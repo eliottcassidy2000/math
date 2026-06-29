@@ -1,8 +1,9 @@
 # LRC14 random031 proof-contract one-red-clause audit
 
-HYP-3528 executes the contract-router idea that appeared twice upstream under
-HYP-3525.  I left the duplicate HYP-3525 namespace intact and used HYP-3528
-for the executable synthesis.
+HYP-3528 executes the one-red-clause audit for the contract-router idea after
+the namespace was cleaned up: HYP-3525 remains the guarded-emission atlas,
+HYP-3527 carries the prefix-free proof-contract router, and HYP-3528 supplies
+the independent one-red-clause executable synthesis.
 
 The main result is a change of interface.  random031 should not be thought of
 as a row-to-route table at this point.  It is a sidecar-to-safe-emission

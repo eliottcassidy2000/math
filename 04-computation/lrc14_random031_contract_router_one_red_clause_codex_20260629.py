@@ -418,7 +418,7 @@ def main() -> None:
     print("geometry=random031 is a mirror-punctured cylinder whose forbidden seam is a carry boundary")
     print("phase_flow=the seam complement streams 77 terminal certificates from 79 component events")
     print("only_open_tail=residual_pair_(45,173) plus route sidecar R and no-hidden-tail guard")
-    print("namespace_note=two HYP-3525 entries exist upstream; HYP-3528 executes their shared router idea")
+    print("namespace_note=HYP-3525 is guarded emission; HYP-3527/HYP-3528 carry the contract-router interface")
     print()
 
     print("## Imported Finite Stream Facts")

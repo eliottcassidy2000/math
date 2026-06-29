@@ -13,6 +13,15 @@ of 2026-05-30.
 
 Useful synthetic maps added later:
 
+- `07-reflections/lrc14-random031-proof-contract-router-codex-20260629.md`:
+  HYP-3527/T1527 turns Chaitin's constant into a finite proof-contract
+  guardrail rather than a number analogy.  The random031 terminal interface is
+  encoded as eight prefix-free clauses with exact contract mass `111/128`,
+  route-carry mass `1/4`, and residual-tail mass `1/128`.  The useful proof
+  service is hidden-tail constancy: `terminal_class+spigot_state` is pure,
+  route sidecar `R` is pure, `I/Q` is not route-pure, and hydrotope
+  owner-support chambers isolate residual `(45,173)` while residue chambers
+  mix it with shadows.
 - `07-reflections/lrc14-random031-certificate-spigot-codex-20260629.md`:
   HYP-3523/T1523 turns the user-suggested spigot-algorithm prompt into a
   concrete random031 proof scheduler: emit terminal certificates left-to-right,

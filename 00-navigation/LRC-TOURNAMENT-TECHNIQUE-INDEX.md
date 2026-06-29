@@ -68,20 +68,26 @@ obligations, and proof-carrier interfaces.
   HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486,
   T1528, LTI-528, OPEN-Q-108.
 
-## LTT-427 - Proof-Contract Router Tournament
+## LTT-427 - Chaitin/Hydrotope Proof-Contract Tournament
 
-- **Move:** Treat proof contracts and sidecar obligations as tournament
-  vertices, orienting edges by terminal-readiness, hidden-tail exposure, and
+- **Move:** Treat proof contracts, prefix-free clause codewords, hidden-tail
+  tests, and sidecar obligations as tournament vertices, orienting edges by
+  terminal-readiness, hidden-tail exposure, unresolved Kraft mass, and
   quotient-forgetting risk.
 - **LRC use:** Turns the random031 evidence stack into a finite theorem
   interface: ordinary route, free-hole single/doublet, bypass transport,
-  bracket lift, residual pair, route sidecar `R`, and vertical guard.
+  bracket lift, residual pair, route sidecar `R`, and vertical guard.  The
+  canonical HYP-3527 router now also records a prefix-free contract budget
+  with `contract_mass=111/128`, route-carry mass `1/4`, residual-tail mass
+  `1/128`, and unused reserve `17/128`.
 - **Preserves:** consumed certificate, emitted owner tail, remaining tail,
-  required sidecars, forbidden quotient shortcuts, and Lean-facing theorem
-  shape.
-- **Forgets / guardrail:** raw component counts, owner counts, residue
-  chambers, scalar hydrotope volumes, and vertical halfturn gluing are illegal
-  unless the contract proves they reconstruct the terminal predicate.
+  terminal spigot state, route `R`, owner-support hydrotope labels, free-hole
+  predigit state, vertical non-gluing, required sidecars, forbidden quotient
+  shortcuts, and Lean-facing theorem shape.
+- **Forgets / guardrail:** raw component counts, owner counts, terminal class
+  alone, `I/Q` without `R`, residue chambers, scalar hydrotope volumes,
+  sliced-box volumes, and vertical halfturn gluing are illegal unless the
+  contract proves they reconstruct the terminal predicate.
 - **Next pull:** HYP-3527 is executed: formalize the three formal-ready
   clauses, keep the four carry-required sidecars explicit, and close the sole
   unresolved proof debt `residual_pair_close_tail` for `(45,173)` with route

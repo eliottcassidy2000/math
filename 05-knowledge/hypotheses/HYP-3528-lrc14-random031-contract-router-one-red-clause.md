@@ -2,7 +2,7 @@
 id: HYP-3528
 title: LRC14 random031 proof-contract one-red-clause audit
 status: EVIDENCE / executable finite theorem-interface router; not an LRC14 proof
-source: codex-2026-06-29 execution of the proof-contract router suggested by HYP-3525, using HYP-3521/HYP-3523/HYP-3524/HYP-3526
+source: codex-2026-06-29 execution of the proof-contract router alongside HYP-3527 and the HYP-3525 guarded-emission atlas, using HYP-3521/HYP-3523/HYP-3524/HYP-3526
 tangent: T1528
 technique: LTI-528
 tournament_technique: LTT-428

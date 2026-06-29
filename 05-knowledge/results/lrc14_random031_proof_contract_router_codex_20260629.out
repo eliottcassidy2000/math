@@ -29,7 +29,7 @@ owner_filtration_ready: ('emit:private_firewall_status', 'emit:h3490_route', "ho
 raw_count_shadow: ('hold:private_firewall_status:missing=colored axis or incidence/projection sidecar', 'hold:h3490_route:missing=route sidecar R', "hold:random031_terminal_class:missing=('allowed_exit', 'flow_class', 'sheet_pgf_bucket')", "hold:owner_residual_pair:missing=('R', 'branch_boundary_lift', 'residual_pair', 'transport_word')", 'emit:raw_count')
 
 ## Contract Clauses
-ordinary_route_emit: status=formal_ready_interface score=94
+ordinary_route_emit: status=formal_ready_interface score=94 codeword=00 mass=1/4
   consumes=('64 ordinary components', '230 cells')
   emits=('ordinary endpoint-rank-2 route certificate',)
   remaining_tail=()
@@ -38,7 +38,7 @@ ordinary_route_emit: status=formal_ready_interface score=94
   evidence=('HYP-3521 ordinary terminal split', 'HYP-3486 endpoint-rank-2 seam-complement exits')
   theorem_shape=ordinary_route_emit(component) -> terminal_discharge
   proof_debt=formal endpoint-rank-2 route lemma
-free_hole_single_emit: status=formal_ready_interface score=90
+free_hole_single_emit: status=formal_ready_interface score=90 codeword=010 mass=1/8
   consumes=('10 single packets', '26 cells')
   emits=('ordinary-bracketed free-hole certificate',)
   remaining_tail=()
@@ -47,7 +47,7 @@ free_hole_single_emit: status=formal_ready_interface score=90
   evidence=('HYP-3511 ordinary-bracketed singles', 'HYP-3523 emit_after_single_bracket_carry')
   theorem_shape=free_hole_single_emit(packet) -> terminal_discharge
   proof_debt=formal HYP-3511 single-bracket lemma
-free_hole_doublet_buffer_emit: status=formal_ready_interface score=88
+free_hole_doublet_buffer_emit: status=formal_ready_interface score=88 codeword=0110 mass=1/16
   consumes=('4 half-open components', '14 cells')
   emits=('2 collapsed doublet certificates',)
   remaining_tail=()
@@ -56,7 +56,7 @@ free_hole_doublet_buffer_emit: status=formal_ready_interface score=88
   evidence=('HYP-3523 two held predigits later emitted', 'HYP-3511 same-branch doublet clusters')
   theorem_shape=free_hole_doublet_buffer(first, second) -> terminal_discharge
   proof_debt=formal doublet buffer/mate lemma
-bypass_transport_emit: status=carry_required score=82
+bypass_transport_emit: status=carry_required score=82 codeword=01110 mass=1/32
   consumes=('12 pure-bypass cells', 'seven-owner seam input')
   emits=('23', '93', '113')
   remaining_tail=('45', '147', '169', '173')
@@ -65,7 +65,7 @@ bypass_transport_emit: status=carry_required score=82
   evidence=('HYP-3522 transport word', 'HYP-3524 S1_transport_emitter')
   theorem_shape=emit_transport(seven_owner_state) -> four_owner_tail_state
   proof_debt=prove transport-word constancy on pure bypass
-bypass_bracket_lift_emit: status=carry_required score=80
+bypass_bracket_lift_emit: status=carry_required score=80 codeword=011110 mass=1/64
   consumes=('four-owner tail after transport',)
   emits=('147', '169')
   remaining_tail=('45', '173')
@@ -74,7 +74,7 @@ bypass_bracket_lift_emit: status=carry_required score=80
   evidence=('HYP-3522 branch-boundary ordinary neighbors', 'HYP-3524 S2_branch_boundary_lift_emitter')
   theorem_shape=emit_bracket_lift(four_owner_state) -> residual_pair_state
   proof_debt=prove adjacent ordinary branch-boundary lift
-private_firewall_route_sidecar: status=carry_required score=78
+private_firewall_route_sidecar: status=carry_required score=78 codeword=10 mass=1/4
   consumes=('I/Q private incidence cut', 'terminal route request')
   emits=('private firewall status', 'route only with R')
   remaining_tail=('route_R',)
@@ -83,7 +83,7 @@ private_firewall_route_sidecar: status=carry_required score=78
   evidence=('private_status_pure_by_I=True', 'private_status_pure_by_Q=True', 'route_pure_by_IQ=False', 'route_pure_by_R=True')
   theorem_shape=private_cut(I/Q) plus route_R -> terminal_route_dispatch
   proof_debt=prove I/Q row-free incidence cut; keep R unless route reconstruction is proved
-vertical_halfturn_guard: status=carry_required score=74
+vertical_halfturn_guard: status=carry_required score=74 codeword=110 mass=1/8
   consumes=('u=2t branch-sheet projection',)
   emits=('address projection only',)
   remaining_tail=('vertical_not_glued',)
@@ -92,7 +92,7 @@ vertical_halfturn_guard: status=carry_required score=74
   evidence=('vertical_present_cells=48/282', 'vertical_mixed_component_count=7')
   theorem_shape=vertical_halfturn_guard -> quotient_legality
   proof_debt=formalize vertical halfturn as address projection, not topology quotient
-residual_pair_close_tail: status=open_tail_lemma score=63
+residual_pair_close_tail: status=open_tail_lemma score=63 codeword=0111110 mass=1/128
   consumes=('residual owners (45,173)',)
   emits=('terminal owner-boundary discharge',)
   remaining_tail=('45', '173')
@@ -101,6 +101,31 @@ residual_pair_close_tail: status=open_tail_lemma score=63
   evidence=('HYP-3524 residual tail isolated as (45,173)', "safe_owner_quotients=('full_filtration_word', 'transport_plus_boundary_word', 'hydrotope_signature_owner_support_cells', 'route_sidecar_R')", "residual_bucket_sizes={'residue_mod14': 3, 'centered_residue': 5, 'owner_support_cells': 1, 'filtration_layer': 15}")
   theorem_shape=close_tail(residual_pair_state, route_R) -> terminal_discharge
   proof_debt=prove two-owner no-hidden-tail residual boundary lemma
+
+## Chaitin / Prefix-Free Contract Budget
+chaitin_reading=finite prefix-free proof contracts; hidden tail must be named before emission
+prefix_free=True
+contract_mass=111/128
+verified_finite_mass=111/128
+formal_frontier_mass=79/128
+formal_ready_mass=7/16
+carry_required_mass=27/64
+open_tail_lemma_mass=1/128
+residual_tail_mass=1/128
+route_carry_mass=1/4
+unused_prefix_reserve=17/128
+
+## Hidden-Tail Constancy Addendum
+source=05-knowledge/results/lrc14_random031_certificate_spigot_codex_20260629.out
+terminal_class: mixed_fibers=2 mixed_rows=68 pure=False
+terminal_class_plus_spigot_state: mixed_fibers=0 mixed_rows=0 pure=True
+route_by_IQ: mixed_fibers=2 mixed_rows=130 pure=False
+route_by_all_colored_plus_IQ: mixed_fibers=1 mixed_rows=7 pure=False
+route_by_R: mixed_fibers=0 mixed_rows=0 pure=True
+hydrotope_residual_bucket_sizes={'residue_mod14': 3, 'centered_residue': 5, 'owner_support_cells': 1, 'filtration_layer': 15}
+hydrotope_transport_plus_boundary_bucket_sizes={'residue_mod14': 3, 'centered_residue': 5, 'owner_support_cells': 1, 'filtration_layer': 15}
+tail_after_boundary_volume_owner_support=17531014120337/1477439763609600
+reading=terminal class and residue chambers are shadows; spigot state, R, owner-support labels, and vertical guard are proof carriers
 
 ## Closure Ledger
 status_hist={'carry_required': 4, 'formal_ready_interface': 3, 'open_tail_lemma': 1}
@@ -121,9 +146,9 @@ vertical_halfturn_guard: vertical_halfturn_guard -> quotient_legality
 residual_pair_close_tail: close_tail(residual_pair_state, route_R) -> terminal_discharge
 
 ## Tournament Analysis
-vertices=proof contracts and sidecar obligations, not runners, raw witnesses, chamber volumes, or owner counts
-pairwise_observable=formal readiness + hidden-tail risk + scalar-forgetting risk
-switch=higher proof-readiness score; ties use dependency order
+vertices=proof contracts, prefix-free clause codewords, hidden-tail tests, and sidecar obligations, not runners, raw witnesses, chamber volumes, or owner counts
+pairwise_observable=formal readiness + hidden-tail risk + unresolved Kraft mass + scalar-forgetting risk
+switch=higher proof-readiness score and lower unresolved prefix mass; ties use dependency order
 score_hist={63: 1, 74: 1, 78: 1, 80: 1, 82: 1, 88: 1, 90: 1, 94: 1}
 directed_3cycles=0
 hamiltonian_path=ordinary_route_emit -> free_hole_single_emit -> free_hole_doublet_buffer_emit -> bypass_transport_emit -> bypass_bracket_lift_emit -> private_firewall_route_sidecar -> vertical_halfturn_guard -> residual_pair_close_tail

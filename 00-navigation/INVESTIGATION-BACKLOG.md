@@ -8,11 +8,19 @@ Ready theorem interfaces are ordinary route emission, free-hole single
 emission, and free-hole doublet buffered emission.  Carry-required clauses are
 bypass transport `(23,93,113)`, bypass bracket lift `(147,169)`,
 private/firewall route sidecar dispatch, and the HYP-3486 vertical-halfturn
-guard.  The sole open-tail clause is `residual_pair_close_tail`: prove the
-two-owner no-hidden-tail boundary lemma for `(45,173)` with route `R`,
-owner-support chamber, and no scalar residue/volume shortcut.  Tournament
-vertices are proof contracts and sidecar obligations, not runners/raw
-witnesses/chamber volumes. -> HYP-3527,
+guard.  Chaitin's constant is used only as a finite prefix-free proof-budget
+discipline: `contract_mass=111/128`, `formal_frontier_mass=79/128`,
+`formal_ready_mass=7/16`, `carry_required_mass=27/64`,
+`residual_tail_mass=1/128`, `route_carry_mass=1/4`, and unused reserve
+`17/128`.  Hidden-tail checks show `terminal_class+spigot_state` is pure while
+terminal class alone mixes; `I/Q` does not reconstruct route, while `R` does;
+owner-support hydrotope chambers isolate the residual and boundary labels,
+while residue chambers and sliced-box volumes are canaries.  The sole
+open-tail clause is `residual_pair_close_tail`: prove the two-owner
+no-hidden-tail boundary lemma for `(45,173)` with route `R`, owner-support
+chamber, and no scalar residue/volume shortcut.  Tournament vertices are proof
+contracts, prefix-free clauses, hidden-tail tests, and sidecar obligations, not
+runners/raw witnesses/chamber volumes. -> HYP-3527,
 HYP-3526, HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520,
 HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486, LTI-527, LTT-427, T1527,
 OPEN-Q-108.
@@ -27,19 +35,6 @@ sidecar obligations as vertices; the preserved predicate is random031 terminal
 discharge. -> HYP-3528, HYP-3526, HYP-3525, HYP-3524, HYP-3523, HYP-3522,
 HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486,
 LTI-528, LTT-428, T1528, OPEN-Q-108.
-
-**HYP-3525 random031 proof-contract router.**  Build the finite
-proof-interface contract now suggested by HYP-3521/HYP-3523/HYP-3524.  The
-contract should list each terminal clause, its required sidecars, consumed
-certificate, emitted tail, remaining tail, forbidden quotient shortcuts, and
-Lean-facing theorem shape.  Required clauses: ordinary route emission,
-free-hole single bracket emission, free-hole doublet buffer/emission, bypass
-transport emit `(23,93,113)`, bypass bracket-lift emit `(147,169)`, residual
-pair close-tail `(45,173)`, HYP-3513 route sidecar `R`, and the HYP-3486
-vertical-halfturn guard.  Tournament vertices are proof contracts and sidecar
-obligations, not runners/raw witnesses/chamber volumes. -> HYP-3525,
-HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3511,
-HYP-3510, HYP-3490, HYP-3486, LTI-525, LTT-425, T1525, OPEN-Q-108.
 
 **HYP-3524 random031 spigot/hydrotope residual scout.**  Turn the HYP-3524
 emitter schedule into a no-hidden-tail lemma.  Exact schedule:

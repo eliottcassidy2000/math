@@ -2,7 +2,7 @@
 id: HYP-3527
 title: LRC14 random031 proof-contract router
 status: EVIDENCE / finite proof-interface contract; not an LRC14 proof
-source: codex-2026-06-29 synthesis of random031 terminal, spigot, hydrotope, owner-boundary, firewall, and quotient-guardrail lanes
+source: codex-2026-06-29 synthesis of random031 terminal, spigot, Chaitin/Kraft hidden-tail, hydrotope, owner-boundary, firewall, and quotient-guardrail lanes
 tangent: T1527
 technique: LTI-527
 tournament_technique: LTT-427
@@ -105,6 +105,56 @@ The immediate proof pull is not to search for another scalar compression.  It
 is to formalize three ready terminal interfaces, keep four carry obligations
 explicit, and close exactly one owner-boundary tail: residual `(45,173)` with
 route sidecar `R`, owner-support chamber, and no-hidden-tail guard.
+
+## Chaitin/Hydrotope Addendum
+
+Chaitin's constant is used here as a finite proof discipline, not as a
+numerical source.  The random031 router assigns prefix-free codewords to the
+eight contract clauses and reads the resulting Kraft mass as an audit of what
+has been named before a proof token may be emitted:
+
+```text
+prefix_free=True
+contract_mass=111/128
+verified_finite_mass=111/128
+formal_frontier_mass=79/128
+formal_ready_mass=7/16
+carry_required_mass=27/64
+open_tail_lemma_mass=1/128
+route_carry_mass=1/4
+unused_prefix_reserve=17/128
+```
+
+The hidden-tail tests are now part of the contract:
+
+```text
+terminal_class: mixed_fibers=2 mixed_rows=68 pure=False
+terminal_class_plus_spigot_state: mixed_fibers=0 mixed_rows=0 pure=True
+route_by_IQ: mixed_fibers=2 mixed_rows=130 pure=False
+route_by_all_colored_plus_IQ: mixed_fibers=1 mixed_rows=7 pure=False
+route_by_R: mixed_fibers=0 mixed_rows=0 pure=True
+```
+
+The hydrotope/sliced-box analogy from the chamber-volume paper contributes a
+guardrail, not a scalar proof.  Owner-support chambers isolate the residual:
+
+```text
+hydrotope_residual_bucket_sizes={
+  residue_mod14: 3,
+  centered_residue: 5,
+  owner_support_cells: 1,
+  filtration_layer: 15
+}
+tail_after_boundary_volume_owner_support=
+  17531014120337/1477439763609600
+```
+
+Thus terminal class alone, `I/Q` without `R`, residue chambers, and sliced-box
+volumes are legal diagnostics only after the proof object keeps the missing
+sidecar.  The Lean-facing shape should be `Random031Contract`: eight
+prefix-free clauses, terminal class plus spigot state, route sidecar `R`,
+owner-support residual chamber, vertical guard, and the remaining
+`residual_pair_close_tail` theorem.
 
 ## Assumption Challenge
 

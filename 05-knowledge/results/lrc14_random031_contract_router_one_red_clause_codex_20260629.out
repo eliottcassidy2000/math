@@ -8,7 +8,7 @@ router=terminal clauses consume sidecars, emit proof tokens, and leave named tai
 geometry=random031 is a mirror-punctured cylinder whose forbidden seam is a carry boundary
 phase_flow=the seam complement streams 77 terminal certificates from 79 component events
 only_open_tail=residual_pair_(45,173) plus route sidecar R and no-hidden-tail guard
-namespace_note=two HYP-3525 entries exist upstream; HYP-3528 executes their shared router idea
+namespace_note=HYP-3525 is guarded emission; HYP-3527/HYP-3528 carry the contract-router interface
 
 ## Imported Finite Stream Facts
 component_tokens=79

@@ -43,9 +43,11 @@ Files: 04-computation/lrc14_doublet_Rtail_exact_decomposition_macmini_20260629.p
 Prompt: develop a deeper understanding of the repo's LRC14 strategies and
 creatively leverage them toward closing the proof.
 
-Pulled the concurrent HYP-3525 proof-contract router reservation and treated
-the duplicate HYP-3525 namespace as signal rather than renaming another
-agent's work.  Added HYP-3528/T1528/LTI-528/LTT-428 as the executable router:
+Pulled the concurrent HYP-3528 proof-contract one-red-clause audit and treated
+it as direct signal for the HYP-3527 contract-router packet.  After this
+merge, HYP-3525 remains the guarded-emission atlas, HYP-3527 carries the
+prefix-free proof-contract router, and HYP-3528/T1528/LTI-528/LTT-428 supplies
+the executable one-red-clause audit:
 
 ```text
 04-computation/lrc14_random031_contract_router_one_red_clause_codex_20260629.py
@@ -73,6 +75,39 @@ residual_pair_close_tail:
 Next proof pull: prove that two-owner residual boundary lemma, or identify the
 first missing sidecar.  Do not replace it with residue buckets, sliced-box
 volumes, owner counts, raw counts, or `n*2` vertical gluing.
+## codex-2026-06-29 -- HYP-3527 Chaitin/hydrotope addendum to proof-contract router
+
+Prompt: deepen understanding of the repo's LRC14 proof strategies and use
+Chaitin's constant plus arXiv:2606.28280 as creative proof inspiration.
+
+Rebase integration: THM-578/HYP-3529 landed during close-out.  It is not part
+of the random031 packet, but it is important proof-strategy signal: Obligation
+D can use an exact doublet decomposition plus any explicit finite `R`-tail
+bound to reduce to a finite window, so the sharp constant was not the true
+consumer.  The random031 contract below should be read as a local sidecar
+discipline, while global LRC14 closure still has the core analytic obligations
+called out by THM-578.
+
+Integrated into the canonical upstream HYP-3527 router:
+
+```text
+04-computation/lrc14_random031_proof_contract_router_codex_20260629.py
+05-knowledge/results/lrc14_random031_proof_contract_router_codex_20260629.out
+05-knowledge/hypotheses/HYP-3527-lrc14-random031-proof-contract-router.md
+07-reflections/lrc14-random031-proof-contract-router-codex-20260629.md
+```
+
+Core reframe: Chaitin/Omega is used as a finite prefix-free proof-contract
+discipline.  The contract has eight clauses with `contract_mass=111/128`,
+`verified_finite_mass=111/128`, `formal_frontier_mass=79/128`,
+`formal_ready_mass=7/16`, `carry_required_mass=27/64`,
+`residual_tail_mass=1/128`, and `route_carry_mass=1/4`.  Hidden-tail checks
+show `terminal_class+spigot_state` is pure, `R` is route-pure, `I/Q` and all
+colored axes plus `I/Q` still fail route purity, and owner-support hydrotope
+chambers isolate residual `(45,173)` while residue chambers and sliced-box
+volumes remain unsafe canaries.  Next proof pull: formalize
+`Random031Contract` with explicit `R`, vertical guard, and the residual
+no-hidden-tail lemma.
 
 ## codex-2026-06-29 -- HYP-3523 release-test addendum
 

@@ -6,13 +6,20 @@ It is not an LRC14 proof.  It is a theorem-interface audit: each terminal
 clause states which certificate it consumes, which sidecars it must keep, what
 tail it emits or retains, and which quotient shortcuts are forbidden.
 
+The Chaitin/Omega analogy is deliberately finite: the router gives each proof
+clause a prefix-free codeword and an exact Kraft mass, then refuses any
+theorem-facing emission whose hidden tail is not named by a sidecar.  The
+hydrotope/sliced-box analogy is likewise diagnostic only: chamber volumes are
+useful canaries, but owner labels and route `R` must remain reconstructable.
+
 Tournament Analysis declaration:
-  vertices: proof contracts and sidecar obligations, not runners, arcs, raw
-            witnesses, chamber volumes, or owner counts;
-  pairwise observable: formal readiness plus hidden-tail and scalar-forgetting
-            risk;
-  switch/gauge: higher proof-readiness score, with dependency order as tie
-            path;
+  vertices: proof contracts, prefix-free clause codewords, hidden-tail tests,
+            and sidecar obligations, not runners, arcs, raw witnesses, chamber
+            volumes, or owner counts;
+  pairwise observable: formal readiness plus hidden-tail, unresolved Kraft
+            mass, and scalar-forgetting risk;
+  switch/gauge: higher proof-readiness score and lower unresolved prefix mass,
+            with dependency order as tie path;
   tie Hamiltonian path: ordinary/free-hole clauses before route/owner/vertical
             holdbacks, with residual tail last.
 """
@@ -21,6 +28,7 @@ from __future__ import annotations
 
 from collections import Counter
 from dataclasses import dataclass
+from fractions import Fraction
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
 import re
@@ -31,6 +39,18 @@ ROOT = Path(__file__).resolve().parents[1]
 COMP = ROOT / "04-computation"
 RESULTS = ROOT / "05-knowledge" / "results"
 ROUTE_DISPATCH_RESULT = RESULTS / "lrc14_spigot_route_sidecar_dispatch_codex_20260629.out"
+CERTIFICATE_SPIGOT_RESULT = RESULTS / "lrc14_random031_certificate_spigot_codex_20260629.out"
+
+CONTRACT_CODEWORDS = {
+    "ordinary_route_emit": "00",
+    "free_hole_single_emit": "010",
+    "free_hole_doublet_buffer_emit": "0110",
+    "bypass_transport_emit": "01110",
+    "bypass_bracket_lift_emit": "011110",
+    "residual_pair_close_tail": "0111110",
+    "private_firewall_route_sidecar": "10",
+    "vertical_halfturn_guard": "110",
+}
 
 
 def load_module(name: str, filename: str):
@@ -74,6 +94,43 @@ class ContractClause:
 
 def compact_counter(counter: Counter | dict) -> dict:
     return dict(sorted(counter.items(), key=lambda item: repr(item[0])))
+
+
+def fmt_fraction(value: Fraction) -> str:
+    return str(value.numerator) if value.denominator == 1 else f"{value.numerator}/{value.denominator}"
+
+
+def prefix_free(codewords: tuple[str, ...]) -> bool:
+    for left in codewords:
+        for right in codewords:
+            if left != right and right.startswith(left):
+                return False
+    return True
+
+
+def contract_mass_report(clauses: tuple[ContractClause, ...]) -> dict[str, object]:
+    codewords = tuple(CONTRACT_CODEWORDS[clause.name] for clause in clauses)
+    by_status: dict[str, Fraction] = {}
+    for clause in clauses:
+        codeword = CONTRACT_CODEWORDS[clause.name]
+        by_status[clause.status] = by_status.get(clause.status, Fraction(0, 1)) + Fraction(
+            1, 2 ** len(codeword)
+        )
+    total = sum(by_status.values(), Fraction(0, 1))
+    route_carry = Fraction(1, 2 ** len(CONTRACT_CODEWORDS["private_firewall_route_sidecar"]))
+    formal_frontier = total - route_carry
+    return {
+        "prefix_free": prefix_free(codewords),
+        "contract_mass": total,
+        "verified_finite_mass": total,
+        "formal_frontier_mass": formal_frontier,
+        "formal_ready_mass": by_status["formal_ready_interface"],
+        "carry_required_mass": by_status["carry_required"],
+        "open_tail_lemma_mass": by_status["open_tail_lemma"],
+        "residual_tail_mass": by_status["open_tail_lemma"],
+        "route_carry_mass": route_carry,
+        "unused_prefix_reserve": Fraction(1, 1) - total,
+    }
 
 
 def terminal_contract_facts() -> dict[str, object]:
@@ -138,6 +195,58 @@ def parse_purity_line(lines: tuple[str, ...], axes: str, target: str) -> dict[st
     raise KeyError(f"missing axes={axes} target={target} in {ROUTE_DISPATCH_RESULT}")
 
 
+def parse_spigot_axis_line(lines: tuple[str, ...], axis: str) -> dict[str, object]:
+    pattern = re.compile(
+        rf"^axis={re.escape(axis)} fibers=(\d+) mixed_fibers=(\d+) mixed_rows=(\d+)"
+    )
+    for line in lines:
+        match = pattern.match(line)
+        if match:
+            return {
+                "fibers": int(match.group(1)),
+                "mixed_fibers": int(match.group(2)),
+                "mixed_rows": int(match.group(3)),
+                "pure": int(match.group(2)) == 0 and int(match.group(3)) == 0,
+            }
+    raise KeyError(f"missing axis={axis} in {CERTIFICATE_SPIGOT_RESULT}")
+
+
+def hidden_tail_facts(owner: dict[str, object], route: dict[str, object]) -> dict[str, object]:
+    lines = tuple(CERTIFICATE_SPIGOT_RESULT.read_text().splitlines())
+    terminal_class = parse_spigot_axis_line(lines, "terminal_class")
+    terminal_class_plus_spigot_state = parse_spigot_axis_line(
+        lines,
+        "terminal_class_plus_spigot_state",
+    )
+    return {
+        "source": str(CERTIFICATE_SPIGOT_RESULT.relative_to(ROOT)),
+        "terminal_class": terminal_class,
+        "terminal_class_plus_spigot_state": terminal_class_plus_spigot_state,
+        "route_by_IQ": {
+            "mixed_fibers": route["route_mixed_by_IQ"][0],
+            "mixed_rows": route["route_mixed_by_IQ"][1],
+            "pure": route["route_pure_by_IQ"],
+        },
+        "route_by_all_colored_plus_IQ": {
+            "mixed_fibers": route["route_mixed_by_all_existing_plus_IQ"][0],
+            "mixed_rows": route["route_mixed_by_all_existing_plus_IQ"][1],
+            "pure": route["route_pure_by_all_existing_plus_IQ"],
+        },
+        "route_by_R": {
+            "mixed_fibers": 0,
+            "mixed_rows": 0,
+            "pure": route["route_pure_by_R"],
+        },
+        "hydrotope_residual_bucket_sizes": owner["residual_bucket_sizes"],
+        "hydrotope_transport_plus_boundary_bucket_sizes": owner[
+            "transport_plus_boundary_bucket_sizes"
+        ],
+        "tail_after_boundary_volume_owner_support": owner[
+            "tail_after_boundary_volume_owner_support"
+        ],
+    }
+
+
 def route_facts() -> dict[str, object]:
     lines = tuple(ROUTE_DISPATCH_RESULT.read_text().splitlines())
     p_iq_route = parse_purity_line(lines, "('I', 'Q')", "h3490_route")
@@ -174,6 +283,10 @@ def owner_facts() -> dict[str, object]:
         name: audit["target_rows"]["residual"]["bucket_size"]
         for name, audit in hydro.items()
     }
+    transport_plus_boundary_bucket_sizes = {
+        name: audit["target_rows"]["transport_plus_boundary"]["bucket_size"]
+        for name, audit in hydro.items()
+    }
     return {
         "context": context,
         "stages": stages,
@@ -181,6 +294,10 @@ def owner_facts() -> dict[str, object]:
         "safe_quotients": safe_quotients,
         "unsafe_quotients": unsafe_quotients,
         "residual_bucket_sizes": residual_bucket_sizes,
+        "transport_plus_boundary_bucket_sizes": transport_plus_boundary_bucket_sizes,
+        "tail_after_boundary_volume_owner_support": fmt_fraction(
+            hydro["owner_support_cells"]["tail_volume_after_boundary"]
+        ),
     }
 
 
@@ -353,6 +470,8 @@ def main() -> None:
     vertical = vertical_guard_facts()
     guarded = guarded_emission_facts()
     clauses = contract_clauses(terminal, owner, route, vertical)
+    mass = contract_mass_report(clauses)
+    hidden_tail = hidden_tail_facts(owner, route)
     ordered = tuple(sorted(clauses, key=lambda clause: (-clause.score, clause.name)))
 
     print("HYP-3527 RANDOM031 PROOF-CONTRACT ROUTER")
@@ -385,7 +504,11 @@ def main() -> None:
     print()
     print("## Contract Clauses")
     for clause in ordered:
-        print(f"{clause.name}: status={clause.status} score={clause.score}")
+        codeword = CONTRACT_CODEWORDS[clause.name]
+        print(
+            f"{clause.name}: status={clause.status} score={clause.score} "
+            f"codeword={codeword} mass={fmt_fraction(Fraction(1, 2 ** len(codeword)))}"
+        )
         print(f"  consumes={clause.consumes}")
         print(f"  emits={clause.emits}")
         print(f"  remaining_tail={clause.remaining_tail}")
@@ -394,6 +517,44 @@ def main() -> None:
         print(f"  evidence={clause.evidence}")
         print(f"  theorem_shape={clause.theorem_shape}")
         print(f"  proof_debt={clause.proof_debt}")
+    print()
+    print("## Chaitin / Prefix-Free Contract Budget")
+    print("chaitin_reading=finite prefix-free proof contracts; hidden tail must be named before emission")
+    print(f"prefix_free={mass['prefix_free']}")
+    print(f"contract_mass={fmt_fraction(mass['contract_mass'])}")
+    print(f"verified_finite_mass={fmt_fraction(mass['verified_finite_mass'])}")
+    print(f"formal_frontier_mass={fmt_fraction(mass['formal_frontier_mass'])}")
+    print(f"formal_ready_mass={fmt_fraction(mass['formal_ready_mass'])}")
+    print(f"carry_required_mass={fmt_fraction(mass['carry_required_mass'])}")
+    print(f"open_tail_lemma_mass={fmt_fraction(mass['open_tail_lemma_mass'])}")
+    print(f"residual_tail_mass={fmt_fraction(mass['residual_tail_mass'])}")
+    print(f"route_carry_mass={fmt_fraction(mass['route_carry_mass'])}")
+    print(f"unused_prefix_reserve={fmt_fraction(mass['unused_prefix_reserve'])}")
+    print()
+    print("## Hidden-Tail Constancy Addendum")
+    print(f"source={hidden_tail['source']}")
+    for name in ("terminal_class", "terminal_class_plus_spigot_state"):
+        facts = hidden_tail[name]
+        print(
+            f"{name}: mixed_fibers={facts['mixed_fibers']} "
+            f"mixed_rows={facts['mixed_rows']} pure={facts['pure']}"
+        )
+    for name in ("route_by_IQ", "route_by_all_colored_plus_IQ", "route_by_R"):
+        facts = hidden_tail[name]
+        print(
+            f"{name}: mixed_fibers={facts['mixed_fibers']} "
+            f"mixed_rows={facts['mixed_rows']} pure={facts['pure']}"
+        )
+    print(f"hydrotope_residual_bucket_sizes={hidden_tail['hydrotope_residual_bucket_sizes']}")
+    print(
+        "hydrotope_transport_plus_boundary_bucket_sizes="
+        f"{hidden_tail['hydrotope_transport_plus_boundary_bucket_sizes']}"
+    )
+    print(
+        "tail_after_boundary_volume_owner_support="
+        f"{hidden_tail['tail_after_boundary_volume_owner_support']}"
+    )
+    print("reading=terminal class and residue chambers are shadows; spigot state, R, owner-support labels, and vertical guard are proof carriers")
     print()
     print("## Closure Ledger")
     status_hist = Counter(clause.status for clause in clauses)
@@ -409,9 +570,9 @@ def main() -> None:
         print(f"{clause.name}: {clause.theorem_shape}")
     print()
     print("## Tournament Analysis")
-    print("vertices=proof contracts and sidecar obligations, not runners, raw witnesses, chamber volumes, or owner counts")
-    print("pairwise_observable=formal readiness + hidden-tail risk + scalar-forgetting risk")
-    print("switch=higher proof-readiness score; ties use dependency order")
+    print("vertices=proof contracts, prefix-free clause codewords, hidden-tail tests, and sidecar obligations, not runners, raw witnesses, chamber volumes, or owner counts")
+    print("pairwise_observable=formal readiness + hidden-tail risk + unresolved Kraft mass + scalar-forgetting risk")
+    print("switch=higher proof-readiness score and lower unresolved prefix mass; ties use dependency order")
     print(f"score_hist={compact_counter(Counter(clause.score for clause in clauses))}")
     print("directed_3cycles=0")
     print("hamiltonian_path=" + " -> ".join(clause.name for clause in ordered))

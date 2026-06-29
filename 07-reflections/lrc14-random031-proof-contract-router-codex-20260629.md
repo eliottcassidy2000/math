@@ -31,6 +31,21 @@ open_tail_lemma=1
 open_tail_lemma=residual_pair_close_tail
 ```
 
+The Chaitin/Omega prompt is useful only after being made finite.  HYP-3527 now
+does that by assigning prefix-free codewords to the eight clauses.  The Kraft
+budget is `contract_mass=111/128`, with `formal_ready_mass=7/16`,
+`carry_required_mass=27/64`, route-carry mass `1/4`, residual-tail mass
+`1/128`, and unused reserve `17/128`.  The small residual mass should not be
+mistaken for small mathematical risk: `(45,173)` is still the last proof tail.
+
+The hidden-tail check explains why the proof should stop compressing:
+terminal class alone mixes `68` rows, while terminal class plus spigot state
+mixes none; `I/Q` mixes `130` route rows, all existing colored axes plus
+`I/Q` still mix `7`, and `R` is route-pure.  The hydrotope chamber diagnostic
+is consistent with that discipline: owner-support buckets isolate the residual
+as a singleton, but residue and filtration chambers are scalar canaries unless
+the owner labels survive.
+
 Three clauses are now ready theorem interfaces: ordinary route emission,
 free-hole single emission, and free-hole doublet buffered emission.  Four
 clauses must keep sidecars while being formalized: bypass transport,
