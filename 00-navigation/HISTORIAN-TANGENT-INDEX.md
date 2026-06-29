@@ -13,6 +13,13 @@ of 2026-05-30.
 
 Useful synthetic maps added later:
 
+- `07-reflections/lrc14-random031-topology-atlas-codex-20260629.md`:
+  HYP-3481/T1441 reframes the hard-control row `random_covering_031` as a
+  mirror-punctured annulus plus bypassed saddle seam.  The useful signal is
+  that the dead projection has four isolated mirror-paired islands, while the
+  max-delta seam on components `43/54` has zero q=`14V` phase hits and is
+  bypassed by lower-delta gates on the same components.  The next proof packet
+  is mirror-puncture island current plus a bypassed-saddle lemma.
 - `07-reflections/lrc14-small-touch-no-hard-geometry-codex-20260629.md`:
   HYP-3478/T1438 resolves the geometry of the six HYP-3476 small-touch rows
   outside AP84 and hard mirror-orbit debt.  The useful signal is that all

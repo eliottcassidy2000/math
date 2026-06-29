@@ -1,3 +1,30 @@
+## codex-2026-06-29 -- HYP-3481 random031 topology atlas
+
+Prompt: look for creative ways to reframe the underlying geometry/topology of
+`random_covering_031`.
+
+Added HYP-3481/T1441/LTI-441/LTT-341 plus script/result/reflection, after
+incoming HYP-3479 claimed the hard-orbit/current join and HYP-3480 claimed the
+zero-edge singleton-current audit:
+
+```text
+04-computation/lrc14_random031_topology_atlas_codex_20260629.py
+05-knowledge/results/lrc14_random031_topology_atlas_codex_20260629.out
+05-knowledge/hypotheses/HYP-3481-lrc14-random031-topology-atlas.md
+07-reflections/lrc14-random031-topology-atlas-codex-20260629.md
+```
+
+Readout: `random_covering_031` is better pictured as a mirror-punctured
+annulus plus a bypassed saddle seam.  The dead-cover projection has four
+isolated mirror-paired islands and no edges.  The max-delta HYP-3455 gates on
+components `43/54` are an antipodal seam with owner boundary
+`(23,45,93,113,147,169,173)`, but the q=`14V` phase flow has zero hits on that
+seam and twelve hits on lower-delta bypass gates on the same components.
+
+Next proof move: formalize the mirror-puncture island-current lemma and the
+bypassed-saddle lemma, retaining island intervals, mirror pairs, branch masks,
+phase-flow hits, and owner-boundary debt before any scalar quotient is trusted.
+
 ## codex-2026-06-29 -- HYP-3478 small-touch/no-hard geometry reservation
 
 Prompt: see the underlying geometry of the six small-touch / no-hard rows.

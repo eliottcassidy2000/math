@@ -197,6 +197,15 @@ obligations, and proof-carrier interfaces.
   obligations the vertices.  The quotient preserves pure small-touch singleton
   debt versus the named random031 hard/gluing overlap, not runner order or
   scalar counts.
+- Need to see random031 topologically after the hard/current join:
+  use LTT-341 after LTT-340/LTT-339/LTT-337/LTT-336/LTT-315/LTT-320 and make
+  mirror-punctured annuli, bypassed saddle seams, seven-owner boundaries,
+  phase-flow bypasses, dead-island packets, and scalar shadows the vertices.
+  HYP-3481 shows the dead projection has four singleton mirror-paired islands,
+  while the max-delta seam on components `43/54` carries no q=`14V` phase hits
+  and is bypassed by lower-delta gates on the same components.  The quotient
+  preserves the random031 discharge target only if it keeps island intervals,
+  mirror pairs, branch masks, phase-flow hits, and owner-boundary sidecars.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -10019,3 +10028,38 @@ quotient_legality_status
 - **Pointers:** HYP-3479, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471,
   HYP-3462, HYP-3470, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438,
   HYP-3436, THM-523, LTI-439, LTT-339, T1439, OPEN-Q-108.
+
+## LTT-341: Random031 Topology Atlas Tournament
+
+- **Move:** Treat local topology carriers as vertices: mirror-punctured
+  annulus, bypassed saddle seam, seven-owner boundary, phase-branch flow,
+  dead-projection scalar, and raw rank scalar.  Runners, arcs, and raw row
+  names are shadows unless they reconstruct these sidecars.
+- **LRC use:** HYP-3481 reframes the random031 hard control clause from
+  HYP-3479/HYP-3480.  Its dead-cover projection has four singleton islands,
+  mirror pairs `(0,3)` and `(1,2)`, and no edges.  Its HYP-3455 max-delta gates
+  on components `43/54` are an antipodal seam carrying owners
+  `(23,45,93,113,147,169,173)`, while the same components carry lower-delta
+  bypass gates with owners `(23,93,113)`.  The q=`14V` phase flow has `282`
+  witnesses, zero hard-gate hits, and `12` lower-delta bypass hits.
+- **Preserves:** terminal random031 discharge predicate, island interval
+  address, mirror pairing, branch mask, max-delta seam, lower-delta bypass,
+  q=`14V` phase-flow hit data, and seven-owner boundary debt.
+- **Forgets / guardrail:** projection-edge count, hard-gate count, rescue rank,
+  and row name are only scalar telemetry.  A legal quotient must not forget the
+  bypass just because the max-delta seam is large.
+- **Pairwise observable:** retained topology payload, phase-flux payload,
+  owner-boundary payload, dead-projection penalty, and raw-rank penalty.
+- **Switch/gauge:** higher proof-facing topology retention first; ties follow
+  `mirror punctures -> bypassed saddle -> owner boundary -> phase flow ->
+  scalar shadows`.
+- **Fingerprint:** `6` vertices, score histogram
+  `{10:1,21:1,61:1,63:1,66:1,68:1}`, no directed `3`-cycles, Hamiltonian path
+  `mirror_punctured_annulus -> bypassed_saddle_seam -> seven_owner_boundary -> phase_branch_flow -> dead_projection_scalar -> raw_rank6_scalar`.
+- **Next hook:** prove the mirror-puncture island-current lemma and the
+  bypassed-saddle lemma, then install random031 as a terminal packet beside
+  HYP-3476 pair-current, HYP-3477 hard-orbit discharge, HYP-3478 singleton
+  geometry, HYP-3479 hard/current join, and HYP-3480 zero-edge singleton lane.
+- **Pointers:** HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476,
+  HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523,
+  LTI-441, LTT-341, T1441, OPEN-Q-108.

@@ -519,6 +519,7 @@ record what it destroys before asking it to prove anything.
 | LTI-438 | Small-touch/no-hard geometry audit | Singleton dead components, mirror-paired component intervals, blocker-owner pair residues, zero-edge dead projection, complete/touching E/branch gate sidecars, unit-delta versus cover-delta sidecar split | HYP-3478 audits the six HYP-3476 small-touch/no-hard rows outside AP84 and HYP-3477 hard-orbit debt.  Exact readout: `14` dead components, all singleton `B0`/`B1` owner-pair components, exact mirror-swapped partners, no projection edges, no owner imbalance, no hard orbit counts, and E/branch touching counts `56,12,26,42,34,30`.  The minimum gate split is `branch_unit_delta:4` and `delta_sidecar_packet:2`, with cover-delta rows `random_covering_039`, `random_covering_074`. | HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523, T1438, LTT-338, LTI-438, OPEN-Q-108 | Promote the result to a finite mirror-singleton current terminal packet, probably split into the two cover-delta rows and four unit-delta rows.  Do not collapse the packet to raw row names, gate counts, or scalar edge-support size without retaining interval/branch/owner locality. |
 | LTI-439 | Hard orbit / current join | Hard mirror-orbit rows, projection-edge cut exceptions, separating-current exceptions, singleton intersection ledger, terminal dispatch sidecars | HYP-3479 is a Lean-backed join for the HYP-3476/HYP-3477 dispatch split, connecting HYP-3475's eight hard mirror orbits to HYP-3472's boundary-current exception ledger.  On the current bank, hard rows have projection cuts and separating currents on `6/7` rows, hard orbits have separating currents on `7/8` orbits, and the only hard current exception is `random_covering_031`; `ap84_hard_rows=[]`. | HYP-3479, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438, HYP-3436, THM-523, T1439, LTT-339, LTI-439, OPEN-Q-108 | Prove separating-current transfer.  Then hard-orbit discharge reduces to that transfer plus the named HYP-3455/HYP-3460 `random_covering_031` clause; handle AP84 and the other current exceptions as non-hard sidecar debt. |
 | LTI-440 | Zero-edge singleton-current audit | Edgeless dead-cover projections, singleton dead components, owner-label involution, unit-delta gate words, small-touch/no-hard route packet, random031 hard/currentless control | HYP-3480 is the executable singleton-current follow-up to HYP-3478's small-touch geometry reservation and HYP-3479's hard-orbit/current join.  The audit should retain dead singleton labels, best touching gates, owner-label pairs, HYP-3476 route labels, HYP-3477/HYP-3479 hard-overlap flags, and unit-delta/two-adic sidecars before attempting scalar compression. | HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438, THM-523, T1440, LTT-340, LTI-440, OPEN-Q-108 | Determine whether `random_covering_001`, `039`, `062`, `074`, `086`, and `101` share a terminal owner-current/unit-delta theorem, with `random031` kept as the named hard/gluing overlap. |
+| LTI-441 | Random031 topology atlas | Mirror-punctured annulus, four singleton dead islands, max-delta antipodal seam, lower-delta same-component bypass, phase-flow flux, seven-owner boundary | HYP-3481 reframes `random_covering_031` as a topology problem rather than a scalar obstruction, downstream of HYP-3479 and with HYP-3480 treating it as the hard zero-edge control.  The dead projection is four isolated mirror-paired islands with no edges; the HYP-3455 max-delta pair on components `43/54` is an antipodal seam carrying owners `(23,45,93,113,147,169,173)`, while the same components have lower-delta bypass gates carrying `(23,93,113)`.  The q=`14V` phase flow has `282` witnesses, `hard_gate_hits=0`, and `lower_delta_hard_component_hits=12`. | HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523, T1441, LTT-341, LTI-441, OPEN-Q-108 | Prove the mirror-puncture island-current lemma and the bypassed-saddle lemma.  The legal quotient must keep island intervals, mirror pairs, branch masks, phase-flow hits, and owner boundary debt before trying to discharge random031. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
@@ -9424,3 +9425,49 @@ arithmetic; it deliberately leaves the geometric transfer as the producer.
 Pointers: HYP-3479, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471,
 HYP-3462, HYP-3470, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438,
 HYP-3436, THM-523, LTI-439, LTT-339, T1439, OPEN-Q-108.
+
+## LTI-441: Random031 Topology Atlas
+
+Created by codex-2026-06-29 for HYP-3481/T1441/LTT-341.  This is the direct
+topology follow-up to HYP-3455/HYP-3460/HYP-3476/HYP-3477/HYP-3479/HYP-3480
+for the unique hard/currentless overlap `random_covering_031`.
+
+Carrier / vertex set: mirror-punctured annulus, singleton dead islands,
+mirror-paired islands, antipodal max-delta seam, lower-delta bypass gates,
+q=`14V` phase-flow hits, seven-owner boundary, and formal terminal proof
+obligations.  Runners, raw gate counts, projection edge counts, and rescue
+rank are shadows unless the topology sidecars are retained.
+
+Preserved LRC predicate: the terminal discharge packet for `random_covering_031`
+after the low-rank E/branch producer fires, after HYP-3479 isolates it as the
+only hard/currentless named clause, and after HYP-3480 keeps it as the hard
+control row for zero-edge singleton-current work.
+
+Destroyed information: island interval order, mirror pairing, branch mask,
+phase-flow bypass, and owner-boundary locality if the row is compressed to
+"the random031 exception", to dead-edge count zero, or to the HYP-3455
+max-delta scalar alone.
+
+Exact readout:
+
+```text
+dead_projection=components=4 largest=1 edges=0
+dead_island_mirror_pairs=[(0,3),(1,2)]
+hard seam components=43,54
+hard seam owners=(23,45,93,113,147,169,173)
+lower-delta bypass owners=(23,93,113)
+q=14V witnesses=282
+hard_gate_hits=0
+lower_delta_hard_component_hits=12
+```
+
+Best use: prove a mirror-puncture island-current lemma and a bypassed-saddle
+lemma.  The row should not be attacked by searching for another projection
+edge cut: there are no dead-projection edges to cut.  Instead, show that a
+zero-flux max-delta seam with same-component lower-delta bypass cannot force
+global obstruction unless it exposes explicit owner-current, two-adic, SPEC,
+or state-lift debt.
+
+Pointers: HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476,
+HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523,
+LTI-441, LTT-341, T1441, OPEN-Q-108.

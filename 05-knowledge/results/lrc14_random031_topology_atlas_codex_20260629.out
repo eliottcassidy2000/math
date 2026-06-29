@@ -1,0 +1,59 @@
+HYP-3481 RANDOM031 TOPOLOGY ATLAS
+status=EVIDENCE / reframing atlas; not an LRC14 proof
+row=random_covering_031
+
+## Reframe 1: mirror-punctured annulus
+Interpretation: the dead-cover projection is not a connected graph
+waiting for a cut.  It is four isolated punctures on a mirror circle.
+dead_projection=components=4 largest=1 edges=0
+dead_island_mirror_pairs=[(0, 3), (1, 2)]
+  island=0 interval=[113/840,55/406] mid=6577/48720 len=23/24360 rank=2 labels=('B0:45', 'B1:23')
+  island=1 interval=[57/406,69/490] mid=999/7105 len=3/7105 rank=2 labels=('B0:113', 'B1:93')
+  island=2 interval=[421/490,349/406] mid=6106/7105 len=3/7105 rank=2 labels=('B0:93', 'B1:113')
+  island=3 interval=[351/406,727/840] mid=42143/48720 len=23/24360 rank=2 labels=('B0:23', 'B1:45')
+
+## Reframe 2: bypassed saddle seam
+Interpretation: the max-delta mirror pair is a short antipodal seam,
+not a phase-grid wall.  The q=14V phase flow has zero flux through
+the seam and nonzero flux through lower-delta gates on the same two
+components.
+hard_pair_is_mirror=True
+  hard_gate: component=43 interval=[71/161,349/791] len=4/18193 mask=branch0 kinds=B0|B0 delta=(3,4) labels=B0:23|B0:113 owners=(23, 45, 93, 113, 147, 169, 173)
+  hard_gate: component=54 interval=[442/791,90/161] len=4/18193 mask=branch1 kinds=B1|B1 delta=(4,3) labels=B1:113|B1:23 owners=(23, 45, 93, 113, 147, 169, 173)
+  bypass_gate: component=43 interval=[344/791,286/651] len=326/73563 mask=branch1 kinds=B1|B1 delta=(0,2) labels=B1:113|B1:93 owners=(23, 93, 113)
+  bypass_gate: component=54 interval=[365/651,447/791] len=326/73563 mask=branch0 kinds=B0|B0 delta=(2,0) labels=B0:93|B0:113 owners=(23, 93, 113)
+  central_mirror_gap=93/791 (0.117573) between hard gates across 1/2
+phase_flux=witnesses=282 hard_gate_hits=0 lower_delta_hard_component_hits=12 no_gate_hits=40
+hard_component_hit_counter={(43, 'branch1', 2): 6, (54, 'branch0', 2): 6}
+
+## Owner topology
+rescue_core=(23, 45, 93, 113, 147, 169)
+seven_owner_core=(23, 45, 93, 113, 147, 169, 173)
+extra_owner=(173,)
+owner_readout=rank-6 rescue core plus one apex owner 173; the seam
+carries the whole owner boundary, but the phase flow bypasses it.
+
+## Proof-facing lemmas suggested
+L1 mirror-puncture lemma: four edgeless dead-cover islands with
+   mirror-paired singleton blockers should route by local island
+   current, not Menger edge cuts.
+L2 bypassed-saddle lemma: a max-delta mirror seam with zero q=14V
+   phase flux and lower-delta same-component flux is a removable
+   saddle, unless its seven-owner boundary creates explicit
+   owner-current/two-adic/SPEC debt.
+
+## Tournament Analysis
+vertices=('mirror_punctured_annulus', 'bypassed_saddle_seam', 'seven_owner_boundary', 'phase_branch_flow', 'dead_projection_scalar', 'raw_rank6_scalar')
+pairwise_observable=retained topology + phase flux + owner boundary
+switch=higher proof-facing carrier score
+score_hist={10: 1, 21: 1, 61: 1, 63: 1, 66: 1, 68: 1}
+directed_3cycles=0
+hamiltonian_path=mirror_punctured_annulus -> bypassed_saddle_seam -> seven_owner_boundary -> phase_branch_flow -> dead_projection_scalar -> raw_rank6_scalar
+
+## Assumption challenge
+Considered vertices: runners, rescue owners, dead islands, mirror seams,
+phase witnesses, survivor gates, blocker labels, cover arcs, Fourier
+modes, and proof obligations.  Chosen vertices are dead islands,
+mirror seams, and phase-flow bypasses.  This preserves the terminal
+discharge predicate and destroys raw runner order only after replacing
+it by mirror, owner-boundary, and phase-flux sidecars.

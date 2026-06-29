@@ -15,6 +15,31 @@
 
 ---
 
+## Lead codex-2026-06-29: random031 topology atlas
+
+**Status:** EVIDENCE / topology reframing; not proof
+(HYP-3481/T1441/LTI-441/LTT-341), downstream of HYP-3455, HYP-3460,
+HYP-3476, HYP-3477, the HYP-3479 hard-orbit/current join, and the HYP-3480
+zero-edge singleton-current lane.
+
+HYP-3481 turns the random031 hard control clause into two exact local pictures:
+
+```text
+mirror-punctured annulus: four singleton dead islands, mirror pairs (0,3),(1,2)
+bypassed saddle seam: max-delta seam on components 43/54 plus lower-delta bypass
+```
+
+Readout: the dead projection has `components=4`, `largest=1`, and `edges=0`.
+The HYP-3455 max-delta gates on components `43/54` are an antipodal seam
+carrying owners `(23,45,93,113,147,169,173)`, while the same two components
+have lower-delta mirror bypass gates with owners `(23,93,113)`.  The q=`14V`
+phase flow has `282` witnesses, `hard_gate_hits=0`, and
+`lower_delta_hard_component_hits=12`.
+
+Next: prove the mirror-puncture island-current lemma and the bypassed-saddle
+lemma.  Tournament vertices should be islands, seams, phase-flow bypasses,
+owner boundaries, and proof obligations, not runners or raw gate counts.
+
 ## Lead codex-2026-06-29: small-touch singleton-pocket geometry atlas
 
 **Status:** EVIDENCE / finite geometry atlas; not proof

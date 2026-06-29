@@ -1,5 +1,29 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3481 random031 topology addendum:**
+HYP-3481 sharpens the unique hard/currentless overlap `random_covering_031`
+after HYP-3479 reduces hard-orbit discharge to separating-current transfer plus
+this named clause, and after HYP-3480 keeps random031 as the zero-edge
+singleton-current hard control.  The dead-cover projection is four isolated
+mirror-paired islands, not a graph with a missing cut:
+
+```text
+dead_projection=components=4 largest=1 edges=0
+dead_island_mirror_pairs=[(0,3),(1,2)]
+```
+
+The max-delta HYP-3455 gates on components `43/54` form an antipodal saddle
+seam with seven-owner boundary `(23,45,93,113,147,169,173)`, but the q=`14V`
+phase flow has zero hits on that seam and `12` hits on lower-delta bypass gates
+on the same two components.
+
+Open proof task: formalize a mirror-puncture island-current lemma and a
+bypassed-saddle lemma.  The quotient must retain island intervals, mirror
+pairs, branch masks, phase-flow hit data, and owner boundary sidecars; raw
+projection edge counts and raw row names are only shadows. -> HYP-3481,
+HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3460, HYP-3455,
+HYP-3451, HYP-3438, THM-523, LTI-441, LTT-341, T1441, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3478 small-touch singleton-pocket addendum:**
 HYP-3478 identifies the geometry of the six small-touch/no-hard rows left
 after HYP-3476 pair-current and HYP-3477 hard-mirror discharge.  They are not
