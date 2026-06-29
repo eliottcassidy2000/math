@@ -15,26 +15,33 @@
 
 ---
 
-## Lead codex-2026-06-29: small-touch/no-hard geometry audit
+## Lead codex-2026-06-29: small-touch singleton-pocket geometry atlas
 
-**Status:** RESERVED / geometry computation pending; not proof
-(HYP-3478/T1438/LTI-438/LTT-338), downstream of HYP-3476 and HYP-3477.
+**Status:** EVIDENCE / finite geometry atlas; not proof
+(HYP-3478/T1438/LTI-438/LTT-338), downstream of HYP-3476 pair-current,
+HYP-3477 hard-mirror discharge, and the S319 colored gate unit-delta split.
 
-HYP-3478 claims the next OPEN-Q-108 packet: the six non-AP currentless rows
-that have no hard mirror orbit and no E/branch pair-current edge support:
+HYP-3478 audits the six small-touch/no-hard rows directly:
 `random_covering_001`, `random_covering_039`, `random_covering_062`,
 `random_covering_074`, `random_covering_086`, and `random_covering_101`.
+All six have edgeless dead-cover projections, all dead components are isolated
+singleton pockets, and every pocket has an exact mirror partner plus at least
+two complete E/branch gate touches.  The owner-pair grammar is:
 
-Planned readout: component intervals, mirror pairing, blocker-owner pairs and
-residues, projection edge support, touching E/branch gate words, and the
-split between cover-delta sidecar rows (`random_covering_039`,
-`random_covering_074`) and clean unit-delta singleton-current rows.
+```text
+001: (165,179), (81,153)
+039: (63,129)
+062: (9,81)
+074: (15,99)
+086: (133,169)
+101: (7,175)
+```
 
-Use tournament vertices as singleton components, mirror-paired components,
-owner-pair labels, fixed section boundaries, touching gate events, residues,
-cover arcs, color/Fourier modes, and proof obligations.  The quotient must
-preserve the terminal discharge predicate and say what interval/branch/owner
-geometry it destroys.
+Next proof task: prove the four branch-unit singleton rows (`001`, `062`,
+`086`, `101`) by a component-local mirror-pocket theorem, then add the S319
+cover-delta sidecar for `039` and `074`.  Do not spend the next session on
+larger pair-current searches unless a new coordinate creates nontrivial
+component support.
 
 ## Lead codex-2026-06-29: hard mirror-orbit discharge audit
 

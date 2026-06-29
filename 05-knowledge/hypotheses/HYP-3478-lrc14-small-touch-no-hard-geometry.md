@@ -1,6 +1,7 @@
 # HYP-3478: LRC14 Small-Touch / No-Hard Geometry
 
-**Status:** RESERVED STUB / computation in progress; not a proof.
+**Status:** SUPERSEDED RESERVATION / filled by the HYP-3478 geometry atlas;
+not a proof.
 
 **Claimed by:** codex-2026-06-29  
 **Tangent:** T1438  
@@ -21,16 +22,23 @@ random_covering_086
 random_covering_101
 ```
 
-This hypothesis reserves a geometry audit for those six rows.  The goal is to
-describe what their zero-edge singleton dead-cover projections actually are:
+This hypothesis reserved a geometry audit for those six rows.  The active
+evidence file is now
+`05-knowledge/hypotheses/HYP-3478-lrc14-small-touch-geometry-atlas.md`, with
+script
+`04-computation/lrc14_small_touch_geometry_atlas_codex_20260629.py` and stored
+output
+`05-knowledge/results/lrc14_small_touch_geometry_atlas_codex_20260629.out`.
+The goal was to describe what their zero-edge singleton dead-cover projections
+actually are:
 component intervals, mirror pairing, blocker-owner pairs, adjacent touching
 gate types, unit-delta versus cover-delta sidecar status, and any local
 owner-current/two-adic/signed-SPEC proof payload suggested by that geometry.
 
-## Planned Test
+## Filled Test
 
-Use the HYP-3450/HYP-3451/HYP-3453/HYP-3438 row bank and the HYP-3472/HYP-3476
-current utilities to compute, for each of the six rows:
+The HYP-3478 atlas used the HYP-3450/HYP-3451/HYP-3453/HYP-3438 row bank and
+the HYP-3472/HYP-3476 current utilities to compute, for each of the six rows:
 
 - dead component intervals and minimal branch-cover labels;
 - mirror pairing of singleton dead components and owner-pair residues;
@@ -54,14 +62,13 @@ order, branch orientation, endpoint wall labels, and owner-current locality.
 
 ## Current Pull
 
-If the six rows all reduce to balanced mirror-paired singleton components,
-then the next proof target is a finite singleton-current lemma: mirror-balanced
-dead components with only small adjacent E/branch touches must discharge by
-bounded owner-current, endpoint-spine, two-adic descent, exact-period,
-signed-SPEC/Rprime, or state-lift debt.  If the two cover-delta rows
-(`random_covering_039`, `random_covering_074`) have a distinct geometry, split
-them from the four clean unit-delta rows before formalizing the terminal
-packet.
+The atlas confirms that the six rows reduce to mirror-paired singleton
+components.  Five rows have one mirror pair and `random_covering_001` has two.
+All dead-cover projections have zero edges, all hard-orbit counts are zero, and
+every pocket has at least two complete E/branch gate touches.  The next proof
+target is a finite singleton-current lemma for the four branch-unit rows
+(`001`, `062`, `086`, `101`), followed by the cover-delta sidecar clause for
+`039` and `074`.
 
 ## Pointers
 

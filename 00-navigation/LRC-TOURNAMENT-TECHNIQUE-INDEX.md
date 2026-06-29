@@ -9930,39 +9930,43 @@ quotient_legality_status
   HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-3436, HYP-2595,
   THM-523, LTI-436, LTT-336, T1436, OPEN-Q-108.
 
-## LTT-338: Small-Touch / No-Hard Singleton Geometry Tournament
+## LTT-338: Small-Touch Singleton-Pocket Geometry Tournament
 
 - **Move:** Treat singleton dead components, mirror-paired component orbits,
   blocker-owner pairs, touching gate events, unit-delta/cover-delta sidecars,
-  and proof obligations as vertices.  Runners, arcs, raw row names, and raw
-  gate counts are shadows unless they preserve the same terminal discharge
-  predicate.
-- **LRC use:** HYP-3478 audits the six HYP-3476 currentless random rows
-  outside AP84 and HYP-3477 hard mirror-orbit debt:
-  `random_covering_001`, `random_covering_039`, `random_covering_062`,
-  `random_covering_074`, `random_covering_086`, and `random_covering_101`.
-  The goal is to see whether their zero-edge dead projections are all balanced
-  mirror-paired singleton-current packets, and whether `random_covering_039`
-  and `random_covering_074` split as cover-delta sidecar rows.
+  and proof obligations as vertices.  The exact computed carrier tournament
+  uses zero-edge singleton geometry, mirror-pair component atlas, owner-pair
+  residue/span word, complete gate-touch sidecar, S319 unit-delta versus
+  cover-delta split, single best-gate shadow, and raw row-name list.
+- **LRC use:** HYP-3478 turns the six small-touch/no-hard rows from a
+  graph-current exception into a finite singleton-pocket packet.  Every dead
+  component is an isolated rank-2 pocket with one B0 and one B1 owner, an exact
+  mirror partner, and at least two complete E/branch gate touches.  The audit
+  confirms the expected split: `random_covering_039` and
+  `random_covering_074` are cover-delta sidecar rows; `random_covering_001`,
+  `random_covering_062`, `random_covering_086`, and `random_covering_101` are
+  branch-unit singleton-current rows.
 - **Preserves:** terminal zero-edge singleton-current predicate, component
-  interval address, mirror partner, blocker-owner pair, touching low-rank
-  E/branch gate word, and unit-delta versus cover-delta status.
-- **Forgets / guardrail:** compressing to row names, edge-support zero, or
-  scalar gate counts forgets interval order, branch orientation, endpoint wall
-  labels, and owner-current locality.  Those destroyed coordinates must be
-  retained or reconstructed before formalizing the packet.
-- **Pairwise observable:** predicate retention, mirror-pair payload,
-  owner-pair payload, touching-gate payload, delta-sidecar payload, formal
-  packet fit, and scalar penalty.
-- **Switch/gauge:** higher retained local proof payload first; ties follow the
-  route `mirror singleton geometry -> owner-current locality -> gate-touch
-  sidecar -> delta split -> formal packet -> scalar shadows`.
-- **Fingerprint:** reserved pending computation.  Expected comparison is
-  cover-delta sidecar rows (`random_covering_039`, `random_covering_074`)
-  versus clean unit-delta rows (`random_covering_001`, `random_covering_062`,
-  `random_covering_086`, `random_covering_101`).
-- **Next hook:** compute the six-row geometry and decide whether OPEN-Q-108
-  needs one singleton-current lemma or a split two-row/four-row finite packet.
+  interval address, mirror partner, blocker-owner pair, residue/span word,
+  complete low-rank E/branch gate touch payload, and S319 unit-delta versus
+  cover-delta status.
+- **Forgets / guardrail:** row names, projection-edge counts, edge-support
+  zero, and raw gate counts are shadows.  A quotient that collapses the
+  pockets must reconstruct interval location, branch orientation, endpoint wall
+  labels, mirror mate, owner-pair residue/span, owner-current locality, and
+  complete gate-touch payload before claiming a proof.
+- **Pairwise observable:** predicate retention, component geometry, mirror
+  payload, owner-pair payload, gate-touch payload, S319 split, and scalar
+  firewall.
+- **Switch/gauge:** higher retained terminal-proof payload first; ties follow
+  the route from zero-edge geometry through mirror/owner/gate/S319 sidecars to
+  raw shadows.
+- **Fingerprint:** `7` vertices, score histogram
+  `{7:1,38:1,55:1,59:2,62:1,65:1}`, no directed `3`-cycles, and Hamiltonian
+  path
+  `G00_zero_edge_singleton_pocket_geometry -> G01_mirror_pair_dead_component_atlas -> G02_owner_pair_residue_span_word -> G03_gate_touch_complete_pocket_sidecar -> G04_s319_unit_delta_vs_delta_sidecar_split -> G05_single_best_gate_shadow -> G06_raw_row_name_exception_list`.
+- **Next hook:** prove the four branch-unit singleton rows first, then add the
+  cover-delta sidecar for `random_covering_039` and `random_covering_074`.
 - **Pointers:** HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471,
   HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523, LTI-438,
   LTT-338, T1438, OPEN-Q-108.

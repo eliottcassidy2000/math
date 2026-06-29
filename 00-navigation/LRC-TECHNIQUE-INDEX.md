@@ -9312,39 +9312,57 @@ The incoming unit-delta split marks `random_covering_039` and
 Pointers: HYP-3476, HYP-3477, HYP-3475, HYP-3474, HYP-3473, HYP-3472,
 HYP-3471, HYP-3470, HYP-3462, HYP-3460, HYP-3455, HYP-3453, HYP-3451,
 THM-523, LTI-436, LTT-336, T1436, OPEN-Q-108.
-## LTI-438: Small-Touch / No-Hard Singleton Geometry
+## LTI-438: Small-Touch Singleton-Pocket Geometry Atlas
 
-Created by codex-2026-06-29 for HYP-3478/T1438/LTT-338.  This is the direct
-geometry follow-up to HYP-3476's six small-touch/no-hard rows.
+Move: replace edge-current on the six small-touch/no-hard rows by a
+component-local singleton-pocket theorem.  The HYP-3476 pair-current failure is
+not a sign that larger E/branch tuples are needed; it exposes that the
+dead-cover projections are edgeless.
 
-Carrier / vertex set: singleton dead components, mirror-paired dead-component
+Carrier / vertex set: singleton dead components, mirror-paired component
 orbits, blocker-owner label pairs, fixed circle sections, section boundaries,
 touching E/branch gate events, color/residue sidecars, and terminal proof
 obligations.  Runners, arcs, raw row names, and gate counts are negative
-control vertices unless they retain the same proof predicate.
+control vertices unless they retain the same proof predicate.  The exact atlas
+carrier is mirror pairs of singleton dead components, with their B0/B1 owner
+pair, residue/span word, complete E/branch gate touches, and S319 gate-kind
+class retained.
 
-Preserved LRC predicate: the terminal discharge packet left after the low-rank
-E/branch producer fires on a row whose dead-cover projection has no edges.
+Preserved LRC predicate: terminal discharge for the six small-touch/no-hard
+rows after ordinary separating current, AP pair-current, hard mirror-orbit
+discharge, and random031 gluing have been routed.
 
-Destroyed information: interval order, branch orientation, endpoint wall
-labels, owner-current locality, and unit-delta/cover-delta sidecar status if
-the packet is compressed to "six row names" or to scalar edge-support zero.
+Destroyed information: scalar row names, projection edge counts, gate counts,
+or the phrase "six rows" forget interval order, branch orientation, endpoint
+wall labels, owner-current locality, mirror partner, owner-pair residue/span,
+complete gate-touch sidecar, and S319 unit-delta versus cover-delta split.
 
-Planned readout:
+Exact readout:
 
 ```text
-rows = random_covering_001, random_covering_039, random_covering_062,
-       random_covering_074, random_covering_086, random_covering_101
-projection edges = 0 for each row under HYP-3476
-expected cover-delta sidecar rows = random_covering_039, random_covering_074
-expected clean unit-delta rows = random_covering_001, random_covering_062,
-                                 random_covering_086, random_covering_101
+projection_edge_hist={0:6}
+edge_support_label_hist={0:6}
+dead_component_count_hist={2:5,4:1}
+mirror_pair_count_hist={1:5,2:1}
+all_dead_components_singleton=True
+all_hard_orbit_count_hist={0:6}
 ```
 
-Best use: if the audit shows mirror-balanced singleton components, state a
-finite singleton-current lemma.  If the cover-delta sidecar rows have a
-different touch geometry, split the terminal packet into a two-row sidecar and
-four-row unit-delta clause before formalization.
+Owner-pair grammar:
+
+```text
+001: (165,179), (81,153)
+039: (63,129)
+062: (9,81)
+074: (15,99)
+086: (133,169)
+101: (7,175)
+```
+
+Next agent hook: prove the four branch-unit singleton rows first:
+`random_covering_001`, `random_covering_062`, `random_covering_086`, and
+`random_covering_101`.  Then add the cover-delta sidecar needed for
+`random_covering_039` and `random_covering_074`.
 
 Pointers: HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471,
 HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523, LTI-438, LTT-338,

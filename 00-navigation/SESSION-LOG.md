@@ -34517,3 +34517,45 @@ still fails in this environment because `origin` is HTTPS and there is no
 GitHub username/token, while `gh` is unavailable and `ssh` is blocked.  The
 closeout handoff below will therefore also remain local unless credentials are
 added.
+
+## codex-2026-06-29 -- small-touch singleton-pocket geometry atlas -- HYP-3478
+
+Continued from the HYP-3476/HYP-3477 split and focused on the user's prompt to
+see the underlying geometry of the six small-touch/no-hard rows.  Added
+`04-computation/lrc14_small_touch_geometry_atlas_codex_20260629.py`,
+`05-knowledge/hypotheses/HYP-3478-lrc14-small-touch-geometry-atlas.md`,
+stored
+`05-knowledge/results/lrc14_small_touch_geometry_atlas_codex_20260629.out`,
+and wrote
+`07-reflections/lrc14-small-touch-geometry-atlas-codex-20260629.md`.
+
+Exact readout:
+
+```text
+projection_edge_hist={0:6}
+edge_support_label_hist={0:6}
+dead_component_count_hist={2:5,4:1}
+mirror_pair_count_hist={1:5,2:1}
+all_dead_components_singleton=True
+all_hard_orbit_count_hist={0:6}
+s319_min_gate_kind_hist={'branch_unit_delta':4,'delta_sidecar_packet':2}
+```
+
+The six rows are mirror-paired singleton pockets, not weak graph-current rows.
+Owner-pair grammar:
+
+```text
+001: (165,179), (81,153)
+039: (63,129)
+062: (9,81)
+074: (15,99)
+086: (133,169)
+101: (7,175)
+```
+
+Every pocket has at least two complete E/branch gate touches.  The proof target
+is now a singleton-pocket theorem: handle branch-unit rows `001`, `062`,
+`086`, and `101` first, then attach the S319 cover-delta sidecar for `039` and
+`074`.  Tournament Analysis uses geometric proof carriers as vertices, with
+Hamiltonian path
+`G00_zero_edge_singleton_pocket_geometry -> G01_mirror_pair_dead_component_atlas -> G02_owner_pair_residue_span_word -> G03_gate_touch_complete_pocket_sidecar -> G04_s319_unit_delta_vs_delta_sidecar_split -> G05_single_best_gate_shadow -> G06_raw_row_name_exception_list`.
