@@ -167,16 +167,73 @@ random031: HYP-3455/HYP-3460 gluing and phase-branch clause
 This makes the next proof target narrower: prove the six small-touch
 zero-edge rows harmless, then close the random031 gluing clause without
 forgetting route sidecar `R`.
+## codex-2026-06-29 -- HYP-3490 private-label firewall audit
 
-Result: added the script/result/reflection:
+Continued after rebasing over the shared HYP-3476 pair-current, HYP-3476
+exception-frontier, and HYP-3477 hard-orbit results.  Claimed
+HYP-3490/T1450/LTI-450/LTT-350 for the label-multiplicity explanation of the
+remaining random currentless rows.
+
+During close-out, origin/main reserved HYP-3480/T1440/LTI-440/LTT-340 for the
+zero-edge singleton-current audit.  Kept that namespace intact and moved this
+private-label firewall packet to HYP-3490/T1450/LTI-450/LTT-350.  The intended
+order is now: HYP-3490 proves the all-union private-label firewall; HYP-3480
+is the executable singleton-current route for the six non-hard rows.
+
+A later close-out fetch reserved HYP-3481/T1441/LTI-441/LTT-341 for the
+`random_covering_031` topology atlas.  Kept that namespace too.  The final
+route split was then updated again after HYP-3482/T1442/LTI-442/LTT-342 landed
+as the random031 seam atlas.  To avoid further close-out namespace races, the
+private-label firewall packet now uses HYP-3490/T1450/LTI-450/LTT-350.  The
+final dependency chain is: HYP-3490 private-label firewall,
+HYP-3484/HYP-3483/HYP-3482/HYP-3481 random031
+forbidden-seam-flow/recursion/seam/topology/HYP-3455 hard gluing, and
+HYP-3480 singleton-current audit over HYP-3478 for the other six rows.
+
+A final close-out fetch added HYP-3483/T1443/LTI-443/LTT-343 for the random031
+recursion-flow comparator.  HYP-3490 now treats HYP-3483 as the immediate
+random031 subroute before the older forbidden-seam and topology atlases.
+
+One more close-out fetch added HYP-3484/T1444/LTI-444/LTT-344 for random031
+forbidden-seam flow.  HYP-3490 now routes the private hard-overlap row through
+that seam-flow surgery packet first: seam deletion changes no phase routing,
+while bypass deletion accounts for exactly the `12` lower-delta hits.
+
+The final rebase also turned HYP-3480 from a reservation into an exact
+singleton-current audit: the six non-hard private rows have complete
+branch-unit touches on `14/14` target dead components and mirror-compatible
+branch-unit gate pairs on `7/7` mirror pairs.  The six-row terminal split is
+clean `062/086/101`, asymmetric `001`, and cover-delta minimum shadows
+`039/074`.
+
+Added:
 
 ```text
-04-computation/lrc14_small_touch_no_hard_geometry_codex_20260629.py
-05-knowledge/results/lrc14_small_touch_no_hard_geometry_codex_20260629.out
-07-reflections/lrc14-small-touch-no-hard-geometry-codex-20260629.md
+04-computation/lrc14_private_label_firewall_codex_20260629.py
+05-knowledge/results/lrc14_private_label_firewall_codex_20260629.out
+05-knowledge/hypotheses/HYP-3490-lrc14-private-label-firewall.md
+07-reflections/lrc14-private-label-firewall-codex-20260629.md
 ```
 
-Exact readout: `rows=6`, `total_dead_components=14`,
+Exact result: the private-firewall rows are exactly the seven HYP-3472 random
+projection-edge exceptions:
+
+```text
+random_covering_001, random_covering_031, random_covering_039,
+random_covering_062, random_covering_074, random_covering_086,
+random_covering_101
+```
+
+On those rows every blocker label touched by every low-rank E/branch gate has
+dead-cover multiplicity `1`, so no union of adjacent E/branch gate labels can
+delete a projection edge.  This upgrades HYP-3476 from "pairs fail" to an
+all-union firewall for that carrier.  The AP currentless rows are non-private
+and close by HYP-3476 pair-current; `random_covering_031` is the only private
+row with hard mirror debt.
+
+After a final rebase, integrated the incoming HYP-3478 small-touch/no-hard
+geometry audit as the terminal packet for the six non-hard private-firewall
+rows.  Exact HYP-3478 readout: `rows=6`, `total_dead_components=14`,
 `dead_count_hist={2:5,4:1}`, `projection_edge_rows=[]`,
 `singleton_cover_fail_rows=[]`, `mirror_failure_rows=[]`, and
 `owner_unbalanced_rows=[]`.  Every dead component is a singleton `B0`/`B1`

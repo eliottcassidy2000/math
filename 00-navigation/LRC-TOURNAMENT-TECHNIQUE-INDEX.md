@@ -228,6 +228,13 @@ obligations, and proof-carrier interfaces.
   carry/doubling split, seven-owner gluing charge, and scalar shadows the
   vertices.  The quotient preserves the seam/complement distinction and must
   retain the `12` bypass hits separately from the zero hard-seam hits.
+- Need to explain why random pair-currents cannot work:
+  use LTT-350 after LTT-336/LTT-337/LTT-338/LTT-339/LTT-340/LTT-341/LTT-342/LTT-343/LTT-344 and make dead-cover
+  blocker labels with multiplicity sidecars, E/branch-touched private labels,
+  all-union firewall packets, random031 hard-overlap, and small-touch/no-hard
+  exits the vertices.  HYP-3490 shows the seven random edge exceptions are
+  exactly the rows where every E/branch-touched label has multiplicity `1`,
+  so no union of adjacent E/branch labels can remove a projection edge.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -10234,3 +10241,46 @@ quotient_legality_status
 - **Pointers:** HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475,
   HYP-3472, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438, HYP-2241,
   THM-523, LTI-444, LTT-344, T1444, OPEN-Q-108.
+
+## LTT-350: Private-Label Firewall Tournament
+
+- **Move:** Treat label-multiplicity proof carriers as vertices: all-union
+  private-label firewall theorem, random031 private hard-overlap packet,
+  six-row small-touch private packet, AP84 non-private pair-current packet,
+  edge-support label axis, raw pair-current count, and raw exception-name
+  shadow.
+- **LRC use:** HYP-3490 explains the HYP-3476 random pair-current failure by
+  label multiplicity rather than by a lack of clever pairs.  The seven random
+  HYP-3472 projection-edge exceptions are exactly the rows where every
+  E/branch-touched blocker label has dead-cover multiplicity `1`; hence no
+  union of adjacent E/branch gate labels can delete a projection edge.
+- **Preserves:** terminal edge-deletion predicate, blocker-label multiplicity,
+  E/branch touch set, random031 hard-overlap status, small-touch/no-hard
+  status, and AP pair-current/non-private split.
+- **Forgets / guardrail:** pair counts, raw row names, and zero edge-support
+  forget whether the obstruction is private-label structural firewall,
+  non-private AP pair-current, or hard random031 gluing debt.
+- **Pairwise observable:** predicate retention, private-label payload,
+  projection-cut firewall, frontier split, gluing exit, quotient guardrail,
+  and scalar firewall.
+- **Switch/gauge:** higher retained proof payload first; ties follow the route
+  `private-label theorem -> random031 private hard-overlap -> small-touch
+  private packet -> AP84 non-private pair-current -> edge-support label axis
+  -> raw pair count -> raw exception-name shadow`.
+- **Fingerprint:** `7` carrier vertices, score histogram
+  `{7:1,17:1,58:1,59:1,64:1,67:2}`, no directed `3`-cycles, and Hamiltonian
+  path
+  `F00_private_label_firewall_theorem -> F01_random031_private_hard_overlap -> F02_small_touch_private_packet -> F03_ap84_nonprivate_pair_current -> F04_edge_support_label_axis -> F05_raw_pair_current_count -> F06_raw_exception_name`.
+- **Next hook:** formalize the multiplicity-one projection lemma, then route
+  `random_covering_031` through HYP-3484 forbidden-seam flow plus HYP-3483
+  recursion flow plus HYP-3482 seam plus HYP-3481 topology plus
+  HYP-3455/HYP-3477/HYP-3460 and the other six
+  private-firewall rows through HYP-3480's singleton-current audit over
+  HYP-3478 mirror-singleton geometry: complete branch-unit touches on `14/14`
+  target components, mirror-compatible branch-unit gates on `7/7` mirror
+  pairs, clean rows `062/086/101`, asymmetric row `001`, and cover-delta
+  minimum-shadow rows `039/074`, then owner-current, endpoint-spine,
+  exact-period/state-lift, two-adic, or signed-SPEC debt.
+- **Pointers:** HYP-3490, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475,
+  HYP-3472, HYP-3471, HYP-3455, HYP-3453, HYP-3451, HYP-3438, THM-523,
+  LTI-450, LTT-350, T1450, OPEN-Q-108.
