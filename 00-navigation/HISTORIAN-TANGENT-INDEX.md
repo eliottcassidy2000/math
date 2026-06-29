@@ -35,9 +35,12 @@ Useful synthetic maps added later:
   singleton components with complete branch-unit E/branch touches and `7/7`
   mirror component pairs with mirror-compatible unit gate pairs, including the
   two cover-delta-minimum rows.  The control `random_covering_031` has `0/4`
-  complete branch-unit components, so the next proof packet is a
-  mirror-unit singleton-current lemma plus the random031 HYP-3481/HYP-3482
-  topology/seam control clause.
+  complete branch-unit components.  `TournamentH7.LRCSingletonCurrentLedger`
+  now records the seven-row and `4+2+1=7` dispatch arithmetic, so the next
+  proof packet is a mirror-unit singleton-current lemma plus the random031
+  HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481
+  seam-complement/fiber/topology control clause, after HYP-3490's private-label
+  firewall split.
 - `07-reflections/lrc14-small-touch-no-hard-geometry-codex-20260629.md`:
   HYP-3478/T1438 resolves the geometry of the six HYP-3476 small-touch rows
   outside AP84 and hard mirror-orbit debt.  The useful signal is that all

@@ -37,8 +37,18 @@ The control row explains why the sidecars must stay explicit.  `random031` also
 has zero projection edges and singleton mirror pairs, but it has no complete
 branch-unit touches and no mirror-unit component pair.  It remains the
 HYP-3455/HYP-3460/HYP-3479 hard/currentless gluing clause, now refined by
-HYP-3481/HYP-3482 into a topology/seam packet, not a member of the small-touch
-packet.
+HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481 into a
+seam-complement/fiber/forbidden-seam/topology packet, not a member of the
+small-touch packet.  HYP-3490 adds the upstream reason the seven-row family
+cannot close by larger adjacent-label pair currents: all touched blocker labels
+are private.
+
+Formalization checkpoint: `TournamentH7.LRCSingletonCurrentLedger` now records
+the seven-row audit, the `4+2+1=7` terminal split, and the exact
+component/mirror-pair count arithmetic.  The stored build output has no axioms
+for the target-row count, random031 control classification, audited-row
+partition, complete component touch, complete mirror-pair gate, dispatch
+completeness, and dispatch/count matching hooks.
 
 Tournament Analysis used proof carriers rather than runners or raw row names:
 mirror-unit singleton-current packet, complete component-touch certificate,
@@ -51,5 +61,6 @@ label.
 
 Next proof work: prove the mirror-unit singleton-current lemma and wire it into
 the route partition after HYP-3476/HYP-3479.  Then the non-AP currentless
-random frontier is reduced to one finite packet plus the HYP-3481/HYP-3482
-random031 hard-control packet.
+random frontier is reduced by HYP-3490 to one six-row singleton-current packet
+plus the HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481 random031
+hard-control packet.

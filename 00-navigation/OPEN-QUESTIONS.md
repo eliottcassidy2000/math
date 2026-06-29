@@ -122,8 +122,10 @@ singleton B0/B1 owner pairs with a mirror-compatible complete branch-unit
 E/branch gate pair, retaining route sidecar `R` and owner residue/two-adic
 words.  This should discharge the six small-touch rows as one finite packet;
 `random_covering_031` remains the hard/currentless HYP-3455/HYP-3460 clause
-now routed through the HYP-3481/HYP-3482 topology/seam packet.
--> HYP-3480, HYP-3482, HYP-3481, HYP-3479, HYP-3478, HYP-3476, HYP-3472,
+now routed through the HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481
+seam-complement/fiber/topology packet, while HYP-3490 explains why the whole
+seven-row family is an adjacent-label private firewall.
+-> HYP-3480, HYP-3486, HYP-3485, HYP-3490, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3479, HYP-3478, HYP-3476, HYP-3472,
 HYP-3455, THM-523, LTI-440, LTT-340, T1440, OPEN-Q-108.
 **OPEN-Q-108 HYP-3484 random031 forbidden-seam addendum:**
 HYP-3484 refines the HYP-3483 recursion-flow comparator and HYP-3482

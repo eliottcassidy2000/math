@@ -200,7 +200,10 @@ obligations, and proof-carrier interfaces.
   pairs with complete branch-unit E/branch touches and mirror-compatible unit
   gate pairs; all six small-touch rows satisfy this (`14/14` components,
   `7/7` mirror pairs), while random031 has `0/4` complete branch-unit
-  components and stays the hard-control clause refined by HYP-3481/HYP-3482.
+  components and stays the hard-control clause refined by
+  HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481.  HYP-3490 now explains the shared
+  private-label firewall that blocks adjacent-label projection-edge currents on
+  all seven random exceptions.
 - Need to see random031 topologically after the hard/current join:
   use LTT-341 after LTT-340/LTT-339/LTT-337/LTT-336/LTT-315/LTT-320 and make
   mirror-punctured annuli, bypassed saddle seams, seven-owner boundaries,
@@ -10084,7 +10087,10 @@ quotient_legality_status
   rows whose absolute minimum gate is cover-delta-sidecar (`039`, `074`) still
   have component-level unit certificates.  The control has `0/4` complete
   branch-unit components and remains the hard/currentless gluing clause now
-  carried by the HYP-3481/HYP-3482 topology/seam packet.
+  carried by the HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481
+  seam-complement/fiber/forbidden-seam/topology packet.  The Lean ledger
+  `TournamentH7.LRCSingletonCurrentLedger` records the finite row, count, and
+  dispatch arithmetic.
 - **Preserves:** singleton-current terminal predicate, mirror partner, swapped
   B0/B1 owner labels, complete branch-unit gate pair, route label, hard-control
   flag, and owner residue/two-adic sidecar.
@@ -10105,8 +10111,11 @@ quotient_legality_status
 - **Next hook:** prove the mirror-unit singleton-current lemma over swapped
   singleton B0/B1 owner pairs, carrying route sidecar `R` and owner
   residue/two-adic words.  Then the non-AP currentless random frontier reduces
-  to that lemma plus the random031 HYP-3481/HYP-3482 seam packet.
-- **Pointers:** HYP-3480, HYP-3482, HYP-3481, HYP-3479, HYP-3478,
+  to that lemma plus the random031
+  HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481
+  seam-complement/fiber/forbidden-seam packet, after HYP-3490 supplies the
+  private-label firewall split.
+- **Pointers:** HYP-3480, HYP-3486, HYP-3485, HYP-3490, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3479, HYP-3478,
   HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3460, HYP-3455,
   HYP-3453, HYP-3451, HYP-3438, THM-523, LTI-440, LTT-340, T1440,
   OPEN-Q-108.

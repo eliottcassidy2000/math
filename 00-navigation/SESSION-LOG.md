@@ -122,6 +122,8 @@ reserved zero-edge singleton-current audit:
 ```text
 04-computation/lrc14_zero_edge_singleton_current_codex_20260629.py
 05-knowledge/results/lrc14_zero_edge_singleton_current_codex_20260629.out
+04-computation/lean/TournamentH7/TournamentH7/LRCSingletonCurrentLedger.lean
+05-knowledge/results/lrc14_singleton_current_lean_codex_20260629.out
 05-knowledge/hypotheses/HYP-3480-lrc14-zero-edge-singleton-current.md
 07-reflections/lrc14-zero-edge-singleton-current-codex-20260629.md
 ```
@@ -139,7 +141,17 @@ The six small-touch/no-hard zero-edge rows now share one component-level
 mirror-unit singleton-current certificate, including `random_covering_039` and
 `random_covering_074` despite their cover-delta absolute minimum gates.  The
 control `random_covering_031` remains the hard/currentless HYP-3455/HYP-3460
-gluing clause, now carried by the HYP-3481/HYP-3482 topology/seam packet.
+gluing clause, now carried by the
+HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481
+seam-complement/fiber/topology packet, with HYP-3490 explaining the upstream
+private-label firewall split.
+
+Lean: added `TournamentH7.LRCSingletonCurrentLedger`, which records the
+seven-row audit, the `4+2+1=7` dispatch split, and the component/mirror-pair
+count arithmetic.  `lake build TournamentH7.LRCSingletonCurrentLedger` passed;
+the stored output reports no axioms for the target-row count, random031 control
+classification, audited-row partition, complete component touch, complete
+mirror-pair gate, dispatch completeness, and dispatch/count matching hooks.
 
 Next theorem target: prove the mirror-unit singleton-current lemma over
 swapped singleton B0/B1 owner pairs, retaining route sidecar `R` and owner
@@ -235,8 +247,8 @@ route split was then updated again after HYP-3482/T1442/LTI-442/LTT-342 landed
 as the random031 seam atlas.  To avoid further close-out namespace races, the
 private-label firewall packet now uses HYP-3490/T1450/LTI-450/LTT-350.  The
 final dependency chain is: HYP-3490 private-label firewall,
-HYP-3484/HYP-3483/HYP-3482/HYP-3481 random031
-forbidden-seam-flow/recursion/seam/topology/HYP-3455 hard gluing, and
+HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481 random031
+seam-complement/fiber/forbidden-seam-flow/topology/HYP-3455 hard gluing, and
 HYP-3480 singleton-current audit over HYP-3478 for the other six rows.
 
 A final close-out fetch added HYP-3483/T1443/LTI-443/LTT-343 for the random031

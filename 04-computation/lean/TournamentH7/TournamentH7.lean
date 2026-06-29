@@ -122,6 +122,8 @@
     · TournamentH7.LRCHardOrbitCurrentJoin — HYP-3479 finite ledger joining
                                       hard mirror-orbit debt to
                                       boundary-current dispatch.
+    · TournamentH7.LRCSingletonCurrentLedger — HYP-3480 finite ledger for
+                                      zero-edge singleton-current dispatch.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
 
@@ -213,5 +215,6 @@ import TournamentH7.LRCBleedingEdgeFrontier
 import TournamentH7.LRCProofFrontier
 import TournamentH7.LRCColoredGateFormalization
 import TournamentH7.LRCHardOrbitCurrentJoin
+import TournamentH7.LRCSingletonCurrentLedger
 import TournamentH7.LRCCrystallographicThetaFrontier
 import TournamentH7.Verify
