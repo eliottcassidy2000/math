@@ -522,6 +522,7 @@ record what it destroys before asking it to prove anything.
 | LTI-441 | Random031 topology atlas | Mirror-punctured annulus, four singleton dead islands, max-delta antipodal seam, lower-delta same-component bypass, phase-flow flux, seven-owner boundary | HYP-3481 reframes `random_covering_031` as a topology problem rather than a scalar obstruction, downstream of HYP-3479 and with HYP-3480 treating it as the hard zero-edge control.  The dead projection is four isolated mirror-paired islands with no edges; the HYP-3455 max-delta pair on components `43/54` is an antipodal seam carrying owners `(23,45,93,113,147,169,173)`, while the same components have lower-delta bypass gates carrying `(23,93,113)`.  The q=`14V` phase flow has `282` witnesses, `hard_gate_hits=0`, and `lower_delta_hard_component_hits=12`. | HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523, T1441, LTT-341, LTI-441, OPEN-Q-108 | Prove the mirror-puncture island-current lemma and the bypassed-saddle lemma.  The legal quotient must keep island intervals, mirror pairs, branch masks, phase-flow hits, and owner boundary debt before trying to discharge random031. |
 | LTI-442 | Random031 punctured-cylinder forbidden seam | Dead-island punctures, mirror-paired components, max-delta seam components, seven-owner seam layers, lower-delta phase-flow bypass, additive owner rim versus doubling branch fold | HYP-3482 extends the HYP-3481 topology atlas by treating the hard pair `(43,54)` as a forbidden max-delta seam whose complement carries phase flow.  Four isolated dead islands form two mirror pairs, the seam carries owners `(23,45,93,113,147,169,173)`, and the 282 phase witnesses live on the seam complement with zero hard-seam hits and 12 lower-delta bypass hits on the same components. | HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3460, HYP-3455, HYP-3451, HYP-3438, THM-523, T1442, LTT-342, LTI-442, OPEN-Q-108 | Build a seam-complement graph: remove the max-delta hard pair, route all q=`14V` phase witnesses through lower-delta branch-compatible gates, and prove every phase-flow component reaches low-rank escape before it would need the forbidden seam. |
 | LTI-443 | Random031 recursion-flow comparator | `n*2` two-adic phase-flow blocks, `n+2` owner-boundary seam, mirror hit-pairing, ordered six-hit bypass windows, span lemma sidecar | HYP-3483 compares the recursion readings behind HYP-3482/HYP-3481.  The moving flow is `n*2`: q=`14V` has `282` witnesses, zero hard-gate hits, `12` lower-delta bypass hits, exact branch/component balance `6/6`, and two consecutive six-hit mirror blocks in `u=2t`.  The stationary seam is `n+2`: seam owners `(23,45,93,113,147,169,173)` versus bypass owners `(23,93,113)`. | HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3460, HYP-3455, HYP-3234, HYP-3232, HYP-3230, HYP-3418, THM-523, T1443, LTT-343, LTI-443, OPEN-Q-108 | Prove a controlled span lemma: seven-owner seam boundary plus ordered two-adic bypass blocks discharges random031 or emits named owner-current/two-adic/SPEC debt. |
+| LTI-444 | Random031 forbidden-seam flow geometry | Mirror-punctured cylinder, four isolated dead islands, max-delta seven-owner seam, q=14V phase-flow complement, lower-delta same-component bypass, C=27 carry/doubling split | HYP-3484 refines the HYP-3483 recursion-flow comparator, the HYP-3482 punctured-cylinder seam atlas, and the HYP-3481 random031 topology atlas after HYP-3479.  The hard pair on components `(43,54)` is not a phase wall: it has max delta `7`, carries all seven owner labels, and receives `0` compatible q=`14V` phase hits.  The same components are hit exactly `12` times through two lower-delta mirror bypass gates, split `6+6`; deleting the seam changes no phase routing, while deleting the bypass gates loses exactly `12` gate hits.  HYP-3480 confirms random031 has `0/4` branch-unit singleton-current components, so it stays outside the six-row mirror-unit packet. | HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-2241, THM-523, T1444, LTT-344, LTI-444, OPEN-Q-108 | Prove the random031 terminal clause as forbidden seam plus complement flow.  Retain the lower-delta bypass and `C=27` carry/doubling sidecar before using wall, delta, owner-count, or raw phase-hit scalars. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
@@ -9594,3 +9595,53 @@ Pointers: HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477,
 HYP-3476, HYP-3460, HYP-3455, HYP-3451, HYP-3438, THM-523, LTI-442,
 LTT-342, T1442,
 OPEN-Q-108.
+
+## LTI-444: Random031 Forbidden-Seam Flow Geometry
+
+Created by codex-2026-06-29 for HYP-3484/T1444/LTT-344.  This technique
+refines the HYP-3483 recursion-flow comparator, the HYP-3482
+punctured-cylinder seam atlas, and the HYP-3481 `random_covering_031`
+topology atlas after the HYP-3479 hard/current join.
+
+Carrier / vertex set: four isolated dead punctures, mirror-paired component
+intervals, max-delta seam gates, lower-delta same-component bypass gates,
+q=`14V` phase-flow hits, `C=27` carry residues, endpoint residues, and terminal
+proof obligations.  Runners, raw walls, raw deltas, and owner counts are
+negative controls unless they reconstruct the seam/complement split.
+
+Preserved LRC predicate: whether the random031 hard pair is a terminal gluing
+obligation after phase-flow, component-cover, and hard-orbit discharge data are
+retained.
+
+Destroyed information: scalarizing to "max delta 7" forgets that the seam has
+zero compatible phase hits, while scalarizing to "12 component hits" forgets
+that those hits use lower-delta opposite-branch bypass gates.
+
+Exact HYP-3484 readout:
+
+```text
+dead_islands=4
+dead_mirror_pairs=((12,85),(13,84))
+dead_projection_edges=0
+seam_components=(43,54)
+seam_owner_union=(23,45,93,113,147,169,173)
+actual_witnesses=282
+hard_seam_phase_hits=0
+lower_delta_same_component_bypass_hits=12
+remove_seam: delta_any=0, delta_no=0
+remove_bypass: lost_any=12, gained_no=12
+HYP-3480 singleton-current contrast: complete_branch_unit_touch=0/4
+```
+
+Recursion hook: for `n=14`, `C=2n-1=27` and `8*C(n,2)+1=729=(2n-1)^2`.
+The additive `n+2`/carry face sees the seven-owner seam; the multiplicative
+`n*2`/doubling face routes around it by `u=2t mod 1`.
+
+Next agent hook: prove the random031 terminal clause as forbidden seam plus
+complement flow.  Test carry-lift stability modulo `27`, endpoint residues
+`(1,9) mod 14`, bypass uniqueness under wider gate bases, and HYP-3478-style
+puncture filling.
+
+Pointers: HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475,
+HYP-3472, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438,
+HYP-2241, THM-523, LTI-444, LTT-344, T1444, OPEN-Q-108.

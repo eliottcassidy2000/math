@@ -1,0 +1,124 @@
+HYP-3484 RANDOM031 FORBIDDEN-SEAM FLOW GEOMETRY
+==============================================================================
+status=EVIDENCE / geometric-topological reframing; not an LRC14 proof
+source=HYP-3455 random031 gluing + HYP-3460 phase pullback + HYP-3477 hard-orbit discharge
+
+## Assumption Challenge
+alternate vertices considered: runners, gaps, fixed circle sections,
+section boundaries, wall-crossing events, residues, cover arcs,
+Fourier modes, matroid circuits, survivor gates, dead islands,
+phase-flow hits, carry residues, and proof obligations.
+chosen carrier vertices: four dead punctures, the max-delta mirror seam,
+the lower-delta mirror bypass channel, C=27 carry coordinates, and
+the phase-flow complement.  This preserves the LRC branch relocation
+predicate plus the q=14V CRT witness predicate, while destroying raw
+runner order and raw wall-count scalars.
+
+## Mirror-Punctured Cylinder
+row=random_covering_031
+speeds=(12, 23, 45, 55, 58, 70, 84, 93, 113, 120, 147, 169, 173)
+components=98
+component_class_hist={'both_alive': 50, 'branch0_only': 22, 'branch1_only': 22, 'dead_both': 4}
+dead_islands=4
+dead_mirror_pairs=((12, 85), (13, 84))
+dead_projection_edges=0
+projection_components=4
+  puncture=i=12 interval=[113/840,55/406] mirror=85 labels=('B0:45', 'B1:23') owners=(23, 45) owner_mod14=(9, 3) owner_mod27=(23, 18)
+  puncture=i=13 interval=[57/406,69/490] mirror=84 labels=('B0:113', 'B1:93') owners=(93, 113) owner_mod14=(9, 1) owner_mod27=(12, 5)
+  puncture=i=84 interval=[421/490,349/406] mirror=13 labels=('B0:93', 'B1:113') owners=(93, 113) owner_mod14=(9, 1) owner_mod27=(12, 5)
+  puncture=i=85 interval=[351/406,727/840] mirror=12 labels=('B0:23', 'B1:45') owners=(23, 45) owner_mod14=(9, 3) owner_mod27=(23, 18)
+
+## Forbidden Seam
+survivor_gates=138
+max_delta=7
+seam_gate_count=2
+seam_components=(43, 54)
+seam_owner_union=(23, 45, 93, 113, 147, 169, 173)
+seam_owner_count=7
+seam_owner_mod14=((23, 9), (45, 3), (93, 9), (113, 1), (147, 7), (169, 1), (173, 5))
+seam_owner_mod27=((23, 23), (45, 18), (93, 12), (113, 5), (147, 12), (169, 7), (173, 11))
+seam_owner_mod7=((23, 2), (45, 3), (93, 2), (113, 1), (147, 0), (169, 1), (173, 5))
+c27_duplicate_residues={12: 2}
+seam_endpoint_speeds=(23, 113)
+seam_endpoint_residues_mod14=((23, 9), (113, 1))
+seam_gates:
+  c43:[71/161,349/791]:B0|B0:mask=branch0:adj=two_sided:d(3,4):route=mixed_owner_residual:labels=B0:23|B0:113:owners=(23, 45, 93, 113, 147, 169, 173)
+  c54:[442/791,90/161]:B1|B1:mask=branch1:adj=two_sided:d(4,3):route=mixed_owner_residual:labels=B1:113|B1:23:owners=(23, 45, 93, 113, 147, 169, 173)
+
+## Phase Flow On The Complement
+V=173
+q=14V=2422
+P=(12,)
+E=(0, 4, 26, 53, 60, 80, 89, 103, 115, 118, 128, 150)
+actual_witnesses=282
+phase_counts={1: 21, 2: 16, 3: 23, 4: 27, 5: 22, 6: 21, 7: 22, 8: 21, 9: 22, 10: 27, 11: 23, 12: 16, 13: 21}
+phase_branch_counts={(1, 0): 9, (1, 1): 12, (2, 0): 6, (2, 1): 10, (3, 0): 15, (3, 1): 8, (4, 0): 16, (4, 1): 11, (5, 0): 11, (5, 1): 11, (6, 0): 12, (6, 1): 9, (7, 0): 11, (7, 1): 11, (8, 0): 9, (8, 1): 12, (9, 0): 11, (9, 1): 11, (10, 0): 11, (10, 1): 16, (11, 0): 8, (11, 1): 15, (12, 0): 10, (12, 1): 6, (13, 0): 12, (13, 1): 9}
+component_class_hits={'both_alive': 208, 'branch0_only': 37, 'branch1_only': 37}
+gate_route_counts={'edge_singleton_parent_gate': 76, 'edge_survivor_residual': 58, 'mixed_owner_residual': 66, 'owner_current_small_delta': 42}
+gate_total_delta_counts={2: 118, 3: 40, 4: 62, 5: 16, 6: 6}
+any_gate_hits=242
+no_gate_hits=40
+ambiguous_gate_hits=0
+hard_seam_phase_hits=0
+lower_delta_same_component_bypass_hits=12
+bypass_component_branch_delta_hist={(43, 'branch1', 2): 6, (54, 'branch0', 2): 6}
+bypass_phase_hist={2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 2, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}
+bypass_branch_hist={0: 6, 1: 6}
+bypass_route_hist={'owner_current_small_delta': 12}
+unique_bypass_gate_count=2
+bypass_gates:
+  c43:[344/791,286/651]:B1|B1:mask=branch1:adj=two_sided:d(0,2):route=owner_current_small_delta:labels=B1:113|B1:93:owners=(23, 93, 113)
+  c54:[365/651,447/791]:B0|B0:mask=branch0:adj=two_sided:d(2,0):route=owner_current_small_delta:labels=B0:93|B0:113:owners=(23, 93, 113)
+witness_gap_hist_top=[(1, 124), (5, 14), (7, 12), (6, 12), (10, 10), (3, 10), (27, 8), (9, 8), (17, 8), (11, 6), (19, 6), (8, 6)]
+phase_doubling_edges={(1, 2): 1, (2, 4): 1, (3, 6): 1, (4, 8): 1, (5, 10): 1, (6, 12): 1, (7, 0): 1, (8, 2): 1, (9, 4): 1, (10, 6): 1, (11, 8): 1, (12, 10): 1, (13, 12): 1}
+
+## Gate-Surgery Experiments
+seam deletion is the forbidden-seam test: if it is really forbidden,
+phase routing should be unchanged when the max-delta seam is removed.
+  remove_seam: any_gate_hits=242 no_gate_hits=40 ambiguous=0 delta_any=0 delta_no=0
+bypass deletion is the complement-flow test: the lower-delta mirror
+channel should carry exactly the same-component phase traffic.
+  remove_bypass: any_gate_hits=230 no_gate_hits=52 ambiguous=0 lost_any=12 gained_no=12
+  remove_seam_and_bypass: any_gate_hits=230 no_gate_hits=52 ambiguous=0
+
+## n+2 Versus n*2 Recursion Coordinates
+n=14 C=2n-1=27
+triangular_bridge_check=8*C(n,2)+1=729
+(2n-1)^2=729
+triangular_identity_holds=True
+additive_n_plus_2_readout=dead punctures and C=27 carry seam
+multiplicative_n_times_2_readout=phase flow under u=2t mod 1
+prediction=random031 is the interface defect: the +2/carry face sees
+a seven-owner max-delta seam, while the *2/doubling face routes around
+that seam and only pays a 12-hit lower-delta bypass toll.
+
+## Prediction And Experiment Design
+P1 seam-deletion invariance: deleting the two max-delta seam gates
+should leave q=14V phase routing unchanged, as observed above.
+P2 bypass-channel sensitivity: deleting the lower-delta same-component
+bypass gates should move exactly 12 witnesses from gate-hit to no-gate
+unless a wider gate basis adds a secondary channel.
+P3 carry-lift stress: perturb or lift seam owners by C=27 classes;
+preserving the endpoint mod-14 pair (1,9) should keep the seam/bypass
+split more often than preserving raw owner size or raw delta.
+P4 puncture filling: compare HYP-3478 singleton pockets against
+random031's four punctures; isolated dead islands should be harmless
+until a seven-owner seam connects their surrounding flow components.
+
+## Tournament Analysis
+vertices=geometric/topological proof carriers, not runners or arcs
+pairwise_observable=puncture isolation + forbidden-seam avoidance + lower-delta bypass + C27 carry/doubling split + scalar firewall
+switch=higher retained LRC predicate and phase-flow payload; ties use declared carrier order
+axes=(branch_predicate,phase_exactness,seam_charge,puncture_topology,bypass_payload,carry_payload,scalar_firewall)
+score_hist={5: 1, 58: 1, 63: 1, 64: 2, 67: 1, 69: 1}
+directed_3cycles=0
+hamiltonian_path=F00_forbidden_seam_complement_flow -> F01_lower_delta_mirror_bypass_channel -> F03_c27_carry_vs_phase_doubling_split -> F04_seven_owner_gluing_clause -> F02_mirror_punctured_cylinder -> F05_small_touch_singleton_pocket_shadow -> F06_raw_wall_or_delta_scalar
+
+## Proof Pull
+Treat random031's hard pair as a forbidden seam, not a wall to cross.
+The complement carries all q=14V phase flow; the max-delta seam carries
+the seven-owner gluing charge but receives zero compatible phase hits.
+The only phase contact with the seam components is the lower-delta
+mirror bypass, exactly 6 hits on each side.  A useful named clause
+should therefore glue: mirror-punctured cylinder + seven-owner seam
++ lower-delta bypass + C=27 carry/doubling split.

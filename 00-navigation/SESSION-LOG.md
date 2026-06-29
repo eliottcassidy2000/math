@@ -96,6 +96,34 @@ Next theorem target: prove the mirror-unit singleton-current lemma over
 swapped singleton B0/B1 owner pairs, retaining route sidecar `R` and owner
 residue/two-adic words.  This reduces the non-AP currentless random frontier
 to that finite packet plus the random031 forbidden-seam packet.
+## codex-2026-06-29 -- HYP-3484 random031 forbidden-seam flow geometry
+
+Prompt: boldly reframe the geometry/topology of `random_covering_031`, treating
+the hard pair as a forbidden seam whose complement carries phase flow, and
+connect it to older `n+2` versus `n*2` recursion ideas.
+
+Added:
+
+```text
+04-computation/lrc14_random031_forbidden_seam_flow_codex_20260629.py
+05-knowledge/results/lrc14_random031_forbidden_seam_flow_codex_20260629.out
+05-knowledge/hypotheses/HYP-3484-lrc14-random031-forbidden-seam-flow.md
+07-reflections/lrc14-random031-forbidden-seam-flow-codex-20260629.md
+```
+
+After rebasing over the incoming HYP-3481 random031 topology atlas, HYP-3482
+punctured-cylinder seam atlas, and HYP-3483 recursion-flow comparator, this
+packet is the seam-surgery and carry/doubling refinement.  Exact readout:
+`random_covering_031` has four isolated dead islands in two
+mirror pairs, zero dead-projection edges, a max-delta mirror seam on components
+`(43,54)` carrying owner union `(23,45,93,113,147,169,173)`, zero q=`14V`
+phase hits on that seam, and `12` lower-delta same-component bypass hits split
+`6+6`.  Gate surgery confirmed the topology: deleting the seam changes no
+phase routing, while deleting the bypass gates moves exactly `12` witnesses to
+no-gate.  After the HYP-3480 singleton-current audit landed, random031 also has
+the sharp control contrast `0/4` complete branch-unit components and `0/2`
+mirror-unit pairs.  The recursion hook is `C=2n-1=27`: the additive/carry face
+sees the seam, while the doubling face `u=2t mod 1` routes around it.
 
 ## codex-2026-06-29 -- HYP-3478 small-touch/no-hard geometry reservation
 

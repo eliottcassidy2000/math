@@ -27,6 +27,35 @@ LTI-443, LTT-343, OPEN-Q-108.
 ---
 
 ## Lead codex-2026-06-29: random031 topology atlas
+## Lead codex-2026-06-29: random031 forbidden-seam flow geometry
+
+**Status:** EVIDENCE / geometric-topological reframing; not proof
+(HYP-3484/T1444/LTI-444/LTT-344), downstream of HYP-3455 random031 gluing,
+HYP-3460 phase pullback, HYP-3477 hard-orbit discharge, HYP-3478 singleton
+pockets, HYP-3479 hard/current join, the HYP-3481 random031 topology atlas,
+the HYP-3482 punctured-cylinder seam atlas, and the HYP-3483 recursion-flow
+comparator.
+
+HYP-3484 stress-tests the HYP-3482/HYP-3483 mirror-punctured cylinder and
+controlled-span recursion model with local gate surgery.  Exact readout: four
+isolated dead islands, two mirror pairs, zero dead-projection edges, max-delta
+seam components `(43,54)`, seam owner union
+`(23,45,93,113,147,169,173)`, q=`2422` phase witnesses `282`, seam phase hits
+`0`, and lower-delta same-component bypass hits `12` split `6+6`.
+
+The gate surgery is the main new signal:
+
+```text
+remove_seam: delta_any=0, delta_no=0
+remove_bypass: lost_any=12, gained_no=12
+```
+
+Next proof task: formulate the random031 named clause as forbidden seam plus
+complement flow, not as a wall crossing.  Follow-up experiments should stress
+the `C=27` carry classes, endpoint residues `(1,9) mod 14`, bypass uniqueness,
+and HYP-3478-style puncture filling.
+
+## Lead codex-2026-06-29: small-touch singleton-pocket geometry atlas
 
 **Status:** EVIDENCE / topology reframing; not proof
 (HYP-3481/T1441/LTI-441/LTT-341), downstream of HYP-3455, HYP-3460,

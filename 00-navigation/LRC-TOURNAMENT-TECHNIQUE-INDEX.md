@@ -210,6 +210,24 @@ obligations, and proof-carrier interfaces.
   and is bypassed by lower-delta gates on the same components.  The quotient
   preserves the random031 discharge target only if it keeps island intervals,
   mirror pairs, branch masks, phase-flow hits, and owner-boundary sidecars.
+- Need to model random031 as a punctured-cylinder seam complement:
+  use LTT-342 after LTT-341/LTT-340/LTT-339/LTT-337/LTT-320/LTT-315 and make
+  forbidden seam complement flow, mirror-punctured cylinder geometry,
+  seven-owner seam words, lower-delta bypass worldlines, additive owner-rim
+  data, and two-adic branch folds the vertices.  Raw component and hard-delta
+  counts are shadows until they reconstruct the seam-complement packet.
+- Need to keep the random031 recursion readings as a span:
+  use LTT-343 after LTT-342/LTT-341/LTT-340/LTT-339/LTT-337/LTT-320/LTT-315 and
+  make controlled span, two-adic phase blocks, mirror bypass hit-pairing,
+  seven-owner boundary insertion, dead-island puncture words, and scalar
+  shadows the vertices.  Do not choose a pure `n+2` or pure `n*2` route.
+- Need to prove the random031 named clause without treating the hard pair as
+  a wall:
+  use LTT-344 after LTT-343/LTT-342/LTT-341/LTT-340/LTT-339/LTT-337/LTT-320/LTT-315 and make forbidden-seam
+  complement flow, lower-delta bypass, mirror-punctured cylinder, C27
+  carry/doubling split, seven-owner gluing charge, and scalar shadows the
+  vertices.  The quotient preserves the seam/complement distinction and must
+  retain the `12` bypass hits separately from the zero hard-seam hits.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -10175,3 +10193,44 @@ quotient_legality_status
 - **Pointers:** HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479,
   HYP-3477, HYP-3460, HYP-3455, HYP-3234, HYP-3232, HYP-3230, HYP-3418,
   THM-523, LTI-443, LTT-343, T1443, OPEN-Q-108.
+
+## LTT-344: Random031 Forbidden-Seam Flow Tournament
+
+- **Move:** Treat the seam/complement distinction as the tournament carrier.
+  Vertices are forbidden-seam complement flow, lower-delta mirror bypass,
+  mirror-punctured cylinder geometry, `C=27` carry versus phase-doubling split,
+  seven-owner gluing clause, small-touch singleton-pocket shadow, and raw
+  wall/delta scalar.
+- **LRC use:** HYP-3484 refines the HYP-3483 recursion-flow comparator and
+  HYP-3482 punctured-cylinder seam atlas, downstream of HYP-3481, by adding
+  deletion surgery and the `C=27` carry sidecar to the claim that the
+  random031 hard pair is not a phase wall.
+  The max-delta seam on components `(43,54)` carries all seven owner labels
+  but receives zero compatible q=`14V` phase hits.  The same components are
+  touched exactly `12` times through lower-delta opposite-branch bypass gates.
+  Deleting the seam changes no phase routing; deleting the bypass gates loses
+  exactly `12` gate hits.  HYP-3480 confirms the control contrast:
+  random031 has `0/4` complete branch-unit singleton-current components.
+- **Preserves:** random031 terminal gluing predicate, puncture isolation,
+  seam owner charge, q=`14V` phase exactness, bypass support, C27 carry
+  residues, and scalar firewall.
+- **Forgets / guardrail:** raw max delta, raw owner count, or raw component
+  hit count is not legal by itself.  A quotient must distinguish zero hard
+  seam hits from the `12` lower-delta same-component bypass hits.
+- **Pairwise observable:** puncture isolation, forbidden-seam avoidance,
+  lower-delta bypass payload, C27 carry/doubling split, seven-owner charge,
+  and scalar penalty.
+- **Switch/gauge:** higher retained LRC predicate and phase-flow payload first;
+  ties use the declared route from complement flow through bypass/carry/gluing
+  to scalar shadows.
+- **Fingerprint:** `7` vertices, score histogram
+  `{5:1,58:1,63:1,64:2,67:1,69:1}`, no directed `3`-cycles, and Hamiltonian
+  path
+  `F00_forbidden_seam_complement_flow -> F01_lower_delta_mirror_bypass_channel -> F03_c27_carry_vs_phase_doubling_split -> F04_seven_owner_gluing_clause -> F02_mirror_punctured_cylinder -> F05_small_touch_singleton_pocket_shadow -> F06_raw_wall_or_delta_scalar`.
+- **Next hook:** prove the random031 named clause as forbidden seam plus
+  complement flow.  Stress-test carry-lift modulo `27`, endpoint residues
+  `(1,9) mod 14`, bypass uniqueness under wider gate bases, and puncture
+  filling relative to HYP-3478/HYP-3480.
+- **Pointers:** HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475,
+  HYP-3472, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438, HYP-2241,
+  THM-523, LTI-444, LTT-344, T1444, OPEN-Q-108.

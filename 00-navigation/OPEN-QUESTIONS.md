@@ -86,6 +86,38 @@ words.  This should discharge the six small-touch rows as one finite packet;
 now routed through the HYP-3481/HYP-3482 topology/seam packet.
 -> HYP-3480, HYP-3482, HYP-3481, HYP-3479, HYP-3478, HYP-3476, HYP-3472,
 HYP-3455, THM-523, LTI-440, LTT-340, T1440, OPEN-Q-108.
+**OPEN-Q-108 HYP-3484 random031 forbidden-seam addendum:**
+HYP-3484 refines the HYP-3483 recursion-flow comparator and HYP-3482
+punctured-cylinder seam atlas, both downstream of the HYP-3481 random031
+topology atlas, by adding seam-deletion and bypass-deletion surgery.  It treats
+the singleton hard/currentless overlap `random_covering_031` as a
+mirror-punctured cylinder flow problem rather than a wall obstruction.  Exact
+facts:
+
+```text
+dead_islands=4
+dead_mirror_pairs=((12,85),(13,84))
+dead_projection_edges=0
+seam_components=(43,54)
+seam_owner_union=(23,45,93,113,147,169,173)
+actual_witnesses=282
+hard_seam_phase_hits=0
+lower_delta_same_component_bypass_hits=12
+```
+
+Gate surgery confirms the interpretation:
+
+```text
+remove_seam: delta_any=0, delta_no=0
+remove_bypass: lost_any=12, gained_no=12
+```
+
+Open proof task: prove the random031 terminal clause as "forbidden seam plus
+complement flow" with the `C=27` carry/doubling split retained.  Test whether
+preserving endpoint residues `(1,9) mod 14` and owner classes modulo `27`
+predicts seam/bypass stability better than raw max-delta or owner count.
+-> HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476,
+HYP-3460, HYP-3455, HYP-3451, THM-523, LTI-444, LTT-344, T1444, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3478 small-touch singleton-pocket addendum:**
 HYP-3478 identifies the geometry of the six small-touch/no-hard rows left
