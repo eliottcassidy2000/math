@@ -124,16 +124,15 @@ rank-one endpoint interval for m>=5: HYP-3454
 mod-35 escape count for all m: HYP-3456
 ```
 
-The remaining AP-tail work is now the carrier/splice step:
+HYP-3462 now closes the carrier/splice step:
 
 ```text
-1. import or prove the HYP-3431 fixed-corridor identity as the complete
-   low branch-union carrier;
-2. splice HYP-3454/HYP-3456/HYP-3457 into the HYP-3439 rank-5 AP-tail descent.
+HYP-3431 branch-union carrier + HYP-3439 rank-5 AP-tail splice.
 ```
 
 This is still not a proof of LRC14.  It only closes the finite AP-tail sidecar
-inside the current HYP-3439/HYP-3452 corridor.
+inside the current HYP-3439/HYP-3452 corridor.  The active follow-up is the
+non-AP HYP-3453/HYP-3451/HYP-3455 transfer.
 
 ## Tournament Analysis
 

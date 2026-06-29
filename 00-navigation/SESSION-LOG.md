@@ -135,6 +135,37 @@ raw_gate_word_shadow -> raw_component_count`.
 Next proof obligation: instantiate colored gate-extension orbit rows on actual
 HYP-3438 gates, then prove the HYP-3455 seven-owner mirror clause and splice
 AP84 HYP-3454/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460 through HYP-3431/HYP-3439.
+## codex-2026-06-29 -- HYP-3462 AP84 corridor-splice certificate
+
+Continued after HYP-3457 by closing the AP84 splice that HYP-3439 still
+carried as a handoff.  Added HYP-3462/T1422/LTI-422/LTT-322 plus script,
+result, and reflection:
+
+`04-computation/lrc14_ap84_corridor_splice_certificate_codex_20260629.py`,
+`05-knowledge/hypotheses/HYP-3462-lrc14-ap84-corridor-splice-certificate.md`,
+`05-knowledge/results/lrc14_ap84_corridor_splice_certificate_codex_20260629.out`,
+and
+`07-reflections/lrc14-ap84-corridor-splice-certificate-codex-20260629.md`.
+
+Readout: HYP-3431's low-core carrier is the branch union
+`[8/49,6/35] union [29/35,41/49]`, not a pure one-branch corridor.  The AP84
+one-branch rescue split through `m=70` has `rescue_rank_hist={5:69,6:1}` and
+`rank_split_failures=[]`: `m=1` is the rank-`6` base with core
+`(3,5,7,9,11,13)`, while `m>=2` uses the rank-`5` core `(5,7,9,11,13)`.
+
+Rebase note: upstream HYP-3460/T1420 is the phase-branch color pullback for
+the noncanonical random031 sibling.  HYP-3462 is the canonical AP84
+carrier/splice closure and should be composed with HYP-3460 in the non-AP
+transfer rather than merged into it.
+
+The sidecar splice is clean: HYP-3457 finite exact/closure/rank-drop failures
+are empty; HYP-3454 endpoint failures are empty on `m=5..70` and symbolic
+containment through `m=420`; HYP-3456 mirror/formula/component-audit failures
+are empty through `m=70`, with no shift failures through `m=210`.
+
+Conclusion: AP84 is now a closed bridge packet.  The next live proof task is
+non-AP transfer through HYP-3460/HYP-3453/HYP-3451 and HYP-3455's seven-owner
+gluing clause, or else a named owner/current/state-lift debt.
 
 ## codex-2026-06-29 -- HYP-3470 AP84 phase-color grid bridge
 
@@ -224,7 +255,7 @@ The escape count is reduced to a period-`35` boundary clock:
 no checked period-shift failures; the formula shifts by `+24` under
 `m -> m+35`.  HYP-3456 now derives that clock as a floor-count lemma, and
 HYP-3457 closes the finite transient packet, so the next proof hook is to
-splice HYP-3454/HYP-3456/HYP-3457 into the HYP-3439 rank-`5` AP-tail descent.
+use HYP-3462 as the closed HYP-3439 AP-tail splice.
 
 Rebase integration note: incoming HYP-3453 is the broader gate-escape
 transversal router.  HYP-3454 should be used as its AP-tail endpoint-clock
@@ -34013,5 +34044,5 @@ The phase break is explicit:
 positive for `m=1..4`, then reversed at `m=5`, which is exactly the HYP-3454
 pure `E:84m/E:84m` phase.  So the AP-tail split now has named sidecars:
 HYP-3457 for finite transients, HYP-3454 for the endpoint interval, and
-HYP-3456 for the mod-`35` escape count.  The remaining AP-tail task is the
-HYP-3431 fixed-corridor carrier plus the HYP-3439 rank-`5` splice.
+HYP-3456 for the mod-`35` escape count.  HYP-3462 now closes the AP-tail carrier/splice.  The remaining task is
+non-AP transfer through HYP-3453/HYP-3451/HYP-3455.

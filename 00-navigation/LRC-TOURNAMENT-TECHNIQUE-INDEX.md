@@ -9385,9 +9385,10 @@ quotient_legality_status
   `{13:1,28:1,47:1,52:1,55:1,57:1,59:1}`, no directed `3`-cycles, and
   Hamiltonian path
   `gap_intersection_floor_count -> fixed_low_corridor_identity -> period35_residue_vector -> mirror_two_corridor_doubling -> component_audit_validation -> raw_beatty_fit -> raw_dead_fraction_peak`.
-- **Next hook:** import or prove the HYP-3431 fixed-corridor identity as the
-  complete low branch-union carrier for the canonical AP-tail family, then
-  splice HYP-3454/HYP-3456/HYP-3457 into the HYP-3439 rank-`5` descent.
+- **Next hook:** HYP-3462 now closes the HYP-3431 carrier plus HYP-3439
+  rank-`5` splice.  Feed the AP84 packet into HYP-3453/HYP-3451 and discharge
+  the non-AP transfer, especially HYP-3455 or named owner/current/state-lift
+  debt.
 - **Pointers:** HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450,
   HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433,
   HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
@@ -9418,9 +9419,9 @@ quotient_legality_status
   `{21:1,43:1,51:1,52:1,55:1,59:1}`, no directed `3`-cycles, and Hamiltonian
   path
   `four_window_explicit_packet -> component_audit_exact_match -> mirror_pairing -> mixed_endpoint_clip_inequalities -> rank_drop_m3_to_m4 -> raw_transient_sample_rows`.
-- **Next hook:** treat finite AP84 transients as closed.  The remaining AP-tail
-  bridge is the HYP-3431 fixed-corridor carrier and HYP-3439 splice of
-  HYP-3454/HYP-3456/HYP-3457.
+- **Next hook:** treat finite AP84 transients as closed.  HYP-3462 now closes
+  the HYP-3431 carrier plus HYP-3439 splice, so the active work is the non-AP
+  HYP-3453/HYP-3451/HYP-3455 transfer.
 - **Pointers:** HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451,
   HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434,
   HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422,
@@ -9576,6 +9577,42 @@ quotient_legality_status
   HYP-3133, HYP-3056, HYP-3054, HYP-2595, HYP-2594, HYP-2593, HYP-2250,
   HYP-2247, LTI-421, LTT-321, T1421, OPEN-Q-108.
 
+## LTT-322: AP84 Corridor-Splice Tournament
+
+- **Move:** Treat the AP84 bridge splice as a tournament over proof
+  obligations.  Vertices are the HYP-3431 branch-union carrier, canonical
+  rank-`6` base split, rank-`5` overlap descent, finite transient sidecar,
+  endpoint-clock tail, floor-count boundary clock, component-audit checks, and
+  raw rescue-rank scalar.
+- **LRC use:** HYP-3462 imports HYP-3431 as the complete low branch-union
+  carrier `[8/49,6/35] union [29/35,41/49]` and splices HYP-3454/HYP-3456/
+  HYP-3457 into HYP-3439.  On `{1,2,...,11,13,84m}`, the checked one-branch
+  split through `m=70` is rank `6` only at `m=1` and rank `5` for every
+  `m>=2`; finite, endpoint, and floor-count failure lists are empty.
+- **Preserves:** AP84 branch-union survivor predicate, HYP-3439 rank split,
+  endpoint labels, floor-count clock, finite transient windows, and the proof
+  obligation order needed by the component-gate route.
+- **Forgets / guardrail:** arbitrary non-AP row geometry, full primitive-row
+  component adjacency, and scalar rescue-rank meaning are discarded.  Use only
+  as the closed AP84 bridge packet.
+- **Pairwise observable:** carrier retention, rank split, endpoint payload,
+  floor-count payload, finite-transient payload, audit validation, and scalar
+  penalty.
+- **Switch/gauge:** higher retained AP-tail proof payload first; ties use the
+  bridge-splice order.
+- **Fingerprint:** `8` vertices, score histogram
+  `{19:1,47:1,54:1,56:1,57:2,59:2}`, no directed `3`-cycles, and Hamiltonian
+  path
+  `fixed_branch_union_carrier -> floor_count_boundary_clock -> canonical_rank6_base_split -> endpoint_clock_tail -> rank5_overlap_descent -> finite_transient_sidecar -> component_audit_checks -> raw_rescue_rank_scalar`.
+- **Next hook:** AP84 is closed as a bridge packet.  Feed it into
+  HYP-3461/HYP-3460/HYP-3453/HYP-3451 and discharge non-AP transfer, especially HYP-3455 or a
+  named owner/current/state-lift debt.
+- **Pointers:** HYP-3462, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453,
+  HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436,
+  HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426,
+  HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-422,
+  LTT-322, T1422, OPEN-Q-108.
+
 ## LTT-330: AP84 Phase-Color Grid Tournament
 
 - **Move:** Treat AP84 colored CRT placement as a tournament over color-grid
@@ -9591,14 +9628,14 @@ quotient_legality_status
   period `5005`.  This is the exact canonical AP84 CRT-placement sidecar under
   HYP-3459's color-packet legality audit, complementary to HYP-3460's
   phase-branch pullback, downstream of HYP-3461's colored-extension gate
-  carrier, and the placement sibling of HYP-3458's
+  carrier and HYP-3462's closed corridor-splice carrier, and the placement sibling of HYP-3458's
   coloring-recursion state.
 - **Preserves:** exact `q=14V` CRT placement, phase-color residue sidecar,
   closed-boundary hits, total discrepancy period, live-color symmetry, and
   compatibility with HYP-3456.
 - **Forgets / guardrail:** branch-cover geometry and component adjacency are
   discarded.  Do not use this as a substitute for HYP-3456's component/corridor
-  escape count.
+  escape count or HYP-3462's structural AP84 carrier.
 - **Pairwise observable:** CRT exactness, grid formula exactness, discrepancy
   period, color-sidecar retention, boundary-clock payload, HYP-3456
   compatibility, and scalarization loss.
@@ -9610,7 +9647,8 @@ quotient_legality_status
   `exact_H2593_CRT_color_predicate -> closed_color_grid_floor_formula -> total_period385_discrepancy_clock -> color_vector_period5005_sidecar -> mod7_boundary_bonus_gate -> H3456_period35_component_bridge -> raw_live_layer_mass_scalar`.
 - **Next hook:** prove the four fixed live intervals and floor/ceiling color
   count symbolically, then attach the period-`385`/`5005` sidecar only when an
-  AP-tail proof needs actual colored CRT witnesses.
-- **Pointers:** HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3454, HYP-3452, HYP-2595,
+  AP-tail proof needs actual colored CRT witnesses after HYP-3462 has closed
+  the structural AP84 carrier.
+- **Pointers:** HYP-3470, HYP-3462, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3454, HYP-3452, HYP-2595,
   HYP-2594, HYP-2593, HYP-3439, THM-523, LTI-430, LTT-330, T1430,
   OPEN-Q-108.

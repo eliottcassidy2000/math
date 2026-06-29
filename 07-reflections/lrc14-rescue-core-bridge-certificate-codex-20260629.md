@@ -41,7 +41,8 @@ negative one-branch slack plus legal two-colour escape.  It destroys raw runner
 order and most interval geometry, so endpoint labels, survivor-gate words, and
 component addresses must remain sidecars.
 
-Next pull: formalize the canonical rank-`6` base case by combining HYP-3431's
-corridor fence with HYP-3450/HYP-3451's four low-rank component escapes; then
-splice HYP-3454/HYP-3456/HYP-3457 into the rank-`5` AP-tail descent.  Only
-after that should the bridge be broadened to arbitrary primitive covering rows.
+HYP-3462 now formalizes the AP84 carrier/splice: HYP-3431 supplies the
+branch-union carrier, `m=1` is the rank-`6` base, `m>=2` is the checked rank-`5`
+AP-tail descent, and HYP-3454/HYP-3456/HYP-3457 supply the endpoint, floor, and
+finite packets.  The next pull is broadening the bridge to non-AP primitive
+covering rows through HYP-3453/HYP-3451 and the HYP-3455 gluing clause.

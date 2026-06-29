@@ -107,6 +107,38 @@ endpoint walls, minimal B0/B1 owner covers, cover deltas, mirror orbit id,
 low-rank escape id, and discharge mode.  Desired outcome: every large orbit
 has a rank-2 escape, while the few unescaped orbits are exactly the AP84 and
 random031 packets already named.
+## Lead codex-2026-06-29: AP84 corridor-splice certificate
+
+**Status:** EVIDENCE / AP-tail bridge splice; not proof
+(HYP-3462/T1422/LTI-422/LTT-322), closing the HYP-3439 AP84 handoff by
+importing HYP-3431 as the complete low branch-union carrier and splicing
+HYP-3454/HYP-3456/HYP-3457 into the rank-`5` descent.  This is the canonical
+AP84 structural sibling to HYP-3460's noncanonical phase-branch color pullback.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3462-lrc14-ap84-corridor-splice-certificate.md`,
+script
+`04-computation/lrc14_ap84_corridor_splice_certificate_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_ap84_corridor_splice_certificate_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-ap84-corridor-splice-certificate-codex-20260629.md`.
+
+Readout: the HYP-3431 low branch-union carrier is exactly
+`[8/49,6/35] union [29/35,41/49]`; branch-specific `b0_good` and `b1_good`
+overlap inside those two corridors.  On `{1,2,...,11,13,84m}`, the one-branch
+rescue split through `m=70` is `rescue_rank_hist={5:69,6:1}` with
+`rank_split_failures=[]`: `m=1` has rank-`6` core `(3,5,7,9,11,13)`, while
+all checked `m>=2` rows have rank-`5` core `(5,7,9,11,13)`.
+
+Splice checks: HYP-3457 finite exact/closure/rank-drop failures are empty;
+HYP-3454 endpoint failures are empty on checked `m=5..70` and symbolic
+containment through `m=420`; HYP-3456 mirror/formula/component-audit failures
+are empty through `m=70`, with no shift failures through `m=210`.
+
+Next: AP84 is now closed as a bridge packet.  Feed it into
+HYP-3460/HYP-3453/HYP-3451 and discharge the non-AP transfer, especially
+HYP-3455's seven-owner gluing clause or named owner/current/state-lift debt.
 
 ## Lead codex-2026-06-29: AP84 phase-color grid bridge
 
@@ -177,10 +209,10 @@ transient row has exactly `4` escapes and `low_rank_escape=4`.  The phase break
 is the sign of `(98m+13)/(588m)-6/35=(455-98m)/(2940m)`: positive for
 `m=1..4`, reversed at `m=5`.
 
-Next: the AP-tail bridge no longer has an unnamed finite transient check.  The
-remaining local task is to import or prove the HYP-3431 fixed-corridor identity
-as the complete low branch-union carrier and splice HYP-3454/HYP-3456/HYP-3457
-into the HYP-3439 rank-`5` descent.
+HYP-3462 now closes the AP-tail carrier/splice by importing HYP-3431 as the
+complete branch-union carrier and routing HYP-3454/HYP-3456/HYP-3457 through
+HYP-3439.  The active follow-up is non-AP transfer through HYP-3453/HYP-3451
+and HYP-3455, not another AP84 finite/transient/carrier audit.
 
 ## Lead codex-2026-06-29: AP84 mod-35 floor-count closure
 
@@ -207,10 +239,9 @@ through `m=70`, `mirror_failures=[]`, `formula_failures=[]`, and
 with closed shift `N(m+35)-N(m)=12`, hence
 `escapes(m+35)-escapes(m)=24`.
 
-Next: finish the AP-tail bridge by importing or proving the HYP-3431
-fixed-corridor identity as the complete low branch-union carrier and splicing
-HYP-3454/HYP-3456/HYP-3457 into the HYP-3439 rank-`5` descent before returning
-to the HYP-3453/HYP-3451 gate-conductance route.
+HYP-3462 now finishes the AP-tail carrier/splice.  Return to the
+HYP-3453/HYP-3451 gate-conductance route and the HYP-3455 noncanonical
+seven-owner gluing clause.
 
 ## Lead codex-2026-06-29: HYP-3453 gate-escape transversal
 

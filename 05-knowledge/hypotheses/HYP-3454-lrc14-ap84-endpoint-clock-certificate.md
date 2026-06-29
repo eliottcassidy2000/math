@@ -164,8 +164,9 @@ This is still not a proof of LRC14.  It is a smaller bridge lemma for the
 current AP-tail/rescue-core corridor.  Raw dead fraction remains a scalar
 warning only: HYP-3452 already showed that its checked maximum is a residue
 artifact at `m=35`, while the proof clock starts at the endpoint phase `m=5`.
-After HYP-3456 and HYP-3457, the remaining AP-tail bookkeeping is the
-HYP-3431 fixed-corridor carrier plus the HYP-3439 rank-`5` splice.
+HYP-3462 now closes the AP-tail bookkeeping by importing the HYP-3431
+branch-union carrier and splicing HYP-3454/HYP-3456/HYP-3457 into HYP-3439.
+The active follow-up is non-AP transfer through HYP-3453/HYP-3451/HYP-3455.
 
 ## Tournament Analysis
 

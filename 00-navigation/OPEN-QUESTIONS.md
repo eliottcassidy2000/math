@@ -64,6 +64,32 @@ discharged. -> HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3
 HYP-3439, HYP-3438, HYP-3436, HYP-3425, HYP-3134, HYP-3133, HYP-3056,
 HYP-2595, HYP-2594, HYP-2247, HYP-2250, LTI-421, LTT-321, T1421,
 OPEN-Q-108.
+**OPEN-Q-108 HYP-3462 AP84 corridor-splice addendum:**
+HYP-3462 closes the named AP84 bridge splice.  HYP-3431 is now imported as the
+complete low branch-union carrier
+
+```text
+[8/49,6/35] union [29/35,41/49],
+```
+
+not as a pure one-branch corridor.  The AP84 one-branch split through `m=70` is
+
+```text
+m=1:  rank 6 core (3,5,7,9,11,13)
+m>=2: rank 5 core (5,7,9,11,13)
+```
+
+with `rank_split_failures=[]`.  The finite/transient/endpoint/floor sidecars
+all have empty failure lists: HYP-3457 closes `m=1..4`, HYP-3454 supplies the
+`m>=5` endpoint interval, and HYP-3456 supplies the mod-`35` boundary count.
+So the remaining AP-tail task is no longer an AP84 carrier/splice audit.  The
+next live task is to feed the closed AP84 packet into HYP-3453/HYP-3451 and
+discharge the non-AP transfer, especially HYP-3455's seven-owner gluing clause
+or named owner/current/state-lift debt. -> HYP-3462, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456,
+HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439,
+HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431,
+HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129,
+HYP-2963, THM-523, LTI-422, LTT-322, T1422, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3460 phase-branch color-pullback addendum:**
 HYP-3460 reconnects the regular circular-coloring / phase-color CRT route to
@@ -137,8 +163,9 @@ Validation against HYP-3452 gives `exact_window_failures=[]`,
 `inequality_failures=[]`; every transient row has `escapes=4` and
 `low_rank_escape=4`.  The phase break is the sign of
 `(98m+13)/(588m)-6/35=(455-98m)/(2940m)`, positive for `m=1..4` and reversed
-at `m=5`.  The remaining AP-tail task is the HYP-3431 fixed-corridor carrier
-and the HYP-3439 splice, not another finite transient check. -> HYP-3457,
+at `m=5`.  HYP-3462 now closes the HYP-3431 carrier plus HYP-3439 splice, so
+the active follow-up is the non-AP transfer through HYP-3453/HYP-3451/HYP-3455,
+not another finite transient check. -> HYP-3462, HYP-3460, HYP-3459, HYP-3458, HYP-3457,
 HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450,
 HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433,
 HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
@@ -173,9 +200,9 @@ Validation against the HYP-3452 component audit through `m=70` gives
 `component_audit_failures=[]`.  The correction vector matches HYP-3454, and
 the closed shift is `N(m+35)-N(m)=12`, hence
 `escapes(m+35)-escapes(m)=24`.  HYP-3457 closes the finite `m=1..4` mixed
-cases.  The remaining AP-tail task is now to import or prove the HYP-3431
-fixed-corridor identity as the complete low branch-union carrier and splice the
-named AP-tail sidecars into the HYP-3439 rank-`5` descent. -> HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453,
+cases.  HYP-3462 now imports the HYP-3431 branch-union carrier and splices the
+named AP-tail sidecars into the HYP-3439 rank-`5` descent, so the live task is
+non-AP transfer. -> HYP-3462, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453,
 HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436,
 HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426,
 HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-416, LTT-316,

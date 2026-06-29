@@ -1,0 +1,80 @@
+HYP-3462 AP84 CORRIDOR-SPLICE CERTIFICATE
+========================================================================
+status=EVIDENCE / AP-tail bridge splice; not an LRC14 proof
+source=HYP-3431 + HYP-3437/HYP-3439 + HYP-3454/HYP-3456/HYP-3457
+
+A. HYP-3431 low branch-union carrier
+  low_core_odd=(1,3,5,7,9,11,13)
+  low_even_half=(1,2,3,4,5)
+  b0_good=('[15/91,13/77]', '[29/35,41/49]')
+  b1_good=('[8/49,6/35]', '[64/77,76/91]')
+  branch_overlap=('[15/91,13/77]', '[64/77,76/91]')
+  branch_union=('[8/49,6/35]', '[29/35,41/49]')
+  expected=('[8/49,6/35]', '[29/35,41/49]')
+  identity_ok=True
+  branch_union_measure=4/245
+  corridor_lengths=('2/245', '2/245')
+
+B. HYP-3439 rank split on the AP84 tower
+  checked_m=1..70
+  rescue_rank_hist={5: 69, 6: 1}
+  route_hist={'canonical_rank6_base': 1, 'rank5_ap_tail_descent': 69}
+  rank_split_failures=[]
+  expected: m=1 -> rank 6 core (3,5,7,9,11,13); m>=2 -> rank 5 core (5,7,9,11,13)
+  samples: m | rank | subset | naive_slack | branch0 | margin | route
+    1 |    6 | (3, 5, 7, 9, 11, 13) | -18586/315315 | 563/105105 | 563/105105 | canonical_rank6_base
+    2 |    5 | (5, 7, 9, 11, 13) | -67909/1261260 | 263/30030 | 1919/840840 | rank5_ap_tail_descent
+    3 |    5 | (5, 7, 9, 11, 13) | -5242/105105 | 3119/315315 | 439/140140 | rank5_ap_tail_descent
+    4 |    5 | (5, 7, 9, 11, 13) | -125093/2522520 | 4397/420420 | 353/80080 | rank5_ap_tail_descent
+    5 |    5 | (5, 7, 9, 11, 13) | -63619/1261260 | 4397/420420 | 291/70070 | rank5_ap_tail_descent
+    6 |    5 | (5, 7, 9, 11, 13) | -5242/105105 | 4397/420420 | 3349/840840 | rank5_ap_tail_descent
+    7 |    5 | (5, 7, 9, 11, 13) | -110797/2207205 | 4397/420420 | 6397/1471470 | rank5_ap_tail_descent
+    8 |    5 | (5, 7, 9, 11, 13) | -129383/2522520 | 4397/420420 | 14111/3363360 | rank5_ap_tail_descent
+   12 |    5 | (5, 7, 9, 11, 13) | -63619/1261260 | 4397/420420 | 20809/5045040 | rank5_ap_tail_descent
+   21 |    5 | (5, 7, 9, 11, 13) | -24701/490490 | 4397/420420 | 9238/2207205 | rank5_ap_tail_descent
+   35 |    5 | (5, 7, 9, 11, 13) | -447907/8828820 | 2553/245245 | 12079/2942940 | rank5_ap_tail_descent
+   36 |    5 | (5, 7, 9, 11, 13) | -47893/945945 | 78431/7567560 | 20809/5045040 | rank5_ap_tail_descent
+   70 |    5 | (5, 7, 9, 11, 13) | -892811/17657640 | 2553/245245 | 24301/5885880 | rank5_ap_tail_descent
+
+C. AP-tail sidecar splice
+  finite clause: HYP-3457 handles m=1..4
+    exact_window_failures=[]
+    closure_failures=[]
+    rank_drop_failures_for_m_ge_3=[]
+  endpoint clause: HYP-3454 handles m>=5
+    checked_endpoint_failures_m_5_to_70=[]
+    symbolic_endpoint_containment_failures_m_5_to_420=[]
+  floor-count clause: HYP-3456 counts the alive boundary gaps
+    mirror_failures_m_1_to_70=[]
+    formula_failures_m_1_to_70=[]
+    component_audit_failures_m_1_to_70=[]
+    shift_failures_m_1_to_210=[]
+
+D. Spliced proof interface
+  m=1: HYP-3431 supplies the canonical rank-6 corridor-fence base;
+       HYP-3457 gives the exact finite survivor windows.
+  m=2..4: HYP-3437/HYP-3439 rank drops to the rank-5 core
+          (5,7,9,11,13), and HYP-3457 supplies the finite windows.
+  m>=5: the checked rank-5 overlap descent is stable through m=70;
+        HYP-3454 gives the rank-one endpoint interval and HYP-3456
+        gives the mod-35 boundary count.
+  This removes the AP84 splice as an unnamed HYP-3439 obligation.  The
+  remaining global proof work is the non-AP primitive-row transfer through
+  HYP-3453/HYP-3451/HYP-3455 or named owner/current/state-lift debt.
+
+E. Tournament Analysis
+  vertices=splice proof obligations, not runners or raw arcs
+  pairwise_observable=carrier retention + rank split + endpoint/floor/transient payload + scalar penalty
+  switch=higher retained AP-tail proof payload; ties by bridge-splice order
+  score_hist={19: 1, 47: 1, 54: 1, 56: 1, 57: 2, 59: 2}
+  directed_3cycles=0
+  hamiltonian_path=fixed_branch_union_carrier -> floor_count_boundary_clock -> canonical_rank6_base_split -> endpoint_clock_tail -> rank5_overlap_descent -> finite_transient_sidecar -> component_audit_checks -> raw_rescue_rank_scalar
+
+F. Assumption Challenge
+  Considered vertices: runners, m-values, residues, fixed circle sections,
+  section boundaries, high-grid gaps, wall-crossing events, branch-union
+  corridors, cover arcs, survivor gates, component graph nodes, odd rescue
+  cores, endpoint walls, Fourier modes, matroid circuits, and proof
+  obligations.  The chosen quotient preserves the AP84 branch-union survivor
+  predicate plus the HYP-3439 rank split.  It destroys arbitrary non-AP row
+  geometry and is therefore a bridge splice, not the global LRC14 theorem.
