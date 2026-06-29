@@ -21,6 +21,44 @@ labels are not certificates unless they reconstruct or route this gate word. ->
 HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429,
 HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129,
 THM-523, LTI-399, LTT-299, T1399, OPEN-Q-108.
+**OPEN-Q-108 HYP-3436 minimal bad-core cover extractor addendum:**
+HYP-3436 completes the HYP-3435 inversion and makes the current LRC14 covering
+target sharper.  Work with
+
+```text
+bad_core = E_safe cap B0_odd cap B1_odd
+```
+
+and the exact audited decomposition
+
+```text
+E_safe = branch_union disjoint-union bad_core.
+```
+
+On the `135` primitive covering rows from the branch-cover stress bank:
+`bad_core_cells=11670`, exact decomposition holds on `135/135`, branch union
+is positive on `135/135`, bad core is positive on `133/135`,
+`min_branch_union_measure=1/105`, `min_positive_survivor_gap=1/162540`,
+`max_bad_core_measure=314/735`, `max_bad_core_cell_length=1/49`, and the
+largest minimal-cover signature is `(5,1)`.  Most local covers are `(1,1)`,
+but the hard cells force `(3,3)` and `(5,1)` signatures.
+
+Concrete task:
+
+```text
+prove the minimal-cover no-gluing lemma
+```
+
+for primitive covering rows.  A full cover of every `E_safe` component by
+compatible low/high odd-owner covers should be impossible unless it emits
+owner-current, exact-period, state-lift, signed-SPEC/Rprime, or two-adic loss
+debt.  Split the proof into `(1,1)` corridor/Helly fences, multi-owner
+endpoint-Menger cuts, HYP-3437 overlap-tax graph cuts, and wide nonlocal
+signed-SPEC/exact-period exits.  Raw bad-core mass, harmonic budgets, and
+gamma/Mertens tails are only priority shadows. -> HYP-3436, HYP-3437, HYP-3435, HYP-3434, HYP-3433, HYP-3432, HYP-3431,
+HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424,
+HYP-3423, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-397,
+LTT-297, T1397, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3432 Euler-Mascheroni harmonic wall-budget addendum:**
 HYP-3432 extends HYP-3430's Euler-Mascheroni scalar-firewall audit by testing
@@ -454,6 +492,16 @@ HYP-2963, THM-523, LTI-397, LTT-297, T1397, OPEN-Q-108.
 
 Supersedes the older HYP-3435 open task to build the extractor.  The remaining
 task is the gluing obstruction above, with the same sidecar routers retained.
+HYP-3436 has now completed this open extraction step.  The branch-overlap
+target should be promoted to the no-gluing finite lemma: every emitted
+minimal bad-core cover must descend two-adically, route through owner-current
+or endpoint-Menger, reproduce the HYP-3431 corridor fence, violate HYP-3423
+quotient legality, or feed HYP-3421/HYP-3129 signed-SPEC/Rprime. -> HYP-3436,
+HYP-3435, HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427,
+HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420,
+HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3129, HYP-2963,
+THM-523, LTI-397, LTT-297, T1397, LTI-396, LTT-296, T1396, LTI-393,
+LTT-293, T1393, LTI-392, LTT-292, T1392, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3417 owner-cut dual current addendum:**
 HYP-3417 sharpens the owner-support/Menger route into a concrete certificate

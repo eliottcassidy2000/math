@@ -39,7 +39,12 @@ sidecar/debt.
 Candidate exits are HYP-3431 corridor-fence structure, HYP-3429 endpoint
 spines, HYP-3428 two-adic loss debt, HYP-3427 wall words, HYP-3426 mirror
 reduction, HYP-3417/HYP-3420 owner-current, HYP-3423 topology legality, and
-HYP-3421/HYP-3129 signed-SPEC.
+HYP-3421/HYP-3129 signed-SPEC/Rprime.
+
+After rebasing over HYP-3437, the handoff is clearer: HYP-3436 supplies the
+bad-core atoms and owner-cover signatures, while HYP-3437 should build the
+incidence/Menger graph that explains negative-slack overlap tax and multi-owner
+no-gluing.
 
 ## Assumption Challenge
 

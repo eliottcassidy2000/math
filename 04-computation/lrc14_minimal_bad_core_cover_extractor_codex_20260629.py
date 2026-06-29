@@ -449,6 +449,9 @@ def main() -> None:
     print("  gluing must keep branch owner words and even endpoint gates; harmonic")
     print("  tails, raw bad measure, or topology-only summaries are illegal shortcuts")
     print("  unless they reconstruct or route those sidecars.")
+    print("  HYP-3437 is the reserved overlap-tax Menger-cut graph route for these")
+    print("  bad-core atoms; wide residuals should route to signed-SPEC/Rprime,")
+    print("  exact-period, state-lift, or two-adic loss debt.")
     print()
 
     hist, path = tournament_fingerprint()

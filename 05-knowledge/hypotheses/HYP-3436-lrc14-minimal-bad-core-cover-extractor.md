@@ -10,6 +10,7 @@ script: 04-computation/lrc14_minimal_bad_core_cover_extractor_codex_20260629.py
 result: 05-knowledge/results/lrc14_minimal_bad_core_cover_extractor_codex_20260629.out
 reflection: 07-reflections/lrc14-minimal-bad-core-cover-extractor-codex-20260629.md
 related:
+  - HYP-3437
   - HYP-3435
   - HYP-3434
   - HYP-3433
@@ -165,7 +166,12 @@ The legal exits are the existing ones: HYP-3431 corridor-fence reproduction,
 HYP-3432 endpoint-budget ordering, HYP-3429 endpoint-spine compression,
 HYP-3428 two-adic loss ledger, HYP-3427 wall words, HYP-3426 one-branch
 mirror, HYP-3424 transfer, HYP-3423 topology-to-magnitude guardrail,
-HYP-3417/HYP-3420 owner-current routing, and HYP-3129/HYP-3421 signed-SPEC.
+HYP-3417/HYP-3420 owner-current routing, HYP-3437 overlap-tax Menger cuts, and
+HYP-3129/HYP-3421 signed-SPEC/Rprime.
+
+After rebase, HYP-3437 is the graph-cut sibling of this packet.  HYP-3436
+supplies the local bad-core atoms and minimal owner-cover signatures; HYP-3437
+should use them as the incidence layer for overlap-tax/no-gluing certificates.
 
 ## Tournament Analysis
 

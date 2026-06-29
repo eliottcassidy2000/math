@@ -13,6 +13,9 @@ local-to-global obstruction.
 Executed the HYP-3435 next hook by inverting the positive branch-cover witness
 and classifying the obstruction `E_safe cap B0_odd cap B1_odd`.  Added
 HYP-3436/T1397/LTI-397/LTT-297 plus script/result/reflection:
+Continued the HYP-3435 two-adic branch-cover certificate route and completed
+the reserved HYP-3436/T1397/LTI-397/LTT-297 obstruction-side packet.  Added
+script/result/reflection:
 
 ```text
 04-computation/lrc14_minimal_bad_core_cover_extractor_codex_20260629.py
@@ -35,6 +38,25 @@ cover ledgers, or route the first compatible full cover to corridor-fence,
 endpoint-spine, two-adic loss, owner-current, topology-legality, or signed-SPEC
 debt.  Raw bad-core mass and harmonic tails remain scalar firewalls, not proof
 certificates.
+Exact audit over the same `135` primitive covering rows: `bad_core_cells=11670`,
+`E_safe = branch_union disjoint-union bad_core` on `135/135`, positive branch
+union on `135/135`, positive bad core on `133/135`, minimum branch union
+`1/105`, minimum positive survivor gap `1/162540`, maximum bad-core mass
+`314/735`, maximum bad-core cell length `1/49`, and maximum minimal-cover
+signature `(5,1)`.  Cover signatures are mostly `(1,1)`, but hard rows force
+multi-owner signatures such as `(3,3)` and `(5,1)`.
+
+The proof target is now sharper: prove the minimal-cover no-gluing lemma.  A
+primitive covering row should not be able to cover every `E_safe` component by
+compatible low/high odd-owner covers unless it emits owner-current,
+exact-period, state-lift, signed-SPEC/Rprime, or two-adic loss debt.  Tournament
+Analysis uses proof obligations as vertices, with priority path
+`bad_core_exact_complement_identity -> minimal_odd_owner_cover_extractor -> endpoint_gate_wall_label_ledger -> survivor_neighbor_gap_certificate -> owner_current_terminal_router -> corridor_fence_basecase_matcher -> harmonic_budget_priority_sidecar -> raw_bad_core_mass_scalar`.
+
+Rebase integration: incoming HYP-3437 reserves the overlap-tax Menger-cut
+certificate.  This is the graph-cut sibling of HYP-3436: use the bad-core atoms
+and local cover signatures here as the incidence layer for HYP-3437's
+overlap-tax/no-gluing cuts.
 
 ## codex-2026-06-28 -- HYP-3432 Euler-Mascheroni harmonic wall-budget sidecar
 

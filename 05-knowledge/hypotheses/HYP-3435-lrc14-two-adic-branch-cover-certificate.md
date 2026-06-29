@@ -302,8 +302,10 @@ repair = active odd/even gate ledger plus finite exception routing.
 9. Feed any remaining wide nonlocal obstruction into HYP-3421/HYP-3129
    signed-SPEC/Rprime rather than into the failed `t=1/2` odd witness.
 
-The immediate next computation is to extract minimal branch-cover certificates
-component-by-component rather than only listing successful witnesses.  If a
-future larger row fails, it should print the minimal endpoint cover; if no such
-minimal cover survives the classifier, the HYP-3422 branch lemma becomes a
-finite theorem target.
+HYP-3436 completes the immediate next computation by extracting minimal
+branch-cover certificates component-by-component and classifying the
+complementary bad core.  The next finite theorem target is now the
+minimal-cover no-gluing lemma: every emitted endpoint cover must either
+reproduce the canonical corridor fence, descend two-adically, route through
+owner-current/Menger, feed signed-SPEC/Rprime, or emit exact-period/state-lift
+debt.

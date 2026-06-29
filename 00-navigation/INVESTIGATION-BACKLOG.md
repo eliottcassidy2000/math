@@ -437,6 +437,10 @@ fiber-PGF-equivalent field.
 
 **Status:** EVIDENCE / exact interval-cover classification; not proof
 (HYP-3436/T1397/LTI-397/LTT-297).
+## Lead codex-2026-06-29: Minimal bad-core cover no-gluing theorem
+
+**Status:** EVIDENCE / exact obstruction-side interval-cover classification;
+not proof (HYP-3436/T1397/LTI-397/LTT-297).
 
 Claimed files:
 `05-knowledge/hypotheses/HYP-3436-lrc14-minimal-bad-core-cover-extractor.md`,
@@ -466,6 +470,36 @@ ledgers across all even-safe components.  If gluing survives in a future bank,
 the first compatible full cover should be routed to HYP-3431 corridor-fence
 structure, HYP-3429 endpoint spines, HYP-3428 two-adic loss, HYP-3417/HYP-3420
 owner-current, HYP-3423 legality, or HYP-3421/HYP-3129 signed-SPEC debt.
+and
+`07-reflections/lrc14-minimal-bad-core-cover-extractor-codex-20260629.md`.
+
+Purpose: invert HYP-3435's positive branch-cover certificate.  Instead of
+only asking where `E_safe cap (branch0_good union branch1_good)` survives, the
+extractor classifies the complementary obstruction
+`bad_core = E_safe cap B0_odd cap B1_odd` component-by-component.  It records
+minimal branch-0 and branch-1 odd-owner covers, even endpoint gates, low/high
+odd endpoint labels, and neighboring survivor gaps.
+
+Readout: `135` primitive covering rows audited, `11670` bad-core cells,
+exact decomposition `E_safe = branch_union disjoint-union bad_core` on
+`135/135`, positive branch union on `135/135`, positive bad core on `133/135`,
+minimum branch union `1/105`, minimum positive survivor gap `1/162540`,
+maximum bad-core mass `314/735`, maximum bad-core cell length `1/49`, and
+maximum minimal-cover signature `(5,1)`.  Most bad-core cells are `(1,1)`,
+but hard rows force `(3,3)` and `(5,1)` local cover signatures.
+
+Next: prove the minimal-cover no-gluing lemma.  A primitive covering row
+should not be able to cover every `E_safe` component by compatible low/high
+odd-owner covers unless it emits owner-current, exact-period, state-lift,
+signed-SPEC/Rprime, or two-adic loss debt.  Suggested split: `(1,1)` and
+canonical covers by corridor/Helly fences; multi-owner covers by
+owner-current or endpoint-Menger cuts; wide nonlocal covers by signed-SPEC,
+exact-period, state-lift, or two-adic descent.
+
+Rebase integration: HYP-3437 now reserves the overlap-tax Menger-cut
+certificate.  Feed HYP-3436 bad-core atoms into that graph-cut route whenever
+the no-gluing obstruction is multi-owner or matches HYP-3434 negative-slack /
+overlap-tax rescue behavior.
 
 ## Lead codex-2026-06-28: Two-adic branch-cover certificate
 
@@ -502,13 +536,9 @@ branch measures `563/105105`, branch union `1/105`, selected witness
 `t=2293/3920`, and score `59/784`.  Finite-bank minimum selected score is
 `1283/17160`, margin `401/120120` over `1/14`.
 
-Creative extension: invert the witness script into a minimal-cover extractor.
-For each even-safe component, enumerate the low-odd and high-odd bad intervals,
-then emit the smallest active odd/even endpoint certificate if their
-intersection covers the component.  Compare those certificates against
-HYP-3417/HYP-3420 owner-current routers, HYP-3423 topology-to-magnitude
-legality, HYP-3424's two-adic transfer lemma, and HYP-3432's reciprocal-budget
-ranking of endpoint debt.
+Creative extension completed by HYP-3436: the witness script has been inverted
+into a minimal-cover extractor.  Continue by proving the no-gluing theorem over
+the emitted bad-core cover signatures and endpoint ledgers.
 
 ## Lead codex-2026-06-28: Owner-cut dual current certificate synthesis
 

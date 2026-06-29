@@ -8595,8 +8595,11 @@ quotient_legality_status
   bad-core covers; if gluing survives, route the first compatible full cover to
   HYP-3431 corridor-fence structure, HYP-3429 endpoint spines, HYP-3428
   two-adic loss debt, HYP-3417/HYP-3420 owner-current, HYP-3423 legality, or
-  HYP-3421/HYP-3129 signed-SPEC.
-- **Pointers:** HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3432, HYP-3431,
+  HYP-3437 overlap-tax Menger cuts, HYP-3421/HYP-3129 signed-SPEC/Rprime.
+- **Rebase integration:** HYP-3437 reserves the overlap-tax Menger-cut
+  certificate.  It should consume HYP-3436 bad-core atoms as the graph
+  incidence layer for no-gluing/overlap-tax certificates.
+- **Pointers:** HYP-3436, HYP-3437, HYP-3435, HYP-3434, HYP-3433, HYP-3432, HYP-3431,
   HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424,
   HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3417, HYP-3129, HYP-2963,
   THM-523, LTI-397, LTT-297, T1397, OPEN-Q-108.

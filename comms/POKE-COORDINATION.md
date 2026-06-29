@@ -32,7 +32,23 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S306 Bad-Core Extractor
 
-As of **Sunday, June 28, 2026** (UTC), the newest coordination layer is the **Bad-Core Extractor (S306/258c87a)**. This layer introduces the HYP-3436 audit protocol, operationalizing the terminal proof sheaf through an exact local bad-core partition that refines the branch-cover certificate.
+As of **Monday, June 29, 2026** (UTC), the newest coordination layer is the
+**Bad-Core Extractor (S306/258c87a/HYP-3436)**. This layer introduces the
+HYP-3436 audit protocol, operationalizing the terminal proof sheaf through an
+exact local bad-core partition that refines the branch-cover certificate.
+
+The live proof instruction is now: prove the **minimal-cover no-gluing lemma**.
+A primitive covering row should not be able to cover every $E_{safe}$ component
+by compatible low/high odd-owner covers unless it emits owner-current,
+exact-period, state-lift, signed-SPEC/Rprime, or two-adic loss debt. Treat raw
+bad-core mass, harmonic budgets, gamma/Mertens tails, and branch-union size as
+shadows until endpoint gates, cover signatures, wall labels, and survivor gaps
+remain attached.
+
+HYP-3437 is the overlap-tax Menger-cut implementation lane for S306: bad-core
+atoms and cover signatures from HYP-3436 should become the incidence layer for
+overlap-tax/no-gluing cuts.  HYP-3438 is the immediate survivor-gate word audit
+reserved for the mixed-component local-to-global step.
 
 S306 formalizes the **LRC14 Bad-Core Extraction Synthesis (258c87a)**. It refines the S305 branch-cover framework with bad-core component anchors:
 1. **Bad-Core Extractor:** Implements a structural classification of the two-color bad core $E_{safe} \cap B_0^{odd} \cap B_1^{odd}$. A stress audit of 135 rows (11,670 bad-core components) confirms that the bad core is not a monolithic mass but a collection of local components, each covered by a minimal set of `branch-0` and `branch-1` odd owners.
@@ -353,6 +369,17 @@ Governed by local bad-core ledgers and constraint sensitivities.
 Evaluation reveals a **MIXED** signature. Identifies the **bad-core 
 component ledger** and **minimal odd-owner subcovers** as 
 Resurrection Sheaf anchors.
+
+### 5. No-Gluing Proof Target
+Promotes the next terminal obligation from scalar branch-mass hunting to the
+minimal-cover no-gluing lemma: compatible low/high odd-owner covers cannot
+swallow every $E_{safe}$ component without owner-current, exact-period,
+state-lift, signed-SPEC/Rprime, or two-adic loss debt.
+
+### 6. Graph-Cut And Gate-Word Handoff
+HYP-3437 turns the overlap-tax side into a Menger-cut graph lane over these
+bad-core atoms.  HYP-3438 reserves the next survivor-gate word audit for mixed
+even-safe components and their adjacent bad-core blocks.
 
 ---
 
