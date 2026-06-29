@@ -1,5 +1,18 @@
 # Investigation Backlog
 
+**HYP-3492 repo-history niche connection atlas.**  Convert the historian
+scorecard into executable HYP-3486/HYP-3490 follow-ups.  Highest-yield tasks:
+build a fiber-Haar certificate on the `1211` base fibers; formalize the
+mirror-versus-vertical quotient-legality lemma; minimize the legal
+mirror-run graph as a DFA; audit bypass owners `(23,93,113)` versus seam-only
+owners `(45,147,169,173)` under C6/C3/Qsqrt(-7); build the free-hole incidence
+table; combine HYP-3490 private-label firewall and HYP-3486 fiber graph as a
+no-hidden-lift theorem; and test boundary odd moments on mirror components.
+-> HYP-3492, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482,
+HYP-3481, HYP-3451, HYP-3437, HYP-3422, HYP-3311, HYP-3310, HYP-3239,
+HYP-3218, HYP-3153, HYP-3148, HYP-3023, HYP-2989, LTI-452, LTT-352, T1452,
+OPEN-Q-108.
+
 **HYP-3485 random031 seam-complement connection atlas.**  Convert the
 HYP-3481/HYP-3482/HYP-3483 picture into the next executable audit.  Build a
 relative seam-complement object: delete the max-delta gates on components

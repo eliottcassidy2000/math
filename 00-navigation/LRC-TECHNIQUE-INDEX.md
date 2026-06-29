@@ -528,6 +528,7 @@ record what it destroys before asking it to prove anything.
 | LTI-446 | Random031 seam-complement fiber graph | Two-adic cylinder coordinate `u=2t mod 1`, branch sheets, legal horizontal+mirror flow components, endpoint-rank-2 routing, free-hole packets, pure 12-cell bypass, vertical half-turn quotient guardrail | HYP-3486 executes the HYP-3482 seam-complement graph target.  The 282 witnesses occupy 258/1211 base fibers.  After deleting the max-delta seam, 242 cells hit exactly one endpoint-rank-2 gate and 40 cells are free-hole witnesses.  The legal horizontal+mirror graph has 79 components: 64 ordinary rank-2 components, one pure 12-cell bypass component on `(43,54)` with owners `(23,93,113)`, and 14 mirror-closed free-hole packets. | HYP-3486, HYP-3490, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, HYP-3438, THM-523, T1446, LTT-346, LTI-446, OPEN-Q-108 | Prove the finite trichotomy: rank-2 routed witness cells discharge, free-hole packets discharge as already-safe phase holes, and the pure bypass component discharges the hard seam boundary or emits named owner/two-adic/SPEC debt.  Do not identify vertical half-turn fibers without a sidecar. |
 | LTI-450 | Private-label firewall audit | Dead-cover blocker label multiplicity, E/branch-touched private labels, all-union projection-edge firewall, random031 hard-overlap split, small-touch/no-hard packet, Lean finite ledger | HYP-3490 explains HYP-3476's pair-current failure: the seven HYP-3472 random projection-edge exceptions are exactly the rows where every E/branch-touched blocker label has dead-cover multiplicity `1`.  Hence no union of adjacent E/branch gate labels can delete a projection edge.  `TournamentH7.LRCPrivateLabelFirewall` records the seven-row/count/route and carrier-score arithmetic. | HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3455, HYP-3453, HYP-3451, HYP-3438, THM-523, T1450, LTT-350, LTI-450, OPEN-Q-108 | Prove the multiplicity-one projection lemma; route random031 through HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481 seam-complement/fiber/forbidden-seam/topology debt and the other six private/no-hard rows through HYP-3480's singleton-current audit over HYP-3478 small-touch geometry, owner-current, endpoint-spine, exact-period/state-lift, two-adic, or signed-SPEC debt. |
 | LTI-451 | History niche-carrier recall atlas | Colored Nerode quotients, label-component Menger/Green cuts, `C=27` carry-lift stress, function-compression constancy, owner-cut/SC charal transversals, Joukowski/HB bulk guardrails | HYP-3491 mines older repo threads for carriers that can be reattached to HYP-3490/HYP-3484.  The strongest missed bridge is HYP-3474's partition-lattice quotient legality applied to `private_firewall_status`; the second is a Menger/Green incidence-cut proof of HYP-3490's multiplicity-one firewall. | HYP-3491, HYP-3490, HYP-3484, HYP-3474, HYP-3473, HYP-3461, HYP-3437, HYP-3419, HYP-3236, HYP-3222, HYP-3153, HYP-3151, HYP-3150, THM-523, T1451, LTT-351, LTI-451, OPEN-Q-108 | Build the firewall Nerode audit, then prove the multiplicity-one incidence cut lemma; keep p-adic/discrepancy/SC/BDH/Lee-Yang language only as exact sidecars. |
+| LTI-452 | Repo-history niche proof-service atlas | Historian cluster scorecard, quotient guardrails, fiber-Haar certificate, p-adic/Krasner quotient legality, C6/C3 owner monodromy, automata mirror-run language, design incidence duals, no-hidden-lift theorem | HYP-3492 mines current summary files plus full commit-subject/touched-path history for recurring niche topics and filters them by proof service rather than exotic name.  For HYP-3486/HYP-3490, the useful imports are exact sidecars: fiber-Haar certificate for the `242/40/12` split, mirror-versus-vertical quotient legality, C6/C3/Qsqrt(-7) monodromy for bypass versus seam-only owners, DFA compression of the `79` components, free-hole incidence duals, no-hidden-lift bridge from private-label firewall to fiber discharge, and boundary odd moments. | HYP-3492, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3451, HYP-3437, HYP-3422, HYP-3311, HYP-3310, HYP-3239, HYP-3218, HYP-3153, HYP-3148, HYP-3023, HYP-2989, THM-523, T1452, LTT-352, LTI-452, OPEN-Q-108 | Pick one exact proof service, not another analogy.  Best first experiments: fiber-Haar certificate and mirror-versus-vertical quotient legality over the HYP-3486 fiber graph. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
@@ -9895,3 +9896,53 @@ geometric readout into a terminal random031 theorem.
 Pointers: HYP-3485, HYP-3490, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477,
 HYP-3460, HYP-3455, HYP-3451, HYP-3437, HYP-3428, HYP-3422, HYP-3140,
 HYP-3034, HYP-3023, THM-523, LTI-445, LTT-345, T1445, OPEN-Q-108.
+
+## LTI-452: Repo-History Niche Proof-Service Atlas
+
+Created by codex-2026-06-29 for HYP-3492/T1452/LTT-352.  This technique
+turns a broad history search into a proof-service router for HYP-3486 and
+HYP-3490.
+
+Carrier / vertex set: recurring niche-topic clusters, but only after each is
+translated into an exact proof service:
+
+```text
+quotient guardrail
+topology/path cut
+cyclotomic owner monodromy
+Haar/Fejer discrepancy certificate
+p-adic/Krasner quotient legality
+automata gap language
+design incidence dual
+irreducibility hidden-lift obstruction
+analytic sieve dispatcher
+polygonal boundary moment
+spectral/stat-mech check
+threshold decoy canary
+```
+
+Preserved LRC predicate: whether the imported topic helps preserve or discharge
+the HYP-3486/HYP-3490 random031 terminal predicate.
+
+Destroyed information: raw topic names, famous theorem labels, constants, and
+analogy glosses.  They are legal only after they become exact sidecars such as
+a fiber-Haar certificate, owner-monodromy orbit, DFA state, incidence dual, or
+quotient-legality lemma.
+
+Best use: instantiate one proof service at a time on the HYP-3486 fiber graph.
+The first two recommended tests are:
+
+```text
+fiber-Haar/Fejer certificate on the 1211 base fibers
+mirror-versus-vertical quotient-legality lemma
+```
+
+Then test C6/C3 owner monodromy for `(23,93,113)` versus
+`(45,147,169,173)`, DFA minimization of the 79 mirror-run components,
+free-hole incidence duals, a no-hidden-lift theorem combining HYP-3490 and
+HYP-3486, and boundary odd moments.
+
+Pointers: HYP-3492, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483,
+HYP-3482, HYP-3481, HYP-3451, HYP-3437, HYP-3422, HYP-3311, HYP-3310,
+HYP-3239, HYP-3218, HYP-3153, HYP-3148, HYP-3023, HYP-2989, THM-523,
+LTI-452, LTT-352, T1452, OPEN-Q-108.

@@ -12,6 +12,31 @@ open question, historian note, and reflection so the next formal task is now
 precise: prove the private-label projection lemma, then feed random031 through
 HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481 and the other six
 private/no-hard rows through HYP-3480/HYP-3478.
+## codex-2026-06-29 -- HYP-3492 repo-history niche connection atlas
+
+Prompt: search back through the repo history comprehensively for niche topics
+that may provide insightful connections.  Pulled incoming HYP-3486 first and
+used it as the current proof anchor.
+
+Added a reproducible miner plus HYP-3492/T1452/LTI-452/LTT-352 and reflection:
+
+```text
+04-computation/repo_history_niche_topic_miner_codex_20260629.py
+05-knowledge/results/repo_history_niche_topic_miner_codex_20260629.out
+05-knowledge/hypotheses/HYP-3492-repo-history-niche-connection-atlas.md
+07-reflections/repo-history-niche-connection-atlas-codex-20260629.md
+```
+
+The miner scanned `3088` current summary/knowledge files and all `7569` commit
+subjects plus touched-path records.  Top recurring clusters: tournament
+quotient guardrails, cyclotomic/Qsqrt(-7), topology/path cuts,
+Haar/Fejer/discrepancy, spectral/stat-mech, p-adic/Hensel/Krasner,
+automata/lacunary, analytic sieve, design/code incidence,
+irreducibility/tiling lifts, polygonal/Faulhaber, and threshold decoys.
+Main proof pull: old niche topics are useful only when they become exact proof
+services for HYP-3486/HYP-3490.  Best next hooks are fiber-Haar certificates,
+mirror-versus-vertical quotient legality, owner monodromy, DFA compression,
+free-hole incidence duals, no-hidden-lift statements, and boundary odd moments.
 
 ## codex-2026-06-29 -- HYP-3485 random031 seam-complement connection atlas
 

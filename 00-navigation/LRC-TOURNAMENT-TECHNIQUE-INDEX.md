@@ -10346,6 +10346,39 @@ quotient_legality_status
   HYP-3472, HYP-3471, HYP-3455, HYP-3453, HYP-3451, HYP-3438, THM-523,
   LTI-450, LTT-350, T1450, OPEN-Q-108.
 
+## LTT-352: Repo-History Niche Proof-Service Tournament
+
+- **Move:** Treat mined niche clusters as proof-service carriers, not as raw
+  topic names.  Vertices are quotient guardrails, topology/path cuts,
+  cyclotomic owner monodromy, Haar/Fejer discrepancy certificates,
+  p-adic/Krasner quotient legality, automata gap language, design incidence
+  duals, irreducibility hidden-lift obstruction, analytic sieve dispatcher,
+  polygonal boundary moments, spectral/stat-mech checks, and threshold decoys.
+- **LRC use:** HYP-3492 filters the repository's recurring exotic topics
+  through HYP-3486/HYP-3490.  A topic is useful only if it becomes an exact
+  sidecar or certificate for the random031 terminal predicate: fiber-Haar on
+  the `242/40/12` split, legal mirror quotient, owner monodromy, DFA
+  compression, incidence dual, no-hidden-lift theorem, or boundary moment.
+- **Preserves:** target proof predicate, destroyed-coordinate ledger,
+  reproducible file support, sidecar specificity, and current random031
+  applicability.
+- **Forgets / guardrail:** proper nouns, constants, or famous theorem names are
+  scalar shadows until they name an exact threshold, clock, certificate, or
+  refuted-route canary.
+- **Pairwise observable:** immediate applicability to HYP-3486/HYP-3490,
+  retained LRC predicate, sidecar exactness, corpus support, and metaphor risk.
+- **Switch/gauge:** higher retained random031 terminal-predicate payload first;
+  ties follow the displayed proof-service route.
+- **Fingerprint:** transitive `12`-vertex tournament with score sequence
+  `(0,1,2,3,4,5,6,7,8,9,10,11)` and Hamiltonian path
+  `Q00_tournament_quotient_guardrail -> Q01_topology_path_cut -> Q02_cyclotomic_owner_monodromy -> Q03_discrepancy_haar_fejer_certificate -> Q04_padic_local_lift_legality -> Q05_automata_gap_language -> Q06_design_incidence_dual -> Q07_irreducibility_hidden_lift_obstruction -> Q08_analytic_sieve_dispatcher -> Q09_polygonal_boundary_moment -> Q10_physics_spectral_statmech -> Q11_constants_threshold_decoys`.
+- **Next hook:** choose one exact proof service and instantiate it on HYP-3486,
+  preferably fiber-Haar/Fejer or mirror-versus-vertical quotient legality.
+- **Pointers:** HYP-3492, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483,
+  HYP-3482, HYP-3481, HYP-3451, HYP-3437, HYP-3422, HYP-3311, HYP-3310,
+  HYP-3239, HYP-3218, HYP-3153, HYP-3148, HYP-3023, HYP-2989, THM-523,
+  LTI-452, LTT-352, T1452, OPEN-Q-108.
+
 ## LTT-345: Random031 Seam-Complement Connection Tournament
 
 - **Move:** Treat the seam-complement proof route as the tournament carrier.

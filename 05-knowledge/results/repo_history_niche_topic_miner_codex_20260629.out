@@ -1,0 +1,712 @@
+Repo History Niche Topic Miner
+================================================================================
+generated=2026-06-29T08:36:10
+tracked_text_files_scanned=3088
+commit_subjects_scanned=7569
+history_commits_with_paths_scanned=7569
+
+Ranked Cluster Scorecard
+--------------------------------------------------------------------------------
+cluster | current_hits | current_paths | commit_subject_hits | history_subject_path_commits
+tournament-quotient-guardrails | 23763 | 2262 | 582 | 940
+cyclotomic-galois-q7 | 5833 | 612 | 193 | 205
+topology-path-cuts | 7340 | 744 | 128 | 154
+discrepancy-haar-fejer | 4574 | 524 | 139 | 148
+physics-spectral-statmech | 2494 | 307 | 124 | 142
+p-adic-local-lifting | 1997 | 367 | 129 | 132
+automata-lacunary-sequences | 3449 | 433 | 100 | 110
+analytic-prime-sieve | 1547 | 243 | 64 | 69
+unit-distance-codes-designs | 1442 | 276 | 56 | 62
+irreducibility-polynomial-tiling | 1118 | 297 | 42 | 49
+polygonal-faulhaber-pollock | 913 | 136 | 36 | 43
+constants-thresholds-decoys | 187 | 33 | 25 | 25
+
+Cluster: tournament-quotient-guardrails
+--------------------------------------------------------------------------------
+regex=\b(A000568|Worpitzky|Eulerian|Lee[-– ]Yang|resolvent|Bring radical|Abel[-– ]Ruffini|canary|filler|metagraph|Hamiltonian path|score sequence|tournament)\b
+proof_pull=Controlled forgetting: every quotient must declare its retained predicate and destroyed coordinates.
+current_hits=23763
+current_paths=2262
+commit_subject_hits=582
+history_subject_path_commits=940
+top_current_paths:
+  3211  00-navigation/SESSION-LOG.md
+  2513  05-knowledge/hypotheses/INDEX.md
+  1161  00-navigation/TANGENTS.md
+   960  00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md
+   557  00-navigation/LRC-TECHNIQUE-INDEX.md
+   554  00-navigation/INVESTIGATION-BACKLOG.md
+   421  00-navigation/CONCEPT-MAP.md
+   391  00-navigation/OPEN-QUESTIONS.md
+   242  07-reflections/tournament-matrix-classic-results-atlas-codex-s210.md
+   163  00-navigation/HISTORIAN-TANGENT-INDEX.md
+    90  01-canon/MISTAKES.md
+    69  07-reflections/tournaments-as-codes.md
+recent_subject_hits:
+  a03769fb3 2026-06-28 New obscure math synthesis: 1. The Bring radical, 2. The Meissel-Mertens constant, 3. The Schwarz-Christoffel mapping theorem for polygons with non-parallel sides
+  78f738425 2026-06-28 kps-2026-06-28-S31as: CLOSE -- PROOF-PUSH (HYP-3218): mac-mini's equidistribution finish = explicit cyclotomic Fejer cert; margin=phi(p), |Gauss sum|^2=7=Lee-Yang zero, coherence-vs-arithmetic fight dissolves (AP=self-dual Fejer fixed point); SESSION-LOG
+  107020281 2026-06-28 kps-2026-06-28-S31as: HYP-3218 PROOF-PUSH -- mac-mini's equidistribution FINISH = the explicit cyclotomic FEJER certificate. 4 bridges: (1) Lee-Yang margin=phi(p) cyclotomic group order; (2) |Gauss sum|^2=7=the Lee-Yang zero; (3) Erdos-Turan=Fejer=my magic fn (HYP-3214); (4) the coherence-vs-arithmetic FIGHT DISSOLVES (AP=self-dual Fejer fixed point)
+  d1afdbb42 2026-06-27 mac-mini-2026-06-27-S74: THE ONE OBSTRUCTION (HYP-3221) -- universal even/odd table (8 faces of one obstruction); apex-7 = Lee-Yang zero at 1/p=7 (Binomial(k,1/7) PGF); algebra is config-blind worst-case (all certs fail at k=7 saturation), resolution is analytic equidistribution; octonion REFUTED (no Fano structure, converges kps S31an mult/add resolution); analytic resolution = kps's Cohn-Elkies/Delsarte cyclotomic magic function; NOT a proof
+  696266ba5 2026-06-27 mac-mini-2026-06-27-S74: checkpoint -- HYP-3221 THE ONE OBSTRUCTION (apex-7 = Lee-Yang zero at 1/p=7; config-blind worst-case algebra fails at k=7; resolution = analytic equidistribution; universal even/odd table)
+  27b34af64 2026-06-27 kps-2026-06-27-S31an: HYP-3211 -- apex 7 = TWO exceptional structures: octonion/G_2 (multiplicative, tournament/H side) + cyclotomic (additive, LRC side). Octonion test productive-NEGATIVE (kappa_3 not doubling-invariant, sectors reflection-symmetric not QR). KEY: Joukowski = the Galois TRACE zeta->zeta+conj=2cos bridging mult circle to additive real cubic
+  0321bbe57 2026-06-27 kps-2026-06-27-S31am: CLOSE -- Joukowski bridge merges Joukowski/Hermite-Biehler/Perron-Frobenius (HYP-3210); tournament TRRT = LRC cover bound via one HB interlacing theorem; SESSION-LOG
+  2e681cfce 2026-06-27 mac-mini-2026-06-27-S73d: the moment-problem merge (HYP-3202) -- Caratheodory-Toeplitz + Griffiths/GKS + Verblunsky/OPUC all read ONE LRC FM/AFM phase (consec k>=8 = PSD Toeplitz + Cov>=0 + |alpha|<1; dissociated breaks all); even half = GKS-II monotonicity, Lee-Yang circle = Caratheodory moment-cone boundary; integrates kps-S31al (lambda_min extremality + random-current); +Fejer-Riesz/Christoffel-Darboux/FKG; ceded HYP-3201->HYP-3203; NOT a proof
+  d8789320f 2026-06-27 kps-2026-06-27-S31am: HYP-3210 -- the JOUKOWSKI BRIDGE merges Joukowski+Hermite-Biehler+Perron-Frobenius: tournament TRRT (real axis, oracle I=A+xB) and LRC cover bound (circle) are ONE Hermite-Biehler interlacing theorem, conformally transported by Joukowski; TRRT Lemma B ports to the LRC even/odd(biquadratic+Eulerian) interlacing; Perron-Frobenius = shared leading mode (ferromagnetic uniform on C ~99.7%, de Moivre -1.8019 on zeros). Flags HYP-3201 collision
+  afc130735 2026-06-27 mac-mini-2026-06-27-S73c: two creative angles for the k=8 node (HYP-3201) -- Angle A (even half, TESTED): Perron-Frobenius spectral route, 1=Perron eigvec of empty-sector covariance for consec (1^T C1=6 lambda_max), FM/AFM=positive/negative spectrum, the spectral reason for codex HYP-3200; Angle B (odd half): Joukowski->Hermite-Biehler port, odd Worpitzky leg real-rooted via Eulerian (Frobenius), both legs real-rooted => interlacing=TRRT Lemma B; NOT a proof
+  3be637d6f 2026-06-27 kps-2026-06-27-S31al: HYP-3201 -- TWO new k=8-node angles. (2) Caratheodory-Toeplitz: consec MAXIMIZES lambda_min(Toeplitz of {q_t}) EXHAUSTIVELY over all 3432 bounded k=8 (Lee-Yang circle = trig moment problem; Szego/Caratheodory tools, de Moivre atoms). (1) Ferromagnetic Griffiths: naive speed-path non-monotone (crosses antiferro), needs random-current/coupling-manifold partial order
+  9860b9a84 2026-06-27 mac-mini-2026-06-27-S73b: ferromagnetic merge (HYP-3154) -- Joukowski bridge = the FM(LRC circle)/AFM(tournament real-axis) bridge; merges the-antiferromagnetic-tournament + kps two-maps; converges kps-S31ai (consec=FM covariance phase, kappa3=associator=apex-7); niche sets (size 13): coverage(AP) != circle-tightness(primes) DECOUPLE, dyadic=spin-glass; honest caveat circle=geometry not LRC coverage; NOT a proof
+history_subject_path_hits:
+  0e48f2e6d 2026-06-29 codex: add HYP-3486 random031 fiber graph
+  3a6fbb013 2026-06-29 codex: add HYP-3485 random031 seam bridge
+  bbdc8ee4e 2026-06-29 codex: add HYP-3490 private-label firewall
+  ed060ef30 2026-06-29 codex: add HYP-3484 random031 forbidden seam flow
+  829a491b5 2026-06-29 codex-2026-06-29: add HYP-3483 random031 recursion flow
+  1cb4f5d68 2026-06-29 codex-2026-06-29: audit HYP-3480 singleton current
+  92cb3b82d 2026-06-29 codex: add HYP-3482 random031 seam atlas
+  bf7feb86c 2026-06-29 codex: add LRC14 small-touch singleton-current split
+  b2045c47b 2026-06-29 codex-2026-06-29: add HYP-3481 random031 topology atlas
+  61c8caa60 2026-06-29 codex-2026-06-29: checkpoint - reserve HYP-3480 singleton-current audit
+  79e7b756a 2026-06-29 codex-2026-06-29: audit HYP-3478 small-touch geometry
+  7700c72d0 2026-06-29 codex: add HYP-3478 small-touch geometry atlas
+sample_current_lines:
+  00-navigation/CONCEPT-MAP.md: # Concept Map — Tournament Parity Research
+  00-navigation/CONCEPT-MAP.md: refinement of HYP-3148's live-core audit, HYP-3146's shift-package/canary
+  00-navigation/CONCEPT-MAP.md: packet, HYP-3145's filler-core interface, HYP-3143's n=4 packet-subbasis audit, and HYP-3144's
+  00-navigation/CONCEPT-MAP.md: from exact chart minimality in the user's n=4 tournament models. The fixed
+  00-navigation/CONCURRENT-SESSIONS.md: - Tournament Analysis remains the default computational lens when it fits:
+  00-navigation/CONCURRENT-SESSIONS.md: pairwise observable, switch/gauge, tie Hamiltonian path, and fingerprints.
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: obligations, not runners or raw colors, are the tournament vertices.
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: Erdős tournament problems, Hamiltonian-path maximization, real-root failure
+
+Cluster: cyclotomic-galois-q7
+--------------------------------------------------------------------------------
+regex=\b(Q\(sqrt\(-?7\)\)|Q\(sqrt\(-7\)\)|sqrt-?7|zeta_?7|ζ_?7|cyclotomic|Gauss sum|Legendre|C3|C6|Chebyshev|de Moivre|Joukowski|Hermite[-– ]Biehler|Lindemann|Weierstrass)\b
+proof_pull=Owner-charge and field sidecar: split residue, magnitude, and monodromy before quotienting.
+current_hits=5833
+current_paths=612
+commit_subject_hits=193
+history_subject_path_commits=205
+top_current_paths:
+   969  00-navigation/SESSION-LOG.md
+   930  05-knowledge/hypotheses/INDEX.md
+   274  00-navigation/TANGENTS.md
+   196  00-navigation/LRC-TECHNIQUE-INDEX.md
+   175  00-navigation/OPEN-QUESTIONS.md
+   155  00-navigation/INVESTIGATION-BACKLOG.md
+   136  00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md
+    81  01-canon/theorems/THM-505-the-ocf-non-spectral-defect-H-equals-spectral-skeleton-plus-witt-defect.md
+    47  07-reflections/the-cap-is-a-chebyshev-equioscillation-extremal-and-a-cohn-elkies-magic-function-kps.md
+    44  07-reflections/the-cyclotomic-ideal-joukowski-de-moivre-and-rational-approximation-of-the-dip-kps.md
+    43  00-navigation/CONCEPT-MAP.md
+    42  07-reflections/the-joukowski-bridge-tournament-trrt-and-lrc-cover-bound-are-one-hermite-biehler-theorem-kps.md
+recent_subject_hits:
+  9bc2f6c17 2026-06-28 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Lindemann-Weierstrass theorem on transcendental numbers, 3. The Mertens conjecture and its counterexample bounds
+  1e059be9c 2026-06-28 kps-2026-06-28-S257: reflection -- the Galois group of the apex prime; LRC(14) in Q(zeta_7), 13 runners = 2 C_6-orbits + fixed 7, two halves = two subfields, residue C_6-symmetric (closed) vs magnitude C_6-broken (hard core, q-specific GW)
+  86a4ed3f8 2026-06-28 kps-2026-06-28-S257: GALOIS reframe -- 13 runners = 2 C_6-orbits (units+evens) + fixed apex 7; two proof-halves in Galois-dual subfields Q(cos2pi/7) & Q(sqrt-7); RESIDUE half C_6-invariant (mac-mini C_3 leap valid), MAGNITUDE half BREAKS C_6 (only 12 flexes) = the hard core. Builds on mac-mini S83
+  d95e48d67 2026-06-28 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Sophie Germain identity, 3. The Hermite-Lindemann-Weierstrass theorem extension for p-adic exponentials
+  ab624ad8f 2026-06-28 codex-S292: C6 residue-magnitude factorization (sync)
+  0517e1348 2026-06-28 codex-2026-06-28: add HYP-3310 C6 residue-magnitude frame
+  d33a4d167 2026-06-28 kps-2026-06-28-S256b: close -- census split + tight-locus manifold + Q(sqrt-7) floor partial + MISTAKE-86
+  69d4dbd42 2026-06-28 kps-2026-06-28-S256b: session log + memory -- Q(sqrt-7) floor (organizes, partial) + CENSUS SPLIT (rigid unit-skeleton + one Jacobsthal doubling) + tight-locus manifold + MISTAKE-86
+  0b46ffc39 2026-06-28 mac-mini-2026-06-28-S83: the hidden C_3 (HYP-3257) -- the 3 binding-pair witnesses are ONE C_3-Galois orbit (x3 mod14); C_3 = (Z/14)*/{+-1} = Gal(Q(cos2pi/7)) = de Moivre angles = index (p-1)/2 = #QR mod7 (all=3); LEAP: run the proof C_3-equivariantly -- HYP-2909 (one binding pair, PROVED) + C_3 generates the equioscillation; cap = C_3-trace; rigidity & equidist = C_3-equivariant residuals on Q(cos2pi/7); direction-change off the 13-dim config space; NOT a proof
+  369c9f4e3 2026-06-28 kps-2026-06-28-S256: Thread B -- apex Q(sqrt-7) organizes RESIDUE layer of floor+census (3 binding pairs = 3 Galois-conjugate QR/NQR pairs), but census tight-vs-loose is MAGNITUDE-level (residue-blind: loose 12->26 shares AP signature, M jumps via un-killing t=1/12). Census = exact-minimal-cover rigidity, NOT a congruence
+  0db478918 2026-06-28 kps-2026-06-28-S256: Thread A -- Q(sqrt-7) PARTIALLY organizes floor SPEC: chi_7(n) useless (SPEC on ramified 7|n), but chi_7(k) in lifted var k=n/14 shows splitting structure (QR+, NQR-, ramified-); organizes not proves; SPEC sign depends on Q spread
+  6e0883389 2026-06-28 kps-2026-06-28-S256: close -- index-theorem tested (describes not proves), sign-cancellation bridge refuted, floor=proof, Q(sqrt-7) route
+history_subject_path_hits:
+  9bc2f6c17 2026-06-28 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Lindemann-Weierstrass theorem on transcendental numbers, 3. The Mertens conjecture and its counterexample bounds
+  9ed691e56 2026-06-28 codex: add HYP-3416 recursive quotient ladder
+  1e059be9c 2026-06-28 kps-2026-06-28-S257: reflection -- the Galois group of the apex prime; LRC(14) in Q(zeta_7), 13 runners = 2 C_6-orbits + fixed 7, two halves = two subfields, residue C_6-symmetric (closed) vs magnitude C_6-broken (hard core, q-specific GW)
+  86a4ed3f8 2026-06-28 kps-2026-06-28-S257: GALOIS reframe -- 13 runners = 2 C_6-orbits (units+evens) + fixed apex 7; two proof-halves in Galois-dual subfields Q(cos2pi/7) & Q(sqrt-7); RESIDUE half C_6-invariant (mac-mini C_3 leap valid), MAGNITUDE half BREAKS C_6 (only 12 flexes) = the hard core. Builds on mac-mini S83
+  d95e48d67 2026-06-28 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Sophie Germain identity, 3. The Hermite-Lindemann-Weierstrass theorem extension for p-adic exponentials
+  c02d4cfc7 2026-06-28 codex-2026-06-28: add HYP-3311 CRT Galois sidecar audit
+  ab624ad8f 2026-06-28 codex-S292: C6 residue-magnitude factorization (sync)
+  0517e1348 2026-06-28 codex-2026-06-28: add HYP-3310 C6 residue-magnitude frame
+  d33a4d167 2026-06-28 kps-2026-06-28-S256b: close -- census split + tight-locus manifold + Q(sqrt-7) floor partial + MISTAKE-86
+  69d4dbd42 2026-06-28 kps-2026-06-28-S256b: session log + memory -- Q(sqrt-7) floor (organizes, partial) + CENSUS SPLIT (rigid unit-skeleton + one Jacobsthal doubling) + tight-locus manifold + MISTAKE-86
+  0b46ffc39 2026-06-28 mac-mini-2026-06-28-S83: the hidden C_3 (HYP-3257) -- the 3 binding-pair witnesses are ONE C_3-Galois orbit (x3 mod14); C_3 = (Z/14)*/{+-1} = Gal(Q(cos2pi/7)) = de Moivre angles = index (p-1)/2 = #QR mod7 (all=3); LEAP: run the proof C_3-equivariantly -- HYP-2909 (one binding pair, PROVED) + C_3 generates the equioscillation; cap = C_3-trace; rigidity & equidist = C_3-equivariant residuals on Q(cos2pi/7); direction-change off the 13-dim config space; NOT a proof
+  369c9f4e3 2026-06-28 kps-2026-06-28-S256: Thread B -- apex Q(sqrt-7) organizes RESIDUE layer of floor+census (3 binding pairs = 3 Galois-conjugate QR/NQR pairs), but census tight-vs-loose is MAGNITUDE-level (residue-blind: loose 12->26 shares AP signature, M jumps via un-killing t=1/12). Census = exact-minimal-cover rigidity, NOT a congruence
+sample_current_lines:
+  00-navigation/CONCEPT-MAP.md: HYP-3139/T1204/LTI-265/LTT-163, making the HYP-3132 De Moivre/biquadratic
+  00-navigation/CONCEPT-MAP.md: quotient. HYP-3110 adds the finite De Moivre/Jacobi/theta case: branch and
+  00-navigation/CONCEPT-MAP.md: | **LRC14 median owner/root sidecar spine** | Owner/root-aware medianization table for proof-state route triples | HYP-3068/S234 extends the S233 Desargues-median finalization lens by making `root_object`, `owner_object`
+  00-navigation/CONCEPT-MAP.md: | **LRC14 Fermat-Catalan automatic-gap extension** | Finite-automaton, lacunary-gap, and perfect-power guardrail for labelled packets | HYP-3009/S178 extends HYP-3008 by treating Moser-de Bruijn even-bit words, fibbinary
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: HYP-3132 De Moivre biquadratic symmetry, HYP-3122 gK8/phi4, HYP-3116
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: reduction, De Moivre biquadratic folding, Bravais residue-flatness, Savitch
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: cyclotomic encodings diverge.
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: exchange renormalization gave a physics language for c3/H interaction.
+
+Cluster: topology-path-cuts
+--------------------------------------------------------------------------------
+regex=\b(Borel|Baire|Cech|Čech|Borsuk[-– ]Ulam|Menger|Green current|normal fan|barcode|persistent|Theta\*|ANYA|CWave|Field D\*|Schwarz[-– ]Christoffel|cut|seam|bypass)\b
+proof_pull=Relative topology: seam complements, punctures, low-rank escapes, and path-lift certificates.
+current_hits=7340
+current_paths=744
+commit_subject_hits=128
+history_subject_path_commits=154
+top_current_paths:
+   857  00-navigation/SESSION-LOG.md
+   774  05-knowledge/hypotheses/INDEX.md
+   534  00-navigation/LRC-TECHNIQUE-INDEX.md
+   521  00-navigation/TANGENTS.md
+   402  00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md
+   318  00-navigation/INVESTIGATION-BACKLOG.md
+   295  00-navigation/OPEN-QUESTIONS.md
+   118  00-navigation/CONCEPT-MAP.md
+    82  05-knowledge/hypotheses/HYP-3485-lrc14-random031-seam-complement-connection-atlas.md
+    76  05-knowledge/hypotheses/HYP-3440-lrc14-bring-sc-menger-charal-signatures.md
+    73  07-reflections/full-vs-fixed-hp-tiling-duality.md
+    49  00-navigation/LRC-LENS-MAP.md
+recent_subject_hits:
+  3a6fbb013 2026-06-29 codex: add HYP-3485 random031 seam bridge
+  672721d7a 2026-06-29 codex-S322: forbidden seam flow (sync)
+  ed060ef30 2026-06-29 codex: add HYP-3484 random031 forbidden seam flow
+  d4e8b96a8 2026-06-29 codex-S321: random031 seam atlas (sync)
+  92cb3b82d 2026-06-29 codex: add HYP-3482 random031 seam atlas
+  107bda76f 2026-06-28 codex-2026-06-28: add HYP-3440 charal cut router
+  013311fcf 2026-06-28 codex-2026-06-29: add HYP-3437 overlap-tax cut certificate
+  8d4329430 2026-06-28 codex-2026-06-28: checkpoint - renumber overlap cut route to HYP-3437
+  23292844d 2026-06-28 codex-2026-06-28: checkpoint - claim HYP-3436 overlap Menger-cut certificate
+  01c66fcb9 2026-06-28 codex-S297: owner-cut chiral synthesis
+  4ae9fc5e8 2026-06-28 codex-S298: Chiral owner-cut recursion (sync)
+  86557ff27 2026-06-28 codex: add HYP-3419 charal owner cut recursion
+history_subject_path_hits:
+  0e48f2e6d 2026-06-29 codex: add HYP-3486 random031 fiber graph
+  3a6fbb013 2026-06-29 codex: add HYP-3485 random031 seam bridge
+  672721d7a 2026-06-29 codex-S322: forbidden seam flow (sync)
+  ed060ef30 2026-06-29 codex: add HYP-3484 random031 forbidden seam flow
+  d4e8b96a8 2026-06-29 codex-S321: random031 seam atlas (sync)
+  92cb3b82d 2026-06-29 codex: add HYP-3482 random031 seam atlas
+  107bda76f 2026-06-28 codex-2026-06-28: add HYP-3440 charal cut router
+  013311fcf 2026-06-28 codex-2026-06-29: add HYP-3437 overlap-tax cut certificate
+  8d4329430 2026-06-28 codex-2026-06-28: checkpoint - renumber overlap cut route to HYP-3437
+  23292844d 2026-06-28 codex-2026-06-28: checkpoint - claim HYP-3436 overlap Menger-cut certificate
+  01c66fcb9 2026-06-28 codex-S297: owner-cut chiral synthesis
+  4ae9fc5e8 2026-06-28 codex-S298: Chiral owner-cut recursion (sync)
+sample_current_lines:
+  00-navigation/CONCEPT-MAP.md: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECHNIQUE-INDEX.md`, now expanded through LT
+  00-navigation/CONCEPT-MAP.md: **Current LRC tournament technique index addenda:** T1123/HYP-3042/LTI-190/LTT-088 adds owner-strip filtration tournaments: residual proof pages, not runners, are the vertices, and the first-surviving-page test asks whet
+  00-navigation/CONCEPT-MAP.md: **S221-S250 value-origin, observer-cut, hyperbolic, finalizer, geometry, Diophantine-lattice, partial-cube, bridge-rank, Toeplitz, exact-audit, Hodge-cycle, Desargues-median, owner/root, Boolean route-center, route-tripl
+  00-navigation/CONCEPT-MAP.md: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECHNIQUE-INDEX.md`, now expanded through LT
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - `07-reflections/lrc14-random031-seam-complement-fiber-graph-codex-20260629.md`:
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: HYP-3486/T1446 executes the HYP-3482 seam-complement graph target in the
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: trichotomy after hard-seam deletion: `242` witnesses route through
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: the lower-delta bypass is one pure `12`-cell component on hard components
+
+Cluster: discrepancy-haar-fejer
+--------------------------------------------------------------------------------
+regex=\b(Erd[oő]s[-– ]Tur[aá]n|Roth[-– ]Hal[aá]sz|Roth[-– ]Vaughan|Beck[-– ]Fiala|van der Corput|Haar|Fej[eé]r|Kaczynski|large sieve|circle method|discrepancy)\b
+proof_pull=Certificate backend: turn interval/fiber imbalance into signed Haar/Fejer or sieve-clock inequalities.
+current_hits=4574
+current_paths=524
+commit_subject_hits=139
+history_subject_path_commits=148
+top_current_paths:
+   532  05-knowledge/hypotheses/INDEX.md
+   486  00-navigation/SESSION-LOG.md
+   356  00-navigation/TANGENTS.md
+   256  00-navigation/OPEN-QUESTIONS.md
+   238  00-navigation/LRC-TECHNIQUE-INDEX.md
+   205  00-navigation/INVESTIGATION-BACKLOG.md
+   159  00-navigation/CONCEPT-MAP.md
+   154  00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md
+    42  05-knowledge/hypotheses/HYP-2989-lrc14-haar-product-discrepancy-tournament-tiling.md
+    32  07-reflections/the-equidistribution-finish-is-the-cyclotomic-fejer-certificate-resolving-the-coherence-fight-kps.md
+    29  05-knowledge/hypotheses/HYP-3245-lrc14-equioscillation-autocorrelation-atlas.md
+    28  00-navigation/LRC-TECHNIQUE-MULTIVERSE-INDEX.md
+recent_subject_hits:
+  2b8f716dd 2026-06-29 New obscure math synthesis: 1. The distribution of 2-adic residues in quadratic extensions, 2. Sharp discrepancy bounds for low-dimensional van der Corput sequences, 3. Local-to-global principles for non-archimedean geometry edge cases
+  70d7df83b 2026-06-29 codex-S318: harmonic discrepancy synthesis (sync)
+  1828d00b8 2026-06-29 New obscure math synthesis: Since you provided an empty repository content section, I cannot identify any specific topics covered within the repository. However, based on the specific areas mentioned in your prompt (residues, discrepancy bounds, and 2-adic geometry), here are three niche, historical, or obscure mathematical topics that fit those categories:, The Hensel-Kürschák Theorem on the 2-adic valuation of harmonic sums, The Erdős-Turán inequality for discrepancy bounds on the circle
+  2da3f7eb8 2026-06-29 New obscure math synthesis: 1. The Lindelöf hypothesis for Dirichlet L-functions, 2. The Erdős-Turán discrepancy bound, 3. 2-adic valuation of the Bell numbers
+  a110ce059 2026-06-28 codex: add LRC14 coloring discrepancy bridge
+  68ffe38a8 2026-06-28 New obscure math synthesis: 1. The transcendence of the Champernowne constant in non-base-10 representations., 2. The Erdős–Turán conjecture on additive bases of order 2., 3. The Hensel's Lemma application to specific 2-adic exponential sums.
+  cfbe8986e 2026-06-28 codex-S289: discrepancy lifting synthesis integration (sync)
+  96e964a6d 2026-06-28 New obscure math synthesis: The Roth-Halász discrepancy bound for arithmetic progressions, The p-adic Hensel-Krasner lemma for non-archimedean geometry, The Ramanujan-Soldner constant for logarithmic integrals
+  77c4bb328 2026-06-28 New obscure math synthesis: 1. The Erdős–Turán inequality for discrepancy of sequences on a circle., 2. The p-adic Littlewood conjecture concerning the simultaneous approximation of reals., 3. The Davenport-Erdős lemma regarding the density of sequences of integers.
+  99fc1155d 2026-06-28 mac-mini-2026-06-28-S76: the two proof targets are ONE (HYP-3239) -- consec=bimodal/phi^4 extremizer (max k2 even, max k3 odd, min k4, max q0+q6, 0/400); even/odd + positive/negative dualities = the inclusion-exclusion parity = Eisenstein(+even)/Legendre(-odd) = my S75d cyclotomic factors; both targets reduce to the cap=sector-discrepancy (even cyclotomic-SOS F_7 + odd Phi_7 ramified dip); converges kps S31au (Q(sqrt-7) wall) + codex HYP-3238; NOT a proof
+  78f738425 2026-06-28 kps-2026-06-28-S31as: CLOSE -- PROOF-PUSH (HYP-3218): mac-mini's equidistribution finish = explicit cyclotomic Fejer cert; margin=phi(p), |Gauss sum|^2=7=Lee-Yang zero, coherence-vs-arithmetic fight dissolves (AP=self-dual Fejer fixed point); SESSION-LOG
+  15d81e028 2026-06-28 mac-mini-2026-06-28-S75e: the cap is a totally-real CYCLOTOMIC quantity in Q(cos2pi/7) (HYP-3235) -- conductor 7^{1,2} in the binding rows cap_8/cap_9 (disc=49); the Fejer magic fn F_7=(de Moivre cubic)^2 is the totally-positive cyclotomic SQUARE (=> Bochner positivity, even half SOS); n=14's TWO heads (7-cap=Q(cos2pi/7) + 3-witness=2n-1=27=3^3 ramification HYP-2436), both depth 3; converges kps S31ar; NOT a proof
+history_subject_path_hits:
+  2b8f716dd 2026-06-29 New obscure math synthesis: 1. The distribution of 2-adic residues in quadratic extensions, 2. Sharp discrepancy bounds for low-dimensional van der Corput sequences, 3. Local-to-global principles for non-archimedean geometry edge cases
+  70d7df83b 2026-06-29 codex-S318: harmonic discrepancy synthesis (sync)
+  1828d00b8 2026-06-29 New obscure math synthesis: Since you provided an empty repository content section, I cannot identify any specific topics covered within the repository. However, based on the specific areas mentioned in your prompt (residues, discrepancy bounds, and 2-adic geometry), here are three niche, historical, or obscure mathematical topics that fit those categories:, The Hensel-Kürschák Theorem on the 2-adic valuation of harmonic sums, The Erdős-Turán inequality for discrepancy bounds on the circle
+  2da3f7eb8 2026-06-29 New obscure math synthesis: 1. The Lindelöf hypothesis for Dirichlet L-functions, 2. The Erdős-Turán discrepancy bound, 3. 2-adic valuation of the Bell numbers
+  a110ce059 2026-06-28 codex: add LRC14 coloring discrepancy bridge
+  68ffe38a8 2026-06-28 New obscure math synthesis: 1. The transcendence of the Champernowne constant in non-base-10 representations., 2. The Erdős–Turán conjecture on additive bases of order 2., 3. The Hensel's Lemma application to specific 2-adic exponential sums.
+  cfbe8986e 2026-06-28 codex-S289: discrepancy lifting synthesis integration (sync)
+  96e964a6d 2026-06-28 New obscure math synthesis: The Roth-Halász discrepancy bound for arithmetic progressions, The p-adic Hensel-Krasner lemma for non-archimedean geometry, The Ramanujan-Soldner constant for logarithmic integrals
+  77c4bb328 2026-06-28 New obscure math synthesis: 1. The Erdős–Turán inequality for discrepancy of sequences on a circle., 2. The p-adic Littlewood conjecture concerning the simultaneous approximation of reals., 3. The Davenport-Erdős lemma regarding the density of sequences of integers.
+  99fc1155d 2026-06-28 mac-mini-2026-06-28-S76: the two proof targets are ONE (HYP-3239) -- consec=bimodal/phi^4 extremizer (max k2 even, max k3 odd, min k4, max q0+q6, 0/400); even/odd + positive/negative dualities = the inclusion-exclusion parity = Eisenstein(+even)/Legendre(-odd) = my S75d cyclotomic factors; both targets reduce to the cap=sector-discrepancy (even cyclotomic-SOS F_7 + odd Phi_7 ramified dip); converges kps S31au (Q(sqrt-7) wall) + codex HYP-3238; NOT a proof
+  78f738425 2026-06-28 kps-2026-06-28-S31as: CLOSE -- PROOF-PUSH (HYP-3218): mac-mini's equidistribution finish = explicit cyclotomic Fejer cert; margin=phi(p), |Gauss sum|^2=7=Lee-Yang zero, coherence-vs-arithmetic fight dissolves (AP=self-dual Fejer fixed point); SESSION-LOG
+  15d81e028 2026-06-28 mac-mini-2026-06-28-S75e: the cap is a totally-real CYCLOTOMIC quantity in Q(cos2pi/7) (HYP-3235) -- conductor 7^{1,2} in the binding rows cap_8/cap_9 (disc=49); the Fejer magic fn F_7=(de Moivre cubic)^2 is the totally-positive cyclotomic SQUARE (=> Bochner positivity, even half SOS); n=14's TWO heads (7-cap=Q(cos2pi/7) + 3-witness=2n-1=27=3^3 ramification HYP-2436), both depth 3; converges kps S31ar; NOT a proof
+sample_current_lines:
+  00-navigation/CONCEPT-MAP.md: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECHNIQUE-INDEX.md`, now expanded through LT
+  00-navigation/CONCEPT-MAP.md: **Current LRC tournament technique index addenda:** T1123/HYP-3042/LTI-190/LTT-088 adds owner-strip filtration tournaments: residual proof pages, not runners, are the vertices, and the first-surviving-page test asks whet
+  00-navigation/CONCEPT-MAP.md: **Latest LRC q-cusp, sixth-power, branch, branch-kernel, and finite-address addenda:** T1162/HYP-3078/LTI-227/LTT-125 is the canonical S246 q-Pochhammer principal-part computation: product, partition, divisor-log, Delta,
+  00-navigation/CONCEPT-MAP.md: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECHNIQUE-INDEX.md`, now expanded through LT
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: discrepancy.
+  00-navigation/INVESTIGATION-BACKLOG.md: **Status:** EVIDENCE / exact AP-tail color-grid discrepancy bridge; not proof
+  00-navigation/INVESTIGATION-BACKLOG.md: transversal with the prior color-reservoir and colored-discrepancy routes, and
+  00-navigation/INVESTIGATION-BACKLOG.md: mixed fiber, and all `7` qdiv>14 rows are `positive-Haar-open`.
+
+Cluster: physics-spectral-statmech
+--------------------------------------------------------------------------------
+regex=\b(octonion|G_2|Calabi[-– ]Yau|Ising|spin[- ]glass|phi\^?4|Potts|protein folding|Golay|Lee[-– ]Yang|partition function|ferromagnetic|antiferromagnetic)\b
+proof_pull=Spectral/partition lens: check whether a sidecar is a true energy certificate or only metaphor.
+current_hits=2494
+current_paths=307
+commit_subject_hits=124
+history_subject_path_commits=142
+top_current_paths:
+   422  00-navigation/SESSION-LOG.md
+   303  05-knowledge/hypotheses/INDEX.md
+   115  00-navigation/LRC-TECHNIQUE-INDEX.md
+   102  00-navigation/TANGENTS.md
+    73  00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md
+    61  00-navigation/OPEN-QUESTIONS.md
+    54  00-navigation/INVESTIGATION-BACKLOG.md
+    29  07-reflections/cnp-lee-yang-chromatic-roots-and-the-wall-s689.md
+    28  07-reflections/the-two-maps-lee-yang-extremality-tournament-real-axis-lrc-circle-kps.md
+    27  05-knowledge/hypotheses/HYP-3141-lrc14-tournament-edge-witness-tip-tail-recursion.md
+    25  00-navigation/HISTORIAN-TANGENT-INDEX.md
+    25  05-knowledge/hypotheses/HYP-3111-minkowski-circuit-ising-demoivre-carrier-atlas.md
+recent_subject_hits:
+  99fc1155d 2026-06-28 mac-mini-2026-06-28-S76: the two proof targets are ONE (HYP-3239) -- consec=bimodal/phi^4 extremizer (max k2 even, max k3 odd, min k4, max q0+q6, 0/400); even/odd + positive/negative dualities = the inclusion-exclusion parity = Eisenstein(+even)/Legendre(-odd) = my S75d cyclotomic factors; both targets reduce to the cap=sector-discrepancy (even cyclotomic-SOS F_7 + odd Phi_7 ramified dip); converges kps S31au (Q(sqrt-7) wall) + codex HYP-3238; NOT a proof
+  78f738425 2026-06-28 kps-2026-06-28-S31as: CLOSE -- PROOF-PUSH (HYP-3218): mac-mini's equidistribution finish = explicit cyclotomic Fejer cert; margin=phi(p), |Gauss sum|^2=7=Lee-Yang zero, coherence-vs-arithmetic fight dissolves (AP=self-dual Fejer fixed point); SESSION-LOG
+  107020281 2026-06-28 kps-2026-06-28-S31as: HYP-3218 PROOF-PUSH -- mac-mini's equidistribution FINISH = the explicit cyclotomic FEJER certificate. 4 bridges: (1) Lee-Yang margin=phi(p) cyclotomic group order; (2) |Gauss sum|^2=7=the Lee-Yang zero; (3) Erdos-Turan=Fejer=my magic fn (HYP-3214); (4) the coherence-vs-arithmetic FIGHT DISSOLVES (AP=self-dual Fejer fixed point)
+  d1afdbb42 2026-06-27 mac-mini-2026-06-27-S74: THE ONE OBSTRUCTION (HYP-3221) -- universal even/odd table (8 faces of one obstruction); apex-7 = Lee-Yang zero at 1/p=7 (Binomial(k,1/7) PGF); algebra is config-blind worst-case (all certs fail at k=7 saturation), resolution is analytic equidistribution; octonion REFUTED (no Fano structure, converges kps S31an mult/add resolution); analytic resolution = kps's Cohn-Elkies/Delsarte cyclotomic magic function; NOT a proof
+  cbbad28b2 2026-06-27 kps-2026-06-27-S31an: CLOSE -- grand synthesis (HYP-3211/3212/3213): cap = arithmetic of Q(cos 2pi/7); Chebyshev equioscillation explains rationality; LRC = additive-apex magic-function extremal (Viazovska sibling); octonion=mult apex, Joukowski=Galois trace; SESSION-LOG
+  8fca1652a 2026-06-27 kps-2026-06-27-S31an: HYP-3213 GRAND SYNTHESIS -- the cap/dip = arithmetic of Q(cos 2pi/7) (6 facets=1 field: cyclotomic ideal/Chebyshev/rationality/disc-7^2/Joukowski-trace/magic-fn); LRC(14) = the ADDITIVE member of the magic-function exceptional-extremal family (Viazovska dim-8=octonion=mult sibling). Leads: Stark L-value, Gamma_0(7) modular magic fn, Beraha/Mahler/subshift
+  696266ba5 2026-06-27 mac-mini-2026-06-27-S74: checkpoint -- HYP-3221 THE ONE OBSTRUCTION (apex-7 = Lee-Yang zero at 1/p=7; config-blind worst-case algebra fails at k=7; resolution = analytic equidistribution; universal even/odd table)
+  8f41198f1 2026-06-27 kps-2026-06-27-S31an: HYP-3212 -- the cap is a CHEBYSHEV EQUIOSCILLATION extremal: V_7(u)-2 = (u-2)*(de Moivre cubic)^2 VERIFIED; the double-root equioscillation EXPLAINS the cap's rationality (=mac-mini disc-9 Q-collapse). Cyclotomic ideal = Chebyshev extremal = rational, ONE fact. Cover bound = Cohn-Elkies LP w/ cyclotomic magic function (Viazovska dim-8=octonion=mult apex)
+  27b34af64 2026-06-27 kps-2026-06-27-S31an: HYP-3211 -- apex 7 = TWO exceptional structures: octonion/G_2 (multiplicative, tournament/H side) + cyclotomic (additive, LRC side). Octonion test productive-NEGATIVE (kappa_3 not doubling-invariant, sectors reflection-symmetric not QR). KEY: Joukowski = the Galois TRACE zeta->zeta+conj=2cos bridging mult circle to additive real cubic
+  2e681cfce 2026-06-27 mac-mini-2026-06-27-S73d: the moment-problem merge (HYP-3202) -- Caratheodory-Toeplitz + Griffiths/GKS + Verblunsky/OPUC all read ONE LRC FM/AFM phase (consec k>=8 = PSD Toeplitz + Cov>=0 + |alpha|<1; dissociated breaks all); even half = GKS-II monotonicity, Lee-Yang circle = Caratheodory moment-cone boundary; integrates kps-S31al (lambda_min extremality + random-current); +Fejer-Riesz/Christoffel-Darboux/FKG; ceded HYP-3201->HYP-3203; NOT a proof
+  d8789320f 2026-06-27 kps-2026-06-27-S31am: HYP-3210 -- the JOUKOWSKI BRIDGE merges Joukowski+Hermite-Biehler+Perron-Frobenius: tournament TRRT (real axis, oracle I=A+xB) and LRC cover bound (circle) are ONE Hermite-Biehler interlacing theorem, conformally transported by Joukowski; TRRT Lemma B ports to the LRC even/odd(biquadratic+Eulerian) interlacing; Perron-Frobenius = shared leading mode (ferromagnetic uniform on C ~99.7%, de Moivre -1.8019 on zeros). Flags HYP-3201 collision
+  0f36830be 2026-06-27 kps-2026-06-27-S31al: two new k=8-node angles (HYP-3201) -- Caratheodory-Toeplitz consec maximizes lambda_min(T) EXHAUSTIVE (Szego route) + ferromagnetic Griffiths/random-current lead; SESSION-LOG
+history_subject_path_hits:
+  99fc1155d 2026-06-28 mac-mini-2026-06-28-S76: the two proof targets are ONE (HYP-3239) -- consec=bimodal/phi^4 extremizer (max k2 even, max k3 odd, min k4, max q0+q6, 0/400); even/odd + positive/negative dualities = the inclusion-exclusion parity = Eisenstein(+even)/Legendre(-odd) = my S75d cyclotomic factors; both targets reduce to the cap=sector-discrepancy (even cyclotomic-SOS F_7 + odd Phi_7 ramified dip); converges kps S31au (Q(sqrt-7) wall) + codex HYP-3238; NOT a proof
+  78f738425 2026-06-28 kps-2026-06-28-S31as: CLOSE -- PROOF-PUSH (HYP-3218): mac-mini's equidistribution finish = explicit cyclotomic Fejer cert; margin=phi(p), |Gauss sum|^2=7=Lee-Yang zero, coherence-vs-arithmetic fight dissolves (AP=self-dual Fejer fixed point); SESSION-LOG
+  107020281 2026-06-28 kps-2026-06-28-S31as: HYP-3218 PROOF-PUSH -- mac-mini's equidistribution FINISH = the explicit cyclotomic FEJER certificate. 4 bridges: (1) Lee-Yang margin=phi(p) cyclotomic group order; (2) |Gauss sum|^2=7=the Lee-Yang zero; (3) Erdos-Turan=Fejer=my magic fn (HYP-3214); (4) the coherence-vs-arithmetic FIGHT DISSOLVES (AP=self-dual Fejer fixed point)
+  d1afdbb42 2026-06-27 mac-mini-2026-06-27-S74: THE ONE OBSTRUCTION (HYP-3221) -- universal even/odd table (8 faces of one obstruction); apex-7 = Lee-Yang zero at 1/p=7 (Binomial(k,1/7) PGF); algebra is config-blind worst-case (all certs fail at k=7 saturation), resolution is analytic equidistribution; octonion REFUTED (no Fano structure, converges kps S31an mult/add resolution); analytic resolution = kps's Cohn-Elkies/Delsarte cyclotomic magic function; NOT a proof
+  cbbad28b2 2026-06-27 kps-2026-06-27-S31an: CLOSE -- grand synthesis (HYP-3211/3212/3213): cap = arithmetic of Q(cos 2pi/7); Chebyshev equioscillation explains rationality; LRC = additive-apex magic-function extremal (Viazovska sibling); octonion=mult apex, Joukowski=Galois trace; SESSION-LOG
+  8fca1652a 2026-06-27 kps-2026-06-27-S31an: HYP-3213 GRAND SYNTHESIS -- the cap/dip = arithmetic of Q(cos 2pi/7) (6 facets=1 field: cyclotomic ideal/Chebyshev/rationality/disc-7^2/Joukowski-trace/magic-fn); LRC(14) = the ADDITIVE member of the magic-function exceptional-extremal family (Viazovska dim-8=octonion=mult sibling). Leads: Stark L-value, Gamma_0(7) modular magic fn, Beraha/Mahler/subshift
+  696266ba5 2026-06-27 mac-mini-2026-06-27-S74: checkpoint -- HYP-3221 THE ONE OBSTRUCTION (apex-7 = Lee-Yang zero at 1/p=7; config-blind worst-case algebra fails at k=7; resolution = analytic equidistribution; universal even/odd table)
+  8f41198f1 2026-06-27 kps-2026-06-27-S31an: HYP-3212 -- the cap is a CHEBYSHEV EQUIOSCILLATION extremal: V_7(u)-2 = (u-2)*(de Moivre cubic)^2 VERIFIED; the double-root equioscillation EXPLAINS the cap's rationality (=mac-mini disc-9 Q-collapse). Cyclotomic ideal = Chebyshev extremal = rational, ONE fact. Cover bound = Cohn-Elkies LP w/ cyclotomic magic function (Viazovska dim-8=octonion=mult apex)
+  27b34af64 2026-06-27 kps-2026-06-27-S31an: HYP-3211 -- apex 7 = TWO exceptional structures: octonion/G_2 (multiplicative, tournament/H side) + cyclotomic (additive, LRC side). Octonion test productive-NEGATIVE (kappa_3 not doubling-invariant, sectors reflection-symmetric not QR). KEY: Joukowski = the Galois TRACE zeta->zeta+conj=2cos bridging mult circle to additive real cubic
+  2e681cfce 2026-06-27 mac-mini-2026-06-27-S73d: the moment-problem merge (HYP-3202) -- Caratheodory-Toeplitz + Griffiths/GKS + Verblunsky/OPUC all read ONE LRC FM/AFM phase (consec k>=8 = PSD Toeplitz + Cov>=0 + |alpha|<1; dissociated breaks all); even half = GKS-II monotonicity, Lee-Yang circle = Caratheodory moment-cone boundary; integrates kps-S31al (lambda_min extremality + random-current); +Fejer-Riesz/Christoffel-Darboux/FKG; ceded HYP-3201->HYP-3203; NOT a proof
+  d8789320f 2026-06-27 kps-2026-06-27-S31am: HYP-3210 -- the JOUKOWSKI BRIDGE merges Joukowski+Hermite-Biehler+Perron-Frobenius: tournament TRRT (real axis, oracle I=A+xB) and LRC cover bound (circle) are ONE Hermite-Biehler interlacing theorem, conformally transported by Joukowski; TRRT Lemma B ports to the LRC even/odd(biquadratic+Eulerian) interlacing; Perron-Frobenius = shared leading mode (ferromagnetic uniform on C ~99.7%, de Moivre -1.8019 on zeros). Flags HYP-3201 collision
+  14a12347d 2026-06-27 codex-2026-06-28: add polarized cyclotomic LRC angles
+sample_current_lines:
+  00-navigation/CONCEPT-MAP.md: separate descent sidecar, and proposes a Lee-Yang/quartic/resolvent ledger:
+  00-navigation/CONCEPT-MAP.md: Pascal/binomial cap, `phi4` dip, `q0=q6*R^6` radius balance,
+  00-navigation/CONCEPT-MAP.md: `phi4` sign, HYP-3132's solvable quartic, and HYP-3133's controlled-forgetting
+  00-navigation/CONCEPT-MAP.md: | **OCF activity-2 / Condorcet packet bridge** | Reads OCF as a compatible-packet partition function and transfers the lesson to LRC14 coimage tails | HYP-2618 shows `H(T)=I(Omega,2)` is hard-core activity `2`, equivalen
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - `07-reflections/lrc14-lee-yang-worpitzky-quartic-packet-codex-20260628.md`:
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: HYP-3152 Lee-Yang radius, the k=8 `L_y` moment identity, Worpitzky odd
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: Lee-Yang legality sidecar for tail/tip contraction; after HYP-3127, this is
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: HYP-3132 De Moivre biquadratic symmetry, HYP-3122 gK8/phi4, HYP-3116
+
+Cluster: p-adic-local-lifting
+--------------------------------------------------------------------------------
+regex=\b(2-adic|p-adic|Hensel|Krasner|Kummer|Dedekind|Monna|Morita|Monsky|Hasse-Arf|local[- ]to[- ]global|non[- ]archimedean|Skolem[- ]Mahler[- ]Lech)\b
+proof_pull=Stability and lift legality: track which quotient coordinates survive small local perturbations.
+current_hits=1997
+current_paths=367
+commit_subject_hits=129
+history_subject_path_commits=132
+top_current_paths:
+   292  00-navigation/SESSION-LOG.md
+   237  05-knowledge/hypotheses/INDEX.md
+   117  00-navigation/TANGENTS.md
+    85  00-navigation/LRC-TECHNIQUE-INDEX.md
+    69  00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md
+    66  00-navigation/INVESTIGATION-BACKLOG.md
+    62  00-navigation/OPEN-QUESTIONS.md
+    34  00-navigation/CONCEPT-MAP.md
+    22  07-reflections/adic-column-families.md
+    20  05-knowledge/hypotheses/HYP-3083-lrc14-hurwitz-finite-address-branch-closure-spine.md
+    18  07-reflections/rapidity-supersingular-two-and-n16-adelic-product-s19.md
+    15  05-knowledge/hypotheses/HYP-3408-lrc14-exotic-guardrail-reframe-atlas.md
+recent_subject_hits:
+  2b8f716dd 2026-06-29 New obscure math synthesis: 1. The distribution of 2-adic residues in quadratic extensions, 2. Sharp discrepancy bounds for low-dimensional van der Corput sequences, 3. Local-to-global principles for non-archimedean geometry edge cases
+  1828d00b8 2026-06-29 New obscure math synthesis: Since you provided an empty repository content section, I cannot identify any specific topics covered within the repository. However, based on the specific areas mentioned in your prompt (residues, discrepancy bounds, and 2-adic geometry), here are three niche, historical, or obscure mathematical topics that fit those categories:, The Hensel-Kürschák Theorem on the 2-adic valuation of harmonic sums, The Erdős-Turán inequality for discrepancy bounds on the circle
+  2da3f7eb8 2026-06-29 New obscure math synthesis: 1. The Lindelöf hypothesis for Dirichlet L-functions, 2. The Erdős-Turán discrepancy bound, 3. 2-adic valuation of the Bell numbers
+  68ffe38a8 2026-06-28 New obscure math synthesis: 1. The transcendence of the Champernowne constant in non-base-10 representations., 2. The Erdős–Turán conjecture on additive bases of order 2., 3. The Hensel's Lemma application to specific 2-adic exponential sums.
+  c59770a15 2026-06-28 kps-2026-06-28-S259: close -- covering floor is 2-adic (even speeds bind); 2-adic descent route
+  a1e05de2f 2026-06-28 kps-2026-06-28-S259: session log + memory -- covering floor is 2-ADIC (even speeds bind); coprime-14 reduction fails; 2-adic descent route; apex-7/census off-path
+  3ea77d920 2026-06-28 kps-2026-06-28-S259: the COVERING FLOOR is 2-ADIC not 7-adic -- binding obstruction = EVEN speeds (376 vs 279); coprime-to-14 reduction FAILS (0/400, R_nr loneliest at t=1/2 where evens die); 2-adic descent route; apex-7/census is OFF-path. Sharpens HYP-3415
+  d95e48d67 2026-06-28 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Sophie Germain identity, 3. The Hermite-Lindemann-Weierstrass theorem extension for p-adic exponentials
+  c78f46f91 2026-06-28 New obscure math synthesis: 1. The Lucas-Lehmer-Riesel test for N = h * 2^n - 1, 2. The Barban-Davenport-Halberstam Theorem on primes in arithmetic progressions, 3. Krasner's Lemma regarding p-adic field extensions and polynomials
+  96e964a6d 2026-06-28 New obscure math synthesis: The Roth-Halász discrepancy bound for arithmetic progressions, The p-adic Hensel-Krasner lemma for non-archimedean geometry, The Ramanujan-Soldner constant for logarithmic integrals
+  77c4bb328 2026-06-28 New obscure math synthesis: 1. The Erdős–Turán inequality for discrepancy of sequences on a circle., 2. The p-adic Littlewood conjecture concerning the simultaneous approximation of reals., 3. The Davenport-Erdős lemma regarding the density of sequences of integers.
+  82e828800 2026-06-28 kps-2026-06-28-S31ar: CLOSE -- the 3 signed recursions = subfield lattice of Q(zeta_7) x 2-adic; the CUBIC de Moivre (HYP-3216) is the missing 4th mode (chi_3 cosets=de Moivre angles); cyclotomic degree (p-1)/2 unifies Venn-depth/ladder/periods (HYP-3217); SESSION-LOG
+history_subject_path_hits:
+  2b8f716dd 2026-06-29 New obscure math synthesis: 1. The distribution of 2-adic residues in quadratic extensions, 2. Sharp discrepancy bounds for low-dimensional van der Corput sequences, 3. Local-to-global principles for non-archimedean geometry edge cases
+  1828d00b8 2026-06-29 New obscure math synthesis: Since you provided an empty repository content section, I cannot identify any specific topics covered within the repository. However, based on the specific areas mentioned in your prompt (residues, discrepancy bounds, and 2-adic geometry), here are three niche, historical, or obscure mathematical topics that fit those categories:, The Hensel-Kürschák Theorem on the 2-adic valuation of harmonic sums, The Erdős-Turán inequality for discrepancy bounds on the circle
+  2da3f7eb8 2026-06-29 New obscure math synthesis: 1. The Lindelöf hypothesis for Dirichlet L-functions, 2. The Erdős-Turán discrepancy bound, 3. 2-adic valuation of the Bell numbers
+  68ffe38a8 2026-06-28 New obscure math synthesis: 1. The transcendence of the Champernowne constant in non-base-10 representations., 2. The Erdős–Turán conjecture on additive bases of order 2., 3. The Hensel's Lemma application to specific 2-adic exponential sums.
+  c59770a15 2026-06-28 kps-2026-06-28-S259: close -- covering floor is 2-adic (even speeds bind); 2-adic descent route
+  a1e05de2f 2026-06-28 kps-2026-06-28-S259: session log + memory -- covering floor is 2-ADIC (even speeds bind); coprime-14 reduction fails; 2-adic descent route; apex-7/census off-path
+  3ea77d920 2026-06-28 kps-2026-06-28-S259: the COVERING FLOOR is 2-ADIC not 7-adic -- binding obstruction = EVEN speeds (376 vs 279); coprime-to-14 reduction FAILS (0/400, R_nr loneliest at t=1/2 where evens die); 2-adic descent route; apex-7/census is OFF-path. Sharpens HYP-3415
+  9ed691e56 2026-06-28 codex: add HYP-3416 recursive quotient ladder
+  d95e48d67 2026-06-28 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Sophie Germain identity, 3. The Hermite-Lindemann-Weierstrass theorem extension for p-adic exponentials
+  c78f46f91 2026-06-28 New obscure math synthesis: 1. The Lucas-Lehmer-Riesel test for N = h * 2^n - 1, 2. The Barban-Davenport-Halberstam Theorem on primes in arithmetic progressions, 3. Krasner's Lemma regarding p-adic field extensions and polynomials
+  c02d4cfc7 2026-06-28 codex-2026-06-28: add HYP-3311 CRT Galois sidecar audit
+  96e964a6d 2026-06-28 New obscure math synthesis: The Roth-Halász discrepancy bound for arithmetic progressions, The p-adic Hensel-Krasner lemma for non-archimedean geometry, The Ramanujan-Soldner constant for logarithmic integrals
+sample_current_lines:
+  00-navigation/CONCEPT-MAP.md: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECHNIQUE-INDEX.md`, now expanded through LT
+  00-navigation/CONCEPT-MAP.md: **Latest LRC q-cusp, sixth-power, branch, branch-kernel, and finite-address addenda:** T1162/HYP-3078/LTI-227/LTT-125 is the canonical S246 q-Pochhammer principal-part computation: product, partition, divisor-log, Delta,
+  00-navigation/CONCEPT-MAP.md: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECHNIQUE-INDEX.md`, now expanded through LT
+  00-navigation/CONCEPT-MAP.md: **Latest LRC q-cusp, branch, and branch-kernel addenda:** T1162/HYP-3078/LTI-227/LTT-125 is the canonical S246 q-Pochhammer principal-part computation: product, partition, divisor-log, Delta, and j tails are legal only a
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: 2-adic orbit in `Z/nZ`, matching the external column-family map.
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: hierarchy, and 2-adic stability were matched to tournaments and chemistry.
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: condition compared with tournament 2-adic universality.
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - 2-adic tower / higher Redei: evaluating independence polynomials at
+
+Cluster: automata-lacunary-sequences
+--------------------------------------------------------------------------------
+regex=\b(Moser[-– ]de Bruijn|fibbinary|Ostrowski[-– ]Hadamard|gap theorem|finite automaton|Zeckendorf|Thue[-– ]Morse|Stern[-– ]Brocot|Farey|three[- ]gap|continued fraction|Sturmian)\b
+proof_pull=Finite-state language for legal fibers, gap packets, and carry/bypass words.
+current_hits=3449
+current_paths=433
+commit_subject_hits=100
+history_subject_path_commits=110
+top_current_paths:
+   475  00-navigation/SESSION-LOG.md
+   421  05-knowledge/hypotheses/INDEX.md
+   188  00-navigation/TANGENTS.md
+   123  00-navigation/OPEN-QUESTIONS.md
+   103  00-navigation/LRC-TECHNIQUE-INDEX.md
+   102  00-navigation/INVESTIGATION-BACKLOG.md
+    95  00-navigation/CONCEPT-MAP.md
+    73  00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md
+    63  07-reflections/lucas-summand-graph-zeckendorf-geometry.md
+    39  07-reflections/zeckendorf-non-consecutivity-pairing.md
+    35  07-reflections/how-the-route-sharpened-and-the-three-gap-stern-brocot-recursion-in-the-cap-kernel.md
+    25  05-knowledge/hypotheses/HYP-2998-farey-fibonacci-additive-basis-carrier.md
+recent_subject_hits:
+  de5cd9b67 2026-06-28 mac-mini-2026-06-28-S75c: INTERLOCKING recursions (HYP-3232) -- three orthogonal recursions (Mobius order / Eisenstein modulus / Legendre three-gap) = the three modes; cap kernel modulus-covariant K^(n)=(2/n)h, Eisenstein fold exactly x1/2, BREAKS at apex n/2=7 (antipode speeds >7 deviate = the difficulty); moment-depth interlocks with speed-vs-apex; converges kps S31aq family law depth=(p+1)/2=4; NOT a proof
+  fec059f3d 2026-06-28 mac-mini-2026-06-28-S75b: route-sharpening synthesis + the THREE-GAP/Stern-Brocot recursion in the cap kernel (HYP-3230) -- K(a,b)=g(a,b)/(7ab), g piecewise-linear with kinks at continued-fraction convergents of a/b; scale-invariance, antipode K(a,13)=(2a-1)/(91a), base K(1,b)=1/(7b), apex K(7,b)=1/49; the Farey/three-gap thread IS the cap-kernel recursion (the two halves merge); NOT a proof
+  130830bb6 2026-06-27 kps-S31ai: cumulant tower -- consec MAXIMIZES total covariance Sigma-k2 (rank 0, ferromagnetic/ordered phi^4 phase; dissociated go negative=antiferromagnetic), MINIMIZES k4 (phi^4 stabilizer); 1/7 associativity-defect was near-coincidence (corrected). Sharpened target: consec max excess co-emptiness = arc-contiguity = three-gap
+  5d614a3f2 2026-06-27 mac-mini-2026-06-27-S62: checkpoint - three-sameness fiber on the LRC lonely set (equinum=covering cardinal-shadow; equidecomp=(D,1/lmax) scissors -- D recovers mod-41 Farey scale, 1/lmax=V*; equidist=meas=tightness detector). HYP-2187 fiber on the measure side; verified table
+  5ba41a37a 2026-06-27 mac-mini-2026-06-27-S60: four-faces-of-14 deep-structure synthesis (Clebsch/Farey=hyperoperation; why exceptional structures surface in LRC) + HYP-3085 (gK8 covering-moment = low-order S2 bound, reflection-Perron certificate route) + integrate kps THM-573/margin correction (ceded HYP-3084)
+  06769d7b2 2026-06-27 mac-mini-2026-06-27-S59: REDIRECT -- LRC(14) proof = the COVERING BOUND (mult-of-14, M>=1/14), VERIFIED reduction; census {AP,GW} is the EASY case's extremal NOT on the critical path; 4 Farey variations=hyperoperation, proof lives at the exponential (apex-periodicity/gamma-trick), not additive (census). Stop the census, finish the covering bound
+  bdd99dd2c 2026-06-26 codex-S227: add Moser fibbinary partial-cube carrier
+  1ab52c232 2026-06-24 codex: update coordination log for S171 Farey Fibonacci economy extension (sync)
+  e0056e96c 2026-06-24 codex-S169: extend Farey Fibonacci economy carrier
+  f7336ad4a 2026-06-24 codex-S171: add summand multiplicand Farey basis merge
+  0844c84ce 2026-06-24 codex: terminal forum debate (Sigma, Gamma, Delta) for LRC(14) synthesis with Thue-Morse, Erdős-Turán, and Brun constant linkings
+  0a5d4f3e3 2026-06-24 New obscure math synthesis: 1. The Thue-Morse sequence's application to fair sharing protocols, 2. The Erdős-Turán conjecture on additive bases of order two, 3. The relationship between the Brun constant and twin prime gaps
+history_subject_path_hits:
+  de5cd9b67 2026-06-28 mac-mini-2026-06-28-S75c: INTERLOCKING recursions (HYP-3232) -- three orthogonal recursions (Mobius order / Eisenstein modulus / Legendre three-gap) = the three modes; cap kernel modulus-covariant K^(n)=(2/n)h, Eisenstein fold exactly x1/2, BREAKS at apex n/2=7 (antipode speeds >7 deviate = the difficulty); moment-depth interlocks with speed-vs-apex; converges kps S31aq family law depth=(p+1)/2=4; NOT a proof
+  fec059f3d 2026-06-28 mac-mini-2026-06-28-S75b: route-sharpening synthesis + the THREE-GAP/Stern-Brocot recursion in the cap kernel (HYP-3230) -- K(a,b)=g(a,b)/(7ab), g piecewise-linear with kinks at continued-fraction convergents of a/b; scale-invariance, antipode K(a,13)=(2a-1)/(91a), base K(1,b)=1/(7b), apex K(7,b)=1/49; the Farey/three-gap thread IS the cap-kernel recursion (the two halves merge); NOT a proof
+  130830bb6 2026-06-27 kps-S31ai: cumulant tower -- consec MAXIMIZES total covariance Sigma-k2 (rank 0, ferromagnetic/ordered phi^4 phase; dissociated go negative=antiferromagnetic), MINIMIZES k4 (phi^4 stabilizer); 1/7 associativity-defect was near-coincidence (corrected). Sharpened target: consec max excess co-emptiness = arc-contiguity = three-gap
+  5d614a3f2 2026-06-27 mac-mini-2026-06-27-S62: checkpoint - three-sameness fiber on the LRC lonely set (equinum=covering cardinal-shadow; equidecomp=(D,1/lmax) scissors -- D recovers mod-41 Farey scale, 1/lmax=V*; equidist=meas=tightness detector). HYP-2187 fiber on the measure side; verified table
+  5ba41a37a 2026-06-27 mac-mini-2026-06-27-S60: four-faces-of-14 deep-structure synthesis (Clebsch/Farey=hyperoperation; why exceptional structures surface in LRC) + HYP-3085 (gK8 covering-moment = low-order S2 bound, reflection-Perron certificate route) + integrate kps THM-573/margin correction (ceded HYP-3084)
+  06769d7b2 2026-06-27 mac-mini-2026-06-27-S59: REDIRECT -- LRC(14) proof = the COVERING BOUND (mult-of-14, M>=1/14), VERIFIED reduction; census {AP,GW} is the EASY case's extremal NOT on the critical path; 4 Farey variations=hyperoperation, proof lives at the exponential (apex-periodicity/gamma-trick), not additive (census). Stop the census, finish the covering bound
+  963e067f7 2026-06-26 codex-S231: add bridge-rank partial-cube split ledger
+  c394e024a 2026-06-26 codex-s228: add exact scout for HYP-3063 partial cube carrier
+  bdd99dd2c 2026-06-26 codex-S227: add Moser fibbinary partial-cube carrier
+  d0470ddee 2026-06-25 codex: add lrc14 automatic gap carrier
+  485fb9bf8 2026-06-25 codex: checkpoint existing lrc14 artifacts before automata thread
+  1ab52c232 2026-06-24 codex: update coordination log for S171 Farey Fibonacci economy extension (sync)
+sample_current_lines:
+  00-navigation/CONCEPT-MAP.md: not a shortcut. Finite witness approximation uses Farey parent intervals,
+  00-navigation/CONCEPT-MAP.md: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECHNIQUE-INDEX.md`, now expanded through LT
+  00-navigation/CONCEPT-MAP.md: **Current LRC tournament technique index addenda:** T1123/HYP-3042/LTI-190/LTT-088 adds owner-strip filtration tournaments: residual proof pages, not runners, are the vertices, and the first-surviving-page test asks whet
+  00-navigation/CONCEPT-MAP.md: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECHNIQUE-INDEX.md`, now expanded through LT
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - Zeckendorf of forbidden values: `7=F_2+F_4` is the tightest valid two-term
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - Zeckendorf of `H(T_7)=189`: indices `[3,5,8,11]`, gaps `[2,3,3]`, gap sum 8.
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - Zeckendorf of `H(T_11)=95095`: terms `[8,144,610,1597,17711,75025]`, indices
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - Zeckendorf pairing: non-consecutive Fibonacci terms are independent sets in
+
+Cluster: analytic-prime-sieve
+--------------------------------------------------------------------------------
+regex=\b(Barban[-– ]Davenport[-– ]Halberstam|Brun[-– ]Titchmarsh|Mertens|M[eö]bius|Mobius|Ramanujan sum|divisor function|Goldbach|ternary Goldbach|parabolic cylinder|saddle[- ]point|explicit formula|upper[- ]bound quadratic sieve)\b
+proof_pull=Smoothing dispatcher: separate admissible packet families before applying one global estimate.
+current_hits=1547
+current_paths=243
+commit_subject_hits=64
+history_subject_path_commits=69
+top_current_paths:
+   246  00-navigation/SESSION-LOG.md
+   186  05-knowledge/hypotheses/INDEX.md
+   134  00-navigation/TANGENTS.md
+    35  00-navigation/OPEN-QUESTIONS.md
+    34  00-navigation/LRC-TECHNIQUE-INDEX.md
+    33  00-navigation/INVESTIGATION-BACKLOG.md
+    28  00-navigation/CONCEPT-MAP.md
+    27  00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md
+    17  07-reflections/the-self-dual-middle-where-parity-lives.md
+    15  07-reflections/the-three-modes-are-parity-stratified-and-lrc14-is-eisenstein-compose-legendre.md
+    15  07-reflections/twin-goldbach-necklace-triples-s521.md
+    14  05-knowledge/hypotheses/HYP-1953-additive-basis-normal-form-spectrum.md
+recent_subject_hits:
+  9bc2f6c17 2026-06-28 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Lindemann-Weierstrass theorem on transcendental numbers, 3. The Mertens conjecture and its counterexample bounds
+  c78f46f91 2026-06-28 New obscure math synthesis: 1. The Lucas-Lehmer-Riesel test for N = h * 2^n - 1, 2. The Barban-Davenport-Halberstam Theorem on primes in arithmetic progressions, 3. Krasner's Lemma regarding p-adic field extensions and polynomials
+  a03769fb3 2026-06-28 New obscure math synthesis: 1. The Bring radical, 2. The Meissel-Mertens constant, 3. The Schwarz-Christoffel mapping theorem for polygons with non-parallel sides
+  1fc5f6ef6 2026-06-28 kps-2026-06-28-S31av: HYP-3239 -- 14=|D_7| (heptagon dihedral); LRC modes = D_7 irreps (trivial=Mobius, sign=complement, 3x2dim=de Moivre cubic). n=14's complement=reflection=mult-by-(-1)=ANTI-AUT (p=7=3mod4, -1 NQR, self-converse) => free Z_2 => BORSUK-ULAM not Brouwer. odd degree=imaginary Gauss sum i*sqrt7. -7 Heegner=>h=1 UFD
+  f569fdf6b 2026-06-28 kps-S31ar: cubic-mode extension VERIFIED -- chi_3 cubic cosets {1,6}/{2,5}/{3,4} = the de Moivre angles EXACTLY; the CUBIC mode (=HYP-3216) named as a signed recursion, completing Mobius/Eisenstein/Legendre/CUBIC/sextic = subfield lattice of Q(zeta_7) x 2-adic
+  d1094e96b 2026-06-28 kps-2026-06-28-S31ar: HYP-3217 -- the 3 modes (Mobius/Eisenstein/Legendre) ARE the subfield lattice of Q(zeta_7) x 2-adic; the CUBIC de Moivre (HYP-3216) is the MISSING 4th mode (deg-3 Gaussian periods=de Moivre angles); sextic=Fejer. Venn-depth=cyclotomic degree (p-1)/2 unifies all. 14=2*7=Eisenstein x [Q(zeta_7) tower]
+  de5cd9b67 2026-06-28 mac-mini-2026-06-28-S75c: INTERLOCKING recursions (HYP-3232) -- three orthogonal recursions (Mobius order / Eisenstein modulus / Legendre three-gap) = the three modes; cap kernel modulus-covariant K^(n)=(2/n)h, Eisenstein fold exactly x1/2, BREAKS at apex n/2=7 (antipode speeds >7 deviate = the difficulty); moment-depth interlocks with speed-vs-apex; converges kps S31aq family law depth=(p+1)/2=4; NOT a proof
+  e04b0b0e5 2026-06-28 New obscure math synthesis: 1. The Barban-Davenport-Halberstam Theorem for specific residues in arithmetic progressions., 2. The Roth-Vaughan discrepancy bound for small sets of integers., 3. The Hensel-Newton lifting lemma for 2-adic geometry edge cases.
+  295c3bb28 2026-06-26 New obscure math synthesis: 1. Thue's Lemma in number theory, 2. The Meissel-Mertens constant, 3. The Erdős-Kac theorem on the number of prime factors of n
+  ef4228d22 2026-06-26 New obscure math synthesis: 1. Pincherle derivative on the algebra of operators, 2. Meissel-Mertens constant for arithmetic progressions, 3. Mahler's 3/2-power sequence distribution bounds
+  a687aecc1 2026-06-25 codex: final S177 sync - integrating Hensel's Lemma for 2-adic units, lacunary discrepancy, and Mertens constants (sync)
+  5d6d23bce 2026-06-25 codex: forum debate on Henselian lifting, lacunary discrepancy, and Mertens constants for LRC(14) (Sigma, Gamma, Delta)
+history_subject_path_hits:
+  9bc2f6c17 2026-06-28 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Lindemann-Weierstrass theorem on transcendental numbers, 3. The Mertens conjecture and its counterexample bounds
+  c78f46f91 2026-06-28 New obscure math synthesis: 1. The Lucas-Lehmer-Riesel test for N = h * 2^n - 1, 2. The Barban-Davenport-Halberstam Theorem on primes in arithmetic progressions, 3. Krasner's Lemma regarding p-adic field extensions and polynomials
+  a03769fb3 2026-06-28 New obscure math synthesis: 1. The Bring radical, 2. The Meissel-Mertens constant, 3. The Schwarz-Christoffel mapping theorem for polygons with non-parallel sides
+  1fc5f6ef6 2026-06-28 kps-2026-06-28-S31av: HYP-3239 -- 14=|D_7| (heptagon dihedral); LRC modes = D_7 irreps (trivial=Mobius, sign=complement, 3x2dim=de Moivre cubic). n=14's complement=reflection=mult-by-(-1)=ANTI-AUT (p=7=3mod4, -1 NQR, self-converse) => free Z_2 => BORSUK-ULAM not Brouwer. odd degree=imaginary Gauss sum i*sqrt7. -7 Heegner=>h=1 UFD
+  f569fdf6b 2026-06-28 kps-S31ar: cubic-mode extension VERIFIED -- chi_3 cubic cosets {1,6}/{2,5}/{3,4} = the de Moivre angles EXACTLY; the CUBIC mode (=HYP-3216) named as a signed recursion, completing Mobius/Eisenstein/Legendre/CUBIC/sextic = subfield lattice of Q(zeta_7) x 2-adic
+  d1094e96b 2026-06-28 kps-2026-06-28-S31ar: HYP-3217 -- the 3 modes (Mobius/Eisenstein/Legendre) ARE the subfield lattice of Q(zeta_7) x 2-adic; the CUBIC de Moivre (HYP-3216) is the MISSING 4th mode (deg-3 Gaussian periods=de Moivre angles); sextic=Fejer. Venn-depth=cyclotomic degree (p-1)/2 unifies all. 14=2*7=Eisenstein x [Q(zeta_7) tower]
+  de5cd9b67 2026-06-28 mac-mini-2026-06-28-S75c: INTERLOCKING recursions (HYP-3232) -- three orthogonal recursions (Mobius order / Eisenstein modulus / Legendre three-gap) = the three modes; cap kernel modulus-covariant K^(n)=(2/n)h, Eisenstein fold exactly x1/2, BREAKS at apex n/2=7 (antipode speeds >7 deviate = the difficulty); moment-depth interlocks with speed-vs-apex; converges kps S31aq family law depth=(p+1)/2=4; NOT a proof
+  e04b0b0e5 2026-06-28 New obscure math synthesis: 1. The Barban-Davenport-Halberstam Theorem for specific residues in arithmetic progressions., 2. The Roth-Vaughan discrepancy bound for small sets of integers., 3. The Hensel-Newton lifting lemma for 2-adic geometry edge cases.
+  295c3bb28 2026-06-26 New obscure math synthesis: 1. Thue's Lemma in number theory, 2. The Meissel-Mertens constant, 3. The Erdős-Kac theorem on the number of prime factors of n
+  ef4228d22 2026-06-26 New obscure math synthesis: 1. Pincherle derivative on the algebra of operators, 2. Meissel-Mertens constant for arithmetic progressions, 3. Mahler's 3/2-power sequence distribution bounds
+  a687aecc1 2026-06-25 codex: final S177 sync - integrating Hensel's Lemma for 2-adic units, lacunary discrepancy, and Mertens constants (sync)
+  5d6d23bce 2026-06-25 codex: forum debate on Henselian lifting, lacunary discrepancy, and Mertens constants for LRC(14) (Sigma, Gamma, Delta)
+sample_current_lines:
+  00-navigation/CONCEPT-MAP.md: | **LRC14 analytic sieve-clock bridge** | Analytic proof clocks used as repair-ladder sidecars rather than scalar LRC quotients | HYP-3032/T1113/LTI-180/LTT-078 repairs the namespace collision with the earlier HYP-3028 r
+  00-navigation/CONCEPT-MAP.md: | **Farey-Fibonacci additive-basis carrier** | Representation-hypergraph proof economy linking Goldbach smoothing, Fermat polygonal bounded arity, Zeckendorf sparse normal forms, and Farey sum/product/power payloads | HY
+  00-navigation/CONCEPT-MAP.md: | **Fibonacci additive-basis Farey bridge** | Proof-currency carrier linking Fibonacci path-rank rows, Zeckendorf normal forms, Goldbach/Fermat representation hypergraphs, and LRC14 unit-excess Farey payloads | HYP-3000/
+  00-navigation/CONCEPT-MAP.md: | **Summand/multiplicand Farey basis merge** | Two-operation graph normal form for additive-basis sequence shadows and Farey mutations | HYP-3003/S171 extends HYP-2998/HYP-2999/HYP-3000 by making `p+q` and `p*q` typed gr
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: atoms, Mobius strip, Euler identity, and the "cube closes" motif are a
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - Mobius bundle: `M[a,*]` living on a non-orientable complement quotient,
+  00-navigation/INVESTIGATION-BACKLOG.md: Mertens/loglog guardrail lanes.
+  00-navigation/INVESTIGATION-BACKLOG.md: Next: require every Euler-Mascheroni, Mertens, or loglog tail estimate in the
+
+Cluster: unit-distance-codes-designs
+--------------------------------------------------------------------------------
+regex=\b(unit distance|self[- ]dual|\[72, ?36, ?16\]|Golay|unital|BIBD|block design|q=3 unital|Steiner|Paley design)\b
+proof_pull=Design view: convert local packets into incidence/block constraints with dual certificates.
+current_hits=1442
+current_paths=276
+commit_subject_hits=56
+history_subject_path_commits=62
+top_current_paths:
+   203  00-navigation/SESSION-LOG.md
+   130  05-knowledge/hypotheses/INDEX.md
+    74  00-navigation/TANGENTS.md
+    56  00-navigation/OPEN-QUESTIONS.md
+    55  00-navigation/CONCEPT-MAP.md
+    32  00-navigation/INVESTIGATION-BACKLOG.md
+    27  07-reflections/steiner-triple-tournaments.md
+    21  05-knowledge/hypotheses/HYP-2976-lrc14-holistic-lineage-synthesis.md
+    21  07-reflections/lrc14-pi-unital-flower-ledger-codex.md
+    19  00-navigation/LRC-TECHNIQUE-INDEX.md
+    19  07-reflections/lrc14-holistic-history-and-current-proof-structure-codex-s160.md
+    17  01-canon/theorems/THM-480-skew-tower-row-code-is-dplus.md
+recent_subject_hits:
+  78f738425 2026-06-28 kps-2026-06-28-S31as: CLOSE -- PROOF-PUSH (HYP-3218): mac-mini's equidistribution finish = explicit cyclotomic Fejer cert; margin=phi(p), |Gauss sum|^2=7=Lee-Yang zero, coherence-vs-arithmetic fight dissolves (AP=self-dual Fejer fixed point); SESSION-LOG
+  107020281 2026-06-28 kps-2026-06-28-S31as: HYP-3218 PROOF-PUSH -- mac-mini's equidistribution FINISH = the explicit cyclotomic FEJER certificate. 4 bridges: (1) Lee-Yang margin=phi(p) cyclotomic group order; (2) |Gauss sum|^2=7=the Lee-Yang zero; (3) Erdos-Turan=Fejer=my magic fn (HYP-3214); (4) the coherence-vs-arithmetic FIGHT DISSOLVES (AP=self-dual Fejer fixed point)
+  12ba6697b 2026-06-27 New obscure math synthesis: 1. Residue fields of p-adic integers in 2-adic geometry, 2. Roth's theorem minor discrepancy bounds for arithmetic progressions, 3. Graham's constant in the context of Steiner tree problems
+  712af9439 2026-06-24 codex-S142: merge affine depth unital chain
+  38ba16da4 2026-06-24 codex-s142: add LRC14 affine depth unital chain
+  d08b8474b 2026-06-24 codex-S140: synthesize C27 unital block lift
+  c0f0d0b32 2026-06-24 document C27 unital block lift and branch-local splice grammar (commit 10df667a)
+  8f0f62804 2026-06-24 codex-S140: checkpoint - q3 unital C27 transfer block lift
+  10df667ad 2026-06-24 codex-S140: add C27 unital block lift audit
+  9887d8701 2026-06-23 codex-S137: sharpen pi unital flower guardrail
+  f3f403fa5 2026-06-23 document Pi Unital Flower unit guardrail and structural hygiene (commit 6d132109)
+  18f69e7cb 2026-06-23 codex-s137: add LRC14 pi unital flower carriers
+history_subject_path_hits:
+  78f738425 2026-06-28 kps-2026-06-28-S31as: CLOSE -- PROOF-PUSH (HYP-3218): mac-mini's equidistribution finish = explicit cyclotomic Fejer cert; margin=phi(p), |Gauss sum|^2=7=Lee-Yang zero, coherence-vs-arithmetic fight dissolves (AP=self-dual Fejer fixed point); SESSION-LOG
+  107020281 2026-06-28 kps-2026-06-28-S31as: HYP-3218 PROOF-PUSH -- mac-mini's equidistribution FINISH = the explicit cyclotomic FEJER certificate. 4 bridges: (1) Lee-Yang margin=phi(p) cyclotomic group order; (2) |Gauss sum|^2=7=the Lee-Yang zero; (3) Erdos-Turan=Fejer=my magic fn (HYP-3214); (4) the coherence-vs-arithmetic FIGHT DISSOLVES (AP=self-dual Fejer fixed point)
+  12ba6697b 2026-06-27 New obscure math synthesis: 1. Residue fields of p-adic integers in 2-adic geometry, 2. Roth's theorem minor discrepancy bounds for arithmetic progressions, 3. Graham's constant in the context of Steiner tree problems
+  485fb9bf8 2026-06-25 codex: checkpoint existing lrc14 artifacts before automata thread
+  712af9439 2026-06-24 codex-S142: merge affine depth unital chain
+  38ba16da4 2026-06-24 codex-s142: add LRC14 affine depth unital chain
+  d08b8474b 2026-06-24 codex-S140: synthesize C27 unital block lift
+  c0f0d0b32 2026-06-24 document C27 unital block lift and branch-local splice grammar (commit 10df667a)
+  8f0f62804 2026-06-24 codex-S140: checkpoint - q3 unital C27 transfer block lift
+  10df667ad 2026-06-24 codex-S140: add C27 unital block lift audit
+  9887d8701 2026-06-23 codex-S137: sharpen pi unital flower guardrail
+  f3f403fa5 2026-06-23 document Pi Unital Flower unit guardrail and structural hygiene (commit 6d132109)
+sample_current_lines:
+  00-navigation/CONCEPT-MAP.md: | **LRC14 cocycle carrier atlas** | Packet-cocycle theorem target for deciding what a quotient is allowed to forget | HYP-2995/S167 treats every serious LRC14 quotient as carrying a signed lost-coordinate cochain on labe
+  00-navigation/CONCEPT-MAP.md: | **Abstract zipper theorem atlas** | Cross-domain controlled-kernel proof template for deciding what a quotient may forget | HYP-2990/S165 generalizes the LRC14 zipper target across old project lanes: LRC14 certificate 
+  00-navigation/CONCEPT-MAP.md: | **LRC14 holistic proof-object sheaf** | Repository-wide synthesis of how LRC14 proof routes matured from scalar/tournament quotients to a labelled proof packet over a Farey/Haar endpoint sheaf | HYP-2976/S160 combines 
+  00-navigation/CONCEPT-MAP.md: | **LRC14 Ramanujan-divisor quotient guardrails** | Controlled-kernel / fiber-homogeneity rule for what LRC14 quotients may forget | HYP-2978/S161 reads the divisor-function/Ramanujan-sum neighborhood and turns it into a
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - QR/BIBD/Paley cluster: QR_7 cycle graph as cocktail party `CP(7)`, n=6
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: `2-(10,4,2)` BIBD, and Fano bridge are one design-theory corridor.
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - n=6 `2-(10,4,2)` BIBD: the alpha_2=4 patterns form a design on Petersen
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - Golay `[24,12,8]`: extended Golay parameters were repeatedly mapped to
+
+Cluster: irreducibility-polynomial-tiling
+--------------------------------------------------------------------------------
+regex=\b(Bunyakovsky|irreducib|Newton polytope|factorization|Sophie Germain|Fermat[-– ]Catalan|convolution|tiling lift|integer polynomial|Mahler measure)\b
+proof_pull=Lift obstruction: reducibility as hidden convolution lift; LRC quotients must prove no hidden lift is lost.
+current_hits=1118
+current_paths=297
+commit_subject_hits=42
+history_subject_path_commits=49
+top_current_paths:
+   136  00-navigation/SESSION-LOG.md
+   115  05-knowledge/hypotheses/INDEX.md
+    70  00-navigation/TANGENTS.md
+    44  00-navigation/OPEN-QUESTIONS.md
+    43  00-navigation/INVESTIGATION-BACKLOG.md
+    34  00-navigation/LRC-TECHNIQUE-INDEX.md
+    29  00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md
+    24  00-navigation/CONCEPT-MAP.md
+    21  05-knowledge/hypotheses/HYP-2452-convolution-factor-capture-tiling.md
+    20  07-reflections/convolution-correlation-adjoint-unifies-clock-shell-converse-s706.md
+    16  01-canon/theorems/THM-441-convolution-correlation-adjoint-duality-unifies-the-repo.md
+    12  07-reflections/if-fifteen-were-prime-structure-shapes-truth-s17.md
+recent_subject_hits:
+  d95e48d67 2026-06-28 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Sophie Germain identity, 3. The Hermite-Lindemann-Weierstrass theorem extension for p-adic exponentials
+  ab624ad8f 2026-06-28 codex-S292: C6 residue-magnitude factorization (sync)
+  72d71f0d7 2026-06-28 mac-mini-2026-06-28-S75d: the A..G recursion modes are CYCLOTOMIC FACTORS (HYP-3233) -- EVEN=(x-1)^2, FULL=(x-1)^3, ODD=(x-1)^3*Phi_2; mode=(x-1)^depth*Phi_d (depth=moment-order=(p+1)/2, Phi_d=character chi_2/chi_3/chi_7); extension=cyclotomic factorization x^14-1=Phi_1*Phi_2*Phi_7*Phi_14; apex Phi_7=de Moivre cubic=the irreducible hardness; verified sympy; NOT a proof
+  259cc6a34 2026-06-26 codex-S249: add Robbins Fermat-Catalan branch tournaments
+  288220a22 2026-06-26 codex-S181: update coordination log with Beck-Fiala and multivariate Mahler measure (sync)
+  d867ba25c 2026-06-26 New obscure math synthesis: The Beck-Fiala Theorem for discrepancy bounds in hypergraphs, The Erdős-Turán inequality for distribution of sequences modulo one, The Mahler measure of multivariate polynomials in transcendental number theory
+  f4b62dda0 2026-06-26 codex-S181: update coordination log with p-adic Mahler measure and singular residue lifting (sync)
+  c46337698 2026-06-25 codex: final S177 sync - integrating 2-adic Littlewood discrepancy, Fermat-Catalan valuations, and Skolem-Mahler-Lech theorem (sync)
+  3499cbc96 2026-06-25 codex: forum debate on 2-adic Littlewood conjecture, Fermat-Catalan valuations, and Skolem-Mahler-Lech theorem for LRC(14) (Sigma, Gamma, Delta)
+  ca8ed1b23 2026-06-25 New obscure math synthesis: The 2-adic Littlewood conjecture discrepancy bounds, The p-adic valuation of the Fermat-Catalan equation, The Skolem-Mahler-Lech theorem for linear recurrences
+  503c4ced8 2026-06-24 New obscure math synthesis: 1. Monna's non-archimedean integration and p-adic functional analysis, 2. The Barban-Davenport-Halberstam theorem on primes in arithmetic progressions, 3. The Mahler measure of Lehmer's constant in non-commutative dynamics
+  8afcbcd06 2026-06-19 kind-pasteur-S12: LRC(14) exact coset/reciprocal factorization K(n)=D7(n mod7)/prod(n_j) — signed quotient ruler made precise (HYP-2646)
+history_subject_path_hits:
+  d95e48d67 2026-06-28 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Sophie Germain identity, 3. The Hermite-Lindemann-Weierstrass theorem extension for p-adic exponentials
+  ab624ad8f 2026-06-28 codex-S292: C6 residue-magnitude factorization (sync)
+  0517e1348 2026-06-28 codex-2026-06-28: add HYP-3310 C6 residue-magnitude frame
+  72d71f0d7 2026-06-28 mac-mini-2026-06-28-S75d: the A..G recursion modes are CYCLOTOMIC FACTORS (HYP-3233) -- EVEN=(x-1)^2, FULL=(x-1)^3, ODD=(x-1)^3*Phi_2; mode=(x-1)^depth*Phi_d (depth=moment-order=(p+1)/2, Phi_d=character chi_2/chi_3/chi_7); extension=cyclotomic factorization x^14-1=Phi_1*Phi_2*Phi_7*Phi_14; apex Phi_7=de Moivre cubic=the irreducible hardness; verified sympy; NOT a proof
+  259cc6a34 2026-06-26 codex-S249: add Robbins Fermat-Catalan branch tournaments
+  3908bcf35 2026-06-26 codex-S222: add hyperbolic reciprocal LRC14 sidecar
+  288220a22 2026-06-26 codex-S181: update coordination log with Beck-Fiala and multivariate Mahler measure (sync)
+  d867ba25c 2026-06-26 New obscure math synthesis: The Beck-Fiala Theorem for discrepancy bounds in hypergraphs, The Erdős-Turán inequality for distribution of sequences modulo one, The Mahler measure of multivariate polynomials in transcendental number theory
+  f4b62dda0 2026-06-26 codex-S181: update coordination log with p-adic Mahler measure and singular residue lifting (sync)
+  265bc43ac 2026-06-25 codex: add LRC14 automatic gap ledger
+  c46337698 2026-06-25 codex: final S177 sync - integrating 2-adic Littlewood discrepancy, Fermat-Catalan valuations, and Skolem-Mahler-Lech theorem (sync)
+  3499cbc96 2026-06-25 codex: forum debate on 2-adic Littlewood conjecture, Fermat-Catalan valuations, and Skolem-Mahler-Lech theorem for LRC(14) (Sigma, Gamma, Delta)
+sample_current_lines:
+  00-navigation/CONCEPT-MAP.md: **Current LRC tournament technique index addenda:** T1123/HYP-3042/LTI-190/LTT-088 adds owner-strip filtration tournaments: residual proof pages, not runners, are the vertices, and the first-surviving-page test asks whet
+  00-navigation/CONCEPT-MAP.md: **S221-S250 value-origin, observer-cut, hyperbolic, finalizer, geometry, Diophantine-lattice, partial-cube, bridge-rank, Toeplitz, exact-audit, Hodge-cycle, Desargues-median, owner/root, Boolean route-center, route-tripl
+  00-navigation/CONCEPT-MAP.md: **Current LRC tournament technique index addenda:** T1123/HYP-3042/LTI-190/LTT-088 adds owner-strip filtration tournaments: residual proof pages, not runners, are the vertices, and the first-surviving-page test asks whet
+  00-navigation/CONCEPT-MAP.md: **S221-S250 value-origin, observer-cut, hyperbolic, finalizer, geometry, Diophantine-lattice, partial-cube, bridge-rank, Toeplitz, exact-audit, Hodge-cycle, Desargues-median, owner/root, Boolean route-center, route-tripl
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - Hopf algebra / subset convolution: Redei-Berge and noncommutative analogues
+  00-navigation/INVESTIGATION-BACKLOG.md: Ramanujan-Soldner zero-points, Sophie Germain quartic splitting,
+  00-navigation/INVESTIGATION-BACKLOG.md: Sophie Germain, Hermite-Lindemann-Weierstrass, Krasner, Meissel-Mertens, and
+  00-navigation/INVESTIGATION-BACKLOG.md: witness address, tiling lift/descent, Cech/Euler hole, `D_7` Borsuk-Ulam sign,
+
+Cluster: polygonal-faulhaber-pollock
+--------------------------------------------------------------------------------
+regex=\b(Fermat polygonal|polygonal number|Pollock|Faulhaber|pentagonal|Euler partition|square pyramidal|triangular tower|odd Faulhaber|boundary moment|Bernoulli)\b
+proof_pull=Boundary-moment carrier: odd moments and additive tilings as obstruction ledgers.
+current_hits=913
+current_paths=136
+commit_subject_hits=36
+history_subject_path_commits=43
+top_current_paths:
+   145  00-navigation/SESSION-LOG.md
+   120  05-knowledge/hypotheses/INDEX.md
+    65  00-navigation/TANGENTS.md
+    30  00-navigation/CONCEPT-MAP.md
+    29  00-navigation/INVESTIGATION-BACKLOG.md
+    29  00-navigation/OPEN-QUESTIONS.md
+    23  01-canon/theorems/THM-498-cycle-spectrum-pollock-completeness-hierarchy.md
+    22  07-reflections/pollock-as-the-bounded-arity-currency-and-the-cycle-spectrum-onset-kps3.md
+    14  07-reflections/bsd-hodge-the-polygonal-ladder-and-what-merges-kps7.md
+    13  05-knowledge/hypotheses/HYP-2454-triangular-power-balance-towers.md
+    13  05-knowledge/hypotheses/HYP-2457-faulhaber-anchor-expansion.md
+    12  05-knowledge/hypotheses/HYP-2530-moment-positivity-one-particle-shadow.md
+recent_subject_hits:
+  12072d493 2026-06-28 kps-2026-06-28-S31aq: HYP-3216 -- the route sharpened by DESCENDING a moment-order ladder = TWO interlocking recursions = 14=2*7: the cyclotomic LADDER (cap_k=cap_(k-1)+k/91 Faulhaber, depth=(p-1)/2 cyclotomic degree, triangular widths) x the 2-adic reflection FOLD (degree halving). Fixed point = de Moivre/Fejer. Family prediction: depth=(p-1)/2
+  b5ed59dd3 2026-06-25 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Lindelöf hypothesis for the Riemann zeta function, 3. Kummer’s congruences for Bernoulli numbers
+  f226a175b 2026-06-24 codex: add LRC14 boundary moment bridge attempt
+  e08e7b964 2026-06-21 kps-2026-06-21 THREAD A: HYP-2745 -- LRC residue discrepancy G_P full closed form = two cycle-graph resistances (Bernoulli B_2); Klein-4 stabilizer PROVED all P>=5; honest pair-vs-slope correction to HYP-2742; completes HYP-2743 program. Verified exact P=3..43, 0 fails. + reflection
+  209e22ff1 2026-06-12 codex: add faulhaber odd-moment anchor expansion
+  139ad577d 2026-06-12 codex: add triangular tower repunit carrier tournament
+  4447c45b4 2026-06-12 monad-explorer-S713: classify triangular tower subset families
+  20094eb01 2026-06-12 monad-explorer-S712: triangular tower Pell bridge + unique shared block
+  d203d49ef 2026-06-14 kind-pasteur-2026-06-14-S7: BSD/Hodge x polygonal ladder - honest theorem-vs-metaphor; Pollock!=pentagonal = degree-3-vs-2 (computed); Delta=eta^24=Ramanujan-tau modular L-function = the BSD bridge (verified); special-value/realizability lens; Lemoine=>weak-Goldbach via 2q=q+q; flagged Lemoine-RH-1/2 as metaphor. HYP-2505/2506, reflection
+  192a52985 2026-06-14 kind-pasteur-2026-06-14-S7: checkpoint - reflection on the BSD/Hodge/polygonal merge (honest theorem-vs-metaphor); HYP-2505 (special-value lens + VERIFIED Delta=eta^24=Ramanujan-tau modular L-function bridge, supplies the missing BSD link), HYP-2506 (Pollock vs pentagonal = degree-3-vs-2 jump, figurate dimension=Waring degree=difficulty); flagged Lemoine-2q/RH-1/2 as metaphor
+  30e345e2e 2026-06-14 kind-pasteur-2026-06-14-S6: the LRC singular series - THM-501 (L(S)=lim D(q,S)/q exists = singular series = (6/7)^13 + relation-lattice sinc corrections; L=0 iff tight; L>0 => loose; C'(14) <= inf L>0 = circle-method singular-series-positivity, the Pollock transfer; evaders = AP-core extremizers, L~0.026>0); HYP-2501..2503; reflection
+  7cde0ee80 2026-06-13 codex: add tournament speedup and pollock carry scouts
+history_subject_path_hits:
+  12072d493 2026-06-28 kps-2026-06-28-S31aq: HYP-3216 -- the route sharpened by DESCENDING a moment-order ladder = TWO interlocking recursions = 14=2*7: the cyclotomic LADDER (cap_k=cap_(k-1)+k/91 Faulhaber, depth=(p-1)/2 cyclotomic degree, triangular widths) x the 2-adic reflection FOLD (degree halving). Fixed point = de Moivre/Fejer. Family prediction: depth=(p-1)/2
+  485fb9bf8 2026-06-25 codex: checkpoint existing lrc14 artifacts before automata thread
+  b5ed59dd3 2026-06-25 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Lindelöf hypothesis for the Riemann zeta function, 3. Kummer’s congruences for Bernoulli numbers
+  f226a175b 2026-06-24 codex: add LRC14 boundary moment bridge attempt
+  e08e7b964 2026-06-21 kps-2026-06-21 THREAD A: HYP-2745 -- LRC residue discrepancy G_P full closed form = two cycle-graph resistances (Bernoulli B_2); Klein-4 stabilizer PROVED all P>=5; honest pair-vs-slope correction to HYP-2742; completes HYP-2743 program. Verified exact P=3..43, 0 fails. + reflection
+  209e22ff1 2026-06-12 codex: add faulhaber odd-moment anchor expansion
+  2476ce4fb 2026-06-12 manually commiting in hopes of fixng git issues for codex becasue codex is a baby and cant fix it on its own
+  139ad577d 2026-06-12 codex: add triangular tower repunit carrier tournament
+  4447c45b4 2026-06-12 monad-explorer-S713: classify triangular tower subset families
+  20094eb01 2026-06-12 monad-explorer-S712: triangular tower Pell bridge + unique shared block
+  d203d49ef 2026-06-14 kind-pasteur-2026-06-14-S7: BSD/Hodge x polygonal ladder - honest theorem-vs-metaphor; Pollock!=pentagonal = degree-3-vs-2 (computed); Delta=eta^24=Ramanujan-tau modular L-function = the BSD bridge (verified); special-value/realizability lens; Lemoine=>weak-Goldbach via 2q=q+q; flagged Lemoine-RH-1/2 as metaphor. HYP-2505/2506, reflection
+  192a52985 2026-06-14 kind-pasteur-2026-06-14-S7: checkpoint - reflection on the BSD/Hodge/polygonal merge (honest theorem-vs-metaphor); HYP-2505 (special-value lens + VERIFIED Delta=eta^24=Ramanujan-tau modular L-function bridge, supplies the missing BSD link), HYP-2506 (Pollock vs pentagonal = degree-3-vs-2 jump, figurate dimension=Waring degree=difficulty); flagged Lemoine-2q/RH-1/2 as metaphor
+sample_current_lines:
+  00-navigation/CONCEPT-MAP.md: **S235 Boolean route-center addendum:** T1151/HYP-3069/LTI-216/LTT-114 turns the simplex/Faulhaber/bridge cue into a Boolean median-completion scout downstream of the S233 Desargues-median warning and S234 owner/root sid
+  00-navigation/CONCEPT-MAP.md: | **Moser-fibbinary partial-cube simplex carrier** | Sidecar turning automatic sequence shadows into cube-complex and simplex packet fields | HYP-3063/S227 treats fibbinary fixed-length windows as Fibonacci-cube partial 
+  00-navigation/CONCEPT-MAP.md: | **Medianized route-center gate** | Boolean sidecar-cube completion for final packet/route/certificate/discharge centers | HYP-3069/S235 models 12 proof carriers as Boolean vectors over packet, route, certificate, sidec
+  00-navigation/CONCEPT-MAP.md: | **Farey-Fibonacci additive-basis carrier** | Representation-hypergraph proof economy linking Goldbach smoothing, Fermat polygonal bounded arity, Zeckendorf sparse normal forms, and Farey sum/product/power payloads | HY
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - Bernoulli chain: `6 -> 42 -> 1806 -> 1806`; von Staudt denominators stabilize
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - Sylvester primality filter: Bernoulli follows Sylvester products until
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: closes the first Bernoulli fixed set.
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: surface, and pentagonal/golden codimension as a geometry-prime motif.
+
+Cluster: constants-thresholds-decoys
+--------------------------------------------------------------------------------
+regex=\b(Ramanujan[-– ]Soldner|Meissel[-– ]Mertens|Skewes|Graham's constant|Kempner|Champernowne|Lehmer|Lucas[-– ]Lehmer[-– ]Riesel|Brun constant)\b
+proof_pull=Canary constants: useful only after becoming exact thresholds, clocks, or named counterexamples.
+current_hits=187
+current_paths=33
+commit_subject_hits=25
+history_subject_path_commits=25
+top_current_paths:
+    35  05-knowledge/hypotheses/INDEX.md
+    21  00-navigation/TANGENTS.md
+    17  00-navigation/SESSION-LOG.md
+    16  00-navigation/OPEN-QUESTIONS.md
+    13  00-navigation/LRC-TECHNIQUE-INDEX.md
+    11  05-knowledge/hypotheses/HYP-3408-lrc14-exotic-guardrail-reframe-atlas.md
+     8  05-knowledge/hypotheses/HYP-3440-lrc14-bring-sc-menger-charal-signatures.md
+     7  00-navigation/INVESTIGATION-BACKLOG.md
+     7  00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md
+     4  05-knowledge/hypotheses/HYP-3407-lrc14-boundary-uniformization-cut-stability.md
+     4  05-knowledge/hypotheses/HYP-3412-lrc14-special-function-cut-signature-recursion.md
+     4  05-knowledge/hypotheses/HYP-3420-lrc14-owner-cut-chiral-transcendence-synthesis.md
+recent_subject_hits:
+  68ffe38a8 2026-06-28 New obscure math synthesis: 1. The transcendence of the Champernowne constant in non-base-10 representations., 2. The Erdős–Turán conjecture on additive bases of order 2., 3. The Hensel's Lemma application to specific 2-adic exponential sums.
+  9bc2f6c17 2026-06-28 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Lindemann-Weierstrass theorem on transcendental numbers, 3. The Mertens conjecture and its counterexample bounds
+  d95e48d67 2026-06-28 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Sophie Germain identity, 3. The Hermite-Lindemann-Weierstrass theorem extension for p-adic exponentials
+  c78f46f91 2026-06-28 New obscure math synthesis: 1. The Lucas-Lehmer-Riesel test for N = h * 2^n - 1, 2. The Barban-Davenport-Halberstam Theorem on primes in arithmetic progressions, 3. Krasner's Lemma regarding p-adic field extensions and polynomials
+  a03769fb3 2026-06-28 New obscure math synthesis: 1. The Bring radical, 2. The Meissel-Mertens constant, 3. The Schwarz-Christoffel mapping theorem for polygons with non-parallel sides
+  96e964a6d 2026-06-28 New obscure math synthesis: The Roth-Halász discrepancy bound for arithmetic progressions, The p-adic Hensel-Krasner lemma for non-archimedean geometry, The Ramanujan-Soldner constant for logarithmic integrals
+  4fd4c16f0 2026-06-28 New obscure math synthesis: 1. The Skewes Number bound for Prime-Counting Functions, 2. The Helfgott-Ruzsa Constant in Additive Combinatorics, 3. 2-adic valuation anomalies in the Collatz 3n+1 mapping sequence
+  07efa3fc4 2026-06-27 New obscure math synthesis: 1. The transcendence of the Champernowne constant in non-base-10 expansions, 2. The application of the Lindelöf hypothesis to minor discrepancy bounds in low-dimensional sequences, 3. Local-global transitions in 2-adic geometry edge cases for non-archimedean fields
+  12ba6697b 2026-06-27 New obscure math synthesis: 1. Residue fields of p-adic integers in 2-adic geometry, 2. Roth's theorem minor discrepancy bounds for arithmetic progressions, 3. Graham's constant in the context of Steiner tree problems
+  fbaf249b3 2026-06-27 New obscure math synthesis: 1. Graham's Sequence under the 2-adic topology, 2. Skewes' Number residue classes in modular arithmetic, 3. The Hermite-Lindemann-Weierstraß theorem for algebraic independence of exponentials over p-adic fields
+  295c3bb28 2026-06-26 New obscure math synthesis: 1. Thue's Lemma in number theory, 2. The Meissel-Mertens constant, 3. The Erdős-Kac theorem on the number of prime factors of n
+  ef4228d22 2026-06-26 New obscure math synthesis: 1. Pincherle derivative on the algebra of operators, 2. Meissel-Mertens constant for arithmetic progressions, 3. Mahler's 3/2-power sequence distribution bounds
+history_subject_path_hits:
+  68ffe38a8 2026-06-28 New obscure math synthesis: 1. The transcendence of the Champernowne constant in non-base-10 representations., 2. The Erdős–Turán conjecture on additive bases of order 2., 3. The Hensel's Lemma application to specific 2-adic exponential sums.
+  9bc2f6c17 2026-06-28 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Lindemann-Weierstrass theorem on transcendental numbers, 3. The Mertens conjecture and its counterexample bounds
+  d95e48d67 2026-06-28 New obscure math synthesis: 1. The Ramanujan-Soldner constant, 2. The Sophie Germain identity, 3. The Hermite-Lindemann-Weierstrass theorem extension for p-adic exponentials
+  c78f46f91 2026-06-28 New obscure math synthesis: 1. The Lucas-Lehmer-Riesel test for N = h * 2^n - 1, 2. The Barban-Davenport-Halberstam Theorem on primes in arithmetic progressions, 3. Krasner's Lemma regarding p-adic field extensions and polynomials
+  a03769fb3 2026-06-28 New obscure math synthesis: 1. The Bring radical, 2. The Meissel-Mertens constant, 3. The Schwarz-Christoffel mapping theorem for polygons with non-parallel sides
+  96e964a6d 2026-06-28 New obscure math synthesis: The Roth-Halász discrepancy bound for arithmetic progressions, The p-adic Hensel-Krasner lemma for non-archimedean geometry, The Ramanujan-Soldner constant for logarithmic integrals
+  4fd4c16f0 2026-06-28 New obscure math synthesis: 1. The Skewes Number bound for Prime-Counting Functions, 2. The Helfgott-Ruzsa Constant in Additive Combinatorics, 3. 2-adic valuation anomalies in the Collatz 3n+1 mapping sequence
+  07efa3fc4 2026-06-27 New obscure math synthesis: 1. The transcendence of the Champernowne constant in non-base-10 expansions, 2. The application of the Lindelöf hypothesis to minor discrepancy bounds in low-dimensional sequences, 3. Local-global transitions in 2-adic geometry edge cases for non-archimedean fields
+  12ba6697b 2026-06-27 New obscure math synthesis: 1. Residue fields of p-adic integers in 2-adic geometry, 2. Roth's theorem minor discrepancy bounds for arithmetic progressions, 3. Graham's constant in the context of Steiner tree problems
+  fbaf249b3 2026-06-27 New obscure math synthesis: 1. Graham's Sequence under the 2-adic topology, 2. Skewes' Number residue classes in modular arithmetic, 3. The Hermite-Lindemann-Weierstraß theorem for algebraic independence of exponentials over p-adic fields
+  295c3bb28 2026-06-26 New obscure math synthesis: 1. Thue's Lemma in number theory, 2. The Meissel-Mertens constant, 3. The Erdős-Kac theorem on the number of prime factors of n
+  ef4228d22 2026-06-26 New obscure math synthesis: 1. Pincherle derivative on the algebra of operators, 2. Meissel-Mertens constant for arithmetic progressions, 3. Mahler's 3/2-power sequence distribution bounds
+sample_current_lines:
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - Lucas-Lehmer vs Sylvester at 7: `47-43=4`, remembered as a Cayley-period
+  00-navigation/HISTORIAN-TANGENT-INDEX.md: - Self-observation chain: `3 -> 7 -> 47 -> 2207` via Lucas-Lehmer-like
+  00-navigation/INVESTIGATION-BACKLOG.md: Ramanujan-Soldner zero-points, Sophie Germain quartic splitting,
+  00-navigation/INVESTIGATION-BACKLOG.md: Meissel-Mertens residuals--into testable LRC14 sidecar-recursion signals.
+  00-navigation/INVESTIGATION-BACKLOG.md: Barban-Davenport-Halberstam, Menger cut, chiral-signature, Ramanujan-Soldner,
+  00-navigation/INVESTIGATION-BACKLOG.md: Sophie Germain, Hermite-Lindemann-Weierstrass, Krasner, Meissel-Mertens, and
+  00-navigation/LRC-LENS-MAP.md: external analogy lens. Pincherle derivatives, Meissel-Mertens constants in
+  00-navigation/LRC-TECHNIQUE-INDEX.md: | LTI-324 | Small-pattern adjacency atlas | Motif payload atoms, no-free-slider tax, normal-fan coordinate tags, trap-boundary use, repair sidecars, terminal-proof risk | HYP-3226 executes a disciplined atlas for compact
+
+Synthesis Notes
+--------------------------------------------------------------------------------
+The highest-value recurring pattern is not any single proper noun. It is the repeated warning that a quotient is legal only when it keeps the sidecar needed by the target predicate.
+For the current random031 seam-complement frontier, the useful old topics are those that can certify one of: local lift stability, signed discrepancy, relative path reachability, finite-state gap language, design incidence, or controlled quotient forgetting.
+Decoy constants should stay in the inspiration bucket until they become exact clocks, thresholds, obstruction labels, or failed-route canaries.

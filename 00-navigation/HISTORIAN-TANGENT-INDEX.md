@@ -13,6 +13,16 @@ of 2026-05-30.
 
 Useful synthetic maps added later:
 
+- `07-reflections/repo-history-niche-connection-atlas-codex-20260629.md`:
+  HYP-3492/T1452 mines `3088` current summary/knowledge files plus `7569`
+  commit subjects and touched-path records for recurring niche topic clusters.
+  The useful signal is not the exotic names by themselves, but the proof
+  service they can provide.  For HYP-3486/HYP-3490, best imports are
+  fiber-Haar/Fejer certificates, mirror-versus-vertical quotient legality,
+  C6/C3/Qsqrt(-7) owner monodromy, DFA compression of the legal mirror-run
+  graph, free-hole incidence duals, no-hidden-lift statements, and boundary
+  odd-moment probes.  Constants stay in the canary bucket until they become
+  exact thresholds, clocks, collision labels, or refuted-route markers.
 - `07-reflections/lrc14-random031-seam-complement-fiber-graph-codex-20260629.md`:
   HYP-3486/T1446 executes the HYP-3482 seam-complement graph target in the
   two-adic cylinder coordinate `u=2t mod 1`.  The useful signal is the

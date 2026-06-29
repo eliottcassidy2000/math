@@ -1,5 +1,17 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3492 repo-history niche atlas addendum:** Which old niche
+topic can be made exact enough to close the HYP-3486 random031 packet first?
+Candidates are now ranked by the miner.  The best proof-facing options are:
+fiber-Haar/Fejer certificate for the `242/40/12` split; Krasner-style
+mirror-versus-vertical quotient legality; C6/C3/Qsqrt(-7) owner monodromy for
+bypass owners versus seam-only owners; DFA compression of the `79` legal
+mirror-run components; free-hole incidence duals; no-hidden-lift statement
+combining HYP-3490 and HYP-3486; and boundary odd-moment probes.  -> HYP-3492,
+HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
+HYP-3451, HYP-3437, HYP-3422, HYP-3311, HYP-3310, HYP-3239, HYP-3218,
+HYP-3153, HYP-3148, HYP-3023, HYP-2989, LTI-452, LTT-352, T1452.
+
 **OPEN-Q-108 HYP-3485 random031 seam-complement connections addendum:**
 HYP-3485 synthesizes the past-work routes around seam complement and bypass
 flow.  The promising proof object is relative, not scalar:
