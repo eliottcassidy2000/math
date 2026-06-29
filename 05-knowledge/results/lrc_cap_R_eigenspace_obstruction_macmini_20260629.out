@@ -1,0 +1,37 @@
+====================================================================================
+TASK 2: is the R-ODD eigenspace of the cap the OBSTRUCTION? (mac-mini-S8)
+====================================================================================
+
+--- consec_8 (k=8 base): E=(0, 1, 2, 3, 4, 5, 6, 7) ---
+  cap (incl-excl) = 0.327211  [R-fixed subsets: 0.602381, R-paired: -0.275170]
+  S2=1.79048  trM=1.60408  => tr(M_even)=1.33639, tr(M_odd)=0.26769
+  R-odd contribution to S2 = -tr(M_odd)/2 = -0.13384  (S2 even part = 1.92432)
+  full M eigenvalues: ['0.8671', '0.2202', '0.1577', '0.1502', '0.1133', '0.0956']
+  R-ODD 2x2 block eigenvalues: ['0.1718', '0.0959']  (Perron=0.8671 is R-EVEN)
+
+--- minimizer {1,5,7,8,9}: E=(0, 1, 5, 7, 8, 9) ---
+  cap (incl-excl) = 0.000000  [R-fixed subsets: 0.453231, R-paired: -0.453231]
+  S2=2.85726  trM=2.73673  => tr(M_even)=2.20085, tr(M_odd)=0.53588
+  R-odd contribution to S2 = -tr(M_odd)/2 = -0.26794  (S2 even part = 3.12520)
+  full M eigenvalues: ['1.4115', '0.2966', '0.2844', '0.2620', '0.2459', '0.2363']
+  R-ODD 2x2 block eigenvalues: ['0.2907', '0.2452']  (Perron=1.4115 is R-EVEN)
+
+--- consec_9 (k=9 base): E=(0, 1, 2, 3, 4, 5, 6, 7, 8) ---
+  cap (incl-excl) = 0.416156  [R-fixed subsets: 0.658673, R-paired: -0.242517]
+  S2=1.54439  trM=1.38129  => tr(M_even)=1.14915, tr(M_odd)=0.23214
+  R-odd contribution to S2 = -tr(M_odd)/2 = -0.11607  (S2 even part = 1.66046)
+  full M eigenvalues: ['0.7473', '0.1982', '0.1350', '0.1219', '0.0908', '0.0880']
+  R-ODD 2x2 block eigenvalues: ['0.1441', '0.0880']  (Perron=0.7473 is R-EVEN)
+
+--- j=4 min {1,11,12,13}: E=(0, 1, 11, 12, 13) ---
+  cap (incl-excl) = 0.000000  [R-fixed subsets: 0.363137, R-paired: -0.363137]
+  S2=3.92516  trM=3.18939  => tr(M_even)=2.66775, tr(M_odd)=0.52165
+  R-odd contribution to S2 = -tr(M_odd)/2 = -0.26082  (S2 even part = 4.18598)
+  full M eigenvalues: ['1.8417', '0.3070', '0.2774', '0.2742', '0.2490', '0.2401']
+  R-ODD 2x2 block eigenvalues: ['0.2766', '0.2450']  (Perron=1.8417 is R-EVEN)
+
+====================================================================================
+Test: if the Perron (bulk) mode is R-EVEN and the binding deviation /
+hardness sits in the R-ODD block, the user's principle is CONFIRMED:
+R-even = SOS-provable bulk, R-odd = the signed obstruction.
+====================================================================================

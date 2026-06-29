@@ -1,0 +1,35 @@
+====================================================================================
+TASK 1: f (palindromic count) via the HALF-SYSTEM transfer recursion (mac-mini-S8)
+====================================================================================
+
+--- Paley T_3  (m=(p-1)/2=1 pairs) ---
+  direct palindromic count: 1
+  half-system enumeration:  f=1  (half-states 2 = m!*2^m vs full p!=6)
+  TRANSFER DP on half-system: f=1  (DP states stored: 2)
+  KEY: validity reduces to PURE HALF-DATA -- arcs v_i->v_{i+1} (i<m) and v_m->0;
+       the mirror/closing arcs are AUTOMATIC by the anti-automorphism phi.
+  consistent: True
+
+--- Paley T_7  (m=(p-1)/2=3 pairs) ---
+  direct palindromic count: 9
+  half-system enumeration:  f=9  (half-states 48 = m!*2^m vs full p!=5040)
+  TRANSFER DP on half-system: f=9  (DP states stored: 21)
+  KEY: validity reduces to PURE HALF-DATA -- arcs v_i->v_{i+1} (i<m) and v_m->0;
+       the mirror/closing arcs are AUTOMATIC by the anti-automorphism phi.
+  consistent: True
+
+--- Paley T_11  (m=(p-1)/2=5 pairs) ---
+  direct palindromic count: (skipped, p large)
+  half-system enumeration:  f=185  (half-states 3840 = m!*2^m vs full p!=39916800)
+  TRANSFER DP on half-system: f=185  (DP states stored: 150)
+  KEY: validity reduces to PURE HALF-DATA -- arcs v_i->v_{i+1} (i<m) and v_m->0;
+       the mirror/closing arcs are AUTOMATIC by the anti-automorphism phi.
+  consistent: True
+
+====================================================================================
+RESULT: f = #palindromic Ham paths is a Hamiltonian-path count on the m=(p-1)/2
+PAIRS of the half-system digraph, computable by a transfer DP whose validity
+condition is PURE half-data (last->next half-arcs + close-to-0); the second half
+is forced by phi.  This is the half-size reduction -- 'genuinely finishable'.
+f-sequence (p=3,7,11): 1, 9, 185.
+====================================================================================
