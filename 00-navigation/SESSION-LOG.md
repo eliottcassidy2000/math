@@ -1,3 +1,29 @@
+## mac-mini-2026-06-29-S10 -- rotational R_n + A038375 + the doubling tower: the symmetry shadow of the max-H sequence (THM-585, HYP-3540)
+
+Prompt: merge in the rotational tournament R_n and A038375 (and other sequences); think recursively, extend freely.
+
+LEMMA (generalizes THM-584's p|H): vertex-transitive T => n|H(T)=n*(odd) (# Ham paths from a fixed vertex
+= H/n). Rotational/circulant R_n are vertex-transitive => n|H(R_n) (verified ALL 2^{(n-1)/2} circulant n=3..13).
+
+KEY RESULT (THM-585): the divisibility of A038375(n)=max H by n is a SHADOW of the maximizer's symmetry.
+n|a(n) EXACTLY for n=1,3,5,7,9,11 -- the circulant-optimal regime (THM-338) -- and fails at n=2,4,6,8,10,12,13.
+At n=13 the maximizer goes non-circulant (THM-338 gap): opt_circ(13)=3711175 IS 13-divisible, but a(13)=3719831
+is NOT. So n|a(n) <=> the H-maximizer is vertex-transitive; THM-338's circulant threshold = a divisibility
+threshold of the OEIS sequence.
+
+TWO RECURSIVE TOWERS: Paley (primes 3mod4: 3,7,11,19,..., vertex-transitive, p|H=p*odd, R(p)->e, achieving a(p))
++ the Mersenne doubling tower (THM-448: skew-Hadamard DRTs on 2^k-1 = 3,7,15,31,63, SELF-SIMILAR
+B_0(T_{2m-1})=T_{m-1} verified H(B_0(T_15))=H(T_7)=189). They coincide at 3,7 (T_p~=Paley) then DIVERGE (T_15,
+T_31 non-Paley). n|H at every tower level INCLUDING the non-vertex-transitive T_15 (15|198335025) -- so DRT
+regularity is a SECOND divisibility mechanism (revives n|a(n) at Mersenne 15 if T_15 maximizes, conjectural).
+
+FREE EXTENSION: Claim A on the hereditary maximizer chain T_p -> T_p-v (which achieves a(p-1)) gives
+a(p)-a(p-1) = 2*sum mu(C) -- the DIFFERENCES of A038375 are OCF cycle sums (verified 189-45=144=2*72). So the
+max-H sequence is, at Paley primes, a Redei/OCF sequence: values on the Paley tower (=p*odd, ->e), differences =
+Claim-A cycle sums, divisibility = symmetry detector. Open: n|H for EVERY DRT? (the sqrt(n) in the DRT spectrum =
+the Gauss-sum sqrt(p)). Files: THM-585, HYP-3540, reflection two-towers-and-the-symmetry-shadow-..., script
+rotational_tournament_arithmetic_macmini_20260629.py.
+
 ## mac-mini-2026-06-29-S9 -- tournaments are number-theoretic: the Paley bridge + the multiplicative spine (THM-584, HYP-3539)
 
 Prompt: investigate deeply the connections between tournaments and natural numbers, especially primes; search back
