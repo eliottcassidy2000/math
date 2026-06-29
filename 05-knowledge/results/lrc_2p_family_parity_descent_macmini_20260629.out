@@ -1,0 +1,29 @@
+================================================================================
+LRC dihedral family n=2p: 2-adic parity descent validation (mac-mini-S5)
+================================================================================
+
+n=6 (p=3, Borsuk-Ulam (p=3mod4), LRC KNOWN/proven):  60 covering sets, depth 3..5
+   meas(lonely S): min=0.03333  (any zero? no)
+   rho_j: min=0.3375  mean=0.9803  frac<0.7=0.012
+   odd-base meas(lonely O_j): min=0.1481  (>0: True)
+
+n=10 (p=5, Brouwer/SOS (p=1mod4), LRC OPEN):  60 covering sets, depth 4..5
+   meas(lonely S): min=0.06232  (any zero? no)
+   rho_j: min=0.5652  mean=0.9711  frac<0.7=0.011
+   odd-base meas(lonely O_j): min=0.2849  (>0: True)
+
+n=14 (p=7, Borsuk-Ulam (p=3mod4), LRC OPEN):  60 covering sets, depth 4..6
+   meas(lonely S): min=0.06505  (any zero? no)
+   rho_j: min=0.6368  mean=0.9667  frac<0.7=0.017
+   odd-base meas(lonely O_j): min=0.2830  (>0: True)
+
+n=22 (p=11, Borsuk-Ulam (p=3mod4), LRC OPEN):  25 covering sets, depth 5..6
+   meas(lonely S): min=0.06803  (any zero? no)
+   rho_j: min=0.5882  mean=0.9627  frac<0.7=0.014
+   odd-base meas(lonely O_j): min=0.2960  (>0: True)
+
+================================================================================
+Validation: if min meas(lonely S)>0 for the KNOWN n=6 (and the descent
+rho_j/odd-caps are bounded), the descent route is sound; the SAME structure
+at n=14 then differs only in scale.  Watch whether rho_j min depends on p mod4.
+================================================================================
