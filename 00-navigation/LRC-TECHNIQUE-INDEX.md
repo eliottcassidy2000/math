@@ -133,6 +133,27 @@ free-hole bracket, or pure-bypass sidecar.  Then turn
 boundary lemma while retaining `PDPPOOO`, the pure-bypass exit label, owner
 union, or legal sheet-PGF bucket across any component quotient.
 
+## LTI-523 - Random031 spigot-style terminal stream
+
+Carrier / vertex set: terminal stream states for HYP-3521 certificates, with
+predigit buffer, owner carry, emitted prefix, and HYP-3513 route sidecar `R`.
+Pairwise observable: whether the carrier preserves stream action, bounded
+carry, terminal discharge, and firewall route attachment.
+Preserved LRC predicate: random031 terminal-discharge predicate after ordinary
+route, free-hole bracket, and bypass owner-boundary certificates emit.
+Destroyed information: raw component identity and raw runner order after a
+certificate emits; terminal class alone is too coarse unless spigot state is
+attached.
+Best use: formalize a bounded-state scheduler:
+`emitted_prefix + predigit_buffer + owner_carry + route_sidecar_R`.
+Failure mode: using component type, terminal class, or terminal class plus
+cluster as the quotient; all mix stream actions before the predigit/carry state
+is named.
+Anchors: HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3511,
+HYP-3510, HYP-3490, HYP-3486, T1523, LTT-423.
+Next agent hook: turn the stream audit into a Lean-facing state machine lemma,
+then isolate the residual `(45,173)` owner-boundary proof.
+
 ## LTI-522 - Random031 owner-boundary bracket filtration
 
 Carrier / vertex set: owner-boundary filtration layers for the pure bypass:
@@ -715,6 +736,7 @@ record what it destroys before asking it to prove anything.
 | LTI-521 | Random031 terminal certificate ledger | Joined terminal dispatch, `230/40/12` cell partition, `242=230+12` gate-routed split, free-hole doublet collapse, pure bypass owner-boundary packet, private-firewall compatibility, vertical-halfturn guardrail | HYP-3521 joins HYP-3486, HYP-3511, HYP-3510, and HYP-3490 into one terminal ledger for random031.  It clarifies that the `242` gate-routed cells are `230` ordinary plus `12` bypass, and that the full terminal partition is `282=230+40+12`.  The `79` legal mirror components become `77` terminal certificates: `64` ordinary route, `10` free-hole singles, `2` free-hole doublets, and `1` bypass owner-boundary certificate. | HYP-3521, HYP-3511, HYP-3510, HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3477, HYP-3460, HYP-3455, THM-523, T1521, LTT-421, LTI-521, OPEN-Q-108 | Formalize the five-lemma terminal packet: ordinary route, free-hole bracket, pure bypass owner-boundary, private-firewall compatibility, and vertical-halfturn quotient guardrail. |
 | LTI-513 | Private-firewall Nerode audit | HYP-3474 axes `K,N,T,S,F,C,M,A`, private-firewall bit, `nondead/nonprivate/private` status, route sidecar `R`, incidence sidecar `I`, projection-frontier sidecar `Q`, finite quotient purity | HYP-3513 joins HYP-3474 colored-gate quotient records to the finite HYP-3490 split.  Existing axes `C`, `F`, `N`, and `T` are pure for private-firewall status, but no existing-axis subset preserves the full five-way route.  `I/Q` are compact three-fiber private-status carriers and `R` is the compact five-fiber route carrier. | HYP-3513, HYP-3491, HYP-3490, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, THM-523, T1513, LTT-413, LTI-513, OPEN-Q-108 | Prove the row-free incidence-cut lemma reducing `I/Q` to blocker-label multiplicity one; either prove route reconstruction from existing data or keep sidecar `R` in the terminal dispatch. |
 | LTI-522 | Random031 owner-boundary bracket filtration | Owner filtration layers, transport word `(23,93,113)`, branch-boundary bracket lift `(147,169)`, residual pair `(45,173)`, mirror-persistent bypass stalk, HYP-3510/HYP-3511 separation, HYP-3513 route sidecar | HYP-3522 refines HYP-3520's owner-current debt inside HYP-3521's bypass terminal packet.  The seven-owner seam splits as transport `(23,93,113)`, branch-boundary bracket owners `(23,93,147,169)`, bracket lift `(147,169)`, transport-only `(113)`, and residual `(45,173)`.  The bypass has `12` cells, branch split `6/6`, endpoint rank `(2,)`, six mirror pairs preserving `(23,93,113)`, and adjacent ordinary branch brackets with words `(93,147,169)` and `(23,169)`. | HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512, HYP-3494, HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, THM-523, T1522, LTT-422, LTI-522, OPEN-Q-108 | Prove transport-word constancy, branch-boundary bracket lift, HYP-3510/HYP-3511 separation, and then a residual `(45,173)` boundary lemma under the HYP-3490/HYP-3513 firewall route sidecar. |
+| LTI-523 | Random031 spigot-style terminal stream | Terminal certificate stream, emitted prefix, one-component free-hole predigit buffer, owner carry `(45,147,169,173)->(45,173)`, HYP-3522 branch-boundary lift, HYP-3513 route sidecar `R`, quotient-purity canary | HYP-3523 turns the HYP-3521/HYP-3522 packet into a bounded-state scheduler.  In q-witness order, `79` component events emit `77` terminal certificates: `64` ordinary routes and `10` free-hole singles are immediate, two doublet clusters buffer one component and close at the next event, and the bypass owner carry opens at rank `45` then shrinks at rank `46` to `(45,173)`.  `terminal_class+spigot_state` is pure for stream action while terminal class alone mixes. | HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486, HYP-3485, THM-523, T1523, LTT-423, LTI-523, OPEN-Q-108 | Formalize `emitted_prefix + predigit_buffer + owner_carry + route_sidecar_R`; prove emitted certificates can be discarded and the only live owner debt is residual `(45,173)`. |
 | LTI-524 | Random031 spigot/hydrotope residual scout | Online owner emitters, monotone tail schedule, no-hidden-tail residual lemma, hydrotope chamber canaries, owner-support singleton chamber, sliced-box scalar guardrail, route sidecar `R` | HYP-3524 turns HYP-3522's owner filtration into a spigot-style proof emitter: seam input `(23,45,93,113,147,169,173)`, transport emit `(23,93,113)`, branch-boundary emit `(147,169)`, residual tail `(45,173)`, with monotone sizes `(0,3,5,5)` and `(7,4,2,2)`.  Hydrotope-style chamber signs show residue quotients are unsafe, while owner-support-cell weights isolate transport, transport-plus-boundary, and residual as singleton chambers. | HYP-3524, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512, HYP-3494, HYP-3511, HYP-3510, HYP-3490, HYP-3486, THM-523, T1524, LTT-424, LTI-524, OPEN-Q-108 | Formalize `EmitterState`: emit transport, emit bracket lift, then prove residual `(45,173)` cannot be hidden by any downstream quotient with route sidecar `R`; keep sliced-box volumes as diagnostics only. |
 | LTI-525 | Spigot guarded emission | Visible packet heads, hidden-tail sidecar bounds, predigit/carry holdbacks, route `R`, owner words, branch-boundary lift, safe seam-sheaf quotient heads, raw count checksum shadows | HYP-3525 extends HYP-3523's certificate-spigot stream and HYP-3524's hydrotope scout into a proof-token discipline.  A route/owner/terminal token may print only when the visible quotient fiber is constant for the target over every legal hidden completion; otherwise the proof holds the first missing sidecar.  For random031, private status emits through `C/F/N/T` or `I/Q`, route through `R`, terminal class through HYP-3520 safe quotients, and owner residual `(45,173)` through transport plus bracket lift plus residual plus `R`. | HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512, HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3511, HYP-3510, HYP-3036, HYP-3024, HYP-3023, HYP-3006, HYP-2990, THM-523, T1525, LTT-425, LTI-525, OPEN-Q-108 | Build a generic `GuardedEmission` checker that reports mixed visible fibers and first missing sidecars, then use it to replace informal named-debt emission in random031 and older route/status banks. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
@@ -10075,6 +10097,55 @@ This is the smallest current random031 terminal-packet theorem shape.
 Pointers: HYP-3521, HYP-3511, HYP-3510, HYP-3494, HYP-3493, HYP-3490,
 HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480,
 HYP-3477, HYP-3460, HYP-3455, THM-523, LTI-521, LTT-421, T1521, OPEN-Q-108.
+
+## LTI-523: Random031 Spigot-Style Terminal Stream
+
+Created by codex-2026-06-29 for HYP-3523/T1523/LTT-423.  This technique is a
+bounded-state proof scheduler for the HYP-3521/HYP-3522 random031 terminal
+packet, prompted by spigot algorithms but instantiated as a finite quotient
+audit.
+
+Exact HYP-3523 readout:
+
+```text
+component_tokens=79
+terminal_certificate_count=77
+emitted_certificate_count=77
+immediate ordinary route certificates=64
+immediate free-hole singles=10
+doublet clusters=(8,13),(2,3)
+max_pending_doublet_components=1
+owner carry=(45,147,169,173) at rank 45
+branch-boundary lift=(147,169) at rank 46
+final owner carry=(45,173)
+```
+
+Quotient canary:
+
+```text
+component_type mixed_rows=78
+terminal_class mixed_rows=68
+terminal_class_plus_cluster mixed_rows=68
+terminal_class_plus_spigot_state mixed_rows=0
+component_index mixed_rows=0
+```
+
+Use LTI-523 when the proof wants to discard emitted random031 certificates
+without losing terminal information.  The allowed retained state is:
+
+```text
+emitted_prefix + predigit_buffer + owner_carry + route_sidecar_R
+```
+
+The technique preserves ordinary route emission, free-hole doublet collapse,
+HYP-3522 owner carry, and HYP-3513 route attachment.  It deliberately destroys
+raw runner order and raw component identity after emission.  Terminal class
+alone is unsafe because it does not distinguish first/second doublet predigits
+or the ordinary component that applies the bypass branch-boundary lift.
+
+Pointers: HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3511,
+HYP-3510, HYP-3490, HYP-3486, HYP-3485, THM-523, LTI-523, LTT-423, T1523,
+OPEN-Q-108.
 
 ## LTI-522: Random031 Owner-Boundary Bracket Filtration
 

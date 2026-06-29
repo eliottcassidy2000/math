@@ -89,6 +89,23 @@ obligations, and proof-carrier interfaces.
   HYP-3511, HYP-3510, HYP-3490, HYP-3486, HYP-3483, HYP-3402, HYP-3034,
   T1520, LTI-520.
 
+## LTT-423 - Spigot-Stream Certificate Tournament
+
+- **Move:** Orient terminal stream states by their ability to emit random031
+  certificates while retaining only bounded predigit/carry state.
+- **LRC use:** HYP-3523 turns the HYP-3521/HYP-3522 terminal packet into
+  `79` component events emitting `77` certificates, with one-component
+  doublet buffers and owner carry `(45,147,169,173)->(45,173)`.
+- **Preserves:** Stream action, free-hole doublet closure, HYP-3522 branch
+  lift, residual owner pair, and HYP-3513 route sidecar `R`.
+- **Forgets / guardrail:** Component type, terminal class, and
+  terminal-class-plus-cluster all mix stream actions; `terminal_class+spigot_state`
+  is the first pure compressed carrier.
+- **Next pull:** Prove the Lean-facing stream state
+  `emitted_prefix + predigit_buffer + owner_carry + route_sidecar_R`.
+- **Pointers:** HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3511,
+  HYP-3510, HYP-3490, HYP-3486, T1523, LTI-523.
+
 ## LTT-422 - Owner-Boundary Bracket-Filtration Tournament
 
 - **Move:** Orient owner-boundary proof carriers by how much of the
@@ -10515,6 +10532,46 @@ quotient_legality_status
 - **Pointers:** HYP-3521, HYP-3511, HYP-3510, HYP-3494, HYP-3493, HYP-3490,
   HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480,
   HYP-3477, HYP-3460, HYP-3455, THM-523, LTI-521, LTT-421, T1521,
+  OPEN-Q-108.
+
+## LTT-423: Random031 Spigot-Stream Certificate Tournament
+
+- **Created:** codex-2026-06-29 for HYP-3523/T1523/LTI-523.
+- **Vertex set:** stream states and proof-carrier buffers:
+  spigot state plus route `R`, terminal class plus carry state, owner-carry
+  buffer, doublet predigit buffer, terminal certificate ledger, terminal-class
+  shadow, component-type shadow, and raw cell-count shadow.
+- **Pairwise observable:** streamability, bounded carry, terminal predicate
+  retention, and route/firewall sidecar retention.
+- **Switch/gauge:** orient toward higher proof-facing stream score; ties use
+  the fixed carrier order.
+- **Fingerprint:**
+
+```text
+score_hist={10:1, 41:1, 63:1, 80:1, 86:1, 92:1, 98:1, 104:1}
+directed_3cycles=0
+hamiltonian_path=
+  spigot_state_plus_route_R
+  -> terminal_class_plus_carry_state
+  -> owner_carry_buffer
+  -> doublet_predigit_buffer
+  -> terminal_certificate_ledger
+  -> terminal_class_shadow
+  -> component_type_shadow
+  -> raw_cell_count_shadow
+```
+
+- **LRC use:** HYP-3523 is the proof scheduler version of HYP-3521/HYP-3522.
+  It shows that `79` component events emit `77` terminal certificates with
+  bounded deferred state: two doublet predigits of width one and one owner
+  carry event reducing `(45,147,169,173)` to `(45,173)`.
+- **Guardrail:** terminal class alone is not a legal tournament vertex for
+  stream actions.  It mixes first and second doublet components and also mixes
+  ordinary route emission with the ordinary component that applies the bypass
+  branch-boundary lift.  Add spigot state or retain component identity until
+  the stream action emits.
+- **Pointers:** HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3511,
+  HYP-3510, HYP-3490, HYP-3486, HYP-3485, THM-523, LTI-523, LTT-423, T1523,
   OPEN-Q-108.
 
 ## LTT-422: Random031 Owner-Boundary Bracket Filtration Tournament

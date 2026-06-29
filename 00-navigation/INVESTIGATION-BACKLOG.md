@@ -25,6 +25,19 @@ Keep tournament vertices as emission rules/proof obligations, not runners.
 Use raw `12/40/79/242/282` only as checksums after the guard succeeds. ->
 HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3493, HYP-3490,
 HYP-3486, HYP-3511, HYP-3510, LTI-525, LTT-425, T1525, OPEN-Q-108.
+**HYP-3523 random031 spigot-style terminal stream.**  Turn the HYP-3521/HYP-3522
+random031 terminal packet into a Lean-facing bounded-state scheduler.  Exact
+readout: `79` component events emit `77` terminal certificates; `64` ordinary
+route components and `10` free-hole singles emit immediately; HYP-3511 doublet
+clusters `(8,13)` and `(2,3)` each use a one-component predigit buffer and close
+at the next event; the bypass opens owner carry `(45,147,169,173)` at rank `45`,
+the branch-boundary ordinary component at rank `46` applies lift `(147,169)`,
+and the residual carry is `(45,173)`.  Next tasks: formalize the stream state
+`emitted_prefix + predigit_buffer + owner_carry + route_sidecar_R`; prove
+terminal-class compression is legal only after adding spigot state; then use
+the scheduler to isolate the residual two-owner boundary lemma. -> HYP-3523,
+HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490,
+HYP-3486, LTI-523, LTT-423, T1523, OPEN-Q-108.
 
 **HYP-3522 random031 owner-boundary bracket filtration.**  Turn the HYP-3522
 filtration into the next terminal owner-boundary lemma.  Exact readout:

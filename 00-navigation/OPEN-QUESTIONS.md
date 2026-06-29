@@ -68,6 +68,30 @@ sidecars rather than raw counts. -> HYP-3525, HYP-3524, HYP-3523, HYP-3522,
 HYP-3521, HYP-3520, HYP-3513, HYP-3493, HYP-3490, HYP-3486, HYP-3511,
 HYP-3510, LTI-525,
 LTT-425, T1525.
+**OPEN-Q-108 HYP-3523 spigot-stream addendum:** Can the random031 terminal
+packet be formalized as a bounded-state streaming scheduler rather than as a
+full live component table?
+
+HYP-3523 gives the exact finite scheduler:
+
+```text
+79 component events -> 77 terminal certificates
+immediate ordinary route certificates = 64
+immediate free-hole single certificates = 10
+max free-hole predigit buffer = 1 component
+owner carry opens at rank 45 as (45,147,169,173)
+branch-boundary lift applies at rank 46
+final owner carry = (45,173)
+```
+
+The open proof task is to prove the stream invariant
+`emitted_prefix + predigit_buffer + owner_carry + route_sidecar_R`: emitted
+ordinary/single/doublet certificates can be discarded after emission, the two
+HYP-3511 doublets close after one pending event, the HYP-3522 bypass carry
+shrinks after one event to `(45,173)`, and HYP-3513 route sidecar `R` remains
+attached unless route reconstruction is proved. -> HYP-3523, HYP-3522,
+HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486,
+LTI-523, LTT-423, T1523.
 
 **OPEN-Q-108 HYP-3522 owner-boundary filtration addendum:** Can the random031
 pure-bypass owner-boundary lemma be reduced from HYP-3520's four-owner current

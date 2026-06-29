@@ -94,6 +94,38 @@ Next proof target: implement a generic `GuardedEmission(target,
 visible_packet, hidden_tail)` checker over random031 packet rows, then use it
 to replace informal "emit named debt" language by explicit fiber-constancy or
 first-missing-sidecar certificates.
+## codex-2026-06-29 -- HYP-3523 random031 spigot-style terminal stream
+
+Prompt: use the spigot-algorithm idea as inspiration for proof exploration
+around LRC14.
+
+Integrated the prompt by making the scheduling idea exact over the current
+HYP-3521/HYP-3522 random031 packet.  Added:
+
+```text
+04-computation/lrc14_random031_certificate_spigot_codex_20260629.py
+05-knowledge/results/lrc14_random031_certificate_spigot_codex_20260629.out
+05-knowledge/hypotheses/HYP-3523-lrc14-random031-certificate-spigot.md
+07-reflections/lrc14-random031-certificate-spigot-codex-20260629.md
+```
+
+Result: in q-witness order, `79` component events emit `77` terminal
+certificates.  The immediate stream emits `64` ordinary route certificates and
+`10` free-hole single certificates.  The only predigit buffer is the two
+HYP-3511 free-hole doublets: clusters `(8,13)` and `(2,3)` each hold one
+component and close at the next event.  The unique bypass opens owner carry
+`(45,147,169,173)` at rank `45`; the adjacent branch-boundary ordinary
+component applies HYP-3522 lift `(147,169)` at rank `46`, leaving residual
+`(45,173)`.
+
+Quotient canary: `component_type`, `terminal_class`, and
+`terminal_class+cluster` all mix stream actions; `terminal_class+spigot_state`
+has zero mixed fibers.  The proof-facing state is therefore
+`emitted_prefix + predigit_buffer + owner_carry + route_sidecar_R`, not raw
+component identity and not terminal class alone.
+
+Next hook: formalize a random031 stream-state lemma, then use it to isolate the
+residual `(45,173)` owner-boundary lemma under the HYP-3513 route sidecar.
 
 ## codex-2026-06-29 -- HYP-3520 random031 owner-boundary persistence
 
@@ -179,6 +211,18 @@ bracket lift `(147,169)`.
 Next proof pull: formalize ordinary emission, HYP-3511 doublet buffering,
 HYP-3522 bypass carry, HYP-3513 route sidecar `R`, and the vertical-halfturn
 guard.
+## codex-2026-06-29 -- HYP-3523 certificate spigot initial claim
+
+Prompt: use the spigot algorithm page as inspiration for related proof routes.
+
+Claimed HYP-3523/T1523/LTI-523/LTT-423 for the certificate-spigot route later
+executed above.  Proposed analogy: mixed-radix reduce-and-carry becomes
+terminal discharge plus named debt propagation; predigits become certificates
+waiting for free-hole or owner-boundary carry; safe digit output becomes proof
+certificate emission without future invalidation.  The executed audit streams
+the HYP-3521 terminal certificates in branch/u order and checks carry buffers
+from HYP-3511 free-hole brackets, HYP-3520 owner-current, HYP-3490 firewall,
+and vertical-halfturn quotient guards.
 
 ## codex-2026-06-29 -- HYP-3520 owner-boundary persistence reservation
 

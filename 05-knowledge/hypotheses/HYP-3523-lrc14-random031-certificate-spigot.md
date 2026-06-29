@@ -1,8 +1,8 @@
 ---
 id: HYP-3523
-title: LRC14 random031 certificate spigot
-status: EVIDENCE / streaming terminal-certificate carry audit; not an LRC14 proof
-source: codex-2026-06-29 spigot-algorithm reframe after HYP-3521/HYP-3520
+title: LRC14 random031 spigot-style terminal certificate stream
+status: EVIDENCE / finite streaming certificate scheduler; not an LRC14 proof
+source: codex-2026-06-29 spigot-inspired continuation of HYP-3522, HYP-3521, HYP-3520, and HYP-3513
 tangent: T1523
 technique: LTI-523
 tournament_technique: LTT-423
@@ -10,81 +10,141 @@ script: 04-computation/lrc14_random031_certificate_spigot_codex_20260629.py
 result: 05-knowledge/results/lrc14_random031_certificate_spigot_codex_20260629.out
 reflection: 07-reflections/lrc14-random031-certificate-spigot-codex-20260629.md
 related:
+  - HYP-3522
   - HYP-3521
   - HYP-3520
-  - HYP-3512
+  - HYP-3513
   - HYP-3511
   - HYP-3510
-  - HYP-3494
-  - HYP-3493
   - HYP-3490
   - HYP-3486
+  - HYP-3485
   - HYP-3483
-  - HYP-3034
+  - HYP-3481
+  - THM-523
   - OPEN-Q-108
 ---
 
-# HYP-3523: Random031 Certificate Spigot
+# HYP-3523: LRC14 Random031 Spigot-Style Terminal Certificate Stream
 
 ## Claim
 
-The spigot-algorithm prompt suggests a proof discipline for
-`random_covering_031`:
+The spigot-algorithm prompt suggests a useful proof scheduler for the
+`random_covering_031` terminal packet: emit local certificates in witness order,
+discard emitted state, and keep only bounded deferred carry when a later local
+event can still change the current certificate.
+
+For the current HYP-3521/HYP-3522 random031 packet, this is exact as a finite
+audit:
 
 ```text
-mixed-radix state     -> terminal certificate ledger
-reduce-and-carry      -> discharge plus named debt propagation
-predigit buffer       -> terminal packet waiting for possible boundary carry
-safe digit emission   -> proof certificate whose future debt is bounded
-tail error            -> unprocessed owner/free-hole/quotient debt
+79 component events
+77 terminal certificates
+max free-hole predigit buffer = 1 component
+max owner carry = 4 labels
+owner carry reduces after 1 event to residual pair (45,173)
 ```
 
-The executable test supports the analogy.  HYP-3521's `79` legal component
-events stream in branch/u order to `77` emitted terminal certificates covering
-all `282` cells.  Ordinary rank-2 route components emit immediately.  The
-`10` free-hole singles emit after ordinary bracket carry.  The two free-hole
-doublets each hold one predigit event and then emit one collapsed certificate
-when the mate arrives.  The unique pure bypass emits only with HYP-3520 and
-HYP-3522 owner-filtration sidecars.
+Thus the random031 terminal proof can be organized as a streaming invariant:
+ordinary route and free-hole single certificates emit immediately; doublet
+free-hole packets use a one-component predigit buffer; the bypass emits a
+transport word and carries owner debt only until the adjacent branch-boundary
+ordinary component reduces it to `(45,173)`.
 
-Key readout:
+This does not prove LRC14.  It gives a compact scheduler for the remaining
+random031 proof obligations and prevents the proof from retaining the whole
+component table after certificates have already emitted.
+
+## Exact Readout
+
+Computed by:
 
 ```text
-component_events=79
-emitted_certificates=77
-component_cells_covered=282
-emitted_certificate_cells=282
-held_predigit_events=2
-held_predigit_buffer_cells=4
-untyped_pending_carry=0
-typed_residual_carry=(45,173)
+04-computation/lrc14_random031_certificate_spigot_codex_20260629.py
+05-knowledge/results/lrc14_random031_certificate_spigot_codex_20260629.out
 ```
 
-The bypass carry is:
+Stream summary:
+
+```text
+component_tokens=79
+terminal_certificate_count=77
+emitted_certificate_count=77
+component_type_hist={bypass:1, free_hole:14, ordinary:64}
+terminal_class_hist={
+  ordinary_rank2_route_component:64,
+  free_hole_single_bracket_packet:10,
+  free_hole_doublet_packet:4,
+  pure_bypass_owner_boundary_component:1
+}
+action_hist={
+  emit_ordinary_route:63,
+  emit_ordinary_route+apply_branch_boundary_lift+emit_bypass_owner_boundary_certificate:1,
+  emit_free_hole_single:10,
+  buffer_free_hole_predigit:2,
+  emit_free_hole_doublet:2,
+  emit_bypass_transport_predigit:1
+}
+```
+
+Doublet buffer:
+
+```text
+doublet_cluster_count=2
+doublet_pending_rank_widths={(8,13):1, (2,3):1}
+max_pending_doublet_components=1
+```
+
+The two HYP-3511 doublets close at the next component event:
+
+```text
+cluster=(8,13) first_rank=30 emit_rank=31 component_indices=(53,5)
+cluster=(2,3)  first_rank=75 emit_rank=76 component_indices=(76,77)
+```
+
+Owner carry:
 
 ```text
 seam_owners=(23,45,93,113,147,169,173)
-transport_word=(23,93,113)
+transport_owners=(23,93,113)
 branch_boundary_owners=(23,93,147,169)
-bracket_lift=(147,169)
+boundary_component_indices=(27,58)
+boundary_component_ranks=(44,46)
+bypass_component_rank=45
+residual_after_transport=(45,147,169,173)
+bracket_lift_owners=(147,169)
 residual_after_branch_boundary=(45,173)
+owner_carry_rank_width=1
 ```
 
-## Interpretation
+The owner events are:
 
-This reframe changes the random031 terminal packet from a static ledger into a
-no-backtracking proof procedure.  The hard pair is not treated as a wall.  It
-is a forbidden seam whose complement carries phase flow, while the certificate
-stream records the delayed proof carry required to emit across nearby
-features.
+```text
+rank=45 open_owner_carry carry=(45,147,169,173)
+rank=46 apply_branch_boundary_lift carry=(45,173)
+```
 
-There is no untyped terminal carry left in the stream.  What remains is typed:
-formalize ordinary route emissions, HYP-3511 doublet buffering, HYP-3522
-owner-filtration carry through transport `(23,93,113)` and bracket lift
-`(147,169)`, and then discharge the residual pair `(45,173)` under the
-HYP-3490/HYP-3513 private-firewall route sidecar.  Every emitted certificate
-also carries the vertical-halfturn guard; the vertical address projection is
-not a legal sheet gluing.
+## Quotient Result
+
+Target: preserve the stream action at each component event.
+
+```text
+component_type:
+  mixed_fibers=2, mixed_rows=78
+terminal_class:
+  mixed_fibers=2, mixed_rows=68
+terminal_class_plus_cluster:
+  mixed_fibers=3, mixed_rows=68
+terminal_class_plus_spigot_state:
+  mixed_fibers=0, mixed_rows=0
+component_index:
+  mixed_fibers=0, mixed_rows=0
+```
+
+Terminal class alone forgets whether a free-hole doublet component is a first
+predigit or the closing component, and it also forgets whether an ordinary
+component applies the bypass branch-boundary lift.  Adding the small spigot
+state restores purity without falling back to raw component identity.
 
 ## Micro Release Test
 
@@ -109,19 +169,68 @@ named.
 
 ## Proof Pull
 
-1. Formalize ordinary route certificates as immediate spigot digits.
-2. Formalize HYP-3511 doublet buffering: first half is a predigit, second half
-   emits the doublet certificate.
-3. Formalize bypass emission as owner-filtration carry: transport
-   `(23,93,113)`, bracket lift `(147,169)`, residual `(45,173)`.
-4. Attach HYP-3513 route sidecar `R` and the vertical guard to every emitted
-   certificate before any quotient compression.
+HYP-3523 turns the HYP-3521/HYP-3522 terminal interface into five proof tasks:
+
+1. Treat the `77` random031 terminal certificates as a left-to-right stream over
+   component events.
+2. Prove ordinary route and free-hole single certificates emit immediately and
+   require no row-name memory.
+3. Prove free-hole doublets need only a one-component predigit buffer, closing
+   at the next component event.
+4. Prove the bypass owner carry opens as `(45,147,169,173)` and HYP-3522 branch
+   bracketing reduces it one event later to `(45,173)`.
+5. Attach the HYP-3513 route sidecar `R` or prove route reconstruction; the
+   final non-streamed proof object is the residual owner pair `(45,173)`, not
+   the full seven-owner seam.
+
+The proof-facing invariant is:
+
+```text
+emitted_prefix + predigit_buffer + owner_carry + route_sidecar_R
+```
+
+where the predigit buffer has size at most `1` component and the owner carry is
+at most `4` labels before reducing to the two-owner residual.
+
+## Tournament Analysis
+
+Vertices are stream states and proof-carrier buffers, not runners or raw arcs.
+
+Pairwise observable: streamability, bounded carry, terminal predicate retention,
+and route/firewall sidecar retention.
+
+Switch/gauge: higher proof-facing stream score; ties use the fixed carrier
+order.
+
+Fingerprint:
+
+```text
+score_hist={10:1, 41:1, 63:1, 80:1, 86:1, 92:1, 98:1, 104:1}
+directed_3cycles=0
+hamiltonian_path=
+  spigot_state_plus_route_R
+  -> terminal_class_plus_carry_state
+  -> owner_carry_buffer
+  -> doublet_predigit_buffer
+  -> terminal_certificate_ledger
+  -> terminal_class_shadow
+  -> component_type_shadow
+  -> raw_cell_count_shadow
+```
 
 ## Assumption Challenge
 
-Tournament vertices are proof-output states and carry buffers, not runners,
-arcs, raw witnesses, or scalar counts.  The preserved predicate is terminal
-certificate emission without later invalidation.  Destroyed information is
-named as carry/debt rather than silently dropped: branch/u order, terminal
-class, bracket carry, owner carry, route guard, and vertical guard must be
-present before scalar compression.
+Candidate vertices considered: runners, gaps, fixed circle sections, section
+boundaries, wall-crossing events, residues, cover arcs, Fourier modes, matroid
+circuits, proof obligations, and stream states.
+
+Chosen vertices are terminal stream states plus predigit/carry buffers.  This
+preserves the random031 terminal-discharge predicate, free-hole doublet
+collapse, owner residual, and firewall route sidecar.  It deliberately destroys
+raw runner order, raw component index after emission, and scalar cell-count
+shadows.
+
+The challenged assumption is that the terminal proof must keep the whole
+random031 component table live until the end.  The audit shows all emitted
+ordinary/single/doublet certificates can stream away, leaving only bounded
+carry plus the residual two-owner lemma and route sidecar.

@@ -13,6 +13,17 @@ of 2026-05-30.
 
 Useful synthetic maps added later:
 
+- `07-reflections/lrc14-random031-certificate-spigot-codex-20260629.md`:
+  HYP-3523/T1523 turns the user-suggested spigot-algorithm prompt into a
+  concrete random031 proof scheduler: emit terminal certificates left-to-right,
+  discard emitted state, and keep only bounded predigit/carry buffers.  Exact
+  audit: `79` component events emit `77` terminal certificates; the two
+  free-hole doublet clusters each buffer one component and close at the next
+  event; the bypass owner carry opens as `(45,147,169,173)` at rank `45`,
+  applies HYP-3522 branch-boundary lift at rank `46`, and leaves residual
+  `(45,173)`.  The proof-facing state is
+  `emitted_prefix + predigit_buffer + owner_carry + route_sidecar_R`, with
+  terminal-class compression legal only after spigot state is attached.
 - `07-reflections/repo-history-niche-connection-atlas-codex-20260629.md`:
   HYP-3492/T1452 mines `3088` current summary/knowledge files plus `7569`
   commit subjects and touched-path records for recurring niche topic clusters.
