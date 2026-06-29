@@ -1,3 +1,27 @@
+## codex-2026-06-29 -- HYP-3478 small-touch/no-hard geometry reservation
+
+Prompt: see the underlying geometry of the six small-touch / no-hard rows.
+After pulling the current mainline, I reserved HYP-3478/T1438/LTI-438/LTT-338
+for the geometry audit of the six HYP-3476 small-touch boundary-current
+exceptions outside hard mirror-orbit debt:
+
+```text
+random_covering_001
+random_covering_039
+random_covering_062
+random_covering_074
+random_covering_086
+random_covering_101
+```
+
+Planned computation: reuse the HYP-3450/HYP-3451/HYP-3453/HYP-3438 row bank
+and HYP-3472/HYP-3476 current utilities to list dead-component intervals,
+mirror-pair structure, blocker-owner pairs, projection edge support, touching
+E/branch gate words, and the unit-delta versus cover-delta split.  The
+tournament vertices will be singleton components, mirror-paired components,
+owner-pair labels, touching gate events, and proof obligations rather than
+runners or raw row names.
+
 ## codex-2026-06-29 -- HYP-3477 hard mirror-orbit discharge audit
 
 Continued from HYP-3475 after rebasing over the incoming HYP-3476

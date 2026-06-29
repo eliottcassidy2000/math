@@ -171,6 +171,13 @@ obligations, and proof-carrier interfaces.
   The quotient preserves hard-gluing debt plus legal lower-delta exits, and it
   must not state phase-bypass universally because only random031 has that
   property in HYP-3477.
+- Need to see the six HYP-3476 small-touch/no-hard rows:
+  use LTT-338 after LTT-336/LTT-337/LTT-332 and make singleton dead
+  components, mirror-paired components, blocker-owner pairs, section
+  boundaries, touching gate events, unit-delta/cover-delta sidecars, and
+  terminal proof obligations the vertices.  The quotient preserves the
+  zero-edge singleton-current discharge predicate and must retain interval,
+  branch, and owner locality before naming a finite proof packet.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -9912,3 +9919,40 @@ quotient_legality_status
   HYP-3471, HYP-3470, HYP-3462, HYP-3461, HYP-3460, HYP-3459, HYP-3458,
   HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-3436, HYP-2595,
   THM-523, LTI-436, LTT-336, T1436, OPEN-Q-108.
+
+## LTT-338: Small-Touch / No-Hard Singleton Geometry Tournament
+
+- **Move:** Treat singleton dead components, mirror-paired component orbits,
+  blocker-owner pairs, touching gate events, unit-delta/cover-delta sidecars,
+  and proof obligations as vertices.  Runners, arcs, raw row names, and raw
+  gate counts are shadows unless they preserve the same terminal discharge
+  predicate.
+- **LRC use:** HYP-3478 audits the six HYP-3476 currentless random rows
+  outside AP84 and HYP-3477 hard mirror-orbit debt:
+  `random_covering_001`, `random_covering_039`, `random_covering_062`,
+  `random_covering_074`, `random_covering_086`, and `random_covering_101`.
+  The goal is to see whether their zero-edge dead projections are all balanced
+  mirror-paired singleton-current packets, and whether `random_covering_039`
+  and `random_covering_074` split as cover-delta sidecar rows.
+- **Preserves:** terminal zero-edge singleton-current predicate, component
+  interval address, mirror partner, blocker-owner pair, touching low-rank
+  E/branch gate word, and unit-delta versus cover-delta status.
+- **Forgets / guardrail:** compressing to row names, edge-support zero, or
+  scalar gate counts forgets interval order, branch orientation, endpoint wall
+  labels, and owner-current locality.  Those destroyed coordinates must be
+  retained or reconstructed before formalizing the packet.
+- **Pairwise observable:** predicate retention, mirror-pair payload,
+  owner-pair payload, touching-gate payload, delta-sidecar payload, formal
+  packet fit, and scalar penalty.
+- **Switch/gauge:** higher retained local proof payload first; ties follow the
+  route `mirror singleton geometry -> owner-current locality -> gate-touch
+  sidecar -> delta split -> formal packet -> scalar shadows`.
+- **Fingerprint:** reserved pending computation.  Expected comparison is
+  cover-delta sidecar rows (`random_covering_039`, `random_covering_074`)
+  versus clean unit-delta rows (`random_covering_001`, `random_covering_062`,
+  `random_covering_086`, `random_covering_101`).
+- **Next hook:** compute the six-row geometry and decide whether OPEN-Q-108
+  needs one singleton-current lemma or a split two-row/four-row finite packet.
+- **Pointers:** HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471,
+  HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523, LTI-438,
+  LTT-338, T1438, OPEN-Q-108.

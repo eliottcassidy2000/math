@@ -15,6 +15,27 @@
 
 ---
 
+## Lead codex-2026-06-29: small-touch/no-hard geometry audit
+
+**Status:** RESERVED / geometry computation pending; not proof
+(HYP-3478/T1438/LTI-438/LTT-338), downstream of HYP-3476 and HYP-3477.
+
+HYP-3478 claims the next OPEN-Q-108 packet: the six non-AP currentless rows
+that have no hard mirror orbit and no E/branch pair-current edge support:
+`random_covering_001`, `random_covering_039`, `random_covering_062`,
+`random_covering_074`, `random_covering_086`, and `random_covering_101`.
+
+Planned readout: component intervals, mirror pairing, blocker-owner pairs and
+residues, projection edge support, touching E/branch gate words, and the
+split between cover-delta sidecar rows (`random_covering_039`,
+`random_covering_074`) and clean unit-delta singleton-current rows.
+
+Use tournament vertices as singleton components, mirror-paired components,
+owner-pair labels, fixed section boundaries, touching gate events, residues,
+cover arcs, color/Fourier modes, and proof obligations.  The quotient must
+preserve the terminal discharge predicate and say what interval/branch/owner
+geometry it destroys.
+
 ## Lead codex-2026-06-29: hard mirror-orbit discharge audit
 
 **Status:** EVIDENCE / exact hard-family ledger; not proof

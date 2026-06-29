@@ -1,5 +1,27 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3478 small-touch/no-hard geometry addendum:**
+HYP-3478 reserves the direct geometry audit for the six HYP-3476 rows that are
+currentless, non-AP, and outside HYP-3477 hard mirror-orbit debt:
+
+```text
+random_covering_001
+random_covering_039
+random_covering_062
+random_covering_074
+random_covering_086
+random_covering_101
+```
+
+Open proof task: determine whether these are all mirror-balanced singleton
+dead-component packets, and whether the two cover-delta sidecar rows
+(`random_covering_039`, `random_covering_074`) require a separate clause from
+the four clean unit-delta rows.  The audit should retain dead intervals,
+blocker-owner pairs, touching gate words, and owner-current locality rather
+than collapsing to raw row names or gate counts. -> HYP-3478, HYP-3477,
+HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3455, HYP-3453, HYP-3451,
+HYP-3450, HYP-3438, THM-523, LTI-438, LTT-338, T1438, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3476 exception-frontier router addendum:**
 HYP-3476 compares the HYP-3472 boundary-current exception frontier with the
 HYP-3475 hard mirror-orbit frontier.  Exact readout:
