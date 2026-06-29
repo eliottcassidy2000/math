@@ -1,5 +1,24 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3521 terminal certificate addendum:** Can the remaining
+`random_covering_031` target be closed by the five-lemma terminal certificate
+packet?
+
+```text
+282 = 230 ordinary endpoint-rank-2 route cells
+    +  40 bracketed free-hole cells
+    +  12 pure bypass owner-boundary cells
+```
+
+The next proof should show: ordinary route certificates discharge all `64`
+ordinary components; HYP-3511's `10` free-hole singles and `2` doublets
+discharge the `40` no-gate cells; the one bypass packet with owners
+`(23,93,113)` and seam debt `(45,147,169,173)` discharges the owner boundary
+or emits named debt; HYP-3490 blocks projection-current replacement; and
+HYP-3486 blocks vertical-halfturn quotienting without sidecars. -> HYP-3521,
+HYP-3511, HYP-3510, HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3485,
+LTI-521, LTT-421, T1521.
+
 **OPEN-Q-108 HYP-3492 repo-history niche atlas addendum:** Which old niche
 topic can be made exact enough to close the HYP-3486 random031 packet first?
 Candidates are now ranked by the miner.  The best proof-facing options are:

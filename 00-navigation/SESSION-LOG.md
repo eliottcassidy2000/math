@@ -9,6 +9,29 @@ lower-delta pure bypass on the same components carries `(23,93,113)` and is hit
 by exactly `12` phase witnesses.  The finite target is a quotient-price matrix
 showing which sidecars reconstruct the persistent boundary debt
 `(45,147,169,173)`.
+## codex-2026-06-29 -- HYP-3521 random031 terminal certificate ledger
+
+Prompt: try new angles on the remaining LRC14 proof targets.  Pulled incoming
+HYP-3493/HYP-3494/HYP-3510/HYP-3511 work first, then built a joined terminal
+ledger for `random_covering_031`:
+
+```text
+04-computation/lrc14_random031_terminal_certificate_ledger_codex_20260629.py
+05-knowledge/results/lrc14_random031_terminal_certificate_ledger_codex_20260629.out
+05-knowledge/hypotheses/HYP-3521-lrc14-random031-terminal-certificate-ledger.md
+07-reflections/lrc14-random031-terminal-certificate-ledger-codex-20260629.md
+```
+
+Main new angle: clarify the old `242` gate-routed count as
+`230 ordinary + 12 bypass`, then make the terminal theorem use the sharper
+partition `282 = 230 ordinary_rank2 + 40 bracketed_free_hole + 12 pure_bypass`.
+The legal `79` mirror components collapse to `77` terminal certificates after
+HYP-3511 doublet collapse: `64` ordinary routes, `10` free-hole singles,
+`2` free-hole doublets, and one bypass owner-boundary packet.
+
+Proof target: ordinary route lemma, free-hole bracket lemma, pure bypass
+owner-boundary lemma, HYP-3490 firewall compatibility, and HYP-3486
+vertical-halfturn guardrail.
 
 ## codex-2026-06-29 -- HYP-3490 Lean private-label firewall ledger
 

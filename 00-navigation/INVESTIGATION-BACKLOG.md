@@ -10,6 +10,19 @@ owner-current/relative-H1 cobordism lemma; failure should name the first
 missing sidecar. -> HYP-3520, HYP-3494, HYP-3493, HYP-3511, HYP-3510,
 HYP-3490, HYP-3486, HYP-3483, HYP-3481, HYP-3402, HYP-3034, LTI-520,
 LTT-420, T1520, OPEN-Q-108.
+**HYP-3521 random031 terminal certificate ledger.**  Formalize the terminal
+packet theorem exposed by `04-computation/lrc14_random031_terminal_certificate_ledger_codex_20260629.py`.
+The random031 proof target now splits as
+`282 = 230 ordinary_rank2 + 40 bracketed_free_hole + 12 pure_bypass`, with the
+older `242` gate-routed count clarified as `230 ordinary + 12 bypass`.  Next
+tasks: prove the ordinary-route lemma for `64` ordinary mirror components;
+prove the HYP-3511 free-hole bracket lemma as `10` singles plus `2` doublets;
+prove the unique bypass owner-boundary lemma for owners `(23,93,113)` and
+seam debt `(45,147,169,173)`; import HYP-3490 as the no-projection-current
+firewall; and keep HYP-3486's vertical-halfturn guardrail as a quotient
+legality sidecar. -> HYP-3521, HYP-3511, HYP-3510, HYP-3494, HYP-3493,
+HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
+HYP-3480, HYP-3477, HYP-3460, HYP-3455, LTI-521, LTT-421, T1521, OPEN-Q-108.
 
 **HYP-3492 repo-history niche connection atlas.**  Convert the historian
 scorecard into executable HYP-3486/HYP-3490 follow-ups.  Highest-yield tasks:

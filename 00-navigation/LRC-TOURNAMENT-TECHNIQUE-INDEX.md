@@ -270,6 +270,12 @@ obligations, and proof-carrier interfaces.
   `40`-cell shadows the vertices.  HYP-3511 shows the `14` legal mirror
   packets split into `10` bracketed singles plus `2` bracketed doublets, with
   every exposed boundary facing an ordinary endpoint-rank-`2` routed cell.
+- Need the random031 terminal packet theorem:
+  use LTT-421 after LTT-411/LTT-410/LTT-346/LTT-350 and make terminal proof
+  obligations the vertices.  HYP-3521 clarifies the partition
+  `282=230 ordinary_rank2 + 40 bracketed_free_hole + 12 pure_bypass`, and the
+  old `242` gate-routed count as `230+12`.  The legal `79` components collapse
+  to `77` terminal certificates after free-hole doublet collapse.
 - Need to explain why random pair-currents cannot work:
   use LTT-350 after LTT-336/LTT-337/LTT-338/LTT-339/LTT-340/LTT-341/LTT-342/LTT-343/LTT-344 and make dead-cover
   blocker labels with multiplicity sidecars, E/branch-touched private labels,
@@ -10345,6 +10351,41 @@ quotient_legality_status
 - **Pointers:** HYP-3486, HYP-3511, HYP-3490, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
   HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, THM-523, LTI-446,
   LTT-346, T1446, OPEN-Q-108.
+
+## LTT-421: Random031 Terminal Certificate Ledger Tournament
+
+- **Move:** Use terminal proof obligations as vertices: terminal certificate
+  ledger, ordinary rank-2 route lemma, free-hole bracket lemma, pure bypass
+  owner-boundary lemma, private-firewall negative certificate, fiber-PGF
+  zero-exit split, vertical-halfturn guardrail, and raw count shadow.
+- **LRC use:** HYP-3521 joins HYP-3486/HYP-3511/HYP-3510/HYP-3490 into one
+  random031 terminal dispatch.  It replaces the ambiguous `242` routed-cell
+  slogan by `230` ordinary route cells plus `12` bypass route cells, and
+  records the full terminal partition:
+  `282 = 230 ordinary_rank2 + 40 bracketed_free_hole + 12 pure_bypass`.
+- **Preserves:** terminal random031 discharge predicate, endpoint rank,
+  free-hole bracket type, doublet collapse, bypass owner debt,
+  private-firewall status, fiber PGF split, and vertical quotient guardrail.
+- **Forgets / guardrail:** raw `282`, raw `242`, raw `79`, and raw `40`
+  counts are legal only after reconstructing their certificate split.  The
+  bypass must not be swallowed by the ordinary endpoint-rank route lemma.
+- **Pairwise observable:** which carrier preserves the terminal discharge
+  predicate with least forgotten sidecar.
+- **Switch/gauge:** orient toward higher retained certificate payload; ties
+  follow the terminal theorem order from joined ledger through ordinary route,
+  free-hole bracket, bypass boundary, firewall, PGF, vertical guardrail, and
+  raw shadow.
+- **Fingerprint:** score histogram
+  `{10:1,66:1,73:1,79:1,84:1,88:1,91:1,100:1}`, no directed `3`-cycles,
+  singleton SCCs, and Hamiltonian path
+  `terminal_certificate_ledger -> ordinary_rank2_route_lemma -> free_hole_bracket_lemma -> pure_bypass_owner_boundary_lemma -> private_firewall_negative_certificate -> fiber_pgf_zero_exit_split -> vertical_halfturn_guardrail -> raw_count_shadow`.
+- **Next hook:** formalize the five-lemma terminal packet in Lean or a theorem
+  note: ordinary route, free-hole bracket, pure bypass owner-boundary,
+  HYP-3490 firewall compatibility, and HYP-3486 vertical-halfturn guardrail.
+- **Pointers:** HYP-3521, HYP-3511, HYP-3510, HYP-3494, HYP-3493, HYP-3490,
+  HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480,
+  HYP-3477, HYP-3460, HYP-3455, THM-523, LTI-521, LTT-421, T1521,
+  OPEN-Q-108.
 
 ## LTT-411: Random031 Free-Hole Bracket Atlas Tournament
 

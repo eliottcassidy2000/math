@@ -1,0 +1,70 @@
+HYP-3521 RANDOM031 TERMINAL CERTIFICATE LEDGER
+status=EVIDENCE / finite terminal-dispatch ledger; not an LRC14 proof
+row=random_covering_031
+
+## Joined Inputs
+fiber_graph=HYP-3486
+free_hole_brackets=HYP-3511
+private_firewall=HYP-3490
+seam_complement_flow=HYP-3510
+seam_owners=(23, 45, 93, 113, 147, 169, 173)
+
+## Cell-Level Terminal Partition
+witness_cells=282
+cell_class_counts={'bypass': 12, 'free_hole': 40, 'ordinary': 230}
+gate_routed_cells=242
+ordinary_rank2_hit_cells=230
+bypass_rank2_hit_cells=12
+free_hole_cells=40
+endpoint_rank_hist_on_hit_cells={2: 242}
+identity_282=230 ordinary_rank2 + 40 bracketed_free_hole + 12 pure_bypass
+identity_242=230 ordinary_rank2 + 12 pure_bypass gate-routed cells
+
+## Component / Certificate Partition
+legal_mirror_components=79
+component_type_hist={'bypass': 1, 'free_hole': 14, 'ordinary': 64}
+component_terminal_hist={'free_hole_doublet_packet': 4, 'free_hole_single_bracket_packet': 10, 'ordinary_rank2_route_component': 64, 'pure_bypass_owner_boundary_component': 1}
+cell_terminal_hist={'free_hole_doublet_packet': 14, 'free_hole_single_bracket_packet': 26, 'ordinary_rank2_route_component': 230, 'pure_bypass_owner_boundary_component': 12}
+terminal_certificate_count_after_doublet_collapse=77
+identity_79_components=64 ordinary + 14 free_hole + 1 bypass
+identity_77_terminal_certificates=64 ordinary + 10 free_single + 2 free_doublet + 1 bypass
+
+## Free-Hole Collapse
+free_single_cells=26
+free_doublet_cells=14
+doublet_cell_summary={(2, 3): 4, (8, 13): 10}
+free_hole_certificate_shape=10 ordinary-bracketed singles + 2 same-branch doublets
+
+## Fiber PGF Sidecar
+occupied_fibers=258
+rank2_escape_pgf={0: 24, 1: 226, 2: 8}  # 24 + 226*y + 8*y^2
+mean_rank2_escape_sheets=121/129
+zero_exit_signature_hist={('free_hole', 'free_hole'): 2, ('free_hole',): 22}
+one_exit_signature_top=[(('ordinary',), 200), (('free_hole', 'ordinary'), 14), (('bypass',), 12)]
+reading=zero-exit fibers are pure free-hole fibers; mixed free-hole/ordinary fibers carry one rank-2 sheet and one bracketed no-gate sheet.
+
+## Pure Bypass Boundary Packet
+bypass_certificate=component_index=1 size=12 hit_components=(43, 54) owners=(23, 93, 113) seam_debt=(45, 147, 169, 173)
+expected_bypass_flow_owners=(23, 93, 113)
+expected_bypass_seam_debt=(45, 147, 169, 173)
+bypass_obligation=prove owner-boundary discharge for this one packet or name owner/two-adic/SPEC debt
+
+## Proof Pull
+L1 ordinary-route lemma: every ordinary component has endpoint-rank-2 hits and exits the seam complement.
+L2 free-hole bracket lemma: all 40 no-gate cells are locally bracketed as 10 singles plus 2 doublets.
+L3 bypass owner-boundary lemma: the only nonordinary gate-routed hard-component packet is the 12-cell bypass with owners (23,93,113).
+L4 firewall compatibility lemma: HYP-3490 forbids replacing L1-L3 by projection-current deletion.
+L5 quotient guardrail lemma: vertical half-turn is an address projection and must not identify the terminal classes.
+
+## Tournament Analysis
+vertices=terminal proof obligations, not runners, raw arcs, or scalar cell counts
+pairwise_observable=which carrier preserves terminal discharge predicate with least forgotten sidecar
+switch=higher retained certificate payload; ties follow the Hamiltonian path
+score_hist={10: 1, 100: 1, 66: 1, 73: 1, 79: 1, 84: 1, 88: 1, 91: 1}
+directed_3cycles=0
+sccs=8 singleton SCCs
+hamiltonian_path=terminal_certificate_ledger -> ordinary_rank2_route_lemma -> free_hole_bracket_lemma -> pure_bypass_owner_boundary_lemma -> private_firewall_negative_certificate -> fiber_pgf_zero_exit_split -> vertical_halfturn_guardrail -> raw_count_shadow
+
+## Assumption Challenge
+Considered vertices: runners, gaps, hard gates, witness cells, u-fibers, branch sheets, free-hole packets, doublet clusters, owner words, endpoint ranks, vertical pairs, and proof obligations.
+Chosen vertices are terminal proof obligations.  This quotient preserves the random031 terminal predicate because it retains class, endpoint rank, free-hole bracket type, bypass owner debt, private-firewall status, and vertical guardrail.
