@@ -122,6 +122,11 @@ obligations, and proof-carrier interfaces.
   boundary color, mod-7 endpoint-rank subcolor, bad-phase derivative, and
   outer-extension shift the vertices.  Raw escape count is only the shadow
   after endpoint rank has been retained.
+- Need to connect old coloring work to new gate work:
+  use LTT-320 after LTT-315/LTT-317/LTT-282 and make regular circular
+  colorings, phase colors, branch colors, component classes, survivor-gate
+  hits, and max-delta bypass flags the vertices.  Raw phase counts are only a
+  shadow unless the two-adic branch pullback and hard-gate hit test are kept.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -9485,4 +9490,45 @@ quotient_legality_status
 - **Pointers:** HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453,
   HYP-3452, HYP-3441, HYP-3438, HYP-3437, HYP-3436, HYP-3431, HYP-2991,
   HYP-2990, HYP-2263, HYP-2247, HYP-1802, THM-523, LTI-419, LTT-319, T1419,
+  OPEN-Q-108.
+
+## LTT-320: Phase-Branch Color Pullback Tournament
+
+- **Move:** Treat the color bridge as a tournament over proof carriers rather
+  than colors alone.  Vertices are the regular circular-coloring multiplier,
+  phase-color CRT reservoir, colored-resonance discrepancy, phase-branch
+  pullback, max-delta gate avoidance, branch-component escape router, and raw
+  phase-count shadow.
+- **LRC use:** HYP-3460 reconnects S359/S363 and HYP-2593/HYP-2595 to
+  HYP-3438/HYP-3450/HYP-3455 as the noncanonical random031 sibling of
+  HYP-3458's AP84 coloring recursion and HYP-3459's AP84 color-packet
+  legality guardrail.  For `random_covering_031` as `V=173`,
+  `P=(12,)`, `E=(0,4,26,53,60,80,89,103,115,118,128,150)`, the phase-color
+  layer has `Sigma≈1.831959`, `actual=open=282`, deficit `≈34.928978`, and
+  candidate bound `8*(k+cGP)+1=193`.  Pullback by `u=2t mod1` gives
+  mirror-symmetric phase/branch counts, `no_component_hits=0`, `242`
+  branch-compatible gate hits, and `hard_gate_hits={}` for the two HYP-3455
+  max-delta mirror gates.
+- **Preserves:** regular circular-coloring predicate, exact CRT witness count,
+  phase color, branch color, component class, survivor-gate route, hard-gate
+  hit/bypass flag, and mirror checks.
+- **Forgets / guardrail:** raw runner order, raw phase-count histograms, and
+  raw gate deltas are discarded.  Use this only when the two-adic pullback and
+  hard-gate hit test are retained.
+- **Pairwise observable:** retained LRC predicate, CRT exactness, phase-color
+  payload, branch-color payload, gate/component payload, and scalar-shadow
+  penalty.
+- **Switch/gauge:** higher retained proof payload first; ties use the
+  phase-branch route.
+- **Fingerprint:** `7` vertices, score histogram
+  `{17:1,50:1,54:1,56:2,58:1,59:1}`, no directed `3`-cycles, and Hamiltonian
+  path
+  `phase_branch_pullback -> max_delta_gate_avoidance -> branch_component_escape_router -> colored_resonance_discrepancy -> phase_color_CRT_reservoir -> regular_circular_coloring_multiplier -> raw_phase_counts`.
+- **Next hook:** prove the phase-branch bypass lemma.  A max-delta gate with
+  zero compatible phase-grid hits must discharge by colored resonance
+  cancellation, low-rank component escape, endpoint-spine/wall lift,
+  owner-current imbalance, two-adic descent, or signed-SPEC/Rprime debt.
+- **Pointers:** HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453,
+  HYP-3452, HYP-3451, HYP-3450, HYP-3438, HYP-3436, HYP-3422, HYP-2991,
+  HYP-2989, HYP-2595, HYP-2594, HYP-2593, THM-523, LTI-420, LTT-320, T1420,
   OPEN-Q-108.

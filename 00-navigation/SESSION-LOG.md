@@ -69,6 +69,38 @@ or arcs.  Score histogram
 `{20:1,36:1,52:1,58:1,62:1,65:1,67:1,68:1,80:1}`, no directed `3`-cycles,
 Hamiltonian path
 `labelled_color_packet_theorem -> residue_gate_plus_floor_word -> haar_zipper_cocycle_repair -> endpoint_phase_sidecar -> incident_C3_Qsqrt_router -> branch_mask_discrepancy_word -> distance_graph_regular_coloring -> raw_mod35_gate_color -> raw_scalar_escape_count`.
+## codex-2026-06-29 -- HYP-3460 phase-branch color pullback
+
+Reconnected the prior coloring lane to the current branch-gate proof stack by
+adding HYP-3460/T1420/LTI-420/LTT-320 plus script/result/reflection, renumbered
+after incoming HYP-3458 and HYP-3459 claimed the AP84 coloring bridge slots:
+
+```text
+04-computation/lrc14_phase_branch_color_pullback_codex_20260629.py
+05-knowledge/results/lrc14_phase_branch_color_pullback_codex_20260629.out
+05-knowledge/hypotheses/HYP-3460-lrc14-phase-branch-color-pullback.md
+07-reflections/lrc14-phase-branch-color-pullback-codex-20260629.md
+```
+
+Core bridge: a regular circular coloring witness `t=a/(14V)` has phase color
+`b=a mod14`; the two-adic branch atlas reads the same witness as
+`u=2t mod1` plus a half-circle branch color.  On `random_covering_031`, read
+as an S3 row with `V=173`, `P=(12,)`, and
+`E=(0,4,26,53,60,80,89,103,115,118,128,150)`, the colored reservoir has
+`Sigma≈1.831959`, `K=2254`, `actual=open=282`, and deficit `≈34.928978`,
+comfortably below the HYP-2595 candidate bound `8*(k+cGP)+1=193`.
+
+Pulling the actual witnesses back through the branch atlas gives exact mirror
+symmetry, `no_component_hits=0`, `242` branch-compatible gate hits, and
+`hard_gate_hits={}` for HYP-3455's two max-delta mirror gates.  The hard
+components `43` and `54` are touched only through lower-delta opposite-branch
+gates.  Proof pull: before promoting a branch-colored gate obstruction to
+global debt, test whether the phase-color CRT layer hits it; if not, route the
+gate through colored resonance cancellation, low-rank component escape,
+endpoint-spine/wall lift, owner-current, two-adic descent, or signed-SPEC debt.
+Together with HYP-3458 and HYP-3459, this splits the coloring return into a
+canonical AP84 recursion, an AP84 color-packet legality guardrail, and a
+noncanonical random031 phase-branch bypass test.
 
 ## codex-2026-06-29 -- HYP-3456 AP84 mod-35 floor-count closure
 

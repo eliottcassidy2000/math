@@ -29,6 +29,24 @@ HYP-3454, HYP-3453, HYP-3452, HYP-3439, HYP-3438, HYP-3436, HYP-3431,
 HYP-2247, HYP-2246, HYP-2243, HYP-2241, THM-523, LTI-418, LTT-318, T1418,
 OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3460 phase-branch color-pullback addendum:**
+HYP-3460 reconnects the regular circular-coloring / phase-color CRT route to
+the two-adic branch-gate route.  For `random_covering_031` as an S3 row with
+`V=173`, the exact colored CRT reservoir has `Sigma≈1.831959`, `actual=282`,
+and deficit `≈34.928978`, below the HYP-2595 candidate bound
+`8*(k+cGP)+1=193`.  Pullback by `u=2t mod1` gives mirror-symmetric
+phase/branch counts and `hard_gate_hits={}` for the two HYP-3455 max-delta
+mirror gates; the hard components are touched only through lower-delta
+opposite-branch gates.  New obligation: prove a phase-branch bypass lemma.
+If a branch-colored gate obstruction has zero compatible phase-grid hits, it
+must discharge by colored resonance cancellation, low-rank component escape,
+endpoint-spine/wall lift, owner-current imbalance, two-adic descent, or
+signed-SPEC/Rprime debt.  HYP-3459 supplies the AP84 legality contrast: a
+color quotient is proof-legal only after the lost gate/floor/endpoint/branch
+packet is retained or routed. -> HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3450, HYP-3438,
+HYP-2991, HYP-2989, HYP-2595, HYP-2594, HYP-2593, LTI-420, LTT-320, T1420,
+OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3457 AP84 finite transient addendum:**
 HYP-3457 closes the finite `m=1..4` side of the AP-tail split from
 HYP-3452/HYP-3454/HYP-3456.  For

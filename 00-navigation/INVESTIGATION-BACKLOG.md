@@ -43,6 +43,39 @@ phase support only `m=1..4`.
 Next: splice HYP-3454/HYP-3456/HYP-3457/HYP-3458 into HYP-3439 as one AP-tail
 rank-`5` descent packet, and run a sibling coloring-rank scout on HYP-3438
 survivor gates joined to HYP-3453 component/gate escapes.
+## Lead codex-2026-06-29: phase-branch color pullback
+
+**Status:** EVIDENCE / exact color-pullback certificate; not proof
+(HYP-3460/T1420/LTI-420/LTT-320), reconnecting S359/S363 regular circular
+colorings and HYP-2593/HYP-2595 phase-color CRT grids with the
+HYP-3438/HYP-3450 branch-coloured gate atlas.  HYP-3460 is the noncanonical
+random031 sibling of incoming HYP-3458, which handles AP84 coloring recursion,
+and HYP-3459, which adds the AP84 color-packet legality guardrail.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3460-lrc14-phase-branch-color-pullback.md`,
+script
+`04-computation/lrc14_phase_branch_color_pullback_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_phase_branch_color_pullback_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-phase-branch-color-pullback-codex-20260629.md`.
+
+Readout: for `random_covering_031` as an S3 row with `V=173`, `P=(12,)`,
+and `E=(0,4,26,53,60,80,89,103,115,118,128,150)`, the phase-color CRT layer
+has `Sigma≈1.831959`, `K=2254`, `actual=open=282`, and exact deficit
+`≈34.928978`, below HYP-2595's candidate bound `8*(k+cGP)+1=193`.  Pulling
+actual witnesses back by `u=2t mod1` gives mirror-symmetric phase/branch
+counts, `no_component_hits=0`, `242` branch-compatible gate hits, and
+`hard_gate_hits={}` for HYP-3455's two max-delta mirror gates.  Hard components
+`43` and `54` are touched only through lower-delta opposite-branch gates.
+
+Next: prove the phase-branch bypass lemma.  Any branch-colored max-delta gate
+obstruction with zero compatible phase-grid hits must discharge by colored
+resonance cancellation, low-rank component escape, endpoint-spine/wall lift,
+owner-current imbalance, two-adic descent, or signed-SPEC/Rprime debt.  Extend
+the script to the full HYP-3438/HYP-3450 bank and classify max-delta gate hits
+versus bypasses.
 
 ## Lead codex-2026-06-29: AP84 finite transient closure
 

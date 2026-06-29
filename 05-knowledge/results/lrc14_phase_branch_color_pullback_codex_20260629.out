@@ -1,0 +1,126 @@
+HYP-3460 PHASE-BRANCH COLOR PULLBACK
+==============================================================================
+status=EVIDENCE / exact color-pullback certificate; not an LRC14 proof
+source=HYP-2593/HYP-2595 + S359/S363 + HYP-3438/HYP-3450/HYP-3455; noncanonical sibling of HYP-3458 AP84 coloring recursion
+
+A. Phase-colored regular circular coloring metrics
+  random031: HYP-3455 noncanonical rank-6 gate-gluing row, read as an S3 row with V=173
+    speeds=(12, 23, 45, 55, 58, 70, 84, 93, 113, 120, 147, 169, 173)
+    V=173 P=(12,) E=(0, 4, 26, 53, 60, 80, 89, 103, 115, 118, 128, 150)
+    Sigma=2184561576461/1192472694400 (1.831959) K=2254 cGP=12 components_bound_cutoff=1230.376604
+    actual=282 open=282 boundary_bonus=0
+    actual_deficit=41651852906953/1192472694400 (34.928978) open_deficit=41651852906953/1192472694400 (34.928978) bound_8(k+cGP)+1=193
+    phase_actual_counts={1: 21, 2: 16, 3: 23, 4: 27, 5: 22, 6: 21, 7: 22, 8: 21, 9: 22, 10: 27, 11: 23, 12: 16, 13: 21}
+    phase_open_counts={1: 21, 2: 16, 3: 23, 4: 27, 5: 22, 6: 21, 7: 22, 8: 21, 9: 22, 10: 27, 11: 23, 12: 16, 13: 21}
+    phase_component_counts={1: 176, 2: 179, 3: 164, 4: 181, 5: 184, 6: 171, 7: 144, 8: 171, 9: 184, 10: 181, 11: 164, 12: 179, 13: 176}
+  ap84_m1: canonical AP84 transient base row
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+    V=84 P=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13) E=(0,)
+    Sigma=426/2695 (0.158071) K=52 cGP=4 components_bound_cutoff=328.967136
+    actual=12 open=10 boundary_bonus=2
+    actual_deficit=492/385 (1.277922) open_deficit=1262/385 (3.277922) bound_8(k+cGP)+1=41
+    phase_actual_counts={1: 4, 2: 2, 12: 2, 13: 4}
+    phase_open_counts={1: 4, 2: 1, 12: 1, 13: 4}
+    phase_component_counts={1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 4, 8: 4, 9: 4, 10: 4, 11: 4, 12: 4, 13: 4}
+  ap84_m5: first pure E:84m/E:84m endpoint phase row from HYP-3454
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 420)
+    V=420 P=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13) E=(0,)
+    Sigma=426/2695 (0.158071) K=52 cGP=4 components_bound_cutoff=328.967136
+    actual=68 open=66 boundary_bonus=2
+    actual_deficit=-124/77 (-1.610390) open_deficit=30/77 (0.389610) bound_8(k+cGP)+1=41
+    phase_actual_counts={1: 5, 2: 5, 3: 5, 4: 6, 5: 6, 6: 5, 7: 4, 8: 5, 9: 6, 10: 6, 11: 5, 12: 5, 13: 5}
+    phase_open_counts={1: 5, 2: 5, 3: 5, 4: 5, 5: 6, 6: 5, 7: 4, 8: 5, 9: 6, 10: 5, 11: 5, 12: 5, 13: 5}
+    phase_component_counts={1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 4, 8: 4, 9: 4, 10: 4, 11: 4, 12: 4, 13: 4}
+  constant_100_failure: HYP-2595 phase-color benchmark: refutes a universal discrepancy constant 100
+    speeds=(1, 2, 11, 317, 360, 538, 718, 787, 848, 902, 910, 1119, 1203)
+    V=1203 P=(1, 2, 11) E=(0, 84, 293, 301, 355, 416, 485, 665, 843, 886)
+    Sigma=294852746600356291895/138048965508259277472 (2.135856) K=10704 cGP=12 components_bound_cutoff=5011.573214
+    actual=2434 open=2432 boundary_bonus=2
+    actual_deficit=6232224037708512594279/46016321836086425824 (135.435076) open_deficit=6324256681380685445927/46016321836086425824 (137.435076) bound_8(k+cGP)+1=177
+    phase_actual_counts={1: 204, 2: 178, 3: 179, 4: 182, 5: 192, 6: 186, 7: 192, 8: 186, 9: 192, 10: 182, 11: 179, 12: 178, 13: 204}
+    phase_open_counts={1: 203, 2: 178, 3: 179, 4: 182, 5: 192, 6: 186, 7: 192, 8: 186, 9: 192, 10: 182, 11: 179, 12: 178, 13: 203}
+    phase_component_counts={1: 815, 2: 821, 3: 808, 4: 817, 5: 836, 6: 834, 7: 842, 8: 834, 9: 836, 10: 817, 11: 808, 12: 821, 13: 815}
+
+B. Pull actual phase-color witnesses back to two-adic branch colors
+  random031: branch pullback via u=2t mod 1
+    phase_branch_counts={(1, 0): 9, (1, 1): 12, (2, 0): 6, (2, 1): 10, (3, 0): 15, (3, 1): 8, (4, 0): 16, (4, 1): 11, (5, 0): 11, (5, 1): 11, (6, 0): 12, (6, 1): 9, (7, 0): 11, (7, 1): 11, (8, 0): 9, (8, 1): 12, (9, 0): 11, (9, 1): 11, (10, 0): 11, (10, 1): 16, (11, 0): 8, (11, 1): 15, (12, 0): 10, (12, 1): 6, (13, 0): 12, (13, 1): 9}
+    component_class_counts={'both_alive': 208, 'branch0_only': 37, 'branch1_only': 37}
+    no_component_hits=0
+    gate_route_counts={'edge_singleton_parent_gate': 76, 'edge_survivor_residual': 58, 'mixed_owner_residual': 66, 'owner_current_small_delta': 42}
+    gate_mask_counts={'both': 32, 'branch0': 105, 'branch1': 105}
+    gate_total_delta_counts={2: 118, 3: 40, 4: 62, 5: 16, 6: 6}
+    no_gate_hits=40
+    ambiguous_gate_hits=0
+    hard_gate_hits={}
+    hard_component_hits={(43, 'branch1', 2): 6, (54, 'branch0', 2): 6}
+    mirror_phase_failures=()
+    mirror_branch_failures=()
+  ap84_m1: branch pullback via u=2t mod 1
+    phase_branch_counts={(1, 0): 2, (1, 1): 2, (2, 0): 1, (2, 1): 1, (12, 0): 1, (12, 1): 1, (13, 0): 2, (13, 1): 2}
+    component_class_counts={'both_alive': 12}
+    no_component_hits=0
+    gate_route_counts={'edge_singleton_parent_gate': 8}
+    gate_mask_counts={'branch0': 4, 'branch1': 4}
+    gate_total_delta_counts={2: 8}
+    no_gate_hits=4
+    ambiguous_gate_hits=0
+    hard_gate_hits={(3, 'branch1'): 2, (4, 'branch1'): 2, (21, 'branch0'): 2, (22, 'branch0'): 2}
+    hard_component_hits={(3, 'branch1', 2): 2, (4, 'branch1', 2): 2, (21, 'branch0', 2): 2, (22, 'branch0', 2): 2}
+    mirror_phase_failures=()
+    mirror_branch_failures=()
+  ap84_m5: branch pullback via u=2t mod 1
+    phase_branch_counts={(1, 0): 3, (1, 1): 2, (2, 0): 3, (2, 1): 2, (3, 0): 3, (3, 1): 2, (4, 0): 3, (4, 1): 3, (5, 0): 3, (5, 1): 3, (6, 0): 3, (6, 1): 2, (7, 0): 2, (7, 1): 2, (8, 0): 2, (8, 1): 3, (9, 0): 3, (9, 1): 3, (10, 0): 3, (10, 1): 3, (11, 0): 2, (11, 1): 3, (12, 0): 2, (12, 1): 3, (13, 0): 2, (13, 1): 3}
+    component_class_counts={'both_alive': 68}
+    no_component_hits=0
+    gate_route_counts={'edge_singleton_parent_gate': 20}
+    gate_mask_counts={'branch0': 10, 'branch1': 10}
+    gate_total_delta_counts={2: 20}
+    no_gate_hits=48
+    ambiguous_gate_hits=0
+    hard_gate_hits={(19, 'branch1'): 10, (88, 'branch0'): 10}
+    hard_component_hits={(19, 'branch1', 2): 10, (88, 'branch0', 2): 10}
+    mirror_phase_failures=()
+    mirror_branch_failures=()
+
+C. Random031 proof readout
+  random031 has a large colored reservoir but small exact deficit: Sigma=1.831959, actual_deficit=34.928978, 8(k+cGP)+1=193.
+  Phase color 0 is absent, as expected from the E=0 max-runner constraint.
+  Nonzero phase colors are mirror-symmetric; the phase-branch matrix is
+  symmetric after b -> 14-b and branch0 <-> branch1.
+  The actual CRT witnesses hit 242 survivor gates or branch-compatible
+  gate intervals, but they hit zero of the two max-delta mirror gates
+  isolated by HYP-3455.  They only touch those hard components through
+  lower-delta branch-opposite gates.
+  Therefore the HYP-3455 seven-owner gate pair is not a colored-CRT
+  survivor obstruction at V=173; it is a continuous branch-gluing proof
+  obligation that the colored placement layer can route around.
+
+D. Theorem-facing synthesis
+  Old coloring route: a time t is a multiplier circular 14-coloring of
+  G(Z,S).  For S3 rows, t=a/(14V) also has a phase color b=a mod 14,
+  and HYP-2595 says only color-compatible V-resonances contribute to
+  discrepancy.
+  New branch route: the same t gives u=2t mod 1 and a branch color.
+  Survivor gates are not runners; they are branch-colored pullbacks of
+  multiplier colorings through the two-adic doubling map.
+  Candidate lemma: any branch-colored max-delta gate obstruction with
+  zero compatible phase-grid hits must discharge by colored resonance
+  cancellation, a low-rank component escape, an endpoint-spine/wall
+  lift, or owner-current/two-adic/signed-SPEC debt.
+
+E. Tournament Analysis
+vertices=proof carriers: regular coloring, phase colors, branch colors, gates
+pairwise_observable=retained LRC predicate + CRT exactness + branch pullback + hard-gate routing
+switch=higher retained-predicate payload; ties by declared route order
+score_hist={17: 1, 50: 1, 54: 1, 56: 2, 58: 1, 59: 1}
+directed_3cycles=0
+hamiltonian_path=phase_branch_pullback -> max_delta_gate_avoidance -> branch_component_escape_router -> colored_resonance_discrepancy -> phase_color_CRT_reservoir -> regular_circular_coloring_multiplier -> raw_phase_counts
+
+F. Assumption challenge
+  Considered vertices: runners, phase colors, branch colors, endpoint
+  residues, gates, components, wall crossings, Fourier modes, fixed
+  sections, and proof obligations.  The chosen pullback vertices preserve
+  the regular circular-coloring predicate and the two-adic branch witness
+  predicate simultaneously.  They destroy raw runner order and raw gate
+  mass, which is legal only because the lost data is replaced by exact
+  phase/branch counts, mirror checks, and hard-gate hit counts.
