@@ -71,6 +71,37 @@ lemma.  The checked law has no failures and shifts by `+24` escapes under
 `m -> m+35`; once proved, it supplies the AP-tail clause needed by the
 HYP-3439 bridge.
 
+## Lead codex-2026-06-29: HYP-3441 incident tax-core residue router
+
+**Status:** EVIDENCE / quotient bridge audit; not proof
+(HYP-3441/T1402/LTI-402/LTT-302), continuing HYP-3437's one-branch
+overlap-tax cut certificate and now pointing into HYP-3438/HYP-3453/HYP-3451.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3441-lrc14-incident-tax-core-residue-router.md`,
+script
+`04-computation/lrc14_incident_tax_core_residue_router_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_incident_tax_core_residue_router_codex_20260629.out`,
+and
+`07-reflections/lrc14-incident-tax-core-residue-router-codex-20260629.md`.
+
+Readout: HYP-3437's `59` negative naive-slack rows have strict rescue ranks
+`{2:7,4:2,5:48,6:2}` but incident tax-core sizes `{1:10,2:49}`.  Strict rank
+is larger than incident size in `59/59`; unit-only cores are `57/59`;
+ramified apex-7 cores are `2/59`; and the dominant incident core is `(11,13)`
+in `48/59` rows.  Endpoint-bounded tax covers the deficit in only `6/59`, so
+this is a bridge obligation, not an endpoint-only theorem.
+
+Next: join the `53` endpoint-tax failures to the HYP-3453 gate ledger.  For
+each failure, decide whether the touched incident atom can be legally recovered
+as a rank-`<=2` survivor gate when `dead_components(row)>0`, whether the
+canonical AP row routes through HYP-3431/HYP-3452/HYP-3454, whether the
+noncanonical rank-`6` obstruction is the HYP-3455 finite gate-gluing clause, or
+whether the row emits owner-current, endpoint-spine, exact-period/state-lift,
+signed-SPEC, or two-adic debt.  Keep the C3/Qsqrt(-7) residue packet as a
+router until strict co-owner multiplicity is reconstructed.
+
 ## Lead codex-2026-06-29: HYP-3438 survivor-gate word audit
 
 **Status:** EVIDENCE / exact survivor-gap gate-word classification; not proof

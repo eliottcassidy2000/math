@@ -89,6 +89,13 @@ obligations, and proof-carrier interfaces.
   odd-blocker cut cores, endpoint-spine lifts, two-adic induction, BDH
   mean-square sidecars, Schwarz-Christoffel prevertex ledgers, Bring
   monodromy guards, and raw harmonic scalars the vertices.
+- Need to compress strict one-branch rescue rank without losing the proof
+  coordinate:
+  use LTT-302 after LTT-298/LTT-300/LTT-299 and make proof obligations,
+  incident overlap atoms, endpoint bridge debts, C3/Qsqrt(-7) residue packets,
+  HYP-3453 gate-transversal candidates, HYP-3454 endpoint-clock handoffs, and
+  HYP-3455 finite gate-gluing clauses the vertices.  Incident tax is a
+  router until co-owner multiplicity is reconstructed.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -9043,6 +9050,48 @@ quotient_legality_status
   HYP-3265, HYP-3260, HYP-3259,
   HYP-3258, HYP-3257, HYP-3256, HYP-3254, HYP-3247, HYP-3123, HYP-2969,
   HYP-2963, THM-523, LTI-401, T1401, OPEN-Q-108.
+
+## LTT-302: Incident Tax-Core Residue Tournament
+
+- **Move:** Use proof obligations and quotient carriers as vertices.  The
+  candidates are HYP-3436/HYP-3438 survivor-gate bridge, endpoint atom bridge,
+  two-adic boundary exit, C3/Qsqrt(-7) residue packet, incident tax-core
+  router, strict HYP-3437 overlap core, Mertens/gamma priority budget, and raw
+  scalar shortcut as negative control.
+- **LRC use:** HYP-3441 explains why the apparent rank-`6` strict overlap
+  obstruction is mostly a two-owner incident/residue packet, while also naming
+  the exact coordinate the quotient destroys.  On `59` negative naive-slack
+  rows, strict rescue ranks `{2:7,4:2,5:48,6:2}` collapse to incident core
+  sizes `{1:10,2:49}`; the dominant core is `(11,13)` in `48/59` rows; but
+  endpoint-bounded tax covers only `6/59`, so the incident quotient is not a
+  proof.
+- **Preserves:** deficit/tax comparison target, touched overlap atoms, incident
+  owner packet, unit-binding C3 slot, Qsqrt(-7) character, and explicit bridge
+  debt.
+- **Forgets / guardrail:** co-owner multiplicity inside a taxable atom.  The
+  quotient may be used only if endpoint labels, strict subset tax,
+  survivor-gate words, or HYP-3453 rank-`<=2` gate transversals reconstruct the
+  lost coordinate.
+- **Pairwise observable:** strict predicate retained, incident compression,
+  endpoint/gate transfer payload, two-adic boundary interface, residue sidecar,
+  and scalar-risk penalty.
+- **Switch/gauge:** higher proof-facing carrier score wins; ties use declared
+  carrier order.
+- **Fingerprint:** `8` vertices, score histogram
+  `{13:1, 40:1, 52:1, 58:1, 59:1, 60:2, 61:1}`, no directed `3`-cycles, and
+  Hamiltonian path
+  `H3436_survivor_gate_word_bridge -> endpoint_atom_bridge_obligation -> two_adic_boundary_exit -> C3_Qsqrt_minus7_residue_packet -> incident_tax_core_router -> strict_H3437_overlap_core -> Mertens_gamma_priority_budget -> raw_constant_or_scalar_route`.
+- **Next hook:** classify the endpoint-tax failures by HYP-3453.  If
+  `dead_components(row)>0`, recover a rank-`<=2` survivor gate that carries
+  the incident atom into HYP-3451's conductance graph; route the canonical AP
+  endpoint-clock clause through HYP-3454; route the named noncanonical rank-`6`
+  clause through HYP-3455; otherwise prove the incident compression has emitted
+  endpoint-spine, owner-current, exact-period/state-lift, signed-SPEC, or
+  two-adic debt.
+- **Pointers:** HYP-3441, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3440,
+  HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
+  HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3422,
+  HYP-3418, HYP-3311, THM-523, LTI-402, LTT-302, T1402, OPEN-Q-108.
 
 ## LTT-310: Component-Cover Obstruction Tournament
 

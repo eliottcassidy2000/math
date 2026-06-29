@@ -1,0 +1,118 @@
+HYP-3441 INCIDENT TAX-CORE RESIDUE ROUTER
+==============================================================================
+Quotient under test:
+  strict HYP-3437 core: a subset must carry its own internal overlap tax
+  incident core: an owner collects the whole tax of every overlap atom it touches
+  Proof obligation: justify strict->incident transfer by endpoint/bad-core bridge data.
+
+A. Aggregate bridge audit
+  rows audited:                              150
+  negative naive-slack rows:                 59
+  strict rescue rank histogram:              {2: 7, 4: 2, 5: 48, 6: 2}
+  incident core size histogram:              {1: 10, 2: 49}
+  strict-to-incident rank gap histogram:      {1: 7, 3: 49, 4: 3}
+  max strict rank:                           6
+  max incident size:                         2
+  strict rank larger than incident size:      59/59
+  unit-only incident cores:                  57/59
+  ramified apex-7 incident cores:             2/59
+
+B. Residue and Galois-sidecar signatures
+  actual_core_hist_top=[((11, 13), 48), ((9, 13), 1), ((11,), 1), ((91,), 1), ((27,), 1), ((161,), 1), ((115,), 1), ((169,), 1), ((23,), 1), ((227,), 1), ((229,), 1), ((99,), 1)]
+  residue_core_hist_top=[((11, 13), 48), ((7,), 2), ((3,), 2), ((1,), 2), ((9, 13), 1), ((11,), 1), ((13,), 1), ((9,), 1), ((5,), 1)]
+  role_signature_hist={('ramified_apex7',): 2, ('unit_binding',): 8, ('unit_binding', 'unit_binding'): 49}
+  C3_slot_signature_hist={('apex7',): 2, ('slot_pm1',): 3, ('slot_pm3',): 3, ('slot_pm3', 'slot_pm1'): 48, ('slot_pm5',): 2, ('slot_pm5', 'slot_pm1'): 1}
+  Qsqrt_minus7_signature_hist={('qr_minus',): 4, ('qr_plus',): 4, ('qr_plus', 'qr_minus'): 49, ('ramified_0',): 2}
+
+C. Endpoint and survivor-spine bridge tests
+  core_on_captured_atom_endpoint:             58/59
+  all_core_owners_on_captured_atom_endpoint:  51/59
+  endpoint_bounded_tax_covers_deficit:        6/59
+  any_survivor_spine_core_attachment:         10/59
+  best_survivor_spine_core_attachment:        1/59
+  mixed_survivor_spine_core_attachment:       1/59
+  both_branch_spine_core_attachment:          2/59
+  endpoint-bridge failures:                  ['covering_AP_with_84', 'canonical_84m_01', 'canonical_84m_02', 'canonical_84m_03', 'canonical_84m_04', 'canonical_84m_05', 'canonical_84m_06', 'canonical_84m_07', 'canonical_84m_08', 'canonical_84m_09', 'canonical_84m_10', 'canonical_84m_11']
+
+D. Critical rows
+  canonical_AP_rank6: covering_AP_with_84
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+    strict: rank=6, subset=(3, 5, 7, 9, 11, 13), deficit=18586/315315, overlap_tax=4055/63063, naive_slack=-18586/315315
+    incident: size=2, core=(11, 13), tax=3769/63063, margin=37/45045, tax/deficit=1.013935
+    router: residues=(11, 13), roles=('unit_binding', 'unit_binding'), C3=('slot_pm3', 'slot_pm1'), Qsqrt_minus7=('qr_plus', 'qr_minus')
+    bridge: endpoint_core_tax=643/12012, endpoint_tax/deficit=0.908143, core_endpoint=True, all_core_endpoint=True, endpoint_covers=False
+    survivor_spine_attach: any=False, best=False, mixed=False, both_branch=False
+    strict_charal_signature=odd14=1:1.3:1.5:1.7:1.9:1.11:1.13:1;roles=14Q:1.even_R:5.odd_unit:6.seven_R:1;mu=0:563/105105.1:3307/9009.2:4055/63063;cut=3,5,7,9,11,13;gap=B05.E84
+  canonical_slot_switch: canonical_84m_05
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 420)
+    strict: rank=5, subset=(5, 7, 9, 11, 13), deficit=63619/1261260, overlap_tax=7681/126126, naive_slack=-63619/1261260
+    incident: size=2, core=(9, 13), tax=63901/1261260, margin=47/210210, tax/deficit=1.004433
+    router: residues=(9, 13), roles=('unit_binding', 'unit_binding'), C3=('slot_pm5', 'slot_pm1'), Qsqrt_minus7=('qr_plus', 'qr_minus')
+    bridge: endpoint_core_tax=293/16380, endpoint_tax/deficit=0.354627, core_endpoint=True, all_core_endpoint=True, endpoint_covers=False
+    survivor_spine_attach: any=False, best=False, mixed=False, both_branch=False
+    strict_charal_signature=odd14=1:1.3:1.5:1.7:1.9:1.11:1.13:1;roles=14Q:1.even_R:5.odd_unit:6.seven_R:1;mu=0:4397/420420.1:91309/252252.2:7681/126126;cut=5,7,9,11,13;gap=E420
+  small_margin_singleton: random_spine_02
+    speeds=(8, 17, 23, 29, 55, 84, 87, 91, 92, 130, 179, 197, 198)
+    strict: rank=4, subset=(17, 29, 87, 91), deficit=6811569227997/112069161163960, overlap_tax=198939173985869/1008622450475640, naive_slack=-6811569227997/112069161163960
+    incident: size=1, core=(23,), tax=192186225677/3161825863560, margin=328293899/100862245047564, tax/deficit=1.000054
+    router: residues=(9,), roles=('unit_binding',), C3=('slot_pm5',), Qsqrt_minus7=('qr_plus',)
+    bridge: endpoint_core_tax=3986122027/511471830870, endpoint_tax/deficit=0.128224, core_endpoint=True, all_core_endpoint=True, endpoint_covers=False
+    survivor_spine_attach: any=True, best=False, mixed=False, both_branch=False
+    strict_charal_signature=odd14=1:2.3:2.7:1.9:1.11:1.13:1;roles=14Q:1.even_R:4.odd_unit:7.seven_R:1;mu=0:17204381366737/126077806309455.1:128330665861/790456465890.2:15698675017789/144088921496520.3:1862170463431/59330732380920.4:31530926809/6465528528690.5:3523814137/1528215834054.6:82/246841;cut=17,29,87,91;gap=B087.B0197
+  ramified_apex7_exception_1: random_covering_04
+    speeds=(22, 48, 50, 51, 59, 64, 91, 96, 99, 143, 154, 161, 171)
+    strict: rank=2, subset=(51, 59), deficit=4674281267/374796021600, overlap_tax=60437489083/384573309120, naive_slack=-4674281267/374796021600
+    incident: size=1, core=(91,), tax=17194786957/340199465760, margin=210469639363/5528241318600, tax/deficit=4.052689
+    router: residues=(7,), roles=('ramified_apex7',), C3=('apex7',), Qsqrt_minus7=('ramified_0',)
+    bridge: endpoint_core_tax=554945706509/22112965274400, endpoint_tax/deficit=2.012258, core_endpoint=True, all_core_endpoint=True, endpoint_covers=True
+    survivor_spine_attach: any=True, best=False, mixed=False, both_branch=False
+    strict_charal_signature=odd14=1:1.3:3.7:2.9:1;roles=14Q:1.even_R:5.odd_unit:5.seven_R:2;mu=0:28953602059/200117332800.1:43975544519/242999618400.2:489190854329/5528241318600.3:30765431951/1005134785200.4:62151/27995968.5:2/10143;cut=51,59;gap=E22.E50
+  ramified_apex7_exception_2: random_covering_14
+    speeds=(21, 22, 29, 32, 43, 98, 105, 109, 132, 136, 161, 169, 180)
+    strict: rank=2, subset=(29, 105), deficit=58313160351779/8133069065961840, overlap_tax=4164111276373/33515394502590, naive_slack=-58313160351779/8133069065961840
+    incident: size=1, core=(161,), tax=126639682541/4064502281840, margin=97546422206381/4066534532980920, tax/deficit=4.345606
+    router: residues=(7,), roles=('ramified_apex7',), C3=('apex7',), Qsqrt_minus7=('ramified_0',)
+    bridge: endpoint_core_tax=392245489541/18290260268280, endpoint_tax/deficit=2.991066, core_endpoint=True, all_core_endpoint=True, endpoint_covers=True
+    survivor_spine_attach: any=True, best=False, mixed=False, both_branch=False
+    strict_charal_signature=odd14=1:3.7:3.11:1;roles=14Q:1.even_R:5.odd_unit:4.seven_R:3;mu=0:2856533528144207/24399207197885520.1:24653923648643/154915601256416.2:9879739342667/110403652479120.3:1517085177943/87295911262560;cut=29,105;gap=E136.E180
+
+E. Proof-facing synthesis
+  The strict HYP-3437 overlap core is the safe theorem object.  The incident
+  core is a router: it collapses all 59 negative rows to size at most 2, but
+  it forgets which co-owners make a touched atom taxable.  The missing lemma
+  is therefore not a scalar bound; it is a transfer theorem from touched
+  overlap atoms to strict subset tax, or to HYP-3436 survivor-gate words.
+  The C3 skeleton says most hard rows use binding-unit pairs; Qsqrt_minus7
+  separates the two quadratic characters inside each binding pair.  The two
+  ramified-apex rows are the explicit apex-7 covering-layer exceptions.
+  The 12->24 hinge remains a 2-adic boundary exit, not a 7-adic census proof.
+
+F. Special-function guardrails
+  Euler-Mascheroni and Meissel-Mertens data are legal only as reciprocal
+  endpoint-budget priorities.  Ramanujan-Soldner is a balance-root metaphor
+  for locating a finite transition, not a certificate.  Sophie Germain
+  factorization belongs to quartic height-wall splits.  Krasner protects
+  local p-adic branch stability.  Hermite-Lindemann-Weierstrass is only a
+  no-free-slider guard: a transcendence slogan cannot replace endpoint
+  owners, wall labels, or strict overlap atoms.
+
+G. Tournament Analysis
+  vertices=proof obligations and quotient carriers, not runners or arcs
+  pairwise_observable=strict predicate retained + incident compression + lost-coordinate debt
+  switch_gauge=higher weighted proof-facing score; ties by declared carrier order
+  axes=strict_predicate_retention,incident_core_compression,endpoint_bridge_payload,c3_residue_router,qsqrt_minus7_sidecar,two_adic_floor_interface,scalar_firewall_compliance
+  score_hist={13: 1, 40: 1, 52: 1, 58: 1, 59: 1, 60: 2, 61: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  hamiltonian_path=H3436_survivor_gate_word_bridge -> endpoint_atom_bridge_obligation -> two_adic_boundary_exit -> C3_Qsqrt_minus7_residue_packet -> incident_tax_core_router -> strict_H3437_overlap_core -> Mertens_gamma_priority_budget -> raw_constant_or_scalar_route
+
+H. Assumption challenge
+  Considered vertices: runners, odd blockers, even-half gates, fixed
+  circle sections, section boundaries, wall crossings, residues, cover arcs,
+  Fourier modes, matroid circuits, strict overlap subsets, incident tax
+  owners, endpoint labels, survivor-gate words, and proof obligations.
+  Chosen quotient: incident tax owners plus endpoint/survivor bridge tests.
+  It preserves the one-branch deficit/tax comparison as an inequality target
+  but destroys internal co-owner multiplicity.  Challenged assumption: the
+  HYP-3437 rank-6 AP core must be attacked as six independent runners; the
+  incident quotient says it is mostly a two-owner residue/endpoint bridge.

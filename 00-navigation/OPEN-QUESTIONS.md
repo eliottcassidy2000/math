@@ -112,6 +112,35 @@ HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3436, HYP-3435, 
 HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129,
 HYP-2963, THM-523, T1413, LTI-413, LTT-313.
 
+**OPEN-Q-108 HYP-3441 incident tax-core addendum:**
+HYP-3441 isolates a strict-to-incident bridge obligation for the one-branch
+overlap-tax route.  The incident quotient is very compressive:
+
+```text
+negative_naive_slack_rows=59
+strict_rescue_rank_hist={2:7, 4:2, 5:48, 6:2}
+incident_core_size_hist={1:10, 2:49}
+strict_rank_larger_than_incident_size=59/59
+dominant_incident_core=(11,13) on 48/59 rows
+endpoint_bounded_tax_covers_deficit=6/59
+```
+
+This is not a proof because a touched atom's tax may depend on co-owners not
+in the incident core.  Concrete task: prove a strict-to-incident transfer
+lemma, or show every endpoint-tax failure routes through the exact
+HYP-3438/HYP-3453 survivor-gate machinery.  The most plausible formulation is:
+if the incident core beats the deficit and endpoint-bounded tax does not, then
+either a HYP-3453 rank-`<=2` survivor gate reconstructs the missing co-owner
+coordinate and feeds HYP-3451 conductance, the canonical AP row routes through
+HYP-3431/HYP-3452/HYP-3454, the noncanonical rank-`6` case routes through
+HYP-3455's finite gate-gluing clause, or the row emits endpoint-spine,
+owner-current, exact-period/state-lift, signed-SPEC, or two-adic debt.  The
+C3/Qsqrt(-7) residue packet is a router, not a certificate. -> HYP-3441,
+HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439,
+HYP-3438, HYP-3437, HYP-3436,
+HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425,
+HYP-3422, HYP-3418, HYP-3311, THM-523, T1402, LTI-402, LTT-302, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3438 survivor-gate word audit addendum:**
 HYP-3438 turns HYP-3436's survivor gaps into exact gate words.  On the
 `135`-row bank, `6228` mixed `E_safe` components emit `8702` survivor gates:

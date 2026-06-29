@@ -33753,3 +33753,31 @@ emit a low-rank escape, endpoint-spine/wall route, owner-current imbalance,
 two-adic descent, or signed-SPEC/Rprime debt.  Tournament Analysis records
 proof obligations/gate carriers as vertices and explicitly rejects raw rank,
 survivor mass, or runner order as sufficient vertices.
+## codex-2026-06-29 -- Incident tax-core residue router -- HYP-3441
+
+Rebased over incoming HYP-3438/HYP-3439/HYP-3452/HYP-3453 and kept those
+mainline artifacts as the stronger survivor-gate / rescue-core / component
+route stack.  Added HYP-3441 as a sidecar bridge audit, not a replacement.
+
+New artifacts:
+`04-computation/lrc14_incident_tax_core_residue_router_codex_20260629.py`,
+`05-knowledge/hypotheses/HYP-3441-lrc14-incident-tax-core-residue-router.md`,
+`05-knowledge/results/lrc14_incident_tax_core_residue_router_codex_20260629.out`,
+and
+`07-reflections/lrc14-incident-tax-core-residue-router-codex-20260629.md`.
+
+Readout: on the `150`-row HYP-3437 bank, the `59` negative naive-slack rows
+have strict rescue ranks `{2:7,4:2,5:48,6:2}` but incident core sizes
+`{1:10,2:49}`.  Strict rank is larger than incident size in `59/59`; unit-only
+incident cores are `57/59`, ramified apex-7 cores are `2/59`, and the dominant
+core `(11,13)` appears in `48/59`.  Endpoint-bounded tax covers only `6/59`.
+
+Conclusion: the C3 / `Q(sqrt(-7))` / 2-adic factorization is useful as a
+router.  It compresses the AP rank-`6` obstacle to a two-owner incident packet,
+but it destroys co-owner multiplicity, so the next proof obligation is
+strict-to-incident transfer.  Best current target: classify the `53`
+endpoint-tax failures by HYP-3453 rank-`<=2` survivor gates and HYP-3451
+conductance; route the canonical AP tower through HYP-3431/HYP-3452/HYP-3454;
+route the named noncanonical rank-`6` obstruction through HYP-3455's finite
+gate-gluing clause; any remaining failure must emit endpoint-spine,
+owner-current, exact-period, state-lift, signed-SPEC, or two-adic debt.
