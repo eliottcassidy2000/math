@@ -53,6 +53,22 @@ component-pair, delta-route, bypass-owner-only, dead-island-only, and
 global-flow owner quotients fail or contaminate the boundary word.  Next formal
 hook: turn this owner-current matrix into the pure-bypass terminal lemma beside
 HYP-3490 private-label firewall and HYP-3493 seam-sheaf dispatch.
+## codex-2026-06-29 -- HYP-3513 private-firewall Nerode audit
+
+Built `04-computation/lrc14_private_firewall_nerode_codex_20260629.py` and
+stored `05-knowledge/results/lrc14_private_firewall_nerode_codex_20260629.out`,
+then recorded HYP-3513/T1513/LTI-513/LTT-413 plus reflection
+`07-reflections/lrc14-private-firewall-nerode-codex-20260629.md`.
+
+Exact finding: the HYP-3474 axes `C`, `F`, `N`, and `T` already reconstruct
+HYP-3490 `private_firewall_status` and the stronger
+`nondead/nonprivate/private` status.  Existing axes do not reconstruct the
+five-way HYP-3490 route.  Sidecars `I` and `Q` are compact three-fiber
+private-status carriers; sidecar `R` is the compact five-fiber route carrier.
+
+Proof pull: prove the row-free multiplicity-one incidence-cut lemma reducing
+`I/Q` to dead-component/blocker-label incidence, then either prove route
+reconstruction or keep route sidecar `R` in the terminal dispatch.
 
 ## codex-2026-06-29 -- HYP-3490 Lean private-label firewall ledger
 
@@ -301,10 +317,11 @@ are HYP-3484 `C=27` carry stress, HYP-3150/HYP-3151 function-compression
 constancy, HYP-3419 owner-cut/SC charal transversals, and HYP-3222/HYP-3153
 root-motion guardrails.
 
-Next proof move: build the firewall Nerode audit, then prove the
-multiplicity-one incidence cut lemma.  Broad p-adic, discrepancy,
-Schwarz-Christoffel, BDH, Lee-Yang, and famous-constant language should enter
-only after being converted into exact sidecars.
+HYP-3513 now executes the firewall Nerode audit.  Next proof move: prove the
+multiplicity-one incidence cut lemma and either reconstruct the HYP-3490 route
+or keep sidecar `R`.  Broad p-adic, discrepancy, Schwarz-Christoffel, BDH,
+Lee-Yang, and famous-constant language should enter only after being converted
+into exact sidecars.
 ## codex-2026-06-29 -- HYP-3510 random031 branch-ordered seam-complement incidence graph
 
 After the incoming HYP-3486 fiber graph and HYP-3484 seam-surgery packet,
@@ -332,6 +349,11 @@ puncture exact-sequence packet.  The max-delta seam is owner-boundary debt, not
 the phase-transport wall.  Next proof move: state the seam-complement
 connectivity lemma and compare this coarse graph observable with HYP-3486's
 legal mirror-run fiber decomposition on the other HYP-3477 hard orbits.
+HYP-3513 now executes the firewall Nerode audit.  Next proof move: prove the
+multiplicity-one incidence cut lemma and either reconstruct the HYP-3490 route
+or keep sidecar `R`.  Broad p-adic, discrepancy, Schwarz-Christoffel, BDH,
+Lee-Yang, and famous-constant language should enter only after being converted
+into exact sidecars.
 
 ## codex-2026-06-29 -- HYP-3483 random031 recursion-flow comparator
 

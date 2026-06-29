@@ -307,6 +307,11 @@ obligations, and proof-carrier interfaces.
   relative-H1 class, and PGF bucket.  With HYP-3493 now no-mixed-stalk on the
   legal graph, the remaining target is owner-boundary persistence for the
   pure bypass.
+- Need to decide which private-firewall quotient can be formalized:
+  use LTT-413 after LTT-351/LTT-350/LTT-334 and make quotient carriers and
+  sidecar selections the vertices.  HYP-3513 shows existing axes already
+  decide private status, `I/Q` are compact status carriers, and `R` is needed
+  for the full route unless reconstructed.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -10728,10 +10733,42 @@ quotient_legality_status
 - **Fingerprint:** hand-ranked transitive carrier tournament, no directed
   `3`-cycles, Hamiltonian path
   `R00_colored_Nerode_firewall_reconstruction -> R01_label_component_Menger_Green_cut -> R02_C27_twoadic_carry_lift_stress -> R03_function_compression_constancy_certificate -> R04_owner_cut_SC_charal_resurrection -> R05_Joukowski_HB_root_motion_bulk_guardrail -> R06_obscure_prompt_import_firewall`.
-- **Next hook:** extend the HYP-3474 partition-lattice script with target
-  `private_firewall_status`, test whether `(C,M,R)`, the full colored gate
-  word, or component-label incidence is the minimal reconstructing packet,
-  then prove the multiplicity-one incidence cut lemma.
-- **Pointers:** HYP-3491, HYP-3490, HYP-3484, HYP-3474, HYP-3473, HYP-3461,
+- **Next hook:** use HYP-3513's executable firewall Nerode audit.  Promote
+  compact `I/Q` status carriers into a row-free multiplicity-one incidence-cut
+  lemma, then either prove route reconstruction or keep sidecar `R`.
+- **Pointers:** HYP-3513, HYP-3491, HYP-3490, HYP-3484, HYP-3474, HYP-3473, HYP-3461,
   HYP-3437, HYP-3419, HYP-3236, HYP-3222, HYP-3153, HYP-3151, HYP-3150,
   THM-523, LTI-451, LTT-351, T1451, OPEN-Q-108.
+
+## LTT-413: Private-Firewall Nerode Carrier Tournament
+
+- **Move:** Treat quotient carriers and explicit sidecar selections as
+  tournament vertices, then rank them by target purity, route purity, mixed
+  fiber penalty, and compression.
+- **LRC use:** HYP-3513 executes the HYP-3491 firewall Nerode follow-up by
+  asking which HYP-3474 colored axes or HYP-3490 sidecars preserve
+  `private_firewall_status`, the stronger private/dead/nondead status, and
+  the five-way HYP-3490 route.
+- **Preserves:** `private_firewall_bit`, `private_dead_status`, and, when
+  sidecar `R` is retained, `h3490_route`.  Existing axes `C/F/N/T` preserve
+  private status; sidecars `I/Q` preserve private status compactly; `R`
+  preserves the route.
+- **Forgets / guardrail:** raw interval geometry, row names, gate order, and
+  owner-current locality.  The main guardrail is that private-status purity is
+  not route purity.
+- **Pairwise observable:** private-firewall purity, route/status purity,
+  mixed-fiber count, mixed-row count, number of fibers, maximum fiber size,
+  and sidecar count.
+- **Switch/gauge:** prefer higher proof-facing carrier score; ties use carrier
+  name.  Under the full-route gauge, `route_sidecar_R` wins.  Under a
+  private-status-only theorem target, the compact `I/Q` sidecars and existing
+  `C/F/N/T` axes are the relevant carriers.
+- **Fingerprint:** `score_hist={54:1,157:2,213:2,215:5,241:1,242:2,250:1}`,
+  `directed_3cycles=0`, Hamiltonian path
+  `route_sidecar_R -> all_colored_plus_route -> count_min_route -> full_color_plus_route -> all_colored_axes -> all_colored_plus_incidence -> all_colored_plus_projection_frontier -> count_min_incidence -> count_plus_min_struct -> count_profile -> full_color_set -> incidence_signature -> projection_frontier_Q -> min_e_struct`.
+- **Next hook:** prove the row-free incidence-cut lemma identifying `I/Q`
+  with blocker-label multiplicity one, then audit route reconstruction or
+  retain route sidecar `R`.
+- **Pointers:** HYP-3513, HYP-3491, HYP-3490, HYP-3474, HYP-3473, HYP-3472,
+  HYP-3471, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
+  HYP-3480, THM-523, LTI-513, LTT-413, T1513, OPEN-Q-108.

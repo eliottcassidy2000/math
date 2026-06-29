@@ -180,6 +180,21 @@ lemma.  The max-delta seam should be treated as owner-boundary debt; the
 seam complement carries phase transport to survivor ports. -> HYP-3510,
 HYP-3511, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
 HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, LTI-510, LTT-410, T1510.
+**OPEN-Q-108 HYP-3491/HYP-3513 firewall Nerode addendum:**
+HYP-3513 answers the first HYP-3491 question.  HYP-3474's existing colored
+axes already reconstruct HYP-3490's `private_firewall_status`: `C`, `F`,
+`N`, and `T` are pure for the boolean private bit and the stronger
+`nondead/nonprivate/private` status.  The full HYP-3490 route is different:
+no subset of `K,N,T,S,F,C,M,A` preserves the five-way route, while sidecar
+`R` does.  Compact sidecars `I/Q` preserve private status but not route.
+
+Open proof task: prove the row-free multiplicity-one incidence-cut lemma that
+turns `I/Q` into a dead-component/blocker-label theorem, then either prove
+route reconstruction or carry route sidecar `R`.  Parallel tasks remain:
+stress HYP-3484's `C=27` seam/bypass packet and run a function-compression
+constancy table for the projection-edge-deletion target. -> HYP-3513,
+HYP-3491, HYP-3490, HYP-3484, HYP-3474, HYP-3437, HYP-3419, HYP-3151,
+HYP-3150, LTI-513, LTT-413, LTI-451, LTT-351, T1513, T1451.
 
 **OPEN-Q-108 HYP-3483 random031 recursion addendum:**
 HYP-3483 answers the `n+2` versus `n*2` prompt by refusing the false choice.

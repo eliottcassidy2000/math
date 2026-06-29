@@ -8,6 +8,7 @@ technique: LTI-451
 tournament_technique: LTT-351
 reflection: 07-reflections/lrc14-history-niche-carrier-recall-codex-20260629.md
 related:
+  - HYP-3513
   - HYP-3490
   - HYP-3484
   - HYP-3483
@@ -43,9 +44,10 @@ worth reattaching:
 1. **Colored Nerode / partition-lattice carrier.**  HYP-3474 already asked
    which colored-gate quotients preserve route predicates.  HYP-3490 gives a
    new target predicate: whether every E/branch-touched blocker label has
-   dead-cover multiplicity `1`.  The next finite test should ask whether this
-   private-label firewall is reconstructible from HYP-3474 axes
-   `K,N,T,S,F,C,M,A`, route sidecar `R`, and component/label incidence.
+   dead-cover multiplicity `1`.  HYP-3513 executes this finite test: `C`,
+   `F`, `N`, and `T` already reconstruct private-firewall status, while the
+   full HYP-3490 route still needs sidecar `R` or a route-reconstruction
+   theorem.
 2. **Label-component Menger/Green carrier.**  HYP-3437 and HYP-3236 should be
    reused at the dead-cover incidence level.  HYP-3490 is exactly a cut
    statement on the bipartite graph `dead component <-> blocker label`:
@@ -107,10 +109,11 @@ root-motion guardrails.
 
 ## Concrete Next Tests
 
-1.  **Firewall Nerode audit:** extend the HYP-3474 partition-lattice script
-    with a target `private_firewall_status` and test whether `(C,M,R)`, full
-    colored gate word, or component-label incidence is the minimal
-    reconstructing packet for HYP-3490.
+1.  **Firewall Nerode audit:** HYP-3513 extends the HYP-3474
+    partition-lattice script with target `private_firewall_status`.  Result:
+    existing axes `C/F/N/T` are pure for private status, sidecars `I/Q` are
+    compact three-fiber private-status carriers, and `R` is the compact
+    five-fiber route carrier.
 2.  **Incidence cut lemma:** formalize the bipartite
     `component <-> blocker label` lemma: if every deleted label has
     multiplicity one in the dead-cover incidence graph, then the unlabelled
@@ -153,5 +156,7 @@ hamiltonian_path =
 directed_3cycles=0
 ```
 
-This is a hand-ranked transitive carrier tournament.  It should be replaced by
-an executable pairwise audit once the firewall Nerode script exists.
+This is a hand-ranked transitive carrier tournament.  HYP-3513 supplies the
+executable pairwise follow-up for the firewall Nerode script; the remaining
+task is the incidence-cut lemma plus route reconstruction or route sidecar
+`R`.

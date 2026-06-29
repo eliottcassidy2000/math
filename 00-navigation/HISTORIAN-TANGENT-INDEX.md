@@ -42,6 +42,15 @@ Useful synthetic maps added later:
   exact-period packets.
   Use these as coordinate-restoration tools before allowing any quotient or
   scalar shortcut into the random031 proof route.
+- `07-reflections/lrc14-private-firewall-nerode-codex-20260629.md`:
+  HYP-3513/T1513 executes the HYP-3491 firewall Nerode follow-up by joining
+  HYP-3474 colored-gate axes to HYP-3490 private-label firewall status.  The
+  surprise is that existing axes `C/F/N/T` already decide the private bit and
+  the three-way dead/private status.  The full HYP-3490 route does not factor
+  through existing axes; compact `I/Q` sidecars are private-status carriers,
+  while `R` is the route carrier.  The useful next hook is a row-free
+  multiplicity-one incidence-cut lemma plus route reconstruction or retained
+  sidecar `R`.
 - `07-reflections/lrc14-random031-seam-complement-fiber-graph-codex-20260629.md`:
   HYP-3486/T1446 executes the HYP-3482 seam-complement graph target in the
   two-adic cylinder coordinate `u=2t mod 1`.  The useful signal is the

@@ -32,6 +32,7 @@ live target function is whether a quotient preserves projection-edge deletion
 under touched-label unions.  If the quotient forgets label multiplicity, it is
 illegal unless a sidecar reconstructs it.
 
-The practical next session should not be another broad analogy sweep.  It
-should build the firewall Nerode audit, then a short incidence-cut proof note.
-Those are the two bridges most likely to make HYP-3490 easier to formalize.
+HYP-3513 now handles the firewall Nerode audit.  The practical next session
+should not be another broad analogy sweep; it should turn the compact `I/Q`
+status sidecars into a row-free incidence-cut proof note and decide whether
+the HYP-3490 route can be reconstructed or must keep sidecar `R`.

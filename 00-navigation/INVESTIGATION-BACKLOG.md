@@ -171,20 +171,42 @@ LTI-443, LTT-343, OPEN-Q-108.
 
 ---
 
+## Lead codex-2026-06-29: private-firewall Nerode audit
+
+**Status:** EVIDENCE / finite quotient reconstruction scout; not proof
+(HYP-3513/T1513/LTI-513/LTT-413).
+
+HYP-3513 executes the firewall Nerode test proposed by HYP-3491.  Existing
+HYP-3474 axes `C`, `F`, `N`, and `T` are already pure for
+`private_firewall_status` and the stronger `nondead/nonprivate/private`
+status, so the private bit is compatible with the colored-gate interface.
+However, no subset of `K,N,T,S,F,C,M,A` preserves the five-way HYP-3490
+route.  Compact sidecars `I/Q` preserve private status, while route sidecar
+`R` is needed for route unless reconstructed.  Next proof target: prove the
+row-free dead-component/blocker-label multiplicity-one incidence-cut lemma,
+then decide whether route can be reconstructed or must be carried as `R`.
+-> HYP-3513, HYP-3491, HYP-3490, HYP-3474, HYP-3473, HYP-3472, HYP-3471,
+HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480,
+LTI-513, LTT-413, OPEN-Q-108.
+
 ## Lead codex-2026-06-29: history niche-carrier recall atlas
 
 **Status:** SYNTHESIS / repo-history proof-route mining; not proof
 (HYP-3491/T1451/LTI-451/LTT-351).
 
 HYP-3491 looks back through older LRC work for missed bridges into the
-HYP-3490/HYP-3484 frontier.  Best current targets: (1) extend HYP-3474 colored
-Nerode partition-lattice audit with `private_firewall_status`; (2) prove the
-HYP-3490 multiplicity-one incidence cut lemma in the label-component graph;
-(3) stress HYP-3484 seam/bypass under `C=27`, endpoint mod-14, and mod-8
-two-adic sidecars.  Guardrail: obscure prompts and famous constants enter only
-after becoming exact sidecars, never as scalar substitutes. -> HYP-3491,
-HYP-3490, HYP-3484, HYP-3474, HYP-3437, HYP-3419, HYP-3236, HYP-3222,
-HYP-3153, HYP-3151, HYP-3150, LTI-451, LTT-351, OPEN-Q-108.
+HYP-3490/HYP-3484 frontier.  HYP-3513 has now executed its first target by
+extending HYP-3474's colored Nerode partition-lattice audit to
+`private_firewall_status`: private status is reconstructible from existing
+colored axes, but route still needs `R` or a reconstruction theorem.  Best
+current targets: (1) prove the HYP-3490 multiplicity-one incidence cut lemma
+in the label-component graph; (2) stress HYP-3484 seam/bypass under `C=27`,
+endpoint mod-14, and mod-8 two-adic sidecars; (3) run the
+function-compression constancy table for projection-edge deletion.  Guardrail:
+obscure prompts and famous constants enter only after becoming exact sidecars,
+never as scalar substitutes. -> HYP-3513, HYP-3491, HYP-3490, HYP-3484,
+HYP-3474, HYP-3437, HYP-3419, HYP-3236, HYP-3222, HYP-3153, HYP-3151,
+HYP-3150, LTI-513, LTT-413, LTI-451, LTT-351, OPEN-Q-108.
 
 ## Lead codex-2026-06-29: random031 topology atlas
 ## Lead codex-2026-06-29: random031 forbidden-seam flow geometry
