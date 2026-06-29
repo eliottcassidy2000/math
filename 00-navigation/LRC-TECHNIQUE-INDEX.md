@@ -34,6 +34,32 @@ safe components, gaps, sections, endpoints, residues, wall crossings, exact
 period packets, Fourier modes, Haar tiles, quotient fibers, state-lift sectors,
 and proof obligations first.
 
+## LTI-528 - Random031 proof-contract router execution
+
+Carrier / vertex set: executable proof-contract clauses and sidecar
+obligations: ordinary route, free-hole single, free-hole doublet buffer,
+bypass transport, bypass bracket lift, private-firewall route sidecar,
+vertical halfturn guard, residual close-tail, and raw count shadow.
+Pairwise observable: theorem-readiness minus hidden-tail risk and
+scalar-forgetting risk.
+Binary relation or gauge: higher contract score; ties use readiness, lower
+risk, and clause name.
+Preserved LRC predicate: legal terminal discharge for the remaining
+random031 packet, with route `R`, owner-tail emission, and vertical guard
+explicit.
+Destroyed information: row identity, component index after emission, raw
+counts, residue chambers, sliced-box volumes, and owner-count shadows.
+Best use: turn the current random031 stack into a Lean-facing theorem
+skeleton with exactly one red clause.
+Failure mode: treating `residual_pair_close_tail` as a scalar chamber/count
+fact instead of a two-owner boundary lemma with `R` and a no-hidden-tail guard.
+Anchors: HYP-3528, HYP-3526, HYP-3525, HYP-3524, HYP-3523, HYP-3522,
+HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486,
+T1528, LTT-428.
+Next agent hook: prove or refute the `residual_pair_close_tail` lemma:
+`transport + bracket_lift + R + no_hidden_tail_guard -> residual (45,173)`
+cannot hide in any legal downstream quotient.
+
 ## LTI-527 - Random031 proof-contract router
 
 Carrier / vertex set: terminal proof contracts and required sidecar

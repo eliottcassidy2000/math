@@ -25,6 +25,30 @@ halfturn gluing may replace those sidecars without a reconstruction theorem.
 -> HYP-3527, HYP-3526, HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521,
 HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486, LTI-527,
 LTT-427, T1527.
+**OPEN-Q-108 HYP-3528 contract-router addendum:** Can the single open
+contract clause `residual_pair_close_tail` be proved after all typed carry has
+streamed away?
+
+HYP-3528 executes the random031 proof-contract router.  It imports the
+HYP-3521 terminal ledger, HYP-3523 certificate spigot, HYP-3524 owner emitter,
+and HYP-3526 route-sidecar guardrail.  The finite contract has nine clauses,
+but only one theorem-facing red clause:
+
+```text
+residual_pair_close_tail:
+  transport + bracket_lift + R + no_hidden_tail_guard
+    -> residual (45,173) cannot hide downstream
+```
+
+Exact readout: `79` component events stream `77` terminal certificates,
+doublet predigits close after rank gaps `(1,1)`, bypass carry opens at rank
+`45`, bracket lift fires at rank `46`, and `final_owner_carry=(45,173)`.
+`I/Q` do not reconstruct route, `R` does.  Vertical halfturn gluing has `69`
+components with `7` mixed components.  The open task is to prove the residual
+lemma using labelled sidecars, not residue buckets, sliced-box volumes, owner
+counts, raw counts, or `n*2` vertical gluing. -> HYP-3528, HYP-3526,
+HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513,
+HYP-3511, HYP-3510, HYP-3490, HYP-3486, LTI-528, LTT-428, T1528.
 
 **OPEN-Q-108 HYP-3524 spigot/hydrotope residual addendum:** Can the
 random031 residual pair `(45,173)` be proved to be a no-hidden-tail terminal

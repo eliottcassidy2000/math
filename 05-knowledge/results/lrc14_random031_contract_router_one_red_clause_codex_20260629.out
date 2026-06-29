@@ -1,0 +1,148 @@
+HYP-3528 RANDOM031 PROOF-CONTRACT ONE-RED-CLAUSE AUDIT
+status=EVIDENCE / executable finite theorem-interface router; not an LRC14 proof
+row=random_covering_031
+source=HYP-3521 + HYP-3523 + HYP-3524 + HYP-3525 + HYP-3526
+
+## Contract Thesis
+router=terminal clauses consume sidecars, emit proof tokens, and leave named tail debt
+geometry=random031 is a mirror-punctured cylinder whose forbidden seam is a carry boundary
+phase_flow=the seam complement streams 77 terminal certificates from 79 component events
+only_open_tail=residual_pair_(45,173) plus route sidecar R and no-hidden-tail guard
+namespace_note=two HYP-3525 entries exist upstream; HYP-3528 executes their shared router idea
+
+## Imported Finite Stream Facts
+component_tokens=79
+terminal_certificate_count=77
+emitted_certificate_count=77
+component_terminal_hist={'free_hole_doublet_packet': 4, 'free_hole_single_bracket_packet': 10, 'ordinary_rank2_route_component': 64, 'pure_bypass_owner_boundary_component': 1}
+cell_terminal_hist={'free_hole_doublet_packet': 14, 'free_hole_single_bracket_packet': 26, 'ordinary_rank2_route_component': 230, 'pure_bypass_owner_boundary_component': 12}
+action_hist={'buffer_free_hole_predigit': 2, 'emit_bypass_transport_predigit': 1, 'emit_free_hole_doublet': 2, 'emit_free_hole_single': 10, 'emit_ordinary_route': 63, 'emit_ordinary_route+apply_branch_boundary_lift+emit_bypass_owner_boundary_certificate': 1}
+pending_doublet_width_hist={0: 77, 1: 2}
+owner_carry_width_hist={0: 45, 2: 33, 4: 1}
+max_pending_doublet_components=1
+max_owner_carry_width=4
+final_owner_carry=(45, 173)
+doublet_rank_gaps=(1, 1)
+owner_rank_gap=1
+
+## Owner Carry Geometry
+seam_owners=(23, 45, 93, 113, 147, 169, 173)
+transport_owners=(23, 93, 113)
+residual_after_transport=(45, 147, 169, 173)
+bracket_lift_owners=(147, 169)
+residual_after_branch_boundary=(45, 173)
+bypass_rank=45
+boundary_component_ranks=(44, 46)
+reading=transport opens at rank 45, branch-boundary lift fires at rank 46, residual is (45,173)
+
+## Route and Vertical Guardrails
+private_status_by_I=True
+private_status_by_Q=True
+route_by_IQ=False
+route_by_all_existing_plus_IQ=False
+route_by_R=True
+existing_route_reconstructs=False
+all_existing_plus_IQ_route_mixed=(1, 7)
+all_existing_plus_IQ_fibers=125
+all_existing_plus_IQ_max_fiber=7
+vertical_halfturn_present_cells=48/282
+vertical_pair_class_counts={('free_hole', 'free_hole'): 2, ('free_hole', 'ordinary'): 14, ('ordinary', 'ordinary'): 8}
+vertical_glued_component_count=69
+vertical_mixed_component_count=7
+
+## Contract Clauses
+clause=ordinary_route_emit score=400 status=FINITE-CLOSED / formal ordinary-route lemma remains certificates=64 components=64 cells=230
+  required_sidecars=('endpoint_rank2', 'seam_complement_route', 'R')
+  emits=('ordinary_terminal_certificate',)
+  remaining_tail=()
+  forbidden_shortcuts=('raw_230_count', 'endpoint_rank_scalar_only')
+  theorem_shape=ordinary_rank2_route_component -> terminal_discharge R
+  proof_debt=formalize the HYP-3486/HYP-3510 rank-2 route discharge
+clause=free_hole_single_emit score=370 status=FINITE-CLOSED / formal bracket lemma remains certificates=10 components=10 cells=26
+  required_sidecars=('HYP3511_bracket_packet', 'ordinary_boundary_neighbor', 'R')
+  emits=('free_hole_single_certificate',)
+  remaining_tail=()
+  forbidden_shortcuts=('raw_40_free_hole_count', 'no_gate_scalar')
+  theorem_shape=ordinary_bracketed_free_hole_single -> terminal_discharge R
+  proof_debt=formalize the HYP-3511 exposed-boundary bracket packet
+clause=free_hole_doublet_buffer_emit score=359 status=FINITE-CLOSED / one-step predigit buffer certificates=2 components=4 cells=14
+  required_sidecars=('doublet_cluster_id', 'one_component_predigit_buffer', 'R')
+  emits=('free_hole_doublet_certificate',)
+  remaining_tail=()
+  forbidden_shortcuts=('terminal_class_without_spigot_state', 'raw_doublet_count')
+  theorem_shape=half_open_same_branch_doublet closes after one component event
+  proof_debt=state the two HYP-3511 doublets as a bounded-buffer lemma
+clause=bypass_transport_emit score=293 status=FINITE-CLOSED / transport word constancy lemma remains certificates=0 components=1 cells=12
+  required_sidecars=('seam_owner_word', 'bypass_owner_word', 'R')
+  emits=('owner_23', 'owner_93', 'owner_113')
+  remaining_tail=('owner_45', 'owner_147', 'owner_169', 'owner_173')
+  forbidden_shortcuts=('bypass_owner_only', 'raw_12_bypass_count')
+  theorem_shape=pure_bypass_owner_word emits transport (23,93,113)
+  proof_debt=formalize HYP-3522 transport-word constancy on the pure bypass
+clause=bypass_bracket_lift_emit score=274 status=FINITE-CLOSED / adjacent branch-boundary lift lemma remains certificates=1 components=2 cells=0
+  required_sidecars=('branch_boundary_ordinary_neighbors', 'bracket_lift_word', 'R')
+  emits=('owner_147', 'owner_169')
+  remaining_tail=('owner_45', 'owner_173')
+  forbidden_shortcuts=('branch_hist_scalar', 'owner_count_shadow')
+  theorem_shape=adjacent ordinary branch-boundary packets emit lift (147,169)
+  proof_debt=formalize the rank-46 branch-boundary bracket lift
+clause=private_firewall_route_sidecar score=269 status=GUARDRAIL-CLOSED / route reconstruction remains false certificates=0 components=0 cells=0
+  required_sidecars=('I', 'Q', 'R')
+  emits=('private_firewall_status', 'h3490_route_when_R_is_retained')
+  remaining_tail=()
+  forbidden_shortcuts=('I_Q_as_route', 'KNTSFCMAIQ_as_route')
+  theorem_shape=I/Q prove private cut; R supplies terminal route
+  proof_debt=prove the row-free multiplicity-one incidence-cut lemma for I/Q
+clause=vertical_halfturn_guard score=249 status=GUARDRAIL-CLOSED / forbid n*2 sheet-gluing shortcut certificates=0 components=69 cells=282
+  required_sidecars=('u_index', 'branch_sheet', 'mirror_legality')
+  emits=('vertical_quotient_forbidden_cut',)
+  remaining_tail=()
+  forbidden_shortcuts=('vertical_halfturn_gluing', 'n_times_2_address_projection')
+  theorem_shape=vertical halfturn may address fibers but cannot identify terminal classes
+  proof_debt=carry the HYP-3486 vertical guard into every terminal theorem statement
+clause=residual_pair_close_tail score=-7 status=OPEN-PROOF-DEBT / final non-streamed random031 tail certificates=0 components=1 cells=12
+  required_sidecars=('residual_pair_(45,173)', 'R', 'no_hidden_tail_guard')
+  emits=('close_owner_45', 'close_owner_173')
+  remaining_tail=('owner_45', 'owner_173')
+  forbidden_shortcuts=('residue_mod14', 'centered_residue', 'sliced_box_volume', 'raw_owner_count')
+  theorem_shape=transport + bracket lift + R -> residual (45,173) cannot hide downstream
+  proof_debt=prove the two-owner residual boundary lemma
+clause=raw_count_shadow score=-217 status=CHECKSUM-ONLY / never theorem-facing certificates=77 components=79 cells=282
+  required_sidecars=()
+  emits=('282', '242', '79', '77', '40', '12')
+  remaining_tail=('all_route_owner_and_vertical_sidecars',)
+  forbidden_shortcuts=('count_as_proof_token',)
+  theorem_shape=counts verify completed clauses but cannot discharge one
+  proof_debt=none as theorem input; use only after sidecar clauses close
+
+## Router Summary
+contract_clause_count=9
+open_clause_names=('residual_pair_close_tail',)
+sidecar_hist={'HYP3511_bracket_packet': 1, 'I': 1, 'Q': 1, 'R': 7, 'bracket_lift_word': 1, 'branch_boundary_ordinary_neighbors': 1, 'branch_sheet': 1, 'bypass_owner_word': 1, 'doublet_cluster_id': 1, 'endpoint_rank2': 1, 'mirror_legality': 1, 'no_hidden_tail_guard': 1, 'one_component_predigit_buffer': 1, 'ordinary_boundary_neighbor': 1, 'residual_pair_(45,173)': 1, 'seam_complement_route': 1, 'seam_owner_word': 1, 'u_index': 1}
+forbidden_shortcut_count=19
+top_forbidden_shortcuts=[('raw_230_count', 1), ('endpoint_rank_scalar_only', 1), ('raw_40_free_hole_count', 1), ('no_gate_scalar', 1), ('terminal_class_without_spigot_state', 1), ('raw_doublet_count', 1), ('bypass_owner_only', 1), ('raw_12_bypass_count', 1), ('branch_hist_scalar', 1), ('owner_count_shadow', 1)]
+formalization_order=ordinary_route_emit -> free_hole_single_emit -> free_hole_doublet_buffer_emit -> bypass_transport_emit -> bypass_bracket_lift_emit -> private_firewall_route_sidecar -> vertical_halfturn_guard -> residual_pair_close_tail
+creative_reframe=the proof ABI is not rows-to-routes, but sidecars-to-safe-emission; residual (45,173) is the last untyped-looking tail after all typed carry is routed
+
+## Tournament Analysis
+vertices=proof-contract clauses and sidecar obligations, not runners or arcs
+pairwise_observable=readiness - hidden-tail-risk - scalar-forgetting-risk
+switch=higher contract score; ties use readiness, lower risk, and clause name
+score_hist={-217: 1, -7: 1, 249: 1, 269: 1, 274: 1, 293: 1, 359: 1, 370: 1, 400: 1}
+directed_3cycles=0
+sccs=9 singleton SCCs
+hamiltonian_path=ordinary_route_emit -> free_hole_single_emit -> free_hole_doublet_buffer_emit -> bypass_transport_emit -> bypass_bracket_lift_emit -> private_firewall_route_sidecar -> vertical_halfturn_guard -> residual_pair_close_tail -> raw_count_shadow
+
+## Lean-Facing Skeleton
+def Random031TerminalContract := ordinary_route_emit + free_hole_single_emit + free_hole_doublet_buffer_emit + bypass_transport_emit + bypass_bracket_lift_emit + private_firewall_route_sidecar + vertical_halfturn_guard + residual_pair_close_tail
+lemma random031_contract_streams_all_certificates: component_events=79 -> terminal_certificates=77
+lemma random031_contract_requires_R: I/Q proves private cut but terminal route uses R
+lemma random031_contract_final_tail: after transport and bracket lift, remaining owner tail is exactly (45,173)
+remaining_goal=random031_residual_pair_close_tail
+
+## Assumption Challenge
+candidate_vertices=runners,arcs,gaps,fixed_sections,section_boundaries,wall_crossings,residue_buckets,cover_arcs,Fourier_modes,matroid_circuits,stream_states,proof_contracts
+chosen_vertices=proof_contracts_and_sidecar_obligations
+preserves=random031 terminal discharge, owner-tail emission, route R, vertical guard, and forbidden quotient cuts
+destroys=raw row identity, component index after emission, scalar counts, residue chambers, and hydrotope volumes
+challenged_assumption=a proof contract should route rows directly; the better interface routes typed sidecars and only then emits terminal tokens

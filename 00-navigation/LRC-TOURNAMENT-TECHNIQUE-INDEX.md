@@ -39,6 +39,35 @@ boundaries, wall-crossing events, residue packets, cover arcs, Fourier modes,
 Haar rectangles, matroid topes/cocircuits, Fejer atom banks, state-lift
 obligations, and proof-carrier interfaces.
 
+## LTT-428 - Executable Proof-Contract Router Tournament
+
+- **Move:** Treat executable theorem clauses as tournament vertices and orient
+  by readiness, hidden-tail exposure, and scalar-forgetting risk.
+- **LRC use:** HYP-3528 executes the random031 router: `79` component events
+  stream `77` terminal certificates, the bypass owner carry opens at rank
+  `45`, branch-boundary lift fires at rank `46`, and the only open terminal
+  clause is `residual_pair_close_tail`.
+- **Preserves:** terminal certificate coverage, emitted owner tails,
+  remaining residual `(45,173)`, route sidecar `R`, vertical-halfturn
+  guardrail, and forbidden quotient shortcuts.
+- **Forgets / guardrail:** raw counts, owner counts, residue buckets,
+  sliced-box volumes, and `n*2` vertical gluing cannot replace the contract
+  fields.
+- **Pairwise observable:** contract score
+  `readiness - hidden_tail_risk - scalar_forgetting_risk`.
+- **Switch/gauge:** higher contract score; ties use readiness, lower risk,
+  and clause name.
+- **Fingerprint:** score histogram
+  `{-217:1,-7:1,249:1,269:1,274:1,293:1,359:1,370:1,400:1}`, no directed
+  `3`-cycles, singleton SCCs, Hamiltonian path
+  `ordinary_route_emit -> free_hole_single_emit -> free_hole_doublet_buffer_emit -> bypass_transport_emit -> bypass_bracket_lift_emit -> private_firewall_route_sidecar -> vertical_halfturn_guard -> residual_pair_close_tail -> raw_count_shadow`.
+- **Next pull:** Prove the two-owner residual boundary lemma under
+  `transport + bracket_lift + R + no_hidden_tail_guard`, or find the first
+  missing sidecar.
+- **Pointers:** HYP-3528, HYP-3526, HYP-3525, HYP-3524, HYP-3523, HYP-3522,
+  HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486,
+  T1528, LTI-528, OPEN-Q-108.
+
 ## LTT-427 - Proof-Contract Router Tournament
 
 - **Move:** Treat proof contracts and sidecar obligations as tournament

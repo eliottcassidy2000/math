@@ -1,3 +1,39 @@
+## codex-2026-06-29 -- HYP-3528 random031 contract-router execution
+
+Prompt: develop a deeper understanding of the repo's LRC14 strategies and
+creatively leverage them toward closing the proof.
+
+Pulled the concurrent HYP-3525 proof-contract router reservation and treated
+the duplicate HYP-3525 namespace as signal rather than renaming another
+agent's work.  Added HYP-3528/T1528/LTI-528/LTT-428 as the executable router:
+
+```text
+04-computation/lrc14_random031_contract_router_one_red_clause_codex_20260629.py
+05-knowledge/results/lrc14_random031_contract_router_one_red_clause_codex_20260629.out
+05-knowledge/hypotheses/HYP-3528-lrc14-random031-contract-router-one-red-clause.md
+07-reflections/lrc14-random031-contract-router-one-red-clause-codex-20260629.md
+```
+
+Main result: random031 is now a finite proof contract rather than a row-route
+table.  `79` component events stream `77` terminal certificates; the two
+free-hole doublet predigits close after rank gaps `(1,1)`; bypass owner carry
+opens at rank `45`, branch-boundary lift fires at rank `46`, and the final
+carry is `(45,173)`.  HYP-3526 guardrails persist: `I/Q` prove private status
+but not route, while `R` is route-pure; vertical halfturn gluing has `69`
+components with `7` mixed components.
+
+The contract has exactly one open theorem-facing clause:
+
+```text
+residual_pair_close_tail:
+  transport + bracket_lift + R + no_hidden_tail_guard
+    -> residual (45,173) cannot hide downstream
+```
+
+Next proof pull: prove that two-owner residual boundary lemma, or identify the
+first missing sidecar.  Do not replace it with residue buckets, sliced-box
+volumes, owner counts, raw counts, or `n*2` vertical gluing.
+
 ## codex-2026-06-29 -- HYP-3523 release-test addendum
 
 Prompt: use the spigot algorithm as inspiration for LRC14 proof work.
