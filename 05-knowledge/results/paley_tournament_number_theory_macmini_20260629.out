@@ -1,0 +1,26 @@
+==============================================================================
+Paley tournament invariants as functions of the prime p (mac-mini-S9)
+==============================================================================
+
+primes p=3 mod4: [3, 7, 11, 19, 23, 31]
+
+  p       H(T_p)               factor H v2(H-1)   f(palin)       C(cyc)
+  3            3                      3       1          1            1
+  7          189                  3^3*7       2          9           24
+ 11        95095           5*7*11*13*19       1        185         5505
+ 19 1172695746915 3^2*5*7*11*19*23*774463       1     573057  34358763933
+ 23       (skip)                                  63871533       (skip)
+ 31       (skip)                                2108041228485       (skip)
+
+f-sequence (palindromic, all p=3mod4): [1, 9, 185, 573057, 63871533, 2108041228485]
+H-sequence: [3, 189, 95095, 1172695746915]
+C-sequence: [1, 24, 5505, 34358763933]
+
+[probes]
+  p=3: H mod p = 0, H mod (p-1) = 1, f mod p = 1, f factor = {}
+  p=7: H mod p = 0, H mod (p-1) = 3, f mod p = 2, f factor = {3: 2}
+  p=11: H mod p = 0, H mod (p-1) = 5, f mod p = 9, f factor = {5: 1, 37: 1}
+  p=19: H mod p = 0, H mod (p-1) = 9, f mod p = 17, f factor = {3: 2, 41: 1, 1553: 1}
+
+Watch for: H odd (Redei), H/f patterns, p | (H - something), Gauss-sum (sqrt p)
+==============================================================================

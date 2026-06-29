@@ -1,0 +1,33 @@
+==============================================================================
+Paley dihedral Burnside identity for Hamiltonian paths (mac-mini-S9)
+==============================================================================
+
+--- Paley T_3: H=3 ---
+  rotation fixed counts (k=0..p-1): [3, 0, 0]  (only k=0 nonzero: True)
+  reflection fixed counts: [1, 1, 1]
+  all p reflections give the SAME f? True  (f=1)
+  Burnside #orbits = (H + sum_refl_fix)/(2p) = (3 + 3)/6 = 1.0  (integer: True)
+  => (H + p f)/(2p) = (3 + 3)/6 = 1.0
+  => H/p = 1 (odd: True),  H/p == f mod2: True
+
+--- Paley T_7: H=189 ---
+  rotation fixed counts (k=0..p-1): [189, 0, 0, 0, 0, 0, 0]  (only k=0 nonzero: True)
+  reflection fixed counts: [9, 9, 9, 9, 9, 9, 9]
+  all p reflections give the SAME f? True  (f=9)
+  Burnside #orbits = (H + sum_refl_fix)/(2p) = (189 + 63)/14 = 18.0  (integer: True)
+  => (H + p f)/(2p) = (189 + 63)/14 = 18.0
+  => H/p = 27 (odd: True),  H/p == f mod2: True
+
+--- Paley T_11: H=95095 ---
+  rotation fixed counts (k=0..p-1): [95095, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  (only k=0 nonzero: True)
+  reflection fixed counts: [185, 185, 185, 185, 185, 185, 185, 185, 185, 185, 185]
+  all p reflections give the SAME f? True  (f=185)
+  Burnside #orbits = (H + sum_refl_fix)/(2p) = (95095 + 2035)/22 = 4415.0  (integer: True)
+  => (H + p f)/(2p) = (95095 + 2035)/22 = 4415.0
+  => H/p = 8645 (odd: True),  H/p == f mod2: True
+
+==============================================================================
+RESULT: #orbits of Ham paths under D_{2p} = (H + p f)/(2p) in Z, with the
+free rotation giving p|H and the p reflections each fixing f paths (THM-582).
+Hence H(T_p) = p * (odd), and H(T_p)/p == f (mod 2) -- a Paley refinement of Redei.
+==============================================================================
