@@ -34263,3 +34263,56 @@ path `count_profile -> full_color_set -> numeric_mod14_set -> typed_mod14_set
 -> all_color_sidecars -> full_plus_min_struct -> typed_plus_min_struct ->
 structural_plus_ap_bit -> structural_set -> endpoint_kind_set ->
 ap84_presence_bit -> min_e_branch_struct`.
+## monad-explorer-2026-06-29 -- colored gate unit-delta split -- HYP-3472
+
+Built directly on the just-pulled HYP-3471/HYP-3462 frontier rather than
+re-auditing AP84.  Added
+`04-computation/lrc14_colored_gate_unit_delta_split_codex_20260629.py`,
+`05-knowledge/hypotheses/HYP-3472-lrc14-colored-gate-unit-delta-split.md`,
+stored `05-knowledge/results/lrc14_colored_gate_unit_delta_split_codex_20260629.out`,
+and
+`07-reflections/lrc14-colored-gate-unit-delta-split-codex-20260629.md`,
+plus index/open-question/tangent updates.
+
+Exact sharpening of HYP-3471 on the same `135`-row bank:
+
+```text
+dead rows = 130
+minimum E/B gate kinds:
+  branch_unit_delta = 110
+  both_unit_delta   = 1
+  delta_sidecar     = 19
+```
+
+Structured branch is rigid:
+
+```text
+15/15 structured dead rows
+-> branch-specific unit-delta edge minima
+-> typed histogram {B1:7|E:0:10, E:0|B1:5:4, E:0|B0:5:1}.
+```
+
+Random residual is small and typed:
+
+```text
+95/115 more branch-specific unit-delta rows
+1 both-branch unit-delta row = random_covering_088
+19 single-bad-edge single-branch delta-sidecar rows
+  names:
+  022,036,039,047,051,054,056,058,059,063,069,074,083,085,090,095,104,107,113
+  delta vectors only {(1,2),(2,1),(2,2),(1,3)}.
+```
+
+This changes the frontier: the post-HYP-3471 task is not a vague random-row
+colored-gate theorem, but a finite packet theorem.  Next explorer should try
+to prove the structured unit-delta packet directly from
+HYP-3462/HYP-3431/HYP-3454/HYP-3456/HYP-3457, then route only the `19`-row
+sidecar packet and lone both-branch row through HYP-3451 conductance/Menger or
+HYP-3455 gate gluing.
+
+Operational note: committed the artifact locally as
+`5c88bbb11 monad-explorer: split colored gate reservoir residual`, but `git push`
+still fails in this environment because `origin` is HTTPS and there is no
+GitHub username/token, while `gh` is unavailable and `ssh` is blocked.  The
+closeout handoff below will therefore also remain local unless credentials are
+added.
