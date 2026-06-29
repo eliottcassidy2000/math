@@ -27,6 +27,42 @@ endpoint-rank subcolor`, then export the same bad-child color/rank sidecar to
 the HYP-3438/HYP-3453 survivor-gate router. -> HYP-3458, HYP-3457, HYP-3456,
 HYP-3454, HYP-3453, HYP-3452, HYP-3439, HYP-3438, HYP-3436, HYP-3431,
 HYP-2247, HYP-2246, HYP-2243, HYP-2241, THM-523, LTI-418, LTT-318, T1418,
+**OPEN-Q-108 HYP-3461 colored-extension gate carrier addendum:**
+HYP-3461 connects prior colorings and extension work to the current covering
+floor, with HYP-3458 supplying the AP84 coloring-recursion sidecar and HYP-3459
+supplying the AP84 color-legality sidecar.  Working rule:
+
+```text
+colors are boundary charges
+extensions are gate-gluing orbits
+```
+
+The scout ranks proof carriers, not runners, with priority path:
+
+```text
+random031_mirror_colored_extension_clause
+-> AP84_colored_endpoint_floor_packet
+-> survivor_gate_colored_payload
+-> observer_cut_orbit_ledger
+-> minimal_two_color_bad_core
+-> colored_resonance_half_boundary
+-> A000568_edge_envelope_controlled_forgetting
+-> PH_bad_coloring_outer_extension_rank
+-> metagraph_GF2_color_boundary
+-> phase_color_reservoir
+-> raw_gate_word_shadow
+-> raw_component_count.
+```
+
+Open proof task: define colored gate-extension orbit rows with gate word,
+branch mask, endpoint walls, minimal B0/B1 covers, cover-delta vector, mirror
+orbit, low-rank escape status, and HYP-3056 discharge mode.  Then prove the
+HYP-3455 seven-owner mirror clause and splice AP84 HYP-3454/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460
+through HYP-3431/HYP-3439.  Raw gate words, raw A000568 shadows, and raw
+component counts are allowed only as shadows after this payload is retained or
+discharged. -> HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453,
+HYP-3439, HYP-3438, HYP-3436, HYP-3425, HYP-3134, HYP-3133, HYP-3056,
+HYP-2595, HYP-2594, HYP-2247, HYP-2250, LTI-421, LTT-321, T1421,
 OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3460 phase-branch color-pullback addendum:**

@@ -76,6 +76,37 @@ resonance cancellation, low-rank component escape, endpoint-spine/wall lift,
 owner-current imbalance, two-adic descent, or signed-SPEC/Rprime debt.  Extend
 the script to the full HYP-3438/HYP-3450 bank and classify max-delta gate hits
 versus bypasses.
+## Lead codex-2026-06-29: Colored-extension gate carrier
+
+**Status:** SYNTHESIS / executable carrier scout; not proof
+(HYP-3461/T1421/LTI-421/LTT-321), reconnecting prior coloring and extension
+work to the current LRC14 covering-floor route, with HYP-3458, HYP-3459, and HYP-3460 as
+the incoming AP84 coloring-recursion, color-legality, and phase-branch pullback sidecars.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3461-lrc14-colored-extension-gate-carrier.md`,
+script
+`04-computation/lrc14_colored_extension_gate_carrier_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_colored_extension_gate_carrier_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-colored-extension-gate-carrier-codex-20260629.md`.
+
+Readout: the scout's proof-carrier tournament is transitive, with path
+`random031_mirror_colored_extension_clause -> AP84_colored_endpoint_floor_packet
+-> survivor_gate_colored_payload -> observer_cut_orbit_ledger ->
+minimal_two_color_bad_core -> colored_resonance_half_boundary ->
+A000568_edge_envelope_controlled_forgetting -> PH_bad_coloring_outer_extension_rank
+-> metagraph_GF2_color_boundary -> phase_color_reservoir ->
+raw_gate_word_shadow -> raw_component_count`.
+
+Next: instantiate the colored gate-extension orbit schema on actual HYP-3438
+survivor gates.  At minimum audit canonical AP84 rows, `random_covering_031`,
+and the HYP-3441 negative naive-slack rows, retaining gate word, branch mask,
+endpoint walls, minimal B0/B1 owner covers, cover deltas, mirror orbit id,
+low-rank escape id, and discharge mode.  Desired outcome: every large orbit
+has a rank-2 escape, while the few unescaped orbits are exactly the AP84 and
+random031 packets already named.
 
 ## Lead codex-2026-06-29: AP84 finite transient closure
 

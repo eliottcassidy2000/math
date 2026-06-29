@@ -506,7 +506,9 @@ record what it destroys before asking it to prove anything.
 | LTI-416 | AP84 mod-35 floor count | HYP-3431 fixed low corridors, moving `42m` high safe gaps, integer intersection inequalities, mirror corridor doubling, period-35 residue vector, component-audit validation | HYP-3456 derives the HYP-3454 escape clock.  For `C1=[8/49,6/35]`, high gap intersection gives `N(m)=floor((504m-6)/70)-floor((96m-13)/14)`; `C0=[29/35,41/49]` mirrors it, so `escapes(m)=2*N(m)`.  Against the HYP-3452 exact component audit through `m=70`, mirror, formula, and component-audit failures are all empty.  The closed shift is `N(m+35)-N(m)=12`, hence `escapes(m+35)-escapes(m)=24`. | HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, T1416, LTT-316, LTI-416, OPEN-Q-108 | Finish the AP-tail bridge by importing/proving the HYP-3431 fixed-corridor identity as the complete low branch-union carrier and splicing HYP-3454/HYP-3456/HYP-3457 into HYP-3439. |
 | LTI-417 | AP84 finite transient closure | Four explicit transient survivor windows, endpoint labels, mirror pair, rank-2 component escapes, sign-change inequality, HYP-3452 component-audit validation | HYP-3457 closes the finite `m=1..4` side of the AP-tail split.  For `{1,2,...,11,13,84m}`, the transient survivor windows are `[8/49,(98m-1)/(588m)]`, `[(98m+1)/(588m),6/35]`, `[29/35,(490m-1)/(588m)]`, and `[(490m+1)/(588m),41/49]`, with labels `B1:7/E:84m`, `E:84m/B1:5`, `B0:5/E:84m`, and `E:84m/B0:7`.  Against HYP-3452, exact window, closure, rank-drop, and inequality failures are all empty; each row has four low-rank escapes.  The phase break is `(98m+13)/(588m)-6/35=(455-98m)/(2940m)`. | HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, T1417, LTT-317, LTI-417, OPEN-Q-108 | Treat finite AP84 transients as closed sidecars; next import the HYP-3431 fixed-corridor carrier and splice the AP-tail packet into HYP-3439. |
 | LTI-418 | AP84 coloring-recursion sidecar | Phase color, mod-35 boundary color, mod-7 endpoint-rank subcolor, outer-extension shift, HYP-2247 bad-child rank analogy | HYP-3458 reconnects old coloring work to AP84.  The HYP-3456 count `N(m)=floor((504m-6)/70)-floor((96m-13)/14)` becomes a `35`-state boundary color after subtracting `floor(12m/35)`, and the HYP-3433/HYP-3454 endpoint address `ceil(48m/7)` has exact rank `1` iff `7|m`, otherwise `2`.  Checks through `m=350` have no period/rank/phase/address failures; mixed color dies after `m=4`. | HYP-3458, HYP-3457, HYP-3456, HYP-3454, HYP-3453, HYP-3452, HYP-3439, HYP-3438, HYP-3436, HYP-3431, HYP-2247, HYP-2246, HYP-2243, HYP-2241, THM-523, T1418, LTT-318, LTI-418, OPEN-Q-108 | Splice HYP-3454/HYP-3456/HYP-3457/HYP-3458 into HYP-3439 as one AP-tail packet, then color HYP-3438/HYP-3453 survivor gates by endpoint rank and child-survival rank. |
+| LTI-419 | AP84 color-packet legality matrix | Residue gate color, floor-correction word, linear height level, endpoint phase, branch mirror, incident C3/Qsqrt(-7) color, Haar zipper cocycle | HYP-3459 audits AP84 color/discrepancy packet legality.  Raw mod-35 gate color and correction color have mixed fibers; the product with endpoint phase and sidecars is the legal AP84 local-to-global splice packet. | HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3441, HYP-3438, HYP-3437, HYP-3436, HYP-3431, HYP-2991, HYP-2990, HYP-2247, THM-523, T1419, LTT-319, LTI-419, OPEN-Q-108 | Build the HYP-3438 survivor-gate color-legality matrix; prove the AP84 splice is a homomorphism for the seven-color packet product or route the first failed color to named debt. |
 | LTI-420 | Phase-branch color pullback | Regular circular `14`-colorings, phase colors `a mod14`, CRT reservoir metrics, two-adic pullback `u=2t mod1`, branch-color matrix, component-class hits, survivor-gate hits, max-delta gate bypass | HYP-3460 reconnects S359/S363 and HYP-2593/HYP-2595 with HYP-3438/HYP-3450/HYP-3455, complementary to HYP-3459's AP84 color-packet legality guardrail.  For `random_covering_031` as `V=173`, `P=(12,)`, `E=(0,4,26,53,60,80,89,103,115,118,128,150)`, the phase-color layer has `Sigma≈1.831959`, `actual=open=282`, deficit `≈34.928978`, and bound `8*(k+cGP)+1=193`.  Pullback gives mirror-symmetric phase/branch counts, `no_component_hits=0`, `242` branch-compatible gate hits, and no hits on HYP-3455's two max-delta mirror gates. | HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3438, HYP-2991, HYP-2989, HYP-2595, HYP-2594, HYP-2593, THM-523, T1420, LTT-320, LTI-420, OPEN-Q-108 | Prove the phase-branch bypass lemma: max-delta branch gates with zero compatible phase-grid hits must discharge by colored resonance cancellation, low-rank component escape, endpoint-spine/wall lift, owner-current imbalance, two-adic descent, or signed-SPEC/Rprime debt. |
+| LTI-421 | Colored-extension gate carrier | Colored boundary-charge vectors, survivor gate-extension orbits, observer-cut discharge modes, AP84 endpoint packets, random031 seven-owner mirror clause, A000568 controlled-forgetting guardrail | HYP-3461 reconnects prior coloring and extension work to the covering-floor frontier while treating HYP-3458, HYP-3459, and HYP-3460 as the AP84 color sidecars.  Colors are boundary charges rather than labels, using HYP-2595's resonance warning; extensions are gluing orbits rather than counts, using HYP-3056 and the HYP-3133/HYP-3134 A000568 guardrails. | HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3439, HYP-3438, HYP-3436, HYP-3425, HYP-3134, HYP-3133, HYP-3056, HYP-2595, HYP-2594, HYP-2247, HYP-2250, T1421, LTT-321, LTI-421, OPEN-Q-108 | Instantiate colored gate-extension orbit rows on HYP-3438 gates; prove the HYP-3455 seven-owner mirror clause and splice AP84 HYP-3454/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460 through HYP-3431/HYP-3439. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
@@ -8732,3 +8734,56 @@ Next agent hook: prove the phase-branch bypass lemma.  If a max-delta
 branch-colored gate has zero compatible phase-grid hits, it must discharge by
 colored resonance cancellation, low-rank component escape, endpoint-spine/wall
 lift, owner-current imbalance, two-adic descent, or signed-SPEC/Rprime debt.
+
+## LTI-421: Colored-Extension Gate Carrier
+
+Created by codex-2026-06-29 for HYP-3461/T1421 as the broader bridge from
+prior coloring and extension work to the current covering-floor gate route.
+HYP-3458, HYP-3459, and HYP-3460 are the AP84 coloring-recursion and color-discrepancy
+sidecars inside this ledger.
+
+Carrier / vertex set:
+
+```text
+colored boundary-charge vectors, survivor gate-extension orbits,
+observer-cut discharge modes, AP84 endpoint packets, random031 seven-owner
+mirror clause, and A000568 controlled-forgetting guardrails.
+```
+
+Preserved LRC predicate: the two-color covering-floor gluing predicate plus
+the existence of a legal escape/discharge.
+
+Destroyed information if used naively: arbitrary runner order, scalar survivor
+mass, raw component count, untyped extension counts, and raw gate-word shadows.
+
+Exact HYP-3461 readout:
+
+```text
+score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1}
+directed_3cycles=0
+scc_sizes=[1,1,1,1,1,1,1,1,1,1,1,1]
+```
+
+Priority path:
+
+```text
+random031_mirror_colored_extension_clause
+-> AP84_colored_endpoint_floor_packet
+-> survivor_gate_colored_payload
+-> observer_cut_orbit_ledger
+-> minimal_two_color_bad_core
+-> colored_resonance_half_boundary
+-> A000568_edge_envelope_controlled_forgetting
+-> PH_bad_coloring_outer_extension_rank
+-> metagraph_GF2_color_boundary
+-> phase_color_reservoir
+-> raw_gate_word_shadow
+-> raw_component_count
+```
+
+Next agent hook: instantiate the colored gate-extension orbit schema on actual
+HYP-3438 survivor gates, retaining gate word, branch mask, endpoint walls,
+minimal B0/B1 owner covers, cover-delta vector, mirror orbit id, low-rank
+escape status, and HYP-3056 discharge mode.  Then prove the HYP-3455
+seven-owner mirror clause and splice AP84
+HYP-3454/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460 through HYP-3431/HYP-3439.

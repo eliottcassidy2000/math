@@ -127,6 +127,12 @@ obligations, and proof-carrier interfaces.
   colorings, phase colors, branch colors, component classes, survivor-gate
   hits, and max-delta bypass flags the vertices.  Raw phase counts are only a
   shadow unless the two-adic branch pullback and hard-gate hit test are kept.
+- Need to connect prior coloring and extension work to the covering floor:
+  use LTT-321 after LTT-315/LTT-316/LTT-317/LTT-318/LTT-319/LTT-320/LTT-101/LTT-159/LTT-160
+  and make proof carriers, color-boundary vectors, gate-extension orbits,
+  observer-cut discharge modes, AP84 sidecars, and the random031 mirror clause
+  the vertices.  The quotient keeps gluing/escape predicates and demotes raw
+  gate words, A000568 shadows, and component counts to telemetry.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -9532,3 +9538,40 @@ quotient_legality_status
   HYP-3452, HYP-3451, HYP-3450, HYP-3438, HYP-3436, HYP-3422, HYP-2991,
   HYP-2989, HYP-2595, HYP-2594, HYP-2593, THM-523, LTI-420, LTT-320, T1420,
   OPEN-Q-108.
+
+## LTT-321: Colored-Extension Gate Carrier Tournament
+
+- **Move:** Treat the coloring/extension merge as a tournament over proof
+  carriers, not runners, arcs, raw colors, or raw extension counts.  Vertices
+  are colored boundary-charge vectors, survivor gate-extension orbits,
+  observer-cut discharge modes, AP84 endpoint packets including HYP-3458,
+  HYP-3459, and HYP-3460, the HYP-3455 random031 mirror clause, A000568
+  controlled-forgetting envelopes, and raw shadows.
+- **LRC use:** HYP-3461 reconnects HYP-2595 colored resonance, HYP-2247
+  coloring extension rank, HYP-2250 color-boundary chains, HYP-3056
+  observer-cut orbits, and HYP-3133/HYP-3134 A000568 envelope discipline to
+  the current HYP-3438/HYP-3455/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460
+  covering-floor stack.
+- **Preserves:** two-color covering-floor gluing predicate, branch masks,
+  endpoint walls, minimal B0/B1 owner covers, cover-delta vectors, mirror
+  orbit ids, low-rank escape status, and named discharge modes.
+- **Forgets / guardrail:** raw gate words, raw A000568 shadows, raw component
+  counts, scalar survivor mass, and untyped extension counts are telemetry
+  until their observer-cut payload is retained or discharged.
+- **Pairwise observable:** predicate retention, color boundary payload,
+  extension/gluing payload, endpoint-owner retention, finite auditability,
+  current-frontier fit, scalar guardrail, and discharge specificity.
+- **Switch/gauge:** higher weighted carrier score first; ties use the score
+  tuple and then the declared proof-facing order.
+- **Fingerprint:** `12` vertices, score histogram
+  `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1}`, no directed
+  `3`-cycles, singleton SCCs, and Hamiltonian path
+  `random031_mirror_colored_extension_clause -> AP84_colored_endpoint_floor_packet -> survivor_gate_colored_payload -> observer_cut_orbit_ledger -> minimal_two_color_bad_core -> colored_resonance_half_boundary -> A000568_edge_envelope_controlled_forgetting -> PH_bad_coloring_outer_extension_rank -> metagraph_GF2_color_boundary -> phase_color_reservoir -> raw_gate_word_shadow -> raw_component_count`.
+- **Next hook:** instantiate colored gate-extension orbit rows on actual
+  HYP-3438 survivor gates; prove the HYP-3455 seven-owner mirror clause; splice
+  AP84 HYP-3454/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460 through
+  HYP-3431/HYP-3439.
+- **Pointers:** HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455,
+  HYP-3454, HYP-3453, HYP-3439, HYP-3438, HYP-3436, HYP-3425, HYP-3134,
+  HYP-3133, HYP-3056, HYP-3054, HYP-2595, HYP-2594, HYP-2593, HYP-2250,
+  HYP-2247, LTI-421, LTT-321, T1421, OPEN-Q-108.

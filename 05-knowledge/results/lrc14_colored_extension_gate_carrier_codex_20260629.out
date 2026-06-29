@@ -1,0 +1,81 @@
+LRC14 colored-extension gate carrier scout
+source=codex-2026-06-29
+claim_status=EXPLORATORY_SYNTHESIS_NOT_PROOF
+
+Tournament Analysis
+vertices=proof carriers and quotient shadows
+pairwise_observable=predicate+color_payload+extension_payload+endpoint_owner+finite_audit+frontier_fit+scalar_guardrail+discharge
+switch=higher weighted score; tie=score tuple then proof-facing order
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path=
+  random031_mirror_colored_extension_clause
+  AP84_colored_endpoint_floor_packet
+  survivor_gate_colored_payload
+  observer_cut_orbit_ledger
+  minimal_two_color_bad_core
+  colored_resonance_half_boundary
+  A000568_edge_envelope_controlled_forgetting
+  PH_bad_coloring_outer_extension_rank
+  metagraph_GF2_color_boundary
+  phase_color_reservoir
+  raw_gate_word_shadow
+  raw_component_count
+
+Carrier Ranking
+rank  carrier                                      weighted_score refs
+----  -------                                      -------------------
+1     random031_mirror_colored_extension_clause    171 HYP-3455/HYP-3438/HYP-3453
+2     AP84_colored_endpoint_floor_packet           166 HYP-3454/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460/HYP-3431
+3     survivor_gate_colored_payload                156 HYP-3438/HYP-3436/HYP-3425
+4     observer_cut_orbit_ledger                    152 HYP-3056/HYP-3054/LTT-101
+5     minimal_two_color_bad_core                   143 HYP-3436/HYP-3425/HYP-3426
+6     colored_resonance_half_boundary              139 HYP-2595/HYP-2594/LTI-048
+7     A000568_edge_envelope_controlled_forgetting  136 HYP-3134/HYP-3133/LTT-159/LTT-160
+8     PH_bad_coloring_outer_extension_rank         112 HYP-2247/HYP-2243
+9     metagraph_GF2_color_boundary                 111 HYP-2250/metagraph_blue_black_parity_s675
+10    phase_color_reservoir                        111 HYP-2593/lrc14_phase_color_reservoir_codex
+11    raw_gate_word_shadow                         80 HYP-3438
+12    raw_component_count                          44 HYP-2594/HYP-3436
+
+Top Carrier Payloads
+- random031_mirror_colored_extension_clause
+  preserves: finite two-color gate-gluing predicate with branch mask, B-S-B-S-B word, owner deltas, mirror cut, and low-rank escape
+  destroys: unrestricted row family generality
+  proof_pull: prove the seven-owner mirror pair cannot extend to a full cover without one of the named HYP-3455 exits
+- AP84_colored_endpoint_floor_packet
+  preserves: AP84 low-corridor branch-union predicate, endpoint wall labels, moving high-grid count, mod-35 clock, endpoint-rank subcolor, phase-branch pullback, finite transient packets
+  destroys: non-AP wall geometry and arbitrary owner adjacency
+  proof_pull: splice HYP-3454/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460 into HYP-3439 after the HYP-3431 fixed-corridor identity is imported
+- survivor_gate_colored_payload
+  preserves: mixed E_safe component gate word plus branch mask, endpoint walls, parent even walls, minimal B0/B1 owner covers, and legal sidecar route
+  destroys: raw runner order and scalar survivor mass
+  proof_pull: promote every survivor gate to a colored extension-orbit row before quotienting by word type
+- observer_cut_orbit_ledger
+  preserves: quotient action, observer address, cut-payload orbit, changed LRC predicate, separating sidecar, discharge mode, residual debt
+  destroys: nothing by itself; it forces every forgetting step to name its loss
+  proof_pull: make gate extension legal only after reconstruction, exactness, dual annihilation, descent, boundary stop, or named debt
+- minimal_two_color_bad_core
+  preserves: E_safe minus B0_odd cap B1_odd, local minimal B0/B1 owner covers, and branch-union identity
+  destroys: long-range concatenation data between local bad blocks
+  proof_pull: use two-color local covers as the base sheaf whose extension obstructions are measured by survivor-gate deltas
+- colored_resonance_half_boundary
+  preserves: mod-14 color, half-boundary endpoint correction, Fourier resonance conditions, and O(k+c_GP) discrepancy target
+  destroys: local gate-gluing topology unless endpoint payload is added
+  proof_pull: turn branch-mask and endpoint-wall events into a color-resonant boundary vector instead of charging raw component count
+
+Proof-Facing Obligations
+- O1_color_boundary_vector: Promote branch masks, endpoint-wall labels, and owner deltas to a colored boundary vector.  HYP-2595 says raw component K is the wrong charge; surviving color-compatible resonance is the charge.
+- O2_gate_extension_orbit: Define a gate-extension orbit modulo row/mirror automorphisms with fields: gate word, branch mask, endpoint walls, minimal B0/B1 owner covers, cover-delta vector, and low-rank escape availability.
+- O3_random031_finite_clause: Prove the HYP-3455 mirror B-S-B-S-B pair on owner union (23,45,93,113,147,169,173) cannot glue to a full cover unless a rank<=2 escape, endpoint spine, owner-current imbalance, two-adic descent, or SPEC/Rprime debt fires.
+- O4_AP84_floor_splice: Use HYP-3456 and HYP-3457 as closed endpoint-color sidecars: the remaining AP84 task is the HYP-3431 fixed-corridor identity plus the splice into HYP-3439, not another sampled clock.
+- O5_controlled_forgetting: Before forgetting to a raw word, raw A000568 shadow, or raw count, record the observer-cut orbit and discharge mode from HYP-3056.
+- O6_finite_colored_placement: If HYP-2595 is formalized, combine the O(k+c_GP) deficit target with the HYP-2593 Sigma floor and exact V<711 checking; then feed the surviving color residue into the gate-extension ledger.
+
+Assumption Challenge
+alternate_vertices_considered=runners,gaps,fixed sections,section boundaries,wall crossings,residues,cover arcs,endpoint walls,gate words,owner-delta events,observer cuts,color boundary vectors,A000568 shadows,AP84 floor packets,proof obligations
+chosen_quotient=colored extension-orbit rows attached to survivor gates and AP/random031 sidecars
+preserved_predicate=two-color covering-floor gluing predicate plus existence of a legal LRC14 escape/discharge
+destroyed_information=arbitrary runner order, scalar survivor mass, raw component count, and untyped extension counts
+challenged_assumption=colors are labels and extensions are counts; here colors are boundary charges and extensions are gluing orbits

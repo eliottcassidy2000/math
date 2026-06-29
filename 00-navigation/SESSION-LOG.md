@@ -101,6 +101,40 @@ endpoint-spine/wall lift, owner-current, two-adic descent, or signed-SPEC debt.
 Together with HYP-3458 and HYP-3459, this splits the coloring return into a
 canonical AP84 recursion, an AP84 color-packet legality guardrail, and a
 noncanonical random031 phase-branch bypass test.
+## codex-2026-06-29 -- HYP-3461 colored-extension gate carrier
+
+Connected prior work on colorings and extension to the current LRC14 covering
+floor.  Rebased over incoming HYP-3458 AP84 coloring-recursion work, HYP-3459
+coloring-discrepancy work, and HYP-3460 phase-branch color pullback, then added
+HYP-3461/T1421/LTI-421/LTT-321 plus script/result/reflection:
+
+```text
+04-computation/lrc14_colored_extension_gate_carrier_codex_20260629.py
+05-knowledge/results/lrc14_colored_extension_gate_carrier_codex_20260629.out
+05-knowledge/hypotheses/HYP-3461-lrc14-colored-extension-gate-carrier.md
+07-reflections/lrc14-colored-extension-gate-carrier-codex-20260629.md
+```
+
+Core synthesis: colors are boundary charges, not labels, and extensions are
+gate-gluing orbits, not counts.  HYP-2595 supplies the colored-resonance
+charge guardrail, HYP-2247/HYP-2250 supply coloring extension/boundary warnings,
+HYP-3133/HYP-3134 supply the A000568 controlled-forgetting extension guardrail,
+and HYP-3056 supplies the observer-cut ledger.  Incoming HYP-3458 supplies the
+AP84 phase/boundary/endpoint-rank color state, incoming HYP-3459 supplies the
+AP84 color-legality matrix, and incoming HYP-3460 supplies the phase-branch
+pullback inside this broader ledger.
+
+Scout readout: proof-carrier tournament has no directed `3`-cycles and path
+`random031_mirror_colored_extension_clause -> AP84_colored_endpoint_floor_packet
+-> survivor_gate_colored_payload -> observer_cut_orbit_ledger ->
+minimal_two_color_bad_core -> colored_resonance_half_boundary ->
+A000568_edge_envelope_controlled_forgetting -> PH_bad_coloring_outer_extension_rank
+-> metagraph_GF2_color_boundary -> phase_color_reservoir ->
+raw_gate_word_shadow -> raw_component_count`.
+
+Next proof obligation: instantiate colored gate-extension orbit rows on actual
+HYP-3438 gates, then prove the HYP-3455 seven-owner mirror clause and splice
+AP84 HYP-3454/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460 through HYP-3431/HYP-3439.
 
 ## codex-2026-06-29 -- HYP-3456 AP84 mod-35 floor-count closure
 

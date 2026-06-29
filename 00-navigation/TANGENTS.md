@@ -2,6 +2,7 @@
 
 **T1418** [codex-2026-06-29] #lrc14 #ap84 #colorings #paris-harrington #outer-extension #mod35 #HYP-3458. AP84 coloring-recursion bridge.  Reconnects HYP-2247/HYP-2243 coloring recursion to the current AP84 packet.  For `{1,2,...,11,13,84m}`, the HYP-3456 count `N(m)=floor((504m-6)/70)-floor((96m-13)/14)` becomes a `35`-state boundary color after subtracting `floor(12m/35)`, and the HYP-3433/HYP-3454 endpoint address `a_m=ceil(48m/7)` has exact left-corridor rank `1` iff `7|m`, otherwise `2`.  Checks through `m=350` have no period, rank, phase, or address failures; boundary histogram `{0:1,1:22,2:12}`, endpoint-rank histogram `{1:5,2:30}`, transition histogram `{0:24,1:10,2:1}`, and mixed phase support only `m=1..4`.  Proof pull: a legal AP-tail quotient should retain `phase color + mod-35 boundary color + mod-7 endpoint-rank subcolor`; next export the same coloring-rank sidecar to HYP-3438/HYP-3453 gate routes. -> HYP-3458, HYP-3457, HYP-3456, HYP-3454, HYP-3453, HYP-3452, HYP-3439, HYP-3438, HYP-3436, HYP-3431, HYP-2247, HYP-2246, HYP-2243, HYP-2241, THM-523, LTI-418, LTT-318, OPEN-Q-108.
 **T1420** [codex-2026-06-29] #lrc14 #coloring #phase-color #branch-color #random031 #gate-gluing #HYP-3460. Phase-branch color pullback.  Reconnects the older S359/S363 regular circular-coloring formulation and HYP-2593/HYP-2595 phase-color CRT reservoir with the newer HYP-3438/HYP-3450 branch-coloured gate/component atlas, complementary to HYP-3459's AP84 color-packet legality guardrail.  A CRT witness `t=a/(14V)` has phase color `b=a mod14`, branch coordinate `u=2t mod1`, and branch color by half-circle.  For `random_covering_031` as an S3 row with `V=173`, `P=(12,)`, and `E=(0,4,26,53,60,80,89,103,115,118,128,150)`, exact metrics are `Sigma≈1.831959`, `K=2254`, `actual=open=282`, and deficit `≈34.928978`, below `8*(k+cGP)+1=193`.  Pullback gives mirror-symmetric phase/branch counts, `no_component_hits=0`, `242` branch-compatible survivor-gate hits, and `hard_gate_hits={}` for the two HYP-3455 max-delta mirror gates; hard components `43` and `54` are touched only through lower-delta opposite-branch gates.  Proof pull: test branch gate debt against phase-color pullbacks before promoting it to global obstruction. -> HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3438, HYP-2991, HYP-2989, HYP-2595, HYP-2594, HYP-2593, THM-523, LTI-420, LTT-320, OPEN-Q-108.
+**T1421** [codex-2026-06-29] #lrc14 #coloring #extension #survivor-gates #covering-floor #controlled-forgetting #HYP-3461. Colored-extension gate carrier.  Reconnects the older coloring and extension threads to the current LRC14 covering floor, with incoming HYP-3458/HYP-3459/HYP-3460 as the AP84 coloring-recursion, color-legality, and phase-branch pullback sidecars.  The scout treats colors as boundary charges and extensions as gluing orbits: HYP-2595's colored resonance warns against raw component count, HYP-2247/HYP-2250 warn that color histograms miss extension rank and boundary chains, HYP-3133/HYP-3134 warn that A000568-style extension shadows need paired child/envelope payload, and HYP-3056 supplies the observer-cut ledger.  Tournament path over proof carriers is `random031_mirror_colored_extension_clause -> AP84_colored_endpoint_floor_packet -> survivor_gate_colored_payload -> observer_cut_orbit_ledger -> minimal_two_color_bad_core -> colored_resonance_half_boundary -> A000568_edge_envelope_controlled_forgetting -> PH_bad_coloring_outer_extension_rank -> metagraph_GF2_color_boundary -> phase_color_reservoir -> raw_gate_word_shadow -> raw_component_count`, with no directed `3`-cycles.  Next hook: instantiate colored gate-extension orbit rows on HYP-3438 gates, prove the HYP-3455 seven-owner mirror clause, and splice AP84 HYP-3454/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460 through HYP-3431/HYP-3439. -> HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3439, HYP-3438, HYP-3436, HYP-3425, HYP-3134, HYP-3133, HYP-3056, HYP-2595, HYP-2594, HYP-2247, HYP-2250, LTI-421, LTT-321, OPEN-Q-108.
 **T1417** [codex-2026-06-29] #lrc14 #ap84 #finite-transients #endpoint-clock #component-cover #HYP-3457. AP84 finite transient closure.  Closes the `m=1..4` finite mixed side of the AP-tail split.  For `{1,2,...,11,13,84m}`, the four transient survivor windows are `[8/49,(98m-1)/(588m)]`, `[(98m+1)/(588m),6/35]`, `[29/35,(490m-1)/(588m)]`, and `[(490m+1)/(588m),41/49]`, with endpoint labels `B1:7/E:84m`, `E:84m/B1:5`, `B0:5/E:84m`, and `E:84m/B0:7`.  Validation against HYP-3452 gives no window, closure, rank-drop, or inequality failures; each transient has exactly `4` escapes.  Phase break: `(98m+13)/(588m)-6/35=(455-98m)/(2940m)` is positive for `m=1..4` and reverses at `m=5`.  Remaining AP-tail task: HYP-3431 carrier plus HYP-3439 splice. -> HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-417, LTT-317, OPEN-Q-108.
 **T1416** [codex-2026-06-29] #lrc14 #ap84 #mod35 #floor-count #endpoint-clock #HYP-3456. AP84 mod-35 floor-count closure.  Derives the HYP-3454 escape clock from HYP-3431 fixed corridors.  For high safe gaps `G_k(m)=[(14k+1)/(588m),(14k+13)/(588m)]`, intersection with `[8/49,6/35]` gives `N(m)=floor((504m-6)/70)-floor((96m-13)/14)` and the mirror corridor doubles it: `escapes(m)=2*N(m)`.  Validation against HYP-3452 through `m=70` has no mirror, formula, or component-audit failures; the correction vector matches HYP-3454 and gives the closed shift `escapes(m+35)-escapes(m)=24`.  HYP-3457 closes the finite transients.  Remaining AP-tail task: import/prove the HYP-3431 fixed-corridor identity as the complete low branch-union carrier and splice the AP-tail sidecars into HYP-3439. -> HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-416, LTT-316, OPEN-Q-108.
 **T1414** [codex-2026-06-29] #lrc14 #ap84 #endpoint-clock #component-cover #mod35 #beatty #HYP-3454. AP84 endpoint-clock certificate.  Narrows the HYP-3452 AP-tail phase into exact endpoint inequalities plus a residue-count sidecar, and pairs with HYP-3453's gate-escape transversal router.  For `{1,2,...,11,13,84m}`, the checked tail `m=5..70` has no endpoint failures: `I_m=[(14ceil(48m/7)+1)/(588m),(14ceil(48m/7)+13)/(588m)]` lies inside `[8/49,6/35]`, has length `1/(49m)`, and carries rank-one labels `L[E:84m] R[E:84m]`; HYP-3457 closes the finite transients `m=1..4` as mixed `E:84m/B1:5` packets.  Escape counts obey the checked period-`35` law `escapes(m)=2*(floor(12m/35)+d[(m-1) mod 35])`, with HYP-3456 deriving the floor count.  Proof pull: splice HYP-3454/HYP-3456/HYP-3457 into the HYP-3439 rank-`5` AP-tail descent. -> HYP-3457, HYP-3456, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-414, LTT-314, OPEN-Q-108.
@@ -4219,3 +4220,50 @@ exact-period/state-lift, or signed-SPEC debt.
 -> HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452,
 HYP-3441, HYP-3438, HYP-3437, HYP-3436, HYP-3431, HYP-2991, HYP-2990,
 HYP-2263, HYP-2247, HYP-1802, THM-523, LTI-419, LTT-319, OPEN-Q-108.
+
+## T1421: LRC14 Colored-Extension Gate Carrier
+
+HYP-3461 reconnects the older coloring and extension threads after the incoming
+HYP-3458/HYP-3459/HYP-3460 AP84 sidecars.  The useful reframing is:
+
+```text
+colors = boundary charges
+extensions = gate-gluing orbits
+```
+
+This keeps HYP-2595's colored-resonance warning, HYP-2247/HYP-2250's extension
+rank and GF(2) boundary warnings, HYP-3133/HYP-3134's controlled-forgetting
+edge/envelope repair, and HYP-3056's observer-cut ledger in one payload.  The
+quotient preserves the LRC predicate only when branch mask, endpoint walls,
+minimal B0/B1 covers, cover-delta vector, mirror orbit, low-rank escape status,
+and discharge mode are retained or named as debt.  It destroys raw component
+count, raw gate word, and raw A000568 shadow information unless those shadows
+are attached to the colored-extension payload.
+
+Tournament Analysis uses proof carriers and gate-extension obligations, not
+runners, arcs, or scalar masses.  The selected path is:
+
+```text
+random031_mirror_colored_extension_clause
+-> AP84_colored_endpoint_floor_packet
+-> survivor_gate_colored_payload
+-> observer_cut_orbit_ledger
+-> minimal_two_color_bad_core
+-> colored_resonance_half_boundary
+-> A000568_edge_envelope_controlled_forgetting
+-> PH_bad_coloring_outer_extension_rank
+-> metagraph_GF2_color_boundary
+-> phase_color_reservoir
+-> raw_gate_word_shadow
+-> raw_component_count
+```
+
+Challenged assumption: colorings should not be treated as labels on runners.
+The proof-facing color object is a boundary-charge vector on gate-extension
+orbits.  Next hook: instantiate this row schema on HYP-3438 survivor gates,
+then prove the HYP-3455 random031 seven-owner mirror clause and splice AP84
+HYP-3454/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460 through HYP-3431/HYP-3439.
+
+-> HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453,
+HYP-3439, HYP-3438, HYP-3436, HYP-3425, HYP-3134, HYP-3133, HYP-3056,
+HYP-2595, HYP-2594, HYP-2250, HYP-2247, LTI-421, LTT-321, OPEN-Q-108.
