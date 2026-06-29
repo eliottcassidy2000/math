@@ -8661,6 +8661,38 @@ quotient_legality_status
   HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
   HYP-3129, THM-523, LTI-399, LTT-299, T1399, OPEN-Q-108.
 
+## LTT-300: Rescue-Core Bridge Tournament
+
+- **Move:** Use proof obligations and bridge carriers as vertices: canonical
+  corridor-fence recognizer, noncanonical bounded rescue core, HYP-3436
+  survivor-gate route, endpoint-spine/wall route, owner-current route,
+  exact-period/state-lift debt, signed-SPEC/Rprime debt, and raw rescue-rank
+  shortcut as a negative control.
+- **LRC use:** HYP-3439 is reserved to connect HYP-3437's one-branch
+  overlap-tax rescue cores with HYP-3436's two-color bad-core/survivor ledger.
+  The target is to separate the canonical HYP-3431 rank-`6` family from
+  noncanonical negative-slack rows that should compress to bounded rank or
+  route to named debt.
+- **Preserves:** negative-slack rescue predicate, endpoint-labelled overlap
+  core, bad-core/survivor context, canonical corridor-fence status, and legal
+  residual route.
+- **Forgets / guardrail:** raw rank, scalar overlap mass, harmonic budgets, and
+  gamma/Mertens priorities cannot certify rescue unless the endpoint labels and
+  survivor-gate sidecars survive or are routed.
+- **Pairwise observable:** retained rescue predicate plus endpoint/survivor
+  payload minus scalar-forgetting debt.
+- **Switch/gauge:** higher proof-facing score wins; ties use declared carrier
+  order.
+- **Tie Hamiltonian path:** canonical corridor-fence recognizer ->
+  noncanonical bounded rescue core -> survivor-gate route -> endpoint-spine
+  route -> owner-current route -> exact-period/state-lift debt ->
+  signed-SPEC/Rprime debt -> raw rescue-rank shortcut.
+- **Next hook:** build the HYP-3439 bridge audit over the HYP-3436/HYP-3437
+  banks and the canonical `84m` tower.
+- **Pointers:** HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434,
+  HYP-3431, HYP-3429, HYP-3427, HYP-3425, HYP-3422, HYP-3418, HYP-3415,
+  THM-523, LTI-400, LTT-300, T1400, OPEN-Q-108.
+
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 
 - **Move:** Use recursive signature repairs as tournament vertices: residue,

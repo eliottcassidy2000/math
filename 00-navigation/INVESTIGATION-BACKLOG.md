@@ -44,7 +44,7 @@ new named residual before any scalar compression is allowed.
 overlap-tax cut certificate and HYP-3436's two-color bad-core cover extractor.
 
 Claimed files:
-`05-knowledge/hypotheses/HYP-3438-lrc14-rescue-core-bridge-certificate.md`,
+`05-knowledge/hypotheses/HYP-3439-lrc14-rescue-core-bridge-certificate.md`,
 script
 `04-computation/lrc14_rescue_core_bridge_certificate_codex_20260629.py`,
 result

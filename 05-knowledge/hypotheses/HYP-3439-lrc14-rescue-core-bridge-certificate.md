@@ -1,15 +1,16 @@
 ---
-id: HYP-3438
+id: HYP-3439
 title: LRC14 rescue-core bridge certificate
 status: RESERVED STUB / computation pending; not an LRC14 proof
 source: codex-2026-06-29 continuation of HYP-3437/HYP-3436/HYP-3431
-tangent: T1399
-technique: LTI-399
-tournament_technique: LTT-299
+tangent: T1400
+technique: LTI-400
+tournament_technique: LTT-300
 script: 04-computation/lrc14_rescue_core_bridge_certificate_codex_20260629.py
 result: 05-knowledge/results/lrc14_rescue_core_bridge_certificate_codex_20260629.out
 reflection: 07-reflections/lrc14-rescue-core-bridge-certificate-codex-20260629.md
 related:
+  - HYP-3438
   - HYP-3437
   - HYP-3436
   - HYP-3435
@@ -25,11 +26,11 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-3438: LRC14 Rescue-Core Bridge Certificate
+# HYP-3439: LRC14 Rescue-Core Bridge Certificate
 
 ## Reservation
 
-This file reserves HYP-3438/T1399/LTI-399/LTT-299 for the next proof-facing
+This file reserves HYP-3439/T1400/LTI-400/LTT-300 for the next proof-facing
 obligation after HYP-3437 and HYP-3436.
 
 Planned computation:
@@ -51,7 +52,7 @@ Every primitive covering row with negative one-branch naive slack either
       walls, owner-current labels, exact-period/state-lift debt, or signed-SPEC.
 ```
 
-This stub is honest: no computation has been run yet under HYP-3438.  The
+This stub is honest: no computation has been run yet under HYP-3439.  The
 reason to reserve the namespace now is that the bridge will create a new script,
 stored output, reflection, and technique entries tying HYP-3437's overlap-tax
 cut core to HYP-3436's local bad-core cover extractor.

@@ -33422,7 +33422,7 @@ exact-period/state-lift, or signed-SPEC debt.  Tournament Analysis uses proof
 carriers, not runners; priority path begins
 `atomic_interval_arrangement -> overlap_tax_menger_core -> endpoint_spine_cut_lift`.
 
-## codex-2026-06-29 -- reserve rescue-core bridge certificate -- HYP-3438
+## codex-2026-06-29 -- reserve rescue-core bridge certificate -- HYP-3439
 
 Reserved HYP-3438/T1399/LTI-399/LTT-299 for the next finite bridge after
 HYP-3437 and HYP-3436.  The planned computation will join HYP-3437's
