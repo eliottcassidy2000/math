@@ -9448,3 +9448,41 @@ quotient_legality_status
 - **Pointers:** HYP-3458, HYP-3457, HYP-3456, HYP-3454, HYP-3453, HYP-3452,
   HYP-3439, HYP-3438, HYP-3436, HYP-3431, HYP-2247, HYP-2246, HYP-2243,
   HYP-2241, THM-523, LTI-418, LTT-318, T1418, OPEN-Q-108.
+
+## LTT-319: AP84 Color-Packet Tournament
+
+- **Move:** Treat coloring as a legal-quotient problem rather than as a
+  decorative analogy.  Vertices are quotient/color proof carriers: labelled
+  color-packet theorem, residue gate plus floor word, Haar zipper cocycle
+  repair, endpoint phase sidecar, incident `C3/Qsqrt(-7)` router, branch-mask
+  discrepancy word, distance-graph regular coloring, raw mod-`35` gate color,
+  and raw scalar escape count.
+- **LRC use:** HYP-3459 audits the AP84 tail color words.  The HYP-3438 gate
+  palette and HYP-3456 correction word have mixed fibers in both directions:
+  `both_outer_inner` has corrections `[1,2]`, while correction `d=1` occurs
+  in `both_outer_inner`, `inner_only_5_gate`, and `outer_only_7_gate`.  Their
+  pair is clean for the AP84 local target, but endpoint phase is not periodic:
+  `m=1` and `m=36` share residue `1` but are in HYP-3457's transient and
+  HYP-3454's rank-one tail phases respectively.
+- **Preserves:** AP-tail gate availability, floor count, endpoint phase,
+  branch mirror status, incident residue/router sidecar, zipper debt
+  declaration, and finite-checkability of the AP84 splice.
+- **Forgets / guardrail:** raw runner identity, non-AP geometry, arbitrary
+  primitive-row adjacency, and scalar balance are unsafe unless the missing
+  packet colors are reconstructible.
+- **Pairwise observable:** preserved AP-tail predicate, lost-coordinate
+  sidecar, product-closure/zipper compatibility, and finite-checkability.
+- **Switch/gauge:** higher retained color-packet score first; ties use the
+  labelled packet priority.
+- **Fingerprint:** `9` vertices, score histogram
+  `{20:1,36:1,52:1,58:1,62:1,65:1,67:1,68:1,80:1}`, no directed `3`-cycles,
+  Hamiltonian path count `1`, and priority path
+  `labelled_color_packet_theorem -> residue_gate_plus_floor_word -> haar_zipper_cocycle_repair -> endpoint_phase_sidecar -> incident_C3_Qsqrt_router -> branch_mask_discrepancy_word -> distance_graph_regular_coloring -> raw_mod35_gate_color -> raw_scalar_escape_count`.
+- **Next hook:** build the HYP-3438 survivor-gate color-legality matrix and
+  prove the AP84 local-to-global splice is a homomorphism for the seven-color
+  packet product, or route the first failed color to HYP-3453/HYP-3455,
+  owner-current, two-adic descent, exact-period/state-lift, or SPEC debt.
+- **Pointers:** HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453,
+  HYP-3452, HYP-3441, HYP-3438, HYP-3437, HYP-3436, HYP-3431, HYP-2991,
+  HYP-2990, HYP-2263, HYP-2247, HYP-1802, THM-523, LTI-419, LTT-319, T1419,
+  OPEN-Q-108.

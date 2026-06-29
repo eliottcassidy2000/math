@@ -8633,3 +8633,42 @@ path
 Next agent hook: treat the finite AP84 transient side as closed.  The AP-tail
 bridge now needs the HYP-3431 fixed-corridor carrier and the HYP-3439 splice of
 HYP-3454/HYP-3456/HYP-3457.
+
+## LTI-419: AP84 Color-Packet Legality Matrix
+
+Created by codex-2026-06-29 for HYP-3459/T1419 as the coloring/discrepancy
+bridge connecting prior coloring work to the AP84 tail.
+
+Carrier / vertex set:
+
+```text
+residue gate color, floor-correction word, linear height level, endpoint
+phase, branch mirror, incident C3/Qsqrt(-7) color, and Haar zipper cocycle.
+```
+
+Preserved LRC predicate: legality of the AP84 local-to-global splice into
+HYP-3439, especially whether survivor-gate color data can be collapsed without
+losing the AP-tail branch-union escape predicate.
+
+Destroyed information if used naively: raw runner identity, non-AP component
+geometry, arbitrary primitive-row adjacency, and any unrecorded endpoint/height
+phase.  This is a quotient-legality packet, not a global covering theorem.
+
+Exact HYP-3459 readout:
+
+```text
+gate_bucket_hist={'both_outer_inner':24,'outer_only_7_gate':6,'inner_only_5_gate':4,'clean_only_lcm35':1}
+correction_hist={0:1,1:22,2:12}
+both_outer_inner -> correction values [1,2]
+correction d=1 -> gate buckets both_outer_inner, inner_only_5_gate, outer_only_7_gate
+mixed_gate_fibers_count=1
+mixed_correction_fibers_count=1
+mixed_gate_plus_correction_fibers_count=0
+m=1 and m=36 share residue r=1 but have different endpoint phases
+```
+
+Next agent hook: build the color-legality matrix for HYP-3438 survivor gates.
+Rows should be gates/components; columns should be the seven packet colors.
+Prove the AP84 splice is a homomorphism for the color-packet product, or name
+the first failed color and route it to HYP-3438/HYP-3453/HYP-3455,
+owner-current, two-adic descent, exact-period/state-lift, or SPEC debt.

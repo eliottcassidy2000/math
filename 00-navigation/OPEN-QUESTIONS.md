@@ -7520,3 +7520,35 @@ HYP-3310, HYP-3301, HYP-3265,
 HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3254, HYP-3247,
 HYP-3123, HYP-2969, HYP-2963, THM-523, LTI-390, LTT-290, T1390,
 OPEN-Q-108.
+
+## OPEN-Q-108 addendum (codex-2026-06-29): AP84 color-packet legality
+
+HYP-3459 turns the coloring/discrepancy archaeology into an AP84 quotient
+guardrail.  The open question is:
+
+```text
+Does the HYP-3438 survivor-gate local-to-global map preserve the seven-color
+AP84 packet product?
+```
+
+The seven colors are:
+
+```text
+residue gate, floor correction, linear height, endpoint phase, branch mirror,
+incident C3/Qsqrt(-7) color, Haar zipper cocycle.
+```
+
+Exact warning signs:
+
+```text
+gate color alone has mixed floor fibers,
+floor color alone has mixed gate fibers,
+residue alone misses the m=1 versus m=36 endpoint-phase split.
+```
+
+So no scalar color-balance or raw mod-`35` argument is proof-legal until it
+shows these colors are reconstructed, annihilated, or routed to named debt.
+Next task: construct the finite color-legality matrix on HYP-3438 survivor
+gates and test product closure against HYP-3453/HYP-3455 escape routes. ->
+HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3438,
+HYP-3441, HYP-2991, HYP-2263, HYP-2247, LTI-419, LTT-319, T1419.

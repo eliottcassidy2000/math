@@ -30,6 +30,45 @@ endpoint-rank subcolor`.  The mixed bad phase has finite support `m=1..4` and
 dies after outer extension.  Next hook: splice HYP-3454/HYP-3456/HYP-3457/HYP-3458
 into HYP-3439 and export the same bad-child color/rank sidecar to
 HYP-3438/HYP-3453 survivor-gate routes.
+## codex-2026-06-29 -- HYP-3459 coloring/discrepancy bridge
+
+Went back through prior coloring work and connected it to the AP84 LRC14
+tail.  Added HYP-3459/T1419/LTI-419/LTT-319 plus script/result/reflection:
+
+```text
+04-computation/lrc14_coloring_discrepancy_bridge_codex_20260629.py
+05-knowledge/results/lrc14_coloring_discrepancy_bridge_codex_20260629.out
+05-knowledge/hypotheses/HYP-3459-lrc14-coloring-discrepancy-bridge.md
+07-reflections/lrc14-coloring-discrepancy-bridge-codex-20260629.md
+```
+
+Synthesis: centered edge variables/W-polynomial products, distance-graph
+regular circular colorings, colored CRT discrepancy, HYP-2991 Haar zipper
+cocycles, and HYP-2247 extension rank all say the same thing: a coloring is a
+quotient, and a quotient is legal only if it preserves the LRC predicate or
+emits the lost coordinate as named debt.
+
+Exact AP84 audit: HYP-3438's gate palette has histogram
+`both_outer_inner:24`, `outer_only_7_gate:6`, `inner_only_5_gate:4`,
+`clean_only_lcm35:1`; HYP-3456's correction word has histogram
+`{0:1,1:22,2:12}`.  Gate color and floor color have mixed fibers in both
+directions, but the pair `(gate_bucket,d)` is clean for the local AP84 target.
+Endpoint phase is still nonperiodic: `m=1` and `m=36` share residue `1`, while
+HYP-3457 makes `m=1` a mixed transient and HYP-3454 makes `m=36` rank-one
+`E/E`.
+
+New proof target: build the HYP-3438 survivor-gate color-legality matrix with
+columns `(gate, floor, height, endpoint_phase, branch_mirror,
+incident_C3_Qsqrt, zipper_cocycle)` and prove the AP84 splice into HYP-3439 is
+a homomorphism for this color-packet product, or route the first failed color
+to HYP-3453/HYP-3455, owner-current, two-adic descent, exact-period/state-lift,
+or SPEC debt.
+
+Tournament Analysis: vertices were quotient/color proof carriers, not runners
+or arcs.  Score histogram
+`{20:1,36:1,52:1,58:1,62:1,65:1,67:1,68:1,80:1}`, no directed `3`-cycles,
+Hamiltonian path
+`labelled_color_packet_theorem -> residue_gate_plus_floor_word -> haar_zipper_cocycle_repair -> endpoint_phase_sidecar -> incident_C3_Qsqrt_router -> branch_mask_discrepancy_word -> distance_graph_regular_coloring -> raw_mod35_gate_color -> raw_scalar_escape_count`.
 
 ## codex-2026-06-29 -- HYP-3456 AP84 mod-35 floor-count closure
 

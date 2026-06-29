@@ -1364,3 +1364,17 @@ labels explain the transfer.
 Open fronts discharge by strict Haar/Baire interior.  Zero-interior boundary
 skeletons route to C27/unital/state-lift labels.  New target:
 boundary-owner skeleton rigidity.
+
+## 2026-06-29: AP84 color-packet legality matrix
+
+HYP-3459 adds a coloring/discrepancy bridge for the AP84 tail.  Gate color and
+floor correction have mixed fibers in both directions, while the pair
+`(gate_bucket,d)` is clean locally; endpoint phase still needs a nonperiodic
+height sidecar because `m=1` and `m=36` share residue but not proof phase.  New
+forum note:
+`poke-forum/posts/20260629-lrc14-ap84-color-packet-legality/post.md`.
+
+Next poke task: build the HYP-3438 survivor-gate matrix with columns
+`gate, floor, height, endpoint_phase, branch_mirror, incident_C3_Qsqrt,
+zipper_cocycle`, then prove the AP84 splice into HYP-3439 is a homomorphism
+for this color-packet product or route the first failed color to named debt.

@@ -4180,3 +4180,41 @@ allowed to forget.
 -> HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420,
 HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3410, HYP-3406,
 HYP-3311, HYP-3265, THM-523, LTI-389, LTT-289, OPEN-Q-108.
+
+## T1419: LRC14 Coloring/Discrepancy Bridge
+
+HYP-3459 goes back through the repo's coloring work and extracts a proof
+guardrail for the current AP84 tail.  The prior threads line up cleanly:
+centered edge variables and the W-polynomial say colors multiply before
+quotienting; the distance-graph note says LRC witnesses are regular circular
+colorings; colored discrepancy says CRT counts must stay color-resolved; the
+Haar zipper says margins need a cocycle side-channel; Paris-Harrington says a
+color needs extension rank.
+
+Exact AP84 audit:
+
+```text
+gate_bucket_hist={'both_outer_inner':24,'outer_only_7_gate':6,'inner_only_5_gate':4,'clean_only_lcm35':1}
+correction_hist={0:1,1:22,2:12}
+both_outer_inner -> d values [1,2]
+d=1 -> three gate buckets
+mixed_gate_plus_correction_fibers_count=0
+m=1 and m=36 share residue but not endpoint phase
+```
+
+The live theorem target is a labelled color-packet homomorphism for the AP84
+splice into HYP-3439:
+
+```text
+residue gate + floor word + height + endpoint phase + branch mirror
++ incident C3/Qsqrt(-7) color + Haar zipper cocycle.
+```
+
+Next hook: build a survivor-gate color-legality matrix over HYP-3438 gates and
+prove product closure.  If product closure fails, the first failed color should
+be routed to HYP-3453/HYP-3455, owner-current, two-adic descent,
+exact-period/state-lift, or signed-SPEC debt.
+
+-> HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452,
+HYP-3441, HYP-3438, HYP-3437, HYP-3436, HYP-3431, HYP-2991, HYP-2990,
+HYP-2263, HYP-2247, HYP-1802, THM-523, LTI-419, LTT-319, OPEN-Q-108.

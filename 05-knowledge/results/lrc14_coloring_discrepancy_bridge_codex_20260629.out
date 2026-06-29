@@ -1,0 +1,135 @@
+HYP-3459 COLORING/DISCREPANCY BRIDGE FOR LRC14
+============================================================================
+status=SYNTHESIS / exact AP84 color-quotient audit; not an LRC14 proof
+source=prior coloring/discrepancy work + HYP-3438 + HYP-3441 + HYP-3456/HYP-3457
+
+A. Prior coloring hooks being connected
+  centered edge variable: s_e=A_e-1/2 is the pair-first color coordinate
+  W-polynomial: Hamiltonian paths are sums over products of those colors
+  distance-graph LRC: a time is a regular circular coloring of G(Z,D)
+  colored discrepancy: CRT counts need one layer for each residue color
+  Haar zipper: a margin quotient must retain the local zeta side-channel
+  Paris-Harrington miniature: a color is live only with extension rank
+
+B. AP84 mod-35 color table
+  r | gate_bucket              | outer | inner | d_r | N(r) | escapes
+   1 | both_outer_inner         |   1   |   1   |   2 |    2 |       4
+   2 | both_outer_inner         |   1   |   1   |   2 |    2 |       4
+   3 | both_outer_inner         |   1   |   1   |   1 |    2 |       4
+   4 | both_outer_inner         |   1   |   1   |   1 |    2 |       4
+   5 | outer_only_7_gate        |   1   |   0   |   1 |    2 |       4
+   6 | both_outer_inner         |   1   |   1   |   1 |    3 |       6
+   7 | inner_only_5_gate        |   0   |   1   |   1 |    3 |       6
+   8 | both_outer_inner         |   1   |   1   |   2 |    4 |       8
+   9 | both_outer_inner         |   1   |   1   |   1 |    4 |       8
+  10 | outer_only_7_gate        |   1   |   0   |   1 |    4 |       8
+  11 | both_outer_inner         |   1   |   1   |   2 |    5 |      10
+  12 | both_outer_inner         |   1   |   1   |   1 |    5 |      10
+  13 | both_outer_inner         |   1   |   1   |   1 |    5 |      10
+  14 | inner_only_5_gate        |   0   |   1   |   1 |    5 |      10
+  15 | outer_only_7_gate        |   1   |   0   |   1 |    6 |      12
+  16 | both_outer_inner         |   1   |   1   |   2 |    7 |      14
+  17 | both_outer_inner         |   1   |   1   |   2 |    7 |      14
+  18 | both_outer_inner         |   1   |   1   |   1 |    7 |      14
+  19 | both_outer_inner         |   1   |   1   |   1 |    7 |      14
+  20 | outer_only_7_gate        |   1   |   0   |   1 |    7 |      14
+  21 | inner_only_5_gate        |   0   |   1   |   1 |    8 |      16
+  22 | both_outer_inner         |   1   |   1   |   2 |    9 |      18
+  23 | both_outer_inner         |   1   |   1   |   2 |    9 |      18
+  24 | both_outer_inner         |   1   |   1   |   1 |    9 |      18
+  25 | outer_only_7_gate        |   1   |   0   |   1 |    9 |      18
+  26 | both_outer_inner         |   1   |   1   |   2 |   10 |      20
+  27 | both_outer_inner         |   1   |   1   |   1 |   10 |      20
+  28 | inner_only_5_gate        |   0   |   1   |   1 |   10 |      20
+  29 | both_outer_inner         |   1   |   1   |   2 |   11 |      22
+  30 | outer_only_7_gate        |   1   |   0   |   1 |   11 |      22
+  31 | both_outer_inner         |   1   |   1   |   2 |   12 |      24
+  32 | both_outer_inner         |   1   |   1   |   2 |   12 |      24
+  33 | both_outer_inner         |   1   |   1   |   1 |   12 |      24
+  34 | both_outer_inner         |   1   |   1   |   1 |   12 |      24
+  35 | clean_only_lcm35         |   0   |   0   |   0 |   12 |      24
+
+C. Legal quotient collision audit
+  gate_bucket_hist={'both_outer_inner': 24, 'clean_only_lcm35': 1, 'inner_only_5_gate': 4, 'outer_only_7_gate': 6}
+  correction_hist={0: 1, 1: 22, 2: 12}
+  gate_bucket -> correction values:
+    both_outer_inner: [1, 2]
+    clean_only_lcm35: [0]
+    inner_only_5_gate: [1]
+    outer_only_7_gate: [1]
+  correction -> gate buckets:
+    d=0: ['clean_only_lcm35']
+    d=1: ['both_outer_inner', 'inner_only_5_gate', 'outer_only_7_gate']
+    d=2: ['both_outer_inner']
+  mixed_gate_fibers_count=1
+  mixed_correction_fibers_count=1
+  mixed_gate_plus_correction_fibers_count=0
+  finite_phase_collision_example:
+    m=1 and m=36 have the same residue r=1, but HYP-3457 says m=1 is
+    a mixed endpoint transient while HYP-3454 says m=36 is rank-one E/E.
+  verdict: gate color, floor correction, and endpoint phase are three
+    different colors.  Any proof quotient using one must emit the other
+    two as sidecars or route them to named debt.
+
+D. Discrepancy and Haar-style contrast over the period-35 word
+  observable | max cyclic discrepancy | best arc | max dyadic contrast | best dyadic block
+  outer_gate       |                   6/7 | start= 1,len= 6,sum=6,exp=36/7,dev=6/7 |                  1 | start= 6,len= 2,contrast=1
+  inner_gate       |                   4/5 | start= 1,len= 4,sum=4,exp=16/5,dev=4/5 |                  1 | start= 4,len= 2,contrast=1
+  both_gate        |                 64/35 | start= 5,len=26,sum=16,exp=624/35,dev=-64/35 |                  2 | start=12,len= 4,contrast=2
+  clean_gate       |                 34/35 | start= 1,len=34,sum=0,exp=34/35,dev=-34/35 |                  1 | start=34,len= 2,contrast=-1
+  correction       |                 93/35 | start=16,len=17,sum=25,exp=782/35,dev=93/35 |                  4 | start=17,len=32,contrast=4
+  correction_eq_2  |                 88/35 | start= 3,len=19,sum=4,exp=228/35,dev=-88/35 |                  4 | start= 6,len=32,contrast=-4
+  escape_value     |                   102 | start= 1,len=15,sum=108,exp=210,dev=-102 |                204 | start=20,len=32,contrast=204
+  reading: the mod-35 color word is low-dimensional but not flat.  The
+    nonzero Haar contrasts are exactly the places where a scalar
+    equidistribution claim would need a zipper side-channel.
+
+E. Labelled color-packet theorem target
+  For the AP84 tail S_m={1,2,...,11,13,84m}, a legal proof packet should
+  carry at least these colors:
+    1. residue gate color: outer gate iff 7 does not divide m, inner gate iff 5 does not divide m
+    2. floor word: N(m)=floor(12m/35)+d_r with d_r from the correction vector
+    3. linear height color: the quotient level floor(12m/35), not just r mod 35
+    4. endpoint phase: finite mixed transients m=1..4 versus rank-one E/E tail
+    5. branch mirror color: C1/C0 and branch0/branch1 ownership
+    6. incident core color: C3 slot plus Qsqrt(-7) sign from HYP-3441
+    7. Haar zipper color: every collapsed margin must retain or kill its zeta cocycle
+  Candidate lemma: any AP84 splice into HYP-3439 is legal if the map from
+  local survivor gates to global branch-union escapes is a homomorphism for
+  this color-packet product, or else the first failed color is routed to
+  HYP-3438/HYP-3453/HYP-3455, owner-current, two-adic descent, or SPEC debt.
+
+F. New leads from the coloring pass
+  LEAD-1: Replace raw AP-tail escape counts by a 7-field color tuple
+    (gate, floor, height, endpoint, branch, incident, zeta).
+  LEAD-2: Prove the canonical mod-35 gate law as a colored discrepancy
+    lemma over the two fixed corridors, not as a component-count census.
+  LEAD-3: Build a finite 'color legality matrix' for HYP-3438 survivor
+    gates: rows are gates, columns are the seven packet colors above.
+  LEAD-4: Reuse the W-polynomial lesson: centered colors multiply cleanly
+    before quotienting; quotient only after product closure is checked.
+  LEAD-5: Use extension-rank language for the finite m=1..4 transient
+    packet: same residue, different child phase, so residue is not a
+    recursive invariant by itself.
+
+G. Tournament Analysis
+  vertices=quotient/color proof carriers, not runners, arcs, or raw residues
+  pairwise_observable=preserved AP-tail predicate + lost-coordinate sidecar + finite-checkability
+  switch_gauge=higher retained color-packet score; ties by labelled-packet priority
+  score_hist={20: 1, 36: 1, 52: 1, 58: 1, 62: 1, 65: 1, 67: 1, 68: 1, 80: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  hamiltonian_path=labelled_color_packet_theorem -> residue_gate_plus_floor_word -> haar_zipper_cocycle_repair -> endpoint_phase_sidecar -> incident_C3_Qsqrt_router -> branch_mask_discrepancy_word -> distance_graph_regular_coloring -> raw_mod35_gate_color -> raw_scalar_escape_count
+
+H. Assumption Challenge
+  Considered vertices: runners, gaps, fixed circle sections, section
+  boundaries, wall-crossing events, residues, cover arcs, Fourier modes,
+  Haar rectangles, centered edge signs, endpoint owners, incident cores,
+  survivor gates, and proof obligations.
+  Chosen quotient: color-packet proof obligations.  It preserves AP-tail
+  gate availability, floor count, endpoint phase, and sidecar debt
+  declaration, but destroys raw runner identity, non-AP geometry, and
+  arbitrary primitive-row adjacency.  Challenged assumption: a coloring
+  quotient is harmless if its classes look balanced.  The audit shows
+  balance is insufficient unless floor, endpoint, branch, and zeta colors
+  remain reconstructible.

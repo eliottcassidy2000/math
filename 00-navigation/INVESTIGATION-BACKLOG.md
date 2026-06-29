@@ -7263,3 +7263,23 @@ on `Phi`, not as a standalone scalar proof.
   addresses, Krasner stability, HLW no-free-slider guards, BDH variance,
   Sophie Germain quartic factors, or Ramanujan-Soldner/Meissel-Mertens bulk
   constants.
+
+## LEAD (codex-2026-06-29): AP84 survivor-gate color-legality matrix
+
+- **Source:** HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3454, HYP-3453, HYP-3438,
+  HYP-3441, HYP-2991, HYP-2263, HYP-2247.
+- **Status:** OPEN.  HYP-3459 shows that the AP84 gate palette and
+  floor-correction word are distinct colors, and endpoint phase is not
+  determined by residue.
+- **Readout:** `both_outer_inner` residues split across correction values
+  `[1,2]`; correction `d=1` appears in three gate buckets; the pair
+  `(gate_bucket,d)` is clean locally; but `m=1` and `m=36` share residue while
+  living in different endpoint phases.
+- **Next steps:** Build a matrix with HYP-3438 survivor gates/components as
+  rows and color columns
+  `(gate, floor, height, endpoint_phase, branch_mirror, incident_C3_Qsqrt,
+  zipper_cocycle)`.  Prove the AP84 local-to-global splice into HYP-3439 is a
+  homomorphism for this color-packet product, or identify the first failed
+  color and route it to HYP-3453/HYP-3455, owner-current, two-adic descent,
+  exact-period/state-lift, or SPEC debt.  Do not replace this with a scalar
+  color balance claim.
