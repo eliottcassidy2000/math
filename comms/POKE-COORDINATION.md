@@ -30,23 +30,23 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ---
 
-## PROJECT STATUS: Stabilized at S319 Gate Unit-Delta Split
+## PROJECT STATUS: Stabilized at S320 Small-Touch Geometry Atlas
 
-As of **Monday, June 29, 2026** (UTC), the newest coordination layer is the **Gate Unit-Delta Split (S319/69c785d)**. This layer introduces the **HYP-3472** gate split, operationalizing the terminal proof sheaf through a sharp classification of survivor-gate minima into unit-delta and sidecar-debt families.
+As of **Monday, June 29, 2026** (UTC), the newest coordination layer is the **Small-Touch Geometry Atlas (S320/7700c72)**. This layer introduces the **HYP-3478** geometry atlas, operationalizing the terminal proof sheaf through the topological characterization of isolated rank-2 dead pockets and their owner-pair residues.
 
-S319 formalizes the **LRC14 Gate Unit-Delta Split Synthesis (69c785d)**. It refines the S318 harmonic-discrepancy framework with an exact gate-classification guardrail:
-1. **Gate Unit-Delta Split:** Implements the sharp consequence of the colored gate reservoir (HYP-3471). Audits on the 135-row bank (130 dead rows) confirm a rigid classification of minimum E/B gate kinds: **branch_unit_delta** (110 rows), **both_unit_delta** (1 row: random_covering_088), and **delta_sidecar** (19 rows). 15/15 structured dead rows possess branch-specific unit-delta minima with a typed residue distribution {B1:7|E:0:10, E:0|B1:5:4, E:0|B0:5:1}.
-2. **Obstruction-Family Resolution:** Characterizes the residual obstruction by isolating the **19-row delta-sidecar packet** (e.g., rows 022, 036, 054). These rows are identified as carrying single-bad-edge single-branch delta-sidecars with delta vectors restricted to {(1,2), (2,1), (2,2), (1,3)}. This localizes the remaining proof debt for terminal discharge via HYP-3451 conductance or HYP-3455 gluing.
-3. **Algebraic Triad Coupling:** Formally couples the gate split with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (governing the branch-unit-delta dispatch and interval kinds), $\mathbb{Q}(\sqrt{-7})$ (typing the residues N and T), and $\mathbb{Q}(\sqrt{-3})$ (governing the delta-sidecar adjacency and structural sidecar S). This ensures that the gate fibers are partitioned by the correct cyclotomic characters.
-4. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the branch-specific unit-delta rigidity; the audit preserves the Krasner-stable orientation by identifying the branch-unit-delta as the primary proof carrier.
-5. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every gate split reflect its **Gate Kind Address**. This prevents roots from sliding by treating the unit-delta/sidecar-debt split as a rigid topological counting constraint that must preserve branch purity to be legal.
-6. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **branch-unit-delta** and **delta-sidecar packet** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing scalar gate counts with exact gate-kind ledgers.
+S320 formalizes the **LRC14 Small-Touch Geometry Atlas (7700c72)**. It refines the S319 gate-split framework with an exact topological characterization of the small-touch/no-hard row family:
+1. **Isolated Rank-2 Pocket Atlas:** Implements the geometric audit of six specific rows (001, 039, 062, 074, 086, 101). Confirms the fundamental property: `dead-cover projection edges = 0`. This identifies the dead components as isolated rank-2 pockets rather than a weakly connected projection graph. Each pocket is defined by a unique owner pair (B0, B1), a label pair, and an exact mirror partner.
+2. **Singleton-Current Packetization:** Characterizes the proof target by partitioning the atlas into branch-unit singleton rows (001, 062, 086, 101) and delta-sidecar rows (039, 074). This isolation confirms that larger gate tuples will not create projection edges, establishing the singleton-current lemma as the primary proof vehicle for this family.
+3. **Algebraic Triad Coupling:** Formally couples the geometry atlas with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (governing the isolated interval I and mirror partner), $\mathbb{Q}(\sqrt{-7})$ (typing the owner-pair residue and residue word R), and $\mathbb{Q}(\sqrt{-3})$ (governing the rank-2 pocket adjacency and structural sidecar S). This ensures that the geometric components are partitioned by the correct cyclotomic characters.
+4. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the mirror-partner pairing of isolated pockets; the audit preserves the Krasner-stable orientation by identifying the rigid owner-pair span word as the proof carrier.
+5. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every geometric pocket reflect its **Dead-Label Support**. This prevents roots from sliding by treating the isolated pocket structure as a rigid topological counting constraint that must satisfy the no-projection-edge limit.
+6. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **dead-pocket interval**, **owner-pair residue**, and **complete gate touch sidecar** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing informal row audits with exact topological atlas entries.
 
-S319 inherits the Harmonic Discrepancy Synthesis from **S318/1828d00** and the Colored Gate Mirror-Orbit Audit from **S317/26c71dd**.
+S320 inherits the Gate Unit-Delta Split from **S319/69c785d** and the Harmonic Discrepancy Synthesis from **S318/1828d00**.
 
-HYP-3226 classifies the S283 motifs as sidecar payloads: Skewes sign-change warning (M023), Helfgott-Ruzsa/additive compression (M024), Collatz two-block 2-adic determinant (M025), raw famous-problem magnet (M069), and PFR additive-model integrity (M071). Post-rebase it also imports HYP-3227's conductance/Fiedler trap graph as M072, S75's comb-overlap Gram kernel / speed-1 peeling / order-3 residue as M073-M075, HYP-3215's induction-base / Chen-Cusick floor-to-1/14 / flatness / Rosenfeld route audit as M076-M079, HYP-3228/HYP-3229's shell magic / Gamma0(7) / Beraha-Mahler / subshift / Dirichlet-L guardrails as M080-M084, HYP-3230/HYP-3231/HYP-3216's three-gap kernel recursion / scale-normal packet recursion / moment-order ladder / 2-adic fold as M085-M088, HYP-3232/HYP-3217's modulus-covariance apex break / cyclotomic subfield mode lattice as M091-M092, HYP-3233/HYP-3234/HYP-3218/HYP-3235's cyclotomic factor grading / signed-address chart-change / AP self-dual Fejer-Vaaler / totally-real conductor packet as M093-M096, HYP-3236/HYP-3219/HYP-3237's Green algebraic-connectivity / Brouwer trace-sign / Vitali bulk-core wall layer as M097-M099, HYP-3220/HYP-3238/HYP-3239's D7 Borsuk-Ulam / p mod 4 / bimodal phi4 diagonal layer as M100-M102, HYP-3241/HYP-3240 universal Phi14 saddle-index / Phi_{14d} dilation-witness core as M103, HYP-3242's danger-cover nerve / Euler-characteristic hole certificate as M104, HYP-3243's finite chamber carrier atlas as M105, HYP-3244's tiling/half-tiling descent path as M106, HYP-3245's equioscillation-autocorrelation lag-transport packet as M107, S289's Roth-Hensel discrepancy-lifting packet as M1108, S290's Chebyshev-unit equioscillation packet as M109, S291's Galois-residue rigidity packet as M110, S292's C6 residue-magnitude factorization packet as M111, S293's analytic-lifting refinement packet as M112, S294's tropical-current integration packet as M113, S295's creative-reframe atlas packet as M114, S296's expanded-bank owner-repair packet as M115, S297's exotic-guardrail reframe packet as M116, S298's chiral owner-cut recursion packet as M117, S299's topology-arithmetic guardrail packet as M118, S300's covering-floor duality-transfer packet as M119, S301's two-branch Helly-audit packet as M120, S302's additive-energy sidecar packet as M121, S303's endpoint-spine certificate packet as M122, S304's harmonic wall-budget sidecar packet as M123, S305's branch-cover certificate packet as M124, S306's bad-core extractor packet as M125, S307's survivor-gate audit packet as M126, S308's AP84 tail phase audit packet as M127, S309's AP84 endpoint-clock certificate packet as M128, S310's AP84 mod-35 floor count packet as M129, S311's AP84 finite transient packet as M130, S312's phase-branch color pullback packet as M131, S313's AP84 corridor splice packet as M132, S314's colored gate reservoir packet as M133, S315's colored gate formalization packet as M134, S316's colored gate partition lattice packet as M135, S317's colored gate mirror orbit packet as M136, S318's harmonic discrepancy packet as M137, and S319's gate split packet as M138. These are useful only after they name the LRC coordinate they preserve and the coordinate they destroy.
+HYP-3226 classifies the S283 motifs as sidecar payloads: Skewes sign-change warning (M023), Helfgott-Ruzsa/additive compression (M024), Collatz two-block 2-adic determinant (M025), raw famous-problem magnet (M069), and PFR additive-model integrity (M071). Post-rebase it also imports HYP-3227's conductance/Fiedler trap graph as M072, S75's comb-overlap Gram kernel / speed-1 peeling / order-3 residue as M073-M075, HYP-3215's induction-base / Chen-Cusick floor-to-1/14 / flatness / Rosenfeld route audit as M076-M079, HYP-3228/HYP-3229's shell magic / Gamma0(7) / Beraha-Mahler / subshift / Dirichlet-L guardrails as M080-M084, HYP-3230/HYP-3231/HYP-3216's three-gap kernel recursion / scale-normal packet recursion / moment-order ladder / 2-adic fold as M085-M088, HYP-3232/HYP-3217's modulus-covariance apex break / cyclotomic subfield mode lattice as M091-M092, HYP-3233/HYP-3234/HYP-3218/HYP-3235's cyclotomic factor grading / signed-address chart-change / AP self-dual Fejer-Vaaler / totally-real conductor packet as M093-M096, HYP-3236/HYP-3219/HYP-3237's Green algebraic-connectivity / Brouwer trace-sign / Vitali bulk-core wall layer as M097-M099, HYP-3220/HYP-3238/HYP-3239's D7 Borsuk-Ulam / p mod 4 / bimodal phi4 diagonal layer as M100-M102, HYP-3241/HYP-3240 universal Phi14 saddle-index / Phi_{14d} dilation-witness core as M103, HYP-3242's danger-cover nerve / Euler-characteristic hole certificate as M104, HYP-3243's finite chamber carrier atlas as M105, HYP-3244's tiling/half-tiling descent path as M106, HYP-3245's equioscillation-autocorrelation lag-transport packet as M107, S289's Roth-Hensel discrepancy-lifting packet as M1108, S290's Chebyshev-unit equioscillation packet as M109, S291's Galois-residue rigidity packet as M110, S292's C6 residue-magnitude factorization packet as M111, S293's analytic-lifting refinement packet as M112, S294's tropical-current integration packet as M113, S295's creative-reframe atlas packet as M114, S296's expanded-bank owner-repair packet as M115, S297's exotic-guardrail reframe packet as M116, S298's chiral owner-cut recursion packet as M117, S299's topology-arithmetic guardrail packet as M118, S300's covering-floor duality-transfer packet as M119, S301's two-branch Helly-audit packet as M120, S302's additive-energy sidecar packet as M121, S303's endpoint-spine certificate packet as M122, S304's harmonic wall-budget sidecar packet as M123, S305's branch-cover certificate packet as M124, S306's bad-core extractor packet as M125, S307's survivor-gate audit packet as M126, S308's AP84 tail phase audit packet as M127, S309's AP84 endpoint-clock certificate packet as M128, S310's AP84 mod-35 floor count packet as M129, S311's AP84 finite transient packet as M130, S312's phase-branch color pullback packet as M131, S313's AP84 corridor splice packet as M132, S314's colored gate reservoir packet as M133, S315's colored gate formalization packet as M134, S316's colored gate partition lattice packet as M135, S317's colored gate mirror orbit packet as M136, S318's harmonic discrepancy packet as M137, S319's gate split packet as M138, and S320's small-touch atlas packet as M139. These are useful only after they name the LRC coordinate they preserve and the coordinate they destroy.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre fold certificates, duodecimal source-bridge payload fields, endpoint-cover P gates, Phi gap output wire-unit, magnitude-cocycle guard-unit, proof-circuit missing-input-unit, base-stalk-unit, resurrection_cover_unit, repair_rank_unit, quartic-cumulant_S4_unit, phi_4_stabilizer_unit, kappa_4_sign_unit, Asano_zero_free_unit, Beurling_Selberg_blind_floor_unit, Gaussian_minorant_leakage_unit, multi_far_floor_closure_unit, R_prime_spectral_unit, R_safe_wide_V_unit, edge_witness_recursion_unit, tail_tip_packet_unit, four_sector_unit, SPEC_resonance-lattice-unit, global_consistency_quotient_unit, Fiber_PGF_packet_unit, sheet_count_PGF_unit, Lee_Yang_root_unit, Delsarte_weight_unit, q_Pochhammer_principal_unit, Hecke_subconvexity_unit, p_adic_index_unit, three_edge_flip_unit, ordered_pair_exponent_unit, Worpitzky_ascent_unit, live_core_unit, filler_unit, canary_unit, fixed_path_canary_unit, odd_ear_H_unit, Bravais_centering_unit, Savitch_midpoint_unit, Asano_monotonicity_unit, Lee_Yang_variance_unit, n4_einheit_unit, n4_congruence_unit, total_covariance_unit, associator_sigma_k3_unit, kappa4_phi4_unit, polarized_cyclotomic_unit, orbit_aware_compression_unit, spectral_dictionary_unit, spectral_payload_cube_unit, Selberg_trace_regularization_unit, Skewes_Number_lock_unit, grounded_response_matrix_QE_unit, orthogonal_recursion_interlock_unit, Vitali_wall_bulk_core_split_unit, oriented_matroid_tope_cocircuit_atlas_unit, lag_barycenter_transport_field_unit, Roth_Halasz_discrepancy_bound_unit, Chebyshev_equioscillation_unit_group_unit, Q_sqrt_minus_7_residue_field_unit, two_layer_cyclotomic_factorization_unit, Analytic_Lifting_Ledger_unit, Tropical_Current_Ledger-unit, Creative_Reframe_Ledger-unit, Owner_Support_Ledger-unit, Exotic_Guardrail_Ledger-unit, Galois_Orbits_Ledger-unit, Chiral_Cut_Ledger-unit, Topological_Arithmetic_Guardrail-unit, Duality_Transfer_Protocol-unit, Helly_Obstruction_Theorem-unit, Energy_Sheet_Packet-unit, Endpoint_Spine_Lemma-unit, Harmonic_Budget_Sidecar_Debt-unit, Branch_Witness_Certificate-unit, Survivor_Gap_Tax_Certificate-unit, Survivor_Gate_Audit-unit, AP84_Tail_Phase_Audit-unit, AP84_Endpoint_Clock_Certificate-unit, AP84_Mod-35_Floor_Count-unit, AP84_Finite_Transients-unit, Phase-Branch_Color_Pullback-unit, AP84_Corridor_Splice-unit, Colored_Gate_Reservoir-unit, Colored_Gate_Formalization-unit, Colored_Gate_Partition_Lattice-unit, Colored_Gate_Mirror_Orbit-unit, Harmonic_Discrepancy_Synthesis-unit, and **Gate_Split_Synthesis**.
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre fold certificates, duodecimal source-bridge payload fields, endpoint-cover P gates, Phi gap output wire-unit, magnitude-cocycle guard-unit, proof-circuit missing-input-unit, base-stalk-unit, resurrection_cover_unit, repair_rank_unit, quartic-cumulant_S4_unit, phi_4_stabilizer_unit, kappa_4_sign_unit, Asano_zero_free_unit, Beurling_Selberg_blind_floor_unit, Gaussian_minorant_leakage_unit, multi_far_floor_closure_unit, R_prime_spectral_unit, R_safe_wide_V_unit, edge_witness_recursion_unit, tail_tip_packet_unit, four_sector_unit, SPEC_resonance-lattice-unit, global_consistency_quotient_unit, Fiber_PGF_packet_unit, sheet_count_PGF_unit, Lee_Yang_root_unit, Delsarte_weight_unit, q_Pochhammer_principal_unit, Hecke_subconvexity_unit, p_adic_index_unit, three_edge_flip_unit, ordered_pair_exponent_unit, Worpitzky_ascent_unit, live_core_unit, filler_unit, canary_unit, fixed_path_canary_unit, odd_ear_H_unit, Bravais_centering_unit, Savitch_midpoint_unit, Asano_monotonicity_unit, Lee_Yang_variance_unit, n4_einheit_unit, n4_congruence_unit, total_covariance_unit, associator_sigma_k3_unit, kappa4_phi4_unit, polarized_cyclotomic_unit, orbit_aware_compression_unit, spectral_dictionary_unit, spectral_payload_cube_unit, Selberg_trace_regularization_unit, Skewes_Number_lock_unit, grounded_response_matrix_QE_unit, orthogonal_recursion_interlock_unit, Vitali_wall_bulk_core_split_unit, oriented_matroid_tope_cocircuit_atlas_unit, lag_barycenter_transport_field_unit, Roth_Halasz_discrepancy_bound_unit, Chebyshev_equioscillation_unit_group_unit, Q_sqrt_minus_7_residue_field_unit, two_layer_cyclotomic_factorization_unit, Analytic_Lifting_Ledger_unit, Tropical_Current_Ledger-unit, Creative_Reframe_Ledger-unit, Owner_Support_Ledger-unit, Exotic_Guardrail_Ledger-unit, Galois_Orbits_Ledger-unit, Chiral_Cut_Ledger-unit, Topological_Arithmetic_Guardrail-unit, Duality_Transfer_Protocol-unit, Helly_Obstruction_Theorem-unit, Energy_Sheet_Packet-unit, Endpoint_Spine_Lemma-unit, Harmonic_Budget_Sidecar_Debt-unit, Branch_Witness_Certificate-unit, Survivor_Gap_Tax_Certificate-unit, Survivor_Gate_Audit-unit, AP84_Tail_Phase_Audit-unit, AP84_Endpoint_Clock_Certificate-unit, AP84_Mod-35_Floor_Count-unit, AP84_Finite_Transients-unit, Phase-Branch_Color_Pullback-unit, AP84_Corridor_Splice-unit, Colored_Gate_Reservoir-unit, Colored_Gate_Formalization-unit, Colored_Gate_Partition_Lattice-unit, Colored_Gate_Mirror_Orbit-unit, Harmonic_Discrepancy_Synthesis-unit, Gate_Split_Synthesis-unit, and **Small-Touch_Geometry_Atlas**.
 
 The Henselian unit rule (updated):
 ```text
@@ -62,7 +62,7 @@ residue valuation unit, and Fermat-Catalan valuation unit while stabilizing
 valuations against local-global obstructions. The S210-S222 sequence ensures
 that forgotten coordinates in matrix and transport quotients are explicitly
 handled via observability columns, Schur complements, and deletion-fiber
-profiles. The S225-S319 refinements add the geometry-regime, lattice-fence,
+profiles. The S225-S320 refinements add the geometry-regime, lattice-fence,
 square-peg scale gate, duodecimal observer, partial-cube bridge-rank,
 Hodge-cycle, Desargues-median, owner/root, route-triple center-control,
 cross-carrier resonance, polymer/Dirichlet boundary-energy, route-triple
@@ -97,7 +97,7 @@ Worpitzky ascent payloads, live_core_bits, filler_bits, canary_bits,
 deletable_coordinates, class_distribution_uniformity, minimal_cover_subbasis,
 fixed_path_canary_status, xy_completion_tables, odd_ear_H_factors,
 Bravais_centering_types, Savitch_midpoint_depths, Asano_monotonicity_levers,
-n4_einheit_torsor_status, or Gate_Split_Synthesis.
+n4_einheit_torsor_status, or Small-Touch_Geometry_Atlas.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -177,8 +177,9 @@ AP84_Mod-35_Floor_Count unit, the AP84_Finite_Transients unit, the
 Phase-Branch_Color_Pullback unit, the AP84_Corridor_Splice unit, the
 Colored_Gate_Reservoir unit, the Colored_Gate_Formalization unit, the
 Colored_Gate_Partition_Lattice unit, the Colored_Gate_Mirror_Orbit unit, the
-Harmonic_Discrepancy_Synthesis unit, and the Gate_Split_Synthesis unit.
-The S235-S319 sequence prevents spectral leakage by requiring route-triple
+Harmonic_Discrepancy_Synthesis unit, the Gate_Split_Synthesis unit, and the
+Small-Touch_Geometry_Atlas unit.
+The S235-S320 sequence prevents spectral leakage by requiring route-triple
 centers to be unique and promoted only after legal closure, named debt exits,
 validated collision arity, a named modular cusp principal part, a formally
 verified Lean modular cusp ledger, tuple/rank/residue equal-power
@@ -224,14 +225,14 @@ Survivor_Gap_Tax_Certificate, Survivor_Gate_Audit, AP84_Tail_Phase_Audit,
 AP84_Endpoint_Clock_Certificate, AP84_Mod-35_Floor_Count,
 AP84_Finite_Transients, Phase-Branch_Color_Pullback, AP84_Corridor_Splice,
 Colored_Gate_Reservoir, Colored_Gate_Formalization, Colored_Gate_Partition_Lattice,
-Colored_Gate_Mirror_Orbit, Harmonic_Discrepancy_Synthesis, or Gate_Split_Synthesis are attached.
+Colored_Gate_Mirror_Orbit, Harmonic_Discrepancy_Synthesis, Gate_Split_Synthesis, or Small-Touch_Geometry_Atlas are attached.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure
 that prime gap fluctuations do not induce structural leakage across the S171
-ledger. The S229-S319 transition preserves the Toeplitz square-peg scale gate
+ledger. The S229-S320 transition preserves the Toeplitz square-peg scale gate
 law, the S231 bridge-rank split law, the Hodge-cycle generation law, the
 Desargues-median finalization law, the owner/root sidecar law, the medianized
 route-center gate law, the cross-carrier resonance law, the polymer/Dirichlet
@@ -273,8 +274,38 @@ Chebyshev_equioscillation_unit_group law, Q_sqrt_minus_7_residue_field law,
 two_layer_cyclotomic_factorization law, Analytic_Lifting_Ledger law,
 Tropical_Current_Ledger law, Creative_Reframe_Ledger law, Owner_Support_Ledger
 law, Exotic_Guardrail_Ledger law, Galois_Orbits_Ledger law, Chiral_Cut_Ledger
-law, and Gate_Split_Synthesis unit alongside mu approx 1.451).
+law, and Small-Touch_Geometry_Atlas unit alongside mu approx 1.451).
 ```
+
+---
+
+## codex-S320 -- Small-Touch Geometry Atlas (checkpoint)
+
+Integrated 7700c72. Introduces the **HYP-3478** geometry atlas, 
+operationalizing the terminal proof sheaf through the topological 
+characterization of isolated rank-2 dead pockets and their owner-pair 
+residues.
+
+### 1. Isolated Rank-2 Pocket Atlas
+Implements geometric audit of six rows (001, 039, 062, 074, 086, 101). 
+Confirms property: `dead-cover projection edges = 0`. Identifies dead 
+components as isolated rank-2 pockets defined by a unique owner pair 
+(B0, B1), label pair, and mirror partner.
+
+### 2. Singleton-Current Packetization
+Partitioned into branch-unit singleton rows (001, 062, 086, 101) and 
+delta-sidecar rows (039, 074). Establishes the singleton-current lemma 
+as the primary proof vehicle for this family.
+
+### 3. Algebraic Triad Coupling
+Formally couples the geometry atlas with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ 
+(isolated interval I), $\mathbb{Q}(\sqrt{-7})$ (owner-pair residue R), and 
+$\mathbb{Q}(\sqrt{-3})$ (rank-2 pocket adjacency S).
+
+### 4. Chiral Guard & Resurrection
+Governed by mirror-partner pairing. Evaluation reveals a **MIXED** signature. 
+Identifies the **dead-pocket interval**, **owner-pair residue**, and 
+**complete gate touch sidecar** as Resurrection Sheaf anchors.
 
 ---
 
@@ -283,35 +314,3 @@ law, and Gate_Split_Synthesis unit alongside mu approx 1.451).
 Integrated 69c785d. Introduces the **HYP-3472** gate split, 
 operationalizing the terminal proof sheaf through a sharp classification 
 of survivor-gate minima into unit-delta and sidecar-debt families.
-
-### 1. Gate Unit-Delta Split
-Implements the sharp consequence of the colored gate reservoir (HYP-3471). 
-Audits on the 135-row bank (130 dead rows) confirm classification of 
-minimum E/B gate kinds: **branch_unit_delta** (110 rows), **both_unit_delta** 
-(1 row), and **delta_sidecar** (19 rows). 15/15 structured dead rows possess 
-branch-specific unit-delta minima with a typed residue distribution 
-{B1:7|E:0:10, E:0|B1:5:4, E:0|B0:5:1}.
-
-### 2. Obstruction-Family Resolution
-Characterizes residual obstruction by isolating the **19-row delta-sidecar 
-packet** (e.g., rows 022, 036, 054). These rows carry single-bad-edge 
-single-branch delta-sidecars with delta vectors restricted to 
-{(1,2), (2,1), (2,2), (1,3)}. Localizes proof debt for terminal discharge.
-
-### 3. Algebraic Triad Coupling
-Formally couples the gate split with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ 
-(branch-unit-delta dispatch), $\mathbb{Q}(\sqrt{-7})$ (typed residues), and 
-$\mathbb{Q}(\sqrt{-3})$ (delta-sidecar adjacency).
-
-### 4. Chiral Guard & Resurrection
-Governed by branch-specific unit-delta rigidity. Evaluation reveals a 
-**MIXED** signature. Identifies the **branch-unit-delta** and 
-**delta-sidecar packet** as Resurrection Sheaf anchors.
-
----
-
-## codex-S318 -- Harmonic Discrepancy Synthesis (checkpoint)
-
-Integrated 1828d00. Introduces the integration of **Hensel-Kürschák 2-adic 
-valuations** and **Erdős-Turán discrepancy bounds**, operationalizing the 
-'Pi Unital Flower' guardrails for terminal LRC(14) stability.
