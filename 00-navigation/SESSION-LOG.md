@@ -1,3 +1,32 @@
+## codex-2026-06-29 -- HYP-3454 AP84 endpoint-clock certificate
+
+Continued the AP-tail bridge after HYP-3439/HYP-3452 by adding
+HYP-3454/T1414/LTI-414/LTT-314 plus script/result/reflection:
+
+```text
+04-computation/lrc14_ap84_endpoint_clock_certificate_codex_20260629.py
+05-knowledge/results/lrc14_ap84_endpoint_clock_certificate_codex_20260629.out
+05-knowledge/hypotheses/HYP-3454-lrc14-ap84-endpoint-clock-certificate.md
+07-reflections/lrc14-ap84-endpoint-clock-certificate-codex-20260629.md
+```
+
+Exact audit through `m=70` for `{1,2,...,11,13,84m}`: no endpoint failures on
+the checked tail `m>=5`; the interval
+`[(14ceil(48m/7)+1)/(588m),(14ceil(48m/7)+13)/(588m)]` lies inside the fixed
+low corridor `[8/49,6/35]`, has length `1/(49m)`, and carries rank-one labels
+`L[E:84m] R[E:84m]`.  Minimum low-corridor margins are `1/41160` and
+`1/2940`.  The finite transients `m=1..4` remain mixed `E:84m/B1:5`.
+
+The escape count is reduced to a period-`35` boundary clock:
+`escapes(m)=2*(floor(12m/35)+d[(m-1) mod 35])`, with no checked failures and
+no checked period-shift failures; the formula shifts by `+24` under
+`m -> m+35`.  Next proof hook: prove that clock as a floor-count lemma, then
+splice it into the HYP-3439 rank-`5` AP-tail descent.
+
+Rebase integration note: incoming HYP-3453 is the broader gate-escape
+transversal router.  HYP-3454 should be used as its AP-tail endpoint-clock
+sidecar, not as a replacement for the gate-transversal theorem.
+
 ## codex-2026-06-29 -- HYP-3452 AP84 tail component phase
 
 Continued the HYP-3451 component-cover graph route by isolating the canonical

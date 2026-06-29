@@ -32,7 +32,7 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S308 AP84 Tail Phase Audit
 
-As of **Monday, June 29, 2026** (UTC), the newest coordination layer is the **AP84 Tail Phase Audit (S308/51afea6)**. This layer introduces the HYP-3452 audit protocol, operationalizing the terminal proof sheaf through an exact phase transition classification for Arithmetic Progression tails.
+As of **Monday, June 29, 2026** (UTC), the newest coordination layer is the **AP84 Tail Phase Audit (S308/51afea6)**. This layer introduces the HYP-3452 audit protocol, operationalizing the terminal proof sheaf through an exact phase transition classification for Arithmetic Progression tails.  HYP-3454 now sharpens this layer by turning the AP84 rank-one endpoint phase into a closed-form endpoint-clock certificate plus a remaining mod-35 boundary-count lemma.
 
 S308 formalizes the **LRC14 AP84 Tail Phase Synthesis (51afea6)**. It refines the S307 survivor-gate framework with AP-tail component anchors:
 1. **AP84 Tail Phase Audit:** Implements a structural classification of the canonical tail family $S_m = \{1,2,...,11,13,84m\}$. A stress audit for $m=1..70$ identifies a definitive phase transition at $m \ge 5$, where the survivor-gate escape becomes a rank-one $E:84m/E:84m$ harmonic component.

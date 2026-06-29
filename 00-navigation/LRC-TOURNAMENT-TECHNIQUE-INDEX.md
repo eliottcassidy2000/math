@@ -9201,3 +9201,38 @@ quotient_legality_status
   HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425,
   HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-413, LTT-313, T1413,
   OPEN-Q-108.
+
+## LTT-314: AP84 Endpoint-Clock Tournament
+
+- **Move:** Treat the AP-tail endpoint-clock proof as a tournament over proof
+  obligations.  Vertices are the closed-form endpoint interval, low-corridor
+  containment inequalities, moving `E:84m` gap certificate, finite transients
+  `m=1..4`, mod-`35` escape boundary clock, component-cover reaudit, and raw
+  dead-fraction scalar.
+- **LRC use:** HYP-3454 narrows HYP-3452's phase theorem.  For checked
+  `m=5..70`, `I_m=[(14ceil(48m/7)+1)/(588m),(14ceil(48m/7)+13)/(588m)]`
+  lies inside `[8/49,6/35]`, has length `1/(49m)`, and is the rank-one
+  `L[E:84m] R[E:84m]` component-cover escape.  Transients `m=1..4` are finite
+  mixed `E/B1` cases, and the escape count has a checked period-`35` clock
+  with shift `+24` under `m -> m+35`.
+- **Preserves:** endpoint labels, low-corridor containment margins, moving
+  even-wall gap address, branch-union escape predicate, and residue-count
+  sidecar.
+- **Forgets / guardrail:** full non-AP component adjacency and raw dead
+  fraction are discarded; use this only as the AP-tail bridge lemma for
+  HYP-3439/HYP-3452.
+- **Pairwise observable:** endpoint exactness, low-corridor containment,
+  residue-clock payload, and scalar-firewall safety.
+- **Switch/gauge:** higher retained proof payload first; ties use the
+  endpoint-clock route.
+- **Fingerprint:** `7` vertices, score histogram
+  `{15:1,45:1,50:2,55:1,56:1,58:1}`, no directed `3`-cycles, and Hamiltonian
+  path
+  `closed_form_endpoint_interval -> low_corridor_containment_inequalities -> moving_E84m_gap_certificate -> finite_transients_m1_to_m4 -> mod35_escape_boundary_clock -> component_cover_reaudit -> raw_dead_fraction_peak`.
+- **Next hook:** prove the mod-`35` floor-count lemma for alive component
+  boundaries, then splice the endpoint-clock clause into the HYP-3439 rank-`5`
+  AP-tail descent.
+- **Pointers:** HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438,
+  HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429,
+  HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963,
+  THM-523, LTI-414, LTT-314, T1414, OPEN-Q-108.

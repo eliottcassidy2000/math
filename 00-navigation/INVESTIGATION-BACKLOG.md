@@ -42,6 +42,34 @@ and `07-reflections/lrc14-gate-escape-transversal-router-codex-20260629.md`.
 Next step: formalize the boundary-mixed-component step and test it first on
 the AP-with-`84m` family, where the gates are exactly the corridor-fence
 endpoints `B1:7|E`, `E|B1:5`, `B0:5|E`, and `E|B0:7`.
+## Lead codex-2026-06-29: AP84 endpoint-clock certificate
+
+**Status:** EVIDENCE / endpoint-inequality and residue-clock certificate; not
+proof (HYP-3454/T1414/LTI-414/LTT-314), sharpening HYP-3452's AP-tail phase
+and HYP-3439's rank-`5` AP-tail descent.  This is the AP-tail endpoint-clock
+companion to incoming HYP-3453's bank-level gate-escape transversal router.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3454-lrc14-ap84-endpoint-clock-certificate.md`,
+script
+`04-computation/lrc14_ap84_endpoint_clock_certificate_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_ap84_endpoint_clock_certificate_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-ap84-endpoint-clock-certificate-codex-20260629.md`.
+
+Readout: for `{1,2,...,11,13,84m}`, the checked tail `m=5..70` has no
+endpoint failures.  The interval
+`[(14ceil(48m/7)+1)/(588m),(14ceil(48m/7)+13)/(588m)]` lies inside the fixed
+low corridor `[8/49,6/35]`, has length `1/(49m)`, and is the rank-one
+`L[E:84m] R[E:84m]` component-cover escape.  Minimum low-corridor margins are
+`1/41160` and `1/2940`.  The transients `m=1..4` are finite mixed
+`E:84m/B1:5` cases.
+
+Next: prove the mod-`35` component-boundary clock as an all-`m` floor-count
+lemma.  The checked law has no failures and shifts by `+24` escapes under
+`m -> m+35`; once proved, it supplies the AP-tail clause needed by the
+HYP-3439 bridge.
 
 ## Lead codex-2026-06-29: HYP-3438 survivor-gate word audit
 
