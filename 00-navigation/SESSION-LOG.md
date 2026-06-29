@@ -35624,3 +35624,31 @@ lower-delta mirror bypass.  The additive owner rim
 `(23,45),(93,113),(147,169)+173` and doubling branch fold `u=2t mod 1` give a
 concrete `n+2` versus `n*2` recursion collision.  Next task is a
 seam-complement flow audit routing the `282` witnesses to low-rank escapes.
+
+## codex-2026-06-29 -- multidenominator rho_D and k<12 attacker floor -- HYP-3530
+
+Worked both requested directions after the HYP-3529 R-tail checkpoint:
+finite multi-denominator global-witness criterion and the k<12 union-bound
+attacker floor.  Added
+`04-computation/lrc14_multidenom_rhostar_attacker_floor_codex_20260629.py`,
+stored
+`05-knowledge/results/lrc14_multidenom_rhostar_attacker_floor_codex_20260629.out`,
+and wrote HYP-3530 plus reflection.
+
+Exact readout: `rho_D(P,E;theta)` over `D<=196` is abundant at the correct
+global threshold `theta=1/7` on the THM-530 hard rows: k=8 binding
+`max_D rho_D=12/13 at D=13`, k=9 `4/5 at D=5`, k=10 `10/11 at D=11`, k=11
+`11/12 at D=12`, with continuous rho values matching the THM-530 exact checks.
+The old via-max refutation family has `rho*_{1/7}=515/1092` but
+`rho*_{2/7}=0`; nevertheless `D=14` has isolated `theta=2/7` grid witnesses,
+so `max_D rho_D` is a finite certificate bank, not a stand-alone positive
+measure theorem.
+
+For the union-bound side, defined attackers by
+`mu_1/7(E)<thr_k=1-gp_min(k)` and exactly scanned primitive normalized bounded
+cores through `span<=k+5` for k=8..11.  Shapes checked:
+`1716,3003,5005,8008`; attackers `0` throughout; below-consecutive shapes `0`;
+near-attackers `0`; consecutive remains the minimizer with floors
+`1891/5880`, `28117/84084`, `242/637`, `10078/28665`.  Proof target is now
+large-span gentleness: prove every span>`k+5` row has `mu_1/7>=thr_k`, or
+extend the finite bank until a known spread lemma applies.

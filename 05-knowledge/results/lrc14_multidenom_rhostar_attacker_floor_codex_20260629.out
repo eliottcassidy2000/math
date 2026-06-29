@@ -1,0 +1,286 @@
+============================================================================================
+HYP-3530 LRC(14): multi-denominator rho_D and k<12 attacker floor
+============================================================================================
+All displayed exact quantities are Fraction arithmetic; decimals are only annotations.
+rho_D is a finite denominator witness/opportunity density, not a completed
+reconstructed-cover proof.  The global-witness threshold is theta=1/7.
+============================================================================================
+A. Multi-denominator finite witness criterion max_D rho_D
+============================================================================================
+D-bank: all denominators 2..196.  D<=14 and 14m subfamilies are tracked.
+Strict inequalities are used at grid points: safe means ||p*a/D|| >= 1/14,
+and good means maxgap > theta.
+
+--------------------------------------------------------------------------------------------
+Scenario: k=8 THM-530 binding row
+  P=(1, 5, 7, 8, 9)
+  E=(0, 1, 2, 3, 4, 5, 6, 7)  k=8 span=7
+
+  global theta=1/7:
+    continuous rho*=2243/5880 = 0.38146259; meas(G_P)=2243/5880 = 0.38146259; mu=691/735 = 0.94013605; intervals=18
+    max_D<=196 rho_D=12/13 = 0.92307692 at D=13 count=12 family=small_q_2..14 residues=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+    first positive denominator: D=6 rho_D=1/3 residues=(1, 5)
+    family best:
+      small_q_2..14 : D= 13 rho_D=12/13 count=12
+      7m_grid       : D= 77 rho_D=34/77 count=34
+      14m_grid      : D= 70 rho_D=17/35 count=34
+      other_grid    : D= 26 rho_D=8/13 count=16
+    positive denominators in bank: 188/195
+
+  via-max theta=2/7:
+    continuous rho*=2473/17640 = 0.14019274; meas(G_P)=2243/5880 = 0.38146259; mu=163/490 = 0.33265306; intervals=8
+    max_D<=196 rho_D=4/13 = 0.30769231 at D=13 count=4 family=small_q_2..14 residues=(1, 6, 7, 12)
+    first positive denominator: D=10 rho_D=1/5 residues=(1, 9)
+    family best:
+      small_q_2..14 : D= 13 rho_D=4/13 count=4
+      7m_grid       : D= 21 rho_D=4/21 count=4
+      14m_grid      : D=126 rho_D=10/63 count=20
+      other_grid    : D= 41 rho_D=10/41 count=10
+    positive denominators in bank: 185/195
+
+--------------------------------------------------------------------------------------------
+Scenario: k=9 union binding row
+  P=(1, 11, 12, 13)
+  E=(0, 1, 2, 3, 4, 5, 6, 7, 8)  k=9 span=8
+
+  global theta=1/7:
+    continuous rho*=991/2860 = 0.34650350; meas(G_P)=1979/4004 = 0.49425574; mu=247/294 = 0.84013605; intervals=28
+    max_D<=196 rho_D=4/5 = 0.80000000 at D=5 count=4 family=small_q_2..14 residues=(1, 2, 3, 4)
+    first positive denominator: D=5 rho_D=4/5 residues=(1, 2, 3, 4)
+    family best:
+      small_q_2..14 : D=  5 rho_D=4/5 count=4
+      7m_grid       : D=189 rho_D=22/63 count=66
+      14m_grid      : D=168 rho_D=8/21 count=64
+      other_grid    : D= 25 rho_D=14/25 count=14
+    positive denominators in bank: 183/195
+
+  via-max theta=2/7:
+    continuous rho*=67/980 = 0.06836735; meas(G_P)=1979/4004 = 0.49425574; mu=277/980 = 0.28265306; intervals=6
+    max_D<=196 rho_D=1/7 = 0.14285714 at D=14 count=2 family=small_q_2..14 residues=(1, 13)
+    first positive denominator: D=14 rho_D=1/7 residues=(1, 13)
+    family best:
+      small_q_2..14 : D= 14 rho_D=1/7 count=2
+      7m_grid       : D= 21 rho_D=2/21 count=2
+      14m_grid      : D= 56 rho_D=3/28 count=6
+      other_grid    : D= 31 rho_D=4/31 count=4
+    positive denominators in bank: 174/195
+
+--------------------------------------------------------------------------------------------
+Scenario: k=10 union binding row
+  P=(1, 12, 13)
+  E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  k=10 span=9
+
+  global theta=1/7:
+    continuous rho*=3803/9555 = 0.39801151; meas(G_P)=55/91 = 0.60439560; mu=38/49 = 0.77551020; intervals=24
+    max_D<=196 rho_D=10/11 = 0.90909091 at D=11 count=10 family=small_q_2..14 residues=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    first positive denominator: D=5 rho_D=4/5 residues=(1, 2, 3, 4)
+    family best:
+      small_q_2..14 : D= 11 rho_D=10/11 count=10
+      7m_grid       : D=189 rho_D=74/189 count=74
+      14m_grid      : D=168 rho_D=37/84 count=74
+      other_grid    : D= 25 rho_D=16/25 count=16
+    positive denominators in bank: 186/195
+
+  via-max theta=2/7:
+    continuous rho*=57/980 = 0.05816327; meas(G_P)=55/91 = 0.60439560; mu=557/2205 = 0.25260771; intervals=6
+    max_D<=196 rho_D=1/7 = 0.14285714 at D=14 count=2 family=small_q_2..14 residues=(1, 13)
+    first positive denominator: D=14 rho_D=1/7 residues=(1, 13)
+    family best:
+      small_q_2..14 : D= 14 rho_D=1/7 count=2
+      7m_grid       : D= 21 rho_D=2/21 count=2
+      14m_grid      : D= 56 rho_D=3/28 count=6
+      other_grid    : D= 17 rho_D=2/17 count=2
+    positive denominators in bank: 174/195
+
+--------------------------------------------------------------------------------------------
+Scenario: k=11 union binding row
+  P=(1, 13)
+  E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)  k=11 span=10
+
+  global theta=1/7:
+    continuous rho*=278/735 = 0.37823129; meas(G_P)=66/91 = 0.72527473; mu=1381/2205 = 0.62630385; intervals=15
+    max_D<=196 rho_D=11/12 = 0.91666667 at D=12 count=11 family=small_q_2..14 residues=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+    first positive denominator: D=2 rho_D=1/2 residues=(1,)
+    family best:
+      small_q_2..14 : D= 12 rho_D=11/12 count=11
+      7m_grid       : D=189 rho_D=10/27 count=70
+      14m_grid      : D=182 rho_D=75/182 count=75
+      other_grid    : D= 24 rho_D=13/24 count=13
+    positive denominators in bank: 192/195
+
+  via-max theta=2/7:
+    continuous rho*=43/588 = 0.07312925; meas(G_P)=66/91 = 0.72527473; mu=127/588 = 0.21598639; intervals=3
+    max_D<=196 rho_D=2/3 = 0.66666667 at D=3 count=2 family=small_q_2..14 residues=(1, 2)
+    first positive denominator: D=2 rho_D=1/2 residues=(1,)
+    family best:
+      small_q_2..14 : D=  3 rho_D=2/3 count=2
+      7m_grid       : D= 21 rho_D=2/21 count=2
+      14m_grid      : D=140 rho_D=11/140 count=11
+      other_grid    : D= 18 rho_D=1/6 count=3
+    positive denominators in bank: 189/195
+
+--------------------------------------------------------------------------------------------
+Scenario: via-max refutation family k=7
+  P=(1, 2, 3, 6, 12, 13)
+  E=(0, 2, 3, 4, 5, 6, 8)  k=7 span=8
+
+  global theta=1/7:
+    continuous rho*=515/1092 = 0.47161172; meas(G_P)=515/1092 = 0.47161172; mu=1 = 1.00000000; intervals=14
+    max_D<=196 rho_D=10/11 = 0.90909091 at D=11 count=10 family=small_q_2..14 residues=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    first positive denominator: D=5 rho_D=4/5 residues=(1, 2, 3, 4)
+    family best:
+      small_q_2..14 : D= 11 rho_D=10/11 count=10
+      7m_grid       : D=189 rho_D=88/189 count=88
+      14m_grid      : D=182 rho_D=45/91 count=90
+      other_grid    : D= 27 rho_D=2/3 count=18
+    positive denominators in bank: 188/195
+
+  via-max theta=2/7:
+    continuous rho*=0 = 0.00000000; meas(G_P)=515/1092 = 0.47161172; mu=13/35 = 0.37142857; intervals=0
+    max_D<=196 rho_D=1/7 = 0.14285714 at D=14 count=2 family=small_q_2..14 residues=(1, 13)
+    first positive denominator: D=14 rho_D=1/7 residues=(1, 13)
+    family best:
+      small_q_2..14 : D= 14 rho_D=1/7 count=2
+      7m_grid       : D= 21 rho_D=0 count=0
+      14m_grid      : D= 28 rho_D=1/14 count=2
+      other_grid    : D= 15 rho_D=0 count=0
+    positive denominators in bank: 14/195
+
+--------------------------------------------------------------------------------------------
+Scenario: density bridge broad shape
+  P=(1, 2, 9)
+  E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10)  k=10 span=10
+
+  global theta=1/7:
+    continuous rho*=121/210 = 0.57619048; meas(G_P)=83/126 = 0.65873016; mu=247/294 = 0.84013605; intervals=12
+    max_D<=196 rho_D=12/13 = 0.92307692 at D=13 count=12 family=small_q_2..14 residues=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+    first positive denominator: D=4 rho_D=1/2 residues=(1, 3)
+    family best:
+      small_q_2..14 : D= 13 rho_D=12/13 count=12
+      7m_grid       : D=119 rho_D=66/119 count=66
+      14m_grid      : D=126 rho_D=4/7 count=72
+      other_grid    : D= 26 rho_D=10/13 count=20
+    positive denominators in bank: 191/195
+
+  via-max theta=2/7:
+    continuous rho*=1/90 = 0.01111111; meas(G_P)=83/126 = 0.65873016; mu=121/490 = 0.24693878; intervals=4
+    max_D<=196 rho_D=2/31 = 0.06451613 at D=31 count=2 family=other_grid residues=(10, 21)
+    first positive denominator: D=31 rho_D=2/31 residues=(10, 21)
+    family best:
+      small_q_2..14 : D=  2 rho_D=0 count=0
+      7m_grid       : D= 77 rho_D=2/77 count=2
+      14m_grid      : D=126 rho_D=2/63 count=4
+      other_grid    : D= 31 rho_D=2/31 count=2
+    positive denominators in bank: 85/195
+
+--------------------------------------------------------------------------------------------
+Scenario: perforated k=8 near AP
+  P=(1, 2, 3, 4, 5)
+  E=(0, 2, 3, 4, 5, 6, 7, 8)  k=8 span=8
+
+  global theta=1/7:
+    continuous rho*=53/105 = 0.50476190; meas(G_P)=53/105 = 0.50476190; mu=1 = 1.00000000; intervals=10
+    max_D<=196 rho_D=12/13 = 0.92307692 at D=13 count=12 family=small_q_2..14 residues=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+    first positive denominator: D=6 rho_D=1/3 residues=(1, 5)
+    family best:
+      small_q_2..14 : D= 13 rho_D=12/13 count=12
+      7m_grid       : D=175 rho_D=12/25 count=84
+      14m_grid      : D= 70 rho_D=18/35 count=36
+      other_grid    : D= 26 rho_D=9/13 count=18
+    positive denominators in bank: 190/195
+
+  via-max theta=2/7:
+    continuous rho*=1/20 = 0.05000000; meas(G_P)=53/105 = 0.50476190; mu=47/140 = 0.33571429; intervals=4
+    max_D<=196 rho_D=4/13 = 0.30769231 at D=13 count=4 family=small_q_2..14 residues=(1, 6, 7, 12)
+    first positive denominator: D=12 rho_D=1/6 residues=(1, 11)
+    family best:
+      small_q_2..14 : D= 13 rho_D=4/13 count=4
+      7m_grid       : D= 91 rho_D=6/91 count=6
+      14m_grid      : D= 28 rho_D=1/7 count=4
+      other_grid    : D= 24 rho_D=1/6 count=4
+    positive denominators in bank: 170/195
+
+============================================================================================
+B. k<12 union-bound floor: exact bounded-core attacker scan
+============================================================================================
+Attacker definition: normalized E with mu_1/7(E) < thr_k = 1 - gp_min(k).
+Exact bounded bank: all primitive normalized shapes with span <= k+5.
+Large-spread probe: exact mu on tail and random sparse shapes outside the bank.
+
+  k=8  |P|=5  gp_min=2243/5880 = 0.38146259 at P=(1, 5, 7, 8, 9)
+    thr_k=3637/5880 = 0.61853741
+    exact bank span<= 13: primitive_shapes=1716
+    min mu_1/7 found=691/735 = 0.94013605
+    consecutive mu=691/735 = 0.94013605; min==consec? True
+    bounded attackers=0; below-consec shapes=0; near-attackers(mu<thr+1/20)=0
+    bounded union floor found=1891/5880 = 0.32159864
+    minimizer sample=[(0, 1, 2, 3, 4, 5, 6, 7)]
+    large-spread probe shapes=230; best mu=44489/45045 = 0.98765679 at E=(0, 1, 2, 3, 4, 5, 6, 15)
+
+  k=9  |P|=4  gp_min=1979/4004 = 0.49425574 at P=(1, 11, 12, 13)
+    thr_k=2025/4004 = 0.50574426
+    exact bank span<= 14: primitive_shapes=3003
+    min mu_1/7 found=247/294 = 0.84013605
+    consecutive mu=247/294 = 0.84013605; min==consec? True
+    bounded attackers=0; below-consec shapes=0; near-attackers(mu<thr+1/20)=0
+    bounded union floor found=28117/84084 = 0.33439180
+    minimizer sample=[(0, 1, 2, 3, 4, 5, 6, 7, 8)]
+    large-spread probe shapes=231; best mu=779/840 = 0.92738095 at E=(0, 1, 2, 3, 4, 5, 6, 7, 16)
+
+  k=10  |P|=3  gp_min=55/91 = 0.60439560 at P=(1, 12, 13)
+    thr_k=36/91 = 0.39560440
+    exact bank span<= 15: primitive_shapes=5005
+    min mu_1/7 found=38/49 = 0.77551020
+    consecutive mu=38/49 = 0.77551020; min==consec? True
+    bounded attackers=0; below-consec shapes=0; near-attackers(mu<thr+1/20)=0
+    bounded union floor found=242/637 = 0.37990581
+    minimizer sample=[(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)]
+    large-spread probe shapes=232; best mu=445/539 = 0.82560297 at E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 30)
+
+  k=11  |P|=2  gp_min=66/91 = 0.72527473 at P=(1, 13)
+    thr_k=25/91 = 0.27472527
+    exact bank span<= 16: primitive_shapes=8008
+    min mu_1/7 found=1381/2205 = 0.62630385
+    consecutive mu=1381/2205 = 0.62630385; min==consec? True
+    bounded attackers=0; below-consec shapes=0; near-attackers(mu<thr+1/20)=0
+    bounded union floor found=10078/28665 = 0.35157858
+    minimizer sample=[(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)]
+    large-spread probe shapes=232; best mu=313310684202082951/413637155023512420 = 0.75745295 at E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 110)
+
+  Bounded-core conclusion for k=8..11:
+    no bounded attackers? True
+    consecutive remains exact bounded minimizer? True
+    bounded k<12 union floor (consec/min bank) = 1891/5880 = 0.32159864
+    THM-530 quoted k>=8 floor from consecutive rows = 1891/5880 = 0.32159864
+    The remaining theorem gap is now explicit: prove every span>k+5 row is gentle
+    (mu_1/7 >= thr_k), or strengthen the exact bounded bank until a known
+    large-spread lemma applies.
+
+============================================================================================
+C. Tournament Analysis over proof carriers
+============================================================================================
+  Pairwise observable: 3*attacker_clearance + 2*witness_support
+    + formal_locality - 2*forgetting_penalty.
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1]
+  Hamiltonian path=bounded_core_attacker_bank -> continuous_union_floor -> max_D_rhoD_bank -> small_q_survivor_filter -> large_spread_gentle_probe -> raw_single_D_only -> via_max_2over7_shadow
+  carrier scores:
+    outscore=6 readiness=23  bounded_core_attacker_bank
+    outscore=5 readiness=19  continuous_union_floor
+    outscore=4 readiness=14  max_D_rhoD_bank
+    outscore=3 readiness=12  small_q_survivor_filter
+    outscore=2 readiness=10  large_spread_gentle_probe
+    outscore=1 readiness=-3  raw_single_D_only
+    outscore=0 readiness=-8  via_max_2over7_shadow
+
+============================================================================================
+TAKEAWAY
+============================================================================================
+  max_D rho_D is positive and usually abundant at theta=1/7 on all tested
+  hard rows, while theta=2/7 still exposes the known via-max failure.
+  For k=8..11, the exact bounded-core bank span<=k+5 contains zero attackers
+  and has consecutive shapes as the minimum.  Thus the proof target below
+  k=12 is sharply reframed: prove the large-spread rows are gentle, or
+  extend the bounded-core bank until an existing spread lemma takes over.
+DONE.
