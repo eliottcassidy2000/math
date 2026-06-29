@@ -1,12 +1,21 @@
-## codex-2026-06-29 -- reserve HYP-3438 survivor-gate word audit
+## codex-2026-06-29 -- HYP-3438 survivor-gate word audit
 
-Reserved HYP-3438/T1399/LTI-399/LTT-299 for the immediate HYP-3436 follow-up.
-The planned computation will decompose each mixed `E_safe` component into a
-gate word of adjacent bad-core blocks and survivor gaps, retaining endpoint wall
-labels, minimal B0/B1 owner covers, cover-owner deltas, branch mask, and parent
-even wall.  Target: turn the HYP-3436 "local bad-core covers cannot simply
-glue" hook into exact survivor-gap boundary words before attempting a
-local-to-global obstruction.
+Executed the immediate HYP-3436 follow-up.  HYP-3438/T1399/LTI-399/LTT-299 now
+decomposes each mixed `E_safe` component into a gate word of adjacent bad-core
+blocks and survivor gaps, retaining endpoint wall labels, minimal B0/B1 owner
+covers, cover-owner deltas, branch mask, and parent even wall.
+
+Exact readout on the `135`-row HYP-3436 bank: `6228` mixed components and
+`8702` survivor gates inside them.  Branch masks split `both:1064`,
+`branch0:3819`, `branch1:3819`; adjacency splits `left_bad_edge:3515`,
+`right_bad_edge:3515`, `two_sided:1672`; every parent endpoint kind is `E|E`.
+The tight AP-with-84 row has four one-gate edge words with labels
+`B1:7|E:84`, `E:84|B1:5`, `B0:5|E:84`, `E:84|B0:7`.
+
+Next proof hook: prove the gate-word obstruction.  Survivor mass is legal only
+after reconstructing or routing adjacent bad-core covers, endpoint labels,
+branch mask, and parent even wall through corridor-fence, endpoint-spine,
+owner-current, two-adic loss, overlap-cut, or signed-SPEC sidecars.
 
 ## codex-2026-06-29 -- HYP-3436 minimal bad-core cover extractor
 
@@ -33480,14 +33489,14 @@ carriers, not runners; priority path begins
 
 ## codex-2026-06-29 -- reserve rescue-core bridge certificate -- HYP-3439
 
-Reserved HYP-3438/T1399/LTI-399/LTT-299 for the next finite bridge after
+Reserved HYP-3439/T1400/LTI-400/LTT-300 for the next finite bridge after
 HYP-3437 and HYP-3436.  The planned computation will join HYP-3437's
 one-branch overlap rescue cores with HYP-3436's two-color bad-core survivor
 ledger, then separate the canonical HYP-3431 corridor-fence family from
 noncanonical rows.
 
 Honest status: stub only at reservation time.  No computation has yet been run
-under HYP-3438.  Claimed artifacts:
+under HYP-3439.  Claimed artifacts:
 `04-computation/lrc14_rescue_core_bridge_certificate_codex_20260629.py`,
 `05-knowledge/results/lrc14_rescue_core_bridge_certificate_codex_20260629.out`,
 and

@@ -8660,16 +8660,27 @@ quotient_legality_status
   adjacent bad-core cover deltas, endpoint-wall alternation, corridor-fence
   recognizer, endpoint-spine sidecar, owner-current route, two-adic loss route,
   signed-SPEC route, and raw survivor-measure shortcut as a negative control.
-- **LRC use:** HYP-3438 is reserved to sharpen HYP-3436's local-to-global hook.
-  HYP-3436 shows every audited row has survivors, but the next proof object is
-  the exact word around each survivor gap inside a mixed `E_safe` component.
+- **LRC use:** HYP-3438 sharpens HYP-3436's local-to-global hook.  On the
+  same `135` primitive covering rows it records `6228` mixed `E_safe`
+  components and `8702` survivor gates.  Branch masks split `both:1064`,
+  `branch0:3819`, `branch1:3819`; adjacency splits `left_bad_edge:3515`,
+  `right_bad_edge:3515`, `two_sided:1672`; parent endpoint kind is always
+  `E|E`.
 - **Preserves:** branch-relocation predicate, survivor interval, endpoint wall
   labels, adjacent B0/B1 cover owners, parent even wall, and legal sidecar
   route.
 - **Forgets / guardrail:** raw survivor measure, mixed-component counts,
   harmonic budgets, and topology-only labels cannot certify the gap unless they
   reconstruct or route the exact gate word.
-- **Next hook:** execute the audit and compute the tournament fingerprint.
+- **Fingerprint:** `9` vertices, score histogram
+  `{12:1,52:1,57:2,58:1,61:1,64:1,66:1,67:1}`, no directed `3`-cycles, and
+  path `G00_exact_survivor_gate_word -> G01_adjacent_cover_delta_ledger ->
+  G02_endpoint_wall_alternation -> G03_branch_mask_relocation_witness ->
+  G04_corridor_fence_recognizer -> G05_overlap_cut_bridge ->
+  G06_owner_current_exception_router -> G07_signed_SPEC_route ->
+  G08_raw_survivor_measure`.
+- **Next hook:** prove the gate-word obstruction or name the first residual
+  gate family that cannot route through the listed sidecars.
 - **Pointers:** HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
   HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
   HYP-3129, THM-523, LTI-399, LTT-299, T1399, OPEN-Q-108.

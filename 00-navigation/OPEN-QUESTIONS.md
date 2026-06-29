@@ -1,9 +1,11 @@
 # Open Questions
 
 **OPEN-Q-108 HYP-3438 survivor-gate word audit addendum:**
-HYP-3436 leaves the proof with exact local bad-core cover ledgers and survivor
-gaps in every audited row.  The immediate open task is to turn each mixed
-`E_safe` component into a gate word:
+HYP-3438 turns HYP-3436's survivor gaps into exact gate words.  On the
+`135`-row bank, `6228` mixed `E_safe` components emit `8702` survivor gates:
+branch masks `both:1064`, `branch0:3819`, `branch1:3819`; adjacency
+`left_bad_edge:3515`, `right_bad_edge:3515`, `two_sided:1672`; all parent
+endpoints `E|E`.  Each gate word retains:
 
 ```text
 bad-core block / survivor gap / bad-core block
@@ -13,9 +15,9 @@ bad-core block / survivor gap / bad-core block
 + parent even wall
 ```
 
-Concrete task: execute HYP-3438 and determine whether every survivor gate
-forces a relocation witness, corridor-fence route, endpoint-spine certificate,
-owner-current debt, two-adic loss route, signed-SPEC route, or named residual.
+Concrete task: prove whether every survivor gate forces a relocation witness,
+corridor-fence route, endpoint-spine certificate, owner-current debt,
+overlap-cut bridge, two-adic loss route, signed-SPEC route, or named residual.
 Raw survivor measure, mixed-component counts, harmonic budgets, and topology
 labels are not certificates unless they reconstruct or route this gate word. ->
 HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429,

@@ -17,7 +17,7 @@
 
 ## Lead codex-2026-06-29: HYP-3438 survivor-gate word audit
 
-**Status:** RESERVED STUB / computation pending
+**Status:** EVIDENCE / exact survivor-gap gate-word classification; not proof
 (HYP-3438/T1399/LTI-399/LTT-299), immediate follow-up to the HYP-3436
 minimal bad-core cover extractor.
 
@@ -34,13 +34,19 @@ Purpose: decompose mixed `E_safe` components from HYP-3436 into exact gate
 words of adjacent bad-core blocks and survivor gaps, retaining endpoint labels,
 minimal B0/B1 cover owners, branch mask, and parent even wall.
 
-Next: execute the audit, then test whether survivor gates route through
-corridor-fence, endpoint-spine, owner-current, two-adic loss, signed-SPEC, or a
+Readout: on the `135`-row HYP-3436 bank, `6228` mixed components emit `8702`
+survivor gates.  Branch masks are `both:1064`, `branch0:3819`,
+`branch1:3819`; adjacency is `left_bad_edge:3515`, `right_bad_edge:3515`,
+`two_sided:1672`; all parent endpoints are `E|E`.  Tight AP-with-84 has four
+one-gate edge words matching the corridor-fence shadow.
+
+Next: prove whether every survivor gate routes through corridor-fence,
+endpoint-spine, owner-current, overlap-cut, two-adic loss, signed-SPEC, or a
 new named residual before any scalar compression is allowed.
 ## Lead codex-2026-06-29: Rescue-core bridge certificate
 
 **Status:** RESERVED STUB / computation pending; not proof
-(HYP-3438/T1399/LTI-399/LTT-299), continuing HYP-3437's one-branch
+(HYP-3439/T1400/LTI-400/LTT-300), continuing HYP-3437's one-branch
 overlap-tax cut certificate and HYP-3436's two-color bad-core cover extractor.
 
 Claimed files:
