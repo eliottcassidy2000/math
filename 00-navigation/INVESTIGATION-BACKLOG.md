@@ -1,5 +1,22 @@
 # Investigation Backlog
 
+**HYP-3522 random031 owner-boundary bracket filtration.**  Turn the HYP-3522
+filtration into the next terminal owner-boundary lemma.  Exact readout:
+forbidden seam owners `(23,45,93,113,147,169,173)`, pure bypass transport
+owners `(23,93,113)`, branch-boundary bracket owners `(23,93,147,169)`,
+bracket lift `(147,169)`, transport-only owner `(113)`, and residual after
+branch boundary `(45,173)`.  The pure bypass stalk has `12` cells, branch
+split `6/6`, hit components `(43,54)`, endpoint rank `(2,)`, and mirror owner
+word `(23,93,113)` on all six mirror pairs.  Next tasks: prove transport-word
+constancy; prove the two branch-boundary bracket intervals add `(147,169)` by
+ordinary neighbors `(93,147,169)` and `(23,169)`; splice HYP-3510 connected
+phase transport and HYP-3511 free-hole bracketing; and prove the residual
+two-owner `(45,173)` boundary cannot support a counterexample under the
+HYP-3490/HYP-3513 private-label firewall route sidecar. -> HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
+HYP-3494, HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485,
+HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455,
+HYP-3402, HYP-3034, LTI-522, LTT-422, T1522, OPEN-Q-108.
+
 **HYP-3520 random031 owner-boundary persistence.**  The quotient-price matrix
 is now executable.  Exact readout: the forbidden seam on `(43,54)` carries
 `(23,45,93,113,147,169,173)`, the lower-delta bypass on the same components

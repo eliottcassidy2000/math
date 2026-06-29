@@ -1,5 +1,27 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3522 owner-boundary filtration addendum:** Can the random031
+pure-bypass owner-boundary lemma be reduced from HYP-3520's four-owner current
+debt to the residual pair `(45,173)`?
+
+HYP-3522 gives the exact filtration:
+
+```text
+seam owners                    = (23,45,93,113,147,169,173)
+pure bypass transport owners   = (23,93,113)
+branch-boundary bracket owners = (23,93,147,169)
+bracket lift                   = (147,169)
+residual after branch boundary = (45,173)
+```
+
+The open proof task is to show that transport-word constancy plus the
+branch-boundary bracket lift plus HYP-3510/HYP-3511 phase/free-hole separation
+leave no legal counterexample supported only by residual owners `(45,173)`,
+with HYP-3490 forbidding projection-current shortcuts and HYP-3513 retaining
+route sidecar `R` unless route reconstruction is proved. -> HYP-3522, HYP-3521,
+HYP-3520, HYP-3513, HYP-3512, HYP-3494, HYP-3511, HYP-3510, HYP-3493, HYP-3490,
+HYP-3486, HYP-3485, LTI-522, LTT-422, T1522.
+
 **OPEN-Q-108 HYP-3521 terminal certificate addendum:** Can the remaining
 `random_covering_031` target be closed by the five-lemma terminal certificate
 packet?

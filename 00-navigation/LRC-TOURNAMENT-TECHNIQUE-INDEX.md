@@ -58,6 +58,26 @@ obligations, and proof-carrier interfaces.
 - **Pointers:** HYP-3520, HYP-3512, HYP-3494, HYP-3493, HYP-3510,
   HYP-3511, HYP-3486, HYP-3483, HYP-3402, HYP-3034, T1520, LTI-520.
 
+## LTT-422 - Owner-Boundary Bracket-Filtration Tournament
+
+- **Move:** Orient owner-boundary proof carriers by how much of the
+  random031 terminal owner predicate they preserve after splitting transport,
+  branch-boundary bracket lift, and residual debt.
+- **LRC use:** Shrinks HYP-3520's four-owner current target
+  `(45,147,169,173)` to a residual pair `(45,173)` once transport
+  `(23,93,113)` and bracket lift `(147,169)` have been paid.
+- **Preserves:** Mirror-persistent bypass owner word, branch-boundary ordinary
+  neighbors, residual owner pair, HYP-3510 phase carrier, HYP-3511 free-hole
+  separation, and HYP-3490 firewall status.
+- **Forgets / guardrail:** A raw seven-owner seam tournament confuses
+  transport with bracket debt; a bypass-owner-only tournament forgets the
+  residual; a raw `12`-cell tournament forgets all owner layers.
+- **Next pull:** Prove the residual `(45,173)` boundary lemma after attaching
+  transport-word constancy and branch-boundary bracket lift.
+- **Pointers:** HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512, HYP-3494,
+  HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, T1522,
+  LTI-522.
+
 ## Fast Routing Map
 
 - Need to separate strict-open mass from endpoint-only equality:
@@ -280,6 +300,12 @@ obligations, and proof-carrier interfaces.
   `282=230 ordinary_rank2 + 40 bracketed_free_hole + 12 pure_bypass`, and the
   old `242` gate-routed count as `230+12`.  The legal `79` components collapse
   to `77` terminal certificates after free-hole doublet collapse.
+- Need to sharpen the pure-bypass owner-boundary clause:
+  use LTT-422 after LTT-421/LTT-420/LTT-411/LTT-410 and make owner filtration
+  layers the vertices.  HYP-3522 splits the seam as transport `(23,93,113)`,
+  branch-boundary bracket lift `(147,169)`, and residual pair `(45,173)`, so
+  the next proof should target a two-owner residual boundary lemma with
+  HYP-3513 route sidecar `R` rather than re-gluing the whole seven-owner seam.
 - Need to explain why random pair-currents cannot work:
   use LTT-350 after LTT-336/LTT-337/LTT-338/LTT-339/LTT-340/LTT-341/LTT-342/LTT-343/LTT-344 and make dead-cover
   blocker labels with multiplicity sidecars, E/branch-touched private labels,
@@ -10395,6 +10421,43 @@ quotient_legality_status
   HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480,
   HYP-3477, HYP-3460, HYP-3455, THM-523, LTI-521, LTT-421, T1521,
   OPEN-Q-108.
+
+## LTT-422: Random031 Owner-Boundary Bracket Filtration Tournament
+
+- **Move:** Use owner-boundary proof carriers as tournament vertices:
+  transport-word constancy, mirror-pair owner persistence,
+  branch-boundary bracket lift, residual puncture/apex debt, free-hole
+  bracket separation, coarse connected phase carrier, and raw seven-owner
+  shadow.
+- **LRC use:** HYP-3522 refines the HYP-3520 owner-current matrix inside the
+  HYP-3521 terminal bypass certificate.  It turns the pure-bypass owner clause
+  from an undifferentiated seam word into:
+  `transport (23,93,113) + bracket lift (147,169) + residual (45,173)`.
+- **Preserves:** transport owners, branch-boundary ordinary-neighbor owners,
+  mirror persistence, hit components `(43,54)`, endpoint rank `(2,)`,
+  HYP-3510 connected phase transport, HYP-3511 free-hole separation, and
+  HYP-3490 private-label firewall compatibility.
+- **Forgets / guardrail:** Raw seam-owner, raw bypass-owner, and raw `12`
+  quotients each destroy a different coordinate.  The legal quotient may
+  forget a gate only after it has paid for transport, branch-boundary, and
+  residual sidecars.
+- **Pairwise observable:** retained owner charge, transport/boundary split,
+  mirror persistence, terminal proof payload, and quotient-safety penalty.
+- **Switch/gauge:** orient toward the carrier preserving more terminal proof
+  payload; ties follow the filtration order from transport through mirror,
+  branch boundary, residual, free-hole separation, coarse carrier, and raw
+  shadow.
+- **Fingerprint:** score histogram
+  `{18:1,70:1,76:1,82:1,87:1,94:1,98:1}`, no directed `3`-cycles, singleton
+  SCCs, and Hamiltonian path
+  `transport_owner_word_constant -> mirror_pair_owner_word_persistence -> branch_boundary_bracket_lift -> residual_puncture_apex_debt -> free_hole_bracket_separation -> coarse_connected_phase_carrier -> raw_seven_owner_shadow`.
+- **Next hook:** prove the residual `(45,173)` boundary obstruction once
+  transport-word constancy and branch-boundary bracket lift are attached to
+  HYP-3510/HYP-3511 and the HYP-3490/HYP-3513 firewall route sidecar.
+- **Pointers:** HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512, HYP-3494,
+  HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3484,
+  HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, THM-523,
+  LTI-522, LTT-422, T1522, OPEN-Q-108.
 
 ## LTT-411: Random031 Free-Hole Bracket Atlas Tournament
 

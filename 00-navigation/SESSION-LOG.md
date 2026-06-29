@@ -18,6 +18,41 @@ Interpretation: the owner-current matrix reconstructs the seam-only debt
 component summaries merge pure bypass `R01` with ordinary discharged context.
 The random031 terminal lemma should retain an owner word, pure-bypass exit
 label, legal sheet-PGF bucket, or an equivalent named repair sidecar.
+## codex-2026-06-29 -- HYP-3522 random031 owner-boundary bracket filtration
+
+Prompt: work creatively on owner-boundary persistence.
+
+Continued the owner-boundary lane after HYP-3520 and HYP-3521.  Added:
+
+```text
+04-computation/lrc14_random031_owner_boundary_filtration_codex_20260629.py
+05-knowledge/results/lrc14_random031_owner_boundary_filtration_codex_20260629.out
+05-knowledge/hypotheses/HYP-3522-lrc14-random031-owner-boundary-filtration.md
+07-reflections/lrc14-random031-owner-boundary-filtration-codex-20260629.md
+```
+
+Main refinement: the pure bypass is not supposed to carry the whole seven-owner
+seam.  It carries a stable transport word `(23,93,113)`.  The adjacent
+ordinary branch-boundary cells add the bracket lift `(147,169)`, leaving the
+smaller residual pair `(45,173)`.  Exact filtration:
+
+```text
+seam=(23,45,93,113,147,169,173)
+transport=(23,93,113)
+branch_boundary=(23,93,147,169)
+bracket_lift=(147,169)
+residual_after_branch_boundary=(45,173)
+```
+
+The pure bypass stalk remains `12` cells, branch split `6/6`, endpoint rank
+`(2,)`, and six mirror pairs preserving owner word `(23,93,113)`.  The two
+branch-order bypass intervals have ordinary neighbors with owners
+`(93,147,169)` and `(23,169)`, intersecting in `(169,)` on both sheets.
+
+Next proof target: prove transport-word constancy, branch-boundary bracket
+lift, HYP-3510/HYP-3511 separation, and a residual two-owner boundary lemma
+for `(45,173)` compatible with the HYP-3490 firewall and HYP-3513 route
+sidecar `R`.
 
 ## codex-2026-06-29 -- HYP-3520 owner-boundary persistence reservation
 

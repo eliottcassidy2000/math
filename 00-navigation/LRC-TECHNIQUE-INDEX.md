@@ -61,6 +61,30 @@ owner-current/relative-H1 boundary lemma while retaining `PDPPOOO`, the
 pure-bypass exit label, owner union, or legal sheet-PGF bucket across any
 component quotient.
 
+## LTI-522 - Random031 owner-boundary bracket filtration
+
+Carrier / vertex set: owner-boundary filtration layers for the pure bypass:
+transport word, mirror-persistent bypass stalk, adjacent ordinary
+branch-boundary brackets, residual puncture/apex owners, free-hole separation,
+coarse connected phase carrier, and raw seven-owner shadow.
+Pairwise observable: whether the carrier preserves the terminal owner-boundary
+predicate while distinguishing transport owners `(23,93,113)`, bracket lift
+owners `(147,169)`, and residual owners `(45,173)`.
+Preserved LRC predicate: random031 pure-bypass owner discharge after HYP-3521's
+terminal packet split.
+Destroyed information: treating every seam owner as bypass transport hides the
+branch-boundary lift; treating the bracket lift as residual overstates the
+remaining owner-current debt.
+Best use: shrink HYP-3520's four-owner current target to a two-owner residual
+lemma after transport constancy and branch-boundary bracketing.
+Failure mode: collapsing the proof to raw `12`, raw seven-owner seam, or
+bypass-owner-only quotients before the branch-boundary sidecar is attached.
+Anchors: HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512, HYP-3494,
+HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, T1522,
+LTT-422.
+Next agent hook: formalize the residual `(45,173)` boundary lemma under the
+HYP-3490/HYP-3513 private-label firewall route sidecar.
+
 ## Current Assembly Principle
 
 The live LRC14 proof object is a labelled packet over several compatible
@@ -563,6 +587,7 @@ record what it destroys before asking it to prove anything.
 | LTI-512 | Random031 niche-history connection scanner | Coordinate-resurrection quotient audit, observer-cut seam payload, finite-address packet receiver, relative Cech/barcode topology, endpoint/Farkas rank-2 exits, fiber-PGF sheet count, C=27 owner/phase resource descent, proof-circuit missing-input ledger, ET/Hensel u-fiber zipper, chiral mirror guard | HYP-3512 searches `26501` tracked archive files plus `6371` commit subjects and `50836` historical path events for older niche carriers that can legally connect to HYP-3486/HYP-3485 random031 seam-complement geometry, now with HYP-3494's local PGF/quotient-price lane folded in as a companion.  The top path says old topics are useful only when they restore a destroyed random031 coordinate: free-hole status, branch sheet, bypass purity, endpoint rank, owner seam word, private-label firewall status, mirror legality, or terminal exit. | HYP-3512, HYP-3494, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3140, HYP-3120, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3034, HYP-3023, HYP-2936, THM-523, T1512, LTT-412, LTI-512, OPEN-Q-108 | Define `Random031SeamComplementPacket`; run quotient-resurrection audits; compute class-conditioned fiber PGF; build relative Cech/H1 with rank-2 exits plus deleted seam as boundary; and turn rank-2 routed cells into endpoint-credit/Farkas certificates. |
 | LTI-521 | Random031 terminal certificate ledger | Joined terminal dispatch, `230/40/12` cell partition, `242=230+12` gate-routed split, free-hole doublet collapse, pure bypass owner-boundary packet, private-firewall compatibility, vertical-halfturn guardrail | HYP-3521 joins HYP-3486, HYP-3511, HYP-3510, and HYP-3490 into one terminal ledger for random031.  It clarifies that the `242` gate-routed cells are `230` ordinary plus `12` bypass, and that the full terminal partition is `282=230+40+12`.  The `79` legal mirror components become `77` terminal certificates: `64` ordinary route, `10` free-hole singles, `2` free-hole doublets, and `1` bypass owner-boundary certificate. | HYP-3521, HYP-3511, HYP-3510, HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3477, HYP-3460, HYP-3455, THM-523, T1521, LTT-421, LTI-521, OPEN-Q-108 | Formalize the five-lemma terminal packet: ordinary route, free-hole bracket, pure bypass owner-boundary, private-firewall compatibility, and vertical-halfturn quotient guardrail. |
 | LTI-513 | Private-firewall Nerode audit | HYP-3474 axes `K,N,T,S,F,C,M,A`, private-firewall bit, `nondead/nonprivate/private` status, route sidecar `R`, incidence sidecar `I`, projection-frontier sidecar `Q`, finite quotient purity | HYP-3513 joins HYP-3474 colored-gate quotient records to the finite HYP-3490 split.  Existing axes `C`, `F`, `N`, and `T` are pure for private-firewall status, but no existing-axis subset preserves the full five-way route.  `I/Q` are compact three-fiber private-status carriers and `R` is the compact five-fiber route carrier. | HYP-3513, HYP-3491, HYP-3490, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, THM-523, T1513, LTT-413, LTI-513, OPEN-Q-108 | Prove the row-free incidence-cut lemma reducing `I/Q` to blocker-label multiplicity one; either prove route reconstruction from existing data or keep sidecar `R` in the terminal dispatch. |
+| LTI-522 | Random031 owner-boundary bracket filtration | Owner filtration layers, transport word `(23,93,113)`, branch-boundary bracket lift `(147,169)`, residual pair `(45,173)`, mirror-persistent bypass stalk, HYP-3510/HYP-3511 separation, HYP-3513 route sidecar | HYP-3522 refines HYP-3520's owner-current debt inside HYP-3521's bypass terminal packet.  The seven-owner seam splits as transport `(23,93,113)`, branch-boundary bracket owners `(23,93,147,169)`, bracket lift `(147,169)`, transport-only `(113)`, and residual `(45,173)`.  The bypass has `12` cells, branch split `6/6`, endpoint rank `(2,)`, six mirror pairs preserving `(23,93,113)`, and adjacent ordinary branch brackets with words `(93,147,169)` and `(23,169)`. | HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512, HYP-3494, HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, THM-523, T1522, LTT-422, LTI-522, OPEN-Q-108 | Prove transport-word constancy, branch-boundary bracket lift, HYP-3510/HYP-3511 separation, and then a residual `(45,173)` boundary lemma under the HYP-3490/HYP-3513 firewall route sidecar. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
@@ -9921,6 +9946,99 @@ This is the smallest current random031 terminal-packet theorem shape.
 Pointers: HYP-3521, HYP-3511, HYP-3510, HYP-3494, HYP-3493, HYP-3490,
 HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480,
 HYP-3477, HYP-3460, HYP-3455, THM-523, LTI-521, LTT-421, T1521, OPEN-Q-108.
+
+## LTI-522: Random031 Owner-Boundary Bracket Filtration
+
+Created by codex-2026-06-29 for HYP-3522/T1522/LTT-422.  This technique is
+the owner-side refinement of HYP-3520 inside the HYP-3521 terminal bypass
+certificate.
+
+Carrier / vertex set: owner-boundary proof layers:
+
+```text
+transport_owner_word_constant
+mirror_pair_owner_word_persistence
+branch_boundary_bracket_lift
+residual_puncture_apex_debt
+free_hole_bracket_separation
+coarse_connected_phase_carrier
+raw_seven_owner_shadow
+```
+
+Preserved LRC predicate: the random031 pure-bypass terminal predicate, but now
+with transport, bracket, and residual owner coordinates separated.
+
+Destroyed information: treating the bypass as if it must carry all seven seam
+owners is the wrong quotient.  Treating `(147,169)` as residual instead of
+branch-boundary bracket lift leaves the proof target two owners too large.
+
+Exact HYP-3522 readout:
+
+```text
+hard_seam_owners=(23,45,93,113,147,169,173)
+pure_bypass_transport_owners=(23,93,113)
+branch_boundary_bracket_owners=(23,93,147,169)
+transport_plus_branch_boundary=(23,93,113,147,169)
+bracket_lift_owners=(147,169)
+transport_only_owners=(113,)
+residual_after_branch_boundary=(45,173)
+```
+
+Pure bypass stalk:
+
+```text
+component_size=12
+branch_hist={0:6,1:6}
+hit_components=(43,54)
+endpoint_ranks=(2,)
+bypass_owner_word_hist={(23,93,113):12}
+mirror_pair_count=6
+mirror_owner_word_persistent=True
+```
+
+Branch-boundary brackets:
+
+```text
+branch=0 bypass_u=(679,680,681,682,683,684)
+         left owners=(93,147,169)
+         right owners=(23,169)
+
+branch=1 bypass_u=(527,528,529,530,531,532)
+         left owners=(23,169)
+         right owners=(93,147,169)
+
+branch_boundary_owner_intersection_by_branch={0:(169,),1:(169,)}
+```
+
+Best use: formalize the proof as a four-step lemma stack:
+
+```text
+transport-word constancy
+branch-boundary bracket lift
+HYP-3510/HYP-3511 phase/free-hole separation
+residual (45,173) boundary obstruction with HYP-3513 route sidecar R
+```
+
+Tournament Analysis: vertices are owner-boundary proof carriers, not runners
+or raw gate arcs.  Pairwise observable is owner charge retained plus
+transport/boundary split, mirror persistence, and quotient safety.  Score
+histogram is `{18:1,70:1,76:1,82:1,87:1,94:1,98:1}` with no directed
+`3`-cycles, and the Hamiltonian path is
+
+```text
+transport_owner_word_constant
+-> mirror_pair_owner_word_persistence
+-> branch_boundary_bracket_lift
+-> residual_puncture_apex_debt
+-> free_hole_bracket_separation
+-> coarse_connected_phase_carrier
+-> raw_seven_owner_shadow
+```
+
+Pointers: HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512, HYP-3494,
+HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3484,
+HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, THM-523,
+LTI-522, LTT-422, T1522, OPEN-Q-108.
 
 ## LTI-511: Random031 Free-Hole Bracket Atlas
 
