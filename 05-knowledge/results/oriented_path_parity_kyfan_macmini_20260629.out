@@ -1,0 +1,27 @@
+================================================================================
+Redei for ORIENTED paths? parity of N_tau(T) per type (mac-mini-S12)
+================================================================================
+
+Note: a 'type tau' here = which of the n-1 consecutive arcs are forward in T.
+tau=all-1 (=all-forward) is the DIRECTED Ham path (Redei: ODD). We scan all types.
+
+n=4 (ALL, 64 tournaments): 8 types
+  CONSTANT-ODD types (8): ---(fwd=0), --+(fwd=1), -+-(fwd=1), -++(fwd=2), +--(fwd=1), +-+(fwd=2), ++-(fwd=2), +++(fwd=3)
+  CONSTANT-EVEN types (0): 
+  VARIABLE-parity types: 0
+  directed all-+ parity: {1} (Redei=odd); all-- parity: {1}
+n=5 (ALL, 1024 tournaments): 16 types
+  CONSTANT-ODD types (8): ----(fwd=0), --+-(fwd=1), -+--(fwd=1), -++-(fwd=2), +--+(fwd=2), +-++(fwd=3), ++-+(fwd=3), ++++(fwd=4)
+  CONSTANT-EVEN types (8): ---+, --++, -+-+, -+++, +---, +-+-, ++--, +++-
+  VARIABLE-parity types: 0
+  directed all-+ parity: {1} (Redei=odd); all-- parity: {1}
+n=6 (3000-sample, 3000 tournaments): 32 types
+  CONSTANT-ODD types (16): -----(fwd=0), ----+(fwd=1), --+--(fwd=1), --+-+(fwd=2), -+-+-(fwd=2), -+-++(fwd=3), -+++-(fwd=3), -++++(fwd=4), +----(fwd=1), +---+(fwd=2), +-+--(fwd=2), +-+-+(fwd=3), ++-+-(fwd=3), ++-++(fwd=4), ++++-(fwd=4), +++++(fwd=5)
+  CONSTANT-EVEN types (16): ---+-, ---++, --++-, --+++, -+---, -+--+, -++--, -++-+, +--+-, +--++, +-++-, +-+++ ...
+  VARIABLE-parity types: 0
+  directed all-+ parity: {1} (Redei=odd); all-- parity: {1}
+
+================================================================================
+If a NONTRIVIAL set of types is constant-ODD, that's a 'Redei for oriented paths' --
+the graded/Ky-Fan odd-count by type, on the type-hypercube {+,-}^{n-1}.
+================================================================================
