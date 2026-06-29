@@ -1,5 +1,5 @@
 ---
-id: HYP-3544
+id: HYP-3545
 title: The per-oriented-type Hamiltonian-path count N_tau(T) has TOURNAMENT-INDEPENDENT parity equal to the transitive/descent-set count (Forcade 1973), with ALL types odd at n=2^k -- this is the Ky Fan / Borsuk-Ulam odd-count GRADED by type on the type-hypercube {+,-}^{n-1} (OPEN-Q-059), the signed cycle index (HYP-3540) is its generating function, the arc-hypercube complement (klein THM-584) is its antipodal Z_2, and arXiv:2512.09332 (arc-deletion stability of oriented paths) is the hypercube-EDGE robustness of these counts; merges Borsuk-Ulam (witness, active) + Ky Fan (now grounded) + Ham Sandwich/Tucker (opportunities) + Kaczynski (analytic floor)
 status: VERIFIED parity-constancy n=4,5,6 (exhaustive n<=5, 3000-sample n=6); Forcade's theorem confirmed; the Ky Fan / Borsuk-Ulam reading is SYNTHESIS (OPEN-Q-059 grounding). Not a proof of LRC.
 source: mac-mini-2026-06-29-S12
@@ -17,7 +17,7 @@ results:
   - 05-knowledge/results/oriented_path_parity_kyfan_macmini_20260629.out
 ---
 
-# HYP-3544 -- oriented-path parity is the graded Ky Fan / Borsuk-Ulam count
+# HYP-3545 -- oriented-path parity is the graded Ky Fan / Borsuk-Ulam count
 
 ## The verified fact (Forcade 1973, reconfirmed)
 For an oriented TYPE `tau in {+,-}^{n-1}` (which of the n-1 consecutive arcs go forward), let

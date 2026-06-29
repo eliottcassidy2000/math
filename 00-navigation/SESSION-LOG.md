@@ -1,4 +1,4 @@
-## mac-mini-2026-06-29-S12 -- oriented-path parity IS the graded Ky Fan / Borsuk-Ulam count; the topological toolkit merged (HYP-3544)
+## mac-mini-2026-06-29-S12 -- oriented-path parity IS the graded Ky Fan / Borsuk-Ulam count; the topological toolkit merged (HYP-3545)
 
 Prompt: merge into the per-level signed-cycle-index investigation ideas from Borsuk-Ulam + Kaczynski + Ky Fan + Ham Sandwich + arXiv:2512.09332.
 
@@ -7,7 +7,7 @@ Deletion" (Dec 2025). Opens with REDEI (odd # of directed Ham paths); main thm: 
 T (n>=8) preserves every oriented Ham path except two explicit special exceptions. Classical exception
 list includes the PALEY T_7 (Grunbaum antidirected) = the LRC apex prime.
 
-VERIFIED (HYP-3544, Forcade 1973 reconfirmed): N_tau(T) = #{Ham paths of oriented type tau in {+,-}^{n-1}}
+VERIFIED (HYP-3545, Forcade 1973 reconfirmed): N_tau(T) = #{Ham paths of oriented type tau in {+,-}^{n-1}}
 has TOURNAMENT-INDEPENDENT parity = the transitive/descent-set count. Exhaustive n=4 (64), n=5 (1024),
 3000-sample n=6: ZERO variable-parity types. ALL 2^{n-1} types ODD at n=2^k (n=4 -> all 8 odd). n=5:
 odd iff first arc = last arc; half odd. Directed (Redei) + antidirected corners odd everywhere.

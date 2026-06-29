@@ -1,6 +1,6 @@
 # One antipodal map: Borsuk–Ulam, Ky Fan, Ham Sandwich, Kaczynski, all on the arc-hypercube
 
-*mac-mini-2026-06-29-S12. Merging the topological-combinatorics toolkit into the per-level signed-cycle-index thread, prompted by arXiv:2512.09332 (El Sahili–El Zein, oriented Hamiltonian paths under arc deletion) and the owner's list (Borsuk–Ulam, Kaczynski, Ky Fan, Ham Sandwich). New: HYP-3544.*
+*mac-mini-2026-06-29-S12. Merging the topological-combinatorics toolkit into the per-level signed-cycle-index thread, prompted by arXiv:2512.09332 (El Sahili–El Zein, oriented Hamiltonian paths under arc deletion) and the owner's list (Borsuk–Ulam, Kaczynski, Ky Fan, Ham Sandwich). New: HYP-3545.*
 
 ## The map that ties the toolkit together
 
@@ -32,4 +32,4 @@ El Sahili–El Zein (arXiv:2512.09332) opens with Rédei's odd count and proves:
 
 Everything in the owner's list is one free `Z_2`-action — the complement = antipodal map of the arc-hypercube. Its `R`-even half is analytic (Kaczynski, `1/ζ(2)`, the floor, Brouwer/SOS); its `R`-odd half is topological (Borsuk–Ulam, Ky Fan, the witness, the obstruction). Rédei/Forcade are the graded Ky-Fan odd-count (verified tournament-independent); the signed cycle index is its generating function; arc deletion is its edge-stability (the arXiv paper); and the apex prime `7` is where the tournament and runner instances coincide. The remaining moves are named: prove the tournament Ky Fan (OPEN-Q-059), and try Ham Sandwich on `M_odd`.
 
-See [[the-one-involution-three-spectra]] (HYP-3543, klein THM-584), [[the-two-indices-redei-is-odd-lonely-is-even-half-tiling-is-the-quotient]] (THM-582), [[the-saddle-index-is-p-minus-1-over-2-borsuk-ulam-forcing-meets-the-vitali-core-kps]]. New: HYP-3544; OPEN-Q-059 (grounded). External: arXiv:2512.09332.
+See [[the-one-involution-three-spectra]] (HYP-3543, klein THM-584), [[the-two-indices-redei-is-odd-lonely-is-even-half-tiling-is-the-quotient]] (THM-582), [[the-saddle-index-is-p-minus-1-over-2-borsuk-ulam-forcing-meets-the-vitali-core-kps]]. New: HYP-3545; OPEN-Q-059 (grounded). External: arXiv:2512.09332.
