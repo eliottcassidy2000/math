@@ -110,6 +110,17 @@ def branch_mask(mid: Fraction, b0_union: list[Interval], b1_union: list[Interval
     raise AssertionError("survivor midpoint is still in both bad unions")
 
 
+def e_labels(labels: Label) -> tuple[str, ...]:
+    return tuple(label for label in labels if label.startswith("E:"))
+
+
+def cover_tokens(segment: "Segment") -> frozenset[tuple[str, int]]:
+    return frozenset(
+        [("B0", owner) for owner in (segment.b0_cover or ())]
+        + [("B1", owner) for owner in (segment.b1_cover or ())]
+    )
+
+
 @dataclass(frozen=True)
 class Segment:
     kind: str
@@ -198,6 +209,71 @@ class SurvivorGate:
         left_sig = "edge" if left is None else f"B0{cover_pair(left.b0_cover)}:B1{cover_pair(left.b1_cover)}"
         right_sig = "edge" if right is None else f"B0{cover_pair(right.b0_cover)}:B1{cover_pair(right.b1_cover)}"
         return f"{left_sig}->{right_sig}"
+
+    @property
+    def is_interior(self) -> bool:
+        return self.left_bad is not None and self.right_bad is not None
+
+    @property
+    def edge_bad(self) -> Segment | None:
+        if self.left_bad is not None and self.right_bad is None:
+            return self.left_bad
+        if self.right_bad is not None and self.left_bad is None:
+            return self.right_bad
+        return None
+
+    @property
+    def singleton_flanked(self) -> bool:
+        if not self.is_interior:
+            return False
+        assert self.left_bad is not None and self.right_bad is not None
+        return self.left_bad.cover_pair == (1, 1) and self.right_bad.cover_pair == (1, 1)
+
+    @property
+    def parent_even_labels(self) -> tuple[str, ...]:
+        vals = set(e_labels(self.parent_left_labels)) | set(e_labels(self.parent_right_labels))
+        return tuple(sorted(vals))
+
+    @property
+    def touches_parent_even_wall(self) -> bool:
+        seen = set(e_labels(self.left_labels)) | set(e_labels(self.right_labels))
+        return bool(seen & set(self.parent_even_labels))
+
+    @property
+    def same_endpoint_even_wall(self) -> bool:
+        return bool(set(e_labels(self.left_labels)) & set(e_labels(self.right_labels)))
+
+    @property
+    def same_parent_even_wall(self) -> bool:
+        left = set(e_labels(self.left_labels))
+        right = set(e_labels(self.right_labels))
+        return bool(left & right & set(self.parent_even_labels))
+
+    @property
+    def edge_singleton_parent_gate(self) -> bool:
+        edge = self.edge_bad
+        return edge is not None and edge.cover_pair == (1, 1) and self.touches_parent_even_wall
+
+    @property
+    def flank_delta_size(self) -> int | None:
+        if not self.is_interior:
+            return None
+        assert self.left_bad is not None and self.right_bad is not None
+        return len(cover_tokens(self.left_bad) ^ cover_tokens(self.right_bad))
+
+    @property
+    def route(self) -> str:
+        if self.edge_singleton_parent_gate:
+            return "edge_singleton_parent_gate"
+        if not self.is_interior:
+            return "edge_survivor_residual"
+        if self.singleton_flanked and self.same_parent_even_wall:
+            return "interior_corridor_singleton_gate"
+        if self.same_endpoint_even_wall:
+            return "endpoint_even_wall_gate"
+        if self.flank_delta_size is not None and self.flank_delta_size <= 2:
+            return "owner_current_small_delta"
+        return "mixed_owner_residual"
 
 
 @dataclass(frozen=True)
@@ -395,6 +471,56 @@ def top_items(counter: Counter, limit: int = 12) -> str:
     return "{" + ", ".join(f"{key!r}: {value}" for key, value in items) + suffix + "}"
 
 
+def canonical_gate_family(gate: SurvivorGate) -> str:
+    edge = gate.edge_bad
+    if edge is None:
+        return "non_edge"
+    owners = (edge.b0_cover or (), edge.b1_cover or ())
+    if owners in {((13,), (7,)), ((7,), (13,))}:
+        return "outer_13_7"
+    if owners in {((11,), (5,)), ((5,), (11,))}:
+        return "inner_11_5"
+    return "other_edge"
+
+
+def canonical_mod35_probe(limit: int = 35) -> tuple[Counter[str], list[int], list[int]]:
+    bucket_hist: Counter[str] = Counter()
+    failures: list[int] = []
+    clean_only_multiples: list[int] = []
+    for m in range(1, limit + 1):
+        speeds = tuple(list(range(1, 12)) + [13, 84 * m])
+        row = H3436.audit_row(f"canonical_84m_mod35_{m:03d}", speeds)
+        components = build_mixed_components(row)
+        gates = [gate for component in components for gate in component.survivor_gates]
+        family_hist = Counter(canonical_gate_family(gate) for gate in gates)
+        clean_only = row.positive and not components and not gates
+        if clean_only:
+            bucket = "clean_only"
+            clean_only_multiples.append(m)
+        elif family_hist == Counter({"outer_13_7": 2, "inner_11_5": 2}):
+            bucket = "outer_plus_inner"
+        elif family_hist == Counter({"outer_13_7": 2}):
+            bucket = "outer_only"
+        elif family_hist == Counter({"inner_11_5": 2}):
+            bucket = "inner_only"
+        else:
+            bucket = "unexpected"
+        bucket_hist[bucket] += 1
+
+        expected = Counter()
+        if m % 7 != 0:
+            expected["outer_13_7"] = 2
+        if m % 5 != 0:
+            expected["inner_11_5"] = 2
+        if not (
+            family_hist == expected
+            and (m % 35 != 0 or clean_only)
+            and (m % 35 == 0 or not clean_only)
+        ):
+            failures.append(m)
+    return bucket_hist, failures, clean_only_multiples
+
+
 def main() -> None:
     rows_by_name = H3436.row_bank()
     audits = [H3436.audit_row(name, speeds) for name, speeds in rows_by_name.items()]
@@ -407,6 +533,7 @@ def main() -> None:
     word_hist = Counter(component.word for component in mixed_components)
     branch_hist = Counter(gate.branch_mask for gate in gates)
     adjacency_hist = Counter(gate.adjacency for gate in gates)
+    route_hist = Counter(gate.route for gate in gates)
     endpoint_hist = Counter(gate.endpoint_kind_signature for gate in gates)
     parent_hist = Counter(gate.parent_kind_signature for gate in gates)
     delta_hist = Counter((gate.b0_delta, gate.b1_delta) for gate in gates)
@@ -420,6 +547,7 @@ def main() -> None:
     largest_gate_rows = row_gate_hist.most_common(8)
     tight = [component for component in mixed_components if component.row_name == "covering_AP_with_84"]
     smallest_survivor_row = min(audits, key=lambda row: (row.survivor_measure, row.name))
+    mod35_bucket_hist, mod35_failures, clean_only_multiples = canonical_mod35_probe(35)
     hist, path = tournament()
 
     print("HYP-3438 SURVIVOR-GATE WORD AUDIT")
@@ -450,6 +578,9 @@ def main() -> None:
     print(f"gate_word_hist={dict(sorted(word_hist.items()))}")
     print(f"survivor_branch_mask_hist={dict(sorted(branch_hist.items()))}")
     print(f"gate_adjacency_hist={dict(sorted(adjacency_hist.items()))}")
+    print(f"route_hist={dict(sorted(route_hist.items()))}")
+    residual_row_names = {gate.row_name for gate in gates if gate.route == "mixed_owner_residual"}
+    print(f"rows_with_mixed_owner_residual={len(residual_row_names)}")
     print(f"survivor_endpoint_kind_hist={top_items(endpoint_hist)}")
     print(f"parent_endpoint_kind_hist={top_items(parent_hist)}")
     print(f"cover_delta_hist={dict(sorted(delta_hist.items()))}")
@@ -477,6 +608,15 @@ def main() -> None:
         print_component(component)
     print()
 
+    print("## Canonical Mod-35 Gate Law Probe")
+    print("family=(1,2,3,4,5,6,7,8,9,10,11,13,84m), scanned_m=1..35")
+    print("observed_rule=outer_13_7 edge gates iff 7 does not divide m; inner_11_5 edge gates iff 5 does not divide m; if 35 divides m then no mixed gates remain and the row survives through clean E_safe components")
+    print(f"m_bucket_hist={dict(sorted(mod35_bucket_hist.items()))}")
+    print("residue_class_bucket_count_per_35=outer_plus_inner:24, outer_only:6, inner_only:4, clean_only:1")
+    print(f"clean_only_multiples={clean_only_multiples}")
+    print(f"canonical_mod35_failures={mod35_failures}")
+    print()
+
     print("## Smallest Survivor Gates")
     for gate in smallest_gates:
         print_gate(gate)
@@ -496,6 +636,9 @@ def main() -> None:
     print("  owner-current exception, a two-adic loss/debt case, an overlap-cut bridge,")
     print("  or a signed-SPEC route.  The raw scalar survivor count is a negative")
     print("  control unless it reconstructs one of those sidecars.")
+    print("  Canonical rows add a mod-35 endpoint law: outer 13/7 edge gates vanish")
+    print("  exactly at multiples of 7, inner 11/5 edge gates vanish exactly at")
+    print("  multiples of 5, and the lcm case survives as clean E_safe.")
     print()
 
     print("## Tournament Analysis")

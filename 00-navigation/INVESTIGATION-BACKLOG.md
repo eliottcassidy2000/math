@@ -74,6 +74,7 @@ HYP-3439 bridge.
 ## Lead codex-2026-06-29: HYP-3438 survivor-gate word audit
 
 **Status:** EVIDENCE / exact survivor-gap gate-word classification; not proof
+**Status:** EVIDENCE / exact survivor-gate classification; not proof
 (HYP-3438/T1399/LTI-399/LTT-299), immediate follow-up to the HYP-3436
 minimal bad-core cover extractor.
 
@@ -106,6 +107,28 @@ compression is allowed.
 (HYP-3439/T1400/LTI-400/LTT-300), continuing HYP-3437's one-branch
 overlap-tax cut certificate, HYP-3438's survivor gates, and HYP-3450/HYP-3451's
 component-cover escape router.
+Readout: on the `135` primitive covering rows, the audit finds `8702` survivor
+gates over `6228` mixed components.  Route histogram:
+`edge_singleton_parent_gate:5950`, `edge_survivor_residual:1080`,
+`owner_current_small_delta:794`, and `mixed_owner_residual:878`; `79` rows have
+mixed-owner residual gates.
+
+Canonical clue: for `{1,...,11,13,84m}`, a one-period `m=1..35` probe supports
+the mod-35 law.  Outer `(13,7)` edge gates occur iff `7` does not divide `m`;
+inner `(11,5)` edge gates occur iff `5` does not divide `m`; when `35 | m`,
+there are no mixed survivor gates and survival comes from clean `E_safe`
+components.
+
+Next: prove the canonical mod-35 gate law by endpoint arithmetic, then build a
+residual-gate discharging table routing mixed-owner and edge-survivor residuals
+through HYP-3437 overlap-tax cuts, HYP-3439 rescue cores, HYP-3440 endpoint-cut
+sidecars, owner-current, two-adic loss, exact-period/state-lift, or
+signed-SPEC.
+## Lead codex-2026-06-29: Rescue-core bridge certificate
+
+**Status:** RESERVED STUB / computation pending; not proof
+(HYP-3439/T1400/LTI-400/LTT-300), continuing HYP-3437's one-branch
+overlap-tax cut certificate and HYP-3436's two-color bad-core cover extractor.
 
 Claimed files:
 `05-knowledge/hypotheses/HYP-3439-lrc14-rescue-core-bridge-certificate.md`,

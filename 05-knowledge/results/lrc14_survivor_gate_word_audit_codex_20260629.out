@@ -21,6 +21,8 @@ survivor_gates_inside_mixed_components=8702
 gate_word_hist={'B-S': 1825, 'B-S-B': 468, 'B-S-B-S': 281, 'B-S-B-S-B': 70, 'B-S-B-S-B-S': 45, 'B-S-B-S-B-S-B': 12, 'B-S-B-S-B-S-B-S': 7, 'B-S-B-S-B-S-B-S-B': 4, 'B-S-B-S-B-S-B-S-B-S': 1, 'S-B': 1825, 'S-B-S': 1164, 'S-B-S-B': 281, 'S-B-S-B-S': 168, 'S-B-S-B-S-B': 45, 'S-B-S-B-S-B-S': 20, 'S-B-S-B-S-B-S-B': 7, 'S-B-S-B-S-B-S-B-S': 4, 'S-B-S-B-S-B-S-B-S-B': 1}
 survivor_branch_mask_hist={'both': 1064, 'branch0': 3819, 'branch1': 3819}
 gate_adjacency_hist={'left_bad_edge': 3515, 'right_bad_edge': 3515, 'two_sided': 1672}
+route_hist={'edge_singleton_parent_gate': 5950, 'edge_survivor_residual': 1080, 'mixed_owner_residual': 878, 'owner_current_small_delta': 794}
+rows_with_mixed_owner_residual=79
 survivor_endpoint_kind_hist={'B1|E': 1769, 'E|B0': 1769, 'E|B1': 1746, 'B0|E': 1746, 'B0|B0': 744, 'B1|B1': 744, 'B1|B0': 98, 'B0|B1': 86}
 parent_endpoint_kind_hist={'E|E': 8702}
 cover_delta_hist={(0, 2): 397, (0, 3): 45, (0, 4): 5, (0, 5): 1, (1, 1): 5950, (1, 2): 455, (1, 3): 42, (1, 4): 5, (1, 5): 2, (2, 0): 397, (2, 1): 455, (2, 2): 614, (2, 3): 82, (2, 4): 5, (3, 0): 45, (3, 1): 42, (3, 2): 82, (3, 3): 44, (3, 4): 7, (4, 0): 5, (4, 1): 5, (4, 2): 5, (4, 3): 7, (4, 4): 2, (5, 0): 1, (5, 1): 2}
@@ -59,6 +61,14 @@ smallest_total_survivor_row=ap_omit_12_tail_84x01 survivor=1/105 mixed_component
       survivor=[491/588,41/49] len=1/588 branch_mask=branch0 endpoint_kinds=E|B0
       labels=E:84|B0:7 adjacency=right_bad_edge delta=(1,1)
       covers=edge->B0(7):B1(13)
+
+## Canonical Mod-35 Gate Law Probe
+family=(1,2,3,4,5,6,7,8,9,10,11,13,84m), scanned_m=1..35
+observed_rule=outer_13_7 edge gates iff 7 does not divide m; inner_11_5 edge gates iff 5 does not divide m; if 35 divides m then no mixed gates remain and the row survives through clean E_safe components
+m_bucket_hist={'clean_only': 1, 'inner_only': 4, 'outer_only': 6, 'outer_plus_inner': 24}
+residue_class_bucket_count_per_35=outer_plus_inner:24, outer_only:6, inner_only:4, clean_only:1
+clean_only_multiples=[35]
+canonical_mod35_failures=[]
 
 ## Smallest Survivor Gates
   random_covering_116 component=33 word=S-B-S
@@ -153,6 +163,9 @@ smallest_total_survivor_row=ap_omit_12_tail_84x01 survivor=1/105 mixed_component
   owner-current exception, a two-adic loss/debt case, an overlap-cut bridge,
   or a signed-SPEC route.  The raw scalar survivor count is a negative
   control unless it reconstructs one of those sidecars.
+  Canonical rows add a mod-35 endpoint law: outer 13/7 edge gates vanish
+  exactly at multiples of 7, inner 11/5 edge gates vanish exactly at
+  multiples of 5, and the lcm case survives as clean E_safe.
 
 ## Tournament Analysis
 vertices=survivor-gate proof carriers, not runners or raw gaps

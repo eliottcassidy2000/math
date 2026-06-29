@@ -485,8 +485,8 @@ record what it destroys before asking it to prove anything.
 | LTI-396 | Two-adic branch-cover certificate | Finite `E_safe` components, branch cells, active odd/even endpoint gates, deletion-sensitivity ledger, minimal odd low-bad/high-bad cover certificates, owner-current exception routing | HYP-3435 turns HYP-3422's interval-overlap target, HYP-3425's two-color bad-core identity, HYP-3426's one-branch mirror, HYP-3427's wall-signature atlas, HYP-3428's loss ledger, HYP-3429's endpoint-spine certificate, HYP-3430's scalar-firewall warning, HYP-3431's canonical corridor-fence proof, and HYP-3432's reciprocal wall-budget sidecar into a general proof-facing finite-ruler certificate.  Exact stress bank audits `135` primitive covering rows: certificate success, branch0 positivity, branch1 positivity, and both-branch positivity all `135/135`; the tight AP-with-84 row has branch union `1/105` and selected score `59/784`.  Active endpoint roles include `odd_unit`, `even_R`, `seven_R`, and `14Q`, so raw branch measure and harmonic-tail scalars are too lossy without sidecars; reciprocal budgets may rank endpoint debt only after exact branch/wall/interval labels remain attached. | HYP-3435, HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3129, HYP-2963, THM-523, T1396, T1393, T1392, LTT-296, LTI-396, LTT-293, LTI-393, LTT-292, LTI-392, OPEN-Q-108 | HYP-3436 has now built the extractor.  Use it to prove the minimal-cover no-gluing lemma, with HYP-3437 as the graph-cut lane for overlap-tax/Menger certificates. |
 | LTI-397 | Minimal bad-core cover extractor | Exact `E_safe cap B0_odd cap B1_odd` interval decomposition, minimal branch-0/branch-1 odd-owner covers, endpoint support labels, canonical singleton-tail probe, component-chain cover obstruction | HYP-3436 completes the HYP-3435 next hook by inverting the branch-cover certificate.  On the same `135`-row bank it verifies branch-union measure identity and positive survivors `135/135`, audits `17164` even-safe components and `11670` bad-core components, finds max minimal two-color owner count `6`, and shows `10288/11670` local bad-core intervals are already `(1,1)` covers.  Endpoint support is `(1,1)` for `11634/11670`.  In the canonical `{1..11,13,84m}` tail, all bad-core components are singleton/singleton from `m=3` through the scanned `m=30`, with no failures; HYP-3437 is the graph-cut sibling that should consume these atoms as overlap-tax incidence data. | HYP-3436, HYP-3437, HYP-3435, HYP-3434, HYP-3432, HYP-3431, HYP-3429, HYP-3427, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, T1397, LTT-297, LTI-397, LTT-296, LTI-396, OPEN-Q-108 | Prove the labelled packet theorem: local minimal bad-cover packets cannot concatenate into a global cover of `E_safe` unless HYP-3437 graph cuts, owner-current, endpoint-spine, overlap-tax, two-adic descent, exact-period, state-lift, or signed-SPEC/Rprime debt is emitted; first prove the canonical singleton-tail law for all `m>=3`, then build the general component-chain owner-cover graph. |
 | LTI-398 | Overlap-tax Menger-cut certificate | Exact `E_safe` atomization, odd-blocker multiplicity, one-branch overlap-tax cut cores, endpoint labels, SC prevertex guardrail, BDH mean-square sidecar, Bring monodromy debt | HYP-3437 extends HYP-3434 by making the overlap-tax rescue structural.  Atomize each `E_safe` component by branch-0 odd-bad endpoints; multiplicity-0 atoms are branch0 survivors and multiplicity-`>=2` atoms are overlap tax.  On the `150`-row HYP-3429 bank, branch0 is positive `150/150`; naive slack is negative `59/150`; every negative row has a strict odd-blocker rescue cut `59/59`.  Rescue rank histogram is `{0:91, 2:7, 4:2, 5:48, 6:2}`.  The only rank-`6` stress is the canonical AP-with-84 duplicate, already aligned with HYP-3431's corridor-fence base case; noncanonical rows in this bank need rank at most `5`. | HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3418, HYP-3415, HYP-3129, THM-523, T1398, LTT-298, LTI-398, OPEN-Q-108 | Prove the bounded cut-core lemma: every primitive covering row either has nonnegative naive slack, a bounded endpoint-labelled overlap core, or routes through HYP-3436 bad-core extraction, HYP-3431 corridor-fence, endpoint-spine/wall/loss ledgers, owner-current, exact-period/state-lift, or signed-SPEC debt. |
-| LTI-399 | Survivor-gate word audit | Mixed `E_safe` components, survivor gaps, adjacent bad-core blocks, endpoint wall labels, minimal B0/B1 owner-cover deltas, branch masks, parent even walls | HYP-3438 executes the immediate local-to-global follow-up to HYP-3436.  On the `135`-row bank it decomposes `6228` mixed even-safe components into gate words and records `8702` survivor gates.  Branch masks split `both:1064`, `branch0:3819`, `branch1:3819`; adjacency splits `left_bad_edge:3515`, `right_bad_edge:3515`, `two_sided:1672`; parent endpoint kind is always `E|E`. | HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, THM-523, T1399, LTT-299, LTI-399, OPEN-Q-108 | Prove that every legal survivor word either gives a relocation witness or routes to corridor-fence, endpoint-spine, owner-current, overlap-cut, two-adic loss, signed-SPEC, or named residual debt. |
-| LTI-400 | Rescue-core bridge certificate | One-branch overlap rescue cores, survivor-gate words, component-cover escape ledgers, canonical rank-`6` recognizer, AP-tail rank-`5` descent, endpoint-spine/wall and owner-current exits | HYP-3439 executes the AP/84m bridge after HYP-3437/HYP-3438/HYP-3450/HYP-3451 and now hands its tail clause to HYP-3452.  HYP-3437 recap: `150` rows, `59` negative naive-slack rows, all rescued, rank histogram `{0:91,2:7,4:2,5:48,6:2}`, rank `6` only at `covering_AP_with_84` / `canonical_84m_01`.  AP bridge: `14` displayed rows, route histogram `{canonical_rank6_corridor_fence_with_two_color_escape:2, ap_tail_rank5_overlap_core_with_two_color_escape:11, nonnegative_one_branch_control_with_two_color_escape:1}`. | HYP-3439, HYP-3452, HYP-3451, HYP-3450, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427, HYP-3425, HYP-3422, HYP-3418, HYP-3415, THM-523, T1400, LTT-300, LTI-400, OPEN-Q-108 | Formalize the bridge lemma: rank `6` is the canonical base case; AP tails use rank-`5` core `(5,7,9,11,13)` plus HYP-3452's finite transients `m=1..4`, rank-one endpoint phase for `m>=5`, and mod-35 escape clock; arbitrary primitive rows must either match this bounded bridge or emit endpoint-spine/wall, owner-current, exact-period/state-lift, two-adic loss, or signed-SPEC debt. |
+| LTI-399 | Survivor-gate word audit | Mixed `E_safe` components, survivor gaps, adjacent bad-core blocks, endpoint wall labels, minimal B0/B1 owner-cover deltas, branch masks, parent even walls | HYP-3438 executes the immediate local-to-global follow-up to HYP-3436.  It decomposes each mixed even-safe component into exact survivor-gate words and finds `8702` gates with dominant route `edge_singleton_parent_gate:5950`; the canonical `{1,...,11,13,84m}` family now has a mod-35 gate law through one full period. | HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, THM-523, T1399, LTT-299, LTI-399, OPEN-Q-108 | Prove the canonical mod-35 endpoint law, then discharge `edge_survivor_residual` and `mixed_owner_residual` gates through overlap-tax cuts, rescue cores, endpoint-cut sidecars, owner-current, two-adic loss, exact-period/state-lift, or signed-SPEC. |
+| LTI-400 | Rescue-core bridge certificate | One-branch overlap rescue cores, two-color bad-core survivor ledgers, canonical corridor-fence recognizer, noncanonical rank-`<=5` compression target, endpoint-spine/wall and owner-current exits | HYP-3439 reserves the proof-facing bridge after HYP-3437 and HYP-3436.  It should join the one-branch overlap-tax rescue cores to the two-color bad-core/survivor ledger, then split the canonical HYP-3431 corridor-fence family from noncanonical negative-slack rows. | HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427, HYP-3425, HYP-3422, HYP-3418, HYP-3415, THM-523, T1400, LTT-300, LTI-400, OPEN-Q-108 | Build the bridge audit: verify whether rank `6` is exactly canonical, whether noncanonical negative-slack rows admit bounded rescue cores of rank at most `5`, and route residual high-rank cases through HYP-3436 survivor gates, endpoint-spine/wall ledgers, owner-current, exact-period/state-lift, two-adic loss, or signed-SPEC. |
 | LTI-373 | Special-function cut signature recursion | Recursive `charal_signature` sidecars, Bring radical branch alarms, Schwarz-Christoffel cut angles, BDH variance packets, Menger exit cuts, Soldner zero normalization, Sophie Germain quartic split, HLW separation, Krasner stability, Mertens residuals | HYP-3412 executes a post-HYP-3406 creative synthesis scout on the `(72,20)` expanded bank (`2431` rows).  Its CHARAL mixed-fiber ladder says residue leaves `3` mixed fibers; residue+height/`v2` leaves `2`; BDH variance leaves `3`; cut-angle, Krasner radius, and owner support each leave `0`; Sophie quartic and honest Bring branch alarm each leave `2`; PGF proxy leaves `1`.  The Menger-style separator table says the `14`-row owner leak, `12`-row petal `10->20` owner/height-persistent leak, and `3`-row height leak all admit one-sidecar covers by `SC_cut_angle`, `Krasner_radius`, or `owner_support`, while height/`v2` separates only some leaks. | HYP-3412, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151, HYP-3150, HYP-3147, HYP-3143, THM-523, T1373, LTT-273, LTI-373, OPEN-Q-108 | Enlarge beyond `(72,20)` and test whether `residue + cut_angle_word` and `residue + krasner_radius_word` remain exact.  If either fails, record the first collision and decide whether full owner support, exact cut labels, or PGF/root branch payload is the true next sidecar. |
 | LTI-374 | Owner-cut resurrection calculus | Cross-exit row-pair clauses, endpoint-owner symmetric differences, minimum owner-label transversals, binary cut-code buckets, terminal chamber router, dual/Farkas current readout | HYP-3414 turns HYP-3411/HYP-3412/HYP-3413/HYP-3409/HYP-3410 into a finite proof-facing calculus.  In each mixed theorem-exit fiber, every cross-exit row pair emits an owner-label clause; a legal owner cut is a hitting set whose cut-code buckets are theorem-exit pure.  Known values are singleton cuts `5:g1` and `1:g1` for the first two leaks, but the `(72,20)` `10->20` frontier has minimum cut size `3`, five minimum cuts, and empty core, so the live theorem is bounded owner transversals rather than a universal singleton owner label. | HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-2969, HYP-2963, THM-523, T1374, LTT-274, LTI-374, OPEN-Q-108 | Extend HYP-3406 beyond `(72,20)`, run the clause/transversal calculator on the first `residue+owner_support` failure if one appears, and add child-deck stability plus terminal-exit routing to every cut-pure fiber. |
 | LTI-382 | Off-grid resonance transparency / Rprime closure | Off-grid witness cells, resonant-speed distance ledger, `14Q` grid-kill check, canonical `84m` binding formula, 2-adic even-speed descent, signed-SPEC `Rprime` constant chase, fiber-PGF/edge-witness glue | HYP-3421 is the exact scout companion to HYP-3415's one-floor critical path, corrected by HYP-3418.  It verifies named off-grid optima with floors `1/12`, `1/8`, `1/9`, and canonical `{1..11,13,84m}` formula `t=(35m+2)/(84m+5)`, `M=7m/(84m+5)>1/14`; every checked resonant speed, including `14Q` tips, is safe at the selected full optima.  The technique recasts resonance as grid-local danger plus full-optimum transparency, while HYP-3418 keeps the floor on the 2-adic/even-speed descent route before the HYP-3129/HYP-3140 `Rprime` chase. | HYP-3421, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3412, HYP-3410, HYP-3310, HYP-3266, HYP-3265, HYP-3255, HYP-3140, HYP-3136, HYP-3129, HYP-3125, HYP-3124, HYP-2896, THM-523, T1382, LTT-282, LTI-382, OPEN-Q-108 | Prove the all-packet transparency classifier, the 2-adic even-speed descent, and the closed-form signed-SPEC `Rprime >= c` constant chase. |
@@ -7734,110 +7734,88 @@ Exact HYP-3438 readout:
 
 ```text
 rows_audited=135
-mixed_E_components=6228
-clean_E_components=7166
-fully_bad_E_components=3770
-survivor_gates_inside_mixed_components=8702
+mixed_components=6228
+survivor_gates=8702
+route_hist={
+  edge_singleton_parent_gate: 5950,
+  edge_survivor_residual: 1080,
+  owner_current_small_delta: 794,
+  mixed_owner_residual: 878
+}
 survivor_branch_mask_hist={both:1064, branch0:3819, branch1:3819}
 gate_adjacency_hist={left_bad_edge:3515, right_bad_edge:3515, two_sided:1672}
-parent_endpoint_kind_hist={E|E:8702}
+rows_with_mixed_owner_residual=79
 ```
 
-The tight AP-with-84 row has four one-gate edge words:
+Canonical mod-35 gate law target:
 
 ```text
-B-S: [8/49,97/588]     B1:7|E:84   branch1
-S-B: [33/196,6/35]     E:84|B1:5   branch1
-B-S: [29/35,163/196]   B0:5|E:84   branch0
-S-B: [491/588,41/49]   E:84|B0:7   branch0
+outer_13_7 edge gates  <=>  7 does not divide m
+inner_11_5 edge gates  <=>  5 does not divide m
+35 divides m           =>  clean E_safe survivor, no mixed gate
 ```
 
+The one-period probe `m=1..35` has no failures and bucket counts
+`outer_plus_inner:24`, `outer_only:6`, `inner_only:4`, `clean_only:1`.
+
 Best use: turn the HYP-3436 gluing hook into a finite obstruction statement.
-Each survivor gate should either be a direct branch-relocation witness, a
-corridor-fence instance, an endpoint-spine sidecar, an owner-current exception,
-a two-adic loss/debt term, an overlap-cut bridge, a signed-SPEC route, or a
-named residual.
+First prove the canonical mod-35 endpoint law.  Then route every noncanonical
+survivor gate as a direct branch-relocation witness, endpoint-spine sidecar,
+owner-current exception, overlap-tax/rescue-core cut, two-adic loss/debt term,
+signed-SPEC route, or named residual.
 
-HYP-3450/HYP-3451 provide the whole-component branch-alive/dead conductance
-projection.  Use that graph layer to choose obstruction cuts, then use LTI-399
-gate words to classify the mixed components inside the selected cuts.
+Assumption challenge: runners, gaps, fixed sections, section boundaries,
+wall-crossing events, residues, cover arcs, endpoint walls, branch-bad owners,
+cover-pair deltas, mixed even components, survivor gaps, and proof obligations
+were all candidate vertices.  The selected quotient preserves the relocation
+predicate and retains endpoint/owner payloads; it destroys raw runner order and
+scalar survivor mass.
 
-Assumption challenge for the planned audit: runners, gaps, fixed sections,
-section boundaries, wall-crossing events, residues, cover arcs, endpoint walls,
-branch-bad owners, cover-pair deltas, mixed even components, survivor gaps, and
-proof obligations remain candidate vertices.  The selected quotient should
-preserve the relocation predicate and record what endpoint/owner data it
-forgets.
-
-Anchors: HYP-3438, HYP-3451, HYP-3450, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
+Anchors: HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
 HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
 HYP-3129, THM-523, LTT-299, T1399, OPEN-Q-108.
 
 ## LTI-400: Rescue-Core Bridge Certificate
 
-Executed by codex-2026-06-29 for HYP-3439/T1400 after HYP-3438, HYP-3450, and
-HYP-3451 made the two-colour survivor/component side exact.  Rebased over
-HYP-3452, the AP-tail clause now has a phase theorem.  This is the proof-facing
-bridge between HYP-3437's one-branch overlap-tax rescue cores, HYP-3438's
-survivor-gate words, HYP-3450/HYP-3451's component-cover escape router, and
-HYP-3452's AP-tail phase split.
+Reserved by codex-2026-06-29 for HYP-3439/T1400 after the executed
+HYP-3438 survivor-gate audit.  This is the proof-facing bridge between HYP-3437's
+one-branch overlap-tax rescue cores and HYP-3436's two-color bad-core /
+survivor ledger.
 
 Carrier:
 
 ```text
 negative one-branch naive-slack row
 + HYP-3437 overlap rescue core
-+ HYP-3438 survivor-gate word
-+ HYP-3450/HYP-3451 component escape ledger
++ HYP-3436 bad-core/survivor ledger
 + canonical HYP-3431 corridor-fence recognizer
 + endpoint-spine/wall/owner-current/exact-period exits
 ```
 
 Preserved LRC predicate: whether a negative one-branch naive-slack row is
 rescued by a bounded endpoint-labelled overlap core, by the canonical
-corridor-fence family, or by a named legal two-colour survivor/component route.
-
-Executed readout:
-
-```text
-HYP-3437 recap:
-  rows_audited=150
-  negative_naive_slack_rows=59
-  negative_rows_with_rescue=59/59
-  all_row_rescue_rank_hist={0:91, 2:7, 4:2, 5:48, 6:2}
-  max_rank_rows=['covering_AP_with_84', 'canonical_84m_01']
-
-AP/84m bridge:
-  bridge_rows=14
-  unique_speed_rows=13
-  bridge_rescue_rank_hist={0:1, 5:11, 6:2}
-  rank6_bridge_rows=['covering_AP_with_84', 'ap_omit_12_tail_84x01']
-  aggregate_survivor_branch_mask_hist={branch0:27, branch1:27}
-  max_danger_bridge=ap_omit_12_tail_84x02
-```
+corridor-fence family, or by a named legal sidecar route.
 
 Destroyed information if used naively: raw rescue rank, scalar overlap-tax
 mass, and harmonic/gamma priorities do not identify which endpoint labels,
 bad-core blocks, and survivor gates carry the certificate.
 
-Best use: prove the canonical rank-`6` base case by HYP-3431 plus the
-HYP-3450/HYP-3451 four-escape component graph; prove the AP-tail rank-`5`
-descent using HYP-3452's finite transients `m=1..4`, rank-one endpoint phase
-for `m>=5`, pair-rank `<=2` from `m>=3`, and mod-`35` Beatty escape clock; then
-extend the bounded bridge to arbitrary primitive covering rows or name the
-first residual sidecar.
+Best use: prove that rank `6` is exactly the canonical HYP-3431 corridor-fence
+case, while noncanonical negative-slack rows have bounded rescue cores of rank
+at most `5` or emit named debt through HYP-3436 survivor gates, endpoint-spine
+walls, owner-current labels, exact-period/state-lift, two-adic loss, or
+signed-SPEC.
 
-Assumption challenge for the bridge: runners, odd blockers, overlap atoms,
-bad-core components, survivor gates, endpoint walls, canonical tower addresses,
-component-cover graph nodes, and proof obligations were candidate vertices.
-The selected quotient uses proof carriers / bridge certificates as vertices
-because that preserves the rescue predicate while admitting explicit routing
-for the endpoint, survivor, and component-address data it forgets.
+Assumption challenge for the planned bridge: runners, odd blockers, overlap
+atoms, bad-core components, survivor gates, endpoint walls, canonical tower
+addresses, and proof obligations remain candidate vertices.  The selected
+quotient should use proof carriers / bridge certificates as vertices because
+that preserves the rescue predicate while admitting explicit routing for the
+endpoint and survivor data it forgets.
 
-Anchors: HYP-3439, HYP-3452, HYP-3451, HYP-3450, HYP-3438, HYP-3437,
-HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427, HYP-3425,
-HYP-3422, HYP-3418, HYP-3415, THM-523, LTT-300, LTI-400, LTI-412, T1400,
-OPEN-Q-108.
+Anchors: HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434,
+HYP-3431, HYP-3429, HYP-3427, HYP-3425, HYP-3422, HYP-3418, HYP-3415,
+THM-523, LTT-300, LTI-400, T1400, OPEN-Q-108.
 
 ## LTI-365: Creative Reframe Lead Atlas
 

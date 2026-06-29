@@ -13,6 +13,15 @@ of 2026-05-30.
 
 Useful synthetic maps added later:
 
+- `07-reflections/lrc14-survivor-gate-word-audit-codex-20260629.md`:
+  HYP-3438/T1399 turns HYP-3436 survivor mass into exact local gate words.
+  It finds `8702` survivor gates, dominated by `5950` edge singleton-parent
+  gates, and reframes the canonical `{1,...,11,13,84m}` tower as a mod-35
+  endpoint law: outer `(13,7)` gates vanish exactly at `7 | m`, inner `(11,5)`
+  gates vanish exactly at `5 | m`, and `35 | m` survives through clean
+  `E_safe` components rather than mixed gates.  The useful inspiration is the
+  quotient guardrail: preserve the gate word, adjacent owner covers, and parent
+  even wall before forgetting raw runner order or scalar survivor mass.
 - `07-reflections/lrc14-minimal-bad-core-cover-extractor-codex-20260629.md`:
   HYP-3436/T1397 inverts the two-adic branch-cover certificate into exact
   local bad-core cover packets.  It records that `10288/11670` bad-core

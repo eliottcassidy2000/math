@@ -89,16 +89,6 @@ obligations, and proof-carrier interfaces.
   odd-blocker cut cores, endpoint-spine lifts, two-adic induction, BDH
   mean-square sidecars, Schwarz-Christoffel prevertex ledgers, Bring
   monodromy guards, and raw harmonic scalars the vertices.
-- Need to invert branch-cover survival into a component-level finite
-  obstruction:
-  use LTT-310 after LTT-299/LTT-298/LTT-297/LTT-296 and make `E_safe`
-  components, paired odd-bad covers, endpoint ranks, even endpoint gates, and
-  forbidden full-saturation obligations the vertices.
-- Need graph proof routing for the component-cover obstruction:
-  use LTT-311 after LTT-310 and make branch-coloured blocker projections,
-  Menger cuts, Green-current certificates, blocker entropy, and algebraic
-  connectivity the vertices.  AP-with-`84m` tails are the danger base cases;
-  high cover-rank random rows are negative controls unless escape count is low.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -8660,72 +8650,75 @@ quotient_legality_status
   adjacent bad-core cover deltas, endpoint-wall alternation, corridor-fence
   recognizer, endpoint-spine sidecar, owner-current route, two-adic loss route,
   signed-SPEC route, and raw survivor-measure shortcut as a negative control.
-- **LRC use:** HYP-3438 sharpens HYP-3436's local-to-global hook.  On the
-  same `135` primitive covering rows it records `6228` mixed `E_safe`
-  components and `8702` survivor gates.  Branch masks split `both:1064`,
-  `branch0:3819`, `branch1:3819`; adjacency splits `left_bad_edge:3515`,
-  `right_bad_edge:3515`, `two_sided:1672`; parent endpoint kind is always
-  `E|E`.
+- **LRC use:** HYP-3438 sharpens HYP-3436's local-to-global hook.  HYP-3436
+  shows every audited row has survivors; HYP-3438 classifies the exact word
+  around each survivor gap inside a mixed `E_safe` component.
 - **Preserves:** branch-relocation predicate, survivor interval, endpoint wall
   labels, adjacent B0/B1 cover owners, parent even wall, and legal sidecar
   route.
 - **Forgets / guardrail:** raw survivor measure, mixed-component counts,
   harmonic budgets, and topology-only labels cannot certify the gap unless they
   reconstruct or route the exact gate word.
-- **Fingerprint:** `9` vertices, score histogram
-  `{12:1,52:1,57:2,58:1,61:1,64:1,66:1,67:1}`, no directed `3`-cycles, and
-  path `G00_exact_survivor_gate_word -> G01_adjacent_cover_delta_ledger ->
-  G02_endpoint_wall_alternation -> G03_branch_mask_relocation_witness ->
-  G04_corridor_fence_recognizer -> G05_overlap_cut_bridge ->
-  G06_owner_current_exception_router -> G07_signed_SPEC_route ->
-  G08_raw_survivor_measure`.
-- **Next hook:** prove the gate-word obstruction or name the first residual
-  gate family that cannot route through the listed sidecars.  Pair this with
-  HYP-3450/HYP-3451: choose obstruction cuts in the whole-component
-  branch-alive/dead projection, then classify mixed components by gate words.
-- **Pointers:** HYP-3438, HYP-3451, HYP-3450, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
+- **Exact readout:** `8702` survivor gates on `135` rows, route histogram
+  `edge_singleton_parent_gate:5950`, `edge_survivor_residual:1080`,
+  `owner_current_small_delta:794`, `mixed_owner_residual:878`, with `79` rows
+  containing mixed-owner residual gates.  Branch-mask histogram is
+  `both:1064`, `branch0:3819`, `branch1:3819`, so residual difficulty is
+  cover-delta/endpoint-gluing rather than one-branch imbalance.
+- **Canonical law:** for `{1,...,11,13,84m}` through one full mod-35 period,
+  outer `(13,7)` edge gates occur iff `7` does not divide `m`, inner `(11,5)`
+  edge gates occur iff `5` does not divide `m`, and `35 | m` gives no mixed
+  gates because the survivor route is clean `E_safe`.
+- **Pairwise observable:** predicate retention + exact gate word + adjacent
+  cover delta + endpoint wall payload + legal sidecar route.
+- **Switch/gauge:** higher proof-facing score; ties by declared carrier order.
+- **Tie Hamiltonian path:** `G00_gate_word_exactness ->
+  G01_adjacent_cover_delta -> G02_endpoint_wall_alternation ->
+  G03_corridor_singleton_recognizer -> G04_endpoint_spine_sidecar ->
+  G05_owner_current_route -> G06_overlap_tax_menger_route ->
+  G07_two_adic_loss_route -> G08_signed_SPEC_route ->
+  G09_raw_survivor_measure`.
+- **Fingerprint:** score histogram
+  `{6:1,98:1,104:1,109:1,112:1,114:1,124:1,126:1,129:1,140:1}`,
+  no directed `3`-cycles, and `9` edge flips against raw-survivor-first.
+- **Next hook:** prove the canonical mod-35 endpoint law, then discharge
+  residual gates through overlap-tax cuts, rescue cores, endpoint-cut sidecars,
+  owner-current, two-adic loss, exact-period/state-lift, or signed-SPEC.
+- **Pointers:** HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
   HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
   HYP-3129, THM-523, LTI-399, LTT-299, T1399, OPEN-Q-108.
 
 ## LTT-300: Rescue-Core Bridge Tournament
 
 - **Move:** Use proof obligations and bridge carriers as vertices: canonical
-  corridor-fence rank-`6` bridge, two-colour component escape, one-branch
-  overlap rescue cut, survivor-gate word route, AP-tail rank-`5` descent,
-  component-conductance router, endpoint-spine/wall handoff, and raw
-  rescue-rank shortcut as a negative control.
-- **LRC use:** HYP-3439 connects HYP-3437's one-branch overlap-tax rescue
-  cores with HYP-3438 survivor gates and HYP-3450/HYP-3451 component-cover
-  escapes on the AP/84m spine.  The executed audit finds rank `6` only at
-  `covering_AP_with_84` / `ap_omit_12_tail_84x01`, while AP tails drop to rank
-  `5` core `(5,7,9,11,13)` and keep low-rank two-colour escapes.  HYP-3452
-  sharpens that tail clause into finite transients `m=1..4`, a rank-one
-  endpoint phase for `m>=5`, pair-rank `<=2` from `m>=3`, and a mod-`35`
-  Beatty escape clock.
+  corridor-fence recognizer, noncanonical bounded rescue core, HYP-3436
+  survivor-gate route, endpoint-spine/wall route, owner-current route,
+  exact-period/state-lift debt, signed-SPEC/Rprime debt, and raw rescue-rank
+  shortcut as a negative control.
+- **LRC use:** HYP-3439 is reserved to connect HYP-3437's one-branch
+  overlap-tax rescue cores with HYP-3436's two-color bad-core/survivor ledger.
+  The target is to separate the canonical HYP-3431 rank-`6` family from
+  noncanonical negative-slack rows that should compress to bounded rank or
+  route to named debt.
 - **Preserves:** negative-slack rescue predicate, endpoint-labelled overlap
   core, bad-core/survivor context, canonical corridor-fence status, and legal
   residual route.
 - **Forgets / guardrail:** raw rank, scalar overlap mass, harmonic budgets, and
   gamma/Mertens priorities cannot certify rescue unless the endpoint labels and
   survivor-gate sidecars survive or are routed.
-- **Pairwise observable:** retained rescue predicate plus endpoint/survivor/
-  component payload minus scalar-forgetting debt.
+- **Pairwise observable:** retained rescue predicate plus endpoint/survivor
+  payload minus scalar-forgetting debt.
 - **Switch/gauge:** higher proof-facing score wins; ties use declared carrier
   order.
-- **Fingerprint:** score histogram `{21:1,54:1,55:2,57:2,58:1,59:1}`;
-  directed `3`-cycles `0`; Hamiltonian path count `1`.
-- **Tie Hamiltonian path:** canonical_corridor_rank6_bridge ->
-  two_color_component_escape -> one_branch_overlap_rescue_cut ->
-  survivor_gate_word_route -> ap_tail_rank5_descent ->
-  component_conductance_router -> endpoint_spine_wall_handoff ->
-  raw_rescue_rank_scalar.
-- **Next hook:** formalize the canonical rank-`6` base case, use HYP-3452 for
-  the rank-`5` AP-tail descent, then extend the bounded bridge to arbitrary
-  primitive covering rows or name the first residual sidecar.
-- **Pointers:** HYP-3439, HYP-3452, HYP-3451, HYP-3450, HYP-3438, HYP-3437,
-  HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427, HYP-3425,
-  HYP-3422, HYP-3418, HYP-3415, THM-523, LTI-400, LTI-412, LTT-300, T1400,
-  OPEN-Q-108.
+- **Tie Hamiltonian path:** canonical corridor-fence recognizer ->
+  noncanonical bounded rescue core -> survivor-gate route -> endpoint-spine
+  route -> owner-current route -> exact-period/state-lift debt ->
+  signed-SPEC/Rprime debt -> raw rescue-rank shortcut.
+- **Next hook:** build the HYP-3439 bridge audit over the HYP-3436/HYP-3437
+  banks and the canonical `84m` tower.
+- **Pointers:** HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434,
+  HYP-3431, HYP-3429, HYP-3427, HYP-3425, HYP-3422, HYP-3418, HYP-3415,
+  THM-523, LTI-400, LTT-300, T1400, OPEN-Q-108.
 
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 

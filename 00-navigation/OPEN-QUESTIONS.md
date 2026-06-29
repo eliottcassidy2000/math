@@ -118,6 +118,8 @@ HYP-3438 turns HYP-3436's survivor gaps into exact gate words.  On the
 branch masks `both:1064`, `branch0:3819`, `branch1:3819`; adjacency
 `left_bad_edge:3515`, `right_bad_edge:3515`, `two_sided:1672`; all parent
 endpoints `E|E`.  Each gate word retains:
+HYP-3438 turns the HYP-3436 local bad-core cover ledgers into exact survivor
+gate words.  Each mixed `E_safe` component is now represented by:
 
 ```text
 bad-core block / survivor gap / bad-core block
@@ -141,6 +143,26 @@ components inside those cuts by the HYP-3438 gate words. -> HYP-3438,
 HYP-3451, HYP-3450, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
 HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
 HYP-3129, THM-523, LTI-399, LTT-299, T1399, OPEN-Q-108.
+Exact readout: `8702` survivor gates over `6228` mixed components, with
+`5950` edge singleton-parent gates, `1080` edge-survivor residuals, `794`
+owner-current small deltas, and `878` mixed-owner residuals.  The canonical
+family `{1,...,11,13,84m}` now suggests a mod-35 theorem:
+
+```text
+outer (13,7) edge gates iff 7 does not divide m
+inner (11,5) edge gates iff 5 does not divide m
+35 divides m iff the survivor route is clean E_safe, not a mixed gate
+```
+
+Concrete task: prove that canonical mod-35 endpoint arithmetic for all `m`,
+then discharge the noncanonical residual gates through HYP-3437 overlap-tax
+Menger cuts, HYP-3439 rescue-core compression, HYP-3440 endpoint-cut sidecars,
+owner-current debt, two-adic loss, exact-period/state-lift, or signed-SPEC.
+Raw survivor measure, mixed-component counts, harmonic budgets, and topology
+labels are not certificates unless they reconstruct or route this gate word. ->
+HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429,
+HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129,
+THM-523, LTI-399, LTT-299, T1399, OPEN-Q-108.
 **OPEN-Q-108 HYP-3436 minimal bad-core cover extractor addendum:**
 HYP-3436 completes the HYP-3435 inversion and makes the current LRC14 covering
 target sharper.  Work with

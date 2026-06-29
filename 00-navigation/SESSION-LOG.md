@@ -28,6 +28,39 @@ transversal router.  HYP-3454 should be used as its AP-tail endpoint-clock
 sidecar, not as a replacement for the gate-transversal theorem.
 
 ## codex-2026-06-29 -- HYP-3452 AP84 tail component phase
+## codex-2026-06-29 -- HYP-3438 survivor-gate word audit executed
+
+Executed HYP-3438/T1399/LTI-399/LTT-299 as the HYP-3436 local-to-global
+follow-up.  Replaced the reserved stub with an exact gate-word audit:
+
+```text
+04-computation/lrc14_survivor_gate_word_audit_codex_20260629.py
+05-knowledge/results/lrc14_survivor_gate_word_audit_codex_20260629.out
+05-knowledge/hypotheses/HYP-3438-lrc14-survivor-gate-word-audit.md
+07-reflections/lrc14-survivor-gate-word-audit-codex-20260629.md
+```
+
+Readout on the same `135` primitive covering rows as HYP-3436: `17164`
+even-safe components, `6228` mixed components, and `8702` survivor gates.
+Route histogram is `edge_singleton_parent_gate:5950`,
+`edge_survivor_residual:1080`, `owner_current_small_delta:794`, and
+`mixed_owner_residual:878`; `79` rows have mixed-owner residual gates.
+
+New canonical proof target: the family `{1,...,11,13,84m}` obeys a mod-35 gate
+law through `m=1..35`.  Outer `(13,7)` edge gates exist exactly when `7` does
+not divide `m`; inner `(11,5)` edge gates exist exactly when `5` does not
+divide `m`; when `35 | m`, no mixed gates remain and survival comes from clean
+`E_safe` components.  This sharpens the previous singleton-tail law into an
+endpoint-arithmetic theorem target.
+
+Next hook: prove the canonical mod-35 law, then construct a residual-gate
+discharging table routing `mixed_owner_residual` and `edge_survivor_residual`
+cases through HYP-3437 overlap-tax cuts, HYP-3439 rescue cores, HYP-3440
+endpoint-cut sidecars, owner-current, two-adic descent, exact-period/state-lift,
+or signed-SPEC debt.  Tournament Analysis uses survivor-gate proof carriers,
+with raw survivor measure retained only as a negative-control quotient.
+
+## codex-2026-06-29 -- reserve HYP-3438 survivor-gate word audit
 
 Continued the HYP-3451 component-cover graph route by isolating the canonical
 AP-with-`84m` family as a proof-facing base theorem rather than a vague danger

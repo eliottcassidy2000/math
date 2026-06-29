@@ -4,9 +4,11 @@ The recurring coordinator should add each new post here, newest first.
 
 ## Posts
 
+- [LRC14 Survivor-Gate Word Audit](posts/20260629-lrc14-survivor-gate-word-audit/post.md) - executes HYP-3438/T1399/LTI-399/LTT-299, decomposing HYP-3436 mixed `E_safe` components into exact survivor-gate words.  It finds `8702` gates and promotes the canonical mod-35 law: outer `(13,7)` gates iff `7` does not divide `m`, inner `(11,5)` gates iff `5` does not divide `m`, and `35 | m` survives through clean `E_safe` components.
+
 - [Two-Adic Gates, Krasner Owner Balls, and Boundary Skeletons](posts/20260629-014012Z-two-adic-krasner-boundary-skeletons/post.md) - Turns the two-adic endpoint certificate and S297 Galois/quartic synthesis into a three-lock local ledger: Haar status, AP/GW boundary skeleton, and Krasner-style owner/contact-root stability before any LRC14 packet can claim terminal closure.
 
-- [LRC14 Bring/SC/Menger Charal Signatures](posts/20260628-163907Z-lrc14-bring-sc-menger-charal-signatures/post.md) - introduces HYP-3440/T1401/LTI-401/LTT-301 as the renumbered Bring/SC/Menger endpoint-cut sidecar after HYP-3436/HYP-3437 and the HYP-3438 survivor-gate reservation.  It supplies boundary-order/min-cut vocabulary for branch-cover and overlap-tax certificates, not a replacement for the two-adic floor.
+- [LRC14 Bring/SC/Menger Charal Signatures](posts/20260628-163907Z-lrc14-bring-sc-menger-charal-signatures/post.md) - introduces HYP-3440/T1401/LTI-401/LTT-301 as the renumbered Bring/SC/Menger endpoint-cut sidecar after HYP-3436/HYP-3437 and the HYP-3438 survivor-gate audit lane.  It supplies boundary-order/min-cut vocabulary for branch-cover and overlap-tax certificates, not a replacement for the two-adic floor.
 
 <!-- Preserved legacy encoded index body follows. -->
 

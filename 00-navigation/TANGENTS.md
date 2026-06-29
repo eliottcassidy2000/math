@@ -72,6 +72,21 @@ by these HYP-3438 gate words. -> HYP-3438, HYP-3451, HYP-3450, HYP-3437,
 HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3428,
 HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, THM-523,
 LTI-399, LTT-299, OPEN-Q-108.
+mixed `E_safe` component into exact words of bad-core blocks and survivor gaps
+while retaining endpoint wall labels, adjacent minimal B0/B1 owner covers,
+cover-owner deltas, branch mask, and parent even wall.  On `135` rows the audit
+finds `8702` survivor gates: `5950` edge singleton-parent gates, `1080`
+edge-survivor residuals, `794` owner-current small deltas, and `878`
+mixed-owner residuals.  New proof pull: the canonical `{1,...,11,13,84m}`
+family obeys a mod-35 gate law through one period: outer `(13,7)` gates iff
+`7` does not divide `m`, inner `(11,5)` gates iff `5` does not divide `m`, and
+`35 | m` survives by clean `E_safe` components with no mixed gates.  Prove that
+endpoint law, then discharge noncanonical residual gates through overlap-tax,
+rescue-core, endpoint-cut, owner-current, two-adic, exact-period/state-lift, or
+signed-SPEC debt before any scalar bad-measure or harmonic-tail compression is
+allowed. -> HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
+HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
+HYP-3129, THM-523, LTI-399, LTT-299, OPEN-Q-108.
 **T1397** [codex-2026-06-29] #lrc14 #two-adic #bad-core #minimal-cover #finite-ruler #endpoint-gates #HYP-3436.
 Minimal bad-core cover extractor.  Executes the HYP-3435 next hook by
 classifying the complementary obstruction `E_safe cap B0_odd cap B1_odd`
