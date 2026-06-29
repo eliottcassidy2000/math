@@ -1,3 +1,28 @@
+## mac-mini-2026-06-29-S8 -- the two tasks: f via the half-system (THM-583) + the R +-1 eigenspace split of the cap is the two-index split (HYP-3538)
+
+Prompt: (1) chase the f-recursion through the half-system digraph (f is a half-HP count); (2) test the surmise
+-- compute the R-odd eigenspace component of the cap for the binding LRC case, check it is the obstruction.
+Organizing principle: the LRC signed certificate = the R-odd (eps=-1) eigenspace of the cap; the R-symmetric
+half on (0,1/2) = SOS/Brouwer; even/Brouwer (+) odd/Borsuk-Ulam IS the +-1 eigenspace split of reversal R.
+
+TASK 1 (THM-583, PROVED+verified): f = #palindromic Ham paths (THM-582 odd index) = a Hamiltonian-path count
+on the (p-1)/2-pair HALF-SYSTEM digraph. A palindromic path is (v_1..v_m, c, phi(v_m)..phi(v_1)); validity
+reduces to PURE HALF-DATA (arcs v_i->v_{i+1} and v_m->c) because phi makes the 2nd half automatic
+(arc(u,w)<=>arc(phi(w),phi(u))). Transfer DP on (last,used-pairs): states 2/21/150 vs p!=6/5040/40M; Paley
+f=1,9,185. Lossless half-compression IFF phi retained (= the eps=-1 coordinate, the HYP-3244 warning).
+
+TASK 2 (HYP-3538, SUPPORTED): the co-emptiness matrix M (R-symmetric under (1 5)(2 4) fix 3,6) splits
+M_even (+) M_odd. For ALL binding configs (consec_8/9, minimizers {1,5,7,8,9}, {1,11,12,13}) the PERRON/bulk
+mode is R-EVEN (the SOS-provable bulk) and there is a nonzero 2-dim R-ODD eigenspace (eigs ~0.1-0.3)
+contributing NEGATIVELY to S2 = the signed obstruction. So the +-1 eigenspace split is a REAL structural
+feature: R-even=provable bulk, R-odd=signed residual. REFINES THM-581/582 per-obligation: the FLOOR (lonely
+measure) is purely R-EVEN; the CAP/concentration (matrix M) carries the R-ODD obstruction. Both tasks: the
+eps=-1 content of R is M_odd (cap side) and f (witness side).
+
+NEXT: confirm "R-odd IS the binding deviation" by localizing the S75e cosine(=R-even)-SOS gap onto M_odd =>
+LRC cap proof = [R-even by S75e SOS] + [R-odd by Borsuk-Ulam odd degree], the literal +-1 split. Files:
+THM-583, HYP-3538, half_system_f_recursion + lrc_cap_R_eigenspace_obstruction scripts.
+
 ## mac-mini-2026-06-29-S7 -- niche reframe: the LRC cap is a measure-valued CLAIM A (deletion-contraction, factor 2, teeth=cycles)
 
 Prompt: look for even more creative reframes (even niche/small topics); explore for ideas as you improve proofs.
