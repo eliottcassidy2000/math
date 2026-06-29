@@ -10284,3 +10284,37 @@ quotient_legality_status
 - **Pointers:** HYP-3490, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475,
   HYP-3472, HYP-3471, HYP-3455, HYP-3453, HYP-3451, HYP-3438, THM-523,
   LTI-450, LTT-350, T1450, OPEN-Q-108.
+
+## LTT-345: Random031 Seam-Complement Connection Tournament
+
+- **Move:** Treat the seam-complement proof route as the tournament carrier.
+  Vertices are relative H1 seam complement, ordered two-adic bypass blocks,
+  owner monodromy seam word, Menger/Green escape graph, zipper quotient
+  ladder, fiber-PGF sheet moment, and raw scalar shadow.
+- **LRC use:** HYP-3485 looks backward through the random031 stack and older
+  LRC machinery to explain what HYP-3484 should become as a theorem.  The
+  random031 packet is `cylinder - punctures - forbidden seam`: delete the
+  max-delta seam, retain the four mirror-paired dead islands as punctures,
+  route phase flow through the `u=2t` lower-delta bypass sheet, and record
+  owner labels as cut or monodromy charges.
+- **Preserves:** random031 terminal predicate, relative topology of the seam
+  complement, puncture sidecars, ordered bypass flow, seven-owner charge,
+  low-rank escape boundary, and quotient-legality guardrails.
+- **Forgets / guardrail:** raw wall/delta/owner/phase-hit scalars are illegal
+  unless they reconstruct zero hard-seam phase hits, the two lower-delta bypass
+  gates, the four punctures, and the seven-owner seam word.
+- **Pairwise observable:** retained LRC predicate, relative-topology payload,
+  two-adic bypass payload, owner-charge payload, escape-boundary payload, and
+  scalar-forgetting penalty.
+- **Switch/gauge:** higher retained proof predicate first; ties use the route
+  from relative H1 to bypass, owner charge, escape graph, quotient ladder,
+  sheet moment, and finally raw scalar shadow.
+- **Fingerprint:** proposed Hamiltonian path
+  `relative_H1_seam_complement -> two_adic_ordered_bypass_blocks -> owner_monodromy_seam_word -> menger_green_escape_graph -> zipper_quotient_ladder -> fiber_pgf_sheet_moment -> raw_scalar_shadow`.
+- **Next hook:** implement the relative seam-complement graph or H1 complex.
+  Low-rank escapes should be boundary vertices, the max-delta seam should be a
+  deleted edge, and the audit should certify whether every q=`14V` phase-flow
+  component reaches escape before crossing the forbidden seam.
+- **Pointers:** HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477,
+  HYP-3460, HYP-3455, HYP-3451, HYP-3437, HYP-3428, HYP-3422, HYP-3140,
+  HYP-3034, HYP-3023, THM-523, LTI-445, LTT-345, T1445, OPEN-Q-108.

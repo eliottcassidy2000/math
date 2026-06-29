@@ -1,5 +1,31 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3485 random031 seam-complement connections addendum:**
+HYP-3485 synthesizes the past-work routes around seam complement and bypass
+flow.  The promising proof object is relative, not scalar:
+
+```text
+cylinder - four mirror-paired punctures - forbidden max-delta seam
+```
+
+with phase-flow worldlines on the complement, owner labels as seam/cut
+monodromy, and low-rank escapes as the boundary to be reached.  The past
+connections are now explicit: HYP-3455 gives the seven-owner gluing clause,
+HYP-3460 gives zero hard hits plus lower-delta bypass hits, HYP-3477 makes
+random031 the unique hard-orbit bypass case, HYP-3023 gives the zipper
+guardrail, HYP-3034 gives the relative Cech/path-lift template,
+HYP-3422/HYP-3428 give the `u=2t` branch engine, HYP-3437/HYP-3451 give
+Menger/Green/current escape tests, and HYP-3140 gives a local sheet-moment
+analogy.
+
+Open proof task: build the seam-complement graph or relative H1 complex by
+deleting the max-delta seam gates, marking the four dead islands as punctures,
+and treating low-rank escapes as boundary.  Prove every q=`14V` phase-flow
+component reaches escape before a forbidden seam crossing is needed.  -> HYP-3485,
+HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, HYP-3451,
+HYP-3437, HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3023, LTI-445,
+LTT-345, T1445.
+
 **OPEN-Q-108 HYP-3483 random031 recursion addendum:**
 HYP-3483 answers the `n+2` versus `n*2` prompt by refusing the false choice.
 For `random_covering_031`, the bypass flow is `n*2`/two-adic: two consecutive
