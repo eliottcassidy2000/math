@@ -495,6 +495,8 @@ record what it destroys before asking it to prove anything.
 | LTI-384 | Q-uniform topology / q-specific arithmetic break guardrail | C2/Borsuk-Ulam residue charge, C6 orbit split, q-mod-3 Eisenstein switch, labelled owner-current packet, two-adic floor descent, Rprime floor handoff, forbidden topology-to-magnitude inference | HYP-3423 turns the `C2 = Borsuk-Ulam` synthesis into a quotient legality rule, renumbered after S259 claimed HYP-3418 for the two-adic covering-floor sharpening and incoming S297/S298 claimed HYP-3420 for owner-cut chiral synthesis.  The C2/BU topological charge is q-uniform and can close only residue/equioscillation obligations.  The canonical Goddyn-Wong magnitude break is q-specific: the HYP-3413 switch is ON only for `q == 1 mod 3`, giving `q=4,7` ON and `q=5,6` OFF.  Therefore any quotient claiming a q-specific magnitude conclusion must retain or restore HYP-3413 arithmetic, HYP-3417 labelled owner currents, S259/HYP-3418 two-adic descent, or HYP-3415 decorrelation floor data. | HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3413, HYP-3411, HYP-3312, HYP-3311, HYP-3310, HYP-3406, HYP-3405, HYP-2963, THM-523, T1384, LTT-284, LTI-384, OPEN-Q-108 | Audit every proof route that invokes C2/BU, C6, or topological degree: if the route concludes residue/equioscillation, mark it legal; if it concludes magnitude/GW/floor, demand q-mod-3 arithmetic, labelled owner-current sidecars, S259/HYP-3418 two-adic descent, or Rprime floor input before accepting the quotient. |
 | LTI-389 | Two-adic descent loss ledger | Halving quotient audit, odd blockers, halved even child under `u=2t`, exact witness loss classes, owner-current/even-hinge sidecars, named off-grid/state-lift debt | HYP-3428 audits the HYP-3410/HYP-3417 AP-collar mixed fibers as a legal-quotient proxy for HYP-3418's two-adic covering-floor route.  On reconstructed rows, the raw half witness fails `23/23`, `22/23` rows keep even binders, and `22/23` rows have the halved even child carrying the exact bottleneck at `u=2t*`; the remaining loss is named, not collapsed into a scalar. | HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3410, HYP-3406, HYP-3311, HYP-3265, THM-523, T1389, LTT-289, LTI-389, OPEN-Q-108 | Attach the loss classes to HYP-3427 wall-word residual search and prove that every failed even-child transfer is paid by bounded odd-blocker, owner-current, off-grid, sheet, state-lift, or named residual debt. |
 | LTI-401 | Bring/Schwarz-Christoffel/Menger Charal signature router | Proof motifs and recursive sidecars; owner-support boundary words, Menger endpoint cuts, Bring branch alarms, Krasner/HLW no-free-slider guards, BDH variance packets, Sophie Germain quartic gates, Soldner/Mertens bulk normalization, energy-plus-sheet packets, endpoint-support triples, wall signatures | HYP-3440 is a lower-payload endpoint-cut motif slice downstream of HYP-3428's two-adic loss ledger, HYP-3424's covering-floor duality transfer, the paired HYP-3425 Helly/energy-sheet scouts, HYP-3426's one-branch mirror endpoint-support audit, and HYP-3427's wall-signature atlas, as well as HYP-3421/HYP-3422 off-grid/two-adic floor scouts and HYP-3423 topology/arithmetic guardrail.  The scout ranks Schwarz-Christoffel owner polygon and Menger endpoint cut first because they preserve endpoint-owner support in the broken magnitude/owner layer, while branch, stability, variance, quartic, energy, and log-prime motifs are guarded packet sidecars.  HYP-3424 says owner/additive data must be packetized before touching the floor; HYP-3425 says relocation needs a Helly/interval target and energy needs a sheet sidecar; HYP-3426/HYP-3427 say endpoint cuts should become one-branch endpoint-support triples and exact wall words. | HYP-3440, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311, HYP-3310, HYP-3301, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3254, HYP-3247, HYP-3123, HYP-2969, HYP-2963, THM-523, T1401, LTT-301, LTI-401, OPEN-Q-108 | Prove bounded endpoint-owner deletion transversals for every residue-plus-height mixed fiber, express the same certificate as a Schwarz-Christoffel boundary word, and feed it into HYP-3428/HYP-3424/HYP-3422/HYP-3425/HYP-3426/HYP-3427 only as owner/branch/packet/wall debt without mistaking it for the floor theorem, the Helly interval lemma, an energy scalar shortcut, or a wall-free geometric analogy. |
+| LTI-410 | Component-cover obstruction extractor | Component-local `E_safe` classes, branch0/branch1 survivor status, paired minimal odd-bad subcovers, survivor endpoint ranks, endpoint labels, forbidden full-saturation target | HYP-3450 refines HYP-3438/HYP-3436/HYP-3435/HYP-3434 by auditing each `E_safe` component as alive/dead by branch rather than only as bad-core mass or gate-word promise.  Exact bank: `135` rows, `17164` components, `rows_with_branch_survivor=135/135`, `rows_with_endpoint_rank_le_2_survivor=135/135`, classes `both_alive=6492`, `branch0_only=3451`, `branch1_only=3451`, `dead_both=3770`; every dead component has paired minimal covers and pair-rank histogram `{2:3492,3:222,4:44,5:10,6:2}`.  The tight `{1..11,13,84}` row has `22` dead-both components and four rank-`2` escape windows. | HYP-3450, HYP-3440, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, T1410, LTT-310, LTI-410, OPEN-Q-108 | Prove the contrapositive: if every `E_safe` component is `dead_both`, then the paired odd-bad covers plus even endpoint gates form a forbidden finite obstruction.  Start with the canonical row and `random_covering_082`; route through Menger cuts, Green currents, conductance, endpoint-spine, owner-current, or two-adic descent. |
+| LTI-411 | Component-cover conductance router | Branch-coloured component/blocker projection graph, blocker entropy, connected dead-cover projection, algebraic-connectivity proxy, Menger/Green-current escape route, AP-tail danger ranking | HYP-3451 converts HYP-3450 paired covers into a graph router.  Dead components are adjacent if their minimal branch-coloured covers share a blocker.  Audit: `rows_audited=135`, `rows_with_low_rank_escape=135/135`, max pair rank `6` at `random_covering_082`, max dead fraction `0.962963` at `ap_omit_12_tail_84x05`, blocker entropy range `[2.000000,3.872947]`.  The rank-`6` row has `106` low-rank escapes and low danger; AP-with-`84m` tails have connected dead-cover projections and only four escapes, so they are the proof-facing graph base cases. | HYP-3451, HYP-3450, HYP-3440, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3432, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, T1411, LTT-311, LTI-411, OPEN-Q-108 | Prove full two-colour blocker saturation of `E_safe` is impossible.  For `{1..11,13,84}`, use the connected `22`-dead-component projection and four rank-`2` escapes to build a bounded Menger cut, Green-current boundary imbalance, or algebraic-connectivity obstruction; then lift to AP tails and arbitrary primitive rows. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
@@ -8167,3 +8169,133 @@ HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311, HYP-3310, HYP-3301,
 HYP-3265, HYP-3260, HYP-3259, HYP-3258,
 HYP-3257, HYP-3256, HYP-3254, HYP-3247, HYP-3123, HYP-2969, HYP-2963,
 THM-523, LTT-301, LTI-401, T1401, OPEN-Q-108.
+
+## LTI-410: Component-Cover Obstruction Extractor
+
+Created by codex-2026-06-28 for HYP-3450/T1410 as the local obstruction
+continuation of HYP-3438's survivor-gate audit, HYP-3436's bad-core extractor,
+HYP-3435's branch-cover certificate, and HYP-3434's overlap-tax identity.  The
+technique moves from bad-core/gate promises to component-level branch survival
+objects.
+
+Carrier / vertex set:
+
+```text
+E_safe components, branch0/branch1 survivor statuses, paired minimal odd-bad
+subcovers, endpoint ranks, endpoint labels, even endpoint gates.
+```
+
+Preserved LRC predicate:
+
+```text
+there exists an E_safe component with branch-union survivor endpoint rank <= 2.
+```
+
+Destroyed information if used naively: which component is being covered, which
+branch dies, which odd blockers form the local minimal cover, and which even
+endpoint gates define the component.
+
+Exact HYP-3450 readout:
+
+```text
+rows_audited=135
+components_total=17164
+rows_with_branch_survivor=135/135
+rows_with_endpoint_rank_le_2_survivor=135/135
+component_class_hist={both_alive:6492, branch0_only:3451,
+  branch1_only:3451, dead_both:3770}
+dead_components_with_two_min_covers=3770/3770
+dead_pair_cover_rank_hist={2:3492, 3:222, 4:44, 5:10, 6:2}
+```
+
+Tight row:
+
+```text
+covering_AP_with_84:
+  components=26
+  dead_both=22
+  both_alive=4
+  best_interval=[33/196,6/35]
+  best_labels=L[E:84] R[B1:5]
+  largest_dead_cover=[43/588,55/588]
+  b0_cover=(1,(1,))
+  b1_cover=(2,(11,13))
+  pair_rank=3
+```
+
+Tournament fingerprint: `7` component-proof vertices, score histogram
+`{12:1, 23:1, 50:1, 51:1, 55:2, 58:1}`, no directed `3`-cycles, and priority
+path
+`minimal_component_obstruction_extractor -> endpoint_gate_rank_lemma -> paired_odd_bad_cover_certificate -> branch_cover_sensitivity_ledger -> green_current_conductance_router -> raw_branch_union_measure -> scalar_harmonic_tail_slogan`.
+
+Next agent hook: prove the contrapositive.  If every component of `E_safe` is
+`dead_both`, the paired odd-bad covers plus even endpoint gates must form a
+forbidden finite obstruction.  Start with `{1..11,13,84}` and
+`random_covering_082`, then route through Menger cuts, Green currents,
+conductance, HYP-3429 endpoint spines, HYP-3417 owner-current, HYP-3423
+topology legality, or two-adic descent.
+
+## LTI-411: Component-Cover Conductance Router
+
+Created by codex-2026-06-28 for HYP-3451/T1411 as the graph-theoretic
+continuation of HYP-3450.  The technique converts paired minimal covers into a
+branch-coloured component/blocker projection graph.
+
+Carrier / vertex set:
+
+```text
+dead components, branch-coloured blocker labels B0:o and B1:o, projected
+component adjacency by shared blockers, low-rank escape components, blocker
+entropy, and algebraic-connectivity/conductance proxies.
+```
+
+Preserved LRC predicate: no full two-colour blocker saturation of `E_safe`
+without an endpoint-rank `<= 2` escape.
+
+Destroyed information if used naively: branch colour, blocker identity,
+component adjacency, and escape endpoint rank.  Raw dead-component count and
+raw dead mass are negative controls.
+
+Exact HYP-3451 readout:
+
+```text
+rows_audited=135
+rows_with_low_rank_escape=135/135
+max_dead_pair_rank=6 at random_covering_082
+max_dead_fraction=0.962963 at ap_omit_12_tail_84x05
+blocker_entropy_range=[2.000000,3.872947]
+effective_blocker_range=[4.000000,14.651206]
+```
+
+Proof-facing rows:
+
+```text
+ap_omit_12_tail_84x02:
+  components=48, dead=44, alive=4, low_rank_escape=4
+  projection_components=1
+  lambda2_largest_projection=4.386932
+  cheeger_proxy=0.104451
+
+covering_AP_with_84:
+  components=26, dead=22, alive=4, low_rank_escape=4
+  projection_components=1
+  lambda2_largest_projection=3.046340
+  cheeger_proxy=0.138470
+
+random_covering_082:
+  max_pair_rank=6
+  alive=106
+  low_rank_escape=106
+  danger_score=0.013126
+```
+
+Tournament fingerprint: `7` graph-proof vertices, score histogram
+`{19:1, 25:1, 50:1, 51:1, 55:1, 56:1, 57:1}`, no directed `3`-cycles, and
+priority path
+`component_blocker_projection_graph -> green_current_escape_certificate -> menger_cut_saturation_obstruction -> algebraic_connectivity_router -> blocker_entropy_firewall -> raw_dead_component_count -> raw_dead_mass_scalar`.
+
+Next agent hook: prove the AP-with-`84` graph base case.  Its `22` dead
+components form one blocker-projection component, but four endpoint-rank `2`
+escape components remain.  A proof should expose these escapes by a bounded
+Menger cut, a Green-current boundary imbalance, or an algebraic-connectivity
+obstruction, then lift to the AP-with-`84m` tails and arbitrary primitive rows.

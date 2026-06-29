@@ -59,6 +59,38 @@ gamma/Mertens tails are only priority shadows. -> HYP-3436, HYP-3437, HYP-3435, 
 HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424,
 HYP-3423, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-397,
 LTT-297, T1397, OPEN-Q-108.
+**OPEN-Q-108 HYP-3450/HYP-3451 component-cover obstruction addendum:**
+HYP-3450 and HYP-3451 refine the branch-cover finite lemma after HYP-3435.
+The local theorem target is no longer a scalar mass estimate; it is:
+
+```text
+Every primitive LRC14 covering row has an E_safe component whose branch-union
+survivor has endpoint rank <= 2.
+```
+
+Equivalently, prove the contrapositive:
+
+```text
+Full two-colour blocker saturation of E_safe is impossible.
+```
+
+HYP-3450 audits `135` rows and `17164` components: every row has a branch
+survivor and every row has an endpoint-rank `<= 2` survivor.  All `3770`
+dead-both components have paired minimal odd-bad covers, with pair-rank
+histogram `{2:3492,3:222,4:44,5:10,6:2}`.  HYP-3451 turns these covers into a
+branch-coloured blocker projection and finds `rows_with_low_rank_escape=135/135`.
+The rank-`6` row `random_covering_082` has `106` low-rank escapes, while the
+AP-with-`84m` rows are the real danger cases: connected dead-cover projections
+and only four low-rank escapes.
+
+Concrete task: prove the `{1..11,13,84}` graph base case.  Its `22` dead
+components form one blocker-projection component, but four endpoint-rank `2`
+escape components remain.  Build a Menger cut, Green-current boundary
+imbalance, or algebraic-connectivity obstruction that forces one escape, then
+lift to AP-with-`84m` tails and arbitrary primitive rows. -> HYP-3451,
+HYP-3450, HYP-3435, HYP-3434, HYP-3429, HYP-3427, HYP-3426, HYP-3425,
+HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-411, LTT-311, LTI-410,
+LTT-310, T1411, T1410, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3432 Euler-Mascheroni harmonic wall-budget addendum:**
 HYP-3432 extends HYP-3430's Euler-Mascheroni scalar-firewall audit by testing

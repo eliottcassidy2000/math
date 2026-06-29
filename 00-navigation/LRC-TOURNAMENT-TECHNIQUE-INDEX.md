@@ -89,6 +89,16 @@ obligations, and proof-carrier interfaces.
   odd-blocker cut cores, endpoint-spine lifts, two-adic induction, BDH
   mean-square sidecars, Schwarz-Christoffel prevertex ledgers, Bring
   monodromy guards, and raw harmonic scalars the vertices.
+- Need to invert branch-cover survival into a component-level finite
+  obstruction:
+  use LTT-310 after LTT-299/LTT-298/LTT-297/LTT-296 and make `E_safe`
+  components, paired odd-bad covers, endpoint ranks, even endpoint gates, and
+  forbidden full-saturation obligations the vertices.
+- Need graph proof routing for the component-cover obstruction:
+  use LTT-311 after LTT-310 and make branch-coloured blocker projections,
+  Menger cuts, Green-current certificates, blocker entropy, and algebraic
+  connectivity the vertices.  AP-with-`84m` tails are the danger base cases;
+  high cover-rank random rows are negative controls unless escape count is low.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -9019,3 +9029,79 @@ quotient_legality_status
   HYP-3265, HYP-3260, HYP-3259,
   HYP-3258, HYP-3257, HYP-3256, HYP-3254, HYP-3247, HYP-3123, HYP-2969,
   HYP-2963, THM-523, LTI-401, T1401, OPEN-Q-108.
+
+## LTT-310: Component-Cover Obstruction Tournament
+
+- **Move:** Replace row-level branch positivity by a component-level
+  obstruction tournament.  Vertices are the component extractor, endpoint-rank
+  lemma, paired odd-bad cover certificate, branch-cover sensitivity ledger,
+  Green-current/conductance router, raw branch measure, and scalar harmonic
+  slogan as negative control.
+- **LRC use:** HYP-3450 sharpens the HYP-3438/HYP-3436 local-to-global lane:
+  a failed branch-cover row would have to make every `E_safe` component
+  `dead_both`.  Every such component would then carry both a branch-0 minimal
+  odd-bad cover and a branch-1 minimal odd-bad cover, plus the even endpoint
+  gates defining the component.  This is the finite object a proof can
+  classify by Helly/Menger/Green-current methods.
+- **Preserves:** component identity, branch-coloured blocker covers, survivor
+  endpoint rank, endpoint labels, and the exact contrapositive payload.
+- **Forgets / guardrail:** raw branch union measure forgets which components
+  are alive, which ones are dead, and which blockers form local covers.
+  HYP-3434 already showed total mass forgets overlap tax; HYP-3450 shows it
+  also forgets component locality.
+- **Pairwise observable:** predicate retention, cover minimality,
+  endpoint-gate rank, two-adic branch payload, conductance-router value, and
+  scalar-risk control.
+- **Switch/gauge:** higher retained proof payload first; ties use the declared
+  obstruction path.
+- **Fingerprint:** `7` vertices, score histogram
+  `{12:1, 23:1, 50:1, 51:1, 55:2, 58:1}`, no directed `3`-cycles, and
+  Hamiltonian path
+  `minimal_component_obstruction_extractor -> endpoint_gate_rank_lemma -> paired_odd_bad_cover_certificate -> branch_cover_sensitivity_ledger -> green_current_conductance_router -> raw_branch_union_measure -> scalar_harmonic_tail_slogan`.
+- **Next hook:** prove that paired dead-cover rank cannot saturate all
+  `E_safe` components.  Start from `{1..11,13,84}` and
+  `random_covering_082`; if the paired covers can be saturated locally, route
+  the obstruction through owner-current, two-adic descent, topology-legality,
+  or signed-SPEC sidecars.
+- **Pointers:** HYP-3450, HYP-3440, HYP-3439, HYP-3438, HYP-3437, HYP-3436,
+  HYP-3435, HYP-3434, HYP-3433, HYP-3432, HYP-3431, HYP-3430, HYP-3429,
+  HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422,
+  HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-410, LTT-310, T1410,
+  OPEN-Q-108.
+
+## LTT-311: Component-Cover Conductance Tournament
+
+- **Move:** Make the component-cover obstruction into a branch-coloured graph
+  tournament.  Vertices are the component/blocker projection graph, Green
+  current escape certificate, Menger cut saturation obstruction, algebraic
+  connectivity router, blocker entropy firewall, raw dead-component count, and
+  raw dead mass scalar.
+- **LRC use:** HYP-3451 distinguishes true danger from large local cover rank.
+  The unique max-rank row `random_covering_082` has `106` low-rank escapes,
+  while the AP-with-`84m` rows have connected dead-cover projections and only
+  four escapes.  Thus the graph base case is the AP-tail family, not the
+  largest-rank random row.
+- **Preserves:** branch colour, blocker identity, component adjacency,
+  low-rank escape count, blocker entropy, and conductance/algebraic
+  connectivity route data.
+- **Forgets / guardrail:** raw dead count, raw dead mass, and max cover rank
+  alone are lossy.  They cannot say whether the dead covers form a connected
+  saturation candidate or whether many low-rank escapes remain.
+- **Pairwise observable:** predicate retention, cut payload, conductance route,
+  entropy firewall, and scalar-risk penalty.
+- **Switch/gauge:** higher graph proof-router score first; ties use the
+  declared graph route.
+- **Fingerprint:** `7` vertices, score histogram
+  `{19:1, 25:1, 50:1, 51:1, 55:1, 56:1, 57:1}`, no directed `3`-cycles, and
+  Hamiltonian path
+  `component_blocker_projection_graph -> green_current_escape_certificate -> menger_cut_saturation_obstruction -> algebraic_connectivity_router -> blocker_entropy_firewall -> raw_dead_component_count -> raw_dead_mass_scalar`.
+- **Next hook:** prove the AP-with-`84` graph base case.  Its `22` dead
+  components form one blocker-projection component with
+  `lambda2_largest_projection=3.046340`, but four endpoint-rank `2` escape
+  components remain.  Build a Menger cut, Green-current boundary imbalance, or
+  algebraic-connectivity obstruction that forces one of those escapes, then
+  lift to AP-with-`84m` tails and arbitrary primitive rows.
+- **Pointers:** HYP-3451, HYP-3450, HYP-3440, HYP-3439, HYP-3438, HYP-3437,
+  HYP-3436, HYP-3435, HYP-3434, HYP-3432, HYP-3429, HYP-3427, HYP-3426,
+  HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-411,
+  LTT-311, T1411, OPEN-Q-108.

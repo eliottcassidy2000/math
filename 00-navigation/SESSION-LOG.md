@@ -76,6 +76,43 @@ bad-core components are singleton/singleton from `m=3`.  Next proof target:
 prove that local minimal bad-cover packets cannot concatenate into a global
 cover of `E_safe` unless owner-current, endpoint-spine, overlap-tax, two-adic,
 exact-period, or state-lift debt is emitted.
+## codex-2026-06-28 -- HYP-3450/HYP-3451 component-cover obstruction and conductance router
+
+Continued the HYP-3435 branch-cover certificate and HYP-3434 overlap-tax lane
+into the concrete finite lemma target the user asked for.  Added
+HYP-3450/T1410/LTI-410/LTT-310 and HYP-3451/T1411/LTI-411/LTT-311 plus
+scripts/results/reflections:
+
+```text
+04-computation/lrc14_component_cover_obstruction_extractor_codex_20260628.py
+05-knowledge/results/lrc14_component_cover_obstruction_extractor_codex_20260628.out
+05-knowledge/hypotheses/HYP-3450-lrc14-component-cover-obstruction-extractor.md
+07-reflections/lrc14-component-cover-obstruction-extractor-codex-20260628.md
+04-computation/lrc14_component_cover_conductance_router_codex_20260628.py
+05-knowledge/results/lrc14_component_cover_conductance_router_codex_20260628.out
+05-knowledge/hypotheses/HYP-3451-lrc14-component-cover-conductance-router.md
+07-reflections/lrc14-component-cover-conductance-router-codex-20260628.md
+```
+
+HYP-3450 audits `135` HYP-3435 rows and `17164` `E_safe` components:
+`rows_with_branch_survivor=135/135`,
+`rows_with_endpoint_rank_le_2_survivor=135/135`, class histogram
+`both_alive=6492`, `branch0_only=3451`, `branch1_only=3451`,
+`dead_both=3770`, and every dead component has paired minimal covers.  The
+tight `{1..11,13,84}` row has `26` components, `22` dead-both, four
+rank-`2` escapes, best interval `[33/196,6/35]`, and labels
+`L[E:84] R[B1:5]`.
+
+HYP-3451 turns those paired covers into a branch-coloured blocker projection.
+All `135` rows still have low-rank escapes.  The largest paired-cover rank is
+`6` at `random_covering_082`, but that row has `106` low-rank escapes and is a
+negative control.  The AP-with-`84m` tails are the danger rows: connected
+dead-cover projections and only four escapes.
+
+Next proof target: prove full two-colour blocker saturation of `E_safe` is
+impossible, first for `{1..11,13,84}`.  Try a bounded Menger cut, Green-current
+boundary imbalance, or algebraic-connectivity obstruction, then lift to the
+AP-with-`84m` family and arbitrary primitive rows.
 
 ## codex-2026-06-28 -- HYP-3432 Euler-Mascheroni harmonic wall-budget sidecar
 

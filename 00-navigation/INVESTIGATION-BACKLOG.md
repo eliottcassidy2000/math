@@ -99,6 +99,46 @@ Next: prove the canonical singleton-tail law for all `m>=3`, then build the
 general component-chain owner-cover graph and prove an all-covered chain emits
 owner-current, endpoint-spine, overlap-tax, two-adic, exact-period, or
 state-lift debt.
+## Lead codex-2026-06-28: Component-cover obstruction and conductance router
+
+**Status:** EVIDENCE / exact component obstruction audit plus graph router; not
+proof (HYP-3450/T1410/LTI-410/LTT-310 and HYP-3451/T1411/LTI-411/LTT-311),
+continuing HYP-3435's branch-cover certificate, HYP-3434's overlap-tax
+identity, and HYP-3429's endpoint-spine route.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3450-lrc14-component-cover-obstruction-extractor.md`,
+`05-knowledge/hypotheses/HYP-3451-lrc14-component-cover-conductance-router.md`,
+scripts
+`04-computation/lrc14_component_cover_obstruction_extractor_codex_20260628.py`
+and
+`04-computation/lrc14_component_cover_conductance_router_codex_20260628.py`,
+results
+`05-knowledge/results/lrc14_component_cover_obstruction_extractor_codex_20260628.out`
+and
+`05-knowledge/results/lrc14_component_cover_conductance_router_codex_20260628.out`,
+and reflections in `07-reflections/`.
+
+Purpose: make the finite lemma target local.  For each `E_safe` component,
+record branch0/branch1 survival, minimal odd-bad covers when a branch dies,
+and endpoint rank/labels when a branch survives.  Then project dead components
+to a branch-coloured blocker graph for Menger/Green-current/conductance proof
+routes.
+
+Readout: HYP-3450 audits `135` rows and `17164` components, with
+`rows_with_endpoint_rank_le_2_survivor=135/135`; component classes are
+`both_alive=6492`, `branch0_only=3451`, `branch1_only=3451`,
+`dead_both=3770`, and all dead components have paired minimal covers.  HYP-3451
+finds `rows_with_low_rank_escape=135/135`, max paired-cover rank `6` at
+`random_covering_082`, max dead fraction `0.962963` at
+`ap_omit_12_tail_84x05`, and AP-with-`84m` tails as the danger rows with
+connected dead-cover projections and only four low-rank escapes.
+
+Next: prove the AP-with-`84` graph base case.  Its `22` dead components form
+one blocker-projection component, yet four endpoint-rank `2` escapes remain.
+Try a bounded Menger cut, Green-current boundary imbalance, or
+algebraic-connectivity obstruction; then lift to AP-with-`84m` tails and
+arbitrary primitive rows.
 
 ## Lead codex-2026-06-28: Euler-Mascheroni harmonic wall-budget sidecar
 
