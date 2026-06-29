@@ -10,6 +10,7 @@ lean_module: 04-computation/lean/TournamentH7/TournamentH7/LRCColoredGateFormali
 result: 05-knowledge/results/lrc14_colored_gate_formalization_lean_codex_20260629.out
 reflection: 07-reflections/lrc14-colored-gate-formalization-codex-20260629.md
 related:
+  - HYP-3472
   - HYP-3471
   - HYP-3462
   - HYP-3470

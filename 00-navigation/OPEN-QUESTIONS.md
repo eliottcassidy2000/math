@@ -21,14 +21,50 @@ and the second should give every LRC14 speed row a terminal packet carrying
 proves `LRC14Statement` by the existing Mreach skeleton.
 
 Open proof task: instantiate the finite producer from exact HYP-3438/HYP-3453
-geometry, preferably by a HYP-3451 current/cut or Menger obstruction proof, and
-then fill terminal exits for AP84 corridor splice, AP84 color-grid placement,
-random031 gluing, component conductance, owner-current, two-adic descent, and
-signed-SPEC/Rprime routes.  The formalization makes raw color counts and raw
-gate counts unusable as terminal proof objects unless they produce one of
-these packets. -> HYP-3473, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460,
+geometry, then attach HYP-3472's dead-cover projection-touch/cut sidecar as the
+HYP-3451 current/Menger route.  Then fill terminal exits for AP84 corridor
+splice, AP84 color-grid placement, random031 gluing, component conductance,
+owner-current, two-adic descent, and signed-SPEC/Rprime routes.  The
+formalization makes raw color counts and raw gate counts unusable as terminal
+proof objects unless they produce one of these packets. -> HYP-3473, HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460,
 HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3438, HYP-3436,
 THM-523, LTI-433, LTT-333, T1433, OPEN-Q-108.
+**OPEN-Q-108 HYP-3472 dead-cover boundary-current addendum:**
+HYP-3472 joins the HYP-3471 low-rank E/branch survivor gates to HYP-3451's
+dead-cover blocker projection.  Exact audit on the `135`-row bank:
+
+```text
+dead rows with touching E/branch gate: 130/130
+dead rows with projection-edge cut gate: 123/130
+dead rows with separating-current gate: 121/130
+```
+
+Edge-cut exceptions are seven random rows:
+
+```text
+random_covering_001
+random_covering_031
+random_covering_039
+random_covering_062
+random_covering_074
+random_covering_086
+random_covering_101
+```
+
+Separating-current exceptions add the AP84 base pair
+`covering_AP_with_84` and `ap_omit_12_tail_84x01`.  HYP-3473 supplies the
+Lean-facing colored-gate interface for the E/branch producer; HYP-3472 should
+be the projection-touch/cut sidecar plugged in after `DeadCoverEBranchSoundness`
+is instantiated.  The open proof task is now to prove the universal touch
+lemma, prove edge/separating transfer away from the named exceptions, and
+discharge the exceptions through HYP-3455, HYP-3462/HYP-3470, owner-current,
+two-adic, signed-SPEC, or state-lift debt.
+Tournament path: `projection_cut_gate -> separating_boundary_current ->
+dead_positive_e_branch_implication -> closed_ap84_packet ->
+random031_seven_owner_clause -> typed_gate_word -> raw_gate_count ->
+raw_dead_fraction`. -> HYP-3472, HYP-3473, HYP-3471, HYP-3462, HYP-3470, HYP-3455,
+HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-3436, HYP-3417, HYP-3129,
+THM-523, LTI-432, LTT-332, T1432, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3458 AP84 coloring-recursion addendum:**
 HYP-3458 reconnects the AP84 endpoint-clock work with HYP-2247/HYP-2243

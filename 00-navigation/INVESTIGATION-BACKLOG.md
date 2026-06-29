@@ -17,9 +17,9 @@
 
 ## Lead codex-2026-06-29: dead-cover boundary-current audit
 
-**Status:** RESERVED STUB / graph-current audit pending; not proof
-(HYP-3472/T1432/LTI-432/LTT-332), claiming the graph/current sibling to
-HYP-3471 after HYP-3462 closed the AP84 corridor-splice packet.
+**Status:** EVIDENCE / exact graph-current audit; not proof
+(HYP-3472/T1432/LTI-432/LTT-332), the graph/current sibling to HYP-3471 after
+HYP-3462 closed the AP84 corridor-splice packet.
 
 Claimed files:
 `05-knowledge/hypotheses/HYP-3472-lrc14-dead-cover-boundary-current.md`,
@@ -30,10 +30,13 @@ result
 and reflection
 `07-reflections/lrc14-dead-cover-boundary-current-codex-20260629.md`.
 
-Known input: HYP-3451 projects dead components into a branch-coloured blocker
-graph; HYP-3453 gives every dead-component row a rank-`<=2` survivor gate; and
-HYP-3471 strengthens that to a rank-`<=2` E/branch survivor gate on all
-`130/130` dead rows in the current bank.
+Readout: `130/130` dead rows have a low-rank E/branch gate touching the
+dead-cover projection; `123/130` have a projection-edge cut; `121/130` have a
+separating current.  Edge-cut exceptions are
+`random_covering_001`, `random_covering_031`, `random_covering_039`,
+`random_covering_062`, `random_covering_074`, `random_covering_086`, and
+`random_covering_101`.  Separating-current exceptions add
+`covering_AP_with_84` and `ap_omit_12_tail_84x01`.
 
 Next: run the boundary-current audit.  For each low-rank E/branch gate, record
 adjacent blocker labels, remove them from the dead-cover incidence graph, and
@@ -70,6 +73,14 @@ component with no low-rank E/branch leak should force impossible branch-current
 divergence or a Menger cut with typed gate-boundary terminals.  Then fill the
 legal terminal packets through HYP-3462, HYP-3470, HYP-3461, HYP-3460,
 HYP-3459, HYP-3458, HYP-3455, HYP-3451, two-adic descent, or signed SPEC.
+Next: prove the universal touch lemma, then edge-cut/separating-current
+transfer away from the named exceptions.  Route `random_covering_031` through
+HYP-3455, the AP84 base rows through HYP-3462/HYP-3470, and the six remaining
+random exceptions through owner-current, two-adic, signed-SPEC, or state-lift
+debt.  Tournament vertices were proof carriers and obligations, not runners:
+projection cut, separating current, E/branch implication, AP84 closed packet,
+random031 seven-owner gluing clause, typed gate word, raw gate count, and raw
+dead fraction.
 
 ## Lead codex-2026-06-29: AP84 coloring-recursion bridge
 

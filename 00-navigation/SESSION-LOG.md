@@ -1,10 +1,10 @@
-## codex-2026-06-29 -- HYP-3472 dead-cover boundary-current reservation
+## codex-2026-06-29 -- HYP-3472 dead-cover boundary-current audit
 
 Prompt: spend another similar session pushing different directions on similar
 questions.  Claimed a graph/current direction rather than another color packet:
 HYP-3472/T1432/LTI-432/LTT-332.
 
-Reserved files:
+Added HYP-3472/T1432/LTI-432/LTT-332 plus script/result/reflection:
 
 ```text
 04-computation/lrc14_dead_cover_boundary_current_codex_20260629.py
@@ -51,6 +51,34 @@ existing `LRCFourteenSkeleton` foundations.  Next pull: instantiate
 `DeadCoverEBranchSoundness` from exact component/gate geometry, then fill AP84,
 random031, conductance, owner-current, two-adic, and signed-SPEC terminal
 packets before applying the global coverage theorem.
+Core readout: `130/130` dead rows have a low-rank E/branch gate touching the
+dead-cover projection; `123/130` have a projection-edge cut; `121/130` have a
+separating current.  Edge-cut exceptions are seven random rows:
+`random_covering_001`, `random_covering_031`, `random_covering_039`,
+`random_covering_062`, `random_covering_074`, `random_covering_086`, and
+`random_covering_101`.  Separating-current exceptions add
+`covering_AP_with_84` and `ap_omit_12_tail_84x01`.
+
+Tournament Analysis: vertices were proof carriers, not runners.  Score
+histogram `{7:1,14:1,52:1,54:1,55:1,63:1,64:1,66:1}`, no directed `3`-cycles,
+one Hamiltonian path:
+
+```text
+projection_cut_gate
+-> separating_boundary_current
+-> dead_positive_e_branch_implication
+-> closed_ap84_packet
+-> random031_seven_owner_clause
+-> typed_gate_word
+-> raw_gate_count
+-> raw_dead_fraction
+```
+
+Next proof pull: prove the universal touch lemma, then projection-edge and
+separating-current transfer off the named exceptions.  Route `random_covering_031`
+through HYP-3455, the AP84 base rows through HYP-3462/HYP-3470, and the six
+remaining random exceptions through owner-current/two-adic/signed-SPEC/state-lift
+debt.
 
 ## codex-2026-06-29 -- HYP-3458 AP84 coloring-recursion bridge
 

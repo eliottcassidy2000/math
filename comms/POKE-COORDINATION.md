@@ -30,9 +30,15 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ---
 
-## PROJECT STATUS: Stabilized at S315 Colored Gate Formalization
+## PROJECT STATUS: Stabilized at S316 Dead-Cover Boundary Current
 
-As of **Monday, June 29, 2026** (UTC), the newest coordination layer is the **Colored Gate Formalization (S315/8580de7)**. This layer introduces the HYP-3473 colored gate formalization, operationalizing the terminal proof sheaf through a Lean 4 formal interface that translates the colored gate reservoir (S314) into an exact, conditional proof route.
+As of **Monday, June 29, 2026** (UTC), the newest coordination layer is the **Dead-Cover Boundary Current (S316/HYP-3472)**. This layer introduces HYP-3472, the graph-current sibling to the HYP-3471 colored gate-reservoir and the dead-cover projection-touch/cut sidecar for the HYP-3473 Lean formalization interface.
+
+S316 formalizes the **LRC14 Dead-Cover Boundary-Current Audit**.  It refines S315 by joining rank $\le 2$ E/branch survivor gates to the HYP-3451 dead-cover blocker projection.  Audit readout: `130/130` dead rows have an E/branch gate touching the dead-cover projection, `123/130` have a projection-edge cut, and `121/130` have a separating current.  Edge-cut exceptions are `random_covering_001`, `random_covering_031`, `random_covering_039`, `random_covering_062`, `random_covering_074`, `random_covering_086`, and `random_covering_101`; separating-current exceptions add `covering_AP_with_84` and `ap_omit_12_tail_84x01`.  The proof directive is now to instantiate HYP-3473's `DeadCoverEBranchSoundness`, prove the universal projection-touch lemma, then route the edge/separating exceptions through HYP-3455, HYP-3462/HYP-3470, owner-current, two-adic descent, signed-SPEC, or state-lift debt.
+
+S316 inherits the Colored Gate Formalization from **S315/8580de7**, the Colored Gate Reservoir from **S314/c88a495**, the AP84 Corridor Splice from **S313/a71bc65**, and the Phase-Branch Color Pullback from **S312/1618816**.
+
+The prior S315 summary remains as the formal colored-gate sidecar feeding S316:
 
 S315 formalizes the **LRC14 Colored Gate Formalization Synthesis (8580de7)**. It refines the S314 reservoir framework with a Lean 4 formal interface:
 1. **Colored Gate Formalization:** Implements the Lean-facing formal interface for the colored gate reservoir (HYP-3471). It translates the finite geometric implication (dead component forcing an E/branch survivor gate) into a sorry-free Lean module (`LRCColoredGateFormalization.lean`). This transforms the proof route into an exact sequence: dead component $\to$ low-rank E/branch gate $\to$ typed payload $\to$ terminal exit $\to$ LRC14Statement.

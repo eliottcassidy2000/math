@@ -1,0 +1,102 @@
+HYP-3472 LRC14 dead-cover boundary-current audit
+
+Method:
+  vertices tested are dead-cover blocker labels, E/branch gates, cuts, currents, and proof obligations.
+  runners/gaps/residues/wall-crossings/cover-arcs were considered as alternate vertices;
+  this quotient preserves dead-cover-to-boundary-gate transfer and destroys full wall geometry.
+
+rows_audited=135
+rows_with_dead_components=130/135
+low_rank_e_branch_gates_total=7002
+dead_row_low_rank_e_branch_gates=6928
+nondead_row_low_rank_e_branch_gates=74
+dead_rows_with_e_branch_gate=130/130
+dead_rows_without_e_branch_gate=[]
+
+projection baseline:
+  projection_components_hist={1: 98, 2: 29, 4: 3}
+  projection_largest_hist={16: 11, 14: 10, 10: 8, 1: 7, 20: 7, 30: 6, 3: 6, 24: 6, 18: 6, 28: 5, 26: 5, 4: 5 ...}
+  projection_edge_hist={0: 7, 6: 5, 20: 5, 12: 5, 40: 4, 2: 4, 128: 3, 22: 3, 34: 3, 36: 3, 104: 3, 52: 3 ...}
+
+gate-cut aggregate:
+  e_branch_gates_touching_dead_projection=6834/6928
+  e_branch_gates_with_projection_edge_cut=5816/6928
+  e_branch_gates_with_separating_current=3266/6928
+  gate_label_count_hist={0: 94, 1: 940, 2: 5048, 3: 662, 4: 146, 5: 34, 6: 4}
+  gate_touch_label_count_hist={1: 940, 2: 5048, 3: 662, 4: 146, 5: 34, 6: 4}
+  gate_removed_edges_hist={0: 1112, 1: 648, 3: 564, 2: 438, 4: 396, 5: 368, 6: 296, 8: 278, 9: 242, 7: 222, 10: 206, 14: 200 ...}
+  gate_largest_drop_hist={0: 4262, 1: 1554, 2: 642, 3: 234, 4: 120, 5: 54, 6: 38, 7: 14, 9: 4, 8: 2, 10: 2, 11: 2}
+  gate_component_gain_hist={0: 3662, 1: 2074, 2: 820, 3: 256, 4: 62, 5: 30, 6: 12, 7: 4, 8: 2, 9: 2, 10: 2, 11: 2}
+  gate_current_hist={(1, 1): 5022, (0, 1): 470, (1, 0): 470, (1, 2): 331, (2, 1): 331, (2, 2): 126, (0, 0): 94, (2, 3): 14, (3, 2): 14, (0, 2): 13, (2, 0): 13, (3, 1): 10 ...}
+  branch_balance_hist={0: 5242, -1: 815, 1: 815, -2: 24, 2: 24, -3: 3, 3: 3, -4: 1, 4: 1}
+
+dead-row coverage:
+  dead_rows_with_touching_gate=130/130
+  dead_rows_without_touching_gate=[]
+  dead_rows_with_projection_edge_cut_gate=123/130
+  dead_rows_without_projection_edge_cut_gate=['random_covering_001', 'random_covering_031', 'random_covering_039', 'random_covering_062', 'random_covering_074', 'random_covering_086', 'random_covering_101']
+  dead_rows_with_separating_current_gate=121/130
+  dead_rows_without_separating_current_gate=['covering_AP_with_84', 'ap_omit_12_tail_84x01', 'random_covering_001', 'random_covering_031', 'random_covering_039', 'random_covering_062', 'random_covering_074', 'random_covering_086', 'random_covering_101']
+
+best-per-row cut histograms:
+  best_removed_edges_hist={14: 10, 3: 8, 0: 7, 7: 5, 16: 4, 18: 4, 1: 4, 5: 4, 20: 3, 31: 3, 10: 3, 9: 3 ...}
+  best_largest_drop_hist={0: 32, 2: 24, 4: 18, 3: 17, 1: 16, 5: 9, 6: 6, 7: 3, 9: 2, 8: 1, 10: 1, 11: 1}
+  best_component_gain_hist={2: 38, 3: 28, 1: 21, 4: 17, 5: 10, 0: 9, 6: 2, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1}
+  best_current_hist={(1, 1): 71, (2, 1): 17, (1, 2): 15, (2, 2): 15, (3, 2): 4, (1, 3): 2, (3, 1): 2, (2, 4): 1, (1, 4): 1, (2, 3): 1, (1, 0): 1}
+  best_endpoint_kind_hist={'B1|E': 35, 'E|B1': 35, 'E|B0': 30, 'B0|E': 30}
+
+AP84/non-AP split:
+  ap84_dead_rows=13 non_ap_dead_rows=117
+  ap84_rows_with_projection_edge_cut_gate=13/13
+  non_ap_rows_with_projection_edge_cut_gate=110/117
+  ap84_rows_with_separating_current_gate=11/13
+  non_ap_rows_with_separating_current_gate=110/117
+
+top projection edge cuts:
+  ap_omit_12_tail_84x12: gate=[8/49,129/784] kind=B1|E labels=('B0:13', 'B1:7') removed_edges=1593 largest_drop=10 component_gain=10 current=(1,1) delta=(1,1)
+  ap_omit_12_tail_84x12: gate=[655/784,41/49] kind=E|B0 labels=('B0:7', 'B1:13') removed_edges=1593 largest_drop=10 component_gain=10 current=(1,1) delta=(1,1)
+  ap_omit_12_tail_84x11: gate=[8/49,1063/6468] kind=B1|E labels=('B0:13', 'B1:7') removed_edges=1365 largest_drop=9 component_gain=9 current=(1,1) delta=(1,1)
+  ap_omit_12_tail_84x11: gate=[5405/6468,41/49] kind=E|B0 labels=('B0:7', 'B1:13') removed_edges=1365 largest_drop=9 component_gain=9 current=(1,1) delta=(1,1)
+  ap_omit_12_tail_84x10: gate=[8/49,193/1176] kind=B1|E labels=('B0:13', 'B1:7') removed_edges=1044 largest_drop=8 component_gain=8 current=(1,1) delta=(1,1)
+  ap_omit_12_tail_84x10: gate=[983/1176,41/49] kind=E|B0 labels=('B0:7', 'B1:13') removed_edges=1044 largest_drop=8 component_gain=8 current=(1,1) delta=(1,1)
+  ap_omit_12_tail_84x12: gate=[1205/7056,6/35] kind=E|B1 labels=('B0:11', 'B1:5') removed_edges=999 largest_drop=7 component_gain=7 current=(1,1) delta=(1,1)
+  ap_omit_12_tail_84x12: gate=[29/35,5851/7056] kind=B0|E labels=('B0:5', 'B1:11') removed_edges=999 largest_drop=7 component_gain=7 current=(1,1) delta=(1,1)
+  ap_omit_12_tail_84x11: gate=[369/2156,6/35] kind=E|B1 labels=('B0:11', 'B1:5') removed_edges=870 largest_drop=6 component_gain=6 current=(1,1) delta=(1,1)
+  ap_omit_12_tail_84x11: gate=[29/35,1787/2156] kind=B0|E labels=('B0:5', 'B1:11') removed_edges=870 largest_drop=6 component_gain=6 current=(1,1) delta=(1,1)
+
+top separating currents:
+  random_covering_013: gate=[379/1120,244/721] kind=E|B1 labels=('B0:35', 'B0:65', 'B1:103', 'B1:119', 'B1:143', 'B1:91') removed_edges=192 largest_drop=11 component_gain=11 current=(2,4) delta=(2,4)
+  random_covering_013: gate=[477/721,741/1120] kind=B0|E labels=('B0:103', 'B0:119', 'B0:143', 'B0:91', 'B1:35', 'B1:65') removed_edges=192 largest_drop=11 component_gain=11 current=(4,2) delta=(4,2)
+  ap_omit_12_tail_84x12: gate=[8/49,129/784] kind=B1|E labels=('B0:13', 'B1:7') removed_edges=1593 largest_drop=10 component_gain=10 current=(1,1) delta=(1,1)
+  ap_omit_12_tail_84x12: gate=[655/784,41/49] kind=E|B0 labels=('B0:7', 'B1:13') removed_edges=1593 largest_drop=10 component_gain=10 current=(1,1) delta=(1,1)
+  ap_omit_12_tail_84x11: gate=[8/49,1063/6468] kind=B1|E labels=('B0:13', 'B1:7') removed_edges=1365 largest_drop=9 component_gain=9 current=(1,1) delta=(1,1)
+  ap_omit_12_tail_84x11: gate=[5405/6468,41/49] kind=E|B0 labels=('B0:7', 'B1:13') removed_edges=1365 largest_drop=9 component_gain=9 current=(1,1) delta=(1,1)
+  random_covering_094: gate=[15/77,41/210] kind=B0|E labels=('B0:11', 'B1:25') removed_edges=55 largest_drop=9 component_gain=5 current=(1,1) delta=(1,1)
+  random_covering_094: gate=[169/210,62/77] kind=E|B1 labels=('B0:25', 'B1:11') removed_edges=55 largest_drop=9 component_gain=5 current=(1,1) delta=(1,1)
+  ap_omit_12_tail_84x10: gate=[8/49,193/1176] kind=B1|E labels=('B0:13', 'B1:7') removed_edges=1044 largest_drop=8 component_gain=8 current=(1,1) delta=(1,1)
+  ap_omit_12_tail_84x10: gate=[983/1176,41/49] kind=E|B0 labels=('B0:7', 'B1:13') removed_edges=1044 largest_drop=8 component_gain=8 current=(1,1) delta=(1,1)
+
+best cuts on rows without separating current:
+  ap_omit_12_tail_84x01: gate=[8/49,97/588] kind=B1|E labels=('B0:13', 'B1:7') removed_edges=20 largest_drop=0 component_gain=0 current=(1,1) delta=(1,1)
+  covering_AP_with_84: gate=[8/49,97/588] kind=B1|E labels=('B0:13', 'B1:7') removed_edges=20 largest_drop=0 component_gain=0 current=(1,1) delta=(1,1)
+  random_covering_001: gate=[1/98,2/189] kind=E|B1 labels=('B0:165', 'B0:179', 'B1:81') removed_edges=0 largest_drop=0 component_gain=0 current=(2,1) delta=(2,1)
+  random_covering_031: gate=[59/168,426/1211] kind=E|B1 labels=('B0:23', 'B0:45', 'B1:93') removed_edges=0 largest_drop=0 component_gain=0 current=(2,1) delta=(2,2)
+  random_covering_039: gate=[3/224,13/903] kind=E|B0 labels=('B0:129', 'B1:63') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1) delta=(1,1)
+  random_covering_062: gate=[134/567,83/350] kind=B1|E labels=('B0:9', 'B1:81') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1) delta=(1,1)
+  random_covering_074: gate=[47/231,153/728] kind=B0|E labels=('B0:99', 'B1:15') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1) delta=(1,1)
+  random_covering_086: gate=[106/1183,69/770] kind=B1|E labels=('B0:133', 'B1:169') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1) delta=(1,1)
+  random_covering_101: gate=[31/210,181/1225] kind=E|B0 labels=('B0:175', 'B1:7') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1) delta=(1,1)
+
+Tournament Analysis:
+  axes=('predicate_retention', 'dead_projection_payload', 'cut_strength', 'current_payload', 'ap_packet_splice', 'random_gluing_sidecar', 'scalar_firewall')
+  score_hist={7: 1, 14: 1, 52: 1, 54: 1, 55: 1, 63: 1, 64: 1, 66: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  hamiltonian_path=B00_projection_cut_gate -> B01_separating_boundary_current -> B02_dead_positive_e_branch_implication -> B03_closed_ap84_packet -> B04_random031_seven_owner_clause -> B05_typed_gate_word -> B06_raw_gate_count -> B07_raw_dead_fraction
+
+Proof pull:
+  The E/branch implication is universal on the current bank, but the
+  boundary-current strengthening is stricter: projection edge cuts and
+  separating currents have named exceptions above.  A future transfer lemma
+  should use projection-cut gates where available and route the exception
+  rows to HYP-3455, owner-current, two-adic, signed-SPEC, or state-lift debt.

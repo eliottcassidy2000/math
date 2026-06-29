@@ -511,8 +511,8 @@ record what it destroys before asking it to prove anything.
 | LTI-421 | Colored-extension gate carrier | Colored boundary-charge vectors, survivor gate-extension orbits, observer-cut discharge modes, AP84 endpoint packets, random031 seven-owner mirror clause, A000568 controlled-forgetting guardrail | HYP-3461 reconnects prior coloring and extension work to the covering-floor frontier while treating HYP-3458, HYP-3459, and HYP-3460 as the AP84 color sidecars.  Colors are boundary charges rather than labels, using HYP-2595's resonance warning; extensions are gluing orbits rather than counts, using HYP-3056 and the HYP-3133/HYP-3134 A000568 guardrails. | HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3439, HYP-3438, HYP-3436, HYP-3425, HYP-3134, HYP-3133, HYP-3056, HYP-2595, HYP-2594, HYP-2247, HYP-2250, T1421, LTT-321, LTI-421, OPEN-Q-108 | Instantiate colored gate-extension orbit rows on HYP-3438 gates; prove the HYP-3455 seven-owner mirror clause and splice AP84 HYP-3454/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460 through HYP-3431/HYP-3439. |
 | LTI-422 | AP84 corridor-splice certificate | HYP-3431 branch-union carrier, AP84 rank-6/rank-5 split, finite transient packet, endpoint interval, mod-35 floor count, HYP-3439 bridge closure | HYP-3462 imports HYP-3431 as the complete low branch-union carrier `[8/49,6/35] union [29/35,41/49]` and splices HYP-3454/HYP-3456/HYP-3457 into HYP-3439, complementary to HYP-3461's colored-extension gate carrier and HYP-3460's noncanonical phase-branch sibling.  The one-branch rescue split through `m=70` is rank `6` only at `m=1` with core `(3,5,7,9,11,13)` and rank `5` for `m>=2` with core `(5,7,9,11,13)`.  Finite window, endpoint containment, and floor-count failure lists are all empty. | HYP-3462, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, T1422, LTT-322, LTI-422, OPEN-Q-108 | AP84 is now a closed bridge packet.  Next feed the splice into HYP-3461/HYP-3460/HYP-3453/HYP-3451 and discharge non-AP transfer, especially the HYP-3455 seven-owner gluing clause or named owner/current/state-lift debt. |
 | LTI-431 | Colored gate reservoir | Typed mod-14 endpoint gate colors, endpoint-kind compression ladder, branch mask, adjacency, cover-delta sidecars, AP84 four-color packet, same-branch gluing guardrail | HYP-3471 reconnects prior coloring work to the HYP-3453 gate transversal and treats HYP-3462 as the AP84 corridor-splice carrier, HYP-3470 as the exact AP84 CRT placement sidecar, and HYP-3461/HYP-3460/HYP-3459/HYP-3458 as colored-extension/color-pullback/AP84 subpackets.  Exact bank: `130/130` dead-component rows have a rank-`<=2` E/branch survivor gate; `8666` low-rank gates split into `7002` E/branch, `1482` same-branch, and `182` cross-branch gates.  Endpoint-kind colors are too coarse (`8` colors), numeric mod-`14` is still lossy (`147`), typed mod-`14` has `360` words, and full colored gate words have `1727`; the AP84 four-color packet covers only `67/130` dead rows. | HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3418, HYP-3415, HYP-2595, HYP-2594, HYP-2593, THM-523, T1431, LTT-331, LTI-431, OPEN-Q-108 | Prove the strengthened finite lemma `dead_components(row)>0 => rank<=2 E/branch survivor gate`.  Then use typed residue plus branch/adjacency/delta to route AP packets through HYP-3462/HYP-3470/HYP-3461/HYP-3460/HYP-3459/HYP-3458/HYP-3454/HYP-3456/HYP-3457 and same-branch/random gluing through HYP-3455/HYP-3451. |
-| LTI-432 | Dead-cover boundary-current audit | Dead-cover blocker projection, E/branch survivor gates, adjacent blocker labels, projection-cut test, branch-current balance, AP84/non-AP split, scalar-current firewall | HYP-3472 reserves the graph-current sibling to HYP-3471.  The planned audit joins HYP-3471's rank-`<=2` E/branch gates to HYP-3451's dead-cover blocker graph, removes each gate's adjacent blocker labels from the projection, and tests whether the gate exposes a small boundary-current/projection cut or only a local survivor touch. | HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-3437, HYP-3436, HYP-3417, HYP-3129, THM-523, T1432, LTT-332, LTI-432, OPEN-Q-108 | Run the boundary-current audit and record projection-cut histograms, separating-current exceptions, branch-current vectors, and a proof-carrier tournament before promoting a non-AP transfer lemma. |
-| LTI-433 | Colored gate formalization interface | Lean proof obligations, colored survivor gate payload, exact count ledger, terminal packet exits, `ColoredGateGlobalCoverage` | HYP-3473 turns HYP-3471 into a sorry-free Lean interface.  It defines endpoint kinds, typed endpoint residues, E/branch low-rank predicates, `DeadCoverEBranchSoundness`, terminal exits, exact HYP-3471 counts, and the conditional assembly `ColoredGateGlobalCoverage -> LRC14Statement`. | HYP-3473, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3438, HYP-3436, THM-523, T1433, LTT-333, LTI-433, OPEN-Q-108 | Instantiate `DeadCoverEBranchSoundness` from exact gate geometry, fill terminal packets through AP84/random/conductance/owner-current/two-adic/SPEC exits, then apply `lrc14_from_colored_gate_global_coverage`. |
+| LTI-432 | Dead-cover boundary-current audit | Dead-cover blocker projection, E/branch survivor gates, adjacent blocker labels, projection-cut test, branch-current balance, AP84/non-AP split, scalar-current firewall | HYP-3472 is the graph-current sibling to HYP-3471.  It joins rank-`<=2` E/branch gates to HYP-3451's dead-cover blocker graph, removes each gate's adjacent blocker labels from the projection, and tests projection-edge cuts and separating currents.  Exact bank: `130/130` dead rows have a touching E/branch gate, `123/130` have a projection-edge cut, and `121/130` have a separating current; edge-cut exceptions are seven random rows including HYP-3455's `random_covering_031`, while separating-current exceptions add `covering_AP_with_84` and `ap_omit_12_tail_84x01`. | HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-3437, HYP-3436, HYP-3417, HYP-3129, THM-523, T1432, LTT-332, LTI-432, OPEN-Q-108 | Prove the universal touch lemma, then edge-cut/separating-current transfer off the named exceptions.  Route `random_covering_031` through HYP-3455, AP84 base rows through HYP-3462/HYP-3470, and remaining random exceptions through owner-current/two-adic/signed-SPEC/state-lift debt. |
+| LTI-433 | Colored gate formalization interface | Lean proof obligations, colored survivor gate payload, exact count ledger, terminal packet exits, `ColoredGateGlobalCoverage` | HYP-3473 turns HYP-3471 into a sorry-free Lean interface and is the natural formal target for HYP-3472's universal touch lemma.  It defines endpoint kinds, typed endpoint residues, E/branch low-rank predicates, `DeadCoverEBranchSoundness`, terminal exits, exact HYP-3471 counts, and the conditional assembly `ColoredGateGlobalCoverage -> LRC14Statement`. | HYP-3473, HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3438, HYP-3436, THM-523, T1433, LTT-333, LTI-433, OPEN-Q-108 | Instantiate `DeadCoverEBranchSoundness` from exact gate geometry, add HYP-3472's dead-cover projection-touch/cut sidecar, fill terminal packets through AP84/random/conductance/owner-current/two-adic/SPEC exits, then apply `lrc14_from_colored_gate_global_coverage`. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
@@ -8990,16 +8990,39 @@ order, scalar color counts, same-row gate multiplicity, and the distinction
 between local gate existence and a projection cut. HYP-3472 is designed to
 measure that distinction before a transfer lemma is attempted.
 
-Planned HYP-3472 readout:
+Exact HYP-3472 readout:
 
 ```text
 rows_audited=135
 dead_rows_with_e_branch_gate=130/130
-projection_cut_gate_histogram=pending
-separating_current_gate_histogram=pending
-dead_rows_without_projection_cut_gate=pending
-dead_rows_without_separating_current=pending
-tournament_fingerprint=pending
+dead_rows_with_touching_gate=130/130
+dead_rows_with_projection_edge_cut_gate=123/130
+dead_rows_without_projection_edge_cut_gate=[
+  random_covering_001,
+  random_covering_031,
+  random_covering_039,
+  random_covering_062,
+  random_covering_074,
+  random_covering_086,
+  random_covering_101
+]
+dead_rows_with_separating_current_gate=121/130
+dead_rows_without_separating_current_gate=[
+  covering_AP_with_84,
+  ap_omit_12_tail_84x01,
+  random_covering_001,
+  random_covering_031,
+  random_covering_039,
+  random_covering_062,
+  random_covering_074,
+  random_covering_086,
+  random_covering_101
+]
+ap84_rows_with_projection_edge_cut_gate=13/13
+ap84_rows_with_separating_current_gate=11/13
+non_ap_rows_with_projection_edge_cut_gate=110/117
+non_ap_rows_with_separating_current_gate=110/117
+tournament_score_hist={7:1,14:1,52:1,54:1,55:1,63:1,64:1,66:1}
 ```
 
 Assumption challenge: the audit deliberately does not make runners or raw arcs
@@ -9010,10 +9033,18 @@ and proof obligations; it chooses blocker labels plus E/branch gate cuts
 because that quotient preserves the dead-cover-to-boundary-gate predicate and
 makes the lost geometry visible as named current debt.
 
+Next proof hook: formalize the universal touch lemma first.  HYP-3473 supplies
+the Lean-facing `DeadCoverEBranchSoundness` interface for the E/branch part;
+HYP-3472 adds the dead-cover projection-touch and cut sidecar.  The edge-cut
+and separating-current lemmas are stronger and must exclude or discharge the
+named exception sets through HYP-3455, HYP-3462/HYP-3470, owner-current,
+two-adic, signed-SPEC, or state-lift sidecars.
+
 ## LTI-433: Colored Gate Formalization Interface
 
 Created by codex-2026-06-29 for HYP-3473/T1433 as the Lean-facing interface
-for HYP-3471's colored gate-reservoir theorem target.
+for HYP-3471's colored gate-reservoir theorem target, and now also the natural
+formal interface for HYP-3472's universal dead-cover projection-touch lemma.
 
 Carrier / vertex set:
 
@@ -9062,7 +9093,8 @@ maximality, raw-color minimality, and the tie between the full colored word
 and the dead-positive E/branch target.
 
 Next agent hook: instantiate `DeadCoverEBranchSoundness` as an exact finite
-theorem from HYP-3438/HYP-3453 data.  Then fill terminal packets through
-HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455,
-HYP-3451, two-adic descent, or signed SPEC/Rprime, and finally discharge
-`ColoredGateGlobalCoverage`.
+theorem from HYP-3438/HYP-3453 data, then add the HYP-3472 projection-touch
+sidecar and its edge/separating-current exception ledger.  Fill terminal
+packets through HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458,
+HYP-3455, HYP-3451, two-adic descent, or signed SPEC/Rprime, and finally
+discharge `ColoredGateGlobalCoverage`.
