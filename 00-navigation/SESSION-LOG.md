@@ -1,3 +1,27 @@
+## mac-mini-2026-06-29-S9 -- tournaments are number-theoretic: the Paley bridge + the multiplicative spine (THM-584, HYP-3539)
+
+Prompt: investigate deeply the connections between tournaments and natural numbers, especially primes; search back
+extensively for prior work on number-theory problems and multiplicative functions.
+
+Ran 2 broad survey agents (tournaments<->primes; multiplicative functions) + a computation. NEW RESULT (THM-584):
+the arithmetic of the Paley H-count. Paley T_p (p prime =3mod4): the free Z_p rotation gives p|H(T_p) (v_p=1), so
+H(T_p)=p*(odd) -- a Paley refinement of Redei; the full dihedral D_{2p} Burnside identity #orbits=(H+p*f)/(2p) in Z
+(f=palindromic count THM-583) forces H/p==f (mod2). VERIFIED p=3,7,11 (H=3,189,95095; f=1,9,185; #orbits=1,18,4415).
+R(p)=H*2^{p-1}/p! = 2.0,2.4,2.44,2.53 -> e. REFUTED the repo conjecture H=|Aut|*3^{(p-3)/2} at p=11 (cofactor
+1729=7*13*19, not 81=3^4).
+
+SYNTHESIS (HYP-3539, reflection tournaments-are-number-theoretic-...): Paley T_p is a tournament iff p=3mod4
+(chi(-1)=-1, same p mod4 as Brouwer/Borsuk-Ulam, Q(sqrt-p)). The multiplicative spine: Mobius mu (incl-excl/x=-1),
+totient phi (Farey packets, phi(14)=6 sectors, floor ~ 1/zeta(2)=6/pi^2 = WHY floor>0), singular series (mu^2/phi
+capacity = my SPEC). Deepest function<->invariant parallel: H(T)=prod H(C_i) (Moon, mult over strong components)
+MIRRORS phi mult over prime powers -- both semigroups with gaps (H misses 7,21; phi misses nontotients). Adelic:
+2,3,7=Hurwitz class-1; e from Paley cherry, pi from Wallis fiber-fraction.
+
+TAKEAWAY for the proof: LRC floor = totient/zeta(2) density surviving the covering constraint (descent THM-580 +
+the Sum phi(b)/b^2=1/zeta(2) positivity); cap obstruction = mu^2/phi capacity at apex prime 7 (= HYP-3538 R-odd
+eigenspace); witness f lives on (p-1)/2=phi(p)/2 pairs (Q(sqrt-p)). Files: THM-584, HYP-3539, reflection, scripts
+paley_tournament_number_theory + paley_dihedral_burnside.
+
 ## mac-mini-2026-06-29-S8 -- the two tasks: f via the half-system (THM-583) + the R +-1 eigenspace split of the cap is the two-index split (HYP-3538)
 
 Prompt: (1) chase the f-recursion through the half-system digraph (f is a half-HP count); (2) test the surmise
