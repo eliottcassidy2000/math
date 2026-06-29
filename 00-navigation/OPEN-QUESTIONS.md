@@ -98,6 +98,21 @@ signed-SPEC/Rprime debt. -> HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HY
 HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3438,
 HYP-3436, HYP-2595, THM-523, LTI-435, LTT-335, T1435, OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3476 pair-current addendum:**
+HYP-3476 tests whether HYP-3472's single-gate exceptions are artifacts of a
+too-small boundary-current carrier.  On the seven projection-edge exceptions
+and the two extra separating-current exceptions, enumerate pairs of low-rank
+E/branch survivor gates and remove the union of their adjacent blocker labels
+from the HYP-3451 dead-cover projection.  The open question is whether every
+target row has a `<=2`-gate projection-edge cut or branch-separated current,
+especially when pairs are compared against HYP-3475 mirror orbits.
+
+Guardrail: the pair-current quotient preserves only the finite cut/current
+predicate.  It forgets interval geometry and branch order unless typed
+endpoint, blocker-label, and mirror sidecars are retained. -> HYP-3476,
+HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3455, HYP-3453,
+HYP-3451, HYP-3438, THM-523, LTI-436, LTT-336, T1436, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3458 AP84 coloring-recursion addendum:**
 HYP-3458 reconnects the AP84 endpoint-clock work with HYP-2247/HYP-2243
 coloring recursion.  For

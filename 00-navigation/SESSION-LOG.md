@@ -1,3 +1,25 @@
+## codex-2026-06-29 -- HYP-3476 dead-cover pair-current exception audit
+
+Prompt: keep trying creative new angles and experiments toward closing the
+LRC14 proof.  Pulled the incoming HYP-3474 partition-lattice and HYP-3475
+mirror-orbit work, then claimed a different graph-current direction:
+HYP-3476/T1436/LTI-436/LTT-336.
+
+Reserved artifacts:
+
+```text
+04-computation/lrc14_dead_cover_pair_current_codex_20260629.py
+05-knowledge/results/lrc14_dead_cover_pair_current_codex_20260629.out
+05-knowledge/hypotheses/HYP-3476-lrc14-dead-cover-pair-current.md
+07-reflections/lrc14-dead-cover-pair-current-codex-20260629.md
+```
+
+Planned experiment: target HYP-3472's seven projection-edge exceptions and the
+two extra separating-current exceptions.  Enumerate pairs of low-rank E/branch
+survivor gates, remove the union of their adjacent blocker labels from the
+HYP-3451 dead-cover projection, and score projection cuts, branch-separated
+currents, component drops, and HYP-3475 mirror-pair status.
+
 ## codex-2026-06-29 -- HYP-3472 dead-cover boundary-current audit
 
 Prompt: spend another similar session pushing different directions on similar

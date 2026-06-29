@@ -15,6 +15,34 @@
 
 ---
 
+## Lead codex-2026-06-29: dead-cover pair-current exception audit
+
+**Status:** RESERVED STUB / computation in progress; not proof
+(HYP-3476/T1436/LTI-436/LTT-336), the two-gate follow-up to HYP-3472's
+single-gate boundary-current exceptions and HYP-3475's mirror-orbit quotient.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3476-lrc14-dead-cover-pair-current.md`,
+script
+`04-computation/lrc14_dead_cover_pair_current_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_dead_cover_pair_current_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-dead-cover-pair-current-codex-20260629.md`.
+
+Planned audit: on the HYP-3472 edge-cut exceptions
+`random_covering_001`, `random_covering_031`, `random_covering_039`,
+`random_covering_062`, `random_covering_074`, `random_covering_086`, and
+`random_covering_101`, plus separating-only exceptions `covering_AP_with_84`
+and `ap_omit_12_tail_84x01`, enumerate low-rank E/branch gate pairs and test
+whether the union of adjacent blocker labels gives a projection-edge cut or a
+branch-separated current.
+
+Tournament vertices should be proof carriers and obligations: pair-current
+cut, mirror-pair current, single-gate current, HYP-3473 formal packet,
+partition-lattice guardrail, and scalar shadows.  Record explicitly which
+predicate is preserved and which interval/branch information is destroyed.
+
 ## Lead codex-2026-06-29: dead-cover boundary-current audit
 
 **Status:** EVIDENCE / exact graph-current audit; not proof

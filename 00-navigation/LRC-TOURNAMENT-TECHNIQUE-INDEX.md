@@ -157,6 +157,12 @@ obligations, and proof-carrier interfaces.
   sidecars, hard delta orbits, and AP84 two-orbit packets the vertices.  The
   quotient preserves low-rank E/branch escape status but must retain ordered
   sidecars because single-gate branch orientation is forgotten.
+- Need to test whether HYP-3472 exceptions are one-gate artifacts:
+  use LTT-336 after LTT-332/LTT-335/LTT-334 and make two-gate pair currents,
+  mirror-pair currents, blocker-label cuts, formal packet obligations, and
+  scalar shadows the vertices.  The quotient preserves a `<=2`-gate
+  dead-cover boundary-current carrier but must retain typed sidecars because it
+  forgets interval geometry and branch order.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
