@@ -45,6 +45,37 @@ dead components and best current `(2,1)`.
 
 Proof pull: prove the three clean best-touch singleton rows first, then the
 asymmetric `001` subcase, then the cover-delta sidecar rows.
+## codex-2026-06-29 -- HYP-3480 zero-edge singleton-current audit
+
+Continued the LRC14 closure push after HYP-3478/HYP-3479 by executing the
+reserved zero-edge singleton-current audit:
+
+```text
+04-computation/lrc14_zero_edge_singleton_current_codex_20260629.py
+05-knowledge/results/lrc14_zero_edge_singleton_current_codex_20260629.out
+05-knowledge/hypotheses/HYP-3480-lrc14-zero-edge-singleton-current.md
+07-reflections/lrc14-zero-edge-singleton-current-codex-20260629.md
+```
+
+Main result:
+
+```text
+target_components_with_complete_branch_unit_touch=14/14
+target_mirror_pairs_with_branch_unit_mirror_gate=7/7
+control_components_with_complete_branch_unit_touch=0/4
+control_mirror_pairs_with_branch_unit_mirror_gate=0/2
+```
+
+The six small-touch/no-hard zero-edge rows now share one component-level
+mirror-unit singleton-current certificate, including `random_covering_039` and
+`random_covering_074` despite their cover-delta absolute minimum gates.  The
+control `random_covering_031` remains the hard/currentless HYP-3455/HYP-3460
+gluing clause, now carried by the HYP-3481/HYP-3482 topology/seam packet.
+
+Next theorem target: prove the mirror-unit singleton-current lemma over
+swapped singleton B0/B1 owner pairs, retaining route sidecar `R` and owner
+residue/two-adic words.  This reduces the non-AP currentless random frontier
+to that finite packet plus the random031 forbidden-seam packet.
 
 ## codex-2026-06-29 -- HYP-3478 small-touch/no-hard geometry reservation
 

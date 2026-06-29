@@ -196,7 +196,11 @@ obligations, and proof-carrier interfaces.
   hard-overlap flags, two-adic residue sidecars, signed-SPEC exits, and proof
   obligations the vertices.  The quotient preserves pure small-touch singleton
   debt versus the named random031 hard/gluing overlap, not runner order or
-  scalar counts.
+  scalar counts.  HYP-3480 sharpens the vertex choice: use mirror component
+  pairs with complete branch-unit E/branch touches and mirror-compatible unit
+  gate pairs; all six small-touch rows satisfy this (`14/14` components,
+  `7/7` mirror pairs), while random031 has `0/4` complete branch-unit
+  components and stays the hard-control clause refined by HYP-3481/HYP-3482.
 - Need to see random031 topologically after the hard/current join:
   use LTT-341 after LTT-340/LTT-339/LTT-337/LTT-336/LTT-315/LTT-320 and make
   mirror-punctured annuli, bypassed saddle seams, seven-owner boundaries,
@@ -10031,6 +10035,47 @@ quotient_legality_status
 - **Pointers:** HYP-3479, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471,
   HYP-3462, HYP-3470, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438,
   HYP-3436, THM-523, LTI-439, LTT-339, T1439, OPEN-Q-108.
+
+## LTT-340: Zero-Edge Singleton-Current Tournament
+
+- **Move:** Use mirror-paired singleton components with complete branch-unit
+  E/branch touches as vertices, joined to route sidecar `R`, owner
+  residue/two-adic words, and the random031 hard-control clause.  Runners, raw
+  row names, zero projection-edge counts, and raw gate counts are scalar
+  shadows unless they reconstruct that certificate.
+- **LRC use:** HYP-3480 audits the six small-touch/no-hard zero-edge rows and
+  the `random_covering_031` control.  The six target rows have `14/14`
+  singleton components with complete branch-unit touches and `7/7` mirror
+  component pairs with mirror-compatible branch-unit gate pairs.  The two
+  rows whose absolute minimum gate is cover-delta-sidecar (`039`, `074`) still
+  have component-level unit certificates.  The control has `0/4` complete
+  branch-unit components and remains the hard/currentless gluing clause now
+  carried by the HYP-3481/HYP-3482 topology/seam packet.
+- **Preserves:** singleton-current terminal predicate, mirror partner, swapped
+  B0/B1 owner labels, complete branch-unit gate pair, route label, hard-control
+  flag, and owner residue/two-adic sidecar.
+- **Forgets / guardrail:** a quotient that keeps only zero projection edges or
+  row names cannot distinguish the six mirror-unit rows from random031.  It
+  must retain route sidecar `R` and component-local branch/unit data before
+  claiming a finite proof packet.
+- **Pairwise observable:** predicate retention, complete component touch,
+  mirror-unit payload, route/hard-control payload, formal fit, and scalar
+  firewall.
+- **Switch/gauge:** higher proof-facing retained payload first; ties follow
+  mirror-unit packet, complete touch, random031 control, route sidecar,
+  cover-delta shadow, owner-residue sidecar, raw edge count, raw row names.
+- **Fingerprint:** `8` vertices, score histogram
+  `{5:1,8:1,45:1,52:1,59:2,62:1,67:1}`, no directed `3`-cycles, and
+  Hamiltonian path
+  `Z00_mirror_unit_singleton_current_packet -> Z01_component_complete_touch_certificate -> Z02_random031_hard_control_clause -> Z03_route_sidecar_R_join -> Z04_cover_delta_min_gate_shadow -> Z05_owner_residue_two_adic_shadow -> Z06_raw_zero_edge_projection_count -> Z07_raw_row_name_list`.
+- **Next hook:** prove the mirror-unit singleton-current lemma over swapped
+  singleton B0/B1 owner pairs, carrying route sidecar `R` and owner
+  residue/two-adic words.  Then the non-AP currentless random frontier reduces
+  to that lemma plus the random031 HYP-3481/HYP-3482 seam packet.
+- **Pointers:** HYP-3480, HYP-3482, HYP-3481, HYP-3479, HYP-3478,
+  HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3460, HYP-3455,
+  HYP-3453, HYP-3451, HYP-3438, THM-523, LTI-440, LTT-340, T1440,
+  OPEN-Q-108.
 
 ## LTT-341: Random031 Topology Atlas Tournament
 

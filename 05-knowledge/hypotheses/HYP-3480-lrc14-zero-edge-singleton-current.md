@@ -1,7 +1,7 @@
 ---
 id: HYP-3480
 title: LRC14 zero-edge singleton-current audit
-status: RESERVED STUB / computation in progress; not an LRC14 proof
+status: EVIDENCE / finite singleton-current certificate audit; not an LRC14 proof
 source: codex-2026-06-29 continuation of HYP-3479 hard-orbit current join, HYP-3478 small-touch geometry, HYP-3476 pair-current/router, and HYP-3477 hard-orbit discharge
 tangent: T1440
 technique: LTI-440
@@ -10,6 +10,8 @@ script: 04-computation/lrc14_zero_edge_singleton_current_codex_20260629.py
 result: 05-knowledge/results/lrc14_zero_edge_singleton_current_codex_20260629.out
 reflection: 07-reflections/lrc14-zero-edge-singleton-current-codex-20260629.md
 related:
+  - HYP-3482
+  - HYP-3481
   - HYP-3479
   - HYP-3478
   - HYP-3477
@@ -30,13 +32,12 @@ related:
 
 HYP-3476 shows that the random boundary-current exceptions are not missing a
 larger E/branch pair cut: their dead-cover projections are edgeless singleton
-packets.  HYP-3477 and the HYP-3476 router remove the hard-currented rows and
-isolate `random_covering_031` as the unique hard/currentless overlap.  This
-stub follows the incoming HYP-3478 small-touch/no-hard geometry reservation and
-HYP-3479 hard-orbit/current join, reserving the executable singleton-current
-packet for the remaining non-hard zero-edge rows.
+packets.  HYP-3478 shows that the six non-hard rows are mirror-paired
+singleton owner packets, while HYP-3479 isolates `random_covering_031` as the
+unique hard/currentless overlap.  This audit checks the component-level
+singleton-current carrier that remains after those splits.
 
-## Planned Scope
+## Scope
 
 Primary rows:
 
@@ -55,26 +56,94 @@ Control row:
 random_covering_031
 ```
 
-The planned script will join HYP-3472 dead-cover projections, HYP-3476
-pair-current support labels, HYP-3476 route labels, HYP-3477 hard-orbit data,
-and the S319/HYP-3472 unit-delta split when available.  It will test whether
-the zero-edge rows are carried by a small owner-label involution, unit-delta
-singleton-current packet, endpoint-spine certificate, two-adic residue class,
-or named hard/gluing exception.
+The script joins HYP-3472 dead-cover projections, HYP-3476 route labels,
+HYP-3478 singleton mirror geometry, HYP-3479 hard-overlap flags, and
+unit-delta/two-adic owner sidecars.  It tests whether each zero-edge singleton
+component has a complete branch-unit E/branch touch and whether mirror partner
+components admit mirror-compatible unit gate pairs.
 
 Existing HYP-3478 companions already split the six primary rows into three
 clean best-touch rows (`062`, `086`, `101`), asymmetric branch-unit row `001`,
-and cover-delta sidecar rows `039`, `074`.  HYP-3480 should preserve that split
-while adding the `random_covering_031` hard/currentless control and route flags.
-HYP-3481 now supplies that control as a mirror-punctured annulus plus bypassed
-saddle atlas, so the combined audit should keep random031 topological payloads
-separate from the six-row singleton-current packet.
+and cover-delta sidecar rows `039`, `074`.  HYP-3480 preserves that
+row-minimum/best-touch split but strengthens it: component-level complete
+branch-unit mirror pairs exist on all six primary rows.  HYP-3481 and HYP-3482
+supply the `random_covering_031` control as a mirror-punctured annulus,
+bypassed saddle, and punctured-cylinder forbidden seam, so random031 topology
+remains a separate terminal payload beside the six-row singleton-current
+packet.
 
-## Tournament Analysis Plan
+## Result
+
+Exact aggregate readout:
+
+```text
+audited_rows=7 target_rows=6 control_rows=1
+route_hist={'random031_overlap_hard_and_currentless': 1, 'small_touch_no_hard_current_exception': 6}
+terminal_class_hist={'mirror_unit_singleton_packet': 4, 'mirror_unit_singleton_packet_cover_delta_min_shadow': 2, 'random031_hard_currentless_control': 1}
+target_projection_edge_hist={0: 6}
+target_min_gate_kind_hist={'branch_unit_delta': 4, 'delta_sidecar_packet': 2}
+target_dead_components=14
+target_components_with_complete_branch_unit_touch=14/14
+target_mirror_pairs_with_branch_unit_mirror_gate=7/7
+cover_delta_min_shadow_rows_with_unit_certificate=('random_covering_039', 'random_covering_074')
+control_components_with_complete_branch_unit_touch=0/4
+control_mirror_pairs_with_branch_unit_mirror_gate=0/2
+hard_currentless_control_rows=('random_covering_031',)
+```
+
+Thus the six small-touch/no-hard rows share a sharper terminal carrier than
+HYP-3478's row-minimum split suggested: even `random_covering_039` and
+`random_covering_074`, whose absolute minimum E/branch gates are
+cover-delta-sidecar gates, still have complete branch-unit mirror pairs at the
+component level.  The component-level packet has seven swapped-owner mirror
+pairs:
+
+```text
+001: (165,179), (81,153)
+039: (63,129)
+062: (9,81)
+074: (15,99)
+086: (169,133)
+101: (7,175)
+```
+
+The control row `random_covering_031` has four singleton dead components and
+zero projection edges, but only two components have any complete E/branch
+touch and none have a complete branch-unit touch.  It remains exactly the
+HYP-3455/HYP-3460/HYP-3479 hard/currentless gluing clause, now refined by
+HYP-3481/HYP-3482 into a random031 puncture/seam packet.
+
+## Proof Pull
+
+A plausible next finite theorem is:
+
+```text
+mirror-swapped singleton B0/B1 owner pair
++ mirror-compatible complete branch-unit E/branch gate pair
++ route sidecar R
++ owner residue/two-adic word
+=> legal singleton-current terminal packet.
+```
+
+If that lemma is proved, the non-AP currentless random frontier outside the
+already named hard control collapses to the single mirror-unit packet.  The
+remaining non-AP hard/currentless debt is `random_covering_031`, now routed to
+the HYP-3481/HYP-3482 puncture and forbidden-seam lemmas.
+
+## Tournament Analysis
 
 Vertices are terminal singleton-current proof carriers, not runners, raw row
 names, or scalar gate counts.  Candidate vertices include owner-label pairs,
 dead singleton components, unit-delta gate words, route labels, hard-overlap
 flags, two-adic residue payloads, signed-SPEC exits, and formal proof
-obligations.  The quotient must preserve whether a zero-edge row is a pure
-small-touch singleton packet or the named random031 hard/gluing overlap.
+obligations.  The quotient preserves whether a zero-edge row has a mirror-unit
+singleton-current certificate or is the named random031 hard/gluing overlap
+whose topology sidecar is HYP-3481/HYP-3482.
+
+Tournament fingerprint from the script:
+
+```text
+score_hist={5: 1, 8: 1, 45: 1, 52: 1, 59: 2, 62: 1, 67: 1}
+directed_3cycles=0
+hamiltonian_path=Z00_mirror_unit_singleton_current_packet -> Z01_component_complete_touch_certificate -> Z02_random031_hard_control_clause -> Z03_route_sidecar_R_join -> Z04_cover_delta_min_gate_shadow -> Z05_owner_residue_two_adic_shadow -> Z06_raw_zero_edge_projection_count -> Z07_raw_row_name_list
+```

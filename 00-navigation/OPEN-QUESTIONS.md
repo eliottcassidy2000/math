@@ -55,6 +55,32 @@ graph, lower-delta bypass, and additive-rim/two-adic-fold split. -> HYP-3482,
 HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3460,
 HYP-3455, HYP-3451, THM-523, LTI-442, LTT-342, T1442, OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3480 zero-edge singleton-current addendum:**
+HYP-3480 sharpens the HYP-3478 small-touch packet.  The six non-AP,
+non-hard zero-edge rows do not need to stay split into four unit-minimum rows
+plus two cover-delta-minimum rows if the proof works component-locally:
+
+```text
+target_components_with_complete_branch_unit_touch=14/14
+target_mirror_pairs_with_branch_unit_mirror_gate=7/7
+cover_delta_min_shadow_rows_with_unit_certificate=(039,074)
+control_components_with_complete_branch_unit_touch=0/4
+control_mirror_pairs_with_branch_unit_mirror_gate=0/2
+```
+
+Open proof task: prove the mirror-unit singleton-current lemma for swapped
+singleton B0/B1 owner pairs with a mirror-compatible complete branch-unit
+E/branch gate pair, retaining route sidecar `R` and owner residue/two-adic
+words.  This should discharge the six small-touch rows as one finite packet;
+`random_covering_031` remains the hard/currentless HYP-3455/HYP-3460 clause
+now routed through the HYP-3481/HYP-3482 topology/seam packet.
+-> HYP-3480, HYP-3482, HYP-3481, HYP-3479, HYP-3478, HYP-3476, HYP-3472,
+HYP-3455, THM-523, LTI-440, LTT-340, T1440, OPEN-Q-108.
+
+**OPEN-Q-108 HYP-3478 small-touch singleton-pocket addendum:**
+HYP-3478 identifies the geometry of the six small-touch/no-hard rows left
+after HYP-3476 pair-current and HYP-3477 hard-mirror discharge.  They are not
+weak projection graphs.  Their dead-cover projections have no edges:
 **OPEN-Q-108 HYP-3478 small-touch/no-hard geometry addendum:**
 HYP-3478 records the direct geometry audit for the six HYP-3476 rows that are
 currentless, non-AP, and outside HYP-3477 hard mirror-orbit debt.  They are

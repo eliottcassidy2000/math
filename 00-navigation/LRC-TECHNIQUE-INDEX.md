@@ -518,7 +518,7 @@ record what it destroys before asking it to prove anything.
 | LTI-437 | Hard mirror-orbit discharge audit | HYP-3475 delta-`>=7` mirror orbits, q=`14V` phase-grid hits, lower-delta E/branch projection currents, bounded pair-current sidecar, random031 gluing exception | HYP-3477 audits the complete hard mirror-orbit family.  Exact split: seven hard orbits have lower-delta E/branch projection-edge cuts, while the only exception is `random_covering_031`, whose max-delta pair has zero compatible q=`14V` hits and remains the HYP-3455/HYP-3476 gluing clause. | HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438, THM-523, T1437, LTT-337, LTI-437, OPEN-Q-108 | Prove the non-random031 lower-delta projection-current discharge and route random031 through HYP-3455/HYP-3476, owner-current, two-adic descent, signed-SPEC/Rprime, or state-lift debt. |
 | LTI-438 | Small-touch/no-hard geometry audit | Singleton dead components, mirror-paired component intervals, blocker-owner pair residues, zero-edge dead projection, complete/touching E/branch gate sidecars, unit-delta versus cover-delta sidecar split | HYP-3478 audits the six HYP-3476 small-touch/no-hard rows outside AP84 and HYP-3477 hard-orbit debt.  Exact readout: `14` dead components, all singleton `B0`/`B1` owner-pair components, exact mirror-swapped partners, no projection edges, no owner imbalance, no hard orbit counts, and E/branch touching counts `56,12,26,42,34,30`.  The minimum gate split is `branch_unit_delta:4` and `delta_sidecar_packet:2`, with cover-delta rows `random_covering_039`, `random_covering_074`. | HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523, T1438, LTT-338, LTI-438, OPEN-Q-108 | Promote the result to a finite mirror-singleton current terminal packet, probably split into the two cover-delta rows and four unit-delta rows.  Do not collapse the packet to raw row names, gate counts, or scalar edge-support size without retaining interval/branch/owner locality. |
 | LTI-439 | Hard orbit / current join | Hard mirror-orbit rows, projection-edge cut exceptions, separating-current exceptions, singleton intersection ledger, terminal dispatch sidecars | HYP-3479 is a Lean-backed join for the HYP-3476/HYP-3477 dispatch split, connecting HYP-3475's eight hard mirror orbits to HYP-3472's boundary-current exception ledger.  On the current bank, hard rows have projection cuts and separating currents on `6/7` rows, hard orbits have separating currents on `7/8` orbits, and the only hard current exception is `random_covering_031`; `ap84_hard_rows=[]`. | HYP-3479, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438, HYP-3436, THM-523, T1439, LTT-339, LTI-439, OPEN-Q-108 | Prove separating-current transfer.  Then hard-orbit discharge reduces to that transfer plus the named HYP-3455/HYP-3460 `random_covering_031` clause; handle AP84 and the other current exceptions as non-hard sidecar debt. |
-| LTI-440 | Zero-edge singleton-current audit | Edgeless dead-cover projections, singleton dead components, owner-label involution, unit-delta gate words, small-touch/no-hard route packet, random031 hard/currentless control | HYP-3480 is the executable singleton-current follow-up to HYP-3478's small-touch geometry reservation and HYP-3479's hard-orbit/current join.  The audit should retain dead singleton labels, best touching gates, owner-label pairs, HYP-3476 route labels, HYP-3477/HYP-3479 hard-overlap flags, and unit-delta/two-adic sidecars before attempting scalar compression. | HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438, THM-523, T1440, LTT-340, LTI-440, OPEN-Q-108 | Determine whether `random_covering_001`, `039`, `062`, `074`, `086`, and `101` share a terminal owner-current/unit-delta theorem, with `random031` kept as the named hard/gluing overlap. |
+| LTI-440 | Zero-edge singleton-current audit | Edgeless dead-cover projections, singleton dead components, owner-label involution, complete branch-unit E/branch touches, mirror-compatible unit gate pairs, route sidecar `R`, random031 hard/currentless control | HYP-3480 executes the singleton-current follow-up to HYP-3478 and HYP-3479.  The six small-touch/no-hard rows have `14/14` singleton components with complete branch-unit touches and `7/7` mirror component pairs with mirror-compatible branch-unit gate pairs.  Rows `039` and `074` have cover-delta absolute minimum gates but still have component-level unit certificates.  The control `random_covering_031` has `0/4` complete branch-unit components and remains the hard/currentless gluing clause, with HYP-3481/HYP-3482 supplying its topology and forbidden-seam payload. | HYP-3480, HYP-3482, HYP-3481, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438, THM-523, T1440, LTT-340, LTI-440, OPEN-Q-108 | Prove the mirror-unit singleton-current lemma over swapped singleton B0/B1 owner pairs, retaining route sidecar `R` and owner residue/two-adic words.  Then the non-AP currentless random frontier reduces to that lemma plus the random031 HYP-3481/HYP-3482 topology/seam packet. |
 | LTI-441 | Random031 topology atlas | Mirror-punctured annulus, four singleton dead islands, max-delta antipodal seam, lower-delta same-component bypass, phase-flow flux, seven-owner boundary | HYP-3481 reframes `random_covering_031` as a topology problem rather than a scalar obstruction, downstream of HYP-3479 and with HYP-3480 treating it as the hard zero-edge control.  The dead projection is four isolated mirror-paired islands with no edges; the HYP-3455 max-delta pair on components `43/54` is an antipodal seam carrying owners `(23,45,93,113,147,169,173)`, while the same components have lower-delta bypass gates carrying `(23,93,113)`.  The q=`14V` phase flow has `282` witnesses, `hard_gate_hits=0`, and `lower_delta_hard_component_hits=12`. | HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523, T1441, LTT-341, LTI-441, OPEN-Q-108 | Prove the mirror-puncture island-current lemma and the bypassed-saddle lemma.  The legal quotient must keep island intervals, mirror pairs, branch masks, phase-flow hits, and owner boundary debt before trying to discharge random031. |
 | LTI-442 | Random031 punctured-cylinder forbidden seam | Dead-island punctures, mirror-paired components, max-delta seam components, seven-owner seam layers, lower-delta phase-flow bypass, additive owner rim versus doubling branch fold | HYP-3482 extends the HYP-3481 topology atlas by treating the hard pair `(43,54)` as a forbidden max-delta seam whose complement carries phase flow.  Four isolated dead islands form two mirror pairs, the seam carries owners `(23,45,93,113,147,169,173)`, and the 282 phase witnesses live on the seam complement with zero hard-seam hits and 12 lower-delta bypass hits on the same components. | HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3460, HYP-3455, HYP-3451, HYP-3438, THM-523, T1442, LTT-342, LTI-442, OPEN-Q-108 | Build a seam-complement graph: remove the max-delta hard pair, route all q=`14V` phase witnesses through lower-delta branch-compatible gates, and prove every phase-flow component reaches low-rank escape before it would need the forbidden seam. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
@@ -9433,6 +9433,49 @@ Pointers: HYP-3479, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471,
 HYP-3462, HYP-3470, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438,
 HYP-3436, THM-523, LTI-439, LTT-339, T1439, OPEN-Q-108.
 
+## LTI-440: Zero-Edge Singleton-Current Audit
+
+Created by codex-2026-06-29 for HYP-3480/T1440/LTT-340 as the terminal
+follow-up to HYP-3478's small-touch singleton geometry and HYP-3479's
+hard/current join, with HYP-3481/HYP-3482 now supplying the named random031
+control topology and forbidden-seam packet.
+
+Carrier / vertex set: mirror-paired singleton dead components, swapped B0/B1
+owner-label pairs, complete branch-unit E/branch gate touches, route sidecar
+`R`, owner residue/two-adic words, and the named random031 hard-control
+clause.
+
+Preserved LRC predicate: whether a zero-edge currentless random row has a
+local mirror-unit singleton-current certificate after the universal E/branch
+producer has fired, or is the named hard/currentless gluing control.
+
+Destroyed information: raw zero projection edges, raw row names, and raw gate
+counts forget the interval mirror, branch orientation, component owner labels,
+and the fact that a cover-delta absolute minimum can coexist with a larger
+complete branch-unit certificate.
+
+Exact HYP-3480 readout:
+
+```text
+target_projection_edge_hist={0:6}
+target_dead_components=14
+target_components_with_complete_branch_unit_touch=14/14
+target_mirror_pairs_with_branch_unit_mirror_gate=7/7
+cover_delta_min_shadow_rows_with_unit_certificate=(random_covering_039, random_covering_074)
+control_components_with_complete_branch_unit_touch=0/4
+control_mirror_pairs_with_branch_unit_mirror_gate=0/2
+```
+
+Next agent hook: prove the mirror-unit singleton-current lemma over swapped
+singleton B0/B1 owner pairs, retaining route sidecar `R` and owner
+residue/two-adic words.  Then the six non-AP currentless random rows discharge
+through one finite packet, while `random_covering_031` stays in the
+HYP-3455/HYP-3460 hard-control lane refined by HYP-3481/HYP-3482.
+
+Pointers: HYP-3480, HYP-3482, HYP-3481, HYP-3479, HYP-3478, HYP-3477,
+HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3460, HYP-3455, HYP-3453,
+HYP-3451, HYP-3438, THM-523, LTI-440, LTT-340, T1440, OPEN-Q-108.
+
 ## LTI-441: Random031 Topology Atlas
 
 Created by codex-2026-06-29 for HYP-3481/T1441/LTT-341.  This is the direct
@@ -9445,10 +9488,10 @@ q=`14V` phase-flow hits, seven-owner boundary, and formal terminal proof
 obligations.  Runners, raw gate counts, projection edge counts, and rescue
 rank are shadows unless the topology sidecars are retained.
 
-Preserved LRC predicate: the terminal discharge packet for `random_covering_031`
-after the low-rank E/branch producer fires, after HYP-3479 isolates it as the
-only hard/currentless named clause, and after HYP-3480 keeps it as the hard
-control row for zero-edge singleton-current work.
+Preserved LRC predicate: the terminal discharge packet for
+`random_covering_031` after the low-rank E/branch producer fires, after
+HYP-3479 isolates it as the only hard/currentless named clause, and after
+HYP-3480 keeps it as the hard control row for zero-edge singleton-current work.
 
 Destroyed information: island interval order, mirror pairing, branch mask,
 phase-flow bypass, and owner-boundary locality if the row is compressed to

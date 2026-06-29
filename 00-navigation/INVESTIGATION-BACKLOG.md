@@ -121,12 +121,12 @@ geometry it destroys.
 
 ## Lead codex-2026-06-29: zero-edge singleton-current audit
 
-**Status:** RESERVED STUB / computation in progress; not proof
-(HYP-3480/T1440/LTI-440/LTT-340), downstream of incoming HYP-3478 small-touch
-geometry, HYP-3479 hard-orbit/current join, HYP-3476 pair-current/router, and
-HYP-3477 hard-orbit discharge.
+**Status:** EVIDENCE / finite singleton-current certificate audit; not proof
+(HYP-3480/T1440/LTI-440/LTT-340), downstream of HYP-3478 small-touch geometry,
+HYP-3479 hard-orbit/current join, HYP-3476 pair-current/router, and HYP-3477
+hard-orbit discharge.
 
-Claimed files:
+Files:
 `05-knowledge/hypotheses/HYP-3480-lrc14-zero-edge-singleton-current.md`,
 script
 `04-computation/lrc14_zero_edge_singleton_current_codex_20260629.py`,
@@ -138,9 +138,23 @@ and reflection
 Target: the six small-touch/no-hard zero-edge rows
 `random_covering_001`, `random_covering_039`, `random_covering_062`,
 `random_covering_074`, `random_covering_086`, and `random_covering_101`,
-with `random_covering_031` retained as the hard/currentless control.  Test
-whether the terminal carrier is owner-label involution, unit-delta singleton
-current, endpoint-spine, two-adic residue, signed-SPEC debt, or named gluing.
+with `random_covering_031` retained as the hard/currentless control.
+
+Exact readout:
+
+```text
+target_components_with_complete_branch_unit_touch=14/14
+target_mirror_pairs_with_branch_unit_mirror_gate=7/7
+cover_delta_min_shadow_rows_with_unit_certificate=(039,074)
+control_components_with_complete_branch_unit_touch=0/4
+control_mirror_pairs_with_branch_unit_mirror_gate=0/2
+```
+
+Next proof hook: prove the mirror-unit singleton-current lemma over swapped
+singleton B0/B1 owner pairs, carrying route sidecar `R` plus owner
+residue/two-adic words.  This collapses the six non-AP currentless random rows
+to one finite packet; `random_covering_031` remains the named hard/gluing
+clause.
 
 ## Lead codex-2026-06-29: hard mirror-orbit discharge audit
 

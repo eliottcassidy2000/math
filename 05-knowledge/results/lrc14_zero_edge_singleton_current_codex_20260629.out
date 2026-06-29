@@ -1,0 +1,154 @@
+HYP-3480 ZERO-EDGE SINGLETON-CURRENT AUDIT
+status=EVIDENCE / finite singleton-current certificate audit; not an LRC14 proof
+sources=HYP-3478 small-touch geometry + HYP-3479 hard/current join + HYP-3472 gate cuts
+target_rows=('random_covering_001', 'random_covering_039', 'random_covering_062', 'random_covering_074', 'random_covering_086', 'random_covering_101')
+control_rows=('random_covering_031',)
+
+## Assumption Challenge
+alternate vertices considered: runners, gaps, fixed circle sections,
+section boundaries, wall-crossing events, residues, cover arcs, Fourier
+modes, matroid circuits, singleton components, mirror component pairs,
+owner-label pairs, touching gate events, route labels, hard-overlap flags,
+and formal proof obligations.
+chosen carrier vertices: mirror-paired singleton dead components with
+complete branch-unit E/branch gate touches, joined to the route sidecar R.
+preserved predicate: the zero-edge currentless row has a local
+mirror-unit singleton-current certificate or is the named random031
+hard/currentless control.
+destroyed if scalarized: exact interval mirror, branch orientation,
+component owner labels, and whether a cover-delta minimum still has a
+larger complete unit-delta touch.
+
+## Aggregate Singleton-Current Ledger
+audited_rows=7 target_rows=6 control_rows=1
+route_hist={'random031_overlap_hard_and_currentless': 1, 'small_touch_no_hard_current_exception': 6}
+terminal_class_hist={'mirror_unit_singleton_packet': 4, 'mirror_unit_singleton_packet_cover_delta_min_shadow': 2, 'random031_hard_currentless_control': 1}
+target_projection_edge_hist={0: 6}
+target_min_gate_kind_hist={'branch_unit_delta': 4, 'delta_sidecar_packet': 2}
+target_dead_components=14
+target_components_with_complete_branch_unit_touch=14/14
+target_mirror_pairs_with_branch_unit_mirror_gate=7/7
+cover_delta_min_shadow_rows_with_unit_certificate=('random_covering_039', 'random_covering_074')
+target_owner_residue_hist={((11,), (11,)): 1, ((13,), (11,)): 1, ((7,), (3,)): 1, ((9,), (11,)): 1, ((1,), (1,)): 1, ((1,), (7,)): 1, ((7,), (7,)): 1}
+control_components_with_complete_branch_unit_touch=0/4
+control_mirror_pairs_with_branch_unit_mirror_gate=0/2
+hard_currentless_control_rows=('random_covering_031',)
+
+## Row Certificates
+
+## Row random_covering_001
+speeds=(14, 30, 38, 64, 66, 81, 96, 104, 132, 146, 153, 165, 179)
+route=small_touch_no_hard_current_exception terminal_class=mirror_unit_singleton_packet hard_orbits=0 hard_max_delta=0
+projection=components:4 largest:1 edges:0 dead=4 e_branch=56 touching=56
+component_complete_touch=4/4 component_branch_unit_complete=4/4 mirror_unit_pairs=2/2 min_gate_kind=branch_unit_delta
+  mirror_pair=(0,3) owner_swapped=True mirror_unit_pair_count=6
+    left labels=('B0:165', 'B1:179') owner_pair=B0:165/B1:179 residues=((11,), (11,)) complete=9 branch_unit=6 owners=(165,179) residues=(11,11) diff=14 v2diff=1 sum=344 v2sum=3
+    right labels=('B0:179', 'B1:165') owner_pair=B0:179/B1:165 residues=((11,), (11,)) complete=9 branch_unit=6 owners=(179,165) residues=(11,11) diff=14 v2diff=1 sum=344 v2sum=3
+    chosen_left=component=51 gate=[519/1022,587/1155] typed=E:6|B0:11 structural=('E|B0', 'branch0', 'right_bad_edge', 1, 1) len=67/168630 labels=('B0:165', 'B1:179')
+    chosen_right=component=48 gate=[568/1155,503/1022] typed=B1:11|E:6 structural=('B1|E', 'branch1', 'left_bad_edge', 1, 1) len=67/168630 labels=('B0:179', 'B1:165')
+  mirror_pair=(1,2) owner_swapped=True mirror_unit_pair_count=1
+    left labels=('B0:153', 'B1:81') owner_pair=B0:153/B1:81 residues=((13,), (11,)) complete=3 branch_unit=1 owners=(153,81) residues=(13,11) diff=72 v2diff=3 sum=234 v2sum=1
+    right labels=('B0:81', 'B1:153') owner_pair=B0:81/B1:153 residues=((11,), (13,)) complete=3 branch_unit=1 owners=(81,153) residues=(11,13) diff=72 v2diff=3 sum=234 v2sum=1
+    chosen_left=component=89 gate=[239/266,965/1071] typed=E:10|B0:13 structural=('E|B0', 'branch0', 'right_bad_edge', 1, 1) len=103/40698 labels=('B0:153', 'B1:81')
+    chosen_right=component=10 gate=[106/1071,27/266] typed=B1:13|E:10 structural=('B1|E', 'branch1', 'left_bad_edge', 1, 1) len=103/40698 labels=('B0:81', 'B1:153')
+
+## Row random_covering_039
+speeds=(36, 39, 42, 44, 52, 58, 63, 66, 98, 102, 129, 160, 180)
+route=small_touch_no_hard_current_exception terminal_class=mirror_unit_singleton_packet_cover_delta_min_shadow hard_orbits=0 hard_max_delta=0
+projection=components:2 largest:1 edges:0 dead=2 e_branch=12 touching=12
+component_complete_touch=2/2 component_branch_unit_complete=2/2 mirror_unit_pairs=1/1 min_gate_kind=delta_sidecar_packet
+  mirror_pair=(0,1) owner_swapped=True mirror_unit_pair_count=2
+    left labels=('B0:63', 'B1:129') owner_pair=B0:63/B1:129 residues=((7,), (3,)) complete=2 branch_unit=2 owners=(63,129) residues=(7,3) diff=66 v2diff=1 sum=192 v2sum=6
+    right labels=('B0:129', 'B1:63') owner_pair=B0:129/B1:63 residues=((3,), (7,)) complete=2 branch_unit=2 owners=(129,63) residues=(3,7) diff=66 v2diff=1 sum=192 v2sum=6
+    chosen_left=component=92 gate=[890/903,221/224] typed=B1:3|E:6 structural=('B1|E', 'branch1', 'left_bad_edge', 1, 1) len=29/28896 labels=('B0:63', 'B1:129')
+    chosen_right=component=1 gate=[3/224,13/903] typed=E:6|B0:3 structural=('E|B0', 'branch0', 'right_bad_edge', 1, 1) len=29/28896 labels=('B0:129', 'B1:63')
+
+## Row random_covering_062
+speeds=(9, 12, 48, 50, 70, 81, 96, 138, 140, 154, 156, 171, 174)
+route=small_touch_no_hard_current_exception terminal_class=mirror_unit_singleton_packet hard_orbits=0 hard_max_delta=0
+projection=components:2 largest:1 edges:0 dead=2 e_branch=26 touching=26
+component_complete_touch=2/2 component_branch_unit_complete=2/2 mirror_unit_pairs=1/1 min_gate_kind=branch_unit_delta
+  mirror_pair=(0,1) owner_swapped=True mirror_unit_pair_count=2
+    left labels=('B0:9', 'B1:81') owner_pair=B0:9/B1:81 residues=((9,), (11,)) complete=3 branch_unit=2 owners=(9,81) residues=(9,11) diff=72 v2diff=3 sum=90 v2sum=1
+    right labels=('B0:81', 'B1:9') owner_pair=B0:81/B1:9 residues=((11,), (9,)) complete=3 branch_unit=2 owners=(81,9) residues=(11,9) diff=72 v2diff=3 sum=90 v2sum=1
+    chosen_left=component=28 gate=[134/567,83/350] typed=B1:11|E:8 structural=('B1|E', 'branch1', 'left_bad_edge', 1, 1) len=23/28350 labels=('B0:9', 'B1:81')
+    chosen_right=component=101 gate=[267/350,433/567] typed=E:8|B0:11 structural=('E|B0', 'branch0', 'right_bad_edge', 1, 1) len=23/28350 labels=('B0:81', 'B1:9')
+
+## Row random_covering_074
+speeds=(2, 15, 42, 44, 56, 62, 75, 80, 99, 104, 120, 129, 159)
+route=small_touch_no_hard_current_exception terminal_class=mirror_unit_singleton_packet_cover_delta_min_shadow hard_orbits=0 hard_max_delta=0
+projection=components:2 largest:1 edges:0 dead=2 e_branch=58 touching=42
+component_complete_touch=2/2 component_branch_unit_complete=2/2 mirror_unit_pairs=1/1 min_gate_kind=delta_sidecar_packet
+  mirror_pair=(0,1) owner_swapped=True mirror_unit_pair_count=1
+    left labels=('B0:15', 'B1:99') owner_pair=B0:15/B1:99 residues=((1,), (1,)) complete=3 branch_unit=1 owners=(15,99) residues=(1,1) diff=84 v2diff=2 sum=114 v2sum=1
+    right labels=('B0:99', 'B1:15') owner_pair=B0:99/B1:15 residues=((1,), (1,)) complete=3 branch_unit=1 owners=(99,15) residues=(1,1) diff=84 v2diff=2 sum=114 v2sum=1
+    chosen_left=component=70 gate=[575/728,184/231] typed=E:6|B1:1 structural=('E|B1', 'branch1', 'right_bad_edge', 1, 1) len=23/3432 labels=('B0:15', 'B1:99')
+    chosen_right=component=13 gate=[47/231,153/728] typed=B0:1|E:6 structural=('B0|E', 'branch0', 'left_bad_edge', 1, 1) len=23/3432 labels=('B0:99', 'B1:15')
+
+## Row random_covering_086
+speeds=(40, 48, 103, 108, 110, 132, 133, 140, 146, 164, 169, 170, 176)
+route=small_touch_no_hard_current_exception terminal_class=mirror_unit_singleton_packet hard_orbits=0 hard_max_delta=0
+projection=components:2 largest:1 edges:0 dead=2 e_branch=34 touching=34
+component_complete_touch=2/2 component_branch_unit_complete=2/2 mirror_unit_pairs=1/1 min_gate_kind=branch_unit_delta
+  mirror_pair=(0,1) owner_swapped=True mirror_unit_pair_count=3
+    left labels=('B0:169', 'B1:133') owner_pair=B0:169/B1:133 residues=((1,), (7,)) complete=6 branch_unit=3 owners=(169,133) residues=(1,7) diff=36 v2diff=2 sum=302 v2sum=1
+    right labels=('B0:133', 'B1:169') owner_pair=B0:133/B1:169 residues=((7,), (1,)) complete=6 branch_unit=3 owners=(133,169) residues=(7,1) diff=36 v2diff=2 sum=302 v2sum=1
+    chosen_left=component=132 gate=[701/770,1077/1183] typed=E:12|B0:1 structural=('E|B0', 'branch0', 'right_bad_edge', 1, 1) len=1/130130 labels=('B0:169', 'B1:133')
+    chosen_right=component=9 gate=[106/1183,69/770] typed=B1:1|E:12 structural=('B1|E', 'branch1', 'left_bad_edge', 1, 1) len=1/130130 labels=('B0:133', 'B1:169')
+
+## Row random_covering_101
+speeds=(7, 10, 35, 44, 56, 64, 74, 90, 120, 130, 150, 167, 175)
+route=small_touch_no_hard_current_exception terminal_class=mirror_unit_singleton_packet hard_orbits=0 hard_max_delta=0
+projection=components:2 largest:1 edges:0 dead=2 e_branch=48 touching=30
+component_complete_touch=2/2 component_branch_unit_complete=2/2 mirror_unit_pairs=1/1 min_gate_kind=branch_unit_delta
+  mirror_pair=(0,1) owner_swapped=True mirror_unit_pair_count=4
+    left labels=('B0:7', 'B1:175') owner_pair=B0:7/B1:175 residues=((7,), (7,)) complete=4 branch_unit=4 owners=(7,175) residues=(7,7) diff=168 v2diff=3 sum=182 v2sum=1
+    right labels=('B0:175', 'B1:7') owner_pair=B0:175/B1:7 residues=((7,), (7,)) complete=4 branch_unit=4 owners=(175,7) residues=(7,7) diff=168 v2diff=3 sum=182 v2sum=1
+    chosen_left=component=37 gate=[61/210,356/1225] typed=E:6|B1:7 structural=('E|B1', 'branch1', 'right_bad_edge', 1, 1) len=1/7350 labels=('B0:7', 'B1:175')
+    chosen_right=component=84 gate=[869/1225,149/210] typed=B0:7|E:6 structural=('B0|E', 'branch0', 'left_bad_edge', 1, 1) len=1/7350 labels=('B0:175', 'B1:7')
+
+## Row random_covering_031
+speeds=(12, 23, 45, 55, 58, 70, 84, 93, 113, 120, 147, 169, 173)
+route=random031_overlap_hard_and_currentless terminal_class=random031_hard_currentless_control hard_orbits=1 hard_max_delta=7
+projection=components:4 largest:1 edges:0 dead=4 e_branch=88 touching=72
+component_complete_touch=2/4 component_branch_unit_complete=0/4 mirror_unit_pairs=0/2 min_gate_kind=branch_unit_delta
+  mirror_pair=(0,3) owner_swapped=True mirror_unit_pair_count=0
+    left labels=('B0:45', 'B1:23') owner_pair=B0:45/B1:23 residues=((3,), (9,)) complete=1 branch_unit=0 owners=(45,23) residues=(3,9) diff=22 v2diff=1 sum=68 v2sum=2
+    right labels=('B0:23', 'B1:45') owner_pair=B0:23/B1:45 residues=((9,), (3,)) complete=1 branch_unit=0 owners=(23,45) residues=(9,3) diff=22 v2diff=1 sum=68 v2sum=2
+    chosen_mirror_unit_pair=None
+    left_best_complete=component=21 gate=[267/1183,111/490] typed=B0:1|E:0 structural=('B0|E', 'branch0', 'left_bad_edge', 3, 3) len=69/82810 labels=('B0:45', 'B1:23', 'B1:93')
+    right_best_complete=component=76 gate=[379/490,916/1183] typed=E:0|B1:1 structural=('E|B1', 'branch1', 'right_bad_edge', 3, 3) len=69/82810 labels=('B0:23', 'B0:93', 'B1:45')
+  mirror_pair=(1,2) owner_swapped=True mirror_unit_pair_count=0
+    left labels=('B0:113', 'B1:93') owner_pair=B0:113/B1:93 residues=((1,), (9,)) complete=0 branch_unit=0 owners=(113,93) residues=(1,9) diff=20 v2diff=2 sum=206 v2sum=1
+    right labels=('B0:93', 'B1:113') owner_pair=B0:93/B1:113 residues=((9,), (1,)) complete=0 branch_unit=0 owners=(93,113) residues=(9,1) diff=20 v2diff=2 sum=206 v2sum=1
+    chosen_mirror_unit_pair=None
+
+## Lemma Target
+Finite audited form:
+  Each of the six small-touch/no-hard zero-edge rows has every dead
+  singleton component completely touched by a branch-unit E/branch gate.
+  The 14 components assemble into 7 mirror pairs, and every pair has at
+  least one mirror-compatible branch-unit gate pair with swapped B0/B1
+  owner labels.
+  Rows random_covering_039 and random_covering_074 still have cover-delta
+  absolute minimum gates, but the component-level certificate finds a
+  complete branch-unit mirror pair, so they need not remain separate
+  terminal debt if the mirror-singleton lemma is proved.
+  The control row random_covering_031 has zero branch-unit complete
+  singleton components and remains exactly the hard/currentless gluing
+  clause from HYP-3455/HYP-3460/HYP-3479.
+Proof pull:
+  Prove a finite mirror-unit singleton-current lemma over swapped
+  singleton B0/B1 owner pairs, carrying route sidecar R and the owner
+  residue/two-adic word.  Then the non-AP currentless random frontier
+  reduces to that lemma plus the named random031 hard-control clause.
+
+## Tournament Analysis
+vertices=['Z00_mirror_unit_singleton_current_packet', 'Z01_component_complete_touch_certificate', 'Z02_random031_hard_control_clause', 'Z03_route_sidecar_R_join', 'Z04_cover_delta_min_gate_shadow', 'Z05_owner_residue_two_adic_shadow', 'Z06_raw_zero_edge_projection_count', 'Z07_raw_row_name_list']
+axes=('predicate_retention', 'component_complete_touch', 'mirror_unit_payload', 'route_sidecar_payload', 'hard_control_payload', 'formal_packet_fit', 'scalar_firewall')
+pairwise_observable=predicate retention + complete component touch + mirror-unit payload + route/hard-control payload + scalar firewall
+switch_gauge=higher proof-facing retained payload first; ties follow mirror unit packet -> complete touch -> random031 control -> route sidecar
+score_hist={5: 1, 8: 1, 45: 1, 52: 1, 59: 2, 62: 1, 67: 1}
+directed_3cycles=0
+hamiltonian_path_count=1
+hamiltonian_path=Z00_mirror_unit_singleton_current_packet -> Z01_component_complete_touch_certificate -> Z02_random031_hard_control_clause -> Z03_route_sidecar_R_join -> Z04_cover_delta_min_gate_shadow -> Z05_owner_residue_two_adic_shadow -> Z06_raw_zero_edge_projection_count -> Z07_raw_row_name_list

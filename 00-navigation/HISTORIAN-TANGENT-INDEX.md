@@ -20,6 +20,15 @@ Useful synthetic maps added later:
   max-delta seam on components `43/54` has zero q=`14V` phase hits and is
   bypassed by lower-delta gates on the same components.  The next proof packet
   is mirror-puncture island current plus a bypassed-saddle lemma.
+- `07-reflections/lrc14-zero-edge-singleton-current-codex-20260629.md`:
+  HYP-3480/T1440 sharpens HYP-3478 by checking complete branch-unit touches at
+  component level.  All six small-touch/no-hard zero-edge rows have `14/14`
+  singleton components with complete branch-unit E/branch touches and `7/7`
+  mirror component pairs with mirror-compatible unit gate pairs, including the
+  two cover-delta-minimum rows.  The control `random_covering_031` has `0/4`
+  complete branch-unit components, so the next proof packet is a
+  mirror-unit singleton-current lemma plus the random031 HYP-3481/HYP-3482
+  topology/seam control clause.
 - `07-reflections/lrc14-small-touch-no-hard-geometry-codex-20260629.md`:
   HYP-3478/T1438 resolves the geometry of the six HYP-3476 small-touch rows
   outside AP84 and hard mirror-orbit debt.  The useful signal is that all
