@@ -1,3 +1,32 @@
+## mac-mini-2026-06-29-S12 -- oriented-path parity IS the graded Ky Fan / Borsuk-Ulam count; the topological toolkit merged (HYP-3544)
+
+Prompt: merge into the per-level signed-cycle-index investigation ideas from Borsuk-Ulam + Kaczynski + Ky Fan + Ham Sandwich + arXiv:2512.09332.
+
+arXiv:2512.09332 = El Sahili-El Zein, "Oriented Hamiltonian Paths in Tournaments: Stability under Arc
+Deletion" (Dec 2025). Opens with REDEI (odd # of directed Ham paths); main thm: deleting one arc from
+T (n>=8) preserves every oriented Ham path except two explicit special exceptions. Classical exception
+list includes the PALEY T_7 (Grunbaum antidirected) = the LRC apex prime.
+
+VERIFIED (HYP-3544, Forcade 1973 reconfirmed): N_tau(T) = #{Ham paths of oriented type tau in {+,-}^{n-1}}
+has TOURNAMENT-INDEPENDENT parity = the transitive/descent-set count. Exhaustive n=4 (64), n=5 (1024),
+3000-sample n=6: ZERO variable-parity types. ALL 2^{n-1} types ODD at n=2^k (n=4 -> all 8 odd). n=5:
+odd iff first arc = last arc; half odd. Directed (Redei) + antidirected corners odd everywhere.
+Script: 04-computation/oriented_path_parity_kyfan_macmini_20260629.py.
+
+KY FAN reading (grounds OPEN-Q-059): the type-hypercube {+,-}^{n-1} with reversal/complement = antipodal
+Z_2; per-type parity = the Ky Fan ALTERNATING odd-count GRADED by type. klein THM-584 (complement =
+antipodal map of arc-hypercube Q_d) is the Z_2; the SIGNED CYCLE INDEX (HYP-3540) is its GF; arXiv:2512
+(arc deletion = Q_d EDGE) is its edge-stability. Redei/Forcade/El-Sahili-Abi-Aad = corners of one count.
+
+MERGED TOOLKIT (one involution R = complement = antipodal of Q_d): R-EVEN half = analytic (KACZYNSKI
+Sum mu^2/phi ~ 1/zeta(2), the floor, Brouwer/SOS); R-ODD half = topological (BORSUK-ULAM witness saddle
+index (p-1)/2, KY FAN, obstruction M_odd). UNUSED OPPORTUNITIES flagged: HAM SANDWICH (bisect M_odd --
+the cap obstruction can't be symmetrically halved); TUCKER (Z_2-labeling of Q_d). NEXT: prove the
+tournament Ky Fan (=> Redei/Forcade are Borsuk-Ulam shadows); Ham Sandwich on M_odd.
+
+Files: HYP-3544, reflection one-antipodal-map-the-topological-toolkit-merged.md, OPEN-Q-059 grounded,
+INDEX updated. Used the Explore agent to map prior Borsuk-Ulam/Kaczynski/Ky-Fan work. Messaged klein.
+
 ## mac-mini-2026-06-29-S11 -- the metagraph Burnside-spectrum (klein THM-584) and the LRC cap are ONE structure (HYP-3543); resolved collision with klein
 
 Prompt: go through prior tournament work + LRC connection; consider the metagraph eigenvalue multiplicities are per-level Burnside orbit-counts.
