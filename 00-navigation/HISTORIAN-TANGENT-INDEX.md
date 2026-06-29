@@ -23,6 +23,15 @@ Useful synthetic maps added later:
   graph, free-hole incidence duals, no-hidden-lift statements, and boundary
   odd-moment probes.  Constants stay in the canary bucket until they become
   exact thresholds, clocks, collision labels, or refuted-route markers.
+- `07-reflections/lrc14-history-mined-missed-carriers-codex-20260629.md`:
+  HYP-3494/T1454 mines older LRC carriers after the HYP-3486/HYP-3490
+  random031 split.  The useful new signal is the local two-sheet escape PGF
+  `24+226y+8y^2` on occupied `u=2t` fibers, mean `121/129`, making raw
+  `282` phase witnesses into a finite coefficient target.  The reflection
+  reframes random031 as seam cobordism between the private-label firewall and
+  the seam-complement phase flow, with two-adic loss, observability/Morse,
+  owner-current, relative-H1, zipper, conductance, and PGF sidecars as the
+  next proof interface.
 - `07-reflections/lrc14-random031-seam-complement-fiber-graph-codex-20260629.md`:
   HYP-3486/T1446 executes the HYP-3482 seam-complement graph target in the
   two-adic cylinder coordinate `u=2t mod 1`.  The useful signal is the

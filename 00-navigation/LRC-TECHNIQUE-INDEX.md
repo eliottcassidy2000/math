@@ -530,6 +530,7 @@ record what it destroys before asking it to prove anything.
 | LTI-451 | History niche-carrier recall atlas | Colored Nerode quotients, label-component Menger/Green cuts, `C=27` carry-lift stress, function-compression constancy, owner-cut/SC charal transversals, Joukowski/HB bulk guardrails | HYP-3491 mines older repo threads for carriers that can be reattached to HYP-3490/HYP-3484.  The strongest missed bridge is HYP-3474's partition-lattice quotient legality applied to `private_firewall_status`; the second is a Menger/Green incidence-cut proof of HYP-3490's multiplicity-one firewall. | HYP-3491, HYP-3490, HYP-3484, HYP-3474, HYP-3473, HYP-3461, HYP-3437, HYP-3419, HYP-3236, HYP-3222, HYP-3153, HYP-3151, HYP-3150, THM-523, T1451, LTT-351, LTI-451, OPEN-Q-108 | Build the firewall Nerode audit, then prove the multiplicity-one incidence cut lemma; keep p-adic/discrepancy/SC/BDH/Lee-Yang language only as exact sidecars. |
 | LTI-452 | Repo-history niche proof-service atlas | Historian cluster scorecard, quotient guardrails, fiber-Haar certificate, p-adic/Krasner quotient legality, C6/C3 owner monodromy, automata mirror-run language, design incidence duals, no-hidden-lift theorem | HYP-3492 mines current summary files plus full commit-subject/touched-path history for recurring niche topics and filters them by proof service rather than exotic name.  For HYP-3486/HYP-3490, the useful imports are exact sidecars: fiber-Haar certificate for the `242/40/12` split, mirror-versus-vertical quotient legality, C6/C3/Qsqrt(-7) monodromy for bypass versus seam-only owners, DFA compression of the `79` components, free-hole incidence duals, no-hidden-lift bridge from private-label firewall to fiber discharge, and boundary odd moments. | HYP-3492, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3451, HYP-3437, HYP-3422, HYP-3311, HYP-3310, HYP-3239, HYP-3218, HYP-3153, HYP-3148, HYP-3023, HYP-2989, THM-523, T1452, LTT-352, LTI-452, OPEN-Q-108 | Pick one exact proof service, not another analogy.  Best first experiments: fiber-Haar certificate and mirror-versus-vertical quotient legality over the HYP-3486 fiber graph. |
 | LTI-453 | Random031 relative seam-sheaf synthesis | Relative seam-sheaf cells, fiber trichotomy, private-label firewall marks, owner-boundary words, Cech/path-lift persistence, legal sheet-PGF buckets, non-archimedean owner-lift sidecars, ordered bypass discrepancy blocks | HYP-3493 merges HYP-3485/HYP-3486/HYP-3490 with repo-search motifs and executes the first seam-sheaf table.  The legal graph has `79` mirror-closed components and no mixed/debt stalks: `64` rank-2 routed, `14` free-hole, and one pure bypass.  The bypass carries owners `(23,93,113)` and seam debt `(45,147,169,173)`. | HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, HYP-3451, HYP-3438, HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3025, HYP-3023, HYP-3311, HYP-3408, THM-523, T1453, LTT-353, LTI-453, OPEN-Q-108 | Prove owner-boundary persistence and local-to-global discharge by rank-2 route, mirror free-hole, pure bypass plus owner boundary, or named owner-current/two-adic/SPEC/state-lift debt; projection-current deletion remains disabled by HYP-3490. |
+| LTI-454 | History-mined random031 seam cobordism | Local two-sheet escape PGF, Lean-backed private-label firewall side, HYP-3493 seam-sheaf right boundary, HYP-3510 connected phase carrier, HYP-3511 free-hole bracket atlas, quotient-price sidecars, relative H1/owner-current/observability matrix, Lean dispatch join | HYP-3494 mines older LRC carriers after HYP-3486/HYP-3490 and turns random031 into a seam-cobordism interface.  Exact new object: occupied-fiber escape polynomial `24+226y+8y^2`, mean `121/129`, now read through HYP-3510/HYP-3511 as rank-2 route, free-hole bracket, and pure-bypass owner-boundary.  Incoming HYP-3493 supplies a no-mixed-stalk seam-sheaf scaffold, while HYP-3510 gives one coarse phase carrier and HYP-3511 brackets the `40` free-hole cells.  It ranks missed carriers: HYP-3480 formal dispatch, HYP-3428 two-adic loss, HYP-3300 observability/Morse, HYP-3402 owner-current, HYP-3243 topes/cocircuits, HYP-3437 Menger cuts, HYP-3034 relative H1, HYP-3023 zipper, HYP-3451 conductance, and HYP-3140 PGF. | HYP-3494, HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3480, HYP-3428, HYP-3300, HYP-3402, HYP-3243, HYP-3437, HYP-3034, HYP-3422, HYP-3023, HYP-3451, HYP-3140, THM-523, T1454, LTT-354, LTI-454, OPEN-Q-108 | Build the quotient-price matrix for random031: `u_index`, branch, mirror mate, cell class, endpoint rank, owner word, private-firewall bit, HYP-3511 bracket type, HYP-3510 carrier component, vertical-halfturn sidecar, relative-H1 class, and PGF bucket.  Then prove owner-boundary persistence for the pure bypass or name the missing sidecar/debt. |
 | LTI-510 | Random031 branch-ordered seam-complement incidence graph | Coarse witness/gate/component incidence collapse, two branch witness cycles, survivor-gate port stitching, mirror-completed bypass rungs, no-gate interior beads, HYP-3486 fiber-refinement guardrail | HYP-3510 refines the HYP-3486 fiber graph from the opposite direction: it collapses branch order plus survivor-gate ports into one seam-complement incidence component `{'C':80,'G':122,'W':282}` after deleting the max-delta seam.  This proves coarse global phase connectivity but must be read below HYP-3486's legal `79`-component mirror-run trichotomy and HYP-3511's free-hole bracket atlas. | HYP-3510, HYP-3511, HYP-3486, HYP-3490, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, THM-523, T1510, LTT-410, LTI-510, OPEN-Q-108 | Use this as the coarse connectedness certificate, then prove which parts survive in HYP-3486's rank-2/free-hole/pure-bypass fiber decomposition and HYP-3511's bracketed no-gate packet grammar. |
 | LTI-511 | Random031 free-hole bracket atlas | Legal mirror free-hole packets, branch-order exposed boundaries, same-branch free adjacency doublets, endpoint-rank-2 ordinary bracketing, puncture-shadow guardrail | HYP-3511 resolves the HYP-3486 free-hole packet into a local grammar.  The `14` legal mirror packets split into `10` individually ordinary-bracketed packets and `4` half-open packets in exactly `2` same-branch doublets, with every exposed packet boundary facing an ordinary endpoint-rank-`2` routed cell. | HYP-3511, HYP-3510, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, THM-523, T1511, LTT-411, LTI-511, OPEN-Q-108 | Promote the free-hole packet to a local lemma: 10 bracketed singles plus 2 bracketed doublets, with any remaining puncture/owner-boundary debt localized to the doublets rather than the full 40-cell no-gate carrier. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
@@ -10025,6 +10026,56 @@ HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455,
 HYP-3451, HYP-3438, HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3025,
 HYP-3023, HYP-3311, HYP-3408, THM-523, LTI-453, LTT-353, T1453,
 OPEN-Q-108.
+
+## LTI-454: History-Mined Random031 Seam Cobordism
+
+Created by codex-2026-06-29 for HYP-3494/T1454/LTT-354.  This technique mines
+older LRC carriers after HYP-3486 and HYP-3490, then turns random031 into a
+seam-cobordism proof interface: Lean-backed private-label firewall side glued to
+the HYP-3493 seam-sheaf right boundary and the HYP-3486 seam-complement
+phase-flow side through explicit sidecars.
+
+After HYP-3510/HYP-3511, this card should be read as a pricing interface
+between three right-boundary local lemmas: rank-2 routing, free-hole bracketing,
+and pure-bypass owner-boundary persistence.
+
+Carrier / vertex set: local occupied `u=2t` fibers, rank-2 escape sheet counts,
+free-hole terminal packets, private-label firewall bit, legal mirror-run graph,
+two-adic loss ledger, owner-current word, relative-H1 class, quotient-price
+observability columns, and formal dispatch packet.
+
+Preserved LRC predicate: terminal discharge of `random_covering_031` after the
+max-delta seam is deleted.
+
+Destroyed information: raw `282` witness count forgets which occupied fibers
+have zero, one, or two escape sheets; vertical half-turn quotient forgets
+free-hole/ordinary separation; dead-projection current deletion forgets that
+all touched labels are private; owner-count scalar forgets seam-only versus
+bypass-flow charge.
+
+Exact HYP-3494 readout:
+
+```text
+witness_cells=282
+occupied_fibers=258
+terminal_sheet_hist={1:234, 2:24}
+rank2_escape_pgf=24 + 226*y + 8*y^2
+mean_rank2_escape_sheets=121/129
+legal_components=79
+vertical_glued_components=69
+vertical_mixed_components=7
+```
+
+Best use: build a quotient-price matrix for random031 with columns `u_index`,
+branch, mirror mate, cell class, endpoint rank, owner word, private-firewall
+bit, vertical-halfturn sidecar, relative-H1 class, and PGF bucket.  HYP-3493
+already removes the generic mixed-stalk worry on the legal graph, so the next
+proof target is owner-boundary persistence for the pure bypass, or a named
+owner/two-adic/SPEC sidecar debt.
+
+Pointers: HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3480, HYP-3428,
+HYP-3511, HYP-3510, HYP-3300, HYP-3402, HYP-3243, HYP-3437, HYP-3034, HYP-3422, HYP-3023,
+HYP-3451, HYP-3140, THM-523, LTI-454, LTT-354, T1454, OPEN-Q-108.
 
 ## LTI-445: Random031 Seam-Complement Connection Atlas
 

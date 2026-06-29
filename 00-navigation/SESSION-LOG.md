@@ -107,6 +107,44 @@ failed immediately because `00-navigation/LRC-TECHNIQUE-INDEX.md` and
 `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` were already unmerged on
 entry, so I preserved that worktree and resolved forward by union rather than
 discarding either side.
+## codex-2026-06-29 -- HYP-3494 history-mined missed carriers for random031
+
+Prompt: look back through repo history for missed niche topics and connections
+to extend the LRC proof work.  Pulled the live mainline first, including the
+HYP-3480 Lean singleton-current ledger and the HYP-3485/HYP-3490 splice.
+
+Added HYP-3494/T1454/LTI-454/LTT-354 plus script, stored output, and
+reflection:
+
+```text
+04-computation/lrc14_history_missed_carriers_codex_20260629.py
+05-knowledge/results/lrc14_history_missed_carriers_codex_20260629.out
+05-knowledge/hypotheses/HYP-3494-lrc14-history-mined-missed-carriers.md
+07-reflections/lrc14-history-mined-missed-carriers-codex-20260629.md
+```
+
+Key new object: local random031 occupied-fiber escape polynomial
+`P_escape(y)=24+226y+8y^2`, mean rank-2 escape sheets `121/129`.  This
+localizes HYP-3140's fiber-PGF moment to the HYP-3486 two-sheet cylinder and
+turns the raw `282` witness count into a finite coefficient target with
+free-hole packets as terminal sidecars.  Synthesis: random031 should be
+formalized as seam cobordism between HYP-3490's private-label firewall and
+HYP-3486's seam-complement phase flow, with HYP-3428/HYP-3300/HYP-3402/HYP-3034
+supplying quotient-price, owner-current, and relative-H1 sidecars.
+
+Close-out integration: this packet was renumbered from the local HYP-3492
+reservation after concurrent upstream work claimed HYP-3492 for the
+repo-history niche proof-service atlas and HYP-3493 for the random031
+seam-sheaf scaffold.  HYP-3493's no-mixed-stalk readout is now treated as the
+first right-boundary execution, sharpening HYP-3494's next target to
+owner-boundary persistence for the pure bypass.
+
+Second close-out integration: HYP-3510/HYP-3511 landed before push.  HYP-3510
+adds the coarse one-component branch-ordered seam-complement carrier, and
+HYP-3511 brackets the `40` no-gate/free-hole cells as `10` ordinary-bracketed
+packets plus `2` same-branch doublets.  HYP-3494 now reads the right boundary
+as three local lemmas: rank-2 route, free-hole bracket, and pure-bypass
+owner-boundary persistence.
 
 ## codex-2026-06-29 -- HYP-3485 random031 seam-complement connection atlas
 

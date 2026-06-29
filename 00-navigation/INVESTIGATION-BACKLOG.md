@@ -27,6 +27,22 @@ sidecars, not scalar proofs.
 HYP-3481, HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, HYP-3451,
 HYP-3438, HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3025, HYP-3023,
 HYP-3311, HYP-3408, LTI-453, LTT-353, T1453, OPEN-Q-108.
+**HYP-3494 random031 history-mined seam-cobordism interface.**  Build the next
+small executable proof interface for random031 using the HYP-3494 local PGF,
+the Lean-backed HYP-3490 private-label firewall, and the HYP-3493
+no-mixed-stalk seam-sheaf scaffold, now sharpened by HYP-3510 connectedness
+and HYP-3511 free-hole bracketing:
+`P_escape(y)=24+226y+8y^2` over occupied `u=2t` fibers.  Attach the sidecars
+identified by history mining: HYP-3490 private-label firewall, HYP-3486 legal
+mirror-run graph, HYP-3428 two-adic loss ledger, HYP-3300 observability matrix,
+HYP-3402 owner-current split, HYP-3034 relative H1, and HYP-3140 PGF moment.
+Concrete next test: make a random031 quotient-price table with columns
+`u_index`, branch, mirror mate, cell class, endpoint rank, owner word,
+private-firewall bit, HYP-3511 bracket type, HYP-3510 carrier component,
+vertical-halfturn sidecar, relative-H1 class, and PGF
+bucket, then prove owner-boundary persistence for the pure bypass or name the
+missing sidecar. -> HYP-3494, HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3480, HYP-3428, HYP-3300, HYP-3402,
+HYP-3034, HYP-3140, LTI-454, LTT-354, T1454, OPEN-Q-108.
 
 **HYP-3485 random031 seam-complement connection atlas.**  Convert the
 HYP-3481/HYP-3482/HYP-3483 picture into the next executable audit.  Build a

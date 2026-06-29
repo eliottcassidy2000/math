@@ -276,6 +276,15 @@ obligations, and proof-carrier interfaces.
   `79/79` legal components are mirror-closed with no mixed/debt stalks, so the
   next route is owner-boundary persistence on the horizontal+mirror seam
   complement.
+- Need to turn random031 history mining into a proof interface:
+  use LTT-354 after LTT-350/LTT-346/LTT-345 and make history-mined proof
+  carriers the vertices.  HYP-3494 localizes HYP-3140's PGF idea to the
+  random031 two-sheet cylinder as `24+226y+8y^2`, then asks for a
+  quotient-price matrix retaining branch, mirror mate, cell class, endpoint
+  rank, owner word, private-firewall bit, vertical-halfturn sidecar,
+  relative-H1 class, and PGF bucket.  With HYP-3493 now no-mixed-stalk on the
+  legal graph, the remaining target is owner-boundary persistence for the
+  pure bypass.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -10505,6 +10514,47 @@ quotient_legality_status
   HYP-3451, HYP-3438, HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3025,
   HYP-3023, HYP-3311, HYP-3408, THM-523, LTI-453, LTT-353, T1453,
   OPEN-Q-108.
+
+## LTT-354: History-Mined Random031 Seam-Cobordism Tournament
+
+- **Move:** Treat older proof carriers as tournament vertices and rank them by
+  how safely they glue HYP-3490's Lean-backed private-label firewall side to
+  HYP-3486's seam-complement phase-flow side.
+- **LRC use:** HYP-3494 replaces raw `282` phase witnesses with the local
+  occupied-fiber escape PGF `24+226y+8y^2`, mean `121/129`, and turns the
+  next random031 step into a quotient-price matrix plus relative H1/owner
+  current/PGF sidecars.  HYP-3493 now supplies a no-mixed-stalk seam-sheaf
+  scaffold, so the live obstruction is owner-boundary persistence for the
+  pure bypass.  HYP-3510/HYP-3511 make the split sharper: one coarse
+  seam-complement carrier, bracketed free-hole cells, and a remaining pure
+  bypass owner-boundary target.
+- **Preserves:** random031 terminal discharge after seam deletion, legal
+  mirror-run topology, free-hole terminal status, endpoint-rank exits,
+  owner-boundary charge, private-label firewall status, and vertical
+  half-turn guardrail.
+- **Forgets / guardrail:** raw witness count, vertical half-turn quotient,
+  raw owner count, and dead-projection current search are unsafe unless the
+  destroyed sidecar is explicitly retained or discharged.
+- **Pairwise observable:** random031 predicate retention, quotient sidecar
+  cost, executable follow-up clarity, and compatibility with the HYP-3486
+  vertical guardrail.
+- **Switch/gauge:** orient toward the carrier with higher retained predicate
+  payload and lower missing-sidecar cost; ties use the declared proof-interface
+  order from formal dispatch through two-adic loss, observability, owner
+  current, topology, cuts, H1, relocation, zipper, conductance, and PGF.
+- **Fingerprint:** score histogram
+  `{81:1,94:1,99:1,105:1,106:1,108:1,114:1,115:1,116:1,119:1,148:1}`,
+  no directed `3`-cycles, and Hamiltonian path
+  `HYP-3480 -> HYP-3428 -> HYP-3300 -> HYP-3402 -> HYP-3243 -> HYP-3437 -> HYP-3034 -> HYP-3422 -> HYP-3023 -> HYP-3451 -> HYP-3140`.
+- **Next hook:** build the random031 quotient-price matrix with columns
+  `u_index`, branch, mirror mate, cell class, endpoint rank, owner word,
+  private-firewall bit, HYP-3511 bracket type, HYP-3510 carrier component,
+  vertical-halfturn sidecar, relative-H1 class, and PGF bucket; prove
+  owner-boundary persistence for the pure bypass or name the first missing
+  sidecar.
+- **Pointers:** HYP-3494, HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3480, HYP-3428,
+  HYP-3300, HYP-3402, HYP-3243, HYP-3437, HYP-3034, HYP-3422, HYP-3023,
+  HYP-3451, HYP-3140, THM-523, LTI-454, LTT-354, T1454, OPEN-Q-108.
 
 ## LTT-345: Random031 Seam-Complement Connection Tournament
 
