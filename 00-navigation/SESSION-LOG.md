@@ -1,3 +1,25 @@
+## codex-2026-06-29 -- HYP-3477 hard mirror-orbit discharge audit
+
+Continued from HYP-3475 after rebasing over the incoming HYP-3476
+pair-current reservation.  I initially collided on HYP-3476, then repaired
+the namespace to HYP-3477/T1437/LTI-437/LTT-337 and integrated HYP-3476 as the
+upstream pair-current sidecar.
+
+Added:
+
+```text
+04-computation/lrc14_hard_mirror_orbit_discharge_codex_20260629.py
+05-knowledge/results/lrc14_hard_mirror_orbit_discharge_codex_20260629.out
+05-knowledge/hypotheses/HYP-3477-lrc14-hard-mirror-orbit-discharge.md
+07-reflections/lrc14-hard-mirror-orbit-discharge-codex-20260629.md
+```
+
+Exact result: HYP-3475's eight hard mirror orbits split `7+1`.  Seven are
+discharged by lower-delta E/branch projection-edge cuts.  The only exception
+is `random_covering_031`; its max-delta pair has zero compatible q=`14V`
+phase-grid hits and remains the HYP-3455/HYP-3476 gluing clause.  The unique
+delta-`8` orbit on `random_covering_022` is not new debt.
+
 ## codex-2026-06-29 -- HYP-3476 dead-cover pair-current exception audit
 
 Prompt: keep trying creative new angles and experiments toward closing the

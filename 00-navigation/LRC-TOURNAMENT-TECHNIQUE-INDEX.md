@@ -163,6 +163,13 @@ obligations, and proof-carrier interfaces.
   scalar shadows the vertices.  The quotient preserves a `<=2`-gate
   dead-cover boundary-current carrier but must retain typed sidecars because it
   forgets interval geometry and branch order.
+- Need to discharge HYP-3475 hard mirror-orbit debt:
+  use LTT-337 after LTT-335/LTT-332/LTT-336 and make hard mirror orbits,
+  q=`14V` phase-grid hit patterns, lower-delta E/branch projection currents,
+  HYP-3476 pair-current sidecars, and random031 gluing clauses the vertices.
+  The quotient preserves hard-gluing debt plus legal lower-delta exits, and it
+  must not state phase-bypass universally because only random031 has that
+  property in HYP-3477.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center

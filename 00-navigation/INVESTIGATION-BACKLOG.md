@@ -15,6 +15,23 @@
 
 ---
 
+## Lead codex-2026-06-29: hard mirror-orbit discharge audit
+
+**Status:** EVIDENCE / exact hard-family ledger; not proof
+(HYP-3477/T1437/LTI-437/LTT-337), downstream of HYP-3475 and the incoming
+HYP-3476 pair-current packet.
+
+HYP-3477 audits the eight cover-delta `>=7` mirror orbits from HYP-3475.
+Result: `7/8` have a lower-delta E/branch survivor gate that gives a
+dead-cover projection-edge cut; the sole exception is `random_covering_031`,
+whose max-delta mirror pair has zero compatible q=`14V` phase-grid hits and
+is the named HYP-3455/HYP-3476 gluing clause.  The unique delta-`8` orbit on
+`random_covering_022` is not separate debt.
+
+Next proof task: prove the lower-delta E/branch projection-current discharge
+for non-random031 hard orbits, and handle random031 through the seven-owner
+gluing / pair-current / owner-current / two-adic / signed-SPEC exits.
+
 ## Lead codex-2026-06-29: dead-cover pair-current exception audit
 
 **Status:** RESERVED STUB / computation in progress; not proof
