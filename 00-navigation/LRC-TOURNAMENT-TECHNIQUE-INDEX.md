@@ -117,6 +117,11 @@ obligations, and proof-carrier interfaces.
   endpoint labels, mirror pairs, rank payloads, sign-change inequality, and
   component-audit match the vertices.  This closes `m=1..4` only; it forgets
   arbitrary non-AP component geometry.
+- Need to reconnect old coloring/outer-extension work to the AP84 proof:
+  use LTT-318 after LTT-314/LTT-316/LTT-317 and make phase color, mod-35
+  boundary color, mod-7 endpoint-rank subcolor, bad-phase derivative, and
+  outer-extension shift the vertices.  Raw escape count is only the shadow
+  after endpoint rank has been retained.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -9410,3 +9415,36 @@ quotient_legality_status
   HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422,
   HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-417, LTT-317, T1417,
   OPEN-Q-108.
+
+## LTT-318: AP84 Coloring-Recursion Tournament
+
+- **Move:** Treat the AP84 escape clock as a coloring recursion rather than a
+  scalar count.  Vertices are phase color, CRT `35`-state boundary color,
+  mod-`7` endpoint-rank subcolor, HYP-2247 bad-phase derivative,
+  outer-extension period shift, transition word, raw escape count, and raw
+  coloring analogy.
+- **LRC use:** HYP-3458 supplies the AP-tail sidecar needed when
+  HYP-3454/HYP-3456/HYP-3457 are spliced into HYP-3439.  It says the legal
+  quotient must retain `phase color + mod-35 boundary color + mod-7 endpoint
+  rank`, because `ceil(48m/7)` is the first left-corridor high gap exactly
+  when `7|m` and the second otherwise.
+- **Preserves:** AP-tail escape count, endpoint-witness location, mixed/pure
+  phase, boundary residue color, endpoint-rank color, and period-extension
+  shift.
+- **Forgets / guardrail:** arbitrary non-AP wall geometry and primitive-row
+  obstruction graphs.  Use as an AP-tail sidecar or as a template for a
+  sibling survivor-gate coloring scout, not as a global LRC14 proof.
+- **Pairwise observable:** retained coloring-recursion payload, endpoint rank,
+  extension-rank derivative, and scalar-forgetting risk.
+- **Switch/gauge:** higher retained address/rank payload first; ties use the
+  AP-tail proof route.
+- **Fingerprint:** `8` vertices, score histogram
+  `{9:1,21:1,46:1,50:1,54:1,55:1,57:1,58:1}`, no directed `3`-cycles, and
+  Hamiltonian path
+  `crt_35_coloring_state -> endpoint_rank_mod7_subcolor -> ph_bad_phase_derivative -> outer_extension_period_shift -> mod35_boundary_color_word -> transition_increment_word -> raw_escape_count -> raw_color_analogy`.
+- **Next hook:** run the same coloring/rank sidecar on HYP-3438 survivor gates
+  joined to HYP-3453 component/gate escapes: color by endpoint labels, minimal
+  cover rank, child-survival rank, and outer-extension death/survival.
+- **Pointers:** HYP-3458, HYP-3457, HYP-3456, HYP-3454, HYP-3453, HYP-3452,
+  HYP-3439, HYP-3438, HYP-3436, HYP-3431, HYP-2247, HYP-2246, HYP-2243,
+  HYP-2241, THM-523, LTI-418, LTT-318, T1418, OPEN-Q-108.

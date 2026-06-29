@@ -1,5 +1,34 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3458 AP84 coloring-recursion addendum:**
+HYP-3458 reconnects the AP84 endpoint-clock work with HYP-2247/HYP-2243
+coloring recursion.  For
+
+```text
+S_m = {1,2,...,11,13,84m}
+```
+
+HYP-3456's left-corridor escape count
+
+```text
+N(m)=floor((504m-6)/70)-floor((96m-13)/14)
+```
+
+is a `35`-state boundary coloring after subtracting `floor(12m/35)`.  The
+missing color sidecar is the HYP-3433/HYP-3454 endpoint address
+`a_m=ceil(48m/7)`: it has left-corridor rank `1` exactly when `7|m` and rank
+`2` otherwise.  This rank law is exact by reducing `m=7q+s`, not merely a
+sampled pattern.  Checks through `m=350` give `period_failures=[]`,
+`rank_failures=[]`, `phase_failures=[]`, and `address_failures=[]`.
+
+Open proof task: splice HYP-3454/HYP-3456/HYP-3457/HYP-3458 into HYP-3439 as a
+single AP-tail packet retaining `phase color + mod-35 boundary color + mod-7
+endpoint-rank subcolor`, then export the same bad-child color/rank sidecar to
+the HYP-3438/HYP-3453 survivor-gate router. -> HYP-3458, HYP-3457, HYP-3456,
+HYP-3454, HYP-3453, HYP-3452, HYP-3439, HYP-3438, HYP-3436, HYP-3431,
+HYP-2247, HYP-2246, HYP-2243, HYP-2241, THM-523, LTI-418, LTT-318, T1418,
+OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3457 AP84 finite transient addendum:**
 HYP-3457 closes the finite `m=1..4` side of the AP-tail split from
 HYP-3452/HYP-3454/HYP-3456.  For

@@ -15,6 +15,35 @@
 
 ---
 
+## Lead codex-2026-06-29: AP84 coloring-recursion bridge
+
+**Status:** EVIDENCE / exact coloring-recursion sidecar for AP-tail bridge; not
+proof (HYP-3458/T1418/LTI-418/LTT-318), reconnecting HYP-2247/HYP-2243
+coloring recursion to the AP84 endpoint-clock packet.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3458-lrc14-ap84-coloring-recursion-bridge.md`,
+script
+`04-computation/lrc14_ap84_coloring_recursion_bridge_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_ap84_coloring_recursion_bridge_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-ap84-coloring-recursion-bridge-codex-20260629.md`.
+
+Readout: for `{1,2,...,11,13,84m}`, HYP-3456's left-corridor count
+`N(m)=floor((504m-6)/70)-floor((96m-13)/14)` becomes a `35`-state boundary
+color after subtracting `floor(12m/35)`.  The HYP-3433/HYP-3454 endpoint
+address `a_m=ceil(48m/7)` is always in the first two left-corridor high gaps,
+with exact rank `1` iff `7|m`, otherwise `2`.  Validation through `m=350` has
+`period_failures=[]`, `rank_failures=[]`, `phase_failures=[]`, and
+`address_failures=[]`; boundary histogram `{0:1,1:22,2:12}`, endpoint-rank
+histogram `{1:5,2:30}`, transition histogram `{0:24,1:10,2:1}`, and mixed
+phase support only `m=1..4`.
+
+Next: splice HYP-3454/HYP-3456/HYP-3457/HYP-3458 into HYP-3439 as one AP-tail
+rank-`5` descent packet, and run a sibling coloring-rank scout on HYP-3438
+survivor gates joined to HYP-3453 component/gate escapes.
+
 ## Lead codex-2026-06-29: AP84 finite transient closure
 
 **Status:** EVIDENCE / finite mixed AP-tail transient certificate; not proof

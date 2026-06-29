@@ -1,0 +1,63 @@
+HYP-3458 AP84 COLORING-RECURSION BRIDGE
+status=EVIDENCE / exact coloring-recursion sidecar for AP-tail bridge; not an LRC14 proof
+source=HYP-2247/HYP-2243 coloring recursion + HYP-3454/HYP-3456/HYP-3457 AP84 clocks
+
+## Exact Checks
+checked_m=1..350
+period_failures=[]
+rank_failures=[]
+phase_failures=[]
+address_failures=[]
+
+## Boundary And Endpoint Color Words
+boundary_color d_r=N(r)-floor(12r/35), residues r=1..35:
+boundary_word=[2, 2, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 1, 0]
+boundary_color_hist={0: 1, 1: 22, 2: 12}
+endpoint_rank_color rank_C1(a_r), residues r=1..35:
+endpoint_rank_word=[2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1]
+endpoint_rank_hist={1: 5, 2: 30}
+transition_increment N(r+1)-N(r), with r=35 using N(36)-N(35):
+transition_word=[0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 2]
+transition_hist={0: 24, 1: 10, 2: 1}
+period_shift=N(m+35)-N(m)=12, escapes shift by 24
+
+## CRT Grid
+Rows are m mod 5 = 0..4; columns are m mod 7 = 0..6.
+Each entry is boundary_color/endpoint_rank_color.
+mod5=0: 0/1 1/2 1/2 1/2 1/2 1/2 1/2
+mod5=1: 1/1 2/2 2/2 2/2 2/2 2/2 1/2
+mod5=2: 1/1 2/2 2/2 2/2 2/2 1/2 1/2
+mod5=3: 1/1 2/2 2/2 1/2 1/2 1/2 1/2
+mod5=4: 1/1 2/2 1/2 1/2 1/2 1/2 1/2
+
+## Homogeneous Trace
+Selected endpoint address a_m=ceil(48m/7) has:
+  rank_C1(a_m)=1 exactly when 7 divides m
+  rank_C1(a_m)=2 otherwise
+Thus the HYP-3433 endpoint witness is always in the first two colored
+left-corridor high gaps.  The mod-35 color word counts all escapes; the
+mod-7 subcolor locates the canonical homogeneous trace inside that set.
+
+## Paris-Harrington / Outer-Extension Reading
+bad_phase_counts={'q0_mixed_residues': 4, 'q1_mixed_residues': 0}
+The mixed endpoint color is a finite bad branch: it appears only at m=1..4
+and is gone after the period extension m -> m+35.  The pure tail is not
+fast-growing PH behavior; it is a 35-state automaton with retained colors
+(phase, boundary d_r, endpoint rank).  This is the tame AP84 version of the
+HYP-2247 rule: do not count colorings without their extension-rank sidecar.
+
+## Tournament Analysis
+vertices=coloring/recursion proof carriers, not runners or raw colors
+pairwise_observable=predicate retention + extension rank + endpoint address + scalar-risk control
+switch=higher retained coloring-recursion payload; ties by AP-tail proof route
+score_hist={9: 1, 21: 1, 46: 1, 50: 1, 54: 1, 55: 1, 57: 1, 58: 1}
+directed_3cycles=0
+hamiltonian_path=crt_35_coloring_state -> endpoint_rank_mod7_subcolor -> ph_bad_phase_derivative -> outer_extension_period_shift -> mod35_boundary_color_word -> transition_increment_word -> raw_escape_count -> raw_color_analogy
+
+## Assumption Challenge
+Considered vertices: runners, residues mod 35, residues mod 7, high gaps,
+color classes, bad-coloring nodes, endpoint addresses, fixed corridors,
+and proof obligations.  The chosen quotient preserves AP-tail escape count,
+endpoint-witness location, mixed/pure phase, and outer-extension shift.
+It destroys arbitrary non-AP wall geometry, so it is a coloring-recursion
+sidecar for the AP-tail bridge rather than a global LRC14 proof.

@@ -1,3 +1,36 @@
+## codex-2026-06-29 -- HYP-3458 AP84 coloring-recursion bridge
+
+Prompt: go back and connect with prior work on colorings and extend/explore.
+Reopened the HYP-2247/HYP-2243 coloring-recursion/outer-extension thread and
+connected it to the current AP84 proof packet.
+
+Added HYP-3458/T1418/LTI-418/LTT-318 plus script/result/reflection:
+
+```text
+04-computation/lrc14_ap84_coloring_recursion_bridge_codex_20260629.py
+05-knowledge/results/lrc14_ap84_coloring_recursion_bridge_codex_20260629.out
+05-knowledge/hypotheses/HYP-3458-lrc14-ap84-coloring-recursion-bridge.md
+07-reflections/lrc14-ap84-coloring-recursion-bridge-codex-20260629.md
+```
+
+Core readout for `{1,2,...,11,13,84m}`: HYP-3456's left-corridor count
+`N(m)=floor((504m-6)/70)-floor((96m-13)/14)` is a `35`-state boundary color
+after subtracting `floor(12m/35)`.  The HYP-3433/HYP-3454 endpoint address
+`a_m=ceil(48m/7)` has exact left-corridor rank `1` iff `7|m`, otherwise rank
+`2`; this follows from the seven-case residue formula with `m=7q+s`.
+
+Validation through `m=350`: `period_failures=[]`, `rank_failures=[]`,
+`phase_failures=[]`, and `address_failures=[]`.  Boundary color histogram
+`{0:1,1:22,2:12}`, endpoint-rank histogram `{1:5,2:30}`, transition histogram
+`{0:24,1:10,2:1}`, and period shift `N(m+35)-N(m)=12`.
+
+Synthesis: the AP84 clock is not merely an escape count.  It is a tame finite
+coloring recursion with state `phase color + mod-35 boundary color + mod-7
+endpoint-rank subcolor`.  The mixed bad phase has finite support `m=1..4` and
+dies after outer extension.  Next hook: splice HYP-3454/HYP-3456/HYP-3457/HYP-3458
+into HYP-3439 and export the same bad-child color/rank sidecar to
+HYP-3438/HYP-3453 survivor-gate routes.
+
 ## codex-2026-06-29 -- HYP-3456 AP84 mod-35 floor-count closure
 
 Continued the HYP-3454 endpoint-clock certificate by deriving the sampled
