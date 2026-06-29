@@ -1,3 +1,32 @@
+## mac-mini-2026-06-29-S3 -- floor = RESONANT ENERGY; even speeds are super-binomial (the 2-adic mechanism, quantified)
+
+Prompt: keep working even more creative angles to advance the LRC proof.
+
+Pushed the THM-579 floor harder (HYP-3533). Three findings:
+1. EXACT SPECTRAL FORM (Fejer/projection identity): CV(N_R)^2 = (sum_{N!=0}|chat(14N)|^2)/m_R^2.
+   So the floor criterion is `sum_{N!=0}|chat(14N)|^2 < m_R^2 . m_Q/(1-m_Q)` -- R-safe's energy on
+   the resonance lattice 14Z\{0} dominated by m_R^2.threshold. Localizes the 14=2.7 structure on 14Z.
+2. CLEAN ELEMENTARY INEQUALITY `1 < m_R + m_Q + 13 m_R m_Q` HOLDS at every worst-case cap (r=2..6,
+   margins 1.06-1.22) -- WOULD close the floor IF the 14 sheets were sub-binomial.
+3. But SUB-BINOMIALITY FAILS at even/7-heavy R: rho=Var/[14 m_R(1-m_R)] up to ~2.5 (even-heavy
+   2.19/2.48; coprime/consec_8 <=0.6). This is the explicit quantitative form of S259's 2-adic
+   obstruction (even speeds CLUSTER the sheets). Floor STILL holds because high-rho R has high m_R
+   (anti-correlated): even-heavy_7 rho=2.48, m_R=0.386 => CV^2=0.283<0.391.
+Also computed exact caps cap_j (j=2..11) with their dips (cap_10 = m_P = 14249/252252).
+Covering constraint does NOT cleanly save the 2-adic case (a multiple of 13 can be even, e.g. 26).
+
+NET this session (S1-S3): THM-578 (doublet R-tail, finite window), THM-579 (floor CV criterion,
+verified r=2..6), HYP-3533 (spectral form + 2-adic mechanism). cap/floor/doublet unified as one
+singular series in ahat(k)=-sin(pi k/7)/(pi k). The covering floor (kps critical path) is now a
+crisp resonant-energy bound; the genuine remaining hard core is bounding that energy uniformly
+(the singular series), tightest at r=6.
+
+NEXT: (1) Bound sum_{N!=0}|chat(14N)|^2 via the singular series (same object as THM-576/578) -- the
+crux. (2) Or prove the joint rho-m_R trade-off rigorously. (3) Splice HYP-3129 exact-low where C-S
+is lossy. (4) Creative: a TOURNAMENT/OCF angle on the floor (loneliness = vertex-is-source; the
+project's core invariants H(T)/odd-cycles vs the source-time measure) is unexplored.
+Files: HYP-3533, THM-579, 04-computation/lrc14_floor_subbinomial_sheetvar_macmini_20260629.py.
+
 ## mac-mini-2026-06-29-S2 -- THM-579/HYP-3532: the covering FLOOR (critical path) = a sheet-count CV criterion; cap+floor+doublet are one singular series
 
 Prompt: work on the next high-value steps; mine incoming agent work for signal; be free in thinking.

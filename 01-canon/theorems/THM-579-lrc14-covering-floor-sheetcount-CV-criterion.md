@@ -95,9 +95,20 @@ since `r<=6` (the floor reduction bounds `|Q|<=6`), **r=6 is the binding case** 
 entire remaining gap localizes to: prove `max_{|R|=7, 14-free} CV(N_R)^2 < cap_6/(1-cap_6) ≈ 0.391`
 (a small-R optimization), plus an unbounded-speed discharge for R.
 
+## Spectral form (HYP-3533, mac-mini-S3)
+By the Fejer/projection identity `sum_{d=-13}^{13}(14-|d|)e(nd/14)=196.[14|n]`, the CV is EXACTLY
+the resonant spectral energy: **`CV(N_R)^2 = (sum_{N!=0}|chat(14N)|^2)/m_R^2`**, so the criterion is
+**`sum_{N!=0}|chat(14N)|^2 < m_R^2 . m_Q/(1-m_Q)`** -- the 2-adically-resonant energy of `R-safe`
+(its mass on `14Z\{0}`) dominated by `m_R^2 . threshold`.  This localizes the whole `14=2.7`
+structure on the `14Z` lattice.  Sub-binomiality (`Var<=14 m_R(1-m_R)`) would reduce the floor to
+the ELEMENTARY `1 < m_R+m_Q+13 m_R m_Q` (holds at all caps), BUT it FAILS at even/7-heavy R
+(`rho=Var/[14 m_R(1-m_R)]` up to ~2.5 -- the explicit S259 2-adic mechanism), compensated because
+high-rho configs have high `m_R` (anti-correlated).  See HYP-3533.
+
 ## Open
 Uniform closure: prove `CV(N_R)^2 < cap_r/(1-cap_r)` for every `r`, tightest at `r=6` (margin
-+0.096).  This needs (a) an upper bound on `CV(N_R)^2` over `|R|=13-r` 14-free configs (the sweep
++0.096); equivalently bound the resonant energy `sum_{N!=0}|chat(14N)|^2 < m_R^2 m_Q/(1-m_Q)` via
+the singular series (same object as THM-576/THM-578).  This needs (a) an upper bound on `CV(N_R)^2` over `|R|=13-r` 14-free configs (the sweep
 suggests it is bounded well below the threshold, max at large-speed R), and (b) discharge of
 unbounded R-speeds (large speeds equidistribute off the 14-grid; expected to lower CV).  Where
 Cauchy-Schwarz is too lossy, fall back to HYP-3129's exact-low refinement -- but no sampled row,
