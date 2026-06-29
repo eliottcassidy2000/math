@@ -1,3 +1,38 @@
+## mac-mini-2026-06-29-S5 -- DIHEDRAL synthesis: the floor is EVEN-CATEGORY (existence), Borsuk-Ulam is for the WITNESS; descent validated across the n=2p family (THM-581)
+
+Prompt: explore connections to past work on dihedral groups and their relation to tournaments; synthesize/investigate/hypothesis-test toward finishing proofs; think recursively.
+
+Mined kps S31av (MSG-334/335, HYP-3239) + mac-mini S75e + the tournament-dihedral past work. Framework:
+14=|D_7| (heptagon); cover bound = D_7 isotypes trivial+SIGN+three 2-dim(de Moivre cubic); Paley T_p
+has symmetry D_{2p} (complement=reflection v->-v, anti-aut iff p=3mod4); S75e cyclotomic Fejer-Bochner
+SOS handles the trivial+2dim EVEN part; kps says SIGN part needs Borsuk-Ulam (free Z_2, p=7=3mod4).
+
+SYNTHESIS (THM-581, HYP-3535): the EXISTENCE of a lonely time (the floor) is sigma-EVEN -- lonely(S)
+is sigma:t->-t invariant, so its SIGN-isotypic part VANISHES. So existence is Brouwer/SOS-category and
+needs NO Borsuk-Ulam. The Borsuk-Ulam/odd-degree obstruction is strictly for WITNESS construction (the
+sigma-fixed points 0,1/2 are danger for covering S => lonely times come ONLY in antipodal pairs
+{t*,-t*}). The free Z_2 of Borsuk-Ulam = the half-translation t->t+1/2 = the doubling-cover deck map;
+my descent (THM-580) IS iterated Reynolds projection onto its invariants => it computes the odd degree
+ARITHMETICALLY (the product) not topologically.
+
+DIHEDRAL FAMILY VALIDATION (n=2p, script lrc_2p_family_parity_descent): n=6 (p=3, KNOWN/PROVEN)
+meas(lonely S)>=0.033>0 over 60 covering sets -- the descent route SOUNDLY reproduces the proven case;
+n=10/14/22 analogous; rho_j (0.34-0.64) and floor UNIFORM across p mod4 -- NO Brouwer/Borsuk-Ulam split
+in the scalar measure, confirming even-category.
+
+RECURSION (think-recursively): n=2^a.m -> descent peels a free-Z_2 (half-translation) steps, each a
+Borsuk-Ulam-degree step, uniform/even -> bottoms out at the ODD CORE m = apex/cyclotomic Z_m arithmetic.
+For 14=2.7: one peel, core=7 (proven; -7 Heegner h=1 = gentlest). The 2-part is the easy even half; the
+odd core is the genuine number theory.
+
+CLOSURE ROUTE assembled (3 agents/sessions): descent (THM-580, peels Z_2, even) + S75e cyclotomic SOS
+(per-level 2-dim de Moivre rho_j>=c) + THM-576 odd caps; Borsuk-Ulam NOT needed for existence. n=6 is
+the template to write the per-level SOS on first.
+
+NEXT: make rho_j>=c rigorous via the 2-sheet cyclotomic Fejer-Bochner SOS (extend S75e to the per-level
+object); bound descent depth from THM-526. Files: THM-581, HYP-3535, reflection
+the-dihedral-recursion-existence-is-even-witness-is-odd.md, lrc_2p_family_parity_descent_macmini.
+
 ## mac-mini-2026-06-29-S4 -- creative reframes of the remaining LRC problems; 2-ADIC PARITY DESCENT gives an exact recursion for the floor (THM-580)
 
 Prompt: reframe each remaining problem 2-3 ways (out-of-the-box), then investigate the favorite two and their connections.

@@ -1,5 +1,19 @@
 # Open Questions
 
+**OPEN-Q-108 THM-581/HYP-3535 the floor is EVEN-CATEGORY; dihedral family; descent=constructive degree (mac-mini-2026-06-29-S5):**
+Synthesis of the dihedral thread.  14=|D_7|; the cover bound = D_7 isotypes (trivial + SIGN + three
+2-dim de Moivre); Paley T_p has symmetry D_{2p}.  CLARIFICATION: EXISTENCE of a lonely time (the floor)
+is sigma-EVEN (lonely(S) invariant under t->-t => SIGN-isotypic part vanishes), hence Brouwer/SOS-category
+-- NO Borsuk-Ulam needed.  kps's Borsuk-Ulam/odd-degree (HYP-3239, p=7=3mod4) is strictly for WITNESS
+construction (fixed points 0,1/2 are danger for covering S => lonely times are antipodal pairs {t*,-t*}).
+The free Z_2 of Borsuk-Ulam = the half-translation t->t+1/2 = the doubling-cover deck map; the 2-adic
+descent (THM-580) is iterated Reynolds projection onto its invariants, computing the odd degree
+ARITHMETICALLY.  FAMILY VALIDATION (n=2p): descent SOUNDLY reproduces the PROVEN n=6 (meas>=0.033>0);
+rho_j and floor UNIFORM across p mod4 (no Brouwer/Borsuk-Ulam split in the measure).  RECURSION:
+n=2^a.m peels a free-Z_2 steps -> odd core m (apex/cyclotomic; 14->7 proven).  CLOSURE ROUTE: descent
++ S75e cyclotomic SOS (per-level 2-dim rho_j>=c) + THM-576 odd caps; n=6 is the template.  OPEN: make
+rho_j>=c rigorous via the 2-sheet cyclotomic Fejer-Bochner SOS.  -> THM-581, THM-580, HYP-3535, HYP-3239, HYP-3219, THM-576, OPEN-Q-108.
+
 **OPEN-Q-108 THM-580/HYP-3534 2-adic PARITY DESCENT for the covering floor (mac-mini-2026-06-29-S4):**
 EXACT recursion (verified 30/30): split S=O u E (odd/even), S'=E/2; since `meas(lonely E)=meas(lonely S')`
 (measure-preserving u=2t) and `lonely(S)=lonely(O) cap lonely(E)`, unrolling gives
