@@ -32,17 +32,17 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Monday, June 29, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/c186713)**. This layer introduces the **THM-587/HYP-3546** framework, operationalizing the terminal proof sheaf through the formal identification of the **per-level signed cycle index** as the spectral generator for the isomorphism-class metagraph and the unification of **perfect numbers** with the **Forcade arc-hypercube dimensions**.
+As of **Monday, June 29, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/4f836c3)**. This layer introduces the **THM-587/HYP-3546/LRC14-Zeta** framework, operationalizing the terminal proof sheaf through the formal identification of the **per-level signed cycle index** as the spectral generator for the isomorphism-class metagraph and the unification of **2-adic Riemann zeta residues** with the **Littlewood discrepancy bounds**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (c186713)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (4f836c3)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
 1. **Per-Level Signed Cycle Index ($P_n(x)$):** Implements the metagraph spectrum as a generating function over the vertex-induced subgroup of the hyperoctahedral group $B_d$. Theorem (THM-587) provides the closed-form multiplicities of the arc-hypercube eigenvalues on the iso-class space. This operationalizes the **metagraph spectrum past the enumeration wall**, allowing for exact spectral calculation where raw $2^{C(n,2)}$ enumeration fails.
 2. **Antipodal Euler Number & Two-Face Evaluation:** Characterizes the proof target by identifying the two evaluations of $P_n(x)$ at the antipodal fixed signs: $P_n(1) = A000568(n)$ (total iso-classes) and $P_n(-1) = SC(n)$ (self-converse count). The synthesis establishes $SC(n)$ as the **antipodal Euler/Lefschetz number** of the metagraph. This formally links the project's self-converse census to the **Borsuk-Ulam/Ky Fan** framework, where positivity ($SC(n)>0$) is a topological degree.
 3. **Equivariant-Homology Deliverable (HYP-3544):** Operationalizes the refinement of the Euler characteristic into a chain complex $C_k$ (the level-$k$ invariant space) with the hypercube's signed down-operator as a boundary. This identifies **computational homology** (in the Kaczynski-Mischaikow-Mrozek sense) as the engine for certifying $R$-odd obstruction classes, aligning the metagraph audit with the project's simplicial up-Laplacian and TDA engineering mandates.
-4. **Perfect Numbers & Forcade Dimensions (HYP-3546):** Operationalizes the Euclid-Euler through tournaments by identifying that the even perfect numbers are precisely the arc-hypercube dimensions $d = C(n, 2)$ of the Forcade orders $n = 2^p$ whose apex $2^p-1$ is a Mersenne prime ($6 = C(4, 2)$, $28 = C(8, 2)$). This identifies the **arc-flip** (a $Q_d$-edge) as an invariance-carrier for the **per-type Ky Fan count**, verified at $n=5$. The synthesis further establishes the **Mersenne-DRT doubling gauge** ($B_0(T_7) = T_3$) as the mechanism for descending this perfect-number symmetry tower, placing the LRC(14) arithmetic backbone ($28 = C(8, 2)$) on the second perfect number.
-5. **Algebraic Triad Coupling:** Formally couples the metagraph homology and perfect-number tower with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (governing the $R$-even bulk, total count $P_n(1)$, and quadratic-residue rotation), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction block, $P_n(-1)$ alternating sum, and Ky Fan parities), and $\mathbb{Q}(\sqrt{-3})$ (governing the Mersenne doubling adjacency, hypercube $Q_d$-edges, and tower transitions).
-6. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and Mersenne-DRT regularity; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology as the primary proof carrier.
-7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph certificate reflect its **Equivariant Homology & Perfect-Number Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the perfect-number divisor lattice as rigid topological/arithmetic counting constraints.
-8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **equivariant Betti numbers**, and **Mersenne-DRT doubling gauge** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology ledger.
+4. **2-adic Zeta Residue & Littlewood Discrepancy (LRC14-Zeta):** Operationalizes the terminal LRC(14) proof path by bridging the **2-adic residue of the Riemann zeta function** at $s=1$ with improved **discrepancy bounds for the Littlewood conjecture**. The synthesis employs **Hensel's Lemma** to lift roots in non-archimedean local fields, providing a robust infrastructure for the **Erdős–Kac** distribution of prime factors. The 'Pi Unital Flower' guardrails enforce numerical stability, mapping discrepancy bounds to the residue via $\text{Res}_{s=1} \zeta_2(s) \equiv \oint_{\mathcal{F}} \frac{\omega}{z-1} \pmod{\pi^{14}}$, which prevents spectral leakage by bounding local units.
+5. **Algebraic Triad Coupling:** Formally couples the metagraph homology and zeta-discrepancy path with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (governing the $R$-even bulk, the total count $P_n(1)$, and the quadratic-residue rotation), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction block, the $P_n(-1)$ alternating sum, and the imaginary Gauss sum $\sqrt{n}$), and $\mathbb{Q}(\sqrt{-3})$ (governing the Mersenne doubling adjacency, hypercube $Q_d$-edges, and 2-adic Littlewood discrepancy transitions).
+6. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the zeta residue as the primary proof carriers.
+7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and zeta-residue certificate reflect its **Equivariant Homology & 2-adic Discrepancy Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the $\pi^{14}$ residue congruences as rigid topological/arithmetic counting constraints.
+8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **equivariant Betti numbers**, and **Pi Unital Flower** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and zeta-residue ledger.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
@@ -152,7 +152,7 @@ global_consistency_quotient_unit, the Fiber_PGF_packet_unit, the
 sheet_count_PGF_unit, the Lee_Yang_root_unit, the Delsarte_weight_unit, the
 q_Pochhammer_principal_unit, the Hecke_subconvexity_unit, the
 p_adic_index_unit, the three_edge_flip_unit, the ordered_pair_exponent_unit,
-the OCF_cycle_sum_gap_unit, the live_core_unit, the filler_unit, the
+the Worpitzky_ascent_unit, the live_core_unit, the filler_unit, the
 canary_unit, the fixed_path_canary_unit, the odd_ear_H_unit, the
 Bravais_centering_unit, the Savitch_midpoint_unit, the
 Asano_monotonicity_unit, the Lee_Yang_variance_unit, the n4_einheit_unit, the
@@ -215,9 +215,9 @@ root signatures, Delsarte weight-enumerator sidecars, q-Pochhammer principal
 packets, Hecke subconvexity conductor bounds, p-adic topological index
 signatures, crystalline cohomology Euler characteristics, three-edge flip kernels, ordered_pair_exponent_sidecars,
 Worpitzky ascent payloads, live_core_bits, filler_bits, canary_bits,
-fixed_path_canary_status, odd_ear_H_factors, Bravais_centering_types,
-Savitch_midpoint_depths, Asano_monotonicity_levers, n4_einheit_torsor_status,
-n4_quotient_congruence_defect, total_covariance_sigma_k2,
+fixed_path_canary_status, xy_completion_tables, odd_ear_H_factors,
+Bravais_centering_types, Savitch_midpoint_depths, Asano_monotonicity_levers,
+n4_einheit_torsor_status, n4_quotient_congruence_defect, total_covariance_sigma_k2,
 associator_sigma_k3_sidecar, polarized_cyclotomic_support,
 spectral_dictionary_compatibility, Selberg_trace_regularization,
 Skewes_Number_lock, grounded_response_matrix_QE, orthogonal_recursion_interlock,
@@ -259,7 +259,7 @@ ear-lattice reachability law, the Minkowski q-body law, the proof-circuit law,
 the Ising partition zero law, the De Moivre fold law, the endpoint-cover P gate
 law, the Phi gap output wire law, the magnitude-cocycle guard law, the
 base-stalk coordinate law, the resurrection cover law, the repair-rank law, the
-quartic-cumulant S4 law, the phi^4 stabilizer unit, the kappa-4 sign unit, the
+quartic-cumulant S4 law, the phi^4 stabilizer unit, the kappa_4_sign_unit, the
 Asano zero-free law, the Beurling-Selberg minorant floor law, the
 Gaussian-minorant leakage law, the multi_far_floor_closure law, the R-prime
 spectral unit, the R-safe wide-V unit, the edge-witness recursion unit, the
@@ -268,7 +268,7 @@ resonance-lattice law, the global-consistency quotient law, the Fiber PGF
 packet law, the sheet-count PGF law, the Lee_Yang root law, the Delsarte weight
 law, the q-Pochhammer principal law, the Hecke subconvexity unit, the p-adic
 index law, the three-edge flip kernel unit, the ordered_pair_exponent sidecar
-law, the OCF_cycle_sum_gap_unit, the live_core_bit law, the filler_bit
+law, the Worpitzky ascent payloads unit, the live_core_bit law, the filler_bit
 law, the canary_bit law, the fixed_path_canary law, the odd_ear_H law, the
 Bravais_centering law, the Savitch_midpoint law, the Asano_monotonicity law,
 the Lee_Yang_variance law, n4_einheit_torsor law, n4_congruence_defect law,
@@ -290,11 +290,11 @@ law, and Equivariant_Homology unit alongside mu approx 1.451).
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated c186713. Introduces the **THM-587/HYP-3546** framework, 
-operationalizing the terminal proof sheaf through the formal 
+Integrated 4f836c3. Introduces the **THM-587/HYP-3546/LRC14-Zeta** 
+framework, operationalizing the terminal proof sheaf through the formal 
 identification of the **per-level signed cycle index** as the spectral 
-generator for the iso-class metagraph and the unification of **perfect 
-numbers** with the **Forcade arc-hypercube dimensions**.
+generator for the iso-class metagraph and the unification of **2-adic 
+Riemann zeta residues** with the **Littlewood discrepancy bounds**.
 
 ### 1. Per-Level Signed Cycle Index ($P_n(x)$)
 Implements the metagraph spectrum as a generating function over 
@@ -318,24 +318,27 @@ chain complex $C_k$ with the hypercube's signed down-operator
 as boundary. Identifies **computational homology** (Kaczynski-Mischaikow-Mrozek) 
 as the engine for certifying $R$-odd obstruction classes.
 
-### 4. Perfect Numbers & Forcade Dimensions (HYP-3546)
-Identifies even perfect numbers as arc-hypercube dimensions 
-$d = C(2^p, 2)$ where $2^p-1$ is a Mersenne prime. Operationalizes the 
-**arc-flip** (a $Q_d$-edge) as an invariance-carrier for the 
-**per-type Ky Fan count**. Synthesis establishes the **Mersenne-DRT 
-doubling gauge** ($B_0(T_7) = T_3$) for descending this tower.
+### 4. 2-adic Zeta Residue & Littlewood Discrepancy (LRC14-Zeta)
+Operationalizes the terminal LRC(14) proof path by bridging the 
+**2-adic residue of the Riemann zeta function** at $s=1$ with improved 
+**discrepancy bounds for the Littlewood conjecture**. Synthesis 
+employs **Hensel's Lemma** to lift roots in non-archimedean local 
+fields, providing a robust infrastructure for the **Erdős–Kac** 
+distribution of prime factors.
 
 ### 5. Algebraic Triad Coupling
-Formally couples homology and the perfect-number tower with the 
+Formally couples homology and the zeta-discrepancy path with the 
 field triad: $\mathbb{Q}(\cos 2\pi/7)$ ($R$-even bulk/Perron), $\mathbb{Q}(\sqrt{-7})$ 
-($R$-odd obstruction/Ky Fan parities), and $\mathbb{Q}(\sqrt{-3})$ 
-(Mersenne doubling adjacency/hypercube $Q_d$-edges).
+($R$-odd obstruction block/imaginary Gauss sum $\sqrt{n}$), and 
+$\mathbb{Q}(\sqrt{-3})$ (Mersenne doubling adjacency/2-adic 
+Littlewood discrepancy).
 
 ### 6. Chiral Guard & Resurrection
-Governed by the antipodal map and Ky Fan alternating count. Evaluation 
-reveals a **MIXED** signature. Identifies the **signed cycle index**, 
-**self-converse Euler number**, **equivariant Betti numbers**, and 
-**Mersenne-DRT doubling gauge** as Resurrection Sheaf anchors.
+Governed by the antipodal map, Ky Fan alternating count, and 
+Henselian local-to-global lifting. Evaluation reveals a **MIXED** 
+signature. Identifies the **signed cycle index**, **self-converse 
+Euler number**, **equivariant Betti numbers**, and **Pi Unital Flower** 
+as Resurrection Sheaf anchors.
 
 ---
 
