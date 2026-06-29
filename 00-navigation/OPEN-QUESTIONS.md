@@ -41,20 +41,27 @@ HYP-3486 blocks vertical-halfturn quotienting without sidecars. -> HYP-3521,
 HYP-3511, HYP-3510, HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3485,
 LTI-521, LTT-421, T1521.
 **OPEN-Q-108 HYP-3520 owner-boundary persistence addendum:** HYP-3520 now
-executes the random031 owner-boundary quotient-price matrix.  Exact surviving
-boundary signature: `45:+1,147:+1,169:+1,173:+1`, obtained by subtracting pure
-bypass owners `(23,93,113)` from the forbidden seam owners
+executes the random031 owner-boundary certificate at both seam-local and
+component-persistence levels.  Exact surviving boundary signature:
+`45:+1,147:+1,169:+1,173:+1`, obtained by subtracting pure bypass owners
+`(23,93,113)` from the forbidden seam owners
 `(23,45,93,113,147,169,173)` on the same hard components `(43,54)`.  Pure
 bypass stalk `R01` has `12` cells, branch split `6/6`, endpoint rank `(2,)`,
-and `external_horizontal_ports=0`.  Open proof task: formalize a terminal
-owner-current/relative-H1 lemma compatible with HYP-3490 and HYP-3493; do not
-use raw `12`, raw `282`, component-pair, delta-route, bypass-owner-only,
-dead-island-only, or global-flow quotients unless they explicitly repair the
-destroyed owner-boundary coordinate.  The HYP-3493 seam-sheaf canary adds that
-owner count, endpoint rank, branch histogram, size, and mirror closure also
-mix `R01` with discharged context. -> HYP-3520, HYP-3512, HYP-3494,
-HYP-3493, HYP-3511, HYP-3510, HYP-3490, HYP-3486, HYP-3483, HYP-3481,
-HYP-3402, HYP-3034, LTI-520, LTT-420, T1520.
+and `external_horizontal_ports=0`.  Exact component partition:
+`64` rank2_owner_persistent, `14` free_hole_bracket_persistent, one
+pure_bypass_owner_boundary, and `unresolved_owner_boundary_components=[]`.
+The full-seam-debt components are exactly HYP-3511's bracketed free-hole
+packets; `R01` is the only seam-only boundary debtor.  The HYP-3493
+seam-sheaf canary adds `PDPPOOO`, owner-empty free holes, safe quotients
+`flow_class`/`allowed_exit`/`owner_union`/`sheet_pgf_bucket`, and unsafe
+quotients owner count, endpoint rank, branch histogram, size, and mirror
+closure.  Open proof task: promote this to the random031 right-boundary
+theorem, rank-2 route or free-hole bracket or pure-bypass owner-boundary,
+compatible with HYP-3490 and HYP-3493.  Do not use scalar/compressed views
+unless they explicitly repair the destroyed owner-boundary coordinate. ->
+HYP-3520, HYP-3521, HYP-3513, HYP-3512, HYP-3494, HYP-3493, HYP-3511,
+HYP-3510, HYP-3490, HYP-3486, HYP-3485, HYP-3483, HYP-3481, HYP-3402,
+HYP-3034, LTI-520, LTT-420, T1520.
 
 **OPEN-Q-108 HYP-3492 repo-history niche atlas addendum:** Which old niche
 topic can be made exact enough to close the HYP-3486 random031 packet first?
@@ -95,17 +102,19 @@ relative_seam_sheaf_cell =
 
 HYP-3493's scaffold finds `79` legal components, all mirror-closed, with
 `64` rank-2 routed components, `14` free-hole packets, one pure bypass, and no
-mixed/debt stalks.  Open proof task: prove owner-boundary persistence and show
-every component exits by rank-2 route, mirror free-hole, pure bypass plus owner
-boundary, or named owner-current/two-adic/signed-SPEC/state-lift debt.  The
+mixed/debt stalks.  HYP-3520 now executes the finite owner-boundary quotient
+audit with no unresolved components.  Open proof task: formalize the
+three-exit right boundary showing every component exits by rank-2 route,
+free-hole bracket, pure bypass owner-boundary, or named
+owner-current/two-adic/signed-SPEC/state-lift debt.  The
 pure bypass has owners `(23,93,113)` and seam debt `(45,147,169,173)`.
 Guardrail: Cech, fiber-PGF, non-archimedean, quadratic/residue, and
 discrepancy analogies are legal only after the owner, branch, mirror, and
 private-label sidecars are retained. -> HYP-3493,
-HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
+HYP-3520, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
 HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, HYP-3451, HYP-3438,
 HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3025, HYP-3023, HYP-3311,
-HYP-3408, LTI-453, LTT-353, T1453.
+HYP-3408, LTI-453, LTI-520, LTT-353, LTT-420, T1453, T1520.
 
 **OPEN-Q-108 HYP-3511 random031 free-hole bracket addendum:**
 HYP-3511 sharpens the HYP-3486 free-hole packet and the HYP-3510 coarse

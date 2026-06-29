@@ -32,6 +32,26 @@ branch histogram, size, and mirror closure as unsafe because they mix pure
 bypass debt with discharged context. -> HYP-3520, HYP-3512, HYP-3494, HYP-3493, HYP-3511, HYP-3510,
 HYP-3490, HYP-3486, HYP-3483, HYP-3481, HYP-3402, HYP-3034, LTI-520,
 LTT-420, T1520, OPEN-Q-108.
+**HYP-3520 random031 owner-boundary persistence.**  The owner-boundary
+certificate is now executable at seam-local, component-persistence, and
+seam-sheaf canary levels.  Exact seam readout: the forbidden seam on `(43,54)`
+carries `(23,45,93,113,147,169,173)`, the lower-delta bypass on the same
+components carries `(23,93,113)`, pure bypass stalk `R01` has `12` cells,
+branch split `6/6`, endpoint rank `(2,)`, and `external_horizontal_ports=0`,
+and the owner-current signature is `45:+1,147:+1,169:+1,173:+1`.  Exact
+persistence readout: `79` components split as `64` rank2_owner_persistent,
+`14` free_hole_bracket_persistent, and one pure_bypass_owner_boundary, with no
+unresolved owner-boundary components; the `14` full-seam-debt components are
+bracketed free-hole packets, and `R01` is the only seam-only debtor.  The
+HYP-3493 canary adds `PDPPOOO` on `R01`, owner-empty free holes, safe component
+quotients `flow_class`/`allowed_exit`/`owner_union`/`sheet_pgf_bucket`, and
+unsafe scalar quotients owner count, endpoint rank, branch histogram, size,
+and mirror closure.  Next proof target: encode this as the random031
+right-boundary theorem, then reject quotient shortcuts unless the seam owner
+word, pure-bypass exit label, sheet-PGF bucket, or named bracket/bypass sidecar
+is retained. -> HYP-3520, HYP-3521, HYP-3513, HYP-3512, HYP-3494, HYP-3493,
+HYP-3511, HYP-3510, HYP-3490, HYP-3486, HYP-3485, HYP-3483, HYP-3482,
+HYP-3481, HYP-3402, HYP-3034, LTI-520, LTT-420, T1520, OPEN-Q-108.
 **HYP-3521 random031 terminal certificate ledger.**  Formalize the terminal
 packet theorem exposed by `04-computation/lrc14_random031_terminal_certificate_ledger_codex_20260629.py`.
 The random031 proof target now splits as
@@ -63,16 +83,18 @@ sheaf table is done in `04-computation/lrc14_random031_relative_seam_sheaf_codex
 Exact readout: `79` legal horizontal+mirror components, `79/79` mirror-closed,
 and no `mixed_or_debt` stalks.  Flow split is `64` rank-2 routed components,
 `14` mirror free-hole packets, and one pure `12`-cell bypass component.  The
-bypass has owners `(23,93,113)` and seam debt `(45,147,169,173)`.  Next:
-prove owner-boundary persistence on the Cech/path-lift side, add a legal
-sheet-PGF moment on horizontal+mirror components only, and run the same sheaf
-table on the other HYP-3477 hard mirror orbits.  Treat
+bypass has owners `(23,93,113)` and seam debt `(45,147,169,173)`.  HYP-3520
+now executes the finite owner-boundary quotient audit with no unresolved
+components.  Next: formalize that three-exit right boundary on the
+Cech/path-lift side, add a legal sheet-PGF moment on horizontal+mirror
+components only, and run the same sheaf table on the other HYP-3477 hard
+mirror orbits.  Treat
 non-archimedean/quadratic/discrepancy motifs as owner-lift or ordered-block
 sidecars, not scalar proofs.
--> HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482,
+-> HYP-3493, HYP-3520, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482,
 HYP-3481, HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, HYP-3451,
 HYP-3438, HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3025, HYP-3023,
-HYP-3311, HYP-3408, LTI-453, LTT-353, T1453, OPEN-Q-108.
+HYP-3311, HYP-3408, LTI-453, LTI-520, LTT-353, LTT-420, T1453, T1520, OPEN-Q-108.
 **HYP-3494 random031 history-mined seam-cobordism interface.**  Build the next
 small executable proof interface for random031 using the HYP-3494 local PGF,
 the Lean-backed HYP-3490 private-label firewall, and the HYP-3493
@@ -81,14 +103,17 @@ and HYP-3511 free-hole bracketing:
 `P_escape(y)=24+226y+8y^2` over occupied `u=2t` fibers.  Attach the sidecars
 identified by history mining: HYP-3490 private-label firewall, HYP-3486 legal
 mirror-run graph, HYP-3428 two-adic loss ledger, HYP-3300 observability matrix,
-HYP-3402 owner-current split, HYP-3034 relative H1, and HYP-3140 PGF moment.
-Concrete next test: make a random031 quotient-price table with columns
+HYP-3402 owner-current split, HYP-3034 relative H1, HYP-3140 PGF moment, and
+HYP-3520 owner-boundary persistence.  Concrete next test: make a random031
+quotient-price table with columns
 `u_index`, branch, mirror mate, cell class, endpoint rank, owner word,
 private-firewall bit, HYP-3511 bracket type, HYP-3510 carrier component,
 vertical-halfturn sidecar, relative-H1 class, and PGF
-bucket, then prove owner-boundary persistence for the pure bypass or name the
-missing sidecar. -> HYP-3494, HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3480, HYP-3428, HYP-3300, HYP-3402,
-HYP-3034, HYP-3140, LTI-454, LTT-354, T1454, OPEN-Q-108.
+bucket, then formalize HYP-3520's three-exit right boundary in the relative
+H1/owner-current dispatch. -> HYP-3494, HYP-3520, HYP-3511, HYP-3510,
+HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3480, HYP-3428, HYP-3300,
+HYP-3402, HYP-3034, HYP-3140, LTI-454, LTI-520, LTT-354, LTT-420, T1454,
+T1520, OPEN-Q-108.
 **HYP-3512 random031 niche-history connection scanner.**  Convert the
 repo-history connection scan into executable random031 packet tests.  The top
 imports are coordinate resurrection, observer-cut payload orbits, finite-address
@@ -103,7 +128,6 @@ rank-2 routed cells into endpoint-credit/Farkas certificates. -> HYP-3512,
 HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
 HYP-3140, HYP-3120, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3034,
 HYP-3023, HYP-2936, LTI-512, LTT-412, T1512, OPEN-Q-108.
-
 **HYP-3485 random031 seam-complement connection atlas.**  Convert the
 HYP-3481/HYP-3482/HYP-3483 picture into the next executable audit.  Build a
 relative seam-complement object: delete the max-delta gates on components

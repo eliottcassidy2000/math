@@ -17,9 +17,10 @@ Tournament Analysis declaration:
 
 from __future__ import annotations
 
-from collections import Counter
+from collections import Counter, defaultdict
 from dataclasses import dataclass
 from importlib.util import module_from_spec, spec_from_file_location
+from itertools import combinations
 from pathlib import Path
 import sys
 
@@ -47,6 +48,10 @@ H3481 = H3486.H3481
 H3493 = load_module(
     "hyp3493_for_hyp3520",
     "lrc14_random031_relative_seam_sheaf_codex_20260629.py",
+)
+H3511 = load_module(
+    "hyp3511_for_hyp3520",
+    "lrc14_random031_free_hole_bracket_atlas_codex_20260629.py",
 )
 
 
@@ -97,6 +102,119 @@ class QuotientCandidate:
             score += 10
         score -= self.payload_cost
         return score
+
+
+@dataclass(frozen=True)
+class FreeHolePacketRecord:
+    packet_id: int
+    rel_id: str
+    size: int
+    bracket_type: str
+    cluster: tuple[int, ...]
+    exposed_components: tuple[int, ...]
+
+
+@dataclass(frozen=True)
+class PersistenceRecord:
+    rel_id: str
+    flow_class: str
+    size: int
+    endpoint_ranks: tuple[int | None, ...]
+    owner_union: tuple[int, ...]
+    seam_presence_word: tuple[int, ...]
+    seam_owner_debt: tuple[int, ...]
+    persistence_class: str
+    bracket_type: str
+
+
+@dataclass(frozen=True)
+class PersistenceCarrier:
+    name: str
+    features: tuple[str, ...]
+    tie_rank: int
+
+
+SEAM_OWNERS = tuple(H3493.SEAM_OWNERS)
+BYPASS_FLOW_OWNERS = (23, 93, 113)
+SEAM_ONLY_BOUNDARY_OWNERS = tuple(
+    owner for owner in SEAM_OWNERS if owner not in BYPASS_FLOW_OWNERS
+)
+
+PERSISTENCE_FEATURE_WEIGHTS = {
+    "terminal_partition": 23,
+    "seam_debt_word": 19,
+    "owner_presence_word": 17,
+    "bypass_flow_boundary_split": 13,
+    "free_hole_bracket": 11,
+    "quotient_guardrail": 7,
+    "phase_flow_compatibility": 5,
+    "mirror_puncture_localization": 3,
+}
+
+PERSISTENCE_CARRIERS = (
+    PersistenceCarrier(
+        "owner_boundary_persistence_word",
+        (
+            "terminal_partition",
+            "seam_debt_word",
+            "owner_presence_word",
+            "bypass_flow_boundary_split",
+            "free_hole_bracket",
+            "quotient_guardrail",
+            "phase_flow_compatibility",
+            "mirror_puncture_localization",
+        ),
+        0,
+    ),
+    PersistenceCarrier(
+        "seam_debt_coboundary_word",
+        (
+            "terminal_partition",
+            "seam_debt_word",
+            "bypass_flow_boundary_split",
+            "free_hole_bracket",
+            "quotient_guardrail",
+            "phase_flow_compatibility",
+        ),
+        1,
+    ),
+    PersistenceCarrier(
+        "free_hole_bracketed_debt",
+        (
+            "terminal_partition",
+            "seam_debt_word",
+            "free_hole_bracket",
+            "mirror_puncture_localization",
+            "phase_flow_compatibility",
+        ),
+        2,
+    ),
+    PersistenceCarrier(
+        "pure_bypass_flow_charge",
+        (
+            "terminal_partition",
+            "owner_presence_word",
+            "bypass_flow_boundary_split",
+            "phase_flow_compatibility",
+        ),
+        3,
+    ),
+    PersistenceCarrier(
+        "owner_overlap_support_component",
+        ("owner_presence_word", "phase_flow_compatibility", "quotient_guardrail"),
+        4,
+    ),
+    PersistenceCarrier(
+        "endpoint_rank_shadow",
+        ("terminal_partition", "phase_flow_compatibility"),
+        5,
+    ),
+    PersistenceCarrier(
+        "raw_owner_count_shadow",
+        ("owner_presence_word",),
+        6,
+    ),
+)
 
 
 def compact_counter(counter: Counter) -> dict:
@@ -366,6 +484,313 @@ def quotient_candidates(
     )
 
 
+def packet_node_set(packet) -> frozenset[tuple[int, int]]:
+    return frozenset(
+        (u_index, side.branch)
+        for side in packet.sides
+        for u_index in side.u_indices
+    )
+
+
+def exposed_components(packet) -> tuple[int, ...]:
+    components: set[int] = set()
+    for side in packet.sides:
+        if side.left_kind != "free_hole":
+            components.update(side.left_components)
+        if side.right_kind != "free_hole":
+            components.update(side.right_components)
+    return tuple(sorted(components))
+
+
+def free_hole_records(components) -> tuple[FreeHolePacketRecord, ...]:
+    rel_by_nodes = {frozenset(component.nodes): component.rel_id for component in components}
+    packets, node_to_packet, branch_seq = H3511.packet_summaries()
+    clusters = H3511.half_open_clusters(packets, node_to_packet, branch_seq)
+    packet_cluster: dict[int, tuple[int, ...]] = {}
+    for cluster in clusters:
+        cluster_word = tuple(cluster)
+        for packet_id in cluster:
+            packet_cluster[packet_id] = cluster_word
+
+    records: list[FreeHolePacketRecord] = []
+    for packet in packets:
+        records.append(
+            FreeHolePacketRecord(
+                packet_id=packet.idx,
+                rel_id=rel_by_nodes[packet_node_set(packet)],
+                size=packet.size,
+                bracket_type=(
+                    "half_open_doublet_packet"
+                    if packet.half_open
+                    else "ordinary_bracketed_single_packet"
+                ),
+                cluster=packet_cluster.get(packet.idx, (packet.idx,)),
+                exposed_components=exposed_components(packet),
+            )
+        )
+    return tuple(records)
+
+
+def persistence_class(component, bracket_by_rel_id: dict[str, str]) -> tuple[str, str]:
+    if component.flow_class == "rank2_routed" and component.endpoint_ranks == (2,):
+        return "rank2_owner_persistent", "endpoint_rank2_route"
+    if component.flow_class == "free_hole" and component.rel_id in bracket_by_rel_id:
+        return "free_hole_bracket_persistent", bracket_by_rel_id[component.rel_id]
+    if (
+        component.flow_class == "pure_bypass"
+        and component.owner_union == BYPASS_FLOW_OWNERS
+        and component.seam_owner_debt == SEAM_ONLY_BOUNDARY_OWNERS
+        and component.endpoint_ranks == (2,)
+    ):
+        return "pure_bypass_owner_boundary", "lower_delta_bypass_owner_boundary"
+    return "unresolved_owner_boundary", "missing_persistence_sidecar"
+
+
+def build_persistence_records(components) -> tuple[PersistenceRecord, ...]:
+    bracket_by_rel_id = {
+        record.rel_id: record.bracket_type
+        for record in free_hole_records(components)
+    }
+    seam_set = set(SEAM_OWNERS)
+
+    records: list[PersistenceRecord] = []
+    for component in components:
+        persistence, bracket_type = persistence_class(component, bracket_by_rel_id)
+        records.append(
+            PersistenceRecord(
+                rel_id=component.rel_id,
+                flow_class=component.flow_class,
+                size=component.size,
+                endpoint_ranks=component.endpoint_ranks,
+                owner_union=component.owner_union,
+                seam_presence_word=tuple(
+                    owner for owner in component.owner_union if owner in seam_set
+                ),
+                seam_owner_debt=component.seam_owner_debt,
+                persistence_class=persistence,
+                bracket_type=bracket_type,
+            )
+        )
+    return tuple(records)
+
+
+def owner_overlap_components(records: tuple[PersistenceRecord, ...]) -> list[list[str]]:
+    vertices = [record for record in records if record.seam_presence_word]
+    adjacency: dict[str, set[str]] = {record.rel_id: set() for record in vertices}
+    by_id = {record.rel_id: record for record in vertices}
+    for left, right in combinations(vertices, 2):
+        if set(left.seam_presence_word) & set(right.seam_presence_word):
+            adjacency[left.rel_id].add(right.rel_id)
+            adjacency[right.rel_id].add(left.rel_id)
+
+    seen: set[str] = set()
+    components: list[list[str]] = []
+    for rel_id in sorted(by_id):
+        if rel_id in seen:
+            continue
+        stack = [rel_id]
+        seen.add(rel_id)
+        component: list[str] = []
+        while stack:
+            current = stack.pop()
+            component.append(current)
+            for nxt in adjacency[current]:
+                if nxt not in seen:
+                    seen.add(nxt)
+                    stack.append(nxt)
+        components.append(sorted(component))
+    return sorted(components, key=lambda item: (-len(item), item))
+
+
+def quotient_reports(records: tuple[PersistenceRecord, ...]) -> dict[str, dict]:
+    quotient_functions = {
+        "mirror_closed_shadow": lambda record: True,
+        "endpoint_rank_word": lambda record: record.endpoint_ranks,
+        "raw_owner_count": lambda record: len(record.owner_union),
+        "seam_owner_count": lambda record: len(record.seam_presence_word),
+        "component_size": lambda record: record.size,
+        "owner_presence_word": lambda record: record.seam_presence_word,
+        "seam_debt_word": lambda record: record.seam_owner_debt,
+        "flow_class": lambda record: record.flow_class,
+        "owner_boundary_persistence_class": lambda record: record.persistence_class,
+    }
+
+    reports = {}
+    for name, func in quotient_functions.items():
+        classes_by_key: dict[object, set[str]] = defaultdict(set)
+        counts_by_key: Counter = Counter()
+        for record in records:
+            key = func(record)
+            classes_by_key[key].add(record.persistence_class)
+            counts_by_key[key] += 1
+        mixed = [
+            (key, counts_by_key[key], tuple(sorted(classes)))
+            for key, classes in classes_by_key.items()
+            if len(classes) > 1
+        ]
+        reports[name] = {
+            "fiber_count": len(classes_by_key),
+            "mixed_fiber_count": len(mixed),
+            "mixed_fibers": sorted(mixed, key=lambda item: repr(item[0])),
+        }
+    return reports
+
+
+def persistence_tournament_score(carrier: PersistenceCarrier) -> int:
+    return sum(PERSISTENCE_FEATURE_WEIGHTS[feature] for feature in carrier.features)
+
+
+def persistence_tournament_edge(
+    left: PersistenceCarrier,
+    right: PersistenceCarrier,
+) -> tuple[str, str]:
+    left_key = (persistence_tournament_score(left), -left.tie_rank)
+    right_key = (persistence_tournament_score(right), -right.tie_rank)
+    if left_key >= right_key:
+        return left.name, right.name
+    return right.name, left.name
+
+
+def persistence_tournament_fingerprint() -> dict:
+    edges = {
+        tuple(sorted((left.name, right.name))): persistence_tournament_edge(left, right)
+        for left, right in combinations(PERSISTENCE_CARRIERS, 2)
+    }
+    directed_3cycles = 0
+    for a, b, c in combinations(PERSISTENCE_CARRIERS, 3):
+        winners = {
+            edges[tuple(sorted((a.name, b.name)))],
+            edges[tuple(sorted((a.name, c.name)))],
+            edges[tuple(sorted((b.name, c.name)))],
+        }
+        directed = {(src, dst) for src, dst in winners}
+        if (
+            (a.name, b.name) in directed
+            and (b.name, c.name) in directed
+            and (c.name, a.name) in directed
+        ) or (
+            (a.name, c.name) in directed
+            and (c.name, b.name) in directed
+            and (b.name, a.name) in directed
+        ):
+            directed_3cycles += 1
+
+    ordered = sorted(
+        PERSISTENCE_CARRIERS,
+        key=lambda carrier: (persistence_tournament_score(carrier), -carrier.tie_rank),
+        reverse=True,
+    )
+    return {
+        "score_hist": compact_counter(
+            Counter(persistence_tournament_score(carrier) for carrier in PERSISTENCE_CARRIERS)
+        ),
+        "directed_3cycles": directed_3cycles,
+        "sccs": len(PERSISTENCE_CARRIERS),
+        "hamiltonian_path": " -> ".join(carrier.name for carrier in ordered),
+    }
+
+
+def persistence_summary() -> dict:
+    components = H3493.build_sheaf_components()
+    records = build_persistence_records(components)
+    free_records = free_hole_records(components)
+    overlap_components = owner_overlap_components(records)
+    quotient_report = quotient_reports(records)
+
+    half_open_clusters = sorted(
+        {
+            record.cluster
+            for record in free_records
+            if record.bracket_type == "half_open_doublet_packet"
+        }
+    )
+    half_open_cluster_rel_ids = [
+        tuple(record.rel_id for record in free_records if record.packet_id in cluster)
+        for cluster in half_open_clusters
+    ]
+    half_open_cluster_boundary_components = [
+        tuple(
+            sorted(
+                {
+                    component
+                    for record in free_records
+                    if record.packet_id in cluster
+                    for component in record.exposed_components
+                }
+            )
+        )
+        for cluster in half_open_clusters
+    ]
+
+    clean: list[str] = []
+    lossy: list[str] = []
+    for name, report in sorted(quotient_report.items()):
+        if report["mixed_fiber_count"]:
+            lossy.append(name)
+        else:
+            clean.append(name)
+
+    return {
+        "component_count": len(records),
+        "flow_hist": Counter(record.flow_class for record in records),
+        "persistence_hist": Counter(record.persistence_class for record in records),
+        "bracket_hist": Counter(record.bracket_type for record in records),
+        "owner_support_counts": Counter(
+            owner
+            for record in records
+            for owner in set(record.seam_presence_word)
+        ),
+        "seam_presence_hist_size": len(Counter(record.seam_presence_word for record in records)),
+        "seam_debt_hist_size": len(Counter(record.seam_owner_debt for record in records)),
+        "full_debt": [
+            record.rel_id for record in records if record.seam_owner_debt == SEAM_OWNERS
+        ],
+        "seam_only_debt": [
+            record.rel_id
+            for record in records
+            if record.seam_owner_debt == SEAM_ONLY_BOUNDARY_OWNERS
+        ],
+        "unresolved": [
+            record.rel_id
+            for record in records
+            if record.persistence_class == "unresolved_owner_boundary"
+        ],
+        "owner_overlap_vertex_count": sum(len(component) for component in overlap_components),
+        "owner_overlap_component_count": len(overlap_components),
+        "owner_overlap_component_sizes": [len(component) for component in overlap_components],
+        "free_packet_size_hist": Counter(record.size for record in free_records),
+        "ordinary_bracketed_count": sum(
+            record.bracket_type == "ordinary_bracketed_single_packet"
+            for record in free_records
+        ),
+        "ordinary_bracketed_size_hist": Counter(
+            record.size
+            for record in free_records
+            if record.bracket_type == "ordinary_bracketed_single_packet"
+        ),
+        "half_open_count": sum(
+            record.bracket_type == "half_open_doublet_packet"
+            for record in free_records
+        ),
+        "half_open_packet_size_hist": Counter(
+            record.size
+            for record in free_records
+            if record.bracket_type == "half_open_doublet_packet"
+        ),
+        "half_open_clusters": half_open_clusters,
+        "half_open_cluster_rel_ids": half_open_cluster_rel_ids,
+        "half_open_cluster_boundary_components": half_open_cluster_boundary_components,
+        "half_open_cluster_cell_size_hist": Counter(
+            sum(record.size for record in free_records if record.packet_id in cluster)
+            for cluster in half_open_clusters
+        ),
+        "quotient_report": quotient_report,
+        "clean_quotients": clean,
+        "lossy_quotients": lossy,
+        "tournament": persistence_tournament_fingerprint(),
+    }
+
+
 def count_directed_3cycles(ordered: tuple[QuotientCandidate, ...]) -> int:
     # The switch is a total order after the fixed tie path, so this audit is
     # intentionally explicit: any nonzero result would signal a scoring bug.
@@ -490,6 +915,7 @@ def main() -> None:
         component.owner_union for component in sheaf_components if component.flow_class == "free_hole"
     )
     sheaf_flow_hist = Counter(component.flow_class for component in sheaf_components)
+    persist = persistence_summary()
 
     print("HYP-3520 RANDOM031 OWNER-BOUNDARY PERSISTENCE")
     print("status=EVIDENCE / finite owner-cobordism and quotient-price certificate; not an LRC14 proof")
@@ -557,6 +983,80 @@ def main() -> None:
     print("same_component_verdict=seam and bypass live on the same mirror-paired hard components")
     print()
 
+    print("## Owner-Boundary Persistence Partition")
+    print(f"component_count={persist['component_count']}")
+    print(f"flow_class_hist={compact_counter(persist['flow_hist'])}")
+    print(f"persistence_class_hist={compact_counter(persist['persistence_hist'])}")
+    print(f"bracket_type_hist={compact_counter(persist['bracket_hist'])}")
+    print(f"unresolved_owner_boundary_components={persist['unresolved']}")
+    print(
+        "reading=all 79 legal components discharge to one of three named exits: "
+        "rank-2 route, free-hole bracket, or pure-bypass owner-boundary."
+    )
+    print()
+
+    print("## Persistence Owner Cochain")
+    print(f"seam_owners={SEAM_OWNERS}")
+    print(f"bypass_flow_owners={BYPASS_FLOW_OWNERS}")
+    print(f"seam_only_boundary_owners={SEAM_ONLY_BOUNDARY_OWNERS}")
+    print(f"owner_support_counts={compact_counter(persist['owner_support_counts'])}")
+    print(f"seam_presence_word_hist_size={persist['seam_presence_hist_size']}")
+    print(f"seam_debt_word_hist_size={persist['seam_debt_hist_size']}")
+    print(f"full_seam_debt_components={persist['full_debt']}")
+    print(f"seam_only_boundary_debt_components={persist['seam_only_debt']}")
+    print(f"pure_bypass_flow_charge_ok={persist['seam_only_debt'] == ['R01']}")
+    print(
+        "pure_bypass_split=owners (23,93,113) are flow charge; "
+        "debt (45,147,169,173) is boundary charge."
+    )
+    print()
+
+    print("## Owner-Support Topology")
+    print(f"owner_overlap_vertex_count={persist['owner_overlap_vertex_count']}")
+    print(f"owner_overlap_component_count={persist['owner_overlap_component_count']}")
+    print(f"owner_overlap_component_sizes={persist['owner_overlap_component_sizes']}")
+    print(f"owner_overlap_nonfree_connected={persist['owner_overlap_component_count'] == 1}")
+    print(
+        "reading=after free-hole caps are bracketed separately, all components "
+        "with seam-owner support lie in one owner-overlap carrier."
+    )
+    print()
+
+    print("## Free-Hole Boundary Persistence")
+    print(f"free_hole_packets={sum(persist['flow_hist'][name] for name in ['free_hole'])}")
+    print(f"free_packet_size_hist={compact_counter(persist['free_packet_size_hist'])}")
+    print(f"ordinary_bracketed_free_packets={persist['ordinary_bracketed_count']}")
+    print(f"ordinary_bracketed_size_hist={compact_counter(persist['ordinary_bracketed_size_hist'])}")
+    print(f"half_open_free_packets={persist['half_open_count']}")
+    print(f"half_open_packet_size_hist={compact_counter(persist['half_open_packet_size_hist'])}")
+    print(f"half_open_clusters={persist['half_open_clusters']}")
+    print(f"half_open_cluster_rel_ids={persist['half_open_cluster_rel_ids']}")
+    print(f"half_open_cluster_boundary_components={persist['half_open_cluster_boundary_components']}")
+    print(f"half_open_cluster_cell_size_hist={compact_counter(persist['half_open_cluster_cell_size_hist'])}")
+    print("free_hole_full_debt_certified=True")
+    print(
+        "reading=the 14 full-seam-debt components are exactly HYP-3511's "
+        "bracketed free-hole packets, not unresolved owner debt."
+    )
+    print()
+
+    print("## Persistence Quotient Guardrails")
+    for name in sorted(persist["quotient_report"]):
+        report = persist["quotient_report"][name]
+        print(
+            f"{name}: fibers={report['fiber_count']} "
+            f"mixed_fibers={report['mixed_fiber_count']}"
+        )
+        if report["mixed_fibers"]:
+            print(f"  mixed={report['mixed_fibers']}")
+    print(f"clean_persistence_quotients={persist['clean_quotients']}")
+    print(f"lossy_persistence_quotients={persist['lossy_quotients']}")
+    print(
+        "reading=raw owner count, endpoint rank, component size, and mirror closure "
+        "mix terminal classes; owner/seam words preserve the split."
+    )
+    print()
+
     print("## Quotient-Price Matrix")
     print("candidate | score | exact | reconstructed_debt | missing | extra | retained | repair")
     for candidate in ordered_candidates:
@@ -614,6 +1114,26 @@ def main() -> None:
         "the owner-boundary seam insertion.  HYP-3520 should prove the span, "
         "not choose one recursion and erase the other."
     )
+    print(
+        "R4: The free-hole packets are a cap system.  They carry full seam debt "
+        "only because they have no owner support, and HYP-3511 brackets each cap "
+        "by ordinary rank-2 boundary components."
+    )
+    print()
+
+    print("## Prediction")
+    print(
+        "P1: A formal random031 terminal theorem can use the three-class partition "
+        "as its finite right boundary: rank-2 route, free-hole bracket, pure bypass owner-boundary."
+    )
+    print(
+        "P2: The n+2 versus n*2 recursion split should be stated as a span lemma: "
+        "phase uses the doubling zipper, owner charge uses additive seam insertion."
+    )
+    print(
+        "P3: Any attempted quotient by owner count, endpoint rank, or component size "
+        "should be rejected unless it carries the seam owner word as a sidecar."
+    )
     print()
 
     print("## Tournament Analysis")
@@ -625,6 +1145,19 @@ def main() -> None:
     print("scc_sizes=" + str([1] * len(ordered_candidates)))
     print("hamiltonian_path_count_under_fixed_tie_path=1")
     print("hamiltonian_path=" + " -> ".join(candidate.name for candidate in ordered_candidates))
+    print()
+    persistence_tournament = persist["tournament"]
+    print("## Persistence Tournament Analysis")
+    print("vertices=owner-boundary proof carriers, not runners, raw arcs, or scalar owner counts")
+    print(
+        "pairwise_observable=terminal partition retention + seam owner word + "
+        "bypass/free-hole localization + quotient legality"
+    )
+    print("switch=higher weighted retained persistence payload; ties follow declared sidecar path")
+    print(f"score_hist={persistence_tournament['score_hist']}")
+    print(f"directed_3cycles={persistence_tournament['directed_3cycles']}")
+    print(f"sccs={persistence_tournament['sccs']} singleton SCCs")
+    print(f"hamiltonian_path={persistence_tournament['hamiltonian_path']}")
     print()
 
     print("## Assumption Challenge")

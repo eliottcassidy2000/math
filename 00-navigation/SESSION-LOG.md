@@ -1,23 +1,56 @@
-## codex-2026-06-29 -- HYP-3520 seam-sheaf compression canary
+## codex-2026-06-29 -- HYP-3520 random031 owner-boundary persistence
 
-After a push race, rebased onto incoming HYP-3520 owner-current certificate
-and HYP-3521 terminal ledger work.  Kept the stronger owner-current/quotient
-price certificate as the HYP-3520 base, then extended its executable with a
-HYP-3493 seam-sheaf compression canary:
+Prompt: work creatively on owner-boundary persistence after the incoming
+random031 seam-flow and free-hole bracket packets.
+
+Fetched/rebased onto the concurrent mainline, then integrated HYP-3494,
+HYP-3510, HYP-3511, HYP-3493, incoming HYP-3512 niche-history scanner,
+incoming HYP-3520 owner-boundary reservation/certificate, incoming HYP-3521
+terminal ledger, incoming HYP-3513 firewall Nerode audit, the HYP-3520
+seam-sheaf canary, and the HYP-3522 filtration refinement.  Upgraded
+HYP-3520/T1520/LTI-520/LTT-420 with one combined script/result/reflection:
 
 ```text
-owner_boundary_persistence_word=PDPPOOO
-free_hole_owner_union_hist={():14}
-safe quotients: flow_class, allowed_exit, owner_union, sheet_pgf_bucket
-unsafe quotients: owner_union_size, endpoint_ranks, branch_hist, size,
-                  mirror_closed
+04-computation/lrc14_random031_owner_boundary_persistence_codex_20260629.py
+05-knowledge/results/lrc14_random031_owner_boundary_persistence_codex_20260629.out
+05-knowledge/hypotheses/HYP-3520-lrc14-random031-owner-boundary-persistence.md
+07-reflections/lrc14-random031-owner-boundary-persistence-codex-20260629.md
 ```
 
-Interpretation: the owner-current matrix reconstructs the seam-only debt
-`(45,147,169,173)`, while the HYP-3493 canary proves several tempting scalar
-component summaries merge pure bypass `R01` with ordinary discharged context.
-The random031 terminal lemma should retain an owner word, pure-bypass exit
-label, legal sheet-PGF bucket, or an equivalent named repair sidecar.
+Exact seam readout: the max-delta forbidden seam on `(43,54)` carries
+`(23,45,93,113,147,169,173)`, the lower-delta pure bypass on the same
+components carries `(23,93,113)`, pure bypass stalk `R01` has `12` cells,
+branch split `6/6`, endpoint rank `(2,)`, and zero external horizontal ports,
+and the owner-current boundary signature is `45:+1,147:+1,169:+1,173:+1`.
+
+Main persistence readout: all `79` legal HYP-3493 components now land in a
+named owner-boundary persistence class: `64` rank2_owner_persistent, `14`
+free_hole_bracket_persistent, and one pure_bypass_owner_boundary, with no
+unresolved owner-boundary components.  The `14` full-seam-debt components are
+exactly HYP-3511 bracketed free-hole packets; the only seam-only debtor is
+`R01`.  Owner support outside bracketed caps is connected (`65` vertices in
+one overlap carrier).
+
+Seam-sheaf canary: `owner_boundary_persistence_word=PDPPOOO`,
+`free_hole_owner_union_hist={():14}`, safe quotients are `flow_class`,
+`allowed_exit`, `owner_union`, and `sheet_pgf_bucket`, while unsafe scalar
+quotients are `owner_union_size`, `endpoint_ranks`, `branch_hist`, `size`, and
+`mirror_closed`.
+
+The quotient audit is the proof-facing part.  Seam/bypass owner words,
+owner-current matrix, hard-component owner map, relative-H1 class,
+owner_presence_word, seam_debt_word, flow_class, and persistence class preserve
+terminal classes.  Raw counts, component pair, delta route, bypass-owner-only,
+dead-island-only, global-flow owner union, owner count, seam-owner count,
+endpoint rank, branch histogram, component size, and mirror closure mix or
+erase terminal classes unless they carry the seam word, pure-bypass exit label,
+sheet-PGF bucket, or a named bracket/bypass sidecar.
+
+HYP-3522 refines the same boundary word: transport `(23,93,113)` plus branch
+bracket lift `(147,169)` leaves a smaller residual pair `(45,173)`.  HYP-3520
+therefore supplies the persistence/quotient guardrail, while HYP-3522 supplies
+the next filtration lemma shape.
+
 ## codex-2026-06-29 -- HYP-3522 random031 owner-boundary bracket filtration
 
 Prompt: work creatively on owner-boundary persistence.
@@ -54,17 +87,6 @@ lift, HYP-3510/HYP-3511 separation, and a residual two-owner boundary lemma
 for `(45,173)` compatible with the HYP-3490 firewall and HYP-3513 route
 sidecar `R`.
 
-## codex-2026-06-29 -- HYP-3520 owner-boundary persistence reservation
-
-Prompt: work creatively on owner-boundary persistence.
-
-Reserved HYP-3520/T1520/LTI-520/LTT-420 for the random031 owner-cobordism
-certificate.  Known starting point: the max-delta forbidden seam on components
-`(43,54)` carries all seven owners `(23,45,93,113,147,169,173)`, while the
-lower-delta pure bypass on the same components carries `(23,93,113)` and is hit
-by exactly `12` phase witnesses.  The finite target is a quotient-price matrix
-showing which sidecars reconstruct the persistent boundary debt
-`(45,147,169,173)`.
 ## codex-2026-06-29 -- HYP-3521 random031 terminal certificate ledger
 
 Prompt: try new angles on the remaining LRC14 proof targets.  Pulled incoming
@@ -88,27 +110,7 @@ HYP-3511 doublet collapse: `64` ordinary routes, `10` free-hole singles,
 Proof target: ordinary route lemma, free-hole bracket lemma, pure bypass
 owner-boundary lemma, HYP-3490 firewall compatibility, and HYP-3486
 vertical-halfturn guardrail.
-Reserved and then executed HYP-3520/T1520/LTI-520/LTT-420 for the random031
-owner-cobordism certificate.  Added:
 
-```text
-04-computation/lrc14_random031_owner_boundary_persistence_codex_20260629.py
-05-knowledge/results/lrc14_random031_owner_boundary_persistence_codex_20260629.out
-05-knowledge/hypotheses/HYP-3520-lrc14-random031-owner-boundary-persistence.md
-07-reflections/lrc14-random031-owner-boundary-persistence-codex-20260629.md
-```
-
-Exact readout: the max-delta forbidden seam on components `(43,54)` carries
-`(23,45,93,113,147,169,173)`, the lower-delta pure bypass on the same
-components carries `(23,93,113)`, and pure bypass stalk `R01` has `12` cells,
-branch split `6/6`, endpoint rank `(2,)`, and zero external horizontal ports.
-The owner-current boundary signature is `45:+1,147:+1,169:+1,173:+1`.
-
-The quotient-price audit made the loss explicit: raw `12`, raw `282`,
-component-pair, delta-route, bypass-owner-only, dead-island-only, and
-global-flow owner quotients fail or contaminate the boundary word.  Next formal
-hook: turn this owner-current matrix into the pure-bypass terminal lemma beside
-HYP-3490 private-label firewall and HYP-3493 seam-sheaf dispatch.
 ## codex-2026-06-29 -- HYP-3513 private-firewall Nerode audit
 
 Built `04-computation/lrc14_private_firewall_nerode_codex_20260629.py` and

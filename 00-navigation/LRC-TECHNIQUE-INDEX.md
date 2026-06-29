@@ -36,30 +36,79 @@ and proof obligations first.
 
 ## LTI-520 - Random031 owner-boundary persistence
 
-Carrier / vertex set: quotient sidecars for the pure bypass, including seam
-owner word, bypass owner word, hard-component owner map, owner-current
-cobordism matrix, relative-H1 boundary class, dead-island owner union, global
-flow-owner union, delta route, component pair, and raw bypass count.
+Carrier / vertex set: quotient sidecars for the pure bypass together with
+owner-boundary persistence classes: seam owner word, bypass owner word,
+hard-component owner map, owner-current cobordism matrix, relative-H1 boundary
+class, bracketed free-hole caps, pure bypass flow/boundary split,
+owner-overlap support graph, quotient guardrails, and raw scalar shadows.
+
 Pairwise observable: exact reconstruction of the boundary debt
-`(45,147,169,173)` together with local compatibility with the `12`-cell pure
-bypass stalk.
-Preserved LRC predicate: random031 pure-bypass discharge after deleting the
-forbidden max-delta seam.
-Destroyed information: scalar and component-only quotients erase the seam-only
-owner word; global-flow owner union contaminates the boundary with owner `55`;
-dead-island owner union recovers only `45`; owner count, endpoint rank, branch
-histogram, size, and mirror closure merge pure-bypass debt with discharged
-HYP-3493 context.
+`(45,147,169,173)`, local compatibility with the `12`-cell pure bypass stalk,
+terminal partition retention, seam owner word, bypass/free-hole localization,
+owner-support connectivity, HYP-3493 compression-canary purity, and scalar
+quotient penalty.
+
+Preserved LRC predicate: the random031 right-boundary terminal predicate
+splits into exactly three exits:
+
+```text
+rank-2 route
+or free-hole bracket
+or pure-bypass owner-boundary.
+```
+
+Destroyed information: owner count, seam-owner count, endpoint rank, component
+size, mirror closure, branch histogram, bypass-owner-only, dead-island-only,
+global-flow owner union, and raw counts mix, erase, or contaminate terminal
+classes.  They are legal only with the seam owner word, pure-bypass exit label,
+`PDPPOOO` owner-boundary persistence word, sheet-PGF bucket, or a named
+bracket/bypass sidecar.
+
+Exact HYP-3520 readout:
+
+```text
+component_count=79
+persistence_class_hist={'free_hole_bracket_persistent':14,
+                        'pure_bypass_owner_boundary':1,
+                        'rank2_owner_persistent':64}
+unresolved_owner_boundary_components=[]
+full_seam_debt_components=14 bracketed free-hole packets
+seam_only_boundary_debt_components=['R01']
+owner_overlap_component_sizes=[65]
+```
+
+Clean persistence quotients: `flow_class`, `owner_boundary_persistence_class`,
+`owner_presence_word`, and `seam_debt_word`.
+
+Lossy persistence quotients: `component_size`, `endpoint_rank_word`,
+`mirror_closed_shadow`, `raw_owner_count`, and `seam_owner_count`.
+
+HYP-3493 canary quotients: `flow_class`, `allowed_exit`, `owner_union`, and
+`sheet_pgf_bucket` preserve the pure-bypass target; `owner_union_size`,
+`endpoint_ranks`, `branch_hist`, `size`, and `mirror_closed` merge `R01` with
+discharged context.
+
 Best use: feed a formal owner-current terminal lemma for the HYP-3490/HYP-3493
-random031 seam-cobordism packet.
-Failure mode: treating the hard pair as a wall instead of a forbidden seam
-whose complement carries phase flow.
-Anchors: HYP-3520, HYP-3512, HYP-3494, HYP-3493, HYP-3510, HYP-3511,
-HYP-3486, HYP-3402, HYP-3034, T1520, LTT-420.
-Next agent hook: turn `45:+1,147:+1,169:+1,173:+1` into a Lean-facing
-owner-current/relative-H1 boundary lemma while retaining `PDPPOOO`, the
-pure-bypass exit label, owner union, or legal sheet-PGF bucket across any
-component quotient.
+random031 seam-cobordism packet, and encode HYP-3520 as the owner-boundary
+sidecar inside HYP-3521's terminal ledger and any future relative-H1, PGF,
+owner-current, or Lean dispatch rule.
+
+Failure mode: treating the hard pair as a wall or treating owner count as a
+terminal invariant.  The hard pair is a forbidden seam whose complement
+carries phase flow; the legal owner object is the seam word.  Global-flow owner
+union contaminates the boundary with owner `55`, and dead-island owner union
+recovers only `45`.
+
+Anchors: HYP-3520, HYP-3521, HYP-3513, HYP-3512, HYP-3494, HYP-3493,
+HYP-3511, HYP-3510, HYP-3490, HYP-3486, HYP-3402, HYP-3034, T1520,
+LTT-420.
+
+Next agent hook: formalize the three-exit right boundary and prove that any
+quotient dropping the seam owner word has already emitted a named rank-2,
+free-hole bracket, or pure-bypass sidecar.  Then turn
+`45:+1,147:+1,169:+1,173:+1` into a Lean-facing owner-current/relative-H1
+boundary lemma while retaining `PDPPOOO`, the pure-bypass exit label, owner
+union, or legal sheet-PGF bucket across any component quotient.
 
 ## LTI-522 - Random031 owner-boundary bracket filtration
 

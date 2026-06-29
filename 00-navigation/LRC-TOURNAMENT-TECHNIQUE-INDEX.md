@@ -41,22 +41,53 @@ obligations, and proof-carrier interfaces.
 
 ## LTT-420 - Owner-Boundary Sidecar Tournament
 
-- **Move:** Rank quotient sidecars by whether they reconstruct the random031
-  pure-bypass boundary debt `(45,147,169,173)`.
-- **LRC use:** Turns HYP-3494's owner-boundary persistence target into a finite
-  sidecar audit before any formal terminal lemma is attempted.
-- **Preserves:** The seam owner word, bypass flow-owner word, hard-component
-  support `(43,54)`, and local `12`-cell pure-bypass stalk.
-- **Forgets / guardrail:** Raw witness counts, component pairs, and bypass
-  owner words alone forget the four seam-only owners; global flow owner union
-  adds contaminant `55`; HYP-3493 component quotients by owner count, endpoint
-  rank, branch histogram, size, or mirror closure merge `R01` with discharged
-  context.
-- **Next pull:** Use the HYP-3520 matrix to formalize the owner-current
-  terminal sidecar `45:+1,147:+1,169:+1,173:+1`, with `PDPPOOO` or an
-  equivalent pure-bypass exit label retained through component compression.
-- **Pointers:** HYP-3520, HYP-3512, HYP-3494, HYP-3493, HYP-3510,
-  HYP-3511, HYP-3486, HYP-3483, HYP-3402, HYP-3034, T1520, LTI-520.
+- **Move:** Use owner-boundary proof carriers as vertices:
+  seam/bypass owner words, owner-current matrix, hard-component owner map,
+  relative-H1 boundary class, owner-boundary persistence word, seam-debt
+  coboundary word, free-hole bracketed debt, pure-bypass flow charge,
+  owner-overlap support component, endpoint-rank shadow, and raw owner-count
+  shadow.
+- **LRC use:** HYP-3520 executes the HYP-3494 owner-boundary target over
+  the HYP-3486 hard-seam receiver, HYP-3493's legal seam-sheaf table, and
+  HYP-3511's bracket atlas.  It reconstructs the pure-bypass boundary debt
+  `(45,147,169,173)` and classifies all `79` components into `64`
+  rank2_owner_persistent, `14` free_hole_bracket_persistent, and one
+  pure_bypass_owner_boundary, with no unresolved owner-boundary components.
+- **Preserves:** terminal random031 right-boundary class, seam owner word,
+  seam-debt word, hard-component support `(43,54)`, local `12`-cell pure
+  bypass stalk, free-hole bracket status, pure bypass flow/boundary split,
+  owner-overlap support, and quotient legality.
+- **Forgets / guardrail:** raw witness counts, component pairs, bypass owner
+  words alone, owner count, seam-owner count, endpoint rank, component size,
+  and mirror closure mix or erase terminal classes.  Global flow owner union
+  adds contaminant `55`; dead-island owner union recovers only `45`.
+- **Pairwise observable:** exact boundary-debt reconstruction plus local
+  `12`-cell bypass retention for the seam-local tournament; terminal partition
+  retention, seam owner word, bypass/free-hole localization, owner-support
+  connectivity, and scalar quotient penalty for the persistence tournament.
+- **Switch/gauge:** higher owner-boundary score with a fixed sidecar-cost tie
+  path for seam-local sidecars; higher weighted retained owner-boundary
+  persistence payload for the component persistence carriers.
+- **Canary:** HYP-3493 quotient buckets are scored as legal only when the
+  pure-bypass owner-boundary target is constant on fibers.  `flow_class`,
+  `allowed_exit`, `owner_union`, and `sheet_pgf_bucket` are safe; owner count,
+  endpoint rank, branch histogram, size, and mirror closure merge `R01` with
+  discharged context.
+- **Fingerprint:** seam-local score histogram
+  `{11:1,12:2,16:1,26:1,31:2,91:1,92:2,93:1,94:1}`, no directed `3`-cycles,
+  and path `seam_and_bypass_owner_words -> owner_current_cobordism_matrix -> hard_component_owner_map -> observer_cut_payload_orbit -> symbolic_relative_H1_boundary_class -> bypass_owner_word_only -> delta_route_phase_blocks -> dead_island_owner_union_minus_bypass -> global_flow_owner_union_minus_bypass -> raw_bypass_count_12 -> raw_282_witness_count -> component_pair_only`.
+- **Fingerprint:** persistence score histogram
+  `{17:1,28:1,29:1,58:1,61:1,78:1,98:1}`, no directed `3`-cycles, and path
+  `owner_boundary_persistence_word -> seam_debt_coboundary_word -> free_hole_bracketed_debt -> pure_bypass_flow_charge -> owner_overlap_support_component -> endpoint_rank_shadow -> raw_owner_count_shadow`.
+- **Next pull:** Formalize the three-exit right boundary theorem for
+  random031: rank-2 route, HYP-3511 free-hole bracket, or pure-bypass
+  owner-boundary.  Then use the HYP-3520 matrix to formalize the
+  owner-current terminal sidecar `45:+1,147:+1,169:+1,173:+1`, with
+  `PDPPOOO` or an equivalent pure-bypass exit label retained through component
+  compression.
+- **Pointers:** HYP-3520, HYP-3521, HYP-3513, HYP-3512, HYP-3494, HYP-3493,
+  HYP-3511, HYP-3510, HYP-3490, HYP-3486, HYP-3483, HYP-3402, HYP-3034,
+  T1520, LTI-520.
 
 ## LTT-422 - Owner-Boundary Bracket-Filtration Tournament
 
