@@ -190,6 +190,13 @@ obligations, and proof-carrier interfaces.
   vertices.
   Raw overlap of exception sets is only useful after the retained current and
   orbit payloads are attached.
+- Need to classify zero-edge singleton-current debt:
+  use LTT-340 after LTT-339/LTT-338/LTT-336/LTT-337 and make singleton dead
+  components, owner-label involutions, unit-delta gate words, route labels,
+  hard-overlap flags, two-adic residue sidecars, signed-SPEC exits, and proof
+  obligations the vertices.  The quotient preserves pure small-touch singleton
+  debt versus the named random031 hard/gluing overlap, not runner order or
+  scalar counts.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center

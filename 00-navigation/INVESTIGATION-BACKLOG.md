@@ -64,6 +64,29 @@ section boundaries, touching gate events, residues, cover arcs, color/Fourier
 modes, and proof obligations.  The quotient must preserve the terminal
 discharge predicate and say what interval/branch/owner geometry it destroys.
 
+## Lead codex-2026-06-29: zero-edge singleton-current audit
+
+**Status:** RESERVED STUB / computation in progress; not proof
+(HYP-3480/T1440/LTI-440/LTT-340), downstream of incoming HYP-3478 small-touch
+geometry, HYP-3479 hard-orbit/current join, HYP-3476 pair-current/router, and
+HYP-3477 hard-orbit discharge.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3480-lrc14-zero-edge-singleton-current.md`,
+script
+`04-computation/lrc14_zero_edge_singleton_current_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_zero_edge_singleton_current_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-zero-edge-singleton-current-codex-20260629.md`.
+
+Target: the six small-touch/no-hard zero-edge rows
+`random_covering_001`, `random_covering_039`, `random_covering_062`,
+`random_covering_074`, `random_covering_086`, and `random_covering_101`,
+with `random_covering_031` retained as the hard/currentless control.  Test
+whether the terminal carrier is owner-label involution, unit-delta singleton
+current, endpoint-spine, two-adic residue, signed-SPEC debt, or named gluing.
+
 ## Lead codex-2026-06-29: hard mirror-orbit discharge audit
 
 **Status:** EVIDENCE / exact hard-family ledger; not proof
