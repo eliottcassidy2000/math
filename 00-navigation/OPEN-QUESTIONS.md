@@ -11,6 +11,31 @@ combining HYP-3490 and HYP-3486; and boundary odd-moment probes.  -> HYP-3492,
 HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
 HYP-3451, HYP-3437, HYP-3422, HYP-3311, HYP-3310, HYP-3239, HYP-3218,
 HYP-3153, HYP-3148, HYP-3023, HYP-2989, LTI-452, LTT-352, T1452.
+**OPEN-Q-108 HYP-3493 random031 relative seam-sheaf addendum:**
+Can the three concurrent random031 packets be glued into a local-to-global
+relative seam-sheaf theorem?  The executable scaffold now builds the proposed
+object
+
+```text
+relative_seam_sheaf_cell =
+  (u_fiber, branch_sheet, mirror_partner, flow_class, endpoint_rank,
+   owner_boundary_word, private_label_status, relative_cycle_id,
+   sheet_pgf_bucket, allowed_exit)
+```
+
+HYP-3493's scaffold finds `79` legal components, all mirror-closed, with
+`64` rank-2 routed components, `14` free-hole packets, one pure bypass, and no
+mixed/debt stalks.  Open proof task: prove owner-boundary persistence and show
+every component exits by rank-2 route, mirror free-hole, pure bypass plus owner
+boundary, or named owner-current/two-adic/signed-SPEC/state-lift debt.  The
+pure bypass has owners `(23,93,113)` and seam debt `(45,147,169,173)`.
+Guardrail: Cech, fiber-PGF, non-archimedean, quadratic/residue, and
+discrepancy analogies are legal only after the owner, branch, mirror, and
+private-label sidecars are retained. -> HYP-3493,
+HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
+HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, HYP-3451, HYP-3438,
+HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3025, HYP-3023, HYP-3311,
+HYP-3408, LTI-453, LTT-353, T1453.
 
 **OPEN-Q-108 HYP-3485 random031 seam-complement connections addendum:**
 HYP-3485 synthesizes the past-work routes around seam complement and bypass

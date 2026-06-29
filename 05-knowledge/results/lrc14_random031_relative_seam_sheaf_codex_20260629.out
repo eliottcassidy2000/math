@@ -1,0 +1,72 @@
+HYP-3493 RANDOM031 RELATIVE SEAM-SHEAF SCAFFOLD
+status=EVIDENCE / component-level sheaf table; not an LRC14 proof
+row=random_covering_031
+
+## Inputs
+source=HYP-3486 seam-complement fiber graph
+private_label_status=HYP-3490 random031 private-label firewall
+seam_owners=(23, 45, 93, 113, 147, 169, 173)
+dead_island_owner_union=(23, 45, 93, 113)
+base_topology=cylinder - four mirror-paired punctures - forbidden seam
+
+## Relative Seam-Sheaf Component Summary
+component_count=79
+flow_class_hist={'free_hole': 14, 'pure_bypass': 1, 'rank2_routed': 64}
+allowed_exit_hist={'endpoint_rank2_discharge': 64, 'mirror_free_hole_packet': 14, 'pure_bypass_plus_owner_boundary_debt': 1}
+mirror_closed_components=79/79
+size_by_class={('free_hole', 2): 10, ('free_hole', 4): 3, ('free_hole', 8): 1, ('pure_bypass', 12): 1, ('rank2_routed', 2): 34, ('rank2_routed', 4): 18, ('rank2_routed', 6): 6, ('rank2_routed', 8): 4, ('rank2_routed', 10): 1, ('rank2_routed', 12): 1}
+owner_union_size_hist={0: 14, 2: 26, 3: 15, 4: 18, 5: 3, 6: 3}
+endpoint_rank_hist={2: 65}
+sheet_pgf_bucket_count=10
+private_label_mark=attached to every component; projection-current route disabled
+
+## Owner Boundary Debt
+seam_debt_hist={(23, 45, 93): 1, (23, 45, 93, 113, 147): 1, (23, 45, 93, 113, 147, 169, 173): 14, (23, 45, 93, 113, 169): 2, (23, 45, 93, 113, 169, 173): 3, (23, 45, 93, 113, 173): 5, (23, 45, 93, 147): 3, (23, 45, 93, 147, 169): 1, (23, 45, 93, 169): 3, (23, 45, 93, 169, 173): 1, (23, 45, 113, 147): 1, (23, 45, 113, 147, 169): 1, (23, 45, 113, 147, 169, 173): 1, (23, 45, 113, 147, 173): 2, (23, 45, 113, 169, 173): 2, (23, 45, 113, 173): 2, (23, 45, 147, 169): 1, (23, 93, 113): 1, (23, 93, 113, 147, 169, 173): 1, (23, 93, 113, 169): 1, (23, 93, 113, 169, 173): 2, (23, 93, 147, 169, 173): 2, (23, 93, 169, 173): 1, (23, 113, 147, 169): 1, (23, 113, 169, 173): 1, (23, 147, 169, 173): 1, (23, 147, 173): 2, (23, 169, 173): 1, (45,): 1, (45, 93): 1, (45, 93, 113): 2, (45, 93, 113, 147, 169): 1, (45, 93, 113, 147, 169, 173): 1, (45, 93, 113, 147, 173): 1, (45, 93, 113, 169): 1, (45, 93, 113, 169, 173): 2, (45, 93, 147, 169, 173): 1, (45, 93, 169, 173): 1, (45, 113, 147, 169): 1, (45, 113, 147, 173): 1, (45, 147, 169, 173): 1, (45, 147, 173): 1, (93, 113, 169, 173): 1, (113, 147, 169): 1, (113, 169): 1, (113, 173): 1, (147,): 1}
+pure_bypass_owner_debt:
+  R01 class=pure_bypass size=12 u=[527,684] branches={0: 6, 1: 6} ranks=(2,) hits=(43, 54) owners=(23, 93, 113) seam_debt=(45, 147, 169, 173) mirror_closed=True pgf=pure_bypass:z^12:b0^6:b1^6 exit=pure_bypass_plus_owner_boundary_debt
+
+## Free-Hole Packets
+free_hole_packet_count=14
+free_hole_size_hist={2: 10, 4: 3, 8: 1}
+  R05 class=free_hole size=8 u=[453,758] branches={0: 4, 1: 4} ranks=() hits=() owners=() seam_debt=(23, 45, 93, 113, 147, 169, 173) mirror_closed=True pgf=free_hole:z^8:b0^4:b1^4 exit=mirror_free_hole_packet
+  R15 class=free_hole size=4 u=[118,1093] branches={0: 2, 1: 2} ranks=() hits=() owners=() seam_debt=(23, 45, 93, 113, 147, 169, 173) mirror_closed=True pgf=free_hole:z^4:b0^2:b1^2 exit=mirror_free_hole_packet
+  R24 class=free_hole size=4 u=[550,661] branches={0: 2, 1: 2} ranks=() hits=() owners=() seam_debt=(23, 45, 93, 113, 147, 169, 173) mirror_closed=True pgf=free_hole:z^4:b0^2:b1^2 exit=mirror_free_hole_packet
+  R28 class=free_hole size=4 u=[446,765] branches={0: 2, 1: 2} ranks=() hits=() owners=() seam_debt=(23, 45, 93, 113, 147, 169, 173) mirror_closed=True pgf=free_hole:z^4:b0^2:b1^2 exit=mirror_free_hole_packet
+  R35 class=free_hole size=2 u=[18,1193] branches={0: 1, 1: 1} ranks=() hits=() owners=() seam_debt=(23, 45, 93, 113, 147, 169, 173) mirror_closed=True pgf=free_hole:z^2:b0^1:b1^1 exit=mirror_free_hole_packet
+  R37 class=free_hole size=2 u=[38,1173] branches={0: 1, 1: 1} ranks=() hits=() owners=() seam_debt=(23, 45, 93, 113, 147, 169, 173) mirror_closed=True pgf=free_hole:z^2:b0^1:b1^1 exit=mirror_free_hole_packet
+  R50 class=free_hole size=2 u=[341,870] branches={0: 1, 1: 1} ranks=() hits=() owners=() seam_debt=(23, 45, 93, 113, 147, 169, 173) mirror_closed=True pgf=free_hole:z^2:b0^1:b1^1 exit=mirror_free_hole_packet
+  R53 class=free_hole size=2 u=[447,764] branches={0: 1, 1: 1} ranks=() hits=() owners=() seam_debt=(23, 45, 93, 113, 147, 169, 173) mirror_closed=True pgf=free_hole:z^2:b0^1:b1^1 exit=mirror_free_hole_packet
+  ... 6 more free-hole packets
+
+## Largest / Debt-Relevant Components
+  R00 class=rank2_routed size=12 u=[92,1119] branches={0: 6, 1: 6} ranks=(2,) hits=(7, 90) owners=(55, 93, 113, 173) seam_debt=(23, 45, 147, 169) mirror_closed=True pgf=rank2_routed:z^12:b0^6:b1^6 exit=endpoint_rank2_discharge
+  R01 class=pure_bypass size=12 u=[527,684] branches={0: 6, 1: 6} ranks=(2,) hits=(43, 54) owners=(23, 93, 113) seam_debt=(45, 147, 169, 173) mirror_closed=True pgf=pure_bypass:z^12:b0^6:b1^6 exit=pure_bypass_plus_owner_boundary_debt
+  R02 class=rank2_routed size=10 u=[367,844] branches={0: 5, 1: 5} ranks=(2,) hits=(31, 66) owners=(23, 93, 169) seam_debt=(45, 113, 147, 173) mirror_closed=True pgf=rank2_routed:z^10:b0^5:b1^5 exit=endpoint_rank2_discharge
+  R03 class=rank2_routed size=8 u=[73,1138] branches={0: 4, 1: 4} ranks=(2,) hits=(6, 91) owners=(45, 93, 173) seam_debt=(23, 113, 147, 169) mirror_closed=True pgf=rank2_routed:z^8:b0^4:b1^4 exit=endpoint_rank2_discharge
+  R04 class=rank2_routed size=8 u=[225,986] branches={0: 4, 1: 4} ranks=(2,) hits=(17, 80) owners=(113, 147, 173) seam_debt=(23, 45, 93, 169) mirror_closed=True pgf=rank2_routed:z^8:b0^4:b1^4 exit=endpoint_rank2_discharge
+  R05 class=free_hole size=8 u=[453,758] branches={0: 4, 1: 4} ranks=() hits=() owners=() seam_debt=(23, 45, 93, 113, 147, 169, 173) mirror_closed=True pgf=free_hole:z^8:b0^4:b1^4 exit=mirror_free_hole_packet
+  R06 class=rank2_routed size=8 u=[358,853] branches={0: 4, 1: 4} ranks=(2,) hits=(30, 67) owners=(23, 147, 169, 173) seam_debt=(45, 93, 113) mirror_closed=True pgf=rank2_routed:z^8:b0^4:b1^4 exit=endpoint_rank2_discharge
+  R07 class=rank2_routed size=8 u=[15,1196] branches={0: 4, 1: 4} ranks=(2,) hits=(0, 97) owners=(93, 169) seam_debt=(23, 45, 113, 147, 173) mirror_closed=True pgf=rank2_routed:z^8:b0^4:b1^4 exit=endpoint_rank2_discharge
+  R08 class=rank2_routed size=6 u=[435,776] branches={0: 3, 1: 3} ranks=(2,) hits=(35, 62) owners=(55, 113, 169, 173) seam_debt=(23, 45, 93, 147) mirror_closed=True pgf=rank2_routed:z^6:b0^3:b1^3 exit=endpoint_rank2_discharge
+  R09 class=rank2_routed size=6 u=[507,704] branches={0: 3, 1: 3} ranks=(2,) hits=(41, 56) owners=(45, 147) seam_debt=(23, 93, 113, 169, 173) mirror_closed=True pgf=rank2_routed:z^6:b0^3:b1^3 exit=endpoint_rank2_discharge
+  R10 class=rank2_routed size=6 u=[567,644] branches={0: 3, 1: 3} ranks=(2,) hits=(46, 51) owners=(55, 147) seam_debt=(23, 45, 93, 113, 169, 173) mirror_closed=True pgf=rank2_routed:z^6:b0^3:b1^3 exit=endpoint_rank2_discharge
+  R11 class=rank2_routed size=6 u=[339,872] branches={0: 3, 1: 3} ranks=(2,) hits=(29, 68) owners=(93, 147) seam_debt=(23, 45, 113, 169, 173) mirror_closed=True pgf=rank2_routed:z^6:b0^3:b1^3 exit=endpoint_rank2_discharge
+
+## Proof Pull
+P1: The sheaf table has no mixed_or_debt components; the current finite carrier splits into rank2_routed, free_hole, and pure_bypass stalks.
+P2: Every legal horizontal+mirror component is mirror-closed, so the Cech/path-lift persistence test should target owner-boundary words, not mirror closure.
+P3: The pure bypass stalk carries owners (23,93,113) and seam debt (45,147,169,173), matching the HYP-3483 n+2 versus n*2 span.
+P4: HYP-3490 disables projection-current deletion on all these stalks; the legal theorem must discharge by endpoint rank, free-hole, bypass, or named owner/two-adic/SPEC/state-lift debt.
+
+## Tournament Analysis
+vertices=relative seam-sheaf proof carriers, not runners or raw arcs
+pairwise_observable=terminal predicate retention + quotient legality + fiber/private-label/owner/persistence/sheet payload
+switch=higher retained proof payload; ties follow the declared path
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+sccs=8 singleton SCCs
+directed_3cycles=0
+hamiltonian_path=S00_relative_seam_sheaf_packet -> S01_fiber_graph_trichotomy -> S02_private_label_firewall -> S03_ordered_twoadic_bypass_blocks -> S04_cech_owner_persistence -> S05_sheet_pgf_moment -> S06_nonarchimedean_owner_lift_gate -> S07_raw_scalar_shadow
+
+## Assumption Challenge
+Considered vertices: runners, gaps, fixed sections, section boundaries, wall crossings, residues, cover arcs, Fourier modes, matroid circuits, witness cells, fiber components, owner-boundary words, and proof obligations.
+Chosen vertices are relative seam-sheaf proof packets.  They preserve the terminal random031 discharge predicate and destroy raw interval geometry only after replacing it with u, branch, mirror, owner, private-label, relative-cycle, and legal exit sidecars.

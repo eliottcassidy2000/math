@@ -12,6 +12,21 @@ no-hidden-lift theorem; and test boundary odd moments on mirror components.
 HYP-3481, HYP-3451, HYP-3437, HYP-3422, HYP-3311, HYP-3310, HYP-3239,
 HYP-3218, HYP-3153, HYP-3148, HYP-3023, HYP-2989, LTI-452, LTT-352, T1452,
 OPEN-Q-108.
+**HYP-3493 random031 relative seam-sheaf synthesis.**  The first executable
+sheaf table is done in `04-computation/lrc14_random031_relative_seam_sheaf_codex_20260629.py`.
+Exact readout: `79` legal horizontal+mirror components, `79/79` mirror-closed,
+and no `mixed_or_debt` stalks.  Flow split is `64` rank-2 routed components,
+`14` mirror free-hole packets, and one pure `12`-cell bypass component.  The
+bypass has owners `(23,93,113)` and seam debt `(45,147,169,173)`.  Next:
+prove owner-boundary persistence on the Cech/path-lift side, add a legal
+sheet-PGF moment on horizontal+mirror components only, and run the same sheaf
+table on the other HYP-3477 hard mirror orbits.  Treat
+non-archimedean/quadratic/discrepancy motifs as owner-lift or ordered-block
+sidecars, not scalar proofs.
+-> HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482,
+HYP-3481, HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, HYP-3451,
+HYP-3438, HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3025, HYP-3023,
+HYP-3311, HYP-3408, LTI-453, LTT-353, T1453, OPEN-Q-108.
 
 **HYP-3485 random031 seam-complement connection atlas.**  Convert the
 HYP-3481/HYP-3482/HYP-3483 picture into the next executable audit.  Build a

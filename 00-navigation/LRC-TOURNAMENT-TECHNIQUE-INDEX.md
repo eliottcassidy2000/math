@@ -253,6 +253,14 @@ obligations, and proof-carrier interfaces.
   terminal predicates only when it retains colored Nerode purity,
   label-component cut incidence, carry residues, compression constancy,
   owner-cut transversals, or root-motion guardrails.
+- Need to merge random031 fiber, topology, and label-firewall packets:
+  use LTT-353 after LTT-345/LTT-346/LTT-350 and make relative seam-sheaf
+  packets, fiber trichotomy, private-label firewall, ordered two-adic bypass
+  blocks, Cech owner persistence, legal sheet-PGF buckets, owner-lift sidecars,
+  and scalar shadows the vertices.  HYP-3493 now has an executable scaffold:
+  `79/79` legal components are mirror-closed with no mixed/debt stalks, so the
+  next route is owner-boundary persistence on the horizontal+mirror seam
+  complement.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -10378,6 +10386,46 @@ quotient_legality_status
   HYP-3482, HYP-3481, HYP-3451, HYP-3437, HYP-3422, HYP-3311, HYP-3310,
   HYP-3239, HYP-3218, HYP-3153, HYP-3148, HYP-3023, HYP-2989, THM-523,
   LTI-452, LTT-352, T1452, OPEN-Q-108.
+
+## LTT-353: Random031 Relative Seam-Sheaf Tournament
+
+- **Move:** Treat relative seam-sheaf proof packets as vertices:
+  seam-sheaf packet, fiber-graph trichotomy, private-label firewall, ordered
+  two-adic bypass blocks, Cech owner persistence, sheet-PGF moment,
+  non-archimedean owner-lift gate, and raw scalar shadow.
+- **LRC use:** HYP-3493 merges HYP-3485, HYP-3486, and HYP-3490 into a
+  single random031 proof-interface proposal, now with an executable scaffold:
+  `79` legal components, all mirror-closed, split into `64` rank-2 routed,
+  `14` free-hole, and one pure bypass stalk.  The hard pair is forbidden seam
+  boundary data; the phase flow lives on the complement and should discharge
+  by rank-2 route, mirror free-hole, pure bypass, or named
+  owner/two-adic/SPEC/state-lift debt.
+- **Preserves:** terminal random031 predicate, legal seam-complement topology,
+  fiber class, branch sheet, mirror mate, owner-boundary word, private-label
+  status, relative persistence, and legal sheet-count payload.
+- **Forgets / guardrail:** raw wall, owner count, phase-hit count, vertical
+  half-turn gluing, p-adic analogy, or discrepancy scalar forgets the carrier
+  unless it reconstructs the owner/branch/mirror/private-label sidecars.
+- **Pairwise observable:** retained proof predicate, quotient legality, fiber
+  trichotomy payload, private-label firewall payload, Cech/path-lift owner
+  persistence, legal sheet-PGF payload, and scalar-forgetting penalty.
+- **Switch/gauge:** orient toward the carrier with more retained proof payload
+  and fewer illegal quotient losses.  Ties use the displayed path.
+- **Fingerprint:** designed synthesis tournament with `8` carrier vertices,
+  score histogram `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1}`, singleton SCCs, no
+  directed `3`-cycles, and Hamiltonian path
+  `S00_relative_seam_sheaf_packet -> S01_fiber_graph_trichotomy -> S02_private_label_firewall -> S03_ordered_twoadic_bypass_blocks -> S04_cech_owner_persistence -> S05_sheet_pgf_moment -> S06_nonarchimedean_owner_lift_gate -> S07_raw_scalar_shadow`.
+  This is a route-order declaration, not a new row-bank computation.
+- **Next hook:** prove owner-boundary persistence for the `79` legal
+  horizontal+mirror components; the pure bypass has owners `(23,93,113)` and
+  seam debt `(45,147,169,173)`.  Run Cech/path-lift and sheet-PGF tests only
+  on legal components, then compare the other HYP-3477 hard mirror orbits as
+  negative controls.
+- **Pointers:** HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483,
+  HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455,
+  HYP-3451, HYP-3438, HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3025,
+  HYP-3023, HYP-3311, HYP-3408, THM-523, LTI-453, LTT-353, T1453,
+  OPEN-Q-108.
 
 ## LTT-345: Random031 Seam-Complement Connection Tournament
 

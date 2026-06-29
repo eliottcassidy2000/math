@@ -37,6 +37,45 @@ Main proof pull: old niche topics are useful only when they become exact proof
 services for HYP-3486/HYP-3490.  Best next hooks are fiber-Haar certificates,
 mirror-versus-vertical quotient legality, owner monodromy, DFA compression,
 free-hole incidence duals, no-hidden-lift statements, and boundary odd moments.
+## codex-2026-06-29 -- HYP-3493 random031 relative seam-sheaf synthesis
+
+Prompt: merge concurrent ideas from other agents and synthesize with repo
+searches through random topics and past work.
+
+Pulled the incoming random031 stack into a single proof-interface proposal:
+HYP-3485 connection atlas, HYP-3486 exact seam-complement fiber graph, and
+HYP-3490 private-label firewall.  Added HYP-3493/T1453/LTI-453/LTT-353 plus
+script/result/reflection:
+
+```text
+04-computation/lrc14_random031_relative_seam_sheaf_codex_20260629.py
+05-knowledge/results/lrc14_random031_relative_seam_sheaf_codex_20260629.out
+05-knowledge/hypotheses/HYP-3493-lrc14-random031-relative-seam-sheaf-synthesis.md
+07-reflections/lrc14-random031-relative-seam-sheaf-synthesis-codex-20260629.md
+```
+
+Synthesis: random031 should be represented as a relative seam sheaf over the
+mirror-punctured cylinder.  The fiber stalk is HYP-3486's trichotomy
+(`242` endpoint-rank-2 routed cells, `40` free-hole cells, one pure `12`-cell
+bypass).  The label stalk is HYP-3490's private-label no-current-deletion
+firewall.  The topology stalk is HYP-3485/HYP-3484/HYP-3482/HYP-3481's four
+punctures, deleted forbidden seam, seven-owner boundary charge, and phase flow
+on the complement.
+
+Executed scaffold readout: `79` legal horizontal+mirror components,
+`79/79` mirror-closed, no `mixed_or_debt` stalks, with `64` rank-2 routed
+components, `14` free-hole packets, and one pure bypass.  The pure bypass has
+owners `(23,93,113)` and seam debt `(45,147,169,173)`.
+
+Past-work/random-topic synthesis: Cech/path-lift and fiber-PGF are promising
+only after owner/branch/mirror sidecars are retained; two-adic relocation gives
+the `n*2` address but must be spanned with the `n+2` owner seam; quadratic,
+non-archimedean, and discrepancy motifs are sidecars for owner-lift gluing and
+ordered bypass blocks, not scalar proof substitutes.
+
+Next executable hook: prove owner-boundary persistence, then test legal
+sheet-PGF moments and run the same sheaf table on the other HYP-3477 hard
+mirror orbits.
 
 ## codex-2026-06-29 -- HYP-3485 random031 seam-complement connection atlas
 
