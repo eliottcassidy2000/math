@@ -1,9 +1,9 @@
 ## codex-2026-06-29 -- HYP-3477 hard mirror-orbit discharge audit
 
 Continued from HYP-3475 after rebasing over the incoming HYP-3476
-pair-current reservation.  I initially collided on HYP-3476, then repaired
-the namespace to HYP-3477/T1437/LTI-437/LTT-337 and integrated HYP-3476 as the
-upstream pair-current sidecar.
+pair-current audit and exception-frontier router.  I initially collided on
+HYP-3476, then repaired the namespace to HYP-3477/T1437/LTI-437/LTT-337 and
+integrated HYP-3476 as the pair-current plus row-level route sidecar.
 
 Added:
 
@@ -36,11 +36,28 @@ Reserved artifacts:
 07-reflections/lrc14-dead-cover-pair-current-codex-20260629.md
 ```
 
-Planned experiment: target HYP-3472's seven projection-edge exceptions and the
-two extra separating-current exceptions.  Enumerate pairs of low-rank E/branch
-survivor gates, remove the union of their adjacent blocker labels from the
-HYP-3451 dead-cover projection, and score projection cuts, branch-separated
-currents, component drops, and HYP-3475 mirror-pair status.
+Result: audited `330` single E/branch cuts and `9113` pair cuts over the nine
+exception rows.  Pair current closes the two AP separating-only rows:
+`covering_AP_with_84` and `ap_omit_12_tail_84x01` each have a non-mirror pair
+with `removed_edges=36`, `largest_drop=2`, and `component_gain=2`; their exact
+mirror pair removes `40` edges but does not separate.  None of the seven
+random HYP-3472 edge exceptions closes under any E/branch pair.
+
+Key diagnostic: the seven random exceptions are edgeless singleton dead-cover
+projections, not connected projections missing the right two-gate cut.  Each
+has `projection_baseline.edges=0`, `edge_support_labels=()`, and
+`gate_edge_support_labels=()`.  The next route is therefore a zero-edge
+singleton-current/owner-current terminal packet, not bigger E/branch pair
+enumeration.
+
+After pulling the next mainline update, this connects to two incoming threads:
+HYP-3477's hard mirror-orbit discharge intersects the seven zero-edge random
+rows at `random_covering_031`, while the colored gate unit-delta split's
+19-row cover-delta sidecar intersects them at `random_covering_039` and
+`random_covering_074`.  The remaining zero-edge rows
+`random_covering_001`, `random_covering_062`, `random_covering_086`, and
+`random_covering_101` are the cleanest singleton-current test cases.
+
 ## codex-2026-06-29 -- HYP-3476 exception-frontier router
 
 Prompt: keep pushing creative LRC14 proof angles after HYP-3475.  Pulled the
@@ -89,29 +106,6 @@ Next hook: prove the six small-touch/no-hard rows harmless by bounded
 owner-current, endpoint-spine, two-adic, exact-period, or signed-SPEC debt:
 `random_covering_001`, `random_covering_039`, `random_covering_062`,
 `random_covering_074`, `random_covering_086`, and `random_covering_101`.
-
-Result: the targeted run audited `330` single E/branch cuts and `9113` pair
-cuts over the nine exception rows.  Pair current closes the two AP
-separating-only rows: `covering_AP_with_84` and `ap_omit_12_tail_84x01` each
-have a non-mirror pair with `removed_edges=36`, `largest_drop=2`, and
-`component_gain=2`; their exact mirror pair removes `40` edges but does not
-separate.  None of the seven random HYP-3472 edge exceptions closes under any
-E/branch pair.
-
-Key diagnostic: the seven random exceptions are edgeless singleton dead-cover
-projections, not connected projections missing the right two-gate cut.  Each
-has `projection_baseline.edges=0`, `edge_support_labels=()`, and
-`gate_edge_support_labels=()`.  The next route is therefore a zero-edge
-singleton-current/owner-current terminal packet, not bigger E/branch pair
-enumeration.
-
-After pulling the next mainline update, this connects to two incoming threads:
-HYP-3477's hard mirror-orbit discharge reservation intersects the seven
-zero-edge random rows at `random_covering_031`, while the colored gate
-unit-delta split's 19-row cover-delta sidecar intersects them at
-`random_covering_039` and `random_covering_074`.  The remaining zero-edge
-rows `random_covering_001`, `random_covering_062`, `random_covering_086`, and
-`random_covering_101` are the cleanest singleton-current test cases.
 
 ## codex-2026-06-29 -- HYP-3472 dead-cover boundary-current audit
 

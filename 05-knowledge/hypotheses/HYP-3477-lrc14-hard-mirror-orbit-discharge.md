@@ -2,7 +2,7 @@
 id: HYP-3477
 title: LRC14 hard mirror-orbit discharge audit
 status: EVIDENCE / exact hard-family discharge ledger; not an LRC14 proof
-source: codex-2026-06-29 continuation of HYP-3475 hard-delta mirror-orbit ledger after incoming HYP-3476 pair-current reservation
+source: codex-2026-06-29 continuation of HYP-3475 hard-delta mirror-orbit ledger after incoming HYP-3476 pair-current and exception-frontier packets
 tangent: T1437
 technique: LTI-437
 tournament_technique: LTT-337
@@ -32,8 +32,21 @@ related:
 
 HYP-3477 audits the eight HYP-3475 hard mirror orbits with cover-delta at
 least `7`, joining exact q=`14V` phase-grid witnesses, HYP-3472
-dead-projection currents, and a bounded HYP-3476-style pair-current sidecar.
-It is a finite-bank discharge ledger, not a proof of LRC14.
+dead-projection currents, and a bounded pair-current sidecar.  It is the
+orbit-level companion to the HYP-3476 pair-current audit and exception-frontier
+router.  It is a finite-bank discharge ledger, not a proof of LRC14.
+
+## Rebase Integration
+
+The active HYP-3476 packets are compatible.  The pair-current audit closes the
+two AP separating-only rows and shows the seven random edge exceptions are
+zero-edge singleton projections, so larger E/branch pair cuts are not the
+right invariant there.  The exception-frontier router then shows that the hard
+mirror-orbit frontier and the boundary-currentless frontier intersect only at
+`random_covering_031`.  HYP-3477 refines the hard side orbit by orbit: seven
+hard orbits already have lower-delta projection-current exits, while
+`random031` is the unique hard/currentless overlap that must route through
+HYP-3455/HYP-3460 and the later gluing sidecars.
 
 ## Exact Readout
 
@@ -93,9 +106,9 @@ new obstruction because a lower-delta E/branch gate on the same row removes
 
 For `random_covering_031`, no single, pair, or mirror E/branch current in
 the bounded HYP-3477 sidecar removes projection edges.  This confirms the
-incoming HYP-3476 reservation is necessary: `random031` is not a generic
-hard-orbit problem but the named finite gluing clause already isolated by
-HYP-3455.
+HYP-3476 exception-frontier router's singleton overlap: `random031` is not a
+generic hard-orbit problem but the named finite gluing clause already isolated
+by HYP-3455.
 
 ## Proof Pull
 
@@ -107,7 +120,8 @@ non-random031 hard orbit
 
 random031 hard orbit
   -> HYP-3455 seven-owner gluing clause
-  -> HYP-3476 pair-current / owner-current / two-adic / signed-SPEC exit
+  -> HYP-3476 route sidecar
+  -> owner-current / two-adic / signed-SPEC exit
 ```
 
 The phase-grid test should be cited carefully.  It does not avoid every hard

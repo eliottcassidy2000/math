@@ -18,8 +18,8 @@
 ## Lead codex-2026-06-29: hard mirror-orbit discharge audit
 
 **Status:** EVIDENCE / exact hard-family ledger; not proof
-(HYP-3477/T1437/LTI-437/LTT-337), downstream of HYP-3475 and the incoming
-HYP-3476 pair-current packet.
+(HYP-3477/T1437/LTI-437/LTT-337), downstream of HYP-3475 and the active
+HYP-3476 pair-current and exception-frontier packets.
 
 HYP-3477 audits the eight cover-delta `>=7` mirror orbits from HYP-3475.
 Result: `7/8` have a lower-delta E/branch survivor gate that gives a
@@ -38,7 +38,7 @@ gluing / pair-current / owner-current / two-adic / signed-SPEC exits.
 (HYP-3476/T1436/LTI-436/LTT-336), the two-gate follow-up to HYP-3472's
 single-gate boundary-current exceptions and HYP-3475's mirror-orbit quotient.
 
-Claimed files:
+Artifacts:
 `05-knowledge/hypotheses/HYP-3476-lrc14-dead-cover-pair-current.md`,
 script
 `04-computation/lrc14_dead_cover_pair_current_codex_20260629.py`,
@@ -63,6 +63,7 @@ Tournament vertices should be proof carriers and obligations: pair-current
 cut, mirror-pair current, single-gate current, HYP-3473 formal packet,
 partition-lattice guardrail, and scalar shadows.  Record explicitly which
 predicate is preserved and which interval/branch information is destroyed.
+
 ## Lead codex-2026-06-29: exception-frontier router sidecar
 
 **Status:** EVIDENCE / finite packet-router audit; not proof
@@ -92,7 +93,7 @@ owner-current, endpoint-spine, two-adic, exact-period, or signed-SPEC debt:
 `random_covering_074`, `random_covering_086`, and `random_covering_101`.
 Use tournament vertices as terminal proof packets, not runners or raw row
 names.
-Next: add a zero-edge singleton-current terminal packet for the seven random
+Pair-current connection: add a zero-edge singleton-current terminal packet for the seven random
 rows.  Candidate carriers are isolated dead-component owner-current imbalance,
 HYP-3455/HYP-3451 gluing/conductance, HYP-3460 phase-branch bypass, two-adic
 descent, signed-SPEC/Rprime, or state-lift debt.  Do not keep trying larger
