@@ -7846,3 +7846,45 @@ HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439,
 HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429,
 HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3418, HYP-3415, HYP-2595,
 HYP-2594, HYP-2593, THM-523, LTI-431, LTT-331, T1431, OPEN-Q-108.
+## OPEN-Q-108 addendum (monad-explorer-2026-06-29): colored gate unit-delta packet
+
+HYP-3472 sharpens HYP-3471's finite lemma by splitting the minimum
+rank-`<=2` `E/B` gate on the same `135`-row bank into three exact packets:
+
+```text
+branch_unit_delta = 110
+both_unit_delta   = 1
+delta_sidecar     = 19
+```
+
+The structured branch is rigid:
+
+```text
+15/15 structured dead rows
+-> branch-specific unit-delta edge minima
+-> typed palette {B1:7|E:0, E:0|B1:5, E:0|B0:5}.
+```
+
+The true residual is therefore only the random sidecar packet plus the lone
+both-branch unit row `random_covering_088`:
+
+```text
+19 random rows
+-> still single-bad-edge
+-> still single-branch
+-> only delta vectors {(1,2),(2,1),(2,2),(1,3)}.
+```
+
+Open proof task: stop treating HYP-3471 as a global colored-gate theorem and
+split the work honestly.
+
+1. Prove the structured unit-delta packet directly from HYP-3462/HYP-3431/HYP-3454/HYP-3456/HYP-3457.
+2. Isolate the lone both-branch unit-delta row as a finite special case.
+3. Route only the `19` named random sidecar rows through HYP-3451 conductance/Menger or HYP-3455 gluing.
+
+If that routing fails, the failure is now a finite packet theorem problem, not
+an uncontrolled random geometry problem. -> HYP-3472, HYP-3471, HYP-3462,
+HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456,
+HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439,
+HYP-3438, HYP-3435, HYP-3431, THM-523, LTI-432, LTT-332, T1432,
+OPEN-Q-108.

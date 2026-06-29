@@ -1,0 +1,42 @@
+HYP-3472 COLORED GATE UNIT-DELTA SPLIT
+status=EVIDENCE / exact HYP-3471 sharpening; not an LRC14 proof
+source=HYP-3471 colored gate-reservoir + H3435 structured/random bank split
+
+## Aggregate Split
+rows_audited=135
+structured_rows=15
+random_rows=120
+dead_rows=130
+structured_dead_rows=15
+random_dead_rows=115
+min_kind_hist={'branch_unit_delta': 110, 'delta_sidecar_packet': 19, 'both_unit_delta': 1}
+unexpected_other_rows=[]
+
+## Structured Packet
+claim=every structured dead row has a branch-specific unit-delta minimum E/branch gate
+structured_unit_delta_rows=15/15
+structured_min_typed_hist={'B1:7|E:0': 10, 'E:0|B1:5': 4, 'E:0|B0:5': 1}
+structured_min_struct_hist={('B1|E', 'branch1', 'left_bad_edge', 1, 1): 10, ('E|B1', 'branch1', 'right_bad_edge', 1, 1): 4, ('E|B0', 'branch0', 'right_bad_edge', 1, 1): 1}
+structured_samples=[('covering_AP_with_84', 'B1:7|E:0', ('B1|E', 'branch1', 'left_bad_edge', 1, 1), '1/588'), ('multi_far_84_154', 'B1:7|E:0', ('B1|E', 'branch1', 'left_bad_edge', 1, 1), '1/588'), ('ap_omit_12_tail_84x01', 'B1:7|E:0', ('B1|E', 'branch1', 'left_bad_edge', 1, 1), '1/588'), ('ap_omit_12_tail_84x02', 'B1:7|E:0', ('B1|E', 'branch1', 'left_bad_edge', 1, 1), '1/392'), ('ap_omit_12_tail_84x03', 'B1:7|E:0', ('B1|E', 'branch1', 'left_bad_edge', 1, 1), '5/1764'), ('ap_omit_12_tail_84x04', 'B1:7|E:0', ('B1|E', 'branch1', 'left_bad_edge', 1, 1), '1/336'), ('ap_omit_12_tail_84x05', 'B1:7|E:0', ('B1|E', 'branch1', 'left_bad_edge', 1, 1), '3/980'), ('ap_omit_12_tail_84x06', 'E:0|B1:5', ('E|B1', 'branch1', 'right_bad_edge', 1, 1), '1/1960'), ('ap_omit_12_tail_84x07', 'E:0|B1:5', ('E|B1', 'branch1', 'right_bad_edge', 1, 1), '23/20580'), ('ap_omit_12_tail_84x08', 'B1:7|E:0', ('B1|E', 'branch1', 'left_bad_edge', 1, 1), '1/4704'), ('ap_omit_12_tail_84x09', 'B1:7|E:0', ('B1|E', 'branch1', 'left_bad_edge', 1, 1), '1/1764'), ('ap_omit_12_tail_84x10', 'B1:7|E:0', ('B1|E', 'branch1', 'left_bad_edge', 1, 1), '1/1176'), ('ap_omit_12_tail_84x11', 'E:0|B1:5', ('E|B1', 'branch1', 'right_bad_edge', 1, 1), '3/10780'), ('ap_omit_12_tail_84x12', 'E:0|B1:5', ('E|B1', 'branch1', 'right_bad_edge', 1, 1), '23/35280'), ('even_frontier_tail_168', 'E:0|B0:5', ('E|B0', 'branch0', 'right_bad_edge', 1, 1), '3/1960')]
+
+## Random Residual
+random_branch_unit_delta_rows=95/115
+random_both_unit_delta_rows=1/115
+random_delta_sidecar_rows=19/115
+random_both_unit_samples=[('random_covering_088', 'B1:11|E:4', ('B1|E', 'both', 'left_bad_edge', 1, 1), '1/2730', 10, 18)]
+
+delta_sidecar packet = still single-bad-edge + single-branch,
+but needs adjacent-cover delta sidecar beyond the unit-delta forms.
+delta_sidecar_struct_hist={('E|B1', 'branch1', 'right_bad_edge', 2, 2): 1, ('B1|E', 'branch1', 'left_bad_edge', 1, 2): 4, ('E|B0', 'branch0', 'right_bad_edge', 1, 2): 3, ('B0|E', 'branch0', 'left_bad_edge', 1, 2): 2, ('B0|E', 'branch0', 'left_bad_edge', 2, 1): 2, ('B1|E', 'branch1', 'left_bad_edge', 2, 1): 1, ('E|B0', 'branch0', 'right_bad_edge', 2, 2): 1, ('E|B0', 'branch0', 'right_bad_edge', 2, 1): 2, ('E|B1', 'branch1', 'right_bad_edge', 2, 1): 1, ('E|B1', 'branch1', 'right_bad_edge', 1, 2): 1, ('E|B1', 'branch1', 'right_bad_edge', 1, 3): 1}
+delta_sidecar_typed_hist={'E:8|B1:1': 2, 'B1:9|E:0': 1, 'E:2|B0:11': 1, 'E:4|B0:7': 1, 'B0:3|E:8': 1, 'B0:11|E:8': 1, 'B1:13|E:8': 1, 'E:0|B0:3': 1, 'B0:5|E:8': 1, 'E:6|B0:7': 1, 'E:12|B1:1': 1, 'B0:3|E:6': 1, 'B1:5|E:8': 1, 'B1:11|E:6': 1, 'E:4|B0:9': 1, 'E:6|B1:1': 1, 'B1:13|E:0': 1, 'E:0|B0:13': 1}
+delta_sidecar_rows=[('random_covering_022', 'E:8|B1:1', ('E|B1', 'branch1', 'right_bad_edge', 2, 2), '1/5950', 16, 150), ('random_covering_036', 'B1:9|E:0', ('B1|E', 'branch1', 'left_bad_edge', 1, 2), '19/175224', 18, 114), ('random_covering_039', 'E:2|B0:11', ('E|B0', 'branch0', 'right_bad_edge', 1, 2), '1/12012', 2, 12), ('random_covering_047', 'E:4|B0:7', ('E|B0', 'branch0', 'right_bad_edge', 1, 2), '1/35280', 24, 128), ('random_covering_051', 'B0:3|E:8', ('B0|E', 'branch0', 'left_bad_edge', 1, 2), '3/89936', 26, 84), ('random_covering_054', 'B0:11|E:8', ('B0|E', 'branch0', 'left_bad_edge', 2, 1), '1/10010', 6, 100), ('random_covering_056', 'B1:13|E:8', ('B1|E', 'branch1', 'left_bad_edge', 2, 1), '1/22378', 16, 126), ('random_covering_058', 'E:0|B0:3', ('E|B0', 'branch0', 'right_bad_edge', 2, 2), '1/4312', 6, 58), ('random_covering_059', 'B0:5|E:8', ('B0|E', 'branch0', 'left_bad_edge', 2, 1), '1/162274', 30, 66), ('random_covering_063', 'E:6|B0:7', ('E|B0', 'branch0', 'right_bad_edge', 2, 1), '1/20580', 8, 70), ('random_covering_069', 'E:12|B1:1', ('E|B1', 'branch1', 'right_bad_edge', 2, 1), '1/33796', 10, 88), ('random_covering_074', 'B0:3|E:6', ('B0|E', 'branch0', 'left_bad_edge', 1, 2), '5/93912', 2, 72), ('random_covering_083', 'B1:5|E:8', ('B1|E', 'branch1', 'left_bad_edge', 1, 2), '3/10150', 30, 58), ('random_covering_085', 'B1:11|E:6', ('B1|E', 'branch1', 'left_bad_edge', 1, 2), '1/10920', 20, 122), ('random_covering_090', 'E:8|B1:1', ('E|B1', 'branch1', 'right_bad_edge', 1, 2), '1/18984', 22, 94), ('random_covering_095', 'E:4|B0:9', ('E|B0', 'branch0', 'right_bad_edge', 2, 1), '1/148330', 14, 96), ('random_covering_104', 'E:6|B1:1', ('E|B1', 'branch1', 'right_bad_edge', 1, 3), '1/19942', 6, 90), ('random_covering_107', 'B1:13|E:0', ('B1|E', 'branch1', 'left_bad_edge', 1, 2), '1/149842', 24, 106), ('random_covering_113', 'E:0|B0:13', ('E|B0', 'branch0', 'right_bad_edge', 1, 2), '1/130928', 14, 138)]
+
+## Finite Consequence
+Exact sharpening of HYP-3471 on the audited bank:
+  every structured dead row -> branch-specific unit-delta minimum E/branch gate
+  every random dead row -> branch-specific unit-delta minimum gate,
+                       or one both-branch unit-delta row,
+                       or a 19-row single-branch cover-delta sidecar packet
+The residual is therefore finite and typed; it is not arbitrary loss of the
+colored gate-reservoir.  The next proof task is to route the 19-row packet
+through HYP-3451 conductance/Menger or HYP-3455 gluing sidecars.
