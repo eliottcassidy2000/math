@@ -1,3 +1,15 @@
+## codex-2026-06-29 -- HYP-3520 owner-boundary persistence reservation
+
+Prompt: work creatively on owner-boundary persistence.
+
+Reserved HYP-3520/T1520/LTI-520/LTT-420 for the random031 owner-cobordism
+certificate.  Known starting point: the max-delta forbidden seam on components
+`(43,54)` carries all seven owners `(23,45,93,113,147,169,173)`, while the
+lower-delta pure bypass on the same components carries `(23,93,113)` and is hit
+by exactly `12` phase witnesses.  The finite target is a quotient-price matrix
+showing which sidecars reconstruct the persistent boundary debt
+`(45,147,169,173)`.
+
 ## codex-2026-06-29 -- HYP-3490 Lean private-label firewall ledger
 
 Added `TournamentH7.LRCPrivateLabelFirewall` and stored

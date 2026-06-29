@@ -1,5 +1,16 @@
 # Investigation Backlog
 
+**HYP-3520 random031 owner-boundary persistence.**  Reserved as the immediate
+HYP-3494 continuation.  Build the executable quotient-price matrix for the
+pure bypass: seam owner word `(23,45,93,113,147,169,173)`, bypass flow-owner
+word `(23,93,113)`, hard components `(43,54)`, exact `12` phase hits, and
+boundary debt `(45,147,169,173)`.  Treat tournament vertices as sidecars and
+proof interfaces, not runners/arcs/raw witnesses.  Success means a finite
+owner-current/relative-H1 cobordism lemma; failure should name the first
+missing sidecar. -> HYP-3520, HYP-3494, HYP-3493, HYP-3511, HYP-3510,
+HYP-3490, HYP-3486, HYP-3483, HYP-3481, HYP-3402, HYP-3034, LTI-520,
+LTT-420, T1520, OPEN-Q-108.
+
 **HYP-3492 repo-history niche connection atlas.**  Convert the historian
 scorecard into executable HYP-3486/HYP-3490 follow-ups.  Highest-yield tasks:
 build a fiber-Haar certificate on the `1211` base fibers; formalize the

@@ -34,6 +34,27 @@ safe components, gaps, sections, endpoints, residues, wall crossings, exact
 period packets, Fourier modes, Haar tiles, quotient fibers, state-lift sectors,
 and proof obligations first.
 
+## LTI-520 - Random031 owner-boundary persistence
+
+Carrier / vertex set: quotient sidecars for the pure bypass, including seam
+owner word, bypass owner word, hard-component owner map, owner-current
+cobordism matrix, relative-H1 boundary class, dead-island owner union, global
+flow-owner union, delta route, component pair, and raw bypass count.
+Pairwise observable: exact reconstruction of the boundary debt
+`(45,147,169,173)` together with local compatibility with the `12`-cell pure
+bypass stalk.
+Preserved LRC predicate: random031 pure-bypass discharge after deleting the
+forbidden max-delta seam.
+Destroyed information: scalar and component-only quotients erase the seam-only
+owner word.
+Best use: prove owner-boundary persistence, or name the first missing sidecar.
+Failure mode: treating the hard pair as a wall instead of a forbidden seam
+whose complement carries phase flow.
+Anchors: HYP-3520, HYP-3494, HYP-3493, HYP-3510, HYP-3511, HYP-3486,
+HYP-3402, HYP-3034, T1520, LTT-420.
+Next agent hook: execute the quotient-price matrix and turn the surviving
+owner-current word into a finite lemma statement.
+
 ## Current Assembly Principle
 
 The live LRC14 proof object is a labelled packet over several compatible

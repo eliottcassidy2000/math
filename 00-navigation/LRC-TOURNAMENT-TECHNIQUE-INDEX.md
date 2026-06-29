@@ -39,6 +39,21 @@ boundaries, wall-crossing events, residue packets, cover arcs, Fourier modes,
 Haar rectangles, matroid topes/cocircuits, Fejer atom banks, state-lift
 obligations, and proof-carrier interfaces.
 
+## LTT-420 - Owner-Boundary Sidecar Tournament
+
+- **Move:** Rank quotient sidecars by whether they reconstruct the random031
+  pure-bypass boundary debt `(45,147,169,173)`.
+- **LRC use:** Turns HYP-3494's owner-boundary persistence target into a finite
+  sidecar audit before any formal terminal lemma is attempted.
+- **Preserves:** The seam owner word, bypass flow-owner word, hard-component
+  support `(43,54)`, and local `12`-cell pure-bypass stalk.
+- **Forgets / guardrail:** Raw witness counts, component pairs, and bypass
+  owner words alone forget the four seam-only owners.
+- **Next pull:** Build the HYP-3520 quotient-price matrix and use the winning
+  sidecars as the exact owner-current cobordism interface.
+- **Pointers:** HYP-3520, HYP-3494, HYP-3493, HYP-3510, HYP-3511, HYP-3486,
+  HYP-3483, HYP-3402, HYP-3034, T1520, LTI-520.
+
 ## Fast Routing Map
 
 - Need to separate strict-open mass from endpoint-only equality:
