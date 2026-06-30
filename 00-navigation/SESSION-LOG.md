@@ -31,6 +31,38 @@ Files: HYP-3617, script forbidden_H_certificates_macmini_20260630.py(+.out). Bui
 condensation HYP-3603 + why-seven-is-forbidden + s699. Broadcast.
 
 ## mac-mini-2026-06-30-S39 -- the 7,21 IMPOSSIBILITY = the COUNTING face of the same odd-cycle/completeness structure as the LRC apex-7 floor (HYP-3616); ceded HYP-3607->3608
+## klein-2026-06-29-S22 -- MORE GRADERS / NEW INVARIANTS: the apex is MULTI-AXIS (gap, flatness/defect, size/odd-girth are independent); new metrics; universal graders verified cross-object (HYP-3610)
+
+Prompt: look for more things that grade everything / act as invariants; imaginatively create new metrics.
+
+Built a FAMILY of spread/concentration graders on the Z_7 cores (scripts grader_family_cores /
+grader_axes_extremal / grader_universality_tournaments _klein.py) and rank-correlated them. The apex is NOT
+one axis -- it splits into >=3 INDEPENDENT axes:
+ - Axis 1 = the GAP g (worst-mode, THM-590 certificate); concentrated pole = DOUBLET (= odd cycle C_p).
+ - Axis 2 = spectral FLATNESS F=GM/AM ~ -DIFFERENCE-SET-DEFECT Var(a(d)); only 0.50 correlated with g;
+   concentrated pole = the ARC/interval -- a DIFFERENT core than g's.
+ - Axis 3 = IPR ~ entropy ~ Cayley-ODD-GIRTH ~ -|O| (effective support size).
+KEY DISAGREEMENT (proof it is multi-axis): doublet min g (0.198) but arc-4 min F (0.5, defect 0.667) -- two
+different 'most concentrated' cores. The difference set (Paley/Fano) is the common RANDOM/spread pole.
+
+NEW invented metrics: difference-set DEFECT Var(a(d)) (distance from a perfect difference set), Cayley
+ODD-GIRTH (on-theme: doublet->girth p, diff-set->3, transitive->inf), spectral flatness, binding-mode k*.
+
+UNIVERSAL graders (need only a spectrum / associated graph -> grade every object): flatness, gap, odd-girth/
+cyclicity. VERIFIED cross-object: on TOURNAMENTS the n=4 Klein-four classes grade odd-girth {inf,3,3,3}
+(transitive = orderable inf cusp = the g=0 analog), cyclicity {0,1,1,2}; the apex cusp (full Z_7, g=0) and
+the transitive tournament (orderable) are the SAME degenerate pole -- the grading structure of the apex Z_7
+cores recurs verbatim on the tournament side. CONJECTURE: g = existence/certificate axis (sigma-odd),
+F = measure/equidistribution axis (sigma-even). Added a grader-space section (VII) to the apex-core-atlas.
+
+HOUSEKEEPING: deep concurrent collision -- mac-mini-S39 moved their small-measure into HYP-3608 (my atlas,
+pushed S21) and made HYP-3609 (their 7,21) colliding with my chip. To stop the ping-pong with NO cross-agent
+editing, I moved MY OWN two: atlas 3608->3611, chip 3609->3612 (touching only my files + my INDEX/log
+entries); mac-mini keeps 3608 (small-measure) + 3609 (7,21). FINAL MAP: 3608=mac-mini small-measure,
+3609=mac-mini 7,21, 3610=klein multi-axis, 3611=klein atlas, 3612=klein chip. No canon overridden; no court
+cases.
+
+## mac-mini-2026-06-30-S39 -- the 7,21 IMPOSSIBILITY = the COUNTING face of the same odd-cycle/completeness structure as the LRC apex-7 floor (HYP-3609); ceded HYP-3607->3608
 
 Prompt: understand the 7,21 impossibility in analogous relation to all this.
 
@@ -66,11 +98,13 @@ Files: HYP-3616. Builds on why-seven-is-forbidden + s699 + HYP-3606/3603/3608/35
 
 ## mac-mini-2026-06-30-S38 -- SEARCH: the small-measure regime is the HEART; the extremal is measure-ZERO with lonely set = the phi(n) units (HYP-3615); ceded HYP-3604->3606
 ## klein-2026-06-29-S21 -- APEX CORE ATLAS: a fine field-guide to the Z_p cores (gap=concentration index; cores=circulant graphs; arcs=Fejer; cross-prime; descent gap-profile) (HYP-3608); resolved HYP-3607 collision (my chip ->3609)
+## mac-mini-2026-06-30-S38 -- SEARCH: the small-measure regime is the HEART; the extremal is measure-ZERO with lonely set = the phi(n) units (HYP-3608); ceded HYP-3604->3606
+## klein-2026-06-29-S21 -- APEX CORE ATLAS: a fine field-guide to the Z_p cores (gap=concentration index; cores=circulant graphs; arcs=Fejer; cross-prime; descent gap-profile) (HYP-3611); resolved HYP-3607 collision (my chip ->3612)
 
 Prompt: seek out and record finely detailed patterns/features of our problemscapes, make things clear, long session.
 
 Built a finely-detailed REFERENCE ATLAS of the apex problemscape (05-knowledge/reference/apex-core-atlas.md,
-HYP-3608). Scripts: apex_core_atlas / apex_cross_prime_family / apex_core_graph_map_and_profiles /
+HYP-3611). Scripts: apex_core_atlas / apex_cross_prime_family / apex_core_graph_map_and_profiles /
 apex_arc_fejer_kernel _klein.py. Fine patterns found:
 
 (1) The gap g(O) is a CONCENTRATION INDEX ordering cores by Fourier spread: doublet(0.198)<arc(0.308)<
@@ -130,8 +164,7 @@ when the area is zero, you count the units / the odd cycle.
 
 Files: HYP-3607, script small_measure_extremal_units_macmini_20260630.py(+.out). Builds on klein-S16/S18 +
 HYP-3580/3562/3606/3548. Broadcast.
-## klein-2026-06-29-S20 -- CHIP THE GAP: THM-580's CS bound CLOSES the deeper levels (j>=1, CS floor 0.65-0.87); the open part LOCALIZES to level 0 (top core CV blows up) = the original existence question (HYP-3608)
-## klein-2026-06-29-S20 -- CHIP THE GAP: THM-580's CS bound CLOSES the deeper levels (j>=1, CS floor 0.65-0.87); the open part LOCALIZES to level 0 (top core CV blows up) = the original existence question (HYP-3609)
+## klein-2026-06-29-S20 -- CHIP THE GAP: THM-580's CS bound CLOSES the deeper levels (j>=1, CS floor 0.65-0.87); the open part LOCALIZES to level 0 (top core CV blows up) = the original existence question (HYP-3612)
 
 Prompt: work at chipping away at the gap and work on the least-eigenvalue certificate.
 

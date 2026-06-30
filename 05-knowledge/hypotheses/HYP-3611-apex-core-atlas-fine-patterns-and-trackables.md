@@ -1,5 +1,5 @@
 ---
-id: HYP-3608
+id: HYP-3611
 title: APEX CORE ATLAS -- fine patterns of the Z_p core landscape: (1) the gap g(O) is a CONCENTRATION INDEX ordering cores by spread, binding = the LEAST-spread doublet (opposite of the Paley/random core); (2) FLAT spectrum <=> INTEGER gap {0,1,2} (difference-set/singleton/full) vs IRRATIONAL binding gaps {0.198,0.308} (non-flat); (3) cores ARE circulant graphs (doublet=C_7 cycle, difference-set=K_7, singleton=I, full=7J, m-arc=Dirichlet/FEJER kernel); (4) the ARC cores are exactly the Fejer-Bochner minorant cores, doublet=2-arc with gap 4sin^2(pi/2p)=the Fejer kernel minimum; (5) cross-prime: doublet gap ~ pi^2/p^2, p=3mod4 has Paley flat-QR (gap (p+1)/4 = max), bracket [4sin^2(pi/2p), (p+1)/4]; (6) NEW TRACKABLE the descent gap-profile, near-universal tail [...,0.308,0.198,1.0], head varies (cusp 0.0 vs co-singleton 1.0)
 status: VERIFIED (exhaustive over 127 Z_7 cores; cross-prime p=3..19; arc=Fejer verified p=7,11,13; descent profiles over standard+binding coverings). Reference artifact: 05-knowledge/reference/apex-core-atlas.md.
 source: klein-2026-06-29-S21
@@ -9,7 +9,7 @@ depends_on:
 related:
   - HYP-3606   # mac-mini: non-bipartiteness form
   - HYP-3598   # the finite families (all 127 cores arise)
-  - HYP-3609   # the gap localizes to level 0 (the descent gap-profile head)
+  - HYP-3612   # the gap localizes to level 0 (the descent gap-profile head)
   - HYP-3593   # the Paley / nu_2 = 3 mod 4 theme
 results:
   - 04-computation/apex_core_atlas_klein.py
@@ -21,7 +21,7 @@ results:
   - 05-knowledge/results/apex_arc_fejer_kernel_klein.out
 ---
 
-# HYP-3608 — the apex core atlas: fine patterns & new trackables
+# HYP-3611 — the apex core atlas: fine patterns & new trackables
 
 Full reference: `05-knowledge/reference/apex-core-atlas.md`. The new fine patterns:
 

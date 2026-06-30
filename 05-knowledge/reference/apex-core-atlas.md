@@ -105,6 +105,29 @@ consec{1..7}         [      0.308, 0.198, 1.0]    min-pos 0.198, depth 3
 
 ---
 
+## VII. The grader space — multi-axis, not one line (klein-S22, HYP-3610)
+
+The gap `g` is only ONE grader. A family of spread/concentration metrics splits the apex into `>= 3`
+INDEPENDENT axes (Spearman over all 127 cores):
+- **Axis 1 = `g` (gap)** — worst-mode concentration / the certificate. Concentrated pole = **doublet** (odd
+  cycle `C_p`); spread pole = difference set.
+- **Axis 2 = `F` (flatness `GM/AM`) ~ -`D` (difference-set DEFECT `Var(a(d))`)** — global difference-set-ness.
+  Only **0.50** correlated with `g`; concentrated pole = the **ARC/interval** (a DIFFERENT core than `g`'s).
+- **Axis 3 = `IPR` ~ entropy ~ odd-girth ~ -`|O|`** — effective support / size.
+
+Disagreement (the proof it is multi-axis): `doublet` minimizes `g` (0.198) but `arc-4` minimizes `F` (0.5,
+defect 0.667). The difference set is the common spread/random pole. CONJECTURE: `g` = the existence/
+certificate axis (sigma-odd), `F` = the equidistribution/measure axis (sigma-even).
+
+**Universal graders** (need only a spectrum or an associated graph -> grade every object):
+- `F` (flatness, any spectrum) — structured<->random.
+- `g` (gap / least eigenvalue, any spectrum) — certificate / worst mode.
+- **odd-girth / cyclicity** (any associated graph) — intransitivity / cycle-scale. VERIFIED cross-object:
+  on tournaments the n=4 Klein-four classes grade `{inf,3,3,3}` (transitive = orderable `inf` cusp = the
+  `g=0` analog; rest = Condorcet `3`); cyclicity `{0,1,1,2}`. The apex cusp (full `Z_7`, `g=0`) and the
+  transitive tournament (orderable, odd-girth `inf`) are the SAME degenerate pole. New invented metrics:
+  difference-set defect, Cayley odd-girth, binding-mode `k*`.
+
 ## The one-paragraph picture
 
 The apex problemscape is the lattice of `Z_p` cores graded by a single concentration index `g(O)` = the
@@ -116,4 +139,4 @@ difference set** (`K_p`, gap `(p+1)/4`, flat, exists iff `p = 3 mod 4`) at the s
 every covering through this lattice with a near-universal gap-profile tail ending at the binding doublet.
 
 See THM-590, HYP-3604/3606 (the least-eigenvalue certificate), HYP-3598/3600 (the finite families),
-HYP-3609 (the gap localizes to level 0), HYP-3608 (this atlas's new patterns/trackables).
+HYP-3612 (the gap localizes to level 0), HYP-3611 (this atlas's new patterns/trackables).

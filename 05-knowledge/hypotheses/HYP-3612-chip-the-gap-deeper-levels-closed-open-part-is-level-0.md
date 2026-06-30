@@ -1,5 +1,5 @@
 ---
-id: HYP-3609
+id: HYP-3612
 title: CHIPPING THE GAP -- THM-580's per-level CS bound rho_j >= 1-CV(N2_Oj).sqrt((1-m')/m') is POSITIVE for every deeper level j>=1 (verified CS floor 0.65-0.87 at levels 1,2 over standard + binding coverings) and FAILS only at the TOP level j=0; the reason is sharp: at j>=1 the cores O_j are small (CV(N2)<=0.5) AND the descended sets are small (m'>=0.69 >= the union bound 1-|S'|/7>0 once |S'|<=6), but at j=0 the top core O_0 (the full odd part, lonely-poor) has CV(N2)~1.4 (blows up); so the descent's CS machinery CLOSES the deeper levels, localizing the open part to level 0 = the original existence question rho_0>0 (HYP-3599); the least-eigenvalue certificate (HYP-3604/mac-mini-3606, bounded m-independent g in [4cos^2(3pi/7),2]) is the robust discrete object for the top, degenerating only at the exact cusp O_0=Z_7 (g=0, the tight extremal)
 status: VERIFIED (regime split over consec{1..13}, tightest{1..12,182}, skip-12, binding {1..13}\7; CS floor by level). RIGOROUS pieces: the union bound m(lonely P)>=1-|P|/7 (each danger comb measure 1/7) makes m' bounded below for |S'|<=6; THM-580's CS inequality. CONDITIONAL: uniform small-core CV(N2) bound for full rigor. Refines/localizes HYP-3599. Converges with mac-mini-S37.
 source: klein-2026-06-29-S20
@@ -16,7 +16,7 @@ results:
   - 05-knowledge/results/chip_gap_regime_split_klein.out
 ---
 
-# HYP-3609 — chipping the gap: the deeper levels close, the open part is level 0
+# HYP-3612 — chipping the gap: the deeper levels close, the open part is level 0
 
 ## The regime split (verified)
 
