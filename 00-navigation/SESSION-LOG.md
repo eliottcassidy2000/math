@@ -1,3 +1,41 @@
+## mac-mini-2026-06-30-S50 -- THE LRC PARITY IS THE BIPARTITENESS OF C_n: even n = bipartite cycle = tight M=1/n (even-block local worst-case); odd n = non-bipartite cycle = the margin; = the apex certificate parity (HYP-3606); + margin deviation (irregular) + odd-n/Paley frontier (HYP-3729)
+
+Prompt: (1) see exactly how the margin deviates at any n; (2) work the even-n worst-case proof (equally-spaced
+C_n can't be beaten); (3) smarter odd-n realizability + tournament connections. klein-S34 explicitly left
+the odd-n covering-min to me ('mac-mini owns it').
+
+THE KEY DISCOVERY: the LRC parity = the bipartiteness of C_n. At the witness t*=1/(2n) the equally-spaced
+orbit IS the cycle C_n. EVEN n: C_n BIPARTITE (antipodal +1/2 pairing, with 1/2 mapping to the hole 0;
+2+lambda_min(C_n)=0, NO spectral gap) => M=1/n is TIGHT, the even block is the worst case (VERIFIED local
+worst-case: 0 of all single-speed perturbations beat 1/n at n=8,10). ODD n: C_n NON-BIPARTITE
+(2+lambda_min(C_n)=4sin^2(pi/2n)>0, a spectral gap) => the primitive covering-min is STRICTLY >1/n (the
+margin). This is EXACTLY the apex least-eigenvalue certificate parity (HYP-3606/THM-590: doublet gap =
+2+lambda_min(C_p) = 4sin^2(pi/2p), positive iff C_p non-bipartite iff p odd). The LRC even/odd and the apex
+bipartite/non-bipartite are the SAME parity on the SAME cycle. (Verified 2+lambda_min(C_n)=0 even /
+4sin^2(pi/2n) odd, n=5..14.)
+
+(2) EVEN-n WORST-CASE: the bipartite equally-spaced even block is the extremal (M=1/n), verified LOCAL
+worst-case (no single-speed perturbation beats 1/n). The full claim 'no covering set beats 1/n' is the open
+LRC; bipartite-C_n is the right extremal frame; strategy = Fejer/antipodal-symmetry certificate or klein's
+even-fold 14->7.
+
+(1) MARGIN DEVIATION (honest): primitive covering-min margin = exact 1/(n(2n-1)) at n=7 (2/13, =1/91) and
+n=8 (2/15, =1/120), but DEVIATES at n=9 (best-known 4/33, margin 1/99 NOT 1/153=1/(9*17)). IRREGULAR, no clean
+formula -- the covering-min is genuinely n-dependent. Reliable exact values only at small n (the covering-min
+is a hard optimization; my structured/local searches are unreliable for n>=9, finding 1/7 at n=8 vs the true
+2/15).
+
+(3)+(4) ODD-n FRONTIER + TOURNAMENTS: the odd-n primitive covering-min lives on a circulant mod m (n=7:13,
+n=8:15) = a PALEY vertex count (Paley graph on 13 = RAMANUJAN; n=14: 2n-1=27=GF(3^3) -> Paley tournament).
+The covering-min = the most equidistributed (Ramanujan-flat) primitive covering set; SEED searches by
+QR/Paley circulants mod m, not by perturbing the construction. The non-bipartite C_n (odd) is the apex
+doublet's cycle; the Paley tournament is the regular/Ramanujan tournament; the C_n bipartite/non-bipartite
+split = the project's even-graph/odd-cycle duality at the covering floor (klein-S34 metazeta: Ramanujan =
+Ihara-RH).
+
+Files: HYP-3729, scripts covering_min_smart_search_macmini_20260630.py(+.out). Builds on HYP-3727 + HYP-3606
++ klein-S34. (n=9 exhaustive confirm of 4/33 launched, slow.) Broadcast.
+
 ## mac-mini-2026-06-30-S49 -- PRIMITIVITY resolves the odd/even covering-min back-and-forth (opus's 1/n is the non-primitive/q-witness EASY case; THM-523 canon reduces LRC to PRIMITIVE covering sets where M>1/n = the hard MARGIN); + the Ramanujan/Paley frame + the 3 leverage ways (HYP-3727)
 
 Prompt: work the 3 leverage ways + the odd-n & even-n covering-min back-and-forth + consider 'a regular graph
