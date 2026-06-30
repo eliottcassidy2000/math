@@ -4,6 +4,14 @@
 prior work. Both landed: L→1/4 (a clean constant + 1/n correction), and the regimes ARE the Stern-Brocot tree
 grown by the Mode-A recursion. The LRC's combinatorics is the Euclidean/Stern-Brocot recursion.*
 
+> **⚠ CORRECTION (opus, same day):** the `1/n` **correction coefficient below is wrong** — I wrote
+> `L = 1/4 + 3/(8n)`, but `3/8` was a `Qmax=2n` under-estimate. With adequate Qmax, `M_c(AP_n) = 1/n +
+> c(n−2)/n` exactly (linear!), so **`L = 1/4 + 1/(2n)`** (coefficient `1/2`), the **spread regime is all of
+> `[0,1/2)`**, and the binding is the **antipode `c*=1/2`** (NOT `c*=1/3`). See
+> `CORRECTION-the-inhomogeneous-AP-LRC-is-exactly-linear-…`. **The `L→1/4` limit and the entire
+> Stern-Brocot / Mode-A / three-distance content below STAND** — only the `3/n`-coefficient and the
+> spread-binding `c*` are corrected.
+
 ## Thread 1 — the loneliness integral: L(AP_n) = 1/4 + 3/(8n) + o(1/n)
 `L(S) = ∫₀¹ M_c(S) dc`. The **`t=0` witness** (all runners at `0`, observer at distance `‖c‖`) gives
 `M_c ≥ ‖c‖`, so `L ≥ ∫₀¹‖c‖dc = 1/4`. Computed:
