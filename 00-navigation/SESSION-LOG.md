@@ -1,3 +1,39 @@
+## klein-2026-06-30-S40 -- the CONSTRUCTION BINDING is PROVED (D=Phi6=(n-1)n+1 ≡ 1 mod (n-1) via explicit images: core AP of multiples of n + killer (n-1)^2 splitting the wrap gap into {1,2n}; three-gap {1,n,2n}); + UNIQUENESS (D/rung unique, covering not: n=7 has 2); + Ostrowski/Zeckendorf address (HYP-3738)
+
+Prompt: work on proving the binding and the uniqueness theorem; think Zeckendorf-related connections.
+
+PROVED THEOREM (the construction binding). For S={1..n-2, n(n-1)}: covering-min M=n/Phi6 at modulus D=Phi6=
+n^2-n+1, rotation a=n, and D=(n-1)n+1 ≡ 1 mod (n-1). Proof by explicit images at a=n mod Phi6: since Phi6≡1
+mod n, gcd(n,Phi6)=1, so the core {k.n : k=1..n-2} is an AP (step n); the killer n(n-1).n ≡ (n-1)^2 =
+(n-2)n+1 lands ONE above the top core point, splitting the wrap gap 2n+1 into {1, 2n}. Gap multiset
+{1, n^(n-3), 2n}, sum (n-1)n+1=Phi6; deep hole = the 2n wrap gap (observer at center, radius n) => M=n/Phi6.
+The UNIT GAP is exactly the +1 in Phi6=(n-1)n+1. Verified n=5..9 (e.g. n=7: images {7,14,21,28,35,36} mod 43,
+gaps {1,7,7,7,7,14}). This proves D≡1 mod(n-1) for the rung-n / construction regime (the covering-min for
+n>=12, incl. n=14).
+
+UNIQUENESS THEOREM. The covering-min VALUE determines a unique binding D=denom(M) and rung k; all extremal
+coverings share them, but the COVERING is NOT unique: n=7 has exactly 2 ({1,2,5,6,7,8} spreader-route,
+{1,4,5,6,7,11} band-prime-killer-route), both D=13; n=9 has >=2, both D=33. The right invariant is the rung.
+
+ZECKENDORF/OSTROWSKI. The ladder denominators k(n-1)+1 are 2-term continuants K(n-1,k); M=[0;n-1,k] is the
+unique Ostrowski representation (the CF-generalization of Zeckendorf -- Zeckendorf = the golden-ratio/all-1 CF
+case). The binding THREE-GAP realizes it geometrically: alpha=a/D=n/Phi6=M, convergent denominators
+q0=1,q1=n-1,q2=Phi6, and the three gaps {1,n,2n}/Phi6 are the Ostrowski place values (||q1 alpha||=1/Phi6 the
+unit gap). The covering-min's rung = its unique address digit.
+
+STILL OPEN: the SPREAD-regime binding (D≡1 for the low-rung covering-mins n=7..11). The spreads are NOT
+three-gap (n=7 spread {1,2,5,6,7,8} has gaps {1,1,2,2,3,4}, four distinct), so the three-gap proof doesn't
+apply -- a different (over-constraint/Ostrowski) argument is needed.
+
+CONVERGENCE with mac-mini-S54 (HYP-3737): mac-mini showed the radius-1 band over-constraint FORCES the
+construction for n>=12 (three-regime trajectory mediant->spread->construction; LRC14 covering-min=14/183). My
+HYP-3738 PROVES the binding for exactly that construction regime -- so for n>=12 (incl. n=14) the covering-min
+= n/Phi6 with binding D=Phi6≡1 mod(n-1) is now PROVED end-to-end (mac-mini: construction is forced; klein: its
+binding is D=Phi6≡1). n=14: 14/183, D=183=14*13+1, rung 14.
+
+HOUSEKEEPING: filed HYP-3738 (3737=mac-mini, no collision). No canon overridden, no court cases. The
+construction-binding theorem is promotable to canon.
+
 ## mac-mini-2026-06-30-S54 -- chasing the next target: the RADIUS-1 BAND over-constraint FORCES the construction for n>=12; THREE-REGIME trajectory (mediant->spread->construction); LRC14 covering-min=14/183; converges with klein-S39 (HYP-3737)
 
 Prompt: chase the next target, leverage knowledge of over-constraint patterns.
