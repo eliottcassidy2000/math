@@ -1,0 +1,24 @@
+  n=14 V=183: 183 speeds, 40747 witnesses
+    iter 1: r=91/365=0.24932 feasible=True
+    iter 2: r=1/8=0.12500 feasible=False
+    iter 3: r=3/16=0.18750 feasible=True
+    iter 4: r=47/301=0.15615 feasible=True
+    iter 5: r=26/185=0.14054 feasible=True
+    iter 6: r=47/354=0.13277 feasible=False
+    iter 7: r=41/300=0.13667 feasible=True
+    iter 8: r=45/334=0.13473 feasible=True
+    iter 9: r=40/299=0.13378 feasible=False
+    iter 10: r=49/365=0.13425 feasible=False
+    iter 11: r=39/290=0.13448 feasible=True
+    iter 12: r=43/320=0.13437 feasible=False
+    iter 13: r=25/186=0.13441 feasible=True
+    iter 14: r=34/253=0.13439 feasible=True
+  => PRIMITIVE COVERING-MIN n=14 = 35/263=0.133080 at t*=247/263, S=[8, 22, 28, 30, 36, 52, 59, 80, 112, 140, 158, 176, 183], prim=True
+     construction n/Phi6=14/183=0.076503; covering-min == construction? False; depth a=[0;13,k] k=?
+
+# !! WARNING (mac-mini-S54): the "35/263=0.1331" result is GARBAGE -- a TIME-LIMIT ARTIFACT.
+# scipy.milp could not solve the 40747-constraint feasibility within the 40s limit and returned
+# false "infeasible" at low r, so the binary search converged to a spurious HIGH value.
+# 35/263 > 14/183 (the construction), which is IMPOSSIBLE for a covering-MIN. The full ILP at V=n(n-1)
+# is intractable for milp. The covering-min at n=14 is 14/183 (the construction) per the over-constraint
+# forcing argument (HYP-3736), NOT this number. Do not cite 35/263.

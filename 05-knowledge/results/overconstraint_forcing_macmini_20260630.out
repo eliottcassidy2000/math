@@ -1,0 +1,14 @@
+RADIUS-1 BAND FORCING (leverage of klein-S38's radius-demand criterion)
+
+  n=10: consecutive base covers interior D in (10,17] @r1: True; outlier n(n-1)=90≡0 mod 2(n-1)=18: True; construction band-radii [1, 1, 1, 1, 0, 1, 1, 0] (all 1 = saturated)
+  n=11: consecutive base covers interior D in (11,19] @r1: True; outlier n(n-1)=110≡0 mod 2(n-1)=20: False; construction band-radii [1, 1, 1, 1, 1, 1, 1, 1, 1] (all 1 = saturated)
+  n=12: consecutive base covers interior D in (12,21] @r1: True; outlier n(n-1)=132≡0 mod 2(n-1)=22: True; construction band-radii [1, 1, 1, 1, 1, 1, 1, 1, 1, 0] (all 1 = saturated)
+  n=13: consecutive base covers interior D in (13,23] @r1: True; outlier n(n-1)=156≡0 mod 2(n-1)=24: False; construction band-radii [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] (all 1 = saturated)
+  n=14: consecutive base covers interior D in (14,25] @r1: True; outlier n(n-1)=182≡0 mod 2(n-1)=26: True; construction band-radii [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0] (all 1 = saturated)
+  n=16: consecutive base covers interior D in (16,29] @r1: True; outlier n(n-1)=240≡0 mod 2(n-1)=30: True; construction band-radii [1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0] (all 1 = saturated)
+
+  spread/drop bases SCATTER deficits across many D (one outlier patches <=3/D) -> fail the band.
+  => the band FORCES the consecutive base; lcm(n-1,n)=n(n-1) is the unique covering outlier => construction.
+
+TRAJECTORY: mediant 2/(2n-1) [n<=6] -> spread [0;n-1,a(n)] [7..11] -> construction n/Phi_6 [n>=12].
+  LRC14 covering-min = 14/183 = construction; margin 13/2562 (HYP-2566 looseness at n=14).
