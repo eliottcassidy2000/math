@@ -1,0 +1,13 @@
+construction [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]: M=14/183=14/183; binding pair at t*=14/183 (speeds with min dist): [1, 182] = {smallest, largest}
+
+STEP 1 (lowness lemma) -- best M over covering 13-sets MISSING a small speed (incl. huge speeds):
+  missing 1: 2/17=0.1176 | missing 2: 13/125=0.1040 | missing 3: 2/19=0.1053 | missing 12: 2/25=0.0800
+  ALL > 14/183=0.0765 -> {1..12} is FORCED for M<=14/183. (Speed 1 is covering-irrelevant but M-necessary.)
+
+STEP 2 (rigorous): {1..12} subset S, |S|=13, covers 2..14 => the 13th speed alone covers q=13 AND q=14
+  => it is a common multiple of 13 and 14 => a multiple of lcm(13,14)=182 => smallest is 182
+  => S = {1..12, 182} = the construction => M = 14/183.
+
+=> LRC14 covering-min = 14/183 (hence LRC14: M>=1/14, margin 13/2562) REDUCES to STEP 1 alone:
+   the LOWNESS LEMMA  M(S) <= n/Phi_6(n) => {1,..,n-2} subset S.
+   This collapses the UNBOUNDED covering-set search to ONE set (no speed bound needed once {1..12} forced).

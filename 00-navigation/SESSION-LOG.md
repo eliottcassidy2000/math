@@ -1,3 +1,32 @@
+## mac-mini-2026-06-30-S56 -- the LRC14 HARD CORE reduces to a single LOWNESS LEMMA (M(S)<=14/183 => {1..12} subset S); covering vs lowness separation (speed 1 covering-irrelevant but M-necessary, binding pair {1, n(n-1)}={smallest,largest}); the unbounded search COLLAPSES to one set (HYP-3740)
+
+Prompt: work on the LRC hard core creatively.
+
+THE REDUCTION. covering-min(14)=14/183 (=> LRC14: M>=1/14, margin 13/2562) follows from:
+  STEP 1 (LOWNESS LEMMA, strongly evidenced, NOT proved): M(S)<=14/183 => {1,2,..,12} subset S.
+  STEP 2 (RIGOROUS): {1..12} subset S, |S|=13, covers 2..14 => the lone 13th speed covers q=13 AND q=14 =>
+    it is a multiple of lcm(13,14)=182 => smallest is 182 => S = construction => M=14/183.
+So once {1..12} is forced, the UNBOUNDED covering-set search collapses to ONE set (no speed bound needed). The
+WHOLE LRC14 hard core is Step 1.
+
+KEY IDEA -- COVERING vs LOWNESS (the separation). The construction's binding pair at t*=14/183 is {1, 182} =
+{smallest, largest} = {1, n(n-1)}. Speed 1 is COVERING-IRRELEVANT (a multiple of no q>=2, so THM-523 never needs
+it) yet M-NECESSARY (half the binding pair). So the LRC difficulty SPLITS: COVERING (q-multiples, THM-523, the q-
+witness) + LOWNESS (the consecutive base {1..n-2} forced for the three-gap/Ostrowski binding, HYP-3738/3739).
+THM-523 is the covering half; the LOWNESS LEMMA is the missing binding half.
+
+STEP 1 EVIDENCE: covering 13-sets MISSING any small speed have M strictly above 14/183 EVEN with huge speeds
+(tested to 455): missing 1->2/17, missing 2->13/125, missing 3->2/19, missing 12->2/25 (all >14/183=0.0765); 0
+single-perturbations of the construction beat/tie it (HYP-3739).
+
+PROOF ROUTES for the lowness lemma: (1) klein-S39's transversal M-optimality (the full consecutive transversal
+is the unique M-min base); (2) a 'k-witness' -- the binding analog of THM-523's q-witness: k missing => an
+explicit lonely t with margin >n/Phi_6 (empirically at small prime moduli, e.g. mod 17 for missing-1 at n=14);
+(3) three-gap rigidity (deleting the AP point kn breaks the unit-gap, raising M).
+
+Files: HYP-3740, lrc_hardcore_lowness_lemma_macmini_20260630.py(+.out). Builds on HYP-3739 + klein-S39/S40 +
+THM-523. The sharpest statement yet of what remains for rigorous covering-min(14)=14/183 => LRC14. Broadcast.
+
 ## mac-mini-2026-06-30-S55 -- the uniqueness theorem is M-UNIQUENESS not base-uniqueness (literal base-uniqueness FAILS: 1406 band-coverers at n=13; but the construction is the strict M-minimizer); Zeckendorf = OSTROWSKI numeration (klein-S40); converges w/ klein-S40 (HYP-3739)
 
 Prompt: work the uniqueness theorem; think Zeckendorf connections.
