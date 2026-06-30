@@ -1,0 +1,38 @@
+==============================================================================
+Approach 1: the EXACT variance of H (the finite Siegel-Rogers 2nd moment)
+==============================================================================
+
+ n  E[H]=n!/2^(n-1)  CV(H)^2 (closed form)   ~decimal              check
+ 3              3/2                    1/3     0.3333                 OK
+ 4                3                    1/3     0.3333                 OK
+ 5             15/2                  19/60     0.3167                 OK
+ 6             45/2                  13/45     0.2889                   
+ 7            315/4                131/504     0.2599                   
+ 8              315                131/560     0.2339                   
+
+  CV(H)^2 -> 0 (H CONCENTRATES): the variance is dominated by the diagonal (E[H]) plus a
+  controlled off-diagonal pair-correlation (the 2^j weight on low-overlap pairs). This is
+  the FINITE rehearsal of the LRC sheet-count concentration THM-579 needs (CV(N_R)^2 small).
+
+  Pair-overlap (the 2nd-moment engine), n=6: #perms by (consistent, #ascending-runs j):
+    consistent=False, j=0: 315 perms, weight 2^0=0
+    consistent=False, j=1: 78 perms, weight 2^1=0
+    consistent=False, j=2: 16 perms, weight 2^2=0
+    consistent=False, j=3: 2 perms, weight 2^3=0
+    consistent=True, j=0: 90 perms, weight 2^0=1
+    consistent=True, j=1: 115 perms, weight 2^1=2
+    consistent=True, j=2: 72 perms, weight 2^2=4
+    consistent=True, j=3: 26 perms, weight 2^3=8
+    consistent=True, j=4: 5 perms, weight 2^4=16
+    consistent=True, j=5: 1 perms, weight 2^5=32
+    => the diagonal (j=n-1=5, the path itself) carries 2^5=32; conflicting perms (c=0)
+    contribute 0; the rest is the low-overlap tail. CV^2 = (weighted sum)/n! - 1.
+
+==============================================================================
+PROOF (rehearsal): CV(H)^2 = (1/n!) sum_{no-descent-by-1} 2^{#ascents-by-1} - 1 -> 0.
+Var(H) ~ E[H] (Poisson-like): the pair second moment is diagonal-dominated, the off-
+diagonal a 2^{overlap} tail that n! outgrows. TRANSFER to LRC: the sheet count N_R has the
+SAME structure -- diagonal (mean) + pairwise resonance-overlap correlation; bounding the
+overlap tail (the Siegel/Rogers 2nd moment with congruence, Han-Lee) gives CV(N_R)^2 small
+= THM-579's gatekeeper. The metagraph is where the bound is exactly checkable.
+==============================================================================

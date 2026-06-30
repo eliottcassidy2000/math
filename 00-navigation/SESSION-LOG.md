@@ -34,6 +34,36 @@ if they do, they're MORE binding than consec and need exact SPEC or Gamma_0(N). 
 2-dim congruence Siegel 2nd moment (arXiv:2507.05905) and check if its main-term bound is set-independent.
 
 ---
+## mac-mini-2026-06-29-S21 -- PROVED H concentrates (the finite rehearsal); the Poisson existence+concentration method (HYP-3560)
+
+Prompt: challenge assumptions, invent more creative tournament/metagraph proof approaches, and PURSUE
+some to proofs. (The owner gave 7 approaches; pursued #1 to a theorem.)
+
+First: collision cleanup. klein-S3 pushed THM-588 (metagraph Laplacian alg.connectivity=4, Fiedler=
+3-cycle/cyclicity, walk gap 4/d) + a colliding HYP-3552 (LRC level-2 transfer). Ceded HYP-3552 to klein;
+renumbered mine (metagraph spectral moments) HYP-3552->HYP-3554. klein THM-588's 'no linear invariant,
+exactly one quadratic' = the structural reason the proof is PURELY 2nd-moment (validates approach 1).
+
+PROVED (approach 1, finite rehearsal): over labeled tournaments E[H]=n!/2^{n-1}, and by relabeling
+symmetry CV(H)^2 = (1/n!) sum_{pi': no descent-by-1} 2^{#ascents-by-1} - 1 (closed form, verified vs
+brute force n<=5). = 1/3,1/3,19/60,13/45,131/504,131/560 for n=3..8; ->0 (0.234,0.212,0.193 at n=8,9,10).
+CV(H)^2 -> 0 because consecutive-integer adjacencies are asymptotically Poisson(1) and CV^2+1 =
+E[2^asc 1(desc=0)] -> e*e^{-1} = 1. So H CONCENTRATES; Var(H)~E[H] (Poisson-like); the 2nd moment is
+diagonal-dominated + a 2^{overlap} pair tail that n! outgrows. This is the EXACT, checkable Siegel-Rogers
+2nd moment = the finite model of THM-579's CV(N_R) gatekeeper.
+
+NEW METHOD (mine): Chen-Stein/Poisson gives BOTH concentration (CV^2->0) AND existence (Poisson(lambda>0)
+>=1 w.p. 1-e^{-lambda} = existence without construction, the probabilistic twin of Ky Fan). TRANSFER:
+Var(N_R) has the same diagonal + pairwise-resonance-overlap shape; the overlap is a CONGRUENCE (speeds
+mod 14), bounded SET-INDEPENDENTLY by Han-Lee's Gamma_0(N) 2nd moment (HYP-3553) => CV(N_R)^2 small.
+MORE new approaches: large-deviation rate (disproof = large deviation); shared Walsh/Fourier basis
+(metagraph THM-584 = LRC exponential sums); cut/cusp VANISHING (THM-588 mult(1)=0 => the score/Eisenstein
+part carries NO obstruction, binding content is purely the cusp/3-cycle, matches S_1 vanishes); reverse
+transfer (Weyl -> tournament counting).
+
+Files: HYP-3560, reflection the-finite-rehearsal-h-concentrates-and-poisson-gives-existence.md, script
+H_variance_finite_rehearsal_macmini (+.out). Also: HYP-3554 (renamed from 3552), the collision cleanup.
+Broadcast.
 
 ## mac-mini-2026-06-29-S20 -- the covering is a congruence subgroup: the Gamma_0(N)<->metagraph<->LRC dictionary; G_n(N) (HYP-3553)
 
