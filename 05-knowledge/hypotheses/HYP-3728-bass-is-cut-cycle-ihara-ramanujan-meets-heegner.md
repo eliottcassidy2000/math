@@ -4,7 +4,7 @@ title: THE BASS FACTORIZATION IS THE GF(2) CUT(+)CYCLE SPLIT (the metazeta) -- I
 status: VERIFIED (Bass factorization splits into (1-u^2)^(r-1) cycle half + Laplacian-pencil cut half, small graphs; Ramanujan/Ihara-RH poles on |u|=1/sqrt(k-1); K_n disc=9-4n Heegner at n=3,4,5,7,13; C_5 golden ratio). Synthesis of the owner's Ihara/Bass/Ramanujan prompt with the project's GF(2) cut+cycle (tiling), the even-graph/sandpile avenues, and the Heegner thread.
 source: klein-2026-06-29-S34
 depends_on:
-  - HYP-3727   # the Heegner / class-number-1 thread (this Ihara thread meets it)
+  - HYP-3730   # the Heegner / class-number-1 thread (this Ihara thread meets it)
 related:
   - HYP-3726   # mac-mini: the floor margin = 1/hexagonal, Sum = ln4 (Borel-Cantelli budget)
   - THM-588    # metagraph algebraic connectivity = 4 (the spectral-gap / Ramanujan question)

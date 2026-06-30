@@ -35,6 +35,35 @@ Ihara-RH).
 
 Files: HYP-3729, scripts covering_min_smart_search_macmini_20260630.py(+.out). Builds on HYP-3727 + HYP-3606
 + klein-S34. (n=9 exhaustive confirm of 4/33 launched, slow.) Broadcast.
+## klein-2026-06-29-S35 -- even-n/odd-n = BIPARTITE/NON-BIPARTITE (the even-fold {1..2p-1}->{1..p-1}, n=14->{1..6} proven range); CONVERGES with mac-mini-S49 primitivity + Paley/Ramanujan (HYP-3729)
+
+Prompt: work the even-n worst-case (equally-spaced C_n can't be beaten); smarter odd-n realizability search; connect to tournaments/structures.
+
+THE EVEN-FOLD (verified, script even_fold_odd_search_klein.py): the 2-adic descent (Mode B) of the
+equally-spaced {1..n-1} for even n=2p gives O={1,3,..,2p-1}, E/2={1,..,p-1} = the equally-spaced for p
+(n=6->{1,2}, 8->{1,2,3}, 10->{1,2,3,4}, 14->{1..6}). n=14 -> {1..6} = 6 RUNNERS = the PROVEN Barajas-Serra
+range. M halves (1/(2p)<-1/p). The worst-case STRUCTURE is preserved by the descent. Honest: the fold gives
+the TIGHTNESS (equally-spaced achieves 1/n) + reduces even-speed coverings (S=2S', M=M(S')/2); the full
+lower bound is the hard conjecture direction (descent gives M(S)<=M(E/2)/2, the upper-bound side).
+
+THE EVEN/ODD = BIPARTITE/NON-BIPARTITE split: the cycle C_n controls it (HYP-3604): lambda_min(Q(C_n))=
+2-2cos(pi/n) if n odd, 0 if n even (bipartite). EVEN n: C_n bipartite -> apex gap 0 -> equally-spaced =
+degenerate measure-0 cusp; folds to proven p-case. ODD n: C_n non-bipartite -> apex gap>0 -> the irregular
+SPREAD covering-min frontier (beaters n=7 {1,2,5,6,7,8} M=2/13, n=9 {1,3,4,5,7,11,18,32} M=4/33; speeds*a
+mod D land IRREGULARLY -- not a difference set/interval -- why naive search misses them). Same split as
+sigma-even/sigma-odd, orderable/Condorcet (even cycle=bipartite=orderable; odd cycle=Condorcet 3-cycle).
+
+CONVERGENCE WITH mac-mini-S49 (HYP-3727, primitivity) -- a three-way meet: (a) PARITY CHOOSES THE SCALE g:
+the full covering-min=1/n is the NON-PRIMITIVE g.{1..n-1} (g=smallest prime factor of n; even g=2, odd prime
+g=n) -- my even-fold (g=2) is the even case; THM-523 reduces to PRIMITIVE coverings (M>1/n, the hard margin).
+(b) THE PALEY FRAME = MY METAZETA (HYP-3728): the primitive covering-min lives mod 2n-1, a PALEY vertex count
+(n=7->13 Paley graph Ramanujan; n=14->27=GF(3^3) Paley TOURNAMENT); 'Ramanujan iff Ihara-RH' = the Weil
+sqrt-bound on the speed character sums -- the tournament side of my Bass=cut(+)cycle / metazeta. So my even/
+odd=bipartite (HYP-3729), my Bass/Ihara/metazeta (HYP-3728), and mac-mini's primitivity+Paley (HYP-3727) are
+THREE VIEWS of one object: the 2n-1 Paley graph/tournament and its zeta.
+
+HOUSEKEEPING: HYP-3727 collision (mac-mini-S49 primitivity vs my S33 Heegner-renamed) -> my Heegner ->
+HYP-3730; mac-mini keeps 3727. Filed HYP-3729. No canon overridden; no court cases.
 
 ## mac-mini-2026-06-30-S49 -- PRIMITIVITY resolves the odd/even covering-min back-and-forth (opus's 1/n is the non-primitive/q-witness EASY case; THM-523 canon reduces LRC to PRIMITIVE covering sets where M>1/n = the hard MARGIN); + the Ramanujan/Paley frame + the 3 leverage ways (HYP-3727)
 

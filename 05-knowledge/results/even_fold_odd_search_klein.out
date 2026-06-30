@@ -1,0 +1,31 @@
+====================================================================================
+ (1) VERIFY the odd-n spread beaters + examine structure (binding modulus)
+====================================================================================
+  n=7: S=[1, 2, 5, 6, 7, 8] -> M=2/13=0.15385, binding D=13, rotation a=3
+     speeds*a mod D = [2, 3, 5, 6, 8, 11]  (avoid the 2-nbhd of 0; covering radius 2)
+     gaps of speeds*a on Z/13: [1, 1, 2, 2, 3, 4]
+  n=9: S=[1, 3, 4, 5, 7, 11, 18, 32] -> M=4/33=0.12121, binding D=33, rotation a=4
+     speeds*a mod D = [4, 6, 11, 12, 16, 20, 28, 29]  (avoid the 4-nbhd of 0; covering radius 4)
+     gaps of speeds*a on Z/33: [1, 1, 2, 4, 4, 5, 8, 8]
+
+====================================================================================
+ (2) THE EVEN-FOLD: descent of the equally-spaced {1..n-1} for even n=2p -> {1..p-1}
+====================================================================================
+  n=6: equally-spaced {1..5} -> odd part O=[1, 3, 5], E/2=[1, 2] (= {1..2}, the p=3 equally-spaced!); M(n)=1/6=0.1667, M(p)=1/3=0.3333
+  n=8: equally-spaced {1..7} -> odd part O=[1, 3, 5, 7], E/2=[1, 2, 3] (= {1..3}, the p=4 equally-spaced!); M(n)=1/8=0.1250, M(p)=1/4=0.2500
+  n=10: equally-spaced {1..9} -> odd part O=[1, 3, 5, 7, 9], E/2=[1, 2, 3, 4] (= {1..4}, the p=5 equally-spaced!); M(n)=1/10=0.1000, M(p)=1/5=0.2000
+  n=14: equally-spaced {1..13} -> odd part O=[1, 3, 5, 7, 9, 11, 13], E/2=[1, 2, 3, 4, 5, 6] (= {1..6}, the p=7 equally-spaced!); M(n)=1/14=0.0714, M(p)=1/7=0.1429
+  => the even-fold descends the equally-spaced {1..2p-1} to the equally-spaced {1..p-1}: the worst-case
+     STRUCTURE is preserved by the 2-adic descent. Even n=2p folds to p (Mode B); p<=7 is the proven LRC range.
+
+====================================================================================
+ (3) EVEN vs ODD cycle: bipartite (apex gap=0) vs non-bipartite (apex gap>0)
+====================================================================================
+  C_6: bipartite=True; lambda_min(2I+A(C_p))=0.00000 (=0 (even cycle, apex gap VANISHES))
+  C_7: bipartite=False; lambda_min(2I+A(C_p))=0.19806 (>0 (odd cycle, apex gap = the obstruction))
+  C_8: bipartite=True; lambda_min(2I+A(C_p))=0.00000 (=0 (even cycle, apex gap VANISHES))
+  C_9: bipartite=False; lambda_min(2I+A(C_p))=0.12061 (>0 (odd cycle, apex gap = the obstruction))
+  => EVEN n: the even cycle C_n is BIPARTITE -> apex gap 0 -> the equally-spaced is the degenerate
+     cusp (M=1/n, measure 0). ODD n: C_n non-bipartite -> apex gap>0 -> the spread/realizability frontier.
+     This is the same even/odd = bipartite/non-bipartite = sigma-even/sigma-odd split (HYP-3604/3728);
+     the odd cycle is the tournament's Condorcet 3-cycle atom (HYP-3602).
