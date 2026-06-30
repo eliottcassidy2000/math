@@ -1,5 +1,5 @@
 ---
-id: HYP-3745
+id: HYP-3748
 title: The CRT ESCAPE is (robustly) UNCOVERABLE -- the t_a witness family + the killer/w over-determination. For a missing-1 covering set, the core {2,..,n-2} at rotation a (mod D=14a+1, n=14) is the AP {2a,3a,..,(n-2)a} with the speed-1 slot (=1a) EMPTY, giving a gap of radius 2a around 0 => M >= 2a/(14a+1) at t=a/(14a+1) (a whole FAMILY of witnesses, a=1,2,3,...). The resonance killer n(n-1)=182=14*13 fills the gap ONLY for a>=7 (182a ≡ -13 mod 14a+1, dist 13 < 2a iff a>=7). So the single free speed w must kill ALL of a=1..6 AND cover the radius-1 band (E(1)=13 moduli) -- and it CANNOT: the most-adversarial CRT w (covering the band AND killing t_a, w~1.5e11) still leaves M=6/43=0.1395 >> 14/183 (the surviving witness merely MOVES -- kill a=4,5,6 and a=3 survives at 6/43). MECHANISM: killing one witness family pins w's residues, which spawns a FRESH witness elsewhere (modular conflicts between the witness moduli 14a+1 and the band moduli via shared factors 3,5,17,19). So no missing-1 covering set reaches 14/183 -- the CRT escape (S57) is robustly uncoverable, completing the lowness-lemma cross-level closure empirically + mechanistically. Speed 1 is irreplaceable: its constant residue 1 fills the AP slot at EVERY rotation a, which no single w can do
 status: ROBUSTLY VERIFIED + mechanism. The t_a family (M_a=2a/(14a+1)) is exact; the killer-kills-a>=7 is exact (182a≡-13); the adversarial test (no missing-1 set reaches 14/183, min M=6/43 vs adversarial w to ~1.5e11) is strong empirical proof. The FULL rigorous all-w proof (the witness-family multiplicity is inexhaustible by one w) is essentially LRC14 -- not closed; this gives the structure + the mechanism + robust evidence.
 source: mac-mini-2026-06-30-S59
@@ -13,7 +13,7 @@ results:
   - 05-knowledge/results/crt_escape_uncoverable_macmini_20260630.out
 ---
 
-# HYP-3745 -- the CRT escape is uncoverable (the t_a witness family)
+# HYP-3748 -- the CRT escape is uncoverable (the t_a witness family)
 
 The last gap in the lowness lemma (HYP-3740/3743): could a huge CRT speed `w` defeat *all* the witnesses of a
 missing-1 covering set and reach `M = 14/183`? **No** -- robustly. The proof structure is a *family* of

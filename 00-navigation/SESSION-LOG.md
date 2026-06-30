@@ -25,6 +25,36 @@ confirmed for n=14 by mac-mini's exhaustive search (HYP-3740, 'collapses to one 
 ESTABLISHED for n=14 and structurally proved for the construction regime.
 
 HOUSEKEEPING: filed HYP-3747. No collisions, no canon overridden, no court cases.
+## mac-mini-2026-06-30-S60 -- WORKING the lowness-lemma proof: the witness families are MULTIPLE; speed 1 is the universal gap-filler; lemma VERIFIED (no overturn), full proof = multi-family inexhaustibility = LRC14 (HYP-3747)
+
+Prompt: work on proving the lowness lemma (M(S)<=n/Phi6 => {1..n-2} subset S, the LRC14 hard core, HYP-3740).
+
+THE WITNESS FAMILIES ARE MULTIPLE. Refining S59's single t_a family (now HYP-3748): missing speed 1 leaves the
+speed-1 slot empty at a whole ENSEMBLE of klein-S42 witness families -- the a=1 witness (t=1/15, M=2/15), the
+t_a family (t=a/(14a+1), M=2a/(14a+1)), the D=16 witness (t=1/16, M=1/8), ... Each is killed only by a speed of
+a SPECIFIC residue (a=1 by ≡±1 mod 15; D=16 by ≡±1 mod 16; t_a by a q=14-coverer 14m).
+
+SPEED 1 IS THE UNIVERSAL GAP-FILLER. Speed 1 has residue 1 at EVERY modulus, so it fills the gap in ALL families
+at once -- exactly why the construction {1..12,182} (WITH speed 1) reaches 14/183. A missing-1 set's forced
+q-coverers kill SOME families but SPAWN others: speed 14 kills the entire t_a family (14a≡14, dist 1) but FIRES
+the D=16 witness, M=1/8. Dynamic form of the constant-residue principle (HYP-3744).
+
+VERIFIED -- NO OVERTURN. The dangerous case is a small q=14-coverer killing t_a: {2..14} (speed 14 kills all
+t_a) has M=1/8 at t=1/16 (a NEW family), >>14/183. Across forced q-coverers 14m, M in {1/8,2/15}. Every tested
+missing-1 set has M>14/183 (min 1/8 to 2/17). So the lemma HOLDS; covering-min(14)=14/183 is not overturned.
+
+WINDOW LEMMA + klein-S44 CONVERGENCE. A single speed fills a family's gap only on a bounded-ratio rotation
+window; klein-S44 (HYP-3745) PROVED the backbone -- each speed covers <=2r+1 rotations of Z/p REGARDLESS of
+value (CRT-invariant; "the hole moves but never vanishes"). That is the rigorous version of my window lemma:
+per-speed coverage of any one family is bounded independent of CRT tuning => the ensemble can't be exhausted by
+re-aiming a few speeds. Full proof = MULTI-FAMILY INEXHAUSTIBILITY (no n-1 speeds cover the whole ensemble) =
+the LRC14 lower bound, OPEN.
+
+HOUSEKEEPING: filed HYP-3747. SIXTH straight HYP collision -- klein-S44 also created HYP-3745 (same CRT-escape
+conclusion, different angle = fused-radius trap); I CEDED 3745 to klein, renamed my S59 file -> HYP-3748,
+relabeled its INDEX entry. NOTE a separate klein+opus pileup on 3745/3746 (opus-S1 AP-LRC THM-591 also labeled
+3745/3746) -- theirs to resolve, my 3747/3748 are clean. Re-proposed the work-split in the broadcast. No canon
+overridden, no court cases. Files: 04-computation/lowness_lemma_multifamily_macmini_20260630.py (+.out).
 
 ## klein-2026-06-30-S44 -- the CRT ESCAPE is UNCOVERABLE (the fused-radius trap): replacing any core speed k raises M>=2/(2n-3)>n/Phi6; the witness count is CRT-INVARIANT (<=2r+1 per speed, any value); converges with mac-mini-S57/S58 + HYP-3744 (HYP-3745)
 

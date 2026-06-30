@@ -1,0 +1,9 @@
+Missing-1 covering sets -- every one has M > 14/183, via DIFFERENT witness families:
+
+  {2..12,13,182} (a=1 witness): M=2/15=0.13333 at t=14/15 (mod 15)  > 14/183: True
+  {2..14} (speed 14 kills t_a -> D=16): M=1/8=0.12500 at t=1/16 (mod 16)  > 14/183: True
+  {2..12,15,182} (S56): M=2/17=0.11765 at t=1/17 (mod 17)  > 14/183: True
+
+  speed 1 has residue 1 at EVERY modulus -> fills the missing-slot gap in ALL families at once
+  (the construction, WITH speed 1, reaches 14/183). A missing-1 set's q-coverers kill some families
+  but spawn others -> M > 14/183 always. The lemma reduces to MULTI-FAMILY inexhaustibility (=LRC14).
