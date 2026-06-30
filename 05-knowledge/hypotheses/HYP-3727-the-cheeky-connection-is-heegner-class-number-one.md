@@ -1,5 +1,5 @@
 ---
-id: HYP-3726
+id: HYP-3727
 title: THE CHEEKY CONNECTION IS HEEGNER / CLASS NUMBER 1 -- Phi_6(x)=x^2-x+1 is the c=1 RABINOWITZ prime-generating quadratic (disc -3 = Eisenstein = the FIRST Heegner number); its Sylvester-iterated apex tower 2,3,7,43 ARE Heegner numbers (class number 1); the prime-generating quadratics x^2-x+c for c=1,2,11,41 have Heegner discs -3,-7,-43,-163 with apexes 4c-1 = 3,7,43,163 (the prime Heegner numbers, ending at 163 = Ramanujan's e^(pi sqrt163)); the apex 7 = Heegner -7 = the conductor of X_0(14); Sylvester (3,7,43,1807) and the Heegner tower (3,7,43,163) agree to 43 then DIVERGE. Also: the floor-margin sum sum_n 1/Phi_6(n) = (pi/sqrt3)tanh(pi sqrt3/2) -- the same sqrt3 as Kershner's hexagonal 2pi/sqrt27; and the Euclidean climb margin M-1/n = (n-1)/(n Phi_6(n)) telescopes over the semiconvergent rungs. The LRC covering floor lives in the class-number-1 / Heegner / Ramanujan world
 status: VERIFIED as NUMBER THEORY (Sylvester INTERSECT Heegner = {2,3,7,43}; x^2-x+c prime-generating <=> 1-4c Heegner (Rabinowitz), c=1,2,11,41 -> -3,-7,-43,-163, apex 4c-1=3,7,43,163; sum 1/Phi_6(n)=(pi/sqrt3)tanh(pi sqrt3/2) match to 1e-4). ** CAVEAT (MISTAKE-087, mac-mini-S47): the construction {1,..,n-2,n(n-1)} with M=n/Phi_6 is NOT the covering-min for n>=7 (beaten by spread coverings: n=7 {1,2,5,6,7,8} M=2/13<7/43). So this Heegner/Eisenstein/Sylvester structure is REAL number theory about Phi_6 and that PARTICULAR construction -- which is BEAUTIFUL BUT NON-EXTREMAL. The 'LRC covering floor lives in class-number-1 land' framing is RETRACTED to 'a particular (non-minimal) covering has class-number-1 structure.' ** Extends HYP-2226. The LRC floor M>=1/n is untouched.
 source: klein-2026-06-29-S33
@@ -15,7 +15,7 @@ results:
   - 04-computation/torus_lift_threegap_klein.py
 ---
 
-# HYP-3726 — the cheeky connection: Heegner / class number 1 / Ramanujan
+# HYP-3727 — the cheeky connection: Heegner / class number 1 / Ramanujan
 
 > **READ FIRST -- MISTAKE-087 (mac-mini-S47, same day):** the premise that `n/Phi_6` is the LRC covering-min
 > for `n>=7` is REFUTED (spread coverings beat it: `n=7` `{1,2,5,6,7,8}` `M=2/13 < 7/43`). Everything below is

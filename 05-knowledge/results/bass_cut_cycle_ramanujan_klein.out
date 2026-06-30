@@ -1,0 +1,36 @@
+======================================================================================
+ BASS = CUT (+) CYCLE, and RAMANUJAN/Ihara-RH (small graphs)
+======================================================================================
+ K_4: V=4 E=6 cycle-rank r=3 (k=3-regular=True)
+   CYCLE half (1-u^2)^(r-1): exponent r-1=2 = dim(cycle space)-1 (the even-graph/H^1 half)
+   CUT half det(I-Au+Qu^2): at u=1 = det(L)=0 (the constant mode); roots = the zeta poles
+   A-spectrum [np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(3.0)]; nontrivial |lam|<=2sqrt(k-1)=2.828? RAMANUJAN=True
+   complex poles |u| (should = 1/sqrt(k-1)=0.7071 for the Ramanujan/RH ones): ['|u|=0.7071', '|u|=0.7071', '|u|=0.7071']
+
+ K_5: V=5 E=10 cycle-rank r=6 (k=4-regular=True)
+   CYCLE half (1-u^2)^(r-1): exponent r-1=5 = dim(cycle space)-1 (the even-graph/H^1 half)
+   CUT half det(I-Au+Qu^2): at u=1 = det(L)=0 (the constant mode); roots = the zeta poles
+   A-spectrum [np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(4.0)]; nontrivial |lam|<=2sqrt(k-1)=3.464? RAMANUJAN=True
+   complex poles |u| (should = 1/sqrt(k-1)=0.5774 for the Ramanujan/RH ones): ['|u|=0.5774', '|u|=0.5774', '|u|=0.5774', '|u|=0.5774']
+
+ C_5: V=5 E=5 cycle-rank r=1 (k=2-regular=True)
+   CYCLE half (1-u^2)^(r-1): exponent r-1=0 = dim(cycle space)-1 (the even-graph/H^1 half)
+   CUT half det(I-Au+Qu^2): at u=1 = det(L)=0 (the constant mode); roots = the zeta poles
+   A-spectrum [np.float64(-1.618), np.float64(-1.618), np.float64(0.618), np.float64(0.618), np.float64(2.0)]; nontrivial |lam|<=2sqrt(k-1)=2.000? RAMANUJAN=True
+   complex poles |u| (should = 1/sqrt(k-1)=1.0000 for the Ramanujan/RH ones): ['|u|=1.0000', '|u|=1.0000', '|u|=1.0000', '|u|=1.0000']
+
+ K_3,3: V=6 E=9 cycle-rank r=4 (k=3-regular=True)
+   CYCLE half (1-u^2)^(r-1): exponent r-1=3 = dim(cycle space)-1 (the even-graph/H^1 half)
+   CUT half det(I-Au+Qu^2): at u=1 = det(L)=0 (the constant mode); roots = the zeta poles
+   A-spectrum [np.float64(-3.0), np.float64(-0.0), np.float64(-0.0), np.float64(0.0), np.float64(0.0), np.float64(3.0)]; nontrivial |lam|<=2sqrt(k-1)=2.828? RAMANUJAN=False
+   complex poles |u| (should = 1/sqrt(k-1)=0.7071 for the Ramanujan/RH ones): ['|u|=0.7071', '|u|=0.7071', '|u|=0.7071', '|u|=0.7071']
+
+ Petersen: V=10 E=15 cycle-rank r=6 (k=3-regular=True)
+   CYCLE half (1-u^2)^(r-1): exponent r-1=5 = dim(cycle space)-1 (the even-graph/H^1 half)
+   CUT half det(I-Au+Qu^2): at u=1 = det(L)=0 (the constant mode); roots = the zeta poles
+   A-spectrum [np.float64(-2.0), np.float64(-2.0), np.float64(-2.0), np.float64(-2.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(3.0)]; nontrivial |lam|<=2sqrt(k-1)=2.828? RAMANUJAN=True
+   complex poles |u| (should = 1/sqrt(k-1)=0.7071 for the Ramanujan/RH ones): ['|u|=0.7071', '|u|=0.7071', '|u|=0.7071', '|u|=0.7071']
+
+ => Bass factorization splits EXACTLY into the cycle-rank power (1-u^2)^(r-1) [even-graph/cycle space]
+    and the Laplacian-pencil det [cut/sandpile]; the GF(2) E = Cut (+) Cycle, made into a zeta.
+    K_4,K_5,Petersen are RAMANUJAN (Ihara-RH holds); K_3,3 bipartite (poles also at +-1/sqrt(k-1)).

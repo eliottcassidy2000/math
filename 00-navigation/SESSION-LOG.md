@@ -30,7 +30,40 @@ the gap (mediant - floor) unconditionally, and the identity chain is exact.
 
 Files: HYP-3726, reflection the-hexagons-revenge-floor-margin-is-one-over-a-hexagonal-number.md, script
 floor_margin_hexagonal_macmini_20260630.py(+.out). Builds on S47 (HYP-3725) + klein HYP-3723. Broadcast.
-## klein-2026-06-29-S33 -- the cheeky connection = HEEGNER / class number 1 (number theory, REAL); INTEGRATED mac-mini-S47's refutation (n/Phi_6 NOT the covering-min, MISTAKE-087) -- the Heegner structure is about the CONSTRUCTION, not the covering-min (HYP-3726)
+## klein-2026-06-29-S34 -- the BASS factorization IS the cut(+)cycle split (the metazeta = even-graph(+)sandpile); Ramanujan=Ihara-RH; Ihara MEETS Heegner (K_n disc 9-4n; K_4 carries sqrt-7; C_5 the golden ratio) (HYP-3728)
+
+Prompt: work both the odd-n covering-min and the even-n statement; poke around past topics; consider 'a regular graph is Ramanujan iff its Ihara zeta satisfies an RH analogue'; and the Bass=cut(+)cycle / metazeta / ln4-Borel-Cantelli / observer-baseline synthesis.
+
+THE BASS FACTORIZATION IS THE GF(2) CUT(+)CYCLE SPLIT (verified, script bass_cut_cycle_ramanujan_klein.py).
+zeta_G(u)^-1 = (1-u^2)^(r-1) . det(I-Au+Qu^2) (r=cycle rank, Q=D-I) splits EXACTLY into the CYCLE/even-graph
+half (1-u^2)^(r-1) (exponent r-1 = dim cycle space - 1) and the CUT/sandpile half det(I-Au+Qu^2) (at u=1 ->
+the Laplacian L; reduced det = spanning trees = sandpile group). So the owner's claim is exact: the Bass
+factorization = the project's GF(2) E=Cut(+)Cycle Hodge split, as one Euler product -- the METAZETA (even-
+graph(cycle) (+) sandpile(cut)). Verified K_4,K_5,C_5,K_3,3,Petersen.
+
+RAMANUJAN <=> Ihara-RH: a k-regular graph is Ramanujan iff its Ihara zeta's nontrivial poles lie on
+|u|=1/sqrt(k-1) (the RH analogue). Verified K_4(1/sqrt2),K_5(1/sqrt3),C_5(1),Petersen(1/sqrt2) Ramanujan;
+K_3,3 bipartite. The metagraph G_n (alg. connectivity 4, THM-588) is the irregular-Ramanujan target -- its
+expansion = the least-eigenvalue certificate (HYP-3604).
+
+IHARA MEETS HEEGNER (the cheeky tie): the complete-graph metagraph K_n has Ihara cut-factor discriminant
+9-4n, hitting the HEEGNER numbers -3,-7,-11,-19,-43 for n=3,4,5,7,13. The n=4 KLEIN-FOUR metagraph K_4
+carries sqrt-7 = the apex / Heegner -7 / the conductor of X_0(14). And C_5 (the pentagon) carries the GOLDEN
+RATIO (2cos2pi/5=1/phi, Fibonacci/H_2). So the small-metagraph Ihara zetas hit exactly the project's
+number-theoretic constants (Heegner HYP-3727, golden ratio HYP-3710).
+
+H-GRADIENT = prime cycles: zeta=prod_{prime cycles}(1-u^len)^-1; the observer's 1 = the u^0 baseline (the
+transitive sink), prime cycles (the metagraph's odd cycles/intransitivity) accumulate above = the H-gradient.
+
+OTHER THREADS (referenced): ln4 budget = mac-mini HYP-3726 (margin-sum 2ln2=ln4=log-det square Cartan,
+Borel-Cantelli; also = central-binomial sum C(2n,n)/(n 4^n), the 1/4 walk radius = zeta growth k^m). The
+odd/even covering-min (post-MISTAKE-087): spread family (n=7 2/13, n=8 2/15, n=9 4/33), even-fold 14->7
+proven, odd-n open (mac-mini owns the covering-min frontier).
+
+HOUSEKEEPING: resolved HYP-3726 collision (mac-mini-S48 floor-margin vs my S33 Heegner) -- my Heegner ->
+HYP-3727; mac-mini keeps 3726. No canon overridden; no court cases.
+
+## klein-2026-06-29-S33 -- the cheeky connection = HEEGNER / class number 1 (number theory, REAL); INTEGRATED mac-mini-S47's refutation (n/Phi_6 NOT the covering-min, MISTAKE-087) -- the Heegner structure is about the CONSTRUCTION, not the covering-min (HYP-3727)
 
 Prompt: keep working the Euclidean climb; leverage the tighter floor margin; find a cheeky out-of-the-box connection lurking in the formulas.
 
