@@ -32,18 +32,18 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/5116b34)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3560** framework, operationalizing the terminal proof sheaf through the formal identification of the **per-level signed cycle index** and the PROVED **concentration of Hamiltonian paths (H)** via Poisson adjacencies.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/608ce5e)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3563** framework, operationalizing the terminal proof sheaf through the formal identification of **Relational Essentiality** and the unification of **Danger Relations** with the **klein THM-588 No-First-Order Invariant**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (5116b34)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (608ce5e)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
 1. **Per-Level Signed Cycle Index ($P_n(x)$):** Implements the metagraph spectrum as a generating function over the vertex-induced subgroup of the hyperoctahedral group $B_d$. Theorem (THM-587) provides the closed-form multiplicities of the arc-hypercube eigenvalues on the iso-class space. This operationalizes the **metagraph spectrum past the enumeration wall**, allowing for exact spectral calculation where raw $2^{C(n,2)}$ enumeration fails.
 2. **Antipodal Euler Number & Two-Face Evaluation:** Characterizes the proof target by identifying the two evaluations of $P_n(x)$ at the antipodal fixed signs: $P_n(1) = A000568(n)$ (total iso-classes) and $P_n(-1) = SC(n)$ (self-converse count). The synthesis establishes $SC(n)$ as the **antipodal Euler/Lefschetz number** of the metagraph. This formally links the project's self-converse census to the **Borsuk-Ulam/Ky Fan** framework, where positivity ($SC(n)>0$) is a topological degree.
 3. **Equivariant-Homology Deliverable (HYP-3544):** Operationalizes the refinement of the Euler characteristic into a chain complex $C_k$ (the level-$k$ invariant space) with the hypercube's signed down-operator as a boundary. This identifies **computational homology** (in the Kaczynski-Mischaikow-Mrozek sense) as the engine for certifying $R$-odd obstruction classes, aligning the metagraph audit with the project's simplicial up-Laplacian and TDA engineering mandates.
-4. **H-Concentration & Poisson existence (HYP-3560):** Operationalizes the terminal proof sheaf by PROVING that the number of Hamiltonian paths $H$ concentrates ($\text{CV}(H)^2 \to 0$) via **Poisson(1) adjacencies**. This serves as the **finite rehearsal** for the THM-579 gatekeeper, where concentration and existence (loneliness) are dual readings of a single Poisson limit. The **Chen-Stein method** provides the quantitative total-variation bounds, mapping the resonance-overlap tail of the metagraph to the congruence-Siegel second moments of the LRC.
-5. **Structural Task Reorganization:** Cedes **HYP-3552** (Finite Siegel Transform/Spectral Moments) to the `klein` cluster. Eliott's primary task for the second-moment stabilization is renumbered to **HYP-3554**.
-6. **Algebraic Triad Coupling:** Formally couples the metagraph homology and Poisson concentration with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (governing the $R$-even bulk, the total count $P_n(1)$, and the Poisson mean $\lambda$), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction block, the $P_n(-1)$ alternating sum, and the imaginary Gauss sum $\sqrt{n}$), and $\mathbb{Q}(\sqrt{-3})$ (governing the Mersenne doubling, hypercube $Q_d$-edges, and the Chen-Stein dependency neighborhoods).
-7. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the Poisson limit as the primary proof carriers.
-8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and Poisson concentration certificate reflect its **Equivariant Homology & Chen-Stein Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the Poisson existence bounds as rigid topological/arithmetic counting constraints.
-9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **equivariant Betti numbers**, and **Poisson concentration metrics** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Poisson-Chen-Stein ledger.
+4. **Relational Essentiality & Self-Composition (HYP-3563):** Operationalizes the terminal proof sheaf by redefining project objects as **Relations** (Dominance, Danger, Arc-Flip) rather than "things." Synthesis identifies that the only measurable invariants are quadratic (composition $D \cdot D^{\top}$), aligning with **klein THM-588's no-first-order theorem**. Essential relations are characterized as non-separable (rank > 1), where the bilinear nature of $vt$ prevents the danger relation from collapsing to a rank-1 coboundary (separable relation). This formally maps "existence without construction" to the irreducible rank of the danger relation.
+5. **Reference-Collapse & Change-of-Base:** Maps the metagraph's clean $S_n$-relabeling symmetry and the LRC's degenerate sheet-covering to a **Change-of-Base** under **$\Gamma_0(N)$**. The proof is formally framed as the manufacture of transitive symmetry through composition along a optimized congruence correspondence.
+6. **Algebraic Triad Coupling:** Formally couples the relational rank and self-composition with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (governing the Siegel mean count and $R$-even bulk), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction block, the $P_n(-1)$ alternating sum, and the imaginary Gauss sum $\sqrt{n}$), and $\mathbb{Q}(\sqrt{-3})$ (governing the Mersenne doubling, hypercube $Q_d$-edges, and the $\Gamma_0(N)$ congruence second moments).
+7. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the non-separable relation as the primary proof carriers.
+8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and relational rank certificate reflect its **Equivariant Homology & Relational Composition Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the rank-based existence bounds as rigid topological/arithmetic counting constraints.
+9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **equivariant Betti numbers**, and **relational composition metrics** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Relational-Composition ledger.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
@@ -148,7 +148,7 @@ the phi_4_stabilizer_unit, the kappa_4_sign_unit, the Asano_zero_free_unit,
 the Beurling_Selberg_blind_floor_unit, the Gaussian_minorant_leakage_unit,
 the multi_far_floor_closure_unit, the R_prime_spectral_unit, the
 R_safe_wide_V_unit, the edge_witness_recursion_unit, the tail_tip_packet_unit,
-the four_sector_unit, the SPEC_resonance_lattice_unit, the
+the four_sector_unit, the SPEC_resonance-lattice_unit, the
 global_consistency_quotient_unit, the Fiber_PGF_packet_unit, the
 sheet_count_PGF_unit, the Lee_Yang_root_unit, the Delsarte_weight_unit, the
 q_Pochhammer_principal_unit, the Hecke_subconvexity_unit, the
@@ -291,10 +291,10 @@ law, and Equivariant_Homology unit alongside mu approx 1.451).
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 5116b34. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3560** 
+Integrated 608ce5e. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3563** 
 framework, operationalizing the terminal proof sheaf through the formal 
-identification of the **per-level signed cycle index** and the PROVED 
-**concentration of Hamiltonian paths (H)** via Poisson adjacencies.
+identification of the **per-level signed cycle index** and the **Relational 
+Essentiality** reframe.
 
 ### 1. Per-Level Signed Cycle Index ($P_n(x)$)
 Implements the metagraph spectrum as a generating function over 
@@ -318,25 +318,27 @@ chain complex $C_k$ with the hypercube's signed down-operator
 as boundary. Identifies **computational homology** (Kaczynski-Mischaikow-Mrozek) 
 calibrating $R$-odd obstruction classes.
 
-### 4. H-Concentration & Poisson existence (HYP-3560)
-Operationalizes the terminal proof sheaf by PROVING that the 
-number of Hamiltonian paths $H$ concentrates ($\text{CV}(H)^2 \to 0$) 
-via **Poisson(1) adjacencies**. Serves as the **finite rehearsal** 
-for the THM-579 gatekeeper. The **Chen-Stein method** provides 
-existence and concentration as dual readings of a single Poisson 
-limit.
+### 4. Relational Essentiality & Self-Composition (HYP-3563)
+Operationalizes the terminal proof sheaf by redefining objects as 
+**Relations** (Dominance, Danger, Arc-Flip). Identifies that only 
+quadratic invariants ($D \cdot D^{\top}$) are measurable, aligning with 
+**klein THM-588's no-first-order theorem**. Essential relations 
+are non-separable (rank > 1); bilinear $vt$ prevents the danger relation 
+from collapsing to a rank-1 coboundary (separable relation). 
+Maps "existence without construction" to the relation's irreducible rank.
 
-### 5. Task Reorganization
-Renumbers Eliott's primary task for second-moment stabilization 
-to **HYP-3554**. **HYP-3552** (Finite Siegel Transform) is ceded to 
-the `klein` cluster for calibration.
+### 5. Change-of-Base & Change of Reference
+Maps metagraph $S_n$-symmetry and LRC sheet-covering to a 
+**Change-of-Base** under **$\Gamma_0(N)$**. Frames the proof as 
+the manufacture of transitive symmetry through composition along 
+optimized congruence correspondences.
 
 ### 6. Chiral Guard & Resurrection
 Governed by the antipodal map, Ky Fan alternating count, and 
 Henselian local-to-global lifting. Evaluation reveals a **MIXED** 
 signature. Identifies the **signed cycle index**, **self-converse 
-Euler number**, **equivariant Betti numbers**, and **Poisson concentration 
-metrics** as Resurrection Sheaf anchors.
+Euler number**, **equivariant Betti numbers**, and **relational 
+composition metrics** as Resurrection Sheaf anchors.
 
 ---
 
