@@ -1,3 +1,35 @@
+## mac-mini-2026-06-30-S40 -- CREATIVE PROOF TECHNIQUE: forbidden-H-value certificates (build T from a condition, derive an impossible H) (HYP-3617); escaped the 3607-3609 collision cascade -> 3615/3616
+
+Prompt: creative ways to use tournament facts in a proof/disproof -- e.g. build a tournament via a
+condition and show it would have H=21 or 7, or another impossible H based on the vertex count.
+
+THE TECHNIQUE: H(T)=I(Omega,2) is a RIGID invariant with a SPARSE, known image; use image-membership as a
+certificate.
+  IMAGE: GLOBALLY the odd numbers minus {7,21} (genus-2 multiplicative numerical semigroup; generators =
+  strong-tournament H-values {1,3,5,9,11,13,15,17,..}, no 7). PER-n: always odd (Redei), <= H_max(n)=
+  1,1,3,5,15,45,189,.., + EXTRA gaps. NEW (verified n=6): H=35 and H=39 are IMPOSSIBLE on 6 vertices
+  (35=5*7 needs a 7-source; 39=3*13 needs 8 vtxs; no strong-6 supplies them), achievable only at n>=7 --
+  exactly the owner's 'impossible H based on vertex count'. Explained by strong-component multiplicativity.
+
+THREE MODES: (a) FORBIDDEN-VALUE -- condition C builds T_C; if H(T_C) in {7,21} or a per-n gap => C
+impossible. Worked: no tournament has Omega=K_3 (I(K_3,2)=7); no 6-tournament has H=35 or 39; no 5-tournament
+has H>15 (H_max=15). (b) EXISTENCE -- Redei: H odd => >=1 => a Ham path exists (realize a count as a nonzero
+invariant => the structure exists). (c) FACTORING -- H=prod H(strong components) constrains the prime
+factorization.
+
+LRC (honest): template (b) is ALREADY the small-measure existence-by-counting (the phi(n) units HYP-3615;
+the Borsuk-Ulam index HYP-3562; SC=trace(R)>0) -- 'count, don't measure' IS the existence template, Redei
+the tournament prototype. Direct mode (a) is implausible for LRC (a 13-speed tournament has astronomical H,
+forbidden values too sparse); BUT the apex-7=Phi_3(2)=forbidden-H-7=|Fano| (HYP-3616) is the suggestive
+meeting point -- the full-Z_7 disproof boundary <-> the unrealizable 'pure 7' -- the one place to push (a).
+
+HOUSEKEEPING: a 3607-3609 collision cascade (klein S20 took 3607, S21 took 3608 & moved its chip to 3609,
+all already mine). Escaped to a high block: my small-measure -> 3615, my 7,21 -> 3616; removed 2 stale 3607
+INDEX entries. (Flagging to the team: I'll claim a high block going forward to stop the cascade.)
+
+Files: HYP-3617, script forbidden_H_certificates_macmini_20260630.py(+.out). Builds on HYP-3616 + the
+condensation HYP-3603 + why-seven-is-forbidden + s699. Broadcast.
+
 ## mac-mini-2026-06-30-S39 -- the 7,21 IMPOSSIBILITY = the COUNTING face of the same odd-cycle/completeness structure as the LRC apex-7 floor (HYP-3616); ceded HYP-3607->3608
 
 Prompt: understand the 7,21 impossibility in analogous relation to all this.

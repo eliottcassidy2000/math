@@ -1,0 +1,31 @@
+==============================================================================
+FORBIDDEN-H-VALUE CERTIFICATES: per-n spectrum, generators, gaps (mac-mini-S40)
+==============================================================================
+
+[1] per-n H-spectrum, H_max, and per-n FORBIDDEN (odd <= H_max not achievable at n):
+  n=2: H_max=  1, achievable=[1]
+        forbidden<=H_max: global[] + PER-N[]
+  n=3: H_max=  3, achievable=[1, 3]
+        forbidden<=H_max: global[] + PER-N[]
+  n=4: H_max=  5, achievable=[1, 3, 5]
+        forbidden<=H_max: global[] + PER-N[]
+  n=5: H_max= 15, achievable=[1, 3, 5, 9, 11, 13, 15]
+        forbidden<=H_max: global[7] + PER-N[]
+  n=6: H_max= 45, achievable=[1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+        forbidden<=H_max: global[7, 21] + PER-N[35, 39]
+
+[2] strong-tournament H-values (the multiplicative GENERATORS, H=prod over strong comps):
+  n=1: [1]
+  n=2: []
+  n=3: [3]
+  n=4: [5]
+  n=5: [9, 11, 13, 15]
+  n=6: [15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+
+[3] WHY {35,39} impossible at n=6: 35=5*7 (no strong has H=7); 39=3*13 = 3(n=3)+13(n=5)=8>6;
+    and no single strong-6 has H in {35,39}. Both fine at n>=7. Global gaps {7,21} (no 7-source).
+
+==============================================================================
+CERTIFICATE: build T from a condition; H(T) in {7,21} (global) or a per-n gap => condition
+impossible. EXISTENCE (Redei): H odd => >=1 => a Ham path exists. FACTORING: H=prod strong-H.
+==============================================================================
