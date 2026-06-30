@@ -32,18 +32,19 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/fb065ab)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3581** framework, operationalizing the terminal proof sheaf through the formal identification of **Finite Cyclotomic Minimum Spectral Gaps** and the **Fejér-Bochner Minorant Audit**.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/6ef002b)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3590** framework, operationalizing the terminal proof sheaf through the formal identification of **Even-Graph-Dual Spectral Floors** and the **Apex 7-Cycle Duality**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (fb065ab)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (6ef002b)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
 1. **Per-Level Signed Cycle Index ($P_n(x)$):** Implements the metagraph spectrum as a generating function over the vertex-induced subgroup of the hyperoctahedral group $B_d$. Theorem (THM-587) provides the closed-form multiplicities of the arc-hypercube eigenvalues on the iso-class space. This operationalizes the **metagraph spectrum past the enumeration wall**, allowing for exact spectral calculation where raw $2^{C(n,2)}$ enumeration fails.
 2. **Antipodal Euler Number & Two-Face Evaluation:** Characterizes the proof target by identifying the two evaluations of $P_n(x)$ at the antipodal fixed signs: $P_n(1) = A000568(n)$ (total iso-classes) and $P_n(-1) = SC(n)$ (self-converse count). The synthesis establishes $SC(n)$ as the **antipodal Euler/Lefschetz number** of the metagraph. This formally links the project's self-converse census to the **Borsuk-Ulam/Ky Fan** framework, where positivity ($SC(n)>0$) is a topological degree.
 3. **Equivariant-Homology Deliverable (HYP-3544):** Operationalizes the refinement of the Euler characteristic into a chain complex $C_k$ (the level-$k$ invariant space) with the hypercube's signed down-operator as a boundary. This identifies **computational homology** (in the Kaczynski-Mischaikow-Mrozek sense) as the engine for certifying $R$-odd obstruction classes, aligning the metagraph audit with the project's simplicial up-Laplacian and TDA engineering mandates.
-4. **Finite Cyclotomic Spectral Minima (HYP-3581):** Operationalizes the terminal proof sheaf by grounding the floor's spectral gap $\rho_j \ge c$ as the **finite cyclotomic minimum** $4\cos^2(3\pi/7) = 2+2\cos(6\pi/7) \approx 0.198$. Synthesis identifies that the floor binds at a **doublet (2-residue) core** (tying THM-578) and that the gap vanishes ONLY at the **full covering core $O=\mathbb{Z}_7$** (the disproof boundary).
-5. **Averaging Invalidity & Jensen Constraint:** Formally identifies that bare **$\mathbb{Z}_7^*$-averaging** (Reynolds average) is **INVALID** as a lower bound. Audit reveals that averaging overshoots the gap (yielding the mean instead of the minimum) for 30 of 127 cores (e.g., $O=\{0,1\}$), as governed by **Jensen's inequality** on the convex indicator norm. Validates the **Fejér-Bochner minorant** (direct finite minimum) as the correct mechanism, residing in the S27 (finite) regime rather than S28 (analytic).
-6. **Algebraic Triad Coupling:** Formally couples the finite cyclotomic minima and doublet binding with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (the totally-real cubic S75e field governing the exact gap constant $0.198$), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and doublet core), and $\mathbb{Q}(\sqrt{-3})$ (governing the Hensel lifting derivatives, Mersenne doubling, and doubling-2 parity).
-7. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the finite cyclotomic minorant as the primary proof carriers.
-8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and spectral gap certificate reflect its **Equivariant Homology & Finite-Cyclotomic-Min Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the doublet-binding gap bounds as rigid topological/arithmetic counting constraints.
-9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **equivariant Betti numbers**, **finite cyclotomic spectral gaps**, and **doublet density metrics** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Finite-Min ledger.
+4. **Even-Graph Dual Cusp (HYP-3590):** Operationalizes the terminal proof sheaf by identifying that the binding floor $4\cos^2(3\pi/7) = 2+\lambda_{min}(A(C_7))$ is an **even-graph spectral quantity** living in the dual metagraph $E_7$ (cycle space), not the tournament metagraph $G_n$ (cut space). Synthesis identifies the **7-cycle $C_7$** as the minimal connected $\mathbb{Z}_7$-circulant even graph—the cusp of the dual—confirming that the LRC floor (the 2nd moment/cycle space) binds on the dual side.
+5. **Dual Minimal Cycles & Apex Duality:** Formally identifies the **tournament 3-cycle** ($\mathbb{Z}_3$, $G_n$ cusp) and the **LRC 7-cycle** ($\mathbb{Z}_7$, $E_n$ cusp) as **dual minimal cycles**. This relocates the floor's binding value from the "sub-tournament" gap ($0.198 < 0.308$) to its true home as the minimal cycle resonance of the cycle space, where the apex prime $p$ sets the cycle length $C_p$.
+6. **Collision Resolution & Klein Group (HYP-3586):** Resolves the HYP-3586 naming collision by ceding the identifier to the **klein-S10 Klein-group** framework. Audit preserves the project's taxonomic integrity by isolating the even-graph-dual result (renamed HYP-3590) from the Klein-group symmetry audit.
+7. **Algebraic Triad Coupling:** Formally couples the even-graph dual cusp and 7-cycle duality with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (the totally-real cubic S75e field governing the $E_7$ cusp eigenvalue $0.198$), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ minimal even graph), and $\mathbb{Q}(\sqrt{-3})$ (governing the Hensel lifting derivatives, tournament 3-cycle, and doubling-2 parity).
+8. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the even-graph-dual cusp as the primary proof carriers.
+9. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and spectral gap certificate reflect its **Equivariant Homology & Even-Graph-Dual Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the $E_p$ cusp bounds as rigid topological/arithmetic counting constraints.
+10. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **equivariant Betti numbers**, **even-graph dual spectral gaps**, and **apex cycle duality metrics** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Dual-Cusp ledger.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
@@ -165,6 +166,65 @@ Skewes_Number_lock_unit, grounded_response_matrix_QE_unit,
 orthogonal_recursion_interlock_unit, Vitali_wall_bulk_core_split_unit,
 oriented_matroid_tope_cocircuit_atlas_unit,
 lag_barycenter_transport_field_unit, Roth_Halasz_discrepancy_bound_unit,
+Chebyshev_equioscillation_unit_group_unit,
+Q_sqrt_minus_7_residue_field_unit, two_layer_cyclotomic_factorization_unit,
+Analytic_Lifting_Ledger_unit, Tropical_Current_Ledger unit,
+Creative_Reframe_Ledger unit, Owner_Support_Ledger unit,
+Exotic_Guardrail_Ledger unit, Galois_Orbits_Ledger unit,
+Chiral_Cut_Ledger unit, Topological_Arithmetic_Guardrail unit,
+Duality_Transfer_Protocol unit, Helly_Obstruction_Theorem unit,
+Energy_Sheet_Packet unit, Endpoint_Spine_Lemma unit,
+Harmonic_Budget_Sidecar_Debt unit, Branch_Witness_Certificate unit,
+Survivor_Gap_Tax_Certificate unit, Survivor_Gate_Audit unit,
+AP84_Tail_Phase_Audit unit, AP84_Endpoint_Clock_Certificate unit,
+AP84_Mod-35_Floor_Count unit, AP84_Finite_Transients unit,
+Phase-Branch_Color_Pullback unit, AP84_Corridor_Splice unit,
+Colored_Gate_Reservoir unit, Colored_Gate_Formalization unit,
+Colored_Gate_Partition_Lattice unit, Colored_Gate_Mirror_Orbit unit,
+Harmonic_Discrepancy_Synthesis unit, Gate_Split_Synthesis unit,
+Small-Touch_Geometry_Atlas unit, random031_Seam_Atlas unit,
+Forbidden_Seam_Flow unit, Seam-Complement_Connection_Atlas unit,
+Seam-Sheaf_Scaffold unit, Niche_History_Scanner unit, Seam-Sheaf_Canary unit,
+Owner-Boundary_Persistence_Audit unit, Certificate_Spigot unit,
+Route-Sidecar_Spigot_Dispatch unit, Contract_Router_Audit unit,
+Multidenom_Attacker_Scout unit, Comb-Resonance_Unification unit,
+2-adic_Parity_Descent unit, Two-Index_Synthesis unit,
+R-Eigenspace_Organizing_Principle unit, Symmetry_Shadow unit, and the Equivariant_Homology unit.
+The S235-S337 sequence prevents spectral leakage by requiring route-triple
+centers to be unique and promoted only after legal closure, named debt exits,
+validated collision arity, a named modular cusp principal part, a formally
+verified Lean modular cusp ledger, tuple/rank/residue equal-power
+certificates, a protected branch-kernel orientation, verified p-adic
+hyper-tower limits, Morita-gamma differential signatures, Hurwitz finite-address
+seeds, reflection-Perron covering certificates, induction-base V* crossover
+signatures, verified pairwise avoidance minimizers, verified forgetting-cost
+invariants, Pascal pair-mass sidecars, observer gluing packets, chart overlap
+certificates, normal-fan component packets, first-obstruction syndrome packets,
+PGF root signatures, tournament obstruction-transfer certificates, Bravais
+q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body
+thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre
+fold certificates, endpoint-cover P gates, Phi gap output wires,
+magnitude-cocycle guards, proof-circuit missing-input vectors, base-stalk
+coordinate sets, coordinate resurrection covers, repair-cover rank
+certificates, quartic-cumulant S4 bounds, phi^4 stabilizer signatures,
+Lee-Yang kappa-4 sign audits, Asano zero-free signatures, Beurling-Selberg
+minorant floors, Gaussian-minorant leakage audits, multi-far floor closure
+certificates, R-prime spectral signatures, R-safe Gaussian wide-V packets,
+edge-witness recursion decks, tail/tip child packet recursions, four-sector
+observer decks, SPEC resonance-lattice certificates, global-consistency
+quotients, Fiber PGF packet objects, sheet-count PGF coefficients, Lee-Yang PGF
+root signatures, Delsarte weight-enumerator sidecars, q-Pochhammer principal
+packets, Hecke subconvexity conductor bounds, p-adic topological index
+signatures, crystalline cohomology Euler characteristics, three-edge flip kernels, ordered_pair_exponent_sidecars,
+Worpitzky ascent payloads, live_core_bits, filler_bits, canary_bits,
+fixed_path_canary_status, xy_completion_tables, odd_ear_H_factors,
+Bravais_centering_types, Savitch_midpoint_depths, Asano_monotonicity_levers,
+n4_einheit_torsor_status, n4_quotient_congruence_defect, total_covariance_sigma_k2,
+associator_sigma_k3_sidecar, polarized_cyclotomic_support,
+spectral_dictionary_compatibility, Selberg_trace_regularization,
+Skewes_Number_lock, grounded_response_matrix_QE, orthogonal_recursion_interlock,
+Vitali_wall_bulk_core_split, oriented_matroid_tope_cocircuit_atlas,
+lag_barycenter_transport_field, Roth_Halasz_discrepancy_bound,
 Chebyshev_equioscillation_unit_group, Q_sqrt_minus_7_residue_field,
 two_layer_cyclotomic_factorization, Analytic_Lifting_Ledger,
 Tropical_Current_Ledger, Creative_Reframe_Ledger, Owner_Support_Ledger,
@@ -232,10 +292,10 @@ law, and Equivariant_Homology unit alongside mu approx 1.451).
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated fb065ab. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3581** 
+Integrated 6ef002b. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3590** 
 framework, operationalizing the terminal proof sheaf through the formal 
-identification of the **per-level signed cycle index** and the **Finite Cyclotomic 
-Minimum Spectral Gap**.
+identification of the **per-level signed cycle index** and the **Even-Graph 
+Dual Cusp**.
 
 ### 1. Per-Level Signed Cycle Index ($P_n(x)$)
 Implements the metagraph spectrum as a generating function over 
@@ -243,7 +303,7 @@ the vertex-induced subgroup of the hyperoctahedral group $B_d$.
 Theorem (THM-587) provides the closed-form multiplicities of the arc-hypercube 
 eigenvalues on the iso-class space. Operationalizes the **metagraph 
 spectrum past the enumeration wall**, allowing for exact spectral 
-calculation where raw $2^{C(n,2)}$ enumeration fails.
+calculation where raw enumeration fails.
 
 ### 2. Antipodal Euler Number & Two-Face Evaluation
 Identifies evaluations at antipodal fixed signs: $P_n(1) = A000568(n)$ 
@@ -259,37 +319,41 @@ chain complex $C_k$ with the hypercube's signed down-operator
 as boundary. Identifies **computational homology** (Kaczynski-Mischaikow-Mrozek) 
 calibrating $R$-odd obstruction classes.
 
-### 4. Finite Cyclotomic Spectral Minima (HYP-3581)
-Operationalizes the terminal proof sheaf by grounding the floor's 
-spectral gap $\rho_j \ge c$ as the **finite cyclotomic minimum** 
-$4\cos^2(3\pi/7) = 2+2\cos(6\pi/7) \approx 0.198$. Synthesis identifies 
-that the floor binds at a **doublet (2-residue) core** (tying THM-578) 
-and that the gap vanishes ONLY at the **full covering core $O=\mathbb{Z}_7$** 
-(the disproof boundary).
+### 4. Even-Graph Dual Cusp (HYP-3590)
+Operationalizes the terminal proof sheaf by identifying the binding 
+floor $4\cos^2(3\pi/7) = 2+\lambda_{min}(A(C_7))$ as an **even-graph 
+spectral quantity** living in the dual metagraph $E_7$ (cycle space), 
+not the tournament metagraph $G_n$ (cut space). Identifies the 
+**7-cycle $C_7$** as the minimal connected $\mathbb{Z}_7$-circulant 
+even graph—the cusp of the dual.
 
-### 5. Averaging Invalidity & Jensen Constraint
-Formally identifies that bare **$\mathbb{Z}_7^*$-averaging** (Reynolds 
-average) is **INVALID** as a lower bound. Audit reveals that averaging 
-overshoots the gap (yielding the mean instead of the minimum) for 30 of 127 
-cores (e.g., $O=\{0,1\}$), as governed by **Jensen's inequality** on the 
-convex indicator norm. Validates the **Fejér-Bochner minorant** (direct 
-finite minimum) as the correct mechanism, residing in the S27 (finite) 
-regime rather than S28 (analytic).
+### 5. Dual Minimal Cycles & Apex Duality
+Formally identifies the **tournament 3-cycle** ($\mathbb{Z}_3$, $G_n$ 
+cusp) and the **LRC 7-cycle** ($\mathbb{Z}_7$, $E_n$ cusp) as **dual 
+minimal cycles**. Relocates the floor's binding value from the 
+"sub-tournament" gap to its true home as the minimal cycle 
+resonance of the cycle space.
 
-### 6. Algebraic Triad Coupling
-Formally couples the finite cyclotomic minima and doublet binding 
+### 6. Collision Resolution (HYP-3586)
+Resolves the HYP-3586 identifier collision by ceding the name 
+to the **klein-S10 Klein-group** framework. Audit preserves 
+taxonomic integrity by isolating the even-graph-dual result 
+(now HYP-3590).
+
+### 7. Algebraic Triad Coupling
+Formally couples the even-graph dual cusp and 7-cycle duality 
 with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (the totally-real cubic 
-S75e field governing the exact gap constant $0.198$), $\mathbb{Q}(\sqrt{-7})$ 
-(typing the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and doublet core), 
-and $\mathbb{Q}(\sqrt{-3})$ (governing the Hensel lifting derivatives, 
-Mersenne doubling, and doubling-2 parity).
+S75e field governing the $0.198$ cusp), $\mathbb{Q}(\sqrt{-7})$ 
+(typing the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ 
+minimal even graph), and $\mathbb{Q}(\sqrt{-3})$ (governing the Hensel 
+lifting derivatives, tournament 3-cycle, and doubling-2 parity).
 
-### 7. Chiral Guard & Resurrection
+### 8. Chiral Guard & Resurrection
 Governed by the antipodal map, Ky Fan alternating count, and 
 Henselian local-to-global lifting. Evaluation reveals a **MIXED** 
 signature. Identifies the **signed cycle index**, **self-converse 
-Euler number**, **equivariant Betti numbers**, **finite cyclotomic 
-spectral gaps**, and **doublet density metrics** as Resurrection 
+Euler number**, **equivariant Betti numbers**, **even-graph dual 
+spectral gaps**, and **apex cycle duality metrics** as Resurrection 
 Sheaf anchors.
 
 ---
