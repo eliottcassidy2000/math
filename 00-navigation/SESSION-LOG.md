@@ -29,6 +29,36 @@ full covering-min lower bound combines all witnesses (budget) + binding (spreads
 
 HOUSEKEEPING: filed HYP-3741. RESOLVED HYP-3740 collision (mac-mini-S56 lowness vs my S41 m-uniqueness): my
 m-uniqueness -> HYP-3742; mac-mini keeps 3740. No canon overridden, no court cases.
+## mac-mini-2026-06-30-S57 -- the LOWNESS LEMMA worked via routes 1&2 back-and-forth: the CONSTANT-RESIDUE principle (small speed = universal pair-coverer, irreplaceable) + the CRT-escape crux RESOLVED (huge CRT speed ~1e16 can't restore M) (HYP-3741)
+
+Prompt: work the first two [proof routes for the lowness lemma] back and forth.
+
+ROUTE 2 (the k-witness, binding-side analog of THM-523's q-witness). A covering set missing small speed k is
+lonely at t=k^{-1}/p for a band prime p in (n,2n-3] whose unit-pair {k,p-k} is uncovered: then all v have
+vk^{-1} mod p in {2..p-2}, so min||vt||>=2/p>n/Phi6 (p<2Phi6/n~2n). Clean: missing-1 at n=14 -> t=1/17, M=2/17.
+But SET-DEPENDENT (a uniform k-witness is impossible -- killers can sit at any t).
+
+ROUTE 1 (klein budget). To defeat EVERY k-witness, S must contain a speed ≡±k mod every band prime (cover
+{k,p-k}); the construction does it with speed k itself; re-buying costs exceed the budget -> higher rung -> M>.
+
+THE CRUX (back-and-forth tension): could ONE huge CRT speed w≡k mod (band primes) cover all the pairs at once
+(budget OK) and restore M=n/Phi6? RESOLVED -- NO: even w≡1 mod (all primes<=43) (~1.3e16), the set {2..12,w,182}
+has M=525/3716≈0.141>>14/183 (exact); the lonely hole just moves to mod 85. So no large-speed CRT escape; {1..12}
+is genuinely forced.
+
+THE SYNTHESIS -- the CONSTANT-RESIDUE PRINCIPLE. A SMALL speed k has CONSTANT residue (k mod p = k for ALL p>k)
+-> covers the {k,p-k} pair mod EVERY prime simultaneously (a 'universal pair-coverer'). A LARGE speed has
+SCATTERED residues (CRT) -> covers {k,p-k} mod only the finitely many p|(w∓k). speed 1 -> [1,1,1,1,1] mod
+17,19,23,29,31; speed 7430 -> [1,1,1,6,21]. So NO finite large-speed set reproduces a constant residue across
+the unboundedly-many binding moduli -> speed k IRREPLACEABLE -> {1..n-2} forced. This unifies route 1 (the
+replacement exceeds the budget) and route 2 (the exposed witness), and explains WHY the CRT escape fails (a
+constant matched only on finitely many primes).
+
+HONEST status: mechanism + crux-robust (to ~1e16), NOT a complete proof -- the actual binding hole can sit at a
+COMPOSITE modulus (mod 85, not a band prime), so full rigor needs the radius demand over ALL D (= klein's budget,
+open). The lowness lemma reduces to 'missing the constant-residue speed exposes a lonely hole somewhere,' now
+mechanism-backed. Files: HYP-3741, lowness_lemma_constant_residue_macmini_20260630.py(+.out). Builds on HYP-3740
++ klein-S39 + THM-523. Broadcast.
 
 ## mac-mini-2026-06-30-S56 -- the LRC14 HARD CORE reduces to a single LOWNESS LEMMA (M(S)<=14/183 => {1..12} subset S); covering vs lowness separation (speed 1 covering-irrelevant but M-necessary, binding pair {1, n(n-1)}={smallest,largest}); the unbounded search COLLAPSES to one set (HYP-3740)
 

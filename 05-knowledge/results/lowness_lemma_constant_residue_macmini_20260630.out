@@ -1,0 +1,11 @@
+CRUX: replace missing speed 1 with a huge CRT speed w ≡ 1 mod (all primes <= P):
+
+  w≡1 mod primes<=23 (=223092871): M~0.14130 at t~0.9294  vs 14/183=0.07650  -> still >> (True)
+  w≡1 mod primes<=29 (=6469693231): M~0.14130 at t~0.9294  vs 14/183=0.07650  -> still >> (True)
+  w≡1 mod primes<=43 (=13082761331670031): M~0.14130 at t~0.9294  vs 14/183=0.07650  -> still >> (True)
+
+  => even an astronomically large CRT speed cannot restore M; {1..n-2} is forced.
+
+CONSTANT vs SCATTERED residue (why speed k is irreplaceable):
+  speed 1: residues mod 17,19,23,29,31 = [1, 1, 1, 1, 1]  (CONSTANT)
+  speed 7430: residues mod 17,19,23,29,31 = [1, 1, 1, 6, 21]  (scattered)
