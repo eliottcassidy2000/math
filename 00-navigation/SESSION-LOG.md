@@ -32,6 +32,42 @@ CV(N_R)^2 uniformly (the open piece of THM-579), with metagraph CV(H) the finite
 
 Files: HYP-3552, reflection the-metagraph-is-a-finite-siegel-transform.md, script
 metagraph_spectral_moments_macmini (+.out). Used the Explore agent for the metagraph survey. Broadcast.
+## klein-2026-06-29-S3 -- new metagraph spectral toolkit (THM-588: algebraic connectivity = 4, Fiedler = cyclicity); two-metagraph clarification; LRC level-2/second-moment transfer + Siegel (arXiv:2507.05905)
+
+Prompt: extend the tournament-metagraph work, define new small useful objects; read arXiv:2507.05905; think
+how metagraph ideas help LRC proofs.
+
+arXiv:2507.05905 = Han-Lee, "Moment formulas of Siegel transforms with congruence conditions (dim 2)" --
+pure number theory: first/SECOND moment of lattice-point counts with mod-q congruences. NOT graph theory,
+but squarely an LRC tool (the cap is a SECOND MOMENT S_2, LRC lives mod 14).
+
+THM-588 (PROVED + verified n=3..9): the canonical arc-flip (dominance-reversal) metagraph Laplacian L=dI-A
+has spectrum {2k : mult(k)>0} (mult = THM-587 signed cycle index). mult(1)=0 (PROVED: transposition (i j)
+negates chi_{arc ij}) + cyclicity is a nonzero level-2 invariant (mult(2)>=1, =1 n<=9) => ALGEBRAIC
+CONNECTIVITY = 4 for ALL n>=3; arc-flip walk gap EXACTLY 4/d; FIEDLER mode = the 3-cycle count (corr 1.000
+n=4,5; 0.998 n=6). New small invariants from n! perms: tr(A)=2,6,16,60,328,3160,54928 (neutral-flip/
+silent-mutation weight), complexity kappa, heat trace, spectral zeta.
+
+TWO-METAGRAPH CLARIFICATION (improves opus-S268): S268's "metagraph eigenvalues" were the MERGED-wiggly
+graph (messy/semicircle spectrum, H=2nd eigenvector, gap ~c/n CONJECTURED). The arc-flip weighted metagraph
+is the EXACTLY-solvable sibling (integer spectrum d-2k, gap 4/d, slow mode = cyclicity not H). Conjecture
+replaced by theorem for the canonical normalization.
+
+LRC TRANSFER (HYP-3552, reflection metagraph-spectral-toolkit-and-the-level-2-obstruction): THM-588's
+no-linear/single-quadratic law (mult(1)=0, mult(2)=1) is the structural reason the LRC obstruction is purely
+the PAIRWISE second moment S_2 (=-tr(M_odd)/2, mac-mini HYP-3538), with first moment S_1 forced zero
+(matches "floor is R-even"). PROPOSED: realize S_2 as a 2-dim Siegel second moment with mod-14 congruences
+(arXiv:2507.05905) -- metagraph says WHAT (one mod-14 second moment), Siegel says HOW, HYP-3551
+anti-Littlewood floor is the positivity. Couples S519 (runner = closed metagraph walk).
+
+Scripts: 04-computation/metagraph-laplacian-spectral-invariants.py. Out: 05-knowledge/results/. No court
+cases; no canon overridden (extends THM-584/587, S268, S519).
+
+NEXT: (1) verify on mac-mini's cap M that S_1=0 and S_2 is the sole binding mode. (2) write LRC pairwise
+co-emptiness as a congruence-conditioned Siegel second moment; compare to S75e cosine SOS. (3) OEIS the
+neutral-flip trace 2,6,16,60,328,3160,54928. (4) HYP-3544 equivariant homology still open.
+
+---
 
 ## mac-mini-2026-06-29-S18 -- where 7/89 comes from; {1..12,182}=14/183 SUPERSEDES it (tighter); the LRC is anti-Littlewood (HYP-3551)
 

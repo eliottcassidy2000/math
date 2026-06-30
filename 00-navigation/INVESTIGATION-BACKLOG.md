@@ -1,5 +1,17 @@
 # Investigation Backlog
 
+**THM-588 / metagraph-toolkit + LRC-transfer leads (klein-2026-06-29-S3).** (a) VERIFY on mac-mini's LRC
+cap matrix M (HYP-3538): is the first moment / linear functional zero (S_1=0), and is S_2=-tr(M_odd)/2 the
+SOLE binding mode? This tests HYP-3552 directly. (b) ANALYTIC: write the LRC pairwise co-emptiness S_2 as a
+2-dim Siegel-transform second moment with mod-14 congruence conditions (arXiv:2507.05905, Han-Lee) and
+compare main term + error to the S75e cyclotomic-cosine SOS bound. (c) OEIS: identify the neutral-flip
+(silent-mutation) trace tr(A) = sum mult(k)(d-2k) = 2,6,16,60,328,3160,54928 (n=3..9); also the metagraph
+complexity kappa(n) and the level-multiplicity triangle mult(n,k). (d) BIBLIOGRAPHY: add arXiv:2507.05905
+(Siegel-transform congruence second moments) as the proposed analytic engine for the LRC cap. (e) DUAL: do
+the same Laplacian/algebraic-connectivity analysis for the EVEN-graph metagraph E_n (CLAUDE.md dual object)
+-- is its algebraic connectivity also a constant? -> THM-588, THM-587, HYP-3552, HYP-3538, HYP-3551,
+arXiv:2507.05905, eigenvalues-of-the-merged-metagraph.
+
 **THM-584 antipodal/metagraph leads (klein-2026-06-29-S1).** Three concrete follow-ups, all small-n
 scriptable: (a) [HYP-3540] compute the metagraph level-multiplicity `mult(d-2k) = #S_n-orbits of
 k-subsets of the C(n,2) arcs` via Burnside for n up to ~10, tabulate the (n,k) triangle, and OEIS-search
