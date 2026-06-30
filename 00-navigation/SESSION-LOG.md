@@ -1,3 +1,32 @@
+## klein-2026-06-29-S15 -- FINALIZE & make rigorous: THM-590 (apex-7 cyclotomic gap, PROVED) + HYP-3596 (honest status ledger); LRC(14) is NOT claimed proved
+
+Prompt: make this rigorous and finalize.
+
+RESPONSIBLE FINALIZATION (per CLAUDE.md: mark VERIFIED/CONJECTURE, never claim proved without the proof).
+Separated the rigorous core from the conjectural program and the open problem.
+
+THM-590 (PROVED, the rigorous self-contained core): the APEX-7 CYCLOTOMIC GAP. For O subset Z_7,
+g(O)=min_{k!=0}|sum_{x in O} zeta^{kx}|^2: (a) g(O)=0 IFF O in {empty, Z_7} (by Phi_7 irreducibility);
+(b) for proper nonempty O, g(O) >= 4cos^2(3pi/7)=2+2cos(6pi/7)=0.198062, equality IFF |O| in {2,5} (the
+DOUBLET, THM-578); (c) g takes exactly 5 values {0,0.198062,0.307979,1,2} in Q(cos2pi/7), mult {2,42,42,14,28}.
+Proof: cyclotomic irreducibility (a) + exhaustive EXACT evaluation over 2^7 subsets (b,c). So the minimal
+nonzero apex obstruction 4cos^2(3pi/7) is POSITIVE -- a theorem (promotes HYP-3581).
+
+HYP-3596 (FINALIZATION ledger): PROVED = THM-584/587/588/589/590. VERIFIED (exact finite) = the 3 even-counts
++ Royle sandwich + blue=SC + BLUE=2^{sq/pronic} (HYP-3591/3592), the modular data genus/cusps=Klein/nu_2=Paley
+(HYP-3586), CV(N_R)^2 unbounded (HYP-3554), the exact binding floor 114382/332563 clearing 3/pi^2 (HYP-3593,
+scan scope). CONJECTURAL REDUCTION (NOT proved) = rho_j=the Z_7-core gap; the Gamma_0(14) Eisenstein(+)f_14
+decomposition; the uniform floor R'>=3/pi^2; hardness=genus. OPEN = **LRC(14) itself is NOT proved by this
+work** (open content = the conditional reduction + the f_14 cusp-form bound).
+
+HONEST FINAL STATEMENT: the self-contained truth of the arc -- '4cos^2(3pi/7) is the minimal apex obstruction,
+and it is positive' -- is now PROVED (THM-590); the bridge from it to LRC(14) is the explicitly-open program.
+
+Collision: mac-mini-S33 also created HYP-3594 (truth=odd-cycle); I renumbered MY finalization to HYP-3596
+(theirs was pushed first), fixed THM-590's reference + INDEX. No canon overridden; no court cases. Convergent
+with mac-mini S33 (the truth = the full circle / odd cycle) and S31 (4cos^2(3pi/7) as the even/cusp object).
+NEXT (floor owners): the two open items in HYP-3596 part C -- the reduction and the f_14 bound.
+
 ## mac-mini-2026-06-29-S33 -- the two open tasks + THE TRUTH across all frames = a single ODD CYCLE (the full circle); ceded HYP-3592->3593->3595 (HYP-3594)
 
 Prompt: work the two open tasks (rib SC-side-even proof; NS-break vs genus) + look at all the history of
