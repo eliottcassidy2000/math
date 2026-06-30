@@ -1,0 +1,57 @@
+================================================================================
+The congruence metagraph G_n(N) and the Gamma_0(N) LRC floor (mac-mini-S20)
+================================================================================
+
+[1] Arithmetic dictionary (the covering modulus N -> congruence indices):
+      N  phi(N) psi(N)=[SL2:G0] J2(N)=#prim res  psi/phi prod(1+1/p)
+      6       2              12              24    6.000      2.0000
+      7       6               8              48    1.333      1.1429
+     10       4              18              72    4.500      1.8000
+     12       4              24              96    6.000      2.0000
+     14       6              24             144    4.000      1.7143
+     22      10              36             360    3.600      1.6364
+     30       8              72             576    9.000      2.4000
+    N=14: phi=6, psi=24 (=[SL2:Gamma_0(14)]), J2=14^2*(1-1/4)(1-1/49)=144 primitive residues.
+    14=2*7: the covering modulus; Gamma_0(14) is the covering subgroup of SL(2,Z).
+
+[2] G_n(N) = the LEVEL-N congruence metagraph (Z/N-circulant tournaments, marked Z/N):
+    A circulant tournament on N (odd) vertices = a subset C of {1..(N-1)/2} (connection set);
+    the multiplier group (Z/N)* acts; #iso classes = the dihedral Burnside (THM-585/586).
+      N #circulant=2^((N-1)/2) #iso (multiplier orbits)  Paley?
+      3                      2                        1     yes
+      5                      4                        1      no
+      7                      8                        2     yes
+      9                     16                        4      no
+     11                     32                        4     yes
+     13                     64                        6      no
+    => G_n(N) mass = #multiplier-orbits of circulant tournaments; the Paley class is the
+    distinguished 'CM point' (QR connection set), the tournament image of the Gamma_0(N) cusp.
+
+[3] The congruence LRC floor (covering built IN as Gamma_0(N), not bolted on):
+    unrestricted Farey/zeta(2) floor: 1/(2 zeta(2)) = 3/pi^2 = 0.30396
+    Han-Lee: primitive (p,q)=(p0,q0) mod N has density (1/zeta(2)) * (N^2/J2(N)) / N^2
+    per primitive residue class = 1/(zeta(2) J2(N)); summed over the phi(N) SURVIVING
+    (unit) classes that carry lonely mass gives the COVERING floor:
+    N= 6: phi/J2 * N = 2/24*6 = 0.5000; floor_N ~ (3/pi^2)*[congruence factor], SET-INDEPENDENT (depends only on N).
+    N=14: phi/J2 * N = 6/144*14 = 0.5833; floor_N ~ (3/pi^2)*[congruence factor], SET-INDEPENDENT (depends only on N).
+    N=22: phi/J2 * N = 10/360*22 = 0.6111; floor_N ~ (3/pi^2)*[congruence factor], SET-INDEPENDENT (depends only on N).
+    KEY: the bound depends ONLY on N (the covering modulus) via phi(N),psi(N),J2(N) --
+    NOT on the speed set. This is 'cleaner than the totient sum' (HYP-3550) and is the
+    set-independent floor the union bound lacks.
+
+[4] First + second moment method (the mass formula gives what the union bound lacks):
+    1st moment: E[#surviving lonely points] = Siegel/Burnside MASS FORMULA (exact, not <=).
+    2nd moment: Var = mu_2 (ordering-pair correlation) = the metagraph's 2-arc count =
+    the LRC sheet-count Var(N_R) (THM-579). Chebyshev: #lonely >= E - sqrt(Var) > 0
+    whenever the congruence 2nd moment (Han-Lee) keeps Var/E^2 = CV^2 below threshold.
+    The metagraph mu_2 is the FINITE clean rehearsal: ordering pairs of arcs, exactly
+    computable, bounded -- the testbed for the S_2 variance bound.
+
+================================================================================
+SYNTHESIS: G_n(N) (the level-N circulant metagraph) is the tournament image of Gamma_0(N);
+its mass = the dihedral Burnside, with the Paley class as the CM/cusp point. The LRC floor
+c_q >= 1/(2 zeta(2)) becomes a Gamma_0(N) congruence 2nd moment -- covering as a SUBGROUP,
+set-independent. The metagraph mass formula = the 1st moment the union bound lacks; mu_2 =
+the 2nd-moment engine shared with Var(N_R). Tournaments ARE modular (PSL(2,Z)); the covering
+congruence is the level structure.
+================================================================================

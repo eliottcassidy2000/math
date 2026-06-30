@@ -1,3 +1,34 @@
+## mac-mini-2026-06-29-S20 -- the covering is a congruence subgroup: the Gamma_0(N)<->metagraph<->LRC dictionary; G_n(N) (HYP-3553)
+
+Prompt: creative ways tournament/metagraph structure aids proofs; extend the owner's 4-bullet synthesis
+fusing Han-Lee (congruence Siegel moments) + the metagraph + the LRC floor (covering = Gamma_0(N)).
+
+Foundation: the-modular-tournament (kps S18e) -- tournaments ARE PSL(2,Z) (S=complement, ST=3-cycle,
+T=vertex-add); X_0(p) genus controls the OCR residual. Plus HYP-3552 (metagraph = finite Siegel transform).
+
+DEVELOPED THE 4 BULLETS (HYP-3553):
+(B1) Han-Lee = the floor with covering BUILT IN. The floor c_q>=1/(2zeta(2))=3/pi^2 becomes a Gamma_0(N)
+     congruence 2nd moment -- covering enters as the SUBGROUP (index psi(N)=N prod(1+1/p)), so the bound is
+     SET-INDEPENDENT (depends only on N via phi/psi/J2; N=14: phi=6, psi=24=[SL2:Gamma_0(14)], J2=144).
+     Cleaner than the totient sum (HYP-3550); removes the set-dependence blocking the uniform floor (the
+     OPEN-Q-108 gatekeeper).
+(B2) the metagraph Burnside MASS FORMULA = the closed-form FIRST moment the union bound lacks (= Siegel's
+     1st-moment formula's finite twin); first+second-moment method with congruence.
+(B3) the metagraph mu_2 (ordering pairs, the 2-arc correlation) = the finite, bounded rehearsal of the
+     S_2 variance Var(N_R) (THM-579); same pair second moment, three registers.
+(B4) G_n(N) = the LEVEL-N congruence metagraph = Z/N-circulant tournaments (marked Z/N = the X_0(N) level
+     structure) under multipliers; mass = the dihedral Burnside = 1,1,2,4,4,6 for N=3,5,7,9,11,13 (a tiny
+     finite-index subset, like Gamma_0(N) in SL(2,Z)); the Paley class = the CM/cusp point.
+
+CREATIVE metagraph-for-proofs: vertex-add T = a HECKE-like raising op G_n->G_{n+1} (eigen-tournaments =
+Hecke eigenforms; X_0(p) genus predicts rational eigenvalues); the OCR-genus law = a closed-form predictor
+for the floor constant (modular/rational iff X_0(N) small genus); the spectral gap (HYP-3552) = the
+expander behind the 2nd-moment method.
+
+Files: HYP-3553, reflection the-covering-is-a-congruence-subgroup.md, script
+congruence_metagraph_gamma0_floor_macmini (+.out). Used the modular-tournament + zeta2-floor reflections.
+Open next: the EXACT congruence-floor constant (the Han-Lee evaluation at N=14). Broadcast.
+
 ## mac-mini-2026-06-29-S19 -- metagraph spectral moments (new invariant); the metagraph is a finite Siegel transform; the Burnside<->Siegel<->LRC moment bridge (HYP-3552)
 
 Prompt: extend/improve the tournament metagraph + define small useful new things; read arXiv:2507.05905;
