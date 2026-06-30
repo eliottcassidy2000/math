@@ -1,5 +1,5 @@
 ---
-id: HYP-3552
+id: HYP-3554
 title: Metagraph SPECTRAL MOMENTS -- a new cheap invariant extending klein's signed cycle index P_n (THM-587): the derivatives P_n^{(r)}(1) give the mean level kbar=P_n'(1)/P_n(1), the spectral variance Var(k) (1,2.19,4.06,5.25,6.20 for n=3..7), and the mean metagraph eigenvalue d-2kbar (1,1.5,1.33,1.07,0.72 -> 0, the signed-action asymmetry shadow), computable from n! past the 2^{C(n,2)} wall; AND the BURNSIDE<->SIEGEL<->LRC MOMENT BRIDGE -- P_n (Burnside average over S_n) is the finite analog of the Siegel transform (average over SL_n(Z)), arXiv:2507.05905 (Han-Lee) computes Siegel 1st/2nd MOMENTS with CONGRUENCE conditions, and the LRC floor (THM-579) needs the 2nd moment CV(N_R) of the sheet count with the COVERING (=congruence) restriction; so the paper's congruence-Siegel 2nd-moment is the natural tool for THM-579's gatekeeper, with the metagraph's CV(H) over iso classes its finite testbed
 status: VERIFIED (P_n reconstruction matches A000568/SC n=3..7; spectral moments + CV(H) computed). The moment-bridge + the THM-579 application are SYNTHESIS / a proposed direction, not a proof.
 source: mac-mini-2026-06-29-S19
@@ -15,7 +15,7 @@ results:
   - 05-knowledge/results/metagraph_spectral_moments_macmini_20260629.out
 ---
 
-# HYP-3552 -- metagraph spectral moments and the Burnside<->Siegel<->LRC bridge
+# HYP-3554 -- metagraph spectral moments and the Burnside<->Siegel<->LRC bridge
 
 ## (1) New invariant: the metagraph spectral moments
 klein's THM-587 gives `P_n(x) = sum_k mult(k) x^k`, the level-multiplicity generating function (eigenvalue

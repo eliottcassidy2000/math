@@ -4,7 +4,7 @@ title: The Gamma_0(N) <-> metagraph <-> LRC dictionary -- developing the four bu
 status: SYNTHESIS + verified arithmetic (psi/phi/J2; circulant-metagraph masses). The dictionary and the four bullets are a research PROGRAM; the exact congruence-floor constant is the Han-Lee computation (structure shown, constant not pinned). Not a proof.
 source: mac-mini-2026-06-29-S20
 related:
-  - HYP-3552   # the metagraph is a finite Siegel transform (this adds the congruence subgroup)
+  - HYP-3554   # the metagraph is a finite Siegel transform (this adds the congruence subgroup)
   - HYP-3550   # the totient-sum / Euler-product floor (this replaces it by Gamma_0(N), set-independent)
   - THM-579    # the sheet-count CV / Var(N_R) 2nd moment (bullet 3)
   - THM-586    # Paley dihedral Burnside = the G_n(N) mass / CM point (bullet 4)
@@ -22,7 +22,7 @@ results:
 
 ## The dictionary
 Building on [the-modular-tournament] (tournaments ARE PSL(2,Z): S=complement, ST=3-cycle, T=vertex-add;
-X_0(p) genus controls the OCR residual) and HYP-3552 (the metagraph is a finite Siegel transform):
+X_0(p) genus controls the OCR residual) and HYP-3554 (the metagraph is a finite Siegel transform):
 | Siegel / Gamma_0(N) (Han-Lee) | tournament / metagraph | LRC floor |
 |---|---|---|
 | `SL(2,Z)` | the tournament modular group | speed relabeling |
@@ -54,7 +54,7 @@ concentration is the first/second-moment method -- and Han-Lee supplies both mom
 The metagraph's `mu_2` -- the count/correlation of ordered PAIRS of arcs (the 2-point function) -- is the
 finite, exactly-computable rehearsal of the LRC `S_2` variance `Var(N_R)` (THM-579, the sheet-count CV) and
 of Han-Lee's `int hat f^2` (the Rogers/Schmidt pair correlation). All three are PAIR second moments; the
-metagraph one is bounded and clean (CV(H) ~ 0.5-0.6, HYP-3552), the testbed for the analytic `S_2` bound.
+metagraph one is bounded and clean (CV(H) ~ 0.5-0.6, HYP-3554), the testbed for the analytic `S_2` bound.
 
 ## Bullet 4 -- G_n(N), the tournament image of the covering congruence
 **Definition.** `G_n(N)` = the LEVEL-N congruence metagraph = the iso classes of `Z/N`-circulant
@@ -73,7 +73,7 @@ set, `N` prime `=3 mod 4`) is the distinguished **CM / cusp point** -- the tourn
 - **Genus law as a closed-form predictor.** kps's OCR-denominator law (closed form iff `X_0(p)` genus 0/1)
   says WHICH metagraph invariants admit closed forms -- a free predictor for the LRC first-moment program
   (the floor constant should be "rational/modular" exactly when the covering modulus `N` has `X_0(N)` small genus).
-- **Metagraph as expander.** The spectral-moment gap (HYP-3552) measures mixing; a spectral-gap bound would
+- **Metagraph as expander.** The spectral-moment gap (HYP-3554) measures mixing; a spectral-gap bound would
   give typical-case concentration (most tournaments/covering sets behave like the mean) -- the qualitative
   content of the second-moment method.
 

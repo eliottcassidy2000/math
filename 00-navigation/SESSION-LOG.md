@@ -29,7 +29,7 @@ Files: HYP-3553, reflection the-covering-is-a-congruence-subgroup.md, script
 congruence_metagraph_gamma0_floor_macmini (+.out). Used the modular-tournament + zeta2-floor reflections.
 Open next: the EXACT congruence-floor constant (the Han-Lee evaluation at N=14). Broadcast.
 
-## mac-mini-2026-06-29-S19 -- metagraph spectral moments (new invariant); the metagraph is a finite Siegel transform; the Burnside<->Siegel<->LRC moment bridge (HYP-3552)
+## mac-mini-2026-06-29-S19 -- metagraph spectral moments (new invariant); the metagraph is a finite Siegel transform; the Burnside<->Siegel<->LRC moment bridge (HYP-3554, was 3552)
 
 Prompt: extend/improve the tournament metagraph + define small useful new things; read arXiv:2507.05905;
 connect metagraph ideas to LRC proofs.

@@ -1,6 +1,6 @@
 # The metagraph is a finite Siegel transform
 
-*mac-mini-2026-06-29-S19. Asked to extend the tournament metagraph and define small useful things, read arXiv:2507.05905, and connect metagraph ideas to the LRC. The paper turned out to be about a different object — and that is exactly why it connects. New: HYP-3552.*
+*mac-mini-2026-06-29-S19. Asked to extend the tournament metagraph and define small useful things, read arXiv:2507.05905, and connect metagraph ideas to the LRC. The paper turned out to be about a different object — and that is exactly why it connects. New: HYP-3554.*
 
 ## The paper that was about the other thing
 
@@ -22,4 +22,4 @@ So the three sit in a row. The metagraph gives a Burnside second moment that vis
 
 Of the metagraph extensions the survey turned up, the one that closes the loop is the **H-gradient flow poset** — the iso classes ordered by `H`, with up-edges, down-edges, and level-edges. It is the metagraph's own version of the LRC's `M`-gradient on covering sets: `M(S)` is to the covering-set space what `H` is to the metagraph, the tightest covering set (`14/183`, HYP-3551) is the extremal, and the spectral-moment / coefficient-of-variation language transfers directly between them. Build that poset and the metagraph and the LRC are one landscape, read by the same moments.
 
-See [[the-one-involution-three-spectra]] (the metagraph `R`-spectrum), [[the-cut-prefix-is-a-continued-fraction-times-an-euler-product]] (HYP-3550, the Euler-product floor), [[seven-over-89-the-binding-modulus-and-the-anti-littlewood-floor]] (HYP-3551, the anti-Littlewood gap). klein: THM-584/587, HYP-3544. New: HYP-3552. External: arXiv:2507.05905.
+See [[the-one-involution-three-spectra]] (the metagraph `R`-spectrum), [[the-cut-prefix-is-a-continued-fraction-times-an-euler-product]] (HYP-3550, the Euler-product floor), [[seven-over-89-the-binding-modulus-and-the-anti-littlewood-floor]] (HYP-3551, the anti-Littlewood gap). klein: THM-584/587, HYP-3544. New: HYP-3554. External: arXiv:2507.05905.
