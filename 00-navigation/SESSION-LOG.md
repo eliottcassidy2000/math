@@ -1,3 +1,34 @@
+## klein-2026-06-29-S16 -- understand FAMILY INFIMUMS: inf R'=0 over the infinite family (measure vanishes), 0.344 was scan-only; provable infimum needs a FINITE family (the descent finitizes) (HYP-3597)
+
+Prompt: come to understand family infimums better.
+
+THE CORRECTION (verified, script family_infimum_structure_klein.py): the covering family is INFINITE and
+inf R' along it is 0, not 0.344. With Q={1,2} fixed, adding high speeds to the binding R={1..13}\{7}:
+R' = 0.344 -> 0.253 -> 0.173 -> 0.107 -> 0 (at +{15,16,17,18}, m_S=0). So inf R' over the FULL family = 0;
+the 0.344 (HYP-3593) was the scan-inf over the R subset {1..13} slice.
+
+WHY inf R'=0 DOESN'T BREAK LRC (measure vs existence): R' = m_S/(m_R m_Q) uses the MEASURE m_S. R'->0 means
+the lonely set's MEASURE vanishes (shrinks to isolated points); LRC is EXISTENCE (lonely(S) nonempty), NOT
+positive measure -- a measure-0 lonely set is still nonempty. The R'=0 cases are over-large S (17+ speeds)
+that trivially cover, OUTSIDE the kps HYP-3415 family. So the floor R'>0 is SUFFICIENT for existence, not
+necessary; the measure can legitimately vanish.
+
+THE LESSON: a family infimum is provable (attained, positive) only over a FINITE family. rho_j over the
+Z_7-cores = FINITE (2^7) -> inf = MIN = 4cos^2(3pi/7) (PROVED, THM-590). R' over coverings = INFINITE ->
+scan only UPPER-bounds the inf (which is 0, the cusp limit, about measure not existence). The 2-adic descent
+is the FINITIZATION that converts the infinite covering family into the finite Z_7-core family; THAT is why
+it is the right move and why the bound is rigorous only there.
+
+MEASURE/EXISTENCE = sigma-even/sigma-odd AT THE CUSP: at m_S->0 the measure (R', sigma-even floor) vanishes;
+existence (a nonempty measure-0 lonely set) is carried by the DISCRETE side (lonely-time count, Redei-odd
+witness, the finite Z_7 cyclotomic structure). So at the cusp you COUNT, not measure -- the precise content
+of 'the proof lives at the cusps'. Same infinite-family pathology as CV(N_R)^2->inf (HYP-3554).
+
+SHARPENINGS: binding single-drop = APEX 7 (R'=0.344); even-speed drops give R'=1.27 (the 2-adic signature);
+odd non-7 drops 0.70-1.0. CORRECTS the scope of HYP-3593/3596 (0.344 = scan-slice, not family-inf; the
+PROVABLE positive floor is THM-590's finite-family 4cos^2(3pi/7)). Reflection: family-infimums-finite-vs-
+infinite-and-measure-vs-existence. No canon overridden (THM-590 unaffected); no court cases.
+
 ## klein-2026-06-29-S15 -- FINALIZE & make rigorous: THM-590 (apex-7 cyclotomic gap, PROVED) + HYP-3596 (honest status ledger); LRC(14) is NOT claimed proved
 
 Prompt: make this rigorous and finalize.

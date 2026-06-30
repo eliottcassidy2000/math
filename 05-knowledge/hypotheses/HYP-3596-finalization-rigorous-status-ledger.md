@@ -43,6 +43,12 @@ reduction to one cusp-form bound.
 - The exact binding floor constant (HYP-3593): `inf_{scan} R' = 114382/332563 = 0.343941` at `R={1..13}\{7}`,
   `Q={1,2}`, which **clears** the clean bound `1/(2 zeta(2)) = 3/pi^2 = 0.303964` by `+0.040`.
   SCOPE: this is the minimum over a 942-covering scan, not a proof of the infimum over the full family.
+  CORRECTION (HYP-3597): `inf R'` over the FULL (infinite) covering family is actually `0` -- the lonely
+  MEASURE `m_S` vanishes as `S` grows (verified `0.344->0.253->0.173->0.107->0`), but this does NOT break
+  LRC (LRC is EXISTENCE, not positive measure; the over-large `S` trivially cover and are outside the
+  relevant family). So `0.344` is a scan-slice value, NOT a family infimum. The PROVABLE positive floor is
+  the FINITE-family minimum `4cos^2(3pi/7)` (THM-590), reached by the descent's finitization -- the measure
+  infimum over the infinite family is the wrong object.
 
 ## C. CONJECTURAL REDUCTION (NOT proved; the program)
 

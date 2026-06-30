@@ -1,0 +1,40 @@
+==============================================================================
+ (1) single-drops R={1..13}\{j}, Q={1,2}: R' vs dropped speed j
+==============================================================================
+   drop j= 7: R'=0.3439  m_R=0.0839 <-- APEX-7 (binding)
+   drop j=13: R'=0.7015  m_R=0.0341
+   drop j= 5: R'=0.7318  m_R=0.0360
+   drop j= 3: R'=0.7893  m_R=0.0403
+   drop j= 9: R'=0.9391  m_R=0.0584
+   drop j=11: R'=0.9581  m_R=0.0619
+   drop j= 1: R'=1.0000  m_R=0.0714
+   drop j= 2: R'=1.2727  m_R=0.0302
+   drop j= 4: R'=1.2727  m_R=0.0242
+   drop j= 6: R'=1.2727  m_R=0.0082
+   drop j= 8: R'=1.2727  m_R=0.0452
+   drop j=10: R'=1.2727  m_R=0.0241
+   drop j=12: R'=1.2727  m_R=0.0122
+   => min over single-drops at j=7 (R'=0.3439); max at j=12 (R'=1.2727)
+
+==============================================================================
+ (2) cusp approach: m_R -> 0. R={1..13}\{7} then re-add danger toward the boundary
+==============================================================================
+   R={1..13}\{7}                m_R=0.08390  R'=0.34394
+   R={1..13}\{7}+{15}           m_R=0.07556  R'=0.25297
+   R={1..13}\{7}+{15,16}        m_R=0.06862  R'=0.17342
+   R={1..13}\{7}+{15,16,17}     m_R=0.06274  R'=0.10688
+   R={1..13}\{7}+{15..20}       m_R=0.04945  R'=nan
+   (watch whether R' -> a positive limit (floor bounded) or -> 0 (floor fails) as m_R shrinks)
+
+==============================================================================
+ (3) does anything beat the 0.344 scan-inf? pair-drops + high speeds + other Q
+==============================================================================
+   min R' over 182 extra candidates: 0.00000  at R=(1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 15, 16, 17, 18) Q=(1, 2)
+   vs the {1..13}\{7} scan-inf 0.34394: LOWER (true inf < scan)
+
+==============================================================================
+ CONTRAST: finite vs infinite family
+==============================================================================
+   rho_j over Z_7-cores: FINITE family (2^7) -> inf = MIN = 4cos^2(3pi/7) = 0.19806 (PROVED, THM-590, attained at the doublet).
+   R'   over coverings : INFINITE family    -> scan only UPPER-bounds the true inf; inf is the m_R->0 CUSP LIMIT.
+   The 2-adic descent FINITIZES R' into rho_j (infinite -> finite); that finitization is what makes the infimum PROVABLE.
