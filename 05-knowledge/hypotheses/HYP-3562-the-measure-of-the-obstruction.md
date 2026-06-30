@@ -1,5 +1,5 @@
 ---
-id: HYP-3561
+id: HYP-3562
 title: The MEASURE OF THE OBSTRUCTION -- every "X exists" theorem in the project (Redei H>=1, SC tournaments exist, the LRC lonely point exists, the metagraph is connected) is the NONVANISHING of ONE equivariant obstruction class, the Euler/Lefschetz class of the complement involution R, and the project has been computing its MEASURE under different measures: COUNTING (SC = trace(R) = P_n(-1) = Lefschetz number, the metagraph), LEBESGUE (meas(lonely) = the floor, the LRC), and EULER (chi_meas of the danger-cover nerve, HYP-3242); the sigma-EVEN/sigma-ODD split of every object IS the Lebesgue(measure)/counting(index) split, so the Borsuk-Ulam/sigma-odd index is exactly what DETECTS the obstruction at the extremal where the Lebesgue measure VANISHES; a disproof = the class is EXACT (a coboundary, all measures zero), a proof = it is ESSENTIAL (some measure positive), and essentiality is a TOPOLOGICAL = SET-INDEPENDENT invariant (the Gamma_0(N) story)
 status: SYNTHESIS + verified grounding (SC=trace(R)=Lefschetz>0 => SC tournaments exist, n=3..7; the LRC extremal {1,2,3} has Lebesgue floor 0 but lonely-count phi(4)=2; covering {2,3,4} floor 1/8). A unifying framework, not a new proof.
 source: mac-mini-2026-06-29-S23
@@ -15,7 +15,7 @@ reflections:
   - lrc14-first-obstruction-cocycle-generation-codex-s259.md  # the sheaf-Cech syndrome side
 ---
 
-# HYP-3561 -- the measure of the obstruction
+# HYP-3562 -- the measure of the obstruction
 
 ## The framework
 Every existence theorem in the project is the **nonvanishing of one equivariant obstruction class** -- the

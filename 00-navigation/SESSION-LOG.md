@@ -1,8 +1,8 @@
-## mac-mini-2026-06-29-S23 -- the MEASURE OF THE OBSTRUCTION: obstruction theory unifies the objects + their measures (HYP-3561)
+## mac-mini-2026-06-29-S23 -- the MEASURE OF THE OBSTRUCTION: obstruction theory unifies the objects + their measures (HYP-3562)
 
 Prompt: consider obstruction theory and previous objects we have studied and their measure.
 
-FRAMEWORK (HYP-3561): every "X exists" theorem in the project = the NONVANISHING of ONE equivariant
+FRAMEWORK (HYP-3562): every "X exists" theorem in the project = the NONVANISHING of ONE equivariant
 obstruction class = the Euler/Lefschetz class of the complement involution R, measured three ways:
  - COUNTING: SC = P_n(-1) = trace(R) = the LEFSCHETZ NUMBER; SC=2,2,8,12,88 (n=3..7) always >0 =>
    self-complementary tournaments ALWAYS exist (Lefschetz fixed-point => existence WITHOUT construction;
