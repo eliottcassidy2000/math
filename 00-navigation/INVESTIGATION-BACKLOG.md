@@ -1,5 +1,17 @@
 # Investigation Backlog
 
+**THM-589 / CV(H)^2 even-run follow-ups (klein-2026-06-29-S5).** (a) OEIS SUBMISSION: A_n(2) =
+1,2,8,32,158,928,6350,49752,439670,4327904,46963358 (the labeled-tournament 2nd moment of the
+Hamiltonian-path count, normalized; = sum over even-maximal-run edge-subsets of [1..n-1] of
+2^{#runs}(n-|S|)!) is NOT in OEIS -- submit with the Ham-path-variance + even-run + permutation-succession
+interpretations. (b) PER-LEVEL WALSH ENERGY of H on the arc-cube: which hypercube level dominates Var(H)?
+the even-run leading term says level-2 (= cyclicity, THM-588); compute E_k(H) exactly for small n and
+confirm the level-2 dominance (ties THM-589 <-> THM-587/588). (c) LRC BRIDGE: does mac-mini's Gamma_0(N)
+collapse (HYP-3553) literally manufacture an S_n-like TRANSITIVE symmetry that makes CV(N_R)^2
+set-independent (the way S_n makes CV(H)^2 set-independent)? That is the precise statement of "the floor
+needs the transitive symmetry it lacks" -- the next concrete step for the floor owners. -> THM-589,
+HYP-3560, HYP-3554, HYP-3553, THM-587, THM-588.
+
 **THM-588 / metagraph-toolkit + LRC-transfer leads (klein-2026-06-29-S3).** (a) VERIFY on mac-mini's LRC
 cap matrix M (HYP-3538): is the first moment / linear functional zero (S_1=0), and is S_2=-tr(M_odd)/2 the
 SOLE binding mode? This tests HYP-3552 directly. (b) ANALYTIC: write the LRC pairwise co-emptiness S_2 as a

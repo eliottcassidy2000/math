@@ -4,7 +4,7 @@ title: PROVED (finite rehearsal, approach 1): the Hamiltonian-path count H conce
 status: PROVED (CV(H)^2 closed form + Poisson limit; verified exactly n=3..10: 1/3,1/3,19/60,13/45,131/504,131/560,...->0). The LRC transfer is a PROGRAM (the rehearsal is rigorous; the transfer needs the Han-Lee congruence 2nd moment).
 source: mac-mini-2026-06-29-S21
 related:
-  - HYP-3554   # the metagraph is a finite Siegel transform (this is the worked 2nd moment)
+  - HYP-3561   # the metagraph is a finite Siegel transform (this is the worked 2nd moment)
   - HYP-3553   # the Gamma_0(N) congruence floor (the set-independent transfer)
   - THM-588    # klein: no linear / one quadratic invariant => purely 2nd-moment (validates approach 1)
   - THM-579    # the LRC gatekeeper CV(N_R)^2 (the transfer target)

@@ -26,6 +26,43 @@ succession count, not bespoke.
 Files: THM-589, reflection the-metagraph-variance-was-already-a-theorem.md, script
 metagraph_H_variance_closed_form_macmini (+.out). Builds on THM-219 + HYP-3560/3554/3553 + klein S4.
 Broadcast.
+## klein-2026-06-29-S5 -- extended the owner's CV(H)^2 identity: EXACT even-run closed form + the 2/n rate (THM-589); the even-overlap parity = the witness-side mirror of the 2-adic descent; resolved the HYP-3554 collision
+
+Prompt: see more LRC<->tournament relations; extend the owner's CV(H)^2 = (1/n!)sum c(pi')2^{j(pi')}-1
+formula; integrate with previous sessions. Pull frequently, integrate incoming.
+
+INTEGRATED INCOMING: mac-mini-S21 (HYP-3560) had JUST proved CV(H)^2 -> 0 via Poisson(1) adjacencies
+(the finite rehearsal of THM-579's gatekeeper), building on my THM-588. I extended rather than redid.
+Also resolved a numbering collision: mac-mini renumbered their spectral-moments into HYP-3554, which I'd
+already used (S4 cv-nr); I renamed theirs to HYP-3561 and fixed all canon refs (mine keeps 3554).
+
+THM-589 (PROVED + verified): re-derived the owner's identity (fix reference path; e=2(n-1)-j; desc adj
+=> incompatible => c=0), then gave the EXACT even-run closed form via binomial inversion:
+A_n(2) = sum_{edge-subsets of [1..n-1] with ALL maximal runs EVEN} 2^{#runs}(n-|S|)!. The mechanism is a
+PARITY cancellation -- two Ham paths' shared consecutive-arc run of length m contributes 1+(-1)^m = 2 if
+even, 0 if ODD (ascending/descending orientations cancel). RATE: CV(H)^2 = 2(n-2)/(n(n-1))+O(1/n^2) ~ 2/n
+(n*CV^2 -> 2, verified to n=320 = 1.99995); std/mean ~ sqrt(2/n). Cross-checks: even-run DP == permutation
+form (n<=9) == direct tournament enumeration (n<=5). A_n(2)=1,2,8,32,158,928,6350,49752,439670,4327904,
+46963358 is NOT in OEIS (new sequence; submit).
+
+TWO NEW LRC<->TOURNAMENT RELATIONS (reflection even-overlap-parity-and-the-two-reference-collapses):
+(1) even-overlap survival (odd cancels) IS the WITNESS-side mirror of the LRC 2-adic descent (THM-580,
+"even survives, odd peels") -- now the "even/antipodal Z_2" pattern on THREE faces (floor THM-580,
+metagraph THM-584, witness THM-589). (2) CV(H)^2 and CV(N_R)^2 are both reference-collapsed pair-overlap
+2nd moments: S_n-collapse (transitive, no vanishing fiber) gives CV(H)^2 clean/set-independent/~2/n->0;
+Z_14-collapse gives CV(N_R)^2 set-dependent/unbounded (HYP-3554). The S_n reference-collapse is the
+TEMPLATE for the set-independent floor bound mac-mini wants (Gamma_0(N), HYP-3553). Integrates THM-587/588
+(H = degree-(n-1) on the arc-cube; orientation parity = its signed structure).
+
+Script: 04-computation/cvH_even_run_closed_form_klein.py. No court cases; no canon overridden (extends
+HYP-3560, THM-587/588, THM-579/580).
+
+NEXT: (1) submit A_n(2) to OEIS w/ the Ham-path-2nd-moment + even-run interpretation. (2) the per-level
+Walsh energy of H (which level dominates Var(H)? the even-run form says level-2 leads, =cyclicity, THM-588).
+(3) does the floor's Gamma_0(N) collapse literally realize an "S_n-like transitive symmetry" that makes
+CV(N_R)^2 set-independent? (the bridge mac-mini/kps want).
+
+---
 
 ## klein-2026-06-29-S4 -- worked the actionable LRC step: the THM-579 floor gatekeeper CV(N_R)^2 is set-dependent + UNBOUNDED (dense R + speed 7), motivating mac-mini's Gamma_0(N) route; floor R'>0 robust (HYP-3554)
 
