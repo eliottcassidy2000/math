@@ -1,0 +1,27 @@
+================================================================================
+Metagraph spectral moments (extending klein THM-587 P_n) + Siegel/LRC analogy
+================================================================================
+
+ n d=C(n,2) P_n(1)=A000568  P_n(-1)=SC   mean k    Var(k)  mean eig  spec.var
+ 3        3           2(OK)      2(OK)    1.000     1.000     1.000     4.000
+ 4        6           4(OK)      2(OK)    2.250     2.188     1.500     8.750
+ 5       10          12(OK)      8(OK)    4.333     4.056     1.333    16.222
+ 6       15          56(OK)     12(OK)    6.964     5.249     1.071    20.995
+ 7       21         456(OK)     88(OK)   10.140     6.200     0.719    24.798
+
+  mean k -> d/2 (spectrum centered); the level VARIANCE is the new invariant = how
+  spread the metagraph spectrum is = a 2nd moment, computable from n! (past the wall).
+
+  H-distribution over iso classes (H = #Ham paths; the metagraph vertex 'size'):
+   n #classes    mean H       Var H CV(H)=sd/mean
+   3        2      2.00        1.00        0.5000
+   4        4      3.00        2.00        0.4714
+   5       12      7.67       22.89        0.6240
+   6       56     21.86      157.55        0.5743
+
+  CV(H) over iso classes is the Burnside analog of Siegel's 2nd-moment CV; the LRC floor
+  THM-579 needs CV(N_R) (sheet count). arXiv:2507.05905 computes such 2nd moments with
+  CONGRUENCE conditions = the LRC COVERING (divisibility) structure. The bridge:
+  metagraph P_n = Burnside avg over S_n  <->  Siegel transform = avg over SL_n(Z);
+  both give 1st (count/mean) and 2nd (variance) moment formulas.
+================================================================================

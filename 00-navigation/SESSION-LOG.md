@@ -1,3 +1,38 @@
+## mac-mini-2026-06-29-S19 -- metagraph spectral moments (new invariant); the metagraph is a finite Siegel transform; the Burnside<->Siegel<->LRC moment bridge (HYP-3552)
+
+Prompt: extend/improve the tournament metagraph + define small useful new things; read arXiv:2507.05905;
+connect metagraph ideas to LRC proofs.
+
+arXiv:2507.05905 = Han-Lee, "Moment formulas of Siegel transforms with congruence conditions in dim 2"
+(July 2025) -- Siegel 1st/2nd MOMENTS of lattice-point counts with CONGRUENCE conditions; Schmidt
+counting + quantitative Khintchine under congruences. NOT metagraph, but directly LRC-relevant.
+
+Used an Explore agent to map the metagraph (G_n, merged G_n/Z_2, even-graph E_n; THM-584/587, HYP-3544;
+spine/ribs/sea; new OEIS candidates E(G_n)=[1,5,30,290,4086,91161], E(G_n/Z_2)=[1,3,21,143,2123,45550];
+a 10-item extension menu).
+
+NEW INVARIANT (HYP-3552): the DERIVATIVES of klein's signed cycle index P_n (THM-587) = the metagraph
+SPECTRAL MOMENTS. mean level kbar=P_n'(1)/P_n(1); spectral Var(k)=1,2.19,4.06,5.25,6.20 (n=3..7); mean
+metagraph eigenvalue d-2kbar=1,1.5,1.33,1.07,0.72 -> 0 = the SIGNED-ACTION ASYMMETRY (bit-flip breaks
+k<->d-k so mult(k)!=mult(d-k), spectrum right-shifted, washing out as n->inf). Computable from n! past
+the 2^C(n,2) wall. Companion CV(H)=0.50,0.47,0.62,0.57 over iso classes. (P_n reconstruction verified vs
+A000568/SC.)
+
+THE BRIDGE: P_n = Burnside average over S_n = the FINITE analog of the Siegel transform (avg over
+SL_n(Z)). P_n(1)=A000568=1st moment (Siegel mean count); P_n(-1)=SC + Var(k)=2nd moment (Rogers/Schmidt
+variance); the bit-flip signs <-> the paper's congruence conditions. So 'the metagraph is a finite Siegel
+transform.'
+
+LRC APPLICATION: THM-579's covering-floor GATEKEEPER R'>=1-CV(N_R)sqrt((1-m_Q)/m_Q) is a SECOND MOMENT --
+Var(N_R)=196*sum|chat(14N)|^2 of a lattice-point (sheet) count RESTRICTED to 14Z = a CONGRUENCE = the
+COVERING structure. So arXiv:2507.05905's congruence-Siegel 2nd-moment is the natural machinery to bound
+CV(N_R)^2 uniformly (the open piece of THM-579), with metagraph CV(H) the finite testbed (it stays
+~0.5-0.6, doesn't blow up). The H-gradient flow poset (metagraph) = the M-gradient on covering sets (LRC)
+= one landscape read by the same moments; tightest covering set 14/183 (HYP-3551) = its extremal.
+
+Files: HYP-3552, reflection the-metagraph-is-a-finite-siegel-transform.md, script
+metagraph_spectral_moments_macmini (+.out). Used the Explore agent for the metagraph survey. Broadcast.
+
 ## mac-mini-2026-06-29-S18 -- where 7/89 comes from; {1..12,182}=14/183 SUPERSEDES it (tighter); the LRC is anti-Littlewood (HYP-3551)
 
 Prompt: understand where 7/89 comes from; think Littlewood conjecture as inspiration for a long exploration.
