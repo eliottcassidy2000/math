@@ -1,0 +1,31 @@
+# Relations, not things
+
+*mac-mini-2026-06-29-S24. The owner asked to extend the coboundary lens and to see in terms of relations between things, not things. The project has been quietly relational all along; this names it.*
+
+## The nouns were never the objects
+
+A tournament is not a set of vertices with arrows drawn in. It is a relation — the dominance relation `a \to b` — and the vertices are only its support. The Lonely Runner is not a search for a time. It is the danger relation `D(v,t) = [\lVert vt\rVert < 1/14]`, a subset of speeds-cross-time, and a lonely time is merely a column of that relation in which nothing is dangerous. The metagraph is not a list of isomorphism classes; it is the arc-flip relation between them. Every noun the project has chased is the support of a relation, and the relation is the thing that carries the mathematics.
+
+This is not a stylistic preference. klein's THM-588 makes it forced: the metagraph has *no* first-order invariant — `mult(1) = 0`, there is no `S_n`-invariant linear functional of the arcs — and exactly one quadratic invariant, the 3-cycle count. A 3-cycle is a relation among three vertices, the failure of transitivity. So there is literally nothing to measure at the level of individual arcs (things); the first measurable quantity is a relation. The transitive tournament, the maximal "thing" — a clean linear order — is the trivial point, zero cyclicity. All content lives in the relation. I checked it: the 3-cycle counts across iso classes run `\{0,1,2\}`, `\{0,\dots,5\}`, `\{0,\dots,8\}` for `n=4,5,6`, and that one relational invariant carries the entire metagraph.
+
+## To study a relation, compose it with itself
+
+If the only invariant is quadratic, the operation that matters is composition. The second moment is not a number you compute about a thing; it is the relation composed with its transpose. `D \cdot D^{\top}` — the Gram of the danger relation — has the first moment on its diagonal (how many times each speed is safe, a thing-count) and the *pair-correlation* off the diagonal: how often two sheets are safe together, the genuine relation. That off-diagonal is THM-588's quadratic, THM-579's `CV(N_R)^2`, THM-589's `W(n)`. They are the same object: the relation composed with itself. The whole proof, klein's no-linear-invariant theorem tells us, is a bound on `D \cdot D^{\top}` — there is nothing lower to reach for.
+
+## A coboundary is a separable relation
+
+Here the coboundary lens sharpens to something checkable. A coboundary is a relation that factors: `D(v,t) = f(v)\,g(t)`, rank one, separable, trivializable by two thing-functions — a potential. An essential relation does not factor; its rank exceeds one. A disproof of the Lonely Runner would be the danger relation collapsing to a coboundary — separating into a speed-part times a time-part, which (being a single product) would cover. It cannot, and the reason is visible in the formula: `\lVert vt\rVert` depends on the *product* `vt`, and a product is the one bilinear thing that refuses to separate. The multiplicative structure that S18 called anti-Littlewood is, in this language, exactly the rank of the relation — the danger relation is full rank because `vt` is irreducibly bilinear. I verified the safe relations are full rank (`3,3,5`) for the small cases; they are essential, not coboundaries. The metagraph's essentiality is the same statement in its own key: the 3-cycle, the irreducibly cyclic relation that no linear order trivializes.
+
+So the obstruction's essentiality is the relation's non-separability, and the disproof is the one move a non-separable relation cannot make. "Existence without construction" stops being mysterious: you never build the lonely point because the lonely point was never the object — the object is the relation, and what you prove is that it does not factor.
+
+## The reference is itself a relation
+
+klein's S5 added the last piece, and it too is relational. The metagraph's second moment is clean — `CV(H)^2 \sim 2/n`, set-independent — and the Lonely Runner's is dirty — `CV(N_R)^2` unbounded. The difference is not in the relations being composed; it is in the *collapse*, the change of base. The metagraph collapses by `S_n`, the full relabeling, the transitive reference with no degenerate fiber, and the composition comes out clean. The runner collapses by `\mathbb{Z}_{14}`, the covering, and degenerates at the cusps. The cure is to *change the base relation* — to find the `\Gamma_0(N)` congruence that gives the runner an `S_n`-like reference, set-independent. klein put it exactly: the floor must manufacture the transitive symmetry it lacks. That is a relational instruction. You do not fix the floor by estimating harder; you fix it by composing along a better correspondence.
+
+## The calculus of correspondences
+
+Once the objects are relations, the tools are the operations on relations, and they are the ones the project keeps rediscovering under other names. Composition is the second moment. Transpose is `R`, the complement / reversal / antipodal involution — one relation, klein-S5 noted, appearing on three faces (floor, metagraph, witness) as three representations of a single 2-adic morphism. Pullback along a map is the reference-collapse, the change of base. Rank is essentiality. The coboundary is the rank-one (separable) locus, the trivial relations. The cohomology — cocycles modulo coboundaries — is essential relations modulo trivial ones, which is the obstruction, whose measure (S23) is the floor.
+
+The proof, stated relationally, is short: the danger relation, composed with itself and read in the right base, is essential and bounded — non-separable (so a lonely point exists) and finite-variance (so it exists robustly). Everything the project has built — the floor, the witness, the metagraph, the Euler class, `\Gamma_0(N)`, `W(n)` — is one of these operations applied to one relation. See the things as the relation's shadows, and the dozen objects become one.
+
+See [[the-measure-of-the-obstruction]] (HYP-3562, the coboundary lens this extends), [[the-metagraph-variance-was-already-a-theorem]] (THM-589, composition = the second moment), [[the-covering-is-a-congruence-subgroup]] (HYP-3553, change of base), klein THM-588 (no first-order invariant), klein-S5 (the reference-collapse). New: HYP-3563.

@@ -30,6 +30,42 @@ NEXT: octonion/Fano work should target Z_7/Paley T_7 (THM-586), not b_1^-. Minor
 of b_1^-(n) (~E/2); relation (if any) to the GLMY tournament Betti (THM-130/154).
 
 ---
+## mac-mini-2026-06-29-S24 -- RELATIONS, NOT THINGS: the relational reframe extending the coboundary lens (HYP-3563)
+
+Prompt: extend the coboundary lens creatively; think abstractly in terms of relations between things, not things.
+
+FIRST: collision cleanup. klein-S5 had renamed my metagraph-spectral-moments (S19) HYP-3554->HYP-3561
+(resolving its collision with klein-S4's cv-nr HYP-3554), but my S23 obstruction-measure ALSO took
+HYP-3561. Moved my obstruction-measure -> HYP-3562; klein's spectral-moments keeps HYP-3561. (klein-S5
+also EXTENDED my THM-589 with the even-run closed form + the 2/n rate verified to n=320, and found the
+two reference-collapse relations -- which fed this session.)
+
+THE REFRAME (HYP-3563): the project's objects ARE relations -- a tournament = the dominance relation
+(a->b); the LRC = the danger relation D(v,t)=[||vt||<1/14]; the metagraph = the arc-flip relation. The
+'things' (lonely point, SC tournament, transitive order) are DERIVED.
+
+WHY FORCED relational: klein THM-588 -- NO first-order/thing invariant (mult(1)=0), only the quadratic
+3-cycle (a RELATION among 3 vertices = non-transitivity). The transitive (linear order = the maximal
+thing) is the trivial point (verified: 3-cycle counts {0,1,2}/{0..5}/{0..8}, n=4,5,6).
+
+THE 2ND MOMENT = the relation composed with itself: D.D^T (the Gram); diag=1st moment (thing-count),
+off-diag = the pair RELATION = THM-588's quadratic = THM-579 CV(N_R)^2 = THM-589 W(n). The proof is a
+bound on D.D^T (nothing lower, klein THM-588).
+
+ESSENTIAL vs COBOUNDARY = rank>1 vs separable: a coboundary = a rank-1/separable relation f(v)g(t)
+(trivializable by a 'thing'/potential). VERIFIED: the LRC safe relation is FULL RANK (3,3,5) = essential.
+DISPROOF = the danger relation is a coboundary (separable => covers); the BILINEAR v*t forbids separation
+(the anti-Littlewood essentiality, HYP-3551); on the metagraph it's the cyclic 3-cycle.
+
+REFERENCE-COLLAPSE (klein-S5) = the change-of-base relation: S_n-collapse clean (CV(H)^2~2/n) vs
+Z_14-collapse dirty (CV(N_R)^2 unbounded); the proof = MANUFACTURING the clean base = Gamma_0(N) (HYP-3553),
+'the floor manufactures the transitive symmetry it lacks.' NEW FRAMES (all relational): span/
+correspondence; composition = 2nd moment; rank = essentiality; morphisms primary (R = one 2-adic
+involution on 3 faces). Proof target SHARPENED: 'the danger relation is essential (rank>1, non-coboundary)',
+not 'a lonely point exists.'
+
+Files: HYP-3563, reflection relations-not-things.md, script relations_not_things_danger_relation_macmini
+(+.out); + the HYP-3561->3562 collision fix. Broadcast.
 
 ## mac-mini-2026-06-29-S23 -- the MEASURE OF THE OBSTRUCTION: obstruction theory unifies the objects + their measures (HYP-3562)
 

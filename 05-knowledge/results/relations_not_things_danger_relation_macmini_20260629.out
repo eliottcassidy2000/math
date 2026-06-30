@@ -1,0 +1,38 @@
+================================================================================
+Relations, not things: the danger relation as the primary object (mac-mini-S24)
+================================================================================
+
+[1] LRC SAFE relation S[i][a] = [speed v_i safe at time a/T] (a lonely time = an all-safe
+    column). The relation is the OBJECT; a lonely point is DERIVED (a full column).
+    {1,2,3} LRC4 extremal   : relation 3x48, rank=3 (>1 => ESSENTIAL, not separable/coboundary); lonely (all-safe) columns: 2
+    {2,3,4} LRC4 covering   : relation 3x48, rank=3 (>1 => ESSENTIAL, not separable/coboundary); lonely (all-safe) columns: 8
+    {1..5} LRC6 extremal    : relation 5x72, rank=5 (>1 => ESSENTIAL, not separable/coboundary); lonely (all-safe) columns: 2
+    => the SAFE relation has rank > 1 (essential): it is NOT a coboundary f(v)g(t).
+    A disproof would need the relation to TRIVIALIZE (separable => covers); the bilinear
+    product v*t in ||v t|| forbids it (the multiplicative structure = the essentiality).
+
+[2] The SECOND MOMENT = the relation's SELF-COMPOSITION (Gram), the pair-correlation:
+    [2, 3, 4]: D D^T (speed-pair overlap, 3x3):
+      [np.int64(26), np.int64(14), np.int64(16)]
+      [np.int64(14), np.int64(27), np.int64(16)]
+      [np.int64(16), np.int64(16), np.int64(28)]
+    diag = #safe-times per speed (the 1st moment); off-diag = the PAIR RELATION (2nd
+    moment). klein THM-588: the off-diag (pair) is the ONLY invariant -- no 1st-order.
+
+[3] Metagraph: a tournament IS the dominance RELATION; only the 3-cycle (a RELATION among
+    3 vertices = failure of transitivity) is S_n-invariant (THM-588, mult(1)=0,mult(2)=1).
+    The transitive tournament = a linear ORDER = the trivial 'thing' (0 cyclicity).
+    n=4: 3-cycle counts over iso classes = [0, 1, 2] (0 = transitive/thing;
+          >0 = relational content). This single relation-invariant carries the metagraph.
+    n=5: 3-cycle counts over iso classes = [0, 1, 2, 3, 4, 5] (0 = transitive/thing;
+          >0 = relational content). This single relation-invariant carries the metagraph.
+    n=6: 3-cycle counts over iso classes = [0, 1, 2, 3, 4, 5, 6, 7, 8] (0 = transitive/thing;
+          >0 = relational content). This single relation-invariant carries the metagraph.
+
+================================================================================
+RELATIONS NOT THINGS: the object is the RELATION (dominance / danger), the only invariant
+is its SELF-COMPOSITION (the 2nd-moment pair-correlation, THM-588's quadratic), a lonely
+point / SC tournament is DERIVED, and a disproof = the relation being a COBOUNDARY
+(separable / rank-1 / trivializable by a thing). The bilinear v*t (LRC) and the cyclic
+3-cycle (metagraph) are the essentialities that forbid trivialization.
+================================================================================
