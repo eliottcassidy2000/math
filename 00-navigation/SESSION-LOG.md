@@ -1,3 +1,31 @@
+## klein-2026-06-29-S28 -- the THREE-GAP THEOREM gives the covering-min directly (killer splits the core's big gap 29->1+28, M=14/183>1/14); torus lift = a 2-row hexagonal patch (HYP-3717)
+
+Prompt: work the natural next step (LRC->2D reduction); work BOTH the torus lift AND the three-distance gaps directly.
+
+(A) CF(n/Phi_6(n)) = [0; n-1, n] (since Phi_6(n)=n^2-n+1=(n-1)n+1); partial quotients = core size n-1 and n.
+
+(B) THREE-DISTANCE gives the covering-min DIRECTLY (script torus_lift_threegap_klein.py). At the binding
+rotation a=14=zeta_6: the densest core {1..12} maps to {14k:k=1..12}, a clean 2-GAP arithmetic progression
+(gaps {14 x11, 29 x1}), deep hole 29/2 = M_core (=1/13). The minimal killer 182=lcm(13,14) maps to 169,
+which lands INSIDE the big 29-gap and SPLITS it 29 -> 1 + 28 (a THREE-gap config {1,14,28}); the deep hole
+drops to 28/2 = 14, so M = 14/183 = n/Phi_6(n). And M > 1/n because a single inserted point can only split
+29 -> 1+28 (deep hole >= 28/2=14); reaching 1/14 would need the big gap <= 2*183/14 = 26.1, unattainable
+with one killer (margin 13/2562). So the THREE-GAP THEOREM is the explicit MECHANISM behind the covering
+floor's positivity for the densest-core + minimal-killer family -- rigorous on this family.
+
+(C) TORUS LIFT: Eisenstein-embedding the speeds {1..12,182} mod (14-zeta_6) (norm a^2+ab+b^2) gives a 2-ROW
+hexagonal patch: {1..6,182} on row b=0 at (1,0)..(6,0),(-1,0); {7..12} on row b=1 at (-7,1)..(-2,1). So the
+covering-min is genuinely 2D-HEXAGONAL (a compact 2-row patch, not a single line); the 1D three gaps
+{1,14,28} are the patch's projection onto the time-line (the line's view of the hexagonal nearest-neighbour
+directions, the A2 3-fold). Torus lift (2D) and three-gap (1D) = two views of the same hexagonal object.
+
+HONEST STATUS: RIGOROUS (this family) = the three-gap computes M=n/Phi_6(n) and proves M>1/n for the
+densest-core + lcm-killer construction (the killer's single split can't shave the big gap enough). OPEN =
+14/183 is the GLOBAL covering-min (no exotic covering beats it); and the precise 1D-three-gap <-> 2D-Kershner
+metric bridge (the lift is the nonlinear Eisenstein reduction, so '1D deep hole = 2D hexagonal covering
+radius' is structural, not yet a clean metric equality). No canon overridden; no court cases. NEXT: the
+global optimality (do non-densest-core coverings beat 14/183?) + the metric bridge.
+
 ## klein-2026-06-29-S27 -- the CONVEX-TILING CLASSIFICATION closes the 2D covering side: density min at 60deg (equilateral triangle = hexagonal = Kershner); bridge gap = LRC->2D reduction alone (HYP-3716)
 
 Prompt: pursue the clean geometric claim; consider the 15 pentagon families / convex-tiling classification;
