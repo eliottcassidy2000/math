@@ -32,6 +32,33 @@ winner, so the failure is UNINFORMATIVE -- NOT a confirmation of 14/183).
 Process: HYP-3725 + MISTAKE-087 + CASE-convergent-not-covering-min (court case vs HYP-3701/opus). Scripts
 covering_min_{trajectory,n14_attack,hillclimb}_macmini_20260630.py(+.out). Broadcast to team (urgent --
 opus/klein building on the false premise).
+## klein-2026-06-29-S32 -- RECURSIVE strategy ledger for the open obligations: greedy/Sylvester covering-min (sporadic exceptions n=4,8; n=14 OK), the Farey/Euclidean existence climb, the descent recursion (HYP-3725)
+
+Prompt: look for creative ways to apply recursive-style thinking to the remaining proof obligations.
+
+STRATEGY 1 -- greedy/Sylvester for the global covering-min (O1). Tested: the densest-core greedy (skip n-1,
+killer lcm(n-1,n)) = the single-skip covering-min = n/Phi_6(n) for nearly all n, with SPORADIC exceptions at
+n=4 (skip-2: 2/7<4/13) and n=8 (skip-6: 4/29<8/57), where skip-(n-2) wins (its killer lcm(n-2,n)=(n-2)n/2 is
+small, n-2,n sharing the factor 2). n=14 AND n=16 WORK. HONEST CORRECTION: the exceptions are NOT the powers
+of 2 (16 works) -- they are sporadic small cases. So the recursive-greedy is a STRONG HEURISTIC, not a
+universal recursion; the global-min (O1) is genuinely n-dependent and not closed by naive greedy. n=14 is in
+the good regime (greedy = 14/183 among single-skips; HYP-3551's grid supports the full global min).
+
+STRATEGY 2 -- the recursive FAREY/Euclidean existence climb (O5). The semiconvergent escapes p_j/q_j =
+j/(j(n-1)+1) satisfy the LINEAR recursion q_j=q_{j-1}+(n-1), p_j=p_{j-1}+1 (the Stern-Brocot/Euclidean
+algorithm), each rung the mediant of the previous and the convergent. The climb starts at the BLOCKED
+mediant 1/n (j=1, killer at 0) and ascends monotonically to the CONVERGENT n/Phi_6(n) (j=n) = the escape. So
+existence (rho_0>0) is a recursive ascent up the semiconvergent ladder -- the Euclidean algorithm IS the
+existence proof. CLEAN.
+
+STRATEGY 3 -- the 2-adic descent (THM-580) as the per-level recursion (O2/O3): S->S'=E/2 reduces a covering
+to a smaller one, bottoming at the apex; the binary peel g=ceil(x/2) computes the covering radius; the cusp
+obstruction localizes to the TOP level, handed to Strategy 2's Farey climb (existence, not measure).
+
+NET: the Farey-climb (existence) and the descent (per-level) recursions are clean; the greedy/Sylvester
+covering-min is strong but has sporadic exceptions (n=4,8) -- the honest signal that the global covering-min
+is n-dependent. Scripts: recursive_strategies_klein.out, greedy_fails_at_powers_of_2_klein.out. No canon
+overridden; no court cases.
 
 ## klein-2026-06-29-S31 -- Phi_6 IS THE SYLVESTER MAP: the apex primes 2,3,7,43 ARE Sylvester numbers; sum 1/s_k = 1 (Egyptian); the LRC covering = a Sylvester/Egyptian dynamical system on the triangle (HYP-3724)
 

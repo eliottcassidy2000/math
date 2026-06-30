@@ -1,0 +1,24 @@
+STRATEGY 1 -- GREEDY (densest-core) optimality: is the densest-core+killer the MIN over coverings?
+ For LRC(n) kill resonances<=n. Compare GREEDY {1..n-1}\{n-1}+lcm(n-1,n) vs alternative skip+killers:
+  n=4: greedy(skip 3)=4/13=0.3077 = n/Phi_6(n)=4/13? True; min over skips=2/7(skip 2)=0.2857; greedy is min? False
+  n=5: greedy(skip 4)=5/21=0.2381 = n/Phi_6(n)=5/21? True; min over skips=5/21(skip 4)=0.2381; greedy is min? True
+  n=6: greedy(skip 5)=6/31=0.1935 = n/Phi_6(n)=6/31? True; min over skips=6/31(skip 5)=0.1935; greedy is min? True
+  n=7: greedy(skip 6)=7/43=0.1628 = n/Phi_6(n)=7/43? True; min over skips=7/43(skip 6)=0.1628; greedy is min? True
+  n=8: greedy(skip 7)=8/57=0.1404 = n/Phi_6(n)=8/57? True; min over skips=4/29(skip 6)=0.1379; greedy is min? False
+
+STRATEGY 2 -- recursive Farey/semiconvergent climb (existence): observer climbs blocked mediant -> convergent
+  semiconvergent ladder j/(j*13+1): the recursion p_j/q_j = mediant(p_{j-1}/q_{j-1}, convergent) (Stern-Brocot)
+   j=1: 1/14  (q_j=q_(j-1)+(n-1): 14=1+13); M_here = 1/14 BLOCKED killer at 0
+   j=2: 2/27  (q_j=q_(j-1)+(n-1): 27=14+13); M_here = 2/27 
+   j=3: 3/40  (q_j=q_(j-1)+(n-1): 40=27+13); M_here = 3/40 
+   j=4: 4/53  (q_j=q_(j-1)+(n-1): 53=40+13); M_here = 4/53 
+   j=5: 5/66  (q_j=q_(j-1)+(n-1): 66=53+13); M_here = 5/66 
+   j=6: 6/79  (q_j=q_(j-1)+(n-1): 79=66+13); M_here = 6/79 
+   j=7: 7/92  (q_j=q_(j-1)+(n-1): 92=79+13); M_here = 7/92 
+   j=8: 8/105  (q_j=q_(j-1)+(n-1): 105=92+13); M_here = 8/105 
+   j=9: 9/118  (q_j=q_(j-1)+(n-1): 118=105+13); M_here = 9/118 
+   j=10: 10/131  (q_j=q_(j-1)+(n-1): 131=118+13); M_here = 10/131 
+   j=11: 11/144  (q_j=q_(j-1)+(n-1): 144=131+13); M_here = 11/144 
+   j=12: 12/157  (q_j=q_(j-1)+(n-1): 157=144+13); M_here = 12/157 
+   j=13: 13/170  (q_j=q_(j-1)+(n-1): 170=157+13); M_here = 13/170 
+   j=14: 14/183  (q_j=q_(j-1)+(n-1): 183=170+13); M_here = 14/183 CONVERGENT escape
