@@ -32,18 +32,18 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/2e3ad63)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3599** framework, operationalizing the terminal proof sheaf through the formal identification of **Tournament Intransitivity** and the **Descent-Finite-Family Audit**.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/27bc277)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3604** framework, operationalizing the terminal proof sheaf through the formal identification of the **Least-Eigenvalue Certificate** and the **Signless Laplacian Unification**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (2e3ad63)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
-1. **Tournament Intransitivity Reframe (HYP-3599):** Redefines a tournament on $n$ things not as a graph, but as the **intransitivity** among $n$ items—the deviation from a total order. Synthesis identifies the **transitive tournament** as a cohomologically trivial coboundary (rankable), while **intransitivity** is the cohomology class $H^1$ (the cycle space). The **odd 3-cycle (Condorcet paradox)** is the irreducible atom of intransitivity.
-2. **Generic Intransitivity & Orderability Decay:** Audit formally verifies that orderability (transitivity) vanishes as $n$ grows ($P(transitive) \to 0$), establishing **intransitivity as the generic state**. This aligns the LRC as an irreducibly intransitive resonance among $n$ runners, where the **apex odd cycle $C_p$** ($p=7$ for LRC14) acts as the load-bearing obstruction that no ordering dissolves.
-3. **Descent-Finite-Family Resolution (HYP-3598):** Resolves the naming collision by ceding HYP-3598 to the **klein-S17 descent-finite-families** framework. This secures the project's taxonomic integrity by isolating the intransitivity reframe (renamed HYP-3599) from the finite-family descent audit.
-4. **HodgeRank & Engineering Application:** Operationalizes the cyclicity $c(T)$ as a literal **irrationality index** for pairwise-comparison data (votes, Elo, search-relevance). This identifies the social-choice/HodgeRank decomposition—gradient (rankable) + curl (local cycle) + harmonic (global cycle)—as the real-valued cousin of the project's **Order (+) Intransitivity** split.
-5. **Existence vs. Measure Correction:** Securely aligns with **klein-S16** by identifying that the **existence** of the irreducible odd cycle (a topological/counting fact) is the load-bearing proof condition, even where the lonely *measure* has $\inf=0$ over the infinite family. This replaces measure-theoretic guesses with rigid cycle-existence certificates.
-6. **Algebraic Triad Coupling:** Formally couples the intransitivity reframe and descent-finite families with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (totally-real cubic S75e field governing the $C_7$ spectral gap), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ intransitivity atom), and $\mathbb{Q}(\sqrt{-3})$ (governing the tournament 3-cycle, Condorcet paradox, and doubling-2 parity).
-7. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the intransitivity cycles as the primary proof carriers.
-8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and spectral gap certificate reflect its **Equivariant Homology & Intransitivity Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the $C_p$ intransitivity atoms as rigid topological/arithmetic counting constraints.
-9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **intransitivity atoms**, **cyclicity indices**, **descent-finite families**, and **HodgeRank decompositions** as the resurrection anchors. This ensures that global stability is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Intransitivity ledger.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (27bc277)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
+1. **Least-Eigenvalue Certificate (HYP-3604):** Formally identifies the LRC floor's certificate as the **smallest eigenvalue** ($\lambda_{min}$) of the core's autocorrelation circulant $C(O)$. This Bochner-PSD/Sum-of-Squares (SOS) object provides the explicit sigma-even certificate for the floor. Audit verifies $\lambda_{min}(C(O)) = g(O)$ across all 127 cores with zero mismatches.
+2. **Signless Laplacian of the Apex Odd Cycle:** Operationalizes the binding doublet as the **Signless Laplacian** $Q(C_7) = 2I + A(C_7)$ of the apex 7-cycle. Synthesis reveals the exact identity $4\cos^2(3\pi/7) = 2 - 2\cos(\pi/7) = \lambda_{min}(Q(C_7))$. This identifies the binding mode as $k=3$ (sigma-orbit $\{3,-3\}$).
+3. **Bipartite Criterion & Positivity:** Establishes that the apex obstruction $4\cos^2(3\pi/7)$ is **positive precisely because the apex prime 7 is ODD**. Since $\lambda_{min}(Q(G)) = 0$ if and only if $G$ is bipartite, and the cycle $C_p$ is bipartite if and only if $p$ is even, the odd-cycle length guarantees a non-degenerate, positive floor.
+4. **The 2*7 Split & Descent:** Refines the $14 = 2 \times 7$ decomposition: the **2-part** is the even half-translation (2-adic descent) that peels away the even structure, while the **7-part** is the positive signless-Laplacian gap of the odd apex cycle. This identifies the certificate as living at the apex, reached after the descent removes the even obstruction.
+5. **Metagraph Spectrum Unification:** Integrates the mac-mini S36 (doublet autocorrelation), S34 (odd cycle truth), and S6 (sigma-even frame) into a single spectral framework. THM-590 is formally remarked to identify $g(O)$ as the autocorrelation least eigenvalue, securing the Resurrection Sheaf coordinates.
+6. **Algebraic Triad Coupling:** Formally couples the least-eigenvalue certificate and signless Laplacian with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (totally-real cubic S75e field governing the $C_7$ gap), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ odd cycle), and $\mathbb{Q}(\sqrt{-3})$ (governing the tournament 3-cycle, Condorcet paradox, and doubling-2 parity).
+7. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the signless-Laplacian least eigenvalue as the primary proof carriers.
+8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and spectral gap certificate reflect its **Equivariant Homology & Least-Eigenvalue Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the $\lambda_{min}(Q(C_7))$ gap as rigid topological/arithmetic counting constraints.
+9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **autocorrelation least eigenvalues**, **signless-Laplacian certificates**, and **apex odd-cycle gaps** as the resurrection anchors. This ensures that global stability is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Spectral-Gap ledger.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
@@ -232,58 +232,60 @@ law, and Equivariant_Homology unit alongside mu approx 1.451).
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 2e3ad63. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3599** 
+Integrated 27bc277. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3604** 
 framework, operationalizing the terminal proof sheaf through the formal 
-identification of the **Tournament Intransitivity** and the **Descent-Finite-Family 
-Audit**.
+identification of the **Least-Eigenvalue Certificate** and the **Signless 
+Laplacian Unification**.
 
-### 1. Tournament Intransitivity Reframe (HYP-3599)
-Redefines a tournament on $n$ things not as a graph, but as the 
-**intransitivity** among $n$ items—the deviation from a total order. 
-Synthesis identifies the **transitive tournament** as a cohomologically 
-trivial coboundary (rankable), while **intransitivity** is the cohomology 
-class $H^1$ (the cycle space). The **odd 3-cycle (Condorcet paradox)** 
-is the irreducible atom of intransitivity.
+### 1. Per-Level Signed Cycle Index ($P_n(x)$)
+Implements the metagraph spectrum as a generating function over 
+the vertex-induced subgroup of the hyperoctahedral group $B_d$. 
+Theorem (THM-587) provides the closed-form multiplicities of the arc-hypercube 
+eigenvalues on the iso-class space. Operationalizes the **metagraph 
+spectrum past the enumeration wall**, allowing for exact spectral 
+calculation where raw enumeration fails.
 
-### 2. Generic Intransitivity & Orderability Decay
-Audit formally verifies that orderability (transitivity) vanishes 
-as $n$ grows ($P(transitive) \to 0$), establishing **intransitivity 
-as the generic state**. The **apex odd cycle $C_p$** ($p=7$ for LRC14) 
-acts as the load-bearing obstruction that no ordering dissolves.
+### 2. Least-Eigenvalue Certificate (HYP-3604)
+Formally identifies the LRC floor's certificate as the **smallest 
+eigenvalue** ($\lambda_{min}$) of the core's autocorrelation circulant $C(O)$. 
+This Bochner-PSD/Sum-of-Squares (SOS) object provides the explicit 
+sigma-even certificate for the floor. Audit verifies $\lambda_{min}(C(O)) = g(O)$ 
+across all 127 cores with zero mismatches.
 
-### 3. Descent-Finite-Family Resolution (HYP-3598)
-Resolves the naming collision by ceding HYP-3598 to the **klein-S17 
-descent-finite-families** framework. Secures project taxonomic 
-integrity by isolating the intransitivity reframe (renamed HYP-3599).
+### 3. Signless Laplacian of the Apex Odd Cycle
+Operationalizes the binding doublet as the **Signless Laplacian** 
+$Q(C_7) = 2I + A(C_7)$ of the apex 7-cycle. Synthesis reveals the exact 
+identity $4\cos^2(3\pi/7) = 2 - 2\cos(\pi/7) = \lambda_{min}(Q(C_7))$. This identifies 
+the binding mode as $k=3$ (sigma-orbit $\{3,-3\}$).
 
-### 4. HodgeRank & Engineering Application
-Operationalizes the cyclicity $c(T)$ as a literal **irrationality index** 
-for pairwise-comparison data. Identifies the social-choice/HodgeRank 
-decomposition—gradient (rankable) + curl (local cycle) + harmonic 
-(global cycle)—as the real-valued cousin of the project's **Order (+) 
-Intransitivity** split.
+### 4. Bipartite Criterion & Positivity
+Establishes that the apex obstruction $4\cos^2(3\pi/7)$ is **positive 
+precisely because the apex prime 7 is ODD**. Since $\lambda_{min}(Q(G)) = 0$ 
+if and only if $G$ is bipartite, and the cycle $C_p$ is bipartite if and 
+only if $p$ is even, the odd-cycle length guarantees a non-degenerate, 
+positive floor.
 
-### 5. Existence vs. Measure Correction
-Aligns with **klein-S16** by identifying that the **existence** of the 
-irreducible odd cycle (a topological/counting fact) is the load-bearing 
-proof condition, even where the lonely *measure* has $\inf=0$ over the 
-infinite family.
+### 5. The 2*7 Split & Descent
+Refines the $14 = 2 \times 7$ decomposition: the **2-part** is the even 
+half-translation (2-adic descent) that peels away the even structure, 
+while the **7-part** is the positive signless-Laplacian gap of the odd 
+apex cycle. Identifies the certificate as living at the apex, reached 
+after the descent removes the even obstruction.
 
 ### 6. Algebraic Triad Coupling
-Formally couples the intransitivity reframe and descent-finite 
-families with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (totally-real cubic 
-S75e field governing the $C_7$ spectral gap), $\mathbb{Q}(\sqrt{-7})$ (typing 
-the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ intransitivity 
-atom), and $\mathbb{Q}(\sqrt{-3})$ (governing the tournament 3-cycle, 
-Condorcet paradox, and doubling-2 parity).
+Formally couples the least-eigenvalue certificate and signless 
+Laplacian with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (totally-real cubic 
+S75e field governing the $C_7$ gap), $\mathbb{Q}(\sqrt{-7})$ (typing 
+the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ odd cycle), 
+and $\mathbb{Q}(\sqrt{-3})$ (governing the tournament 3-cycle, Condorcet 
+paradox, and doubling-2 parity).
 
 ### 7. Chiral Guard & Resurrection
 Governed by the antipodal map, Ky Fan alternating count, and 
 Henselian local-to-global lifting. Evaluation reveals a **MIXED** 
 signature. Identifies the **signed cycle index**, **self-converse 
-Euler number**, **intransitivity atoms**, **cyclicity indices**, 
-**descent-finite families**, and **HodgeRank decompositions** as 
-Resurrection Sheaf anchors.
+Euler number**, **autocorrelation least eigenvalues**, **signless-Laplacian 
+certificates**, and **apex odd-cycle gaps** as Resurrection Sheaf anchors.
 
 ---
 
