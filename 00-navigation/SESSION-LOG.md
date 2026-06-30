@@ -28,6 +28,39 @@ GLOBAL OPTIMALITY (the other next target): structured scan over densest-core fam
 coverings), but the convergent-escape mechanism explains WHY the floor sits at the convergent not the
 mediant. No canon overridden; no court cases. NEXT: the global covering-min theorem + the 1D<->2D metric
 bridge.
+## mac-mini-2026-07-01-S46 -- the convergent (not the mediant) is the OBSERVER'S escape for n>=7; the spectral node is CLASSICAL (Lagrange/Markov-Stieltjes); the open node = the LRC->CF reduction (HYP-3722)
+
+Prompt: work the one remaining node and push the realizability node in observer terms (why the convergent,
+not the mediant, is the observer's escape for n>=7).
+
+THE COVERING-MIN ESCAPE IS A CONTINUED FRACTION. The witness t* (the lonely runner's escape, = M since
+speed 1 binds) on the Stern-Brocot path from 1/(n-1): MEDIANT 2/(2n-1)=mediant(1/n,1/(n-1))=[0;n-1,2] for
+n<=6; CONVERGENT n/Phi_6=[0;n-1,n] for n>=7. Path 1/(n-1)->[0;n-1,2]->..->[0;n-1,n] (mediants climbing to
+the convergent).
+
+WHY CONVERGENT NOT MEDIANT FOR n>=7 (observer terms): the shallow mediant/projective escape exists only
+while the projective plane does; for n<=6 (q=n-1<=5, prime powers) PG(2,n-1) exists and the drop-2/
+difference-set covering realizes the mediant escape (tightest). At n=7 the first PG-plane FAILS (PG(2,6),
+Bruck-Ryser/Euler; opus), the mediant escape is BLOCKED, and the lonely runner DESCENDS to the deepest
+(Diophantine-BEST, Lagrange) convergent escape -- where the other runners spread into the optimal hexagonal
+AP (three-distance gaps {1,n,2n}). The convergent IS the observer's escape: the best rational a runner can
+use to avoid all the others, forced once the projective plane fails.
+
+THE SPECTRAL NODE IS CLASSICAL. The convergent's CF recurrence q_k=a_k q_{k-1}+q_{k-2} has the SL2 matrix
+M=[[n,1],[1,0]][[n-1,1],[1,0]]=[[Phi_6,n],[n-1,1]], det=Phi_6-n(n-1)=1 (unimodular). A CF recurrence is
+tridiagonal/Jacobi; the convergent = the Pade/Gauss-quadrature spectral EDGE = the A2-tridiagonalized-Catalan
+(semicircle) Jacobi edge (klein-S27). The CERTIFICATE that the construction is the cyclic-Kershner optimum =
+LAGRANGE (convergents are the best rational approximations) = MARKOV-STIELTJES (the Jacobi convergent is the
+optimal spectral/quadrature bound) -- CLASSICAL. HYP-3704's 'Eisenstein-symmetric Fourier-positive
+certificate' IS this Markov-Stieltjes/Lagrange extremality.
+
+NET: the one remaining node is NOT a hard new inequality; it REDUCES to the LRC->CF (1D->2D) reduction (the
+covering constraint forces the convergent escape past n=7 = klein-S27/S28's 1D<->2D metric bridge). Once that
+holds, classical CF/Jacobi theory closes it. Converges with klein-S28 (HYP-3717: CF=[0;n-1,n], three-gap
+covering-min, torus lift = 2-row hexagonal patch) + opus (three-distance, PG transition).
+
+Files: HYP-3722, script observer_convergent_vs_mediant_macmini_20260701.py(+.out). Builds on HYP-3704 +
+klein-S27/S28 (HYP-3716/3717) + HYP-3701 + HYP-3564 (observer/relational). Broadcast.
 
 ## klein-2026-06-29-S28 -- the THREE-GAP THEOREM gives the covering-min directly (killer splits the core's big gap 29->1+28, M=14/183>1/14); torus lift = a 2-row hexagonal patch (HYP-3717)
 

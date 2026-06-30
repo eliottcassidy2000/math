@@ -1,0 +1,32 @@
+================================================================================
+OBSERVER'S ESCAPE: convergent (n>=7) vs mediant (n<=6) + the spectral/Jacobi node
+================================================================================
+
+[1] the escape t* (=M) along the Stern-Brocot path from 1/(n-1):
+    n= 5: mediant 2/9=[0;[4, 2]]  convergent 5/21=[0;[4, 5]]  covering-min = MEDIANT  [0;n-1,2]
+    n= 6: mediant 2/11=[0;[5, 2]]  convergent 6/31=[0;[5, 6]]  covering-min = MEDIANT  [0;n-1,2]
+    n= 7: mediant 2/13=[0;[6, 2]]  convergent 7/43=[0;[6, 7]]  covering-min = CONVERGENT [0;n-1,n]
+    n= 8: mediant 2/15=[0;[7, 2]]  convergent 8/57=[0;[7, 8]]  covering-min = CONVERGENT [0;n-1,n]
+    n=11: mediant 2/21=[0;[10, 2]]  convergent 11/111=[0;[10, 11]]  covering-min = CONVERGENT [0;n-1,n]
+    n=14: mediant 2/27=[0;[13, 2]]  convergent 14/183=[0;[13, 14]]  covering-min = CONVERGENT [0;n-1,n]
+    2/(2n-1) = mediant(1/n, 1/(n-1)) = the shallow escape (partial quotient 2).
+    n/Phi_6 = [0;n-1,n] = the full convergent = the DEEPEST escape (partial quotient n).
+    transition at n=7 = first PG(2,n-1) failure PG(2,6) (opus): the projective/mediant escape is
+    blocked, the observer descends to the hexagonal/Eisenstein CONVERGENT.
+
+[2] the spectral/Jacobi node: the convergent = the SL2 CF-recurrence matrix (det 1):
+    n=7: M=[[n,1],[1,0]][[n-1,1],[1,0]] = [[43, 7], [6, 1]] = [[Phi6=43,n],[n-1,1]], det=1, slope=n/Phi6=7/43
+    n=14: M=[[n,1],[1,0]][[n-1,1],[1,0]] = [[183, 14], [13, 1]] = [[Phi6=183,n],[n-1,1]], det=1, slope=n/Phi6=14/183
+    det M = Phi6 - n(n-1) = 1 (SL2/unimodular). The CF recurrence q_k=a_k q_{k-1}+q_{k-2} is
+    tridiagonal (Jacobi); the convergent = the Pade/Gauss-quadrature spectral edge. klein: the A2
+    'tridiagonalized' Jacobi operator has Catalan moments (semicircle); covering radius = its edge.
+    CERTIFICATE = LAGRANGE (convergents = best approximations) = MARKOV-STIELTJES (the Jacobi
+    convergent is the optimal spectral/quadrature bound) -- CLASSICAL.
+
+================================================================================
+UNIFICATION: the observer's escape (the lonely runner's best-approximation lonely time) IS the
+CF convergent n/Phi_6 = [0;n-1,n] for n>=7 (the mediant 2/(2n-1) for n<=6), and the convergent IS
+the SL2/Jacobi spectral edge. The proof reduces to: (a) the LRC->CF reduction (the covering forces
+the convergent escape past n=7 = the PG(2,6) failure = klein-S27 LRC->2D) -- the OPEN piece; plus
+(b) convergent-is-best (Lagrange/Markov-Stieltjes) -- CLASSICAL. The one node = the LRC->CF reduction.
+================================================================================
