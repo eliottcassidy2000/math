@@ -16,8 +16,10 @@ HONEST CORRECTION: the data point n=13 = 1/12 is REFUTED. The construction {1..1
 primitive covering with M = 13/157 = [0;12,13] (rung 13) < 1/12 = 0.08333 (verified, binding D=157). The 1/12
 (rung inf, the ceiling) came from a small-Smax search that could not host the killer 156 -- same failure mode
 as MISTAKE-087 and my own S36 run. So covering-min(13) <= 13/157, NOT 1/12. For n>=12 the best-known is the
-construction (rung n); whether a larger-speed spread beats it (spread->construction transition near n=12) is
-under test (n=12, Smax=80, still running).
+construction (rung n); the spread->construction transition near n=11->12 is WEAKLY CONFIRMED (Smax=48 IP gives
+the construction; Smax=80 IP timed out; a randomized probe of 40k primitive coverings, speeds<=60, found NO
+spread beating 12/133). So rungs go 2,2,4,4,3 (spreads, n<=11) then jump to n (construction, n>=12) -- a
+genuine regime change, not yet proved.
 
 NEW SEQUENCES: rung k(n)=2,2,4,4,3; binding D(n)=13,15,33,37,31 (=2n-1 Paley only n=7,8, HYP-3731); defect
 delta=(k-1)/k=1/2,1/2,3/4,3/4,2/3; construction-deficit n-k=5,6,5,6,8; margin numerator eps=k-1=1,1,3,3,2.

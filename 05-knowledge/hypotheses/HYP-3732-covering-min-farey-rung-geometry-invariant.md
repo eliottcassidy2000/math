@@ -58,9 +58,12 @@ S36 run; cf. MISTAKE-087 on the construction being non-extremal.)
 ## The irregularity
 The rung `k(n) = 2,2,4,4,3` for `n=7..11` is genuinely irregular (no closed form): consecutive pairs `(7,8)`
 and `(9,10)` share a rung (2 and 4), `n=11` drops to 3. For `n>=12` the best-known covering-min is the
-construction (rung `n`); whether a larger-speed spread beats it (a spread->construction TRANSITION near
-`n=12`) is under test. The irregularity is ARITHMETIC -- it depends on how the resonances `<= n` can be killed
-while spreading (e.g. a prime `n` whose only small killer is `n` itself behaves differently from a composite).
+construction (rung `n`), and the spread->construction TRANSITION near `n=11->12` is **weakly confirmed**: the
+`Smax=48` IP returns the construction, the `Smax=80` IP timed out, and a randomized probe of 40000 primitive
+coverings (speeds `<=60`, medium killers `18..60`) found NO spread beating `12/133`. So the rungs go
+`2,2,4,4,3` (spreads, `n<=11`) then jump to `n` (construction, `n>=12`) -- a genuine regime change, not yet
+proved. The irregularity is ARITHMETIC -- it depends on how the resonances `<= n` can be killed while spreading
+(a prime `n` whose only small killer is `n` itself behaves differently from a composite).
 
 ## Connections (structural, not numerical)
 The covering-min rung shares its character with the repo's other no-closed-form sequences -- `width(G_n) =
