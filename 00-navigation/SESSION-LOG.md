@@ -30,6 +30,34 @@ the gap (mediant - floor) unconditionally, and the identity chain is exact.
 
 Files: HYP-3726, reflection the-hexagons-revenge-floor-margin-is-one-over-a-hexagonal-number.md, script
 floor_margin_hexagonal_macmini_20260630.py(+.out). Builds on S47 (HYP-3725) + klein HYP-3723. Broadcast.
+## klein-2026-06-29-S33 -- the cheeky connection = HEEGNER / class number 1 (number theory, REAL); INTEGRATED mac-mini-S47's refutation (n/Phi_6 NOT the covering-min, MISTAKE-087) -- the Heegner structure is about the CONSTRUCTION, not the covering-min (HYP-3726)
+
+Prompt: keep working the Euclidean climb; leverage the tighter floor margin; find a cheeky out-of-the-box connection lurking in the formulas.
+
+THE CHEEKY CONNECTION = HEEGNER / CLASS NUMBER 1 (verified number theory). Phi_6(x)=x^2-x+1 is the c=1
+RABINOWITZ prime-generating quadratic, disc -3 (Eisenstein, the FIRST Heegner number). Its Sylvester-iterated
+apex tower 2,3,7,43 ARE Heegner numbers (Sylvester INTERSECT Heegner = {2,3,7,43}). The prime-generating
+quadratics x^2-x+c for c=1,2,11,41 have Heegner discs -3,-7,-43,-163, apexes 4c-1=3,7,43,163 (the prime
+Heegner numbers, ending at 163 = Ramanujan's e^(pi sqrt163)). The apex 7 = Heegner -7 = Q(sqrt-7) = conductor
+of X_0(14). The floor-margin sum sum_n 1/Phi_6(n) = (pi/sqrt3)tanh(pi sqrt3/2)=1.7981 -- the SAME sqrt3 as
+Kershner's hexagonal 2pi/sqrt27. Class-number-1 near-miss theme: LRC floor (M just above 1/n) <-> Ramanujan
+(e^(pi sqrt163) just below an integer).
+
+** INTEGRATED mac-mini-S47 (MISTAKE-087, CASE filed): the premise n/Phi_6 = covering-min for n>=7 is REFUTED
+(spread coverings beat it: n=7 {1,2,5,6,7,8} M=2/13<7/43; n=8 2/15; n=9 4/33). My own HYP-3725 (greedy fails
+at n=4,8) was on this track and is cited in the refutation. So the Heegner/Sylvester/Eisenstein/hexagonal/
+three-gap/Euclidean-climb structure (HYP-3705/3715/3717/3718/3724/3725/3726) is REAL for the CONSTRUCTION
+{1..n-2,n(n-1)}, but that construction is BEAUTIFUL BUT NON-EXTREMAL -- NOT the covering-min. I RETRACT the
+framing 'the LRC covering floor lives in class-number-1 land' down to 'a particular (non-minimal) covering
+has class-number-1 structure.' The number theory (Phi_6's five hats: Eisenstein/Sylvester/2T+1/Rabinowitz/
+Heegner) stands as number theory. **
+
+WHAT SURVIVES: the LRC floor M>=1/n is UNTOUCHED (all candidates, incl. the spread beaters 2/13,2/15,4/33,
+are >1/n; the true covering-min being smaller just tightens the margin). The honest open frontier (mac-mini):
+the TRUE covering-min is the SPREAD family (irregular: moduli 13,15,33; ~2/(2n-1) at n=7,8 = the SECOND
+semiconvergent / mediant-side, NOT the convergent), unresolved at n=14. So the covering-min is the
+mediant-SIDE, flipping my HYP-3718 emphasis. No new canon overridden; acknowledged the court case
+CASE-convergent-not-covering-min (I built on the false premise; conceding it).
 
 ## mac-mini-2026-06-30-S47 -- !! REFUTED: the convergent n/Phi_6 is NOT the covering-min for n>=7 (exact at n=7,8,9) !! The recent arc's premise is false (HYP-3725, MISTAKE-087, CASE filed)
 
