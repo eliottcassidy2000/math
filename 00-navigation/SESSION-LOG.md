@@ -1,3 +1,38 @@
+## mac-mini-2026-06-30-S58 -- SUMMING the witness hierarchy = a TRIANGULAR number (T_(n-1)-1); extending the constant-residue budget to ALL moduli; the hierarchy is MULTI-LEVEL (HYP-3743); converges w/ klein-S42 (who PROVED the witness theorem)
+
+Prompt: sum the witness hierarchy across primes creatively + extend the constant-residue budget argument.
+
+THE HIERARCHY IS MULTI-LEVEL (radius bands: radius-0 = THM-523 resonances D<=n-1; radius-1 band D in (n,2n-2];
+radius-2 band; ...). The lowness obstruction lives at radius>=1.
+
+RADIUS-1 SUM (the creative result, EXACT). Missing small speed k exposes the unit-pair {k,D-k} mod every band
+modulus D in (n-2+k, 2n-2] => E(k) = n-k exposed moduli. E(k)=n-k DECREASES in k, ordering the M-jumps (miss 1
+most-exposed -> M=2/17; miss n-2 least -> 2/25). SUMMED: Sum_{k=1}^{n-2} E(k) = Sum_{j=2}^{n-1} j = T_(n-1)-1, a
+TRIANGULAR number (verified n=10..16: 44,65,90,119) -- 'everything is the triangle' at the LRC binding.
+
+CONSTANT-RESIDUE EXTENDS TO ALL MODULI (the budget extension): k mod D = k for EVERY D>k (not just primes), so
+the n-2 dense-core speeds are universal pair-coverers mod every band modulus ((n-2)*|band| pair-covers by n-2
+speeds = the budget's efficiency). Replacing core speed k loses all E(k)=n-k of its pair-covers.
+
+THE BUDGET / SUMMING. Missing core k over-commits the n-1 speeds at radius-1: [re-cover q=k if k>=2] +
+[resonances n-1,n] + [E(k)=n-k exposed pairs]; the forced killer 182 covers ~0 exposed (verified: miss-1 0/13,
+miss-12 0/2). Only escape = ONE huge CRT speed covering all E(k) band-1 pairs at once -- but it is SCATTERED at
+HIGHER radius levels (S57: missing-1 CRT escape's hole at mod 85, radius 12, OUTSIDE the band). By
+constant-residue (universal coverer at EVERY level), summing the hierarchy ACROSS LEVELS leaves no escape =>
+{1..n-2} forced => covering-min(n>=12)=n/Phi6.
+
+HONEST: radius-1 sum EXACT (T_(n-1)-1); the multi-level cross-closure (CRT escape caught at higher radius for
+ALL k, not just verified k=1) is the mechanism + S57 evidence, NOT a full proof. Strongest for small k (E large).
+
+CONVERGES w/ klein-S42 (HYP-3741, same cluster): klein PROVED the WITNESS THEOREM (speed set S, prime p, radius
+r: if some rotation a has no runner in {-r..r} mod p then M(S)>=(r+1)/p at t=a/p; r=0=q-witness, r=1=k-witness)
++ transversal M-optimality + three-gap rigidity. klein proves the witnesses; I sum them (T_(n-1)-1) + extend to
+all moduli. [5th straight lockstep collision: S38/S53,S39/S54,S40/S55,S42/S57,now S42/S58. Ceded HYP-3741 to
+klein, renamed my S57 to HYP-3744, this is HYP-3743.]
+
+Files: HYP-3743, witness_hierarchy_sum_budget_macmini_20260630.py(+.out). Builds on HYP-3744(was 3741)/klein-S42
++ HYP-3740 + klein-S39. Broadcast (flag the lockstep -- we should split work).
+
 ## klein-2026-06-30-S42 -- the WITNESS HIERARCHY: the k-witness is the radius-1 analog of THM-523's q-witness (runners avoid r-nbhd mod p => gap>=(r+1)/p); proves transversal M-optimality (pt1) + three-gap rigidity (pt3); CONVERGES with mac-mini-S56's lowness lemma (HYP-3741)
 
 Prompt: work points 2 (k-witness) and 3 (three-gap rigidity) back and forth.

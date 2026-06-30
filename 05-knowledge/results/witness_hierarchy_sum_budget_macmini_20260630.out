@@ -1,0 +1,18 @@
+Witness hierarchy E(k) = exposed band moduli for a covering set missing small speed k:
+  E(k) = #{D in (n-2+k, 2n-2]} = n-k ; Sum_k E(k) = T_(n-1)-1 (triangular).
+
+  n=10: E(k)=[9, 8, 7, 6, 5, 4, 3, 2]  sum=44=T_(n-1)-1=44
+  n=12: E(k)=[11, 10, 9, 8, 7, 6, 5, 4, 3, 2]  sum=65=T_(n-1)-1=65
+  n=14: E(k)=[13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2]  sum=90=T_(n-1)-1=90
+  n=16: E(k)=[15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2]  sum=119=T_(n-1)-1=119
+
+BUDGET COUNT (n=14): construction = (n-2=12 core, constant-residue universal pair-coverers) + (1 killer 182).
+  killer 182 covers exposed pairs {k,D-k}: missing 1 -> 0 of 13; missing 12 -> 0 of 2 (verified).
+  missing core speed k over-commits the 13 speeds: [re-cover q=k if k>=2] + [resonances 13,14] + [E(k)=n-k
+  exposed pairs] > 13 free slots. So the exposed pairs stay UNCOVERED -> lonely witness -> M>14/183.
+  Hence {1,..,12} is FORCED, the 13th speed is lcm(13,14)=182 (HYP-3740 Step 2), => covering-min=14/183.
+
+  MULTI-LEVEL: the above is the RADIUS-1 band (sum T_(n-1)-1). A CRT speed CAN cover all E(k) band-1
+  pairs with ONE huge speed -- but it is then SCATTERED at HIGHER radius levels (S57: missing-1 CRT hole
+  at mod 85, radius 12, OUTSIDE the band). Constant-residue (k mod D=k for ALL D) => the small speed k is
+  the universal coverer at EVERY level; summing the hierarchy ACROSS LEVELS forces {1,..,n-2}.

@@ -1,5 +1,5 @@
 ---
-id: HYP-3741
+id: HYP-3744
 title: The LOWNESS LEMMA (M(S)<=n/Phi_6 => {1,..,n-2} subset S), routes 1&2 synthesized via the CONSTANT-RESIDUE principle, and the CRT-escape crux RESOLVED. Route 2 (k-witness): a covering set missing small speed k is lonely at t=k^{-1}/p for a band prime p where the {k,p-k} unit-pair is uncovered, giving min||vt||>=2/p>n/Phi_6 (clean: missing-1 at n=14 -> t=1/17, M=2/17) -- but SET-DEPENDENT (a uniform k-witness is impossible: killers can be placed at any t). Route 1 (klein-S39 budget/transversal): to defeat every k-witness, S must contain a speed ≡±k mod every binding modulus. THE CRUX: could a single HUGE CRT speed w≡k mod (product of band primes) defeat all k-witnesses and restore M=n/Phi_6? RESOLVED -- NO: even w≡1 mod (all primes<=43) (~1.3e16) leaves M=525/3716≈0.141>>14/183 (exact); the lonely hole merely moves to mod 85. THE SYNTHESIS -- the CONSTANT-RESIDUE PRINCIPLE: a SMALL speed k has CONSTANT residue (k mod p = k for ALL p>k), covering the {k,p-k} pair mod EVERY prime simultaneously -- a 'universal pair-coverer'; a LARGE speed has SCATTERED residues (by CRT), covering {k,p-k} mod only the finitely many p|(w∓k). So NO finite set of large speeds replaces a small speed across the (unboundedly many) binding moduli -- speed k is IRREPLACEABLE, and missing it always exposes a lonely hole. This unifies route 1 (replacement exceeds the budget) and route 2 (the exposed witness), and robustly forces {1,..,n-2} subset S
 status: SYNTHESIS + crux RESOLVED (robust to CRT speeds ~1e16, exact M=525/3716). The constant-residue principle is the MECHANISM (proved for the band primes: a small speed is the unique universal {k,p-k}-coverer); it is strong evidence + the right intuition, NOT a complete proof of the lowness lemma -- the actual binding hole can sit at a COMPOSITE modulus (mod 85, not a band prime), so a full proof must control all moduli (= klein's budget over all D, still open). Reduces the lowness lemma to: "missing the constant-residue speed k exposes a lonely hole at some modulus" -- now mechanism-backed.
 source: mac-mini-2026-06-30-S57
@@ -13,7 +13,7 @@ results:
   - 05-knowledge/results/lowness_lemma_constant_residue_macmini_20260630.out
 ---
 
-# HYP-3741 -- the lowness lemma: routes 1 & 2 synthesized (the constant-residue principle)
+# HYP-3744 -- the lowness lemma: routes 1 & 2 synthesized (the constant-residue principle)
 
 Working the lowness lemma's two proof routes (HYP-3740) **back and forth** -- the k-witness (route 2) and the
 transversal/budget (route 1) -- synthesizes into one principle and resolves the sharp crux.
