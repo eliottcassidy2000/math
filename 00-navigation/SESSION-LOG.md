@@ -1,4 +1,38 @@
 ## klein-2026-06-29-S13 -- BLUE/BLACK patterns: BLUE(n)=2^{square/pronic}; BLUE-CLASSES = SC exactly; blue is the SC spine (arena), genus is the binding subset; new trackables (HYP-3593)
+## klein-2026-06-29-S14 -- the exact floor constant + THE TRUTH across all 16 frames: one positive cyclotomic atom at the apex-7 cusp (HYP-3593)
+
+Prompt: work on the bound; look at all the history of frames we thought were most fundamental; find the
+truth we were aiming at.
+
+THE BOUND (exact, script lrc14_exact_floor_constant_klein.py): inf R' = 114382/332563 = 0.34394 (binding
+R={1..13}\{7}, Q={1,2}; denom = 7^2*11*617). Clears the CLEAN set-independent floor 1/(2 zeta(2))=3/pi^2=
+0.304 by +0.040. The EXACT value is messy/R-specific; the CLEAN frame-independent bound is 3/pi^2. Two clean
+truth-numbers: 3/pi^2 (bulk/Eisenstein/zeta(2) floor) and 4cos^2(3pi/7)=0.198 (apex-cusp/doublet/cusp-form
+obstruction atom). The floor = the second does not sink the first.
+
+THE TRUTH ACROSS FRAMES (reflection the-history-of-frames-and-the-truth-we-were-aiming-at). Catalogued all
+16 frames each once 'most fundamental' (covering/Diophantine; metagraph; triangle/staircase; 2-adic descent;
+CV-variance gatekeeper; R-eigenspace/complement=antipodal; Euler-product/anti-Littlewood; Gamma_0(N)/Siegel;
+relations-not-things; ESSENTIAL x BOUNDED; transitive collapse; finite cyclotomic min; X_0(14) cusps=Klein;
+genus=local-global gap/cusp-form; genus=odd-boundary/even-graph; blue=SC spine). Read in order they are a
+MONOTONE ZOOM-IN on ONE obstruction: continuum measure -> variance over all sets (wrong/unbounded) ->
+per-level decorrelation -> finite min over 2^7 cores -> a single doublet -> one cyclotomic number at the
+apex cusp.
+
+THE TRUTH: the LRC(14) floor is the POSITIVITY OF A SINGLE CYCLOTOMIC OBSTRUCTION ATOM at the apex-7 cusp
+(the doublet = the genus-1 cusp form f_14 = the sigma-odd M_odd = the blue odd-boundary on the SC spine =
+4cos^2(3pi/7)), surrounded by the bulk floor 3/pi^2 that every local chart computes. Three fingerprints
+across ALL frames: (1) a bulk/obstruction split; (2) the obstruction is 1-DIMENSIONAL at N=14 (genus 1, one
+cusp form, one doublet); (3) it is CYCLOTOMIC at the apex 7. The recurring error was mistaking each chart
+for the territory; the cure was the persistence test (it killed b_1^-=7, 89=F_11, the CV route; it kept
+28=T(7)=C(8,2), P_n(-1)=SC, the apex Z_7, the doublet). What remained, frame after frame, is one positive
+number.
+
+CLOSING STATEMENT OF THE ARC: LRC(14) holds because a single cyclotomic number at the apex-7 cusp is
+positive (4cos^2(3pi/7) > 0 survives the bulk), and the bulk around it is 3/pi^2. The remaining proof = the
+bound on that one atom (the leading apex-cusp coeff of f_14, HYP-3587). Everything else is charts.
+
+No canon overridden; no court cases. (Convergent with mac-mini S31 on 4cos^2(3pi/7) as the EVEN/cusp object.)
 
 Prompt: look for patterns in the blue (or aspects related), or even the black; be creative defining new
 things to track.
