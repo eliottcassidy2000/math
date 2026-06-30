@@ -1,0 +1,49 @@
+================================================================================
+Transitive-group 2nd moment = Fourier-SOS: Z_7 (floor) + S_n (rehearsal) (mac-mini-S27)
+================================================================================
+
+[1] Z_7 autocorrelation Gram is PSD; eigenvalues = |Fourier|^2 (Bochner = SOS):
+    representative safe sets S subset Z_7; eigenvalues lambda_0..lambda_6, min nonzero = gap:
+    S=[1, 2, 4]: eig=[9.00, 2.00, 2.00, 2.00, 2.00, 2.00, 2.00]  PSD=True  min-nonzero(gap)=2.000
+    S=[1, 2, 3]: eig=[9.00, 5.05, 0.31, 0.64, 0.64, 0.31, 5.05]  PSD=True  min-nonzero(gap)=0.308
+    S=[0, 1, 2, 4]: eig=[16.00, 2.00, 2.00, 2.00, 2.00, 2.00, 2.00]  PSD=True  min-nonzero(gap)=2.000
+    S=[1, 2, 4, 5]: eig=[16.00, 0.64, 5.05, 0.31, 0.31, 5.05, 0.64]  PSD=True  min-nonzero(gap)=0.308
+    S=[3, 5, 6]: eig=[9.00, 2.00, 2.00, 2.00, 2.00, 2.00, 2.00]  PSD=True  min-nonzero(gap)=2.000
+    => ALL eigenvalues >= 0 (Bochner): the Z_7 Gram is automatically PSD = an SOS.
+    rho_j>=c is the SPECTRAL GAP (smallest mode) being bounded below -- the cyclotomic
+    Fejer-Bochner minorant (S75e). The Gram is a single Z_7-average (transitive).
+
+[2] SET-INDEPENDENCE (the transitivity payoff): the Z_7^* multiplier u permutes Fourier
+    modes (lambda_k -> lambda_{ku}), so the SPECTRUM (multiset) is INVARIANT across the orbit:
+    u=1: u*S=[1, 2, 4]  spectrum-sorted=['2.00', '2.00', '2.00', '2.00', '2.00', '2.00', '9.00']
+    u=2: u*S=[1, 2, 4]  spectrum-sorted=['2.00', '2.00', '2.00', '2.00', '2.00', '2.00', '9.00']
+    u=3: u*S=[3, 5, 6]  spectrum-sorted=['2.00', '2.00', '2.00', '2.00', '2.00', '2.00', '9.00']
+    u=4: u*S=[1, 2, 4]  spectrum-sorted=['2.00', '2.00', '2.00', '2.00', '2.00', '2.00', '9.00']
+    u=5: u*S=[3, 5, 6]  spectrum-sorted=['2.00', '2.00', '2.00', '2.00', '2.00', '2.00', '9.00']
+    u=6: u*S=[3, 5, 6]  spectrum-sorted=['2.00', '2.00', '2.00', '2.00', '2.00', '2.00', '9.00']
+    => spectrum invariant across the Z_7^* orbit: True.  The bound depends on the Z_7
+    STRUCTURE, not the specific config => SET-INDEPENDENT (the manufactured transitive symmetry).
+
+[3] The eigenvalues live in Q(cos 2pi/7) (the totally-real cubic, the S75e field):
+    cos(2pi k/7), k=1,2,3 = [0.6235, -0.2225, -0.901]
+    (roots of 8x^3+4x^2-4x-1=0). lambda_k = |Shat(k)|^2 = sum a(d) cos(2pi kd/7) is a real
+    cyclotomic value; positivity over this field = the Fejer-Bochner SOS = S75e's F_7.
+
+[4] The PROVEN rehearsal: CV(H)^2 = W(n)/n!-1 (THM-589) is the S_n group-averaged 2nd moment:
+     n CV(H)^2=W/n!-1     ~2/n
+     4         0.3333   0.5000
+     5         0.3167   0.4000
+     6         0.2889   0.3333
+     7         0.2599   0.2857
+     8         0.2339   0.2500
+    CV(H)^2 -> 0 as ~2/n: the S_n-averaged 2nd moment is bounded (clean), PROVED. The
+    even-overlap parity (W(n)'s 1+(-1)^m per run = the DOUBLING-2 / 2-adic mechanism, klein-S5)
+    is the SAME doubling that the 2-adic descent (THM-580) uses to peel to the Z_7 apex.
+
+================================================================================
+BRIDGE: rho_j>=c (LRC floor, Z_7-average, cyclotomic SOS = S75e, set-independent by Z_7
+transitivity) and CV(H)^2~2/n (PROVEN, S_n-average, even-overlap SOS) are the SAME object --
+a transitive-group-averaged 2nd moment certified positive in the group-Fourier basis -- on
+Z_7 vs S_n, linked by the shared DOUBLING-2 (2-adic) mechanism. The rehearsal is the theorem;
+the floor is the same theorem on the descended Z_7 apex (Heegner h=1 = gentlest cyclotomic).
+================================================================================

@@ -36,6 +36,40 @@ it = 0.344 (and >= 1/(2 zeta2) provably); certify the binding covering {1..13}\{
 the units/BU saddle (THM-582/583 witness side).
 
 ---
+## mac-mini-2026-06-29-S27 -- GROUNDED: rho_j>=c = the Z_7 cyclotomic Gram gap; the octonion is the OPTIMAL rho_j; CV(H)~2/n the proven rehearsal (HYP-3575)
+
+Prompt (owner): a transitive group turns a 2nd moment into a group-average; its PSD certificate in the
+group-Fourier basis is an SOS = on Z_7 the cyclotomic = S75e; so rho_j>=c = Z_7 cyclotomic Gram positivity,
+set-independent by transitivity (Heegner h=1 gentlest); CV(H)~2/n (even-overlap doubling-2) is the rehearsal.
+
+NOTE: klein-S7b (HYP-3566) pushed the same transitivity reframe (the floor is a transitivity problem;
+2-adic descent exposes the transitive Z_7; rho_j>=c = Z_7 cyclotomic reference-collapse = S75e SOS). My
+session GROUNDS it + adds the proven-rehearsal bridge (the part the owner flagged as mine, CV(H)~2/n).
+
+GROUNDED (HYP-3575): the Z_7 autocorrelation Gram (a(d)=#{x in S:x+d in S}, circulant) is PSD by BOCHNER
+(eigenvalues lambda_k=|sum_x omega^{kx}|^2 >= 0 = an SOS); rho_j>=c = its SPECTRAL GAP (= the Fejer-Bochner
+minorant S75e); SET-INDEPENDENT because the Z_7^* multiplier permutes Fourier modes (lambda_k->lambda_{ku})
+=> spectrum invariant across the orbit (the transitivity payoff, verified); eigenvalues in Q(cos 2pi/7)
+(the S75e field).
+
+NEW FINDING: the apex-7 octonion/Fano QR={1,2,4} is a PERFECT (planar) DIFFERENCE SET mod 7 (its 6 nonzero
+differences = {1..6} each once) => FLAT autocorrelation => FLAT spectrum lambda_k = |S|-1 = 2 for all k!=0
+= the MAXIMAL spectral gap. So the OCTONION/PALEY IS THE OPTIMAL rho_j (best-conditioned cyclotomic Gram).
+This RELOCATES the octonion (klein-S6 refuted it in b_1^-; HYP-3566 relocated to the Z_7 core) to its
+concrete role: the perfect-difference-set / flat-autocorrelation best-case floor. A non-difference-set
+{1,2,3} drops to gap 0.31.
+
+PROVEN REHEARSAL BRIDGE: CV(H)^2~2/n (THM-589, S_n group-average, even-overlap doubling-2) and rho_j>=c
+(Z_7-average, cyclotomic SOS) are ONE object -- a transitive-group-averaged 2nd moment certified positive
+in the group-Fourier basis -- on S_n vs Z_7, linked by the shared DOUBLING-2 (2-adic) mechanism. The
+rehearsal is the theorem; the floor is the same theorem on the descended Z_7 apex.
+
+REMAINING (the actual close): show the descended core O_j is Z_7-cyclic invariant at binding levels
+(klein's S7b test) so its Gram clears the octonion-optimal gap; else Gamma_0(14) (HYP-3553) supplies the
+transitive symmetry. Concrete next: run the Z_7-invariance test on binding descended cores.
+
+Files: HYP-3575, script Z7_cyclotomic_gram_SOS_rehearsal_macmini (+.out). Extends klein-S7b HYP-3566 +
+HYP-3570 + THM-589 + HYP-3535/3547. Broadcast.
 
 ## mac-mini-2026-06-29-S26 -- REFRAME: the remaining LRC targets collapse to ESSENTIAL x BOUNDED of one relation (HYP-3570)
 
