@@ -29,6 +29,41 @@ optimality. LEAD ('tridiagonalized'): the triangular/A2 lattice's 3-fold structu
 whose moments are the Catalan family (HYP-3710) -- a spectral route to the zeta_6-line covering radius.
 Converges with mac-mini-S43 (HYP-3702 covering-set taxonomy) + my HYP-3715 subconditions. No canon
 overridden; no court cases.
+## mac-mini-2026-06-30-S44 -- the LRC covering-min IS a TILING-OPTIMALITY (two regimes + the 6/7 boundary); 'triangular tiling = god, tridiagonalized' = the A2 Cartan (HYP-3703)
+
+Prompt (owner): the resolved convex-polygon-tiling classification (15 pentagons, 3 hexagons, all quads/
+triangles, NONE >=7 sides -- Reinhardt 1918 + Rao); improvements on the Socolar-Taylor aperiodic monotile;
+a quadrilateral 'at the right angle' = two equilateral triangles; the triangular tiling is a god, just
+tridiagonalized.
+
+THE COVERING-MIN IS A COVERING-OPTIMALITY with TWO REGIMES at the 6/7 boundary:
+  - n<=6: PROJECTIVE-PLANE/Steiner-design covering (drop-2 2/(2n-1), works WHILE PG(2,n-1) exists).
+  - n>=7: HEXAGONAL/Kershner covering (construction n/Phi_6(n), Eisenstein/A2; speed-residues mod Phi_6 = AP
+    with three-distance gaps EXACTLY {1,n,2n}, opus-S1).
+  - TRANSITION at n=7 = the FIRST projective-plane FAILURE PG(2,6) (Bruck-Ryser/Euler 36 officers; opus-S1).
+    klein-S24 bridges Steiner-design <-> Kershner via the wallpaper group p6m. n=14: q=13 prime, PG(2,13)
+    exists, construction clean.
+
+'TRIANGULAR TILING = GOD, TRIDIAGONALIZED' (the owner's line, made exact): the equilateral/hexagonal A2 =
+Eisenstein Z[zeta_6] = the covering-OPTIMAL lattice (Kershner). Its Cartan/Gram = [[2,-1],[-1,2]] TRIDIAGONAL
+(det 3 = disc Q(sqrt-3)); the right-angle quadrilateral square Z^2 = [[2,0],[0,2]] DIAGONAL (det 4). So A2 =
+Z^2 'tridiagonalized' (the off-diagonal -1 coupling); the LRC lives on A2 (coupled/hexagonal). And the
+project's TWO triangles are ONE lattice: the tournament STAIRCASE (right-isosceles) = A2 SHEARED; the
+equilateral A2 = the LRC-covering form. The god seen sheared (tournaments) vs symmetric (the covering).
+
+THE 6/7 BOUNDARY (the recurring closure): convex polygons tile only with <=6 sides (NONE >=7, Reinhardt-Rao);
+apex 7=Phi_3(2)=|Fano|; forbidden-H {7,21}; covering-min transition n=7 (PG(2,6) failure). The covering tile
+is a HEXAGON (max convex); 7 = first impossible. One boundary, many faces.
+
+PROOF ROUTE: the hard core = the DISCRETE cyclic-Kershner problem (opus's only open node); Kershner 1939
+(continuous hexagonal covering = thinnest, PROVEN) is the twin -- make the Eisenstein-torus lift rigorous, or
+use the three-distance gaps {1,n,2n} directly ({1}+AP, HYP-3702). MONOTILE LEAD (Socolar-Taylor -> hat/
+spectre): the outlier n(n-1) = the single 'closing tile' completing the periodic background {1,..,n-2}; the
+modern aperiodic monotile is the model for a single-tile covering certificate.
+
+CONTEXT: opus-S1 (three-distance {1,n,2n}, PG(2,6) transition, cyclic-Kershner open node) + klein-S24/S25
+(p6m, A2 Coxeter-Catalan) converging. Files: HYP-3703, reflection the-god-tridiagonalized-two-triangles-one-
+lattice.md. Builds on HYP-3702/3701/3706/3616/3700. Broadcast.
 
 ## mac-mini-2026-06-30-S43 -- TAXONOMY of covering-set special cases: easy families (provable) + the hard core; the shifted-block 'renormalization flow' (HYP-3702)
 
