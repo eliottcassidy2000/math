@@ -1,0 +1,19 @@
+DIRECT ATTACK: can any covering (n-1)-set beat the convergent n/Phi_6?
+
+    n      1/n  med 2/(2n-1)  conv n/Phi6 |  targeted min   rand min  GLOBAL min  verdict
+    7  0.14286       0.15385      0.16279 |       0.17647    0.15385     0.15385  MEDIANT beats conv
+        best set n=7: [1, 2, 5, 6, 7, 8]
+    8  0.12500       0.13333      0.14035 |       0.15385    0.13333     0.13333  MEDIANT beats conv
+        best set n=8: [1, 4, 5, 6, 7, 11, 16]
+    9  0.11111       0.11765      0.12329 |       0.13333    0.12121     0.12121  BEATS conv
+        best set n=9: [1, 3, 4, 5, 7, 11, 18, 32]
+   10  0.10000       0.10526      0.10989 |       0.12500    0.12500     0.12500  conv not beaten (low search)
+        best set n=10: [1, 2, 3, 4, 6, 7, 8, 9, 10]
+   11  0.09091       0.09524      0.09910 |       0.11765    0.11765     0.11765  conv not beaten (low search)
+        best set n=11: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11]
+   12  0.08333       0.08696      0.09023 |       0.10526    0.11111     0.10526  conv not beaten (low search)
+        best set n=12: [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12]
+   13  0.07692       0.08000      0.08280 |       0.08696    0.10256     0.08696  conv not beaten (low search)
+        best set n=13: [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]
+   14  0.07143       0.07407      0.07650 |       0.09091    0.10000     0.09091  conv not beaten (low search)
+        best set n=14: [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14]

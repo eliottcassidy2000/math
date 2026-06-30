@@ -1,3 +1,38 @@
+## mac-mini-2026-06-30-S47 -- !! REFUTED: the convergent n/Phi_6 is NOT the covering-min for n>=7 (exact at n=7,8,9) !! The recent arc's premise is false (HYP-3725, MISTAKE-087, CASE filed)
+
+Prompt: "think past the projective plane and keep pushing abstractly..." -- doing so computationally
+OVERTURNS the premise the whole recent arc rests on.
+
+THE REFUTATION (exact, dense-grid cross-checked, complete breakpoints per MISTAKE-86): smaller-M primitive
+covering (n-1)-sets than the construction {1,..,n-2,n(n-1)} (the "convergent", M=n/Phi_6):
+  n=7: {1,2,5,6,7,8}        M=2/13 =0.15385 < 7/43=0.16279  (t=4/13,  mod 2n-1=13)
+  n=8: {1,4,5,6,7,11,16}    M=2/15 =0.13333 < 8/57=0.14035  (t=8/15,  mod 2n-1=15)
+  n=9: {1,3,4,5,7,11,18,32} M=4/33 =0.12121 < 9/73=0.12329  (t=29/33, mod 33)
+All primitive, cover {2,..,n}, size n-1. So there is NO mediant->convergent transition at n=7; the
+sub-convergent keeps beating the construction past n=6. The PG(2,6)-failure narrative was a post-hoc fit to
+n<=6, not a mechanism.
+
+WHAT IT KILLS: the GENERAL claim "convergent = covering-min for all n>=7" (HYP-3701's n>=7 half). opus's
+"14/183 covering-min via 107-set scan" is a RESTRICTED near-construction scan, not the global min (the
+beaters are SPREAD-structured -- a speed 32~3.5n at n=9 -- which perturbation scans and low-speed exhaustion
+both miss). The Kershner/Eisenstein/A2-Jacobi/Sylvester/Egyptian/observer-escape structure
+(HYP-3703/3704/3717/3722/3724) is REAL for the construction but the construction is NOT the extremal covering
+set -- the elegant structure was conflated with the optimization.
+
+WHAT IT DOESN'T KILL: the LRC floor M>=1/n. Every candidate (mediant 2/(2n-1), 4/33, convergent) is >1/n.
+The covering-min being SMALLER (the mediant) makes the floor margin TIGHTER: 2/(2n-1)-1/n = 1/(n(2n-1)) ~
+1/(2n^2), vs the construction's (n-1)/(n Phi_6) ~ 1/n^2. Floor untouched; only the extremal set's identity
+and value change.
+
+OPEN (honestly): the true covering-min trajectory at n>=10 is NOT a clean 2/(2n-1) (n=9 gives 4/33 mod 33,
+not the mediant 2/17 -- mixed moduli {13,15,33}); and whether 14/183 specifically is beaten at n=14 is
+unresolved (my random/greedy/hill-climb searches don't beat it at n>=10 but fail to reproduce even the n=9
+winner, so the failure is UNINFORMATIVE -- NOT a confirmation of 14/183).
+
+Process: HYP-3725 + MISTAKE-087 + CASE-convergent-not-covering-min (court case vs HYP-3701/opus). Scripts
+covering_min_{trajectory,n14_attack,hillclimb}_macmini_20260630.py(+.out). Broadcast to team (urgent --
+opus/klein building on the false premise).
+
 ## klein-2026-06-29-S31 -- Phi_6 IS THE SYLVESTER MAP: the apex primes 2,3,7,43 ARE Sylvester numbers; sum 1/s_k = 1 (Egyptian); the LRC covering = a Sylvester/Egyptian dynamical system on the triangle (HYP-3724)
 
 Prompt: think recursively and abstractly, keep pushing; consider Sylvester/Egyptian fractions.

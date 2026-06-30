@@ -1,0 +1,16 @@
+COVERING-MIN TRAJECTORY: is the convergent really the covering-min for n>=7?
+(REFUTED exact at n=7: {1,2,5,6,7,8} M=2/13<7/43; n=8: {1,4,5,6,7,11,16} M=2/15<8/57)
+
+    n      1/n  mediant 2/(2n-1)  conv n/Phi6 |  search(low) min | targeted-mediant
+    7  0.14286           0.15385      0.16279 |          0.15385 |          0.17647
+        search argmin n=7: (1, 2, 5, 6, 7, 8)
+        targeted set  n=7: [2, 3, 4, 6, 7, 10]
+    8  0.12500           0.13333      0.14035 |          0.13333 |          0.15385
+        search argmin n=8: (1, 4, 5, 6, 7, 11, 16)
+        targeted set  n=8: [1, 2, 3, 5, 6, 7, 8]
+    9  0.11111           0.11765      0.12329 |          0.12500 |          0.13333
+        search argmin n=9: (1, 2, 6, 7, 8, 9, 10, 11)
+        targeted set  n=9: [1, 2, 3, 5, 6, 7, 8, 9]
+   10  0.10000           0.10526      0.10989 |          0.11111 |          0.12500
+        search argmin n=10: (1, 6, 8, 9, 10, 11, 17, 19, 21)
+        targeted set  n=10: [1, 2, 3, 4, 6, 7, 8, 9, 10]

@@ -2505,3 +2505,19 @@ MISTAKE-078 flagged that "verified-on-families ≠ uniform theorem" (correct, st
 **The fix:** f_S(t)=min_i ||s_i t|| is piecewise linear; its local maxima (the candidates for max_t) occur where some ||s_i t|| has a kink (t=k/(2 s_i)) OR where two terms cross. Two terms ||s_i t||=||s_j t|| cross at BOTH t=k/(s_i - s_j) AND t=k/(s_i + s_j). The full candidate set is {k/(2 s_i)} U {k/(s_i - s_j)} U {k/(s_i + s_j)}. Sanity anchors: M(AP)=1/14, M(GW)=1/14, M({1..11,13,26})=1/12. Always include the s_i+s_j family; cross-check with a fine rational grid.
 
 **Lesson:** A "tight" verdict from an exact-rational M computation is only as good as the breakpoint set. Incomplete breakpoints give a one-sided error (underestimate M) that fabricates tights -- the most dangerous direction for a census.
+
+## MISTAKE-087 (2026-06-30, mac-mini-S47) -- the construction n/Phi_6 was assumed to be the COVERING-MIN for n>=7 from a heuristic + a restricted scan; it is NOT (beaten exact at n=7,8,9)
+
+**What happened:** HYP-3701 (my own, S42) inferred a "transition at n=7": drop-2/mediant 2/(2n-1) is the covering-min for n<=6, and the construction {1,..,n-2,n(n-1)} = n/Phi_6(n) takes over as the covering-min for n>=7. The inference rested on (a) the PG(2,6)-failure heuristic (the first projective plane fails at q=6=n-1) and (b) opus's "107-set scan confirmed 14/183" -- a scan of NEAR-CONSTRUCTION variants. The whole subsequent arc (HYP-3703 tiling-optimality, 3704 three-routes, 3717 three-gap, 3722 observer-escape; the Kershner/Eisenstein/A2 framing) built on "convergent = covering-min for n>=7."
+
+**The refutation (exact, dense-grid cross-checked):** smaller-M primitive covering (n-1)-sets exist at every n=7,8,9:
+- n=7: {1,2,5,6,7,8}, M=2/13=0.15385 < 7/43=0.16279 (t=4/13)
+- n=8: {1,4,5,6,7,11,16}, M=2/15=0.13333 < 8/57=0.14035 (t=8/15)
+- n=9: {1,3,4,5,7,11,18,32}, M=4/33=0.12121 < 9/73=0.12329 (t=29/33)
+So there is NO transition at n=7; the sub-convergent (mediant at n=7,8) keeps beating the construction. opus's 14/183 is a restricted-family min, NOT the global covering-min.
+
+**Why it slipped through:** the beaters are SPREAD-STRUCTURED (a speed of 32 ~ 3.5n at n=9), so near-construction perturbation scans and low-speed exhaustion both MISS them. The PG-failure heuristic was a post-hoc fit to n<=6, not a mechanism.
+
+**Not fatal to LRC:** all candidates (mediant 2/(2n-1), 4/33, convergent) are > 1/n; the covering-min being smaller just makes the floor margin tighter (~1/(n(2n-1)) vs ~1/n^2). The LRC floor M>=1/n is untouched.
+
+**Lesson:** (1) a "covering-min" claim must be tested against SPREAD-structured covering sets (large speeds), not only near-construction perturbations or low-speed exhaustion. (2) An elegant structure on a particular covering set (the construction's hexagonal AP / three-distance / Eisenstein) does NOT make that set extremal -- do not conflate "a beautiful covering" with "the minimal covering." (3) A transition inferred from a number-theoretic coincidence (PG(2,6)) needs exhaustive confirmation at the first n past the alleged transition. -> HYP-3725, HYP-3701, CASE-convergent-not-covering-min.
