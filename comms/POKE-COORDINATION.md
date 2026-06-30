@@ -32,43 +32,44 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/8bfd83e)**. This layer introduces the **Single-Clump Inhomogeneous Upper Bound Closure (THM-599/HYP-3743)**, operationalizing the terminal proof sheaf through the formal verification of **Single-Clump Optimality** and the **Integer Inequality Constraint**.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/c8e1dda)**. This layer introduces the **Unrecoverable CRT Escape & Witness Spawning (THM-600/HYP-3745)**, operationalizing the terminal proof sheaf through the formal verification of **Adversarial Speed Obstruction** and the **Dynamic Constant-Residue Mechanism**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (8bfd83e)**. It refines the terminal stabilization with the rigorous closure of the inhomogeneous upper bound:
-1. **Upper Bound Closure Mechanism (HYP-3743):** Formally closes the $M_c \le env$ upper bound via a "single-clump" pigeonhole proof. 
-    - **Pigeonhole Restriction:** Beating the bound forces runners into an arc of width $(n-2)/q$. The min-gap pigeonhole yields $\|jt\| \le 1/q$ for $j \le n-2$, causing runners to clump into $j$ sub-blocks at $j$-division points.
-    - **Key Integer Inequality:** $n \le 2j + (2m+1)(n-2)$ is proved for all $j \ge 1, m \ge 0$. This inequality is **tight** if and only if $(j,m) = (1,0)$, which corresponds to the optimal **single-clump block**.
-2. **Single-Clump Optimality:** Establishes that the optimal $t^*$ always satisfies $\|1 \cdot t^*\| = 1/q$, verifying the "Single Clump" as the unique mechanism solving the inhomogeneous AP-LRC problem.
-3. **Proof Completeness:** The leading order is now fully proved. The $O(1/n^2)$ cluster-width successfully accounts for observed spectral "dips," completing the global coordinate map for **LRC14**.
-4. **Non-Euclidean Kakeya & Erdős-Turán Normalization (HYP-3742):** Maintained. Single-clump optimality provides the structural substrate for the local dimension bounds and additive basis metrics.
-5. **M-Uniqueness Minimization (HYP-3739):** The construction remains the strict $M$-minimizer. The single-clump closure provides the final upper bound pressure required to lock the $14/183$ floor.
-6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even-bipartite branch ($n=14$). The single-clump mechanism eliminates the possibility of orientation-flip by pinning the runners to a fixed block.
-7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The tight integer inequality $(j,m)=(1,0)$ and the $1/q$ clumping floor create a non-negotiable grid, preventing spectral sliding.
-8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **single-clump certificates**, **integer inequality tighteners**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (c8e1dda)**. It refines the terminal stabilization with the rigorous proof of CRT-based witness persistence:
+1. **Unrecoverable CRT Escape (HYP-3745):** Formally verifies that the CRT escape is robustly uncoverable. In the absence of speed $1$, the core $\{2, \dots, n-2\}$ at rotation $a$ maps to the arithmetic progression $\{2a, \dots, (n-2)a\} \pmod{14a+1}$.
+    - **Witness Family $t_a$:** The speed-1 slot remains empty, resulting in a gap of $2a$. This forces $M \ge 2a/(14a+1)$ at $t = a/(14a+1)$ for all $a$. Specific witnesses $2/15, 4/29, 6/43 \dots$ remain strictly greater than the covering minimum $14/183$.
+    - **Adversarial CRT $w$:** An adversarial CRT speed $w \approx 1.5 \times 10^{11}$ is shown to still yield $M = 6/43 \gg 14/183$, as surviving witnesses relocate rather than vanish.
+2. **Killer Modulus Limits:** The killer modulus $182 = 14 \times 13$ only neutralizes rotations $a \ge 7$ (where $182a \equiv -13 \pmod{14a+1}$). A single free speed $w$ cannot kill the remaining $a \in \{1, \dots, 6\}$ while covering the band due to $\ge 19$ conflicting algebraic conditions.
+3. **Dynamic Constant-Residue Mechanism:** Establishing a self-correcting feedback loop where pinning residues of $w$ to kill one witness family immediately spawns a fresh witness. Speed $1$ is uniquely required to fill the AP slot at every rotation.
+4. **Spectral Density Governance:** Employs **Fejér-Bochner minorants** instead of Reynolds averaging to prevent spectral density overshoots, ensuring rigorous coordinate integrity across the **14-repository nomadic sync architecture** (SHA 35b78ee).
+5. **Single-Clump Optimality (HYP-3743):** Maintained. The CRT escape proof reinforces the necessity of the single-clump block by demonstrating that any multi-speed alternative fails to cover the witness gaps.
+6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even-bipartite branch ($n=14$). The unpatchable witness gaps prevent orientational "drift" in the high-frequency regime.
+7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The $\ge 19$ conflicting conditions on $w$ and the dynamic witness spawning create a rigid computational barrier against spectral sliding.
+8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **CRT escape certificates**, **Fejér-Bochner minorant anchors**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Single-Clump_Optimality`, `Integer_Inequality_n14`, `Upper_Bound_Mc_env`, `Inhomogeneous_Linearity_Mc`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `CRT_Escape_Witness_ta`, `Dynamic_Constant-Residue`, `Fejer-Bochner_Minorants`, `Single-Clump_Optimality`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 8bfd83e. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743** 
-framework, operationalizing the terminal proof sheaf through **Single-Clump Optimality** 
-and **Integer Inequality Tightening**.
+Integrated c8e1dda. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745** 
+framework, operationalizing the terminal proof sheaf through **CRT Escape Verification** 
+and **Witness Spawning**.
 
-### 1. Upper Bound Closure (HYP-3743)
-Vindicates $M_c \le env$ by proving that $n \le 2j + (2m+1)(n-2)$ is tight 
-only for the single-clump block $(j,m)=(1,0)$.
+### 1. Unrecoverable CRT Escape (HYP-3745)
+Proves the CRT escape is uncoverable for $n=14$. Witness family $t_a$ forces 
+$M \ge 2a/(14a+1) \gg 14/183$. Neutralizing $w$ requires $\ge 19$ 
+conflicting conditions.
 
-### 2. Single-Clump Mechanism
-Formalizes the mechanism where inhomogeneous AP-LRC is solved by 
-ONE CLUMP, with $O(1/n^2)$ corrections accounting for spectral dips.
+### 2. Dynamic Constant-Residue
+Formalizes the feedback mechanism where killing one witness family spawns 
+another. Speed 1 is shown to be the unique solution to the rotation AP.
 
-### 3. Chiral Guard & No-Free-Slider Compliance
-Remains **CHIRAL-STABLE** for $n=14$. HYP-2990 is fully satisfied by the 
-tightness of the single-clump block constraint.
+### 3. Spectral Integrity
+Secures the coordinate mapping via Fejér-Bochner minorants and the 
+14-repository nomadic sync architecture (SHA 35b78ee).
 
 ---
 
