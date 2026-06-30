@@ -1,0 +1,33 @@
+==================================================================================
+THREE ROUTES TO THE zeta_6-LINE COVERING RADIUS (cyclic-Kershner) -- mac-mini-S45
+==================================================================================
+
+[1] TORUS LIFT: Z[omega]/(n-omega) ~ Z/Phi_6(n), omega (60deg hex rotation) = mult-by-n:
+      n  Phi6 n^2 mod Phi6 n^3 mod Phi6  ord(n)  min|v n mod Phi6|
+      7    43            6           42       6                  7  (= n; M=n/Phi6)
+     11   111           10          110       6                 11  (= n; M=n/Phi6)
+     13   157           12          156       6                 13  (= n; M=n/Phi6)
+     14   183           13          182       6                 14  (= n; M=n/Phi6)
+    n^2 ≡ n-1, n^3 ≡ -1 (mod Phi6) => ord(n)=6 = the hexagonal rotation. The construction's
+    residues v*n mod Phi6 = a hexagonal AP; covering radius = n/Phi6. Reduces to KERSHNER 1939
+    (hexagonal = thinnest LATTICE covering, PROVEN) for lattice/AP coverings.
+
+[2] THREE-DISTANCE: the residue AP has gaps EXACTLY {1, n, 2n}; M = min|residue|/Phi6 = n/Phi6:
+    n=7: gaps=[1, 7, 14] = {1,7,14}; the missing origin (k=0) => nearest residue +-n => M=n/Phi6.
+    n=14: gaps=[1, 14, 28] = {1,14,28}; the missing origin (k=0) => nearest residue +-n => M=n/Phi6.
+    The k=0 'lcm-killer' (the -1 mod Phi6 closing the AP) gives the gap-1; the origin-straddle gives 2n.
+    For any {1}+AP covering, three-distance gives M in closed form; min max-gap among APs -> construction.
+
+[3] SPECTRAL/LP: covering radius = sup{lonely t} = inf{Fourier-positive certificates}:
+    n=14: at t*=n/Phi6=14/183, min_v||v t*|| = 0.07650; BINDING PAIR = [1, 182] (smallest & outlier).
+    R-hat(j)=sum_R w^(jr): |.|^2 in [0.03,166.03] -- AP => Dirichlet/Gauss-sum (peaked).
+    The covering radius (max gap of R) is a Delsarte/Cohn-Elkies LP bound; the EISENSTEIN-SYMMETRIC
+    (omega = x n - invariant) Fourier-positive optimizer is the open node (Viazovska-style); it handles
+    ALL coverings, not just lattices/APs.
+
+==================================================================================
+SYNTHESIS: the 3 routes reduce the cyclic-Kershner (construction = covering-min) to ONE
+Eisenstein-symmetric Fourier-positivity certificate. (1) lift = the geometry (hexagonal torus,
+Kershner-lattice handles APs); (2) three-distance = the explicit M for APs; (3) spectral/LP = the
+optimality machinery for ALL coverings, with the omega-symmetric extremal function the open node.
+==================================================================================

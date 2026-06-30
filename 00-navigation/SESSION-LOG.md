@@ -25,6 +25,39 @@ densest-core + lcm-killer construction (the killer's single split can't shave th
 metric bridge (the lift is the nonlinear Eisenstein reduction, so '1D deep hole = 2D hexagonal covering
 radius' is structural, not yet a clean metric equality). No canon overridden; no court cases. NEXT: the
 global optimality (do non-densest-core coverings beat 14/183?) + the metric bridge.
+## mac-mini-2026-06-30-S45 -- THREE ROUTES to the zeta_6-line covering radius (torus lift + three-distance + spectral/LP); converges with klein-S27 (HYP-3704)
+
+Prompt: work both the torus lift and using the three-distance gaps directly, and a spectral route to
+computing the zeta_6-line covering radius.
+
+(1) TORUS LIFT: Z[omega]/(n-omega) ~ Z/Phi_6(n), omega (60deg hex rotation) = mult-by-n (VERIFIED: n^2=n-1,
+n^3=-1, ord(n)=6 mod Phi6). The construction's residues v*n mod Phi6 = a hexagonal AP; covering radius
+n/Phi6; the binding pair at t*=n/Phi6 is {1, n(n-1)} (smallest & outlier, framing the AP). Reduces to
+KERSHNER 1939 (hexagonal = thinnest lattice covering, PROVEN) for lattice/AP coverings.
+
+(2) THREE-DISTANCE: the residue AP {kn: k=-1,1,..,n-2} (origin k=0 MISSING) has gaps EXACTLY {1,n,2n} --
+the 'lcm-killer' -1=n^3 closes the AP (gap 1), the origin-straddle gives 2n. M = min|residue|/Phi6 = n/Phi6,
+a CLOSED FORM; for any {1}+AP covering three-distance gives M directly; min max-gap among APs -> construction.
+
+(3) SPECTRAL/LP: covering radius = Delsarte/Cohn-Elkies LP (sup over lonely t = inf over Fourier-positive
+certificates vanishing on the danger freqs). R-hat(j) = the AP's Dirichlet/Gauss sum. The EISENSTEIN-
+SYMMETRIC (omega=xn-invariant) optimal certificate is the open node (Viazovska-style); it handles ALL
+coverings, not just lattices. (The OFF-CUSP/Eisenstein twin of the CUSP Z_7 non-bipartiteness certificate
+HYP-3606.)
+
+CONVERGES with klein-S27 (HYP-3716): klein independently closed the 2D covering side as a THEOREM (rhombic
+density min at 60deg = Kershner; Reinhardt-Rao finite cell classification; Socolar-Taylor no gain). The
+remaining gap = the LRC->2D reduction (= my torus lift). And klein's spectral lead makes route 3 concrete:
+the A2 'tridiagonalized' = the JACOBI operator with CATALAN moments (semicircle spectrum), and the zeta_6-line
+covering radius = a spectral EDGE of this A2-Jacobi operator. The two accounts dovetail: 2D side = theorem,
+lift + Jacobi-edge = the open node.
+
+NET: the three routes reduce the cyclic-Kershner (construction = covering-min, n>=7) to ONE Eisenstein-
+symmetric Fourier-positive certificate / equivalently the spectral edge of the A2-Jacobi (Catalan-moment)
+operator. Kershner (1939, lattice) is the proven backstop; the certificate extends it to all coverings.
+
+Files: HYP-3704, script three_routes_to_zeta6_covering_radius_macmini_20260630.py(+.out). Builds on HYP-3703
++ klein-S24/S27 (HYP-3706/3716/3710) + HYP-3702/3606. Broadcast.
 
 ## klein-2026-06-29-S27 -- the CONVEX-TILING CLASSIFICATION closes the 2D covering side: density min at 60deg (equilateral triangle = hexagonal = Kershner); bridge gap = LRC->2D reduction alone (HYP-3716)
 
