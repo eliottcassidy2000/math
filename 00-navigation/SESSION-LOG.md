@@ -26,6 +26,39 @@ Reflection: blue-is-the-SC-spine-squares-and-pronic-and-new-trackables. Pairs wi
 4cos^2(3pi/7) cusp value as an EVEN object): the binding doublet sits in the blue/SC spine. No canon
 overridden; no court cases. NEXT: compute the black Eulerian cycle rank (S675b); test blue=SC at n=7;
 the odd-boundary multiplicity distribution over the SC spine.
+## mac-mini-2026-06-29-S32 -- equinumerosity (labeled-only) + the d=1 RIB SC-side-even theorem + silent-flip=self-loop Eulerian (HYP-3592); ceded HYP-3586->3590
+
+Prompt: understand tournament/even-graph equinumerosity (the particularities); search past work where
+sections of the merged metagraph were discussed as Eulerian.
+
+FIRST: ceded a HYP-3586 collision (klein-S10 took it for the Klein-group cusps) -- renamed my S31
+even-graph-dual to HYP-3590 (file + INDEX + reflection + log + memory).
+
+Launched an Explore over the corpus for "Eulerian merged metagraph". Concurrently klein-S12 (HYP-3591)
++ codex-S675b nailed the SANDWICH (Eulerian<=tournaments<=all; tournaments=odd-order Burnside=signed cycle
+index) and the d=m black/blue Eulerian sections. My 3 distinctive/additive pieces:
+
+(1) EQUINUMEROSITY is LABELED-only: tournaments = 2^(n-1) x even graphs (the CUT/score factor in
+T=CUT(+)CYCLE); the iso fan-out A000568/A002854 = 1,1.7,3.5 GROWS (cut adds iso TYPES, refuting the old
+'thermodynamic copies' intuition in tournaments-and-even-graphs.md); clean decomposition only at ODD n
+(Cut∩Cycle=0; =dim n-2 at even n -- so the n=14 apex Z_7 shadow is one descent level down).
+
+(2) NEW PARITY THEOREM (verified n<=6 + proof via R): every SC class has EVEN d=1 SC-NS (RIB) degree --
+the complement involution R fixes the SC class and pairs its NS-neighbors into complement-pairs. So the
+d=1 ribs are SC-side-Eulerian at ALL n, FULLY Eulerian at n=4,5 (NS side also even), NS side first breaks
+at n=6 {2,3,4,6}. d=1 edge types n=5: 16 SC-NS + 12 SC-SC + 2 NS-NS = 30 = E(G_5). The full metagraph is
+NOT Eulerian (odd degrees n=4,5,6). DISTINCT from codex's d=m black/blue (this is the d=1 wiggly layer).
+
+(3) The prior Eulerian thread = THM-413 Lemma A: a SILENT FLIP = a metagraph SELF-LOOP exists iff the
+value-multigraph G_x is EULERIAN; defects {x,rho(2x)} merge iff x=(2n-1)/3 (order-3 torsion; n=14:
+C=27=3^3, x=9). The metagraph degree parity = C(n,2)-#selfloops is governed by this.
+
+UNIFICATION: both asks -> the CYCLE SPACE; R (complement = 2-adic involution = cut/cycle reference) is the
+common engine: fixes SC (ribs SC-side-even), splits black/blue (codex), -1-eigenspace = odd/cusp
+obstruction (klein-S12). The even-graph dual E_n is where the floor binds (HYP-3590).
+
+Files: HYP-3592, scripts equinumerosity_and_eulerian_metagraph_macmini_20260629.py(+.out); renamed
+HYP-3590. Builds on klein-S12 (HYP-3591) + codex-S675b + THM-413/584/578. Broadcast.
 
 ## klein-2026-06-29-S12 -- three 'evens' (Royle sandwich); the Eulerian sections (codex-S675b black/blue); and THE GENUS IS THE ODD BOUNDARY (HYP-3591)
 

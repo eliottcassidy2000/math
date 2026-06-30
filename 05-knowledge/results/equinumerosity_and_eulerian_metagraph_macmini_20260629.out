@@ -1,0 +1,36 @@
+================================================================================
+TOURNAMENT <-> EVEN-GRAPH EQUINUMEROSITY + is the MERGED METAGRAPH EULERIAN? (mac-mini-S32)
+================================================================================
+
+[1] EQUINUMEROSITY -- labeled bijection (Cut+Cycle) vs iso-class mismatch:
+     n  C(n,2)  lab.tourn  lab.even   ratio iso.tourn iso.even
+     3       3          8         2      4x         2        2
+     4       6         64         8      8x         4        3
+     5      10       1024        64     16x        12        7
+     6      15      32768      1024     32x        56       16
+    => LABELED: tournaments = 2^(n-1) x even graphs (the CUT/score factor); the GF(2) split
+       tournament = CUT(dim n-1, scores) (+) CYCLE(dim C(n-1,2), even graph) is EXACT & clean.
+    => ISO: A000568 (2,4,12,56) vs A002854 (2,3,7,16) DIVERGE -- S_n breaks the labeled bijection
+       (tournaments & even graphs have DIFFERENT stabilizers); equinumerous only LABELED/per-fiber.
+
+[2] is the ARC-FLIP METAGRAPH EULERIAN (all degrees even <=> admits an Euler circuit)?
+    LABELED arc-flip graph = hypercube Q_d, d=C(n,2): d-regular, Eulerian iff d even iff n=0,1 mod4.
+     n d=C(n,2) #classes #odd-multideg #odd-simpledeg Eulerian(multi)?
+     4        6        4             2              2       NO (2 odd)
+     5       10       12             4              6       NO (4 odd)
+     6       15       56            34             34      NO (34 odd)
+    (multideg = #arc-flips leaving the class; simpledeg = #distinct neighbor classes.)
+
+[3] DETAIL -- parity by class & the MERGED graph G_n/Z_2 (complement-folded):
+    n=4: d=6; multideg values=[3, 6]; simpledeg values=[2, 3]; #merged nodes=3, #self-complementary=2
+    n=5: d=10; multideg values=[6, 7, 8, 9, 10]; simpledeg values=[2, 3, 4, 6, 7]; #merged nodes=10, #self-complementary=8
+    n=6: d=15; multideg values=[10, 11, 12, 13, 14, 15]; simpledeg values=[3, 4, 5, 6, 7, 10, 11, 12, 13, 14]; #merged nodes=34, #self-complementary=12
+    NOTE: d=C(n,2) parity: n=4->6(even), n=5->10(even), n=6->15(ODD), n=7->21(ODD). The hypercube
+    Q_d is Eulerian for n=4,5 (d even) but NOT n=6,7 (d odd). The iso-quotient may differ.
+
+================================================================================
+FINDINGS: (1) equinumerosity is LABELED only (tournaments = 2^(n-1) x even graphs via Cut+Cycle);
+iso-class counts diverge (A000568 vs A002854) because S_n stabilizers differ. (2) Eulerian-ness of
+the metagraph is governed by d=C(n,2) parity at the labeled (hypercube) level; the iso-class degree
+parities are computed above -- see which n give all-even (Eulerian) metagraphs.
+================================================================================
