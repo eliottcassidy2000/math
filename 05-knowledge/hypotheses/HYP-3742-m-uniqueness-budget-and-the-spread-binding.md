@@ -1,5 +1,5 @@
 ---
-id: HYP-3740
+id: HYP-3742
 title: M-UNIQUENESS via the killer-or-transversal budget + the spread-binding open piece. NEGATIVE RESULT: the clean rung-k construction (dense core {1..n-2} + CRT killer) FAILS for k<n -- the forced-large killer creates a deeper hole at a FINER modulus (n=7,k=2: killer 168=13^2-1 gives M=28/169 at binding 13^2, not 2/13), so CLEAN three-gap constructions exist ONLY at rung n; low rungs need spreads (messy gaps). M-UNIQUENESS: (proved for n>=12) the radius-1 band budget forces the construction (mac-mini HYP-3737) and its binding is D=Phi6≡1 mod(n-1) (klein HYP-3738), so M(n)=n/Phi6 is the UNIQUE covering-min, binding D=Phi6, for n>=12 incl. n=14=14/183; (all n) the value M(n) fixes a unique binding D=denom(M) and rung shared by every extremal covering (the covering itself is NOT unique: n=7 has 2). The SPREAD-regime binding (D≡1 for n=7..11) stays OPEN -- reframed: the covering-min is conjecturally a best one-sided approximation to 1/(n-1)
 status: NEGATIVE RESULT verified (clean rung-k construction fails for k<n: n=7,8,9). M-UNIQUENESS proved for n>=12 (combining mac-mini's band-forcing + klein's construction-binding); invariant-uniqueness holds for all n (value determines binding/rung). Spread binding OPEN (clean-construction route now closed).
 source: klein-2026-06-30-S41

@@ -1,3 +1,35 @@
+## klein-2026-06-30-S42 -- the WITNESS HIERARCHY: the k-witness is the radius-1 analog of THM-523's q-witness (runners avoid r-nbhd mod p => gap>=(r+1)/p); proves transversal M-optimality (pt1) + three-gap rigidity (pt3); CONVERGES with mac-mini-S56's lowness lemma (HYP-3741)
+
+Prompt: work points 2 (k-witness) and 3 (three-gap rigidity) back and forth.
+
+THE WITNESS HIERARCHY (PROVED, farey_rung_spread_family_klein.py + direct). For a speed set S, prime p,
+radius r>=0: if some rotation a has NO runner s.a in {-r,..,r} mod p, then M(S) >= (r+1)/p, witnessed by
+t=a/p. r=0 = THM-523's q-witness (no multiple of p -> gap>=1/p); r=1 = the NEW k-witness (S misses +-pair
+{k,p-k} mod p -> t=k^{-1}/p, gap>=2/p; verified p=13,17,19). This is the CONSTRUCTIVE DUAL of the radius-layer
+over-constraint (HYP-3734/3736): to beat (r+1)/p you must cover the r-nbhd mod p, else the witness fires.
+
+POINT 1 (transversal M-optimality, via k-witness): the consecutive transversal {1..(p-1)/2} is the UNIQUE
+minimal radius-1 cover mod p; remove any speed k -> pair {k,p-k} unrepped -> k-witness at t=k^{-1}/p. So no
+small speed can be dropped without a witness.
+
+POINT 3 (three-gap rigidity, via q-witness): the construction is a STRICT local M-min. Perturbing the killer
+n(n-1)->n(n-1)±1 breaks resonance n-1 (not a covering) -> q-witness t=1/(n-1) -> M=1/(n-1); dropping a core
+speed -> M=1/(n-2) (verified n=7,9,12). The unit gap (+1 in Phi6, HYP-3738) is RIGID: the killer must be a
+multiple of n-1 AND n or the q-witness fires.
+
+BACK-AND-FORTH: q-witness (r=0, resonances, killer rigidity) and k-witness (r=1, band primes, transversal
+optimality) are the two ends of one hierarchy -- the constructive backbone of the over-constraint.
+
+CONVERGENCE with mac-mini-S56 (HYP-3740, the LOWNESS LEMMA: M(S)<=14/183 => {1..12} subset S; speed 1
+covering-irrelevant but M-necessary; binding pair {1, n(n-1)}): mac-mini's 'speed 1 M-necessary' IS my
+k-witness for speed 1 (missing it trips a witness). My witness hierarchy PROVES the lowness lemma's mechanism
+(small speeds are M-necessary because dropping one trips a witness). Same result, constructive vs structural.
+HONEST scope: the witnesses prove the over-constraint necessity + construction rigidity (q-witness tight); the
+full covering-min lower bound combines all witnesses (budget) + binding (spreads open).
+
+HOUSEKEEPING: filed HYP-3741. RESOLVED HYP-3740 collision (mac-mini-S56 lowness vs my S41 m-uniqueness): my
+m-uniqueness -> HYP-3742; mac-mini keeps 3740. No canon overridden, no court cases.
+
 ## mac-mini-2026-06-30-S56 -- the LRC14 HARD CORE reduces to a single LOWNESS LEMMA (M(S)<=14/183 => {1..12} subset S); covering vs lowness separation (speed 1 covering-irrelevant but M-necessary, binding pair {1, n(n-1)}={smallest,largest}); the unbounded search COLLAPSES to one set (HYP-3740)
 
 Prompt: work on the LRC hard core creatively.
@@ -26,7 +58,7 @@ explicit lonely t with margin >n/Phi_6 (empirically at small prime moduli, e.g. 
 
 Files: HYP-3740, lrc_hardcore_lowness_lemma_macmini_20260630.py(+.out). Builds on HYP-3739 + klein-S39/S40 +
 THM-523. The sharpest statement yet of what remains for rigorous covering-min(14)=14/183 => LRC14. Broadcast.
-## klein-2026-06-30-S41 -- the spread-binding open piece + M-uniqueness via the budget: NEGATIVE RESULT (clean rung-k construction FAILS for k<n -- killer backfires at D^2); M-uniqueness PROVED for n>=12 (band-forcing + construction-binding => M=n/Phi6 unique, incl. n=14); converges with mac-mini-S55 (HYP-3740)
+## klein-2026-06-30-S41 -- the spread-binding open piece + M-uniqueness via the budget: NEGATIVE RESULT (clean rung-k construction FAILS for k<n -- killer backfires at D^2); M-uniqueness PROVED for n>=12 (band-forcing + construction-binding => M=n/Phi6 unique, incl. n=14); converges with mac-mini-S55 (HYP-3742)
 
 Prompt: work on the one open piece (spread-regime binding) and the M-uniqueness proof via klein's killer-or-transversal budget.
 
@@ -54,7 +86,7 @@ Zeckendorf = Ostrowski numeration (= my S40 framing). My 'invariant uniqueness, 
 'base-uniqueness fails'; my 'M-uniqueness n>=12' = his 'construction strict M-minimizer (n=13)'. My distinct
 piece: the NEGATIVE result (clean rung-k construction fails -> spreads are essential for low rungs).
 
-HOUSEKEEPING: filed HYP-3740 (3739=mac-mini, no collision). No canon overridden, no court cases.
+HOUSEKEEPING: filed HYP-3742 (renamed 3740->3742 to resolve collision with mac-mini-S56). No canon overridden, no court cases.
 
 ## mac-mini-2026-06-30-S55 -- the uniqueness theorem is M-UNIQUENESS not base-uniqueness (literal base-uniqueness FAILS: 1406 band-coverers at n=13; but the construction is the strict M-minimizer); Zeckendorf = OSTROWSKI numeration (klein-S40); converges w/ klein-S40 (HYP-3739)
 
