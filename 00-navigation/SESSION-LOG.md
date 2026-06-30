@@ -33,6 +33,39 @@ HOUSEKEEPING: ceded HYP-3607 (klein-S20 'chip the gap' took it); my S38 small-me
 Files: HYP-3609. Builds on why-seven-is-forbidden + s699 + HYP-3606/3603/3608/3547. Broadcast.
 
 ## mac-mini-2026-06-30-S38 -- SEARCH: the small-measure regime is the HEART; the extremal is measure-ZERO with lonely set = the phi(n) units (HYP-3608); ceded HYP-3604->3606
+## klein-2026-06-29-S21 -- APEX CORE ATLAS: a fine field-guide to the Z_p cores (gap=concentration index; cores=circulant graphs; arcs=Fejer; cross-prime; descent gap-profile) (HYP-3608); resolved HYP-3607 collision (my chip ->3609)
+
+Prompt: seek out and record finely detailed patterns/features of our problemscapes, make things clear, long session.
+
+Built a finely-detailed REFERENCE ATLAS of the apex problemscape (05-knowledge/reference/apex-core-atlas.md,
+HYP-3608). Scripts: apex_core_atlas / apex_cross_prime_family / apex_core_graph_map_and_profiles /
+apex_arc_fejer_kernel _klein.py. Fine patterns found:
+
+(1) The gap g(O) is a CONCENTRATION INDEX ordering cores by Fourier spread: doublet(0.198)<arc(0.308)<
+singleton(1)<diff-set(2); the binding obstruction is the LEAST-spread core (the doublet) -- the OPPOSITE of
+the random/Paley core. Hardest = maximal concentration, not equidistribution.
+(2) FLAT spectrum <=> INTEGER gap {0,1,2} (difference-set/singleton/full); IRRATIONAL binding gaps
+{0.198,0.308} = the non-flat cores.
+(3) Cores ARE circulant graphs: doublet=C_7 (cycle, signless Laplacian Q(C_7)), diff-set=K_7 (I+J),
+singleton=I, full=7J (rank-1 cusp). The gap classes are named graph types.
+(4) ARC cores = the FEJER-BOCHNER minorant cores: the m-arc has |Ohat(k)|^2 = the Fejer kernel
+(sin(pi m k/p)/sin(pi k/p))^2 (verified p=7,11,13); the binding doublet IS the 2-arc, gap 4sin^2(pi/2p) =
+the Fejer kernel's MINIMUM -- unifying the least-eigenvalue certificate (HYP-3604) with the analytic
+minorant (S75e): same object.
+(5) Cross-prime: doublet gap 4sin^2(pi/2p)~pi^2/p^2 (smaller odd prime = larger floor; p=7->0.198 is
+3rd-largest); p=3mod4 (3,7,11,19) QR is a Paley difference set (flat, gap (p+1)/4=MAX), p=1mod4 (5,13,17)
+not; 7=3mod4 is the Paley case (the nu_2 theme). Bracket [4sin^2(pi/2p),(p+1)/4]; #gap-values 1,2,4,14,35
+for p=3,5,7,11,13.
+(6) NEW TRACKABLE the descent GAP-PROFILE [g(O_j)]: near-universal TAIL [...,0.308,0.198,1.0] (arc,doublet,
+singleton); HEAD (level 0) distinguishes coverings (cusp 0.0 for dense-consecutive/fills Z_7, vs co-singleton
+1.0). Binding atom universally the doublet. Plus trackables: concentration index, core shape type,
+flat-vs-nonflat, level-0 apex type.
+
+Integrated mac-mini-S38 (HYP-3607, the small-measure regime = the heart; consecutive extremal has lonely
+measure exactly 0, lonely set = the phi(n) units -- generalizes my klein-S8 n=14 fact to all n; convergent
+with the whole existence-not-measure frame). Housekeeping: HYP-3607 double-collision (my S20 chip, pushed
+first, vs mac-mini-S38 small-measure) -- I renumbered MY chip 3607->3609 (my atlas took 3608), touching only
+my files; mac-mini keeps 3607. No canon overridden; no court cases.
 
 Prompt: go back and search through previous work regarding very small areas of coverage or measure
 regarding runners.
@@ -66,6 +99,7 @@ when the area is zero, you count the units / the odd cycle.
 Files: HYP-3607, script small_measure_extremal_units_macmini_20260630.py(+.out). Builds on klein-S16/S18 +
 HYP-3580/3562/3606/3548. Broadcast.
 ## klein-2026-06-29-S20 -- CHIP THE GAP: THM-580's CS bound CLOSES the deeper levels (j>=1, CS floor 0.65-0.87); the open part LOCALIZES to level 0 (top core CV blows up) = the original existence question (HYP-3608)
+## klein-2026-06-29-S20 -- CHIP THE GAP: THM-580's CS bound CLOSES the deeper levels (j>=1, CS floor 0.65-0.87); the open part LOCALIZES to level 0 (top core CV blows up) = the original existence question (HYP-3609)
 
 Prompt: work at chipping away at the gap and work on the least-eigenvalue certificate.
 

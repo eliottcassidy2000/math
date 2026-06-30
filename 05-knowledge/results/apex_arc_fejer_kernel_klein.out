@@ -1,0 +1,22 @@
+ARC cores = Dirichlet/Fejer cores: |Ohat(k)|^2 = (sin(pi m k/p)/sin(pi k/p))^2
+
+ p=7:
+   1-arc: |Ohat|^2 matches Fejer kernel: True ; gap=1.00000
+   2-arc: |Ohat|^2 matches Fejer kernel: True ; gap=0.19810
+   3-arc: |Ohat|^2 matches Fejer kernel: True ; gap=0.30800
+   => 2-arc (doublet) gap = 4cos^2(pi(p-1)/2p) = 4 sin^2(pi/2p) = 0.19806 (the binding apex atom)
+
+ p=11:
+   1-arc: |Ohat|^2 matches Fejer kernel: True ; gap=1.00000
+   2-arc: |Ohat|^2 matches Fejer kernel: True ; gap=0.08100
+   3-arc: |Ohat|^2 matches Fejer kernel: True ; gap=0.09590
+   => 2-arc (doublet) gap = 4cos^2(pi(p-1)/2p) = 4 sin^2(pi/2p) = 0.08101 (the binding apex atom)
+
+ p=13:
+   1-arc: |Ohat|^2 matches Fejer kernel: True ; gap=1.00000
+   2-arc: |Ohat|^2 matches Fejer kernel: True ; gap=0.05810
+   3-arc: |Ohat|^2 matches Fejer kernel: True ; gap=0.08460
+   => 2-arc (doublet) gap = 4cos^2(pi(p-1)/2p) = 4 sin^2(pi/2p) = 0.05812 (the binding apex atom)
+
+SO: the ARC cores are exactly the Fejer-Bochner minorant cores (S75e); the gap is a Fejer-kernel
+value, and the BINDING doublet is the 2-arc, gap 4sin^2(pi/2p) -- the Fejer kernel's smallest value.

@@ -1,0 +1,35 @@
+======================================================================================
+ CORE -> CIRCULANT-GRAPH MAP: each gap class is a named circulant graph
+======================================================================================
+   full Z_7         a(d)=[7, 7, 7, 7, 7, 7, 7]  gap=0.0000  <- 7J (rank-1)
+   doublet {0,1}    a(d)=[2, 1, 0, 0, 0, 0, 1]  gap=0.1981  <- 2I+A(C_7) = Q(C_7) signless Laplacian of the 7-CYCLE
+   arc {0,1,2}      a(d)=[3, 2, 1, 0, 0, 1, 2]  gap=0.3080  <- interval autocorr [3,2,1,0,0,1,2]
+   singleton {0}    a(d)=[1, 0, 0, 0, 0, 0, 0]  gap=1.0000  <- I (empty graph)
+   diff-set/QR {1,2,4} a(d)=[3, 1, 1, 1, 1, 1, 1]  gap=2.0000  <- 2I+(J-I)=I+J: COMPLETE graph K_7 (Paley)
+
+   => LOW gap = CONCENTRATED core (doublet 0.198 < arc 0.308); HIGH gap = SPREAD (diff-set=2).
+      the gap ORDERS cores by spread; the binding obstruction is the most-concentrated (doublet).
+
+======================================================================================
+ SPREAD ORDERING (gap as a concentration index), all Z_7 core shapes:
+======================================================================================
+   gap=0.1981  doublet (2 adj)        |O|=2
+   gap=0.1981  pair-skip1 (2, d=2)    |O|=2
+   gap=0.1981  co-doublet (5)         |O|=5
+   gap=0.3080  arc-4 {0,1,2,3}        |O|=4
+   gap=0.3080  arc-3 {0,1,2}          |O|=3
+   gap=1.0000  singleton              |O|=1
+   gap=2.0000  V-3 {0,1,3}            |O|=3
+   gap=2.0000  diff-set {1,2,4}       |O|=3
+
+======================================================================================
+ DESCENT GAP-PROFILE (new trackable): the multiset of apex gaps along the descent chain
+======================================================================================
+   consec{1..13}          gap-profile [0.0, 0.308, 0.198, 1.0]   min-positive=0.198  (depth 4)
+   tightest{1..12,182}    gap-profile [1.0, 0.308, 0.198, 1.0]   min-positive=0.198  (depth 4)
+   skip12{1..11,13,84}    gap-profile [0.0, 0.308, 0.198, 1.0]   min-positive=0.198  (depth 4)
+   binding{1..13}\7       gap-profile [1.0, 0.308, 0.198, 1.0]   min-positive=0.198  (depth 4)
+   consec{1..14}          gap-profile [0.0, 0.308, 0.198, 1.0]   min-positive=0.198  (depth 4)
+   consec{1..7}           gap-profile [0.308, 0.198, 1.0]   min-positive=0.198  (depth 3)
+   => every chain's min-positive gap is the DOUBLET 0.198 (or a 0.308) -- the binding per-level atom;
+      a gap of 0.0 in the profile = the chain passes through the full-Z_7 cusp (mod-7 covering at that level).
