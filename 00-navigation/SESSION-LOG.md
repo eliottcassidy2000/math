@@ -1,3 +1,40 @@
+## klein-2026-06-29-S4 -- worked the actionable LRC step: the THM-579 floor gatekeeper CV(N_R)^2 is set-dependent + UNBOUNDED (dense R + speed 7), motivating mac-mini's Gamma_0(N) route; floor R'>0 robust (HYP-3554)
+
+Prompt: work the most actionable step (verify the LRC second-moment claim) myself; merge other tasks at
+discretion; pull frequently, integrate incoming as signal.
+
+INTEGRATED INCOMING (pulled 3x): mac-mini-S19 (HYP-3552, to me) reframed the actionable LRC 2nd moment from
+the cap S_2 to THM-579's FLOOR gatekeeper CV(N_R)^2 = the congruence-conditioned variance of the 14-sheet
+count (the open piece of THM-579). mac-mini-S20 (HYP-3553) cast the floor as a SET-INDEPENDENT Gamma_0(N)
+congruence 2nd moment. I worked the floor gatekeeper directly.
+
+DID (HYP-3554, VERIFIED -- exact-arithmetic adversarial scan of 1828 14-free speed sets, reusing mac-mini's
+THM-579 machinery): (1) the CONSECUTIVE family R={1..k}, k=2..12 PASSES the gatekeeper (CV^2 0..1.095) --
+extends mac-mini's verified r=2..6 table to r=2..12. (2) sup CV(N_R)^2 = 8.74 at R={1..13}\{12} (m_R=0.012);
+it GROWS as m_R->0 (dense R, sheet-count concentration), AMPLIFIED by the SPEED-7 resonance (7*a/14 = a/2,
+the 2-adic/7-adic worry S259); at the size-valid pairing the gatekeeper FAILS => "bound CV(N_R)^2 above
+uniformly over all 14-free R" is FALSE. (3) actual R'=m_S/(m_R m_Q) > 0 EVERYWHERE tested (1.27 at the
+worst) => the FLOOR is robust; only the CV-proof breaks on dense R.
+
+IMPLICATION (constructive): this MOTIVATES HYP-3553's set-independent Gamma_0(N) route -- the CV gatekeeper
+is irreparably set-dependent, so the uniform floor must go through the congruence density (phi/psi/J2), and
+finding (3) shows the robust target R'>0 genuinely exists. METAGRAPH CONTRAST (reflection
+the-variance-blows-up-where-the-fiber-vanishes): metagraph CV(H) bounded (THM-588) bc S_n transitive (no
+vanishing fiber); LRC CV(N_R) unbounded bc m_R->0 -- the metagraph testbed models the bounded regime, NOT
+the m_R->0 corner. General lesson: a coefficient of variation is the wrong uniform invariant when the mean
+can vanish; use a multiplicative/congruence floor instead.
+
+Script: 04-computation/lrc14_floor_CV_uniform_scan_klein.py (reuses lrc14_floor_CV_sheetcount_bound_macmini).
+Out: 05-knowledge/results/. No court cases; no canon overridden (tests THM-579, HYP-3552/3553).
+
+NEXT (for floor owners mac-mini/kps/codex): (1) pursue the Gamma_0(14) set-independent bound (this scan
+shows CV is not the route and R'>0 is robust). (2) characterize which dense R occur in the kps covering
+family (HYP-3415): if non-consecutive dense R never occur, the CV gatekeeper IS uniform on the real family;
+if they do, they're MORE binding than consec and need exact SPEC or Gamma_0(N). (3) realize Var(N_R) as a
+2-dim congruence Siegel 2nd moment (arXiv:2507.05905) and check if its main-term bound is set-independent.
+
+---
+
 ## mac-mini-2026-06-29-S20 -- the covering is a congruence subgroup: the Gamma_0(N)<->metagraph<->LRC dictionary; G_n(N) (HYP-3553)
 
 Prompt: creative ways tournament/metagraph structure aids proofs; extend the owner's 4-bullet synthesis

@@ -1,0 +1,74 @@
+====================================================================================
+ LRC14 floor: adversarial uniform scan of CV(N_R)^2  (klein-S4; reuses mac-mini THM-579)
+====================================================================================
+ scanned 1828 distinct 14-free speed sets R
+
+ TOP 12 by CV(N_R)^2 (the binding / worst-case structures):
+       CV^2      m_R  R
+     8.7355   0.0122  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)
+     7.7551   0.0082  (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+     4.2890   0.0242  (1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+     3.6258   0.0839  (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13)
+     2.9110   0.0921  (1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13)
+     2.7249   0.0363  (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13)
+     2.5154   0.0324  (1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13)
+     2.4319   0.0364  (1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13)
+     2.3403   0.1046  (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 13)
+     2.2257   0.1199  (1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13)
+     2.0748   0.1242  (1, 2, 4, 5, 6, 8, 9, 10, 11, 12, 13)
+     2.0507   0.1081  (1, 2, 3, 5, 6, 8, 9, 10, 11, 12, 13)
+
+ SUP CV(N_R)^2 = 8.73553 at R=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13) (m_R=0.0122)
+   contains speed 7: True;  is consecutive prefix: False
+
+====================================================================================
+ GATEKEEPER margin  CV^2  vs  m_Q/(1-m_Q)   (sufficient cond: CV^2 < ratio)
+====================================================================================
+   m_Q: {'{1,2}': 0.7857, '{1,2,3}': 0.6905, '{1..4}': 0.619, '{1..5}': 0.5048, '{1..6}': 0.4571}
+
+   R (top CV^2)                      CV^2  best-margin Q -> ratio, slack
+   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)  8.7355  {1..6} -> 0.842, slack -7.893
+   (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  7.7551  {1..6} -> 0.842, slack -6.913
+   (1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13)  4.2890  {1..6} -> 0.842, slack -3.447
+   (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13)  3.6258  {1..6} -> 0.842, slack -2.784
+   (1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13)  2.9110  {1..6} -> 0.842, slack -2.069
+   (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13)  2.7249  {1..6} -> 0.842, slack -1.883
+   (1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13)  2.5154  {1..6} -> 0.842, slack -1.673
+   (1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13)  2.4319  {1..6} -> 0.842, slack -1.590
+
+ TIGHTEST gatekeeper slack over scan (R top-CV^2 x hardest Q): -7.8934  at R=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13) vs Q={1..6}
+
+====================================================================================
+ ACTUAL R' vs the clean gatekeeper (size-valid pairing |R|+|Q|=14, Q={1..14-|R|})
+====================================================================================
+   R                                  |Q|  R_actual    CV^2 gate>0?  Rp>0?
+ -- top adversarial R (dense, speed-7) --
+   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)   2    1.2727   8.736      NO    YES
+   (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)   2    1.2727   7.755      NO    YES
+   (1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13)   2    1.2727   4.289      NO    YES
+   (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13)   2    0.3439   3.626     YES    YES
+   (1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13)   3    0.4850   2.911      NO    YES
+ -- consecutive family R={1..k}, the binding 'real covering' rows (extends mac-mini r=2..6) --
+   (1,)                                13  (degenerate: m_R=0.857, m_Q=0.000) skip
+   (1, 2)                              12    1.0000   0.000     YES    YES
+   (1, 2, 3)                           11    1.0010   0.002     YES    YES
+   (1, 2, 3, 4)                        10    0.9863   0.025     YES    YES
+   (1, 2, 3, 4, 5)                      9    1.0039   0.064     YES    YES
+   (1, 2, 3, 4, 5, 6)                   8    1.0190   0.115     YES    YES
+   (1, 2, 3, 4, 5, 6, 7)                7    0.9183   0.143     YES    YES
+   (1, 2, 3, 4, 5, 6, 7, 8)             6    0.9587   0.116     YES    YES
+   (1, 2, 3, 4, 5, 6, 7, 8, 9)          5    1.0396   0.132     YES    YES
+   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)      4    1.0579   0.159     YES    YES
+   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)   3    0.9673   0.825     YES    YES
+   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)   2    0.7015   1.095     YES    YES
+   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)   1  (degenerate: m_R=0.000, m_Q=0.857) skip
+
+ CONCLUSION:
+   sup CV(N_R)^2 in scan = 8.736 (dense R + speed 7); it GROWS as m_R->0,
+   so the clean gatekeeper CV^2 < m_Q/(1-m_Q) is NOT uniformly satisfied -- it FAILS for
+   dense R even at the size-valid pairing. BUT actual R' stays > 0 throughout the scan:
+   floor holds = True.  => the floor is TRUE on these cases but the clean
+   CV gatekeeper alone does NOT prove it for dense R; the binding worst-case is the
+   maximally-dense R with speed 7 (the 2-adic/7-adic resonance). The uniform proof must
+   either restrict to the actual covering family or supplement the gatekeeper with the
+   exact SPEC on dense R (where m_R->0 inflates the second moment).
