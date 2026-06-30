@@ -1,0 +1,48 @@
+==============================================================================
+The MEASURE of the obstruction: Lefschetz (metagraph) <-> floor (LRC) (mac-mini-S23)
+==============================================================================
+
+[1] Metagraph: SC = P_n(-1) = trace(R) = the LEFSCHETZ NUMBER of the complement R.
+    Lefschetz: trace(R)=SC != 0 => R has a FIXED POINT => self-complementary tournament
+    EXISTS -- existence WITHOUT construction (the obstruction is nonzero).
+     n A000568=P_n(1) SC=P_n(-1)=tr(R) obstruction != 0?
+     3              2                2 YES (SC>0 => exist)
+     4              4                2 YES (SC>0 => exist)
+     5             12                8 YES (SC>0 => exist)
+     6             56               12 YES (SC>0 => exist)
+     7            456               88 YES (SC>0 => exist)
+    SC = 2,2,8,12,88 (n=3..7): the obstruction is ALWAYS nonzero => SC tournaments
+    always exist. The 'measure' here is the COUNTING measure (SC = #fixed classes).
+
+[2] The obstruction splits R-EVEN (the MEASURE/floor side) (+) R-ODD (the INDEX/witness):
+     n dim R-even=(A+SC)/2 dim R-odd=(A-SC)/2
+     3                  2                  0
+     4                  3                  1
+     5                 10                  2
+     6                 34                 22
+     7                272                184
+    R-even = V_merged (the SOS/Brouwer bulk, the floor side); R-odd = #NS (the Borsuk-Ulam
+    obstruction, the witness/index). SC = (R-even) - (R-odd) = the Euler/Lefschetz number.
+
+[3] LRC analog: the danger cover {D_v} on the circle; the lonely set L = T \ U D_v is
+    the 'hole'; meas(L) = the FLOOR = the measure of the obstruction; the EULER char of
+    the cover nerve = chi_meas (HYP-3242). Tiny case S={1,2,3} (LRC4, threshold 1/4):
+    (a) EXTREMAL S=[1, 2, 3] (non-covering): Lebesgue floor = 0.0000 (=0, measure-zero!),
+        but lonely COUNT = 2 points at a/4, a in [1, 3] = units mod 4 (phi(4)=2).
+        => obstruction NONZERO via the COUNTING measure, though Lebesgue VANISHES.
+    (b) COVERING S=[2, 3, 4]: Lebesgue floor = 0.1250 > 0 => obstruction nonzero via MEASURE.
+    KEY: the obstruction has TWO measures -- LEBESGUE (sigma-EVEN, the bulk floor) and
+    COUNTING/Euler (sigma-ODD, the units/index). At the extremal Lebesgue->0 but the COUNT
+    survives = WHY the Borsuk-Ulam/sigma-odd index matters (it detects the obstruction when
+    the measure vanishes). The sigma-even/odd split IS the Lebesgue/counting split.
+
+==============================================================================
+UNIFICATION: one equivariant obstruction class (of the complement R), three MEASURES:
+ - metagraph: SC = trace(R) = Lefschetz number = COUNTING measure (SC tournaments exist);
+ - LRC: meas(lonely) = the FLOOR = LEBESGUE measure (lonely point exists);
+ - nerve: chi_meas = the EULER-CALCULUS measure (HYP-3242).
+The MOMENT method (THM-589) computes this measure: 1st moment = E[#] = the mean (existence
+if >0), 2nd moment W(n) = concentration. Obstruction theory says WHEN existence is FORCED
+(class nonzero = topological, SET-INDEPENDENT); the measure says HOW MUCH (the floor).
+Disproof = the class is EXACT (a coboundary, zero measure). Proof = the class is ESSENTIAL.
+==============================================================================

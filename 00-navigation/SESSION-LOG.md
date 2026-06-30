@@ -1,3 +1,33 @@
+## mac-mini-2026-06-29-S23 -- the MEASURE OF THE OBSTRUCTION: obstruction theory unifies the objects + their measures (HYP-3561)
+
+Prompt: consider obstruction theory and previous objects we have studied and their measure.
+
+FRAMEWORK (HYP-3561): every "X exists" theorem in the project = the NONVANISHING of ONE equivariant
+obstruction class = the Euler/Lefschetz class of the complement involution R, measured three ways:
+ - COUNTING: SC = P_n(-1) = trace(R) = the LEFSCHETZ NUMBER; SC=2,2,8,12,88 (n=3..7) always >0 =>
+   self-complementary tournaments ALWAYS exist (Lefschetz fixed-point => existence WITHOUT construction;
+   the exact finite rehearsal of the LRC lonely-point existence).
+ - LEBESGUE: meas(lonely) = the FLOOR (the LRC).
+ - EULER: chi_meas of the danger-cover nerve (HYP-3242).
+
+KEY REFINEMENT (verified): the obstruction has TWO measures, and the project's sigma-EVEN/sigma-ODD split
+IS the Lebesgue(measure)/counting(index) split. The LRC4 EXTREMAL {1,2,3} has Lebesgue floor = 0 (measure
+zero!) but lonely COUNT = phi(4)=2 (the units mod 4); the covering {2,3,4} has Lebesgue floor 1/8. So the
+Borsuk-Ulam/sigma-odd index is EXACTLY what detects the obstruction at the extremal where the Lebesgue
+measure VANISHES -- the precise reason the witness (sigma-odd) is needed and not just the floor (sigma-even).
+SC = (R-even)-(R-odd) = the alternating sum of the two measures (the Euler/Lefschetz number).
+
+DISPROOF = the class is EXACT (a coboundary, all measures 0, the hole filled). PROOF = ESSENTIAL (some
+measure >0). Essentiality is a TOPOLOGICAL = SET-INDEPENDENT invariant = the Gamma_0(N) story (HYP-3553);
+klein-S4's unbounded per-set CV(N_R)^2 is the symptom of measuring a topological invariant pointwise on a
+moduli space (it diverges at the cusps). The MOMENT method (THM-589) computes the measure (1st=mean=Siegel
+mass=existence; 2nd=W(n)=concentration); obstruction theory + moments + klein's equivariant homology
+(HYP-3544) = three computations of one measure-valued class. Builds on codex's first-obstruction-cocycle
+(the sheaf-Cech syndrome side).
+
+Files: HYP-3561, reflection the-measure-of-the-obstruction.md, script obstruction_measure_lefschetz_macmini
+(+.out). Broadcast.
+
 ## mac-mini-2026-06-29-S22 -- the metagraph H-variance CLOSED FORM = THM-219's W(n); CV(H)^2 ~ 2/n exactly (THM-589)
 
 Prompt: extend the Han-Lee/metagraph/LRC synthesis; the owner provided a closed form
