@@ -72,7 +72,7 @@ SELF-CORRECTIONS (honest, this session): an erroneous L=1/4+3/(8n) and a spuriou
 both finite-Qmax under-estimation ARTIFACTS; large Qmax gives the clean linear law (1/2 coefficient). Also
 corrected an earlier 'AP maximizes O' -> AP MINIMIZES O (doubly minimal: min M, min O).
 
-NEW INVARIANTS (HYP-3746): ordering complexity O(S)=#circular orderings of {0,vt} as t sweeps = the LRC analog
+NEW INVARIANTS (HYP-3748): ordering complexity O(S)=#circular orderings of {0,vt} as t sweeps = the LRC analog
 of Hamiltonian-path count H; O(AP_n)=Phi(n-1)=FAREY LENGTH (A002088), EVEN vs H ODD. The LRC(AP) IS the
 three-distance (Sos-Steinhaus) theorem (O=#regimes, M=1/n the metric); regimes = Stern-Brocot tree (Mode-A
 recursion O(n)-O(n-1)=phi(n-1); covmin t=1/n = base of ray [0;n-1,k], one-stern-brocot-ray/HYP-3732; mediant =
@@ -84,7 +84,7 @@ locus under OBSERVER perturbation, NOT a proof of LRC(14): OPEN-Q-108 (the unifo
 lonely MEASURE under SPEED perturbation, a different quantity. Honest: LRC(14) remains open; the block/clump
 method may transfer to bounding meas(G_C) near the tight locus (noted in OPEN-Q-108).
 
-Artifacts: THM-591; HYP-3745, HYP-3746; 8 reflections in 07-reflections/ (PROOF-..., CORRECTION-..., the-LRC-
+Artifacts: THM-591; HYP-3747, HYP-3748 (renumbered from 3745/3746 -- klein-S43/S44 claimed those concurrently); 9 reflections in 07-reflections/ (PROOF-..., CORRECTION-..., DIP-UPGRADE-..., the-LRC-
 for-the-AP-IS-the-three-distance-theorem, ...-stern-brocot-tree, the-ordering-complexity-hamiltonian-path-
 bridge, new-invariants-..., PINNED-...apex-prime); ~10 scripts in 04-computation/lrc_*_opus_20260630.py.
 Handoff: (a) bit-rigor of the O(1/n^2) dips (j>=2 cluster widths via three-distance); (b) does the block/clump
