@@ -1,5 +1,5 @@
 ---
-id: HYP-3586
+id: HYP-3590
 title: OPEN QUESTION ANSWERED (does the metagraph reproduce the cusp value 4cos^2(3pi/7)?) -- NOT on the tournament side (the Z_7 circulant TOURNAMENTS of G_n give only {0.308 generic, 2.0 Paley=flat=optimal=H-max}; the binding 0.198 is SUB-tournament), but YES on the EVEN-GRAPH DUAL E_n: the doublet's autocorrelation IS the shifted 7-cycle adjacency, so 4cos^2(3pi/7) = 2 + lambda_min(A(C_7)) EXACTLY, the spectral floor of the minimal Z_7-circulant EVEN graph (the 7-cycle = the cusp of E_7); so the LRC cusp binds on the DUAL (cycle-space/even-graph) metagraph, and the tournament 3-cycle (G_n's Fiedler mode = cyclicity, THM-588, a Z_3 object) and the LRC doublet (E_n's 7-cycle, a Z_7 object) are DUAL MINIMAL CYCLES -- the apex prime 7 sets the cycle length
 status: COMPUTED + verified exact (8 Z_7 circulant tournaments; 2+lambda_min(C_7)=4cos^2(3pi/7) to machine precision). The even-graph-dual placement of the binding value is the new structural result; honestly TEMPERS S30's "3-cycle <-> doublet" (they are dual, on opposite sides of the G_n/E_n duality, not the same-side mirror).
 source: mac-mini-2026-06-29-S31
@@ -14,7 +14,7 @@ results:
   - 05-knowledge/results/cusp_value_vs_metagraph_apex_layer_macmini_20260629.out
 ---
 
-# HYP-3586 -- the cusp value is the even-graph dual, not the tournament
+# HYP-3590 -- the cusp value is the even-graph dual, not the tournament
 
 ## The open question (S30) and the honest answer
 S30 asked: does the metagraph H->1 corner reproduce the LRC cusp value `4cos^2(3pi/7)` quantitatively?

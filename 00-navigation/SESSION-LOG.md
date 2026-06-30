@@ -10,7 +10,7 @@ WHAT THE GENUS MEANS (verified, script lrc14_eisenstein_cusp_genus_meaning_klein
 NOT DETERMINE = the LOCAL-GLOBAL GAP (cusp forms vanish at all cusps). genus 0 (LRC(6)) = boundary determines
 the floor (Hasse / Euler product / bulk rehearsal SUFFICES); genus 1 (LRC(14)) = ONE global mode (the cusp
 form f_14 = rank-0 elliptic curve 14a) the rehearsal cannot see = the obstruction. This is the MEANING behind
-'the testbed models the bulk not the cusp' (klein-S4) and 'hardness = genus' (HYP-3586).
+'the testbed models the bulk not the cusp' (klein-S4) and 'hardness = genus' (HYP-3590).
 
 CONCRETE STEP WORKED: the decomposition is 3 Eisenstein + 1 f_14. Cusp forms VANISH at cusps, so the f_14
 VALUE at the apex cusp is 0; the obstruction is the LEADING q-expansion COEFFICIENT of f_14 at the d=7 cusp
@@ -71,7 +71,7 @@ No canon overridden; no court cases.
 NEXT (floor owners): decompose the Gamma_0(14) 2nd moment into Eisenstein + f_14 and bound the f_14 piece at
 the apex cusp; confirm genus<->hardness on LRC(6) (should be pure-Eisenstein/no cusp form). Pairs w/ mac-mini
 S30 (the doublet/3-cycle cusp rehearsal).
-## mac-mini-2026-06-29-S31 -- OPEN QUESTION ANSWERED: the cusp value 4cos^2(3pi/7) is the EVEN-GRAPH DUAL (2+lambda_min(C_7)), NOT the tournament metagraph; uniform E_p-cusp formula 4sin^2(pi/2p) (HYP-3586)
+## mac-mini-2026-06-29-S31 -- OPEN QUESTION ANSWERED: the cusp value 4cos^2(3pi/7) is the EVEN-GRAPH DUAL (2+lambda_min(C_7)), NOT the tournament metagraph; uniform E_p-cusp formula 4sin^2(pi/2p) (HYP-3590)
 
 Prompt: work the open question (S30: does the metagraph H->1 corner reproduce 4cos^2(3pi/7)?); read a
 bunch of our metagraph work for inspiration.
