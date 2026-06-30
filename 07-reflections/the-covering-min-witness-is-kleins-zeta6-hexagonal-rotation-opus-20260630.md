@@ -34,6 +34,22 @@ A scan of **107 covering 13-sets** (interval bases `{1..k}` × covering completi
 > (PG(2,13) is the optimal covering) and with `14/183` being the covering-min (no covering beats the
 > construction).
 
+## Integration: the covering-min is n-DEPENDENT (mac-mini HYP-3701) — but n/Φ₆ holds AT n=14
+mac-mini HYP-3701 (pulled mid-session) is a crucial correction: **`n/Φ₆(n)` is NOT the *universal*
+covering-min.** At small `n` a "drop-2" family beats it, achieving `2/(2n−1)`:
+`n=4:{1,3,4}=2/7`, `n=5:{1,3,4,5}=2/9`, `n=6:{1,3,4,5,18}=2/11` — each `< n/Φ₆(n)` (`4/13, 5/21, 6/31`).
+Indeed `n(2n−1) − 2Φ₆(n) = n−2 > 0`, so **`2/(2n−1) < n/Φ₆(n)` for all `n>2`** — *if* drop-2 scaled it would
+always win. **The content is that it does NOT scale.** Verified at n=14: the drop-2 family `{1,3,…,13, 14m}`
+gives `M ∈ {2/17, 9/83, 5/43} ≈ 0.108–0.118`, far ABOVE `14/183=0.0765` (it never reaches `2/27=0.074`). So:
+> The covering-min **extremal family is n-dependent**, transitioning ~`n=6–7` (the apex!): drop-2
+> (`2/(2n−1)`) wins for `n≤6`, the construction (`n/Φ₆`) for `n≥7`. **At n=14 the construction stands** —
+> `14/183` IS the covering-min (my 107-set + adversarial scans, mac-mini's drop-2 check). So the witness=ζ₆
+> / hexagonal-bridge analysis is valid for the LRC(14) regime, but `n/Φ₆` is not a uniform formula across n.
+The transition near `n=7` is suggestive: `7` is the apex prime, the genus jump (X₀(14), 14a). The
+covering-min's extremal family changes exactly where the modular obstruction appears — the M-edge
+(covering-min vs 1/n, this column) and the gap-edge (mac-mini HYP-3700, the apex column) are distinct but
+both pivot at the apex 7.
+
 ## What this adds to the bridge (klein's open piece)
 klein's open bridge: *does the continuous LRC covering-min equal the discrete design covering number /
 inherit Kershner optimality?* This reflection pins **one direction concretely**:
