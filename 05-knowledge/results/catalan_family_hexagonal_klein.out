@@ -1,0 +1,41 @@
+====================================================================================
+ THE THREE SEQUENCES = the Catalan family modulated by linear factors
+====================================================================================
+  n=1: Catalan=   1  n*Catalan(seq1)=    1  (n/2)Cat(n+1)(seq2)=    1  central C(2n,n)=    2 = Cat+seq1=2
+  n=2: Catalan=   2  n*Catalan(seq1)=    4  (n/2)Cat(n+1)(seq2)=    5  central C(2n,n)=    6 = Cat+seq1=6
+  n=3: Catalan=   5  n*Catalan(seq1)=   15  (n/2)Cat(n+1)(seq2)=   21  central C(2n,n)=   20 = Cat+seq1=20
+  n=4: Catalan=  14  n*Catalan(seq1)=   56  (n/2)Cat(n+1)(seq2)=   84  central C(2n,n)=   70 = Cat+seq1=70
+  n=5: Catalan=  42  n*Catalan(seq1)=  210  (n/2)Cat(n+1)(seq2)=  330  central C(2n,n)=  252 = Cat+seq1=252
+  n=6: Catalan= 132  n*Catalan(seq1)=  792  (n/2)Cat(n+1)(seq2)= 1287  central C(2n,n)=  924 = Cat+seq1=924
+  => seq3=Cat, seq1=n*Cat, seq2=(n/2)Cat(n+1); Cat+seq1 = central binomial C(2n,n).
+
+====================================================================================
+ NESTING: the three are adjacent near-central Pascal columns C(2n, n-j), j=0,1,2
+====================================================================================
+  (Catalan = C(2n,n)-C(2n,n-1) = the j=0 normalized 'reflected' count)
+  n=2: C(2n,n)=6, C(2n,n-1)=4(=seq1), C(2n,n-2)=1; seq2=C(2n+1,n-1)=5=C(2n,n-1)+C(2n,n-2)
+  n=3: C(2n,n)=20, C(2n,n-1)=15(=seq1), C(2n,n-2)=6; seq2=C(2n+1,n-1)=21=C(2n,n-1)+C(2n,n-2)
+  n=4: C(2n,n)=70, C(2n,n-1)=56(=seq1), C(2n,n-2)=28; seq2=C(2n+1,n-1)=84=C(2n,n-1)+C(2n,n-2)
+  n=5: C(2n,n)=252, C(2n,n-1)=210(=seq1), C(2n,n-2)=120; seq2=C(2n+1,n-1)=330=C(2n,n-1)+C(2n,n-2)
+  n=6: C(2n,n)=924, C(2n,n-1)=792(=seq1), C(2n,n-2)=495; seq2=C(2n+1,n-1)=1287=C(2n,n-1)+C(2n,n-2)
+
+====================================================================================
+ FIBONACCI analogy: both families are read off PASCAL's triangle
+====================================================================================
+  Fibonacci = SHALLOW DIAGONAL SUMS of Pascal: F(n)=sum_k C(n-1-k,k); [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]; rate phi=1.618
+  Catalan family = NEAR-CENTRAL ENTRIES of Pascal (the 'fat diagonal'); rate 4.
+  Both nested in Pascal; Fibonacci is the THIN (shallow) reading, Catalan the CENTRAL reading.
+
+====================================================================================
+ A2 (hexagonal/triangular) Weyl-chamber walk test -- does the Catalan family count them?
+====================================================================================
+  sl3 A2 dominant walks 0->0 by length: [0, 0, 1, 0, 0, 5, 0, 0, 42, 0, 0, 462]
+  (nonzero only at multiples of 3; the A2 'Catalan' = sub-sequence) ; Catalan = [1, 1, 2, 5, 14, 42]
+  A2 walk sub-sequence (len 3,6,9,12): [1, 5, 42, 462]  -- compare A2-Catalan / our family
+
+====================================================================================
+ HEXAGONAL COVERING OPTIMALITY (Kershner 1939) -- the continuous side of the bridge
+====================================================================================
+  thinnest plane covering by congruent disks = the HEXAGONAL lattice, density theta = 2pi/sqrt(27) = 1.209200
+  (Kershner 1939; Fejes Toth). This is the OPTIMAL lattice covering, wallpaper p6m -- a THEOREM.
+  So the continuous-side optimality is settled; the open bridge is: is the LRC covering the hexagonal one?

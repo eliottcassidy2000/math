@@ -1,3 +1,33 @@
+## klein-2026-06-29-S25 -- the 3 nested sequences = the rank-1 CATALAN FAMILY; the hexagonal covering = the rank-2 A2 Coxeter-Catalan; Kershner settles the continuous side (HYP-3710)
+
+Prompt: see about the hexagonal covering optimality; prior Fibonacci work; the 3 nested sequences
+1,4,15,56,210 / 1,5,21,84,330 / 1,2,5,14,42.
+
+IDENTIFIED the three (script catalan_family_hexagonal_klein.py): seq3=Catalan(n) [A000108] 1,2,5,14,42;
+seq1=C(2n,n-1)=n*Catalan(n) [A001791] 1,4,15,56,210; seq2=C(2n+1,n-1)=(n/2)Catalan(n+1) [A002054]
+1,5,21,84,330. The rank-1 (A1) CATALAN FAMILY (Catalan modulated by linear factors). KEY relations:
+Catalan(n)+n*Catalan(n) = central binomial C(2n,n); all three = near-central Pascal columns C(2n,n-j).
+
+FIBONACCI (corrected): both Fibonacci and the Catalan family are read off PASCAL's triangle, but DIFFERENT
+readings -- Fibonacci = the SHALLOW diagonal SUMS (rate phi=1.618), the Catalan family = the NEAR-CENTRAL
+entries (rate 4). So they do NOT move at the same rate (~4^n vs ~phi^n); they are three nested PARALLEL
+Pascal columns (thin vs fat reading). Prior project Fibonacci work = the Zeckendorf/Pisano/Farey additive-
+basis line (HYP-1902/1920/2437/2998) -- a different thread.
+
+THE HEXAGONAL/A2 LADDER (the tie to the covering bridge): the hexagonal/triangular lattice = the A2 root
+lattice; its Weyl-chamber walk count (mult of trivial in V^{ox 3n} for sl3) = the A2 COXETER-CATALAN
+2(3n)!/(n!(n+1)!(n+2)!) = 1,5,42,462,6006 [A005789]. So the owner's three sequences (rank-1 A1) and the
+hexagonal covering bridge (rank-2 A2) are the SAME Coxeter-Catalan combinatorics ASCENDING IN RANK (A1
+2-fold/Dyck -> A2 3-fold/hexagonal). This dovetails with HYP-3706 (the Singer multiplier = the 3-fold A2
+rotation zeta_3).
+
+HEXAGONAL COVERING OPTIMALITY: Kershner 1939 (+ Fejes Toth) -- the hexagonal lattice is the THINNEST
+covering of the plane by congruent disks, density 2pi/sqrt(27)=1.2092, full p6m symmetry -- a THEOREM. So the
+bridge's continuous side is settled; the open part stays the LRC->hexagonal claim (HYP-3706).
+
+Reflection: (none new; recorded in HYP-3710). No canon overridden; no court cases. NEXT: the LRC->hexagonal-
+torus reduction (does the continuous LRC covering inherit Kershner optimality?).
+
 ## klein-2026-06-29-S24 -- the DESIGN-COVERING BRIDGE is the HEXAGONAL WALLPAPER GROUP; the Singer multiplier = the 3-fold rotation (zeta_3 = Frobenius = Condorcet) (HYP-3706)
 
 Prompt: work on the design-covering bridge, think wallpaper groups.
