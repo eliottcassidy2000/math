@@ -61,6 +61,34 @@ for-the-AP-IS-the-three-distance-theorem, ...-stern-brocot-tree, the-ordering-co
 bridge, new-invariants-..., PINNED-...apex-prime); ~10 scripts in 04-computation/lrc_*_opus_20260630.py.
 Handoff: (a) bit-rigor of the O(1/n^2) dips (j>=2 cluster widths via three-distance); (b) does the block/clump
 single-clump method bound meas(G_C) for OPEN-Q-108?; (c) the exact L-limit constant for non-AP sets.
+## mac-mini-2026-06-30-S59 -- the CRT ESCAPE is robustly UNCOVERABLE: the t_a witness FAMILY (missing speed 1 => empty AP slot => gap 2a/(14a+1) at EVERY rotation a); killer kills a>=7, w can't kill a=1..6 + cover band; adversarial w (~1.5e11) still gives M=6/43>>14/183 (HYP-3745)
+
+Prompt: prove the CRT escape is uncoverable.
+
+THE t_a WITNESS FAMILY. For a missing-1 covering set, the core {2..n-2} at rotation a (t=a/D, D=14a+1 for n=14)
+maps to the AP {2a,3a,..,(n-2)a} mod D with the speed-1 slot (=1a) EMPTY => nearest core point to 0 is 2a (not
+a) => gap radius 2a => M >= 2a/(14a+1) at t=a/(14a+1), for EVERY a=1,2,3,.. (2/15,4/29,6/43,.. all >>14/183).
+Missing speed 1 leaves a double-width hole at EVERY rotation.
+
+WHY ONE SPEED CAN'T KILL THE FAMILY. The resonance killer 182=14*13 fills the gap ONLY for a>=7 (182a≡-13 mod
+14a+1, dist 13 < 2a iff a>=7) -- kills the tail free. So the single free speed w must kill a=1..6 AND cover the
+radius-1 band (E(1)=13 exposed moduli, HYP-3743) = >=19 modular conditions, conflicting via shared factors (the
+witness moduli 14a+1=15,29,43,57,71,85 share 3,5,17,19 with the band moduli).
+
+ADVERSARIAL TEST (the proof attempt). The most-adversarial CRT w -- chosen to cover the band AND kill as many
+t_a as possible (w~1.5e11) -- STILL leaves M=6/43=0.1395 >> 14/183. The surviving witness merely MOVES (kill
+a=4,5,6 => a=3 survives at 6/43). No missing-1 covering set reaches 14/183 (verified vs w up to ~1.5e11).
+MECHANISM: killing one witness family PINS w's residues, spawning a FRESH witness elsewhere -- the DYNAMIC form
+of the constant-residue principle (HYP-3744): speed 1 has residue 1 at EVERY rotation a (fills the AP slot
+uniformly); a single w matches that only at finitely many a.
+
+STATUS: exact (t_a family M_a=2a/(14a+1); killer kills exactly a>=7); robustly verified (no missing-1 set
+reaches 14/183, min M=6/43 vs adversarial w to ~1.5e11); OPEN = the fully rigorous all-w proof (the family is
+inexhaustible by one speed) = LRC14-hard. This CLOSES the S57 CRT-escape gap empirically+mechanistically =>
+pins covering-min(14)=14/183 => LRC14 (14/183>1/14). The remaining rigor: 't_a family inexhaustible by one w'.
+
+Files: HYP-3745, crt_escape_uncoverable_macmini_20260630.py(+.out). Builds on HYP-3744(constant-residue)/3743
+(hierarchy sum)/3740(hard core) + klein-S42 (witness thm). Broadcast.
 
 ## mac-mini-2026-06-30-S58 -- SUMMING the witness hierarchy = a TRIANGULAR number (T_(n-1)-1); extending the constant-residue budget to ALL moduli; the hierarchy is MULTI-LEVEL (HYP-3743); converges w/ klein-S42 (who PROVED the witness theorem)
 

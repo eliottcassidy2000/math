@@ -1,0 +1,15 @@
+Missing speed 1, witness family t_a = a/(14a+1):  M_a = 2a/(14a+1)  (the missing speed-1 slot).
+   a  D=14a+1   M_a=2a/D  >14/183? killer 182*a mod D killer kills (a>=7)?
+   1       15       2/15      True                  2                False
+   2       29       4/29      True                 13                False
+   3       43       6/43      True                 13                False
+   4       57       8/57      True                 13                False
+   5       71      10/71      True                 13                False
+   6       85      12/85      True                 13                False
+   7       99      14/99      True                 13                 True
+   8      113     16/113      True                 13                 True
+
+  killer 182=14*13 kills only a>=7 (dist 13 < 2a iff a>=7). So a=1..6 must be killed by the free speed w.
+  ADVERSARIAL TEST: w covering the band AND killing t_a -- min M over such missing-1 sets = 6/43 = 0.1395
+  >> 14/183 = 0.0765. No missing-1 set reaches 14/183 (verified vs w up to ~1.5e11).
+  MECHANISM: killing a witness family pins w's residues, spawning a fresh witness => the escape is uncoverable.
