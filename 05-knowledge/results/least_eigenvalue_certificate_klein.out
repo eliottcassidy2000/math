@@ -1,0 +1,32 @@
+====================================================================================
+ THE LEAST-EIGENVALUE CERTIFICATE: g(O) = smallest nonzero eigenvalue of the cyclotomic Gram
+====================================================================================
+ target doublet value 4cos^2(3pi/7) = 0.198062
+
+[1] For every proper nonempty core O: smallest eigenvalue of C(O) == g(O) (THM-590).  mismatches=0
+    distinct gap values = [0.0, 0.198062, 0.307979, 1.0, 2.0]
+    (these are THM-590's five values; min nonzero = 0.198062 = 4cos^2(3pi/7))
+
+[2] The binding DOUBLET O={0,1}: the explicit certificate
+    autocorrelation a(d), d=0..6 = [2, 1, 0, 0, 0, 0, 1]
+    Gram C eigenvalues (sorted) = [np.float64(0.1981), np.float64(0.1981), np.float64(1.555), np.float64(1.555), np.float64(3.247), np.float64(3.247), np.float64(4.0)]
+    smallest eigenvalue lambda_min = 0.198062  vs 4cos^2(3pi/7) = 0.198062
+    SOS/least eigenvector v (the dual certificate) = [np.float64(0.234), np.float64(-0.419), np.float64(0.522), np.float64(-0.521), np.float64(0.416), np.float64(-0.23), np.float64(-0.002)]
+    check C v = lambda v: ||Cv - lam v|| = 6.79e-16
+    Bochner: ALL eigenvalues >= 0 (True) -- C is PSD = an SOS (sigma-even).
+
+[3] sigma = negation (k <-> 7-k): C is real-symmetric circulant, so lambda_k = lambda_{7-k}
+    (the de Moivre cos-pairing). The 6 nonzero modes pair into 3 sigma-orbits -> a CUBIC
+    over Q(cos 2pi/7) {cos2pi/7, cos4pi/7, cos6pi/7}. The gap is a sigma-EVEN (cosine) value:
+    O=[0, 1]: |Ohat(k)|^2 k=0..6 = [4.0, 3.247, 1.555, 0.1981, 0.1981, 1.555, 3.247]  (k<->7-k symmetric: True)
+    O=[0, 1, 2]: |Ohat(k)|^2 k=0..6 = [9.0, 5.0489, 0.308, 0.6431, 0.6431, 0.308, 5.0489]  (k<->7-k symmetric: True)
+    O=[1, 2, 4]: |Ohat(k)|^2 k=0..6 = [9.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0]  (k<->7-k symmetric: True)
+
+[4] LIFT to the full lonely measure (the non-factoring test):
+    doublet-ish {1,8}: full min |Lhat(k)|^2 = 0.0000 (DC=m^2 region 0.538); apex g(O mod7)=1.0000
+    {1,3,5}: full min |Lhat(k)|^2 = 0.0000 (DC=m^2 region 0.441); apex g(O mod7)=0.3080
+    {1,2,4}: full min |Lhat(k)|^2 = 0.0000 (DC=m^2 region 0.517); apex g(O mod7)=2.0000
+    NOTE: the full power spectrum HAS near-zeros (L̂ vanishes at many k) -- the full 'least
+    eigenvalue' is ~0 generically. The certificate is NOT the naive full-spectrum min; it is
+    the APEX (mod-7) cyclotomic gap (THM-590), reached after the 2-adic descent factors out the
+    2-part. The 'danger does not factor' => the certificate lives at the apex, not the full grid.

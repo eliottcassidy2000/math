@@ -1,0 +1,18 @@
+THE CERTIFICATE = lambda_min of the SIGNLESS LAPLACIAN of the apex cycle C_p (positive IFF p ODD):
+ p | doublet gap g | lambda_min(Q(C_p)) | 2-2cos(pi/p) | p odd? | =0 (bipartite/even)?
+  3|     1.000000 |         1.000000 |    1.000000 |  True | NO
+  4|     0.000000 |         0.000000 |    0.000000 | False | YES (=0)
+  5|     0.381966 |         0.381966 |    0.381966 |  True | NO
+  6|     0.000000 |         0.000000 |    0.000000 | False | YES (=0)
+  7|     0.198062 |         0.198062 |    0.198062 |  True | NO
+  8|     0.000000 |         0.000000 |    0.000000 | False | YES (=0)
+  9|     0.120615 |         0.120615 |    0.120615 |  True | NO
+ 10|     0.000000 |         0.000000 |    0.000000 | False | YES (=0)
+ 11|     0.081014 |         0.081014 |    0.081014 |  True | NO
+ 12|     0.000000 |         0.000000 |    0.000000 | False | YES (=0)
+ 13|     0.058116 |         0.058116 |    0.058116 |  True | NO
+ 14|     0.000000 |         0.000000 |    0.000000 | False | YES (=0)
+
+ apex p=7: 4cos^2(3pi/7) = 0.198062 = 2-2cos(pi/7) = 0.198062 = lambda_min(Q(C_7))
+ => the apex obstruction is POSITIVE precisely because 7 is ODD (C_7 non-bipartite); an even apex gives 0.
+ sin(pi/14)=cos(3pi/7): 0.222521 0.222521

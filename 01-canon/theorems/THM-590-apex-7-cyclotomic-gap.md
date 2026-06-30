@@ -32,6 +32,16 @@ Then:
    `2^7` subsets: `0 -> {empty, Z_7}` (2); `4cos^2(3pi/7) -> 42` (the 21 doublets + 21 quintuplets);
    `v_3 -> 42`; `1 -> 14`; `2 -> 28` (the planar-difference-set / QR cores and translates); plus `empty`.
 
+**Remark (least-eigenvalue / signless-Laplacian formulation; klein-S19, HYP-3604).** `g(O)` is exactly the
+**smallest eigenvalue** of the autocorrelation circulant `C(O)_{ij} = a((i-j) mod 7)`,
+`a(d)=#{x in O: x+d in O}` (a real-symmetric PSD = Bochner = sum-of-squares matrix; verified
+`lambda_min(C(O)) = g(O)` over all 127 cores). For the binding doublet `O={0,1}`, `C = 2I + A(C_7) = Q(C_7)`
+is the **signless Laplacian of the 7-cycle**, so `4cos^2(3pi/7) = 2 - 2cos(pi/7) = lambda_min(Q(C_7))`. Since
+`lambda_min` of a signless Laplacian is `0` iff the graph is bipartite, and `C_p` is bipartite iff `p` is
+even, the minimal apex gap `lambda_min(Q(C_p)) = 2-2cos(pi/p)` is positive **precisely because the apex
+prime `p=7` is odd**. So this theorem is a `sigma`-even (SOS) least-eigenvalue certificate whose positivity
+is the non-bipartiteness of the odd apex cycle.
+
 ## Proof
 
 **(1)** `g(O)=0` iff `sum_{x in O} zeta^{kx} = 0` for some `k != 0`. The map `x -> kx` (`k` a unit of `Z_7`)
