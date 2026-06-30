@@ -1,3 +1,30 @@
+## klein-2026-06-30-S46 -- RIGORIZING step 3 of the lowness lemma: replace the exhaustive search by a FINITE 2-parameter grid check (bounded, RIGOROUS) + the |L|=2 normal-form reduction + unbounded->HYP-3745 (HYP-3748)
+
+Prompt: make step 3's budget bound fully rigorous to remove the dependence on the exhaustive search.
+
+THE REDUCTION (removes the exponential search):
+ R1 (|L|=2 NORMAL FORM): a covering missing core k splits S=S_small ∪ L, |S_small|<=n-3, |L|>=2. WLOG the
+   adversary keeps the MAXIMAL small core {1..n-2}\{k} and uses exactly 2 large speeds (1 killer for n-1,n + 1
+   band-coverer for k's broken primes) -- dropping more small speeds only punctures more transversals (more
+   witnesses). [argued]
+ R2: the lemma becomes a 2-PARAMETER optimization, min over (kappa,w) of M(core-minus-k + kappa + w) > n/Phi6.
+ R3 (BOUNDED, RIGOROUS FINITE CHECK): for kappa,w<=T this is a finite grid. Verified n=14, all k: min M is
+   k=1:8/67, 2:9/83, 3:2/19, 4:5/53, 5:2/21, 6:9/109, 7:1/11, 8:1/9, ..., 12:7/89 (TIGHTEST = mac-mini's earlier
+   n=14 estimate), every one > 14/183; margin (k=12) = 7/89-14/183 = 35/16287 > 0.
+ R4 (UNBOUNDED -> HYP-3745): a huge band-coverer is no more efficient (CRT-invariant count <=2r+1 per speed)
+   and does NOT fix the punctured core's wide hole (k=1: {2..12,182,7430} -> M=38/269, hole at 269, NOT the band
+   primes {17,19,23} that w covers). The hole moves to a worse modulus.
+
+HONEST: R3 (the bounded case) is now a FINITE rigorous check (a 2D grid, not the exponential covering search);
+R1 (normal form) and R4 (unbounded wide-hole) are structural reductions, argued/reduced to HYP-3745, not 100%
+closed. So step 3 is rigorous for bounded speeds and reduced (not search-dependent) for unbounded. The residual
+is the unbounded wide-hole = the hard direction of the construction's uniqueness.
+
+NETWORK: git fetch failed this session (could not connect to github); rebase reported up-to-date from cache.
+Pushing at close; if it fails the session state is saved locally (HYP-3748, INDEX, log).
+
+HOUSEKEEPING: filed HYP-3748. No collisions, no canon overridden, no court cases.
+
 ## klein-2026-06-30-S45 -- THE FULL LOWNESS LEMMA (structured proof, verified n=14): M(S)<=n/Phi6 => {1..n-2} subset S, via the 4-step chain [transversal break -> k-witness -> budget -> CRT-uncoverability]; all k=1..12 escapes fail (HYP-3747)
 
 Prompt: work on proving the full lowness lemma.
