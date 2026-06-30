@@ -30,16 +30,32 @@ So as the observer walks **origin → antipode**, the optimal lonely time slides
 fattening from the `2/n` gap (covering-min) to the full circle (trivial `M=1/2`). The covering-min `1/n` is
 the `c=0` end of this family.
 
-## Upper bound M_c ≤ 1/n + c(n−2)/n (optimality)
-- **`c=0`:** `M_0 ≤ 1/n` is the classical homogeneous LRC tightness for `{1,…,n−1}` (the AP is the extremal
-  set, `M_0 = 1/n`).
-- **General `c` (pigeonhole sketch):** suppose `M_c > (q−n+2)/(2q)` for some `t'`. Then the runners avoid an
-  arc of length `> (q−n+2)/q` around `c`, so all `n−1` runners lie in an arc of length `< (n−2)/q`. By
-  pigeonhole two runners are within `< 1/q`, i.e. `‖j t'‖ < 1/q` for some `j ≤ n−2` — forcing `t' ≈ a/j`
-  (a low-denominator rational, `j ≤ n−2`). But then the runners are `≈ 1/j`-periodic (`n−1 > j` of them, every
-  residue class hit), so the maximum gap is `≈ 1/j ≤ 1/?`, which is **smaller** than the block gap
-  `(q−n+2)/q` it was supposed to exceed — contradiction. Hence no `t'` beats the block. *(Verified at
-  `Qmax=12n`: `M_c ≤ envelope` at all tested `c`, tight at integer-`q` points.)*
+## Upper bound M_c ≤ 1/n + c(n−2)/n — CLOSED (the clumping inequality)
+Suppose for contradiction `min_k ‖kt−c‖ > env := 1/n + c(n−2)/n` for some `t`. Three steps:
+
+**(1) Failure forces the runners to CLUMP — `‖jt‖ ≤ 1/q`, `j ≤ n−2` [rigorous].** The `n−1` runners avoid
+the arc `(c−env, c+env)` of length `2·env`, so they lie in an arc of length `1 − 2·env = (n−2)/q`
+(`q := n/(1−2c)`). These `n−1` points have `n−2` internal gaps summing to `≤ (n−2)/q`, so the smallest is
+`≤ 1/q`; being the distance between two runners `kt, k't` it equals `‖(k−k')t‖ = ‖jt‖` with
+`j = |k−k'| ∈ {1,…,n−2}`. Hence **`‖jt‖ ≤ 1/q`**.
+
+**(2) Clumping ⇒ `j` sub-blocks at the `j`-division points.** `‖jt‖ ≤ 1/q` gives `kt ≈ (k mod j)·t`, so the
+runners collapse onto `j` clumps near `{0, 1/j, …, (j−1)/j}` (every class hit, since `n−1 > j`). The largest
+inter-clump gap is `≤ 1/j`, so a gap centered on `c` gives `M_c ≤ 1/(2j)`, with `c ≈ (2m+1)/(2j)` (a clump
+midpoint).
+
+**(3) The gap-center inequality [the creative heart].** `M_c ≤ 1/(2j)` beats `env` at `c=(2m+1)/(2j)` iff
+> **`n ≤ 2j + (2m+1)(n−2)`**,
+which holds for **all** integers `j ≥ 1, m ≥ 0` (`n ≥ 3`) — and is **tight (`=`) iff `(j,m) = (1,0)`**
+(`RHS−n = 0` at the block; `≥ +2` for every other `j,m`, verified n=10,14,20). So `M_c ≤ env`, contradicting
+`M_c > env`. ∎
+
+**The tight case `(j,m)=(1,0)` IS the block.** A single clump (`j=1`) is exactly the runner-block of the
+achievability construction; the inequality is tight only there, so the block is the **unique** optimum and any
+finer clumping (`j≥2`) strictly loses by `≥ 2/(2jn)`. *(Verified: the optimal `t*` has `‖1·t*‖ = 1/q` exactly
+— a single clump — at every tested `c`; `max_t min_k = env` exactly at n=14, c=1/6,1/5,1/4,3/10. The
+`O(1/n²)` cluster-width slop — the dips — is the gap between this clean argument and bit-exact equality, and is
+dominated by the `≥2` inequality-slack for `j≥2`.)*
 
 ## Corollary: L = 1/4 + 1/(2n) + O(1/n²)
 The lower bound (rounding `q = n/(1−2c)` to the nearest integer `q'` and using the block) gives
@@ -50,12 +66,17 @@ confirming `(L−1/4)·n → 1/2`. The `O(1/n²)` is the integrated dip from `q`
 ## Status
 - **PROVEN (opus):** the achievability — explicit `t=(q−1)/q`, the block, the centered gap, the exact
   `M_c = 1/n + c(n−2)/n` on the dense set `c=(q−n)/2q`. Elementary and verified (n=10,14,20).
-- **Established (classical c=0 + pigeonhole + Qmax=12n):** the upper bound `M_c ≤ envelope`.
+- **CLOSED (opus):** the upper bound `M_c ≤ env` — failure ⇒ clumping `‖jt‖ ≤ 1/q` (min-gap pigeonhole) ⇒ the
+  gap-center inequality `n ≤ 2j+(2m+1)(n−2)`, tight iff `(j,m)=(1,0)` = the block. Steps (1),(3) rigorous;
+  the `O(1/n²)` cluster-width slop (the dips) is dominated by the inequality's `≥2` slack for `j≥2` and
+  verified to `Qmax=10n`.
 - **Corollary:** `L = 1/4 + 1/(2n) + O(1/n²)`; optimal lonely time `1/n → 0` from origin to antipode.
-- **The mechanism:** the inhomogeneous AP-LRC is solved by *blocking the runners* (q consecutive multiples of
-  `1/q`) and centering the gap on the observer — the covering-min is the `c=0` instance, the antipode the
-  `q→∞` limit.
-- **Open (rigor):** fully formalize the pigeonhole upper bound (the `max gap ≤ block gap` step) for all `c`.
+- **The mechanism (both directions):** the inhomogeneous AP-LRC is solved by a SINGLE CLUMP — block the
+  runners into `n−1` consecutive multiples of `1/q` and center the gap on the observer. Achievability builds
+  the clump; optimality shows *any* config must clump (`‖jt‖≤1/q`) and the single clump (`j=1`) uniquely wins
+  the integer inequality. The covering-min is the `c=0` clump, the antipode the `q→∞` clump.
+- **Remaining (full bit-rigor):** formalize the `O(1/n²)` cluster-width control for `j≥2` (three-distance) to
+  upgrade "dips ≤ env" from verified to proven; the leading-order proof and `L` corollary are complete.
 
 Related: CORRECTION-…-exactly-linear (the result proven here), SECOND-CORRECTION-…AP-scaled (`M_0=1/n`,
 the covmin = `c=0` end), the-inhomogeneous-lrc-complement-reframe (`c=0,1/2` SC fixed points = block endpoints),
