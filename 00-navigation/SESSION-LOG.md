@@ -1,3 +1,35 @@
+## klein-2026-06-29-S23 -- ATTACK n/Phi_6(n) >= 1/n: the inequality is TRIVIAL (n>=1); the content is the PROJECTIVE-PLANE covering-min optimality; Q(sqrt-3) Eisenstein column (HYP-3705)
+
+Prompt (owner): the open conjecture binds off-cusp at n/Phi_6(n)=14/183 (positive measure, M tightest), the
+Q(sqrt-3) existence-column inequality. Attack n/Phi_6(n) >= 1/n directly; the real question is whether it is
+genuinely the covering-min (no covering beats the construction).
+
+THE SHARPEST POINT: n/Phi_6(n) >= 1/n <=> n^2 >= n^2-n+1 <=> n >= 1 -- TRIVIAL. The analytic inequality
+carries NO content. ALL the open content is the word 'covering-min': that no covering beats the construction.
+
+STRUCTURE (verified, script phi6_covering_min_structure_klein.py): Phi_6(n)=n^2-n+1 is (A) the EISENSTEIN
+NORM |n-zeta_6|^2 (zeta_6=e^{i pi/3}) -> field Q(sqrt-3); (B) the point-count of PG(2,n-1); (C) the size of
+a (Phi_6(n),n,1) SINGER difference set (n-1 a prime power). n=14: 183=3*61 (61=1mod6 SPLITS in Z[zeta_6], 3
+RAMIFIES), q=13 PRIME so PG(2,13) EXISTS -> 14 speeds mod 183, every nonzero diff once. Every prime
+p|Phi_6(n), p!=3, is =1 mod 6 (Eisenstein-split). So Phi_6 is the Q(sqrt-3) 'existence column.'
+
+THE REFRAMING: since the inequality is trivial, LRC(14) (in this frame) reduces to a COMBINATORIAL
+OPTIMALITY -- the (183,14,1) projective-plane covering is optimal. A (v,k,1) symmetric design (Steiner
+S(2,k,v)) IS the optimal covering design when it exists (covering number attained exactly, no redundancy).
+So 'no covering beats the construction' HOLDS at the design level; the genuine open content localizes to the
+LRC-floor M <-> design-covering-number BRIDGE (needs M's exact def, the floor owners'). Not an inequality --
+a single design-theoretic optimality + its continuous bridge.
+
+TWO COLUMNS (synthesis with the multi-axis atlas HYP-3610 + mac-mini-S41/HYP-3700):
+ - Q(sqrt-3) covering/existence column: the SINGER difference set = the SPREAD pole, value n/Phi_6(n), the
+   covering-min, OFF-cusp (positive measure, M tightest).
+ - Q(cos2pi/p) apex/measure column: the DOUBLET = the CONCENTRATED pole = the odd cycle C_p, value
+   4sin^2(pi/2p), the descent attractor, the measure-vanishing isolated edge (mac-mini-S41).
+The 2-adic descent flows to the doublet attractor; the conjecture BINDS off-cusp at the difference set.
+Reflection: two-cyclotomic-columns-the-apex-gap-and-the-eisenstein-covering-min. No canon overridden; no
+court cases. NEXT: the LRC-floor<->design-covering bridge (does the continuous covering inherit PG(2,13)'s
+design-optimality?).
+
 ## mac-mini-2026-06-30-S41 -- pushed the disproof mode: the proof/disproof EDGE is ISOLATED (not razor-thin) for LRC14; isolation is GENUS-determined (HYP-3700)
 
 Prompt: push the disproof mode but mainly be aware of the exact nature of the razor-thin edge between proof

@@ -1,0 +1,50 @@
+============================================================================================
+ Phi_6(n) = n^2-n+1: Eisenstein norm | projective-plane order n-1 | prime factors | n/Phi6 vs 1/n
+============================================================================================
+   n  Phi6(n)       factors q=n-1 prime-pwr?    n/Phi6      1/n gap=(n-1)/nPhi6
+   3        7             7             True   0.42857  0.33333        0.095238
+   4       13            13             True   0.30769  0.25000        0.057692
+   5       21           3*7             True   0.23810  0.20000        0.038095
+   6       31            31             True   0.19355  0.16667        0.026882
+   7       43            43            False   0.16279  0.14286        0.019934
+   8       57          3*19             True   0.14035  0.12500        0.015351
+   9       73            73             True   0.12329  0.11111        0.012177
+  10       91          7*13             True   0.10989  0.10000        0.009890
+  11      111          3*37            False   0.09910  0.09091        0.008190
+  12      133          7*19             True   0.09023  0.08333        0.006892
+  13      157           157            False   0.08280  0.07692        0.005879
+  14      183          3*61             True   0.07650  0.07143        0.005074 <== LRC(14)
+  15      211           211            False   0.07109  0.06667        0.004423
+  16      241           241            False   0.06639  0.06250        0.003890
+  17      273        3*7*13             True   0.06227  0.05882        0.003448
+  18      307           307             True   0.05863  0.05556        0.003076
+  19      343           7^3            False   0.05539  0.05263        0.002762
+  20      381         3*127             True   0.05249  0.05000        0.002493
+  14      183          3*61             True   0.07650  0.07143        0.005074 <== LRC(14)
+
+============================================================================================
+ (A) Eisenstein-norm check: Phi_6(n) = |n - zeta_6|^2, zeta_6 = (1+i sqrt3)/2  [Q(sqrt-3)]
+============================================================================================
+   n=3: |n - zeta_6|^2 = 7.0000   Phi_6(n) = 7   match=True
+   n=7: |n - zeta_6|^2 = 43.0000   Phi_6(n) = 43   match=True
+   n=14: |n - zeta_6|^2 = 183.0000   Phi_6(n) = 183   match=True
+
+============================================================================================
+ prime factors of Phi_6(n) are =1 mod 6 (Eisenstein SPLIT primes), except 3 (ramified):
+============================================================================================
+   n=3: Phi_6=7 -> primes [7]; classes [(7, '1 mod6')]
+   n=7: Phi_6=43 -> primes [43]; classes [(43, '1 mod6')]
+   n=14: Phi_6=183 -> primes [3, 61]; classes [(3, '3(ramified)'), (61, '1 mod6')]
+   n=13: Phi_6=157 -> primes [157]; classes [(157, '1 mod6')]
+   n=8: Phi_6=57 -> primes [3, 19]; classes [(3, '3(ramified)'), (19, '1 mod6')]
+   => every prime p|Phi_6(n), p!=3, satisfies p=1 mod 6 (p splits in Z[zeta_6], the Eisenstein integers).
+
+============================================================================================
+ THE CONTENT (since the inequality is trivial): is n/Phi_6(n) the COVERING-MIN?
+============================================================================================
+   n=14: Phi_6=183=3*61 (61 = 1 mod 6, splits; 3 ramifies). q=13 is PRIME, so PG(2,13) EXISTS
+   => a (183, 14, 1) SINGER difference set of 14 speeds mod 183 (every nonzero diff once).
+   n/Phi_6 = 14/183 = 0.076503;  1/n = 1/14 = 0.071429;  margin = 0.005074
+   The inequality 14/183 >= 1/14 is n>=1 (trivial). OPEN: is 14/183 the genuine covering-min,
+   i.e. is the (183,14,1) projective-plane covering OPTIMAL (no covering beats it)? -- a
+   design-theoretic optimality question, the Q(sqrt-3)/Eisenstein 'existence-column'.
