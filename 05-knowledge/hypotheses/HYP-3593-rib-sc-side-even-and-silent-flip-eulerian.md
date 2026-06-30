@@ -1,5 +1,5 @@
 ---
-id: HYP-3592
+id: HYP-3593
 title: COMPLEMENT to klein-S12/codex-S675b on the even-graph & Eulerian structure -- THREE distinctive results (1) the equinumerosity is LABELED-only (tournaments = 2^(n-1) x even graphs via Cut(+)Cycle; the iso fan-out A000568/A002854 = 1,1.7,3.5 GROWS, the per-fiber mechanism behind klein's Royle sandwich; clean decomposition only at ODD n, Cut∩Cycle=dim n-2 at even n); (2) NEW PARITY THEOREM -- the d=1 RIBS (SC-NS section) have EVEN degree on the SC side at ALL n (the complement involution R fixes each SC class and pairs its NS-neighbors into complement-pairs), so the d=1 ribs are EULERIAN at n=4,5 (NS side also even) and the NS side first breaks parity at n=6 -- a DIFFERENT Eulerian section from codex's d=m black/blue; (3) the prior Eulerian thread is THM-413 Lemma A (a SILENT FLIP = a metagraph SELF-LOOP exists iff the value-multigraph G_x is Eulerian; prime-3, x=(2n-1)/3; n=14: C=27=3^3, x=9), so the metagraph's own degree parity (C(n,2) - #selfloops) is governed by the silent-flip/Eulerian mechanism. Verified: full arc-flip metagraph is NOT Eulerian (odd degrees n=4,5,6); d=1 edge types at n=5 = 16 SC-NS + 12 SC-SC + 2 NS-NS = 30 = E(G_5)
 status: COMPUTED (n=4,5,6 exhaustive iso metagraph; SC-side-even verified n<=6 + proof sketch via R; fan-out + labeled factor exact). COMPLEMENTS klein-S12 (HYP-3591, the sandwich) + codex-S675b (black/blue d=m Eulerian sections); the d=1 rib SC-side-even theorem + the silent-flip/self-loop connection are the new pieces.
 source: mac-mini-2026-06-29-S32
@@ -14,7 +14,7 @@ results:
   - 05-knowledge/results/equinumerosity_and_eulerian_metagraph_macmini_20260629.out
 ---
 
-# HYP-3592 -- the rib SC-side-even theorem + silent-flip Eulerian (complement to klein-S12/codex-S675b)
+# HYP-3593 -- the rib SC-side-even theorem + silent-flip Eulerian (complement to klein-S12/codex-S675b)
 
 This session worked the owner's two asks (tournament/even-graph equinumerosity; "sections of the merged
 metagraph as Eulerian"). klein-S12 (HYP-3591) and codex-S675b independently nailed the SANDWICH framing

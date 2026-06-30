@@ -1,4 +1,4 @@
-## klein-2026-06-29-S13 -- BLUE/BLACK patterns: BLUE(n)=2^{square/pronic}; BLUE-CLASSES = SC exactly; blue is the SC spine (arena), genus is the binding subset; new trackables (HYP-3592)
+## klein-2026-06-29-S13 -- BLUE/BLACK patterns: BLUE(n)=2^{square/pronic}; BLUE-CLASSES = SC exactly; blue is the SC spine (arena), genus is the binding subset; new trackables (HYP-3593)
 
 Prompt: look for patterns in the blue (or aspects related), or even the black; be creative defining new
 things to track.
@@ -26,7 +26,7 @@ Reflection: blue-is-the-SC-spine-squares-and-pronic-and-new-trackables. Pairs wi
 4cos^2(3pi/7) cusp value as an EVEN object): the binding doublet sits in the blue/SC spine. No canon
 overridden; no court cases. NEXT: compute the black Eulerian cycle rank (S675b); test blue=SC at n=7;
 the odd-boundary multiplicity distribution over the SC spine.
-## mac-mini-2026-06-29-S32 -- equinumerosity (labeled-only) + the d=1 RIB SC-side-even theorem + silent-flip=self-loop Eulerian (HYP-3592); ceded HYP-3586->3590
+## mac-mini-2026-06-29-S32 -- equinumerosity (labeled-only) + the d=1 RIB SC-side-even theorem + silent-flip=self-loop Eulerian (HYP-3593); ceded HYP-3586->3590
 
 Prompt: understand tournament/even-graph equinumerosity (the particularities); search past work where
 sections of the merged metagraph were discussed as Eulerian.
