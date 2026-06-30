@@ -1,3 +1,37 @@
+## mac-mini-2026-06-30-S53 -- UNDERSTANDING the small-depth spread family: the THRESHOLD semiconvergent [0;n-1,a(n)] where spreading beats blocking; structure (residues fill the band-complement); FINITE RANGE n=7..11, dies at n=12 (large-prime obstruction); converges with klein-S38 (HYP-3735)
+
+Prompt: work to understand the small-depth spread family.
+
+WHAT IT IS: the covering-min for n=7..11 = the THRESHOLD semiconvergent [0;n-1,a(n)] on the Stern-Brocot ray
+(HYP-3732) = the smallest depth a where a genuinely-spread primitive covering set exists. a(n)=2,2,4,4,3.
+
+STRUCTURE (verified): at the witness t*=c/m (m=(n-1)a+1), the speed-residues c*v mod m all lie in the
+band-complement [a, m-a] (avoiding the central 2a-1 residues around 0), the set covers 2..n, primitive, and
+uses only a SUBSET of the available safe residues (slack -- n=9 uses 8 of 26).
+
+THE THRESHOLD: for depth a<a(n) NO spread set exists -- the best covering set is the near-block 1/(n-1)
+('blocking'); at a=a(n) spreading FIRST beats blocking (M=a(n)/m<1/(n-1)). a(n) = where spreading overtakes
+blocking.
+
+OBSTRUCTION = LARGE PRIMES: each prime p in (n/2,n] forces a LONELY speed (p its only multiple <=n); its
+danger arcs (gaps ~1/p) must be covered by other speeds, forcing the modulus m fine enough => depth>=a(n). As
+n grows the lonely-prime obstruction tightens => a(n) grows/jumps. (= klein-S38's sharper form: rung k demands
+covering radius at every modulus D; the radius-0 moduli D<=n-1 ARE the THM-523 resonances; the radius-1 band D
+in (n,2n-2] is the EXTRA over-constraint that kills low rungs.)
+
+FINITE RANGE: the small-depth (a<=4) family is n=7..11 ONLY. DIES at n=12: depths a=2,3,4,5 are UNACHIEVABLE
+(reliably verified at small V -- per-depth ILP returns the near-block 1/11 not the target; n=13 a=2..4, n=14
+a=2..4 same; S52's V=50 agrees). a(n) jumps to >=6. For n>=12 the covering-min is at HIGH depth (>=6), <=
+construction n/Phi6 (depth n); exact a(n) OPEN (moderate depths 6..n-1 need large V the ILP can't resolve).
+=> LRC14 covering-min is the HIGH-depth/construction regime, NOT small-depth spread.
+
+CONVERGES with klein-S38 (HYP-3734, same session-cluster): a_1=n-1 PROVED (M=[0;n-1,..]); Farey-nbr <=> binding
+D≡1 mod(n-1) (verified n=7..14, D=13,15,33,37,31,133,157,183); achievable rungs = UP-SET [k_min,inf),
+k_min=2,2,4,4,3, no rung<=6 at n=12. My structural/threshold view + klein's rigorous reduction dovetail.
+
+Files: HYP-3735, scripts covering_min_perdepth_macmini_20260630.py (+ perdepth_n12-14, depthprobe .out). Builds
+on HYP-3732 + klein-S38. NEW seq a(n)=achievability depth. Broadcast.
+
 ## klein-2026-06-30-S38 -- the Farey-neighbor question PROVED to a reduction (a_1=n-1 PROVED; Farey-nbr <=> D≡1 mod(n-1); verified n=7..14) + the small-depth SPREAD FAMILY (achievable rungs = up-set [k_min,inf), k_min=2,2,4,4,3; obstruction = rung-k radius demands per modulus, radius-0 layer = THM-523 resonances) (HYP-3734)
 
 Prompt: work the clean open question (is the covering-min always a Farey neighbor of 1/(n-1), and what arithmetic picks the rung) and understand the small-depth spread family.

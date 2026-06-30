@@ -1,0 +1,22 @@
+n=12: near-block 1/(n-1)=0.09091, construction n/Phi6=0.09023
+   a=2 (m=23, target 2/23=0.08696): min-M@V=23 = 1/11=0.09091  depth-2-achievable:False  <construction:False
+   a=3 (m=34, target 3/34=0.08824): min-M@V=34 = 1/11=0.09091  depth-3-achievable:False  <construction:False
+   a=4 (m=45, target 4/45=0.08889): min-M@V=45 = 1/11=0.09091  depth-4-achievable:False  <construction:False
+   a=5 (m=56, target 5/56=0.08929): min-M@V=56 = 1/11=0.09091  depth-5-achievable:False  <construction:False
+   a=6 (m=67, target 6/67=0.08955): min-M@V=67 = 7/76=0.09211  depth-6-achievable:False  <construction:False
+   a=7 (m=78, target 7/78=0.08974): min-M@V=78 = 2/21=0.09524  depth-7-achievable:False  <construction:False
+  => smallest achievable depth a(12) = None; spread beats construction: False
+n=13: near-block 1/(n-1)=0.08333, construction n/Phi6=0.08280
+   a=2 (m=25, target 2/25=0.08000): min-M@V=25 = 1/12=0.08333  depth-2-achievable:False  <construction:False
+   a=3 (m=37, target 3/37=0.08108): min-M@V=37 = 1/12=0.08333  depth-3-achievable:False  <construction:False
+   a=4 (m=49, target 4/49=0.08163): min-M@V=49 = 1/12=0.08333  depth-4-achievable:False  <construction:False
+   a=5 (m=61, target 5/61=0.08197): min-M@V=61 = 7/82=0.08537  depth-5-achievable:False  <construction:False
+   a=6 (m=73, target 6/73=0.08219): min-M@V=73 = 13/138=0.09420  depth-6-achievable:False  <construction:False
+   a=7 (m=85, target 7/85=0.08235): min-M@V=85 = 11/120=0.09167  depth-7-achievable:False  <construction:False
+  => smallest achievable depth a(13) = None; spread beats construction: False
+n=14: near-block 1/(n-1)=0.07692, construction n/Phi6=0.07650
+   a=2 (m=27, target 2/27=0.07407): min-M@V=27 = 1/13=0.07692  depth-2-achievable:False  <construction:False
+   a=3 (m=40, target 3/40=0.07500): min-M@V=40 = 1/13=0.07692  depth-3-achievable:False  <construction:False
+   a=4 (m=53, target 4/53=0.07547): min-M@V=53 = 1/13=0.07692  depth-4-achievable:False  <construction:False
+   a=5 (m=66, target 5/66=0.07576): min-M@V=66 = 8/97=0.08247  depth-5-achievable:False  <construction:False
+   a=6 (m=79, target 6/79=0.07595): min-M@V=79 = 12/145=0.08276  depth-6-achievable:False  <construction:False
