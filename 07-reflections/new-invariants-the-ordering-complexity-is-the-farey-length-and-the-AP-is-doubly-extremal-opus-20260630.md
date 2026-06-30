@@ -1,8 +1,15 @@
 # Wielding definitions — new LRC invariants from the observer: the ORDERING COMPLEXITY O(S) = #distinct circular orderings of {0,s_i t} as t sweeps (the LRC analogue of the tournament's Hamiltonian-path count) equals the FAREY-SEQUENCE LENGTH Φ(n−1)=Σ_{d≤n−1}φ(d) (totient summatory, A002088) for the AP — exact n=4..10, dilation-invariant, and EVEN where the tournament's H is ODD (Rédei); the AP MAXIMIZES O (it has every difference, hence every crossing), so the AP is DOUBLY EXTREMAL — minimal M (the covering-min, the hardest observer) AND maximal O (the richest ordering) — and the LONELINESS INTEGRAL L(S)=∫M_c dc gives the translation-averaged loneliness (~0.28, floor 1/n at c=0)
 
 *opus-2026-06-30. Owner: look for other creative measures or invariants; definitions are your power, wield
-them. Defined three from the observer; the ordering complexity turned out to be the Farey length, and it makes
-the AP doubly extremal (min-M, max-O). The LRC's combinatorial backbone is the Farey sequence.*
+them. Defined three from the observer; the ordering complexity turned out to be the Farey length. The LRC's
+combinatorial backbone is the Farey sequence.*
+
+> **⚠ CORRECTION (opus, same day):** the claim below that the AP *maximizes* `O` / is "doubly extremal" is
+> **WRONG**. The AP **MINIMIZES** `O` (smallest max speed ⇒ smallest Farey ⇒ `O=Φ(n−1)` is the min; verified:
+> min `O` over 4-subsets of `[1..8]` is at the AP). The AP is doubly **MINIMAL** (min `M`, min `O`) — the
+> tightest *and* simplest config, matching the **transitive** tournament (min `H=1`). The Farey-length result
+> (`O=Φ(n−1)`), the loneliness integral, and the other definitions stand. See
+> `the-ordering-complexity-hamiltonian-path-bridge-…-doubly-minimal` for the corrected statement and the bridge.
 
 ## Definition 1: ordering complexity O(S) = the Farey length
 > **`O(S)`** := the number of distinct circular orderings of the `n` points `{0, s_1 t, …, s_{n−1} t}` as
@@ -20,16 +27,15 @@ Computed `O(AP_n)` vs `Φ(n−1) = Σ_{d≤n−1} φ(d)` (totient summatory, the
 > the Farey sequence; the tournament's are `H = I(Ω,2)`. (Parity dictionary: LRC orderings even, tournament
 > paths odd — the `+1` is the tournament's irreducible, the pairing is the LRC's time-reversal symmetry.)
 
-## The AP is DOUBLY extremal (min M, max O)
-- The AP MAXIMIZES `O`: it contains **every** difference `1,…,n−2`, hence **every** Farey crossing, so
-  `O(AP_n) = Φ(n−1)` is the maximum (any other speed set has fewer distinct differences ⇒ fewer crossings ⇒
-  `O ≤ Φ(n−1)`).
+## The AP is DOUBLY MINIMAL (min M, min O) — [corrected]
+- The AP MINIMIZES `O`: it has the **smallest max speed `n−1`**, hence the smallest Farey `F_{n−1}`, hence
+  `O(AP_n) = Φ(n−1)` is the **minimum** (any other `(n−1)`-set of distinct positive integers has max speed
+  `≥ n−1` ⇒ a larger Farey ⇒ `O ≥ Φ(n−1)`; verified min over 4-subsets of `[1..8]`). *(Earlier draft said
+  "maximizes" — wrong, see the banner.)*
 - The AP MINIMIZES `M`: it is the global extremal `M = 1/n` (the covering-min, the hardest observer).
-> So **the AP is doubly extremal — minimal loneliness `M` and maximal ordering richness `O`** — the tightest
-> *and* the richest configuration. The two new invariants pin the AP from opposite directions: `M` says it's
-> the worst to escape, `O` says it's the most permutationally complex. (Tournament echo: the transitive
-> tournament is `H=1` minimal *and* the linear order maximal — the AP ↔ transitive, both the "ordered"
-> extremal.)
+> So **the AP is doubly MINIMAL — minimal loneliness `M` and minimal ordering complexity `O`** — the tightest
+> AND simplest configuration. (Tournament echo: the **transitive** tournament is `H=1` minimal — the AP ↔
+> transitive, both the simplest/"ordered" config.)
 
 ## Definition 2: the loneliness integral L(S) = ∫ M_c dc
 > **`L(S)`** := `∫_0^1 M_c(S) dc` — the **translation-averaged loneliness** over all observer positions `c`
@@ -63,11 +69,11 @@ concentrated at the single point `c=0`.
 
 ## Status
 - **Computed/verified (opus):** `O(AP_n) = Φ(n−1)` (Farey length, A002088) n=4..10; dilation-invariant; even
-  (vs odd `H`); AP maximizes `O`; `L(AP_n) ≈ 0.28` (mean loneliness, floor `1/n` at `c=0`).
+  (vs odd `H`); **AP MINIMIZES `O`** [corrected]; `L(AP_n) ≈ 0.28` (mean loneliness, floor `1/n` at `c=0`).
 - **Defined (wielded):** ordering complexity `O`, loneliness integral `L`, apex reading `A`, witness-Farey
   spectrum `W`, dilation class `[S]` — reading the Farey/Stern-Brocot backbone of the LRC.
-- **New facts:** the AP is doubly extremal (min `M`, max `O`); the LRC difficulty localizes at `c=0`; `O` is
-  the Farey length and the LRC analogue of `H`.
+- **New facts:** the AP is doubly **MINIMAL** (min `M`, min `O`) ↔ transitive (min `H`); the LRC difficulty
+  localizes at `c=0`; `O` is the Farey length and the LRC analogue of `H`.
 
 Related: PINNED-…apex-prime (the apex reading), observer-transformations-dilation (dilation invariance),
 the-observer-on-the-tournament-side (`H` = Ham paths), SECOND-CORRECTION-…AP-scaled (min `M` = AP·p),
