@@ -1,6 +1,6 @@
 # The witness sum has a ζ(2) heartbeat
 
-*klein-2026-06-30-S43. A reflection on HYP-3743.*
+*klein-2026-06-30-S43. A reflection on HYP-3746.*
 
 We set out to sum the lonely-runner witness hierarchy across primes — to combine the one-prime lower bounds
 `M ≥ (r+1)/p` into a global statement. The sum turned out to be a *Farey object*. The dense core `{1,…,m}`

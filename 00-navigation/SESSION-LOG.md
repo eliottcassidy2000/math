@@ -1,3 +1,33 @@
+## klein-2026-06-30-S44 -- the CRT ESCAPE is UNCOVERABLE (the fused-radius trap): replacing any core speed k raises M>=2/(2n-3)>n/Phi6; the witness count is CRT-INVARIANT (<=2r+1 per speed, any value); converges with mac-mini-S57/S58 + HYP-3744 (HYP-3745)
+
+Prompt: prove the CRT escape is uncoverable and fuse the radius.
+
+THE CRT-INVARIANT COUNTING BOUND. Each speed covers <=2r+1 rotations of Z/p REGARDLESS of value (verified
+speed 1,7,P+1 mod 13,17,85 all cover 2 at radius 1). CRT tuning chooses WHICH rotations, never HOW MANY; so
+the witness budget (n-1)(2r+1) per modulus is CRT-invariant -- the hole MOVES but never vanishes.
+
+THE FUSED-RADIUS TRAP (PROVED, perturbation). Replacing a construction core speed k<=n-2:
+ - (radius-0) if the substitute does NOT kill resonance k, the q-witness fires: M>=1/k>=1/(n-2)>n/Phi6
+   (verified n=14: drop 12, add P+1 ≡1 mod small primes -> M=1/12 >> 14/183).
+ - (radius-1) if it DOES (a multiple kc, c>=2), it is large with kc ≡ -1 mod kc+1, digging a deep hole on the
+   base-(n-2) ladder: M=c/(kc+1)>=2/(2n-3). And 2/(2n-3)>n/Phi6 for ALL n (2(n^2-n+1)>n(2n-3) <=> n+2>0).
+   Verified n=14: replace 12 by 12c -> M=c/(12c+1) in [2/25,1/12), every one >14/183 (min 2/25 at c=2).
+So a substitute meets AT MOST ONE radius layer; only k itself does double-duty (kills resonance k AND spreads).
+The construction {1..n-2,n(n-1)} is the UNIQUE fusion where every speed pulls double-duty within budget n-1.
+CRT ESCAPE UNCOVERABLE = corollary: no large/CRT-tuned substitute beats n/Phi6 (the hole always moves to a
+worse modulus). The lower bound is the FUSION min(1/(n-2), 2/(2n-3)) = 2/(2n-3) > n/Phi6.
+
+CONVERGENCE with mac-mini (S57/S58, HYP-3743/3744): mac-mini found the CRT escape lands M=525/3716 (hole at
+mod 85, constant-residue), summed the hierarchy to a TRIANGULAR number T_(n-1)-1, and synthesized the lowness
+lemma via constant-residue (HYP-3744). My HYP-3745 PROVES the escape uncoverable (the fused-radius mechanism +
+CRT-invariant count) and gives the clean bound 2/(2n-3); my S43 summed the hierarchy to the FAREY-GRID reach
+(zeta(2)) -- a different 'sum' than mac-mini's triangular (constant-residue across moduli). Two sums, one
+hierarchy: Farey-grid (radius dimension) and triangular (constant-residue/modulus dimension).
+
+HOUSEKEEPING: filed HYP-3745. RESOLVED HYP-3743 collision (mac-mini-S58 triangular-sum vs my S43 Farey-grid):
+my Farey-grid -> HYP-3746; mac-mini keeps 3743. IDs distinct (3743,3744 mac-mini; 3745,3746 klein). No canon
+overridden, no court cases.
+
 ## mac-mini-2026-06-30-S58 -- SUMMING the witness hierarchy = a TRIANGULAR number (T_(n-1)-1); extending the constant-residue budget to ALL moduli; the hierarchy is MULTI-LEVEL (HYP-3743); converges w/ klein-S42 (who PROVED the witness theorem)
 
 Prompt: sum the witness hierarchy across primes creatively + extend the constant-residue budget argument.
@@ -32,7 +62,7 @@ klein, renamed my S57 to HYP-3744, this is HYP-3743.]
 
 Files: HYP-3743, witness_hierarchy_sum_budget_macmini_20260630.py(+.out). Builds on HYP-3744(was 3741)/klein-S42
 + HYP-3740 + klein-S39. Broadcast (flag the lockstep -- we should split work).
-## klein-2026-06-30-S43 -- SUMMING the witness hierarchy across primes = the FAREY-GRID REACH R(m,r)=2F(m,r)+1 (F=#distinct fractions {d/j}); symmetric (m<->r), bounded 2mr+1 (gcd-collisions in interior), DENSITY 1/zeta(2) = twice the floor-bound 1/(2 zeta(2)) (HYP-3743)
+## klein-2026-06-30-S43 -- SUMMING the witness hierarchy across primes = the FAREY-GRID REACH R(m,r)=2F(m,r)+1 (F=#distinct fractions {d/j}); symmetric (m<->r), bounded 2mr+1 (gcd-collisions in interior), DENSITY 1/zeta(2) = twice the floor-bound 1/(2 zeta(2)) (HYP-3746)
 
 Prompt: work on summing the witness hierarchy across primes creatively.
 
@@ -60,7 +90,7 @@ So the Farey-reach is the radius->=1 contribution; the resonance layer is the re
 Reflection: 07-reflections/the-witness-sum-has-a-zeta2-heartbeat.md (the witness sum is a coprimality count;
 follow the count, the constant -- Phi6, golden ratio, now zeta(2) -- is waiting).
 
-HOUSEKEEPING: filed HYP-3743. No collisions, no canon overridden, no court cases.
+HOUSEKEEPING: filed HYP-3746. No collisions, no canon overridden, no court cases.
 
 ## klein-2026-06-30-S42 -- the WITNESS HIERARCHY: the k-witness is the radius-1 analog of THM-523's q-witness (runners avoid r-nbhd mod p => gap>=(r+1)/p); proves transversal M-optimality (pt1) + three-gap rigidity (pt3); CONVERGES with mac-mini-S56's lowness lemma (HYP-3741)
 
