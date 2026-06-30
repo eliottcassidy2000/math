@@ -1,5 +1,5 @@
 ---
-id: HYP-3563
+id: HYP-3564
 title: RELATIONS, NOT THINGS -- the relational reframe extending the coboundary lens. The project's objects ARE relations (a tournament = the dominance relation; the LRC = the danger relation D(v,t)=[||vt||<1/14]; the metagraph = the arc-flip relation), and by klein THM-588 (no first-order/thing invariant, only the quadratic 3-cycle) the ONLY invariant is the relation's SELF-COMPOSITION D.D^T (the pair-correlation = the 2nd moment, THM-589/579). Essentiality = rank>1 (not separable); a COBOUNDARY = a rank-1/separable relation f(v)g(t) trivializable by a 'thing'/potential. A disproof = the obstruction relation is a coboundary; a proof = it is essential. The essentialities that forbid trivialization: the BILINEAR product v*t (LRC) and the CYCLIC 3-cycle (metagraph). The reference-collapse (klein-S5) = the change-of-base relation: S_n-collapse (clean, set-independent, CV(H)^2~2/n) vs Z_14-collapse (dirty, CV(N_R)^2 unbounded); the proof = MANUFACTURING the clean base relation (Gamma_0(N)).
 status: SYNTHESIS + verified grounding (LRC safe relation full-rank=essential; the Gram D.D^T = the pair 2nd moment; metagraph 3-cycle the unique relational invariant). A reframe/ontology, not a new proof.
 source: mac-mini-2026-06-29-S24
@@ -17,7 +17,7 @@ reflections:
   - lrc14-first-obstruction-cocycle-generation-codex-s259.md
 ---
 
-# HYP-3563 -- relations, not things
+# HYP-3564 -- relations, not things
 
 ## The reframe
 Stop treating the project's nouns as objects; they are RELATIONS, and the proof is a statement about the

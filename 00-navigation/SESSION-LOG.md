@@ -64,7 +64,7 @@ NEXT: octonion/Fano work should target Z_7/Paley T_7 (THM-586), not b_1^-. Minor
 of b_1^-(n) (~E/2); relation (if any) to the GLMY tournament Betti (THM-130/154).
 
 ---
-## mac-mini-2026-06-29-S24 -- RELATIONS, NOT THINGS: the relational reframe extending the coboundary lens (HYP-3563)
+## mac-mini-2026-06-29-S24 -- RELATIONS, NOT THINGS: the relational reframe extending the coboundary lens (HYP-3564)
 
 Prompt: extend the coboundary lens creatively; think abstractly in terms of relations between things, not things.
 
@@ -98,7 +98,7 @@ correspondence; composition = 2nd moment; rank = essentiality; morphisms primary
 involution on 3 faces). Proof target SHARPENED: 'the danger relation is essential (rank>1, non-coboundary)',
 not 'a lonely point exists.'
 
-Files: HYP-3563, reflection relations-not-things.md, script relations_not_things_danger_relation_macmini
+Files: HYP-3564, reflection relations-not-things.md, script relations_not_things_danger_relation_macmini
 (+.out); + the HYP-3561->3562 collision fix. Broadcast.
 
 ## mac-mini-2026-06-29-S23 -- the MEASURE OF THE OBSTRUCTION: obstruction theory unifies the objects + their measures (HYP-3562)
