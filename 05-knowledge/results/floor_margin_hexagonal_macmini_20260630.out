@@ -1,0 +1,18 @@
+margin(n) = 2/(2n-1) - 1/n = 1/(n(2n-1)); the denominator's many faces:
+
+    n  n(2n-1)    H_n  T_(2n-1)  C(2n,2)  dim so(2n)  Phi6(2n)=2d+1
+    4       28     28        28       28          28             57
+    7       91     91        91       91          91            183
+    8      120    120       120      120         120            241
+   14      378    378       378      378         378            757
+
+  all-equal & doubling-bridge hold for n=2..15: True
+
+  Sum_n 1/(n(2n-1)) = 1.3862942  vs  2 ln 2 = 1.3862944 = ln 4 = 1.3862944
+
+  Beta-moment: margin = 2*B(2n-1,2) = 2*int_0^1 x^(2n-2)(1-x) dx:
+    n=7: 1/(n(2n-1))=0.01098901  2B(2n-1,2)=0.01098901  match=True
+    n=14: 1/(n(2n-1))=0.00264550  2B(2n-1,2)=0.00264550  match=True
+
+  LRC14 hinge: T_13 = 91 = margin-denom(7) = 7*13 = (Phi6(14)-1)/2;  14 = 2*7 (apex doubled).
+    7*13=91, (Phi6(14)-1)/2=91, T_13=91

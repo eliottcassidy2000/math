@@ -1,3 +1,36 @@
+## mac-mini-2026-06-30-S48 -- the hexagon's revenge: the tighter floor margin = 1/(n(2n-1)) = 1/H_n (hexagonal) = 1/T_(2n-1) = 1/C(2n,2) (tournament arcs!) = 1/dim so(2n) = 2B(2n-1,2); Sum = ln 4; doubling Phi_6(2n)=2*denom(n)+1 (HYP-3726, reflection)
+
+Prompt: leverage the tighter floor margin creatively; find a cheeky out-of-the-box connection.
+
+THE CHEEKY CHAIN (all verified exact, n=2..15). The mediant covering value sits above the floor by
+margin(n) = 2/(2n-1) - 1/n = 1/(n(2n-1)), and n(2n-1) is SIMULTANEOUSLY:
+  H_n (n-th HEXAGONAL number) = T_(2n-1) ((2n-1)-th TRIANGULAR) = C(2n,2) (arcs of K_(2n) = TOURNAMENT side)
+  = dim so(2n) (even orthogonal Lie algebra / skew 2nx2n) = 2*B(2n-1,2) (a Beta moment 2*int_0^1 x^(2n-2)(1-x)dx).
+So S47 killed the hexagonal COVERING-MIN, but the hexagon comes back woven into the FLOOR MARGIN -- and it is
+the same number as the triangle T_(2n-1), the tournament-arc count, the so(2n) dimension, and a Beta moment.
+
+THE SUM: Sum_n 1/(n(2n-1)) = 2 int_0^1 dx/(1+x) = 2 ln 2 = ln 4. Per-level the margin lives on the TRIANGLE
+T_(2n-1); the TOTAL is ln(det Z^2) = the SQUARE Cartan (det 4), the +1-cousin of the A2/Eisenstein lattice
+(det 3). Triangle vs square, per-level vs total -- the "god tridiagonalized" duality, again.
+
+DOUBLING BRIDGE (a new Mode C, n->2n): Phi_6(2n) = 2*[margin-denom at n] + 1 = 2 n(2n-1) + 1. The convergent
+modulus at 2n = twice the margin denom at n, plus 1 (klein's Phi_6=2T+1, T=T_(2n-1)). LRC14 HINGE: Phi_6(14)
+=2 T_13+1, T_13=91=margin-denom(7)=(Phi_6(14)-1)/2; 14=2*7 = the apex-7 (genus-1 boundary, forbidden H=7,
+Fano) DOUBLED.
+
+MEANING: S47's lesson sharpened -- the hexagon/triangle/tournament geometry IS everywhere, it was just attached
+to the wrong QUANTITY. It doesn't describe the covering-min (the mediant does, mod 2n-1); it describes the
+FLOOR MARGIN -- the room the floor has to breathe. LEVERAGE leads (conjectural, next sessions): (1) tournament
+embedding LRC_n -> K_(2n), margin=1/arcs => bridge to H(T)/OCF (the two mandates compute the same number);
+(2) summable safe-measure (Sum=ln4<inf => Borel-Cantelli/union-bound, ties HYP-3615/THM-579); (3) Beta-moment
+LP (margin=2B(2n-1,2) = explicit slack for a Beurling-Selberg floor bound).
+
+Caveat: this is the MEDIANT margin (covering-min=mediant proved only n=7,8; HYP-3725). The form 1/(n(2n-1)) is
+the gap (mediant - floor) unconditionally, and the identity chain is exact.
+
+Files: HYP-3726, reflection the-hexagons-revenge-floor-margin-is-one-over-a-hexagonal-number.md, script
+floor_margin_hexagonal_macmini_20260630.py(+.out). Builds on S47 (HYP-3725) + klein HYP-3723. Broadcast.
+
 ## mac-mini-2026-06-30-S47 -- !! REFUTED: the convergent n/Phi_6 is NOT the covering-min for n>=7 (exact at n=7,8,9) !! The recent arc's premise is false (HYP-3725, MISTAKE-087, CASE filed)
 
 Prompt: "think past the projective plane and keep pushing abstractly..." -- doing so computationally
