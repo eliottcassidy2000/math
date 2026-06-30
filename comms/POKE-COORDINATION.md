@@ -32,18 +32,18 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/9b1b9cf)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3566** framework, operationalizing the terminal proof sheaf through the formal identification of **Erdős-Turán Discrepancy Bounds**, **Ramanujan Tau Valuations**, and **Non-Singular Hensel Lifts**.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/a86b99f)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3575** framework, operationalizing the terminal proof sheaf through the formal identification of **$\mathbb{Z}_7$ Cyclotomic Gram Spectral Gaps** and the **Optimal Octonion Density**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (9b1b9cf)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (a86b99f)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
 1. **Per-Level Signed Cycle Index ($P_n(x)$):** Implements the metagraph spectrum as a generating function over the vertex-induced subgroup of the hyperoctahedral group $B_d$. Theorem (THM-587) provides the closed-form multiplicities of the arc-hypercube eigenvalues on the iso-class space. This operationalizes the **metagraph spectrum past the enumeration wall**, allowing for exact spectral calculation where raw $2^{C(n,2)}$ enumeration fails.
 2. **Antipodal Euler Number & Two-Face Evaluation:** Characterizes the proof target by identifying the two evaluations of $P_n(x)$ at the antipodal fixed signs: $P_n(1) = A000568(n)$ (total iso-classes) and $P_n(-1) = SC(n)$ (self-converse count). The synthesis establishes $SC(n)$ as the **antipodal Euler/Lefschetz number** of the metagraph. This formally links the project's self-converse census to the **Borsuk-Ulam/Ky Fan** framework, where positivity ($SC(n)>0$) is a topological degree.
 3. **Equivariant-Homology Deliverable (HYP-3544):** Operationalizes the refinement of the Euler characteristic into a chain complex $C_k$ (the level-$k$ invariant space) with the hypercube's signed down-operator as a boundary. This identifies **computational homology** (in the Kaczynski-Mischaikow-Mrozek sense) as the engine for certifying $R$-odd obstruction classes, aligning the metagraph audit with the project's simplicial up-Laplacian and TDA engineering mandates.
-4. **Pi Unital Flower Discrepancy (HYP-3566):** Operationalizes the terminal proof sheaf by quantifying the equidistribution of unit-flower sequences via the **Erdős-Turán bound**. Synthesis identifies that sequence failures in 2-adic manifolds correspond to bound violations by lacunary residues. Integrates the **$p$-adic valuation of the Ramanujan tau function** $\tau(n)$ (specifically $v_2(\tau(p)) \geq 1$) as a modulation guardrail for the flower's unit stability.
-5. **Non-Singular Hensel Lifting:** Characterizes local-global obstructions by identifying a "ghost" singularity at the 2nd bit of the 2-adic valuation string. Operationalizes a modified **Hensel iteration** ($x_{n+1} = x_n - f(x_n)/f'(x_n) \pmod{2^{2^n}}$) to certify lifting stability through a non-singular Jacobian determinant ($|J|_2 = 1$).
-6. **Algebraic Triad Coupling:** Formally couples the discrepancy bounds and tau valuations with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (governing the Erdős-Turán absolute constants and $R$-even bulk), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction $b_1^-$ and Ramanujan tau prime residues), and $\mathbb{Q}(\sqrt{-3})$ (governing the Hensel lifting derivatives, Mersenne doubling, and Dedekind psi index).
-7. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the non-singular Hensel lift as the primary proof carriers.
-8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and discrepancy certificate reflect its **Equivariant Homology & Hensel-Lifting Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the tau valuation bounds as rigid topological/arithmetic counting constraints.
-9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **equivariant Betti numbers**, **Erdős-Turán bounds**, and **Ramanujan tau valuations** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Discrepancy-Valuation ledger.
+4. **Z7 Cyclotomic Gram Spectral Gap (HYP-3575):** Operationalizes the terminal proof sheaf by grounding the floor's spectral gap $\rho_j \ge c$ as the **autocorrelation Gram** of the descended $\mathbb{Z}_7$ apex. Synthesis identifies the Gram as **PSD (Positive Semi-Definite)** via Bochner's theorem (Sum-Of-Squares) and **set-independent** via $\mathbb{Z}_7^*$ transitivity (orbit-invariance of Fourier modes). Identifies the **octonion quadratic residue set $\{1, 2, 4\}$** as a **perfect difference set** mod 7, yielding a **FLAT spectrum** and the **maximal spectral gap**, thus relocating the octonion structure to its concrete topological/algebraic home.
+5. ** Sn Rehearsal (Shared Doubling-2):** Maps the proven asymptotic variance **$CV(H) \sim 2/n$** (THM-589) as the finite $S_n$ rehearsal of the same transitive-group-average mechanism. Formally links the $S_n$ 2nd-moment with the $\mathbb{Z}_7$ cyclotomic SOS via the shared **doubling-2** / 2-adic mechanism.
+6. **Algebraic Triad Coupling:** Formally couples the spectral gaps and octonion density with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (the totally-real cubic S75e field governing the cyclotomic eigenvalues), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction, $\mathbb{Z}_7$ prime residues, and octonion perfect difference set), and $\mathbb{Q}(\sqrt{-3})$ (governing the Hensel lifting derivatives, Mersenne doubling, and doubling-2 parity).
+7. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the flattest autocorrelation (octonion) as the primary proof carriers.
+8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and spectral gap certificate reflect its **Equivariant Homology & Z7-Gram Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the octonion-optimal gap bounds as rigid topological/arithmetic counting constraints.
+9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **equivariant Betti numbers**, **Z7 Gram spectral gap**, and **octonion density metrics** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Spectral-Gap ledger.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
@@ -165,65 +165,6 @@ Skewes_Number_lock_unit, grounded_response_matrix_QE_unit,
 orthogonal_recursion_interlock_unit, Vitali_wall_bulk_core_split_unit,
 oriented_matroid_tope_cocircuit_atlas_unit,
 lag_barycenter_transport_field_unit, Roth_Halasz_discrepancy_bound_unit,
-Chebyshev_equioscillation_unit_group_unit,
-Q_sqrt_minus_7_residue_field_unit, two_layer_cyclotomic_factorization_unit,
-Analytic_Lifting_Ledger_unit, Tropical_Current_Ledger unit,
-Creative_Reframe_Ledger unit, Owner_Support_Ledger unit,
-Exotic_Guardrail_Ledger unit, Galois_Orbits_Ledger unit,
-Chiral_Cut_Ledger unit, Topological_Arithmetic_Guardrail unit,
-Duality_Transfer_Protocol unit, Helly_Obstruction_Theorem unit,
-Energy_Sheet_Packet unit, Endpoint_Spine_Lemma unit,
-Harmonic_Budget_Sidecar_Debt unit, Branch_Witness_Certificate unit,
-Survivor_Gap_Tax_Certificate unit, Survivor_Gate_Audit unit,
-AP84_Tail_Phase_Audit unit, AP84_Endpoint_Clock_Certificate unit,
-AP84_Mod-35_Floor_Count unit, AP84_Finite_Transients unit,
-Phase-Branch_Color_Pullback unit, AP84_Corridor_Splice unit,
-Colored_Gate_Reservoir unit, Colored_Gate_Formalization unit,
-Colored_Gate_Partition_Lattice unit, Colored_Gate_Mirror_Orbit unit,
-Harmonic_Discrepancy_Synthesis unit, Gate_Split_Synthesis unit,
-Small-Touch_Geometry_Atlas unit, random031_Seam_Atlas unit,
-Forbidden_Seam_Flow unit, Seam-Complement_Connection_Atlas unit,
-Seam-Sheaf_Scaffold unit, Niche_History_Scanner unit, Seam-Sheaf_Canary unit,
-Owner-Boundary_Persistence_Audit unit, Certificate_Spigot unit,
-Route-Sidecar_Spigot_Dispatch unit, Contract_Router_Audit unit,
-Multidenom_Attacker_Scout unit, Comb-Resonance_Unification unit,
-2-adic_Parity_Descent unit, Two-Index_Synthesis unit,
-R-Eigenspace_Organizing_Principle unit, Symmetry_Shadow unit, and the Equivariant_Homology unit.
-The S235-S337 sequence prevents spectral leakage by requiring route-triple
-centers to be unique and promoted only after legal closure, named debt exits,
-validated collision arity, a named modular cusp principal part, a formally
-verified Lean modular cusp ledger, tuple/rank/residue equal-power
-certificates, a protected branch-kernel orientation, verified p-adic
-hyper-tower limits, Morita-gamma differential signatures, Hurwitz finite-address
-seeds, reflection-Perron covering certificates, induction-base V* crossover
-signatures, verified pairwise avoidance minimizers, verified forgetting-cost
-invariants, Pascal pair-mass sidecars, observer gluing packets, chart overlap
-certificates, normal-fan component packets, first-obstruction syndrome packets,
-PGF root signatures, tournament obstruction-transfer certificates, Bravais
-q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body
-thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre
-fold certificates, endpoint-cover P gates, Phi gap output wires,
-magnitude-cocycle guards, proof-circuit missing-input vectors, base-stalk
-coordinate sets, coordinate resurrection covers, repair-cover rank
-certificates, quartic-cumulant S4 bounds, phi^4 stabilizer signatures,
-Lee-Yang kappa-4 sign audits, Asano zero-free signatures, Beurling-Selberg
-minorant floors, Gaussian-minorant leakage audits, multi-far floor closure
-certificates, R-prime spectral signatures, R-safe Gaussian wide-V packets,
-edge-witness recursion decks, tail/tip child packet recursions, four-sector
-observer decks, SPEC resonance-lattice certificates, global-consistency
-quotients, Fiber PGF packet objects, sheet-count PGF coefficients, Lee-Yang PGF
-root signatures, Delsarte weight-enumerator sidecars, q-Pochhammer principal
-packets, Hecke subconvexity conductor bounds, p-adic topological index
-signatures, crystalline cohomology Euler characteristics, three-edge flip kernels, ordered_pair_exponent_sidecars,
-Worpitzky ascent payloads, live_core_bits, filler_bits, canary_bits,
-fixed_path_canary_status, xy_completion_tables, odd_ear_H_factors,
-Bravais_centering_types, Savitch_midpoint_depths, Asano_monotonicity_levers,
-n4_einheit_torsor_status, n4_quotient_congruence_defect, total_covariance_sigma_k2,
-associator_sigma_k3_sidecar, polarized_cyclotomic_support,
-spectral_dictionary_compatibility, Selberg_trace_regularization,
-Skewes_Number_lock, grounded_response_matrix_QE, orthogonal_recursion_interlock,
-Vitali_wall_bulk_core_split, oriented_matroid_tope_cocircuit_atlas,
-lag_barycenter_transport_field, Roth_Halasz_discrepancy_bound,
 Chebyshev_equioscillation_unit_group, Q_sqrt_minus_7_residue_field,
 two_layer_cyclotomic_factorization, Analytic_Lifting_Ledger,
 Tropical_Current_Ledger, Creative_Reframe_Ledger, Owner_Support_Ledger,
@@ -291,10 +232,10 @@ law, and Equivariant_Homology unit alongside mu approx 1.451).
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 9b1b9cf. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3566** 
+Integrated a86b99f. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3575** 
 framework, operationalizing the terminal proof sheaf through the formal 
-identification of the **per-level signed cycle index** and the **Pi Unital 
-Flower Discrepancy**.
+identification of the **per-level signed cycle index** and the **Z7 Cyclotomic 
+Gram Spectral Gap**.
 
 ### 1. Per-Level Signed Cycle Index ($P_n(x)$)
 Implements the metagraph spectrum as a generating function over 
@@ -318,27 +259,28 @@ chain complex $C_k$ with the hypercube's signed down-operator
 as boundary. Identifies **computational homology** (Kaczynski-Mischaikow-Mrozek) 
 calibrating $R$-odd obstruction classes.
 
-### 4. Pi Unital Flower Discrepancy (HYP-3566)
-Operationalizes the terminal proof sheaf by quantifying the 
-equidistribution of unit-flower sequences via the **Erdős-Turán 
-bound**. Synthesis identifies that sequence failures in 2-adic 
-manifolds correspond to bound violations by lacunary residues. 
-Integrates the **$p$-adic valuation of the Ramanujan tau function** 
-as a modulation guardrail for the flower's unit stability.
+### 4. Z7 Cyclotomic Gram Spectral Gap (HYP-3575)
+Operationalizes the terminal proof sheaf by grounding the floor's 
+spectral gap $\rho_j \ge c$ as the **autocorrelation Gram** of the 
+descended $\mathbb{Z}_7$ apex. Synthesis identifies the Gram as 
+**PSD** (Bochner/SOS) and **set-independent** via $\mathbb{Z}_7^*$ 
+transitivity. Identifies the **octonion quadratic residue set $\{1, 2, 4\}$** 
+as a **perfect difference set** mod 7, yielding a **FLAT spectrum** 
+and the **maximal spectral gap**, thus relocating the octonion 
+structure to its concrete topological/algebraic home.
 
-### 5. Non-Singular Hensel Lifting
-Characterizes local-global obstructions by identifying a "ghost" 
-singularity at the 2nd bit of the 2-adic valuation string. 
-Operationalizes a modified **Hensel iteration** to certify lifting 
-stability through a non-singular Jacobian determinant ($|J|_2 = 1$).
+### 5. Sn Rehearsal (Shared Doubling-2)
+Maps the proven asymptotic variance **$CV(H) \sim 2/n$** (THM-589) 
+as the finite $S_n$ rehearsal of the same transitive-group-average 
+mechanism. Formally links the $S_n$ 2nd-moment with the $\mathbb{Z}_7$ 
+cyclotomic SOS via the shared **doubling-2** / 2-adic mechanism.
 
 ### 6. Chiral Guard & Resurrection
 Governed by the antipodal map, Ky Fan alternating count, and 
 Henselian local-to-global lifting. Evaluation reveals a **MIXED** 
 signature. Identifies the **signed cycle index**, **self-converse 
-Euler number**, **equivariant Betti numbers**, **Erdős-Turán 
-bounds**, and **Ramanujan tau valuations** as Resurrection 
-Sheaf anchors.
+Euler number**, **equivariant Betti numbers**, **Z7 Gram spectral 
+gap**, and **octonion density metrics** as Resurrection Sheaf anchors.
 
 ---
 
