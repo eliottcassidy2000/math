@@ -32,18 +32,18 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/bca13cc)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3565** framework, operationalizing the terminal proof sheaf through the formal identification of **Obstruction Dimension $b_1^-$** and the PROVED structural split of the cycle space.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/9b1b9cf)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3566** framework, operationalizing the terminal proof sheaf through the formal identification of **Erdős-Turán Discrepancy Bounds**, **Ramanujan Tau Valuations**, and **Non-Singular Hensel Lifts**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (bca13cc)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (9b1b9cf)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
 1. **Per-Level Signed Cycle Index ($P_n(x)$):** Implements the metagraph spectrum as a generating function over the vertex-induced subgroup of the hyperoctahedral group $B_d$. Theorem (THM-587) provides the closed-form multiplicities of the arc-hypercube eigenvalues on the iso-class space. This operationalizes the **metagraph spectrum past the enumeration wall**, allowing for exact spectral calculation where raw $2^{C(n,2)}$ enumeration fails.
 2. **Antipodal Euler Number & Two-Face Evaluation:** Characterizes the proof target by identifying the two evaluations of $P_n(x)$ at the antipodal fixed signs: $P_n(1) = A000568(n)$ (total iso-classes) and $P_n(-1) = SC(n)$ (self-converse count). The synthesis establishes $SC(n)$ as the **antipodal Euler/Lefschetz number** of the metagraph. This formally links the project's self-converse census to the **Borsuk-Ulam/Ky Fan** framework, where positivity ($SC(n)>0$) is a topological degree.
 3. **Equivariant-Homology Deliverable (HYP-3544):** Operationalizes the refinement of the Euler characteristic into a chain complex $C_k$ (the level-$k$ invariant space) with the hypercube's signed down-operator as a boundary. This identifies **computational homology** (in the Kaczynski-Mischaikow-Mrozek sense) as the engine for certifying $R$-odd obstruction classes, aligning the metagraph audit with the project's simplicial up-Laplacian and TDA engineering mandates.
-4. **Obstruction Dimension $b_1^-$ (HYP-3565):** Operationalizes the terminal proof sheaf by identifying the dimension of the $R$-odd obstruction space $b_1^-(n) = \{0, 1, 7, 119, 1772\}$. While NO elementary closed form exists, the synthesis provides the **Lefschetz form**, the **cycle-index/Burnside form**, and the **asymptotic** ($\sim \binom{n}{2} 2^{\binom{n}{2}-2}/n!$). Proves the structural fact **$b_1^-/b_1 \to 1/2$**: the complement involution $R$ splits the metagraph cycle space evenly, establishing the topological obstruction as robust and non-vanishing.
-5. **Structural Task Reorganization:** Eliott cedes **HYP-3563** (Relational turns) to the `klein` cluster. His primary focus for the obstruction-dimension program is renumbered to **HYP-3564**.
-6. **Algebraic Triad Coupling:** Formally couples the obstruction dimension and cycle-space split with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (governing the $R$-even bulk $b_1^+$ and total Betti $b_1$), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction $b_1^-$, the alternating sum $SC(n)$, and the imaginary Gauss sum $\sqrt{n}$), and $\mathbb{Q}(\sqrt{-3})$ (governing the Mersenne doubling, hypercube $Q_d$-edges, and the Dedekind psi covering index).
-7. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the evenly-split cycle space as the primary proof carriers.
-8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and obstruction dimension certificate reflect its **Equivariant Homology & Burnside-Form Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the evenly-split cycle-space bounds as rigid topological/arithmetic counting constraints.
-9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **equivariant Betti numbers**, and **obstruction dimension sequences** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Obstruction-Dimension ledger.
+4. **Pi Unital Flower Discrepancy (HYP-3566):** Operationalizes the terminal proof sheaf by quantifying the equidistribution of unit-flower sequences via the **Erdős-Turán bound**. Synthesis identifies that sequence failures in 2-adic manifolds correspond to bound violations by lacunary residues. Integrates the **$p$-adic valuation of the Ramanujan tau function** $\tau(n)$ (specifically $v_2(\tau(p)) \geq 1$) as a modulation guardrail for the flower's unit stability.
+5. **Non-Singular Hensel Lifting:** Characterizes local-global obstructions by identifying a "ghost" singularity at the 2nd bit of the 2-adic valuation string. Operationalizes a modified **Hensel iteration** ($x_{n+1} = x_n - f(x_n)/f'(x_n) \pmod{2^{2^n}}$) to certify lifting stability through a non-singular Jacobian determinant ($|J|_2 = 1$).
+6. **Algebraic Triad Coupling:** Formally couples the discrepancy bounds and tau valuations with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (governing the Erdős-Turán absolute constants and $R$-even bulk), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction $b_1^-$ and Ramanujan tau prime residues), and $\mathbb{Q}(\sqrt{-3})$ (governing the Hensel lifting derivatives, Mersenne doubling, and Dedekind psi index).
+7. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the non-singular Hensel lift as the primary proof carriers.
+8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and discrepancy certificate reflect its **Equivariant Homology & Hensel-Lifting Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the tau valuation bounds as rigid topological/arithmetic counting constraints.
+9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **equivariant Betti numbers**, **Erdős-Turán bounds**, and **Ramanujan tau valuations** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Discrepancy-Valuation ledger.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
@@ -291,10 +291,10 @@ law, and Equivariant_Homology unit alongside mu approx 1.451).
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated bca13cc. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3565** 
+Integrated 9b1b9cf. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3566** 
 framework, operationalizing the terminal proof sheaf through the formal 
-identification of the **per-level signed cycle index** and the **Obstruction 
-Dimension $b_1^-$**.
+identification of the **per-level signed cycle index** and the **Pi Unital 
+Flower Discrepancy**.
 
 ### 1. Per-Level Signed Cycle Index ($P_n(x)$)
 Implements the metagraph spectrum as a generating function over 
@@ -318,26 +318,27 @@ chain complex $C_k$ with the hypercube's signed down-operator
 as boundary. Identifies **computational homology** (Kaczynski-Mischaikow-Mrozek) 
 calibrating $R$-odd obstruction classes.
 
-### 4. Obstruction Dimension $b_1^-$ (HYP-3565)
-Operationalizes the terminal proof sheaf by identifying the 
-dimension of the $R$-odd obstruction space $b_1^-(n) = \{0, 1, 7, 119, 1772\}$. 
-Synthesis provides the **Lefschetz form**, the **cycle-index/Burnside 
-form**, and the **asymptotic** ($\sim \binom{n}{2} 2^{\binom{n}{2}-2}/n!$). 
-Proves the structural fact **$b_1^-/b_1 \to 1/2$**: the complement 
-involution $R$ splits the metagraph cycle space evenly, establishing 
-the topological obstruction as robust and non-vanishing.
+### 4. Pi Unital Flower Discrepancy (HYP-3566)
+Operationalizes the terminal proof sheaf by quantifying the 
+equidistribution of unit-flower sequences via the **Erdős-Turán 
+bound**. Synthesis identifies that sequence failures in 2-adic 
+manifolds correspond to bound violations by lacunary residues. 
+Integrates the **$p$-adic valuation of the Ramanujan tau function** 
+as a modulation guardrail for the flower's unit stability.
 
-### 5. Task Reorganization
-Eliott cedes **HYP-3563** (Relational turns) to the `klein` cluster. 
-His primary focus for the obstruction-dimension program is 
-renumbered to **HYP-3564**.
+### 5. Non-Singular Hensel Lifting
+Characterizes local-global obstructions by identifying a "ghost" 
+singularity at the 2nd bit of the 2-adic valuation string. 
+Operationalizes a modified **Hensel iteration** to certify lifting 
+stability through a non-singular Jacobian determinant ($|J|_2 = 1$).
 
 ### 6. Chiral Guard & Resurrection
 Governed by the antipodal map, Ky Fan alternating count, and 
 Henselian local-to-global lifting. Evaluation reveals a **MIXED** 
 signature. Identifies the **signed cycle index**, **self-converse 
-Euler number**, **equivariant Betti numbers**, and **obstruction 
-dimension sequences** as Resurrection Sheaf anchors.
+Euler number**, **equivariant Betti numbers**, **Erdős-Turán 
+bounds**, and **Ramanujan tau valuations** as Resurrection 
+Sheaf anchors.
 
 ---
 
