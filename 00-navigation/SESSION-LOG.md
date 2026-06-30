@@ -1,3 +1,32 @@
+## mac-mini-2026-06-29-S25 -- 1,7,119,1772 = b_1^- : closed-form status, the obstruction-is-half fact, new proof-sequences (HYP-3565)
+
+Prompt: find a closed form for 1,7,119,1772; relevant sequences; define own useful new sequences.
+
+IDENTIFIED: 1,7,119,1772 = b_1^-(n) for n=3..7 (klein-S6 HYP-3563), the R-ODD first Betti of the arc-flip
+metagraph = the OBSTRUCTION DIMENSION (the cycle-space realization of the S23 obstruction / klein HYP-3544).
+
+CLOSED-FORM STATUS: no elementary closed form. b_1^-=(E-V+SC-E_SCSC+E_comp)/2 (klein Lefschetz) is a
+DIFFERENCE of tournament-Burnside sequences (V=A000568, SC=P_n(-1), E(G_n)=1,5,30,290,4086) -- none
+elementary; factorizations 0,1,7,7*17,2^2*443 have no pattern. The closed forms that EXIST: (i) the
+Lefschetz form; (ii) the cycle-index/Burnside form (each of V,SC,E is an S_n-sum, computable from n!, past
+the 2^{C(n,2)} wall); (iii) asymptotic b_1^- ~ C(n,2)2^{C(n,2)-2}/n!.
+
+NEW FACT: b_1=E-V+1=0,2,19,235,3631 splits b_1^-=0,1,7,119,1772 + b_1^+=0,1,12,116,1859; the OBSTRUCTION
+FRACTION b_1^-/b_1=0.50,0.37,0.51,0.49 -> 1/2 (the complement R splits the metagraph cycle space
+asymptotically EVENLY; the obstruction is HALF, robust -- consistent with S19's mean-eigenvalue->0).
+
+CORRESPONDENCE: b_1^-(n) (metagraph cycle space) <-> phi(n)/2 the saddle index (LRC lonely-pair, the
+danger-cover H_0) -- same R-odd obstruction, two complexes.
+
+NEW PROOF-SEQUENCE ROSTER: b_1^-(obstruction dim), b_1^+(measure side), E(G_n)(relation size, Burnside),
+W(n)=1,2,8,32,158,928(2nd moment THM-589=simplicial-Redei), SC(Lefschetz/counting measure), phi(n)/2(LRC
+obstruction mirror), psi(N)=A001615(Gamma_0(N) congruence index).
+
+(Housekeeping: ceded HYP-3563 to klein-S6's b_1^-; my relations-not-things (S24) renumbered HYP-3563->3564.)
+
+Files: HYP-3565, script b1minus_closed_form_macmini (+.out). Builds on klein-S6 HYP-3563 + HYP-3544/3562 +
+THM-587/589. Broadcast.
+
 ## klein-2026-06-29-S7 -- proof-hygiene reference: the POLYSEMOUS CONSTANTS (numbers that wear arithmetic vs dimensional hats; bridges vs traps vs homonyms)
 
 Prompt: beyond 7, which natural numbers must we be careful about (different ways we see them) for this

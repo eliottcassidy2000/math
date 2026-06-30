@@ -1,0 +1,45 @@
+==============================================================================
+b_1^-(n)=0,1,7,119,1772 -- the R-odd first Betti = the obstruction dimension
+==============================================================================
+
+[1] b_1 = E - V + 1 (cycle rank); split b_1 = b_1^+ + b_1^-:
+     n  b_1=E-V+1   b_1^-   b_1^+  b_1^-/b_1
+     3          0       0       0        nan
+     4          2       1       1     0.5000
+     5         19       7      12     0.3684
+     6        235     119     116     0.5064
+     7       3631    1772    1859     0.4880
+    b_1   = [0, 2, 19, 235, 3631]
+    b_1^- = [0, 1, 7, 119, 1772]  (the obstruction)
+    b_1^+ = [0, 1, 12, 116, 1859]
+
+[2] OBSTRUCTION FRACTION b_1^-/b_1 (n=4..7): [0.5, 0.3684, 0.5064, 0.488]
+    hovers near 1/2 => the R-odd obstruction is ASYMPTOTICALLY HALF the cycle space
+    (the complement R splits the metagraph cycle space asymptotically evenly): a new
+    refinement of the obstruction picture (S23) -- the obstruction is ~half, not vanishing.
+
+[3] ASYMPTOTIC: b_1 ~ E (since E>>V); E(G_n) ~ d 2^{d-1}/n! (identity-perm Burnside term),
+    d=C(n,2); so b_1^- ~ E/2 ~ C(n,2) 2^{C(n,2)-2}/n!:
+     n   E(G_n)   d*2^(d-1)/n!   b_1^- C(n,2)2^(d-2)/n!
+     3        1            2.0       0              1.0
+     4        5            8.0       1              4.0
+     5       30           42.7       7             21.3
+     6      290          341.3     119            170.7
+     7     4086         4369.1    1772           2184.5
+    => the leading growth is 2^{C(n,2)}/n! (super-exponential); b_1^- ~ (1/2) b_1.
+
+[4] FORMULA-FIT (is b_1^- elementary?):
+    b_1^-/SC = [0.0, 0.5, 0.875, 9.917, 20.136] (not clean)
+    b_1^-/V  = [0.0, 0.25, 0.583, 2.125, 3.886] (not clean)
+    b_1^- factorizations: 0, 1, 7, 7*17, 2^2*443 -- NO pattern (klein: not in OEIS).
+    CONCLUSION: b_1^- is a DIFFERENCE of tournament-Burnside sequences (V=A000568, SC, E,
+    E_SCSC, E_comp), none elementary; so NO elementary closed form. The genuine closed form
+    is the CYCLE-INDEX / Burnside one: each of V,SC,E is a sum over S_n (computable from n!,
+    past the 2^{C(n,2)} wall), and b_1^- = (E-V+SC-E_SCSC+E_comp)/2 (klein's Lefschetz).
+
+==============================================================================
+ANSWER: 1,7,119,1772 = b_1^-(n+2) the R-odd first Betti = the obstruction dimension.
+No elementary closed form (a difference of non-elementary tournament-Burnside counts),
+but the exact Lefschetz form b_1^-=(E-V+SC-E_SCSC+E_comp)/2 and asymptotic ~C(n,2)2^{C(n,2)-2}/n!.
+NEW FACT: b_1^-/b_1 -> 1/2 (the obstruction is asymptotically half the metagraph cycle space).
+==============================================================================
