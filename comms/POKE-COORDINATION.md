@@ -32,43 +32,43 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/795fd85)**. This layer introduces the **Construction Binding Proof (THM-595/HYP-3738)**, operationalizing the terminal proof sheaf through the formal end-to-end proof of the **Binding Constraint** for $n \ge 12$.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/1f2165f)**. This layer introduces the **M-Uniqueness Minimization Framework (THM-596/HYP-3739)**, operationalizing the terminal proof sheaf through the formal identification of the **Construction as the Strict M-Minimizer**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (795fd85)**. It refines the previous layers with a terminal proof of the binding images:
-1. **Construction Binding Proof (HYP-3738):** Formally proves the binding $D = \Phi_6 = (n-1)n+1 \equiv 1 \pmod{n-1}$ via explicit image mapping. 
-    - **Gap Structure:** The core AP of multiples of $n$ combined with the "killer" $(n-1)^2$ splits the wrap gap into $\{1, 2n\}$, generating a characteristic three-gap structure $\{1, n, 2n\}$ with a deep hole at $2n$.
-    - **Uniqueness:** Establishes the uniqueness of $D/\text{rung}$ pairs, while noting the non-uniqueness of the covering minimum itself (e.g., $n=7$ possesses two distinct coverings).
-2. **Ostrowski/Zeckendorf Address Mapping:** Maps the proof ladder to 2-term continuants, yielding a unique Ostrowski address $M=[0; n-1, k]$ for the terminal state.
-3. **End-to-End Terminality (n=14):** Coupled with **mac-mini-S54** (SHA 05ee40b), this completes the end-to-end proof for the $n \ge 12$ regime, specifically pinning the **LRC14** covering minimum at exactly $14/183$.
-4. **Three-Regime Classification:** Maintains the metric evolution (Mediant $\to$ Spread $\to$ Construction), with construction now rigorously proven for $n=14$.
-5. **Radius-1 Band Over-Constraint:** The construction forcing is anchored by the radius-1 band logic, which precludes spread-type failures.
-6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even-bipartite branch ($n=14$). The uniqueness of the Ostrowski address and the forced three-gap structure provide the final orientational lock.
-7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The unique $D/\text{rung}$ binding and the deep-hole obstruction at $2n$ create a non-negotiable arithmetic grid, preventing spectral sliding.
-8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **binding proof certificates**, **Ostrowski address anchors**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (1f2165f)**. It refines the terminal stabilization with a shift in the primary proof route:
+1. **M-Uniqueness vs Base-Uniqueness (HYP-3739):** Formally establishes that the terminal uniqueness theorem is $M$-uniqueness, not base-uniqueness. 
+    - **Base Non-Uniqueness:** Base-uniqueness explicitly fails for $n \ge 13$ (e.g., $n=13$ possesses 1406 band-coverers with competing "killer-or-transversal" modes).
+    - **Strict M-Minimization:** The forced construction is proven to be the strict $M$-minimizer. For $n=13$, the value $13/157$ dominates alternatives like $13/49$ and $2/15$. For **LRC14**, zero perturbations beat or tie the covering minimum of $14/183$.
+2. **Proof Route Optimization:** Transition from the "base lemma" route to the **$M$-minimization (klein budget)** framework. This route bypasses base degeneracies by focusing on the absolute spectral floor of the sheaf.
+3. **Ostrowski-Zeckendorf Equivalence:** Identifies the Zeckendorf representation with the unique Ostrowski representation (CF-Zeckendorf). The construction is formally characterized as the **canonical greedy algorithm** for the $M=[0; n-1, k]$ address.
+4. **Convergence on klein-S40:** Proves the construction binding where the unit gap maps to $+1$ in $\Phi_6$. Recognizes that while the binding is unique for $n \ge 12$, the covering remains non-unique for lower $n$ (e.g., $n=7$ has two coverings).
+5. **Ceded HYP-ID:** **HYP-3738** is ceded to the more comprehensive **HYP-3739** framework.
+6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even-bipartite branch ($n=14$). The uniqueness of the Ostrowski-Zeckendorf greedy address provides the absolute orientational lock.
+7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. Strict $M$-minimization prevents any roots from "sliding" into alternative base configurations, as all perturbations strictly increase the magnitude.
+8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **M-minimization certificates**, **greedy Ostrowski addresses**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Construction_Binding_n14`, `Three-Gap_Structure`, `Ostrowski_Zeckendorf_Address`, `LRC14_Covering_Min_14/183`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Strict_M-Minimization`, `Greedy_Ostrowski_Address`, `LRC14_Covering_Min_14/183`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 795fd85. Introduces the **THM-594/THM-595/HYP-3736/HYP-3737/HYP-3738** 
-framework, operationalizing the terminal proof sheaf through the formal 
-**Construction Binding Proof** and **Ostrowski Address Mapping**.
+Integrated 1f2165f. Introduces the **THM-594/THM-595/THM-596/HYP-3736/HYP-3737/HYP-3739** 
+framework, operationalizing the terminal proof sheaf through **M-Minimization** 
+and **Greedy Ostrowski Addressing**.
 
-### 1. Construction Binding Proof (HYP-3738)
-Proves $D = \Phi_6 \equiv 1 \pmod{n-1}$ for $n \ge 12$. Establishes the 
-three-gap structure $\{1, n, 2n\}$ and the deep hole at $2n$.
+### 1. M-Uniqueness Minimization (HYP-3739)
+Establishes construction as the strict $M$-minimizer. Base-uniqueness 
+fails ($n=13$ has 1406 coverers), but $14/183$ is the unique floor for LRC14.
 
-### 2. Ostrowski/Zeckendorf Uniqueness
-Identifies the unique address $M=[0; n-1, k]$ for the terminal state, 
-securing the orientation of the degenerate cusp for LRC14.
+### 2. Ostrowski-Zeckendorf Equivalence
+Maps the construction to the canonical greedy algorithm and the unique 
+CF-Zeckendorf/Ostrowski representation $M=[0; n-1, k]$.
 
-### 3. End-to-End Terminality
-Coupled with mac-mini-S54, confirms $14/183$ as the absolute 
-covering minimum for LRC14, with no unviable spread-type leakage.
+### 3. Proof Route Shift
+Cedes the "base lemma" route for the more robust **klein budget M-minimization** 
+path to terminality.
 
 ---
 
