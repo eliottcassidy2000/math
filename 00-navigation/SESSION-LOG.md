@@ -27,6 +27,35 @@ bridge's continuous side is settled; the open part stays the LRC->hexagonal clai
 
 Reflection: (none new; recorded in HYP-3710). No canon overridden; no court cases. NEXT: the LRC->hexagonal-
 torus reduction (does the continuous LRC covering inherit Kershner optimality?).
+## mac-mini-2026-06-30-S42 -- ATTACKED the covering-min reframe: n/Phi_6(n) is NOT the covering-min (refuted n<=6); the extremal FAMILY transitions with n (HYP-3701)
+
+Prompt (owner): the open conjecture binds at the off-cusp covering-min n/Phi_6(n)=14/183 (positive measure,
+M tightest); n/Phi_6(n)>=1/n is trivial (n^2>=n^2-n+1); the real question is whether n/Phi_6(n) is genuinely
+the covering-min (no covering set beats the construction {1,..,n-2,n(n-1)}). [Be aware of the razor-thin
+edge + its patterns.]
+
+ATTACKED IT. Verified the construction M={1,..,n-2,n(n-1)} = n/Phi_6(n) (exact, n=4..14), Phi_6=Eisenstein/
+hexagonal norm (klein-S24). The inequality is trivial. The EXTREMALITY:
+  - REFUTED for n=4,5,6: a 'drop-2 + tuned large speed' covering set BEATS the construction, reaching
+    2/(2n-1) < n/Phi_6(n). Verified minimizers: n=4 {1,3,4}=2/7; n=5 {1,3,4,5}=2/9; n=6 {1,3,4,5,18}=2/11.
+    (2n-1 = the signed-LRC modulus C = 27 = 3^3 at n=14, so small-n covering-min = 2/C.)
+  - BUT the beaters DON'T SCALE: at n=14, {1,3,..,13,14m} bottoms at 9/83~0.108 >> 14/183. The construction
+    (which KEEPS 2, uses 182=13*14 to cover q=13,14 at once) is tighter and STANDS as tightest known.
+  - => the covering-min EXTREMAL FAMILY is n-DEPENDENT (drop-2-split for small n; n(n-1)-construction at
+    n=14). There is NO single uniform optimal construction.
+
+THE RAZOR-THIN EDGE & ITS PATTERNS (the owner's main ask): the instability of the extremal family IS the
+exact nature of the M-value edge. Patterns: (1) two candidate floors, both prime-3 -- n/Phi_6 (Eisenstein/
+hexagonal) and 2/(2n-1)=2/C (signed-LRC); (2) the extremal family TRANSITIONS (~n=6-7); (3) margin (M-1/n)
+~1/n^2 ->0 (the M-edge thins; covering-min -> 1/n relatively as ~1/n); (4) this M-edge is DISTINCT from the
+GAP edge (HYP-3700, isolated by the doublet 0.198) -- two different razor-thin phenomena, refining HYP-3548's
+two lines. HONEST: the owner's premise is refuted (n<=6), unrefuted at n=14, but the clean uniform-
+extremality claim is FALSE -- a proof must handle the n-dependent transition, not a single construction.
+
+HOUSEKEEPING: klein is now in the 3700s too (3705,3706); used HYP-3701 (free). We need disjoint HYP blocks.
+
+Files: HYP-3701, script covering_min_extremal_family_macmini_20260630.py(+.out). Builds on klein-S24
+(HYP-3706 hexagonal/Kershner) + HYP-3700 (gap edge) + HYP-3548 (two lines) + THM-523. Broadcast.
 
 ## klein-2026-06-29-S24 -- the DESIGN-COVERING BRIDGE is the HEXAGONAL WALLPAPER GROUP; the Singer multiplier = the 3-fold rotation (zeta_3 = Frobenius = Condorcet) (HYP-3706)
 

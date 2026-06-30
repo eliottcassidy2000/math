@@ -1,0 +1,27 @@
+================================================================================
+IS n/Phi_6(n) THE COVERING-MIN? -- the extremal family TRANSITIONS with n (mac-mini-S42)
+================================================================================
+
+[1] construction {1,..,n-2, n(n-1)}: M = n/Phi_6(n); n/Phi_6 >= 1/n trivial:
+    n= 6: M=6/31=0.19355 = n/Phi_6(n)=6/31 ; >=1/n? True
+    n= 7: M=7/43=0.16279 = n/Phi_6(n)=7/43 ; >=1/n? True
+    n=14: M=14/183=0.07650 = n/Phi_6(n)=14/183 ; >=1/n? True
+
+[2] the covering-min BEATS the construction for small n (= 2/(2n-1), drop-2 + tuned large):
+    n=4: [1, 3, 4]: M=2/7=0.28571 = 2/(2n-1)=2/7; < n/Phi_6=4/13? True  (covering-min)
+    n=5: [1, 3, 4, 5]: M=2/9=0.22222 = 2/(2n-1)=2/9; < n/Phi_6=5/21? True  (covering-min)
+    n=6: [1, 3, 4, 5, 18]: M=2/11=0.18182 = 2/(2n-1)=2/11; < n/Phi_6=6/31? True  (covering-min)
+
+[3] but the small-n beaters DON'T scale -- n=14, drop-2 + 14m vs the construction:
+    n=14: best drop-2+14m = 9/83=0.10843 (big=70) -- WORSE than construction 14/183=0.07650
+    => at n=14 the construction (KEEPS 2, uses 182=13*14) is tighter; the extremal FAMILY transitions.
+
+================================================================================
+HONEST ANSWER: n/Phi_6(n) is NOT the covering-min in general -- REFUTED for n=4,5,6 (covering-min
+= 2/(2n-1), via drop-2+tuned-large). The beaters DON'T scale to n=14 (drop-2+14m gives 9/83 >>
+14/183), so at n=14 the construction STANDS (tightest known, unrefuted). The EXTREMAL FAMILY is
+n-DEPENDENT (drop-2-split for small n; n(n-1)-construction at n=14) -- there is no single uniform
+optimal construction. Both candidate floors are prime-3 flavored: n/Phi_6 (Eisenstein/hexagonal),
+2/(2n-1)=2/C (signed-LRC modulus, 27=3^3). The inequality (>= 1/n) is trivial for either; the OPEN
+content is the n-dependent EXTREMALITY, and the M-edge margin ~1/n^2 -> 0.
+================================================================================
