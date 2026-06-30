@@ -1,3 +1,39 @@
+## mac-mini-2026-06-30-S49 -- PRIMITIVITY resolves the odd/even covering-min back-and-forth (opus's 1/n is the non-primitive/q-witness EASY case; THM-523 canon reduces LRC to PRIMITIVE covering sets where M>1/n = the hard MARGIN); + the Ramanujan/Paley frame + the 3 leverage ways (HYP-3727)
+
+Prompt: work the 3 leverage ways + the odd-n & even-n covering-min back-and-forth + consider 'a regular graph
+is Ramanujan iff its Ihara zeta satisfies an RH analogue.' Concurrently opus claimed covering-min=1/n (even
+block), klein/opus refuted the construction.
+
+THE PRIMITIVITY RESOLUTION (centerpiece). The FULL covering-min (any covering set, incl. non-primitive) =
+1/n for ALL n -- via the scaled block g*{1..n-1}, g = smallest prime factor of n (verified exact n=7..15).
+This is the q-witness/EASY case in disguise: g*{1..n-1}/g = {1..n-1} omits a multiple of n, so its M=1/n is
+the q=n witness. opus's even block 2*{1..n-1} is the g=2 special case (even n). PARITY ONLY CHOOSES g (even:
+g=2; odd prime: g=n; odd composite: g=p_min); the value is 1/n for every n. BUT THM-523 (CANON, PROVED)
+reduces LRC to PRIMITIVE covering sets, where M>1/n STRICTLY (n=7->2/13, n=8->2/15, n=9->4/33, n=14~7/89;
+HYP-2566 uniform looseness) = the genuinely HARD case carrying the MARGIN. KEY STEP: a non-primitive covering
+S (gcd g) has M(S)=M(S/g) with S/g primitive but non-covering => the q-witness already gives >=1/n; so only
+PRIMITIVE covering sets are hard (=THM-523). So opus's 1/n (non-primitive) is the easy case; the hard
+primitive covering-min is >1/n -- opus & my S47 are both right about DIFFERENT quantities.
+
+THE RAMANUJAN/PALEY FRAME (owner's 'consider'). The primitive covering-min lives on a circulant mod m (n=7:13,
+n=8:15, n=9:33). M is governed by the speed character sums R-hat(j)=sum_v e^(2pi i v j/m) (HYP-3704). The
+criterion 'Ramanujan iff Ihara-zeta RH' = the spectral-gap / Weil sqrt-bound on these sums. 2n-1 is a PALEY
+vertex count: n=7 -> Paley GRAPH on 13 (1 mod 4) = RAMANUJAN (max|nontriv eig|=2.303<=2sqrt5=4.472, verified);
+n=14 -> 2n-1=27=GF(3^3) (3 mod 4) -> Paley TOURNAMENT on 27 (|nonprincipal eig|~sqrt27/2, the Weil bound).
+Construction's AP = Gauss/Dirichlet sums (Weil-tight, structured). opus's metazeta (Ihara zeta of metagraph
+G_n) = the tournament-side instance of the same zeta machinery.
+
+THE 3 LEVERAGE WAYS (mediant margin 1/(n(2n-1))=1/dim so(2n), HYP-3726): (1) TOURNAMENT EMBEDDING -> the Paley
+tournament on 2n-1 verts (the H(T)/OCF bridge; 27=GF(3^3) at n=14); (2) BOREL-CANTELLI (Sum margins=ln4<inf,
+finite safe-measure budget); (3) BETA-MOMENT LP (margin=2B(2n-1,2), a Beurling-Selberg test function).
+
+Caveat: the mediant margin 1/(n(2n-1)) is exact only at n=7,8; at n=14 the primitive covering-min ~7/89
+(THM-523), margin ~9/1246 not 1/378. Leverage targets the mediant family; HYP-2566 (uniform looseness) is open.
+
+Files: HYP-3727, script primitivity_parity_ramanujan_macmini_20260630.py(+.out). Reconciles opus-S1 +
+mac-mini-S47 + THM-523 (canon). No court case (no canon overridden; opus's even-block fact is TRUE but about
+the easy/non-primitive case). Broadcast w/ opus reconciliation.
+
 ## mac-mini-2026-06-30-S48 -- the hexagon's revenge: the tighter floor margin = 1/(n(2n-1)) = 1/H_n (hexagonal) = 1/T_(2n-1) = 1/C(2n,2) (tournament arcs!) = 1/dim so(2n) = 2B(2n-1,2); Sum = ln 4; doubling Phi_6(2n)=2*denom(n)+1 (HYP-3726, reflection)
 
 Prompt: leverage the tighter floor margin creatively; find a cheeky out-of-the-box connection.

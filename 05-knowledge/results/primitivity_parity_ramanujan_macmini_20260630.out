@@ -1,0 +1,35 @@
+==============================================================================
+PRIMITIVITY RESOLVES THE ODD/EVEN BACK-AND-FORTH (THM-523 is canon)
+==============================================================================
+
+FULL covering-min = 1/n for ALL n via scaled block g*{1..n-1}, g = smallest prime factor:
+  n= 7: g= 7  M=  1/7=0.14286 (=1/n: True)  covers:True  gcd=7 NON-primitive  [the q=7-witness in disguise: g*{1..6}/g = {1..6} omits mult of 7]
+  n= 8: g= 2  M=  1/8=0.12500 (=1/n: True)  covers:True  gcd=2 NON-primitive  [the q=8-witness in disguise: g*{1..7}/g = {1..7} omits mult of 8]
+  n= 9: g= 3  M=  1/9=0.11111 (=1/n: True)  covers:True  gcd=3 NON-primitive  [the q=9-witness in disguise: g*{1..8}/g = {1..8} omits mult of 9]
+  n=10: g= 2  M= 1/10=0.10000 (=1/n: True)  covers:True  gcd=2 NON-primitive  [the q=10-witness in disguise: g*{1..9}/g = {1..9} omits mult of 10]
+  n=11: g=11  M= 1/11=0.09091 (=1/n: True)  covers:True  gcd=11 NON-primitive  [the q=11-witness in disguise: g*{1..10}/g = {1..10} omits mult of 11]
+  n=12: g= 2  M= 1/12=0.08333 (=1/n: True)  covers:True  gcd=2 NON-primitive  [the q=12-witness in disguise: g*{1..11}/g = {1..11} omits mult of 12]
+  n=14: g= 2  M= 1/14=0.07143 (=1/n: True)  covers:True  gcd=2 NON-primitive  [the q=14-witness in disguise: g*{1..13}/g = {1..13} omits mult of 14]
+  n=15: g= 3  M= 1/15=0.06667 (=1/n: True)  covers:True  gcd=3 NON-primitive  [the q=15-witness in disguise: g*{1..14}/g = {1..14} omits mult of 15]
+
+  => parity only chooses g (even n: g=2 = opus's even block; odd prime: g=n; odd composite: g=p_min).
+     The value is 1/n for ALL n. This is the EASY/q-witness case. THM-523 EXCLUDES it (non-primitive).
+
+PRIMITIVE covering-min (the HARD case, THM-523, M>1/n strictly):
+  n=7: primitive [1, 2, 5, 6, 7, 8]  M=2/13=0.15385 > 1/n=0.14286  (margin 0.01099)
+  n=8: primitive [1, 4, 5, 6, 7, 11, 16]  M=2/15=0.13333 > 1/n=0.12500  (margin 0.00833)
+  n=9: primitive [1, 3, 4, 5, 7, 11, 18, 32]  M=4/33=0.12121 > 1/n=0.11111  (margin 0.01010)
+  n=14: THM-523 search min ~ 7/89 = 0.0787 > 1/14 = 0.0714 (HYP-2566: uniform looseness).
+
+==============================================================================
+RAMANUJAN / PALEY FRAME (the spectral criterion)
+==============================================================================
+
+  n=7 mediant modulus 2n-1=13 (prime, 1 mod 4): Paley GRAPH on 13 is 6-regular, eigenvalues 6, (-1+-sqrt13)/2; max|nontrivial|=2.303 <= 2sqrt(k-1)=4.472  => RAMANUJAN.
+  n=14 mediant modulus 2n-1=27=GF(3^3) (3 mod 4): Paley TOURNAMENT on 27 vertices; non-principal
+        |eigenvalue| ~ sqrt(27)/2=2.598 = the Weil/Ramanujan sqrt bound.
+
+  FRAME: the primitive covering-min lives on a circulant mod m; M is governed by the speed
+  character sums; the Ihara-RH / Ramanujan / Weil sqrt-bound is the spectral-gap criterion that
+  controls the floor. The construction's AP = Gauss/Dirichlet sums (Weil-tight). opus's metazeta
+  (Ihara zeta of the metagraph G_n) is the tournament-side instance of the same zeta machinery.
