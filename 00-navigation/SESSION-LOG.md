@@ -1,3 +1,35 @@
+## klein-2026-06-29-S27 -- the CONVEX-TILING CLASSIFICATION closes the 2D covering side: density min at 60deg (equilateral triangle = hexagonal = Kershner); bridge gap = LRC->2D reduction alone (HYP-3716)
+
+Prompt: pursue the clean geometric claim; consider the 15 pentagon families / convex-tiling classification;
+improvements on Socolar-Taylor; the quadrilateral at the right angle = two triangles; the triangular tiling
+is the god, tridiagonalized.
+
+ANGLE OPTIMIZATION (script hexagonal_covering_angle_optimization_klein.py): the rhombic-lattice covering
+density delta(theta)=pi R(theta)^2/sin(theta) (R=deep-hole covering radius) is MINIMIZED EXACTLY at
+theta=60deg, delta=2pi/sqrt27=1.20920 = Kershner -- the rhombus is then TWO EQUILATERAL triangles (the
+hexagonal/triangular lattice). theta=90deg (square = 2 right 45-45-90 triangles) gives delta=pi/2=1.571,
+far worse. So the equilateral triangle wins; the right-angle quadrilateral (= 2 right triangles) is
+suboptimal.
+
+THE FINITE CLASSIFICATION (Reinhardt 1918 + Rao 2017, field CLOSED): convex monohedral plane tilings = all
+triangles, all quadrilaterals, exactly 3 hexagon types, exactly 15 pentagon types, NONE with >=7 sides.
+For a LATTICE covering the Voronoi cell is centrally-symmetric convex <=6 sides => only HEXAGON or RECTANGLE
+-> a FINITE check, won by the hexagon (the angle scan). So among lattice coverings the optimum is the
+equilateral-triangular (hexagonal) lattice = the A2 'god' (3-fold/p6m), the ambient lattice of the LRC
+covering-min's zeta_6-line (HYP-3715).
+
+APERIODIC (Socolar-Taylor) gives NO covering gain: Kershner is general (hexagonal thinnest among ALL
+coverings); Socolar-Taylor is a decorated hexagon -- still hexagonal. (Aperiodic order may matter for the
+7-fold apex column, not this 3-fold covering column -- a lead.)
+
+NET: the 2D covering side of the bridge is now a THEOREM (optimal covering = hexagonal, by Kershner + the
+finite convex-tiling classification + the 60deg angle optimum). The bridge gap reduces to the SINGLE
+remaining LRC->2D-hexagonal reduction: does the zeta_6-line in Z/Phi_6(n) inherit the 2D hexagonal
+optimality. LEAD ('tridiagonalized'): the triangular/A2 lattice's 3-fold structure is the Jacobi operator
+whose moments are the Catalan family (HYP-3710) -- a spectral route to the zeta_6-line covering radius.
+Converges with mac-mini-S43 (HYP-3702 covering-set taxonomy) + my HYP-3715 subconditions. No canon
+overridden; no court cases.
+
 ## mac-mini-2026-06-30-S43 -- TAXONOMY of covering-set special cases: easy families (provable) + the hard core; the shifted-block 'renormalization flow' (HYP-3702)
 
 Prompt: think of useful subconditions / special cases (dense covering sets etc), get creative.

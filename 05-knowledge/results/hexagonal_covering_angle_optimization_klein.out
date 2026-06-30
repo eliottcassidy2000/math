@@ -1,0 +1,35 @@
+================================================================================
+ Rhombic-lattice COVERING DENSITY vs rhombus angle theta (unit basis vectors)
+================================================================================
+   theta cov.radius R  area=sin density pi R^2/area  cell = 2 triangles
+     50d      0.55134   0.76604             1.24661   2 isoceles
+     55d      0.56177   0.81915             1.21034   2 isoceles
+     60d      0.57735   0.86603             1.20920   2 EQUILATERAL (optimal)
+     65d      0.59093   0.90631             1.21046   2 isoceles
+     70d      0.60904   0.93969             1.24009   2 isoceles
+     75d      0.62910   0.96593             1.28720   2 isoceles
+     80d      0.65188   0.98481             1.35562   2 isoceles
+     85d      0.67785   0.99619             1.44901   2 isoceles
+     90d      0.70711   1.00000             1.57080   2 right (45-45-90)
+
+ MIN density at theta = 60 deg, delta = 1.20920  (Kershner 2pi/sqrt27 = 1.20920)
+ square (90 deg) density = 1.57080  (= pi/2 = 1.57080); hexagon WINS.
+
+================================================================================
+ THE FINITE CLASSIFICATION (Reinhardt 1918 + Rao 2017) makes the covering search FINITE
+================================================================================
+ Convex polygons that monohedrally tile the plane: ALL triangles, ALL quadrilaterals,
+ exactly 3 hexagon types, exactly 15 pentagon types; NONE with >= 7 sides. (Rao 2017 closed it.)
+ For a LATTICE covering the Voronoi cell is CENTRALLY SYMMETRIC + convex with <=6 sides
+  => only the HEXAGON or the RECTANGLE (parallelogram). The angle scan above: hexagon (60deg,
+  rhombus=2 equilateral triangles) beats rectangle/square (90deg, 2 right triangles).
+  So among lattice coverings the optimum is the EQUILATERAL-TRIANGULAR (hexagonal) lattice -- a
+  FINITE check (hexagon vs rectangle), won by the hexagon (Kershner). The triangular lattice = the
+  A2 'god': the 3-fold (tridiagonal/A2) structure, p6m, the zeta_6-line's ambient lattice (HYP-3715).
+
+================================================================================
+ APERIODIC (Socolar-Taylor) does NOT beat it
+================================================================================
+ Fejes Toth: the hexagonal lattice is the thinnest covering among ALL coverings (not just lattices).
+ The Socolar-Taylor aperiodic monotile is a DECORATED HEXAGON (forces aperiodicity) -- still in the
+ hexagonal family; aperiodicity gives no covering-density gain. So the optimum stays hexagonal/A2.
