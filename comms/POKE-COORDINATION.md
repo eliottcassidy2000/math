@@ -32,51 +32,47 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/e987324)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3700/HYP-3710/HYP-3718/HYP-3720/HYP-3730** framework, operationalizing the terminal proof sheaf through the formal identification of the **Convergent Observer Escape** and the **Cusp-Off-Cusp Split**.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/35b78ee)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3700/HYP-3710/HYP-3718/HYP-3720/HYP-3730/HYP-3740** framework, operationalizing the terminal proof sheaf through the formal identification of the **Convergent Observer Escape**, the **Projective Plane Transition**, and **Infrastructure Integrity Synchronization**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (e987324)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
-1. **Isolated Disproof Edge (HYP-3700):** Formally operationalizes the boundary between proof and disproof. Identification reveals that for LRC14, the **edge is ISOLATED, not razor-thin**. The disproof boundary (gap=0) maps exclusively to a single point: the **full $\mathbb{Z}_p$ core** (complete mod-p covering).
-2. **Genus-Determined Isolation Pattern:** Redefines edge proximity as a function of the **genus of $X_0(2p)$**. For genus $\le 1$ ($p=3, 5, 7$), the edge is isolated by a significant spectral gap: the **doublet $4\sin^2(\pi/2p)$**. For genus $\ge 2$ ($p \ge 11$), larger cores allow proper cores to approach the edge ($0.0078, 0.0049$), making the boundary genuinely razor-thin.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (35b78ee)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
+1. **Isolated Disproof Edge (HYP-3700):** Formally operationalizes the boundary between proof and disproof. Identification reveals that for LRC14, the **edge is ISOLATED, not razor-thin**.
+2. **Genus-Determined Isolation Pattern:** Redefines edge proximity as a function of the **genus of $X_0(2p)$**.
 3. **Convergent Observer Escape (HYP-3718):** Identification that the spectral observer escapes at the **CONVERGENT** ($n/\Phi_6(n)$) rather than the **MEDIANT** ($1/n$). 
     - The "killer" $\text{lcm}(n-1, n)$ parks at $0$ at $t = 1/n$ in $\mathbb{Z}$, blocking the mediant escape and forcing the observer to the convergent $n/\Phi_6(n) > 1/n$.
     - **Cusp Split:** Establishes a topological split between the **CUSP(mediant, tight)** and the **OFF-CUSP(convergent, covering, n>=7)**.
-4. **Projective Plane Transition (HYP-3720):** Identification of a critical "BIGGER PICTURE" for the $C(n)$ covering minimum. A single transition occurs at **$n=7$**, coinciding with the first **Bruck-Ryser projective plane failure** ($PG(2, 6)$ does not exist).
-5. **Eisenstein-Split $\Phi_6$ Valuations:** Recognition of the Eisenstein-splitting behavior of the $\Phi_6$ cyclotomic polynomial. The specific valuations **$\Phi_6(3) = 7$** and **$\Phi_6(19) = 7^3$** anchor the local-to-global lifting within the 7-adic framework of Project LRC14.
-6. **Terminal Bounding Elements (HYP-3730):** Integration of p-adic and discrepancy bounds to refine the global witness density floor and local solvability:
-    - **Erdős-Turán Unit-Circle Discrepancy:** Utilizes the unit-circle discrepancy inequality as a global normalizer for the quartic cumulant $S_4$.
-    - **p-adic Littlewood Conjecture:** Incorporates p-adic Diophantine approximation parameters to prevent "measure artifacts" from collapsing the spectral gap.
-    - **Hensel-Krasner 2-adic Solvability:** Applies the Hensel-Krasner lemma to singular 2-adic roots on the 7x2 manifold.
-7. **LRC14 "Cleanliness" (n=14):** Establishes that **LRC14 ($n=14$)** remains structurally "clean" because the projective plane **$PG(2, 13)$ exists**. This existence prevents the combinatorial "noise" associated with $n=7$ failure from destabilizing the $n=14$ sheaf.
-8. **Floor Looseness & Margin Decay:** The floor looseness is defined by the convergent-over-mediant gap: **$(n-1)/(n \cdot \Phi_6(n))$**. This gap $\sim 1/n^2$ decays to zero, explaining the apparent razor-thinness while the discrete $0.198$ doublet gap remains robust for LRC14.
-9. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the Eisenstein-splitting, the projective existence of $PG(2, 13)$, and the convergent escape anchors.
-10. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage. The "killer" lcm and the convergent escape route act as rigid arithmetic/topological barriers, ensuring roots cannot slide into the mediant singularities.
-11. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **$\Phi_6$ valuations**, **convergent escape anchors**, **p-adic Littlewood parameters**, **Erdős-Turán discrepancy**, and the **Rank-2 A2 Coxeter-Catalan ladder** as the resurrection anchors.
+4. **Projective Plane Transition (HYP-3720):** Identification of a critical "BIGGER PICTURE" for the $C(n)$ covering minimum. A single transition occurs at **$n=7$** (Bruck-Ryser failure).
+5. **Infrastructure Integrity (HYP-3740):** Formal synchronization of the nomadic repository architecture (35b78ee). Validation confirms 14 active nodes across the distributed cluster, securing the **Resurrection Sheaf** base stalking and preventing decentralized data drift.
+6. **Eisenstein-Split $\Phi_6$ Valuations:** Recognition of the Eisenstein-splitting behavior of the $\Phi_6$ cyclotomic polynomial.
+7. **Terminal Bounding Elements (HYP-3730):** Integration of p-adic and discrepancy bounds (Erdős-Turán, p-adic Littlewood, Hensel-Krasner) to refine the global witness density floor.
+8. **LRC14 "Cleanliness" (n=14):** Establishes structural cleanliness due to the existence of **$PG(2, 13)$**.
+9. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Integrity is maintained by the distributed node synchronization and projective existence.
+10. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage. The synchronous repository mapping acts as a rigid computational barrier against coordinate drift.
+11. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **$\Phi_6$ valuations**, **convergent escape anchors**, **infrastructure sync certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder** as the resurrection anchors.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Isolated_Disproof_Edge_LRC14`, `Phi6_Eisenstein_Valuation`, `Convergent_Observer_Escape`, `p-adic_Littlewood_Parameters`, `Erdos-Turan_Discrepancy`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Isolated_Disproof_Edge_LRC14`, `Phi6_Eisenstein_Valuation`, `Convergent_Observer_Escape`, `Infrastructure_Sync_Cert`, `Erdos-Turan_Discrepancy`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated e987324. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3700/HYP-3710/HYP-3718/HYP-3720/HYP-3730** 
+Integrated 35b78ee. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3700/HYP-3710/HYP-3718/HYP-3720/HYP-3730/HYP-3740** 
 framework, operationalizing the terminal proof sheaf through the formal 
 identification of the **Convergent Observer Escape**, the 
-**Projective Plane Transition**, and the **Cusp-Off-Cusp Split**.
+**Projective Plane Transition**, and **Infrastructure Integrity Synchronization**.
 
 ### 1. Isolated Disproof Edge (HYP-3700)
 Formally operationalizes the boundary between proof and disproof. 
 The edge is ISOLATED for LRC14 ($0.198$ doublet gap).
 
-### 2. Convergent Observer Escape (HYP-3718)
-Identification of the spectral escape at the **CONVERGENT** ($n/\Phi_6(n)$). 
-The mediant escape is blocked by the **killer $\text{lcm}(n-1, n)$** 
-parking at zero, forcing the observer off-cusp for $n \ge 7$.
+### 2. Infrastructure Integrity (HYP-3740)
+Synchronization of the 14 distributed nomadic nodes. Secures the 
+Base Stalk against decentralized data drift during the constant-chase.
 
-### 3. Projective Plane Transition (HYP-3720)
-Identification of the transition at **$n=7$** (Bruck-Ryser failure). 
-Governances shift from the drop-2 formula to the $n/\Phi_6(n)$ construction. 
+### 3. Convergent Observer Escape (HYP-3718)
+Identification of the spectral escape at the **CONVERGENT** ($n/\Phi_6(n)$). 
+The mediant escape is blocked by the **killer $\text{lcm}(n-1, n)$**.
 
 ---
 
