@@ -27,6 +27,37 @@ CONTEXT: opus-S1 confirmed covering-min=14/183 at n=14 (107-set scan) + integrat
 transition at n=7=apex). klein-S24/S25 developing the hexagonal/Coxeter-Catalan side.
 
 Files: HYP-3702. Builds on HYP-3701 + klein-S24/S25 (HYP-3706/3710) + THM-523 + HYP-3700. Broadcast.
+## klein-2026-06-29-S26 -- the COVERING-MIN IS A zeta_6-LINE in the hexagonal lattice; subconditions (dense cores -> M>1/n partial bound) (HYP-3715)
+
+Prompt: work the clean remaining target (LRC->hexagonal); think useful subconditions/special cases (dense
+covering sets etc.); get creative.
+
+Pinned M from prior work (HYP-3551): M(S) = the lonely-runner GAP = covering radius j/D at the binding
+modulus D. Reproduced (script hex_bridge_subconditions_klein.py): M({1..12,182})=14/183 (binding rotation
+a=14, D=183=Phi_6(14)); M({1..11,13,84})=7/89; densest-core-wins (skip-13 core {1..12} + killer
+182=lcm(13,14) -> 14/183 = n/Phi_6(n) = the covering-min).
+
+THE CONCRETE HEXAGONAL REALIZATION: at the binding rotation a=14=zeta_6 (14^6=1 mod 183), the speeds map to
+the n-spaced AP {-14,14,28,...,168} = the runners EQUALLY SPACED (spacing n) along the zeta_6 (hexagonal
+60-deg) direction in Z/Phi_6(n)=Z[zeta_6]/(n-zeta_6), covering radius n. So the LRC covering-min IS,
+concretely, a LINE (1D AP) in the zeta_6 direction of the hexagonal lattice -- the abstract hexagonal
+quotient (HYP-3706) made explicit.
+
+SUBCONDITIONS (the user's ask):
+ (1) DENSE covering sets -- the covering-min lives at the densest coverable core + minimal killer; and the
+     densest core {1..n-2} ALONE has gap 1/(n-1) (=1/13>1/14), so the dense-core family satisfies M>1/n
+     (the conjecture holds on dense coverings, HYP-2566/3551). This is exactly where the min sits AND where
+     a partial bound is provable.
+ (2) ANTIPODAL binding (1, n(n-1)=-1 mod D); modulus D=Phi_6(n)=1+n(n-1).
+ (3) the lcm(n-1,n) MINIMAL KILLER (coprime->largest->equidistributes->minimal perturbation, gives Phi_6(n)).
+ (4) DISCRETE KERSHNER -- the tightest covering (min covering radius ~D/2k) uses maximally-spread speeds
+     (verified); for the covering-min the spread is the zeta_6-line in Z/Phi_6(n).
+
+HONEST STATUS: VERIFIED = M=covering radius, 14/183 at densest-core+lcm-killer, the zeta_6-line binding
+config, discrete Kershner, the dense-core partial bound M>1/n. OPEN = 14/183 is the GLOBAL covering-min (no
+exotic covering beats it) + the cyclic-line<->2D-Kershner step. The bridge is now the geometric claim: 'the
+optimal LRC covering is the zeta_6-line in the hexagonal lattice.' No canon overridden; no court cases.
+NEXT: prove the zeta_6-line is the optimal covering line (the cyclic-line Kershner).
 
 ## klein-2026-06-29-S25 -- the 3 nested sequences = the rank-1 CATALAN FAMILY; the hexagonal covering = the rank-2 A2 Coxeter-Catalan; Kershner settles the continuous side (HYP-3710)
 

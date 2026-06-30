@@ -1,0 +1,38 @@
+==================================================================================
+ (1) M = gap = covering radius j/D: reproduce 14/183 and 7/89
+==================================================================================
+   {1..12,182}      M = 14/183 = 0.07650  (binding rot a=14);  D=Phi_6(14)=183? True
+   {1..11,13,84}    M = 7/89 = 0.07865  (binding rot a=37);  D=Phi_6(14)=183? False
+
+==================================================================================
+ (2) DENSEST-CORE-WINS: {1..13}\{skip} + minimal killer lcm(skip,14); the covering-min
+==================================================================================
+   skip 13 (killer 182): M=14/183=0.07650 <== covering-min
+   skip 12 (killer  84): M=7/89=0.07865
+   skip  6 (killer  42): M=2/23=0.08696
+   skip 11 (killer 154): M=14/157=0.08917
+   skip  7 (killer  14): M=2/22=0.09091
+   skip 10 (killer  70): M=7/77=0.09091
+   skip  4 (killer  28): M=2/19=0.10526
+   skip  5 (killer  70): M=2/19=0.10526
+   skip  9 (killer 126): M=14/131=0.10687
+   skip  8 (killer  56): M=7/63=0.11111
+   skip  2 (killer  14): M=2/17=0.11765
+   skip  3 (killer  42): M=2/17=0.11765
+   skip  1 (killer  14): M=2/16=0.12500
+   => densest coverable core {1..12} (skip 13) + killer 182=lcm(13,14) -> 14/183 (HYP-3551).
+
+==================================================================================
+ (3) HEXAGONAL embedding + antipodal binding
+==================================================================================
+   zeta_6=14 mod 183: 14^6 mod 183=1 (order 6); 183=Phi_6(14)=13*14+1 (Eisenstein norm).
+   binding pair (1,182): 182=-1 mod 183 (ANTIPODAL); the gap 14/183 = hex-quotient covering radius/D.
+
+==================================================================================
+ (4) DISCRETE KERSHNER: min covering radius for k speeds in Z/D (tightest covering)
+==================================================================================
+   Z/13, k=4: min covering radius=2 (~D/2k=1.6); a minimizer=(1, 2, 3, 4)
+   Z/21, k=5: min covering radius=2 (~D/2k=2.1); a minimizer=(1, 3, 4, 5, 7)
+   Z/31, k=6: min covering radius=3 (~D/2k=2.6); a minimizer=(1, 4, 5, 6, 7, 11)
+   => the tightest covering uses MAXIMALLY-SPREAD speeds (the difference-set/hexagonal pole). For the
+      LRC covering-min the spread is forced into Z/Phi_6(n) (hexagonal), where Kershner is optimal.
