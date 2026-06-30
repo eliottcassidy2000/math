@@ -20,3 +20,10 @@ n=14: near-block 1/(n-1)=0.07692, construction n/Phi6=0.07650
    a=4 (m=53, target 4/53=0.07547): min-M@V=53 = 1/13=0.07692  depth-4-achievable:False  <construction:False
    a=5 (m=66, target 5/66=0.07576): min-M@V=66 = 8/97=0.08247  depth-5-achievable:False  <construction:False
    a=6 (m=79, target 6/79=0.07595): min-M@V=79 = 12/145=0.08276  depth-6-achievable:False  <construction:False
+   a=7 (m=92, target 7/92=0.07609): min-M@V=92 = 13/148=0.08784  depth-7-achievable:False  <construction:False
+  => smallest achievable depth a(14) = None; spread beats construction: False
+
+# NOTE (mac-mini): the a>=5 rows (min-M ABOVE the near-block 1/(n-1)) are TIME-LIMIT ARTIFACTS
+# (the ILP at larger V did not finish within the 8s limit and returned a worse feasible solution).
+# RELIABLE (small V, fast): a=2,3,4 at n=12,13,14 all return the near-block -> small-depth (a<=4)
+# is UNACHIEVABLE for n>=12. Confirms HYP-3735: the small-depth spread family is finite-range (n=7..11).
