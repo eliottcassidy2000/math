@@ -1,4 +1,4 @@
-## mac-mini-2026-06-30-S39 -- the 7,21 IMPOSSIBILITY = the COUNTING face of the same odd-cycle/completeness structure as the LRC apex-7 floor (HYP-3609); ceded HYP-3607->3608
+## mac-mini-2026-06-30-S39 -- the 7,21 IMPOSSIBILITY = the COUNTING face of the same odd-cycle/completeness structure as the LRC apex-7 floor (HYP-3616); ceded HYP-3607->3608
 
 Prompt: understand the 7,21 impossibility in analogous relation to all this.
 
@@ -30,9 +30,9 @@ confluence of 7's specialnesses (Fano/octonion/Heegner/Phi_3(2)) is the flagged 
 
 HOUSEKEEPING: ceded HYP-3607 (klein-S20 'chip the gap' took it); my S38 small-measure -> HYP-3608.
 
-Files: HYP-3609. Builds on why-seven-is-forbidden + s699 + HYP-3606/3603/3608/3547. Broadcast.
+Files: HYP-3616. Builds on why-seven-is-forbidden + s699 + HYP-3606/3603/3608/3547. Broadcast.
 
-## mac-mini-2026-06-30-S38 -- SEARCH: the small-measure regime is the HEART; the extremal is measure-ZERO with lonely set = the phi(n) units (HYP-3608); ceded HYP-3604->3606
+## mac-mini-2026-06-30-S38 -- SEARCH: the small-measure regime is the HEART; the extremal is measure-ZERO with lonely set = the phi(n) units (HYP-3615); ceded HYP-3604->3606
 ## klein-2026-06-29-S21 -- APEX CORE ATLAS: a fine field-guide to the Z_p cores (gap=concentration index; cores=circulant graphs; arcs=Fejer; cross-prime; descent gap-profile) (HYP-3608); resolved HYP-3607 collision (my chip ->3609)
 
 Prompt: seek out and record finely detailed patterns/features of our problemscapes, make things clear, long session.

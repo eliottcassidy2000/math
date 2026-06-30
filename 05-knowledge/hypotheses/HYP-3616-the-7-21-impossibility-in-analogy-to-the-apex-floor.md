@@ -1,5 +1,5 @@
 ---
-id: HYP-3609
+id: HYP-3616
 title: THE 7,21 IMPOSSIBILITY (the two forbidden H-values) in analogy to all the recent apex-floor work -- H(T)=I(Omega,2) (Redei: always ODD) takes every odd value EXCEPT {7,21} = {Phi_3(2), 3*Phi_3(2)}, the only two gaps of a genus-2 multiplicative numerical semigroup; H=7 means "3 conflicting odd cycles, zero depth" and is impossible because a tournament's COMPLETENESS forces a 5-cycle (contamination) -> H>7 (why-seven-is-forbidden). THE BRIDGE: 7=Phi_3(2) is EXACTLY the prime where ord_7(2)=3, so <2>={1,2,4}=QR_7=the Fano line=the octonion=the LRC flat/optimal core (S31); it is the SAME 7 as LRC14's apex (14=2*7, the descent peels the order-3 two). THE ANALOGY to all this: (a) BOTH are about ODD CYCLES (H counts them; the LRC binds on C_7); (b) SAME MECHANISM = completeness/density forces over-saturation (tournament completeness forces extra cycles => H-gap; LRC danger over-covers, union bound (2-n)/n NEGATIVE => measure vanishes => counting); (c) 21=3*7=C(7,2) = the forbidden H AND the number of doublets (the binding LRC cores, THM-590) -- one 21, two masks; (d) the band-gap {7,21} <-> the LRC discrete apex-gap landscape {0,0.198,0.308,1,2} / the gap-0 cusp; (e) H is multiplicative over STRONG COMPONENTS (the S35 condensation) <-> the descent over irreducible cores -- {7,21} are the values no irreducible-paradox product hits. The forbidden-H 7 (counting/completeness impossibility) and the LRC apex-7 floor (geometry/non-bipartiteness positivity) are two faces of the prime 7's odd-cycle structure
 status: SYNTHESIS + VERIFIED grounding (H-spectrum gaps {7,21} confirmed by enumeration n<=6 = the only odd gaps; 7=Phi_3(2), ord_7(2)=3, <2>={1,2,4}=QR=Fano arithmetic verified). The "same 7" bridge is arithmetically grounded; whether it is a deep necessity or a confluence of 7's specialness (Fano/octonion/Heegner/Phi_3(2)) is the flagged open question (INDEX ~L9696). Not a new proof.
 source: mac-mini-2026-06-30-S39
@@ -8,13 +8,13 @@ related:
   - polarized-delta-fields-band-gaps-and-numerical-semigroups-s699  # {7,21}=genus-2 semigroup gaps, multiplicative via strong components
   - HYP-3606  # the non-bipartiteness certificate (the LRC apex-7 floor; the geometry face)
   - HYP-3603  # the condensation = strong components = the multiplicative atoms of H (S35)
-  - HYP-3608  # the small-measure regime (the measure-vanishing face of the over-saturation mechanism)
+  - HYP-3615  # the small-measure regime (the measure-vanishing face of the over-saturation mechanism)
   - HYP-3547  # the octonion/Fano QR_7={1,2,4} (the optimal core; the shared structure)
 results:
   - 04-computation/small_measure_extremal_units_macmini_20260630.py  # (related; union-bound failure)
 ---
 
-# HYP-3609 -- the 7,21 impossibility in analogy to the apex-7 floor
+# HYP-3616 -- the 7,21 impossibility in analogy to the apex-7 floor
 
 The owner asked to understand the 7,21 impossibility in analogous relation to all the recent work.
 
@@ -42,7 +42,7 @@ line `{1,2,4}`), grounding the repo's flagged "same prime-3/Fano root" (INDEX ~L
 |---|---|---|
 | object | `H = I(Omega,2)`, counts ODD cycles | the danger relation's odd cycle `C_7` |
 | the atom | `H=7` = 3 conflicting odd cycles | the doublet `= C_7` (HYP-3606) |
-| MECHANISM | **completeness forces a 5-cycle => contamination => H>7** | **danger over-covers (union bd `(2-n)/n<0`) => measure vanishes** (HYP-3608) |
+| MECHANISM | **completeness forces a 5-cycle => contamination => H>7** | **danger over-covers (union bd `(2-n)/n<0`) => measure vanishes** (HYP-3615) |
 | what's forbidden | the values `{7,21}` (band gap) | positive lonely measure at the extremal (=0) |
 | what carries it | the odd-cycle structure forces H past 7 | EXISTENCE/COUNTING (the units, the odd cycle) |
 | `21` | `= 3*Phi_3(2)`, the 2nd forbidden H | `= C(7,2)` = the number of DOUBLETS (binding cores, THM-590) |
@@ -51,7 +51,7 @@ line `{1,2,4}`), grounding the repo's flagged "same prime-3/Fano root" (INDEX ~L
   (`C_7`). `H=7` is "pure odd-cycle curvature"; the LRC binding atom is one odd cycle.
 - **Same mechanism: COMPLETENESS / DENSITY forces over-saturation.** A tournament is complete, so an
   isolated 3-fold-curvature substructure bleeds into a 5-cycle -> `H>7` (forbidden). The LRC danger combs
-  are so dense (`n-1` combs of measure `2/n`, union bound `(2-n)/n < 0`, HYP-3608) that they over-cover ->
+  are so dense (`n-1` combs of measure `2/n`, union bound `(2-n)/n < 0`, HYP-3615) that they over-cover ->
   the lonely measure vanishes. In BOTH, the complete/dense structure cannot isolate a clean piece; the
   excess forces a gap (no `H=7`) or a collapse (measure `->0`). The "phantom volume" (forbidden H) is the
   counting twin of the "small measure" (vanishing lonely set).
