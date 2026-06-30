@@ -1,5 +1,5 @@
 ---
-id: HYP-3607
+id: HYP-3608
 title: SEARCH + SYNTHESIS of the small-measure / thin-coverage regime for the runners -- the regime is not a corner of the LRC but its HEART, anchored by a clean (verified n=3..8, proved general) fact: the consecutive extremal W={1,..,n-1} has lonely measure EXACTLY 0 at every n, its lonely "set" being the phi(n) touch-points {k/n : gcd(k,n)=1} = the UNITS mod n (in phi(n)/2 antipodal pairs); the union bound goes NEGATIVE ((2-n)/n for n>=3, =-0.857 at n=14: the n-1 danger combs each of measure 2/n can cover all of [0,1)), so measure-based arguments are structurally doomed at the extremal. The catalogue (klein-S16 inf R'=0; klein-S18 rho_0->0 = the existence question; HYP-3580 the cusp = m_R->0; HYP-3562 Lebesgue=0 but count=phi; HYP-3548 two razor-thin lines; THM-590 the finite cyclotomic min) all says the SAME thing: at the small-measure regime measure VANISHES and EXISTENCE/COUNTING carries it -- the units, the odd cycle, the discrete non-bipartiteness certificate (THM-590/HYP-3606). The small-measure search REVEALS why the proof had to abandon measure and move to the discrete certificate
 status: SEARCH + SYNTHESIS (catalogues the prior small-measure thread) + VERIFIED anchor (consecutive extremal lonely measure=0, lonely set=phi(n) units, n=3..8; proved: t=k/n is lonely iff gcd(k,n)=1, else runner j=n/gcd sits at 0). Generalizes klein-S8's n=14 {1..13}->units fact to all n. Not a new proof of LRC.
 source: mac-mini-2026-06-30-S38
@@ -14,7 +14,7 @@ results:
   - 04-computation/intransitivity_among_n_things_macmini_20260630.py  # union-bound failure (related)
 ---
 
-# HYP-3607 -- the small-measure regime is the heart of the Lonely Runner
+# HYP-3608 -- the small-measure regime is the heart of the Lonely Runner
 
 The owner asked to search the prior work on very small areas of coverage/measure for the runners. The
 search (an Explore over ~25 files) plus a fresh computation say one thing: **the small-measure regime is
