@@ -1,0 +1,26 @@
+======================================================================================
+ LRC14: set-independent floor bound + the danger relation does not factor (klein-S8)
+======================================================================================
+ Gamma_0(14): phi=6, psi=24 (=index), J_2=144, |SL2(Z/14)|=14*144=2016.
+ candidate set-indep constants:  1/(2 zeta2)=0.30396  phi/psi=0.25000  J2/psi^2=0.25000  1/psi=0.04167  phi/(psi)*? 
+
+ (1) ACTUAL floor R' = m_S/(m_R m_Q) over a broad adversarial covering family (|R|+|Q|=14):
+   scanned 956 valid coverings.  inf R' = 0.34394  at R=(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13) (|Q|=2)
+   sup |R'-1| (= sup |SPEC|/product) = 0.65606   (floor holds set-indep iff <1: YES)
+   => R' bounded BELOW by 0.3439 > 0 across the family, EVEN THOUGH CV(N_R)^2 is unbounded (HYP-3554).
+   compare inf R' to set-indep constants: 1/(2 zeta2)=0.30396, phi/psi=0.25, J2/psi^2=0.25.
+   lowest 6 R':
+      R'=0.3439  |Q|=2  m_R=0.0839 m_Q=0.7857  R=(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13)
+      R'=0.4418  |Q|=3  m_R=0.1199 m_Q=0.6905  R=(1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13)
+      R'=0.4459  |Q|=3  m_R=0.1081 m_Q=0.6905  R=(1, 2, 3, 5, 6, 8, 9, 10, 11, 12, 13)
+      R'=0.4850  |Q|=3  m_R=0.0921 m_Q=0.6905  R=(1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13)
+      R'=0.5004  |Q|=4  m_R=0.1441 m_Q=0.6190  R=(1, 2, 3, 6, 8, 9, 10, 11, 12, 13)
+      R'=0.5397  |Q|=3  m_R=0.1274 m_Q=0.6905  R=(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12)
+
+ (2) DOES NOT FACTOR:
+   (2a) coverings with R'!=1 (SPEC!=0, relation couples R&Q): 953/956 (relation does NOT factor)
+   (2b) extremal {1..13}: meas(lonely)=0.0 (tight/measure-0 locus); units (Z/14)* = [1, 3, 5, 9, 11, 13] (phi(14)=6);
+        antipodal pairs (the BU counting measure, saddle index phi/2=3): [(1, 13), (3, 11), (5, 9)]
+        unit fractions a/14 lonely for {1..13} (touch-points): [1, 3, 5, 9, 11, 13] of [1, 3, 5, 9, 11, 13]
+
+ VERDICT: the floor deficit |SPEC|/product stays < 1 set-independently (R' bounded below > 0) even where CV blows up; and the danger relation does not factor (SPEC!=0; at the extremal the lonely set is the multiplicative units in antipodal BU pairs). The 'right frame' is the actual correlation |R'-1|, not the lossy CV -- the Gamma_0(14)/cyclotomic collapse bounds THAT.

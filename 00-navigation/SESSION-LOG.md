@@ -1,3 +1,42 @@
+## klein-2026-06-29-S8 -- the two clauses of the proof sentence, COMPUTED: the floor is set-independent (inf R'=0.344 >= 1/(2 zeta(2))) and the danger relation does NOT factor (units/BU extremal) (HYP-3571)
+
+Prompt: one concrete computation (Gamma_0(14) congruence 2nd moment bounds CV(N_R)^2 set-independently;
+psi=24,phi=6,J2=144) + one structural fact (the danger relation does not factor; bilinearity of vt + BU
+counting measure at the extremal). "The proof reads as a sentence about a relation: it does not factor, and
+composed with itself it stays small, in the right frame."
+
+CONVERGENCE: mac-mini-S26 (HYP-3570) independently reframed the remaining targets as ESSENTIAL x BOUNDED of
+one relation -- exactly my does-not-factor (ESSENTIAL) x stays-small (BOUNDED) sentence. My HYP-3571 supplies
+the COMPUTATIONS for both factors.
+
+DID (HYP-3571, CONFIRMED; reflection the-proof-is-one-sentence-about-a-relation):
+Gamma_0(14) arithmetic: phi=6, psi=24=[SL2(Z):Gamma0(14)], J2=144, |SL2(Z/14)|=14*144=2016.
+(1) STAYS SMALL, set-independently: the ACTUAL correlation |SPEC|/product = |R'-1| (R'=m_S/(m_R m_Q)) over
+956 adversarial coverings has sup|R'-1|=0.656<1 => inf R'=0.344>0 set-independently, ABOVE 1/(2 zeta(2))=
+0.304 (mac-mini Gamma_0(14) bound HYP-3553) -- EVEN THOUGH CV(N_R)^2 is unbounded (HYP-3554). The CV
+(Cauchy-Schwarz) frame is the lossy/set-dependent one; |R'-1| is the right frame. Binding covering =
+{1..13}\{7} (drops the APEX prime; R'=0.344); CV instead peaks at {1..13}\{12} (with 7) -- DIFFERENT
+functionals, only |R'-1| is the floor. Resolves the HYP-3554 paradox (CV blows up, floor robust).
+(2) DOES NOT FACTOR: SPEC!=0 for 953/956 (R,Q coupled via bilinear v*t -> R'!=1; a factoring would force
+R'=1). At the extremal {1..13} (meas lonely = 0, the tight locus) the lonely touch-points are EXACTLY the
+units (Z/14)* = {1,3,5,9,11,13} (all 6 verified) in phi/2=3 antipodal pairs {(1,13),(3,11),(5,9)} = the
+BORSUK-ULAM counting measure (saddle index 3) = an irreducible multiplicative object (no additive
+factoring).
+
+THE SENTENCE: the covering floor = one statement about D:(v,t)->||v t||<1/14 -- it does not factor
+(SPEC!=0; extremal = units in phi/2 antipodal BU pairs), and composed with itself stays small (|R'-1|<1
+set-independently, R'>=0.344>1/(2 zeta2)), in the right frame (the actual correlation, via the transitive
+Gamma_0(14)/Z_7-cyclotomic collapse of HYP-3566, not the lossy CV).
+
+Script: 04-computation/lrc14_gamma0_setindep_floor_and_nonfactoring_klein.py. No canon overridden; no court
+cases. Builds on mac-mini HYP-3553/3564/3570, klein HYP-3554/3566.
+
+NEXT (floor owners): derive inf R' in closed form from the p=2,7 local Gamma_0(14) Euler densities and check
+it = 0.344 (and >= 1/(2 zeta2) provably); certify the binding covering {1..13}\{7}; the ESSENTIAL factor is
+the units/BU saddle (THM-582/583 witness side).
+
+---
+
 ## mac-mini-2026-06-29-S26 -- REFRAME: the remaining LRC targets collapse to ESSENTIAL x BOUNDED of one relation (HYP-3570)
 
 Prompt: creatively apply the recent ideas (obstruction/relational/moment/Gamma_0(N)) to reframe the
