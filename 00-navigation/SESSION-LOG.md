@@ -1,4 +1,35 @@
-## klein-2026-06-29-S13 -- BLUE/BLACK patterns: BLUE(n)=2^{square/pronic}; BLUE-CLASSES = SC exactly; blue is the SC spine (arena), genus is the binding subset; new trackables (HYP-3593)
+## mac-mini-2026-06-29-S33 -- the two open tasks + THE TRUTH across all frames = a single ODD CYCLE (the full circle); ceded HYP-3592->3593->3595 (HYP-3594)
+
+Prompt: work the two open tasks (rib SC-side-even proof; NS-break vs genus) + look at all the history of
+frames we called fundamental and find the truth we were aiming at.
+
+HOUSEKEEPING: two more HYP collisions ceded -- my S32 rib-theorem went 3592 (klein-S13 BLUE=SC) -> 3593
+(klein-S14 the-truth) -> HYP-3595. (klein-S13=HYP-3592, klein-S14=HYP-3593.)
+
+T1 (rib SC-side-even): PROVED in general. R (complement) is an involution-automorphism (THM-584); for any
+involution-automorphism, the non-fixed neighbors of a fixed vertex pair up. SC classes are R-fixed => even
+SC-NS (rib) degree, ALL n (SC-odd count=0 verified n=3..6). A corollary of R detecting the cycle space.
+
+T2 (NS-break vs genus): HONEST NON-CONNECTION. NS-rib defect = 0,0,0,6 by tournament-n (always even, by
+handshake from T1; first defect at n=6). Genus(X_0(2p)) = 0,0,1,2,2 by apex-prime-p. DIFFERENT index
+variables (tournament vertex count vs LRC modulus); the n=4 metagraph carrying X_0(14)'s 4 cusps is FIXED
+across the genus family, so the genus can't live there. Shared R/even-odd root only. Documented, not forced.
+
+THE TRUTH (HYP-3594, complements klein-S14 HYP-3593): klein-S14 gave the VALUE (one cyclotomic atom
+4cos^2(3pi/7), frames=monotone zoom-in). This is the IDENTITY: every fundamental frame (an Explore agent
+mapped 17 of them) measures ONE object = a single ODD CYCLE, the apex p-cycle C_p (p=7). VALUE
+4cos^2(3pi/7)=2+lambda_min(A(C_7)) (HYP-3590, the 7-cycle spectral floor); IDENTITY = odd-length cycle in
+the R-odd/cycle-space/even-graph dual; MULTIPLICITY = genus = #independent odd-cycle obstructions (0,0,1,2,2;
+LRC14 genus 1 = ONE odd cycle); LINEAGE/FULL CIRCLE = the parent OCF is literally the ODD-Cycle Collection
+(H=I(Omega,2)), metagraph's unique invariant = 3-cycle (THM-588), LRC14 binds at C_7 -- began with odd
+cycles, collapsed back to ONE. ESSENTIAL x BOUNDED = 'the odd cycle EXISTS (non-bipartite/non-separable,
+anti-Littlewood) AND its spectrum is positive (4cos^2(3pi/7)>0, off the gap=0 disproof boundary)' -- both
+clauses, one cycle. N=14 is the first hard case = the first genuinely global single odd cycle (genus 0->1).
+
+Files: HYP-3594, reflection the-full-circle-it-was-always-the-odd-cycle.md, renamed HYP-3595. Builds on
+klein-S14 (HYP-3593) + HYP-3590 + THM-588/584 + HYP-3587. Broadcast.
+
+## klein-2026-06-29-S13 -- BLUE/BLACK patterns: BLUE(n)=2^{square/pronic}; BLUE-CLASSES = SC exactly; blue is the SC spine (arena), genus is the binding subset; new trackables (HYP-3592)
 ## klein-2026-06-29-S14 -- the exact floor constant + THE TRUTH across all 16 frames: one positive cyclotomic atom at the apex-7 cusp (HYP-3593)
 
 Prompt: work on the bound; look at all the history of frames we thought were most fundamental; find the
@@ -60,7 +91,7 @@ Reflection: blue-is-the-SC-spine-squares-and-pronic-and-new-trackables. Pairs wi
 4cos^2(3pi/7) cusp value as an EVEN object): the binding doublet sits in the blue/SC spine. No canon
 overridden; no court cases. NEXT: compute the black Eulerian cycle rank (S675b); test blue=SC at n=7;
 the odd-boundary multiplicity distribution over the SC spine.
-## mac-mini-2026-06-29-S32 -- equinumerosity (labeled-only) + the d=1 RIB SC-side-even theorem + silent-flip=self-loop Eulerian (HYP-3593); ceded HYP-3586->3590
+## mac-mini-2026-06-29-S32 -- equinumerosity (labeled-only) + the d=1 RIB SC-side-even theorem + silent-flip=self-loop Eulerian (HYP-3595); ceded HYP-3586->3590
 
 Prompt: understand tournament/even-graph equinumerosity (the particularities); search past work where
 sections of the merged metagraph were discussed as Eulerian.
@@ -91,7 +122,7 @@ UNIFICATION: both asks -> the CYCLE SPACE; R (complement = 2-adic involution = c
 common engine: fixes SC (ribs SC-side-even), splits black/blue (codex), -1-eigenspace = odd/cusp
 obstruction (klein-S12). The even-graph dual E_n is where the floor binds (HYP-3590).
 
-Files: HYP-3592, scripts equinumerosity_and_eulerian_metagraph_macmini_20260629.py(+.out); renamed
+Files: HYP-3595, scripts equinumerosity_and_eulerian_metagraph_macmini_20260629.py(+.out); renamed
 HYP-3590. Builds on klein-S12 (HYP-3591) + codex-S675b + THM-413/584/578. Broadcast.
 
 ## klein-2026-06-29-S12 -- three 'evens' (Royle sandwich); the Eulerian sections (codex-S675b black/blue); and THE GENUS IS THE ODD BOUNDARY (HYP-3591)
