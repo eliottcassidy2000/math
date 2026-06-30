@@ -1,5 +1,5 @@
 ---
-id: HYP-3604
+id: HYP-3606
 title: The LEAST-EIGENVALUE CERTIFICATE for the LRC apex floor -- the binding value 4cos^2(3pi/7) is lambda_min(2I+A(C_7)), the least eigenvalue of the doublet's autocorrelation Gram (= twice-identity plus the 7-cycle adjacency); and its POSITIVITY is exactly the NON-BIPARTITENESS of C_p (the apex cycle has odd length p, so A(C_p) has no eigenvalue -2, so 2I+A(C_p) is positive definite with lambda_min = 2-2cos(pi/p) = 4sin^2(pi/2p) > 0). Over all 127 non-full Z_p cores the least nonzero-mode eigenvalue is >= this doublet value (THM-590). The certificate is SET-INDEPENDENT (depends only on the apex prime p), is the Bochner/SOS minorant (its worst eigenvector is the middle Fourier mode k=(p+-1)/2), and certifies the sigma-ODD / discrete / EXISTENCE content (klein-S18), not the measure. So: the LRC floor is positive BECAUSE the apex cycle is odd
 status: VERIFIED (exact: lambda_min(2I+A(C_p))=4sin^2(pi/2p) for odd p, =0 for even p; 127-core census). The certificate FORM + the non-bipartiteness mechanism are the contribution; the value/positivity is klein's THM-590. Finite & explicit (Lean-able: forall O subsetneq Z_p, lambda_min^nonzero(Gram O) >= 4sin^2(pi/2p)).
 source: mac-mini-2026-06-30-S37
@@ -14,7 +14,9 @@ results:
   - 05-knowledge/results/least_eigenvalue_certificate_macmini_20260630.out
 ---
 
-# HYP-3604 -- the least-eigenvalue certificate is non-bipartiteness
+# HYP-3606 -- the least-eigenvalue certificate is non-bipartiteness
+
+**CONVERGES with klein-S19 (HYP-3604), reached independently the same week** -- klein frames the matrix as the SIGNLESS LAPLACIAN Q(C_p)=D+A=2I+A (the standard non-bipartiteness object; lambda_min(Q)=0 iff a bipartite component) and proves g(O)=lambda_min(Q(O)) for all 127 cores. That is the canonical form; this adds the worst-eigenvector (Fejer-Bochner minorant), the explicit set-independence, and the existence-side placement (klein-S18).
 
 Working the least-eigenvalue certificate (the owner's ask). The apex floor is a positive-definiteness
 statement about one explicit matrix, and its positivity has a one-line reason: the apex cycle is odd.

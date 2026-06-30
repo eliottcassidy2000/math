@@ -1,4 +1,4 @@
-## mac-mini-2026-06-30-S37 -- THE LEAST-EIGENVALUE CERTIFICATE = non-bipartiteness; the LRC floor is positive BECAUSE the apex cycle is ODD (HYP-3604); resolved double collision (3599+3600)
+## mac-mini-2026-06-30-S37 -- THE LEAST-EIGENVALUE CERTIFICATE = non-bipartiteness; the LRC floor is positive BECAUSE the apex cycle is ODD (HYP-3606); resolved double collision (3599+3600)
 
 Prompt: work on the least-eigenvalue certificate.
 
@@ -27,7 +27,7 @@ deepest REASON of klein's THM-590.
 
 Files: HYP-3604, script least_eigenvalue_certificate_macmini_20260630.py(+.out). Builds on THM-590 +
 HYP-3590/3599/3602/3535. Broadcast.
-## klein-2026-06-29-S19 -- the LEAST-EIGENVALUE CERTIFICATE = the signless Laplacian of the apex ODD cycle; 4cos^2(3pi/7)=lambda_min(Q(C_7))>0 because 7 is ODD (HYP-3604)
+## klein-2026-06-29-S19 -- the LEAST-EIGENVALUE CERTIFICATE = the signless Laplacian of the apex ODD cycle; 4cos^2(3pi/7)=lambda_min(Q(C_7))>0 because 7 is ODD (HYP-3606)
 
 Prompt: think odd/even prior work and work on the least-eigenvalue certificate.
 
