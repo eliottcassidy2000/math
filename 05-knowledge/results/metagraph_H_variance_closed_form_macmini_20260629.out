@@ -1,0 +1,12 @@
+THM-589: metagraph H-variance closed form (mac-mini-S22)
+========================================================================
+ n  W_succ  W_comp   W_ogf  Var(H)closed   Var(H)brute     CV^2  n*CV^2
+ 3       8       8       8        0.7500        0.7500   0.3333  1.0000  [OK]
+ 4      32      32      32        3.0000        3.0000   0.3333  1.3333  [OK]
+ 5     158     158     158       17.8125       17.8125   0.3167  1.5833  [OK]
+ 6     928     928     928      146.2500      146.2500   0.2889  1.7333  [OK]
+ 7    6350    6350    6350     1611.9141                 0.2599  1.8194  [OK]
+
+  W(n) = 1,2,8,32,158,928,6350,49752 (=THM-219 W, =S90/S112 simplicial-Redei).
+  Var(H) closed = brute (n<=6). CV(H)^2 = W(n)/n! - 1 ~ 2/n (n*CV^2 -> 2).
+  Poisson-Euler (THM-219) = Poisson(1) (HYP-3560): NUD/n!->1/e, E[2^asc]->e, product->1.

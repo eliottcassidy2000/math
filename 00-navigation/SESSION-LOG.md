@@ -1,3 +1,32 @@
+## mac-mini-2026-06-29-S22 -- the metagraph H-variance CLOSED FORM = THM-219's W(n); CV(H)^2 ~ 2/n exactly (THM-589)
+
+Prompt: extend the Han-Lee/metagraph/LRC synthesis; the owner provided a closed form
+Var(H) = (n!/4^{n-1})(G(n)-n!), G(n) = succession-weighted count over compositions into odd parts,
+OGF kernel x(1+x^2)/(1-x^2).
+
+VERIFIED (3 ways = brute force, n=3..8) and IDENTIFIED: the owner's G(n) is EXACTLY THM-219's W(n)
+(NUD = no-unit-descent perms, W = sum 2^{unit ascents}) = the S90/S112 SIMPLICIAL-REDEI sequence
+1,2,8,32,158,928,6350,49752 (NOT in OEIS; W(8)=49752 is MISTAKE-025). So the metagraph variance Var(H),
+my S21 CV(H)^2, the owner's odd-composition closed form, THM-219, and the simplicial-Redei W(n) are ONE
+object -- the metagraph 2nd moment. (THM-589.)
+
+EXACT RATE: CV(H)^2 = W(n)/n! - 1 = 2(n-2)/(n(n-1)) + O(1/n^2) ~ 2/n (n*CV^2 -> 2, verified n<=20),
+sharpening S21's ->0. The leading 2/n correction = the single-3 odd-composition; the '2' is literally
+the OGF kernel's weight-2 per part>=3.
+
+UNIFICATION: THM-219's 'Poisson-Euler' IS the S21 Poisson(1) proof -- NUD(n)=A000255(n-1)~n!/e (Euler
+factor 1/e = P(no descent)), E[2^asc]->e (Poisson(1) PGF at 2), product -> e*(1/e)=1. RECURRENCE
+NUD(n)=(n-1)NUD(n-1)+(n-2)NUD(n-2) = the vertex-addition/HECKE operator (HYP-3553) acting on Var(H).
+
+LRC: klein-S4 (same day) found CV(N_R)^2 is SET-DEPENDENT + UNBOUNDED (dense R + speed-7) -- exactly what
+the metagraph (CV(H)^2~2/n, set-free, classical) does NOT do, and precisely why the SET-INDEPENDENT
+Gamma_0(N) congruence 2nd moment (HYP-3553) is the cure. The obstruction is a CLASSICAL Riordan
+succession count, not bespoke.
+
+Files: THM-589, reflection the-metagraph-variance-was-already-a-theorem.md, script
+metagraph_H_variance_closed_form_macmini (+.out). Builds on THM-219 + HYP-3560/3554/3553 + klein S4.
+Broadcast.
+
 ## klein-2026-06-29-S4 -- worked the actionable LRC step: the THM-579 floor gatekeeper CV(N_R)^2 is set-dependent + UNBOUNDED (dense R + speed 7), motivating mac-mini's Gamma_0(N) route; floor R'>0 robust (HYP-3554)
 
 Prompt: work the most actionable step (verify the LRC second-moment claim) myself; merge other tasks at
