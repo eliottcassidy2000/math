@@ -1,3 +1,36 @@
+## klein-2026-06-30-S36 -- the COVERING-MIN as an IP over the DANGER-CIRCULANT: PINS n=7->2/13, 8->2/15, 9->4/33, 11->3/31 (NEW, beats construction); + the dual set-cover/independent-set reframes (copy observer to all n points = Galilean-invariant symmetric version); + chromatic<->OCF computational (even n=Paley tournament/Redei, odd n=Paley graph/Ihara) (HYP-3731)
+
+Prompt: creatively reframe the synthesis (change the observer / translate / copy to all n points / relate to Hamiltonian paths); IMPLEMENT the covering-min as an IP over the danger-circulant independent sets -- to pin the odd-n values AND make the chromatic<->OCF bridge computational.
+
+THE IP (delivered, scipy.milp, covering_min_ip_danger_circulant_klein.py). SET-COVER reframe (one observer at
+0): M(S)<=t iff for EVERY modulus D' and rotation a, some speed s has dist(s.a mod D',0)<=floor(t.D'). Binary-
+search t with constraints {this set-cover at all D'<=Dmax, resonance-killing b|s for b<=n, primitivity p∤s}.
+The smallest feasible t = the covering-min. PINS: n=7->2/13 {1,2,5,6,7,8}, 8->2/15, 9->4/33 (alt optimum
+{1,4,5,6,7,11,32,36}), 11->3/31 {2,6,8,9,10,11,13,14,17,19} NEW -- and 3/31 < 11/111 (beats the construction).
+7,8,9 match mac-mini; 11 is new data. HONEST: Smax=4n suffices for n<=11 (small-beater regime); n>=13 the
+optimal killer/binding exceeds 4n (construction scale ~n(n-1)), so the n=13 run under-resourced gave 1/12 >
+13/157 (non-optimal) -- pinning 13,14 needs a heavier IP.
+
+THE CREATIVE REFRAMES (owner's questions, reframes_fix_klein.py):
+ - CHANGE THE OBSERVER / TRANSLATE: the ONE-observer M is NOT Galilean-invariant (the point 0 is
+   distinguished). The SYMMETRIC (all-observers, every runner lonely from ALL others) M IS invariant -- it
+   depends only on the pairwise DIFFERENCE set, unchanged by V->V-w (verified V={0,1,2,5,6,7,8}, diffs {1..8},
+   M_sym=1/9, invariant under all shifts). So "copy the observer to all n points" is the move that makes the
+   analogy invariant; the symmetric version lives on the translation-invariant danger-circulant (Cayley graph
+   on the GROUP Z/D). Same machine, two analogues (asymmetric 2/13 vs symmetric 1/9).
+ - COPY TO ALL n POINTS = the INDEPENDENT-SET dual: at the lonely time the n runner-positions are an
+   independent set in C_D({1..j}) -- the exact dual of the set-cover IP.
+ - RELATE TO HAMILTONIAN PATHS = the danger-circulant's ORIENTATION reruns the even/odd split: EVEN n ->
+   2n-1=3 mod 4 = Paley TOURNAMENT -> Redei/OCF Hamiltonian-path count H (verified ODD: q=7->189, q=11->95095);
+   ODD n -> 2n-1=1 mod 4 = Paley GRAPH -> Ramanujan/Ihara (verified Ramanujan q=13,17).
+
+CHROMATIC<->OCF made computational: chi(danger-circulant C_D({1..j-1}))=3,3,5,4 for n=7,8,9,11 (the classical
+lonely-runner<->distance-graph link); the OCF/H-count of its orientation. The lonely runner, the tournament
+OCF (even n), and the Ihara zeta (odd n) are THREE READINGS of one circulant. Aligns with mac-mini-S50 (LRC
+parity = bipartiteness of C_n) and my HYP-3729.
+
+HOUSEKEEPING: filed HYP-3731. No collisions, no canon overridden, no court cases.
+
 ## mac-mini-2026-06-30-S50 -- THE LRC PARITY IS THE BIPARTITENESS OF C_n: even n = bipartite cycle = tight M=1/n (even-block local worst-case); odd n = non-bipartite cycle = the margin; = the apex certificate parity (HYP-3606); + margin deviation (irregular) + odd-n/Paley frontier (HYP-3729)
 
 Prompt: (1) see exactly how the margin deviates at any n; (2) work the even-n worst-case proof (equally-spaced

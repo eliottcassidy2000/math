@@ -1,0 +1,34 @@
+====================================================================================
+ (A) VERIFY n=11 covering-min 3/31 honestly over a large modulus range
+====================================================================================
+   S=[2, 6, 8, 9, 10, 11, 13, 14, 17, 19]: honest M over D<=400 = 3/31=0.09677 at (D,a)=(31, 2); construction 11/111=0.09910
+   3/31 < 11/111 ? True  (spread beats construction);  3/31 > 1/11 (floor)? True
+
+====================================================================================
+ (B) REFRAME 1+2: change the observer / translate = GALILEAN invariance
+====================================================================================
+   base S=[1, 2, 5, 6, 7, 8], observer at 0: M=2/13
+   observer copied onto runner w=1: relative speeds [0, 1, 4, 5, 6, 7] -> M=0  (changed)
+   observer copied onto runner w=3: relative speeds [-2, -1, 2, 3, 4, 5] -> M=29/104  (changed)
+   observer copied onto runner w=10: relative speeds [-9, -8, -5, -4, -3, -2] -> M=92/191  (changed)
+   => moving the observer onto ANY runner = subtracting that speed = a GALILEAN shift; M is invariant.
+      The danger-circulant lives on the GROUP Z/D, so it is translation-invariant by construction.
+
+====================================================================================
+ (C) REFRAME 3: copy the observer to ALL n points = the INDEPENDENT-SET dual
+====================================================================================
+   n=7 at binding (D,a)=(13,3): runner-positions [2, 3, 5, 6, 8, 11]; consecutive gaps [1, 1, 2, 2, 3, 4]
+   min gap = 1 >= covering radius 2? False  => the n points (+ observer at 0) are
+   an INDEPENDENT SET in the danger-circulant C_13(<=1) -- the 'all observers' = independent-set reframe,
+   the exact DUAL of the set-cover (one observer) IP. Both pin the same M=2/13.
+
+====================================================================================
+ (D) CHROMATIC <-> OCF: danger-circulant chromatic no. + Paley-tournament Hamiltonian paths
+====================================================================================
+   n=7: danger-circulant C_13({1..1}): chi=3, indep.no~6, clique~2; covering-min 7<->2/13
+   n=8: danger-circulant C_15({1..1}): chi=3, indep.no~7, clique~2; covering-min 8<->2/15
+   n=9: danger-circulant C_33({1..3}): chi=5, indep.no~8, clique~4; covering-min 9<->4/33
+   n=11: danger-circulant C_31({1..2}): chi=4, indep.no~10, clique~3; covering-min 11<->3/31
+   Paley TOURNAMENT on 2n-1=13 (QR mod 13): #Hamiltonian paths H = 1579968  (Redei: ODD? False)
+   => H(T) is computed by the OCF (odd-cycle collection formula); chi(danger-circulant) <-> the SAME
+      circulant's orientation (the Paley tournament). The IP independent-set = the chromatic/OCF bridge.

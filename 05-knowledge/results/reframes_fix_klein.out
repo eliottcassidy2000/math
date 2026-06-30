@@ -1,0 +1,22 @@
+====================================================================================
+ (B-fix) SYMMETRIC (all-observers) M IS Galilean-invariant; one-observer M is NOT
+====================================================================================
+   V=[0, 1, 2, 5, 6, 7, 8] (observer = a runner). pairwise-difference set [1, 2, 3, 4, 5, 6, 7, 8]
+   symmetric M (every runner lonely from ALL others) = 1/9=0.11111
+     shift V-> V-1 = [-1, 0, 1, 4, 5, 6, 7]: diffs [1, 2, 3, 4, 5, 6, 7, 8] -> M_sym=1/9  (invariant: differences unchanged)
+     shift V-> V-3 = [-3, -2, -1, 2, 3, 4, 5]: diffs [1, 2, 3, 4, 5, 6, 7, 8] -> M_sym=1/9  (invariant: differences unchanged)
+     shift V-> V-10 = [-10, -9, -8, -5, -4, -3, -2]: diffs [1, 2, 3, 4, 5, 6, 7, 8] -> M_sym=1/9  (invariant: differences unchanged)
+   => the SYMMETRIC version is Galilean-invariant (lives on the difference set / the translation-
+      invariant danger-circulant). The one-observer M=2/13 is the asymmetric (distinguished-0) value;
+      the symmetric all-pairs value is SMALLER/different -- copying the observer to all n points is the
+      STRONGER (group-invariant) condition. Same machine, two analogues.
+
+====================================================================================
+ (D-fix) odd n -> Paley GRAPH (Ramanujan); even n -> Paley TOURNAMENT (Redei/OCF)
+====================================================================================
+   2n-1=7 (n=4, 3 mod 4): valid Paley TOURNAMENT=True; #Hamiltonian paths H=189, Redei ODD? True
+   2n-1=11 (n=6, 3 mod 4): valid Paley TOURNAMENT=True; #Hamiltonian paths H=95095, Redei ODD? True
+   2n-1=13 (n=7, 1 mod 4): Paley GRAPH, deg 6; max|nontriv eig|=2.303 <= 2sqrt(5)=4.472? Ramanujan=True
+   2n-1=17 (n=9, 1 mod 4): Paley GRAPH, deg 8; max|nontriv eig|=2.562 <= 2sqrt(7)=5.292? Ramanujan=True
+   => EVEN n: 2n-1=3 mod 4 = Paley TOURNAMENT -> Redei/OCF H-count (odd); ODD n: 2n-1=1 mod 4 =
+      Paley GRAPH -> Ramanujan/Ihara. The even/odd split AGAIN: tournament(OCF) vs graph(Ihara).

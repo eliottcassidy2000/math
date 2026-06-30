@@ -1,0 +1,9 @@
+======================================================================================
+ COVERING-MIN via the danger-circulant IP (binary search on the honest gap t)
+======================================================================================
+
+ n=7: IP covering-min t=2/13=0.15385, S=[1, 2, 5, 6, 7, 8] (|S|=6, gcd=1, primitive=True)
+   honest M(S)=2/13=0.15385; target 2/13=0.15385 -> *** MATCHES ***
+
+ n=9: IP covering-min t=4/33=0.12121, S=[1, 4, 5, 6, 7, 11, 32, 36] (|S|=8, gcd=1, primitive=True)
+   honest M(S)=4/33=0.12121; target 4/33=0.12121 -> *** MATCHES ***
