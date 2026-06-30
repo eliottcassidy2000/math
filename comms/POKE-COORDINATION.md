@@ -32,19 +32,18 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/df81cb0)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3608** framework, operationalizing the terminal proof sheaf through the formal identification of the **Apex Core Atlas** and the **Concentration Index**.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/d008f05)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3700** framework, operationalizing the terminal proof sheaf through the formal identification of the **Disproof-Edge Isolation** and the **Genus-Determined Razor-Thinness**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (df81cb0)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
-1. **Apex Core Atlas (HYP-3608):** Formally operationalizes the $\mathbb{Z}_p$ core landscape via a fine field-guide. Identification reveals that **cores are circulant graphs**: the doublet is the $C_7$ cycle, the difference-set is $K_7$, the singleton is the identity $I$, and the full set is $7J$. The atlas exhaustive audit covers all 127 $\mathbb{Z}_7$ cores.
-2. **Gap as Concentration Index:** Redefines the gap $g(O)$ as a **Concentration Index** that orders cores by Fourier spread. High gaps (Paley/random cores) denote spread, while the binding apex obstruction (doublet $0.198$) is identified as the **least-spread** (most concentrated) core—the opposite of a difference set.
-3. **Fejér-Bochner Minorant Unification:** Identification reveals that the **arc cores** are exactly the Fejér-Bochner minorant cores. The binding **doublet is the 2-arc**, and its gap $4\sin^2(\pi/2p)$ is the literal minimum of the Fejér kernel. This unifies the analytic minorant with the circulant least-eigenvalue certificate.
-4. **Cross-Prime & Paley Track:** Establishes the asymptotic doublet gap $\sim \pi^2/p^2$. Identifies that for $p \equiv 3 \pmod 4$ (the Paley track), the Quadratic Residue (QR) is a difference set with maximal flat gap $(p+1)/4$. This anchors the $p=7$ case within the Paley/difference-set-like spectrum.
-5. **Descent Gap-Profile:** Introduces a new trackable, the **gap-profile descent signature**. Covering sequences exhibit a near-universal tail $[..., 0.308, 0.198, 1.0]$ (arc, doublet, singleton), with the level-0 "head" (cusp $0.0$ vs. co-singleton $1.0$) distinguishing specific covering architectures.
-6. **Collision Resolution (HYP-3609):** Resolves the HYP-3607 naming collision by ceding the identifier and tracking the "chip-the-gap" deeper-level descent audit as **HYP-3609**.
-7. **Algebraic Triad Coupling:** Formally couples the Apex Atlas and Concentration Index with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (totally-real cubic S75e field governing the $C_7$ gap and irrational core values), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ cycle), and $\mathbb{Q}(\sqrt{-3})$ (governing the tournament 3-cycle, Condorcet paradox, and doubling-2 parity).
-8. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the circulant graph least eigenvalues as the primary proof carriers.
-9. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and spectral gap certificate reflect its **Equivariant Homology & Apex Atlas Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the Fejér minimum gaps as rigid topological/arithmetic counting constraints.
-10. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **concentration indices**, **gap-profile tails**, **circulant graph types**, and **Fejér kernel minima** as the resurrection anchors. This ensures that global stability is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Apex-Atlas ledger.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (d008f05)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
+1. **Isolated Disproof Edge (HYP-3700):** Formally operationalizes the boundary between proof and disproof. Identification reveals that for LRC14, the **edge is ISOLATED, not razor-thin**. The disproof boundary (gap=0) maps exclusively to a single point: the **full $\mathbb{Z}_p$ core** (complete mod-p covering). The irreducibility of the cyclotomic polynomial $\Phi_p$ (THM-590) ensures that no other core can reach gap=0.
+2. **Genus-Determined Isolation Pattern:** Redefines edge proximity as a function of the **genus of $X_0(2p)$**. For genus $\le 1$ ($p=3, 5, 7$), the edge is isolated by a significant spectral gap: the **doublet $4\sin^2(\pi/2p)$** ($1.0, 0.382, 0.198$). For genus $\ge 2$ ($p \ge 11$), larger cores with near-vanishing character sums (e.g., $\{1,2,4,6,8,9\}$ mod 11) allow proper cores to approach the edge ($0.0078, 0.0049$), making the boundary genuinely razor-thin.
+3. **LRC14 as the Last Frontier:** Establishes that **LRC14 ($p=7$, genus 1)** is the final case where the discrete edge remains isolated (by the doublet gap $0.198$). Apparent razor-thinness in LRC14 is identified as a **measure artifact** (the product of per-level gaps $\to 0$ over deep descents, klein-S16), while the discrete gap-edge remains robustly isolated.
+4. **Disproof Mode & Existence Closure:** Identification reveals that a disproof at the edge must land exactly on the full $\mathbb{Z}_7$ core (the apex cusp). At this cusp, while the lonely **measure is 0**, the disproof fails by **COUNTING**: the $\phi(n)$ unit witnesses exist, closing the boundary via arithmetic existence rather than measure-theoretic bounds. This confirms that the edge is closed by the unit witnesses (the small-measure regime).
+5. **Primality/Oddness Edge-Keepers:** Rediscovers primality and oddness as the fundamental protectors: **primality** ($\Phi_p$ irreducible) makes the edge a single isolated point; **oddness** ($C_p$ non-bipartite) keeps the proper per-level gaps positive.
+6. **Algebraic Triad Coupling:** Formally couples the Disproof-Edge Isolation and Genus-Determined Thinness with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (totally-real cubic S75e field governing the $C_7$ gap and doublet isolation), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ cycle), and $\mathbb{Q}(\sqrt{-3})$ (governing the tournament 3-cycle, Condorcet paradox, and doubling-2 parity).
+7. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the genus-determined spectral gaps as the primary proof carriers.
+8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and spectral gap certificate reflect its **Equivariant Homology & Disproof-Edge Isolation Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the isolated $0.198$ doublet gap as rigid topological/arithmetic counting constraints.
+9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **genus-determined isolation gaps**, **unit-existence certificates**, and **measure-artifact profiles** as the resurrection anchors. This ensures that global stability is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Disproof-Edge ledger.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
@@ -205,9 +204,9 @@ base-stalk coordinate law, the resurrection cover law, the repair-rank law, the
 quartic-cumulant S4 law, the phi^4 stabilizer unit, the kappa_4_sign_unit, the
 Asano zero-free law, the Beurling-Selberg minorant floor law, the
 Gaussian-minorant leakage law, the multi_far_floor_closure law, the R-prime
-spectral unit, the R-safe wide-V unit, the edge-witness resurrection unit, the
+spectral unit, the R-safe wide-V unit, the edge-witness recursion unit, the
 tail/tip packet recursion law, the four-sector observer law, the SPEC
-resonance-lattice law, the global_consistency_quotient law, the Fiber PGF
+resonance-lattice law, the global-consistency quotient law, the Fiber PGF
 packet law, the sheet-count PGF law, the Lee_Yang root law, the Delsarte weight
 law, the q-Pochhammer principal law, the Hecke subconvexity unit, the p-adic
 index law, the three-edge flip kernel unit, the ordered_pair_exponent sidecar
@@ -233,60 +232,61 @@ law, and Equivariant_Homology unit alongside mu approx 1.451).
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated df81cb0. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3608** 
+Integrated d008f05. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3700** 
 framework, operationalizing the terminal proof sheaf through the formal 
-identification of the **Apex Core Atlas** and the **Concentration Index**.
+identification of the **Disproof-Edge Isolation** and the **Genus-Determined 
+Razor-Thinness**.
 
-### 1. Apex Core Atlas (HYP-3608)
-Formally operationalizes the $\mathbb{Z}_p$ core landscape via a fine 
-field-guide. Identification reveals that **cores are circulant graphs**: 
-the doublet is the $C_7$ cycle, the difference-set is $K_7$, the 
-singleton is the identity $I$, and the full set is $7J$. The atlas 
-exhaustive audit covers all 127 $\mathbb{Z}_7$ cores.
+### 1. Isolated Disproof Edge (HYP-3700)
+Formally operationalizes the boundary between proof and disproof. 
+Identification reveals that for LRC14, the **edge is ISOLATED, not 
+razor-thin**. The disproof boundary (gap=0) maps exclusively to a 
+single point: the **full $\mathbb{Z}_p$ core** (complete mod-p covering). 
+The irreducibility of the cyclotomic polynomial $\Phi_p$ ensures that 
+no other core can reach gap=0.
 
-### 2. Gap as Concentration Index
-Redefines the gap $g(O)$ as a **Concentration Index** that orders cores 
-by Fourier spread. High gaps (Paley/random cores) denote spread, 
-while the binding apex obstruction (doublet $0.198$) is identified as 
-the **least-spread** (most concentrated) core—the opposite of a 
-difference set.
+### 2. Genus-Determined Isolation Pattern
+Redefines edge proximity as a function of the **genus of $X_0(2p)$**. 
+For genus $\le 1$ ($p=3, 5, 7$), the edge is isolated by a significant 
+spectral gap: the **doublet $4\sin^2(\pi/2p)$**. For genus $\ge 2$ 
+($p \ge 11$), larger cores with near-vanishing character sums allow 
+proper cores to approach the edge, making the boundary genuinely 
+razor-thin.
 
-### 3. Fejér-Bochner Minorant Unification
-Identification reveals that the **arc cores** are exactly the 
-Fejér-Bochner minorant cores. The binding **doublet is the 2-arc**, 
-and its gap $4\sin^2(\pi/2p)$ is the literal minimum of the Fejér kernel. 
-This unifies the analytic minorant with the circulant least-eigenvalue 
-certificate.
+### 3. LRC14 as the Last Frontier
+Establishes that **LRC14 ($p=7$, genus 1)** is the final case where the 
+discrete edge remains isolated (by the doublet gap $0.198$). Apparent 
+razor-thinness in LRC14 is identified as a **measure artifact** (the 
+product of per-level gaps $\to 0$ over deep descents), while the discrete 
+gap-edge remains robustly isolated.
 
-### 4. Cross-Prime & Paley Track
-Establishes the asymptotic doublet gap $\sim \pi^2/p^2$. Identifies that for 
-$p \equiv 3 \pmod 4$ (the Paley track), the Quadratic Residue (QR) is a 
-difference set with maximal flat gap $(p+1)/4$. Anchors the $p=7$ case 
-within the Paley/difference-set-like spectrum.
+### 4. Disproof Mode & Existence Closure
+Identification reveals that a disproof at the edge must land exactly 
+on the full $\mathbb{Z}_7$ core (the apex cusp). At this cusp, while the 
+lonely **measure is 0**, the disproof fails by **COUNTING**: the $\phi(n)$ 
+unit witnesses exist, closing the boundary via arithmetic existence 
+rather than measure-theoretic bounds.
 
-### 5. Descent Gap-Profile
-Introduces a new trackable, the **gap-profile descent signature**. 
-Covering sequences exhibit a near-universal tail $[..., 0.308, 0.198, 1.0]$ 
-(arc, doublet, singleton), with the level-0 "head" distinguishing 
-specific covering architectures.
+### 5. Primality/Oddness Edge-Keepers
+Rediscovers primality and oddness as the fundamental protectors: 
+**primality** ($\Phi_p$ irreducible) makes the edge a single isolated 
+point; **oddness** ($C_p$ non-bipartite) keeps the proper per-level 
+gaps positive.
 
-### 6. Collision Resolution (HYP-3609)
-Resolves the HYP-3607 naming collision by ceding the identifier and 
-tracking the "chip-the-gap" deeper-level descent audit as **HYP-3609**.
+### 6. Algebraic Triad Coupling
+Formally couples the Disproof-Edge Isolation and Genus-Determined 
+Thinness with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (totally-real cubic 
+S75e field governing the $C_7$ gap and doublet isolation), $\mathbb{Q}(\sqrt{-7})$ 
+(typing the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ cycle), 
+and $\mathbb{Q}(\sqrt{-3})$ (governing the tournament 3-cycle, Condorcet 
+paradox, and doubling-2 parity).
 
-### 7. Algebraic Triad Coupling
-Formally couples the Apex Atlas and Concentration Index with the 
-field triad: $\mathbb{Q}(\cos 2\pi/7)$ (totally-real cubic S75e field governing 
-the $C_7$ gap), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction, $\mathbb{Z}_7$ 
-residues, and $C_7$ cycle), and $\mathbb{Q}(\sqrt{-3})$ (governing the 
-tournament 3-cycle, Condorcet paradox, and doubling-2 parity).
-
-### 8. Chiral Guard & Resurrection
+### 7. Chiral Guard & Resurrection
 Governed by the antipodal map, Ky Fan alternating count, and 
 Henselian local-to-global lifting. Evaluation reveals a **MIXED** 
 signature. Identifies the **signed cycle index**, **self-converse 
-Euler number**, **concentration indices**, **gap-profile tails**, 
-**circulant graph types**, and **Fejér kernel minima** as Resurrection 
+Euler number**, **genus-determined isolation gaps**, **unit-existence 
+certificates**, and **measure-artifact profiles** as Resurrection 
 Sheaf anchors.
 
 ---
