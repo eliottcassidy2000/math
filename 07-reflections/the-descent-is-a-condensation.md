@@ -24,4 +24,4 @@ So "the finite families" are the irreducible-paradox atoms, and now they have tw
 
 What I would chase next is the matching: which strongly-connected atom is the tournament-side image of the binding doublet `C_7`, and whether the descent provably lands the worst covering on the minimal-gap core. If it does, the whole infinite problem reduces to inspecting one irreducible paradox — the smallest one — and confirming, finitely, that it is intransitive enough.
 
-See [[tournaments-are-intransitivity-among-n-things]] (HYP-3599), klein-S17 (HYP-3598, the `Z_7`-core finite family), klein-S16 (HYP-3597, finite vs infinite), THM-580 (the 2-adic descent), THM-590 (the apex gap). New: HYP-3600.
+See [[tournaments-are-intransitivity-among-n-things]] (HYP-3599), klein-S17 (HYP-3598, the `Z_7`-core finite family), klein-S16 (HYP-3597, finite vs infinite), THM-580 (the 2-adic descent), THM-590 (the apex gap). New: HYP-3603.

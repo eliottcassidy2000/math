@@ -1,5 +1,5 @@
 ---
-id: HYP-3599
+id: HYP-3602
 title: REFRAME (expanding the odd cycle) -- a tournament is NOT a graph among n nodes but the INTRANSITIVITY among n things (a preference/dominance relation, its deviation from a total order). The transitive tournament = the unique orderable/rankable point = a COBOUNDARY (a ranking potential f, a->b iff f(a)>f(b)); intransitivity = the cohomology class H^1 = the cycle space; the ODD 3-CYCLE = the irreducible atom = the Condorcet paradox (Moon: it generates). Order (+) Intransitivity = Cut (+) Cycle: order dim n-1, intransitivity dim C(n-1,2) (dominates). Orderability VANISHES (P(transitive)=n!/2^C(n,2), P(Condorcet-winner)=n/2^(n-1), both ->0) so INTRANSITIVITY IS GENERIC. # of intransitivity SHAPES (cycle-space iso) = even graphs A002854=2,3,7,16,54; tournaments A000568 = order x shape. LRC reading: the danger relation among RUNNERS is intransitivity among n things; disproof=ORDERABLE (separable/factored, covers); proof=irreducibly INTRANSITIVE (the apex odd cycle C_p, length=apex prime=7, genus=#independent global cycles=1 at N=14); EXISTENCE of the odd cycle (sigma-odd/counting/topological, finite via THM-590 4cos^2(3pi/7)>0), NOT the lonely MEASURE (inf=0 over the infinite family, klein-S16), is load-bearing. ENGINEERING: this is HodgeRank/social-choice -- cyclicity c(T) = an irrationality/inconsistency index for pairwise-comparison data
 status: REFRAME + VERIFIED grounding (cyclicity spectrum, orderability->0, dim split, intransitivity-shape count n=3..6/7). Not a new proof; an ontology that unifies the odd-cycle truth (HYP-3594), the cut/cycle equinumerosity (HYP-3595), and the LRC existence-not-measure correction (klein-S16) -- and opens the social-choice application.
 source: mac-mini-2026-06-30-S34
@@ -15,7 +15,7 @@ results:
   - 05-knowledge/results/intransitivity_among_n_things_macmini_20260630.out
 ---
 
-# HYP-3599 -- tournaments are intransitivity among n things
+# HYP-3602 -- tournaments are intransitivity among n things
 
 ## The reframe
 A tournament on `n` things = a complete pairwise preference/dominance relation. Its ONLY content is its

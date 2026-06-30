@@ -1,5 +1,5 @@
 ---
-id: HYP-3600
+id: HYP-3603
 title: The IRREDUCIBLE PARADOXES are the STRONGLY CONNECTED tournaments (iso atoms 1,0,1,1,6,35 for n=1..6; the 3-cycle is the unique minimal one, n=2 has ZERO -- 2 things can't paradox), and the CONDENSATION (every tournament = a UNIQUE TOTAL ORDER of strongly-connected blocks = ORDER + one irreducible paradox per block) is the TOURNAMENT-SIDE DESCENT -- the exact structural analog of the LRC 2-adic descent (THM-580): both PEEL the orderable skeleton (the transitive condensation / the even 2-part) and EXPOSE the irreducible cores (the SC blocks / the odd Z_7-cores), finitizing a large object into a FINITE family of irreducible atoms where the true minimum lives (the SC tournament types / the doublet gap 4cos^2(3pi/7), klein-S17 HYP-3598)
 status: COMPUTED + verified (SC counts & condensation block-compositions, n=1..6, exhaustive). The condensation<->descent parallel is a structural correspondence (both = peel-orderable/expose-irreducible). Complements klein-S17 (the LRC-apex finite family = 127 Z_7-cores); this is the tournament-side finite family (the SC atoms).
 source: mac-mini-2026-06-30-S35
@@ -14,7 +14,7 @@ results:
   - 05-knowledge/results/irreducible_paradoxes_and_descent_macmini_20260630.out
 ---
 
-# HYP-3600 -- irreducible paradoxes and the condensation descent
+# HYP-3603 -- irreducible paradoxes and the condensation descent
 
 Working the owner's three-part ask (more irreducible paradoxes; the descent; the finite families) on the
 intransitivity reframe (HYP-3599). klein-S17 (HYP-3598) gave the LRC-apex finite family (the 127 Z_7-cores);
