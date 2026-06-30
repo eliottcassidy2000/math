@@ -1,0 +1,29 @@
+================================================================================
+ Weight-2 dims on Gamma_0(2p): BULK (Eisenstein) vs OBSTRUCTION (cusp forms = genus)
+================================================================================
+  N=2p apex  #cusps dimEis=cusps-1  dimCusp=genus                   note
+     6    3       4              3              0          LRC(6) SOLVED
+    10    5       4              3              0    apex5 not Mers/Heeg
+    14    7       4              3              1     LRC(14) FIRST HARD
+    22   11       4              3              2                 apex11
+    26   13       4              3              2                 apex13
+ => BULK/Eisenstein is CONSTANT (=3, four cusps) across the family; OBSTRUCTION/cusp = genus
+    grows 0,0,1,2,2. The genus is the DIMENSION of the missing global (cusp-form) modes.
+
+================================================================================
+ Z_p core-gap landscape  gap(O)=min_{k!=0}|sum_{x in O} w_p^{kx}|^2  (the apex cyclotomic gap)
+================================================================================
+  p= 3 (X_0(2p) genus 0): 2 distinct gap values; min nonzero=1.00000 at O=(0,); doublet gap=1.00000
+        distinct gaps = [0.0, 1.0]
+  p= 5 (X_0(2p) genus 0): 3 distinct gap values; min nonzero=0.38197 at O=(0, 1); doublet gap=0.38197
+        distinct gaps = [0.0, 0.38197, 1.0]
+  p= 7 (X_0(2p) genus 1): 5 distinct gap values; min nonzero=0.19806 at O=(0, 1); doublet gap=0.19806
+        distinct gaps = [0.0, 0.19806, 0.30798, 1.0, 2.0]
+  p=11 (X_0(2p) genus 2): 15 distinct gap values; min nonzero=0.00777 at O=(0, 1, 2, 3, 7); doublet gap=0.08101
+        distinct gaps = [0.0, 0.00777, 0.05592, 0.08101, 0.09593, 0.13897, 0.25018, 0.27155, 0.4236, 0.57482, 0.60212, 0.85945, 1.0, 1.08101, 3.0]
+  p=13 (X_0(2p) genus 2): 36 distinct gap values; min nonzero=0.00491 at O=(0, 1, 2, 3, 5, 11); doublet gap=0.05812
+        distinct gaps = [0.0, 0.00491, 0.01436, 0.02923, 0.03773, 0.05812, 0.06551, 0.07502, 0.08456, 0.09296, 0.13024, 0.14905, 0.16739, 0.22232, 0.25006, 0.26519, 0.29675, 0.35323, 0.36685, 0.39012, 0.48667, 0.53782, 0.54315, 0.58998, 0.61225, 0.68235, 0.69722, 0.80217, 0.81704, 0.98801, 1.0, 1.08456, 1.58998, 1.6228, 1.69722, 3.0]
+
+ NOTE: the doublet gap = min_k 2+2cos(2pi k/p) DECREASES with p (0.198 at 7) independent of genus;
+ the genus distinction is GLOBAL (the cusp-form/obstruction dim), not the local gap-landscape min.
+ Cross-check (persistence test for hardness=genus): genus 0 vs 1 is about the GLOBAL obstruction.

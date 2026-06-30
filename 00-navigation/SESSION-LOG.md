@@ -1,4 +1,38 @@
-## klein-2026-06-29-S10 -- LONG cusp session: the 4 cusps of X_0(14) ARE the Klein group; LRC hardness = genus(X_0(2p)); the obstruction is the genus-1 cusp form f_14; + a procedurally-generated reframe grid (HYP-3586)
+## klein-2026-06-29-S11 -- the GENUS IS THE LOCAL-GLOBAL GAP: bulk constant (Eisenstein=3), obstruction = cusp form (=genus); the concrete step worked; the one master dichotomy (HYP-3587)
+
+Prompt: another reframe-heavy session on the concrete next step (decompose Gamma_0(14) 2nd moment into
+Eisenstein + f_14, bound the cusp piece) + understand what the genus shift FUNDAMENTALLY represents + find
+more synthesizing points.
+
+WHAT THE GENUS MEANS (verified, script lrc14_eisenstein_cusp_genus_meaning_klein.py): weight-2 on Gamma_0(2p)
+= Eisenstein (dim = #cusps-1 = 3, CONSTANT across the LRC family = the BULK) + cusp forms (dim = genus =
+0,0,1,2,2 = the OBSTRUCTION). => THE GENUS IS THE DIMENSION OF THE GLOBAL MODES THE BOUNDARY/CUSP DATA DOES
+NOT DETERMINE = the LOCAL-GLOBAL GAP (cusp forms vanish at all cusps). genus 0 (LRC(6)) = boundary determines
+the floor (Hasse / Euler product / bulk rehearsal SUFFICES); genus 1 (LRC(14)) = ONE global mode (the cusp
+form f_14 = rank-0 elliptic curve 14a) the rehearsal cannot see = the obstruction. This is the MEANING behind
+'the testbed models the bulk not the cusp' (klein-S4) and 'hardness = genus' (HYP-3586).
+
+CONCRETE STEP WORKED: the decomposition is 3 Eisenstein + 1 f_14. Cusp forms VANISH at cusps, so the f_14
+VALUE at the apex cusp is 0; the obstruction is the LEADING q-expansion COEFFICIENT of f_14 at the d=7 cusp
+-- a single finite number (rank 0 => non-degenerate, floor bounded away from 0). So the floor = one finite
+LOCAL computation (the 2^7-core cyclotomic min, HYP-3581, done) + one GLOBAL number (the apex-cusp leading
+coeff of f_14). The hard part has a name and a finite shape.
+
+VERIFIED: genus 1 <=> the DOUBLET binds (0.198=4cos^2(3pi/7), THM-578); genus>=2 (p=11,13) => LARGER cores
+bind BELOW the doublet (gaps 0.0078, 0.0049 at {0,1,2,3,7},{0,1,2,3,5,11}). So N=14 is the LAST case whose
+obstruction is a doublet = the last bespoke-tractable LRC (a sharper 'why 14' than Mersenne-Heegner-3mod4).
+
+THE MASTER DICHOTOMY (synthesis): every two-index split = ONE local-global split, dim(global)=genus:
+Eisenstein/cusp = boundary/interior = Hasse/genus-gap = sigma-even/sigma-odd = R-even/R-odd (THM-584) =
+bulk/obstruction = Euler-product(HYP-3550)/anti-Littlewood(HYP-3551) = the 2^7-core cyclotomic min/the global
+f_14. Everything computable is the LOCAL column; the one missing thing is the genus-dim GLOBAL column (one
+cusp form at genus 1). MORE synthesizing points: nu_2=0<=>Paley keeps the genus a clean integer; anti-
+Littlewood = the global obstruction to local (Littlewood) vanishing; 14a bad reduction at 2,7 = the local
+cusp factors; (speculative, persistence-test-first) floor constant ~ period/L(f_14,1).
+
+Reflection: the-genus-is-the-local-global-gap-and-the-one-master-dichotomy. No canon overridden; no court
+cases. NEXT (floor owners): bound the leading apex-cusp coefficient of f_14 (the rank-0 newform 14a); confirm
+LRC(6) is pure-Eisenstein (no cusp form) as the genus-0 control.
 
 Prompt: work the next 3 moves; long session on cusp behavior + abnormalities; think freely for big shifts;
 FORCE procedural reframe generation.
