@@ -1,0 +1,18 @@
+[A] The refuted route's blind-spot sets ARE certified by a prime witness:
+    S=[1, 2, 3, 12]...  rho*=0 but N(S,19)=2>=1  -> M>=1/14
+    S=[1, 2, 3, 6]...  rho*=0 but N(S,37)=2>=1  -> M>=1/14
+    S=[1, 2, 3, 18]...  rho*=0 but N(S,37)=2>=1  -> M>=1/14
+
+[B] THM-566 divisor-loaded S_B={1..11,13,84*lcm(1..B)}: density STABLE at a fixed large prime
+    p=1009: B11(7d):N/p=0.0119  B26(13d):N/p=0.0099  B41(20d):N/p=0.0119  B60(27d):N/p=0.0099  B100(43d):N/p=0.0099
+    p=4999: B11(7d):N/p=0.0108  B26(13d):N/p=0.0088  B41(20d):N/p=0.0100  B60(27d):N/p=0.0096  B100(43d):N/p=0.0096
+
+[C] lonely-measure(S) = large-prime density limit, > 0  <=>  M(S) > 1/14:
+    core {1..11,13}        : 0.01216
+    rho*=0 [1, 2, 3, 12]... : 0.04888
+    rho*=0 [1, 2, 3, 6]... : 0.05957
+    rho*=0 [1, 2, 3, 18]... : 0.04144
+    random covering sample (n=300): min lonely-measure = 0.06438; 5 smallest = [0.0644, 0.0648, 0.0694, 0.0746, 0.0763]
+
+    => the live target is: lonely-measure(S) >= c0 > 0 uniformly over covering 13-sets,
+       i.e. N(S,p) > 0 at some prime p -- an exponential-sum lower bound (the analytic core).

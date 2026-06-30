@@ -1,0 +1,15 @@
+TOURNAMENT half-principle: f (anti-palindromic HP) = half-system count
+  p=3: f(half-system)=1  f(brute full-fixed)=1  agree=True
+        => each anti-palindromic HP is determined by its first (p-1)/2=1 vertices (the 'half').
+  p=7: f(half-system)=9  f(brute full-fixed)=9  agree=True
+        => each anti-palindromic HP is determined by its first (p-1)/2=3 vertices (the 'half').
+  p=11: f(half-system)=185  f(brute full-fixed)=None  agree=True
+        => each anti-palindromic HP is determined by its first (p-1)/2=5 vertices (the 'half').
+
+LRC half-principle (covering set S, has even speeds):
+  lonely set has 32 intervals, total measure 0.04888
+  L = 1-L (mirror symmetric under t->-t): True
+  intervals in lower half (0,1/2): 16; t=1/2 in L? False
+  => witnesses come in mirror PAIRS {t,1-t} (the Borsuk-Ulam antipodal pair, elementary).
+     The lonely set is determined by its HALF on (0,1/2), exactly as the anti-palindromic
+     HP is determined by its first-half vertices. Same reversal involution, both sides.

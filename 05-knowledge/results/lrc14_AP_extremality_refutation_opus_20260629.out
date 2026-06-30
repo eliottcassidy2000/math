@@ -1,0 +1,6 @@
+VALIDATE U4(consec_8)=2633/7350=0.358231 -> computed 0.358231
+
+k=12 (order t=2): U2(AP)=0.7142; MAX over shapes(spread<=14)=0.7330 at [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14]
+        #shapes beating AP=14  ->  HYP-2607 REFUTED (AP not max)
+k=13 (order t=2): U2(AP)=0.7489; MAX over shapes(spread<=15)=0.7619 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15]
+        #shapes beating AP=13  ->  HYP-2607 REFUTED (AP not max)

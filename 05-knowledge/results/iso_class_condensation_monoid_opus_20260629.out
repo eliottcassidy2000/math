@@ -1,0 +1,15 @@
+H-atoms (H of strongly-connected primes) per size:
+  size 1: SC primes have H in [1]
+  size 2: SC primes have H in []
+  size 3: SC primes have H in [3]
+  size 4: SC primes have H in [5]
+  size 5: SC primes have H in [9, 11, 13, 15]
+  size 6: SC primes have H in [15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+
+verify H multiplicative over condensation (n=5,6):
+  n=5: H == product over primes for ALL 12 classes: True
+  n=6: H == product over primes for ALL 56 classes: True
+
+=> H(tournament) = PRODUCT of H over its strongly-connected primes (the recursive
+   compression: factor into SC atoms, look up each atom's H). The atoms are the
+   incompressible cores; everything reducible multiplies cleanly.

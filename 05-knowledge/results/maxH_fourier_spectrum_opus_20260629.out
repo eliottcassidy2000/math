@@ -1,0 +1,22 @@
+(1) PROOF Paley not max at n=19 (exact integers, two DP routes):
+  H(Paley_19): route1=1172695746915 route2=1172695746915 agree=True
+  H(rot_19)  : route1=1184212824763 route2=1184212824763 agree=True
+  rotational - Paley = 11517077848 > 0 : True  => Paley is NOT the maximizer at 19. QED.
+
+(2) Fourier spectrum mu_j = sum_{d in C} omega^{jd}  (omega=e^{2pi i/n}):
+  n= 7      Paley: mu_0=3.0; Re(mu_j)=-1/2 for j!=0? True; |Im| in [1.32,1.32] (Paley: flat~sqrt(n)/2=1.32)
+  n= 7  half-turn: mu_0=3.0; Re(mu_j)=-1/2 for j!=0? True; |Im| in [0.24,2.19] (Paley: flat~sqrt(n)/2=1.32)
+  n=11      Paley: mu_0=5.0; Re(mu_j)=-1/2 for j!=0? True; |Im| in [1.66,1.66] (Paley: flat~sqrt(n)/2=1.66)
+  n=11  half-turn: mu_0=5.0; Re(mu_j)=-1/2 for j!=0? True; |Im| in [0.15,3.48] (Paley: flat~sqrt(n)/2=1.66)
+  n=19      Paley: mu_0=9.0; Re(mu_j)=-1/2 for j!=0? True; |Im| in [2.18,2.18] (Paley: flat~sqrt(n)/2=2.18)
+  n=19  half-turn: mu_0=9.0; Re(mu_j)=-1/2 for j!=0? True; |Im| in [0.08,6.03] (Paley: flat~sqrt(n)/2=2.18)
+  n=23      Paley: mu_0=11.0; Re(mu_j)=-1/2 for j!=0? True; |Im| in [2.40,2.40] (Paley: flat~sqrt(n)/2=2.40)
+  n=23  half-turn: mu_0=11.0; Re(mu_j)=-1/2 for j!=0? True; |Im| in [0.07,7.31] (Paley: flat~sqrt(n)/2=2.40)
+
+  => Paley: |Im| FLAT = sqrt(n)/2 (Gauss sum, Ramanujan-extremal spectrum).
+     half-turn: |Im| SPREAD, large at low freq (Dirichlet/cotangent kernel).
+     Both live on the vertical line Re=-1/2 (forced: C is a tournament sign-set).
+
+  LRC link: the LRC danger band is also a Z_p subset; its transform is the SAME Dirichlet
+  kernel phi-hat, and the Gauss sum i*sqrt(p) is the LRC sign-obstruction. Max-H selects the
+  Dirichlet (concentrated) shape; LRC's hard part is the Gauss (flat) shape. One dichotomy.

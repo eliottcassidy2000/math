@@ -1,0 +1,17 @@
+V1+V2 exact identity (*) and m2 dilate-overlap reproduce N:
+   S=(1, 2, 3) p=29: N=18 expansion=18.0000 match=True
+   S=(1, 2, 5) p=31: N=20 expansion=20.0000 match=True
+   S=(2, 3, 7) p=37: N=24 expansion=24.0000 match=True
+   S=(1, 2, 3, 4, 5) p=41: N=24 expansion=24.0000 match=True
+
+V3 non-truncation: N = main + m2 + rem(m>=3); resonant 'core' vs generic
+   core (resonant)   p=503: N=  6 | main=   69.6 m2=   51.2 rem(m>=3)=  -114.8
+   core (resonant)   p=1009: N= 12 | main=  134.3 m2=  105.3 rem(m>=3)=  -227.6
+   generic covering  p=503: N= 50 | main=   69.6 m2=   10.2 rem(m>=3)=   -29.8
+   generic covering  p=1009: N=102 | main=  134.3 m2=   18.3 rem(m>=3)=   -50.5
+
+V4 witness-prime density (N(S,p)>=1, p<=1500 coprime):
+   core {1..11,13}: 0.948
+   divisor-loaded B=26 (13-digit): 0.926
+   divisor-loaded B=60 (27-digit): 0.946
+   divisor-loaded B=150 (66-digit): 0.946

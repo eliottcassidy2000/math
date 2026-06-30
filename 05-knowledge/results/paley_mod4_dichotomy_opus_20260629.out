@@ -1,0 +1,12 @@
+  p  p%4     neg=          H       f    a=triv    b=sign         c   b/(a+b)
+  3    3 anti-aut          3       1         1         0         1    0.0000  int=True
+  5    1      AUT         10       0         1         1         2    0.5000  int=True
+  7    3 anti-aut        189       9        18         9        27    0.3333  int=True
+ 11    3 anti-aut      95095     185      4415      4230      8645    0.4893  int=True
+ 13    1      AUT    1579968       0     60768     60768    121536    0.5000  int=True
+ 19    3 anti-aut 1172695746915  573057 30860700921 30860127864 61720828785    0.5000  int=True
+
+DICHOTOMY: p=1mod4 -> f=0, a=b, b/(a+b)=1/2 exactly (reflection has no fixed path).
+           p=3mod4 -> f>0, a>b by exactly f, b/(a+b)<1/2 ->1/2 (anti-palindromic HPs).
+The discriminant is the REVERSAL forced by the anti-automorphism -- the same p mod 4
+that gives Borsuk-Ulam(odd) vs Brouwer(even), imaginary vs real, Q(sqrt-p) vs Q(sqrt p).

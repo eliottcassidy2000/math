@@ -1,0 +1,11 @@
+ n  P_n(1)=A000568  P_n(-1)=SC  NS=(A-SC)/2 V_merged=(A+SC)/2
+ 3               2           2            0                 2   OK
+ 4               4           2            1                 3   OK
+ 5              12           8            2                10   OK
+ 6              56          12           22                34   OK
+ 7             456          88          184               272   OK
+ 8            6880         176         3352              3528   OK
+ 9          191536        2752        94392             97144   OK
+
+klein THM-587: SC = 2,2,8,12,88,176 (n=3..8). Extension below if n=9 computed.
+NS = R-odd block dim = where the Borsuk-Ulam/Ky-Fan obstruction lives (klein: the LRC odd index).

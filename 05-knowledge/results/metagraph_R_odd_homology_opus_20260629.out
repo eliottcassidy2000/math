@@ -1,0 +1,5 @@
+n=4: V=4 E=5 comp=1 | b0=1 b1=2 | SC(R-fixed verts)=2 tr(R|C1)=1 tr(R|H1)=0 | b1^+=1 b1^-(R-ODD)=1
+n=5: V=12 E=30 comp=1 | b0=1 b1=19 | SC(R-fixed verts)=8 tr(R|C1)=12 tr(R|H1)=5 | b1^+=12 b1^-(R-ODD)=7
+n=6: V=56 E=290 comp=1 | b0=1 b1=235 | SC(R-fixed verts)=12 tr(R|C1)=8 tr(R|H1)=-3 | b1^+=116 b1^-(R-ODD)=119
+
+R-ODD Betti b1^- = the cycle-space obstruction dimension; candidate match to LRC cap M_odd (2-dim).

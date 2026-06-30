@@ -1,0 +1,24 @@
+[1] EXACT canon check: mu_k = rho*(empty, {0..k-1})
+    mu_3  =          1  claim 1  OK
+    mu_4  =      19/21  claim 19/21  OK
+    mu_5  =       9/14  claim 9/14  OK
+    mu_13 =   829/4620  claim 829/4620  OK
+    consecutive floor = 1/84 at k=9, P=(1, 2, 3, 12)  (claim 1/84: OK)
+
+[2] UNCONDITIONAL union bound rho* >= mu(E) - |P|/7  (proves rho*>0 for k>=12):
+    k=11: mu_consec=0.2160 - 2/7 = -41/588 = -0.0697  -> inconclusive
+    k=12: mu_consec=0.2030 - 1/7 = 389/6468 = 0.0601  -> PROVES rho*>0
+    k=13: mu_consec=0.1794 - 0/7 = 829/4620 = 0.1794  -> PROVES rho*>0
+
+[3]+[4] REFUTATION: admissible primitive covering 13-sets with rho*=0, yet lonely
+    P=(1, 2, 3, 12) E=[0, 2, 3, 4, 5, 6, 7, 8, 10]
+       rho*=0  |  covering set S=[1, 2, 3, 12, 18, 20, 21, 22, 23, 24, 25, 26, 28]
+       primitive=True covering=True | M(S)=1/9=0.1111 at t=17/27 (>=1/14: True)
+    P=(1, 2, 3, 6) E=[0, 1, 2, 4, 5, 6, 7, 8, 10]
+       rho*=0  |  covering set S=[1, 2, 3, 6, 18, 20, 21, 22, 23, 24, 26, 27, 28]
+       primitive=True covering=True | M(S)=5/41=0.1220 at t=10/41 (>=1/14: True)
+    P=(1, 2, 3) E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+       rho*=0  |  covering set S=[1, 2, 3, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+       primitive=True covering=True | M(S)=1/9=0.1111 at t=11/45 (>=1/14: True)
+
+==> inf rho* = 0 (route's c0>0 conjecture REFUTED); sets remain lonely. All checks pass: True

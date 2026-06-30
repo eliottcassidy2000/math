@@ -1,0 +1,20 @@
+C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\maxH_circulant_opus_20260629.py:7: SyntaxWarning: invalid escape sequence '\S'
+  i->j iff (j-i mod n) in connectset, where connectset = S union {n-k : k in {1..(n-1)/2}\S}.
+Extend A038375 via circulant search (odd n). max H over 2^{(n-1)/2} circulants:
+  n   #circ   maxH(circ)   A038375             argmax S QR achieves?
+  3       2            3         3                   []          YES
+  5       4           15        15                   []          YES
+  7       8          189       189                  [3]          YES
+  9      16         3357      3357                  [1]     no(3159)
+ 11      32        95095         ?                  [2]          YES
+ 13      64      3711175         ?                   []  no(3669497)
+ 15     128    198464295         ?                   [] no(196264905)
+
+NEW sequence candidate -- MIN H over circulant tournaments (smallest 'rotational core'):
+  n=3: minH(circ)=3
+  n=5: minH(circ)=15
+  n=7: minH(circ)=175
+  n=9: minH(circ)=3159
+  n=11: minH(circ)=92411
+  n=13: minH(circ)=3669497
+  n=15: minH(circ)=193215375

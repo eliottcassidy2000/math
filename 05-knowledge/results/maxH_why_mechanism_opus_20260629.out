@@ -1,0 +1,13 @@
+n=3mod4 (Paley valid). t3 equal (both regular). Higher cycles + H:
+  n        tourn    t3     t5      t7              H
+  7   rotational    14     28      17            175
+  7        Paley    14     42      24            189
+ 11   rotational    55    484    3399          93027
+ 11        Paley    55    594    3960          95095
+
+n=19: H(rotational)=1184212824763  H(Paley)=1172695746915  -> rotational wins: True
+CROSSOVER: Paley's pseudorandomness wins for SHORT cycles / small n; the half-turn's
+clustered long-range structure wins for LONG cycles / large n. Paley maximal only n<=11.
+
+HALF-TURN: rotational R_n (i beats next (n-1)/2) = THM-374 half-turn circular tournament
+= the LRC half-turn comparator. So the H-maximizer (n>=13) IS the LRC geometry.

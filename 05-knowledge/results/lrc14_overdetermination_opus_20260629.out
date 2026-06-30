@@ -1,0 +1,12 @@
+PART A -- bad primes confined below P0(S)=max(S)/(2(M(S)-1/14)):
+  S(max=14): M=0.0833 margin=0.0119 P0=   588 | bad primes<4000: 12 (max 73) -> all < P0: True
+  S(max=28): M=0.1111 margin=0.0397 P0=   353 | bad primes<4000: 3 (max 31) -> all < P0: True
+  S(max=39): M=0.0870 margin=0.0155 P0=  1256 | bad primes<4000: 38 (max 547) -> all < P0: True
+
+PART B -- far elements RAISE M (help): drop smallest, add a far speed:
+  bounded base [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]: Mproxy=0.1250
+  -> add far 1300 (max=1300): Mproxy=0.1762  cov=True prim=True
+  -> add far 4862 (max=4862): Mproxy=0.2199  cov=True prim=True
+  -> add far 716 (max=4862): Mproxy=0.2474  cov=True prim=True
+  -> add far 2289 (max=4862): Mproxy=0.2894  cov=True prim=True
+  (M rises as resonant small speeds are replaced by far ones => bounded-core is the hard case)
