@@ -37,6 +37,39 @@ No canon overridden; no court cases.
 NEXT (floor owners): decompose the Gamma_0(14) 2nd moment into Eisenstein + f_14 and bound the f_14 piece at
 the apex cusp; confirm genus<->hardness on LRC(6) (should be pure-Eisenstein/no cusp form). Pairs w/ mac-mini
 S30 (the doublet/3-cycle cusp rehearsal).
+## mac-mini-2026-06-29-S31 -- OPEN QUESTION ANSWERED: the cusp value 4cos^2(3pi/7) is the EVEN-GRAPH DUAL (2+lambda_min(C_7)), NOT the tournament metagraph; uniform E_p-cusp formula 4sin^2(pi/2p) (HYP-3586)
+
+Prompt: work the open question (S30: does the metagraph H->1 corner reproduce 4cos^2(3pi/7)?); read a
+bunch of our metagraph work for inspiration.
+
+Read the metagraph corpus (launched an Explore agent over 15+ files: THM-584/586/587/588/589, the
+reflections, even-graph dual). Used THM-588 (Fiedler=cyclicity=3-cycle; mult(1)=0 no cut invariant,
+mult(2)=1), THM-586 (Paley=H-max), the even-graph dual E_n.
+
+HONEST ANSWER (a clean split):
+- NO on the tournament side. The 8 Z_7 circulant TOURNAMENTS of G_n give only gaps {0.308 (6 generic,
+  H=175), 2.0 (2 Paley/Fano, H=189=H-MAX, =flat/octonion-optimal, Gauss sum (1+7)/4)}. The LRC binding
+  0.198 is SUB-tournament (0.198 < 0.308 = the minimal tournament gap). A doublet (size 2) is not a
+  tournament connection set (those are size 3).
+- YES on the EVEN-GRAPH DUAL E_n. A doublet depends only on its difference d; its autocorrelation =
+  2I + A(C_7) where C_7 = 7-cycle = Cay(Z_7,{+-d}). So 4cos^2(3pi/7) = 2+2cos(6pi/7) = 2+lambda_min(A(C_7))
+  EXACTLY (machine-verified) = the spectral floor of the minimal Z_7-circulant EVEN graph = the cusp of E_7.
+
+So the floor binds on the CYCLE-SPACE / DUAL metagraph. REFINES S30: the tournament 3-cycle (G_n Fiedler =
+cyclicity, Z_3, gap 1) and the LRC doublet (E_n 7-cycle, Z_7) are not a same-side mirror but G_n<->E_n
+DUAL minimal cycles -- the apex prime sets the length (3 on the cut side, 7 on the cycle side, because
+14=2*7). THM-588 foretold it (no cut invariant, only the cyclicity => binding content is cycle-space).
+Optimum on the primal (Paley=flat=H-max), floor on the dual (7-cycle).
+
+UNIFORM E_p-CUSP FORMULA (LRC at n=2p): binding value = 2+lambda_min(C_p) = 2-2cos(pi/p) = 4sin^2(pi/2p);
+verified p=3,5,7,11,13: LRC6=1, LRC10=0.382, LRC14=0.198, LRC22=0.081, LRC26=0.058. Asymptotic ~pi^2/p^2 ->0
+(larger apex prime = smaller floor = HARDER). NEXT: does the descent's R-tail (THM-578) literally land on
+C_p (the minimal even graph)? If so the floor's last bound IS the E_p cusp eigenvalue, uniform in p.
+
+Files: HYP-3586, reflection the-floor-binds-on-the-dual-side.md, script
+cusp_value_vs_metagraph_apex_layer_macmini_20260629.py(+.out), proof-state memory. Broadcast.
+
+## mac-mini-2026-06-29-S30 -- CUSP EXPLORATION: mapped the apex cusp landscape + FOUND the missing cusp rehearsal (metagraph H->1 binds at the 3-cycle = the LRC doublet's mirror) (HYP-3585)
 
 Prompt: work the next move (cusp behavior); spend a long session on cusp details, abnormalities, new
 things to track.
