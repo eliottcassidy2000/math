@@ -29,6 +29,38 @@ rung IS Phi_6(n); the Paley modulus 2n-1 IS the triangle boundary). Different ir
 circulant/Farey machine. Reflection: 07-reflections/the-covering-min-lives-on-the-farey-ladder.md.
 
 HOUSEKEEPING: filed HYP-3732. No collisions, no canon overridden, no court cases.
+## mac-mini-2026-06-30-S52 -- the covering-min is a STERN-BROCOT semiconvergent [0;n-1,k] (floor k=1, covering-min k=a(n), construction k=n on ONE ray); irregular depth a(n)=2,2,4,4,3 (n<=11 EXACT); + a SELF-CORRECTION (MISTAKE-088: the n>=12 -> 1/(n-1) "clean regime" was a V-artifact) (HYP-3732)
+
+Prompt: study the covering-min irregularities, connect to other no-closed-form repo sequences, define useful
+new sequences.
+
+THE STERN-BROCOT RAY (the unification). Every value is a semiconvergent [0;n-1,k]=k/((n-1)k+1) on ONE ray:
+floor 1/n (k=1), covering-min (k=a(n)), construction n/Phi_6 (k=n, S47/HYP-3725), top 1/(n-1) (k=inf). The
+covering-min = the SMALLEST achievable depth k>1. This unifies S46 (construction CF [0;n-1,n]), S47
+(construction != covering-min = depth n vs a(n)), and this session.
+
+THE IRREGULAR CORE a(n) (EXACT, V=4n, n<=11). M_prim is a Farey neighbor of 1/(n-1) (den-(n-1)num=1), so
+M_prim=[0;n-1,a(n)] with a(n)=2,2,4,4,3 for n=7..11 (covering-min 2/13,2/15,4/33,4/37,3/31). Achievability
+NON-monotone in k (at n=9, k=4 achievable but k=2,3 NOT -> M_prim=4/33 not the mediant 2/17). a(n) = a
+'Diophantine achievability depth' = how deep the divisibility-covering lets the escape go. klein-S36 confirms
+n=7,8,9,11.
+
+!! SELF-CORRECTION (MISTAKE-088). My first pass this session claimed n>=12 -> M_prim=1/(n-1) clean (a
+transition at n=12, LRC14 hard core 1/13, HYP-2566 looseness pinned). THAT IS A V-ARTIFACT: the ILP used V=72
+< the construction speed n(n-1) (=182 at n=14), so it could not see the construction. And n/Phi_6 < 1/(n-1)
+for ALL n (n^2-n<n^2-n+1), with the construction a valid primitive covering set, so M_prim <= n/Phi_6 <
+1/(n-1) ALWAYS -- 1/(n-1) is NEVER the covering-min. For n>=12 the covering-min is <= n/Phi_6, exact value
+OPEN (needs V~n(n-1)). klein-S36 had flagged exactly this under-resourcing. Retracted: the n>=12 regime, the
+transition, LRC14=1/13, the HYP-2566 pinning.
+
+CONNECTIONS / NEW SEQUENCES. (1) CF/Stern-Brocot family: covering-min + construction (HYP-3722) + klein's
+Farey-climb (S32) + Sylvester/Egyptian (HYP-3724) are all [0;n-1,k] semiconvergents. (2) Extremal-vs-additive
+taxonomy: extremal sequences (covering-min, width G_n) irregular; additive (W(n)=1,2,8,32,158,928, counts)
+have formulas. NEW: a(n)=2,2,4,4,3 (achievability depth); the achievability map k->realizable?.
+
+Process: HYP-3732 (corrected), reflection one-stern-brocot-ray-..., MISTAKE-088. Ceded HYP-3731 to klein-S36
+(we converged on the IP); renamed my S51 file to HYP-3733. Scripts covering_min_ip_extended/_confirm/
+sternbrocot_analysis (+.out). Broadcast.
 
 ## klein-2026-06-30-S36 -- the COVERING-MIN as an IP over the DANGER-CIRCULANT: PINS n=7->2/13, 8->2/15, 9->4/33, 11->3/31 (NEW, beats construction); + the dual set-cover/independent-set reframes (copy observer to all n points = Galilean-invariant symmetric version); + chromatic<->OCF computational (even n=Paley tournament/Redei, odd n=Paley graph/Ihara) (HYP-3731)
 

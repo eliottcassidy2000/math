@@ -1,0 +1,27 @@
+THE STERN-BROCOT RAY [0; n-1, k] = k/((n-1)k+1):  floor(k=1)=1/n  ...  top(k->inf)=1/(n-1)
+  the floor, the covering-min, AND the construction n/Phi_6 all live on this ONE ray:
+
+    n  floor 1/n=[0;n-1,1]   M_prim=[0;n-1,a]  a(n)  constr n/Phi6=[0;n-1,n]    margin
+    7                  1/7               2/13     2                     7/43      1/91
+    8                  1/8               2/15     2                     8/57     1/120
+    9                  1/9               4/33     4                     9/73      1/99
+   10                 1/10               4/37     4                    10/91     3/370
+   11                 1/11               3/31     3                   11/111     2/341
+   12                 1/12               1/11 inf(=1/(n-1))                   12/133     1/132
+   13                 1/13               1/12 inf(=1/(n-1))                   13/157     1/156
+   14                 1/14               1/13 inf(=1/(n-1))                   14/183     1/182
+   15                 1/15               1/14 inf(=1/(n-1))                   15/211     1/210
+
+KEY FACTS:
+  * M_prim is a FAREY NEIGHBOR of 1/(n-1) (den-(n-1)num=1) for n=7..11 -> M_prim=[0;n-1,a(n)].
+  * IRREGULAR CORE a(n) = 2,2,4,4,3 (n=7..11) = the smallest Stern-Brocot depth achievable by a
+    primitive covering set; achievability is NON-monotonic in k (a=4 achievable at n=9 but a=2,3 NOT).
+  * TRANSITION at n=12: the spread/semiconvergent family DIES (no proper [0;n-1,k] achievable);
+    M_prim = 1/(n-1) (the convergent, k->inf) = the (n-1)-consecutive LRC value (an n->n-1 FOLD).
+  * So M_prim CLEAN for n>=12: 1/(n-1), margin 1/(n(n-1)). LRC14 hard core = 1/13 (beats THM-523's
+    empirical 7/89; > 1/14 with margin 1/182). This PINS HYP-2566 looseness = 1/(n(n-1)) for n>=12.
+
+  Unification on the ray [0;n-1,k]:  k=1 -> 1/n (floor) ; k=a(n) -> covering-min ; k=n -> n/Phi_6
+  (construction, S47/HYP-3725) ; k->inf -> 1/(n-1). Covering-min = smallest achievable k>1.
+
+  verify: [0;n-1,1]=1/n and [0;n-1,n]=n/Phi6 for n=14: 1/14 = 1/14? True | 14/183 = 14/183? True

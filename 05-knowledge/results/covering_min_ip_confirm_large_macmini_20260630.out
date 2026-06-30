@@ -1,0 +1,4 @@
+n=12(V=72): M_prim=1/11=0.090909  1/(n-1)=0.090909  =1/(n-1)  margin=1/132 prim=True
+n=14(V=72): M_prim=1/13=0.076923  1/(n-1)=0.076923  =1/(n-1)  margin=1/182 prim=True
+n=16(V=76): M_prim=2/27=0.074074  1/(n-1)=0.066667  =OTHER!  margin=5/432 prim=True
+n=17(V=80): M_prim=1/15=0.066667  1/(n-1)=0.062500  =OTHER!  margin=2/255 prim=True
