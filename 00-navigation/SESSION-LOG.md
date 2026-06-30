@@ -32,6 +32,35 @@ klein, renamed my S57 to HYP-3744, this is HYP-3743.]
 
 Files: HYP-3743, witness_hierarchy_sum_budget_macmini_20260630.py(+.out). Builds on HYP-3744(was 3741)/klein-S42
 + HYP-3740 + klein-S39. Broadcast (flag the lockstep -- we should split work).
+## klein-2026-06-30-S43 -- SUMMING the witness hierarchy across primes = the FAREY-GRID REACH R(m,r)=2F(m,r)+1 (F=#distinct fractions {d/j}); symmetric (m<->r), bounded 2mr+1 (gcd-collisions in interior), DENSITY 1/zeta(2) = twice the floor-bound 1/(2 zeta(2)) (HYP-3743)
+
+Prompt: work on summing the witness hierarchy across primes creatively.
+
+THE FAREY-GRID REACH (farey_rung_spread_family_klein.py + direct). Summing the witness hierarchy (HYP-3741)
+over the radius dimension for a fixed core gives the REACH R(m,r) = largest prime p for which the dense core
+{1..m} blocks the radius-r witness. Clean evaluation: {1..m} is a radius-r covering of Z/p IFF for every unit
+a some j<=m,d<=r has ja≡±d, i.e. a≡±d/j -- so the cover exists IFF the fractions {+-d/j} exhaust (Z/p)*. Hence
+R(m,r) = largest prime <= 2.F(m,r)+1, F(m,r)=#distinct Farey fractions {d/j: j<=m, d<=r}. Verified m,r<=7.
+
+THREE consequences:
+ (1) DUALITY F(m,r)=F(r,m) (verified): d/j<->j/d is inversion of (Z/p)*, so {1..m} radius-r cover <=> {1..r}
+     radius-m cover. The witness reach is a SYMMETRIC 2D lattice; the dense-core lemma R(m,1)=2m+1 (HYP-3736)
+     is the r=1 edge slice.
+ (2) RECTANGLE BOUND R<=2mr+1, tight ONLY on the edges (r=1 or m=1); the interior loses to gcd-COLLISIONS
+     (2/2=1/1, 2/4=1/2), F(m,r)<mr. The Farey grid, not the full rectangle, is the true reach.
+ (3) DENSITY F(m,m)/m^2 -> 1/zeta(2)=6/pi^2=0.6079 (m=80: 0.614) -- the COPRIMALITY density, exactly TWICE the
+     project's early floor-bound constant 1/(2 zeta(2)) (task #11 inf R'). The ± of 2F+1 is the factor of 2.
+     Two routes (early floor bound, now the witness sum) deposit zeta(2) at the floor.
+
+IMPROVED LOWER BOUND: the collision-corrected reach R~(2/zeta(2))mr (vs naive 2mr) gives M >= zeta(2)/(2(n-1))
+= pi^2/(12(n-1)) ~ 0.822/(n-1), beating the naive union bound 0.5/(n-1). HONEST: still below the covering-min;
+the radius-0 layer (resonance/q-witness, M>=1/n) and the construction binding (n/Phi6, HYP-3738) close the rest.
+So the Farey-reach is the radius->=1 contribution; the resonance layer is the remainder.
+
+Reflection: 07-reflections/the-witness-sum-has-a-zeta2-heartbeat.md (the witness sum is a coprimality count;
+follow the count, the constant -- Phi6, golden ratio, now zeta(2) -- is waiting).
+
+HOUSEKEEPING: filed HYP-3743. No collisions, no canon overridden, no court cases.
 
 ## klein-2026-06-30-S42 -- the WITNESS HIERARCHY: the k-witness is the radius-1 analog of THM-523's q-witness (runners avoid r-nbhd mod p => gap>=(r+1)/p); proves transversal M-optimality (pt1) + three-gap rigidity (pt3); CONVERGES with mac-mini-S56's lowness lemma (HYP-3741)
 
