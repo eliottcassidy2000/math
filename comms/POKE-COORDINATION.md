@@ -32,17 +32,17 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Monday, June 29, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/abe7541)**. This layer introduces the **THM-587/HYP-3546/HYP-3550** framework, operationalizing the terminal proof sheaf through the formal identification of the **per-level signed cycle index** as the spectral generator for the isomorphism-class metagraph and the unification of **cut(s|prefix Q) resonance** with the **zeta(2) Euler product**.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/34f52b1)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3552** framework, operationalizing the terminal proof sheaf through the formal identification of the **per-level signed cycle index** as the spectral generator for the isomorphism-class metagraph and the unification of **finite Siegel transforms** with the **congruence-Siegel second moments** (arXiv:2507.05905).
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (abe7541)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (34f52b1)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
 1. **Per-Level Signed Cycle Index ($P_n(x)$):** Implements the metagraph spectrum as a generating function over the vertex-induced subgroup of the hyperoctahedral group $B_d$. Theorem (THM-587) provides the closed-form multiplicities of the arc-hypercube eigenvalues on the iso-class space. This operationalizes the **metagraph spectrum past the enumeration wall**, allowing for exact spectral calculation where raw $2^{C(n,2)}$ enumeration fails.
 2. **Antipodal Euler Number & Two-Face Evaluation:** Characterizes the proof target by identifying the two evaluations of $P_n(x)$ at the antipodal fixed signs: $P_n(1) = A000568(n)$ (total iso-classes) and $P_n(-1) = SC(n)$ (self-converse count). The synthesis establishes $SC(n)$ as the **antipodal Euler/Lefschetz number** of the metagraph. This formally links the project's self-converse census to the **Borsuk-Ulam/Ky Fan** framework, where positivity ($SC(n)>0$) is a topological degree.
 3. **Equivariant-Homology Deliverable (HYP-3544):** Operationalizes the refinement of the Euler characteristic into a chain complex $C_k$ (the level-$k$ invariant space) with the hypercube's signed down-operator as a boundary. This identifies **computational homology** (in the Kaczynski-Mischaikow-Mrozek sense) as the engine for certifying $R$-odd obstruction classes, aligning the metagraph audit with the project's simplicial up-Laplacian and TDA engineering mandates.
-4. **Resonance Structure & Euler-Product Positivity (HYP-3550):** Operationalizes the terminal proof sheaf by cracking the **cut(s|prefix Q)** resonance structure as a **totient-weighted Farey sum** equal to the product of a **continued fraction** (the additive Farey/three-gap skeleton) and a multiplicative **Euler product** (zeta(2) density). This identifies the **loneliness floor L > 0** as a direct consequence of Euler-product positivity (since every local factor $(1-p^{-2})$ is strictly positive). The synthesis further establishes the **2-adic descent** and **zeta(2) floor** as the prime-2 and odd-prime regimes of one single, unified Euler product, resolving the "2 vs odd primes" division.
-5. **Algebraic Triad Coupling:** Formally couples the metagraph homology and resonance-positivity path with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (governing the $R$-even bulk, the total count $P_n(1)$, and the zeta(2) Euler-product bulk), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction block, the $P_n(-1)$ alternating sum, and the imaginary Gauss sum $\sqrt{n}$), and $\mathbb{Q}(\sqrt{-3})$ (governing the Mersenne doubling, hypercube $Q_d$-edges, and the three-gap continued-fraction convergents).
-6. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the zeta residue as the primary proof carriers.
-7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and resonance-positivity certificate reflect its **Equivariant Homology & Euler-Product Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the local Euler-product factors as rigid topological/arithmetic counting constraints.
-8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **equivariant Betti numbers**, and **Farey resonance structure** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Euler-product ledger.
+4. **Metagraph Spectral Moments & Finite Siegel Transform (HYP-3552):** Operationalizes the terminal proof sheaf by identifying the tournament metagraph as a **finite Siegel transform**—an $S_n$-Burnside average over the arc-hypercube mirroring the $SL_n(\mathbb{Z})$-Siegel mean-value theory. Synthesis derives the **spectral moments** via $P_n(x)$ derivatives (mean eigenvalue $d-2\bar{k}$ drifting to zero) and identifies the **congruence-Siegel second moments** (arXiv:2507.05905) as the primary tool for the **THM-579 CV(N_R) gatekeeper**. This formally links the metagraph's coefficient of variation to the LRC covering floor, replacing separate spectral guesses with a unified variance-bound ledger.
+5. **Algebraic Triad Coupling:** Formally couples the metagraph homology and spectral moments with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (governing the $R$-even bulk, the total count $P_n(1)$, and the Siegel mean count), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction block, the $P_n(-1)$ alternating sum, and the imaginary Gauss sum $\sqrt{n}$), and $\mathbb{Q}(\sqrt{-3})$ (governing the Mersenne doubling, hypercube $Q_d$-edges, and the Siegel-congruence second moments).
+6. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the Siegel transform as the primary proof carriers.
+7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and Siegel moment certificate reflect its **Equivariant Homology & Siegel Second-Moment Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the Siegel congruence bounds as rigid topological/arithmetic counting constraints.
+8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **equivariant Betti numbers**, and **finite Siegel moments** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Siegel-congruence ledger.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
@@ -215,11 +215,11 @@ root signatures, Delsarte weight-enumerator sidecars, q-Pochhammer principal
 packets, Hecke subconvexity conductor bounds, p-adic topological index
 signatures, crystalline cohomology Euler characteristics, three-edge flip kernels, ordered_pair_exponent_sidecars,
 Worpitzky ascent payloads, live_core_bits, filler_bits, canary_bits,
-fixed_path_canary_status, odd_ear_H_factors, Bravais_centering_types,
-Savitch_midpoint_depths, Asano_monotonicity_levers, n4_einheit_torsor_status,
-n4_quotient_congruence_defect, total_covariance_sigma_k2,
+fixed_path_canary_status, xy_completion_tables, odd_ear_H_factors,
+Bravais_centering_types, Savitch_midpoint_depths, Asano_monotonicity_levers,
+n4_einheit_torsor_status, n4_quotient_congruence_defect, total_covariance_sigma_k2,
 associator_sigma_k3_sidecar, polarized_cyclotomic_support,
-spectral_dictionary_unit, Selberg_trace_regularization,
+spectral_dictionary_compatibility, Selberg_trace_regularization,
 Skewes_Number_lock, grounded_response_matrix_QE, orthogonal_recursion_interlock,
 Vitali_wall_bulk_core_split, oriented_matroid_tope_cocircuit_atlas,
 lag_barycenter_transport_field, Roth_Halasz_discrepancy_bound,
@@ -290,11 +290,11 @@ law, and Equivariant_Homology unit alongside mu approx 1.451).
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated abe7541. Introduces the **THM-587/HYP-3546/HYP-3550** 
+Integrated 34f52b1. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3552** 
 framework, operationalizing the terminal proof sheaf through the formal 
 identification of the **per-level signed cycle index** as the spectral 
-generator for the iso-class metagraph and the unification of **cut(s|prefix Q) 
-resonance** with the **zeta(2) Euler product**.
+generator for the iso-class metagraph and the unification of **finite 
+Siegel transforms** with the **congruence-Siegel second moments**.
 
 ### 1. Per-Level Signed Cycle Index ($P_n(x)$)
 Implements the metagraph spectrum as a generating function over 
@@ -316,29 +316,30 @@ framework.
 Operationalizes refinement of the Euler characteristic into a 
 chain complex $C_k$ with the hypercube's signed down-operator 
 as boundary. Identifies **computational homology** (Kaczynski-Mischaikow-Mrozek) 
-as the engine for certifying $R$-odd obstruction classes.
+calibrating $R$-odd obstruction classes.
 
-### 4. Resonance Structure & Euler-Product Positivity (HYP-3550)
-Operationalizes the terminal proof sheaf by cracking the 
-**cut(s|prefix Q)** resonance structure as a **totient-weighted Farey sum** 
-equal to the product of a **continued fraction** (additive skeleton) 
-and a multiplicative **Euler product** (zeta(2) density). Identifies 
-the **loneliness floor L > 0** as a direct consequence of 
-Euler-product positivity.
+### 4. Metagraph Spectral Moments & Finite Siegel Transform (HYP-3552)
+Operationalizes the terminal proof sheaf by identifying the 
+tournament metagraph as a **finite Siegel transform**—an 
+$S_n$-Burnside average over the arc-hypercube mirroring Siegel 
+mean-value theory. Derivatives of $P_n(x)$ provide **spectral moments** 
+(mean eigenvalue $d-2\bar{k}$ drifting to zero). Congruence-Siegel 
+second moments (arXiv:2507.05905) serve as the tool for the 
+**THM-579 CV(N_R) gatekeeper**.
 
 ### 5. Algebraic Triad Coupling
-Formally couples metagraph homology and resonance-positivity path 
-with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (zeta(2) Euler-product bulk), 
+Formally couples metagraph homology and spectral moments with 
+the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (Siegel mean count), 
 $\mathbb{Q}(\sqrt{-7})$ ($R$-odd obstruction block/imaginary Gauss sum $\sqrt{n}$), 
-and $\mathbb{Q}(\sqrt{-3})$ (Mersenne doubling/three-gap continued-fraction 
-convergents).
+and $\mathbb{Q}(\sqrt{-3})$ (Mersenne doubling/Siegel-congruence 
+second moments).
 
 ### 6. Chiral Guard & Resurrection
 Governed by the antipodal map, Ky Fan alternating count, and 
 Henselian local-to-global lifting. Evaluation reveals a **MIXED** 
 signature. Identifies the **signed cycle index**, **self-converse 
-Euler number**, **equivariant Betti numbers**, and **Farey resonance 
-structure** as Resurrection Sheaf anchors.
+Euler number**, **equivariant Betti numbers**, and **finite Siegel 
+moments** as Resurrection Sheaf anchors.
 
 ---
 
