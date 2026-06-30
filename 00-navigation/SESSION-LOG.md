@@ -1,3 +1,33 @@
+## mac-mini-2026-06-30-S55 -- the uniqueness theorem is M-UNIQUENESS not base-uniqueness (literal base-uniqueness FAILS: 1406 band-coverers at n=13; but the construction is the strict M-minimizer); Zeckendorf = OSTROWSKI numeration (klein-S40); converges w/ klein-S40 (HYP-3739)
+
+Prompt: work the uniqueness theorem; think Zeckendorf connections.
+
+NAIVE TARGET OVERTURNED: "the consecutive base {1..n-2} is the UNIQUE band-coverer" is FALSE. At n=13 there are
+1406 valid (n-2)-bases covering 2..n-2 + the radius-1 band interior. They split by klein-S39's killer-OR-
+transversal dichotomy: each band prime p in (n,2n-3] is handled by a ±-transversal (the consecutive base, all
+of them) OR a KILLER (a multiple of p, e.g. the base {13..23} uses 23 as the killer for p=23). So band-coverage
+is far from unique.
+
+BUT M-UNIQUENESS HOLDS: the construction (consecutive base {1..n-2} + lcm outlier n(n-1)) is the STRICT
+M-MINIMIZER. n=13: construction 13/157 vs killer-block {13..23}+out 13/49 and shifted {2..12}+out 2/15 -- both
+>> 13/157. n=14: 0 of all single-perturbations (small-speed swap or outlier change) beat OR tie 14/183. So the
+covering-min is unique IN M, not in band-coverage. RIGOROUS ROUTE: M-minimization among killer-or-transversal
+band-coverers (klein's budget), NOT a base-uniqueness lemma -- a useful redirection.
+
+ZECKENDORF = OSTROWSKI (the precise answer, klein-S40): M=[0;n-1,k] is the unique OSTROWSKI representation --
+the continued-fraction generalization of Zeckendorf (Zeckendorf = Ostrowski for the golden CF [1;1,1,..]); the
+ladder denominators k(n-1)+1 are the 2-term continuants K(n-1,k); the binding three-gap {1,n,2n} realizes the
+representation geometrically. The construction = the CANONICAL GREEDY (all-transversal low base + minimal
+killer) = the Ostrowski-canonical form. Joins the project's greedy thread (Sylvester-Egyptian HYP-3724).
+
+CONVERGES w/ klein-S40 (HYP-3738, same cluster): klein PROVED the construction binding (rotation a=n, D=Phi6,
+images = core AP of multiples of n + killer ≡(n-2)n+1 splitting the wrap gap 2n+1 into {1,2n}; the unit gap IS
+the +1 in Phi6; gaps {1,n,2n}, sum Phi6, verified n=5..9) + uniqueness-of-invariants-not-covering (n=7 has 2
+coverings: spreader-route + band-prime-killer-route). Ceded HYP-3738 to klein, renamed mine to HYP-3739.
+
+OPEN (both): the SPREAD-regime binding (n=7..11 spreads are NOT three-gap, n=7 spread gaps {1,1,2,2,3,4}); the
+full M-uniqueness proof. Files: HYP-3739, coveringmin_uniqueness_zeckendorf_macmini_20260630.py(+.out). Broadcast.
+
 ## klein-2026-06-30-S40 -- the CONSTRUCTION BINDING is PROVED (D=Phi6=(n-1)n+1 ≡ 1 mod (n-1) via explicit images: core AP of multiples of n + killer (n-1)^2 splitting the wrap gap into {1,2n}; three-gap {1,n,2n}); + UNIQUENESS (D/rung unique, covering not: n=7 has 2); + Ostrowski/Zeckendorf address (HYP-3738)
 
 Prompt: work on proving the binding and the uniqueness theorem; think Zeckendorf-related connections.

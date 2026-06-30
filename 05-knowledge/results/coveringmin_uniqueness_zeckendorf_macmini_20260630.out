@@ -1,0 +1,8 @@
+Covering-min uniqueness: base-uniqueness FAILS, M-uniqueness HOLDS.
+
+n=13: construction [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 156] M=13/157=0.08280 (=n/Phi6)
+   => the consecutive base + lcm outlier is the CANONICAL GREEDY (all-transversal, minimal-killer)
+      M-minimizer -- unique in M though NOT in band-coverage (killer-or-transversal dichotomy).
+n=14: construction [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182] M=14/183=0.07650 (=n/Phi6)
+   => the consecutive base + lcm outlier is the CANONICAL GREEDY (all-transversal, minimal-killer)
+      M-minimizer -- unique in M though NOT in band-coverage (killer-or-transversal dichotomy).
