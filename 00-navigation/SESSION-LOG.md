@@ -1,3 +1,34 @@
+## klein-2026-06-29-S29 -- the observer escapes at the CONVERGENT, not the MEDIANT: the killer blocks the mediant 1/n (parks at 0), forcing the convergent n/Phi_6(n)>1/n (HYP-3718)
+
+Prompt: work the natural next targets; push the realizability node in observer terms (why the convergent,
+not the mediant, is the observer's escape for n>=7).
+
+THE OBSERVER ESCAPE LADDER (verified, script observer_escape_convergent_not_mediant_klein.py). n/Phi_6(n)=
+[0;n-1,n] has semiconvergents j/(j(n-1)+1), j=1..n: j=1 = 1/n (the MEDIANT = the LRC threshold), j=n =
+n/Phi_6(n) (the CONVERGENT = the covering-min). For {1..12,182} the lonely gap M(t)=min_s||s t|| at the
+semiconvergent t=j/(13j+1) EQUALS that semiconvergent value, climbing monotonically 0.0741->0.0765:
+  j=1 (mediant 1/14): M=0 BLOCKED -- killer 182 sits at 0 (182*(1/14)=13 in Z);
+  j=14 (convergent 14/183): M=14/183 = the MAX escape, >1/14.
+
+THE REALIZABILITY NODE (the heart). The minimal killer lcm(n-1,n)=n(n-1) has n(n-1)/n=n-1 in Z, so at the
+mediant time t=1/n the killer sits EXACTLY at the observer (0) -- the mediant escape is BLOCKED for every n
+(verified n=4,7,10,14). A covering set is REQUIRED to kill resonance n (THM-523), and the minimal killer
+that does so is precisely the point landing at 0 at t=1/n. So the covering condition ITSELF blocks the
+mediant escape, forcing the observer to the next realizable node -- the CONVERGENT n/Phi_6(n)>1/n. The
+covering floor's strict positivity above 1/n IS the gap between the blocked mediant and the realized
+convergent: n/Phi_6(n)-1/n = (n-1)/(n.Phi_6(n)) (= the 'uniform looseness', HYP-2566).
+
+THE CUSP/OFF-CUSP SPLIT: mediant 1/n = the tight extremal {1..n-1} (measure-0 cusp, M=1/n, the classical
+proven small-n case); convergent n/Phi_6(n) = the COVERING regime (positive measure, off-cusp, M>1/n, the
+open n>=7 / apex-genus>=1 case -- apex prime 7, genus(X_0(2p)) jumps to 1 at N=14). So for n>=7 the relevant
+(covering) escape is the convergent, strictly above the mediant.
+
+GLOBAL OPTIMALITY (the other next target): structured scan over densest-core families (n=14) finds min M =
+14/183 at {1..12,182}; nothing beats it (supports global-min, HYP-3551). Still open as a theorem (exotic
+coverings), but the convergent-escape mechanism explains WHY the floor sits at the convergent not the
+mediant. No canon overridden; no court cases. NEXT: the global covering-min theorem + the 1D<->2D metric
+bridge.
+
 ## klein-2026-06-29-S28 -- the THREE-GAP THEOREM gives the covering-min directly (killer splits the core's big gap 29->1+28, M=14/183>1/14); torus lift = a 2-row hexagonal patch (HYP-3717)
 
 Prompt: work the natural next step (LRC->2D reduction); work BOTH the torus lift AND the three-distance gaps directly.
