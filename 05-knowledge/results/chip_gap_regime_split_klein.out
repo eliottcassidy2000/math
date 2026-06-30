@@ -1,0 +1,52 @@
+==================================================================================
+ (1)+(3) the regime split: descended-set size, m', union bound, CV(N2), CS floor by level
+==================================================================================
+
+ consec{1..13}:
+   lvl | |S^j| |O_j| | m'(=m lonely S^{j+1}) | union 1-|S'|/7 | CV(N2_Oj) | CS floor 1-CV.sqrt((1-m')/m') | g(Oj)
+     0 |   13    7 |               0.4571 |       0.1429 |     1.398 |                      -0.5229 | 0.000 <-- RIGOROUS (|S'|<=6: m'>=union>0)
+     1 |    6    3 |               0.6905 |       0.5714 |     0.383 |                       0.7435 | 0.308 <-- RIGOROUS (|S'|<=6: m'>=union>0)
+     2 |    3    2 |               0.8571 |       0.8571 |     0.328 |                       0.8662 | 0.198 <-- RIGOROUS (|S'|<=6: m'>=union>0)
+     3 |    1    1 | (terminal, all-odd)
+
+ tightest{1..12,182}:
+   lvl | |S^j| |O_j| | m'(=m lonely S^{j+1}) | union 1-|S'|/7 | CV(N2_Oj) | CS floor 1-CV.sqrt((1-m')/m') | g(Oj)
+     0 |   13    6 |               0.3881 |       0.0000 |     1.047 |                      -0.3148 | 1.000 (OPEN: |S'|>=7, dense)
+     1 |    7    4 |               0.6905 |       0.5714 |     0.518 |                       0.6535 | 0.308 <-- RIGOROUS (|S'|<=6: m'>=union>0)
+     2 |    3    2 |               0.8571 |       0.8571 |     0.328 |                       0.8662 | 0.198 <-- RIGOROUS (|S'|<=6: m'>=union>0)
+     3 |    1    1 | (terminal, all-odd)
+
+ skip12{1..11,13,84}:
+   lvl | |S^j| |O_j| | m'(=m lonely S^{j+1}) | union 1-|S'|/7 | CV(N2_Oj) | CS floor 1-CV.sqrt((1-m')/m') | g(Oj)
+     0 |   13    7 |               0.4367 |       0.1429 |     1.398 |                      -0.5871 | 0.000 <-- RIGOROUS (|S'|<=6: m'>=union>0)
+     1 |    6    3 |               0.6769 |       0.5714 |     0.383 |                       0.7353 | 0.308 <-- RIGOROUS (|S'|<=6: m'>=union>0)
+     2 |    3    2 |               0.8571 |       0.8571 |     0.391 |                       0.8402 | 0.198 <-- RIGOROUS (|S'|<=6: m'>=union>0)
+     3 |    1    1 | (terminal, all-odd)
+
+ binding{1..13}\7:
+   lvl | |S^j| |O_j| | m'(=m lonely S^{j+1}) | union 1-|S'|/7 | CV(N2_Oj) | CS floor 1-CV.sqrt((1-m')/m') | g(Oj)
+     0 |   12    6 |               0.4571 |       0.1429 |     0.946 |                      -0.0314 | 1.000 <-- RIGOROUS (|S'|<=6: m'>=union>0)
+     1 |    6    3 |               0.6905 |       0.5714 |     0.383 |                       0.7435 | 0.308 <-- RIGOROUS (|S'|<=6: m'>=union>0)
+     2 |    3    2 |               0.8571 |       0.8571 |     0.328 |                       0.8662 | 0.198 <-- RIGOROUS (|S'|<=6: m'>=union>0)
+     3 |    1    1 | (terminal, all-odd)
+
+==================================================================================
+ (2) the descent's payoff: 2-SHEET CV bounded vs 14-SHEET CV unbounded (HYP-3554), small cores
+==================================================================================
+   core O (odd, |O| small) | m(lonely) | CV(N2) 2-sheet | CV(N14) 14-sheet
+   [1]                      | 0.8571    |        0.264  |        0.000
+   [1, 3]                   | 0.7619    |        0.328  |        0.044
+   [1, 3, 5]                | 0.6476    |        0.383  |        0.094
+   [1, 2, 3]                | 0.6905    |        0.523  |        0.049
+   [1, 3, 5, 9]             | 0.5524    |        0.534  |        0.120
+   [1, 2, 3, 4, 5]          | 0.5048    |        0.683  |        0.253
+   => for SMALL cores the 2-sheet CV is modest; the descent peels to small cores where CV is tame,
+      converting the unbounded 14-sheet variance route (HYP-3554) into bounded 2-sheet pieces --
+      EXCEPT the top large core, where both blow up (the localized gap).
+
+==================================================================================
+ (4) the least-eigenvalue certificate g is BOUNDED in [4cos^2(3pi/7), 2] (never blows up):
+==================================================================================
+   g range over proper cores = [0.1981, 2.0]  (m-INDEPENDENT, discrete)
+   so where the measure CS bound dies (top, m'->0), the least-eigenvalue certificate persists --
+   it is exactly the robust object for the open top levels (the cusp regime).

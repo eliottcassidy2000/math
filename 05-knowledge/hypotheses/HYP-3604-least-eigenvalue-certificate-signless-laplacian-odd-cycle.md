@@ -10,6 +10,8 @@ related:
   - HYP-3594   # mac-mini S34: the truth is the ODD cycle (here = the odd C_7 that makes lambda_min>0)
   - THM-588    # algebraic connectivity / graph-spectral least eigenvalue
   - HYP-3599   # the bridge (the floor is sigma-even; this is its certificate)
+  - HYP-3606   # mac-mini-S37: CONVERGENT independent rediscovery (non-bipartiteness form); cites this
+  - HYP-3607   # klein-S20: chips the remaining gap (deeper levels closed, open part = level 0)
 results:
   - 04-computation/least_eigenvalue_certificate_klein.py
   - 05-knowledge/results/least_eigenvalue_certificate_klein.out
