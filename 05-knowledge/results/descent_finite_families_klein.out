@@ -1,0 +1,19 @@
+==================================================================================
+ Finite family of 2-adic descent cores (mod 7) over the covering family
+==================================================================================
+ distinct odd-cores (as integer sets): 494
+ distinct mod-7 residue-sets (the APEX finite family): 126 of 2^7=128 possible
+
+ residue-sets by apex gap value:
+   gap=0.000000: 1 residue-sets, sizes [7]  <-- Z_7 (covering boundary, gap 0)
+   gap=0.198062: 42 residue-sets, sizes [2, 5]  <-- DOUBLET binding = 4cos^2(3pi/7)
+   gap=0.307979: 41 residue-sets, sizes [3, 4]
+   gap=1.000000: 14 residue-sets, sizes [1, 6]
+   gap=2.000000: 28 residue-sets, sizes [3, 4]
+
+ inf apex-gap over arising NON-Z_7 cores = 0.198062  (4cos^2(3pi/7)=0.198062)
+ doublets (2-residue cores) that ARISE: 21 -- e.g. [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6)]
+ => doublets arise => inf apex-gap = 4cos^2(3pi/7) EXACTLY (THM-590 forbids anything lower).
+ min core size |O_j| arising: 1 ; sizes present: [1, 2, 3, 4, 5, 6, 7]
+
+ is the apex family ALL 2^7 residue-sets? False  (else CONSTRAINED to 126)

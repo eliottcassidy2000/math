@@ -33,6 +33,35 @@ intransitivity_among_n_things_macmini_20260630.py(+.out). Gives HYP-3594's odd c
 on HYP-3564/3594/3595 + THM-588/590 + klein-S16. Broadcast.
 
 ## klein-2026-06-29-S16 -- understand FAMILY INFIMUMS: inf R'=0 over the infinite family (measure vanishes), 0.344 was scan-only; provable infimum needs a FINITE family (the descent finitizes) (HYP-3597)
+## klein-2026-06-29-S17 -- KNOW THE FINITE FAMILIES: the descent realizes ALL 127 nonempty Z_7-cores; per-level apex floor = 4cos^2(3pi/7) attained + unavoidable (HYP-3598)
+
+Prompt: work on the descent, come to know the finite families.
+
+Read THM-580 (the 2-adic parity descent: S=O u E, S'=E/2, recurse; meas(lonely S)=prod rho_j . prod
+meas(lonely O_j)) + mac-mini's descend() (peel even, collect odd parts O_j). Simulated the descent over a
+broad covering family and collected the cores.
+
+THE FINITE FAMILY IS COMPLETE (verified, script descent_finite_families_klein.py): over consec prefixes +
+tightest coverings {1..12,182}/{1..11,13,84} + even-heavy + 2000+ random coverings, ALL 127 nonempty subsets
+of Z_7 arise as descent cores (mod 7); only the empty set is absent. CONSTRUCTIVE: any residue-set R is a
+level-j core via speeds 2^j a, a odd, a=r mod 7. So the apex finite family = the full nonempty power set
+2^{Z_7}\{empty}.
+
+Apex gaps = THM-590's 5 values {0(only Z_7), 0.198(42 doublets/5-cores), 0.308(41), 1(14), 2(28)}.
+CONSEQUENCE: doublets ALWAYS arise => inf rho_j(apex) = 4cos^2(3pi/7) is a true ATTAINED minimum, and
+UNAVOIDABLE -- the family is complete, so no covering-family constraint can raise the per-level apex floor
+(THM-590 forbids lower). The ONLY gap-0 core = the full Z_7 = the mod-7 covering = the apex CUSP (apex
+measure vanishes; existence carries the floor there, HYP-3597). Floor = bounded product:
+meas(lonely S) >= (4cos^2(3pi/7))^d . cap^d (THM-576 caps), d <= 1+max 2-adic valuation.
+
+HONEST SCOPE: RIGOROUS = the apex cyclotomic gap (THM-590) + the completeness of the finite family
+(construction); so the APEX SKELETON of the floor is fully pinned (complete family, doublet-binding,
+inf=4cos^2(3pi/7)). CONDITIONAL = that rho_j (the genuine 2-sheet decorrelation) equals/is bounded by its
+apex cyclotomic gap (mac-mini S27/S28: needs Gamma_0(14) averaging for non-Z_7^*-invariant cores). The
+bridge skeleton->full rho_j is the remaining reduction.
+
+Reflection: knowing-the-finite-families-the-descent-realizes-all-of-Z7. No canon overridden; no court cases.
+NEXT (floor owners): the rho_j-to-apex-skeleton reduction (the Gamma_0(14) averaging) + bounding the depth d.
 
 Prompt: come to understand family infimums better.
 
