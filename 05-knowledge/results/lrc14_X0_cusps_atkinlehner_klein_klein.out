@@ -1,0 +1,34 @@
+==================================================================================
+ X_0(N) modular data for the LRC(2p) family (klein-S10)
+==================================================================================
+  N=2p  psi  #cusps  nu2  nu3  genus   role
+     6   12       4    0    0      0   LRC(6) apex 3 -- SOLVED
+    10   18       4    2    0      0   (apex 5, not Mers/Heeg)
+    14   24       4    0    0      1   LRC(14) apex 7 -- FIRST HARD/OPEN
+    22   36       4    0    0      2   (apex 11)
+    26   42       4    2    0      2   (apex 13)
+ => genus(X_0(2p)) = 0,0,1,2,? for p=3,5,7,11,13; the genus JUMPS 0->1 exactly at N=14
+    (among LRC-relevant apices {3,7}: genus 0 = LRC(6) solved, genus 1 = LRC(14) first hard).
+
+==================================================================================
+ X_0(14): 4 cusps <-> divisors {1,2,7,14} <-> subsets of {2,7}; widths N/c
+==================================================================================
+   cusp d= 1  width=14   d=1  cusp at oo   : BULK (unbounded-far / interior)
+   cusp d= 2  width= 7   d=2  cusp        : DOUBLING (2-adic descent, W_2)
+   cusp d= 7  width= 2   d=7  cusp        : APEX-7 (speed-7, 7a/14=a/2 even/odd coupling) = HARD
+   cusp d=14  width= 1   d=14 cusp at 0   : FULL-DENSE (m_R->0, all mod-7 resonance = covering)
+   sum of widths = 24 = psi(14) = 24  (index check)
+
+ Atkin-Lehner action on cusps (W_q toggles prime q):
+   W_2: d1->d2, d2->d1, d7->d14, d14->d7
+   W_7: d1->d7, d2->d14, d7->d1, d14->d2
+   W_14=W_2 W_7 (Fricke): d1->d14, d2->d7, d7->d2, d14->d1
+ => W(14)={1,W_2,W_7,W_14} = (Z/2)^2 acts REGULARLY (simply transitively) on the 4 cusps
+    => THE 4 CUSPS ARE THE KLEIN FOUR-GROUP = the n=4 tournament classes {T,+,-,S} (THM-584).
+
+ Klein dictionary (THM-584: complement = coordinate swap; SC diagonal vs NS swapped pair):
+   d=1 (bulk)  <-> T (00, source&sink)        [identity]
+   d=2 (W_2)   <-> + (10, source killed)       [2-adic / doubling involution]
+   d=7 (W_7)   <-> - (01, sink killed)         [apex-7 involution] -- THE HARD CUSP
+   d=14 (W_14) <-> S (11, neither = strong)    [Fricke / full complement]
+   The 2-adic descent peels W_2; the residual apex is the W_7 cusp; the binding doublet sits there.

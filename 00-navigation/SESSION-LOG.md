@@ -1,4 +1,42 @@
-## mac-mini-2026-06-29-S30 -- CUSP EXPLORATION: mapped the apex cusp landscape + FOUND the missing cusp rehearsal (metagraph H->1 binds at the 3-cycle = the LRC doublet's mirror) (HYP-3585)
+## klein-2026-06-29-S10 -- LONG cusp session: the 4 cusps of X_0(14) ARE the Klein group; LRC hardness = genus(X_0(2p)); the obstruction is the genus-1 cusp form f_14; + a procedurally-generated reframe grid (HYP-3586)
+
+Prompt: work the next 3 moves; long session on cusp behavior + abnormalities; think freely for big shifts;
+FORCE procedural reframe generation.
+
+CONVERGENCE: mac-mini S30 (HYP-3585) mapped the Z_7-core gap landscape (arithmetic), ADOPTING my S9
+correction (min/minorant not S28-averaging). My S10 adds the modular-curve GEOMETRY -- complementary.
+
+THREE VERIFIED FACTS (script lrc14_X0_cusps_atkinlehner_klein_klein.py):
+(1) The 4 cusps of X_0(14) {d=1,2,7,14} ARE the KLEIN FOUR-GROUP: Atkin-Lehner W(14)=(Z/2)^2 acts REGULARLY
+=> cusps = the n=4 tournament classes {T,+,-,S} (THM-584 -- the arc of the WHOLE conversation closes:
+started at n=4 Klein, ends at the cusps = that Klein). Dictionary: d=1(width14)=BULK=T; d=2(7)=DOUBLING=+=W_2;
+d=7(2)=APEX-HARD=-=W_7; d=14(1)=FULL/covering=S=Fricke. The two order-2 structures = W_2 (descent)/W_7
+(apex); complement = Fricke W_14; the binding DOUBLET = the width-2 apex cusp.
+(2) genus(X_0(2p))=0,0,1,2,2 (p=3,5,7,11,13), JUMPS 0->1 at N=14 => LRC(6) genus0 SOLVED, LRC(14) genus1
+FIRST-HARD. REFRAME: LRC(2p) hardness = genus(X_0(2p)) (geometric 'why 14', companion to HYP-3547 arithmetic).
+(3) nu_2(X_0(2p))=0 iff apex=3mod4 iff Paley (the Borsuk-Ulam pillar) -- the elliptic-point count IS the
+Paley condition.
+
+THE ABNORMALITY / BIG REFRAME (conjecture): X_0(14) is genus 1 = the rank-0 curve 14a, carrying a weight-2
+CUSP FORM f_14 that genus-0 X_0(6) lacks. The Gamma_0(14) 2nd moment = Eisenstein(bulk) (+) cusp-form(f_14);
+the metagraph/CV(H) rehearsal sees only the Eisenstein/bulk; the MISSING PIECE = the f_14 component at the
+apex cusp = the obstruction. So 'what we're missing' = a genus-1 cusp form at d=7.
+
+PROCEDURAL REFRAME GRID (objects x lenses, ★=big): D*D spectral gap at apex cusp ★; cusps=Klein ★★;
+floor=Eisenstein+f_14 ★★; cusps=places=adelic Euler product, hardness=local-global (genus0=Hasse,
+genus1=Sha-like) ★; hardness=genus ★★; descent=flow to apex cusp ★; doublet=difference-set MIN vs Fano=optimal.
+
+ABNORMALITIES TO TRACK: genus jump at 14; cusps=Klein; nu_2=0<=>Paley; 14a rank 0; the '6' cluster (phi(14)=6
+vs 6 isogeny curves -- PERSISTENCE TEST, likely a trap); doublet=apex cusp.
+
+Reflection: the-cusps-are-the-klein-group-hardness-is-the-genus. THE SHIFT: treat LRC(14) as the arithmetic
+geometry of the rank-0 genus-1 curve X_0(14) (cusps=Klein, AL=two-order-2, genus=hardness, f_14=obstruction);
+everything else (metagraph, antipodal, signed cycle index, descent, doublet) = charts on this one curve.
+No canon overridden; no court cases.
+
+NEXT (floor owners): decompose the Gamma_0(14) 2nd moment into Eisenstein + f_14 and bound the f_14 piece at
+the apex cusp; confirm genus<->hardness on LRC(6) (should be pure-Eisenstein/no cusp form). Pairs w/ mac-mini
+S30 (the doublet/3-cycle cusp rehearsal).
 
 Prompt: work the next move (cusp behavior); spend a long session on cusp details, abnormalities, new
 things to track.
