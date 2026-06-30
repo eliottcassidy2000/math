@@ -1,0 +1,13 @@
+==============================================================================
+ Task 2: Singer Z_7 / Fano test on H_1^-(G_5), dim 7  (klein-S6)
+==============================================================================
+ G_5: V=12, E=30, SC(fixed by R)=8
+ |Aut(G_5)| = 2;  element orders present = [1, 2]
+ (A) order-7 automorphism (Singer Z_7 on the 12 vertices) exists: False
+ H_1 dim beta1=19;  b_1^-=7  (R_* -1-eigenspace)
+ (B) no order-7 automorphism -> no graph-Singer-Z_7; any Fano structure is NOT from graph symmetry.
+ (C) R-swapped vertex pairs (NS complement-pairs): 2 pairs -> [(1, 7), (2, 5)]
+     #NS pairs = 2; b_1^-=7.
+
+ VERDICT: see whether (A)/(B) reveal a Singer Z_7; else 7 = dim coincidence (b_1^- = 0,1,7,119,1772,
+ not a 7-pattern; 7|b_1^- holds n=5,6 but fails n=7).

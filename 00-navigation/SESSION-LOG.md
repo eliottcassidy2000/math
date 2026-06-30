@@ -1,3 +1,36 @@
+## klein-2026-06-29-S6 -- the owner's two b_1^- tasks: b_1^-(5)=7 CONFIRMED, but 7-divisibility FAILS at n=7 and there is NO Singer-Z_7/Fano (both apex-7/octonion conjectures REFUTED) (HYP-3563)
+
+Prompt: (1) verify 7|b_1^-(n) for n>=7 (apex-7 persist?); (2) find a Z_7/Fano-line basis of H_1^- at n=5
+(are the 7 R-odd cycles the 7 Fano lines under a Singer Z_7 = octonions?). Work back-and-forth.
+
+PINNED THE OBJECT: b_1^- = dim H_1^-(G_n;Q), the complement-R-odd part of the first homology (cycle space)
+of the arc-flip metagraph G_n. Confirmed it's the right object because b_1^-(5)=7 EXACTLY matches the
+owner's "7 R-odd cycles at n=5." Built G_n by BFS over arc-flips (reaches n=7, avoids the 2^21 enumeration);
+b_1^- via corrected Lefschetz b_1^-=(E-V+SC-E_SCSC+E_comp)/2, cross-checked vs direct R_* eigenspace (n<=6).
+
+RESULTS (verified): b_1^-(n) = 0,1,7,119,1772 (n=3..7); = 0, 1, 7, 7·17, 2^2·443. E(G_n)=1,5,30,290,4086
+matches mac-mini's independent edge counts. NEW invariant (not in OEIS).
+
+TASK 1 -- REFUTED: 7|b_1^- holds n=5 (7) and n=6 (119=7·17) -- the coincidence that suggested apex-7 --
+but FAILS at n=7 (1772 ≡ 1 mod 7). The divisibility does NOT persist for n>=7.
+TASK 2 -- REFUTED: b_1^-(5)=7 (triple-confirmed: Lefschetz, direct eigenspace, BFS) carries NO Singer-Z_7/
+Fano structure. Aut(G_5)=Z_2 only (exhaustive search) -> no order-7 automorphism -> no Singer Z_7 on the
+12 vertices. And H_1^- is 7-dim over Q, so 7 generating cycles are a BASIS (no GF(2) Fano-line dependency).
+So b_1^-(5)=7 is a DIMENSIONAL COINCIDENCE; the genuine octonion/Fano (QR{1,2,4} translates on Z_7, the
+apex prime) lives at Paley T_7 (HYP-3547/THM-586), NOT in the metagraph homology. The two 7's are unrelated.
+
+NET: both tempting conjectures closed (dead-end documented per project norm); b_1^- retained as a new
+metagraph invariant with an exact edge-counting formula. Parity note: E_comp (class one-flip from its
+complement) = 0 at odd n (5,7), 5 at n=6.
+
+Scripts: 04-computation/metagraph_Rodd_first_betti_klein.py, metagraph_n5_Rodd_fano_test_klein.py. No
+court cases; no canon overridden. (Also: mac-mini-S24 cleanly propagated my S5 HYP-3554->3561 collision fix.)
+
+NEXT: octonion/Fano work should target Z_7/Paley T_7 (THM-586), not b_1^-. Minor: closed form/asymptotics
+of b_1^-(n) (~E/2); relation (if any) to the GLMY tournament Betti (THM-130/154).
+
+---
+
 ## mac-mini-2026-06-29-S23 -- the MEASURE OF THE OBSTRUCTION: obstruction theory unifies the objects + their measures (HYP-3562)
 
 Prompt: consider obstruction theory and previous objects we have studied and their measure.
