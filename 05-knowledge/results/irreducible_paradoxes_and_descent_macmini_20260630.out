@@ -1,0 +1,42 @@
+====================================================================================
+IRREDUCIBLE PARADOXES (strongly connected tournaments) + the CONDENSATION DESCENT (mac-mini-S35)
+====================================================================================
+
+[1] The IRREDUCIBLE PARADOXES = strongly connected tournament iso-types (the finite atom family):
+     n  #iso tourn  #irreducible (SC)    block-compositions seen
+     1           1                  1                     [(1,)]
+     2           1                  0                   [(1, 1)]
+     3           2                  1          [(1, 1, 1), (3,)]
+     4           4                  1 [(1, 1, 1, 1), (1, 3), (3, 1), (4,)]
+     5          12                  6                    7 types
+     6          56                 35                   12 types
+    => irreducible-paradox counts: [1, 0, 1, 1, 6, 35] (n=1..6). n=2 has ZERO (one always beats the other -- 2 things can't paradox).
+    The MINIMAL paradox is the 3-cycle (n=3, unique). Atoms are FEW and classifiable.
+
+[2] CONDENSATION: every tournament = a unique TOTAL ORDER of strongly-connected BLOCKS:
+    n=4: 4 classes -> block-compositions: {(4,): 1, (1, 3): 1, (3, 1): 1, (1, 1, 1, 1): 1}
+          transitive (all blocks size 1, ZERO paradox) = 1; single block size 4 (fully irreducible) = 1
+    n=5: 12 classes -> block-compositions: {(5,): 6, (1, 4): 1, (4, 1): 1, (1, 1, 3): 1, (1, 3, 1): 1, (3, 1, 1): 1, (1, 1, 1, 1, 1): 1}
+          transitive (all blocks size 1, ZERO paradox) = 1; single block size 5 (fully irreducible) = 6
+    n=6: 56 classes -> block-compositions: {(6,): 35, (1, 5): 6, (3, 3): 1, (5, 1): 6, (1, 1, 4): 1, (1, 4, 1): 1, (4, 1, 1): 1, (1, 1, 1, 3): 1, (1, 1, 3, 1): 1, (1, 3, 1, 1): 1, (3, 1, 1, 1): 1, (1, 1, 1, 1, 1, 1): 1}
+          transitive (all blocks size 1, ZERO paradox) = 1; single block size 6 (fully irreducible) = 35
+    => ORDER (the block ranking, orderable skeleton) (+) IRREDUCIBLE PARADOX (each SC block).
+    This IS the tournament-side descent: peel the transitive condensation, expose the SC cores.
+
+[3] THE TWO DESCENTS (same move, two levels) -- both finitize to irreducible cores:
+    TOURNAMENT condensation:  T = total-order(blocks) + SC-block per block
+       peel: the orderable condensation (the ranking of blocks)
+       expose: the strongly-connected blocks = the irreducible paradoxes (atoms: 0,0,1,1,6,35,..)
+    LRC 2-adic descent (THM-580, klein-S17):  meas(lonely S) = prod rho_j * prod meas(lonely O_j)
+       peel: the even/2-part (E/2, the 'doubling', the orderable 2-adic skeleton)
+       expose: the odd Z_7-cores O_j = the irreducible resonances (finite family: 127 cores)
+    BOTH: infinite/large object -> FINITE family of irreducible cores; the true MIN lives there
+       (tournament: the SC atoms; LRC apex: doublet gap 4cos^2(3pi/7)>0, THM-590, klein-S17).
+
+====================================================================================
+FINDING: the irreducible paradoxes are the STRONGLY CONNECTED tournaments (atoms 0,0,1,1,6,35 for
+n=1..6); the CONDENSATION (order-of-blocks) is the tournament-side DESCENT, the exact analog of the
+2-adic descent (klein-S17). 'Knowing the finite families' = knowing these irreducible cores: the SC
+atoms on the tournament side, the 127 Z_7-cores on the LRC apex side. The proof lives on the finite
+family of irreducible paradoxes, where a true minimum (the odd-cycle gap) is attained.
+====================================================================================

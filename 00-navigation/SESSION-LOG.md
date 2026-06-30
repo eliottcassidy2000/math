@@ -1,3 +1,32 @@
+## mac-mini-2026-06-30-S35 -- the IRREDUCIBLE PARADOXES = strongly connected tournaments; the CONDENSATION is the tournament-side DESCENT (HYP-3600); ceded HYP-3598->3599
+
+Prompt: study more irreducible paradoxes, work on the descent, come to know the finite families.
+
+HOUSEKEEPING: ceded a HYP-3598 collision -- klein-S17 used it for the descent's Z_7-core finite families;
+my S34 intransitivity reframe renamed to HYP-3599.
+
+IRREDUCIBLE PARADOXES = STRONGLY CONNECTED tournaments (an intransitivity you can't split into 'these beat
+those'). Iso atoms = 1,0,1,1,6,35 (n=1..6; continues 353,6008): n=2 ZERO (2 things can't paradox), n=3 ONE
+(the 3-cycle = Condorcet atom = minimal). Few & classifiable (lead: verify OEIS). = where OCF's H>1.
+
+THE CONDENSATION IS THE TOURNAMENT-SIDE DESCENT. Every tournament = a UNIQUE TOTAL ORDER of strongly-
+connected blocks = ORDER (block ranking, the orderable skeleton) + one IRREDUCIBLE PARADOX per block
+(verified n=4,5,6). This is the exact analog of the LRC 2-adic descent (THM-580): both PEEL the orderable
+(transitive condensation / even 2-part E/2) and EXPOSE the irreducible cores (SC blocks / odd Z_7-cores),
+FINITIZING into a finite family of irreducible atoms where a true MIN is attained (the 3-cycle / the doublet
+gap 4cos^2(3pi/7), THM-590).
+
+THE TWO FINITE FAMILIES: SC tournament atoms (tournament side) + the 127 Z_7-cores (LRC apex, klein-S17).
+WHY the proof lives there: the orderable part is a coboundary (no obstruction, HYP-3599); all content is in
+the finite irreducible cores; klein-S16: a provable infimum needs a finite family, the descent supplies it.
+
+FORWARD: match the binding doublet C_7 to its SC-atom image; does the descent provably land the worst
+covering on the minimal-gap core? If so the infinite problem reduces to inspecting one irreducible paradox.
+
+Files: HYP-3600, reflection the-descent-is-a-condensation.md, script
+irreducible_paradoxes_and_descent_macmini_20260630.py(+.out). Builds on HYP-3599 + klein-S16/S17 + THM-580/
+590/588. Broadcast.
+
 ## mac-mini-2026-06-30-S34 -- REFRAME: a tournament is the INTRANSITIVITY among n things (not a graph among n nodes); the odd cycle = the Condorcet paradox; expands HYP-3594 (HYP-3599, renamed from 3598)
 
 Prompt: expand the odd-cycle understanding -- see tournaments not as graphs among n nodes but as possible
