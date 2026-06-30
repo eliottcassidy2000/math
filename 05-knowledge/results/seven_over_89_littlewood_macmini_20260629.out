@@ -1,0 +1,46 @@
+==================================================================================
+Where does 7/89 come from? binding-pair / packing-radius anatomy + Littlewood lens
+==================================================================================
+
+[A] [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]  (skip-12 core + killer 84=lcm(12,14)):
+    M = 7/89 at t* = 37/89;  binders = [5, 84]  (84 == 84 = -5 mod 89, so 89=84+5)
+    packing radius = numerator 7: the 13 speeds*37 mod 89 all avoid the
+    7-neighbourhood of 0; sorted distances to 0: [7, 7, 8, 14, 15, 22, 23, 29, 30, 36, 37, 38, 44]
+    cont.frac(89/7)=[12, 1, 2, 2], (89/37)=[2, 2, 2, 7], (84/5)=[16, 1, 4]  (89=F_11, coincidence)
+
+[B] single-large covering family {1..11,13,L}, L=84k: M, binding modulus D, partner:
+        L          M      D partner (D-L mod?)       cf(D/Mnum)
+       84       7/89     89                [5]    [12, 1, 2, 2]
+      168     14/173    173                [5]    [12, 2, 1, 4]
+      252     21/257    257                [5]       [12, 4, 5]
+      336     28/341    341                [5] [12, 5, 1, 1, 2]
+      420       7/85    425                [5]    [60, 1, 2, 2]
+      504     42/509    509                [5]    [12, 8, 2, 2]
+    => D = L + (small partner); M numerator = packing radius. NOT Fibonacci across the
+    family (89,173,...) => 89=F_11 was coincidence. The structure is binding-pair + packing.
+
+[C] LITTLEWOOD lens -- vary the killer L freely (any covering single-large set),
+    find the TIGHTEST M and check the binding-ratio continued fraction (bounded q_i?):
+    covering single-large sets: 7; TIGHTEST 6 (smallest M):
+      L=  84: M=     7/89 D=   89 partner=     [5] cf(L/partner)=[16, 1, 4]
+      L= 168: M=   14/173 D=  173 partner=     [5] cf(L/partner)=[33, 1, 1, 2]
+      L= 252: M=   21/257 D=  257 partner=     [5] cf(L/partner)=[50, 2, 2]
+      L= 336: M=   28/341 D=  341 partner=     [5] cf(L/partner)=[67, 5]
+      L= 420: M=     7/85 D=  425 partner=     [5] cf(L/partner)=[84]
+      L= 504: M=   42/509 D=  509 partner=     [5] cf(L/partner)=[100, 1, 4]
+    Littlewood reading: the binding pair (L, partner) -- the tightness is the simultaneous
+    approximation of a wall by BOTH L*t and partner*t at t*=a/D; D=L+partner is their
+    'resonance modulus'. The product ||L t*||*||partner t*|| = M^2 (both = M at the bind).
+
+[D] LITTLEWOOD product q*||q a||*||q b|| at the binding (q=D, a=L/D, b=partner/D):
+    7/89 set: D=89, M=7/89; D*M*M = 89*(7/89)^2 = 0.5506 = 89*7^2/89^2 = 49/89 = 49/89
+    Littlewood asks inf_q q||qa||||qb||=0; here the LRC sup pins it at 7^2/D = 49/89
+    >0 -- the LRC FLOOR is the OBSTRUCTION to the Littlewood product vanishing at the bind.
+
+==================================================================================
+UNDERSTANDING 7/89: it is the PACKING RADIUS (7) over the BINDING MODULUS (89 = 84+5)
+of the tightest covering completion of the skip-12 core. M=j/D where D=binding-pair sum,
+j = covering radius of the speeds in Z/D. Littlewood lens: the bind is the simultaneous
+approximation of a wall by the pair (L, partner); the LRC floor M>=1/14 is exactly the
+statement that this product CANNOT be driven to 0 -- the anti-Littlewood (a POSITIVE floor).
+==================================================================================

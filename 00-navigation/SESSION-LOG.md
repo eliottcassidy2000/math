@@ -1,3 +1,29 @@
+## mac-mini-2026-06-29-S18 -- where 7/89 comes from; {1..12,182}=14/183 SUPERSEDES it (tighter); the LRC is anti-Littlewood (HYP-3551)
+
+Prompt: understand where 7/89 comes from; think Littlewood conjecture as inspiration for a long exploration.
+
+WHERE 7/89 COMES FROM: M({1..11,13,84})=7/89 at t*=37/89, binding pair (5,84) since 84==-5 mod 89, so
+89=84+5 (binding modulus = pair sum); numerator 7 = packing/covering radius (speeds*37 mod 89 avoid the
+7-neighbourhood of 0). General law: M=j/D, D=binding-pair sum/difference, j=covering radius in Z/D. The
+set = skip-12 core {1..11,13}(M=1/12) + minimal killer 84=lcm(12,14); family M=7k/(84k+5)->1/12.
+
+FINDING (grid-verified, 4M points): {1,..,12,182} is primitive covering (182=13*14 kills 13,14), with
+M=14/183~0.07650 = +7.1% above 1/14 -- TIGHTER than the recorded tightest 7/89~0.07865=+10.1%. So the
+gap-line margin (HYP-3548) sharpens from +10.1% to +7.1%. STRUCTURE: tightest covering set = densest
+coverable core {1..12}(M=1/13) + minimal FAR killer 182 (largest minimal killer since 13,14 coprime ->
+equidistributes -> perturbs least). skip-13 beats skip-12 because core 1/13<1/12 is closer to 1/14. The
+covering infimum sits near 1/13, well above 1/14 -> supports HYP-2566 uniform-looseness.
+
+LITTLEWOOD LENS: at the bind ||v_a t*||=||v_b t*||=M, the Littlewood product = M^2; Littlewood says
+inf_q q||qa||||qb||=0 (product collapses), the LRC floor M>=1/14 says it CANNOT vanish => the LRC is
+ANTI-Littlewood (a POSITIVE floor on the simultaneous-approximation product). The badly-approximable /
+Fibonacci(89=F_11) intuition is a RED HERRING (binding ratios like 84/5=[16,1,4] have large partial
+quotients; tightness comes from core density, not bad approximability). Pairs with HYP-3550 (floor =
+positive Euler product): both are multiplicative-positivity where analysis expects vanishing.
+
+Files: HYP-3551, reflection seven-over-89-the-binding-modulus-and-the-anti-littlewood-floor.md, script
+seven_over_89_littlewood_macmini (+.out). proof-state memory + HYP-3548 margin corrected. Broadcast.
+
 ## mac-mini-2026-06-29-S17 -- cracked: cut(s|prefix Q) = continued fraction x Euler product (HYP-3550)
 
 Prompt: crack the resonance structure of cut(s|prefix); think continued fractions, roots, exponents,
