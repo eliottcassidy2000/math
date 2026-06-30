@@ -1,0 +1,45 @@
+======================================================================================
+ Is Z_7*-averaging a VALID lower bound on the raw floor gap?  (klein-S9)
+======================================================================================
+ checked 127 nonempty cores O subset Z_7.
+ averaging VALID (avg_gap <= raw_gap) for 97/127;  FAILS for 30.
+
+ FAILURES (averaging too optimistic: avg_gap > raw_gap -- these cores BREAK the
+ set-independent averaged bound; the floor needs more than bare Z_7*-averaging there):
+   O=(1, 2, 3, 4, 5)  raw_gap=0.1981  avg_gap=0.6944  (raw < avg by 0.4964)
+   O=(1, 2, 3, 4, 6)  raw_gap=0.1981  avg_gap=0.6944  (raw < avg by 0.4964)
+   O=(1, 2, 4, 5, 6)  raw_gap=0.1981  avg_gap=0.6944  (raw < avg by 0.4964)
+   O=(0, 1)  raw_gap=0.1981  avg_gap=0.6944  (raw < avg by 0.4964)
+   O=(0, 2)  raw_gap=0.1981  avg_gap=0.6944  (raw < avg by 0.4964)
+   O=(0, 3)  raw_gap=0.1981  avg_gap=0.6944  (raw < avg by 0.4964)
+   O=(0, 4)  raw_gap=0.1981  avg_gap=0.6944  (raw < avg by 0.4964)
+   O=(0, 5)  raw_gap=0.1981  avg_gap=0.6944  (raw < avg by 0.4964)
+   O=(0, 6)  raw_gap=0.1981  avg_gap=0.6944  (raw < avg by 0.4964)
+   O=(2, 3, 4, 5, 6)  raw_gap=0.1981  avg_gap=0.6944  (raw < avg by 0.4964)
+   O=(1, 2, 3, 5, 6)  raw_gap=0.1981  avg_gap=0.6944  (raw < avg by 0.4964)
+   O=(1, 3, 4, 5, 6)  raw_gap=0.1981  avg_gap=0.6944  (raw < avg by 0.4964)
+   O=(1, 2, 4, 6)  raw_gap=0.3080  avg_gap=0.4444  (raw < avg by 0.1365)
+   O=(1, 3, 5, 6)  raw_gap=0.3080  avg_gap=0.4444  (raw < avg by 0.1365)
+   O=(0, 1, 6)  raw_gap=0.3080  avg_gap=0.4444  (raw < avg by 0.1365)
+   O=(0, 2, 5)  raw_gap=0.3080  avg_gap=0.4444  (raw < avg by 0.1365)
+   O=(0, 3, 4)  raw_gap=0.3080  avg_gap=0.4444  (raw < avg by 0.1365)
+   O=(1, 2, 3, 4)  raw_gap=0.3080  avg_gap=0.4444  (raw < avg by 0.1365)
+   O=(1, 2, 4, 5)  raw_gap=0.3080  avg_gap=0.4444  (raw < avg by 0.1365)
+   O=(2, 3, 5, 6)  raw_gap=0.3080  avg_gap=0.4444  (raw < avg by 0.1365)
+
+ cores with raw_gap=0 (covering boundary, NOT floor cores): [(0, 1, 2, 3, 4, 5, 6)]
+ => raw_gap=0 ONLY at the full residue set O=Z_7 (the mod-7 covering): True
+
+ THE RIGHT FRAME (direct finite min, no averaging): the descent cores are SUBSETS of Z_7,
+ a FINITE set. The set-independent floor is the finite minimum of the raw cyclotomic gap over
+ NON-covering cores (excluding O=Z_7):
+   min_{O != Z_7} raw_gap(O) = 0.19806  at O=(0, 1, 2, 5, 6)  (a Q(cos 2pi/7) value)
+   => rho_j >= 0.19806 > 0 SET-INDEPENDENTLY, by a finite check over 2^7-2 cores --
+      no Reynolds averaging needed (and averaging would be INVALID, overshooting 30 cores).
+   O=(1, 2, 4): raw off-0 spectrum = [2.0, 2.0, 2.0, 2.0, 2.0, 2.0]  (flat=True)
+   O=(1, 2, 3): raw off-0 spectrum = [5.049, 0.308, 0.643, 0.643, 0.308, 5.049]  (flat=False)
+   O=(1, 3, 5): raw off-0 spectrum = [0.308, 0.643, 5.049, 5.049, 0.643, 0.308]  (flat=False)
+
+ VERDICT: if FAILS=0, Z_7*-averaging is a uniformly VALID set-independent lower bound and the
+ floor closes via averaging (the missing step is filled). If FAILS>0, those cores are the real
+ obstruction -- averaging alone is too optimistic there, and the descent/Gamma_0(14) must do more.

@@ -1,3 +1,40 @@
+## klein-2026-06-29-S9 -- right-frame audit: rho_j>=c is a FINITE cyclotomic min = 4cos^2(3pi/7) (binding doublet); bare Z_7*-averaging is INVALID; what we were missing = finiteness + average-vs-minorant (HYP-3581)
+
+Prompt: find the actual right frames for other open LRC little problems; intentionally understand what we
+are MISSING given all the connections.
+
+DECISIVE (HYP-3581, CONFIRMED, exhaustive over all 127 cores O subset Z_7; reflection
+the-right-frame-audit-when-the-proof-becomes-finite): the RIGHT FRAME for rho_j>=c (the floor's open piece,
+mac-mini S27 = Z_7 cyclotomic Gram gap): the descent cores are SUBSETS of Z_7 = FINITE, so the
+set-independent floor is the DIRECT FINITE MIN over non-covering cores = min_{O!=Z_7} min_{k!=0}
+|sum_{x in O}w^{kx}|^2 = 4cos^2(3pi/7) = 2+2cos(6pi/7) = 0.19806 (Q(cos2pi/7)), BINDING at a DOUBLET
+(2-residue) core (ties THM-578); raw_gap=0 ONLY at the full covering O=Z_7 (disproof boundary, off the
+floor). So rho_j>=4cos^2(3pi/7)>0 set-independently by a FINITE check -- the "BOUNDED" clause (HYP-3571) is
+a finite cyclotomic FACT, not an analytic estimate.
+
+WHAT WE WERE MISSING (the meta point): (1) FINITENESS -- the relevant objects are mod-7 cores, a finite set;
+we kept reaching for analytic machinery (CV, averaging, SOS) for a 2^7-case minimum; the right frame
+DISSOLVES the inequality into a finite computation. (2) A BEAUTIFUL-BUT-INVALID MECHANISM: bare Z_7*-AVERAGING
+(mac-mini S28, "manufacture transitivity by Reynolds") OVERSHOOTS the gap for 30/127 cores (Jensen gives
+<=MEAN not <=MIN); only the exhaustive check caught it. The VALID mechanism is the Fejer-Bochner MINORANT =
+the finite min (S27), NOT the average. Same validity-test discipline that killed the b_1^- octonion
+(HYP-3563), now on a MECHANISM. (3) The CONNECTIONS ARE THE MAP, not the territory: the web (Siegel,
+octonion, perfect numbers, X_0(14) cusps) points to WHERE the proof lives (finite mod-7 cyclotomic, sigma-even,
+binding doublet) but the proof is the finite check, and the structural connections are mostly sigma-odd/orthogonal.
+
+AUDIT of other little problems' right frames: inf R'=0.344 -> doublet/Gamma_0(14) local densities (closed
+form pending); m_Q -> Q-core mod-14 density (parallel to R-core); gap line M>=7/89 -> MULTIPLICATIVE
+(M=1/smallest surviving denom, HYP-3550) = a DIFFERENT frame from the cyclotomic gap, don't conflate.
+
+Script: 04-computation/lrc14_averaging_validity_z7_gram_klein.py. CORRECTS mac-mini S28 (averaging) toward
+S27 (minorant); no canon overridden; no court cases.
+
+NEXT (floor owners): confirm rho_j normalization + that the descent's O_j range over Z_7-cores (S28); write
+inf R' in closed form from the p=2,7 local densities; then the BOUNDED clause is finite. Pairs with
+mac-mini S29 (the proof lives at the X_0(14) cusps) -- the doublet cusp is the binding one.
+
+---
+
 ## mac-mini-2026-06-29-S29 -- GAP ANALYSIS: the proof lives at the CUSPS of X_0(14), not the bulk; the witness thread is off-path (HYP-3580)
 
 Prompt: find the right frames for other LRC open little problems; understand what we're MISSING given all
