@@ -1,3 +1,34 @@
+## klein-2026-06-29-S24 -- the DESIGN-COVERING BRIDGE is the HEXAGONAL WALLPAPER GROUP; the Singer multiplier = the 3-fold rotation (zeta_3 = Frobenius = Condorcet) (HYP-3706)
+
+Prompt: work on the design-covering bridge, think wallpaper groups.
+
+THE WALLPAPER FRAME (verified, script hexagonal_wallpaper_bridge_klein.py): Q(sqrt-3)=Z[zeta_6]=the
+HEXAGONAL (triangular) lattice, wallpaper group p6m. Phi_6(n)=|n-zeta_6|^2=the norm=the index
+[Z[zeta_6]:(n-zeta_6)], and Z/Phi_6(n)=Z[zeta_6]/(n-zeta_6) is a hexagonal-lattice quotient. In the quotient
+zeta_6=n, so the hexagonal C6 point group acts as multiplication:
+  ROTATION TOWER: zeta_6 = mult-by-n (order 6, the 60-deg); zeta_3 = zeta_6^2 = mult-by-n^2 = mult-by-(n-1)
+  = q = the SINGER MULTIPLIER (order 3, the 120-deg = the FROBENIUS of GF(q^3)/GF(q)); -1 = n^3 (order 2).
+KEY identity: q = n-1 = n^2 mod Phi_6(n) (since n^2-(n^2-n+1)=n-1). Verified n=3..14: ord(n)=6, ord(q)=3,
+ord(-1)=2. So the classical Singer multiplier IS the 3-fold hexagonal rotation.
+
+THE DIFFERENCE SET'S SYMMETRY = p3 (not p6): mult-by-q (120-deg) IS a multiplier of the (Phi_6(n),n,1)
+Singer difference set (verified n=3,4,6; a union of 3-fold orbits, e.g. n=4: D={0,1,3,9}={0}u{1,3,9}); but
+mult-by-n (60-deg) is NOT. So the design carries the p3 (3-fold zeta_3) sub-symmetry of the ambient p6m
+hexagonal lattice. The 3-fold zeta_3 = the project's Condorcet/odd-3-cycle atom (HYP-3602) -- the minimal
+intransitivity IS the difference set's rotational symmetry.
+
+THE BRIDGE: discrete design-optimality (projective plane = optimal Steiner covering, p3-symmetric Singer
+set) <-> continuous covering-optimality (hexagonal lattice = THINNEST plane covering, Kershner 1939, p6m),
+TRANSFERRED by the shared hexagonal/Eisenstein symmetry. The wallpaper group p6m is the bridge: the symmetry
+under which BOTH the discrete Steiner optimum and the continuous Kershner optimum are the SAME extremal
+hexagonal configuration. The covering-min n/Phi_6(n) = the density of the hexagonal-symmetric covering.
+
+HONEST SCOPE: RIGOROUS = the lattice/rotation/multiplier structure + Kershner + Steiner optimality (known
+theorems). OPEN (the actual bridge) = that the LRC continuous covering-min IS the p6m-hexagonal covering
+(needs M's exact def + the LRC->hexagonal-torus reduction); the wallpaper frame SHARPENS it to one clean
+geometric claim: 'the optimal LRC covering is the hexagonal one.' Reflection: two-cyclotomic-columns (added
+the wallpaper-bridge section). No canon overridden; no court cases.
+
 ## klein-2026-06-29-S23 -- ATTACK n/Phi_6(n) >= 1/n: the inequality is TRIVIAL (n>=1); the content is the PROJECTIVE-PLANE covering-min optimality; Q(sqrt-3) Eisenstein column (HYP-3705)
 
 Prompt (owner): the open conjecture binds off-cusp at n/Phi_6(n)=14/183 (positive measure, M tightest), the

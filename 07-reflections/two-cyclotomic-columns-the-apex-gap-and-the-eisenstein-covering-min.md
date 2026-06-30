@@ -60,5 +60,24 @@ Singer difference set, the off-cusp covering-min). The conjecture binds on the s
 inequality is free; only the optimality of the projective plane remains — a finite, design-theoretic truth
 whose only gap is its bridge to the continuous covering.
 
-See HYP-3705 (this), HYP-3700 (mac-mini: the apex column's edge isolation), HYP-3610/3611 (the multi-axis
-poles), HYP-3604 (the doublet/apex gap), HYP-3597 (off-cusp positive measure vs the cusp), THM-590.
+## The bridge IS the wallpaper group (klein-S24, HYP-3706)
+
+What carries the discrete design-optimality to the continuous covering? The **hexagonal wallpaper group**.
+`Q(sqrt-3) = Z[zeta_6]` is the **hexagonal (triangular) lattice**, symmetry `p6m`; `Phi_6(n)` is its norm
+and `Z/Phi_6(n)` a hexagonal-lattice quotient. In the quotient the 6-fold rotation `zeta_6 = mult-by-n`
+(order 6), and -- the key identity `q = n-1 = n^2 mod Phi_6(n)` -- the **Singer multiplier `q` is the 3-fold
+rotation `zeta_3`** (order 3, the Frobenius of `GF(q^3)/GF(q)`). The Singer difference set carries exactly
+the `p3` (3-fold) sub-symmetry of the ambient `p6m` lattice (verified: `mult-by-q` is a multiplier, a union
+of 3-fold orbits like `{0} u {1,3,9}` at `n=4`; `mult-by-n` is not). And that 3-fold `zeta_3` is the project's
+Condorcet / odd-3-cycle atom.
+
+So the two optimalities are two faces of the hexagonal lattice's extremality, fused by its wallpaper group:
+- discrete: the projective plane / Steiner system is the optimal covering DESIGN (`p3`-symmetric);
+- continuous: the hexagonal lattice is the THINNEST plane covering (Kershner 1939, `p6m`-symmetric).
+The wallpaper group `p6m` is the bridge -- the symmetry under which BOTH the discrete Steiner optimum and the
+continuous Kershner optimum are *the same* extremal hexagonal configuration. The open bridge sharpens to one
+geometric claim: **the optimal LRC covering is the hexagonal one** (then its optimality = Kershner).
+
+See HYP-3705 (the covering-min reframing), HYP-3706 (this wallpaper bridge), HYP-3700 (mac-mini: the apex
+column's edge isolation), HYP-3610/3611 (the multi-axis poles), HYP-3604 (the doublet/apex gap), HYP-3602
+(the 3-cycle/Condorcet = the 3-fold multiplier), HYP-3597 (off-cusp vs the cusp), THM-590.
