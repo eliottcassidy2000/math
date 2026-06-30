@@ -1,0 +1,52 @@
+====================================================================================
+CUSP LANDSCAPE: the 128 Z_7 cores -- gap structure, abnormalities (mac-mini-S30)
+====================================================================================
+
+[1] gap landscape by core size (gap = min nonzero cyclotomic mode):
+    size  #cores   min gap   max gap  #gap=0                  distinct gaps
+       1       7    1.0000    1.0000       0                          [1.0]
+       2      21    0.1981    0.1981       0                       [0.1981]
+       3      35    0.3080    2.0000       0                   [0.308, 2.0]
+       4      35    0.3080    2.0000       0                   [0.308, 2.0]
+       5      21    0.1981    0.1981       0                       [0.1981]
+       6       7    1.0000    1.0000       0                          [1.0]
+       7       1    0.0000    0.0000       1                          [0.0]
+
+    global min gap (non-Z_7) = 0.19806
+    4cos^2(3pi/7) = 2+2cos(6pi/7) = 0.19806  (klein-S9: the rho_j floor, binds at doublets)
+
+[2] the BINDING cores (gap = the global min) and the gap=0 cores (disproof boundary):
+    binders (gap=0.1981): 42 cores, sizes [2, 5]
+      doublets among binders: [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [1, 2]] (= THM-578 R-tail object)
+    gap=0 cores (disproof boundary): [[0, 1, 2, 3, 4, 5, 6]]  -- ONLY the full Z_7 (and empty)
+    => the floor binds at DOUBLETS; gap vanishes ONLY at the covering-complete O=Z_7.
+
+[3] the cyclotomic gap VALUES (all live in Q(cos 2pi/7), the totally-real cubic):
+    distinct gap values (5): [0.0, 0.19806, 0.30798, 1.0, 2.0]
+      4cos^2(1pi/7) = 3.24698      4cos^2(2pi/7) = 1.55496      4cos^2(3pi/7) = 0.19806
+    => the gaps are 2+2cos(2pi m/7) = 4cos^2(m pi/7) and sums -- a SHORT finite cyclotomic set.
+
+[4] ABNORMALITIES:
+    (a) Z_7^*-averaging OVERSHOOT (avg_gap > raw_gap, Jensen): 30/126 cores
+        => averaging gives the MEAN not the MIN -- klein-S9's correction of my S28, CONFIRMED.
+    (b) FLAT-spectrum cores (perfect difference sets, octonion-optimal): [[0], [1], [2], [3], [4], [5], [6], [0, 1, 3], [0, 1, 5], [0, 2, 3], [0, 2, 6], [0, 4, 5], [0, 4, 6], [1, 2, 4], [1, 2, 6], [1, 3, 4], [1, 5, 6], [2, 3, 5], [2, 4, 5], [3, 4, 6], [3, 5, 6], [0, 1, 2, 4], [0, 1, 2, 5], [0, 1, 3, 6], [0, 1, 4, 6], [0, 2, 3, 4], [0, 2, 5, 6], [0, 3, 4, 5], [0, 3, 5, 6], [1, 2, 3, 5], [1, 2, 3, 6], [1, 3, 4, 5], [1, 4, 5, 6], [2, 3, 4, 6], [2, 4, 5, 6], [0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 6], [0, 1, 2, 4, 5, 6], [0, 1, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6], [0, 1, 2, 3, 4, 5, 6]]
+        {1,2,4} & {3,5,6} (the Fano/QR lines) are the size-3 flats; gap=2 (max for size 3).
+    (c) COMPLEMENT symmetry: gap(O) == gap(Z_7\O) for |O|!=0,7 (char sum vanishes):
+        gap(O)==gap(complement): True  => the doublet (2) and its 5-complement bind together.
+
+[5] METAGRAPH H->1 CUSP REHEARSAL (the transitive-limit corner = the X_0 cusp):
+    The LRC cusp is m_R->0; the metagraph cusp is H->1 (transitive). Test: the near-transitive
+    classes' H-distribution low tail -- is there a 'doublet-like' binding minimum?
+    n=5: H-spectrum [1, 3, 3, 3, 5, 5, 9, 9, 11, 13, 15, 15]; transitive H=1 (the cusp); 1st neighbor H=3 (the cusp 'doublet').
+    n=6: H-spectrum [1, 3, 3, 3, 3, 5, 5, 5, 9, 9, 9, 9, 9, 11, 11, 13, 13, 15, 15, 15, 15, 15, 15, 17, 17, 19, 19, 23, 23, 23, 23, 25, 25, 27, 27, 29, 29, 29, 29, 31, 31, 33, 33, 33, 33, 33, 37, 37, 37, 37, 37, 41, 43, 43, 45, 45]; transitive H=1 (the cusp); 1st neighbor H=3 (the cusp 'doublet').
+    => the metagraph H->1 cusp: transitive (H=1) + its smallest neighbor (H=3 = one 3-cycle) =
+    the cusp's binding object, the 3-CYCLE -- the metagraph mirror of the LRC DOUBLET (both the
+    minimal non-trivial relation: 3-cycle = minimal cyclicity, doublet = minimal resonance pair).
+
+====================================================================================
+CUSP FINDINGS: (1) rho_j floor = 4cos^2(3pi/7)=0.198 binds at DOUBLETS (=THM-578 R-tail);
+(2) gap=0 ONLY at O=Z_7 (disproof boundary); (3) gaps are a SHORT cyclotomic set in Q(cos2pi/7);
+(4) averaging overshoots (Jensen, klein-S9 confirmed); (4b) {1,2,4}/{3,5,6} Fano flats are the
+optimal; (4c) doublet binds with its 5-complement; (5) the metagraph cusp (H->1) binds at the
+3-CYCLE = the mirror of the LRC doublet (both minimal relations). Track: doublet<->3-cycle<->R-tail.
+====================================================================================

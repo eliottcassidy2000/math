@@ -1,3 +1,34 @@
+## mac-mini-2026-06-29-S30 -- CUSP EXPLORATION: mapped the apex cusp landscape + FOUND the missing cusp rehearsal (metagraph H->1 binds at the 3-cycle = the LRC doublet's mirror) (HYP-3585)
+
+Prompt: work the next move (cusp behavior); spend a long session on cusp details, abnormalities, new
+things to track.
+
+FIRST: absorbed klein-S9 (HYP-3581), which CORRECTED my S28 -- bare Z_7*-averaging is INVALID (Jensen:
+averaging gives the MEAN, but rho_j>=c needs the MIN); the valid mechanism is the Fejer-Bochner MINORANT =
+the finite cyclotomic MINIMUM rho_j >= 4cos^2(3pi/7)=0.198, binding at a DOUBLET (ties THM-578). I adopted
+this corrected frame and mapped the whole cusp.
+
+THE CUSP LANDSCAPE (exhaustive, all 128 Z_7 cores): the gap takes only 5 distinct cyclotomic values
+{0, 0.198=4cos^2(3pi/7), 0.308, 1, 2} (all in Q(cos2pi/7)), BIMODAL + complement-symmetric (gap(O)=
+gap(Z_7\O)). The 21 DOUBLETS + their 21 5-complements bind at the floor 0.198 (=THM-578 R-tail). The
+Fano/perfect-difference-set cores ({1,2,4},{3,5,6} + translates, gap 2) are the flat/octonion-OPTIMAL (the
+opposite extreme). gap=0 ONLY at O=Z_7 (the disproof boundary, structurally off-floor). Confirmed klein-S9's
+averaging overshoot: 30/126 cores have avg_gap>raw_gap (Jensen).
+
+THE MISSING CUSP REHEARSAL (S29) FOUND: the metagraph H->1 transitive-limit corner binds at the 3-CYCLE
+(H=3, one cyclic triangle; verified n=5,6: H-spectrum bottoms 1,3,3,...) = the EXACT MIRROR of the LRC
+doublet. Both are the MINIMAL non-trivial RELATION (doublet=minimal resonance pair, 3-cycle=minimal
+cyclicity). So the cusp rehearsal is exact and mirrors the bulk one (CV(H)~2/n <-> rho_j in the bulk;
+3-cycle <-> doublet at the cusp).
+
+THE THREAD TO TRACK: doublet (rho_j=4cos^2(3pi/7)) <-> 3-cycle (metagraph H=3) <-> R-tail (THM-578,
+obligation D) <-> cyclicity (THM-588, the unique quadratic) -- the minimal relation IS the cusp's binding
+object in all 4 registers. The floor's last bound is a DOUBLET statement.
+
+Files: HYP-3585, reflection the-minimal-relation-binds-the-cusp.md, script
+cusp_landscape_exploration_macmini_20260629.py(+.out), proof-state memory. Builds on klein-S9 + my S29.
+Broadcast.
+
 ## klein-2026-06-29-S9 -- right-frame audit: rho_j>=c is a FINITE cyclotomic min = 4cos^2(3pi/7) (binding doublet); bare Z_7*-averaging is INVALID; what we were missing = finiteness + average-vs-minorant (HYP-3581)
 
 Prompt: find the actual right frames for other open LRC little problems; intentionally understand what we
