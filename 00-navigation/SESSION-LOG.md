@@ -1,4 +1,4 @@
-## mac-mini-2026-06-30-S34 -- REFRAME: a tournament is the INTRANSITIVITY among n things (not a graph among n nodes); the odd cycle = the Condorcet paradox; expands HYP-3594 (HYP-3598)
+## mac-mini-2026-06-30-S34 -- REFRAME: a tournament is the INTRANSITIVITY among n things (not a graph among n nodes); the odd cycle = the Condorcet paradox; expands HYP-3594 (HYP-3599, renamed from 3598)
 
 Prompt: expand the odd-cycle understanding -- see tournaments not as graphs among n nodes but as possible
 intransitivity amongst n things.
@@ -28,7 +28,7 @@ curl=local cyclic inconsistency + harmonic) is the R-valued cousin of Order(+)In
 the unit of curl. Cyclicity c(T)=C(n,3)-sum C(s_i,2) = an IRRATIONALITY/inconsistency index for any
 pairwise-comparison data (Elo/sports, votes, A/B, search-relevance, recommendations).
 
-Files: HYP-3598, reflection tournaments-are-intransitivity-among-n-things.md, script
+Files: HYP-3599 (renamed from 3598), reflection tournaments-are-intransitivity-among-n-things.md, script
 intransitivity_among_n_things_macmini_20260630.py(+.out). Gives HYP-3594's odd cycle its MEANING. Builds
 on HYP-3564/3594/3595 + THM-588/590 + klein-S16. Broadcast.
 
