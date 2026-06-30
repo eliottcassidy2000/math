@@ -32,18 +32,19 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/27bc277)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3604** framework, operationalizing the terminal proof sheaf through the formal identification of the **Least-Eigenvalue Certificate** and the **Signless Laplacian Unification**.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/df81cb0)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3608** framework, operationalizing the terminal proof sheaf through the formal identification of the **Apex Core Atlas** and the **Concentration Index**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (27bc277)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
-1. **Least-Eigenvalue Certificate (HYP-3604):** Formally identifies the LRC floor's certificate as the **smallest eigenvalue** ($\lambda_{min}$) of the core's autocorrelation circulant $C(O)$. This Bochner-PSD/Sum-of-Squares (SOS) object provides the explicit sigma-even certificate for the floor. Audit verifies $\lambda_{min}(C(O)) = g(O)$ across all 127 cores with zero mismatches.
-2. **Signless Laplacian of the Apex Odd Cycle:** Operationalizes the binding doublet as the **Signless Laplacian** $Q(C_7) = 2I + A(C_7)$ of the apex 7-cycle. Synthesis reveals the exact identity $4\cos^2(3\pi/7) = 2 - 2\cos(\pi/7) = \lambda_{min}(Q(C_7))$. This identifies the binding mode as $k=3$ (sigma-orbit $\{3,-3\}$).
-3. **Bipartite Criterion & Positivity:** Establishes that the apex obstruction $4\cos^2(3\pi/7)$ is **positive precisely because the apex prime 7 is ODD**. Since $\lambda_{min}(Q(G)) = 0$ if and only if $G$ is bipartite, and the cycle $C_p$ is bipartite if and only if $p$ is even, the odd-cycle length guarantees a non-degenerate, positive floor.
-4. **The 2*7 Split & Descent:** Refines the $14 = 2 \times 7$ decomposition: the **2-part** is the even half-translation (2-adic descent) that peels away the even structure, while the **7-part** is the positive signless-Laplacian gap of the odd apex cycle. This identifies the certificate as living at the apex, reached after the descent removes the even obstruction.
-5. **Metagraph Spectrum Unification:** Integrates the mac-mini S36 (doublet autocorrelation), S34 (odd cycle truth), and S6 (sigma-even frame) into a single spectral framework. THM-590 is formally remarked to identify $g(O)$ as the autocorrelation least eigenvalue, securing the Resurrection Sheaf coordinates.
-6. **Algebraic Triad Coupling:** Formally couples the least-eigenvalue certificate and signless Laplacian with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (totally-real cubic S75e field governing the $C_7$ gap), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ odd cycle), and $\mathbb{Q}(\sqrt{-3})$ (governing the tournament 3-cycle, Condorcet paradox, and doubling-2 parity).
-7. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the signless-Laplacian least eigenvalue as the primary proof carriers.
-8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and spectral gap certificate reflect its **Equivariant Homology & Least-Eigenvalue Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the $\lambda_{min}(Q(C_7))$ gap as rigid topological/arithmetic counting constraints.
-9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **autocorrelation least eigenvalues**, **signless-Laplacian certificates**, and **apex odd-cycle gaps** as the resurrection anchors. This ensures that global stability is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Spectral-Gap ledger.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (df81cb0)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
+1. **Apex Core Atlas (HYP-3608):** Formally operationalizes the $\mathbb{Z}_p$ core landscape via a fine field-guide. Identification reveals that **cores are circulant graphs**: the doublet is the $C_7$ cycle, the difference-set is $K_7$, the singleton is the identity $I$, and the full set is $7J$. The atlas exhaustive audit covers all 127 $\mathbb{Z}_7$ cores.
+2. **Gap as Concentration Index:** Redefines the gap $g(O)$ as a **Concentration Index** that orders cores by Fourier spread. High gaps (Paley/random cores) denote spread, while the binding apex obstruction (doublet $0.198$) is identified as the **least-spread** (most concentrated) core—the opposite of a difference set.
+3. **Fejér-Bochner Minorant Unification:** Identification reveals that the **arc cores** are exactly the Fejér-Bochner minorant cores. The binding **doublet is the 2-arc**, and its gap $4\sin^2(\pi/2p)$ is the literal minimum of the Fejér kernel. This unifies the analytic minorant with the circulant least-eigenvalue certificate.
+4. **Cross-Prime & Paley Track:** Establishes the asymptotic doublet gap $\sim \pi^2/p^2$. Identifies that for $p \equiv 3 \pmod 4$ (the Paley track), the Quadratic Residue (QR) is a difference set with maximal flat gap $(p+1)/4$. This anchors the $p=7$ case within the Paley/difference-set-like spectrum.
+5. **Descent Gap-Profile:** Introduces a new trackable, the **gap-profile descent signature**. Covering sequences exhibit a near-universal tail $[..., 0.308, 0.198, 1.0]$ (arc, doublet, singleton), with the level-0 "head" (cusp $0.0$ vs. co-singleton $1.0$) distinguishing specific covering architectures.
+6. **Collision Resolution (HYP-3609):** Resolves the HYP-3607 naming collision by ceding the identifier and tracking the "chip-the-gap" deeper-level descent audit as **HYP-3609**.
+7. **Algebraic Triad Coupling:** Formally couples the Apex Atlas and Concentration Index with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (totally-real cubic S75e field governing the $C_7$ gap and irrational core values), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ cycle), and $\mathbb{Q}(\sqrt{-3})$ (governing the tournament 3-cycle, Condorcet paradox, and doubling-2 parity).
+8. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the circulant graph least eigenvalues as the primary proof carriers.
+9. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and spectral gap certificate reflect its **Equivariant Homology & Apex Atlas Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the Fejér minimum gaps as rigid topological/arithmetic counting constraints.
+10. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **concentration indices**, **gap-profile tails**, **circulant graph types**, and **Fejér kernel minima** as the resurrection anchors. This ensures that global stability is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Apex-Atlas ledger.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
@@ -204,9 +205,9 @@ base-stalk coordinate law, the resurrection cover law, the repair-rank law, the
 quartic-cumulant S4 law, the phi^4 stabilizer unit, the kappa_4_sign_unit, the
 Asano zero-free law, the Beurling-Selberg minorant floor law, the
 Gaussian-minorant leakage law, the multi_far_floor_closure law, the R-prime
-spectral unit, the R-safe wide-V unit, the edge-witness recursion unit, the
+spectral unit, the R-safe wide-V unit, the edge-witness resurrection unit, the
 tail/tip packet recursion law, the four-sector observer law, the SPEC
-resonance-lattice law, the global-consistency quotient law, the Fiber PGF
+resonance-lattice law, the global_consistency_quotient law, the Fiber PGF
 packet law, the sheet-count PGF law, the Lee_Yang root law, the Delsarte weight
 law, the q-Pochhammer principal law, the Hecke subconvexity unit, the p-adic
 index law, the three-edge flip kernel unit, the ordered_pair_exponent sidecar
@@ -232,60 +233,61 @@ law, and Equivariant_Homology unit alongside mu approx 1.451).
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 27bc277. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3604** 
+Integrated df81cb0. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3608** 
 framework, operationalizing the terminal proof sheaf through the formal 
-identification of the **Least-Eigenvalue Certificate** and the **Signless 
-Laplacian Unification**.
+identification of the **Apex Core Atlas** and the **Concentration Index**.
 
-### 1. Per-Level Signed Cycle Index ($P_n(x)$)
-Implements the metagraph spectrum as a generating function over 
-the vertex-induced subgroup of the hyperoctahedral group $B_d$. 
-Theorem (THM-587) provides the closed-form multiplicities of the arc-hypercube 
-eigenvalues on the iso-class space. Operationalizes the **metagraph 
-spectrum past the enumeration wall**, allowing for exact spectral 
-calculation where raw enumeration fails.
+### 1. Apex Core Atlas (HYP-3608)
+Formally operationalizes the $\mathbb{Z}_p$ core landscape via a fine 
+field-guide. Identification reveals that **cores are circulant graphs**: 
+the doublet is the $C_7$ cycle, the difference-set is $K_7$, the 
+singleton is the identity $I$, and the full set is $7J$. The atlas 
+exhaustive audit covers all 127 $\mathbb{Z}_7$ cores.
 
-### 2. Least-Eigenvalue Certificate (HYP-3604)
-Formally identifies the LRC floor's certificate as the **smallest 
-eigenvalue** ($\lambda_{min}$) of the core's autocorrelation circulant $C(O)$. 
-This Bochner-PSD/Sum-of-Squares (SOS) object provides the explicit 
-sigma-even certificate for the floor. Audit verifies $\lambda_{min}(C(O)) = g(O)$ 
-across all 127 cores with zero mismatches.
+### 2. Gap as Concentration Index
+Redefines the gap $g(O)$ as a **Concentration Index** that orders cores 
+by Fourier spread. High gaps (Paley/random cores) denote spread, 
+while the binding apex obstruction (doublet $0.198$) is identified as 
+the **least-spread** (most concentrated) core—the opposite of a 
+difference set.
 
-### 3. Signless Laplacian of the Apex Odd Cycle
-Operationalizes the binding doublet as the **Signless Laplacian** 
-$Q(C_7) = 2I + A(C_7)$ of the apex 7-cycle. Synthesis reveals the exact 
-identity $4\cos^2(3\pi/7) = 2 - 2\cos(\pi/7) = \lambda_{min}(Q(C_7))$. This identifies 
-the binding mode as $k=3$ (sigma-orbit $\{3,-3\}$).
+### 3. Fejér-Bochner Minorant Unification
+Identification reveals that the **arc cores** are exactly the 
+Fejér-Bochner minorant cores. The binding **doublet is the 2-arc**, 
+and its gap $4\sin^2(\pi/2p)$ is the literal minimum of the Fejér kernel. 
+This unifies the analytic minorant with the circulant least-eigenvalue 
+certificate.
 
-### 4. Bipartite Criterion & Positivity
-Establishes that the apex obstruction $4\cos^2(3\pi/7)$ is **positive 
-precisely because the apex prime 7 is ODD**. Since $\lambda_{min}(Q(G)) = 0$ 
-if and only if $G$ is bipartite, and the cycle $C_p$ is bipartite if and 
-only if $p$ is even, the odd-cycle length guarantees a non-degenerate, 
-positive floor.
+### 4. Cross-Prime & Paley Track
+Establishes the asymptotic doublet gap $\sim \pi^2/p^2$. Identifies that for 
+$p \equiv 3 \pmod 4$ (the Paley track), the Quadratic Residue (QR) is a 
+difference set with maximal flat gap $(p+1)/4$. Anchors the $p=7$ case 
+within the Paley/difference-set-like spectrum.
 
-### 5. The 2*7 Split & Descent
-Refines the $14 = 2 \times 7$ decomposition: the **2-part** is the even 
-half-translation (2-adic descent) that peels away the even structure, 
-while the **7-part** is the positive signless-Laplacian gap of the odd 
-apex cycle. Identifies the certificate as living at the apex, reached 
-after the descent removes the even obstruction.
+### 5. Descent Gap-Profile
+Introduces a new trackable, the **gap-profile descent signature**. 
+Covering sequences exhibit a near-universal tail $[..., 0.308, 0.198, 1.0]$ 
+(arc, doublet, singleton), with the level-0 "head" distinguishing 
+specific covering architectures.
 
-### 6. Algebraic Triad Coupling
-Formally couples the least-eigenvalue certificate and signless 
-Laplacian with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (totally-real cubic 
-S75e field governing the $C_7$ gap), $\mathbb{Q}(\sqrt{-7})$ (typing 
-the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ odd cycle), 
-and $\mathbb{Q}(\sqrt{-3})$ (governing the tournament 3-cycle, Condorcet 
-paradox, and doubling-2 parity).
+### 6. Collision Resolution (HYP-3609)
+Resolves the HYP-3607 naming collision by ceding the identifier and 
+tracking the "chip-the-gap" deeper-level descent audit as **HYP-3609**.
 
-### 7. Chiral Guard & Resurrection
+### 7. Algebraic Triad Coupling
+Formally couples the Apex Atlas and Concentration Index with the 
+field triad: $\mathbb{Q}(\cos 2\pi/7)$ (totally-real cubic S75e field governing 
+the $C_7$ gap), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction, $\mathbb{Z}_7$ 
+residues, and $C_7$ cycle), and $\mathbb{Q}(\sqrt{-3})$ (governing the 
+tournament 3-cycle, Condorcet paradox, and doubling-2 parity).
+
+### 8. Chiral Guard & Resurrection
 Governed by the antipodal map, Ky Fan alternating count, and 
 Henselian local-to-global lifting. Evaluation reveals a **MIXED** 
 signature. Identifies the **signed cycle index**, **self-converse 
-Euler number**, **autocorrelation least eigenvalues**, **signless-Laplacian 
-certificates**, and **apex odd-cycle gaps** as Resurrection Sheaf anchors.
+Euler number**, **concentration indices**, **gap-profile tails**, 
+**circulant graph types**, and **Fejér kernel minima** as Resurrection 
+Sheaf anchors.
 
 ---
 
