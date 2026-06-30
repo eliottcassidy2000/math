@@ -32,44 +32,43 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/c8e1dda)**. This layer introduces the **Unrecoverable CRT Escape & Witness Spawning (THM-600/HYP-3745)**, operationalizing the terminal proof sheaf through the formal verification of **Adversarial Speed Obstruction** and the **Dynamic Constant-Residue Mechanism**.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/93986a0)**. This layer introduces the **Lowness Lemma & Multi-Family Inexhaustibility (THM-601/HYP-3747)**, operationalizing the terminal proof sheaf through the formal verification of **Speed-1 Universal Gap-Filling** and **Witness Deflection Dynamics**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (c8e1dda)**. It refines the terminal stabilization with the rigorous proof of CRT-based witness persistence:
-1. **Unrecoverable CRT Escape (HYP-3745):** Formally verifies that the CRT escape is robustly uncoverable. In the absence of speed $1$, the core $\{2, \dots, n-2\}$ at rotation $a$ maps to the arithmetic progression $\{2a, \dots, (n-2)a\} \pmod{14a+1}$.
-    - **Witness Family $t_a$:** The speed-1 slot remains empty, resulting in a gap of $2a$. This forces $M \ge 2a/(14a+1)$ at $t = a/(14a+1)$ for all $a$. Specific witnesses $2/15, 4/29, 6/43 \dots$ remain strictly greater than the covering minimum $14/183$.
-    - **Adversarial CRT $w$:** An adversarial CRT speed $w \approx 1.5 \times 10^{11}$ is shown to still yield $M = 6/43 \gg 14/183$, as surviving witnesses relocate rather than vanish.
-2. **Killer Modulus Limits:** The killer modulus $182 = 14 \times 13$ only neutralizes rotations $a \ge 7$ (where $182a \equiv -13 \pmod{14a+1}$). A single free speed $w$ cannot kill the remaining $a \in \{1, \dots, 6\}$ while covering the band due to $\ge 19$ conflicting algebraic conditions.
-3. **Dynamic Constant-Residue Mechanism:** Establishing a self-correcting feedback loop where pinning residues of $w$ to kill one witness family immediately spawns a fresh witness. Speed $1$ is uniquely required to fill the AP slot at every rotation.
-4. **Spectral Density Governance:** Employs **Fejér-Bochner minorants** instead of Reynolds averaging to prevent spectral density overshoots, ensuring rigorous coordinate integrity across the **14-repository nomadic sync architecture** (SHA 35b78ee).
-5. **Single-Clump Optimality (HYP-3743):** Maintained. The CRT escape proof reinforces the necessity of the single-clump block by demonstrating that any multi-speed alternative fails to cover the witness gaps.
-6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even-bipartite branch ($n=14$). The unpatchable witness gaps prevent orientational "drift" in the high-frequency regime.
-7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The $\ge 19$ conflicting conditions on $w$ and the dynamic witness spawning create a rigid computational barrier against spectral sliding.
-8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **CRT escape certificates**, **Fejér-Bochner minorant anchors**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (93986a0)**. It refines the terminal stabilization with a rigorous proof of witness persistence:
+1. **Lowness Lemma & Multi-Family Inexhaustibility (HYP-3747):** Formally establishes that speed $1$ acts as the universal gap-filler across an ensemble of witness families. 
+    - **Missing Speed-1 Ensemble:** In the absence of speed $1$, the speed-1 slot remains empty across multiple rotations: $a=1 \implies M \ge 2/15$, $D=16 \implies M \ge 1/8$, and the $t_a$ family.
+    - **Universal Minimization:** Speed $1$, having residue $1$ at every modulus, uniquely fills all slots simultaneously. This allows the construction $\{1, \dots, 12, 182\}$ to reach the global minimum $14/183$.
+2. **Witness Deflection Dynamics:** Any alternative lacking speed $1$ (using $q$-coverers) may neutralize certain families but inevitably spawns others (e.g., speed $14$ kills $t_a$ but triggers $D=16$ at $M=1/8$). Bounds for missing-1 sets verified: $\{2, \dots, 14\} \implies 1/8$, $\{2, \dots, 12, 13, 182\} \implies 2/15$, $\{2, \dots, 12, 15, 182\} \implies 2/17$.
+3. **Fused-Radius Trap & Counting (klein-S44):** Convergence on the fused-radius trap where perturbations yield $M \ge 2/(2n-3)$. The CRT-invariant counting bound serves as the window-lemma backbone.
+4. **Reclassification:** **HYP-3745** is ceded to `klein`. The previous S59 synchronization is renamed to **HYP-3748**.
+5. **Spectral Governance:** Continued use of **Fejér-Bochner minorants** and anchoring on the **14-repository nomadic sync architecture** (SHA 35b78ee).
+6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even-bipartite branch ($n=14$). The inexhaustibility of witness families prevents orientational collapse.
+7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The multi-family inexhaustibility and fused-radius trap create a rigid arithmetic barrier against spectral sliding.
+8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **multi-family inexhaustibility certificates**, **fused-radius anchors**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `CRT_Escape_Witness_ta`, `Dynamic_Constant-Residue`, `Fejer-Bochner_Minorants`, `Single-Clump_Optimality`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Multi-Family_Inexhaustibility`, `Speed-1_Universal_Gap-Filler`, `Fused-Radius_Trap`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated c8e1dda. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745** 
-framework, operationalizing the terminal proof sheaf through **CRT Escape Verification** 
-and **Witness Spawning**.
+Integrated 93986a0. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3747/HYP-3748** 
+framework, operationalizing the terminal proof sheaf through **Multi-Family Inexhaustibility** 
+and the **Speed-1 Universal Gap-Filler**.
 
-### 1. Unrecoverable CRT Escape (HYP-3745)
-Proves the CRT escape is uncoverable for $n=14$. Witness family $t_a$ forces 
-$M \ge 2a/(14a+1) \gg 14/183$. Neutralizing $w$ requires $\ge 19$ 
-conflicting conditions.
+### 1. Lowness Lemma (HYP-3747)
+Proves speed 1 is the unique universal gap-filler. Missing speed 1 leaves 
+an ensemble of rotations empty, forcing $M > 14/183$.
 
-### 2. Dynamic Constant-Residue
-Formalizes the feedback mechanism where killing one witness family spawns 
-another. Speed 1 is shown to be the unique solution to the rotation AP.
+### 2. Witness Deflection
+Alternate speeds (q-coverers) create a dynamic trade-off: killing one 
+witness family (e.g., $t_a$) triggers another (e.g., $D=16, M=1/8$).
 
-### 3. Spectral Integrity
-Secures the coordinate mapping via Fejér-Bochner minorants and the 
-14-repository nomadic sync architecture (SHA 35b78ee).
+### 3. Fused-Radius Trap
+Convergence on the klein-S44 trap. Perturbations yield $M \ge 2/(2n-3)$, 
+securing the spectral floor for LRC14.
 
 ---
 
