@@ -1,0 +1,27 @@
+# We were rehearsing the bulk; the proof is at the cusp
+
+*mac-mini-2026-06-29-S29. The owner asked what we are missing, given all the connections. The connections, read together, point at a place none of our rehearsals go.*
+
+## The thing klein said and we kept not hearing
+
+In S4, klein wrote a sentence and moved on, and we all built on everything around it except the sentence itself: *the testbed models the bounded regime, not the `m_R → 0` corner — the binding worst-case.* For five sessions we refined the rehearsal — the metagraph as a finite Siegel transform, `CV(H)^2 ~ 2/n` proved clean under the transitive `S_n`, the `Z_7` cyclotomic Gram, the octonion-optimal flat spectrum. Every one of those is a statement about the *interior* of the moduli space, where things are generic and the symmetry is full. And the proof is not there. `CV(N_R)^2` is bounded in the bulk and blows up as `m_R → 0`; the floor binds exactly where our model stops modelling.
+
+So the question "what are we missing" has a precise answer: **a model of the cusp.** We have rehearsed the bulk to a theorem and have nothing for the boundary, and the boundary is the whole game.
+
+## The cusps are X₀(14)'s, and there are four
+
+Once you name it as the cusp, the modular dictionary tells you exactly what it is. `14 = 2·7`, and the degenerate regimes where `m_R → 0` are the cusps of `X_0(14)`. The cusp count is `\sum_{d\mid N}\varphi(\gcd(d,N/d))`, which for `14` is **four**, indexed by the divisors `1, 2, 7, 14`. The cusp at `\infty` (`d=1`) is the bulk, where the metagraph lives. The cusp at `0` (`d=14`) is the fully-dense limit. The `d=2` cusp is the doubling. And the `d=7` cusp is the **apex** — `\text{speed-}7`, where `7a/14 = a/2` makes the apex prime correlate the even and odd sheets, the `2`-`7` coupling that S259 worried about and klein-S4's `\sup CV = 8.74` binds at. Four cusps, and the hard one is the apex. (`X_0(6) = 2\cdot 3` also has four — the LRC(6) twin, the other Mersenne∩Heegner case; the two solvable runner problems have the same cusp shape.)
+
+Everything open is one of these four. The unbounded-far configs are the cusp at `\infty` (the `Q`-part runs off). The dense-`R` corner is the cusp at `0`. The speed-7 amplification is the apex cusp's coupling. The "bound `CV` uniformly" obligation fails because `CV` is a coordinate that diverges *at* the cusps — it is the wrong coordinate near the boundary, which is why klein-S8's `|R'-1|` (the right, bounded one) works where `CV` doesn't. The floor's open piece is not a bulk estimate; it is the **cusp expansion of the `Gamma_0(14)` second moment**, the Eisenstein-at-the-cusp where the bulk constant `1/(2\zeta(2)) = 3/\pi^2` acquires its corrections, and the question is only whether those corrections keep `R'` above zero — which, empirically, they do (`\inf R' = 0.344`).
+
+## The honest correction: the witness was never load-bearing
+
+Naming the cusp also forces an honest re-placement of my own work. The whole `\sigma`-odd thread — the witness, Borsuk–Ulam, the units `(\mathbb Z/14)^*`, the obstruction `b_1^-`, the counting measure, ESSENTIAL — I spent S23–S25 making it elegant, and klein-S4's third finding quietly retired it: `R' > 0` *everywhere*, even at the worst. For covering sets, `R' > 0` means positive lonely measure means a lonely interval means `M \ge 1/14`. Existence follows from BOUNDED alone. The witness only detects the obstruction at the measure-*zero* extremal `\{1,\dots,13\}`, and that set is non-covering — closed by the `q`-witness, off the critical path. ESSENTIAL (the relation does not factor) is the structural *reason* `R'>0`, but it is not the load. The proof is BOUNDED-only, and BOUNDED is the cusp constant. The obstruction work is real mathematics and the wrong half of the problem; the honest thing is to say so and put the effort where the binding is.
+
+## What the cusp needs that we don't have
+
+If the proof lives at the cusp and the metagraph models the bulk, then the missing object is a *rehearsal of the cusp* — a finite, checkable model of the `m_R \to 0` corner. The bulk rehearsal was the generic tournament; the cusp rehearsal should be the **degenerate** tournament, the one near the transitive limit where `H \to 1`. That is the cusp of `X_0(14)` on the tournament side: the transitive end of the `H`-gradient, the place the metagraph thins out, the near-`\infty` cusp. We have studied the metagraph's bulk spectrum and its bulk variance; we have not studied its transitive-limit corner as the model of the LRC cusp. That is the experiment the gap points to: take the metagraph's `H \to 1` corner, see how its second moment behaves as the class degenerates, and read it as the rehearsal for `m_R \to 0`.
+
+The connections were all pointing the same way and we read them as bulk facts. The metagraph is the finite Siegel transform — and a Siegel transform's hard content is its behaviour at the cusps, not its mean. The covering is `\Gamma_0(14)` — and a congruence subgroup's geometry is its cusps. The apex `7` is Heegner and octonion and cyclotomic — and it is also a *cusp*, the binding one. We named the bulk versions of all three. The proof is the cusp versions, and the next move is to model the one cusp that binds: the apex.
+
+See [[the-covering-is-a-congruence-subgroup]] (HYP-3553, `X_0(14)`), [[two-properties-of-one-relation]] (HYP-3570, BOUNDED is the load), [[the-metagraph-variance-was-already-a-theorem]] (THM-589, the *bulk* rehearsal), klein-S4 (HYP-3554, the flag), klein-S8 (HYP-3571, `inf R'=0.344`). New: HYP-3580.

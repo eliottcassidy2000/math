@@ -1,3 +1,37 @@
+## mac-mini-2026-06-29-S29 -- GAP ANALYSIS: the proof lives at the CUSPS of X_0(14), not the bulk; the witness thread is off-path (HYP-3580)
+
+Prompt: find the right frames for other LRC open little problems; understand what we're MISSING given all
+the connections.
+
+THE BLIND SPOT (klein-S4 flagged it, we kept not hearing it): 'the testbed models the bounded regime, NOT
+the m_R->0 corner (the binding worst-case)'. ALL our rehearsal (metagraph, CV(H)~2/n, transitive S_n, Z_7
+bulk) models the INTERIOR/BULK; the proof lives at the CUSP.
+
+THE CUSPS ARE X_0(14)'s, exactly 4 (sum_{d|14}phi(gcd(d,14/d))=4; divisors 1,2,7,14): d=1=oo=bulk;
+d=14=0=full-dense; d=2=doubling; d=7=APEX cusp = speed-7 (7a/14=a/2 correlates even/odd sheets, the 2-7
+coupling, S259) = the HARD cusp (klein-S4 sup CV=8.74 at {1..13}\{12}; klein-S8 binding {1..13}\{7}).
+X_0(6)=2·3 also 4 cusps = the LRC(6) twin (the two Mersenne∩Heegner solvable cases share cusp shape).
+
+ALL OPEN LITTLE PROBLEMS ARE CUSP PROBLEMS: unbounded-far = cusp at oo (Q->oo); dense-R m_R->0 = cusp at
+0/apex; speed-7 amplification = the d=7 coupling; 'bound CV uniformly' FAILS because CV is the WRONG
+coordinate AT the cusps (klein-S8's |R'-1| is the right, bounded one). The floor's open piece = the CUSP
+EXPANSION of the Gamma_0(14) 2nd moment (Eisenstein-at-cusp; bulk value 1/(2zeta(2))=3/pi^2; corrections
+keep R'>0, empirically inf R'=0.344).
+
+HONEST CORRECTION: the WITNESS / sigma-odd / obstruction thread (my S23-25: b_1^-, units (Z/14)*,
+Borsuk-Ulam, ESSENTIAL) is OFF the critical path -- klein-S4 finding 3: R'>0 EVERYWHERE => existence is
+DIRECT from BOUNDED (R'>0 <=> meas lonely>0 <=> M>=1/14 for covering sets); the witness only detects the
+measure-zero NON-COVERING extremal {1..13} (off-path, q-witness). So the proof is BOUNDED-ONLY = the cusp
+constant. (Re-places my own obstruction work as elegant-but-off-path.)
+
+MISSING REHEARSAL: a model of the CUSP. The metagraph models the bulk; the cusp candidate = the
+metagraph's transitive-limit corner (H->1 = the X_0 cusp on the tournament side), which we have NOT studied
+as the rehearsal. NEXT: compute the Gamma_0(14) 2nd-moment CUSP behavior (apex-7/speed-7), not the bulk
+constant; test the metagraph H->1 corner as the cusp rehearsal.
+
+Files: HYP-3580, reflection we-were-rehearsing-the-bulk-the-proof-is-at-the-cusp.md, proof-state memory
+updated. Grounded: X_0(14) 4 cusps, speed-7=a/2. Builds on klein-S4/S8 + HYP-3553/3570/3576. Broadcast.
+
 ## mac-mini-2026-06-29-S28 -- working the DESCENDED CORE: klein-S7b's test ANSWERED (not bare-Z_7, but Gamma_0(14)-averaged) (HYP-3576)
 
 Prompt: work on the descended core (the remaining close from S27/HYP-3575).
