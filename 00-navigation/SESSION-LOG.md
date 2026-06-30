@@ -1,3 +1,37 @@
+## mac-mini-2026-06-30-S34 -- REFRAME: a tournament is the INTRANSITIVITY among n things (not a graph among n nodes); the odd cycle = the Condorcet paradox; expands HYP-3594 (HYP-3598)
+
+Prompt: expand the odd-cycle understanding -- see tournaments not as graphs among n nodes but as possible
+intransitivity amongst n things.
+
+THE REFRAME: a tournament = a complete pairwise preference among n THINGS; its ONLY content is its
+INTRANSITIVITY (deviation from a total order). Nodes/arcs are scaffolding. TRANSITIVE = the unique
+orderable/rankable point = a COBOUNDARY (a ranking potential f, a->b iff f(a)>f(b)), cohomologically
+trivial, the cusp. INTRANSITIVITY = the failure of a potential = H^1 = the cycle space. The ODD 3-CYCLE =
+the irreducible atom = the CONDORCET PARADOX (rock-paper-scissors); Moon: every intransitivity contains
+one, the 3-cycles generate. Odd because a linear order cannot absorb an odd loop.
+
+GROUNDED (n=3..6/7): Order(+)Intransitivity = Cut(+)Cycle (dims n-1 vs C(n-1,2), intransitivity dominates);
+cyclicity spectrum (transitive c=0 UNIQUE); ORDERABILITY VANISHES (P(transitive) & P(Condorcet-winner) both
+->0) so INTRANSITIVITY IS GENERIC (order = the measure-0 miracle); # intransitivity SHAPES = even graphs
+A002854 (tournaments = order x shape).
+
+LRC READING (the payoff): the danger relation among RUNNERS is intransitivity among n things. DISPROOF =
+ORDERABLE (dangers separate/factor f(v)g(t), a coboundary -> covering; the bilinear vt forbids it =
+anti-Littlewood/essentiality). PROOF = irreducibly INTRANSITIVE: an odd cycle whose LENGTH = the apex prime
+(C_7 for LRC14, the 7 residues of Z_7; generic bottoms at C_3); genus = #independent global cycles = 1 at
+N=14. Aligns with klein-S16 (HYP-3597): EXISTENCE of the odd cycle (sigma-odd/counting/topological, finite
+via THM-590 4cos^2(3pi/7)>0) is load-bearing, NOT the lonely MEASURE (inf=0 over the infinite family). At
+the cusp you COUNT, not measure -- and counting an odd cycle is exactly detecting intransitivity.
+
+ENGINEERING (mandate): this IS HodgeRank/social-choice. The Hodge decomposition (gradient=ranking +
+curl=local cyclic inconsistency + harmonic) is the R-valued cousin of Order(+)Intransitivity, the 3-cycle
+the unit of curl. Cyclicity c(T)=C(n,3)-sum C(s_i,2) = an IRRATIONALITY/inconsistency index for any
+pairwise-comparison data (Elo/sports, votes, A/B, search-relevance, recommendations).
+
+Files: HYP-3598, reflection tournaments-are-intransitivity-among-n-things.md, script
+intransitivity_among_n_things_macmini_20260630.py(+.out). Gives HYP-3594's odd cycle its MEANING. Builds
+on HYP-3564/3594/3595 + THM-588/590 + klein-S16. Broadcast.
+
 ## klein-2026-06-29-S16 -- understand FAMILY INFIMUMS: inf R'=0 over the infinite family (measure vanishes), 0.344 was scan-only; provable infimum needs a FINITE family (the descent finitizes) (HYP-3597)
 
 Prompt: come to understand family infimums better.

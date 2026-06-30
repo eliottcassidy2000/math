@@ -1,0 +1,47 @@
+==================================================================================
+TOURNAMENTS AS INTRANSITIVITY AMONG n THINGS (mac-mini-S34)
+==================================================================================
+
+[1] A preference among n things splits: ORDER (rankable part) (+) INTRANSITIVITY (the rest):
+     n pairs C(n,2)  ORDER dim (n-1)  INTRANSIT dim C(n-1,2)
+     3            3                2                       1
+     4            6                3                       3
+     5           10                4                       6
+     6           15                5                      10
+     7           21                6                      15
+    ORDER = cut space (a ranking potential, a COBOUNDARY); INTRANSITIVITY = cycle space (H^1).
+    => the n-1 'score' d.o.f. are the orderable part; the C(n-1,2) cycle d.o.f. are pure
+       intransitivity -- the part NO ranking can explain. Intransitivity DOMINATES for large n.
+
+[2] INTRANSITIVITY SPECTRUM -- cyclicity (# rock-paper-scissors triples) per iso class:
+    n=3: cyclicity -> #classes {0: 1, 1: 1}; TRANSITIVE (c=0): 1 class (unique, the cusp); max intransitivity c=1
+    n=4: cyclicity -> #classes {0: 1, 1: 2, 2: 1}; TRANSITIVE (c=0): 1 class (unique, the cusp); max intransitivity c=2
+    n=5: cyclicity -> #classes {0: 1, 1: 3, 2: 2, 3: 2, 4: 3, 5: 1}; TRANSITIVE (c=0): 1 class (unique, the cusp); max intransitivity c=5
+    n=6: cyclicity -> #classes {0: 1, 1: 4, 2: 4, 3: 4, 4: 10, 5: 8, 6: 12, 7: 8, 8: 5}; TRANSITIVE (c=0): 1 class (unique, the cusp); max intransitivity c=8
+    => c=0 (transitive = the ONE total order up to relabeling) is unique; everything else is
+       intransitive. The metagraph is organized by intransitivity: 0 at the center (cusp).
+
+[3] ORDERABILITY vanishes (intransitivity is GENERIC) -- the Condorcet phenomenon:
+     n  P(transitive=fully orderable)   P(has a Condorcet winner)
+     3                       0.750000                    0.750000
+     4                       0.375000                    0.500000
+     5                       0.117188                    0.312500
+     6                       0.021973                    0.187500
+     7                       0.002403                    0.109375
+     8                       0.000150                    0.062500
+    => both -> 0 fast: a random preference among many things is almost never rankable and
+       usually has no overall winner. INTRANSITIVITY is the rule, not the exception.
+
+[4] # of DISTINCT intransitivity patterns (GF(2) cycle-space shadow, up to relabeling):
+    The undirected support of the intransitivity = an EVEN graph (cycle space). Iso classes:
+    A002854 = 2, 3, 7, 16, 54 (n=3..7) = the # of essentially different intransitivity SHAPES.
+    (Tournaments A000568 = 2,4,12,56,456 > these: a shape hosts several preferences once you
+    overlay an ordering -- order x intransitivity, the labeled 2^(n-1) fibration, S32/HYP-3595.)
+
+==================================================================================
+THE ATOM: the 3-cycle (odd, length 3) = the irreducible intransitivity = the Condorcet paradox.
+Tournaments ARE the space of intransitivity patterns among n things; the transitive order is the
+trivial (cohomologically exact) point; the odd cycle generates H^1. The LRC danger relation among
+RUNNERS is the same kind of object -- intransitivity among n things -- and its apex odd cycle C_7
+is the irreducible resonance the floor 4cos^2(3pi/7)>0 (THM-590) certifies as non-degenerate.
+==================================================================================
