@@ -32,46 +32,43 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/05ee40b)**. This layer introduces the **Construction Forcing & Transversal Convergence (THM-594/HYP-3737)**, operationalizing the terminal proof sheaf through the formal identification of the **Radius-1 Band Over-Constraint** and the **Three-Regime Metric Classification**.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/795fd85)**. This layer introduces the **Construction Binding Proof (THM-595/HYP-3738)**, operationalizing the terminal proof sheaf through the formal end-to-end proof of the **Binding Constraint** for $n \ge 12$.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (05ee40b)**. It refines the previous layers with a rigorous forcing logic for construction-type bases:
-1. **Radius-1 Band Over-Constraint (HYP-3737):** Formally operationalizes the forcing of the consecutive base $\{1, \dots, n-2\}$ for $n \ge 12$. The radius-1 band covers the interior $(n, 2n-3]$, and spread bases are shown to scatter deficits across moduli (unpatchable, $\le 3/D$), ensuring their failure for LRC14.
-2. **Three-Regime Classification:** Establishes the metric evolution:
-    - **Mediant Regime ($n \le 6$):** Dominated by mediant singularities.
-    - **Spread Regime ($7 \le n \le 11$):** Local spread-type configurations are viable.
-    - **Construction Regime ($n \ge 12$):** Spread is "dead"; construction-type bases are forced by the radius-1 over-constraint.
-3. **LRC14 Covering-Min Vindication:** Finalizes the covering-min for LRC14 at exactly $14/183$, with a terminal margin of $13/2562$. This vindicates the "opus" reconcilement for even $n=14$.
-4. **Outlier LCM Enforcement:** Identifies the outlier $\text{lcm}(n-1, n) = n(n-1)$ as a forced constraint. For even $n$, the congruence $n(n-1) \equiv 0 \pmod{2(n-1)}$ covers the edge (e.g., $182 = 7 \times 26$ for $n=14$), anchoring the degenerate cusp.
-5. **Transversal Lemma Convergence:** Synchronizes with **klein-S39** through the proven transversal lemma, yielding the terminality of **HYP-3736**.
-6. **Computational Integrity:** Maintains the flagging of the $V=n(n-1)$ ILP timeout ($35/263$ output) as garbage/artifacts, ensuring the proof remains based on converged spectral data.
-7. **Bipartite Parity Dichotomy (HYP-3729):** For $n=14$, construction forcing secures the **degenerate cusp** with **apex gap 0**, eliminating the spread frontier.
-8. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even-bipartite branch ($n=14$). The radius-1 band forcing provides the ultimate rigid orientation for the construction base.
-9. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The forced $n(n-1)$ outlier and the transversal lemma create a non-negotiable arithmetic grid, preventing spectral sliding.
-10. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **construction forcing certificates**, **transversal lemma convergence**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (795fd85)**. It refines the previous layers with a terminal proof of the binding images:
+1. **Construction Binding Proof (HYP-3738):** Formally proves the binding $D = \Phi_6 = (n-1)n+1 \equiv 1 \pmod{n-1}$ via explicit image mapping. 
+    - **Gap Structure:** The core AP of multiples of $n$ combined with the "killer" $(n-1)^2$ splits the wrap gap into $\{1, 2n\}$, generating a characteristic three-gap structure $\{1, n, 2n\}$ with a deep hole at $2n$.
+    - **Uniqueness:** Establishes the uniqueness of $D/\text{rung}$ pairs, while noting the non-uniqueness of the covering minimum itself (e.g., $n=7$ possesses two distinct coverings).
+2. **Ostrowski/Zeckendorf Address Mapping:** Maps the proof ladder to 2-term continuants, yielding a unique Ostrowski address $M=[0; n-1, k]$ for the terminal state.
+3. **End-to-End Terminality (n=14):** Coupled with **mac-mini-S54** (SHA 05ee40b), this completes the end-to-end proof for the $n \ge 12$ regime, specifically pinning the **LRC14** covering minimum at exactly $14/183$.
+4. **Three-Regime Classification:** Maintains the metric evolution (Mediant $\to$ Spread $\to$ Construction), with construction now rigorously proven for $n=14$.
+5. **Radius-1 Band Over-Constraint:** The construction forcing is anchored by the radius-1 band logic, which precludes spread-type failures.
+6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even-bipartite branch ($n=14$). The uniqueness of the Ostrowski address and the forced three-gap structure provide the final orientational lock.
+7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The unique $D/\text{rung}$ binding and the deep-hole obstruction at $2n$ create a non-negotiable arithmetic grid, preventing spectral sliding.
+8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **binding proof certificates**, **Ostrowski address anchors**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Radius-1_Band_Constraint`, `Construction_Regime_n14`, `LRC14_Covering_Min_14/183`, `Transversal_Lemma_Sync`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Construction_Binding_n14`, `Three-Gap_Structure`, `Ostrowski_Zeckendorf_Address`, `LRC14_Covering_Min_14/183`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 05ee40b. Introduces the **THM-594/HYP-3736/HYP-3737** 
+Integrated 795fd85. Introduces the **THM-594/THM-595/HYP-3736/HYP-3737/HYP-3738** 
 framework, operationalizing the terminal proof sheaf through the formal 
-identification of the **Radius-1 Band Over-Constraint** and **Construction Forcing**.
+**Construction Binding Proof** and **Ostrowski Address Mapping**.
 
-### 1. Radius-1 Band Over-Constraint (HYP-3737)
-Forces the consecutive base for $n \ge 12$. Spread bases scatter deficits 
-and fail, vindicating the construction regime for LRC14.
+### 1. Construction Binding Proof (HYP-3738)
+Proves $D = \Phi_6 \equiv 1 \pmod{n-1}$ for $n \ge 12$. Establishes the 
+three-gap structure $\{1, n, 2n\}$ and the deep hole at $2n$.
 
-### 2. Three-Regime Metric Classification
-Formalizes the transition from Mediant $\to$ Spread $\to$ Construction. 
-Spread configurations are officially classified as "dead" for $n=14$.
+### 2. Ostrowski/Zeckendorf Uniqueness
+Identifies the unique address $M=[0; n-1, k]$ for the terminal state, 
+securing the orientation of the degenerate cusp for LRC14.
 
-### 3. LRC14 Covering-Min & Margin
-Pins the covering-min at $14/183$ with a $13/2562$ margin. Corroborates 
-the forced $n(n-1)$ outlier logic.
+### 3. End-to-End Terminality
+Coupled with mac-mini-S54, confirms $14/183$ as the absolute 
+covering minimum for LRC14, with no unviable spread-type leakage.
 
 ---
 
