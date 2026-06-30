@@ -1,3 +1,40 @@
+## mac-mini-2026-06-29-S26 -- REFRAME: the remaining LRC targets collapse to ESSENTIAL x BOUNDED of one relation (HYP-3570)
+
+Prompt: creatively apply the recent ideas (obstruction/relational/moment/Gamma_0(N)) to reframe the
+remaining LRC proof targets.
+
+THE REFRAME: all remaining LRC(14) work = TWO properties of ONE object -- the danger relation
+D(v,t)=[||vt||<1/14] composed with itself, D.D^T (= the 2nd moment = the pair-correlation = the
+R-equivariant obstruction class, the only invariant per klein THM-588). TARGET:
+  D.D^T is ESSENTIAL (non-coboundary; existence/floor>0; the sigma-odd/witness/counting half)
+  AND BOUNDED (CV(N_R)^2 < m_Q/(1-m_Q); the gatekeeper; the sigma-even/floor/Lebesgue half),
+  under the Gamma_0(N) CHANGE-OF-BASE.
+
+THE 4 OBLIGATIONS ARE FACETS: A(THM-527 witness density G2>0)+B(witness floor)=ESSENTIAL (the obstruction
+is nonzero = the counting measure phi(n)/2, survives where Lebesgue vanishes, S23); C(gK8 concentration)+
+D(doublet R-tail)=BOUNDED (the 2nd-moment concentration/tail). floor R'>0 = ESSENTIAL x BOUNDED.
+
+TWO KEY MOVES (why the reframe changes the attack):
+ (i) ESSENTIAL is TOPOLOGICAL not analytic -- the bilinear product vt forbids D from factoring
+     (separable=coboundary=covers=disproof), so essentiality is SET-INDEPENDENT (HYP-3564). Dissolves
+     'prove G2>0 for every config' into 'the class is essential.'
+ (ii) BOUNDED is a CHANGE-OF-BASE not a sharper estimate -- klein-S4: CV(N_R)^2 set-dependent/UNBOUNDED
+     (Z_14-collapse, degenerate at cusps) vs the metagraph's clean S_n-collapse; the cure = the Gamma_0(N)
+     congruence (HYP-3553) making it depend only on N. 'Manufacture the transitive symmetry it lacks'
+     (klein-S5). Discharges C, D, and the gatekeeper with ONE congruence 2nd moment.
+
+PROVED METAGRAPH TEMPLATE (the rehearsal is finished on the finite mirror): CV(H)^2~2/n (THM-589, the
+BOUNDED template) + b_1^-/b_1->1/2 (HYP-3565, the ESSENTIAL template: obstruction robustly half) +
+SC=trace(R)>0 (THM-587, Lefschetz existence without construction).
+
+CONCRETE NEXT STEP: evaluate the Gamma_0(14) congruence 2nd moment (Han-Lee arXiv:2507.05905) and show it
+bounds CV(N_R)^2 set-independently (psi(14)=24, phi(14)=6, J2(14)=144). That single computation discharges
+the gatekeeper + C + D; A + B is the essentiality (the class is nonzero), certified by non-separability +
+the counting measure.
+
+Files: HYP-3570, reflection two-properties-of-one-relation.md. proof-state memory updated with the
+ESSENTIAL x BOUNDED reframe. Broadcast.
+
 ## mac-mini-2026-06-29-S25 -- 1,7,119,1772 = b_1^- : closed-form status, the obstruction-is-half fact, new proof-sequences (HYP-3565)
 
 Prompt: find a closed form for 1,7,119,1772; relevant sequences; define own useful new sequences.
