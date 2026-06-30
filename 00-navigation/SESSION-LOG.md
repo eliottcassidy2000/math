@@ -27,6 +27,40 @@ hierarchy: Farey-grid (radius dimension) and triangular (constant-residue/modulu
 HOUSEKEEPING: filed HYP-3745. RESOLVED HYP-3743 collision (mac-mini-S58 triangular-sum vs my S43 Farey-grid):
 my Farey-grid -> HYP-3746; mac-mini keeps 3743. IDs distinct (3743,3744 mac-mini; 3745,3746 klein). No canon
 overridden, no court cases.
+## opus-2026-06-30-S1 -- The INHOMOGENEOUS AP-LRC gap is EXACTLY LINEAR: M_c(AP_n)=1/n+c(n-2)/n (THM-591, PROVED); consolidated + extended toward LRC; new invariants (ordering complexity = Farey length, three-distance = the engine, regimes = Stern-Brocot tree)
+
+Prompt (long session): find creative measures/invariants; push the ordering-complexity<->Hamiltonian-path bridge; chase the L-limit + continued fraction recursively; chase the 3/8 + spread-regime binding; CHASE THE PROOF; close the last step creatively; consolidate into canon + extend the LRC proof.
+
+HEADLINE -- THM-591 (new, PROVED leading order): for the AP S={1..n-1} (THM-405 extremal) with observer at c,
+the inhomogeneous LRC gap M_c(S)=max_t min_v||vt-c|| = 1/n + c(n-2)/n = c+(1-2c)/n exactly (c in [0,1/2]).
+PROOF: (achievability) the BLOCK -- t=(q-1)/q, q=n/(1-2c), sends the runners to a block of n-1 consecutive
+multiples of 1/q leaving a gap (q-n+2)/q CENTERED at c, so M=(q-n+2)/2q=env (exact on dense c=(q-n)/2q);
+(upper bound) CLUMPING -- failure forces ||jt||<=1/q (min-gap pigeonhole), runners clump into j sub-blocks,
+giving the integer inequality n<=2j+(2m+1)(n-2), true for all j>=1,m>=0 and TIGHT iff (j,m)=(1,0)=the block.
+The optimal lonely time slides 1/n->0 origin->antipode; c=0 (THM-405 covmin) & c=1/2 (antipode) are the two
+SC fixed points = the line's endpoints. COROLLARY: loneliness integral L=int M_c dc = 1/4+1/(2n)+O(1/n^2).
+
+SELF-CORRECTIONS (honest, this session): an erroneous L=1/4+3/(8n) and a spurious 'trivial regime' c*=1/3 were
+both finite-Qmax under-estimation ARTIFACTS; large Qmax gives the clean linear law (1/2 coefficient). Also
+corrected an earlier 'AP maximizes O' -> AP MINIMIZES O (doubly minimal: min M, min O).
+
+NEW INVARIANTS (HYP-3746): ordering complexity O(S)=#circular orderings of {0,vt} as t sweeps = the LRC analog
+of Hamiltonian-path count H; O(AP_n)=Phi(n-1)=FAREY LENGTH (A002088), EVEN vs H ODD. The LRC(AP) IS the
+three-distance (Sos-Steinhaus) theorem (O=#regimes, M=1/n the metric); regimes = Stern-Brocot tree (Mode-A
+recursion O(n)-O(n-1)=phi(n-1); covmin t=1/n = base of ray [0;n-1,k], one-stern-brocot-ray/HYP-3732; mediant =
+skeleton b(+1) step; Sylvester = the Phi6 path/HYP-3724).
+
+EXTENSION toward LRC: my 'rational-time lemma' (no v=0 mod n => M>=1/n via t=1/n) is ALREADY canon (THM-523
+q-witness, THM-360 divisibility) -- cited, not duplicated. THM-591 is a complete solution for the AP tight
+locus under OBSERVER perturbation, NOT a proof of LRC(14): OPEN-Q-108 (the uniform fattening lemma) bounds the
+lonely MEASURE under SPEED perturbation, a different quantity. Honest: LRC(14) remains open; the block/clump
+method may transfer to bounding meas(G_C) near the tight locus (noted in OPEN-Q-108).
+
+Artifacts: THM-591; HYP-3745, HYP-3746; 8 reflections in 07-reflections/ (PROOF-..., CORRECTION-..., the-LRC-
+for-the-AP-IS-the-three-distance-theorem, ...-stern-brocot-tree, the-ordering-complexity-hamiltonian-path-
+bridge, new-invariants-..., PINNED-...apex-prime); ~10 scripts in 04-computation/lrc_*_opus_20260630.py.
+Handoff: (a) bit-rigor of the O(1/n^2) dips (j>=2 cluster widths via three-distance); (b) does the block/clump
+single-clump method bound meas(G_C) for OPEN-Q-108?; (c) the exact L-limit constant for non-AP sets.
 
 ## mac-mini-2026-06-30-S58 -- SUMMING the witness hierarchy = a TRIANGULAR number (T_(n-1)-1); extending the constant-residue budget to ALL moduli; the hierarchy is MULTI-LEVEL (HYP-3743); converges w/ klein-S42 (who PROVED the witness theorem)
 
