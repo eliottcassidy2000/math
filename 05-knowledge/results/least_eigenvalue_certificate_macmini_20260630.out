@@ -1,0 +1,47 @@
+====================================================================================
+THE LEAST-EIGENVALUE CERTIFICATE for the LRC apex floor (mac-mini-S37)
+====================================================================================
+
+[1] CERTIFICATE -- the doublet Gram 2I + A(C_p) is POSITIVE DEFINITE iff p is ODD:
+      p parity  lambda_min A(C_p)  lambda_min 2I+A  C_p bipartite?      cert
+      3   odd           -1.00000          1.00000              no     PSD>0
+      5   odd           -1.61803          0.38197              no     PSD>0
+      7   odd           -1.80194          0.19806              no     PSD>0
+     11   odd           -1.91899          0.08101              no     PSD>0
+     13   odd           -1.94188          0.05812              no     PSD>0
+      4  even           -2.00000          0.00000             YES  SINGULAR
+      6  even           -2.00000          0.00000             YES  SINGULAR
+    A(C_p) eigenvalues are 2cos(2pi k/p) in (-2,2]; the bottom -2 is reached IFF p even
+    (k=p/2 exists) = C_p bipartite. p ODD => lambda_min(A) = -2cos(pi/p) > -2 => 2I+A > 0.
+    p=7: lambda_min(2I+A(C_7)) = 2-2cos(pi/7) = 4sin^2(pi/14) = 0.19806 = 4cos^2(3pi/7) (HYP-3590, THM-590).
+
+[2] THE WORST MODE (least eigenvector) -- the binding resonance direction:
+    p=5: A(C_p) min eigenvalue at Fourier mode k=3 (= (p-1)/2 or (p+1)/2, the near-pi/2 frequency); eigenvector v_j = cos(2pi*3*j/p).
+    p=7: A(C_p) min eigenvalue at Fourier mode k=4 (= (p-1)/2 or (p+1)/2, the near-pi/2 frequency); eigenvector v_j = cos(2pi*4*j/p).
+    p=11: A(C_p) min eigenvalue at Fourier mode k=6 (= (p-1)/2 or (p+1)/2, the near-pi/2 frequency); eigenvector v_j = cos(2pi*6*j/p).
+    => the floor binds in the MIDDLE Fourier mode (k ~ p/2) -- the most-oscillatory resonance,
+    which for ODD p never hits the -1 phase exactly (that is the non-bipartiteness).
+
+[3] UNIFORM over all 127 non-full Z_7 cores -- the least-eigenvalue minorant (THM-590):
+    gap values over cores: [0.19806, 0.30798, 1.0, 2.0]; the GLOBAL least nonzero-mode eigenvalue = 0.19806
+    = 4cos^2(3pi/7) at the doublets. So inf over the finite family of the least eigenvalue is the
+    DOUBLET's 4sin^2(pi/14) -- a single set-INDEPENDENT positive number (depends only on p=7).
+
+[4] SET-INDEPENDENCE -- the certificate depends ONLY on the apex prime p:
+     apex p  floor = 4sin^2(pi/2p)  = 2-2cos(pi/p)
+          3                1.00000         1.00000
+          5                0.38197         0.38197
+          7                0.19806         0.19806
+         11                0.08101         0.08101
+         13                0.05812         0.05812
+    The covering set never enters; only p does. This is the set-independent floor the gatekeeper
+    needs -- a least-eigenvalue (Bochner/SOS) certificate, NOT a per-set estimate.
+
+====================================================================================
+CERTIFICATE (clean form): for the apex prime p (odd), the doublet Gram 2I+A(C_p) is positive
+definite with lambda_min = 4sin^2(pi/2p) > 0, BECAUSE C_p is non-bipartite (p odd). Over all
+non-full Z_p cores the least nonzero-mode eigenvalue is >= this (THM-590). It is set-independent
+(only p), and it certifies the sigma-ODD / Bochner / DISCRETE content (the odd cycle is present &
+non-degenerate = EXISTENCE, klein-S18), NOT the measure (which binds at the cusp). The floor's
+positivity IS the apex cycle's odd length.
+====================================================================================

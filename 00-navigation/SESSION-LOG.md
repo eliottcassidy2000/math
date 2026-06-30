@@ -1,3 +1,33 @@
+## mac-mini-2026-06-30-S37 -- THE LEAST-EIGENVALUE CERTIFICATE = non-bipartiteness; the LRC floor is positive BECAUSE the apex cycle is ODD (HYP-3604); resolved double collision (3599+3600)
+
+Prompt: work on the least-eigenvalue certificate.
+
+HOUSEKEEPING: resolved a double collision -- klein-S18 used HYP-3599 (skeleton->rho_j split) AND moved
+klein-S17's descent to HYP-3600, both already mine (S34 intransitivity / S35 condensation). Ceded both: my
+intransitivity -> HYP-3602, my condensation -> HYP-3603; deduped the stale HYP-3598 INDEX entries. Final:
+3599=klein skeleton, 3600=klein descent, 3602/3603=mine.
+
+THE CERTIFICATE. The apex floor is a positive-definiteness (Bochner) statement about ONE explicit matrix.
+For an apex core O subset Z_p, the autocorrelation GRAM is the circulant with eigenvalues |sum_{x in O}
+w^{kx}|^2; the floor = least NONZERO-mode eigenvalue. For the binding DOUBLET {a,b}, the Gram = 2I+A(C_p)
+(C_p = the p-cycle), and lambda_min = 2+lambda_min(A(C_p)) = 2-2cos(pi/p) = 4sin^2(pi/2p) (=0.198=
+4cos^2(3pi/7) at p=7).
+
+THE MECHANISM (the heart): A(C_p) eigenvalues 2cos(2pi k/p) live in (-2,2]; the bottom -2 is attained IFF
+k=p/2 exists IFF p EVEN IFF C_p BIPARTITE. So 2I+A(C_p) >0 <=> lambda_min(A)>-2 <=> C_p NON-BIPARTITE <=>
+p ODD. THE LEAST-EIGENVALUE CERTIFICATE IS THE ODD-CYCLE/NON-BIPARTITENESS CERTIFICATE: the floor is
+positive BECAUSE the apex cycle has odd length (= the apex prime 7). p even => singular (the disproof
+boundary). The worst eigenvector = the middle Fourier mode k=(p+-1)/2 (the Fejer-Bochner SOS minorant).
+
+UNIFORM (THM-590): over all 127 non-full Z_7 cores the least nonzero eigenvalue >= 0.198 (at doublets).
+SET-INDEPENDENT (only p; the covering never enters) -- the gatekeeper's floor in certificate form, FINITE
+& Lean-able. PLACEMENT (klein-S18): certifies the sigma-ODD/discrete/EXISTENCE content (the odd cycle is
+present & non-degenerate), NOT the measure-rho_j (binds at the cusp). This is the certificate FORM + the
+deepest REASON of klein's THM-590.
+
+Files: HYP-3604, script least_eigenvalue_certificate_macmini_20260630.py(+.out). Builds on THM-590 +
+HYP-3590/3599/3602/3535. Broadcast.
+
 ## mac-mini-2026-06-30-S36 -- ANSWERED the two S35 team questions: the descent lands the worst covering on the DOUBLET (Q2 yes); the matching is a category clarification (Q1: the atom is the even-graph C_7) (HYP-3601)
 
 Prompt: work on the questions I sent the team (the S35 broadcast's FORWARD).
