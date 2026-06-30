@@ -1,3 +1,32 @@
+## klein-2026-06-29-S13 -- BLUE/BLACK patterns: BLUE(n)=2^{square/pronic}; BLUE-CLASSES = SC exactly; blue is the SC spine (arena), genus is the binding subset; new trackables (HYP-3592)
+
+Prompt: look for patterns in the blue (or aspects related), or even the black; be creative defining new
+things to track.
+
+VERIFIED PATTERNS (script blue_black_tiling_patterns_klein.py):
+(1) BLUE(n) = #grid-symmetric tilings = 2^{e(n)}, e = k^2 for odd n=2k+1 (SQUARES), k(k-1) for even n=2k
+    (PRONIC). BLUE = 2,4,16,64,512,4096,65536 (n=3..9), exponents 1,2,4,6,9,12,16. Blue = Fix(grid) ~ Q_{e}.
+(2) SHARP: BLUE-CLASSES = SC EXACTLY -- a class contains a grid-symmetric tiling IFF it is self-complementary
+    (blue-classes = SC = 2,2,8,12 for n=3..6; pure-black = NS exactly). Blue lives on the SC SPINE (R-fixed,
+    THM-584), since transpose=complement for tournaments and the grid involution = the tiling-level transpose.
+    Sharpens CLAUDE.md's 'transpose-self never pure-black' to the exact count. S675b's 'odd-boundary' = the
+    ODD grid-sym multiplicity per SC class (0 over NS). Pure-blue split 2,1,3,2 (n=3..6), rest mixed.
+
+CORRECTION to HYP-3591 (honest): blue support = SC (2,2,8,12,88) != genus (0,0,1,2,2). Blue is the ARENA
+(the SC spine, R-fixed/sigma-even); the genus-obstruction is the BINDING SUBSET within it (the doublet at
+N=14). WHERE (blue=SC spine) vs HOW MANY (genus = binding atoms) are DIFFERENT invariants on the same arena
+-- itself a polysemy lesson (blue-the-support != the-obstruction-count).
+
+NEW TRACKABLES DEFINED: BLUE(n)=2^{sq/pronic} (square side = LRC-relevant/apex/Paley parity); the blue=SC
+identity + pure-black=NS (track persistence n>=7); blue multiplicity mu_diamond(C)=#grid-sym tilings in C
+(0 if NS, ODD if SC = the odd-boundary spectrum); black Eulerian cycle rank b_1 (S675b open Q, defined,
+uncomputed); square/pronic parity vs nu_2=0<=>Paley (HYP-3586).
+
+Reflection: blue-is-the-SC-spine-squares-and-pronic-and-new-trackables. Pairs with mac-mini S31 (the
+4cos^2(3pi/7) cusp value as an EVEN object): the binding doublet sits in the blue/SC spine. No canon
+overridden; no court cases. NEXT: compute the black Eulerian cycle rank (S675b); test blue=SC at n=7;
+the odd-boundary multiplicity distribution over the SC spine.
+
 ## klein-2026-06-29-S12 -- three 'evens' (Royle sandwich); the Eulerian sections (codex-S675b black/blue); and THE GENUS IS THE ODD BOUNDARY (HYP-3591)
 
 Prompt: understand tournament/even-graph equinumerosity + its particularities; find past work on Eulerian
