@@ -70,5 +70,5 @@ by the complete finite family `2^{Z_7} \ {empty}`, whose per-level minimum is th
 (not measure) carries the floor. This is what "the finite families" are: the full nonempty power set of the
 apex `Z_7`, with THM-590 as their exact gap law.
 
-See HYP-3598 (this), THM-590 (the gap law), THM-580 (the descent), HYP-3597 (measure/existence; finite vs
+See HYP-3600 (this), THM-590 (the gap law), THM-580 (the descent), HYP-3597 (measure/existence; finite vs
 infinite), HYP-3575/3576 (the rho_j reduction, conditional), THM-576 (the caps).

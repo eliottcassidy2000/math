@@ -1,0 +1,32 @@
+======================================================================================
+ THE BRIDGE: actual rho_j vs apex gap g(O_j mod7) and 2-sheet CV  (391 levels)
+======================================================================================
+
+ min rho_j = 0.0000  (THM-580 reported min 0.515)
+ 12 BINDING (smallest rho_j) levels:  rho_j |  g(apex) | CV(N2) | m'(desc) | |O mod7| | source
+   rho=0.0000 | g=0.0000 | CV=1.398 | m'=0.3347 | |O7|=7 | consec{1..14} L0
+   rho=0.0000 | g=0.0000 | CV=1.398 | m'=0.4571 | |O7|=7 | consec{1..13} L0
+   rho=0.0513 | g=0.0000 | CV=1.398 | m'=0.4367 | |O7|=7 | skip12{1..11,13,84} L0
+   rho=0.1890 | g=1.0000 | CV=1.047 | m'=0.3881 | |O7|=6 | tightest{1..12,182} L0
+   rho=0.2289 | g=1.0000 | CV=1.047 | m'=0.4571 | |O7|=6 | consec{1..12} L0
+   rho=0.3425 | g=1.0000 | CV=1.047 | m'=0.5048 | |O7|=6 | consec{1..11} L0
+   rho=0.4423 | g=0.1981 | CV=0.902 | m'=0.3109 | |O7|=5 | rand36 L0
+   rho=0.5705 | g=0.1981 | CV=0.778 | m'=0.3695 | |O7|=5 | rand62 L0
+   rho=0.6001 | g=0.1981 | CV=1.035 | m'=0.4852 | |O7|=5 | rand1 L0
+   rho=0.6056 | g=1.0000 | CV=1.285 | m'=0.3982 | |O7|=6 | rand109 L0
+   rho=0.6221 | g=1.0000 | CV=1.009 | m'=0.3294 | |O7|=6 | rand19 L0
+   rho=0.6285 | g=0.1981 | CV=0.860 | m'=0.4696 | |O7|=5 | rand111 L0
+
+ rho_j range [0.000,1.192]; g range [0.000,2.000]
+
+ min rho_j conditioned on the apex gap value (does small g force small rho?):
+   g=0.0000: levels=   4  min rho=0.0000  mean rho=0.2293
+   g=0.1981: levels= 144  min rho=0.4423  mean rho=0.9654
+   g=0.3080: levels=  80  min rho=0.6783  mean rho=0.9496
+   g=1.0000: levels= 104  min rho=0.1890  mean rho=0.9550
+   g=2.0000: levels=  59  min rho=0.7100  mean rho=0.9452
+
+ THM-580 CS bound  1 - CV(N2).sqrt((1-m')/m')  vs actual rho_j (is the apex skeleton tighter?):
+   levels with m'<0.15 (lonely-poor, CS lossy): 0  -- their min rho_j=nan
+   CS bound is NEGATIVE (vacuous) on 69/391 levels; actual rho_j stays >= 0.000 there.
+   => the m'-independent apex skeleton (THM-590) is the right object exactly where the m'-dependent CS bound dies.

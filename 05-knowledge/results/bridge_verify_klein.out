@@ -1,0 +1,21 @@
+(A) VERIFY rho_0 = m_S/(m_O m_E) and that rho_0 -> 0 as m_S -> 0 (the boundary/cusp):
+    covering S          | m_S     | m_O     | m_E     | rho_0=m_S/(m_O m_E) | |O7|
+    {1..11}             | 0.05633 | 0.32587 | 0.50476 |   0.34248        | 6
+    {1..12}             | 0.03410 | 0.32587 | 0.45714 |   0.22891        | 6
+    {1..12,182}         | 0.02390 | 0.32587 | 0.38807 |   0.18897        | 6
+    {1..12,84,182}      | 0.01853 | 0.32587 | 0.34019 |   0.16718        | 6
+    {1..12,42,84,182}   | 0.01566 | 0.32587 | 0.30827 |   0.15584        | 6
+    {1..13}             | 0.00000 | 0.23930 | 0.45714 |   0.00000        | 7
+
+(B) min rho_0 by cusp-proximity |O mod 7| (level-0, m_S>0 coverings only):
+    |O7| | min rho_0 | apex gap g | example residues
+     1   |  0.9112  |  1.0000    | [6]
+     2   |  0.6535  |  0.1981    | [2, 4]
+     3   |  0.5290  |  2.0000    | [1, 2, 4]
+     4   |  0.3295  |  0.3080    | [1, 3, 4, 6]
+     5   |  0.1366  |  0.1981    | [1, 2, 4, 5, 6]
+     6   |  0.1041  |  1.0000    | [1, 2, 3, 4, 5, 6]
+     7   |  0.1355  |  0.0000    | [0, 1, 2, 3, 4, 5, 6]
+
+    => full rho_j binds as |O7| -> 7 (the CUSP), opposite the skeleton (doublet |O7|=2, g=0.198).
+    => the apex skeleton is NOT a lower bound for the full (measure) rho_j; rho_0 ∝ m_S -> 0 at the boundary.

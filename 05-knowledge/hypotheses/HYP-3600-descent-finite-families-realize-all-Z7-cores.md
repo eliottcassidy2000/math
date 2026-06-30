@@ -1,5 +1,5 @@
 ---
-id: HYP-3598
+id: HYP-3600
 title: The 2-adic descent (THM-580) finitizes the infinite covering family into a bounded-depth CHAIN of Z_7-cores, and over all coverings those cores realize EVERY nonempty subset of Z_7 (the apex finite family is COMPLETE, 127/127, verified + constructive); hence the per-level apex floor inf rho_j(apex) = 4cos^2(3pi/7) is a true attained minimum, unavoidable (doublets always arise, THM-590), with the single full-Z_7 core as the gap-0 cusp where existence carries the floor
 status: VERIFIED (descent simulated over consec prefixes + tightest coverings + even-heavy + 2000+ random; all 127 nonempty Z_7-residue-sets arise) + constructive (any residue-set realizable by choosing speeds 2^j a, a odd, a=r mod 7). RIGOROUS for the APEX SKELETON; the rho_j(2-sheet) -> apex-gap reduction is conditional (mac-mini S27/S28).
 source: klein-2026-06-29-S17
@@ -16,7 +16,7 @@ results:
   - 05-knowledge/results/descent_finite_families_klein.out
 ---
 
-# HYP-3598 — the descent realizes every nonempty Z_7-core; the apex finite family is complete
+# HYP-3600 — the descent realizes every nonempty Z_7-core; the apex finite family is complete
 
 ## What the descent produces
 

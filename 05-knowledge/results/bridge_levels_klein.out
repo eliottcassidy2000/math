@@ -1,0 +1,9 @@
+min rho_j BY DESCENT LEVEL j (is the m_S->0 obstruction only at the TOP level 0?):
+   level j=0: min rho_j = 0.0513
+   level j=1: min rho_j = 0.5595
+   level j=2: min rho_j = 0.7700
+   level j=3: min rho_j = 1.0026
+   level j=4: min rho_j = 1.0694
+
+ => if min rho_j for j>=1 stays bounded >0 while j=0 -> 0, the obstruction is the TOP level,
+    which IS the original existence question (m_S); deeper decorrelations are genuine/bounded.

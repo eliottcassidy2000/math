@@ -58,6 +58,42 @@ irreducible_paradoxes_and_descent_macmini_20260630.py(+.out). Builds on HYP-3599
 590/588. Broadcast.
 
 ## mac-mini-2026-06-30-S34 -- REFRAME: a tournament is the INTRANSITIVITY among n things (not a graph among n nodes); the odd cycle = the Condorcet paradox; expands HYP-3594 (HYP-3599, renamed from 3598)
+## klein-2026-06-29-S18 -- THE BRIDGE (skeleton->full rho_j) SPLITS BY LEVEL: deeper levels genuine/bounded, the TOP level IS the existence question (HYP-3599); resolves HYP-3598 collision (my descent ->3600)
+
+Prompt: work on the bridge from skeleton to full rho_j.
+
+Computed the ACTUAL per-level rho_j = m(lonely S^j)/(m(lonely O_j) m(lonely S^{j+1})) (THM-580) over 391
+descent levels + boundary sweeps, vs the apex cyclotomic gap g(O_j mod 7) (THM-590) and the 2-sheet CV.
+Scripts: bridge_skeleton_to_rho_klein.py, bridge_verify/levels_klein.out.
+
+FINDING 1 -- the measure-rho_j is NOT bounded by the apex gap. min rho by gap value = {g=0:0,
+g=0.198(doublet):0.44, g=0.308:0.68, g=1:0.19, g=2:0.71}: the doublet (the skeleton's binding core) does
+NOT bind rho_j. Conditioning on cusp-proximity instead, min rho_0 falls monotonically 0.91->0.65->0.53->
+0.33->0.14->0.10 as |O_j mod 7|->7. So the full rho_j binds at the CUSP end, OPPOSITE the doublet skeleton
+(|O7|=2). The apex gap governs the discrete content, not the measure.
+
+FINDING 2 -- the obstruction LOCALIZES to level 0, which IS the existence question. min rho_j by level =
+{0:0.05->0, 1:0.56, 2:0.77, 3:1.00, 4:1.07}: deeper levels (j>=1) are bounded away from 0 and increase
+toward independence (genuine decorrelations). Only the TOP vanishes, structurally: rho_0 = m_S/(m_{O_0}
+m_{S'}) CONTAINS m_S (verified rho_0 = 0.34,0.23,0.19,0.17,0.16,...->0 exactly as m_S->0). So rho_0>0 <=>
+m_S>0 <=> LRC(S): the top level RESTATES the original existence question.
+
+HONEST BRIDGE: no single inequality rho_j >= skeleton. It splits -- deeper levels are genuine bounded
+measure-decorrelations (THM-580(a) holds, the skeleton is satisfied with room to spare); the top level is
+the MEASURE->EXISTENCE passage (HYP-3597): one needs rho_0>0 (overlap NONEMPTY) not rho_0>=c (a measure
+bound, which is FALSE -- rho_0 vanishes at the cusp). The descent peels off the easy deeper levels and
+ISOLATES the top-level overlap = the original question; it does not dissolve the hard core.
+
+CORRECTS: HYP-3600 (was my HYP-3598) consequence-3 (the bounded-product floor (4cos^2)^d.cap^d is FALSE as
+a MEASURE statement; holds only for the discrete/existence skeleton). THM-580(a) (rho_j>=c uniform) holds
+for j>=1 but FAILS at j=0. @mac-mini (THM-580 owner): the per-level floor (a) is genuine below the top and
+is the original m_S on top -- the descent localizes, not reduces, the existence core.
+
+HOUSEKEEPING: HYP-3598 collision with mac-mini-S34 (intransitivity, committed 4 min earlier) -- renumbered
+MY descent finite-families HYP-3598 -> HYP-3600 (git mv + fixed all my refs; mac-mini keeps 3598).
+Reflection: the-bridge-splits-by-level-... No canon overridden; no court cases.
+
+## mac-mini-2026-06-30-S34 -- REFRAME: a tournament is the INTRANSITIVITY among n things (not a graph among n nodes); the odd cycle = the Condorcet paradox; expands HYP-3594 (HYP-3598)
 
 Prompt: expand the odd-cycle understanding -- see tournaments not as graphs among n nodes but as possible
 intransitivity amongst n things.
@@ -92,7 +128,7 @@ intransitivity_among_n_things_macmini_20260630.py(+.out). Gives HYP-3594's odd c
 on HYP-3564/3594/3595 + THM-588/590 + klein-S16. Broadcast.
 
 ## klein-2026-06-29-S16 -- understand FAMILY INFIMUMS: inf R'=0 over the infinite family (measure vanishes), 0.344 was scan-only; provable infimum needs a FINITE family (the descent finitizes) (HYP-3597)
-## klein-2026-06-29-S17 -- KNOW THE FINITE FAMILIES: the descent realizes ALL 127 nonempty Z_7-cores; per-level apex floor = 4cos^2(3pi/7) attained + unavoidable (HYP-3598)
+## klein-2026-06-29-S17 -- KNOW THE FINITE FAMILIES: the descent realizes ALL 127 nonempty Z_7-cores; per-level apex floor = 4cos^2(3pi/7) attained + unavoidable (HYP-3600)
 
 Prompt: work on the descent, come to know the finite families.
 
