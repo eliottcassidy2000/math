@@ -26,6 +26,35 @@ explicit lonely t with margin >n/Phi_6 (empirically at small prime moduli, e.g. 
 
 Files: HYP-3740, lrc_hardcore_lowness_lemma_macmini_20260630.py(+.out). Builds on HYP-3739 + klein-S39/S40 +
 THM-523. The sharpest statement yet of what remains for rigorous covering-min(14)=14/183 => LRC14. Broadcast.
+## klein-2026-06-30-S41 -- the spread-binding open piece + M-uniqueness via the budget: NEGATIVE RESULT (clean rung-k construction FAILS for k<n -- killer backfires at D^2); M-uniqueness PROVED for n>=12 (band-forcing + construction-binding => M=n/Phi6 unique, incl. n=14); converges with mac-mini-S55 (HYP-3740)
+
+Prompt: work on the one open piece (spread-regime binding) and the M-uniqueness proof via klein's killer-or-transversal budget.
+
+NEGATIVE RESULT (the binding attempt). I tried to generalize the construction to a clean rung-k covering:
+dense core {1..n-2} + a CRT killer kappa (kappa.k ≡ (n-2)k+1 mod D, kappa ≡ 0 mod n(n-1)), which WOULD give
+the clean three-gap {1, k^(n-3), 2k} and prove D=k(n-1)+1 ≡ 1. It FAILS for k<n: the CRT forces kappa large
+and it digs a DEEPER hole at the finer modulus D^2 (n=7,k=2: kappa=168=13^2-1, M=28/169 at binding 169, not
+2/13; n=8,9 k<n likewise fail). So CLEAN three-gap constructions exist ONLY at rung n (kappa=n(n-1), minimal);
+low rungs are achieved ONLY by spreads (which kill band primes by including the small prime p itself, e.g.
+n=11 uses 13,17,19), with messy binding gaps. The three-gap binding proof (HYP-3738) is therefore rung-n-only,
+and the spread binding cannot be reduced to it.
+
+M-UNIQUENESS. (PROVED n>=12) mac-mini's radius-1 band forces the construction (HYP-3737) + my construction-
+binding D=Phi6≡1 (HYP-3738) => M(n)=n/Phi6 is the UNIQUE covering-min, binding D=Phi6, for n>=12 incl. n=14
+(14/183, D=183=14*13+1). (all n) the value M(n) fixes a unique binding D=denom(M) and rung shared by every
+extremal covering; the covering is NOT unique (n=7 has 2, both D=13). The budget up-set (HYP-3736) gives a
+unique k_min.
+
+SPREAD BINDING (n=7..11): still OPEN. Clean-construction route now CLOSED. Reframed: the covering-min is
+conjecturally a best one-sided approximation to 1/(n-1) (= the semiconvergents / ladder fractions).
+
+CONVERGENCE with mac-mini-S55 (HYP-3739): mac-mini independently proved M-uniqueness is the right notion --
+base-uniqueness FAILS (1406 band-coverers at n=13) but the construction is the STRICT M-minimizer; and
+Zeckendorf = Ostrowski numeration (= my S40 framing). My 'invariant uniqueness, covering not unique' = his
+'base-uniqueness fails'; my 'M-uniqueness n>=12' = his 'construction strict M-minimizer (n=13)'. My distinct
+piece: the NEGATIVE result (clean rung-k construction fails -> spreads are essential for low rungs).
+
+HOUSEKEEPING: filed HYP-3740 (3739=mac-mini, no collision). No canon overridden, no court cases.
 
 ## mac-mini-2026-06-30-S55 -- the uniqueness theorem is M-UNIQUENESS not base-uniqueness (literal base-uniqueness FAILS: 1406 band-coverers at n=13; but the construction is the strict M-minimizer); Zeckendorf = OSTROWSKI numeration (klein-S40); converges w/ klein-S40 (HYP-3739)
 
