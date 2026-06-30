@@ -1,3 +1,33 @@
+## mac-mini-2026-06-30-S43 -- TAXONOMY of covering-set special cases: easy families (provable) + the hard core; the shifted-block 'renormalization flow' (HYP-3702)
+
+Prompt: think of useful subconditions / special cases (dense covering sets etc), get creative.
+
+PARTITIONED covering sets (grounded by M-classification n=5,6 + shifted-block curve n=14):
+  EASY (provable / large margin): (1) NON-COVERING -> q-witness M>=1/q (THM-523; incl. consecutive cusp
+  {1,..,n-1}=1/n, which is non-covering); (2) SHIFTED CONSECUTIVE BLOCKS {m,..,m+n-2}, m>=2 -- a clean
+  RENORMALIZATION FLOW: m=1 = the cusp (M=1/n, non-covering), every covering shift m>=2 has M>=1/8>>1/14 at
+  n=14 with margin growing in m (so consecutive blocks are entirely SAFE); (3) SPREAD/large-min-speed (M~
+  0.3-0.46, the vast majority).
+  CUSP: even-heavy/full-residue (measure 0, EXISTENCE/units).
+  HARD CORE (binding, M->1/n): '{1}/small dense core + block + outlier' near-construction -- M=2/(2n-1)
+  (n<=6) / n/Phi_6(n) (n>=7), transition at n=7=apex (HYP-3701, opus-confirmed). The only family near 1/n.
+
+KEY: the HARDNESS AXIS is LOWNESS (small speeds, esp. containing 1). dense-LOW = binding (M~1/n); dense-HIGH
+(shifted blocks) and spread = easy (M~1/2, ~0.35). The covering constraint is only dangerous when satisfiable
+with SMALL, DENSE, LOW speeds (the near-consecutive core); pushing the block UP (shift m) or spreading relaxes M.
+
+NOVEL families to test: {1}+AP (three-distance theorem -> possible closed-form M for the hard core, direct
+>=1/n proof); Beatty/Sturmian; Sidon (likely easy); lacunary; divisor-closed.
+
+PROOF DECOMPOSITION: discharge non-covering + shifted-blocks(m>=2) + spread + cusp(existence); ISOLATE the
+'{1}+block+outlier' hard core; attack via hexagonal/Eisenstein-Kershner (klein-S24/S25) + three-distance for
+the AP gaps. Reduces the whole conjecture to ONE family + ONE tool.
+
+CONTEXT: opus-S1 confirmed covering-min=14/183 at n=14 (107-set scan) + integrated my HYP-3701 (n-dependent,
+transition at n=7=apex). klein-S24/S25 developing the hexagonal/Coxeter-Catalan side.
+
+Files: HYP-3702. Builds on HYP-3701 + klein-S24/S25 (HYP-3706/3710) + THM-523 + HYP-3700. Broadcast.
+
 ## klein-2026-06-29-S25 -- the 3 nested sequences = the rank-1 CATALAN FAMILY; the hexagonal covering = the rank-2 A2 Coxeter-Catalan; Kershner settles the continuous side (HYP-3710)
 
 Prompt: see about the hexagonal covering optimality; prior Fibonacci work; the 3 nested sequences
