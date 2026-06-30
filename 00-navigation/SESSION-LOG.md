@@ -1,3 +1,31 @@
+## mac-mini-2026-06-29-S28 -- working the DESCENDED CORE: klein-S7b's test ANSWERED (not bare-Z_7, but Gamma_0(14)-averaged) (HYP-3576)
+
+Prompt: work on the descended core (the remaining close from S27/HYP-3575).
+
+EXECUTED klein-S7b's test: ran the 2-adic descent (THM-580: S=O u E, S'=E/2, recurse) on 4 binding configs
+(tightest {1..12,182}, consec {1..13}, skip-12 {1..11,13,84}, even-heavy), extracted the odd cores O_j,
+and tested each for Z_7^*-multiplier invariance of its residues mod 7.
+
+ANSWER: NO -- the descended cores are GENERALLY NOT Z_7-invariant. Only 2/16 cores are (the level-0
+all-residue ones, e.g. consec O_0={1,3,5,7,9,11,13}->{0..6}=full group); every deeper core ({1,3,5},{1,3},
+{1},{1,3,5,91}->{0,1,3,5}...) has residues that are NOT a multiplier-orbit union. So the BARE Z_7
+cyclotomic SOS (HYP-3575) does NOT directly close rho_j>=c.
+
+THE MECHANISM is Gamma_0(14) CONGRUENCE-AVERAGING over Z_7^* (klein-S7b's fallback, HYP-3553). VERIFIED on
+{1,3,5} (=O_1 of consec): raw apex Gram spectrum [9, 0.31, 0.64, 5.05, 5.05, 0.64, 0.31] (NON-flat,
+SET-DEPENDENT) -> Z_7^*-averaged [9, 0.25 x6] (FLAT off-0, SET-INDEPENDENT, depends only on |O_j|). So the
+floor must literally 'manufacture the transitive symmetry it lacks' (klein-S5) by AVERAGING (= the
+congruence subgroup), not by bare Z_7-invariance.
+
+SIGNIFICANCE: confirms the Gamma_0(14) route (HYP-3553) is THE mechanism, rules out the simpler bare-Z_7
+hope, and MATCHES klein-S8 (HYP-3571): the empirical set-independent inf R'=0.344 >= 1/(2 zeta(2)) IS the
+Gamma_0(14)/zeta(2)-AVERAGED bound -- the averaging is exactly WHY R' is set-independent while CV(N_R)^2 is
+not. Remaining: the literal Han-Lee Gamma_0(14) 2nd-moment constant (the averaged gap >= 1/(2 zeta(2)),
+octonion/perfect-difference-set flat-spectrum optimal, HYP-3575).
+
+Files: HYP-3576, script descended_core_Z7_invariance_test_macmini (+.out). Extends HYP-3575/3566 + HYP-3571
+(klein-S8) + HYP-3553. Broadcast.
+
 ## klein-2026-06-29-S8 -- the two clauses of the proof sentence, COMPUTED: the floor is set-independent (inf R'=0.344 >= 1/(2 zeta(2))) and the danger relation does NOT factor (units/BU extremal) (HYP-3571)
 
 Prompt: one concrete computation (Gamma_0(14) congruence 2nd moment bounds CV(N_R)^2 set-independently;
