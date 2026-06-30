@@ -1,4 +1,36 @@
-## klein-2026-06-29-S11 -- the GENUS IS THE LOCAL-GLOBAL GAP: bulk constant (Eisenstein=3), obstruction = cusp form (=genus); the concrete step worked; the one master dichotomy (HYP-3587)
+## klein-2026-06-29-S12 -- three 'evens' (Royle sandwich); the Eulerian sections (codex-S675b black/blue); and THE GENUS IS THE ODD BOUNDARY (HYP-3591)
+
+Prompt: understand tournament/even-graph equinumerosity + its particularities; find past work on Eulerian
+sections of the merged metagraph; work the genus-dimensional column creatively.
+
+EQUINUMEROSITY (verified, script even_graph_equinumerosity_three_counts_klein.py): 'even graph' = THREE
+distinct Burnside counts on K_n edges, equal ONLY at n=3 (the polysemy trap): A000088 (ALL graphs)
+4,11,34,156,1044; A000568 (tournaments = ROYLE-even = ODD-ORDER Burnside = signed cycle index P_n(1),
+THM-587) 2,4,12,56,456; A002854 (degree-even = EULERIAN = cycle space, GF(2)-correct) 2,3,7,16,54. SANDWICH:
+Eulerian <= tournaments <= all. The tournament equinumerosity is with ROYLE-even (DFGPR 2022), NOT Eulerian
+-- a polysemy distinction. (The naive Eulerian dim E_orb-V_orb+1 is WRONG at even n: the E=Cut+Cycle-iff-n-odd
+GF(2) parity obstruction; fixed with the deg-map GF(2) rank.) Tournaments = signed/odd-order object; Eulerian
+= cycle-space bulk; the even-graph shadow of a tournament (T_cycle=(I+L)T mod 2, odd n) is its cycle/bulk part.
+
+EULERIAN SECTIONS (the past work = codex-S675b, merged-line-parity-even-odd): in the corrected complement-line
+lift, BLACK is always EULERIAN (even, boundary-zero/F_2 = cycle-space kernel), BLUE is the ODD-degree boundary
+coset; verified through n=7. 'Odd is even plus a NAMED BOUNDARY.' S675b punchline: 'the black Eulerian side is
+a certificate and the blue odd boundary marks the exact floor atoms.'
+
+GENUS COLUMN (creative synthesis, reflection three-evens-the-royle-sandwich-and-the-genus-is-the-odd-boundary):
+match S675b to the modular Eisenstein(bulk)+cusp-form(obstruction) split (HYP-3587) => THE GENUS IS THE
+DIMENSION OF THE ODD BOUNDARY = #blue floor atoms = dim cusp forms. The cusp form f_14 IS the blue odd-boundary;
+S675b's 'blue floor atoms' = the modular 'cusp-form obstruction', found INDEPENDENTLY (codex on the metagraph,
+klein on the modular curve). LRC(14): genus 1 = ONE blue atom = the DOUBLET (THM-578) = f_14. Genus 0 (LRC6) =
+zero blue atoms (black certificate closes it). Genus>=2 = several (irreducible).
+
+MASTER DICHOTOMY (homological row added): local/global = even/odd = cycle-space-kernel/boundary-coset =
+Eulerian-black/blue = Eisenstein/cusp-form = bulk/obstruction; dim(global) = genus. Everything computable is
+BLACK (the Eulerian/cycle-space bulk, the metagraph, CV(H)); the one missing thing is BLUE -- the genus counts
+it, and for N=14 it is a single doublet.
+
+No canon overridden; no court cases. NEXT (floor owners): bound the one blue atom (the leading apex-cusp coeff
+of f_14, HYP-3587); use S675b's line-lift to make the blue floor atoms visible as a certificate.
 
 Prompt: another reframe-heavy session on the concrete next step (decompose Gamma_0(14) 2nd moment into
 Eisenstein + f_14, bound the cusp piece) + understand what the genus shift FUNDAMENTALLY represents + find

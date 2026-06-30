@@ -1,0 +1,20 @@
+==============================================================================
+ The three 'even graph' counts on K_n (Burnside); the equinumerosity particularity
+==============================================================================
+  n  A000088(all)  A000568(tourn=Royle-even)  A002854(degree-even=Euler)
+  3             4                          2                           2
+  4            11                          4                           3
+  5            34                         12                           7
+  6           156                         56                          16
+  7          1044                        456                          54
+
+ A000088 (all graphs):        [4, 11, 34, 156, 1044]  (expect 4,11,34,156,1044)
+ A000568 (tournaments/Royle): [2, 4, 12, 56, 456]  (expect 4,12,56,456,6880)
+ A002854 (degree-even/Euler): [2, 3, 7, 16, 54]  (expect 3,7,16,54,243)
+
+ PARTICULARITY:
+ - tournaments (A000568) = the ODD-ORDER restriction of the all-graph Burnside (= signed cycle
+   index P_n(1), THM-587). Royle 2022: also = #Royle-even graphs (an intrinsic property).
+ - EULERIAN/degree-even (A002854) = the CYCLE-SPACE Burnside (boundary-zero/F_2). DIFFERENT.
+ - all three = 2 at n=3 (coincidence), then diverge: tournaments > Eulerian for n>=4.
+ - tournaments are SANDWICHED: A002854 <= A000568 <= A000088 ? True
