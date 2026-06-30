@@ -1,0 +1,13 @@
+n  | best-known covering-min | rung k | source        | construction n/Phi6 (rung n)
+--------------------------------------------------------------------------------------------
+ 7 |     2/13=0.15385      |      2 | spread (IP)   | 7/43=0.16279
+ 8 |     2/15=0.13333      |      2 | spread (IP)   | 8/57=0.14035
+ 9 |     4/33=0.12121      |      4 | spread (IP)   | 9/73=0.12329
+10 |     4/37=0.10811      |      4 | spread (IP)   | 10/91=0.10989
+11 |     3/31=0.09677      |      3 | spread (IP)   | 11/111=0.09910
+12 |   12/133=0.09023      |     12 | construction  | 12/133=0.09023
+13 |   13/157=0.08280      |     13 | construction  | 13/157=0.08280
+14 |   14/183=0.07650      |     14 | construction  | 14/183=0.07650
+
+RUNG SEQUENCE k(n) (best-known): the Farey-ladder position of the covering-min, M(n)=[0;n-1,k]=k/(k(n-1)+1).
+Floor 1/n = rung 1; construction n/Phi6 = rung n; ceiling 1/(n-1) = rung inf. Covering-min rung in [2,n].

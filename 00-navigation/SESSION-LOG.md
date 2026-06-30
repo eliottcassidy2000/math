@@ -1,3 +1,35 @@
+## klein-2026-06-30-S37 -- the covering-min's GEOMETRY INVARIANT = the STERN-BROCOT/FAREY RUNG k(n): M(n)=[0;n-1,k]=k/(k(n-1)+1), Farey neighbor of the ceiling 1/(n-1); rungs n=7..11 = 2,2,4,4,3; HONEST: user's n=13=1/12 REFUTED (construction 13/157<1/12); new sequences (rung/binding/defect/deficit) (HYP-3732)
+
+Prompt: find a geometry invariant arithmetically anchored; study the irregularities of the covering-min (n=7,8,9,11,13 = 2/13,2/15,4/33,3/31,1/12; margins 1/91,1/120,1/99,2/341,1/156) and other no-closed-form repo sequences; find connections; define new sequences.
+
+THE GEOMETRY INVARIANT = the STERN-BROCOT / FAREY RUNG k(n). Every covering-min is a continued fraction
+M(n)=[0; n-1, k] = k/(k(n-1)+1) -- the rung-k fraction on the Farey ladder from the floor 1/n (rung 1) to the
+ceiling 1/(n-1) (rung inf), with the construction n/Phi_6(n) at rung n. Two clean Farey adjacencies (verified
+n=7..11): |det(M, 1/(n-1))|=1 (M is ALWAYS a Farey NEIGHBOR of the ceiling) and |det(M, 1/n)|=k-1 (= the
+margin numerator; M is at Farey-height k above the floor). k ~ D/n = the binding-modulus STRETCH per runner
+(tight k=2 D~2n for spreads; loose k=n D=Phi_6 for the construction). Geometric (Farey tessellation) +
+arithmetic (continued fraction). delta(n)=n-1/M=(k-1)/k = a rotation-number defect (ties three-gap HYP-3717).
+
+VERIFIED RUNGS (re-checked by exact gap): n=7..11 -> 2,2,4,4,3 (M = 2/13,2/15,4/33,4/37,3/31; n=10 NEW = 4/37).
+
+HONEST CORRECTION: the data point n=13 = 1/12 is REFUTED. The construction {1..11,156} (156=13.12) is a
+primitive covering with M = 13/157 = [0;12,13] (rung 13) < 1/12 = 0.08333 (verified, binding D=157). The 1/12
+(rung inf, the ceiling) came from a small-Smax search that could not host the killer 156 -- same failure mode
+as MISTAKE-087 and my own S36 run. So covering-min(13) <= 13/157, NOT 1/12. For n>=12 the best-known is the
+construction (rung n); whether a larger-speed spread beats it (spread->construction transition near n=12) is
+under test (n=12, Smax=80, still running).
+
+NEW SEQUENCES: rung k(n)=2,2,4,4,3; binding D(n)=13,15,33,37,31 (=2n-1 Paley only n=7,8, HYP-3731); defect
+delta=(k-1)/k=1/2,1/2,3/4,3/4,2/3; construction-deficit n-k=5,6,5,6,8; margin numerator eps=k-1=1,1,3,3,2.
+
+CONNECTIONS (structural, not numerical): the rung's irregularity is the same character as width(G_n)=
+1,2,3,6,15,49 (breaks C(n-2,floor) at n=7), chi(E_n)=2,3,5,10,28, A000568, NS-merged=0,1,2,22,184 -- but NO
+numerical coincidence. The genuine link is the shared anchor: the staircase delta_{n-2}/Phi_6 (the construction
+rung IS Phi_6(n); the Paley modulus 2n-1 IS the triangle boundary). Different irregular spectra of one
+circulant/Farey machine. Reflection: 07-reflections/the-covering-min-lives-on-the-farey-ladder.md.
+
+HOUSEKEEPING: filed HYP-3732. No collisions, no canon overridden, no court cases.
+
 ## klein-2026-06-30-S36 -- the COVERING-MIN as an IP over the DANGER-CIRCULANT: PINS n=7->2/13, 8->2/15, 9->4/33, 11->3/31 (NEW, beats construction); + the dual set-cover/independent-set reframes (copy observer to all n points = Galilean-invariant symmetric version); + chromatic<->OCF computational (even n=Paley tournament/Redei, odd n=Paley graph/Ihara) (HYP-3731)
 
 Prompt: creatively reframe the synthesis (change the observer / translate / copy to all n points / relate to Hamiltonian paths); IMPLEMENT the covering-min as an IP over the danger-circulant independent sets -- to pin the odd-n values AND make the chromatic<->OCF bridge computational.
