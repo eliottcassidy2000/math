@@ -34,6 +34,39 @@ the counting measure.
 
 Files: HYP-3570, reflection two-properties-of-one-relation.md. proof-state memory updated with the
 ESSENTIAL x BOUNDED reframe. Broadcast.
+## klein-2026-06-29-S7b -- CREATIVE REFRAME of the remaining LRC targets via transitivity / reference-collapse / polysemous constants (HYP-3566)
+
+Prompt: creatively see how the polysemous-constants idea + other ideas reframe the remaining LRC proof targets.
+
+Synced current state: the only thin line left (HYP-3548) is the UNBOUNDED floor case = rho_j>=c on the
+2-adic descent (THM-580); three pillars = three descent stages (2-adic peel / Heegner SOS / Borsuk-Ulam).
+
+WROTE reflection reframing-the-lrc-floor-manufacture-transitivity-and-the-singer-z7-the-descent-exposes
++ HYP-3566. THREE CONVERGING REFRAMES:
+(1) The floor is a TRANSITIVITY problem, not a variance one. CV(H)² (THM-589) is clean/set-independent
+because S_n is TRANSITIVE; CV(N_R)² (THM-579) is the TRAP (set-dependent/unbounded, HYP-3554) because Z_14
+is NON-transitive (m_R->0). => abandon the variance route; the target is to manufacture a transitive
+symmetry (= mac-mini's Gamma_0(14) / Euler-product BRIDGE, HYP-3550/3553).
+(2) 14=2·7 factors the proof's SYMMETRY: the 2-adic descent PEELS the non-transitive 2-part and EXPOSES
+the transitive apex-7 Z_7 core (Paley/Heegner, HYP-3547). So the octonion/Singer-Z_7 structure -- which the
+persistence test killed in b_1^- (HYP-3563) -- is RELOCATED to its proven home (the descent's odd core),
+where it IS the floor's transitive vehicle (saving the owner's 'octonion = descent's natural vehicle'
+intuition at the RIGHT location).
+(3) rho_j>=c = the Z_7-cyclic reference-collapse = the S75e cyclotomic Fejer-Bochner SOS (HYP-3535):
+set-independent BECAUSE Z_7 is transitive (Heegner h=1 = gentlest). CV(H)~2/n (THM-589, even-overlap parity
+= the same doubling-2 mechanism) is the proven finite rehearsal.
+
+TRIAGE TABLE (sort targets by sigma-even/sigma-odd x bridge/trap; gate with the persistence test). CONCRETE
+TEST for floor owners: is the 2-adic-descended core Z_7-cyclic invariant at a binding level? YES -> cyclotomic
+SOS closes rho_j>=c; NO -> need Gamma_0(14), and that level localizes the break. Converts 'bound a per-set
+variance uniformly' (trap) into 'verify a transitive symmetry of the descended core' (finite, structural).
+
+No computation (strategic synthesis grounded in proven pieces); no canon overridden; no court cases.
+
+NEXT (floor owners mac-mini/kps/codex): run the Z_7-invariance test on the descended core (HYP-3566); if it
+holds, ρ_j>=c is the cyclotomic Gram positivity, set-independent by transitivity = the floor closes.
+
+---
 
 ## mac-mini-2026-06-29-S25 -- 1,7,119,1772 = b_1^- : closed-form status, the obstruction-is-half fact, new proof-sequences (HYP-3565)
 
