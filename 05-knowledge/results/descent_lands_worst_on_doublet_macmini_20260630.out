@@ -1,0 +1,50 @@
+====================================================================================
+DOES THE DESCENT LAND THE WORST COVERING ON THE DOUBLET? (4cos^2(3pi/7)=0.1981)
+====================================================================================
+
+[1] R = {1..13}\{x}, drop each x -- the descent chain's min per-level gap:
+    drop x  depth  min per-level gap  doublet? full-Z7(gap0)?
+         1      4             0.1981       YES             no
+         2      4             0.1981       YES            YES
+         3      4             0.1981       YES             no
+         4      4             0.3080        no            YES
+         5      4             0.1981       YES             no
+         6      4             0.1981       YES            YES
+         7      4             0.1981       YES             no
+         8      3             0.1981       YES            YES
+         9      4             0.1981       YES             no
+        10      4             0.1981       YES            YES
+        11      4             0.1981       YES             no
+        12      4             0.3080        no            YES
+        13      4             0.1981       YES             no
+    => the worst BOUNDED (positive) per-level floor over drop-one = 0.1981 at x=1 (=4cos^2(3pi/7), the DOUBLET).
+    (drop x=7 = the apex prime = klein-S8's binding R; its chain hits the doublet {1,3}.)
+
+[2] broader sweep -- min per-level gap and whether the chain hits a doublet:
+              consec {1..13}: core sizes [7, 3, 2, 1], min gap 0.1981, doublet=Y, full-Z7=Y
+              consec {1..12}: core sizes [6, 3, 2, 1], min gap 0.1981, doublet=Y, full-Z7=N
+        tightest {1..12,182}: core sizes [6, 4, 2, 1], min gap 0.1981, doublet=Y, full-Z7=N
+       skip-12 {1..11,13,84}: core sizes [7, 3, 2, 1], min gap 0.1981, doublet=Y, full-Z7=Y
+      even-heavy {2,4,..,26}: core sizes [7, 3, 2, 1], min gap 0.1981, doublet=Y, full-Z7=Y
+       {1..13}\{7} (binding): core sizes [6, 3, 2, 1], min gap 0.1981, doublet=Y, full-Z7=N
+
+[3] THM-590 (per-level): over ALL 127 nonempty Z_7-cores, the positive gaps and their MIN:
+    distinct gap values: [0.0, 0.1981, 0.308, 1.0, 2.0]; MIN POSITIVE = 0.1981 = 4cos^2(3pi/7) (at the doublets); gap=0 only at full Z_7.
+    => no covering's chain can have a positive per-level factor below the doublet 0.198 (THM-590).
+
+[4] Q1 -- the matching (tournament-side image of the binding doublet C_7):
+    The doublet {a,b} depends only on d=b-a; its autocorrelation = 2I + A(C_7), C_7=Cay(Z_7,{+-d}).
+    So the binding atom = the 7-CYCLE C_7 = an EVEN graph = the CUSP of the even-graph dual E_7,
+    NOT a strongly-connected TOURNAMENT (a tournament connection set has size 3, the doublet is 2).
+    Tournament side has the 3-CYCLE (minimal cyclicity, Z_3); the apex binding object is its
+    EVEN-GRAPH DUAL at length 7 (HYP-3590). The 'image' is a CATEGORY clarification: the binding
+    atom lives on the cycle-space/dual side; matching it to one SC tournament is a category error.
+
+====================================================================================
+ANSWERS: Q2 -- the WORST bounded covering descends THROUGH a DOUBLET (min per-level gap = 0.198 =
+4cos^2(3pi/7), THM-590, attained at drop-x=7 = klein-S8's binding R); deeper/full-Z_7 chains are
+the gap-0 cusp (measure-0, existence carries, klein-S16). The total floor is the PRODUCT over the
+chain (-> 0 for deep chains); the per-level binding atom is the doublet. Q1 -- the binding atom is
+the EVEN-GRAPH 7-cycle C_7 (cusp of E_7), not a tournament; tournament side has the 3-cycle, its
+length-7 dual. So the descent reduces the floor to ONE irreducible atom: the doublet/C_7.
+====================================================================================

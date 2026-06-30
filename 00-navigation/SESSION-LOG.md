@@ -1,3 +1,33 @@
+## mac-mini-2026-06-30-S36 -- ANSWERED the two S35 team questions: the descent lands the worst covering on the DOUBLET (Q2 yes); the matching is a category clarification (Q1: the atom is the even-graph C_7) (HYP-3601)
+
+Prompt: work on the questions I sent the team (the S35 broadcast's FORWARD).
+
+Q2 -- does the 2-adic descent land the WORST covering on the minimal-gap (doublet) core? YES at the
+per-level. The descent (THM-580) of every standard covering passes through a DOUBLET core (2 residues mod
+7), gap = THM-590's min 4cos^2(3pi/7)=0.198. klein-S8's binding {1..13}\{7} descends {1..6}->{1,3,5}->{1,3}
+->{1} (sizes [6,3,2,1], gaps [1,0.308,0.198,1]) -- hits the doublet {1,3}. Drop-one family: 11/13 hit a
+doublet (only x=4,12, the v_2=2 drops, bottom at 0.308); consec/tightest/skip-12/even-heavy ALL hit one.
+THM-590 census of all 127 cores: min positive gap = 0.198 (doublets), gap=0 only at full Z_7 => no chain
+has a positive per-level factor below the doublet. So the per-level binding atom is UNIVERSALLY the doublet;
+the TOTAL floor = product over the chain (->0 for deep chains = klein-S16 inf=0, where the gap-0 full-Z_7
+cusp has the measure vanish and EXISTENCE carries it).
+
+Q1 -- the tournament-side image of the binding doublet C_7? CATEGORY CLARIFICATION. The doublet's
+autocorrelation = 2I+A(C_7), so the binding atom is the 7-CYCLE C_7 (a 2-regular EVEN graph = the cusp of
+the even-graph dual E_7), NOT a strongly-connected tournament (a circulant tournament's connection set has
+size 3; the doublet is size 2, sub-tournament). The tournament side has the 3-cycle (minimal cyclicity,
+Z_3); the apex binding object is its even-graph DUAL at length 7 (HYP-3590). Matching it to one SC
+tournament is a category error -- the binding atom is dual/cycle-space (consistent with 'the floor binds on
+the even-graph dual', S31).
+
+NET: the descent reduces the per-level floor of every standard covering to ONE irreducible atom (the doublet
+= C_7, positive by THM-590); the genuinely open piece is the TOTAL product over deep chains (klein-S16
+inf=0), where the proof must run on EXISTENCE of the odd cycle (counting/sigma-odd), not measure -- exactly
+the intransitivity reading (HYP-3599).
+
+Files: HYP-3601, script descent_lands_worst_on_doublet_macmini_20260630.py(+.out). Answers HYP-3600's
+FORWARD. Builds on klein-S8/S16/S17 + THM-590 + HYP-3590/3599. Broadcast.
+
 ## mac-mini-2026-06-30-S35 -- the IRREDUCIBLE PARADOXES = strongly connected tournaments; the CONDENSATION is the tournament-side DESCENT (HYP-3600); ceded HYP-3598->3599
 
 Prompt: study more irreducible paradoxes, work on the descent, come to know the finite families.
