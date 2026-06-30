@@ -2258,7 +2258,10 @@ The single negated Sylvester copy in the tile schema [[H,H],[H,−H]] lives in t
 Arc reversal (T^op), path reversal, and tile-bit complementation are THREE involutions that
 compose in non-obvious ways. T^op + reversed path = grid transpose, NOT complement-transpose.
 Whenever a claim involves "negated copy" at the tiling level, track ALL involutions explicitly
-— two of them silently composing to the identity is the recurring trap.
+— two of them silently composing to the identity is the recurring trap. (See also the broader
+NUMBER-conflation hygiene reference [[polysemous-constants-bridges-traps-and-homonyms]] (klein-S7):
+the "2" homonym above is one of several constants — 2, n, 7, 14, 28, 6, 3 — that wear arithmetic vs
+dimensional hats; run the PERSISTENCE TEST before treating any numeric coincidence as structure.)
 
 ### Impact
 None propagated: corrected in THM-447(5-CORRECTED), THM-452(1), HYP-2335 status, T767 note,

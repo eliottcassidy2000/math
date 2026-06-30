@@ -1,3 +1,37 @@
+## klein-2026-06-29-S7 -- proof-hygiene reference: the POLYSEMOUS CONSTANTS (numbers that wear arithmetic vs dimensional hats; bridges vs traps vs homonyms)
+
+Prompt: beyond 7, which natural numbers must we be careful about (different ways we see them) for this
+project's proofs?
+
+WROTE reflection polysemous-constants-bridges-traps-and-homonyms (a reference catalog). Generalized the
+"two 7's" lesson (HYP-3563) into a TAXONOMY: a number plays an ARITHMETIC role (prime/totient/modulus/
+factor) and/or a DIMENSIONAL role (count/Betti/binomial/dim); the coincidence is either a BRIDGE (provable,
+persists across n -- SAFE), a TRAP (holds at one n, dies -- e.g. b_1^-(5)=7 died at n=7), or a HOMONYM
+(one symbol, several objects -- a notation hazard, MISTAKE-033). DIAGNOSTIC = the PERSISTENCE TEST: check
+the next n before promoting a coincidence to structure.
+
+CATALOG (proof-critical): **2** (HOMONYM, most dangerous: complement-reflection sigma vs 2-adic doubling
+delta -- the two order-2 structures; + the THREE involutions of MISTAKE-033). **n** (HOMONYM: tournament
+vertex count vs LRC modulus 14 vs Paley prime p vs Forcade order 2^p -- the owner's own "n=5 / apex 7"
+mixed two indices). **7** (BRIDGE: apex prime Z_7/Paley/Fano/octonion, HYP-3547; + TRAP: b_1^-(5)=7,
+V(E_5)=7 coincidences, HYP-3563). **14** (BRIDGE: modulus = 14 sheets N_R; NUMEROLOGY: dim G_2=14, flagged).
+**28** (BRIDGE, PROVEN: perfect = T(7) = C(8,2) = arc-count, HYP-3546; NUMEROLOGY: dim so(8)). **6** (three
+unrelated 6's: phi(14)=6 cap sectors vs C(4,2)=6 n=4 arcs vs T(3)=6=LRC(6)). **3** (prime/3mod4 vs
+3-cycle=cyclicity Fiedler THM-588 vs Fano-line size). **red-herring class**: 89=F_11 (HYP-3551 flagged),
+factor primes 17/443 (outputs, not structure).
+
+The deepest SAFE identities are the PROVEN arithmetic<->dimensional bridges: 28=T(7)=C(8,2) (HYP-3546),
+P_n(-1)=SC(n) (THM-587), chi(T_p)=p (THM-129). Anything that merely LOOKS like one must pass the
+persistence test first.
+
+Added a pointer from MISTAKES.md (the MISTAKE-033 involution lesson). No new computation; no canon
+overridden; no court cases. Reference doc for all agents.
+
+NEXT: when a session hits a numeric coincidence (esp. a Betti/count = a meaningful prime), consult this
+catalog + run the persistence test before building on it.
+
+---
+
 ## klein-2026-06-29-S6 -- the owner's two b_1^- tasks: b_1^-(5)=7 CONFIRMED, but 7-divisibility FAILS at n=7 and there is NO Singer-Z_7/Fano (both apex-7/octonion conjectures REFUTED) (HYP-3563)
 
 Prompt: (1) verify 7|b_1^-(n) for n>=7 (apex-7 persist?); (2) find a Z_7/Fano-line basis of H_1^- at n=5
