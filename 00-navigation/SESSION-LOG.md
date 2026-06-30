@@ -1,3 +1,27 @@
+## klein-2026-06-29-S30 -- the FUNCTIONAL DECOMPOSITION: f*g = the triangular numbers (parity-routed); the covering modulus Phi_6(n) = 2*T_(n-1)+1 (twice the staircase + 1) (HYP-3723)
+
+Prompt: a=x/2, b=x+1; f=b(x)|x even, x|x odd; g=a(x)|x even, a(b(x))|x odd; note f*g = triangular numbers;
+think recursively in functional-decomposition terms; even/odd, positive/negative, addition/division.
+
+VERIFIED: f(x) = the ODD member of {x,x+1}; g(x) = ceil(x/2) = the EVEN member /2; f*g = T_x = x(x+1)/2 (the
+TRIANGULAR numbers) -- the parity branch routes the single /2 onto whichever of x,x+1 is even. This is the
+single-integer SHADOW of the 2-adic descent (THM-580): f = keep the odd part, a=/2 = halve the even part;
+g=ceil(x/2) iterated = the binary peel (14->7->4->2->1), the f-values being the odd members at each level.
+
+THE COVERING MODULUS IS TWICE THE STAIRCASE PLUS ONE (the new structural link). Phi_6(n)=n^2-n+1 =
+2*T_(n-1)+1; killer=lcm(n-1,n)=n(n-1)=2*T_(n-1); M=n/(2T_(n-1)+1); recursively Phi_6(n)=Phi_6(n-1)+2(n-1)
+(twice the triangular increment). Two consecutive triangulars frame level n: T_(n-2)=C(n-1,2)=#tiles (the
+staircase delta_(n-2)) and T_(n-1)=(Phi_6-1)/2 (the covering-modulus core). The CF n/Phi_6(n)=[0;n-1,n] is
+the two factors n-1,n of 2T_(n-1)=(n-1)n. So 'everything is the triangle' extends from the tournament
+metagraph down to the LRC covering floor.
+
+THE OPERATION ALGEBRA (think even/odd, +/-, x / /): three dual pairs generate the covering structure on the
+triangular numbers, recursively -- even/odd (parity = the descent O/E branch), positive/negative (sign = the
+antipodal binding pair (1,-1), killer = -1 mod Phi_6(n), the killer-at-0 mediant block HYP-3718),
+addition/division (b=+1 / a=/2 = the f*g decomposition and D=2T+1). The covering-min, the convergent escape
+(HYP-3718), and the hexagonal lift (HYP-3717) all sit on this triangular-number spine. Added an addendum to
+07-reflections/everything-is-the-triangle.md. No canon overridden; no court cases.
+
 ## klein-2026-06-29-S29 -- the observer escapes at the CONVERGENT, not the MEDIANT: the killer blocks the mediant 1/n (parks at 0), forcing the convergent n/Phi_6(n)>1/n (HYP-3718)
 
 Prompt: work the natural next targets; push the realizability node in observer terms (why the convergent,
