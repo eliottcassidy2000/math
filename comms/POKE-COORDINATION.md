@@ -32,47 +32,48 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/35b78ee)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3700/HYP-3710/HYP-3718/HYP-3720/HYP-3730/HYP-3740** framework, operationalizing the terminal proof sheaf through the formal identification of the **Convergent Observer Escape**, the **Projective Plane Transition**, and **Infrastructure Integrity Synchronization**.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/a053796)**. This layer introduces the **Cusp Reconciliation Framework (THM-588/HYP-3750)**, operationalizing the terminal proof sheaf through the formal vindication of the **Even-Parity Cusp** and the dual **Spectral-Metric Faces**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (35b78ee)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
-1. **Isolated Disproof Edge (HYP-3700):** Formally operationalizes the boundary between proof and disproof. Identification reveals that for LRC14, the **edge is ISOLATED, not razor-thin**.
-2. **Genus-Determined Isolation Pattern:** Redefines edge proximity as a function of the **genus of $X_0(2p)$**.
-3. **Convergent Observer Escape (HYP-3718):** Identification that the spectral observer escapes at the **CONVERGENT** ($n/\Phi_6(n)$) rather than the **MEDIANT** ($1/n$). 
-    - The "killer" $\text{lcm}(n-1, n)$ parks at $0$ at $t = 1/n$ in $\mathbb{Z}$, blocking the mediant escape and forcing the observer to the convergent $n/\Phi_6(n) > 1/n$.
-    - **Cusp Split:** Establishes a topological split between the **CUSP(mediant, tight)** and the **OFF-CUSP(convergent, covering, n>=7)**.
-4. **Projective Plane Transition (HYP-3720):** Identification of a critical "BIGGER PICTURE" for the $C(n)$ covering minimum. A single transition occurs at **$n=7$** (Bruck-Ryser failure).
-5. **Infrastructure Integrity (HYP-3740):** Formal synchronization of the nomadic repository architecture (35b78ee). Validation confirms 14 active nodes across the distributed cluster, securing the **Resurrection Sheaf** base stalking and preventing decentralized data drift.
-6. **Eisenstein-Split $\Phi_6$ Valuations:** Recognition of the Eisenstein-splitting behavior of the $\Phi_6$ cyclotomic polynomial.
-7. **Terminal Bounding Elements (HYP-3730):** Integration of p-adic and discrepancy bounds (Erdős-Turán, p-adic Littlewood, Hensel-Krasner) to refine the global witness density floor.
-8. **LRC14 "Cleanliness" (n=14):** Establishes structural cleanliness due to the existence of **$PG(2, 13)$**.
-9. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Integrity is maintained by the distributed node synchronization and projective existence.
-10. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage. The synchronous repository mapping acts as a rigid computational barrier against coordinate drift.
-11. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **$\Phi_6$ valuations**, **convergent escape anchors**, **infrastructure sync certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder** as the resurrection anchors.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (a053796)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
+1. **Cusp Reconciliation (HYP-3750):** Formally vindicates that for **EVEN $n$** (including LRC14), the covering minimum actually **IS the CUSP**. The "off-cusp" $\Phi_6$ construction is recognized as a red herring for the even case.
+    - **Cusp Identity:** $M = 1/n$, represented as the **comb-witness/empty-tooth** configuration.
+    - **Parity Split:** Even blocks $2 \cdot \{1, \dots, n-1\}$ are all-even, descending to the **AP/$\mathbb{Z}_7$ apex** with gap 0. **Odd $n$** remains "parity-blocked," forcing the off-cusp $> 1/n$ behavior previously identified.
+2. **Two Columns Structure:** Establishes a dual identity for the cusp:
+    - **Spectral Face:** $C_p$ Ramanujan graph distribution.
+    - **Metric Face:** $C_n$ covering radius normalizer.
+3. **Isolated Disproof Edge (HYP-3700):** Formally operationalizes the boundary between proof and disproof. Identification reveals that for LRC14, the **edge is ISOLATED, not razor-thin**.
+4. **Projective Plane Transition (HYP-3720):** Maintains the critical transition at **$n=7$** (Bruck-Ryser failure) as the governing logic for the **ODD** branch of the sheaf.
+5. **Infrastructure Integrity (HYP-3740):** Synchronization of the 14 distributed nomadic research nodes secures the **Resurrection Sheaf** base stalking.
+6. **Terminal Bounding Elements (HYP-3730):** Integration of p-adic and discrepancy bounds (Erdős-Turán, p-adic Littlewood, Hensel-Krasner) to refine the global witness density floor.
+7. **LRC14 "Cleanliness" (n=14):** Confirms that **LRC14** remains structurally clean, anchored by the even-cusp vindication and the existence of **$PG(2, 13)$**.
+8. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` remains **MIXED**. While the even branch stabilizes at the cusp, the overall signature must account for the parity-split between the even (cusp) and odd (off-cusp) proof stalks.
+9. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage. The even-cusp's "gap 0" descent is bounded by the rigid parity-block on the odd side, preventing roots from sliding across the parity boundary.
+10. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **even-cusp vindication**, **convergent escape anchors (odd branch)**, **infrastructure sync certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder** as the resurrection anchors.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Isolated_Disproof_Edge_LRC14`, `Phi6_Eisenstein_Valuation`, `Convergent_Observer_Escape`, `Infrastructure_Sync_Cert`, `Erdos-Turan_Discrepancy`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Even-Cusp_Vindication`, `Parity-Blocked_Odd_Branch`, `Infrastructure_Sync_Cert`, `Erdos-Turan_Discrepancy`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 35b78ee. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3700/HYP-3710/HYP-3718/HYP-3720/HYP-3730/HYP-3740** 
+Integrated a053796. Introduces the **THM-588/HYP-3700/HYP-3718/HYP-3720/HYP-3730/HYP-3740/HYP-3750** 
 framework, operationalizing the terminal proof sheaf through the formal 
-identification of the **Convergent Observer Escape**, the 
-**Projective Plane Transition**, and **Infrastructure Integrity Synchronization**.
+identification of the **Even-Cusp Reconciliation**, the 
+**Spectral-Metric Faces**, and **Infrastructure Integrity Synchronization**.
 
-### 1. Isolated Disproof Edge (HYP-3700)
-Formally operationalizes the boundary between proof and disproof. 
-The edge is ISOLATED for LRC14 ($0.198$ doublet gap).
+### 1. Even-Cusp Reconciliation (HYP-3750)
+Vindicates that for even $n$, the covering minimum IS the cusp ($M=1/n$). 
+The even block $2 \cdot \{1, \dots, n-1\}$ descends to the apex with gap 0.
 
-### 2. Infrastructure Integrity (HYP-3740)
+### 2. Parity Split Logic
+**Even branch** stabilizes at the cusp; **Odd branch** remains 
+"parity-blocked" and forced off-cusp ($> 1/n$).
+
+### 3. Infrastructure Integrity (HYP-3740)
 Synchronization of the 14 distributed nomadic nodes. Secures the 
-Base Stalk against decentralized data drift during the constant-chase.
-
-### 3. Convergent Observer Escape (HYP-3718)
-Identification of the spectral escape at the **CONVERGENT** ($n/\Phi_6(n)$). 
-The mediant escape is blocked by the **killer $\text{lcm}(n-1, n)$**.
+Base Stalk against decentralized data drift.
 
 ---
 
