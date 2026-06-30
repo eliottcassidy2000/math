@@ -1,3 +1,29 @@
+## klein-2026-06-30-S38 -- the Farey-neighbor question PROVED to a reduction (a_1=n-1 PROVED; Farey-nbr <=> D≡1 mod(n-1); verified n=7..14) + the small-depth SPREAD FAMILY (achievable rungs = up-set [k_min,inf), k_min=2,2,4,4,3; obstruction = rung-k radius demands per modulus, radius-0 layer = THM-523 resonances) (HYP-3734)
+
+Prompt: work the clean open question (is the covering-min always a Farey neighbor of 1/(n-1), and what arithmetic picks the rung) and understand the small-depth spread family.
+
+THE OPEN QUESTION, resolved to a reduction (farey_rung_spread_family_klein.py):
+ - PROVED a_1=n-1: the covering-min M in (1/n, 1/(n-1)) since 1/n < M (THM-523) <= construction n/Phi6(n) <
+   1/(n-1) (because n(n-1)=n^2-n < n^2-n+1=Phi6). So floor(1/M)=n-1 always; M=[0;n-1,...].
+ - PROVED REDUCTION: M is a Farey neighbor of 1/(n-1) <=> binding D ≡ 1 mod (n-1) <=> on the semiconvergent
+   ladder. (M=j/D lowest terms, a_1=n-1 gives D=(n-1)j+r_1; CF length 2 iff r_1|j; gcd(j,r_1)=gcd(j,D)=1
+   forces r_1=1, i.e. D=(n-1)j+1.)
+ - VERIFIED D≡1 mod(n-1) for ALL covering-mins n=7..14 (D=13,15,33,37,31,133,157,183). So the answer is YES
+   for every computed n; the general proof (covering-min never off-ladder) is OPEN.
+
+THE SMALL-DEPTH SPREAD FAMILY:
+ - The achievable rungs form an UP-SET [k_min,inf) (if rung k works, so does every k'>k). So covering-min =
+   k_min(n). Verified k_min = 2,2,4,4,3 (n=7..11); no rung<=6 for n=12 (construction rung n takes over).
+ - OBSTRUCTION (arithmetic, clean): rung k demands covering radius floor(kD/(k(n-1)+1)) at EVERY modulus D.
+   The radius-0 moduli are EXACTLY D<=n-1 = the THM-523 resonances (so THM-523 IS the radius-0 layer of the
+   Farey-rung demands!). The radius-1 band D in (n,2n-2] is the EXTRA demand (radius-1 coverings of Z/D not
+   forced by resonance-killing). Lower rungs keep the radius small across MORE moduli (slope ~1/n), over-
+   constraining the n-1 speeds -> low rungs fail as n grows -> k_min rises -> by n=12 only the construction
+   survives. The exact k_min is arithmetic (which radius-1 coverings of Z/D, D in (n,2n-2], are simultaneously
+   realizable by n-1 primitive speeds).
+
+HOUSEKEEPING: filed HYP-3734. No collisions, no canon overridden, no court cases.
+
 ## klein-2026-06-30-S37 -- the covering-min's GEOMETRY INVARIANT = the STERN-BROCOT/FAREY RUNG k(n): M(n)=[0;n-1,k]=k/(k(n-1)+1), Farey neighbor of the ceiling 1/(n-1); rungs n=7..11 = 2,2,4,4,3; HONEST: user's n=13=1/12 REFUTED (construction 13/157<1/12); new sequences (rung/binding/defect/deficit) (HYP-3732)
 
 Prompt: find a geometry invariant arithmetically anchored; study the irregularities of the covering-min (n=7,8,9,11,13 = 2/13,2/15,4/33,3/31,1/12; margins 1/91,1/120,1/99,2/341,1/156) and other no-closed-form repo sequences; find connections; define new sequences.

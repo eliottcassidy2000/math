@@ -1,0 +1,22 @@
+======================================================================================
+ (1) Farey-neighbor <=> binding D = j(n-1)+1 <=> D ≡ 1 mod (n-1). Verify on covering-mins:
+======================================================================================
+  n= 7: M=2/13    CF=[0, 6, 2]    len=3  D=13, D mod (n-1)=1, D=j(n-1)+1? True  Farey-nbr-of-1/(n-1)? True
+  n= 8: M=2/15    CF=[0, 7, 2]    len=3  D=15, D mod (n-1)=1, D=j(n-1)+1? True  Farey-nbr-of-1/(n-1)? True
+  n= 9: M=4/33    CF=[0, 8, 4]    len=3  D=33, D mod (n-1)=1, D=j(n-1)+1? True  Farey-nbr-of-1/(n-1)? True
+  n=10: M=4/37    CF=[0, 9, 4]    len=3  D=37, D mod (n-1)=1, D=j(n-1)+1? True  Farey-nbr-of-1/(n-1)? True
+  n=11: M=3/31    CF=[0, 10, 3]   len=3  D=31, D mod (n-1)=1, D=j(n-1)+1? True  Farey-nbr-of-1/(n-1)? True
+  n=12: M=12/133  CF=[0, 11, 12]  len=3  D=133, D mod (n-1)=1, D=j(n-1)+1? True  Farey-nbr-of-1/(n-1)? True
+  n=13: M=13/157  CF=[0, 12, 13]  len=3  D=157, D mod (n-1)=1, D=j(n-1)+1? True  Farey-nbr-of-1/(n-1)? True
+  n=14: M=14/183  CF=[0, 13, 14]  len=3  D=183, D mod (n-1)=1, D=j(n-1)+1? True  Farey-nbr-of-1/(n-1)? True
+
+======================================================================================
+ (2) Achievable low rungs k (IP, Smax=4n): the small-depth spread family
+======================================================================================
+ n  | rung: 2    3    4    5    6   | min achievable rung
+  7 |      Y    Y    Y    Y    Y   | 2
+  8 |      Y    Y    Y    Y    Y   | 2
+  9 |      .    .    Y    Y    Y   | 4
+ 10 |      .    .    Y    Y    Y   | 4
+ 11 |      .    Y    Y    Y    Y   | 3
+ 12 |      .    .    .    .    .   | None
