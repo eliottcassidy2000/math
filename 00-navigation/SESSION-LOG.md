@@ -30,6 +30,44 @@ OCF (even n), and the Ihara zeta (odd n) are THREE READINGS of one circulant. Al
 parity = bipartiteness of C_n) and my HYP-3729.
 
 HOUSEKEEPING: filed HYP-3731. No collisions, no canon overridden, no court cases.
+## mac-mini-2026-06-30-S51 -- covering-min as an ILP over the danger-circulant PINS the primitive odd-n values (n=11:3/31 NEW, n=13<=1/12); margin trajectory exact & irregular; chromatic<->OCF bridge computational (rotational tournament R_m, Redei); 4 reframings of the parity=bipartite-C_n result (HYP-3731)
+
+Prompt: (B) implement covering-min as an IP over danger-circulant independent sets (pin odd-n + chromatic<->OCF
+bridge computational); (A) reframe HYP-3729 creatively (change observer / translate / copy to all n points /
+Hamiltonian paths).
+
+(B) THE ILP. Correct formulation: M(S)<=r iff for every breakpoint tau=k/d (d<=2V, the FULL universe) some
+v in S has ||v tau||<=r (radius-r danger arcs cover). Binary-search r; each feasibility a set-cover ILP
+(scipy.milp/HiGHS) with size + divisibility-cover + PRIMITIVITY (each prime p: some speed coprime to p).
+PITFALL FIXED: gridding a single modulus Z/m is WRONG (returns Z/m-flat-but-spiky sets; gave false 2/11 at
+n=9). PINS the PRIMITIVE covering-min EXACTLY: n=7:2/13, n=8:2/15, n=9:4/33 (match exact/exhaustive),
+n=11:3/31 (NEW), n=13:<=1/12 (V=56). MARGIN trajectory now exact: 1/91, 1/120, 1/99, 2/341, 1/156 --
+IRREGULAR (=1/(n(2n-1)) only at n=7,8), confirming the covering-min is genuinely n-dependent. (Dropping the
+primitivity rows, the ILP returns the FULL min 1/n via the non-primitive scaled blocks -- even block at n=8,
+3*{1..8} at n=9 -- confirming HYP-3727's easy/hard split.)
+
+OCF BRIDGE (computational): the set-cover's LP-dual is a PACKING of lonely witnesses no single speed can
+danger together = an INDEPENDENT SET in the danger conflict graph. The oriented danger circulant is a
+ROTATIONAL TOURNAMENT R_m with ODD #Hamiltonian-paths (Redei: 15,175,3267 for m=5,7,9) and OCF
+H(R_m)=I(Omega,2). So the covering-min ILP and the OCF are independent-set computations on the SAME
+circulant/tournament -- the chromatic<->OCF bridge is a shared computational object (structural, not a proven
+equality).
+
+(A) FOUR REFRAMINGS of 'LRC parity = bipartiteness of C_n':
+- CHANGE OBSERVER: the GEOMETRY (C_n, the parity) is observer-INVARIANT (vertex-transitive), but the
+  ARITHMETIC covering-min is observer-ANCHORED -- re-referencing to another runner breaks the divisibility-
+  covering (new |speeds| omit some q) and changes M (even block from runner-2: M=1/7, fails to cover 7). So the
+  parity/geometry analogy persists; the worst-case set/value is anchored to the divisibility origin (obs 0).
+- TRANSLATE: speed-shift v->v+c ROTATES the orbit (circulant-invariant C_n, breaks covering); witness-shift
+  t->t+c SHEARS it. Geometry translation-covariant, arithmetic not -- the same tension.
+- COPY TO ALL n POINTS: the view-obstruction reframe (Cusick) -- the n trajectories miss the centre; the n
+  holes are vertex-transitive; even/odd = antipodal-pairing (bipartite) or not.
+- HAMILTONIAN PATHS: the rotational tournament R_m, Redei's odd Ham-path count, OCF H(R_m) -- the covering-min
+  tied to the project's core tournament invariants. Odd m: R_m regular (Paley-like); even m: none.
+
+Files: HYP-3731, scripts covering_min_ip_v2_macmini_20260630.py(+primitive .out, +v2 .out). Builds on HYP-3729
++ HYP-3727 + klein-S34 (Redei/OCF/metazeta). n=9 cross-checked vs the 2M-set exhaustive (confirmed 4/33).
+Broadcast.
 
 ## mac-mini-2026-06-30-S50 -- THE LRC PARITY IS THE BIPARTITENESS OF C_n: even n = bipartite cycle = tight M=1/n (even-block local worst-case); odd n = non-bipartite cycle = the margin; = the apex certificate parity (HYP-3606); + margin deviation (irregular) + odd-n/Paley frontier (HYP-3729)
 

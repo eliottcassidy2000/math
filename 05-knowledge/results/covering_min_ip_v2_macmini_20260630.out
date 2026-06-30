@@ -1,0 +1,7 @@
+COVERING-MIN via CORRECT set-cover ILP (universe = all breakpoints k/d, d<=2V)
+
+n= 7 (V=20): covering-min r=2/13=0.15385  S=[1, 4, 5, 6, 7, 11]  trueM=2/13=0.15385  witness t*=4/13  margin=0.01099  primitive=True  (1/n=0.14286)
+n= 8 (V=22): covering-min r=1/8=0.12500  S=[2, 4, 6, 8, 10, 12, 14]  trueM=1/8=0.12500  witness t*=1/16  margin=0.00000  primitive=False  (1/n=0.12500)
+n= 9 (V=36): covering-min r=1/9=0.11111  S=[3, 6, 9, 12, 15, 18, 21, 24]  trueM=1/9=0.11111  witness t*=5/27  margin=0.00000  primitive=False  (1/n=0.11111)
+n=11 (V=44): covering-min r=3/31=0.09677  S=[2, 6, 8, 9, 10, 11, 13, 14, 17, 19]  trueM=3/31=0.09677  witness t*=29/31  margin=0.00587  primitive=True  (1/n=0.09091)
+n=13 (V=52): covering-min r=1/12=0.08333  S=[4, 8, 12, 13, 16, 20, 24, 28, 32, 36, 40, 44]  trueM=1/12=0.08333  witness t*=23/48  margin=0.00641  primitive=True  (1/n=0.07692)
