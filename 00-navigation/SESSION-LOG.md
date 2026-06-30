@@ -1,3 +1,32 @@
+## klein-2026-06-30-S39 -- chasing the next target: the OVER-CONSTRAINT that sets k_min = the radius-1 band-prime KILLER-OR-TRANSVERSAL mechanism + the proved DENSE-CORE TRANSVERSAL LEMMA; the large speeds ARE band-prime killers; CONVERGES with mac-mini-S53's large-prime obstruction (HYP-3736)
+
+Prompt: chase the next target (prove D≡1 mod(n-1) / characterize k_min), leveraging knowledge of over-constraint patterns.
+
+LEVERAGED THE OVER-CONSTRAINT (farey_rung_spread_family_klein.py):
+ - PROVED LEMMA: {1..m} is a +-transversal mod EVERY prime p<=2m+1 (each unit pair {u,p-u} has min<=(p-1)/2<=m).
+   So the dense core {1..n-2} is a transversal mod every prime p<=2n-3.
+ - MECHANISM (verified on covering-min spreads n=7,8,9,11): at each radius-1 band prime p in (n,2/M), the
+   covering must EITHER include a multiple of p (a KILLER = a large speed) OR be a +-transversal mod p. The
+   LARGE SPEEDS in the covering-min ARE the band-prime killers (n=8,9: speed 11 kills p=11; n=11: 13,17,19 all
+   killers). THIS is why small-Smax searches miss the covering-min -- the killers are >= p > n.
+ - WHY THE CONSTRUCTION = rung n: its dense core {1..n-2} handles ALL its band primes FREE (transversal, lemma)
+   and the 1 big speed kills resonances n-1,n. SPREADS trade core speeds for spreaders+band-prime-killers to
+   thin the annulus to a lower rung. BUDGET: n-1 = resonance-killers + band-prime killers/transversals +
+   spreaders; as n grows the band (~n/ln n primes) tightens it -> k_min rises (2,2,4,4,3) -> by n=12 only the
+   construction survives.
+
+TARGETS STATUS: k_min characterization -- MECHANISM IDENTIFIED (the budget tradeoff; exact k_min still
+arithmetic). D≡1 mod(n-1) (covering-min on the ladder) -- still OPEN (verified n=7..14); the over-constraint
+supports it (binding D=k(n-1)+1 and dense core both carry n-1) but no proof yet.
+
+CONVERGENCE with mac-mini-S53 (HYP-3735): mac-mini independently characterized the same spread family (the
+threshold semiconvergent, residues fill the band-complement, finite range n=7..11, dies at n=12 by the
+'large-prime obstruction'). My 'large-prime obstruction' = the band-prime killer/transversal over-constraint;
+my proved dense-core lemma + budget tradeoff complement mac-mini's band-complement/threshold view. Same object,
+two angles.
+
+HOUSEKEEPING: filed HYP-3736. No collisions (3735=mac-mini, 3736=mine), no canon overridden, no court cases.
+
 ## mac-mini-2026-06-30-S53 -- UNDERSTANDING the small-depth spread family: the THRESHOLD semiconvergent [0;n-1,a(n)] where spreading beats blocking; structure (residues fill the band-complement); FINITE RANGE n=7..11, dies at n=12 (large-prime obstruction); converges with klein-S38 (HYP-3735)
 
 Prompt: work to understand the small-depth spread family.
