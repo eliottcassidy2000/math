@@ -1,3 +1,36 @@
+## mac-mini-2026-06-30-S41 -- pushed the disproof mode: the proof/disproof EDGE is ISOLATED (not razor-thin) for LRC14; isolation is GENUS-determined (HYP-3700)
+
+Prompt: push the disproof mode but mainly be aware of the exact nature of the razor-thin edge between proof
+and disproof and its patterns.
+
+Being precise dissolved the 'razor-thin' for LRC14. THE EDGE = gap(O)=0 occurs (by Phi_p irreducibility,
+THM-590) ONLY at the full Z_p core (the complete mod-p covering) = a SINGLE point, measure 0. ISOLATION (min
+positive gap = how close a partial covering can get) is GENUS-DETERMINED:
+  p=3,5,7 (genus 0,0,1): the DOUBLET 4sin^2(pi/2p) = 1.0, 0.382, 0.198 -- a SPECTRAL GAP, NO core in (0,that).
+  p=11,13 (genus 2): a LARGER near-vanishing-character-sum core ({1,2,4,6,8,9} mod 11, gap 0.0078; 0.0049
+  at 13) -- NOT the doublet; the edge goes RAZOR-THIN.
+(Rediscovers/sharpens klein-S11 HYP-3587: the genus measures how thin the disproof edge is.)
+
+SO LRC14 (p=7, genus 1) is the LAST case with an ISOLATED edge (0.198). Its apparent 'razor-thinness' is
+purely a MEASURE artifact: the TOTAL floor is the PRODUCT of per-level gaps, and over a deep 2-adic descent
+that product ->0 (klein-S16 inf R'=0) -- soft, accumulative, NOT a discrete approach to the boundary. LRC14
+is THIN IN MEASURE, ISOLATED IN GAP. The two razor-thin lines (HYP-3548) refined: gap-M far (+10%), measure
+thin (inf=0), discrete gap-edge ISOLATED (0.198).
+
+PUSHING THE DISPROOF: a disproof must land EXACTLY on the full Z_7 (cannot slide toward it -- isolated jump
+0.198, nothing in between), where the lonely measure is 0 but EXISTENCE (the phi(n) units, HYP-3615) gives a
+lonely point. So the edge is closed by COUNTING, not measure or forbidden-H; the forbidden-H 7=Phi_3(2)=
+|Fano| MIRRORS the special-ness (the unrealizable 'pure 7') but doesn't close it. The disproof mode, pushed
+to the edge, lands on the same wall: a measure-0 complete-covering point, closed by the unit witnesses.
+
+PATTERNS: (1) edge=1 point (full covering); (2) isolation=genus; (3) LRC14=frontier (last isolated);
+(4) discrete-gap thinness (isolated for LRC14) vs measure thinness (soft product->0); (5) closed by
+existence; (6) primality keeps edge a point (Phi_p irreducible), oddness keeps gap>0 (C_p non-bipartite).
+
+Files: HYP-3700, reflection the-edge-is-isolated-not-thin.md. Used a high HYP number (3700) to escape the
+collision cascade (suggest disjoint blocks per agent). Builds on HYP-3617/3616/3615 + klein-S11/S16 + THM-590
++ HYP-3548. Broadcast.
+
 ## mac-mini-2026-06-30-S40 -- CREATIVE PROOF TECHNIQUE: forbidden-H-value certificates (build T from a condition, derive an impossible H) (HYP-3617); escaped the 3607-3609 collision cascade -> 3615/3616
 
 Prompt: creative ways to use tournament facts in a proof/disproof -- e.g. build a tournament via a
