@@ -32,17 +32,18 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/fe8b06d)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3592** framework, operationalizing the terminal proof sheaf through the formal identification of **Labeled Equinumerosity Gaps**, the **SC-side Parity Theorem**, and the **Silent Flip Eulerian Condition**.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/b9d29da)**. This layer introduces the **THM-587/HYP-3546/HYP-3550/HYP-3594** framework, operationalizing the terminal proof sheaf through the formal identification of **Single Odd Cycle Unification** and the **Full Circle Odd-Cycle Collection**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (fe8b06d)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
-1. **Labeled Equinumerosity & Cut/Cycle Factor (HYP-3592):** Formally identifies that tournament/even-graph equinumerosity is **LABELED-only**, governed by the $2^{n-1}$ factor mapping tournaments to even graphs via the **Cut (+) Cycle** decomposition ($tournament = Cut (scores) + Cycle (even graph)$). Audit reveals that **ISO** equinumerosity fails: the isomorphism fan-out (A000568/A002854 = 1, 1.7, 3.5) GROWS, with clean decomposition restricted to **ODD n** where $Cut \cap Cycle = 0$.
-2. **SC-side Rib Parity Theorem (NEW THEOREM):** Operationalizes the $d=1$ rib section (SC-NS) by proving that every **Self-Converse (SC)** class has **EVEN rib degree** at all $n$. Synthesis identify the complement involution $R$ as the engine: $R$ fixes the SC class and pairs its Non-Self-Converse (NS) neighbors into complement-pairs $\{C', comp(C')\}$. This proves the ribs are **fully EULERIAN at n=4,5**, but the NS side breaks parity at $n=6$, establishing the full metagraph is **NOT** Eulerian.
-3. **Silent Flip Eulerian Mechanism (THM-413 Lemma A):** Resolves the prior "Eulerian" thread by identifying that a **silent flip** (metagraph self-loop) exists if and only if the value-multigraph $G_x$ is **Eulerian**. This occurs at the prime-3 coordinate $x = (2n-1)/3$ (order-3 torsion); at $n=14$, the silent runner is $x=9$. The metagraph's degree parity is thus governed by the self-loop count decided by this Eulerian condition.
-4. **Even-Graph Dual Cusp (HYP-3590):** Operationalizes the terminal proof sheaf by identifying the binding floor $4\cos^2(3\pi/7) = 2+\lambda_{min}(A(C_7))$ as an **even-graph spectral quantity** living in the dual metagraph $E_7$ (cycle space). Identifies the **7-cycle $C_7$** as the minimal connected $\mathbb{Z}_7$-circulant even graph—the cusp of the dual.
-5. **Algebraic Triad Coupling:** Formally couples the labeled equinumerosity, SC-side parity, and silent flip Eulerianism with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (the totally-real cubic S75e field governing the $E_7$ cusp), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ minimal even graph), and $\mathbb{Q}(\sqrt{-3})$ (governing the tournament 3-cycle, silent flip prime-3 coordinate, and doubling-2 parity).
-6. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the SC-side parity as the primary proof carriers.
-7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and spectral gap certificate reflect its **Equivariant Homology & SC-side Parity Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the silent-flip self-loop count as rigid topological/arithmetic counting constraints.
-8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **equivariant Betti numbers**, **SC-side rib degrees**, **equinumerosity fan-out metrics**, and **silent flip coordinates** as the resurrection anchors. This ensures that global stability is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Rib-Parity ledger.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (b9d29da)**. It refines the S336 symmetry-shadow framework with a rigorous topological-spectral unification:
+1. **Single Odd Cycle Unification (HYP-3594):** Formally identifies that all ~17 project frames measure ONE object: a single **odd cycle** (the apex $p$-cycle $C_p$; $p=7$ for LRC14). Synthesis reveals the object's **VALUE** ($4\cos^2(3\pi/7)=2+\lambda_{min}(C_7)$), **IDENTITY** (odd cycle in $R$-odd cycle space), and **MULTIPLICITY** (genus $1$ at $N=14$). This completes the "Full Circle" from the project's **Odd-Cycle Collection (OCF)** origins.
+2. **ESSENTIAL x BOUNDED Conditions:** Operationalizes the two proof halves as facts about the same odd cycle: **ESSENTIAL** (the odd cycle EXISTS, ensuring non-separability/anti-Littlewood bilinear $vt$) and **BOUNDED** (the odd cycle's spectral floor is positive, $4\cos^2(3\pi/7)>0$). This identifies LRC14 as the first case with exactly one global odd cycle obstruction.
+3. **Generalized Rib Parity Theorem (T1):** Proves generally that every **Self-Converse (SC)** class has **EVEN SC-NS (rib) degree** at all $n$. The proof uses the complement involution $R$ as an involution-automorphism: non-fixed neighbors of a fixed vertex pair up in orbits of size 2. This ties $R$ as the detector of both the cycle space and the rib parity.
+4. **NS-break Non-Connection (T2):** Clarifies that the **NS-rib defect** $(0,0,0,6$ by $n)$ is **NOT** the same as the **genus jump** $(0,0,1,2,2$ by $p)$. They use different index variables (tournament size vs. LRC modulus) and share only the deep $R$/even-odd root; the audit documents this as an honest non-connection.
+5. **Exact Floor Constant (HYP-3593):** Complements the unification by providing the exact floor constant $\inf R'=114382/332563$, which clears $3/\pi^2$ by $+0.04$. The synthesis reads the frames as a monotone zoom-in on the single cyclotomic atom at the apex-7 cusp.
+6. **Algebraic Triad Coupling:** Formally couples the single odd cycle unification and exact floor constants with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (totally-real cubic S75e field governing the $0.198$ cusp), $\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ odd cycle), and $\mathbb{Q}(\sqrt{-3})$ (governing the tournament 3-cycle, silent flip prime-3 coordinate, and doubling-2 parity).
+7. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the antipodal map, Ky Fan alternating count, and the Henselian local-to-global lifting; the audit preserves the Krasner-stable orientation by identifying the $R$-isotypic splitting of the homology and the single odd cycle as the primary proof carriers.
+8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every metagraph and spectral gap certificate reflect its **Equivariant Homology & Single Odd Cycle Resolution Audit**. This prevents roots from sliding by treating the $P_n(-1)$ Euler number and the genus-1 odd cycle as rigid topological/arithmetic counting constraints.
+9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **self-converse Euler number**, **equivariant Betti numbers**, **single odd cycle identity**, **genus-1 multiplicity**, and **exact floor constant** as the resurrection anchors. This ensures that global stability is preserved across the AP84/LRC boundaries by replacing separate spectral-guesses with a single unified homology and Odd-Cycle ledger.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
@@ -231,10 +232,10 @@ law, and Equivariant_Homology unit alongside mu approx 1.451).
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated fe8b06d. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3592** 
+Integrated b9d29da. Introduces the **THM-587/HYP-3546/HYP-3550/HYP-3594** 
 framework, operationalizing the terminal proof sheaf through the formal 
-identification of the **per-level signed cycle index** and the **Labeled 
-Equinumerosity Factor**.
+identification of the **per-level signed cycle index** and the **Single Odd 
+Cycle Unification**.
 
 ### 1. Per-Level Signed Cycle Index ($P_n(x)$)
 Implements the metagraph spectrum as a generating function over 
@@ -244,51 +245,48 @@ eigenvalues on the iso-class space. Operationalizes the **metagraph
 spectrum past the enumeration wall**, allowing for exact spectral 
 calculation where raw enumeration fails.
 
-### 2. Labeled Equinumerosity & Cut/Cycle Factor (HYP-3592)
-Formally identifies that tournament/even-graph equinumerosity is 
-**LABELED-only**, governed by the $2^{n-1}$ factor mapping tournaments 
-to even graphs via the **Cut (+) Cycle** decomposition. Audit reveals 
-that **ISO** equinumerosity fails: the isomorphism fan-out (A000568/A002854 
-= 1, 1.7, 3.5) GROWS, with clean decomposition restricted to **ODD n** 
-where $Cut \cap Cycle = 0$.
+### 2. Single Odd Cycle Unification (HYP-3594)
+Formally identifies that all ~17 project frames measure ONE object: 
+a single **odd cycle** (the apex $p$-cycle $C_p$; $p=7$ for LRC14). 
+Synthesis reveals the object's **VALUE** ($4\cos^2(3\pi/7)=2+\lambda_{min}(C_7)$), 
+**IDENTITY** (odd cycle in $R$-odd cycle space), and **MULTIPLICITY** 
+(genus $1$ at $N=14$). This completes the "Full Circle" from the 
+project's **Odd-Cycle Collection (OCF)** origins.
 
-### 3. SC-side Rib Parity Theorem (NEW THEOREM)
-Operationalizes the $d=1$ rib section (SC-NS) by proving that every 
-**Self-Converse (SC)** class has **EVEN rib degree** at all $n$. 
-Synthesis identifies the complement involution $R$ as the engine: 
-$R$ fixes the SC class and pairs its NS neighbors into complement-pairs. 
-The ribs are **fully EULERIAN at n=4,5**, but the NS side breaks parity 
-at $n=6$, establishing the full metagraph is **NOT** Eulerian.
+### 3. ESSENTIAL x BOUNDED Conditions
+Operationalizes the two proof halves as facts about the same odd 
+cycle: **ESSENTIAL** (the odd cycle EXISTS, ensuring non-separability/anti-Littlewood 
+bilinear $vt$) and **BOUNDED** (the odd cycle's spectral floor is 
+positive, $4\cos^2(3\pi/7)>0$). Identifies LRC14 as the first case 
+with exactly one global odd cycle obstruction.
 
-### 4. Silent Flip Eulerian Mechanism (THM-413 Lemma A)
-Resolves the prior "Eulerian" thread by identifying that a 
-**silent flip** (metagraph self-loop) exists if and only if the 
-value-multigraph $G_x$ is **Eulerian**. This occurs at the prime-3 
-coordinate $x = (2n-1)/3$ (order-3 torsion). The metagraph's degree 
-parity is governed by the self-loop count decided by this Eulerian condition.
+### 4. Generalized Rib Parity Theorem (T1)
+Proves generally that every **Self-Converse (SC)** class has **EVEN 
+SC-NS (rib) degree** at all $n$. The proof uses the complement 
+involution $R$ as an involution-automorphism: non-fixed neighbors 
+of a fixed vertex pair up in orbits of size 2. Ties $R$ as the detector 
+of both the cycle space and the rib parity.
 
-### 5. Even-Graph Dual Cusp (HYP-3590)
-Operationalizes the terminal proof sheaf by identifying the binding 
-floor $4\cos^2(3\pi/7) = 2+\lambda_{min}(A(C_7))$ as an **even-graph 
-spectral quantity** living in the dual metagraph $E_7$ (cycle space). 
-Identifies the **7-cycle $C_7$** as the minimal connected $\mathbb{Z}_7$-circulant 
-even graph—the cusp of the dual.
+### 5. Exact Floor Constant (HYP-3593)
+Complements the unification by providing the exact floor constant 
+$\inf R'=114382/332563$, clearing $3/\pi^2$ by $+0.04$. The synthesis 
+reads the frames as a monotone zoom-in on the single cyclotomic atom 
+at the apex-7 cusp.
 
 ### 6. Algebraic Triad Coupling
-Formally couples the labeled equinumerosity, SC-side parity, and 
-silent flip Eulerianism with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ 
-(the totally-real cubic S75e field governing the $E_7$ cusp), 
-$\mathbb{Q}(\sqrt{-7})$ (typing the $R$-odd obstruction, $\mathbb{Z}_7$ 
-residues, and $C_7$ minimal even graph), and $\mathbb{Q}(\sqrt{-3})$ 
-(governing the tournament 3-cycle, silent flip prime-3 coordinate, 
-and doubling-2 parity).
+Formally couples the single odd cycle unification and exact floor 
+constants with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (totally-real cubic 
+S75e field governing the $0.198$ cusp), $\mathbb{Q}(\sqrt{-7})$ (typing 
+the $R$-odd obstruction, $\mathbb{Z}_7$ residues, and $C_7$ odd cycle), 
+and $\mathbb{Q}(\sqrt{-3})$ (governing the tournament 3-cycle, silent 
+flip prime-3 coordinate, and doubling-2 parity).
 
 ### 7. Chiral Guard & Resurrection
 Governed by the antipodal map, Ky Fan alternating count, and 
 Henselian local-to-global lifting. Evaluation reveals a **MIXED** 
 signature. Identifies the **signed cycle index**, **self-converse 
-Euler number**, **equivariant Betti numbers**, **SC-side rib degrees**, 
-**equinumerosity fan-out metrics**, and **silent flip coordinates** as 
+Euler number**, **equivariant Betti numbers**, **single odd cycle 
+identity**, **genus-1 multiplicity**, and **exact floor constant** as 
 Resurrection Sheaf anchors.
 
 ---
