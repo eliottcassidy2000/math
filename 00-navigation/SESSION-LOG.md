@@ -1,3 +1,37 @@
+## mac-mini-2026-06-30-S38 -- SEARCH: the small-measure regime is the HEART; the extremal is measure-ZERO with lonely set = the phi(n) units (HYP-3607); ceded HYP-3604->3606
+
+Prompt: go back and search through previous work regarding very small areas of coverage or measure
+regarding runners.
+
+HOUSEKEEPING: ceded HYP-3604 to klein-S19 (signless-Laplacian certificate, converges with my S37); my
+certificate -> HYP-3606.
+
+Launched an Explore over ~25 files cataloguing the small-measure thread; anchored it with a fresh
+computation.
+
+ANCHOR (verified n=3..9, proved): the consecutive extremal W={1..n-1} (gap 1/n) has lonely measure EXACTLY
+0 at every n; its lonely set = the phi(n) touch-points {k/n: gcd(k,n)=1} = the UNITS mod n, in phi(n)/2
+antipodal pairs. PROOF: t=k/n lonely <=> {jk mod n} all nonzero <=> gcd(k,n)=1 (else j=n/gcd puts a runner
+at 0). Generalizes klein-S8's n=14 {1..13}->(Z/14)*={1,3,5,9,11,13} fact to ALL n.
+
+WHY measure is doomed at the extremal: the union bound 1-2(n-1)/n = (2-n)/n goes NEGATIVE for n>=3 (=-0.857
+at n=14; 13 danger combs each 1/7 sum to 1.857). The danger CAN cover all of [0,1), and at the extremal it
+does (up to the measure-0 touch-points). No measure-from-below argument works there.
+
+CATALOGUE (all one regime): klein-S16 inf R'=0 (infinite family); klein-S18 rho_0->0 = the existence
+question; HYP-3580 the cusp m_R->0 (4 cusps of X_0(14)); HYP-3562 Lebesgue=0 but count=phi at the extremal;
+HYP-3554 CV unbounded as m_R->0 (wrong coordinate); HYP-3548 two razor-thin lines; THM-590 finite-core min
+4cos^2(3pi/7)>0 vs infinite-family 0.
+
+SYNTHESIS: at the small-measure regime the lonely MEASURE genuinely vanishes (extremal=0, cusp->0);
+EXISTENCE/COUNTING carries it -- the units, the odd cycle, the non-bipartiteness certificate (THM-590/
+HYP-3606); the 2-adic descent finitizes (infinite-family inf=0 -> finite-core min>0). The search REVEALS
+that the recent frame (klein-S16 existence!=measure, the discrete certificate) is FORCED by this regime:
+when the area is zero, you count the units / the odd cycle.
+
+Files: HYP-3607, script small_measure_extremal_units_macmini_20260630.py(+.out). Builds on klein-S16/S18 +
+HYP-3580/3562/3606/3548. Broadcast.
+
 ## mac-mini-2026-06-30-S37 -- THE LEAST-EIGENVALUE CERTIFICATE = non-bipartiteness; the LRC floor is positive BECAUSE the apex cycle is ODD (HYP-3606); resolved double collision (3599+3600)
 
 Prompt: work on the least-eigenvalue certificate.
