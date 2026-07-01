@@ -1,3 +1,30 @@
+## klein-2026-06-30-S49 -- THE PATCH-TUNING UNIFICATION: GW and the covering-min are two single-element patches of the mother AP {1..n-1}, via two healing modes (DOUBLE r=2v -> floor iff n==2 mod 6; LCM r=lcm -> covering, universal) (HYP-3753)
+
+Prompt: merge + extend the patch-tuning idea -- skip 12 + patch r gives 1/12 for almost all r but r=24 uniquely -> 1/14 tight; covering-min {1..12,182} is also a skip-and-patch (skip 13, patch 182=lcm(13,14)); GW and covering-min are two single-element patchworks of the same AP.
+
+MERGED + EXTENDED (patch_tuning, farey_rung_spread_family_klein.py). The MOTHER AP is {1..n-1}. A single patch =
+skip element k, insert element r: S = {1..n-1}\{k} ∪ {r}. Both extremal objects are single patches:
+ - GW (lonely-runner FLOOR 1/n) = skip(n-2), patch 2(n-2). n=14: {1..11,13,24}, M=1/14.
+ - COVERING-MIN construction = skip(n-1), patch n(n-1)=lcm(n-1,n). n=14: {1..12,182}, M=14/183.
+
+THE PATCH-TUNING MAP M(k,r): skipping k breaks resonance k, so GENERICALLY M=1/k (resonance hole, q-witness at
+D=k) -- verified n=14: skip 12 -> 1/12 for 172/187 of r<=200; special r heal it. TWO canonical healing modes:
+ (A) COVERING-PATCH (LCM): skip(n-1), patch lcm(n-1,n). UNIVERSAL -- always M=n/Phi6 (covering-min), covers all
+   resonances, ALL n (verified 8/57,10/91,12/133,14/183). One big speed n(n-1) kills resonances n-1 AND n.
+ (B) GW-PATCH (DOUBLE): skip(n-2), patch 2(n-2). Reaches the FLOOR 1/n IFF n==2 mod 6 (gcd(n-2,2)>1 and
+   gcd(n-2,3)>1 <=> n even & n==2 mod 3, the Jacobsthal/gcd criterion HYP-2893). Verified n=8,14 hit the floor;
+   n=10,12 give near-floor 2/19, 2/23. n=14 == 2 mod 6 -- the LRC14 target sits on the floor-achieving class.
+
+FLOOR VARIETY (n=14): scanning ALL single-patches for M=1/14 -> UNIQUELY {skip 12, patch 24}=GW. So among single
+patches the tightest lonely runner is a rigid unique edit; the cross-type tight sets (HYP-3750) are MULTI-patches.
+
+UNIFICATION: the two hardest extremal objects of the two problems (tightest lonely runner; smallest covering) are
+two single edits of the SAME AP, via DUAL healings -- DOUBLE (minimal residue shift -> floor) vs LCM (kills two
+resonances -> covering). Mother AP + {double, lcm} = the two extremal problems. Reflection:
+07-reflections/one-AP-two-healings.md.
+
+HOUSEKEEPING: filed HYP-3753. No collisions, no canon overridden, no court cases.
+
 ## klein-2026-06-30-S48 -- CLASSIFYING the non-difference-closed tight sets: NOT all are GW near-APs (v->2v) -- a broader DUPLICATION+DROP family incl. a CROSS-type refutes the clean conjecture; but finite per n => the fattening lemma holds (HYP-3750)
 
 Prompt: classify the non-difference-closed tight sets -- is every one, like GW, a near-AP (AP with a few differences replaced by their multiples)? If that family is finite, + difference-closed=dilated-AP, the tight locus is finite and the fattening lemma follows.
