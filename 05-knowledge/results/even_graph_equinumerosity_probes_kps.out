@@ -1,0 +1,38 @@
+==========================================================================================
+ ONE CUBE, FOUR FACES: labeled equinumerosity 2^{C(n-1,2)}
+==========================================================================================
+   n  2^C(n-1,2) evenGraphs(n)lab  graphs(n-1)lab  match?
+   3           2                2               2   yes (all = 2^1)
+   4           8                8               8   yes (all = 2^3)
+   5          64               64              64   yes (all = 2^6)
+   6        1024             1024            1024   yes (all = 2^10)
+   7       32768            32768           32768   yes (all = 2^15)
+
+==========================================================================================
+ UNLABELED orbit counts DIVERGE (same cube, different group actions)
+==========================================================================================
+   n  evenGr=two-gr A002854  graphs(n-1) A000088  tournaments A000568
+   3                      2                    2                    2
+   4                      3                    4                    4
+   5                      7                   11                   12
+   6                     16                   34                   56
+   7                     54                  156                  456
+  even/two-graph (S_n on structure) != graphs(n-1) (S_{n-1}) != tournaments (S_n on ORIENTATION).
+  The labeled bijection even(n)<->graph(n-1) is NOT S_n-equivariant => unlabeled divergence.
+
+  brute-force check unlabeled even graphs (confirm A002854 = 2,3,7,16):
+    n=3: unlabeled even graphs = 2 (labeled 2=2^1); A002854=2 match=True
+    n=4: unlabeled even graphs = 3 (labeled 8=2^3); A002854=3 match=True
+    n=5: unlabeled even graphs = 7 (labeled 64=2^6); A002854=7 match=True
+    n=6: unlabeled even graphs = 16 (labeled 1024=2^10); A002854=16 match=True
+
+==========================================================================================
+ ISING HIGH-TEMPERATURE IDENTITY: even subgraphs of K_n = Curie-Weiss Ising Z
+==========================================================================================
+  Sum_{even S subset E(K_n)} x^|S|  ==  2^{-n} Sum_{s in {+-1}^n} prod_{i<j}(1 + x s_i s_j)
+  K_4: even-subgraph gen poly = [1, 0, 0, 4, 3, 0, 0]
+        Ising 2^-n sum     = [1, 0, 0, 4, 3, 0, 0]   IDENTITY HOLDS: True
+  K_5: even-subgraph gen poly = [1, 0, 0, 10, 15, 12, 15, 10, 0, 0, 1]
+        Ising 2^-n sum     = [1, 0, 0, 10, 15, 12, 15, 10, 0, 0, 1]   IDENTITY HOLDS: True
+  => the even-graph metagraph E_n IS the combinatorics of the Curie-Weiss Ising model on K_n.
+DONE.

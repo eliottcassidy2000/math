@@ -1,5 +1,23 @@
 # Investigation Backlog
 
+**EVEN-GRAPH EQUINUMEROSITY -- one cube, four faces, eight wild lines (kind-pasteur-2026-07-01-S11).** GROUNDED
+(script even_graph_equinumerosity_probes_kps.py): `2^{C(n-1,2)}` counts, via labeled bijections, the tournament
+cycle-space, even graphs on n, TWO-GRAPHS on n, and graphs on n-1 -- but unlabeled they DIVERGE (even=two-graph
+A002854=2,3,7,16,54; graphs(n-1) A000088; tournaments A000568) because the apex bijection is not S_n-equivariant.
+Top leads (see reflection even-graph-equinumerosity-one-cube-four-faces-eight-wild-lines-kps.md):
+(1) EVEN=TWO-GRAPH=PALEY: A002854 also counts Seidel switching classes => regular two-graphs = conference
+    matrices = PALEY = the SAME object as G_n's H-max and the iso-covering depth-extremum. Next: Seidel spectrum
+    of E_7's densest node, look for sqrt(7); recast OPEN-Q-108 as an equiangular-lines extremal bound.
+(2) G_n<->E_n = TUTTE chromatic<->flow duality (even subgraphs = flow support). Next: test V(E_n)/V(G_n)/bridge B
+    as S_n-symmetrized Tutte specializations of K_n.
+(3) E_n = CURIE-WEISS ISING (VERIFIED: Sum_{even S} x^|S| = 2^-n Sum_s prod(1+x s_i s_j)); odd-n palindrome = Z_2.
+    Next: is the perfection-break at n=7 a phase transition; is chi(E_n)=2,3,5,10,28 the order parameter?
+(4) NON-EQUIVARIANCE ANOMALY: Burnside-decompose A002854 vs A000088(n-1) by cycle type; the difference = a new
+    S_n-rep invariant (groupoid cardinalities differ by exactly n = apex placements).
+(5) E_n as a Cayley/Schreier graph of F_2^{C(n-1,2)} (Walsh spectrum). (6) q-equinumerosity/reciprocity.
+(7) LRC "even runners" {2,4,6,8,10,12} live in E_7 (dual to odd R_7, HYP-3802). (8) a master n=7/8 transition
+    across both pillars. -> HYP-3802, OPEN-Q-108, even-graphs-as-first-class, A002854.
+
 **LRC FRONTIER + MSS FINITENESS -- the repo was unaware (mac-mini-2026-07-01-S78, HYP-3794). HIGH PRIORITY.**
 The modern Lonely-Runner literature (2024-26) is NOT tracked in this repo (grep: zero mentions). It directly
 reframes the open core. THREE actions:
