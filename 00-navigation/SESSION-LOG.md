@@ -1,3 +1,21 @@
+## opus-2026-07-01-S13 -- VERBLUNSKY on the unit circle: the AP runner-cloud's coefficients are HARMONIC |α_j|=1/(n−1−j); α_0=centroid=observer-lens; a group-like DICTIONARY of circle maps (AGL(1)⋊+PSL₂(ℤ)+Szegő); POSITION-space dual of kp-S7 (HYP-3795)
+
+Prompt: "pushing verblunsky to the unit circle provides a nice visual recursive metaphor for the LRC... see if there are creative functions between points on a loop... a whole dictionary of them may allow them to operate group-like. also work the clean next step, synthesizing."
+
+Built the Verblunsky/OPUC lens for the RUNNER CLOUD {e^{2πi vt}} (position-space) — complementary to kind-pasteur-S7's time-space OPUC of the lonely set (HYP-3793, same day). Findings:
+
+(1) HARMONIC LAW (exact, verified n=5,7,10,14,20): the AP {1..n−1} at its lonely time t=1/n is the n-th roots of unity MINUS the marked origin z=1; the uniform measure on that cloud has Verblunsky coefficients |α_j| = 1/(n−1−j) EXACTLY — the reciprocal integers 1/(n−1),…,1/2,1, phases all ±π (real), terminal α_{n−2}=1 (purely atomic, n−1 atoms). Σ|α_j| = H_{n−1} → ln n + γ (Euler–Mascheroni, a triangle constant); Szegő product 0.
+
+(2) OBSERVER-LENS = α_0. α_0 = 1/(n−1) is EXACTLY the runner centroid seen from z=1: Σ over all n roots is 0, delete z=1, the remaining n−1 runners' centroid is −1/(n−1), so α_0 = −conj(centroid) = 1/(n−1). The FIRST Verblunsky coefficient IS the observer-lens (the user's memory note, made literal). The Szegő recursion (one degree/"vertex" per step, reflection α_j growing 1/(n−1)→1) = the repo's Mode A reduction (n→n−1, vertex insertion) = the recursive metaphor requested.
+
+(3) DICTIONARY of functions between points on a loop, group-like (relations verified): AFFINE AGL(1,ℝ/ℤ)={x↦±vx+a} — runner=dilation δ_v, observer=rotation ρ_a (THM-591), antipode=reflection ι; the LONELY SET = (ℤ/n)* = the invertible dilations ({1,3,5,9,11,13}=φ(14) at n=14) — EXACTLY kp-S7's (ℤ/N)* census maximizers and mac-mini-S77's safe-band residue system R(q,a)={av mod q}, which all live in this AGL(1,q) action. MODULAR PSL₂(ℤ) (Gauss {1/x}, Farey mediant, Möbius) = the CF/rung ladder (1/M=[n−1;n], S71). SZEGŐ semigroup = vertex-insertion. ANALYTIC: sawtooth (ι-odd), distance ‖·‖ (ι-even).
+
+(4) SYNTHESIS: position-space OPUC is the DUAL of kp-S7's time-space OPUC — both dual circles say tight⇒atomic⇒Verblunsky at the boundary, spread⇒Szegő-class decay; the Verblunsky decay rate quantifies the STRUCTURED/SPREAD two-regime (HYP-3790) = equidistribution (mac-mini HYP-3786) = far-element decorrelation (THM-546), now in OPUC language on both circles.
+
+HONEST NEGATIVE (the clean next step I tried): the reproducing/Christoffel kernel K_N(1,1) at the marked origin does NOT track M(S) (max at t≈0.01 not 1/14; non-monotone — construction K=5031≈AP's M, spread K=17 with M=0.22). It measures MASS/density, but the lonely gap is a nearest-atom DISTANCE, and it's Vandermonde-ill-conditioned as t→0. The observer-lens is α_0=centroid, not the full kernel. Recorded so no one re-runs it.
+
+SCOPE (honest): a beautiful reframing + a new invariant (a runner config's Verblunsky signature) + the group dictionary + the observer-lens made exact; NOT yet a new bound on M — the harmonic law CHARACTERIZES the AP's OPUC signature, it does not prove extremality. Checkpoint pushed mid-session. Reflection + HYP-3795 + INDEX + this log. Scripts in 04-computation/lrc_verblunsky_{lens,harmonic_law}_opus_20260701.py, lrc_circle_dictionary_opus_20260701.py, lrc_christoffel_observer_lens_opus_20260701.py (+.out). No canon overridden; no court cases.
+
 ## mac-mini-2026-07-01-S78 -- THE OPEN CORE IS FINITE: the MSS velocity bound corrects the repo's 'unbounded is the difficulty' premise; the LRC frontier (8-10 runners, prime-filtering) IS the repo's own method (HYP-3794); resolved HYP-3792 collision (kps-S7 -> HYP-3793)
 
 Prompt: work on the remaining open core (the for-all-covering-S band-dodging existence) and any concepts that may relate to it for inspiration.
