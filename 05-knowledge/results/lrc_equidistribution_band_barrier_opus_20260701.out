@@ -1,0 +1,14 @@
+  n  constr band-gap  beater band-gap  rand-spread mean  equidist 1.5 ln n
+  7                3                4               4.3               2.69
+  8                3                4               4.3               2.92
+  9                3                4               4.4               3.12
+ 10                3                4               4.6               3.30
+ 11                3                4               4.6               3.45
+ 12                3             None               4.7               3.60
+ 13                3             None               4.8               3.73
+ 14                3             None               4.8               3.85
+
+=> construction = interval (band-gap 3 for ALL n); beaters = band-gap 4 (thin low-discrepancy shell);
+   random spread ~4.5-5 and growing; equidistribution gap 1.5 ln n climbs through the shell near the
+   ILP transition n=12. The shell collapses onto the pure interval = the construction. (Mechanism, not
+   yet proof: band-gap is coarse; the sharp version = all-moduli Erdos-Turan/Weil discrepancy.)
