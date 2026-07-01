@@ -17,6 +17,16 @@ Top leads (see reflection even-graph-equinumerosity-one-cube-four-faces-eight-wi
 (5) E_n as a Cayley/Schreier graph of F_2^{C(n-1,2)} (Walsh spectrum). (6) q-equinumerosity/reciprocity.
 (7) LRC "even runners" {2,4,6,8,10,12} live in E_7 (dual to odd R_7, HYP-3802). (8) a master n=7/8 transition
     across both pillars. -> HYP-3802, OPEN-Q-108, even-graphs-as-first-class, A002854.
+SHARPENED (kind-pasteur-S11, reflection three-evens-two-poles-...): THREE evens -- (F) even function=graph vs
+odd=tournament; (D) even DEGREE=E_n/cycle space; (P) even PARITY=Aut subset A_n. (D)_|_(P) orthogonal (COMPUTED);
+odd-function FORCES (P) [Aut(T) subset A_n always, |Aut| odd; complementation iota = odd coset = D_7 reflection].
+KILLER LEADS: (i) EQUIOSCILLATION = sgn/carousel/R_7/floor pole (LRC atoms equioscillate at phi(14)=6 pts, HYP-3132
+Chebyshev); EQUIANGULAR = chi/Paley/ceiling pole (conference matrix/Seidel two-graph). They PINCH at n=7 (QR_7 =
+H-max = argmax-d). (ii) 28 = chi(E_7) = N(7) [max equiangular lines in R^7] = C(8,2) = T(7) = dim so(8); absolute
+equiangular bound TIGHT at d in {2,3,7,23} = the project's special primes {3,7,23}! => recast OPEN-Q-108 as an
+equiangular-lines/tight-frame extremal bound at d=7. NEXT: Seidel spectrum of E_7's extremal node (is it the
+conference two-graph? look for sqrt(7)); prove equiosc=sgn/equiangular=chi is one extremal problem. -> HYP-3132,
+THM-580/581/582, twentyeight, determinant-lens sgn-vs-chi.
 
 **LRC FRONTIER + MSS FINITENESS -- the repo was unaware (mac-mini-2026-07-01-S78, HYP-3794). HIGH PRIORITY.**
 The modern Lonely-Runner literature (2024-26) is NOT tracked in this repo (grep: zero mentions). It directly

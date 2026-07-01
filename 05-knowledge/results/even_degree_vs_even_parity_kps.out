@@ -1,0 +1,41 @@
+==============================================================================================
+ (P) AUTOMORPHISM PARITY of TOURNAMENTS: always Aut subset A_n; anti-aut (complementation) is ODD
+==============================================================================================
+
+ transitive T_7: |Aut|=1 (odd=True), |anti-Aut|=1
+   Aut signs = {1}  => Aut subset A_7 (all EVEN parity): True
+   anti-Aut signs = {-1}  => complementation iota is ODD parity: True
+
+ R_7 carousel {1,2,3} (=sgn): |Aut|=7 (odd=True), |anti-Aut|=7
+   Aut signs = {1}  => Aut subset A_7 (all EVEN parity): True
+   anti-Aut signs = {-1}  => complementation iota is ODD parity: True
+
+ Paley_7 QR {1,2,4} (=chi): |Aut|=21 (odd=True), |anti-Aut|=21
+   Aut signs = {1}  => Aut subset A_7 (all EVEN parity): True
+   anti-Aut signs = {-1}  => complementation iota is ODD parity: True
+
+==============================================================================================
+ (D) vs (P) ARE INDEPENDENT: an EVEN-DEGREE graph can have ODD-parity automorphisms
+==============================================================================================
+  C_4 (4-cycle): degrees [2, 2, 2, 2] (all even). |Aut|=8, aut signs={1, -1}
+    => EVEN DEGREE but has ODD-parity automorphisms (e.g. the reflection (1 3)): (D) does NOT imply (P).  Contrast tournaments, where (P) is automatic.
+  K_4: degrees all 3 (ODD). |Aut|=24=S_4, signs={1, -1} (both).
+
+==============================================================================================
+ THE 2x2 TABLE {degree parity} x {automorphism-parity class} over small graphs
+==============================================================================================
+  (even-degree?, Aut subset A_4?) -> # iso classes of graphs on 4 vertices:
+    even-degree= True, Aut<=A_4=False: 3 classes
+    even-degree=False, Aut<=A_4= True: 1 classes
+    even-degree=False, Aut<=A_4=False: 7 classes
+  => the two 'evens' cross-classify graphs into all four cells: they are ORTHOGONAL properties.
+
+==============================================================================================
+ ODD VERSIONS
+==============================================================================================
+  ODD DEGREE graphs (all degrees odd) exist only for n EVEN (handshake): a coset of the cycle space,
+    = T-joins / perfect-matching parity.  ODD PARITY automorphisms = Aut has a member in S_n\A_n.
+  TOURNAMENTS: (P) is FORCED even (Aut<=A_n) and the ODD coset is EXACTLY the anti-automorphisms
+    (complementation iota).  So for tournaments the sgn character = the orientation-preserving/reversing
+    Z_2 = the complement/converse mirror = the dihedral reflection of the Paley heptagon's D_7.
+DONE.
