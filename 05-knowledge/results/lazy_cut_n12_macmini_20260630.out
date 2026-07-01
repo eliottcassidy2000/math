@@ -1,0 +1,6 @@
+
+=== n=12: target covering-min r = n/Phi6 = 12/133 = 0.090226, V=n(n-1)=132 ===
+    n=12: 40 cuts, last M=0.19718 (target 0.09023), 14s
+    n=12: 80 cuts, last M=0.22059 (target 0.09023), 30s
+    n=12: 120 cuts, last M=0.22222 (target 0.09023), 52s
+    n=12: 160 cuts, last M=0.22368 (target 0.09023), 104s
