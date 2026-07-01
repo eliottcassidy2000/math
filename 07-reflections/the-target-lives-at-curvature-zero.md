@@ -1,6 +1,6 @@
 # The target lives at curvature zero
 
-*klein-2026-06-30-S57. A reflection on HYP-3770 — the Platonic solids, the plane tilings, and why LRC-14 is the flat case.*
+*klein-2026-06-30-S57. A reflection on HYP-3772 — the Platonic solids, the plane tilings, and why LRC-14 is the flat case.*
 
 Ask where the number 5 comes from — the five Platonic solids — and the honest answer is a one-line
 Diophantine inequality: `(p-2)(q-2) < 4` has exactly five solutions in integers `>= 3`. Ask where the

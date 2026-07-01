@@ -11,6 +11,31 @@ MORE RESONANCES. 3D crystallography: 7 crystal systems, 14 Bravais lattices (= 2
 DIRECTION: since 14-fold quasicrystals exist as cut-and-projects from 6D Z[zeta_14], the LRC14 covering may itself be a cut-and-project (13 circle-speeds = projection of a 6D cyclotomic lattice covering; lonely set = the 6 star-directions). If made precise the LRC14 floor becomes a 6D covering statement.
 
 HONEST: classical facts assembled + the triple-6 identification (units = quasicrystal dimension = cyclotomic star, the sharp new bit); the cut-and-project view is a DIRECTION not established; a synthesis, not a new proof step. HOUSEKEEPING: filed HYP-3772 (clean). Converges w/ the concurrent Dedekind-margin thread (klein-S56 HYP-3768 proved s(n,Phi6); opus-S5 HYP-3770 reciprocity descent). Files: 04-computation/crystallographic_dimension_hierarchy_lrc14_macmini_20260630.py (+.out). No canon overridden, no court cases.
+## klein-2026-06-30-S58 -- RIEMANN-HURWITZ DESCENT extends Gauss-Bonnet: the 2-adic peel = the branched cover X_0(2p)->X_0(p); the residual is its ramification (HYP-3773)
+
+Prompt: look back over descent ideas in the repo and use them to extend possibly Kershner or Gauss-Bonnet.
+
+Extended last session's Gauss-Bonnet (curvature=genus, S57) via the repo's oldest descent (THM-580 2-adic peel). Filed HYP-3773; reflection the-descent-is-a-branched-cover-the-residual-is-its-ramification.md; script riemann_hurwitz_descent_klein.py.
+
+THE MOVE: the 2-adic parity descent (THM-580, peel n=2p -> odd apex p) IS the degeneracy branched cover X_0(2p) -> X_0(p) (degree psi(2p)/psi(p)=3), and RIEMANN-HURWITZ is its Gauss-Bonnet: chi(2p)=3chi(p)-R. The descent REMOVES the level-2 curvature R, lowering the genus to the g=0 (spherical, obstruction-free) apex.
+
+COMPUTED (genus via g=1+psi/12-nu2/4-nu3/3-nu_inf/2, sanity-checked vs known genera; R=4-6g(p)+2g(2p)):
+  p:    3   5   7   11  13
+  g(2p):0   0   1   2   2   (n=6,10,14,22,26)
+  R:    4   4   6   2   8
+n=14: X_0(14)(g=1) -> X_0(7)(g=0), R=6; the descent removes exactly the genus-1 = the cusp form f_14 = elliptic curve 14a (S56/HYP-3768). It BOTTOMS at the g=0 apex X_0(7) (no cusp obstruction; the 127/127 Z_7 cores, HYP-2108). => the hard residual = the RAMIFICATION the 2-adic descent concentrates.
+
+ONE DESCENT, FOUR FACES: measure (THM-580 rho), genus/curvature (RH R, here), triangle-group (mac-mini HYP-3771 (2,3,p) spine; p=7 = the spherical->hyperbolic turn = the frontier), continued-fraction (opus HYP-3770 O(log) reciprocity). All share the g=0 apex fixed point. NEXT LEVER: the rho_j (measure decorrelation) <-> R (ramification) correspondence -- if they match, the descents are ONE map and the LRC-14 obstruction IS the ramification of a degree-3 modular cover.
+
+KERSHNER anchor: covering-min = n/Phi6 = flat hexagonal A_2 covering (Kershner thinnest plane covering, HYP-3706) = the g=1 MIDDLE of the descent tower (spherical/Platonic below at n=6,10; hyperbolic above at n=22,26).
+
+HONEST: Riemann-Hurwitz + genus formula are exact/standard; identifying R with the LRC residual f_14 and the THM-580(measure)<->RH(curvature) bridge are SYNTHESIS (same shape, same fixed point, not yet the same map). Per-cusp/elliptic R breakdown + rho<->R untested.
+
+CONVERGENCE: builds on mac-mini S65 (HYP-3771 (2,3,p) spine) and opus S5 (HYP-3770 reciprocity descent). HOUSEKEEPING: HYP-3770 collision -- opus-S5 keeps 3770 (reciprocity), mac-mini has 3771 ((2,3,n)); I renamed my S57 Platonic/curvature synthesis 3770->3772; this session = HYP-3773.
+
+NEXT: (1) per-cusp ramification of X_0(14)->X_0(7) vs THM-580's rho_j (the rho<->R map); (2) does the Atkin-Lehner W_2 realize the descent involution? (3) Kershner descent of the covering density.
+
+--- prior entries ---
 
 ## mac-mini-2026-06-30-S65 -- The 5 plane-lattices / 5 Platonic solids = ONE (2,3,n) angle-defect spine; the LRC apex-prime walks it and the genus of X0(2p) tracks the geometry (jump 0->1 at p=7 = why LRC14 is the frontier) (HYP-3771)
 
@@ -23,11 +48,11 @@ THE LRC APEX-PRIME WALK (the proof connection). LRC(2p) apex prime p walks the (
 TWO LRC GEOMETRIES cleanly separated: covering-min = order 6 (hexagonal/A2/Euclidean, universal, Dedekind margin); apex = order p (spherical p<=5, hyperbolic p>=7). B2 (square, order 4) = the anomaly-free crystallographic competitor.
 
 CONVERGENCE: klein-S56 (HYP-3768) independently PROVED my S64 closed form s(n,Phi6)=-(Phi6-1)/(12Phi6) and extended it (->-1/12=zeta(-1)=-B2/2, reading B2 as the Bernoulli number/E2 anomaly; this session reads B2 as the square root lattice -- both converge, and both are the covering-min's order-6 story). HOUSEKEEPING: filed HYP-3771 (clean). NOTE HYP-3768 collision: klein-S56 reused my S64 number (klein's is an extension/proof of mine) -- klein to resolve. Files: 04-computation/five_tilings_five_solids_apex_geometry_macmini_20260630.py (+.out); reflection the-angle-defect-spine-... No canon overridden, no court cases.
-## klein-2026-06-30-S57 -- PLATONIC SOLIDS / PLANE TILINGS / BRAVAIS on the LRC: the counts are one Schlafli inequality; CURVATURE = GENUS; LRC-14 is the FLAT/hexagonal case (HYP-3770)
+## klein-2026-06-30-S57 -- PLATONIC SOLIDS / PLANE TILINGS / BRAVAIS on the LRC: the counts are one Schlafli inequality; CURVATURE = GENUS; LRC-14 is the FLAT/hexagonal case (HYP-3772)
 
 Prompt: consider the 5 2D plane tilings <-> 5 Platonic solids; understand where their nature/count come from; explore connections to proofs.
 
-Filed HYP-3770; reflection the-target-lives-at-curvature-zero.md; script platonic_tilings_curvature_genus_klein.py.
+Filed HYP-3772; reflection the-target-lives-at-curvature-zero.md; script platonic_tilings_curvature_genus_klein.py.
 
 WHERE THE COUNTS COME FROM: a regular {p,q} has curvature kappa=1/p+1/q-1/2; sign(kappa)=sign(4-(p-2)(q-2)). (p-2)(q-2)<4 => 5 PLATONIC (sphere, chi=2, g=0); =4 => 3 regular PLANE tilings (chi=0, g=1); >4 => inf hyperbolic (chi<0, g>=2). The '5' and '3' are the integer points of ONE Diophantine inequality. HONEST: '5 plane tilings' folklore conflates spherical (5 Platonic = 5 SPHERICAL tilings) with plane (there are 3 regular plane tilings; the '5' in 2D = the 5 BRAVAIS lattices).
 

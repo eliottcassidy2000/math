@@ -1,0 +1,32 @@
+(0) sanity: genus X_0(N) for small N (known: g=0 for N<=10,12,13; g=1 at 11,14; g=2 at 22,23,26)
+    X_0( 1): genus=0  cusps=1 nu2=1 nu3=1 psi=1
+    X_0( 7): genus=0  cusps=2 nu2=0 nu3=2 psi=8
+    X_0(10): genus=0  cusps=4 nu2=2 nu3=0 psi=18
+    X_0(11): genus=1  cusps=2 nu2=0 nu3=0 psi=12
+    X_0(13): genus=0  cusps=2 nu2=2 nu3=2 psi=14
+    X_0(14): genus=1  cusps=4 nu2=0 nu3=0 psi=24
+    X_0(15): genus=1  cusps=4 nu2=0 nu3=0 psi=24
+    X_0(22): genus=2  cusps=4 nu2=0 nu3=0 psi=36
+    X_0(23): genus=2  cusps=2 nu2=0 nu3=0 psi=24
+    X_0(26): genus=2  cusps=4 nu2=2 nu3=0 psi=42
+
+(1) THE RIEMANN-HURWITZ DESCENT X_0(2p) -> X_0(p) (degree 3 = the 2-adic peel):
+      p  g(p)  g(2p)  chi(p)  chi(2p)  R=3chi(p)-chi(2p)  genus drop
+      3     0      0       2        2                  4          +0  (deg=3)
+      5     0      0       2        2                  4          +0  (deg=3)
+      7     0      1       2        0                  6          +1  <== LRC-14: flat g=1 -> spherical g=0 (curvature removed)  (deg=3)
+     11     1      2       0       -2                  2          +1  (deg=3)
+     13     0      2       2       -2                  8          +2  (deg=3)
+
+(2) INTERPRETATION: R = ramification = the curvature the level-2 CONCENTRATES = the residual.
+    The 2-adic descent (THM-580) peels n=2p -> apex p; geometrically = X_0(2p)->X_0(p) degree-3
+    branched cover; genus (curvature) DROPS; the removed curvature R is the iota-odd residual
+    (n=14: g 1->0, the removed genus-1 = f_14 = curve 14a, S56/HYP-3768). The descent BOTTOMS at
+    the genus-0 (spherical, no cusp obstruction) apex X_0(p): the base case of the LRC descent.
+
+(3) the (2,3,p) apex geometry (mac-mini HYP-3771) vs X_0-genus:
+    (2,3,3): 1/2+1/3+1/3-1 = 1/6 -> spherical;  X_0(6) genus 0
+    (2,3,5): 1/2+1/3+1/5-1 = 1/30 -> spherical;  X_0(10) genus 0
+    (2,3,7): 1/2+1/3+1/7-1 = -1/42 -> hyperbolic;  X_0(14) genus 1
+    (2,3,11): 1/2+1/3+1/11-1 = -5/66 -> hyperbolic;  X_0(22) genus 2
+    (2,3,13): 1/2+1/3+1/13-1 = -7/78 -> hyperbolic;  X_0(26) genus 2

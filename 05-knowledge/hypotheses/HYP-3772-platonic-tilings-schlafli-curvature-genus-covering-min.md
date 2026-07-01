@@ -1,5 +1,5 @@
 ---
-id: HYP-3770
+id: HYP-3772
 title: PLATONIC SOLIDS / PLANE TILINGS / BRAVAIS on the LRC -- the counts 5 (Platonic) and 3 (regular plane tilings) are the integer solutions of ONE Schlafli inequality (p-2)(q-2)<4 (=4), with combinatorial curvature kappa(p,q)=1/p+1/q-1/2; and this CURVATURE TRICHOTOMY (sphere chi=2 g=0 / plane chi=0 g=1 / hyperbolic chi<0 g>=2) IS the X_0(2p) GENUS trichotomy of the LRC family (genus 0,0,1,2,2 for p=3,5,7,11,13 = n=6,10,14,22,26). SO n=14 (LRC target) = genus 1 = the FLAT / EUCLIDEAN / PLANE-TILING case, whose lattice is the HEXAGONAL A_2 = the covering-min's home (Phi_6=Eisenstein, HYP-3715/3706): the Platonic solids are the genus-0 small-n analogues, hyperbolic the genus>=2 large-n. THREE proof-bridges: (1) covering-min = KERSHNER's thinnest hexagonal covering (the plane-covering theorem, HYP-3706); (2) DUALITY (p,q)<->(q,p) = the antipodal iota (THM-584/HYP-3767): self-dual {3,3},{4,4}=iota-FIXED, dual pairs octa/cube, icosa/dodeca, triangular/hexagonal = the SC-spine / complement structure; (3) GAUSS-BONNET: total combinatorial curvature = chi = the danger-cover NERVE Euler characteristic (codex M102) = the genus obstruction (S56) = the iota-odd degree (S55). CRYSTALLOGRAPHIC RESTRICTION (2D orders {1,2,3,4,6}) explains why the covering-min is 6-fold (Phi_6) not 5-fold; 5-fold (golden/icosahedral) is lattice-forbidden -> Fibonacci/quasicrystal thread
 status: SYNTHESIS / exploration (rigorous classification + conceptual bridges, not a new proof). PROVED/standard: the Schlafli counts (5 Platonic, 3 plane) from (p-2)(q-2) vs 4; curvature=1/p+1/q-1/2; chi=2-2g; crystallographic restriction {1,2,3,4,6}; Kershner (hexagon = thinnest plane covering). VERIFIED (computed): the count check, the duality self-dual/pair split, the curvature=genus trichotomy table (n=14 <-> genus 1 <-> flat/hexagonal). CONJECTURAL/bridge: the curvature<->genus correspondence as a LRC organizing principle; Gauss-Bonnet chi = danger-nerve Euler char = the coverage-crux obstruction. HONEST count clarification: the 5 Platonic are the 5 regular SPHERICAL tilings; there are exactly 3 regular PLANE tilings and 5 planar BRAVAIS lattices -- the '5 plane tilings <-> 5 Platonic' folklore conflates spherical with plane; the rigorous content is the shared {p,q}/curvature classification.
 source: klein-2026-06-30-S57
@@ -14,7 +14,7 @@ related:
   - HYP-3726   # the hexagonal margin number
 ---
 
-# HYP-3770 — Platonic solids, plane tilings, and the LRC
+# HYP-3772 — Platonic solids, plane tilings, and the LRC
 
 ## Where the counts come from (one Diophantine inequality)
 A regular `{p,q}` (p-gons, q at each vertex) has **combinatorial curvature** `kappa = 1/p + 1/q - 1/2`,
