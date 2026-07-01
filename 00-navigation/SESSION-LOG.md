@@ -12,6 +12,21 @@ Reflection: lrc-difficulty-by-n-is-the-apex-prime-arithmetic-and-the-tournament-
 -> HYP-3813, twentyeight (3 pillars {3,7}), three-evens-two-poles (tight-eq {2,3,7,23}), the-SC-spine-is-the-half-tiling (S17), THM-580/581, determinant-lens.
 
 ---
+## opus-2026-07-01-S22b -- BROUWER vs BORSUK-ULAM: complement fixed point => SOS works; p=3 mod4 FREES the Z2 => the three pillars are the hard-regime tools (HYP-3814).
+
+Prompt: push the open extensions; consider complement=automorphism => Brouwer fixed point => SOS works; the three pillars are tools for the harder p=3 mod4 regime (free Z2 => Borsuk-Ulam).
+
+PUSHED extensions (HYP-3813): (A) c3 (cyclic 3-cycles = grid-triangle count) = Tr(A^3)/3 = SPECTRAL MOMENT (verified n<=5) -- the 3rd face. (B) the Cayley-Dickson 'i' is INTRINSIC to the Cayley map (skew S => imaginary eigenvalues i*lambda); rho=R.V is iso-blind & not a sqrt-complement (no plane isometry squares to a reflection).
+
+THE PIVOT (verified p=3..23): p=3 mod4 <=> -1=QNR <=> negation swaps QR<->QNR FREELY (free Z2) <=> PALEY TOURNAMENT exists. p=1 mod4 => -1=QR => negation fixes QR => Paley=GRAPH.
+
+BROUWER SIDE (easy): complement=Z2 involution on the convex moment body => fixed point exists; when the OPTIMIZER is ι-fixed (AP lonely measure G(t)=G(1-t)), the INVARIANT SOS is exact (Gatermann-Parrilo) => 'SOS works'. SC = fold-fixed = grid-sym = conjugation-symmetric spectrum.
+
+BORSUK-ULAM SIDE (hard): p=3 mod4 free Z2 (Paley = flip-rank obstruction HYP-3805, covering-min hardness HYP-3812) => no Z2-equivariant map to a lower sphere => NO symmetric SOS certificate for a free-orbit optimum (the 2-atom {t*,1-t*}) => exactly where my MOSEK campaign found no SOS shortcut (HYP-3791).
+
+THE THREE PILLARS (mac-mini HYP-3796) = the free-regime constructive tools: POCS/Kaczmarz (witness search w/o fixed pt), Christoffel/flat-extension (complement-paired atoms, no central atom), Blaschke (free Z2 = no circle-map fixed pt = Diophantine/Herman rigidity = deep-well). PAYOFF: a criterion -- SOS-tractable (symmetric/p=1) vs need-the-pillars (free/p=3 mod4); AP bound=Brouwer/SOS, covering-min & Paley obstruction=Borsuk-Ulam.
+
+CONVERGENCE: HYP-3813 was TRIPLE-claimed (opus S22 Cayley bridge + mac-mini S87 six bridges + klein S80 covering-min phase cloud) -- all unifying the two pillars via the staircase/complement fold; my S22b adds the TOPOLOGY layer (Brouwer/Borsuk-Ulam, why SOS works or doesn't). HONEST: backbone verified (c3=Tr(A^3)/3; p=3mod4=free Z2); 'free Z2 => SOS provably fails' is the organizing conjecture. Reflection: brouwer-vs-borsuk-ulam-the-complement-fixed-point-makes-SOS-work-and-p3mod4-frees-the-Z2-opus-20260701.md; script topo_brouwer_borsukulam_c3_opus_20260701.py. HYP-3814. No canon overridden.
 
 ## klein-2026-07-01-S80 -- INTEGRATION: the COVERING-MIN PHASE CLOUD = AP(step n) + ANTIPODAL KILLER -- one geometric picture unifying Chebyshev 2-pt + three-gap + phase-residue + cloud-tournament + Phi6-irreducibility (HYP-3813).
 
