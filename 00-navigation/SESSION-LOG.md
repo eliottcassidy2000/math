@@ -1,3 +1,17 @@
+## mac-mini-2026-06-30-S64 -- B2/E2/Dedekind on the hard residual: THE LRC14 MARGIN IS THE OBSERVER'S DEDEKIND SUM; positive because A2/hexagonal (order-6), zero on B2/square (order-4); E2 form on Gamma_0(14); reciprocity vs the residual (HYP-3768)
+
+Prompt: consider B2/E2/Dedekind objects and work on the genuinely hard residual.
+
+THE MARGIN IS A DEDEKIND SUM (exact, verified n=3..15). margin(n) = n/Phi6 - 1/n = (n-1)/(n Phi6) = -12 s(n,Phi6)/n^2, where Phi6=n^2-n+1 and s is the Dedekind sum. The closed form 12 s(n,Phi6) = -(Phi6-1)/Phi6 holds because n^3 = -1 mod Phi6 (Phi6 | n^3+1), i.e. n is the ORDER-6 element omega = the 60deg Eisenstein/hexagonal rotation of the torus lift Z/Phi6. So LRC14's safety margin (14/183 exceeds the floor 1/14 by 13/2562) IS the observer Dedekind sum s(14,183) = -91/1098. An LRC quantity = a modular/Dedekind quantity.
+
+B2 vs A2/E2 -- why the margin is positive. Order-4 element h (h^2=-1 mod k = SQUARE lattice / B2 / imaginary unit i, 90deg) has s(h,k)=0 => ZERO margin (covering-min would equal the floor, degenerate). The order-6 observer (HEXAGONAL / A2 / Eisenstein, 60deg) has s!=0 => POSITIVE margin. So LRC14 holds with room precisely because its observer is hexagonal not square; the positive margin is the hexagonal Dedekind anomaly. B2 is the anomaly-free competitor that loses.
+
+E2 -- the modular home. F_d = E2(tau)-d E2(d tau) is a genuine weight-2 modular form on Gamma_0(d) (the quasimodular anomalies cancel). F_14 has const 1-14 = -(n-1) = -13; F_2,F_7,F_14 span the 3-dim Eisenstein subspace of M_2(Gamma_0(14)) (4 cusps => dim c-1=3); the 1-dim cusp form f_14 (genus(X_0(14))=1) = the OBSTRUCTION, to be controlled at the apex cusp d=7 (W_7, width 2). E2 gives the explicit Eisenstein bulk, isolating f_14 = the residual.
+
+RESIDUAL ATTACK. The residual (Step 4, HYP-3745/3749): a missing-core patched set must keep M>n/Phi6, i.e. the margin cannot erode to 0. In this frame: eroding the margin = driving the hexagonal Dedekind anomaly to 0 = restoring the order-4/square (B2) structure. The patch is a single integer; its residues across moduli are CRT-linked; Dedekind-Rademacher reciprocity (the repo far-coherence tool, HYP-2808) forbids its Dedekind sums from going anomaly-free at every modulus at once. So the anomaly persists = "the hole moves but never vanishes," now with a target: the Step-4 residual = persistence of the order-6 anomaly s(n,Phi6) under +-k CRT patching = non-vanishing of f_14 at d=7.
+
+HONEST: identities exact/verified (n=3..15); E2 & B2 are NEW to the repo, the margin=Dedekind-sum identity is new. The residual attack is a framework/mechanism (aligned with HYP-2808), NOT a proof of Step 4. HOUSEKEEPING: filed HYP-3768 (renamed from 3766, ceded to klein-S54). Files: 04-computation/dedekind_e2_b2_margin_macmini_20260630.py (+.out); reflection 07-reflections/the-margin-is-the-hexagonal-dedekind-anomaly.md. Built on the survey of HYP-3553/3586/2808/3715/3745/3749. No canon overridden, no court cases.
+
 ## klein-2026-06-30-S55 -- SIGN THEORY ON THE OPEN CRUX: the antipodal involution reduces sheaf-coverage to an iota-ORBIT set-cover (halving); every witness is an iota-symmetric hole; parity lemma; Borsuk-Ulam bridge (HYP-3767)
 
 Prompt: work on the open crux (the multi-metric danger sheaf covers the modulus site); think from the perspective of sign theory.
