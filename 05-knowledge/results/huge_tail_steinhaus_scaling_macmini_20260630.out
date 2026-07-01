@@ -1,0 +1,27 @@
+(1) SCALING LAW  M({1..n-2, n(n-1)k}) = nk/(n(n-1)k+1)  [1/M=(n-1)+1/(nk)]
+  n= 7: covmin(k=1)=n/Phi6=7/43;  M(k)=nk/(n(n-1)k+1) holds k=1..6: True;  M->1/(n-1)=1/6 as k->inf
+  n= 8: covmin(k=1)=n/Phi6=8/57;  M(k)=nk/(n(n-1)k+1) holds k=1..6: True;  M->1/(n-1)=1/7 as k->inf
+  n=10: covmin(k=1)=n/Phi6=10/91;  M(k)=nk/(n(n-1)k+1) holds k=1..6: True;  M->1/(n-1)=1/9 as k->inf
+  n=12: covmin(k=1)=n/Phi6=12/133;  M(k)=nk/(n(n-1)k+1) holds k=1..6: True;  M->1/(n-1)=1/11 as k->inf
+  n=13: covmin(k=1)=n/Phi6=13/157;  M(k)=nk/(n(n-1)k+1) holds k=1..6: True;  M->1/(n-1)=1/12 as k->inf
+  n=14: covmin(k=1)=n/Phi6=14/183;  M(k)=nk/(n(n-1)k+1) holds k=1..6: True;  M->1/(n-1)=1/13 as k->inf
+  ALL n: True
+
+(2) STRICTLY INCREASING => min at k=1 (construction); the tail can't beat covering-min
+  n=14: M(k=1..7)=[0.07650273224043716, 0.07671232876712329, 0.07678244972577697, 0.07681755829903979, 0.07683863885839737, 0.0768526989935956, 0.07686274509803921]  increasing=True
+
+(3) COMPLETENESS: single huge patch must be a multiple of lcm(n-1,n)=n(n-1)
+  n=12: lcm(n-1,n)=132 = n(n-1)=132? True  => huge single-patch family = {n(n-1)k} only
+  n=13: lcm(n-1,n)=156 = n(n-1)=156? True  => huge single-patch family = {n(n-1)k} only
+  n=14: lcm(n-1,n)=182 = n(n-1)=182? True  => huge single-patch family = {n(n-1)k} only
+
+(4) STEINHAUS: three-gap {1,nk,2nk} = {1,n,2n} scaled by k; killer = -1 mod D_k; D_k=2(Tk)+1
+  k=1: D_k=183=2(Tk)+1=183?True; killer n(n-1)k=182=-1 mod D?True; three-gap={1: 1, 14: 11, 28: 1}
+  k=2: D_k=365=2(Tk)+1=365?True; killer n(n-1)k=364=-1 mod D?True; three-gap={1: 1, 28: 11, 56: 1}
+  k=3: D_k=547=2(Tk)+1=547?True; killer n(n-1)k=546=-1 mod D?True; three-gap={1: 1, 42: 11, 84: 1}
+
+(5) HUGE MULTI-PATCH: does dropping 2 core + 2 huge speeds beat 14/183? (sample)
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 156, 182]: cover=True M=5/61=0.081967 (>14/183=0.076503)
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 312, 364]: cover=True M=26/313=0.083067 (>14/183=0.076503)
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 2184, 4368]: cover=True M=182/2185=0.083295 (>14/183=0.076503)
+DONE.

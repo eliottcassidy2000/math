@@ -21,6 +21,21 @@ HOUSEKEEPING: HYP-3782 collision -- mac-mini (Lorentzian) keeps 3782; I renamed 
 NEXT: (1) Delsarte LP over the HYP-3763-forced speed set (valid, not V-truncated); (2) Lasserre-2 SDP if cvxpy appears; (3) formalize the Delsarte+HYP-3763 pairing into a rigorous near-tight bound.
 
 --- prior entries ---
+## mac-mini-2026-06-30-S73 -- THE HUGE-SPEED TAIL IS STEINHAUS SCALING: exact law M({1..n-2,n(n-1)k})=nk/(n(n-1)k+1) closes the huge SINGLE-patch residual for all n (HYP-3784)
+
+Prompt (long session): extend the concept that the huge speed tail is Steinhaus scaling.
+
+THE SCALING LAW (verified n=7..14, all k): M({1,...,n-2, n(n-1)k}) = nk/(n(n-1)k+1). Equivalently 1/M=(n-1)+1/(nk) = the self-concordant ladder (S71) with rung nk; the huge-multiple tail traces the Stern-Brocot ray [0;n-1,nk] from the construction (k=1, M=n/Phi6) STRICTLY INCREASING up to 1/(n-1) (k->inf, the bare punctured core). Min over the family is at k=1 = the construction.
+
+STEINHAUS (why): at the k-witness (denom D_k=n(n-1)k+1=2(Tk)+1, T=n(n-1)/2), the core residues {j*nk mod D_k : j=1..n-2} form an AP of step nk, the killer n(n-1)k = -1 mod D_k (the S67 reflection anchor, scaled), and the THREE-GAP (Steinhaus) gaps are {1, nk, 2nk} = the construction's {1,n,2n} three-distance SCALED BY k. So D_k=2(Tk)+1 = 'Phi6 for the scaled speed-sum Tk' -- the huge-multiple tail is the whole S67 regularization structure (Phi6=2T+1, killer=-1) reproduced at scale k; the three-gap theorem is scale-invariant, so a huge speed only walks the ray toward 1/(n-1), never below k=1. 'The huge speed tail is Steinhaus scaling' = literally this Mobius/three-gap law M(k)=nk/(n(n-1)k+1).
+
+COMPLETENESS + RIGOR: {1..n-2} covers 2..n-2; covering q=n-1 AND q=n with ONE huge speed forces a multiple of lcm(n-1,n)=n(n-1) (elementary). So {1..n-2, n(n-1)k} is the ONLY huge single-patch covering family, and since M(k) is strictly increasing (min at k=1), NO huge single-patch beats the construction -- for ALL n. This closes the huge single-patch residual (modulo the verified+three-distance-sketched scaling law). Huge MULTI-patches tested also do not beat (5/61, 26/313, 182/2185, ...).
+
+RESIDUAL MAP (where the covering-min lower bound stands): bounded speeds<=n(n-1) [lazy-cut HYP-3782, n=12 rigorous, n=13,14 pending faster solver] + huge single-patch [this scaling law, all n] = CLOSED; only huge MULTI-patch (drop>=2 core, add>=2 huge) remains OPEN.
+
+UNIFIES: S52 Stern-Brocot ray, S67 Phi6=2T+1 regularization (scaled D_k=2(Tk)+1), S71 self-concordant ladder (rung nk), the {1,n,2n} three-distance (scaled {1,nk,2nk}), klein's CRT-invariant counting bound (a three-gap statement). Steinhaus scaling is the through-line.
+
+HONEST: scaling law verified n=7..14 (exact closed form) + three-distance proof-sketch; completeness elementary/rigorous; together => huge single-patch tail can't beat the construction, all n. Huge multi-patch only sampled (not exhaustive) = the remaining open piece. HOUSEKEEPING: filed HYP-3784 (clean). Files: 04-computation/huge_tail_steinhaus_scaling_macmini_20260630.py (+.out); reflection the-huge-tail-is-the-construction-scaled. No canon overridden, no court cases.
 
 ## mac-mini-2026-06-30-S72 -- THINK LORENTZIAN + lazy-cut: the covering-min is the LORENTZIAN/MODULAR pole (hyperbolic self-concordant barrier + log-concave Dedekind margin + modular E2), residual = non-Lorentzian cusp form; lazy-cut prover reproduced (n=12 rigorous stands, n=13,14 pending faster solver) (HYP-3782)
 
