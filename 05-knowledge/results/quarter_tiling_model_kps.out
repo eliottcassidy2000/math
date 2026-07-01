@@ -1,0 +1,21 @@
+====================================================================================================
+ QUARTER-TILING orbit counts (Burnside over Klein 4-group <sigma,phi>)
+====================================================================================================
+   n   m   f D=(m+f)/2  tilings 2^m   HALF Q/<s> QUARTER Q/<s,phi> blue-lines 2^(D-1) black-quads
+   4   3   1         2            8            6                3                 2           1  (blue+quads=quarter: True)
+   5   6   2         4           64           40               20                 8          12  (blue+quads=quarter: True)
+   6  10   2         6         1024          544              272                32         240  (blue+quads=quarter: True)
+   7  15   3         9        32768        16640             8320               256        8064
+   8  21   3        12      2097152      1050624           525312              2048      523264
+
+====================================================================================================
+ VERIFY orbit sizes by enumeration + BLUE-SPINE CONNECTIVITY (n=4,5,6)
+====================================================================================================
+  n=4: Klein-4 orbit sizes {2: 2, 4: 1}  | SC nodes=2; BLUE graph on SC connected? True
+  n=5: Klein-4 orbit sizes {2: 8, 4: 12}  | SC nodes=8; BLUE graph on SC connected? True
+  n=6: Klein-4 orbit sizes {2: 32, 4: 240}  | SC nodes=12; BLUE graph on SC connected? True
+
+SYNTHESIS: half=fold by sigma (tournament complement); QUARTER=fold again by phi (tiling complement,
+  flip-all, fpf). Blue lines = the SIZE-2 quarter-orbits; black quads = size-4. The blue subgraph =
+  the quarter-tiling's own complement structure (recursion). Blue-spine connectivity checked above.
+DONE.

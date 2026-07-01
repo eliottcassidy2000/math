@@ -1,3 +1,18 @@
+## kind-pasteur-2026-07-01-S16 -- THE RECONSTRUCTION WALL AT n=7 (local fingerprints FAIL) + blue-spine CONNECTED + the double-complement quotient (algebraic 'quarter', reconciled w/ opus-S20)
+
+Prompt: work the open next ideas; think about the quarter tiling model.
+
+THREE RESULTS:
+(1) RECONSTRUCTION WALL AT n=7: the n=6 key (I(Omega,x), d=det(I+S)) does NOT stay injective. Sampled 1600 tournaments -> 427/456 classes (94%): I(Omega,x) alone cospectral for 90% (385/427; poly=1+i1 x+i2 x^2, i3=0 => low resolution); (I(Omega,x),d) still 142 collision groups; +skew-spectrum cpS does NOT close it. So (OCF,determinant) is complete ONLY through n=6; at n=7 cospectral FAMILIES explode past any bounded classical fingerprint. Local-invariant reconstruction hits a WALL at n=7.
+(2) BLUE-SPINE CONNECTED (n=4,5,6): the blue graph on SC nodes is CONNECTED -> upgrades the odd-parity min-degree>=1 bound to full connectivity. The SC/blue spine is a single connected backbone. n-robust structural invariant (unlike fingerprints).
+(3) DOUBLE-COMPLEMENT QUOTIENT ('quarter', ALGEBRAIC): Q_m/<sigma,phi> (Klein-4: sigma=grid-reflection=tournament complement, phi=complement TILING=flip-all=blue-line pairing). Orbits EXACTLY size-2 (BLUE lines={t,phi t}, grid-sym => SELF-COMPLEMENTARY lines, 2^{D-1}) + size-4 (BLACK QUADS={t,sigma t,phi t,sigma.phi t}=a black line + its tournament-COMPLEMENT line, (2^m-2^D)/4). Count=(2^m+2^D)/4=2^{m-2}+2^{D-2} = 3,20,272,8320,525312 (n=4..8), verified n<=6. DESCENT TOWER Full->Half(sigma)->quotient(phi), a complement Cayley-Dickson.
+CORRECTION/CONVERGENCE (opus-S20 HYP-3811): the GEOMETRIC sigma-fold is SINGLE/TERMINAL (folded region has no 2nd complement-reflection) => NO geometric quarter-TILING; folded class-count = A051337 (cycles=2 mod4). opus is RIGHT geometrically; my 'quarter' is the ALGEBRAIC Klein-4 double-complement quotient (phi is non-geometric), a valid different object, NOT a second geometric fold. Renamed accordingly.
+SYNTHESIS: fingerprints DEGRADE (complete n<=6, fail n=7) but complement STRUCTURE recurses (sigma-fold=half-tiling/SC-blue, phi-fold=self-complementary blue lines, spine connected, odd parity n-robust). Reconstruct the metagraph by the DESCENT TOWER (assemble self-complementary blue lines + complement-paired black quads under pairing rules + recursive parity), NOT by ever-finer node labels.
+Reflection: the-quarter-tiling-model-and-the-reconstruction-wall-at-n7-kps.md; scripts n7_ocf_det_injectivity_kps.py, quarter_tiling_model_kps.py (+.out). Not a HYP reservation.
+-> HYP-3811 (opus, fold terminal/A051337), HYP-3809/3810, THM-549/550, THM-281, the-determinant-lens (d perp H, Cayley-Dickson), the-reconstruction-key (S15).
+
+---
+
 ## opus-2026-07-01-S20 -- the FOLD is a SINGLE terminal step (NO quarter-tiling), and the folded class-count is A051337 (cycles = 2 mod 4); CORRECTS two S19/HYP-3810 claims (HYP-3811).
 
 Prompt: (1) does H_n fold to a quarter-tiling; (2) odd-n recursion rule mirroring the even-n folded-class-count.

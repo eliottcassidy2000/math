@@ -1,0 +1,11 @@
+n=7: sampled 1600 random tournaments -> 427 distinct iso classes found (of 456, 94% coverage)
+  (I(Omega,x)) alone: 120 cospectral groups (>=2 classes share the OCF poly) covering 385 classes
+  (I(Omega,x), d): 142 collision groups => (I(Omega,x),d) INJECTIVE on the sample? False
+   FIRST (I(Omega,x),d)-cospectral collisions (need a 3rd coordinate):
+     ipoly(i1,i2,i3)=(36, 4, 0), d=256: 2 classes; skew-spectra distinct? False
+     ipoly(i1,i2,i3)=(9, 0, 0), d=192: 4 classes; skew-spectra distinct? False
+     ipoly(i1,i2,i3)=(26, 4, 0), d=128: 2 classes; skew-spectra distinct? False
+     ipoly(i1,i2,i3)=(42, 6, 0), d=128: 2 classes; skew-spectra distinct? False
+     ipoly(i1,i2,i3)=(11, 1, 0), d=256: 4 classes; skew-spectra distinct? False
+   adding skew-spectrum cpS: 147 residual collision groups => (I(Omega,x),d,cpS) injective on sample? False
+DONE.
