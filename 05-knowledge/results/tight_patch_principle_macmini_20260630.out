@@ -1,0 +1,22 @@
+PATCH-PRINCIPLE n=14: skip s, patch = a MULTIPLE m*s of s (kills resonance hole at D=s).
+  floor 1/14=0.07143  cmin 14/183=0.07650
+
+  skip s | patch m*s -> M (m=2..)                             | notable
+       1 | 14:1/8*cov 15:2/17                                 |
+       2 | 14:2/17*cov 28:2/17*cov                            |
+       3 | 15:2/17 42:2/17*cov                                |
+       4 | 16:2/19 28:2/19*cov 56:2/19*cov                    |
+       5 | 15:2/19 70:2/19*cov                                |
+       6 | 18:2/23 42:2/23*cov 84:2/23*cov                    |
+       7 | 14:1/11*cov 28:1/9*cov 42:3/25*cov 56:1/8*cov 70:5 |
+       8 | 16:2/23 56:1/9*cov 112:2/17*cov                    |
+       9 | 18:2/23 126:14/131*cov                             |
+      10 | 20:2/27 70:1/11*cov 140:2/21*cov                   |
+      11 | 22:2/25 154:14/157*cov                             |
+      12 | 24:1/14*TIGHT 84:7/89*cov 168:14/173*cov           | <TIGHT at [24]
+      13 | 26:2/27 182:14/183*COVMIN                          | <COVMIN at [182]
+
+THE TWO CANONICAL PATCHWORKS (skip s of AP{1..13}, patch = multiple of s):
+  GW : skip 12 (=n-2), patch 24 =2*(n-2)      -> M=1/14  cover=False  [tight, non-covering]
+  CON: skip 13 (=n-1), patch 182=lcm(13,14)   -> M=14/183  cover=True  [covering-min]
+  lcm(13,14)=13*14=182; 2*(n-2)=24. Both patches are multiples of the skipped speed.

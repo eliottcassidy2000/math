@@ -1,0 +1,63 @@
+================================================================================
+A1. SINGLE-SWAP TIGHT CENSUS (AP {1..n-1}, remove one k, add one r<=4n): the sporadics
+================================================================================
+  n= 5: 1 sporadic single-swap(s)   skip2+add7(r%n=2,)
+  n= 6: 1 sporadic single-swap(s)   skip2+add9(r%n=3,)
+  n= 7: 0 sporadic single-swap(s)  AP-only (apex-clean)   
+  n= 8: 1 sporadic single-swap(s)   skip6+add12(r%n=4,=2k)
+  n= 9: 0 sporadic single-swap(s)  AP-only (apex-clean)   
+  n=10: 0 sporadic single-swap(s)  AP-only (apex-clean)   
+  n=11: 0 sporadic single-swap(s)  AP-only (apex-clean)   
+  n=12: 0 sporadic single-swap(s)  AP-only (apex-clean)   
+  n=13: 0 sporadic single-swap(s)  AP-only (apex-clean)   
+  n=14: 1 sporadic single-swap(s)   skip12+add24(r%n=10,=2k)
+  n=15: 0 sporadic single-swap(s)  AP-only (apex-clean)   
+  n=16: 0 sporadic single-swap(s)  AP-only (apex-clean)   
+
+================================================================================
+A2. GW-DOUBLING FAMILY: skip (n-2), add 2(n-2).  TIGHT  <=>  n = 2 (mod 6)
+================================================================================
+  n= 5: 6|(n-2)? False  skip  3 add  6 -> M=1/4       
+  n= 6: 6|(n-2)? False  skip  4 add  8 -> M=2/11      
+  n= 7: 6|(n-2)? False  skip  5 add 10 -> M=1/6       
+  n= 8: 6|(n-2)? True   skip  6 add 12 -> M=1/8       TIGHT, ndc=True, cover=False
+  n= 9: 6|(n-2)? False  skip  7 add 14 -> M=1/8       
+  n=10: 6|(n-2)? False  skip  8 add 16 -> M=2/19      
+  n=11: 6|(n-2)? False  skip  9 add 18 -> M=1/10      
+  n=12: 6|(n-2)? False  skip 10 add 20 -> M=2/23      
+  n=13: 6|(n-2)? False  skip 11 add 22 -> M=1/12      
+  n=14: 6|(n-2)? True   skip 12 add 24 -> M=1/14      TIGHT, ndc=True, cover=False
+  n=15: 6|(n-2)? False  skip 13 add 26 -> M=1/14      
+  n=16: 6|(n-2)? False  skip 14 add 28 -> M=2/31      
+  n=17: 6|(n-2)? False  skip 15 add 30 -> M=1/16      
+  n=18: 6|(n-2)? False  skip 16 add 32 -> M=2/35      
+  n=19: 6|(n-2)? False  skip 17 add 34 -> M=1/18      
+  n=20: 6|(n-2)? True   skip 18 add 36 -> M=1/20      TIGHT, ndc=True, cover=False
+  n=21: 6|(n-2)? False  skip 19 add 38 -> M=1/20      
+  n=22: 6|(n-2)? False  skip 20 add 40 -> M=2/43      
+  n=23: 6|(n-2)? False  skip 21 add 42 -> M=1/22      
+  n=24: 6|(n-2)? False  skip 22 add 44 -> M=2/47      
+  n=25: 6|(n-2)? False  skip 23 add 46 -> M=1/24      
+  n=26: 6|(n-2)? True   skip 24 add 48 -> M=1/26      TIGHT, ndc=True, cover=False
+
+================================================================================
+A3. MULTI-SWAP sporadic at n=8 (two-swap), + n=5,6 small exceptions
+================================================================================
+  n=8 two-swap tight sets: [(1, 4, 5, 6, 7, 11, 13)]  (all ndc=True)
+  n=5 small sporadic (1, 3, 4, 7): M=1/5 ndc=True (residues mod 5: [1, 2, 3, 4])
+  n=6 small sporadic (1, 3, 4, 5, 9): M=1/6 ndc=True (residues mod 6: [1, 3, 3, 4, 5])
+
+================================================================================
+B. PATCHWORK UNIFICATION (n=14): skip s of AP{1..13}, patch = a MULTIPLE m*s of s.
+   The patch kills the resonance hole at D=s. Only two hit the critical M-values.
+================================================================================
+  floor 1/14=0.07143   covering-min 14/183=0.07650
+  skip s | multiples m*s giving notable M
+      12 | 24:1/14 <<TIGHT>>
+      13 | 182:14/183 <<COVMIN>>
+
+  GW  = AP skip 12 (=n-2), patch 24 = 2(n-2)     : M=1/14 cover=False  [tight LRC floor]
+  CON = AP skip 13 (=n-1), patch 182=lcm(13,14)  : M=14/183 cover=True  [covering-min]
+  Both patches are multiples of the skipped speed: 24=2*12, 182=14*13.
+
+DONE.

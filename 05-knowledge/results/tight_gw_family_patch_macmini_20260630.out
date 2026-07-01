@@ -1,0 +1,41 @@
+=== (1) GW-DOUBLING FAMILY: skip k=n-2, add 2(n-2). Predicted tight iff 6|(n-2) (n=2 mod6) ===
+  n= 5 (n mod6=5, 6|n-2? False): skip 3, add 6 -> M=1/4   ndc=True
+  n= 6 (n mod6=0, 6|n-2? False): skip 4, add 8 -> M=2/11   ndc=True
+  n= 7 (n mod6=1, 6|n-2? False): skip 5, add 10 -> M=1/6   ndc=True
+  n= 8 (n mod6=2, 6|n-2? True): skip 6, add 12 -> M=1/8 TIGHT  ndc=True
+  n= 9 (n mod6=3, 6|n-2? False): skip 7, add 14 -> M=1/8   ndc=True
+  n=10 (n mod6=4, 6|n-2? False): skip 8, add 16 -> M=2/19   ndc=True
+  n=11 (n mod6=5, 6|n-2? False): skip 9, add 18 -> M=1/10   ndc=True
+  n=12 (n mod6=0, 6|n-2? False): skip 10, add 20 -> M=2/23   ndc=True
+  n=13 (n mod6=1, 6|n-2? False): skip 11, add 22 -> M=1/12   ndc=True
+  n=14 (n mod6=2, 6|n-2? True): skip 12, add 24 -> M=1/14 TIGHT  ndc=True
+  n=15 (n mod6=3, 6|n-2? False): skip 13, add 26 -> M=1/14   ndc=True
+  n=16 (n mod6=4, 6|n-2? False): skip 14, add 28 -> M=2/31   ndc=True
+  n=17 (n mod6=5, 6|n-2? False): skip 15, add 30 -> M=1/16   ndc=True
+  n=18 (n mod6=0, 6|n-2? False): skip 16, add 32 -> M=2/35   ndc=True
+  n=19 (n mod6=1, 6|n-2? False): skip 17, add 34 -> M=1/18   ndc=True
+  n=20 (n mod6=2, 6|n-2? True): skip 18, add 36 -> M=1/20 TIGHT  ndc=True
+  n=21 (n mod6=3, 6|n-2? False): skip 19, add 38 -> M=1/20   ndc=True
+  n=22 (n mod6=4, 6|n-2? False): skip 20, add 40 -> M=2/43   ndc=True
+  n=23 (n mod6=5, 6|n-2? False): skip 21, add 42 -> M=1/22   ndc=True
+  n=24 (n mod6=0, 6|n-2? False): skip 22, add 44 -> M=2/47   ndc=True
+  n=25 (n mod6=1, 6|n-2? False): skip 23, add 46 -> M=1/24   ndc=True
+  n=26 (n mod6=2, 6|n-2? True): skip 24, add 48 -> M=1/26 TIGHT  ndc=True
+
+=== (2) PATCH-TUNING at n=14: skip 12, add r; how does M depend on r? (r=24 is tight) ===
+  skip12 add  16: M=1/12      = 0.08333 
+  skip12 add  18: M=1/12      = 0.08333 
+  skip12 add  20: M=1/12      = 0.08333 
+  skip12 add  22: M=1/12      = 0.08333 
+  skip12 add  24: M=1/14      = 0.07143 <-TIGHT 1/14
+  skip12 add  26: M=1/12      = 0.08333 
+  skip12 add  28: M=1/12      = 0.08333 
+  skip12 add  36: M=3/41      = 0.07317 
+  skip12 add  48: M=4/53      = 0.07547 
+  skip12 add  60: M=1/13      = 0.07692   =construction-ish
+  skip12 add 168: M=14/173    = 0.08092 
+  skip12 add 182: M=1/12      = 0.08333 
+
+=== (3) n=8 EXTENDED: all single-swaps r<=80 + is there a 2nd sporadic? ===
+  n=8 single-swaps r<=80 tight: [(6, 12)]
+  n=8 two-swaps (a,b<=30) tight: [(1, 4, 5, 6, 7, 11, 13)]  count=1

@@ -1,0 +1,19 @@
+SINGLE-SWAP CENSUS: AP {1..n-1} with one element k removed, one r added (r<=Rmax, r not in AP)
+report all TIGHT (M=1/n) single-swaps, classify by (skip k, add r): residue r%n, ratio r/k, k killed-primes
+
+n=5: 1 tight single-swaps
+   skip  2, add   7:  r%%n= 2 (FILLS skipped res 2),  r/k=7/2,  primes(k)=[2] primes(r)=[7]  
+n=6: 1 tight single-swaps
+   skip  2, add   9:  r%%n= 3 (DOUBLES res 3),  r/k=9/2,  primes(k)=[2] primes(r)=[3]  
+n=7: 0 tight single-swaps  (AP only, apex-clean)
+n=8: 1 tight single-swaps
+   skip  6, add  12:  r%%n= 4 (DOUBLES res 4),  r/k=2,  primes(k)=[2, 3] primes(r)=[2, 3]  2k
+n=9: 0 tight single-swaps  (AP only, apex-clean)
+n=10: 0 tight single-swaps  (AP only, apex-clean)
+n=11: 0 tight single-swaps  (AP only, apex-clean)
+n=12: 0 tight single-swaps  (AP only, apex-clean)
+n=13: 0 tight single-swaps  (AP only, apex-clean)
+n=14: 1 tight single-swaps
+   skip 12, add  24:  r%%n=10 (DOUBLES res 10),  r/k=2,  primes(k)=[2, 3] primes(r)=[2, 3]  2k
+n=15: 0 tight single-swaps  (AP only, apex-clean)
+n=16: 0 tight single-swaps  (AP only, apex-clean)
