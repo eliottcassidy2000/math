@@ -1,0 +1,35 @@
+====================================================================================
+MSS UNCONDITIONAL VELOCITY BOUND for LRC14 (14 runners, 13 speeds)
+====================================================================================
+  suffices to check velocities <= C(14,2)^12 = 91^12 = 322475487413604782665681
+  ~ 10^23.51   (looser n^2n = 13^26 ~ 10^29.0)
+  => a counterexample (if any) has all 13 speeds in [1, 3.22e+23]. FINITE.
+
+====================================================================================
+THE FINITE OPEN CORE vs the repo's thresholds (all << the MSS ceiling)
+====================================================================================
+  construction patch n(n-1)        182                        forced single-patch multiple (S73)
+  lcm(13,14)                       182                        = n(n-1); the one-slot cover of q=13 AND q=14
+  lazy-cut bounded ceiling         182                        rigorous at n=12 (HYP-3782)
+  signed-correction thresh (max)   259                        per-core N/(3(1-2r)|L_C|) (HYP-3787)
+  MSS unconditional ceiling        322475487413604782665681   ALL counterexample speeds below this (finite)
+
+  => the interval (182, 3.2e23] is a FINITE (astronomically large) window the analytic tools
+     must clear -- effectivize the ceiling, do not prove asymptotic equidistribution.
+
+====================================================================================
+REFRAMED PROOF MAP for LRC14 (following the Rosenfeld/MSS template)
+====================================================================================
+  [MSS]     speeds bounded: all 13 speeds <= 91^12 (finite).
+  [THM-523] covering reduction: non-covering killed by q-witness; reduce to covering 13-sets.
+  [HYP-3750]band-prime filtering {17,19,23}: the repo's analog of Rosenfeld Lemma 6/7 --
+            LEAN IN: check the Lemma-6 covering condition per band prime (elementary, SOTA-proven).
+  [S77]     safe-band residue frame + deep-well isolation: bulk M>=0.108>>1/14 (slack to 1/14).
+  [lazy-cut]search the bounded residual (target M<1/14 for speed, HYP-3792 slack lever).
+  [S73-75]  effectivize the (182, ceiling] window (equidistribution/signed correction, now with a
+            FINITE upper limit 91^12, so single/few large speeds are cleanly bounded).
+
+HONEST: MSS makes the open core FINITE, not FEASIBLE (91^12 is unsearchable). It corrects the
+'unbounded is the difficulty' framing, connects the repo to the frontier (Rosenfeld prime-filtering =
+HYP-3750), and redirects the huge-speed effort to EFFECTIVE bounds. It does not by itself close LRC14.
+DONE.
