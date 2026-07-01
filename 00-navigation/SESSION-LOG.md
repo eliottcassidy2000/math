@@ -1,3 +1,21 @@
+## klein-2026-06-30-S59 -- A ZOO of X_0(N) invariants; the SHARPER frontier metric (newform count 0,0,1,0,2); the rho<->R lever DEGREE CORRECTION (THM-580 is degree-2 = W_2, not the degree-3 degeneracy) (HYP-3775)
+
+Prompt: work the next lever (rho<->R) and find other formulas/metrics like genus -- diverse, niche.
+
+Filed HYP-3775; reflection match-the-degree-not-just-the-shape.md; script modular_invariants_zoo_klein.py.
+
+(A) SHARPER METRIC (the find): the LRC-relevant obstruction is the NEW cusp forms, not the raw genus. dim S_2^new(2p) = g(2p) - 2 g(p) = 0,0,1,0,2 for p=3,5,7,11,13 (vs raw genus 0,0,1,2,2, HYP-3587). n=14 is the FIRST 2p with a GENUINELY NEW obstruction (f_14 = curve 14a); n=22 is ALL-OLD (g(22)=2 but 2g(11)=2, J_0(22)~J_0(11)^2, ZERO new forms -- its genus is inherited from p=11). So the new-form count pinpoints n=14 as the frontier SHARPER than the genus. (Growth that is inherited is not the obstruction.)
+
+(B) THE rho<->R LEVER, honest DEGREE CORRECTION to my S58 (HYP-3773): THM-580's 2-adic descent is a DEGREE-2 measure-preserving cover (u=2t on the circle). My S58 matched it to the modular degeneracy X_0(2p)->X_0(p), which is DEGREE 3 (Gamma_0(2) index = 1+2 = |P^1(F_2)|). DIFFERENT covers. So S58's R=6 is the (real) ramification of the degree-3 degeneracy, NOT of THM-580's degree-2 descent. The degree-MATCHED object is the Atkin-Lehner involution W_2 (degree 2): on X_0(14) it has 4 fixed CM points (RH, quotient X_0(14)/W_2 genus 0; discriminants among -4,-8,-7,-56). Lesson: match the DEGREE, not just the endpoints. [The numerical rho_j <-> 4 correspondence is still open -- rho real in [.5,1] vs integer 4 -- but now well-posed with the right cover.]
+
+(C) THE INVARIANT ZOO (diverse, exact) for X_0(2p): cusps nu_inf=4 CONSTANT = the Eisenstein BULK (dim=cusps-1=3, HYP-3587); index psi(2p)=3(p+1), psi(14)=24=eta exponent (Delta=eta^24); orbifold -chi=psi/6; nu2,nu3 = the (2,3,p) cone points (mac-mini HYP-3771); Phi6(n) factorization (large prime = covering-min binding core, HYP-3732); Dedekind s(n,Phi6) (HYP-3768). => cusps CONSTANT (bulk) while newforms GROW (obstruction) = the local-global split read directly off the invariants.
+
+CONVERGENCE: mac-mini S67 (HYP-3774) covering-min=zeta-regularization carrier (bulk+residual) and kind-pasteur (-1/12 web) both fuse the S56-58 E2/residual thread; my newform-count sharpens WHICH n has the new obstruction.
+
+NEXT: (1) compute THM-580's rho for the single 14->7 peel and compare to the W_2 fixed-point/CM data (the now-well-posed rho<->R); (2) is W_2 = the descent involution literally (u=2t <-> W_2 on the X_0(14) side)? (3) the newform metric 0,0,1,0,2 vs the covering-min margin across n.
+
+--- prior entries ---
+
 ## mac-mini-2026-06-30-S67 -- THE COVERING-MIN IS A ZETA-REGULARIZATION CARRIER: 5 results fusing the crystallographic (S65/S66) + Dedekind (S64) + the sum-of-naturals seed; the -1/12 anomaly is HEXAGONAL (HYP-3774)
 
 Prompt: keep the crystallographic angle; synthesize with the sum-of-naturals seed (Phi6=2T+1, killer=2T=-1, s=-T/(12T+6)->-1/12=zeta(-1)); build multiple proofs/hypotheses. [CONVERGES with opus-S6, same seed concurrently -- my distinct contribution is the crystallographic-regularization synthesis R3 + the multi-result framing.]

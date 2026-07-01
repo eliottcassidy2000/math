@@ -1,0 +1,56 @@
+================================================================================================
+(I) THE INVARIANT ZOO for X_0(N):  g | cusps | nu2 nu3 | index psi | -chi_orb=psi/6 | area/pi=psi/3
+================================================================================================
+   N   g cusps  nu2  nu3   psi   psi/6  S2new
+   3   0     2    0    1     4     2/3
+   5   0     2    2    0     6       1
+   6   0     4    0    0    12       2
+   7   0     2    0    2     8     4/3
+  10   0     4    2    0    18       3
+  11   1     2    0    0    12       2
+  13   0     2    2    2    14     7/3
+  14   1     4    0    0    24       4
+  15   1     4    0    0    24       4
+  22   2     4    0    0    36       6
+  23   2     2    0    0    24       4
+  26   2     4    2    0    42       7
+
+================================================================================================
+(II) THE LRC FAMILY n=2p and a HUNT: which invariants track genus 0,0,1,2,2 ?
+================================================================================================
+  p  n=2p  g(2p)  g(p) S2new(2p)=g(2p)-g(p)? cusps(2p) Mazur num(p-1)/12
+  3     6      0     0                     0         4                 1
+  5    10      0     0                     0         4                 1
+  7    14      1     0                     1         4                 1
+ 11    22      2     1                     1         4                 5
+ 13    26      2     0                     2         4                 1
+   NOTE: g(2p)-g(p) = 0,0,1,1,2 (p=3,5,7,11,13) = the NEWFORM count at level 2p = the residual dim.
+        (n=14: 1 newform = f_14 = curve 14a; the genus JUMP is the newform, S56-58.)
+
+================================================================================================
+(III) THE rho<->R LEVER, honest degrees: THM-580 (u=2t) = degree 2; degeneracy = degree 3
+================================================================================================
+   p=7, n=14: THM-580 circle descent DEGREE=2 (u=2t); modular degeneracy DEGREE=3 (Gamma_0(2) index)
+   p=11, n=22: THM-580 circle descent DEGREE=2 (u=2t); modular degeneracy DEGREE=3 (Gamma_0(2) index)
+   p=13, n=26: THM-580 circle descent DEGREE=2 (u=2t); modular degeneracy DEGREE=3 (Gamma_0(2) index)
+   => S58's 'peel = degree-3 degeneracy' is a SHAPE match, not a degree match. The degree-2
+      candidate is Atkin-Lehner W_2 (an involution). Compute W_2 fixed points (class numbers):
+   X_0(6): g=0; if g(X_0(6)/W_2)=0 then W_2 has f=2+2*0-0=2 fixed points (RH deg 2)
+   X_0(10): g=0; if g(X_0(10)/W_2)=0 then W_2 has f=2+2*0-0=2 fixed points (RH deg 2)
+   X_0(14): g=1; if g(X_0(14)/W_2)=0 then W_2 has f=2+2*1-0=4 fixed points (RH deg 2)
+   X_0(22): g=2; if g(X_0(22)/W_2)=0 then W_2 has f=2+2*2-0=6 fixed points (RH deg 2)
+   X_0(26): g=2; if g(X_0(26)/W_2)=0 then W_2 has f=2+2*2-0=6 fixed points (RH deg 2)
+
+================================================================================================
+(IV) NICHE: Phi_6(n) factorization, Dedekind sum, and a covering-min hunt
+================================================================================================
+   n  Phi6=n^2-n+1           factor    s(n,Phi6)  covmin n/Phi6
+   6            31               31        -5/62           6/31
+  10            91             7*13      -15/182          10/91
+  14           183             3*61     -91/1098         14/183
+  22           463              463      -77/926         22/463
+  26           651           3*7*31    -325/3906         26/651
+   8            57             3*19      -14/171           8/57
+  12           133             7*19      -11/133         12/133
+   Phi6(14)=183=3*61 (large prime 61); Phi6(26)=651=3*7*31. The large prime factor of Phi6
+   is the covering-min binding's arithmetic core (HYP-3732 Farey rung).
