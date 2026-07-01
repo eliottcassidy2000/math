@@ -1,0 +1,34 @@
+SC nodes at n=6 (sorted by grid-sym count, then tiling count):
+node    cat gridsym tilings     H |Aut|  c3           scores
+   0   BLUE       1       1     1     1   0 (0, 1, 2, 3, 4, 5)
+  23   BLUE       1       1     9     9   2 (1, 1, 1, 4, 4, 4)
+   5  MIXED       3       5     5     1   2 (0, 2, 2, 3, 3, 5)
+  55  MIXED       3      15    45     3   8 (2, 2, 2, 3, 3, 3)
+  12  MIXED       5      17    17     1   4 (1, 1, 2, 3, 4, 4)
+  22  MIXED       5      17    17     1   4 (1, 1, 2, 3, 4, 4)
+  44  MIXED       7      29    29     1   6 (1, 2, 2, 3, 3, 4)
+  43  MIXED       7      29    29     1   6 (1, 2, 2, 3, 3, 4)
+  31  MIXED       7      33    33     1   6 (1, 2, 2, 3, 3, 4)
+  30  MIXED       7      37    37     1   6 (1, 2, 2, 3, 3, 4)
+  54  MIXED       9      15    45     3   8 (2, 2, 2, 3, 3, 3)
+  46  MIXED       9      41    41     1   8 (2, 2, 2, 3, 3, 3)
+
+TWINS (mixed nodes grouped by grid-sym count) and the SEPARATOR:
+  grid-sym=3: 2 nodes
+     node  5: tilings=  5 H=   5 |Aut|=1 c3= 2 scores=(0, 2, 2, 3, 3, 5)
+     node 55: tilings= 15 H=  45 |Aut|=3 c3= 8 scores=(2, 2, 2, 3, 3, 3)
+     => SEPARATED by tc (all distinct: [5, 15])
+  grid-sym=5: 2 nodes
+     node 12: tilings= 17 H=  17 |Aut|=1 c3= 4 scores=(1, 1, 2, 3, 4, 4)
+     node 22: tilings= 17 H=  17 |Aut|=1 c3= 4 scores=(1, 1, 2, 3, 4, 4)
+     => NOT fully separated by tc/H/aut/c3/scores (cospectral within group)
+  grid-sym=7: 4 nodes
+     node 31: tilings= 33 H=  33 |Aut|=1 c3= 6 scores=(1, 2, 2, 3, 3, 4)
+     node 30: tilings= 37 H=  37 |Aut|=1 c3= 6 scores=(1, 2, 2, 3, 3, 4)
+     node 44: tilings= 29 H=  29 |Aut|=1 c3= 6 scores=(1, 2, 2, 3, 3, 4)
+     node 43: tilings= 29 H=  29 |Aut|=1 c3= 6 scores=(1, 2, 2, 3, 3, 4)
+     => NOT fully separated by tc/H/aut/c3/scores (cospectral within group)
+  grid-sym=9: 2 nodes
+     node 46: tilings= 41 H=  41 |Aut|=1 c3= 8 scores=(2, 2, 2, 3, 3, 3)
+     node 54: tilings= 15 H=  45 |Aut|=3 c3= 8 scores=(2, 2, 2, 3, 3, 3)
+     => SEPARATED by tc (all distinct: [41, 15])
