@@ -36,9 +36,11 @@ non-doubling sporadics (`n=5:g=7`, `n=6:g=9`) are other `g` whose interval-grid 
 
 ## Four creative proof angles (extending patch tuning)
 1. **Covering-rigidity (conserved overlap).** `Σ_v meas(D_v) = (n−1)·2/n = 2 − 2/n`, so any covering of
-   `[0,1)` has **overlap measure exactly `1 − 2/n`** (a conserved quantity). A retiling must preserve it:
-   `meas(D_g ∩ H_k^c)` (the patch's wasted overlap) is forced, tightly constraining `g`. *Angle: prove
-   finiteness of retilings by bounding overlap-preserving patches.*
+   `[0,1)` has **overlap measure exactly `1 − 2/n`** (a conserved quantity). *Angle: bound overlap-preserving
+   patches.* **⚠ REFUTED as a lowness lever (chased, see `covering-rigidity-via-moments-is-a-dead-end`):** the
+   overlap `1−2/n` holds for EVERY tight set (not distinguishing), and `∫m²` does NOT separate tight from
+   non-tight (the non-tight `12→26` swap has the lowest `∫m²`). Tightness is POINTWISE (`min_t m(t)≥1`);
+   moments average it away. Use the pointwise patch-bound instead. (Salvage: the doubling patch is `k=n−2`.)
 2. **Fourier-positivity.** Covering ⟺ `Σ_{v∈S} 1_{D_v}(t) ≥ 1 ∀t`. Since `1_{D_v}` is a dilated Fejér-type
    kernel, this is a **nonnegativity of an exponential sum** `Σ_v Σ_{|m|≤?} ĉ_v(m) e(mt) ≥ 1`. *Angle: an
    SOS/Turán-type certificate for the AP covering, perturbed by the swap.*
