@@ -1,0 +1,48 @@
+DATA TABLE (merged metagraph, n=3..6):
+
+n=3: classes(A000568)=2 nodes(V_merged)=2 SC=2 | cats [blue=2 mixed=0 black=0]
+     grid-sym tilings=2 sigma-fixed=2 (equal? True) | blue lines=1 black lines=0 sea=0 pb-selfloops=0
+     quarter-square floor((n-1)^2/4)=1 vs m=C(n-1,2)=1 | PARITY sc_odd=True ns_even=True
+     tiling counts: BLUE=[1, 1] MIXED=[] BLACK=[]
+
+n=4: classes(A000568)=4 nodes(V_merged)=3 SC=2 | cats [blue=1 mixed=1 black=1]
+     grid-sym tilings=4 sigma-fixed=4 (equal? True) | blue lines=2 black lines=2 sea=0 pb-selfloops=0
+     quarter-square floor((n-1)^2/4)=2 vs m=C(n-1,2)=3 | PARITY sc_odd=True ns_even=True
+     tiling counts: BLUE=[1] MIXED=[5] BLACK=[2]
+
+n=5: classes(A000568)=12 nodes(V_merged)=10 SC=8 | cats [blue=3 mixed=5 black=2]
+     grid-sym tilings=16 sigma-fixed=16 (equal? True) | blue lines=8 black lines=24 sea=0 pb-selfloops=0
+     quarter-square floor((n-1)^2/4)=4 vs m=C(n-1,2)=6 | PARITY sc_odd=True ns_even=True
+     tiling counts: BLUE=[1, 1, 3] MIXED=[5, 9, 9, 11, 13] BLACK=[2, 10]
+
+n=6: classes(A000568)=56 nodes(V_merged)=34 SC=12 | cats [blue=2 mixed=10 black=22]
+     grid-sym tilings=64 sigma-fixed=64 (equal? True) | blue lines=32 black lines=480 sea=290 pb-selfloops=24
+     quarter-square floor((n-1)^2/4)=6 vs m=C(n-1,2)=10 | PARITY sc_odd=True ns_even=True
+     tiling counts: BLUE=[1, 1] MIXED=[5, 15, 15, 17, 17, 29, 29, 33, 37, 41] BLACK=[2, 2, 6, 10, 10, 18, 18, 18, 22, 22, 26, 30, 38, 46, 46, 50, 58, 62, 66, 74, 74, 86]
+
+SEQUENCES to mine (n=3..6):
+  nodes       : [2, 3, 10, 34]
+  SC          : [2, 2, 8, 12]
+  blue        : [2, 1, 3, 2]
+  mixed       : [0, 1, 5, 10]
+  black       : [0, 1, 2, 22]
+  bluelines   : [1, 2, 8, 32]
+  blacklines  : [0, 2, 24, 480]
+  sea         : [0, 0, 0, 290]
+  pbself      : [0, 0, 0, 24]
+  gridsym     : [2, 4, 16, 64]
+  sigfix      : [2, 4, 16, 64]
+
+--- new conjecture tests (n=5,6) ---
+TWIN-PAIRING CONFIRMED: SC nodes' #grid-sym-tilings multiset has ALL-EVEN multiplicities
+  n=5: {1:4, 3:4}; n=6: {1:2,3:2,5:2,7:4,9:2}. (tiling-count multiset is NOT all-even.)
+  => a fixed-point-free involution twins the SC nodes by grid-sym count.
+STRUCTURE=CONSTRAINT under-determined: a valid color+eligibility+degree-preserving 2-swap EXISTS at n=5,6
+  => the parity/eligibility/degree constraints are NECESSARY but NOT SUFFICIENT to pin the metagraph;
+     they are its 'parity skeleton'; the tournament-iso structure selects the actual realization.
+PARITY THEOREM REDUCTION: sigma (complement-fold) PRESERVES merged nodes; node = union of sigma-orbits
+  (fixed=grid-sym, else pairs); tiling_count = #gridsym + 2*#pairs => parity = #gridsym mod 2.
+  SC node has ODD #gridsym (crux, verified), NS has 0 => SC odd / NS even tiling count.
+IDENTITY: #grid-sym tilings = 2^floor((n-1)^2/4) = 2^(half-tiling quarter-square size); blue lines = half.
+  => the BLUE structure lives on the half-tiling (fold fundamental domain); grid-sym <=> sigma-fixed.
+SC classes = A051337 (self-converse tournaments) = 2,2,8,12 (n=3..6) = #pure_blue + #mixed.
