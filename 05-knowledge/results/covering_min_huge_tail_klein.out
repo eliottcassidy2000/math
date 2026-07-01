@@ -1,0 +1,7 @@
+HUGE-SPEED TAIL (n=14, construction=14/183=0.07650): does a killer > n(n-1)=182 ever beat?
+  {1..12, 182}: covering=True M=14/183=0.07650 >= construction
+  {1..12, 364}: covering=True M=28/365=0.07671 >= construction
+  {1..12, 546}: covering=True M=42/547=0.07678 >= construction
+  {1..12, 910}: covering=True M=70/911=0.07684 >= construction
+  {1..12, 1820}: covering=True M=140/1821=0.07688 >= construction
+  {1..12, 2366}: covering=True M=182/2367=0.07689 >= construction

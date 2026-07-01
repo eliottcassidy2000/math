@@ -1,0 +1,13 @@
+FAREY BINDING-FIRST (speed-independent): which rungs j are binding-feasible? (necessary cond.)
+known covering-min rung a(n)=2,2,4,4,3 for n=7..11 (validation); rung n = construction
+  n= 7 (D_j=j*6+1): binding-feasible rungs [2, 3, 4, 5, 6, 7]; smallest=2  [known a(n)=2: OK]
+  n= 8 (D_j=j*7+1): binding-feasible rungs [2, 3, 4, 5, 6, 7, 8]; smallest=2  [known a(n)=2: OK]
+  n= 9 (D_j=j*8+1): binding-feasible rungs [2, 3, 4, 5, 6, 7, 8, 9]; smallest=2  [known a(n)=4: OK]
+  n=10 (D_j=j*9+1): binding-feasible rungs [2, 3, 4, 5, 6, 7, 8, 9, 10]; smallest=2  [known a(n)=4: OK]
+  n=11 (D_j=j*10+1): binding-feasible rungs [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]; smallest=2  [known a(n)=3: OK]
+  n=12 (D_j=j*11+1): binding-feasible rungs [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; smallest=2  => rungs<n binding-feasible: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  n=13 (D_j=j*12+1): binding-feasible rungs [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; smallest=2  => rungs<n binding-feasible: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  n=14 (D_j=j*13+1): binding-feasible rungs [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]; smallest=2  => rungs<n binding-feasible: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+If (n>=12) no rung<n is binding-feasible: the covering-min is the construction for ALL speeds
+(closing HYP-3779's >n(n-1) gap), since a beater's rung would have to pass this necessary check.

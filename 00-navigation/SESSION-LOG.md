@@ -1,3 +1,23 @@
+## klein-2026-07-01-S62 -- worked the HYP-3779 menu ("Farey tessellations"): binding-first is TOO WEAK (= the CRT-escape); huge-speed tail = Steinhaus scaling; covering-min(12,13,14)=construction (HYP-3781)
+
+Prompt: work the ranked menu and think Farey tessellations.
+
+Filed HYP-3781; scripts covering_min_farey_binding_klein.py + covering_min_huge_tail_klein.out.
+
+(A) FAREY BINDING-FIRST (the menu's binding-first / Farey-dissection item, speed-INDEPENDENT): the covering-min is a Farey neighbor of 1/(n-1) (HYP-3732), rung j, binding modulus D=j(n-1)+1 -- a det-1 edge of the Farey tessellation on the Stern-Brocot ray from 1/(n-1). Necessary condition for rung j: EXISTS rotation a* with every q in {2..n} having a multiple in the safe band {r: dist(r a*,D)>=j} mod D. RESULT: TOO WEAK -- ALL rungs j=2..n are binding-feasible for n=7..14 (incl n=9 where rungs 2,3 are NOT the covering-min, and n=12,13,14 with no beater). Rules out NOTHING.
+
+WHY (the clarifying lesson): all constraining moduli are SMALL (binding D<=(n-1)^2, resonances<=n, band<2n), so a huge CRT-tuned speed can be tuned to pass EVERY single-modulus check -- this IS the CRT-escape (HYP-3745). No single-modulus (Farey binding) check sees the obstruction; the real obstruction is the multi-modulus CRT-INVARIANT COUNTING (each speed covers <=2r+1 rotations per modulus regardless of size). This is exactly WHY the lazy-cut ILP (multi-modulus, HYP-3779) works and the Farey binding-first (single-modulus) does not.
+
+(B) HUGE-SPEED TAIL (HYP-3779's >n(n-1) gap): the double-killer family {1..n-2, n(n-1)t} gives M=(nt)/(n(n-1)t+1), INCREASING in t toward 1/(n-1) (n=14: 14/183, 28/365, 42/547, 70/911, ...) = the Steinhaus scaling c/(kc+1) (HYP-3763). So larger killers are strictly WORSE; the construction (t=1, smallest double-killer n(n-1)=lcm(n-1,n)) is the best. The tail's binding D=n(n-1)t+1 slides up the same Stern-Brocot ray toward the ceiling 1/(n-1).
+
+(C) SYNTHESIS: covering-min(n=12,13,14) = the construction n/Phi6, RIGOROUS for speeds<=n(n-1) (lazy-cut HYP-3779); the huge-speed tail via HYP-3745 (CRT-invariance) + HYP-3737 (band over-constraint) -- verified, not fully proved for arbitrary huge-speed sets.
+
+MENU STATUS: lazy-cut cutting-plane ILP = DONE (closes <=n(n-1)); Farey binding-first = TOO WEAK (this session, clarifying negative); LP = too weak (HYP-3779). NEXT LEVER = Lovasz-theta/SDP -- a tighter MULTI-modulus relaxation (single-modulus and LP both fail; the theta of the danger conflict graph could give the lower bound in one shot).
+
+FAREY-TESSELLATION framing (kept): the covering-min lives on the Stern-Brocot ray from 1/(n-1); the witnesses are Farey fractions; the tail slides up the ray; the three-gap (HYP-3762) governs the ray. But the DANGER-COVER obstruction is not visible at any single Farey edge -- it is the multi-edge counting.
+
+--- prior entries ---
+
 ## kind-pasteur-2026-07-01-S1 -- the Eisenstein/cusp dichotomy IS the THREE-DISTANCE (Steinhaus) theorem; the soft "hyperconcavity" order parameter does NOT threshold regularizability (it is arithmetic) (extends opus HYP-3775; converges mac-mini HYP-3780; no HYP reserved)
 
 Prompt: think hyperconcavity; extend HYP-3768's iota-even Eisenstein/iota-odd cusp into a checkable geometric form (regularizable/-1/12 <=> AP-interval ordered; un-regularizable/cusp <=> generic disordered).
