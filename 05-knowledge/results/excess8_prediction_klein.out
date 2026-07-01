@@ -1,0 +1,45 @@
+==============================================================================
+SELF-CHECK n=7 (must reproduce S83: |Aut| {9:4,21:1}, SC {9:2,21:1}, excess=3)
+==============================================================================
+  n=7 fix((012)(345)(6)): fix has 2^7 tournaments -> 12 distinct classes
+    |Aut| dist: {3: 7, 9: 4, 21: 1};  SC among them: {3: 3, 9: 2, 21: 1}
+    #{|Aut|>7} = 5;  #{|Aut|>7 AND SC} = 3
+
+==============================================================================
+PREDICT excess(8) = #{SC classes on 8 vtx with |Aut|>8}
+==============================================================================
+  n=8 fix((012)(345)(6)(7))  [captures |Aut| in {9,21}]: fix has 2^10 tournaments -> 48 distinct classes
+    |Aut| dist: {3: 30, 9: 16, 21: 2};  SC among them: {3: 8, 9: 4}
+    #{|Aut|>8} = 18;  #{|Aut|>8 AND SC} = 4
+  n=8 fix((01234)(5)(6)(7))  [captures |Aut| = 15]: fix has 2^8 tournaments -> 12 distinct classes
+    |Aut| dist: {5: 10, 15: 2};  SC among them: {}
+    #{|Aut|>8} = 2;  #{|Aut|>8 AND SC} = 0
+
+------------------------------------------------------------------------------
+UNION (dedup): distinct classes with |Aut|>8 = 20
+  |Aut| dist: {9: 16, 15: 2, 21: 2};  SC among them: {9: 4}
+    |Aut|=21  SC=False  scores=(0, 4, 4, 4, 4, 4, 4, 4)
+    |Aut|=21  SC=False  scores=(3, 3, 3, 3, 3, 3, 3, 7)
+    |Aut|=15  SC=False  scores=(1, 1, 1, 5, 5, 5, 5, 5)
+    |Aut|=15  SC=False  scores=(2, 2, 2, 2, 2, 6, 6, 6)
+    |Aut|= 9  SC=False  scores=(0, 1, 3, 3, 3, 6, 6, 6)
+    |Aut|= 9  SC=False  scores=(0, 2, 2, 2, 4, 6, 6, 6)
+    |Aut|= 9  SC=True  scores=(0, 2, 2, 2, 5, 5, 5, 7)
+    |Aut|= 9  SC=False  scores=(0, 3, 3, 3, 4, 5, 5, 5)
+    |Aut|= 9  SC=True  scores=(1, 1, 1, 3, 4, 6, 6, 6)
+    |Aut|= 9  SC=False  scores=(1, 1, 1, 3, 5, 5, 5, 7)
+    |Aut|= 9  SC=False  scores=(1, 1, 1, 4, 4, 4, 6, 7)
+    |Aut|= 9  SC=False  scores=(1, 1, 1, 4, 5, 5, 5, 6)
+    |Aut|= 9  SC=False  scores=(1, 2, 2, 2, 3, 6, 6, 6)
+    |Aut|= 9  SC=True  scores=(1, 2, 2, 2, 5, 5, 5, 6)
+    |Aut|= 9  SC=False  scores=(1, 3, 3, 3, 3, 5, 5, 5)
+    |Aut|= 9  SC=False  scores=(2, 2, 2, 3, 4, 4, 4, 7)
+    |Aut|= 9  SC=False  scores=(2, 2, 2, 3, 4, 5, 5, 5)
+    |Aut|= 9  SC=False  scores=(2, 2, 2, 3, 4, 5, 5, 5)
+    |Aut|= 9  SC=False  scores=(2, 2, 2, 4, 4, 4, 4, 6)
+    |Aut|= 9  SC=True  scores=(3, 3, 3, 3, 4, 4, 4, 4)
+
+==============================================================================
+PREDICTED excess(8) = #{SC & |Aut|>8} = 4
+  (excess sequence would be 0,0,0,1,3,4 for n=3..8; verifiable once rho(8) is computed)
+==============================================================================
