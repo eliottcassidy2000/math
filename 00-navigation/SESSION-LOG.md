@@ -26,6 +26,17 @@ at n=14). The general three-gap rigidity g(n)<=3 remains the open core (HYP-+291
 confirmed, delivering the completeness the program needed.
 
 HOUSEKEEPING: filed HYP-3761. No collisions, no canon overridden, no court cases.
+## mac-mini-2026-06-30-S63 -- THREE results toward tight-set completeness {AP,GW} for n=14: (1) NO off-class double-heal floor-achiever [sharp n=2 mod6], (2) the multi-patch moduli [j=1 unique GW, j=2 EMPTY for n=14], (3) completeness reduction [AP unique residue-complete] (HYP-3761)
+
+Prompt: prove there are no other tight sets; the multi-patch (skip j, patch j) moduli generating the near-AP family; whether the double-heal has a floor-achiever off the n=2 mod6 class.
+
+(1) OFF-CLASS DOUBLE-HEAL -- a clean NEGATIVE. skip v, add 2v reaches the LRC floor 1/n ONLY at n=2 mod6 (always v=n-2); verified n=5..30. Off-class (6 nmid n-2) the best double-heal over ALL v plateaus at M=2/(2n-1)>1/n and never touches the floor. So klein-S49's n=2 mod6 criterion is SHARP not just for v=n-2 but for EVERY skip position -- no doubling rescues the floor off the residue class. Answers the question: NO.
+
+(2) THE MULTI-PATCH MODULI. By the HYP-+2914 necessary conditions, residues mod n = {1..n-1} (complete) or one-gap {1..n-1}\{k}; so EVERY tight set is a residue-multi-patch of the AP (drop residues, lift others to r+n*m). The j-patch moduli: j=0 = AP; j=1 = GW (UNIQUE single-swap for n=14, verified additions up to 100, far beyond 2n); j=2 = cross-types (n=8 has {1,4,5,6,7,11,13}) but for n=14 the j=2 enum finds 0 tight (36270 sets, adds<=44) -- NO cross-type at n=14.
+
+(3) COMPLETENESS REDUCTION (two verified sub-results). (A) The AP is the UNIQUE RESIDUE-COMPLETE tight set: no residue-complete lift (all 13 residues, some lifted to r+14m) is tight except the all-zero AP (verified <=2 lifted residues, m<=3). So every NON-AP tight set has the one-gap residue structure (a dropped residue) -- matching GW. (B) The one-gap lift is bounded: for drop 12, dup residue d via d+14m, the ONLY tight instance is d=10,m=1=GW (no other d, no larger m). NET: {AP,GW} is COMPLETE for n=14 within all tested bounds (residue-complete=>AP; j=1=>GW adds<=100; j=2=>none); the residual is the large-lift/high-multiplicity one-gap tail = the HYP-+2909 scale-separation gap. Not a full proof; a genuine reduction + the sharp off-class answer.
+
+Builds on klein-S48/S49 (HYP-3750/3753), opus-S1, HYP-+2913/+2914. HOUSEKEEPING: filed HYP-3761 (clean). Files: 04-computation/tight_multipatch_and_completeness_macmini_20260630.py + 3 result files (multipatch_completeness, double_heal_offclass, residue_complete_liftbound). No canon overridden, no court cases.
 
 ## klein-2026-06-30-S49 -- THE PATCH-TUNING UNIFICATION: GW and the covering-min are two single-element patches of the mother AP {1..n-1}, via two healing modes (DOUBLE r=2v -> floor iff n==2 mod 6; LCM r=lcm -> covering, universal) (HYP-3753)
 

@@ -1,0 +1,31 @@
+PART 3: DOUBLE-HEAL FLOOR-ACHIEVER -- skip v, add 2v (2v>=n). Any floor (M=1/n) off n=2mod6?
+(also report the near-floor M when no exact floor, to see how close off-class gets)
+
+  n= 5 [5mod6 ]: floor v=[]   best double-heal M=2/9=0.2222 at skip4
+  n= 6 [0mod6 ]: floor v=[]   best double-heal M=2/11=0.1818 at skip4
+  n= 7 [1mod6 ]: floor v=[]   best double-heal M=2/13=0.1538 at skip6
+  n= 8 [2mod6]: floor v=[6]   best double-heal M=1/8=0.1250 at skip6
+  n= 9 [3mod6 ]: floor v=[]   best double-heal M=2/17=0.1176 at skip6
+  n=10 [4mod6 ]: floor v=[]   best double-heal M=2/19=0.1053 at skip8
+  n=11 [5mod6 ]: floor v=[]   best double-heal M=2/21=0.0952 at skip10
+  n=12 [0mod6 ]: floor v=[]   best double-heal M=2/23=0.0870 at skip10
+  n=13 [1mod6 ]: floor v=[]   best double-heal M=2/25=0.0800 at skip12
+  n=14 [2mod6]: floor v=[12]   best double-heal M=1/14=0.0714 at skip12
+  n=15 [3mod6 ]: floor v=[]   best double-heal M=2/29=0.0690 at skip12
+  n=16 [4mod6 ]: floor v=[]   best double-heal M=2/31=0.0645 at skip14
+  n=17 [5mod6 ]: floor v=[]   best double-heal M=2/33=0.0606 at skip16
+  n=18 [0mod6 ]: floor v=[]   best double-heal M=2/35=0.0571 at skip16
+  n=19 [1mod6 ]: floor v=[]   best double-heal M=2/37=0.0541 at skip18
+  n=20 [2mod6]: floor v=[18]   best double-heal M=1/20=0.0500 at skip18
+  n=21 [3mod6 ]: floor v=[]   best double-heal M=2/41=0.0488 at skip18
+  n=22 [4mod6 ]: floor v=[]   best double-heal M=2/43=0.0465 at skip20
+  n=23 [5mod6 ]: floor v=[]   best double-heal M=2/45=0.0444 at skip22
+  n=24 [0mod6 ]: floor v=[]   best double-heal M=2/47=0.0426 at skip20
+  n=25 [1mod6 ]: floor v=[]   best double-heal M=2/49=0.0408 at skip24
+  n=26 [2mod6]: floor v=[24]   best double-heal M=1/26=0.0385 at skip24
+  n=27 [3mod6 ]: floor v=[]   best double-heal M=2/53=0.0377 at skip24
+  n=28 [4mod6 ]: floor v=[]   best double-heal M=2/55=0.0364 at skip26
+  n=29 [5mod6 ]: floor v=[]   best double-heal M=2/57=0.0351 at skip28
+  n=30 [0mod6 ]: floor v=[]   best double-heal M=2/59=0.0339 at skip28
+
+CONCLUSION: does ANY n with n!=2mod6 have a double-heal floor-achiever?

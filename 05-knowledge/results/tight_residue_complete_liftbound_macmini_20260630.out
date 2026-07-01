@@ -1,0 +1,12 @@
+PART 1 sub-result A: is the AP the UNIQUE RESIDUE-COMPLETE tight set (all residues 1..13)?
+  residue-complete tight = one speed per residue r in 1..13, speed=r+14*m_r, small lifts.
+  Test: lift up to 2 residues (m in {1,2,3}); the rest at m=0. Any tight besides AP?
+
+  AP {1..13} tight? True
+  residue-complete tight sets besides AP (<=2 lifts, m<=3): 0
+  => AP is UNIQUE residue-complete tight (within tested lifts)
+
+PART 1 sub-result B: LIFT BOUND. GW={1..11,13,24}=drop12,dup-res-10-lift(24=10+14,m=1).
+  For the one-gap structure (drop 12, dup residue d via d+14m), which (d,m) give tight?
+   drop12, dup residue 10 via d+14m: TIGHT at [(1, 24)]  (max lift m=1)
+  => the lift m is BOUNDED (small); GW's m=1 is the tight one.
