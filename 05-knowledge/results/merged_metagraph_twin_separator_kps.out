@@ -1,0 +1,47 @@
+====================================================================================================
+ n=6 TWIN SEPARATOR: invariants per twin node (rep class)
+====================================================================================================
+
+ TWIN (Bk, blue=0, black=2, H=3): nodes [1, 3]
+   node 1: |Aut|=3, score=(0, 1, 2, 4, 4, 4), c3=1, c5=0, I(Omega,x)=1+1x+0x^2, d=det(I+S)=64, cpS=(1, 0, 15, 0, 39, 0, 9)
+   node 3: |Aut|=3, score=(0, 1, 3, 3, 3, 5), c3=1, c5=0, I(Omega,x)=1+1x+0x^2, d=det(I+S)=64, cpS=(1, 0, 15, 0, 39, 0, 9)
+   SEPARATED BY: ['score']
+
+ TWIN (Bk, blue=0, black=18, H=9): nodes [4, 6]
+   node 4: |Aut|=1, score=(0, 2, 2, 3, 4, 4), c3=3, c5=1, I(Omega,x)=1+4x+0x^2, d=det(I+S)=64, cpS=(1, 0, 15, 0, 39, 0, 9)
+   node 6: |Aut|=1, score=(0, 2, 2, 3, 4, 4), c3=3, c5=1, I(Omega,x)=1+4x+0x^2, d=det(I+S)=96, cpS=(1, 0, 15, 0, 55, 0, 25)
+   SEPARATED BY: ['d=det(I+S)', 'cpA', 'cpS']
+
+ TWIN (Mx, blue=5, black=12, H=17): nodes [12, 22]
+   node 12: |Aut|=1, score=(1, 1, 2, 3, 4, 4), c3=4, c5=4, I(Omega,x)=1+8x+0x^2, d=det(I+S)=32, cpS=(1, 0, 15, 0, 15, 0, 1)
+   node 22: |Aut|=1, score=(1, 1, 2, 3, 4, 4), c3=4, c5=2, I(Omega,x)=1+6x+1x^2, d=det(I+S)=128, cpS=(1, 0, 15, 0, 63, 0, 49)
+   SEPARATED BY: ['c5', 'I(Omega,x)', 'd=det(I+S)', 'cpA', 'cpS']
+
+ TWIN (Bk, blue=0, black=46, H=23): nodes [21, 24]
+   node 21: |Aut|=1, score=(1, 1, 3, 3, 3, 4), c3=5, c5=4, I(Omega,x)=1+9x+1x^2, d=det(I+S)=96, cpS=(1, 0, 15, 0, 55, 0, 25)
+   node 24: |Aut|=1, score=(1, 2, 2, 3, 3, 4), c3=6, c5=5, I(Omega,x)=1+11x+0x^2, d=det(I+S)=32, cpS=(1, 0, 15, 0, 15, 0, 1)
+   SEPARATED BY: ['score', 'c3', 'c5', 'I(Omega,x)', 'd=det(I+S)', 'cpA', 'cpS']
+
+ TWIN (Bk, blue=0, black=74, H=37): nodes [38, 42]
+   node 38: |Aut|=1, score=(1, 2, 3, 3, 3, 3), c3=7, c5=9, I(Omega,x)=1+16x+1x^2, d=det(I+S)=96, cpS=(1, 0, 15, 0, 55, 0, 25)
+   node 42: |Aut|=1, score=(1, 2, 3, 3, 3, 3), c3=7, c5=7, I(Omega,x)=1+14x+2x^2, d=det(I+S)=64, cpS=(1, 0, 15, 0, 39, 0, 9)
+   SEPARATED BY: ['c5', 'I(Omega,x)', 'd=det(I+S)', 'cpA', 'cpS']
+
+ TWIN (Mx, blue=7, black=22, H=29): nodes [43, 44]
+   node 43: |Aut|=1, score=(1, 2, 2, 3, 3, 4), c3=6, c5=4, I(Omega,x)=1+10x+2x^2, d=det(I+S)=64, cpS=(1, 0, 15, 0, 47, 0, 1)
+   node 44: |Aut|=1, score=(1, 2, 2, 3, 3, 4), c3=6, c5=6, I(Omega,x)=1+12x+1x^2, d=det(I+S)=160, cpS=(1, 0, 15, 0, 63, 0, 81)
+   SEPARATED BY: ['c5', 'I(Omega,x)', 'd=det(I+S)', 'cpA', 'cpS']
+
+====================================================================================================
+ SUMMARY: # of the twin-pairs each invariant separates (out of 6)
+====================================================================================================
+          |Aut|: separates 0/6
+          score: separates 2/6
+             c3: separates 1/6
+             c5: separates 4/6
+     I(Omega,x): separates 4/6
+     d=det(I+S): separates 5/6
+            cpA: separates 5/6
+            cpS: separates 5/6
+   ANY tested invariant: separates 6/6  => full identifiability by these? True
+DONE.

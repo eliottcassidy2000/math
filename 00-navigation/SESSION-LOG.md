@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-01-S15 -- THE RECONSTRUCTION KEY IS (OCF, DETERMINANT): the first OCF-cospectral twin {4,6} at n=6 is det(I+S)-visible; + flip-all-half-tiling = complement gives odd-parity LOWER BOUNDS
+
+Prompt: run the twin separator test; think "flipping all D half-tiles = flipping all m tiles" and lower bounds from odd-grid-sym parity.
+
+TWIN SEPARATOR (the n=6 reconstruction twins, per-node invariants): |Aut| 0/6 (useless, twins auto-matched); score 2/6; c3 1/6; c5 4/6; I(Omega,x) OCF-poly 4/6; d=det(I+S) 5/6; cpA/cpS 5/6; ANY = 6/6.
+ - THE HARD PAIR {4,6} (NS/pure-black, blue0 black18 H=9) is OCF-COSPECTRAL: identical score (0,2,2,3,4,4), |Aut|=1, c3=3, c5=1, I(Omega,x)=1+4x -- the project's crown invariant CANNOT tell them apart (first OCF-cospectral pair, at n=6 = the reconstruction break). SEPARATED by d=det(I+S)=64 vs 96 (+ skew spectrum). This is the-determinant-lens thesis LIVE: H and d are ORTHOGONAL coordinates (R^2<=0.004); where the OCF/path axis is blind, the determinant/switching axis sees.
+ - RECONSTRUCTION KEY: (I(Omega,x), d) is a COMPLETE node-fingerprint at n=6 (6/6). So beyond (cat,deg,H): ADD d. H alone stalls at the OCF-cospectral wall; (H,d) clears it. [Open: injective for n>=7?]
+FLIP-ALL = COMPLEMENT (owner's identity, formalized): half-tiling has D=f+p=floor((n-1)^2/4)=A002620 cells (THM-549/550); grid-sym tilings = half-tilings; flipping all D half-tiles = flipping all m tiles = complement phi. So phi|_{grid-sym} = FLIP-ALL on the 2^D-cube, FIXED-POINT-FREE => the 2^D grid-sym tilings pair into 2^{D-1} BLUE lines; blue subgraph = complement structure of the half-tiling cube Q_D (the recursion).
+ODD-GRID-SYM PARITY LOWER BOUNDS (from THM-281 odd + flip-all fpf): (1) #SC EVEN, clean re-proof via 2^D=sum_SC g_C, each g_C odd => #SC = 2^D = 0 mod 2, and #SC<=2^D. (2) BLUE-OTHER-DEG >=1 ODD for every SC node -- odd count can't be phi-closed within a class (flip-all fpf) => SC spine is blue-connected outward, NO blue-isolated SC. (3) #pure-blue>=1 (transitive).
+TWO TWIN MECHANISMS: black (NS) sea twins (no grid-sym) need the DETERMINANT d; the SC/blue spine governed by odd-parity/half-tiling. Reconstruction decomposes: blue spine by parity-recursion, black twins by determinant. (I(Omega,x),d) = joint key.
+CONVERGENCE: mac-mini-S84 HYP-3809 (SC twin-pairing, under-determination) + S85 HYP-3810 (kappa_SC=half-tiling dim floor((n-1)^2/4), blue T-join bipartite->non-bipartite n=6). My layer = twin-SEPARATOR (OCF-cospectral + d) + the flip-all/odd-parity lower bounds.
+Reflection: the-reconstruction-key-is-OCF-and-determinant-plus-flipall-halftiling-parity-bounds-kps.md; script merged_metagraph_twin_separator_kps.py (+.out). Not a HYP reservation.
+-> HYP-3809, HYP-3810, THM-549/550, THM-281/282, the-determinant-lens (d perp H), does-H-close-reconstruction (S14).
+
+---
+
 ## mac-mini-2026-07-01-S85 -- THE T-JOIN PARITY OBSTRUCTS LOW-DIM COVERS OF THE SC CLASSES: kappa_SC = half-tiling dim floor((n-1)^2/4) >> info floor (gap ~ n^2/4); blue T-join bipartite->non-bipartite at n=6 (HYP-3810) [TOURNAMENT/tiling; pursues HYP-3809 atlas]
 
 Prompt: pursue the conjecture-atlas topics; see whether the T-join boundary/parity obstructs low-dimensional covers of the SC classes.
