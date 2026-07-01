@@ -15,6 +15,19 @@ CONVERGENCE: mac-mini S67 (HYP-3774) covering-min=zeta-regularization carrier (b
 NEXT: (1) compute THM-580's rho for the single 14->7 peel and compare to the W_2 fixed-point/CM data (the now-well-posed rho<->R); (2) is W_2 = the descent involution literally (u=2t <-> W_2 on the X_0(14) side)? (3) the newform metric 0,0,1,0,2 vs the covering-min margin across n.
 
 --- prior entries ---
+## opus-2026-06-30-S7 -- The bulk/residual = Eisenstein/cusp split IS the AP/INTERVAL vs GENERIC split; the beater margin is NOT a cotangent sum (concrete NEGATIVE, corrects HYP-3773's Zagier hope) (HYP-3775)
+
+Prompt: work the concrete next step (beater's higher-dim Dedekind form) + relate the abstract pattern to the repo + synthesize/extend.
+
+The concrete step yielded a clean NEGATIVE that sharpened the whole synthesis. Results (HYP-3775):
+1. CONCRETE STEP -> NEGATIVE: the beater margin is NOT a Zagier cotangent sum -- the full-product d(D;speeds) diverges (beater speeds share factors with D: n=8 beater 16==1 mod 15 collides) or is unrelated where defined; witness 2-fold s(a,D) also mismatches. HYP-3773's "beaters = Zagier higher-dim (reciprocity extends)" is WITHDRAWN.
+2. SHARP CRITERION (verified): the margin is a classical 2-fold Dedekind sum (=> -1/12=zeta(-1) eta anomaly) EXACTLY when the witness residues {v*a mod D} are a SCALED INTERVAL (AP). Construction = scaled interval-core {1..n-2}+antipode killer -1 (MODULAR, n=7,8,9,14); beaters n=7,8,9,10 = generic non-consecutive subsets (NON-MODULAR). Reason: AP/interval lonely measures telescope to a Dedekind sum; generic sets don't.
+3. SYNTHESIS: this gives mac-mini-S67's bulk/residual (HYP-3774) and klein-S56's Eisenstein/cusp (HYP-3768) a CHECKABLE geometric form -- regularizable/Eisenstein/-1/12 <=> AP/interval (ORDERED); un-regularizable/cusp/no-closed-form <=> generic (DISORDERED). Genus jump 0->1 at n=14 (HYP-3586) = the residual's birth = cusp form f14=curve 14a. The covering-min's irregularity a(n) IS genuine non-modularity; -1/12 = signature of order, residual = price of disorder (=OPEN-Q-108 iota-odd index).
+4. Repo web (search agent): Phi6=Eisenstein norm=PG(2,n-1)=Singer (HYP-3705); B2=1/6 unifies zeta(2)/E2/reciprocity; psi(14)=24=eta exponent; (2,3,n) spine n=7 hyperbolic frontier (HYP-3771); the eta anomaly -1/12 joins the triangle's constants (fiber fraction/Wallis/pi, Gamma/e, gamma).
+
+HONEST: criterion + Zagier-negative rigorous; the order/disorder = bulk/residual synthesis is a framework (fuses mac-mini-S67 + klein-S56). Corrected my own HYP-3773 Zagier optimism.
+
+NEXT: (a) quantify the residual/cusp (a(n) / f14) -- the genuinely non-modular core (OPEN-Q-108, H3/H4), still the crux; (b) is there a MODULAR-FORMS bound on how far a disordered (generic) set can beat the ordered (AP/Eisenstein) construction = a cusp-form-norm bound on a(n)?; (c) the interval criterion + Singer/PG(2,n-1): does PG-existence (n-1 prime power) gate the modular/regularizable regime?
 
 ## mac-mini-2026-06-30-S67 -- THE COVERING-MIN IS A ZETA-REGULARIZATION CARRIER: 5 results fusing the crystallographic (S65/S66) + Dedekind (S64) + the sum-of-naturals seed; the -1/12 anomaly is HEXAGONAL (HYP-3774)
 

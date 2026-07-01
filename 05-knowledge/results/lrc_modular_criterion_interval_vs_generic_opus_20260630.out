@@ -1,0 +1,16 @@
+MODULAR criterion: are the witness residues a SCALED INTERVAL (AP) => classical Dedekind sum?
+  n=7  constr: M=7/43, witness a=7: MODULAR (scaled interval c=7)
+  n=7  BEATER: M=2/13, witness a=3: NON-MODULAR (generic subset -> cusp/residual, no closed form)
+  n=8  constr: M=8/57, witness a=8: MODULAR (scaled interval c=8)
+  n=8  BEATER: M=2/15, witness a=7: NON-MODULAR (generic subset -> cusp/residual, no closed form)
+  n=9  BEATER: M=4/33, witness a=4: NON-MODULAR (generic subset -> cusp/residual, no closed form)
+  n=10 BEATER: M=4/37, witness a=10: NON-MODULAR (generic subset -> cusp/residual, no closed form)
+  n=14 constr: M=14/183, witness a=14: MODULAR (scaled interval c=14)
+
+NEGATIVE: the beater margin is NOT a Zagier cotangent sum:
+  n=7 constr: M=7/43, margin=0.01993, full-product Zagier d(D;speeds)=-2.329e+03 (unrelated / ill-defined for non-coprime speeds)
+  n=7 BEATER: M=2/13, margin=0.01099, full-product Zagier d(D;speeds)=3.692e+00 (unrelated / ill-defined for non-coprime speeds)
+  n=8 BEATER: M=2/15, margin=0.00833, full-product Zagier d(D;speeds)=2.316e+14 (unrelated / ill-defined for non-coprime speeds)
+
+=> regularizable/Eisenstein/-1/12 <=> AP/interval (construction, ORDERED); residual/cusp/no-closed-form <=> generic (beaters, DISORDERED).
+   The bulk/residual (HYP-3774) = Eisenstein/cusp (HYP-3768) split IS the AP/interval vs generic split; genus jump 0->1 at n=14 = the residual's birth.
