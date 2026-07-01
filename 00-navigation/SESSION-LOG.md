@@ -1,3 +1,19 @@
+## opus-2026-07-01-S23 -- LEFSCHETZ makes the hard side easy: the BORSUK-ULAM obstruction is DUAL to GAUSS-SUM (Weil/Lefschetz) exactness -- certify the free-Z2 regime with a TRACE FORMULA, not a fixed point (HYP-3815).
+
+Prompt: tricks to make the hard side (free-Z2, p=3 mod4, Borsuk-Ulam) easier; think Lefschetz fixed-point counts.
+
+THE MOVE: Brouwer counts EXISTENCE (a free involution has no fixed point => symmetric SOS fails, HYP-3814), but LEFSCHETZ L(f)=sum(-1)^i Tr(f_*|H_i) COUNTS fixed points of the FROBENIUS/dilation even when the involution is free.
+
+(A) VERIFIED: Paley skew matrix S_ij=chi(j-i) (p=3 mod4) has spectrum EXACTLY {0, +-i*sqrt(p)} = the GAUSS SUM (p=3,7,11,19,23) = the Frobenius eigenvalue on H^1 (Grothendieck-Lefschetz = Weil point count). Paley Cayley spectrum CONCENTRATED at {1, e^(+-2i arctan sqrt p)} (fixed vertex + Gauss-sum pair), NOT spread like transitive roots-of-unity => the 'hard' object is arithmetically SIMPLE, just non-symmetric.
+
+(B) VERIFIED: LRC runner dilation phi_v:t->vt on S^1 has L(phi_v)=1-v = -(v-1) = signed resonance count (t=k/(v-1), runner-return fixed pts); loneliness = complement of union Fix(phi_v); three-distance/Farey = their combinatorics.
+
+THE DUALITY: p=3 mod4 <=> -1=QNR <=> free QR-negation Z2 (Borsuk-Ulam wall) is the SAME condition that makes the Paley TOURNAMENT exist & its Gauss sum sqrt(p) EXACT (Weil/Lefschetz). Topological hardness = arithmetic exactness, same door. TRICK: on the hard side, read off the LEFSCHETZ/WEIL TRACE (Gauss/Ramanujan sums, resonance counts 1-v), not a symmetric fixed point.
+
+LRC PAYOFF: the crux already IS a trace formula -- AP moments = Ramanujan sums c_N(k) (klein HYP-3793) = character-sum Lefschetz traces; the SINGULAR SERIES (SOS-obstructed, HYP-3791) = sum of these traces (no symmetric certificate but exact trace => why the far-element/equidistribution route works where SOS stalls); covering-min at composite Phi6 metric-irreducible = the trace does NOT factor over CRT (THM-503). The three pillars (HYP-3796) = the CONSTRUCTIVE face of the trace (flat-extension=atomic fixed-point decomp; Blaschke fixed pts=Fix(phi_v); POCS->trace support).
+
+HONEST: Gauss-sum/dilation traces verified+classical (conference matrices, Weil); 'the LRC singular series = an exact Lefschetz trace that CERTIFIES M>=1/n' is the organizing conjecture (trace exact; bound still needs far-element analysis). Reflection: lefschetz-makes-the-hard-side-easy-borsuk-ulam-obstruction-is-dual-to-gauss-sum-exactness-opus-20260701.md; script lefschetz_paley_gauss_dilation_opus_20260701.py. HYP-3815. No canon overridden.
+
 ## kind-pasteur-2026-07-01-S19 -- THE BRIDGE-2 MINDSET IS ONE RUNG OF A UNIVERSAL MOMENT LADDER: identification-rung CLIMBS with n, count/spectral families are ORTHOGONAL, the reconstruction wall = the ladder SATURATING (continuous descent); same recursion as LRC Lasserre (HYP-3789)
 
 Prompt: think about the bridge-2 mindset + the 2nd moment; keep looking for subtle patterns like this recursively.
