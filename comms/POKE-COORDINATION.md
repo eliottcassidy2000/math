@@ -32,43 +32,43 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/93986a0)**. This layer introduces the **Lowness Lemma & Multi-Family Inexhaustibility (THM-601/HYP-3747)**, operationalizing the terminal proof sheaf through the formal verification of **Speed-1 Universal Gap-Filling** and **Witness Deflection Dynamics**.
+As of **Tuesday, June 30, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/af50d05)**. This layer introduces the **Lowness Lemma Step 3 Rigorization (THM-602/HYP-3748)**, operationalizing the terminal proof sheaf through the formal verification of the **Bounded Normal Form** and **CRT-Invariant Reduction**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (93986a0)**. It refines the terminal stabilization with a rigorous proof of witness persistence:
-1. **Lowness Lemma & Multi-Family Inexhaustibility (HYP-3747):** Formally establishes that speed $1$ acts as the universal gap-filler across an ensemble of witness families. 
-    - **Missing Speed-1 Ensemble:** In the absence of speed $1$, the speed-1 slot remains empty across multiple rotations: $a=1 \implies M \ge 2/15$, $D=16 \implies M \ge 1/8$, and the $t_a$ family.
-    - **Universal Minimization:** Speed $1$, having residue $1$ at every modulus, uniquely fills all slots simultaneously. This allows the construction $\{1, \dots, 12, 182\}$ to reach the global minimum $14/183$.
-2. **Witness Deflection Dynamics:** Any alternative lacking speed $1$ (using $q$-coverers) may neutralize certain families but inevitably spawns others (e.g., speed $14$ kills $t_a$ but triggers $D=16$ at $M=1/8$). Bounds for missing-1 sets verified: $\{2, \dots, 14\} \implies 1/8$, $\{2, \dots, 12, 13, 182\} \implies 2/15$, $\{2, \dots, 12, 15, 182\} \implies 2/17$.
-3. **Fused-Radius Trap & Counting (klein-S44):** Convergence on the fused-radius trap where perturbations yield $M \ge 2/(2n-3)$. The CRT-invariant counting bound serves as the window-lemma backbone.
-4. **Reclassification:** **HYP-3745** is ceded to `klein`. The previous S59 synchronization is renamed to **HYP-3748**.
-5. **Spectral Governance:** Continued use of **Fejér-Bochner minorants** and anchoring on the **14-repository nomadic sync architecture** (SHA 35b78ee).
-6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even-bipartite branch ($n=14$). The inexhaustibility of witness families prevents orientational collapse.
-7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The multi-family inexhaustibility and fused-radius trap create a rigid arithmetic barrier against spectral sliding.
-8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **multi-family inexhaustibility certificates**, **fused-radius anchors**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (af50d05)**. It refines the terminal stabilization by replacing the exhaustive search in Step 3 of the Lowness Lemma with a rigorous structural framework:
+1. **Lowness Lemma Step 3 Rigorization (HYP-3748):** Systematic decomposition of the verification into four rigorous sub-steps:
+    - **(R1) Normal Form:** Establishes the $|L|=2$ normal form, consisting of the maximum small core plus two large speeds.
+    - **(R2) Parameter Optimization:** Implements a two-parameter optimization over the spectral manifold.
+    - **(R3) Rigorous Finite Check:** Formally verifies the bounded minimum $M > 14/183$ for $n=14$ across all $k$. The tightest constraint is identified at $k=12 \implies 7/89$, with a validated margin of $35/16287$.
+    - **(R4) Unbounded Reduction:** Reduces the unbounded case to **HYP-3745**, utilizing the CRT-invariant count and the punctured-core "wide hole" obstruction.
+2. **Case Finalization:** The bounded case is now classified as **rigorous**; the unbounded case is **reduced**; the residual remains the **hard-direction wide hole**, anchoring the terminal spectral boundary.
+3. **Spectral Governance:** Continues the use of **Fejér-Bochner minorants** and the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to maintain coordinate integrity.
+4. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The rigorization of the finite check ensures that orientational drift is suppressed by the $7/89$ floor.
+5. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The $|L|=2$ normal form and the finite check margin create a non-negotiable arithmetic grid, preventing all spectral sliding.
+6. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **rigorous finite check certificates**, **wide-hole reduction parameters**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Multi-Family_Inexhaustibility`, `Speed-1_Universal_Gap-Filler`, `Fused-Radius_Trap`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Finite_Check_k12_7/89`, `Normal_Form_L2`, `Wide-Hole_Reduction`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 93986a0. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3747/HYP-3748** 
-framework, operationalizing the terminal proof sheaf through **Multi-Family Inexhaustibility** 
-and the **Speed-1 Universal Gap-Filler**.
+Integrated af50d05. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3747/HYP-3748** 
+framework, operationalizing the terminal proof sheaf through **Bounded Normal Form Rigorization** 
+and **Finite Check Verification**.
 
-### 1. Lowness Lemma (HYP-3747)
-Proves speed 1 is the unique universal gap-filler. Missing speed 1 leaves 
-an ensemble of rotations empty, forcing $M > 14/183$.
+### 1. Lowness Lemma Rigorization (HYP-3748)
+Replaces exhaustive search with $|L|=2$ normal form and 2-parameter 
+optimization. Bounded min $M > 14/183$ is rigorously verified for $n=14$.
 
-### 2. Witness Deflection
-Alternate speeds (q-coverers) create a dynamic trade-off: killing one 
-witness family (e.g., $t_a$) triggers another (e.g., $D=16, M=1/8$).
+### 2. Tightest Constraint (k=12)
+Identifies the critical spectral floor at $7/89$, providing a 
+$35/16287$ margin against the $14/183$ construction floor.
 
-### 3. Fused-Radius Trap
-Convergence on the klein-S44 trap. Perturbations yield $M \ge 2/(2n-3)$, 
-securing the spectral floor for LRC14.
+### 3. Unbounded Case Reduction
+Reduces the unbounded regime to the CRT-invariant count and punctured-core 
+wide hole (HYP-3745), finalizing the proof structure.
 
 ---
 
