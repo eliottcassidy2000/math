@@ -1,0 +1,35 @@
+============================================================================
+PSL(2,7): |G| = 168 = 168 = 8*21 (Hurwitz group; Aut Klein quartic; Aut Fano PG(2,2))
+  element-order distribution: {1: 1, 2: 21, 3: 56, 4: 42, 7: 48}
+  => 21 involutions (=21), 48 order-7 (=48=6*8 Sylow-7);  the {7,21} apex orders
+
+Frobenius-21 subgroup C7:C3 (the apex |Aut(Paley_7)|): |<x,y>| = 21  (x order 7, y order 3, y normalizes <x>)  => the Paley automorphism group lives in PSL(2,7)
+
+Apex Cayley graph Cay(PSL(2,7), (2,3,7)-gens): 3-regular, N=168
+  lambda_1=3.000, |lambda_2|=2.880;  Ramanujan bound 2*sqrt(d-1)=2.828  => not Ramanujan (still an expander base)
+
+============================================================================
+THE FOUR FACES OF sqrt(p) at the hard apex (p = 3 mod 4):
+============================================================================
+  p= 3: (1) Gauss g(p)=1.7321 i  (=i*sqrt3=1.7321i)   (2) Paley skew eig = +-i*sqrt(p)=+-1.7321i   (3) Ramanujan 2*sqrt(p)=3.4641   (4) Q(sqrt(-3)) disc -3
+  p= 7: (1) Gauss g(p)=2.6458 i  (=i*sqrt7=2.6458i)   (2) Paley skew eig = +-i*sqrt(p)=+-2.6458i   (3) Ramanujan 2*sqrt(p)=5.2915   (4) Q(sqrt(-7)) disc -7
+  p=11: (1) Gauss g(p)=3.3166 i  (=i*sqrt11=3.3166i)   (2) Paley skew eig = +-i*sqrt(p)=+-3.3166i   (3) Ramanujan 2*sqrt(p)=6.6332   (4) Q(sqrt(-11)) disc -11
+  => sqrt(p) is ONE atom with four faces: imaginary (Gauss/Paley/field, iota-ODD) + real (Ramanujan/expansion).
+  p=7: sqrt7=2.6458 = |g(7)| = |Paley skew eig| = (Ramanujan bound)/2 = |disc Q(sqrt-7)|^{1/2}.
+
+============================================================================
+LEFT-RIGHT CAYLEY SQUARE COMPLEX (the LTC substrate, Dinur et al.)
+============================================================================
+  |A|=3 (left), |B|=2 (right); vertices=168, distinct squares=252
+  each vertex g has a LOCAL VIEW = its A x B neighborhood (link); the Tanner/LTC code puts a base code on links.
+  LOCAL-TESTABILITY PROXY: a global codeword is legal iff every link is legal; a far word violates a
+  constant fraction of links iff the complex is a co-boundary expander (Dinur et al. c^3 theorem).
+  proxy coboundary test on a fixed 1-cochain: 116/252 squares violate parity (46.0%) -- nonzero => the square complex DOES locally detect a global defect.
+
+============================================================================
+THE PROPOSAL (honest): the flip-rank certificate is ANTI-LTC in the SPECTRAL basis (S82); but the apex's
+own group PSL(2,7) gives an expander square-complex whose LOCAL links carry the Frobenius-21 symmetry the
+spectrum missed. Turning the anti-LTC into an LTC = encoding the SC/|Aut| certificate as a co-cycle on
+this complex, testable link-by-link. Substrate + expansion + local-defect-detection BUILT here; the full
+c^3 soundness for the tournament certificate is the deep step (Dinur et al. give it for their base codes).
+============================================================================

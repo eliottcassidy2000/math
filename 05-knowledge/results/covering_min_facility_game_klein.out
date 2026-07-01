@@ -1,0 +1,26 @@
+==========================================================================
+ADVERSARIAL FACILITY-LOCATION GAME, n=14, Phi6=183=3*61; S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+==========================================================================
+(1) GAME VALUE M(S) = max_k min_v dist(vk mod Phi6) = 14/183 = 0.07650
+    achieved at k* = 14  (t* = 14/183); 1/n = 0.07143; M(S) >= 1/n
+    M(S) = n/Phi6 = 14/183 = 0.07650 (covering-min, THM-523)  [defender's best loneliness]
+
+(2) LP-DUAL / equioscillation certificate at k*: binding runners (dist=M) = [1, 182]
+    binding phase-residues (signed, /Phi6): [('+14', 1), ('-14', 182)]  => the observer(0) is PINNED between +14 and -14 = +-n (Chebyshev 2-point, S73)
+    dual weights (1/2,1/2) on {runner 1, killer}: moving t either way brings one binder closer => M certified.
+
+(3) DISCREPANCY POTENTIAL (Koksma-Hlawka |avg f(vt) - int f| <= V(f) D*):
+    runner cloud at t* has star-discrepancy D* = 0.0765; three-gap sizes (approx) = [0.0055, 0.0765, 0.153]
+    coverage potential PHI = N*2*M = 13*2*14/183 = 1.9891  (<1 => an uncovered gap MUST exist)
+    => the potential-function/PoA floor: if total danger 2(n-1)M < 1 the observer escapes; equality tunes M.
+    Koksma-Hlawka reads the lonely measure L_C = int 1_lonely as a discrepancy of the {vt} cloud.
+
+(4) POCHHAMMER fiber fraction f(n)=(1/2)_(n-2)/(n-2)!:  f(14) = 0.1612  ~ 1/sqrt(pi*n) = 0.1508
+    the pi/EVEN/MEASURE side (Wallis/Gamma, iota-even) -- complementary to the sqrt(p)/ODD/CERTIFICATE
+    side (Gauss i*sqrt(p), HYP-3820). Two halves of the apex: measure ~ 1/sqrt(pi n), certificate ~ sqrt(p).
+
+==========================================================================
+NET: covering-min = adversarial facility location; the LP-dual is the 2-point equioscillation {1,killer};
+the discrepancy/coverage potential (Koksma-Hlawka) is the potential-function/PoA handle on inf-measure;
+and the two apex halves are f(n)~1/sqrt(pi n) (measure) and sqrt(p) (certificate).
+==========================================================================
