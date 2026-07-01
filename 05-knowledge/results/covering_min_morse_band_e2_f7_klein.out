@@ -1,0 +1,30 @@
+========================================================================
+(1) FAR-ELEMENT RESONANCE: killer n(n-1) == -1 mod Phi6(n)
+========================================================================
+  n= 8: Phi6=57, killer n(n-1)=56, k mod Phi6 = 56 (== -1 mod Phi6? True)  [Phi6=57=]
+  n=10: Phi6=91, killer n(n-1)=90, k mod Phi6 = 90 (== -1 mod Phi6? True)  [Phi6=91=]
+  n=12: Phi6=133, killer n(n-1)=132, k mod Phi6 = 132 (== -1 mod Phi6? True)  [Phi6=133=]
+  n=14: Phi6=183, killer n(n-1)=182, k mod Phi6 = 182 (== -1 mod Phi6? True)  [Phi6=183=]
+  => the far element sits at residue -1 of the binding modulus Phi6 (the ceiling of the
+     Stern-Brocot ray); this is the far-element resonance / the E2-hexagonal zeta_6 direction.
+
+========================================================================
+(2) MORSE / BAND LANDSCAPE of G(t)=min_v||v t|| for the construction (n=14)
+========================================================================
+  construction [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+  global max M = 0.07650 (=14/183, at t*=14/183=0.07650); grid max 0.07650 at 0.92350
+  top LOCAL-max (Morse) values of G: [0.0765, 0.076, 0.0756, 0.0755, 0.0752, 0.0747, 0.0742, 0.0738]
+  the binding t*=14/183 is the GLOBAL Morse maximum; the lower local maxima are the 'band
+  barrier' critical points (radius-1 band moduli). Loneliness is a POINTWISE spike (S54).
+
+========================================================================
+(3) F7 / APEX-7 + SPECTRAL GAP: can a low-degree Fejer (PSD) minorant certify M>=n/Phi6?
+========================================================================
+  Fejer F_7 weighted avg of loneliness = 0.02953  vs  M=14/183=0.07650  (gap factor 2.6x)
+  Fejer F_14 weighted avg of loneliness = 0.01888  vs  M=14/183=0.07650  (gap factor 4.1x)
+  Fejer F_61 weighted avg of loneliness = 0.00699  vs  M=14/183=0.07650  (gap factor 10.9x)
+  => the spectral/averaged (Fejer, incl. apex F_7) proxy is FAR below M: the averaged lens is
+     BLIND to the pointwise loneliness spike (S54). So the tight lower-bound certificate is
+     COMBINATORIAL (the witness packing / lazy-cut HYP-3779), not a Delsarte/Fejer SDP.
+     E2/Eisenstein = the regularizable BULK (Dedekind->-1/12, S56); the residual (cusp form,
+     apex-7/F7) is the un-relaxable core the PSD relaxation cannot see.

@@ -1,5 +1,5 @@
 ---
-id: HYP-3781
+id: HYP-3783
 title: THE FAREY BINDING-FIRST CHECK IS TOO WEAK (it is the CRT-escape) + the huge-speed tail is the Steinhaus scaling => covering-min(12,13,14)=construction via lazy-cut + tail. Worked the HYP-3779 menu ("think Farey tessellations"). (A) FAREY BINDING-FIRST (speed-independent): the covering-min is a Farey neighbor of 1/(n-1) (HYP-3732), rung j, binding modulus D=j(n-1)+1 (Stern-Brocot ray). Necessary condition for rung j: EXISTS rotation a* with every q in {2..n} having a multiple in the safe band {r: dist(r a*,D)>=j} mod D. RESULT: TOO WEAK -- ALL rungs j=2..n are binding-feasible for every n=7..14 (incl. n=9 where rungs 2,3 are NOT realized, and n=12,13,14 with no beater). It rules out NOTHING. WHY: a huge CRT-tuned speed satisfies every SMALL-modulus condition (binding D<=(n-1)^2, resonances, band are all small) -- this IS the CRT-escape (HYP-3745); the real obstruction is the multi-modulus CRT-INVARIANT COUNTING (each speed covers <=2r+1 rotations per modulus REGARDLESS of value), which no single-modulus Farey check captures. (B) HUGE-SPEED TAIL confirmed: the double-killer family {1..n-2, n(n-1)t} gives M=(nt)/(n(n-1)t+1) -> 1/(n-1), INCREASING in t (n=14: 14/183,28/365,42/547,...) -- larger killers are strictly WORSE (Steinhaus scaling HYP-3763); the construction (t=1, smallest double-killer) is the best. (C) SYNTHESIS: covering-min(n=12,13,14)=construction via the lazy-cut ILP (no beater speeds<=n(n-1), HYP-3779) + the huge-tail scaling/HYP-3737 band (speeds>n(n-1)); the general-huge-speed case rests on HYP-3745's CRT-invariance (verified, not fully proved)
 status: MIXED (honest negative + confirmation + synthesis). VERIFIED: (A) the Farey binding-first necessary condition passes for ALL rungs 2..n at n=7..14 (too weak, rules out nothing) -- a clarifying NEGATIVE: it is defeated by the CRT-escape, pinpointing that the obstruction is multi-modulus counting not single-modulus binding. (B) huge-tail M=(nt)/(n(n-1)t+1) increasing (exact, n=14). (C) covering-min(12,13,14)=construction: RIGOROUS for speeds<=n(n-1) (lazy-cut HYP-3779); the double-killer tail is exact; the GENERAL huge-speed tail is argued via HYP-3745/3737, not fully proved. FAREY-TESSELLATION framing: the covering-min on the Stern-Brocot ray from 1/(n-1); the tail's binding D=n(n-1)t+1 is the Farey structure; three-gap (HYP-3762) governs it.
 source: klein-2026-07-01-S62
@@ -17,7 +17,7 @@ results:
   - 05-knowledge/results/covering_min_huge_tail_klein.out
 ---
 
-# HYP-3781 — the Farey binding-first check is too weak (it is the CRT-escape)
+# HYP-3783 — the Farey binding-first check is too weak (it is the CRT-escape)
 
 ## (A) Farey binding-first: a speed-independent check that RULES OUT NOTHING
 "Think Farey tessellations": the covering-min is a Farey NEIGHBOR of `1/(n-1)` (HYP-3732), rung `j`,

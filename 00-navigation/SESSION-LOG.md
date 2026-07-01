@@ -18,6 +18,29 @@ FIRST SWING (b) DONE, WORKS (reflection the-single-far-unbounded-case-closes; sc
 CONVERGES klein HYP-3781 (same-day "huge-speed tail = Steinhaus scaling") on the large-speed direction; mac-mini HYP-3780 (hyperbolicity/certificate). NO HYP reserved (extends opus HYP-3779/klein). Files: lrc14_singlefar_morse_bandbarrier_kps.py(+.out); reflections the-real-dichotomy-is-bounded-vs-unbounded-..., the-single-far-unbounded-case-closes-... No canon overridden. NEXT: multi-far (two combs vs a hole) = the residual.
 
 ## klein-2026-07-01-S62 -- worked the HYP-3779 menu ("Farey tessellations"): binding-first is TOO WEAK (= the CRT-escape); huge-speed tail = Steinhaus scaling; covering-min(12,13,14)=construction (HYP-3781)
+## klein-2026-07-01-S63 -- the NEXT LEVER (SDP/Delsarte) HAS A SPECTRAL GAP: loneliness is pointwise, so the tight covering-min certificate is COMBINATORIAL not spectral; far-element / Morse-band / E2 / F7 (HYP-3782)
+
+Prompt: work the next lever, think E2 + F7 and far-element resonance and morse/band barrier.
+
+Worked the HYP-3783 menu's Lovasz-theta/SDP item through the requested lenses. cvxpy unavailable (no full SDP), so I prototyped the Fejer/PSD proxy + the structural geometry. Filed HYP-3782; script covering_min_morse_band_e2_f7_klein.py.
+
+(1) FAR-ELEMENT RESONANCE: the construction killer n(n-1) = Phi6(n)-1 == -1 mod Phi6 for ALL n (verified 8,10,12,14). The far element sits at the '-1 slot' of the binding modulus = the ceiling of the Stern-Brocot ray 1/(n-1), the zeta_6/E2-hexagonal direction (HYP-3715); Dedekind s(n,Phi6)->-1/12 (E2 anomaly, S56). The far element is not 'far' -- it is the reflection anchor -1 at the hexagonal modulus.
+
+(2) MORSE/BAND LANDSCAPE: G(t)=min_v||v t|| (loneliness) for the construction (n=14) is a POINTWISE SPIKE at the binding t*=14/183 (the global Morse maximum = M) atop a decaying LADDER of local maxima (0.0765,0.0760,0.0756,0.0755,0.0752,...) = the radius-1 BAND-BARRIER critical points (moduli n<D<2n). By iota-symmetry (S55) the max also appears at 1-14/183=0.9235. Landscape = one sharp spike + a band ladder.
+
+(3) F7 / APEX-7 + SPECTRAL GAP: the Fejer-weighted AVERAGE of loneliness is 2.6-11x BELOW M (F_7 avg 0.0295, F_14 0.0189, F_61 0.0070 vs M=0.0765) and gets WORSE at higher degree (more concentrated averaging sees the spike LESS). This is the spectral gap: the averaged/PSD lens is BLIND to the pointwise loneliness spike (S54, 'the average is blind'). So a Delsarte/Fejer/theta SDP -- the 'next lever' -- has a spectral gap.
+
+SYNTHESIS: E2/Eisenstein = the regularizable BULK (Dedekind->-1/12, the far-element -1 slot, hexagonal zeta_6 -- spectrally VISIBLE); apex-7/F7 cusp-form = the un-relaxable RESIDUAL (the pointwise spike, genus-1 f_14, S56 -- spectrally INVISIBLE). So the tight lower-bound certificate is the COMBINATORIAL witness packing (the lazy-cut HYP-3779, a finite list of ~thousands of lonely-witness cuts), NOT a spectral SDP. The next lever is gap-limited by the pointwise nature of loneliness.
+
+HONEST: cvxpy unavailable -> no full SDP tested; the Fejer-average is a NAIVE spectral proxy (a proper Delsarte SDP optimizing the kernel could be tighter, but per S54's pointwise principle likely still gapped). The lesson: loneliness is pointwise; the certificate must be a list of POINTS (witnesses), not a spectrum.
+
+HOUSEKEEPING: HYP-3781 collision -- opus (creative-geometry) keeps 3781; I renamed my S62 Farey-binding-first 3781->3783; this session = HYP-3782.
+
+NEXT: (1) if cvxpy becomes available, test the full Lovasz theta of the danger conflict graph (does the SDP tightening close the gap or confirm it?); (2) formalize 'loneliness is pointwise => spectral relaxations gap' as a theorem; (3) the far-element -1-slot + band-ladder as the structure for a combinatorial (not spectral) uniqueness proof of the construction.
+
+--- prior entries ---
+
+## klein-2026-07-01-S62 -- worked the HYP-3779 menu ("Farey tessellations"): binding-first is TOO WEAK (= the CRT-escape); huge-speed tail = Steinhaus scaling; covering-min(12,13,14)=construction (HYP-3783)
 
 Prompt: work the ranked menu and think Farey tessellations.
 
