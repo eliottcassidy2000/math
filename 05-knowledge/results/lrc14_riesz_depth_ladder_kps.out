@@ -1,0 +1,90 @@
+==============================================================================
+VALIDATION GATE: reproduce the three published benchmarks (must match)
+==============================================================================
+  consec8                                sup|wD|=0.7296 at w=68   expect~0.73  OK
+  odd-struct s11                         sup|wD|=2.5417 at w=90   expect~2.54  OK
+  multiscale {0,1,2,30,31,32,60,61}      sup|wD|=3.9088 at w=62   expect~3.91  OK
+  ENGINE VALIDATED: True
+
+==============================================================================
+P1  DEPTH LADDER (scale 30): sup|wD| vs number of coherent blocks
+    base block B={0,1,2}; nblocks copies at 0,30,60,...  (Riesz factors)
+==============================================================================
+  #blocks  set                                              sup|wD|   at w*   #cells  incr
+        1   [0, 1, 2]                                         0.0000    n/a       0    (DEGENERATE: base too thin to near-cover -> no N1 cells -> Delta=0)
+        2   [0, 1, 2, 30, 31, 32]                             1.4895    121      68  +1.489
+        3   [0, 1, 2, 30, 31, 32, 60, 61, 62]                 3.2943    248     278  +1.805
+        4   [0, 1, 2, 30, 31, 32, 60, 61, 62, 90, 91, 92]     4.6126    120     376  +1.318
+    (3-blk minus 62 = the published extremizer) [0, 1, 2, 30, 31, 32, 60, 61]  3.9088     62
+    LINEAR FIT (non-degenerate blocks [2, 3, 4]): sup|wD| ~= 1.562*(#blocks) + -1.553
+
+==============================================================================
+    same ladder at SCALE 50 (tests whether the per-block increment is scale-free)
+==============================================================================
+    1 blocks [0, 1, 2]                                sup|wD|= 0.0000 at w=  n/a  
+    2 blocks [0, 1, 2, 50, 51, 52]                    sup|wD|= 2.2312 at w=  201  +2.231
+    3 blocks [0, 1, 2, 50, 51, 52, 100, 101, 102]     sup|wD|= 5.1278 at w=  152  +2.897
+
+==============================================================================
+CONTROL: coherence vs cardinality.  Three families at MATCHED cardinality:
+   (a) coherent block tower (Riesz)   (b) consecutive single block
+   (c) GENUINE Sidon set (Mian-Chowla): minimal additive structure = decorrelated
+   NOTE: random-integers-in-a-small-box are NOT incoherent -- by pigeonhole they
+   are dense in differences (high additive energy), so they score HIGH.  A real
+   incoherence control must be Sidon (all pairwise sums distinct).
+==============================================================================
+  card | tower(blocks) sup|wD|  | consec sup|wD| | SIDON sup|wD|   (Sidon set)
+     6  |    1.4895          |    0.7327      |   0.3434   [0, 1, 3, 7, 12, 20]
+     9  |    3.2943          |    0.9342      |   3.6535   [0, 1, 3, 7, 12, 20, 30, 44, 65]
+    12  |    4.6126          |    0.7878      |   9.7378   [0, 1, 3, 7, 12, 20, 30, 44, 65, 80, 96, 122]
+  READING: the block tower is NOT uniquely worst. Both wide towers and wide
+  Sidon sets score high; the narrow consec block is the MINIMIZER. => the driver
+  is SPREAD / #distinct-scales, reached by coherent repetition OR by spreading.
+
+==============================================================================
+THE TRADE-OFF: why large sup|wD| is NOT a counterexample (Phi anti-correlates)
+   p0(E')=meas{all 7 sectors hit};  p1=meas{exactly one inner sector missed};
+   plateau Plat = p0 + p1/7 (frozen-phase limit).  cap_9 = 1979/4004 ~ 0.4943.
+==============================================================================
+  family(card9)   span   p0(E')    p1-meas   Plat=p0+p1/7   sup|wD|   regime
+  consec-9           8   0.4162    0.2221    0.4479        0.934   BINDING (near cap, small Delta)
+  tower-9(3blk)     62   0.2233    0.2656    0.2613        3.294   SLACK (small Plat, large Delta)
+  sidon-9           65   0.0366    0.3935    0.0928        3.654   SLACK (small Plat, large Delta)
+  => sup|wD| is LARGE exactly where Plat is SMALL. p0(full)=Plat+Delta stays < cap
+     in every regime. The discrepancy and the plateau are DUAL; neither alone is
+     a counterexample. This is the Phi-Delta trade-off (repo HYP-2779/kps-S23).
+
+==============================================================================
+P2  SCALE RESONANCE: does the argmax w* EXTEND the tower?
+    (attacker=defender: worst far element continues the self-similar block pattern)
+==============================================================================
+  2-block tower [0, 1, 2, 30, 31, 32]
+      |wD|=1.4895 at w= 121   (w mod 30 = 1)  <- w mod 30 = 1  (EXTENDS a block: 30*4+1)
+      |wD|=1.2005 at w=  60   (w mod 30 = 0)  <- w mod 30 = 0  (EXTENDS a block: 30*2+0)
+      |wD|=1.0675 at w= 192   (w mod 30 = 12)
+      |wD|=0.9954 at w= 114   (w mod 30 = 24)
+      |wD|=0.8176 at w=  91   (w mod 30 = 1)  <- w mod 30 = 1  (EXTENDS a block: 30*3+1)
+
+  3-block tower [0, 1, 2, 30, 31, 32, 60, 61, 62]
+      |wD|=3.2943 at w= 248   (w mod 30 = 8)
+      |wD|=3.2597 at w= 279   (w mod 30 = 9)
+      |wD|=2.5944 at w=  92   (w mod 30 = 2)  <- w mod 30 = 2  (EXTENDS a block: 30*3+2)
+      |wD|=2.5502 at w=  91   (w mod 30 = 1)  <- w mod 30 = 1  (EXTENDS a block: 30*3+1)
+      |wD|=2.5373 at w= 210   (w mod 30 = 0)  <- w mod 30 = 0  (EXTENDS a block: 30*7+0)
+
+  4-block tower [0, 1, 2, 30, 31, 32, 60, 61, 62, 90, 91, 92]
+      |wD|=4.6126 at w= 120   (w mod 30 = 0)  <- w mod 30 = 0  (EXTENDS a block: 30*4+0)
+      |wD|=4.5052 at w= 122   (w mod 30 = 2)  <- w mod 30 = 2  (EXTENDS a block: 30*4+2)
+      |wD|=4.2427 at w= 368   (w mod 30 = 8)
+      |wD|=3.9605 at w= 480   (w mod 30 = 0)  <- w mod 30 = 0  (EXTENDS a block: 30*16+0)
+      |wD|=3.7552 at w= 365   (w mod 30 = 5)
+
+==============================================================================
+P3  STRUCTURAL: exact 2-fold Riesz factorization of the clean tower
+    E = B (+) 30*B,  B={0,1,2};   \hat 1_E(xi) =?= \hat 1_B(xi) * \hat 1_B(30 xi)
+==============================================================================
+    max_xi | \hat 1_E(xi) - \hat 1_B(xi)\hat 1_B(30 xi) | over 49 probes = 5.53e-14
+    => E IS an exact 2-fold Riesz product (B dilated by 1 and by 30).
+       n-block tower = B (+) 30*{0..n-1}; deeper nesting B(+)30B(+)900B = 3-fold, etc.
+
+DONE.

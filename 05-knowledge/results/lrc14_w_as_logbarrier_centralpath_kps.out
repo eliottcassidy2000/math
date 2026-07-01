@@ -1,0 +1,42 @@
+==================================================================================
+CORE C = [0, 1, 2, 3, 4, 5, 6, 7]   (a bounded near-cover; the 'analytic center' is Plat(C))
+==================================================================================
+  Plat(C) = p0 + p1/7 = 0.362099 = 621/1715     [center, w=inf]
+  period-max sup_w|w*Delta_w| (barrier-residual constant) ~ 1.0583
+      w   p0(C+{w}) direct   Plat+wD/w (decomp)  match?  |resid|=|p0-Plat|   bound pm/w
+     15           0.340816             0.340816    True           0.021283     0.070554   resid<=bound OK
+     20           0.354422             0.354422    True           0.007677     0.052915   resid<=bound OK
+     30           0.363946             0.363946    True           0.001846     0.035277   resid<=bound OK
+     50           0.353401             0.353401    True           0.008698     0.021166   resid<=bound OK
+    100           0.361973             0.361973    True           0.000126     0.010583   resid<=bound OK
+    200           0.359592             0.359592    True           0.002507     0.005292   resid<=bound OK
+    400           0.363180             0.363180    True           0.001081     0.002646   resid<=bound OK
+    800           0.362134             0.362134    True           0.000035     0.001323   resid<=bound OK
+  => as 1/w -> 0, p0(C+{w}) -> Plat(C). The signed content is the O(1/w)
+     Dedekind residual (bounded, periodic), NOT a divergent absolute tail.
+
+==================================================================================
+CORE C = [0, 1, 2, 3, 5, 7, 9, 11]   (a bounded near-cover; the 'analytic center' is Plat(C))
+==================================================================================
+  Plat(C) = p0 + p1/7 = 0.136337 = 2572/18865     [center, w=inf]
+  period-max sup_w|w*Delta_w| (barrier-residual constant) ~ 1.9375
+      w   p0(C+{w}) direct   Plat+wD/w (decomp)  match?  |resid|=|p0-Plat|   bound pm/w
+     15           0.146691             0.146691    True           0.010354     0.129163   resid<=bound OK
+     20           0.174809             0.174809    True           0.038472     0.096873   resid<=bound OK
+     30           0.118924             0.118924    True           0.017413     0.064582   resid<=bound OK
+     50           0.136834             0.136834    True           0.000497     0.038749   resid<=bound OK
+    100           0.132000             0.132000    True           0.004338     0.019375   resid<=bound OK
+    200           0.137758             0.137758    True           0.001421     0.009687   resid<=bound OK
+    400           0.134645             0.134645    True           0.001692     0.004844   resid<=bound OK
+    800           0.135931             0.135931    True           0.000406     0.002422   resid<=bound OK
+  => as 1/w -> 0, p0(C+{w}) -> Plat(C). The signed content is the O(1/w)
+     Dedekind residual (bounded, periodic), NOT a divergent absolute tail.
+
+INTERPRETATION
+  1/w is a CENTRAL-PATH coordinate. w=inf = analytic center Plat(C).
+  Peeling far runners one at a time = following the central path inward.
+  A Beurling-Selberg minorant proves the CENTER (bounded core, finite) is positive;
+  the far runner is the barrier whose 1/w residual is a SIGNED but BOUNDED Dedekind
+  sum -- exactly the signed content that positivity-only methods miss, now isolated
+  to a finite periodic object instead of the divergent |T|>=3 absolute tail.
+DONE.

@@ -1,0 +1,52 @@
+================================================================================
+(A) PREDICTOR SHOOT-OUT: which order parameter tracks p0's ordering best?
+    family: all k=8 subsets E of {0..13} with 0 in E  (C(13,7)=1716 sets)
+    predictors: additive energy AE | spectral flatness SF | diff-set size |E-E| | width
+    metric: Kendall tau_b vs p0  (|tau|->1 = fewer inversions = cleaner monotone)
+================================================================================
+  #sets = 1716
+  tau(additive energy AE, p0) = +0.3929
+  tau(spectral flatness SF, p0) = -0.3408   (expect NEGATIVE: flat spectrum -> low cover)
+  tau(diff-set size |E-E|, p0) = -0.2398   (spread)
+  tau(width max(E), p0)        = -0.1842
+
+  p0-argmax set = (0, 1, 2, 3, 4, 5, 6, 7)  p0=0.3272  (is it consecutive (0, 1, 2, 3, 4, 5, 6, 7)?)
+  AE-argmax set = (0, 1, 2, 3, 4, 5, 6, 7)   SF-argmin set = (0, 1, 3, 4, 5, 6, 8, 9)
+
+  strict discordant pairs (out of 1471470):
+    AE (+): 405181 (27.5%)   SF (-): 484870 (33.0%)   |E-E| (+): 677169 (46.0%)
+  => BEST single predictor by |tau|: additive energy (|tau|=0.3929)
+
+================================================================================
+(B) DOES THE DFT OF THE EXTREMIZER PREDICT WHERE w*Delta_w PEAKS?
+    E' = {0,1,2,30,31,32,60,61}  (= clean tower B(+)30B minus the element 62)
+================================================================================
+  B1 defected-Riesz identity  max|\hat1_E' - (\hat1_B(xi)\hat1_B(30xi) - e(62xi))| = 5.53e-14
+     => the extremizer IS an exact 2-fold Riesz product MINUS one term (a 'defected' Riesz product).
+  B2 top side-peaks of |\hat 1_E'(xi)|^2  (xi = j/1800); nearest k/30 and k/60:
+       xi=0.0333  power= 62.3   |xi - 1/30|=0.0000   |xi - 2/60|=0.0000
+       xi=0.0672  power= 57.7   |xi - 2/30|=0.0006   |xi - 4/60|=0.0006
+       xi=0.1006  power= 50.5   |xi - 3/30|=0.0006   |xi - 6/60|=0.0006
+       xi=0.1344  power= 41.6   |xi - 4/30|=0.0011   |xi - 8/60|=0.0011
+       xi=0.1678  power= 32.0   |xi - 5/30|=0.0011   |xi - 10/60|=0.0011
+       xi=0.2017  power= 22.6   |xi - 6/30|=0.0017   |xi - 12/60|=0.0017
+  B3 top |w*Delta_w| peaks over w=1..630:  (w mod 7, w mod 30)
+       w= 480  |wD|=5.1956   (w mod 7 = 4, w mod 30 = 0)
+       w=  62  |wD|=3.9088   (w mod 7 = 6, w mod 30 = 2)
+       w= 248  |wD|=3.6977   (w mod 7 = 3, w mod 30 = 8)
+       w= 488  |wD|=3.2630   (w mod 7 = 5, w mod 30 = 8)
+       w= 510  |wD|=3.1764   (w mod 7 = 6, w mod 30 = 0)
+       w=  90  |wD|=3.0053   (w mod 7 = 6, w mod 30 = 0)
+       w= 240  |wD|=2.4923   (w mod 7 = 2, w mod 30 = 0)
+       w= 149  |wD|=2.4729   (w mod 7 = 2, w mod 30 = 29)
+  B3' dominant FREQUENCIES of the w->w*Delta_w sequence (period = 1/freq in units of w):
+       period ~   7.00 in w   (amp 71.5)   [7?True  30?False  15?False]
+       period ~   2.76 in w   (amp 61.7)   [7?False  30?False  15?False]
+       period ~   3.50 in w   (amp 52.6)   [7?False  30?False  15?False]
+       period ~   2.60 in w   (amp 51.3)   [7?False  30?False  15?False]
+       period ~   3.96 in w   (amp 50.1)   [7?False  30?False  15?False]
+       period ~   2.19 in w   (amp 49.0)   [7?False  30?False  15?False]
+       period ~   4.53 in w   (amp 45.1)   [7?False  30?False  15?False]
+       period ~   2.05 in w   (amp 44.0)   [7?False  30?False  15?False]
+
+DONE.

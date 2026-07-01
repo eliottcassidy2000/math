@@ -1,0 +1,68 @@
+====================================================================================
+Q2a  THE TWO FORMS AGREE: sawtooth (Rademacher) form == cotangent (log-barrier) form
+     s(h,k) = sum ((i/k))((hi/k))  ==  (1/4k) sum cot(pi i/k)cot(pi hi/k)
+====================================================================================
+   s( 1, 5) sawtooth=+0.200000=1/5   cotangent=+0.200000   diff=0.00e+00
+   s( 2, 7) sawtooth=+0.071429=1/14   cotangent=+0.071429   diff=4.16e-17
+   s( 3,11) sawtooth=+0.136364=3/22   cotangent=+0.136364   diff=2.22e-16
+   s( 5,13) sawtooth=+0.000000=0   cotangent=-0.000000   diff=4.64e-17
+   s( 8,21) sawtooth=+0.063492=4/63   cotangent=+0.063492   diff=3.47e-16
+   s(13,34) sawtooth=+0.000000=0   cotangent=+0.000000   diff=2.76e-15
+   => the L1/sawtooth (B_2, current sector Delta_w) and the cotangent (log-barrier)
+      are the SAME NUMBER: one signed object, two barriers.
+
+====================================================================================
+Q3  DEDEKIND RECIPROCITY -> EUCLIDEAN DESCENT -> uniform bound (the log-barrier payoff)
+     s(h,k)+s(k,h) = -1/4 + (1/12)(h/k + k/h + 1/(hk))
+====================================================================================
+   s(2,7)+s(7,2) = +0.071429   reciprocity RHS = +0.071429   diff=0.0e+00
+   s(5,13)+s(13,5) = +0.000000   reciprocity RHS = +0.000000   diff=0.0e+00
+   s(13,34)+s(34,13) = +0.000000   reciprocity RHS = +0.000000   diff=0.0e+00
+   s(89,233)+s(233,89) = +0.000000   reciprocity RHS = +0.000000   diff=0.0e+00
+   EUCLIDEAN DESCENT (reciprocity unfold) vs direct sum:
+   s(5,13): descent=+0.00000 in  4 steps (Euclid, O(log k)); direct=+0.00000 match=True
+   s(13,34): descent=+0.00000 in  6 steps (Euclid, O(log k)); direct=+0.00000 match=True
+   s(89,233): descent=+0.00000 in 10 steps (Euclid, O(log k)); direct=+0.00000 match=True
+   s(196,509): descent=+0.89391 in  7 steps (Euclid, O(log k)); direct=+0.89391 match=True
+   s(1,1000000): descent=+83333.08333 in  1 steps (Euclid, O(log k)); direct= (skip: k large)
+   => reciprocity computes s(h,k) in O(log k) steps and BOUNDS it by the continued-
+      fraction partial quotients of h/k -- a UNIFORM structural bound. The sector
+      period-max (THM-563) is a per-base O(lcm) max with NO such descent.
+
+====================================================================================
+Q1  SELF-CONCORDANCE  |F'''| <= 2 (F'')^{3/2}  : which barrier qualifies?
+====================================================================================
+   barrier F(x)            F''      F'''        |F'''|/(F'')^1.5   self-concordant?
+   -log(x)             @x=0.30  F''=   11.111  F'''=     -74.07     2.0000          YES (<=2)
+   -log(x)             @x=0.05  F''=  400.001  F'''=  -16000.19     2.0000          YES (<=2)
+   -log(sin(pi x))     @x=0.10  F''=  103.356  F'''=   -1998.67     1.9021          YES (<=2)
+   tent |x-1/2|        @x=0.30  F''=    0.000  F'''=       0.00        inf          NO (F''=0)
+   tent |x-1/2|        @x=0.49  F''=    0.000  F'''=       0.00        inf          NO (F''=0)
+   => -log is self-concordant (ratio->2, the canonical barrier). The TENT/sawtooth
+      has F''=0 a.e. (F''' singular at the kink) -> NOT self-concordant.
+
+====================================================================================
+Q2b  THE BRIDGE: the LOG barrier's gradient IS the cotangent (hence Dedekind)
+     d/dx [ -log(2 sin(pi x)) ] = -pi cot(pi x);  summing -cot over the orbit {h i/k}
+     reproduces the cotangent Dedekind sum = the SIGNED residual.
+====================================================================================
+   (1/4k) sum_i cot(pi i/7) cot(pi 2 i/7) = +0.071429 = s(2,7)  [log-barrier residual]
+   (1/4k) sum_i cot(pi i/13) cot(pi 5 i/13) = -0.000000 = s(5,13)  [log-barrier residual]
+   (1/4k) sum_i cot(pi i/21) cot(pi 8 i/21) = +0.063492 = s(8,21)  [log-barrier residual]
+   => The log barrier is self-concordant AND its far-runner residual is the classical
+      Dedekind sum -- the SIGNED shadow the conjecture needs, WITH reciprocity.
+
+====================================================================================
+SYNTHESIS
+====================================================================================
+ - 'Self-concordant barrier residual' is LITERAL only for the LOG barrier, not the
+   sector/tent functional (piecewise-linear, F''=0).
+ - Both barriers give the SAME signed number s(h,k): the sector Delta_w is its
+   Rademacher/B_2 (sawtooth, L1) form; the log barrier gives the COTANGENT form.
+ - The log barrier BUYS: (i) literal interior-point self-concordance (central path,
+   Newton), (ii) DEDEKIND RECIPROCITY = a Euclidean descent = a UNIFORM-in-w bound,
+   which the per-base period-max (THM-563) does not provide.
+ - Route refinement: recast the far-element residual via the LOG barrier to trade the
+   per-base finite period-max for ONE reciprocity/continued-fraction bound -- the
+   general-bounded-base closure THM-563 leaves 'in progress'.
+DONE.

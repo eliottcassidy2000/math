@@ -1,0 +1,42 @@
+==========================================================================================
+PART 1  period-max vs rms  (is period-max <= C*rms with C = O(1)?)
+  full enumeration of one period P=7*lcm(B); rms=sqrt(E[g^2]); ratio=period-max/rms
+==========================================================================================
+  base                          period P  period-max    at w       rms  max/rms
+  consec7 {0..6}                     420      1.0000     175    0.2840    3.521
+  consec8 {0..7}                    2940      1.0583     384    0.3037    3.485
+  consec9 {0..8}                    5880      1.2507     956    0.3315    3.773
+  consec10 {0..9}                  17640      1.3153   11991    0.3336    3.943
+  skip {0,1,2,3,5,7,9,11}          48510      2.3009   48456    0.5682    4.050
+  wide {0,1,2,7,8,9,13}            45864      1.5771    5931    0.3217    4.902
+  => max/rms across bases: min=3.48  max=4.90  ROUGHLY CONSTANT -> variance is a faithful proxy
+
+==========================================================================================
+PART 2  variance DECOUPLES pairwise (no full-period enumeration) -- correctness + cost
+==========================================================================================
+  consec7 {0..6}               P=    420 #endpoints= 46  E[g^2]=0.08065  match=True  maxPairLcm=210  t_full=0.12s t_pairwise=1.77s
+  consec8 {0..7}               P=   2940 #endpoints= 56  E[g^2]=0.09224  match=True  maxPairLcm=294  t_full=1.13s t_pairwise=5.10s
+  consec9 {0..8}               P=   5880 #endpoints= 58  E[g^2]=0.10990  match=True  maxPairLcm=392  t_full=2.39s t_pairwise=5.74s
+  consec10 {0..9}              P=  17640 #endpoints= 58  E[g^2]=0.11130  match=True  maxPairLcm=504  t_full=7.33s t_pairwise=7.50s
+  => pairwise E[g^2] matches full enumeration EXACTLY and only touches periods <= maxPairLcm << P.
+
+==========================================================================================
+PART 3  LARGE-lcm base: full period infeasible, pairwise variance still cheap
+==========================================================================================
+  base [0, 1, 2, 3, 4, 5, 6, 7, 9, 11, 13]
+  full period P = 7*lcm = 1,261,260  (full-max enumeration = 1,261,260 evals -> infeasible here)
+  pairwise variance: E[g^2]=0.16349  rms=0.4043  maxPairLcm=1001  #endpoints=84  computed in 33.48s
+  => period-max <= C*rms with empirical C~4.90 gives period-max <~ 1.982 WITHOUT enumerating 1,261,260 points.
+
+==========================================================================================
+VERDICT
+==========================================================================================
+ - Reciprocity computes SUMS, not the MAX: the period-MAX is a genuine extremum.
+ - BUT the VARIANCE (an L2 sum) DECOUPLES into pairwise tent-correlations, each a
+   Dedekind-Rademacher sum over a SMALL period (<= maxPairLcm), never the 7*lcm(B) full
+   period -- and each pairwise term is further reducible by Dedekind reciprocity (O(log)).
+ - IF period-max <= C*rms uniformly (Part 1 measures C), the fast variance BOUNDS the
+   period-max without enumeration. This is the honest form of the 'reciprocity' payoff:
+   an L2/variance surrogate, faithful iff C=O(1); the exact MAX still needs enumeration
+   or an Ostrowski/three-distance sup bound (the continued-fraction sup, same CF object).
+DONE.

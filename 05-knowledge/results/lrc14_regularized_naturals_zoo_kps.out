@@ -1,0 +1,71 @@
+========================================================================================
+C1  BERNOULLI TOWER & EVEN-VANISHING:  zeta(-k) = -B_{k+1}/(k+1)
+========================================================================================
+   k   zeta(-k) = 1^k+2^k+...(reg)     parity
+    0           -1/2                EVEN k -> -1/2 (=B_1, zeta(0))
+    1          -1/12                ODD  k -> Bernoulli != 0   <== -1/12 (the natural sum)
+    2              0                EVEN k -> ZERO
+    3          1/120                ODD  k -> Bernoulli != 0
+    4              0                EVEN k -> ZERO
+    5         -1/252                ODD  k -> Bernoulli != 0
+    6              0                EVEN k -> ZERO
+    7          1/240                ODD  k -> Bernoulli != 0
+    8              0                EVEN k -> ZERO
+    9         -1/132                ODD  k -> Bernoulli != 0
+   10              0                EVEN k -> ZERO
+   11      691/32760                ODD  k -> Bernoulli != 0
+   => zeta(NEG EVEN)=0 (the trivial zeros) == the project's EVEN-annihilation
+      (Burnside Fix(even cycle)=0, beta_2=0). zeta(NEG ODD)=Bernoulli == the ODD/OCF content.
+
+========================================================================================
+C2/C3  ALTERNATING (eta) vs PLAIN (zeta) REGULARIZED NATURAL SUMS
+========================================================================================
+   zeta(0)  = 1+1+1+...   = -1/2     (= B_1 = -1/2)
+   eta(0)   = 1-1+1-...   = 1/2      (Grandi's series)
+   zeta(-1) = 1+2+3+...   = -1/12    (-1/12, PLAIN)
+   eta(-1)  = 1-2+3-4+... = 1/4      (ALTERNATING)
+
+   Dedekind reciprocity  s(h,k)+s(k,h) = -1/4 + (1/12)(h/k+k/h+1/hk):
+     s(2,7)+s(7,2) =     1/14 = -1/4 + (1/12)(...)  [True]
+     s(3,7)+s(7,3) =    -1/63 = -1/4 + (1/12)(...)  [True]
+     s(5,13)+s(13,5) =        0 = -1/4 + (1/12)(...)  [True]
+     s(8,21)+s(21,8) =   1/1008 = -1/4 + (1/12)(...)  [True]
+   CONSTANTS:  -1/4 = -eta(-1) = -(1-2+3-4+...) ;  1/12 = -zeta(-1) = -(1+2+3+...).  verified=True
+   => the barrier residual (a Dedekind sum) is built from the ALTERNATING(signed) and
+      PLAIN(unsigned) regularized natural sums -- the signed/unsigned split, as constants.
+
+========================================================================================
+C4  CASIMIR ROAD TO WEIGHT 12:  -(1/2) zeta(-1) = 1/24
+========================================================================================
+   -(1/2) zeta(-1) = -(1/2)(-1/12) = 1/24 = 1/24  (the exponent in eta = q^(1/24) prod(1-q^n))
+   eta^24 = Delta = q prod(1-q^n)^24  is the weight-12 cusp form;  24 = 2*12 = the GW doubling.
+   => -1/12 -> Casimir 1/24 -> eta^24 (weight 12) is a REAL (string/modular) bridge from the
+      regularized natural sum to weight 12 -- upgrading the 'two twelves' coincidence.
+
+========================================================================================
+C5  REGULARIZED PRODUCT  prod n = exp(-zeta'(0)) = sqrt(2 pi)
+========================================================================================
+   zeta'(0) = -1/2 ln(2 pi) = -0.918939 ;  prod_{n>=1} n := exp(-zeta'(0)) = 2.506628 = sqrt(2 pi) = 2.506628
+   => the regularized product of ALL naturals is sqrt(2 pi) -- the Gamma/Stirling 'e, sqrt(2pi)'
+      of the triangle foundation, dual to the SUM -1/12.
+
+========================================================================================
+C6  THE APEX-7 TWISTED -1/12  (generalized Bernoulli over Q(sqrt-7))
+========================================================================================
+   chi_7 = Legendre mod 7:  QR{1,2,4}=+1, NQR{3,5,6}=-1 ;  chi_7(-1)=chi_7(6)=-1  (ODD char, since 7=3 mod 4)
+   B_{1,chi_7} = -1   (odd index, ODD char -> NONZERO: the class-number datum; L(0,chi_7) = -B_1,chi = 1)
+   B_{2,chi_7} = 0   (even index, ODD char -> ZERO: the TWISTED even-vanishing)
+   L(-1, chi_7) = -B_2,chi/2 = 0  (a trivial zero)
+   => The apex oddness (7 = 3 mod 4) that makes the Gauss sum IMAGINARY (i sqrt7) is the SAME
+      parity that ZEROES the even-index twisted Bernoulli B_{2,chi_7}. Even-vanishing, twisted.
+      The surviving apex constant is B_{1,chi_7} = -1 (odd index) -- the Q(sqrt-7) class number h=1.
+
+========================================================================================
+SYNTHESIS: -1/12 is one node of a REGULARIZED-NATURALS web
+========================================================================================
+ STRUCTURAL (verified): zeta(-even)=0 = even-annihilation; Dedekind constants = {plain -1/12,
+   alternating 1/4} regularized naturals; Casimir 1/24 -> eta^24 weight 12; prod n = sqrt(2pi);
+   twisted B_{2,chi_7}=0 = apex-7 even-vanishing (7=3 mod4 => chi odd).
+ The universal -1/12 (Bernoulli) governs the residual/floor for ALL n; the apex twist replaces
+ it by the chi_7-Bernoulli over Q(sqrt-7) -- where the signed obstruction becomes real.
+DONE.
