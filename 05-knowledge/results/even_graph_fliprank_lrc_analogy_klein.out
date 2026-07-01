@@ -1,0 +1,21 @@
+OBLIGATION 1: EVEN-GRAPH flip-rank rho_E / rainbow R_E vs TOURNAMENT rho_G/R_G (same cube Q_m, different S_n-quotient)
+  n  m |E_n| rho_E ceilE  R_E floorE   |G_n| rho_G  R_G
+  3  1     2     1     1    1      1       2     1    1
+  4  3     3     2     2    1      1       4     2    2
+  5  6     7     6     3    2      2      12     4    3
+  6 10    16     9     4    3      4      56     7    5
+  covering-excess rho-ceil(log2): compare even-graph vs tournament (is it self-dual under the bijection?)
+  DIAGNOSIS -- even-graph class orbit sizes in the fund-cycle cube (why even graphs resist subcubes):
+    n=5: 7 classes, orbit sizes in Q_6 = [1, 1, 10, 10, 12, 15, 15] (sum=64=2^6); tiny orbits (empty/near-empty even graph) pin the subcube
+    n=6: 16 classes, orbit sizes in Q_10 = [1, 6, 10, 15, 15, 20, 45, 60, 60, 60, 72, 90, 90, 120, 180, 180] (sum=1024=2^10); tiny orbits (empty/near-empty even graph) pin the subcube
+  => R_E < floor(log2|E_n|) at n=6 (3<4): the tournament law 'rainbow = floor' is NOT self-dual --
+     it was SPECIFIC to the tournament quotient (the balanced-cut shape); the SAME cube, quotiented by
+     the even-graph S_n-action, packs/covers WORSE. Assumption challenged: flip-rank depends on the QUOTIENT,
+     not the cube -- the tournament<->even-graph bijection is a cube-iso but NOT a flip-rank-iso.
+
+OBLIGATION 2: LRC analogue -- relation lattice = the 'even graph' of the speeds; #3-term relations = c3 analogue
+  n=7: #3-term relations (a+b=c):  AP {1..6} = 15;  construction {1..5,42} = 10
+  n=10: #3-term relations (a+b=c):  AP {1..9} = 36;  construction {1..8,90} = 28
+  n=14: #3-term relations (a+b=c):  AP {1..13} = 78;  construction {1..12,182} = 66
+  (analogy: transitive tournament c3=0 <-> a set with FEW/structured 3-term relations; the OCF N <-> the lonely measure L;
+   high additive energy <-> low lonely measure (THM-515). The relation lattice IS the LRC cycle space / even graph.)
