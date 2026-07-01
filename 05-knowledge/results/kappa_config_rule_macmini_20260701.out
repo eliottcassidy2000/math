@@ -1,0 +1,7 @@
+mac-mini-S81 -- explicit configuration rule for kappa(n):
+n=4 kappa=2: FREE(shape)=[(0,1),(2,3)] (perfect matching)
+   FIXED rule (1=i->j): (0,2):1, (0,3):0, (1,2):0, (1,3):0
+n=5 kappa=4: FREE(shape)=[(0,1),(0,2),(1,2),(3,4)] (triangle{0,1,2} + edge{3,4})
+   FIXED rule (1=i->j): (0,3):1,(0,4):1,(1,3):1,(1,4):0,(2,3):0,(2,4):0
+kappa(n)=1+C(n-2,2)=A000124(n-3) [lazy caterer]: 1,2,4,7,11,16 (n=3..8); EXACT n<=6.
+m-kappa=n-3 (naive Ham-path tiling redundancy). beta=MFAS covering radius R(n)=1,1,3,4 (n=3..6).

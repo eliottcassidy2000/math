@@ -1,0 +1,17 @@
+kappa(n) = 1 + C(n-2,2)  vs  info-floor ceil(log2 A000568)  vs  naive m=C(n-1,2):
+  n=3: kappa=  1  info-floor=1  naive m=  1  (m-kappa = n-3 = 0;  kappa=m(n-1)+1)
+  n=4: kappa=  2  info-floor=2  naive m=  3  (m-kappa = n-3 = 1;  kappa=m(n-1)+1)
+  n=5: kappa=  4  info-floor=4  naive m=  6  (m-kappa = n-3 = 2;  kappa=m(n-1)+1)
+  n=6: kappa=  7  info-floor=6  naive m= 10  (m-kappa = n-3 = 3;  kappa=m(n-1)+1)
+  n=7: kappa= 11  info-floor=9  naive m= 15  (m-kappa = n-3 = 4;  kappa=m(n-1)+1)
+  n=8: kappa= 16  info-floor=None  naive m= 21  (m-kappa = n-3 = 5;  kappa=m(n-1)+1)
+
+--- Part 1: optimal free-arc SHAPES (n=4,5), by free-graph iso-type ---
+  n=4 (kappa=2): optimal free-arc graph-types (degseq, #edges, #triangles) -> count:
+     ((1, 1, 1, 1), 2, 0)  x3   e.g. [(0, 1), (2, 3)]
+  n=5 (kappa=4): optimal free-arc graph-types (degseq, #edges, #triangles) -> count:
+     ((1, 1, 2, 2, 2), 4, 1)  x10   e.g. [(0, 1), (0, 2), (1, 2), (3, 4)]
+
+--- Part 2: n=7 test (predict kappa=11). Verify constructions by canon-ing the subcube only ---
+  Construction A (11 free arcs [(0, 1), (0, 2), (1, 2), (3, 4), (3, 5), (4, 5), (0, 3), (0, 6), (3, 6), (1, 6), (2, 6)]):
+     covers 225/456 classes with transitive fixing  (partial)

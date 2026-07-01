@@ -1,0 +1,31 @@
+ n   m  #iso  R=maxβ  R_ord  β-distribution (count by value)
+ 3   1     2       1      1   0:1 1:1
+ 4   3     4       1      1   0:1 1:3
+ 5   6    12       3      3   0:1 1:6 2:4 3:1
+ 6  10    56       4      4   0:1 1:10 2:22 3:19 4:4
+
+R(n) = covering radius (max min-flips over iso classes): [1, 1, 3, 4]
+R_order(n) = max MFAS:                                    [1, 1, 3, 4]
+m = C(n-1,2):                                             [1, 3, 6, 10]
+
+--- n=4: max-beta (least-compressible) iso classes (beta=1) ---
+   beta=1 beta_order(MFAS)=1 c3=2 scores=(1, 1, 2, 2) H(#hampaths)=5 |Aut|=1
+   beta=1 beta_order(MFAS)=1 c3=1 scores=(1, 1, 1, 3) H(#hampaths)=3 |Aut|=3
+   beta=1 beta_order(MFAS)=1 c3=1 scores=(0, 2, 2, 2) H(#hampaths)=3 |Aut|=3
+   beta=0 beta_order(MFAS)=0 c3=0 scores=(0, 1, 2, 3) H(#hampaths)=1 |Aut|=1
+
+--- n=5: max-beta (least-compressible) iso classes (beta=3) ---
+   beta=3 beta_order(MFAS)=3 c3=5 scores=(2, 2, 2, 2, 2) H(#hampaths)=15 |Aut|=5
+   beta=2 beta_order(MFAS)=2 c3=4 scores=(1, 2, 2, 2, 3) H(#hampaths)=15 |Aut|=3
+   beta=2 beta_order(MFAS)=2 c3=4 scores=(1, 2, 2, 2, 3) H(#hampaths)=13 |Aut|=1
+   beta=2 beta_order(MFAS)=2 c3=4 scores=(1, 2, 2, 2, 3) H(#hampaths)=11 |Aut|=1
+   beta=2 beta_order(MFAS)=2 c3=3 scores=(1, 1, 2, 3, 3) H(#hampaths)=9 |Aut|=1
+   beta=1 beta_order(MFAS)=1 c3=3 scores=(1, 1, 2, 3, 3) H(#hampaths)=9 |Aut|=1
+
+--- n=6: max-beta (least-compressible) iso classes (beta=4) ---
+   beta=4 beta_order(MFAS)=4 c3=8 scores=(2, 2, 2, 3, 3, 3) H(#hampaths)=45 |Aut|=3
+   beta=4 beta_order(MFAS)=4 c3=8 scores=(2, 2, 2, 3, 3, 3) H(#hampaths)=45 |Aut|=3
+   beta=4 beta_order(MFAS)=4 c3=8 scores=(2, 2, 2, 3, 3, 3) H(#hampaths)=43 |Aut|=1
+   beta=4 beta_order(MFAS)=4 c3=8 scores=(2, 2, 2, 3, 3, 3) H(#hampaths)=43 |Aut|=1
+   beta=3 beta_order(MFAS)=3 c3=8 scores=(2, 2, 2, 3, 3, 3) H(#hampaths)=41 |Aut|=1
+   beta=3 beta_order(MFAS)=3 c3=7 scores=(2, 2, 2, 2, 3, 4) H(#hampaths)=37 |Aut|=1
