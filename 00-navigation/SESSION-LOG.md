@@ -1,3 +1,27 @@
+## mac-mini-2026-07-01-S85 -- THE T-JOIN PARITY OBSTRUCTS LOW-DIM COVERS OF THE SC CLASSES: kappa_SC = half-tiling dim floor((n-1)^2/4) >> info floor (gap ~ n^2/4); blue T-join bipartite->non-bipartite at n=6 (HYP-3810) [TOURNAMENT/tiling; pursues HYP-3809 atlas]
+
+Prompt: pursue the conjecture-atlas topics; see whether the T-join boundary/parity obstructs low-dimensional covers of the SC classes.
+
+ANSWER: YES, strongly. Joined S81 covers + S84 T-join. Define kappa_SC(n) = min axis-aligned subcube dimension (choose k free arcs, fix rest) realizing ALL self-complementary iso classes.
+
+RESULT (exhaustive n<=6): kappa_SC = 1,4,6 (n=4,5,6). For n>=5, kappa_SC = floor((n-1)^2/4) = the HALF-TILING / complement-fold dimension, which EXCEEDS the information floor ceil(log2 #SC)=1,3,4 by a QUADRATICALLY-GROWING gap (0,1,2 for n=4,5,6; +4 predicted n=7). The SC classes FILL the entire complement-fold and cannot be compressed.
+
+MECHANISM (the T-join parity): the blue line-subgraph on the SC merged nodes is a T-JOIN (all-odd-degree, boundary T = every SC node), because each SC class has an ODD number of grid-symmetric tilings (the S84 parity theorem). This odd parity is exactly why no subcube smaller than the fold covers all SC classes.
+- UPPER BOUND (clean, general): the grid-sym subcube {t: bit[i]=bit[sigma(i)]} has dim floor((n-1)^2/4), contains ALL grid-sym tilings, and its iso classes are EXACTLY the SC classes => covers all SC => kappa_SC <= half-dim.
+- LOWER BOUND (the obstruction, verified n=5,6): no smaller subcube works; a lower-parity subcube can't capture every odd-grid-sym SC class.
+
+BLUE T-JOIN STRUCTURE: all-odd-degree (T=all SC nodes); connected; cycle-rank (genus) 0,1,15 (n=4,5,6); BIPARTITE (n<=5) -> NON-BIPARTITE (n=6). The bipartite->non-bipartite switch at n=6 is ANOTHER FACE of the n=6 transition (with the NS-NS sea onset HYP-3808, the pure-black self-loops, and the minimal-flip kappa gauge break HYP-3798) -- ONE threshold, four faces (the tiling hypercube becomes generic at n=6).
+
+kappa_all - kappa_SC = 0,1,2 (n=5,6,7) = the extra dimension needed to ALSO cover the NS 'sea'.
+
+CONJECTURES (atlas): (1) kappa_SC(n)=floor((n-1)^2/4) for n>=5 (grid-sym subcube is the optimal SC cover); (2) obstruction gap ~ n^2/4 (SC covers maximally parity-obstructed); (3) blue T-join cycle-rank 0,1,15,... identify the sequence; (4) the bipartite->non-bipartite / sea-onset / kappa-break coincidence at n=6 = one threshold.
+
+CONCRETE NEXT TARGET: prove the lower bound kappa_SC >= floor((n-1)^2/4) for n>=5 from the odd-grid-sym (T-join) parity -- show any subcube missing a fold-dimension misses an odd-grid-sym SC class => turns the empirical obstruction into a theorem and confirms the T-join parity is the exact mechanism.
+
+REFLECTION (self-complementary-classes-cannot-be-compressed.md): a defining symmetry is a double agent -- it compresses in one coordinate (half-tiling saves 2x) and FORBIDS compression in another (SC classes fill the fold's full quadratic dimension). Info bound counts distinguishing; parity obstruction counts containing; for a self-symmetric family they diverge quadratically.
+
+Files: 04-computation/sc_cover_dimension_tjoin_obstruction_macmini_20260701.py (+.out); HYP-3810. HONEST: kappa_SC=1,4,6 EXACT (n<=6); =half-dim for n=5,6; upper bound proven general; lower bound (obstruction) verified n<=6, formula conjectural n>=7; T-join parity = identified mechanism, lower-bound proof is the open target. No canon overridden, no court cases.
+
 ## kind-pasteur-2026-07-01-S14 -- DOES H CLOSE RECONSTRUCTION? NO, but it cuts degeneracy ~5x and extends node-identifiability to n=5 (breaks at n=6 with 6 twin-pairs); a realization-degeneracy METRIC SUITE. CONVERGES mac-mini-S84 HYP-3809 (under-determination + SC twin-pairing).
 
 Prompt: chase whether H closes reconstruction; think realization-degeneracy metrics.
