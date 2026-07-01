@@ -1,0 +1,84 @@
+Verifying the owner's structure on the merged metagraph, n=4,5,6:
+
+=== n=4: m=3, classes=4, merged nodes=3, lines=2^(m-1)=4 (blue=2, black=2) ===
+  PURE_BLUE: 1 nodes
+     node  0: tilings=  1 | blue_other=1 black_other=0 | blue_self=0 black_self=0
+  PURE_BLACK: 1 nodes
+     node  1: tilings=  2 | blue_other=0 black_other=2 | blue_self=0 black_self=0
+  MIXED: 1 nodes
+     node  2: tilings=  5 | blue_other=1 black_other=2 | blue_self=1 black_self=0
+  CLAIMS: pure-black black_other even=True; mixed black_other even=True, blue_other odd=True; pure-blue blue_other odd=True; self-loops only on mixed=True
+
+=== n=5: m=6, classes=12, merged nodes=10, lines=2^(m-1)=32 (blue=8, black=24) ===
+  PURE_BLUE: 3 nodes
+     node  0: tilings=  1 | blue_other=1 black_other=0 | blue_self=0 black_self=0
+     node  3: tilings=  1 | blue_other=1 black_other=0 | blue_self=0 black_self=0
+     node 11: tilings=  3 | blue_other=3 black_other=0 | blue_self=0 black_self=0
+  PURE_BLACK: 2 nodes
+     node  1: tilings=  2 | blue_other=0 black_other=2 | blue_self=0 black_self=0
+     node  2: tilings= 10 | blue_other=0 black_other=10 | blue_self=0 black_self=0
+  MIXED: 5 nodes
+     node  4: tilings=  9 | blue_other=1 black_other=8 | blue_self=0 black_self=0
+     node  6: tilings=  9 | blue_other=3 black_other=6 | blue_self=0 black_self=0
+     node  8: tilings= 11 | blue_other=3 black_other=4 | blue_self=0 black_self=2
+     node  9: tilings=  5 | blue_other=1 black_other=4 | blue_self=0 black_self=0
+     node 10: tilings= 13 | blue_other=3 black_other=6 | blue_self=0 black_self=2
+  CLAIMS: pure-black black_other even=True; mixed black_other even=True, blue_other odd=True; pure-blue blue_other odd=True; self-loops only on mixed=True
+
+=== n=6: m=10, classes=56, merged nodes=34, lines=2^(m-1)=512 (blue=32, black=480) ===
+  PURE_BLUE: 2 nodes
+     node  0: tilings=  1 | blue_other=1 black_other=0 | blue_self=0 black_self=0
+     node 23: tilings=  1 | blue_other=1 black_other=0 | blue_self=0 black_self=0
+  PURE_BLACK: 22 nodes
+     node  1: tilings=  2 | blue_other=0 black_other=2 | blue_self=0 black_self=0
+     node  2: tilings= 10 | blue_other=0 black_other=10 | blue_self=0 black_self=0
+     node  3: tilings=  2 | blue_other=0 black_other=2 | blue_self=0 black_self=0
+     node  4: tilings= 18 | blue_other=0 black_other=18 | blue_self=0 black_self=0
+     node  6: tilings= 18 | blue_other=0 black_other=18 | blue_self=0 black_self=0
+     node  8: tilings= 22 | blue_other=0 black_other=22 | blue_self=0 black_self=0
+     node  9: tilings= 10 | blue_other=0 black_other=10 | blue_self=0 black_self=0
+     node 10: tilings= 26 | blue_other=0 black_other=26 | blue_self=0 black_self=0
+     node 11: tilings=  6 | blue_other=0 black_other=6 | blue_self=0 black_self=0
+     node 14: tilings= 30 | blue_other=0 black_other=26 | blue_self=0 black_self=2
+     node 16: tilings= 38 | blue_other=0 black_other=34 | blue_self=0 black_self=2
+     node 20: tilings= 18 | blue_other=0 black_other=18 | blue_self=0 black_self=0
+     node 21: tilings= 46 | blue_other=0 black_other=42 | blue_self=0 black_self=2
+     node 24: tilings= 46 | blue_other=0 black_other=46 | blue_self=0 black_self=0
+     node 28: tilings= 22 | blue_other=0 black_other=22 | blue_self=0 black_self=0
+     node 29: tilings= 50 | blue_other=0 black_other=42 | blue_self=0 black_self=4
+     node 32: tilings= 62 | blue_other=0 black_other=58 | blue_self=0 black_self=2
+     node 35: tilings= 58 | blue_other=0 black_other=54 | blue_self=0 black_self=2
+     node 38: tilings= 74 | blue_other=0 black_other=74 | blue_self=0 black_self=0
+     node 42: tilings= 74 | blue_other=0 black_other=66 | blue_self=0 black_self=4
+     node 45: tilings= 66 | blue_other=0 black_other=66 | blue_self=0 black_self=0
+     node 51: tilings= 86 | blue_other=0 black_other=74 | blue_self=0 black_self=6
+  MIXED: 10 nodes
+     node  5: tilings=  5 | blue_other=3 black_other=2 | blue_self=0 black_self=0
+     node 12: tilings= 17 | blue_other=5 black_other=12 | blue_self=0 black_self=0
+     node 22: tilings= 17 | blue_other=5 black_other=12 | blue_self=0 black_self=0
+     node 30: tilings= 37 | blue_other=7 black_other=30 | blue_self=0 black_self=0
+     node 31: tilings= 33 | blue_other=7 black_other=26 | blue_self=0 black_self=0
+     node 43: tilings= 29 | blue_other=7 black_other=22 | blue_self=0 black_self=0
+     node 44: tilings= 29 | blue_other=7 black_other=22 | blue_self=0 black_self=0
+     node 46: tilings= 41 | blue_other=7 black_other=32 | blue_self=1 black_self=0
+     node 54: tilings= 15 | blue_other=7 black_other=6 | blue_self=1 black_self=0
+     node 55: tilings= 15 | blue_other=3 black_other=12 | blue_self=0 black_self=0
+  CLAIMS: pure-black black_other even=True; mixed black_other even=True, blue_other odd=True; pure-blue blue_other odd=True; self-loops only on mixed=False
+
+
+--- category-pair line breakdown (which categories connect) ---
+n=5 BLUE: MIXED-PURE_BLUE=5, MIXED-MIXED=3 (NO pure_blue-pure_blue)
+n=5 BLACK: MIXED-PURE_BLACK=12, MIXED-MIXED=8 (NO pure_black-pure_black sea!); black self-loops MIXED=4
+n=6 BLUE: MIXED-PURE_BLUE=2, MIXED-MIXED=28 (NO pure_blue-pure_blue)
+n=6 BLACK: MIXED-PURE_BLACK=156, PURE_BLACK-PURE_BLACK=290 (SEA!), MIXED-MIXED=10; black self-loops PURE_BLACK=24
+=> PURE_BLUE is ALWAYS pendant to MIXED (never blue-blue). PURE_BLACK: only rib-to-MIXED at n<=5;
+   NS-NS sea + pure-black self-loops turn ON at n=6 (owner's layered model + self-loop-only-mixed conj = n<=5 only).
+
+--- closed forms (verified n=4..8) ---
+total lines=2^(m-1), m=C(n-1,2): 4,32,512,16384,1048576 (ratio 2^(n-2))
+#grid-sym tilings=2^((m+floor((n-1)/2))/2): 4,16,64,512,4096; blue lines=half: 2,8,32,256,2048
+black lines: 2,24,480,16128,1046528; blue fraction -> 0 (grid-sym exponentially rare)
+PARITY THEOREM: SC merged node <=> ODD tiling count; NS merged node <=> EVEN.
+ (NS-merged={A,A^op} => count=2|A| even; SC=single class, ODD # grid-sym tilings.)
+BLACK subgraph = EVEN-degree (Eulerian) graph on {NS,mixed}; BLUE subgraph = all-ODD-degree on SC nodes.
+ => #SC nodes EVEN (blue handshake). tiling_count = blue_other(odd@SC) + black_other(even) + 2*self.
