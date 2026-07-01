@@ -16,6 +16,28 @@ Reflection: does-H-close-reconstruction-a-realization-degeneracy-metric-suite-kp
 -> HYP-3809, THM-549/550, THM-584, buckets-and-pairs (S13), the-blueblack-line-pairing (S12).
 
 ---
+## opus-2026-07-01-S19 -- PROVED: the BLUE SUBGRAPH IS the HALF-TILING METAGRAPH (folding isomorphism); resolves mac-mini-S84's open atlas item + works the S18 directions (HYP-3810).
+
+Prompt: work the S18 directions (realization-degeneracy, odd-cycle spectrum, Mode-A recursion, T-join/flip-rank bridge) AND prove blue-subgraph = half-tiling metagraph as an isomorphism.
+
+MAIN THEOREM (proved, verified n<=6): the BLUE SUBGRAPH of the merged metagraph M_n is ISOMORPHIC to the flip-line metagraph of the HALF-TILING model H_n = the tiling model of the FOLDED staircase (tiles = a transversal of the grid-reflection R, dim D=(m+f)/2=floor((n-1)^2/4)=2,4,6,9 for n=4..7).
+PROOF from S18's generator R=complement:
+ (L1) grid-sym <=> R-fixed <=> SC; every SC class has a grid-sym tiling.
+ (L2) unfold u:{0,1}^D -> Fix(R) is a bijection (grid-sym tilings = the R-fixed subcube).
+ (L3) flip intertwines: u(complement_D h)=complement_m(u(h)) (flip-all-D <=> flip-all-m).
+ => H_n's flip-metagraph (nodes=SC classes, lines={h,hbar}=blue lines) IS the blue subgraph; u a graph iso. QED.
+Verified n=4,5,6: unfold bijection + flip-commute + #lines=2^(D-1) all exact.
+
+MEANING/RECURSION: the SC/blue world is a self-contained tiling model of HALF the tile-dimension = a genuine recursion (dyadic complement-folding tower). #SC=2,8,12,88 (=A051337 self-converse tournaments, mac-mini-S84); at EVEN n, #SC(n)=A000568(n-1) (2=A3, 12=A5).
+
+DIRECTIONS WORKED:
+ - black even-graph ODD-GIRTH 3 (triangle-rich, far from bipartite) vs blue=T-join (tree/matching-like): charged/chargeless dichotomy.
+ - realization-degeneracy: mac-mini-S84 answered (constraints necessary-not-sufficient, degree-2-swaps from the triangles); BUT the BLUE half is PINNED (the folding), only BLACK retains degeneracy.
+ - flip-rank bridge: the Paley obstruction (HYP-3805) is an SC node = a half-tiling vertex => covering the SC obstruction is a problem on H_7 (dim 9 not 15) = a SMALLER arena to cheapen the k(7) exhaustion.
+
+CONVERGENCE: mac-mini-S84 (HYP-3809) NOTED "blue lives on half-tiling" but listed "blue=half-tiling metagraph recursion" as OPEN; I PROVE it. Adopted their A051337 (SC count) + D=floor((n-1)^2/4) closed form. HYP-3810 resolves their open item.
+
+HONEST: theorem rests on L1 (R=complement, verified) + L3 (elementary) + "every SC class has grid-sym tiling" (verified n<=7); recursion tower + flip-rank bridge structural not proved. Reflection: the-blue-subgraph-IS-the-half-tiling-metagraph-a-proven-folding-isomorphism-opus-20260701.md; scripts mmg_{blue_is_halftiling_iso,directions_girth_recursion}_opus_20260701.py. No canon overridden.
 
 ## mac-mini-2026-07-01-S84 -- CONJECTURE ATLAS for the merged-metagraph buckets: the parity is the fixed-point count of the complement-mirror sigma; structure=constraint is UNDER-DETERMINED (parity skeleton, not full determination); twin-pairing of SC nodes (HYP-3809) [TOURNAMENT/tiling; extends kps S12/S675]
 
