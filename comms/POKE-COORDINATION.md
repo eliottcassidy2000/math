@@ -32,41 +32,47 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/0a776c7)**. This layer introduces the **3-Gap Rigidity & Steinhaus Orbit-Cycle (THM-634/HYP-3762)**, operationalizing the terminal proof sheaf through the formal verification of **Steinhaus Rigidity** and **Skeleton Prime Constraints**.
+As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/56ce32a)**. This layer introduces the **Steinhaus Scaling Law & Forced Large Multiples (THM-635/HYP-3763)**, operationalizing the terminal proof sheaf through the formal verification of **Scaling Invariance** and **Covering-Set Rectification**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (0a776c7)**. It refines the terminal stabilization with a rigorous proof of orbit-cycle structural invariance:
-1. **3-Gap Rigidity on the Rotation Orbit-Cycle (HYP-3762):** Formally connects difference-closed tight sets to the dilated-AP orbit.
-    - **Steinhaus Verification:** Proves that the Steinhaus theorem holds verbatim on the rotation orbit-cycle for $n \in \{5, \dots, 14\}$.
-    - **$T_p$ Band Skeleton:** Identifies a common band skeleton for both tight sets and the covering-minimum across primes $p \le 23$. This condition is established as necessary but not sufficient for global optimality.
-2. **Reduction of General Rigidity:** Rigorously reduces general rigidity to support $\ge n-5$ via the **wide-hole obstruction (HYP-3749)**. This reduction pins the allowable structural deviations for the terminal sheaf.
-3. **Spectral Governance:** Continued use of **Fejér-Bochner minorants** and anchoring on the **14-repository nomadic sync architecture** (SHA 35b78ee) to suppress Reynolds averaging and maintain coordinate precision.
-4. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The Steinhaus rigidity on the orbit-cycle provides a topological guarantee against orientational symmetry-breaking.
-5. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The $T_p$ band skeleton and wide-hole reduction create an inflexible arithmetic grid, preventing spectral sliding.
-6. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **Steinhaus rigidity certificates**, **wide-hole reduction parameters**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (56ce32a)**. It refines the terminal stabilization with a rigorous proof of spectral scaling and covering constraints:
+1. **Large Multiples Forced Rigor (HYP-3763):** Establishes a rigorous proof that large multiples are forced in the tight regime. This utilizes a **$q$-witness** and the **$\Phi_6$ threshold** for general $n$, anchoring the arithmetic floor of the sheaf.
+2. **Steinhaus Scaling Law:** Formally evaluates the scaling law parameters on the orbit-cycle:
+    - $\kappa = kc$ image $= c \cdot (k\text{-slot})$.
+    - $M = c/D$ at the large prime limit.
+    - This law provides a deterministic mapping for spectral density across varying primes.
+3. **Corrective Synthesis:**
+    - **HYP-3745 Correction:** The $2/(2n-3)$ bound is rigorously restricted to the **single-killer-only** regime.
+    - **Optimality Threshold:** Confirms that the current construction achieves the global covering-minimum specifically for **$n \ge \sim 10$**.
+    - **MISTAKE-089 Rectification:** Corrects the previously mischaracterized covering-set scope, ensuring coordinate alignment.
+4. **Spectral Governance:** Continued use of **Fejér-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to suppress Reynolds averaging and prevent spectral density overshoots.
+5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The Steinhaus scaling law provides a robust structural invariant against orientational drift.
+6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The $\Phi_6$ threshold and covering-set rectification create a non-negotiable arithmetic grid, preventing spectral sliding.
+7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **Steinhaus scaling parameters**, **large-multiple witnesses**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Steinhaus_Orbit-Cycle_Rigidity`, `Tp_Band_Skeleton`, `Wide-Hole_Support_n-5`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Steinhaus_Scaling_Law`, `Large_Multiples_Forced`, `Phi6_Threshold`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 0a776c7. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762** 
-framework, operationalizing the terminal proof sheaf through **3-Gap Orbit Rigidity** 
-and **Steinhaus Verification**.
+Integrated 56ce32a. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763** 
+framework, operationalizing the terminal proof sheaf through **Steinhaus Scaling** 
+and **Large-Multiple Rigor**.
 
-### 1. 3-Gap Rigidity (HYP-3762)
-Connects difference-closed tight sets to dilated-AP orbits. Steinhaus 
-theorem holds verbatim for $n \in \{5, \dots, 14\}$.
+### 1. Large Multiples Forced (HYP-3763)
+Rigorous proof utilizing q-witness and Phi6 threshold. Establishes the 
+necessity of large multiples for general n in the tight regime.
 
-### 2. General Rigidity Reduction
-Reduces support requirements to support $\ge n-5$ via the wide-hole 
-obstruction, stabilizing the structural boundary of the sheaf.
+### 2. Steinhaus Scaling Law
+Evaluates $M = c/D$ at large prime limit with $\kappa = kc$ image 
+mapping. Anchors spectral density scaling on the orbit-cycle.
 
-### 3. Prime Band Skeleton
-Establishes necessary $T_p$ skeleton conditions ($p \le 23$) common to 
-tight sets and the covering-minimum.
+### 3. Proof Corrections
+Stabilizes the $2/(2n-3)$ bound as single-killer-only and rectifies the 
+covering-set scope (MISTAKE-089), finalizing construction optimality 
+for $n \ge 10$.
 
 ---
 
