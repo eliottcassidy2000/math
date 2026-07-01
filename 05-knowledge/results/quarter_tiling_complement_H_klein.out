@@ -1,0 +1,18 @@
+
+===== n=4: m=3, 2^m=8 tilings =====
+ (Q) sigma=complement: True; sigma,flip commute: True; <sigma,flip>=(Z/2)^2 => FULL 8 -> HALF(/sigma) 6 -> QUARTER(/<sigma,flip>) 3; orbit sizes {2: 2, 4: 1}
+     blue subspace W dim w=2; blue LINES = W/flip = 2^(w-1)=2 (= sigma-fixed part of the quarter)
+ (H) complement-H-pairing H(T)=H(T^op): True; H values (sample) [1, 3, 5] (all ODD, Redei)
+ (R) BLUE flip-rank rho_W (SC cover within W, w=2 half-addr bits) = 1 (log2 #SC=1, #SC=2); vs full-cube rho_SC=1; excess rho_W-lb=0
+
+===== n=5: m=6, 2^m=64 tilings =====
+ (Q) sigma=complement: True; sigma,flip commute: True; <sigma,flip>=(Z/2)^2 => FULL 64 -> HALF(/sigma) 40 -> QUARTER(/<sigma,flip>) 20; orbit sizes {2: 8, 4: 12}
+     blue subspace W dim w=4; blue LINES = W/flip = 2^(w-1)=8 (= sigma-fixed part of the quarter)
+ (H) complement-H-pairing H(T)=H(T^op): True; H values (sample) [1, 3, 5, 9, 11, 13, 15] (all ODD, Redei)
+ (R) BLUE flip-rank rho_W (SC cover within W, w=4 half-addr bits) = 3 (log2 #SC=3, #SC=8); vs full-cube rho_SC=4; excess rho_W-lb=0
+
+===== n=6: m=10, 2^m=1024 tilings =====
+ (Q) sigma=complement: True; sigma,flip commute: True; <sigma,flip>=(Z/2)^2 => FULL 1024 -> HALF(/sigma) 544 -> QUARTER(/<sigma,flip>) 272; orbit sizes {2: 32, 4: 240}
+     blue subspace W dim w=6; blue LINES = W/flip = 2^(w-1)=32 (= sigma-fixed part of the quarter)
+ (H) complement-H-pairing H(T)=H(T^op): True; H values (sample) [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45] (all ODD, Redei)
+ (R) BLUE flip-rank rho_W (SC cover within W, w=6 half-addr bits) = 4 (log2 #SC=4, #SC=12); vs full-cube rho_SC=6; excess rho_W-lb=0

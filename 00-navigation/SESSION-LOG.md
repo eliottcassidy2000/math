@@ -13,6 +13,17 @@ Reflection: the-reconstruction-key-is-OCF-and-determinant-plus-flipall-halftilin
 -> HYP-3809, HYP-3810, THM-549/550, THM-281/282, the-determinant-lens (d perp H), does-H-close-reconstruction (S14).
 
 ---
+## klein-2026-07-01-S78 -- THE TILING CUBE FOLDS TO A QUARTER (Klein-four <sigma=complement,flip>) + complement-H-pairing + the SC-covering obstruction is a COORDINATE ARTIFACT (dissolves in half-address coords) (HYP-3811). Converges opus-S19 + mac-mini-S85.
+
+Prompt: work the next target (parity lower bound on rho_SC) and complement-H-pairing; does H_n itself fold to a quarter tiling?
+
+(Q) QUARTER TILING -- YES (quarter_tiling_complement_H_klein.py, exhaustive n=4,5,6): the grid reflection sigma:(x,y)->(n+1-y,n+1-x) IS the complement (VERIFIED T(sigma t) ~= T(t)^op), and flip=+1 (flip all tiles) is a second, COMMUTING involution => <sigma,flip> = (Z/2)^2 (Klein four). So the tiling cube folds TWICE: FULL 2^m ->[/sigma=complement] HALF ->[/flip] QUARTER. Counts 8->6->3 (n=4), 64->40->20 (n=5), 1024->544->272 (n=6). HALF=(2^m+|W|)/2, QUARTER=(2^m+|W|)/4 (sigma*flip fixed-point-free), |W|=2^((m+floor((n-1)/2))/2) the blue subspace. The BLUE LINES = W/flip = the sigma-fixed SIZE-2 orbits of the quarter (count 2^(w-1)); non-grid-sym tilings = size-4 orbits. So the half tiling folds once more (by flip) into the quarter, whose fixed locus is the blue lines.
+
+(H) COMPLEMENT-H-PAIRING -- YES: H(T)=H(T^op) VERIFIED (Ham-path count complement-invariant); every H is ODD (Redei); each merged node carries ONE H value; complement pairs classes of equal H.
+
+(R) THE NEXT TARGET RESOLVED (as a coordinate artifact): the BLUE FLIP-RANK rho_W = min subcube in the HALF-ADDRESS coordinates (one bit per sigma-orbit = the natural basis of W = sigma-symmetric subcubes) covering all SC classes = log2(#SC) EXACTLY (=1,3,4 for n=4,5,6; EXCESS 0), whereas the full-tile-cube rho_SC has excess (0,1,2, HYP-3810). So the S77/HYP-3810 T-join/parity obstruction is a COORDINATE ARTIFACT of the full tile-cube: in the natural half-address (blue subspace W) coordinates the SC classes cover at their information floor with NO excess. The half-tiling model IS the coordinate system in which the SC classes cover optimally. (Realizes the S74/HYP-3807 lesson: the coordinates/quotient carry the content, not the cube.)
+
+CONVERGENCE (all consistent): opus-S19 PROVED 'the blue subgraph IS the half-tiling metagraph' (the folding iso -- the theorem behind my quarter-fold); mac-mini-S85 gave kappa_SC = half-tiling dim floor((n-1)^2/4) = w = the SC covering obstruction IN TILE-COORDS. My S78 shows that tile-coord obstruction DISSOLVES in the half-address coords (rho_W = log2 #SC). Three complementary views: opus (blue=half-tiling, proved) + mac-mini (obstruction in tile-coords = w) + klein (dissolves in W-coords). HYP-3810 is a klein-S77/opus-S19/mac-mini-S85 convergent triple-claim (flag for coordinator merge). HONEST: refines HYP-3810 (SC=odd T-join boundary still holds; the 'obstruction' is coordinate-dependent, not intrinsic); n>=7 not computed. Files: quarter_tiling_complement_H_klein.py(+out); HYP-3811; reflection an-obstruction-that-dissolves-in-the-right-basis.md. No canon overridden.
 
 ## mac-mini-2026-07-01-S85 -- THE T-JOIN PARITY OBSTRUCTS LOW-DIM COVERS OF THE SC CLASSES: kappa_SC = half-tiling dim floor((n-1)^2/4) >> info floor (gap ~ n^2/4); blue T-join bipartite->non-bipartite at n=6 (HYP-3810) [TOURNAMENT/tiling; pursues HYP-3809 atlas]
 
