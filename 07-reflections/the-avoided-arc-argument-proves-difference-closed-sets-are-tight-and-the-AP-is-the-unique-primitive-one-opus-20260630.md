@@ -55,6 +55,31 @@ whose tightness rests on such patchwork coverings, are the hard case.
   fails at `t` where `‖12t‖<1/14`; those `t` are a thin set — checking that GW's `{13,24}` covers them is a
   finite verification, a possible route to GW's tightness proof.
 
+## Connection to the repo's tight census (doubling operad + Jacobsthal) — confirmed & unified
+The repo already has a deep empirical picture (`anatomy-of-a-tight-runner-set`, `lrc-n14-tight-census-enum-s608`,
+`lrc-n14-tight-family-…-s553`, HYP-2055/2917/2919, THM-631). **My independent enumeration (direct `M`-computation)
+reproduces their single-swap census exactly:**
+| n | 5 | 6 | 7 | 8 | 9–13 | 14 |
+|---|---|---|---|---|---|---|
+| non-AP single-swap tight `(k→g)` | `2→7` | `2→9` | — | `6→12` | — | `12→24` |
+| type | `g=k+n` | (other) | none | **`g=2k`** | none | **`g=2k`** |
+So the two halves of the tight locus are:
+- **AP component (RIGOROUS, mine):** difference-closed = dilated APs, proved tight by the avoided-arc-edge
+  argument. Elementary.
+- **Sporadic component (repo, conjectural):** the **doubling operad** `k ↦ 2k` (`n=8: 6→12`, `n=14: 12→24 =
+  2(n−2)`), gated by the **Jacobsthal function** (the swap survives iff `v`'s coprime-window is clear —
+  THM-631: at n=14 the gate opens exactly once, at `v=12`). Plus rarer non-doubling sporadics (`n=5,6`) and
+  multi-swap ones (`n=8`'s `{1,4,5,6,7,11,13}`).
+
+**The avoided-arc lens unifies them:** a single-swap `k→g` set fails difference-closure exactly at the
+**removed element `k`** — when the min-gap difference is `k`, no runner `k` catches the danger arc. Tightness
+survives iff the absent-`k` regime `‖kt‖<1/n` is covered by the added `g`. For a **doubling `g=2k`**, `2k`
+catches `‖kt‖<1/(2n)` (via `‖2kt‖<1/n`); the residual `‖kt‖∈[1/(2n),1/n)` is covered by shifted runners —
+**and whether that residual coverage closes is exactly the Jacobsthal gate.** So the doubling operad is the
+`g=2k` instance of "the removed-`k` regime must be re-covered," and the Jacobsthal condition is the
+avoided-arc coverage condition made precise. The rare non-doubling sporadics (`n=5,6`) are other `g` that
+happen to cover the regime (`n=5: g=7≡2 mod 5` lifts `2`).
+
 ## Status
 - **PROVED (opus, elementary):** difference-closed `⇒ M(S) ≤ 1/n`; the unique primitive difference-closed
   `(n−1)`-set is the AP; hence dilated APs are the difference-closed family, all tight. Verified n=5..8
