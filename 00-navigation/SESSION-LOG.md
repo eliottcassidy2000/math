@@ -1,3 +1,23 @@
+## mac-mini-2026-07-01-S90 (cont.) -- THE FLIP-RANK EXCESS = #{SC classes with |Aut|>n} (verified n=4..7 = 0,0,1,3); + the iota-odd certificate field Q(sqrt-3,sqrt-7) with sqrt21=3*7=forbidden H (HYP-3819)
+
+Prompt: compute predicted excess(8); attempt to prove excess >= #{SC & |Aut|>n} (each forcing a covering dimension); rigorize SC-among-super-symmetric via T-join parity x rarity; compute the next step in the iota-odd certificate in Q(sqrt-3,sqrt-7) + exhibit sqrt21; consider 3 links.
+
+MAIN RESULT (exact n=4..7): excess(n) = #{SC classes with |Aut|>n} = 0,0,1,3 -- matches opus/klein flip-rank excess EXACTLY.
+ |Aut| dists: n=6 {1:41,3:12,5:2,9:1}; n=7 {1:399,3:47,5:4,7:1,9:4,21:1}.
+ THE SC CONDITION IS ESSENTIAL: at n=7 only 3 of the 5 super-symmetric (|Aut|>7) classes are SC, and excess=3 (Paley P_7 |Aut|=21 SC + two |Aut|=9 SC; the two NON-SC super-symmetric don't force excess).
+
+RIGORIZATION (proof sketch): rarity x complement-pairing. A super-symmetric class (|Aut|>n) is a NEEDLE (<(n-1)! labeled reps, hard to catch in a thin covering subcube => +1 dim). Complementation T->T^op = the ANTIPODAL map on Q_m (THM-584); a NON-SC needle has a distinct partner C^op at the antipode => a complement-symmetric covering catches the pair {C,C^op} with ONE dimension (they share). An SC needle is complement-FIXED (no partner) => forces its OWN dimension. Hence excess >= #{SC & |Aut|>n}, tight n<=7. = the covering face of the S85 T-join obstruction (SC = fold-fixed rigid spine). NOT rigorous (tightness + |Aut|>n threshold need the packing made precise).
+
+CONFIRMED BY opus (HYP-3798/3805): the n=7 flip-rank obstruction IS the Paley heptagon (argmax|Aut|=21, SC, = the LRC atoms HYP-3802) -- exactly my SC-super-symmetric class. CORRECTION: my S81 kappa(7)=1+C(5,2)=11 is WRONG; opus/klein kappa(7)=12 (lazy-caterer BREAKS at n=7); excess(7)=12-9=3. Appended the correction to HYP-3798.
+
+excess(8) = #{SC & |Aut|>8} -- OPEN. The order-7 Paley-extended family at n=8 is NON-SC (2 classes |Aut|=21, both SC=False) => 0 contribution; the SC super-symmetric classes at n=8 come from order-3/5 auto structures (full n=8 enumeration deferred -- 2^21 tilings x 8! canon).
+
+THE iota-ODD CERTIFICATE FIELD: Q(sqrt-3, sqrt-7) is BIQUADRATIC, Gal = Z2xZ2 = the S88 involution-atlas Klein four. Its 3 quadratic subfields = the 3 order-2 involutions: Q(sqrt-3) [Eisenstein/hexagonal/Phi6=n^2-n+1/Dedekind margin], Q(sqrt-7) [apex-7/Klein-quartic-PSL(2,7)/X0(14)/cusp f14], Q(sqrt21) [REAL: sqrt-3*sqrt-7=-sqrt21; 21=3*7=THE FORBIDDEN H VALUE {7,21}=C(7,2), the TOURNAMENT side]. h(-3)=h(-7)=1 (both PID) => genus-1-clean biquadratic matching X0(14) genus 1. So sqrt21 = the real geometric mean of the hexagonal(3) and apex(7) involutions; its square 21 is the forbidden H-count. NEXT STEP: exhibit sqrt21 in the covering-min certificate as the real-subfield entry where the E2(sqrt-3) bulk meets the f14(sqrt-7) cusp.
+
+TANGENTIAL LINKS (assessed): Annals 2026 Dinur et al 'Good LTCs' (c^3 codes via LEFT-RIGHT Cayley complexes = a Z2xZ2; <-> flip-rank COVERING CODE + Paley/QR Cayley tournaments); Cornell CS6840 L8 Tardos, PoA via smoothness + the HOTELLING facility-covering game (<-> LRC covering-within-r + no-regret dynamics = kps 'OMWU freq = skew-spectrum' + Kaczmarz/POCS S80); github pipeline-math (AI prover-verifier + Lean-4 formalization = process template for the LRC14 Lean skeleton). All tangential lenses, not deep dependencies.
+
+Files: 04-computation/excess_sc_supersymmetric_macmini_20260701.py (+.out); HYP-3819; reflection the-excess-counts-the-rare-and-self-mirrored.md. HONEST: excess=#{SC&|Aut|>n} exact n<=7 + SC-essential; rigorization = sketch; excess(8) open; Q(sqrt-3,sqrt-7)/sqrt21 = exact NT + structural tie, not a certificate. No canon overridden; corrected HYP-3798 (kappa(7)=12).
+
 ## kind-pasteur-2026-07-01-S24 -- THE HALF-TILING IS A LEFT-RIGHT SQUARE COMPLEX (but ABELIAN, not an expander); cut(+)cycle = GF(2) ALEXANDER DUALITY; even-graph=LDPC, tournament reconstruction = ANTI-LTC (fails n=7). Chasing the LTC lead.
 
 Prompt: chase the LTC lead (half-tiling square complex = left-right Cayley complex); consider quarter tiling / new relations; think Alexander duality + past Kaczmarz/Kaczynski + locally-testable(certifiable) codes.
