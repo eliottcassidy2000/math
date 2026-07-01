@@ -1,0 +1,22 @@
+(1) SPECTRAL/eta-invariant form  s(h,k) = (1/4k) sum cot(pi j/k) cot(pi h j/k) = eta(L(k,h))
+    n= 4: sawtooth=-0.076923 cotangent=-0.076923 exact=-1/13  match=True
+    n= 7: sawtooth=-0.081395 cotangent=-0.081395 exact=-7/86  match=True
+    n=14: sawtooth=-0.082878 cotangent=-0.082878 exact=-91/1098  match=True
+    => margin s(14,183)=-91/1098 = eta-invariant of the lens space L(183,14); reciprocity = APS cobordism.
+
+(2) EULER-MACLAURIN: margin = -12 s/n^2 = B2-remainder of the speed-sum; n^2*margin -> 1 = -12 zeta(-1)
+    n=  7: margin=       6/301=0.0199336  n^2*margin=0.976744
+    n= 14: margin=     13/2562=0.0050742  n^2*margin=0.994536
+    n= 50: margin=   49/122550=0.0003998  n^2*margin=0.999592
+    n=500: margin=499/124750500=0.0000040  n^2*margin=0.999996
+
+(3) p-ADIC zeta_p(-1) = -(1-p)/12; apex prime 7 regularizes DIFFERENTLY from the reals
+    archimedean zeta(-1) = -1/12 = -0.0833
+    2-adic zeta_2(-1) = -(1-2)/12 =  1/12 = +0.0833
+    3-adic zeta_3(-1) = -(1-3)/12 =   1/6 = +0.1667
+    5-adic zeta_5(-1) = -(1-5)/12 =   1/3 = +0.3333
+    7-adic zeta_7(-1) = -(1-7)/12 =   1/2 = +0.5000   <== LRC14 apex
+    13-adic zeta_13(-1) = -(1-13)/12 =     1 = +1.0000
+    => the residual (f14 at the 7-cusp) = where 7-adic (1/2) and archimedean (-1/12) regularizations split.
+
+DONE.

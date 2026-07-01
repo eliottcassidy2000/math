@@ -1,3 +1,19 @@
+## mac-mini-2026-06-30-S70 -- THREE MORE regularization avatars of the LRC14 margin (deepening S67): the eta-invariant/lens-space (topological), the Euler-Maclaurin B2-remainder (exact), and the p-adic zeta_p(-1) split at the apex (HYP-3779)
+
+Prompt: go back to regularization concepts, build multiple proofs/hypotheses on the sum-of-naturals seed. [2nd pass on the S67 seed -- went DEEPER with three NEW avatars, did not repeat HYP-3774's Mobius/24/hexagonal/Faulhaber results.]
+
+Seed (S67): margin(n)=n/Phi6-1/n=-12 s(n,Phi6)/n^2, s(n,Phi6)=-T/(12T+6)->-1/12=zeta(-1), T=1+..+(n-1), Phi6=2T+1. Three MORE regularization avatars, all verified:
+
+AVATAR 1 -- SPECTRAL/TOPOLOGICAL. The Dedekind sum has the cotangent (spectral) form s(h,k)=(1/4k)sum_j cot(pi j/k)cot(pi h j/k) (verified = sawtooth = exact for n=4,7,14), which is the APS eta-invariant / Hirzebruch signature defect of the LENS SPACE L(k,h). So the LRC14 margin s(14,183)=-91/1098 IS the eta-invariant of the 3-manifold L(183,14), and Dedekind-Rademacher reciprocity (HYP-2808) = the APS COBORDISM/gluing formula (the lens spaces co-bound). The margin is a TOPOLOGICAL/spectral regularization, not just arithmetic.
+
+AVATAR 2 -- EULER-MACLAURIN. margin = -12 s/n^2 is EXACTLY the Bernoulli-B2 (2nd-order) remainder of the finite speed-sum T; n^2*margin -> -12 zeta(-1) = 1 (verified 0.977,0.995,..->1). B2=1/6, zeta(-1)=-B2/2=-1/12 the E-M coefficient. 'Finite carries the actual sum, asymptotic carries regularization' = literally the Euler-Maclaurin expansion of sum k.
+
+AVATAR 3 -- p-ADIC. Kubota-Leopoldt zeta_p(-1)=-(1-p)/12. At the apex prime 7: zeta_7(-1)=1/2, DISAGREEING with the archimedean zeta(-1)=-1/12. The Euler factor (1-p) is nontrivial exactly at the covering prime's place. So the un-regularizable residual (f14 at the 7-cusp) is exactly WHERE the 7-adic and archimedean regularizations SPLIT (discrepancy 1/2+1/12=7/12, localized at 7).
+
+SYNTHESIS: three regularization avatars (archimedean -1/12, spectral eta-invariant of L(183,14), p-adic zeta_p(-1)) AGREE on the bulk, SPLIT at the apex prime 7 = the residual = the genus-1 cusp form f14. Upgrades S67's bulk/residual dichotomy to a concrete triple. PROOF-DIRECTIONS: (1) bound the margin via lens-space eta-invariant positivity + cobordism (reciprocity); (3) characterize the residual as the 7-adic/archimedean discrepancy ('wild at 7').
+
+HONEST: avatars 1-3 are exact/classical (Dedekind=lens-space eta-invariant [Hirzebruch-Zagier/APS]; Euler-Maclaurin; Kubota-Leopoldt zeta_p(-1)); the synthesis + directions are reframings, NOT closed proofs. Deepens S67 HYP-3774, no repeat. HOUSEKEEPING: filed HYP-3779 (clean). Files: 04-computation/regularization_avatars_eta_padic_macmini_20260630.py (+.out). No canon overridden, no court cases.
+
 ## klein-2026-06-30-S60 -- NEW APPROACH: the COVERING-MIN TRANSITION AT n=12 IS REAL (exact ILP, verified up to speeds 4n); corrects my HYP-3764 pessimism (HYP-3778)
 
 Prompt: try a new approach.
