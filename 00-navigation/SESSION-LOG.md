@@ -1,3 +1,18 @@
+## kind-pasteur-2026-07-01-S19 -- THE BRIDGE-2 MINDSET IS ONE RUNG OF A UNIVERSAL MOMENT LADDER: identification-rung CLIMBS with n, count/spectral families are ORTHOGONAL, the reconstruction wall = the ladder SATURATING (continuous descent); same recursion as LRC Lasserre (HYP-3789)
+
+Prompt: think about the bridge-2 mindset + the 2nd moment; keep looking for subtle patterns like this recursively.
+
+QUANTIFIED (resolution = #distinct invariant values / #iso classes, n=4..7): an increasing ladder score -> +H(OCF) -> +cycles -> +d=det(I+S) -> +cpA -> +cpS.
+ n=4: score alone IDENTIFIES (1.000). n=5: count family SATURATES (0.917, one OCF-cospectral pair), SPECTRAL d RESCUES to 1.000 [Bridge-2 LIVE]. n=6: EVERYTHING saturates 0.893 (50/56, even full spectrum). n=7: 0.822 (433/456 sample).
+KEY PATTERNS: (1) identification-rung CLIMBS with n (score@4 -> +d@5 -> beyond-spectrum@6+). (2) SPECTRAL family buys EXACTLY ONE n (n=4 score -> n=5 spectrum). (3) count/spectral families ORTHOGONAL (n=7: count-only 0.746, spectral-only 0.376, combined 0.822 -- complementary blind spots = d perp H quantified). (4) d ~= FULL SPECTRUM for discrimination (cpA/cpS barely help beyond d). (5) the 'wall' is a CONTINUOUS DESCENT (1.000,1.000,0.893,0.822), not a cliff; n=5 is the last n a bounded-moment invariant identifies.
+THE RECURSION (Bridge-2 = one rung of a moment/correlation-order filtration): order-1 (count/trace/mean = H,|L_S|,degree, blind first) -> order-2 (spectrum/Gram/variance/determinant = d, DD^T, Var(H), SEPARATES) -> order>=3 (WL/canon/Lasserre level>=3). Difficulty = the rung you must climb to. SELF-SIMILAR: WL = iterated order-2 (neighbor-multiset), so Bridge-2 iterated IS reconstruction (=> WL-from-category discrete, S14).
+SAME RECURSION IN 2 WORLDS: LRC covering-min = Lasserre hierarchy (HYP-3789: level1 union blind / level2 pair-corr / level-inf exact, converges only at m=|S|); mac-mini Bridge-2 (LRC champions Gram trace-cospectral, spectrum-distinct); THM-589 (H mean vs H-VARIANCE); determinant-lens AVERAGE face (E[det]=A000085 = ensemble moment); Verblunsky |alpha_k| = moment ladder of the spectral measure.
+NEXT HUNTS: LRC atom pair-correlation (Ramanujan HYP-3793) = atoms' 2nd moment; SC-spine blue-degree(1) vs blue-graph spectrum(2); do LRC Gram-cospectral champions force a rung-3 separator = the LRC analog of the n=7 wall.
+Reflection: the-bridge-2-mindset-is-one-rung-of-a-universal-moment-ladder-kps.md; script moment_ladder_resolution_by_n_kps.py (+.out). Not a HYP reservation.
+-> HYP-3789 (Lasserre), HYP-3813 (mac-mini Bridge-2), THM-589, determinant-lens (d perp H), HYP-3795 (Verblunsky), the-reconstruction-key (S15).
+
+---
+
 ## kind-pasteur-2026-07-01-S18 -- LRC DIFFICULTY BY n IS THE APEX-PRIME ARITHMETIC (non-monotone!); the tournament reconstruction WALL at 7 vertices is the combinatorial SHADOW of LRC(14). Complements mac-mini-S87 six-bridges (at n=14) with the BY-n variation.
 
 Prompt: work open next questions; apply this work to LRC; think LRC above/below 14 runners (easier/harder/clearer/surprising); search past connections comprehensively.

@@ -1,0 +1,47 @@
+========================================================================================================
+ MOMENT-LADDER RESOLUTION by n: #distinct invariant values / #iso classes (1.000 = identifies)
+========================================================================================================
+
+ n=4: 4 classes found (of 4, exhaustive):
+         score:    4/4  resolution=1.000 <= IDENTIFIES
+            +H:    4/4  resolution=1.000 <= IDENTIFIES
+       +cycles:    4/4  resolution=1.000 <= IDENTIFIES
+            +d:    4/4  resolution=1.000 <= IDENTIFIES
+          +cpA:    4/4  resolution=1.000 <= IDENTIFIES
+          +cpS:    4/4  resolution=1.000 <= IDENTIFIES
+    [count fam (score,H,cyc): 4/4=1.000]  [spectral fam (d,cpA,cpS): 3/4=0.750]
+
+ n=5: 12 classes found (of 12, exhaustive):
+         score:    9/12  resolution=0.750
+            +H:   11/12  resolution=0.917
+       +cycles:   11/12  resolution=0.917
+            +d:   12/12  resolution=1.000 <= IDENTIFIES
+          +cpA:   12/12  resolution=1.000 <= IDENTIFIES
+          +cpS:   12/12  resolution=1.000 <= IDENTIFIES
+    [count fam (score,H,cyc): 11/12=0.917]  [spectral fam (d,cpA,cpS): 9/12=0.750]
+
+ n=6: 56 classes found (of 56, exhaustive):
+         score:   22/56  resolution=0.393
+            +H:   40/56  resolution=0.714
+       +cycles:   47/56  resolution=0.839
+            +d:   50/56  resolution=0.893
+          +cpA:   50/56  resolution=0.893
+          +cpS:   50/56  resolution=0.893
+    [count fam (score,H,cyc): 47/56=0.839]  [spectral fam (d,cpA,cpS): 28/56=0.500]
+
+ n=7: 433 classes found (of 456, ~sample):
+         score:   52/433  resolution=0.120
+            +H:  230/433  resolution=0.531
+       +cycles:  323/433  resolution=0.746
+            +d:  350/433  resolution=0.808
+          +cpA:  356/433  resolution=0.822
+          +cpS:  356/433  resolution=0.822
+    [count fam (score,H,cyc): 323/433=0.746]  [spectral fam (d,cpA,cpS): 163/433=0.376]
+
+ INTERPRET: the COUNT family (score/H/cycles) saturates first; the SPECTRAL family (d/cpA/cpS)
+   is orthogonal and rescues -- BOTH together IDENTIFY through n=6 but SATURATE at n=7 (cospectral
+   families) => the ladder must climb to WL/canonical form. Each rung's wall arrives one n later:
+   count-only fails ~n=5, +d fails ~n=7, full-spectral fails n=7 => the reconstruction wall is the
+   moment ladder saturating. Same recursion as the LRC Lasserre hierarchy (HYP-3789: level1 union /
+   level2 pair-correlation / level-inf exact) and THM-589 (H mean vs H VARIANCE).
+DONE.
