@@ -1,0 +1,42 @@
+POOL: 10350 candidate 11-cores; 10350 are LOOSE (M>1/14, meas>0).
+1/36 = 0.02778;  1/28 = 0.03571
+
+=== BOTTOM 14 by meas(L_C) (the near-tight locus) ===
+        meas       M     N  #at     family  core
+     0.03226    1/10    10    4 FULL(Z/N)*  [1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13]
+     0.03238    2/19    19    2    2-clash  [1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13]
+     0.03626    1/10    10    4 FULL(Z/N)*  [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13]
+     0.03639    2/19    19    2    2-clash  [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13]
+     0.03838    2/17    17    2    2-clash  [1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]
+     0.04238    2/17    17    2    2-clash  [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]
+     0.04243    1/10    10    4 FULL(Z/N)*  [1, 2, 3, 4, 5, 7, 9, 11, 12, 13, 16]
+     0.04413     1/6     6    2 FULL(Z/N)*  [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 13]
+     0.04417    2/19    19    2    2-clash  [1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13]
+     0.04643    1/10    10    4 FULL(Z/N)*  [1, 2, 3, 4, 5, 6, 7, 9, 11, 13, 16]
+     0.04703    2/19    19    2    2-clash  [1, 2, 3, 4, 7, 9, 10, 11, 12, 13, 16]
+     0.04783    1/10    10    4 FULL(Z/N)*  [1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 15]
+     0.04833    2/19    19    2    2-clash  [1, 2, 3, 5, 6, 7, 8, 9, 11, 12, 13]
+     0.04854    2/17    17    2    2-clash  [1, 3, 4, 5, 7, 9, 10, 11, 12, 13, 16]
+
+GLOBAL MIN over pool: meas=313/9702=0.03226 at [1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13]
+  M=1/10, atoms on (Z/10)*, full-orbit=True; >= 1/36? True
+
+=== MIN meas per MODULAR CLASS N (full-orbit cores only) ===
+  N=  3 ((Z/3)*, phi=2): min meas=0.11386=474178157/4164400240  #cores=16  >=1/36? True
+  N=  4 ((Z/4)*, phi=2): min meas=0.10031=13426421/133855722  #cores=85  >=1/36? True
+  N=  5 ((Z/5)*, phi=4): min meas=0.10036=62159/619344  #cores=463  >=1/36? True
+  N=  6 ((Z/6)*, phi=2): min meas=0.04413=1546/35035  #cores=569  >=1/36? True
+  N=  7 ((Z/7)*, phi=6): min meas=0.09206=4739/51480  #cores=404  >=1/36? True
+  N=  8 ((Z/8)*, phi=4): min meas=0.05335=2243/42042  #cores=241  >=1/36? True
+  N=  9 ((Z/9)*, phi=6): min meas=0.06655=11191/168168  #cores=150  >=1/36? True
+  N= 10 ((Z/10)*, phi=4): min meas=0.03226=313/9702  #cores=26  >=1/36? True
+  N= 11 ((Z/11)*, phi=10): min meas=0.08382=6407/76440  #cores=5  >=1/36? True
+  N= 12 ((Z/12)*, phi=4): min meas=0.05633=10931/194040  #cores=1  >=1/36? True
+  N= 18 ((Z/18)*, phi=6): min meas=0.16349=103/630  #cores=1  >=1/36? True
+
+=== DICHOTOMY TEST on the bottom 30: full-orbit OR 2-clash? ===
+  bottom-30 family split: {'FULL': 10, '2CLASH': 20, 'OTHER': 0}
+
+VERDICT: global min meas = 0.03226 (>=1/36=True); argmin full-orbit (Z/10)*=True.
+  Near-tight locus = {full unit orbit, partial 2-clash} (+ any OTHER flagged above) -- the 11-speed THM-523 echo.
+DONE.

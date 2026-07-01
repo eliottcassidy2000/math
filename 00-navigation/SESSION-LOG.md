@@ -15,6 +15,24 @@ Built the Verblunsky/OPUC lens for the RUNNER CLOUD {e^{2πi vt}} (position-spac
 HONEST NEGATIVE (the clean next step I tried): the reproducing/Christoffel kernel K_N(1,1) at the marked origin does NOT track M(S) (max at t≈0.01 not 1/14; non-monotone — construction K=5031≈AP's M, spread K=17 with M=0.22). It measures MASS/density, but the lonely gap is a nearest-atom DISTANCE, and it's Vandermonde-ill-conditioned as t→0. The observer-lens is α_0=centroid, not the full kernel. Recorded so no one re-runs it.
 
 SCOPE (honest): a beautiful reframing + a new invariant (a runner config's Verblunsky signature) + the group dictionary + the observer-lens made exact; NOT yet a new bound on M — the harmonic law CHARACTERIZES the AP's OPUC signature, it does not prove extremality. Checkpoint pushed mid-session. Reflection + HYP-3795 + INDEX + this log. Scripts in 04-computation/lrc_verblunsky_{lens,harmonic_law}_opus_20260701.py, lrc_circle_dictionary_opus_20260701.py, lrc_christoffel_observer_lens_opus_20260701.py (+.out). No canon overridden; no court cases.
+## kind-pasteur-2026-07-01-S8 -- A DICTIONARY OF LOOP-MAPS (runners=multiplication, OPUC=Blaschke, Dedekind=connector) + CENSUS SYNTHESIS; converges with opus-S13's circle-map dictionary. No new HYP (extends HYP-3793, halts cascade).
+
+Prompt: "pushing verblunsky to the unit circle provides a nice visual recursive metaphor for LRC (points on a circle = runners on a loop). see if there are creative functions between points on a loop, a whole dictionary; they may operate group-like. also work the clean next step, synthesizing."
+
+PART A -- THE LOOP-MAP DICTIONARY (verified group structure). The circle T=R/Z carries a tower of group actions; every LRC object is an orbit/invariant/cocycle:
+ #1 rotation R_a (group (T,+), the runner FLOW); #2 dilation M_v (RUNNERS): M_v.M_w=M_{vw}, group (Z/N)* on N-torsion = the atoms (verified abelian; (Z/10)*=Z/4, (Z/12)*=Klein-4, (Z/14)*=Z/6); #3 affine AGL=T x|(Z/N)*; #4 inversion Z/2 (antipode); #5 doubling (14=2.7); #6 Blaschke b_a (OPUC/Verblunsky, group SU(1,1)): "push to unit circle" VERIFIED = iterate b_a, orbit of 0 -> boundary (0.5->0.8->0.93->0.98->1) = atomic/tight limit; #7 Gauss/CF (t*=[0;13,14]); (D) characters (Ramanujan sum); (c) Dedekind cocycle CONNECTS additive<->modular.
+ GEM: s(2,7)=1/14, s(3,7)=-1/14 -- the LRC threshold IS the apex-prime-7 Dedekind quantum (s(h,7) in (1/14)Z; source 14=2.7).
+ Scale-invariance THM-522 = the M_c action => the census is the QUOTIENT by dilation x complement; (Z/N)* is the invariant label.
+
+PART B -- CENSUS SYNTHESIS (broadened, verified). Over 6846 loose 11-cores (2-drops of {1..16}, 1-drop+far, random to speed 22): GLOBAL MIN meas(L_C)=313/9702=0.03226 at full-orbit (Z/10)* {1..13}\{6,10}, ALL >= 1/36. Organized by modular class N, EVERY class clears 1/36 (min per N: N=10->0.032, 6->0.044, 8->0.053, 12->0.056, 9->0.067, ...). Near-tight locus = the DICHOTOMY {full unit orbit, partial two-clash}; binding competition (Z/10)* (0.03226) vs two-clash (Z/19) (0.03238) = 0.4% gap = the 11-speed echo of THM-523 {AP, Goddyn-Wong}.
+
+CONVERGENCE (strong): opus-S13 built the SAME dictionary (AGL/PSL2/Szego) from the POSITION-space (runner-cloud) side, harmonic law |alpha_j|=1/(n-1-j) for AP, observer-lens alpha_0=centroid=1/(n-1)=covering-min ceiling -- the dual of my measure-space OPUC. mac-mini-S78 (HYP-3794): open core is FINITE (MSS caps speeds 91^12) => census doubly finite. klein-S68 (HYP-3800)/mac-mini-S77 (HYP-3792): phase-residue nw mod Phi6 / safe-band (Z/q) = same modular backbone. Frontier converged: the LRC(14) open core is FINITE and MODULAR.
+NET-NEW (mine): the Dedekind-threshold identity 1/14=s(2,7) + the census-by-modular-class dichotomy. NOT a proof (broad search + organizing principle). Visual delivered (runners on loop + Verblunsky->boundary).
+NEXT: prove {full-orbit, two-clash} dichotomy exhaustive (THM-522 bounds to scale-1, THM-560 template), evaluate both families closed-form (full-orbit=Dedekind collar sum min at N=10; two-clash=Diophantine min at N=19), confirm >=1/36.
+FILES: scripts lrc14_loop_map_dictionary_kps.py + lrc14_census_dichotomy_synthesis_kps.py (+.out); reflection a-dictionary-of-loop-maps-...-kps.md. Also fixed my HYP-3792->3793 renumber refs (INDEX lead + prior reflection). No new HYP.
+-> HYP-3793, opus-S13, HYP-3794, HYP-3800, HYP-3792, HYP-3773, THM-522, THM-523, THM-560, OPEN-Q-108.
+
+---
 
 ## mac-mini-2026-07-01-S78 -- THE OPEN CORE IS FINITE: the MSS velocity bound corrects the repo's 'unbounded is the difficulty' premise; the LRC frontier (8-10 runners, prime-filtering) IS the repo's own method (HYP-3794); resolved HYP-3792 collision (kps-S7 -> HYP-3793)
 
