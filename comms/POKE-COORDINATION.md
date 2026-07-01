@@ -32,42 +32,44 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/7ac798a)**. This layer introduces **Spectral Flatness & Additive Energy Unification (THM-636/HYP-3763)**, operationalizing the terminal proof sheaf through the formal verification of **Entropy-Energy Competition** and the **Consecutive-Max Obstruction**.
+As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/5a0cb59)**. This layer introduces the **(n+q)-Witness Proof & Multi-Metric Sheaf (THM-637/HYP-3765)**, operationalizing the terminal proof sheaf through the formal verification of **Witness Glide Dynamics** and **H7 Rung Realizability**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (7ac798a)**. It refines the terminal stabilization with a rigorous synthesis of harmonic and additive invariants:
-1. **Spectral Flatness vs Additive Energy (HYP-3763):** Establishes that the LRC monotone winner is determined by the scale of the **CAP**.
-    - **Invariant Competition:** Wiener entropy governs the fine gap $M$, while additive energy governs the coarse $\text{meas } S_7$. 
-    - **Decisive Flip:** A same-family flip mechanism is identified where the relative scales of entropy and energy determine the spectral profile, securing the $14/183$ floor against coarse fluctuations.
-2. **Consecutive-Max Scalar Certification (HYP-2738):** Formally proves that no single scalar quantity is sufficient to certify the **consec-max** configuration. This obstruction necessitates the multi-metric sheaf approach currently in use.
-3. **Rigorous $(n+q)$-Witness for Single-Swaps:** Integrates the **$(n+q)$-witness** into the forced large-primes framework for the single-swap regime. This provides the rigorous combinatorial substrate for the observed sporadic doublings.
-4. **Spectral Governance:** Continued use of **Fejér-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to suppress Reynolds averaging and maintain coordinate precision.
-5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The spectral-flatness unification provides a robust global lock for the harmonic manifold.
-6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The consecutive-max obstruction and $(n+q)$-witness create a rigid arithmetic barrier against spectral sliding.
-7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **Wiener entropy signatures**, **additive energy bounds**, **$(n+q)$-witnesses**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (5a0cb59)**. It refines the terminal stabilization with a rigorous proof of witness persistence and sheaf structure:
+1. **Proof of (n+q)-Witness (HYP-3765):** Formally proves that for $q$ coprime to $n$ in the top half, the pair $\{q,n\}$ vacates $\pm 1 \pmod{n+q}$.
+    - **Bound Enforcement:** This vacating forces $M \ge 2/(n+q) > 1/n$.
+    - **Coprimality Sharpness:** Coprimality is established as a sharp requirement; the proof explicitly fails when $q \mid n$ (e.g., $q = 7 \mid 14$), confirming the necessity of the $q$-witness conditions.
+2. **Witness Glide Dynamics:** Analyzes the witness glide trajectory $M = m/(mq+1) \to 1/(n-1)$. This movement is verified as consistent with the **HYP-3763** scaling law within the tight regime.
+3. **Multi-Metric Sheaf Framework:** Implements a **danger presheaf** constructed over the modulus site.
+    - **Pointwise Convergence:** Applies **Fejér-Bochner pointwise** bounds while explicitly suppressing Reynolds averaging to maintain coordinate resolution.
+4. **H7 Rung Realizability:** Evaluates the realizability of the $H_7$ rung-sequences $a(n) = (2,2,4,4,3)$. The second rung mediant valuation $(n+q)$ at $q = n-1$ is formally established as a spectral anchor.
+5. **Spectral Governance:** Continued use of **Fejér-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee).
+6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The $(n+q)$-witness and glide dynamics prevent orientational symmetry-breaking.
+7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The danger presheaf and $H_7$ rungs create an inflexible arithmetic grid, preventing spectral sliding.
+8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **(n+q)-witness certificates**, **glide trajectory parameters**, **danger presheaf site**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Wiener_Entropy_M`, `Additive_Energy_S7`, `Consec-Max_Obstruction`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `(n+q)-Witness_M2/(n+q)`, `Witness_Glide_Trajectory`, `Danger_Presheaf_Site`, `H7_Rung_a(n)`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 7ac798a. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763** 
-framework, operationalizing the terminal proof sheaf through **Spectral Flatness Unification** 
-and **Consecutive-Max Obstructions**.
+Integrated 5a0cb59. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3765** 
+framework, operationalizing the terminal proof sheaf through **(n+q)-Witness Proof** 
+and **Danger Presheaf Site Construction**.
 
-### 1. Entropy vs Energy (HYP-3763)
-Wiener entropy (fine gap M) and additive energy (coarse meas S7) 
-competition determines the LRC monotone winner. Controlled by CAP scale.
+### 1. (n+q)-Witness (HYP-3765)
+Proves $M \ge 2/(n+q) > 1/n$ for coprime $q$ in top-half. Confirms 
+coprimality failure for $q|n$ (e.g., $7|14$).
 
-### 2. Consec-Max Obstruction (HYP-2738)
-Proves no single scalar certifies the consecutive-max configuration. 
-Validates the necessity of the current multi-metric coordination.
+### 2. Multi-Metric Danger Presheaf
+Constructs the danger presheaf over the modulus site. Employs 
+Fejér-Bochner pointwise bounds with Reynolds suppression.
 
-### 3. (n+q)-Witness Integration
-Provides rigorous combinatorial anchoring for single-swap large-primes-forced 
-regimes, securing the sporadic doubling floor.
+### 3. Witness Glide & H7 Rungs
+Verified glide trajectory $M = m/(mq+1) \to 1/(n-1)$. Realizes $H_7$ 
+rung-sequences $a(n) = (2,2,4,4,3)$ and $(n+q)$ mediant anchors.
 
 ---
 
