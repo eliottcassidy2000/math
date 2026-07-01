@@ -1,0 +1,21 @@
+ n  #graphs #tournaments  #even(II)   #odd  even=tourn? #graphs=t+odd?
+ 3        4            2          2      2         True           True
+ 4       11            4          4      7         True           True
+ 5       34           12         12     22         True           True
+
+=> (II) EVEN graphs (no automorphism reverses an odd #edges) = tournaments = A000568.
+   The repo's E_n (A002854 even-DEGREE / switching classes) is a DIFFERENT object -- do not conflate.
+   Equinumerosity mechanism: #graphs = #tournaments + #odd graphs (Cauchy-Frobenius; RPGFD 2022).
+
+--- cross-tabulation (even-DEGREE? , type-II-even?) -> #graph iso classes ---
+n=4: (F,F)=6 (F,T)=2 (T,F)=1 (T,T)=2   [type-II-even total 4=tourn; even-deg total 3=A002854]
+n=5: (F,F)=17 (F,T)=10 (T,F)=5 (T,T)=2 [type-II-even total 12=tourn; even-deg total 7=A002854]
+=> the two 'even' notions are LOGICALLY INDEPENDENT (all 4 quadrants populated).
+
+--- |Aut| distributions (a natural bijection would preserve this; it does NOT) ---
+n=4: tournaments |Aut| {1:2, 3:2} (all ODD)   even-graphs(II) |Aut| {2:1,6:1,8:1,24:1} (all EVEN)
+n=5: tournaments |Aut| {1:7,3:4,5:1} (all ODD) even-graphs(II) |Aut| {2:5,4:1,6:1,8:2,12:1,24:1,120:1} (all EVEN)
+LEMMA: odd |Aut(X)| => reversal character eps_X: Aut(X)->Z/2 is trivial => X is type-II EVEN.
+ (so all asymmetric graphs, |Aut|=1, are even; they first appear at n=6.) Tournaments always have ODD |Aut|.
+ => tournaments (odd |Aut|) and even graphs (even |Aut| for n<=5) share NO |Aut| value yet equinumerous
+    => the RPGFD bijection cannot preserve Aut; a pure counting coincidence (Cauchy-Frobenius).

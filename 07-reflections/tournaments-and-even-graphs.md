@@ -68,3 +68,20 @@ The 48x difference in information density (score vs cycle bits) has a physical i
 This is a THERMODYNAMIC structure. The OCR is the fraction of "energy" (H) that's captured by the thermodynamic (macroscopic) description. 97% means tournament thermodynamics works extremely well -- you can predict H from scores alone, just as you can predict pressure from temperature and volume alone.
 
 The 3% residual is the "fluctuations" -- the part that requires microscopic (cycle-level) information to predict. In tournament theory, this 3% is where all the deep combinatorics lives.
+
+---
+
+## RESOLVED (mac-mini-2026-07-01-S82, HYP-3799)
+
+The flagged equinumerosity IS a theorem -- against the RIGHT "even graph" notion. There are TWO:
+- **(I) EVEN-DEGREE** (this reflection's "even graph" = cycle space) = **A002854** = 2,3,7,16,54 = two-graphs
+  = switching classes of graphs (Mallows-Sloane 1975). This is the repo's `E_n`. NOT equal to A000568 -- the
+  "4 != 3" observation above is CORRECT for this notion.
+- **(II) AUTOMORPHISM-PARITY even** (Royle-Praeger-Glasby-Freedman-Devillers 2022, arXiv:2204.01947): a graph
+  is ODD if some automorphism reverses an ODD number of edges, EVEN otherwise. **#(type-II even) = #tournaments
+  = A000568** (Thm 1.1). Verified n<=5: 2,4,12.
+
+So the "Royle et al. equinumerosity" uses notion (II), not the even-degree notion (I) of this reflection. The
+two are logically independent (2x2 cross-tab all populated). Mechanism: #graphs = #tournaments + #odd graphs.
+The natural bijection is OPEN (RPGFD). Do NOT conflate E_n (A002854, even-degree) with the RPGFD even graph
+(A000568). See HYP-3799.
