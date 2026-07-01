@@ -1,0 +1,14 @@
+(1) (n+q)-witness COPRIMALITY edge: q must be coprime to n (q^-1 mod n+q exists). n=14:
+   q=7: gcd(q,n=14)=7 -> witness FAILS (q|n, no q^-1)
+   q=11: gcd(q,n=14)=1 -> witness APPLIES
+   q=13: gcd(q,n=14)=1 -> witness APPLIES
+   => q=7 excluded (7|14); the (n+q)-witness handles only q coprime to n. 7 needs a DIFFERENT metric.
+
+(2) MULTI-METRIC GLUING: drop q=13 (n=14), add HUGE multiple 13m. (n+q)=27 witness may weaken;
+    does M stay >1/14 via ANOTHER modulus? (the sheaf glues local witnesses)
+   add 13*2=26: M=   2/27=0.0741 >1/14? True  binding (n+q)=27,a=2
+   add 13*3=39: M=   3/40=0.0750 >1/14? True  binding D=40,a=3
+   add 13*5=65: M=   5/66=0.0758 >1/14? True  binding D=66,a=5
+   add 13*10=130: M= 10/131=0.0763 >1/14? True  binding D=131 prime,a=10
+   add 13*50=650: M= 50/651=0.0768 >1/14? True  binding D=651,a=50
+   add 13*100=1300: M=100/1301=0.0769 >1/14? True  binding D=1301 prime,a=100

@@ -1,0 +1,31 @@
+==========================================================================
+(A) H7: covering-min rung a(n), binding modulus D=a(n-1)+1, factorization
+==========================================================================
+  n covering-min rung a(n)  D=a(n-1)+1    factor(D)  D=2n-1?
+  7       2/13         2          13           13     True
+  8       2/15         2          15          3*5     True
+  9       4/33         4          33         3*11    False
+ 10       4/37         4          37           37    False
+ 11       3/31         3          31           31    False
+  a(n) = 2,2,4,4,3 (n=7..11): irregular. Note rung 2 => D=2n-1 (the signed-LRC modulus, THM-401).
+  Realizability of rung 2 (mediant 2/(2n-1)) at n=7,8 (D=13,15) but NOT n=9,10,11 -- the
+  covering-system obstruction: whether resonances {2..n} admit a set avoiding {0,+-1} mod (2n-1).
+
+==========================================================================
+(B) The (n+q)-witness: single-swap census of the tight AP {1..n-1} (M=1/n)
+==========================================================================
+n=14: floor 1/n=1/14; large primes q in ((n-1)/2,13] = [11, 13]
+   drop q=11, add 2q=22: M(S)=2/25=0.0800 >1/n? True; (n+q)=25, a*=q^-1=16, min-dist=2 -> witness 2/25=0.0800
+   drop q=13, add 2q=26: M(S)=2/27=0.0741 >1/n? True; (n+q)=27, a*=q^-1=25, min-dist=2 -> witness 2/27=0.0741
+   DOUBLING drop 12(composite), add 24: M=1/14=0.0714 = FLOOR (tight, GW) (n==2 mod6? True)
+n=18: floor 1/n=1/18; large primes q in ((n-1)/2,17] = [11, 13, 17]
+   drop q=11, add 2q=22: M(S)=2/29=0.0690 >1/n? True; (n+q)=29, a*=q^-1=8, min-dist=2 -> witness 2/29=0.0690
+   drop q=13, add 2q=26: M(S)=2/31=0.0645 >1/n? True; (n+q)=31, a*=q^-1=12, min-dist=2 -> witness 2/31=0.0645
+   drop q=17, add 2q=34: M(S)=2/35=0.0571 >1/n? True; (n+q)=35, a*=q^-1=33, min-dist=2 -> witness 2/35=0.0571
+   DOUBLING drop 16(composite), add 32: M=2/35=0.0571 > floor (n==2 mod6? False)
+n=20: floor 1/n=1/20; large primes q in ((n-1)/2,19] = [11, 13, 17, 19]
+   drop q=11, add 2q=22: M(S)=2/31=0.0645 >1/n? True; (n+q)=31, a*=q^-1=17, min-dist=2 -> witness 2/31=0.0645
+   drop q=13, add 2q=26: M(S)=2/33=0.0606 >1/n? True; (n+q)=33, a*=q^-1=28, min-dist=2 -> witness 2/33=0.0606
+   drop q=17, add 2q=34: M(S)=2/37=0.0541 >1/n? True; (n+q)=37, a*=q^-1=24, min-dist=2 -> witness 2/37=0.0541
+   drop q=19, add 2q=38: M(S)=2/39=0.0513 >1/n? True; (n+q)=39, a*=q^-1=37, min-dist=2 -> witness 2/39=0.0513
+   DOUBLING drop 18(composite), add 36: M=1/20=0.0500 = FLOOR (tight, GW) (n==2 mod6? True)

@@ -13,6 +13,25 @@ Also: a full signed-vs-unsigned scan of BOTH threads (search agent) -- the law i
 HONEST CEILING: the barrier is a RELAXATION (min m>=1 => B>=0, not conversely) and does NOT pin the AP among covering sets (GW B=0.438 > AP 0.428) -- it certifies covering, not consec-max. The band-limited signed majorant construction for the AP (summed per-scale Beurling-Selberg loss < 0.43) is the OPEN research target.
 
 NEXT: (a) attempt the actual band-limited signed majorant Q of -log m for the AP, degree set by the finest scale (Beurling-Selberg gap 1/(N+1)); (b) the AP-vs-GW selection stays with the pointwise/support route (klein-S51/HYP-3762 tight=>support>=n-5); (c) NOTE the klein-S53 HYP-3764 covering-min "n>=12 transition" is UNVERIFIED (challenges HYP-3737/3747 basis) -- flagged, worth a look.
+## klein-2026-06-30-S54 -- THE (n+q)-WITNESS RIGORIZED + THE MULTI-METRIC WITNESS SHEAF + rung realizability (H7) (HYP-3765)
+
+Prompt: work on H7 and the multi-metric sheaf approach; rigorous (n+q)-witness for single-swap large-primes-forced regime + combinatorial anchoring for the sporadic n=14 doublings; spectral governance (Fejer-Bochner minorants, Reynolds averaging suppressed).
+
+Built on opus's (n+q)-witness (tight regime) + my HYP-3763/3764. Filed HYP-3765; reflection the-witness-is-pointwise-the-average-is-blind.md; script rung_realizability_nq_witness_klein.py (+ nq_witness_gluing_klein.out).
+
+(A) (n+q)-WITNESS PROVED (single-swap tight regime): q COPRIME to n, (n-1)/2<q<=n-1, drop q from AP {1..n-1} + add small multiple mq => M>=2/(n+q)>1/n. Proof: at a=q^{-1} mod (n+q), residues +-1 pull back to speeds q (DROPPED) and n (OUT OF RANGE) -- both absent => radius-1 hole => M>=2/(n+q); q<=n-1 => n+q<2n => 2/(n+q)>1/n. Coprimality q∤n is SHARP: q=7 at n=14 (apex, 7|14) has no q^{-1} mod 21, witness FAILS. VERIFIED exact n=14,18,20 (M=2/(n+q)). The composite doubling n-2 (->2(n-2)=GW) is the ONLY survivor, tight iff n==2 mod6 (14,20 yes; 18 no) -- the sporadic doublings anchored.
+
+(B) THE WITNESS GLIDES (multi-metric ladder): larger multiple mq -> binding modulus glides n+q -> mq+1, M=m/(mq+1) -> 1/(n-1); infimum 2/(n+q) at smallest multiple. This is the SAME multiplier-scaling law as the covering-min large-multiple trap (HYP-3763), now in the tight regime. So 'drop q => not tight' is a LADDER of local witnesses.
+
+(C) THE MULTI-METRIC SHEAF (framework): witnesses = local sections of a DANGER PRESHEAF over the site of moduli D (radius floor(D/n) = the metric: 0=resonance, 1=pair, 2=...); tight set <=> danger covers every (D,a) (global section); a witness = a local failure. ONE metric misses cases (q|n) that OTHERS cover: q=7 escapes (n+q)=21 but is caught at moduli 7,9,11 (M=1/7,1/9,1/11). Gluing = CRT / the Steinhaus glide (which modulus catches the runner the previous one let slip). Fejer-Bochner minorant evaluated POINTWISE (Reynolds group-averaging SUPPRESSED -- additive-energy/4th-moment averaging is blind, HYP-+2873/opus-S2) = the section certificate. Tightness is POINTWISE.
+
+(D) H7: covering-min rung a(n)=2,2,4,4,3 (n=7..11), irregular; binding D=a(n-1)+1. RUNG 2 = mediant 2/(2n-1) = the (n+q)-witness at q=n-1 -- the FLOOR and COVERING-MIN regimes MEET at rung 2. Realizability of rung r = a covering-system condition on the factorization of r(n-1)+1 (speeds avoid {0,..,+-(r-1)} mod that); irregular, predicted NO closed form (like Farey rung HYP-3732, width(G_n), A000568).
+
+RESIDUAL / open crux: the general-S residual (huge multiple / runner n at residue -1 defeats a single (n+q)) is handled BY the sheaf (another metric catches it) but not yet by ONE closed statement -- proving the local sections cover the whole site (a Cech 'no lonely point survives all metrics') is the LRC-hard core.
+
+NEXT: (1) prove the sheaf covers (Cech gluing over the modulus site); (2) close the general-S residual via the glide transition maps; (3) characterize a(n) realizability. NOTE prior HYP-3763 collision (opus-S2 & my S52) -- opus's went to INDEX, mine is the file; no conflict now.
+
+--- prior entries ---
 
 ## klein-2026-06-30-S53 -- THE COVERING-MIN OPEN EDGE: the construction is the LOOSE rung, the true min is a search-resistant small-rung spread set, and the "n>=12 transition" is UNVERIFIED (HYP-3764)
 
