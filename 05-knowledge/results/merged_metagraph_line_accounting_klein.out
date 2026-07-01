@@ -1,0 +1,33 @@
+
+===== n=4: m=3, total lines 2^(m-1)=4 (blue 2 + black 2); merged nodes 3 =====
+  categories: {'mixed': 1, 'pure-black': 1, 'pure-blue': 1}
+  pure-black: 1 nodes; fiber-parities [0]; self-loop lines here=0; sample(f,bx,kx,bs,ks)=(2, 0, 2, 0, 0)
+       mixed: 1 nodes; fiber-parities [1]; self-loop lines here=1; sample(f,bx,kx,bs,ks)=(5, 1, 2, 1, 0)
+   pure-blue: 1 nodes; fiber-parities [1]; self-loop lines here=0; sample(f,bx,kx,bs,ks)=(1, 1, 0, 0, 0)
+  CORRECTED-RULE VIOLATIONS: 0 -> corrected rules HOLD
+  TRIPARTITE: blue-touches-pureblack=False (should F); black-touches-pureblue=False (should F)
+  #SC=#PB+#MX=2 (even? True); #blue lines=2 vs 2^((m+floor((n-1)/2))/2-1)=2 (match True)
+  SELF-LOOPS by category: pure-black=0, mixed=1, pure-blue=0  => CONJECTURE 'only mixed self-loop' holds n<=5, REFUTED at n=6 (pure-black dominate); pure-blue never.
+  PER-CLASS tiling-count parities (unmerged): [1]  => all ODD => SC-merged(1 class)=ODD, NS-merged(2 classes)=EVEN [Redei-type PROOF of the fiber-parity checksum]
+
+===== n=5: m=6, total lines 2^(m-1)=32 (blue 8 + black 24); merged nodes 10 =====
+  categories: {'mixed': 5, 'pure-black': 2, 'pure-blue': 3}
+  pure-black: 2 nodes; fiber-parities [0]; self-loop lines here=0; sample(f,bx,kx,bs,ks)=(10, 0, 10, 0, 0)
+       mixed: 5 nodes; fiber-parities [1]; self-loop lines here=4; sample(f,bx,kx,bs,ks)=(9, 3, 6, 0, 0)
+   pure-blue: 3 nodes; fiber-parities [1]; self-loop lines here=0; sample(f,bx,kx,bs,ks)=(3, 3, 0, 0, 0)
+  CORRECTED-RULE VIOLATIONS: 0 -> corrected rules HOLD
+  TRIPARTITE: blue-touches-pureblack=False (should F); black-touches-pureblue=False (should F)
+  #SC=#PB+#MX=8 (even? True); #blue lines=8 vs 2^((m+floor((n-1)/2))/2-1)=8 (match True)
+  SELF-LOOPS by category: pure-black=0, mixed=4, pure-blue=0  => CONJECTURE 'only mixed self-loop' holds n<=5, REFUTED at n=6 (pure-black dominate); pure-blue never.
+  PER-CLASS tiling-count parities (unmerged): [1]  => all ODD => SC-merged(1 class)=ODD, NS-merged(2 classes)=EVEN [Redei-type PROOF of the fiber-parity checksum]
+
+===== n=6: m=10, total lines 2^(m-1)=512 (blue 32 + black 480); merged nodes 34 =====
+  categories: {'mixed': 10, 'pure-black': 22, 'pure-blue': 2}
+  pure-black: 22 nodes; fiber-parities [0]; self-loop lines here=24; sample(f,bx,kx,bs,ks)=(30, 0, 26, 0, 2)
+       mixed: 10 nodes; fiber-parities [1]; self-loop lines here=2; sample(f,bx,kx,bs,ks)=(17, 5, 12, 0, 0)
+   pure-blue: 2 nodes; fiber-parities [1]; self-loop lines here=0; sample(f,bx,kx,bs,ks)=(1, 1, 0, 0, 0)
+  CORRECTED-RULE VIOLATIONS: 0 -> corrected rules HOLD
+  TRIPARTITE: blue-touches-pureblack=False (should F); black-touches-pureblue=False (should F)
+  #SC=#PB+#MX=12 (even? True); #blue lines=32 vs 2^((m+floor((n-1)/2))/2-1)=32 (match True)
+  SELF-LOOPS by category: pure-black=24, mixed=2, pure-blue=0  => CONJECTURE 'only mixed self-loop' holds n<=5, REFUTED at n=6 (pure-black dominate); pure-blue never.
+  PER-CLASS tiling-count parities (unmerged): [1]  => all ODD => SC-merged(1 class)=ODD, NS-merged(2 classes)=EVEN [Redei-type PROOF of the fiber-parity checksum]

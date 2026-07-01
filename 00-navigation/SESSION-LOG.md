@@ -40,6 +40,25 @@ Reflection: the-blueblack-line-pairing-is-a-degree-tiling-count-realization-kps.
 -> forbidden-seven (odd tc), merged-metagraph-invariants, geometric-alignment (spine/ribs/sea), CLAUDE.md blue/black defs.
 
 ---
+## klein-2026-07-01-S75 -- THE MERGED-METAGRAPH BLUE/BLACK LINE ACCOUNTING made precise: a TRIPARTITE 2-colored degree structure + a Rédei fiber-parity CHECKSUM; owner's process formalized, 1 conjecture refuted (HYP-3808).
+
+Prompt: formalize the owner's merged-metagraph blue/black line pairing process (3 node categories, tiling counts, self-loops), make the rules precise/explanatory, find metrics + recursion, make progress.
+
+GROUNDED the structure (merged_metagraph_line_accounting_klein.py, exhaustive n=4,5,6; fixed a canon bug first). Nodes: PURE-BLUE (SC, all tilings grid-sym), MIXED (SC, some), PURE-BLACK (NS-merged). fiber = tiling count = line-degree (self-loops x2). LINE={t, flip(t)} (flip ALL tiles), BLUE iff t grid-sym.
+
+VERIFIED + PROVED (0 rule-violations):
+(1) FIBER-PARITY Z2 CHECKSUM: SC-merged nodes ODD fiber, NS-merged EVEN. PROVED: every unmerged iso class has an ODD tiling count (verified all-odd n<=6; = Rédei's odd-#-Ham-paths via tilings<->base-Ham-paths), so SC(1 class)=odd, NS(2 complement classes, equal)=even.
+(2) TRIPARTITE line structure: BLUE lines live ONLY on SC nodes (pure-blue u mixed); BLACK only on NS u mixed; MIXED = the unique INTERFACE (both colors). Blue never touches pure-black; black never touches pure-blue.
+(3) OWNER'S PARITY CLAIMS CONFIRMED: pure-black -> even # black-cross, no blue; mixed -> odd # blue-cross + even # black-cross; pure-blue -> odd # blue, no black.
+(4) #SC=#pure-blue+#mixed is EVEN (2,8,12 for n=4,5,6), forced by the BLUE HANDSHAKE (every SC node has ODD blue-degree, blue lines pair SC nodes).
+(5) EXACT counts: total lines=2^(m-1); #blue=2^((m+floor((n-1)/2))/2 - 1) (=2,8,32); #black=rest.
+(6) CONJECTURE REFUTED ('self-loops only on mixed'): holds n<=5 (pure-black self-loops=0) but BREAKS at n=6 -- pure-black DOMINATE (24 of 26 self-loop lines; mixed 2); PURE-BLUE never self-loops. An n=6 transition (parallel to the flip-rank n=6 transition, HYP-3803). A self-loop = a tiling t with flip(t) ~= T(t) or T(t)^op (flip-all-tiles symmetry).
+
+THE PROCESS MADE PRECISE: a 2-colored degree-constrained multigraph realization (with self-loops) on a tripartite node set, target degrees = fibers: PURE-BLUE (fiber odd, blue-only, no self-loop); PURE-BLACK (fiber even, black-only, self-loops allowed n>=6); MIXED (fiber odd = odd-blue + even-black, both, interface). Conservation: Sum fibers=2^m; Sum blue-deg=2#blue; #SC even.
+METRICS: the Z2 charge (fiber parity = SC/NS = Rédei checksum); the blue charge (#SC even); interface load on MX; self-loop budget per category (n-dependent, onset n=6); blue fraction (=grid-sym fraction). (#PB,#MX,#KB)=(1,1,1),(3,5,2),(2,10,22); #KB=NS-merged=(A000568-SC)/2=0,1,2,22,184.
+NEXT TARGET: self-loop count formula (flip-all-tiles symmetry census), #MX vs #PB split, and whether tripartite+checksum+exact-blue-count DETERMINE the assignment (rigidity). Both flip-rank and self-loops transition at n=6 -- a unified explanation is the concrete target.
+
+HONEST: checksum PROVED modulo 'per-class tiling count odd' (verified n<=6, = Rédei); self-loop onset characterized not formula'd; n>=7 not computed (canon too slow). A precise formalization + 1 proved conservation law (the checksum) + 1 refuted conjecture. HYP-3808 in klein block, no collision. Files: merged_metagraph_line_accounting_klein.py(+out); HYP-3808; reflection the-metagraph-is-a-conservation-law.md. No canon overridden.
 
 ## opus-2026-07-01-S17 -- WORKING THE OPEN QUESTION (flip-rank excess formula?): resolved NEGATIVELY -- k(n) is a genuine COVERING NUMBER, the excess is symmetry-folding but NOT a formula (extends HYP-3805).
 
