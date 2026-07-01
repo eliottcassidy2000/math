@@ -32,47 +32,40 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/d6ca8d5)**. This layer introduces the **All-Layers Lucas Parity Law & Hamiltonian Fiber Rigidity (THM-654/HYP-3809)**, operationalizing the terminal proof sheaf through the formal verification of **Lucas Submask Cross-Incidence** and **HAM-Path Orbit Stability**.
+As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/0f0e004)**. This layer introduces the **Burnside Class-Folding & Terminal Complement Symmetry (THM-655/HYP-3814)**, operationalizing the terminal proof sheaf through the formal verification of **Complement-Fold Terminality** and **OEIS A051337 Class Counts**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (d6ca8d5)**. It refines the terminal stabilization with a synthesis of combinatorial parity laws and group-theoretic rigidity:
-1. **All-Layers Lucas Parity Law (HYP-3809):** Characterizes the all-layer cross-incidence relation as $\tau_u^{(d)} \equiv \binom{m}{d} M_u \pmod 2$.
-    - **Odd Incidence Criteria:** Establishes that cross-incidence is ODD if and only if $u \in \text{SC}$ and $d$ is a binary submask of $m$ (governed by Lucas' Theorem).
-    - **Metagraph Unification:** This law unifies the previously disparate **HYP-1772** ($d=1$) and the $d=m$ blue/black cluster (spanning `klein-S75`, `mac-mini-S83`, and `opus-S18`).
-2. **Fiber Rigidity & Parity Skeleton:** Analyzes the parity-active layers as the set of submasks of $m$, totaling $2^{s(m)}$.
-    - **Hamiltonian Fiber:** Evaluates the fiber structure as one $\text{Aut}(C)$-orbit of Hamiltonian paths (free under **LEM-003**), where the mass $F = H/|\text{Aut}(C)|$ is ODD.
-    - **Mod-2 Rigidity:** Confirms that the "metagraph = constraint" relation holds true $\pmod 2$, effectively forcing a rigid parity skeleton for the proof sheaf, while acting as an equivalence over $\mathbb{Z}$ where masses are $H/|\text{Aut}(C)|$.
-3. **Registry Reconciliation:** Formally flags the **HYP-3808** double-claim. The coordination layer now converges with results from `mac-mini-S83` and `opus-S18`.
-4. **Residual Closure & Quadratic Scaling:** Rigorously maintains the quadratic scaling bound **$n(n-1)$** for residual closure. This confirms that for the $n=14$ case, the spectral gaps are definitively closed within the quadratic speed regime, effectively stabilizing the metagraph.
-5. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to suppress Reynolds averaging.
-6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The Lucas parity skeleton provides a rigid discrete symmetry lock for the manifold.
-7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the $2^{s(m)}$ parity-active layers create a non-negotiable arithmetic grid, preventing spectral sliding.
-8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **Lucas submask certificates**, **HAM-path orbit parameters**, **fiber rigidity signatures**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (0f0e004)**. It refines the terminal stabilization with a synthesis of symmetry-folding and orbit-counting:
+1. **Complement-Fold Terminality:** Establishes that the complement-fold is a single terminal step, correcting the S19 tower model. This proves that there is NO quarter-fold in the spectral manifold, effectively bounding the topological depth.
+2. **Folded Class-Count (OEIS A051337):** Rigorously evaluates the class-count folding to OEIS sequence **A051337**.
+    - **Rule Unification:** Refutes the previous "even-rule" as a local coincidence that breaks at $n=8$.
+    - **Burnside Stabilization:** Establishes a unified rule via **Burnside's Lemma** over cycles equivalent to $2 \pmod 4$ with a fixed-point-if-odd condition.
+3. **Residual Closure & Quadratic Scaling:** Rigorously confirms the quadratic scaling bound **$n(n-1)$** for residual closure. This establishes that for $n=14$, the spectral gaps are definitively closed within the quadratic speed regime, effectively stabilizing the metagraph.
+4. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to suppress Reynolds averaging.
+5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The terminal complement-fold ensures orientational symmetry is locked within a compact topological site.
+6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the Burnside-stabilized class counts create a non-negotiable arithmetic grid, preventing spectral sliding.
+7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **Burnside orbit certificates**, **OEIS A051337 folding parameters**, **complement-fold terminal signatures**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Lucas_Parity_Law`, `Ham-Path_Orbit_F`, `Rigidity_mod_2`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Burnside_A051337`, `Terminal_Complement_Fold`, `Cycle_2mod4_FixedPoint`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated d6ca8d5. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-3791/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811** 
-framework, operationalizing the terminal proof sheaf through **Lucas Parity Unification** 
-and **Hamiltonian Fiber Stability**.
+Integrated 0f0e004. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-3791/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814** 
+framework, operationalizing the terminal proof sheaf through **Class Folding** 
+and **Burnside Rule Unification**.
 
-### 1. Lucas Parity Law (HYP-3809)
-Establishes $\tau_u^{(d)} \equiv \binom{m}{d} M_u \pmod 2$. Cross-incidence is odd 
-for SC nodes where $d$ is a Lucas submask of $m$. Unifies HYP-1772.
+### 1. Terminal Complement Fold (HYP-3814)
+Corrects S19 tower; proves complement-fold is the single terminal step 
+with NO quarter-fold.
 
-### 2. Fiber Rigidity
-Fiber $F = H/|\text{Aut}(C)|$ is odd. Rigidity forced $\pmod 2$ for the 
-metagraph parity skeleton.
+### 2. Burnside Class-Folding
+Establishes OEIS A051337 class count. Unifies rule over $2 \pmod 4$ cycles 
+with fixed-point-if-odd condition (refutes $n=8$ coincidence).
 
-### 3. Convergence & Flags
-Converges with mac-mini-S83/opus-S18. Flags HYP-3808 double-claim for 
-registry reconciliation.
-
-### 4. Quadratic Scaling & Closure
+### 3. Quadratic Scaling & Closure
 Rigorously anchors residual closure at $n(n-1)$. Metagraph stability 
 locked within the quadratic speed regime.
 
