@@ -112,6 +112,35 @@ peel layers.
 
 ---
 
+## The Witness / Safe-Band Frame (covering-min characterization, mac-mini-S77)
+
+These four definitions recast the LRC14 **covering-min** lower bound (every primitive
+covering 13-set has `M(S) >= n/Phi6 = 14/183`, THM-523/HYP-3778) as an explicit arithmetic
+band-dodging problem, and pin the extremal structure. `Phi6(n) = n^2 - n + 1` (= 183 at n=14).
+
+**Binding witness** `t*(S)` and the **rational witness form** `(q,a)`: the maximizer
+`t* = argmax_t min_{v in S} ||vt||`, written as `a/q` in lowest terms. `M(S) = max_{q,a}
+(1/q) * min_{v in S} ||a v||_q`, where `||x||_q = dist(x mod q, 0)` is the residue distance.
+
+**Safe-band residue system** `R(q,a) = {a v mod q : v in S}` and **danger band**
+`B_r = {x in Z/q : ||x||_q < r q}` (half-width `r q`). Loneliness at `(q,a)` `<=>` `R(q,a)`
+avoids `B_r`. So the covering-min lower bound = *every covering 13-set has a cyclic dilation
+`a` and modulus `q` whose residues all miss the band of half-width `ceil(r q)`*.
+
+**Arithmetic depth** `q*(S)` = the denominator of the binding witness, and its **CF signature**
+= the continued fraction of `t*`. The construction `{1..n-2, n(n-1)}` is **deep**:
+`q* = Phi6`, `CF(t*) = [0; n-1, n]`. Every restructured covering 13-set binds **shallow**
+(`q* <= ~50`, short CF) with `M ~ 0.10-0.14`. (`1/M = [n-1; n] = (n-1) + 1/n`, the S71 ladder.)
+
+**Deep-well isolation**: random covering primitive 13-sets have `M >= ~0.108` (factor `~1.4`
+above the construction `0.0765`, factor `~1.5` above the LRC threshold `1/14`). The
+**danger zone** (covering sets with `M` near `1/14`) is exactly the construction's scaled
+family. At `t* = n/Phi6` the multiples `k(n-1)` land at residue `-k` (since `n(n-1) = -1 mod
+Phi6`), so covering's forced multiple of `n-1` must be `>= n(n-1)` to be safe — the
+**forced-cover obstruction** that singles out the patch `n(n-1)`. See HYP-3792, HYP-3789.
+
+---
+
 ## The Tiling Model
 
 **Base path** P_0: the fixed path n → n−1 → ⋯ → 1.

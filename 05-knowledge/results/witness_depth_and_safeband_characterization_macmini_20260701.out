@@ -1,0 +1,36 @@
+==========================================================================================
+(2) THE EXTREMAL RESIDUE MECHANISM at t*=n/Phi6 -- general n
+==========================================================================================
+n=8: Phi6=57, t*=8/57=CF[0, 7, 8], safe-band half-width n=8
+   core 1..6 -> [8, 16, 24, 32, 40, 48]  (AP step 8); skipped 7 -> residue 56 (dist 1=DANGER)
+   patch 56 -> residue 49 (dist 8=n, safe edge); M = 8/57
+n=10: Phi6=91, t*=10/91=CF[0, 9, 10], safe-band half-width n=10
+   core 1..8 -> [10, 20, 30, 40, 50, 60, 70, 80]  (AP step 10); skipped 9 -> residue 90 (dist 1=DANGER)
+   patch 90 -> residue 81 (dist 10=n, safe edge); M = 10/91
+n=12: Phi6=133, t*=12/133=CF[0, 11, 12], safe-band half-width n=12
+   core 1..10 -> [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]  (AP step 12); skipped 11 -> residue 132 (dist 1=DANGER)
+   patch 132 -> residue 121 (dist 12=n, safe edge); M = 12/133
+n=14: Phi6=183, t*=14/183=CF[0, 13, 14], safe-band half-width n=14
+   core 1..12 -> [14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168]  (AP step 14); skipped 13 -> residue 182 (dist 1=DANGER)
+   patch 182 -> residue 169 (dist 14=n, safe edge); M = 14/183
+
+==========================================================================================
+(3) ARITHMETIC DEPTH: construction is DEEP [0;n-1,n]; restructured covering sets are SHALLOW
+==========================================================================================
+set                                    M    witness  depth q*  CF
+construction {1..12,182}          14/183     14/183     183  [0, 13, 14]
+
+==========================================================================================
+(4) DEEP-WELL ISOLATION: random covering primitive 13-sets (speeds<=60)
+==========================================================================================
+sampled 5001 covering primitive 13-sets; construction 14/183 = 0.07650; LRC threshold 1/14 = 0.07143
+  min M = 0.10778   5th pct = 0.1370   median = 0.1737
+  # below 0.10 = 0;  # below 1/14+.001 = 0
+  => bulk sits >= 0.108 (factor 1.51 above 1/14). Near-threshold covering sets are
+     NOT random -- they require the construction's arithmetic (the 182 patch reaching q=Phi6).
+
+SYNTHESIS: covering-min lower bound splits by ARITHMETIC DEPTH:
+  shallow witnesses (q*<=Q): the bulk, M>=0.108>>1/14 (lazy-cut, easy vs 1/14 slack target);
+  deep witness q*=Phi6: only the construction family reaches it (forced-cover obstruction), M>=14/183;
+  huge speeds: S73/S74/S75 (don't beat). The residue/CF-depth is the through-line.
+DONE.
