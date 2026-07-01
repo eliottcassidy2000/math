@@ -1,0 +1,26 @@
+(1) genus X0(2n) vs beater existence:
+    n= 7 2n=14 genus=1 a(n)= 2 BEATER
+    n= 8 2n=16 genus=0 a(n)= 2 BEATER
+    n= 9 2n=18 genus=0 a(n)= 4 BEATER
+    n=10 2n=20 genus=1 a(n)= 4 BEATER
+    n=11 2n=22 genus=2 a(n)= 3 BEATER
+    n=12 2n=24 genus=1 a(n)=12 construction
+    n=13 2n=26 genus=2 a(n)=13 construction
+    n=14 2n=28 genus=2 a(n)=14 construction
+    beaters (n=7..11) at genus [1, 0, 0, 1, 2] (incl 0,0!); no beaters (n=12..14) at genus [1, 2, 2]
+    => genus does NOT separate. FAIL.
+
+(2) f14 (14a) coeffs a_n: [1, -1, -2, 1, 0, 2, 1, -1, 1, 0, 0]
+    a(n) rung n=7..11 = [2, 2, 4, 4, 3] vs f14 = [1, -1, 1, 0, 0] => NO match. FAIL.
+
+(3) margin GAP construction - covering-min (n=7..11):
+    n=7: gap=5/559=0.00894
+    n=8: gap=2/285=0.00702
+    n=9: gap=5/2409=0.00208
+    n=10: gap=6/3367=0.00178
+    n=11: gap=8/3441=0.00232
+    => irregular rationals, Theta(1/n^2), abrupt 0 at n=12. No L-value pattern. FAIL.
+
+=> NO modular-forms bound on a(n). LAW: VALUE is modular (-1/12=zeta(-1), the construction, HYP-3775);
+   EXISTENCE is combinatorial (radius-1 band, klein-S60 HYP-3778). Cusp form f14 = OPEN-Q-108 proof obstruction, not a(n).
+   Rigorous transition tool = character-sum/Weil (repo's sqrt(V) peel-deviation THM-546), not modular forms.

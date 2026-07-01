@@ -13,6 +13,20 @@ AVATAR 3 -- p-ADIC. Kubota-Leopoldt zeta_p(-1)=-(1-p)/12. At the apex prime 7: z
 SYNTHESIS: three regularization avatars (archimedean -1/12, spectral eta-invariant of L(183,14), p-adic zeta_p(-1)) AGREE on the bulk, SPLIT at the apex prime 7 = the residual = the genus-1 cusp form f14. Upgrades S67's bulk/residual dichotomy to a concrete triple. PROOF-DIRECTIONS: (1) bound the margin via lens-space eta-invariant positivity + cobordism (reciprocity); (3) characterize the residual as the 7-adic/archimedean discrepancy ('wild at 7').
 
 HONEST: avatars 1-3 are exact/classical (Dedekind=lens-space eta-invariant [Hirzebruch-Zagier/APS]; Euler-Maclaurin; Kubota-Leopoldt zeta_p(-1)); the synthesis + directions are reframings, NOT closed proofs. Deepens S67 HYP-3774, no repeat. HOUSEKEEPING: filed HYP-3779 (clean). Files: 04-computation/regularization_avatars_eta_padic_macmini_20260630.py (+.out). No canon overridden, no court cases.
+## opus-2026-07-01-S8 -- The MODULAR-FORMS BOUND ON a(n) FAILS (three ways): EXISTENCE is combinatorial, VALUE is modular (HYP-3779)
+
+Prompt: work on the modular-forms bound (a cusp-form-norm bound on a(n) = how far a disordered set beats the Eisenstein construction).
+
+Tested the modular-forms bound three ways -- all NEGATIVE -- and the failure sharpens the framework. Results (HYP-3779):
+1. GENUS MISMATCH: genus X0(2n) for n=7..14 = 1,0,0,1,2,1,2,2; beaters exist at genus {1,0,0,1,2} INCLUDING genus 0 (n=8,9, no cusp form!); construction wins at genus {1,2,2} (cusp form exists yet no beater). Genus does NOT separate beater/no-beater.
+2. COEFFICIENT MISMATCH: f14 (curve 14a = eta(q)eta(q^2)eta(q^7)eta(q^14)) has a_n=1,-1,1,0,0 for n=7..11 != a(n)=2,2,4,4,3.
+3. GAP IRREGULARITY: margin gap construction-covmin = 5/559,2/285,5/2409,6/3367,8/3441 (irregular, abrupt 0 at n=12). No L-value pattern.
+
+CLEAN LAW: VALUE is modular (construction margin -> -1/12=zeta(-1), Eisenstein/E2 anomaly, HYP-3768/3774/3775 -- the ordered/AP set's value); EXISTENCE is combinatorial (whether disorder beats it = radius-1 band, klein-S60/HYP-3737/3778; beaters FINITE n=7..11, irregular rungs). klein/mac-mini's "Eisenstein bulk + cusp residual" conflated these; the test separates them. HYP-3775's Dedekind<=>interval criterion (a VALUE statement) STANDS; the "beaters=cusp" (existence) reading WITHDRAWN.
+
+The cusp form f14's real role = the OPEN-Q-108 PROOF obstruction (klein-S56, why no beater exists), NOT a(n) (at n=14 a=14 => covmin IS the pure Eisenstein construction). REDIRECT: klein's open transition-proof part (speeds>4n) is a character-sum/Weil problem (elementary Ramanujan-Petersson = repo's sqrt(V) peel-deviation THM-546), not modular forms.
+
+Integrated klein-S60 (HYP-3778, transition ILP-verified real). NEXT: (a) the character-sum/Weil bound on band-covering realizability for speeds>4n (the honest transition-proof residual); (b) is there a modular meaning to the construction's -1/12 beyond the VALUE (e.g. the E2 quasi-modularity as the reason the margin is positive = mac-mini-S67 R3, hexagonal)?; (c) OPEN-Q-108 iota-odd index = the genuine cusp obstruction.
 
 ## klein-2026-06-30-S60 -- NEW APPROACH: the COVERING-MIN TRANSITION AT n=12 IS REAL (exact ILP, verified up to speeds 4n); corrects my HYP-3764 pessimism (HYP-3778)
 
