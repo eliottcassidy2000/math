@@ -10,6 +10,21 @@ NEXT: (a) prove PoA<=4.85 via Koksma-Hlawka star-discrepancy cap (covering const
 -> HYP-3819 (mac-mini sqrt21), S18(p mod4)/S20(Gauss)/S21(field)/S23(compositum,anti-LTC), twentyeight(Fano), Koksma-Hlawka, Annals 2026 203-2(LTC).
 
 ---
+## opus-2026-07-01-S29 -- COVERING-MIN = adversarial FACILITY-LOCATION game (potential=discrepancy, AP=min-discrepancy equilibrium); sqrt21 residual = ADDITIVE-MULTIPLICATIVE obstruction (21 not a sum of 2 squares); good LTC group = PSL_2(7) (HYP-3821).
+
+Prompt: aim the LTC at PSL_2(7) w/ sqrt21 as the POCS-convergence class; hunt the non-abelian expander; use sum-of-two-squares / Koksma-Hlawka / Mahler-Popken / integer-complexity / Pochhammer as jumping-off points; reframe covering-min as an attacker-defender facility-location game + import a potential/PoA argument for inf meas.
+
+CONVERGES mac-mini-S90 (independently: Q(sqrt-3,sqrt-7), sqrt21=3*7=forbidden H; + flip-rank excess = #{SC classes |Aut|>n}=0,0,1,3) & kps-S23 (D_14=21*403 exhibits sqrt21). HYP-3819 double-claimed (opus/mac-mini).
+
+(A) FACILITY-LOCATION GAME: covering-min = min_S max_t min_v ||vt|| = defender picks covering S (runners/facilities), attacker=observer@0 picks t, payoff=its gap. POTENTIAL = star-DISCREPANCY (Koksma-Hlawka). VERIFIED AP at t=1/n = runners EQUALLY SPACED = MIN discrepancy => observer gap=1/n; higher-disc configs have a bigger gap (M>1/n). LRC extremal = min-discrepancy UNIFORM equilibrium; M>=1/n = potential floor; import PoA/Hotelling (CS6840) to bound inf meas by a discrepancy potential.
+
+(B) SUM OF TWO SQUARES = the obstruction (VERIFIED): 21=3*7 NOT sum-of-2-sq (obs 3,7 both=3mod4); 61 IS (clean); 183=3*61 not(obs 3); 403=13*31 not(obs 31)=>D_14=21*403 obs {3,7,31}. SAME FACT 4 WAYS: (21 not a^2+b^2)=(3,7=3mod4)=(narrow class Z/2, S27)=(iota-odd Gauss i sqrt p, S23). => sqrt21 residual = ADDITIVE-MULTIPLICATIVE incompatibility (21=3*7 mult. but no a^2+b^2 add.) = Mahler-Popken/integer-complexity +/x tension; =1mod4 primes (sums of 2 sq, e.g. 61) carry NO residual.
+
+(C) PSL_2(7) (VERIFIED): order 168, element orders 1,2,3,4,7 (48 order-7 + 56 order-3); 2 cuspidal 3-dim irreps carry (-1+-sqrt-7)/2 => sqrt-7 in char field; |Aut(Paley_7)|=21=7x3=Frobenius/Borel => sqrt21 crosses order-7 & order-3. LPS/quaternion Cayley graphs of PSL_2(p)=RAMANUJAN EXPANDERS => good LTC sqrt21-cert = cocycle on the LEFT-RIGHT CAYLEY COMPLEX of PSL_2(7) (LPS gens, real expander unlike abelian tiling cube S28); sqrt21=nontrivial Z/2 class; POCS/Kaczmarz (pillar A) = constructor.
+
+(D) Pochhammer=fiber fraction (1/2)_{n-2}/(n-2)! (Gamma/Wallis, iota-even far half).
+
+HONEST: two-squares + PSL_2(7) + AP-uniform-gap EXACT/classical; the facility-location potential bound + PSL_2(7)-LTC construction are pointed ROUTES (name game/potential/group/class/method), not a proof/construction. Reflection: the-covering-min-is-a-facility-location-game-and-the-residual-is-an-additive-multiplicative-obstruction-opus-20260701.md; script facility_location_sum2sq_psl27_opus_20260701.py. HYP-3821. No canon overridden.
 
 ## mac-mini-2026-07-01-S90 (cont.) -- THE FLIP-RANK EXCESS = #{SC classes with |Aut|>n} (verified n=4..7 = 0,0,1,3); + the iota-odd certificate field Q(sqrt-3,sqrt-7) with sqrt21=3*7=forbidden H (HYP-3819)
 
