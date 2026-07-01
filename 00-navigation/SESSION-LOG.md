@@ -1,3 +1,17 @@
+## opus-2026-07-01-S24 -- THE SECOND MOMENTS: LRC atom pair-correlation = SQUARED RAMANUJAN; SC-spine blue spectrum is METALLIC (golden/silver), bipartite at odd n (HYP-3816).
+
+Prompt: work the LRC atom pair-correlation (Ramanujan sums = atoms' 2nd moment) and the SC-spine blue-degree vs blue-graph spectrum.
+
+The 2nd-moment layer above S23's Lefschetz traces (1st moment).
+
+TASK 1 (LRC atoms = units (Z/N)*): 1st moment mu-hat(k)=c_N(k)=Ramanujan sum (=Lefschetz trace). 2nd moment = pair-correlation A(m)=#{unit pairs diff m}; Wiener-Khinchin A-hat(k)=|c_N(k)|^2 EXACTLY (verified N=6,10,14). N=14: A(0)=6=phi, A(even)=5, A(odd)=0 (units all ODD => diffs EVEN); |c_14(k)|^2 = flat 1 + SPIKES 36 at k=0 and k=7=N/2 (the antipode/iota frequency) => 2nd moment sees the iota-symmetry exactly.
+
+TASK 2 (SC spine = blue subgraph = half-tiling): blue-DEGREES = T-join (all ODD, T=SC), EVEN multiplicities (twin-pairing). Blue SPECTRUM BIPARTITE (symmetric about 0) for ODD n, self-looped for EVEN n (blue self-loops even-n only). Eigenvalues = QUADRATIC-IRRATIONAL METALLIC ratios: GOLDEN (1+-sqrt5)/2 at n=4, SILVER 1+sqrt2 family at n=5. Multigraph (Sum lam^2 > Sum deg at n=7: 552>512).
+
+PARALLEL (2 pillars, 1 parity, 2 arithmetics): the complement/iota odd/even parity is SHARED (atoms odd=>even-diff+iota-spike; spine bipartite-at-odd-n). But arithmetic SPLITS: Cayley spectra = cyclotomic/Gauss (roots of unity, sqrt p, S22/23); SC-spine ADJACENCY spectrum = METALLIC (degree-2, continued-fraction fixed points x=k+1/x). RESONANCE: metallic = the deep-well t*=[0;n-1,n] CF arithmetic; so spine spectrum & covering-modulus share CF/metallic arithmetic, Paley obstruction shares Gauss-sum sqrt p arithmetic = the two S23 hard-side flavors.
+
+HONEST: pair-corr=|Ramanujan|^2 EXACT; metallic clean at n=4,5, qualitative (degree-2 unnamed) n=6,7; 'spine ~ covering-CF-arithmetic' is a structural resonance. Reflection: the-second-moments-atom-pair-correlation-is-squared-ramanujan-and-the-SC-spine-spectrum-is-metallic-opus-20260701.md; scripts {lrc_atom_paircorrelation_ramanujan, sc_spine_bluedegree_vs_spectrum}_opus_20260701.py. HYP-3816. No canon overridden.
+
 ## opus-2026-07-01-S23 -- LEFSCHETZ makes the hard side easy: the BORSUK-ULAM obstruction is DUAL to GAUSS-SUM (Weil/Lefschetz) exactness -- certify the free-Z2 regime with a TRACE FORMULA, not a fixed point (HYP-3815).
 
 Prompt: tricks to make the hard side (free-Z2, p=3 mod4, Borsuk-Ulam) easier; think Lefschetz fixed-point counts.
