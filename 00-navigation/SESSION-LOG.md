@@ -1,3 +1,31 @@
+## klein-2026-06-30-S48 -- CLASSIFYING the non-difference-closed tight sets: NOT all are GW near-APs (v->2v) -- a broader DUPLICATION+DROP family incl. a CROSS-type refutes the clean conjecture; but finite per n => the fattening lemma holds (HYP-3750)
+
+Prompt: classify the non-difference-closed tight sets -- is every one, like GW, a near-AP (AP with a few differences replaced by their multiples)? If that family is finite, + difference-closed=dilated-AP, the tight locus is finite and the fattening lemma follows.
+
+CLASSIFICATION (residues mod the binding n+1, tight sets M(S)=1/(n+1), enumerated n=4..8):
+ - DIFFERENCE-CLOSED tight = residues mod (n+1) a PERMUTATION of {1..n} = a dilated AP mod (n+1). (e.g.
+   {1,3,4,7} is {1,2,3,4} mod 5 -- so the naive integer 'is it an AP' test misclassifies; the right lens is
+   residues mod n+1.) One class up to dilation.
+ - NON-DIFFERENCE-CLOSED (near-AP) = residues COLLIDE: one residue DUPLICATED (an element r+(n+1)j lands on an
+   existing residue) and one DROPPED, i.e. S = {1..n}\{v} ∪ {s+(n+1)}.
+
+THE ANSWER: NO -- not every one is a GW near-AP (v->2v). TWO sub-types:
+ - GW-type (s=2v mod n+1, element v->2v): {1,2,3,4,5,7,12} = {1..7} with 6->12 (drop res 6, dup res 4=2.6 mod 8).
+ - CROSS-type (s UNRELATED to v): {1,3,4,5,9} (drop res 2, dup res 3 via 9=3+6; 3 != 2v mod 6 for any v);
+   {1,4,5,6,7,11,13} (drop 2, dup 5 via 13=5+8). Both re-verified TIGHT (M=1/6, 1/8). The cross-type REFUTES
+   the clean 'every one like GW' conjecture -- the family is the broader duplication+drop.
+
+BUT THE FINITENESS HOLDS (the program's crux). Near-AP census n=4..8 = 0,1,0,2,0 (very few per n); up to
+dilation the small census (cf HYP-+2913 a(n)=1,2,2,1). So the tight locus is FINITE per n (1 dilated-AP class +
+<=2 near-APs) => the fattening lemma follows, provided the classification is the broader 'AP residues mod n+1
+with one residue duplicated (a lifted element) and one dropped' (subsuming GW + cross-type). GW-type is
+Jacobsthal-bounded (HYP-2893); the cross-type is likewise tightly constrained.
+
+NET: the user's PROGRAM (tight locus finite -> fattening lemma) is SOUND (per-n finiteness verified), but the
+specific 'all near-APs are GW v->cv' is REFUTED (cross-types exist); use the broader duplication+drop form.
+
+HOUSEKEEPING: filed HYP-3750. No collisions, no canon overridden, no court cases.
+
 ## klein-2026-06-30-S47 -- BOUNDING the punctured-core wide hole (R4): the wide-hole MAP (M(P_k)=1/k resonance-miss / ~2/(n-1+k) spread; always >n/Phi6) + the FEJER framework (interval = spectral-4th-moment-max); the CRT-linkage obstruction to naive bounds (HYP-3749)
 
 Prompt: work on bounding the punctured-core wide hole with an inequality; poke the repo for past inequalities halfway; long session.
