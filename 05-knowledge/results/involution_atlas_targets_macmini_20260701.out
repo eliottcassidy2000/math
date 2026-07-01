@@ -1,0 +1,8 @@
+mac-mini-S88 -- next targets worked:
+(A) Phi6 vs half-tiling dim: Phi6 = 4*floor((n-1)^2/4) + (n+1) for EVEN n [n=14: 4*42+15=183]; = 4*h + n for ODD n.
+    => Phi6 ~ 4 * (half-tiling dim). Triangle(~n^2/2) --fold--> quarter-square half-tiling(~n^2/4);
+    Phi6(~n^2) = the UNFOLDED full square = 4x = TWO folds. Covering-min modulus = double-fold of the half-tiling.
+(B) LRC SPECTRAL TWINS EXIST (n=8, r=1/8, 1300 covering 7-sets): 46 coarse-classes (same M + gcd-profile)
+    with >=2 distinct sets -- ALL 46 spectrally DISTINCT, 0 cospectral. => the danger-Gram (D D^T) spectrum
+    ALWAYS separates coarse-identical covering sets = the LRC analog of the tournament spectral twins (S86).
+    Grounds HYP-3813 Bridge 2 next-target.
