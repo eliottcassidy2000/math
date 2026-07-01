@@ -9,6 +9,19 @@ Reflection: the-half-tiling-is-an-abelian-square-complex-the-metagraph-is-an-ant
 -> THM-584 (complement=antipode, Kaczynski toolkit), HYP-3796 (Kaczmarz), even-graph-equinumerosity (Tutte), S14-19 (reconstruction/anti-LTC), S16 (quarter tiling), S20-22 (Gauss/Alexander), Annals 2026 203-2 (Dinur LTC).
 
 ---
+## opus-2026-07-01-S28 -- the HALF-TILING is the sigma-fixed DIAGONAL of a LEFT-RIGHT square complex, but ABELIAN => degenerate LTC; the good code lives on PSL_2(7); Kaczmarz/POCS=left-right alternation; Alexander duality verified (HYP-3820).
+
+Prompt: chase the LTC lead (half-tiling square complex = left-right Cayley complex?); consider the quarter/new relations; think Alexander duality + Kaczmarz(POCS) + locally-testable codes.
+
+STRONG CONVERGENCE kind-pasteur-S23: they independently got g_3*g_7=-sqrt21 in Q(sqrt-3,sqrt-7) AND EXHIBITED sqrt21 in the deep-well discriminant D_14=21*403 (=my earlier CF disc n(n-1)(n^2-n+4)/4; 14*13*186/4=8463=21*403) -- the concrete 'exhibiting sqrt21' I was contemplating! (also matches: sqrt21|sqrt(D_14).) Same 3 links (kps IDs the CS6840 lecture as Hotelling game). My S28 complements w/ the square-complex/LTC verdict + Kaczmarz + Alexander.
+
+SQUARE COMPLEX (verified n=4,5,6): tiling cube (Z/2)^m carries Z/2xZ/2=<flip,sigma> (flip=complement-tiling=LEFT, sigma=grid-reflection=RIGHT, commute) => SQUARES {t,flip t,sigma t,flip sigma t}; #squares=2^(m-2)-2^(D-2)(=1,12,240), #lines(size2)=2^(D-1)(=2,8,32)=BLUE lines(sigma-fixed); sigma-fixed=2^D=half-tiling; 4sq+2ln=2^m. => BLACK=free Z/2xZ/2 squares, BLUE=the sigma-fixed DIAGONAL=half-tiling.
+
+LTC VERDICT (honest): left-right in SHAPE but NOT a good LTC -- group ABELIAN (Z/2)^m (left=right collapses) + singleton gens A={flip},B={sigma} => trivial links, no local codes (sigma=automorphism not translation). => the good locally-testable sqrt21-certificate should live on the NON-ABELIAN heptagon group PSL_2(7) (the 7 in N=14; order 168; |Aut(Paley_7)|=21=its Frobenius/Borel); sqrt21=narrow-Z/2 (S27)=the nontrivial cohomology class. SHARPENING: LTC on PSL_2(7), not the tiling cube.
+
+KACZMARZ/POCS = the left-right alternation (mac-mini pillar A) = the CONSTRUCTIVE face building the certificate the cohomology defines; local testability = checkable square-by-square. ALEXANDER DUALITY (verified AP n=5,7,14): b0(lonely)=b0(danger) on S^1 = the iota-complementarity (kps-S22). QUARTER: no GEOMETRIC 2nd fold (S20 D_1); kps double-complement quarter=modular not tile reflection.
+
+HONEST: square complex + Alexander EXACT; 'good LTC=PSL_2(7) left-right complex carrying sqrt21' is a pointed ROUTE (names group+class+method), not a construction. Reflection: the-halftiling-is-the-sigma-fixed-diagonal-of-a-leftright-square-complex-abelian-so-not-yet-a-good-LTC-opus-20260701.md; script halftiling_leftright_square_complex_alexander_opus_20260701.py. HYP-3820. No canon overridden.
 
 ## kind-pasteur-2026-07-01-S23 -- THE COMPOSITUM CERTIFICATE LOCALIZES: g_3*g_7 = -sqrt21 in Q(√-3,√-7) (real quadratic Q(sqrt21), NOT degree 4); sqrt21 = (LRC6 cert)x(LRC14 cert), exhibited in deep-well D_14=21*403; + 3 external leads (LTC/Cayley, Hotelling game, pipeline-math)
 
