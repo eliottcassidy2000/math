@@ -10,6 +10,21 @@ Reflection: the-compositum-certificate-localizes-to-sqrt21-and-three-external-le
 -> OPEN-Q-108, S20/S21/S22 (Lefschetz/field-split/cohomology), HYP-3815/3816, reconstruction thread S14-19.
 
 ---
+## opus-2026-07-01-S27 -- THE NEXT STEP: OPEN-Q-108 residual = the NARROW-CLASS Z/2 of Q(sqrt21); exhibiting sqrt21 = a LEFT-RIGHT CAYLEY-COMPLEX cocycle (Annals LTC link) (HYP-3819).
+
+Prompt: compute the next step in the iota-odd certificate in Q(sqrt-3,sqrt-7); contemplate exhibiting sqrt21 in the covering-min certificate; assess 3 external links.
+
+CONVERGES kind-pasteur-S22 (cohomological three-distance: lonely set=H^0, complementarity=Alexander duality, iota-odd=Gauss cert, sqrt21=CERTIFICATION-program residual NOT the census crux). My S25-27 = same thread; kps's Alexander-duality sharpens my chi(lonely set) (S25); we agree sqrt21 is the certificate residual.
+
+NEXT STEP (verified, past the Gauss sums = units/genus of the bridge field): Q(sqrt21) fundamental unit (5+sqrt21)/2 has NORM +1 => neg-Pell unsolvable => NARROW class# = 2*wide = residual Z/2; genus disc=21=3*7 (two ramified =3mod4) => narrow 2-rank=1 => Cl+ contains Z/2. Q(sqrt3),Q(sqrt7): norm+1 (Z/2 each); Q(sqrt61): norm -1 (CLEAN). => obstruction concentrates on iota-odd 3*7=21, vanishes on iota-even 61. So RESIDUAL = narrow-class Z/2 of Q(sqrt21) = ideal-class realization of the OPEN-Q-108 Z/2 Borsuk-Ulam odd index (THM-582); narrow group = iota-graded refinement, narrow-Z/2 = iota-odd degree.
+
+Hasse-Davenport: g_2(chi_p)=-(i sqrt p)^2=+p (iota-odd i sqrt p lifts to even prime p; sqrt21=cross sqrt(3*7)). COMPOSITUM: sqrt-7 in Q(zeta_14)(tight AP), sqrt-3 in Q(zeta_183)(covering) => sqrt21 in Q(zeta_2562) (needs BOTH).
+
+EXHIBIT sqrt21: the covering-min certificate = a 2-COCYCLE (cup of i sqrt3 & i sqrt7 1-cocycles) on the LEFT-RIGHT CAYLEY COMPLEX of Z/2xZ/2=Gal(Q(sqrt-3,sqrt-7)) (two involutions: antipode + QR-negation); sqrt21 = nontrivial locally-testable class; read via chi(lonely set)/far-element.
+
+3 LINKS: (1) CS6840 Alg Game Theory (Brouwer/Nash + SOS-for-games) = fixed-point/cert toolkit (HYP-3814), tangential; (2) **Annals 203-2 p.03 'Good LTCs' via LEFT-RIGHT CAYLEY COMPLEXES = DEEP** = the certifying-cohomology(S25)+Cayley(S22) machinery (Cayley complex cohomology = locally-testable code); the tool to CONSTRUCT the sqrt21 cocycle; (3) github pipeline-math (GPT+Lean prover-verifier, tiling complements) = methodological.
+
+HONEST: class-field arithmetic exact/classical; 'covering-min cert = Cayley-complex cocycle, sqrt21=narrow-Z/2' is a sharpened ROUTE not a construction; LTC link substantive, AGT tangential. Backlog updated w/ 3 links. Reflection: the-residual-is-the-narrow-class-Z2-of-Q-sqrt21-*; script biquadratic_narrow_class_group_residual_opus_20260701.py. HYP-3819. No canon overridden.
 
 ## kind-pasteur-2026-07-01-S22 -- COHOMOLOGICAL THREE-DISTANCE: the lonely set is H^0, complementarity = ALEXANDER DUALITY (b_0(L_C)=b_0(danger)), ι-odd part = the Gauss certificate; and the sqrt21 bridge IS the CERTIFICATION-program residual, NOT the classical census crux
 
