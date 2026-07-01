@@ -15,6 +15,23 @@ FOUR new angles (all exact-Fraction / grid-verified), synthesizing S64-S76 into 
 PROOF MAP this enables (LRC14-covering <=): [1 shallow/bulk: q*<=Q bounded, M>=0.108>1/14, lazy-cut vs the 1/14 slack target] + [2 construction family: deep q*=Phi6 scaled, M>=14/183>1/14, S73 scaling closed] + [3 huge speeds: don't beat, S74/S75, <=6-huge rigorous]. The residue/CF-depth is the through-line; beaters would need the deep q=Phi6 locus, blocked by the forced-cover obstruction except for the construction.
 
 HONEST: a CHARACTERIZATION synthesis (converts 'reframe' -> concrete finite target + strategic slack lever + exact structural reason for the extremum); the for-all-covering-S band-dodging EXISTENCE is still the open core (cases 1,3 residuals). New DEFINITIONS added to 01-canon/definitions.md (binding witness/rational form, safe-band residue system, arithmetic depth/CF signature, deep-well isolation, forced-cover obstruction). Reflection: the-skip-and-patch-is-forced-by-the-band.md. HOUSEKEEPING: resolved HYP-3789 3-way collision -- I committed HYP-3789 (moment relaxation, S76) 13min before klein-S67's dup; renamed klein-S67 -> HYP-3791 (kps-S6 consensus already treats 3789 as mine). Files: 04-computation/witness_depth_and_safeband_characterization_macmini_20260701.py(+.out). No canon overridden, no court cases.
+## kind-pasteur-2026-07-01-S7 -- THE FLAT-EXTENSION MOMENTS ARE RAMANUJAN SUMS; THE 11-CENSUS IS ORGANIZED BY (Z/N)*; ζ IS THE UNIT-RESTRICTED DIRICHLET DENOMINATOR (HYP-3792)
+
+Prompt: "work on improving our understanding of the census and the Caratheodory-Toeplitz flat-extension and search back work for inspiration thoroughly, considering the reimann zeta function and modular multiplication related ideas specifically."
+
+WHAT I DID. Three thorough search-back Explore agents (census/tight-locus; Toeplitz/OPUC/moment; zeta/modular) + two verified computation scripts. SIX exact findings (HYP-3792):
+ (1) AP core {1..N-1} covering-min MAXIMIZERS = (Z/N)* EXACTLY (N=12,13,14 -> phi=4,12,6 atoms). HYP-3789's flat-extension atoms are literally the UNITS.
+ (2) The flat-extension moment matrix of that atomic measure IS the RAMANUJAN-SUM Toeplitz matrix [c_N(j-l)], c_N(k)=sum_{a in (Z/N)*} e(ak/N); rank=phi(N) EXACTLY; muhat(k)=c_N(k) matches the multiplicative formula.
+ (3) ZETA: sum_N c_N(k)/N^s = sigma_{1-s}(k)/zeta(s) (verified). The Riemann zeta function is the DENOMINATOR of the unit-restricted Dirichlet series = EXACTLY the unit-restricted density THM-503(4) left UNTESTED. REFINES (not contradicts) THM-503: L(archimedean) no Euler product, but the atomic SKELETON moments (the (Z/N)* set) are multiplicative Ramanujan sums carrying 1/zeta. Modular=skeleton, archimedean=collar widths.
+ (4) CENSUS-BY-MODULAR-STRUCTURE: 78 cores {1..13}\{i,j} sort by meas, each labelled by its (Z/N)*; MIN = full-orbit (Z/10)* {1..13}\{6,10} (313/9702), runner-up = partial-orbit (Z/19) two-clash (0.03238) = 11-speed echo of THM-523 {AP, Goddyn-Wong}.
+ (5) COLLAR = MODULAR INVERSE: binding runner at atom a/N has speed v=a^{-1} mod N; meas=sum over units of widths set by the modular inverse = Dedekind-shaped (kin to HYP-3773 margin -> -1/12 = zeta(-1)).
+ (6) OPUC/VERBLUNSKY (fills repo gap): all |alpha_k|<1 (PD/valid); extremizer near-atomic (|a_5,9,11|~0.92-0.98, Szego prod 1e-5) vs fatter {1..11} (max 0.65, prod 0.19) = a tightness thermometer; minimize meas <=> maximize atomicity.
+HONEST: verified identities + organizing principle (WHY extremizer=(Z/10)*), NOT a proof of inf meas>=1/36. Census still a search over 2-drops of {1..13}; modular labels split near-tight locus into {full orbit, two-clash} but don't yet bound all 11-cores.
+NEXT: prove the {full-orbit,two-clash} dichotomy exhaustive (a la THM-523 finiteness, band 1/14, 11 speeds; THM-522 bounds to scale-1), evaluate both families closed-form, check >=1/36.
+FILES: scripts lrc14_census_toeplitz_ramanujan_kps.py + lrc14_census_modular_verblunsky_kps.py (+.out); reflection the-flat-extension-moments-are-ramanujan-sums-the-census-is-modular-kps.md; HYP-3792 (+ detail file). Reserved HYP-3792 (no collision). Preserved codex Lean leftover.
+-> HYP-3789, HYP-3773, THM-503, THM-501/515, THM-523, THM-560, THM-522, HYP-3762, OPEN-Q-108.
+
+---
 
 ## kind-pasteur-2026-07-01-S6 -- NICHE-INSPIRATION FINISH SWEEP + HONEST MARGIN CORRECTION: the reduced target inf meas(L_C)>=1/36 over 11-cores is TIGHT (1.16x, extremizer {1..13}\{6,10}), NOT an 87% freebie; the three sharp finish-tools I ranked CONVERGE with concurrent HYP-3787/3789/3790
 

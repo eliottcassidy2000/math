@@ -1,0 +1,69 @@
+==============================================================================================
+ PART 1  AP CORE MAXIMIZERS = (Z/N)*  (modular multiplication; #atoms=phi(N))
+==============================================================================================
+  S={1..11}: M=1/12=0.08333; #atoms=4; denoms=[12]
+     atoms=['1/12', '5/12', '7/12', '11/12']
+     (Z/12)* = [1, 5, 7, 11] (phi=4);  atoms == units/12?  True
+  S={1..12}: M=1/13=0.07692; #atoms=12; denoms=[13]
+     atoms=['1/13', '2/13', '3/13', '4/13', '5/13', '6/13', '7/13', '8/13', '9/13', '10/13', '11/13', '12/13']
+     (Z/13)* = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] (phi=12);  atoms == units/13?  True
+  S={1..13}: M=1/14=0.07143; #atoms=6; denoms=[14]
+     atoms=['1/14', '3/14', '5/14', '9/14', '11/14', '13/14']
+     (Z/14)* = [1, 3, 5, 9, 11, 13] (phi=6);  atoms == units/14?  True
+
+==============================================================================================
+ PART 2  FLAT-EXTENSION MOMENT MATRIX = RAMANUJAN-SUM TOEPLITZ  (rank=phi(N))
+==============================================================================================
+  N=12 phi=4: (W=4) Toeplitz rank=4  (flat if =phi)  min|nonzero eig|=2.000
+  N=12 phi=4: (W=6) Toeplitz rank=4  (flat if =phi)  min|nonzero eig|=6.000
+  N=12 phi=4: (W=8) Toeplitz rank=4  (flat if =phi)  min|nonzero eig|=6.000
+     muhat(k) k=0..11 = [4, 0, 2, 0, -2, 0, -4, 0, -2, 0, 2, 0]
+     c_12(k)  Ramanujan = [4, 0, 2, 0, -2, 0, -4, 0, -2, 0, 2, 0]   match=True
+  N=14 phi=6: (W=6) Toeplitz rank=6  (flat if =phi)  min|nonzero eig|=1.000
+  N=14 phi=6: (W=8) Toeplitz rank=6  (flat if =phi)  min|nonzero eig|=7.000
+  N=14 phi=6: (W=10) Toeplitz rank=6  (flat if =phi)  min|nonzero eig|=7.000
+     muhat(k) k=0..13 = [6, 1, -1, 1, -1, 1, -1, -6, -1, 1, -1, 1, -1, 1]
+     c_14(k)  Ramanujan = [6, 1, -1, 1, -1, 1, -1, -6, -1, 1, -1, 1, -1, 1]   match=True
+
+==============================================================================================
+ PART 3  RAMANUJAN <-> ZETA:  sum_N c_N(k) N^-s = sigma_{1-s}(k)/zeta(s)
+==============================================================================================
+  s=2.0 k= 1:  sum_N c_N(k)/N^s = 0.607927   sigma_{1-s}(k)/zeta(s) = 0.607929   match=True
+  s=2.0 k= 6:  sum_N c_N(k)/N^s = 1.215852   sigma_{1-s}(k)/zeta(s) = 1.215858   match=True
+  s=2.0 k=12:  sum_N c_N(k)/N^s = 1.418496   sigma_{1-s}(k)/zeta(s) = 1.418501   match=True
+  s=3.0 k= 1:  sum_N c_N(k)/N^s = 0.831907   sigma_{1-s}(k)/zeta(s) = 0.831907   match=True
+  s=3.0 k= 6:  sum_N c_N(k)/N^s = 1.155427   sigma_{1-s}(k)/zeta(s) = 1.155427   match=True
+  s=3.0 k=12:  sum_N c_N(k)/N^s = 1.213198   sigma_{1-s}(k)/zeta(s) = 1.213198   match=True
+  => the Riemann zeta function enters as the DENOMINATOR of the Ramanujan (unit-restricted) Dirichlet
+     series. THM-503: L(archimedean) has NO Euler product; the UNIT-RESTRICTED atomic moments DO.
+
+==============================================================================================
+ PART 4  NEAR-TIGHT 11-CORE EXTREMIZER {1..13}\{6,10}: perturbed (Z/N)* atoms
+==============================================================================================
+  S=[1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13]
+     M=1/10=0.10000 (>1/14=True); #atoms=4 denoms=[10]
+     atoms=['1/10', '3/10', '7/10', '9/10']
+     meas(L_C @1/14)=313/9702=0.03226; #collars=8
+  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+     M=1/12=0.08333 (>1/14=True); #atoms=4 denoms=[12]
+     atoms=['1/12', '5/12', '7/12', '11/12']
+     meas(L_C @1/14)=10931/194040=0.05633; #collars=14
+  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+     M=1/13=0.07692 (>1/14=True); #atoms=12 denoms=[13]
+     atoms=['1/13', '2/13', '3/13', '4/13', '5/13', '6/13', '7/13', '8/13', '9/13', '10/13', '11/13', '12/13']
+     meas(L_C @1/14)=6617/194040=0.03410; #collars=12
+
+==============================================================================================
+ PART 5  CENSUS: collar volume = sum over atoms of width set by binding slopes
+==============================================================================================
+  extremizer collars (lo,hi,width) around each maximizer:
+    [  15/154,  13/126] w=0.00577  center~0.1003
+    [  29/182,    9/56] w=0.00137  center~0.1600
+    [  29/168,  27/154] w=0.00271  center~0.1740
+    [   29/98,  55/182] w=0.00628  center~0.2991
+    [ 127/182,   69/98] w=0.00628  center~0.7009
+    [ 127/154, 139/168] w=0.00271  center~0.8260
+    [   47/56, 153/182] w=0.00137  center~0.8400
+    [ 113/126, 139/154] w=0.00577  center~0.8997
+  TOTAL meas=0.03226=313/9702 ; 1/36=0.02778 ; margin=1.161x
+DONE.
