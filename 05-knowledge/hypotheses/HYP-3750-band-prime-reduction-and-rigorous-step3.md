@@ -1,14 +1,15 @@
 ---
 id: HYP-3750
-title: TWO rigorous results toward the LRC14 lower bound. (A, MINOR THEOREM PROVEN) THE BAND-PRIME REDUCTION -- LRC14 <=> M(S)>=1/14 for every covering 13-set that is a +-transversal-OR-multiple modulo EACH of the band primes {17,19,23}; every other covering set has M>=2/23>1/14 (rigorous corollary of the klein-S42 radius-1 witness theorem). The band primes are EXACTLY the primes in (n, 2n*183/14 ~ 26.1] that exceed n=14; primes p<=13 are satisfied FREE (covering => a multiple of p). (B, STEP 3 MADE RIGOROUS) klein-S45's hand-wavy budget step ("the n-1 budget leaves ~1 slot, forcing a CRT band-coverer", verified by exhaustive search) is replaced by: (i) the (T_p) reformulation [rigorous]; (ii) PATCH IDENTIFICATION -- a missing core speed k breaks the pair {k,p-k} mod p for p in (12+k,25], whose only patch is a speed =+-k mod p that is LARGE (>= p-k >= 13) [rigorous]; (iii) the CARDINALITY FLOOR -- no multiple of 23 => >=11 speeds in distinct pairs mod 23 (each speed lies in exactly ONE pair), so |S|>=11 with <=2 spare, TIGHT at the construction (residues 1..12,21 mod 23) [rigorous]. THEN the decisive negative result: a SINGLE huge CRT speed (w=0 mod 182, w=+-k mod 17*19*23) satisfies ALL large-speed obligations at once, so the cardinality lower bound on |S| is EXACTLY 11 and never reaches 14 -- COUNTING CANNOT CLOSE STEP 3. The entire residual is therefore Step 4 (does that CRT patch dig an M-hole) = HYP-3745 (perturbation-proved) / multi-family inexhaustibility (HYP-3749) = the LRC14 lower bound. NET: removes the exhaustive search from Steps 1-3 (now a clean reformulation) and PROVES the difficulty is residue-structural, not budgetary -- localizing 100% of LRC14 to one statement about the +-k CRT patch.
+title: TWO rigorous results toward the LRC14 lower bound. (A, MINOR THEOREM PROVEN) THE BAND-PRIME REDUCTION -- LRC14 <=> M(S)>=1/14 for every covering 13-set that is a +-transversal-OR-multiple modulo EACH of the band primes {17,19,23}; every other covering set has M>=2/23>1/14 (rigorous corollary of the klein-S42 radius-1 witness theorem). The band primes are EXACTLY the primes in (n, 2n*183/14 ~ 26.1] that exceed n=14; primes p<=13 are satisfied FREE (covering => a multiple of p). (B, STEP 3 MADE RIGOROUS) klein-S45's hand-wavy budget step ("the n-1 budget leaves ~1 slot, forcing a CRT band-coverer", verified by exhaustive search) is replaced by: (i) the (T_p) reformulation [rigorous]; (ii) PATCH IDENTIFICATION -- a missing core speed k breaks the pair {k,p-k} mod p for p in (12+k,25], whose only patch is a speed =+-k mod p that is LARGE (>= p-k >= 13) [rigorous]; (iii) the CARDINALITY FLOOR -- no multiple of 23 => >=11 speeds in distinct pairs mod 23 (each speed lies in exactly ONE pair), so |S|>=11 with <=2 spare, TIGHT at the construction (residues 1..12,21 mod 23) [rigorous]. THEN the decisive negative result: a SINGLE huge CRT speed (w=0 mod 182, w=+-k mod 17*19*23) satisfies ALL large-speed obligations at once, so the cardinality lower bound on |S| is EXACTLY 11 and never reaches 14 -- COUNTING CANNOT CLOSE STEP 3. The entire residual is therefore Step 4 (does that CRT patch dig an M-hole) = HYP-3745 (perturbation-proved) / multi-family inexhaustibility (HYP-3752) = the LRC14 lower bound. NET: removes the exhaustive search from Steps 1-3 (now a clean reformulation) and PROVES the difficulty is residue-structural, not budgetary -- localizing 100% of LRC14 to one statement about the +-k CRT patch.
 status: TASK A (reduction) PROVED -- rigorous corollary of the witness theorem; verified (243 not-(T_p) covering sets, 0 violations; construction is a triple band-transversal). TASK B: the (T_p) reformulation, patch identification, and cardinality floor are RIGOROUS; the tightness (cardinality min = 11, one CRT speed serves all large obligations) is PROVED by explicit CRT construction -- so the residual is provably NOT cardinality but Step 4. Does NOT prove LRC14; it REDUCES it (cleanly) and localizes the residual.
 source: mac-mini-2026-06-30-S61
 depends_on:
   - HYP-3741   # klein-S42 radius-1 witness theorem (PROVED): no runner in {-1,0,1} mod p at some rotation => M>=2/p
 related:
   - HYP-3747   # klein-S45 the full lowness lemma 4-step chain (this makes its Step 3 rigorous + localizes the residual to Step 4)
+  - HYP-3748   # klein-S46 rigorizing Step 3 (|L|=2 normal form + bounded finite grid check) -- CONVERGENT, complementary decomposition
   - HYP-3745   # klein-S44 CRT escape uncoverable / fused-radius trap (= Step 4, the now-sole residual; perturbation-proved)
-  - HYP-3749   # mac-mini-S60 multi-family inexhaustibility (= Step 4 for arbitrary patch = the residual)
+  - HYP-3752   # mac-mini-S60 multi-family inexhaustibility (= Step 4 for arbitrary patch = the residual)
   - HYP-3740   # the lowness lemma (mac-mini, exhaustive-search verification this partially de-randomizes)
 results:
   - 04-computation/lrc14_band_reduction_step3_rigorous_macmini_20260630.py
@@ -74,18 +75,31 @@ witnesses, since `min_v ||v a/D||` depends only on residues mod `D`. It fails: t
 every `k`). So no `D <= 30` certificate proves the lowness lemma; the binding witness of a well-chosen
 completion sits at `D > 30` ("the hole moves but never vanishes," klein-S44) and the required `D` is
 **unbounded**. This confirms the residual is irreducibly about **unbounded moduli** -- exactly the multi-family
-inexhaustibility (HYP-3749) -- not any finite check.
+inexhaustibility (HYP-3752) -- not any finite check.
 
 ## What this buys -- the residual is localized
 The entire remaining difficulty is whether the forced `±k` CRT patch digs an `M`-hole above `14/183` -- i.e.
 **Step 4** (klein-S45), `=` HYP-3745 (CRT-escape uncoverable, perturbation-proved) `=` multi-family
-inexhaustibility (HYP-3749) for an arbitrary patch. Steps 1-3 are now a clean reformulation with **no search**;
+inexhaustibility (HYP-3752) for an arbitrary patch. Steps 1-3 are now a clean reformulation with **no search**;
 the difficulty is **residue-structural, not budgetary**, and 100% of LRC14 sits in one statement:
 
 > *The `±k` CRT band-patch forced by a missing core speed satisfies `M(S) >= 2/(2n-3) > n/Phi_6`.*
 
 This both gives a genuine **minor theorem** (the band reduction) and tells the team precisely where to spend
 effort: **not** on the budget (provably hopeless) but on the patch's hole (Step 4 for general `S`).
+
+## Convergence with klein-S46 (HYP-3748)
+klein-S46 attacked the same Step 3 from the complementary side: a `|L|=2` **normal form** (max small core minus
+`k` + 2 large speeds) reduces the exhaustive search to a **2-parameter** problem, whose **bounded** case
+(`kappa, w <= T`) is a finite rigorous grid check (verified `n=14`, tightest `k=12 -> 7/89`), leaving the
+**unbounded** case to HYP-3745. The two results fit together: klein's R3 handles bounded large speeds *with the
+core present*; his residual is R1 (why the core-present normal form is WLOG) and R4 (unbounded). My results
+supply exactly the missing rigor around his residual: the **cardinality floor** shows the core-present normal
+form is *not* forced by counting (so R1 is a genuine gap, not a formality), and the **two negatives** (a single
+CRT speed defeats any budget count; 2 speeds defeat any finite-`D` witness list) prove his R4 cannot be closed
+by a *finite* certificate -- the unbounded case is irreducibly Step 4. Together: bounded case = finite check
+(klein); the reason the unbounded case resists finitization = the two negatives (here); both point to the same
+sole residual.
 
 ## Honest scope
 Task A is a complete rigorous reduction (corollary of the proved witness theorem). In Task B, items 1-3 are

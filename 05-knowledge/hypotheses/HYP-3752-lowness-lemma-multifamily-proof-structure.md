@@ -1,10 +1,10 @@
 ---
-id: HYP-3749
+id: HYP-3752
 title: Working the LOWNESS-LEMMA proof -- the witness families are MULTIPLE, and speed 1 is the universal gap-filler. Missing speed 1 leaves the speed-1 slot empty at a WHOLE ENSEMBLE of witness families, not just the t_a family (HYP-3745): the a=1 witness (t=1/15, M=2/15), the t_a family (t=a/(14a+1), M=2a/(14a+1)), the D=16 witness (t=1/16, M=1/8), ... Each family is killed only by a speed of a SPECIFIC residue (the a=1 gap by =±1 mod 15; D=16 by =±1 mod 16; t_a by the q=14-coverer 14m, which fills t_a for a>m/2). SPEED 1 has residue 1 at EVERY modulus, so it fills the gap in ALL families simultaneously -- which is exactly why the construction (WITH speed 1) reaches 14/183. A missing-1 set's forced q-coverers kill SOME families but SPAWN others (e.g. speed 14 = a q=14-coverer kills the entire t_a family but fires the D=16 witness, M=1/8). WINDOW LEMMA: a single speed w fills the gap of a given family only on a bounded-ratio window of rotations (asymptotically a in (m0/(s+2), m0/(s-2)), s=w mod 14, ratio <=5 for s>=3), so it cannot cover a wide rotation range. VERIFIED (no overturn): every missing-1 set has M>14/183 (min ~1/8 to 2/17; {2..14}=1/8, {2..12,13,182}=2/15, {2..12,15,182}=2/17). So the lemma HOLDS; the full proof reduces to MULTI-FAMILY INEXHAUSTIBILITY (no single replacement speed covers the whole family ensemble) = the LRC14 lower bound
 status: STRUCTURE MAPPED + verified TRUE (no overturn). The multi-family witnesses, the speed-1 universal-filler mechanism, and the window lemma are exact/verified; every tested missing-1 set has M>14/183. The full proof (the family ensemble is inexhaustible by one speed, for ALL covering sets) is the LRC14 lower bound -- OPEN. This session refines HYP-3745 (the t_a family was ONE of the ensemble; speed 14 kills it but another fires) and confirms the lemma is not overturnable.
 source: mac-mini-2026-06-30-S60
 related:
-  - HYP-3748  # my S59: the t_a witness family (this refines it -- one family of the ensemble; killing it spawns another)
+  - HYP-3751  # my S59: the t_a witness family (this refines it -- one family of the ensemble; killing it spawns another)
   - HYP-3745  # klein-S44 CRT-escape uncoverable / fused-radius trap + the PROVED CRT-invariant counting bound (=2r+1 rotations per speed, regardless of value) = the rigorous window lemma
   - HYP-3744  # the constant-residue principle (speed 1's residue 1 at every modulus = the universal gap-filler, here dynamic over families)
   - HYP-3740  # the LRC14 hard core = the lowness lemma (this maps its proof structure)
@@ -14,10 +14,10 @@ results:
   - 05-knowledge/results/lowness_lemma_multifamily_macmini_20260630.out
 ---
 
-# HYP-3749 -- the lowness lemma's proof structure: multiple witness families, speed 1 the universal filler
+# HYP-3752 -- the lowness lemma's proof structure: multiple witness families, speed 1 the universal filler
 
 Working toward a proof of the lowness lemma (`M(S) <= n/Phi_6 => {1,..,n-2} \subseteq S`, the LRC14 hard core,
-HYP-3740). My S59 `t_a` family (HYP-3748) is only ONE of an ensemble; mapping the ensemble both clarifies the
+HYP-3740). My S59 `t_a` family (HYP-3751) is only ONE of an ensemble; mapping the ensemble both clarifies the
 proof and shows the lemma is not overturnable. **Convergent independent work:** klein-S44 (HYP-3745) reached the
 same "CRT escape uncoverable" conclusion from the construction's local rigidity (the *fused-radius trap*) and --
 crucially -- **proved** the counting bound my window lemma needed (see below).

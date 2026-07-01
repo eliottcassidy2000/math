@@ -40,5 +40,5 @@ insufficient.** Spend it on Step 4 for a *general* `±k` patch (not just multipl
 speed congruent to `±k` at a band prime cannot simultaneously stay far from `0` at every modulus the missing
 core speed vacates. That is where the whole problem now sits.
 
-*See [[HYP-3750]], [[HYP-3749]] (multi-family), [[HYP-3745]] (the CRT patch / Step 4), and the recurring
+*See [[HYP-3750]], [[HYP-3752]] (multi-family), [[HYP-3745]] (the CRT patch / Step 4), and the recurring
 "measure vanishes, existence carries it" motif of [[we-were-rehearsing-the-bulk-the-proof-is-at-the-cusp]].*
