@@ -1,0 +1,14 @@
+ROTATIONAL {1,2,3}: |Aut|=7 (automorphisms), |SC-witnesses|=7 (converse-isos)
+   self-complementary (SC = T ~ T^op)? True   full 'dihedral' group |Aut|+|SC| = 14
+PALEY/QR {1,2,4}: |Aut|=21 (automorphisms), |SC-witnesses|=21 (converse-isos)
+   self-complementary (SC = T ~ T^op)? True   full 'dihedral' group |Aut|+|SC| = 42
+
+   iota=(k->6-k) is an SC-witness for rotational? True
+   => Aut=C_7 (rotations preserve), reflections REVERSE (anti-aut) => D_7 acts, tournament is SC. On the repo's SC SPINE.
+
+== LRC connection at t=1/14 (the AP's lonely time) ==
+  13 runners v/14: ODD v=[1, 3, 5, 7, 9, 11, 13] -> odd/14 = the 7 heptagon vertices minus... units=[1, 3, 5, 9, 11, 13] (6 units) + v=7 -> 1/2 (antipode)
+  EVEN v=[2, 4, 6, 8, 10, 12] -> v/14 = ['1/7', '2/7', '3/7', '4/7', '5/7', '6/7'] = the non-trivial 7th roots of unity (the C_7 orbit)
+  So at t=1/14: ODD runners land on roots of z^7=-1 (the tournament vertices), EVEN runners on roots of z^7=+1 (7th roots).
+  M=1/14 is set by runners 1 & 13 = vertices 0 & 6 = the EXTREME iota-pair (nearest odd/14 points to origin 0).
+  distances origin->vertices: ['0.0714', '0.0714', '0.2143', '0.2143', '0.3571', '0.3571', '0.5000']  min=1/14=0.0714 (the gap M), max=1/2 (antipode)
