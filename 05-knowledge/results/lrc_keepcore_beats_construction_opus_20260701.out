@@ -1,0 +1,17 @@
+VALIDATE method vs klein's OWN beaters (grid must match):
+  n=7: klein 2/13=0.15385  my grid 0.15385  match=True
+  n=9: klein 4/33=0.12121  my grid 0.12121  match=True
+  n=11: klein 3/31=0.09677  my grid 0.09677  match=True
+
+KEEP-CORE {1..n-2, 2(n-1)} vs construction n/Phi6:
+  n= 7: {1..5,12} covering=True  M=2/13=0.153846  vs constr 7/43=0.162791  BEATS=True
+  n= 8: {1..6,14} covering=True  M=2/15=0.133333  vs constr 8/57=0.140351  BEATS=True
+  n= 9: {1..7,16} covering=True  M=2/17=0.117647  vs constr 9/73=0.123288  BEATS=True
+  n=10: {1..8,18} covering=True  M=2/19=0.105263  vs constr 10/91=0.109890  BEATS=True
+  n=11: {1..9,20} covering=True  M=2/21=0.095238  vs constr 11/111=0.099099  BEATS=True
+  n=12: {1..10,22} covering=True  M=2/23=0.086957  vs constr 12/133=0.090226  BEATS=True
+  n=13: {1..11,24} covering=True  M=2/25=0.080000  vs constr 13/157=0.082803  BEATS=True
+  n=14: {1..12,26} covering=True  M=2/27=0.074074  vs constr 14/183=0.076503  BEATS=True
+
+=> covering-min <= 2/(2n-1) for ALL n (keep-core family); construction n/Phi6 NEVER optimal.
+   klein-S60 HYP-3778 (a(14)=14 transition) + HYP-3737 (outlier=n(n-1)) REFUTED. LRC(14) [M>=1/14] unaffected.

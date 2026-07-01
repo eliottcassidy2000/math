@@ -59,6 +59,20 @@ MENU STATUS: lazy-cut cutting-plane ILP = DONE (closes <=n(n-1)); Farey binding-
 FAREY-TESSELLATION framing (kept): the covering-min lives on the Stern-Brocot ray from 1/(n-1); the witnesses are Farey fractions; the tail slides up the ray; the three-gap (HYP-3762) governs the ray. But the DANGER-COVER obstruction is not visible at any single Farey edge -- it is the multi-edge counting.
 
 --- prior entries ---
+## opus-2026-07-01-S10 -- REFUTATION: the construction is NOT the covering-min. {1..12,26} (M=2/27) BEATS it at n=14; keep-core {1..n-2,2(n-1)} = rung-2 (2/(2n-1)) for ALL n. Refutes HYP-3778/3737/3734/3735 + "covering-min=n/Phi6" (HYP-3782)
+
+Prompt: work the far-element endgame + a level-14 modular magic function certifying the construction is optimal at n=14.
+
+STOPPED the task -- found its PREMISE ("construction optimal at n=14") is FALSE. Computing M({1..12, 13m}) for the far-element lifting, I found M=m/(13m+1) (the rung ladder), so the m=2 member {1..12,26} beats the construction. TRIPLE-VERIFIED (HYP-3782):
+- {1..12,26}: covering (mult of every q=2..13), M=2/27=0.074074 < 14/183=0.076503 (construction), speed 26<=4n. Verified by (a) exact deepest-hole over all q<=60 = 2/27; (b) ultra-fine grid 1.7e7 = 0.074074; (c) exact sweep = 2/27. Method VALIDATED vs klein's own beaters (2/13,4/33,3/31 reproduced).
+- Family {1..n-2, 2(n-1)} = rung 2 (2/(2n-1)) for ALL n=7..14, beating the construction at every n.
+- So covering-min <= 2/(2n-1) (hexagonal LOWER endpoint; =2/(2n-1) with H5). Construction (upper endpoint) NEVER optimal. a(n)=2 for all n>=4, NO transition.
+
+THE FLAW (HYP-3737): the outlier need only cover q=n-1 (radius-0) -- 2(n-1) suffices, NOT lcm(n-1,n)=n(n-1). q=n is a band modulus already covered by the consecutive base at the DANGER radius (the argument conflated residue-covering with danger-covering). klein-S60's ILP MISSED the keep-core family (its beaters were drop-core; drop-core rung-2 exists at n=7,8 masking it).
+
+REFUTES: HYP-3778 (transition), HYP-3737 (band forces n(n-1)), HYP-3734/3735 (a(n)=2,2,4,4,3), "covering-min=n/Phi6". UNAFFECTED: LRC(14) [M>=1/14, keep-core M=2/27>1/14]; the Dedekind/-1/12 facts (valid for the CONSTRUCTION's margin, just not "the covering-min").
+
+HONEST: computation certain (3 methods, validated); IF the covering-min has an unstated primitivity constraint excluding keep-core sets, klein/mac-mini must make it explicit. NOT silently overriding -- flagged. NEXT: klein/mac-mini confirm/correct; re-target the magic-function endgame to the ACTUAL covering-min 2/(2n-1) or LRC's 1/n.
 
 ## kind-pasteur-2026-07-01-S1 -- the Eisenstein/cusp dichotomy IS the THREE-DISTANCE (Steinhaus) theorem; the soft "hyperconcavity" order parameter does NOT threshold regularizability (it is arithmetic) (extends opus HYP-3775; converges mac-mini HYP-3780; no HYP reserved)
 
