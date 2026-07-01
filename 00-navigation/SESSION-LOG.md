@@ -1,3 +1,22 @@
+## mac-mini-2026-07-01-S89 -- YES: the U-spectrum (adjacency A) SEES the flip-rank excess the skew-spectrum (S=A-A^T) MISSES -- U determines |Aut|, skew is blind; mechanism A=(J-I+S)/2, skew=converse-EVEN throws away the score (HYP-3816)
+
+Prompt: try to determine whether the U-spectrum sees the flip-rank excess the skew-spectrum misses.
+
+'U-spectrum' (owner's term, not previously in repo) = eigenvalues of the 0/1 adjacency A (the 'unsigned' directed tournament matrix) = kps's cpA. skew-spectrum = eigenvalues of S = A - A^T (+/-1 skew, converse-EVEN). flip-rank excess = the S_n-folding excess in the covering number k(n)=kappa (0,0,0,1,3 for n=3..7, opus/klein HYP-3805), DRIVEN by high-|Aut| covering-'needles' (few-labeled-rep classes a thin subcube can't cover).
+
+RESULT (n=5,6 exhaustive): YES.
+- U-spectrum is 4-5x FINER: 9 vs 2 distinct at n=5; 28 vs 6 at n=6.
+- U-spectrum DETERMINES |Aut| (U-cospectral => same |Aut|); skew-spectrum does NOT.
+- Skew is BLIND to |Aut|: at n=6 all 56 classes collapse into just 6 skew-spectra, EACH mixing different |Aut| -- {1:8,3:8}, {1:16}, {1:6,5:2}, {1:5,3:1}, {1:5,3:1}, {1:1,3:2,9:1}. The |Aut|=5 (C_5-rotational) and |Aut|=9 covering-needles sit in the SAME skew-spectrum as |Aut|=1 classes. So the skew-spectrum cannot distinguish a covering-needle from a generic class = blind to exactly the symmetry that drives the flip-rank excess. The U-spectrum separates the needles.
+
+MECHANISM: A=(J-I+S)/2, so A and S are the same matrix DATA but their SPECTRA couple differently to the all-ones vector J. The skew-spectrum is CONVERSE-EVEN (invariant under S->-S = the converse T->T^T) and in discarding the sign it discards the coupling to J = the score/row-sum direction. The SCORE SEQUENCE + its degeneracies are where |Aut| lives (a symmetric tournament has a degenerate/patterned score sequence), so the U-spectrum -- retaining the Perron/J coupling -- reads the symmetry the skew-spectrum threw away.
+
+INVOLUTION-ATLAS (S88, HYP-3814) placement: the CONVERSE is the fold; skew-spectrum = the converse-EVEN projection (GRADE +1), U-spectrum = even + the converse-ODD score part (GRADE -1). The flip-rank excess is a score-borne symmetry phenomenon, so the converse-even skew-spectrum is structurally unable to see it while the full U-spectrum can.
+
+HONEST: the ROBUST claim is the negative (skew provably blind to |Aut|, mixing it within every skew-cospectral group, n=5,6). 'U determines |Aut|' is exact n<=6 (likely small-n; S86 spectral twins already show U-cospectral != iso-complete, but there both twins have |Aut|=1). NEXT: (1) n=7 -- do U-cospectral classes of different |Aut| ever appear? (2) does U's |Aut|-resolution quantitatively PREDICT the per-n excess 0,0,0,1,3?
+
+Files: 04-computation/u_spectrum_vs_skew_spectrum_fliprank_macmini_20260701.py (+.out); HYP-3816; reflection the-skew-spectrum-throws-away-the-score.md. No canon overridden, no court cases.
+
 ## opus-2026-07-01-S24 -- THE SECOND MOMENTS: LRC atom pair-correlation = SQUARED RAMANUJAN; SC-spine blue spectrum is METALLIC (golden/silver), bipartite at odd n (HYP-3816).
 
 Prompt: work the LRC atom pair-correlation (Ramanujan sums = atoms' 2nd moment) and the SC-spine blue-degree vs blue-graph spectrum.
