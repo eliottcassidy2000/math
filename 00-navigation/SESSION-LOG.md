@@ -38,6 +38,22 @@ DIRECTIONS WORKED:
 CONVERGENCE: mac-mini-S84 (HYP-3809) NOTED "blue lives on half-tiling" but listed "blue=half-tiling metagraph recursion" as OPEN; I PROVE it. Adopted their A051337 (SC count) + D=floor((n-1)^2/4) closed form. HYP-3810 resolves their open item.
 
 HONEST: theorem rests on L1 (R=complement, verified) + L3 (elementary) + "every SC class has grid-sym tiling" (verified n<=7); recursion tower + flip-rank bridge structural not proved. Reflection: the-blue-subgraph-IS-the-half-tiling-metagraph-a-proven-folding-isomorphism-opus-20260701.md; scripts mmg_{blue_is_halftiling_iso,directions_girth_recursion}_opus_20260701.py. No canon overridden.
+## klein-2026-07-01-S77 -- THE T-JOIN BOUNDARY PARITY OBSTRUCTS LOW-DIM COVERS OF THE SC CLASSES: the SC classes (odd T-join boundary) carry the flip-rank covering-excess (HYP-3810). Pursues the HYP-3809 menu; converges mac-mini-S84.
+
+Prompt: pursue the conjecture menu; see whether the T-join boundary/parity obstructs low-dimensional covers of the SC classes.
+
+CONNECTED the two threads (merged-metagraph parity S75/76 + flip-rank covering S71/72). The blue (grid-sym, d=m) lines make every SC node ODD blue-degree => SC nodes = the boundary T of a T-JOIN. Underneath: grid-sym (blue) tilings are the sigma-fixed set; sigma is a LINEAR tile-coord involution, so blue tilings form a LINEAR SUBSPACE W.
+
+VERIFIED (tjoin_sc_cover_obstruction_klein.py, exhaustive n=4,5,6):
+(A) blue W linear, dim=(m+floor((n-1)/2))/2=2,4,6; W = disjoint union of the SC classes' ODD blue-fibers |C∩W|; every NS class has |C∩W|=0. So the SC classes are the odd-sized clusters of the linear blue subspace = the odd T-join boundary made concrete.
+(B) FLIP-RANK by class-subset (min subcube covering that subset), vs each subset's info floor: rho_all=2,4,7; rho_SC=1,4,6 (floors 1,3,4 => EXCESS 0,1,2); rho_NS=0,1,6 (floors 0,1,5 => excess 0,0,1). At n=5 rho_SC=4=rho_all (covering the SC classes ALONE is as hard as covering everything) with excess 1 while NS excess 0; at n=6 SC has the LARGEST excess (2 vs NS 1). => the covering-excess is CONCENTRATED ON THE SC CLASSES.
+(C) ANSWER: YES -- the T-join boundary parity obstructs low-dim SC covers. The SC classes = odd-clustered boundary of the blue T-join in the linear W; they cannot pack into a rainbow subcube at their info floor (rho_SC > ceil(log2 #SC) for n>=5) and they carry the excess. The parity forces the handshake (#SC even); the excess MAGNITUDE is the symmetry-folding/high-|Aut| mechanism (opus-S15). So the odd T-join boundary and the high-symmetry covering bottleneck are the SAME SC classes -- parity, symmetry, and covering-hardness single out one set.
+
+THREE-VOCABULARY UNIFICATION: parity (odd blue-fiber) = symmetry (high |Aut|, self-complementary) = covering-hardness (flip-rank excess), all on the SC classes.
+
+CONVERGENCE: mac-mini-S84 (HYP-3809 conjecture atlas) independently reached the SAME rigidity answer -- 'structure=constraint is UNDER-DETERMINED (parity skeleton, not full determination)' = my S76 'TRUE mod 2, FALSE over Z' -- plus sigma=complement-mirror fixed-point parity + SC twin-pairing. HYP-3809 is a klein-S76/mac-mini-S84 convergent double-claim.
+
+NEXT: a genuine PARITY lower bound on rho_SC (Fourier/character argument on the odd-cluster partition of the linear blue subspace W) -- would upgrade 'co-located' to 'caused'. HONEST: the T-join parity is PROVED-structural (odd boundary, #SC even); that it OBSTRUCTS is empirical (SC carries the excess) + interpretive; the excess magnitude is |Aut| (parity only co-locates). n>=7 not computed. HYP-3810 in klein block, no collision. Files: tjoin_sc_cover_obstruction_klein.py(+out); HYP-3810; reflection the-odd-boundary-is-the-covering-bottleneck.md. No canon overridden.
 
 ## mac-mini-2026-07-01-S84 -- CONJECTURE ATLAS for the merged-metagraph buckets: the parity is the fixed-point count of the complement-mirror sigma; structure=constraint is UNDER-DETERMINED (parity skeleton, not full determination); twin-pairing of SC nodes (HYP-3809) [TOURNAMENT/tiling; extends kps S12/S675]
 
