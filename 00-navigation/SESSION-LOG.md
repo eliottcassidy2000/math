@@ -67,6 +67,31 @@ BORSUK-ULAM SIDE (hard): p=3 mod4 free Z2 (Paley = flip-rank obstruction HYP-380
 THE THREE PILLARS (mac-mini HYP-3796) = the free-regime constructive tools: POCS/Kaczmarz (witness search w/o fixed pt), Christoffel/flat-extension (complement-paired atoms, no central atom), Blaschke (free Z2 = no circle-map fixed pt = Diophantine/Herman rigidity = deep-well). PAYOFF: a criterion -- SOS-tractable (symmetric/p=1) vs need-the-pillars (free/p=3 mod4); AP bound=Brouwer/SOS, covering-min & Paley obstruction=Borsuk-Ulam.
 
 CONVERGENCE: HYP-3813 was TRIPLE-claimed (opus S22 Cayley bridge + mac-mini S87 six bridges + klein S80 covering-min phase cloud) -- all unifying the two pillars via the staircase/complement fold; my S22b adds the TOPOLOGY layer (Brouwer/Borsuk-Ulam, why SOS works or doesn't). HONEST: backbone verified (c3=Tr(A^3)/3; p=3mod4=free Z2); 'free Z2 => SOS provably fails' is the organizing conjecture. Reflection: brouwer-vs-borsuk-ulam-the-complement-fixed-point-makes-SOS-work-and-p3mod4-frees-the-Z2-opus-20260701.md; script topo_brouwer_borsukulam_c3_opus_20260701.py. HYP-3814. No canon overridden.
+## klein-2026-07-01-S81 -- SYNTHESIS: THREE GEOMETRIES glued by the CAYLEY TRANSFORM; COMPLEMENT = ONE REFLECTION in all three; the ODD/EVEN (Redei) duality = ONE FACT seen three ways (HYP-3814).
+
+Prompt: think about how tournaments exist in both the staircase tiling and the unit circle glued by the Cayley transform; complement is a reflection in both geometries; the odd/even duality is one fact in three geometries.
+
+THE DICTIONARY (three_geometries_cayley_complement_klein.py). A tournament is ONE object in three coordinate systems:
+  (1) STAIRCASE -- a tiling of delta_{n-2} (base path + non-consecutive-arc tiles, cube Q_m).
+  (2) CIRCLE -- a runner-set = eig(U), U=(I-S)(I+S)^{-1} the CAYLEY transform of the skew +-1 matrix S=A-A^T. S skew => U orthogonal, eig(U) on |z|=1 (Cayley: imaginary spec(S) -> unit circle).
+  (3) The CAYLEY TRANSFORM S|->U is the GLUE (combinatorial staircase -> circle spectrum). Not a rope-bridge analogy: an actual change of coordinates.
+
+COMPLEMENT = ONE REFLECTION (proved by hand + verified n=3,4,5 all tournaments):
+  staircase grid-reflection sigma:(x,y)->(n+1-y,n+1-x) (opus-S18) = skew NEGATION S->-S (A->A^T) = circle CONJUGATION theta->-theta (U(-S)=U(S)^{-1}=U^T). Cayley-conjugate; the SAME involution. VERIFIED: complement->U^{-1} exactly.
+
+ODD/EVEN = ONE FACT (the reflection's fixed-point parity): an SC class = reflection-FIXED. Redei (H(T) odd) => SC merged-node fiber H ODD; NS merged-node fiber H(T)+H(T^op)=2H EVEN. Reads as: sigma-fixed-fiber-odd (staircase) / palindromic-mass-odd (circle) / U perm-conjugate U^{-1} (spectral). VERIFIED n=3,4,5: |G_n|=2,4,12=A000568, #SC=2,2,8, NS-merged=0,1,2 (canon), SC fiber odd + NS fiber even all True.
+
+TWO COROLLARIES (verified): (a) spec(-S)=spec(S) ALWAYS (skew +-symmetric) => the Cayley spectrum is COMPLEMENT-BLIND -- this EXPLAINS the S72/HYP-3804 skew-spectrum weakness (a reflection is invisible to a reflection-symmetric invariant). (b) n odd <=> S singular (odd skew) <=> +1 in eig(U) = a runner PINNED at angle 0.
+
+BONUS + a CORRECTION (exact): the Paley-p (p=3 mod 4) skew circulant has spec(S)={0,+-i*sqrt(p)} (the Gauss sum), so its CAYLEY eigenvalues sit at cos(theta)=-(p-1)/(p+1) (=-3/4 p=7, -5/6 p=11) -- an irrational angle, NOT roots of unity, U^p != I. Corrects a RECOLLECTION (not the file) of HYP-3802: "roots of unity" is the VERTEX loop (circle i), while the Cayley spectrum (circle ii) encodes the Gauss sum. Two circles, both with complement=reflection.
+
+CONVERGENT with mac-mini HYP-3813-S87 (six-bridges): my Cayley transform GROUNDS their sigma<->iota Z_2 fold (bridge 1) + even/odd grading (bridge 3) as an actual gluing map, not just a parallel.
+
+FILES: 04-computation/three_geometries_cayley_complement_klein.py (+.out); HYP-3814; reflection one-reflection-in-three-geometries.md. HONEST: a geometric-dictionary synthesis + proved linear-algebra identities (exact) + iso-class facts (n=3,4,5); not a new theorem. NOTE: HYP-3813 double-claimed (klein-S80 + mac-mini-S87) -- 3813 is in klein's block 3800-3849; flagged for coordinator.
+
+NEXT: (a) does the Cayley spectrum see the flip-rank / SC-covering excess that the skew-spectrum misses? (b) extend the Gauss-sum Cayley angle to general circulant/rotational tournaments (Ramanujan-sum spectrum). (c) is the covering-min extremizer's phase cloud (HYP-3813) the Cayley spectrum of some canonical tournament?
+
+---
 
 ## klein-2026-07-01-S80 -- INTEGRATION: the COVERING-MIN PHASE CLOUD = AP(step n) + ANTIPODAL KILLER -- one geometric picture unifying Chebyshev 2-pt + three-gap + phase-residue + cloud-tournament + Phi6-irreducibility (HYP-3813).
 
