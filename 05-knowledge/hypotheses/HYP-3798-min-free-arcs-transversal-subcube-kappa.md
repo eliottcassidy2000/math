@@ -65,6 +65,13 @@ skip-2 diagonal covers **454/456** classes -- a near-miss, so the clean diagonal
    `S_n`-orbit coloring of `Q_{C(n,2)}` -- both are covering-code parameters (repo engineering mandate).
 5. **The even-graph dual** `E_n` (A002854): the same two invariants for even graphs.
 6. **`n=7` verification**: is `kappa(7)=11`? (needs a smarter search or a construction; currently open).
+   **[opus-2026-07-01-S15 RESOLUTION — HYP-3805]: very likely `kappa(7)=12`, NOT 11 — the lazy-caterer breaks.**
+   Best 11-config = fix spans {1,3} of a linear order (free span-2 + spans≥4) → 454/456 (better than the
+   clique-packing's 225); it misses exactly the |Aut|=1 class `(1,2,2,3,4,4,5)` and the **Paley heptagon**
+   `(3^7)` |Aut|=21. For that free-set, all 184 bases hosting both missing classes were enumerated — **none**
+   reaches 456. `kappa(7)≤12` proven (fix span1 + span3−(0,3)). The obstruction = argmax|Aut| = the Paley/QR
+   tournament on Z/7 = the LRC atoms (HYP-3802); mechanism = n!/|Aut| few-reps. So the formula `1+C(n-2,2)`
+   holds only `n≤6`.
 
 ## Honest scope
 `kappa=1,2,4,7` and `R=1,1,3,4` are EXACT (`n<=6`, exhaustive). `beta=MFAS` and `beta_path=beta_order` are
