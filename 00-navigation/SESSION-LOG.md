@@ -12,6 +12,31 @@ Reflection: the-bridge-2-mindset-is-one-rung-of-a-universal-moment-ladder-kps.md
 -> HYP-3789 (Lasserre), HYP-3813 (mac-mini Bridge-2), THM-589, determinant-lens (d perp H), HYP-3795 (Verblunsky), the-reconstruction-key (S15).
 
 ---
+## mac-mini-2026-07-01-S88 -- THE INVOLUTION ATLAS: five faces of the fold; parity=|Fix(fold)| is CANON (THM-587 antipodal Euler = Lefschetz), Redei H-oddness an instance; LRC spectral twins GROUNDED; Phi_6 = double-fold of the half-tiling (HYP-3814)
+
+Prompt: work the S87 next targets; search past staircase objects; how does seeing order-2 involutions from many lenses synthesize deeper truths?
+
+DEEP ANSWER: the project runs on essentially TWO order-2 involutions of the staircase triangle -- the FOLD sigma (anti-diagonal reflection = complement/transpose/iota/score-reversal/conjugation/antipodal-map-of-arc-hypercube THM-584; fixed pts = SC tournaments / iota-symmetric lonely times) and the ANTIPODE flip (all-tile-bits, no fixed pts) = Klein four <sigma,flip>. An order-2 involution tau has FIVE FACES, each a project chapter seen through a lens:
+(1) FOLD = quotient X/tau (merged metagraph, half-tiling, LRC half);
+(2) GRADE = +/-1 eigenspaces = R acts (-1)^k on hypercube level k (THM-584): blue-odd/black-even, SC/NS, iota-even(E2 Eisenstein)/iota-odd(cusp f14);
+(3) FIX = fixed set = the rigid core (SC classes / iota-symmetric witnesses / diagonal spine; palindromic Ham-path f odd on SC, THM-582);
+(4) DUAL = tau on the dual (2 spectral twins <-> 2 dual Platonic pairs S86; Atkin-Lehner <W_2,W_7>=V_4 on X_0(14) = 4 cusps {1,2,7,14} = the n=4 tournament classes -- a SECOND Klein four = same Z2xZ2);
+(5) GRAM = tau composed with the relation = 2nd moment (adjacency A / danger D D^T / W(n)=H-variance).
+
+THE IDENTITIES BETWEEN FACES = the deep connections:
+- ** PARITY = trace(tau) = |Fix(tau)| is CANON (THM-587 per-level signed cycle index = antipodal Euler number = the Lefschetz fixed-point count of the complement involution). REDEI'S H-ODDNESS IS AN INSTANCE ** -- H odd = the R-odd eigenspace has odd dim = the Borsuk-Ulam iota-odd degree is nonzero. So the FOUNDATIONAL parity (H odd) and the HARDEST obstruction (iota-odd cusp / OPEN-Q-108) are the SAME face.
+- SECOND MOMENT = the Gram whose SPECTRUM separates invariant-cospectral objects that counts miss. GROUNDED: tournament spectral twins (S86, adjacency spectrum) + LRC SPECTRAL TWINS (this session: 46/46 coarse-identical (same M + gcd-profile) covering 7-sets at n=8 are ALL separated by the danger-Gram D D^T spectrum). Same move both domains.
+- DUALITY = the involution on the dual (2 spectral twins <-> 2 dual Platonic pairs).
+
+THE DOUBLE FOLD (Phi_6 <-> half-tiling): triangle(~n^2/2) --fold--> quarter-square half-tiling floor((n-1)^2/4)(~n^2/4); Phi_6=n^2-n+1(~n^2) = the UNFOLDED full square: Phi_6 = 4*floor((n-1)^2/4) + (n+1) for even n [n=14: 4*42+15=183]. Covering-min modulus = the double-fold; SC spine = one fold's fixed set.
+
+R and iota are IDENTICAL (THM-584, different coordinates). Paley = the ATTRACTOR where all involutions converge (SC + transitive Z/pZ + Galois-fixed; apex prime p=n/2=7). Independent extra Z2s: cut/cycle GF(2) grading; Mode B n->n-2 (with 3-fold Eisenstein omega<->omega-bar).
+
+Repo mine (Explore agent) inventoried 14 order-2 objects: complement R/iota (THM-549/584, TIER 1), Atkin-Lehner V_4 (TIER 2), Walsh/Redei/Borsuk-Ulam (dependent on R), cut/cycle + Mode B (independent), Paley (attractor). All collapse to ONE geometric involution in many lenses.
+
+NEXT: (1) prove PARITY=|Fix(fold)| uniformly at the crux (SC-odd-grid-sym, HYP-3809) as a Lefschetz count on the tiling hypercube; (2) explicit iota-symmetric-witness <-> SC-class correspondence (FIX across lenses); (3) is the twin-pairing the third Klein element flip.sigma on the fold-fixed subcube.
+
+Files: 04-computation/metagraph_lrc_integration_macmini_20260701.py; 05-knowledge/results/involution_atlas_targets_macmini_20260701.out; HYP-3814; reflection the-five-faces-of-an-involution.md. HONEST: the five-faces frame ORGANIZES canon (THM-549/584/587/582) + LRC (not new machinery); PARITY=|Fix| is canon (THM-587); the two next-targets (LRC spectral twins, Phi_6 double-fold) grounded computationally. No canon overridden, no court cases.
 
 ## kind-pasteur-2026-07-01-S18 -- LRC DIFFICULTY BY n IS THE APEX-PRIME ARITHMETIC (non-monotone!); the tournament reconstruction WALL at 7 vertices is the combinatorial SHADOW of LRC(14). Complements mac-mini-S87 six-bridges (at n=14) with the BY-n variation.
 
