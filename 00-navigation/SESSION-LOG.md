@@ -1,3 +1,26 @@
+## mac-mini-2026-07-01-S84 -- CONJECTURE ATLAS for the merged-metagraph buckets: the parity is the fixed-point count of the complement-mirror sigma; structure=constraint is UNDER-DETERMINED (parity skeleton, not full determination); twin-pairing of SC nodes (HYP-3809) [TOURNAMENT/tiling; extends kps S12/S675]
+
+Prompt: creatively generate multitudes of conjectures; work concrete targets; mine repo comprehensively + synthesize; think 'natural numbers in buckets' (pure black/mixed/pure blue) with parity end-conditions; test the hypothesis that the metagraph structure IS its constraint (assign pairs, first two categories odd, last even); explore which tilings share a node (symmetry restrictions), consider the half-tiling model.
+
+Mined the repo (Explore agent): kps has SUBSTANTIAL prior blue/black work (metagraph-blue-black-even-odd-s675.md, the-blueblack-line-pairing-is-a-degree-tiling-count-realization-kps.md) establishing the tripartite structure, tiling_count=degree, black-degree-even, grid-sym<=>tau-fixed<=>SC, AND the n=6 self-loop correction. My HYP-3808 CONVERGES with kps; this session (HYP-3809) confirms + EXTENDS.
+
+THE SYMMETRY FRAME (which tilings share a node): TWO involutions on the 2^m tilings form <flip, sigma> = Z2xZ2. flip = complement-tiling (flip all tile bits) = the LINES (blue/black; no fixed points). sigma = anti-diagonal mirror = complement T->T^op = transpose (THM-549, the half-tiling fold) = the MERGE + grid-symmetry. VERIFIED: sigma PRESERVES merged nodes (t, sigma(t) always same node) => a node is a union of sigma-orbits (fixed=grid-sym, else pairs).
+
+PARITY THEOREM REDUCTION (the mechanism): tiling_count = #gridsym + 2*#pairs => PARITY = #gridsym mod 2. SC node has ODD #gridsym (the crux), NS has 0 => SC odd / NS even tiling count. So the owner's odd/odd/even bucket rule = a COUNT OF FIXED POINTS of the complement mirror sigma.
+
+CONFIRMED (n<=6 exhaustive):
+- IDENTITY: #grid-sym tilings = 2^floor((n-1)^2/4) = 2^(half-tiling quarter-square size) => the BLUE structure lives ENTIRELY on the half-tiling (the sigma fundamental domain); blue lines = half. The two colors = inside/outside the fold mirror.
+- SC classes = A051337 (self-converse tournaments) = 2,2,8,12 = #pure_blue+#mixed; V_merged=(A000568+A051337)/2; => A051337 is EVEN for all n>=3 (blue-subgraph handshake, all-odd-degree).
+- TWIN-PAIRING (NEW): the multiset {#grid-sym tilings per SC node} has ALL-EVEN multiplicities (n=5:{1:4,3:4}, n=6:{1:2,3:2,5:2,7:4,9:2}) => a fixed-point-free involution twins SC nodes by grid-sym count (a Z2 inside the Z2xZ2, living on the blue half; tiling-count multiset is NOT all-even).
+- STRUCTURE=CONSTRAINT is UNDER-DETERMINED: valid color+eligibility+degree-preserving 2-swaps EXIST at n=5,6 => the owner's parity/eligibility constraints are NECESSARY but NOT SUFFICIENT to pin the metagraph -- they are its PARITY SKELETON; the tournament-iso structure selects the actual realization. (Honest refinement of the owner's 'exactly equivalent' hypothesis: the bones, not the body.)
+- flip.sigma has 0 fixed points (n=4,5,6).
+
+CONJECTURE ATLAS (open, ranked): (1) blue subgraph = merged metagraph of the folded half-tiling (kps target; grid-sym=2^half is first evidence); (2) SC-odd-gridsym = the parity crux (likely a unique 'central' grid-sym rep + flip-pairs); (3) identify the C4 twin involution (flip.sigma? pairs pure_blue<->mixed?); (4) SEA-ONSET at n=6 = the minimal-flip kappa gauge break (HYP-3798, my S81) = precedes n=7 diameter jump: ONE threshold, three faces; (5) category-count closed forms (#pure_blue=2,1,3,2; #mixed=0,1,5,10; #pure_black=(A000568-A051337)/2); (6) sea/self-loop growth (0,0,0,290 / 0,0,0,24); (7) black-Eulerian-cycle structure <-> H-spectrum; (8) odd-square/even-pronic half-tiling parity <-> pure_blue/mixed split; (9) even-graph lift (S82) blue/black footprints in cycle-space; (10) forbidden line-degrees 7,21?; (11) prove flip.sigma fixed-point-free.
+
+CONCRETE NEXT TARGET: prove C1 (parity theorem) via the crux (every SC class has an odd # of sigma-fixed tilings) + the blue=half-tiling recursion + unify the n=6 sea onset with kappa (HYP-3798).
+
+Files: 04-computation/metagraph_bucket_conjecture_atlas_macmini_20260701.py (+.out); HYP-3809; reflection the-parity-skeleton-and-the-two-mirrors.md. HONEST: C1-C6 verified n<=6 (C1 also kps); atlas is conjectural; structure=constraint refined to 'necessary skeleton'. kps has priority on the core blue/black structure. No canon overridden, no court cases.
+
 ## kind-pasteur-2026-07-01-S13 -- BUCKETS AND PAIRS: the merged metagraph as a distribution problem -- #SC is EVEN (proved, settles a flagged-open question), reconstruction is RIGID ONLY at n<=4, the BLUE SUBGRAPH IS THE HALF-TILING (THM-549/550); + an 18-item conjecture multitude
 
 Prompt: creatively generate multitudes of conjectures; work concrete targets; mine past work comprehensively (extend niche adjacent ideas); frame everything as natural numbers in buckets (pure-black/mixed/pure-blue); test owner's hypothesis "the metagraph IS its constraints"; explore which tilings share a node (symmetry); consider prior HALF-TILING work.
