@@ -1,0 +1,89 @@
+========================================================================================================
+ n=4: m=3 tiles, 2^m=8 tilings, 4 iso classes, 3 merged nodes; lines: blue=2 black=2 total=4=2^(m-1)
+========================================================================================================
+   node  SC?       type  #til | bkOth blOth bkSelf blSelf | par(bkOth) par(blOth) selfloop?
+      0   SC  pure-blue     1 |     0     1      0      0 |       even        ODD     False
+      1   NS pure-black     2 |     2     0      0      0 |       even       even     False
+      2   SC      mixed     5 |     2     1      0      1 |       even        ODD      True
+  node census (SC/NS x type):
+    NS pure-black: 1
+    SC      mixed: 1
+    SC  pure-blue: 1
+  SELF-LOOP nodes: 1; their types = {'mixed'}  => owner's 'self-loops only on MIXED' : True
+  BLUE line type-pairs (between distinct nodes):   {('mixed', 'pure-blue'): 1}
+  BLACK line type-pairs (between distinct nodes):  {('mixed', 'pure-black'): 2}
+  BLUE self-loops by type:   {'mixed': 1}    BLACK self-loops by type:  {}
+
+========================================================================================================
+ n=5: m=6 tiles, 2^m=64 tilings, 12 iso classes, 10 merged nodes; lines: blue=8 black=24 total=32=2^(m-1)
+========================================================================================================
+   node  SC?       type  #til | bkOth blOth bkSelf blSelf | par(bkOth) par(blOth) selfloop?
+      0   SC  pure-blue     1 |     0     1      0      0 |       even        ODD     False
+      1   NS pure-black     2 |     2     0      0      0 |       even       even     False
+      2   NS pure-black    10 |    10     0      0      0 |       even       even     False
+      3   SC  pure-blue     1 |     0     1      0      0 |       even        ODD     False
+      4   SC      mixed     9 |     8     1      0      0 |       even        ODD     False
+      6   SC      mixed     9 |     6     3      0      0 |       even        ODD     False
+      8   SC      mixed    11 |     4     3      2      0 |       even        ODD      True
+      9   SC      mixed     5 |     4     1      0      0 |       even        ODD     False
+     10   SC      mixed    13 |     6     3      2      0 |       even        ODD      True
+     11   SC  pure-blue     3 |     0     3      0      0 |       even        ODD     False
+  node census (SC/NS x type):
+    NS pure-black: 2
+    SC      mixed: 5
+    SC  pure-blue: 3
+  SELF-LOOP nodes: 2; their types = {'mixed'}  => owner's 'self-loops only on MIXED' : True
+  BLUE line type-pairs (between distinct nodes):   {('mixed', 'pure-blue'): 5, ('mixed', 'mixed'): 3}
+  BLACK line type-pairs (between distinct nodes):  {('mixed', 'pure-black'): 12, ('mixed', 'mixed'): 8}
+  BLUE self-loops by type:   {}    BLACK self-loops by type:  {'mixed': 4}
+
+========================================================================================================
+ n=6: m=10 tiles, 2^m=1024 tilings, 56 iso classes, 34 merged nodes; lines: blue=32 black=480 total=512=2^(m-1)
+========================================================================================================
+   node  SC?       type  #til | bkOth blOth bkSelf blSelf | par(bkOth) par(blOth) selfloop?
+      0   SC  pure-blue     1 |     0     1      0      0 |       even        ODD     False
+      1   NS pure-black     2 |     2     0      0      0 |       even       even     False
+      2   NS pure-black    10 |    10     0      0      0 |       even       even     False
+      3   NS pure-black     2 |     2     0      0      0 |       even       even     False
+      4   NS pure-black    18 |    18     0      0      0 |       even       even     False
+      5   SC      mixed     5 |     2     3      0      0 |       even        ODD     False
+      6   NS pure-black    18 |    18     0      0      0 |       even       even     False
+      8   NS pure-black    22 |    22     0      0      0 |       even       even     False
+      9   NS pure-black    10 |    10     0      0      0 |       even       even     False
+     10   NS pure-black    26 |    26     0      0      0 |       even       even     False
+     11   NS pure-black     6 |     6     0      0      0 |       even       even     False
+     12   SC      mixed    17 |    12     5      0      0 |       even        ODD     False
+     14   NS pure-black    30 |    26     0      2      0 |       even       even      True
+     16   NS pure-black    38 |    34     0      2      0 |       even       even      True
+     20   NS pure-black    18 |    18     0      0      0 |       even       even     False
+     21   NS pure-black    46 |    42     0      2      0 |       even       even      True
+     22   SC      mixed    17 |    12     5      0      0 |       even        ODD     False
+     23   SC  pure-blue     1 |     0     1      0      0 |       even        ODD     False
+     24   NS pure-black    46 |    46     0      0      0 |       even       even     False
+     28   NS pure-black    22 |    22     0      0      0 |       even       even     False
+     29   NS pure-black    50 |    42     0      4      0 |       even       even      True
+     30   SC      mixed    37 |    30     7      0      0 |       even        ODD     False
+     31   SC      mixed    33 |    26     7      0      0 |       even        ODD     False
+     32   NS pure-black    62 |    58     0      2      0 |       even       even      True
+     35   NS pure-black    58 |    54     0      2      0 |       even       even      True
+     38   NS pure-black    74 |    74     0      0      0 |       even       even     False
+     42   NS pure-black    74 |    66     0      4      0 |       even       even      True
+     43   SC      mixed    29 |    22     7      0      0 |       even        ODD     False
+     44   SC      mixed    29 |    22     7      0      0 |       even        ODD     False
+     45   NS pure-black    66 |    66     0      0      0 |       even       even     False
+     46   SC      mixed    41 |    32     7      0      1 |       even        ODD      True
+     51   NS pure-black    86 |    74     0      6      0 |       even       even      True
+     54   SC      mixed    15 |     6     7      0      1 |       even        ODD      True
+     55   SC      mixed    15 |    12     3      0      0 |       even        ODD     False
+  node census (SC/NS x type):
+    NS pure-black: 22
+    SC      mixed: 10
+    SC  pure-blue: 2
+  SELF-LOOP nodes: 10; their types = {'mixed', 'pure-black'}  => owner's 'self-loops only on MIXED' : False
+  BLUE line type-pairs (between distinct nodes):   {('mixed', 'pure-blue'): 2, ('mixed', 'mixed'): 28}
+  BLACK line type-pairs (between distinct nodes):  {('mixed', 'pure-black'): 156, ('pure-black', 'pure-black'): 290, ('mixed', 'mixed'): 10}
+  BLUE self-loops by type:   {'mixed': 2}    BLACK self-loops by type:  {'pure-black': 24}
+
+KEY IDENTITY: tiling count of a merged node = its DEGREE in the blue/black line multigraph
+  (each tiling = one line-endpoint; self-loop {t,flip(t)} in one node contributes +2).
+DONE.

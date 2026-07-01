@@ -1,3 +1,20 @@
+## kind-pasteur-2026-07-01-S12 -- THE BLUE/BLACK LINE PAIRING IS A DEGREE = TILING-COUNT REALIZATION: tripartite by grid-symmetry (=transpose-fixed), black-degree ALWAYS EVEN, owner's 3 categories PROVED; two honest corrections (self-loops + sea-onset at n=6)
+
+Prompt: formalize the owner's merged-metagraph tiling-count pairing process from the tiling explorer; precise rules for eligible node pairings; metrics; recursion; concrete next target. (Owner's description: nodes with even black to others; connect to nodes with even-black+odd-blue=odd; 3rd pure-blue odd-blue-only category; self-loops +2 conjectured only on mixed.)
+
+GROUNDED by exact replica of tournament-tiling-explorer.html (n=4,5,6). KEY IDENTITY: each tiling = one line-endpoint => tiling count of a merged node = its DEGREE in the blue/black line multigraph (self-loop {t,flip(t)} in one node = +2). A LINE = {t, flip(t)} (flip = complement TILING, d=m layer); BLUE iff grid-sym.
+MASTER FACT (proves everything): grid-sym <=> TRANSPOSE-FIXED (tau(t)=t). => blue line has both endpoints SC; black never touches pure-blue.
+TRIPARTITE (PROVED): A=pure-black=NS (tiling count EVEN, black-deg even, blue 0); B=mixed=SC (ODD count, even black + ODD blue = odd total, THE BRIDGE); C=pure-blue=SC (ODD, blue-only, odd). Owner's 3 categories = A,B,C exactly.
+PARITY THEOREM (proved): (1) black-degree ALWAYS EVEN [black tilings tau-moved => come in tau-pairs; tau preserves node + flip-target]. (2) tiling-count parity = SC odd / NS even [tc=H/|Aut| odd; SC=1 class, NS=2 classes]. => SC total odd, black even => BLUE ODD. All owner parities forced.
+LINE RULES (verified): BLUE only within {B,C}; BLACK only within {A,B}; mixed=sole bridge; pure-blue & pure-black NEVER connect.
+TWO HONEST CORRECTIONS: (i) self-loops NOT only mixed -- blue self-loops on mixed, but BLACK self-loops on pure-black from n=6 (24). (ii) "A connects only to B" holds n<=5 but SEA ONSET at n=6: 290 pure-black<->pure-black black lines appear (another break-at-6).
+REFRAME: a degree-constrained edge-2-coloured multigraph realization; feasibility automatic, content = SC/NS + forbidden-seven odd tc FORCE the parities & tripartite incidence. METRICS: black pairing number=black-deg/2; blue signature (odd); bridge split; sea fraction (0 at n<=5, onsets n=6); census #A=(A000568-SC)/2, #pure-blue=1,3,2 (non-monotone, target). RECURSION: blue lines live on grid-sym=tau-fixed tilings = sub-cube dim (m+f)/2 = the pairing process on the FOLDED staircase (blue = self-similar one level down).
+NEXT TARGET: closed form for #pure-blue/#mixed + sea-onset criterion; prove blue subgraph = merged metagraph of the ~n/2 fold.
+Reflection: the-blueblack-line-pairing-is-a-degree-tiling-count-realization-kps.md; script merged_metagraph_line_pairing_kps.py (+.out). Not a HYP reservation (formalization).
+-> forbidden-seven (odd tc), merged-metagraph-invariants, geometric-alignment (spine/ribs/sea), CLAUDE.md blue/black defs.
+
+---
+
 ## opus-2026-07-01-S17 -- WORKING THE OPEN QUESTION (flip-rank excess formula?): resolved NEGATIVELY -- k(n) is a genuine COVERING NUMBER, the excess is symmetry-folding but NOT a formula (extends HYP-3805).
 
 Prompt: work the open question (is the excess k-max(bounds) = the max|Aut| folding, giving a formula for k(n)?).
