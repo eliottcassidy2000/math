@@ -1,0 +1,22 @@
+ n  #SC floor kappa_SC half-dim kappa_all  obstruction?
+ 4    2     1        1        2         2  no (=floor)
+      cover: free arcs [(0, 1)] (dim 1)
+ 5    8     3        4        4         4  YES (>floor)
+      cover: free arcs [(0, 1), (0, 2), (1, 2), (3, 4)] (dim 4)
+ 6   12     4        6        6         7  YES (>floor)
+      cover: free arcs [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (4, 5)] (dim 6)
+
+--- SUMMARY (accurate) ---
+n | #SC | floor | kappa_SC | half-dim floor((n-1)^2/4) | obstruction gap (kappa_SC - floor)
+4 |  2  |  1    |    1     |    2                      | 0  (no obstruction; grid-sym subcube NOT optimal)
+5 |  8  |  3    |    4     |    4                      | 1  (kappa_SC = half-dim)
+6 | 12  |  4    |    6     |    6                      | 2  (kappa_SC = half-dim)
+CONJECTURE: kappa_SC(n) = floor((n-1)^2/4) for n>=5 (the half-tiling / complement-fold dimension).
+UPPER BOUND (clean): grid-sym subcube (dim = half-dim) contains ALL grid-sym tilings = exactly the SC
+  classes => covers all SC classes => kappa_SC <= half-dim.
+LOWER BOUND (the obstruction, verified n=5,6): no subcube of dim < half-dim covers all SC classes.
+BLUE T-JOIN: all-odd-degree on SC nodes (T = every SC node); connected; cycle-rank 0,1,15 (n=4,5,6);
+  bipartite (n=4,5) -> NON-bipartite (n=6) = another face of the n=6 transition.
+MECHANISM: each SC class has an ODD number of grid-sym tilings (parity theorem = odd blue-degree = the
+  T-join) => the grid-sym tilings are essential and span the half-tiling dimension => low-dim covers blocked.
+kappa_all - kappa_SC = 1,0,1,2 (n=4..7): extra dimension to also cover the NS 'sea'.
