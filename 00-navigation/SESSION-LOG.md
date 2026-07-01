@@ -30,6 +30,20 @@ HOUSEKEEPING: HYP-3769 collision -- opus-S4 (self-concordant residual) keeps 376
 NEXT: (1) is the covering-min lower bound literally Kershner/Fejes-Toth on A_2? (2) the Gauss-Bonnet danger-nerve chi as the crux obstruction (codex M102); (3) 5-fold/golden in the covering-min CF-rung tail.
 
 --- prior entries ---
+## opus-2026-06-30-S5 -- The LRC margin is a FINITE RECIPROCITY COMPUTATION: O(log) Dedekind descent at infeasible large-lcm bases (n=10^30, lcm(1..80)~10^34); construction=2 steps; general-rung NEGATIVE (only rung n is a single Dedekind sum) (HYP-3770)
+
+Prompt: push to a large-lcm base where enumeration is infeasible but the descent is O(log), converting general bounded-base closure into a finite reciprocity computation.
+
+Realized the owner's move on the construction margin (builds on mac-mini/klein HYP-3768 margin=Dedekind sum, my HYP-3769 residual=rung):
+1. The Dedekind sum s(h,k) (= the LRC margin, HYP-3768) computes by RECIPROCITY in O(log k) Euclidean descent -- verified == O(k) enumeration (s(14,183)=-91/1098 in 2 steps).
+2. The construction margin is a 2-STEP reciprocity for EVERY n (Phi6==1 mod n collapses it, = klein-S56's "one step"), EXACT to n=10^30 where Phi6~10^60 residues make enumeration INFEASIBLE; s(n,Phi6)->-1/12=zeta(-1) confirmed (klein-S56's E2 anomaly).
+3. Genuine large-lcm base D=lcm(1..m)~e^m: O(log D)=O(m) descent (m=80: D~10^34, 5 steps, enum 3e34 terms infeasible). THE owner's "large-lcm base where enumeration infeasible but descent O(log)."
+4. NEGATIVE (new): the general-rung margin (k-1)/(n D), D=k(n-1)+1, is NOT a single observer Dedekind sum -- for n=14 only rung k=n (D=Phi6) works; k=2..13 have NO observer a. So reciprocity CLOSES the cyclotomic (construction) H6 endpoint uniformly in n, but does NOT close the covering-min a(n) (no closed form, H3/H4 open).
+5. UNIFICATION: the rung residual (HYP-3769, CF tail) and the Dedekind sum (HYP-3768, CF descent) are TWO readings of ONE Euclidean/CF descent (1/M=[0;n-1,rung]); construction collapses both to O(1).
+
+HONEST: this closes the CONSTRUCTION (loose/cyclotomic upper) endpoint's margin by finite reciprocity at any base -- NOT the LRC-relevant covering-min (hexagonal lower, elementary via H5). The general-rung negative bounds the reach of the klein/mac-mini Dedekind program.
+
+NEXT: (a) is the general-rung margin a SUM of Dedekind sums (one per danger arc / multi-arc), still O(log) each? -- would extend reciprocity past the construction. (b) The covering-min a(n) needs a smart search (H3/H4), untouched by reciprocity. (c) Does the E2/zeta(-1) limit (s->-1/12) have a modular meaning for the covering-min sequence (klein-S56 E2 direction)?
 
 ## opus-2026-06-30-S4 -- The covering-min's SELF-CONCORDANT RESIDUAL 1/M=(n-1)+1/rung; H3 confirmed n=7,8; the known beaters VIOLATE the lowness lemma HYP-3747 (n-dependent); H6 window pinned hexagonal<->cyclotomic(=Dedekind sum) (HYP-3769)
 

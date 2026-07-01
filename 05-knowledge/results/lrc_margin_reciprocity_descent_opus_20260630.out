@@ -1,0 +1,27 @@
+(A) reciprocity == direct enumeration:
+    s(2,5): recip=0 (2 steps) direct=0 match=True
+    s(3,7): recip=-1/14 (2 steps) direct=-1/14 match=True
+    s(8,21): recip=4/63 (5 steps) direct=4/63 match=True
+    s(14,183): recip=-91/1098 (2 steps) direct=-91/1098 match=True
+    s(23,100): recip=-13/40 (4 steps) direct=-13/40 match=True
+
+(B) construction margin = -12 s(n,Phi6)/n^2 via reciprocity (2 steps, Phi6==1 mod n); large n:
+    n=14: margin=5.074e-03 EXACT in 2 steps; enum=183 residues; s(n,Phi6)~-0.082878 (->-1/12=zeta(-1))
+    n=10^6: margin=1.000e-12 EXACT in 2 steps; enum=999999000001 residues; s(n,Phi6)~-0.083333 (->-1/12=zeta(-1))
+    n=10^18: margin=1.000e-36 EXACT in 2 steps; enum=999999999999999999000000000000000001 residues; s(n,Phi6)~-0.083333 (->-1/12=zeta(-1))
+    n=10^30: margin=1.000e-60 EXACT in 2 steps; enum=999999999999999999999999999999000000000000000000000000000001 residues; s(n,Phi6)~-0.083333 (->-1/12=zeta(-1))
+
+(C) large-lcm base D=lcm(1..m)~e^m: O(log D) descent, enumeration infeasible:
+    m=20: D~10^8 (28 bits), enum=2.3e+08 terms INFEASIBLE; s(23,D) in 5 steps
+    m=50: D~10^21 (72 bits), enum=3.1e+21 terms INFEASIBLE; s(53,D) in 6 steps
+    m=80: D~10^34 (115 bits), enum=3.2e+34 terms INFEASIBLE; s(83,D) in 5 steps
+
+(D) NEGATIVE: is the general-rung margin a single observer Dedekind sum? n=14, D=13k+1:
+    k= 2 D= 27: margin=1/378 -> observer a with s(a,D)=target: NONE  (a=n works: False)
+    k= 3 D= 40: margin=1/280 -> observer a with s(a,D)=target: NONE  (a=n works: False)
+    k= 7 D= 92: margin=3/644 -> observer a with s(a,D)=target: NONE  (a=n works: False)
+    k=14 D=183: margin=13/2562 -> observer a with s(a,D)=target: [14, 170]  (a=n works: True)
+    => only the construction rung k=n (D=Phi6) is a single observer Dedekind sum; covering-min a(n) is not.
+
+=> LRC construction margin = finite O(log) reciprocity at ANY base (enumeration infeasible);
+   residual(HYP-3769)=CF tail and Dedekind sum(HYP-3768)=CF descent are ONE Euclidean descent.
