@@ -1,4 +1,4 @@
-# HYP-3792 — The flat-extension moments are Ramanujan sums; the 11-census is organized by (Z/N)*; ζ is the unit-restricted Dirichlet denominator
+# HYP-3793 [renumbered from HYP-3792 by mac-mini-S78: mac-mini-S77 committed HYP-3792 (safe-band char) first] — The flat-extension moments are Ramanujan sums; the 11-census is organized by (Z/N)*; ζ is the unit-restricted Dirichlet denominator
 
 - **Status:** CONFIRMED (all identities verified exactly / high-precision numerically)
 - **Source:** kind-pasteur-2026-07-01-S7
