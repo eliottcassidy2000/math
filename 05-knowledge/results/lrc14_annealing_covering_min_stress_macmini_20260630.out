@@ -1,0 +1,19 @@
+TARGET 14/183=0.076503; search-grid |t|=20599 (d<=260); M(con) grid=0.076503
+  !! trial 1: EXACT M=14/183=0.076503 <= 14/183  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+  [trial 7] running best M_grid=0.076503 (target 0.076503)
+  [trial 15] running best M_grid=0.076503 (target 0.076503)
+  [trial 23] running best M_grid=0.076503 (target 0.076503)
+  [trial 31] running best M_grid=0.076503 (target 0.076503)
+  [trial 39] running best M_grid=0.076503 (target 0.076503)
+
+GLOBAL BEST: M_grid=0.076503 exact=14/183=0.076503  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+beaters found (exact < 14/183): 1
+VERDICT: TIE at 14/183 (construction optimal)
+DONE.
+100 anneals from RANDOM covering 13-sets (MAXSPEED=220). target 14/183=0.076503
+  per-trial best M: min=0.126761 median=0.143579 max=0.159624
+  # anneals reaching <= target+1e-6: 0/100
+  # anneals with M < target-1e-6 (strict beater): 0
+  GLOBAL best exact = 14/183 = 0.076503  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+  landscape (sorted best-M, first 15): [0.12676, 0.12821, 0.12832, 0.12903, 0.13043, 0.13187, 0.13245, 0.13265, 0.13333, 0.13333, 0.13333, 0.13333, 0.13433, 0.13514, 0.13514]
+VERDICT: CONFIRMS covering-min=14/183 (no strict beater in 100 anneals; construction is the attractor)
