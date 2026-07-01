@@ -1,0 +1,10 @@
+  n  construction n/Phi6  #beaters    tightest covering found
+------------------------------------------------------------------------------
+ 10      10/91=0.10989         0       10/91=0.10989 = construction
+ 11     11/111=0.09910         0      11/111=0.09910 = construction
+ 12     12/133=0.09023         0      12/133=0.09023 = construction
+ 13     13/157=0.08280         0      13/157=0.08280 = construction
+ 14     14/183=0.07650         0      14/183=0.07650 = construction
+
+A randomized search (not exhaustive): 0 beaters => construction is the covering-min at that n
+within the sampled spread/large-speed families; >0 => construction is NOT the covering-min.

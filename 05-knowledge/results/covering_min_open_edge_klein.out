@@ -1,0 +1,16 @@
+  n  construction    drop2-mediant    double-killer   1/(n-1)  winner / runner-up margin over constr
+----------------------------------------------------------------------------------------------------------------
+  7    7/43=0.1628       2/11=0.1818       7/37=0.1892    0.1667  win=constr; runner-up=drop2 margin=+0.01903
+  8    8/57=0.1404       5/31=0.1613       4/29=0.1379    0.1429  win=dblkill  <== CONSTR NOT min!; runner-up=constr margin=+0.00242
+  9    9/73=0.1233       2/13=0.1538       9/65=0.1385    0.1250  win=constr; runner-up=dblkill margin=+0.01517
+ 10   10/91=0.1099      13/89=0.1461       5/43=0.1163    0.1111  win=constr; runner-up=dblkill margin=+0.00639
+ 11  11/111=0.0991       2/15=0.1333     11/101=0.1089    0.1000  win=constr; runner-up=dblkill margin=+0.00981
+ 12  12/133=0.0902        1/8=0.1250       2/21=0.0952    0.0909  win=constr; runner-up=dblkill margin=+0.00501
+ 13  13/157=0.0828       2/17=0.1176     13/145=0.0897    0.0833  win=constr; runner-up=dblkill margin=+0.00685
+ 14  14/183=0.0765       9/83=0.1084       7/89=0.0787    0.0769  win=constr; runner-up=dblkill margin=+0.00215
+ 15  15/211=0.0711       2/19=0.1053     15/197=0.0761    0.0714  win=constr; runner-up=dblkill margin=+0.00505
+ 16  16/241=0.0664       5/49=0.1020      8/115=0.0696    0.0667  win=constr; runner-up=dblkill margin=+0.00318
+ 17  17/273=0.0623       2/21=0.0952     17/257=0.0661    0.0625  win=constr; runner-up=dblkill margin=+0.00388
+ 18  18/307=0.0586       6/65=0.0923       3/49=0.0612    0.0588  win=constr; runner-up=dblkill margin=+0.00259
+
+constr = n/Phi6 (densest core {1..n-2}+killer n(n-1)); drop2 = mediant beater; dblkill = my 7/89 family

@@ -1,0 +1,13 @@
+n=12: construction 12/133=0.09023; BEST found 12/133=0.09023 rung=12 = construction
+   0 beaters in the drop<=2 + <=2-killer(<=5n) structured family
+n=13: construction 13/157=0.08280; BEST found 13/157=0.08280 rung=13 = construction
+   0 beaters in the drop<=2 + <=2-killer(<=5n) structured family
+n=14: construction 14/183=0.07650; BEST found 14/183=0.07650 rung=14 = construction
+   0 beaters in the drop<=2 + <=2-killer(<=5n) structured family
+Does the drop<=2 targeted family find the KNOWN beaters at n=9,10,11?
+  n=9: construction 9/73; best 5/41=0.12195 BEATS rung=5
+  n=10: construction 10/91; best 4/37=0.10811 BEATS rung=4
+  n=11: construction 11/111; best 11/111=0.09910 = constr (MISSED known beater!) rung=11
+
+Known covering-min: n=9 -> 4/33 (drop-3 set), n=10 -> 4/37 (drop-1), n=11 -> 3/31
+If drop<=2 misses n=9/n=11, it cannot certify no-beater at n=12,13,14 (same blind spot).

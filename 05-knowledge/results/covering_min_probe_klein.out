@@ -1,0 +1,10 @@
+SANITY (known beaters, full M):
+  n=7 M=2/13 rung=2 < constr 7/43? True
+  n=8 M=2/15 rung=2 < constr 8/57? True
+  n=9 M=4/33 rung=4 < constr 9/73? True
+
+  n   construction  best found (2-stage probe)  rung  verdict
+----------------------------------------------------------------------------
+ 12  12/133=0.09023      12/133=0.09023    12  = construction
+ 13  13/157=0.08280      13/157=0.08280    13  = construction
+ 14  14/183=0.07650      14/183=0.07650    14  = construction

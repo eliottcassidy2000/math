@@ -1,3 +1,23 @@
+## klein-2026-06-30-S53 -- THE COVERING-MIN OPEN EDGE: the construction is the LOOSE rung, the true min is a search-resistant small-rung spread set, and the "n>=12 transition" is UNVERIFIED (HYP-3764)
+
+Prompt: look for past patterns of thin edges; hypothesize freely about the open edge of the covering-min conjecture.
+
+Surveyed the repo's thin-edge threads (HYP-3548 two razor-thin lines; HYP-3551 7/89 anatomy; HYP-3726 margin=1/hexagonal=1/(n(2n-1)); HYP-3701 margin~1/n^2; HYP-3700 disproof edge). Then reframed and stress-tested the covering-min. Filed HYP-3764; reflection the-clean-answer-is-the-loose-one.md; scripts covering_min_{open_edge,beater_search,probe,targeted}_klein.py (+ .out; probe_validation .out is the key one).
+
+THE REFRAME (exact): a covering set's gap = a Farey rung M = r/(r(n-1)+1), INCREASING in r from 1/n (r=1, the floor, UNREACHABLE since covering sets have M>1/n strictly, THM-523) to 1/(n-1) (r->inf). The construction {1..n-2,n(n-1)} = rung n = the LOOSE end (near 1/(n-1)); the covering-min = the SMALLEST realizable rung a(n)>=2, a SPREAD set beating the construction by only ~1/n^2. So "densest core + minimal killer = tightest" (HYP-3551) is BACKWARDS: the dense construction is the loosest rung; tightness lives at small rungs = spread sets.
+
+VERIFIED beaters (construction is NOT the covering-min): n=7 {1,2,5,6,7,8}=2/13(rung2), n=8 {1,4,5,6,7,11,16}=2/15(r2), n=9 {1,3,4,5,7,11,18,32}=4/33(r4), n=10 {1,2,3,5,6,7,8,9,30}=4/37(r4), n=11 3/31(r3). a(n)=2,2,4,4,3 << n.
+
+THE HONEST EDGE (search unreliability): I ran three searches for beaters at n=12,13,14 -- ALL found the construction only (0 beaters). BUT each demonstrably MISSES known beaters: random misses all structured; hillclimb finds n=7,8,10 but MISSES n=9,11; targeted drop<=2 finds n=9,10 but MISSES n=11 (true 3/31 not found). So "0 beaters at n=12,13,14" is NOT evidence for the transition -- the SAME searches wrongly report 0 at n=11. No search I have certifies no-beater at n>=12.
+
+HYPOTHESES: H3 LEADING (bold) -- the "n>=12 transition" (HYP-3737 band over-constraint) is a search MIRAGE; low-rung beaters persist for all n; construction never exactly the covering-min. This challenges the EVIDENTIAL BASIS of HYP-3737 (forces construction n>=12) and HYP-3747 (lowness lemma) WITHOUT a counterexample -- flagged, not refuted. H4 alt: transition real, needs a PROOF (search won't do). H5 PROVED: LRC-orthogonal -- rung>=2 => covering-min in [2/(2n-1), n/Phi6], LRC holds margin>=1/(n(2n-1)) regardless of a(n). H6: all margins Theta(1/n^2), pinned between cyclotomic(Phi6) and hexagonal(n(2n-1)) reciprocals, never closing (LRC) nor opening past 1/(n(n-1)). H7: a(n) = a covering-system/Jacobsthal realizability function, no closed form (like Farey rung HYP-3732).
+
+FLAG to mac-mini (author of HYP-3737/3747, and has concurrent covering_min_hillclimb work): the "construction=covering-min for n>=12" is supported only by searches that miss beaters at n=9,11. Worth a targeted drop->=3/large-spread search at n=12,13,14, or a PROOF of the band-over-constraint, before treating the transition as established.
+
+NEXT: (1) targeted drop->=3 spread search at n=12,13,14 to try to FIND a beater (would definitively refute the transition); (2) PROVE-or-refute HYP-3737's band-over-constraint mechanism; (3) characterize a(n) as a realizability function of factorizations of r(n-1)+1.
+
+--- prior entries ---
+
 ## klein-2026-06-30-S52 -- "LARGE MULTIPLES ARE FORCED" made rigorous (general n) + the Steinhaus SCALING LAW for why they fail + honest corrections to HYP-3745 and the covering-min scope (HYP-3763)
 
 Prompt: survey ALL number-theory work in the repo (creative, comprehensive, niche included); work on making "large primes forced" fully rigorous; use Steinhaus ideas to push proofs.
