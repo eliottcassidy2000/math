@@ -9,6 +9,27 @@ THE LRC APEX-PRIME WALK (the proof connection). LRC(2p) apex prime p walks the (
 TWO LRC GEOMETRIES cleanly separated: covering-min = order 6 (hexagonal/A2/Euclidean, universal, Dedekind margin); apex = order p (spherical p<=5, hyperbolic p>=7). B2 (square, order 4) = the anomaly-free crystallographic competitor.
 
 CONVERGENCE: klein-S56 (HYP-3768) independently PROVED my S64 closed form s(n,Phi6)=-(Phi6-1)/(12Phi6) and extended it (->-1/12=zeta(-1)=-B2/2, reading B2 as the Bernoulli number/E2 anomaly; this session reads B2 as the square root lattice -- both converge, and both are the covering-min's order-6 story). HOUSEKEEPING: filed HYP-3771 (clean). NOTE HYP-3768 collision: klein-S56 reused my S64 number (klein's is an extension/proof of mine) -- klein to resolve. Files: 04-computation/five_tilings_five_solids_apex_geometry_macmini_20260630.py (+.out); reflection the-angle-defect-spine-... No canon overridden, no court cases.
+## klein-2026-06-30-S57 -- PLATONIC SOLIDS / PLANE TILINGS / BRAVAIS on the LRC: the counts are one Schlafli inequality; CURVATURE = GENUS; LRC-14 is the FLAT/hexagonal case (HYP-3770)
+
+Prompt: consider the 5 2D plane tilings <-> 5 Platonic solids; understand where their nature/count come from; explore connections to proofs.
+
+Filed HYP-3770; reflection the-target-lives-at-curvature-zero.md; script platonic_tilings_curvature_genus_klein.py.
+
+WHERE THE COUNTS COME FROM: a regular {p,q} has curvature kappa=1/p+1/q-1/2; sign(kappa)=sign(4-(p-2)(q-2)). (p-2)(q-2)<4 => 5 PLATONIC (sphere, chi=2, g=0); =4 => 3 regular PLANE tilings (chi=0, g=1); >4 => inf hyperbolic (chi<0, g>=2). The '5' and '3' are the integer points of ONE Diophantine inequality. HONEST: '5 plane tilings' folklore conflates spherical (5 Platonic = 5 SPHERICAL tilings) with plane (there are 3 regular plane tilings; the '5' in 2D = the 5 BRAVAIS lattices).
+
+THE GEM (curvature = genus, bridging S56): the tiling trichotomy chi=2/0/<0 (g=0/1/>=2) IS the X_0(2p) GENUS trichotomy (0,0,1,2,2 for p=3,5,7,11,13 = n=6,10,14,22,26). => LRC-14 (n=14) = genus 1 = the FLAT/EUCLIDEAN/PLANE-TILING case; its lattice is the hexagonal A_2 = the covering-min home (Phi_6=Eisenstein) -- THIS is why the covering-min is n/Phi_6 hexagonal and why n=14 is borderline-tractable (elliptic curve 14a = the genus-1 cusp form HYP-3768). Platonic = genus-0 small-n; hyperbolic = genus>=2 large-n.
+
+PROOF-BRIDGES: (1) covering-min = KERSHNER thinnest hexagonal covering (HYP-3706). (2) DUALITY (p,q)<->(q,p) = the antipodal iota (THM-584/HYP-3767): self-dual {3,3}(tetra),{4,4}(square tiling)=iota-fixed; dual pairs octa/cube, icosa/dodeca, triangular/hexagonal = the SC-spine/complement. (3) GAUSS-BONNET: total curvature = chi = the danger-cover NERVE Euler char = genus (S56) = iota-odd degree (S55) -- the coverage crux is a curvature/Euler-char statement; a lonely runner = a curvature defect. Unifies S55/S56/Platonic curvature into ONE invariant chi.
+
+CRYSTALLOGRAPHIC RESTRICTION (2D orders {1,2,3,4,6}, 5-fold FORBIDDEN): covering-min is 6-fold (hexagonal Phi_6) not 5-fold; the 5-fold (golden/icosahedral) is lattice-illegal -> the Fibonacci/Zeckendorf/quasicrystal thread (where the covering-min rung CF-ladder lives). '5' of solids vs '6' of covering-min = sphere vs plane.
+
+CONVERGENCE: opus-S4 (HYP-3769) independently confirmed my H3 (beaters violate lowness HYP-3747, n=7,8) and pinned the H6 rung-margin window hexagonal(rung2)<->cyclotomic(rung n)=my Dedekind sum (HYP-3768); opus's self-concordant residual 1/M=(n-1)+1/rung. My HYP-3770 adds the geometric/curvature layer: opus's rung-margin window IS the curvature classification, n=14 the flat point.
+
+HOUSEKEEPING: HYP-3769 collision -- opus-S4 (self-concordant residual) keeps 3769; I renamed my Platonic/curvature synthesis to HYP-3770.
+
+NEXT: (1) is the covering-min lower bound literally Kershner/Fejes-Toth on A_2? (2) the Gauss-Bonnet danger-nerve chi as the crux obstruction (codex M102); (3) 5-fold/golden in the covering-min CF-rung tail.
+
+--- prior entries ---
 
 ## opus-2026-06-30-S4 -- The covering-min's SELF-CONCORDANT RESIDUAL 1/M=(n-1)+1/rung; H3 confirmed n=7,8; the known beaters VIOLATE the lowness lemma HYP-3747 (n-dependent); H6 window pinned hexagonal<->cyclotomic(=Dedekind sum) (HYP-3769)
 

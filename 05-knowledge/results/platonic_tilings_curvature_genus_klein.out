@@ -1,0 +1,31 @@
+==========================================================================
+(1)+(2) SCHLAFLI {p,q}: the counts 5 (Platonic) and 3 (plane) from (p-2)(q-2) vs 4
+==========================================================================
+   PLATONIC (5): [((3, 3), 'tetrahedron'), ((3, 4), 'octahedron'), ((3, 5), 'icosahedron'), ((4, 3), 'cube'), ((5, 3), 'dodecahedron')]
+   PLANE    (3): [((3, 6), 'triangular tiling'), ((4, 4), 'square tiling'), ((6, 3), 'HEXAGONAL tiling')]
+   count check: Platonic=5 (=5?), plane=3 (=3?)
+
+   DUALITY (p,q)<->(q,p) = the antipodal iota (THM-584/HYP-3767):
+     Platonic: ['tetrahedron [SELF-DUAL=iota-fixed]', 'octahedron<->cube', 'icosahedron<->dodecahedron']
+     plane: ['triangular tiling<->HEXAGONAL tiling', 'square tiling [SELF-DUAL=iota-fixed]']
+
+==========================================================================
+(3) CURVATURE = GENUS: the tiling trichotomy IS the X_0(2p) genus trichotomy (S56)
+==========================================================================
+     p  n=2p genus X_0(2p)       curvature regime    tiling analogue
+     3     6             0           sphere (g=0)           Platonic
+     5    10             0           sphere (g=0)           Platonic
+     7    14             1            PLANE (g=1)      hexagonal/A_2  <== LRC-14, the flat case
+    11    22             2      hyperbolic (g>=2)   hyperbolic {p,q}
+    13    26             2      hyperbolic (g>=2)   hyperbolic {p,q}
+
+   => LRC-14 (n=14, genus 1) = the EUCLIDEAN/PLANE-TILING case; covering-min = hexagonal A_2
+      (Phi_6 = Eisenstein, HYP-3715/3706). Platonic = genus-0 small-n; hyperbolic = genus>=2 large-n.
+
+==========================================================================
+(4) CRYSTALLOGRAPHIC RESTRICTION: 2D rotation orders {1,2,3,4,6}; 5-fold FORBIDDEN
+==========================================================================
+   n-fold with 2cos(2pi/n) in Z (lattice-compatible): [1, 2, 3, 4, 6]  -- note 5 and 7+ EXCLUDED
+   the 5 BRAVAIS lattices: oblique(2), rectangular(2), rhombic(2), square(4), HEXAGONAL(6)
+   => the covering-min is 6-fold (hexagonal, Phi_6), NOT 5-fold. Icosahedral 5-fold (golden
+      ratio) is lattice-FORBIDDEN -> lives in the Fibonacci/Zeckendorf/quasicrystal thread.
