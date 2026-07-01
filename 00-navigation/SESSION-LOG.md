@@ -1,3 +1,18 @@
+## kind-pasteur-2026-07-01-S18 -- LRC DIFFICULTY BY n IS THE APEX-PRIME ARITHMETIC (non-monotone!); the tournament reconstruction WALL at 7 vertices is the combinatorial SHADOW of LRC(14). Complements mac-mini-S87 six-bridges (at n=14) with the BY-n variation.
+
+Prompt: work open next questions; apply this work to LRC; think LRC above/below 14 runners (easier/harder/clearer/surprising); search past connections comprehensively.
+
+THE BACKBONE (apex-prime pillar table, grounded): LRC(n=2p) apex = Paley/heptagon tournament on p vertices; the 3 proof-pillars = p's arithmetic: MERSENNE(2-adic descent THM-580) / HEEGNER(sqrt(-p) SOS S75e) / 3-mod-4(Paley-tournament + Borsuk-Ulam THM-581). ONLY p in {3,7} are all three => ONLY n=6 (PROVED) and n=14 (first open) have all 3 tools.
+EASIER/HARDER/CLEARER: n=6 easiest (all pillars + trivial tournament space, 2 classes). n=14 RICHEST-but-FIRST-OPEN (all pillars, Paley heptagon, tight-equiangular d=7) yet the tournament space on 7 vtx = this session's RECONSTRUCTION WALL (90% OCF-cospectral) => the gentlest place to break LRC open is ALSO where the class-combinatorics first goes irreducible.
+FOUR SURPRISES (survey-corrected): (1) BIG ONE -- p=1 mod 4 (n=10,26,34) is EASIER not harder: complement reflection = AUTOMORPHISM (Paley GRAPH) => BROUWER fixed point => SOS witnesses directly; the 3 pillars are TOOLS for the HARD p=3mod4 free-Z2/Borsuk-Ulam regime. So axis #1 = p mod 4, not pillar count. [I initially had this backwards; corrected via Explore survey.] (2) NON-MONOTONE within hard regime -- n=19 (C=37, both prime) is a CLEANER control than 14/21; above 14 you lose pillars (22 loses Mersenne, 62 loses Heegner). (3) TIGHT-EQUIANGULAR {7,23}: n=14,46 tight apices; 46 special via equiangular. (4) FINITE core -- MSS 2024 bounds LRC(14) counterexample speeds <= 91^12 (refutes unboundedness); covering sets are OVER-lonely (M~0.095>>1/14).
+APPLYING THIS SESSION'S WORK: (a) reconstruction wall at p=7 vtx = shadow of LRC(14) (trivial at p=3=LRC6-proved). (b) half-tiling = LRC WITNESS side (two-index, mac-mini-S6). (c) BRIDGE-2 CONVERGENCE (w/ mac-mini-S87 HYP-3813): my twin separator -- OCF/H-cospectral tournament twins {4,6} separated only by SPECTRUM (d=det(I+S)) <-> mac-mini's LRC champions trace-cospectral (1.857) but Gram-spectrally distinct (top eig .5006/.4992/.4803). SAME move: 2nd-moment/spectrum separates 1st-moment-cospectral objects, in BOTH worlds = the determinant-lens d perp H.
+MENTAL MODEL: LRC difficulty = f(apex prime arithmetic), NOT f(n). tournament-space complexity by p = the thermometer (trivial p=3, first-irreducible p=7).
+CONVERGENCE: mac-mini-S87 HYP-3813 (six metagraph<->LRC bridges AT n=14) + klein-S80 (covering-min phase cloud); my S18 = the BY-n survey (complementary). Explore agent (LRC-by-n repo status) still running; integrate next.
+Reflection: lrc-difficulty-by-n-is-the-apex-prime-arithmetic-and-the-tournament-wall-at-7-is-the-shadow-kps.md; script lrc_by_n_apex_tournament_complexity_kps.py (+.out). Not a HYP reservation.
+-> HYP-3813, twentyeight (3 pillars {3,7}), three-evens-two-poles (tight-eq {2,3,7,23}), the-SC-spine-is-the-half-tiling (S17), THM-580/581, determinant-lens.
+
+---
+
 ## klein-2026-07-01-S80 -- INTEGRATION: the COVERING-MIN PHASE CLOUD = AP(step n) + ANTIPODAL KILLER -- one geometric picture unifying Chebyshev 2-pt + three-gap + phase-residue + cloud-tournament + Phi6-irreducibility (HYP-3813).
 
 Prompt: novel intriguing ways to integrate the fold/tournament work with LRC.
