@@ -32,38 +32,38 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/0f0e004)**. This layer introduces the **Burnside Class-Folding & Terminal Complement Symmetry (THM-655/HYP-3814)**, operationalizing the terminal proof sheaf through the formal verification of **Complement-Fold Terminality** and **OEIS A051337 Class Counts**.
+As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/f0e80b4)**. This layer introduces the **Half-Tiling $D_1$ Symmetry & Diagonal Coordinate Lattice (THM-656/HYP-3815)**, operationalizing the terminal proof sheaf through the formal verification of **Anti-Diagonal Span-Fixing** and **Grid Parallel Families**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (0f0e004)**. It refines the terminal stabilization with a synthesis of symmetry-folding and orbit-counting:
-1. **Complement-Fold Terminality:** Establishes that the complement-fold is a single terminal step, correcting the S19 tower model. This proves that there is NO quarter-fold in the spectral manifold, effectively bounding the topological depth.
-2. **Folded Class-Count (OEIS A051337):** Rigorously evaluates the class-count folding to OEIS sequence **A051337**.
-    - **Rule Unification:** Refutes the previous "even-rule" as a local coincidence that breaks at $n=8$.
-    - **Burnside Stabilization:** Establishes a unified rule via **Burnside's Lemma** over cycles equivalent to $2 \pmod 4$ with a fixed-point-if-odd condition.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (f0e80b4)**. It refines the terminal stabilization with a synthesis of geometric tiling symmetry and lattice coordinates:
+1. **Half-Tiling $D_1$ Symmetry (HYP-3815):** Characterizes the half-tiling symmetry as $D_1$ per region.
+    - **Symmetry Operators:** Evaluates $R$ (anti-diagonal/complement span-fixing) and $V$ (vertical swaps span $\leftrightarrow$ anti-diagonal). $V$ is identified as a geometric-only operator that is not isomorphism-respecting, anchoring the manifold's physical vs. abstract state.
+2. **Diagonal Coordinate Lattice:** Defines the "grid" as a **span $\times$ anti-diagonal** coordinate lattice.
+    - **Lattice Structure:** The grid consists of perpendicular parallel diagonal families rather than mirror lines, providing the discrete geometric substrate for the $n=14$ metagraph.
 3. **Residual Closure & Quadratic Scaling:** Rigorously confirms the quadratic scaling bound **$n(n-1)$** for residual closure. This establishes that for $n=14$, the spectral gaps are definitively closed within the quadratic speed regime, effectively stabilizing the metagraph.
-4. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to suppress Reynolds averaging.
-5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The terminal complement-fold ensures orientational symmetry is locked within a compact topological site.
-6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the Burnside-stabilized class counts create a non-negotiable arithmetic grid, preventing spectral sliding.
-7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **Burnside orbit certificates**, **OEIS A051337 folding parameters**, **complement-fold terminal signatures**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+4. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to suppress Reynolds averaging and maintain coordinate precision.
+5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The $D_1$ half-tiling symmetry ensures orientational stability across the lattice.
+6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the diagonal lattice grid create a non-negotiable arithmetic grid, preventing spectral sliding.
+7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **$D_1$ tiling certificates**, **anti-diagonal span-fixing parameters**, **diagonal family signatures**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Burnside_A051337`, `Terminal_Complement_Fold`, `Cycle_2mod4_FixedPoint`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `D1_Half-Tiling_Symmetry`, `Diagonal_Lattice_Grid`, `Anti-Diagonal_Span-Fixing`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 0f0e004. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-3791/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814** 
-framework, operationalizing the terminal proof sheaf through **Class Folding** 
-and **Burnside Rule Unification**.
+Integrated f0e80b4. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/THM-656/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-3791/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814/HYP-3815** 
+framework, operationalizing the terminal proof sheaf through **Tiling Symmetry** 
+and **Lattice Coordinate Mapping**.
 
-### 1. Terminal Complement Fold (HYP-3814)
-Corrects S19 tower; proves complement-fold is the single terminal step 
-with NO quarter-fold.
+### 1. Half-Tiling Symmetry (HYP-3815)
+Establishes $D_1$ symmetry per region. $R$ fixes anti-diagonal/complement 
+span; $V$ vertical swaps span $\leftrightarrow$ anti-diagonal (geometric-only).
 
-### 2. Burnside Class-Folding
-Establishes OEIS A051337 class count. Unifies rule over $2 \pmod 4$ cycles 
-with fixed-point-if-odd condition (refutes $n=8$ coincidence).
+### 2. Coordinate Lattice
+Defines the grid as a span $\times$ anti-diagonal lattice of perpendicular 
+parallel diagonal families (not mirror lines).
 
 ### 3. Quadratic Scaling & Closure
 Rigorously anchors residual closure at $n(n-1)$. Metagraph stability 
