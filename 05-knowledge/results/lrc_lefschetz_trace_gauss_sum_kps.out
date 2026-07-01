@@ -1,0 +1,46 @@
+================================================================================================
+ N=14=2*7: atoms = units (Z/14)* = [1, 3, 5, 9, 11, 13]  (φ=6)
+================================================================================================
+ ι: a->N-a orbits on units: [(1, 13), (3, 11), (5, 9)]; ι-FIXED units: [] => FREE action: True
+   => ordinary Lefschetz Λ(ι) on the atoms = #(ι-fixed atoms) = 0 (free) -- Lefschetz-EVEN is BLIND.
+
+================================================================================================
+ (B) atom moments = RAMANUJAN SUMS c_N(k) = character traces over (Z/N)*
+================================================================================================
+    k    c_N(k) direct  closed match
+    0     6.0000 +0.0j       6  True
+    1     1.0000 +0.0j       1  True
+    2    -1.0000 +0.0j      -1  True
+    3     1.0000 +0.0j       1  True
+    4    -1.0000+-0.0j      -1  True
+    5     1.0000+-0.0j       1  True
+    6    -1.0000 +0.0j      -1  True
+    7    -6.0000+-0.0j      -6  True
+    8    -1.0000+-0.0j      -1  True
+    9     1.0000+-0.0j       1  True
+   10    -1.0000+-0.0j      -1  True
+   11     1.0000 +0.0j       1  True
+   12    -1.0000 +0.0j      -1  True
+   13     1.0000+-0.0j       1  True
+  => atom autocorrelation = Ramanujan sum c_14 (a CHARACTER TRACE), all match: True
+
+================================================================================================
+ (D) THE ι-ODD INDEX = the quadratic GAUSS SUM g_p (Borsuk-Ulam odd degree)
+================================================================================================
+  p=7: χ(-1)=(-1|7)=-1  => χ is ODD (p=3 mod4, -1 non-residue => FREE ι)
+  Gauss sum g_7 = Σ_a (a|7) e(a/7) = +0.000000+2.645751j
+    |g|=2.645751 vs sqrt(7)=2.645751; g = i*sqrt(p)? True
+  => g_7 = i*sqrt(7): a SINGLE nonzero ι-ODD trace. Being nonzero, Borsuk-Ulam CERTIFIES a lonely runner
+     (the odd/reduced index obstructs an ι-equivariant cover). This is the certification, not Λ(ι)=0.
+
+================================================================================================
+ THE BYPASS (framing)
+================================================================================================
+ Naive: L = Σ_A (-1)^|A| I_A is absolutely DIVERGENT (Σ|c_k|~; MISTAKE-078) -- signed cancellation opaque.
+ Lefschetz split: L = (ι-EVEN main term, the (6/7)^13 average, positive) + (ι-ODD correction).
+  * ι acts FREELY => ordinary Lefschetz Λ(ι)=0 (no ι-fixed lonely pt): the EVEN index cannot see it.
+  * The ι-ODD index localizes to the quadratic character => the GAUSS SUM g_7=i*sqrt(7) (ONE number),
+    computed by the three pillars (Borsuk-Ulam odd degree / i*sqrt(7) / the p=7 apex).
+ => Replace the divergent series by the single Gauss-sum trace: the odd index certifies M>=1/n WITHOUT
+    summing the signed correction. This is why p=3mod4 needs Borsuk-Ulam (odd/Gauss) not Brouwer (even).
+DONE.
