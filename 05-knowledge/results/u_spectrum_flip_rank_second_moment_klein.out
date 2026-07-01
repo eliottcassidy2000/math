@@ -1,0 +1,66 @@
+==============================================================================
+DOES THE U-SPECTRUM SEE THE FLIP-RANK EXCESS?   (n, structural facts)
+==============================================================================
+ n  |G_n|  V_merged  #SC rho(flip) ceil_log2  excess
+ 3      2         2    2         1         1       0
+ 4      4         3    2         2         2       0
+ 5     12        10    8         4         4       0
+ 6     56        34   12         7         6       1
+  (excess first appears at n=6; HYP-3810: SC classes carry it)
+
+------------------------------------------------------------------------------
+n = 3
+  |G_n|=2, #SC=2, V_merged=2
+  (1) distinct skew-spectra = 1;  distinct U-spectra = 1  (equal => Cayley is a spectral bijection, U carries no more)
+  (2) resolution ceiling V_merged=2: distinct-spectra 1 < V_merged (LOSES 1 MORE beyond complement-pairs)
+      cospectral collisions = |G_n|-distinct = 1  (>= #NS-pairs = 0 forced by complement-reflection)
+  (3) 2nd moment trace(S^2): values=[-6.0]  (constant = -n(n-1) = -6 => BLIND)
+      4th moment trace(S^4): #distinct values = 1  (first informative even moment)
+      circular trace(U)=sum cos(theta): #distinct values = 1  (Cayley wrap makes the blind 2nd moment informative; note it matches/beats trace(S^4))
+  (4) COMBINATORIAL: #distinct H(Redei) = 2, #distinct (H,c3) = 2  (vs #distinct spectra = 1) -- combinatorial counts resolve FAR more than any spectrum
+      H all odd (Redei) = True; metagraph 2nd moment Var(H) = 1.000  (THM-589 W(n); the SECOND MOMENT that IS relevant to covering/flip-rank)
+
+------------------------------------------------------------------------------
+n = 4
+  |G_n|=4, #SC=2, V_merged=3
+  (1) distinct skew-spectra = 2;  distinct U-spectra = 2  (equal => Cayley is a spectral bijection, U carries no more)
+  (2) resolution ceiling V_merged=3: distinct-spectra 2 < V_merged (LOSES 1 MORE beyond complement-pairs)
+      cospectral collisions = |G_n|-distinct = 2  (>= #NS-pairs = 1 forced by complement-reflection)
+  (3) 2nd moment trace(S^2): values=[-12.0]  (constant = -n(n-1) = -12 => BLIND)
+      4th moment trace(S^4): #distinct values = 2  (first informative even moment)
+      circular trace(U)=sum cos(theta): #distinct values = 2  (Cayley wrap makes the blind 2nd moment informative; note it matches/beats trace(S^4))
+  (4) COMBINATORIAL: #distinct H(Redei) = 3, #distinct (H,c3) = 3  (vs #distinct spectra = 2) -- combinatorial counts resolve FAR more than any spectrum
+      H all odd (Redei) = True; metagraph 2nd moment Var(H) = 2.000  (THM-589 W(n); the SECOND MOMENT that IS relevant to covering/flip-rank)
+
+------------------------------------------------------------------------------
+n = 5
+  |G_n|=12, #SC=8, V_merged=10
+  (1) distinct skew-spectra = 2;  distinct U-spectra = 2  (equal => Cayley is a spectral bijection, U carries no more)
+  (2) resolution ceiling V_merged=10: distinct-spectra 2 < V_merged (LOSES 8 MORE beyond complement-pairs)
+      cospectral collisions = |G_n|-distinct = 10  (>= #NS-pairs = 2 forced by complement-reflection)
+  (3) 2nd moment trace(S^2): values=[-20.0]  (constant = -n(n-1) = -20 => BLIND)
+      4th moment trace(S^4): #distinct values = 2  (first informative even moment)
+      circular trace(U)=sum cos(theta): #distinct values = 2  (Cayley wrap makes the blind 2nd moment informative; note it matches/beats trace(S^4))
+  (4) COMBINATORIAL: #distinct H(Redei) = 7, #distinct (H,c3) = 8  (vs #distinct spectra = 2) -- combinatorial counts resolve FAR more than any spectrum
+      H all odd (Redei) = True; metagraph 2nd moment Var(H) = 22.889  (THM-589 W(n); the SECOND MOMENT that IS relevant to covering/flip-rank)
+
+------------------------------------------------------------------------------
+n = 6
+  |G_n|=56, #SC=12, V_merged=34
+  (1) distinct skew-spectra = 6;  distinct U-spectra = 6  (equal => Cayley is a spectral bijection, U carries no more)
+  (2) resolution ceiling V_merged=34: distinct-spectra 6 < V_merged (LOSES 28 MORE beyond complement-pairs)
+      cospectral collisions = |G_n|-distinct = 50  (>= #NS-pairs = 22 forced by complement-reflection)
+  (3) 2nd moment trace(S^2): values=[-30.0]  (constant = -n(n-1) = -30 => BLIND)
+      4th moment trace(S^4): #distinct values = 5  (first informative even moment)
+      circular trace(U)=sum cos(theta): #distinct values = 6  (Cayley wrap makes the blind 2nd moment informative; note it matches/beats trace(S^4))
+  (4) COMBINATORIAL: #distinct H(Redei) = 19, #distinct (H,c3) = 31  (vs #distinct spectra = 6) -- combinatorial counts resolve FAR more than any spectrum
+      H all odd (Redei) = True; metagraph 2nd moment Var(H) = 157.551  (THM-589 W(n); the SECOND MOMENT that IS relevant to covering/flip-rank)
+
+==============================================================================
+NET: U-spectrum = S-spectrum (Cayley bijection) -> NO eigenvalue-level gain. Both factor
+through the MERGED metagraph (ceiling V_merged) because complement is a reflection and the
+spectrum is reflection-invariant. The flip-rank excess is carried by the SC (fixed) classes
+on the UNMERGED G_n -> SPECTRALLY INVISIBLE. The 2nd moment trace(S^2)=-n(n-1) is the constant
+order-2 shadow of that symmetry; Cayley wraps it into an informative circular moment trace(U),
+but resolution is still capped at V_merged. To see the excess needs NON-spectral symmetry data.
+==============================================================================

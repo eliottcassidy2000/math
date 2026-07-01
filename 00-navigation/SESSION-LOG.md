@@ -11,6 +11,29 @@ TASK 2 (SC spine = blue subgraph = half-tiling): blue-DEGREES = T-join (all ODD,
 PARALLEL (2 pillars, 1 parity, 2 arithmetics): the complement/iota odd/even parity is SHARED (atoms odd=>even-diff+iota-spike; spine bipartite-at-odd-n). But arithmetic SPLITS: Cayley spectra = cyclotomic/Gauss (roots of unity, sqrt p, S22/23); SC-spine ADJACENCY spectrum = METALLIC (degree-2, continued-fraction fixed points x=k+1/x). RESONANCE: metallic = the deep-well t*=[0;n-1,n] CF arithmetic; so spine spectrum & covering-modulus share CF/metallic arithmetic, Paley obstruction shares Gauss-sum sqrt p arithmetic = the two S23 hard-side flavors.
 
 HONEST: pair-corr=|Ramanujan|^2 EXACT; metallic clean at n=4,5, qualitative (degree-2 unnamed) n=6,7; 'spine ~ covering-CF-arithmetic' is a structural resonance. Reflection: the-second-moments-atom-pair-correlation-is-squared-ramanujan-and-the-SC-spine-spectrum-is-metallic-opus-20260701.md; scripts {lrc_atom_paircorrelation_ramanujan, sc_spine_bluedegree_vs_spectrum}_opus_20260701.py. HYP-3816. No canon overridden.
+## klein-2026-07-01-S82 -- THE U-SPECTRUM DOES NOT SEE THE FLIP-RANK EXCESS (a clean NO with a structural reason); the covering-relevant SECOND MOMENT is the METAGRAPH H-variance, not a spectral moment (HYP-3816, was 3815).
+
+Prompt: try to see whether the U-spectrum sees the flip-rank excess the skew-spectrum misses; consider the second moment.
+
+RESULT: definitive NO, verified exactly n=3,4,5,6 (u_spectrum_flip_rank_second_moment_klein.py; exact integer char polys via Faddeev-LeVerrier).
+
+(1) CAYLEY IS A SPECTRAL BIJECTION. eig(U)=(1-i*mu)/(1+i*mu), so U-cospectral <=> S-cospectral. #distinct U-spectra = #distinct skew-spectra = 1,2,2,6 at n=3..6. The U-spectrum carries EXACTLY the skew-spectrum's info -- no eigenvalue-level gain (the hope was structurally impossible: a bijection on eigenvalues can't change cospectrality).
+
+(2) RESOLUTION CEILING = V_merged. Complement is a REFLECTION (S81/HYP-3814): spec(-S)=spec(S) ALWAYS => every NS complement-pair is cospectral => #distinct spectra <= V_merged=(|G_n|+#SC)/2; the spectrum factors through the MERGED (reflection-quotient) metagraph. Reality is FAR weaker: at n=6, 6 distinct spectra for 56 classes (V_merged=34), 50 collisions of which only 22 are forced by complement-pairing.
+
+(3) THE EXCESS IS SPECTRALLY INVISIBLE. flip-rank excess = 0,0,0,1 (first at n=6, rho=7 vs LB=6); HYP-3810: the SC (reflection-FIXED) classes carry it. Those fixed points are exactly what the spectral quotient collapses. You cannot photograph a mirror by standing in front of it: a reflection-symmetric invariant carries no info about the reflection's fixed points.
+
+(4) SECOND MOMENT. trace(S^2)=-n(n-1) is CONSTANT (-6,-12,-20,-30) -- the order-2 shadow of the reflection-symmetry, BLIND. The Cayley wrap converts it to a live circular moment trace(U)=sum cos(theta)=sum(1-mu^2)/(1+mu^2), which recovers the full (weak) spectral resolution in ONE scalar (6/6 at n=6, beating trace(S^4)=5) -- a reusable trick (a symmetry-pinned 2nd moment can be revived through the group exp map) -- but still capped at the spectral ceiling. The RIGHT covering 2nd moment is the METAGRAPH H-variance Var(H) (THM-589 W(n)=1,2,22.9,157.6): the combinatorial count H (Redei, all odd) resolves 2,3,7,19 classes and (H,c3) resolves 31 at n=6, FAR more than any spectrum's 6.
+
+BOTTOM LINE: the flip-rank excess is a COMBINATORIAL covering property of the metagraph, invisible to all spectra (S or U); the right instrument is combinatorial (the H-distribution and its variance), not spectral. Confirms + quantifies the S72 skew-spectrum weakness (spectrum resolves 1,2,2,6 of |G_n|=2,4,12,56) and explains it via the reflection.
+
+CONVERGENCE: opus-S23 independently derived the same Paley Cayley spectrum = Gauss sum {1, e^{+-2i arctan sqrt p}} (my HYP-3814 result), extended to a Lefschetz/Weil trace framing (opus HYP-3815). Renumbered mine 3815->3816 (opus committed 3815 first in the rebase); opus's 3815 is in klein's block 3800-3849 -- block-overlap flagged for coordinator.
+
+FILES: 04-computation/u_spectrum_flip_rank_second_moment_klein.py (+.out); HYP-3816; reflection the-spectrum-cannot-see-a-reflection.md.
+
+NEXT: (a) a COMBINATORIAL covering invariant tuned to SC fixed points (the excess-carrier); (b) does Var(H) or a metagraph second moment PREDICT the flip-rank excess across n; (c) the opus Lefschetz-trace line (HYP-3815) x my no-spectral-detection: is the excess a torsion/fixed-point-defect the trace formula also cannot see?
+
+---
 
 ## opus-2026-07-01-S23 -- LEFSCHETZ makes the hard side easy: the BORSUK-ULAM obstruction is DUAL to GAUSS-SUM (Weil/Lefschetz) exactness -- certify the free-Z2 regime with a TRACE FORMULA, not a fixed point (HYP-3815).
 
