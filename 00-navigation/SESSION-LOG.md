@@ -1,3 +1,15 @@
+## kind-pasteur-2026-07-01-S3 -- TWO-COMB swing => MULTI-FAR IS THE SINGULAR SERIES, LOCALIZED: far combs equidistribute on the fixed lonely set L_C; single-far CLOSED, multi-far residual = the signed resonance correction = OPEN-Q-108 (converges klein HYP-3784 Delsarte+far-element; no HYP)
+
+Prompt: work the next swing (two-comb / multi-far); reframe as needed. (Morse on S^1: g_C PL Morse, holes=local maxima; Borsuk-Ulam iota-odd = the obstruction.)
+
+TWO-COMB (2D view-obstruction: line of slope W2/W1 on T^2 escaping the danger CROSS into the safe square (6/7)^2). Exact interval computation (lrc14_twofar_twocomb_resonance): widest hole of fat cores survives ALL pairs (min joint-safe ~0.58 delta); worst pairs are NEAR-EQUAL combs (W2-W1 small). But union bound (lrc14_rfar_unionbound_closure) FAILS r=2..6 on SPREAD cores (thin widest holes, boundary teeth eat margin).
+
+THE FIX + REFRAME (lrc14_multifar_equidistribution_singularseries): the right object is the WHOLE fragmented L_C (spread worst core = 300 holes, meas 0.167), NOT the widest hole. Far combs EQUIDISTRIBUTE relative to L_C: meas(L_C cap safe(W)) -> (6/7)meas(L_C) (verified, ratio->0.857). r combs keep (6/7)^r meas(L_C) [MAIN TERM, >0 all r] minus signed RESONANCE corrections. THIS IS THE SINGULAR SERIES L=(6/7)^13+sum_T(-7/6)^|T|R_T, localized to the far combs on the bounded core's lonely set. Verified two-comb: worst survival 0.114 vs main (6/7)^2 meas=0.122, correction=0.0088>0.
+
+CLEAN SEPARATION: single-far r=1 = NO resonance (one comb can't self-resonate) => survival=(6/7)meas>0 CLEAN => CLOSED (= the band-barrier as r=1 equidistribution). multi-far r=2..6 = main term positive + SMALL signed resonance correction (0.008 vs 0.122) = OPEN-Q-108 / r-far Dedekind ladder / Riesz-product factor-of-2; the far-element decorrelation Delta_W=O(1/W) is the rate. r>=7 = THM-573 sieve. REFRAME: "does a beater exist" (config search over disordered a(n)) -> "is the signed correction < the (6/7)^r meas MAIN TERM, uniformly over bounded cores" (analytic bound on a signed sum over a FIXED set = where Riesz/decorrelation/Erdos-Turan live). NOT combinatorial, NOT large.
+
+CONVERGES klein HYP-3784 (same-day Delsarte dual + far-element defeats-it-alone) -- the dual-certificate direction I reframed last turn; mac-mini/klein multi-far. Honest: single-far verified-closed; multi-far main term positive + correction empirically small, but "correction < main uniformly" IS OPEN-Q-108 (localized, not resolved). NO HYP reserved (extends klein/opus). Files: lrc14_{twofar_twocomb_resonance,rfar_unionbound_closure,multifar_equidistribution_singularseries}_kps.py(+outs); reflection multi-far-is-the-singular-series-localized-... No canon overridden.
+
 ## klein-2026-07-01-S64 -- the DELSARTE DUAL IS STRONG (correcting S63): the creative use is DELSARTE + HYP-3763; the far-element defeats it alone (HYP-3784)
 
 Prompt: reason about delsarte sdp and how it could be used creatively.

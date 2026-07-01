@@ -1,0 +1,28 @@
+==============================================================================================
+r-FAR UNION-BOUND CLOSURE:  hole survives r combs  <=>  delta_max > threshold_r = r/((7-r)*183)
+  core size = 13-r ; proven LRC(14-r) => M(C)>=1/(14-r) => fat holes
+==============================================================================================
+   r core size  threshold_r  min delta_max (rand)   margin  closes?
+   2        11     0.002186              0.002048    0.94x    False
+   3        10     0.004098              0.002307    0.56x    False
+   4         9     0.007286              0.002104    0.29x    False
+   5         8     0.013661              0.002724    0.20x    False
+   6         7     0.032787              0.003147    0.10x    False
+
+==============================================================================================
+VERDICT
+==============================================================================================
+  r=2: union bound TIGHT/FAILS -> needs exact equidistribution (resonance analysis)   worst core=[1, 26, 74, 94, 122, 130, 161, 172, 174, 176, 177]
+  r=3: union bound TIGHT/FAILS -> needs exact equidistribution (resonance analysis)   worst core=[1, 25, 64, 89, 98, 145, 162, 174, 180, 181]
+  r=4: union bound TIGHT/FAILS -> needs exact equidistribution (resonance analysis)   worst core=[1, 21, 124, 133, 137, 173, 175, 176, 181]
+  r=5: union bound TIGHT/FAILS -> needs exact equidistribution (resonance analysis)   worst core=[1, 68, 120, 121, 154, 158, 161, 175]
+  r=6: union bound TIGHT/FAILS -> needs exact equidistribution (resonance analysis)   worst core=[1, 83, 131, 149, 163, 170, 175]
+
+  ALL r=2..6 close by union bound: False
+  residual r = [2, 3, 4, 5, 6]: the union bound is too lossy (boundary teeth eat the margin);
+  these need the EXACT two-comb result (survives with ~0.58 delta) generalized -- resonance
+  collapses effective combs, non-resonant equidistributes. NOT a beater search.
+
+  (r>=7: >=7 far speeds => >=7 mult-of-7-like => THM-573 level-7 sieve, M>1/14. r<=6 is the
+   whole residual; single-far r=1 closed; r=2 exact-verified; r=3..6 = the finite constant-chase.)
+DONE.

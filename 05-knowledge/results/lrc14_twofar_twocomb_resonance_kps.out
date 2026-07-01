@@ -1,0 +1,43 @@
+============================================================================================
+TWO-COMB SURVIVAL on the widest hole of a core (does it escape the 2D danger cross?)
+============================================================================================
+  AP {1..11}       widest hole delta=0.01299
+    over 1953 pairs (W1,W2) in [183,246): killed(meas=0)=0;  MIN joint-safe=0.008523 at (W1,W2)=(191,193) gcd=1 ratio=191/193
+    worst joint-safe / delta = 0.656  (incommensurate -> ~ (6/7)^2 = 0.735); HOLE ALWAYS SURVIVES (min>0)
+  {1..10,12}       widest hole delta=0.01190
+    over 1953 pairs (W1,W2) in [183,246): killed(meas=0)=0;  MIN joint-safe=0.007563 at (W1,W2)=(194,201) gcd=1 ratio=194/201
+    worst joint-safe / delta = 0.635  (incommensurate -> ~ (6/7)^2 = 0.735); HOLE ALWAYS SURVIVES (min>0)
+  {1..9,11,13}     widest hole delta=0.00628
+    over 1953 pairs (W1,W2) in [183,246): killed(meas=0)=0;  MIN joint-safe=0.003635 at (W1,W2)=(212,216) gcd=4 ratio=212/216
+    worst joint-safe / delta = 0.579  (incommensurate -> ~ (6/7)^2 = 0.735); HOLE ALWAYS SURVIVES (min>0)
+
+============================================================================================
+THE RESONANCE STRUCTURE: which (W1,W2) minimize joint-safe? (the 2D view-obstruction slope)
+============================================================================================
+  core {1..11}, widest hole delta=0.01299; the 8 WORST (smallest joint-safe) pairs:
+    (W1,W2)=(191,193)  joint-safe=0.008523  gcd=1  W2-W1=2  ratio~1.010
+    (W1,W2)=(191,194)  joint-safe=0.008534  gcd=1  W2-W1=3  ratio~1.016
+    (W1,W2)=(191,195)  joint-safe=0.008545  gcd=1  W2-W1=4  ratio~1.021
+    (W1,W2)=(192,194)  joint-safe=0.008546  gcd=2  W2-W1=2  ratio~1.010
+    (W1,W2)=(192,195)  joint-safe=0.008557  gcd=3  W2-W1=3  ratio~1.016
+    (W1,W2)=(193,195)  joint-safe=0.008569  gcd=1  W2-W1=2  ratio~1.010
+    (W1,W2)=(193,203)  joint-safe=0.008655  gcd=1  W2-W1=10  ratio~1.052
+    (W1,W2)=(194,203)  joint-safe=0.008667  gcd=1  W2-W1=9  ratio~1.046
+  the 4 BEST (largest joint-safe):
+    (W1,W2)=(186,199)  joint-safe=0.011150  gcd=1  W2-W1=13
+    (W1,W2)=(187,200)  joint-safe=0.011161  gcd=1  W2-W1=13
+    (W1,W2)=(198,211)  joint-safe=0.011277  gcd=1  W2-W1=13
+    (W1,W2)=(199,212)  joint-safe=0.011287  gcd=1  W2-W1=13
+
+============================================================================================
+READING / REFRAME
+============================================================================================
+ - Two-comb survival = a line of slope W2/W1 on T^2 escaping the danger CROSS into the safe
+   square (6/7)^2=36/49. Generic (incommensurate) lines equidistribute => hit the safe square;
+   the ONLY threat is RESONANCE (low-denominator slope / large gcd / small W2-W1).
+ - Resonance collapses the two combs to ONE effective comb (common period) => the SINGLE-FAR
+   band-barrier applies again (three-distance). Non-resonant => joint 36/49 safe measure.
+   So multi-far reduces to [resonant = single-far, CLOSED] + [non-resonant = equidistribution].
+ - Borsuk-Ulam iota-odd: the resonant lines are the antipodally-trapped ones; the index bites
+   only there -- the sharply-isolated residual.
+DONE.

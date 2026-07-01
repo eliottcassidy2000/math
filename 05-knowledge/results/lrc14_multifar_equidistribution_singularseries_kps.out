@@ -1,0 +1,39 @@
+==========================================================================================
+AP core {1..11}:  meas(L_C)=0.05633  (#holes=14)
+==========================================================================================
+  SINGLE-FAR (r=1) equidistribution: meas(L_C cap safe(W)) -> (6/7)meas=0.04829
+     W=  183: survival=0.05059  ratio=0.8980 (->6/7=0.8571)  >0 CLEAN
+     W=  600: survival=0.04841  ratio=0.8593 (->6/7=0.8571)  >0 CLEAN
+     W= 2000: survival=0.04836  ratio=0.8584 (->6/7=0.8571)  >0 CLEAN
+     W= 6000: survival=0.04825  ratio=0.8564 (->6/7=0.8571)  >0 CLEAN
+  TWO-FAR (r=2): main (6/7)^2 meas=0.04139; worst over resonances (=singular correction):
+     worst two-comb survival=0.03890 at (511, 514)  correction=0.00249  >0: True
+  r-FAR MAIN TERM (6/7)^r meas(L_C) (the singular-series bulk, always >0):
+     r:  1:0.0483  2:0.0414  3:0.0355  4:0.0304  5:0.0261  6:0.0223
+==========================================================================================
+spread core (worst r=2):  meas(L_C)=0.16668  (#holes=300)
+==========================================================================================
+  SINGLE-FAR (r=1) equidistribution: meas(L_C cap safe(W)) -> (6/7)meas=0.14287
+     W=  183: survival=0.14811  ratio=0.8886 (->6/7=0.8571)  >0 CLEAN
+     W=  600: survival=0.14567  ratio=0.8739 (->6/7=0.8571)  >0 CLEAN
+     W= 2000: survival=0.14262  ratio=0.8556 (->6/7=0.8571)  >0 CLEAN
+     W= 6000: survival=0.14301  ratio=0.8580 (->6/7=0.8571)  >0 CLEAN
+  TWO-FAR (r=2): main (6/7)^2 meas=0.12246; worst over resonances (=singular correction):
+     worst two-comb survival=0.11367 at (524, 526)  correction=0.00880  >0: True
+  r-FAR MAIN TERM (6/7)^r meas(L_C) (the singular-series bulk, always >0):
+     r:  1:0.1429  2:0.1225  3:0.1050  4:0.0900  5:0.0771  6:0.0661
+
+==========================================================================================
+VERDICT / REFRAME
+==========================================================================================
+ - The far combs equidistribute RELATIVE to the fixed L_C: each keeps 6/7 of meas(L_C).
+ - survival(r) = (6/7)^r meas(L_C) [main term, >0 all r] - [signed resonance correction].
+   This IS the singular series L=(6/7)^13+sum_T(-7/6)^|T|R_T, localized to the far combs on L_C.
+ - SINGLE-FAR r=1: no resonance => survival=(6/7)meas>0 => CLOSED (matches the band-barrier).
+ - MULTI-FAR r=2..6: main term positive; residual = the signed resonance correction (small: 0.008
+   vs main 0.122 at r=2) = OPEN-Q-108 / the r-far Dedekind ladder / the Riesz-product factor-of-2.
+   NOT a beater search -- an analytic bound on a signed correction over a FIXED bounded core.
+ - r>=7: THM-573 level-7 sieve. So the whole unbounded case = [r=1 closed] + [r=2..6 signed
+   correction, the known crux] + [r>=7 sieve]. The Morse/equidistribution frame recovers the
+   singular series and pins the residual exactly.
+DONE.
