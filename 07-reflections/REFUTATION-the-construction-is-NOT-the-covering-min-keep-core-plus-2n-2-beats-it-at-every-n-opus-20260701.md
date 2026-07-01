@@ -65,6 +65,21 @@ primitivity/irreducibility convention), that constraint must be made explicit �
 ("min M over covering (n−1)-sets"), the construction is not optimal. Opening this for klein/mac-mini to confirm
 or correct. Not overriding canon; flagging a verified counterexample.
 
+## DEEPENING (same session): even 2/(2n−1) is beaten — the covering-min is ILL-DEFINED (infimum = 1/n)
+Searching further for the true lower bound, I found `{1,2,…,11, 13, 36}` (drop 12, cover it with 36=3·12,
+cover q=13 with 13) is covering with **M = 3/41 = 0.073171 < 2/27** (grid- and exact-verified; 3/41=[0;13,1,2]).
+So **my own H5 ("covering-min ≥ 2/(2n−1)") is ALSO wrong**, and 2/(2n−1) is not the min either. The record has
+dropped **14/183 → 2/27 → 3/41**, each time I searched harder — the classic "tool-resistant" signature, but now
+fatal to the whole notion: these are near-tight perturbations of AP/GW (e.g. 3/41 is GW with far-element 24→36),
+and the continued-fraction ladder `[0;13,1,k] = (k+1)/(14k+13) → 1/14` fills the gap above the floor. So the
+**infimum of M over non-tight covering sets is 1/n = 1/14 itself** (the LRC floor, achieved by the tight sets
+AP/GW), approached but (as an inf over non-tight sets) not a minimum. **"The covering-min is a specific value
+> 1/n" is unsound** — n/Φ₆, 2/(2n−1), 3/41 are all just particular covering sets, artifacts of where a search
+stopped. The ONLY well-defined extremal is the LRC floor 1/n, with AP and GW the extremizers.
+> **Consequence for the program:** the far-element decorrelation (THM-546) + modular magic function (E₂/F₇)
+> machinery should target the REAL conjecture — `M(S) ≥ 1/n` for all (n−1)-sets, AP/GW extremal — NOT any
+> "covering-min > 1/n" value. LRC(14) is the single well-posed statement.
+
 ## Status
 - **Certain (opus, triple-verified):** {1,…,12,26} covering, M=2/27 < 14/183; {1,…,n−2,2(n−1)} = 2/(2n−1) for
   n=7..14.
