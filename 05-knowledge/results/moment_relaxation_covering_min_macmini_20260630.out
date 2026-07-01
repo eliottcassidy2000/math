@@ -1,0 +1,78 @@
+========================================================================================
+PART 1 -- THE EXTREMAL LONELY SET IS A FEW ATOMS (measure zero) => low-rank moment matrix
+========================================================================================
+
+construction {1..12,182}: M=14/183=0.07650  covering=True
+  |lonely atoms at r=M| = 2  (measure zero)
+  atoms = ['14/183', '169/183']
+  denominators = [183]   iota-symmetric (t<->1-t): True
+
+AP {1..13}: M=1/14=0.07143  covering=False
+  |lonely atoms at r=M| = 6  (measure zero)
+  atoms = ['1/14', '3/14', '5/14', '9/14', '11/14', '13/14']
+  denominators = [14]   iota-symmetric (t<->1-t): True
+  atoms with denom n=14: numerators mod n = [1, 3, 5, 9, 11, 13]; units(Z/14)* = [1, 3, 5, 9, 11, 13]
+
+========================================================================================
+PART 2 -- THE BONFERRONI / MOMENT HIERARCHY: S_k and truncations T_m (exact-on-grid)
+========================================================================================
+
+construction  r=0.99*M=0.07574  |S|=13  mean #dangers=1.969  max #dangers=13
+  true |L_S(r)| (level-inf, exact-on-grid) = 0.001892
+  S_k (level-k moment = sum of k-fold danger overlaps):
+    S_0=1.0000  S_1=1.9692  S_2=2.3921  S_3=4.4131  S_4=8.3564  S_5=12.6795
+  Bonferroni truncations T_m = sum_{k<=m} (-1)^k S_k  (converge to |L_S|):
+    T_0 = +1.00000
+    T_1 = -0.96918  <- UNION BOUND (level 1): 1-|S|*2r
+    T_2 = +1.42294  <- +pair correlations (2nd moment / HYP-3571 / S75)
+    T_3 = -2.99017
+    T_4 = +5.36624
+    T_5 = -7.31323
+    T_6 = +7.41514
+    T_7 = -5.52063
+  level-1 value 1-|S|*2r = -0.9692  (USELESS: <0; the finite union bound cannot certify)
+
+AP {1..13}  r=0.99*M=0.07071  |S|=13  mean #dangers=1.839  max #dangers=13
+  true |L_S(r)| (level-inf, exact-on-grid) = 0.002589
+  S_k (level-k moment = sum of k-fold danger overlaps):
+    S_0=1.0000  S_1=1.8386  S_2=2.1723  S_3=4.5320  S_4=9.5717  S_5=15.9976
+  Bonferroni truncations T_m = sum_{k<=m} (-1)^k S_k  (converge to |L_S|):
+    T_0 = +1.00000
+    T_1 = -0.83857  <- UNION BOUND (level 1): 1-|S|*2r
+    T_2 = +1.33371  <- +pair correlations (2nd moment / HYP-3571 / S75)
+    T_3 = -3.19824
+    T_4 = +6.37343
+    T_5 = -9.62414
+    T_6 = +10.86710
+    T_7 = -9.10233
+  level-1 value 1-|S|*2r = -0.8386  (USELESS: <0; the finite union bound cannot certify)
+
+========================================================================================
+PART 3 -- TRIG-MOMENT (TOEPLITZ) VIEW + FLAT EXTENSION (Curto-Fialkow)
+========================================================================================
+The lonely measure mu = uniform on the extremal atoms. Its Fourier moments y_k = (1/|A|) sum_a e^{-2pi i k a}
+form a Toeplitz matrix M_K=[y_{j-l}] that is PSD (Bochner) with rank = #atoms (Caratheodory-Toeplitz).
+
+construction: #atoms=2  Toeplitz M_K rank -> stabilizes at 2 (=#atoms? True)
+  rank(M_K) for K=1,5,10,20,30: 2, 2, 2, 2, 2
+  min eigenvalue over K (PSD/Bochner, should be >= ~0): -2.27e-14   flat-extension rank stable from K>=1
+  localization: every atom is lonely for every v in S (||va|| >= M): True  (=> mu is a lonely measure)
+
+AP {1..13}: #atoms=6  Toeplitz M_K rank -> stabilizes at 6 (=#atoms? True)
+  rank(M_K) for K=1,5,10,20,30: 2, 6, 6, 6, 6
+  min eigenvalue over K (PSD/Bochner, should be >= ~0): -1.11e-14   flat-extension rank stable from K>=5
+  localization: every atom is lonely for every v in S (||va|| >= M): True  (=> mu is a lonely measure)
+
+========================================================================================
+PART 4 -- WHY NO FINITE LEVEL IS EXACT: the atom needs degree ~ denominator(t*) (uncertainty)
+========================================================================================
+Resolving a spike at t* of denominator D needs Fourier degree ~ D (uncertainty / Nyquist).
+So the moment relaxation must reach degree ~ Phi6(n) to 'see' the atom. Numerology vs lazy-cut #cuts:
+  n=8: Phi6=57  t*=n/Phi6=8/57 denom=57  (lazy-cut n=12 closed at ~208 cuts; degree scale ~ Phi6)
+  n=10: Phi6=91  t*=n/Phi6=10/91 denom=91  (lazy-cut n=12 closed at ~208 cuts; degree scale ~ Phi6)
+  n=12: Phi6=133  t*=n/Phi6=12/133 denom=133  (lazy-cut n=12 closed at ~208 cuts; degree scale ~ Phi6)
+  n=14: Phi6=183  t*=n/Phi6=14/183 denom=183  (lazy-cut n=12 closed at ~208 cuts; degree scale ~ Phi6)
+
+=> finite moment level = klein's Delsarte LP (HYP-3784, near-tight at bounded V, gapped as V grows);
+   the gap is HYP-3785's spectral gap = the moment-hierarchy face of S61 'finite-D cannot close Step 3'.
+DONE.
