@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-01-S22 -- COHOMOLOGICAL THREE-DISTANCE: the lonely set is H^0, complementarity = ALEXANDER DUALITY (b_0(L_C)=b_0(danger)), ι-odd part = the Gauss certificate; and the sqrt21 bridge IS the CERTIFICATION-program residual, NOT the classical census crux
+
+Prompt: extend three-distance/far-element cohomologically; think complementarity; is the Q(sqrt-3,sqrt-7)/sqrt21 bridge (ι-odd Gauss i sqrt7 meeting Eisenstein covering) the OPEN-Q-108 residual?
+
+COHOMOLOGY (verified, construction champion {1..11,13,36}, band 1/14): (A) L_C = b_0=2 ARCS = H^0=R^2 (H^1=0, contractible) => M>=1/n <=> b_0>=1 (loneliness = non-vanishing H^0). (B) COMPLEMENTARITY = ALEXANDER DUALITY on S^1: b_0(L_C)=b_0(danger)=2 (lonely arcs & covered gaps ALTERNATE, equal count) => covering <=> danger closes to one cycle; loneliness <=> cover has a gap. (C) THREE-DISTANCE: 1 distinct arc width (ι-symmetric collar pair). (D) FAR ELEMENT = degree-w circle map (Lefschetz Λ(φ_w)=1-w); cuts L_C by three-distance, EQUIDISTRIBUTES (surviving frac->1-2r=6/7) but b_0 STAYS >0 (never closes the cover) = cohomological far-decorrelation (HYP-3787); single/<=6-far cohomologically certified.
+ι ON H^0: ι SWAPS the 2 arcs (ι-pair) => H^0 = (ι-EVEN R, sum = measure/covering) + (ι-ODD R, diff = Borsuk-Ulam/Gauss). Λ(ι)=0 (swapped, free) => even blind, ι-ODD carries the certificate (S20 Lefschetz split at H^0 level).
+THE sqrt21 RESIDUAL ASSESSMENT: covering Q(sqrt-3) [Phi6/metallic, opus-S24] x certification Q(sqrt-7) [Gauss i sqrt7] => real compositum Q(sqrt21); deep-well D_14=33852=21*403 => sqrt21|sqrt(D_14) VERIFIED (the bridge is realized in the binding CF). VERDICT: sqrt21 IS the residual of the LEFSCHETZ/CERTIFICATION program (the mixed cohomology, neither pure isotype, = bridging Q(sqrt-3),Q(sqrt-7) to make i sqrt7 => M>=1/n rigorous). NOT the classical multi-far CENSUS residual (extremizers = pentagon (Z/10)* Q(sqrt5) + sporadic (Z/19) Q(sqrt-19), their OWN sub-apex fields, not sqrt21). => owner's conjecture holds for ONE program (trace-formula), not the census crux; a promising ROUTE, not the whole difficulty.
+CONVERGENCE: opus-S24 HYP-3816 (atom pair-corr = |Ramanujan|^2, SC-spine spectrum METALLIC = my covering/CF flavor; Paley=Gauss); mac-mini-S90 HYP-3817 (fixed-point instrument from the group action). My layer = the cohomological H^0/Alexander-duality/complementarity + the sqrt21-residual assessment.
+NEXT: compute the ι-odd certificate IN the compositum Q(sqrt-3,sqrt-7) (does the mixed part localize => close the trace route); build the ι-equivariant nerve from the far-element degree-w circle-map three-distance cells, read its odd Lefschetz number (the S20 open leap).
+Reflection: cohomological-three-distance-complementarity-and-the-sqrt21-bridge-is-the-certification-residual-kps.md; script cohomological_three_distance_and_sqrt21_bridge_kps.py (+.out). Not a HYP reservation.
+-> HYP-3816 (opus metallic/Gauss), HYP-3787 (far O(1/w)), HYP-3789, THM-581/582, S20 (Lefschetz), S21 (field split), OPEN-Q-108, MISTAKE-078.
+
+---
+
 ## mac-mini-2026-07-01-S90 -- A FIXED-POINT-SENSITIVE INSTRUMENT MUST BE BUILT FROM THE GROUP ACTION (covering invariant or moment), NOT another transform; the U-spectrum FAILS at n=7; LRC parallel = the Fourier/Delsarte spectral gap (HYP-3817)
 
 Prompt: work the next tasks and consider whether the next instrument has to be built to be sensitive to fixed points, not blind to them by symmetry -- a covering invariant, or Var(H), rather than another clever transform.

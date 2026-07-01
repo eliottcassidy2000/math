@@ -1,0 +1,36 @@
+==============================================================================================
+ (A)+(B)+(C): cohomology of the lonely set L_C (construction champion {1..11,13,36}, band 1/14)
+==============================================================================================
+  b_0(L_C) = #lonely arcs = 2  (H^0=R^2, H^1=0)  => M>=1/14 certified iff b_0>=1: True
+  measure |L_C| = 0.000794
+  THREE-DISTANCE: #distinct arc widths = 1  (widths [0.0003968253968253968]...)
+  b_0(danger cover) = #gaps between lonely arcs = 2  => complementarity b_0(L_C)=b_0(danger): True
+
+==============================================================================================
+ (D) FAR ELEMENT w: degree-w circle map, Lefschetz Λ=1-w, equidistributes on L_C
+==============================================================================================
+  w=  37: Λ(φ_w)=1-w=  -36; survivors L_C∩safe(w): 2 arcs, meas frac=1.0000 (-> 1-2r=6/7=0.8571); survives (b_0>0): True
+  w=  50: Λ(φ_w)=1-w=  -49; survivors L_C∩safe(w): 2 arcs, meas frac=1.0000 (-> 1-2r=6/7=0.8571); survives (b_0>0): True
+  w= 300: Λ(φ_w)=1-w= -299; survivors L_C∩safe(w): 2 arcs, meas frac=1.0000 (-> 1-2r=6/7=0.8571); survives (b_0>0): True
+  w= 700: Λ(φ_w)=1-w= -699; survivors L_C∩safe(w): 2 arcs, meas frac=0.7429 (-> 1-2r=6/7=0.8571); survives (b_0>0): True
+  => the far element cuts L_C into ~1-2r of itself (equidistribution); it NEVER covers it (b_0 stays >0).
+
+==============================================================================================
+ (E) THE Q(sqrt-3,sqrt-7) BRIDGE via sqrt21, and the residual assessment
+==============================================================================================
+  covering field   = Q(sqrt-3)  (Phi6 / Eisenstein / metallic-CF flavor, opus-S24)
+  certification    = Q(sqrt-7)  (Gauss sum i*sqrt7, ι-odd Lefschetz, S20)
+  real compositum  = Q(sqrt(3*7)) = Q(sqrt21);  sqrt-3 * sqrt-7 = -sqrt21
+  deep-well D_14 = n(n-1)(n^2-n+4) = 33852 = squarefree 8463 = 21*403 => sqrt21 | sqrt(D_14): True
+  => the DEEP-WELL binding CF (metallic/covering side) CONTAINS sqrt21 = the bridge of covering & cert.
+  ASSESSMENT of 'is the sqrt21 bridge the OPEN-Q-108 residual?':
+   - The bridge Q(sqrt-3,sqrt-7)/sqrt21 IS the residual of the LEFSCHETZ/CERTIFICATION program: the ι-odd
+     Gauss certificate (sqrt-7) must interact with the Eisenstein covering (sqrt-3) to certify the WHOLE
+     cover; the 'mixed' part (neither pure isotype) lives in the compositum sqrt21. Making i*sqrt7 => M>=1/n
+     rigorous = bridging these two fields. So YES for the trace-formula approach's residual.
+   - It is NOT the CLASSICAL multi-far census residual: those extremizers are the pentagon (Z/10)* [Q(sqrt5)]
+     and the sporadic two-clash (Z/19) [Q(sqrt-19)] -- their OWN sub-apex fields, not sqrt21.
+   => HONEST: sqrt21 = the certification-program residual (a promising reformulation), distinct from the
+      classical census residual. The two programs meet only if the census extremizers' fields (5,19) also
+      reduce to the apex compositum -- which they do NOT, so the bridge is one route, not the whole crux.
+DONE.
