@@ -1,0 +1,39 @@
+================================================================================================
+ CORRECTED PoA (11-CORE, the r=2 residual): meas = (6/7)^k (1+R)
+================================================================================================
+  pentagon 11-core [1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13]: k=11, meas=0.032261, (6/7)^11=0.183479
+  1+R = meas/indep = 0.175832  => R = -0.824168  (the resonance correction)
+  inf meas>=1/36 <=> 1+R >= (1/36)/(6/7)^11 = 0.151395 <=> R >= -0.848605
+  actual R=-0.8242 >= target -0.8486? True  (clears by 0.0244, TIGHT)
+  PRICE OF ANARCHY = (6/7)^11/meas = 5.687; target PoA <= (6/7)^11*36 = 6.605
+  [S24 CORRECTION: used k=13 (whole set) -> 4.18/4.85; the RESIDUAL is 11-cores -> 5.69/6.61]
+
+================================================================================================
+ WHY 2nd-moment FAILS: meas{C=0} is a BELOW-MEAN TAIL (wrong direction)
+================================================================================================
+  congestion C(t)=#dangerous runners: E[C] = k*2r = 11*(1/7) = 1.5714 > 1
+  => meas{C=0} is a BELOW-mean event; Markov/Paley-Zygmund/2nd-moment give UPPER bounds on meas (P(C>0)
+     >= E[C]^2/E[C^2]), i.e. LOWER bounds FAIL. The lower bound CANNOT be an unsigned/absolute estimate.
+  danger-Gram trace = 1.5714 (=E[C]=1.5714); top eigenvalues [np.float64(0.4207), np.float64(0.1787), np.float64(0.1642), np.float64(0.1425)]
+  (mac-mini Bridge-2: the Gram 2nd moment; its spectrum bounds |R| in MAGNITUDE but NOT the signed value.)
+
+================================================================================================
+ THE REDUCTION: the PoA bound = the SIGNED resonance = the Gauss certificate (S20)
+================================================================================================
+  R = Sum_{nonzero resonances Sum m_v v=0} prod_v [ghat(m_v)/(6/7)].  Sum|.| DIVERGES (MISTAKE-078); R
+  converges only with SIGNED cancellation. So bounding R >= -0.849 needs the signed structure = the ι-odd
+  Lefschetz/Gauss certificate (S20, g_7=i sqrt7) + the tight-locus finiteness (THM-523 {AP,GW}). The
+  facility-location PoA bound and the arithmetic certificate are the SAME bound seen two ways.
+  => HONEST: not a discrepancy proof; the tight 1/36 route is (a) the FINITE near-tight census (THM-522
+     quantization bounds it) + (b) singular-series positivity (THM-501). PoA<=6.61 is the clean restatement.
+
+================================================================================================
+ THE 21-FROBENIUS SUBGROUP + owner's faces
+================================================================================================
+  F_21 = C_7 x| C_3 = Aut(Paley_7), order 21 = 3*7 = the compositum modulus (S23 sqrt21). F_21 < PSL_2(F_7)
+   (168 = 8*21): the apex Frobenius sits inside the LTC expander group. C_7 = rotation (the runners'
+   cyclic loop), C_3 = the QR multiplier (the tournament orientation). 21 = |F_21| = forbidden H (THM-079).
+  UNIFYING sqrt-p (odd/certificate): Gauss i sqrt p / Paley skew {0,±i sqrt p} / Ramanujan 2 sqrt p / Q(sqrt-p).
+  POCHHAMMER pi (even/measure): f(n)=(1/2)_{n-2}/(n-2)! ~ 1/sqrt(pi n) -- the (6/7)^k independent side.
+  So the PoA decomposition meas=(6/7)^k[1+R] IS the pi-side (independent) x the sqrt-p-side (signed R).
+DONE.

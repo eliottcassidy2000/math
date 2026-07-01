@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-01-S26 -- THE PoA BOUND IS A BELOW-MEAN TAIL => it CANNOT be an unsigned discrepancy bound; it REDUCES to the signed Gauss certificate (game theory = arithmetic, one bound). + corrected PoA (11-cores: 5.69, target 6.61) + 21-Frobenius < PSL_2(F_7)
+
+Prompt: consider the 21-Frobenius subgroup + Pochhammer/integer-complexity/sqrt-p faces; work to prove PoA<=4.85 by capping star-discrepancy or a more creative method.
+
+CORRECTION (S24 error): the r=2 residual is over 11-CORES not 13 speeds. pentagon 11-core {1..13}\{6,10}: k=11, meas=0.032261, (6/7)^11=0.18348 => meas=(6/7)^k(1+R), R=-0.8242; inf meas>=1/36 <=> R>=-0.8486 (clears by 0.024, tight); PoA=(6/7)^11/meas=5.69, target PoA<=(6/7)^11*36=6.61.
+PROOF ATTEMPT -> HONEST BLOCK + REDUCTION: (a) congestion C(t)=#dangerous has E[C]=k/7=11/7=1.571>1 => meas{C=0} is a BELOW-MEAN TAIL; Markov/Paley-Zygmund/2nd-moment/Gram give UPPER bounds on meas (P(C>0)>=E[C]^2/E[C^2]) = WRONG DIRECTION => NO unsigned/absolute estimate (Koksma-Hlawka in magnitude, Gram spectrum) can lower-bound meas. The naive 'cap the star-discrepancy' route is BLOCKED. (b) R = signed resonance sum; Sum|.| DIVERGES (MISTAKE-078); R converges only via SIGNED cancellation => bounding R>=-0.849 NEEDS the signed structure = the ι-odd Gauss certificate (S20 g_7=i sqrt7) + tight-locus finiteness (THM-523 {AP,GW}). => THE FACILITY-LOCATION PoA BOUND AND THE GAUSS CERTIFICATE ARE THE SAME BOUND, two views. The game-theoretic reformulation does NOT bypass the arithmetic; it IS the arithmetic.
+=> REAL proof routes (unblocked): (1) FINITE near-tight census (THM-522 quantization bounds it; enumerate primitive scale-1 11-cores, verify each >=1/36; my S8/S9 + THM-523 dichotomy); (2) singular-series POSITIVITY (THM-501). PoA<=6.61 = the clean RESTATEMENT unifying them, not a shortcut.
+21-FROBENIUS: F_21=C_7 x| C_3=Aut(Paley_7), order 21=3*7=compositum modulus (sqrt21), SITS INSIDE PSL_2(F_7) (168=8*21) -- apex Frobenius < apex expander. C_7=runner loop, C_3=QR orientation, 21=|F_21|=forbidden H (THM-079): 3*7 in three roles. POTENTIAL SPLIT: meas=(6/7)^k[1+R] = pi/even/measure side (independent, Pochhammer f~1/sqrt(pi n)) x sqrt-p/odd/certificate side (signed R, Gauss i sqrt p).
+CONVERGENCE: mac-mini HYP-3819 (sqrt21=forbidden H). Reflection: the-PoA-bound-is-a-below-mean-tail-so-it-reduces-to-the-signed-gauss-certificate-not-a-discrepancy-kps.md; script poa_bound_attempt_signed_resonance_kps.py (+.out). Not a HYP reservation.
+NEXT: run the FINITE near-tight 11-core census to completion (the ONE unblocked route) -- verify each primitive scale-1 near-tight 11-core meas>=1/36 => closes the r=2 residual.
+-> S20/S23/S24 (Gauss/compositum/expander), THM-501/522/523, MISTAKE-078, HYP-3789, HYP-3819, THM-079 (forbidden 21).
+
+---
+
 ## kind-pasteur-2026-07-01-S25 -- THE NONABELIAN EXPANDER IS PSL_2(F_p) (gap 2sqrt-p = Gauss arithmetic); SUM-OF-TWO-SQUARES IS the difficulty split; inf meas is a FACILITY-LOCATION PoA (inf meas>=1/36 <=> PoA<=4.85). Converges mac-mini HYP-3819 (sqrt21).
 
 Prompt: hunt the nonabelian expander realization; consider Pochhammer-Chree, Hlawka-Koksma, Mahler-Popken + integer-complexity + sum-of-two-squares as jumping-off; import a potential-function/PoA argument for inf meas (LRC = facility-location game).
