@@ -1,3 +1,13 @@
+## kind-pasteur-2026-07-01-S4 -- SIGNED CAUCHY-SCHWARZ on the far-comb correction: a FINITE bound where the absolute one diverges; closes fat-core multi-far, residual = near-tight cores x incommensurate combs (converges mac-mini HYP-3786 equidistribution-on-L_C; no HYP)
+
+Prompt: aim at the signed correction creatively.
+
+The multi-far residual = signed correction integral_{L_C} f(W1 t)f(W2 t) dt (f=1_safe-6/7), = the localized singular series. ABSOLUTE bound DIVERGES (Sum|c_k|~Sum 1/k, MISTAKE-078 wall). CREATIVE MOVE (lrc14_signed_correction_cauchyschwarz): it's an inner product vs the FIXED L_C, so CAUCHY-SCHWARZ + PARSEVAL (||1_{L_C}||_2^2=meas(L_C)): |correction| <= sqrt(meas)*||g||_2, g=f(W1.)f(W2.), ||g||_2 -> 6/49 -- FINITE. So survival >= (6/7)^2 meas - sqrt(meas)(6/49) > 0 <=> meas(L_C)>1/36. VERIFIED (true corr ~0.002, well inside bound; fixed a 49x slip in ||g||_2 -> stronger).
+
+THREE-WAY REDUCTION of two-far: (A) fat cores meas>1/13: CLOSED for ALL combs (worst resonance 2:1 ||g||_2=0.203). (B) resonant combs (low-denom W2/W1): safe(W1)cap safe(2W1) depends on W1 t alone => COLLAPSE to one effective comb => single-far/band-barrier. (C) RESIDUAL = near-tight cores (meas<1/36 = OPEN-Q-108 small-lonely-measure locus, inf L=1/1260) x INCOMMENSURATE combs -- sharply isolated (small measure AND non-resonant). r-far: non-resonant threshold 6^{-r} SHRINKS with r while the (13-r)-core FATTENS => higher r closes; residual concentrates at LOW r (2,3) on near-tight cores. r>=7=THM-573.
+
+NET: OPEN-Q-108 multi-far residual = the tight-locus census cores x the Riesz/decorrelation combs -- the two best-understood project objects, meeting on a sharp set. This IS HYP-3129's L2-CS tool transported to the far-comb setting; near-equal combs = THM-578 doublet. CONVERGES mac-mini HYP-3786 (same-day: huge multi-patch = equidistribution on fixed L_C) -- my CS bound is a CONCRETE tool for their "effective equidistribution". Honest: NOT a proof; near-tight x non-resonant residual = OPEN-Q-108 heart, unresolved; but everything else peeled off by a SIGNED bound the absolute one couldn't reach. NO HYP reserved. Files: lrc14_signed_correction_cauchyschwarz_kps.py(+out); reflection a-signed-cauchy-schwarz-bound-on-the-far-comb-correction-kps.md. No canon overridden.
+
 ## mac-mini-2026-06-30-S74 -- THE HUGE MULTI-PATCH CASE = EQUIDISTRIBUTION ON THE FIXED LONELY SET L_C: reduces the last open piece of the covering-min lower bound to effective equidistribution; + opus's non-covering-beater flagged (HYP-3786)
 
 Prompt: creative new angles on the huge multi-patch case; think equidistribution on the fixed lonely set L_C; extend as far as you can.

@@ -1,0 +1,55 @@
+==========================================================================================
+AP {1..11}: meas(L_C)=0.05633  main=(6/7)^2 meas=0.04139  meas>1/36? True
+==========================================================================================
+  (W1,W2)=(191,193): survival=0.04262  corr(int f1f2)=-0.00069  ||g||2=0.1225  CS-bound sqrt(meas)*||g||2=0.02906  |corr|<=bound:True
+       => survival >= main - CS-bound = +0.01232  >0 CLOSED
+  (W1,W2)=(200,201): survival=0.04238  corr(int f1f2)=+0.00028  ||g||2=0.1225  CS-bound sqrt(meas)*||g||2=0.02906  |corr|<=bound:True
+       => survival >= main - CS-bound = +0.01232  >0 CLOSED
+  (W1,W2)=(211,317): survival=0.04163  corr(int f1f2)=-0.00019  ||g||2=0.1224  CS-bound sqrt(meas)*||g||2=0.02906  |corr|<=bound:True
+       => survival >= main - CS-bound = +0.01233  >0 CLOSED
+  (W1,W2)=(367,733): survival=0.04262  corr(int f1f2)=+0.00047  ||g||2=0.1224  CS-bound sqrt(meas)*||g||2=0.02906  |corr|<=bound:True
+       => survival >= main - CS-bound = +0.01232  >0 CLOSED
+==========================================================================================
+spread (worst r=2): meas(L_C)=0.16668  main=(6/7)^2 meas=0.12246  meas>1/36? True
+==========================================================================================
+  (W1,W2)=(191,193): survival=0.11513  corr(int f1f2)=-0.00225  ||g||2=0.1225  CS-bound sqrt(meas)*||g||2=0.04999  |corr|<=bound:True
+       => survival >= main - CS-bound = +0.07247  >0 CLOSED
+  (W1,W2)=(200,201): survival=0.11995  corr(int f1f2)=-0.00292  ||g||2=0.1225  CS-bound sqrt(meas)*||g||2=0.05000  |corr|<=bound:True
+       => survival >= main - CS-bound = +0.07247  >0 CLOSED
+  (W1,W2)=(211,317): survival=0.11882  corr(int f1f2)=-0.00161  ||g||2=0.1224  CS-bound sqrt(meas)*||g||2=0.04999  |corr|<=bound:True
+       => survival >= main - CS-bound = +0.07247  >0 CLOSED
+  (W1,W2)=(367,733): survival=0.11685  corr(int f1f2)=-0.00257  ||g||2=0.1224  CS-bound sqrt(meas)*||g||2=0.04999  |corr|<=bound:True
+       => survival >= main - CS-bound = +0.07247  >0 CLOSED
+==========================================================================================
+near-tight-ish {1,2,3,4,5,6,7,8,9,10,84}: meas(L_C)=0.11587  main=(6/7)^2 meas=0.08513  meas>1/36? True
+==========================================================================================
+  (W1,W2)=(191,193): survival=0.09024  corr(int f1f2)=-0.00023  ||g||2=0.1225  CS-bound sqrt(meas)*||g||2=0.04168  |corr|<=bound:True
+       => survival >= main - CS-bound = +0.04345  >0 CLOSED
+  (W1,W2)=(200,201): survival=0.08128  corr(int f1f2)=-0.00051  ||g||2=0.1225  CS-bound sqrt(meas)*||g||2=0.04168  |corr|<=bound:True
+       => survival >= main - CS-bound = +0.04345  >0 CLOSED
+  (W1,W2)=(211,317): survival=0.08295  corr(int f1f2)=-0.00034  ||g||2=0.1224  CS-bound sqrt(meas)*||g||2=0.04168  |corr|<=bound:True
+       => survival >= main - CS-bound = +0.04345  >0 CLOSED
+  (W1,W2)=(367,733): survival=0.08380  corr(int f1f2)=+0.00045  ||g||2=0.1224  CS-bound sqrt(meas)*||g||2=0.04168  |corr|<=bound:True
+       => survival >= main - CS-bound = +0.04345  >0 CLOSED
+==========================================================================================
+RESONANCE: ||g||2 inflates for low-denominator ratios W2/W1 (worst = 2:1)
+==========================================================================================
+  ratio 2:1           : ||g||2=0.2025  => CS threshold meas>0.0760  (2:1 = WORST)
+  ratio 3:1           : ||g||2=0.1699  => CS threshold meas>0.0535  
+  ratio 3:2           : ||g||2=0.1699  => CS threshold meas>0.0535  
+  ratio 5:3           : ||g||2=0.1384  => CS threshold meas>0.0355  
+  ratio ~1:1 coprime  : ||g||2=0.1225  => CS threshold meas>0.0278  
+  => 2:1 is worst (meas>0.076=1/13); higher denom -> 6/49 (meas>1/36). BUT resonant combs
+     W2=2W1 COLLAPSE to one effective comb (both depend on W1 t) => single-far, band-barrier.
+==========================================================================================
+VERDICT
+==========================================================================================
+ - Cauchy-Schwarz vs the fixed L_C (Parseval ||1_L||_2^2=meas) bounds the SIGNED two-comb
+   correction by sqrt(meas)*||g||2, ||g||2->6/49 (non-resonant) -- FINITE (beats the divergent
+   absolute Sum|c_k|). survival >= (6/7)^2 meas - sqrt(meas)(6/49) > 0  <=>  meas(L_C) > 1/36.
+ - r-far: threshold meas > 6^{-r}, SHRINKS with r (and the core shrinks => L_C fattens) => the
+   FAT-CORE part of ALL r=2..6 closes. RESIDUAL = [near-tight cores meas<=6^{-r}] x [resonant
+   combs, ||g||2 up to ~0.30 => collapse to single-far]. A sharp reduction of OPEN-Q-108.
+ - This is the SIGNED tool the absolute bound could not reach: L2/Parseval on the fixed lonely
+   set, not term-by-term. Ties to HYP-3129 (L2-CS on SPEC) and the Riesz-product program.
+DONE.
