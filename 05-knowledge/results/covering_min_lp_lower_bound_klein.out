@@ -1,0 +1,9 @@
+LP-RELAXATION LOWER BOUND: is 'M < n/Phi6' infeasible (=> construction is the covering-min)?
+  n     V     n/Phi6  #witnesses all-0 rows   LP M<thr                            verdict
+ 12   132     12/133       21239          0      False LP feasible -> too weak (integrality gap)
+ 13   156     13/157       29635          0      False LP feasible -> too weak (integrality gap)
+ 14   182     14/183       40339          0      False LP feasible -> too weak (integrality gap)
+
+If LP infeasible: NO covering set with speeds<=n(n-1) beats the construction (rigorous, closes
+the (4n,n(n-1)] residual of HYP-3778). If feasible: the LP relaxation has an integrality gap;
+need a tighter relaxation (Lovasz theta / SDP / Lasserre) or the exact ILP.

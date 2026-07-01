@@ -1,0 +1,2 @@
+LAZY-CUT ILP: does a covering set (speeds<=n(n-1)) BEAT the construction n/Phi6?
+  n=12 V=132: NO beater with M<12/133 (ILP infeasible after 208 cuts) -> covering-min=12/133 for speeds<=n(n-1) [RIGOROUS, closes residual]

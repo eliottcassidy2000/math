@@ -1,0 +1,2 @@
+n=13 V=156: NO beater M<13/157 (infeasible, 3 rounds, 2153 constraints) -> covmin=13/157 speeds<=n(n-1) RIGOROUS
+n=14 V=182: NO beater M<14/183 (infeasible, 3 rounds, 3916 constraints) -> covmin=14/183 speeds<=n(n-1) RIGOROUS

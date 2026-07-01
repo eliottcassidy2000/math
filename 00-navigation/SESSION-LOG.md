@@ -54,6 +54,33 @@ CLEAN LAW: VALUE is modular (construction margin -> -1/12=zeta(-1), Eisenstein/E
 The cusp form f14's real role = the OPEN-Q-108 PROOF obstruction (klein-S56, why no beater exists), NOT a(n) (at n=14 a=14 => covmin IS the pure Eisenstein construction). REDIRECT: klein's open transition-proof part (speeds>4n) is a character-sum/Weil problem (elementary Ramanujan-Petersson = repo's sqrt(V) peel-deviation THM-546), not modular forms.
 
 Integrated klein-S60 (HYP-3778, transition ILP-verified real). NEXT: (a) the character-sum/Weil bound on band-covering realizability for speeds>4n (the honest transition-proof residual); (b) is there a modular meaning to the construction's -1/12 beyond the VALUE (e.g. the E2 quasi-modularity as the reason the margin is positive = mac-mini-S67 R3, hexagonal)?; (c) OPEN-Q-108 iota-odd index = the genuine cusp obstruction.
+## klein-2026-07-01-S61 -- METHODS BEYOND THE ILP: the LAZY-CUT (cutting-plane) ILP CLOSES the covering-min residual RIGOROUSLY for n=12,13,14 (incl. LRC-14) up to speeds n(n-1) (HYP-3779)
+
+Prompt: think of even more creative methods than ILP, search around and brainstorm.
+
+Brainstormed a method taxonomy + prototyped two, and one CLOSED last session's residual. Filed HYP-3779; reflection the-bottleneck-was-the-constraints-not-the-problem.md; scripts covering_min_lp_lower_bound_klein.py, covering_min_lazy_cuts_klein.py, covering_min_multicut_klein.py (+ .out).
+
+THE BOTTLENECK: the full set-cover ILP (HYP-3731) carries ~40k danger constraints (all breakpoints k/d) and milp TIMES OUT at speeds V>~4n -- HYP-3778's (4n,n(n-1)] residual (a beater could hide among large speeds).
+
+(#1) LP-RELAXATION infeasibility certificate -- TOO WEAK: the set-cover LP (x in [0,1]) for 'M<n/Phi6' is FEASIBLE at n=12,13,14 V=n(n-1) (integrality gap), so no certificate. Honest negative.
+
+(#2) LAZY-CONSTRAINT / CUTTING-PLANE ILP (Benders row generation) -- WORKS: solve a TINY ILP (size n-1 + divisibility), read the candidate, compute exact M + deepest-hole witness t*, add ONLY that cut, re-solve. The ILP carries only the witnesses that BIND, so it runs at V=n(n-1) where the monolithic ILP dies. RESULT (rigorous): the ILP goes INFEASIBLE => NO covering set with speeds<=n(n-1) beats the construction:
+  n=12 V=132: 208 single-cut rounds  => covmin=12/133
+  n=13 V=156: 3 MULTI-cut rounds     => covmin=13/157
+  n=14 V=182: 3 MULTI-cut rounds     => covmin=14/183  (the LRC-14 TARGET)
+So the covering-min = the construction n/Phi6 for n=12,13,14, for ALL speeds <= n(n-1). This CLOSES the HYP-3778 residual for all three (up to 4n last session -> up to n(n-1) now).
+
+MULTI-CUT variant (add EVERY lonely witness of each candidate per round, not just the deepest) converges in 3 rounds vs 208 -- the no-beater certificate is a finite packing of a few thousand lonely-witness cuts (= the LP-dual / the witness sheaf HYP-3766, made operational).
+
+REMAINING GAP: speeds > n(n-1) not excluded by search -- but the construction's own max speed IS n(n-1), and the huge-speed tail is HYP-3745's CRT-escape (a theory question, not a search one). So this is effectively the full covering-min for n=12,13,14.
+
+IMPLICATIONS: fully confirms HYP-3737 (construction n>=12) up to n(n-1); completes the correction of my HYP-3764 pessimism (the edge was tool-resistant: the RIGHT tool -- lazy cuts -- resolves it).
+
+BROADER MENU (brainstorm, untried, ranked): Lovasz-theta/SDP (one-shot, closes the LP integrality gap), column-generation (push past n(n-1)), B&B+q/k/(n+q)-witness pruning, CRT residue-class decomposition, meet-in-the-middle (core+killers), binding-first Farey-dissection, danger-nerve topology (Cech, S57), spectral/Hoffman on the danger circulant.
+
+NEXT: (1) Lovasz theta for a one-shot certificate; (2) column generation for speeds > n(n-1); (3) the huge-speed tail via the lowness lemma (HYP-3747/3763).
+
+--- prior entries ---
 
 ## klein-2026-06-30-S60 -- NEW APPROACH: the COVERING-MIN TRANSITION AT n=12 IS REAL (exact ILP, verified up to speeds 4n); corrects my HYP-3764 pessimism (HYP-3778)
 
