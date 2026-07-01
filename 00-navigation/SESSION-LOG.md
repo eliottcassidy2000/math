@@ -1,3 +1,18 @@
+## klein-2026-07-01-S73 -- CHEBYSHEV EQUIOSCILLATION + COVERING EXCESS + RIGIDITY: creative abstract lenses synthesized and APPLIED to the covering-min proof (HYP-3806). Converges opus-S15 (flip-rank(7)=12).
+
+Prompt: look for even more creative concepts/abstract things to care about, then synthesize and apply them to proofs.
+
+NEW ABSTRACT LENSES introduced + applied (chebyshev_covering_excess_klein.py, exact n=7..14):
+(I) CHEBYSHEV / EQUIOSCILLATION. The covering-min M(S)=max_t min_v||vt|| is a MINIMAX; its extremizer is pinned by its ALTERNATION SET = the runners binding at t*. VERIFIED exact: the alternation set is EXACTLY {1, n(n-1)} = {v: v≡±1 mod Phi6}, multiplicity 2 for ALL n; the killer n(n-1)≡-1 mod Phi6 IS the v≡-1 binding runner (the killer identity = the equioscillation).
+(II) COVERING EXCESS (a unifying invariant across the repo's TWO HALVES). M_C - 1/n = (n-1)/(n*Phi6) EXACT -- the price a COVERING constraint pays above the free LRC floor 1/n; the numerator (n-1)=the DROPPED speed=the CF partial quotient of t*=[0;n-1,n]. Tournament analogue: flip-rank rho(n)-ceil(log2|G_n|) = 0,0,0,1,3 for n=3..7 (opus-S15 HYP-3805 resolved rho(7)=12). Both halves: covering forces the extremal value above the free/packing floor.
+(III) RIGIDITY / potential theory. t*,1-t* are the ONLY global maximizers (grid N=2e6, n=7,10,14) -- alternation length 2 = MINIMAL => the extremizer is an ISOLATED CORNER of the minimax = the deep-well isolation (mac-mini's 5001-set finding), now structural not empirical.
+
+SYNTHESIS: FIVE "2"s are ONE fact -- alternation length (2 binding runners) = #atoms of the lonely measure (t*,1-t*) = OPUC Verblunsky termination |alpha_1|=1 (2-atom) = #global maximizers (2) = #{v≡±1 mod Phi6} -- all carried by the killer identity n(n-1)≡-1 mod Phi6.
+
+APPLIED TO PROOF (the sharpest reframe yet): the covering-min lower bound = a CHEBYSHEV / LP-DUALITY statement with a 2-POINT-supported dual (on runners {1,killer} at times {t*,1-t*}). A beater (M<M_C) must BREAK a length-2 alternation FORCED by v≡±1 mod Phi6 while COVERING all q<=n (THM-523); the two obligations meet on the finite Phi6 phase-lattice (S68/HYP-3802 "covering forces q*: n->Phi6") -- OPEN-Q-108 in Chebyshev/LP-dual form: a FINITE, 2-DIMENSIONAL dual on a FINITE phase group (an object one can hope to construct).
+
+CONVERGENCE: opus-S15 (HYP-3805) resolved the TOURNAMENT flip-rank(7)=12, obstruction = the Paley heptagon (|Aut|=21, max|Aut|=1,3,3,5,9,21 for n=2..7 extends my S72's 3,3,5,9), with the mechanism "high-|Aut| classes are hardest to cover." That is the tournament covering-excess + its |Aut|-mechanism; MY HYP-3806 is the LRC covering-excess IDENTITY + the equioscillation/Chebyshev structure -- same "covering >> free" on both halves. COLLISION: opus committed HYP-3805 first (via rebase); my Chebyshev work renamed -> HYP-3806 (klein block). HONEST: all facts exact-verified; the lenses (Chebyshev, covering-excess, rigidity) are established, here identified/unified/applied; NOT a proof (OPEN-Q-108 open), a proof TEMPLATE + synthesis. Files: chebyshev_covering_excess_klein.py(+out); HYP-3806; reflection five-twos-are-one-corner.md. No canon overridden.
+
 ## opus-2026-07-01-S15 -- FLIP-RANK n=7 RESOLUTION + PALEY-HEPTAGON OBSTRUCTION: a four-agent MERGE; k(7)=12 not 11 (lazy-caterer BREAKS); the obstruction IS the LRC extremal object (HYP-3805).
 
 Prompt: continue the Verblunsky/runners-on-a-loop + tournament min-flip work, EXTEND, and MERGE with new incoming.

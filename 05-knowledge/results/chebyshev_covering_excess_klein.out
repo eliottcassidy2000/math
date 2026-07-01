@@ -1,0 +1,24 @@
+(I,II) CHEBYSHEV equioscillation set + COVERING EXCESS (exact, n=7..14):
+   n Phi6      M_C  alternation set (binding runners) =={v:v≡±1 modΦ6}   M_C-1/n =(n-1)/(nΦ6)
+   7   43     7/43                            [1, 42]             True     6/301         True
+   8   57     8/57                            [1, 56]             True     7/456         True
+   9   73     9/73                            [1, 72]             True     8/657         True
+  10   91    10/91                            [1, 90]             True     9/910         True
+  11  111   11/111                           [1, 110]             True   10/1221         True
+  12  133   12/133                           [1, 132]             True   11/1596         True
+  13  157   13/157                           [1, 156]             True   12/2041         True
+  14  183   14/183                           [1, 182]             True   13/2562         True
+  => alternation set = {1, n(n-1)} = {v≡±1 mod Phi6} for ALL n (mult 2); killer n(n-1)≡-1 mod Phi6.
+  => covering excess M_C-1/n = (n-1)/(n*Phi6) EXACT: numerator = the DROPPED speed n-1 = CF quotient of [0;n-1,n].
+
+(III) RIGIDITY: the global maximizers t of min_v||vt|| (construction) -- alternation length:
+   n=7: maximizers t ~ [0.16279, 0.83721]  (t*=0.16279, 1-t*=0.83721); count=2 => RIGID (only t*,1-t*)
+   n=10: maximizers t ~ [0.10989, 0.89011]  (t*=0.10989, 1-t*=0.89011); count=2 => RIGID (only t*,1-t*)
+   n=14: maximizers t ~ [0.0765, 0.9235]  (t*=0.07650, 1-t*=0.92350); count=2 => RIGID (only t*,1-t*)
+
+APPLIED TO PROOF (template): the covering-min is a Chebyshev minimax; its extremizer equioscillates
+on EXACTLY 2 runners {1, killer} at the 2 points {t*,1-t*}. The LP/Chebyshev DUAL certificate for
+M(S)>=M_C is supported on this length-2 alternation. A BEATER (M<M_C) must break a length-2
+alternation forced by v≡±1 mod Phi6, WHILE covering all q<=n (THM-523) -- the 2 obligations conflict
+(the phase-lattice pins the alternation to Phi6). This is OPEN-Q-108 in Chebyshev/LP-dual form:
+construct the 2-point-supported dual, or show the alternation cannot be broken under covering.
