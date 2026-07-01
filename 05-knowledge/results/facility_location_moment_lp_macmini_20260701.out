@@ -1,0 +1,35 @@
+########################################################################
+# MOMENT LP: can the GLOBAL potential (A,Phi) force a lonely-measure floor?  (n=14)
+########################################################################
+
+=== r=1/14 (LRC threshold, A~1.86) ===   S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+  A=1.8572  Phi=4.4261  C_max=13  ACTUAL |L|=0.02390
+  coverage histogram m_k (k=0..):  [0.0239 0.5231 0.293  0.0747 0.0377 0.0119 0.0114 0.0065 0.002  0.0016
+ 0.0013 0.0011 0.0096 0.0024]
+  --- moment LP: min |L| given (A,Phi,support) ---
+  min m_0 (LP) = 0.000000   witness dist = {1: np.float64(0.3894), 2: np.float64(0.586), 12: np.float64(0.0247)}
+  => GLOBAL potential CANNOT force a floor (actual |L|=0.0239 but a same-moment dist with |L|=0.0000 exists)
+
+=== r=14/183 covering-min (A~1.99) ===   S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+  A=1.9891  Phi=4.8548  C_max=13  ACTUAL |L|=0.00000
+  coverage histogram m_k (k=0..):  [0.     0.4804 0.3373 0.091  0.0403 0.0127 0.0129 0.0055 0.0028 0.0017
+ 0.0014 0.0012 0.0102 0.0025]
+  --- moment LP: min |L| given (A,Phi,support) ---
+  min m_0 (LP) = 0.000000   witness dist = {1: np.float64(0.2724), 2: np.float64(0.7014), 12: np.float64(0.0262)}
+  => GLOBAL potential CANNOT force a floor (actual |L|=0.0000 but a same-moment dist with |L|=0.0000 exists)
+
+########################################################################
+# The potential bound 1-A+Phi/C_max IS positive in the SUB-CRITICAL regime (A<1).
+# Sweep r; report union bound (1-A) vs potential bound (1-A+Phi/Cmax) vs actual |L|.
+########################################################################
+          r       A      Phi  Cmax  1-A(union)  pot.bound  actual|L|
+     0.0100  0.2600   0.5315    13      0.7400     0.7809    0.83266
+     0.0200  0.5200   1.0822    13      0.4800     0.5632    0.67277
+     0.0300  0.7800   1.6524    13      0.2200     0.3471    0.51709
+     0.0357  0.9282   1.9930    13      0.0718     0.2251    0.43240
+     0.0400  1.0400   2.2537    13     -0.0400     0.1334    0.37344
+     0.0500  1.3000   2.8696    13     -0.3000    -0.0793    0.23160
+     0.0600  1.5600   3.5454    13     -0.5600    -0.2873    0.11591
+     0.0714  1.8571   4.4259    13     -0.8571    -0.5167    0.02390
+
+  (A=1 at r=1/(2*13)=0.03846; below it the union/potential bounds are live, above they die.)
