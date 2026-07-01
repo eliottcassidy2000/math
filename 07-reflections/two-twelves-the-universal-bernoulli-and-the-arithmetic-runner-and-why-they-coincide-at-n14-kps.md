@@ -2,7 +2,7 @@
 
 *kind-pasteur-2026-06-30. A survey of every `12 / 1/12 / −1/12` in the repo, read against the hypercontractivity result of the same session. The web is real, but it is **two threads that align at n=14**, not one — and separating them is clarifying, testable, and stops a coincidence from masquerading as structure.*
 
-> **Concurrent convergence (2026-06-30).** klein/mac-mini **HYP-3768** and opus **HYP-3770** independently pinned the *universal* `−1/12` as `s(n,Φ₆) → −1/12 = ζ(−1)` (the `E₂` anomaly) on the covering-min margin — i.e. the "universal Bernoulli `1/12`" of this reflection, reached first on their object. The **two-twelves split** (universal Bernoulli vs the arithmetic `n−2`) and the testable `1/(n−2)` prediction below are what this reflection adds.
+> **Concurrent convergence (2026-06-30).** klein/mac-mini **HYP-3768**, opus **HYP-3770** and opus **HYP-3773** pinned the *universal* `−1/12` as `s(n,Φ₆) → −1/12 = ζ(−1)` (the `E₂` anomaly) on the covering-min margin — i.e. the "universal Bernoulli `1/12`" of this reflection, reached first on their object (HYP-3773 even ties `Φ₆ = 2·Σspeeds + 1`, so the covering-min *is* the regularized sum of speeds). The **two-twelves split** (universal Bernoulli vs the arithmetic `n−2`) and the testable `1/(n−2)` prediction below are what this reflection adds.
 
 ## The web (what the survey found)
 

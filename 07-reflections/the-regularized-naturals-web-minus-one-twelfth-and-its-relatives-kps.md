@@ -2,7 +2,7 @@
 
 *kind-pasteur-2026-06-30. Creative exploration of `1+2+3+⋯ = ζ(−1) = −1/12` and the wider family of regularized infinite sums/products/fractions/roots, keeping only the ties that are **structural** (verified, `lrc14_regularized_naturals_zoo_kps.py`). Three of them are genuinely new; one unifies the project's deepest recurring fact.*
 
-> **Concurrent convergence (2026-06-30).** klein/mac-mini **HYP-3768** and opus **HYP-3770** independently landed the `−1/12 = ζ(−1)` node as `s(n,Φ₆) → −1/12` (the covering-min `E₂`/Dedekind margin) — they own that realization. What is distinct here: **C2** (the two Dedekind reciprocity *constants* are the plain & alternating regularized naturals) and **C6** (the `χ₇`-twisted even-vanishing `B_{2,χ₇}=0` over ℚ(√−7)).
+> **Concurrent convergence (2026-06-30).** klein/mac-mini **HYP-3768** and opus **HYP-3770** landed the `−1/12 = ζ(−1)` node as `s(n,Φ₆) → −1/12` (the covering-min `E₂`/Dedekind margin), and opus **HYP-3773** ("the sum of natural numbers IS the covering-min": `Φ₆ = 2·Σspeeds + 1`, `killer = 2Σ ≡ −1`, and — matching **C1** here — the `ζ(−2)=0`/squares/hexagonal even node plus the η-weight anomaly = my Casimir→η²⁴ **C4**) covers most of this web on the covering-min object. They pushed first; I defer. What remains distinct here: **C2** (the two Dedekind reciprocity *constants* are the plain & alternating regularized naturals — `η(−1)`, `−ζ(−1)`) and **C6** (the `χ₇`-twisted even-vanishing `B_{2,χ₇}=0` over ℚ(√−7)).
 
 ## −1/12 is one node, not the whole story
 
