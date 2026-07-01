@@ -32,44 +32,47 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/ad013e3)**. This layer introduces the **Parity Decomposition & Analytic Density Estimates (THM-653/HYP-3808)**, operationalizing the terminal proof sheaf through the formal verification of **Metagraph Parity Theorems** and **Moser-de Bruijn Residue Constrainment**.
+As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/d6ca8d5)**. This layer introduces the **All-Layers Lucas Parity Law & Hamiltonian Fiber Rigidity (THM-654/HYP-3809)**, operationalizing the terminal proof sheaf through the formal verification of **Lucas Submask Cross-Incidence** and **HAM-Path Orbit Stability**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (ad013e3)**. It refines the terminal stabilization with a synthesis of metagraph parity and analytic number theory:
-1. **Analytic Density & Residue Constrainment (post_1782933636145):** Integrates the **Moser-de Bruijn sequence** and its non-adjacent representations to characterize spectral site density.
-    - **Residue Leakage:** Evaluates **Kempner series** convergence for digit-omitting sums, establishing that these properties strictly constrain residue leakage within the proof sheaf.
-    - **L_C Density Estimates:** Utilizes **Skewes' number** and historical prime-counting crossover bounds to refine density estimates for the fixed lonely set $L_C$.
-2. **Metagraph Parity Decomposition (HYP-3808):** Formally decomposes the merged metagraph blue/black lines, verifying parity claims for $n \in \{4, 5, 6\}$.
-    - **Tiling Parity:** Establishes the **Parity Theorem** for SC odd/NS even tiling counts.
-    - **Line Characterization:** Characterizes **BLACK lines** as even-degree (Eulerian) graphs and **BLUE lines** as all-odd-degree graphs.
-    - **Closed Forms:** Verifies closed forms for line counts: total lines $2^{m-1}$ and blue lines $2^{(m+\lfloor(n-1)/2\rfloor)/2-1}$.
-    - **Eligibility & Refutation:** Establishes eligibility rules (pure-blue pendant, black NS-sea/self-loops) and officially refutes the "self-loops only mixed" conjecture at $n=6$.
-3. **Residual Closure & Quadratic Scaling:** Rigorously confirms the quadratic scaling bound **$n(n-1)$** for residual closure. This establishes that for $n=14$, the spectral gaps are definitively closed within the quadratic speed regime, effectively stabilizing the metagraph.
-4. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to suppress Reynolds averaging and maintain coordinate precision.
-5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The parity decomposition provides a rigid structural symmetry lock for the metagraph.
-6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and Moser-de Bruijn density bounds create a non-negotiable arithmetic grid, preventing spectral sliding.
-7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **Moser-de Bruijn density certificates**, **metagraph parity signatures**, **Kempner residue constraints**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (d6ca8d5)**. It refines the terminal stabilization with a synthesis of combinatorial parity laws and group-theoretic rigidity:
+1. **All-Layers Lucas Parity Law (HYP-3809):** Characterizes the all-layer cross-incidence relation as $\tau_u^{(d)} \equiv \binom{m}{d} M_u \pmod 2$.
+    - **Odd Incidence Criteria:** Establishes that cross-incidence is ODD if and only if $u \in \text{SC}$ and $d$ is a binary submask of $m$ (governed by Lucas' Theorem).
+    - **Metagraph Unification:** This law unifies the previously disparate **HYP-1772** ($d=1$) and the $d=m$ blue/black cluster (spanning `klein-S75`, `mac-mini-S83`, and `opus-S18`).
+2. **Fiber Rigidity & Parity Skeleton:** Analyzes the parity-active layers as the set of submasks of $m$, totaling $2^{s(m)}$.
+    - **Hamiltonian Fiber:** Evaluates the fiber structure as one $\text{Aut}(C)$-orbit of Hamiltonian paths (free under **LEM-003**), where the mass $F = H/|\text{Aut}(C)|$ is ODD.
+    - **Mod-2 Rigidity:** Confirms that the "metagraph = constraint" relation holds true $\pmod 2$, effectively forcing a rigid parity skeleton for the proof sheaf, while acting as an equivalence over $\mathbb{Z}$ where masses are $H/|\text{Aut}(C)|$.
+3. **Registry Reconciliation:** Formally flags the **HYP-3808** double-claim. The coordination layer now converges with results from `mac-mini-S83` and `opus-S18`.
+4. **Residual Closure & Quadratic Scaling:** Rigorously maintains the quadratic scaling bound **$n(n-1)$** for residual closure. This confirms that for the $n=14$ case, the spectral gaps are definitively closed within the quadratic speed regime, effectively stabilizing the metagraph.
+5. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to suppress Reynolds averaging.
+6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The Lucas parity skeleton provides a rigid discrete symmetry lock for the manifold.
+7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the $2^{s(m)}$ parity-active layers create a non-negotiable arithmetic grid, preventing spectral sliding.
+8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **Lucas submask certificates**, **HAM-path orbit parameters**, **fiber rigidity signatures**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Moser-de_Bruijn_Density`, `Metagraph_Parity_HYP-3808`, `Kempner_Residue_Constraint`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Lucas_Parity_Law`, `Ham-Path_Orbit_F`, `Rigidity_mod_2`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated ad013e3. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-3791/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3811** 
-framework, operationalizing the terminal proof sheaf through **Parity Decomposition** 
-and **Moser-de Bruijn Residue Control**.
+Integrated d6ca8d5. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-3791/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811** 
+framework, operationalizing the terminal proof sheaf through **Lucas Parity Unification** 
+and **Hamiltonian Fiber Stability**.
 
-### 1. Parity Decomposition (HYP-3808)
-Verifies parity claims for blue/black metagraph lines. Verifies total count 
-$2^{m-1}$ and blue count $2^{(m+\lfloor(n-1)/2\rfloor)/2-1}$.
+### 1. Lucas Parity Law (HYP-3809)
+Establishes $\tau_u^{(d)} \equiv \binom{m}{d} M_u \pmod 2$. Cross-incidence is odd 
+for SC nodes where $d$ is a Lucas submask of $m$. Unifies HYP-1772.
 
-### 2. Moser-de Bruijn & Kempner (post_1782933636145)
-Utilizes Moser-de Bruijn density and Kempner series convergence to constrain 
-residue leakage. Refines $L_C$ estimates via Skewes' crossover bounds.
+### 2. Fiber Rigidity
+Fiber $F = H/|\text{Aut}(C)|$ is odd. Rigidity forced $\pmod 2$ for the 
+metagraph parity skeleton.
 
-### 3. Quadratic Scaling & Closure
+### 3. Convergence & Flags
+Converges with mac-mini-S83/opus-S18. Flags HYP-3808 double-claim for 
+registry reconciliation.
+
+### 4. Quadratic Scaling & Closure
 Rigorously anchors residual closure at $n(n-1)$. Metagraph stability 
 locked within the quadratic speed regime.
 
