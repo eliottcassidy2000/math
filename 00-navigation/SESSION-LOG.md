@@ -9,6 +9,27 @@ THE FIX + REFRAME (lrc14_multifar_equidistribution_singularseries): the right ob
 CLEAN SEPARATION: single-far r=1 = NO resonance (one comb can't self-resonate) => survival=(6/7)meas>0 CLEAN => CLOSED (= the band-barrier as r=1 equidistribution). multi-far r=2..6 = main term positive + SMALL signed resonance correction (0.008 vs 0.122) = OPEN-Q-108 / r-far Dedekind ladder / Riesz-product factor-of-2; the far-element decorrelation Delta_W=O(1/W) is the rate. r>=7 = THM-573 sieve. REFRAME: "does a beater exist" (config search over disordered a(n)) -> "is the signed correction < the (6/7)^r meas MAIN TERM, uniformly over bounded cores" (analytic bound on a signed sum over a FIXED set = where Riesz/decorrelation/Erdos-Turan live). NOT combinatorial, NOT large.
 
 CONVERGES klein HYP-3784 (same-day Delsarte dual + far-element defeats-it-alone) -- the dual-certificate direction I reframed last turn; mac-mini/klein multi-far. Honest: single-far verified-closed; multi-far main term positive + correction empirically small, but "correction < main uniformly" IS OPEN-Q-108 (localized, not resolved). NO HYP reserved (extends klein/opus). Files: lrc14_{twofar_twocomb_resonance,rfar_unionbound_closure,multifar_equidistribution_singularseries}_kps.py(+outs); reflection multi-far-is-the-singular-series-localized-... No canon overridden.
+## klein-2026-07-01-S65 -- EQUIDISTRIBUTION ON THE FIXED LONELY SET L_C: the far element is IMPOTENT on L_C (narrow arcs => equidistributes => can't patch), closing the S64 tail; dodge != patch (HYP-3786)
+
+Prompt: think equidistribution on the fixed lonely set L_C and extend anything related as far as you can.
+
+Filed HYP-3786; reflection dodge-is-not-patch-the-far-element-equidistributes.md; scripts lonely_set_equidistribution_klein.py + lonely_set_harmonic.
+
+THE LONELY SET L_C: for the construction C={1..12,182}, L_C(r)={t: min_{v in C}||vt||>r} is a CANTOR set (intervals 84,48,28,24,...,2 as r:0.05->M_C) CONCENTRATED at the binding t*=n/Phi6 (the zeta_6/hexagonal point). meas(L_C)=0.024 at the floor 1/n (the construction's lonely measure = its looseness, M_C>1/n).
+
+EQUIDISTRIBUTION: a beater must COVER L_C to reduce M below M_C. Coverage frac_w = meas(L_C∩{||wt||<r'})/meas(L_C). (Weyl) mean_w frac_w = 2r' EXACTLY (equidistribution on L_C on average) -- HIGH variance = RESONANCE. Resonance law: w covers L_C iff (i) ||w t*||<r' (w near a HARMONIC of 1/t*=Phi6/n=183/14=13.07) AND (ii) w SMALL (danger arc width 2r'/w wide enough). Anti-resonant: the core {6..12}, apex 7, 61 (=Phi6/3), killer 182 (frac 0.016).
+
+THE FAR-ELEMENT CLOSURE (the extension): a HUGE w has arc width 2r'/w->0, so it covers only ~2r'*meas(L_C) of L_C REGARDLESS of tuning -- verified: harmonic-tuned huge w (~k*Phi6/n, w~5000) gives frac~0.149~2r', NOT concentrated. So the FAR ELEMENT CANNOT PATCH L_C -- it equidistributes. This CLOSES the S64 residual (speeds>n(n-1)) by equidistribution, complementary to HYP-3763 (large multiples raise M). Only SMALL speeds reach L_C: the core {1..n-2} DEFINE L_C (anti-resonant), the missing n-1 is the harmonic (resonant) but using it rebuilds the covering (HYP-3778 forbids a beater).
+
+DODGE != PATCH (reconciles HYP-3745): a huge speed can DODGE every small-modulus witness (CRT-tuned safe residue = valid covering MEMBER) but cannot COVER L_C (patch = beat). The far element is SAFE but BLIND. Every prior lower-bound method failed on the far element because they tried to rule it out as a MEMBER; the truth is it is an impotent ACTOR (can't reach the concentrated L_C with narrow arcs).
+
+EXTENSIONS: Fourier/Salem (the frac_w variance = the L_C-measure's Fourier coefficients at the harmonics of Phi6/n; L_C is NON-Salem = arithmetic, hence resonances -- but only small speeds exploit them); dynamical (runner flow t->{vt} on L_C, equidistribution = unique ergodicity on average, harmonics = eigenfrequencies); t*=n/Phi6=zeta_6 Eisenstein atom (L_C concentrates at the hexagonal point, S57).
+
+HONEST: grid-approx (N=4e5), empirical mechanism not a theorem; closes the S64 tail heuristically.
+
+NEXT: (1) make 'huge speed can't cover L_C' rigorous (arc-width vs L_C-interval-width bound); (2) the Fourier decay of the L_C measure (Salem gap) as the covering-min lower-bound certificate; (3) L_C as a zeta_6 Eisenstein atom -- tie to the E2/cusp split (S56).
+
+--- prior entries ---
 
 ## klein-2026-07-01-S64 -- the DELSARTE DUAL IS STRONG (correcting S63): the creative use is DELSARTE + HYP-3763; the far-element defeats it alone (HYP-3784)
 

@@ -1,0 +1,17 @@
+binding t*=0.07650, harmonic freq 1/t* = Phi6/n = 13.0714
+HARMONIC LAW: w resonates with L_C iff ||w*t*|| small (w near k*Phi6/n). Check frac vs ||w t*||:
+   w=  13: ||w t*||=0.0055  frac_cover(L_C)=1.000  (near-harmonic? True)
+   w=  26: ||w t*||=0.0109  frac_cover(L_C)=1.000  (near-harmonic? True)
+   w=  39: ||w t*||=0.0164  frac_cover(L_C)=0.868  (near-harmonic? True)
+   w=  52: ||w t*||=0.0219  frac_cover(L_C)=0.728  (near-harmonic? True)
+   w=  65: ||w t*||=0.0273  frac_cover(L_C)=0.633  (near-harmonic? True)
+   w=  78: ||w t*||=0.0328  frac_cover(L_C)=0.520  (near-harmonic? True)
+   w= 182: ||w t*||=0.0765  frac_cover(L_C)=0.016  (near-harmonic? True)
+   w= 183: ||w t*||=0.0000  frac_cover(L_C)=0.124  (near-harmonic? True)
+   w=   7: ||w t*||=0.4645  frac_cover(L_C)=0.000  (near-harmonic? False)
+   w=  61: ||w t*||=0.3333  frac_cover(L_C)=0.000  (near-harmonic? False)
+
+FAR-ELEMENT: generic HUGE w equidistributes on L_C (frac~2r=0.153); harmonic-tuned huge w resonates:
+   12 random huge w in [5e3,5e4]: mean frac=0.153 (vs 2r=0.153); max=0.158
+   12 harmonic-tuned huge w (k*Phi6/n, k~400): mean frac=0.149; max=0.152  (w e.g. [5229, 5242, 5255])
+=> generic huge w equidistributes (~0.15, wasted); only harmonic-tuned w resonates (covers L_C).

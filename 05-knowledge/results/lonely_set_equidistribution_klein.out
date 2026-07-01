@@ -1,0 +1,26 @@
+construction C=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182], M_C = 14/183 = 0.07650
+(1) THE FIXED LONELY SET L_C(r) = {t: min_v||vt|| > r}: measure + #intervals
+   r=0.05000: meas(L_C)=0.23160  #intervals=84  (r vs floor 1/n=0.07143, M_C=0.07650)
+   r=0.06000: meas(L_C)=0.11591  #intervals=48  (r vs floor 1/n=0.07143, M_C=0.07650)
+   r=0.07000: meas(L_C)=0.03238  #intervals=28  (r vs floor 1/n=0.07143, M_C=0.07650)
+   r=0.07143: meas(L_C)=0.02389  #intervals=24  (r vs floor 1/n=0.07143, M_C=0.07650)
+   r=0.07104: meas(L_C)=0.02559  #intervals=24  (r vs floor 1/n=0.07143, M_C=0.07650)
+   r=0.07650: meas(L_C)=0.00001  #intervals=2  (r vs floor 1/n=0.07143, M_C=0.07650)
+
+(2) EQUIDISTRIBUTION on L_C(r=0.0745) (meas=0.00696): coverage frac_w of L_C by w's danger
+    {t: ||wt||<r'}, r'=0.0765; Weyl prediction 2r'=0.1530. Concentration=equidistrib; outliers=resonance.
+    mean frac_w = 0.1530 (vs 2r'=0.1530); std=0.1112
+    MOST-covering w (resonant, CRT-escape candidates): [(np.float64(1.0), 26), (np.float64(1.0), 13), (np.float64(0.868), 39), (np.float64(0.728), 52), (np.float64(0.687), 93), (np.float64(0.648), 80), (np.float64(0.646), 106), (np.float64(0.633), 65)]
+    LEAST-covering w (anti-resonant, lonely-preserving): [(np.float64(0.0), 6), (np.float64(0.0), 7), (np.float64(0.0), 8), (np.float64(0.0), 9), (np.float64(0.0), 10), (np.float64(0.0), 11), (np.float64(0.0), 12), (np.float64(0.0), 19)]
+    w= 182: frac=0.0158  (ANTI (misses L_C))
+    w= 183: frac=0.1237  (equidistributed)
+    w=  13: frac=1.0000  (RESONANT (covers L_C))
+    w=  14: frac=0.5780  (RESONANT (covers L_C))
+    w=   7: frac=0.0000  (ANTI (misses L_C))
+    w=  61: frac=0.0000  (ANTI (misses L_C))
+    w= 366: frac=0.0841  (ANTI (misses L_C))
+
+=> if generic large w -> frac ~ 2r' (equidistribution) but a FEW resonant w cover much more,
+   the CRT-escape = w RESONATING with the arithmetic (three-gap/Farey) structure of L_C.
+   Extending S64: the far element beats ONLY by resonating with L_C; generic large speeds
+   equidistribute and waste their danger off the lonely set.
