@@ -1,3 +1,21 @@
+## mac-mini-2026-07-01-S91 -- THE COVERING-MIN AS AN ADVERSARIAL FACILITY-LOCATION GAME + the potential/PoA import for inf-meas AND ITS SHARP LIMIT (HYP-3822)
+
+Prompt: the covering-min is an adversarial facility-location game on the circle (runners=facilities, lonely observer=point farthest from all, covering-min=adversary's min-over-configs value); import a potential-function / price-of-anarchy argument for inf meas. + arXiv:2604.16750 (Blaschke) + Kaczynski's Riemann-sphere (boundary functions) work.
+
+THE GAME (attacker-defender facility location): circle R/Z; runners=FACILITIES x_i(t)=v_i t mod 1; observer=client at 0; loneliness(t)=min_i||v_i t||; M(S)=max_t loneliness=defender's minimax objective; covering-min=min over covering S of M(S)=14/183. Lonely set L=(t:min||v_i t||>=r); inf meas=inf_S|L|=the FLOOR.
+
+THE POTENTIAL IMPORT (Rosenthal congestion) -- a VALID bound: coverage C(t)=#{i:||v_i t||<r}; A=int C=(n-1)2r (1st moment); Phi=int C(C-1)=sum_{i!=j}|D_i cap D_j| (congestion). THEOREM |L| >= 1-A+Phi/C_max (proof: k(k-1)<=C_max(k-1)). BEATS the union bound 1-A; LIVE in the SUB-critical regime (r=0.0357: union 0.07, potential 0.23, actual 0.43). But at the CRITICAL r=1/14 (A~1.86~2) it goes NEGATIVE (dies at r~0.047 crossover).
+
+THE SHARP LIMIT (moment LP) -- the session's real content: min m_0 s.t. (sum m_k=1, sum k m_k=A, sum k(k-1)m_k=Phi, support{0..n-1}) = EXACTLY 0.000000 at r=1/14 AND r=14/183. A same-moment witness {C=1:.39,C=2:.59,C=12:.025} has ZERO loneliness. => the GLOBAL congestion moments PROVABLY CANNOT force inf meas>0; the floor is a LOCAL/ARITHMETIC fact (which t carries which coverage), not a global-moment one. Not looseness -- a genuine limitation of the PoA/potential import.
+
+THE SHARPENED PRINCIPLE (sharpens HYP-3817): the dichotomy is not transform-vs-moment, it is AVERAGE-vs-LOCAL. A MOMENT CAN AVERAGE TOO. The global empirical 2nd moment Phi is blind to the atom exactly as Fourier/Delsarte hit the spectral gap (HYP-3785); the moment that WORKS is the ARITHMETIC/congruence 2nd moment (HYP-3571 Gamma_0(N), set-independent CV(N_R)^2) -- indexed by residues, remembers WHERE the mass sits. "Reach for a moment" -> "reach for the ARITHMETIC/local moment."
+
+THE ANALYTIC FRAME: Blaschke(2604.16750) -- facility dynamics = linear core of circle maps B_a; involution I(z)=1/zbar = the fold iota (S88 atlas); Arnold tongues T_{p/q} = the rational resonances = the LOCAL a/q piles the global moment averages away; Herman-ring/Diophantine regime = the deep well (t*=n/Phi6, bounded partial quotients, S79). Kaczynski boundary functions (PhD 1967, radial/curvilinear limits on the disk) -- C(t)=a TAME boundary function (Baire-1, finite arc-union); floor = its LOCAL zero-set tameness (union of intervals); Bagemihl ambiguous points = the lonely-arc endpoints (finiteness => Fourier decay N/(pi m), S75).
+
+CONVERGENCE (this session's inbox): klein-S84 + opus-S27 independently found excess=#{SC & |Aut|>n} (my S90c HYP-3819) -- klein computed excess(8)=4 (obstruction MIGRATES from non-SC Paley|Aut|=21 down to the |Aut|=9 SC cluster incl (3,3,3,3,4,4,4,4)); opus found sqrt21 residual = NARROW-CLASS Z/2 of Q(sqrt21) (unit (5+sqrt21)/2 norm +1 => neg-Pell unsolvable => Cl+ has Z/2 = OPEN-Q-108). HOUSEKEEPING: ceded HYP-3819 to klein (first committer); renamed mine -> HYP-3821 (the Q(sqrt-3,sqrt-7) biquadratic angle).
+
+Files: 04-computation/facility_location_{potential_poa,moment_lp}_macmini_20260701.py (+.out); HYP-3822; reflection a-moment-can-average-too.md. HONEST: game frame + potential bound exact (n=14); the impossibility (LP min m_0=0) solid; Blaschke/Kaczynski = exact where arithmetic (involution, tameness), analogical where dynamical. No canon overridden, no court cases.
+
 ## kind-pasteur-2026-07-01-S26 -- THE PoA BOUND IS A BELOW-MEAN TAIL => it CANNOT be an unsigned discrepancy bound; it REDUCES to the signed Gauss certificate (game theory = arithmetic, one bound). + corrected PoA (11-cores: 5.69, target 6.61) + 21-Frobenius < PSL_2(F_7)
 
 Prompt: consider the 21-Frobenius subgroup + Pochhammer/integer-complexity/sqrt-p faces; work to prove PoA<=4.85 by capping star-discrepancy or a more creative method.

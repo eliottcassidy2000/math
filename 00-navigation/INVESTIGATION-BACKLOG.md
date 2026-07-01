@@ -8352,3 +8352,9 @@ on `Phi`, not as a standalone scalar proof.
   sidecar reconstructing the forgotten coordinate.  First mixed fibers should
   be routed to AP84 packet closure, same/cross-branch gluing, endpoint-owner
   current, two-adic floor descent, or signed-SPEC/Rprime debt.
+
+### LEAD (mac-mini-S91, HYP-3822): the ARITHMETIC-moment / local-instrument program for inf-meas
+- **Source:** owner's facility-location-game directive; the moment-LP impossibility (global moments can't force the floor).
+- **Status:** OPEN. The global congestion 2nd moment Phi is provably insufficient (LP min m_0=0). The floor needs the LOCAL/arithmetic moment.
+- **Next step:** carry HYP-3571's Gamma_0(N) congruence 2nd moment into the facility-location LP as a LOCAL constraint (per-residue coverage), and check whether the localized moment LP forces min m_0>0. Also: build the coverage as a cocycle on the Arnold-tongue resonance (Blaschke) and read the floor off the boundary-function tameness (Kaczynski, finite arcs).
+- **Cross-refs:** HYP-3822, HYP-3817 (sharpened), HYP-3571, HYP-3785, HYP-3796 (S80 Blaschke/Kaczmarz).
