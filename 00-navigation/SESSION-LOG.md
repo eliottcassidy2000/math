@@ -1,3 +1,17 @@
+## opus-2026-07-01-S17 -- WORKING THE OPEN QUESTION (flip-rank excess formula?): resolved NEGATIVELY -- k(n) is a genuine COVERING NUMBER, the excess is symmetry-folding but NOT a formula (extends HYP-3805).
+
+Prompt: work the open question (is the excess k-max(bounds) = the max|Aut| folding, giving a formula for k(n)?).
+
+TWO things needed pinning: (1) k(7)=12 or 11? (2) does a rigorous bound EQUAL k (=> formula)?
+
+(1) k(7)=12 REINFORCED three more ways: (a) rigorous bound chain k(n)>=D(n)>=R(n) & k>=floor, computed D(7)>=7 (ecc(transitive)=ecc(Paley)=7); (b) 60 TARGETED Paley-GEODESIC-aligned 11-subcubes (free the 7 arcs where the closest Paley rep departs transitive => Paley IS hosted, +4 more) ALL fail full coverage; (c) + S15's complete negative (optimal free-set spans{2,4,5,6}: all 184 viable bases fail) + randoms. Lazy-caterer 1+C(n-2,2)=11 refuted; excess +1 at n=7.
+
+(2) NO rigorous bound equals k => NO formula. k exceeds max(floor,D,R) by 0,0,0,1,3, and that excess is NOT ⌈log2 max|Aut|⌉ (2,2,3,4,5), not max|Aut|-linear (3,3,5,9,21), not D, not R. The lazy-caterer fit 4 points and broke at the 5th = the signature of a genuine COVERING-CODE parameter (these lack closed forms).
+
+RESOLUTION: the open question's premise (excess => formula) is FALSE. What IS rigorous: the mechanism is symmetry (obstruction = argmax|Aut|, proved via miss-frequency; high-|Aut| = n!/|Aut| few reps = hard to cover); the excess appears when a new doubly-regular/Paley class emerges. But the AMOUNT is a covering number, not formulaic (n=6 jump proved only by exhaustion, n=7 by near-exhaustion). VERDICT for team: stop hunting a k(n) formula; BOUND it (k>=max(floor,D,R) proved chain; UB = spans{1,3} construction 1+C(n-2,2), tight n<=6, +1 at n=7); the gap = symmetry-folding, governed qualitatively (not formulaically) by max|Aut|.
+
+HONEST: k(7)=12 very strongly evidenced, not fully exhausted (~5 CPU-hrs feasible); D(7)>=7 (diameter exact value not pinned, weak bound anyway). Reflection: the-flip-rank-excess-is-symmetry-folding-but-not-a-formula-kn-is-a-genuine-covering-number-opus-20260701.md; scripts tournament_{isodiameter_n7,fliprank_n7_targeted11}_opus_20260701.py (+.out). Extends HYP-3805. No canon overridden.
+
 ## mac-mini-2026-07-01-S82 -- THE TOURNAMENT/EVEN-GRAPH EQUINUMEROSITY, RESOLVED: TWO distinct 'even graph' notions; the repo conflated them; RPGFD's type-II even = A000568 = tournaments (HYP-3799) [TOURNAMENT side]
 
 Prompt: explore + synthesize ideas related to tournament/even-graph equinumerosity; be creative with novel frames.

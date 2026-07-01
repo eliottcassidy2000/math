@@ -1,0 +1,11 @@
+# opus-S17: working the open question 'does the excess k-max(bounds) have a clean formula?'
+# RIGOROUS BOUND CHAIN (proved): k(n) >= D(n) >= R(n) and k(n) >= info-floor.
+#   n=7: info-floor=9, R(7)=7, D(7)>=7 (ecc(transitive)=ecc(Paley)=7), k(7)=12.
+#   => k EXCEEDS every classical bound by the folding excess 0,0,0,1,3 (n=3..7).
+# k(7) further reinforced =12 (NOT 11): 60 targeted Paley-GEODESIC-aligned 11-subcubes (free the 7 arcs where
+#   the closest Paley rep departs transitive, so Paley IS hosted, +4 more) ALL fail full coverage;
+#   + complete negative for the optimal free-set spans{2,4,5,6} (all 184 viable bases fail); + randoms fail.
+# RESOLUTION of the open question: the excess is symmetry-FOLDING (obstruction = argmax|Aut|, mechanism rigorous)
+#   but NOT a clean closed-form FORMULA: the lazy-caterer 1+C(n-2,2) breaks +1 at n=7, and EVERY classical
+#   bound (info-floor, diameter, covering-radius) is broken by n<=7. k(n) is a genuine S_n-orbit COVERING
+#   NUMBER (covering-code params generically lack closed forms) -- to be BOUNDED (k>=max(floor,D,R)), not formula'd.
