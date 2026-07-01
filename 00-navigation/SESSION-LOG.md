@@ -32,6 +32,22 @@ BRIDGE 6 -- 2nd MOMENT [already canon THM-589]: W(n)=metagraph H-variance=simpli
 NEXT TARGETS / new conjectures: (1) true LRC spectral twins -- covering sets M-cospectral AND covering-profile-identical but danger-Gram-spectrally distinct (construction vs tuned near-miss); (2) fold-fixed correspondence SC classes <-> iota-symmetric LRC witnesses via a shared staircase coordinate; (3) is the metagraph n=6 spherical->hyperbolic transition the same event as the LRC (2,3,n) Euclidean node; (4) half-tiling floor((n-1)^2/4) <-> Phi_6=n^2-n+1 (both quadratic fold-rigidity dimensions).
 
 Files: 04-computation/metagraph_lrc_integration_macmini_20260701.py (+.out); HYP-3813; reflection two-folds-of-one-triangle.md. HONEST: Bridge 2 GROUNDED (computational); Bridge 6 canon (THM-589); Bridges 1/3/4/5 are structural correspondences on the shared Z_2-folded staircase -- intriguing + testable, not theorems. A cross-domain synthesis opening concrete tests. No canon overridden, no court cases.
+## opus-2026-07-01-S22 -- TWO GEOMETRIES, ONE ALGEBRA: the CAYLEY TRANSFORM bridges the staircase and the unit circle; complement is a REFLECTION in both; transitive spectrum = ROOTS OF UNITY (HYP-3813).
+
+Prompt: see more algebra<->geometry links like R=complement / V=span-swap; notice the pattern; extend.
+
+PATTERN: one tournament algebra, TWO geometries (staircase tiling + unit circle), bridged by the CAYLEY TRANSFORM: T -> skew S=A-A^T -> U=(I+S)^{-1}(I-S) in SO(n) -> eigenvalues ON THE UNIT CIRCLE (= the LRC 'runners on a loop').
+
+DICTIONARY (verified n<=5, spectra n<=9):
+ (i) COMPLEMENT (S->-S) = anti-diagonal reflection R on the staircase = COMPLEX CONJUGATION (angle->-angle) on the circle. ONE involution, TWO mirrors.
+ (ii) SELF-COMPLEMENTARY = grid-symmetric (R-fixed) tiling = CONJUGATION-SYMMETRIC spectrum.
+ (iii) TRANSITIVE Cayley spectrum = ROOTS OF UNITY: odd n = n-th roots (incl 1 at angle 0); even n = primitive 2n-th roots (no 1). The odd/even split as 'is 1 in the spectrum'. Circulant/rotational -> exact roots (the runner cloud). Verified exactly n=3..9.
+
+UNIFIES THE TWO PILLARS: staircase (tiling, R=complement, S18-21) and circle (LRC runners=Cayley eigenvalues=roots of unity, HYP-3802/3795) are two coordinate systems for the same objects; complement is the shared reflection. 'Everything is the Triangle' gains a dual 'Everything is the Circle'.
+
+PARITY UNIFIED: odd-n SC anti-automorphism has 1 FIXED VERTEX (HYP-3811) = the real-axis eigenvalue (odd-cardinality conjugation-symmetric set => >=1 real point). The '=2 mod4 cycle rule' (algebra), roots-of-unity parity (circle), transpose-self tiling parity (staircase) = ONE fact, three geometries.
+
+OPEN (proposed): span-d & c3=C(n,3)-sum C(s_i,2) circle-images (spectral moments); V and the order-4 rho=RV on the circle (sqrt-complement / Cayley-Dickson i). CONNECTS klein-S79/HYP-3812 (LRC complement-fold from the modular side). HONEST: 3 headline rows verified; span/c3/V/rho proposed. Reflection: two-geometries-one-algebra-the-cayley-transform-bridges-the-staircase-and-the-circle-opus-20260701.md; scripts cayley_{alggeo_dictionary,transitive_roots_of_unity}_opus_20260701.py. HYP-3813. No canon overridden.
 
 ## kind-pasteur-2026-07-01-S17 -- THE SC SPINE IS THE HALF-TILING, SO WORK THERE: n=7 blue-spine CONNECTED + census (#SC=88, #pure-blue=4) via 512 half-tilings (64x cheaper); #pure-blue CLOSED FORM; blue self-loops are EVEN-n-only; five mental-model updates
 
