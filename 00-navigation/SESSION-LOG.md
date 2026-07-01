@@ -1,3 +1,19 @@
+## opus-2026-07-01-S15 -- FLIP-RANK n=7 RESOLUTION + PALEY-HEPTAGON OBSTRUCTION: a four-agent MERGE; k(7)=12 not 11 (lazy-caterer BREAKS); the obstruction IS the LRC extremal object (HYP-3805).
+
+Prompt: continue the Verblunsky/runners-on-a-loop + tournament min-flip work, EXTEND, and MERGE with new incoming.
+
+CONVERGENCE: four agents independently hit the owner's flip-rank question -- opus (min-flip), klein (HYP-3803 rho, balanced-cut), kps (HYP-3803 k_min, gauge), mac-mini (HYP-3798 kappa, lazy-caterer + skip-2 diagonal), klein (HYP-3804 rainbow dual). ALL agree k(n)=1,2,4,7 (n=3..6, exhaustive) and ALL fit k=1+C(n-2,2) => predicted k(7)=11, but NOBODY realized an 11-config.
+
+MY RESOLUTION (first real n=7 computation, vectorized canonical over all 456 classes):
+- mac-mini's "skip-2 diagonal" = my "fix spans {1,3}" ((i,i+3) has span 3); we independently hit the IDENTICAL 454/456. I then IDENTIFIED the 2 missing classes: (1,2,2,3,4,4,5) |Aut|=1, and the REGULAR tournament (3^7) |Aut|=21 = the PALEY/QR heptagon on Z/7 = roots of -1 = the LRC atoms (HYP-3802).
+- For that free-set (spans{2,4,5,6}), ALL 184 bases hosting both missing classes were enumerated -- NONE reaches 456. So the canonical optimal free-set CANNOT do 11 under any base (resolves mac-mini's "a different fixing may close it" -- it can't). k(7)<=12 PROVEN (fix span1 + span3 minus one arc). => k(7)=12, the lazy-caterer breaks at n=7.
+
+MECHANISM: #labeled reps = n!/|Aut|; high-|Aut| = few reps = hardest to catch. The class forcing k up = argmax|Aut|. Over 25 random 11-configs the Paley heptagon is missed 24 times (most robust); miss-ranking tracks |Aut| (21,9,7,3,..). max|Aut| = 1,3,3,5,9,21 (n=2..7; extends klein-S72). k(n)-floor = 0,0,0,1,3.
+
+DOUBLE-EXTREME UNIFICATION: MFAS(Paley)=7 = the MAX feedback-arc distance at n=7 = mac-mini's covering radius R(7). So the Paley heptagon is BOTH the most symmetric (|Aut|=21) AND the farthest-from-transitive (MFAS=7) tournament: covering-hard (k) and expression-hard (beta) coincide. FOUR faces of one object: flip-rank obstruction + covering-min extremizer (OPEN-Q-108) + harmonic-Verblunsky atom set (HYP-3795) + max-MFAS/covering-radius. The repo's tournament half and LRC half meet at the heptagon.
+
+HONEST: k(7)=12 strongly evidenced (UB=12 proven; canonical free-set fails completely under all 184 bases; 2 random searches fail), NOT exhaustive over all C(21,11) free-sets. Unification is a sharpened conjecture (symmetry-extremality), not a lower-bound proof. HYP-3805; reflection the-flip-rank-obstruction-is-the-paley-heptagon-lazy-caterer-breaks-at-n7-opus-20260701.md; scripts tournament_fliprank_{anybase,n7_missing_classes,n7_paley_obstruction,aut_mechanism,obstruction_ranking}_opus_20260701.py + lrc_verblunsky_harmonic_ladder_* (+.out). Notes added to HYP-3798. No canon overridden (k(7)=11 was CONJECTURAL for all).
+
 ## klein-2026-07-01-S72 -- A TOURNAMENT-INVARIANT SAFARI (creative new properties): the PACKING/COVERING asymmetry (rainbow R(n) vs flip-rank rho(n)), the skew-spectrum's weakness, the QR-triangle 2-design (HYP-3804).
 
 Prompt: explore other creative tournament-related new properties, even if not directly LRC-related.

@@ -70,8 +70,15 @@ repo — the LRC covering-min and the tournament flip-rank — are both **extrem
 in both the extremality is *symmetry* (the D₇/Frobenius group folding the space too tightly to separate or to
 cover). And the same heptagon carries the **harmonic Verblunsky ladder** `|α_j|=1/(n-1-j)` (HYP-3795/3802):
 the AP lonely config at t=1/n is the n-th roots minus one, whose OPUC coefficients are the reciprocal
-integers. One object, three faces: covering-min extremizer, harmonic-Verblunsky atom set, flip-rank
-obstruction.
+integers. One object, **four** faces: covering-min extremizer, harmonic-Verblunsky atom set, flip-rank
+obstruction, and — from mac-mini's companion invariant — the **max-feedback-arc-set** tournament. I verified
+`MFAS(Paley)=7`, the *maximum* over all n=7 tournaments (mac-mini's covering radius `R(7)`, extending
+`R=1,1,3,4` for n=3..6). So the heptagon is a **double extreme**: it is simultaneously the *most symmetric*
+tournament (|Aut|=21) and the *farthest from transitive* (needs 7 arc-reversals). These are the two ways a
+tournament can be "hard": hard to *catch as a class* (covering, `k`) and hard to *express as one object*
+(feedback distance, `beta`) — and they coincide precisely at the Paley heptagon. Over 25 random 11-configs
+the heptagon is missed **24 times**, the single most robust obstruction; the whole miss-ranking tracks |Aut|
+(21, 9, 7, 3, …).
 
 ## Extensions (what this opens)
 1. **The obstruction sequence.** `max|Aut|(n) = 1,3,3,5,9,21,…` (n=2..7). Predict `k(n)` exceeds the floor

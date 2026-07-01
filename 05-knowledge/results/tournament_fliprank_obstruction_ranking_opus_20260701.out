@@ -1,0 +1,9 @@
+# opus-S15 extension: Paley heptagon = ROBUST double-extreme obstruction (n=7)
+# Over 25 random 11-free-sets (transitive base), miss-frequency ranked by symmetry:
+#   missed 24/25 |Aut|=21 MFAS=7  <- PALEY HEPTAGON (the LRC atoms)
+#   missed 24/25 |Aut|=7  MFAS=6  (rotational C_7{1,2,3})
+#   missed 22/25 |Aut|=9  MFAS=5
+#   missed 21/25 |Aut|=3  MFAS=7 ; 19/25 |Aut|=3 MFAS=4 ; 19/25 |Aut|=1 MFAS=5
+# Paley heptagon: |Aut|=21 (max) AND MFAS(beta)=7 (=max = mac-mini covering radius R(7)).
+# => the flip-rank obstruction = max-|Aut| = max-MFAS tournament: covering-hard AND expression-hard coincide.
+# max|Aut| sequence 1,3,3,5,9,21 (n=2..7); k(n)-floor = 0,0,0,1,3 (n=3..7).
