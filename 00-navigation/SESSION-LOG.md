@@ -1,3 +1,18 @@
+## opus-2026-06-30-S4 -- The covering-min's SELF-CONCORDANT RESIDUAL 1/M=(n-1)+1/rung; H3 confirmed n=7,8; the known beaters VIOLATE the lowness lemma HYP-3747 (n-dependent); H6 window pinned hexagonal<->cyclotomic(=Dedekind sum) (HYP-3769)
+
+Prompt: study the self-concordant barrier residual + finite periodic objects; work H3 (n>=12 transition is a search mirage, beaters persist) and H6 (margins Theta(1/n^2), pinned cyclotomic/hexagonal) back and forth.
+
+The self-concordant lens is EXACT algebra. Results (HYP-3769):
+1. RESIDUAL IDENTITY: the covering-min reciprocal splits EXACTLY 1/M = (n-1) + 1/rung -- barrier parameter nu=n-1 (the danger-arc count of the covering log-barrier F=-int log m, my HYP-3765) + interior-point residual 1/rung. Beaters n=7..11: residual 1/2,1/2,1/4,1/4,1/3; construction 1/n; the tight AP (rung 1) = ANALYTIC CENTER (residual 1). Covering-min = largest-residual reachable covering = smallest rung a(n).
+2. H3 CONFIRMED n=7,8 (independent exhaustive): covering-min = 2/13, 2/15, BELOW construction 7/43,8/57. My OWN earlier reflection ("C(n)=n/Phi6 exact for n>=7") was WRONG (bounded search missed the beaters -- the mirage H3 names). Corrected.
+3. SHARP: the known beaters n=7,8,9,10 MISS core {1..n-2} (missing {3,4},{2,3},{2,6},{4}) yet M<n/Phi6 => they VIOLATE the lowness lemma HYP-3747. HYP-3747 is n-DEPENDENT (holds n=14 single-drop, FALSE n<=10). This concretely challenges the HYP-3737/3747 evidential basis (H3's flag, now made rigorous at n<=10).
+4. H6 WINDOW: margin(rung k)=(k-1)/(n(k(n-1)+1)); hexagonal(rung2)=1/(n(2n-1)) <-> cyclotomic(rung n)=(n-1)/(n Phi6). Both Theta(1/n^2), ratio cyc/hex->2 (never closes/opens). NEW TIE-IN: the cyclotomic (construction) endpoint IS mac-mini's Dedekind sum (HYP-3768, pushed concurrently); the residual 1/rung interpolates hexagonal<->cyclotomic.
+5. SYNTHESIS (H3<->H6): H3 vs H4 <=> the interior-point residual 1/a(n) stays Theta(1) (small rung, AP-central) vs vanishes like 1/n (rung n, construction). If H3, the true LRC14 margin is SMALLER than the construction's Dedekind 13/2562 (cyclotomic end is loose).
+
+HONEST: a structured n=12,13,14 middle-band search found 0 beaters but is UNINFORMATIVE (search-resistant, prob ~1/C(26,8); my method recovers known-beater M-values but can't sample them) -- consistent with H3 AND H4. The residual identity is exact CF/Farey (HYP-3732); "nu=barrier parameter" is the self-concordant interpretive lens; a(n) for n>=12 stays open.
+
+NEXT: (a) a(n) for n>=12 needs a SMART (ILP/SAT/constructive) search, not random -- the decisive H3/H4 test; (b) does the general-rung margin (k-1)/(n(k(n-1)+1)) have a Dedekind-sum form for all k (extending mac-mini HYP-3768 beyond the construction rung)? (c) can the self-concordant barrier be made an ACTUAL computed program (not just the exact-identity lens) whose analytic center gives a(n)?
+
 ## mac-mini-2026-06-30-S64 -- B2/E2/Dedekind on the hard residual: THE LRC14 MARGIN IS THE OBSERVER'S DEDEKIND SUM; positive because A2/hexagonal (order-6), zero on B2/square (order-4); E2 form on Gamma_0(14); reciprocity vs the residual (HYP-3768)
 
 Prompt: consider B2/E2/Dedekind objects and work on the genuinely hard residual.
