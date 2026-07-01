@@ -55,6 +55,21 @@ NETWORK: git fetch failed this session (could not connect to github); rebase rep
 Pushing at close; if it fails the session state is saved locally (HYP-3748, INDEX, log).
 
 HOUSEKEEPING: filed HYP-3748. No collisions, no canon overridden, no court cases.
+## mac-mini-2026-06-30-S61 -- TWO rigorous results toward the LRC14 lower bound: (A) the BAND-PRIME REDUCTION [LRC14 <=> triple band-transversal covering sets; else M>=2/23>1/14] and (B) klein-S45 STEP 3 made rigorous [+ the decisive negative: counting/finite-certificates CANNOT close it; residual = 100% Step 4] (HYP-3750)
+
+Prompt: creative progress on the LRC14 lower bound itself (even a minor statement) + make Step 3's budget bound fully rigorous, removing the exhaustive-search dependence.
+
+THE (T_p) REFORMULATION (rigorous, from klein-S42 witness thm HYP-3741). M(S)<2/p => S has a multiple of p OR a ±-transversal mod p (proof: an uncovered unit u gives rotation a=u^{-1} with no runner in {-1,0,1} => M>=2/p). Elementary corollary, no search. Applies to all p<=23 (2/p>14/183).
+
+TASK A -- THE BAND-PRIME REDUCTION (a minor related statement, PROVED). The band primes = the primes p with 2/p>14/183 (<=> p<=26.14) that exceed n=14, i.e. {17,19,23}; primes p<=13 are FREE (covering => multiple of p). A covering 13-set failing (T_p) at some band prime has M>=2/p>=2/23=.087>1/14 => LRC14 holds for it with room. Hence LRC14 <=> M>=1/14 on covering sets that are ±-transversal-or-multiple mod EACH of 17,19,23. The construction {1..12,182} IS a triple band-transversal (182 ≡ 12,11,21 mod 17,19,23; no multiples), so the hard subclass is non-empty and holds the extremal candidate. Verified 243 not-(T_p) covering sets, 0 violations of M>=2/p.
+
+TASK B -- klein-S45 STEP 3 MADE RIGOROUS (removing the exhaustive search). Replace "budget leaves ~1 slot" by: (i) the (T_p) reformulation; (ii) PATCH IDENTIFICATION -- missing core k breaks pair {k,p-k} mod p for p in (12+k,25]; the only patch is a LARGE speed ≡±k mod p (smallest non-missing rep p-k>=13) [matches klein-S45 Step1 exactly: k=1,3->{17,19,23}; k=6->{19,23}; k=10->{23}; k=12->{}]; (iii) CARDINALITY FLOOR -- no mult of 23 => ±-transversal mod 23 needs all 11 pairs, each speed lies in exactly ONE pair => |S|>=11, <=2 spare, TIGHT at the construction (residues 1..12,21 mod 23).
+
+THE DECISIVE NEGATIVE (this is the real content). Counting CANNOT close Step 3: for missing k<=4 a SINGLE huge CRT speed (0 mod 182, ±k mod 17·19·23) satisfies ALL large-speed obligations (cover q=13,14 + patch all three band pairs) simultaneously, so the cardinality lower bound on |S| stays at the mod-23 floor 11 and never reaches 14. AND no finite-D witness certificate closes it either: the bare core {1..12}\{k} has 30-60 witnesses at D<=30, but a greedy hitting-set shows just 2 speeds kill them ALL -- so the binding witness of a well-chosen completion sits at unbounded D ("the hole moves but never vanishes"). CONCLUSION: 100% of the residual is Step 4 (does the ±k CRT patch dig an M-hole) = HYP-3745 (perturbation-proved) / multi-family inexhaustibility (HYP-3749) = the LRC14 lower bound. The difficulty is proven residue-structural, NOT budgetary -- telling the team exactly where to spend effort.
+
+SAFETY: broad search of the near-construction family ({1..12}\{k} + two speeds, all covering completions) confirmed min M > 14/183 for k=1..5 (min 5/53=.094 at k=4; k=1,2 -> 2/17,2/19) and k=6..12 via the main-script table (2/25,1/8,1/9,1/10,1/11,1/12) + klein-S45 + S60 -- no counterexample; consistent with S60 no-overturn on a much larger family.
+
+HOUSEKEEPING: three-way HYP-3747 collision (klein-S45 full lowness lemma [priority, pushed first], opus-S1 AP-LRC renumber, my S60 multi-family). Ceded 3747 to klein-S45; renamed my S60 file -> HYP-3749, relabeled its INDEX entry. New S61 work = HYP-3750. (opus+klein still share 3747/3748 headers -- theirs.) No canon overridden, no court cases. Files: 04-computation/lrc14_band_reduction_step3_rigorous_macmini_20260630.py (+.out).
 
 ## klein-2026-06-30-S45 -- THE FULL LOWNESS LEMMA (structured proof, verified n=14): M(S)<=n/Phi6 => {1..n-2} subset S, via the 4-step chain [transversal break -> k-witness -> budget -> CRT-uncoverability]; all k=1..12 escapes fail (HYP-3747)
 

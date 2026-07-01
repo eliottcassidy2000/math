@@ -1,0 +1,90 @@
+n=14  target = n/Phi6 = 14/183 = 0.076503   (1/14 = 0.071429)
+
+==============================================================================
+0. BAND PRIMES = primes p in (n, 26.14], i.e. {17,19,23}.  (2/p > 14/183 <=> p<=26)
+==============================================================================
+  primes with 2/p > 14/183 :  [2, 3, 5, 7, 11, 13, 17, 19, 23]   (all p<=23)
+  of these, p>n=14         :  [17, 19, 23]  = the BAND PRIMES
+  p<=13 are covered FREE   :  covering => multiple of p for every prime p<=13
+    2/2 = 1.0000  >1/14? True   >14/183? True
+    2/3 = 0.6667  >1/14? True   >14/183? True
+    2/5 = 0.4000  >1/14? True   >14/183? True
+    2/7 = 0.2857  >1/14? True   >14/183? True
+    2/11 = 0.1818  >1/14? True   >14/183? True
+    2/13 = 0.1538  >1/14? True   >14/183? True
+    2/17 = 0.1176  >1/14? True   >14/183? True
+    2/19 = 0.1053  >1/14? True   >14/183? True
+    2/23 = 0.0870  >1/14? True   >14/183? True
+
+==============================================================================
+1. (T_p) REFORMULATION  M(S)<2/p => mult-of-p or +-transversal mod p   [p=17,19,23]
+   verifying contrapositive  not(T_p) => M(S) >= 2/p  on covering sets
+==============================================================================
+  checked not(T_p) cases: 243;  violations of M>=2/p: 0   => reformulation holds on all samples
+
+==============================================================================
+2. TASK A REDUCTION: a covering 13-set that fails (T_p) for some p in {17,19,23}
+   has M >= 2/p >= 2/23 = 0.0870 > 1/14 = 0.0714  -> LRC14 holds for it with room.
+   => LRC14  <=>  M>=1/14 on covering sets that are transversal-or-mult mod 17,19,AND 23
+==============================================================================
+   the construction {1..12,182}:
+     mod 17: mult? False   +-transversal? True   (182 mod 17 = 12)
+     mod 19: mult? False   +-transversal? True   (182 mod 19 = 11)
+     mod 23: mult? False   +-transversal? True   (182 mod 23 = 21)
+   => construction is a TRIPLE band-transversal covering set; M=14/183=0.07650 at t=14/183
+   so the hard subclass is non-empty and the extremal candidate lives in it.
+
+==============================================================================
+3. TASK B (Step 3 rigorous): missing core k breaks pair {k,p-k} mod p, p in (12+k,25]
+   patch = speed =+-k mod p; smallest non-missing rep is p-k (>=13) -> LARGE.  Per k:
+==============================================================================
+    k | broken band primes p in (12+k,25]   | patch values (=+-k mod p, in 13..p-1)
+    1 | [17, 19, 23]                        | 17:[16]; 19:[18]; 23:[22]
+    2 | [17, 19, 23]                        | 17:[15]; 19:[17]; 23:[21]
+    3 | [17, 19, 23]                        | 17:[14]; 19:[16]; 23:[20]
+    4 | [17, 19, 23]                        | 17:[13]; 19:[15]; 23:[19]
+    5 | [19, 23]                            | 19:[14]; 23:[18]
+    6 | [19, 23]                            | 19:[13]; 23:[17]
+    7 | [23]                                | 23:[16]
+    8 | [23]                                | 23:[15]
+    9 | [23]                                | 23:[14]
+   10 | [23]                                | 23:[13]
+   11 | []                                  | (none -- k=11,12: large-multiple subcase)
+   12 | []                                  | (none -- k=11,12: large-multiple subcase)
+   (matches klein-S45 Step1: k=1,3->{17,19,23}; k=6->{19,23}; k=10->{23}; k=12->{})
+
+==============================================================================
+4. CARDINALITY FLOOR (rigorous) + TIGHTNESS (why counting can't finish Step 3)
+==============================================================================
+  4a. no mult of 23 => +-transversal mod 23 needs all 11 pairs hit; each speed hits
+      exactly ONE pair mod 23 => >= 11 speeds.  |S|=13 => at most 2 spare.
+      construction residues mod23: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 21]
+      pairs covered: 11/11 ; redundant speeds: 2  (=> exactly 2 spare, TIGHT)
+  4b. large-speed obligations for missing k<=4 (no mult of band primes):
+      O1:13|L  O2:14|L  O3:L=+-k mod23  O4:L=+-k mod19  O5:L=+-k mod17
+      k=1: single CRT speed L=1270360 (mod 1352078)  satisfies O1..O5 simultaneously? True
+      k=2: single CRT speed L=1188642 (mod 1352078)  satisfies O1..O5 simultaneously? True
+      k=3: single CRT speed L=1106924 (mod 1352078)  satisfies O1..O5 simultaneously? True
+      k=4: single CRT speed L=1025206 (mod 1352078)  satisfies O1..O5 simultaneously? True
+      => the minimum number of speeds for O1..O5 is 1 (one giant CRT speed).
+      => CARDINALITY lower bound on |S| stays at 11 (the mod-23 floor); it never reaches 14.
+      => Step 3 CANNOT be closed by counting; the entire residual is whether that CRT
+         patch digs an M-hole (Step 4 = HYP-3745 / multi-family inexhaustibility).
+
+==============================================================================
+5. SANITY: near-construction missing exactly core k (rest of core + 182 + patch p-k)
+==============================================================================
+   k= 1: S=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 16, 18]  cover=False M=1/7     =0.1429 >target
+   k= 2: S=[1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 17]  cover=False M=2/21    =0.0952 >target
+   k= 3: S=[1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16]  cover=False M=1/10    =0.1000 >target
+   k= 4: S=[1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15]  cover=False M=2/21    =0.0952 >target
+   k= 5: S=[1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 14, 18]  cover=False M=2/21    =0.0952 >target
+   k= 6: S=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 17]  cover=False M=2/25    =0.0800 >target
+   k= 7: S=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 16, 182]  cover=True  M=13/94   =0.1383 >target
+   k= 8: S=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15, 182]  cover=False M=1/8     =0.1250 >target
+   k= 9: S=[1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 182]  cover=False M=1/9     =0.1111 >target
+   k=10: S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 182]  cover=False M=1/10    =0.1000 >target
+   k=11: S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 182, 183]  cover=False M=1/11    =0.0909 >target
+   k=12: S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 182, 183]  cover=False M=1/12    =0.0833 >target
+
+DONE.
