@@ -1,0 +1,29 @@
+n=14 construction C=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182] t*=0.07650=14/183 M_C=0.07650  -cos(2π t*)=-0.8867
+Verblunsky (reflection) coeffs alpha_n of the lonely measure mu=(1/L)1_{L_C}dt at several levels r:
+
+ r=0.0500 (meas L=0.2316): alpha_0=-0.0178 vs -cos(2πt*)=-0.8867 (c_1/L two-atom law)
+    |alpha_n| n=0..11: 0.018 0.019 0.013 0.018 0.092 0.098 0.193 0.190 0.174 0.278 0.212 0.391
+    max|alpha_n| (n<=39) = 0.5570  (->1 signals atomic/termination); E_40=1.42e-01
+ r=0.0600 (meas L=0.1159): alpha_0=-0.0308 vs -cos(2πt*)=-0.8867 (c_1/L two-atom law)
+    |alpha_n| n=0..11: 0.031 0.016 0.008 0.024 0.146 0.137 0.306 0.216 0.184 0.385 0.297 0.614
+    max|alpha_n| (n<=39) = 0.8109  (->1 signals atomic/termination); E_40=7.97e-03
+ r=0.0700 (meas L=0.0324): alpha_0=-0.0685 vs -cos(2πt*)=-0.8867 (c_1/L two-atom law)
+    |alpha_n| n=0..11: 0.068 0.176 0.054 0.055 0.304 0.244 0.256 0.382 0.224 0.389 0.443 0.940
+    max|alpha_n| (n<=39) = 0.9874  (->1 signals atomic/termination); E_40=4.54e-07
+ r=0.0740 (meas L=0.0095): alpha_0=-0.2044 vs -cos(2πt*)=-0.8867 (c_1/L two-atom law)
+    |alpha_n| n=0..11: 0.204 0.324 0.137 0.126 0.527 0.459 0.275 0.632 0.136 0.282 0.337 0.980
+    max|alpha_n| (n<=39) = 0.9971  (->1 signals atomic/termination); E_40=1.27e-11
+ r=0.0762 (meas L=0.0006): alpha_0=-0.8871 vs -cos(2πt*)=-0.8867 (c_1/L two-atom law)
+    |alpha_n| n=0..11: 0.887 1.000 0.887 1.000
+    max|alpha_n| (n<=39) = 1.0000  (->1 signals atomic/termination); E_40=7.41e-14
+
+APPROACH TO THE BINDING (r -> M_C): does |alpha_1| -> 1 (2-atom termination at t*,1-t*)?
+    r=0.0700 L=0.03238: alpha_0=-0.0685 |alpha_1|=0.1755 |alpha_2|=0.0544 |alpha_3|=0.0549  (terminated at n=12)
+    r=0.0730 L=0.01497: alpha_0=-0.1667 |alpha_1|=0.2623 |alpha_2|=0.1105 |alpha_3|=0.1040  (terminated at n=12)
+    r=0.0750 L=0.00471: alpha_0=-0.3120 |alpha_1|=0.4214 |alpha_2|=0.3048 |alpha_3|=0.2485  (terminated at n=12)
+    r=0.0762 L=0.00061: alpha_0=-0.8871 |alpha_1|=1.0000 |alpha_2|=0.8871 |alpha_3|=1.0000  (terminated at n=4)
+    r=0.0764 L=0.00020: alpha_0=-0.8868 |alpha_1|=1.0000 |alpha_2|=0.8868 |alpha_3|=1.0000  (terminated at n=4)
+
+CLOSED-FORM 2-atom {t*,1-t*}: alpha_0=-0.8867 (=-cos(2πt*)=-0.8867), |alpha_1|=1.0000 (=1 => exactly 2 atoms)
+  => the extremal lonely measure (2 atoms at the Phi6-denominator points) TERMINATES at n=1: |alpha_1|=1.
+  => the Verblunsky sequence RECURSIVELY refines S66's two-atom law (alpha_0) into the full L_C.
