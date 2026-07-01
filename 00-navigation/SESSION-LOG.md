@@ -9,6 +9,23 @@ Three findings (tournament_invariant_safari_klein.py, exhaustive n=3..6):
 (D) QR-TRIANGLE DESIGN: the directed-triangle hypergraph of the quadratic-residue (doubly-regular) tournament on q=prime=3 mod 4 is a 2-(q,3,(q+1)/4) DESIGN (every pair in (q+1)/4 directed triangles); VERIFIED q=3,7,11,19,23 (lambda=1,2,3,5,6). Rotational {1,2,3} on 7 is NOT a design (coverages 1,2,3) => the 2-design property CHARACTERIZES doubly-regularity. Clean tournament<->combinatorial-design bridge; the QR tournament is exactly the one on the LRC atoms (HYP-3802).
 
 HONEST: R(n)=floor(log2) verified n<=6, conjectured general; (D) likely known (doubly-regular <-> skew-Hadamard <-> 2-design; cf prior five_cycle_3design_s24e) but freshly verified with exact lambda=(q+1)/4; (C) a documented negative. Exploratory, not LRC-tied (per the owner's invitation). Most novel = (A), the rainbow/flip-rank duality quantifying how symmetry makes covering harder than packing. HYP-3804 in klein block, no collision. Files: tournament_invariant_safari_klein.py(+out); HYP-3804; reflection packing-is-easy-covering-is-hard.md. No canon overridden.
+## mac-mini-2026-07-01-S81 -- TWO NEW TILING-MODEL INVARIANTS: kappa(n)=1+C(n-2,2)=lazy-caterer (min free arcs to express ALL iso classes) + beta=MFAS (min flips per class); the naive Ham-path tiling is redundant by exactly n-3 arcs = the SKIP-2 DIAGONAL (HYP-3798) [TOURNAMENT side, not LRC]
+
+Prompt: owner's n=4 observation (all 4 iso classes via 3 tile-flips naively, but 2 arcs suffice given a config rule on the fixed arcs); study how the min-flip shape changes with n; define differently, pattern-seek freely.
+
+Color the arc-hypercube Q_{C(n,2)} by tournament iso class. TWO invariants:
+
+(1) beta(T) = min tile-flips to express T's class (best base Ham path) = C(n,2) - max_{Ham-path order} #forward = the MINIMUM FEEDBACK ARC SET. PROVED beta_path=beta_order (a min-feedback order has no backward CONSECUTIVE arc -- adjacent swap improves -- so it IS a Ham path; the tiling model's best base = the median order). Covering radius R(n)=max beta = 1,1,3,4 (n=3..6) ~ n^2/4 - c n^{3/2} (max-MFAS).
+
+(2) kappa(n) = min dimension of an axis-aligned subcube (k FREE arcs, FIX the other C(n,2)-k) whose 2^k tournaments hit ALL A000568(n) iso classes = the owner's object. EXACT (exhaustive) n<=6: kappa=1,2,4,7. FORMULA kappa(n)=1+C(n-2,2)=m(n)-(n-3)=m(n-1)+1 = A000124(n-3) [LAZY-CATERER numbers 1,2,4,7,11,16]; predicts kappa(7)=11,(8)=16. Info-floor ceil(log2 A000568)=1,2,4,6,9: kappa MEETS it n<=5, first EXCEEDS at n=6 (7>6).
+
+** REDUNDANCY = n-3, LOCATED ON A DIAGONAL: ** the naive Ham-path tiling (m=C(n-1,2) free tiles) is redundant by exactly n-3 arcs. kappa_tiling(n)=kappa(n) (verified n<=6): you can FREEZE, in addition to the Ham path, the n-3 SKIP-2 DIAGONAL tiles {(i,i+3): 0<=i<=n-4} (the line one step inside the staircase hypotenuse) and still express all classes -- the frozen diagonal carries NO iso information. THIS is the owner's 'configuration rule on the fixed arcs': fix the Ham path + the skip-2 diagonal. Optimal free-arc shapes (arbitrary-arc view) = clique-packings: n=4 MATCHING {01,23}, n=5 TRIANGLE+edge {012,34}, n=6 TWO TRIANGLES+bridge.
+
+n=7 TEST: the forward-fixed skip-2 diagonal covers 454/456 (near-miss, 2 short) => the clean diagonal rule is EXACT n<=6 and near-true after; kappa(7)=11 remains a conjecture (a slightly different 11-arc fixing may close it; orientation sweep inconclusive so far).
+
+RELATED / OPEN (pattern-seeking menu): prove kappa=1+C(n-2,2) (transitive fixing FAILS at n=7=225/456, fixing subtle); WHY the skip-2 diagonal is redundant; the info-floor gap growth ~n log n; the even-graph dual E_n (A002854); beta & kappa as covering-code params of the S_n-orbit coloring (engineering mandate).
+
+Both invariants are EXACT n<=6 (beta=MFAS proved; kappa=1,2,4,7 & R=1,1,3,4 exhaustive). Formula+kappa(7)=11 CONJECTURAL. A genuinely new pair of tournament invariants + a clean lazy-caterer formula + the skip-2-diagonal configuration rule. Files: 04-computation/min_flip_tiling_beta_*, min_free_arcs_transversal_subcube_*, kappa_shapes_and_n7_*, kappa_config_rule_and_n7_search_* (+.out). Reflection: the-tiling-model-is-redundant-by-a-diagonal.md. HYP-3798. No canon overridden, no court cases.
 
 ## klein-2026-07-01-S71 -- THE FLIP-RANK of tournament iso classes: minimal realizing-subcube = FIX A BALANCED MAX-CUT, FLIP THE TWO SIDES; a PHASE TRANSITION at n=6 (HYP-3803).
 

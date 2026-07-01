@@ -42,15 +42,19 @@ Info-theoretic floor `ceil(log2 A000568(n)) = 1,2,4,6,9` for `n=3..7`: `kappa` M
 and first EXCEEDS it at `n=6` (`7 > 6`) -- the subcube can be information-optimal only up to `n=5`.
 
 ## The optimal SHAPE and the configuration rule
-The minimizing free-arc set is a dense clique-packing with `C(n-2,2)+1` edges (unique up to free-graph
-iso for `n<=5`):
-- `n=4`: a perfect **matching** `{01, 23}` (free-graph degseq `(1,1,1,1)`), fixed rule e.g. `0->2, 3->0,
-  2->1, 3->1`. This is exactly the owner's "2 arcs, configuration rule."
-- `n=5`: a **triangle + disjoint edge** `{012, 34}` (degseq `(1,1,2,2,2)`, 1 triangle), fixed rule
-  `0->3,0->4,1->3,4->1,3->2,4->2`.
-- `n=6`: **two triangles + a bridge** `{012, 345, 03}` (2 triangles).
-The triangle is the natural "generator" (its 8 orientations give the cyclic-vs-transitive iso bit); the
-count of triangles in the optimal shape grows with `n`.
+Two equivalent views of the optimal configuration:
+
+**(a) Free arbitrary arcs** -- a dense clique-packing with `C(n-2,2)+1` edges (unique up to free-graph iso
+for `n<=5`): `n=4` a perfect **matching** `{01,23}`; `n=5` a **triangle+edge** `{012,34}`; `n=6` **two
+triangles+bridge** `{012,345,03}`.
+
+**(b) The clean rule INSIDE the tiling model** (`kappa_tiling(n) = kappa(n)`, verified `n<=6`): keep the
+Hamiltonian path fixed AND freeze the `n-3` tiles of the **skip-2 diagonal** `{(i, i+3) : 0<=i<=n-4}` (the
+line one step inside the staircase hypotenuse), freeing the other `1+C(n-2,2)` tiles. The frozen tiles carry
+no isomorphism information once the rest of the board is set. So the owner's "configuration rule on the
+fixed arcs" = *fix the Hamiltonian path and the skip-2 diagonal.* (Exact `n<=6`; at `n=7` the forward-fixed
+skip-2 diagonal covers **454/456** classes -- a near-miss, so the clean diagonal rule is exact only through
+`n=6` and `kappa(7)=11` needs a slightly different `11`-arc fixing, still open.)
 
 ## Related things to study (open)
 1. **Prove `kappa(n) = 1 + C(n-2,2)`**: upper bound = a clique-packing construction with the right fixing
