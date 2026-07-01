@@ -36,6 +36,21 @@ PLATONIC / 2D-TILING CONNECTION (structural, via kps S20bh 'the-five-platonic-to
 SUB-CONJECTURES: (1) spectral twins persist n>=6, count relates to the 2 dual Platonic pairs / genus of G_n; (2) the twin involution (grid-sym-count pairing) is an unidentified cospectral-mate map on the fold; (3) the near-regular / high-Aut SC nodes are the residual spherical survivors.
 
 Files: 04-computation/twin_separator_n6_platonic_macmini_20260701.py (+.out); HYP-3811; reflection the-twins-that-only-the-spectrum-can-tell-apart.md. HONEST: twins + separator hierarchy + 2 invariant-cospectral spectral twins EXACT (n=6); Platonic connection is structural synthesis (not numerical identity); dual-pair<->spectral-twin (2=2) is the concrete match; twin involution unidentified. No canon overridden, no court cases.
+## opus-2026-07-01-S21 -- the HALF-TILING's extra vertical mirror V (swaps span<->anti-diagonal) is GEOMETRIC-ONLY (not a fold); the 'grid' is the span x anti-diagonal COORDINATE lattice, not mirror lines.
+
+Prompt: meaningful non-fold operations on the half-tiling model; does it have perpendicular parallel lines of symmetry along its diagonals; what grid?
+
+Computed the exact isometry symmetry group of the tile point-set (n=4..9):
+- FULL staircase: D_1 = <R>, single reflection across the anti-diagonal x+y=n+1 = the COMPLEMENT fold (S18); FIXES the span d=x-y.
+- HALF-region: D_1 = <V>, single reflection across the VERTICAL x=(n+3)/2. V exists because in the half the row-x-range [y+2, n+1-y] has midpoint (n+3)/2 INDEPENDENT of y (the full staircase's row-center drifts, so it lacks V).
+
+WHAT V IS: an involution of the half-tiling CUBE that permutes the SC tournaments, BUT it is GEOMETRIC-ONLY -- it does NOT respect tournament-iso (verified n=5,6,7: same-class tilings map to different classes). So V is NOT a fold, NOT a relabeling, NOT the complement (which is trivial on SC). It's the folded region's extra shape-mirror.
+
+R vs V in (s,d)=(x+y, x-y): R:(s,d)->(2n+2-s,d) FIXES span; V:(s,d)->(n+3-d,n+3-s) SWAPS span<->anti-diagonal. In (x,y) they are at 45deg (R slope -1, V vertical), NOT perpendicular.
+
+THE GRID (answer to part b): the tiles occupy a lattice with TWO PERPENDICULAR families of parallel diagonal lines -- constant SPAN d=x-y (slope +1) and constant ANTI-DIAGONAL s=x+y (slope -1) -- on the checkerboard sublattice s=d mod2 (= the (x,y) lattice rotated 45deg, scaled sqrt2). THAT is the grid. BUT these are COORDINATE lines, not mirror axes: the symmetry is only D_1 (one mirror per region); no parallel family of mirrors (no span-reflection; R,V single & at 45deg). So the perpendicular-parallel-diagonal 'grid' is the span x anti-diagonal coordinate lattice; the mirrors are single (R along an anti-diag line, span-fixing; V the transpose mirror swapping the two directions).
+
+Overlaps kind-pasteur-S16 (double-complement 'algebraic quarter'): my V is the GEOMETRIC (tile-level, iso-blind) extra symmetry; kps's double-complement is an ALGEBRAIC quotient -- complementary, both consistent with S20/HYP-3811 'no metagraph quarter-fold'. Reflection: the-half-tilings-extra-vertical-mirror-swaps-span-and-anti-diagonal-but-the-grid-is-coordinates-not-mirrors-opus-20260701.md; scripts mmg_halftiling_{V_reflection,symmetry_grid,V_characterization}_opus_20260701.py. No canon overridden, no new HYP (geometric characterization extending HYP-3810/3811).
 
 ## kind-pasteur-2026-07-01-S16 -- THE RECONSTRUCTION WALL AT n=7 (local fingerprints FAIL) + blue-spine CONNECTED + the double-complement quotient (algebraic 'quarter', reconciled w/ opus-S20)
 
