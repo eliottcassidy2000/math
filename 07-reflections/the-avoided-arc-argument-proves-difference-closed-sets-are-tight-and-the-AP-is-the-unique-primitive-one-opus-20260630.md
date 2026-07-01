@@ -34,10 +34,15 @@ The tight locus at `n=14` is conjecturally `{AP {1..13}, Goddyn–Wong {1,…,11
 provably-tight via difference-closure. But **`GW = {1,…,11,13,24}` is tight (`M=1/14`, verified) yet NOT
 difference-closed** — e.g. `12 = 13−1 ∉ GW` (also `14,15,…` absent). So its min-gap difference can be `12`,
 which is **not a runner**, and the avoided-arc-edge argument fails: nothing sits at `12t` to catch the danger
-arc. GW is tight for a subtler reason (a `12t`-gap must be covered by some *other* runner via the specific
-`{13,24}` structure). **This is exactly the residual OPEN-Q-108 must handle**: proving the tight locus finite
-means ruling out all tight sets beyond the dilated-AP family, and the non-difference-closed ones (the GW
-family) are the hard case.
+arc. **GW's mechanism (explored):** it binds at `t*=1/14` via runners **`1` and `13`** — which sandwich `0`
+at `±1/14` (their difference is the absent `12`) — mimicking the AP `{1..13}` there. The dangerous regime
+`‖12t‖<1/14` is covered by a **patchwork**, not one runner: `24 = 2·12` catches it when `‖12t‖<1/28` (then
+`‖24t‖<1/14`), and for `‖12t‖∈[1/28,1/14)` a *shifted* runner (`13`, `11`, …) lands in the arc by
+number-theoretic coincidences of `t`. Verified: over 4383 times with `‖12t‖<1/14`, **0** leave the danger arc
+empty. So GW's `{13,24}` do cover the absent-difference gap — but by a delicate `t`-dependent patchwork, not a
+clean rule. **This is exactly the residual OPEN-Q-108 must handle**: proving the tight locus finite means
+ruling out all tight sets beyond the dilated-AP family, and the non-difference-closed ones (the GW family),
+whose tightness rests on such patchwork coverings, are the hard case.
 
 ## What this buys OPEN-Q-108
 - **The AP component is off the table** — rigorously characterized (difference-closed ⇔ dilated AP) and
