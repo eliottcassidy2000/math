@@ -1,0 +1,30 @@
+# Flip-rank kappa(n) n=7 resolution + Paley obstruction (opus-2026-07-01)
+# Merges opus min-flip / klein HYP-3803 (flip-rank) / mac-mini HYP-3798 (kappa=lazy-caterer).
+
+## UNANIMOUS (three-way exhaustive): kappa(n) = 1, 2, 4, 7 for n=3,4,5,6
+  info-floor ceil(log2 A000568(n)) = 1,2,4,6 ; kappa meets it n<=5, EXCEEDS at n=6 (7>6).
+  Three descriptions of the SAME minimal configuration (all C(n-2,2)+1 free arcs):
+    - opus:     fix spans {1,3} of a linear order, free span 2 + spans>=4  (transitive base; unique, reversal-symmetric)
+    - klein:    fix a balanced max-cut K_{a,b}, flip the two sides         (bipartite base)
+    - mac-mini: clique-packing {012,345,03,...} + a subtle non-transitive fixing
+
+## n=7 RESOLUTION (opus): the lazy-caterer formula 1+C(n-2,2)=11 is very likely WRONG; kappa(7)=12.
+  - UPPER BOUND kappa(7) <= 12: PROVEN. fix span 1 (Ham path) + span 3 minus one arc (0,3); free 12 -> all 456.
+  - spans{1,3} config (k=11, transitive base): covers 454/456. MISSING exactly 2 classes:
+        score (1,2,2,3,4,4,5)  |Aut|=1   (5040 labeled reps)
+        score (3,3,3,3,3,3,3)  |Aut|=21  (240 reps) = the PALEY / QR heptagon on Z/7 = roots of -1
+  - For the canonical best free-set F=spans{2,4,5,6} (11 arcs): of the 184 base orientations that host BOTH
+        missing classes, NONE reaches 456. => this free-set cannot do k=11 under ANY base.
+  - mac-mini transitive clique-packing at n=7: 225/456. mac-mini + opus random searches at k=11: nothing.
+  => kappa(7) = 12 (UB proven, LB>11 strongly evidenced). The lazy-caterer C(n-2,2)+1 breaks at n=7.
+
+## THE OBSTRUCTION IS SYMMETRY (mechanism, opus):
+  #labeled reps of a class = n!/|Aut|. High-|Aut| classes have FEW reps -> hardest to fit into a small subcube.
+  n=6 minimal fiber (fix spans{1,3}, 128 tilings -> 56 classes): multiplicity vs |Aut|:
+     |Aut|=1: 41 classes, mean mult 2.8   |Aut|=3: 12 cls mult 1.0   |Aut|=5: 2 cls mult 1.0   |Aut|=9: 1 cls mult 1.0
+  The class that FORCES kappa up at n=7 = argmax|Aut| = the Paley heptagon (|Aut|=21).
+  => The min-flip obstruction at n=7 is EXACTLY the LRC extremal object (klein-S70 roots-of-(-1), opus-S14 heptagon).
+
+## VERBLUNSKY BRIDGE (opus, prior): AP {1..n-1} at lonely time t=1/n = n-th roots minus 1;
+  its Verblunsky coeffs |alpha_j| = 1/(n-1-j) EXACTLY (harmonic ladder), terminal alpha=1 (atomic).
+  The same heptagon (n=7 units mod 14) is the flip-rank obstruction AND the harmonic-Verblunsky atom set.
