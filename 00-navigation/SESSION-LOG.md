@@ -1,3 +1,19 @@
+## klein-2026-06-30-S51 -- THE GENERAL THREE-GAP RIGIDITY IS STEINHAUS ON THE ROTATION ORBIT-CYCLE; T_p band skeleton common to tight+covering-min; reduced to a support/wide-hole bound (HYP-3762)
+
+Prompt: work on general 3-gap rigidity, see how it relates to cycles, and think band-transversal machinery (tight sets obey the same (T_p) conditions for p<=23).
+
+Attacked the open-core rigidity g(n)<=3 (tight => <=3 gaps mod n, HYP-+2913) three ways and REDUCED it. Filed HYP-3762; reflection the-rigidity-is-steinhaus-on-the-orbit-cycle.md; script three_gap_rigidity_cycles_klein.py (+.out).
+
+1. BAND-TRANSVERSAL (the owner's hint), VERIFIED: tight sets (AP, GW) AND the covering-min {1..12,182} obey the SAME conditions T_p (radius-floor(p/n) covering of Z/p) for EVERY prime p<=23 -- resonance-kill p<14 {2,3,5,7,11,13}, +-transversal 14<=p<28 {17,19,23}. So T_p is the COMMON skeleton of BOTH extremal families (the tight LRC floor and the covering-min). But prime-T_p (p<=23) is NECESSARY not SUFFICIENT for <=3 gaps: found 4-gap sets obeying all prime T_p that are all NON-tight (M=4/31,2/15,1/7, killed by a deeper hole at composite/large D). So the rigidity needs the full tightness, not the finite band conditions.
+
+2. THE CYCLE CONNECTION (EXACT, = Steinhaus): the difference-closed tight sets are the dilated APs c*{1..n-1} (HYP-3750); their residues mod n ARE the rotation ORBIT {c,2c,...,(n-1)c mod n}. The Steinhaus three-gap theorem applies VERBATIM => <=3 arc-lengths. So on that family the rigidity IS the three-gap theorem (verified n=5,7,8,11,13,14, all exactly 2-gap). The orbit is a single n-cycle (Cayley graph of Z/n by generator c); the three lengths are consecutive CF convergents of c/n + their sum -- the Farey/Ostrowski cycle (HYP-3746), the Ihara prime-cycle framing (HYP-3728).
+
+3. SUPPORT / WIDE-HOLE reduction (general tight): combinatorial identity #distinct gaps = 1 + #distinct run-lengths of the MISSING residue set. So 4 gaps needs 3 distinct run-lengths => missing >= 1+2+3 = 6 residues (support <= n-6). Hence support >= n-5 => <=3 gaps. And tight => high support by the wide-hole inequality (HYP-3749): missing >=4 forces a deep hole M>1/n (verified n=14, 24000 samples all M>1/14; census HYP-3761 shows even support in {n-2,n-1}). So the OPEN rigidity REDUCES to the cleaner target "tight => support >= n-5".
+
+NEXT: the general rigidity now rests on ONE tractable target -- the wide-hole support bound "tight => support >= n-5" at all n (a HYP-3749 generalization). Also: is the Steinhaus route extendable to the near-AP (patched) family via "gap-neutral patch" (the patch lands on a multiplicity, not a hole -- HYP-3753)? And does the T_p common skeleton have a converse under the FULL (all-D) tightness?
+
+--- prior entries ---
+
 ## klein-2026-06-30-S50 -- THE n=14 TIGHT CENSUS IS COMPLETE: {AP, GW} and nothing else (exhaustive residue-config-mod-14 enumeration); also VERIFIES the three-gap rigidity at n=14 (HYP-3761)
 
 Prompt: take the natural next step -- completeness of the {AP, GW} census for n=14 (no other tight sets), which needs the Steinhaus/three-gap rigidity bound.

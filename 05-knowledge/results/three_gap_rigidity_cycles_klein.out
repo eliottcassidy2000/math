@@ -1,0 +1,43 @@
+==============================================================================
+(1) BAND-TRANSVERSAL T_p: tight sets + covering-min obey the SAME T_p, p<=23
+==============================================================================
+   AP    : T_p all hold p<=23? True   #gaps mod 14 = 2
+   GW    : T_p all hold p<=23? True   #gaps mod 14 = 2
+   C-min : T_p all hold p<=23? True   #gaps mod 14 = 2
+   radii floor(p/14): [(2, 0), (3, 0), (5, 0), (7, 0), (11, 0), (13, 0), (17, 1), (19, 1), (23, 1)]
+   => resonance-kill (p<14: 2,3,5,7,11,13) + transversal (14<=p<28: 17,19,23)
+
+   NECESSARY-NOT-SUFFICIENT: prime-T_p (p<=23) counterexamples with 4 gaps are
+   all NON-tight (deeper hole elsewhere):
+     [1, 5, 6, 10, 11, 12, 15, 19, 20, 21, 23, 25, 26]: M=4/31  gaps=4  (tight? False)
+     [4, 5, 8, 9, 10, 12, 14, 18, 19, 22, 23, 24, 26]: M=2/15  gaps=4  (tight? False)
+
+==============================================================================
+(2) CYCLE route: diff-closed tight = dilated AP = rotation orbit => Steinhaus
+==============================================================================
+   n= 5 c=1: residues=orbit; M=1/5 (=1/n? True) gaps=2 (Steinhaus <=3? True)
+   n= 5 c=2: residues=orbit; M=1/5 (=1/n? True) gaps=2 (Steinhaus <=3? True)
+   n= 7 c=1: residues=orbit; M=1/7 (=1/n? True) gaps=2 (Steinhaus <=3? True)
+   n= 7 c=2: residues=orbit; M=1/7 (=1/n? True) gaps=2 (Steinhaus <=3? True)
+   n= 8 c=1: residues=orbit; M=1/8 (=1/n? True) gaps=2 (Steinhaus <=3? True)
+   n=11 c=1: residues=orbit; M=1/11 (=1/n? True) gaps=2 (Steinhaus <=3? True)
+   n=11 c=2: residues=orbit; M=1/11 (=1/n? True) gaps=2 (Steinhaus <=3? True)
+   n=13 c=1: residues=orbit; M=1/13 (=1/n? True) gaps=2 (Steinhaus <=3? True)
+   n=13 c=2: residues=orbit; M=1/13 (=1/n? True) gaps=2 (Steinhaus <=3? True)
+   n=14 c=1: residues=orbit; M=1/14 (=1/n? True) gaps=2 (Steinhaus <=3? True)
+
+==============================================================================
+(3) WIDE-HOLE/SUPPORT route: #gaps = 1 + #distinct-run-lengths(missing)
+==============================================================================
+   identity check on tight sets:
+     AP: missing run-lengths=[1]  1+#distinct=2  actual gaps=2
+     GW: missing run-lengths=[1]  1+#distinct=2  actual gaps=2
+   => 4 gaps needs 3 distinct run-lengths => missing>=1+2+3=6 => support>=n-5 => <=3 gaps
+
+   wide-hole bound (n=14): missing>=4 (support<=10) forces M>1/14:
+     missing=4 (support=10): 8000 configs; M<=1/14: 0
+     missing=5 (support=9): 8000 configs; M<=1/14: 0
+     missing=6 (support=8): 8000 configs; M<=1/14: 0
+
+NET: rigidity g(n)<=3 = Steinhaus on the rotation orbit-cycle (diff-closed exact)
+     + support>=n-5 via the wide-hole inequality (general). T_p = common skeleton.
