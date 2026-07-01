@@ -1,0 +1,32 @@
+(A) SEED IDENTITIES (exact):
+  n= 3: T=  3 Phi6=2T+1=  7 killer=2T=-1 s=-T/(12T+6)=-1/14      all-exact=True
+  n= 4: T=  6 Phi6=2T+1= 13 killer=2T=-1 s=-T/(12T+6)=-1/13      all-exact=True
+  n= 5: T= 10 Phi6=2T+1= 21 killer=2T=-1 s=-T/(12T+6)=-5/63      all-exact=True
+  n= 6: T= 15 Phi6=2T+1= 31 killer=2T=-1 s=-T/(12T+6)=-5/62      all-exact=True
+  n= 7: T= 21 Phi6=2T+1= 43 killer=2T=-1 s=-T/(12T+6)=-7/86      all-exact=True
+  n= 8: T= 28 Phi6=2T+1= 57 killer=2T=-1 s=-T/(12T+6)=-14/171    all-exact=True
+  n= 9: T= 36 Phi6=2T+1= 73 killer=2T=-1 s=-T/(12T+6)=-6/73      all-exact=True
+  n=10: T= 45 Phi6=2T+1= 91 killer=2T=-1 s=-T/(12T+6)=-15/182    all-exact=True
+  n=11: T= 55 Phi6=2T+1=111 killer=2T=-1 s=-T/(12T+6)=-55/666    all-exact=True
+  n=12: T= 66 Phi6=2T+1=133 killer=2T=-1 s=-T/(12T+6)=-11/133    all-exact=True
+  n=13: T= 78 Phi6=2T+1=157 killer=2T=-1 s=-T/(12T+6)=-13/157    all-exact=True
+  n=14: T= 91 Phi6=2T+1=183 killer=2T=-1 s=-T/(12T+6)=-91/1098   all-exact=True
+
+(B) MARGIN carries the regularization: n^2*margin -> -12 zeta(-1) = 1
+  n=   10: n^2*margin = 0.989011
+  n=   50: n^2*margin = 0.999592
+  n=  200: n^2*margin = 0.999975
+  n= 1000: n^2*margin = 0.999999
+  n= 5000: n^2*margin = 1.000000
+
+(C) the regularization constants: zeta(-1)=-1/12=-B2/2, 12=-1/zeta(-1), 6=1/B2, psi(14)=24=2*12 (eta exponent)
+
+(D) hexagonal (order 6) -> s -> -1/12 = zeta(-1);  square (order 4, h^2=-1) -> s = 0 (no anomaly)
+  hex order-6 n= 4: s=-1/13  -> -1/12
+  hex order-6 n= 7: s=-7/86  -> -1/12
+  hex order-6 n=14: s=-91/1098  -> -1/12
+  square order-4 k= 5: h=2 (h^2=-1): s=0  (no regularization => zero margin)
+  square order-4 k=13: h=5 (h^2=-1): s=0  (no regularization => zero margin)
+  square order-4 k=17: h=4 (h^2=-1): s=0  (no regularization => zero margin)
+
+DONE.

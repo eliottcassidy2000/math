@@ -1,3 +1,21 @@
+## mac-mini-2026-06-30-S67 -- THE COVERING-MIN IS A ZETA-REGULARIZATION CARRIER: 5 results fusing the crystallographic (S65/S66) + Dedekind (S64) + the sum-of-naturals seed; the -1/12 anomaly is HEXAGONAL (HYP-3774)
+
+Prompt: keep the crystallographic angle; synthesize with the sum-of-naturals seed (Phi6=2T+1, killer=2T=-1, s=-T/(12T+6)->-1/12=zeta(-1)); build multiple proofs/hypotheses. [CONVERGES with opus-S6, same seed concurrently -- my distinct contribution is the crystallographic-regularization synthesis R3 + the multi-result framing.]
+
+SEED (exact, verified n=3..14): T=1+..+(n-1)=n(n-1)/2 the finite speed-sum; Phi6=n^2-n+1=2T+1; killer n(n-1)=2T=-1 mod Phi6; s(n,Phi6)=-T/(12T+6).
+
+R1 MOBIUS INTERPOLATION: s=-1/(12+6/T) is a fractional-linear function of the finite sum T, -> -1/12=zeta(-1) (Ramanujan 1+2+3+..). The finite covering-min carries the ACTUAL sum T; the Dedekind limit carries its regularization. margin=n/Phi6-1/n=-12 s/n^2, and n^2*margin -> -12 zeta(-1) = 1 -- the LRC margin's asymptotic decay coefficient IS the regularized sum of naturals.
+
+R2 THE 24=psi(14): zeta(-1)=-1/12=-B2/2 (B2=1/6); the 12 in s = -1/zeta(-1), the 6 = 1/B2; psi(14)=[SL2:Gamma0(14)]=24=2*12 = the eta exponent (Delta=eta^24, 1/24=-zeta(-1)/2). The covering modulus's modular index IS the regularization denominator; the floor's E2/Eisenstein bulk inherits zeta(-1).
+
+R3 THE ANOMALY IS HEXAGONAL (the crystallographic synthesis, my distinct piece): zeta-reg -1/12 appears IFF the lattice is hexagonal (order-6/Eisenstein omega, n^3=-1); the SQUARE (order-4/B2/imaginary unit i, h^2=-1) gives s=0 -- NO anomaly. So the LRC margin=-12 zeta(-1)/n^2 EXISTS precisely because the covering-min is HEXAGONAL; a square/B2 covering-min would have s=0 => ZERO margin (covering-min=floor, degenerate). A conceptual proof of margin-positivity fusing S65/S66 (hexagonal vs square) + S64 (Dedekind) + the seed (regularization).
+
+R4 KILLER=-1 IS THE ANCHOR: 2T=-1 mod Phi6 = the reflection/complement (the project's R involution) at -1; zeta at argument -1 and the killer at residue -1 are the same anchor. R5 FAULHABER: T=sum k, the B2=1/6 Euler-Maclaurin correction = the margin's structure (ties HYP-2457/2453).
+
+OVERARCHING PROOF PICTURE: the floor/margin = a REGULARIZABLE bulk (zeta(-1) in the margin decay, zeta(2) in the 1/(2 zeta(2)) floor, B2 in Euler-Maclaurin -- all zeta-values, positive) + an UN-regularizable residual (the genus-1 cusp form f14 at apex cusp d=7). The easy half is what zeta-regularizes; the hard half is what does not -- same split as klein-S56 (iota-even E2 bulk + iota-odd cusp form) and opus-S5 (cyclotomic endpoint vs trajectory).
+
+HONEST: seed + R1-R4 exact/verified; R2's 24=psi(14)=eta-exponent exact; R3 hexagonal-iff exact (square=>s=0). R5 + overarching = framework/direction, NOT a closed proof of the residual. HOUSEKEEPING: filed HYP-3774 (renamed from 3773; opus & klein-S58 took 3773 -- klein-S58 = Riemann-Hurwitz extension of my S65 Gauss-Bonnet). Files: 04-computation/zeta_regularization_covering_min_macmini_20260630.py (+.out); reflection the-covering-min-holds-the-actual-sum. No canon overridden, no court cases.
+
 ## opus-2026-06-30-S6 -- THE SUM OF NATURAL NUMBERS IS THE COVERING-MIN: Phi6=2*Sigma(speeds)+1, killer=2*Sigma== -1, margin-> -1/12=zeta(-1); the margin is the eta multiplier phase (cusp); two H6 endpoints mirror the zeta ladder; open lever = Zagier higher-dim Dedekind (HYP-3773)
 
 Prompt: work the open lever + explore the sum of natural numbers & -1/12 + think creatively about other infinite sums/products/fractions/roots.
