@@ -1,0 +1,35 @@
+==============================================================================================
+ THE COMPOSITUM CERTIFICATE g_3 * g_7 = -sqrt21 (localizes to Q(sqrt21))
+==============================================================================================
+  g_3 = +0.000000+1.732051i   (= i*sqrt3, |g3|=1.732051, sqrt3=1.732051)
+  g_7 = +0.000000+2.645751i   (= i*sqrt7, |g7|=2.645751, sqrt7=2.645751)
+  g_3 * g_7 = -4.582576+0.000000i   ; -sqrt21 = -4.582576
+    => g_3*g_7 = -sqrt21 (REAL, single number in Q(sqrt21)): True
+
+==============================================================================================
+ HASSE-DAVENPORT composite: g_21 = chi_3(7) chi_7(3) g_3 g_7 = +sqrt21 (real Gauss sum, D=21=1mod4)
+==============================================================================================
+  chi_3(7)=(7|3)=1, chi_7(3)=(3|7)=-1  => chi_3(7)chi_7(3) = -1
+  predicted g_21 = -1*(-sqrt21) = +4.582576-0.000000i
+  direct g_21 = sum_a (a|21) e(a/21) = +4.582576-0.000000i  ; +sqrt21 = +4.582576
+    => g_21 = +sqrt21 (D=21=1mod4 real), matches Hasse-Davenport: True
+
+==============================================================================================
+ THE BIQUADRATIC Q(sqrt-3, sqrt-7): subfields & localization
+==============================================================================================
+  Gal(Q(sqrt-3,sqrt-7)/Q) = (Z/2)^2; three quadratic subfields:
+    Q(sqrt-3)  [Eisenstein COVERING, p=3/LRC(6) apex]  -- imaginary
+    Q(sqrt-7)  [Gauss CERTIFICATION, p=7/LRC(14) apex] -- imaginary
+    Q(sqrt21)  [the REAL compositum, = g_3*g_7]        -- REAL, DEGREE 2
+  => the ι-odd certificate's MIXED part (neither pure covering nor pure cert) LOCALIZES to Q(sqrt21):
+     it is a SINGLE real quadratic number, NOT degree 4. The bridge costs a field, not spectral degree.
+
+==============================================================================================
+ sqrt21 EXHIBITED in the covering deep-well
+==============================================================================================
+  deep-well D_14 = n(n-1)(n^2-n+4) = 33852, squarefree 8463 = 21*403  => sqrt21 | sqrt(D_14): True
+  covering-min = 14/183, Phi6(14)=183=3*61.  The apex-3 (Eisenstein) & apex-7 (Gauss) meet as sqrt21.
+  INTERPRETATION: sqrt21 = g_3 * g_7 = (the LRC(6) certificate) x (the LRC(14) certificate). The bridge
+   certificate for LRC(14) is the PRODUCT of the proved case's (p=3) and the open case's (p=7) Gauss sums,
+   living in the real quadratic Q(sqrt21) -- the certification remains QUADRATIC across the bridge.
+DONE.

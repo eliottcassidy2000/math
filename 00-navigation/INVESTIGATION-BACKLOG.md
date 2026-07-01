@@ -1,5 +1,11 @@
 # Investigation Backlog
 
+**THREE EXTERNAL LEADS (owner, kind-pasteur-2026-07-01-S22) -- tangential connections to assess/extend.**
+(1) GOOD LOCALLY TESTABLE CODES (Dinur-Evra-Livne-Lubotzky-Mozes, Annals 2026 203-2, https://annals.math.princeton.edu/2026/203-2/p03): c^3-LTC via LEFT-RIGHT CAYLEY COMPLEXES. STRONG lead: (a) local-testability = local-to-global = RECONSTRUCTION (the S14-19 thread: how much global tournament class does a local/bounded-invariant view certify); LTC = where local DOES certify global. (b) the tiling/half-tiling is a SQUARE COMPLEX; Lubotzky's Ramanujan/expander arithmetic = the sqrt-p Gauss-sum flavor (Paley skew {0,±i√p} = Ramanujan bound). NEXT: is the tiling/half-tiling square complex a left-right Cayley complex; does its local testability quantify the reconstruction wall?
+(2) CORNELL CS6840 ALGORITHMIC GAME THEORY (Tardos, HOTELLING games, Sept 2025, https://www.cs.cornell.edu/courses/cs6840/2025fa/lectures/): the LRC covering-min IS an adversarial FACILITY-LOCATION game on the circle -- runners=facilities, lonely observer = point farthest from all (max_t min_v ||vt||), covering-min = adversary's min-over-configs value (attacker-defender). NEXT: read covering-min as a Hotelling game value; import a potential-function / price-of-anarchy argument for inf meas.
+(3) Pengbinghui/pipeline-math (AI prover-verifier + Lean 4, https://github.com/Pengbinghui/pipeline-math): resolved open problems incl. TILING AND COMPLEMENT problems (the project's exact domain). MODERATE (methodological): prover-verifier + Lean for the finite/MSS residual of LRC(14) and for formalizing reconstruction/half-tiling results. NEXT: read its tiling-complement solutions for overlap.
+Reflection: the-compositum-certificate-localizes-to-sqrt21-and-three-external-leads-kps.md. -> OPEN-Q-108, reconstruction thread (S14-22), HYP-3815/3816.
+
 **EVEN-GRAPH EQUINUMEROSITY -- one cube, four faces, eight wild lines (kind-pasteur-2026-07-01-S11).** GROUNDED
 (script even_graph_equinumerosity_probes_kps.py): `2^{C(n-1,2)}` counts, via labeled bijections, the tournament
 cycle-space, even graphs on n, TWO-GRAPHS on n, and graphs on n-1 -- but unlabeled they DIVERGE (even=two-graph

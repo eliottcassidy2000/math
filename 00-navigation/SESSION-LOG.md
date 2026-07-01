@@ -1,3 +1,16 @@
+## kind-pasteur-2026-07-01-S23 -- THE COMPOSITUM CERTIFICATE LOCALIZES: g_3*g_7 = -sqrt21 in Q(√-3,√-7) (real quadratic Q(sqrt21), NOT degree 4); sqrt21 = (LRC6 cert)x(LRC14 cert), exhibited in deep-well D_14=21*403; + 3 external leads (LTC/Cayley, Hotelling game, pipeline-math)
+
+Prompt: compute next step in the ι-odd certificate in Q(√-3,√-7); exhibit sqrt21 explicitly in the covering-min; consider 3 external links as tangential connections.
+
+VERIFIED: g_3=i sqrt3, g_7=i sqrt7 => g_3*g_7 = -sqrt21 (SINGLE REAL number in Q(sqrt21)). Hasse-Davenport: g_21 = chi_3(7)chi_7(3) g_3 g_7 = (-1)(-sqrt21)=+sqrt21 = the real quadratic Gauss sum (D=21=1mod4). The biquadratic Q(√-3,√-7) has subfields Q(√-3)[covering/Eisenstein/p=3], Q(√-7)[cert/Gauss/p=7], Q(sqrt21)[real compositum]. => the ι-odd certificate's MIXED part LOCALIZES to Q(sqrt21) -- DEGREE 2, real, NOT degree 4: bridging the two apex fields costs a field but NOT spectral complexity (good for the trace-formula route; the S22 open leap doesn't blow up).
+sqrt21 EXHIBITED 3 ways: (i) = g_3*g_7 = (LRC(6) apex cert)x(LRC(14) apex cert) -- the two triple-pillar cases multiply into the LRC14 bridge; (ii) sqrt21 | sqrt(D_14), D_14=33852=21*403*4 (deep-well CF discriminant); (iii) the real subfield of Q(√-3,√-7) (product of two imaginary units is real).
+THREE EXTERNAL LEADS (assessed, -> backlog): (1) Good Locally Testable Codes (Dinur-Lubotzky et al, Annals 2026 203-2): c^3-LTC via LEFT-RIGHT CAYLEY COMPLEXES = STRONG: local-testability = local-to-global = my RECONSTRUCTION thread (S14-19); tiling/half-tiling = SQUARE COMPLEX; Lubotzky Ramanujan = sqrt-p Gauss flavor. (2) CS6840 HOTELLING games (Tardos): LRC covering-min = adversarial FACILITY-LOCATION game on the circle (runners=facilities, lonely=farthest point, covering-min=adversary value) = attacker-defender; import potential-function/PoA. (3) Pengbinghui/pipeline-math (AI prover-verifier+Lean): solved TILING & COMPLEMENT problems (project's domain) = methodological lead for the finite/MSS residual + formalization.
+NEXT: (a) is the tiling/half-tiling square complex a left-right Cayley complex; does local testability = the reconstruction wall? (b) formalize covering-min as a Hotelling game, seek a potential function; (c) ι-equivariant nerve odd Lefschetz number = sqrt21-controlled bridge.
+Reflection: the-compositum-certificate-localizes-to-sqrt21-and-three-external-leads-kps.md; script compositum_certificate_sqrt21_kps.py (+.out). Backlog updated. Not a HYP reservation.
+-> OPEN-Q-108, S20/S21/S22 (Lefschetz/field-split/cohomology), HYP-3815/3816, reconstruction thread S14-19.
+
+---
+
 ## kind-pasteur-2026-07-01-S22 -- COHOMOLOGICAL THREE-DISTANCE: the lonely set is H^0, complementarity = ALEXANDER DUALITY (b_0(L_C)=b_0(danger)), ι-odd part = the Gauss certificate; and the sqrt21 bridge IS the CERTIFICATION-program residual, NOT the classical census crux
 
 Prompt: extend three-distance/far-element cohomologically; think complementarity; is the Q(sqrt-3,sqrt-7)/sqrt21 bridge (ι-odd Gauss i sqrt7 meeting Eisenstein covering) the OPEN-Q-108 residual?
