@@ -1,0 +1,12 @@
+================================================================================================
+ SC/BLUE structure via the HALF-TILING (only 2^D grid-sym tilings needed)
+================================================================================================
+   n   D  2^D=#half   #SC  #pure-blue  #mixed g_C all odd BLUE-SPINE conn blue self-loops
+   4   2          4     2           1       1        True            True               1
+   5   4         16     8           3       5        True            True               0
+   6   6         64    12           2      10        True            True               2
+   7   9        512    88           4      84        True            True               0
+
+  => extends the census to n=7 CHEAPLY (512 half-tilings vs 32768 full).
+     #pure-blue = 1,3,2,? ; blue-spine connectivity tested at n=7.
+DONE.

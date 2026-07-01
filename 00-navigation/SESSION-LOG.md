@@ -1,3 +1,21 @@
+## kind-pasteur-2026-07-01-S17 -- THE SC SPINE IS THE HALF-TILING, SO WORK THERE: n=7 blue-spine CONNECTED + census (#SC=88, #pure-blue=4) via 512 half-tilings (64x cheaper); #pure-blue CLOSED FORM; blue self-loops are EVEN-n-only; five mental-model updates
+
+Prompt: work the open next threads; explore past work with new understanding; find connections; improve mental models.
+
+STANCE SHIFT (the key insight): the entire SC/blue structure lives on the 2^D grid-sym tilings (D=floor((n-1)^2/4)~m/2) = the HALF-TILING (THM-549/550). So study the SC spine THERE, not on the full 2^m cube. n=7: 512 half-tilings vs 32768 full (64x).
+CONCRETE RESULTS (n=4..7 via half-tiling):
+ (1) BLUE-SPINE CONNECTED through n=7 (88 SC classes): upgrades odd-parity min-deg>=1 (S15) to CONNECTIVITY, verified n=4..7. Single blue-connected backbone. Conj: all n (proof via descent recursion).
+ (2) #pure-blue CLOSED FORM (solves the S13 census target): sequence 1,3,2,4 (n=4..7) splits by parity => #pure-blue = ceil(n/2) (odd n) / n/2-1 (even n). Predicts n=8->3, n=9->5.
+ (3) BLUE SELF-LOOPS are EVEN-n-ONLY: counts 1,0,2,0 (n=4..7) => exist iff n even. Aligns THM-550 pronic(even)/square(odd) dichotomy; matches full-model S12 (1,0,2) + extends. g_C odd confirmed at n=7 (THM-281).
+ Also: #SC=2,8,12,88 (n=4..7) via half-tiling.
+FIVE MENTAL-MODEL UPDATES: MM1 study SC on the half-tiling (half-dimensional; n=8 now reachable). MM2 H is a GRADIENT not an IDENTIFIER (90% OCF-cospectral n=7); pair with determinant d, accept relational past n=6. MM3 blue/black = self-complementary / complement-paired LINES (cleaner primitive; ties THM-582 palindromic, THM-281). MM4 even/odd-n split runs to the spine (blue self-loops even-only; 14=2.7 seam). MM5 reconstruct by the DESCENT TOWER not fingerprints (SC spine connected+low-dim+odd-parity+recursive = n-robust).
+CONNECTIONS: THM-549/550 (I was computing on the half-tiling unnamed; census+connectivity new there); THM-281 odd = g_C odd = blue-deg odd = spine connectivity (one parity fact, 4 statements); THM-582 (blue=self-complementary=palindromic witness); determinant-lens (d = reconstruction 2nd coord; descent=Cayley-Dickson); geometric-alignment (spine now PROVED connected n<=7); n=7 wall joins the n=7 threshold family (Paley/cospectral/homology).
+CONVERGENCE: mac-mini-S86 also runs the twin separator (n=6 twins need the adjacency SPECTRUM = my d/cpA/cpS, S15) -- 'spectral twins', dual-polytope/hyperbolic-onset framing. My S16-17 half-tiling blue-spine + mental models = complementary/novel.
+Reflection: the-SC-spine-is-the-half-tiling-work-there-n7-connectivity-and-mental-model-updates-kps.md; script halftiling_blue_spine_census_kps.py (+.out). Not a HYP reservation.
+-> THM-549/550, THM-281, THM-582, the-determinant-lens, geometric-alignment, HYP-3809/3810/3811, mac-mini-S86.
+
+---
+
 ## mac-mini-2026-07-01-S86 -- THE TWIN SEPARATOR: 3 of the 5 mixed twins (n=6) separate by tiling-count/H, the remaining 2 are INVARIANT-COSPECTRAL SPECTRAL TWINS {12,22},{43,44} (separated only by the adjacency spectrum) = dual-polytope analog; the twins are the n=6 HYPERBOLIC-ONSET refinement past icosahedral n=5 (HYP-3811) [TOURNAMENT/tiling]
 
 Prompt: run the twin separator against the 5 remaining twins; think connections with 2D plane tilings and Platonic solids.
