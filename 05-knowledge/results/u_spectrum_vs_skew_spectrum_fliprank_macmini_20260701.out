@@ -1,0 +1,20 @@
+=== n=5: 12 iso classes ===
+  #distinct U-spectra (adjacency) = 9 / 12  (0.750)
+  #distinct skew-spectra          = 2 / 12  (0.167)
+  skew-cospectral GROUPS mixing different |Aut| (skew BLIND to symmetry): 2
+    of those, U-spectrum fully separates the classes: 1
+  U-spectrum determines |Aut|? True   skew-spectrum determines |Aut|? False
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py:3045: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py:3046: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+  corr(max-U-spectrum-multiplicity, |Aut|) = 0.087   corr(max-skew-mult, |Aut|) = nan
+
+=== n=6: 56 iso classes ===
+  #distinct U-spectra (adjacency) = 28 / 56  (0.500)
+  #distinct skew-spectra          = 6 / 56  (0.107)
+  skew-cospectral GROUPS mixing different |Aut| (skew BLIND to symmetry): 5
+    of those, U-spectrum fully separates the classes: 0
+  U-spectrum determines |Aut|? True   skew-spectrum determines |Aut|? False
+  corr(max-U-spectrum-multiplicity, |Aut|) = 0.252   corr(max-skew-mult, |Aut|) = 0.223
+
