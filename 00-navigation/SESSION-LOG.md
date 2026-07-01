@@ -1,3 +1,16 @@
+## kind-pasteur-2026-07-01-S5 -- MOMENT RELAXATION reduces multi-far to ONE measure lower bound: inf meas(L_C) > 6^{-r} over (13-r)-cores (converges mac-mini HYP-3787 signed-correction=Fourier-of-1_{L_C}; no HYP)
+
+Prompt: pursue the near-tight x incommensurate residual; think moment relaxation.
+
+MOMENT RELAXATION (lrc14_multifar_reduces_to_measure_lowerbound): survival=mu(safe-cube), mu=pushforward of 1_{L_C} onto T^r via t->(W_i t); moments mu-hat(k)=1_{L_C}-hat(sum k_i W_i) = the core's Fourier coeffs at resonance freqs. SOS dual = band-limited minorant (Cohn-Elkies/Beurling-Selberg = the "3rd category" cert). TWO RUNGS close everything:
+- COPRIME combs (degree-2=Cauchy-Schwarz): |correction|<=sqrt(meas)*(6/49)^{r/2} < main=(6/7)^r meas <=> meas(L_C)>6^{-r}.
+- GCD>1 combs REDUCE (u=g t) to the r-speed comb {W_i/g} at large freq g (>=92, since far combs>182); x-g equidistributes L_C => survival -> meas(cap safe(W_i/g))*meas(L_C) >= (1-r/7)meas > 0. VERIFIED: (2g,3g) -> meas(safe(2)cap safe(3))*meas=0.762*meas (g=92,300,700 converge).
+So multi-far r=2..6 COLLAPSES to ONE clean bound: inf_{(13-r)-cores} meas(L_C) > 6^{-r}. SEARCH: closes all r=2..6, margins 1.9x(r=2) -> 14068x(r=6) [core shrinks=>L_C fattens AND threshold shrinks, both help; r=2 binding]. r>=7=THM-573.
+
+WHY PROGRESS: OPEN-Q-108 multi-far is now a MEASURE LOWER BOUND on FEWER-speed cores (proven LRC<=12): r=2 target = inf meas(L_C)>=1/36 over 11-cores (LRC(12) gives M(C)>=1/12 => nonempty super-level set => variational measure bound), lower-dim than the open 13-set inf L=1/1260. Converted a SIGNED-oscillation problem into a POSITIVE measure bound.
+
+CONVERGES mac-mini HYP-3787 (same-day: signed correction = Fourier of 1_{L_C} at harmonics of the far speed; rigorous <=6-huge-speed bound) -- their rigorous quantitative bound + my moment-relaxation reduction to the measure inf are the same object two ways. Honest: search min NOT proved inf; r>=3 robust (huge margins), r=2 (1.9x) needs the real inf. NO HYP reserved. Files: lrc14_multifar_reduces_to_measure_lowerbound_kps.py(+out); reflection moment-relaxation-reduces-multifar-to-a-measure-lower-bound-... No canon overridden.
+
 ## mac-mini-2026-06-30-S75 -- THE SIGNED CORRECTION = FOURIER OF 1_{L_C} AT HARMONICS OF THE TEST SPEED: a quantitative bound making the single-huge-speed & <=6-huge-speed cases of the covering-min residual RIGOROUS (HYP-3787)
 
 Prompt: reframe/improve 'signed correction is the off-diagonal version of this: the Fourier coefficients of 1_{L_C} sampled at harmonics of the test speed'; keep pushing toward proofs.

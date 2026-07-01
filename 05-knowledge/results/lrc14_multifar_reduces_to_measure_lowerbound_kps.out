@@ -1,0 +1,38 @@
+============================================================================================
+PART 1  GCD REDUCTION (gcd>1 combs close by x-g equidistribution)
+============================================================================================
+  meas(safe(a)cap safe(b)) for small coprime (a,b) >= 1-2/7 = 5/7 = 0.714:
+    (a,b)=(1,2): meas(safe(a)cap safe(b))=0.7857
+    (a,b)=(2,3): meas(safe(a)cap safe(b))=0.7619
+    (a,b)=(3,4): meas(safe(a)cap safe(b))=0.7500
+    (a,b)=(2,5): meas(safe(a)cap safe(b))=0.7429
+    (a,b)=(3,5): meas(safe(a)cap safe(b))=0.7429
+    (a,b)=(4,5): meas(safe(a)cap safe(b))=0.7429
+  reduction: (W1,W2)=(2g,3g) on min-meas 11-core (meas=0.05142); survival -> 0.03918:
+    g=  92: survival=0.03749 (target 0.03918, ratio 0.957) >0
+    g= 300: survival=0.03905 (target 0.03918, ratio 0.997) >0
+    g= 700: survival=0.03924 (target 0.03918, ratio 1.002) >0
+
+============================================================================================
+PART 2  THE MEASURE LOWER BOUND: is inf meas(L_C) > 6^{-r} over (13-r)-cores?
+============================================================================================
+   r  k=13-r  min meas(L_C)       6^-r   margin  closes?
+   2      11       0.051417   0.027778     1.9x     True
+   3      10       0.088801   0.004630    19.2x     True
+   4       9       0.172494   0.000772   223.6x     True
+   5       8       0.216780   0.000129  1685.7x     True
+   6       7       0.301531   0.000021 14068.2x     True
+
+============================================================================================
+VERDICT
+============================================================================================
+ - Moment relaxation: survival=mu(safe-cube); DEGREE-2 (Cauchy-Schwarz) closes COPRIME combs
+   for meas(L_C)>6^{-r}; GCD>1 combs REDUCE (u=g t) to an r-speed comb {W_i/g} at large freq g,
+   x-g equidistributes L_C => survival -> meas(cap safe(W_i/g))*meas(L_C) >= (1-r/7)meas > 0.
+ - So multi-far r=2..6 REDUCES to ONE clean bound:  inf_{(13-r)-cores} meas(L_C) > 6^{-r}.
+   Search: CLOSES all r with margins 1.9x (r=2) -> 14000x (r=6). EASY for r>=3; r=2 tight-ish.
+ - This is OPEN-Q-108 on FEWER speeds (proven LRC(<=12)): the LONELY-MEASURE inf on (13-r)-cores,
+   lower-dimensional & more tractable than the full 13-set inf. Rates = far-element decorrelation.
+ - HONEST: min is a SEARCH min, not a proved inf; r>=3 margins make it robust, r=2 (1.9x) needs
+   a real inf meas(L_C)>1/36 over 11-cores (tractable via LRC(12)). r>=7 = THM-573.
+DONE.
