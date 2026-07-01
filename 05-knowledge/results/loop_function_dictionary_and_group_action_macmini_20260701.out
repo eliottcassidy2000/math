@@ -1,0 +1,68 @@
+==============================================================================================
+(I) THE LOOP-FUNCTION DICTIONARY -- maps R/Z -> R/Z (and config maps), by group
+==============================================================================================
+
+  [ISOMETRY O(2)]
+     1. rot_c        x -> x+c              rotation = observer/origin shift (inhomogeneous LRC)
+     2. refl (iota)  x -> -x               antipode/complement; the killer -1 symmetry (t<->1-t)
+
+  [ENDOMORPHISM / AFFINE AGL(1)]
+     3. dil_v        x -> v x   (v in Z)   a RUNNER of speed v; the x |-> vx map
+     4. unit-dil_a   x -> a x   (a in (Z/q)*) INVERTIBLE dilation = the WITNESS SEARCH generator
+     5. aff_{v,a}    x -> v x + a          the ax+b group; runner v seen from moving observer a
+     6. times-n      x -> n x   (endo)     Bernoulli/doubling endomorphism (expanding)
+
+  [MOBIUS / VERBLUNSKY (disk aut = PSL2R boundary)]
+     7. blaschke_A   z -> (z-A)/(1-Abar z) Verblunsky/OPUC atom-pusher (|A|->1 = atomic = lonely)
+     8. cayley       disk <-> half-plane   the standard disk/H transfer
+     9. mobius       x -> (ax+b)/(cx+d)    fractional-linear; PSL2 on the boundary circle
+    10. gauss        x -> {1/x}            continued-fraction shift = PSL2Z generator (S<->T)
+    11. mediant      (a/b,c/d)->(a+c)/(b+d) Farey/Stern-Brocot; builds t*=[0;n-1,n]
+
+  [FLOW / DYNAMICS]
+    12. flow_v,t     x -> x + v t          the runner FLOW; LRC = avoid arc(-r,r) for all v at one t
+    13. 3-gap return interval-exchange     three-distance first-return (Steinhaus); the S73 gaps
+    14. winding      rotation number       the a in a/q = winding of the witness
+
+  [CONFIGURATION MAPS (multiset -> multiset)]
+    15. scale_c      {v_i} -> {c v_i}      dilate all runners (scale-invariance THM-522)
+    16. insert/del   {v_i} -> {v_i} +/- {w} vertex insertion/removal (Mode A; remove-large)
+    17. conv/Mink    mu*nu / A+B           convolution of point measures / Minkowski sum on loop
+    18. W_N          Atkin-Lehner involution modular involution on X_0(N) (apex X_0(14))
+    19. ramanujan_hat c -> (c_q(k))_k      the config's Fourier = Ramanujan sums (kps-S7)
+
+  [COCYCLES / MEASURES (functions ON the group)]
+    20. dedekind s(a,q)=sum((ka/q))((k/q)) the PSL2Z cocycle = the LRC MARGIN (HYP-3768)
+    21. verblunsky  alpha_j (Szego recursion) reflection tower; |alpha_j|=1/(n-1-j) for AP (opus-S13)
+    22. saw ((x))=x-floor-1/2              iota-ODD sawtooth (Dedekind summand)
+    23. dist ||x||                         iota-EVEN distance-to-integer (the loneliness)
+
+  => 23 loop-functions. GROUP STRUCTURE: isometry O(2) + dilation = AFFINE AGL(1,R/Z);
+     Mobius/Gauss/mediant generate PSL2(Z) (CF descent); Blaschke = disk-aut PSL2(R) (Verblunsky);
+     the arithmetic apex = Gamma_0(14) / PSL2(7) (Klein quartic). Runners = the DILATION subgroup.
+
+  GROUP RELATIONS verified: dil compose  dil_a dil_b = dil_ab=True; affine law   a_{v,a}a_{w,b}=a_{vw,vb+a}=True; refl-conj    refl dil refl = dil=True; semidirect   dil rot = rot' dil=True
+
+==============================================================================================
+(II) THE CLEAN NEXT STEP -- THE LRC WITNESS SEARCH IS A GROUP ACTION (dilation orbit hits safe box)
+==============================================================================================
+Safe box B_r = {c : ||c_i||_q >= rq for all i}. Relative volume = (1-2r)^13:
+  r=LRC 1/14: (1-2r)^13 = 0.1348  (the orbit must hit a box of this relative volume)
+  r=covering-min 14/183: (1-2r)^13 = 0.1155  (the orbit must hit a box of this relative volume)
+
+Construction {1..12,182} -- the (Z/q)* orbit reaches the box at the RIGHT modulus q:
+  q=  14: best dilation a=None, min-dist=0, M-at-q=0=0.0000  misses
+  q=  15: best dilation a=   1, min-dist=1, M-at-q=1/15=0.0667  misses
+  q=  91: best dilation a=None, min-dist=0, M-at-q=0=0.0000  misses
+  q= 183: best dilation a=  14, min-dist=14, M-at-q=14/183=0.0765  HITS box(1/14)
+
+The orbit view of a few covering 13-sets at q=183 (does the dilation orbit clear 1/14?):
+  construction             covering=True  best over q<400: M=14/183=0.0765 at q=183  >=1/14
+  AP {1..13} (non-cov)     covering=False  best over q<400: M=1/14=0.0714 at q=14  >=1/14
+  GW {1..11,13,24}         covering=False  best over q<400: M=1/14=0.0714 at q=14  >=1/14
+
+SYNTHESIS: M(S) = max_q [ (1/q) max_{a in (Z/q)*} min_i ||a v_i||_q ] = max_q (1/q)(orbit-best at q).
+  => covering-min lower bound = EVERY covering config's (Z/q)* dilation-orbit meets the safe box B_{1/14}
+     at some modulus q<=91^12 (MSS, S78). The atoms (kps) = the regular orbit = units; the Ramanujan
+     sums c_q(k) = the group Fourier => |orbit cap box| is a CHARACTER SUM (the analytic engine).
+DONE.
