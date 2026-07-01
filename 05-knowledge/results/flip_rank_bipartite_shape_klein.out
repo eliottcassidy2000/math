@@ -1,0 +1,14 @@
+(A) f(n) = C(ceil(n/2),2)+C(floor(n/2),2)  vs  LB = ceil(log2 |G_n|):
+   n=3: f= 1  =  LB= 1   |G_n|=2
+   n=4: f= 2  =  LB= 2   |G_n|=4
+   n=5: f= 4  =  LB= 4   |G_n|=12
+   n=6: f= 6  =  LB= 6   |G_n|=56
+   n=7: f= 9  =  LB= 9   |G_n|=456
+   n=8: f=12  < (bipartite IMPOSSIBLE)  LB=13   |G_n|=6880
+   n=9: f=16  < (bipartite IMPOSSIBLE)  LB=18   |G_n|=191536
+   n=10: f=20  < (bipartite IMPOSSIBLE)  LB=24   |G_n|=9733056
+
+(B) does the balanced-bipartite config actually realize all iso classes?
+n=4: |G|=4 split 2+2  free f(n)=C(2,2)+C(2,2)=2  LB=ceil(log2)=2  ->  balanced-bipartite REALIZES all classes: True (cut orientation #1)
+n=5: |G|=12 split 3+2  free f(n)=C(3,2)+C(2,2)=4  LB=ceil(log2)=4  ->  balanced-bipartite REALIZES all classes: True (cut orientation #7)
+n=6: |G|=56 split 3+3  free f(n)=C(3,2)+C(3,2)=6  LB=ceil(log2)=6  ->  balanced-bipartite REALIZES all classes: False (NO cut orientation works)

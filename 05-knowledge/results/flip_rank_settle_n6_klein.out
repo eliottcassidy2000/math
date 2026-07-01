@@ -1,0 +1,2 @@
+n=6 |G|= 56 ; exhaustive: does any 6-edge subcube realize?
+  k=6 realizes: False => rho(6)=7 (LB+1), the log2 bound is NOT tight at n=6

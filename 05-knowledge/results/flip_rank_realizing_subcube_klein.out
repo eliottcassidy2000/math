@@ -1,0 +1,15 @@
+n=4: |G_n|=4 edges=6 lower-bound ceil(log2)=2  naive C(n-1,2)=3
+  rho(4) = 2  (=LB, TIGHT); redundancy 2^2-|G|=0; #achieving configs found (exhaustive): 24
+     free-arc shape kinds: {'matching': 24}
+     example: free arcs [(0, 1), (2, 3)] (shape (4, 2, (1, 1, 1, 1), 'matching')); a fixed orientation exists
+
+n=5: |G_n|=12 edges=10 lower-bound ceil(log2)=4  naive C(n-1,2)=6
+  rho(5) = 4  (=LB, TIGHT); redundancy 2^4-|G|=4; #achieving configs found (exhaustive): 120
+     free-arc shape kinds: {'other': 120}
+     example: free arcs [(0, 1), (0, 2), (1, 2), (3, 4)] (shape (5, 2, (1, 1, 2, 2, 2), 'other')); a fixed orientation exists
+
+n=6 (randomized flip-rank search):
+n=6: |G_n|=56 edges=15 lower-bound ceil(log2)=6  naive C(n-1,2)=10
+  rho(6) = 7  (LB+1); redundancy 2^7-|G|=72; #achieving configs found (random(60000)): 27
+     free-arc shape kinds: {'other': 27}
+     example: free arcs [(0, 3), (0, 4), (1, 2), (1, 5), (2, 3), (2, 5), (3, 4)] (shape (6, 1, (2, 2, 2, 2, 3, 3), 'other')); a fixed orientation exists

@@ -1,3 +1,21 @@
+## klein-2026-07-01-S71 -- THE FLIP-RANK of tournament iso classes: minimal realizing-subcube = FIX A BALANCED MAX-CUT, FLIP THE TWO SIDES; a PHASE TRANSITION at n=6 (HYP-3803).
+
+Prompt: on n=4 all 4 iso classes come from flipping 3 arcs (naive) but also 2 arcs given a config rule on the 4 fixed arcs; study how this "shape of fixed arcs enabling minimum flips" changes as n grows; define it differently, seek patterns.
+
+DEFINITION: a labeled tournament = a bit per edge (i<j); a REALIZING SUBCUBE of dim k = k "free" edges + a fixed orientation of the rest whose 2^k completions meet EVERY iso class (A000568). FLIP-RANK rho(n) = min such k. Info floor LB=ceil(log2|G_n|).
+
+VERIFIED EXHAUSTIVE (flip_rank_*_klein.py): rho(n)=1,2,4,7 for n=3,4,5,6. LB=1,2,4,6 -- TIGHT for n<=5, BREAKS at n=6 (rho(6)=7=LB+1; exhaustive over ALL C(15,6) free-sets x fixed orientations: no 6-edge subcube realizes G_6; a 7-edge one does).
+
+THE SHAPE (answer to the prompt): the minimal config for n<=5 = FIX A BALANCED VERTEX-BIPARTITION CUT (complete bipartite K_{a,b}, a=ceil(n/2), b=floor(n/2)) and FLIP THE TWO SIDES (the within-part sub-tournaments). free-count f(n)=C(a,2)+C(b,2). n=4: fix K_{2,2} (the 4 fixed arcs = the cut = owner's config rule), free the matching {(0,1),(2,3)}. n=5: fix K_{3,2}, free triangle{0,1,2}+edge{3,4}.
+
+STRIKING ARITHMETIC: f(n)=C(ceil(n/2),2)+C(floor(n/2),2) EQUALS LB EXACTLY for n=3..7 (1,2,4,6,9); then f(n)<LB for n>=8 (12<13,16<18,...) => bipartite becomes information-theoretically IMPOSSIBLE at n>=8.
+
+PHASE TRANSITION at n=6 (before the n=8 barrier): balanced-bipartite REALIZES for n=4,5 (specific "mixing" cut orientations) but FAILS for EVERY split of n=6 (3+3 f=6, 2+4 f=7, 1+5 f=10) and EVERY cut orientation -- the two triangles + any fixed K_{3,3} bridge give too many isomorphic T_6 to cover all 56. The n=6 achiever (rho=7) is a NON-bipartite connected 7-edge config (degrees 2,2,2,2,3,3). So the shape FAILS (n=6) two steps before it becomes IMPOSSIBLE (n=8) -- the S_n quotient folds the cube too tightly once the halves are symmetric triangles.
+
+Redundancy 2^rho-|G|=0,0,4,72; transversal (exact bijection subcube) only n<=4 (|G|=2,4 powers of 2). RELATED NOTIONS defined: transversal-rank, cut-orientation mixing condition, base-path-anchored flip-rank (naive=C(n-1,2)), rainbow dual (max all-distinct subcube), vertex-cut vs edge-cut/cycle (GF(2)) link.
+
+CONVERGENCE + collision: opus-S14 (HYP-3802 "heptagon tournament") independently did the SAME 7-vertex-tournament-on-the-atoms synthesis as my S70 HYP-3802 (Cayley duality + CRT parity split; deeper in those directions, mine has Paley/QR + binding-fingerprint). Both numbered 3802 (klein committed first, 41c77d5b3); INDEX has a double-entry, FLAGGED for coordinator MERGE (genuinely convergent, not renumbered). My NEW work HYP-3803 (flip-rank) is distinct + clean, in the klein block. HONEST: rho(n) for n>=7 not computed (n=7 canonicalization too slow here); post-transition shape uncharacterized; a structural discovery about how iso classes pack in the tournament cube, NOT tied to an LRC proof. Files: flip_rank_{realizing_subcube,bipartite_shape,settle_n6}_klein.py(+outs); HYP-3803; reflection the-minimal-code-is-a-cut-until-it-isnt.md. No canon overridden.
+
 ## mac-mini-2026-07-01-S80 -- KACZMARZ + CHRISTOFFEL/RKHS + BLASCHKE-DYNAMICS merged into the LRC group-action frame; the deep-well isolation IS Diophantine/Herman rigidity of t*=[0;n-1,n] (HYP-3796); ceded HYP-3795 to opus-S13 (my S79 -> HYP-3797)
 
 Prompt: merge ideas from arXiv:2604.16750 + prior Kaczmarz + Christoffel/reproducing-kernel; explore new loop-functions freely; keep pushing for proofs.
