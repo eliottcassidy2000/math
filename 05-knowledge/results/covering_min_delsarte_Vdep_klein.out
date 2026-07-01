@@ -1,0 +1,10 @@
+V-DEPENDENCE of the Delsarte LP bound (n=14): larger V (huge speeds) should WEAKEN it toward trivial 1/(2(n-1))=0.0385
+    V cert covmin>=  (targets: floor 1/n=0.0714, covmin=0.0765)
+   28        0.0750   (V/n = 2.0)
+   56        0.0650   (V/n = 4.0)
+  112        0.0500   (V/n = 8.0)
+  224        0.0000   (V/n = 16.0)
+
+=> if the bound DROPS as V grows, the far-element (huge equidistributing multiple, beta_q->2L)
+   defeats the Delsarte DUAL -- the CRT-escape (S62). BUT HYP-3763 (large-multiples-forced) says
+   a BEATER cannot use huge multiples (they raise M), so the effective V IS bounded => Delsarte+HYP-3763 is valid.

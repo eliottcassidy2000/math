@@ -1,5 +1,5 @@
 ---
-id: HYP-3782
+id: HYP-3785
 title: THE NEXT LEVER (SDP/Delsarte) HAS A SPECTRAL GAP -- loneliness is pointwise, so averaged/PSD certificates are blind (S54); the tight covering-min lower bound is COMBINATORIAL (the lazy-cut witness packing, HYP-3779). Working the HYP-3783 menu through E2 + F7(apex-7) + far-element resonance + Morse/band barrier. (1) FAR-ELEMENT RESONANCE: the construction killer n(n-1) = Phi6(n)-1 == -1 mod Phi6 for ALL n (verified 8,10,12,14) -- the far element sits at the "-1 slot" (the ceiling of the Stern-Brocot ray, the zeta_6/E2-hexagonal direction; Dedekind s(n,Phi6)->-1/12, S56). (2) MORSE/BAND LANDSCAPE: G(t)=min_v||v t|| (loneliness) for the construction is a POINTWISE SPIKE at the binding t*=n/Phi6 (global Morse max = M) atop a LADDER of lower local maxima (n=14: 0.0765, 0.0756, 0.0755, 0.0752,... = the radius-1 band-barrier critical points); the max sits at 1-n/Phi6 too (iota-symmetric, S55). (3) F7/SPECTRAL GAP: the Fejer-weighted AVERAGE of loneliness is 2.6-11x BELOW M (F_7: 0.0295, F_14: 0.0189, F_61: 0.0070 vs M=0.0765) and gets WORSE at higher degree -- the averaged/PSD lens is BLIND to the spike (S54). So a Delsarte/Fejer SDP has a spectral gap; the E2/Eisenstein bulk is regularizable (->-1/12, S56) but the apex-7/F7 cusp-form residual is the un-relaxable core the PSD relaxation cannot see. CONCLUSION: the tight lower-bound certificate is the COMBINATORIAL witness packing (lazy-cut), not the SDP -- the next lever is gap-limited by the pointwise nature of loneliness
 status: MIXED (structural facts + honest assessment of the next lever). VERIFIED: far-element killer == -1 mod Phi6 (exact, all n); the Morse local-max ladder of the construction's loneliness landscape (n=14 grid); the Fejer-average spectral gap (2.6-11x below M, worsening with degree). ASSESSMENT (S54-backed, not a theorem): averaged/PSD (Delsarte/Fejer/theta) certificates are blind to the pointwise loneliness spike, so the SDP 'next lever' is expected gap-limited; the lazy-cut combinatorial witness packing (HYP-3779) remains the tight certificate. cvxpy unavailable (no full SDP tested); the Fejer-average is a naive spectral proxy (a proper Delsarte SDP could be tighter but, per S54, likely still gapped).
 source: klein-2026-07-01-S63
@@ -17,7 +17,7 @@ results:
   - 05-knowledge/results/covering_min_morse_band_e2_f7_klein.out
 ---
 
-# HYP-3782 — the next lever has a spectral gap; the far-element, the Morse band, and F7
+# HYP-3785 — the next lever has a spectral gap; the far-element, the Morse band, and F7
 
 ## The next lever, assessed
 HYP-3783 flagged Lovasz-theta/SDP (a tighter, PSD, multi-modulus relaxation) as the next lever after the

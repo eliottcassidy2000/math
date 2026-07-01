@@ -1,0 +1,15 @@
+STRUCTURED DELSARTE LP (n=14, V=56, grid=900): sum_q beta_q vs 1 (certifies covmin>=L iff <1)
+  reference: trivial 1/(2(n-1))=0.0385, LRC floor 1/n=0.0714, covering-min n/Phi6=0.0765
+         L  sum beta_q   certifies covmin>=L?
+    0.0300      0.0000                   True
+    0.0385      0.2500                   True
+    0.0450      0.5000                   True
+    0.0500      0.5000                   True
+    0.0550      0.8090                   True
+    0.0600      0.9026                   True
+    0.0650      0.9994                   True
+    0.0714      1.2496                  False
+    0.0765      1.3046                  False
+  => Delsarte LP certifies covering-min >= 0.0650  (trivial 0.0385, floor 0.0714)
+  If ~trivial: the LP LEVEL is weak (grid-approx); the SDP/Lasserre tightening is needed to
+  reach the floor/covering-min -- confirming the certificate must add PSD-moment structure.

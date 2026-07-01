@@ -1,3 +1,27 @@
+## klein-2026-07-01-S64 -- the DELSARTE DUAL IS STRONG (correcting S63): the creative use is DELSARTE + HYP-3763; the far-element defeats it alone (HYP-3784)
+
+Prompt: reason about delsarte sdp and how it could be used creatively.
+
+Reasoned about the Delsarte SDP + prototyped the dual LP, CORRECTING my own S63 (HYP-3785). Filed HYP-3784; scripts covering_min_delsarte_lp_klein.py + _Vdep.
+
+S63 CORRECTION: S63 dismissed the spectral/Delsarte lever using the naive Fejer AVERAGE of loneliness (0.029 << M=0.0765, blind because max>=average, S54). But that's the WRONG object. The Delsarte DUAL -- a pointwise-valid nonneg weight w minimizing the per-resonance danger mass, structured by the covering (min_w sum_q beta_q, beta_q=max_{q|v} int w[||vt||<L]; sum_q beta_q<1 => covmin>=L) -- is STRONG.
+
+RESULT (grid LP, n=14): the Delsarte dual certifies covmin >= 0.075 (V=2n), 0.065 (4n), 0.050 (8n), 0.000 (16n). At V=2n it ~EQUALS the true covmin 14/183=0.0765 -- vs trivial 1/(2(n-1))=0.0385 and S63's naive-avg 0.029. So the DUAL sees the spike; only the AVERAGE is blind. S63 was too hasty.
+
+WHY IT WEAKENS WITH V (the far-element defeat): as V grows, large multiples EQUIDISTRIBUTE (int w[||vt||<L]->2L for large v), so beta_q->2L and sum_q beta_q->(n-1)2L = trivial. This is the far-element resonance / CRT-escape (S62/HYP-3745): a huge speed's danger is spread and captures 2L of any dual weight. So the ALL-speeds Delsarte dual is trivial -- confirming the spectral limit, but for the SHARP reason (large-multiple equidistribution), not 'averages are blind'.
+
+THE CREATIVE RESCUE (Delsarte + HYP-3763): the all-speeds dual is defeated by large multiples, BUT HYP-3763 (large-multiples-forced) says a BEATER cannot use them (they raise M via the Steinhaus scaling c/(kc+1)). So a set with M<L has BOUNDED speeds => the Delsarte dual restricted to beater-reachable speeds is VALID and near-tight. Neither alone works (Delsarte-all-speeds trivial; HYP-3763 gives no value); TOGETHER near-tight: HYP-3763 bounds WHICH multiples, Delsarte bounds the danger given bounded multiples. This is the creative use of Delsarte for the covering-min.
+
+THE SDP (Lasserre) TIGHTENING: the remaining ~15% gap (0.065 vs 0.0765 at V=4n) is the LP integrality gap; Lasserre-2 (PSD moment matrix over speed-pairs) closes it, symmetry-reduced by D_7/zeta_6/apex-7 into small blocks -- the Eisenstein/E2 isotype (bulk, visible) + cusp/F7 isotypes (residual, the gap). Well-motivated now (not dismissed); needs cvxpy (unavailable).
+
+HONEST: grid-approx (not rigorous); the V-bounded LP isn't directly valid for sets with the killer n(n-1)>2n (fix: run the LP over the HYP-3763-FORCED speed set = core + specific double-killer, whose danger w dodges at t*=14/183). A reasoned route to a near-tight lower bound, not yet rigorous.
+
+HOUSEKEEPING: HYP-3782 collision -- mac-mini (Lorentzian) keeps 3782; I renamed my S63 next-lever/spectral-gap 3782->3785; this session=3784.
+
+NEXT: (1) Delsarte LP over the HYP-3763-forced speed set (valid, not V-truncated); (2) Lasserre-2 SDP if cvxpy appears; (3) formalize the Delsarte+HYP-3763 pairing into a rigorous near-tight bound.
+
+--- prior entries ---
+
 ## mac-mini-2026-06-30-S72 -- THINK LORENTZIAN + lazy-cut: the covering-min is the LORENTZIAN/MODULAR pole (hyperbolic self-concordant barrier + log-concave Dedekind margin + modular E2), residual = non-Lorentzian cusp form; lazy-cut prover reproduced (n=12 rigorous stands, n=13,14 pending faster solver) (HYP-3782)
 
 Prompt: think lorentzian + the sum-of-naturals regularization seed + build on the reported lazy-cut result (n=12 covering-min=12/133 RIGOROUS, 208 cuts); check n=13,14.
@@ -18,7 +42,7 @@ FIRST SWING (b) DONE, WORKS (reflection the-single-far-unbounded-case-closes; sc
 CONVERGES klein HYP-3781 (same-day "huge-speed tail = Steinhaus scaling") on the large-speed direction; mac-mini HYP-3780 (hyperbolicity/certificate). NO HYP reserved (extends opus HYP-3779/klein). Files: lrc14_singlefar_morse_bandbarrier_kps.py(+.out); reflections the-real-dichotomy-is-bounded-vs-unbounded-..., the-single-far-unbounded-case-closes-... No canon overridden. NEXT: multi-far (two combs vs a hole) = the residual.
 
 ## klein-2026-07-01-S62 -- worked the HYP-3779 menu ("Farey tessellations"): binding-first is TOO WEAK (= the CRT-escape); huge-speed tail = Steinhaus scaling; covering-min(12,13,14)=construction (HYP-3781)
-## klein-2026-07-01-S63 -- the NEXT LEVER (SDP/Delsarte) HAS A SPECTRAL GAP: loneliness is pointwise, so the tight covering-min certificate is COMBINATORIAL not spectral; far-element / Morse-band / E2 / F7 (HYP-3782)
+## klein-2026-07-01-S63 -- the NEXT LEVER (SDP/Delsarte) HAS A SPECTRAL GAP: loneliness is pointwise, so the tight covering-min certificate is COMBINATORIAL not spectral; far-element / Morse-band / E2 / F7 (HYP-3785)
 
 Prompt: work the next lever, think E2 + F7 and far-element resonance and morse/band barrier.
 
