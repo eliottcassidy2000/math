@@ -1,0 +1,39 @@
+==============================================================================================
+SINGLE-FAR CERTIFICATE:  W > W*(C)=1/(7*delta_max) => M(C u {W}) >= 1/14  (band-barrier)
+  need W* <= 182 (klein's bounded closure) to CLOSE the unbounded single-far case
+==============================================================================================
+  core C (12 speeds)                meas(L_C)   delta_max  W*=1/(7dmax)  #arcs  W*<=182?
+  AP {1..12}                          0.03410    0.005952         24.00     12        True
+  {2..13}                             0.07143    0.035714          4.00      2        True
+  {1..11,13}                          0.01216    0.004082         35.00      4        True
+  {1..11,13} (near-tight?)            0.01216    0.004082         35.00      4        True
+  {1..10,12,13}                       0.06192    0.008929         16.00     10        True
+  one mid speed {1..11,30}            0.05395    0.012987         11.00     14        True
+  one big speed {1..11,90}            0.05316    0.005844         24.44     16        True
+  one big speed {1..11,182}           0.04299    0.004710         30.33     30        True
+  two-ish big {1..10,90,150}          0.11133    0.005714         25.00     42        True
+
+==============================================================================================
+SEARCH: worst (smallest delta_max) bounded 12-core, by max-speed budget B
+  single-far closes for cores with max<=B iff worst W* <= 182
+==============================================================================================
+  max-speed budget B= 20: worst W*=   34.83 (delta_max=0.004101) <=182 CLOSES  core=[1, 2, 3, 5, 6, 8, 9, 11, 13, 14, 17, 19]
+  max-speed budget B= 30: worst W*=   25.10 (delta_max=0.005691) <=182 CLOSES  core=[1, 4, 8, 10, 17, 18, 19, 22, 23, 26, 28, 29]
+  max-speed budget B= 50: worst W*=   32.14 (delta_max=0.004444) <=182 CLOSES  core=[1, 12, 14, 23, 24, 25, 28, 42, 44, 45, 47, 49]
+  max-speed budget B= 90: worst W*=   40.14 (delta_max=0.003559) <=182 CLOSES  core=[1, 6, 16, 18, 56, 66, 80, 81, 83, 84, 85, 87]
+  max-speed budget B=140: worst W*=   52.84 (delta_max=0.002704) <=182 CLOSES  core=[1, 12, 27, 42, 46, 64, 78, 101, 102, 111, 120, 124]
+  max-speed budget B=182: worst W*=   73.58 (delta_max=0.001942) <=182 CLOSES  core=[1, 56, 64, 101, 118, 121, 165, 169, 174, 176, 181, 182]
+
+==============================================================================================
+READING (Morse + band-barrier + Borsuk-Ulam)
+==============================================================================================
+ - L_C = super-level set {g_C>=1/14} = arcs around the LOCAL MAXIMA of the PL Morse function g_C;
+   delta_max = widest 'hole'. Three-distance bounds the #slopes (=> structured arc widths for AP cores).
+ - The far W carves with thin danger teeth (width 1/(7W)); a hole survives iff wider than a tooth
+   (delta_max>1/(7W)). This IS the band-barrier: thin bands cannot cover fat holes.
+ - L_C is ANTIPODE-SYMMETRIC (||v(-t)||=||vt|| => t in L_C <=> -t in L_C); the Z/2 (complement/iota)
+   action is free off the fixed points {0,1/2}; whether a hole survives is the iota-odd (Borsuk-Ulam)
+   index -- the topological packaging of the band-barrier (klein-S56 iota-odd = OPEN-Q-108 residual).
+ - NET: single-far closes for small-max cores (fat holes, W*<=182 overlaps klein); large internal
+   speeds (thin holes, W*>182) are the multi-far residual = >=2 large speeds = the r-far ladder.
+DONE.
