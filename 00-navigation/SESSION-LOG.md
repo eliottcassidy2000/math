@@ -1,3 +1,21 @@
+## kind-pasteur-2026-07-01-S9 -- THE ATOMS ARE A HEPTAGON, THE CENSUS IS A POLYGON-TOURNAMENT, THE EXTREMIZER IS THE PENTAGON: bridging LRC to the tournament/tiling pillar via dihedral D_p. Extends HYP-3793, no new HYP.
+
+Prompt: "with the runners-on-the-loop / Verblunsky synthesis, also consider tournaments and dihedral groups. For the 6 unit atoms consider a tournament on 7 vertices (vertex 0 = 1/14, vertex 6 = 13/14, added vertex at 7/14) and apply the tiling model. Work to make the finish concrete."
+
+THE BRIDGE (verified). The owner's construction lands on a clean correspondence between the LRC census and the project's tournament/tiling pillar:
+ (A) The 7 odd residues {1,3,5,7,9,11,13}/14 are EQUALLY SPACED by 1/7 = a REGULAR HEPTAGON; symmetry = DIHEDRAL D_7 of ORDER 14 (=the LRC modulus). vertex k <-> (2k+1)/14; vertex 3 = 7/14 = 1/2 = the owner's added vertex = the one non-unit.
+ (B) Two actions: ADDITIVE heptagon rotation C_7 (+1/7) + reflections = D_7 (geometry); MULTIPLICATIVE (Z/14)*=<x3>=C_6 (fixes center 7, orbit 1->3->9->13->11->5) = the runner-multiplication. Inversion iota (t->-t: 1<->13,3<->11,5<->9, 7 fixed) = TOURNAMENT COMPLEMENTATION T->T^op (merged-metagraph Z_2 / Borsuk-Ulam iota-odd). [Arithmetic inverse a->a^-1: 1,13 fixed, 3<->5,9<->11 = the collar-binding involution, a DIFFERENT dihedral element.]
+ (C) TOURNAMENTS on 7 vertices + TILING MODEL: geometric forward-arc = ROTATIONAL C_7(1,2,3), H=175 (regular, |Aut|=7, tiling forward-gaps {2,3}); QR = PALEY C_7(1,2,4), H=189 = the n=7 MAXIMIZER (|Aut|=21, forward-gaps {2,4}). BOTH SELF-CONVERSE = iota-invariant => the heptagon reflection IS tournament complementation.
+ (D) GENERAL BRIDGE (makes the finish concrete): a full-orbit census class (Z/N)*, N=2p, IS the regular p-GON with D_p symmetry (order N) and a p-vertex tournament. A (Z/N)* core has M=1/N, so LOOSE iff N<14 => the loose full-orbit classes are EXACTLY N=3..13; N=14 (HEPTAGON) is the TIGHT boundary (M=1/14, the AP {1..13}). Among clean polygons only triangle (N=6, 0.044) and PENTAGON (N=10, 0.03226) survive loose; the census MIN over all N=3..13 is the PENTAGON. rotational H(p)=3,15,175 for p=3,5,7.
+
+MAKE-FINISH-CONCRETE: inf meas(L_C) = min over [11 full-orbit polygon classes N=3..13, min at PENTAGON N=10 = 313/9702] + [two-clash SPORADIC family (N=19,17,..; non-polygon, 2-atom), competes 0.03238 but stays above]; both clear 1/36. This IS the tournament image of THM-523's {AP, Goddyn-Wong}: full-orbit=circulant/Paley-like polygon, two-clash=sporadic. Finite two-family check, polygon side PINNED.
+HONEST: structural correspondence + finite reframe, NOT a proof; two-clash uniform >=1/36 still open (11-speed GW Diophantine); no closed-form meas=tournament-invariant identity found (correspondence is of symmetry/family, not numeric). Visual delivered (heptagon tournament + iota-axis).
+CONVERGENCE: complements opus-S13/mac-mini-S79 HYP-3795 (loop-map/group-action dictionary) by adding the TOURNAMENT/TILING pillar + dihedral D_p (which they did not touch).
+FILES: script lrc14_heptagon_tournament_tiling_kps.py (+.out); reflection the-atoms-are-a-heptagon-...-pentagon-kps.md.
+-> HYP-3793, HYP-3795, THM-523, THM-255/027 (Paley H-max), HYP-2576 (difference-winding=circular tournament), THM-024 (SC anti-aut), merged-metagraph G_n/Z_2, OPEN-Q-108.
+
+---
+
 ## mac-mini-2026-07-01-S79 -- THE LRC WITNESS SEARCH IS A GROUP ACTION: loop-function dictionary (~23 maps, group-like) + the dilation-orbit-hits-safe-box reformulation; orbit-count = Ramanujan char sum = #atoms (HYP-3795); builds on opus-S13 + kps-S7, converges klein-S68
 
 Prompt: pushing Verblunsky to the unit circle is a recursive metaphor for the LRC (points on a circle = runners on a loop); define creative functions between points on a loop, a whole dictionary, group-like; and work the clean next step, synthesizing.

@@ -1,0 +1,32 @@
+============================================================================================
+ (A)(B) THE 7 ODD POINTS = REGULAR HEPTAGON, symmetry D_7 (order 14)
+============================================================================================
+  vertices k=0..6 -> (2k+1)/14 = ['1/14', '3/14', '5/14', '1/2', '9/14', '11/14', '13/14']
+  consecutive gaps = ['1/7', '1/7', '1/7', '1/7', '1/7', '1/7'] all = 1/7? True  => REGULAR HEPTAGON
+  units (Z/14)* = [1, 3, 5, 9, 11, 13] (6 units) + center 7 (=7/14=1/2, the added vertex, NON-unit)
+  MULT (Z/14)* = <x3> orbit: [1, 3, 9, 13, 11, 5] (C_6, fixes 7); ADD heptagon rotation = k->k+1 (+1/7).
+  inversion iota (t->-t <=> a->14-a): 1<->13,3<->11,5<->9,7 fixed = reflection; a^-1 mod14: {1: 1, 3: 5, 5: 3, 9: 11, 11: 9, 13: 13}
+
+============================================================================================
+ (C) TOURNAMENTS ON 7 VERTICES + TILING MODEL
+============================================================================================
+  ROTATIONAL C_7(1,2,3): scores=[3, 3, 3, 3, 3, 3, 3] (regular? True); H(Ham paths)=175; c3=14; |Aut|=7; self-converse(=iota-inv/complement)? True
+     base path 0..6 needs 1 in S: True; TILING: forward tiles gaps [2, 3], backward gaps [4, 5, 6] (15 tiles total across the staircase)
+  PALEY C_7(1,2,4)=QR7: scores=[3, 3, 3, 3, 3, 3, 3] (regular? True); H(Ham paths)=189; c3=14; |Aut|=21; self-converse(=iota-inv/complement)? True
+     base path 0..6 needs 1 in S: True; TILING: forward tiles gaps [2, 4], backward gaps [3, 5, 6] (15 tiles total across the staircase)
+  Paley_7 H=189 is the n=7 MAXIMUM (project canon). Both are SELF-CONVERSE => iota-invariant => the
+  dihedral reflection = tournament complementation T->T^op (the merged-metagraph Z_2, CLAUDE.md).
+
+============================================================================================
+ (D) THE GENERAL BRIDGE: census class (Z/N)*, N=2p  <->  regular p-GON  <->  D_p  <->  p-vertex tournament
+============================================================================================
+   N=2p   p      poly D_p order  #units  min meas(L_C) rot-tourn H(p)
+      6   3  triangle         6       2        0.04413             3
+     10   5  pentagon        10       4        0.03226            15
+     14   7  heptagon        14       6        0.00000           175
+  => N=10 = PENTAGON (p=5) is the census EXTREMIZER (min meas 0.03226); N=14 = HEPTAGON (p=7) is
+     the TIGHT reference (meas 0, the AP {1..13}); N=6 = TRIANGLE (p=3) is looser (0.044).
+  The full-orbit census family = the REGULAR p-GONS; the two-clash family = the SPORADIC (non-polygon,
+  2-atom) sets = the Goddyn-Wong analog. Census infimum over full-orbit = optimization over p-gons,
+  attained at the PENTAGON. This is the tournament/dihedral image of the {AP, GW} dichotomy (THM-523).
+DONE.
