@@ -1,3 +1,34 @@
+## klein-2026-06-30-S47 -- BOUNDING the punctured-core wide hole (R4): the wide-hole MAP (M(P_k)=1/k resonance-miss / ~2/(n-1+k) spread; always >n/Phi6) + the FEJER framework (interval = spectral-4th-moment-max); the CRT-linkage obstruction to naive bounds (HYP-3749)
+
+Prompt: work on bounding the punctured-core wide hole with an inequality; poke the repo for past inequalities halfway; long session.
+
+FIRST WIND -- the wide-hole MAP. P_k = {1..n-2}\{k} (punctured core). M(P_k) = 1/k EXACTLY for k>(n-2)/2 (P_k
+misses resonance k -> q-witness at D=k, PROVED); ~2/(n-1+k) for small k (spread hole at D~n-1+k, verified
+n=10,12,14 with minor deviations e.g. n=10 k=3). CRUCIALLY M(P_k) > n/Phi6 for EVERY k (min 1/12 at k=n-2,
+n=14 > 14/183) -- the punctured core ALONE exceeds the covering-min. The 2 large speeds REDUCE M (k=1: 1/7->
+8/67) but the hole is ROBUST: min over 2 speeds = 7/89 (k=12, via double-killer 84=12.7=14.6 + 13), still >
+14/183. Filling the hole at one D barely lowers the max -- the missing-k deficit is spread across scales.
+
+REPO POKE (inequality inspiration) -> the FRAMEWORK:
+ (i) FEJER-optimality (HYP-+2873): additive energy A(E)=#{a+b=c+d}=spectral 4th moment ∫|E^|^4 is MAXIMIZED by
+   the consecutive interval; A({1..12})=1156 > A(P_k)=791..891, so the interval is the uniquely most-
+   concentrated core = the uniquely optimal cover; any puncture is strictly worse and 2 speeds can't restore it.
+ (ii) SET-INDEPENDENT FLOOR (HYP-3571): inf R' >= 1/(2 zeta(2))=0.304 over all coverings (Gamma_0(14)/zeta(2));
+   the right frame is |R'-1|. Ties to the zeta(2) of the Farey-grid reach (HYP-3746).
+ (iii) Beurling-Selberg minorants (HYP-2948).
+
+THE OBSTRUCTION: the per-modulus relaxation (2 speeds free residues per modulus) gives M=0 (place a runner at 0
+to cover the observer) -- too strong. The hole survives ONLY via the CRT-linkage of a single integer across
+moduli, so no simple 'P_k has 3 wide holes, 2 speeds fill 2' count works (2 speeds can be CRT-tuned to any
+finite set of moduli). The surviving hole is genuinely arithmetic.
+
+HONEST: PROVED M(P_k)=1/k (resonance-miss); VERIFIED punctured-core-alone M>n/Phi6 (all k, n=10,12,14) and the
+2-speed min >14/183 (n=14, tightest 7/89). The QUANTITATIVE inequality (Fejer concentration-deficit -> M-gap,
+closing R4 of HYP-3748) remains OPEN = the hard direction of the construction's uniqueness. Contribution: the
+wide-hole map + the Fejer/floor/minorant framework as the route.
+
+HOUSEKEEPING: filed HYP-3749. No collisions, no canon overridden, no court cases.
+
 ## klein-2026-06-30-S46 -- RIGORIZING step 3 of the lowness lemma: replace the exhaustive search by a FINITE 2-parameter grid check (bounded, RIGOROUS) + the |L|=2 normal-form reduction + unbounded->HYP-3745 (HYP-3748)
 
 Prompt: make step 3's budget bound fully rigorous to remove the dependence on the exhaustive search.
