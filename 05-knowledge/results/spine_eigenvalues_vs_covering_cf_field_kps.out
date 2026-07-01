@@ -1,0 +1,40 @@
+==================================================================================================
+ (1) PALEY SKEW SPINE eigenvalues: stay quadratic {0, ±i*sqrt(p)} = Q(sqrt(-p))?
+==================================================================================================
+    p p mod4     nonzero eigs (skew circ chi)  = ±i*sqrt(p)?      field
+    3      3                [-1.7321, 1.7321]           True  Q(sqrt-3)
+    7      3                [-2.6458, 2.6458]           True  Q(sqrt-7)
+   11      3                [-3.3166, 3.3166]           True Q(sqrt-11)
+   19      3                [-4.3589, 4.3589]           True Q(sqrt-19)
+   23      3                [-4.7958, 4.7958]           True Q(sqrt-23)
+   31      3                [-5.5678, 5.5678]           True Q(sqrt-31)
+  => the arithmetic (Paley/Gauss) spine STAYS QUADRATIC in Q(sqrt(-p)) for every p=3 mod4 (all deg 2).
+
+==================================================================================================
+ (3) COVERING CF at n=2p: covering-min = n/Phi6(n), 1/M=[n-1;n]; periodic [0;bar{n-1,n}] field
+==================================================================================================
+    p  n=2p Phi6(n)=n^2-n+1     M=n/Phi6   [0;bar(n-1,n)] Q(sqrt D)  sqfree D
+    3     6              31         6/31                 Q(sqrt255)       255
+    7    14             183       14/183                Q(sqrt8463)      8463
+   11    22             463       22/463               Q(sqrt53823)     53823
+   19    38            1407      38/1407              Q(sqrt495615)    495615
+   23    46            2071      46/2071              Q(sqrt119255)    119255
+   31    62            3783      62/3783             Q(sqrt3579663)   3579663
+  Phi6 field (6th cyclotomic Q(zeta6)) = Q(sqrt-3).  The covering-min itself is RATIONAL (finite CF [n-1;n]).
+
+==================================================================================================
+ DO THE FIELDS MATCH?
+==================================================================================================
+    p  spine Q(sqrt-p)  Phi6 field periodic-CF sqfree match spine=Phi6?
+    3        Q(sqrt-3)   Q(sqrt-3)         Q(sqrt255)              True
+    7        Q(sqrt-7)   Q(sqrt-3)        Q(sqrt8463)             False
+   11       Q(sqrt-11)   Q(sqrt-3)       Q(sqrt53823)             False
+   19       Q(sqrt-19)   Q(sqrt-3)      Q(sqrt495615)             False
+   23       Q(sqrt-23)   Q(sqrt-3)      Q(sqrt119255)             False
+   31       Q(sqrt-31)   Q(sqrt-3)     Q(sqrt3579663)             False
+
+ VERDICT: the SPINE stays quadratic Q(sqrt-p) (imaginary) for all p=3mod4; the COVERING is rational
+   (finite CF Phi6(n)/n) with Phi6-field Q(sqrt-3), and the periodic deep-well CF is REAL quadratic
+   Q(sqrt D_n).  The spine field Q(sqrt-p) MATCHES the Phi6/covering field Q(sqrt-3) ONLY at p=3 (n=6,
+   PROVED).  For p=7 (n=14) they DIVERGE: certification lives in Q(sqrt-7), covering geometry in Q(sqrt-3).
+DONE.

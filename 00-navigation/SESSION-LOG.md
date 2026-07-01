@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-01-S21 -- THE SPINE STAYS QUADRATIC Q(sqrt-p) BUT THE COVERING FIELD IS Q(sqrt-3); they MATCH ONLY AT n=6, and the SPLIT at n=14 (Q(sqrt-7) vs Q(sqrt-3)) is the difficulty
+
+Prompt: push the next thread; do the spine eigenvalues at larger n stay quadratic, and do their fields match the covering CF?
+
+ANSWERS (verified p=3,7,11,19,23,31): (1) PALEY SKEW SPINE eigenvalues = {0, ±i*sqrt(p)} for EVERY p=3mod4 -- always DEGREE 2, field Q(sqrt-p). STAY QUADRATIC: YES. (Contrast: the combinatorial SC blue-spine metagraph is a large graph, high-degree spectrum -- the ARITHMETIC spine stays quadratic, the combinatorial one does not.) (2) COVERING-min = n/Phi6(n), 1/M=[n-1;n] finite CF => M RATIONAL; the arithmetic content Phi6 (6th cyclotomic) has FIXED field Q(zeta6)=Q(sqrt-3) (Eisenstein). MATCH spine=covering ONLY at p=3 (n=6, PROVED); at n=14 they SPLIT: certification Q(sqrt-7) vs covering Q(sqrt-3).
+DEEP FINDING: LRC proved exactly where the Gauss-sum CERTIFICATION field Q(sqrt-p) = the Eisenstein COVERING field Q(sqrt-3), i.e. p=3/n=6. n=14 is the FIRST n=2p where the certificate LEAVES the covering field => a proof must work in the BIQUADRATIC Q(sqrt-3,sqrt-7) and BRIDGE two fields. Field-split = the extra arithmetic = why LRC(14) is the first hard case (a clean necessary-condition reading of the by-n difficulty S18).
+DEEP-WELL CF sees the COMPOSITUM: periodic [0;bar{n-1,n}] = REAL quadratic Q(sqrt D_n), D_n=n(n-1)(n^2-n+4); at n=14 squarefree part 3*7*13*31 CONTAINS 21=3*7 = the real compositum of Q(sqrt-3),Q(sqrt-7) (sqrt-3*sqrt-7=-sqrt21). So the binding CF sees BOTH fields. (apex p | D_n always since p|n; the 3p compositum is clean where 3||D_n, not universal -- n=46 has 3^2|D so 3 drops.)
+NEXT: does the biquadratic Q(sqrt-3,sqrt-7) give the BRIDGE (certification interacting with Eisenstein covering via sqrt21 = OPEN-Q-108 residual)? For p=1mod4 (easy Brouwer regime): g_p=sqrt(p) REAL (chi even) => spine Q(sqrt p) REAL vs covering Q(sqrt-3) imaginary -- never match, but Brouwer needs none.
+CONVERGENCE nearby: mac-mini-S89 HYP-3816 (U/adjacency spectrum sees what skew misses) -- complementary spectral-invariant work.
+Reflection: the-spine-stays-quadratic-Q-sqrt-minus-p-but-the-covering-field-is-Q-sqrt-minus-3-they-split-at-n14-kps.md; script spine_eigenvalues_vs_covering_cf_field_kps.py (+.out). Not a HYP reservation.
+-> HYP-3815 (opus Paley skew=Frobenius), the-singular-series-lefschetz (S20 g_7=i sqrt7), twentyeight (pillars), HYP-3773 (Phi6/-1/12), HYP-3796 (deep-well CF), S18 (by-n), OPEN-Q-108.
+
+---
+
 ## mac-mini-2026-07-01-S89 -- YES: the U-spectrum (adjacency A) SEES the flip-rank excess the skew-spectrum (S=A-A^T) MISSES -- U determines |Aut|, skew is blind; mechanism A=(J-I+S)/2, skew=converse-EVEN throws away the score (HYP-3816)
 
 Prompt: try to determine whether the U-spectrum sees the flip-rank excess the skew-spectrum misses.
