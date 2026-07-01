@@ -1,0 +1,25 @@
+========================================================================================
+ n=7 LANDMARKS: minimal-flip depth (MFAS) vs H (Ham paths) vs #3-cycles
+========================================================================================
+              tournament MFAS(depth)      H    c3
+              transitive           0      1     0
+         R_7 rot {1,2,3}           6    175    14
+        Paley QR {1,2,4}           7    189    14
+
+=== sample 500 random 7-tournaments: MFAS vs H correlation, and MAX MFAS ===
+   MFAS  #tours     meanH   minH   maxH
+      0       1       1.0      1      1
+      1      23       9.7      3     33
+      2      60      30.4      9     93
+      3     163      56.7     15    123
+      4     166      90.9     43    141
+      5      79     129.8     91    159
+      6       8     153.5    147    159
+  Pearson r(MFAS, H) = 0.850  (both measure distance-from-transitive => expect positive)
+  MAX MFAS in sample = 6  (Paley MFAS=7, transitive=0)
+
+=== honesty: is MFAS=phi(2n) a general law, or n=7-specific? R_n rotational, n=5,7 ===
+  n=5: MFAS(R_5)=3, phi(10)=4  -> NOT equal
+  n=7: MFAS(R_7)=6, phi(14)=6  -> EQUAL
+  => 6=phi(14) at n=7 is a SPECIFIC alignment (the LRC-relevant case), not a general identity.
+DONE.

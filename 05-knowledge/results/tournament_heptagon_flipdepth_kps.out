@@ -1,0 +1,25 @@
+==============================================================================================
+ HEPTAGON TOURNAMENTS: minimal-flip depth to transitive = MIN FEEDBACK ARC SET
+==============================================================================================
+
+ R_7 rotational {1,2,3}:
+   #3-cycles=14  Ham-paths(H)=175  |Aut|=7
+   base-ordering 0->..->6 back-arcs (opus's flipped tiles) = 6
+   TRUE MIN FEEDBACK ARC SET (min back-arcs over all 7! orders) = 6  (best order (0, 1, 2, 3, 4, 5, 6))
+   => opus's 6 is the BASE count; the metagraph geodesic to transitive is MFAS=6 = phi(14)=6 (atom count)!
+
+ Paley_7 QR {1,2,4}:
+   #3-cycles=14  Ham-paths(H)=189  |Aut|=21
+   base-ordering 0->..->6 back-arcs (opus's flipped tiles) = 7
+   TRUE MIN FEEDBACK ARC SET (min back-arcs over all 7! orders) = 7  (best order (0, 1, 2, 3, 4, 5, 6))
+   => opus's 6 is the BASE count; the metagraph geodesic to transitive is MFAS=7 (NOT 6; base count 6 is not minimal)
+
+==============================================================================================
+ R_7 <-> Paley_7 minimal flip distance, and to transitive
+==============================================================================================
+   flip_dist(R_7, Paley_7) = 5  (metagraph geodesic between the two heptagon classes)
+   MFAS(R_7)=6, MFAS(Paley_7)=7  (depth of each below transitive)
+
+ INTERPRET: MFAS = the minimal-flip metagraph depth; opus's '6 tiles' is the base-labeling Hamming
+   weight, an UPPER bound on the geodesic. The true depth is the feedback-arc-set invariant.
+DONE.
