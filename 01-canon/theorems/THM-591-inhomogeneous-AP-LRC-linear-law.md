@@ -1,13 +1,14 @@
 ---
 id: THM-591
 title: The inhomogeneous Lonely-Runner gap of the AP is exactly linear in the observer position
-status: PROVED (M_c>=env EXACT via rational-q achievability + 1-Lipschitz; M_c<=env via clumping, structural step verified)
+status: PROVED (both directions ELEMENTARY -- M_c>=env via rational-q achievability + 1-Lipschitz; M_c<=env via the avoided-arc-edge argument)
 date: 2026-06-30
 session: opus-2026-06-30-S1
 depends_on:
   - THM-405   # homogeneous AP M=1/n (the c=0 case)
-  - THM-523   # q-witness / covering-set reduction
+  - THM-523   # q-witness / covering-set reduction (the upper bound is its dual)
   - THM-360   # unit-endpoint divisibility filter (t=a/n)
+  - THM-386   # far_iff_fract: the avoided-arc characterization (Lean-checked)
 related:
   - OPEN-Q-108
   - HYP-3747
@@ -51,17 +52,24 @@ set ⇒ `M_c ≥ env` **everywhere** — the law is exact, no dips. (See `DIP-UP
 The optimal lonely time (mirror form `t=1/q`, `q=n/(1−2c)`) **slides `1/n → 0`** as the observer walks
 origin → antipode: `c=0 ⇒ t=1/n` (the THM-405 covering-min), `c→1/2 ⇒ t→0` (the trivial antipode).
 
-## B. Upper bound (optimality) — the clumping inequality [steps (1),(3) rigorous]
+## B. Upper bound (optimality) — the avoided-arc-edge argument [ELEMENTARY, fully rigorous]
 
-Suppose `min_v ‖vt−c‖ > env := 1/n + c(n−2)/n` for some `t`. (1) The `n−1` runners then avoid an arc of
-length `2·env`, so they lie in an arc of length `(n−2)/q` (`q=n/(1−2c)`); their `n−2` internal gaps sum to
-`≤(n−2)/q`, so the smallest is `≤1/q`, i.e. **`‖jt‖ ≤ 1/q` for some `j ≤ n−2`** (a forced *clump*). (2) The
-runners collapse onto `j` sub-blocks at the `j`-division points, so a gap centered on `c` has `M_c ≤ 1/(2j)`
-with `c ≈ (2m+1)/2j`. (3) `1/(2j) ≤ env` at `c=(2m+1)/2j` is the integer inequality
-> **`n ≤ 2j + (2m+1)(n−2)`**,  true for all `j≥1, m≥0` (`n≥3`), **tight iff `(j,m)=(1,0)`** = the block.
-So `M_c ≤ env`, contradiction. ∎  The unique tight case is the single clump (`j=1`) = the achievability
-block; every finer clump (`j≥2`) loses by `≥2`. The `O(1/n²)` cluster-width slop (the dips) is dominated by
-this `≥2` slack and is verified to `Qmax=10n`.
+Set `q := n/(1−2c)` (so `1/q = (1−2c)/n`). The one identity that closes it:
+> **`c − env = (2c−1)/n = −1/q`**  and  **`1 − 2·env = (n−2)/q`.**
+So the observer's avoided arc `[c−env, c+env]` has **left endpoint exactly `−1/q`**; mod 1 it is
+`[0, c+env] ∪ [1−1/q, 1)`, which **contains `(−1/q, 1/q)`** (since `1/q ≤ c+env ⟺ 0 ≤ 2cn`).
+
+**Proof.** Suppose `min_v ‖vt−c‖ > env` for some `t`. Then no runner lies in `[c−env, c+env]`, so the `n−1`
+runners lie in the complementary **open** arc of length `1−2·env = (n−2)/q`. Their `n−2` consecutive gaps sum
+to *strictly less* than `(n−2)/q`, so the smallest is `< 1/q`; being the arc-distance between two consecutive
+runners it equals `‖jt‖` with `j ∈ {1,…,n−2}`. Hence `‖jt‖ < 1/q`, i.e. `jt mod 1 ∈ (−1/q, 1/q) ⊆` the
+avoided arc — so the runner `jt` has `‖jt − c‖ ≤ env`, contradicting the hypothesis. ∎
+
+No three-gap theorem, no cluster widths, no `Qmax`. The `c=0` case recovers the classical homogeneous tightness
+`M_0 ≤ 1/n` (THM-405): the forced runner with `‖jt‖ < 1/n` lands in `[−1/n,1/n]`. This is the *dual* of the
+q-witness (THM-523): the forced near-`0` runner is exactly what the observer's `1/q`-aligned danger arc
+catches. (See `UPPER-BOUND-CLOSED-…` reflection. Supersedes the earlier clumping-inequality argument, which had
+an `O(1/n²)` structural slop — now removed.)
 
 ## C. Corollaries
 
@@ -91,6 +99,8 @@ different quantity). The known reduction stands: by THM-523/THM-360, LRC(n) hold
 04-computation/lrc_upperbound_clumping_inequality_opus_20260630.py
 04-computation/lrc_inhomog_linear_envelope_opus_20260630.py
 04-computation/lrc_dip_upgrade_rational_q_lipschitz_opus_20260630.py
+04-computation/lrc_upper_bound_avoided_arc_edge_PROOF_opus_20260630.py
+07-reflections/UPPER-BOUND-CLOSED-the-avoided-arc-edge-is-minus-1-over-q-so-the-forced-runner-lands-inside-it-opus-20260630.md
 07-reflections/PROOF-the-inhomogeneous-AP-LRC-linearity-the-block-construction-gives-Mc-equals-1-over-n-plus-c-n-minus-2-over-n-opus-20260630.md
 07-reflections/CORRECTION-the-inhomogeneous-AP-LRC-is-exactly-linear-Mc-equals-1-over-n-plus-c-times-n-minus-2-over-n-opus-20260630.md
 07-reflections/DIP-UPGRADE-the-inhomogeneous-AP-LRC-law-is-EXACT-rational-q-achievability-plus-lipschitz-kills-the-dips-opus-20260630.md
