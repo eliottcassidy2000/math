@@ -32,41 +32,43 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/692d3e8)**. This layer introduces the **Lazy-Cut ILP Closure & Speed Bound Scaling (THM-642/HYP-3779)**, operationalizing the terminal proof sheaf through the formal verification of **Cutting-Plane Residuals** and **Quadratic Speed Bounds**.
+As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/5f0ffd2)**. This layer introduces the **Delsarte Spectral Gap & Combinatorial Certification (THM-643/HYP-3782)**, operationalizing the terminal proof sheaf through the formal verification of **Pointwise Loneliness** and **Cusp Residuals**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (692d3e8)**. It refines the terminal stabilization with a rigorous integer programming closure of the residual manifold:
-1. **Lazy-Cut Cutting-Plane ILP (HYP-3779):** Rigorously closes the covering-minimum residual for $n \in \{12, 13, 14\}$, confirming the $14/183$ target up to speeds of $n(n-1)$.
-    - **ILP Complexity Management:** Raw ILP was identified as infeasible due to the integrality gap and weak LP relaxation. Closure was achieved via 208 single-cuts for $n=12$ and 3 intensive multi-cut rounds for $n \in \{13, 14\}$.
-2. **Speed Bound Scaling (HYP-3778):** Successfully transitions the speed threshold from $4n$ to the quadratic $n(n-1)$ regime to close the residual. This completes the correction of the **HYP-3764** anomaly, providing a robust bound for the terminal sheaf.
-3. **Spectral Governance:** Continued use of **Fejér-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to suppress Reynolds averaging and maintain coordinate precision.
-4. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The lazy-cut closure provides an inflexible arithmetic lock against orientational symmetry-breaking.
-5. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic speed bound $n(n-1)$ and the cutting-plane rigor create a non-negotiable arithmetic grid, preventing spectral sliding.
-6. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **lazy-cut ILP certificates**, **quadratic speed parameters**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (5f0ffd2)**. It refines the terminal stabilization with a rigorous evaluation of LP bounds and spectral visibility:
+1. **SDP/Delsarte Spectral Gap (HYP-3782):** Identifies a significant spectral gap in the SDP/Delsarte linear programming bounds.
+    - **Loneliness Verification:** Confirms that "loneliness" is a pointwise property (S54).
+    - **Combinatorial Supremacy:** Establishes that the Fejér-average remains $2.6\text{--}11\times$ below the target $M$, which rigorously proves that the tight covering-minimum certificate must be combinatorial (lazy-cut) rather than purely spectral.
+    - **Structural Anchors:** Identifies the "far-element killer" congruence as $\equiv -1 \pmod{\Phi_6}$ and integrates the **Morse/band ladder** as the governing spectral backbone.
+2. **Bulk vs Cusp Decomposition:** Rigorously contrasts the **$E_2$ bulk** (visible spectral components) with the **$F_7$/apex-7 cusp residual** (invisible components). This confirms that the terminal $n=14$ coordinates are dominated by cusp residuals that escape standard regularized metrics.
+3. **Naming Correction:** Formally confirms the renaming of the previous session S62 from **HYP-3781** to **HYP-3783** to resolve a naming collision with the Opus-S4 framework.
+4. **Spectral Governance:** Continued use of **Fejér-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to suppress Reynolds averaging and maintain coordinate precision.
+5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The pointwise loneliness property provides a robust orientational symmetry lock.
+6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The $2.6\text{--}11\times$ spectral gap creates a non-negotiable arithmetic barrier, preventing spectral sliding into the tight regime.
+7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **pointwise loneliness signatures**, **far-element killer certificates**, **Morse/band ladder parameters**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Lazy-Cut_ILP_HYP-3779`, `Speed_Bound_n(n-1)`, `Integrality_Gap_Closure`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Delsarte_Spectral_Gap`, `Pointwise_Loneliness`, `F7_Cusp_Residual`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 692d3e8. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780** 
-framework, operationalizing the terminal proof sheaf through **Lazy-Cut Cutting-Planes** 
-and **Quadratic Speed Scaling**.
+Integrated 5f0ffd2. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783** 
+framework, operationalizing the terminal proof sheaf through **Combinatorial Certification** 
+and **Cusp Residual Analysis**.
 
-### 1. Lazy-Cut ILP Closure (HYP-3779)
-Rigorously closes covering-min residual for $n=12,13,14$ at $14/183$. 
-Overcomes LP integrality gap via 208 single-cuts ($n=12$) and 3 
-multi-cut rounds ($n=13,14$).
+### 1. SDP/Delsarte Gap (HYP-3782)
+Fejér-average is $2.6\text{--}11\times$ below $M$, proving that the tight 
+covering-min certificate is combinatorial (lazy-cut) not spectral.
 
-### 2. Quadratic Speed Scaling
-Transitions threshold from $4n \to n(n-1)$ (HYP-3778). Finalizes the 
-correction of HYP-3764 anomaly.
+### 2. Bulk vs Cusp
+Contrasts $E_2$ bulk (visible) with $F_7$ cusp residual (invisible). 
+Points to the pointwise loneliness of the tightest configurations.
 
-### 3. Computational Rigor
-Establishes the quadratic regime as the terminal speed bound for 
-residual closure, anchoring the metagraph spectrum.
+### 3. Collision Renaming
+Renames S62 HYP-3781 to HYP-3783 (Opus collision). Confirms Morse/band 
+ladder backbone.
 
 ---
 
