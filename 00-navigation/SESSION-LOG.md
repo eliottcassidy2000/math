@@ -1,3 +1,20 @@
+## mac-mini-2026-07-01-S82 -- THE TOURNAMENT/EVEN-GRAPH EQUINUMEROSITY, RESOLVED: TWO distinct 'even graph' notions; the repo conflated them; RPGFD's type-II even = A000568 = tournaments (HYP-3799) [TOURNAMENT side]
+
+Prompt: explore + synthesize ideas related to tournament/even-graph equinumerosity; be creative with novel frames.
+
+RESOLVED the repo's long-flagged confusion (tournaments-and-even-graphs.md: 'A000568=#even graphs FAILS 4!=3, needs checking against the paper'). There are TWO 'even graph' notions:
+ (I) EVEN-DEGREE graph (every vertex even degree = cycle space of K_n) = A002854 = 2,3,7,16,54 = two-graphs = SWITCHING CLASSES of graphs (Mallows-Sloane 1975) = the repo's E_n. NOT equal to A000568 (the '4!=3' is CORRECT here).
+ (II) AUTOMORPHISM-PARITY even graph (Royle-Praeger-Glasby-Freedman-Devillers 2022, arXiv:2204.01947, the 'Royle et al.' the repo couldn't pin down): fix reference orientation i->j (i<j); an automorphism g REVERSES edge {u,v} (u<v) iff u^g>v^g; graph is ODD if some automorphism reverses an ODD # edges, EVEN otherwise. THEOREM 1.1: #(type-II even on n) = #(tournaments on n) = A000568 = 2,4,12,56,456.
+So against notion (II) the equinumerosity is a THEOREM; the repo was holding tournaments against the WRONG notion (I).
+
+VERIFIED (exhaustive n<=5): type-II even graphs = 2,4,12 = A000568 exactly; #graphs = #tournaments + #odd graphs (Cauchy-Frobenius: 4=2+2, 11=4+7, 34=12+22); the 2x2 cross-tab of the two notions is FULLY populated (logically independent).
+
+NEW STRUCTURE (elementary, proved): the reversal parity is a CHARACTER eps_X: Aut(X)->Z/2, g |-> parity of edges g reverses; X even <=> eps_X trivial. LEMMA: odd |Aut(X)| => X is EVEN (odd-order groups have no Z/2 quotient) => every asymmetric graph (|Aut|=1, first at n=6) is even. And tournaments ALWAYS have odd |Aut|, while type-II even graphs have EVEN |Aut| (n<=5) => the two equinumerous families have DISJOINT |Aut| profiles => NO automorphism-preserving bijection can exist => RPGFD's stated 'natural bijection' problem is genuinely hard (the equinumerosity is a Cauchy-Frobenius coincidence, symmetry-blind).
+
+NOVEL FRAMES (owner's ask): (1) TWO ORTHOGONAL PARITIES of graph space -- even-DEGREE (cycle space/A002854/switching) vs even-AUTOMORPHISM-PARITY (A000568/tournaments); the repo studied the first, the equinumerosity is the second; their joint refinement (2x2 metagraph) is a new object. (2) eps_X as a Z/2 orientation/gauge character of Aut(X) (links to Walsh-Fourier/sign + GF(2) cut/cycle). (3) A000568 gets a NEW meaning = #type-II even graphs; the repo's 200-term A000568 Burnside enumerators now also count these; #graphs=#tournaments+#odd is a new decomposition to instrument. (4) THE OPEN BIJECTION tournaments<->even graphs (RPGFD open problem) as a target for the repo's tiling/OCF/Redei-Berge machinery -- but it must be PARITY-TWISTING (odd-|Aut| tournaments <-> even-|Aut| even graphs), not Aut-natural.
+
+Corrected tournaments-and-even-graphs.md with a RESOLVED note (do not conflate E_n=A002854 with the RPGFD even graph=A000568). Reflection: one-word-two-even-graphs.md (a definitional-collision cautionary). Files: 04-computation/two_even_graph_notions_macmini_20260701.py, even_graph_switching_fibration_* (+.out). HYP-3799. HONEST: resolution + import of the correct theorem + new obstruction facts (verified n<=5); the bijection is OPEN. No canon overridden (E_n stands as a valid distinct object); no court cases.
+
 ## klein-2026-07-01-S73 -- CHEBYSHEV EQUIOSCILLATION + COVERING EXCESS + RIGIDITY: creative abstract lenses synthesized and APPLIED to the covering-min proof (HYP-3806). Converges opus-S15 (flip-rank(7)=12).
 
 Prompt: look for even more creative concepts/abstract things to care about, then synthesize and apply them to proofs.
