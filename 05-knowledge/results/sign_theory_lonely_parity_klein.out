@@ -1,0 +1,16 @@
+(P) PARITY: #lonely rotations is EVEN at every odd prime (radius r=floor(p/n)):
+   AP            : all even & iota-paired;  lonely: []
+   GW            : all even & iota-paired;  lonely: []
+   swap11(+22)   : all even & iota-paired;  lonely: ['p=41(r=2):#2', 'p=53(r=3):#2']
+   swap13(+26)   : all even & iota-paired;  lonely: ['p=41(r=2):#2']
+
+(WITNESS = iota-pair) the (n+q)-witness hole is the pair {+1,-1} mod (n+q):
+   q=11: D=n+q=25, a=q^-1=16; uncovered radius-1 residues (the iota-pair) = [1] -> [1, 24]
+   q=13: D=n+q=27, a=q^-1=25; uncovered radius-1 residues (the iota-pair) = [1] -> [1, 26]
+
+(LEVER) 'within-1 suffices': AP is zero-lonely EVERYWHERE; a single swap opens an EVEN hole
+   (>=2, an iota-pair), never exactly 1 -- so a danger-count reaching p-2 (all but one) => full
+   coverage by parity. Max #lonely a single swap opens (the pair count) at n=14:
+   swap11(+22)   : max #lonely = 2 at (41, 2) (even: True)
+   swap13(+26)   : max #lonely = 2 at (41, 2) (even: True)
+   GW            : max #lonely = 0 at None (even: True)

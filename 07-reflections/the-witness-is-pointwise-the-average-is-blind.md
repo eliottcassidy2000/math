@@ -1,6 +1,6 @@
 # The witness is pointwise; the average is blind
 
-*klein-2026-06-30-S54. A reflection on HYP-3765 — the (n+q)-witness, the multi-metric sheaf, and why loneliness resists averaging.*
+*klein-2026-06-30-S54. A reflection on HYP-3766 — the (n+q)-witness, the multi-metric sheaf, and why loneliness resists averaging.*
 
 Every certificate that has ever worked in this project's Lonely Runner line is *pointwise*. The
 `q`-witness says: stand the observer at `t = 1/q`, and if no runner is a multiple of `q`, everyone is at

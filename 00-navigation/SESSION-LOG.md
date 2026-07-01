@@ -1,3 +1,27 @@
+## klein-2026-06-30-S55 -- SIGN THEORY ON THE OPEN CRUX: the antipodal involution reduces sheaf-coverage to an iota-ORBIT set-cover (halving); every witness is an iota-symmetric hole; parity lemma; Borsuk-Ulam bridge (HYP-3767)
+
+Prompt: work on the open crux (the multi-metric danger sheaf covers the modulus site); think from the perspective of sign theory.
+
+The sign = the ANTIPODAL involution iota: a->-a (= t->1-t = the complement map, THM-584 -- the SAME sign that runs the tournament mandate). Filed HYP-3767; reflection loneliness-is-antipodally-paired.md; scripts sign_theory_lonely_parity_klein.py (+ _general.out).
+
+KEY: since ||x|| is EVEN, each speed's danger zone D_s(r)={a: sa in {-r..r} mod D} is iota-SYMMETRIC => a covered IFF -a covered => COVERAGE IS AN ORBIT QUESTION over (Z/D)/iota (HALVES the space).
+
+(P) PARITY LEMMA (PROVED): for ODD D, iota is fixed-point-free on nonzero residues, so #lonely rotations at radius r is EVEN and lonely rotations come in +-PAIRS. Verified odd D=3..59 (prime AND composite), all sets. Even-D caveat: a=D/2 is iota-fixed (parity can be odd) -- the clean parity is an ODD-modulus phenomenon (same odd/even split as THM-584/HYP-3538).
+
+WITNESS = iota-symmetric hole: q-witness (radius 0) = the iota-FIXED hole {0} (resonance); k-/(n+q)-witness (radius 1) = the iota-PAIR {+1,-1}. VERIFIED the (n+q)-witness hole is exactly {1, n+q-1} mod (n+q) -- so 'the pair {q,n} vacates +-1' IS 'the orbit {+-1} is uncovered'. The witness hierarchy radius r = the orbit ladder {+-1},...,{+-r}.
+
+REDUCTION: each speed covers <=r nonzero orbits at radius r; the crux = an ORBIT SET-COVER over the (D-1)/2 nonzero orbits by n-1 speeds. Parity forbids off-by-one (you're off by whole orbits) -- a count reaching 'all but <1 orbit' is complete.
+
+BRIDGE (OPEN-Q-108/THM-584): the iota-equivariant danger cover = the LRC face of the Borsuk-Ulam 'odd index'; the crux = a GLOBAL iota-equivariant degree (the sheaf's antipodal Cech class) vanishes. The Redei parity (H(T) odd) and runner-loneliness are two readings of ONE iota-equivariant degree.
+
+HONEST NEGATIVE: no radius<=1 localization -- radius>=2 witnesses genuinely exist (drop-11 at n=14 lonely at D=41 r=2, D=53 r=3), because danger zones OVERLAP and the naive orbit-count (n-1)r>=(D-1)/2 is an UPPER bound on coverage not a lower one. Per-modulus parity is trivially even (a constraint, not a detector). So sign theory SHARPENS the crux (orbit halving + parity) but does NOT close it; the real object is the GLOBAL degree = OPEN-Q-108, open.
+
+HOUSEKEEPING: HYP-3765 collision resolved -- opus-S3 (Riesz log-barrier) keeps 3765; I renamed my S54 (n+q)-witness/sheaf to HYP-3766 (file+INDEX+reflection+SESSION-LOG updated).
+
+NEXT: (1) compute the global iota-equivariant Cech/degree class over the modulus site (OPEN-Q-108 realization); (2) the orbit set-cover LP/inequality on (Z/D)/iota; (3) does the sign grading interact with opus's signed log-barrier certificate (HYP-3765)?
+
+--- prior entries ---
+
 ## opus-2026-06-30-S3 -- The Riesz factorization of {0,1,2,30,31,32,60,61} grounds the multiscale LOG-BARRIER signed certificate: T_S=T_A*T_B-z^62 EXACT => log ADDS across scales => predicts where w*Delta_w peaks; the barrier separates tight (+0.43) from holes (-inf) via the AM-GM gap (HYP-3765)
 
 Prompt: confirm the Riesz factorization of {0,1,2,30,31,32,60,61} numerically (pure DFT), show it predicts where w*Delta_w peaks (grounds route A), use w as a log-barrier smoothing inside a Beurling-Selberg/Fourier-positivity signed certificate, and look back at signed-vs-unsigned series in the repo.
@@ -13,11 +37,11 @@ Also: a full signed-vs-unsigned scan of BOTH threads (search agent) -- the law i
 HONEST CEILING: the barrier is a RELAXATION (min m>=1 => B>=0, not conversely) and does NOT pin the AP among covering sets (GW B=0.438 > AP 0.428) -- it certifies covering, not consec-max. The band-limited signed majorant construction for the AP (summed per-scale Beurling-Selberg loss < 0.43) is the OPEN research target.
 
 NEXT: (a) attempt the actual band-limited signed majorant Q of -log m for the AP, degree set by the finest scale (Beurling-Selberg gap 1/(N+1)); (b) the AP-vs-GW selection stays with the pointwise/support route (klein-S51/HYP-3762 tight=>support>=n-5); (c) NOTE the klein-S53 HYP-3764 covering-min "n>=12 transition" is UNVERIFIED (challenges HYP-3737/3747 basis) -- flagged, worth a look.
-## klein-2026-06-30-S54 -- THE (n+q)-WITNESS RIGORIZED + THE MULTI-METRIC WITNESS SHEAF + rung realizability (H7) (HYP-3765)
+## klein-2026-06-30-S54 -- THE (n+q)-WITNESS RIGORIZED + THE MULTI-METRIC WITNESS SHEAF + rung realizability (H7) (HYP-3766)
 
 Prompt: work on H7 and the multi-metric sheaf approach; rigorous (n+q)-witness for single-swap large-primes-forced regime + combinatorial anchoring for the sporadic n=14 doublings; spectral governance (Fejer-Bochner minorants, Reynolds averaging suppressed).
 
-Built on opus's (n+q)-witness (tight regime) + my HYP-3763/3764. Filed HYP-3765; reflection the-witness-is-pointwise-the-average-is-blind.md; script rung_realizability_nq_witness_klein.py (+ nq_witness_gluing_klein.out).
+Built on opus's (n+q)-witness (tight regime) + my HYP-3763/3764. Filed HYP-3766; reflection the-witness-is-pointwise-the-average-is-blind.md; script rung_realizability_nq_witness_klein.py (+ nq_witness_gluing_klein.out).
 
 (A) (n+q)-WITNESS PROVED (single-swap tight regime): q COPRIME to n, (n-1)/2<q<=n-1, drop q from AP {1..n-1} + add small multiple mq => M>=2/(n+q)>1/n. Proof: at a=q^{-1} mod (n+q), residues +-1 pull back to speeds q (DROPPED) and n (OUT OF RANGE) -- both absent => radius-1 hole => M>=2/(n+q); q<=n-1 => n+q<2n => 2/(n+q)>1/n. Coprimality q∤n is SHARP: q=7 at n=14 (apex, 7|14) has no q^{-1} mod 21, witness FAILS. VERIFIED exact n=14,18,20 (M=2/(n+q)). The composite doubling n-2 (->2(n-2)=GW) is the ONLY survivor, tight iff n==2 mod6 (14,20 yes; 18 no) -- the sporadic doublings anchored.
 
@@ -29,7 +53,7 @@ Built on opus's (n+q)-witness (tight regime) + my HYP-3763/3764. Filed HYP-3765;
 
 RESIDUAL / open crux: the general-S residual (huge multiple / runner n at residue -1 defeats a single (n+q)) is handled BY the sheaf (another metric catches it) but not yet by ONE closed statement -- proving the local sections cover the whole site (a Cech 'no lonely point survives all metrics') is the LRC-hard core.
 
-NEXT: (1) prove the sheaf covers (Cech gluing over the modulus site); (2) close the general-S residual via the glide transition maps; (3) characterize a(n) realizability. NOTE prior HYP-3763 collision (opus-S2 & my S52) -- opus's went to INDEX, mine is the file; no conflict now.
+NEXT: (1) prove the sheaf covers (Cech gluing over the modulus site); (2) close the general-S residual via the glide transition maps; (3) characterize a(n) realizability. NOTE prior HYP-3765 (opus Riesz) + HYP-3763 collisions (opus-S2 & my S52) -- opus's went to INDEX, mine is the file; no conflict now.
 
 --- prior entries ---
 

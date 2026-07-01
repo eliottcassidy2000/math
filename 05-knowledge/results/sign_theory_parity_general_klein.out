@@ -1,0 +1,12 @@
+(P-general) PARITY at ALL ODD D (prime OR composite): #lonely even + iota-paired?
+   odd D=3..59: all even & iota-paired? True  (iota a->-a free on nonzero residues for ODD D)
+
+(EVEN D caveat) at EVEN D, a=D/2 is an iota-FIXED point -> parity can be ODD:
+   D=16: #lonely=0 (even? True); D/2=8 lonely? False
+   D=20: #lonely=0 (even? True); D/2=10 lonely? False
+   D=26: #lonely=2 (even? True); D/2=13 lonely? False
+   D=28: #lonely=0 (even? True); D/2=14 lonely? False
+
+(HONEST scope) radius>=2 witnesses DO exist (overlaps beat naive orbit-count):
+   swap11 at D=41, r=2: #lonely=2 -> a genuine radius-2 iota-pair witness
+   swap11 at D=53, r=3: #lonely=2 -> a genuine radius-3 iota-pair witness
