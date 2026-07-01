@@ -1,0 +1,70 @@
+n=14 core=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  r=r'=1/14  2r'=1/7=0.1429  Phi6=183  t*=0.07650=[0;13,14]
+L=meas(L_C(core))=0.03410  #intervals I=12  (Cantor set at the binding)
+
+===== PART A: FRACTAL Fourier structure (self-similar combs at CF convergent denominators) =====
+CF of t*=14/183 = [0;13,14]; convergent denominators q1=13 (=n-1, the MISSING speed), q2=183=Phi6.
+ two-atom law hat1(k) ~ L cos(2π k t*); peaks where k t* ~ integer i.e. k ~ multiples of 1/t*=13.07
+   k=  13: hat1=+0.03366  hat1/L=+0.987  cos(2πk t*)=+0.999
+   k=  26: hat1=+0.03239  hat1/L=+0.950  cos(2πk t*)=+0.998
+   k=  39: hat1=+0.03042  hat1/L=+0.892  cos(2πk t*)=+0.995
+   k=  52: hat1=+0.02794  hat1/L=+0.819  cos(2πk t*)=+0.991
+   k=  65: hat1=+0.02519  hat1/L=+0.739  cos(2πk t*)=+0.985
+   k= 183: hat1=-0.00613  hat1/L=-0.180  cos(2πk t*)=+1.000
+   k= 196: hat1=-0.00499  hat1/L=-0.146  cos(2πk t*)=+0.999
+ SELF-SIMILARITY: the comb around k=0 (DC) repeats around each resonance k~13m. Ratio of combs:
+   comb at 13*1=13: |hat1|=0.03366, next rung 13*2: |hat1|=0.03239, ratio=0.962
+   comb at 13*2=26: |hat1|=0.03239, next rung 13*3: |hat1|=0.03042, ratio=0.939
+   comb at 13*3=39: |hat1|=0.03042, next rung 13*4: |hat1|=0.02794, ratio=0.919
+ PRIME-7 GATING (7-vanishing, THM-503: s(t)=0 at 7|t): |hat1(k)| at k = multiples of 7 vs neighbors:
+   k=  7 (7|k): |hat1|=0.00986  nbr-avg=0.00960  
+   k= 14 (7|k): |hat1|=0.00258  nbr-avg=0.02023  SUPPRESSED
+   k= 21 (7|k): |hat1|=0.01088  nbr-avg=0.00839  
+   k= 28 (7|k): |hat1|=0.00826  nbr-avg=0.00237  
+   k= 49 (7|k): |hat1|=0.00851  nbr-avg=0.00771  
+   k= 61 (prime 61): |hat1|=0.00939  nbr-avg=0.00833  
+
+===== PART B: MULTI-FAR survival vs independence; PRIME-2 lives in the ODD kernel (not survival sign) =====
+ H = consecutive far block {W..W+r-1} (near-equal combs).  W=1000:
+    r  survival   (6/7)^r  correction  sign
+    1   0.86461   0.85714    +0.00747     +
+    2   0.75455   0.73469    +0.01985     +
+    3   0.63548   0.62974    +0.00575     +
+    4   0.54506   0.53978    +0.00529     +
+    5   0.45083   0.46266    -0.01183     -
+ NOTE: survival-correction sign is NOT (-1)^r (data: +,+,+,+,-). The prime-2 (ι-odd) structure
+ is in the DANGER KERNEL s(j)=sin(2πj r')/(πj) (ODD in j = ι-odd = the ± band = why it's SIGNED),
+ NOT in the survival parity. hat1 (FT of 1_{L_C}) is real & EVEN (cos) -- the ι-EVEN partner.
+
+===== PART C: PAIRWISE 2-far corr2(a,b): resonance = |a-b| or a+b hits the 13-lattice (fractal) =====
+ corr2 for a=1000, b=1000+delta (near-equal combs): resonance vs the difference delta:
+   delta=  1 (=1): corr2=+0.00579  
+   delta=  2 (=2): corr2=-0.00747  
+   delta=  3 (=3): corr2=-0.01010  RESONANT (delta ~ 13-lattice? False)
+   delta=  6 (=2x3): corr2=-0.01579  RESONANT (delta ~ 13-lattice? False)
+   delta=  7 (=7): corr2=-0.01414  RESONANT (delta ~ 13-lattice? False)
+   delta= 12 (=2x2x3): corr2=-0.00730  
+   delta= 13 (=13): corr2=+0.09925  RESONANT (delta ~ 13-lattice? True)
+   delta= 14 (=2x7): corr2=+0.01697  RESONANT (delta ~ 13-lattice? False)
+   delta= 26 (=2x13): corr2=+0.08139  RESONANT (delta ~ 13-lattice? True)
+ => corr2 peaks when the comb-DIFFERENCE delta resonates with the 13-lattice (=1/first-convergent).
+    The prime structure of delta (2,3,7,13...) controls which combs co-resonate: PRIME-graded.
+ SIGN CENSUS (scan delta=1..40): are the STRONG resonances POSITIVE (redundant, bad for beater)
+ while anti-correlations (negative, coverage-SPREADING, needed to beat) stay WEAK?
+   most POSITIVE (redundant): [(np.float64(0.0993), 13, '13|d=True'), (np.float64(0.0814), 26, '13|d=True'), (np.float64(0.067), 39, '13|d=True'), (np.float64(0.0201), 28, '13|d=False')]
+   most NEGATIVE (spreading): [(np.float64(-0.0161), 35), (np.float64(-0.0158), 6), (np.float64(-0.0151), 36), (np.float64(-0.0149), 22)]
+   => if strong = positive/13-lattice (redundant) and negatives are weak, far combs cannot
+      SPREAD coverage over L_C (only pile up redundantly) => no multi-far beater (heuristic).
+
+===== PART D: does the 13-lattice resonance SURVIVE to all scales? (the OPEN-Q-108 crux) =====
+ THE decisive test: a 13-SPACED pair (W, W+13) resonates (PART C). Does corr2(W,W+13) DECAY in W,
+ or persist at all scales? If it decays like single-far O(1/W), multi-far is ALSO impotent.
+         W  |corr1(W)|  |corr2(W,W+1)|  |corr2(W,W+13)|  x |corr1|
+       200     0.04032         0.00188          0.08293        2.1
+      1000     0.00747         0.00579          0.09925       13.3
+      5000     0.00327         0.00333          0.10299       31.5
+     20000     0.02381         0.00040          0.11262        4.7
+     50000     0.05938         0.01118          0.07446        1.3
+ KEY: if |corr2(W,W+13)| ALSO -> 0 as W->inf, the 13-resonance is a FINITE-SCALE effect: far-far
+ combs cannot resonate at large scale => the multi-far correction vanishes => far element impotent
+ at ALL orders r (recursive extension of S66). If it PERSISTS, that is the OPEN-Q-108 danger locus.
+ (grid N=6e5 resolves W up to ~N/20; W=50000 is near the resolution edge -- read the trend.)

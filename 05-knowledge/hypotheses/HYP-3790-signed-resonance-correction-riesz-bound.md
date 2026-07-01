@@ -1,5 +1,5 @@
 ---
-id: HYP-3787
+id: HYP-3790
 title: BOUNDING THE SIGNED RESONANCE CORRECTION on the lonely set L_C via the RIESZ/THETA form. The S65 coverage frac_w = meas(L_C ∩ {||wt||<r'})/meas(L_C) has an EXACT Fourier identity for its deviation from the equidistribution mean 2r': correction_w := frac_w - 2r' = (2/L) Σ_{j>=1} hat1(jw) sin(2π j r')/(π j), where hat1(k)=\hat{1_{L_C}}(k) is REAL & EVEN (t->1-t symmetry), hat1(0)=L=meas(L_C). This is the OFF-DIAGONAL (k=jw) extension of THM-515's ON-diagonal (k=0) theta form L=Σ_{t∈Λ}∏h. THREE results: (1) EXACT identity verified (FFT reconstruction = direct to <2e-4, all w); (2) TWO-ATOM SIGN LAW hat1(k) ≈ L cos(2π k t*) E(k), t*=n/Phi6 the binding hexagonal point, E(k)<=1 a decaying interval-width envelope -- so the SIGN of the correction is cos(2π k t*): RESONANT(+) at w near harmonics of 1/t*=Phi6/n=13.07 (peaks k=13,26,39,52,65, hat1(13)~+L), ANTI(-) at half-harmonics; (3) RIGOROUS FAR-ELEMENT BOUND: 1_{L_C}=finite union of I(r) intervals => |hat1(k)|<=I/(πk) (TV/jump bound, 0 pointwise violations) => |correction_w| <= (2 I(r)/(π L w)) S(r') = O(1/w), S(r')=Σ_j(1/j)min(2r',1/(πj))<∞ (=185/w at n=14,r=0.07). This makes S65 far-element impotence QUANTITATIVE: a far speed covers L_C only to O(1/w) beyond equidistribution => cannot patch the lonely set. Riesz(Bedert-2025)/theta = the right tool for THIS tail (THM-515)
 status: MIXED (exact identity + geometric law + rigorous rate, on a fixed grid). VERIFIED (FFT N=6e5, n=14, r=r'=0.07, L=0.0324): (1) correction_w = (2/L)Σ hat1(jw)sin(2πjr')/(πj) matches direct frac_w-2r' to <2e-4 for w=13,26,39,6,7,12,61,182,183,91,5000,5001. (2) hat1/L vs cos(2πkt*): 0.968/0.999, 0.908/0.998, 0.819/0.995 (k=13,26,39) -- two-atom + decaying envelope. (3) TV bound |hat1(k)|<=I/(πk) (I=28): 0 violations over k=1..400; |correction_w|<=185/w holds for all tested w (200..10000), incl residual-resonant large w. RIGOROUS given I(r) finite. NOT a full theorem: I(r)->∞ as r->M_C, general n not covered, constant loose. Complements HYP-3786 (mechanism) with a rate.
 source: klein-2026-07-01-S66
@@ -20,7 +20,14 @@ results:
   - 05-knowledge/results/signed_resonance_correction_klein.out
 ---
 
-# HYP-3787 — bounding the signed resonance correction on L_C (Riesz/theta form)
+# HYP-3790 — bounding the signed resonance correction on L_C (Riesz/theta form)
+
+> **Renumbered HYP-3787 -> HYP-3790 by klein-2026-07-01-S67.** Collision: mac-mini-S75 committed
+> `HYP-3787` (signed-correction = Fourier of 1_{L_C} at harmonics — the SAME identity + TV bound, derived
+> independently) at 09:43, 6 min before this klein-S66 commit (09:49). Per the earliest-commit-owns rule
+> (as used for the HYP-3786 case), mac-mini keeps `HYP-3787`; this file (which adds the two-atom SIGN law
+> and the resonance-harmonic structure) moved to `HYP-3790`. Content/claims UNCHANGED. The two are the
+> same discovery from two toolkits — a genuine independent convergence; see mac-mini's HYP-3787.
 
 ## The object (from S65/HYP-3786)
 For the covering-min construction `C = {1..n-2, n(n-1)}` (n=14: `{1..12,182}`), the lonely set at level `r`

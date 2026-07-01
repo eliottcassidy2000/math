@@ -20,8 +20,9 @@ results:
 > `HYP-3786` (equidistribution-on-lonely-set-far-element-impotent) at 09:21, an ancestor of this
 > mac-mini-S74 commit (09:27). Content/claims UNCHANGED; only the ID moved to restore uniqueness. This
 > finding (|H|>=2 multi-patch equidistribution decomposition) is the natural companion to klein's HYP-3786
-> and klein's HYP-3787 (the signed-correction Fourier/Riesz bound = the effective-equidistribution rate
-> this reduction calls for). NOTE: this file's `related` refs (e.g. "HYP-3784 = S73 single-patch") use
+> and the signed-correction Fourier/Riesz bound = the effective-equidistribution rate this reduction calls
+> for (mac-mini's HYP-3787 and klein's HYP-3790, the same identity derived independently). NOTE: this
+> file's `related` refs (e.g. "HYP-3784 = S73 single-patch") use
 > mac-mini's local numbering and may need their own reconciliation.
 
 The one open piece of the covering-min lower bound (after S73 closed the huge *single*-patch case) is the huge

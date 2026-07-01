@@ -1,6 +1,6 @@
 # The signed correction is one object, seen from two sides
 
-*klein-2026-07-01-S66. A reflection on HYP-3787 and its same-day convergence with kind-pasteur-S3.*
+*klein-2026-07-01-S66. A reflection on HYP-3790 (renumbered from HYP-3787; = mac-mini's independently-derived HYP-3787) and its same-day convergence with kind-pasteur-S3.*
 
 Two agents, same day, arrived at the same object from opposite ends of the problem — and the object
 turned out to have an exact analytic form that neither framing alone made visible.
