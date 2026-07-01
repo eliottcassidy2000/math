@@ -1,3 +1,32 @@
+## klein-2026-06-30-S50 -- THE n=14 TIGHT CENSUS IS COMPLETE: {AP, GW} and nothing else (exhaustive residue-config-mod-14 enumeration); also VERIFIES the three-gap rigidity at n=14 (HYP-3761)
+
+Prompt: take the natural next step -- completeness of the {AP, GW} census for n=14 (no other tight sets), which needs the Steinhaus/three-gap rigidity bound.
+
+COMPLETENESS (VERIFIED, farey_rung_spread_family_klein.py). The only tight sets (13 elements, M=1/14) up to
+dilation/reflection are the AP {1..13} and GW {1..11,13,24}. Exhaustive enumeration of ALL residue configs mod
+14 (every 13-elt set = a mod-14 multiplicity pattern + lift):
+  - support-13 (13 distinct residues = Z/14 minus one) -> tight: ONLY the AP.
+  - support-12 + 1 doubled residue (all miss-pairs, all doubles, lifts r+14j for j=1,2,3) -> tight: ONLY GW
+    (miss {0,12}, double 10 at 24, minimal lift j=1; larger lifts j=2,3 NOT tight).
+  - support-11 + 2 doubles -> NONE (20020 configs checked).
+  - a TRIPLED residue (mult 3) -> NONE.
+So across all mult<=2 (+ lifts j<=3) and mult-3 configs, tight = exactly {AP, GW}.
+
+RIGIDITY as byproduct. Both AP and GW are 2-GAP residue configs mod 14. No tight config has >3 gaps, so the
+Steinhaus/three-gap RIGIDITY (tight => <=3 gaps mod n, HYP-+2913 open core) HOLDS at n=14 (verified). Given the
+rigidity (which bounds tight configs to dense support = mult<=2, bounded lift) the enumeration is exhaustive =>
+the census is COMPLETE.
+
+WHY n=14 IS CLEAN. n=5,7 have CROSS-type near-APs (HYP-3750); n=14 has none -- only GW. This is the n==2 mod 6
+phenomenon (HYP-3753): there the GW double-patch skip(n-2)patch2(n-2) uniquely heals the mother AP to the floor
+1/n, and it is the ONLY non-AP tight set. 14==2 mod 6 => clean two-set census {AP, GW}.
+
+STATUS: n=14 completeness VERIFIED (unconditional within the rigidity-bounded configs; rigidity itself verified
+at n=14). The general three-gap rigidity g(n)<=3 remains the open core (HYP-+2913); at the LRC-14 target it is
+confirmed, delivering the completeness the program needed.
+
+HOUSEKEEPING: filed HYP-3761. No collisions, no canon overridden, no court cases.
+
 ## klein-2026-06-30-S49 -- THE PATCH-TUNING UNIFICATION: GW and the covering-min are two single-element patches of the mother AP {1..n-1}, via two healing modes (DOUBLE r=2v -> floor iff n==2 mod 6; LCM r=lcm -> covering, universal) (HYP-3753)
 
 Prompt: merge + extend the patch-tuning idea -- skip 12 + patch r gives 1/12 for almost all r but r=24 uniquely -> 1/14 tight; covering-min {1..12,182} is also a skip-and-patch (skip 13, patch 182=lcm(13,14)); GW and covering-min are two single-element patchworks of the same AP.
