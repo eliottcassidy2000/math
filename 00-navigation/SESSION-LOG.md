@@ -1,3 +1,17 @@
+## mac-mini-2026-06-30-S66 -- MORE crystallographic connections: the generalized restriction dim>=phi(n) places LRC14 at phi=6; the TRIPLE 6 (phi(14)=quasicrystal-dim=#lonely-units); 7 systems/14 Bravais; apex = I2(7) non-crystallographic (HYP-3772)
+
+Prompt: search through other crystallographic related connections (continuing S65).
+
+GENERALIZED CRYSTALLOGRAPHIC RESTRICTION: an n-fold rotation needs ambient dimension >= phi(n) (the cyclotomic degree; Z[zeta_n] is the minimal lattice; a planar n-fold quasicrystal is a cut-and-project from R^phi(n)). Hierarchy: phi=2 {3,4,6} = 2D crystals (5 Bravais lattices, S65); phi=4 {5,8,10,12} = 4D quasicrystals (Penrose-5/octagonal-8/decagonal-10/dodecagonal-12); phi=6 {7,9,14,18} = 6D quasicrystals (7-,14-fold, exist in soft matter).
+
+THE TRIPLE 6 (the sharp new identity). LRC14 apex prime 7, phi(7)=phi(14)=6, so the 7-/14-fold apex symmetry first lives in SIX dimensions (Z[zeta_14]). AND |(Z/14)^*| = 6 = phi(14), with (Z/14)^* = {1,3,5,9,11,13} = the LRC14 extremal LONELY SET (units/touch-points at the cusp {1..13}, HYP-3571/3615). So the '6' of LRC14 is THREE things at once: the cyclotomic degree phi(14), the quasicrystal embedding dimension, and the number of lonely units. The lonely runners ARE the 6 independent directions of the 14-fold cyclotomic star; the phi(14)/2 = 3 antipodal unit-pairs = the physical half of the 6D = 3+3 cut-and-project splitting. This upgrades the repo's 'lonely set = units' (measure-0, counting) to a crystallographic-DIMENSION statement.
+
+MORE RESONANCES. 3D crystallography: 7 crystal systems, 14 Bravais lattices (= 2*7 = LRC14; hexagonal system = order-6 covering-min side; 2D = 4 systems, 5 lattices = the S65 five). COXETER/WEYL: crystallographic <=> branch labels m in {2,3,4,6} (rank-2: A1xA1(2), A2(3,hexagonal |W|=6), B2=C2(4,square |W|=8), G2(6,|W|=12)); the apex = I2(7) (dihedral heptagon), the smallest NON-crystallographic dihedral after H2=I2(5) (pentagon). LRC covering-min = A2/G2 (crystallographic order 6); apex = I2(7) (non-crys) = the 4cos^2(3pi/7)>0 floor gap. Every crystallographic guise says the same about 7: no 7-fold crystal, I2(7) not a Weyl group, 2cos(2pi/7) irrational, min dim phi(7)=6.
+
+DIRECTION: since 14-fold quasicrystals exist as cut-and-projects from 6D Z[zeta_14], the LRC14 covering may itself be a cut-and-project (13 circle-speeds = projection of a 6D cyclotomic lattice covering; lonely set = the 6 star-directions). If made precise the LRC14 floor becomes a 6D covering statement.
+
+HONEST: classical facts assembled + the triple-6 identification (units = quasicrystal dimension = cyclotomic star, the sharp new bit); the cut-and-project view is a DIRECTION not established; a synthesis, not a new proof step. HOUSEKEEPING: filed HYP-3772 (clean). Converges w/ the concurrent Dedekind-margin thread (klein-S56 HYP-3768 proved s(n,Phi6); opus-S5 HYP-3770 reciprocity descent). Files: 04-computation/crystallographic_dimension_hierarchy_lrc14_macmini_20260630.py (+.out). No canon overridden, no court cases.
+
 ## mac-mini-2026-06-30-S65 -- The 5 plane-lattices / 5 Platonic solids = ONE (2,3,n) angle-defect spine; the LRC apex-prime walks it and the genus of X0(2p) tracks the geometry (jump 0->1 at p=7 = why LRC14 is the frontier) (HYP-3771)
 
 Prompt: consider the 5 2D plane tilings corresponding to the 5 Platonic solids; nature, count, connections to proofs.

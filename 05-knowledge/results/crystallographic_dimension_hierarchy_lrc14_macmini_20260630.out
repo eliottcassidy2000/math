@@ -1,0 +1,47 @@
+==========================================================================
+(1) GENERALIZED CRYSTALLOGRAPHIC RESTRICTION: n-fold needs dim >= phi(n)
+==========================================================================
+  dim phi= 1: n in [1, 2]   trivial
+  dim phi= 2: n in [3, 4, 6]   2D CRYSTAL (5 Bravais lattices)
+  dim phi= 4: n in [5, 8, 10, 12]   4D quasicrystal (5,8,10,12-fold: Penrose/Ammann/decagonal/dodecagonal)
+  dim phi= 6: n in [7, 9, 14, 18]   6D quasicrystal (7,9,14,18-fold)
+  dim phi= 8: n in [15, 16, 20, 24]   8D
+  dim phi=10: n in [11, 22]   10D
+  dim phi=12: n in [13, 21]   12D
+  dim phi=16: n in [17]   16D
+  dim phi=18: n in [19]   18D
+  dim phi=22: n in [23]   22D
+
+==========================================================================
+(2) THE TRIPLE 6 of LRC14
+==========================================================================
+  phi(7) = 6,  phi(14) = 6   -> 7-fold & 14-fold symmetry live in dim 6 (Z[zeta_14])
+  (Z/14)^* = [1, 3, 5, 9, 11, 13]   |.| = 6 = phi(14) = the LRC14 extremal LONELY SET (units; HYP-3571/3615)
+  antipodal pairs = phi(14)/2 = 3  (the 'physical' half of the 6D = 3+3 cut-and-project)
+  => 6 = cyclotomic degree = quasicrystal embed dim = #lonely units.  The runners ARE the cyclotomic star.
+
+==========================================================================
+(3) CRYSTAL SYSTEMS / BRAVAIS LATTICES by dimension (the 7 & 14 resonance)
+==========================================================================
+  1D:   1 crystal systems,   1 Bravais lattices
+  2D:   4 crystal systems,   5 Bravais lattices   <== 5 lattices (S65)
+  3D:   7 crystal systems,  14 Bravais lattices   <== 7 systems, 14 Bravais = 2*7 = LRC14
+  4D:  33 crystal systems,  64 Bravais lattices
+  5D:  59 crystal systems, 189 Bravais lattices
+  6D: 251 crystal systems, 841 Bravais lattices
+
+==========================================================================
+(4) COXETER / WEYL: crystallographic <=> labels m in {2,3,4,6}; apex = I2(7) non-crystallographic
+==========================================================================
+  rank-2 crystallographic (Weyl/lattice-preserving): A1xA1 m=2 | A2 m=3 (hexagonal, |W|=6) |
+                                                     B2=C2 m=4 (square, |W|=8) | G2 m=6 (|W|=12)
+  NON-crystallographic dihedral: H2=I2(5) pentagon | I2(7) HEPTAGON = the apex | H3,H4 (5-fold)
+    I2(2) = A1xA1      : deg 2cos(pi/2) = 1   crystallographic
+    I2(3) = A2         : deg 2cos(pi/3) = 1   crystallographic
+    I2(4) = B2/C2      : deg 2cos(pi/4) = 2   crystallographic
+    I2(5) = H2=I2(5)   : deg 2cos(pi/5) = 2   NON-crys (quasicrystal)
+    I2(6) = G2         : deg 2cos(pi/6) = 2   crystallographic
+    I2(7) = I2(7)=apex : deg 2cos(pi/7) = 3   NON-crys (quasicrystal)
+  => LRC covering-min = order-6 A2/G2 (crystallographic); apex = I2(7) (non-crys) = 4cos^2(3pi/7) floor gap.
+
+DONE.
