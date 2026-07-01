@@ -1,0 +1,32 @@
+==========================================================================================
+(A) KACZMARZ / ALTERNATING PROJECTIONS -- constructive witness search (find a lonely time)
+==========================================================================================
+  construction  : found a lonely time in 18/40 random starts; median sweeps=2; e.g. t=0.53571 (target t*=14/183=0.07650)
+  AP {1..13}    : found a lonely time in 7/40 random starts; median sweeps=2; e.g. t=0.35714 (target t*=14/183=0.07650)
+  GW            : found a lonely time in 7/40 random starts; median sweeps=2; e.g. t=0.35714 (target t*=14/183=0.07650)
+  => POCS/Kaczmarz CONSTRUCTS the lonely time. Convergence from most starts = a constructive certificate;
+     the sweeps-to-converge is a RESONANCE/conditioning measure (harder near the extremal construction).
+
+==========================================================================================
+(B) CHRISTOFFEL / CD REPRODUCING KERNEL at the observer z=1 (large K = lonely = gap at origin)
+==========================================================================================
+  construction  : argmax_t K_N(1,1) at t=0.00260 (min-dist there=0.0026); grid-M(S)=0.0765  off
+  AP {1..13}    : argmax_t K_N(1,1) at t=0.01810 (min-dist there=0.0181); grid-M(S)=0.0714  off
+  GW            : argmax_t K_N(1,1) at t=0.00423 (min-dist there=0.0042); grid-M(S)=0.0714  off
+  => the reproducing-kernel local density at the observer peaks near the lonely time (moment-computable
+     via the Toeplitz/CD kernel, kps-S7) -- the RKHS face of orbit-count=#atoms (S79).
+
+==========================================================================================
+(C) BLASCHKE DYNAMICS -- new loop-functions from arXiv:2604.16750
+==========================================================================================
+  NEW ENTRIES for the loop-function dictionary (S79):
+    24. rotation number rho(f)     of the runner-map t->t+vt: mode-locking (rational rho) = the danger/resonance
+    25. Arnold tongue A_{p/q}      parameter region where a circle map locks to rho=p/q; danger arcs = tongue slices
+    26. Blaschke product B(z)      deg-d circle-to-circle map; ITERATION = the Verblunsky recursion; |alpha|->1 = atomic/lonely
+    27. devil's staircase          rho as a fn of parameter: Cantor set of lockings = the resonance lattice (13Z, klein-S67)
+    28. Poincare return map        first-return of the runner flow to an arc = the three-gap map (S73)
+    29. Denjoy/Herman conjugacy    smooth conj to rigid rotation iff rho Diophantine (t* = [0;13,14] = badly approximable-ish)
+  => the runner is a DEGREE-1 CIRCLE MAP; loneliness = avoiding all Arnold tongues (mode-locking);
+     the Blaschke product is the disk-dynamics generator whose boundary rotation number is the LRC phase.
+     Merges the S79 dictionary (dilation group) with DYNAMICS (iteration / rotation number / tongues).
+DONE.

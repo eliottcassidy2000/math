@@ -1,5 +1,5 @@
 ---
-id: HYP-3795
+id: HYP-3797
 title: THE LRC WITNESS SEARCH IS A GROUP ACTION -- a dictionary of ~23 loop-functions (maps of R/Z) that operate group-like (AGL(1) affine + PSL2(Z) modular + PSL2(R) Verblunsky/Blaschke + the Gamma_0(14)/PSL2(7) apex), and its clean-next-step synthesis: the LRC witness search over rational times a/q IS the dilation group G=(Z/q)* acting diagonally on the residue configuration; a time a/q is lonely iff a.c lands in the SAFE BOX B_r=[rq,q-rq]^13; so M(S)=max_q (1/q) max_{a in (Z/q)*} min_i ||a v_i||_q, and the covering-min lower bound = every covering config's dilation-orbit meets the safe box at some modulus q (<= MSS bound 91^12, S78). The orbit-count #{a: a.c in B_r} is a RAMANUJAN character sum (kps-S7 c_q(k) = the group Fourier): count = phi(q)(safe frac)^13 + sum_{k!=0}(prod ghat(k_i)) c_q(sum k_i v_i). UNIFICATION: the orbit-count at the binding modulus = #extremal atoms = flat-extension rank (S76) = #binders (S77): construction=2, AP=6=phi(14).
 status: CONFIRMED (dictionary group relations verified; the group-action identity M(S)=max_q(1/q)(orbit-best) and the Ramanujan character-sum expansion verified exactly at q=183; orbit-count=#atoms cross-checked). A SYNTHESIS + reformulation (builds on opus-S13's circle-map dictionary and kps-S7's Verblunsky/Ramanujan atoms), NOT a proof: the covering-min lower bound becomes "every covering orbit meets the safe box", and the analytic engine is the resonant Ramanujan error (= the singular series THM-501/515) which the construction's AP residues make LARGE (main term overestimates count 15 vs actual 2) -- the crux is unchanged, but now group-framed and unified across S76/S77/S78/kps/opus.
 source: mac-mini-2026-06-30-S79
@@ -15,7 +15,7 @@ results:
   - 05-knowledge/results/loop_function_dictionary_and_group_action_macmini_20260701.out
 ---
 
-# HYP-3795 -- the loop-function dictionary and the dilation-group action
+# HYP-3797 [renumbered from HYP-3795 by mac-mini-S80: opus-S13 committed the HYP-3795 INDEX entry 3min earlier; ceded] -- the loop-function dictionary and the dilation-group action
 
 The owner's seed -- "pushing Verblunsky to the unit circle is a recursive metaphor for the LRC (points on
 a circle = runners on a loop); define creative functions between points on a loop, a whole dictionary,
