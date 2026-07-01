@@ -1,3 +1,28 @@
+## mac-mini-2026-07-01-S79 -- THE LRC WITNESS SEARCH IS A GROUP ACTION: loop-function dictionary (~23 maps, group-like) + the dilation-orbit-hits-safe-box reformulation; orbit-count = Ramanujan char sum = #atoms (HYP-3795); builds on opus-S13 + kps-S7, converges klein-S68
+
+Prompt: pushing Verblunsky to the unit circle is a recursive metaphor for the LRC (points on a circle = runners on a loop); define creative functions between points on a loop, a whole dictionary, group-like; and work the clean next step, synthesizing.
+
+TWO deliverables (builds on opus-S13 circle-map dictionary + kps-S7 Verblunsky/Ramanujan atoms):
+
+(I) THE DICTIONARY -- ~23 loop-functions (maps of R/Z), organized by the group each generates, relations verified:
+  - ISOMETRY O(2): rotation R_c (observer shift), reflection iota (antipode, t<->1-t).
+  - AFFINE AGL(1): dilation M_v (a RUNNER = the map x->vx), unit-dilation M_a a in (Z/q)* (the WITNESS search generator), affine vx+a, times-n endo.
+  - MOBIUS/VERBLUNSKY PSL2(R): Blaschke B_A (atom-pusher, |A|->1=atomic=lonely), Cayley, Mobius (ax+b)/(cx+d), Gauss {1/x} (PSL2Z), Farey mediant (builds t*=[0;n-1,n]).
+  - FLOW: runner flow x->x+vt, three-gap return (interval exchange), winding number.
+  - CONFIG MAPS: scale-all, insert/delete runner (Mode A), convolution/Minkowski, Atkin-Lehner W_N (apex X_0(14)), Ramanujan-hat (config Fourier).
+  - COCYCLES: Dedekind s(a,q) (the PSL2Z cocycle = the margin), Verblunsky alpha_j (|alpha_j|=1/(n-1-j) AP, opus), sawtooth ((x)) iota-odd, ||x|| iota-even.
+  VERIFIED group relations: M_a M_b=M_ab; affine law; iota M_v iota=M_v; semidirect M_v R_a=R_va M_v. => rot+refl+dil = AGL(1); Gauss/mediant = PSL2(Z); Blaschke = PSL2(R); apex Gamma_0(14)/PSL2(7). RUNNERS = the DILATION subgroup.
+
+(II) THE CLEAN NEXT STEP (synthesis) -- THE LRC WITNESS SEARCH IS A GROUP ACTION. A rational time a/q gives runner positions a v_i/q; lonely (>=r) iff the dilated config a.c (c=v_i mod q) lands in the SAFE BOX B_r=[rq,q-rq]^13. So M(S)=max_q (1/q) max_{a in (Z/q)*} min_i ||a v_i||_q, and the COVERING-MIN LOWER BOUND = every covering config's (Z/q)* dilation-orbit meets B_r at some modulus q (<=91^12 by MSS, S78). Safe box rel-volume (1-2r)^13=(6/7)^13=0.135.
+
+THE ORBIT-COUNT IS A RAMANUJAN CHARACTER SUM (kps-S7's c_q = the group Fourier): #{a in (Z/q)*: a.c in B_r} = phi(q)(safe frac)^13 + sum_{k!=0}(prod ghat(k_i)) c_q(sum_i k_i v_i). VERIFIED at q=183: main phi(183)(156/183)^13=15.06 but EXACT count=2 -- the construction's residues are a maximally-resonant AP {14,28,..,168,169}, so c_183(61)=-60 pulls 15->2. THIS is why the singular series (THM-501/515) is hard, now group-framed.
+
+THE UNIFICATION (one integer): orbit-count at the binding modulus = #extremal atoms (S76 flat-ext rank) = #binders (S77): construction=2 (atoms {14/183,169/183}), AP=6=phi(14) (units (Z/14)*). The group-action count, the moment-matrix rank, and the binding runners are literally one number.
+
+CLEAN NEXT STEP (honest): prove count>0 for every covering config at some q = bound the resonant Ramanujan error < the phi(q)(6/7)^13 main term. Generic covering configs: error small, count~15>0 easily. Crux = near-construction resonant configs (count drops to 2 but stays positive = the binders) = the S77 bulk/construction dichotomy in orbit-count language; tool = kps-S7 Ramanujan sums.
+
+CONVERGES klein-S68 HYP-3800 (their phase-residue p(w)=n*w mod Phi6 = my dilation residue a*v with a=n; same object). NOT a proof; a unifying reformulation putting S76/S77/S78, kps, opus, klein in one group-theoretic frame. Reflection: the-runners-are-a-group-and-the-search-is-its-orbit.md. Files: 04-computation/loop_function_dictionary_and_group_action_macmini_20260701.py(+.out). No canon overridden, no court cases.
+
 ## opus-2026-07-01-S13 -- VERBLUNSKY on the unit circle: the AP runner-cloud's coefficients are HARMONIC |α_j|=1/(n−1−j); α_0=centroid=observer-lens; a group-like DICTIONARY of circle maps (AGL(1)⋊+PSL₂(ℤ)+Szegő); POSITION-space dual of kp-S7 (HYP-3795)
 
 Prompt: "pushing verblunsky to the unit circle provides a nice visual recursive metaphor for the LRC... see if there are creative functions between points on a loop... a whole dictionary of them may allow them to operate group-like. also work the clean next step, synthesizing."
