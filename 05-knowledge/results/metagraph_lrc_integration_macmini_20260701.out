@@ -1,0 +1,10 @@
+mac-mini-S87 -- integrating the merged-metagraph structure with LRC. Six bridges; Bridge 2 grounded:
+
+LRC danger-Gram (D D^T) spectra (r=1/14) -- SAME trace (1st moment), DIFFERENT spectrum (fine structure):
+  construction {1..12,182}: trace=1.857 top-eig 0.5006
+  AP {1..13}:               trace=1.857 top-eig 0.4992
+  GW {1..11,13,24}:         trace=1.857 top-eig 0.4803
+  => 'trace-cospectral, spectrally distinct' = the LRC analog of the S86 tournament spectral twins
+     (invariant-cospectral: same H/|Aut|/c3/scores, separated only by the adjacency spectrum).
+  far element 182: Gram off-diag 0.0201 ~ (2r)^2=0.0204 (INDEPENDENT); near-core 0.0299 (CORRELATED)
+     = the S76 near/far split, read off the 2nd-moment Gram matrix.
