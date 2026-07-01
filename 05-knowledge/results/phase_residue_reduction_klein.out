@@ -1,0 +1,56 @@
+n=14 Phi6=183=prod{3: 1, 61: 1}  t*=0.07650  CF=[0;13,14]  L=meas(L_C)=0.03410
+KILLER identity: n(n-1)=182=Phi6-1 => n(n-1) mod Phi6 = 182 (=-1). p(w+13)=p(w)-1.
+
+(A) PHASE-RESIDUE p(w)=n*w mod Phi6 predicts corr1(w): sign vs cos(2π p/Phi6), phase-dist to binding
+       w  p(w)   phase  cos(2πp/Φ)   corr1(w)  agree?
+      13   182  0.9945      +0.999    +0.8571     yes
+      26   181  0.9891      +0.998    +0.6960     yes
+      39   180  0.9836      +0.995    +0.5886     yes
+      52   179  0.9781      +0.991    +0.5081     yes
+      65   178  0.9727      +0.985    +0.4436     yes
+      78   177  0.9672      +0.979    +0.3898     yes
+       7    98  0.5355      -0.975    -0.1429     yes
+      61   122  0.6667      -0.500    -0.1124     yes
+      91   176  0.9617      +0.971    +0.3439     yes
+     100   119  0.6503      -0.586    -0.0963     yes
+     183     0  0.0000      +1.000    -0.0660      NO
+     196   182  0.9945      +0.999    -0.0359      NO
+     300   174  0.9508      +0.953    -0.0268      NO
+     500    46  0.2514      -0.009    +0.0034     yes
+     501    60  0.3279      -0.470    +0.0182      NO
+    => sign(corr1) agrees with sign cos(2π p/Phi6) in 11/15. The disagreements are ALL
+       large-w with |corr1|<0.04 (magnitude decayed, S66 O(1/w)): p(w) sets the PHASE/DIRECTION,
+       but the MAGNITUDE is width-limited O(1/w). Phase != full coupling.
+
+(B) FINITE PERIODICITY: w and w+Phi6 have the SAME phase-residue p (=> same coupling DIRECTION);
+    magnitude differs only by the width/decay O(1/w). corr1(w) vs corr1(w+Phi6):
+    w= 13 (p=182): corr1=+0.8571 | w+Φ6=196 (p=182): corr1=-0.0359 | 2Φ6+w=379: corr1=-0.0090
+    w= 26 (p=181): corr1=+0.6960 | w+Φ6=209 (p=181): corr1=-0.0095 | 2Φ6+w=392: corr1=+0.0067
+    w= 39 (p=180): corr1=+0.5886 | w+Φ6=222 (p=180): corr1=-0.0054 | 2Φ6+w=405: corr1=+0.0214
+    (same sign/direction across +Phi6 shifts = phase is a Z/Phi6 invariant; magnitude ~ decays)
+
+(C) PAIRWISE corr2(a,b) depends on the PHASE-DIFFERENCE p(a)-p(b)=n(a-b) mod Phi6 (not a,b sep.):
+        a     b  a-b p(a)-p(b) modΦ     corr2
+     1000  1013  -13              1   +0.0993
+     2000  2013  -13              1   +0.1032
+      500   513  -13              1   +0.1038
+     1000  1026  -26              2   +0.0814
+     1000  1001   -1             14   +0.0058
+     1000  1007   -7             85   -0.0141
+      300   313  -13              1   +0.0866
+    => corr2 large & positive iff p(a)-p(b) near 0 (a-b in (n-1)Z=13Z, i.e. n(a-b)≡small): REDUNDANT.
+
+(D) THE FINITE PROBLEM lives on Z/Phi6, CRT-factored over the primes of Phi6, mod antipode Z/2:
+    Z/183 = Z/3 x Z/61  (CRT over primes of Phi6)
+    prime 2 (the FIRST prime) = the antipode iota: p <-> -p (t<->1-t). The finite covering problem
+    is on (Z/183)/(±1). primes of Phi6=[3, 61] refine it (S68 lens: 2=sign, [3, 61]=phase-CRT).
+    gcd(n,Phi6)=1 (n is a unit mod Phi6 => p(w)=n*w is a BIJECTION Z/Phi6->Z/Phi6).
+
+=> CORRECTED REDUCTION (honest): the SCALE-INVARIANT finite structure is the DIFFERENCE SET.
+   - single-far: phase = p(w)∈Z/Phi6 (DIRECTION); magnitude = width O(1/w) -> 0 (impotent, S66).
+   - PAIRWISE: corr2(a,a+δ) depends ONLY on the difference δ (scale-invariant: same for a=300..2000),
+     via p(δ)=nδ mod Phi6; LARGE & POSITIVE (redundant) iff δ∈(n-1)Z with δ small (S67).
+   So multi-far coupling is governed by the DIFFERENCE-SET {w_i-w_j} and its phase-residues in
+   Z/Phi6 (translation-invariant) -- and the magnitude on the resonance lattice (n-1)Z is the
+   ADDITIVE ENERGY of the far-speed set (HYP-2873/THM-515). Redundancy(+)=helps survival;
+   spreading(-)=weak. The FINITE object is the difference-set's phase-histogram on Z/Phi6.

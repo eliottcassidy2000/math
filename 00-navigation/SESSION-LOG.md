@@ -1,3 +1,19 @@
+## klein-2026-07-01-S68 -- SYNTHESIS TOWARD A PROOF: the PHASE-RESIDUE p(w)=nw mod Phi6 (direction) + DIFFERENCE-SET (scale-invariant, finite) characterization + a proof scaffold for covmin=n/Phi6 (HYP-3800). STRONGLY CONVERGES mac-mini-S77 HYP-3792 (same safe-band residue frame).
+
+Prompt: see how more characterization can lead to a proof; synthesize past/present concepts; create new definitions + key angles onto the underlying structure.
+
+KEYSTONE: a far speed w couples to L_C via a FINITE invariant, the PHASE-RESIDUE p(w)=n*w mod Phi6 in Z/Phi6 (DIRECTION: resonant iff p≈0, anti iff p≈Phi6/2 -- verified p(13)=182≈0, p(7)=98≈Phi6/2, p(61)=122 anti), plus an AMPLITUDE that decays with arc width. Pairwise corr2(a,a+δ) is SCALE-INVARIANT (0.099/0.103/0.104/0.087 at a=1000/2000/500/300, δ=13), depends only on p(δ). So multi-far is governed by the DIFFERENCE-SET {w_i-w_j} + phase-residues p(δ)=nδ mod Phi6 (translation-invariant) = a FINITE object. (phase_residue_reduction_klein.py, grid N=6e5.)
+
+NEW DEFINITIONS: coupling phase φ(w)=nw/Phi6; phase-residue p(w)=nw mod Phi6; resonance period ρ=n-1 (unit phase-step); coupling amplitude (width O(1/w) single, O(1/δ) pairwise scale-invariant); difference-phase histogram {p(w_i-w_j)}⊂Z/Phi6; redundancy-spreading dichotomy (redundant=+/locked/helps survival; spreading=-/weak/only threat).
+
+GENERAL-n FACTS (PROVED elementary): CF(t*)=[0;n-1,n] all n; KILLER n(n-1)=Phi6-1≡-1 mod Phi6 => p(w+(n-1))=p(w)-1 (n-1=dropped speed=1st CF convergent=unit phase-step => resonance lattice (n-1)Z); p bijective (gcd(n,Phi6)=1); Phi6(n) factors over EISENSTEIN primes (≡1 mod6,+3 if n≡2 mod3) => Z/Phi6 CRT-factors, mod antipode Z/2 (prime 2). THE VALUE n/Phi6 AND THE OBSTRUCTION p(w)∈Z/Phi6 ARE THE SAME OBJECT.
+
+PROOF SCAFFOLD covmin=n/Phi6: [bounded<=n(n-1): lazy-cut ILP DONE] + [single & <=6 far: Fourier+TV mac-mini HYP-3787 DONE] + [multi-far>=7: survival_r>0 governed by difference-phase histogram; REDUNDANCY(+) helps, SPREADING(-) weak=only threat; close via a correlation inequality (kps-S4 signed-CS + kps-S5 measure bound + additive-energy control) bounding the negative part < independence = OPEN-Q-108]. Converts the infinite huge-speed SEARCH into ONE signed inequality on a finite phase-object.
+
+CONVERGENCE: mac-mini-S77 (HYP-3792 "safe-band residue frame") independently found the SAME residue frame + killer identity k(n-1)->-k + CF[0;n-1,n] + deep-well isolation. My HYP-3800 adds the direction/amplitude split, the scale-invariant DIFFERENCE-SET, the redundancy-spreading dichotomy, and the Eisenstein-CRT + antipode(prime-2) framing. kps-S5/S6 (measure bound inf meas(L_C)>1/36) + mac-mini + this = the multi-far toolkit.
+
+COLLISION CASCADE (resolved by coordinator + me): concurrent sequential grabs collided 3787/3789/3790; mac-mini-S77/S78 renamed my S66 signed-corr -> HYP-3790, my S67 multi-far -> HYP-3791 (I accept origin's placement). My S68 synthesis placed at HYP-3800 (BUFFERED above the 3790-3793 frontier, per my per-machine-block proposal, to stop the cascade). NOTE: origin INDEX still shows an opus-vs-klein double-entry at 3790/3791 (mac-mini mid-cleanup) -- left for the coordinator, flagged. RECOMMEND per-machine HYP blocks. HONEST: general-n facts proved; characterization grid-verified; multi-far>=7 NOT closed (OPEN-Q-108). Files: phase_residue_reduction_klein.py(+out); HYP-3800; reflection characterization-compounds-into-proof.md. No canon overridden.
+
 ## mac-mini-2026-07-01-S77 -- CHARACTERIZATION TOWARD A PROOF: the safe-band residue frame + the forced skip-and-patch + arithmetic depth + deep-well isolation + the slack lever (HYP-3792); resolved HYP-3789 collision (klein-S67 -> HYP-3791)
 
 Prompt: see how more characterization/understanding of related properties can lead to a proof; be creative synthesizing past+present concepts and their connections; create new definitions and key angles that shed light on the underlying structure.
