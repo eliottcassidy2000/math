@@ -32,6 +32,17 @@ FILES: scripts lrc14_census_toeplitz_ramanujan_kps.py + lrc14_census_modular_ver
 -> HYP-3789, HYP-3773, THM-503, THM-501/515, THM-523, THM-560, THM-522, HYP-3762, OPEN-Q-108.
 
 ---
+## opus-2026-07-01-S12 -- MOSEK campaign: unblocks the per-set moment-SOS/flat-extension (exact where SCS failed) but NO SDP shortcut to the for-all-S crux (=singular series / HYP-2738 coupled signed extremality); confirms the far-element route (HYP-3791)
+
+Owner gave a MOSEK license, asked for max-leverage SDP work toward finishing LRC(14). Installed+licensed MOSEK (~/mosek/mosek.lic, wired into cvxpy), ran a real SDP campaign:
+
+POSITIVE: the M(S)=max_t min_v||vt|| moment-SOS (univariate Chebyshev) is EXACT with MOSEK where SCS was non-monotone: {1,2,3,4}->0.345492 (rank-2 flat extension=2 atoms), {1,2,4}->0.75 (rank 1). The flat-extension/Curto-Fialkow certificate = mac-mini-S89's atomic reframe => MOSEK is the accurate solver that approach needs (free solvers can't). LIMIT (Lasserre, not MOSEK): AP (13 speeds) converges slowly (R=32 gives 0.077 vs true 0.0495; degree=max speed); construction (max 182) worse.
+
+NEGATIVE (the crux): the p0/L_y "consec maximizes L_y" (THM-534) is loose in EVERY naive relaxation -- boolean-moment over sector-empty chi_j with single-runner bound J(A)<=(7-|A|)/7 + monotone => MOSEK returns 1.0; even pinning S_1>=S_1(consec) => still 1.0, because L_y is COUPLED ALTERNATING (consec min S_1 but max S_2,S_4 at once) = HYP-2738 signed-certificate impossibility. The missing structure is the 1-PARAMETER singular series (runners=dilations e*t of one t), which no boolean/moment cone captures.
+
+VERDICT: MOSEK is the per-set CLOSER (flat extension -- recommend mac-mini-S89 route their SDPs through it), NOT the for-all OPENER. The for-all-S closure IS the far-element/equidistribution route (klein-S66 O(1/w), mac-mini-S74/89) + the singular series -- MOSEK confirms the team's path is necessary, no SDP shortcut. Only hybrid that bites: analytic theta bounds on J(A) fed into a MOSEK moment-LP.
+
+Also earlier this session: retracted HYP-3782 (my q-range error, covering-min=14/183 STANDS); + HYP-3790 (L_y two-regime synthesis). NEXT: mac-mini use MOSEK for flat-extension certificates; closure via the far-element route; the hybrid singular-series-bounds + MOSEK-LP is the only SDP-flavored path.
 
 ## kind-pasteur-2026-07-01-S6 -- NICHE-INSPIRATION FINISH SWEEP + HONEST MARGIN CORRECTION: the reduced target inf meas(L_C)>=1/36 over 11-cores is TIGHT (1.16x, extremizer {1..13}\{6,10}), NOT an 87% freebie; the three sharp finish-tools I ranked CONVERGE with concurrent HYP-3787/3789/3790
 
@@ -17355,7 +17366,7 @@ complement into a max-gap-shaped predicate, without yet proving the full
 sorted cyclic-gap `goodSet` readout.  Focused, `Verify`, and root transcripts:
 `lrc_dense_covers_compl_bridge_codex_s86g.out`,
 `lrc_witness_floor_dense_compl_bridge_codex_s86g.out`,
-`tournamenth7_verify_lrc_dense_compl_bridge_codex_s86g.out`, and
+`tournamenth7_verify_lrc_dense_compl_brid䁧e_codex_s86g.out`, and
 `tournamenth7_root_lrc_dense_compl_bridge_codex_s86g.out`; scans found no
 warnings, no `sorryAx`, and no `declaration uses .sorry`.
 
