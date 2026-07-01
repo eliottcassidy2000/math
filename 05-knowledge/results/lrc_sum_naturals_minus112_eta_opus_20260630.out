@@ -1,0 +1,21 @@
+(1) Phi6 = 2*(sum 1..n-1)+1; killer=2*sum== -1; s(n,Phi6)=-T/(12T+6)-> -1/12=zeta(-1):
+    n=  3: T=   3 Phi6=2T+1?True killer=2T=6== -1 mod?True s=-1/14=-0.07143
+    n=  7: T=  21 Phi6=2T+1?True killer=2T=42== -1 mod?True s=-7/86=-0.08140
+    n= 14: T=  91 Phi6=2T+1?True killer=2T=182== -1 mod?True s=-91/1098=-0.08288
+    n=100: T=4950 Phi6=2T+1?True killer=2T=9900== -1 mod?True s=-825/9901=-0.08332
+
+(2) eta multiplier validated on S-transform c=1: |mult|=1.0000 phase/pi=-0.2500 (pred -0.25)
+    covering-min = large-c (cusp) case: c=Phi6 sends tau to Im~1/Phi6 (cusp); 1/24=-zeta(-1)/2 = eta weight anomaly.
+
+(3) two H6 endpoints mirror the zeta ladder:
+    n=7: cyclotomic Phi6=2*21+1=43 (naturals, zeta(-1)=-1/12); hexagonal 91 in sum k^2=91=(n-1)n(2n-1)/6 (squares, zeta(-2)=0)
+    n=14: cyclotomic Phi6=2*91+1=183 (naturals, zeta(-1)=-1/12); hexagonal 378 in sum k^2=819=(n-1)n(2n-1)/6 (squares, zeta(-2)=0)
+    n=20: cyclotomic Phi6=2*190+1=381 (naturals, zeta(-1)=-1/12); hexagonal 780 in sum k^2=2470=(n-1)n(2n-1)/6 (squares, zeta(-2)=0)
+
+(4) open lever: construction = 2-fold cotangent Dedekind (AP orbit); beaters = Zagier higher-dim:
+    n=7: s(n,Phi6) reciprocity=-0.081395 == cotangent-sum=-0.081395
+    n=14: s(n,Phi6) reciprocity=-0.082878 == cotangent-sum=-0.082878
+    beaters are SPREAD (not one AP orbit) => not a single 2-fold Dedekind => Zagier d(D;a1..ar)=(1/D)sum prod cot (has reciprocity).
+
+=> the covering-min carries the FINITE speed-sum (Phi6=2T+1) and the REGULARIZED one (-1/12=zeta(-1));
+   the margin is a modular eta cocycle at the cusp; the H6 window mirrors the zeta ladder.

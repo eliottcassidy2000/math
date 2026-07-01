@@ -1,3 +1,18 @@
+## opus-2026-06-30-S6 -- THE SUM OF NATURAL NUMBERS IS THE COVERING-MIN: Phi6=2*Sigma(speeds)+1, killer=2*Sigma== -1, margin-> -1/12=zeta(-1); the margin is the eta multiplier phase (cusp); two H6 endpoints mirror the zeta ladder; open lever = Zagier higher-dim Dedekind (HYP-3773)
+
+Prompt: work the open lever + explore the sum of natural numbers & -1/12 + think creatively about other infinite sums/products/fractions/roots.
+
+The -1/12 turned out to be LITERAL. Results (HYP-3773):
+1. KEY IDENTITY (rigorous): Phi6(n)=n^2-n+1 = 2*(1+2+...+(n-1))+1 = 2T+1, where T=sum of the runner speeds; the construction KILLER n(n-1)=2T=Phi6-1 == -1 mod Phi6 (twice the speed-sum = the zeta6 antipode). The sum of speeds is LITERALLY the covering-min denominator.
+2. -1/12: s(n,Phi6)=-T/(12T+6) -> -1/12 = zeta(-1) = regularized (1+2+3+...). FINITE covering-min carries the actual speed-sum; ASYMPTOTIC margin carries its regularization.
+3. MODULAR: the margin = the Dedekind-ETA multiplier phase (observer matrix c=Phi6,d=n); VALIDATED on c=1 (S-transform, |mult|=1, phase -1/4 exact); the covering-min is the LARGE-c CUSP case (c=Phi6 => Im~1/Phi6; naive q-series can't reach it = klein-S56's cusp-form residual). 1/24=-zeta(-1)/2 => -1/12 is the eta weight anomaly.
+4. CREATIVE: the two H6 endpoints mirror the zeta ladder -- cyclotomic Phi6=2*Sigma(k)+1<->zeta(-1)=-1/12 (naturals); hexagonal n(2n-1) in Sigma(k^2)=(n-1)n(2n-1)/6<->zeta(-2)=0 (squares). Matches mac-mini's B2/A2 order-4-vs-6 dichotomy.
+5. OPEN LEVER RESOLVED: construction margin = classical 2-FOLD cotangent Dedekind (verified) because the speeds are one AP ORBIT mod Phi6; beaters are SPREAD => not a single 2-fold Dedekind (explains my HYP-3770 negative) => home is Zagier HIGHER-DIMENSIONAL Dedekind sums (which have reciprocity, poly-time). The lever works via higher reciprocity, at the cost of dimension.
+
+HONEST: identities+cotangent+eta(c=1) rigorous; eta-at-cusp sound by theorem; zeta(-2) covering-meaning creative; beater higher-fold exact form open. Converges with mac-mini's phi=6/zeta6 quasicrystal thread (HYP-3771/3772): the eta/Dedekind (margin=modular cocycle) and the 6D Z[zeta_14] star are two faces of one zeta6 arithmetic.
+
+NEXT: (a) compute a beater's exact Zagier higher-fold Dedekind form (the concrete lever); (b) make the zeta(-2)=0<->hexagonal-endpoint parallel a theorem (is the tight/hexagonal end really the vanishing-anomaly one?); (c) the cusp connection to klein-S56's genus-1 cusp form f_14 (the residual = OPEN-Q-108 odd index).
+
 ## mac-mini-2026-06-30-S66 -- MORE crystallographic connections: the generalized restriction dim>=phi(n) places LRC14 at phi=6; the TRIPLE 6 (phi(14)=quasicrystal-dim=#lonely-units); 7 systems/14 Bravais; apex = I2(7) non-crystallographic (HYP-3772)
 
 Prompt: search through other crystallographic related connections (continuing S65).
