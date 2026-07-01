@@ -1,0 +1,33 @@
+========================================================================
+(1) CONSTANT UNIFICATION via B2 = 1/6
+========================================================================
+   B2 (Bernoulli) = 1/6
+   zeta(2) = pi^2/6 = pi^2 * B2   (my witness-sum heartbeat 1/zeta(2), HYP-3746)
+   E2 = 1 - (4/B2) sum sigma_1 q^n = 1 - 24 q - ...   (4/B2 = 24)
+   Dedekind reciprocity constant 1/12 = B2/2 = 1/12
+   => one Bernoulli B2 runs the witness-sum zeta(2), E2, and Dedekind reciprocity.
+
+========================================================================
+(2) SAWTOOTH BRIDGE: ||x|| = 1/2 - |((x))|; loneliness = runners at the half-integer
+========================================================================
+   x=1/7: ||x||=1/7=0.1429, 1/2-|((x))|=1/7  match=True; ((-x))=-((x))? True
+   x=3/7: ||x||=3/7=0.4286, 1/2-|((x))|=3/7  match=True; ((-x))=-((x))? True
+   x=1/2: ||x||=1/2=0.5000, 1/2-|((x))|=1/2  match=True; ((-x))=-((x))? True
+   x=5/13: ||x||=5/13=0.3846, 1/2-|((x))|=5/13  match=True; ((-x))=-((x))? True
+   x=1/14: ||x||=1/14=0.0714, 1/2-|((x))|=1/14  match=True; ((-x))=-((x))? True
+   => a lonely observer (all ||st|| large) has every runner st near 1/2 (the iota-fixed point).
+
+========================================================================
+(3) DEDEKIND SUMS of LRC bindings + RECIPROCITY as the sheaf gluing (CF descent)
+========================================================================
+   AP tight  (D=14,a=1):  s(1,14) = 13/14 = +0.9286;  reciprocity holds: True
+   covering-min constr (D=Phi6=183,a=14):  s(14,183) = -91/1098 = -0.0829;  reciprocity holds: True
+   (n+q)-witness q=13 (D=27,a=25):  s(25,27) = -143/162 = -0.8827;  reciprocity holds: True
+   (n+q)-witness q=11 (D=25,a=16):  s(16,25) = -4/25 = -0.1600;  reciprocity holds: True
+   covering-min beater n=10 (D=37,a=?):  s(10,37) = 3/37 = +0.0811;  reciprocity holds: True
+
+   RECIPROCITY = the two-modulus GLUING: s(a,D) [modulus D] <-> s(D,a) [modulus a<D], the
+   Euclidean/continued-fraction DESCENT. Iterating it walks D down its CF [n-1, a(n)] --
+   the SAME Farey/three-gap ladder the covering-min lives on (HYP-3732/3762). The descent
+   TERMINATES at small modulus (base case) UNLESS an obstruction (E2 anomaly / genus cusp
+   form, HYP-3587) blocks it -- that obstruction IS the iota-odd degree residual.

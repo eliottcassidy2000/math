@@ -11,6 +11,27 @@ E2 -- the modular home. F_d = E2(tau)-d E2(d tau) is a genuine weight-2 modular 
 RESIDUAL ATTACK. The residual (Step 4, HYP-3745/3749): a missing-core patched set must keep M>n/Phi6, i.e. the margin cannot erode to 0. In this frame: eroding the margin = driving the hexagonal Dedekind anomaly to 0 = restoring the order-4/square (B2) structure. The patch is a single integer; its residues across moduli are CRT-linked; Dedekind-Rademacher reciprocity (the repo far-coherence tool, HYP-2808) forbids its Dedekind sums from going anomaly-free at every modulus at once. So the anomaly persists = "the hole moves but never vanishes," now with a target: the Step-4 residual = persistence of the order-6 anomaly s(n,Phi6) under +-k CRT patching = non-vanishing of f_14 at d=7.
 
 HONEST: identities exact/verified (n=3..15); E2 & B2 are NEW to the repo, the margin=Dedekind-sum identity is new. The residual attack is a framework/mechanism (aligned with HYP-2808), NOT a proof of Step 4. HOUSEKEEPING: filed HYP-3768 (renamed from 3766, ceded to klein-S54). Files: 04-computation/dedekind_e2_b2_margin_macmini_20260630.py (+.out); reflection 07-reflections/the-margin-is-the-hexagonal-dedekind-anomaly.md. Built on the survey of HYP-3553/3586/2808/3715/3745/3749. No canon overridden, no court cases.
+## klein-2026-06-30-S56 -- B2/E2/DEDEKIND on the hard residual: the covering-min's Dedekind sum IS the E2 anomaly (-1/12); the residual is the genus cusp form (curve 14a) (HYP-3768)
+
+Prompt: consider B2/E2/Dedekind objects and work on the genuinely hard residual.
+
+Brought the modular package to the crux (the character/sign residual = the iota-odd degree, S55). Filed HYP-3768; reflection the-covering-min-is-eisenstein-the-residual-is-a-cusp-form.md; scripts dedekind_e2_lrc_residual_klein.py + dedekind_e2_separation_klein.py (.out).
+
+ONE CONSTANT B2=1/6: zeta(2)=pi^2*B2 (my witness-sum heartbeat HYP-3746), E2=1-(4/B2)sum sigma_1 q^n, Dedekind reciprocity const B2/2=1/12. One Bernoulli ties the runner side to the modular side.
+
+SAWTOOTH BRIDGE: ((x))=x-floor(x)-1/2 is iota-ODD (((-x))=-((x)); the S55 sign atom) and ||x||=1/2-|((x))|, so a LONELY observer (all ||st|| large) has every runner st near the HALF-INTEGER 1/2 = the iota-FIXED point. Dedekind's atom = the loneliness atom.
+
+PROVED (sympy + reciprocity, one line): s(n, Phi6(n)) = -(Phi6-1)/(12 Phi6) = -n(n-1)/(12(n^2-n+1)) -> -1/12 = zeta(-1) = -B2/2 (THE E2 ANOMALY CONSTANT). Proof: Phi6=n^2-n+1 ==1 mod n (since n^2-n=n(n-1)) => s(Phi6,n)=s(1,n)=(n-1)(n-2)/12n; one Dedekind-reciprocity step gives the closed form. Verified n=7..14 exact. => the COVERING-MIN CONSTRUCTION IS THE iota-EVEN EISENSTEIN/E2 BULK; its Dedekind sum is the E2 anomaly.
+
+RECIPROCITY = THE SHEAF GLUING: s(h,k)<->s(k,h) is the Euclidean/continued-fraction step = the two-modulus gluing of the multi-metric danger sheaf (HYP-3766) = the three-gap renormalization (HYP-3762). The covering-min glues in ONE step because Phi6==1 mod n (the Farey-neighbor condition HYP-3732).
+
+THE RESIDUAL LOCATED = the iota-ODD GENUS CUSP FORM (HYP-3587/3041): for n=2p, genus X_0(2p)=0,0,1,2,2 (p=3,5,7,11,13) GROWS while the Eisenstein bulk (#cusps-1=3) stays CONSTANT. n=14 => genus 1 => the weight-2 cusp form f_14 = elliptic curve 14a = the iota-odd degree of OPEN-Q-108 (S55). So: covering-min = E2/Eisenstein bulk (COVERED, iota-even, Dedekind->-1/12); the hard residual = the genus cusp form f_14 (iota-ODD, uncovered) -- the obstruction now has a CONDUCTOR and a NAME.
+
+HONEST: the Dedekind sum at the binding does NOT separate tight/non-tight (AP & GW share binding (14,1) => s=13/14). This LOCATES the residual (via HYP-3587's decomposition + S55) but does NOT prove the crux; reciprocity-as-gluing is a mechanism, not a termination proof.
+
+NEXT: (1) compute f_14 / curve-14a's role as the iota-odd degree explicitly (the OPEN-Q-108 realization); (2) does the covering-min beater (lower rung) shift the Eisenstein/cusp balance? (3) the reciprocity descent's termination = the crux.
+
+--- prior entries ---
 
 ## klein-2026-06-30-S55 -- SIGN THEORY ON THE OPEN CRUX: the antipodal involution reduces sheaf-coverage to an iota-ORBIT set-cover (halving); every witness is an iota-symmetric hole; parity lemma; Borsuk-Ulam bridge (HYP-3767)
 

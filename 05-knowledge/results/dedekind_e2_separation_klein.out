@@ -1,0 +1,30 @@
+(A) s(n, Phi6(n)) at the covering-min construction binding -- closed form?
+   n= 7: s(7,43) =        -7/86 = -0.0814   -(D-1)/12D=       -7/86 match=True
+   n= 8: s(8,57) =      -14/171 = -0.0819   -(D-1)/12D=     -14/171 match=True
+   n= 9: s(9,73) =        -6/73 = -0.0822   -(D-1)/12D=       -6/73 match=True
+   n=10: s(10,91) =      -15/182 = -0.0824   -(D-1)/12D=     -15/182 match=True
+   n=11: s(11,111) =      -55/666 = -0.0826   -(D-1)/12D=     -55/666 match=True
+   n=12: s(12,133) =      -11/133 = -0.0827   -(D-1)/12D=     -11/133 match=True
+   n=13: s(13,157) =      -13/157 = -0.0828   -(D-1)/12D=     -13/157 match=True
+   n=14: s(14,183) =     -91/1098 = -0.0829   -(D-1)/12D=    -91/1098 match=True
+
+(B) does the Dedekind sum s(a,D) at the binding SEPARATE tight from non-tight?
+   AP{1..13}(tight1/14)          : M=   1/14 bind(D=14,a=1) gcd=1 s(a,D)=13/14 =+0.9286
+   GW(tight1/14)                 : M=   1/14 bind(D=14,a=1) gcd=1 s(a,D)=13/14 =+0.9286
+   constr{1..12,182}(14/183)     : M= 14/183 bind(D=183,a=14) gcd=1 s(a,D)=-91/1098 =-0.0829
+   drop13+26(2/27)               : M=   2/27 bind(D=27,a=2) gcd=1 s(a,D)=143/162 =+0.8827
+
+(C) THE E2/GENUS RESIDUAL: for n=2p the obstruction dim = genus X_0(2p) (HYP-3587/3041)
+   n= 6 (=2*3): genus X_0(6)=0  (Eisenstein bulk = #cusps-1 = 3 CONSTANT; cusp-form OBSTRUCTION = 0)
+   n=10 (=2*5): genus X_0(10)=0  (Eisenstein bulk = #cusps-1 = 3 CONSTANT; cusp-form OBSTRUCTION = 0)
+   n=14 (=2*7): genus X_0(14)=1  (Eisenstein bulk = #cusps-1 = 3 CONSTANT; cusp-form OBSTRUCTION = 1)
+   n=22 (=2*11): genus X_0(22)=2  (Eisenstein bulk = #cusps-1 = 3 CONSTANT; cusp-form OBSTRUCTION = 2)
+   n=26 (=2*13): genus X_0(26)=2  (Eisenstein bulk = #cusps-1 = 3 CONSTANT; cusp-form OBSTRUCTION = 2)
+   => n=14: residual = genus-1 cusp form f_14 (elliptic curve 14a) = the iota-ODD degree (S55);
+      E2/Eisenstein (iota-EVEN bulk) is COVERED; the cusp form is the uncovered residual.
+reciprocity gives s(n,Phi6) = n*(1 - n)/(12*(n**2 - n + 1))
+target -(Phi6-1)/(12 Phi6) = n*(1 - n)/(12*(n**2 - n + 1))
+EQUAL (proved via one reciprocity step + Phi6=1 mod n): True
+
+limit n->inf: -1/12  = -1/12 = zeta(-1) = -B2/2 (the E2 anomaly constant)
+Phi6 = 1 mod n check: (n^2-n+1) mod n = 1 (since n^2-n=n(n-1))
