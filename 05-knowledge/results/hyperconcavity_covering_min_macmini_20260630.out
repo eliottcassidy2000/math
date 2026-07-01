@@ -1,0 +1,20 @@
+HYPERCONCAVITY of the LRC(2p) sequences (n=3..23):
+  M = n/Phi6        : convex=True  concave=False log-concave=False
+  1/M = (n-1)+1/n   : convex=True  concave=False log-concave=True
+  margin            : convex=True  concave=False log-concave=False
+  |s(n,Phi6)|       : convex=False concave=True  log-concave=True
+
+H1 -- 1/M = (n-1)+1/n EXACT + CONVEX (self-concordant ladder, opus-S4 rung=n):
+   n= 7: 1/M = Phi6/n = 43/7 = (n-1)+1/n = 6+1/7  (convex: d^2/dn^2=2/n^3>0)
+   n=14: 1/M = Phi6/n = 183/14 = (n-1)+1/n = 13+1/14  (convex: d^2/dn^2=2/n^3>0)
+   n=20: 1/M = Phi6/n = 381/20 = (n-1)+1/n = 19+1/20  (convex: d^2/dn^2=2/n^3>0)
+   Stern-Brocot ray [0;n-1,k]: 1/value=(n-1)+1/k, convex in k => the CF descent is a self-concordant barrier.
+   Self-concordant barriers <=> hyperbolicity cones (hyperbolic polys) <=> apex-7 hyperbolic (2,3,7) geometry.
+
+H2 -- |s(n,Phi6)| = T/(12T+6) is CONCAVE + LOG-CONCAVE, rising to 1/12=|zeta(-1)| (its sup):
+   n=  3: |s| = T/(12T+6) = 1/14 = 0.07143  (-> 1/12=0.08333)
+   n=  7: |s| = T/(12T+6) = 7/86 = 0.08140  (-> 1/12=0.08333)
+   n= 14: |s| = T/(12T+6) = 91/1098 = 0.08288  (-> 1/12=0.08333)
+   n=100: |s| = T/(12T+6) = 825/9901 = 0.08332  (-> 1/12=0.08333)
+
+DONE.
