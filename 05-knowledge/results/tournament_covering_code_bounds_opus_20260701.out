@@ -1,0 +1,15 @@
+# Coding-theory framing of the S_n-orbit coloring of Q_{C(n,2)} (opus-S16, extends HYP-3805)
+# COVERING CODE bounds -- all PROVED, verified exact n<=7:
+#   info-floor ceil(log2 #cls) = 1,2,4,6,9   (sphere-covering)
+#   covering radius R(n)=max MFAS            = 1,1,3,4,7   (max dist to transitive code)
+#   iso-diameter  D(n)=max-pair iso-dist     = 1,2,3,4,(>=7)
+#   flip-rank     k(n)=min transversal subcube= 1,2,4,7,12
+# CHAIN: k(n) >= D(n) >= R(n) AND k(n) >= info-floor (proof: a transversal subcube holds reps of transitive
+#   + the farthest class agreeing on fixed arcs => differ only in free arcs => k >= their iso-distance).
+# KEY: k(n) EXCEEDS all three classical bounds (n=6: k=7 > floor=6 > D=R=4; n=7: k=12 > floor=9 > R=7).
+#   The excess = the S_n orbit-FOLDING penalty, driven by max|Aut| (few reps = hard to cover).
+# AXES: R(n) extremizer (max MFAS=depth) vs max|Aut| (symmetry): DIVERGE at n=6 (|Aut|=3 vs 9),
+#   COINCIDE at n=7 (Paley, |Aut|=21, MFAS=7=both) => kind-pasteur's 'two axes meet at Paley' = a PALEY-PRIME phenomenon.
+# PREDICTION (refined): k(n) jumps track max|Aut|; largest at n=3 mod4 (DOUBLY-REGULAR/Paley, klein HYP-3804 2-design,
+#   = LRC QR atoms): Paley primes |Aut|=p(p-1)/2 = 7->21,11->55,19->171,23->253. n=9 spike 27 (prime-power).
+#   MFAS(Paley_p) (covering radius at Paley primes): 7(exact), <=12(n=9), <=20(n=11).

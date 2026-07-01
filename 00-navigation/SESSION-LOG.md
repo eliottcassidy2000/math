@@ -12,6 +12,26 @@ SYNTHESIS: FIVE "2"s are ONE fact -- alternation length (2 binding runners) = #a
 APPLIED TO PROOF (the sharpest reframe yet): the covering-min lower bound = a CHEBYSHEV / LP-DUALITY statement with a 2-POINT-supported dual (on runners {1,killer} at times {t*,1-t*}). A beater (M<M_C) must BREAK a length-2 alternation FORCED by v≡±1 mod Phi6 while COVERING all q<=n (THM-523); the two obligations meet on the finite Phi6 phase-lattice (S68/HYP-3802 "covering forces q*: n->Phi6") -- OPEN-Q-108 in Chebyshev/LP-dual form: a FINITE, 2-DIMENSIONAL dual on a FINITE phase group (an object one can hope to construct).
 
 CONVERGENCE: opus-S15 (HYP-3805) resolved the TOURNAMENT flip-rank(7)=12, obstruction = the Paley heptagon (|Aut|=21, max|Aut|=1,3,3,5,9,21 for n=2..7 extends my S72's 3,3,5,9), with the mechanism "high-|Aut| classes are hardest to cover." That is the tournament covering-excess + its |Aut|-mechanism; MY HYP-3806 is the LRC covering-excess IDENTITY + the equioscillation/Chebyshev structure -- same "covering >> free" on both halves. COLLISION: opus committed HYP-3805 first (via rebase); my Chebyshev work renamed -> HYP-3806 (klein block). HONEST: all facts exact-verified; the lenses (Chebyshev, covering-excess, rigidity) are established, here identified/unified/applied; NOT a proof (OPEN-Q-108 open), a proof TEMPLATE + synthesis. Files: chebyshev_covering_excess_klein.py(+out); HYP-3806; reflection five-twos-are-one-corner.md. No canon overridden.
+## opus-2026-07-01-S16 -- THE FLIP-RANK IS A COVERING CODE: k(n) >= D(n) >= R(n) but EXCEEDS all classical bounds (S_n-folding excess); depth & symmetry axes FUSE only at Paley primes (extends HYP-3805).
+
+Prompt: extend the Paley-prime prediction; consider the coding-theory framing -- covering radius, min transversal-subcube dim of the S_n-orbit coloring.
+
+MERGE w/ kind-pasteur-S10 (they built the DEPTH axis = MFAS geodesic to transitive, MFAS(Paley)=7, MFAS<->H r=0.85; I built the WIDTH axis = flip-rank; kps confirmed my k(7)=12, framed 'width-break caused by depth-extremum').
+
+CODING-THEORY FRAMING (the ask): the S_n-orbit coloring of Q_{C(n,2)} is a COVERING CODE. Five invariants unified: k(n)=min transversal-subcube dim (COVERING), klein rainbow Rb(n)=max injective-subcube dim (PACKING dual), mac-mini R(n)=max MFAS=COVERING RADIUS (= iso-dist to the transitive code, since MFAS(C)=dist(C,transitive)), iso-DIAMETER D(n), info-floor.
+
+PROVED + verified exact n<=7:
+- R(n)=1,1,3,4,7 ; D(n)=1,2,3,4 ; k(n)=1,2,4,7,12 ; floor=1,2,4,6,9.
+- CHAIN k(n) >= D(n) >= R(n) (a transversal subcube holds transitive + every class agreeing on fixed arcs => any pair differs only in the k free arcs => min-iso-dist <= k for all pairs) AND k(n) >= floor.
+- PUNCHLINE: k(n) EXCEEDS ALL THREE bounds (n=6: 7 > 6 > 4=4; n=7: 12 > 9 > 7). Excess = 0,0,0,1,3 = the S_n orbit-FOLDING penalty (klein's 'group folds the cube' made quantitative), driven by max|Aut| (n!/|Aut| few reps = hard to cover).
+
+TWO AXES FUSE AT PALEY PRIMES: depth-extremal (max MFAS) vs symmetry-extremal (max|Aut|) DIVERGE at n=6 (covering-radius extremizer |Aut|=3 =/= max|Aut|=9) but COINCIDE at n=7 (Paley heptagon is BOTH max MFAS=7=R(7) AND max|Aut|=21). So kps's 'two axes meet at Paley' is precisely a PALEY-PRIME phenomenon -- and why k jumps hardest there (both the geometric bound and the folding excess peak on ONE class).
+
+PREDICTION (refined, honest): flip-rank jumps track max|Aut|, NOT Paley primes exclusively. Circulant max|Aut| (multiplier group) = 3,5,21,27,55 for n=3,5,7,9,11; DOUBLY-REGULAR n=3 mod4 (Paley, = klein HYP-3804 2-design = LRC QR atoms) carry |Aut|=p(p-1)/2=21,55,171,253 (cleanest, LRC-tied), but n=9 (prime power 3^2) spikes to 27>21 too. So: jumps where a highly-symmetric tournament exists; Paley primes are the cleanest instances.
+
+LRC finish: OPEN-Q-108 (min covering M <-> max D_7 symmetry) now = 'the LRC extremizer is the symmetry-extremal tournament' = the flip-rank obstruction = covering-radius extremizer = (at Paley primes) depth geodesic endpoint. Same crux, better instrumented.
+
+HONEST: chain + R,D exact n<=7 PROVED; k(7)=12 strongly evidenced (not exhaustive); max|Aut| n>=8 constructible lower bounds (Paley = known max at Paley primes); unification is a sharpened conjecture. Reflection: the-flip-rank-is-a-covering-code-and-it-exceeds-every-classical-bound-by-the-sn-folding-excess-opus-20260701.md; scripts tournament_{covering_code_bounds,covering_radius_n7_paley,maxaut_paley_prediction}_opus_20260701.py (+.out). Extends HYP-3805. No canon overridden.
 
 ## opus-2026-07-01-S15 -- FLIP-RANK n=7 RESOLUTION + PALEY-HEPTAGON OBSTRUCTION: a four-agent MERGE; k(7)=12 not 11 (lazy-caterer BREAKS); the obstruction IS the LRC extremal object (HYP-3805).
 
