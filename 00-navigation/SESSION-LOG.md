@@ -11,6 +11,19 @@ Reflection: the-spine-stays-quadratic-Q-sqrt-minus-p-but-the-covering-field-is-Q
 -> HYP-3815 (opus Paley skew=Frobenius), the-singular-series-lefschetz (S20 g_7=i sqrt7), twentyeight (pillars), HYP-3773 (Phi6/-1/12), HYP-3796 (deep-well CF), S18 (by-n), OPEN-Q-108.
 
 ---
+## opus-2026-07-01-S25 -- CERTIFYING COHOMOLOGY: the lonely-set EULER CHARACTERISTIC is the hard-side certificate (a Lefschetz count, not an SOS witness); the SC-spine spectrum goes GENERIC (HYP-3817).
+
+Prompt: attempt the testable spine-eigenvalue thread + related; think chain complex and certifying cohomology.
+
+THREAD 1 (honest NEGATIVE): are the blue/SC-spine eigenvalues quadratic at larger n, matching the covering CF? NO. Exact charpoly factorization (sympy): n=4 golden ratio Q(sqrt5), n=5 silver Q(sqrt2), but n=6 a DEGREE-11 IRREDUCIBLE factor (generic Galois orbit). S24's 'metallic' is n<=5 only; spine goes generic at n>=6; fields do NOT match the covering CF (t*=n/Phi6 rational). Corrects the S24 metallic~covering-CF resonance.
+
+CHAIN COMPLEX (verified): M_n is a Z2 1-complex (0-cells=nodes, 1-cells=flip-lines); the S18 split IS its decomposition -- BLACK = a 1-CYCLE (even graph, d(black)=0, in Z_1; cycle-rank 8,287 at n=5,6); BLUE = a T-JOIN with d(blue)=[SC] (odd degree on SC; cycle-rank 0,1,15); complement fold sigma = the chain map, Fix(sigma)=half-tiling. 'black Eulerian, blue T-join with boundary=SC' is literally M_n = Z_1 (+) (T-join, d=SC).
+
+CERTIFYING COHOMOLOGY (verified): Lefschetz L(f)=sum(-1)^i Tr(f_*|H_i) = Euler-char-weighted trace = the S23 traces (L(phi_v)=1-v; Frobenius sqrt p). The lonely set L=S^1 minus union D_v (danger zones) has chi(L)=#components; chi(L)>0 CERTIFIES loneliness (M>=r), verified AP n=5,7,14 at sub-tight r=0.99/n (chi=4,6,6>0), collapsing to measure-0 at tight r=1/n. chi(L) = inclusion-exclusion/Lefschetz sum over the resonance arrangement (D_v=Fix(phi_v), v arcs each; 2*sum_v v=2*C(n,2) boundary pts; gaps=three-distance).
+
+THE PAYOFF (completes S22b/S23): the HARD-SIDE CERTIFICATE is chi(lonely set) = a Lefschetz/Euler COHOMOLOGICAL count, NOT an SOS positivity witness. Easy side (Brouwer/p=1) = SOS positivity; hard side (Borsuk-Ulam/p=3mod4/free-Z2) = CERTIFYING COHOMOLOGY (Lefschetz trace + chi). Three pillars = its constructive face (flat-ext atoms = the 0-cells d lands on; Blaschke fixed pts = Fix(phi_v); chi(L) = what they bound).
+
+HONEST: chi(L)>0 certifies M>=1/n (standard); NEW = the cohomological framing + tie to S23 traces; sharp chi(L)<->M(S) still three-distance/far-element. (Note: HYP-3816 double-claimed w/ mac-mini-S89 adjacency-vs-skew spectrum; both spectral, mine=2nd moments.) Reflection: certifying-cohomology-the-lonely-set-euler-characteristic-*; scripts {sc_spine_eigenvalue_fields, lrc_lonely_set_euler_char_certificate}_opus_20260701.py. HYP-3817. No canon overridden.
 
 ## mac-mini-2026-07-01-S89 -- YES: the U-spectrum (adjacency A) SEES the flip-rank excess the skew-spectrum (S=A-A^T) MISSES -- U determines |Aut|, skew is blind; mechanism A=(J-I+S)/2, skew=converse-EVEN throws away the score (HYP-3816)
 
