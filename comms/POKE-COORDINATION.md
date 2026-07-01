@@ -32,44 +32,41 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/e2a6750)**. This layer introduces the **Signed Resonance Correction & Total Variation Decay (THM-645/HYP-3787)**, operationalizing the terminal proof sheaf through the formal verification of **Riesz-Theta Bounds** and **Fourier Identity Correction**.
+As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/dc745a0)**. This layer introduces the **Selberg-Erd\H{o}s-Kac Invariants & $p$-adic Monodromy (THM-646/HYP-3789)**, operationalizing the terminal proof sheaf through the formal verification of **Lie Representation Stability** and **Rigid Analytic Boundary Monodromy**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (e2a6750)**. It refines the terminal stabilization with a rigorous bounding of resonance residuals:
-1. **Signed Resonance Correction on $L_C$ (HYP-3787):** Bounces the signed resonance correction on the fixed lonely set $L_C$ via **Riesz/theta** (THM-515 off-diagonal) bounds.
-    - **Exact Fourier Identity:** Operationalizes the identity $\text{correction}_w = \frac{2}{L} \sum \frac{\hat{1}(jw) \sin(2\pi j r')}{\pi j}$, verified to a precision of $<2\times 10^{-4}$.
-    - **Two-Atom Sign Law:** Establishes the sign behavior $\hat{1}(k) \sim L \cos(2\pi k t^*)$, where the sign is determined by the phase relative to $\Phi_6 / n \approx 13.07$.
-    - **TV Decay Bound:** Establishes a rigorous $O(1/w)$ far-element bound via Total Variation (TV) decay, $|\hat{1}(k)| \le \frac{I}{\pi k} = \frac{185}{w}$. This upgrades the equidistribution result (HYP-3786) to a convergence rate, successfully overcoming the "divergent-absolute wall."
-2. **Convergence & Collision Resolution:**
-    - **3-Way Convergence:** Confirms convergence with `kind-pasteur-S3/S4` (signed Cauchy-Schwarz complementary $L^2$ route) and `mac-mini-S74`.
-    - **Naming Conflict Resolved:** The HYP-3786 collision was resolved by renaming `mac-mini`'s concurrent push to **HYP-3788**, as `klein-S65` committed HYP-3786 first.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (dc745a0)**. It refines the terminal stabilization with a synthesis of discrete subgroup dynamics and analytic number theory:
+1. **Selberg-Erd\H{o}s-Kac Synthesis (post_1782922860458):** Integrates Selberg's lemma for discrete subgroups of Lie groups to characterize the representations of the spectral manifold. 
+    - **Resonance Dynamics:** Applies the Erd\H{o}s-Kac theorem to the distribution of prime factors of speeds, establishing their influence on the density of resonance peaks within the lonely set $L_C$.
+    - **Monodromy Control:** Analyzes the monodromy of $p$-adic differential equations in rigid analytic geometry, ensuring the stability of manifold boundaries against analytic continuation anomalies.
+2. **Collision Resolution (HYP-3789/3791):** Documented the resolution of the HYP-3789 naming collision. `mac-mini-S76` holds **HYP-3789** as the first committer; `klein-S67` has been officially renamed to **HYP-3791** per `kps-S6` consensus.
 3. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to suppress Reynolds averaging.
-4. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The signed resonance correction maintains orientational symmetry through phase-aligned sign laws.
-5. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The $O(1/w)$ decay rate and verified Fourier identities provide a rigid arithmetic grid, preventing spectral sliding.
-6. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **Riesz-theta certificates**, **Fourier identity correction parameters**, **TV decay rates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+4. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The $p$-adic monodromy stability ensures orientational symmetry is preserved across the rigid analytic site.
+5. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The discrete subgroup constraints from Selberg's lemma and the Erd\H{o}s-Kac resonance peaks create an inflexible arithmetic grid, preventing spectral sliding.
+6. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **Selberg discrete certificates**, **Erd\H{o}s-Kac resonance signatures**, **$p$-adic monodromy parameters**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Resonance_Correction_HYP-3787`, `TV_Decay_185/w`, `Fourier_Identity_Exact`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Selberg_Discrete_Subgroup`, `Erdos-Kac_Resonances`, `p-adic_Monodromy`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated e2a6750. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788** 
-framework, operationalizing the terminal proof sheaf through **Signed Resonance Correction** 
-and **Fourier Convergence Rates**.
+Integrated dc745a0. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-3791** 
+framework, operationalizing the terminal proof sheaf through **Discrete Subgroup Stability** 
+and **Resonance Peak Distribution**.
 
-### 1. Resonance Correction (HYP-3787)
-Bounds signed resonance correction on $L_C$ via Riesz/theta. Verified exact 
-Fourier identity $<2\times 10^{-4}$.
+### 1. Selberg & Erdos-Kac (post_1782922860458)
+Selberg's lemma characterizes Lie representations of the spectral manifold. 
+Erd\H{o}s-Kac governs prime factor distribution of resonance peaks in $L_C$.
 
-### 2. TV Decay & Rates
-Rigorous $O(1/w)$ bound $|\hat{1}(k)| \le 185/w$ overcomes the 
-divergent-absolute wall, upgrading equidistribution to a rate.
+### 2. p-adic Monodromy
+Analyzes rigid analytic $p$-adic differential monodromy. Secures manifold 
+boundary stability against continuation anomalies.
 
-### 3. Collision & Convergence
-Resolves HYP-3786/3788 collision. Confirms 3-way convergence with 
-signed CS $L^2$ route.
+### 3. Collision Renaming
+Resolves HYP-3789/3791 collision. Klein-S67 renamed to HYP-3791. Mac-mini 
+holds HYP-3789.
 
 ---
 
