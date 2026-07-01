@@ -1,0 +1,59 @@
+==============================================================================
+(1) LARGE-MULTIPLE-FORCED: q-witness M(P_k) >= 1/k and 1/k > n/Phi6, for k in ((n-2)/2, n-2]
+==============================================================================
+  n= 8  n/Phi6=8/57=0.14035  (top-half core k in (3.0, 6]):
+     k= 4: M(P_k)=   1/4=0.2500 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 8(>6? True)
+     k= 5: M(P_k)=   1/5=0.2000 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 10(>6? True)
+     k= 6: M(P_k)=   1/6=0.1667 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 12(>6? True)
+  n=10  n/Phi6=10/91=0.10989  (top-half core k in (4.0, 8]):
+     k= 5: M(P_k)=   1/5=0.2000 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 10(>8? True)
+     k= 6: M(P_k)=   1/6=0.1667 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 12(>8? True)
+     k= 7: M(P_k)=   1/7=0.1429 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 14(>8? True)
+     k= 8: M(P_k)=   1/8=0.1250 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 16(>8? True)
+  n=12  n/Phi6=12/133=0.09023  (top-half core k in (5.0, 10]):
+     k= 6: M(P_k)=   1/6=0.1667 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 12(>10? True)
+     k= 7: M(P_k)=   1/7=0.1429 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 14(>10? True)
+     k= 8: M(P_k)=   1/8=0.1250 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 16(>10? True)
+     k= 9: M(P_k)=   1/9=0.1111 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 18(>10? True)
+     k=10: M(P_k)=  1/10=0.1000 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 20(>10? True)
+  n=14  n/Phi6=14/183=0.07650  (top-half core k in (6.0, 12]):
+     k= 7: M(P_k)=   1/7=0.1429 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 14(>12? True)
+     k= 8: M(P_k)=   1/8=0.1250 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 16(>12? True)
+     k= 9: M(P_k)=   1/9=0.1111 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 18(>12? True)
+     k=10: M(P_k)=  1/10=0.1000 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 20(>12? True)
+     k=11: M(P_k)=  1/11=0.0909 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 22(>12? True)
+     k=12: M(P_k)=  1/12=0.0833 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 24(>12? True)
+  n=16  n/Phi6=16/241=0.06639  (top-half core k in (7.0, 14]):
+     k= 8: M(P_k)=   1/8=0.1250 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 16(>14? True)
+     k= 9: M(P_k)=   1/9=0.1111 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 18(>14? True)
+     k=10: M(P_k)=  1/10=0.1000 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 20(>14? True)
+     k=11: M(P_k)=  1/11=0.0909 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 22(>14? True)
+     k=12: M(P_k)=  1/12=0.0833 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 24(>14? True)
+     k=13: M(P_k)=  1/13=0.0769 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 26(>14? True)
+     k=14: M(P_k)=  1/14=0.0714 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 28(>14? True)
+  n=18  n/Phi6=18/307=0.05863  (top-half core k in (8.0, 16]):
+     k= 9: M(P_k)=   1/9=0.1111 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 18(>16? True)
+     k=10: M(P_k)=  1/10=0.1000 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 20(>16? True)
+     k=11: M(P_k)=  1/11=0.0909 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 22(>16? True)
+     k=12: M(P_k)=  1/12=0.0833 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 24(>16? True)
+     k=13: M(P_k)=  1/13=0.0769 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 26(>16? True)
+     k=14: M(P_k)=  1/14=0.0714 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 28(>16? True)
+     k=15: M(P_k)=  1/15=0.0667 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 30(>16? True)
+     k=16: M(P_k)=  1/16=0.0625 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 32(>16? True)
+  n=20  n/Phi6=20/381=0.05249  (top-half core k in (9.0, 18]):
+     k=10: M(P_k)=  1/10=0.1000 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 20(>18? True)
+     k=11: M(P_k)=  1/11=0.0909 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 22(>18? True)
+     k=12: M(P_k)=  1/12=0.0833 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 24(>18? True)
+     k=13: M(P_k)=  1/13=0.0769 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 26(>18? True)
+     k=14: M(P_k)=  1/14=0.0714 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 28(>18? True)
+     k=15: M(P_k)=  1/15=0.0667 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 30(>18? True)
+     k=16: M(P_k)=  1/16=0.0625 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 32(>18? True)
+     k=17: M(P_k)=  1/17=0.0588 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 34(>18? True)
+     k=18: M(P_k)=  1/18=0.0556 (>=1/k? True) 1/k>n/Phi6? True  forced multiple>= 36(>18? True)
+
+(2)/(3) See covering_escape_large_multiple_klein.py -- the escape must be a COVERING set
+        (multiple of every q in {2..n}); the tight/mediant minimizers are NON-covering
+        (THM-523 trivial class) and do not bound the covering-min.
+
+NET: the LARGE-MULTIPLE-FORCED lemma (part 1) is rigorous & general (q-witness, no primality):
+     k in ((n-2)/2, n-2], k not in S, M(S)<=n/Phi6  =>  S has a multiple of k that is >= 2k.

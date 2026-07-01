@@ -1,3 +1,19 @@
+## klein-2026-06-30-S52 -- "LARGE MULTIPLES ARE FORCED" made rigorous (general n) + the Steinhaus SCALING LAW for why they fail + honest corrections to HYP-3745 and the covering-min scope (HYP-3763)
+
+Prompt: survey ALL number-theory work in the repo (creative, comprehensive, niche included); work on making "large primes forced" fully rigorous; use Steinhaus ideas to push proofs.
+
+Did a comprehensive NT survey (Explore agent -- LRC/Farey/zeta/Paley/modular-forms/Steinhaus/CRT/additive-energy clusters catalogued). Then attacked "large primes forced" = the unbounded/large-speed residual (R4) of the lowness lemma (HYP-3748/3745). Filed HYP-3763; reflection the-multiplier-scales-its-own-distance.md; scripts large_multiple_forced_steinhaus_klein.py + covering_escape_large_multiple_klein.py (+.out).
+
+(A) RIGOROUS LEMMA (general n, no primality): k<=n-2, k not in S, M(S)<=n/Phi6(n) => S has a multiple of k, and if k>(n-2)/2 it is >=2k>n-2 (LARGE). Proof: q-witness (observer t=1/k => every non-multiple is >=1/k away, so no multiple => M>=1/k) + 1/k>n/Phi6 (kn<=(n-2)n<n^2-n+1); smallest multiple above the vacated k is 2k. The forcing THRESHOLD is the 6th cyclotomic value Phi6(n)=n^2-n+1 (hexagonal/Eisenstein). Verified n=8..20.
+
+(B) STEINHAUS SCALING LAW (the mechanism, using HYP-3762): the forced kappa=kc kills resonance k (D=k, ≡0) but the core is an AP so (three-gap) its orbit has no slack; removing k merges a DOUBLE gap. At a modulus D where k is near-resonant (k*a≡±1, k would sit at distance 1), kappa's image = c*(k-slot) ≡ ±c -- distance SCALED 1->c, out at the RIM of the hole, not in it. kappa refills the k-slot only if D|k(c-1) (never the deep modulus). So killing-resonance (≡0 mod k) and filling-hole (≡k mod D) are incompatible congruences of ONE integer. Verified n=14 k=12: c=2->M=2/25, c=7->7/89, c=13->13/157=13/Phi6(13); the surviving hole is at a LARGE PRIME D. "Large primes forced" holds in BOTH senses: large speed in the set, large prime as the hole's modulus.
+
+(C) HONEST CORRECTIONS: (i) HYP-3745's M>=2/(2n-3) is single-killer-only -- the DOUBLE-killer 84=12*7=14*6 gives 7/89<2/25=2/(2n-3) (still >n/Phi6, razor). (ii) Single-drop COVERING escapes exceed n/Phi6 for n=10,12,14 (5/43,2/21,7/89; margin SHRINKS ~1/n^2) but FAIL at n=8 (4/29<8/57): construction is covering-min only for n>=~10 (HYP-3701). SCOPE GUARD (caught mid-session): the covering-min ranges over COVERING sets (mult of every q in {2..n}); the tight/mediant minimizers (GW M=1/n; 2/(2n-1)) are NON-covering (THM-523 trivial class) and are NOT escapes -- an unconstrained search reports them as phantom escapes.
+
+NEXT: the full residual (a closed inequality M>n/Phi6 for ALL covering escapes at ALL large n) is the razor-thin covering-min conjecture (margin ~1/n^2); the scaling law M=c/D + a lower bound on the surviving-hole prime D vs the multiplier c is the route. Also: extend the rigorous large-multiple-forced lemma to a two-speed budget-count (how many top-half core speeds can a covering set drop?).
+
+--- prior entries ---
+
 ## klein-2026-06-30-S51 -- THE GENERAL THREE-GAP RIGIDITY IS STEINHAUS ON THE ROTATION ORBIT-CYCLE; T_p band skeleton common to tight+covering-min; reduced to a support/wide-hole bound (HYP-3762)
 
 Prompt: work on general 3-gap rigidity, see how it relates to cycles, and think band-transversal machinery (tight sets obey the same (T_p) conditions for p<=23).

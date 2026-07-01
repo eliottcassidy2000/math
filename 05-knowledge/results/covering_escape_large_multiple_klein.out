@@ -1,0 +1,18 @@
+COVERING escapes missing a top-half core speed k  (must be a genuine covering set)
+==============================================================================
+n= 8: construction M=8/57=0.1404 (=n/Phi6? True)
+      tightest COVERING escape (min over k): M=4/29=0.1379 vs n/Phi6=0.1404  margin=-0.00242  BELOW!
+      at k=6 (dropped), speeds A=7,B=24; binding D=29,a=5; forced mult-of-6=24
+      Steinhaus displacement: k-slot=1, forced-multiple image=4, dist=3
+n=10: construction M=10/91=0.1099 (=n/Phi6? True)
+      tightest COVERING escape (min over k): M=5/43=0.1163 vs n/Phi6=0.1099  margin=+0.00639  OK (>n/Phi6)
+      at k=8 (dropped), speeds A=9,B=40; binding D=43,a=16; forced mult-of-8=40
+      Steinhaus displacement: k-slot=42, forced-multiple image=38, dist=4
+n=12: construction M=12/133=0.0902 (=n/Phi6? True)
+      tightest COVERING escape (min over k): M=2/21=0.0952 vs n/Phi6=0.0902  margin=+0.00501  OK (>n/Phi6)
+      at k=10 (dropped), speeds A=11,B=60; binding D=63,a=19; forced mult-of-10=60
+      Steinhaus displacement: k-slot=1, forced-multiple image=6, dist=5
+n=14: construction M=14/183=0.0765 (=n/Phi6? True)
+      tightest COVERING escape (min over k): M=7/89=0.0787 vs n/Phi6=0.0765  margin=+0.00215  OK (>n/Phi6)
+      at k=12 (dropped), speeds A=13,B=84; binding D=89,a=37; forced mult-of-12=84
+      Steinhaus displacement: k-slot=88, forced-multiple image=82, dist=6
