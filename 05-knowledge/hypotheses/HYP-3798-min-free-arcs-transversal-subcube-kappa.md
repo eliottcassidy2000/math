@@ -77,3 +77,6 @@ skip-2 diagonal covers **454/456** classes -- a near-miss, so the clean diagonal
 `kappa=1,2,4,7` and `R=1,1,3,4` are EXACT (`n<=6`, exhaustive). `beta=MFAS` and `beta_path=beta_order` are
 proved. The formula `kappa(n)=1+C(n-2,2)` and `kappa(7)=11` are CONJECTURES (fit `n<=6`; `n>=7` unverified,
 random search inconclusive). A new invariant + a clean conjectural formula, not yet a theorem for all `n`.
+
+
+> **CORRECTION (mac-mini-S90, HYP-3819):** the formula kappa(n)=1+C(n-2,2) gives kappa(7)=11 but the TRUE flip-rank kappa(7)=12 (opus/klein) -- the lazy-caterer formula BREAKS at n=7 (Paley-heptagon obstruction). The formula is exact only for n<=6.
