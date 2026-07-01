@@ -1,3 +1,15 @@
+## klein-2026-07-01-S72 -- A TOURNAMENT-INVARIANT SAFARI (creative new properties): the PACKING/COVERING asymmetry (rainbow R(n) vs flip-rank rho(n)), the skew-spectrum's weakness, the QR-triangle 2-design (HYP-3804).
+
+Prompt: explore other creative tournament-related new properties, even if not directly LRC-related.
+
+Three findings (tournament_invariant_safari_klein.py, exhaustive n=3..6):
+(A) PACKING/COVERING ASYMMETRY. Define RAINBOW NUMBER R(n) = max subcube dim whose 2^k completions are ALL in DISTINCT iso classes (the PACKING dual of last session's flip-rank rho(n) = COVERING min). VERIFIED: R(n)=floor(log2|G_n|) EXACTLY (1,2,3,5 for n=3..6), while rho(n)=1,2,4,7 EXCEEDS ceil(log2) starting at n=6. Gap rho-R = 0,0,1,2 GROWS. So iso classes PACK at the information floor but COVER above the ceiling: covering is strictly HARDER than packing under the S_n action -- the group's folding obstructs covering (forces unavoidable collisions) but aids packing (fewer distinct things, room to dodge). Reframes the n=6 flip-rank transition: at n=6 the covering problem first outgrows its info floor while packing never does.
+(B) max|Aut| over classes = 3,3,5,9 (n=3..6).
+(C) SKEW-SPECTRUM is a VERY WEAK invariant: eigenvalues of S=T-T^T (+-1 skew) give only 1,2,2,6 DISTINCT spectra among |G_n|=2,4,12,56 -- almost all tournaments cospectral. Clean NEGATIVE (dead-end invariant, documented).
+(D) QR-TRIANGLE DESIGN: the directed-triangle hypergraph of the quadratic-residue (doubly-regular) tournament on q=prime=3 mod 4 is a 2-(q,3,(q+1)/4) DESIGN (every pair in (q+1)/4 directed triangles); VERIFIED q=3,7,11,19,23 (lambda=1,2,3,5,6). Rotational {1,2,3} on 7 is NOT a design (coverages 1,2,3) => the 2-design property CHARACTERIZES doubly-regularity. Clean tournament<->combinatorial-design bridge; the QR tournament is exactly the one on the LRC atoms (HYP-3802).
+
+HONEST: R(n)=floor(log2) verified n<=6, conjectured general; (D) likely known (doubly-regular <-> skew-Hadamard <-> 2-design; cf prior five_cycle_3design_s24e) but freshly verified with exact lambda=(q+1)/4; (C) a documented negative. Exploratory, not LRC-tied (per the owner's invitation). Most novel = (A), the rainbow/flip-rank duality quantifying how symmetry makes covering harder than packing. HYP-3804 in klein block, no collision. Files: tournament_invariant_safari_klein.py(+out); HYP-3804; reflection packing-is-easy-covering-is-hard.md. No canon overridden.
+
 ## klein-2026-07-01-S71 -- THE FLIP-RANK of tournament iso classes: minimal realizing-subcube = FIX A BALANCED MAX-CUT, FLIP THE TWO SIDES; a PHASE TRANSITION at n=6 (HYP-3803).
 
 Prompt: on n=4 all 4 iso classes come from flipping 3 arcs (naive) but also 2 arcs given a config rule on the 4 fixed arcs; study how this "shape of fixed arcs enabling minimum flips" changes as n grows; define it differently, seek patterns.

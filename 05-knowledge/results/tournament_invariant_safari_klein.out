@@ -1,0 +1,26 @@
+(A,B,C) panel over n=3..6:
+  n  |G_n| rho(LB..) R(n) rainbow floor(log2)  maxAut #cospectral-noniso
+  3      2         1 1 (exhaustive)           1       3                  2  (distinct spectra 1/2)
+  4      4         2 2 (exhaustive)           2       3                  4  (distinct spectra 2/4)
+  5     12         4 3 (exhaustive)           3       5                 12  (distinct spectra 2/12)
+  6     56         7 5 (exhaustive)           5       9                 56  (distinct spectra 6/56)
+
+  R(n) is the PACKING dual of flip-rank rho(n): R <= floor(log2|G|) <= ceil(log2|G|) <= rho.
+  cospectral-noniso = #classes NOT separated by the skew (T-T^T) spectrum (spectral incompleteness).
+
+(D) QR tournament directed-triangle hypergraph = 2-(q,3,(q+1)/4) design?
+   q= 3: #triangles=   1, predicted lambda=(q+1)/4=1, pair-coverages seen=[1] -> 2-design: True
+   q= 7: #triangles=  14, predicted lambda=(q+1)/4=2, pair-coverages seen=[2] -> 2-design: True
+   q=11: #triangles=  55, predicted lambda=(q+1)/4=3, pair-coverages seen=[3] -> 2-design: True
+   q=19: #triangles= 285, predicted lambda=(q+1)/4=5, pair-coverages seen=[5] -> 2-design: True
+   q=23: #triangles= 506, predicted lambda=(q+1)/4=6, pair-coverages seen=[6] -> 2-design: True
+   Is the 2-design property SPECIAL to doubly-regular (QR), or do OTHER regular tournaments give it?
+   q=7 QR {1,2,4}: #triangles=14, pair-coverages=[2] -> 2-design: True (doubly-regular=True)
+   q=7 rotational {1,2,3}: #triangles=14, pair-coverages=[1, 2, 3] -> 2-design: False (doubly-regular=False)
+
+SUMMARY of the safari:
+  (A) rainbow R(n)=floor(log2|G_n|) EXACTLY (n=3..6) while flip-rank rho(n) EXCEEDS ceil(log2):
+      gap rho-R = 0,0,1,2 -> iso classes PACK at the floor but COVER above the ceiling (asymmetry).
+  (C) skew (T-T^T) spectrum is a VERY WEAK invariant (distinct spectra grow far slower than |G_n|).
+  (D) QR/doubly-regular triangle hypergraph is a 2-(q,3,(q+1)/4) design; rotational is NOT -> the
+      2-design property CHARACTERIZES doubly-regularity (a clean tournament<->design bridge).
