@@ -29,6 +29,23 @@ THE LRC PARALLEL (the whole point): the covering-min is a FIXED-POINT/rigidity p
 NEXT: (1) build a per-class LOCAL moment Var_flip(H) and test needle-detection; (2) restate the LRC lower bound as 'moment + covering, not transform' (moment floor = positive bound, covering lazy-cut = finite closure, Fourier gap = the proof no transform closes it); (3) prove PARITY=|Fix(fold)| at the SC-odd-grid-sym crux (HYP-3809) as the archetype fixed-point count.
 
 Files: 04-computation/fixed_point_instruments_macmini_20260701.py (+.out); HYP-3817; reflection to-see-a-symmetry-do-not-average-over-it.md. HONEST: (A),(B) grounded (n=7 sample, n=6 exhaustive); the design principle is a strategic synthesis (organizes S89+S86+LRC gap), directional not a theorem. No canon overridden, no court cases.
+## opus-2026-07-01-S26 -- THE BIQUADRATIC BRIDGE: sqrt21 is the OPEN-Q-108 residual (the iota-ODD index i*sqrt7 heptagon meets the EISENSTEIN covering sqrt-3 as the iota-EVEN cross-term of Q(sqrt-3,sqrt-7)) (HYP-3818).
+
+Prompt: consider complementarity; extend three-distance/far-element; think cohomologically; is the Q(sqrt-3,sqrt-7) bridge (i*sqrt7 interacting with the Eisenstein covering via sqrt21) the OPEN-Q-108 residual?
+
+CONVERGES kind-pasteur-S21 (the sqrt-7 vs sqrt-3 SPLIT at n=14 is the difficulty): my sqrt21 IS the bridge between their two fields.
+
+OPEN-Q-108's 'odd index' = a NONZERO Borsuk-Ulam DEGREE of the antipodal(complement) action in the R-ODD block (THM-582: rho=phi.reverse involution on Ham paths => H(T)==#palindromic mod2, Redei => odd>=1; verified Paley T_7,T_11). That R-ODD block IS the iota-odd Gauss certificate i*sqrt7 (heptagon).
+
+TWO ORDER-2 STRUCTURES = antipode iota + QR-negation (free iff p=3mod4) = Gal(Q(sqrt-3,sqrt-7))=Z2xZ2.
+
+VERIFIED GAUSS iota-PARITY: g(3)=i*sqrt3, g(7)=i*sqrt7 (p=3mod4, iota-ODD imaginary); g(21)=sqrt21 (21=1mod4, iota-EVEN real); i*sqrt3 * i*sqrt7 = -sqrt21 = +-g(21) = a CUP PRODUCT H^1_odd (x) H^1_odd -> H^2_even. LRC-14: N=14=2*7 (heptagon sqrt-7), Phi6=183=3*61 (Eisenstein 3 => sqrt-3), |Aut(Paley_7)|=21=3*7 (shared 3). odd-index(7) meets covering(Eisenstein 3) at sqrt21=sqrt(3*7).
+
+VERDICT (grounded): sqrt21 IS the residual -- (1) iota-EVEN & composite (single-prime Gauss is iota-odd/imaginary; only the CROSS 3*7 gives a real certificate coupling odd index to even covering); (2) does NOT split (THM-503 L-not-Euler-product; klein-HYP-3812 binds only at composite Phi6; sqrt21 not in Q(sqrt-3) nor Q(sqrt-7)); (3) the EVEN half of the R-graded Lefschetz certificate (S25).
+
+THREE-DISTANCE/FAR-ELEMENT graded: iota-EVEN = far/uniform (Eisenstein E2, sqrt21/sqrt61, SOS/Brouwer-easy); iota-ODD = near/structured (i*sqrt7 heptagon, odd index, palindromic paths, Borsuk-Ulam-hard); residual gap = the sqrt21 cross-term.
+
+HONEST: arithmetic + iota-parity cohomology VERIFIED; 'sqrt21 = the residual' is a grounded conjecture (right field); OPEN = exhibiting sqrt21 in the covering-min certificate (closing OPEN-Q-108); 61 = separate split factor. Reflection: the-biquadratic-bridge-sqrt21-is-the-open-q-108-residual-*; script biquadratic_sqrt21_bridge_gauss_opus_20260701.py. HYP-3818. No canon overridden.
 
 ## kind-pasteur-2026-07-01-S21 -- THE SPINE STAYS QUADRATIC Q(sqrt-p) BUT THE COVERING FIELD IS Q(sqrt-3); they MATCH ONLY AT n=6, and the SPLIT at n=14 (Q(sqrt-7) vs Q(sqrt-3)) is the difficulty
 
