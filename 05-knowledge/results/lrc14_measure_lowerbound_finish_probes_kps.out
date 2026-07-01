@@ -1,0 +1,24 @@
+========================================================================================
+PROBE 1  HARD SEARCH: min meas(L_C) over 11-cores (near-tight locus)
+========================================================================================
+  9974 cores: MIN meas(L_C)=0.032261=313/9702 at [1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13]
+  1/36=0.027778; inf>=1/36? True; margin=1.16x (TIGHT)
+
+========================================================================================
+PROBE 2  REVERSE-MARKOV (dead-end: int g_C < 1/14)
+========================================================================================
+  extremizer [1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13]: int g_C=0.03124 < 1/14=0.07143; M~0.09983
+  reverse-Markov LB (int g -1/14)/(M-1/14) = -1.4151 < 0 => VACUOUS (lonely set = above-mean tail)
+
+========================================================================================
+PROBE 3  COLLAR/MORSE: meas(L_C) = sum of collar widths at the local maxima
+========================================================================================
+  extremizer meas=0.03226; #collars(local maxima >=1/14)=8; widths 0.00137..0.00628
+    threshold 1/14: meas{g>=0.0714}=0.03226
+    threshold 1/13: meas{g>=0.0769}=0.02395
+    threshold 1/12: meas{g>=0.0833}=0.01532
+  => the lonely set is the COLLAR from 1/14 up to the maxima ~1/12; measure = sum of collar widths.
+
+NET: target TRUE but TIGHT (1.16x); finish needs a SHARP tool (census of dilated-AP minimizers /
+     Caratheodory-Toeplitz moment positivity / HYP-3787 O(1/w) to dissolve the threshold), not a freebie.
+DONE.
