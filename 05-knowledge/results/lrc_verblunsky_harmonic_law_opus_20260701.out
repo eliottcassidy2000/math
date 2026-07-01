@@ -1,0 +1,10 @@
+HARMONIC LAW: AP {1..n-1} at t=1/n has |alpha_j| = 1/(n-1-j) exactly?
+  n= 5: |alpha_j|=1/(n-1-j)? True   phases/pi=[np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(-1.0)]
+  n= 7: |alpha_j|=1/(n-1-j)? True   phases/pi=[np.float64(-1.0), np.float64(-1.0), np.float64(1.0), np.float64(-1.0), np.float64(-1.0), np.float64(-1.0)]
+  n=10: |alpha_j|=1/(n-1-j)? True   phases/pi=[np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(1.0), np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(-1.0)]
+  n=14: |alpha_j|=1/(n-1-j)? True   phases/pi=[np.float64(1.0), np.float64(-1.0), np.float64(1.0), np.float64(1.0), np.float64(-1.0), np.float64(1.0), np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(-1.0)]
+  n=20: |alpha_j|=1/(n-1-j)? True   phases/pi=[np.float64(-1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(-1.0), np.float64(1.0), np.float64(-1.0), np.float64(-1.0), np.float64(1.0), np.float64(1.0), np.float64(-1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(-1.0)]
+  => VERIFIED. The AP lonely config's Verblunsky = harmonic reciprocals; phases = pi (real, alternating sign structure).
+
+  n=14: sum|alpha_j| = H_(n-1) = 3.1801 (harmonic number ~ ln(n)+gamma); alpha_0=1/(n-1)=0.0769 (the covering-min CEILING)
+        alpha_(n-2)=1 (terminal => n-1 atoms, purely atomic measure). LRC gap M=1/n=1/14 sits just below alpha_0=1/13.

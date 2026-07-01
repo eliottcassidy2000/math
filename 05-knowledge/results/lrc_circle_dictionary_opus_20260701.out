@@ -1,0 +1,20 @@
+== DICTIONARY of circle functions (12 entries), grouped ==
+ AFFINE AGL(1):  rot_a, dil_v (RUNNER), refl (antipode), aff_{v,a}
+ MODULAR PSL2Z:  gauss {1/x}, mediant (Farey), mobius (a x+b)/(c x+d)
+ SZEGO semigrp:  verblunsky vertex-insertion (n->n-1)
+ ANALYTIC:       saw ((x)) [iota-odd], dist ||x|| [iota-even]
+
+GROUP RELATIONS: dil compose False | affine law True | refl-conj True | semidirect rot<|dil True
+  => rot, dil, refl generate the AFFINE GROUP AGL(1,R/Z) = {x -> +-v x + a}.  RUNNERS = the dilation part.
+
+LRC at n=14: lonely set = units (Z/14)* = [1, 3, 5, 9, 11, 13]  (the dilations that are INVERTIBLE mod 14).
+  |units| = phi(14) = 6; these are exactly the speeds with a well-defined observer-inverse.
+
+|alpha_0| = |runner centroid| (observer at z=1) -- SMALL = balanced/cold = good LRC spreading:
+  AP {1..13} @ t=1/14 : |alpha_0|=0.0769  = 1/(n-1)=1/13=0.0769 EXACT (deleted z=1 pulls centroid)
+  construction @14/183 : |alpha_0|=0.0369
+  GW {1..11,13,24}@1/14: |alpha_0|=0.1428
+  random spread @gen t  : |alpha_0|=0.2678 (bigger=less balanced)
+
+  => The Verblunsky HIERARCHY {alpha_j} is a tower of BALANCE measures of the runner cloud from the origin;
+     alpha_0=centroid, and for the extremal AP the WHOLE tower is harmonic 1/(n-1-j) (vertex-peeling = Mode A).
