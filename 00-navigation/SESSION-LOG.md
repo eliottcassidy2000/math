@@ -37,6 +37,21 @@ Reflection: buckets-and-pairs-the-merged-metagraph-as-a-constraint-conjecture-mu
 -> THM-549/550 (half-tiling), THM-281/282/584/582, LEM-003, HYP-3808, klein-S13, HYP-3540.
 
 ---
+## klein-2026-07-01-S76 -- THE ALL-LAYERS LUCAS PARITY LAW of the merged metagraph: ONE law unifying HYP-1772 (d=1) + the d=m blue/black cluster (klein-S75/mac-mini-S83/opus-S18); + fiber freeness + rigidity-mod-2 + a conjecture menu (HYP-3809).
+
+Prompt: generate multitudes of conjectures; mine past work comprehensively (buckets, half-tiling); the owner hypothesizes the merged metagraph = the constraint (3 categories, first two end ODD, last ends EVEN); explore which tilings share a node (symmetry restrictions).
+
+MINED: HYP-1772 (merged-tiling bucket parity) already PROVES the checksum for all n: F(C)=H(C)/|Aut(C)| is ODD because Rédei makes H odd and |Aut| is odd (an involutory tournament automorphism would reverse an edge). So SC-merged (1 class)=odd, NS-merged (2 complement classes)=even. HYP-1772's 'edge balance' is the d=1 (wiggly) case; my S75 blue/black is the d=m case. Half-tiling model = HYP-2689/THM-551 (grid-sym subcube via half-addresses = the blue subcube).
+
+MAIN RESULT -- THE ALL-LAYERS LUCAS PARITY LAW (all_layers_parity_fiber_klein.py, exhaustive n=4,5,6, 0 violations): for merged node u (mass M_u) and Hamming layer d (flip d tiles), 2 lambda_u^(d) + tau_u^(d) = C(m,d) M_u (each of M_u tilings has C(m,d) distance-d neighbors), so tau_u^(d) ≡ C(m,d) M_u (mod 2). With M_u≡[u SC] (HYP-1772) and Lucas C(m,d) mod2 = [d a binary submask of m]: CROSS-INCIDENCE tau_u^(d) is ODD <=> (u is SC) AND (d submask of m). d=1 = HYP-1772 (C(m,1)=m); d=m = the blue/black lines (C(m,m)=1 => every SC node odd-degree => #SC EVEN). PARITY-ACTIVE LAYERS = binary submasks of m (a Boolean subcube size 2^s(m), s=digit-sum): {1,2,3},{2,4,6},{2,8,10} for n=4,5,6. So the two scattered results (d=1, d=m) are the endpoints of ONE Lucas-graded ladder.
+
+WHICH TILINGS SHARE A NODE (the fiber): F(C)=H(C)/|Aut(C)|, and Aut(C) acts FREELY on the Hamiltonian paths (LEM-003), so a node's tilings = ONE Aut(C)-orbit of Ham paths (each Ham path = a way to lay the base path); two tilings share a node iff a relabeling relates their base-path realizations (up to Aut/complement). The grid-symmetric (blue) tilings are the fixed points of sigma = the reflection; opus-S18 shows sigma IS the complement, which explains why blue lines only touch SC nodes.
+
+RIGIDITY (the owner's central hypothesis 'metagraph = the constraint'): TRUE mod 2, FALSE over Z. The odd/odd/even category rule + the all-layers Lucas law FORCE the ENTIRE Z/2 parity skeleton (every cross-incidence parity, #SC even, v_2(M_u) in {0,1} never >=2). But the integer masses are F(C)=H/|Aut| -- genuine Rédei/|Aut| tournament data that parity cannot determine. So the constraint IS the metagraph's parity content; the residual is exactly the arithmetic of H and |Aut|.
+
+CONJECTURE MENU (13, several proof-backed): all-layers Lucas law; parity-active-layer count = 2^s(m)-1; #SC even all n; fiber freeness; v_2(M_u) in {0,1}; pure-blue never self-loops; NS self-loop onset at n=6 (= first NS class with a flip-all-tiles symmetry); tripartite color rule (blue<->SC via sigma=complement); #blue=2^((m+floor((n-1)/2))/2-1); n=6 as a universal threshold via m binary (m=1,3,6,10 -> 1010 at n=6); category recursion (#PB,#MX,#KB)=(1,1,1),(3,5,2),(2,10,22), #KB=(A000568-SC)/2.
+
+CONVERGENCE: mac-mini-S83 (HYP-3808, independently: black=even graph, blue=odd, SC odd/NS even, self-loop-conj refuted at n=6, same #blue formula) + opus-S18 (grid reflection = complement) all hit the d=m cluster this turn -- my HYP-3809 is the Lucas-graded ALL-LAYERS extension. HYP-3808 is a klein-S75/mac-mini-S83 double-claim (I committed first; flagged for coordinator merge). HONEST: main law proof-backed (counting identity + HYP-1772); conjecture menu open; n>=7 not recomputed. Files: all_layers_parity_fiber_klein.py(+out); HYP-3809; reflection one-law-across-all-layers-graded-by-lucas.md. No canon overridden.
 
 ## opus-2026-07-01-S18 -- THE GRID REFLECTION IS THE COMPLEMENT: it GENERATES the blue/black even-graph+T-join parity decomposition (extends mac-mini-S83/HYP-3808, concurrent convergence).
 

@@ -1,0 +1,18 @@
+
+===== n=4: m=3, merged nodes 3, #SC=2 =====
+  ALL-LAYERS parity: tau(u,d)≡C(m,d)*M_u mod2 -> violations=0 (0 => LAW HOLDS)
+    C(m,d) odd at layers d in [1, 2, 3] (Lucas); at those d, odd-cross = SC nodes; else all even
+    d=1 odd-cross nodes: 2 (=SC iff m odd, m=3 odd); d=m odd-cross: 2 (=#SC=2)
+  FIBER F(C)=H/|Aut| holds: True; F(C) odd: True (=> merged mass parity = [SC], HYP-1772 proved via |Aut| odd)
+
+===== n=5: m=6, merged nodes 10, #SC=8 =====
+  ALL-LAYERS parity: tau(u,d)≡C(m,d)*M_u mod2 -> violations=0 (0 => LAW HOLDS)
+    C(m,d) odd at layers d in [2, 4, 6] (Lucas); at those d, odd-cross = SC nodes; else all even
+    d=1 odd-cross nodes: 0 (=SC iff m odd, m=6 even); d=m odd-cross: 8 (=#SC=8)
+  FIBER F(C)=H/|Aut| holds: True; F(C) odd: True (=> merged mass parity = [SC], HYP-1772 proved via |Aut| odd)
+
+===== n=6: m=10, merged nodes 34, #SC=12 =====
+  ALL-LAYERS parity: tau(u,d)≡C(m,d)*M_u mod2 -> violations=0 (0 => LAW HOLDS)
+    C(m,d) odd at layers d in [2, 8, 10] (Lucas); at those d, odd-cross = SC nodes; else all even
+    d=1 odd-cross nodes: 0 (=SC iff m odd, m=10 even); d=m odd-cross: 12 (=#SC=12)
+  FIBER F(C)=H/|Aut| holds: True; F(C) odd: True (=> merged mass parity = [SC], HYP-1772 proved via |Aut| odd)
