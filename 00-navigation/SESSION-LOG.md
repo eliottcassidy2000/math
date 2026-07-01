@@ -1,3 +1,21 @@
+## mac-mini-2026-07-01-S90 -- A FIXED-POINT-SENSITIVE INSTRUMENT MUST BE BUILT FROM THE GROUP ACTION (covering invariant or moment), NOT another transform; the U-spectrum FAILS at n=7; LRC parallel = the Fourier/Delsarte spectral gap (HYP-3817)
+
+Prompt: work the next tasks and consider whether the next instrument has to be built to be sensitive to fixed points, not blind to them by symmetry -- a covering invariant, or Var(H), rather than another clever transform.
+
+THE OWNER'S INSIGHT IS CORRECT AND GROUNDED. A spectral TRANSFORM is built to be S_n-INVARIANT (its whole purpose = not depend on labeling); but the fixed-point/symmetry content (|Aut|, the flip-rank-excess needles) is ABOUT how relabeling acts -- so a transform has AVERAGED OVER exactly the coordinate you want to read.
+
+(A) n=7 SAMPLE: the U-spectrum (adjacency) FAILS to determine |Aut| -- in a 450-class sample, one U-spectrum holds BOTH |Aut|=1 and |Aut|=3. So S89's 'U determines |Aut|' was small-n LUCK (leaked via score degeneracies); at n=7 the leak closes. NO transform is a robust fixed-point detector (skew already blind at n=6).
+
+(B) n=6 COMPLEMENTARITY (exhaustive): the 15 high-|Aut| NEEDLES (|Aut| {3:12,5:2,9:1}, the flip-rank-excess drivers) are flagged by GROUP-ACTION instruments (|Aut|, MFAS covering-radius, kappa) but not transforms; the |Aut|=1 SPECTRAL TWINS (S86) are flagged by the U-spectrum but NOT by |Aut|/covering. TWO fine-structures, TWO instrument kinds -- COMPLEMENTARY, not ranked: build the covering/moment instrument for the fixed-point content, the transform for the generic content.
+
+DESIGN PRINCIPLE: to measure a group's fixed points, use an instrument BUILT FROM its action, not one INVARIANT under it. Covering (kappa = orbit-packing) sees the few-rep needles directly; moment (Var(H)=W(n) = orbit-weighted) writes |Aut| in as a weight; |Aut| itself = the direct fixed-point count (= |Fix| of the fold, S88 PARITY-face). These are the OPPOSITE kind of object from transforms -- engaged with the group, not quotiented by it.
+
+THE LRC PARALLEL (the whole point): the covering-min is a FIXED-POINT/rigidity problem (the extremal loneliness is an ATOM, a fixed point of the iota-fold; the construction a symmetric deep well). THIS is why the analytic TRANSFORMS (Fourier/Delsarte/Fejer) hit the SPECTRAL GAP (HYP-3785/S54) -- averaging/PSD, blind to the pointwise atom, exactly as the skew-spectrum is blind to |Aut|; and why the instruments that WORK are the MOMENT (2nd-moment floor inf R'>=1/(2 zeta(2)), HYP-3571) + COVERING (lazy-cut, HYP-3782), both group-action-built. Var(H)=W(n) (tournament) and CV(N_R)^2 (LRC floor) are the SAME moment instrument (THM-589). So the owner's tournament instrument principle IS the LRC proof strategy: for a fixed-point extremum, reach for a covering or a moment, never another transform.
+
+NEXT: (1) build a per-class LOCAL moment Var_flip(H) and test needle-detection; (2) restate the LRC lower bound as 'moment + covering, not transform' (moment floor = positive bound, covering lazy-cut = finite closure, Fourier gap = the proof no transform closes it); (3) prove PARITY=|Fix(fold)| at the SC-odd-grid-sym crux (HYP-3809) as the archetype fixed-point count.
+
+Files: 04-computation/fixed_point_instruments_macmini_20260701.py (+.out); HYP-3817; reflection to-see-a-symmetry-do-not-average-over-it.md. HONEST: (A),(B) grounded (n=7 sample, n=6 exhaustive); the design principle is a strategic synthesis (organizes S89+S86+LRC gap), directional not a theorem. No canon overridden, no court cases.
+
 ## kind-pasteur-2026-07-01-S21 -- THE SPINE STAYS QUADRATIC Q(sqrt-p) BUT THE COVERING FIELD IS Q(sqrt-3); they MATCH ONLY AT n=6, and the SPLIT at n=14 (Q(sqrt-7) vs Q(sqrt-3)) is the difficulty
 
 Prompt: push the next thread; do the spine eigenvalues at larger n stay quadratic, and do their fields match the covering CF?
