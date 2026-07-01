@@ -1,3 +1,26 @@
+## klein-2026-06-30-S60 -- NEW APPROACH: the COVERING-MIN TRANSITION AT n=12 IS REAL (exact ILP, verified up to speeds 4n); corrects my HYP-3764 pessimism (HYP-3778)
+
+Prompt: try a new approach.
+
+Pivoted from the modular-synthesis groove (S56-59) to a concrete, falsifiable attack on the covering-min open edge (HYP-3764: is the construction the covering-min for n>=12?). Filed HYP-3778; reflection tool-resistant-not-search-resistant.md; scripts covering_min_calibrated_search_klein.py + the reused ILP (covering_min_ip_v2_macmini); results covering_min_ilp_{n12,4n}_klein.out.
+
+THE JOURNEY (honest): my own new searches FAILED first -- a calibrated drop<=3-keep-1 search validated on n=9,10 but MISSED n=11; a random 8n search missed everything. WHY: the real n=11 beater is {2,6,8,9,10,11,13,14,17,19}=3/31, which DROPS speed 1 and 5 core speeds (highly spread) -- ad-hoc structural searches can't reach it. So I switched to the EXACT set-cover ILP (HYP-3731, scipy milp) -- the RIGHT tool -- which recovers ALL n<=11 beaters incl. the elusive n=11.
+
+THE RESULT (ILP, reliable at V~4n): covmin(speeds<=4n):
+  n=7..11: 2/13,2/15,4/33,4/37,3/31 -- spread family BEATS construction n/Phi6.
+  n=12,13,14: 1/11,1/12,1/13 = 1/(n-1) -- NO beater <=4n; construction n/Phi6 (12/133,13/157,14/183) WINS.
+CLEAN TRANSITION at n=12: covmin(<=4n) < construction for n<=11, = 1/(n-1) > construction for n>=12.
+
+IMPLICATIONS: CONFIRMS HYP-3737 (construction forced n>=12) up to the 4n envelope. CORRECTS my HYP-3764: its leading hypothesis H3 ('the n=12 transition is a search-mirage; beaters persist for all n') is DISFAVORED -- beaters do NOT persist past n=11 in the 4n envelope. The edge was TOOL-resistant (my searches encoded a structural prior the spread beaters break), not search-resistant (the exact ILP resolves it). H4 (transition real) supported.
+
+HONEST RESIDUAL: the ILP is exact only for speeds<=V, reliable only at V~4n (milp 25s time-limit: V=90,n=12 returns a SPURIOUS 6/55 > the V=60 answer 1/11 -- timeout artifact, distrust high V). So verified = 'no beater with speeds<=4n at n=12,13,14'. A beater in (4n, n(n-1)] is NOT excluded (but all known beaters have speed<=3.5n, so the spread family is likely exhausted). NOT a full proof that covmin(n>=12)=n/Phi6.
+
+CONVERGENCE: mac-mini S69 (HYP-3777) independently did 'a new approach = stochastic global optimization' -- same prompt-spirit.
+
+NEXT: (1) push the ILP into (4n, n(n-1)] with a longer milp time-limit or a better formulation (resolve fully); (2) the lower-bound proof (lowness lemma HYP-3747) for the (4n, n(n-1)] tail; (3) is 1/(n-1) provably the speed-<=4n covmin for n>=12?
+
+--- prior entries ---
+
 ## mac-mini-2026-06-30-S69 -- A NEW APPROACH (stochastic global optimization): annealing stress-tests covering-min(14)=14/183 -> CONFIRMED (no beater in 140 anneals) + the construction is an ISOLATED DEEP WELL (HYP-3777)
 
 Prompt: try a new approach. [Deliberate break from the S60-S68 structural/modular SYNTHESIS -- attack, not reframe.]

@@ -1,0 +1,10 @@
+VALIDATION (must recover known beaters): n=9->4/33, n=10->4/37, n=11->3/31
+  n=9: construction 9/73=0.1233; SEARCH best 4/33=0.1212 BEATS (validated); #beaters=2
+        tightest: [1, 4, 5, 6, 7, 11, 32, 36]  M=4/33
+  n=10: construction 10/91=0.1099; SEARCH best 4/37=0.1081 BEATS (validated); #beaters=1
+        tightest: [1, 2, 3, 5, 6, 7, 8, 9, 30]  M=4/37
+  n=11: construction 11/111=0.0991; SEARCH best 11/111=0.0991 FAILED to beat -- method invalid here; #beaters=0
+
+THE OPEN EDGE: n=12,13,14 (calibrated drop<=3 + killers<=5n):
+  n=12: construction 12/133=0.09023; SEARCH best 12/133=0.09023  -> = construction (no beater in the calibrated family)
+  n=13: construction 13/157=0.08280; SEARCH best 13/157=0.08280  -> = construction (no beater in the calibrated family)
