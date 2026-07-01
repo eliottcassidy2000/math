@@ -1,0 +1,39 @@
+============================================================================================
+THE THREE-DISTANCE CRITERION: #distinct cyclic gaps of the witness residues
+  <=3 gaps = single-rotation orbit = scaled AP = Steinhaus = REGULARIZABLE (Eisenstein, -1/12)
+  >3 gaps  = >=2 rotations = higher gap-dimension = CUSP (un-regularizable residual)
+============================================================================================
+  CONSTRUCTION {1..n-2, n(n-1)}  (the ordered/Eisenstein object):
+    n= 7: #gaps=3  M=    7/43 (D=Phi6=43)   THREE-DISTANCE (AP orbit) -> regularizable
+    n= 8: #gaps=3  M=    8/57 (D=Phi6=57)   THREE-DISTANCE (AP orbit) -> regularizable
+    n= 9: #gaps=3  M=    9/73 (D=Phi6=73)   THREE-DISTANCE (AP orbit) -> regularizable
+    n=10: #gaps=3  M=   10/91 (D=Phi6=91)   THREE-DISTANCE (AP orbit) -> regularizable
+    n=11: #gaps=3  M=  11/111 (D=Phi6=111)   THREE-DISTANCE (AP orbit) -> regularizable
+    n=12: #gaps=3  M=  12/133 (D=Phi6=133)   THREE-DISTANCE (AP orbit) -> regularizable
+    n=13: #gaps=3  M=  13/157 (D=Phi6=157)   THREE-DISTANCE (AP orbit) -> regularizable
+    n=14: #gaps=3  M=  14/183 (D=Phi6=183)   THREE-DISTANCE (AP orbit) -> regularizable
+  BEATERS (the disordered/cusp covering-min, opus HYP-3769):
+    n= 7: #gaps=4  M=   2/13 (D=13)   >3 gaps -> NOT three-distance -> cusp
+    n= 8: #gaps=4  M=   2/15 (D=15)   >3 gaps -> NOT three-distance -> cusp
+    n= 9: #gaps=5  M=   4/33 (D=33)   >3 gaps -> NOT three-distance -> cusp
+    n=10: #gaps=5  M=   4/37 (D=37)   >3 gaps -> NOT three-distance -> cusp
+
+============================================================================================
+WHY <=3 gaps = regularizable: a single-rotation orbit {k*alpha} (Steinhaus/three-distance) is
+an AP; the sawtooth sum over an AP TELESCOPES into a Dedekind sum (Ostrowski/continued-fraction),
+closed via reciprocity (Phi6==1 mod n) -> -1/12. >3 gaps = the residues are NOT one orbit -> no
+telescoping -> no Dedekind form -> cusp. The 'gap dimension' = # rotations = the genus/cusp index.
+============================================================================================
+  three-distance <-> continued fractions: the number of gaps of {k*alpha mod 1} is <=3 for ALL
+  N (Steinhaus); the gap SIZES are the CF convergent denominators of alpha. So 'one rotation' = 
+  'one continued fraction' = the O(log) reciprocity descent of last session; >3 gaps = no single CF.
+
+============================================================================================
+HONEST SCOPE (the criterion is exact/arithmetic, not soft; large-D covering regime)
+============================================================================================
+  random sets: 167/398 have <=3 gaps overall (NOISY: small-D non-covering sets trivially few gaps);
+    but among large-D (D>=k^2, covering-like) witnesses: 0/14 have <=3 gaps
+    => the construction's <=3 gaps is meaningful in the LARGE-D covering-min regime; there it is the
+       three-distance/AP signature that beaters violate. Soft-concentration metrics do NOT threshold
+       regularizability (it is the EXACT arithmetic AP/three-distance property).
+DONE.

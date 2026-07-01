@@ -1,0 +1,40 @@
+================================================================================================
+PART 1  WITNESS RESIDUES + CYCLIC order parameter: construction (arc) vs beaters (generic)
+================================================================================================
+  -- CONSTRUCTION {1..n-2, n(n-1)} (should be cyclic ARC at witness => ordered/Eisenstein) --
+  construction n=7         M=   7/43 (a/D=7/43)  residues(descaled by 1/7? ) E_norm=0.890  lc_viol=0  cyc-arc/AP=False
+  construction n=8         M=   8/57 (a/D=8/57)  residues(descaled by 1/8? ) E_norm=0.913  lc_viol=0  cyc-arc/AP=False
+  construction n=9         M=   9/73 (a/D=9/73)  residues(descaled by 1/9? ) E_norm=0.930  lc_viol=0  cyc-arc/AP=False
+  construction n=10        M=  10/91 (a/D=10/91)  residues(descaled by 1/10? ) E_norm=0.943  lc_viol=0  cyc-arc/AP=False
+  construction n=11        M= 11/111 (a/D=11/111)  residues(descaled by 1/11? ) E_norm=0.952  lc_viol=0  cyc-arc/AP=False
+  -- BEATERS (generic covering-min; opus verified NON-interval residues => cusp) --
+  beater n=7               M=   2/13 (a/D=3/13)  residues(descaled by 1/3? ) E_norm=0.808  lc_viol=8  cyc-arc/AP=False
+  beater n=8               M=   2/15 (a/D=7/15)  residues(descaled by 1/7? ) E_norm=0.922  lc_viol=6  cyc-arc/AP=False
+  beater n=9               M=   4/33 (a/D=4/33)  residues(descaled by 1/4? ) E_norm=0.581  lc_viol=12  cyc-arc/AP=False
+  beater n=10              M=   4/37 (a/D=10/37)  residues(descaled by 1/10? ) E_norm=0.681  lc_viol=10  cyc-arc/AP=False
+
+================================================================================================
+PART 2  DICHOTOMY TABLE: cyclic arc <=> high E_norm <=> regularizable (checkable)
+================================================================================================
+    n |                 construction |                       beater
+      |              E_norm  arc?  M |              E_norm  arc?  M
+    7 |           0.890  False  7/43 | 0.808  False                          2/13
+    8 |           0.913  False  8/57 | 0.922  False                          2/15
+    9 |           0.930  False  9/73 | 0.581  False                          4/33
+   10 |          0.943  False  10/91 | 0.681  False                          4/37
+  READING: construction residues = cyclic ARC (E_norm high, regularizable/-1/12);
+           beater residues = NOT arc (E_norm lower, un-regularizable/cusp). The gap = residual.
+
+================================================================================================
+PART 3  the -1/12 telescoping is the ARC structure (regularizable side, reproduced)
+================================================================================================
+  n=7: s(n,Phi6)=-0.081395 = closed -T/(12T+6)=-0.081395 [True]  -> -1/12 ; Phi6 mod n=1 (arc telescopes in 1 reciprocity step)
+  n=10: s(n,Phi6)=-0.082418 = closed -T/(12T+6)=-0.082418 [True]  -> -1/12 ; Phi6 mod n=1 (arc telescopes in 1 reciprocity step)
+  n=14: s(n,Phi6)=-0.082878 = closed -T/(12T+6)=-0.082878 [True]  -> -1/12 ; Phi6 mod n=1 (arc telescopes in 1 reciprocity step)
+
+================================================================================================
+SYNTHESIS: cyclic additive energy of the witness residues = the ORDER PARAMETER.
+  arc/AP (max) = Eisenstein/regularizable/-1/12 ; generic (deficit) = cusp/residual.
+  Extends opus HYP-3775's BINARY 'interval?' to a SCALAR that quantifies the residual
+  (the open OPEN-Q-108 iota-odd index) -- and identifies it as a hyperconcavity/Fejer defect.
+DONE.

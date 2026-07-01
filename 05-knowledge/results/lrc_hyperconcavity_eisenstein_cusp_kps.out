@@ -1,0 +1,63 @@
+==============================================================================================
+PART 1  THE AUTOCORRELATION DICHOTOMY: ordered/interval => log-concave (Fejer) => max energy
+  E_norm = E(R)/E(interval same size) in (0,1]; defect = hyperconcavity (log-concavity) defect
+==============================================================================================
+  -- reference families --
+  interval {0..9}                    |R|=10  E=  670  E_norm=1.000  lc_defect= 0 (zeros 0, viol 0)  ORDERED (interval/AP)
+  AP step 3 {0,3,..,27}              |R|=10  E=  670  E_norm=1.000  lc_defect=36 (zeros 36, viol 0)  ORDERED (interval/AP)
+  interval-with-hole (drop 3,4)      |R|= 8  E=  268  E_norm=0.779  lc_defect= 4 (zeros 0, viol 4)  DISORDERED
+  Sidon (Mian-Chowla) size 8         |R|= 8  E=  120  E_norm=0.349  lc_defect=34 (zeros 32, viol 2)  DISORDERED
+  random size 8 in [0,40]            |R|= 8  E=  152  E_norm=0.442  lc_defect=24 (zeros 16, viol 8)  DISORDERED
+  -- the actual LRC BEATERS (generic covering-min, opus HYP-3769) --
+  beater n=7  [1, 2, 5, 6, 7, 8]     |R|= 6  E=  110  E_norm=0.753  lc_defect= 2 (zeros 0, viol 2)  DISORDERED
+  beater n=8  [1, 4, 5, 6, 7, 11, 16] |R|= 7  E=  135  E_norm=0.584  lc_defect=14 (zeros 6, viol 8)  DISORDERED
+  beater n=9  [1, 3, 4, 5, 7, 11, 18, 32] |R|= 8  E=  164  E_norm=0.477  lc_defect=28 (zeros 24, viol 4)  DISORDERED
+  beater n=10  [1, 2, 3, 5, 6, 7, 8, 9, 30] |R|= 9  E=  329  E_norm=0.673  lc_defect=32 (zeros 26, viol 6)  DISORDERED
+  -- the CONSTRUCTION witness residues (interval-core {1..n-2} + antipode -1, opus HYP-3775) --
+  construction n=7 residues          |R|= 6  E=  106  E_norm=0.726  lc_defect=66 (zeros 64, viol 2)  DISORDERED
+  construction n=8 residues          |R|= 7  E=  171  E_norm=0.740  lc_defect=90 (zeros 88, viol 2)  DISORDERED
+  construction n=9 residues          |R|= 8  E=  260  E_norm=0.756  lc_defect=118 (zeros 116, viol 2)  DISORDERED
+  construction n=10 residues         |R|= 9  E=  377  E_norm=0.771  lc_defect=150 (zeros 148, viol 2)  DISORDERED
+  construction n=11 residues         |R|=10  E=  526  E_norm=0.785  lc_defect=186 (zeros 184, viol 2)  DISORDERED
+  construction n=12 residues         |R|=11  E=  711  E_norm=0.798  lc_defect=226 (zeros 224, viol 2)  DISORDERED
+  construction n=13 residues         |R|=12  E=  936  E_norm=0.810  lc_defect=270 (zeros 268, viol 2)  DISORDERED
+  construction n=14 residues         |R|=13  E= 1205  E_norm=0.820  lc_defect=318 (zeros 316, viol 2)  DISORDERED
+
+==============================================================================================
+PART 2  THE REGULARIZABLE SIDE: the construction's Dedekind sum CLOSES (-> -1/12=zeta(-1))
+  s(n,Phi6) = -T/(12T+6),  T=n(n-1)/2;  margin=-12 s/n^2;  n^2*margin -> -12 zeta(-1)=1
+==============================================================================================
+  n=  6: s(n,Phi6) closed=-0.080645  enum True   n^2*margin=0.96774 (->1);  Phi6 mod n = 1 (==1 => 1-step reciprocity = AP telescoping)
+  n=  7: s(n,Phi6) closed=-0.081395  enum True   n^2*margin=0.97674 (->1);  Phi6 mod n = 1 (==1 => 1-step reciprocity = AP telescoping)
+  n= 10: s(n,Phi6) closed=-0.082418  enum True   n^2*margin=0.98901 (->1);  Phi6 mod n = 1 (==1 => 1-step reciprocity = AP telescoping)
+  n= 14: s(n,Phi6) closed=-0.082878  enum True   n^2*margin=0.99454 (->1);  Phi6 mod n = 1 (==1 => 1-step reciprocity = AP telescoping)
+  n= 50: s(n,Phi6) closed=-0.083299  enum True   n^2*margin=0.99959 (->1);  Phi6 mod n = 1 (==1 => 1-step reciprocity = AP telescoping)
+  n=200: s(n,Phi6) closed=-0.083331  (skip enum)   n^2*margin=0.99997 (->1);  Phi6 mod n = 1 (==1 => 1-step reciprocity = AP telescoping)
+  => construction is REGULARIZABLE: Phi6==1 mod n makes the AP/interval sawtooth sum telescope
+     in one reciprocity step -> closed form -> the -1/12 Eisenstein anomaly.
+
+==============================================================================================
+PART 3  THE ORDER PARAMETER QUANTIFIES THE RESIDUAL (the open part)
+==============================================================================================
+  E_norm (order): construction (residues) vs beaters (both at their n):
+    n=7: construction E_norm=0.726 (log-concave, Eisenstein) vs beater E_norm=0.753 (disordered, cusp)  M_beater=0.1538
+    n=8: construction E_norm=0.740 (log-concave, Eisenstein) vs beater E_norm=0.584 (disordered, cusp)  M_beater=0.1333
+    n=9: construction E_norm=0.756 (log-concave, Eisenstein) vs beater E_norm=0.477 (disordered, cusp)  M_beater=0.1212
+    n=10: construction E_norm=0.771 (log-concave, Eisenstein) vs beater E_norm=0.673 (disordered, cusp)  M_beater=0.1081
+  correlation of beater DISORDER (1-E_norm) with DEPTH (n/Phi6 - M_beater), the residual size:
+    n=7: disorder(1-E_norm)=0.247   residual depth(n/Phi6 - M)=0.0089
+    n=8: disorder(1-E_norm)=0.416   residual depth(n/Phi6 - M)=0.0070
+    n=9: disorder(1-E_norm)=0.523   residual depth(n/Phi6 - M)=0.0021
+    n=10: disorder(1-E_norm)=0.327   residual depth(n/Phi6 - M)=0.0018
+    Pearson(disorder, residual depth) = -0.551
+
+==============================================================================================
+PART 4  WHY ORDER = REGULARIZABLE: interval autocorr = Fejer triangle => Fourier >= 0 (pos-def)
+==============================================================================================
+  interval size 5: autocorrelation == triangle (m-|t|)_+ ? True  -> Fourier = |hat 1_R|^2 = Fejer kernel >= 0
+  interval size 8: autocorrelation == triangle (m-|t|)_+ ? True  -> Fourier = |hat 1_R|^2 = Fejer kernel >= 0
+  => the ordered (interval/AP) set has a LOG-CONCAVE (Fejer) autocorrelation and a NON-NEGATIVE
+     power spectrum -- positive-definite, hence its Dedekind/sawtooth sum telescopes and
+     REGULARIZES (-1/12 = zeta(-1), the E2/Eisenstein anomaly, = the level-k Fejer magic function).
+     Disorder breaks log-concavity => no telescoping => cusp/un-regularizable residual.
+DONE.

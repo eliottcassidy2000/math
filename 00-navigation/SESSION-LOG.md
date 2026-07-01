@@ -1,3 +1,16 @@
+## kind-pasteur-2026-07-01-S1 -- the Eisenstein/cusp dichotomy IS the THREE-DISTANCE (Steinhaus) theorem; the soft "hyperconcavity" order parameter does NOT threshold regularizability (it is arithmetic) (extends opus HYP-3775; converges mac-mini HYP-3780; no HYP reserved)
+
+Prompt: think hyperconcavity; extend HYP-3768's iota-even Eisenstein/iota-odd cusp into a checkable geometric form (regularizable/-1/12 <=> AP-interval ordered; un-regularizable/cusp <=> generic disordered).
+
+RESULT (lrc_threedistance_eisenstein_cusp_kps.py): opus HYP-3775's "witness residues = scaled interval" criterion IS the classical THREE-DISTANCE (Steinhaus) theorem. Computed the binding-witness residues {v*a mod D} cyclically:
+- CONSTRUCTION {1..n-2, n(n-1)}: EXACTLY 3 distinct cyclic gaps for n=7..14 (single-rotation orbit = scaled AP + antipode = Steinhaus) -> regularizable, Dedekind s(n,Phi6)=-T/(12T+6)->-1/12 (reproduced).
+- BEATERS n=7,8,9,10: 4,4,5,5 gaps (>=2 rotations, higher "gap dimension") -> non-modular, cusp.
+So regularizable/Eisenstein/-1/12 <=> residues are ONE rotation orbit (<=3 gaps = AP = ONE continued fraction = the O(log) reciprocity descent, opus HYP-3770); cusp <=> >3 gaps (>=2 rotations = the genus/cusp index). The gaps of {k*alpha} ARE the CF convergent denominators -> ties to last session's continued-fraction/zeta(2)<->zeta(-1) thread. Partially REHABILITATES opus HYP-3773's withdrawn "beaters=higher-dimensional" (in the gap/rotation sense, not literal Zagier cotangent).
+
+HONEST NEGATIVE (the requested "hyperconcavity" route): soft concentration invariants do NOT cleanly threshold regularizability. Cyclic additive energy ->1 for the construction (real, mirrors mac-mini HYP-3774 finite-T->reg) but noisy at finite n (n=8 beater residue collision 16==1 mod15). Log-concave (Fejer) autocorrelation: construction lc_viol=0 but dense arcs give 2 and ~4% of random give 0 -- NOISY. Lesson (= a result): regularizability is EXACT/ARITHMETIC (the AP/three-distance property), not soft -- consistent with last session (the cusp/hard part is arithmetic/signed, out of reach of soft concentration/positivity). Scope: <=3 gaps is meaningful only in the large-D covering regime (0/14 large-D random witnesses have <=3 gaps; small-D non-covering trivially do).
+
+CONVERGES mac-mini HYP-3780 (same-day: covering-min = self-concordant convex ladder + LOG-CONCAVE margin, "hyper" faces = apex-7 hyperbolicity) on the M/margin object; mine is the RESIDUE three-distance + the soft-metric negative. NO HYP reserved (extends opus HYP-3775, defer to first-pusher). Files: lrc_threedistance_eisenstein_cusp_kps.py(+.out), lrc_hyperconcavity_cyclic_kps.py(+.out), lrc_hyperconcavity_eisenstein_cusp_kps.py(+.out, the line-vs-cyclic-metric lesson); reflection the-eisenstein-cusp-dichotomy-is-the-three-distance-theorem-kps.md. No canon overridden.
+
 ## mac-mini-2026-06-30-S71 -- MERGING HYPERCONCAVITY: the covering-min is a self-concordant CONVEX LADDER (1/M=(n-1)+1/n) with a LOG-CONCAVE Dedekind margin; both 'hyper' faces = apex-7 hyperbolicity (HYP-3780)
 
 Prompt: merge in hyperconcavity related ideas creatively. Read hyperconcavity as the modern concavity toolkit (log-concavity + hyperbolic-barrier self-concordance) and merged it with the covering-min/margin/regularization thread + opus-S4's self-concordant residual.
