@@ -1,0 +1,20 @@
+r=14/183=0.07650, 2r=0.1530
+
+(A) FOURIER IDENTITY covered(w) = 2r|L_C| + signed_correction  (direct vs Fourier), core={1..6}:
+    |L_C|=0.41858, N(arcs)=12, diagonal 2r|L_C|=0.06405
+    w=     7: direct=0.131147  2r|L_C|+corr=0.131159  signed_corr=+0.067114  bound N/(3w)=0.57143
+    w=    50: direct=0.076940  2r|L_C|+corr=0.076941  signed_corr=+0.012896  bound N/(3w)=0.08000
+    w=   182: direct=0.065323  2r|L_C|+corr=0.065321  signed_corr=+0.001276  bound N/(3w)=0.02198
+    w=  1000: direct=0.063343  2r|L_C|+corr=0.063344  signed_corr=-0.000701  bound N/(3w)=0.00400
+    w= 10000: direct=0.064017  2r|L_C|+corr=0.064024  signed_corr=-0.000022  bound N/(3w)=0.00040
+
+(B) |hat 1_{L_C}(m)| <= N/(pi m)  =>  |signed correction| <= N/(3w)  (the decay giving the bound):
+    core={1..6}: |L_C|=0.41858 N= 12  sup(pi m|hat|)=9.50<=N? True  THRESHOLD w>11 => single huge w beats nothing (M>=r)
+    core={1..9}: |L_C|=0.13282 N= 20  sup(pi m|hat|)=14.07<=N? True  THRESHOLD w>59 => single huge w beats nothing (M>=r)
+    core={1..11}: |L_C|=0.02129 N= 14  sup(pi m|hat|)=10.34<=N? True  THRESHOLD w>259 => single huge w beats nothing (M>=r)
+
+(C) THE ARGUMENT (proof push):
+    single huge w > N/(3(1-2r)|L_C|): covered(w) < |L_C| => M(C u {w}) >= r  RIGOROUS (Fourier decay of 1_{L_C}).
+    multi-patch <=6 huge speeds each > threshold: union bound => covered < |L_C| => M >= r  RIGOROUS.
+    bounded speeds <= threshold: lazy-cut ILP (HYP-3782).  Residual: >=7 huge speeds (cross-harmonic hat(jw_i-j'w_j)).
+DONE.

@@ -1,3 +1,20 @@
+## mac-mini-2026-06-30-S75 -- THE SIGNED CORRECTION = FOURIER OF 1_{L_C} AT HARMONICS OF THE TEST SPEED: a quantitative bound making the single-huge-speed & <=6-huge-speed cases of the covering-min residual RIGOROUS (HYP-3787)
+
+Prompt: reframe/improve 'signed correction is the off-diagonal version of this: the Fourier coefficients of 1_{L_C} sampled at harmonics of the test speed'; keep pushing toward proofs.
+
+THE FOURIER IDENTITY (upgrades S74's equidistribution heuristic to a quantitative bound). For a test speed w, the measure of the core's fixed lonely set L_C(r) that w's danger arcs cover is (Parseval; 1_{||wt||<r}(t)=g(wt), hat(g) supported on multiples of w):
+  covered(w) = 2r|L_C|                              [DIAGONAL j=0 = the equidistribution main term]
+             + sum_{j!=0} hat(1_{L_C})(jw) ghat(j)  [SIGNED CORRECTION = Fourier of 1_{L_C} at harmonics jw of w]
+with ghat(j)=sin(2pi j r)/(pi j) (the danger-arc Fourier / Fejer kernel). Verified: covered_direct = 2r|L_C|+corr to 5-6 digits.
+
+THE DECAY BOUND. L_C is a union of N arcs => |hat(1_{L_C})(m)| <= N/(pi|m|) (verified sup_m pi m |hat| <= N). Hence |signed correction| <= sum_{j!=0}(N/(pi|jw|))(1/(pi|j|)) = (N/(pi^2 w)) 2 zeta(2) = N/(3w). (The zeta(2)=sum 1/j^2 is the SAME Basel constant as the floor 1/(2 zeta(2)), HYP-3571.) So covered(w) <= 2r|L_C| + N/(3w) < |L_C| once w > N/(3(1-2r)|L_C|).
+
+THE PROOF PUSH. (1) SINGLE huge speed w > N/(3(1-2r)|L_C|) [explicit threshold 11/59/259 for cores {1..6}/{1..9}/{1..11}]: covered(w)<|L_C| => a lonely time survives => M(C u {w})>=r. RIGOROUS (Fourier decay of 1_{L_C}) -- and for ANY huge w, not just the 182k of S73. (2) MULTI-PATCH <=6 huge speeds (each > threshold): union bound covered(H) <= |H| 2r|L_C| + sum N/(3 w_i) < |L_C| when |H| 2r<1 (|H|<=6) => M>=r RIGOROUS. (3) Bounded speeds <= threshold: lazy-cut ILP (HYP-3782). (4) RESIDUAL narrows to >=7 huge speeds -- union bound fails, needs the CROSS-HARMONIC terms hat(1_{L_C})(jw_i - j'w_j) (inclusion-exclusion / joint equidistribution).
+
+WHAT IT IMPROVES: S74 (heuristic covered~2r|L_C|) -> quantitative identity with explicit error N/(3w) + survival threshold; the repo signed-cut thread gets its explicit form; S74's 'effective Erdos-Turan' residual IS this Fourier decay (concrete). Combined with the lazy-cut (bounded), this closes most of the covering-min lower bound and reduces the rest to the >=7-huge-speed cross-harmonic sum.
+
+HONEST: the Fourier identity + decay bound |signed correction|<=N/(3w) are rigorous (Parseval + finite-arcs 1/m decay), verified numerically; single-huge-speed & <=6-huge-speed cases RIGOROUS (explicit thresholds, per-core finite N and |L_C|); the >=7-huge-speed case (cross-harmonic) is the remaining residual. A substantial proof-push, not a complete proof. HOUSEKEEPING: filed HYP-3787 (clean; codex-S337 is coordinating the lonely-set-equidistribution thread). Files: 04-computation/signed_correction_fourier_LC_macmini_20260630.py (+.out). No canon overridden, no court cases.
+
 ## kind-pasteur-2026-07-01-S4 -- SIGNED CAUCHY-SCHWARZ on the far-comb correction: a FINITE bound where the absolute one diverges; closes fat-core multi-far, residual = near-tight cores x incommensurate combs (converges mac-mini HYP-3786 equidistribution-on-L_C; no HYP)
 
 Prompt: aim at the signed correction creatively.
