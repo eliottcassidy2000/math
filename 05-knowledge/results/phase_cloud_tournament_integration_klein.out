@@ -1,0 +1,16 @@
+n=14 Phi6=183; construction phase cloud (at t*): [14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 169]
+  = AP(step n=14) [14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168] + KILLER at 182 = -n mod Phi6 = 169
+(1) three-gap sizes of the cloud: [1, 14, 28] (three-gap theorem: <=3 distinct); gap multiset sum=183=Phi6
+(2) observer(0) clearance = 14/183 = M_C = 0.07650; FLANKING cloud points [14, 169] = {+n, -n} = runners {1, killer} (the Chebyshev 2-point dual, S73)
+(3) rotational tournament of the cloud: scores [6, 6, 6, 6, 6, 7, 6, 6, 6, 6, 6, 6, 5]; #3-cycles c3=90; H (Redei) odd by theorem (13 vertices, not brute-forced)
+    the AP gives a near-transitive/circulant order; the killer inserts one near-tie next to runner 12 (gap 1 at 182-168=14)
+(4) BEATER-OBSTRUCTION in cloud terms: to beat, a covering set's phase cloud must clear <n from 0 at EVERY t
+    (max clearance < n/Phi6). But covering (multiple of every q<=n) forces the small speeds {1..n-2}, whose
+    phases at t* are the AP(step n) -> gap exactly n at 0. So the observer's gap can't shrink below n at t*;
+    the killer only SYMMETRIZES it (antipode). This is the S79 Phi6-metric-irreducibility as a CLOUD fact:
+    the AP-step is n because the DEEP witness is Phi6 (=n^2-n+1), and the AP of the small speeds tiles Z/Phi6
+    with step n, leaving the size-n gap at 0. Covering => AP-step n => clearance n => M >= n/Phi6.
+
+INTEGRATION: covering-min extremizer = an ARITHMETIC-PROGRESSION phase cloud (step n) + an ANTIPODAL KILLER,
+observer in the size-n gap, flanked by the 2-point Chebyshev alternation {1, killer}={+n,-n}. Unifies
+S68(phase-residue)+S73(Chebyshev 2-pt)+S79(Phi6-irreducible)+S70(cloud tournament)+HYP-3762(three-gap).

@@ -1,3 +1,17 @@
+## klein-2026-07-01-S80 -- INTEGRATION: the COVERING-MIN PHASE CLOUD = AP(step n) + ANTIPODAL KILLER -- one geometric picture unifying Chebyshev 2-pt + three-gap + phase-residue + cloud-tournament + Phi6-irreducibility (HYP-3813).
+
+Prompt: novel intriguing ways to integrate the fold/tournament work with LRC.
+
+THE PICTURE (phase_cloud_tournament_integration_klein.py): in phase-residue coordinates (S68, p(v)=n*v mod Phi6), the covering-min construction's runner cloud AT THE BINDING t* is EXACTLY the ARITHMETIC PROGRESSION {n*k mod Phi6 : k=1..n-2} (step n = the small runners 1..n-2) + the KILLER at p(n(n-1)) = -n mod Phi6. The observer (0) sits in the gap between the killer (-n) and runner 1 (+n): clearance = n/Phi6 = M_C on BOTH sides.
+
+VERIFIED (n=14): cloud = {14,28,...,168} (AP step 14) + {169=-14}; THREE-GAP sizes {1, n, 2n} = {1,14,28} (three-gap theorem, HYP-3762); observer clearance 14/183 = M_C; FLANKING cloud points {14,169} = {+n,-n} = runners {1, killer} = the CHEBYSHEV 2-POINT dual (S73); the killer is the iota-antipode (-n) of the slowest runner (+n), symmetrizing the gap. The cloud's ROTATIONAL tournament (S70) is NEAR-REGULAR (scores mostly 6, one 7, one 5; c3=90; H odd by Redei).
+
+WHY n/Phi6 (transparent in this coord): covering (THM-523) forces the small speeds {1..n-2}, whose t*-phases are the AP of step n; an AP of step n leaves clearance exactly n at the observer => M >= n/Phi6. The killer adds the antipodal point (covers q=n-1,n AND symmetrizes the gap into the 2-point Chebyshev alternation). This is the S79 Phi6-metric-irreducibility as a CLOUD FACT: the AP tiles Z/Phi6 with step n (the irreducible composite modulus), so the gap can't shrink below n.
+
+INTEGRATION: FIVE prior threads become ONE geometric object -- S68 (phase-residue = the coordinates), S73 (Chebyshev 2-pt = the flanking runners {+n,-n}), S79 (Phi6-irreducible = the AP tiles with step n), S70 (runner-cloud tournament = the cloud's rotational tournament), HYP-3762 (three-gap = the gap sizes {1,n,2n}). The covering-min = an arithmetic-progression phase cloud with an antipodal pin; the value n/Phi6 is just (AP step n)/(modulus Phi6), read off the picture. Lesson: when a problem has many invariants, find the coordinate system in which they're shadows of one thing -- here the phase cloud.
+
+HONEST: exact n=14 (general-n via S68's p(k)=nk AP structure); a UNIFYING reframe + a clean 'why n/Phi6', NOT a new bound (the no-beater is S79/OPEN-Q-108). HYP-3813 in klein block, no collision. Files: phase_cloud_tournament_integration_klein.py(+out); HYP-3813; reflection the-covering-min-is-an-AP-cloud-with-an-antipodal-pin.md. No canon overridden.
+
 ## kind-pasteur-2026-07-01-S17 -- THE SC SPINE IS THE HALF-TILING, SO WORK THERE: n=7 blue-spine CONNECTED + census (#SC=88, #pure-blue=4) via 512 half-tilings (64x cheaper); #pure-blue CLOSED FORM; blue self-loops are EVEN-n-only; five mental-model updates
 
 Prompt: work the open next threads; explore past work with new understanding; find connections; improve mental models.
