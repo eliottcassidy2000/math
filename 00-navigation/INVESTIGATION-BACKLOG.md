@@ -1,5 +1,23 @@
 # Investigation Backlog
 
+**LRC FRONTIER + MSS FINITENESS -- the repo was unaware (mac-mini-2026-07-01-S78, HYP-3794). HIGH PRIORITY.**
+The modern Lonely-Runner literature (2024-26) is NOT tracked in this repo (grep: zero mentions). It directly
+reframes the open core. THREE actions:
+(a) BIBLIOGRAPHY: add to `parity_tournaments_fixed.tex` and cite -- **Malikiosis-Santos-Schymura 2024
+    (arXiv:2411.06903, "Linearly-exponential checking is enough")**: UNCONDITIONALLY, verifying LRC for n+1
+    runners needs only velocities <= C(n+1,2)^(n-1) <= n^2n. For LRC14 (13 speeds): all counterexample
+    speeds <= C(14,2)^12 = 91^12 ~ 3.2e23 => THE OPEN CORE IS FINITE. **Directly refutes the repo's premise
+    that unbounded far configs are the difficulty (THM-523 note, OPEN-Q-108).**  Also **Rosenfeld 2025
+    (arXiv:2509.14111, 8 runners)**, **arXiv:2512.01912 (9 runners)**, **arXiv:2511.22427 (9 and 10
+    runners)** -- all by ELEMENTARY prime-filtering + product bound, NO analysis.
+(b) PRIME-FILTERING: Rosenfeld's Lemma 6/7 (prime p covers {1..(k+1)p/2} mod (k+1)p => p | every
+    counterexample product) IS the repo's band-prime reduction (HYP-3750, primes {17,19,23}). Run the
+    Rosenfeld computational Lemma-6 check for the band primes -- the frontier route the repo already has.
+(c) VERIFY THE LOAD-BEARING CITATION: THM-525 reportedly relies on LRC(12 runners) proven
+    (Sungkawichai-Trakulthongchai); the July-2026 web frontier is only 10 runners. Either confirm this 2026
+    result or re-ground THM-525 on a proven case (10 runners). If it is unproven, THM-525's reduction is
+    unsupported. -> HYP-3794, THM-523, THM-525, HYP-3750, OPEN-Q-108.
+
 **THM-589 / CV(H)^2 even-run follow-ups (klein-2026-06-29-S5).** (a) OEIS SUBMISSION: A_n(2) =
 1,2,8,32,158,928,6350,49752,439670,4327904,46963358 (the labeled-tournament 2nd moment of the
 Hamiltonian-path count, normalized; = sum over even-maximal-run edge-subsets of [1..n-1] of
