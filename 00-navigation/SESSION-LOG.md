@@ -1,3 +1,24 @@
+## mac-mini-2026-07-01-S86 -- THE TWIN SEPARATOR: 3 of the 5 mixed twins (n=6) separate by tiling-count/H, the remaining 2 are INVARIANT-COSPECTRAL SPECTRAL TWINS {12,22},{43,44} (separated only by the adjacency spectrum) = dual-polytope analog; the twins are the n=6 HYPERBOLIC-ONSET refinement past icosahedral n=5 (HYP-3811) [TOURNAMENT/tiling]
+
+Prompt: run the twin separator against the 5 remaining twins; think connections with 2D plane tilings and Platonic solids.
+
+The '5 remaining twins' = the 5 twin-pairs among the 10 MIXED SC merged nodes at n=6 (grid-sym counts {3:2,5:2,7:4,9:2}; the pure-blue pair is the trivial 6th), from HYP-3809's twin-pairing (grid-sym counts all-even multiplicity).
+
+SEPARATOR HIERARCHY (n=6 exhaustive):
+- 3 twins separate by TILING COUNT (=H/|Aut|): gs=3 {node5 H=5, node55 H=45}; gs=7a {30 H=37, 31 H=33}; gs=9 {46 H=41, 54 H=45}.
+- 2 twins are INVARIANT-COSPECTRAL (identical grid-sym, tiling count, H, |Aut|=1, c3, AND score sequence) yet distinct iso classes -- the SPECTRAL TWINS {12,22} (gs5, H=17, scores (1,1,2,3,4,4), c3=4) and {43,44} (gs7, H=29, scores (1,2,2,3,3,4), c3=6). They separate ONLY by the ADJACENCY EIGENVALUE SPECTRUM. So the twin separator is 2-tier: tiling count first, spectrum for the residue.
+- The twin pairing is NUMERICAL (by grid-sym count); flip.sigma does NOT induce it (lands in many nodes) => the twinning is a parity coincidence, structural involution UNIDENTIFIED (open).
+
+PLATONIC / 2D-TILING CONNECTION (structural, via kps S20bh 'the-five-platonic-tournaments.md': G_5 f-vector=(12,30,20)=ICOSAHEDRON, |S_5|=2|A_5|=2|Aut(ico)| the x2=complement; n=5=pentagon=spherical/hyperbolic boundary, n<=4 Platonic/spherical, n>=6 hyperbolic):
+- The TWINS are an n=6 HYPERBOLIC-ONSET phenomenon -- the first size PAST icosahedral n=5. The spherical Platonic regularity fractures into twins at n=6 = a 5TH FACE of the n=6 transition (with sea-onset/pure-black-self-loops/T-join-nonbipartite HYP-3808/3810 + minimal-flip-kappa-break HYP-3798).
+- The 2 SPECTRAL twins MIRROR the 2 DUAL Platonic pairs (cube/octahedron, dodecahedron/icosahedron; tetrahedron self-dual): dual polytopes share symmetry group + combinatorial data but differ in realization; the spectral twins share every combinatorial invariant but differ spectrally = same-data/dual-realization. Exactly 2 dual pairs, 2 spectral twins (the sharpest concrete point, 2=2).
+- The near-regular SC nodes (scores (2,2,2,3,3,3): 46,54,55; high-|Aut|=9 pure-blue node 23, scores (1,1,1,4,4,4)) = the 'most Platonic' survivors, residual icosahedral symmetry inside n=6.
+- 2D-tiling: Euclidean plane tilings (curvature 0) = the flat boundary between spherical (Platonic, n<=5) and hyperbolic (n>=6); the n=6 twins = first hyperbolic tournament structures.
+
+SUB-CONJECTURES: (1) spectral twins persist n>=6, count relates to the 2 dual Platonic pairs / genus of G_n; (2) the twin involution (grid-sym-count pairing) is an unidentified cospectral-mate map on the fold; (3) the near-regular / high-Aut SC nodes are the residual spherical survivors.
+
+Files: 04-computation/twin_separator_n6_platonic_macmini_20260701.py (+.out); HYP-3811; reflection the-twins-that-only-the-spectrum-can-tell-apart.md. HONEST: twins + separator hierarchy + 2 invariant-cospectral spectral twins EXACT (n=6); Platonic connection is structural synthesis (not numerical identity); dual-pair<->spectral-twin (2=2) is the concrete match; twin involution unidentified. No canon overridden, no court cases.
+
 ## kind-pasteur-2026-07-01-S16 -- THE RECONSTRUCTION WALL AT n=7 (local fingerprints FAIL) + blue-spine CONNECTED + the double-complement quotient (algebraic 'quarter', reconciled w/ opus-S20)
 
 Prompt: work the open next ideas; think about the quarter tiling model.
