@@ -11,6 +11,27 @@ WHY n/Phi6 (transparent in this coord): covering (THM-523) forces the small spee
 INTEGRATION: FIVE prior threads become ONE geometric object -- S68 (phase-residue = the coordinates), S73 (Chebyshev 2-pt = the flanking runners {+n,-n}), S79 (Phi6-irreducible = the AP tiles with step n), S70 (runner-cloud tournament = the cloud's rotational tournament), HYP-3762 (three-gap = the gap sizes {1,n,2n}). The covering-min = an arithmetic-progression phase cloud with an antipodal pin; the value n/Phi6 is just (AP step n)/(modulus Phi6), read off the picture. Lesson: when a problem has many invariants, find the coordinate system in which they're shadows of one thing -- here the phase cloud.
 
 HONEST: exact n=14 (general-n via S68's p(k)=nk AP structure); a UNIFYING reframe + a clean 'why n/Phi6', NOT a new bound (the no-beater is S79/OPEN-Q-108). HYP-3813 in klein block, no collision. Files: phase_cloud_tournament_integration_klein.py(+out); HYP-3813; reflection the-covering-min-is-an-AP-cloud-with-an-antipodal-pin.md. No canon overridden.
+## mac-mini-2026-07-01-S87 -- INTEGRATING the merged-metagraph structure (S81-86) with LRC (S60-80): SIX BRIDGES, both are two Z_2-folds of one staircase triangle; the Gram/2nd-moment spectrum bridge GROUNDED (tournament adjacency A <-> LRC danger D D^T) (HYP-3813)
+
+Prompt: see novel intriguing ways to integrate the recent merged-metagraph work with LRC.
+
+UNIFYING PICTURE: both the tournament metagraph and the LRC live on the staircase triangle delta_{n-2}, each FOLDED BY A Z_2, with a Gram/2nd-moment SPECTRAL fine-structure layer. Six bridges:
+
+BRIDGE 1 -- THE Z_2 FOLD: complement sigma (tournament: reverse all arcs = transpose = y=x mirror, THM-549; SC classes = fold-fixed) <-> iota t->1-t (LRC: lonely set iota-symmetric; covering-min binding pair {t*,1-t*}={14/183,169/183}). Same Z_2 on the same triangle; half-tiling (sigma fundamental domain) <-> LRC half [0,1/2].
+
+BRIDGE 2 -- THE GRAM/SPECTRAL SEPARATOR [GROUNDED]: the S86 tournament SPECTRAL TWINS are invariant-cospectral (same H/|Aut|/c3/scores) but separated by the ADJACENCY spectrum of A (the tournament relation). The LRC FLOOR (HYP-3571) is 'the danger relation D composed with itself' D D^T (= the S76 pair-overlap Gram). VERIFIED: the LRC danger-Gram of construction/AP/GW all have SAME trace 1.857 (=|S|*2r, the 1st moment) but DISTINCT spectra (top eig 0.5006/0.4992/0.4803) = 'trace-cospectral, spectrally distinct' = the exact LRC analog of the spectral twins. The S76 near/far split is visible IN the Gram (far element off-diag 0.0201~(2r)^2 independent; near-core 0.0299 correlated). SAME MOVE: the Gram/2nd-moment spectrum of a 0/1 relation carries what the counts miss (tournament A, LRC D D^T). SHARPEST concrete anchor.
+
+BRIDGE 3 -- EVEN/ODD Z_2-GRADING: SC-odd/NS-even tiling count + black=even-degree(Eulerian) graph / blue=odd graph (S83/84) + RPGFD even-graph=tournaments (S82) <-> LRC iota-even (Eisenstein/E2 bulk) / iota-odd (cusp form f14; margin = Dedekind sum = iota-odd sawtooth).
+
+BRIDGE 4 -- APEX-7 + n=6 EUCLIDEAN shared: forbidden H={7,21}, G_5=icosahedron (spherical), n=6 spherical->hyperbolic transition, odd holes/diameter jump at n=7 <-> LRC14=2*7, apex-7=Klein quartic PSL(2,7), (2,3,n) makes n=6 EUCLIDEAN (hexagonal A2 = covering-min Phi_6), n=7 genus jump (HYP-3771/S65). 7 = apex, n=6 = flat boundary, on BOTH sides.
+
+BRIDGE 5 -- COVERING OBSTRUCTION: T-join parity obstructs SC-cover to kappa_SC=floor((n-1)^2/4) (S85) <-> covering-min rigidity/isolated-deep-well (no beater, S69/S77). Both: covering a self-symmetric extremal family is parity/rigidity-obstructed above the naive bound; half-tiling dim floor((n-1)^2/4) <-> Phi_6 rigidity.
+
+BRIDGE 6 -- 2nd MOMENT [already canon THM-589]: W(n)=metagraph H-variance=simplicial-Redei succession count, Var(H)=(n!/4^{n-1})(W(n)-n!) <-> CV(N_R)^2 (LRC floor 2nd moment). Spectral twins refine H; danger-Gram refines the floor -- same 2nd-moment layer.
+
+NEXT TARGETS / new conjectures: (1) true LRC spectral twins -- covering sets M-cospectral AND covering-profile-identical but danger-Gram-spectrally distinct (construction vs tuned near-miss); (2) fold-fixed correspondence SC classes <-> iota-symmetric LRC witnesses via a shared staircase coordinate; (3) is the metagraph n=6 spherical->hyperbolic transition the same event as the LRC (2,3,n) Euclidean node; (4) half-tiling floor((n-1)^2/4) <-> Phi_6=n^2-n+1 (both quadratic fold-rigidity dimensions).
+
+Files: 04-computation/metagraph_lrc_integration_macmini_20260701.py (+.out); HYP-3813; reflection two-folds-of-one-triangle.md. HONEST: Bridge 2 GROUNDED (computational); Bridge 6 canon (THM-589); Bridges 1/3/4/5 are structural correspondences on the shared Z_2-folded staircase -- intriguing + testable, not theorems. A cross-domain synthesis opening concrete tests. No canon overridden, no court cases.
 
 ## kind-pasteur-2026-07-01-S17 -- THE SC SPINE IS THE HALF-TILING, SO WORK THERE: n=7 blue-spine CONNECTED + census (#SC=88, #pure-blue=4) via 512 half-tilings (64x cheaper); #pure-blue CLOSED FORM; blue self-loops are EVEN-n-only; five mental-model updates
 
