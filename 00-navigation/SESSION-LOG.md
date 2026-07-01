@@ -1,3 +1,29 @@
+## mac-mini-2026-07-01-S83 -- THE MERGED METAGRAPH'S BLUE/BLACK LINES ARE A PARITY DECOMPOSITION: black=EVEN graph (Eulerian), blue=ODD graph; tiling-count parity = SC/NS type; owner's parity claims verified, self-loop-only-mixed conjecture REFUTED at n=6 (HYP-3808) [TOURNAMENT/tiling]
+
+Prompt: the merged metagraph blue/black line structure -- pure-black nodes (even black to others), the mixed they connect to (even black + odd blue), the pure-blue 3rd category (odd blue only); frame the tiling-count reconstruction as a colored pairing/assignment process; metrics, reframings, recursion, corrections; conjecture: self-loops only on mixed.
+
+Built the merged metagraph from the tiling explorer (LINE={tiling t, flip(t)=complement-tiling}, blue iff isGridSym(t); 2^m tilings -> 2^(m-1) lines; MERGE by transpose, SC=transpose-self). Node tiling-count = its line-degree = blue_other + black_other + 2(blue_self+black_self).
+
+OWNER'S 3 PARITY CLAIMS ALL VERIFIED (exhaustive n=4,5,6): PURE_BLACK (merged NS) even black_other; MIXED even black_other + ODD blue_other; PURE_BLUE odd blue_other.
+
+** PARITY THEOREM (new): SC merged node <=> ODD tiling count; NS merged node <=> EVEN. ** (NS-merged={A,A^op} => count=2|A| even; SC=single self-complementary class with ODD # grid-sym tilings => odd blue_other => odd count.) Corollary: #SC merged nodes is EVEN (blue-subgraph handshake; verified 2,8,12 at n=4,5,6).
+
+** DEEP FRAME (ties S82): the BLACK line subgraph has EVEN degree at every node = an EULERIAN / even-DEGREE graph (an 'even graph' in the A002854 sense!); the BLUE line subgraph is ALL-ODD-degree on the SC nodes. So the metagraph's own lines split as EVEN(black) (+) ODD(blue) -- the even/odd parity dual the project chases is literally drawn in the explorer's blue/black coloring. ** tiling_count = odd_blue(@SC) + even_black + 2*self.
+
+CLOSED FORMS (n=4..8): #lines=2^(m-1)=4,32,512,16384,1048576 (recursion x2^(n-2)); #grid-sym tilings=2^((m+floor((n-1)/2))/2)=4,16,64,512,4096; #blue lines=half=2,8,32,256,2048; #black=2,24,480,16128,1046528; blue fraction -> 0 (grid-sym exponentially rare).
+
+ELIGIBILITY RULES (the pairing process, refined + verified n<=6): BLUE lines only MIXED-MIXED / MIXED-PURE_BLUE / MIXED-self (both endpoints grid-sym => both SC; PURE_BLUE is ALWAYS a PENDANT hanging off the mixed core -- never blue-blue, never blue self-loop). BLACK lines: MIXED-MIXED / MIXED-PURE_BLACK / MIXED-self at n<=5, PLUS PURE_BLACK-PURE_BLACK (the NS-NS sea, 290 lines) + PURE_BLACK self-loops (24) at n>=6.
+
+** CORRECTION to owner's conjecture: self-loops are NOT only on mixed. ** At n=6 the pure-black (NS) nodes acquire black self-loops and a dense NS-NS black sea. The layered pure-black--mixed--pure-blue picture (and self-loops-only-on-mixed) is EXACT ONLY for n<=5; the sea + pure-black self-loops switch ON at n=6 = a genuine structural transition (the black even-graph becomes generically dense/self-connected once the tiling hypercube is big enough to be typical).
+
+METRICS: (1) tiling-count parity = SC/NS 2-coloring; (2) blue_other = SC-charge (odd SC / 0 NS), black_other = even everywhere; (3) closed-form line counts; (4) pendant count (#pure-blue leaves, blue_other=1); (5) mixed interface degree (odd blue, even black); (6) NS-NS sea fraction of black lines (0 at n<=5 -> 290/480 at n=6 = transition order parameter); (7) self-loop census by category; (8) category counts (n=6: pure-blue 2, pure-black 22, mixed 10; #SC even).
+
+REFRAMINGS: the assignment = a COLORED DEGREE-REALIZATION / f-factor on a category-typed host with parity constraints -- BLACK = an EULERIAN (even) factor on {NS, mixed} (decompose into cycles), BLUE = an ODD/T-join factor on SC nodes with pure-blue as leaves. RECURSION: line counts x2^(n-2); grid-sym doubling; category recursion (Mode A/B) open.
+
+CONCRETE NEXT TARGET: (a) prove the parity theorem (SC odd/NS even) via |A|=|A^op| + odd-grid-sym-count lemma; (b) prove eligibility (blue=>SC-SC, black=>non-blue) as theorems; (c) explain the n=6 onset of the NS-NS sea + pure-black self-loops (why n>=6?); (d) characterize the black Eulerian cycle structure vs the H-spectrum degrees.
+
+Files: 04-computation/merged_metagraph_blue_black_lines_macmini_20260701.py (+.out). Reflection: the-metagraph-lines-are-the-even-odd-split.md. HYP-3808. HONEST: all claims + parity theorem + even/odd decomposition + eligibility + closed forms + n=6 transition VERIFIED n=4,5,6; conjecture 'self-loops only mixed' REFUTED at n=6; general-n proofs are the open next targets. No canon overridden, no court cases.
+
 ## kind-pasteur-2026-07-01-S12 -- THE BLUE/BLACK LINE PAIRING IS A DEGREE = TILING-COUNT REALIZATION: tripartite by grid-symmetry (=transpose-fixed), black-degree ALWAYS EVEN, owner's 3 categories PROVED; two honest corrections (self-loops + sea-onset at n=6)
 
 Prompt: formalize the owner's merged-metagraph tiling-count pairing process from the tiling explorer; precise rules for eligible node pairings; metrics; recursion; concrete next target. (Owner's description: nodes with even black to others; connect to nodes with even-black+odd-blue=odd; 3rd pure-blue odd-blue-only category; self-loops +2 conjectured only on mixed.)
