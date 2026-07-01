@@ -1,3 +1,20 @@
+## opus-2026-07-01-S18 -- THE GRID REFLECTION IS THE COMPLEMENT: it GENERATES the blue/black even-graph+T-join parity decomposition (extends mac-mini-S83/HYP-3808, concurrent convergence).
+
+Prompt: describe/constrain the blue/black flip-line assignment process on the merged metagraph (pure-blue/pure-black/mixed nodes, tiling counts); new metrics, reframe, recursion; also sidestep the flip-rank exhaustion + odd/even prior work.
+
+CONVERGENCE: mac-mini-S83 (HYP-3808) independently derived the SAME parity decomposition I did -- black=EVEN graph, blue=T-join/all-odd on SC, tau-parity (SC odd/NS even), same closed forms (#blue=2^((m+floor((n-1)/2))/2-1)), same eligibility rules, same n=6 self-loop correction. I agree with all of it.
+
+MY UNIQUE CONTRIBUTION = the GENERATING MECHANISM: the grid reflection R (isGridSym involution on tiles) IS THE TOURNAMENT COMPLEMENT -- class(R(t))=complement(class(t)) for EVERY tiling (verified 8/8, 64/64, 1024/1024). This PROVES the parity theorem (mac-mini's listed 'NEXT'):
+ (i) grid-sym <=> R-fixed <=> SC (blue lives in SC world, black touches NS);
+ (ii) R permutes lines preserving color+merged-pair; pairs each black EDGE with a DISTINCT one => EVEN black-degree (the even graph);
+ (iii) grid-sym tilings are R-fixed => ODD SC blue-degree (the T-join, T=SC, |SC| even).
+CHARACTERIZES self-loops: BLACK SELF-LOOP <=> R(t)=flip(t) (grid-reflection = tile-complement) = the R-fixed black lines => why they keep black even AND why they land on pure-black (n>=6).
+REFRAME (Z/2 chain): black = cycle-space element (Eulerian, chargeless); blue = chain with BOUNDARY = SC nodes; the whole assignment = ONE involution (complement) splitting the flip-pairing into R-symmetric (black-even) + R-fixed (blue-T-join). tau-parity IS the T-join boundary condition.
+
+METRICS/RECURSION: (B,M,K) = (1,1,1),(3,5,2),(2,10,22),(4,84,184) for n=4..7; SC=B+M=2,8,12,88; K=NS-merged=1,2,22,184; black even-graph connected, cycle-rank 1,14,425 (n=4,5,6), non-bipartite n>=5 (odd cycles). NEW proposed: realization-degeneracy (do parities+support uniquely pin the edges?); black odd-cycle spectrum; Mode-A recursion; T-join/parity PRUNING as a bridge to the flip-rank (the Paley obstruction is an SC/T-join node, odd tiling-count).
+
+HONEST: R=complement verified n<=6 + it's the mechanism proving the parities in general; recursion + flip-rank bridge proposed not proved. Extends HYP-3808 (NOT a duplicate; mac-mini owns it, I add the generator + note on their entry). Reflection: the-blue-black-flip-lines-are-an-even-graph-plus-a-t-join-grid-reflection-is-the-complement-opus-20260701.md; scripts mmg_{blueblack_parity,grid_reflection_is_complement,evengraph_tjoin_decomp,category_recursion_n7}_opus_20260701.py. No canon overridden.
+
 ## mac-mini-2026-07-01-S83 -- THE MERGED METAGRAPH'S BLUE/BLACK LINES ARE A PARITY DECOMPOSITION: black=EVEN graph (Eulerian), blue=ODD graph; tiling-count parity = SC/NS type; owner's parity claims verified, self-loop-only-mixed conjecture REFUTED at n=6 (HYP-3808) [TOURNAMENT/tiling]
 
 Prompt: the merged metagraph blue/black line structure -- pure-black nodes (even black to others), the mixed they connect to (even black + odd blue), the pure-blue 3rd category (odd blue only); frame the tiling-count reconstruction as a colored pairing/assignment process; metrics, reframings, recursion, corrections; conjecture: self-loops only on mixed.
