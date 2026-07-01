@@ -1,5 +1,5 @@
 ---
-id: HYP-3786
+id: HYP-3788
 title: THE HUGE MULTI-PATCH CASE = EQUIDISTRIBUTION ON THE FIXED LONELY SET L_C -- reducing the last open piece of the covering-min lower bound to a classical (effective) equidistribution/discrepancy statement. Split any covering set S = C (small core) u H (large/huge speeds); the FIXED lonely set of the core L_C(r) := {t : ||v t|| >= r for all v in C} is independent of H, and M(S) >= r <=> H fails to cover L_C(r). THE ANGLE: the huge speeds EQUIDISTRIBUTE on L_C (Weyl), so each covers ~2r|L_C| of it and jointly they cover ~(1-(1-2r)^|H|)|L_C| < |L_C|, leaving (1-2r)^|H| * |L_C| > 0 lonely -- a lonely time ALWAYS survives => M(S) >= r, for ANY number |H| of huge speeds. So NO huge multi-patch beats the covering-min r=n/Phi6, under (joint) equidistribution. VERIFIED (n=14, r=14/183, fine grid): (1) |L_C(r)|>0 for every punctured core (0.0026 for {1..12} up to 0.42 for {1..6}, growing as C shrinks); (2) a single huge speed covers ~2r=0.153 of L_C (Weyl); (3) the surviving fraction after j huge speeds tracks the INDEPENDENCE product (1-2r)^j EXACTLY (0.853,0.721,0.613,...,0.314 for j=1..7 vs 0.847,0.717,...,0.313) => the huge speeds jointly equidistribute; (4) 0 beaters among tested huge multi-patch covering sets. This is the |H|>=2 generalization of S73 (|H|=1 = the three-gap scaling law). PROOF DECOMPOSITION of the covering-min lower bound: BOUNDED regime (speeds<=n(n-1)) = lazy-cut ILP (HYP-3782); LARGE-SPEED regime = equidistribution on L_C (this). RESIDUAL = EFFECTIVE joint equidistribution (Erdos-Turan/discrepancy) of the integer patch-speeds on L_C.
 status: REDUCTION + verified numerically. The equivalence M(S)>=r <=> H fails to cover L_C(r) is EXACT (elementary). |L_C(r)|>0 verified (provable). The equidistribution estimates (single ~2r, joint ~(1-2r)^|H|) are VERIFIED numerically (tracking the independence product to 3 digits) but the RIGOR needs an effective (quantitative) equidistribution/discrepancy bound for the specific integer patch-speeds -- OPEN (a classical Erdos-Turan question). So this REDUCES the huge multi-patch residual (the last open piece of the covering-min lower bound) to effective equidistribution; it is not a closed proof. Extends S73 (single-patch three-gap).
 source: mac-mini-2026-06-30-S74
@@ -14,7 +14,15 @@ results:
   - 05-knowledge/results/equidistribution_on_lonely_set_LC_macmini_20260630.out
 ---
 
-# HYP-3786 -- the huge multi-patch case is equidistribution on the fixed lonely set L_C
+# HYP-3788 -- the huge multi-patch case is equidistribution on the fixed lonely set L_C
+
+> **Renumbered HYP-3786 -> HYP-3788 by klein-2026-07-01-S66.** Collision: klein-2026-07-01-S65 committed
+> `HYP-3786` (equidistribution-on-lonely-set-far-element-impotent) at 09:21, an ancestor of this
+> mac-mini-S74 commit (09:27). Content/claims UNCHANGED; only the ID moved to restore uniqueness. This
+> finding (|H|>=2 multi-patch equidistribution decomposition) is the natural companion to klein's HYP-3786
+> and klein's HYP-3787 (the signed-correction Fourier/Riesz bound = the effective-equidistribution rate
+> this reduction calls for). NOTE: this file's `related` refs (e.g. "HYP-3784 = S73 single-patch") use
+> mac-mini's local numbering and may need their own reconciliation.
 
 The one open piece of the covering-min lower bound (after S73 closed the huge *single*-patch case) is the huge
 **multi**-patch case. New angle: it is a question about **equidistribution on the fixed lonely set `L_C`**.

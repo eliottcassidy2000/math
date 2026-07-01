@@ -35,6 +35,6 @@ The single-patch tail was a three-gap scaling (S73); the multi-patch tail is its
 theorem — Steinhaus's three-gap in the finite, Weyl's equidistribution in the limit — one saying the large
 speeds are too uniform to close the hole.
 
-*See [[HYP-3786]], [[HYP-3784]] (single-patch three-gap scaling), [[HYP-3782]] (lazy-cut, the bounded regime),
+*See [[HYP-3788]] (this finding; renumbered from HYP-3786 by klein-S66 — klein-S65 held 3786 first), [[HYP-3784]] (single-patch three-gap scaling), [[HYP-3782]] (lazy-cut, the bounded regime),
 [[HYP-3571]] (the floor = measure of the lonely set), and the "measure survives, existence carries it" motif of
 [[we-were-rehearsing-the-bulk-the-proof-is-at-the-cusp]].*
