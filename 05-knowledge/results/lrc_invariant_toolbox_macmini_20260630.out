@@ -1,0 +1,38 @@
+==============================================================================================
+LRC(2p) INVARIANT TOOLBOX -- p=3,5,7,11,13,17,19,23
+==============================================================================================
+ p|genus  triGrp gon|nu2 h(-p)|psi covol/pi phi| apexgap 2p-1
+ 3|    0      24   1|  0     1| 12        4   2|1.00000    5=Paley-graph
+ 5|    0     120   1|  2     0| 18        6   4|0.38197    9=composite
+ 7|    1     INF   2|  0     1| 24        8   6|0.19806   13=Paley-graph
+11|    2     INF   2|  0     1| 36       12  10|0.08101   21=composite
+13|    2     INF   2|  2     0| 42       14  12|0.05812   25=composite
+17|    3     INF   ?|  2     0| 54       18  16|0.03405   33=composite
+19|    4     INF   ?|  0     1| 60       20  18|0.02728   37=Paley-graph
+23|    5     INF   ?|  0     3| 72       24  22|0.01863   45=composite
+
+==============================================================================================
+SORTED BY WHAT EACH METRIC DETECTS (the diversity):
+==============================================================================================
+  A. FRONTIER-DETECTORS (spherical -> hyperbolic at p=7, = genus jump 0->1):
+       genus g(X0(2p)) = 1+psi/12-nu2/4-nu3/3-cusps/2  = dim S2^new = # cusp-form obstructions (f14)
+       (2,3,p) triangle group order 4/(1/2+1/3+1/p-1): FINITE p<=5 (24,120), INFINITE p>=7
+       gonality of X0(2p): 1 (P^1) for p<=5, 2 (elliptic/hyperelliptic) for p>=7
+       HURWITZ THRESHOLD: (2,3,7) is the minimal hyperbolic triangle group; Klein quartic genus 3,
+         Aut=PSL(2,7)=168=84*(3-1) attains the Hurwitz bound 84(g-1). p=7 = the Hurwitz prime.
+    B. QR / p-mod-4 DETECTORS (a DIFFERENT axis -- the Paley/tournament dichotomy on 2p-1):
+       nu2(2p)=1+(-1/p): 2 if p=1mod4, 0 if p=3mod4  (p=7 -> 0)
+       h(-p): nonzero (class number of Q(sqrt-p)) for p=3mod4; the QR structure
+       2p-1: p=7 -> 13 = 1mod4 -> PALEY GRAPH (Ramanujan, the covering-min circulant); else tournament
+    C. SCALE (monotone, no transition): psi, phi(2p), J2, hyperbolic covolume (=psi*pi/3), apex gap ~1/p^2
+    D. THE UNIQUE-ELLIPTIC METRIC at p=7:  X0(14) has genus EXACTLY 1 => it is an ELLIPTIC CURVE (14a),
+       the ONLY apex prime where X0(2p) is elliptic (p<=5 rational, p>=11 genus>=2). And:
+         14a: conductor 14, RANK 0, TORSION = Z/6, |torsion| = 6 = phi(14) = #(Z/14)^* = the lonely set!
+       So the modular curve's torsion order recovers the triple-6 (S66).
+==============================================================================================
+NEW FRAMING: genus = dim(un-regularizable residual) (S67). The 'metric like genus' IS the genus,
+read as the RESIDUAL DIMENSION: 0 (fully zeta-regularizable, easy) for p=3,5; 1 (one cusp form,
+first hard) at p=7. The frontier-detectors (triGrp/gonality/Hurwitz) are its geometric shadows;
+the QR-detectors (nu2/class number/Paley) are an ORTHOGONAL axis (the covering-min circulant type).
+
+DONE.

@@ -1,3 +1,19 @@
+## mac-mini-2026-06-30-S68 -- A DIVERSE METRICS TOOLBOX for LRC(2p): beyond genus, TWO orthogonal axes of invariants (frontier vs QR); p=7 = the UNIQUE-elliptic Hurwitz apex, torsion Z/6=phi(14) (HYP-3776; converges klein-S59)
+
+Prompt: work the next lever -- find other formulas for metrics like genus, search all around, diverse niche possibilities. [CONVERGES with klein-S59 (HYP-3775, the X0(N) invariant ZOO) -- same task, concurrent.]
+
+Computed a broad invariant panel across apex primes p=3,5,7,11,13,17,19,23 and sorted every metric by WHAT it detects. TWO ORTHOGONAL AXES + a unique-elliptic coincidence at p=7.
+
+AXIS 1 -- FRONTIER-DETECTORS (all fire at p=7, the spherical->hyperbolic transition = the genus jump 0->1): genus g(X0(2p))=1+psi/12-nu2/4-nu3/3-cusps/2 = dim S2^new = #cusp-form obstructions (f14); the (2,3,p) TRIANGLE-GROUP order 4/(1/2+1/3+1/p-1), FINITE (24,120) for p<=5, INFINITE (hyperbolic) for p>=7; the GONALITY of X0(2p), 1 (rational P^1) p<=5 -> 2 (elliptic/hyperelliptic) p>=7; the HURWITZ THRESHOLD -- (2,3,7) is the minimal hyperbolic triangle group and the Klein quartic (genus 3) has Aut=PSL(2,7)=168=84(g-1), so p=7 is THE Hurwitz prime.
+
+AXIS 2 -- QR / p mod 4 DETECTORS (ORTHOGONAL to the genus, = the covering-min circulant's type): nu2(2p)=1+(-1/p)=2 if p=1mod4 else 0; h(-p)=class number of Q(sqrt-p), nonzero for p=3mod4 (h(-23)=3 the first >1); 2p-1 = a PALEY GRAPH (Ramanujan) if 1mod4, a rotational TOURNAMENT (Redei/OCF) if 3mod4. LRC14 (p=7) is hyperbolic on axis 1 (genus 1) AND 3mod4 on axis 2 (nu2=0, 2p-1=13 Paley).
+
+THE UNIQUE-ELLIPTIC METRIC: p=7 is the ONLY apex prime where X0(2p) has genus EXACTLY 1, so X0(14) IS an elliptic curve (14a): conductor 14, RANK 0, TORSION Z/6, and |torsion|=6=phi(14)=#(Z/14)^* = the lonely set -- the S66 triple-6 RECURS as the modular curve's torsion order. p=7 = 'Goldilocks': genus not 0 (rational/trivial), not >=2 (generic), exactly 1 (elliptic, rank 0, tractable).
+
+NEW FRAMING: genus = dim(un-regularizable residual) (S67 connection); the frontier-detectors are its geometric shadows, the QR-detectors an orthogonal covering-min axis. SCALE metrics (monotone): psi, phi(2p), J2, covolume psi*pi/3, apex gap ~pi^2/p^2.
+
+HONEST: panel exact/computed; 14a facts standard (LMFDB); the 2-axis organization + framings (genus=residual dim; torsion=phi(14); p=7=Hurwitz/unique-elliptic) are the contribution -- a metrics catalog, not a proof. HOUSEKEEPING: filed HYP-3776 (renamed from 3775 -- klein-S59 took it for the convergent invariant-zoo). Files: 04-computation/lrc_invariant_toolbox_macmini_20260630.py (+.out). No canon overridden, no court cases.
+
 ## klein-2026-06-30-S59 -- A ZOO of X_0(N) invariants; the SHARPER frontier metric (newform count 0,0,1,0,2); the rho<->R lever DEGREE CORRECTION (THM-580 is degree-2 = W_2, not the degree-3 degeneracy) (HYP-3775)
 
 Prompt: work the next lever (rho<->R) and find other formulas/metrics like genus -- diverse, niche.
