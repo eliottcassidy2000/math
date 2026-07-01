@@ -1,3 +1,19 @@
+## opus-2026-06-30-S3 -- The Riesz factorization of {0,1,2,30,31,32,60,61} grounds the multiscale LOG-BARRIER signed certificate: T_S=T_A*T_B-z^62 EXACT => log ADDS across scales => predicts where w*Delta_w peaks; the barrier separates tight (+0.43) from holes (-inf) via the AM-GM gap (HYP-3765)
+
+Prompt: confirm the Riesz factorization of {0,1,2,30,31,32,60,61} numerically (pure DFT), show it predicts where w*Delta_w peaks (grounds route A), use w as a log-barrier smoothing inside a Beurling-Selberg/Fourier-positivity signed certificate, and look back at signed-vs-unsigned series in the repo.
+
+DONE, four clean results (HYP-3765, renumbered from 3764 = klein-S53 collision):
+1. FACTORIZATION EXACT: S = ({0,1,2}(+){0,30,60}) minus corner 62, so T_S = T_A*T_B - z^62 (max err 2.7e-15, pure DFT) -- a rank-1 perturbation of a clean tensor (Fejer at scale 1 x Fejer at scale 30).
+2. TENSOR + ADDITIVE LOG: |T_S|^2 = tensor |T_A|^2|T_B|^2 (Pearson 0.985); for the clean product log|T_F|^2 = log|T_A|^2+log|T_B|^2 EXACT (4.6e-13 off the Dirichlet zeros). The log ADDS across scales -- THE grounding for a multiscale log-barrier.
+3. PREDICTS w*Delta_w PEAKS: coherence heights at the t=k/30 comb track the coarse envelope (3|T_A(k/30)|)^2 at corr 0.9972; the THM-546 peel deviation w*D(w) (signed-sinc -sin(2pi m/n)/(pi m)) has 10/12 top peel-freqs on the 30-comb+{0,1,2} satellites, and is SIGNED (cancellation, THM-546 Abel/QR).
+4. LOG-BARRIER = SIGNED SMOOTHING: B=<log m> gives tight (AP,GW) a positive averaged margin +0.43 where min m=1 is the borderline; holes => B=-inf. AM conserved (1.857, blind), GM separates (the AM-GM gap). The barrier's convex majorant is SIGNED (the L_y/Bonferroni signs HYP-2738/THM-534 prove forced); by (2) it builds scale-by-scale => a MULTISCALE signed certificate.
+
+Also: a full signed-vs-unsigned scan of BOTH threads (search agent) -- the law is "a signed certificate is forced exactly when the nonneg bound is loosest AT the extremizer" (LRC: HYP-2738 impossibility, THM-534 Bonferroni dual, THM-546 signed Abel 1.54-76x, THM-523/515 signed sinc/theta, HYP-2974 Toeplitz PSD; parity: OCF plain I(Omega,2) but signed mu-recursion, Even-Odd alternating identity).
+
+HONEST CEILING: the barrier is a RELAXATION (min m>=1 => B>=0, not conversely) and does NOT pin the AP among covering sets (GW B=0.438 > AP 0.428) -- it certifies covering, not consec-max. The band-limited signed majorant construction for the AP (summed per-scale Beurling-Selberg loss < 0.43) is the OPEN research target.
+
+NEXT: (a) attempt the actual band-limited signed majorant Q of -log m for the AP, degree set by the finest scale (Beurling-Selberg gap 1/(N+1)); (b) the AP-vs-GW selection stays with the pointwise/support route (klein-S51/HYP-3762 tight=>support>=n-5); (c) NOTE the klein-S53 HYP-3764 covering-min "n>=12 transition" is UNVERIFIED (challenges HYP-3737/3747 basis) -- flagged, worth a look.
+
 ## klein-2026-06-30-S53 -- THE COVERING-MIN OPEN EDGE: the construction is the LOOSE rung, the true min is a search-resistant small-rung spread set, and the "n>=12 transition" is UNVERIFIED (HYP-3764)
 
 Prompt: look for past patterns of thin edges; hypothesize freely about the open edge of the covering-min conjecture.

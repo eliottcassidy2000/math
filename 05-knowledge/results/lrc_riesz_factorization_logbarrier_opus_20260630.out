@@ -1,0 +1,16 @@
+(1) FACTORIZATION
+    max|T_S-(T_A T_B - z^62)| = 2.70e-15  (exact, machine precision)
+    max|T_F - T_A T_B|        = 2.70e-15  (clean product F=A(+)B)
+(2) TENSOR SPECTRUM  Pearson(|T_S|^2, |T_A|^2|T_B|^2) = 0.9850
+    max|log|T_F|^2 - (log|T_A|^2+log|T_B|^2)| off-zeros = 4.64e-13  (ADDITIVE across scales)
+(3) COMB HEIGHTS  corr(|T_S(k/30)|^2, (3|T_A(k/30)|)^2) = 0.9972
+(3b) PEEL DEVIATION w*D(w): 10/12 top peel-freqs on the 30-comb+{0,1,2} satellites: [30, 31, 32, 60, 61, 91, 92, 120, 121, 122]
+     signed: sum w*D=+3.003, max|w*D|=3.038 (cancellation, THM-546 signed Abel/QR)
+(4) LOG-BARRIER B=<log m>  (AM conserved, GM separates tight from holes)
+           AP: min m=1  hole=0.0000  B=0.4278537096729059  geo-mean=1.534  arith=1.858
+           GW: min m=1  hole=0.0000  B=0.4379188612857196  geo-mean=1.549  arith=1.858
+       12->26: min m=0  hole=0.0122  B=    -inf  geo-mean=0.000  arith=1.858
+       drop-7: min m=0  hole=0.0227  B=    -inf  geo-mean=0.000  arith=1.858
+
+=> Riesz factorization (multiplicative) => log-barrier ADDITIVE across scales => a MULTISCALE signed
+   Beurling-Selberg certificate (route A). The barrier is the signed smoothing HYP-2738 proves is forced.
