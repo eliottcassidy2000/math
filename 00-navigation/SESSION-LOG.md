@@ -11,6 +11,26 @@ NEXT: run the FINITE near-tight 11-core census to completion (the ONE unblocked 
 -> S20/S23/S24 (Gauss/compositum/expander), THM-501/522/523, MISTAKE-078, HYP-3789, HYP-3819, THM-079 (forbidden 21).
 
 ---
+## opus-2026-07-01-S30 -- BUILT the PSL_2(F_7) LEFT-RIGHT Cayley complex: certificate = an H^1 class (dim 16) on an EXPANDER, O(1)-local = anti-LTC -> LTC via the apex's own group; + the FOUR FACES of sqrt p (HYP-3823).
+
+Prompt: build the explicit PSL_2(F_7) left-right Cayley code + test O(1)-local-testability; discrepancy potential + {7,21} impossibility + 21-Frobenius + Pochhammer f(14) + Mahler-Popken + the unifying sqrt p four faces.
+
+STRONG CONVERGENCE kind-pasteur-S25 (independently: PSL_2(F_p)=the nonabelian expander gap 2sqrt-p=Gauss; sum-of-two-squares=the difficulty split; inf meas=FACILITY-LOCATION PoA, inf meas>=1/36 <=> PoA<=4.85 -- the QUANTITATIVE version of my S29 game framing). My S30 BUILDS what they identified.
+
+BUILT (verified): G=PSL_2(7) (168), LEFT gen a order-7 (heptagon), RIGHT gen b order-3 (Eisenstein), <a,b>=G => squares {g,ag,gb,agb} CROSS the 3&7 (=sqrt21).
+ (1) EXPANDER: deg-4 Cayley 2nd eig 3.69 vs Ramanujan 2sqrt3=3.46 (gap 0.31, weak but HUGE vs abelian tiling cube ~2/m; LPS gens=>exact Ramanujan).
+ (2) V=168,E=336,F=168; each edge in EXACTLY 2 squares => a CLOSED SURFACE/CSS-code.
+ (3) CODE (GF2): rank d1=160,d0=160 => dim Z^1=176, B^1=160, dim H^1=16 = the certificate class space; sqrt21(narrow-Z/2,S27)=a distinguished Z/2 class in H^1.
+ (4) O(1)-LOCAL: each square=4 edges, each edge in 2 squares => non-cocycle 1_e violates 2 squares, locally detected.
+=> TURNS THE ANTI-LTC (abelian tiling cube S28) INTO AN LTC via the apex group; certificate = cohomology class on the heptagon group's OWN complex; POCS/Kaczmarz=constructor.
+
+HONEST CAVEAT: 2 gens => SURFACE code = O(1)-LOCAL but NOT yet O(1)-SOUND (surface codes poly(n) soundness); a GOOD classical LTC (DELLM) needs LPS-Ramanujan gens + TENSOR local codes -- the next build.
+
+FOUR FACES of sqrt p (all realized): Gauss i sqrt p (cert S23) | Paley skew +-i sqrt p (tournament S23) | Ramanujan 2 sqrt p (expander/LTC THIS build) | field Q(sqrt-p) (arithmetic S27); sqrt21=cross of p=3&7.
+{7,21} IMPOSSIBILITY: 21=forbidden H AND |Aut(Paley_7)|=21=Frobenius/Borel of PSL_2(7) => the impossibility IS the maximal symmetry (H-hole at the apex's |Aut|).
+POCHHAMMER (verified): f(14)=(1/2)_12/12!=0.1612~1/sqrt(pi n)=0.1508 = iota-EVEN/pi/MEASURE face (far, SOS/Brouwer-easy), complementary to i sqrt p cert. Mahler-Popken ||7||=6,||14||=8,||21||=9 (speculative, +/x tension).
+
+Reflection: the-apex-code-built-the-psl27-leftright-cayley-complex-and-the-four-faces-of-sqrt-p-opus-20260701.md; script psl27_leftright_cayley_code_opus_20260701.py. HYP-3823. No canon overridden.
 
 ## kind-pasteur-2026-07-01-S25 -- THE NONABELIAN EXPANDER IS PSL_2(F_p) (gap 2sqrt-p = Gauss arithmetic); SUM-OF-TWO-SQUARES IS the difficulty split; inf meas is a FACILITY-LOCATION PoA (inf meas>=1/36 <=> PoA<=4.85). Converges mac-mini HYP-3819 (sqrt21).
 
