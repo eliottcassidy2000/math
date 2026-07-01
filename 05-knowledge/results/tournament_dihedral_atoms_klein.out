@@ -1,0 +1,27 @@
+(A) THE 6 UNIT ATOMS of the tight AP core {1..13} and their Verblunsky sequence
+    max min_v||vt|| = 0.07143 (=1/14=0.07143? tight); atom positions k/14 for k in [1, 3, 5, 9, 11, 13]
+    (Z/14)* units = [1, 3, 5, 9, 11, 13]  (6=phi(14)); match => atoms ARE the units
+    6-atom measure moments c_1=+0.1667; Verblunsky |alpha_n|: 0.167 0.200 0.250 0.333 0.500 1.000
+    LADDER: |alpha_k| = 1/(6-k)? 0.167~0.167 0.200~0.200 0.250~0.250 0.333~0.333 0.500~0.500 1.000~1.000
+    terminates at n=6 with |alpha_{5}|=1.0000 (=1 => EXACTLY 6 atoms = 6 units) [Verblunsky-Geronimus]
+    MOMENTS = RAMANUJAN SUMS c_14(k)/phi(14): c_k measured +1.000 +0.167 -0.167 +0.167 -0.167 +0.167 -0.167
+                                              c_14(k)/6     +1.000 +0.167 -0.167 +0.167 -0.167 +0.167 -0.167  (=> HYP-3793 convergence)
+
+(B) TOURNAMENTS on Z/7 (differences = the prime 7 = n/2 = 7-vanishing locus)
+   Paley/QR {1,2,4}: scores=[3, 3, 3, 3, 3, 3, 3] (regular=True); c3=14 c5=42 c7=24  N(OCF)=80; H(Redei Ham-paths)=189 (odd=True); |Aut|=21; self-converse=True
+   Rotational {1,2,3}: scores=[3, 3, 3, 3, 3, 3, 3] (regular=True); c3=14 c5=28 c7=17  N(OCF)=59; H(Redei Ham-paths)=175 (odd=True); |Aut|=7; self-converse=True
+
+(C) TILING model (n=7, staircase delta_5): circulant tournament => DIFFERENCE-STRIPED tiling
+   Paley/QR: 1 in S=True (base path OK); tiles set at differences [2, 4] (8/15 tiles); grid-symmetric(BLUE)=True
+   Rotational: 1 in S=True (base path OK); tiles set at differences [2, 3] (9/15 tiles); grid-symmetric(BLUE)=True
+   => circulant/dihedral tournaments are difference-striped; grid-sym preserves x-y => all BLUE (self-converse).
+
+(D) INVARIANT DICTIONARY  runner/measure  <->  Verblunsky/OPUC  <->  tournament/tiling
+   6 atoms = (Z/14)* units     | |alpha_5|=1 (6-atom termination)   | 7 vertices (6 units + iota-fixed 7/14)
+   antipode iota: t->1-t       | conjugation z->1/z-bar (reflection) | tournament CONVERSE T^op = x->-x
+   7-vanishing (prime n/2=7)   | moment period tied to 7            | tournament lives on Z/7 (QR/Paley)
+   dihedral D_7 on roots of -1 | rotational Verblunsky phases       | circulant => Aut>=Z/7; Paley Aut=21
+   runner speed M_v: t->vt     | degree-v Blaschke product          | arc/connection multiplier m in (Z/7)*
+   binding depth M             | alpha_0=-cos, termination level    | OCF N / Ham-path count H (parity, Redei)
+   KEY BRIDGE: prime 2 = antipode/converse (iota, self-converse tournaments); prime 7 = n/2 = the
+   7-vanishing = the vertex set Z/7 of the tournament; QR(7) = the Paley orientation = the dihedral one.

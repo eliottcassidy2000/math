@@ -34,6 +34,26 @@ Bridged the LRC/runners world to the repo's central tournament-tiling world. All
 REFINED INVARIANTS (deliverable): [V₇=roots z⁷=−1, D₇ order 14] + [SC type, Aut C₇, 14 triangles, 175 paths] + [Cayley→7th roots, U⁷=I∈SO(7)] + [tiling dist 6, chords {4,5,6}] + [CRT parity split: odd-SC-tournament × even-harmonic-Verblunsky].
 
 HONEST: everything above is verified/rigorous, but it CHARACTERIZES the AP extremal via maximal (SC/D₇) symmetry — it does NOT close the covering-min lower bound. It sharpens the crux into a SYMMETRY-EXTREMALITY conjecture ("minimal covering M ↔ maximal SC/D₇ symmetry" = OPEN-Q-108 in tournament form), not a proof. Parallel convergence: klein-S69 (HYP-3801) + mac-mini-S79 independently built the same loop-map dictionary; my new layer is the tournament/dihedral/Cayley/tiling/CRT angle. Checkpoint pushed mid-session. Reflection + HYP-3802 + INDEX + this log. Scripts in 04-computation/lrc_heptagon_{tournament_setup,cayley_verblunsky,aut_sc,crt_parity_decomp}_opus_20260701.py (+.out). No canon overridden; no court cases.
+## klein-2026-07-01-S70 -- TOURNAMENTS x DIHEDRAL x RUNNERS on the 7 roots of -1: the atom-tournament bridge (project's two halves meet) + a refined BINDING-FINGERPRINT invariant tower (HYP-3802). Converges opus-S13 + mac-mini-S79.
+
+Prompt: with the runners/Verblunsky synthesis, also consider tournaments and dihedral groups; for the 6 unit atoms consider a tournament on 7 vertices (vertex 0 ~ 1/14, vertex 6 ~ 13/14, added vertex at 7/14) and apply the tiling model; make the finish concrete, formulate/refine invariants.
+
+THE 7 POINTS. The tight AP core {1..13} (M=1/14, LRC floor) has lonely measure = 6 ATOMS at the units (Z/14)*={1,3,5,9,11,13}/14 = the PRIMITIVE 14th ROOTS OF UNITY (cyclotomic Phi_14, phi(14)=6). ADD the iota-fixed 7/14=1/2 (7=odd non-unit) => the 7 points {1,3,5,7,9,11,13}/14 = the SEVENTH ROOTS OF -1 (z^7=-1), with a DIHEDRAL D_7 action: rotation 1/7 + reflection = antipode iota:t->1-t = runner COMPLEMENT = tournament CONVERSE.
+
+VERIFIED (tournament_dihedral_atoms_klein.py, n=14):
+ - atoms ARE the units (max min_v||vt||=1/14 exactly, tight);
+ - MOMENTS = RAMANUJAN SUMS c_k = c_14(k)/phi(14) (+1,+1/6,-1/6,+1/6,...) => convergence with mac-mini/kps HYP-3793, from the OPUC/units side;
+ - VERBLUNSKY LADDER |alpha_k| = 1/(6-k) exactly (1/6,1/5,1/4,1/3,1/2,1), terminating |alpha_5|=1 (6 atoms, Verblunsky-Geronimus); para-orthogonal poly = cyclotomic Phi_14.
+ - QR/PALEY tournament on Z/7 (i->j iff i-j in QR(7)={1,2,4}): regular scores 3, c3=14=n, N(OCF)=80, H(Redei Ham-paths)=189 odd, |Aut|=21 (Frobenius 7:3); vs rotational {1,2,3}: N=59, H=175, |Aut|=7. Paley = the dihedral/QR/max-cycle one.
+ - TILING (n=7 delta_5): circulant tournament => DIFFERENCE-STRIPED (tile (x,y) set iff x-y in S) => grid-symmetric (BLUE), since grid-sym preserves x-y. Paley stripes {2,4}, rotational {2,3}.
+
+PRIME BRIDGE (the S67 lens, now structural): prime 2 = the antipode iota = the tournament CONVERSE (self-converse tournaments); prime 7 = n/2 = the 7-VANISHING (THM-503) = the vertex set Z/7; QR(7) = the Paley orientation = the dihedral tournament.
+
+REFINED INVARIANT TOWER (binding fingerprint of a speed set S): q*(S)=binding modulus=atom denominator; M(S)=k/q* (Farey rung); N_at(S)=atom count=Verblunsky termination; the Verblunsky ladder; the atom-tournament (OCF N, Redei H, |Aut|); (cyclotomic) moments=Ramanujan sums.
+TWO POLES: tight AP {1..n-1}: q*=n, M=1/n (floor), N_at=phi(n)=6, primitive n-th roots, ladder 1/(6-k), NON-covering. Construction {1..n-2,n(n-1)}: q*=Phi6, M=n/Phi6 (covmin), N_at=2, atoms +-t*, COVERING.
+THE FINISH (concrete): COVERING FORCES q*: n -> Phi6 (the CF second convergent t*=[0;n-1,n]), raising M from the floor 1/n to n/Phi6; atoms move off the n-lattice (6 primitive roots) onto the Phi6-lattice (2 atoms). The AP would beat covmin (1/n<n/Phi6) but is NOT covering (no multiple of n); covering (THM-523) pins atoms to the Phi6 phase-lattice (S68). "No covering set's binding fingerprint is deeper than the construction's" = OPEN-Q-108.
+
+CONVERGENCE: opus-S13 (HYP-3795, AP runner-cloud Verblunsky harmonic |alpha_j|=1/(n-1-j) + circle-map dictionary AGL(1)+PSL2+Szego) + mac-mini-S79 (loop dictionary group-action, orbit-count=Ramanujan=#atoms) did the Verblunsky/dictionary/Ramanujan; MY unique layer = the TOURNAMENT/DIHEDRAL/PALEY bridge + tiling + binding-fingerprint tower (ties LRC back to the tournament-parity project = the repo's other half). HONEST: synthesis + refined invariants + 1 finish-mechanism, NOT a new proof. HYP-3802 in klein block, no collision. Files: tournament_dihedral_atoms_klein.py(+out); HYP-3802; reflection the-two-halves-meet-at-the-atoms.md. No canon overridden.
 
 ## mac-mini-2026-07-01-S79 -- THE LRC WITNESS SEARCH IS A GROUP ACTION: loop-function dictionary (~23 maps, group-like) + the dilation-orbit-hits-safe-box reformulation; orbit-count = Ramanujan char sum = #atoms (HYP-3795); builds on opus-S13 + kps-S7, converges klein-S68
 
