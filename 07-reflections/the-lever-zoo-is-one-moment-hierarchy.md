@@ -40,6 +40,17 @@ merely equidistributes. The construction beats every rival not by efficient cove
 that could patch the hole is too spread out to find it. S74's near/far split, S75's signed correction,
 and the whole equidistribution picture are the level-2 correlation structure of one measure.
 
+One honest subtlety keeps the frame from over-promising. The *primal* hierarchy here -- the
+inclusion-exclusion on the continuous lonely measure -- is not the same as a generic Lasserre SDP, and
+the generic ones don't help: the degree-2 lift of the discrete mod-7 sector-hit distribution *collapses*
+to the union bound (my own threadC file, CJJ Prop 1.2), and the `M(S)` moment-SOS (opus) points the
+wrong way (it certifies beaters, not the lower bound). What carries content is the *continuous* pair
+correlation, whose dual is the project's proved Delsarte LP (THM-534) and the `Z_7` Fejer-Bochner SOS
+(the floor's actual sum-of-squares, eigenvalues `(0,1,1,1,1,1,1)`). Even the magic function on the dual
+side is the Cohn-Elkies / Chebyshev-equioscillation extremal -- the one-dimensional cyclotomic cousin of
+Viazovska. So the hierarchy is real, but it is the *right* hierarchy (continuous, cyclotomic dual), not
+whichever SDP a solver will accept.
+
 The pattern that transcends the theorem: **a long list of independent partial results is often one object
 under a hierarchy, and the reason none of them closes the problem is usually a single geometric feature
 of the extremum** -- here, that it is a measure-zero atom and not a region. When the levers proliferate,

@@ -74,6 +74,37 @@ Full `S_2 = 2.43` vs independence `C(13,2)(2r)^2 = 1.83`, **excess `+0.60`**. So
 
 This is the level-2 (pair-correlation) *mechanism* for "no beater," quantitative and exact-on-grid.
 
+## Integration with the repo's moment/SDP machinery (S76 survey)
+
+The primal object here (the inclusion-exclusion hierarchy on `|L_S|`) has a **dual** already built:
+
+- **DUAL (proved)**: THM-534 (`the sector moment-LP dual certificate`) -- `meas(S_7) <= L_y(E)`, the magic
+  function `g(t) >= 1_{t=0}`; the project's core LP, AP-extremal for bounded spread. klein's Delsarte LP
+  (`covering_min_delsarte_lp_klein.py`, HYP-3784) is its speed-restricted instance.
+- **DUAL SOS (verified)**: the `Z_7` cyclotomic **Fejer-Bochner SOS** (opus,
+  `lrc_z7_cyclotomic_sos_floor_opus_20260629.py`): kernel `h` PSD with eigenvalues
+  `rho_j = 1_safe(j/7) = (0,1,1,1,1,1,1)`, floor `c=1` on the six safe modes -- the *actual* SOS
+  certificate of the level-2 floor, set-independent (apex-7 transitivity).
+
+**Crucial caveat (resolves an apparent tension).** A naive Lasserre lift does NOT help:
+- My own `lrc14_threadC_sos_lasserre_lift_macmini.py` found the **degree-2 Lasserre lift of the discrete
+  mod-7 sector-hit distribution COLLAPSES to level-1** (CJJ Prop 1.2: missing-sector events aren't closed
+  under linear combination).
+- opus's `lrc_lasserre_sdp_Mofs_opus_20260701.py` (M(S) moment-SOS, exact on `{1,2,3}->1/4`) is the
+  **wrong direction**: it upper-bounds `max_t min_v`, i.e. it certifies *beaters*, not the lower bound;
+  and `M(S)` is computable exactly anyway.
+
+The resolution sharpens the hierarchy picture: the **discrete** (mod-`p`) Lasserre collapses, but the
+**continuous** 2nd moment -- the pair correlation of the danger *arcs* -- does NOT: it is the HYP-3571
+floor `1/(2 zeta(2)) = 3/pi^2 = 0.304`. So the moment relaxation that carries content is the
+**inclusion-exclusion on the continuous lonely measure** (this file), with dual = THM-534 LP + the `Z_7`
+Fejer-Bochner SOS, NOT a generic sector-hit SDP.
+
+**Loose inspiration (survey)**: the LRC magic function is the Cohn-Elkies / Chebyshev-equioscillation
+extremal (`V_7(u)-2 = (u-2)(de Moivre cubic)^2`, kps reflection), the 1-D analog of Viazovska's
+sphere-packing magic function -- the same "positive-definite minorant meets the extremal configuration"
+duality, here cyclotomic (`E_2`/hexagonal) rather than modular.
+
 ## What it buys and does not buy
 
 - **Unification**: the union bound (HYP-3785), the 2nd-moment floor (HYP-3571), the signed correction

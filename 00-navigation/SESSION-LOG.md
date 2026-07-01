@@ -1,3 +1,29 @@
+## mac-mini-2026-06-30-S76 -- THE COVERING-MIN LOWER BOUND IS A MOMENT RELAXATION: the repo's lever-zoo is one Lasserre/trig-moment hierarchy; extremal lonely set = a few atoms (flat-extension cert); level-2 correlation = the near/far mechanism (HYP-3789)
+
+Prompt: search back through the repo for past topics that could be connected, even loosely, chasing inspiration; think moment relaxation and covering-min.
+
+THE FRAME. The inner problem M(S)=max_t min_v ||vt|| is a trig-polynomial optimization on the circle, so its lower bound is a Lasserre/trigonometric-MOMENT hierarchy, and the repo's separately-discovered covering-min levers ARE its levels:
+  |L_S(r)| = integral prod_v (1-g_v(t)) dt = sum_{A subseteq S} (-1)^|A| I_A   (inclusion-exclusion = Bonferroni = moment truncation)
+  S_k = sum_{|A|=k} I_A = integral C(c(t),k) dt,  c(t)=#dangers active;  T_m = sum_{k<=m}(-1)^k S_k brackets |L_S|.
+  LEVEL 1 = union bound / Fejer average T_1=1-|S|*2r = -0.97 < 0 => USELESS (= HYP-3785 spectral gap, blind to the spike).
+  LEVEL 2 = pair correlations = the 2nd-moment floor (HYP-3571) = the S75 signed correction (HYP-3787).
+  LEVEL inf = exact |L_S| = the lazy-cut (HYP-3782, Positivstellensatz).
+  DUAL = THM-534 Delsarte-LP (proved) + Z_7 cyclotomic Fejer-Bochner SOS (opus, rho_j=(0,1,1,1,1,1,1)).
+Verified exact-on-grid (G=2^22): |L_S|>0 (0.0019/0.0026 at r=0.99M); truncations OSCILLATE (+1.4,-3.0,+5.4,-7.3), converge only at m=|S|.
+
+THE EXTREMAL LONELY SET IS A FEW ATOMS (measure zero) => FLAT-EXTENSION certificate (exact Fractions):
+  construction {1..12,182}: 2 atoms {14/183,169/183}, iota-symmetric, denom Phi6=183.
+  AP {1..13}: 6 atoms = the units (Z/14)* {1,3,5,9,11,13}/14 (independent confirmation of HYP-3571/3549; 6=phi(14)).
+  => the lonely measure's Toeplitz moment matrix is PSD (Bochner) with rank = #atoms (2, 6), stabilizing at K>=1, K>=5 (Caratheodory). Curto-Fialkow flat extension; localization verified (every atom lonely for every v).
+
+THE NEW MECHANISM (level-2, exact-on-grid). Pair correlations I_vw split by arithmetic: small-speed pairs (1,2),(1,3),(6,12),(4,8) are strongly POSITIVELY correlated (I_vw=M, +0.053 above independence (2r)^2 -- their arcs pile up redundantly near rationals) while the far element 182 is ~INDEPENDENT (I_{v,182}=(2r)^2 to 3 digits, equidistributes). Full S_2=2.43 vs independence 1.83, excess +0.60. So: the covering-min lower bound SURVIVES because the small-speed dangers waste their coverage budget piling up redundantly, leaving t* lonely, while the one far speed n(n-1) that could patch it is too spread out (independent) to find it. This is S74's near/far split seen at level 2, made quantitative.
+
+WHY NO FINITE LEVEL CLOSES IT: the extremum is a measure-zero atom (a delta), so no finite-degree average sees it -- the moment-hierarchy face of HYP-3785's spectral gap AND of S61's 'finite-D certificates cannot close Step 3'. Honest caveat (survey): the naive DISCRETE (mod-7 sector-hit) Lasserre degree-2 lift COLLAPSES to level-1 (my threadC file, CJJ Prop 1.2); opus's M(S) moment-SOS is the wrong direction (certifies beaters). What carries content is the CONTINUOUS pair correlation (this file) + its cyclotomic dual.
+
+RESIDUAL LOCALIZED: the S75 >=7-huge-speed case = a level-2 cross-harmonic moment (off-diagonal Toeplitz hat(1_{L_C})(jw_i-j'w_j)). Loose inspiration: the LRC magic function is the Cohn-Elkies/Chebyshev-equioscillation extremal, the 1-D cyclotomic cousin of Viazovska.
+
+HONEST: a unifying reframe + 1 new mechanism (level-2 positive correlation of the near core) + 1 new invariant (extremal lonely set finitely atomic, rank=#atoms). NOT a new proof -- the flat cert is rank-1 (one witness suffices), so the moment view confirms the hard part is the for-all-covering-S search. Files: 04-computation/moment_relaxation_covering_min_macmini_20260630.py(+.out); HYP-3789; reflection the-lever-zoo-is-one-moment-hierarchy.md. Survey (Explore agent) inventoried the full moment/SDP machinery (THM-534, Z_7 SOS, opus Lasserre, Delsarte LP, Cohn-Elkies). No canon overridden, no court cases.
+
 ## kind-pasteur-2026-07-01-S5 -- MOMENT RELAXATION reduces multi-far to ONE measure lower bound: inf meas(L_C) > 6^{-r} over (13-r)-cores (converges mac-mini HYP-3787 signed-correction=Fourier-of-1_{L_C}; no HYP)
 
 Prompt: pursue the near-tight x incommensurate residual; think moment relaxation.
