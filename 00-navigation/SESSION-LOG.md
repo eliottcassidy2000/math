@@ -1,3 +1,20 @@
+## kind-pasteur-2026-07-01-S13 -- BUCKETS AND PAIRS: the merged metagraph as a distribution problem -- #SC is EVEN (proved, settles a flagged-open question), reconstruction is RIGID ONLY at n<=4, the BLUE SUBGRAPH IS THE HALF-TILING (THM-549/550); + an 18-item conjecture multitude
+
+Prompt: creatively generate multitudes of conjectures; work concrete targets; mine past work comprehensively (extend niche adjacent ideas); frame everything as natural numbers in buckets (pure-black/mixed/pure-blue); test owner's hypothesis "the metagraph IS its constraints"; explore which tilings share a node (symmetry); consider prior HALF-TILING work.
+
+THREE RESULTS (grounded n<=6 + repo mining via Explore):
+ R1 (#SC EVEN, proved -- settles what the mining flagged "unknown if a theorem"): #self-converse classes is even for all n>=3. One line: 2^m = sum of bucket sizes = sum_NS(even)+sum_SC(odd) = #SC (mod 2), and 2^m even. Verified #SC=2,2,8,12,88 (n=3..7).
+ R2 (RECONSTRUCTION rigid ONLY at n<=4 -- tests owner's central hypothesis): local data (category + blue-deg + black-deg per node) UNIQUELY determines the multigraph at n=4 (0 legal degree-preserving colour-respecting 2-swaps) but NOT from n=5 (92 black + 19 blue swaps at n=5; 88380 at n=6). So "metagraph IS its constraints" is TRUE n<=4, FALSE n>=5: extra data needed = the phi-pairing (complement-tiling node-map). H helps (transitive H=1 flips BLUE to the unique SC class H=2^{n-2}+1, the "big SC neighbour") but phi is NOT cleanly H-antitone (H-sums span a range) => H alone insufficient. Reconstruction defect = new complexity measure, 0 iff n<=4.
+ R3 (BLUE SUBGRAPH = HALF-TILING, synthesis): grid-sym (sigma-fixed) tilings = 2^{floor((n-1)^2/4)} (klein-S13 square/pronic), and floor((n-1)^2/4)=A002620 = the HALF-TILING cell count (THM-549/550, sigma=complement phi(T^op)). So last turn's "blue-fold recursion" IS the half-tiling; blue=sigma-fixed half=Redei-witness half, black=sigma-moved=LRC-existence half (mac-mini-S6 two-index). Whole tripartition = one shadow of complement sigma.
+WHICH TILINGS SHARE A NODE: the H/|Aut| tilings = free Aut-orbits of Hamiltonian paths (LEM-003 freeness) union transpose; sigma-fixed (blue) reps in an SC class = ODD count (THM-281) = palindromic reps (THM-582, H=#palindromic mod2).
+CONJECTURE MULTITUDE (18, see reflection): f=floor((n-1)/2); grid-sym=2^{floor((n-1)^2/4)}; #A=(A000568-SC)/2; #pure-blue=1,3,2 (closed form OPEN); transitive->H=2^{n-2}+1 blue hub; blue/black self-loop + sea onset BOTH at n=6; blue subgraph ~= half-tiling process (halving recursion via THM-550); reconstruction-closing invariant.
+NEXT TARGETS: (a) prove blue subgraph = half-tiling metagraph (isomorphism) => THM-550 recurrences; (b) is (category,degree,H) sufficient for reconstruction?; (c) #pure-blue closed form; (d) sea/self-loop onset criterion (merge klein-S13).
+CONVERGENCE: opus-S18 + mac-mini HYP-3808 concurrently working grid-reflection=complement + blue/black even-graph/T-join parity; my R1/R2/R3 + buckets frame are complementary.
+Reflection: buckets-and-pairs-the-merged-metagraph-as-a-constraint-conjecture-multitude-kps.md; scripts merged_metagraph_{line_pairing,buckets_conjectures,extra_constraint}_kps.py (+.out). Not a HYP reservation.
+-> THM-549/550 (half-tiling), THM-281/282/584/582, LEM-003, HYP-3808, klein-S13, HYP-3540.
+
+---
+
 ## opus-2026-07-01-S18 -- THE GRID REFLECTION IS THE COMPLEMENT: it GENERATES the blue/black even-graph+T-join parity decomposition (extends mac-mini-S83/HYP-3808, concurrent convergence).
 
 Prompt: describe/constrain the blue/black flip-line assignment process on the merged metagraph (pure-blue/pure-black/mixed nodes, tiling counts); new metrics, reframe, recursion; also sidestep the flip-rank exhaustion + odd/even prior work.

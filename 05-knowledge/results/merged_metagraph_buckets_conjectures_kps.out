@@ -1,0 +1,33 @@
+====================================================================================================
+ (1)+(2)+(3): #SC-even, bucket census, reconstruction rigidity
+====================================================================================================
+  n=4: 2^m=8, #classes=4, #merged=3, #SC=2  [2^m mod2=0, #SC mod2=0 -> #SC EVEN: True]
+     census (#nodes, sum tilings): PB=(1, 1) Mx=(1, 5) Bk=(1, 2)  | total tilings=8
+     RECONSTRUCTION rigidity: black graph 2 edges, 0 legal degree-preserving 2-swaps; blue graph 1 edges, 0 legal swaps  -> unique-from-local-data: True
+  n=5: 2^m=64, #classes=12, #merged=10, #SC=8  [2^m mod2=0, #SC mod2=0 -> #SC EVEN: True]
+     census (#nodes, sum tilings): PB=(3, 5) Mx=(5, 47) Bk=(2, 12)  | total tilings=64
+     RECONSTRUCTION rigidity: black graph 20 edges, 92 legal degree-preserving 2-swaps; blue graph 8 edges, 19 legal swaps  -> unique-from-local-data: False
+  n=6: 2^m=1024, #classes=56, #merged=34, #SC=12  [2^m mod2=0, #SC mod2=0 -> #SC EVEN: True]
+     census (#nodes, sum tilings): PB=(2, 2) Mx=(10, 238) Bk=(22, 784)  | total tilings=1024
+     RECONSTRUCTION rigidity: black graph 456 edges, 88380 legal degree-preserving 2-swaps; blue graph 30 edges, 328 legal swaps  -> unique-from-local-data: False
+
+====================================================================================================
+ (4) WHICH TILINGS SHARE A NODE = Hamiltonian-path rerootings mod Aut (tiling count = H/|Aut|)
+====================================================================================================
+  n=5 per-class: tiling count vs H/|Aut| (H=Ham paths, |Aut| of a class rep):
+    class 0 (node 0, SC): H=1, |Aut|=1, H/|Aut|=1   node tiling-count=1
+    class 1 (node 1, NS): H=3, |Aut|=3, H/|Aut|=1   node tiling-count=2
+    class 2 (node 2, NS): H=5, |Aut|=1, H/|Aut|=5   node tiling-count=10
+    class 3 (node 3, SC): H=3, |Aut|=3, H/|Aut|=1   node tiling-count=1
+    class 4 (node 4, SC): H=9, |Aut|=1, H/|Aut|=9   node tiling-count=9
+    class 6 (node 6, SC): H=9, |Aut|=1, H/|Aut|=9   node tiling-count=9
+    class 8 (node 8, SC): H=11, |Aut|=1, H/|Aut|=11   node tiling-count=11
+    class 9 (node 9, SC): H=15, |Aut|=3, H/|Aut|=5   node tiling-count=5
+    class 10 (node 10, SC): H=13, |Aut|=1, H/|Aut|=13   node tiling-count=13
+    class 11 (node 11, SC): H=15, |Aut|=5, H/|Aut|=3   node tiling-count=3
+  => tilings in a node = the H Hamiltonian paths of its tournament(s), grouped into Aut-orbits;
+     H/|Aut| per class, summed over the 1 (SC) or 2 (NS) merged classes = node tiling count.
+
+SEEDS: #SC even (proved: 2^m even => sum of #SC odd counts even); PB/Mx odd, Bk even; recon NOT unique
+       from (category,deg) alone => the metagraph carries EXTRA constraint beyond the bucket data.
+DONE.
