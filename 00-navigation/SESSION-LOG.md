@@ -1,3 +1,22 @@
+## kind-pasteur-2026-07-01-S14 -- DOES H CLOSE RECONSTRUCTION? NO, but it cuts degeneracy ~5x and extends node-identifiability to n=5 (breaks at n=6 with 6 twin-pairs); a realization-degeneracy METRIC SUITE. CONVERGES mac-mini-S84 HYP-3809 (under-determination + SC twin-pairing).
+
+Prompt: chase whether H closes reconstruction; think realization-degeneracy metrics.
+
+VERDICT: H does NOT close reconstruction, but the effect is sharp & quantifiable (grounded n<=6).
+ (1) BARE node-H adds nothing: a degree-preserving 2-swap ignores node labels => reconstruction-from-(degree,H-label) degeneracy = degree-only degeneracy (sigma=100 at n=5 either way).
+ (2) The H-LEVEL CONNECTION PATTERN (which H-values link, per colour) cuts swaps ~4-6x: sigma_H = 22 vs baseline 100 (n=5), 15262 vs 85099 (n=6). Strong PARTIAL constraint, NOT zero.
+ (3) (category, blue-deg, black-deg, H) is a COMPLETE node-FINGERPRINT for n<=5 (injective, 0 twins) and FIRST FAILS at n=6 (6 twin-pairs). Adding c3 breaks only 1 => 5 c3-robust twin-pairs survive. So H extends identifiability exactly ONE n past degree.
+TWO THRESHOLDS: swap-uniqueness (degree+colour DETERMINES graph) holds ONLY n=4; fingerprint-injectivity ((cat,deg,H) IDENTIFIES nodes) holds through n=5, breaks n=6 (same break-at-6 as sea-onset/black self-loops).
+THE 6 n=6 TWINS (first irreducible ambiguity): pairs sharing (cat,bl,bk,H) -- e.g. mixed (5,12,H=17) nodes {12,22}, mixed (7,22,H=29) {43,44}, pure-black pairs {1,3},{4,6},{38,42}; c3 splits only {21,24}. TWO are MIXED (SC) => ambiguity not confined to the sea.
+1-WL from CATEGORY alone is DISCRETE (metagraph asymmetric) => graph reconstructible from its OWN adjacency but NOT from node fingerprints => the obstruction is RELATIONAL (the complement-tiling phi-map), not a richer node label.
+METRIC SUITE (proposed trackables): sigma(n) baseline swaps; sigma_I(n) I-refined swaps + reduction ratio sigma/sigma_I; tau_I(n) twin count under fingerprint I (identifiability threshold = last n with tau=0); WL-level (intrinsic rigidity); the explicit twin list.
+NEXT: (a) minimal invariant splitting the 5 surviving n=6 twins (score seq / |Aut| / OCF I(Omega,x) / H(phi(.))); (b) test relational (H, H-of-complement) => does it close it?; (c) twin asymptotics.
+CONVERGENCE: mac-mini-S84 HYP-3809 (conjecture atlas: parity = sigma fixed-point count; structure=constraint UNDER-DETERMINED = my R2/S14; SC twin-pairing = my twins). My layer = the H-reconstruction quantification + metric suite.
+Reflection: does-H-close-reconstruction-a-realization-degeneracy-metric-suite-kps.md; script merged_metagraph_H_reconstruction_kps.py (+.out). Not a HYP reservation.
+-> HYP-3809, THM-549/550, THM-584, buckets-and-pairs (S13), the-blueblack-line-pairing (S12).
+
+---
+
 ## mac-mini-2026-07-01-S84 -- CONJECTURE ATLAS for the merged-metagraph buckets: the parity is the fixed-point count of the complement-mirror sigma; structure=constraint is UNDER-DETERMINED (parity skeleton, not full determination); twin-pairing of SC nodes (HYP-3809) [TOURNAMENT/tiling; extends kps S12/S675]
 
 Prompt: creatively generate multitudes of conjectures; work concrete targets; mine repo comprehensively + synthesize; think 'natural numbers in buckets' (pure black/mixed/pure blue) with parity end-conditions; test the hypothesis that the metagraph structure IS its constraint (assign pairs, first two categories odd, last even); explore which tilings share a node (symmetry restrictions), consider the half-tiling model.

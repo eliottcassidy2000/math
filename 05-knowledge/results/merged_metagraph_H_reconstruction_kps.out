@@ -1,0 +1,30 @@
+n=4: 3 nodes | black 2 edges, blue 1 edges
+  SWAP numbers: baseline (deg+colour) black=0 blue=0;  H-edge-structure black=0 blue=0
+    => H-structure closes reconstruction (swaps->0)? True  (baseline unique? True)
+  1-WL identification (#stable classes / 3 nodes; DISCRETE=closed):
+    category=3  +degree=3  +H=3  +H+c3=3   [+H discrete? True; +H+c3 discrete? True]
+  twin nodes under (cat,deg,H): 0  (0 => (cat,deg,H) injective on nodes)
+
+n=5: 10 nodes | black 20 edges, blue 8 edges
+  SWAP numbers: baseline (deg+colour) black=84 blue=16;  H-edge-structure black=20 blue=2
+    => H-structure closes reconstruction (swaps->0)? False  (baseline unique? False)
+  1-WL identification (#stable classes / 10 nodes; DISCRETE=closed):
+    category=10  +degree=10  +H=10  +H+c3=10   [+H discrete? True; +H+c3 discrete? True]
+  twin nodes under (cat,deg,H): 0  (0 => (cat,deg,H) injective on nodes)
+
+  TWIN GROUPS (type,blue-deg,black-deg,H) -> nodes [+ tiling-count, c3]:
+    (Bk,bl=0,bk=2,H=3) -> nodes [(1, 2, 1), (3, 2, 1)]
+    (Bk,bl=0,bk=18,H=9) -> nodes [(4, 18, 3), (6, 18, 3)]
+    (Mx,bl=5,bk=12,H=17) -> nodes [(12, 17, 4), (22, 17, 4)]
+    (Bk,bl=0,bk=46,H=23) -> nodes [(21, 46, 5), (24, 46, 6)]
+    (Bk,bl=0,bk=74,H=37) -> nodes [(38, 74, 7), (42, 74, 7)]
+    (Mx,bl=7,bk=22,H=29) -> nodes [(43, 29, 6), (44, 29, 6)]
+n=6: 34 nodes | black 456 edges, blue 30 edges
+  SWAP numbers: baseline (deg+colour) black=84812 blue=287;  H-edge-structure black=15208 blue=54
+    => H-structure closes reconstruction (swaps->0)? False  (baseline unique? False)
+  1-WL identification (#stable classes / 34 nodes; DISCRETE=closed):
+    category=34  +degree=34  +H=34  +H+c3=34   [+H discrete? True; +H+c3 discrete? True]
+  twin nodes under (cat,deg,H): 6  (0 => (cat,deg,H) injective on nodes)
+
+VERDICT printed per n. Metrics: sigma (baseline swaps), sigma_H (H-structure swaps), WL-level, twins.
+DONE.
