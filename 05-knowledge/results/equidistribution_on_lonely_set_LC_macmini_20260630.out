@@ -1,0 +1,32 @@
+r = covering-min = 14/183 = 0.07650;  2r = 0.1530;  1-2r = 0.8470
+
+(1) |L_C(r)| for punctured cores {1..M} (fixed lonely set of the small core):
+    core={1..12}: |L_C| = 0.00261   (>0 => hole exists)
+    core={1..11}: |L_C| = 0.02128   (>0 => hole exists)
+    core={1..10}: |L_C| = 0.09028   (>0 => hole exists)
+    core={1..9}: |L_C| = 0.13281   (>0 => hole exists)
+    core={1..8}: |L_C| = 0.21620   (>0 => hole exists)
+    core={1..6}: |L_C| = 0.41858   (>0 => hole exists)
+
+(2) EQUIDISTRIBUTION: fraction of L_C a single huge speed renders dangerous (Weyl -> 2r):
+    w=    182: covers 0.1678  (2r=0.1530)
+    w=   5003: covers 0.1535  (2r=0.1530)
+    w=  50000: covers 0.1499  (2r=0.1530)
+    w= 999983: covers 0.1377  (2r=0.1530)
+
+(3) JOINT coverage by j huge speeds vs INDEPENDENCE product (1-2r)^j (=> the hole never dies):
+    after j=1: surviving fraction of L_C = 0.8534   (1-2r)^j = 0.8470
+    after j=2: surviving fraction of L_C = 0.7211   (1-2r)^j = 0.7174
+    after j=3: surviving fraction of L_C = 0.6131   (1-2r)^j = 0.6076
+    after j=4: surviving fraction of L_C = 0.5181   (1-2r)^j = 0.5147
+    after j=5: surviving fraction of L_C = 0.4365   (1-2r)^j = 0.4359
+    after j=6: surviving fraction of L_C = 0.3686   (1-2r)^j = 0.3692
+    after j=7: surviving fraction of L_C = 0.3135   (1-2r)^j = 0.3127
+    => surviving fraction (1-2r)^j > 0 for ALL j => a lonely time ALWAYS survives => M(C u H) >= r.
+
+(4) PROOF DECOMPOSITION of the covering-min lower bound (M(S) >= n/Phi6 for all covering S):
+    - BOUNDED regime (all speeds <= n(n-1)): lazy-cut ILP (HYP-3782; n=12 rigorous).
+    - LARGE-SPEED regime (some speed > threshold): S = C u H; |L_C(r)|>0; H equidistributes on L_C =>
+      covers <1 of it (1-(1-2r)^|H|) => lonely time survives => M(S) >= r.  |H|=1 is the S73 three-gap case.
+    Residual = EFFECTIVE joint equidistribution (Erdos-Turan/discrepancy) of the integer patch-speeds on L_C.
+DONE.
