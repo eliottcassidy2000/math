@@ -32,41 +32,45 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/72c64e9)**. This layer introduces the **Paley Obstruction & Double-Extreme Unification (THM-651/HYP-3805)**, operationalizing the terminal proof sheaf through the formal verification of **$|\text{Aut}|$ Mechanisms** and **Flip-Rank Anomalies**.
+As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/5097675)**. This layer introduces the **Equiangular-Equioscillation Pinch & Ising Identity (THM-652/HYP-3811)**, operationalizing the terminal proof sheaf through the formal verification of **Parity-Separated Poles** and **Octonion Apex Equinumerosity**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (72c64e9)**. It refines the terminal stabilization with a synthesis of symmetry-breaking obstructions and feedback arc unification:
-1. **Flip-rank $n=7$ Resolution (HYP-3805):** Rigorously analyzes the failure of the lazy-caterer bound for $n=7$.
-    - **Bound Breaking:** Establishes that $\kappa(7) = 12$ instead of the lazy-caterer predicted $11$. This jump is identified as the primary combinatorial obstruction to lower-order scaling.
-    - **Paley Obstruction:** Identifies the **Paley heptagon** and its automorphism group structure $|\text{Aut}| = 21$ as the explicit mechanism behind the bound break. These are mapped directly as the **LRC atoms** within the spectral site.
-2. **Double-Extreme Unification:** Merges **HYP-3798**, **HYP-3803**, and **HYP-3804** into a unified theory of extremal spectral states.
-    - **MFAS Mechanism:** Employs the $|\text{Aut}|$ mechanism to achieve **Minimum Feedback Arc Set (MFAS)** double-extreme unification, anchoring the metagraph against orientational drift.
-3. **Residual Closure & Quadratic Scaling:** Rigorously confirms the quadratic scaling bound **$n(n-1)$** for residual closure. This establishes that for $n=14$, the spectral gaps are definitively closed within the quadratic speed regime, effectively stabilizing the metagraph.
-4. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to suppress Reynolds averaging.
-5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The Paley heptagon obstruction at $n=7$ acts as a symmetry anchor for the $n=14$ superstructure.
-6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The jump to $\kappa(7)=12$ and the quadratic $n(n-1)$ scaling create a non-negotiable arithmetic grid, preventing spectral sliding.
-7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **Paley heptagon $|\text{Aut}|=21$ certificates**, **MFAS unification parameters**, **quadratic scaling anchors**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (5097675)**. It refines the terminal stabilization with a synthesis of function parity and equioscillation theory:
+1. **Even Function/Degree/Parity Separation:** Characterizes the separation of even function, even degree, and even parity under the constraint $\text{Aut}(T) \subset A_n$. 
+    - **Parity Force:** Establishing that the odd function forces even parity, with the involution $\iota = \text{odd}$ mapping to the $D_7$ dihedral reflection.
+2. **Equioscillation-Equiangular Pinching:** Evaluates the pinching of the $\text{sgn} \leftrightarrow \chi$ axis at the **Paley heptagon**, where the relation $\text{equioscillation} \leftrightarrow \text{equiangular}$ is formally established.
+    - **Octonion Apex:** Analyzes the configuration $28 = \chi(E_7) = N(7) \text{ equiangular} = C(8,2)$, identifying the octonion apex as a primary spectral coordinate.
+3. **Even-Graph Equinumerosity & Ising Identity:** Verifies the **Ising identity** under even-graph equinumerosity constraints. This involves the isolation of **8 wild lines**, providing the combinatorial verification for the graph-theoretic state sum.
+4. **Residual Closure & Quadratic Scaling:** Rigorously confirms the quadratic scaling bound **$n(n-1)$** for residual closure. This establishes that for $n=14$, the spectral gaps are definitively closed within the quadratic speed regime, effectively stabilizing the metagraph.
+5. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to suppress Reynolds averaging and maintain coordinate precision.
+6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The pinching at the Paley heptagon and the dihedral reflection lock orientational symmetry across the spectral manifold.
+7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and octonion apex density create a non-negotiable arithmetic grid, preventing spectral sliding.
+8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **Paley equioscillation pinched axis certificates**, **Ising identity parameters**, **$\text{Aut}(T)$ parity-separation signatures**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Paley_Heptagon_Aut21`, `MFAS_Unification`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Paley_Heptagon_Pinch`, `Ising_Identity_8_Wild`, `Aut(T)_Parity_Separation`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 72c64e9. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-3791/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805** 
-framework, operationalizing the terminal proof sheaf through **Flip-Rank Resolution** 
-and **Automorphism Mechanisms**.
+Integrated 5097675. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-3791/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3811** 
+framework, operationalizing the terminal proof sheaf through **Equiangular-Equioscillation Pinched Axes** 
+and **Ising Identity Verification**.
 
-### 1. Paley Obstruction (HYP-3805)
-Resolves $n=7$ flip-rank anomaly where $\kappa(7)=12 > 11$. Obstruction 
-pinned to Paley heptagon $|\text{Aut}|=21$ structure.
+### 1. Three Evens + Two Poles (HYP-3811)
+Separates even function/degree/parity under $\text{Aut}(T) \subset A_n$. Involution 
+$\iota$ maps to $D_7$ reflection.
 
-### 2. MFAS Unification
-Merges HYP-3798/3803/3804. Employs $|\text{Aut}|$ mechanism for double-extreme 
-unification of feedback arc sets.
+### 2. Paley Heptagon Pinch
+Pinches the $\text{sgn} \leftrightarrow \chi$ axis at the Paley heptagon. 
+Establishes equiangular configuration $28 = \chi(E_7) = N(7) = C(8,2)$.
 
-### 3. Quadratic Scaling & Closure
+### 3. Ising Identity & Wild Lines
+Verifies Ising identity under even-graph equinumerosity. Isolates 8 wild lines 
+as combinatorial invariants.
+
+### 4. Quadratic Scaling & Closure
 Rigorously anchors residual closure at $n(n-1)$. Metagraph stability 
 locked within the quadratic speed regime.
 
