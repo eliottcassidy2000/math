@@ -15,6 +15,25 @@ FILES: script lrc14_heptagon_tournament_tiling_kps.py (+.out); reflection the-at
 -> HYP-3793, HYP-3795, THM-523, THM-255/027 (Paley H-max), HYP-2576 (difference-winding=circular tournament), THM-024 (SC anti-aut), merged-metagraph G_n/Z_2, OPEN-Q-108.
 
 ---
+## opus-2026-07-01-S14 -- THE HEPTAGON TOURNAMENT: the 6 units + antipode 7/14 = roots of z⁷=−1, a self-complementary D₇ tournament Cayley-dual to the runners; t=1/14 CRT-factors into odd(SC tournament) × even(harmonic Verblunsky, nested LRC(7)) (HYP-3802)
+
+Prompt: "with the above runners on the loop verblunsky synthesis, also consider tournaments and dihedral groups. for the 6 unit atoms consider a tournament on 7 vertices with vertex 0 corresponding to 1/14 and vertex 6 corresponding to 13/14 and and added vertex at 7/14 and apply the tiling model and related to these. work to make the finish concrete, formulate and refine invariants."
+
+Bridged the LRC/runners world to the repo's central tournament-tiling world. All VERIFIED:
+
+(1) GEOMETRY: the 7 vertices (2k+1)/14 (vertex 0=1/14 … 6=13/14, added vertex 3=7/14=1/2) are EXACTLY the roots of z⁷=−1 — a regular heptagon with DIHEDRAL D₇ symmetry (order 14 = the LRC modulus). ι:x→−x (antipode) FIXES the added vertex 7/14 (= reflection center) and pairs the 6 units into 3 ι-pairs; the 6 units = the non-fixed vertices (2k+1 coprime to 14 ⇔ k≠3).
+
+(2) TOURNAMENT R₇ ("beat next 3"): SELF-COMPLEMENTARY — |Aut|=7 (C₇ rotations) + 7 converse-isos (witness ι) = D₇ order 14; rotations preserve arcs, reflections REVERSE them ⇒ R₇ lives on the repo's SC SPINE. Score-regular; 14 cyclic triangles (=|D₇|=the LRC 14), 21 transitive (=#edges), 175 Ham paths (odd, Rédei ✓). Paley/QR sibling {1,2,4}: |Aut|=21 + the √7 Gauss-sum spectrum.
+
+(3) CAYLEY DUALITY (exact): the skew-adjacency's Cayley transform U=(I−S)(I+S)⁻¹∈SO(7) has U⁷=I and spectrum EXACTLY the 7th roots of unity — the ±1 tournament and the 7 runners-on-the-loop are Cayley-dual; Verblunsky of that spectrum = (0,…,0,1) [Haar/symmetric].
+
+(4) TILING model: base path 0→1→…→6, 15 tiles = chords; R₇ = the transitive tournament with EXACTLY 6 tiles flipped (Hamming distance 6 = #units), the flipped tiles = the long chords {4,5,6}.
+
+(5) THE FINISH, CONCRETE — CRT/PARITY FACTORIZATION: at the AP's lonely time t=1/14 the 13 runners factor by parity (ℤ/14 ≅ ℤ/2 × ℤ/7): ODD {1,3,5,7,9,11,13} → roots of z⁷=−1 (full heptagon = the SC tournament, Verblunsky (0,…,0,1)); EVEN {2,4,6,8,10,12} → roots of z⁷=+1 minus origin → HARMONIC Verblunsky 1/(6−j) EXACT = a nested LRC(7) (my HYP-3795 at n=7). The ± sign IS the parity IS ι IS the complement ℤ₂; M=1/14 is set by runners 1 & 13 = the extreme ι-pair. So LRC(14)'s lonely config = (parity ℤ/2) × (heptagon D₇) — a concrete CRT/multiplicative descent (ties to mac-mini-S77/klein-S68 Φ₆ Eisenstein-CRT + kp-S7 (ℤ/N)* Ramanujan skeleton, here carrying a tournament).
+
+REFINED INVARIANTS (deliverable): [V₇=roots z⁷=−1, D₇ order 14] + [SC type, Aut C₇, 14 triangles, 175 paths] + [Cayley→7th roots, U⁷=I∈SO(7)] + [tiling dist 6, chords {4,5,6}] + [CRT parity split: odd-SC-tournament × even-harmonic-Verblunsky].
+
+HONEST: everything above is verified/rigorous, but it CHARACTERIZES the AP extremal via maximal (SC/D₇) symmetry — it does NOT close the covering-min lower bound. It sharpens the crux into a SYMMETRY-EXTREMALITY conjecture ("minimal covering M ↔ maximal SC/D₇ symmetry" = OPEN-Q-108 in tournament form), not a proof. Parallel convergence: klein-S69 (HYP-3801) + mac-mini-S79 independently built the same loop-map dictionary; my new layer is the tournament/dihedral/Cayley/tiling/CRT angle. Checkpoint pushed mid-session. Reflection + HYP-3802 + INDEX + this log. Scripts in 04-computation/lrc_heptagon_{tournament_setup,cayley_verblunsky,aut_sc,crt_parity_decomp}_opus_20260701.py (+.out). No canon overridden; no court cases.
 
 ## mac-mini-2026-07-01-S79 -- THE LRC WITNESS SEARCH IS A GROUP ACTION: loop-function dictionary (~23 maps, group-like) + the dilation-orbit-hits-safe-box reformulation; orbit-count = Ramanujan char sum = #atoms (HYP-3795); builds on opus-S13 + kps-S7, converges klein-S68
 
