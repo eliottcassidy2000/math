@@ -1,5 +1,12 @@
 # The blue subgraph IS the half-tiling metagraph — a proven folding isomorphism (the SC world is a self-contained tiling model of half the dimension)
 
+> **⚠️ S20 CORRECTION (opus, HYP-3811).** Two claims below are WRONG (the theorem itself STANDS):
+> (1) the "dyadic complement-folding tower" — NO, the fold is a **single terminal step**: R=complement is
+> order-2, and H_n *is* its fixed set (all SC), so it cannot fold again by complement.
+> (2) "at even n, #SC(n)=A000568(n−1)" — a **coincidence** (n=4,6 only), **breaks at n=8** (176≠456). The
+> folded class-count is **A051337** (self-converse tournaments), governed by anti-automorphisms with all
+> cycles ≡ 2 mod 4. See the S20 reflection / HYP-3811.
+
 *opus-2026-07-01-S19. The owner asked to prove "blue-subgraph = half-tiling metagraph as an isomorphism" and
 to work the S18 directions (odd-cycle spectrum, recursion, realization-degeneracy, the T-join/flip-rank bridge).
 This proves the isomorphism from the S18 generator (R = complement) and reports the directions.*

@@ -1,3 +1,17 @@
+## opus-2026-07-01-S20 -- the FOLD is a SINGLE terminal step (NO quarter-tiling), and the folded class-count is A051337 (cycles = 2 mod 4); CORRECTS two S19/HYP-3810 claims (HYP-3811).
+
+Prompt: (1) does H_n fold to a quarter-tiling; (2) odd-n recursion rule mirroring the even-n folded-class-count.
+
+TASK 1 -- NO quarter-fold: the folding involution R=complement (S18) is ORDER 2; its fixed set = the SC world = H_n; inside H_n every tournament is complement-FIXED (verified all grid-sym tournaments SC, n=4,5,6), so folding by complement again fixes EVERYTHING => no proper sub-fold. H_n isn't a staircase model (D=floor((n-1)^2/4) != C(k,2)) so carries no nontrivial grid reflection. => M_n->H_n is a SINGLE terminal fold. CORRECTS HYP-3810's speculated 'dyadic tower'.
+
+TASK 2 -- folded class-count = A051337 (self-converse tournaments) = 2,2,8,12,88,176,2752,8784,279968,1492288,95458560,872687552 (n=3..14), matches metagraph B+M for n<=7. Burnside: #SC(n)=(1/n!)sum_pi #{T:pi(T)=comp(T)}.
+ CORRECTS HYP-3810's 'even rule #SC(2k)=A000568(2k-1)': a COINCIDENCE (n=4,6 only), BREAKS at n=8 (176 != A7=456), n=10 (8784 != A9=191536).
+ UNIFIED RULE (verified n<=14): inner count nonzero IFF every anti-automorphism cycle has length = 2 mod 4 (parts 2,6,10,14=2*odd) + exactly one fixed point iff n odd.
+ EVEN/ODD MIRROR (the ask): odd-n rule = even-(n-1) rule + one extra FIXED VERTEX (append a 1-cycle); #contributing types = q(floor(n/2)) (partitions into distinct/odd parts) = 1,1,2,2,3,3,4,4,5. Dominant term = all-transpositions tau; corrections swap 6 transpositions for a 6-cycle, etc.
+ MECHANISM: complement = arc-REVERSAL => pair-orbit orientations alternate => length-l vertex-cycle closes consistently iff l=2 mod4 (the tournament shift of the classical 4|l self-complementary-GRAPH rule); 2 fixed pts impossible => <=1.
+
+HONEST: both verified (Task1 n<=6; Task2 n<=14 + matches A051337 + classical cycle theory). Two S19 corrections are the honest content. Overlaps kind-pasteur-S15 (flip-all-half-tiling=complement). Reflection: the-fold-is-a-single-step-and-the-folded-class-count-is-A051337-cycles-2-mod-4-opus-20260701.md; scripts {sc_count_burnside_A051337,mmg_no_quarterfold,sc_anti_auto_cycletypes}_opus_20260701.py. HYP-3811 + correction banners on HYP-3810/S19 reflection. No canon overridden.
+
 ## kind-pasteur-2026-07-01-S15 -- THE RECONSTRUCTION KEY IS (OCF, DETERMINANT): the first OCF-cospectral twin {4,6} at n=6 is det(I+S)-visible; + flip-all-half-tiling = complement gives odd-parity LOWER BOUNDS
 
 Prompt: run the twin separator test; think "flipping all D half-tiles = flipping all m tiles" and lower bounds from odd-grid-sym parity.
