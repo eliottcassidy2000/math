@@ -32,43 +32,46 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/4c8a932)**. This layer introduces the **Sporadic Doubling Classification & Operad Gating (THM-631/HYP-3749)**, operationalizing the terminal proof sheaf through the formal census of **Non-Difference-Closed Tight Sets**.
+As of **Wednesday, July 1, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/226372b)**. This layer introduces the **Patch-Tuning Unification & Modular Tightness Extension (THM-632/HYP-3760)**, operationalizing the terminal proof sheaf through the formal verification of **Dual Healing Modes** and **Modular Residue Restrictions**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (4c8a932)**. It refines the terminal stabilization with a classification of sporadic structural anomalies:
-1. **Classification of Non-Difference-Closed Tight Sets (HYP-3749):** Formally categorizes sets that remain tight without satisfying difference-closure.
-    - **Repository Census Confirmation:** Independent enumeration confirms the sporadic census for $n \in \{5, \dots, 8\}$.
-    - **Sporadic Doubling Identifiers:** Identifies non-AP single-swap sporadics: $n=5 \ (2 \to 7)$, $n=6 \ (2 \to 9)$, $n=8 \ (6 \to 12 = \text{DOUBLE})$, and the critical **LRC14** sporadic doubling **$n=14 \ (12 \to 24 = \text{DOUBLE})$**. Outside these cases, the regime is AP-only.
-2. **Repo Doubling Operad (THM-631, HYP-2917):** Establishes the $g = 2k$ doubling mechanism. The operad's viability is formally gated by **Jacobsthal numbers**, which govern the combinatorial width of the swap regime.
-3. **Avoided-Arc Lens Unification:** Unifies the structural failure of difference-closure through an avoided-arc lens. A swap $k \to g$ fails closure at the removed $k$; it remains tight if and only if the absent-$k$ regime $\|kt\| < 1/n$ is covered by $g$. For $g=2k$, coverage is strictly $< 1/2n$, with the residual acting as the Jacobsthal gate.
-4. **Rigor Status:** The **AP component** is now classified as **rigorous**; the **sporadic component** remains a high-confidence **repository conjecture**.
-5. **Spectral Governance:** Continued anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) using **Fejér-Bochner minorants** to maintain coordinate integrity.
-6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even-bipartite branch ($n=14$). The classification of sporadic doublings prevents orientational symmetry-breaking in the tight-set manifold.
-7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The Jacobsthal gating and doubling operad create a rigid arithmetic lattice, preventing spectral sliding.
-8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **sporadic doubling certificates**, **Jacobsthal gate parameters**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (226372b)**. It refines the terminal stabilization with a unified classification of tight set healing mechanisms:
+1. **Independent Cross-Check (HYP-3760):** Provides independent convergence on tight set classification (**HYP-3750**) and patch-tuning unification (**HYP-3753**). 
+    - **Collision Flag:** A naming collision was identified for **HYP-3750** (reused from S61 band-prime); priority ceded to `klein-S48` for the tight classification.
+    - **Difference-Closed Normal Form:** Confirms that difference-closed tight sets are strictly dilated APs.
+2. **Two-Healing-Modes Unification:**
+    - **GW-type (Doubling):** Characterized by skipping $n-2$ and patching with $2(n-2) = \text{DOUBLE}$. This yields a spectral floor of $1/n$ if and only if $n \equiv 2 \pmod 6$.
+    - **Construction-type (LCM):** Characterized by skipping $n-1$ and patching with $\text{lcm}(n-1, n) = \text{LCM}$. This yields the global covering minimum of $14/183$ for **LRC14**.
+3. **Single-Swap Census Extension ($n=5 \dots 16$):** Extends the sporadic single-swap census, confirming that structural anomalies are restricted to $n \in \{5, 6, 8, 14\}$.
+4. **GW-Doubling Family Extension ($n=5 \dots 26$):** Extends the doubling family analysis, verifying that tightness is attained specifically at $n \in \{8, 14, 20, 26\}$. This structurally confirms the $n \equiv 2 \pmod 6$ modular restriction as a universal gating condition.
+5. **Non-Difference-Closed Classification:** Categorizes complex tight sets into GW-type and cross-type multi-swaps, further refining the sporadic structural boundary.
+6. **Spectral Governance:** Anchored on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) using **Fejér-Bochner minorants** to prevent spectral density overshoots and suppress Reynolds averaging.
+7. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even-bipartite branch ($n=14$). The modular restriction ($n \equiv 2 \pmod 6$) provides a rigid symmetry lock for the doubling family.
+8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The dual-mode unification and modular residues create a non-negotiable arithmetic lattice, preventing spectral sliding.
+9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **patch-tuning certificates**, **modular residue restrictions**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Sporadic_Doubling_n14`, `Doubling_Operad_THM-631`, `Jacobsthal_Gate`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Dual_Healing_Modes`, `Modular_Restriction_n2mod6`, `Patch-Tuning_Unification`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated 4c8a932. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3747/HYP-3748/HYP-3749** 
-framework, operationalizing the terminal proof sheaf through **Sporadic Doubling Classification** 
-and **Jacobsthal Operad Gating**.
+Integrated 226372b. Introduces the **THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3747/HYP-3748/HYP-3749/HYP-3760** 
+framework, operationalizing the terminal proof sheaf through **Dual healing Mode Unification** 
+and **Modular Tightness Extension**.
 
-### 1. Non-Difference-Closed Classification (HYP-3749)
-Formally census sporadic tight sets. Confirms $n=14 \ (12 \to 24)$ as a 
-critical doubling sporadic, while the majority of the regime remains AP-only.
+### 1. Patch-Tuning Unification (HYP-3760)
+Independently verifies the two healing modes: GW-type (doubling) and 
+Construction-type (LCM). Confirms $n \equiv 2 \pmod 6$ modular gating.
 
-### 2. Doubling Operad (THM-631)
-Operationalizes the $g=2k$ doubling mechanism gated by Jacobsthal numbers. 
-Unifies sporadic behavior under the avoided-arc lens.
+### 2. Single-Swap & Doubling Extensions
+Extends the census to $n=16$ (single-swap) and $n=26$ (doubling), 
+anchoring the structural anomalies observed in LRC14.
 
-### 3. Rigor Distribution
-AP components are rigorous; sporadic components are repository conjectures. 
-Anchored by the 14-repository nomadic sync architecture (SHA 35b78ee).
+### 3. Namespace Resolution
+Resolves the HYP-3750 collision by designating the independent 
+cross-check as HYP-3760, preserving canonical coordination integrity.
 
 ---
 
