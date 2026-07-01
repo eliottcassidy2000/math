@@ -1,0 +1,40 @@
+==============================================================================================
+ k_min(n): the minimal FREE-arc count to hit all iso classes; the FIXED-arc gauge
+==============================================================================================
+   n m=C(n,2) #classes log2#cls  k_min  f=m-kmin log2(n!)
+   3        3        2     1.00      1         2     2.58
+   4        6        4     2.00      2         4     4.58
+   5       10       12     3.58      4         6     6.91
+  (info bound ceil(log2#cls) vs k_min; f=fixed arcs vs log2(n!)=symmetry entropy)
+
+==============================================================================================
+ n=3: k_min=1 (info-bound lb=1; TIGHT=True); 3 viable FREE-arc sets
+==============================================================================================
+  viable free-arc-set SHAPES: {'matching': 3}
+   FREE [(0, 1)] (matching); FIXED arcs [(0, 2), (1, 2)] oriented ['0->2', '2->1']
+   FREE [(0, 2)] (matching); FIXED arcs [(0, 1), (1, 2)] oriented ['1->0', '2->1']
+   FREE [(1, 2)] (matching); FIXED arcs [(0, 1), (0, 2)] oriented ['0->1', '2->0']
+
+==============================================================================================
+ n=4: k_min=2 (info-bound lb=2; TIGHT=True); 3 viable FREE-arc sets
+==============================================================================================
+  viable free-arc-set SHAPES: {'matching': 3}
+   FREE [(0, 1), (2, 3)] (matching); FIXED arcs [(0, 2), (0, 3), (1, 2), (1, 3)] oriented ['0->2', '3->0', '2->1', '3->1']
+   FREE [(0, 2), (1, 3)] (matching); FIXED arcs [(0, 1), (0, 3), (1, 2), (2, 3)] oriented ['1->0', '3->0', '2->1', '3->2']
+   FREE [(0, 3), (1, 2)] (matching); FIXED arcs [(0, 1), (0, 2), (1, 3), (2, 3)] oriented ['0->1', '2->0', '3->1', '3->2']
+
+==============================================================================================
+ n=5: k_min=4 (info-bound lb=4; TIGHT=True); 10 viable FREE-arc sets
+==============================================================================================
+  viable free-arc-set SHAPES: {'path/other': 10}
+   FREE [(0, 1), (0, 2), (1, 2), (3, 4)] (path/other); FIXED arcs [(0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4)] oriented ['0->3', '0->4', '1->3', '4->1', '3->2', '4->2']
+   FREE [(0, 1), (0, 3), (1, 3), (2, 4)] (path/other); FIXED arcs [(0, 2), (0, 4), (1, 2), (1, 4), (2, 3), (3, 4)] oriented ['0->2', '0->4', '2->1', '4->1', '3->2', '4->3']
+   FREE [(0, 1), (0, 4), (1, 4), (2, 3)] (path/other); FIXED arcs [(0, 2), (0, 3), (1, 2), (1, 3), (2, 4), (3, 4)] oriented ['0->2', '3->0', '2->1', '3->1', '4->2', '4->3']
+
+==============================================================================================
+ PATTERN / REFRAME
+==============================================================================================
+  k_min is the DIMENSION of the smallest axis-aligned subcube meeting every S_n-orbit.
+  f_max=m-k_min FIXED arcs GAUGE-FIX the relabeling symmetry; the bound f_max<=log2(n!) is the
+  symmetry entropy. Naive Ham-path fixes only n-1 (weak); optimal fixes ~log2(n!) (strong gauge).
+DONE.

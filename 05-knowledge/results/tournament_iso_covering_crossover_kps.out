@@ -1,0 +1,24 @@
+==================================================================================================
+ CROSSOVER TABLE: balanced-2-partition within-arcs  vs  info bound ceil(log2 A000568)
+==================================================================================================
+   n  C(n,2) maxcut n^2/4 bal-within  log2(n!)  log2(A568)  infoK balanced covers?
+   3       3            2          1      2.58        1.00      1              yes
+   4       6            4          2      4.58        2.00      2              yes
+   5      10            6          4      6.91        3.58      4              yes
+   6      15            9          6      9.49        5.81      6              yes
+   7      21           12          9     12.30        8.83      9              yes
+   8      28           16         12     15.30       12.75     13      NO (break!)
+   9      36           20         16     18.47       17.55     18      NO (break!)
+  10      45           25         20     21.79       23.21     24      NO (break!)
+  balanced-within = C(n,2) - floor(n^2/4);  covers iff balanced-within >= ceil(log2 A000568).
+  n=3..7: balanced-within == infoK (clean).  n=8: balanced-within=12 < infoK=13 => BALANCED FAILS.
+  Reason: max-cut floor(n^2/4) [QUADRATIC] overtakes symmetry-entropy log2(n!) [~n log n] at n=8.
+
+==================================================================================================
+ CONFIRM k_min(6)=6: lower bound 2^5=32<56 => k>=6; find a (3,3) free-set + orientation covering all 56
+==================================================================================================
+  free within-block arcs (|.|=6): [(0, 1), (0, 2), (1, 2), (3, 4), (3, 5), (4, 5)]
+  fixed cross arcs (|.|=9): [(0, 3), (0, 4), (0, 5), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5)]
+  searched cross-orientations: best coverage = 42/56 classes; covering orientation found? False
+  => k_min(6) = 6 CONFIRMED (best 42; lower bound 2^5<56 gives k>=6).
+DONE.

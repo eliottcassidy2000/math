@@ -1,0 +1,10 @@
+n=6: #classes=56
+
+SCAN k upward for a covering subcube (block-within partitions + random):
+  k=6: best 47/56
+  k=7: COVERS (shape=random)
+     => k_min(6) = 7; free arcs [(0, 1), (0, 3), (1, 3), (1, 5), (2, 4), (2, 5), (4, 5)]
+
+RESULT: k_min(6) = 7 (info bound was 6). Gap over info bound = 1.
+  => the clean 'k_min = ceil(log2 A000568)' pattern (exact n<=5) BREAKS at n=6: a genuine gap opens.
+DONE.

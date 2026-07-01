@@ -1,0 +1,9 @@
+n=6: #iso classes = 56 (expect A000568(6)=56: True)
+
+SEARCH k=6 (lower bound: 2^5=32<56 => k>=6). Looking for a covering 6-arc subcube...
+  structured (3,3) blocks {0,1,2}{3,4,5}: best coverage over all orientations = 42/56
+  structured (4,1,1) block {0,1,2,3}: best coverage over all orientations = 42/56
+  random 6-arc search (3000 tries): best coverage = 47/56
+  ==> NO covering 6-arc subcube found (best 47/56); strong evidence k_min(6)>=7.
+  k=7 achievable? False  => k_min(6) = 6 or 7 (see above)
+DONE.

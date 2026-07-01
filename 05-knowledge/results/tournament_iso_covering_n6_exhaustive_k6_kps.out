@@ -1,0 +1,4 @@
+n=6 classes=56
+EXHAUSTIVE k=6: global best coverage = 47/56
+  => k_min(6) >= 7 PROVEN (no k=6 subcube covers)
+DONE.
