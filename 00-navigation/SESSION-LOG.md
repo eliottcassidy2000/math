@@ -13,6 +13,17 @@ Did a comprehensive NT survey (Explore agent -- LRC/Farey/zeta/Paley/modular-for
 NEXT: the full residual (a closed inequality M>n/Phi6 for ALL covering escapes at ALL large n) is the razor-thin covering-min conjecture (margin ~1/n^2); the scaling law M=c/D + a lower bound on the surviving-hole prime D vs the multiplier c is the route. Also: extend the rigorous large-multiple-forced lemma to a two-speed budget-count (how many top-half core speeds can a covering set drop?).
 
 --- prior entries ---
+## opus-2026-06-30-S2 -- The residual-n-in-S attack arc: "large primes forced" made RIGOROUS for the single swap (the (n+q)-witness), a 58-thread number-theory catalog, and the SPECTRAL-FLATNESS scale-matching result (HYP-3763)
+
+Prompt (final): "attack the residual n in S -- the right order parameter is spectral flatness, not additive energy... concrete falsifiable test: does spectral flatness have FEWER inversions than additive energy against p0?" (preceded by: make large-primes-forced rigorous + catalog all number theory in the repo).
+
+Two blocks this session:
+
+1. LARGE PRIMES FORCED (single swap) -- RIGOROUS. For q prime in ((n-1)/2, n-1], NO single-swap tight set S=({1..n-1}\{q})+{g}: (i) g not a multiple of q => no multiple of q => q-witness M>=1/q>1/n; (ii) g=mq => the +-pair {q,n} is uncovered mod (n+q) => the NEW (n+q)-witness at a=q^{-1} gives M>=2/(n+q)>1/n. Verified exact n=14,18 all large primes, m=2,3. The residual = the n-in-S case (runner n hits residue -1, covering the witness) = the repo's HYP-3749 CRT crux. Also cataloged 58 number-theory threads across 5 anchors (CF/Farey/Ostrowski, cyclotomic/p-adic, additive/Fourier, primes/Jacobsthal, Burnside/Heegner). Reflections: RIGOROUS-single-swap-large-prime-forced-the-n-plus-q-witness..., BRAVE-lowness-attack....
+
+2. SPECTRAL FLATNESS vs ADDITIVE ENERGY (owner's hint) -- ran the falsifiable test faithfully both ways (HYP-3763). Located the repo's exact setup (search agent): the "cap" = measS7 (mod-7 coverage), A had 1368 within-span inversions, and HYP-2738 already PROVES no nonneg monotone certifies consec-max. RESULT (scale-matching law): vs the COARSE measS7, additive energy WINS (span-12: 235181 vs Wiener 411288); vs the TRUE fine LRC gap M, Wiener entropy W=-<log m(t)> WINS (near-AP inv-frac 0.19-0.23 vs 0.39-0.45, Pearson 0.74 vs 0.09; span-12 233735 vs 369437). DECISIVE: on ONE fixed family the winner flips with the CAP (coarse->A, fine->W) -- so the owner's instinct is VINDICATED for the right target (the fine gap), and the repo's additive-energy framing was on the coarse proxy. CEILING (honest): W is a better PROXY but the AP does NOT minimize W (entropy blind to the pointwise tight locus); no scalar certifies consec-max (HYP-2738), the crux stays HYP-3749. Script lrc_flatness_vs_energy_scale_opus_20260630.py.
+
+NEXT: the scale-matching law says use FINE/pointwise tools for the lowness -- aligns with klein-S51/HYP-3762 (tight => support>=n-5, the wide-hole/HYP-3749 route). Two live fine-scale certificate ideas: (a) the log-barrier W as the smoothing in a Beurling-Selberg/Fourier-positivity signed certificate (HYP-2974); (b) close the CRT residual n-in-S (HYP-3749) directly -- the one crux both the large-primes-forced and the lowness reduce to.
 
 ## klein-2026-06-30-S51 -- THE GENERAL THREE-GAP RIGIDITY IS STEINHAUS ON THE ROTATION ORBIT-CYCLE; T_p band skeleton common to tight+covering-min; reduced to a support/wide-hole bound (HYP-3762)
 
