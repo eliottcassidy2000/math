@@ -1,0 +1,30 @@
+n=14 Phi6=183=3*61; construction C=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]; covering-min M_C=n/Phi6=14/183=0.07650
+
+(1) COMPLEMENT-FOLD (iota: t->1-t). M(S)=max_t min_v||vt|| is iota-invariant (||v(1-t)||=||vt||),
+    so the whole problem folds to the half-circle [0,1/2]; the 2 binding atoms {t*,1-t*} fold to 1.
+    iota-symmetry of the loneliness profile G(t)=G(1-t): True (fold to [0,1/2] valid)
+
+(2) QUARTER-FOLD group: complement -1 mod Phi6 = 182 = 62*121 (partial complements mod 3, mod 61);
+    <62,121> = {1,62,121,182} = Klein-four in (Z/183)*; iota=182=(-1 mod3,-1 mod61). This folds
+    the phase space Z/Phi6 into a QUARTER, exactly as <sigma,flip> folded the tournament cube.
+
+(3) THE TEST -- does the covering-min obstruction DISSOLVE under the CRT quarter (binding factor over 3,61)?
+    M(construction) restricted to each modulus q (loneliness available at q):
+      q=   2: max_t min_v||vt|| = 0 = 0.00000 (covered/shallow)
+      q=   3: max_t min_v||vt|| = 0 = 0.00000 (covered/shallow)
+      q=   6: max_t min_v||vt|| = 0 = 0.00000 (covered/shallow)
+      q=   7: max_t min_v||vt|| = 0 = 0.00000 (covered/shallow)
+      q=  14: max_t min_v||vt|| = 0 = 0.00000 (covered/shallow)
+      q=  61: max_t min_v||vt|| = 4/61 = 0.06557 (covered/shallow)
+      q= 183: max_t min_v||vt|| = 14/183 = 0.07650 <-- = M_C (the DEEP binding)
+      q= 183: max_t min_v||vt|| = 14/183 = 0.07650 <-- = M_C (the DEEP binding)
+    => modulus 3: 0.0000; modulus 61: 0.0656; modulus Phi6=3*61: 0.0765=M_C
+    The construction COVERS the prime moduli 3 and 61 (small M there) and binds ONLY at the COMPOSITE Phi6.
+    => the covering-min is METRIC-IRREDUCIBLE at Phi6: it does NOT factor over the CRT quarter (primes 3,61).
+    So the obstruction does NOT dissolve under the quarter-fold (unlike the tournament SC-cover, a coord artifact).
+    This is the analytic non-factorization of THM-503 (L is NOT an Euler product), seen as: the covering-min
+    lives at the DEEP composite modulus Phi6 (the 2nd CF convergent), invisible to the prime CRT factors.
+
+    WHAT THE COMPLEMENT-FOLD DOES BUY: halves the problem to [0,1/2]; lonely measure iota-even => Verblunsky
+    REAL (S66); the parity lemma (S55, odd D => #lonely even) is the iota-fold fixed-point count. The HALF
+    fold is useful; the QUARTER (CRT) fold is a real group symmetry but the metric obstruction is Phi6-deep.

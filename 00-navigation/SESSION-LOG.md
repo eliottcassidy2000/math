@@ -33,6 +33,21 @@ Reflection: the-quarter-tiling-model-and-the-reconstruction-wall-at-n7-kps.md; s
 -> HYP-3811 (opus, fold terminal/A051337), HYP-3809/3810, THM-549/550, THM-281, the-determinant-lens (d perp H, Cayley-Dickson), the-reconstruction-key (S15).
 
 ---
+## klein-2026-07-01-S79 -- APPLY THE FOLD-THINKING TO LRC-14: the complement-fold (iota) halves it usefully; the quarter-fold (CRT Klein-four over Phi6's Eisenstein primes) is a GROUP symmetry but the covering-min obstruction is METRIC-IRREDUCIBLE at composite Phi6 -- does NOT dissolve (the productive DIS-analogy to the tournament) (HYP-3812).
+
+Prompt: see how the fold-thinking helps LRC-14; apply analogously, abstractly; quarter tilings are important; do the complement-fold.
+
+(1) COMPLEMENT-FOLD (lrc_complement_fold_quarter_klein.py): the antipode iota:t->1-t (S55) is the LRC complement; M(S)=max_t min_v||vt||, the danger pattern, and the lonely measure are ALL iota-invariant (VERIFIED G(t)=G(1-t)) => LRC folds to the half-circle [0,1/2]; the 2 binding atoms {t*,1-t*} fold to 1. USEFUL: lonely measure iota-even => Verblunsky REAL (S66); the parity lemma (S55, odd D=>#lonely even) = the iota fixed-point count. The complement-fold is a genuine (single) reduction.
+
+(2) QUARTER-FOLD GROUP: the phase space Z/Phi6 (Phi6=3*61, Eisenstein primes) has complement -1 mod Phi6 = 182 = 62*121 = product of the PARTIAL complements (-1 mod 3, -1 mod 61); <62,121> = {1,62,121,182} = Klein-four in (Z/Phi6)*, folding Z/Phi6 into a QUARTER exactly as <sigma,flip> folded the tournament cube. iota=182 is the diagonal.
+
+(3) THE TEST (does the obstruction dissolve, S78/HYP-3811?): NO. M(construction) restricted to modulus q = 0 (q=2,3,6,7,14, COVERED), 4/61=0.066 (q=61, shallow < M_C), and = M_C=n/Phi6=14/183 ONLY at the composite q=Phi6=183. The construction COVERS the prime moduli 3,61 and binds ONLY at the composite Phi6 => the covering-min is METRIC-IRREDUCIBLE at Phi6, does NOT factor over the CRT quarter, so the obstruction does NOT dissolve (unlike the tournament SC-cover, a coordinate artifact that DID dissolve in half-address coords). This is the covering-side re-derivation of THM-503 (L not an Euler product): the binding lives at the DEEP composite Phi6 (the 2nd CF convergent [0;n-1,n]), no prime/CRT shortcut.
+
+ABSTRACT LESSON: fold-thinking DIAGNOSES obstructions -- coordinate-artifact (dissolves under the fold => easy in the right basis, the tournament) vs metric-irreducible (survives every fold => genuinely hard, the LRC). The LRC covering-min is the latter; its proof must engage the FULL Phi6 (the S73/HYP-3806 Chebyshev 2-point dual {1,killer} at {t*,1-t*}), with no shortcut. A hoped-for dissolution became a diagnostic (more useful): it maps the difficulty to exactly one composite modulus + its 2-point boundary.
+
+RECONCILIATION with opus-S20 (HYP-3811, concurrent): opus-S20 CORRECTS the quarter-tiling framing -- 'the fold is a SINGLE terminal step, NO quarter-tiling.' My S79 LRC finding is CONSISTENT: the quarter-fold (CRT) is a GROUP symmetry, NOT a problem-reducing fold (obstruction metric-irreducible) -- both conclude the complement-fold is the real (single) reduction and the 'quarter' does not reduce the problem. [My S78 HYP-3811 Klein-four group-quotient COUNTS of the tiling cube (8->6->3, 64->40->20, 1024->544->272) are correct as group quotients; opus-S20's point is that this is not a genuine new tiling MODEL -- concede the framing, the counts stand. HYP-3811 is a klein-S78/opus-S20 double-claim on the tournament side; my HYP-3812 (LRC) is distinct and clean.]
+
+HONEST: exact n=14; the complement-fold utility is established (S55/S66); a structural explanation of the LRC difficulty (metric-irreducible at Phi6, confirming THM-503), NOT a new bound. Files: lrc_complement_fold_quarter_klein.py(+out); HYP-3812; reflection the-fold-is-a-diagnostic-artifact-versus-irreducible.md. No canon overridden.
 
 ## opus-2026-07-01-S20 -- the FOLD is a SINGLE terminal step (NO quarter-tiling), and the folded class-count is A051337 (cycles = 2 mod 4); CORRECTS two S19/HYP-3810 claims (HYP-3811).
 
