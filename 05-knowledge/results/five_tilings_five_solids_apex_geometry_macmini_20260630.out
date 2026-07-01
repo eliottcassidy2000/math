@@ -1,0 +1,42 @@
+==============================================================================
+(1) COUNT 5: crystallographic rotation orders = {n: 2cos(2pi/n) in Z} = {phi(n)<=2}
+==============================================================================
+   = [1, 2, 3, 4, 6]  (count 5) = the 5 planar orders / 5 Bravais lattices
+   n=3: 2cos(2pi/n)=-1.0000  phi=2  crystallographic
+   n=4: 2cos(2pi/n)=+0.0000  phi=2  crystallographic
+   n=5: 2cos(2pi/n)=+0.6180  phi=4  FORBIDDEN (no n-fold lattice)
+   n=6: 2cos(2pi/n)=+1.0000  phi=2  crystallographic
+   n=7: 2cos(2pi/n)=+1.2470  phi=6  FORBIDDEN (no n-fold lattice)
+
+==============================================================================
+(2) THE (2,3,n) ANGLE-DEFECT TRICHOTOMY  sign(1/2+1/3+1/n-1)  [Gauss-Bonnet]
+==============================================================================
+   n=3: 1/2+1/3+1/n-1 = 1/6    (+0.1667)  spherical   tetrahedron {3,3}
+   n=4: 1/2+1/3+1/n-1 = 1/12   (+0.0833)  spherical   octahedron {3,4}
+   n=5: 1/2+1/3+1/n-1 = 1/30   (+0.0333)  spherical   icosahedron {3,5}
+   n=6: 1/2+1/3+1/n-1 = 0      (+0.0000)  EUCLIDEAN   HEX/triangular tiling {3,6} = A2 = covering-min
+   n=7: 1/2+1/3+1/n-1 = -1/42  (-0.0238)  hyperbolic  Klein quartic (2,3,7)=PSL(2,7)=168=Fano
+
+==============================================================================
+(3) 5 PLATONIC SOLIDS  {p,q} with 1/p+1/q>1/2  (positive angle defect)
+==============================================================================
+   {3,3}  1/p+1/q-1/2 = 1/6
+   {3,4}  1/p+1/q-1/2 = 1/12
+   {3,5}  1/p+1/q-1/2 = 1/30
+   {4,3}  1/p+1/q-1/2 = 1/12
+   {5,3}  1/p+1/q-1/2 = 1/30
+   count = 5
+
+==============================================================================
+(4) LRC(2p) APEX-PRIME WALK: genus X0(2p) tracks the (2,3,p) geometry
+==============================================================================
+   p= 3  X0( 6): genus=0, cusps=4  geometry(2,3,3)=Euclidean/crystallographic
+   p= 5  X0(10): genus=0, cusps=4  geometry(2,3,5)=SPHERICAL/icosahedral (Platonic!)
+   p= 7  X0(14): genus=1, cusps=4  geometry(2,3,7)=HYPERBOLIC (Klein-type)  <== genus jump 0->1, spherical->hyperbolic = LRC14 frontier
+   p=11  X0(22): genus=2, cusps=4  geometry(2,3,11)=HYPERBOLIC (Klein-type)
+   p=13  X0(26): genus=2, cusps=4  geometry(2,3,13)=HYPERBOLIC (Klein-type)
+
+   apex gap 4cos^2(3pi/7) = 2+2cos(6pi/7) = 0.19806 = 2+lambda_min(C_7) (>0 iff 7 odd/non-tiling)
+   covering-min lives at order 6 (hexagonal/A2, Euclidean); B2 (square, order 4) = anomaly-free (HYP-3768).
+
+DONE.
