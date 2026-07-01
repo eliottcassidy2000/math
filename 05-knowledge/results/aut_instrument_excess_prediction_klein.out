@@ -1,0 +1,72 @@
+================================================================================
+THE |Aut| INSTRUMENT (commutant of U) + EXCESS PREDICTION
+================================================================================
+ n  |G_n|  LB  rho  excess
+ 3      2   1    1       0
+ 4      4   2    2       0
+ 5     12   4    4       0
+ 6     56   6    7       1
+ 7    456   9   12       3
+  target excess sequence: 0,0,0,1,3  (n=3..7)
+
+--------------------------------------------------------------------------------
+n=3: |G_n|=2  Sum(fiber)=2 (=2^m=8: False)  |Aut| all odd=True
+  |Aut| distribution (value:count) = {1: 1, 3: 1};  max|Aut|=3
+  #SC=2 (reflection FIXED classes); #distinct |Aut| values=2
+  RESOLUTION: spectrum=1  ->  (spectrum,|Aut|)=2  ->  (+SC)=2  ->  (+H,+MFAS)=2  of |G_n|=2
+
+--------------------------------------------------------------------------------
+n=4: |G_n|=4  Sum(fiber)=8 (=2^m=64: False)  |Aut| all odd=True
+  |Aut| distribution (value:count) = {1: 2, 3: 2};  max|Aut|=3
+  #SC=2 (reflection FIXED classes); #distinct |Aut| values=2
+  RESOLUTION: spectrum=2  ->  (spectrum,|Aut|)=2  ->  (+SC)=2  ->  (+H,+MFAS)=3  of |G_n|=4
+
+--------------------------------------------------------------------------------
+n=5: |G_n|=12  Sum(fiber)=64 (=2^m=1024: False)  |Aut| all odd=True
+  |Aut| distribution (value:count) = {1: 7, 3: 4, 5: 1};  max|Aut|=5
+  #SC=8 (reflection FIXED classes); #distinct |Aut| values=3
+  RESOLUTION: spectrum=2  ->  (spectrum,|Aut|)=4  ->  (+SC)=6  ->  (+H,+MFAS)=10  of |G_n|=12
+
+--------------------------------------------------------------------------------
+n=6: |G_n|=56  Sum(fiber)=1024 (=2^m=32768: False)  |Aut| all odd=True
+  |Aut| distribution (value:count) = {1: 41, 3: 12, 5: 2, 9: 1};  max|Aut|=9
+  #SC=12 (reflection FIXED classes); #distinct |Aut| values=4
+  RESOLUTION: spectrum=6  ->  (spectrum,|Aut|)=12  ->  (+SC)=15  ->  (+H,+MFAS)=33  of |G_n|=56
+
+================================================================================
+max|Aut| sequence (n=3..7): [3, 3, 5, 9, 21]  (opus: 1,3,3,5,9,21 for n=2..7; n=6->9 check: True )
+excess     sequence (n=3..7): [0, 0, 0, 1, 3]
+
+--------------------------------------------------------------------------------
+CANDIDATE PREDICTORS of the excess 0,0,0,1,3 (n=3..7):
+  floor(log2 maxAut)-1                   -> [0, 0, 1, 2, 3]   
+  ceil(log2 maxAut)-2                    -> [0, 0, 1, 2, 3]   
+  bigOmega(maxAut)-1                     -> [0, 0, 0, 1, 1]   
+  floor(maxAut/n)                        -> [1, 0, 1, 1, 3]   
+  round(maxAut/n)-1                      -> [0, 0, 0, 1, 2]   
+  floor(log2(maxAut/n))+1?               -> [0, 0, 0, 0, 1]   
+  maxAut>=2n ? 3 : maxAut>n ? 1 : 0      -> [0, 0, 0, 1, 3]   *** MATCH ***
+  (max|Aut| itself: [3, 3, 5, 9, 21]; excess target [0, 0, 0, 1, 3])
+
+================================================================================
+PRINCIPLED HYPOTHESIS:  excess(n) = #{iso classes C : |Aut(C)| > n}
+  (= # tournaments STRICTLY MORE SYMMETRIC than the cyclic rotation C_n)
+================================================================================
+  n=3: |Aut| dist {1: 1, 3: 1};  #{|Aut|>3} = 0 (of which SC = 0);  excess = 0  OK
+  n=4: |Aut| dist {1: 2, 3: 2};  #{|Aut|>4} = 0 (of which SC = 0);  excess = 0  OK
+  n=5: |Aut| dist {1: 7, 3: 4, 5: 1};  #{|Aut|>5} = 0 (of which SC = 0);  excess = 0  OK
+  n=6: |Aut| dist {1: 41, 3: 12, 5: 2, 9: 1};  #{|Aut|>6} = 1 (of which SC = 1);  excess = 1  OK
+
+  n=7 (targeted via fix(sigma), sigma=(012)(345)(6)):
+    fix(sigma) hit 12 distinct classes; |Aut| dist: {3: 7, 9: 4, 21: 1}; SC among them: {3: 3, 9: 2, 21: 1}
+    #{|Aut|>7} = 5   (excess target=3 => raw census OVERSHOOTS)
+    #{|Aut|>7 AND SC} = 3   (SC-refined; target=3 => *** MATCH ***)
+    (fix(sigma) captures EVERY |Aut|>7 class: |Aut|>7 on 7 pts forces |Aut| in {9,21}, both have a 3+3+1 order-3 element ~ sigma)
+
+================================================================================
+VERDICT (honest):
+  * |Aut| (=commutant of U) IS the fixed-point-sensitive instrument: Aut* (anti-auto extension)
+    detects SC exactly; (spectrum,|Aut|) resolution ~2x spectrum (still < |G_n|).
+  * |Aut| predicts the OBSTRUCTION qualitatively: the single hardest class = argmax|Aut| (Paley, n=7).
+  * QUANTITATIVE excess: raw census #{|Aut|>n}=0,0,0,1,5 MATCHES n<=6 but OVERSHOOTS n=7 (5 vs 3);
+    the excess is a COVERING-ARRANGEMENT quantity (HYP-3810 T-join parity), not a pure symmetry count.

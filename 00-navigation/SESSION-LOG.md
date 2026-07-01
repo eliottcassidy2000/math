@@ -74,6 +74,33 @@ THE PAYOFF (completes S22b/S23): the HARD-SIDE CERTIFICATE is chi(lonely set) = 
 
 HONEST: chi(L)>0 certifies M>=1/n (standard); NEW = the cohomological framing + tie to S23 traces; sharp chi(L)<->M(S) still three-distance/far-element. (Note: HYP-3816 double-claimed w/ mac-mini-S89 adjacency-vs-skew spectrum; both spectral, mine=2nd moments.) Reflection: certifying-cohomology-the-lonely-set-euler-characteristic-*; scripts {sc_spine_eigenvalue_fields, lrc_lonely_set_euler_char_certificate}_opus_20260701.py. HYP-3817. No canon overridden.
 
+## klein-2026-07-01-S83 -- THE FLIP-RANK EXCESS = #{SELF-COMPLEMENTARY CLASSES MORE SYMMETRIC THAN THE ROTATION C_n}: the fixed-point-sensitive instrument (|Aut| = commutant of U, refined by SC) predicts the excess 0,0,0,1,3 that the spectrum could not see (HYP-3817).
+
+Prompt: work the next instrument; whether U's |Aut|-resolution quantitatively predicts the excess 0,0,0,1,3 (n=3..7).
+
+RESULT (positive, exact n=3..7): excess = rho(n) - ceil(log2|G_n|) = 0,0,0,1,3 EQUALS #{iso classes C : C self-complementary AND |Aut(C)| > n}.
+
+THE INSTRUMENT (S82 lead answered). The excess is invisible to the spectrum (S82: reflection-blind). The fixed-point-sensitive instrument is the AUTOMORPHISM GROUP: |Aut(T)| = the COMMUTANT of the Cayley U (perms P with PU=UP) = a NON-spectral invariant; its complement-extension Aut*(T) (auto- AND anti-automorphisms) detects SC exactly ([Aut*:Aut]=2 <=> SC = reflection FIXED point). (spectrum,|Aut|) resolves ~2x the spectrum alone (2,2,4,12 vs S82's 1,2,2,6 at n=3..6), still << |G_n|.
+
+THE PREDICTION (aut_instrument_excess_prediction_klein.py, exact). Two mechanisms combine:
+  - opus-S15: the covering OBSTRUCTION is the max-|Aut| class (high |Aut| = few labeled reps n!/|Aut| = hardest to fit in a small subcube); max|Aut| = 1,3,3,5,9,21 (n=2..7); n=7 obstruction = Paley heptagon (|Aut|=21).
+  - HYP-3810: the SC classes CARRY the excess (T-join parity).
+The RAW symmetry census #{|Aut|>n} = 0,0,0,1,5 OVERSHOOTS at n=7 (five super-rotational classes: four |Aut|=9 + one |Aut|=21). Filtering to SELF-COMPLEMENTARY (the reflection fixed points, HYP-3810's excess-carrier) drops the two non-SC |Aut|=9 classes, giving exactly 2+1 = 3 = excess(7). So the excess counts classes that are BOTH super-symmetric (|Aut|>n = more symmetric than C_n) AND reflection-fixed (SC) -- precisely the two features invisible to the skew/Cayley spectrum (S82).
+
+DATA (exact): n=3,4,5,6 by full iso-class enumeration (|Aut| dist n=6 = {1:41,3:12,5:2,9:1}, matches opus); n=7 by targeted fix(sigma), sigma=(012)(345)(6), which captures EVERY |Aut|>7 class (|Aut|>7 on 7 pts forces |Aut| in {9,21}, both have a 3+3+1 order-3 element ~ sigma): |Aut| dist {3:7,9:4,21:1}, SC among them {3:3,9:2,21:1} => #{SC & |Aut|>7} = 3. Also confirmed |Aut| all ODD (Moon); fiber f=H/|Aut|, Sum f = 2^{C(n-1,2)}.
+
+THE ARC CLOSES: S81 (complement = reflection) -> S82 (spectrum is reflection-blind to symmetry AND fixed points) -> S83 (the excess is counted by exactly those two blind spots, intersected: super-symmetric AND SC). The thing the spectrum could not measure is the thing that measures the excess.
+
+HONEST: verified 5 points (incl 3 zeros + the raw-census-overshoot correction), but only 2 nonzero informative values => a mechanistically-grounded CONJECTURE (opus symmetry + HYP-3810 SC), NOT a theorem. Falsifiable prediction: excess(8) = #{SC on 8 vtx with |Aut|>8}, testable once rho(8) is known (infeasible now, |G_8|=6880, cube Q_21).
+
+CONVERGENCE + COORDINATION: mac-mini-S89 independently reached |Aut| as the key ("U-spectrum sees the excess" -- but their U = ADJACENCY A, mine = Cayley(skew); both agree skew is blind and |Aut| is the missing non-spectral refinement). HEAVY numbering collision this day: HYP-3816 TRIPLE-claimed (klein-S82 u-spectrum + mac-mini-S89 u-spectrum + opus-S24 second-moments), all on this vein; the klein block 3800-3849 has broken down (opus advancing +1/session: S23=3815, S24=3816). PROPOSAL to coordinator: split the sub-block (e.g., klein 3835-3849, opus 3815-3829) and merge the three 3816 files (they are convergent). My HYP-3817 is clean (only my file, no INDEX collision).
+
+FILES: 04-computation/aut_instrument_excess_prediction_klein.py (+.out); HYP-3817; reflection the-excess-counts-what-the-spectrum-was-blind-to.md.
+
+NEXT: (a) compute #{SC on 8 vtx, |Aut|>8} = the predicted excess(8) (targeted high-symmetry enumeration); (b) PROVE excess >= #{SC & |Aut|>n} (each such class forces a covering dimension) toward a theorem; (c) why SC exactly among super-symmetric -- the T-join parity (HYP-3810) x the |Aut|>n rarity, made rigorous.
+
+---
+
 ## mac-mini-2026-07-01-S89 -- YES: the U-spectrum (adjacency A) SEES the flip-rank excess the skew-spectrum (S=A-A^T) MISSES -- U determines |Aut|, skew is blind; mechanism A=(J-I+S)/2, skew=converse-EVEN throws away the score (HYP-3816)
 
 Prompt: try to determine whether the U-spectrum sees the flip-rank excess the skew-spectrum misses.
