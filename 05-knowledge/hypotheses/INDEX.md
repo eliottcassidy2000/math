@@ -12414,8 +12414,8 @@ Closes my assigned residual (kps MSG-238) for THM-527 Part A: the finite-Vmax co
 - **Artifacts:** TBD this session.
 - **Depends on / relates to:** HYP-3958 (cert layer), mac-mini HYP-3860, klein HYP-4003 (owner policy), opus THM-593A, LonelyRunnerMathlib.
 
-## HYP-3960: the (star)-census RUN (kps-assigned critical-path item 3) + the Lean mass-certificate table
-- **Status:** CLAIMED/IN-PROGRESS, kind-pasteur-2026-07-02-S3.
+## HYP-3960: the (star)-census RUN + the Lean mass-certificate table — DELIVERED (queue -2)
+- **Status:** DELIVERED, kind-pasteur-2026-07-02-S3. CENSUS (single-level window-14 slice): k=13 FULL 91/91, k=12 FULL 4732/4732, k=11 FULL 78078/78078 — ZERO failures, every admissible shape carries a one-arc certificate covering its whole V-tail (V* <= 17/40/67); k=10 sampled in-flight. LEAN: LRCCertTable.lean (rowOK decidable + row_tail GENERIC standard-axioms-only + page13 [91 rows] + page12 [4732 rows, 13 chunks] each ONE native_decide theorem + quantified page corollaries). DAG Layer-3 kps census row: [CENSUS] -> [RUN + LEAN k=13+k=12 pages].
 - **Claim:** (a) run the kps residual finite census over the admissible single-level shape slice (P admissible small parts x offset patterns within the window-14 universe, k=10..13): per-shape widest-arc certificate search; PARTITION [single-level certified | needs nesting (cert_two_level) | investigate]; (b) LEAN MASS TABLE: one native_decide theorem checking an entire census page of certificates (List-based checker over the k=13 window-14 patterns), + the quantified tail corollary — converting the DAG's Layer-3 kps census row from [CENSUS] to [LEAN].
 - **Artifacts:** TBD this session.
 - **Depends on / relates to:** HYP-3958/3959 (cert layer), DAG ledger item 3, THM-602 (shape normal form), klein HYP-4004 (L_y decide-table pattern), opus LRCCommensuration.
