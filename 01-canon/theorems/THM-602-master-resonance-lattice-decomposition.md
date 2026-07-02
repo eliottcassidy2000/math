@@ -54,3 +54,41 @@ Every node of the local-covering program is now one of: (i) a proved elementary 
 **Proof.** The overlap is the measure of `x` in the `P`-comb with `Qx − θ` in the `(±r)`-window. The `P`-comb is `P` arcs of length `2r/P` centered at `k/P`; on the arc at `k/P` the fast coordinate `Qx` sweeps an interval of length `Q·(2r/P) = 2rQ/P` starting at phase `kQ/P + const`. Since `gcd(P,Q) = 1`, the starting phases `{kQ/P mod 1 : k}` are the `P` equally-spaced points `{k/P}`. So the total swept multiset is `P` intervals of equal length `2rQ/P` at spacing `1/P` — which tile the circle exactly `2rQ ∈ ℤ` times, with no dependence on where the window sits. Hence the window of length `2r` is covered with total multiplicity-weighted measure `2rQ · 2r / Q`... precisely: the coverage of ANY window of length `2r` by an exact `m`-fold tiling is `m · 2r`, so the overlap is `(2rQ)(2r)/Q = (2r)²`, independent of `θ`. ∎
 
 **Consequences.** (i) The deviation table of THM-602 Part C is supported off the `7 | Q` rows — verifying the S100 observations `(1,7), (2,7), (1,14) → exactly 1/49` and killing the densest pattern family identically. (ii) Per pair, the remaining deviations sit on the primitive pattern's `t`-multiples with `dev(tP₀, tQ₀) ≤ 1/(3t²P₀Q₀)`: the per-pair total is `≤ ζ(2)/(3P₀Q₀)` — convergent, explicit, and finitely supported after the commensurate kills. No infinite process remains in Part C's error accounting. (iii) Lean shape: the lemma is a finite tiling argument (equal spacing + integer total ⟹ exact cover), the same species as the polygon module's coset sums — transcription-ready.
+
+## Addendum (S15, 2026-07-02) — THE COMPLETENESS LEG: exhaustiveness by normal form, not by census
+
+**The owner's observation, made precise.** The censuses certify the families they contain;
+nothing yet proves those families exhaust the covering universe. Splitting the concern:
+
+1. **Cluster-level completeness is FREE.** THM-602(A)'s trichotomy is exhaustive by excluded
+   middle on a DECIDABLE predicate: for a concrete cluster and window, "resolved" is a finite
+   integer check against the 30-pattern list. In Lean the case split is
+   `if resolved then floor else renormalize` — no completeness lemma needed.
+2. **Configuration-level completeness is the real leg** — "every covering 13-set reaches
+   clusters the checker handles" — and it splits: (a) far/unbounded elements: the peel handles
+   them GENERICALLY (proved; no family enumeration involved); (b) bounded cores: this is
+   exactly THM-595's G1 (structured census ≠ exhaustive bounded enumeration).
+3. **THE RESOLUTION — make the checker the census.** Do not prove the structured families
+   exhaust: replace family-certification by NORMAL-FORM certification. Every cluster's
+   resonance lattice row-reduces to a Hermite normal form whose basis heights are ≤ 7; the
+   HNF list is complete BY CONSTRUCTION (a finite algebra fact: HNF exists and is unique —
+   mathlib has the machinery); the fuel checker walks the trichotomy and lands every input
+   in (i) a resolved floor (truncation, uniform in the shape), or (ii) an HNF class with a
+   per-class certified base value, or (iii) the mass-subcritical base. Exhaustiveness of the
+   ENUMERATION is then the exhaustiveness of HNF classification — a normal-form theorem, not
+   an empirical claim. The structured censuses (drops/dilations/randoms) remain as
+   cross-checks, not load-bearing exhaustiveness claims.
+4. **What genuinely remains open after this reframe** (the honest kernel): the per-HNF-class
+   base values must each be certified (finite, engine exists — the min_θ/drift-line rows),
+   and the checker's soundness theorem must be instantiated against the skeleton's `Mreach`
+   (the bridge is `le_csSup` on `Mreach = sSup(minReach '' Icc 0 1)` from a rational witness
+   — a 10-line lemma against `LRCMreachConcrete`'s existing BddAbove infrastructure). Neither
+   is mathematics-open; both are construction. The single mathematically-open sentence of the
+   whole program is now: **"every per-HNF-class drift-line base value is positive"** — a
+   finite list of exact rational computations whose POSITIVITY is the last empirical input,
+   exactly analogous to (and no harder than) klein's six census rows that are already
+   machine-checked.
+
+**Net:** the completeness leg dissolves into (HNF classification = algebra) + (a finite
+positive-rationals list = the last computation). The covering universe is exhausted by
+normal forms, not by families.
