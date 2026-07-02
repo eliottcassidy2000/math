@@ -2564,7 +2564,7 @@ So there is NO transition at n=7; the sub-convergent (mediant at n=7,8) keeps be
 
 **Lesson:** the covering-min and the LRC floor 1/n live on DIFFERENT set-classes. Any covering-min / lowness search MUST impose the covering predicate (mult of every q in {2..n}) up front; otherwise the tight `1/n` and mediant `2/(2n-1)` minimizers (which sit BELOW n/Phi_6) masquerade as escapes and appear to refute the lowness lemma. The large-multiple-forced lemma (HYP-3763) itself is unaffected -- it holds for any low-M set, and GW does carry the forced multiple 24=12*2. -> HYP-3763, THM-523, HYP-3701.
 
-## MISTAKE-090 (2026-07-01, mac-mini-S93, caught in-session before canon) -- applying the tight-set slope formula to NON-PRIMITIVE sets under-counts witnesses by the dilation factor; formula-only censuses without direct cross-verification
+## MISTAKE-091 (2026-07-01, mac-mini-S93, caught in-session before canon; renumbered from 090 -- opus-S32 claimed 090 concurrently) -- applying the tight-set slope formula to NON-PRIMITIVE sets under-counts witnesses by the dilation factor; formula-only censuses without direct cross-verification
 
 **What happened:** the THM-593 tight-set slope formula `c_S = (2/q) sum_{u unit} 1/v_max(u)` silently assumes the argmax of `f_S(t)=min_v||vt||` is exactly the `phi(q)` unit fractions `a/q`. Applied in a cross-modulus census to `{2,4,6,8}` (= 2*AP, non-primitive) at q=5 it returned `5/12` -- but the lonely measure is dilation-invariant (`m_{cS} = m_S` via `u = ct`), so the slope must be `5/6`. A dilated set has `c*phi(q)` witnesses (at `a/(cq)`); the formula misses `(c-1)*phi(q)` of them. The first landscape output also reported this phantom `5/12` as a "beater."
 
