@@ -12,6 +12,19 @@ DELIVERED (04-computation/lean/TournamentH7/TournamentH7/LRCGapSurplusLedger.lea
  - CROSS-VALIDATION: Aledger's values were confirmed by TWO independent Python enumerations before Lean (c-engine + x-engine, S32/S33) -- three independent implementations now agree on all 12 rationals.
 
 HONEST STATUS ("the whole proof in Lean" -- what remains): the analytic bridge (integral = breakpoint sum) is the ONE named un-mechanized node of this branch (generic affine-midpoint lemma + sorting-stability; paper proof in THM-599); the admissible (P,U)-JOINT tables and the k=8..13 pattern-universe censuses are engine-ready but not yet embedded; mac-mini's S_d/cubic-leg nodes and klein's nest chain plug into the same skeleton. hp0cap/hpartA's replacement DAG (HYP-3953 D1-D5) now has D5's finite face machine-checked. LRC(14) NOT fully formalized -- but the ledger branch is now [computable definitions + native_decide table + one named analytic hypothesis], which is the dispatch's requested shape. Files: LRCGapSurplusLedger.lean (+root import); HYP-3957 (+INDEX). No canon overridden.
+## mac-mini-2026-07-01-S101 -- LEAN: DangerousPatterns.lean + BonferroniTruncation.lean BOTH SORRY-FREE -- THM-601(i)'s constructive avoidance and THM-599's truncation engine machine-checked (HYP-3857)
+
+Prompt (owner): formalize the whole LRC 14; be creative in remaining obligations.
+
+TournamentH7.DangerousPatterns (sorry-free): no_double_cover -- if every integer is >= r(P+Q) from P*theta then no x has |Px - a| < r and |Qx - theta - b| < r (the identity Q(Px-a) - P(Qx-theta-b) = P*theta - (Qa - Pb) + triangle inequality); protected_phase_exists (theta = 1/(2P): P*theta = 1/2, distance >= 1/2 >= r(P+Q)); dangerous_of_small_sum (packaged: 2r(P+Q) <= 1 => an empty-overlap phase EXISTS).  THM-601(i)'s dangerous direction is now formal with ZERO analysis -- pure triangle inequality + arithmetic.
+
+TournamentH7.BonferroniTruncation (sorry-free): partial_alternating_choose (sum_{d<=D} (-1)^d C(c,d) = (-1)^D C(c-1,D), induction + Pascal) and odd_truncation_le_uncovered (odd D => the truncated inclusion-exclusion is <= the uncovered indicator pointwise) -- THM-599's combinatorial core, the engine behind kappa_13 = 2052/7^5.
+
+FORMAL CHAIN STATUS: sieve_frac/covering reduction + witness attainment (oracle/codex) + LonelyRunnerMathlib k<=2 (kps) + LRCUnitResidue + PolygonMirskyNewman (S95) + DangerousPatterns + BonferroniTruncation (S101).  Remaining Lean surface: forced-independence arc-counting (finite bookkeeping), exact-minima table (decide), S_d DAG wiring, two finite censuses.
+
+FILES: 2 modules + root imports; HYP-3857.
+
+NEXT: (a) the arc-counting forced-independence module (the last analytic-flavored piece, restated as finite interval bookkeeping per THM-601(iii)); (b) wire anticovering_floor_given_Sd_bounds into LRCFourteenSkeleton as DAG nodes; (c) the exact-minima decide table; (d) kps: PR sequencing -- DangerousPatterns is mathlib-general (interval sweep vs Z).
 
 ## klein-2026-07-01-S93 -- THM-601's ENUMERATION MACHINE-CHECKED: the 1D-HELLY INTEGER RESTATEMENT (measure theory -> bounded integer non-existence; 8100 cases -> 286 gcd-reduced triples by monotonicity; NestDecidable.lean BUILDS SORRY-FREE with native_decide + the Helly lemma) (HYP-4000, klein block 4000+)
 
