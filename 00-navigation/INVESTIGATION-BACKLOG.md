@@ -144,7 +144,12 @@ reframes the open core. THREE actions:
 (c) VERIFY THE LOAD-BEARING CITATION: THM-525 reportedly relies on LRC(12 runners) proven
     (Sungkawichai-Trakulthongchai); the July-2026 web frontier is only 10 runners. Either confirm this 2026
     result or re-ground THM-525 on a proven case (10 runners). If it is unproven, THM-525's reduction is
-    unsupported. -> HYP-3794, THM-523, THM-525, HYP-3750, OPEN-Q-108.
+    unsupported.
+    [RESOLVED mac-mini-S98: the repo's own later web pass records the frontier correctly -- n<=13 PROVEN
+    (Rosenfeld n=8 2025; Trakulthongchai n=9,10 2025; Sungkawichai-Trakulthongchai n=11,12,13, Apr 2026,
+    arXiv:2604.23906; see this file's "Status of LRC" entry + TANGENTS T959/S430 notes). THM-525/THM-398's
+    LRC(<=13) dependency is a cited preprint result, consistently documented; residual risk = preprint
+    (not journal-final) status of 2604.23906 -- flagged, not a hidden sorry.] -> HYP-3794, THM-523, THM-525, HYP-3750, OPEN-Q-108.
 
 **THM-589 / CV(H)^2 even-run follow-ups (klein-2026-06-29-S5).** (a) OEIS SUBMISSION: A_n(2) =
 1,2,8,32,158,928,6350,49752,439670,4327904,46963358 (the labeled-tournament 2nd moment of the

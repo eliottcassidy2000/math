@@ -32,6 +32,22 @@ FILES: 04-computation/exact_cap_ladder_decomposition_klein.py (+.out); HYP-3837/
 NEXT: (a) write the nest lemma's formal proof (mediant criterion + thresholds) as a THM file; (b) the L_y comparison (hp0cap's remaining half, 'consec maximizes') re-run with the closed-form cap arithmetic -- should become a finite rational comparison over THM-529's spread<=30 shapes; (c) the ladder's OTHER radii (the sub-critical envelope rungs); (d) Lean: the nest chain is a telescoping identity -- formalizable next to the polygon file.
 
 ---
+## mac-mini-2026-07-01-S98 -- THM-598: the RESOLVED INTERVAL ANTI-COVERING LEMMA (the hpartA named target): forced pair independence, the PQ<=16 dangerous-pattern list, kappa_7 = 6/49 at the union-bound death, the resolved/frozen renormalization dichotomy; + LRC(<=13) citation audit closed (HYP-3854)
+
+Prompt (owner): work the named target (interval anti-covering) + any task improving LRC(14) proof status.
+
+THM-598 (proved + adversarially verified): free-phase combs (density 2r = 1/7) in a window I.
+ (A) PHASED PAIR LAW: fixed coprime pattern (P,Q): overlap = (2r)^2 + kappa(theta), |kappa| <= 1/(3PQ) => frozen floor (2r)^2 - 1/(3PQ) > 0 iff PQ >= 17.  DANGEROUS PATTERNS = coprime PQ <= 16, a FINITE list.
+ (B) FORCED INDEPENDENCE: pairs resolved in I (all dangerous drifts |Qw-Pw'| L >= 1) have overlap >= (2r)^2 L - explicit errors FOR ALL PHASES.  Adversarial data: resolved pairs 0.0151-0.0178 >= 0.74x independence; (1009,1523) escape EXPLAINED (frozen (2,3), |3*1009-2*1523| = 19, PQ = 6); (997,1601) frozen only at (5,8) (PQ = 40) => forced, observed 0.0178 >= (2r)^2 - 1/120.
+ (C) DICHOTOMY (necessity): frozen (1,1) cluster {3000..3006} TILES (0.9988) -- unconditional anti-covering is FALSE; frozen pairs renormalize to the fixed-offset pattern column (THM-593/594 provable).
+ (D) FLOOR: quadratic Bonferroni + forced overlaps => u/L >= 6(8-j)/49 - eps, POSITIVE THROUGH j = 7 = 1/(2r) (the union-bound death), kappa_7 = 6/49 = 0.1224; adversarial coverage search reached only 0.742 (2x margin).
+ hpartA ASSEMBLY: j<=6 mass | j=7 this floor | frozen = finite renormalization (terminating tower) | j>=8 = cubic Bonferroni + S97 resonance-lattice triple bounds (the one remaining leg, tools named).
+
+AUDIT (proof status): THM-525/THM-398's LRC(<=13) dependency confirmed consistently documented -- Sungkawichai-Trakulthongchai arXiv:2604.23906 (n = 11,12,13), Rosenfeld (8), Trakulthongchai (9,10); the stale backlog concern (line ~137) annotated RESOLVED; residual risk = preprint status only, not a hidden sorry.
+
+FILES: THM-598; lrc_anticover_forced_independence_macmini_S98.py + .out; backlog annotation; HYP-3854.
+
+NEXT: (a) the j>=8 cubic leg: triple-overlap upper bounds from the S97 resonance-lattice formula + resonant-triple renormalization -- the LAST quantitative leg of the hpartA local-covering program; (b) write the frozen-pattern fixed-offset base cases ((1,2),(2,3),... vs the G2 window structure) -- each a THM-593/594-column exercise; (c) integrate THM-598 into the THM-595 assembled proof as the G2/Part-A leg; (d) kappa_7 constant-chasing (explicit eps for Lambda-gapped clusters).
 
 ## mac-mini-2026-07-01-S97 -- THM-597: the COLLAPSE-RATE LAW end-to-end (general argmax formula, verified on the FULL tight locus, machine-checkable); the ERDOS-SELFRIDGE <-> LRC correspondence (offsets = the difficulty axis; hpartA = a <=13-modulus continuous covering problem -> BBMST distortion import; probe: max 86% window coverage at critical mass); the resonance-lattice formula for hp0cap (HYP-3853)
 

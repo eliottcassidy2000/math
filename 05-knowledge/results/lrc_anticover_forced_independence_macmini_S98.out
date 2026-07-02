@@ -1,0 +1,25 @@
+==============================================================================
+(a) FORCED INDEPENDENCE: Diophantine-resolved pair, window L=0.01
+==============================================================================
+  (1009,1523): min height-8 resonance |m w1+m' w2| = 19; independence (2r)^2 = 0.02041; adversarial MIN overlap/L = 0.00000 (NOT forced)
+  (997,1601): min height-8 resonance |m w1+m' w2| = 29; independence (2r)^2 = 0.02041; adversarial MIN overlap/L = 0.01783 (FORCED (>= 0.7x indep))
+  (1013,2311): min height-8 resonance |m w1+m' w2| = 158; independence (2r)^2 = 0.02041; adversarial MIN overlap/L = 0.01507 (FORCED (>= 0.7x indep))
+
+==============================================================================
+(b) NEAR-RESONANT ESCAPE: (1000, 2001) ~ frozen pattern (1,2), L=0.01
+==============================================================================
+  |1*w2 - 2*w1| = 1 (height-2 resonance, drift over L: 0.010 << 1)
+  adversarial MIN overlap/L over 4000 draws = 0.00000 vs independence 0.02041  (ESCAPES (overlap ~ 0))
+
+==============================================================================
+(c) THE j=7 FLOOR: resolved 7-cluster, adversarial coverage search
+==============================================================================
+  speeds [1009, 1523, 1997, 2311, 2749, 3181, 3617]; min pairwise height-8 resonance = 19
+  L=0.01: adversarial MAX coverage (random + ascent) = 0.7270; uncovered >= 0.2730 vs Bonferroni-2 floor 6/49 = 0.1224  (BOUND HOLDS)
+  L=0.005: adversarial MAX coverage (random + ascent) = 0.7422; uncovered >= 0.2578 vs Bonferroni-2 floor 6/49 = 0.1224  (BOUND HOLDS)
+
+==============================================================================
+(d) FROZEN-PATTERN COVER BLOCK: near-equal combs (w..w+6), L small
+==============================================================================
+  speeds [3000, 3001, 3002, 3003, 3004, 3005, 3006], L=0.0005 (pairwise drift <= 0.0030):
+  tiling phases k/7: coverage = 0.9988; best overall = 0.9988 (TILES (~1) -- must renormalize)
