@@ -1,0 +1,43 @@
+##########################################################################
+# LOCALIZED moment LP: does per-arc (Gamma_0-aligned) localization make min m_0 > 0?
+#   grid G=2196000; N_atom=Phi_6(14)=183
+##########################################################################
+
+S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]  r=1/14   ACTUAL |L| = 0.02390
+
+       Q   aligned?  union bound   potential  #under-cov
+       1    Gamma_0      0.00000     0.00000           0
+       2    generic      0.00000     0.00000           0
+       3    Gamma_0      0.00000     0.00000           0
+       6    generic      0.00000     0.00000           0
+      61    Gamma_0      0.00904     0.02191           4
+     183    Gamma_0      0.02312     0.02390          14 <-atom
+     366    Gamma_0      0.02312     0.02390          22
+     549    Gamma_0      0.02312     0.02390          26
+     366    Gamma_0      0.02312     0.02390          22
+    1098    Gamma_0      0.02364     0.02390          42
+   18300    Gamma_0      0.02390     0.02390         464
+  183000    Gamma_0      0.02390     0.02390        4392
+
+  => Q=1 (GLOBAL) gives 0 (matches S91 HYP-3822); Q>=? goes POSITIVE; ->|L| as Q->inf.
+
+##########################################################################
+# FLOOR: over many LRC14 speed sets, the localized bound (Q=183, atom-aligned).
+#   min over sets of the localized bound = a proxy floor (holds for all sampled sets).
+##########################################################################
+
+  grid=732000, r=1/14, Q=183 (atom-aligned)
+                   set       |L|  loc.union(Q=183)   loc.pot  #under
+               {1..13}   0.00000           0.00000   0.00000       0
+           {1..12,182}   0.02389           0.02311   0.02389      14
+       {1..12,182} (b)   0.03148           0.02316   0.03148      14
+      AP step2 {2..26}   0.00000           0.00000   0.00000       0
+      AP step3 {3..39}   0.00000           0.00000   0.00000       0
+                 rand0   0.14634           0.00573   0.04366       4
+                 rand1   0.12644           0.00909   0.06604       8
+                 rand2   0.12963           0.01469   0.07753      20
+                 rand3   0.15559           0.00000   0.03030       0
+                 rand4   0.12383           0.01440   0.06312       8
+
+  min localized-potential bound over sampled sets (Q=183) = 0.00000
+  (kps floor target: inf meas >= 1/36 = 0.02778; compare.)
