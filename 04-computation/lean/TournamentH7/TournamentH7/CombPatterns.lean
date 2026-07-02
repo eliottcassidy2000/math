@@ -125,4 +125,66 @@ theorem pattern_overlap_zero (P Q : ℕ) (r : ℚ) (hP : 0 < P) (hQ : 0 < Q)
     length (inter (comb P r 0) (comb Q r (1 / (2 * P)))) = 0 :=
   length_eq_zero_of_no_mem (no_mem_inter_comb P Q r hP hQ hr hsum)
 
+/-! ### The forced direction (THM-605(i) converse), arithmetic level.
+
+For `1 < 2r(P+Q)`, coprime `(P,Q)`: EVERY phase admits a double-covered point.
+Construction (S11 plan): `s = Pθ + z ∈ (−r(P+Q), r(P+Q))` by ceiling choice;
+the case-free split `u = s/(P+Q)`, `v = −u` solves `Qu − Pv = s` with
+`|u|,|v| < r` strictly; Bézout teeth `a = −z·d`, `b = z·c` make the two comb
+residues exactly `u` and `v`. -/
+
+theorem exists_double_cover (P Q : ℕ) (r θ : ℚ) (hP : 0 < P) (hQ : 0 < Q)
+    (hcop : Nat.Coprime P Q) (hr : 0 < r) (hforce : 1 < 2 * r * ((P : ℚ) + Q)) :
+    ∃ x : ℚ, ∃ a b : ℤ,
+      -r ≤ (P : ℚ) * x - a ∧ (P : ℚ) * x - a < r ∧
+      -r ≤ (Q : ℚ) * x - θ - b ∧ (Q : ℚ) * x - θ - b < r := by
+  have hP' : (0 : ℚ) < (P : ℚ) := by exact_mod_cast hP
+  have hPne : (P : ℚ) ≠ 0 := ne_of_gt hP'
+  have hPQ : (0 : ℚ) < (P : ℚ) + Q := by
+    have : (0 : ℚ) < (Q : ℚ) := by exact_mod_cast hQ
+    linarith
+  obtain ⟨z, hz1, hz2⟩ : ∃ z : ℤ,
+      -(r * ((P : ℚ) + Q)) < (P : ℚ) * θ + z ∧ (P : ℚ) * θ + z < r * ((P : ℚ) + Q) := by
+    refine ⟨⌊-(r * ((P : ℚ) + Q)) - (P : ℚ) * θ⌋ + 1, ?_, ?_⟩
+    · have h := Int.lt_floor_add_one (-(r * ((P : ℚ) + Q)) - (P : ℚ) * θ)
+      push_cast
+      linarith
+    · have h := Int.floor_le (-(r * ((P : ℚ) + Q)) - (P : ℚ) * θ)
+      push_cast
+      linarith
+  set s : ℚ := (P : ℚ) * θ + z with hs
+  set u : ℚ := s / ((P : ℚ) + Q) with hu
+  have hu1 : -r < u := by
+    rw [hu, lt_div_iff₀ hPQ]
+    linarith
+  have hu2 : u < r := by
+    rw [hu, div_lt_iff₀ hPQ]
+    linarith
+  have huv : (Q : ℚ) * u - (P : ℚ) * (-u) = s := by
+    rw [hu]; field_simp; ring
+  obtain ⟨c, d, hcd⟩ : ∃ c d : ℤ, (P : ℤ) * c + (Q : ℤ) * d = 1 := by
+    refine ⟨Nat.gcdA P Q, Nat.gcdB P Q, ?_⟩
+    have h1 := Nat.gcd_eq_gcd_ab P Q
+    have h2 : Nat.gcd P Q = 1 := hcop
+    rw [h2] at h1
+    push_cast at h1 ⊢
+    linarith
+  have hcdQ : (P : ℚ) * c + (Q : ℚ) * d = 1 := by exact_mod_cast hcd
+  have hba : (P : ℚ) * ((z : ℚ) * c) - (Q : ℚ) * (-(z : ℚ) * d) = z := by
+    linear_combination (z : ℚ) * hcdQ
+  set x : ℚ := ((-(z : ℚ) * d) + u) / P with hxdef
+  have hx1 : (P : ℚ) * x - (-(z : ℚ) * d) = u := by
+    rw [hxdef]; field_simp; ring
+  have hmul : (Q : ℚ) * ((-(z : ℚ) * d) + u) = (θ + ((z : ℚ) * c) + (-u)) * P := by
+    linear_combination huv + hs - hba
+  have hx2 : (Q : ℚ) * x - θ - ((z : ℚ) * c) = -u := by
+    rw [hxdef]
+    field_simp
+    linear_combination hmul
+  refine ⟨x, -z * d, z * c, ?_, ?_, ?_, ?_⟩
+  · rw [show ((-z * d : ℤ) : ℚ) = -(z : ℚ) * d by push_cast; ring, hx1]; linarith
+  · rw [show ((-z * d : ℤ) : ℚ) = -(z : ℚ) * d by push_cast; ring, hx1]; linarith
+  · rw [show ((z * c : ℤ) : ℚ) = (z : ℚ) * c by push_cast; ring, hx2]; linarith
+  · rw [show ((z * c : ℤ) : ℚ) = (z : ℚ) * c by push_cast; ring, hx2]; linarith
+
 end TournamentH7.CombPatterns

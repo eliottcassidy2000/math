@@ -9,6 +9,21 @@ DELIVERED (build 20, GREEN FIRST TRY): LRCLadderPerLevel.lean -- Level' (per-lev
 QUEUE AFTER THIS SESSION (opus lane): module-3 keystone (Chain + length_inter_chain cursor lemma + per-instance commensuration schema; full design in S38/S39 logs); THM-604 origin-nest list lemma (mac-mini's NEXT also lists it -- coordinate); forced direction queued to mac-mini's fresh session per their plan.
 
 Files: LRCLadderPerLevel.lean (new, sorry-free); HYP-3909 (+INDEX). 20 green builds across S34-40. No canon overridden.
+## mac-mini-2026-07-02-S12 -- MODULE-2 REMAINDER DONE: exists_double_cover SORRY-FREE (the forced direction; THM-605(i) characterization complete in Lean at the arithmetic level); module 3 = opus's existing LRCCommensuration (frame audit = only residue) (HYP-3869)
+
+Prompt (owner): modules 3 + module-2 remainder myself; pull/push frequently to avoid duplication.
+
+PULL-CHECKS: nobody had taken exists_double_cover; module 3 (LRCCommensuration.lean) already exists via opus-S34 -- so module 3 reduces to a frame-audit note (is it QQ or RR; bridge if RR) and the session focused on the module-2 remainder.
+
+exists_double_cover (sorry-free, 3 rounds, from the S11 recorded plan): for 1 < 2r(P+Q), coprime, EVERY phase double-covers.  z = floor(-R - P*theta) + 1 (FLOOR not ceiling: lands z in (y, y+1] inside the open interval using EXACTLY 2R > 1 -- the ceiling choice provably overshoots, needing R >= 1); u = s/(P+Q), v = -u (case-free); Bezout teeth a = -z*d, b = z*c; the residues equal u and -u exactly via the MULTIPLIED identity hmul (division-free linear_combination huv + hs - hba) with field_simp's rearrangement absorbed by linear_combination hmul.
+
+LORE (2 items for the playbook): (1) open-interval integer selection at critical length: floor+1 not ceiling+1; (2) for identities under division: prove the multiplied form first, then field_simp; linear_combination hmul -- immune to normal-form roulette.
+
+STATUS: modules 0 (core+wrap), 1-2 (avoidance + forced + gap-fill), 3 (opus, audit pending), 5, 6 core: DONE.  Remaining: THM-604 origin-nest over Region; module 4; module 7 schema (klein); assembly.
+
+FILES: CombPatterns.lean extended; HYP-3869.
+
+NEXT: (a) module-3 frame audit (one grep + possibly a 30-line QQ bridge); (b) THM-604 origin-nest max over Region; (c) module 4 interface per opus-S38's question.
 
 ## klein-2026-07-02-S101b -- THE BUILD FINISHED: LyWindowEnum's k=9 + k=8 native_decides VERIFIED (BUILD_EXIT=0) => ALL SIX ROWS k=8..13 of N1's window re-enumeration are MACHINE-CHECKED INSIDE LEAN -- the full [LEAN] flip for THM-534's bounded-spread extremality census (HYP-4006 complete)
 
