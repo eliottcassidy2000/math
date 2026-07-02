@@ -285,4 +285,112 @@ theorem conjecture_two : Conjecture 2 := by
 
 end TwoRunners
 
+section UnitResidue
+
+/-!
+### The unit-residue improvement lemma (project THM-593 Part A)
+
+If no speed in `S` is divisible by `q` and the residues `v * a % q` avoid `1`, then the
+loneliness bound `1/q` can be strictly improved, by an explicit rational amount at an explicit
+rational time.  Contrapositive: a `q`-tight set without multiples of `q` must represent every
+unit residue and its negative (apply the lemma at `a` and at `q - a`) — the structural fact
+behind the classification of tight speed sets.
+
+The witness is fully constructive: with `V` a bound on the speeds and `n = q * (V + 1)`, the
+time `(a*(V+1) - 1) / n` is `(1/q + 1/n)`-lonely.  The proof is pure modular arithmetic: the
+runner of speed `v` with residue `r = v*a % q ∈ {2, …, q-1}` sits at circle-position
+`(r*(V+1) - v) / n`, and `min (r*(V+1) - v, n - (r*(V+1) - v)) ≥ V + 2` uniformly in `r`.
+-/
+
+/-- **The unit-residue improvement lemma** (project THM-593 Part A, constructive form).
+Let `V` bound the speeds in `S`.  If every `v ∈ S` has `v * a % q ∉ {0, 1}`, then the explicit
+rational time `(a*(V+1) - 1) / (q*(V+1))` is `(1/q + 1/(q*(V+1)))`-lonely for `S`. -/
+theorem isLonelyAt_of_unit_residue_missed (S : Finset ℕ) {q a V : ℕ}
+    (hq : 0 < q) (ha : 0 < a) (hV : ∀ v ∈ S, v ≤ V)
+    (hnd : ∀ v ∈ S, v * a % q ≠ 0) (hmiss : ∀ v ∈ S, v * a % q ≠ 1) :
+    IsLonelyAt S (1 / q + 1 / (q * (V + 1)))
+      (((a * (V + 1) - 1 : ℕ) : ℝ) / ((q * (V + 1) : ℕ) : ℝ)) := by
+  intro v hv
+  have hv1 : 1 ≤ v := by
+    rcases Nat.eq_zero_or_pos v with h0 | h
+    · exact absurd (by simp [h0]) (hnd v (by rwa [h0] at hv ⊢))
+    · exact h
+  have hvV : v ≤ V := hV v hv
+  set w : ℕ := v * a with hw
+  set r : ℕ := w % q with hr
+  set k : ℕ := w / q with hk
+  set n : ℕ := q * (V + 1) with hn
+  have hr2 : 2 ≤ r := by
+    have h0 : r ≠ 0 := by rw [hr, hw]; exact hnd v hv
+    have h1 : r ≠ 1 := by rw [hr, hw]; exact hmiss v hv
+    omega
+  have hrq : r < q := Nat.mod_lt _ hq
+  have hwqk : q * k + r = w := by rw [hk, hr]; exact Nat.div_add_mod w q
+  -- the numerator `A` of the witness time, additively
+  have hA1 : 1 ≤ a * (V + 1) := Nat.one_le_iff_ne_zero.mpr (by positivity)
+  set A : ℕ := a * (V + 1) - 1 with hA
+  have hA' : A + 1 = a * (V + 1) := by omega
+  -- product bookkeeping, all additive
+  have hprod : v * A + v = w * (V + 1) := by
+    calc v * A + v = v * (A + 1) := by ring
+    _ = v * (a * (V + 1)) := by rw [hA']
+    _ = w * (V + 1) := by rw [hw]; ring
+  have hsplit : w * (V + 1) = n * k + r * (V + 1) := by
+    calc w * (V + 1) = (q * k + r) * (V + 1) := by rw [hwqk]
+    _ = n * k + r * (V + 1) := by rw [hn]; ring
+  have hrV_ge : 2 * (V + 1) ≤ r * (V + 1) := Nat.mul_le_mul_right _ hr2
+  have hrV_lt : r * (V + 1) + (V + 1) ≤ n := by
+    have h1 : (r + 1) * (V + 1) ≤ q * (V + 1) := Nat.mul_le_mul_right _ (by omega)
+    have h2 : (r + 1) * (V + 1) = r * (V + 1) + (V + 1) := by ring
+    omega
+  -- the exact circle position: `(v * A) % n = r*(V+1) - v`, i.e. `s` with `s + v = r*(V+1)`
+  have hvle : v ≤ r * (V + 1) := by omega
+  set s : ℕ := r * (V + 1) - v with hs
+  have hs' : s + v = r * (V + 1) := by omega
+  have hvA : v * A = n * k + s := by omega
+  have hslt : s < n := by omega
+  have hmod : (v * A) % n = s := by
+    rw [hvA, Nat.mul_comm n k, Nat.add_comm, Nat.add_mul_mod_self_right,
+      Nat.mod_eq_of_lt hslt]
+  -- the uniform gap: both `s` and `n - s` are at least `V + 2`
+  have hgap : V + 2 ≤ min s (n - s) := by omega
+  -- assemble
+  have hncast : (0 : ℝ) < ((n : ℕ) : ℝ) := by
+    have : 0 < n := by positivity
+    exact_mod_cast this
+  have hcast : (v : ℝ) * (((A : ℕ) : ℝ) / ((n : ℕ) : ℝ)) = (((v * A : ℕ) : ℝ)) / ((n : ℕ) : ℝ) := by
+    push_cast; ring
+  rw [hcast, norm_natCast_div, hmod]
+  have hmin : ((V + 2 : ℕ) : ℝ) ≤ ((min s (n - s) : ℕ) : ℝ) := by exact_mod_cast hgap
+  have htarget : 1 / (q : ℝ) + 1 / ((q : ℝ) * ((V : ℝ) + 1)) = ((V + 2 : ℕ) : ℝ) / ((n : ℕ) : ℝ) := by
+    have hq' : ((q : ℕ) : ℝ) ≠ 0 := Nat.cast_ne_zero.mpr hq.ne'
+    have hV1 : ((V : ℝ) + 1) ≠ 0 := by positivity
+    rw [hn]; push_cast; field_simp; ring
+  rw [htarget]
+  gcongr
+
+/-- **The unit-residue lemma** (project THM-593 Part A, contrapositive form): if `S` admits no
+`(1/q + ε)`-lonely time for any `ε > 0` ("`q`-tight from above") and no speed in `S` is
+divisible by `q`, then for every `a` coprime to `q` some `v ∈ S` has `v * a ≡ 1 (mod q)`.
+Applying this at `a` and at `q - a` shows every unit residue *and its negative* is represented
+in `S mod q` — the structural fact behind the classification of tight speed sets. -/
+theorem exists_residue_one_of_tight (S : Finset ℕ) {q : ℕ} (hq : 0 < q)
+    (hnd : ∀ v ∈ S, ¬ q ∣ v)
+    (htight : ∀ ε : ℝ, 0 < ε → ¬ ∃ t, IsLonelyAt S (1 / q + ε) t)
+    {a : ℕ} (ha : 0 < a) (hco : Nat.Coprime a q) :
+    ∃ v ∈ S, v * a % q = 1 := by
+  by_contra hmiss
+  push_neg at hmiss
+  set V : ℕ := S.sup id with hVdef
+  have hV : ∀ v ∈ S, v ≤ V := fun v hv => Finset.le_sup (f := id) hv
+  have hnd' : ∀ v ∈ S, v * a % q ≠ 0 := by
+    intro v hv h0
+    exact hnd v hv (hco.symm.dvd_of_dvd_mul_right (Nat.dvd_of_mod_eq_zero h0))
+  have hL := isLonelyAt_of_unit_residue_missed S hq ha hV hnd' hmiss
+  have hq' : (0 : ℝ) < (q : ℝ) := by exact_mod_cast hq
+  have hε : (0 : ℝ) < 1 / ((q : ℝ) * ((V : ℝ) + 1)) := by positivity
+  exact htight _ hε ⟨_, hL⟩
+
+end UnitResidue
+
 end LonelyRunner
