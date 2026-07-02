@@ -25,6 +25,17 @@ DELIVERED (LRCWitnessCert.lean extension; FIRST-BUILD CLEAN; axioms [propext, Cl
 INSIGHT (the "better way" the dispatch asked for): the ladder makes the CERTIFICATE SCHEMA closed under depth -- a multi-cluster pack row = (P, [(offs_l, c_l)], lo, hi, mu) + the SepChain thresholds; V's remain free coordinates (boxes/tails per level). Combined with the shape-space principle (S5) the ENTIRE covering case reduces to: finitely many pack rows (THM-602's shape enumeration) x [cert_ladder]. The remaining Lean surface on my lane: the pack-ingestion checker for Level-lists (a CertRow generalization -- mechanical, LRCCertTable pattern) and the fuel-indexed checkCluster wrapper (now a thin layer over cert_ladder + SepChain decide).
 
 HONEST: cert_ladder needs its consumers (multi-cluster pack rows -- generator extension is mechanical; opus's depth-3 data is ready-made); the below-V* windows and THM-602's shape enumeration remain the open DAG surface (mac-mini's lane); LRC(14) NOT yet assembled. Files: LRCWitnessCert.lean (+~150 lines), full project lake green (1814 jobs). No canon overridden.
+## mac-mini-2026-07-02-S10 -- MODULES 1-2 CORE SHIPPED: CombPatterns.lean SORRY-FREE (mem_comb; length_eq_zero_of_no_mem gap-fill; pattern_overlap_zero = THM-605(i) avoidance over Region, all-QQ) -- with the HALF-OPEN ORIENTATION TRICK making the QQ port SHARPER than the RR original (HYP-3867)
+
+Prompt (owner): modules 1-2 collaboratively; pull/push frequently; integrate and extend ideas.
+
+Built on kps's unified module-0 (pulled their canonical Region/mem_inter/comb API first).  CombPatterns.lean (sorry-free, 2 rounds): (1) length_eq_zero_of_no_mem -- the empty-region bridge module 0 lacked (uninhabited => all intervals degenerate => length 0, by list induction); (2) mem_comb -- tooth characterization k + phi - r <= v x < k + phi + r via div_le_iff0/lt_div_iff0; (3) no_mem_inter_comb + pattern_overlap_zero -- THM-605(i)'s avoidance at the Region level: theta = 1/(2P) kills the pattern overlap when 2r(P+Q) <= 1.
+
+THE IDEA EXTENDED (the session's insight): the HALF-OPEN [a,b) convention makes the QQ port SHARPER than the S101 RR proof -- under the resonance combination Q(Px-a) - P(Qx-theta-b) the two half-open orientations OPPOSE, so the value lies STRICTLY inside (-r(P+Q), r(P+Q)) with no strictness hypotheses, and the boundary case P+Q = 7 (r(P+Q) = 1/2 exactly) is covered for free.  Integrality tail: the combination is 1/2 + integer in (-1/2, 1/2) => integer in (-1, 0) => omega.
+
+FILES: CombPatterns.lean + root import; HYP-3867.
+
+NEXT: module 2's forced direction (P+Q > floor(1/2r) => every phase overlaps -- the sweep count over Region); then THM-604's origin-nest max as a Region lemma; kps module 6, klein module 7 per the playbook.
 
 ## opus-2026-07-02-S37 -- THM-607: THE CERTIFICATE-BOX THEOREM (study session per owner directive): the exact V-region of fixed ladder data, the region/arithmetic factorization with Module-0, sharp thresholds, mesh tiling; 400-tuple exact verification (HYP-3906)
 
