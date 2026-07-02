@@ -1,0 +1,79 @@
+==============================================================================
+(1)+(2)+(3): piecewise linearity, slope formula, convexity criterion
+==============================================================================
+
+--- AP {1..13}: piecewise structure on (0, 1/14] ---
+S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; #grid breakpoint candidates = 13
+slope formula -sum(1/vL+1/vR) matches cell slope in ALL cells: True
+kinks: convex=11, CONCAVE=0, flat=1
+overtaking predicted below 1/14: 0 pair(s) []
+=> convex on (0,1/14) predicted: True; observed: True
+
+--- deep well {1..12,182}: piecewise structure on (0, 1/14] ---
+S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]; #grid breakpoint candidates = 323
+slope formula -sum(1/vL+1/vR) matches cell slope in ALL cells: True
+kinks: convex=77, CONCAVE=64, flat=181
+concave kinks (r, slope_before, slope_after):
+   r=1/181 = 0.005525   -13.3189 -> -15.3079
+   r=1/179 = 0.005587   -15.3079 -> -15.9636
+   r=1/177 = 0.005650   -15.9636 -> -16.3526
+   r=1/173 = 0.005780   -16.3526 -> -16.5638
+   r=1/171 = 0.005848   -16.5638 -> -16.7347
+   r=2/181 = 0.011050   -9.7434 -> -11.7325
+   r=1/90 = 0.011111   -11.7325 -> -12.7215
+   r=2/179 = 0.011173   -12.7215 -> -13.3771
+overtaking predicted below 1/14: 12 pair(s) [(1, 182, '1/181'), (2, 182, '1/90'), (3, 182, '1/179'), (4, 182, '1/89'), (5, 182, '1/177'), (6, 182, '1/88')]
+=> convex on (0,1/14) predicted: False; observed: False
+
+--- spread {1..12,40}: piecewise structure on (0, 1/14] ---
+S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 40]; #grid breakpoint candidates = 59
+slope formula -sum(1/vL+1/vR) matches cell slope in ALL cells: True
+kinks: convex=17, CONCAVE=8, flat=33
+concave kinks (r, slope_before, slope_after):
+   r=1/39 = 0.025641   -12.5260 -> -14.4760
+   r=1/37 = 0.027027   -14.4760 -> -15.0927
+   r=1/33 = 0.030303   -15.0927 -> -15.3284
+   r=1/31 = 0.032258   -15.3284 -> -15.5006
+   r=1/29 = 0.034483   -15.5006 -> -15.6325
+   r=2/39 = 0.051282   -9.8624 -> -11.8124
+   r=2/37 = 0.054054   -11.4560 -> -12.0727
+   r=2/33 = 0.060606   -9.8487 -> -10.0844
+overtaking predicted below 1/14: 7 pair(s) [(1, 40, '1/39'), (2, 40, '1/19'), (3, 40, '1/37'), (6, 40, '1/17'), (7, 40, '1/33'), (9, 40, '1/31')]
+=> convex on (0,1/14) predicted: False; observed: False
+
+==============================================================================
+(4): AP closed form  C_AP(N) = (2/N) sum_{a unit} 1/a
+==============================================================================
+N=14: predicted C_AP=1666/6435 = 0.258897; measured c=1666/6435=0.258897 (2nd pt 0.258897); last bp=1/15
+N=8: predicted C_AP=44/105 = 0.419048; measured c=44/105=0.419048 (2nd pt 0.419048); last bp=1/9
+N=6: predicted C_AP=2/5 = 0.400000; measured c=2/5=0.400000 (2nd pt 0.400000); last bp=1/7
+AP closed form EXACT at N=6,8,14  [assert passed]
+
+==============================================================================
+(5): unit-residue lemma sanity + (6): slope of known tight sets
+==============================================================================
+AP{1..5} q=6: TIGHT M=1/6; slope c=2/5=0.400000 vs C_AP=0.400000 (RIGID); #witnesses=2; residues=[1, 2, 3, 4, 5]; all units present: True
+cross {1,3,4,5,9} q=6: TIGHT M=1/6; slope c=2/5=0.400000 vs C_AP=0.400000 (RIGID); #witnesses=2; residues=[1, 3, 4, 5]; all units present: True
+AP{1..7} q=8: TIGHT M=1/8; slope c=44/105=0.419048 vs C_AP=0.419048 (RIGID); #witnesses=4; residues=[1, 2, 3, 4, 5, 6, 7]; all units present: True
+GW {1,2,3,4,5,7,12} q=8: TIGHT M=1/8; slope c=44/105=0.419048 vs C_AP=0.419048 (RIGID); #witnesses=4; residues=[1, 2, 3, 4, 5, 7]; all units present: True
+cross {1,4,5,6,7,11,13} q=8: TIGHT M=1/8; slope c=328/1001=0.327672 vs C_AP=0.419048 (BEATS AP); #witnesses=4; residues=[1, 3, 4, 5, 6, 7]; all units present: True
+
+==============================================================================
+(6): ENUMERATE dup+drop tight 13-sets mod 14 and find TRUE inf slope at N=14
+==============================================================================
+C_AP(14) = 1666/6435 = 0.258897
+tight dup+drop sets found: 1
+  drop 12(nonunit), dup 10(nonunit) via 24: slope=1666/6435=0.258897  (=AP)
+      S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+
+TRUE inf slope over (AP + dup+drop tight locus) at N=14: 1666/6435 = 0.258897
+tight sets dropping a UNIT residue: 0 (lemma predicts 0)
+
+==============================================================================
+(bonus) tangent-ladder demo on the deep well: certify m>0 up to 1/14
+==============================================================================
+r0=1/28=0.03571: m=0.43216, slope=-15.8995, tangent zero at r=0.06290
+r0=1/20=0.05000: m=0.23160, slope=-13.7218, tangent zero at r=0.06688
+r0=1/16=0.06250: m=0.09261, slope=-9.1364, tangent zero at r=0.07264  >= 1/14 ✓
+r0=13/183=0.07104: m=0.02559, slope=-4.3493, tangent zero at r=0.07692  >= 1/14 ✓
+r0=243/3500=0.06943: m=0.03644, slope=-7.4489, tangent zero at r=0.07432  >= 1/14 ✓
