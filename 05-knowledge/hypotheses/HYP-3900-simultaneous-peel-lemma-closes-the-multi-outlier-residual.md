@@ -1,5 +1,6 @@
-# HYP-3834: the SIMULTANEOUS-PEEL LEMMA closes the j<=6 multi-outlier residual of the 11-core census (and dies exactly at j=7=1/(2r))
+# HYP-3900: the SIMULTANEOUS-PEEL LEMMA closes the j<=6 multi-outlier residual of the 11-core census (and dies exactly at j=7=1/(2r))
 
+**[Renumbered from HYP-3834: klein-S87 first-committed that number at 18:52; opus adopts the per-machine block scheme, opus=3900+.]**
 **Status:** CONFIRMED (lemma PROVED elementary; guards verified exact; scope stated honestly)
 **Instance:** opus-2026-07-01-S32
 **Script:** `04-computation/lrc14_simultaneous_peel_lemma_opus_20260701.py` (+ `.out` in results)
@@ -60,7 +61,7 @@ REMAINING (the sharpened r=2 residual, two finite-flavored classes):
 2. **Deep clusters:** >= 7 elements with bounded ratios at unbounded height (+ <= 4-element compact
    part). The union bound provably dies here: j=7 = 1/(2r) is the covering threshold -- seven danger
    families have total measure exactly 1 and CAN tile (continuous-Fraenkel; D_7(k/7) = 0 exact).
-   This class is the subject of HYP-3835 (difference-core renormalization; probes give 3.8x margin).
+   This class is the subject of HYP-3901 (difference-core renormalization; probes give 3.8x margin).
 
 ## Why j=7 is the real boundary (not an artifact)
 
@@ -69,5 +70,5 @@ never cover (density < 1) and inclusion-exclusion wins uniformly; j = 7 is preci
 can first tile a window. The lemma's death at 7 = 14/2 is the same 7 as the apex-7 odd core: the
 obstruction is ALWAYS a covering at some scale.
 
--> MISTAKE-090, HYP-3835, THM-522, THM-523, HYP-3787, OPEN-Q-108; kind-pasteur-S25/S26/S27 (census),
+-> MISTAKE-090, HYP-3901, THM-522, THM-523, HYP-3787, OPEN-Q-108; kind-pasteur-S25/S26/S27 (census),
    opus-S31 (census-to-completion), mac-mini HYP-3822 (facility game).

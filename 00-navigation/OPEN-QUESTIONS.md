@@ -1,13 +1,13 @@
 # Open Questions
 
-**OPEN-Q-108 HYP-3834/3835 the r=2 residual after the simultaneous peel (opus-2026-07-01-S32):** The
+**OPEN-Q-108 HYP-3900/3835 the r=2 residual after the simultaneous peel (opus-2026-07-01-S32):** The
 multi-outlier tail of the 11-core census is CLOSED for any j<=6 far elements by the simultaneous-peel
 lemma (PROVED: meas(L_C) >= (1-j/7)meas(L_low) - (2c_low/7)sum 1/w; scale-free error 22j/(7Lambda) at a
 gap cut; guard table all positive, min margin 0.0130; MISTAKE-090 retires the false uniform-arc-count
 requirement). The union bound dies EXACTLY at j=7=1/(2r) (each danger has meas 1/7 => seven can tile:
 the covering threshold = apex-7). Sharpened remaining residual: (1) bounded middle band (gap-free,
 max in (19, Lambda^10]) -- finite, extend the dense census; (2) deep clusters (>=7 elts, bounded ratios,
-height -> inf) -- renormalize to the DIFFERENCE CORE one scale down (HYP-3835): two-scale factorization
+height -> inf) -- renormalize to the DIFFERENCE CORE one scale down (HYP-3901): two-scale factorization
 verified to 3 decimals, the AP is the FIXED POINT of the difference flow (differences of an AP = an AP),
 worst 7-pattern = consecutive (confirmed vs 5 alternatives), D_7 vanishes exactly at continuous-Fraenkel
 tiling times t=k/7, boundary minimax probe (~7500 configs) SURVIVED at 1.97x pentagon. The tower loses
@@ -15,7 +15,7 @@ tiling times t=k/7, boundary minimax probe (~7500 configs) SURVIVED at 1.97x pen
 O(1/N) rate meas -> Int_{L_low} D uniform over bounded-ratio patterns (= HYP-3787 in renormalized
 coordinates); (b) positive floor for Int_{L_low} D_pattern (induction on the tower; needs the Fraenkel-
 side rigidity of tiling times); (c) is the binding case ALWAYS height-1 (the census), i.e. does the
-scale flow contract toward the fixed point? -> HYP-3834, HYP-3835, MISTAKE-090, THM-522/523, HYP-3787.
+scale flow contract toward the fixed point? -> HYP-3900, HYP-3901, MISTAKE-090, THM-522/523, HYP-3787.
 **OPEN-Q-108 THM-592/THM-593/HYP-3840 radius-derivative addendum (mac-mini-2026-07-01-S93):**
 m_S(r) = the SURVIVAL FUNCTION of f_S(t)=min_v||vt||; piecewise linear on the Farey grid d/(v±w); slope
 = co-area density -Σ_components(1/v_L+1/v_R); merges convex, overtaking resonances (r=d/(w-v), first at

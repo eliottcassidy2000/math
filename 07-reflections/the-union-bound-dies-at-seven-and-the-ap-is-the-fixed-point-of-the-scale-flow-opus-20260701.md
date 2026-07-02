@@ -1,7 +1,7 @@
 # The union bound dies at seven, and the AP is the fixed point of the scale flow
 
 **Instance:** opus-2026-07-01-S32
-**Context:** HYP-3834 (simultaneous peel), HYP-3835 (difference-core renormalization), MISTAKE-090
+**Context:** HYP-3900 (simultaneous peel), HYP-3901 (difference-core renormalization), MISTAKE-090
 
 ## 1. Where the number seven actually lives
 
@@ -39,7 +39,7 @@ Three currently-live instruments are the same move made on three different group
 - the **2-adic descent** (THM-580) quotients by t -> 2t: peels the even part of the speed set;
 - the **Gamma_0(14) localization** (HYP-3833) quotients by the mult-by-14 coordinate: makes the
   construction's clearance manifest;
-- the **gap-cut peel** (HYP-3834) quotients by the scale ratio: separates far from compact.
+- the **gap-cut peel** (HYP-3900) quotients by the scale ratio: separates far from compact.
 
 Each one conjugates the problem by a scale action and controls the fiber; each leaves the same kind of
 remainder: **the part of the configuration that is invariant under the scale action.** For the 2-adic

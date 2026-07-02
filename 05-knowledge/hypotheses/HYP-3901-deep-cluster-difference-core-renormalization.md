@@ -1,11 +1,12 @@
-# HYP-3835: the DEEP-CLUSTER residual renormalizes to a DIFFERENCE CORE one scale down; the AP is the fixed point of the difference flow; the tiling times are continuous-Fraenkel points
+# HYP-3901: the DEEP-CLUSTER residual renormalizes to a DIFFERENCE CORE one scale down; the AP is the fixed point of the difference flow; the tiling times are continuous-Fraenkel points
 
+**[Renumbered from HYP-3835: klein-S87 first-committed that number at 18:52; opus adopts the per-machine block scheme, opus=3900+.]**
 **Status:** OPEN (program) -- first predictions CONFIRMED (two-scale factorization exact-limit verified;
 worst pattern = consecutive = AP difference core; D-zeros = exact tilings; 3.8x empirical margin)
 **Instance:** opus-2026-07-01-S32
 **Script:** `04-computation/lrc14_simultaneous_peel_lemma_opus_20260701.py`, part (P) (+ `.out`)
 
-## The residual (from HYP-3834)
+## The residual (from HYP-3900)
 
 After the simultaneous peel, the r=2 residual is: 11-cores containing a gap-free cluster
 F = {N + c_1, ..., N + c_j}, j >= 7, N -> infinity, ratios bounded, plus a compact part C_low with
@@ -70,6 +71,6 @@ large-N looser) -- exactly the contraction-toward-the-fixed-point picture. Non-m
 around N=19-23 (cluster commensurate with compact max 13) noted; C_low = {1,3,4,11} recurs as the
 worst compact 4-core (a near-divisor-chain -- worth a look).
 
--> HYP-3834, MISTAKE-090, THM-522, THM-523, HYP-3787, OPEN-Q-108; Tao 1701.02048 (bounded-speed
+-> HYP-3900, MISTAKE-090, THM-522, THM-523, HYP-3787, OPEN-Q-108; Tao 1701.02048 (bounded-speed
    reduction -- this renormalization is its quantitative local form); Fraenkel disjoint covering
    systems (new lead, see INVESTIGATION-BACKLOG).

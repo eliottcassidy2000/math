@@ -25,13 +25,13 @@ forces the far-containing prefix's arc count into the error term, and that count
 peeled element. The requested lemma was unprovable because it is false.
 
 **Correct framing (the fix).** Peel ALL far elements AT ONCE by a union bound (simultaneous-peel lemma,
-HYP-3834): meas(L_C) >= (1-j/7) meas(L_low) - (2 c_low/7) sum_{w in F} 1/w -- only the COMPACT part's
+HYP-3900): meas(L_C) >= (1-j/7) meas(L_low) - (2 c_low/7) sum_{w in F} 1/w -- only the COMPACT part's
 arc count ever enters, and at a multiplicative gap cut the scales cancel (error <= 22j/(7 Lambda),
 uniform, scale-free). The union bound dies exactly at j=7=1/(2r) (seven speeds can cover), which is the
 TRUE boundary of the method; the residual is gap-free >=7-element clusters, not an arc-count problem.
 
 **Impact.** S31's Part B verdict stands (its checks were correct); only its stated "remaining ingredient"
-is replaced. The j<=6 multi-outlier tail is now closed by HYP-3834's guard table (all margins positive,
+is replaced. The j<=6 multi-outlier tail is now closed by HYP-3900's guard table (all margins positive,
 min 0.013 at j=5,6). Lesson: when an induction forces you to control a quantity that grows along the
 induction, change the induction, not the estimate. Source: opus-2026-07-01-S32.
 

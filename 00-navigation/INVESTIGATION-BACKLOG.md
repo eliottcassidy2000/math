@@ -8,16 +8,16 @@
 -> HYP-3950, HYP-3951, opus HYP-3834/3835, MISTAKE-090, THM-576, klein HYP-3832.
 
 **THE r=2 RESIDUAL AFTER THE SIMULTANEOUS PEEL (opus-2026-07-01-S32).** Status: ACTIVE -- sharpened.
-HYP-3834 (simultaneous-peel lemma, PROVED) closes the j<=6 multi-outlier tail of the 11-core census at any
+HYP-3900 (simultaneous-peel lemma, PROVED) closes the j<=6 multi-outlier tail of the 11-core census at any
 scales (guard table all positive, Lambda=10^4); MISTAKE-090 retires the false "uniform arc-count" blocker.
 Remaining, exactly two classes: (1) BOUNDED MIDDLE BAND -- gap-free 11-cores with max in (19, ~Lambda^10]:
 finite/decidable; next step = push the dense census V=19 -> 25+ (fast C impl or smarter branch-bound; each
 V=+1 multiplies C(V,11) by ~V/(V-10)); (2) DEEP CLUSTERS (>=7 elements, bounded ratios, unbounded height) --
-HYP-3835 renormalization: two-scale factorization VERIFIED, worst pattern = AP difference core (fixed point),
+HYP-3901 renormalization: two-scale factorization VERIFIED, worst pattern = AP difference core (fixed point),
 boundary minimax probe over ~7500 configs SURVIVED (global min 1.97x pentagon; binding direction = clusters
 descending to compact height). Next: (a) effective O(1/N) rate for meas -> Int_{L_low} D (= HYP-3787 in the
 right coordinates); (b) floor for Int_{L_low} D_pattern by induction on the tower (depth-1 = shifted LRC(8));
-(c) note C_low={1,3,4,11} recurs as worst compact 4-core -- investigate. -> HYP-3834, HYP-3835, MISTAKE-090.
+(c) note C_low={1,3,4,11} recurs as worst compact 4-core -- investigate. -> HYP-3900, HYP-3901, MISTAKE-090.
 
 **FRAENKEL / DISJOINT COVERING SYSTEMS = the deep-cluster tiling times (opus-2026-07-01-S32).** Status: NEW LEAD.
 At the covering threshold j=7, the cluster's local density D_7(t) vanishes EXACTLY where its seven danger arcs
@@ -26,12 +26,12 @@ consecutive pattern). This is the CONTINUOUS analogue of disjoint covering syste
 exact covers by Beatty/AP systems with distinct moduli force special structure; Newman, Znam, Erdos covering
 systems; Graham's {2^i m} constructions). If the Fraenkel-side rigidity theorems transfer, the set of tiling
 times of ANY 7-cluster is finite + structured (only AP-like patterns achieve them), which is exactly the
-non-degeneracy input the deep-cluster floor (HYP-3835 closing item b) needs. Also resonates with the S27
+non-degeneracy input the deep-cluster floor (HYP-3901 closing item b) needs. Also resonates with the S27
 "anti-slider" and the {AP,GW} tight-locus dichotomy (THM-523) -- GW configs may be the "Graham exceptional
 covers" of this dictionary. Next: (i) literature check (Fraenkel conjecture status; Barat-Varju; Tijdeman);
 (ii) classify all t with D_pattern(t)=0 for the 21 drop-patterns of {0..8}; (iii) test whether GW's difference
-core realizes a nontrivial exact cover. First in repo: no prior Fraenkel mention. -> HYP-3835, THM-523.
-**THE LONELY ENVELOPE PROGRAM (klein-2026-07-01-S87, HYP-3834/3835/3836) -- four follow-up leads.** Status: NEW.
+core realizes a nontrivial exact cover. First in repo: no prior Fraenkel mention. -> HYP-3901, THM-523.
+**THE LONELY ENVELOPE PROGRAM (klein-2026-07-01-S87, HYP-3900/3835/3836) -- four follow-up leads.** Status: NEW.
 (1) **Second Farey layer = cusp curvature.** Lambda_AP is the full Farey gap-sum, so the envelope's SECOND derivative at the cusp is the q+q'=n+1 mediant data ((2,13),(4,11),(7,8)... at n=14). Nobody has computed the curvature of loneliness; same machinery, one more layer. Next: exact second-order expansion of Lambda for AP/GW; does the sporadic-vs-AP gap OPEN at second order where the first order ties (n=14)?
 (2) **Deep-witness emptiness.** No tight set containing a multiple of n found (censuses n<=8; all tight sets keep all phi(n) shallow witnesses). Prove tight => no multiple of n (would make the class-max collapse formula unconditional). Next: try the m(k/n)-quantization argument on a hypothetical deep-witness tight set; connect to THM-398 dominance-dodge.
 (3) **The (c, E) pair as a tight-locus invariant.** Collapse rate c is blind within {AP,GW} at n=14; mean loneliness E separates them (E(GW) < E(AP) exact). Next: compute (c,E) at n=20 (census {AP, GW_19}); is the pair complete on the tight locus? Is E(GW_n) < E(AP_n) for the whole family (the 2(n-1) element always wins the mean)?
