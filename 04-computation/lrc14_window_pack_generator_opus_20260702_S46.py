@@ -66,7 +66,7 @@ if OUT and fails == 0:
     hdr = ("/-\nCopyright (c) 2026 The TournamentH7 project contributors. All rights reserved.\n"
            "Released under Apache 2.0 license as described in the file LICENSE.\n"
            "Authors: opus (LRC multi-agent project, generated pack)\n-/\n"
-           "import TournamentH7.LRCRatWitness\n\n"
+           "import TournamentH7.LRCKernelGate\n\n"
            f"/-! # Bounded-window census band ({WLO}, {W0}] -- generated pack -/\n\n"
            "namespace LonelyRunner\nnamespace WindowPack\n\nopen LonelyRunner\n\n")
     io.open(OUT, "w", encoding="utf-8", newline="\n").write(hdr + body + "\n\nend WindowPack\nend LonelyRunner\n")
