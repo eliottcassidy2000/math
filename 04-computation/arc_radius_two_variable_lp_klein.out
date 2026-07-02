@@ -1,0 +1,35 @@
+precomputing danger-arc masses (W=200, Q=28, 3 rows)...
+
+instrument                                       max coverage    floor 1-max
+L1 single-radius                                     1.000000       0.000000   [target r=1/16]
+L2 arc x radius (3 rows)                             1.000000       0.000000   [target r=1/16]
+L3 + overlap cuts (small-speed pairs)                1.000000       0.000000   [target r=1/16]
+
+L1 single-radius                                     1.000000       0.000000   [target r=1/15]
+L2 arc x radius (3 rows)                             1.000000       0.000000   [target r=1/15]
+L3 + overlap cuts (small-speed pairs)                1.000000       0.000000   [target r=1/15]
+
+L1 single-radius                                     1.000000       0.000000   [target r=1/14]
+L2 arc x radius (3 rows)                             1.000000       0.000000   [target r=1/14]
+L3 + overlap cuts (small-speed pairs)                1.000000       0.000000   [target r=1/14]
+
+interpretation: floor > 0 at a sub-critical target = a universal covering floor
+(for all covering sets, speeds <= 200, modulo fractional relaxation).
+floor = 0 = the relaxation smears the atom; identifies the missing constraint layer.
+DONE.
+=== TIGHTENING: W=30 (concentration forced by covering pins on a small speed pool) ===
+precomputing danger-arc masses (W=30, Q=28, 3 rows)...
+
+instrument                                       max coverage    floor 1-max
+L1 single-radius                                     1.000000       0.000000   [target r=1/16]
+L2 arc x radius (3 rows)                             1.000000       0.000000   [target r=1/16]
+L3 + overlap cuts (small-speed pairs)                1.000000       0.000000   [target r=1/16]
+
+L1 single-radius                                     1.000000       0.000000   [target r=1/15]
+L2 arc x radius (3 rows)                             1.000000       0.000000   [target r=1/15]
+L3 + overlap cuts (small-speed pairs)                1.000000       0.000000   [target r=1/15]
+
+L1 single-radius                                     1.000000       0.000000   [target r=1/14]
+L2 arc x radius (3 rows)                             1.000000       0.000000   [target r=1/14]
+L3 + overlap cuts (small-speed pairs)                1.000000       0.000000   [target r=1/14]
+

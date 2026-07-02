@@ -1,0 +1,84 @@
+============================================================================================
+A. OVERTAKING-DEFECT SIEVE (HYP-3841): tangent-ladder certificates, anchor r0=1/16 -> 1/14
+============================================================================================
+  CONSTR {1..12,182}     cov=True  L(1/16)=0.0926  s0=-9.136  K=1.989 (#down=1/42)  cert(1/14)=-0.00672  actual=0.02390  CERT-OK=False  M=14/183
+  RANDCOV0               cov=True  L(1/16)=0.1647  s0=-5.988  K=0.186 (#down=1/49)  cert(1/14)=+0.10958  actual=0.12330  CERT-OK=True  M=23/89
+  RANDCOV1               cov=True  L(1/16)=0.1535  s0=-4.232  K=0.457 (#down=1/42)  cert(1/14)=+0.11159  actual=0.12077  CERT-OK=True  M=2/7
+  RANDCOV2               cov=True  L(1/16)=0.1604  s0=-4.727  K=2.773 (#down=2/47)  cert(1/14)=+0.09345  actual=0.11890  CERT-OK=True  M=13/55
+  RANDCOV3               cov=True  L(1/16)=0.1960  s0=-5.709  K=0.691 (#down=4/44)  cert(1/14)=+0.13886  actual=0.14982  CERT-OK=True  M=7/39
+  RANDCOV4               cov=True  L(1/16)=0.1917  s0=-5.328  K=0.055 (#down=1/41)  cert(1/14)=+0.14368  actual=0.15171  CERT-OK=True  M=7/29
+  RANDCOV5               cov=True  L(1/16)=0.1735  s0=-5.044  K=0.223 (#down=2/55)  cert(1/14)=+0.12648  actual=0.13485  CERT-OK=True  M=37/191
+  RANDCOV6               cov=True  L(1/16)=0.1565  s0=-5.582  K=0.170 (#down=3/59)  cert(1/14)=+0.10512  actual=0.11544  CERT-OK=True  M=7/43
+  RANDCOV7               cov=True  L(1/16)=0.1476  s0=-5.522  K=0.045 (#down=1/59)  cert(1/14)=+0.09789  actual=0.11077  CERT-OK=True  M=11/57
+  CLUSTER                cov=False  L(1/16)=0.1353  s0=-5.172  K=0.666 (#down=3/31)  cert(1/14)=+0.08319  actual=0.09511  CERT-OK=True  M=1/8
+  TWO-SCALE              cov=False  L(1/16)=0.0675  s0=-6.906  K=2.200 (#down=2/39)  cert(1/14)=-0.01382  actual=0.02998  CERT-OK=False  M=1/10
+
+  certificate success: 9/11
+  overtaking band check: kinks at d/(w-v) in [1/16,1/14] need (w-v)/d in [14,16] -- differences
+  in a narrow band; K small iff few pairs have w-v in {14d..16d} with aligned fractions.
+
+============================================================================================
+B. FINAL-WINDOW IDENTITY (HYP-3843): Lambda_AP == Lambda_GW exactly on [r*, 1/14]?
+============================================================================================
+  profiles DIFFER at 11 candidate radii; LAST difference at r = 1/15 = 0.066667
+  identity on (1/15, 1/14]: True  => r* = 1/15 (exclusive)
+  window width 1/14 - r* = 0.004762; midpoints check exact-equal: True
+
+============================================================================================
+C. (c, E) AT n=20 (HYP-3843): does mean loneliness separate {AP_19, GW_19}?
+============================================================================================
+  E(AP_19) = 0.02121322  E(GW_19) = 0.02120207  GW<AP: True  (exact diff -1.115e-05)
+  (collapse rates equal by HYP-3835 family universality; E separates iff GW<AP strictly)
+
+============================================================================================
+D. DEEP-WITNESS EMPTINESS (HYP-3843): tight census n=9 (v<=20), n=10 (v<=18); multiples of n?
+============================================================================================
+  n=9: tight sets (v<=20): 1
+    (1, 2, 3, 4, 5, 6, 7, 8)  #wit=6  multiples-of-9: NONE
+  n=10: tight sets (v<=18): 1
+    (1, 2, 3, 4, 5, 6, 7, 8, 9)  #wit=4  multiples-of-10: NONE
+
+DONE.
+============================================================================================
+A. OVERTAKING-DEFECT SIEVE (HYP-3841): tangent-ladder certificates, anchor r0=1/16 -> 1/14
+============================================================================================
+  CONSTR {1..12,182}     cov=True  L(1/16)=0.0926  s0=-9.136  K=1.989 (#down=1/42)  cert(1/14)=-0.00672  actual=0.02390  CERT-OK=False  M=14/183
+  RANDCOV0               cov=True  L(1/16)=0.1647  s0=-5.988  K=0.186 (#down=1/49)  cert(1/14)=+0.10958  actual=0.12330  CERT-OK=True  M=23/89
+  RANDCOV1               cov=True  L(1/16)=0.1535  s0=-4.232  K=0.457 (#down=1/42)  cert(1/14)=+0.11159  actual=0.12077  CERT-OK=True  M=2/7
+  RANDCOV2               cov=True  L(1/16)=0.1604  s0=-4.727  K=2.773 (#down=2/47)  cert(1/14)=+0.09345  actual=0.11890  CERT-OK=True  M=13/55
+  RANDCOV3               cov=True  L(1/16)=0.1960  s0=-5.709  K=0.691 (#down=4/44)  cert(1/14)=+0.13886  actual=0.14982  CERT-OK=True  M=7/39
+  RANDCOV4               cov=True  L(1/16)=0.1917  s0=-5.328  K=0.055 (#down=1/41)  cert(1/14)=+0.14368  actual=0.15171  CERT-OK=True  M=7/29
+  RANDCOV5               cov=True  L(1/16)=0.1735  s0=-5.044  K=0.223 (#down=2/55)  cert(1/14)=+0.12648  actual=0.13485  CERT-OK=True  M=37/191
+  RANDCOV6               cov=True  L(1/16)=0.1565  s0=-5.582  K=0.170 (#down=3/59)  cert(1/14)=+0.10512  actual=0.11544  CERT-OK=True  M=7/43
+  RANDCOV7               cov=True  L(1/16)=0.1476  s0=-5.522  K=0.045 (#down=1/59)  cert(1/14)=+0.09789  actual=0.11077  CERT-OK=True  M=11/57
+  CLUSTER                cov=False  L(1/16)=0.1353  s0=-5.172  K=0.666 (#down=3/31)  cert(1/14)=+0.08319  actual=0.09511  CERT-OK=True  M=1/8
+  TWO-SCALE              cov=False  L(1/16)=0.0675  s0=-6.906  K=2.200 (#down=2/39)  cert(1/14)=-0.01382  actual=0.02998  CERT-OK=False  M=1/10
+
+  certificate success: 9/11
+  overtaking band check: kinks at d/(w-v) in [1/16,1/14] need (w-v)/d in [14,16] -- differences
+  in a narrow band; K small iff few pairs have w-v in {14d..16d} with aligned fractions.
+
+============================================================================================
+B. FINAL-WINDOW IDENTITY (HYP-3843): Lambda_AP == Lambda_GW exactly on [r*, 1/14]?
+============================================================================================
+  profiles DIFFER at 11 candidate radii; LAST difference at r = 1/15 = 0.066667
+  identity on (1/15, 1/14]: True  => r* = 1/15 (exclusive)
+  window width 1/14 - r* = 0.004762; midpoints check exact-equal: True
+
+============================================================================================
+C. (c, E) AT n=20 (HYP-3843): does mean loneliness separate {AP_19, GW_19}?
+============================================================================================
+  E(AP_19) = 0.02121322  E(GW_19) = 0.02120207  GW<AP: True  (exact diff -1.115e-05)
+  (collapse rates equal by HYP-3835 family universality; E separates iff GW<AP strictly)
+
+============================================================================================
+D. DEEP-WITNESS EMPTINESS (HYP-3843): tight census n=9 (v<=20), n=10 (v<=18); multiples of n?
+============================================================================================
+  n=9: tight sets (v<=20): 1
+    (1, 2, 3, 4, 5, 6, 7, 8)  #wit=6  multiples-of-9: NONE
+  n=10: tight sets (v<=18): 1
+    (1, 2, 3, 4, 5, 6, 7, 8, 9)  #wit=4  multiples-of-10: NONE
+  CONSTR {1..12,182}     step1 cert(1/15)=+0.04625 (actual 0.05747, K1=1.989)
+                         step2 from cert1: cert(1/14)=+0.00875 (K2=0.000, s(1/15+)=-7.875)  CHAIN-OK=True
+  TWO-SCALE              step1 cert(1/15)=+0.02954 (actual 0.04258, K1=2.200)
+                         step2 from cert1: cert(1/14)=+0.01185 (K2=0.000, s(1/15+)=-3.717)  CHAIN-OK=True
