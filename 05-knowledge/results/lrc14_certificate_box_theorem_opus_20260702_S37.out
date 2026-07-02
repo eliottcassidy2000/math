@@ -1,0 +1,36 @@
+====================================================================================================
+ THM-607: the certificate-box theorem.  Fixed data: window [7/20,3/8], certs [Fraction(399, 4000), Fraction(221, 1000), Fraction(143, 2000)]
+====================================================================================================
+
+ (A) intrinsic slacks mu-bar_l (region side, V-free):
+   level 1: mu-bar = 793/28000 = 0.028321   (S36 used schedule-mu 253/9000 = 0.0281 -- box below is SHARPER)
+   level 2: mu-bar = 43/1750 = 0.024571   (S36 used schedule-mu 11/450 = 0.0244 -- box below is SHARPER)
+   level 3: mu-bar = 1/14000 = 0.000071   (S36 used schedule-mu 0 = 0.0000 -- box below is SHARPER)
+
+ (B) fixed-schedule box (S36 schedule delta = 253/450000, 11/900000, 0):
+   level 1: V_1 in ( 40.92 , 50.37 ]   (integers: 41..50, count 10)
+   level 2: V_2 in ( 1818.18 , 2010.39 ]   (integers: 1819..2010, count 192)
+   level 3: V_3 in ( 81818.18 , inf )   (tail)
+
+ (C) per-tuple-schedule SHARP region (delta_l := mu-bar_l / V_l):
+   V_1 > (1+mu-bar_1)/delta_0 = 41.13
+   V_2/V_1 > (1+mu-bar_2)/mu-bar_1 = 36.18
+   V_3/V_2 > (1+mu-bar_3)/mu-bar_2 = 40.70
+   VERIFY: 400 random tuples from the sharp region: fails = 0, worst margin = 0.071500 (>= 1/14 = 0.071429)
+
+ (D) geometric-mesh tiling (mesh ratio r = 2): schedules delta_l^(j) = mu-bar_l * 2^-j;
+     each box has multiplicative width >= 2 on every bounded axis  <=>  the mesh covers all
+     tuples with ratios >= 2*(1+mu-bar_l)/mu-bar_{l-1}:
+       V_2/V_1 >= 72.4
+       V_3/V_2 >= 81.4
+     boxes to cover V <= 10^9 on 2 bounded axes at mesh r=2: <= 900 (log_2(10^9) ~ 30 per axis)
+     => ONE certificate datum + a 30^2-box ledger certifies EVERY sharp-ratio tuple to 10^9;
+        each box is two rational inequalities per level: pure decide, no new regions.
+
+ FACTORIZATION DEMO (Module-0 view): certificates recomputed by pure region calculus:
+   level 1: region search at band h+mu-bar reproduces a valid cert: True (c = 399/4000)
+   level 2: region search at band h+mu-bar reproduces a valid cert: True (c = 221/1000)
+   level 3: region search at band h+mu-bar reproduces a valid cert: True (c = 143/2000)
+   (regions never see V; the V-conditions are the two box inequalities -- the split is total.)
+
+DONE.
