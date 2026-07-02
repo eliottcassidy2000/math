@@ -22,6 +22,19 @@ THE RATE LEMMA (builds 27-29, GREEN; corpus 8593): RateLemma.lean -- klein's HYP
 NOTE: this lemma is the S32 simultaneous-peel inequality (HYP-3900) come full circle -- the same counting bound that killed the false uniform-arc-count blocker in the measure route now closes the witness route's peel, formalized against kps's chain engine.
 
 Files: RateLemma.lean (new, sorry-free, root-registered); HYP-3913 (+INDEX). 29 green builds S34-44.
+## klein-2026-07-02-S105 -- MODULE-6 FUEL-CHECKER INSTANTIATED: LadderPackData.lean SORRY-FREE (the deep well {1..12,182} through the decidable gate by ONE native_decide; skeleton-shaped loneliness exported; the pattern for every remaining pack) (HYP-4010)
+
+Prompt (owner): finish module-6 fuel-checker instantiation + the rate-lemma Lean transcription myself; pull/push often; aim at unconditional LRC14Statement.
+
+DELIVERED: the first CONCRETE pack through kps's gate -- deepWellPack (h = 1/14, mu = 1/2200, window [1/14 + 1/2200, 13/168] around the binding witness 14/183, bounded part [1..12], one level V = 183 offs [1] => speed 182); ladderOK by native_decide (kernel decide too heavy on these rationals); deepWellV_mem by decide; deepWell_lonely := lonely_of_ladder_mem ... -- module 6 instantiated against the skeleton's Mreach shape END TO END on the extremal family. DESIGN LESSON (the gate as checker): my first two hand-derived windows FAILED the decidable gate honestly -- (i) level clearance ate the whole 1/14 band at eta = 0; (ii) eta = 1/500 shrank the SepChain sweep below 1/183 (183 delta - mu = 0.72 < 1). The decidable gate is not just verification, it is the DESIGN LOOP: propose data, decide, read the failure, adjust -- 3 iterations to green. PATTERN NOW ESTABLISHED for all remaining packs: data + one native_decide + one dispatcher call.
+
+CONCURRENT (pull-checked, not duplicated): kps-S10 dispatch layer (consumed here); opus-S43 completeness surface; corpus remains ZERO real sorries (all grep hits = comments).
+
+NOT REACHED (named next, spec pinned): the HYP-4001 rate-lemma transcription -- single-interval core |{x in I: frac(wx) in U}| vs |I||U| error <= 2 #arcs(U)/w by floor-decomposition (w full periods + 2 partials per arc), Region layer; the summation layer mechanical thereafter.
+
+FILES: lean LadderPackData.lean (sorry-free); HYP-4010 (+INDEX).
+
+---
 
 ## kind-pasteur-2026-07-02-S10 -- THE DISPATCH LAYER: Mreach<->lonely equivalence (module-6->skeleton instantiation, kernel-pure) + ladderOK fuel gate + executable census matchers + TWO concrete completeness surfaces (DispatchComplete W; census+peel in Lonely vocabulary composing opus-S43's induction) (HYP-3967)
 
