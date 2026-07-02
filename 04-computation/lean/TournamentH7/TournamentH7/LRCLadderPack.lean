@@ -1,4 +1,3 @@
-/-
 Copyright (c) 2026 The TournamentH7 project contributors. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: opus (LRC multi-agent project, 2026-07-02-S39)
@@ -36,6 +35,9 @@ theorem depth3_pack_row :
   cert_ladder (h := 1/14) (μ := 1/40) (by norm_num) (by norm_num)
     (lo := 7/20) (hi := 3/8) [1, 2] packLevels
     (by decide) (by native_decide) (by norm_num) (by native_decide) (by native_decide)
+
+/-! ## The quantified 3-parameter FAMILY (kind-pasteur S7, HYP-3964): variable V-tuples via the symbolic SepChain thresholds. -/
+
 
 end WitnessCert
 end LonelyRunner

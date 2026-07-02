@@ -12447,3 +12447,9 @@ Closes my assigned residual (kps MSG-238) for THM-527 Part A: the finite-Vmax co
 - **Claim:** generalize cert_two_level to a LIST of cluster levels via the nested-window induction: every level pays exactly mu (windows nest, so tau stays within delta_l = mu/V_l of EVERY level's ruler point simultaneously — THM-606's constant inflation, formally); separations as the decidable recursive SepChain predicate (1 < V(delta − mu/V) then recurse with delta := mu/V) — separations become CERTIFICATE DATA, so packs carry multi-cluster shapes end-to-end. All levels at uniform band h+mu; P at band h. Reuses coe_add_int/norm_ge_of_arcSafe/norm_ge_norm_sub_abs/exists_int_in_long_interval.
 - **Artifacts:** TBD this session.
 - **Depends on / relates to:** HYP-3959 (cert_two_level = the depth-2 case), opus THM-606/HYP-3905, playbook module 6, RatIntervals (stable).
+
+
+## HYP-3964: the first multi-cluster pack row — pack3_family machine-checked (infinite 3-parameter 13-runner family)
+- **Status:** DELIVERED, kind-pasteur-2026-07-02-S7. LRCLadderPack.lean (2 build rounds): fresh depth-3 certificate in the cert_ladder schema (mu=1/100, arc width 293/2450, phases 137/320, 161/1600, 253/320); pack3_sep from integer thresholds V1>=9, V2>=101V1+1, V3>=101V2+1 (STANDARD AXIOMS, pure math); pack3_family = the Lean form of opus THM-606 (axioms std-3 + 5 pack-check native_decides). Pack-row pattern set: shape data + threshold lemma + safety decides + one cert_ladder call. Mass production awaits THM-602 enumeration.
+- **Artifacts:** LRCLadderPack.lean (+root import).
+- **Depends on / relates to:** HYP-3963 (cert_ladder), opus THM-606/HYP-3905, mac-mini HYP-3867 (CombPatterns), THM-602.
