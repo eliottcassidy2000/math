@@ -182,6 +182,7 @@ import TournamentH7.LRCGapSurplusLedger
 import TournamentH7.LRCWitnessCert
 import TournamentH7.LRCCertTable
 import TournamentH7.LRCLadderPack
+import TournamentH7.ForcedOverlap
 import TournamentH7.RatIntervals
 import TournamentH7.LRCDeathChain
 import TournamentH7.LRCFactorialAtom
