@@ -56,6 +56,20 @@ The 1.16x tightness of the census (pentagon = 1.161 x 1/36) vs the 3.8x deep-clu
 binding case is COMPACT (height 1), consistent with the fixed-point picture: the flow contracts toward
 the AP at height 1, where the census already holds.
 
+## Boundary falsification probe (same session): SURVIVED
+
+The dangerous region is the boundary between census (1.16x tight) and deep clusters (3.8x loose).
+Probed (`lrc14_deep_cluster_boundary_minimax_opus_20260701.py`, exact rationals, ~7500 configs):
+(A) consecutive 7-cluster x ALL 715 compact 4-cores x heights 14..120: min 0.0662 (N=19);
+(B) pentagon-difference drop-pattern clusters: min 0.0818;
+(C) mixed compact-k + (11-k)-cluster, k=0..3: min 0.0635 at {1,3,4}+{20..27} (k=3, N=20);
+(D) barely-gap-free two-scale clusters (ratios 2-5): min 0.1718.
+GLOBAL boundary min = 0.063457 = 1.967 x pentagon = 2.284 x 1/36. NOTHING dips below the height-1
+census extremizer; the worst direction is clusters DESCENDING toward compact height (N=20 binding,
+large-N looser) -- exactly the contraction-toward-the-fixed-point picture. Non-monotone resonance dip
+around N=19-23 (cluster commensurate with compact max 13) noted; C_low = {1,3,4,11} recurs as the
+worst compact 4-core (a near-divisor-chain -- worth a look).
+
 -> HYP-3834, MISTAKE-090, THM-522, THM-523, HYP-3787, OPEN-Q-108; Tao 1701.02048 (bounded-speed
    reduction -- this renormalization is its quantitative local form); Fraenkel disjoint covering
    systems (new lead, see INVESTIGATION-BACKLOG).

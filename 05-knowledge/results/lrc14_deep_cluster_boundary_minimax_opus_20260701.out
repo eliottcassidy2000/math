@@ -1,0 +1,39 @@
+====================================================================================================
+ BOUNDARY MINIMAX PROBE.  benchmarks: 1/36 = 0.027778 ; pentagon = 0.032261
+====================================================================================================
+
+ A. consecutive 7-cluster {N..N+6} x ALL primitive compact 4-cores (max<=13):
+    compact 4-cores: 715; heights: [14, 16, 19, 23, 28, 35, 45, 60, 85, 120]
+    N=  14: min meas = 0.076305 at C_low=(2, 3, 11, 13)   (/pentagon: 2.365x)
+    N=  16: min meas = 0.074706 at C_low=(1, 4, 6, 13)   (/pentagon: 2.316x)
+    N=  19: min meas = 0.066202 at C_low=(1, 4, 9, 13)   (/pentagon: 2.052x)
+    N=  23: min meas = 0.069457 at C_low=(1, 3, 4, 11)   (/pentagon: 2.153x)
+    N=  28: min meas = 0.084545 at C_low=(1, 4, 9, 13)   (/pentagon: 2.621x)
+    N=  35: min meas = 0.075638 at C_low=(1, 3, 4, 11)   (/pentagon: 2.345x)
+    N=  45: min meas = 0.090744 at C_low=(1, 3, 4, 13)   (/pentagon: 2.813x)
+    N=  60: min meas = 0.095253 at C_low=(1, 3, 4, 11)   (/pentagon: 2.953x)
+    N=  85: min meas = 0.095737 at C_low=(1, 3, 4, 11)   (/pentagon: 2.968x)
+    N= 120: min meas = 0.089559 at C_low=(1, 3, 4, 11)   (/pentagon: 2.776x)
+
+ B. pentagon-difference clusters: 7-subsets of {N+c: c in {0..8}} with AP-with-drops patterns,
+    over compact parts drawn from the pentagon's small elements:
+    min over 21x5x5 configs = 0.081842 at low=(1, 3, 4, 5), N=20, pattern=(0, 2, 3, 4, 5, 6, 8)
+    (/pentagon: 2.537x)
+
+ C. mixed splits: compact k + consecutive (11-k)-cluster:
+    k=0 compact + 11-cluster: min = 0.158078 at low=(), N=120   (/pentagon: 4.900x)
+    k=1 compact + 10-cluster: min = 0.091804 at low=(2,), N=20   (/pentagon: 2.846x)
+    k=2 compact + 9-cluster: min = 0.079710 at low=(2, 3), N=20   (/pentagon: 2.471x)
+    k=3 compact + 8-cluster: min = 0.063457 at low=(1, 3, 4), N=20   (/pentagon: 1.967x)
+
+ D. barely-gap-free two-scale clusters (ratios 2..5, no Lambda-gap):
+    min over N x q x splits = 0.171842 at N=30, ratio q=4, split=(4, 7)
+    (/pentagon: 5.327x)
+
+====================================================================================================
+ GLOBAL MIN over all boundary families: 0.063457 = 153403/2417415
+   at C = (1, 3, 4, 20, 21, 22, 23, 24, 25, 26, 27) (family C)
+   vs pentagon 313/9702 = 0.032261: ratio 1.967x
+   vs 1/36: ratio 2.284x ; below pentagon? False ; below 1/36? False
+ If ratio/pentagon >= 1: the fixed-point conjecture SURVIVES the boundary probe (census stays binding).
+DONE.

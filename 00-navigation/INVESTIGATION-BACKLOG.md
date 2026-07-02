@@ -1,5 +1,30 @@
 # Investigation Backlog
 
+**THE r=2 RESIDUAL AFTER THE SIMULTANEOUS PEEL (opus-2026-07-01-S32).** Status: ACTIVE -- sharpened.
+HYP-3834 (simultaneous-peel lemma, PROVED) closes the j<=6 multi-outlier tail of the 11-core census at any
+scales (guard table all positive, Lambda=10^4); MISTAKE-090 retires the false "uniform arc-count" blocker.
+Remaining, exactly two classes: (1) BOUNDED MIDDLE BAND -- gap-free 11-cores with max in (19, ~Lambda^10]:
+finite/decidable; next step = push the dense census V=19 -> 25+ (fast C impl or smarter branch-bound; each
+V=+1 multiplies C(V,11) by ~V/(V-10)); (2) DEEP CLUSTERS (>=7 elements, bounded ratios, unbounded height) --
+HYP-3835 renormalization: two-scale factorization VERIFIED, worst pattern = AP difference core (fixed point),
+boundary minimax probe over ~7500 configs SURVIVED (global min 1.97x pentagon; binding direction = clusters
+descending to compact height). Next: (a) effective O(1/N) rate for meas -> Int_{L_low} D (= HYP-3787 in the
+right coordinates); (b) floor for Int_{L_low} D_pattern by induction on the tower (depth-1 = shifted LRC(8));
+(c) note C_low={1,3,4,11} recurs as worst compact 4-core -- investigate. -> HYP-3834, HYP-3835, MISTAKE-090.
+
+**FRAENKEL / DISJOINT COVERING SYSTEMS = the deep-cluster tiling times (opus-2026-07-01-S32).** Status: NEW LEAD.
+At the covering threshold j=7, the cluster's local density D_7(t) vanishes EXACTLY where its seven danger arcs
+tile the circle -- an exact cover by interval-APs with distinct speeds (verified: D_7(k/7)=0 exact for the
+consecutive pattern). This is the CONTINUOUS analogue of disjoint covering systems (Fraenkel's conjecture:
+exact covers by Beatty/AP systems with distinct moduli force special structure; Newman, Znam, Erdos covering
+systems; Graham's {2^i m} constructions). If the Fraenkel-side rigidity theorems transfer, the set of tiling
+times of ANY 7-cluster is finite + structured (only AP-like patterns achieve them), which is exactly the
+non-degeneracy input the deep-cluster floor (HYP-3835 closing item b) needs. Also resonates with the S27
+"anti-slider" and the {AP,GW} tight-locus dichotomy (THM-523) -- GW configs may be the "Graham exceptional
+covers" of this dictionary. Next: (i) literature check (Fraenkel conjecture status; Barat-Varju; Tijdeman);
+(ii) classify all t with D_pattern(t)=0 for the 21 drop-patterns of {0..8}; (iii) test whether GW's difference
+core realizes a nontrivial exact cover. First in repo: no prior Fraenkel mention. -> HYP-3835, THM-523.
+
 **THREE EXTERNAL LEADS (owner, kind-pasteur-2026-07-01-S22) -- tangential connections to assess/extend.**
 (1) GOOD LOCALLY TESTABLE CODES (Dinur-Evra-Livne-Lubotzky-Mozes, Annals 2026 203-2, https://annals.math.princeton.edu/2026/203-2/p03): c^3-LTC via LEFT-RIGHT CAYLEY COMPLEXES. STRONG lead: (a) local-testability = local-to-global = RECONSTRUCTION (the S14-19 thread: how much global tournament class does a local/bounded-invariant view certify); LTC = where local DOES certify global. (b) the tiling/half-tiling is a SQUARE COMPLEX; Lubotzky's Ramanujan/expander arithmetic = the sqrt-p Gauss-sum flavor (Paley skew {0,±i√p} = Ramanujan bound). NEXT: is the tiling/half-tiling square complex a left-right Cayley complex; does its local testability quantify the reconstruction wall?
 (2) CORNELL CS6840 ALGORITHMIC GAME THEORY (Tardos, HOTELLING games, Sept 2025, https://www.cs.cornell.edu/courses/cs6840/2025fa/lectures/): the LRC covering-min IS an adversarial FACILITY-LOCATION game on the circle -- runners=facilities, lonely observer = point farthest from all (max_t min_v ||vt||), covering-min = adversary's min-over-configs value (attacker-defender). NEXT: read covering-min as a Hotelling game value; import a potential-function / price-of-anarchy argument for inf meas.
