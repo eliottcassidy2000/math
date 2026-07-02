@@ -1,3 +1,13 @@
+## klein-2026-07-02-S110 -- AUDIT SESSION: corpus green at HEAD (baseline re-verified) + kps's census-class FLAG CLOSED (LRC13Citation.lean sorry-free: the owner-policy citation node LRCUpTo13 + lonely14_of_repeat -- repeated-entry tuples have <= 12 distinct speeds, lonely at 1/13 >= 1/14 by citation; Lonely depends only on the range) + self-audit of census20's population breadth recorded (HYP-4015)
+
+Prompt (owner): find errors/improvements in the formalization, implement them myself.
+
+FINDINGS + FIXES: (1) BASELINE: full lake build at HEAD green (audit anchor). (2) THE FLAGGED GAP (kps-S15: the census class quantifies over monotone tuples INCLUDING repeated entries; the pack generators enumerate distinct tuples only -- repeated-entry window tuples were UNPROVED): CLOSED via LRC13Citation.lean -- LRCUpTo13 (the CLAUDE.md-policy citation node as a named Prop: consumed as a hypothesis, discharged by citation, never sorry) + lonely14_of_repeat (repeat => Finset.card image <= 12 via injOn_of_card_image_eq => enumerate the range via equivFin => cite at k <= 12 => gap 1/(k+1) >= 1/14 transfers pointwise since Lonely reads only the range). Sorry-free, builds green. (3) SELF-AUDIT of my HYP-4014 census20: it quantifies over ALL nonzero window tuples while pack data covers primitive covering distinct ones -- three sub-populations (non-covering / imprimitive / repeated); kps-S15's kernel-pure normalization surface handles them on the Lonely route (and (2) closes the repeated leg everywhere); census20 remains the G2-route alternative, populations now mapped.
+
+FILES: lean LRC13Citation.lean (sorry-free); HYP-4015 (+INDEX).
+
+---
+
 ## kind-pasteur-2026-07-02-S15 -- THE WINDOW WIRING THEOREM (hwindow reduces KERNEL-PURE to exactly the packs' census class) + the two-census-hypothesis final surface (HYP-3972)
 
 Prompt (owner): finish the two finite computations (DispatchComplete W, hwindow) + the strong-induction wrapper.
