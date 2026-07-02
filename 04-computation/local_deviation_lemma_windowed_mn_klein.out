@@ -1,0 +1,37 @@
+============================================================================================
+A. THE LOCAL DEVIATION LEMMA -- verification
+============================================================================================
+  r = 1/14, s = sin(2 pi r)/pi = 0.138109
+
+  GAP7 = [97, 111, 125, 139, 153, 167, 181]: A = 1.0000, delta = 14, M = 13
+    t0 = 0.130:  int|C-A| K_M = 0.591868  >= s = 0.138109  OK=True
+    t0 = 0.377:  int|C-A| K_M = 0.594170  >= s = 0.138109  OK=True
+    t0 = 0.500:  int|C-A| K_M = 0.582562  >= s = 0.138109  OK=True
+    t0 = 0.771:  int|C-A| K_M = 0.611448  >= s = 0.138109  OK=True
+    t0 = 0.925:  int|C-A| K_M = 0.598336  >= s = 0.138109  OK=True
+
+  CONS7 = [100, 101, 102, 103, 104, 105, 106]: delta = 1 -> M = 0 (lemma degenerates to the global bound)
+    global int|C-A| = 0.596017 >= s = 0.138109  OK=True
+
+B. THE DICHOTOMY -- can a window be (nearly) covered?
+============================================================================================
+  GAP7: min uncovered over windows |I|=0.05: 0.010750 at t=0.0155   [lemma floor s|I|/2 = 0.003453 applies iff delta|I| large: delta*|I| = 0.70]
+  CONS7: min uncovered over windows |I|=0.05: 0.002875 at t=0.1220   [lemma floor s|I|/2 = 0.003453 applies iff delta|I| large: delta*|I| = 0.05]
+
+  reading: GAP7 (delta|I| = 0.7) obeys the floor; CONS7 (delta|I| = 0.05) can
+  nearly cover windows -- the gap-less regime, exactly the renormalization fixed
+  point (consecutive = AP difference core). hpartA danger case = split regimes.
+
+============================================================================================
+C. TRIPLE OVERLAP |D_u ^ D_v ^ D_w| -- relation-lattice formula (HYP-3848)
+============================================================================================
+  (3,5,8) [w=u+v (one relation family)]: exact = 0.01785714 (1/56),  series = 0.01785557,  agree = True
+  (2,3,5) [w=u+v (one relation family)]: exact = 0.02857143 (1/35),  series = 0.02857301,  agree = True
+  (3,5,11) [generic]: exact = 0.01298701 (1/77),  series = 0.01298600,  agree = True
+  (5,7,12) [w=u+v (one relation family)]: exact = 0.01190476 (1/84),  series = 0.01190297,  agree = True
+  independence benchmark (2r)^3 = 0.0029154518950437313
+  -> the series = (2r)^3 + pair-relation slices + the genuine triple slice;
+     w = u+v turns on the (k, k, -k)+null lattice; each slice is a finite
+     cosine/Bernoulli-polynomial evaluation (the d=3 layer of mac-mini sec-1).
+
+DONE.
