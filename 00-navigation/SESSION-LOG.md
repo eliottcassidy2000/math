@@ -9,6 +9,26 @@ STATUS: THM-604 complete in Lean (attainment opus / upper bound mine). Module bo
 FILES: lean PhasedPairBound.lean (sorry-free, ~230 lines); HYP-4008 (+INDEX).
 
 ---
+## kind-pasteur-2026-07-02-S9 -- THE CONCRETE ENDGAME: LRC14Statement <-> covering-families-lonely (kernel-pure equivalence, NO opaque vocabulary) + the corpus->Lonely conversion (4823 census rows + blocks as infinite Lonely families) + the dispatcher normalization trio (HYP-3966)
+
+Prompt (owner): get all modules complete + sorry-free yourself; long session; big build; mathlib-ready state; 100% certainty about what is correct.
+
+PULL-DRIVEN CONTEXT: opus-S42 landed THE BIG BUILD GREEN (8589 jobs, all satellites root-registered) + AxiomAudit.lean + the submission-state dossier; mac-mini-S14 confirmed the corpus audit (zero real sorries outside the legacy skeleton; endgame kernel-pure). So the build/audit half of my dispatch was already done -- my session went to the part the dossier got WRONG and the surface nobody had made concrete.
+
+THE CORRECTION (recorded in 03-artifacts/drafts/lrc14-concrete-frontier-kps-20260702-S9.md): lrc14_endgame's two parameters (hfloor, hpartA) are phrased over OPAQUE witnessG2/shapeOf -- opaque constants have no provable properties, so NO wiring discharges them as stated. The dossier's "wiring tasks, no open mathematics" is wrong in emphasis: discharge requires either Lebesgue-concretization (against playbook T1) or the certificate route. The honest remaining mathematics = the THM-602 completeness leg (nothing certifies that the certified rows exhaust the covering universe).
+
+DELIVERED (LRC14CertRoute.lean, 6 build rounds, registered, full lake build green, axiom profiles verified):
+ - **lrc14_statement_iff_covering_lonely (KERNEL-PURE)**: LRC14Statement <-> every covering family is lonely, where CoveringFamily v = for every q in {2..14} some speed divisible by q -- plain integer arithmetic, no opaque functions. Backward glue = sieve_one_div. THE frontier is now ONE named concrete Prop.
+ - **lonely_iff_norm_forall**: the vocabulary equivalence (Lonely <-> all-speeds UnitAddCircle norm >= 1/14; round-point + integer-spacing argument) -- connects the ENTIRE certificate corpus to the final Lonely form.
+ - **covering_block_lonely**: consecutive blocks {V-12..V} (V >= 15, V%14 != 13) are COVERING and LONELY -- the first infinite family of covering LRC(14) instances machine-checked end-to-end (via certAP_tail).
+ - **rowFamily13_lonely / rowFamily12_lonely**: ALL 91 k=13 rows + ALL 4732 k=12 rows become infinite Lonely families (every V >= V*), via page shape audits (native_decide) + the getD bridge. The certified sub-universe of the covering branch is now in final vocabulary.
+ - **The dispatcher normalization trio**: lonely_abs_iff (signs), lonely_comp_equiv (relabeling), lonely_exists_of_scale (integer dilation) + LonelySpeed pointwise form -- the abs/sort/gcd preprocessing any future dispatcher needs, mathlib-grade.
+
+AXIOM PROFILES: the equivalence + bridge + invariance trio = [propext, Classical.choice, Quot.sound] PURE; block/row families add only their certificate native_decides (standard profile).
+
+HONEST STATUS toward the owner's "100% certain": everything BENEATH the frontier is machine-checked; the frontier itself (covering branch) contains genuinely open mathematics (THM-602 completeness), not bookkeeping. LRC(14) is NOT yet a theorem in Lean; it is now EXACTLY ONE concrete Prop away, with the largest certified sub-universe to date.
+
+FILES: LRC14CertRoute.lean (new, registered); lrc14-concrete-frontier-kps-20260702-S9.md; HYP-3966 INDEX; this entry. No canon overridden (dossier correction is a complement doc + letter flag, not an override).
 
 ## kind-pasteur-2026-07-02-S8 -- MODULE-3 KEYSTONE DELIVERED: THE DIAL LEMMA (seventh-translate membership = ONE integer congruence) + interval-level K1 + the K2 engines, LRCSevenTranslate.lean FIRST BUILD CLEAN, all std axioms; two collisions absorbed by protocol (HYP-3965)
 

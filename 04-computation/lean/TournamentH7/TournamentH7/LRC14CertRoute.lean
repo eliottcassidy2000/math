@@ -167,6 +167,21 @@ theorem lonely_abs_iff {ι : Type*} (n : ℕ) (v : ι → ℤ) (t : ℝ) :
   · rw [h]
     exact lonelySpeed_neg_iff n (v i) t
 
+/-- Scale compatibility: a lonely time for the primitive family gives one for any
+integer multiple (`t := s / c`).  With sign and relabeling invariance this
+completes the dispatcher normalization trio (abs, sort, divide by gcd). -/
+theorem lonely_exists_of_scale {ι : Type*} (n : ℕ) (w : ι → ℤ) (c : ℤ) (hc : c ≠ 0)
+    (h : ∃ s : ℝ, Lonely n w s) : ∃ t : ℝ, Lonely n (fun i => c * w i) t := by
+  obtain ⟨s, hs⟩ := h
+  have hcR : (c : ℝ) ≠ 0 := by exact_mod_cast hc
+  refine ⟨s / c, fun i m => ?_⟩
+  have := hs i m
+  have hval : ((c * w i : ℤ) : ℝ) * (s / c) = (w i : ℝ) * s := by
+    push_cast
+    field_simp
+  rw [hval]
+  exact this
+
 /-! ## The first covering discharges: consecutive blocks -/
 
 /-- The consecutive block `{V, V−1, …, V−12}` as a 13-speed family. -/
