@@ -59,6 +59,7 @@ theorem clip_pos_iff {P Q : ℕ} (hP : 0 < (P : ℚ)) (hQ : 0 < (Q : ℚ))
   · rintro ⟨h1, h2⟩
     refine ⟨⟨?_, ?_⟩, ?_, ?_⟩ <;> nlinarith
 
+<<<<<<< HEAD
 /-- Positive-sum extraction over nonnegative lists. -/
 theorem exists_pos_of_sum_pos {L : List ℚ} (hnn : ∀ x ∈ L, 0 ≤ x) (h : 0 < L.sum) :
     ∃ x ∈ L, 0 < x := by
@@ -127,5 +128,74 @@ theorem phased_pair_bound {P Q : ℕ} (hcop : Nat.Coprime P Q)
       sorry
   · sorry
 
+=======
+/-- Meeting uniqueness: with `2r(P+Q) ≤ 1` and coprime `P, Q`, at most one index pair
+`(k,l)` in `range P × range Q` can have a positive clip. -/
+theorem meeting_unique {P Q : ℕ} (hcop : Nat.Coprime P Q)
+    {r φ ψ : ℚ} (hr2 : 2 * r * ((P : ℚ) + Q) ≤ 1)
+    {k l k' l' : ℕ} (hk : k < P) (hl : l < Q) (hk' : k' < P) (hl' : l' < Q)
+    (h : |(k : ℚ) * Q - l * P + (φ * Q - ψ * P)| < r * ((P : ℚ) + Q))
+    (h' : |(k' : ℚ) * Q - l' * P + (φ * Q - ψ * P)| < r * ((P : ℚ) + Q)) :
+    k = k' ∧ l = l' := by
+  set N : ℤ := (k : ℤ) * Q - l * P with hN
+  set N' : ℤ := (k' : ℤ) * Q - l' * P with hN'
+  have hcast : ((N : ℚ)) - ((N' : ℚ))
+      = ((k : ℚ) * Q - l * P + (φ * Q - ψ * P))
+        - ((k' : ℚ) * Q - l' * P + (φ * Q - ψ * P)) := by
+    simp only [hN, hN']
+    push_cast
+    ring
+  have hdiffQ : |((N : ℚ)) - ((N' : ℚ))| < 1 := by
+    rw [hcast]
+    calc |((k : ℚ) * Q - l * P + (φ * Q - ψ * P))
+          - ((k' : ℚ) * Q - l' * P + (φ * Q - ψ * P))|
+        ≤ |(k : ℚ) * Q - l * P + (φ * Q - ψ * P)|
+          + |(k' : ℚ) * Q - l' * P + (φ * Q - ψ * P)| := abs_sub _ _
+      _ < r * ((P : ℚ) + Q) + r * ((P : ℚ) + Q) := add_lt_add h h'
+      _ ≤ 1 := by linarith
+  have hNN : N = N' := by
+    have h1 : |N - N'| < 1 := by exact_mod_cast hdiffQ
+    rw [abs_lt] at h1
+    omega
+  -- coprime split: (k−k')Q = (l−l')P
+  have hDQ : ((l : ℤ) - l') * P = (Q : ℤ) * ((k : ℤ) - k') := by
+    have : (k : ℤ) * Q - l * P = (k' : ℤ) * Q - l' * P := by
+      simpa [hN, hN'] using hNN
+    linarith
+  have hcop' : IsCoprime (Q : ℤ) (P : ℤ) := by
+    rw [Int.isCoprime_iff_gcd_eq_one]
+    simpa [Nat.gcd_comm] using hcop
+  have hQl : (Q : ℤ) ∣ ((l : ℤ) - l') :=
+    hcop'.dvd_of_dvd_mul_right ⟨(k : ℤ) - k', hDQ⟩
+  obtain ⟨m, hm⟩ := hQl
+  have hQpos : (0 : ℤ) < (Q : ℤ) := by
+    have : 0 < Q := lt_of_le_of_lt (Nat.zero_le l) hl
+    exact_mod_cast this
+  have hm0 : m = 0 := by
+    rcases lt_trichotomy m 0 with hmlt | hme | hmgt
+    · exfalso
+      have h1 : m ≤ -1 := by omega
+      have h2 : (Q : ℤ) * m ≤ (Q : ℤ) * (-1) :=
+        mul_le_mul_of_nonneg_left h1 (le_of_lt hQpos)
+      have h3 : -(Q : ℤ) < (l : ℤ) - l' := by omega
+      linarith [hm]
+    · exact hme
+    · exfalso
+      have h1 : (1 : ℤ) ≤ m := by omega
+      have h2 : (Q : ℤ) * 1 ≤ (Q : ℤ) * m :=
+        mul_le_mul_of_nonneg_left h1 (le_of_lt hQpos)
+      have h3 : (l : ℤ) - l' < Q := by omega
+      linarith [hm]
+  have hll : l = l' := by
+    have : (l : ℤ) - l' = 0 := by rw [hm, hm0, mul_zero]
+    omega
+  have hkk : k = k' := by
+    have hE0 : ((l : ℤ) - l') = 0 := by rw [hm, hm0, mul_zero]
+    have : (Q : ℤ) * ((k : ℤ) - k') = 0 := by rw [← hDQ, hE0, zero_mul]
+    rcases mul_eq_zero.mp this with hq0 | hd0
+    · omega
+    · omega
+  exact ⟨hkk, hll⟩
+>>>>>>> 28b592b34 (klein-2026-07-02-S103: checkpoint - meeting_unique GREEN (coprime residue uniqueness w/ free phases; THM-604(b) stage 2))
 
 end PhasedPairBound
