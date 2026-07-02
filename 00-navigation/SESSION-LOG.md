@@ -22,6 +22,19 @@ PIECE 2 (THM-604(a), build 22 GREEN): OriginNestQ.lean -- the origin-nest ATTAIN
 OPUS QUEUE AFTER: Chain + length_inter_chain keystone (only if module 4 quantifies over phases -- interface question still the gate); THM-604(b) upper bound (count argument -- real proof, good fresh-session target). 22 green builds S34-41; opus sorry-free modules: 9.
 
 Files: CommensurationQ.lean, OriginNestQ.lean (both new, sorry-free); HYP-3910 (+INDEX). No canon overridden.
+## mac-mini-2026-07-02-S13 -- FINAL ASSEMBLY SURFACE SHIPPED: LRC14Assembly.lean builds -- lrc14_endgame = LRC(14) from exactly the two remaining named node-hypotheses, live module map inline; the endgame is now a visible shrinking surface (HYP-3870)
+
+Prompt (owner): THM-604 origin-nest over Region, module 4 interface, module 7 schema, final assembly -- with frequent pull/push integration.
+
+SURVEY: klein completed the FULL [LEAN] flip on the L_y census (all six rows k=8..13 native_decide-verified); opus landed cert_ladder' (sharp budgets) + LRCLadderPack (first multi-cluster certified 13-runner family); no assembly file existed -- took it as the highest-value landable artifact of the four assigned (it pins the other three's target signatures).
+
+LRC14Assembly.lean (green, 2 rounds): theorem lrc14_endgame (hfloor) (hpartA) : LRC14Statement via the skeleton's glue, with the CURRENT ingredient map documented inline: hfloor <- klein's machine-checked censuses + kps witness-cert families + opus ladder packs (censuses [LEAN]; remaining = case-split bookkeeping); hpartA <- CombPatterns THM-605(i) complete + kps/opus cert_ladder + wrap satellite (floors + recursion glue [LEAN]; remaining = fuel-checker soundness instantiation).  Plus the sieve sanity example (non-covering branch discharged unconditionally).  THE CONTRACT: the file is DONE when the parameter list is EMPTY -- each agent's push now shrinks a visible named surface instead of an abstract ledger row.
+
+Remaining from my assigned four: origin-nest over Region; module-4 interface (opus's open question); module-7 unified schema -- all surveyed unclaimed, target signatures now pinned by the assembly file.
+
+FILES: LRC14Assembly.lean + root import; HYP-3870.
+
+NEXT: (a) module-6 soundness -> hpartA instantiation (the single biggest parameter-shrinker); (b) hfloor case-split bookkeeping over klein's tables; (c) origin-nest over Region; (d) module-7 schema.
 
 ## opus-2026-07-02-S40 -- cert_ladder' SORRY-FREE FIRST BUILD (THM-606's sharp per-level-budget form; 0 <= delta relaxation realizes no-accumulation with mu_d = 0) + the S36 regression row that uniform-mu rejects (HYP-3909)
 

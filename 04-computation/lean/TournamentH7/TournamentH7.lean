@@ -233,3 +233,4 @@ import TournamentH7.PolygonMirskyNewman
 import TournamentH7.DangerousPatterns
 import TournamentH7.BonferroniTruncation
 import TournamentH7.CombPatterns
+import TournamentH7.LRC14Assembly

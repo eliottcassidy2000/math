@@ -1,18 +1,10 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-{}
 =======
 {
-  "session_start": "2026-07-02T02:25:45.866931",
-  "start_commit": "a202b6d4ffdc231a41d57da777443cc0996c3ef1",
-=======
-{
-  "session_start": "2026-07-02T02:25:27.022395",
-  "start_commit": "86f91a733b87605f2156567276827931fc575e0f",
->>>>>>> Stashed changes
+  "session_start": "2026-07-02T02:42:08.042378",
+  "start_commit": "c63c87ad459c90f35329a86a671bce75a7785288",
   "pushed": false,
   "message_sent": false
+<<<<<<< HEAD
 }
 >>>>>>> Stashed changes
 =======
@@ -26,4 +18,6 @@
 >>>>>>> Stashed changes
   "pushed": false,
   "message_sent": false
+=======
+>>>>>>> 8158bb523 (mac-mini-2026-07-02-S13: LRC14Assembly.lean -- lrc14_endgame pins LRC(14) to exactly two named remaining hypotheses with live module map; sieve sanity example; the endgame is a visible shrinking surface; root import; HYP-3870)
 }
