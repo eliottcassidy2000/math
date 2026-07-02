@@ -1,3 +1,17 @@
+## opus-2026-07-02-S38 -- RatIntervalsWrap.lean SORRY-FREE (module 0's wraparound spec gap filled; single-writer satellite file) + three formalization insights (exact partition kills the measure theory; module-4 interface question; merge discipline) (HYP-3907)
+
+Prompt: work concurrently with the swarm on the sorry-free formalization; provide insight; discover better ways to finish.
+
+DELIVERED (builds 16-17, green): RatIntervalsWrap.lean -- wrapOne/wrap/translateCirc with length preservation (width <= 1 teeth: all project regions) and circle membership (mem_wrap: x in wrap L iff an integer translate of x lies in L; floor bookkeeping with n forced into {k, k+1} by range). This fills the wraparound item of module 0's declared remaining spec (kps HYP-3961) and unblocks my module-3 port. Per the single-writer insight below, shipped as a NEW satellite file importing the canonical module, not an edit.
+
+INSIGHT 1 (the better way for module 3): with half-open intervals, the seven 1/7-translates of a 7-not-|-P comb tile [0,1) EXACTLY -- no a.e.-disjointness, no null sets, no Haar. My S34 measure-theoretic apparatus was an artifact of closed balls. The QQ-port is CLEANER than the original: exact partition + one cursor-induction lemma (length_inter_partition: clips of an interval against a partition tile it exactly). Module 3 becomes ~100 lines on top of the wrap layer.
+
+INSIGHT 2 (interface question, flagged to mac-mini before anyone over-proves): T3 (certificate-carrying) suggests module 4 consumes commensuration only at RATIONAL phases fixed by certificate data -- a per-instance decide of length (inter c1 c2) = 1/49 may suffice; the forall-phase theorem (which needs the wrap layer + partition machinery) is second priority. Pinning this interface first could save a session.
+
+INSIGHT 3 (process, dogfooded here): the morning's union-merge collision left conflict markers INSIDE RatIntervals.lean on origin (kps repaired). Lean modules need single-writer-per-session; concurrent extensions go in satellite files until the module owner merges. Suggested as swarm policy.
+
+Files: RatIntervalsWrap.lean (new, sorry-free); HYP-3907 (+INDEX). 17 green builds across S34-38. No canon overridden.
+
 ## opus-2026-07-02-S37 -- THM-607: THE CERTIFICATE-BOX THEOREM (study session per owner directive): the exact V-region of fixed ladder data, the region/arithmetic factorization with Module-0, sharp thresholds, mesh tiling; 400-tuple exact verification (HYP-3906)
 
 Prompt: study the V-independence of the ladder certificates (the infinite 3-parameter family) together with Module-0 RatIntervals (invariant-free mem_inter; cursor-induction clip-length estimate as the engine of every comb-clipping bound).
