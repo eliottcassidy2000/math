@@ -249,5 +249,5 @@ import TournamentH7.OriginNestQ
 import TournamentH7.LRC14CompletenessSurface
 import TournamentH7.FarElementRate
 import TournamentH7.RateLemma
-import TournamentH7.LRCWindowPack1
+-- import TournamentH7.LRCWindowPack1  -- WIP: 0xC0000005 crash at file scale (both decide flavors); see HYP-3916 forensics
 import TournamentH7.LRCKernelGate
