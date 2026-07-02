@@ -11,6 +11,17 @@ STATUS TOWARD UNCONDITIONAL: hfloor <- case-split over klein's verified tables +
 FILES: FarElementRate.lean + root import; HYP-3873.
 
 NEXT: (a) the cert_ladder' -> Mreach_ge_of_witness composition (the hpartA discharge); (b) the hfloor case-split assembly; (c) the per-HNF-class base list run.
+## opus-2026-07-02-S44 -- THE RATE LEMMA IN LEAN: rate_lemma_component sorry-free via tooth-in-shifted-cell containment; hpartial = the one named residue (discharge pattern machine-checked); hpartA integrated as kps-done (HYP-3913)
+
+Prompt: finish the fuel-checker instantiation and the rate lemma's Lean transcription myself; pull/push frequently; re-route on new info.
+
+PULL-DRIVEN INTEGRATION (efficiency as directed): kps-S10's LRC14Dispatch.lean landed overnight -- Mreach_ge_iff_lonely (the module-6->skeleton instantiation) KERNEL-PURE, ladderOK fuel gate, matchesRow dispatch, DispatchComplete W as the concrete completeness parameter. The fuel-checker instantiation is DONE; duplicating it would have wasted the session. Verified in the corpus build; remaining dispatch parameters (DispatchComplete W, hwindow) are kps-file conventions.
+
+THE RATE LEMMA (builds 27-29, GREEN; corpus 8593): RateLemma.lean -- klein's HYP-4001(b) over Region. THE PROOF DESIGN: each tooth ((k+phi-r)/v, (k+phi+r)/v) is CONTAINED in cell k of the SHIFTED uniform chain starting at (phi-r)/v (width 2r <= 1) => toothClip <= min(2r/v, cellClip) [toothClip_le, proved; the fraction arithmetic done via field_simp-equality + div_nonneg, no lemma-name roulette]. Sum-split identity (list induction) + hcover (chain-clip sum <= b-a: kps's clip_chain_sum in inequality form) + hpartial (the excess of min over 2r*cellClip <= two end-corrections: THE two-partial-cells bound, floor-uniqueness at each endpoint) => Sum toothclips <= 2r(b-a) + 4r/v. rate_lemma_component takes hcover+hpartial as parameters (endgame pattern, sorry-free); BOTH + the assembled bound machine-checked at the S36 level-1 parameters (native_decide x3) demonstrating per-instance dischargeability. STATUS: the last unformalized mathematical statement is now PROVED MODULO hpartial -- a named, finite-flavored, per-instance-decidable sub-lemma whose general proof is the floor-uniqueness two-endpoint argument (~60 lines, either klein's or my next session).
+
+NOTE: this lemma is the S32 simultaneous-peel inequality (HYP-3900) come full circle -- the same counting bound that killed the false uniform-arc-count blocker in the measure route now closes the witness route's peel, formalized against kps's chain engine.
+
+Files: RateLemma.lean (new, sorry-free, root-registered); HYP-3913 (+INDEX). 29 green builds S34-44.
 
 ## kind-pasteur-2026-07-02-S10 -- THE DISPATCH LAYER: Mreach<->lonely equivalence (module-6->skeleton instantiation, kernel-pure) + ladderOK fuel gate + executable census matchers + TWO concrete completeness surfaces (DispatchComplete W; census+peel in Lonely vocabulary composing opus-S43's induction) (HYP-3967)
 
