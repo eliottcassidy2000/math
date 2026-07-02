@@ -178,6 +178,7 @@ import TournamentH7.ProductSum
 import TournamentH7.OpSymmetry
 import TournamentH7.LonelyRunner
 import TournamentH7.LonelyRunnerMathlib
+import TournamentH7.LRCGapSurplusLedger
 import TournamentH7.LRCDeathChain
 import TournamentH7.LRCFactorialAtom
 import TournamentH7.LRCBooleanTypeCut
