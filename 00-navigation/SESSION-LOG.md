@@ -1,3 +1,20 @@
+## kind-pasteur-2026-07-02-S14 -- THE PEEL AGGREGATION ASSEMBLY COMPLETE, ALL KERNEL-PURE (LRCPeelAssembly.lean: iterated partition inequality + the HALF-COMB SPLIT + damped_peel + the quantitative iterating gate + the wrap-free composite gate) (HYP-3971)
+
+Prompt (owner): finish the module-6 fuel-checker instantiation + the far-element rate lemma transcription myself, then the HNF tables / DispatchComplete evaluation / peel aggregation; aim for unconditional LRC14Statement; pull/push frequently.
+
+DELIVERED (LRCPeelAssembly.lean, 11 build rounds + a corrupt-olean forensic detour, registered, corpus green; ALL FOUR PILLARS [propext, Classical.choice, Quot.sound] -- zero native_decide in the peel chain):
+ - **length_diffF_ge** (the ITERATED PARTITION INEQUALITY): length(diffF L B) >= length L - length(inter L B) for any live subtrahend. Ingredients: clip_cut_pieces_le (the two cut pieces are disjoint sub-pieces: their clips against any interval total at most the whole), length_inter_diff1F_le (intersections only shrink under subtraction), the S12 filtered partition identity, and the S9 append-split.
+ - **THE HALF-COMB SPLIT** (the design move of the session): the phase-0 danger comb WRAPS at the seam -- instead of transcribing a wrapped-rate variant (~250 lines), split the danger set as frac(sx) in [0,h) u [1-h,1) = dangerPair = TWO NON-WRAPPING combs at radius h/2, phases h/2 and 1-h/2. The S11 rate lemma applies to each half VERBATIM with the same sharp constant; the completeness bridge (not_mem_dangerPair_forall) needs no wrap layer at all.
+ - **damped_peel** (THE PEEL AGGREGATION THEOREM): length(goodRegion2 (E ++ [w]) h) >= (1 - 2h) * length(goodRegion2 E h) - #pieces * 4h/w. Adding a far runner costs the damped factor plus an O(1/w) boundary fee. goodRegion2_append makes the peel literally one diffF.
+ - **goodRegion2_pos_of_peel**: the explicit-threshold ITERATING gate (epsilon-length + w above threshold -> extended good region still positive) -- the induction step for multi-far peeling.
+ - **exists_lonely_of_goodRegion2_pos**: the wrap-free composite gate (positive good length -> 13-family lonely), mirroring S13's pipeline over dangerPair.
+
+FORENSICS (fleet-relevant): my S11 FarElementRate olean was hit by the corrupt-olean cascade opus-S47b hotfixed (0xC0000005 = the segfaults I bisected to an IMPORTS-ONLY file); purge of package artifacts + fresh build fixed everything. LESSON (now mandatory practice): check lake/lean EXIT CODES every round -- grep-for-error alone can miss a segfaulting round and report false green.
+
+STATE AFTER THIS SESSION: the peel leg of the census+peel induction is now FORMAL and QUANTITATIVE end-to-end (partition inequality -> rate bound -> damped inequality -> iterating gate -> loneliness). With klein-S107's verification (corpus green, zero sorryAx, distance = exactly two finite computations: DispatchComplete W + hwindow) the unconditional-LRC14 remainder = those finite computations + instantiating the peel induction over the census (the composite induction: base = census classes at length >= epsilon by decide, step = goodRegion2_pos_of_peel).
+
+FILES: LRCPeelAssembly.lean (new, registered); HYP-3971 INDEX; this entry. No canon overridden.
+
 ## klein-2026-07-02-S107 -- THE FULL-CORPUS VERIFICATION AT HEAD: 8597 jobs GREEN, ZERO sorryAx anywhere; AxiomAudit built => everything beneath the final surface is kernel-checked PROOF; the verified unconditional distance = exactly TWO finite computations (DispatchComplete W, hwindow) (HYP-4012)
 
 Prompt (owner): finish remaining Lean pieces; get the proof unconditionally verified.
