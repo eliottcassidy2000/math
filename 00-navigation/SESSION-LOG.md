@@ -1,3 +1,23 @@
+## kind-pasteur-2026-07-02-S8 -- MODULE-3 KEYSTONE DELIVERED: THE DIAL LEMMA (seventh-translate membership = ONE integer congruence) + interval-level K1 + the K2 engines, LRCSevenTranslate.lean FIRST BUILD CLEAN, all std axioms; two collisions absorbed by protocol (HYP-3965)
+
+Prompt (owner): module 3 + module-2 remainder, self-execute, pull/push from git a bunch.
+
+PULL-DRIVEN REROUTES (3 collisions this session, all resolved by protocol):
+ 1. MODULE-2 REMAINDER: built ForcedOverlap.lean sorry-free (std axioms; the Bezout-as-certificate-data variant) -- then the sync pull showed mac-mini-S12's exists_double_cover had pushed FIRST and subsumes it. DELETED mine per first-pusher rule. LORE KEPT: in thin import closures (RatIntervals-only), take Bezout data (c d : Z) (hcd : c*P + d*Q = 1) as theorem ARGUMENTS instead of IsCoprime -- zero import risk, and consumers carry the cocertificate anyway.
+ 2. MODULE-3 per-instance rows: opus-S41's CommensurationQ.lean landed (overlapQ rows = 1/49 + control) -- my queued instance-interface work, done by them. Not duplicated.
+ 3. THE KEYSTONE ITSELF: klein-S102b pushed their K1-arith (ZMod 7 residue selector) into LRCSevenTranslate.lean while my full file was in flight. HAND-MERGED per never-union-merge law: their theorem VERBATIM (import narrowed Mathlib -> Mathlib.Data.ZMod.Basic), my interval layer appended; green; klein messaged directly to stop the race.
+
+DELIVERED (LRCSevenTranslate.lean, the klein HYP-4007 keystone; interval-level part FIRST BUILD CLEAN; all [propext, Classical.choice, Quot.sound]):
+ - **THE DIAL LEMMA** (mem_sevenTranslate_iff_dvd): for x in [0,1), mem x (translateCirc (j/7) (comb P (1/14) psi)) <=> 7 | floor(7(P x - psi) + 1/2) - P*j. Membership in the j-th seventh-translate IS one integer congruence; the rational x enters only through the dial reading N. The seven-translate tiling is thereby ARITHMETIZED: the translates are the seven residues of N mod 7 twisted by P.
+ - **K1** (sevenTranslate_existsUnique + cover + disjoint): for 7 not | P, every x in [0,1) lies in EXACTLY ONE of the seven translates, at EVERY phase -- no null sets, no measure theory. Proof = dial + dial_existsUnique (Euclidean N = 7M + i; mod-7 inverse table 1<->1, 2<->4, 3<->5, 6<->6; every branch closed by omega).
+ - **K2 ENGINES**: clip_chain_sum (the telescoping cursor: clip-lengths of [a,b) against N abutting uniform cells sum EXACTLY to max 0 (b - max a c)); length_inter_append_right; length_inter_comm (the Fubini swap for the quadratic intersection; + length_inter_nil, clip_comm). The swap route turns Sigma_j length(inter L T_j) into length(inter (T_0++...++T_6) L) with NO sorting of phase-dependent teeth -- the route past the sorted-endpoint nightmare.
+
+REMAINING K2/K3 GLUE (mapped in file header + klein letter, claimable): (a) Tile lo hi discipline = clip_chain_sum with variable-width abutting cells (same induction); (b) the 7P wrapped teeth tile [0,1) as a LENGTH statement (pointwise = K1 + intra-comb uniqueness, same floor argument); (c) K3 general form = K2 at L = wrap(comb Q r phi) + seven-term equality via 1/7-periodicity (needs circle-translation invariance of inter-length; zone-split at 1-t pre-translation). Per-instance K3 rows already machine-checked (opus) => general form is polish-tier unless module 4 quantifies over phases (opus INSIGHT 2 still governs).
+
+MODULE MAP AFTER THIS SESSION: 0 core+wrap DONE; 1-2 DONE (avoidance + forced + gap-fill); 3 = per-instance DONE (opus) + keystone K1 DONE (this session) + K2/K3 glue mapped; 4 = interface question (mac-mini S13's LRC14Assembly pins the two remaining node-hypotheses hfloor/hpartA); 5, 6 core DONE; 7 schema (klein). The DAG is nearly closed at the arithmetic level.
+
+FILES: LRCSevenTranslate.lean (merged, registered); ForcedOverlap.lean (created then deleted, dedup); HYP-3965 INDEX entry; klein direct message. No canon overridden.
+
 ## klein-2026-07-02-S102 -- MODULE-3 FRAME AUDIT DONE (LRCCommensuration is RR/measure-theoretic: UnitAddCircle + volume + ENNReal at lines 32-67 => the QQ-BRIDGE IS REQUIRED) + the keystone SPEC pinned against the wrap API; module-2 remainder confirmed DONE by mac-mini-S12 (pull-check, no duplication) (HYP-4007)
 
 Prompt (owner): module 3 + module-2 remainder myself; pull/push frequently.
