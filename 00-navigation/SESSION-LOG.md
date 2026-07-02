@@ -19,6 +19,17 @@ THE STUDY (reflection shape-space-certificates-and-the-free-clip-kps-S5.md):
  (1) V-INDEPENDENCE = the rotation identity one level down: arcSafe reads only offsets/phases, so certificates are constant on the fibers of speeds-space -> shape-space; ONE finite rational datum certifies an infinite fiber (opus THM-606 depth-3: V1-box x V2-box x V3-tail, exact tau = 65180143/180000000 -- the first multi-cluster multi-parameter certified 13-runner family; my S1 tails were the 1-parameter case). THE COVERING CASE OF LRC(14) IS A STATEMENT ABOUT A FINITE SHAPE SPACE -- speeds are coordinates the proof never reads; THM-602 enumerates shapes, not speeds; MSS 91^12 said it abstractly, the certificate layer makes it constructive in bytes. THM-606 improvement studied: real-window-start downward induction pays CONSTANT band inflation vs my linear-in-depth grading -- depth is free; only window separation costs.
  (2) THE FREE CLIP: the no-hypothesis-on-A clause of length_inter_le_left is what makes module 6 feasible -- fuel-recursion intermediates are unnormalized clip outputs; one-sided Norm (constructor combs only) means NO invariants threaded; degenerate pairs cost 0 and stay degenerate. The cursor trichotomy = THM-602 Part A at list level; the estimate = the S28 arc-count budget read from the prover side (the adversary pays in arc count <-> the prover never pays for clipping).
  (3) SYNTHESIS: a certificate is a shape-space point whose fiber is an infinite family, checked by clipping rational lists against Norm combs at zero invariant cost -- a finite pack of small data + one soundness theorem is on track to BE the LRC(14) proof.
+## mac-mini-2026-07-02-S9 -- SWARM UNBLOCKED: RatIntervals merge collision repaired (union driver had committed UNRESOLVED MARKERS interleaving kps-S4's core with my S8 layer -- module 0 silently broken); both versions reconstructed from git objects and merged cleanly; lake GREEN (HYP-3866)
+
+Prompt (owner): keep the loop running; pull/push frequently; heads-up about other agents; don't get stuck.
+
+THE CYCLE THAT MATTERED: pulled -> noticed kps-S4 had ALSO landed module 0 -> inspected -> the file contained unresolved conflict markers (the union merge driver interleaved the two versions across two blocks and COMMITTED the markers; Lean errors appeared as cryptic 'unknown tactic' far from the markers).  Two naive in-place repairs failed (the interleave split each version across both blocks).  CLEAN FIX: git show 7d72609ce (kps) and 054b4d77f (mine) recovered both pristine versions; merged as kps's 345-line core (canonical) + my comb/len_comb layer in its own namespace with a dedup note; lake builds green in 9s.
+
+WORKFLOW LESSON (canonized in the HYP entry): .lean files must NOT go through the union merge driver -- on any collision, reconstruct per side from git objects and concatenate namespaces.  Recommend adding *.lean merge=binary (or manual) to .gitattributes -- flagged to the owner/coordinator.
+
+FILES: repaired RatIntervals.lean; HYP-3866.
+
+NEXT: (1) dedup the two namespaces (port comb into kps core) -- polish; (2) modules 1-2 per the playbook; (3) .gitattributes fix (owner).
 
 ## kind-pasteur-2026-07-02-S4 -- MODULE 0 LANDED: RatIntervals.lean SORRY-FREE, STANDARD AXIOMS ONLY (the playbook's blocking library; mem_inter INVARIANT-FREE; cursor-induction length monotonicity) -- the swarm is unblocked (HYP-3961)
 
