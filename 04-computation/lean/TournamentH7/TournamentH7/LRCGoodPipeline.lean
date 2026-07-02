@@ -85,16 +85,17 @@ theorem not_mem_wrap_comb_forall {s : ℕ} (hs : 0 < s) {h : ℚ} (hh2 : 2 * h �
 /-! ## The good region and the composite gate -/
 
 /-- The good region of a speed list at band `h`: the unit window minus every wrapped
-danger comb. -/
+danger comb.  Built with the COMPUTATIONAL difference (`diffF`, live pieces only) so
+per-class positivity is one tractable `native_decide`. -/
 def goodRegion (speeds : List ℤ) (h : ℚ) : Region :=
-  diff [((0 : ℚ), 1)] (speeds.flatMap fun s => wrap (comb s.toNat h 0))
+  diffF [((0 : ℚ), 1)] (speeds.flatMap fun s => wrap (comb s.toNat h 0))
 
 /-- A member of the good region is inside `[0,1)` and `h`-safe for every speed against
 every integer. -/
 theorem good_mem_safe {speeds : List ℤ} {h : ℚ} (hh2 : 2 * h ≤ 1)
     (hpos : ∀ s ∈ speeds, 0 < s) {x : ℚ} (hx : mem x (goodRegion speeds h)) :
     (0 ≤ x ∧ x < 1) ∧ ∀ s ∈ speeds, ∀ m : ℤ, h ≤ |(s : ℚ) * x - m| := by
-  obtain ⟨hwin, havoid⟩ := mem_diff.mp hx
+  obtain ⟨hwin, havoid⟩ := mem_diffF.mp hx
   obtain ⟨p, hp, hx1, hx2⟩ := hwin
   rcases List.mem_singleton.mp hp with rfl
   simp only at hx1 hx2
@@ -122,6 +123,16 @@ theorem exists_lonely_of_goodRegion_pos (v : Fin 13 → ℤ) (hv : ∀ i, 0 < v 
   have hsafe := good_mem_safe (by norm_num) hpos hx
   exact ⟨((x : ℚ) : ℝ), LRC14.lonely_of_rat_forall fun i m =>
     hsafe.2 (v i) (List.mem_ofFn.mpr ⟨i, rfl⟩) m⟩
+
+/-- End-to-end pipeline test: the consecutive block `{3,…,15}` is lonely because its
+good region has positive computed length — ONE `native_decide`, no witness search. -/
+example : ∃ t : ℝ, Lonely 14 (LRC14.blockFamily 15) t := by
+  apply exists_lonely_of_goodRegion_pos
+  · intro i
+    unfold LRC14.blockFamily
+    have := i.isLt
+    omega
+  · native_decide
 
 end RatIntervals
 end LonelyRunner

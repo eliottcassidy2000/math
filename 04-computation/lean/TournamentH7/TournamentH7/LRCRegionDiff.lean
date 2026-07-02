@@ -223,6 +223,71 @@ theorem length_diff1_add_inter (L : Region) {q : ℚ × ℚ} (hq : q.1 ≤ q.2) 
       rw [hL, hlenp, ← length_cut_add_clip p hq]
       linarith [ih]
 
+/-! ## Computational variants: degenerate pieces dropped
+
+The plain `diff` keeps degenerate pieces, which is fine for proofs but doubles the list
+per subtraction — exponential under evaluation.  The filtered variants keep the piece
+count linear (a live piece per retained endpoint); membership is unchanged because
+degenerate pieces are memberless. -/
+
+/-- Computational cut: only live pieces. -/
+def cutF (p q : ℚ × ℚ) : Region := (cut p q).filter fun r => decide (r.1 < r.2)
+
+/-- Computational region-minus-interval. -/
+def diff1F (L : Region) (q : ℚ × ℚ) : Region := L.flatMap fun p => cutF p q
+
+/-- Computational region difference. -/
+def diffF (L B : Region) : Region := B.foldl diff1F L
+
+theorem mem_cutF {x : ℚ} {p q : ℚ × ℚ} :
+    mem x (cutF p q) ↔ (p.1 ≤ x ∧ x < p.2) ∧ ¬ (q.1 ≤ x ∧ x < q.2) := by
+  rw [← mem_cut]
+  unfold cutF mem
+  constructor
+  · rintro ⟨s, hs, hx⟩
+    exact ⟨s, (List.mem_filter.mp hs).1, hx⟩
+  · rintro ⟨s, hs, hx1, hx2⟩
+    refine ⟨s, List.mem_filter.mpr ⟨hs, ?_⟩, hx1, hx2⟩
+    exact decide_eq_true_eq.mpr (lt_of_le_of_lt hx1 hx2)
+
+theorem mem_diff1F {x : ℚ} {L : Region} {q : ℚ × ℚ} :
+    mem x (diff1F L q) ↔ mem x L ∧ ¬ (q.1 ≤ x ∧ x < q.2) := by
+  unfold diff1F
+  constructor
+  · rintro ⟨s, hs, hx⟩
+    simp only [List.mem_flatMap] at hs
+    obtain ⟨p, hp, hsp⟩ := hs
+    have := mem_cutF.mp ⟨s, hsp, hx⟩
+    exact ⟨⟨p, hp, this.1⟩, this.2⟩
+  · rintro ⟨⟨p, hp, hxp⟩, hq⟩
+    obtain ⟨s, hsp, hx⟩ := mem_cutF.mpr ⟨hxp, hq⟩
+    exact ⟨s, List.mem_flatMap.mpr ⟨p, hp, hsp⟩, hx⟩
+
+/-- Membership through the computational difference — same characterization as `mem_diff`. -/
+theorem mem_diffF {x : ℚ} : ∀ {B : Region} {L : Region},
+    mem x (diffF L B) ↔ mem x L ∧ ∀ q ∈ B, ¬ (q.1 ≤ x ∧ x < q.2) := by
+  intro B
+  induction B with
+  | nil =>
+      intro L
+      unfold diffF
+      simp
+  | cons q B ih =>
+      intro L
+      unfold diffF at ih ⊢
+      simp only [List.foldl_cons]
+      rw [ih, mem_diff1F]
+      constructor
+      · rintro ⟨⟨hL, hq⟩, hB⟩
+        refine ⟨hL, ?_⟩
+        intro s hs
+        rcases List.mem_cons.mp hs with rfl | hs'
+        · exact hq
+        · exact hB s hs'
+      · rintro ⟨hL, hall⟩
+        exact ⟨⟨hL, hall q (List.mem_cons_self ..)⟩,
+          fun s hs => hall s (List.mem_cons_of_mem _ hs)⟩
+
 /-! ## The witness extractor -/
 
 /-- Positive length yields an explicit member: the left endpoint of any live interval.

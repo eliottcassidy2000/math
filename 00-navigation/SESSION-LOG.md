@@ -9,6 +9,20 @@ DELIVERED: (1) LRCWindowPack1.lean -- ALL 966 primitive covering 13-tuples with 
 STATE AFTER: hwindow = band packs up to the dispatch cut W (mechanical generator re-runs); DispatchComplete W = kps's pack-ingestion evaluation. The unconditional theorem remains exactly those two finite computations away -- both now have running engines and demonstrated slices.
 
 Files: LRCWindowPack1.lean (966 rows), lrc14_window_pack_generator (repo artifact); HYP-3915 (+INDEX). 31+ green builds S34-46.
+## kind-pasteur-2026-07-02-S13 -- THE GOOD-SET PIPELINE CLOSED + MADE COMPUTABLE: danger-comb completeness bridge (kernel-pure) + composite gate (one length computation -> Lonely) + diffF (exponential-blowup fix) + END-TO-END TEST ({3..15} lonely by ONE native_decide) (HYP-3970)
+
+Prompt (owner): finish remaining wiring pieces; improve the formalization.
+
+DELIVERED (full corpus 8598 jobs green; all new theorems kernel-pure):
+ 1. **not_mem_wrap_comb_forall (LRCGoodPipeline.lean)** -- THE DANGER-COMB COMPLETENESS BRIDGE, the last named wiring piece: a point of [0,1) outside the wrapped phase-0 comb of speed s is h-far from EVERY integer (the wrap tooth covers the seam at 1; Euclidean witness k = m mod s, n = -(m div s); the half-open teeth give the closed-threshold Lonely form for free).
+ 2. **goodRegion + good_mem_safe + exists_lonely_of_goodRegion_pos** -- THE COMPOSITE GATE: a 13-family of positive speeds whose good region has positive computed length is lonely. ONE rational length computation per family/class, NO witness search. The second census-leg gate (dual to ratWitnessOK witness tables).
+ 3. **THE COMPUTABILITY FIX (LRCRegionDiff.lean): cutF/diff1F/diffF + mem_cutF/mem_diff1F/mem_diffF** -- the plain diff keeps degenerate pieces = 2 pieces per cut = EXPONENTIAL under evaluation (2^200 for a 13-family good set); the filtered variants keep the piece count linear; membership characterization identical (degenerates memberless). goodRegion switched to diffF.
+ 4. **END-TO-END TEST**: example {3,...,15} lonely via exists_lonely_of_goodRegion_pos + ONE native_decide computing 0 < length(goodRegion ...) -- the pipeline is not just formalized but computable and TESTED (the tight family {1..13} would correctly FAIL this gate: its closed-threshold good set has length 0).
+ 5. **Refactor**: lonely_of_rat_forall extracted in LRCRatWitness.lean (the shared Q->R loneliness lift; ratWitness soundness now a 1-liner over it).
+
+THE CENSUS LEG IS NOW MECHANIZED END TO END: per shape-class, base positivity = one native_decide row through the composite gate. Remaining for unconditional LRC14Statement: the shape-class tables themselves (HNF census generation, mac-mini lane), the DispatchComplete W evaluation, and the peel aggregation assembly -- all generation + decide, zero new lemmas needed.
+
+FILES: LRCGoodPipeline.lean (new, registered), LRCRegionDiff.lean (+F variants), LRCRatWitness.lean (refactor); HYP-3970 INDEX; this entry. No canon overridden.
 
 ## kind-pasteur-2026-07-02-S12 -- TWO ENGINES FOR THE FINAL SURFACE: the RATIONAL-WITNESS GATE (any (family, rational time) row -> Lonely by one decide) + REGION DIFFERENCE (partition identity, witness extractor) -- both kernel-pure (HYP-3969)
 
