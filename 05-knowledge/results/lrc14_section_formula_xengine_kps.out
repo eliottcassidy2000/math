@@ -1,0 +1,35 @@
+====================================================================================================
+ X1: CLOSED-FORM SECTION IDENTITIES (exact)
+====================================================================================================
+  A(1, 2) = 36/49  (= (1-w)^2 = 36/49? True)   grid M = 4
+  A(3, 10) = 36/49  (= (1-w)^2 = 36/49? True)   grid M = 22
+  A(5, 37) = 36/49  (= (1-w)^2 = 36/49? True)   grid M = 97
+  A(1, 2, 3) = 61/98  (= 61/98? True)   grid M = 9
+  A(10, 24, 38) = 61/98  (= 61/98? True)   grid M = 113
+
+====================================================================================================
+ X2: x-ENGINE REPRODUCES THE S32 LEDGER EXACTLY (rational equality) + timing
+====================================================================================================
+  k= 2: x-engine A =                    36/49   == c-engine? True   (M = 97, 0.00s)
+  k= 3: x-engine A =                    61/98   == c-engine? True   (M = 113, 0.00s)
+  k= 4: x-engine A =                    11/21   == c-engine? True   (M = 17, 0.00s)
+  k= 5: x-engine A =                  127/294   == c-engine? True   (M = 37, 0.00s)
+  k= 6: x-engine A =                  141/392   == c-engine? True   (M = 65, 0.00s)
+  k= 7: x-engine A =                  173/588   == c-engine? True   (M = 65, 0.00s)
+  k= 8: x-engine A =                  169/686   == c-engine? True   (M = 99, 0.00s)
+  k= 9: x-engine A =               4267/20580   == c-engine? True   (M = 99, 0.01s)
+  k=10: x-engine A =               4279/24696   == c-engine? True   (M = 141, 0.01s)
+  k=11: x-engine A =               9451/61740   == c-engine? True   (M = 171, 0.01s)
+  k=12: x-engine A =         4615489/35315280   == c-engine? True   (M = 365, 0.02s)
+  k=13: x-engine A =     144699147/1267426160   == c-engine? True   (M = 549, 0.04s)
+  ALL k=2..13 REPRODUCED EXACTLY: True
+
+====================================================================================================
+ X3: SCALE DEMO — exact census over ALL 7-subsets of {1..13} (primitivized)
+====================================================================================================
+  patterns evaluated (after primitivize + translation dedup): 924   (5.0s)
+  MIN A = 173/588 = 0.294218
+  argmin difference-patterns (first 4): [(0, 2, 3, 4, 5, 6, 8)]
+  next values: 521/1764 (0.2954), 869/2940 (0.2956), 73/245 (0.2980)
+  min vs witnessMP: x5.21   ALL >= MP: True
+DONE.

@@ -108,6 +108,36 @@ Margins over witnessMP = 14249/252252: ×13.01, ×11.02, ×9.27, ×7.65, ×6.37,
 ×3.07, ×2.71, ×2.31, ×2.02. Pool-certified minima at k = 6, 8, 10 equal the argmins
 (difference-pattern degeneracies: two patterns each at 141/392 and 4279/24696).
 
+## Lean-facing restatement (HYP-3956, S33): the SECTION FORMULA — no duality, no subtorus Haar
+
+Doing the c-integral in closed form per x-section (the free-c set at fixed x has measure exactly
+the gap surplus) restates the whole object as a ONE-CIRCLE integral:
+
+    (SF)  A(U) = ∫₀¹ F_U(x) dx,   F_U(x) = Σ_{circular gaps g of {frac(u_i x)}} (g − w)⁺,
+
+and every d-fold band overlap likewise becomes a one-circle integral of an explicit piecewise-
+linear integrand — e.g. vol(B_i ∩ B_j) = ∫₀¹ (w − ‖(u_i−u_j)x‖)⁺ dx = w² (one substitution + a
+one-variable integral), and the AP-triple ∫(w − 2‖mx‖)⁺ = w²/2 = 2h². **The Lean inputs reduce
+to: Fubini on T², the AddCircle ball volume, and measure-preservation of x ↦ m·x — all in
+mathlib.** The compact-group push / Pontryagin-duality proof above remains the structural story;
+(SF) is the mechanization route.
+
+**Enumeration.** F_U is piecewise-affine in x with ALL breakpoints in
+{ j/m } ∪ { (7j±1)/(7m) } over the pairwise DIFFERENCES m = u_j − u_i only (phase collisions and
+gap-through-w crossings). Consequently:
+- breakpoint counts stay tiny (17–549 across the k = 2..13 argmin patterns, vs the c-engine's
+  Σ 4·u·u′ sets), and the exact integral is the midpoint sum over breakpoint intervals;
+- all breakpoints lie in (1/M)ℤ with M = 7·lcm(differences), giving the Lean-native identity
+  **(GT): A(U) = (1/M)·Σ_{r<M} F_U((2r+1)/(2M)) — a finite sum of rationals**; the single generic
+  analytic lemma needed is "the integral of a piecewise-affine function equals its midpoint sum on
+  any refining grid".
+
+**Cross-verification (lrc14_section_formula_xengine_kps.out):** the x-engine reproduces the ENTIRE
+c-engine ledger k = 2..13 in exact rational equality (two independent enumerations, twelve
+rationals), at 0.00–0.04 s per pattern; and a COMPLETE exact census of all 924 canonical
+(primitivized, translation-deduped) 7-element patterns of {1..13} runs in 5 s: min = 173/588 at
+difference-pattern (0,2,3,4,5,6,8) (= the sampled argmin's translate), all ≥ witnessMP (×5.21).
+
 ## Consequences and scope
 
 1. **The (⋆)-census of HYP-3953 is symbolic**: every term of the c-averaged ledger is an exact

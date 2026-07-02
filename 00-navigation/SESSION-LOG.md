@@ -7,6 +7,26 @@ THM-601 (proved): (i) min_theta ov_{P,Q} = 0 <=> 2r(P+Q) <= 1 -- the functional 
 FILES: THM-601; lrc_exact_pattern_min_table_macmini_S100.py + .out; HYP-3856.
 
 NEXT: (a) closed form for the exact minima (Farey two-term conjecture; table suffices meanwhile); (b) Lean: THM-601(i) is a 10-line mathlib lemma (interval sweep) -- natural next module; (c) the d-fold simplex enumeration run (d <= 5, sum|m| <= 7: a few hundred patterns, each an exact min) = THM-599's eps_d made explicit; (d) integrate into opus's assembled doc + kps's ledger.
+## kind-pasteur-2026-07-01-S33 -- THE SECTION FORMULA: THM-599 restated Lean-first (c-integral in closed form per section => one-circle integral of the gap surplus; NO duality, NO subtorus Haar) + the x-SIDE ENGINE (breakpoints over DIFFERENCES only: 17-549 vs 10^3-10^5; ~100x faster; reproduces the ENTIRE ledger in exact rational equality) + the COMPLETE k=7 pattern-universe census (924 patterns, 5s, min 173/588) (HYP-3956)
+
+Prompt: improve the enumeration or cleverly restate parts so the proof translates better to Lean.
+
+THE RESTATEMENT (canonized as THM-599's "Lean-facing restatement" section): do the c-integral in CLOSED FORM per x-section -- the free-c set at fixed x has measure exactly the gap surplus:
+ (SF) A(U) = Int_0^1 F_U(x) dx, F_U = Sum_gaps (g - w)^+;
+every d-fold band overlap becomes a ONE-CIRCLE integral of an explicit piecewise-linear integrand: pair = Int (w - ||mx||)^+ dx = w^2 (one substitution + a one-variable integral); AP-triple = Int (w - 2||mx||)^+ = w^2/2 = 2h^2. LEAN INPUTS SHRINK TO: Fubini on T^2 + AddCircle ball volume + measure-preservation of x -> mx -- all in mathlib. The compact-group/duality proof stays as the structural story; (SF) is the mechanization route.
+
+THE ENUMERATION IMPROVEMENT: F_U is piecewise-AFFINE in x with breakpoints ONLY at {j/m} u {(7j+-1)/(7m)} over pairwise DIFFERENCES m (phase collisions + gap-through-w crossings). Consequences:
+ (1) COMPUTATION: breakpoint counts 17-549 across the k=2..13 argmins (the S32 c-engine's candidate sets were Sum 4uu' ~ 10^3-10^5); 0.00-0.04s per pattern (~100x at k=13).
+ (2) LEAN FORM: all breakpoints in (1/M)Z, M = 7*lcm(diffs) => (GT): A(U) = (1/M) Sum_{r<M} F_U((2r+1)/(2M)) -- a FINITE SUM OF RATIONALS (Finset.sum of an explicit computable function; evaluation via the breakpoint sum when M is huge). The ONE analytic lemma needed, generic and once: integral of a piecewise-affine function = its midpoint sum on a refining grid. Everything else = rational arithmetic + sorting.
+
+VERIFICATION (lrc14_section_formula_xengine_kps.py + .out):
+ X1: closed-form identities exact (36/49 at three pairs, 61/98 at two AP-triples).
+ X2: THE x-ENGINE REPRODUCES THE ENTIRE S32 LEDGER k=2..13 IN EXACT RATIONAL EQUALITY -- twelve rationals, TWO INDEPENDENT ENUMERATIONS (c-side interval intersections vs x-side gap sums). Strongest pre-Lean correctness certificate the ledger can have.
+ X3: SCALE -- the COMPLETE exact census of ALL 924 canonical (primitivized, translation-deduped) 7-element patterns of {1..13} in 5s: min = 173/588 at difference-pattern (0,2,3,4,5,6,8) (= the S30 sampled argmin's translate -- consistency), runner-ups 521/1764, 869/2940, 73/245; ALL >= witnessMP, min margin x5.21. The k=7 admissible pattern universe is now EXACTLY certified, not spot-checked.
+
+LEAN PLAN (in HYP-3956; pairs with mac-mini HYP-3856's Lean-ready normal form): gapSurplus as a computable Q-function (sort+fold, no reals); the generic piecewise-affine midpoint lemma; A_eq_breakpointSum via sorting-stability ("no collision => order constant => affine"); ledger rows become decide/norm_num facts. Natural neighbors: LonelyRunnerMathlib.lean, LRCThreeGapSampling, mac-mini's polygon file.
+
+HONEST: restatement + engines + census verified and canon-updated; the Lean file itself NOT written this session (the plan names the 4 pieces; the generic affine lemma is the only analysis); k=8..13 full pattern-universe censuses = next mechanical runs (the engine now makes them minutes-scale). LRC(14) NOT proved. Files: lrc14_section_formula_xengine_kps.py (+.out); THM-599 canon addendum; HYP-3956 (+INDEX). No canon overridden.
 
 ## mac-mini-2026-07-01-S99 -- THM-599: the QUINTIC BONFERRONI CLOSURE -- the j >= 8 leg CLOSES at all j <= 13 (cubic fails 12/13; kappa_13 = 2052/7^5 -> (6/7)^j); THM-600 canonizes kps's torus-band theorem; sLRC audit of THM-592..598 PASSED (HYP-3855)
 
