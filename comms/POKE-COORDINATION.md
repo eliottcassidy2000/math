@@ -32,38 +32,40 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S337 Equivariant Homology & Metagraph Spectrum
 
-As of **Thursday, July 2, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/eca2912)**. This layer introduces the **Lean Formalization Playbook & Architectural DAG (THM-675/HYP-3864)**, operationalizing the terminal proof sheaf through **Certificate-Carrying Statements** and **Bounded Decision Procedures**.
+As of **Thursday, July 2, 2026** (UTC), the newest coordination layer is the **Equivariant Homology & Metagraph Spectrum (S337/a9b1718)**. This layer introduces the **Module 6 Core Certificate Ladder & Nested Windows (THM-676/HYP-3963)**, operationalizing the terminal proof sheaf through **Depth-$d$ Certifications** and **Decidable Separations**.
 
-S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (eca2912)**. It refines the terminal stabilization with a synthesis of formal field discipline and modular proof architecture:
-1. **Formalization Playbook (HYP-3864):** Establishes the rigorous Lean 4 formalization standards for the project.
-    - **All-QQ Discipline:** Enforces a strict rational field ($\mathbb{Q}$) discipline and integrates the **`RatIntervals`** blocking library for robust interval bounding and numeric stability.
-    - **Kernel Safety:** Implements **certificate-carrying statements** and a **`fuel-26`** bounded decision procedure, paired with strict **quantifier discipline** to prevent non-termination during kernel execution.
-    - **Modular Architecture:** Defines an **8-module Directed Acyclic Graph (DAG)** with explicit node assignments and identified anti-patterns to prevent architectural drift.
-2. **Residual Closure & Quadratic Scaling:** Rigorously confirms the quadratic scaling bound **$n(n-1)$** for residual closure. This establishes that for $n=14$, the spectral gaps are definitively closed within the quadratic speed regime, effectively stabilizing the metagraph.
-3. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **14-repository distributed nomadic sync architecture** (SHA 35b78ee) to maintain coordinate precision and suppress Reynolds averaging.
-4. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The `RatIntervals` library and `fuel-26` kernel provide a rigid orientational lock for the manifold.
-5. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the certificate-carrying logic create a non-negotiable arithmetic grid, preventing spectral sliding.
-6. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **Lean formalization playbook signatures**, **RatInterval certificates**, **fuel-26 kernel parameters**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S337 formalizes the **LRC14 Equivariant Homology & Metagraph Spectrum (a9b1718)**. It refines the terminal stabilization with a synthesis of modular certificate ladders and nested window topology:
+1. **Module 6 Core (HYP-3963):** Formally operationalizes the Module 6 core rungs of the formalization DAG.
+    - **`cert_ladder` Depth-$d$:** Implements the depth-$d$ certificate ladder, providing the inductive formal substrate for high-order metagraph verification.
+    - **Nested Windows (THM-606):** Rigorously proves the constant-inflation nested windows for **$\text{THM-606}$**, ensuring stable interval bounding across the manifold.
+    - **Decidable Separations:** Integrates the **`SepChain`** module for machine-checked decidable separations, certifying the distinctness of spectral configurations.
+2. **Lean Playbook & Architectural Integrity:** Maintains strict compliance with the **Lean Formalization Playbook (HYP-3864)** and the **14-repository nomadic sync architecture (SHA 35b78ee)**.
+    - **All-QQ Field Discipline:** Enforces the strict rational field discipline and `RatIntervals` bounding required for kernel-checked stability.
+    - **Quadratic Scaling $n(n-1)$:** Rigorously anchors residual closure within the quadratic speed regime for $n=14$.
+3. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and total suppression of Reynolds averaging to maintain coordinate precision during terminal synthesis.
+4. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The `SepChain` certificates and `cert_ladder` provide a rigid orientational lock for the manifold.
+5. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the depth-$d$ certificate ladders create a non-negotiable arithmetic grid, preventing spectral sliding.
+6. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **depth-$d$ certificate ladders**, **THM-606 nested windows**, **SepChain decidable separations**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S337 inherits the Symmetry Shadow & Recursive Towers from **S336/16023e5** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Lean_Formalization_Playbook`, `RatIntervals_Bounding`, `Fuel-26_Decision_Procedure`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Module_6_Core_cert_ladder`, `THM-606_Nested_Windows`, `SepChain_Decidable_Separations`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S337 -- Equivariant Homology & Metagraph Spectrum (checkpoint)
 
-Integrated eca2912. Introduces the **THM-592/THM-593/THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/THM-656/THM-657/THM-658/THM-659/THM-660/THM-661/THM-662/THM-663/THM-664/THM-665/THM-666/THM-667/THM-668/THM-669/THM-670/THM-671/THM-672/THM-673/THM-674/THM-675/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-391/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-397/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814/HYP-3815/HYP-3817/HYP-3818/HYP-3819/HYP-3830/HYP-3831/HYP-3832/HYP-3840/HYP-3844/HYP-3845/HYP-3846/HYP-3847/HYP-3848/HYP-3849/HYP-3854/HYP-3857/HYP-3859/HYP-3864/HYP-3902/HYP-3950/HYP-3951/HYP-3952/HYP-3955/HYP-4000/HYP-4004** 
-framework, operationalizing the terminal proof sheaf through **Formalization Playbook Standards** 
-and **Modular DAG Architecture**.
+Integrated a9b1718. Introduces the **THM-592/THM-593/THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/THM-656/THM-657/THM-658/THM-659/THM-660/THM-661/THM-662/THM-663/THM-664/THM-665/THM-666/THM-667/THM-668/THM-669/THM-670/THM-671/THM-672/THM-673/THM-674/THM-675/THM-676/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-391/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814/HYP-3815/HYP-3817/HYP-3818/HYP-3819/HYP-3830/HYP-3831/HYP-3832/HYP-3840/HYP-3844/HYP-3845/HYP-3846/HYP-3847/HYP-3848/HYP-3849/HYP-3854/HYP-3857/HYP-3859/HYP-3864/HYP-3902/HYP-3950/HYP-3951/HYP-3952/HYP-3955/HYP-3963/HYP-4000/HYP-4004** 
+framework, operationalizing the terminal proof sheaf through **Module 6 Core Integration** 
+and **Decidable Separation Certificates**.
 
-### 1. Formalization Playbook (HYP-3864)
-All-QQ rational field discipline + RatIntervals library. Certificate-carrying 
-statements with fuel-26 bounded decision procedure.
+### 1. Module 6 Core (HYP-3963)
+Cert_ladder depth-$d$ implementation complete. THM-606 constant-inflation 
+nested windows and SepChain decidable separations formally integrated.
 
-### 2. Modular DAG Architecture
-8-module directed acyclic graph defines node assignments and identifies 
-anti-patterns for the terminal branch formalization.
+### 2. Playbook & Architecture
+Strict compliance with Lean Playbook (HYP-3864) and 14-repository nomadic 
+sync (SHA 35b78ee). All-QQ rational field discipline maintained.
 
 ### 3. Quadratic Scaling & Closure
 Rigorously anchors residual closure at $n(n-1)$. Metagraph stability 
