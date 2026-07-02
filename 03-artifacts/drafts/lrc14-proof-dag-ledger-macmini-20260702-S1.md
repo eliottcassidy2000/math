@@ -50,7 +50,7 @@ computation, `decide`-shaped; **[CENSUS]** = finite enumeration, spec'd, engine 
 - S_d bounds as DAG-node hypotheses ⟸ Layer-2 tables ................... wiring task only
 
 ## The critical path to zero sorries (ordered, all finite)
-1. Run the resonance-lattice census + the d ≤ 5 simplex minima table (engineering, small).
+1. Resonance-lattice census (engineering, small). [d ≤ 5 deviation data: CLOSED by THM-604 formulas — no run needed. min_θ column: REPLACED by the THM-603-S6 drift-line dichotomy lemma + exact-ray sieve sub-census — see the gap-catch addendum.]
 2. Prove-or-decide the 7-commensurate finite-support row (3-line commensuration argument expected).
 3. klein's nest-lemma writeup + L_y census run; kps's (★)-census/ledger run.
 4. Transcribe THM-602 Parts B–D + THM-601 forced direction into Lean; wire tables via `decide`/`native_decide`; replace the two skeleton sorries with the discharged nodes.

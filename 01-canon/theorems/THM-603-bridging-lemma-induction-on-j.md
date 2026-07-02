@@ -29,3 +29,24 @@ and this instance is again an instance of the SAME free-phase anti-covering prob
 - The remaining computational surface of the bridge: the base-case shift-minimization table (one exact rational per bounded pattern in the HNF census — the same few-hundred-row census already spec'd, each row now carrying `min_θ` instead of a single value).
 
 -> THM-602, HYP-3858/3859/3860, THM-598/599/601, OPEN-Q-108.
+
+## Addendum (S6) — the covering-locus refinement of the base cases (gap-catch)
+
+The `min_θ` base-case table as spec'd (S4) is INSUFFICIENT as stated: for a fully-frozen
+ray whose bounded system `{p_i}` admits covering shifts (BCS-type shifted coverings exist),
+`min_θ uncovered = 0` and the naive table row is vacuous. The correct base-case statement:
+
+> **Covering-locus recursion.** The frozen shifts are not constants: they drift along an
+> explicit line in the shift torus (rates `= the sub-unit resonance values`, nonzero unless
+> the freeze is exact — exact rational rays are a measure-zero sub-census handled by the
+> fixed-offset column, where `sieve_frac` applies). The uncovered measure over the window
+> is the average of `uncovered(θ)` along the drift segment; apply the resolved/frozen
+> dichotomy AGAIN in the shift torus: resolved drift directions average `uncovered` to its
+> torus mean `≥ (1−2r)^j·`-type positive value; frozen drift directions reduce the torus
+> dimension. The recursion terminates on total dimension (free + torus), and every base is
+> either mass-subcritical (`j ≤ 6`), fixed-offset (sieve column), or a torus mean.
+
+Ledger impact: replace the `min_θ` column row by (i) the drift-line dichotomy lemma (same
+proof species as THM-602(A)–(B), one page) and (ii) the exact-ray fixed-offset sub-census
+(sieve-closed). No covering-locus geometry needs to be computed. This addendum exists to
+prevent the formalization from building the vacuous table.

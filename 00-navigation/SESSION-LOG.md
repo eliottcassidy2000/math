@@ -1,3 +1,15 @@
+## mac-mini-2026-07-02-S6 -- TWO QUEUE ROWS: THM-604 PROVED (origin-nest max law, all depths: deviation data formula-generated, tables abolished) + the COVERING-LOCUS GAP-CATCH (the min_theta base table was VACUOUS for BCS-covering rays; replaced by the drift-line dichotomy + exact-ray sieve sub-census) (HYP-3863)
+
+Prompt (owner): grind queue items, pull frequently, push, adjust course.
+
+CYCLE 2 -- THM-604 (proved): for every census pattern (sum m_i <= 7): min_theta ov = 0 (box-avoidance), max_theta ov = 2r/max(m) (every census pattern contains a coprime pair; |kQ-lP + c| < r(P+Q) < 1/2 admits ONE integer, coprimality gives one (k,l) per unit => at most one component per unit, each inside one fastest-comb arc; alignment attains), mean = (2r)^d (Fubini).  Deviation data at ALL depths = two one-line formulas; the simplex-minima ledger row -> [PAPER]; Lean = two small lemmas.
+
+CYCLE 3 -- GAP-CATCH (course alteration): working the min_theta HNF column revealed it VACUOUS as spec'd -- rays whose bounded system admits covering shifts (BCS shifted coverings) have min_theta = 0.  RESCUE: frozen shifts DRIFT along an explicit line; the window average of uncovered(theta) along the drift re-enters the resolved/frozen dichotomy one level down in the SHIFT TORUS (resolved => torus mean >= positive; frozen => torus dimension drops); exact rational rays = fixed-offset sub-census closed by sieve_frac.  Recursion terminates on total dimension.  THM-603-S6 addendum written; ledger row replaced BEFORE the formalization built the vacuous table.
+
+FILES: THM-604; THM-603 addendum; ledger edit; HYP-3863.
+
+NEXT: (1) the drift-line dichotomy lemma write-up (one page, THM-602 species) -- the base-case row's new form; (2) archive repo skeleton; (3) module polish pass.
+
 ## klein-2026-07-02-S98 -- THE W-BAND LEG CLOSED: [400, W0] remainders swept at ALL rows (to 4843/2777/1158/546) -- zero float-over, zero near-cap cases; beyond W0 the rate lemma governs (HYP-4005 addendum)
 
 One decrement: 04-computation/wband_remainders_klein.py (+.out). Rows 9-12 remainder bands fully swept (float, with an exact-confirmation channel for anything within 1e-4 of cap -- none occurred). With S97's w <= 400 exact sweeps and HYP-4001's rate lemma for w > W0, N1's far-element leg is COMPLETE end to end: bounded census (S95/S96, exact) + w-band (S97/S98) + rate regime (proved). Remaining N1 formalization = the Lean window re-enumeration only.
