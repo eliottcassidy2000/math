@@ -230,4 +230,3 @@ import TournamentH7.LRCUnitResidue
 import TournamentH7.PolygonMirskyNewman
 import TournamentH7.DangerousPatterns
 import TournamentH7.BonferroniTruncation
-import TournamentH7.RatIntervals

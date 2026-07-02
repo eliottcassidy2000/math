@@ -1,5 +1,4 @@
 /-
-<<<<<<< HEAD
   TournamentH7.RatIntervals — MODULE 0 of the LRC(14) formalization playbook (T2).
   kind-pasteur-2026-07-02-S4 (HYP-3961).  The blocking mini-library: every danger set, comb,
   window, overlap, and uncovered set in the proof is a value of this type.
@@ -53,69 +52,11 @@ theorem mem_clip {x : ℚ} {p q : ℚ × ℚ} :
 with no normalization hypotheses. -/
 theorem mem_inter {x : ℚ} {A B : Region} :
     mem x (inter A B) ↔ mem x A ∧ mem x B := by
-=======
-  TournamentH7.RatIntervals  (mac-mini-2026-07-02-S8)
-
-  MODULE 0 of the formalization playbook (HYP-3864): the verified
-  rational-interval-list core that every danger set, comb, window, and overlap
-  in the LRC(14) chain is a value of.  ALL-ℚ discipline (T1): no reals, no
-  measure theory; membership is decidable and lengths are rationals.
-
-  Scope (minimal viable core, sorry-free; extend in place):
-    • `RI` = lists of half-open rational intervals (not necessarily normalized)
-    • semantic membership `mem`, decidable
-    • `len` (sum of nonneg widths), `len_nonneg`, `len_append`
-    • `inter` (pairwise intersection), with `mem_inter` correctness
-    • `translate`, with `mem_translate` and `len_translate`
-    • singleton/comb constructors for downstream modules
-
-  Design note: correctness lemmas are stated against `mem`; length-vs-measure
-  agreement for OVERLAPPING lists is downstream work (normalization pass) —
-  consumers in the playbook only ever measure pairwise-disjoint or intersected
-  families, which this core covers.
--/
-import Mathlib.Tactic
-
-namespace TournamentH7.RatIntervals
-
-/-- A finite union of half-open rational intervals `[a, b)`, as raw data. -/
-abbrev RI := List (ℚ × ℚ)
-
-/-- Semantic membership. -/
-def mem (x : ℚ) (l : RI) : Prop := ∃ p ∈ l, p.1 ≤ x ∧ x < p.2
-
-instance (x : ℚ) (l : RI) : Decidable (mem x l) := by
-  unfold mem; infer_instance
-
-/-- Total length (widths clipped at 0). -/
-def len (l : RI) : ℚ := (l.map (fun p => max 0 (p.2 - p.1))).sum
-
-theorem len_nonneg (l : RI) : 0 ≤ len l := by
-  unfold len
-  induction l with
-  | nil => simp
-  | cons p t ih =>
-      simp only [List.map_cons, List.sum_cons]
-      have : (0 : ℚ) ≤ max 0 (p.2 - p.1) := le_max_left _ _
-      linarith
-
-theorem len_append (l₁ l₂ : RI) : len (l₁ ++ l₂) = len l₁ + len l₂ := by
-  unfold len
-  rw [List.map_append, List.sum_append]
-
-/-- Pairwise intersection of two interval families. -/
-def inter (l₁ l₂ : RI) : RI :=
-  (l₁.flatMap fun p => l₂.map fun q => (max p.1 q.1, min p.2 q.2))
-
-theorem mem_inter {x : ℚ} {l₁ l₂ : RI} :
-    mem x (inter l₁ l₂) ↔ mem x l₁ ∧ mem x l₂ := by
->>>>>>> 054b4d77f (mac-mini-2026-07-02-S8: module 0 RatIntervals.lean sorry-free (decidable mem, len lemmas, inter correctness, translate invariance, comb density 2r) -- playbook DAG unblocked; coercion-in-binder trap documented; HYP-3865)
   unfold mem inter
   constructor
   · rintro ⟨r, hr, hx1, hx2⟩
     simp only [List.mem_flatMap, List.mem_map] at hr
     obtain ⟨p, hp, q, hq, rfl⟩ := hr
-<<<<<<< HEAD
     have := mem_clip.mp ⟨hx1, hx2⟩
     exact ⟨⟨p, hp, this.1⟩, ⟨q, hq, this.2⟩⟩
   · rintro ⟨⟨p, hp, hxp⟩, ⟨q, hq, hxq⟩⟩
@@ -400,44 +341,12 @@ theorem mem_union {x : ℚ} {A B : Region} : mem x (A ++ B) ↔ mem x A ∨ mem 
     · exact ⟨p, List.mem_append.mpr (Or.inl hp), hx⟩
     · exact ⟨p, List.mem_append.mpr (Or.inr hp), hx⟩
 
-end RatIntervals
-end LonelyRunner
-=======
-    simp only [max_le_iff] at hx1
-    have hlt : x < min p.2 q.2 := hx2
-    exact ⟨⟨p, hp, hx1.1, lt_of_lt_of_le hlt (min_le_left _ _)⟩,
-           ⟨q, hq, hx1.2, lt_of_lt_of_le hlt (min_le_right _ _)⟩⟩
-  · rintro ⟨⟨p, hp, hp1, hp2⟩, ⟨q, hq, hq1, hq2⟩⟩
-    refine ⟨(max p.1 q.1, min p.2 q.2), ?_, ?_, ?_⟩
-    · simp only [List.mem_flatMap, List.mem_map]
-      exact ⟨p, hp, q, hq, rfl⟩
-    · exact max_le hp1 hq1
-    · exact lt_min hp2 hq2
+/-! ## The comb constructor (ported from mac-mini-S8's concurrent module-0 build, HYP-3865;
+density lemma theirs, Norm engine ours — merged kind-pasteur-2026-07-02-S5) -/
 
-/-- Translation by `t`. -/
-def translate (t : ℚ) (l : RI) : RI := l.map fun p => (p.1 + t, p.2 + t)
-
-theorem mem_translate {x t : ℚ} {l : RI} :
-    mem x (translate t l) ↔ mem (x - t) l := by
-  unfold mem translate
-  constructor
-  · rintro ⟨r, hr, h1, h2⟩
-    simp only [List.mem_map] at hr
-    obtain ⟨p, hp, rfl⟩ := hr
-    exact ⟨p, hp, by linarith, by linarith⟩
-  · rintro ⟨p, hp, h1, h2⟩
-    exact ⟨(p.1 + t, p.2 + t), List.mem_map.mpr ⟨p, hp, rfl⟩, by linarith, by linarith⟩
-
-theorem len_translate (t : ℚ) (l : RI) : len (translate t l) = len l := by
-  unfold len translate
-  rw [List.map_map]
-  congr 1
-  ext p
-  simp
-
-/-- The comb constructor: `v` arcs of half-width `r/v` at centers `(k + φ)/v`,
-`k = 0..v−1` — the danger set of speed `v` with phase `φ`, on one period. -/
-def comb (v : ℕ) (r φ : ℚ) : RI :=
+/-- The comb: `v` arcs of half-width `r/v` at centers `(k + φ)/v`, `k = 0..v−1` — the danger
+set of speed `v` with phase `φ`, on one period. -/
+def comb (v : ℕ) (r φ : ℚ) : Region :=
   ((List.range v).map (Nat.cast : ℕ → ℚ)).map fun k => ((k + φ - r) / v, (k + φ + r) / v)
 
 private theorem sum_map_range_const (n : ℕ) (f : ℕ → ℚ) (c : ℚ)
@@ -451,10 +360,11 @@ private theorem sum_map_range_const (n : ℕ) (f : ℕ → ℚ) (c : ℚ)
       push_cast
       ring
 
-theorem len_comb (v : ℕ) (hv : 0 < v) (r φ : ℚ) (hr : 0 ≤ r) :
-    len (comb v r φ) = 2 * r := by
-  unfold len comb
-  have hv' : (0 : ℚ) < (v : ℚ) := by exact_mod_cast hv
+/-- Comb density: total length `2r`, independent of the speed and phase. -/
+theorem length_comb (v : ℕ) (hv : 0 < v) (r φ : ℚ) (hr : 0 ≤ r) :
+    length (comb v r φ) = 2 * r := by
+  unfold length comb
+  have hv2 : (0 : ℚ) < (v : ℚ) := by exact_mod_cast hv
   rw [List.map_map, List.map_map]
   refine (sum_map_range_const v _ (2 * r / v) ?_).trans ?_
   · intro k _
@@ -465,5 +375,27 @@ theorem len_comb (v : ℕ) (hv : 0 < v) (r φ : ℚ) (hr : 0 ≤ r) :
     rw [hdiff, max_eq_right (by positivity)]
   · field_simp
 
+end RatIntervals
+end LonelyRunner
+
+/-! Compatibility shim for consumers of the concurrent mac-mini namespace (HYP-3865). -/
+namespace TournamentH7.RatIntervals
+
+abbrev RI := LonelyRunner.RatIntervals.Region
+abbrev mem := LonelyRunner.RatIntervals.mem
+abbrev len := LonelyRunner.RatIntervals.length
+abbrev inter := LonelyRunner.RatIntervals.inter
+abbrev translate := LonelyRunner.RatIntervals.translate
+abbrev comb := LonelyRunner.RatIntervals.comb
+
+theorem mem_inter {x : ℚ} {A B : RI} : mem x (inter A B) ↔ mem x A ∧ mem x B :=
+  LonelyRunner.RatIntervals.mem_inter
+theorem len_nonneg (l : RI) : 0 ≤ len l := LonelyRunner.RatIntervals.length_nonneg l
+theorem len_append (A B : RI) : len (A ++ B) = len A + len B :=
+  LonelyRunner.RatIntervals.length_append A B
+theorem len_translate (t : ℚ) (l : RI) : len (translate t l) = len l :=
+  LonelyRunner.RatIntervals.length_translate t l
+theorem len_comb (v : ℕ) (hv : 0 < v) (r φ : ℚ) (hr : 0 ≤ r) : len (comb v r φ) = 2 * r :=
+  LonelyRunner.RatIntervals.length_comb v hv r φ hr
+
 end TournamentH7.RatIntervals
->>>>>>> 054b4d77f (mac-mini-2026-07-02-S8: module 0 RatIntervals.lean sorry-free (decidable mem, len lemmas, inter correctness, translate invariance, comb density 2r) -- playbook DAG unblocked; coercion-in-binder trap documented; HYP-3865)
