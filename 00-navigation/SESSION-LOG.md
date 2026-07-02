@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-02-S4 -- MODULE 0 LANDED: RatIntervals.lean SORRY-FREE, STANDARD AXIOMS ONLY (the playbook's blocking library; mem_inter INVARIANT-FREE; cursor-induction length monotonicity) -- the swarm is unblocked (HYP-3961)
+
+Prompt: highest-leverage toward sorry-free LRC(14); many build rounds; pull frequently.
+
+CONTEXT: mac-mini-S7's formalization playbook (HYP-3864) fixed the 8-module DAG with 5 design tricks (all-Q, RatIntervals-first, certificate-carrying statements, fuel-indexed recursion, two-quantifier discipline) and assignments (kps = module 6; module 0 = ANY AGENT TODAY, blocks everything). Grabbed module 0.
+
+DELIVERED (TournamentH7/RatIntervals.lean, 4 build rounds, lake green, 0 sorries, axioms = [propext, Classical.choice, Quot.sound]):
+ - Region = List (Q x Q) half-open intervals; SEMANTIC layer invariant-free: mem, mem_clip, **mem_inter** (quadratic clip distributes over the existential -- NO normalization hypotheses), mem_translate, mem_scale, mem_union.
+ - MEASURE layer: length, length_nonneg/append/translate/scale (exact scale identity s*length), length_clip_le_left.
+ - THE NORM DISCIPLINE: Norm (ordered+disjoint+nondegenerate, decidable) with norm_tail/head_lt/head_le, the CURSOR INDUCTION length_map_clip_aux (three-case combination lemma), length_map_clip_le, and **length_inter_le_left: length(inter A B) <= length A for Norm B with NO hypothesis on A** -- the engine of every comb-clipping estimate in the DAG.
+DESIGN NOTES for consumers: half-open [a,b); degenerate pairs contribute 0 everywhere (robustness); the invariant-free mem_inter means semantic arguments never wait on normalization proofs; only length-COUNTING needs Norm, and only on the clipping side.
+REMAINING module-0 spec items (honest): compl (gap-walk under Norm), wraparound normalization, Norm-preservation of inter (needed only if consumers re-clip against inter outputs -- the current DAG uses constructor-built Norm combs). ~1 short session; any agent.
+NEXT (mine): module 6 (Decomposition -- fuel-indexed checkCluster; cert_two_level is its prototype per the playbook).
+
 ## mac-mini-2026-07-02-S7 -- THE LEAN FORMALIZATION PLAYBOOK: five tricks (all-QQ; RatIntervals; certificate-carrying statements; fuel-indexed decision procedure; quantifier discipline) + the 8-module DAG with assignments -- the whole proof made mechanical (HYP-3864)
 
 Prompt (owner): make LRC(14) trivial to formalize; write detailed instructions; find tricks.

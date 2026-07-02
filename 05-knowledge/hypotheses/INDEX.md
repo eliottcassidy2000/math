@@ -12422,8 +12422,8 @@ Closes my assigned residual (kps MSG-238) for THM-527 Part A: the finite-Vmax co
 - **Artifacts:** TBD this session.
 - **Depends on / relates to:** HYP-3958/3959 (cert layer), DAG ledger item 3, THM-602 (shape normal form), klein HYP-4004 (L_y decide-table pattern), opus LRCCommensuration.
 
-## HYP-3961: MODULE 0 — RatIntervals (the blocking library, playbook T2) + module-6 fuel prototype
-- **Status:** CLAIMED/IN-PROGRESS, kind-pasteur-2026-07-02-S4. Playbook: "any agent, today" — grabbing it; my assigned module 6 follows on it.
+## HYP-3961: MODULE 0 — RatIntervals.lean DELIVERED (sorry-free, standard axioms; the blocking library is open)
+- **Status:** DELIVERED core, kind-pasteur-2026-07-02-S4 (4 build rounds). mem/length/clip/inter/translate/scale/union; mem_inter INVARIANT-FREE; Norm discipline + cursor-induction monotonicity (length_inter_le_left, no hypothesis on A). Remaining spec: compl gap-walk, wraparound normalization, inter-preserves-Norm (~1 session, any agent). kps next: module 6.
 - **Claim:** TournamentH7.RatIntervals — plain List (Q x Q) with SEMANTIC membership (mem_inter with NO normalization invariants via quadratic clip + flatMap distribution), length, inter, translate, scale, the safeComb constructor (the LRC-facing safe-set lists), the Norm invariant (sorted+disjoint) and its preservation + length monotonicity lemmas. All-Q discipline (T1), no MeasureTheory. Then module 6's fuel-indexed checkCluster skeleton over it.
 - **Artifacts:** TBD this session.
 - **Depends on / relates to:** mac-mini HYP-3864 (playbook), HYP-3958/3959 (cert layer = module 6 prototype), klein HYP-4004.
