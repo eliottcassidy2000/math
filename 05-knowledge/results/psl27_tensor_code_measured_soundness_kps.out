@@ -1,0 +1,93 @@
+==========================================================================================================
+ PSL_2(F_7): |G| = 168; elements by order: 2:21, 3:56, 4:42, 7:48
+==========================================================================================================
+
+ searching generating sets (best Cayley lambda_2 per size; A from order-7, B from order-3/4):
+   A2: deg 2  lambda2 = 2.000  (Ramanujan bound 2sqrt(d-1) = 2.000)  generates G: False
+   B2: deg 2  lambda2 = 2.000  (Ramanujan bound 2sqrt(d-1) = 2.000)  generates G: False
+   A4: deg 4  lambda2 = 3.414  (Ramanujan bound 2sqrt(d-1) = 3.464)  generates G: True
+   B4: deg 4  lambda2 = 3.414  (Ramanujan bound 2sqrt(d-1) = 3.464)  generates G: True
+   A6: deg 6  lambda2 = 3.971  (Ramanujan bound 2sqrt(d-1) = 4.472)  generates G: True
+   B6: deg 6  lambda2 = 4.000  (Ramanujan bound 2sqrt(d-1) = 4.472)  generates G: True
+   A8: deg 8  lambda2 = 4.317  (Ramanujan bound 2sqrt(d-1) = 5.292)  generates G: True
+   B8: deg 8  lambda2 = 4.392  (Ramanujan bound 2sqrt(d-1) = 5.292)  generates G: True
+
+==========================================================================================================
+ CONFIG SURFACE rep2xrep2 (deg2):  |A|=2 |B|=2
+==========================================================================================================
+  components = 8 (DISCONNECTED — mac-mini regime)   V=168 F=168 (=|G||A||B|/4: 168)   dim C = 8  rate = 0.048
+  inner codes: C_A [2,1,2] delta_A=1.000 | C_B [2,1,2] delta_B=1.000
+  min-distance upper bound d_ub = 21 (bank of 8 reduced codewords)
+  s(weight-1 exhaustive) = 4.0000   (viol = 4 vertices)
+  s(weight-2 exhaustive n=14028) = 3.0000   (viol = 6)
+  s(structured tubes/rects) = 2.0000   (('tube', 7, 14))
+  s(hill-climb + coset-reduce) = 0.2609   (support 69)
+  ==> MEASURED s (min over probes) = 0.2609
+  1/36-family: 1/36=0.0278 | census 313/9702=0.0323 | delta_A*delta_B=1.0000 | (dAdB)^2=1.0000 | dAdB/4=0.2500 | trickle-down min(dA,dB)=1.0000
+
+==========================================================================================================
+ CONFIG T3-like par4xpar4 (deg4):  |A|=4 |B|=4
+==========================================================================================================
+  components = 1 (CONNECTED)   V=168 F=672 (=|G||A||B|/4: 672)   dim C = 172  rate = 0.256
+  inner codes: C_A [4,3,2] delta_A=0.500 | C_B [4,3,2] delta_B=0.500
+  min-distance upper bound d_ub = 12 (bank of 87 reduced codewords)
+  s(weight-1 exhaustive) = 16.0000   (viol = 4 vertices)
+  s(weight-2 exhaustive n=225456) = 12.0000   (viol = 6)
+  s(structured tubes/rects) = 8.0000   (('tube', 7, 14))
+  s(hill-climb + coset-reduce) = 1.2269   (support 401)
+  ==> MEASURED s (min over probes) = 1.2269
+  1/36-family: 1/36=0.0278 | census 313/9702=0.0323 | delta_A*delta_B=0.2500 | (dAdB)^2=0.0625 | dAdB/4=0.0625 | trickle-down min(dA,dB)=0.5000
+
+==========================================================================================================
+ CONFIG T6 par6xpar6 (deg6=phi7):  |A|=6 |B|=6
+==========================================================================================================
+  components = 1 (CONNECTED)   V=168 F=1512 (=|G||A||B|/4: 1512)   dim C = 678  rate = 0.448
+  inner codes: C_A [6,5,2] delta_A=0.333 | C_B [6,5,2] delta_B=0.333
+  min-distance upper bound d_ub = 6 (bank of 213 reduced codewords)
+  s(weight-1 exhaustive) = 36.0000   (viol = 4 vertices)
+  s(weight-2 sampled n=299822) = 22.5000   (viol = 5)
+  s(structured tubes/rects) = 13.5000   (('rect', 4, 6))
+  s(hill-climb + coset-reduce) = 2.1435   (support 634)
+  ==> MEASURED s (min over probes) = 2.1435
+  1/36-family: 1/36=0.0278 | census 313/9702=0.0323 | delta_A*delta_B=0.1111 | (dAdB)^2=0.0123 | dAdB/4=0.0278 | trickle-down min(dA,dB)=0.3333
+
+==========================================================================================================
+ CONFIG T6 rep6xrep6 (deg6):  |A|=6 |B|=6
+==========================================================================================================
+  components = 1 (CONNECTED)   V=168 F=1512 (=|G||A||B|/4: 1512)   dim C = 1  rate = 0.001
+  inner codes: C_A [6,1,6] delta_A=1.000 | C_B [6,1,6] delta_B=1.000
+  min-distance upper bound d_ub = 1512 (bank of 1 reduced codewords)
+  s(weight-1 exhaustive) = 36.0000   (viol = 4 vertices)
+  s(weight-2 sampled n=299801) = 22.5000   (viol = 5)
+  s(structured tubes/rects) = 15.7500   (('rect', 4, 7))
+  s(hill-climb + coset-reduce) = 2.0513   (support 702)
+  ==> MEASURED s (min over probes) = 2.0513
+  1/36-family: 1/36=0.0278 | census 313/9702=0.0323 | delta_A*delta_B=1.0000 | (dAdB)^2=1.0000 | dAdB/4=0.2500 | trickle-down min(dA,dB)=1.0000
+
+==========================================================================================================
+ CONFIG T8 ham8xham8 (deg8=LPS):  |A|=8 |B|=8
+==========================================================================================================
+  components = 1 (CONNECTED)   V=168 F=2688 (=|G||A||B|/4: 2688)   dim C = 16  rate = 0.006
+  inner codes: C_A [8,4,4] delta_A=0.500 | C_B [8,4,4] delta_B=0.500
+  min-distance upper bound d_ub = 936 (bank of 142 reduced codewords)
+  s(weight-1 exhaustive) = 64.0000   (viol = 4 vertices)
+  s(weight-2 sampled n=299881) = 40.0000   (viol = 5)
+  s(structured tubes/rects) = 28.0000   (('rect', 4, 7))
+  s(hill-climb + coset-reduce) = 3.1338   (support 822)
+  ==> MEASURED s (min over probes) = 3.1338
+  1/36-family: 1/36=0.0278 | census 313/9702=0.0323 | delta_A*delta_B=0.2500 | (dAdB)^2=0.0625 | dAdB/4=0.0625 | trickle-down min(dA,dB)=0.5000
+
+==========================================================================================================
+ SUMMARY: measured soundness vs the 1/36 family
+==========================================================================================================
+                        config  comp     F  dimC  d_ub   s_meas   dAdB  verdict
+      SURFACE rep2xrep2 (deg2)     8   168     8    21   0.2609  1.000  >>1/36
+      T3-like par4xpar4 (deg4)     1   672   172    12   1.2269  0.250  >>1/36
+      T6 par6xpar6 (deg6=phi7)     1  1512   678     6   2.1435  0.111  >>1/36
+           T6 rep6xrep6 (deg6)     1  1512     1  1512   2.0513  1.000  >>1/36
+       T8 ham8xham8 (deg8=LPS)     1  2688    16   936   3.1338  0.250  >>1/36
+
+  READING: s is the WORST-CASE tester ratio actually measured; the 1/36 analytic floor is the
+  11-core lonely-measure minimum. A numeric match would make the soundness/measure mirror
+  QUANTITATIVE; a mismatch pins it as structural analogy (both = uniform detection floors).
+DONE.

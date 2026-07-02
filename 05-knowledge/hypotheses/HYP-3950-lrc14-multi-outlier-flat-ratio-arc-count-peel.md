@@ -66,12 +66,32 @@ outliers can help. The trade-off is self-defeating: meas-minimal bases give outl
 That is the reason "a uniform arc-count bound" suffices — N_B is not an enemy to bound but a resource
 the adversary must spend.
 
+## CONVERGENCE with opus-S32 (same-prompt collision; opus pushed first — priority theirs on the lemma)
+Discovered mid-session: **opus-2026-07-01-S32's HYP-3834 (simultaneous-peel lemma) IS this union floor**
+— meas(L_C) >= (1-j/7)meas(L_low) - (2 c_low/7) Σ_{w∈F} 1/w, proved independently hours earlier, with
+the Λ-gap-cut chaining + tower M_k and the j=7 covering-threshold boundary ("union bound dies at 7").
+Their MISTAKE-090 retires the FALSE version of "uniform arc-count" (a bound on far-containing PREFIX
+arc counts — impossible, c ~ w·meas grows; my sec-3 GROW verification N' <= 2N + w·meas exhibits the
+same growth). **Terminology alignment: this file's "uniform arc-count" = the bound on the COMPACT
+base's arc count N_B (= opus's c_low) entering the one-shot union floor — the CORRECT object, exactly
+MISTAKE-090's fix, not the retired prefix version.**
+My independent layer beyond opus-S32: (a) the sharper per-arc constant **N_B/7 vs their 2c_low/7**
+(factor 2, via the ⌊ℓw⌋+1 tooth count); (b) explicit per-r finite cutoffs W*(r) = sup over bases
+(112/181/290/513) — the finite-window quantification complementing their Λ=10^4 gap-cut; (c) the
+ACTUAL minima with exact rationals + the monotone-in-r law (their guard table bounds, my census
+locates: 733/21021 at (19,20), 40753/1261260 at +50); (d) LEDGER = CAP ATLAS (min_m = cap_{13-m});
+(e) the pair-overlap Farey law (sec 5). Their unique layer beyond mine: the deep-cluster
+renormalization program (HYP-3835: difference-core flow, AP = fixed point, boundary minimax 1.97x,
+Fraenkel/exact-cover lead) — strictly stronger than my sec-4 packed-cluster probes (which match their
+{N..N+10} limit 0.158 exactly).
+
 ## Honest status
 - r <= 6: VERIFIED-CLOSED (ledger + PROVED per-speed lemma + finite windows; windows scanned at the
   binding bases, exhaustible in principle; ledger pool systematic-but-finite like S27's census).
+  Convergent with opus-S32 HYP-3834 (their guard table, min margin 0.0130, same conclusion).
 - r >= 7: 3.2x+ slack, scale-invariant limits; rigorous closure needs the r-far equidistribution rate
-  (only <= 6-far is proved). NOT a proof of the r=2 residual — the same evidence standard as S27's
-  census, now covering ALL outlier counts. LRC(14) still NOT proved.
+  (only <= 6-far is proved) = opus HYP-3835's tower floor. NOT a proof of the r=2 residual — the same
+  evidence standard as S27's census, now covering ALL outlier counts. LRC(14) still NOT proved.
 
 ## Artifacts
 - 04-computation/lrc14_multi_outlier_flat_ratio_peel_kps.py (+ .out)
