@@ -62,5 +62,25 @@ def Ly3 (E : List ℕ) : ℚ := 1 - 13 * S E 1 / 18 + 4 * S E 2 / 9 - S3 E / 6
 /-- k = 10 window (2002 shapes, degree-3 dual): every L_y ≤ cap₁₀ = 55/91. -/
 theorem window10 : (shapes 10 14).all (fun E => Ly3 E ≤ 55/91) = true := by native_decide
 
+/-- k = 9 window (6435 shapes, same degree-3 dual): every L_y ≤ cap₉ = 1979/4004. -/
+theorem window9 : (shapes 9 15).all (fun E => Ly3 E ≤ 1979/4004) = true := by native_decide
+
+/-- Fourth sector moment (for the row-8 degree-4 dual). -/
+def S4 (E : List ℕ) : ℚ := ((sectors 4).map (J E)).sum
+
+/-- The row-8 dual: L_y = 1 − S₁ + S₂ − (9/10)S₃ + (3/5)S₄. -/
+def Ly4 (E : List ℕ) : ℚ := 1 - S E 1 + S E 2 - 9 * S3 E / 10 + 3 * S4 E / 5
+
+/-- k = 8 window, chunked by second element: shapes with tail starting at m. -/
+def shapes8 (m : ℕ) : List (List ℕ) :=
+  ((((List.range 16).map (· + 1)).filter (· > m)).sublistsLen 6).map (fun t => 0 :: m :: t)
+
+/-- k = 8 window (11440 shapes total, degree-4 dual), verified in two chunks. -/
+theorem window8a : ((List.range 4).map (· + 1)).all
+    (fun m => (shapes8 m).all (fun E => Ly4 E ≤ 2243/5880)) = true := by native_decide
+theorem window8b : (((List.range 12).map (· + 5))).all
+    (fun m => (shapes8 m).all (fun E => Ly4 E ≤ 2243/5880)) = true := by native_decide
+
 end LyWindowEnum
+
 

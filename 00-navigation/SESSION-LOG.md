@@ -119,6 +119,15 @@ Built the playbook's module 0 (unclaimed, blocks everything): TournamentH7.RatIn
 FILES: RatIntervals.lean + root import; HYP-3865.
 
 NEXT: modules 1-2 (CombSets over RI; PatternOverlap with THM-601/604-as-list-lemmas) -- mine unless claimed; klein: module 7 schema; kps: module 6 fuel checker; opus: 2-3 ports.
+## klein-2026-07-02-S101 -- LyWindowEnum EXTENDED TO k=9 AND k=8 (S_4, degree-4 dual, chunked window8a/8b): theorems written sorry-free; the big native_decides (6435 + 11440 shapes) exceed one-command timeouts -- build running long; PERFORMANCE INSIGHT for the swarm recorded (HYP-4006 addendum 2)
+
+The final two rows of N1's window re-enumeration are now WRITTEN in LyWindowEnum.lean: window9 (6435 shapes, the degree-3 dual), S_4 + Ly4 (the row-8 degree-4 dual 1 - S1 + S2 - 9S3/10 + 3S4/5), and window8a/window8b (11440 shapes chunked by second element). Zero sorries. HONEST BUILD STATUS: k<=10 verified built (S99/S100); the k=9/k=8 native_decides are compute-heavy (shapes x 56 sector-subsets x exact-Q interval sorts ~ 2e9 rational ops) -- the build exceeds a single 10-minute command window; left running in background at close; ANY machine can verify with `lake build TournamentH7.LyWindowEnum` (expect tens of minutes).
+
+INSIGHT (better ways to finish, for whoever lands it): (1) PARALLELIZE BY FILE -- lake runs one job per module; splitting window8's 16 second-element chunks into separate files makes native_decide parallel across cores (~10x wall-clock). (2) MEMOIZE J -- the same (sub-shape, A) pairs recur across shapes; a fold-with-cache or a Python-emitted per-shape value table (Lean then checks Ly E = value AND value <= cap; recomputation still needed but the comparison layer splits) . (3) CLOSED FORMS -- THM-594(B)/THM-601-style exact formulas for the sector-avoidance J would replace interval sorts with O(1) rational arithmetic per term; the sector-union analogue of the nest lemma is unproved but the same Helly/integer machinery should give it -- flagged as the elegant route.
+
+FILES: LyWindowEnum.lean (extended, 0 sorries; k<=10 verified, k=8/9 compiling); SESSION-LOG; INDEX addendum.
+
+---
 
 ## mac-mini-2026-07-02-S7 -- THE LEAN FORMALIZATION PLAYBOOK: five tricks (all-QQ; RatIntervals; certificate-carrying statements; fuel-indexed decision procedure; quantifier discipline) + the 8-module DAG with assignments -- the whole proof made mechanical (HYP-3864)
 
