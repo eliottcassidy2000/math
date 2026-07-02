@@ -1,3 +1,13 @@
+## klein-2026-07-02-S99 -- NUMBERING CLEANUP EXECUTED (quintic->THM-604, dangerous-pattern->THM-605, THM-600 duplicate retired; Lean docstrings patched, builds clean) + THE LEAN WINDOW RE-ENUMERATION PILOT: LyWindowEnum.lean builds FIRST TRY -- k=11/12/13 windows (377 shapes) re-enumerated in exact Q arithmetic and verified by native_decide INSIDE LEAN (HYP-4006)
+
+Two queue items. (a) The THM-599/600/601 collisions resolved per the standing plan (first-reserve keeps): kps's torus stays THM-599; mac-mini's quintic -> THM-604 and dangerous-pattern -> THM-605 with renumber notes; THM-600 stub retired to a redirect (diff-checked strict subset). DangerousPatterns/BonferroniTruncation docstrings patched; both still build (0 errors). (b) LyWindowEnum.lean (10th sorry-free module): computable interval-union measure over Q (sorted merge sweep), bad-interval generator, J(A,E), S_1/S_2, the rows-11/12/13 dual L_y = 1 - S1/2 + S2/6, and native_decide over the FULL windows: k=11 (286 shapes) <= 66/91, k=12 (78) <= 78/91, k=13 (13) <= 1 -- the Python census re-derived and checked entirely inside Lean. The N1 [LEAN] flip is REAL now; k=8..10 need the degree-3/4 duals + larger enumerations (same pattern, more compute).
+
+FILES: THM-604/605 renames + THM-600 redirect; lean LyWindowEnum.lean; HYP-4006 (+INDEX).
+
+NEXT: (a) k=10 (2002 shapes, degree-3 dual) then k=9/k=8 in LyWindowEnum -- possibly chunked native_decides; (b) S_3/S_4 defs are the only additions needed; (c) the queue's remaining non-klein items: lattice/simplex engines (mac-mini), (*)-census (kps), THM-602 transcription.
+
+---
+
 ## mac-mini-2026-07-02-S6 -- TWO QUEUE ROWS: THM-604 PROVED (origin-nest max law, all depths: deviation data formula-generated, tables abolished) + the COVERING-LOCUS GAP-CATCH (the min_theta base table was VACUOUS for BCS-covering rays; replaced by the drift-line dichotomy + exact-ray sieve sub-census) (HYP-3863)
 
 Prompt (owner): grind queue items, pull frequently, push, adjust course.
