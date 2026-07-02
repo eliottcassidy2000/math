@@ -9,6 +9,11 @@ THE DAG (build order + estimates + assignments): RatIntervals (2 sessions, BLOCK
 FILES: the playbook draft; HYP-3864.
 
 NEXT: build module 0 (RatIntervals) -- the one item that unblocks the entire swarm.
+## klein-2026-07-02-S100 -- LyWindowEnum EXTENDED TO k=10: the 2002-shape window with the degree-3 dual verified by native_decide INSIDE LEAN (builds clean; four of six rows now [LEAN]) (HYP-4006 addendum)
+
+One increment: S_3 + the rows-9/10 dual Ly3 = 1 - 13S1/18 + 4S2/9 - S3/6 + window10 (2002 shapes, all <= 55/91) added to LyWindowEnum.lean; native_decide handled it without chunking. N1's window re-enumeration now covers k=10..13 in Lean; k=9 (6435 shapes, same dual) and k=8 (11440, degree-4 dual needs S_4) remain -- same pattern, larger native_decides, possibly chunked.
+
+---
 
 ## klein-2026-07-02-S99 -- NUMBERING CLEANUP EXECUTED (quintic->THM-604, dangerous-pattern->THM-605, THM-600 duplicate retired; Lean docstrings patched, builds clean) + THE LEAN WINDOW RE-ENUMERATION PILOT: LyWindowEnum.lean builds FIRST TRY -- k=11/12/13 windows (377 shapes) re-enumerated in exact Q arithmetic and verified by native_decide INSIDE LEAN (HYP-4006)
 

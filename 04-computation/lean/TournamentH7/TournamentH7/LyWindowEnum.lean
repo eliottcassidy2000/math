@@ -53,4 +53,14 @@ theorem window12 : (shapes 12 13).all (fun E => Ly E ≤ 78/91) = true := by nat
 /-- k = 11 window (286 shapes): every L_y ≤ cap₁₁ = 66/91. -/
 theorem window11 : (shapes 11 13).all (fun E => Ly E ≤ 66/91) = true := by native_decide
 
+/-- Third sector moment (for the rows-9/10 degree-3 dual). -/
+def S3 (E : List ℕ) : ℚ := ((sectors 3).map (J E)).sum
+
+/-- The rows-9/10 dual: L_y = 1 − (13/18)S₁ + (4/9)S₂ − (1/6)S₃. -/
+def Ly3 (E : List ℕ) : ℚ := 1 - 13 * S E 1 / 18 + 4 * S E 2 / 9 - S3 E / 6
+
+/-- k = 10 window (2002 shapes, degree-3 dual): every L_y ≤ cap₁₀ = 55/91. -/
+theorem window10 : (shapes 10 14).all (fun E => Ly3 E ≤ 55/91) = true := by native_decide
+
 end LyWindowEnum
+
