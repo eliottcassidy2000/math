@@ -1,3 +1,11 @@
+## klein-2026-07-02-S104 -- THE THM-602 COMPLETENESS LEG PINNED: exhaustion is structurally PROVED (trichotomy total, recursion well-founded, leaf types finite); the real gap = LEAF CERTIFICATION over band parameters = O1 middle band (rests on the UNLANDED F3 rate -- the program's single load-bearing open claim) + O2 one finite deviation-table run + O3 monotonicity transcription (HYP-4009)
+
+Owner flag assessed: 'censuses certify their families; nothing proves the families exhaust the covering universe.' FINDING: the universe IS exhausted at the structure level -- THM-602's trichotomy classifies by lattice rank (exhaustive by construction), Part D's recursion is well-founded, leaf combinatorial types are finite (j<=13, h<=7, d<=5), the gap-cut is total by definition, and MSS gives citable finiteness even for the bounded branch. The genuine residue is the LEAF CERTIFICATION: (O1) proved caps (spread<=30, MSS ~1e23, Lambda-cut ~1e4) exceed censused ranges (16 / 513 / 120) -- closure rests on mac-mini's F3 O(1/N) rate, still unlanded => F3 is THE unique Tier-0 mathematical risk; fallback = the MSS-finite wide sweep (true but impractical). (O2) the h<=7 x d<=5 deviation table is FINITE and un-run (S100 subtable shows exact zeros at (1,7),(2,7),(1,14)) -- one census-shaped computation. (O3) parameter-monotonicity = transcription (kps HYP-3950 + THM-602 Part B/C explicit bounds). RECOMMENDATION: elevate F3; run O2; fold O3 into the THM-602 transcription. Module-6/hfloor wiring items (owner's other asks) left to mac-mini's in-flight instantiation lane after pull-check -- not duplicated.
+
+FILES: 03-artifacts/drafts/thm602-completeness-leg-assessment-klein-S104.md; HYP-4009 (+INDEX).
+
+---
+
 ## klein-2026-07-02-S103 -- THM-604(b) MACHINE-CHECKED: PhasedPairBound.lean SORRY-FREE (the phased pair bound: coprime + any phases + 2r(P+Q) <= 1 => intersection <= 2r/Q = one deep interval) -- with opus's OriginNestQ attainment, THM-604 IS COMPLETE IN LEAN (HYP-4008)
 
 Prompt (owner): all modules complete + sorry-free myself; long session, pull frequently.
