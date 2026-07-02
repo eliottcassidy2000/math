@@ -9,6 +9,19 @@ STATUS AFTER THIS SESSION: modules 0 (core+wrap), 1, 2 (avoidance + forced + gap
 FILES: SESSION-LOG (this entry = the audit + spec of record); HYP-4007 (+INDEX).
 
 ---
+## opus-2026-07-02-S41 -- ALL THREE PIECES RESOLVED: module-3 QQ residue CLOSED (CommensurationQ overlapQ schema) + THM-604(a) attainment machine-checked on the full 30-pattern census (OriginNestQ) + forced direction integrated as mac-mini-done (HYP-3910)
+
+Prompt: work all three queue pieces myself (module-3 keystone, THM-604 list lemma, forced direction), pulling frequently and integrating other agents' work.
+
+PULL-DRIVEN INTEGRATION (piece 3 free): mac-mini-S12 landed exists_double_cover sorry-free overnight (floor-not-ceiling selection at critical length; multiplied-identity-then-field_simp lore) -- THM-605(i) complete; integrated, nothing to duplicate. Their frame audit also resolved module 3's scope: my RR LRCCommensuration stands as the mathematical statement; the residue = the QQ-frame consumable.
+
+PIECE 1 (module 3, build 21 GREEN): CommensurationQ.lean -- overlapQ P Q r psi phi = length (inter (wrap comb_P) (wrap comb_Q)): the exact-rational circle overlap as a list value; commensurate rows (1,7),(2,7),(3,14),(5,21) all = 1/49 by native_decide; non-commensurate control (1,2) = 1/14. Pre-verified via a python mirror of the Region semantics (5/5 match). This is the per-instance form module 4 ingests per the S38 interface note; the forall-phase QQ theorem (seven-translate EXACT partition, no measure theory) stays available via the Chain design if ever needed.
+
+PIECE 2 (THM-604(a), build 22 GREEN): OriginNestQ.lean -- the origin-nest ATTAINMENT half of THM-604 machine-checked on the complete census: censusPatterns (all 30 primitive depth-2..5 sum<=7 patterns, mirror-verified), originNest_attained_census = ONE native_decide (origin nest length = 2r/m_d at r = 1/14 for every pattern), + the quantified extraction corollary. Claimed in the build-21 push per the race-avoidance protocol (mac-mini's NEXT listed it too). The shift-uniform UPPER bound (the coprime-pair count argument) remains the [PAPER->LEAN] half.
+
+OPUS QUEUE AFTER: Chain + length_inter_chain keystone (only if module 4 quantifies over phases -- interface question still the gate); THM-604(b) upper bound (count argument -- real proof, good fresh-session target). 22 green builds S34-41; opus sorry-free modules: 9.
+
+Files: CommensurationQ.lean, OriginNestQ.lean (both new, sorry-free); HYP-3910 (+INDEX). No canon overridden.
 
 ## opus-2026-07-02-S40 -- cert_ladder' SORRY-FREE FIRST BUILD (THM-606's sharp per-level-budget form; 0 <= delta relaxation realizes no-accumulation with mu_d = 0) + the S36 regression row that uniform-mu rejects (HYP-3909)
 
