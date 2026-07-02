@@ -5,6 +5,7 @@ Authors: kind-pasteur (LRC multi-agent project, 2026-07-01-S29)
 -/
 import Mathlib.Analysis.Normed.Group.AddCircle
 import Mathlib.Data.ZMod.Basic
+import Mathlib.NumberTheory.DiophantineApproximation.Basic
 
 /-!
 # The Lonely Runner Conjecture: definitions and elementary bounds
@@ -141,6 +142,36 @@ theorem conjecture_one : Conjecture 1 := by
     rw [round_eq]; norm_num
   rw [this]
   norm_num
+
+section Tightness
+
+/-- **Tightness of the Lonely Runner bound** (Dirichlet's approximation theorem): at every time
+`t`, some speed in `{1, …, k}` is within `1/(k+1)` of the origin.  So the constant `1/(k+1)` in
+the conjecture cannot be improved. -/
+theorem exists_norm_le_of_mem_Icc (k : ℕ) (hk : 0 < k) (t : ℝ) :
+    ∃ v ∈ Finset.Icc 1 k, ‖(((v : ℝ) * t : ℝ) : UnitAddCircle)‖ ≤ 1 / ((k : ℝ) + 1) := by
+  obtain ⟨j, s, hs0, hsk, h⟩ := Real.exists_int_int_abs_mul_sub_le t hk
+  refine ⟨s.toNat, ?_, ?_⟩
+  · rw [Finset.mem_Icc]
+    omega
+  · have hvs : ((s.toNat : ℕ) : ℝ) = (s : ℝ) := by
+      exact_mod_cast congrArg (Int.cast : ℤ → ℝ) (Int.toNat_of_nonneg hs0.le)
+    rw [hvs]
+    calc ‖(((s : ℝ) * t : ℝ) : UnitAddCircle)‖
+        = |(s : ℝ) * t - round ((s : ℝ) * t)| := UnitAddCircle.norm_eq
+      _ ≤ |(s : ℝ) * t - j| := round_le _ j
+      _ ≤ 1 / ((k : ℝ) + 1) := h
+
+/-- The constant `1/(k+1)` in the Lonely Runner Conjecture is optimal: for the consecutive
+speeds `{1, …, k}` no time is `r`-lonely for any `r > 1/(k+1)`. -/
+theorem not_isLonelyAt_Icc_of_lt {k : ℕ} (hk : 0 < k) {r t : ℝ}
+    (hr : 1 / ((k : ℝ) + 1) < r) : ¬ IsLonelyAt (Finset.Icc 1 k) r t := by
+  intro hL
+  obtain ⟨v, hv, hnorm⟩ := exists_norm_le_of_mem_Icc k hk t
+  have := hL v hv
+  linarith
+
+end Tightness
 
 section TwoRunners
 

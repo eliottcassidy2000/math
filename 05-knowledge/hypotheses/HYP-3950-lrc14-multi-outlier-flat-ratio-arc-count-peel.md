@@ -49,6 +49,11 @@ all >= 3.9x. **Residual analytic lemma for full rigor at r >= 7:** the multi-dim
 equidistribution rate for clusters (HYP-3787's O(1/w) is proved only <= 6-far) — with 3.2x margin.
 
 ### 5. EXACT PAIR-OVERLAP LAW (Farey-collision threshold AT n=14)
+**[UPDATE 2026-07-01-S29: mac-mini THM-594 PROVES the first branch (2r/q iff r(p+q) <= 1, Fourier)
+and CORRECTS my "-> 1/49 exact independence" gloss: beyond the threshold the exact overlap is the
+wrapped-branch formula 4r^2 - 2(1-2rp)(1-rq)/(pq), which FLUCTUATES (1/55, 5/231, 3/143, ...);
+independence 1/49 holds exactly only on the curve 7(q+2p-14) = pq. My coprime spot checks
+(0.02037-0.02045) were consistent with fluctuation but I over-summarized. Defer to THM-594.]**
 meas(D_w ∩ D_w') depends only on the reduced ratio p/q (scale-invariance, verified):
     **F(p,q) = 1/(7 max(p,q)) when p + q <= 14** (only the 0-teeth meet: Farey separation
     |i/p - j/q| >= 1/pq > (p+q)/(14pq) iff p+q < 14), transitioning to **1/49 (independence)** for
