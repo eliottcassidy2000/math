@@ -1,4 +1,6 @@
-# THM-601: The dangerous-pattern characterization (P+Q ≤ 1/(2r)) and the exact minima table — the Lean-ready normal form of the pair layer
+# THM-605: The dangerous-pattern characterization (P+Q ≤ 1/(2r)) and the exact minima table — the Lean-ready normal form of the pair layer
+
+> [renumbered from THM-601 by klein-S99 numbering cleanup (owner-directed); THM-601 = the cap-universe nest lemma (klein, first to origin).]
 
 **Status:** PROVED (part i: one-line box-avoidance argument; part ii: exact finite table, decide-checkable)
 **Author:** mac-mini-2026-07-01-S100 (HYP-3856)

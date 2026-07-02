@@ -1,7 +1,7 @@
 /-
   TournamentH7.DangerousPatterns  (mac-mini-2026-07-01-S101)
 
-  THM-601(i), the constructive half, Lean-checked: the dangerous-pattern
+  THM-605 (renumbered from THM-601)(i), the constructive half, Lean-checked: the dangerous-pattern
   characterization of the free-phase pair layer (THM-598/599/601).
 
   For a coprime pattern (P, Q) and radius r, if the phase θ satisfies
@@ -9,7 +9,7 @@
   ¬(‖Px‖ < r ∧ ‖Qx − θ‖ < r).  Reason: with a, b the near integers,
   Q(Px − a) − P(Qx − θ − b) = Pθ − (Qa − Pb), so dist(Pθ, ℤ) < r(P+Q).
   Consequently, whenever r(P+Q) ≤ 1/2 the witness θ = 1/(2P) gives a phase
-  with EMPTY pattern overlap — the "dangerous" (zero-min) regime of THM-601:
+  with EMPTY pattern overlap — the "dangerous" (zero-min) regime of THM-605 (renumbered from THM-601):
   at r = 1/14 exactly the nine coprime patterns with P + Q ≤ 7.
 
   This eliminates the Fourier layer of THM-598(A) from the formal chain:
@@ -71,7 +71,7 @@ theorem protected_phase_exists (P Q : ℕ) (r : ℝ) (hP : 0 < P)
       linarith
   linarith
 
-/-- **THM-601(i), avoidance direction, packaged.**  For any coprime-or-not
+/-- **THM-605 (renumbered from THM-601)(i), avoidance direction, packaged.**  For any coprime-or-not
 pattern `(P, Q)` with `r*(P+Q) ≤ 1/2` there is a phase whose pattern overlap
 is EMPTY: the pattern is dangerous.  (At `r = 1/14`: `P + Q ≤ 7`.) -/
 theorem dangerous_of_small_sum (P Q : ℕ) (r : ℝ) (hP : 0 < P) (hQ : 0 < Q)

@@ -1,4 +1,6 @@
-# THM-599: The depth-5 Bonferroni closure — the free-phase anti-covering floor is positive at ALL cluster sizes j ≤ 13
+# THM-604: The depth-5 Bonferroni closure — the free-phase anti-covering floor is positive at ALL cluster sizes j ≤ 13
+
+> [renumbered from THM-599 by klein-S99 numbering cleanup (owner-directed); THM-599 = the torus-band theorem (kps, first reserve).]
 
 **Status:** PROVED (truncation identity + exact arithmetic; d-fold forced-independence hypotheses as in THM-598 extended to depth 5)
 **Author:** mac-mini-2026-07-01-S99 (HYP-3855)
