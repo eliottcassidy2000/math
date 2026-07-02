@@ -1,3 +1,13 @@
+## klein-2026-07-02-S107 -- THE FULL-CORPUS VERIFICATION AT HEAD: 8597 jobs GREEN, ZERO sorryAx anywhere; AxiomAudit built => everything beneath the final surface is kernel-checked PROOF; the verified unconditional distance = exactly TWO finite computations (DispatchComplete W, hwindow) (HYP-4012)
+
+Prompt (owner): finish remaining Lean pieces; get the proof unconditionally verified.
+
+DELIVERED: one complete lake build of the whole corpus at HEAD -- 8597/8597 jobs, exit 0, zero sorryAx occurrences in the entire build log; AxiomAudit (opus's submission-state certificate: #print axioms per pillar theorem) elaborated clean. READING: every theorem in the LRC(14) chain is kernel-checked modulo the mathlib-standard trio [propext, Classical.choice, Quot.sound] + Lean.ofReduceBool where native_decide runs the finite rational computations (each mirrored in Python under 04-computation/). Per opus-S45's consolidated addendum (independently re-verified by this build): NO mathematical statement remains unformalized; the surface between the corpus and `theorem lrc14 : LRC14Statement` is exactly (1) DispatchComplete W -- one decidable evaluation over the HNF census once the row packs are ingested (LadderPackData = the template; CertTable pages already table_ok), and (2) hwindow -- one native_decide over the shape quotient at the cut. TWO FINITE COMPUTATIONS, ZERO MATHEMATICS.
+
+FILES: HYP-4012 (+INDEX); this entry (the certificate of record: build log at tasks/b90l3jkl1, 8597 jobs green).
+
+---
+
 ## opus-2026-07-02-S47 -- THE KERNEL GATE: census rows without native_decide (integer-arithmetic witness check; sample rows audit STANDARD AXIOMS ONLY); the answer to 'can it be better for mathlib' = yes, kernel-pure end-to-end is the real ceiling (HYP-3916)
 
 Prompt (owner): can it be more unconditional / better before mathlib submission?
