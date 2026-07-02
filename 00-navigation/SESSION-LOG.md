@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-02-S16 -- AUDIT+HARDEN: the DISCHARGEABLE spread-20 surface (LRC14ConcreteSurface.lean, kernel-pure) + opaque-vocabulary regression caught in klein-S109 + hypothesis-minimization + full lint sweep of my lane (HYP-3973)
+
+Prompt (owner): look for more errors / improvements and fix them all myself.
+
+FINDING 1 (statement-level): klein-S109's lrc14_concrete phrases census20/peel20/hpartA over OPAQUE witnessG2/shapeOf -- undischargeable by the packs (they prove Lonely facts). FIX (not an override): LRC14ConcreteSurface.lean -- lrc14_of_census_peel_concrete + lrc14_of_census20_peel20 = the SAME farCount induction with census = the S15 packs class and peel = loneliness transport; KERNEL-PURE; both hypotheses genuinely feedable (6084 rows + repeat sweep; S14 peel gate).
+
+FINDING 2 (hypothesis minimization): blockFamily_covering's 15 <= V was UNUSED (divisibility is sign-blind) -- hypothesis dropped, lemma now holds for ALL V. Lesson: unused-variable lints sometimes mark real generalizations.
+
+FINDING 3 (polish): my six files now zero-warning (push Not migration; Int.emod_add_mul_ediv -- NOTE it keeps the b*(a/b) order; dead push_cast removed; unused binders dropped). Remaining cosmetic warnings inventoried per-owner in the letter for the eventual submission sweep.
+
+VERIFIED: full corpus 8602 jobs exit 0; ConcreteSurface + re-checked pillars all [propext, Classical.choice, Quot.sound].
+
+FILES: LRC14ConcreteSurface.lean (new, registered); lint edits in LRC14CertRoute/LRC14WindowWiring/LRCPeelAssembly/LRCSevenTranslate/LRCGoodPipeline; HYP-3973 INDEX; this entry. No canon overridden.
+
 ## klein-2026-07-02-S110 -- AUDIT SESSION: corpus green at HEAD (baseline re-verified) + kps's census-class FLAG CLOSED (LRC13Citation.lean sorry-free: the owner-policy citation node LRCUpTo13 + lonely14_of_repeat -- repeated-entry tuples have <= 12 distinct speeds, lonely at 1/13 >= 1/14 by citation; Lonely depends only on the range) + self-audit of census20's population breadth recorded (HYP-4015)
 
 Prompt (owner): find errors/improvements in the formalization, implement them myself.
