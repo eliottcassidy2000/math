@@ -7,6 +7,17 @@ FILES: THM-604/605 renames + THM-600 redirect; lean LyWindowEnum.lean; HYP-4006 
 NEXT: (a) k=10 (2002 shapes, degree-3 dual) then k=9/k=8 in LyWindowEnum -- possibly chunked native_decides; (b) S_3/S_4 defs are the only additions needed; (c) the queue's remaining non-klein items: lattice/simplex engines (mac-mini), (*)-census (kps), THM-602 transcription.
 
 ---
+## opus-2026-07-02-S35 -- BELOW-V* WINDOWS CLOSED (53 kernel-decide rows, no-V-gap _all theorems for all 3 cert shapes) + the GENERAL PERIODIC AVERAGING lemma (row-7 block reduction); 3 more green builds (15 total across S34-35) (HYP-3904)
+
+Prompt: formalize the below-V* finite windows per shape (decide-shaped), the shape-universe enumeration, the multi-level recursion glue, the row-7 extension; decrease counts; pull frequently.
+
+DELIVERED 1 (windows -- DAG-surface item 1 of 3 CLOSED): LRCWitnessWindow.lean. Per-V rational witnesses a/b for every V below each tail threshold, checked by KERNEL decide via the closed Nat criterion b <= 14*min((v*a)%b, b-(v*a)%b) (= ||v*(a/b)|| >= 1/14 through norm_natCast_div; norm_ge_of_natCheck + rowOK + lonely_of_rowOK machinery). certAP_window [13,15), cert3_window [21,47), cert4_window [15,40); the V=13 boundary row uses the TIGHT witness 1/14 (the closed inequality makes even the tight AP pass). Combined _all theorems: the dilated-AP family holds for EVERY V>=13, shape-3 for V>=21, shape-4 for V>=15 -- NO V-GAP remains in any certified family. Axiom check: windows are STANDARD-AXIOMS pure (no native_decide; kernel decide on 53 small-numeral rows); only the tails inherit kps's native_decide. Witness generator: exact max-min over the complete breakpoint grid, 53/53 pass (script + .out committed).
+
+DELIVERED 2 (the extension -- row-7 block reduction): LRCCommensuration refactored around the observation that the S34 tiling proof never used the second comb beyond 1/7-PERIODICITY: seven_mul_volume_inter_periodic (7 not|P, C any 1/7-periodic measurable => 7*vol(danger P psi CAP C) = vol C, axiom-clean) + seventh_periodic_danger + seventh_periodic_inter + mem_add_tau_iff; seven_commensuration re-derived as a corollary. Consumption pattern for forced_independence_d5: intersections of 7-divisible danger combs are 1/7-periodic, so each non-commensurate speed peels an exact factor 1/7 -- the commensurate-block recursion step is now a two-line application.
+
+NOT REACHED (honest): shape-universe enumeration (mac-mini's THM-604 abolished the deviation tables and is evolving the covering-locus sieve mid-session -- statement layer would have collided) and the depth-d ladder wrapper (base = kps cert_two_level; next session's target). Coordination: pushed windows before klein's HYP-4006 window re-enumeration pilot landed (they can build on mine); no collisions this session.
+
+Files: LRCWitnessWindow.lean (new), LRCCommensuration.lean (refactored), lrc14_window_witness_generator_opus_20260702_S35.py + .out; HYP-3904 (+INDEX). No canon overridden.
 
 ## mac-mini-2026-07-02-S6 -- TWO QUEUE ROWS: THM-604 PROVED (origin-nest max law, all depths: deviation data formula-generated, tables abolished) + the COVERING-LOCUS GAP-CATCH (the min_theta base table was VACUOUS for BCS-covering rays; replaced by the drift-line dichotomy + exact-ray sieve sub-census) (HYP-3863)
 

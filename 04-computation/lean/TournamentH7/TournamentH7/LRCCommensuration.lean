@@ -188,40 +188,74 @@ theorem balls_disjoint {P : ℤ} (hP7 : ¬ (7 : ℤ) ∣ P) {i j : ℕ} (hi7 : i
       _ = 1 / 7 := by norm_num
   linarith
 
-/-- **The 7-commensuration lemma** (project THM-602 addendum; DAG-spec row 6).  At the
-critical radius `r = 1/14`, a speed `P` not divisible by `7` and a speed `Q` divisible by `7`
-have danger-overlap exactly `(2r)² = 1/49`, for *every* pair of phases: 7-commensurate pairs
-are exactly independent.  The seven `1/7`-translates of the `P`-comb tile the circle a.e.,
-while the `Q`-comb is `1/7`-periodic; averaging over the translates gives the product. -/
-theorem seven_commensuration {P Q : ℤ} (hP7 : ¬ (7 : ℤ) ∣ P) (hQ0 : Q ≠ 0) (hQ7 : (7 : ℤ) ∣ Q)
-    (ψ φ : UnitAddCircle) :
-    volume (danger P ψ (1 / 14) ∩ danger Q φ (1 / 14)) = ENNReal.ofReal (1 / 49) := by
+/-- Multiples of the seventh-turn vanish for `7`-divisible coefficients. -/
+theorem zsmul_seventh_eq_zero {Q : ℤ} (hQ7 : (7 : ℤ) ∣ Q) : Q • seventh = 0 := by
+  obtain ⟨m, rfl⟩ := hQ7
+  rw [show ((7 * m : ℤ)) = m * 7 by ring, ← smul_smul, seven_zsmul_seventh, smul_zero]
+
+/-- Invariance under one seventh-turn extends to all translates `tau i`. -/
+theorem mem_add_tau_iff {C : Set UnitAddCircle}
+    (hC : ∀ x, x + seventh ∈ C ↔ x ∈ C) (i : ℕ) :
+    ∀ x, x + tau i ∈ C ↔ x ∈ C := by
+  induction i with
+  | zero =>
+    intro x
+    have h0 : tau 0 = 0 := by unfold tau; simp
+    rw [h0, add_zero]
+  | succ n ih =>
+    intro x
+    have hs : tau (n + 1) = tau n + seventh := by
+      unfold tau
+      rw [show ((n + 1 : ℕ) : ℤ) = (n : ℤ) + 1 by push_cast; ring, add_smul, one_smul]
+    rw [hs, ← add_assoc]
+    exact (hC (x + tau n)).trans (ih x)
+
+/-- A `7`-divisible danger comb is `1/7`-periodic. -/
+theorem seventh_periodic_danger {Q : ℤ} (hQ7 : (7 : ℤ) ∣ Q) (φ : UnitAddCircle) (r : ℝ) :
+    ∀ x, x + seventh ∈ danger Q φ r ↔ x ∈ danger Q φ r := by
+  intro x
+  have hval : Q • (x + seventh) + φ = Q • x + φ := by
+    rw [smul_add, zsmul_seventh_eq_zero hQ7, add_zero]
+  simp only [mem_danger, hval]
+
+/-- Periodicity passes to intersections (used to reduce commensurate BLOCKS). -/
+theorem seventh_periodic_inter {C D : Set UnitAddCircle}
+    (hC : ∀ x, x + seventh ∈ C ↔ x ∈ C) (hD : ∀ x, x + seventh ∈ D ↔ x ∈ D) :
+    ∀ x, x + seventh ∈ C ∩ D ↔ x ∈ C ∩ D := fun x =>
+  and_congr (hC x) (hD x)
+
+/-- **The general averaging lemma** (the load-bearing form): a speed `P` not divisible by `7`
+is exactly `1/7`-independent of EVERY `1/7`-periodic measurable set:
+
+    7 · vol (danger P ψ (1/14) ∩ C) = vol C.
+
+Row-7 consumers apply this iteratively — an intersection of `7`-divisible danger combs is
+`1/7`-periodic, so each non-commensurate speed peels off an exact factor `1/7`.  The proof is
+the seven-translate tiling: the translates of the `P`-comb partition the circle a.e. into seven
+pieces of equal `C`-conditional volume. -/
+theorem seven_mul_volume_inter_periodic {P : ℤ} (hP7 : ¬ (7 : ℤ) ∣ P) (ψ : UnitAddCircle)
+    {C : Set UnitAddCircle} (hCper1 : ∀ x, x + seventh ∈ C ↔ x ∈ C)
+    (hCmeas : MeasurableSet C) :
+    (7 : ℝ≥0∞) * volume (danger P ψ (1 / 14) ∩ C) = volume C := by
   have hP0 : P ≠ 0 := fun h => hP7 (h ▸ dvd_zero 7)
   have hrpos : (0 : ℝ) < 1 / 14 := by norm_num
   have hr2 : 2 * (1 / 14 : ℝ) ≤ 1 := by norm_num
-  -- (1) the Q-comb is 1/7-periodic
-  have hCper : ∀ i : ℕ, (fun x => x + tau i) ⁻¹' danger Q φ (1 / 14) = danger Q φ (1 / 14) := by
-    intro i
-    rw [preimage_add_danger]
-    have hQτ : Q • tau i = 0 := by
-      obtain ⟨m, rfl⟩ := hQ7
-      unfold tau
-      rw [smul_smul, show (7 * m * (i : ℤ)) = (m * (i : ℤ)) * 7 by ring, ← smul_smul,
-        seven_zsmul_seventh, smul_zero]
-    rw [hQτ, add_zero]
+  -- (1) C is invariant under every translate
+  have hCper : ∀ i : ℕ, (fun x => x + tau i) ⁻¹' C = C := fun i =>
+    Set.ext fun x => mem_add_tau_iff hCper1 i x
   -- (2) translating carries the intersection to the shifted-phase piece
-  have htrans : ∀ i : ℕ, (fun x => x + tau i) ⁻¹' (danger P ψ (1 / 14) ∩ danger Q φ (1 / 14)) =
-      danger P (ψ + P • tau i) (1 / 14) ∩ danger Q φ (1 / 14) := by
+  have htrans : ∀ i : ℕ, (fun x => x + tau i) ⁻¹' (danger P ψ (1 / 14) ∩ C) =
+      danger P (ψ + P • tau i) (1 / 14) ∩ C := by
     intro i
     rw [Set.preimage_inter, hCper, preimage_add_danger]
   -- (3) so every piece has the intersection's volume
   have hpiece : ∀ i : ℕ,
-      volume (danger P (ψ + P • tau i) (1 / 14) ∩ danger Q φ (1 / 14)) =
-      volume (danger P ψ (1 / 14) ∩ danger Q φ (1 / 14)) := by
+      volume (danger P (ψ + P • tau i) (1 / 14) ∩ C) =
+      volume (danger P ψ (1 / 14) ∩ C) := by
     intro i
     rw [← htrans i]
     exact (measurePreserving_add_right volume (tau i)).measure_preimage
-      (((measurableSet_danger P ψ _).inter (measurableSet_danger Q φ _)).nullMeasurableSet)
+      (((measurableSet_danger P ψ _).inter hCmeas).nullMeasurableSet)
   -- (4) the union of the seven translate-pieces has full measure
   have hpre : ∀ i : ℕ, danger P (ψ + P • tau i) (1 / 14) =
       runnerMap P ψ ⁻¹' ball (-(P • tau i)) (1 / 14) := fun i =>
@@ -245,7 +279,6 @@ theorem seven_commensuration {P Q : ℤ} (hP7 : ¬ (7 : ℤ) ∣ P) (hQ0 : Q ≠
       · exact fun i _ => measurableSet_ball
     · exact (Finset.measurableSet_biUnion _ fun i _ => measurableSet_ball).nullMeasurableSet
   -- (5) the C-mass splits equally over the seven pieces
-  have hCmeas : MeasurableSet (danger Q φ (1 / 14)) := measurableSet_danger Q φ _
   have hUmeas : MeasurableSet (⋃ i ∈ Finset.range 7, danger P (ψ + P • tau i) (1 / 14)) :=
     Finset.measurableSet_biUnion _ fun i _ => measurableSet_danger P _ _
   have hUc : volume (⋃ i ∈ Finset.range 7, danger P (ψ + P • tau i) (1 / 14))ᶜ = 0 := by
@@ -253,25 +286,25 @@ theorem seven_commensuration {P Q : ℤ} (hP7 : ¬ (7 : ℤ) ∣ P) (hQ0 : Q ≠
     have huniv : volume (Set.univ : Set UnitAddCircle) = 1 := by
       rw [AddCircle.measure_univ, ENNReal.ofReal_one]
     rw [huniv, tsub_self]
-  have hsplit : volume (danger Q φ (1 / 14) ∩ ⋃ i ∈ Finset.range 7,
-        danger P (ψ + P • tau i) (1 / 14)) = ENNReal.ofReal (2 * (1 / 14)) := by
-    have h1 : volume (danger Q φ (1 / 14) ∩ ⋃ i ∈ Finset.range 7,
+  have hsplit : volume (C ∩ ⋃ i ∈ Finset.range 7,
+        danger P (ψ + P • tau i) (1 / 14)) = volume C := by
+    have h1 : volume (C ∩ ⋃ i ∈ Finset.range 7,
           danger P (ψ + P • tau i) (1 / 14)) +
-        volume (danger Q φ (1 / 14) \ ⋃ i ∈ Finset.range 7,
-          danger P (ψ + P • tau i) (1 / 14)) = volume (danger Q φ (1 / 14)) :=
+        volume (C \ ⋃ i ∈ Finset.range 7,
+          danger P (ψ + P • tau i) (1 / 14)) = volume C :=
       measure_inter_add_diff _ hUmeas
-    have h2 : volume (danger Q φ (1 / 14) \ ⋃ i ∈ Finset.range 7,
+    have h2 : volume (C \ ⋃ i ∈ Finset.range 7,
         danger P (ψ + P • tau i) (1 / 14)) = 0 :=
       measure_mono_null (fun x hx => hx.2) hUc
     rw [h2, add_zero] at h1
-    rw [h1, volume_danger hQ0 φ hrpos hr2]
-  have hsum : volume (danger Q φ (1 / 14) ∩ ⋃ i ∈ Finset.range 7,
+    exact h1
+  have hsum : volume (C ∩ ⋃ i ∈ Finset.range 7,
       danger P (ψ + P • tau i) (1 / 14)) =
-      (7 : ℕ) • volume (danger P ψ (1 / 14) ∩ danger Q φ (1 / 14)) := by
+      (7 : ℕ) • volume (danger P ψ (1 / 14) ∩ C) := by
     rw [Set.inter_iUnion₂, measure_biUnion_finset]
     · have heach : ∀ i ∈ Finset.range 7,
-          volume (danger Q φ (1 / 14) ∩ danger P (ψ + P • tau i) (1 / 14)) =
-          volume (danger P ψ (1 / 14) ∩ danger Q φ (1 / 14)) := by
+          volume (C ∩ danger P (ψ + P • tau i) (1 / 14)) =
+          volume (danger P ψ (1 / 14) ∩ C) := by
         intro i _
         rw [Set.inter_comm]
         exact hpiece i
@@ -284,12 +317,23 @@ theorem seven_commensuration {P Q : ℤ} (hP7 : ¬ (7 : ℤ) ∣ P) (hQ0 : Q ≠
           hij).preimage _)
       exact hd.mono Set.inter_subset_right Set.inter_subset_right
     · exact fun i _ => hCmeas.inter (measurableSet_danger P _ _)
-  -- (6) endgame: 7 · V = 1/7 ⟹ V = 1/49
-  have hkey : ((7 : ℕ) : ℝ≥0∞) * volume (danger P ψ (1 / 14) ∩ danger Q φ (1 / 14)) =
-      ENNReal.ofReal (2 * (1 / 14)) := by
-    rw [← nsmul_eq_mul, ← hsum, hsplit]
-  have hval : ((7 : ℕ) : ℝ≥0∞) * ENNReal.ofReal (1 / 49) = ENNReal.ofReal (2 * (1 / 14)) := by
-    calc ((7 : ℕ) : ℝ≥0∞) * ENNReal.ofReal (1 / 49)
+  calc (7 : ℝ≥0∞) * volume (danger P ψ (1 / 14) ∩ C)
+      = ((7 : ℕ) : ℝ≥0∞) * volume (danger P ψ (1 / 14) ∩ C) := by norm_num
+    _ = (7 : ℕ) • volume (danger P ψ (1 / 14) ∩ C) := (nsmul_eq_mul _ _).symm
+    _ = volume C := by rw [← hsum]; exact hsplit
+
+/-- **The 7-commensuration lemma** (project THM-602 addendum; DAG-spec row 6).  At the
+critical radius `r = 1/14`, a speed `P` not divisible by `7` and a speed `Q` divisible by `7`
+have danger-overlap exactly `(2r)² = 1/49`, for *every* pair of phases: 7-commensurate pairs
+are exactly independent.  Corollary of the general averaging lemma. -/
+theorem seven_commensuration {P Q : ℤ} (hP7 : ¬ (7 : ℤ) ∣ P) (hQ0 : Q ≠ 0) (hQ7 : (7 : ℤ) ∣ Q)
+    (ψ φ : UnitAddCircle) :
+    volume (danger P ψ (1 / 14) ∩ danger Q φ (1 / 14)) = ENNReal.ofReal (1 / 49) := by
+  have hkey := seven_mul_volume_inter_periodic hP7 ψ
+    (seventh_periodic_danger hQ7 φ (1 / 14)) (measurableSet_danger Q φ _)
+  rw [volume_danger hQ0 φ (by norm_num) (by norm_num)] at hkey
+  have hval : (7 : ℝ≥0∞) * ENNReal.ofReal (1 / 49) = ENNReal.ofReal (2 * (1 / 14)) := by
+    calc (7 : ℝ≥0∞) * ENNReal.ofReal (1 / 49)
         = ENNReal.ofReal 7 * ENNReal.ofReal (1 / 49) := by norm_num
       _ = ENNReal.ofReal (7 * (1 / 49)) := (ENNReal.ofReal_mul (by norm_num)).symm
       _ = ENNReal.ofReal (2 * (1 / 14)) := by norm_num
