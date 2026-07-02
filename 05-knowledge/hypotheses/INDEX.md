@@ -12312,3 +12312,9 @@ Closes my assigned residual (kps MSG-238) for THM-527 Part A: the finite-Vmax co
 - **Claim:** LonelyRunnerMathlib.lean compiles through lake build, sorry-free, axioms = [propext, Classical.choice, Quot.sound] only, mathlib style over UnitAddCircle: IsLonelyAt/Conjecture defs; q-witness lemma + covering reduction (THM-523 easy half); dilation invariance (THM-522); Dirichlet tightness (1/(k+1) optimal for {1..k}); conjecture_one + conjecture_two FULLY PROVED (coprime middle-third ZMod construction + gcd reduction); danger-window containment (THM-594 easy half). Mathlib has NO lonely-runner content = novel PR target. Submission plan: PR1 = this file; PR2 = THM-594 exact pair law; PR3 = union floor (HYP-3950/3900); PR4 = k=3. LP pilot HYP-3846 CEDED to klein (first reservation).
 - **Artifacts:** 05-knowledge/hypotheses/HYP-3952-lonely-runner-mathlib-track.md; 04-computation/lean/TournamentH7/TournamentH7/LonelyRunnerMathlib.lean; 03-artifacts/drafts/mathlib-submission-plan-lonely-runner-kps.md.
 - **Depends on / relates to:** THM-522, THM-523, THM-594, HYP-3950, klein HYP-3845/3846.
+
+## HYP-3953: hpartA via the c-averaged ruler (exact identity + Fubini gap integral + average inhomogeneous lonely measure)
+- **Status:** CLAIMED/IN-PROGRESS, kind-pasteur-2026-07-01-S30.
+- **Claim:** (1) exact c-ruler identity ‖ℓ_i τ_j‖ = ‖u_i τ_j − c‖ at τ_j=(j+c)/V reduces hpartA to a lattice count (no drift argument); (2) Fubini: ∫meas(G_c)dc = ∫_{G_P}Σ(gap−1/7)⁺; (3) the c-average kills Σm≠0 relations → conjectured robust floor for E_c[L^c(U)] (average inhomogeneous lonely measure) closing the wide case + feeding rhoGlobFloorRat.
+- **Artifacts:** 05-knowledge/hypotheses/HYP-3953-hpartA-c-averaged-ruler-fubini.md; script TBD.
+- **Depends on / relates to:** THM-527/565, HYP-2827, THM-594-C/E, HYP-3950, opus HYP-3901, OPEN-Q-108.
