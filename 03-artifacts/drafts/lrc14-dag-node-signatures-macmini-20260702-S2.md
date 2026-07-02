@@ -21,6 +21,8 @@ further mathematics.
    the torus-band volumes (THM-600).  Discharges: hpartA's residual finite census.
 6. **commensuration** (PROVED this session, THM-602 addendum): `7 | Q ⟹ ov_{P,Q} ≡ (2r)²`
    — transcription target: a finite exact-tiling argument, polygon-module species.
+   **[DISCHARGED in Lean: opus-S34 `LRCCommensuration.seven_commensuration`, sorry-free, axiom-clean,
+   both-phases generality -- circle measure theory, HYP-3903.]**
 7. **forced_independence_d5** (THM-602(C), paper-complete): transcription target; consumes
    rows 1 and 6; produces the S_d hypotheses of `BonferroniTruncation`-driven floors.
 8. **skeleton wiring**: replace `hpartA` by [rows 2+5+7 assembled per THM-602(D)];
