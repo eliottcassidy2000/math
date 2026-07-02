@@ -16,6 +16,19 @@ O(1/N) rate meas -> Int_{L_low} D uniform over bounded-ratio patterns (= HYP-378
 coordinates); (b) positive floor for Int_{L_low} D_pattern (induction on the tower; needs the Fraenkel-
 side rigidity of tiling times); (c) is the binding case ALWAYS height-1 (the census), i.e. does the
 scale flow contract toward the fixed point? -> HYP-3834, HYP-3835, MISTAKE-090, THM-522/523, HYP-3787.
+**OPEN-Q-108 THM-592/THM-593/HYP-3840 radius-derivative addendum (mac-mini-2026-07-01-S93):**
+m_S(r) = the SURVIVAL FUNCTION of f_S(t)=min_v||vt||; piecewise linear on the Farey grid d/(v±w); slope
+= co-area density -Σ_components(1/v_L+1/v_R); merges convex, overtaking resonances (r=d/(w-v), first at
+gcd/(w-v)) concave; the union bound = the tangent at r=0 (the S91 moment stall = wrong anchor, not wrong
+category). Ladder: m(r1) >= m(r0)+(m'(r0)-K)(r1-r0); tangent at 1/16 alone certifies M(deep well)>=1/14.
+Tight sets: unit-residue lemma (all unit residues forced; drops non-unit; q prime => permutation type;
+proves klein-S48 census zeros); slope c_S >= (2/q)Σ_u 1/v_max(u), equality iff clean; S92's 0.26 =
+1666/6435 exactly; q=5..16 landscape: rigidity fails at q=5 (29/42), q=8 (328/1001), HOLDS at q=14
+(tight locus {AP, GW-24}). THREE live questions: (1) STABILITY unit-residue lemma (missing unit =>
+M >= 1/q + gap) -> the fattening lemma; find the covering-branch (residue-0) analog. (2) DEFECT SIEVE:
+bound the exposed overtaking defect K(r0,1/14) for covering sets -> tangent-ladder covering floor.
+(3) the arc×radius two-variable LP (unifies HYP-3824 Q-localization with the slope). -> THM-592, THM-593,
+HYP-3840, HYP-3824, HYP-3750, OPEN-Q-108.
 
 **OPEN-Q-110 the antipodal/metagraph thread (klein-2026-06-29-S1, THM-584):** Complement R = the ANTIPODAL
 MAP of the arc-hypercube Q_{C(n,2)}; the iso-class metagraph A is its S_n-quotient, splitting R-even/R-odd

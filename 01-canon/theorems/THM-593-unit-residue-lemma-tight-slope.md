@@ -26,26 +26,30 @@
 
 ## Part B — the exact slope of a tight set
 
-By THM-592(ii) and Corollary A2, near `r = 1/q` the lonely set of a tight `S` is a union of one shrinking component per unit witness `a/q`, bounded on each side by the runners achieving residues `±1` at `a`; when a residue `u` is carried by several runners the **binding endpoint owner is the fastest**, `v_max(u) = max{v ∈ S : v ≡ u (mod q)}`. Each witness component has width `(1/q − r)(1/v_max(a^{-1}) + 1/v_max(−a^{-1}))`. Summing over units (as `a` runs over units so does `a^{-1}`):
+By THM-592(ii) and Corollary A2, near `r = 1/q` the lonely set of a tight `S` contains one shrinking component per unit witness `a/q`, bounded on each side by the runners achieving residues `±1` at `a`; when a residue `u` is carried by several runners the **binding endpoint owner is the fastest**, `v_max(u) = max{v ∈ S : v ≡ u (mod q)}`. Each such component has width `(1/q − r)(1/v_max(a^{-1}) + 1/v_max(−a^{-1}))`. Summing over units (as `a` runs over units so does `a^{-1}`):
 
 ```
 m_S(r) = c_S · (1 − q r)   on the last linearity cell below 1/q,  with
 
-c_S = (2/q) · Σ_{u ∈ (Z/q)^*}  1 / v_max(u).          (exact)
+c_S ≥ (2/q) · Σ_{u ∈ (Z/q)^*}  1 / v_max(u),
 ```
+with **equality iff the argmax of `f_S` is exactly the unit fractions** (call such tight sets **clean**); extra witnesses (necessarily also with `min = 1/q`) only add components/slope. Every primitive tight set tested (all q = 5..16 families, incl. `{1,3,4,7}`, GW sets, cross-types) is clean — verified by direct measurement. Non-primitive sets are NOT clean: a dilation `cS` has `c·φ(q)` witnesses (at `a/(cq)`), and its slope equals `c_{S}` by the dilation invariance `m_{cS}(r) = m_S(r)` — the formula applied naively to `cS` under-counts by the factor `c` (caught by the `{2,4,6,8}` cross-check; always normalize to gcd 1 first).
 
 **Corollary B1 (AP value & the S92 constant).** For `S = {1,…,q−1}`: `v_max(u) = u`, so
 `c_AP(q) = (2/q) Σ_{u∈(Z/q)^*} 1/u`. At `q = 14`: `c_AP = 2(1/13 + 1/45 + 1/33) = 1666/6435 = 0.258897…` — the exact value of the empirical "0.26" slope of HYP-3824/S92.
 
 **Corollary B2 (slope rigidity iff lifts avoid unit residues).** `c_S = c_AP(q)` iff every unit residue is carried by its minimal representative (`v_max(u) = u`), i.e. all lifted elements sit on **non-unit** residues. Verified rigid: AP; GW `{1,2,3,4,5,7,12}` (q=8, lift on residue 4); GW `{1,…,11,13,24}` (q=14, lift on residue 10); cross `{1,3,4,5,9}` (q=6, lift on residue 3).
 
-**Corollary B3 (rigidity FAILS in general — beaters exist).** The q=8 tight set `{1,4,5,6,7,11,13}` (drop 2, dup 5 via 13, relift 3→11 — the relift is a forced covering patch) carries units 3 and 5 on fast runners 11 and 13:
-`c = (2/8)(1/1 + 1/7 + 1/11 + 1/13) = 328/1001 = 0.3277 < c_AP(8) = 44/105 = 0.4190.`
-So the AP is **not** universally the slope minimizer over the tight locus; the slope floor is a classification-dependent quantity `(2/q)·min_{tight S} Σ_u 1/v_max(u)`.
+**Corollary B3 (rigidity FAILS in general — beaters exist).** Two mechanisms, both verified directly:
+- *Relift beater, q = 8*: `{1,4,5,6,7,11,13}` (drop 2, dup 5 via 13, relift 3→11 — the relift is a forced covering patch) carries units 3 and 5 on fast runners 11 and 13:
+  `c = (2/8)(1/1 + 1/7 + 1/11 + 1/13) = 328/1001 = 0.3277 < c_AP(8) = 44/105 = 0.4190.`
+- *Perm-lift beater at PRIME modulus, q = 5*: `{1,3,4,7}` (residues a permutation of {1..4}; the unit 2 lifted to 7): `c = (2/5)(1/1 + 1/7 + 1/3 + 1/4) = 29/42 = 0.690 < c_AP(5) = 5/6 = 0.833.` So Corollary A4 (prime ⟹ permutation type only) does NOT rescue rigidity at prime moduli: permutation-type sets can still lift units.
 
-**Corollary B4 (q = 14).** Exhaustive sweep over the classified families (single lifts j ≤ 12, double dup+drop/relifts j ≤ 4): the only non-AP tight 13-set is the GW set `{1,…,11,13,24}`, which is rigid. Hence at `N = 14` the slope floor over the enumerated tight locus is exactly
+The AP is **not** universally the slope minimizer over the tight locus; the slope floor is the classification-dependent quantity `(2/q)·min_{clean tight S} Σ_u 1/v_max(u)`. Landscape census q = 5..16 (`lrc_tight_slope_landscape_macmini_S93.out`): beaters exist at q ∈ {5, 8}; all other q in range, including q = 14, are rigid over the enumerated families.
+
+**Corollary B4 (q = 14).** Sweep over the classified families — perm-lift (j ≤ 6), perm-2lift (j ≤ 3 each), dup+drop with non-unit drops (j ≤ 6; unit drops excluded by Corollary A3 and re-verified 0 in a sanity pass), dup+drop + one element relift (j ≤ 3 each; the pattern that produces the q=8 beater): the only non-AP tight 13-set is the GW set `{1,…,11,13,24}` (drop 12, dup 10 via 24), which is rigid. Hence at `N = 14` the slope floor over the enumerated tight locus is exactly
 `c_min(14) = c_AP(14) = 1666/6435`,
-confirming and sharpening HYP-3824's `inf_S |L_S(r)| ≈ 0.26·(1−14r)`: the constant is `1666/6435` and it is attained by BOTH extremals (AP and GW). [Sweep: `lrc_tight13_locus_slope_floor_macmini_S93.out`. Caveat: exhaustiveness is relative to the HYP-3750 residue classification and the lift bounds; higher lifts verified to break tightness upward (M > 1/q, LRC-safe) in all sampled families.]
+confirming and sharpening HYP-3824's `inf_S |L_S(r)| ≈ 0.26·(1−14r)`: the constant is `1666/6435` and it is attained by BOTH extremals (AP and GW). [Sweep: `lrc_tight13_locus_slope_floor_v2_macmini_S93.out`. Caveats: exhaustiveness is relative to the HYP-3750 residue classification (single dup+drop) plus the lift bounds; higher lifts verified to break tightness upward (M > 1/q, LRC-safe) in all sampled escalating-lift families.]
 
 ## Interpretation
 

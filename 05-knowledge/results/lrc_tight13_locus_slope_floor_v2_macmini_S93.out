@@ -1,0 +1,16 @@
+==============================================================================
+(A) perm-lift x->x+14j, j<=6
+(A2) perm-2lift, j<=3 each
+(B) dup+drop (drop non-unit v, dup s via s+14j), j<=6
+  TIGHT [drop12 dup10 via 24]  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+(B2) dup+drop + one relift, j<=3 each  (the q=8-beater pattern)
+(sanity) drops of UNIT residues (lemma predicts none tight), sample j<=2
+unit-drop tight sets found: 0 (THM-593 predicts 0)
+==============================================================================
+C_AP(14) = 1666/6435 = 0.258897
+non-AP tight 13-sets found: 1
+  slope 1666/6435 = 0.258897  = C_AP (rigid)  [thm593 OK]  drop12 dup10 via 24
+     S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+
+SLOPE FLOOR at N=14 over enumerated tight locus: 1666/6435 = 0.258897
+(families: perm-lift j<=6, perm-2lift j<=3, dup+drop j<=6, dup+drop+relift j<=3)

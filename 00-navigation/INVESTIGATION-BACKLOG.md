@@ -29,6 +29,27 @@ core realizes a nontrivial exact cover. First in repo: no prior Fraenkel mention
 (2) **Deep-witness emptiness.** No tight set containing a multiple of n found (censuses n<=8; all tight sets keep all phi(n) shallow witnesses). Prove tight => no multiple of n (would make the class-max collapse formula unconditional). Next: try the m(k/n)-quantization argument on a hypothetical deep-witness tight set; connect to THM-398 dominance-dodge.
 (3) **The (c, E) pair as a tight-locus invariant.** Collapse rate c is blind within {AP,GW} at n=14; mean loneliness E separates them (E(GW) < E(AP) exact). Next: compute (c,E) at n=20 (census {AP, GW_19}); is the pair complete on the tight locus? Is E(GW_n) < E(AP_n) for the whole family (the 2(n-1) element always wins the mean)?
 (4) **Envelope carrier classification.** Exhaustive n=4,5: carriers of inf_S Lambda_S(r) walk down ladders {1,m,m+1} -> AP; near-tight LOOSE sets undercut the tight line until isolation bites. Next: carrier decomposition at n=14 sub-critical radii (is kps's pentagon 11-core a carrier at r ~ 0.906/14?); a per-radius carrier law = the quantitative LRC. Scripts: lonely_profile_farey_slope_klein.py, tight_census_collapse_rates_klein.py. -> THM-523 (inf L = envelope at 1/14), HYP-3824, HYP-3750, HYP-3763.
+**THE RADIUS-DERIVATIVE / SURVIVAL-FUNCTION FRAME (mac-mini-2026-07-01-S93, THM-592/593, HYP-3840). NEW — HIGH PRIORITY follow-ups.**
+The lonely measure `m_S(r)` is the survival function of `f_S(t)=min_v||vt||`; its slope is the co-area
+density `-Σ_components(1/v_L+1/v_R)`; breakpoints live on the pairwise Farey grid `d/(v±w)`; merge kinks are
+convex, overtaking kinks (`r=d/(w-v)`, first at `gcd/(w-v)`) are concave; the union bound = the tangent at r=0.
+S92's empirical `0.26(1-14r)` floor = exactly `1666/6435·(1-14r)`; tight-set slope closed form
+`c_S=(2/q)Σ_{u unit}1/v_max(u)`; rigidity FAILS at q=8 (`328/1001` beater `{1,4,5,6,7,11,13}`) but HOLDS at q=14
+(tight locus = {AP, GW-24} only). Follow-ups, in priority order:
+(1) STABILITY unit-residue lemma: missing unit residue ⟹ `M(S) ≥ 1/q + v_j/(q(v_max+v_j))` (gap above);
+    quantify and feed the fattening lemma (OPEN-Q-108). The lemma applies on the NON-covering branch only
+    (covering sets contain multiples of 14 = residue 0); find the covering-branch analog (residue-0-aware).
+(2) DEFECT SIEVE: bound the exposed overtaking defect `K(r0,1/14)` (THM-592(v)) for covering 13-sets — each
+    concave kink needs an escape window uncovered by the other 12 runners; the small speeds {1..12}-ish cover
+    most windows. If `K` is uniformly small, the tangent ladder from a sieve-certified anchor closes floors.
+(3) TWO-VARIABLE LP: per-arc × per-radius masses `|{t∈I_c : f_S(t)≥r}|` (Γ₀-position-localization × radius-
+    localization in one matrix) — strictly stronger than both HYP-3824's localized LP and the global slope.
+(4) WHY 14 IS RIGID BUT 8 IS NOT: the relift covering-patch domino closes at q=8 and fails at q=14 —
+    characterize which q admit unit-lift beaters (landscape census `lrc_tight_slope_landscape_macmini_S93`).
+(5) ENGINEERING: `04-computation/lonely_profile.py` (exact full-profile library, self-tested) — use it as the
+    standard exact `M(S)`/measure/slope engine in future LRC sessions; candidate PyPI micro-package with the
+    mod_rank library.
+-> THM-592, THM-593, HYP-3840, HYP-3824, OPEN-Q-108, HYP-3750, HYP-2893.
 
 **THREE EXTERNAL LEADS (owner, kind-pasteur-2026-07-01-S22) -- tangential connections to assess/extend.**
 (1) GOOD LOCALLY TESTABLE CODES (Dinur-Evra-Livne-Lubotzky-Mozes, Annals 2026 203-2, https://annals.math.princeton.edu/2026/203-2/p03): c^3-LTC via LEFT-RIGHT CAYLEY COMPLEXES. STRONG lead: (a) local-testability = local-to-global = RECONSTRUCTION (the S14-19 thread: how much global tournament class does a local/bounded-invariant view certify); LTC = where local DOES certify global. (b) the tiling/half-tiling is a SQUARE COMPLEX; Lubotzky's Ramanujan/expander arithmetic = the sqrt-p Gauss-sum flavor (Paley skew {0,±i√p} = Ramanujan bound). NEXT: is the tiling/half-tiling square complex a left-right Cayley complex; does its local testability quantify the reconstruction wall?
