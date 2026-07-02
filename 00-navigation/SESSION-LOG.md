@@ -1,3 +1,17 @@
+## mac-mini-2026-07-02-S4 -- THM-603 the BRIDGING LEMMA PROVED (induction on j not n; shifted bounded systems; LRC(<n) never needed); signature spec v2 n-parametric + MATHLIB TARGET declared; small-n packs generated (HYP-3861)
+
+Prompt (owner): work the complete gap list; target = submit fully Lean formalized to mathlib.
+
+THM-603 (the one new proof of HYP-3860, done): renormalized instances are SHIFTED BOUNDED-INTEGER comb systems with j' = j - k free parameters; the floors are shift-proof (forall-phase); frozen shifts enter ONLY the base cases as min_theta over a k-torus = a piecewise-linear vertex minimum = one exact rational per HNF census pattern; termination at j <= 6 by mass alone.  COROLLARY: no induction on n exists in the formal proof at all -- the well-founded j-recursion carries everything; the <=13-settled policy is a convenience, not load-bearing.
+
+SPEC v2 (appended): all rows n-parametric (SIMPLEX(n); (n/2)-commensuration verbatim; P+Q <= floor(n/2); min_theta column added); row 9 = the bridging recursion.  MATHLIB TARGET: general theorems -> Mathlib PRs (kps 4-PR plan + polygon + unit-residue + DangerousPatterns + BonferroniTruncation + pair law); certificate packs + DAG assembly -> companion archive repo lean-lonely-runner with final theorem lonelyRunner_le_14 : forall n <= 14, LRCStatement n.
+
+SMALL-n PACKS: n = 4..7 dangerous lists = 1,1,2,2 patterns; covering families at 3n-bounded speeds = 100/416/2480/12630 (tiny; full packs need the MSS-style bound per n -- engine exists).
+
+FILES: THM-603; spec v2; small_n_packs .out; HYP-3861.
+
+NEXT: (1) the min_theta column run over the HNF census (the last table); (2) the S95 style-debt polish pass on the four modules for PR readiness; (3) the archive repo skeleton (lakefile + the final theorem statement + pack ingestion layout); (4) klein/kps rows per the spec.
+
 ## mac-mini-2026-07-02-S3 -- FEASIBILITY: one formalized LRC proof for ALL n <= 14 = HIGH; the uniform e^-2 floor (exact, [0.104, 0.132] across n = 4..14); recursion-becomes-induction; shrinking packs (HYP-3860)
 
 Prompt (owner): can our techniques prove LRC(<=13)? tricks? ultimate ideal = clean formalized proof of all cases up to 14.

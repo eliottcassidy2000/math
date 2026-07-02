@@ -25,3 +25,27 @@ further mathematics.
    rows 1 and 6; produces the S_d hypotheses of `BonferroniTruncation`-driven floors.
 8. **skeleton wiring**: replace `hpartA` by [rows 2+5+7 assembled per THM-602(D)];
    replace `hp0cap` by [rows 3+4 + THM-534]. Both replacements are glue, no mathematics.
+
+## v2 (S4): n-parametric restatement + the mathlib submission target
+
+All eight rows hold with `n` as a parameter: replace `1/14 → 1/n`, `SIMPLEX30 → SIMPLEX(n)
+= {primitive m⃗ : Σ|m_i| ≤ ⌊n/2⌋}`, `SPREAD30 → SPREAD(n)` (THM-529's bound is n-uniform),
+`7 | Q → (n/2) | Q`-commensuration (THM-602 addendum's proof is verbatim: `2rQ ∈ ℤ`),
+`P+Q ≤ 7 → P+Q ≤ ⌊n/2⌋` (THM-601 is already stated for general r). Row 2's lattice census
+gains the `min_θ` column per THM-603(3). New row 9: **bridging recursion** — THM-603, no
+per-n hypotheses; base `j ≤ 6` for all `n ≤ 14` (mass-subcritical since `2·6/n < 1 ⟺ n > 12`…
+for `n ≤ 12` the base is `j ≤ ⌊(n−1)/2⌋`; both branches unconditional union bounds).
+
+**MATHLIB SUBMISSION TARGET (the declared goal).** Split per mathlib norms:
+- **Mathlib PRs** (general mathematics, n-parametric): the LonelyRunner basics + sieve
+  (kps PR plan); the polygon/Mirsky–Newman theorem; the unit-residue lemma; the dangerous-
+  pattern characterization (interval-sweep); the Bonferroni truncation identity; the pair
+  law. These carry standalone value and match mathlib scope.
+- **Companion archive** (the certificate packs + skeleton assembly, four-color/PNT+ style):
+  the per-n tables (`decide`/`native_decide`), the census outputs, the DAG assembly of
+  LRC(n ≤ 14). Proposed home: a dedicated repo `lean-lonely-runner` with mathlib as dep,
+  submitted to the mathlib-adjacent archive list, with the final theorem
+  `theorem lonelyRunner_le_14 : ∀ n ≤ 14, LRCStatement n`.
+- Sequencing: kps's 4 PRs → the S95/S101 modules (polish pass: naming, docstrings,
+  minimized imports per the S95 roadmap's style-debt list) → the archive repo skeleton →
+  packs land as engines complete.
