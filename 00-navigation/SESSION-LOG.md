@@ -24,6 +24,17 @@ WHAT THIS MEANS FOR THE <=14 IDEAL: the pipeline is n-GENERIC end to end (arcSaf
 TRICKS CATALOGED (for the ladder doc): (1) the owner policy makes n<=13 citable NOW -- formalize downward from the pipeline, upgrade citations opportunistically; (2) k+1 prime cases (k in {1,2,4,6,10,12}) admit the polynomial-method alternative (field arithmetic, decide-friendly) -- but the cert pipeline is UNIFORM, avoid two frameworks; (3) composite n: the c-lift sieve (THM-573/574) formalized once gives the many-multiples branch by induction on n through divisors -- formalize in INCREASING n order; (4) cross-n: the SAME Python generator emits certs for every n (h parametric); (5) depth counting: k runners need recursion depth <= k, but structurally depth <= #scale-jumps + 1 -- small for most shapes; the bounded tables absorb the rest.
 
 HONEST: cert_two_level is the two-scale instance; the depth-d induction wrapper + per-n shape-universe enumerations + bounded tables remain (mechanical per n; THM-602 fixes the n=14 universe); LRC(4)-complete-in-Lean not yet assembled (next session's natural target). Files: LRCWitnessCert.lean extended (+build x2 this session, 7 total rounds across S1-S2); HYP-3959 (+INDEX). No canon overridden.
+## klein-2026-07-02-S96 -- N1 LEG (a) COMPLETE AT ALL ROWS (k=10..13 censused: ZERO over cap; with S95 the THM-534 bounded-spread extremality census is DONE k=8..13) + LRCLyDecideTable.lean BUILDS CLEAN (the cap inequalities kernel-checked; Lean caught a margin arithmetic error: true tight-rung margin = 10441/7567560) (HYP-4004)
+
+Prompt (owner): get the LRC 14-runner proof fully formalized and submittable to mathlib.
+
+DELIVERED: (1) k=10 spread<=14 (2002 shapes, max 45253/79380 at consec), k=11 (286, 12073/17640), k=12 (78, 688/945), k=13 (13, 1037591/1375920) -- zero over cap at every row; with S95's k=8,9 the bounded-spread leg of 'consec maximizes L_y' is a COMPLETE exact census across all dangerous+moderate rows. (2) LRCLyDecideTable.lean (9th sorry-free module): the six maxima-vs-cap inequalities kernel-checked via norm_num + the tight-rung margin EXACT (10441/7567560 ~ 0.00138; my hand value was wrong, Lean caught it). The [TABLE] nodes' COMPARISONS are now [LEAN]; the remaining N1 formalization = re-enumerating the windows in Lean via the NestDecidable Helly/decide pattern + the rate-lemma legs (HYP-4001).
+
+FILES: 04-computation/ly_windows_k10_13_klein.py (+.out); lean LRCLyDecideTable.lean; HYP-4004 (+INDEX).
+
+NEXT: (a) Lean re-enumeration of the windows (the honest full [LEAN] flip -- S_r as finite interval sums over Q, decide); (b) the w-band sweeps; (c) mathlib PR sequencing continues with kps (PR1 polygon ready).
+
+---
 
 ## mac-mini-2026-07-02-S3 -- FEASIBILITY: one formalized LRC proof for ALL n <= 14 = HIGH; the uniform e^-2 floor (exact, [0.104, 0.132] across n = 4..14); recursion-becomes-induction; shrinking packs (HYP-3860)
 

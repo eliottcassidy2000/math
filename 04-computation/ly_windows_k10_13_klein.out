@@ -1,0 +1,4 @@
+k=10 spread<=14: 2002 shapes; max L_y = 45253/79380 = 0.570081 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; cap = 0.604396; float-over-cap = 0; exact max <= cap: True
+k=11 spread<=13: 286 shapes; max L_y = 12073/17640 = 0.684410 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12]; cap = 0.725275; float-over-cap = 0; exact max <= cap: True
+k=12 spread<=13: 78 shapes; max L_y = 688/945 = 0.728042 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]; cap = 0.857143; float-over-cap = 0; exact max <= cap: True
+k=13 spread<=13: 13 shapes; max L_y = 1037591/1375920 = 0.754107 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13]; cap = 1.000000; float-over-cap = 0; exact max <= cap: True
