@@ -215,6 +215,7 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
   ≤13-runner preprints for granted as TRUE. Do not re-audit them, hedge on them, or list
   their preprint status as a proof risk. (A formal citation caveat belongs only in final
   journal write-ups, not in canon, ledgers, or session reasoning.)
+  In Lean, LRC(≤13) enters as a named citation hypothesis, not a sorry.
 
 - **Never silently override a canon theorem.** Open a court case first.
 - **Never claim a result is proved if you haven't seen the proof.** Mark it VERIFIED or CONJECTURE.

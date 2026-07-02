@@ -1,0 +1,7 @@
+k=8 spread<=16: 11440 shapes scanned (float), top-8 exact-confirmed
+  leg(a): max L_y = 2633/7350 = 0.358231 at [0, 2, 4, 6, 8, 10, 12, 14]; cap_8 = 0.381463; over-cap among top = 0 (float scan saw 0 over)
+  leg(c): max L_y^inf = 20698/46305 = 0.446993 at [0, 2, 4, 6, 8, 10, 12, 14]; cap_9 = 0.494256; margin = +0.047263
+k=9 spread<=15: 6435 shapes scanned (float), top-8 exact-confirmed
+  leg(a): max L_y = 26083/52920 = 0.492876 at [0, 1, 2, 3, 4, 5, 6, 7, 8]; cap_9 = 0.494256; over-cap among top = 0 (float scan saw 0 over)
+  leg(c): max L_y^inf = 923/1764 = 0.523243 at [0, 1, 2, 3, 4, 5, 6, 7, 8]; cap_10 = 0.604396; margin = +0.081153
+DECIDE-TABLE (Lean-consumable): per row, the exact rationals (max L_y, cap_k, max L_y^inf, cap_k+1).

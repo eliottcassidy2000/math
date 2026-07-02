@@ -1,8 +1,6 @@
-  "session_start": "2026-07-01T23:42:28.039322",
-  "start_commit": "24fc75b20308af0721a0829d241741fbbdf1e047",
+{
+  "session_start": "2026-07-02T00:23:25.493147",
+  "start_commit": "6ca1996a607e9f6dcfd5a095befa4a87bdc4c21d",
   "pushed": false,
   "message_sent": false
 }
-=======
-{}
->>>>>>> d47b32b38 (mac-mini-2026-07-02-S2: checkpoint - owner policy LRC(<=13)=SETTLED into CLAUDE.md + ledger; claim HYP-3859)

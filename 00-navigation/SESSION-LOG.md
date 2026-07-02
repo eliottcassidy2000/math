@@ -32,6 +32,21 @@ THE SIGNATURE SPEC (drafts/lrc14-dag-node-signatures-macmini-20260702-S2.md): 8 
 FILES: THM-602 addendum; census engine + .out; signature spec; CLAUDE.md + ledger edits; HYP-3859.
 
 NEXT: (1) d>=3 exact minima for the 21 higher patterns (same breakpoint method); (2) klein/kps: your rows now have signatures -- run to spec; (3) transcription of rows 6-7; (4) the skeleton replacement PR.
+## klein-2026-07-02-S95 -- OWNER POLICY CANONIZED (LRC(<=13) IS PROVED -- CLAUDE.md Key Principles; preprints granted; Lean = citation hypothesis not sorry) + THE QUEUED FULL-WINDOW L_y CENSUS RUN (N1 legs (a)+(c): ZERO over cap at k=8 AND k=9; exact decide-table rationals for the DAG ledger) (HYP-4003)
+
+Prompt (owner): communicate LRC(<=13)-proved policy to all future agents; run the lattice+simplex census / 7-commensurate row / klein's + kps's queued censuses; transcription + DAG wiring toward full Lean formalization.
+
+POLICY (delivered): CLAUDE.md Key Principles now leads with -- LRC(n<=13) IS PROVED, take as given for the 14-runner case; Sungkawichai-Trakulthongchai arXiv:2604.23906 (n=11,12,13) + earlier literature granted as true; no re-derivation/hedging/auditing; in Lean a named citation hypothesis, NOT a sorry. Reaches every future session via the auto-read.
+
+MY QUEUED CENSUS (delivered, exact): sorry-ledger N1 legs (a)+(c) at the binding rows. k=8 spread<=16 (11440 shapes): ZERO over cap_8; max L_y = 2633/7350 = 0.358231 at the DILATED AP {0,2,...,14} (ties consec, THM-531). k=9 spread<=15 (6435): ZERO over cap_9; max = 26083/52920 = 0.492876 at consec -- margin 0.00138 = the tightest rung in the program. Damped maxima (leg c, the HYP-4001 recursion inputs): 20698/46305 (margin +0.047263 vs cap_9), 923/1764 (+0.081153 vs cap_10). Method: float scan + exact top-8 confirmation; outputs are decide-table rationals for the DAG ledger's [TABLE] nodes. (First exact-arithmetic attempt timed out silently -- lesson: print incrementally or scan float-first.)
+
+REMAINING QUEUE (with owners, per mac-mini-S1's ledger): the lattice HNF + simplex census engines (mac-mini, 'tiny list + a few hundred entries'), the 7-commensurate finite-support row mini-proof (mac-mini/kps), kps's (*)-census symbolic run, the transcription of THM-602 + skeleton wiring of the 8 sorry-free Lean islands. The two ledgers (mine S94, mac-mini S1) agree: zero reasoning gaps; everything left is [TABLE]/[CENSUS]/[PAPER-transcription].
+
+FILES: CLAUDE.md (policy); 04-computation/ly_full_window_census_klein.py (+.out); HYP-4003 (+INDEX).
+
+NEXT: (a) k=10..13 windows same treatment (cheap now); (b) the w-band sweeps w < K/margin per row (the rate lemma's finite leg); (c) wire the decide-table into the ledger's N1 node and flip its tag toward [LEAN].
+
+---
 
 ## mac-mini-2026-07-02-S1 -- THM-602 (master resonance-lattice decomposition: cluster-level renormalization coherence, the arc-counting proof in full, well-founded recursion) + the PROOF-DAG LEDGER: ZERO reasoning gaps remain; the critical path to sorry-free is 4 ordered finite items (HYP-3858)
 
