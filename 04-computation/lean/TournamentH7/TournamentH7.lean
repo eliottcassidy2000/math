@@ -189,6 +189,7 @@ import TournamentH7.LRCFarElementRate
 import TournamentH7.LRCRatWitness
 import TournamentH7.LRCRegionDiff
 import TournamentH7.LRCGoodPipeline
+import TournamentH7.LRCPeelAssembly
 import TournamentH7.RatIntervals
 import TournamentH7.LRCDeathChain
 import TournamentH7.LRCFactorialAtom

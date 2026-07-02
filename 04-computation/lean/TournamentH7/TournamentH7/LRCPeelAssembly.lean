@@ -148,14 +148,12 @@ theorem length_inter_cut_le (p : ℚ × ℚ) {q : ℚ × ℚ} (hq : q.1 ≤ q.2)
   rw [length_append]
   induction B with
   | nil =>
-      unfold length
-      simp
+      norm_num [length]
   | cons s B ihB =>
       unfold length at ihB ⊢
       simp only [List.map_cons, List.sum_cons]
       have hper := clip_cut_pieces_le p hq s
-      unfold clip at hper
-      simp only at hper ⊢
+      simp only [clip] at ihB ⊢
       linarith [hper, ihB]
 
 /-- Intersections only shrink under a live subtraction. -/
