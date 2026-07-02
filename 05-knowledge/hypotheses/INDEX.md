@@ -12430,3 +12430,9 @@ Closes my assigned residual (kps MSG-238) for THM-527 Part A: the finite-Vmax co
 - **Claim:** TournamentH7.RatIntervals — plain List (Q x Q) with SEMANTIC membership (mem_inter with NO normalization invariants via quadratic clip + flatMap distribution), length, inter, translate, scale, the safeComb constructor (the LRC-facing safe-set lists), the Norm invariant (sorted+disjoint) and its preservation + length monotonicity lemmas. All-Q discipline (T1), no MeasureTheory. Then module 6's fuel-indexed checkCluster skeleton over it.
 - **Artifacts:** TBD this session.
 - **Depends on / relates to:** mac-mini HYP-3864 (playbook), HYP-3958/3959 (cert layer = module 6 prototype), klein HYP-4004.
+
+
+## HYP-3962: module-0 merge repair (canonical RatIntervals) + the shape-space study
+- **Status:** DELIVERED, kind-pasteur-2026-07-02-S5. REPAIR: origin RatIntervals.lean had committed conflict markers (kps-S4 x mac-mini-S8 union-merge); canonical rebuild = my Norm engine + their comb/length_comb ported + TournamentH7.RatIntervals compat shim + root dedupe; lake green; pushed fast. FLEET RULE proposed: no union merge driver on .lean. STUDY (reflection shape-space-certificates-and-the-free-clip): V-independence => certificates constant on speeds->shape fibers (THM-606 depth-3 = V1-box x V2-box x V3-tail infinite family); the covering case = a FINITE shape-space statement; THM-606 constant inflation vs my linear grading (depth free, separation costs); the no-hypothesis-on-A clip = module 6 threads no invariants = the arc-count budget from the prover side.
+- **Artifacts:** RatIntervals.lean (canonical); 07-reflections/shape-space-certificates-and-the-free-clip-kps-S5.md.
+- **Depends on / relates to:** HYP-3961, mac-mini HYP-3865, opus THM-606/HYP-3905, HYP-3959, HYP-3950.
