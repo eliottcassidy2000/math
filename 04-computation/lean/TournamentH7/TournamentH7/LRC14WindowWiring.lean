@@ -48,7 +48,7 @@ theorem tupleGcd_pos (w : Fin 13 → ℤ) (hw : ∀ i, w i ≠ 0) : 0 < tupleGcd
 /-- The primitivized tuple: divide out the gcd. -/
 def primPart (w : Fin 13 → ℤ) : Fin 13 → ℤ := fun i => w i / (tupleGcd w : ℤ)
 
-theorem primPart_mul (w : Fin 13 → ℤ) (hw : ∀ i, w i ≠ 0) (i : Fin 13) :
+theorem primPart_mul (w : Fin 13 → ℤ) (i : Fin 13) :
     w i = (tupleGcd w : ℤ) * primPart w i := by
   unfold primPart
   exact (Int.mul_ediv_cancel' (tupleGcd_dvd w i)).symm
@@ -57,7 +57,7 @@ theorem primPart_pos (w : Fin 13 → ℤ) (hw : ∀ i, 0 < w i) (i : Fin 13) :
     0 < primPart w i := by
   have hne : ∀ j, w j ≠ 0 := fun j => (hw j).ne'
   have hg : 0 < (tupleGcd w : ℤ) := by exact_mod_cast tupleGcd_pos w hne
-  have hmul := primPart_mul w hne i
+  have hmul := primPart_mul w i
   by_contra hle
   have hle2 : primPart w i ≤ 0 := le_of_not_gt hle
   have hnp : (tupleGcd w : ℤ) * primPart w i ≤ 0 :=
@@ -71,7 +71,7 @@ theorem primPart_gcd_eq_one (w : Fin 13 → ℤ) (hw : ∀ i, w i ≠ 0) :
     apply Finset.dvd_gcd
     intro i _
     have h1 : (tupleGcd (primPart w) : ℤ) ∣ primPart w i := tupleGcd_dvd (primPart w) i
-    have h2 := primPart_mul w hw i
+    have h2 := primPart_mul w i
     have h3 : ((tupleGcd w * tupleGcd (primPart w) : ℕ) : ℤ) ∣ w i := by
       push_cast
       rw [h2]
@@ -83,9 +83,8 @@ theorem primPart_gcd_eq_one (w : Fin 13 → ℤ) (hw : ∀ i, w i ≠ 0) :
   have hle := Nat.le_of_dvd hg hkey
   have hpos : 0 < tupleGcd (primPart w) := by
     apply tupleGcd_pos
-    intro i
-    intro h0
-    have := primPart_mul w hw i
+    intro i h0
+    have := primPart_mul w i
     rw [h0, mul_zero] at this
     exact hw i this
   nlinarith [hle, hpos, hg]
@@ -114,7 +113,7 @@ theorem hwindow_of_normalized_census (W : ℤ)
   have hg_pos : 0 < g := tupleGcd_pos w hw_ne
   set u : Fin 13 → ℤ := primPart w with hu
   have hu_pos : ∀ i, 0 < u i := primPart_pos w hw_pos
-  have hu_mul : ∀ i, w i = (g : ℤ) * u i := primPart_mul w hw_ne
+  have hu_mul : ∀ i, w i = (g : ℤ) * u i := primPart_mul w
   have hu_mono : Monotone u := by
     intro i j hij
     have hgZ : (0 : ℤ) < (g : ℤ) := by exact_mod_cast hg_pos
@@ -133,7 +132,7 @@ theorem hwindow_of_normalized_census (W : ℤ)
     by_cases hcov : CoveringFamily u
     · exact hcensus u hu_pos hu_mono hu_W hcov hu_prim
     · unfold CoveringFamily at hcov
-      push_neg at hcov
+      push Not at hcov
       obtain ⟨q, hq2, hq14, hdiv⟩ := hcov
       exact ⟨(1 : ℝ) / q, sieve_one_div 14 q u hq14 (by omega) hdiv⟩
   -- Transport back: scale, then relabeling, then signs

@@ -54,7 +54,7 @@ theorem lrc14_of_covering_lonely
   by_cases hc : CoveringFamily v
   · exact hcov v hv hc
   · unfold CoveringFamily at hc
-    push_neg at hc
+    push Not at hc
     obtain ⟨q, hq2, hq14, hdiv⟩ := hc
     exact ⟨(1 : ℝ) / q, sieve_one_div 14 q v hq14 (by omega) hdiv⟩
 
@@ -142,7 +142,7 @@ theorem lonelySpeed_neg_iff (n : ℕ) (s : ℤ) (t : ℝ) :
     exact this
   · have := h (-m)
     push_cast at this ⊢
-    rw [show -(s : ℝ) * t - (m : ℝ) = -((s : ℝ) * t - (-m : ℝ)) by push_cast; ring,
+    rw [show -(s : ℝ) * t - (m : ℝ) = -((s : ℝ) * t - (-m : ℝ)) by ring,
       abs_neg]
     exact this
 
@@ -197,7 +197,7 @@ theorem blockFamily_nonzero (V : ℤ) (hV : 15 ≤ V) : ∀ i, blockFamily V i �
 
 /-- Thirteen consecutive integers cover every modulus `q ≤ 13` automatically, and
 cover `q = 14` exactly when `V % 14 ≠ 13`. -/
-theorem blockFamily_covering (V : ℤ) (hV : 15 ≤ V) (hmod : V % 14 ≠ 13) :
+theorem blockFamily_covering (V : ℤ) (hmod : V % 14 ≠ 13) :
     CoveringFamily (blockFamily V) := by
   intro q hq2 hq14
   have hqz : (0 : ℤ) < (q : ℤ) := by exact_mod_cast (by omega : 0 < q)
@@ -216,7 +216,9 @@ theorem blockFamily_covering (V : ℤ) (hV : 15 ≤ V) (hmod : V % 14 ≠ 13) :
   unfold blockFamily
   have htn : (((V % (q : ℤ)).toNat : ℕ) : ℤ) = V % (q : ℤ) := Int.toNat_of_nonneg hr0
   rw [htn]
-  exact ⟨V / (q : ℤ), by linarith [Int.emod_add_ediv V (q : ℤ)]⟩
+  have hde : V % (q : ℤ) + (q : ℤ) * (V / (q : ℤ)) = V :=
+    Int.emod_add_mul_ediv V (q : ℤ)
+  exact ⟨V / (q : ℤ), by linarith⟩
 
 /-- **Every consecutive block `{V−12,…,V}` (V ≥ 15) is 14-lonely** — bridged from
 the witness-arc certificate `certAP_tail` (the V-independent tail row). -/
@@ -240,7 +242,7 @@ lonely end-to-end**: consecutive blocks with `V % 14 ≠ 13` are covering AND lo
 instead, being non-covering.) -/
 theorem covering_block_lonely (V : ℤ) (hV : 15 ≤ V) (hmod : V % 14 ≠ 13) :
     CoveringFamily (blockFamily V) ∧ ∃ t : ℝ, Lonely 14 (blockFamily V) t :=
-  ⟨blockFamily_covering V hV hmod, blockFamily_lonely V hV⟩
+  ⟨blockFamily_covering V hmod, blockFamily_lonely V hV⟩
 
 /-! ## The generic corpus → `Lonely` conversion
 

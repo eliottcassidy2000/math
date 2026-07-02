@@ -123,7 +123,7 @@ theorem mem_sevenTranslate_iff_dvd {x : ℚ} (hx0 : 0 ≤ x) (hx1 : x < 1) {P : 
     have htn : (((m % (P : ℤ)).toNat : ℕ) : ℚ) = ((m % (P : ℤ) : ℤ) : ℚ) := by
       exact_mod_cast Int.toNat_of_nonneg hem0
     have hme : ((m % (P : ℤ) : ℤ) : ℚ) + (P : ℚ) * ((m / (P : ℤ) : ℤ) : ℚ) = (m : ℚ) := by
-      exact_mod_cast Int.emod_add_ediv m (P : ℤ)
+      exact_mod_cast Int.emod_add_mul_ediv m (P : ℤ)
     refine ⟨-(m / (P : ℤ)), (m % (P : ℤ)).toNat, ?_, ?_, ?_⟩
     · omega
     · have hexp : (P : ℚ) * (x + ((-(m / (P : ℤ)) : ℤ) : ℚ) - (j : ℚ) / 7)

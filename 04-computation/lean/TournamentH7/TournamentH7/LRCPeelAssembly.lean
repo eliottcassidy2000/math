@@ -40,7 +40,7 @@ theorem length_filter_live (L : Region) :
       · rw [List.filter_cons_of_neg (by simpa using hp)]
         unfold length at ih ⊢
         simp only [List.map_cons, List.sum_cons]
-        rw [ih, max_eq_left (by push_neg at hp; linarith)]
+        rw [ih, max_eq_left (by push Not at hp; linarith)]
         ring
 
 /-- The filtered cut has the same length as the unfiltered cut. -/
@@ -132,7 +132,7 @@ theorem length_inter_filter_live (X B : Region) :
           apply max_eq_left
           unfold clip
           simp only
-          push_neg at hp
+          push Not at hp
           have h1 : min p.2 r.2 ≤ p.2 := min_le_left _ _
           have h2 : p.1 ≤ max p.1 r.1 := le_max_left _ _
           linarith

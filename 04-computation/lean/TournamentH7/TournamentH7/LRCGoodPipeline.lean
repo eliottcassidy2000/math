@@ -63,7 +63,7 @@ theorem not_mem_wrap_comb_forall {s : ℕ} (hs : 0 < s) {h : ℚ} (hh2 : 2 * h �
   rw [TournamentH7.CombPatterns.mem_comb hs]
   have hem0 : 0 ≤ m % (s : ℤ) := Int.emod_nonneg m hsZne
   have hemS : m % (s : ℤ) < (s : ℤ) := Int.emod_lt_of_pos m hsZ
-  have hme : m % (s : ℤ) + (s : ℤ) * (m / (s : ℤ)) = m := Int.emod_add_ediv m (s : ℤ)
+  have hme : m % (s : ℤ) + (s : ℤ) * (m / (s : ℤ)) = m := Int.emod_add_mul_ediv m (s : ℤ)
   refine ⟨(m % (s : ℤ)).toNat, ?_, ?_, ?_⟩
   · omega
   · -- (k : ℚ) + 0 − h ≤ s·(x + n)
