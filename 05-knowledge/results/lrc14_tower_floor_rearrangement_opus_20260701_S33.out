@@ -1,0 +1,43 @@
+============================================================================================================
+ TOWER FLOOR by exact rearrangement:  F_j = min over primitive patterns (range<=14) of Q_c((j-4)/7)
+   target: F_j > 1/36 = 0.027778  for j = 7..11   (m = (j-4)/7 = worst-case compact lonely measure)
+============================================================================================================
+
+ j=7: patterns scanned 1515; float-worst 5: 0.05070@(0, 1, 2, 3, 4, 5, 6), 0.06176@(0, 2, 3, 4, 5, 6, 8), 0.06406@(0, 2, 4, 5, 6, 8, 10), 0.06644@(0, 1, 2, 3, 4, 5, 7), 0.07013@(0, 1, 2, 3, 4, 5, 13)
+   EXACT min over worst-40:  F_7 = 559/11025 = 0.050703  at pattern (0, 1, 2, 3, 4, 5, 6)
+   m = (j-4)/7 = 0.4286;  F_7 > 1/36 ?  True   (margin 1.825x)
+
+ j=8: patterns scanned 1750; float-worst 5: 0.05454@(0, 1, 2, 3, 4, 5, 6, 7), 0.06082@(0, 1, 2, 3, 4, 5, 6, 8), 0.06678@(0, 2, 4, 5, 6, 8, 10, 12), 0.06982@(0, 1, 2, 3, 4, 5, 6, 9), 0.07031@(0, 2, 3, 4, 6, 8, 10, 12)
+   EXACT min over worst-40:  F_8 = 184019/3246495 = 0.056682  at pattern (0, 1, 2, 3, 4, 5, 6, 7)
+   m = (j-4)/7 = 0.5714;  F_8 > 1/36 ?  True   (margin 2.041x)
+
+ j=9: patterns scanned 1519; float-worst 5: 0.06485@(0, 1, 2, 3, 4, 5, 6, 7, 8), 0.06896@(0, 2, 3, 4, 5, 6, 7, 8, 10), 0.07005@(0, 1, 2, 3, 4, 5, 6, 7, 9), 0.07203@(0, 2, 4, 6, 7, 8, 10, 12, 14), 0.07247@(0, 1, 2, 3, 4, 5, 6, 7, 10)
+   EXACT min over worst-40:  F_9 = 244547/3522610 = 0.069422  at pattern (0, 1, 2, 3, 4, 5, 6, 7, 8)
+   m = (j-4)/7 = 0.7143;  F_9 > 1/36 ?  True   (margin 2.499x)
+
+ j=10: patterns scanned 1022; float-worst 5: 0.08959@(0, 2, 4, 5, 6, 7, 8, 10, 12, 14), 0.09005@(0, 2, 3, 4, 5, 6, 7, 8, 10, 12), 0.09218@(0, 1, 2, 3, 4, 5, 6, 7, 8, 10), 0.09313@(0, 2, 3, 4, 5, 6, 7, 8, 9, 12), 0.09357@(0, 2, 3, 4, 5, 6, 7, 8, 10, 14)
+   EXACT min over worst-40:  F_10 = 56333/617400 = 0.091242  at pattern (0, 2, 3, 4, 5, 6, 7, 8, 10, 12)
+   m = (j-4)/7 = 0.8571;  F_10 > 1/36 ?  True   (margin 3.285x)
+
+ j=11: patterns scanned 511; float-worst 5: 0.14535@(0, 2, 4, 5, 6, 7, 8, 9, 10, 12, 14), 0.14806@(0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14), 0.14922@(0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14), 0.15042@(0, 2, 3, 4, 6, 7, 8, 9, 10, 12, 14), 0.15047@(0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)
+   EXACT min over worst-40:  F_11 = 63941/432180 = 0.147950  at pattern (0, 2, 4, 5, 6, 7, 8, 9, 10, 12, 14)
+   m = (j-4)/7 = 1.0000;  F_11 > 1/36 ?  True   (margin 5.326x)
+
+============================================================================================================
+ STRUCTURE CHECKS (F1/F2 for the write-up), j=7:
+   consecutive pattern zeros (exact): [Fraction(1, 7), Fraction(2, 7), Fraction(3, 7), Fraction(4, 7), Fraction(5, 7), Fraction(6, 7)]  (predicted subset of k/7, k=1..6)
+   slopes at zero t=1/7: left -6.000, right 6.000  (claim: >= range = 6)
+   pattern (0, 1, 3, 7, 8, 10, 14): min D = 8/49 = 0.16327  (no tiling => strictly positive everywhere)
+   j=8 consecutive: measure of interval zero-set = 44/735 = 0.05986  (robust coverings exist)
+
+ VERDICT:
+   j= 7: F_j = 0.050703 (559/11025) at (0, 1, 2, 3, 4, 5, 6)   > 1/36: True
+   j= 8: F_j = 0.056682 (184019/3246495) at (0, 1, 2, 3, 4, 5, 6, 7)   > 1/36: True
+   j= 9: F_j = 0.069422 (244547/3522610) at (0, 1, 2, 3, 4, 5, 6, 7, 8)   > 1/36: True
+   j=10: F_j = 0.091242 (56333/617400) at (0, 2, 3, 4, 5, 6, 7, 8, 10, 12)   > 1/36: True
+   j=11: F_j = 0.147950 (63941/432180) at (0, 2, 4, 5, 6, 7, 8, 9, 10, 12, 14)   > 1/36: True
+   ALL j=7..11 clear 1/36: True
+ => the deep-cluster tower floor holds (in the N->inf limit) for ALL primitive patterns of range <= 14,
+    with worst-case-POSITION compact parts (no assumption on where L_low sits). Larger ranges recurse
+    into the gap-cut peel (HYP-3900); finite heights N < N* form the finite middle band (see doc).
+DONE.

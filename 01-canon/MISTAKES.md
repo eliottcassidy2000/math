@@ -11,6 +11,25 @@ Format per entry:
 
 ---
 
+## MISTAKE-092 (2026-07-01, opus-S33) -- incomplete kink taxonomy for the cluster density D_c(t): same-endpoint (center-coincidence) collisions t = m/delta were omitted from the breakpoint grid. Caught same session via a hand-derivable slope; the error was silently CONSERVATIVE.
+
+**What was done (incomplete).** Computing the renormalized cluster density D_c(t) as piecewise linear with
+breakpoints only at opposite-endpoint collisions (7m+-1)/(7 delta). The structure check then reported a
+one-sided slope 4 at a zero where the hand derivation (gap-rate sum) gives 6 -- the discrepancy exposed a
+missed kink at t = 1/6 (= m/delta, two arc centers coinciding), a CONCAVE PEAK of D between grid points.
+
+**Why it mattered / why it did not.** All missed kinks are concave peaks (center-coincidence = union-measure
+minimum = D maximum), so linear interpolation between the sampled kinks sits pointwise BELOW the true D:
+the computed rearrangement floors F_j were valid LOWER bounds and every conclusion survived. But "exact"
+would have been a false label, and in another context a one-sided sampling error would not be benign.
+
+**Correct framing.** D_c's kinks come in exactly two types (the same taxonomy as THM-592(iii) in the
+r-variable): opposite-endpoint collisions delta*t == +-1/7 (gap birth/death, convex) and same-endpoint
+collisions delta*t == 0 (overtaking/coincidence, concave peak). Enumerate BOTH: t in {(7m+e)/(7 delta),
+e in {-1,0,+1}}. Lesson (cf. MISTAKE-086, incomplete breakpoint set for M(S)): enumerate collision TYPES
+from the geometry, not from the first pattern that works; keep one hand-derivable value (a slope at a
+structured point) as a canary in every piecewise-linear computation. Source: opus-2026-07-01-S33.
+
 ## MISTAKE-090 (2026-07-01, opus-S32) -- the 11-core far-element lever asked for a "UNIFORM ARC-COUNT bound c' <= const" that is FALSE as needed; one-at-a-time peeling was the wrong induction. Fixed by the SIMULTANEOUS peel.
 
 **What was assumed (WRONG, opus-S31).** That closing the multi-outlier r=2 residual needs a uniform bound
