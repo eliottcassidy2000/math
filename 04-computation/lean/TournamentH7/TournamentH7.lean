@@ -222,3 +222,5 @@ import TournamentH7.LRCSingletonCurrentLedger
 import TournamentH7.LRCPrivateLabelFirewall
 import TournamentH7.LRCCrystallographicThetaFrontier
 import TournamentH7.Verify
+import TournamentH7.LRCUnitResidue
+import TournamentH7.PolygonMirskyNewman

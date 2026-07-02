@@ -36,6 +36,15 @@ core realizes a nontrivial exact cover. First in repo: no prior Fraenkel mention
 (2) **Deep-witness emptiness.** No tight set containing a multiple of n found (censuses n<=8; all tight sets keep all phi(n) shallow witnesses). Prove tight => no multiple of n (would make the class-max collapse formula unconditional). Next: try the m(k/n)-quantization argument on a hypothetical deep-witness tight set; connect to THM-398 dominance-dodge.
 (3) **The (c, E) pair as a tight-locus invariant.** Collapse rate c is blind within {AP,GW} at n=14; mean loneliness E separates them (E(GW) < E(AP) exact). Next: compute (c,E) at n=20 (census {AP, GW_19}); is the pair complete on the tight locus? Is E(GW_n) < E(AP_n) for the whole family (the 2(n-1) element always wins the mean)?
 (4) **Envelope carrier classification.** Exhaustive n=4,5: carriers of inf_S Lambda_S(r) walk down ladders {1,m,m+1} -> AP; near-tight LOOSE sets undercut the tight line until isolation bites. Next: carrier decomposition at n=14 sub-critical radii (is kps's pentagon 11-core a carrier at r ~ 0.906/14?); a per-radius carrier law = the quantitative LRC. Scripts: lonely_profile_farey_slope_klein.py, tight_census_collapse_rates_klein.py. -> THM-523 (inf L = envelope at 1/14), HYP-3824, HYP-3750, HYP-3763.
+**ARC x RADIUS LP -- THE NON-SMEARING PILOT SPEC (mac-mini-S95 + opus SS7.3 + klein HYP-3842). OPEN, spec'd.**
+klein REFUTED the naive LP (fractional speed profiles smear the atom: value 0 at all radii/W). opus SS7.3's
+variables survive that refutation (per-arc lonely masses x_{a,l} + layer monotonicity + per-arc coverage +
+slope transport = THM-592(ii) localized) BUT the universal version still needs config data that cannot smear:
+use RESIDUE-CLASS-INTEGRAL config variables (klein's own fix) -- per class mod Q in {14,61,183}, integral
+runner counts, coverage coefficients exact from THM-594(B) pair law. n=6 pilot: 5 runners, target the
+LP-certified collapse law c(1-6r), c <= 2/5. Ladder-consistency check: the LP value must reproduce
+THM-592(v) with K from THM-596's band structure. -> SS7.3 (opus-S33 doc), HYP-3842, THM-592/594/596.
+
 **THE TOWER FLOOR'S LAST LEGS (mac-mini-2026-07-01-S94, THM-594/595, HYP-3850). NEW — the two scoped gaps of the assembled census-exhaustiveness proof.**
 (G1) CENSUS STANDARD: exhaustive bounded 11-core enumeration V<=25 (engineering: fast C/numpy interval kernel,
      opus-S32 handoff 2) OR extend kps-S28's ledger=cap-atlas theorem (min over bounded m-cores = cap_{13-m},
