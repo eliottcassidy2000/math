@@ -1,0 +1,14 @@
+
+=== W = 20: 6084 covering rows (3s) ===
+TIGHT rows (optimum exactly 1/14, zero-length interval): 0
+smallest POSITIVE margin: 1/84 = 1.190e-02  at (1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18) (opt 1/12)
+  -> uniform interval floor for non-tight rows: 2*mu/W = 1.190e-03
+margin stats over 6084 non-tight rows: min 1.190e-02, median 5.357e-02, max 2.143e-01
+margin histogram (log10 decade -> count): {-2: 5609, -1: 475}
+
+=== W = 22: 31471 covering rows (17s) ===
+TIGHT rows (optimum exactly 1/14, zero-length interval): 0
+smallest POSITIVE margin: 1/84 = 1.190e-02  at (1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18) (opt 1/12)
+  -> uniform interval floor for non-tight rows: 2*mu/W = 1.082e-03
+margin stats over 31471 non-tight rows: min 1.190e-02, median 5.357e-02, max 2.411e-01
+margin histogram (log10 decade -> count): {-2: 28314, -1: 3157}

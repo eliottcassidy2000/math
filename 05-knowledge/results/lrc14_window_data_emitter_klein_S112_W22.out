@@ -1,0 +1,17 @@
+  2000 covering rows, 0 fails, 1s
+  4000 covering rows, 0 fails, 1s
+  6000 covering rows, 0 fails, 1s
+  8000 covering rows, 0 fails, 2s
+  10000 covering rows, 0 fails, 2s
+  12000 covering rows, 0 fails, 2s
+  14000 covering rows, 0 fails, 2s
+  16000 covering rows, 0 fails, 3s
+  18000 covering rows, 0 fails, 3s
+  20000 covering rows, 0 fails, 3s
+  22000 covering rows, 0 fails, 4s
+  24000 covering rows, 0 fails, 4s
+  26000 covering rows, 0 fails, 4s
+  28000 covering rows, 0 fails, 4s
+  30000 covering rows, 0 fails, 5s
+TOTAL: 31471 rows with witnesses, 0 FAILURES, 5s
+emitted 04-computation/lean/TournamentH7/TournamentH7/LRCWindowData22.lean: 53 chunks, 31471 rows
