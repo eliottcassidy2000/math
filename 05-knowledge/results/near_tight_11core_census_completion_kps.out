@@ -1,0 +1,38 @@
+==============================================================================================
+ CENSUS: 15472 distinct 11-cores. band 1/14, target 1/36=0.027778
+==============================================================================================
+  MIN meas(L_C) = 313/9702 = 0.032261 at (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13)
+  min >= 1/36? True   margin = min/(1/36) = 1.1614x  (gap +0.004484)
+  #cores BELOW 1/36: 0  => CLEARS (all >= 1/36)
+
+  NEAR-TIGHT locus (within 5% of min), smallest 10:
+    meas=0.032261 = 313/9702   core (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13)
+    meas=0.032261 = 313/9702   core (3, 6, 9, 12, 15, 21, 24, 27, 33, 36, 39)
+    meas=0.032261 = 313/9702   core (5, 10, 15, 20, 25, 35, 40, 45, 55, 60, 65)
+    meas=0.032261 = 313/9702   core (2, 4, 6, 8, 10, 14, 16, 18, 22, 24, 26)
+    meas=0.032384 = 389/12012   core (5, 10, 15, 25, 35, 40, 45, 50, 55, 60, 65)
+    meas=0.032384 = 389/12012   core (1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13)
+    meas=0.032384 = 389/12012   core (2, 4, 6, 10, 14, 16, 18, 20, 22, 24, 26)
+    meas=0.032384 = 389/12012   core (3, 6, 9, 15, 21, 24, 27, 30, 33, 36, 39)
+
+==============================================================================================
+ (D) LARGE-SPEED ARGUMENT: a huge speed keeps meas >= ~(6/7)*sub-core (equidistribution)
+==============================================================================================
+  10-core [1, 2, 3, 4, 5, 7, 8, 9, 11, 12]: meas=0.085410
+    + huge speed w=  200: 11-core meas=0.073650  (>= (6/7)*0.0854=0.0732? True)
+    + huge speed w=  700: 11-core meas=0.073369  (>= (6/7)*0.0854=0.0732? True)
+    + huge speed w= 1500: 11-core meas=0.072951  (>= (6/7)*0.0854=0.0732? True)
+    + huge speed w= 5000: 11-core meas=0.073330  (>= (6/7)*0.0854=0.0732? True)
+  => a huge speed only multiplies by ~6/7 (equidistributes on the fixed sub-core's lonely set); it CANNOT
+     push meas below the small-core minimum. So the MIN over ALL 11-cores lives at BOUNDED speeds =>
+     the finite (bounded-speed) census IS the whole r=2 residual (modulo the equidistribution rate, S3).
+
+==============================================================================================
+ VERDICT
+==============================================================================================
+  Over 15472 systematically-enumerated 11-cores (all k-drops of {1..V} for the dilated-AP + GW tight
+  locus, dilations, and 8000 random primitive cores), inf meas(L_C) = 0.032261 at the PENTAGON
+  (Z/10)* core, and EVERY core clears 1/36 (margin 1.161x, TIGHT). The large-speed argument
+  confines the min to bounded speeds. This is the finite census route (unblocked) to the r=2 residual;
+  full rigor needs THM-523 tight-locus finiteness + the equidistribution rate as the large-speed cap.
+DONE.
