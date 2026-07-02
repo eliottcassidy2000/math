@@ -141,6 +141,40 @@ orbit-closure/difference-core heuristics (opus HYP-3901: rational directions = c
 census minima; irrational = larger measure) say the census minima ARE the global minima — the
 same principle already verified for the S27/S28 censuses.
 
+## 7.5 [S31 addendum] The torus-band theorem: the (⋆)-census is SYMBOLIC (HYP-3954)
+
+The c-averaged ledger lives on the (x,c)-torus as the complement of a union of integer-slope bands
+B_i = {‖c − u_i x‖ < h}. Elementary theorem (verified V1-V3, 6 digits everywhere):
+(i) vol(B_i) = w = 2h; (ii) **pairs are EXACTLY independent** — (x,c) ↦ (c−u_i x, c−u_j x) has
+determinant u_j − u_i ≠ 0, so vol(B_i ∩ B_j) = w² with NO arithmetic correction (THM-594-B's
+fluctuations live on the x-circle at fixed c; the c-average removes them); (iii) d-fold overlaps are
+2-dim SUBTORUS BOX VOLUMES with Fourier series over the saturated sum-zero relation lattice
+Λ_S = {m : Σm_i = 0, Σm_i u_i = 0} — exact rationals at h = 1/14; the AP relation (1,−2,1) gives
+2h², the maximal triple weight, which is WHY AP patterns minimize A. Checks: A(pair) = 36/49,
+A(AP-triple) = 61/98, A(k=4 argmin) = 11/21 — inclusion-exclusion equals the sampled ledger to six
+digits on every case. Bonferroni-3 certifies the floor ≥ witnessMP through k = 8; beyond, run the
+census at full depth or by exact c-breakpoint integration (L^c is piecewise-linear in c with rational
+breakpoints — exact rational integration per pattern). The bands are the 2-dimensional LR-ZONOTOPE
+picture (generators (u_i, 1)) — the c-ruler recursion is an LR-zonotope recursion.
+
+## 9. [S31 addendum] The strategic layer: MSS finite checking and the sLRC-false filter
+
+- **MSS (arXiv:2411.06903, Forum Math. Sigma 2025):** speeds up to C(n+1,2)^{n−1} suffice to verify
+  LRC for n+1 runners — for LRC(14): **91^12 ≈ 3.2·10^23, unconditional**. Every "unbounded/wide"
+  residual in this project is FINITE-IN-PRINCIPLE by citation; the project's censuses, cutoffs
+  (W* ≤ 513, V* ≈ 234, Λ = 10^4) are effective-bound improvements of ~20 orders of magnitude on the
+  studied branches. The honest framing of the whole program: **making MSS effective at n = 14.**
+- **BCS (arXiv:2603.24784):** the SHIFTED LRC is FALSE from n = 5, and the Lonely Vector Property
+  fails from n = 12. DESIGN FILTER for every open lemma: any statement quantified over ALL shifts
+  has sLRC strength and is at risk of being false — state floors as AVERAGES over shifts (Fubini) or
+  EXISTENCE of good shifts, never ∀-shift. (This architecture complies: (F) is an average, (R) is an
+  existence. Audit flagged for: the odd-covering bridge (covering systems carry free offsets = the
+  shifted side; Erdős–Selfridge lives there) and any windowed-tiling lemma quantified over windows.)
+- **Guo–Sun (math/0412217):** odd covering systems with distinct squarefree moduli need lcm with
+  ≥ 22 prime divisors — the arithmetic-budget species of our THM-522/2-adic-tower arguments; note
+  the LRC-pinned analogue of "odd covering" is trivial (all-odd sets miss q = 2 ⇒ q-witness at 1/2),
+  which locates the depth of Erdős–Selfridge strictly on the shifted side of the dictionary.
+
 ## 8. Summary for the DAG
 
 Replace the axiom pair (hfloor, hpartA) by:

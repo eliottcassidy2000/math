@@ -1,5 +1,13 @@
 # Investigation Backlog
 
+**MSS FINITE-CHECKING + THE sLRC-FALSE FILTER + THE SYMBOLIC CENSUS ENGINE (kind-pasteur-2026-07-01-S31, HYP-3954).** Status: NEW, high leverage.
+(1) INGEST MSS (arXiv:2411.06903): speeds <= C(14,2)^12 = 91^12 suffice for LRC(14), UNCONDITIONAL -- every wide/unbounded residual is finite-in-principle; add to the proof map as the outer boundary; project = making MSS effective (current effective cutoffs: W*<=513, V*~234, Lambda=1e4).
+(2) sLRC-FALSE AUDIT (BCS arXiv:2603.24784: shifted LRC false from n=5; LVP false from n=12): sweep all OPEN lemmas for forall-shift strength (at risk of being FALSE); state floors as shift-AVERAGES or shift-EXISTENCE only. Flagged: klein HYP-3849 odd-covering bridge (covering systems carry free offsets = the shifted side; note the pinned analogue of odd-covering is trivial via q=2-witness), mac-mini windowed-MN (window quantifiers).
+(3) SYMBOLIC CENSUS ENGINE for the (star)-ledger: A(U) exact per pattern via c-breakpoint rational integration (L^c piecewise-linear in c) or full-depth torus IE; targets: k<=13 admissible ledger with exact rationals (Bonferroni-3 already certifies k<=8: values .517/.412/.312/.201/.099 vs MP=.0565).
+(4) d-FOLD SUBTORUS VOLUMES as the clean home of mac-mini S96's Bernoulli-overlap program (pairs carry NO arithmetic on the torus; first arithmetic at triples via primitive sum-zero relations; AP (1,-2,1) maximal = 2h^2).
+-> HYP-3953, HYP-3954, mac-mini HYP-3852/3853, klein HYP-3847/3848/3849, MSS 2411.06903, BCS 2603.24784, Guo-Sun math/0412217.
+
+
 **kps-S28 SHARPENINGS + 4 NEW LEADS on the r=2 residual & the apex code (kind-pasteur-2026-07-01-S28, HYP-3950/3951; converges the opus-S32 entry below).** Status: NEW.
 (1) **FAREY PAIR-OVERLAP LAW -> r-fold resonance vocabulary.** Proved-shape exact law: meas(D_p ∩ D_q) = 1/(7 max(p,q)) iff p+q <= 14 (only 0-teeth meet; Farey separation threshold AT n=14), -> 1/49 = independence beyond. CONJECTURE: the r-fold joint law has the same finite structure (threshold sum p_i ~ n) => every coordination the adversary can attempt is a FINITE Farey table — would make all "resonance corrections" in the multi-outlier/deep-cluster analysis finite-checkable. Next: derive the triple law meas(D_p ∩ D_q ∩ D_r); connect to klein HYP-3800 difference-set phases + opus HYP-3835 difference cores.
 (2) **W*(r) FINITE WINDOWS: mechanical exhaustion.** The union floor's per-r cutoffs (112/181/290/513 for r=1..4, sup over bounded bases) leave finite boxes [15, W*]^r x {binding bases}; exhaust them exactly the way S27 exhausted the bounded census (complements opus's middle-band V=19->25 push; the two parameterizations should be merged). Sharper per-arc constant N_B/7 (vs 2c_low/7) halves the windows.

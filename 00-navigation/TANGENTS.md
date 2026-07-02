@@ -4470,3 +4470,15 @@ orbit and best-current sidecars.
 Next hook: prove separating-current transfer as an actual lemma.  Once that is
 available, hard-orbit discharge reduces to that transfer plus the already named
 HYP-3455/HYP-3460 `random_covering_031` clause.
+
+## T-crossing-numbers (kind-pasteur-2026-07-01-S31, owner prompt): Zarankiewicz/Harary-Hill vs the LRC extremal principle
+The optimal-drawing conjectures for cr(K_n) (Harary-Hill, cylindrical two-circle drawings) and cr(K_{m,n})
+(Zarankiewicz, two-axis drawings) place points EQUIDISTRIBUTED on circles/axes, and their counting
+functions are floor-products (n/2 families) -- the same species as our unit-harmonic collapse constants
+and Farey-threshold counts. Shared principle: uniform placement extremizes an interleaving count
+(crossings = interleaved 4-tuples <-> our binding pairs/Farey collisions p+q<=n). Probe ideas logged:
+(a) annulus/oriented-lens drawings of the winding tournament T(S,t) give an orientation-SENSITIVE
+crossing invariant X(S,t) (straight chords see only C(n,4)); sweep t -> a crossing PROFILE with Farey
+breakpoints; test whether the tight locus {AP,GW} is crossing-extremal at witness times. (b) the tensor
+code's K_{|A|,|B|} links: Zarankiewicz counts pairs of squares interleaving on the cylinder -- a
+geometric-complexity reading of local views. Status: TANGENT, unexplored; no claims.

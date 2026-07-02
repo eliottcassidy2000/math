@@ -1,0 +1,52 @@
+====================================================================================================
+ V1: PAIR INDEPENDENCE  vol(B_i ∩ B_j) = w^2 = 1/49 = 0.02040816  (theorem; grid check)
+====================================================================================================
+  slopes (  1,  2): grid vol = 0.020408
+  slopes (  1, 14): grid vol = 0.020408
+  slopes (  3, 10): grid vol = 0.020408
+  slopes (  5, 37): grid vol = 0.020408
+  slopes (  7, 21): grid vol = 0.020408
+  slopes (100,101): grid vol = 0.020408
+
+====================================================================================================
+ V2: TRIPLES — Fourier vs grid; AP relation (1,-2,1): hand value 2h^2 = 1/98 = 0.01020408
+====================================================================================================
+  U=   (0, 1, 2) rel   (1, -2, 1):  fourier = 0.010204   grid = 0.010204   [2h^2 = 0.010204]
+  U=  (0, 7, 14) rel   (1, -2, 1):  fourier = 0.010204   grid = 0.010204   [2h^2 = 0.010204]
+  U=(10, 24, 38) rel   (1, -2, 1):  fourier = 0.010204   grid = 0.010204   [2h^2 = 0.010204]
+  U=   (0, 1, 3) rel   (2, -3, 1):  fourier = 0.006803   grid = 0.006803
+  U=   (0, 2, 5) rel   (3, -5, 2):  fourier = 0.004082   grid = 0.004081
+  U=   (0, 1, 7) rel   (6, -7, 1):  fourier = 0.002915   grid = 0.002915
+  U=  (0, 3, 11) rel  (8, -11, 3):  fourier = 0.003015   grid = 0.003015
+
+====================================================================================================
+ V3: FULL INCLUSION-EXCLUSION vs the S30 sampled ledger
+====================================================================================================
+  U=     (5, 37): A_IE = 0.734694   A_sampled = 0.734694  [36/49 = 0.734694]
+  U=   (1, 2, 3): A_IE = 0.622449   A_sampled = 0.622449  [61/98 = 0.622449]
+  U=(10, 24, 38): A_IE = 0.622449   A_sampled = 0.622449  [61/98 = 0.622449]
+  U=   (1, 2, 4): A_IE = 0.625850   A_sampled = 0.625850
+  U=(5, 6, 7, 8): A_IE = 0.523810   A_sampled = 0.523810
+  U=(1, 2, 3, 4): A_IE = 0.523810   A_sampled = 0.523810
+
+====================================================================================================
+ V4: BONFERRONI FLOORS (torus, exact terms) for the S30 argmin patterns, k = 4..13
+====================================================================================================
+    k   Bonf-2   Bonf-3  sampled A  vs witnessMP=0.0565
+    4   0.5510   0.5170     0.5238   Bonf-3 >= MP   (triple sum 0.0340, 4 triples, 5 distinct relations cached)
+    5   0.4898   0.4116     0.4320   Bonf-3 >= MP   (triple sum 0.0782, 10 triples, 6 distinct relations cached)
+    6   0.4490   0.3122     0.3597   Bonf-3 >= MP   (triple sum 0.1367, 20 triples, 9 distinct relations cached)
+    7   0.4286   0.2014     0.2942   Bonf-3 >= MP   (triple sum 0.2272, 35 triples, 9 distinct relations cached)
+    8   0.4286   0.0988     0.2464   Bonf-3 >= MP   (triple sum 0.3297, 56 triples, 13 distinct relations cached)
+    9   0.4490  -0.0231     0.2073   Bonf-3 < MP   (triple sum 0.4721, 84 triples, 13 distinct relations cached)
+   10   0.4898  -0.1508     0.1733   Bonf-3 < MP   (triple sum 0.6405, 120 triples, 18 distinct relations cached)
+   11   0.5510  -0.2917     0.1531   Bonf-3 < MP   (triple sum 0.8428, 165 triples, 23 distinct relations cached)
+   12   0.6327  -0.3484     0.1307   Bonf-3 < MP   (triple sum 0.9811, 220 triples, 43 distinct relations cached)
+   13   0.7347  -0.4949     0.1142   Bonf-3 < MP   (triple sum 1.2296, 286 triples, 67 distinct relations cached)
+
+ READING: every inclusion-exclusion term is a subtorus box volume — exact, rational at h = 1/14, with
+ NO arithmetic in singles and pairs, and the first arithmetic entering at triples through the primitive
+ sum-zero relation (AP (1,-2,1) carries the max weight 2h^2). The (⋆)-census is symbolic. Bonferroni-3
+ is a certified signed truncation when the 4-fold tail is controlled — for the floor at witnessMP the
+ table shows the working margins.
+DONE.
