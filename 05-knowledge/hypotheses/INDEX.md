@@ -12421,3 +12421,9 @@ Closes my assigned residual (kps MSG-238) for THM-527 Part A: the finite-Vmax co
 - **Claim:** (a) run the kps residual finite census over the admissible single-level shape slice (P admissible small parts x offset patterns within the window-14 universe, k=10..13): per-shape widest-arc certificate search; PARTITION [single-level certified | needs nesting (cert_two_level) | investigate]; (b) LEAN MASS TABLE: one native_decide theorem checking an entire census page of certificates (List-based checker over the k=13 window-14 patterns), + the quantified tail corollary — converting the DAG's Layer-3 kps census row from [CENSUS] to [LEAN].
 - **Artifacts:** TBD this session.
 - **Depends on / relates to:** HYP-3958/3959 (cert layer), DAG ledger item 3, THM-602 (shape normal form), klein HYP-4004 (L_y decide-table pattern), opus LRCCommensuration.
+
+## HYP-3961: MODULE 0 — RatIntervals (the blocking library, playbook T2) + module-6 fuel prototype
+- **Status:** CLAIMED/IN-PROGRESS, kind-pasteur-2026-07-02-S4. Playbook: "any agent, today" — grabbing it; my assigned module 6 follows on it.
+- **Claim:** TournamentH7.RatIntervals — plain List (Q x Q) with SEMANTIC membership (mem_inter with NO normalization invariants via quadratic clip + flatMap distribution), length, inter, translate, scale, the safeComb constructor (the LRC-facing safe-set lists), the Norm invariant (sorted+disjoint) and its preservation + length monotonicity lemmas. All-Q discipline (T1), no MeasureTheory. Then module 6's fuel-indexed checkCluster skeleton over it.
+- **Artifacts:** TBD this session.
+- **Depends on / relates to:** mac-mini HYP-3864 (playbook), HYP-3958/3959 (cert layer = module 6 prototype), klein HYP-4004.
