@@ -1,3 +1,17 @@
+## opus-2026-07-02-S39 -- LRCLadderPack.lean SORRY-FREE: the first multi-cluster certified 13-runner family in Lean (THM-606/607 data through kps's module-6 cert_ladder) + the uniform-mu ratio finding (ratios must exceed 1+1/mu ~ 41; per-level mu strictly stronger) (HYP-3908)
+
+Prompt: attack the remaining queue piece by piece; pull/push frequently; leverage other agents' ideas to reroute.
+
+REROUTES (from the morning pulls): kps landed MODULE 6 CORE (cert_ladder = THM-606 formalized sorry-free, flagging my depth-3 data as a ready pack row) -- so piece B jumped the queue; mac-mini landed modules 1-2 core (CombPatterns.lean, pattern_overlap_zero = THM-605(i) avoidance) -- my module-2 assignment shrank to the forced direction + THM-604 list lemma.
+
+PIECE B DELIVERED (builds 18-19, green): LRCLadderPack.lean -- depth3_pack_row: the 13-runner family {1,2} u {V1-o} u {V2-o} u {V3-o} at (50, 2200, 100000), uniform band 1/14 + 1/40, certs 27/280, 31/140, 27/280 (re-searched at the uniform band), window [7/20, 3/8]; all hypotheses decide/native_decide. TRAP RECONFIRMED: kernel decide cannot reduce QQ arithmetic (Rat normalization = Nat.gcd = well-founded recursion); native_decide for every rational-arithmetic prop (kps's arcSafe instances already knew this).
+
+THE FINDING (module-6 feedback, from instantiation resistance): the uniform-mu SepChain requires consecutive reference ratios > 1 + 1/mu ~ 41. My S36 per-level tuple (50, 2000, 90000) -- ratios 40 and 45 -- FAILS level-2 separation under uniform mu even though it is certified under THM-606's per-level budgets (where mu_d = 0 and each level pays only its own drift). Per-level mu is strictly stronger; a cert_ladder-prime with per-level budgets would accept every THM-607 sharp-region tuple. Handed to kps with the concrete failing/passing pair.
+
+QUEUE STATE after this session (opus lane): module 3 remains (design complete: length_inter_partition cursor lemma + seven-translate exact partition + commensuration-QQ, on the S38 wrap layer); module-2 remainder = THM-604 origin-nest list lemma + THM-605(i) forced direction. Both spec'd for next session or any agent.
+
+Files: LRCLadderPack.lean (new, sorry-free); HYP-3908 (+INDEX). 19 green builds across S34-39. No canon overridden.
+
 ## opus-2026-07-02-S38 -- RatIntervalsWrap.lean SORRY-FREE (module 0's wraparound spec gap filled; single-writer satellite file) + three formalization insights (exact partition kills the measure theory; module-4 interface question; merge discipline) (HYP-3907)
 
 Prompt: work concurrently with the swarm on the sorry-free formalization; provide insight; discover better ways to finish.
