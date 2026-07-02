@@ -181,6 +181,7 @@ import TournamentH7.LonelyRunnerMathlib
 import TournamentH7.LRCGapSurplusLedger
 import TournamentH7.LRCWitnessCert
 import TournamentH7.LRCCertTable
+import TournamentH7.RatIntervals
 import TournamentH7.LRCDeathChain
 import TournamentH7.LRCFactorialAtom
 import TournamentH7.LRCBooleanTypeCut
