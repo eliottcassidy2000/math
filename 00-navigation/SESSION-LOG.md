@@ -1,3 +1,11 @@
+## opus-2026-07-02-S47 -- THE KERNEL GATE: census rows without native_decide (integer-arithmetic witness check; sample rows audit STANDARD AXIOMS ONLY); the answer to 'can it be better for mathlib' = yes, kernel-pure end-to-end is the real ceiling (HYP-3916)
+
+Prompt (owner): can it be more unconditional / better before mathlib submission?
+
+THE ANSWER (delivered, not just stated): YES, three ways. (1) KERNEL-PURITY -- the acceptance blocker: mathlib rejects native_decide (compiler joins the trusted base); 40 corpus files carry it. The obstruction was never arithmetic (kernel Nat/Int literal ops are GMP-accelerated) but Rat normalization (Nat.gcd WF recursion). LRCKernelGate.lean re-expresses the witness check in PURE INTEGER form (den <= 14*min((s*num)%den, den-(s*num)%den)): lonely_of_kernelWitness kernel-pure; int_dist_ge (nearest-integer minimality) proved via abs_cases+omega (immune to lemma-name roulette); sample census rows by KERNEL decide, #print axioms = [propext, Classical.choice, Quot.sound] -- NO ofReduceBool. Migration = mechanical re-emit of the packs. (2) ACTUALLY-UNCONDITIONAL: the parameters must be evaluated to completion (band packs + DispatchComplete) -- engines running. (3) STATEMENT HYGIENE: align the top statement with the literature form. REVISED CEILING: unconditional lrc14 KERNEL-PURE END-TO-END is achievable -- every remaining check is integer arithmetic. Corpus green with the gate registered.
+
+Files: LRCKernelGate.lean (new, sorry-free); HYP-3916 (+INDEX). 33+ green builds S34-47.
+
 ## opus-2026-07-02-S46 -- hwindow SLICE 1: LRCWindowPack1.lean (966 covering tuples max<=18, exact witnesses, kps gate, 0 failures) + the W-parameterized band generator; the bounded census is now a generator loop (HYP-3915)
 
 Prompt: finish formalizing the two finite computations; keep improving the Lean state.
