@@ -45,7 +45,7 @@ then `m_S` is **convex** on `(0, ρ]`. At `ρ = 1/N`: `w − v ≤ N·gcd(v,w)` 
 ```
 m_S(r_1) ≥ m_S(r_0) + ( m_S'(r_0^+) − K(r_0, r_1) ) · (r_1 − r_0),
 ```
-where `K(r_0,r_1) = Σ (1/v − 1/w)` summed over the (exposed) overtaking events in `(r_0, r_1)`. If there are none (e.g. under (iv)), this is the plain convexity tangent bound: a certified pair (measure, slope) at a sub-critical anchor radius pushes positivity of `m_S` up to the tangent root. Verified instance: for the deep well, the tangent at `r_0 = 1/16` alone certifies `m > 0` past `1/14` (i.e. `M(S) ≥ 1/14` follows from data at `1/16`).
+where `K(r_0,r_1) = Σ (1/v − 1/w)` summed over the (exposed) overtaking events in `(r_0, r_1)`. *(S94 sharpening: weighting each event by its remaining distance, `m_S(r_1) ≥ m_S(r_0) + m_S'(r_0^+)(r_1−r_0) − Σ_kinks Δ(ρ)·(r_1−ρ)`, is strictly better and equally immediate from the BV integration; the unweighted form treats all kinks as if at the anchor. S94 defect sieve: generic covering 13-sets have K(1/16, 1/14) = 0 — their overtaking resonances are covered, not exposed — and the ladder from anchor 1/16 alone certifies m(1/14) > 0 for 22/25 sampled covering sets; the exposed defect concentrates on the deep-well family, `lrc_pairlaw_defect_arcradius_macmini_S94.out`.)* If there are none (e.g. under (iv)), this is the plain convexity tangent bound: a certified pair (measure, slope) at a sub-critical anchor radius pushes positivity of `m_S` up to the tangent root. Verified instance: for the deep well, the tangent at `r_0 = 1/16` alone certifies `m > 0` past `1/14` (i.e. `M(S) ≥ 1/14` follows from data at `1/16`).
 
 ## Proof
 

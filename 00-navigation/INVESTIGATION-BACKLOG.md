@@ -36,6 +36,21 @@ core realizes a nontrivial exact cover. First in repo: no prior Fraenkel mention
 (2) **Deep-witness emptiness.** No tight set containing a multiple of n found (censuses n<=8; all tight sets keep all phi(n) shallow witnesses). Prove tight => no multiple of n (would make the class-max collapse formula unconditional). Next: try the m(k/n)-quantization argument on a hypothetical deep-witness tight set; connect to THM-398 dominance-dodge.
 (3) **The (c, E) pair as a tight-locus invariant.** Collapse rate c is blind within {AP,GW} at n=14; mean loneliness E separates them (E(GW) < E(AP) exact). Next: compute (c,E) at n=20 (census {AP, GW_19}); is the pair complete on the tight locus? Is E(GW_n) < E(AP_n) for the whole family (the 2(n-1) element always wins the mean)?
 (4) **Envelope carrier classification.** Exhaustive n=4,5: carriers of inf_S Lambda_S(r) walk down ladders {1,m,m+1} -> AP; near-tight LOOSE sets undercut the tight line until isolation bites. Next: carrier decomposition at n=14 sub-critical radii (is kps's pentagon 11-core a carrier at r ~ 0.906/14?); a per-radius carrier law = the quantitative LRC. Scripts: lonely_profile_farey_slope_klein.py, tight_census_collapse_rates_klein.py. -> THM-523 (inf L = envelope at 1/14), HYP-3824, HYP-3750, HYP-3763.
+**THE TOWER FLOOR'S LAST LEGS (mac-mini-2026-07-01-S94, THM-594/595, HYP-3850). NEW — the two scoped gaps of the assembled census-exhaustiveness proof.**
+(G1) CENSUS STANDARD: exhaustive bounded 11-core enumeration V<=25 (engineering: fast C/numpy interval kernel,
+     opus-S32 handoff 2) OR extend kps-S28's ledger=cap-atlas theorem (min over bounded m-cores = cap_{13-m},
+     proven-pattern m<=5) to m=11 — either closes THM-595 leg G1 structurally.
+(G2) COMPACT-DEEP FLOOR: THM-594(C) proves exact tiling needs INFINITE divisor chains; bounded-ratio compact
+     clusters contain no unbounded divisor towers — formalize that ONE sentence into a quantitative decay bound
+     for Int_{L_low} D_F along the only escape route, and the tower floor (opus HYP-3835 residual 2) closes.
+(G3) COVERING-FLOOR CERTIFICATE FACTORY: S94 defect sieve shows generic covering 13-sets have K(1/16,1/14)=0
+     (resonances covered) and the THM-592(v) ladder certifies from the 1/16 anchor; the exposed-defect family
+     is exactly the deep-well/forced-multiple family (K_DW ~ 364/183) — one family, THM-523-characterized.
+     Build: weighted ladder (S94 sharpening) + a K=0 lemma for covering sets + the deep-well family by hand.
+(G4) tight => no multiple of n (THM-593 addendum conjecture; q=5 exhaustive empty; needs a global covering-
+     budget argument); covering-branch stability lemma (residue-0-aware).
+-> THM-594, THM-595, HYP-3850, HYP-3950, HYP-3834/3835, OPEN-Q-108.
+
 **THE RADIUS-DERIVATIVE / SURVIVAL-FUNCTION FRAME (mac-mini-2026-07-01-S93, THM-592/593, HYP-3840). NEW — HIGH PRIORITY follow-ups.**
 The lonely measure `m_S(r)` is the survival function of `f_S(t)=min_v||vt||`; its slope is the co-area
 density `-Σ_components(1/v_L+1/v_R)`; breakpoints live on the pairwise Farey grid `d/(v±w)`; merge kinks are
