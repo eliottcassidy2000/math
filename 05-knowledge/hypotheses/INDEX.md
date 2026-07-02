@@ -12408,3 +12408,9 @@ Closes my assigned residual (kps MSG-238) for THM-527 Part A: the finite-Vmax co
 - **Claim:** (1) Lipschitz step: margin-checked certs give a WINDOW of good times (circle-norm 1-Lipschitz vs |x-y|); (2) cert_two_level: two nested certificate levels (P, offs1@V1, offs2@V2) with separation V2 > V1/margin-window compose to a common h-lonely time — the first formal instance of mac-mini HYP-3860's identified bridging lemma; n-UNIFORM (arcSafe/cert layer already h-generic). (3) Verdict integration: with the owner policy (LRC<=13 settled/citable) + HYP-3860 (feasibility HIGH), the ladder plan = cite now, upgrade case-by-case via this pipeline; LRC(4) completeness = q-witness (done) + bounded witness table (decide) + single-far certs (done) + THIS two-level glue.
 - **Artifacts:** TBD this session.
 - **Depends on / relates to:** HYP-3958 (cert layer), mac-mini HYP-3860, klein HYP-4003 (owner policy), opus THM-593A, LonelyRunnerMathlib.
+
+## HYP-3960: the (star)-census RUN (kps-assigned critical-path item 3) + the Lean mass-certificate table
+- **Status:** CLAIMED/IN-PROGRESS, kind-pasteur-2026-07-02-S3.
+- **Claim:** (a) run the kps residual finite census over the admissible single-level shape slice (P admissible small parts x offset patterns within the window-14 universe, k=10..13): per-shape widest-arc certificate search; PARTITION [single-level certified | needs nesting (cert_two_level) | investigate]; (b) LEAN MASS TABLE: one native_decide theorem checking an entire census page of certificates (List-based checker over the k=13 window-14 patterns), + the quantified tail corollary — converting the DAG's Layer-3 kps census row from [CENSUS] to [LEAN].
+- **Artifacts:** TBD this session.
+- **Depends on / relates to:** HYP-3958/3959 (cert layer), DAG ledger item 3, THM-602 (shape normal form), klein HYP-4004 (L_y decide-table pattern), opus LRCCommensuration.
