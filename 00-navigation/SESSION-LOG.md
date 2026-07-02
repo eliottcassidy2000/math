@@ -1,3 +1,21 @@
+## kind-pasteur-2026-07-02-S11 -- THE FAR-ELEMENT RATE LEMMA IS IN LEAN, KERNEL-PURE (rate_core two-boundary-cells trichotomy + comb form 4r/w + opus hpartial/hcover DISCHARGED unconditionally + multi-component region form) (HYP-3968)
+
+Prompt (owner): finish the module-6 fuel-checker instantiation + transcribe the far-element rate lemma myself; aim for fully unconditional LRC14Statement.
+
+DELIVERED (LRCFarElementRate.lean, 6 build rounds, registered, ALL FOUR THEOREMS [propext, Classical.choice, Quot.sound] ONLY):
+ - **rate_core**: unit-spaced teeth [k, k+rho) clipped against [A,B), -1 <= A <= B <= w: tooth mass = rho(B-A) up to 2*rho. THE PROOF IS COUNTING-FREE: per unit cell the tooth term equals rho x the coverage term EXACTLY except at the TWO named indices m = floor(A), floor(B) (floor trichotomy; |t - rho c| <= rho there); coverage total = clip_chain_sum telescope; indicator sums over nodup range; the sharp constant 2rho survives A in [-1,0) because the floor(A) indicator sum VANISHES (floor < 0 not in range) paying rho|A| <= rho instead.
+ - **length_inter_comb_near**: klein HYP-4001's per-interval statement -- |length(inter [(a,b)] (comb w r phi)) - 2r(b-a)| <= 4r/w for non-wrapping bands (r <= phi, phi + r <= 1), including the B < 0 edge (comb misses the interval entirely; 2r(b-a) < 4r/w directly).
+ - **toothClip_sum_near**: opus-S44's rate_lemma_component conclusion UNCONDITIONALLY -- their hcover AND hpartial hypotheses (their file: "hpartial's general proof is the floor-uniqueness two-endpoint argument") are exactly what rate_core proves; two-sided; their toothClip vocabulary consumed via length_inter_eq_toothClip_sum.
+ - **length_inter_comb_near_region**: the aggregated multi-component form (klein's comp(G) constant): |length(G cap comb_w) - 2r length G| <= (#components)(4r/w), induction + triangle.
+
+COLLISION HANDLED: opus-S44 pushed RateLemma.lean (conditional on hpartial, instances native_decide) minutes before mine; different files, auto-merged; MINE DISCHARGES THEIRS -- flagged in letter for rewiring.
+
+FUEL-CHECKER INSTANTIATION: audited complete on my lane as of S10 (ladderOK gate + lonely_of_ladder_mem + Mreach_ge_iff_lonely = the module-6 -> skeleton wiring, kernel-pure). Remaining mirror for opus cert_ladder-prime (per-level budgets) is mechanical -- flagged, not blocking.
+
+STATUS TOWARD UNCONDITIONAL LRC14Statement (honest): the rate lemma was the ONE unformalized mathematical statement in every ledger (opus HYP-3912: "REMAINING MATHEMATICS: (1) rate lemma transcription; (2) hpartA"). (2) was S10's Mreach equivalence; (1) is this session. WHAT REMAINS IS NO LONGER MATHEMATICS: census format wiring (klein tables -> census leg), damped-comparison decide rows (exact rationals exist), w-band certificate flips (swept exact, need decide tables), the peel-step aggregation (rate lemma x sectors x components -- Finset bookkeeping over my region form), and the final census+peel induction instantiation (surface from S10, kernel-pure). Every leaf is decide-shaped or list bookkeeping; zero analytic unknowns remain.
+
+FILES: LRCFarElementRate.lean (new, registered); HYP-3968 INDEX; this entry. No canon overridden.
+
 ## mac-mini-2026-07-02-S16 -- THE FAR-ELEMENT RATE LEMMA'S LEAN KERNEL: FarElementRate.lean SORRY-FREE (exists_antipode_dodge: window 1/w contains a 1/2-clearance point, constructive; dodge_within: margin transport; rate w >= V/eps formal) -- klein-S104's 'single load-bearing open claim' transcribed (HYP-3873)
 
 Prompt (owner): module-6 instantiation + the far-element rate lemma's Lean transcription myself; aim unconditional.

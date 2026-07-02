@@ -24,6 +24,7 @@
      `|length (inter [(a,b)] (comb w r φ)) − 2r(b−a)| ≤ 4r/w`.
 -/
 import TournamentH7.LRCSevenTranslate
+import TournamentH7.RateLemma
 
 namespace LonelyRunner
 namespace RatIntervals
@@ -444,6 +445,82 @@ theorem length_inter_comb_near {w : ℕ} (hw : 0 < w) {r φ a b : ℚ}
       apply div_le_div_of_nonneg_right ?_ hwQ.le
       linarith
     linarith
+
+/-! ## Bridges: opus-S44's conditional form discharged, and the multi-component region form -/
+
+/-- The single-interval intersection IS the tooth-clip sum (opus-S44's `toothClip`
+vocabulary). -/
+theorem length_inter_eq_toothClip_sum (w : ℕ) (r φ a b : ℚ) :
+    length (inter [(a, b)] (comb w r φ))
+      = ((List.range w).map fun k : ℕ => toothClip w r φ a b k).sum := by
+  unfold inter comb length clip toothClip
+  simp only [List.flatMap_cons, List.flatMap_nil, List.append_nil, List.map_map]
+  congr 1
+
+/-- **opus-S44's `rate_lemma_component` conclusion, UNCONDITIONALLY**: the `hcover` and
+`hpartial` hypotheses of `RateLemma.lean` are discharged by `rate_core`'s two-boundary-cell
+trichotomy.  Two-sided. -/
+theorem toothClip_sum_near {w : ℕ} (hw : 0 < w) {r φ a b : ℚ}
+    (hr : 0 ≤ r) (hrφ : r ≤ φ) (hφ1 : φ + r ≤ 1)
+    (ha : 0 ≤ a) (hab : a ≤ b) (hb : b ≤ 1) :
+    |((List.range w).map fun k : ℕ => toothClip w r φ a b k).sum - 2 * r * (b - a)|
+      ≤ 4 * r / w := by
+  rw [← length_inter_eq_toothClip_sum]
+  exact length_inter_comb_near hw hr hrφ hφ1 ha hab hb
+
+/-- **The multi-component (region) rate lemma** — klein HYP-4001's aggregated form: a region
+with `n` components loses at most `n` pairs of partial wraps:
+`|length (G ∩ comb_w) − 2r·length G| ≤ n·(4r/w)`. -/
+theorem length_inter_comb_near_region {w : ℕ} (hw : 0 < w) {r φ : ℚ}
+    (hr : 0 ≤ r) (hrφ : r ≤ φ) (hφ1 : φ + r ≤ 1) :
+    ∀ G : Region, (∀ p ∈ G, 0 ≤ p.1 ∧ p.1 ≤ p.2 ∧ p.2 ≤ 1) →
+      |length (inter G (comb w r φ)) - 2 * r * length G|
+        ≤ (G.length : ℚ) * (4 * r / w) := by
+  intro G
+  induction G with
+  | nil =>
+      intro _
+      simp [inter, length]
+  | cons p G' ih =>
+      intro hp
+      obtain ⟨hp1, hp12, hp2⟩ := hp p (List.mem_cons_self ..)
+      have hG' := ih fun q hq => hp q (List.mem_cons_of_mem _ hq)
+      -- split the intersection at the head interval
+      have hsplit : length (inter (p :: G') (comb w r φ))
+          = length (inter [p] (comb w r φ)) + length (inter G' (comb w r φ)) := by
+        unfold inter
+        simp only [List.flatMap_cons, List.flatMap_nil, List.append_nil]
+        rw [length_append]
+      have hlen : length (p :: G') = (p.2 - p.1) + length G' := by
+        unfold length
+        simp only [List.map_cons, List.sum_cons]
+        rw [max_eq_right (by linarith)]
+      have hpeta : [p] = [(p.1, p.2)] := by simp
+      have hhead : |length (inter [(p.1, p.2)] (comb w r φ)) - 2 * r * (p.2 - p.1)|
+          ≤ 4 * r / w :=
+        length_inter_comb_near hw hr hrφ hφ1 hp1 hp12 hp2
+      rw [hsplit, hlen, hpeta]
+      have habs : |length (inter [(p.1, p.2)] (comb w r φ)) + length (inter G' (comb w r φ))
+          - 2 * r * ((p.2 - p.1) + length G')|
+          ≤ |length (inter [(p.1, p.2)] (comb w r φ)) - 2 * r * (p.2 - p.1)|
+            + |length (inter G' (comb w r φ)) - 2 * r * length G'| := by
+        have := abs_add_le
+          (length (inter [(p.1, p.2)] (comb w r φ)) - 2 * r * (p.2 - p.1))
+          (length (inter G' (comb w r φ)) - 2 * r * length G')
+        calc |length (inter [(p.1, p.2)] (comb w r φ)) + length (inter G' (comb w r φ))
+              - 2 * r * ((p.2 - p.1) + length G')|
+            = |(length (inter [(p.1, p.2)] (comb w r φ)) - 2 * r * (p.2 - p.1))
+              + (length (inter G' (comb w r φ)) - 2 * r * length G')| := by
+              congr 1
+              ring
+          _ ≤ _ := this
+      have hcount : ((p :: G').length : ℚ) * (4 * r / w)
+          = 4 * r / w + (G'.length : ℚ) * (4 * r / w) := by
+        simp only [List.length_cons]
+        push_cast
+        ring
+      rw [hcount]
+      linarith [habs, hhead, hG']
 
 end RatIntervals
 end LonelyRunner
