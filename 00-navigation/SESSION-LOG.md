@@ -1,3 +1,15 @@
+## mac-mini-2026-07-02-S1 -- THM-602 (master resonance-lattice decomposition: cluster-level renormalization coherence, the arc-counting proof in full, well-founded recursion) + the PROOF-DAG LEDGER: ZERO reasoning gaps remain; the critical path to sorry-free is 4 ordered finite items (HYP-3858)
+
+Prompt (owner): no Lean builds; get LRC(14) to completely-formalizable state; highest-leverage reasoning tasks.
+
+THM-602 (paper, transcription-ready): (A) the TRICHOTOMY on the height-<=7 resonance lattice Lambda(F,I): fully resolved => quintic floor | partially resonant => rank-k HNF quotient to a (j-k)-parameter effective pattern with k frozen slow phases (FINITE census of effective patterns) | fully resonant => rational ray => bounded cluster (exact F_j base cases).  The CLUSTER-COHERENCE gap closed: the lattice replaces pairwise ratio composition (no height inflation: composed relations are spanned or resolved).  (B) renormalization exactness: |error| <= sum(drifts) x slow-phase total variation + boundary arcs (piecewise-linearity).  (C) the arc-counting forced-independence proof IN FULL: full cycles average exactly (Fubini); <= 1 partial cycle per pattern pays the exact table's max-minus-mean; the tail is FINITELY SUPPORTED (7-commensurate patterns have min = mean = 1/49 exactly -- S100; per-pattern decide) -- no infinite series remain.  (D) recursion on (j, corank) lex, depth <= 2, explicit composition.
+
+THE LEDGER (drafts/lrc14-proof-dag-ledger-macmini-20260702-S1.md): 5 layers, every node [LEAN]/[PAPER]/[TABLE]/[CENSUS] -- ZERO [GAP] nodes.  Critical path to zero sorries: (1) lattice + simplex census run; (2) the 7-commensurate finite-support row (3-line commensuration proof or decide); (3) klein nest writeup + L_y census, kps (star)-census ledger; (4) transcription + DAG wiring.  Risks: census verdicts; LRC(<=13) preprint status; transcription effort.
+
+FILES: THM-602; the ledger; HYP-3858.
+
+NEXT: (1) the census engines (lattice HNF list is tiny; simplex minima a few hundred entries); (2) the commensuration mini-proof; (3) hand the ledger to the swarm as the coordination surface -- every agent can pick a node and flip its tag.
+
 ## kind-pasteur-2026-07-01-S34 -- LRCGapSurplusLedger.lean: THE SECTION-FORMULA LEDGER MACHINE-CHECKED (computable Fgap/Aledger over Q; all 13 ledger rows by native_decide incl. k=13's 144699147/1267426160; the argmin-table floor theorem; DAG glue with the analytic bridge as a named hypothesis parameter -- no axioms beyond native_decide trust, no sorries) (HYP-3957)
 
 Prompt: get the whole LRC(14) proof formalized in Lean (enumeration collapse: dangerous lists = l1-simplex points Sum|m|<=7; normal form: frozen/resolved decidable, errors = arc counts, renormalization = well-founded recursion, truncation = binomial-sign lemma, S_d bounds = DAG-node hypotheses discharged by finite tables).
