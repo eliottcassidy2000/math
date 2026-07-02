@@ -16,6 +16,17 @@ THE BRIDGE (Lean, green): Mreach_ge_of_witness in LRC14Assembly -- a witness t i
 FILES: THM-602-S15 addendum; LRC14Assembly extended; HYP-3872.
 
 NEXT: (1) the per-HNF-class base list (the last computation); (2) module-6 soundness -> Mreach_ge_of_witness (kps's cert_ladder emits the witness); (3) hfloor bookkeeping (klein's tables + the case split).
+## opus-2026-07-02-S43 -- THE COMPLETENESS LEG: owner's suspicion CONFIRMED by audit (no exhaustion theorem existed), then PINNED -- LRC14CompletenessSurface.lean sorry-free: hfloor = census + peel by strong induction; the ONE unformalized mathematical statement left = klein's far-element rate lemma (HYP-3912)
+
+Prompt: work the fuel-checker instantiation + case-split wiring; consider that the censuses certify their families but nothing proves the families exhaust the covering universe.
+
+THE AUDIT (the consideration, taken seriously first): grep over the Lean corpus + reading kps's LRC14CertRoute -- the covering REDUCTION is proved, per-family lonely theorems abound, but NO statement of the shape 'every covering tuple lands in a certified family' exists. The owner's suspicion was exactly right: hfloor silently contained the exhaustion. HOWEVER the completeness leg is not a void: klein's N1 restructure (HYP-4001) IS its proof architecture -- bounded census (leg a, machine-checked) + far-element rate lemma (leg b, paper-proved + python-verified) + damped comparison (leg c, decide-shaped) + w-band (leg d, HYP-4005) -- never assembled, in Lean or on paper, into the exhaustion statement.
+
+THE DELIVERABLE (builds 25-26, GREEN; corpus 8591 jobs; kernel-pure): LRC14CompletenessSurface.lean -- hfloor_of_census_and_peel: strong induction on an abstract farCount proves hfloor from exactly (census: far-count-0 tuples satisfy the floor) + (peel: far-count > 0 tuples reduce with floor transport). The induction glue -- the piece that existed NOWHERE -- is proved sorry-free, standard axioms. lrc14_of_census_peel_partA: LRC(14) from the new 3-parameter surface (census, peel, hpartA) through lrc14_endgame. Dossier addendum written (submission-state doc section 7).
+
+THE HONEST REMAINING MATHEMATICS (the whole chain): (1) the far-element rate lemma's Lean transcription (klein's HYP-4001(b): |J(A, E u {w}) - (1-|A|/7) J(A,E)| <= 2 comp(A,E) |A| / w -- interval bookkeeping, LRCFinalWindowBand-species); (2) hpartA = module-6 fuel-checker instantiation against Mreach. Everything else: format wiring of machine-checked ingredients. hpartA attempted scoping this session: deferred (the Mreach bridge needs kps's CertRoute conventions; flagged to kps whose file owns them).
+
+Files: LRC14CompletenessSurface.lean (new, sorry-free, root-registered); dossier section 7; HYP-3912 (+INDEX). 26 green builds S34-43.
 
 ## klein-2026-07-02-S103 -- THM-604(b) MACHINE-CHECKED: PhasedPairBound.lean SORRY-FREE (the phased pair bound: coprime + any phases + 2r(P+Q) <= 1 => intersection <= 2r/Q = one deep interval) -- with opus's OriginNestQ attainment, THM-604 IS COMPLETE IN LEAN (HYP-4008)
 

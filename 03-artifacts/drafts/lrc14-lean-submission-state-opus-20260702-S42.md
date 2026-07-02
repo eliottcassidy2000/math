@@ -70,3 +70,26 @@ Everything below the two-parameter surface is machine-verified: kernel-checked w
 mathematics is symbolic, native_decide + independent Python mirror where it is a finite
 rational computation. No analytic estimate, no unverified table, no axiom beyond the
 standard trio plus ofReduceBool is anywhere in the dependency cone of `lrc14_endgame`.
+
+## 7. Addendum (S43): the completeness leg, confronted and pinned
+
+**The owner's question — do the censuses provably EXHAUST the covering universe? — was
+correct to ask: no exhaustion theorem existed anywhere in the corpus** (audited: kps's
+CertRoute has the covering reduction and per-family theorems; nothing of the shape "every
+covering tuple lands in a certified family").
+
+**What is now true (LRC14CompletenessSurface.lean, sorry-free, kernel-pure):**
+`hfloor_of_census_and_peel` proves that the exhaustion follows from two named legs by strong
+induction on an abstract far-element counter:
+- **census leg** (farCount = 0): ingredients machine-checked (klein LyWindowEnum k=8..13);
+  remaining = format wiring, finite;
+- **peel leg** (farCount > 0): klein's far-element rate lemma (HYP-4001(b)) + damped
+  comparison (leg c, decide-shaped) + w-band sweeps (leg d, HYP-4005) — **the rate lemma is
+  the ONE genuinely unformalized mathematical statement remaining in the whole chain**
+  (proved on paper, python-verified exact; Lean transcription pending).
+
+`lrc14_of_census_peel_partA` re-derives LRC(14) from (census, peel, hpartA) — the endgame
+surface is now three finite-shaped parameters with named provenance, kernel-pure glue
+throughout. The deeper measure-route exhaustiveness (THM-602 trichotomy, THM-595 case tree)
+remains the paper architecture behind the same split; the witness route needs only the
+counted form.
