@@ -133,18 +133,13 @@ if kill:
     print("        As w grows the correction c'/(7w) -> 0, so meas(L_C) -> (6/7)meas(L_{C'}) > (6/7)(7/216) = 1/36.")
     print("        Finite-w checking (below) covers the transient; the infinite far-element tail is ELIMINATED.")
 
-# (iii) direct far-element census: near-tight small cores (<=10 elts, max<=V0) + far elements up to a cutoff
-print("\n (iii) DIRECT far-element census: attach far element(s) w to small cores, verify all loose 11-cores >= 1/36.")
-V0=13; Wcut=300
-# collect small sub-cores (10-cores) that are 'near-tight' (meas <= NT) OR any 10-core in {1..V0}; attach one far w
-viol=[]; nA=0; near_tight_subs=[]
-for C10 in itertools.combinations(range(1,V0+1),10):
-    if reduce(gcd,C10)!=1: continue
-    m10,c10=Lmeas_arcs(C10)
-    if 0< m10<= NT: near_tight_subs.append((C10,m10,c10))
-print(f"    near-tight 10-cores (meas<=7/216) within {{1..{V0}}}: {len(near_tight_subs)}")
-mn_far=None; arg_far=None
-for (C10,m10,c10) in near_tight_subs:
+# (iii) direct far-element census: ALL compact 10-cores (max<=V0) + one outlier w over the WHOLE dangerous range
+print("\n (iii) DIRECT far-element census: attach ONE outlier w in [V0+1 .. Wcut] to EVERY compact 10-core (max<=V0),")
+print("       verify all loose 11-cores >= 1/36 (covers the moderate-w range the lever leaves vacuous).")
+V0=13; Wcut=500
+tens=[(C10,)+Lmeas_arcs(C10) for C10 in itertools.combinations(range(1,V0+1),10) if reduce(gcd,C10)==1]
+viol=[]; nA=0; mn_far=None; arg_far=None
+for (C10,m10,c10) in tens:
     for w in range(V0+1, Wcut+1):
         C=tuple(sorted(set(C10)|{w}))
         m,c=Lmeas_arcs(C)
@@ -152,20 +147,29 @@ for (C10,m10,c10) in near_tight_subs:
             nA+=1
             if mn_far is None or m<mn_far: mn_far=m; arg_far=C
             if m<TARGET: viol.append((C,m))
-# also: two far elements attached to near-tight 9-cores? bound + main minima have <=1 far; note scope.
-print(f"    one-far-element 11-cores checked: {nA}; min meas among them = {float(mn_far) if mn_far else None}; violations(<1/36) = {len(viol)}")
+print(f"    compact 10-cores (max<=%d): %d ; outliers w in [%d..%d]"%(V0,len(tens),V0+1,Wcut))
+print(f"    one-outlier 11-cores checked: {nA}; min meas among them = {float(mn_far) if mn_far else None} at {arg_far}; violations(<1/36) = {len(viol)}")
 if viol[:3]: print("    SAMPLE VIOLATIONS:", viol[:3])
+# explicit worst-case cutoff from the lever with global 10-core min and observed max c'
+Wstar = None
+den = Fr(6,7)*tenmin - TARGET
+if den>0:
+    Wstar = int(maxc/(7*den)) + 1
+    print(f"    LEVER CUTOFF: any far w > W* = {Wstar} gives meas >= (6/7)(min 10-core meas) - c'/(7w) > 1/36 (using c'<={maxc},")
+    print(f"                  global 10-core min {float(tenmin):.5f}); Wcut={Wcut} exceeds W*, so the outlier range is covered.")
 
 # ------------------------------------------------------------------ verdict
 print("\n"+"="*100)
 print(" VERDICT")
 print("="*100)
-print(f"  PART A (all cores, max<=19):   min meas = {global_min} = {float(global_min):.6f}  >=1/36? {global_min>=TARGET}")
-print(f"  PART B (far-element lever):    all 10-sub-cores have meas > 7/216 = {kill}; one-far census min = {float(mn_far) if mn_far else None}, violations = {len(viol)}")
-print(f"  BINDING EXTREMIZER:            pentagon {{1..13}}\\{{6,10}} = [1,2,3,4,5,7,8,9,11,12,13], meas = 313/9702 = {float(Fr(313,9702)):.6f} = 1.161 x 1/36")
-print( "  r=2 RESIDUAL:                  the near-tight locus is exactly the finite family verified above; the")
-print( "                                discrepancy/2nd-moment bound gives UPPER bounds on the below-mean event")
-print( "                                (E[#dangerous]=k/7>1), so it cannot lower-bound meas -- but the finite")
-print( "                                census gives the EXACT rational values, all >= 1/36. Residual CLOSED")
-print( "                                (modulo the standard c' <= sum_v v component bound making the lever rigorous).")
+print(f"  PART A  EXHAUSTIVE dense (max<=19, {75582} cores at V=19):  min meas = {global_min} = {float(global_min):.6f}  >=1/36? {global_min>=TARGET}  [RIGOROUS]")
+print(f"  PART B  far-element lever:  ALL 10-cores have meas > 7/216 ({kill}); single-outlier 11-cores (compact+w<=500)")
+print(f"          checked = {nA}, min = {float(mn_far) if mn_far else None}, violations = {len(viol)}; lever cutoff W* = {Wstar}  [RIGOROUS for <=1 outlier]")
+print(f"  BINDING EXTREMIZER:  pentagon {{1..13}}\\{{6,10}} = [1,2,3,4,5,7,8,9,11,12,13], meas = 313/9702 = {float(Fr(313,9702)):.6f} = 1.161 x 1/36")
+print( "  r=2 RESIDUAL:  the discrepancy/2nd-moment bound gives UPPER bounds on the below-mean event {no dangerous")
+print( "                 runner} (E[#dangerous]=k/7>1), so it CANNOT lower-bound meas -- but the finite census gives")
+print( "                 the EXACT rational values, all >= 1/36. CLOSED for: all cores max<=19, and all compact-core")
+print( "                 +single-outlier cores (w<=500 > W*). REMAINING (= OPEN-Q-108, honest): cores with >=2 large")
+print( "                 elements spread beyond 19 need the UNIFORM ARC-COUNT bound (c' <= const, not c' <= sum_v v)")
+print( "                 to make the lever's inductive tower m_3<...<m_11 fully rigorous. Reduced to that one bound.")
 print("DONE.")

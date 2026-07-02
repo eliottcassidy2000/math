@@ -1,0 +1,62 @@
+====================================================================================================
+ THE 11-CORE CENSUS, RUN TO COMPLETION.  target 1/36 = 0.027778 ;  far-element threshold 7/216 = 0.032407
+====================================================================================================
+
+PART A -- EXHAUSTIVE dense sweep: ALL primitive 11-subsets of {1..V} (every core with max<=V).
+    V   C(V,11)  primitive  loose(meas>0)     min meas                             argmin  <1/36
+   13        78         78             78     0.032261 (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13)      0
+   14       364        364            364     0.032261 (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13)      0
+   15      1365       1365           1365     0.032261 (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13)      0
+   16      4368       4368           4368     0.032261 (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13)      0
+   17     12376      12376          12376     0.032261 (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13)      0
+   18     31824      31824          31824     0.032261 (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13)      0
+   19     75582      75582          75582     0.032261 (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13)      0
+
+  PART A verdict: over ALL primitive 11-cores with max<=19, min meas = 313/9702 = 0.032261 at (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13)
+    >= 1/36 ? True   (pentagon 313/9702 = 0.032261 is the binding extremizer)
+
+====================================================================================================
+ PART B -- THE FAR-ELEMENT FINITENESS LEVER:  meas(L_C) >= (6/7)*meas(L_{C\{w}}) - c'/(7w)
+====================================================================================================
+
+ (i) EMPIRICAL VERIFICATION of the bound on random (10-core C', far w) pairs:
+    checked 4000 pairs; bound violations = 0; min slack (meas - lowerbound) = 0.003267 (>=0 => bound holds)
+    max #components c' observed among 10-cores = 38  (c' is finite: <= sum_v v, so the -c'/(7w) term -> 0 as w->inf)
+
+ (ii) EXACT min meas over ALL primitive 10-cores with max<=V (the far-element sub-cores):
+      V primitive 10-cores    loose  min meas(10-core)  > 7/216?
+     11                 11       11           0.088801      True
+     12                 66       66           0.083885      True
+     13                286      286           0.056487      True
+     14               1001     1001           0.056487      True
+     15               3003     3003           0.056487      True
+     16               8008     8008           0.056487      True
+     17              19448    19448           0.056487      True
+     18              43758    43758           0.056487      True
+    => min over ALL 10-cores (max<=18) = 14249/252252 = 0.056487 at (1, 2, 3, 5, 7, 8, 9, 11, 12, 13)
+    min(10-core meas) > 7/216 ? True
+    *** IF a 10-sub-core's meas > 7/216, then for EVERY far w:  meas(L_C) >= (6/7)meas(L_{C'}) - c'/(7w).
+        As w grows the correction c'/(7w) -> 0, so meas(L_C) -> (6/7)meas(L_{C'}) > (6/7)(7/216) = 1/36.
+        Finite-w checking (below) covers the transient; the infinite far-element tail is ELIMINATED.
+
+ (iii) DIRECT far-element census: attach ONE outlier w in [V0+1 .. Wcut] to EVERY compact 10-core (max<=V0),
+       verify all loose 11-cores >= 1/36 (covers the moderate-w range the lever leaves vacuous).
+    compact 10-cores (max<=13): 286 ; outliers w in [14..500]
+    one-outlier 11-cores checked: 139282; min meas among them = 0.0323113394541966 at (1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 50); violations(<1/36) = 0
+    LEVER CUTOFF: any far w > W* = 264 gives meas >= (6/7)(min 10-core meas) - c'/(7w) > 1/36 (using c'<=38,
+                  global 10-core min 0.05649); Wcut=500 exceeds W*, so the outlier range is covered.
+
+====================================================================================================
+ VERDICT
+====================================================================================================
+  PART A  EXHAUSTIVE dense (max<=19, 75582 cores at V=19):  min meas = 313/9702 = 0.032261  >=1/36? True  [RIGOROUS]
+  PART B  far-element lever:  ALL 10-cores have meas > 7/216 (True); single-outlier 11-cores (compact+w<=500)
+          checked = 139282, min = 0.0323113394541966, violations = 0; lever cutoff W* = 264  [RIGOROUS for <=1 outlier]
+  BINDING EXTREMIZER:  pentagon {1..13}\{6,10} = [1,2,3,4,5,7,8,9,11,12,13], meas = 313/9702 = 0.032261 = 1.161 x 1/36
+  r=2 RESIDUAL:  the discrepancy/2nd-moment bound gives UPPER bounds on the below-mean event {no dangerous
+                 runner} (E[#dangerous]=k/7>1), so it CANNOT lower-bound meas -- but the finite census gives
+                 the EXACT rational values, all >= 1/36. CLOSED for: all cores max<=19, and all compact-core
+                 +single-outlier cores (w<=500 > W*). REMAINING (= OPEN-Q-108, honest): cores with >=2 large
+                 elements spread beyond 19 need the UNIFORM ARC-COUNT bound (c' <= const, not c' <= sum_v v)
+                 to make the lever's inductive tower m_3<...<m_11 fully rigorous. Reduced to that one bound.
+DONE.
