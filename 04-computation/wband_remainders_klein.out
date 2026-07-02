@@ -1,0 +1,6 @@
+row 12: remainder (400,546]: float-over = 0; near-cap exact-confirmed 0 (all clear: True)
+row 11: remainder (400,1158]: float-over = 0; near-cap exact-confirmed 0 (all clear: True)
+row 10: remainder (400,2777]: float-over = 0; near-cap exact-confirmed 0 (all clear: True)
+row 9: remainder (400,4843]: float-over = 0; near-cap exact-confirmed 0 (all clear: True)
+=> the w-band leg: swept + confirmed over the ENTIRE (spread, W0] range at every row;
+   beyond W0 the rate lemma (HYP-4001) takes over. Leg CLOSED.

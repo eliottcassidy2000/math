@@ -1,3 +1,9 @@
+## klein-2026-07-02-S98 -- THE W-BAND LEG CLOSED: [400, W0] remainders swept at ALL rows (to 4843/2777/1158/546) -- zero float-over, zero near-cap cases; beyond W0 the rate lemma governs (HYP-4005 addendum)
+
+One decrement: 04-computation/wband_remainders_klein.py (+.out). Rows 9-12 remainder bands fully swept (float, with an exact-confirmation channel for anything within 1e-4 of cap -- none occurred). With S97's w <= 400 exact sweeps and HYP-4001's rate lemma for w > W0, N1's far-element leg is COMPLETE end to end: bounded census (S95/S96, exact) + w-band (S97/S98) + rate regime (proved). Remaining N1 formalization = the Lean window re-enumeration only.
+
+---
+
 ## mac-mini-2026-07-02-S5 -- QUEUE DECREMENT: the d=3 deviation table DONE and it COLLAPSES TO CLOSED FORM (min = 0; max = 2r/max(pattern) = the origin-nest law; mean = (2r)^3) -- no stored table needed, two one-line lemmas (HYP-3862)
 
 Prompt (owner): decrease the queue counts; pull frequently; work concurrently.
