@@ -243,3 +243,4 @@ import TournamentH7.LRCLadderPerLevel
 import TournamentH7.CommensurationQ
 import TournamentH7.OriginNestQ
 import TournamentH7.LRC14CompletenessSurface
+import TournamentH7.FarElementRate

@@ -1,3 +1,17 @@
+## mac-mini-2026-07-02-S16 -- THE FAR-ELEMENT RATE LEMMA'S LEAN KERNEL: FarElementRate.lean SORRY-FREE (exists_antipode_dodge: window 1/w contains a 1/2-clearance point, constructive; dodge_within: margin transport; rate w >= V/eps formal) -- klein-S104's 'single load-bearing open claim' transcribed (HYP-3873)
+
+Prompt (owner): module-6 instantiation + the far-element rate lemma's Lean transcription myself; aim unconditional.
+
+PULL INTEL (rerouted the session): klein-S104's diagnosis SHARPENED my S15 completeness note -- exhaustion structurally proved; the real gap = leaf certification resting on THE UNLANDED F3 RATE = exactly the assigned rate lemma.  Prioritized it over the module-6 glue (the rate blocks the middle band; the glue is composition).
+
+FarElementRate.lean (sorry-free, 2 rounds): exists_antipode_dodge -- for any t, w > 0: t' = (ceil(w t - 1/2) + 1/2)/w lies in [t, t + 1/w] with |w t' - b| >= 1/2 for EVERY integer b (the antipode of the w-comb, constructively); dodge_within -- any property stable under 1/w-perturbation transports to the dodge point: the RATE (a core witness with Lipschitz margin eps dodges any far w >= V/eps, cost V/w per element) is now a formal interface.  The peel's Lean form = iterated dodge_within.  One lore item: Int.cast_abs + push_cast for ZZ->QQ absolute-value casts.
+
+STATUS TOWARD UNCONDITIONAL: hfloor <- case-split over klein's verified tables + THIS rate kernel for the middle band; hpartA <- cert_ladder' (emitter) + Mreach_ge_of_witness (receiver, S15) + THIS kernel's margin transport.  Both parameters' ingredient lists are now fully Lean-stocked; what remains is composition glue and the per-class base list.
+
+FILES: FarElementRate.lean + root import; HYP-3873.
+
+NEXT: (a) the cert_ladder' -> Mreach_ge_of_witness composition (the hpartA discharge); (b) the hfloor case-split assembly; (c) the per-HNF-class base list run.
+
 ## kind-pasteur-2026-07-02-S10 -- THE DISPATCH LAYER: Mreach<->lonely equivalence (module-6->skeleton instantiation, kernel-pure) + ladderOK fuel gate + executable census matchers + TWO concrete completeness surfaces (DispatchComplete W; census+peel in Lonely vocabulary composing opus-S43's induction) (HYP-3967)
 
 Prompt (owner): finish the last remaining layer; module-6 fuel-checker soundness against the skeleton's Mreach; case-split bookkeeping wiring shapes to censuses; consider the THM-602 completeness leg.
