@@ -45,17 +45,17 @@ theorem norm_ge_of_natCheck {w : ℤ} (hw : 0 ≤ w) {a b : ℕ} (hb : 0 < b)
 
 /-- A window row: witness `a/b` certifies the full shape `(P, offs)` at reference speed `V`.
 Decidable by kernel `decide` (small numerals). -/
-def rowOK (P offs : List ℤ) (V : ℤ) (a b : ℕ) : Prop :=
+def windowRowOK (P offs : List ℤ) (V : ℤ) (a b : ℕ) : Prop :=
   0 < b ∧
   (∀ s ∈ P, 0 ≤ s ∧ b ≤ 14 * min ((s.toNat * a) % b) (b - (s.toNat * a) % b)) ∧
   (∀ o ∈ offs, 0 ≤ V - o ∧
     b ≤ 14 * min (((V - o).toNat * a) % b) (b - ((V - o).toNat * a) % b))
 
-instance (P offs : List ℤ) (V : ℤ) (a b : ℕ) : Decidable (rowOK P offs V a b) := by
-  unfold rowOK; infer_instance
+instance (P offs : List ℤ) (V : ℤ) (a b : ℕ) : Decidable (windowRowOK P offs V a b) := by
+  unfold windowRowOK; infer_instance
 
 /-- A checked window row yields the lonely time for its shape instance. -/
-theorem lonely_of_rowOK {P offs : List ℤ} {V : ℤ} {a b : ℕ} (h : rowOK P offs V a b) :
+theorem lonely_of_windowRowOK {P offs : List ℤ} {V : ℤ} {a b : ℕ} (h : windowRowOK P offs V a b) :
     ∃ τ : ℝ,
       (∀ s ∈ P, ((h14 : ℚ) : ℝ) ≤ ‖(((s : ℝ) * τ : ℝ) : UnitAddCircle)‖) ∧
       (∀ o ∈ offs, ((h14 : ℚ) : ℝ) ≤ ‖((((V - o : ℤ) : ℝ) * τ : ℝ) : UnitAddCircle)‖) := by
@@ -72,10 +72,10 @@ theorem certAP_window (V : ℤ) (h1 : 13 ≤ V) (h2 : V < 15) :
     ∃ τ : ℝ, ∀ o ∈ offsAP, ((h14 : ℚ) : ℝ) ≤
       ‖((((V - o : ℤ) : ℝ) * τ : ℝ) : UnitAddCircle)‖ := by
   interval_cases V
-  · obtain ⟨τ, -, hO⟩ := lonely_of_rowOK (P := ([] : List ℤ)) (offs := offsAP)
+  · obtain ⟨τ, -, hO⟩ := lonely_of_windowRowOK (P := ([] : List ℤ)) (offs := offsAP)
       (V := 13) (a := 1) (b := 14) (by decide)
     exact ⟨τ, hO⟩
-  · obtain ⟨τ, -, hO⟩ := lonely_of_rowOK (P := ([] : List ℤ)) (offs := offsAP)
+  · obtain ⟨τ, -, hO⟩ := lonely_of_windowRowOK (P := ([] : List ℤ)) (offs := offsAP)
       (V := 14) (a := 1) (b := 16) (by decide)
     exact ⟨τ, hO⟩
 
@@ -94,32 +94,32 @@ theorem cert3_window (V : ℤ) (h1 : 21 ≤ V) (h2 : V < 47) :
       (∀ s ∈ P3, ((h14 : ℚ) : ℝ) ≤ ‖(((s : ℝ) * τ : ℝ) : UnitAddCircle)‖) ∧
       (∀ o ∈ offs3, ((h14 : ℚ) : ℝ) ≤ ‖((((V - o : ℤ) : ℝ) * τ : ℝ) : UnitAddCircle)‖) := by
   interval_cases V
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 21) (a := 3) (b := 17) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 22) (a := 1) (b := 6) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 23) (a := 1) (b := 8) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 24) (a := 2) (b := 17) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 25) (a := 1) (b := 9) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 26) (a := 4) (b := 27) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 27) (a := 4) (b := 23) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 28) (a := 1) (b := 6) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 29) (a := 3) (b := 19) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 30) (a := 3) (b := 26) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 31) (a := 1) (b := 8) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 32) (a := 7) (b := 39) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 33) (a := 5) (b := 29) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 34) (a := 1) (b := 6) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 35) (a := 4) (b := 25) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 36) (a := 7) (b := 32) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 37) (a := 11) (b := 52) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 38) (a := 3) (b := 17) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 39) (a := 6) (b := 35) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 40) (a := 1) (b := 6) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 41) (a := 8) (b := 37) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 42) (a := 13) (b := 62) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 43) (a := 11) (b := 61) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 44) (a := 7) (b := 40) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 45) (a := 7) (b := 41) (by decide)
-  · exact lonely_of_rowOK (P := P3) (offs := offs3) (V := 46) (a := 1) (b := 6) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 21) (a := 3) (b := 17) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 22) (a := 1) (b := 6) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 23) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 24) (a := 2) (b := 17) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 25) (a := 1) (b := 9) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 26) (a := 4) (b := 27) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 27) (a := 4) (b := 23) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 28) (a := 1) (b := 6) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 29) (a := 3) (b := 19) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 30) (a := 3) (b := 26) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 31) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 32) (a := 7) (b := 39) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 33) (a := 5) (b := 29) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 34) (a := 1) (b := 6) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 35) (a := 4) (b := 25) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 36) (a := 7) (b := 32) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 37) (a := 11) (b := 52) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 38) (a := 3) (b := 17) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 39) (a := 6) (b := 35) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 40) (a := 1) (b := 6) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 41) (a := 8) (b := 37) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 42) (a := 13) (b := 62) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 43) (a := 11) (b := 61) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 44) (a := 7) (b := 40) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 45) (a := 7) (b := 41) (by decide)
+  · exact lonely_of_windowRowOK (P := P3) (offs := offs3) (V := 46) (a := 1) (b := 6) (by decide)
 
 /-- **The `{1,2,3} ∪ {V−o}` family for every `V ≥ 21`** — window + tail; no V-gap. -/
 theorem cert3_all (V : ℤ) (hV : 21 ≤ V) :
@@ -137,31 +137,31 @@ theorem cert4_window (V : ℤ) (h1 : 15 ≤ V) (h2 : V < 40) :
       (∀ s ∈ P4, ((h14 : ℚ) : ℝ) ≤ ‖(((s : ℝ) * τ : ℝ) : UnitAddCircle)‖) ∧
       (∀ o ∈ offs4, ((h14 : ℚ) : ℝ) ≤ ‖((((V - o : ℤ) : ℝ) * τ : ℝ) : UnitAddCircle)‖) := by
   interval_cases V
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 15) (a := 1) (b := 8) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 16) (a := 1) (b := 9) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 17) (a := 1) (b := 8) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 18) (a := 1) (b := 20) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 19) (a := 1) (b := 8) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 20) (a := 1) (b := 11) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 21) (a := 1) (b := 8) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 22) (a := 1) (b := 24) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 23) (a := 1) (b := 8) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 24) (a := 2) (b := 17) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 25) (a := 1) (b := 8) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 26) (a := 2) (b := 19) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 27) (a := 1) (b := 8) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 28) (a := 7) (b := 19) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 29) (a := 1) (b := 8) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 30) (a := 2) (b := 21) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 31) (a := 1) (b := 8) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 32) (a := 3) (b := 25) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 33) (a := 1) (b := 8) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 34) (a := 1) (b := 9) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 35) (a := 1) (b := 8) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 36) (a := 10) (b := 27) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 37) (a := 1) (b := 8) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 38) (a := 11) (b := 29) (by decide)
-  · exact lonely_of_rowOK (P := P4) (offs := offs4) (V := 39) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 15) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 16) (a := 1) (b := 9) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 17) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 18) (a := 1) (b := 20) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 19) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 20) (a := 1) (b := 11) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 21) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 22) (a := 1) (b := 24) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 23) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 24) (a := 2) (b := 17) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 25) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 26) (a := 2) (b := 19) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 27) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 28) (a := 7) (b := 19) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 29) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 30) (a := 2) (b := 21) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 31) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 32) (a := 3) (b := 25) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 33) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 34) (a := 1) (b := 9) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 35) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 36) (a := 10) (b := 27) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 37) (a := 1) (b := 8) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 38) (a := 11) (b := 29) (by decide)
+  · exact lonely_of_windowRowOK (P := P4) (offs := offs4) (V := 39) (a := 1) (b := 8) (by decide)
 
 /-- **The `{2,…,6} ∪ {V−even}` family for every `V ≥ 15`** — window + tail; no V-gap. -/
 theorem cert4_all (V : ℤ) (hV : 15 ≤ V) :

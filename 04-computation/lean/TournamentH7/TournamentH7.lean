@@ -234,3 +234,9 @@ import TournamentH7.DangerousPatterns
 import TournamentH7.BonferroniTruncation
 import TournamentH7.CombPatterns
 import TournamentH7.LRC14Assembly
+import TournamentH7.LRCCommensuration
+import TournamentH7.RatIntervalsWrap
+import TournamentH7.LRCWitnessWindow
+import TournamentH7.LRCLadderPerLevel
+import TournamentH7.CommensurationQ
+import TournamentH7.OriginNestQ
