@@ -61,17 +61,24 @@ instance (v : Fin 13 → ℤ) (t : ℚ) : Decidable (ratWitnessOK v t) := by
   unfold ratWitnessOK
   infer_instance
 
-/-- **Gate soundness (kernel-pure)**: a passing rational witness IS a lonely time. -/
-theorem lonely_of_ratWitness {v : Fin 13 → ℤ} {t : ℚ} (h : ratWitnessOK v t) :
+/-- The ℚ→ℝ loneliness lift: an all-integers rational bound at a rational time casts to
+`Lonely` over ℝ.  Shared by the witness gate and the good-set pipeline. -/
+theorem lonely_of_rat_forall {v : Fin 13 → ℤ} {t : ℚ}
+    (h : ∀ i, ∀ m : ℤ, (1 : ℚ) / 14 ≤ |(v i : ℚ) * t - m|) :
     Lonely 14 v ((t : ℚ) : ℝ) := by
   intro i m
-  have hq := ratLonelyAt_forall_int (by norm_num) (h i) m
+  have hq := h i m
   have hcast : ((|((v i : ℚ)) * t - (m : ℚ)| : ℚ) : ℝ) = |(v i : ℝ) * ((t : ℚ) : ℝ) - (m : ℝ)| := by
     push_cast
     ring_nf
   calc (1 : ℝ) / (14 : ℕ) = (((1 : ℚ) / 14 : ℚ) : ℝ) := by norm_num
     _ ≤ ((|((v i : ℚ)) * t - (m : ℚ)| : ℚ) : ℝ) := by exact_mod_cast hq
     _ = |(v i : ℝ) * ((t : ℚ) : ℝ) - (m : ℝ)| := hcast
+
+/-- **Gate soundness (kernel-pure)**: a passing rational witness IS a lonely time. -/
+theorem lonely_of_ratWitness {v : Fin 13 → ℤ} {t : ℚ} (h : ratWitnessOK v t) :
+    Lonely 14 v ((t : ℚ) : ℝ) :=
+  lonely_of_rat_forall fun i => ratLonelyAt_forall_int (by norm_num) (h i)
 
 /-- Existence form: the census-table consumer. -/
 theorem exists_lonely_of_ratWitness {v : Fin 13 → ℤ} (t : ℚ) (h : ratWitnessOK v t) :
