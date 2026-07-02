@@ -1,3 +1,9 @@
+## klein-2026-07-02-S108 -- hwindow SLICE 2: LRCWindowPack2.lean BUILDS (5118 covering tuples, band (18, 20], exact witnesses, KERNEL-GATED, 0 failures) -- census complete to max <= 20 (6084 rows) (HYP-4013)
+
+Generator re-run for the band (18, 20]: 5118 primitive covering 13-tuples, exact max-min rational witnesses, 0 failures (a failure row would BE a counterexample). Rows converted from the stale ratWitness template to the KernelGate style (lonely_of_kernelWitness (by norm_num) (by decide) -- kernel-pure, submission-grade); build 2944 jobs green. HONESTY CORRECTION vs the S108 commit message: the GENERATOR PATCH PATTERN-MISSED and the generator is UNCHANGED -- next slicer must apply the conversion: import LRCRatWitness -> LRCKernelGate, and per row replace '(((num/den : Q)) : R) := lonely_of_ratWitness (by native_decide)' with '((((num : Q) / (den : Q)) : Q) : R) := KernelGate.lonely_of_kernelWitness (by norm_num) (by decide)'. Band (20, 22] next: mechanically identical, larger -- split files per the parallel-build lesson.
+
+---
+
 ## kind-pasteur-2026-07-02-S14 -- THE PEEL AGGREGATION ASSEMBLY COMPLETE, ALL KERNEL-PURE (LRCPeelAssembly.lean: iterated partition inequality + the HALF-COMB SPLIT + damped_peel + the quantitative iterating gate + the wrap-free composite gate) (HYP-3971)
 
 Prompt (owner): finish the module-6 fuel-checker instantiation + the far-element rate lemma transcription myself, then the HNF tables / DispatchComplete evaluation / peel aggregation; aim for unconditional LRC14Statement; pull/push frequently.
