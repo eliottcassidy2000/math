@@ -11,6 +11,15 @@ FINDING 3 (polish): my six files now zero-warning (push Not migration; Int.emod_
 VERIFIED: full corpus 8602 jobs exit 0; ConcreteSurface + re-checked pillars all [propext, Classical.choice, Quot.sound].
 
 FILES: LRC14ConcreteSurface.lean (new, registered); lint edits in LRC14CertRoute/LRC14WindowWiring/LRCPeelAssembly/LRCSevenTranslate/LRCGoodPipeline; HYP-3973 INDEX; this entry. No canon overridden.
+## klein-2026-07-02-S111 -- THE COMPOSED WINDOW LEG: HWindow20.lean SORRY-FREE (first-try build) -- hwindow at the censused cut from exactly {distinct census} + {citation node}; the REPEAT case formally eliminated through the wiring (HYP-4016)
+
+Prompt (owner): improve the endgame surface; get everything unconditionally formalized.
+
+DELIVERED: hwindow20 (cite : LRCUpTo13) (hdistinct20 : strictly-monotone positive primitive covering <= 20 => lonely) : forall nonzero v with |v i| <= 20, exists t, Lonely 14 v t. Mechanism: kps's hwindow_of_normalized_census normalizes signs/order/gcd; inside, by_cases on a repeat -- repeat => lonely14_of_repeat (S110's citation route, covering-agnostic), no repeat + monotone => StrictMono => the distinct census. THE SURFACE SHRINK: the window leg at W=20 now has exactly ONE remaining item -- the pack-list dispatcher turning the 6084 individual winRow theorems into hdistinct20's quantified form (a membership case-split; opus/kps's list-form packs or a Lean re-enumeration la LyWindowEnum both work). Composition builds green, 8492 jobs.
+
+FILES: lean HWindow20.lean; HYP-4016 (+INDEX).
+
+---
 
 ## klein-2026-07-02-S110 -- AUDIT SESSION: corpus green at HEAD (baseline re-verified) + kps's census-class FLAG CLOSED (LRC13Citation.lean sorry-free: the owner-policy citation node LRCUpTo13 + lonely14_of_repeat -- repeated-entry tuples have <= 12 distinct speeds, lonely at 1/13 >= 1/14 by citation; Lonely depends only on the range) + self-audit of census20's population breadth recorded (HYP-4015)
 
