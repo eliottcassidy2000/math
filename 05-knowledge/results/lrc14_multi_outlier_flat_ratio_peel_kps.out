@@ -1,0 +1,164 @@
+========================================================================================================
+ (1) BASE LEDGER: min over BOUNDED m-cores, m = 7..11  (drops of {1..V} + random primitive)
+========================================================================================================
+  m= 7  #cores=  4326  min meas=0.217491  N_arcs= 18  argmin=(1, 3, 5, 7, 8, 9, 11)
+         flat (6/7)^4 * min = 0.117396   union (1-4/7)*min = 0.093211   vs 1/36=0.027778   flat_clears=True  union_clears=True
+  m= 8  #cores=  4494  min meas=0.163920  N_arcs= 18  argmin=(1, 2, 3, 5, 7, 8, 9, 11)
+         flat (6/7)^3 * min = 0.103226   union (1-3/7)*min = 0.093668   vs 1/36=0.027778   flat_clears=True  union_clears=True
+  m= 9  #cores=  4715  min meas=0.092456  N_arcs= 14  argmin=(1, 2, 3, 5, 7, 8, 9, 11, 13)
+         flat (6/7)^2 * min = 0.067927   union (1-2/7)*min = 0.066040   vs 1/36=0.027778   flat_clears=True  union_clears=True
+  m=10  #cores=  5001  min meas=0.056487  N_arcs= 12  argmin=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13)
+         flat (6/7)^1 * min = 0.048418   union (1-1/7)*min = 0.048418   vs 1/36=0.027778   flat_clears=True  union_clears=True
+  m=11  #cores=  5364  min meas=0.032261  N_arcs=  8  argmin=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13)
+         flat (6/7)^0 * min = 0.032261   union (1-0/7)*min = 0.032261   vs 1/36=0.027778   flat_clears=True  union_clears=True
+
+  FLAT-RATIO TEST: min_m * (7/6)^(11-m) (should be ~constant if per-slot cost = 6/7):
+    m= 7: min=0.217491   normalized min*(6/7)^(11-m) = 0.117396
+    m= 8: min=0.163920   normalized min*(6/7)^(11-m) = 0.103226
+    m= 9: min=0.092456   normalized min*(6/7)^(11-m) = 0.067927
+    m=10: min=0.056487   normalized min*(6/7)^(11-m) = 0.048418
+    m=11: min=0.032261   normalized min*(6/7)^(11-m) = 0.032261
+
+  GREEDY-DROP NESTING of argmins (is argmin_{m} = argmin_{m+1} minus one element?):
+    argmin_11 ⊃ argmin_10? True   dropped: [4]
+    argmin_10 ⊃ argmin_9? True   dropped: [12]
+    argmin_9 ⊃ argmin_8? True   dropped: [13]
+    argmin_8 ⊃ argmin_7? True   dropped: [2]
+
+  top-5 per m (near-minimal locus):
+    m= 7  0.217491  N= 18  (1, 3, 5, 7, 8, 9, 11)
+    m= 7  0.218032  N= 20  (1, 5, 6, 7, 8, 9, 11)
+    m= 7  0.221975  N= 18  (1, 3, 4, 5, 7, 9, 11)
+    m= 7  0.227412  N= 20  (1, 2, 5, 7, 8, 9, 11)
+    m= 7  0.228468  N= 20  (1, 4, 5, 6, 7, 9, 11)
+    m= 8  0.163920  N= 18  (1, 2, 3, 5, 7, 8, 9, 11)
+    m= 8  0.167167  N= 16  (1, 3, 4, 5, 7, 8, 9, 11)
+    m= 8  0.170413  N= 18  (1, 3, 5, 6, 7, 8, 9, 11)
+    m= 8  0.170413  N= 20  (1, 2, 5, 6, 7, 8, 9, 11)
+    m= 8  0.171449  N= 18  (1, 3, 5, 7, 8, 9, 11, 12)
+    m= 9  0.092456  N= 14  (1, 2, 3, 5, 7, 8, 9, 11, 13)
+    m= 9  0.098450  N= 12  (1, 3, 4, 5, 7, 8, 9, 11, 13)
+    m= 9  0.100781  N= 16  (1, 2, 5, 6, 7, 8, 9, 11, 13)
+    m= 9  0.102612  N= 14  (1, 3, 5, 6, 7, 8, 9, 11, 13)
+    m= 9  0.104564  N= 14  (1, 3, 5, 7, 8, 9, 11, 12, 13)
+    m=10  0.056487  N= 12  (1, 2, 3, 5, 7, 8, 9, 11, 12, 13)
+    m=10  0.060488  N= 12  (1, 2, 3, 5, 6, 7, 8, 9, 11, 13)
+    m=10  0.062481  N= 10  (1, 3, 4, 5, 7, 8, 9, 11, 12, 13)
+    m=10  0.066482  N= 10  (1, 3, 4, 5, 6, 7, 8, 9, 11, 13)
+    m=10  0.068230  N= 10  (1, 2, 3, 4, 5, 7, 8, 9, 11, 13)
+    m=11  0.032261  N=  8  (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13)
+    m=11  0.032384  N=  8  (1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13)
+    m=11  0.036262  N=  8  (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13)
+    m=11  0.036385  N=  8  (1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13)
+    m=11  0.038378  N=  6  (1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+
+========================================================================================================
+ (2) UNIFORM ARC-COUNT UNION FLOOR + cutoffs:  meas >= meas(L_B)(1-r/7) - (N_B/7) Σ 1/w_j
+========================================================================================================
+  Per-speed lemma (periodicity repairs the union bound):  meas(L_B ∩ D_w) <= meas(L_B)/7 + N_B/(7w).
+  PROOF: D_w = w teeth of width 1/(7w), 1/w-periodic; an arc I meets <= |I|w+1 teeth, each
+  contributing <= 1/(7w) => danger in I <= |I|/7 + 1/(7w); sum over the N_B arcs. QED (elementary).
+  => cutoff W*(r,m): smallest W with min_m*(1-r/7) - (N/7)(r/W) >= 1/36 for ALL outliers >= W:
+    r=1: base min_m=0.056487 (m=10, N=12)  union margin=+0.020640  W*(argmin)=    83.1   UNIFORM W*max=    112.3   #bases with margin<=0: 0
+    r=2: base min_m=0.092456 (m=9, N=14)  union margin=+0.038262  W*(argmin)=   104.5   UNIFORM W*max=    181.0   #bases with margin<=0: 0
+    r=3: base min_m=0.163920 (m=8, N=18)  union margin=+0.065891  W*(argmin)=   117.1   UNIFORM W*max=    290.0   #bases with margin<=0: 0
+    r=4: base min_m=0.217491 (m=7, N=18)  union margin=+0.065433  W*(argmin)=   157.2   UNIFORM W*max=    513.1   #bases with margin<=0: 0
+
+  numeric check of  meas(L_B ∩ D_w) <= meas(L_B)/7 + N_B/(7w)  (worst ratio should be <= 1):
+    worst danger/bound = 0.9018  at core=(1, 2, 3, 5, 7, 8, 9, 11, 13) w=1000  (danger=0.013714 bound=0.015208)  LEMMA HOLDS
+
+========================================================================================================
+ (3) ONE-STEP PEEL + ARC GROWTH:  meas(L∩safe_w) >= (6/7)meas(L) - N/(7w);  N' <= 2N + w*meas
+========================================================================================================
+    peel lower bound: worst (bound - actual) = -1.37e-03 at ((1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13), 997)  HOLDS
+    arc growth:       worst N'/(2N + w*meas) = 0.8654  at ((1, 2, 3, 5, 7, 8, 9, 11, 13), 997)  HOLDS
+
+========================================================================================================
+ (4a) SINGLE-OUTLIER scan: B = top minimal 10-cores, w = 15..800  (verify 0.03231 @ +50)
+========================================================================================================
+  B=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13) meas_B=0.056487 N_B=12  limit (6/7)meas=0.048418  min over w<=800: 0.032311 at w=50
+  B=(1, 2, 3, 5, 6, 7, 8, 9, 11, 13) meas_B=0.060488 N_B=12  limit (6/7)meas=0.051847  min over w<=800: 0.037405 at w=20
+  B=(1, 3, 4, 5, 7, 8, 9, 11, 12, 13) meas_B=0.062481 N_B=10  limit (6/7)meas=0.053555  min over w<=800: 0.036754 at w=17
+  B=(1, 3, 4, 5, 6, 7, 8, 9, 11, 13) meas_B=0.066482 N_B=10  limit (6/7)meas=0.056985  min over w<=800: 0.042805 at w=17
+  B=(1, 2, 3, 4, 5, 7, 8, 9, 11, 13) meas_B=0.068230 N_B=10  limit (6/7)meas=0.058483  min over w<=800: 0.040025 at w=30
+
+  global single-outlier top-5:
+    meas=0.032311  B=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13) + w=50
+    meas=0.033405  B=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13) + w=20
+    meas=0.033910  B=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13) + w=30
+    meas=0.036728  B=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13) + w=19
+    meas=0.036754  B=(1, 3, 4, 5, 7, 8, 9, 11, 12, 13) + w=17
+  EXACT check of global min: meas((1, 2, 3, 5, 7, 8, 9, 11, 12, 13)+50) = 40753/1261260 = 0.032311   >= 1/36? True   margin = 1.1632x
+
+========================================================================================================
+ (4b) TWO-OUTLIER scan: B = top minimal 9-cores; resonant + grid + spread + random pairs
+========================================================================================================
+  B=(1, 2, 3, 5, 7, 8, 9, 11, 13) meas_B=0.092456  flat (6/7)^2*meas=0.067927  min found: 0.040098 at (w1,w2)=(23,30)
+  B=(1, 3, 4, 5, 7, 8, 9, 11, 13) meas_B=0.098450  flat (6/7)^2*meas=0.072331  min found: 0.041857 at (w1,w2)=(17,30)
+  B=(1, 2, 5, 6, 7, 8, 9, 11, 13) meas_B=0.100781  flat (6/7)^2*meas=0.074043  min found: 0.034870 at (w1,w2)=(19,20)
+  B=(1, 3, 5, 6, 7, 8, 9, 11, 13) meas_B=0.102612  flat (6/7)^2*meas=0.075389  min found: 0.044850 at (w1,w2)=(19,60)
+  B=(1, 3, 5, 7, 8, 9, 11, 12, 13) meas_B=0.104564  flat (6/7)^2*meas=0.076823  min found: 0.044332 at (w1,w2)=(17,50)
+  B=(1, 4, 5, 6, 7, 8, 9, 11, 13) meas_B=0.106775  flat (6/7)^2*meas=0.078447  min found: 0.039497 at (w1,w2)=(19,20)
+
+  global two-outlier top-8:
+    meas=0.034870  B=(1, 2, 5, 6, 7, 8, 9, 11, 13) + (19,20)   [w2/w1=1.053, w2-w1=1]
+    meas=0.034870  B=(1, 2, 5, 6, 7, 8, 9, 11, 13) + (19,20)   [w2/w1=1.053, w2-w1=1]
+    meas=0.037462  B=(1, 2, 5, 6, 7, 8, 9, 11, 13) + (17,19)   [w2/w1=1.118, w2-w1=2]
+    meas=0.037462  B=(1, 2, 5, 6, 7, 8, 9, 11, 13) + (17,19)   [w2/w1=1.118, w2-w1=2]
+    meas=0.039497  B=(1, 4, 5, 6, 7, 8, 9, 11, 13) + (19,20)   [w2/w1=1.053, w2-w1=1]
+    meas=0.039497  B=(1, 4, 5, 6, 7, 8, 9, 11, 13) + (19,20)   [w2/w1=1.053, w2-w1=1]
+    meas=0.040098  B=(1, 2, 3, 5, 7, 8, 9, 11, 13) + (23,30)   [w2/w1=1.304, w2-w1=7]
+    meas=0.040098  B=(1, 2, 3, 5, 7, 8, 9, 11, 13) + (23,30)   [w2/w1=1.304, w2-w1=7]
+  EXACT check of global min: 733/21021 = 0.034870  >= 1/36? True   margin = 1.2553x
+  #pairs below 1/36: 0  (out of 98399)
+
+========================================================================================================
+ (4c) THREE-OUTLIER probe: B = top minimal 8-cores; structured + random triples
+========================================================================================================
+  B=(1, 2, 3, 5, 7, 8, 9, 11) meas_B=0.163920  flat (6/7)^3*meas=0.103226  min found: 0.056487 at (12, 13, 14)
+  B=(1, 3, 4, 5, 7, 8, 9, 11) meas_B=0.167167  flat (6/7)^3*meas=0.105271  min found: 0.062481 at (12, 13, 14)
+  B=(1, 3, 5, 6, 7, 8, 9, 11) meas_B=0.170413  flat (6/7)^3*meas=0.107316  min found: 0.069071 at (13, 27, 55)
+
+  global three-outlier top-6:
+    meas=0.056487  B=(1, 2, 3, 5, 7, 8, 9, 11) + (12, 13, 14)
+    meas=0.056487  B=(1, 2, 3, 5, 7, 8, 9, 11) + (12, 13, 24)
+    meas=0.062481  B=(1, 3, 4, 5, 7, 8, 9, 11) + (12, 13, 14)
+    meas=0.062481  B=(1, 3, 4, 5, 7, 8, 9, 11) + (12, 13, 24)
+    meas=0.069071  B=(1, 3, 5, 6, 7, 8, 9, 11) + (13, 27, 55)
+    meas=0.069496  B=(1, 2, 3, 5, 7, 8, 9, 11) + (13, 27, 55)
+  EXACT check of global min: 14249/252252 = 0.056487  >= 1/36? True   margin = 2.0335x
+  #triples below 1/36: 0  (out of 21491)
+
+========================================================================================================
+ (5) PAIR OVERLAP: integer combs cannot be disjoint. meas(D_w1 ∩ D_w2) vs independent 1/49
+========================================================================================================
+    (w1,w2)=( 20, 21)  overlap=0.020408   [1/49=0.020408, 1/14=0.071429]  ~indep
+    (w1,w2)=( 20, 40)  overlap=0.071429   [1/49=0.020408, 1/14=0.071429]  RESONANT
+    (w1,w2)=( 20, 60)  overlap=0.047619   [1/49=0.020408, 1/14=0.071429]  
+    (w1,w2)=( 20, 27)  overlap=0.020370   [1/49=0.020408, 1/14=0.071429]  ~indep
+    (w1,w2)=( 50, 51)  overlap=0.020448   [1/49=0.020408, 1/14=0.071429]  ~indep
+    (w1,w2)=( 50,100)  overlap=0.071429   [1/49=0.020408, 1/14=0.071429]  RESONANT
+    (w1,w2)=( 50,150)  overlap=0.047619   [1/49=0.020408, 1/14=0.071429]  
+    (w1,w2)=( 50, 63)  overlap=0.020408   [1/49=0.020408, 1/14=0.071429]  ~indep
+    (w1,w2)=( 97,194)  overlap=0.071429   [1/49=0.020408, 1/14=0.071429]  RESONANT
+    (w1,w2)=( 97, 98)  overlap=0.020408   [1/49=0.020408, 1/14=0.071429]  ~indep
+    (w1,w2)=( 35, 36)  overlap=0.020408   [1/49=0.020408, 1/14=0.071429]  ~indep
+    (w1,w2)=( 35, 70)  overlap=0.071429   [1/49=0.020408, 1/14=0.071429]  RESONANT
+    (w1,w2)=(101,103)  overlap=0.020420   [1/49=0.020408, 1/14=0.071429]  ~indep
+    (w1,w2)=( 60, 84)  overlap=0.020408   [1/49=0.020408, 1/14=0.071429]  ~indep
+    min overlap over sample = 0.020370  (REAL speeds could achieve 0; integer combs stay near >= ~1/49*(1-eps))
+
+========================================================================================================
+ (6) VERDICT / ASSEMBLED SKELETON
+========================================================================================================
+  observed minima: bounded 0.032261 | 1-outlier 0.032311 | 2-outlier 0.034870 | 3-outlier 0.056487
+  ALL >= 1/36 = 0.027778?  True
+  SKELETON: inf over 11-cores = min over r=#outliers of [bounded (11-r)-core ledger] x [outlier cost]:
+   - r=0: S27 census (min = pentagon 313/9702).
+   - each r: outliers > W*(r): UNION FLOOR (uniform arc-count, sec 2) — PROVED elementary;
+             outliers <= W*(r): FINITE box — scanned here (sec 4), exhaustible in principle;
+             thin-margin r (union floor fails): multiplicative PEEL (sec 3) with spread/cluster split,
+             clustered pairs gain the overlap credit (sec 5: integer combs overlap >= ~1/49).
+  The residual analytic lemma = the peel error control for CLUSTERED outlier packs (the same
+  Dedekind/pair-discrepancy object as THM-563/564) — everything else is finite.
+DONE.

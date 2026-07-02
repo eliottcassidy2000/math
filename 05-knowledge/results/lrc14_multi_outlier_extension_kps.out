@@ -1,0 +1,70 @@
+========================================================================================================
+ (1) LEDGER m=1..6 + union floors r=5,6  [floor: min_m*(1-r/7) - (N/7)*r/W  for outliers > W]
+========================================================================================================
+  m=1: min meas=0.857143 N= 1 argmin=(1,)   union floor (1-10/7)*min = -0.367347   FAILS -> peel/cluster regime
+  m=2: min meas=0.725275 N=11 argmin=(1, 13)   union floor (1-9/7)*min = -0.207221   FAILS -> peel/cluster regime
+  m=3: min meas=0.604396 N=20 argmin=(1, 12, 13)   union floor (1-8/7)*min = -0.086342   FAILS -> peel/cluster regime
+  m=4: min meas=0.494256 N=26 argmin=(1, 11, 12, 13)   union floor (1-7/7)*min = +0.000000   FAILS -> peel/cluster regime
+  m=5: min meas=0.381463 N=18 argmin=(1, 5, 7, 8, 9)   union floor (1-6/7)*min = +0.054495   clears 1/36
+  m=6: min meas=0.280983 N=20 argmin=(1, 5, 7, 8, 9, 11)   union floor (1-5/7)*min = +0.080281   clears 1/36
+  (m=1: exactly 6/7 for any speed, scale-invariance)
+
+  LEDGER = CAP ATLAS cross-check (min_m should equal canon cap_{13-m}):
+    m=2: ledger 0.725275  vs cap_11 = 0.725275   match: True
+    m=3: ledger 0.604396  vs cap_10 = 0.604396   match: True
+    m=4: ledger 0.494256  vs cap_9 = 0.494256   match: True
+    m=5: ledger 0.381463  vs cap_8 = 0.381463   match: True
+  => the small-m lonely ledger IS the sector route's cap atlas: min_m = cap_{13-m} (same extremizers).
+  Two extremal PHASES: {1} u top (Dirichlet-type) for m<=4; odd-unit-heavy near-AP for m>=5
+  (the phase transition = THM-576's cap-pattern break at j=5).
+
+========================================================================================================
+ (2) r>=7: PACKED far clusters (union floor vacuous). meas of {W..W+r-1} alone and with bounded part
+========================================================================================================
+  cluster {200..206} (r=7): meas=0.297991  [(6/7)^7=0.339917]  ratio=0.877   >= 1/36? True
+  cluster {200..208} (r=9): meas=0.211506  [(6/7)^9=0.249735]  ratio=0.847   >= 1/36? True
+  cluster {200..210} (r=11): meas=0.158089  [(6/7)^11=0.183479]  ratio=0.862   >= 1/36? True
+  cluster {1000..1006} (r=7): meas=0.297963  [(6/7)^7=0.339917]  ratio=0.877   >= 1/36? True
+  cluster {1000..1008} (r=9): meas=0.211472  [(6/7)^9=0.249735]  ratio=0.847   >= 1/36? True
+  cluster {1000..1010} (r=11): meas=0.158057  [(6/7)^11=0.183479]  ratio=0.861   >= 1/36? True
+  cluster {5000..5006} (r=7): meas=0.297959  [(6/7)^7=0.339917]  ratio=0.877   >= 1/36? True
+  cluster {5000..5008} (r=9): meas=0.211468  [(6/7)^9=0.249735]  ratio=0.847   >= 1/36? True
+  cluster {5000..5010} (r=11): meas=0.158050  [(6/7)^11=0.183479]  ratio=0.861   >= 1/36? True
+
+  mixed bounded + packed cluster (11 speeds total):
+    B=(1, 2, 3, 4) + {200..206}: meas=0.104671   >= 1/36? True   (x3.77)
+    B=(1, 2, 3, 4) + {1000..1006}: meas=0.103559   >= 1/36? True   (x3.73)
+    B=(1, 2, 3) + {200..207}: meas=0.089534   >= 1/36? True   (x3.22)
+    B=(1, 2, 3) + {1000..1007}: meas=0.089836   >= 1/36? True   (x3.23)
+    B=(1, 2) + {200..208}: meas=0.096098   >= 1/36? True   (x3.46)
+    B=(1, 2) + {1000..1008}: meas=0.096451   >= 1/36? True   (x3.47)
+    B=(1,) + {200..209}: meas=0.105149   >= 1/36? True   (x3.79)
+    B=(1,) + {1000..1009}: meas=0.105938   >= 1/36? True   (x3.81)
+
+  adversarial variants (resonant scale, dilated cluster, two clusters):
+    S=(1, 2, 3, 4, 84, 85, 86, 87, 88, 89, 90): meas=0.109669  >= 1/36? True  (x3.95)
+    S=(1, 2, 3, 4, 84, 168, 252, 336, 420, 504, 588): meas=0.207191  >= 1/36? True  (x7.46)
+    S=(1, 2, 3, 50, 100, 150, 200, 250, 300, 350, 400): meas=0.183660  >= 1/36? True  (x6.61)
+    S=(1, 2, 3, 4, 50, 51, 100, 101, 200, 201, 400): meas=0.224522  >= 1/36? True  (x8.08)
+    S=(1, 2, 3, 4, 5, 7, 8, 19, 20, 39, 40): meas=0.168279  >= 1/36? True  (x6.06)
+
+========================================================================================================
+ (3) EXACT PAIR-OVERLAP LAW: meas(D_p*g ∩ D_q*g) = F(p,q) (ratio-only); F(k,1)=1/(7k); coprime->1/49
+========================================================================================================
+  F(k,1)*7k (should be 1.0 for exact multiples):
+    k= 2: overlap=0.071429  x 7k = 1.0000
+    k= 3: overlap=0.047619  x 7k = 1.0000
+    k= 4: overlap=0.035714  x 7k = 1.0000
+    k= 5: overlap=0.028571  x 7k = 1.0000
+    k= 6: overlap=0.023810  x 7k = 1.0000
+    k= 7: overlap=0.020408  x 7k = 1.0000
+    k= 8: overlap=0.017857  x 7k = 1.0000
+    k= 9: overlap=0.015873  x 7k = 1.0000
+    k=10: overlap=0.014286  x 7k = 1.0000
+
+  ratio-only test: F(p,q) at different scales g (rows should match):
+    p/q=3/2: g=12: 0.047619  g=24: 0.047619  g=60: 0.047619   x49 = 2.3333
+    p/q=5/3: g=12: 0.028571  g=24: 0.028571  g=60: 0.028571   x49 = 1.4000
+    p/q=7/5: g=12: 0.020408  g=24: 0.020408  g=60: 0.020408   x49 = 1.0000
+    p/q=4/3: g=12: 0.035714  g=24: 0.035714  g=60: 0.035714   x49 = 1.7500
+    p/q=5/2: g=12: 0.028571  g=24: 0.028571  g=60: 
