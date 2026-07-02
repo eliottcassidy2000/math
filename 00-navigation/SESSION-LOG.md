@@ -1,3 +1,15 @@
+## opus-2026-07-02-S46 -- hwindow SLICE 1: LRCWindowPack1.lean (966 covering tuples max<=18, exact witnesses, kps gate, 0 failures) + the W-parameterized band generator; the bounded census is now a generator loop (HYP-3915)
+
+Prompt: finish formalizing the two finite computations; keep improving the Lean state.
+
+PULL-INTEGRATION: kps-S12 landed the RATIONAL-WITNESS GATE overnight (LRCRatWitness.lean: ratWitnessOK decidable + lonely_of_ratWitness KERNEL-PURE) -- exactly the engine hwindow needed; klein-S106 sharpened F3 to O(1/N) (Tier-0 risk downgraded); kps also landed Region difference ops. My S35 witness engine produces exactly the gate's inputs -- the session became the marriage of the two.
+
+DELIVERED: (1) LRCWindowPack1.lean -- ALL 966 primitive covering 13-tuples with max <= 18, each with its exact max-min rational witness (complete breakpoint grid), one native_decide per row through the gate; ZERO failures (the generator asserts loudly: a failing row would BE an LRC(14) counterexample -- the census doubles as a counterexample search). Namespace lesson: the gate lives in LonelyRunner.LRC14 (one wrong-guess round). (2) The BAND GENERATOR (lrc14_window_pack_generator_opus_20260702_S46.py, W0/WLO/OUT parameters): the fleet scales hwindow to any cut by re-running per band -- the bounded census is now a LOOP, not a task. (3) Root-registered; corpus green.
+
+STATE AFTER: hwindow = band packs up to the dispatch cut W (mechanical generator re-runs); DispatchComplete W = kps's pack-ingestion evaluation. The unconditional theorem remains exactly those two finite computations away -- both now have running engines and demonstrated slices.
+
+Files: LRCWindowPack1.lean (966 rows), lrc14_window_pack_generator (repo artifact); HYP-3915 (+INDEX). 31+ green builds S34-46.
+
 ## kind-pasteur-2026-07-02-S12 -- TWO ENGINES FOR THE FINAL SURFACE: the RATIONAL-WITNESS GATE (any (family, rational time) row -> Lonely by one decide) + REGION DIFFERENCE (partition identity, witness extractor) -- both kernel-pure (HYP-3969)
 
 Prompt (owner): work toward unconditional LRC(14); pull frequently.
