@@ -1,3 +1,19 @@
+## mac-mini-2026-07-01-S99 -- THM-599: the QUINTIC BONFERRONI CLOSURE -- the j >= 8 leg CLOSES at all j <= 13 (cubic fails 12/13; kappa_13 = 2052/7^5 -> (6/7)^j); THM-600 canonizes kps's torus-band theorem; sLRC audit of THM-592..598 PASSED (HYP-3855)
+
+Prompt (owner): make LRC(14) proofs better/finished; the j>=8 cubic leg; nest-lemma THM; closed-form L_y; sub-critical ladder; Lean nest chain; canonize the torus theorem; symbolic k<=13 ledger; sLRC audit sweep.
+
+THM-599 (proved): 1_{C=0} >= sum_{d<=D}(-1)^d (C choose d) for ODD D => u >= alternating S_d; under depth-5 resolution S_d forced to C(j,d)(2r)^d(1+-eps).  EXACT: the cubic truncation FAILS at j=12 (-0.0087) and j=13 (-0.0991) -- the 'cubic leg' as posed could never close -- but the QUINTIC is positive at every j <= 13: kappa_13 = B_5(13) = 2052/16807 = 2052/7^5 ~ 0.1221, converging to the independent value (6/7)^13 = 0.1348: the resolved free-phase adversary cannot beat random.  Assembly complete in structure: j<=6 mass | j=7 THM-598 (6/49) | 8<=j<=13 THM-599 | frozen/resonant tuples -> finite fixed-offset renormalization (terminating).  Remaining: finite symbolic dangerous-pattern lists d<=5 + boundary constants (non-analytic).
+
+THM-600: kps-S31's TORUS-BAND THEOREM canonized per their merge recommendation (credit kps): exact c-averaged pair independence on the (x,c)-torus, d-fold overlaps = subtorus box volumes (exact rationals), AP relation max weight 2h^2; interfaces recorded (sLRC shift-average side; the free-phase anchor for THM-598/599; the symbolic-ledger inputs).
+
+sLRC AUDIT (BCS 2603.24784: sLRC FALSE from n=5; kps's forall-shift design filter): THM-592-597 shift-free PASS; THM-598/599 phase-quantified ONLY under resolution -- the BCS counterexample mechanism (near-equal tiling clusters) is exactly the frozen column ALREADY excluded into renormalization (THM-598(C)'s necessity demo pre-found the audit's counterexample) PASS; S97 E-S bridge consistent with kps's flag (free offsets = the open side).
+
+HANDOFFS HONORED (not duplicated): nest-lemma THM writeup, closed-form L_y comparison, sub-critical ladder rungs, Lean telescoping nest chain = klein-S91's named next-steps -- acknowledged to klein; the symbolic k<=13 ledger = kps's queued run, THM-600 records its interface.
+
+FILES: THM-599, THM-600; HYP-3855; exact truncation table (inline fractions).
+
+NEXT: (a) the d<=5 dangerous-pattern symbolic enumeration (free-phase twin of kps's ledger) -- makes THM-599's eps_d explicit; (b) integrate THM-598/599 into opus's assembled doc as the completed Part-A leg; (c) klein's four items; (d) Lean: THM-599's truncation identity is combinatorially trivial (binomial remainder sign) -- a natural next Lean module after the nest chain.
+
 ## kind-pasteur-2026-07-01-S31 -- THE TORUS-BAND THEOREM: the c-averaged ledger has EXACT pair independence on the (x,c)-torus; d-fold overlaps = subtorus box volumes (exact rationals; AP relation carries max weight 2h^2) => HYP-3953's (star)-census is SYMBOLIC. + the MSS/BCS strategic layer (91^12 finite checking; sLRC FALSE => the forall-shift design filter) (HYP-3954)
 
 Prompt: unit-residue rigidity + gap-sum (collapse law machine-checkable); divisor-minimal frequency; Malikiosis-Santos-Schymura; the Erdos-Selfridge odd-covering conjecture (Guo-Sun 22 primes) + 3 links; crossing numbers K_n vs K_{m,n}; keep closing hp0cap/hpartA.
