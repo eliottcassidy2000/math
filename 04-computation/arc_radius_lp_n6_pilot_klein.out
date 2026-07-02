@@ -1,0 +1,12 @@
+==========================================================================================
+SEC-7.3 ARC x RADIUS LP, n=6 PILOT: separable closed form = arc-localized ladder
+==========================================================================================
+  AP_5 {1..5}      Q=6  anchor Lambda(1/7)=2/35 (law: 2/35)  LP-min at 1/6 = 0   true Lambda(1/6) = 0   certifies-law=YES
+  sporadic         Q=6  anchor Lambda(1/7)=41/630 (law: 2/35)  LP-min at 1/6 = 0   true Lambda(1/6) = 0   certifies-law=YES
+  AP_5 {1..5}      Q=31  anchor Lambda(1/7)=2/35 (law: 2/35)  LP-min at 1/6 = 0   true Lambda(1/6) = 0   certifies-law=YES
+  sporadic         Q=31  anchor Lambda(1/7)=41/630 (law: 2/35)  LP-min at 1/6 = 0   true Lambda(1/6) = 0   certifies-law=YES
+
+  reading: anchor at 1/7 = (2/5)(1/7) = 2/35; window exactly linear (d=1 band (6,7)
+  empty, diam <= 12 => K=0); transport budgets = exact gap rates => the LP constraint
+  set (i)-(iii) is EXACT on the final window; the collapse law is LP-certified per-set.
+  NEXT (universal): parameterize D_{a,l} by covering axioms only; multi-layer coupling.

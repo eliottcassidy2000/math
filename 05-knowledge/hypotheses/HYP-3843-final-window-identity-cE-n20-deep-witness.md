@@ -1,8 +1,8 @@
 ---
 id: HYP-3843
-title: The FINAL-WINDOW IDENTITY -- Lambda_AP == Lambda_GW as identical functions on (1/15, 1/14], r* = 1/15 exactly; the AP/GW tie breaks AT the 1/15 breakpoint, at no interior order; E separates the pair at n=20 too; deep-witness emptiness extends to n=9,10
-status: CONFIRMED (exact)
-source: klein-2026-07-01-S88
+title: The FINAL-WINDOW IDENTITY -- CORRECTED (klein-S89, MISTAKE-093): Lambda_AP == Lambda_GW as identical functions on [2/29, 1/14], r* = 2/29 (NOT 1/15); AP alone carries (1/15, 2/29); E separates the pair at n=20 too; deep-witness emptiness extends to n=9,10
+status: CONFIRMED (exact) -- part 1 CORRECTED by klein-S89 (r* = 2/29; see MISTAKE-093)
+source: klein-2026-07-01-S88; corrected klein-2026-07-01-S89
 script: 04-computation/overtaking_defect_sieve_final_window_klein.py (+ .out)
 related:
   - HYP-3834/3835/3836 (distribution function, collapse law, crossing)
@@ -12,18 +12,21 @@ related:
 
 # HYP-3843: the final-window identity and the n=20 / deep-witness extensions
 
-## 1. Final-window identity (answers the curvature question)
+## 1. Final-window identity -- CORRECTED klein-S89 (MISTAKE-093): r* = 2/29, not 1/15
 
-Lambda_AP and Lambda_GW at n=14 are EQUAL AS FUNCTIONS on (1/15, 1/14] -- verified exactly
-at every candidate breakpoint of both profiles and at midpoints; the LAST radius where
-they differ is r = 1/15 itself. So the AP/GW tie does NOT break at second order, third
-order, or any order inside the final window: on the last Farey window the two tight sets
-have literally the same lonely measure, because only the six mediant gaps survive there
-and both sets bound them with the same unit pairs {k^-1, 14-k^-1} (HYP-3835). The tie
-breaks exactly AT the q+q' = 15 layer (r* = 1/15), where the profiles' 11 differing
-radii end. Consequence for the envelope: on (1/15, 1/14] the tight locus contributes ONE
-function, not two -- the census's "last mile" is single-valued; curvature separates AP
-from GW only at and below 1/15.
+Lambda_AP and Lambda_GW at n=14 are EQUAL AS FUNCTIONS on **[2/29, 1/14]** (width 1/406).
+The S88 claim of identity on (1/15, 1/14] was WRONG: GW has a real kink at 2/29
+(gap-death of a (5,24) pair at d=2; mac-mini-S94's breakpoint list 2/33, 2/31, 2/29 was
+correct), the profiles agree at 2/29 and above and differ on the sliver (1/15, 2/29)
+with Lambda_GW > Lambda_AP -- the S88 probe's single midpoint (29/420 = 0.06905) sat just
+above 2/29 = 0.06897 and missed the sliver. So the AP ALONE carries the envelope on
+(1/15, 2/29): the second-order tie-break in AP's favor, confirming mac-mini S94(3) in
+full. What SURVIVES of S88: the last mile is single-valued on the positive shared window
+[2/29, 1/14], where only the six mediant gaps live and both tight sets bound them with
+the same unit pairs {k^-1, 14-k^-1} (HYP-3835). Lesson (MISTAKE-093): equality at all
+candidate breakpoints does not imply identity between them when one function kinks where
+the other is straight; per-function per-segment midpoint assertions are mandatory
+(HYP-3841's ladder code had them; its K values are unaffected).
 
 ## 2. (c, E) at n=20
 

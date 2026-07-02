@@ -1,0 +1,46 @@
+============================================================================================
+(b) THE BAND TABLE: concave kink radii d/(w-v) in (1/15, 1/14) need w-v in (14d, 15d)
+============================================================================================
+  d=1:  w-v in (14,15)  ->  EMPTY (integrality!)
+  d=2:  w-v in (28,30)  ->  [29]
+  d=3:  w-v in (42,45)  ->  [43, 44]
+  d=4:  w-v in (56,60)  ->  [57, 58, 59]
+  d=5:  w-v in (70,75)  ->  [71, 72, 73, 74]
+  d=6:  w-v in (84,90)  ->  [85, 86, 87, 88, 89]
+  d=7:  w-v in (98,105)  ->  [99, 100, 101, 102, 103, 104]
+  => any concave kink in the open window has d>=2, w-v>=29; diam(S)<=28 => K=0. PROVED.
+
+============================================================================================
+(d)(i) RECONCILIATION: is 2/29 a real kink of Lambda_GW? (mac-mini S94 lists it as breakpoint)
+============================================================================================
+  GW: Lambda at 2/29 -eps/0/+eps: 0.0089685 0.0089275 0.0088912  locally-linear-through=False
+  AP: Lambda at 2/29 -eps/0/+eps: 0.0089637 0.0089275 0.0088912  locally-linear-through=True
+  identical there? True (gap-death candidates 2/33, 2/31 are BELOW 1/15 -- consistent w/ both sessions)
+  GW window band-crossing candidates: 0; critical (exposure-necessary): 0
+
+============================================================================================
+(d)(ii) DEEP WELL {1..12,182}: window candidates and their submersion
+============================================================================================
+  candidates in window: 14, critical: 0
+  (d, w-v) pairs present: [(12, 170), (12, 171), (12, 172), (12, 173), (12, 174), (12, 176), (12, 177), (12, 178), (12, 179)]
+  example (12,182,d=12): r0=6/85=0.07059 x0=1/170=0.00588 m(x0)=1/170=0.00588 < r0 => SUBMERGED (covered by a faster small speed)
+
+============================================================================================
+(d)(iii) ADVERSARIAL HUNT: covering 13-sets with PLANTED band pairs (w-v=29,43,44);
+         does ANY have a critical (m(x0)=r0) window crossing? [necessary for exposure]
+============================================================================================
+  CRITICAL CROSSINGS FOUND in 5229 cases / 2028 covering sets, e.g.:
+    S=[9, 12, 16, 20, 26, 33, 42, 44, 54, 70, 77, 86, 107]
+      (v,w,d)=(12,70,4) r0=2/29 x0=5/29 m(x0)=2/29
+      slopes around r0: left -3.6731  right -3.5409  CONCAVE-KINK=no
+    S=[9, 12, 16, 20, 26, 33, 42, 44, 54, 70, 77, 86, 107]
+      (v,w,d)=(33,107,5) r0=5/74 x0=45/74 m(x0)=5/74
+      slopes around r0: left -3.7687  right -3.8106  CONCAVE-KINK=YES
+    S=[24, 34, 36, 39, 42, 44, 80, 90, 109, 110, 113, 119, 121]
+      (v,w,d)=(24,109,6) r0=6/85 x0=64/85 m(x0)=6/85
+      slopes around r0: left -3.6928  right -3.7578  CONCAVE-KINK=YES
+    S=[24, 34, 36, 39, 42, 44, 80, 90, 109, 110, 113, 119, 121]
+      (v,w,d)=(34,121,6) r0=2/29 x0=12/29 m(x0)=2/29
+      slopes around r0: left -4.5203  right -4.0433  CONCAVE-KINK=no
+
+DONE.

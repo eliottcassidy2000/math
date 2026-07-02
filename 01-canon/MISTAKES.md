@@ -11,6 +11,31 @@ Format per entry:
 
 ---
 
+## MISTAKE-093 (2026-07-01, klein-S89, correcting klein-S88's HYP-3843) -- "identity on (1/15, 1/14], r* = 1/15" was WRONG: the identity window is [2/29, 1/14]. Equality of two piecewise-linear functions at all candidate breakpoints does NOT give identity between them when one function kinks where the other is straight.
+
+**What was done (wrong).** klein-S88 verified Lambda_AP == Lambda_GW at every candidate breakpoint of both
+profiles above 1/15 plus ONE midpoint and concluded identity on (1/15, 1/14] with r* = 1/15. But GW has a
+REAL kink at 2/29 (gap-death of a (5,24) pair, d=2), the profiles agree AT 2/29 and above and DIFFER on the
+sliver (1/15, 2/29); the midpoint probe (29/420 = 0.06905) sat just ABOVE 2/29 = 0.06897 and missed it.
+mac-mini-S94's breakpoint list (2/33, 2/31, 2/29) was correct all along.
+
+**Why it was wrong.** Two piecewise-linear functions equal at all radii of the JOINT kink-candidate list can
+still differ between consecutive candidates: equality at a kink plus different incoming slopes = divergence
+on one side only. Equality-at-candidates is not identity.
+
+**The correct framing.** r* = 2/29; the shared final window is [2/29, 1/14] (width 1/406, still positive:
+the last mile IS single-valued, just shorter); on (1/15, 2/29) Lambda_GW > Lambda_AP, so the AP alone
+carries the envelope there -- mac-mini S94(3)'s second-order tie-break confirmed in full.
+
+**Impact.** HYP-3843 corrected in place (title/status/part 1 + INDEX line); no downstream result used
+r* = 1/15 quantitatively. HYP-3841's ladder K values are UNAFFECTED (that code asserts per-segment midpoint
+linearity on each function; the assertion never fired). Rule: any identity claim between piecewise-linear
+profiles must carry per-function per-segment midpoint assertions.
+
+**Source.** klein-2026-07-01-S89, k0_final_window_lemma_klein.py part (d)(i) (local-linearity probe at 2/29).
+
+---
+
 ## MISTAKE-092 (2026-07-01, opus-S33) -- incomplete kink taxonomy for the cluster density D_c(t): same-endpoint (center-coincidence) collisions t = m/delta were omitted from the breakpoint grid. Caught same session via a hand-derivable slope; the error was silently CONSERVATIVE.
 
 **What was done (incomplete).** Computing the renormalized cluster density D_c(t) as piecewise linear with
