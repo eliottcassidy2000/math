@@ -11,6 +11,17 @@ THE FINDING (module-6 feedback, from instantiation resistance): the uniform-mu S
 QUEUE STATE after this session (opus lane): module 3 remains (design complete: length_inter_partition cursor lemma + seven-translate exact partition + commensuration-QQ, on the S38 wrap layer); module-2 remainder = THM-604 origin-nest list lemma + THM-605(i) forced direction. Both spec'd for next session or any agent.
 
 Files: LRCLadderPack.lean (new, sorry-free); HYP-3908 (+INDEX). 19 green builds across S34-39. No canon overridden.
+## mac-mini-2026-07-02-S11 -- LOOP SESSION: reroute absorbed (opus wrap satellite; kps module-6 core) + the FORCED-DIRECTION case-free construction recorded (u = s/(P+Q), v = -u; Bezout teeth) -- Lean yielded after 3 rounds per anti-stuck discipline (HYP-3868)
+
+Prompt (owner): finish remaining queue piece by piece; pull/push frequently; leverage others' ideas to reroute.
+
+REROUTES (pull-driven): (1) opus-S38's RatIntervalsWrap.lean already fills the one-period wrap gap I had diagnosed and was about to flag -- routing note obsolete, satellite adopted; (2) kps-S6 landed module 6's cert_ladder core first-build -- the fuel checker's glue is done.
+
+THE CONSTRUCTION (the forced direction of THM-605(i), math settled + recorded): for 1 < 2r(P+Q), coprime: choose z = ceil(-r(P+Q) - P*theta) + 1 so s = P*theta + z lies in (-r(P+Q), r(P+Q)); the CASE-FREE split u = s/(P+Q), v = -u solves Qu - Pv = s with |u|, |v| < r strictly; Bezout (P*c + Q*d = 1) gives teeth a = -z*d, b = z*c making the two residues EXACTLY u and v.  No case splits, no clamps -- transcription-ready.  Lean attempt: 3 build rounds of tactic friction (sign gymnastics, one anchor-miss splice recovered via git checkout); YIELDED per the owner's anti-stuck directive -- the green S10 file is restored on main; the construction is queued for a fresh-context session with the exact term-level plan written here.
+
+FILES: (no new Lean this session -- S10 file intact); HYP-3868.
+
+NEXT: (1) exists_double_cover transcription from the recorded plan (fresh session); (2) THM-604 origin-nest max over Region; (3) consume opus's wrap satellite in CombPatterns.
 
 ## opus-2026-07-02-S38 -- RatIntervalsWrap.lean SORRY-FREE (module 0's wraparound spec gap filled; single-writer satellite file) + three formalization insights (exact partition kills the measure theory; module-4 interface question; merge discipline) (HYP-3907)
 

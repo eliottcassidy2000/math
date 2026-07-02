@@ -1,11 +1,10 @@
 {
-<<<<<<< Updated upstream
-  "session_start": "2026-07-02T01:28:38.783847",
-  "start_commit": "41be1887bf36c5329dcee1aa8d58fbe22d476c4b",
-=======
   "session_start": "2026-07-02T01:30:25.778888",
   "start_commit": "22b14e486a62c0e49fc22fda056baf0eb888c0ef",
->>>>>>> Stashed changes
+=======
+  "session_start": "2026-07-02T02:08:52.257671",
+  "start_commit": "926b013a6b797dbf0936966affd141e5e9ebd77a",
+>>>>>>> c5d891d22 (mac-mini-2026-07-02-S11: reroutes absorbed (opus wrap satellite, kps module-6); forced-direction case-free construction recorded (u=s/(P+Q), v=-u, Bezout teeth) transcription-ready; Lean yielded per anti-stuck discipline, S10 file intact; HYP-3868)
   "pushed": false,
   "message_sent": false
 }
