@@ -1,3 +1,13 @@
+## mac-mini-2026-07-01-S100 -- THM-601: dangerous patterns = P+Q <= 7 (one-line box-avoidance, NO Fourier); exact minima table (decide-checkable); d-fold lists collapse to the l1-simplex sum|m| <= 7 -- the Lean-ready normal form of THM-598/599 (HYP-3856)
+
+Prompt (owner): improve the enumeration / cleverly restate for Lean translation.
+
+THM-601 (proved): (i) min_theta ov_{P,Q} = 0 <=> 2r(P+Q) <= 1 -- the functional Qu-Pv sweeps a length-2r(P+Q) interval over the box; avoids Z iff it fits in a unit gap.  At r = 1/14: EXACTLY NINE dangerous patterns (P+Q <= 7), replacing the ~18-suspect Fourier list with linear arithmetic.  (ii) EXACT minima for P+Q >= 8: (1,7),(2,7),(1,14) -> 1/49 (independence is the floor at 7-commensurate patterns); (1..2,Q) -> 1/(7Q); (3,5) -> 1/105 etc -- a finite decide-checkable table.  (iii) d-FOLD COLLAPSE: box-avoidance verbatim => a primitive d-pattern zeroes its overlap iff sum|m_i| <= 7: THM-599's depth-5 lists = l1-simplex lattice points; the symbolic ledger = simplex enumeration + exact minima.  (iv) NORMAL FORM: frozen = decidable integers; errors = arc counting; renormalization = well-founded recursion; truncation = binomial sign; S_d = DAG hypotheses.
+
+FILES: THM-601; lrc_exact_pattern_min_table_macmini_S100.py + .out; HYP-3856.
+
+NEXT: (a) closed form for the exact minima (Farey two-term conjecture; table suffices meanwhile); (b) Lean: THM-601(i) is a 10-line mathlib lemma (interval sweep) -- natural next module; (c) the d-fold simplex enumeration run (d <= 5, sum|m| <= 7: a few hundred patterns, each an exact min) = THM-599's eps_d made explicit; (d) integrate into opus's assembled doc + kps's ledger.
+
 ## mac-mini-2026-07-01-S99 -- THM-599: the QUINTIC BONFERRONI CLOSURE -- the j >= 8 leg CLOSES at all j <= 13 (cubic fails 12/13; kappa_13 = 2052/7^5 -> (6/7)^j); THM-600 canonizes kps's torus-band theorem; sLRC audit of THM-592..598 PASSED (HYP-3855)
 
 Prompt (owner): make LRC(14) proofs better/finished; the j>=8 cubic leg; nest-lemma THM; closed-form L_y; sub-critical ladder; Lean nest chain; canonize the torus theorem; symbolic k<=13 ledger; sLRC audit sweep.
