@@ -1,3 +1,20 @@
+## kind-pasteur-2026-07-02-S15 -- THE WINDOW WIRING THEOREM (hwindow reduces KERNEL-PURE to exactly the packs' census class) + the two-census-hypothesis final surface (HYP-3972)
+
+Prompt (owner): finish the two finite computations (DispatchComplete W, hwindow) + the strong-induction wrapper.
+
+PULL FINDINGS: klein owns the hwindow band grind (slice 2 done: 5118 tuples (18,20] kernel-gated, census complete to max<=20); opus's WindowPack1 (966 tuples <=18) is WIP-unregistered pending their 0xC0000005 fresh-context debug; the strong-induction shell (lrc14_of_lonely_census_peel) landed in my S10 file. So this session took the piece BETWEEN them that nobody owned: the packs certify PRIMITIVE COVERING SORTED-POSITIVE tuples, but the hwindow signature quantifies over ALL nonzero bounded families -- the normalization gap was UNPROVEN.
+
+DELIVERED (LRC14WindowWiring.lean, 3 build rounds, registered, corpus green):
+ - **hwindow_of_normalized_census (KERNEL-PURE)**: (every monotone positive primitive covering tuple <= W lonely) -> (every nonzero family with |v i| <= W lonely). The chain: signs (lonely_abs_iff) -> relabeling (Tuple.sort + lonely_comp_equiv; mathlib's Tuple.monotone_sort gives the permutation witness) -> Nat-gcd primitivization (tupleGcd/primPart: gcd-divide preserves positivity, monotonicity, boundedness; primPart_gcd_eq_one by the gcd*gcd | gcd squeeze) -> THE SIEVE DICHOTOMY AT THE PRIMITIVE LEVEL: if primitivization broke covering-ness, the primitive tuple misses some q in {2..14} and is lonely at 1/q directly (sieve_one_div); loneliness transports back through scale (lonely_exists_of_scale), permutation, signs.
+ - **lrc14_of_dispatchComplete_and_census**: THE FINAL SURFACE with BOTH hypotheses census-shaped -- LRC14Statement from (DispatchComplete W) + (the normalized bounded census at W). Axioms: std-3 + the two page-shape native_decides inherited from dispatch (migratable to opus's kernel gate).
+ - Nat-gcd infrastructure (tupleGcd_dvd/pos, primPart_mul/pos/gcd_eq_one) reusable for any future normalization step.
+
+FLAG (generator owners, klein/opus): the census class quantifies over MONOTONE tuples, which includes REPEATED-entry tuples (v i = v j allowed). The pack generators enumerate distinct sorted tuples; either the generators add the repeat sweep (finitely many more rows -- repeats only reduce constraints) or a dedup-wiring lemma lands later. The theorem is correct as stated; the class is explicit and decidable.
+
+STATE: the hwindow computation is now PURELY a pack-membership case-split against a kernel-pure reduction target (klein's bands + opus's crash fix remain); DispatchComplete W remains the HNF-ingestion computation. The strong-induction wrapper exists (S10) and the peel gate (S14) feeds its step; the composite surface is one theorem consuming both censuses.
+
+FILES: LRC14WindowWiring.lean (new, registered); HYP-3972 INDEX; this entry. No canon overridden.
+
 ## klein-2026-07-02-S108 -- hwindow SLICE 2: LRCWindowPack2.lean BUILDS (5118 covering tuples, band (18, 20], exact witnesses, KERNEL-GATED, 0 failures) -- census complete to max <= 20 (6084 rows) (HYP-4013)
 
 Generator re-run for the band (18, 20]: 5118 primitive covering 13-tuples, exact max-min rational witnesses, 0 failures (a failure row would BE a counterexample). Rows converted from the stale ratWitness template to the KernelGate style (lonely_of_kernelWitness (by norm_num) (by decide) -- kernel-pure, submission-grade); build 2944 jobs green. HONESTY CORRECTION vs the S108 commit message: the GENERATOR PATCH PATTERN-MISSED and the generator is UNCHANGED -- next slicer must apply the conversion: import LRCRatWitness -> LRCKernelGate, and per row replace '(((num/den : Q)) : R) := lonely_of_ratWitness (by native_decide)' with '((((num : Q) / (den : Q)) : Q) : R) := KernelGate.lonely_of_kernelWitness (by norm_num) (by decide)'. Band (20, 22] next: mechanically identical, larger -- split files per the parallel-build lesson.
