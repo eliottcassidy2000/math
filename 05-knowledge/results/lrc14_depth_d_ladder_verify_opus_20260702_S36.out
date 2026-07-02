@@ -1,0 +1,49 @@
+====================================================================================================
+ THM-606 depth-3 ladder, exact instantiation.  h = 1/14; window [7/20, 3/8], delta0 = 1/40
+====================================================================================================
+  levels: V1=50, offs=[0, 1, 2]; V2=2000, offs=[0, 1, 3]; V3=90000, offs=[0, 1, 2, 4, 7]
+  schedule: delta_1=253/450000 (mu_1=253/9000=0.0281); delta_2=11/900000 (mu_2=11/450=0.0244); delta_3=0 (mu_3=0=0.0000)
+
+ (H-len) checks: 1 < V_l * (delta_{l-1} - delta_l):
+   l=1: V=50: 10997/9000 = 1.2219 > 1 ? True
+   l=2: V=2000: 11/10 = 1.1000 > 1 ? True
+   l=3: V=90000: 11/10 = 1.1000 > 1 ? True
+   ALL (H-len): True
+
+ certificate search (arcSafe at inflated bands):
+   level 1: band h+mu = 6271/63000 = 0.0995: c_1 = 399/4000
+   level 2: band h+mu = 151/1575 = 0.0959: c_2 = 221/1000
+   level 3: band h+mu = 1/14 = 0.0714: c_3 = 143/2000
+   P = [1, 2] arcSafe(h, s, 0): True
+
+ MAIN WALK from a = lo: tau = 65180143/180000000
+   worst runner margin: 143/2000 = 0.071500  >= 1/14 = 0.071429 ? True
+   speed      1: dist = 0.362112
+   speed      2: dist = 0.275776
+   speed     50: dist = 0.105595   (level 1, offset 0)
+   speed     49: dist = 0.256517   (level 1, offset 1)
+   speed     48: dist = 0.381371   (level 1, offset 2)
+   speed   2000: dist = 0.223811   (level 2, offset 0)
+   speed   1999: dist = 0.138301   (level 2, offset 1)
+   speed   1997: dist = 0.137475   (level 2, offset 3)
+   speed  90000: dist = 0.071500   (level 3, offset 0)
+   speed  89999: dist = 0.290612   (level 3, offset 1)
+   speed  89998: dist = 0.347276   (level 3, offset 2)
+   speed  89996: dist = 0.376948   (level 3, offset 4)
+   speed  89993: dist = 0.463283   (level 3, offset 7)
+
+ ROBUSTNESS: CLAIM(2) from 200 random window starts: fails = 0, worst sub-margin = 0.071500
+             full ladder with random ruler picks x200: fails = 0
+
+ (F2) ratio table: mu_per_level ~ (1+eta)/(rho-1) vs exact schedule at geometric V:
+   rho= 10: mu_1=0.1210 mu_2=0.1100 (bound (1+eta)/(rho-1)=0.1222) ok=True
+   rho= 20: mu_1=0.0578 mu_2=0.0550 (bound (1+eta)/(rho-1)=0.0579) ok=True
+   rho= 29: mu_1=0.0392 mu_2=0.0379 (bound (1+eta)/(rho-1)=0.0393) ok=True
+   rho= 40: mu_1=0.0282 mu_2=0.0275 (bound (1+eta)/(rho-1)=0.0282) ok=True
+   rho= 80: mu_1=0.0139 mu_2=0.0138 (bound (1+eta)/(rho-1)=0.0139) ok=True
+
+ NEGATIVE CONTROL: violate (H-len) at level 3 (V3' with V3'*delta_2 < 1):
+   V3' = 40909 (V3'*delta_2 = 0.500 < 1): ruler interval EMPTY for 286/1000 starts
+   => (H-len) is sharp: below it the construction genuinely fails on a positive fraction of windows.
+
+DONE.
