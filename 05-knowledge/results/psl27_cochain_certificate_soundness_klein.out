@@ -1,0 +1,23 @@
+============================================================================
+GF(2) COCHAIN COMPLEX of the PSL(2,7) left-right square complex; certificate soundness
+============================================================================
+  [(2,3,7) x <7>] |A|=3,|B|=2: V=168, E=420, F=252
+    rank d0=167, rank d1=239;  Betti  b0=1  b1=14  b2=13
+    => b1=14>0 => 14 nontrivial certificate class(es) the local test can't see
+  [6 involutions x <7>] |A|=6,|B|=2: V=168, E=672, F=504
+    rank d0=167, rank d1=455;  Betti  b0=1  b1=50  b2=49
+    => b1=50>0 => 50 nontrivial certificate class(es) the local test can't see
+
+============================================================================
+THE CERTIFICATE COCHAIN (QR/Paley sign) + soundness on complex 1
+============================================================================
+  certificate = coboundary of the Paley/QR vertex-sign: it is a cocycle (d1=0 on all squares)? True (violations=0); it is a COBOUNDARY by construction => LOCALLY TESTABLE (vertex-differences).
+  soundness sample (200 pseudo-random 1-cochains): mean rejection |d1 g|/|F| = 0.467, min = 0.429, max = 0.496
+  => nonzero rejection on generic words = the square test DETECTS non-cocycles; combined with b1=14
+     (complex 1) the coboundary structure determines local testability of the certificate.
+
+============================================================================
+READ: b1 tells whether the apex complex KILLS the anti-LTC obstruction (b1=0) or retains nontrivial
+certificate classes (b1>0). The Paley/QR certificate is realized as a COBOUNDARY (locally testable)
+when it lifts to im(d0). This is the explicit co-cycle encoding + the soundness (coboundary) test.
+============================================================================

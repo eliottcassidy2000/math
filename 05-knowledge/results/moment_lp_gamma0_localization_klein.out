@@ -1,0 +1,23 @@
+==========================================================================
+MOMENT LP + Gamma_0(14) LOCALIZATION,  n=14, Phi6=183=3*61,  M_C=n/Phi6=0.07650
+==========================================================================
+
+(A) UNLOCALIZED moment LP (first-moment / union bound):
+    total danger = 2*(n-1)*M_C = 1.9891 (>1) => m0_unloc = 1 - total = -0.9891 < 0  STALLS
+    (this is the SOS/Fourier stall, HYP-3791: the moment method cannot certify positivity unlocalized.)
+
+(B) LOCALIZED moment LP (Gamma_0(14) = mult-by-n phase coords, S68):
+    phase cloud p(v)=n*v mod Phi6 = [14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 169]
+    = AP(step n) + killer (HYP-3813); observer(0) clearance = min_v dist = 14/183 = 0.07650
+    LP max-min over observer offset: best clearance = 14/183 at offset 0  (=observer 0)
+    => min m0 (localized) = 0.07650 = n/Phi6 = M_C  > 0   CERTIFIED (> 1/n=0.07143? True)
+    linprog LP-dual value (tight pair {+n,-n}): m0 = 0.07650  (matches n/Phi6)
+
+==========================================================================
+VERDICT: the Gamma_0(14) congruence localization = the mult-by-n phase coordinate (S68) RESCUES the
+stalled moment method: UNLOCALIZED m0 = 1-2(n-1)M_C < 0 (union stall), but LOCALIZED min m0 = n/Phi6 > 0
+(the AP-cloud clearance = the equioscillation LP-dual). So min m0 > 0 UNDER Gamma_0(N)-localization --
+the congruence symmetry is exactly what turns the negative union bound into a positive certificate.
+HONEST: this is the S68/HYP-3813 clearance re-read as a localized moment LP; it certifies the
+CONSTRUCTION's covering-min > 0, not the min over all configs (LRC's remaining hard direction).
+==========================================================================
