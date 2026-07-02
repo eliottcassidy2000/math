@@ -1,0 +1,103 @@
+shape | V | witness a/b | max-min | Nat-check
+   AP |  13 | 1/14 | 0.071429 | OK
+   AP |  14 | 1/16 | 0.125000 | OK
+    3 |  21 | 3/17 | 0.176471 | OK
+    3 |  22 | 1/6 | 0.166667 | OK
+    3 |  23 | 1/8 | 0.125000 | OK
+    3 |  24 | 2/17 | 0.117647 | OK
+    3 |  25 | 1/9 | 0.111111 | OK
+    3 |  26 | 4/27 | 0.111111 | OK
+    3 |  27 | 4/23 | 0.173913 | OK
+    3 |  28 | 1/6 | 0.166667 | OK
+    3 |  29 | 3/19 | 0.105263 | OK
+    3 |  30 | 3/26 | 0.115385 | OK
+    3 |  31 | 1/8 | 0.125000 | OK
+    3 |  32 | 7/39 | 0.153846 | OK
+    3 |  33 | 5/29 | 0.172414 | OK
+    3 |  34 | 1/6 | 0.166667 | OK
+    3 |  35 | 4/25 | 0.120000 | OK
+    3 |  36 | 7/32 | 0.125000 | OK
+    3 |  37 | 11/52 | 0.134615 | OK
+    3 |  38 | 3/17 | 0.176471 | OK
+    3 |  39 | 6/35 | 0.171429 | OK
+    3 |  40 | 1/6 | 0.166667 | OK
+    3 |  41 | 8/37 | 0.135135 | OK
+    3 |  42 | 13/62 | 0.129032 | OK
+    3 |  43 | 11/61 | 0.147541 | OK
+    3 |  44 | 7/40 | 0.175000 | OK
+    3 |  45 | 7/41 | 0.170732 | OK
+    3 |  46 | 1/6 | 0.166667 | OK
+    4 |  15 | 1/8 | 0.125000 | OK
+    4 |  16 | 1/9 | 0.111111 | OK
+    4 |  17 | 1/8 | 0.125000 | OK
+    4 |  18 | 1/20 | 0.100000 | OK
+    4 |  19 | 1/8 | 0.125000 | OK
+    4 |  20 | 1/11 | 0.090909 | OK
+    4 |  21 | 1/8 | 0.125000 | OK
+    4 |  22 | 1/24 | 0.083333 | OK
+    4 |  23 | 1/8 | 0.125000 | OK
+    4 |  24 | 2/17 | 0.117647 | OK
+    4 |  25 | 1/8 | 0.125000 | OK
+    4 |  26 | 2/19 | 0.105263 | OK
+    4 |  27 | 1/8 | 0.125000 | OK
+    4 |  28 | 7/19 | 0.105263 | OK
+    4 |  29 | 1/8 | 0.125000 | OK
+    4 |  30 | 2/21 | 0.095238 | OK
+    4 |  31 | 1/8 | 0.125000 | OK
+    4 |  32 | 3/25 | 0.120000 | OK
+    4 |  33 | 1/8 | 0.125000 | OK
+    4 |  34 | 1/9 | 0.111111 | OK
+    4 |  35 | 1/8 | 0.125000 | OK
+    4 |  36 | 10/27 | 0.111111 | OK
+    4 |  37 | 1/8 | 0.125000 | OK
+    4 |  38 | 11/29 | 0.103448 | OK
+    4 |  39 | 1/8 | 0.125000 | OK
+
+ALL WINDOW ROWS PASS: True
+
+============================================================
+ LEAN EMISSION
+============================================================
+
+def windowAP : List (ℤ × ℕ × ℕ) := [(13, 1, 14), (14, 1, 16)]
+-- windowAP: V ∈ [13, 15)  (2 rows)
+  -- V=13: exact lonely_of_row (a := 1) (b := 14) (by decide)
+  -- V=14: exact lonely_of_row (a := 1) (b := 16) (by decide)
+
+def window3 : List (ℤ × ℕ × ℕ) := [(21, 3, 17), (22, 1, 6), (23, 1, 8), (24, 2, 17), (25, 1, 9), (26, 4, 27), (27, 4, 23), (28, 1, 6), (29, 3, 19), (30, 3, 26), (31, 1, 8), (32, 7, 39), (33, 5, 29), (34, 1, 6), (35, 4, 25), (36, 7, 32), (37, 11, 52), (38, 3, 17), (39, 6, 35), (40, 1, 6), (41, 8, 37), (42, 13, 62), (43, 11, 61), (44, 7, 40), (45, 7, 41), (46, 1, 6)]
+-- window3: V ∈ [21, 47)  (26 rows)
+  -- V=21: exact lonely_of_row (a := 3) (b := 17) (by decide)
+  -- V=22: exact lonely_of_row (a := 1) (b := 6) (by decide)
+  -- V=23: exact lonely_of_row (a := 1) (b := 8) (by decide)
+  -- V=24: exact lonely_of_row (a := 2) (b := 17) (by decide)
+  -- V=25: exact lonely_of_row (a := 1) (b := 9) (by decide)
+  -- V=26: exact lonely_of_row (a := 4) (b := 27) (by decide)
+  -- V=27: exact lonely_of_row (a := 4) (b := 23) (by decide)
+  -- V=28: exact lonely_of_row (a := 1) (b := 6) (by decide)
+  -- V=29: exact lonely_of_row (a := 3) (b := 19) (by decide)
+  -- V=30: exact lonely_of_row (a := 3) (b := 26) (by decide)
+  -- V=31: exact lonely_of_row (a := 1) (b := 8) (by decide)
+  -- V=32: exact lonely_of_row (a := 7) (b := 39) (by decide)
+  -- V=33: exact lonely_of_row (a := 5) (b := 29) (by decide)
+  -- V=34: exact lonely_of_row (a := 1) (b := 6) (by decide)
+  -- V=35: exact lonely_of_row (a := 4) (b := 25) (by decide)
+  -- V=36: exact lonely_of_row (a := 7) (b := 32) (by decide)
+  -- V=37: exact lonely_of_row (a := 11) (b := 52) (by decide)
+  -- V=38: exact lonely_of_row (a := 3) (b := 17) (by decide)
+  -- V=39: exact lonely_of_row (a := 6) (b := 35) (by decide)
+  -- V=40: exact lonely_of_row (a := 1) (b := 6) (by decide)
+  -- V=41: exact lonely_of_row (a := 8) (b := 37) (by decide)
+  -- V=42: exact lonely_of_row (a := 13) (b := 62) (by decide)
+  -- V=43: exact lonely_of_row (a := 11) (b := 61) (by decide)
+  -- V=44: exact lonely_of_row (a := 7) (b := 40) (by decide)
+  -- V=45: exact lonely_of_row (a := 7) (b := 41) (by decide)
+  -- V=46: exact lonely_of_row (a := 1) (b := 6) (by decide)
+
+def window4 : List (ℤ × ℕ × ℕ) := [(15, 1, 8), (16, 1, 9), (17, 1, 8), (18, 1, 20), (19, 1, 8), (20, 1, 11), (21, 1, 8), (22, 1, 24), (23, 1, 8), (24, 2, 17), (25, 1, 8), (26, 2, 19), (27, 1, 8), (28, 7, 19), (29, 1, 8), (30, 2, 21), (31, 1, 8), (32, 3, 25), (33, 1, 8), (34, 1, 9), (35, 1, 8), (36, 10, 27), (37, 1, 8), (38, 11, 29), (39, 1, 8)]
+-- window4: V ∈ [15, 40)  (25 rows)
+  -- V=15: exact lonely_of_row (a := 1) (b := 8) (by decide)
+  -- V=16: exact lonely_of_row (a := 1) (b := 9) (by decide)
+  -- V=17: exact lonely_of_row (a := 1) (b := 8) (by decide)
+  -- V=18: exact lonely_of_row (a := 1) (b := 20) (by decide)
+  -- V=19: exact lonely_of_row (a := 1) (b := 8) (by decide)
+  -- V=20: exa
