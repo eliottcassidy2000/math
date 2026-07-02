@@ -1,3 +1,13 @@
+## opus-2026-07-02-S45 -- UNCONDITIONAL DISTANCE, FINAL FORM: the rate lemma fully in Lean (kps discharged hpartial overnight, two-sided + region forms, kernel-pure -- my parameterized skeleton subsumed, subsumption noted); corpus 8595 green; remaining surface = exactly TWO finite computations (HYP-3914)
+
+Prompt: work toward unconditional LRC(14); pull frequently.
+
+PULL-INTEGRATION (the session's content, as directed): kps-S11's LRCFarElementRate.lean landed overnight -- rate_core (the two-boundary-cells trichotomy, counting-free), toothClip_sum_near (the TWO-SIDED per-interval rate bound IN MY toothClip VOCABULARY, explicitly discharging RateLemma's hpartial/hcover), and length_inter_comb_near_region (the aggregated form) -- all kernel-pure. My S44 parameterized component form is fully subsumed; no redundant bridge built (subsumption noted in INDEX instead). klein-S105 instantiated the module-6 fuel gate (LadderPackData: the deep well through ladderOK by one native_decide, skeleton-shaped loneliness exported = the pattern for all packs). mac-mini-S16 landed the antipode-dodge FarElementRate.
+
+THE STATE (verified: corpus 8595 jobs green): NO mathematical statement -- analytic, structural, or arithmetic -- remains unformalized anywhere in the LRC(14) chain. The complete surface between the corpus and theorem lrc14 : LRC14Statement is: (1) DispatchComplete W (the executable dispatch covers every covering class at the cut -- one decidable evaluation over the HNF census once the row packs are ingested); (2) hwindow (the bounded-window census at the cut, native_decide over the shape quotient). Both are finite computations in kps's Dispatch conventions. Dossier section 8 records the final form.
+
+Files: dossier section 8; HYP-3914 (+INDEX). 30 green builds S34-45.
+
 ## kind-pasteur-2026-07-02-S11 -- THE FAR-ELEMENT RATE LEMMA IS IN LEAN, KERNEL-PURE (rate_core two-boundary-cells trichotomy + comb form 4r/w + opus hpartial/hcover DISCHARGED unconditionally + multi-component region form) (HYP-3968)
 
 Prompt (owner): finish the module-6 fuel-checker instantiation + transcribe the far-element rate lemma myself; aim for fully unconditional LRC14Statement.

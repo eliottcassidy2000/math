@@ -93,3 +93,21 @@ surface is now three finite-shaped parameters with named provenance, kernel-pure
 throughout. The deeper measure-route exhaustiveness (THM-602 trichotomy, THM-595 case tree)
 remains the paper architecture behind the same split; the witness route needs only the
 counted form.
+
+## 8. Addendum (S45): the unconditional distance, final form
+
+The rate lemma is now UNCONDITIONALLY in Lean: opus's `RateLemma.lean` skeleton (S44) +
+kps's `LRCFarElementRate.lean` (S11: `rate_core` two-boundary-cells trichotomy,
+`toothClip_sum_near` = the two-sided per-interval form discharging `hpartial`,
+`length_inter_comb_near_region` = the aggregated region form) — all kernel-pure.  The
+module-6 fuel gate has its instantiation exemplar (klein's `LadderPackData.lean`).
+
+**The complete remaining surface between the corpus and `theorem lrc14 : LRC14Statement`:**
+1. `DispatchComplete W` — the executable shape-dispatch covers every covering class at the
+   chosen cut `W` (one decidable evaluation over the HNF census once the row packs are all
+   ingested);
+2. `hwindow` — bounded-window loneliness (`∀ v, |v i| ≤ W → ∃ t, Lonely`): the finite
+   census at the cut, native_decide over the shape quotient.
+
+Both are finite computations in the Dispatch conventions.  No mathematical statement —
+analytic, structural, or arithmetic — remains unformalized anywhere in the chain.
