@@ -1,0 +1,25 @@
+PSL(2,7): |G|=168, ord(a)=7, ord(b)=3, <a,b>=G: False
+complex: V=168, E=336, F=168;  each edge in {2,2} squares (surface code iff all=2)
+GF(2): rank(delta^0)=160, rank(delta^1)=160
+       dim Z^1=176, dim B^1=160, dim H^1=16   (opus-S30: 176,160,16)
+
+explicit QR/heptagon cochain: weight=111/336, violated squares=94/168 (not a cocycle -> project)
+
+######################################################################
+# SOUNDNESS TEST: string defects (low violation, far from the code) => surface-code soundness
+######################################################################
+   string len L  weight  violated sq  viol/|F|  ratio viol/len
+              1       1            2    0.0119          2.0000
+              2       2            4    0.0238          2.0000
+              3       3            6    0.0357          2.0000
+              5       5           10    0.0595          2.0000
+              7       7           14    0.0833          2.0000
+             10       4            8    0.0476          0.8000
+             14       0            0    0.0000          0.0000
+             20       6           12    0.0714          0.6000
+             30       2            4    0.0238          0.1333
+
+  Interpretation: a length-L string violates O(1) squares (endpoints) but has weight ~L and is
+  ~L-far from Z^1 => soundness delta ~ (violated/|F|)/(dist/|E|) ~ O(1/L) -> 0. NOT O(1)-sound:
+  O(1)-LOCAL (each edge in 2 squares) but surface-code (poly) soundness -- CONFIRMS opus-S30.
+  A GOOD LTC needs LPS-Ramanujan gens + tensor local codes (each edge in MANY squares).

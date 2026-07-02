@@ -1,0 +1,11 @@
+|G|=168, ord(a)=7, ord(b)=3
+# components (under commuting left-<a>,right-<b>) = 8
+component sizes = Counter({21: 8})   (21 = |Borel| = |Aut(Paley_7)| = 3*7)
+rank(delta^0)=|V|-#comp = 168-8 = 160  => matches the 160 (=> 8 comps) from the build
+
+CONCLUSION: single-generator (order-7 left, order-3 right) left-right Cayley complex is INHERENTLY
+DISCONNECTED into |<a>\G/<b>| = 8 pieces of size 21, because left/right mult COMMUTE
+(component of g = <a>g<b>, <=21). A disconnected graph has spectral gap 0 => NOT an expander.
+Each component = a Borel/Frobenius-21 surface = |Aut(Paley_7)|. Genuine expansion (and any O(1)
+soundness) requires a GENERATING SET per side (LPS-Ramanujan), exactly opus-S30's caveat -- sharpened:
+the single-generator apex complex is not merely non-O(1)-sound, it is not even connected.
