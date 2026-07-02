@@ -298,5 +298,66 @@ theorem clip_chain_sum {w : ℚ} (hw : 0 < w) :
           have h1 : max 0 (c + w - a) = 0 := max_eq_left (by linarith)
           rw [h1, zero_add]
 
+/-! ### K2 GLUE: the swap lemmas (phase-free sum plumbing)
+
+The route from K1 to K2/K3 without ever sorting phase-dependent teeth:
+`Σ_j length (inter L T_j) = length (inter L (T_0 ++ ⋯ ++ T_6))` by
+`length_inter_append_right`, then flip to `length (inter (T_0 ++ ⋯) L)` by
+`length_inter_comm` when the tiling side must drive the cursor.  Both are pure
+list-sum rearrangements — no `Norm`, no ordering, no phases. -/
+
+theorem length_inter_nil (B : Region) : length (inter B []) = 0 := by
+  induction B with
+  | nil => rfl
+  | cons q B ih =>
+      simp only [inter, List.flatMap_cons, List.map_nil, List.nil_append] at ih ⊢
+      exact ih
+
+/-- Intersection length is additive in the right argument's concatenation. -/
+theorem length_inter_append_right (A B C : Region) :
+    length (inter A (B ++ C)) = length (inter A B) + length (inter A C) := by
+  induction A with
+  | nil => simp [inter, length]
+  | cons p A ih =>
+      simp only [inter, List.flatMap_cons] at ih ⊢
+      rw [List.map_append, length_append, length_append, length_append, length_append, ih]
+      ring
+
+/-- Clip is symmetric as a value. -/
+theorem clip_comm (p q : ℚ × ℚ) : clip p q = clip q p := by
+  unfold clip
+  rw [max_comm, min_comm]
+
+private theorem length_inter_cons_right (B : Region) (p : ℚ × ℚ) (A : Region) :
+    length (inter B (p :: A))
+      = length (B.map fun q => clip q p) + length (inter B A) := by
+  induction B with
+  | nil => simp [inter, length]
+  | cons q B ih =>
+      simp only [inter, List.flatMap_cons, List.map_cons] at ih ⊢
+      rw [length_append]
+      unfold length at ih ⊢
+      simp only [List.map_cons, List.sum_cons, List.map_append, List.sum_append] at ih ⊢
+      linarith
+
+/-- Intersection length is symmetric — the Fubini swap for the quadratic intersection. -/
+theorem length_inter_comm (A B : Region) : length (inter A B) = length (inter B A) := by
+  induction A with
+  | nil =>
+      rw [length_inter_nil]
+      rfl
+  | cons p A ih =>
+      rw [length_inter_cons_right B p A, ← ih]
+      simp only [inter, List.flatMap_cons]
+      rw [length_append]
+      congr 1
+      unfold length
+      congr 1
+      rw [List.map_map, List.map_map]
+      apply List.map_congr_left
+      intro q _
+      simp only [Function.comp_apply]
+      rw [clip_comm]
+
 end RatIntervals
 end LonelyRunner
