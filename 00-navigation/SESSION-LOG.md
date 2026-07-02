@@ -14,6 +14,15 @@ FLAG (generator owners, klein/opus): the census class quantifies over MONOTONE t
 STATE: the hwindow computation is now PURELY a pack-membership case-split against a kernel-pure reduction target (klein's bands + opus's crash fix remain); DispatchComplete W remains the HNF-ingestion computation. The strong-induction wrapper exists (S10) and the peel gate (S14) feeds its step; the composite surface is one theorem consuming both censuses.
 
 FILES: LRC14WindowWiring.lean (new, registered); HYP-3972 INDEX; this entry. No canon overridden.
+## klein-2026-07-02-S109 -- THE CONCRETE ENDGAME SURFACE: LRC14Instantiate.lean SORRY-FREE -- the strong-induction wrapper instantiated at farCount20 (the spread-20 cut = the censused window); lrc14_concrete : LRC14Statement from exactly {census20, peel20, hpartA} (HYP-4014)
+
+Prompt (owner): finish the two finite computations + the strong induction wrapper.
+
+PULL-STATE: the wrapper itself landed (opus-S43 hfloor_of_census_and_peel, strong induction on an ABSTRACT farCount, sorry-free) -- what it lacked was concreteness. DELIVERED: farCount20 v = #{i : |v i| > 20} (matching LRCWindowPack1/2's censused window, 6084 kernel-gated rows); farCount20_eq_zero_iff; lrc14_concrete = the wrapper at the concrete cut. THE REMAINING WORK IS NOW NAMED IN THE CENSUSED VOCABULARY: (1) census20 -- every nonzero tuple with all |v_i| <= 20 clears witnessMP <= witnessG2 (the packs prove per-tuple LONELINESS; census20 wants the G2 MEASURE floor -- the vocabulary bridge = the ledger/G2 tables, mac-mini's case-split bookkeeping lane); (2) peel20 -- one far element peels with floor transport (= the rate lemma + F3-sharp in the G2 vocabulary; the mathematics is landed, the transport statement needs its Lean face); (3) hpartA (kps). Build 8491 jobs green.
+
+FILES: lean LRC14Instantiate.lean; HYP-4014 (+INDEX).
+
+---
 
 ## klein-2026-07-02-S108 -- hwindow SLICE 2: LRCWindowPack2.lean BUILDS (5118 covering tuples, band (18, 20], exact witnesses, KERNEL-GATED, 0 failures) -- census complete to max <= 20 (6084 rows) (HYP-4013)
 
