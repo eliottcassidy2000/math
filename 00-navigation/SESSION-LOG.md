@@ -1,3 +1,22 @@
+## kind-pasteur-2026-07-02-S17 -- THE WINDOW LEG IS CLOSED BY DATA: the pack-list dispatcher done myself (6084 rows regenerated as plain-List data + kernel-gate soundness + enumeration COMPLETENESS) => LRC(14) = citation + peel20 ONLY (HYP-3974)
+
+Prompt (owner): work the pack band, peel schedule, and DispatchComplete ingestion MYSELF -- stop deferring to other agents.
+
+DELIVERED (LRCWindowData.lean, 8 build rounds, registered, corpus green):
+ - **THE BAND DATA, REGENERATED INDEPENDENTLY**: my emitter variant (lrc14_window_data_emitter_kps_S17.py) of opus's S46 generator re-enumerated the full (0,20] covering-primitive band: 6084 rows, 0 failures, integer kernel-gate mirror verified in Python -- COUNT MATCHES the fleet's 966+5118, an independent regeneration cross-check. Emitted as plain-List WinRow data in 13 chunks (NO ![...] tuple literals -- dodges opus's S47 0xC0000005 crash class entirely; the whole band is a List value + ONE gate evaluation).
+ - **winRow_lonely**: list-level kernel-gate soundness (via opus's lonely_of_kernelWitness, kernel-pure).
+ - **sorted_subset_sublist**: strictly sorted list with members in a strictly sorted list is a Sublist (the enumeration bridge; 35-line double induction).
+ - **winData_complete**: enumeration completeness -- every covering candidate in sublistsLen 13 of the concrete [1..20] has a row (ONE native_decide over C(20,13) = 77520 candidates). KEY SIMPLIFICATION: at W = 20 primitivity is AUTOMATIC (13 distinct positive entries with gcd >= 2 need max >= 26), so tupleGcd never enters the completeness path.
+ - **hdistinct20_from_data**: klein-S111's last window hypothesis DISCHARGED (class membership -> universe membership -> completeness row -> gate -> Lonely).
+ - **hwindow20_closed (cite : LRCUpTo13)**: the full bounded-window statement at W = 20, discharged by data + the owner-sanctioned LRC(<=13) citation node (repeats).
+ - **lrc14_of_peel20**: LRC14Statement from EXACTLY {LRCUpTo13, peel20}. The hwindow computation, census20, and the bounded half of DispatchComplete are ALL RETIRED.
+
+AXIOMS: std-3 + the two winData native_decides (gate + completeness; both Python-mirrored). Lean-practical notes for the fleet: (a) the NN->ZZ mapped range' elaborates as a monadic do-block breaking mem_map rewrites -- use concrete ZZ literal lists + an omega membership characterization; (b) rows-as-data + one gate evaluation is the crash-free scale pattern (vs per-row theorems).
+
+REMAINING LRC(14) SURFACE: peel20 (the far-element transport) + the citation node. DESIGN NOTE for the peel leg: bare-Lonely transport cannot be fed by the S14 length gate directly -- the induction invariant must carry length-positivity (the epsilon schedule); the lrc14_of_census_peel_concrete wrapper should evolve to the length-invariant form. That is the next session-scale piece.
+
+FILES: LRCWindowData.lean (new, registered); lrc14_window_data_emitter_kps_S17.py + .out; HYP-3974 INDEX; this entry. No canon overridden.
+
 ## kind-pasteur-2026-07-02-S16 -- AUDIT+HARDEN: the DISCHARGEABLE spread-20 surface (LRC14ConcreteSurface.lean, kernel-pure) + opaque-vocabulary regression caught in klein-S109 + hypothesis-minimization + full lint sweep of my lane (HYP-3973)
 
 Prompt (owner): look for more errors / improvements and fix them all myself.
