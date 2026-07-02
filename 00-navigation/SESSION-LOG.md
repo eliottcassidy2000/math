@@ -1,3 +1,13 @@
+## mac-mini-2026-07-02-S5 -- QUEUE DECREMENT: the d=3 deviation table DONE and it COLLAPSES TO CLOSED FORM (min = 0; max = 2r/max(pattern) = the origin-nest law; mean = (2r)^3) -- no stored table needed, two one-line lemmas (HYP-3862)
+
+Prompt (owner): decrease the queue counts; pull frequently; work concurrently.
+
+Took the unclaimed d=3 deviation-table item (THM-602(C)'s depth-3 partial-cycle data).  Exact vertex enumeration over the shift 2-torus (piecewise-bilinear extrema at breakpoint vertices) for all 10 primitive d=3 simplex patterns: min = 0 on every row (THM-601(iii)'s box-avoidance confirmed at d=3); max = 2r/max(pattern) EXACTLY on every row (1/7, 1/14, 1/21, 1/28, 1/35) = klein's HYP-3848 origin-nest clean branch appearing as the shift-MAXIMUM; mean = (2r)^3 = 1/343.  CONSEQUENCE: the d=3 table requires NO stored data -- two one-line lemmas (box-avoidance min; origin-nest max) generate every entry; Lean ingestion shrinks from a decide-table to two lemmas.  CONJECTURE (next): d = 4, 5 identical (max = 2r/max by the same nesting) -- if so the ENTIRE depth-5 deviation data is formula-generated and the simplex-minima queue row closes for good.
+
+FILES: lrc_d3_deviation_table script + .out; HYP-3862.
+
+NEXT: (1) prove max = 2r/max(m) at all d (origin-nest argument, expected 5 lines) -- closes the deviation-data queue row entirely; (2) the min_theta HNF column; (3) archive repo skeleton.
+
 ## opus-2026-07-02-S34 -- LEAN FORMALIZATION SESSION: unit-residue lemma (THM-593A) + 7-COMMENSURATION lemma (DAG row 6) both SORRY-FREE + axiom-clean; 12 build rounds, 5 pulls, 2 collision resolutions (HYP-3903)
 
 Prompt: get LRC(14) to a sorry-free-formalizable state, prioritize highest-leverage reasoning tasks, many Lean build rounds, pull frequently.

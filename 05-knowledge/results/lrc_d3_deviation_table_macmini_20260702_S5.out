@@ -1,0 +1,15 @@
+d=3 deviation table, r=1/14, mean=(2r)^3=1/343=0.002915
+   pattern    exact min    exact max     max-mean     mean-min
+  (1,1,1)             0          1/7       48/343        1/343
+  (1,1,2)             0         1/14       47/686        1/343
+  (1,1,3)             0         1/21      46/1029        1/343
+  (1,1,4)             0         1/28      45/1372        1/343
+  (1,1,5)             0         1/35      44/1715        1/343
+  (1,2,2)             0         1/14       47/686        1/343
+  (1,2,3)             0         1/21      46/1029        1/343
+  (1,2,4)             0         1/28      45/1372        1/343
+  (1,3,3)             0         1/21      46/1029        1/343
+  (2,2,3)             0         1/21      46/1029        1/343
+
+All min = 0 expected (sum|m| <= 7: danger-capable, THM-601(iii)); the max-mean
+column is the partial-cycle cost THM-602(C) charges per frozen depth-3 resonance.

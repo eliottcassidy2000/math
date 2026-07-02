@@ -1,6 +1,11 @@
 {
+<<<<<<< Updated upstream
   "session_start": "2026-07-02T00:58:58.108724",
   "start_commit": "ed9cfdcacb07e09747a291e0f022ddda667a79fc",
+=======
+  "session_start": "2026-07-02T00:55:43.307856",
+  "start_commit": "36af1c1e5f40d1cc3826493eee7964c7b5e2540f",
+>>>>>>> Stashed changes
   "pushed": false,
   "message_sent": false
 }
