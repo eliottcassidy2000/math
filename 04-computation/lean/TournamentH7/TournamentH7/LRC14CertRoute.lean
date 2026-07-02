@@ -100,6 +100,73 @@ theorem lonely_of_norm_forall {v : Fin 13 → ℤ} {t : ℝ}
           rw [habs]
           linarith
 
+/-- The reverse bridge: `Lonely` implies the norm form (instantiate at the round
+point).  With `lonely_of_norm_forall` this makes the two vocabularies fully
+interchangeable. -/
+theorem norm_forall_of_lonely {v : Fin 13 → ℤ} {t : ℝ} (h : Lonely 14 v t) :
+    ∀ i, (1 : ℝ) / 14 ≤ ‖(((v i : ℝ) * t : ℝ) : UnitAddCircle)‖ := by
+  intro i
+  rw [UnitAddCircle.norm_eq]
+  have := h i (round ((v i : ℝ) * t))
+  calc (1 : ℝ) / 14 = 1 / (14 : ℕ) := by norm_num
+    _ ≤ |(v i : ℝ) * t - round ((v i : ℝ) * t)| := this
+
+/-- **The vocabulary equivalence**: `Lonely` ⟺ all-speeds circle-norm `≥ 1/14`. -/
+theorem lonely_iff_norm_forall {v : Fin 13 → ℤ} {t : ℝ} :
+    Lonely 14 v t ↔
+      ∀ i, (1 : ℝ) / 14 ≤ ‖(((v i : ℝ) * t : ℝ) : UnitAddCircle)‖ :=
+  ⟨norm_forall_of_lonely, lonely_of_norm_forall⟩
+
+/-! ## Layer-1 invariance lemmas
+
+`Lonely` is a pointwise conjunction over speeds, so it is invariant under
+permuting the family and under flipping the sign of any speed.  These are the
+normalization moves every dispatcher needs (sort the speeds, make them
+positive) — mathlib-grade and independent of the certificates. -/
+
+/-- The one-speed loneliness predicate. -/
+def LonelySpeed (n : ℕ) (s : ℤ) (t : ℝ) : Prop :=
+  ∀ m : ℤ, (1 : ℝ) / n ≤ |(s : ℝ) * t - m|
+
+theorem lonely_iff_forall_speed {ι : Type*} (n : ℕ) (v : ι → ℤ) (t : ℝ) :
+    Lonely n v t ↔ ∀ i, LonelySpeed n (v i) t :=
+  Iff.rfl
+
+/-- One-speed loneliness is sign-invariant (`m ↦ −m`). -/
+theorem lonelySpeed_neg_iff (n : ℕ) (s : ℤ) (t : ℝ) :
+    LonelySpeed n (-s) t ↔ LonelySpeed n s t := by
+  constructor <;> intro h m
+  · have := h (-m)
+    push_cast at this ⊢
+    rw [show -(s : ℝ) * t - (-m : ℝ) = -((s : ℝ) * t - m) by ring, abs_neg] at this
+    exact this
+  · have := h (-m)
+    push_cast at this ⊢
+    rw [show -(s : ℝ) * t - (m : ℝ) = -((s : ℝ) * t - (-m : ℝ)) by push_cast; ring,
+      abs_neg]
+    exact this
+
+/-- `Lonely` is invariant under any relabeling (in particular permutations). -/
+theorem lonely_comp_equiv {ι κ : Type*} (n : ℕ) (v : ι → ℤ) (t : ℝ) (e : κ ≃ ι) :
+    Lonely n (v ∘ e) t ↔ Lonely n v t := by
+  constructor
+  · intro h i m
+    have := h (e.symm i) m
+    simpa using this
+  · intro h i m
+    exact h (e i) m
+
+/-- `Lonely` is invariant under flipping the signs of any subset of speeds:
+loneliness depends only on the absolute speeds. -/
+theorem lonely_abs_iff {ι : Type*} (n : ℕ) (v : ι → ℤ) (t : ℝ) :
+    Lonely n (fun i => |v i|) t ↔ Lonely n v t := by
+  rw [lonely_iff_forall_speed, lonely_iff_forall_speed]
+  refine forall_congr' fun i => ?_
+  rcases abs_choice (v i) with h | h
+  · rw [h]
+  · rw [h]
+    exact lonelySpeed_neg_iff n (v i) t
+
 /-! ## The first covering discharges: consecutive blocks -/
 
 /-- The consecutive block `{V, V−1, …, V−12}` as a 13-speed family. -/
