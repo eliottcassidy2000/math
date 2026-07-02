@@ -233,5 +233,135 @@ theorem cert4_tail (V : ℤ) (hV : 40 ≤ V) :
     cert4_safeP cert4_safeO
     V (by norm_num; nlinarith) (by omega)
 
+/-! ## The two-level nested certificate (HYP-3959 — the bridging lemma's first instance)
+
+Two scales compose: level 1 (reference `V₁`, offsets `offs₁`) is certified at the INFLATED band
+`h + μ`; level 2 (reference `V₂ > V₁/μ`, offsets `offs₂`) samples the window `[τ₀, τ₀ + μ/V₁]`
+around a level-1 ruler point.  At the final time τ (a level-2 ruler point):
+ * `P` and `offs₂` are exact (τ ∈ [lo, hi]; the c-ruler identity at `V₂`);
+ * only the `V₁`-PHASE drifts, by at most `V₁ · (μ/V₁) = μ` — absorbed by the inflated band
+   (the circle norm is 1-Lipschitz).
+Iterating this step is the `n`-uniform ladder; no other analytic input appears. -/
+
+/-- The circle norm is 1-Lipschitz against real perturbation. -/
+theorem norm_ge_norm_sub_abs (y x : ℝ) :
+    ‖((y : ℝ) : UnitAddCircle)‖ - |x - y| ≤ ‖((x : ℝ) : UnitAddCircle)‖ := by
+  have hxy : ((y : ℝ) : UnitAddCircle)
+      = ((x : ℝ) : UnitAddCircle) + ((y - x : ℝ) : UnitAddCircle) := by
+    have hsum : (x : ℝ) + (y - x) = y := by ring
+    calc ((y : ℝ) : UnitAddCircle) = (((x + (y - x) : ℝ)) : UnitAddCircle) := by rw [hsum]
+      _ = ((x : ℝ) : UnitAddCircle) + ((y - x : ℝ) : UnitAddCircle) := rfl
+  have hle : ‖((y : ℝ) : UnitAddCircle)‖
+      ≤ ‖((x : ℝ) : UnitAddCircle)‖ + ‖((y - x : ℝ) : UnitAddCircle)‖ := by
+    rw [hxy]; exact norm_add_le _ _
+  have habs : ‖((y - x : ℝ) : UnitAddCircle)‖ ≤ |y - x| := by
+    rw [UnitAddCircle.norm_eq]
+    simpa using round_le (y - x) 0
+  have habs' : |y - x| = |x - y| := abs_sub_comm y x
+  linarith
+
+/-- **The two-level nested certificate.** -/
+theorem cert_two_level {h μ : ℚ} (h0 : 0 ≤ h) (hμpos : 0 < μ) {cTar₁ cTar₂ lo hi : ℚ}
+    (P offs₁ offs₂ : List ℤ)
+    (hPpos : ∀ s ∈ P, 0 ≤ s) (hO1pos : ∀ o ∈ offs₁, 0 ≤ o) (hO2pos : ∀ o ∈ offs₂, 0 ≤ o)
+    (hPsafe : ∀ s ∈ P, arcSafe h s 0 lo hi)
+    (hO1safe : ∀ o ∈ offs₁, arcSafe (h + μ) o cTar₁ lo hi)
+    (hO2safe : ∀ o ∈ offs₂, arcSafe h o cTar₂ lo hi)
+    (V₁ V₂ : ℤ) (hV1pos : 0 < V₁) (hV2pos : 0 < V₂)
+    (hV1len : 1 < (V₁ : ℚ) * (hi - lo - μ / V₁))
+    (hV2len : 1 < (V₂ : ℚ) * (μ / V₁)) :
+    ∃ τ : ℝ,
+      (∀ s ∈ P, (h : ℝ) ≤ ‖(((s : ℝ) * τ : ℝ) : UnitAddCircle)‖) ∧
+      (∀ o ∈ offs₁, (h : ℝ) ≤ ‖((((V₁ - o : ℤ) : ℝ) * τ : ℝ) : UnitAddCircle)‖) ∧
+      (∀ o ∈ offs₂, (h : ℝ) ≤ ‖((((V₂ - o : ℤ) : ℝ) * τ : ℝ) : UnitAddCircle)‖) := by
+  have hV1R : (0 : ℝ) < (V₁ : ℝ) := by exact_mod_cast hV1pos
+  have hV2R : (0 : ℝ) < (V₂ : ℝ) := by exact_mod_cast hV2pos
+  have hV2Q : (V₂ : ℝ) ≠ 0 := ne_of_gt hV2R
+  set δ : ℝ := (μ : ℝ) / (V₁ : ℝ) with hδdef
+  have hδpos : 0 < δ := by
+    apply div_pos (by exact_mod_cast hμpos) hV1R
+  have hδcast : ((μ / V₁ : ℚ) : ℝ) = δ := by rw [hδdef]; push_cast; ring
+  -- level-1 ruler point τ₀ ∈ [lo, hi − δ]
+  obtain ⟨j₁, hj1, hj2⟩ := exists_int_in_long_interval
+    (a := (V₁ : ℝ) * (lo : ℝ) - (cTar₁ : ℝ))
+    (b := (V₁ : ℝ) * ((hi : ℝ) - δ) - (cTar₁ : ℝ))
+    (by
+      have h1 : (1 : ℝ) < (V₁ : ℝ) * ((hi : ℝ) - (lo : ℝ) - ((μ / V₁ : ℚ) : ℝ)) := by
+        exact_mod_cast hV1len
+      rw [hδcast] at h1
+      nlinarith)
+  set τ₀ : ℝ := ((j₁ : ℝ) + (cTar₁ : ℝ)) / (V₁ : ℝ) with hτ₀
+  have hτ₀lo : (lo : ℝ) ≤ τ₀ := by rw [hτ₀, le_div_iff₀ hV1R]; linarith
+  have hτ₀hi : τ₀ ≤ (hi : ℝ) - δ := by rw [hτ₀, div_le_iff₀ hV1R]; linarith
+  have hV₁τ₀ : (V₁ : ℝ) * τ₀ = (j₁ : ℝ) + (cTar₁ : ℝ) := by
+    rw [hτ₀]; field_simp
+  -- level-2 ruler point τ ∈ [τ₀, τ₀ + δ]
+  obtain ⟨j₂, hk1, hk2⟩ := exists_int_in_long_interval
+    (a := (V₂ : ℝ) * τ₀ - (cTar₂ : ℝ)) (b := (V₂ : ℝ) * (τ₀ + δ) - (cTar₂ : ℝ))
+    (by
+      have h2 : (1 : ℝ) < (V₂ : ℝ) * ((μ / V₁ : ℚ) : ℝ) := by exact_mod_cast hV2len
+      rw [hδcast] at h2
+      nlinarith)
+  set τ : ℝ := ((j₂ : ℝ) + (cTar₂ : ℝ)) / (V₂ : ℝ) with hτdef
+  have hτ1 : τ₀ ≤ τ := by rw [hτdef, le_div_iff₀ hV2R]; linarith
+  have hτ2 : τ ≤ τ₀ + δ := by rw [hτdef, div_le_iff₀ hV2R]; linarith
+  have hτlo : (lo : ℝ) ≤ τ := le_trans hτ₀lo hτ1
+  have hτhi : τ ≤ (hi : ℝ) := by linarith
+  refine ⟨τ, ?_, ?_, ?_⟩
+  · -- small speeds: direct
+    intro s hs
+    have := norm_ge_of_arcSafe (hPpos s hs) h0 (hPsafe s hs) hτlo hτhi
+    simpa using this
+  · -- level-1 cluster: phase-drift absorption
+    intro o ho
+    -- (V₁ − o)·τ = [(c₁ − o·τ) + V₁·(τ − τ₀)] + j₁
+    have hkey : ((V₁ - o : ℤ) : ℝ) * τ
+        = (((cTar₁ : ℝ) - (o : ℝ) * τ) + (V₁ : ℝ) * (τ - τ₀)) + (j₁ : ℝ) := by
+      push_cast
+      nlinarith [hV₁τ₀]
+    rw [hkey, coe_add_int]
+    -- the inflated-band safety of o at τ (τ ∈ [lo, hi])
+    have hsafe := norm_ge_of_arcSafe (hO1pos o ho) (by linarith [hμpos.le] : (0:ℚ) ≤ h + μ)
+      (hO1safe o ho) hτlo hτhi
+    have hcast : (((h + μ : ℚ)) : ℝ) = (h : ℝ) + (μ : ℝ) := by push_cast; ring
+    rw [hcast] at hsafe
+    -- flip the sign inside the norm: ‖o·τ − c₁‖ = ‖c₁ − o·τ‖
+    have hflip : ‖(((o : ℝ) * τ - (cTar₁ : ℝ) : ℝ) : UnitAddCircle)‖
+        = ‖(((cTar₁ : ℝ) - (o : ℝ) * τ : ℝ) : UnitAddCircle)‖ := by
+      have hne : ((cTar₁ : ℝ) - (o : ℝ) * τ : ℝ) = -(((o : ℝ) * τ - (cTar₁ : ℝ))) := by ring
+      rw [hne]
+      have : ((-(((o : ℝ) * τ - (cTar₁ : ℝ))) : ℝ) : UnitAddCircle)
+          = -((((o : ℝ) * τ - (cTar₁ : ℝ) : ℝ) : UnitAddCircle)) := rfl
+      rw [this, norm_neg]
+    -- Lipschitz absorption of the V₁-phase drift (0 ≤ V₁(τ − τ₀) ≤ μ)
+    have hdrift : |(((cTar₁ : ℝ) - (o : ℝ) * τ) + (V₁ : ℝ) * (τ - τ₀))
+        - ((cTar₁ : ℝ) - (o : ℝ) * τ)| ≤ (μ : ℝ) := by
+      have h1 : (((cTar₁ : ℝ) - (o : ℝ) * τ) + (V₁ : ℝ) * (τ - τ₀))
+          - ((cTar₁ : ℝ) - (o : ℝ) * τ) = (V₁ : ℝ) * (τ - τ₀) := by ring
+      rw [h1, abs_of_nonneg (by nlinarith)]
+      have hδV : (V₁ : ℝ) * δ = (μ : ℝ) := by
+        rw [hδdef]; field_simp
+      nlinarith
+    have hlip := norm_ge_norm_sub_abs ((cTar₁ : ℝ) - (o : ℝ) * τ)
+      ((((cTar₁ : ℝ) - (o : ℝ) * τ) + (V₁ : ℝ) * (τ - τ₀)))
+    rw [hflip] at hsafe
+    linarith
+  · -- level-2 cluster: exact c-ruler identity
+    intro o ho
+    have hid := cruler_norm V₂ o j₂ (cTar₂ : ℝ) hV2Q
+    rw [hτdef, hid]
+    have hsafe := norm_ge_of_arcSafe (hO2pos o ho) h0 (hO2safe o ho) hτlo hτhi
+    rw [hτdef] at hsafe
+    have hswap : ‖(((cTar₂ : ℝ) - (o : ℝ) * (((j₂ : ℝ) + (cTar₂ : ℝ))/(V₂ : ℝ)) : ℝ) : UnitAddCircle)‖
+        = ‖(((o : ℝ) * (((j₂ : ℝ) + (cTar₂ : ℝ))/(V₂ : ℝ)) - (cTar₂ : ℝ) : ℝ) : UnitAddCircle)‖ := by
+      have hne : ((cTar₂ : ℝ) - (o : ℝ) * (((j₂ : ℝ) + (cTar₂ : ℝ))/(V₂ : ℝ)) : ℝ)
+          = -(((o : ℝ) * (((j₂ : ℝ) + (cTar₂ : ℝ))/(V₂ : ℝ)) - (cTar₂ : ℝ))) := by ring
+      rw [hne]
+      have : ((-(((o : ℝ) * (((j₂ : ℝ) + (cTar₂ : ℝ))/(V₂ : ℝ)) - (cTar₂ : ℝ))) : ℝ) : UnitAddCircle)
+          = -((((o : ℝ) * (((j₂ : ℝ) + (cTar₂ : ℝ))/(V₂ : ℝ)) - (cTar₂ : ℝ) : ℝ) : UnitAddCircle)) := rfl
+      rw [this, norm_neg]
+    rw [hswap]
+    simpa using hsafe
+
 end WitnessCert
 end LonelyRunner

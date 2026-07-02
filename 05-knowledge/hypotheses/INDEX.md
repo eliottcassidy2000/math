@@ -12397,8 +12397,8 @@ Closes my assigned residual (kps MSG-238) for THM-527 Part A: the finite-Vmax co
 - **Artifacts:** TBD this session.
 - **Depends on / relates to:** HYP-3953 (R), THM-599, HYP-3957, LonelyRunnerMathlib.lean, LRCThreeGapSampling, mac-mini HYP-3856/3857/3858, klein HYP-4000.
 
-## HYP-3959: the TWO-LEVEL NESTED CERTIFICATE in Lean (the bridging lemma's first instance) + the n-uniform ladder verdict
-- **Status:** CLAIMED/IN-PROGRESS, kind-pasteur-2026-07-02-S2.
+## HYP-3959: the TWO-LEVEL NESTED CERTIFICATE in Lean — SORRY-FREE, STANDARD AXIOMS ONLY
+- **Status:** DELIVERED (cert_two_level compiled clean on first build; axioms = [propext, Classical.choice, Quot.sound]; no native_decide), kind-pasteur-2026-07-02-S2. Design discovery: NO window machinery — tau stays in [lo,hi]; only the V1-PHASE drifts (<= mu), absorbed by certifying offs1 at band h+mu (one 1-Lipschitz application). P/offs2 direct (arcSafe + exact c-ruler at V2). Separations: 1 < V1(hi-lo-mu/V1), 1 < V2(mu/V1). Iterating = the n-uniform ladder; the remaining formalization is an induction wrapper + per-n tables, not analysis. Ladder verdict integrated: owner policy (n<=13 citable) + HYP-3860 (HIGH) => cite now, upgrade case-by-case; LRC(4)-complete = next assembly target.
 - **Claim:** (1) Lipschitz step: margin-checked certs give a WINDOW of good times (circle-norm 1-Lipschitz vs |x-y|); (2) cert_two_level: two nested certificate levels (P, offs1@V1, offs2@V2) with separation V2 > V1/margin-window compose to a common h-lonely time — the first formal instance of mac-mini HYP-3860's identified bridging lemma; n-UNIFORM (arcSafe/cert layer already h-generic). (3) Verdict integration: with the owner policy (LRC<=13 settled/citable) + HYP-3860 (feasibility HIGH), the ladder plan = cite now, upgrade case-by-case via this pipeline; LRC(4) completeness = q-witness (done) + bounded witness table (decide) + single-far certs (done) + THIS two-level glue.
 - **Artifacts:** TBD this session.
 - **Depends on / relates to:** HYP-3958 (cert layer), mac-mini HYP-3860, klein HYP-4003 (owner policy), opus THM-593A, LonelyRunnerMathlib.
