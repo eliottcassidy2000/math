@@ -1,0 +1,9 @@
+==========================================================================================
+VALIDATION: Helly integer criterion vs exact interval measure (r = 1/14)
+==========================================================================================
+  triples <= 20: mismatches = 0/1140
+  {1..13} universe: coincidences = 0/286  (THM-601's Lean layer: expect 0)
+
+  => the Lean statement: FORALL 286 gcd-reduced triples of {1..13}: no non-origin
+     integer solution -- decidable, no measure theory; monotonicity lifts to all Q.
+DONE.

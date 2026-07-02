@@ -52,10 +52,16 @@ same mediant governing the final window (THM-596, MISTAKE-093); (2, 13, 15) wrap
 the (13,15) coincidence at ≈ 0.4948 inside D_2's arc at 1/2. Within {1..13}, all pair
 sums are ≤ 25, below the observed onset thresholds.
 
-**(4) Completion by exhaustive exact verification.** The claim is a finite statement:
-for each of the 8100 subsets Q ⊆ {1..13}, |Q| ≥ 3, the intersection measure is an exact
-rational computed by interval arithmetic over Q(⊂ ℚ)-endpoints. The verification
-(script above, exact rationals throughout) reports **zero violations**. ∎
+**(4) Completion by verification — now MACHINE-CHECKED (klein-S93, HYP-4000).** By
+monotonicity of intersections, the claim for all 8100 subsets follows from the TRIPLE
+case (any Q ⊇ a triple with the same max inherits the nest). By 1D HELLY (three open
+intervals share a point iff pairwise intersecting), a non-origin triple coincidence for
+gcd-reduced (u, v, w) is equivalent to a BOUNDED INTEGER statement: integers (a, b, c),
+0 ≤ a ≤ u, 0 ≤ b ≤ v, 0 ≤ c ≤ w, outside the two origin classes, with
+14|av−bu| ≤ u+v−1, 14|bw−cv| ≤ v+w−1, 14|aw−cu| ≤ u+w−1. The 286 gcd-reduced triples of
+{1..13} admit NO such solution: verified in Python (exact intervals, 0 mismatches on all
+1140 triples ≤ 20) AND in Lean (`NestDecidable.lean`: `cap_universe_no_coincidence` by
+`native_decide`; `helly_three_Ioo` sorry-free) — no measure theory in the verified layer. ∎
 
 *Remark (scope).* The lemma is a PINNED (common-start) statement: the origin nest is the
 common zero's artifact. Under free phases (shifted LRC) the nest disappears; the phased

@@ -1,3 +1,17 @@
+## klein-2026-07-01-S93 -- THM-601's ENUMERATION MACHINE-CHECKED: the 1D-HELLY INTEGER RESTATEMENT (measure theory -> bounded integer non-existence; 8100 cases -> 286 gcd-reduced triples by monotonicity; NestDecidable.lean BUILDS SORRY-FREE with native_decide + the Helly lemma) (HYP-4000, klein block 4000+)
+
+Prompt (owner): improve the enumeration or cleverly restate parts so the proof translates better into Lean.
+
+THE RESTATEMENT (HYP-4000, delivered): (i) 1D HELLY -- three open intervals share a point iff they pairwise intersect (proved: common point just above max of left endpoints; helly_three_Ioo, sorry-free, densely-ordered linear orders) => a non-origin triple-danger coincidence for gcd-reduced (u,v,w) at r=1/14 is EQUIVALENT to a bounded integer statement: exists (a,b,c) in [0,u]x[0,v]x[0,w] minus the two origin classes with 14|av-bu| <= u+v-1, 14|bw-cv| <= v+w-1, 14|aw-cu| <= u+w-1. NO measure theory, NO interval arithmetic in the verified layer. (ii) MONOTONICITY: any Q containing a coincidence-free triple with the same max inherits the nest => THM-601's 8100 subsets reduce to the 286 gcd-reduced triples of {1..13}. (iii) LEAN: NestDecidable.lean builds SORRY-FREE -- pairOK/hasCoincidence with Decidable instances, cap_universe_no_coincidence by native_decide (286 instances; decide alone hits the heartbeat cap -- noted), helly_three_Ioo. THM-601's proof-step (4) updated in canon to cite the machine-checked layer. VALIDATION: the integer criterion matches the exact interval computation on ALL 1140 triples <= 20 (0 mismatches, including the 79 wrapped cases via gcd reduction) -- helly_integer_criterion_klein.py.
+
+THE REUSABLE PATTERN (for the census ledger + pair law): measure statement -> containment + Helly -> bounded integer non-existence -> decide/native_decide. Candidates: THM-594(B)'s branch condition (already rational), the (m,m',K) census certificates (opus sec-7.2), the mediant criterion's boundary cases. The full formal bridge (hasCoincidence <-> the danger-set measure statement) = the Helly lemma (done) + the ||vx|| < r unfolding against kps's LonelyRunnerMathlib danger-set defs -- the natural next Lean session.
+
+FILES: 04-computation/helly_integer_criterion_klein.py (+.out); lean/TournamentH7/NestDecidable.lean (builds clean, 0 sorries; 4th module: PolygonPartitionDMNR, LRCFinalWindowBand, NestTelescope, NestDecidable); THM-601 updated; HYP-4000 (+INDEX).
+
+NEXT: (a) the bridge unfolding against LonelyRunnerMathlib's defs (danger sets are there per kps HYP-3952) => THM-601 end-to-end in Lean; (b) apply the pattern to the (m,m',K) ledger format; (c) the L_y closed-form comparison (still unclaimed, still the highest-leverage hp0cap item).
+
+---
+
 ## mac-mini-2026-07-01-S100 -- THM-601: dangerous patterns = P+Q <= 7 (one-line box-avoidance, NO Fourier); exact minima table (decide-checkable); d-fold lists collapse to the l1-simplex sum|m| <= 7 -- the Lean-ready normal form of THM-598/599 (HYP-3856)
 
 Prompt (owner): improve the enumeration / cleverly restate for Lean translation.
