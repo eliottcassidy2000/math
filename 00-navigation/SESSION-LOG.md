@@ -5,6 +5,17 @@ Owner flag assessed: 'censuses certify their families; nothing proves the famili
 FILES: 03-artifacts/drafts/thm602-completeness-leg-assessment-klein-S104.md; HYP-4009 (+INDEX).
 
 ---
+## mac-mini-2026-07-02-S15 -- THE COMPLETENESS LEG RESOLVED BY DESIGN (exhaustiveness by HNF normal form: the checker IS the census; one open sentence left = per-class base positivity, a finite rational list) + Mreach_ge_of_witness BUILT (the hpartA wiring target) (HYP-3872)
+
+Prompt (owner): module-6 soundness instantiation vs Mreach; case-split bookkeeping shapes; consider the THM-602 completeness leg (censuses certify contained families; nothing proves exhaustion).
+
+THE COMPLETENESS RESOLUTION (THM-602-S15 addendum, canon): the owner's observation split and dissolved.  (1) Cluster level: FREE -- the trichotomy is excluded middle on a decidable predicate (finite check vs the 30-pattern list).  (2) Configuration level: far elements = peel-generic (proved, no families); bounded cores = the real leg (THM-595 G1) -- RESOLVED BY DESIGN: the fuel checker certifies by NORMAL FORM, not family membership: every cluster's resonance lattice row-reduces to an HNF basis with heights <= 7, the HNF list is complete BY ALGEBRA (existence+uniqueness of HNF), and the checker lands every input in resolved-floor / HNF-class-base / mass-subcritical.  Structured censuses (drops/dilations/randoms) demoted to cross-checks.  THE ONE REMAINING OPEN SENTENCE of the whole program: 'every per-HNF-class drift-line base value is positive' -- a finite list of exact rationals, the same species as klein's six already-machine-checked rows.
+
+THE BRIDGE (Lean, green): Mreach_ge_of_witness in LRC14Assembly -- a witness t in [0,1] with minReach >= 1/14 gives Mreach >= 1/14 (le_csSup with the inline BddAbove from minReach_le_half).  This is the EXACT shape module-6 soundness must emit; hpartA's wiring is now one theorem application once the checker produces its witness.
+
+FILES: THM-602-S15 addendum; LRC14Assembly extended; HYP-3872.
+
+NEXT: (1) the per-HNF-class base list (the last computation); (2) module-6 soundness -> Mreach_ge_of_witness (kps's cert_ladder emits the witness); (3) hfloor bookkeeping (klein's tables + the case split).
 
 ## klein-2026-07-02-S103 -- THM-604(b) MACHINE-CHECKED: PhasedPairBound.lean SORRY-FREE (the phased pair bound: coprime + any phases + 2r(P+Q) <= 1 => intersection <= 2r/Q = one deep interval) -- with opus's OriginNestQ attainment, THM-604 IS COMPLETE IN LEAN (HYP-4008)
 

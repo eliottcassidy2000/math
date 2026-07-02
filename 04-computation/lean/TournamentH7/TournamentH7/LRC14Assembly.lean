@@ -48,4 +48,20 @@ example (v : Fin 13 → ℤ) (hdiv : ∀ i, ¬ ((14 : ℤ) ∣ v i)) :
     ∃ t : ℝ, LonelyRunner.Lonely 14 v t :=
   ⟨1 / 14, lrc14_no_multiple_of_14 v hdiv⟩
 
+/-! ### The module-6 → Mreach instantiation bridge (the hpartA wiring shape).
+
+A single rational witness time with clearance ≥ 1/14 bounds `Mreach` from
+below — the exact shape the fuel checker's soundness theorem must produce.
+This is the last interface between the certificate layer and the skeleton. -/
+
+theorem Mreach_ge_of_witness (v : Fin 13 → ℤ) (t : ℝ)
+    (ht : t ∈ Set.Icc (0 : ℝ) 1)
+    (hcl : (1 : ℝ) / 14 ≤ LonelyRunner.LRC14Concrete.minReach v t) :
+    (1 : ℝ) / 14 ≤ LonelyRunner.LRC14Concrete.Mreach v := by
+  refine le_trans hcl (le_csSup ?_ ?_)
+  · refine ⟨1 / 2, ?_⟩
+    rintro y ⟨s, -, rfl⟩
+    exact LonelyRunner.LRC14Concrete.minReach_le_half v s
+  · exact Set.mem_image_of_mem _ ht
+
 end TournamentH7.LRC14Assembly
