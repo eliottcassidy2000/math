@@ -1,0 +1,36 @@
+==========================================================================================
+TIGHT CENSUS WITH COLLAPSE RATES -- k=n-1 runners, threshold 1/n
+==========================================================================================
+
+--- n=4 (k=3 runners), speeds <= 40, primitive ---
+    universal candidate (2/n)Hx(n) = 2/3 = 0.666667
+    tight sets found: 1
+    (1, 2, 3)                        c =          2/3 = 0.666667  #wit=2 at 1/4,3/4                        UNIVERSAL
+    DISTINCT collapse rates at n=4: 1
+      c=         2/3 = 0.666667  x1 sets
+
+--- n=5 (k=4 runners), speeds <= 40, primitive ---
+    universal candidate (2/n)Hx(n) = 5/6 = 0.833333
+    tight sets found: 2
+    (1, 2, 3, 4)                     c =          5/6 = 0.833333  #wit=4 at 1/5,2/5,3/5,4/5                UNIVERSAL
+    (1, 3, 4, 7)                     c =        29/42 = 0.690476  #wit=4 at 1/5,2/5,3/5,4/5                
+    DISTINCT collapse rates at n=5: 2
+      c=       29/42 = 0.690476  x1 sets
+      c=         5/6 = 0.833333  x1 sets
+
+--- n=6 (k=5 runners), speeds <= 30, primitive ---
+    universal candidate (2/n)Hx(n) = 2/5 = 0.400000
+    tight sets found: 2
+    (1, 2, 3, 4, 5)                  c =          2/5 = 0.400000  #wit=2 at 1/6,5/6                        UNIVERSAL
+    (1, 3, 4, 5, 9)                  c =          2/5 = 0.400000  #wit=2 at 1/6,5/6                        UNIVERSAL
+    DISTINCT collapse rates at n=6: 1
+      c=         2/5 = 0.400000  x2 sets
+
+--- n=7 (k=6 runners), speeds <= 24, primitive ---
+    universal candidate (2/n)Hx(n) = 7/10 = 0.700000
+    tight sets found: 1
+    (1, 2, 3, 4, 5, 6)               c =         7/10 = 0.700000  #wit=6 at 1/7,2/7,3/7,4/7,5/7,6/7        UNIVERSAL
+    DISTINCT collapse rates at n=7: 1
+      c=        7/10 = 0.700000  x1 sets
+
+DONE.
