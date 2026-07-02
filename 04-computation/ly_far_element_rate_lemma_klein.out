@@ -1,0 +1,26 @@
+============================================================================================
+(1) RATE LEMMA verification: |J(A, E+{w}) - (1-|A|/7) J(A,E)| <= 2 comp |A| / w
+============================================================================================
+  E=[0, 1, 2, 3] A=(1,) w=40: |err|=0.000510 <= bound 0.250000  OK=True
+  E=[0, 1, 2, 3] A=(1,) w=97: |err|=0.000386 <= bound 0.103093  OK=True
+  E=[0, 1, 2, 3] A=(1,) w=200: |err|=0.000204 <= bound 0.050000  OK=True
+  E=[0, 1, 2, 3] A=(2, 4) w=40: |err|=0.004762 <= bound 0.500000  OK=True
+  E=[0, 1, 2, 3] A=(2, 4) w=97: |err|=0.001964 <= bound 0.206186  OK=True
+  E=[0, 1, 2, 3] A=(2, 4) w=200: |err|=0.000000 <= bound 0.100000  OK=True
+  E=[0, 1, 2, 3] A=(1, 3, 5) w=40: |err|=0.005102 <= bound 0.600000  OK=True
+  E=[0, 1, 2, 3] A=(1, 3, 5) w=97: |err|=0.001052 <= bound 0.247423  OK=True
+  E=[0, 1, 2, 3] A=(1, 3, 5) w=200: |err|=0.000340 <= bound 0.120000  OK=True
+
+============================================================================================
+(2) DAMPED comparison: max L_y^inf over bounded shapes (k elts) vs cap_{k+1}; W0 thresholds
+============================================================================================
+  k=8->row 9: max L_y^inf = 0.446993 at E=[0, 1, 2, 3, 4, 5, 6, 7];  cap_9 = 0.494256;  margin = +0.047263  => far rows CLOSED for w >= K/margin
+  k=9->row 10: max L_y^inf = 0.523243 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8];  cap_10 = 0.604396;  margin = +0.081153  => far rows CLOSED for w >= K/margin
+  k=10->row 11: max L_y^inf = 0.651019 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9];  cap_11 = 0.725275;  margin = +0.074256  => far rows CLOSED for w >= K/margin
+  k=11->row 12: max L_y^inf = 0.703345 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12];  cap_12 = 0.857143;  margin = +0.153798  => far rows CLOSED for w >= K/margin
+
+(3) THE RESTRUCTURED PROOF (THM-534 open half):
+    [bounded-spread census: exact, decide]  +  [rate lemma: elementary, formalizable]
+    +  [damped comparison: finite rational, decide]  +  [w-band w < W0: finite exact sweep]
+    +  [clustered far blocks: the renormalization tower (opus F-lemmas)]
+DONE.

@@ -9,6 +9,19 @@ THE LEDGER (drafts/lrc14-proof-dag-ledger-macmini-20260702-S1.md): 5 layers, eve
 FILES: THM-602; the ledger; HYP-3858.
 
 NEXT: (1) the census engines (lattice HNF list is tiny; simplex minima a few hundred entries); (2) the commensuration mini-proof; (3) hand the ledger to the swarm as the coordination surface -- every agent can pick a node and flip its tag.
+## klein-2026-07-02-S94 -- THE L_y FAR-ELEMENT RATE LEMMA (proved; damped comparison POSITIVE at every k) => hp0cap's #1 blocker RESTRUCTURED into decide-shaped legs + THE LRC14 SORRY-LEDGER (every remaining node, ranked; verdict: nothing left needs new analytic ideas) (HYP-4001/4002)
+
+Prompt (owner): no Lean builds; get LRC(14) to sorry-free-formalizable state; highest-leverage reasoning tasks for proof structure.
+
+HYP-4001 (delivered): THE RATE LEMMA -- |J(A, E u {w}) - (1-|A|/7) J(A,E)| <= 2 comp(A,E) |A|/w (proof: per component of Good_A(E), frac(wx) equidistributes with at most 2 partial wraps per avoided sector; elementary, exact, verified all cases within bound). COROLLARY: L_y(E u {w}) <= L_y^inf(E) + K(E)/w, L_y^inf = the DAMPED functional sum y_r (1-r/7) S_r. DAMPED COMPARISON (exact rationals, spread<=12 windows): max L_y^inf vs cap has POSITIVE margin at every sampled k (8->9: +0.047; 9->10: +0.081; 10->11: +0.074; 11->12: +0.154). => THM-534's open half (the hp0cap #1 blocker, 'consec maximizes L_y over ALL E') RESTRUCTURES as: [bounded-spread census, exact/decide] + [rate lemma, PROVED] + [damped comparison, decide] + [finite w-band w < K/margin, exact sweep] + [clustered far blocks -> the renormalization tower]. Every leg decidable or proved; formalization = the HYP-4000 Helly/decide pattern + LRCFinalWindowBand-style interval bookkeeping.
+
+HYP-4002 (delivered): THE SORRY-LEDGER (03-artifacts/drafts/lrc14-sorry-ledger-klein-S94.md), from a full survey: Tier 0 = N1 hp0cap (now restructured, above) + N2 hpartA (kps-S30's dissolution needs: rotation+Fubini identities written as lemmas, the (*)-census run symbolically, skeleton node discharged); Tier 1 (all finite/structural): F3 rate (mac-mini claim), G2 divisor-chain rigidity (1-2 paragraphs, UNWRITTEN -- cheapest Tier-1 item), F-iii/iv sweeps, G1 V<=25 extension, R2 write-out; Tier 2 non-blocking. Lean islands (8 sorry-free modules incl. today's ecosystem) await skeleton wiring; skeleton's 4 named hypotheses mapped to ledger nodes. HOUSEKEEPING PLAN: two THM-599s + THM-600 duplicate + two THM-601s -- keep 599=torus (kps first), quintic->602; keep 601=nest (klein first), dangerous-pattern->603 (mac-mini's call, two Lean docstrings to touch); merge/delete THM-600 duplicate. VERDICT: ~60-70%% proved-or-machine-checked; NO remaining node requires a new analytic idea -- sorry-free formalizability is now project management, not a mathematical bet.
+
+FILES: 04-computation/ly_far_element_rate_lemma_klein.py (+.out); 03-artifacts/drafts/lrc14-sorry-ledger-klein-S94.md; HYP-4001/4002 (+INDEX).
+
+NEXT (by ledger rank): (a) N1 legs (a)+(c) full-window runs per k (decide-shaped, unclaimed); (b) N2: write kps's rotation+Fubini identities as standalone lemmas; (c) N4 G2 divisor-chain paragraph (cheapest close); (d) the numbering cleanup (coordinator or owners).
+
+---
 
 ## kind-pasteur-2026-07-01-S34 -- LRCGapSurplusLedger.lean: THE SECTION-FORMULA LEDGER MACHINE-CHECKED (computable Fgap/Aledger over Q; all 13 ledger rows by native_decide incl. k=13's 144699147/1267426160; the argmin-table floor theorem; DAG glue with the analytic bridge as a named hypothesis parameter -- no axioms beyond native_decide trust, no sorries) (HYP-3957)
 
