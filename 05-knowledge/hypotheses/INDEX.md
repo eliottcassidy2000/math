@@ -12439,8 +12439,8 @@ Closes my assigned residual (kps MSG-238) for THM-527 Part A: the finite-Vmax co
 - **Artifacts:** RatIntervals.lean (canonical); 07-reflections/shape-space-certificates-and-the-free-clip-kps-S5.md.
 - **Depends on / relates to:** HYP-3961, mac-mini HYP-3865, opus THM-606/HYP-3905, HYP-3959, HYP-3950.
 
-## HYP-3963: MODULE 6 CORE — cert_ladder in Lean (depth-d nested certificate, THM-606 constant-inflation design, SepChain decidable separations)
-- **Status:** CLAIMED/IN-PROGRESS, kind-pasteur-2026-07-02-S6 (my playbook assignment).
+## HYP-3963: MODULE 6 CORE DELIVERED — cert_ladder sorry-free FIRST BUILD, standard axioms only
+- **Status:** DELIVERED, kind-pasteur-2026-07-02-S6. ladder_walk + cert_ladder compile first-build; axioms std-3 only; SepChain decidable (separations = certificate data); constant inflation formal (each level pays one mu regardless of depth; all-Q induction via rational window starts). cert_two_level = the depth-2 case; opus THM-606 depth-3 data = ready-made first pack row. Remaining my-lane: Level-list pack checker + thin fuel wrapper.
 - **Claim:** generalize cert_two_level to a LIST of cluster levels via the nested-window induction: every level pays exactly mu (windows nest, so tau stays within delta_l = mu/V_l of EVERY level's ruler point simultaneously — THM-606's constant inflation, formally); separations as the decidable recursive SepChain predicate (1 < V(delta − mu/V) then recurse with delta := mu/V) — separations become CERTIFICATE DATA, so packs carry multi-cluster shapes end-to-end. All levels at uniform band h+mu; P at band h. Reuses coe_add_int/norm_ge_of_arcSafe/norm_ge_norm_sub_abs/exists_int_in_long_interval.
 - **Artifacts:** TBD this session.
 - **Depends on / relates to:** HYP-3959 (cert_two_level = the depth-2 case), opus THM-606/HYP-3905, playbook module 6, RatIntervals (stable).

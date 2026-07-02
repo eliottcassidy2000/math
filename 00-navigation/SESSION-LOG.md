@@ -11,6 +11,20 @@ INSIGHT 2 (interface question, flagged to mac-mini before anyone over-proves): T
 INSIGHT 3 (process, dogfooded here): the morning's union-merge collision left conflict markers INSIDE RatIntervals.lean on origin (kps repaired). Lean modules need single-writer-per-session; concurrent extensions go in satellite files until the module owner merges. Suggested as swarm policy.
 
 Files: RatIntervalsWrap.lean (new, sorry-free); HYP-3907 (+INDEX). 17 green builds across S34-38. No canon overridden.
+## kind-pasteur-2026-07-02-S6 -- MODULE 6 CORE SORRY-FREE ON THE FIRST BUILD: cert_ladder (depth-d nested certificate, THM-606 constant inflation, SepChain decidable separations) -- STANDARD AXIOMS ONLY; the multi-scale glue is done (HYP-3963)
+
+Prompt: work concurrently toward the sorry-free formalization; insight + better ways.
+
+CONTEXT ON SYNC: module 0 stable (the two concurrent repairs -- mine S5, mac-mini S9/HYP-3866 -- converged to the same canonical content; no markers, lake green; the fleet rule "never union-merge .lean" now written by both of us).
+
+DELIVERED (LRCWitnessCert.lean extension; FIRST-BUILD CLEAN; axioms [propext, Classical.choice, Quot.sound] only):
+ - Level structure (offs, c, V) + **SepChain** (decidable recursive separations: 0 < V and 1 < V(delta - mu/V), recurse with delta := mu/V) -- SEPARATIONS ARE NOW CERTIFICATE DATA: a pack row carries a whole multi-cluster shape, checkable by decide.
+ - **ladder_walk** (the induction): nested windows [t0Q, t0Q + mu/V_l]; because windows NEST, the final tau stays within mu/V_l of EVERY level's ruler point simultaneously => each level pays exactly ONE mu of band inflation, independent of depth -- THM-606's constant-inflation design, formally. The induction stays in Q (t0Q = (j + c)/V rational; only tau is real), keeping the playbook's all-Q discipline through the recursion.
+ - **cert_ladder** (module 6 core): P at band h + all levels at the uniform band h+mu + SepChain => a common h-lonely time for P and every cluster {V_l - o}. cert_two_level is now the depth-2 special case; opus's exact depth-3 family (THM-606) is an instance awaiting a pack row.
+
+INSIGHT (the "better way" the dispatch asked for): the ladder makes the CERTIFICATE SCHEMA closed under depth -- a multi-cluster pack row = (P, [(offs_l, c_l)], lo, hi, mu) + the SepChain thresholds; V's remain free coordinates (boxes/tails per level). Combined with the shape-space principle (S5) the ENTIRE covering case reduces to: finitely many pack rows (THM-602's shape enumeration) x [cert_ladder]. The remaining Lean surface on my lane: the pack-ingestion checker for Level-lists (a CertRow generalization -- mechanical, LRCCertTable pattern) and the fuel-indexed checkCluster wrapper (now a thin layer over cert_ladder + SepChain decide).
+
+HONEST: cert_ladder needs its consumers (multi-cluster pack rows -- generator extension is mechanical; opus's depth-3 data is ready-made); the below-V* windows and THM-602's shape enumeration remain the open DAG surface (mac-mini's lane); LRC(14) NOT yet assembled. Files: LRCWitnessCert.lean (+~150 lines), full project lake green (1814 jobs). No canon overridden.
 
 ## opus-2026-07-02-S37 -- THM-607: THE CERTIFICATE-BOX THEOREM (study session per owner directive): the exact V-region of fixed ladder data, the region/arithmetic factorization with Module-0, sharp thresholds, mesh tiling; 400-tuple exact verification (HYP-3906)
 

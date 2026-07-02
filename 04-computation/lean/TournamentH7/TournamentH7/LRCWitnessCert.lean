@@ -363,5 +363,156 @@ theorem cert_two_level {h μ : ℚ} (h0 : 0 ≤ h) (hμpos : 0 < μ) {cTar₁ cT
     rw [hswap]
     simpa using hsafe
 
+/-! ## MODULE 6 CORE: the depth-d ladder (HYP-3963; THM-606's constant-inflation design)
+
+A ladder level is a cluster (offsets, ruler phase, reference speed).  The nested-window
+induction places one ruler point per level; because the windows NEST, the final time stays
+within `μ/V_ℓ` of level ℓ's ruler point for EVERY ℓ simultaneously — each level pays exactly
+one `μ` of band inflation, independent of depth (THM-606).  Separations are the decidable
+`SepChain` predicate, so they are certificate DATA. -/
+
+/-- One ladder level: cluster offsets, ruler phase, reference speed. -/
+structure Level where
+  offs : List ℤ
+  c    : ℚ
+  V    : ℤ
+
+/-- The chained separation conditions, carrying the current window width `δ`. -/
+def SepChain (μ : ℚ) : ℚ → List Level → Prop
+  | _, [] => True
+  | δ, L :: rest => 0 < L.V ∧ 1 < (L.V : ℚ) * (δ - μ / L.V) ∧ SepChain μ (μ / L.V) rest
+
+instance (μ : ℚ) : ∀ (δ : ℚ) (Ls : List Level), Decidable (SepChain μ δ Ls)
+  | _, [] => by unfold SepChain; infer_instance
+  | δ, L :: rest => by
+      have := instDecidableSepChain μ (μ / L.V) rest
+      unfold SepChain
+      infer_instance
+
+/-- **The ladder walk**: nested-window induction over the levels. -/
+theorem ladder_walk {h μ : ℚ} (h0 : 0 ≤ h) (hμpos : 0 < μ) {lo hi : ℚ} :
+    ∀ (Ls : List Level) (a δ : ℚ), 0 < δ →
+    lo ≤ a → a + δ ≤ hi →
+    SepChain μ δ Ls →
+    (∀ L ∈ Ls, ∀ o ∈ L.offs, 0 ≤ o ∧ arcSafe (h + μ) o L.c lo hi) →
+    ∃ τ : ℝ, ((a : ℚ) : ℝ) ≤ τ ∧ τ ≤ ((a : ℚ) : ℝ) + ((δ : ℚ) : ℝ) ∧
+      ∀ L ∈ Ls, ∀ o ∈ L.offs,
+        (h : ℝ) ≤ ‖((((L.V - o : ℤ) : ℝ) * τ : ℝ) : UnitAddCircle)‖ := by
+  intro Ls
+  induction Ls with
+  | nil =>
+      intro a δ hδ _ _ _ _
+      refine ⟨((a : ℚ) : ℝ), le_refl _, ?_, ?_⟩
+      · have : (0:ℝ) < ((δ : ℚ) : ℝ) := by exact_mod_cast hδ
+        linarith
+      · intro L hL; cases hL
+  | cons L rest ih =>
+      intro a δ hδ halo hahi hsep hsafe
+      obtain ⟨hVpos, hVlen, hsep'⟩ := hsep
+      have hVR : (0 : ℝ) < (L.V : ℝ) := by exact_mod_cast hVpos
+      have hVQpos : (0 : ℚ) < (L.V : ℚ) := by exact_mod_cast hVpos
+      set δ' : ℚ := μ / L.V with hδ'def
+      have hδ'pos : 0 < δ' := div_pos hμpos hVQpos
+      obtain ⟨j, hj1, hj2⟩ := exists_int_in_long_interval
+        (a := (L.V : ℝ) * ((a : ℚ) : ℝ) - ((L.c : ℚ) : ℝ))
+        (b := (L.V : ℝ) * (((a : ℚ) : ℝ) + ((δ : ℚ) : ℝ) - ((δ' : ℚ) : ℝ)) - ((L.c : ℚ) : ℝ))
+        (by
+          have h1 : (1 : ℚ) < (L.V : ℚ) * (δ - δ') := by rw [hδ'def]; exact hVlen
+          have h1R : (1 : ℝ) < (L.V : ℝ) * (((δ : ℚ) : ℝ) - ((δ' : ℚ) : ℝ)) := by
+            exact_mod_cast h1
+          nlinarith)
+      set t0Q : ℚ := ((j : ℚ) + L.c) / (L.V : ℚ) with ht0Q
+      have ht0cast : ((t0Q : ℚ) : ℝ) = ((j : ℝ) + ((L.c : ℚ) : ℝ)) / (L.V : ℝ) := by
+        rw [ht0Q]; push_cast; ring
+      have hVt0 : (L.V : ℝ) * ((t0Q : ℚ) : ℝ) = (j : ℝ) + ((L.c : ℚ) : ℝ) := by
+        rw [ht0cast]; field_simp
+      have ht0a : ((a : ℚ) : ℝ) ≤ ((t0Q : ℚ) : ℝ) := by
+        rw [ht0cast, le_div_iff₀ hVR]; linarith
+      have ht0b : ((t0Q : ℚ) : ℝ) ≤ ((a : ℚ) : ℝ) + ((δ : ℚ) : ℝ) - ((δ' : ℚ) : ℝ) := by
+        rw [ht0cast, div_le_iff₀ hVR]; linarith
+      have ht0aQ : lo ≤ t0Q := by
+        have h1 : ((lo : ℚ) : ℝ) ≤ ((a : ℚ) : ℝ) := by exact_mod_cast halo
+        have h2 : ((lo : ℚ) : ℝ) ≤ ((t0Q : ℚ) : ℝ) := le_trans h1 ht0a
+        exact_mod_cast h2
+      have ht0bQ : t0Q + δ' ≤ hi := by
+        have h1 : ((a : ℚ) : ℝ) + ((δ : ℚ) : ℝ) ≤ ((hi : ℚ) : ℝ) := by exact_mod_cast hahi
+        have h2 : ((t0Q + δ' : ℚ) : ℝ) ≤ ((hi : ℚ) : ℝ) := by
+          push_cast
+          push_cast at ht0b
+          linarith
+        exact_mod_cast h2
+      obtain ⟨τ, hτ1, hτ2, hτrest⟩ := ih t0Q δ' hδ'pos ht0aQ ht0bQ hsep'
+        (fun L' hL' => hsafe L' (List.mem_cons_of_mem _ hL'))
+      refine ⟨τ, ?_, ?_, ?_⟩
+      · exact le_trans ht0a hτ1
+      · have h3 : ((δ' : ℚ) : ℝ) + ((t0Q : ℚ) : ℝ) ≤ ((a : ℚ) : ℝ) + ((δ : ℚ) : ℝ) := by
+          linarith [ht0b]
+        linarith [hτ2]
+      · intro L' hL' o ho
+        rcases List.mem_cons.mp hL' with rfl | hL'
+        · obtain ⟨ho0, hosafe⟩ := hsafe L' (List.mem_cons_self ..) o ho
+          have hτlo' : ((lo : ℚ) : ℝ) ≤ τ := by
+            have h1 : ((lo : ℚ) : ℝ) ≤ ((t0Q : ℚ) : ℝ) := by exact_mod_cast ht0aQ
+            linarith [hτ1]
+          have hτhi' : τ ≤ ((hi : ℚ) : ℝ) := by
+            have h1 : ((t0Q + δ' : ℚ) : ℝ) ≤ ((hi : ℚ) : ℝ) := by exact_mod_cast ht0bQ
+            push_cast at h1
+            linarith [hτ2]
+          have hsafeτ := norm_ge_of_arcSafe ho0 (by linarith : (0:ℚ) ≤ h + μ) hosafe hτlo' hτhi'
+          have hcast : (((h + μ : ℚ)) : ℝ) = (h : ℝ) + (μ : ℝ) := by push_cast; ring
+          rw [hcast] at hsafeτ
+          have hkey : ((L'.V - o : ℤ) : ℝ) * τ
+              = ((((L'.c : ℚ) : ℝ) - (o : ℝ) * τ) + (L'.V : ℝ) * (τ - ((t0Q : ℚ) : ℝ))) + (j : ℝ) := by
+            push_cast
+            push_cast at hVt0
+            nlinarith [hVt0]
+          rw [hkey, coe_add_int]
+          have hdrift : |((((L'.c : ℚ) : ℝ) - (o : ℝ) * τ) + (L'.V : ℝ) * (τ - ((t0Q : ℚ) : ℝ)))
+              - (((L'.c : ℚ) : ℝ) - (o : ℝ) * τ)| ≤ (μ : ℝ) := by
+            have h1 : ((((L'.c : ℚ) : ℝ) - (o : ℝ) * τ) + (L'.V : ℝ) * (τ - ((t0Q : ℚ) : ℝ)))
+                - (((L'.c : ℚ) : ℝ) - (o : ℝ) * τ) = (L'.V : ℝ) * (τ - ((t0Q : ℚ) : ℝ)) := by ring
+            rw [h1]
+            have h2 : (0:ℝ) ≤ τ - ((t0Q : ℚ) : ℝ) := by linarith [hτ1]
+            have h3 : τ - ((t0Q : ℚ) : ℝ) ≤ ((δ' : ℚ) : ℝ) := by linarith [hτ2]
+            rw [abs_of_nonneg (by nlinarith)]
+            have hVδ' : (L'.V : ℝ) * ((δ' : ℚ) : ℝ) = (μ : ℝ) := by
+              rw [hδ'def]; push_cast; field_simp
+            nlinarith
+          have hflip : ‖(((o : ℝ) * τ - ((L'.c : ℚ) : ℝ) : ℝ) : UnitAddCircle)‖
+              = ‖((((L'.c : ℚ) : ℝ) - (o : ℝ) * τ : ℝ) : UnitAddCircle)‖ := by
+            have hne : (((L'.c : ℚ) : ℝ) - (o : ℝ) * τ : ℝ)
+                = -(((o : ℝ) * τ - ((L'.c : ℚ) : ℝ))) := by ring
+            rw [hne]
+            have hcoe : ((-(((o : ℝ) * τ - ((L'.c : ℚ) : ℝ))) : ℝ) : UnitAddCircle)
+                = -((((o : ℝ) * τ - ((L'.c : ℚ) : ℝ) : ℝ) : UnitAddCircle)) := rfl
+            rw [hcoe, norm_neg]
+          have hlip := norm_ge_norm_sub_abs (((L'.c : ℚ) : ℝ) - (o : ℝ) * τ)
+            (((((L'.c : ℚ) : ℝ) - (o : ℝ) * τ) + (L'.V : ℝ) * (τ - ((t0Q : ℚ) : ℝ))))
+          rw [hflip] at hsafeτ
+          linarith
+        · exact hτrest L' hL' o ho
+
+/-- **MODULE 6 CORE**: one multi-cluster certificate (small speeds at band `h`, all ladder
+levels at the uniform band `h + μ`, `SepChain` separations) yields a common `h`-lonely time. -/
+theorem cert_ladder {h μ : ℚ} (h0 : 0 ≤ h) (hμpos : 0 < μ) {lo hi : ℚ}
+    (P : List ℤ) (Ls : List Level)
+    (hPpos : ∀ s ∈ P, 0 ≤ s) (hPsafe : ∀ s ∈ P, arcSafe h s 0 lo hi)
+    (hlohi : lo < hi)
+    (hsep : SepChain μ (hi - lo) Ls)
+    (hLsafe : ∀ L ∈ Ls, ∀ o ∈ L.offs, 0 ≤ o ∧ arcSafe (h + μ) o L.c lo hi) :
+    ∃ τ : ℝ,
+      (∀ s ∈ P, (h : ℝ) ≤ ‖(((s : ℝ) * τ : ℝ) : UnitAddCircle)‖) ∧
+      ∀ L ∈ Ls, ∀ o ∈ L.offs,
+        (h : ℝ) ≤ ‖((((L.V - o : ℤ) : ℝ) * τ : ℝ) : UnitAddCircle)‖ := by
+  obtain ⟨τ, hτ1, hτ2, hτL⟩ := ladder_walk h0 hμpos Ls lo (hi - lo)
+    (by linarith) (le_refl _) (by linarith) hsep hLsafe
+  refine ⟨τ, ?_, hτL⟩
+  intro s hs
+  have hτhi : τ ≤ ((hi : ℚ) : ℝ) := by
+    have h1 : ((lo : ℚ) : ℝ) + ((hi - lo : ℚ) : ℝ) = ((hi : ℚ) : ℝ) := by push_cast; ring
+    linarith [hτ2]
+  have := norm_ge_of_arcSafe (hPpos s hs) h0 (hPsafe s hs) hτ1 hτhi
+  simpa using this
+
 end WitnessCert
 end LonelyRunner
