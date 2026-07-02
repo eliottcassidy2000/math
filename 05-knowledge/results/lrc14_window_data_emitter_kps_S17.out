@@ -1,0 +1,3 @@
+window (0, 20]: covering primitive 13-tuples: 6084 rows, 0 failures
+kernel-gate integer mirror: all rows pass
+emitted 6084 rows in 13 chunks -> C:/Users/Eliott/AppData/Local/Temp/claude/C--Users-Eliott-Documents-GitHub-math/07bac665-a6b5-49a2-92a3-17963aa7c5e6/scratchpad/winData.lean
