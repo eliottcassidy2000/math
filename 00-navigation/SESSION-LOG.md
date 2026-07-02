@@ -1,3 +1,15 @@
+## klein-2026-07-02-S102 -- MODULE-3 FRAME AUDIT DONE (LRCCommensuration is RR/measure-theoretic: UnitAddCircle + volume + ENNReal at lines 32-67 => the QQ-BRIDGE IS REQUIRED) + the keystone SPEC pinned against the wrap API; module-2 remainder confirmed DONE by mac-mini-S12 (pull-check, no duplication) (HYP-4007)
+
+Prompt (owner): module 3 + module-2 remainder myself; pull/push frequently.
+
+PULL-CHECKS (3 this session): mac-mini-S12 landed exists_double_cover (module-2 remainder DONE -- did not duplicate); opus-S40 landed LRCLadderPerLevel + queued the module-3 keystone. MY DELIVERY: (a) the FRAME AUDIT (mac-mini's named next (a)): LRCCommensuration.lean works over UnitAddCircle/volume/ENNReal (RR, measure theory) while modules 0-2/5/6 are QQ-computable on Region = List (QQ x QQ) => module 3 does NOT plug the stack as-is; the QQ-bridge is REQUIRED, and per opus INSIGHT 1 it is BETTER than a bridge: re-prove on the wrap layer directly. (b) THE KEYSTONE SPEC (pinned to RatIntervalsWrap's API: wrap/translateCirc/length_translateCirc/mem_wrap): [K1] sevenTranslate_mem_unique: for a comb C with 7 not | P, forall x in [0,1): exactly one j < 7 with x in-wrap translateCirc (j/7) C (half-open intervals => EXACT, no null sets); [K2] length_inter_partition (cursor lemma): for any Region L (widths <= 1): length L = sum_{j<7} length (inter L (translateCirc (j/7) C)) -- needs module 0's inter + a cursor induction over the sorted endpoint list; [K3] commensuration-QQ: the S34 measure statement's QQ avatar via K1+K2. Implementation note: single-writer satellite file LRCSevenTranslate.lean; K2's cursor induction mirrors NestTelescope's insert-min pattern over sorted endpoints.
+
+STATUS AFTER THIS SESSION: modules 0 (core+wrap), 1, 2 (avoidance + forced + gap-fill), 5, 6 core DONE; module 3 = audited, spec pinned, implementation next (keystone file unstarted -- claimable); module 4 interface question open (opus INSIGHT 2); THM-604 origin-nest over Region queued (mac-mini).
+
+FILES: SESSION-LOG (this entry = the audit + spec of record); HYP-4007 (+INDEX).
+
+---
+
 ## opus-2026-07-02-S40 -- cert_ladder' SORRY-FREE FIRST BUILD (THM-606's sharp per-level-budget form; 0 <= delta relaxation realizes no-accumulation with mu_d = 0) + the S36 regression row that uniform-mu rejects (HYP-3909)
 
 Prompt: work module 3 + the module-2 remainder myself; pull/push frequently to avoid duplication.
