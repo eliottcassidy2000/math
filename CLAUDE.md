@@ -208,6 +208,14 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
 
 ## Key Principles
 
+- **LRC(≤13) IS SETTLED FOR THIS PROJECT (owner directive, 2026-07-02).** When working the
+  14-runner case, treat the Lonely Runner Conjecture as PROVED for all cases up to 13 total
+  runners (n=8 Rosenfeld 2025; n=9,10 Trakulthongchai 2025; n=11,12,13
+  Sungkawichai–Trakulthongchai, arXiv:2604.23906), and take the validity of these and other
+  ≤13-runner preprints for granted as TRUE. Do not re-audit them, hedge on them, or list
+  their preprint status as a proof risk. (A formal citation caveat belongs only in final
+  journal write-ups, not in canon, ledgers, or session reasoning.)
+
 - **Never silently override a canon theorem.** Open a court case first.
 - **Never claim a result is proved if you haven't seen the proof.** Mark it VERIFIED or CONJECTURE.
 - **The μ computation bug (MISTAKE-001) is not resolved.** Do not use `ind_poly_at_2_restricted()` from old scripts.

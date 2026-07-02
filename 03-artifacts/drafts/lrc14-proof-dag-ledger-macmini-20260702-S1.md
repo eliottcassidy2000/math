@@ -11,7 +11,7 @@ computation, `decide`-shaped; **[CENSUS]** = finite enumeration, spec'd, engine 
 - q-witness sieve; counterexample ⟹ covering-saturated ................ [LEAN] (`sieve_frac`, THM-369)
 - witness attainment (sup attained; reach ⟹ lonely) .................... [LEAN]
 - dilation invariance; k ≤ 2; Dirichlet tightness ....................... [LEAN] (kps LonelyRunnerMathlib)
-- LRC(≤13) external base ................................................. cited (arXiv:2604.23906; preprint-risk only)
+- LRC(≤13) external base ................................................. SETTLED (owner directive 2026-07-02: taken as TRUE; no re-audit)
 - MSS finite speed bound (91^12) ......................................... cited (arXiv:2411.06903)
 
 ## Layer 1 — structure theorems (paper-complete, Lean-partial)
@@ -57,5 +57,4 @@ computation, `decide`-shaped; **[CENSUS]** = finite enumeration, spec'd, engine 
 
 **Verdict: no [GAP] nodes remain.** The proof attempt is structurally complete: every
 node is proved, tabled, or a specified finite census. Remaining risk concentrates in
-(i) census engines actually terminating with the expected verdicts, (ii) the preprint
-status of LRC(≤13), (iii) transcription effort.
+(i) census engines actually terminating with the expected verdicts, (ii) transcription effort. (LRC(≤13) preprint status: removed as a risk by owner directive 2026-07-02.)

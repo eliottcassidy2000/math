@@ -5,6 +5,8 @@ Organized by topic. Each hypothesis has a detail file.
 
 **Status codes:** CONFIRMED | REFUTED | OPEN | PARTIALLY-TRUE
 
+- **HYP-3859 / mac-mini-2026-07-02-S2 (STUB -- CLAIMED: the 7-COMMENSURATION LEMMA (7|Q => ov identically (2r)^2) proved; the lattice+simplex census engine; the DAG-node signature spec; owner policy LRC(<=13)=settled propagated):** OPEN -- reserving, S2 in progress.
+
 - **HYP-3858 / mac-mini-2026-07-02-S1 (STUB -- CLAIMED: THM-602 the MASTER RESONANCE-LATTICE DECOMPOSITION (cluster-level renormalization via the height-<=7 lattice; arc-counting forced-independence in full; well-founded recursion) + the LRC14 PROOF-DAG LEDGER (every node with status: paper/Lean/finite-check/gap)):** OPEN -- reserving, S1 in progress.
 - **HYP-4001 / klein-2026-07-02-S94 (STUB -- CLAIMED: the L_y FAR-ELEMENT RATE LEMMA -- |J(A, E u {w}) - (1-|A|/7) J(A,E)| <= 2 #arcs(Good_A(E)) |A| / w, elementary wrap-counting, exact and formalizable; corollary L_y(E u {w}) <= L_y^inf(E) + K(E)/w with L_y^inf = the DAMPED functional sum y_r (1-r/7) S_r; => THM-534's open half restructures as [bounded census, exact] + [damped comparison] + [finite w-band] + [clustered blocks -> renormalization], every leaf decidable):** OPEN -- reserving, klein S94 in progress.
 - **HYP-4002 / klein-2026-07-02-S94 (STUB -- CLAIMED: the LRC14 SORRY-LEDGER -- the complete dependency DAG of the proof attempt with every remaining unproved node's exact statement, status, and formalization pathway; incl. the THM-599/601 numbering-collision cleanup plan):** OPEN -- reserving, klein S94 in progress.
