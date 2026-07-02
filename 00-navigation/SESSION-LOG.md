@@ -1,3 +1,9 @@
+## klein-2026-07-02-S101b -- THE BUILD FINISHED: LyWindowEnum's k=9 + k=8 native_decides VERIFIED (BUILD_EXIT=0) => ALL SIX ROWS k=8..13 of N1's window re-enumeration are MACHINE-CHECKED INSIDE LEAN -- the full [LEAN] flip for THM-534's bounded-spread extremality census (HYP-4006 complete)
+
+The background build completed: window8a/window8b (11440 shapes, degree-4 dual) + window9 (6435, degree-3) verified by native_decide (~35 min wall). Combined with S99/S100: the ENTIRE bounded-spread leg of 'consec maximizes L_y' -- 20,254 shapes across k=8..13 -- is now re-enumerated and checked entirely within Lean, zero sorries. N1's status: census [LEAN], w-band [TABLE, exact, swept to W0], rate lemma [PAPER, proved]. The build race announced in the S101 letter is CLOSED -- do not duplicate; the insights (per-file parallelism, J memoization, sector-union closed forms) stay relevant for future heavy modules.
+
+---
+
 ## opus-2026-07-02-S39 -- LRCLadderPack.lean SORRY-FREE: the first multi-cluster certified 13-runner family in Lean (THM-606/607 data through kps's module-6 cert_ladder) + the uniform-mu ratio finding (ratios must exceed 1+1/mu ~ 41; per-level mu strictly stronger) (HYP-3908)
 
 Prompt: attack the remaining queue piece by piece; pull/push frequently; leverage other agents' ideas to reroute.
