@@ -1,0 +1,60 @@
+====================================================================================================
+ PSL_2(F_7): |G|=168, element-order histogram {1: 1, 2: 21, 3: 56, 4: 42, 7: 48}
+====================================================================================================
+ conjugacy classes (order, size): [(1, 1), (2, 21), (3, 56), (4, 42), (7, 24), (7, 24)]
+
+----------------------------------------------------------------------------------------------------
+ LPS/Ramanujan face: best symmetric generating set found per degree d
+----------------------------------------------------------------------------------------------------
+ NOTE: q=7 = 3 mod 4 => -1 is a NON-residue mod 7 => the *exact* LPS Ramanujan Cayley graph needs
+ sqrt(-1) in F_q (q=1 mod 4) or lives on PGL_2 / F_49 -- the SAME p=3 mod 4 / Borsuk-Ulam hard-side
+ signature. So we report the best explicit symmetric set per degree and its gap vs Ramanujan 2*sqrt(d-1).
+   deg d   lambda2  Ramanujan 2sqrt(d-1)  gap d-lambda2  Ramanujan?
+       3     2.655                 2.828          0.345        True
+       4     3.286                 3.464          0.714        True
+       5     3.453                 4.000          1.547        True
+       6     3.759                 4.472          2.241        True
+
+====================================================================================================
+ THE UPGRADE: surface code (Delta=2, repetition inner code) -> tensor LTC (Delta>=3, good inner code)
+====================================================================================================
+                      config |A|=|B|    V  F(faces)  edge in #sq  dimZ(code)    rate  link lam2
+     SURFACE  d=2 rep[2,1,2]       2  168       168            2           8   0.048      0.000
+    TENSOR   d=3 even[3,2,2]       3  168       370            3          59   0.159      0.000
+    TENSOR   d=4 even[4,3,2]       4  168       638            4         174   0.273      0.000
+    TENSOR   d=4 rep [4,1,4]       4  168       638            4           7   0.011      0.000
+
+  link lam2 = 0.000 for ALL: the vertex link is the COMPLETE bipartite graph K_{|A|,|B|}, a PERFECT
+  spectral expander (2nd singular value 0). The trickle-down (Kaufman-Oppenheim) soundness certificate
+  is  soundness >= (inner-code relative distance) x (1 - link-lam2)  -> controlled by the INNER CODE.
+
+====================================================================================================
+ O(1)-SOUNDNESS CERTIFICATE (Dinur-Evra-Livne-Lubotzky-Mozes / Kaufman-Oppenheim trickle-down):
+   soundness rho >= delta_inner * (1 - lambda_link).  Links are K_{A,B} (lambda_link=0) => rho >= delta_inner.
+====================================================================================================
+                      config |A|=|B|  edge in #sq    inner [n,k,d]  delta_inner=d/n  link lam2   rho >= (O(1)?)
+     SURFACE  d=2 rep[2,1,2]       2            2          [2,?,2]            1.000      0.000      1.000  no (Delta=2)
+    TENSOR   d=3 even[3,2,2]       3            3          [3,?,2]            0.667      0.000      0.667  YES (const)
+    TENSOR   d=4 even[4,3,2]       4            4          [4,?,2]            0.500      0.000      0.500  YES (const)
+    TENSOR   d=4 rep [4,1,4]       4            4          [4,?,4]            1.000      0.000      1.000  YES (const)
+
+  READING:
+  * SURFACE (Delta=2): each edge in only 2 squares => the inner 'code' is [2,*] repetition; a single tile
+    error along a homology cycle is a LOGICAL OPERATOR invisible to O(1) local checks => poly(n) soundness
+    (this is exactly S30's H^1=16 toric-type code -- O(1)-LOCAL but NOT O(1)-SOUND).
+  * TENSOR (Delta>=3, inner distance d0>=2): each edge in Delta squares carries a genuine inner code of
+    relative distance delta_inner>=1/2; links are complete bipartite K_{A,B} (PERFECT expander, lam=0),
+    so trickle-down gives rho >= delta_inner*(1-0) = delta_inner = O(1). The small surface logical operator
+    can no longer be locally consistent: its support must be a full inner-codeword (weight >= d0) in EVERY
+    link it crosses => it is detected. This is the surface -> good-LTC upgrade mechanism, realized at q=7.
+
+  THE BRIDGE TO 1/36: rho (algebraic soundness floor) is the mirror of inf-meas >= 1/36 (analytic loneliness
+  floor). Both say: a locally-checkable object cannot silently fail -- there is a CONSTANT lower bound. The
+  census (Part 2) verifies the analytic constant 1/36 by exhausting near-tight cores; the LTC verifies the
+  algebraic constant delta_inner by the tensor inner code. Same 'no small cosystole' statement, two sides.
+
+  HONEST SCOPE: q=7 (|G|=168) realizes the MECHANISM exactly (Ramanujan gens found, links perfect, inner
+  distance>=1/2). The ASYMPTOTIC O(1)-soundness theorem is DELLM's family q->infty; a single q cannot
+  exhibit growing distance. What is PROVED here: the expander upgrade (3.69 -> Ramanujan 3.286<=3.464), the
+  perfect links, and delta_inner>=1/2 -- the three ingredients the theorem multiplies. Route, not proof.
+DONE.
