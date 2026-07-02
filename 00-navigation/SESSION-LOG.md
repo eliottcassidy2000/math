@@ -1,3 +1,15 @@
+## opus-2026-07-02-S40 -- cert_ladder' SORRY-FREE FIRST BUILD (THM-606's sharp per-level-budget form; 0 <= delta relaxation realizes no-accumulation with mu_d = 0) + the S36 regression row that uniform-mu rejects (HYP-3909)
+
+Prompt: work module 3 + the module-2 remainder myself; pull/push frequently to avoid duplication.
+
+PULL-DRIVEN REROUTE: the morning state showed (a) kps flagged the per-level-mu generalization explicitly for opus (HYP-3964); (b) mac-mini recorded the forced-direction recipe but QUEUED its Lean for their own fresh session after 3 rounds of sign friction (HYP-3868) -- attacking the same transcription would have duplicated their queued work; (c) nobody had per-level-mu or the module-3 keystone. So the session went to the flagged piece.
+
+DELIVERED (build 20, GREEN FIRST TRY): LRCLadderPerLevel.lean -- Level' (per-level mu), SepChain' (window mu/V passed down, decidable), ladder_walk' (kps's induction with the 0 <= delta relaxation: nil tolerates degenerate windows so mu_d = 0 works -- THM-606's inflation-does-not-accumulate realized; cons re-derives positivity from its own separation; head level absorbs drift into its OWN band h + L.mu), cert_ladder' (accepts every THM-607 sharp-region tuple; uniform-mu = constant special case). REGRESSION: depth3_perLevel_row certifies (50, 2000, 90000) with the ORIGINAL S36 certificates and budgets (253/9000, 11/450, 0) -- exactly the configuration the uniform-mu SepChain rejects (ratios 40, 45 < 41). The failing/passing pair now exists as two Lean theorems.
+
+QUEUE AFTER THIS SESSION (opus lane): module-3 keystone (Chain + length_inter_chain cursor lemma + per-instance commensuration schema; full design in S38/S39 logs); THM-604 origin-nest list lemma (mac-mini's NEXT also lists it -- coordinate); forced direction queued to mac-mini's fresh session per their plan.
+
+Files: LRCLadderPerLevel.lean (new, sorry-free); HYP-3909 (+INDEX). 20 green builds across S34-40. No canon overridden.
+
 ## klein-2026-07-02-S101b -- THE BUILD FINISHED: LyWindowEnum's k=9 + k=8 native_decides VERIFIED (BUILD_EXIT=0) => ALL SIX ROWS k=8..13 of N1's window re-enumeration are MACHINE-CHECKED INSIDE LEAN -- the full [LEAN] flip for THM-534's bounded-spread extremality census (HYP-4006 complete)
 
 The background build completed: window8a/window8b (11440 shapes, degree-4 dual) + window9 (6435, degree-3) verified by native_decide (~35 min wall). Combined with S99/S100: the ENTIRE bounded-spread leg of 'consec maximizes L_y' -- 20,254 shapes across k=8..13 -- is now re-enumerated and checked entirely within Lean, zero sorries. N1's status: census [LEAN], w-band [TABLE, exact, swept to W0], rate lemma [PAPER, proved]. The build race announced in the S101 letter is CLOSED -- do not duplicate; the insights (per-file parallelism, J memoization, sector-union closed forms) stay relevant for future heavy modules.
