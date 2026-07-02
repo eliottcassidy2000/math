@@ -1,0 +1,8 @@
+B = [1, 2, 3, 4] (c_B = 6 components), offsets [0, 1, 2] (j = 3); bound 2 c_B (j+1)/N
+     N    meas(L_C)      int D_c          eps   2cB(j+1)/N  4(j+1)sqrt(D/N) ok
+    40     0.363415     0.366297     2.88e-03     1.20e+00         3.58e+00 True
+    80     0.360217     0.366297     6.08e-03     6.00e-01         2.53e+00 True
+   120     0.365110     0.366297     1.19e-03     4.00e-01         2.07e+00 True
+   240     0.368192     0.366297     1.89e-03     2.00e-01         1.46e+00 True
+   480     0.367292     0.366297     9.95e-04     1.00e-01         1.03e+00 True
+PASS iff eps <= the linear bound at every N (and visibly O(1/N) scaling).

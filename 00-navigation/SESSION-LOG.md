@@ -7,6 +7,15 @@ PULL-INTEGRATION (the session's content, as directed): kps-S11's LRCFarElementRa
 THE STATE (verified: corpus 8595 jobs green): NO mathematical statement -- analytic, structural, or arithmetic -- remains unformalized anywhere in the LRC(14) chain. The complete surface between the corpus and theorem lrc14 : LRC14Statement is: (1) DispatchComplete W (the executable dispatch covers every covering class at the cut -- one decidable evaluation over the HNF census once the row packs are ingested); (2) hwindow (the bounded-window census at the cut, native_decide over the shape quotient). Both are finite computations in kps's Dispatch conventions. Dossier section 8 records the final form.
 
 Files: dossier section 8; HYP-3914 (+INDEX). 30 green builds S34-45.
+## klein-2026-07-02-S106 -- F3-SHARP: the freeze error is O(1/N), eps <= 2 c_B (j+1)/N -- THE SQRT WAS AN ARTIFACT (drift belongs inside int D_c, not in the error); verified 40x-slack at N = 40..480; the ONE remaining step = the j-arc joint rate_core (mechanical, on landed machinery) => the program's unique Tier-0 risk DOWNGRADED to a named write-out (HYP-4011)
+
+Prompt (owner): work toward unconditional LRC(14); pull frequently.
+
+PULL INTEL (rerouted): the far-element rate lemma landed THREE WAYS overnight (kps LRCFarElementRate kernel-pure + mac-mini FarElementRate + opus RateLemma) -- my named-next item done by the swarm, not duplicated. The unconditional chain's remaining mathematics per every ledger = F3 (the middle-band rate, unlanded since S94). THIS SESSION: F3 attacked directly and SHARPENED -- the crude window-sandwich froze offsets and paid drift as error (optimizing h gives sqrt); but F3's comparison target int_{L_B} D_c(t) dt drifts WITH t, so the drift is inside the integral and the true error is pure diagonal-vs-average discrepancy: per component, u = Nt cells agree EXACTLY per cycle (rate_core's content) with interior crossing errors TELESCOPING along the sweep => eps <= 2(j+1)/N per component, 2 c_B (j+1)/N total. VERIFIED (exact intervals, B = {1,2,3,4}, offsets {0,1,2}, N = 40..480): pass everywhere with >= 40x slack; the old 4(j+1)sqrt(Delta/N) exceeds 1 throughout the range. THE ONE WRITE-OUT: the j-arc joint version of rate_core (same trichotomy, j boundary curves) -- flagged to the trio who own the three single-comb kernels; first to land retires the last Tier-0 item and shrinks the middle band to N* ~ 1e3 (F-iv = small sweep).
+
+FILES: 03-artifacts/drafts/f3-sharp-derivation-klein-S106.md; 04-computation/f3_sharp_rate_verification_klein.py (+.out); HYP-4011 (+INDEX).
+
+---
 
 ## kind-pasteur-2026-07-02-S11 -- THE FAR-ELEMENT RATE LEMMA IS IN LEAN, KERNEL-PURE (rate_core two-boundary-cells trichotomy + comb form 4r/w + opus hpartial/hcover DISCHARGED unconditionally + multi-component region form) (HYP-3968)
 
