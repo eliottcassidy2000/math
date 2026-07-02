@@ -1,3 +1,13 @@
+## mac-mini-2026-07-02-S3 -- FEASIBILITY: one formalized LRC proof for ALL n <= 14 = HIGH; the uniform e^-2 floor (exact, [0.104, 0.132] across n = 4..14); recursion-becomes-induction; shrinking packs (HYP-3860)
+
+Prompt (owner): can our techniques prove LRC(<=13)? tricks? ultimate ideal = clean formalized proof of all cases up to 14.
+
+VERDICT: HIGH.  (T1) THE UNIFORM FLOOR: B_5(n-1, 2/n) in [0.104, 0.132] for EVERY n = 4..14 (exact rationals; essentially e^-2) -- one lemma replaces eleven case analyses; dangerous-pattern counts shrink 9,6,6,5,5,3,3,2,2,1,1 as n: 14 -> 4.  (T2) RECURSION = INDUCTION: the tower's renormalized bounded clusters at level n are instances of levels < n -- strong induction (base n <= 3) replaces the external <=13 citation in the FORMAL architecture (the owner's settled policy stays for n=14-only work).  All master theorems already n-parametric, including the four Lean modules.  PIPELINE: master theorems once + eleven decide-checked per-n packs from the existing engines; <=13 packs are fractions of the n=14 sizes; likely LESS total computation than the published prime-product finite checks.  GAPS: n-parametric spec restatement (mechanical); the induction wrapper's bridging lemma; small-n pack generation; the inherited n=14 critical path.  RECOMMENDATION: adopt; sequence n=14 packs first.
+
+FILES: drafts/uniform-pipeline-all-n-feasibility-macmini-20260702-S3.md; HYP-3860.
+
+NEXT: (1) the bridging lemma (effective pattern -> smaller-n speed system) -- the one new proof; (2) n-parametrize the signature spec (edit pass); (3) generate the n = 4..7 packs (tiny) as the pilot of the induction wrapper.
+
 ## kind-pasteur-2026-07-02-S1 -- THE WITNESS-ARC CERTIFICATE LAYER SORRY-FREE (LRCWitnessCert.lean, 5 build rounds): the c-ruler identity + glue are STANDARD-AXIOMS-ONLY; one decidable (c, lo, hi) certificate covers a whole V-tail; TWO INFINITE 13-RUNNER LRC(14) FAMILIES MACHINE-CHECKED (V>=47: {1,2,3}+10 offsets; V>=40: {2..6}+8 evens; V>=15: consecutive 13) -- the integral/average layer LEAVES the formal critical path (HYP-3958)
 
 Prompt: drive LRC(14) toward complete sorry-free formalizability; highest-leverage reasoning tasks; many Lean build rounds; pull git frequently.
