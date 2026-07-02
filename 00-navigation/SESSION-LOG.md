@@ -1,3 +1,15 @@
+## mac-mini-2026-07-02-S7 -- THE LEAN FORMALIZATION PLAYBOOK: five tricks (all-QQ; RatIntervals; certificate-carrying statements; fuel-indexed decision procedure; quantifier discipline) + the 8-module DAG with assignments -- the whole proof made mechanical (HYP-3864)
+
+Prompt (owner): make LRC(14) trivial to formalize; write detailed instructions; find tricks.
+
+THE TRICKS: T1 the whole proof lives in QQ (every witness rational, every measure rational) => formalize everything over QQ, one cast lemma to RR at the top, zero MeasureTheory.  T2 RatIntervals (~300-line verified rational-interval-list library) = the single blocking infrastructure; all objects become its values, all THM-592/601/604 arguments become list computations.  T3 certificates not optimizations (attainment + per-cell affine bounds; one schema + one checker for ALL censuses).  T4 the decomposition recursion as a fuel-26 structurally-recursive decision procedure + one soundness theorem (no well-founded recursion machinery); LRC(14) covering case = soundness + evaluation.  T5 quantifier discipline structural in the schema (sLRC/BCS).
+
+THE DAG (build order + estimates + assignments): RatIntervals (2 sessions, BLOCKS ALL -- any agent, today) -> CombSets/PatternOverlap/Commensuration (ports, 1 each; opus template) -> ForcedIndependence (2; mac-mini) -> Truncation (done) -> Decomposition (2-3; kps's nested certificate is the prototype) -> Certificates (1-2; klein's L_y table closest to the schema) -> Assembly (1; QQ->RR cast; lrc14).  Total ~10-12 focused sessions, parallel after module 0.  Anti-patterns: no MeasureTheory, no direct optimizations, no WF recursion, no bare forall-shift, no THM-604-generable tables.
+
+FILES: the playbook draft; HYP-3864.
+
+NEXT: build module 0 (RatIntervals) -- the one item that unblocks the entire swarm.
+
 ## klein-2026-07-02-S99 -- NUMBERING CLEANUP EXECUTED (quintic->THM-604, dangerous-pattern->THM-605, THM-600 duplicate retired; Lean docstrings patched, builds clean) + THE LEAN WINDOW RE-ENUMERATION PILOT: LyWindowEnum.lean builds FIRST TRY -- k=11/12/13 windows (377 shapes) re-enumerated in exact Q arithmetic and verified by native_decide INSIDE LEAN (HYP-4006)
 
 Two queue items. (a) The THM-599/600/601 collisions resolved per the standing plan (first-reserve keeps): kps's torus stays THM-599; mac-mini's quintic -> THM-604 and dangerous-pattern -> THM-605 with renumber notes; THM-600 stub retired to a redirect (diff-checked strict subset). DangerousPatterns/BonferroniTruncation docstrings patched; both still build (0 errors). (b) LyWindowEnum.lean (10th sorry-free module): computable interval-union measure over Q (sorted merge sweep), bad-interval generator, J(A,E), S_1/S_2, the rows-11/12/13 dual L_y = 1 - S1/2 + S2/6, and native_decide over the FULL windows: k=11 (286 shapes) <= 66/91, k=12 (78) <= 78/91, k=13 (13) <= 1 -- the Python census re-derived and checked entirely inside Lean. The N1 [LEAN] flip is REAL now; k=8..10 need the degree-3/4 duals + larger enumerations (same pattern, more compute).
