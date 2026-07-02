@@ -221,5 +221,39 @@ theorem lrc14_of_dispatchComplete (W : ℤ)
     exact hs
   · exact hwindow v hv hbnd
 
+/-! ## 5. The concrete census + peel surface
+
+opus-S43's `hfloor_of_census_and_peel` structures the completeness leg as a strong
+induction on an abstract far-element counter — but over the skeleton's opaque
+`witnessG2` vocabulary.  Here is the SAME induction in concrete `Lonely` vocabulary:
+LRC(14) from (census, peel) with no opaque functions anywhere.  The census leg is
+now genuinely dischargeable against `dispatch`/window checks; the peel leg's Lean
+target (klein's rate lemma HYP-4001(b), the one unformalized statement) is now
+phrased as loneliness transport. -/
+
+/-- **LRC(14) from concrete census + peel** (strong induction on the far count;
+induction pattern after opus-S43, vocabulary concrete).  `census`: families with
+no far element are lonely.  `peel`: a family with a far element reduces to one
+with strictly fewer far elements, transporting loneliness back. -/
+theorem lrc14_of_lonely_census_peel
+    (farCount : (Fin 13 → ℤ) → ℕ)
+    (census : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → farCount v = 0 →
+      ∃ t : ℝ, Lonely 14 v t)
+    (peel : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → 0 < farCount v →
+      ∃ v' : Fin 13 → ℤ, (∀ i, v' i ≠ 0) ∧ farCount v' < farCount v ∧
+        ((∃ t : ℝ, Lonely 14 v' t) → ∃ t : ℝ, Lonely 14 v t)) :
+    LRC14Statement := by
+  suffices H : ∀ n : ℕ, ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → farCount v = n →
+      ∃ t : ℝ, Lonely 14 v t by
+    exact fun v hv => H (farCount v) v hv rfl
+  intro n
+  induction n using Nat.strong_induction_on with
+  | _ n ih =>
+    intro v hv hn
+    rcases Nat.eq_zero_or_pos n with rfl | hpos
+    · exact census v hv hn
+    · obtain ⟨v', hv', hlt, himp⟩ := peel v hv (hn ▸ hpos)
+      exact himp (ih (farCount v') (by omega) v' hv' rfl)
+
 end LRC14
 end LonelyRunner
