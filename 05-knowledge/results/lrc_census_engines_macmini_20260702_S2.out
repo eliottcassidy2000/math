@@ -1,0 +1,20 @@
+==========================================================================
+(1) l1-SIMPLEX CENSUS: primitive d-patterns, sum|m| <= 7 (danger-capable)
+==========================================================================
+  d=2: 9 primitive patterns (up to sign/perm): [(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 3), (2, 5), (3, 4)]
+  d=3: 10 primitive patterns (up to sign/perm): [(1, 1, 1), (1, 1, 2), (1, 1, 3), (1, 1, 4), (1, 1, 5), (1, 2, 2), (1, 2, 3), (1, 2, 4), (1, 3, 3), (2, 2, 3)]
+  d=4: 7 primitive patterns (up to sign/perm): [(1, 1, 1, 1), (1, 1, 1, 2), (1, 1, 1, 3), (1, 1, 1, 4), (1, 1, 2, 2), (1, 1, 2, 3), (1, 2, 2, 2)]
+  d=5: 4 primitive patterns (up to sign/perm): [(1, 1, 1, 1, 1), (1, 1, 1, 1, 2), (1, 1, 1, 1, 3), (1, 1, 1, 2, 2)]
+  TOTAL census size: 30 patterns -- the complete depth-5 dangerous list.
+
+==========================================================================
+(2) HNF RANK-1 LATTICE CENSUS at j = 3, 4 (renormalization directions)
+==========================================================================
+  j=3: rank-1 primitive height-<=7 directions (up to sym): 20
+        [(1, 0, 0), (1, 1, 0), (1, 1, 1), (2, 1, 0), (2, 1, 1), (2, 2, 1), (3, 1, 0), (3, 1, 1), (3, 2, 0), (3, 2, 1), (3, 2, 2), (3, 3, 1), (4, 1, 0), (4, 1, 1), (4, 2, 1), (4, 3, 0), (5, 1, 0), (5, 1, 1), (5, 2, 0), (6, 1, 0)]
+  j=4: rank-1 primitive height-<=7 directions (up to sym): 27
+        [(1, 0, 0, 0), (1, 1, 0, 0), (1, 1, 1, 0), (1, 1, 1, 1), (2, 1, 0, 0), (2, 1, 1, 0), (2, 1, 1, 1), (2, 2, 1, 0), (2, 2, 1, 1), (2, 2, 2, 1), (3, 1, 0, 0), (3, 1, 1, 0), (3, 1, 1, 1), (3, 2, 0, 0), (3, 2, 1, 0), (3, 2, 1, 1), (3, 2, 2, 0), (3, 3, 1, 0), (4, 1, 0, 0), (4, 1, 1, 0), (4, 1, 1, 1), (4, 2, 1, 0), (4, 3, 0, 0), (5, 1, 0, 0), (5, 1, 1, 0), (5, 2, 0, 0), (6, 1, 0, 0)]
+
+Higher-rank lattices = HNF combinations of these directions (finite, bounded
+entries by Hadamard); the full rank-k enumeration is a nested loop over this
+list -- sizes above make the total census a few hundred at most.

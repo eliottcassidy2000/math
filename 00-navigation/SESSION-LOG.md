@@ -17,6 +17,21 @@ DELIVERED (TournamentH7/LRCWitnessCert.lean; 5 build rounds; lake build green 18
 INTEGRATION (pulled 3x during the session): klein-S94's HYP-4002 SORRY-LEDGER ("nothing left needs new analytic ideas") -- this layer discharges its (R)/witness-attainment node class and REMOVES the bridge node; HYP-4001 restructures hp0cap's blocker into decide legs (complementary). mac-mini HYP-3858 master DAG: cert_lonely_tail is the DAG's tail-node discharger.
 
 HONEST: the certificate layer covers V-TAILS of fixed-offset-pattern shapes; the below-V* finite windows and the SHAPE-UNIVERSE enumeration (which (P, offs) patterns exhaust the covering case -- the census/decomposition nodes, mac-mini THM-602 territory) remain the open DAG surface; multi-level/nested shapes need the recursion glue (paper: HYP-3953 retirement). LRC(14) NOT fully formalized -- but the tail half of the witness route is now sorry-free end-to-end, standard axioms on the analytic part. Files: LRCWitnessCert.lean (+root); HYP-3958 (+INDEX). No canon overridden.
+## mac-mini-2026-07-02-S2 -- the 7-COMMENSURATION LEMMA PROVED; the COMPLETE depth-5 dangerous census = 30 patterns; DAG-node signatures for every remaining census; owner policy LRC(<=13) = SETTLED into CLAUDE.md (HYP-3859)
+
+Prompt (owner): tell all future agents LRC(<=13) preprints = TRUE for the n=14 work; get the census runs + commensurate row + klein/kps runs + transcription/wiring Lean-ready.
+
+POLICY: CLAUDE.md Key Principles now opens with the owner directive (LRC(<=13) SETTLED, no re-audits, no hedging; citation caveat only in journal write-ups); ledger risk line updated.
+
+THE COMMENSURATION LEMMA (THM-602 addendum, PROVED): gcd(P,Q)=1, 7|Q => ov_{P,Q}(theta) = (2r)^2 for EVERY theta.  Proof: the P-comb's arcs pull back to P equally-spaced Q-phase sweeps of total length 2rQ in Z -- an exact tiling; any window sees coverage (2rQ)(2r)/Q phase-independently.  Kills the densest deviation family identically; per-pair tails t^2-convergent => THM-602(C) is unconditional.
+
+THE CENSUSES (ran to completion): the COMPLETE depth-5 dangerous list = 30 patterns (d=2: the nine THM-601 pairs; d=3: 10; d=4: 7; d=5: 4) -- decide-sized.  Rank-1 renormalization directions: 20 (j=3), 27 (j=4); full HNF = nested loop, a few hundred.
+
+THE SIGNATURE SPEC (drafts/lrc14-dag-node-signatures-macmini-20260702-S2.md): 8 rows -- each remaining census/table node stated as the exact Lean hypothesis it discharges (klein nest + L_y; kps (star)-census; the 2 transcription targets; the 2 skeleton replacements = glue).
+
+FILES: THM-602 addendum; census engine + .out; signature spec; CLAUDE.md + ledger edits; HYP-3859.
+
+NEXT: (1) d>=3 exact minima for the 21 higher patterns (same breakpoint method); (2) klein/kps: your rows now have signatures -- run to spec; (3) transcription of rows 6-7; (4) the skeleton replacement PR.
 
 ## mac-mini-2026-07-02-S1 -- THM-602 (master resonance-lattice decomposition: cluster-level renormalization coherence, the arc-counting proof in full, well-founded recursion) + the PROOF-DAG LEDGER: ZERO reasoning gaps remain; the critical path to sorry-free is 4 ordered finite items (HYP-3858)
 
