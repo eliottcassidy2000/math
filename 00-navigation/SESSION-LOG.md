@@ -1,3 +1,21 @@
+## mac-mini-2026-07-01-S97 -- THM-597: the COLLAPSE-RATE LAW end-to-end (general argmax formula, verified on the FULL tight locus, machine-checkable); the ERDOS-SELFRIDGE <-> LRC correspondence (offsets = the difficulty axis; hpartA = a <=13-modulus continuous covering problem -> BBMST distortion import; probe: max 86% window coverage at critical mass); the resonance-lattice formula for hp0cap (HYP-3853)
+
+Prompt (owner): creatively close hp0cap + hpartA; relate the odd-covering-system conjecture (E-S; >=22 primes squarefree) + 3 links; crossing numbers K_n vs K_{m,n}; unit-residue + gap-sum => collapse-rate law machine-checkable end to end.
+
+THM-597 (proved + verified): tight S => every witness denominator divisible by q; Lambda_S(r) = c(S)(1-qr) above the last breakpoint with c(S) = (1/q) sum_{argmax}(1/v_+ + 1/v_-); unit-fraction floor = klein's HYP-3835 law, equality iff clean.  Formula = direct slope EXACTLY on all 9 known tight sets (q=5,6,8,14, both beaters); per-set exact certificates => end-to-end machine-checkable given THM-593A (Lean, S95) + THM-592(i).
+
+THE E-S BRIDGE: covering systems <-> danger combs with the OFFSET column as the difficulty axis (free = E-S open; fixed = our provable rigidity: MN/polygon/unit-residue); all-odd E-S <-> our t=1/2 antipode (one line, Lean'd); >=22 primes <-> THM-523 saturation; BBMST min-modulus <-> MSS 91^12; 2-adic chains = canonical exact cover = the scale-action fixed locus; doubling-map reading (2604.16750): odd denominators = periodic points, descent quotients the transient direction.
+
+hpartA PROGRAM: G2-window local covering by j<=13 distinct-spacing free-phase combs at density 1/7 = the E-S/BBMST regime, far below covering-complexity thresholds.  PROBE: j=7 (critical mass A=1.0): 3000 phase draws max 86% coverage (|I|=0.01), 80% (0.02); j=6: 81% -- residual >= 14% at criticality.  Named target: the interval anti-covering lemma (|I cap {C=0}| >= kappa_j|I|, distortion iteration with the arc-count tax: uncovered components <= sum(w_i|I|+1)); + peel + S93 grid => hpartA outside the compact regime.
+
+hp0cap ROUTE (formula proved): d-fold overlaps = resonance-lattice sums (sum over m.e = 0 of coefficient products; abs conv d>=3; d=2 = THM-594B); rational sectors => Bernoulli finite forms => q_j(E) exact rationals => hp0cap = THM-534 + finite exact bounded-spread census + exact far deficits.  Vitali eliminated.
+
+CROSSING NUMBERS (assessed tangent): Zarankiewicz two-AP / Guy cylindrical regular-polygon optimal drawings = interleaving-count species (binding grid, MT slices); Kleitman parity = iota/Redei Z2; backlog: does the 2-page circular K_n count decompose over the Farey level structure like Lambda_AP?
+
+FILES: THM-597; lrc_collapse_law_endtoend_macmini_S97.py + .out; erdos-selfridge-lrc-correspondence-macmini-S97.md; HYP-3853.
+
+NEXT: (a) prove the interval anti-covering lemma (kappa_j for j<=13) -- hpartA's core, the BBMST-distortion adaptation; (b) implement the resonance-lattice exact q_j evaluator + run the bounded-spread census -- hp0cap's compute leg; (c) deep-witness emptiness (finite per set, conjectural in general); (d) the 2-page K_n Farey decomposition probe.
+
 ## mac-mini-2026-07-01-S96 -- the FAREY-LEVEL-14 structure (23520/392 decoded: slope diff = 29/60 = 2(1/5+1/24), mediant 2/29; c_AP = 2n * MORDELL-TORNHEIM level-n slice; THM-596 bands = Stern-Brocot numerator strata) + NEW STRATEGIES for hp0cap (exact Bernoulli multi-overlaps replace Vitali) and hpartA (windowed Mirsky-Newman) (HYP-3852)
 
 Prompt (owner): mathematical connections of 23520 & 392; new strategies for closing hp0cap and hpartA; pure math (no Lean); extra-creative tangent exploration.
