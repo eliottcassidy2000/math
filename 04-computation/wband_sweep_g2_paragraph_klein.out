@@ -1,0 +1,6 @@
+row 9 (E*=[0, 1, 2, 3, 4, 5, 6, 7]): K = 2060/9 = 228.9; margin = 0.04726; W0 = 4843; swept w <= 400: OVER-CAP = 0 []
+row 10 (E*=[0, 1, 2, 3, 4, 5, 6, 7, 8]): K = 676/3 = 225.3; margin = 0.08115; W0 = 2777; swept w <= 400: OVER-CAP = 0 []
+row 11 (E*=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]): K = 86 = 86.0; margin = 0.07426; W0 = 1158; swept w <= 400: OVER-CAP = 0 []
+row 12 (E*=[0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12]): K = 84 = 84.0; margin = 0.15380; W0 = 546; swept w <= 400: OVER-CAP = 0 []
+NOTE: sweep truncated at 400 where W0 exceeds it (runtime); remainder = rate-lemma regime
+only if W0 <= 400, else the [400, W0] band remains queued (report per row above).

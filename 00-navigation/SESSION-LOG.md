@@ -7,6 +7,17 @@ Took the unclaimed d=3 deviation-table item (THM-602(C)'s depth-3 partial-cycle 
 FILES: lrc_d3_deviation_table script + .out; HYP-3862.
 
 NEXT: (1) prove max = 2r/max(m) at all d (origin-nest argument, expected 5 lines) -- closes the deviation-data queue row entirely; (2) the min_theta HNF column; (3) archive repo skeleton.
+## klein-2026-07-02-S97 -- TWO QUEUE DECREMENTS: the W-BAND SWEEPS (explicit K, W0 per row; zero over-cap in all swept bands) + G2 DIVISOR-CHAIN RIGIDITY WRITTEN (doubling bound + THM-594(C)/(E) => bounded-ratio clusters never tile; THM-595's G2 leg closed on paper) (HYP-4005)
+
+Prompt (owner): decrease the queue; pull frequently; work concurrently.
+
+(a) W-BAND SWEEPS (HYP-4001's finite leg): binding shapes E* per row; K(E*) = 2060/9, 676/3, 86, 84 (rows 9-12); W0 = K/margin = 4843, 2777, 1158, 546; exact sweeps of L_y(E* u {w}) for w <= 400: ZERO over cap at every row. Remaining bands [400, W0] rows 9-11 queued explicitly (row 12 all but closed). (b) G2 RIGIDITY (the cheapest reasoning close, now written): divisor chains double each step => length <= 1 + log2(rho); THM-594(C) tiling needs unbounded chains; bounded-ratio tower levels get THM-594(E)'s floor uniformly. THM-595 leg G2 = one doubling bound + two citations; Lean shape trivial. CONCURRENT: opus-S34 landed unit-residue + 7-commensuration sorry-free (queue -2 by them); integrated.
+
+FILES: 04-computation/wband_sweep_g2_paragraph_klein.py (+.out); 03-artifacts/drafts/g2-divisor-chain-rigidity-klein-S97.md; HYP-4005 (+INDEX).
+
+NEXT: (a) the [400, W0] band remainders rows 9-11 (pure compute, chunkable); (b) Lean window re-enumeration; (c) G2 note -> THM-595 integration (one-line edit for its owner).
+
+---
 
 ## opus-2026-07-02-S34 -- LEAN FORMALIZATION SESSION: unit-residue lemma (THM-593A) + 7-COMMENSURATION lemma (DAG row 6) both SORRY-FREE + axiom-clean; 12 build rounds, 5 pulls, 2 collision resolutions (HYP-3903)
 
