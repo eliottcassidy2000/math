@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-02-S12 -- TWO ENGINES FOR THE FINAL SURFACE: the RATIONAL-WITNESS GATE (any (family, rational time) row -> Lonely by one decide) + REGION DIFFERENCE (partition identity, witness extractor) -- both kernel-pure (HYP-3969)
+
+Prompt (owner): work toward unconditional LRC(14); pull frequently.
+
+FLEET STATE CONSUMED: opus-S45 consolidated the remaining surface = DispatchComplete W + hwindow (dossier sec-8: "no mathematical statement remains unformalized"); klein-S106 landed F3-sharp (eps <= 2 c_B (j+1)/N; the sqrt was a window-freezing artifact; Tier-0 risk -> one named write-out OVER MY landed rate_core machinery); mac-mini-S16 FarElementRate (witness-side antipode dodge; complementary to my measure-side comb bound).
+
+DELIVERED (both files registered, ALL kernel-pure [propext, Classical.choice, Quot.sound]):
+ 1. **LRCRatWitness.lean -- the hwindow engine**: ratLonelyAt (one-speed round-point comparison, decidable) + ratWitnessOK (13 comparisons, decidable) + lonely_of_ratWitness (soundness: round-point minimality over Q covers every integer since n >= 2, then one cast to R) + exists form + sanity row ({1..13} @ 1/14 by native_decide). ANY witness table row (concrete family, rational time) is now ONE decide -> a Lonely theorem. The bounded census leg's per-row engine.
+ 2. **LRCRegionDiff.lean -- the last missing module-0 operation**: cut (one interval minus one, <= 2 pieces, degenerates kept) / diff1 / diff (foldl); mem_cut/mem_diff1/mem_diff (membership = in L and in no subtrahend interval); **length_cut_add_clip** = the PARTITION IDENTITY (cut pieces + clip overlap = interval length; LIVE q REQUIRED -- for degenerate q the two pieces overlap and double-count: found by counterexample p=(0,4), q=(5,3) during the build, documented in-file); **length_diff1_add_inter** (unconditional in L!); **exists_mem_of_length_pos** (positive length -> explicit rational member = the left endpoint of a live interval).
+ 
+THE PIPELINE THESE ENABLE (design, for the census leg's discharge): goodRegion := diff window (wrapped danger combs); per shape-class "base positivity" (mac-mini S15's one open sentence) = 0 < length goodRegion, ONE computable rational per class (native_decide); exists_mem_of_length_pos extracts the rational witness; mem_diff says it avoids every danger tooth; the comb-completeness bridge (mem_comb negated, wrap layer for the k=s tooth) turns that into ratWitnessOK-style loneliness. Every step now has its Lean tool; the remaining wiring is the danger-comb completeness bridge + the shape-class tables.
+
+FILES: LRCRatWitness.lean, LRCRegionDiff.lean (new, registered); HYP-3969 INDEX; this entry. No canon overridden.
+
 ## opus-2026-07-02-S45 -- UNCONDITIONAL DISTANCE, FINAL FORM: the rate lemma fully in Lean (kps discharged hpartial overnight, two-sided + region forms, kernel-pure -- my parameterized skeleton subsumed, subsumption noted); corpus 8595 green; remaining surface = exactly TWO finite computations (HYP-3914)
 
 Prompt: work toward unconditional LRC(14); pull frequently.
