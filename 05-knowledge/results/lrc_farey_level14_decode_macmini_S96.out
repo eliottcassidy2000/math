@@ -1,0 +1,42 @@
+==============================================================================
+(1) THE 23520 / 392 DECODE
+==============================================================================
+  r = 27/392 = 1/14 - 1/392  (392 = 2*14^2 = 392)
+  Lambda_GW - Lambda_AP at 27/392 = 1/23520  (claim 1/23520: True)
+  slope difference on [1/15, 2/29]: -29/60  (claim -29/60: True)
+  29/60 = 2*(1/5 + 1/24)? True   (GW pair (5,24) + mirror)
+  5 + 24 = 29 = 2n+1;  mediant(1/15, 1/14) = (1+1)/(15+14) = 2/29 ✓
+  (29/60)*(2/29 - 27/392) = 1/23520  (= 1/23520: True);  23520 = 60*392 = 23520
+
+==============================================================================
+(2) MORDELL-TORNHEIM SLICE IDENTITY: c_AP(n) = 2n * MT-slice(n)
+==============================================================================
+  n=6: c_AP = 2/5 = 0.400000;  2n*MT_slice = 2/5  EQUAL: True
+  n=8: c_AP = 44/105 = 0.419048;  2n*MT_slice = 44/105  EQUAL: True
+  n=14: c_AP = 1666/6435 = 0.258897;  2n*MT_slice = 1666/6435  EQUAL: True
+  n=20: c_AP = 543160/2909907 = 0.186659;  2n*MT_slice = 543160/2909907  EQUAL: True
+  => the collapse constant is the p+q=n slice of the MT layer-cake;
+     the SAME level n is THM-594(B)'s pair-overlap branch point p+q<=n.
+
+==============================================================================
+(3) STERN-BROCOT BAND STRUCTURE of the open final window (1/15, 1/14)
+==============================================================================
+  d'=2: reduced q* in (14d',15d') = [29]   radii ['2/29']
+  d'=3: reduced q* in (14d',15d') = [43, 44]   radii ['3/43', '3/44']
+  d'=4: reduced q* in (14d',15d') = [57, 59]   radii ['4/57', '4/59']
+  d'=5: reduced q* in (14d',15d') = [71, 72, 73, 74]   radii ['5/71', '5/72', '5/73', '5/74']
+  d'=6: reduced q* in (14d',15d') = [85, 89]   radii ['6/85', '6/89']
+  minimal numerator = 2 at q*=29: the MEDIANT -- GW's identity onset,
+  the first exposed band (THM-596), and the band-emptying anchor, all one point.
+
+==============================================================================
+(4) hp0cap PROBE: L_y for consec_9 vs far-swap; 1/w rate vs pair law
+==============================================================================
+  consec_9 [1, 2, 3, 4, 5, 6, 7, 8, 9]: L_y = 2111/4410 = 0.478685; cap_9 = 0.494256; p0<=L_y<=cap? L_y<=cap: True
+  far-swap 9 -> w (drop 9, add w):
+    w=  30: L_y = 0.392755; drop from consec = +0.085930; w*(consec-drop gap to limit) probe = 2.5779
+    w=  60: L_y = 0.379490; drop from consec = +0.099195; w*(consec-drop gap to limit) probe = 5.9517
+    w= 120: L_y = 0.393265; drop from consec = +0.085420; w*(consec-drop gap to limit) probe = 10.2503
+    w= 240: L_y = 0.391173; drop from consec = +0.087511; w*(consec-drop gap to limit) probe = 21.0027
+  (decorrelated-limit and O(1/w) rate: the pair-law THM-594(B) branch-2
+   formula gives the exact per-pair deficit -- the Vitali replacement.)

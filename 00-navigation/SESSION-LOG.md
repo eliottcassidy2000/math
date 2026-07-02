@@ -1,3 +1,21 @@
+## mac-mini-2026-07-01-S96 -- the FAREY-LEVEL-14 structure (23520/392 decoded: slope diff = 29/60 = 2(1/5+1/24), mediant 2/29; c_AP = 2n * MORDELL-TORNHEIM level-n slice; THM-596 bands = Stern-Brocot numerator strata) + NEW STRATEGIES for hp0cap (exact Bernoulli multi-overlaps replace Vitali) and hpartA (windowed Mirsky-Newman) (HYP-3852)
+
+Prompt (owner): mathematical connections of 23520 & 392; new strategies for closing hp0cap and hpartA; pure math (no Lean); extra-creative tangent exploration.
+
+THE DECODE (all exact, lrc_farey_level14_decode_macmini_S96): 392 = 2*14^2 (27/392 = 1/14 - 1/392); the Lambda_GW - Lambda_AP slope on [1/15, 2/29] is EXACTLY -29/60 = -2(1/5 + 1/24) (the GW outlier pair (5,24) merge kink + mirror); 5+24 = 29 = 2n+1 and 2/29 = MEDIANT(1/15, 1/14); 1/23520 = (29/60)(2/29 - 27/392) with 23520 = 60*392.  UNIVERSAL 5: at every n the GW outlier 2(n-2) meets runner 5 at the window mediant.
+
+THE SYNTHESIS (one Farey level, four appearances): (a) THM-594(B) pair overlaps branch at p+q=14; (b) c_AP(n) = 2n * sum_{p+q=n, gcd=1} 1/(pq(p+q)) EXACT at n=6,8,14,20 -- the collapse constant is the level-n SLICE of klein's Mordell-Tornheim layer-cake E (profile kinks contribute jump*radius = d/(vw) = MT terms); (c) THM-596's final-window bands are the Stern-Brocot NUMERATOR STRATA (d'=2:{29}=mediant, 3:{43,44}, 4:{57,59}, 5:{71..74}, 6:{85,89}); (d) the deep-well CF [0;13,14] = a tree path => 'danger zone = short tree path' would unify HYP-3792 with THM-596.  Ladder consequence: anchor rungs at mediants; q* grows Fibonacci-fast along the tree; exposure needs 13 residues clear mod q* => convergent defect series.
+
+hp0cap STRATEGY: THM-534 gives p0 <= L_y; the open 'consec maximizes L_y' becomes [bounded-spread finite EXACT census] + [far drop by exact THM-594(B)-branch-2 deficit sums] once the d-fold overlap closed forms (Bernoulli-polynomial cosine series, d<=7; d=2 proved) are written -- the Vitali/marginal-uniformity leg is replaced by closed-form rational inequalities.  Probe: consec_9 L_y = 2111/4410 <= cap_9 = 1979/4004; far swaps drop ~0.086 >= 0.044, arithmetically oscillating in w (why uniform estimates fought).  Side-check proposed: do the cap_k rationals emerge as Bernoulli/MT combinations (cap and slope one species; opus SS7.4 quantitative)?
+
+hpartA STRATEGY: WINDOWED MIRSKY-NEWMAN.  The G2 window is a finite rational-interval union; killing the reach = the large cluster locally TILING every component; target lemma: |I cap {C_F=0}| >= |I| - A_I + windowed Parseval defect (divisor-minimal frequency against a Beurling-Selberg majorant of 1_I -- HYP-3765 machinery + THM-594(A/C/E)); divisor-chain near-tilings are exactly what THM-580's 2-adic descent already quotients (the fixed-locus alignment doing work INSIDE a named sorry).  Fallback: mediant-anchored recursive peel.
+
+(Owner's '23530': read as 23520; noted 23530 = 2*5*13*181, 181 = the deep-well resonance denominator -- coincidence flagged, no mechanism claimed.)
+
+FILES: lrc_farey_level14_decode_macmini_S96.py + .out; 03-artifacts/drafts/hp0cap-hpartA-new-strategies-macmini-S96.md; HYP-3852.
+
+NEXT: (a) write the d-fold Bernoulli overlap lemma (THM-594(B) -> general d) -- unlocks the hp0cap census; (b) prove the windowed-MN lemma (BS majorant + divisor-minimal coefficient) -- hpartA's core; (c) check cap_k = MT/Bernoulli combinations; (d) the SB-ladder defect series (geometric convergence along the tree); (e) universal-5 for other sporadic tight families (q=8 relift beater's mediant partner).
+
 ## kind-pasteur-2026-07-01-S29 -- MATHLIB TRACK OPENED: LonelyRunnerMathlib.lean COMPILES SORRY-FREE + AXIOM-CLEAN (q-witness, covering reduction, dilation, Dirichlet tightness, k=1/k=2 fully proved) + 4-PR submission plan; LP pilot CEDED to klein HYP-3846; THM-594 correction integrated (HYP-3952)
 
 Prompt: formalize the 14-runner LRC work for mathlib submission; consider the sec-7.3 arc x radius two-variable LP (n=6 pilot).
