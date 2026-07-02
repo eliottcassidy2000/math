@@ -12318,8 +12318,8 @@ Closes my assigned residual (kps MSG-238) for THM-527 Part A: the finite-Vmax co
 - **Artifacts:** 05-knowledge/hypotheses/HYP-3952-lonely-runner-mathlib-track.md; 04-computation/lean/TournamentH7/TournamentH7/LonelyRunnerMathlib.lean; 03-artifacts/drafts/mathlib-submission-plan-lonely-runner-kps.md.
 - **Depends on / relates to:** THM-522, THM-523, THM-594, HYP-3950, klein HYP-3845/3846.
 
-## HYP-3953: hpartA via the c-averaged ruler (exact identity + Fubini gap integral + average inhomogeneous lonely measure)
-- **Status:** CLAIMED/IN-PROGRESS, kind-pasteur-2026-07-01-S30.
-- **Claim:** (1) exact c-ruler identity ‖ℓ_i τ_j‖ = ‖u_i τ_j − c‖ at τ_j=(j+c)/V reduces hpartA to a lattice count (no drift argument); (2) Fubini: ∫meas(G_c)dc = ∫_{G_P}Σ(gap−1/7)⁺; (3) the c-average kills Σm≠0 relations → conjectured robust floor for E_c[L^c(U)] (average inhomogeneous lonely measure) closing the wide case + feeding rhoGlobFloorRat.
+## HYP-3953: hpartA closed-in-architecture via the c-averaged ruler (4 exact identities + 1 finite census; NO rate lemma)
+- **Status:** VERIFIED (identities exact, ledgers computed, residual = named finite census), kind-pasteur-2026-07-01-S30.
+- **Claim (verified):** (R) exact c-ruler identity ‖(V−o)τ_j‖=‖oτ_j−c‖ collapses hpartA's drift/equidistribution into the lattice count ∃c: V·meas(G_c)>arcCount (end-to-end verified, margins +163..+1720); (F) Fubini ∫meas(G_c)dc=∫_{G_P}Σ(gap−1/7)⁺ exact (witnessG2 should be DEFINED as this); (Ω) ROTATION IDENTITY F_{V−offs}=F_{offs} POINTWISE — the fast scale cancels, NO equidistribution rate exists on this route (HYP-3787 bypassed); retirement recursion (each level's reference runner becomes a c-constraint, strict cardinality descent, depth ≤13). Ledger: min E_x[F_U] = (6/7)^2 EXACTLY at k=2 (no dip below independence), 0.294 at k=7 (0.866 ratio vs 0.640 homogeneous), 0.114 at k=13 (2.0x witnessMP); union-death row 55x above THM-594-E Parseval backstop; two-window joint exactly V-free. Residual = (⋆)-census (admissible joint ledger, finite per level). CONSEQUENCE: (hfloor,hpartA) close together; hp0cap leaves the critical path.
 - **Artifacts:** 05-knowledge/hypotheses/HYP-3953-hpartA-c-averaged-ruler-fubini.md; script TBD.
 - **Depends on / relates to:** THM-527/565, HYP-2827, THM-594-C/E, HYP-3950, opus HYP-3901, OPEN-Q-108.
