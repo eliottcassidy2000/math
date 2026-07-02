@@ -11,6 +11,30 @@ Format per entry:
 
 ---
 
+## MISTAKE-090 (2026-07-01, opus-S32) -- the 11-core far-element lever asked for a "UNIFORM ARC-COUNT bound c' <= const" that is FALSE as needed; one-at-a-time peeling was the wrong induction. Fixed by the SIMULTANEOUS peel.
+
+**What was assumed (WRONG, opus-S31).** That closing the multi-outlier r=2 residual needs a uniform bound
+c' <= const on the number of lonely-set components of an 11-core PREFIX that already CONTAINS a large
+element w1 (so the next peel's error c'/(7 w2) vanishes). S31's census-to-completion .out states this as
+"REMAINING ... needs the UNIFORM ARC-COUNT bound (c' <= const, not c' <= sum_v v)".
+
+**Why wrong.** No such bound exists: intersecting a compact core's lonely set (c'' arcs, measure m'')
+with A_w shatters it into c ~ w*m'' + 2c'' components -- VERIFIED growing 16,24,26,38,66 for w=20..400
+(lrc14_simultaneous_peel_lemma_opus_20260701.out, part L). The one-at-a-time induction m_3<...<m_11
+forces the far-containing prefix's arc count into the error term, and that count grows linearly in the
+peeled element. The requested lemma was unprovable because it is false.
+
+**Correct framing (the fix).** Peel ALL far elements AT ONCE by a union bound (simultaneous-peel lemma,
+HYP-3834): meas(L_C) >= (1-j/7) meas(L_low) - (2 c_low/7) sum_{w in F} 1/w -- only the COMPACT part's
+arc count ever enters, and at a multiplicative gap cut the scales cancel (error <= 22j/(7 Lambda),
+uniform, scale-free). The union bound dies exactly at j=7=1/(2r) (seven speeds can cover), which is the
+TRUE boundary of the method; the residual is gap-free >=7-element clusters, not an arc-count problem.
+
+**Impact.** S31's Part B verdict stands (its checks were correct); only its stated "remaining ingredient"
+is replaced. The j<=6 multi-outlier tail is now closed by HYP-3834's guard table (all margins positive,
+min 0.013 at j=5,6). Lesson: when an induction forces you to control a quantity that grows along the
+induction, change the induction, not the estimate. Source: opus-2026-07-01-S32.
+
 ## MISTAKE-085 (2026-06-22, mac-mini-S30) -- Node 1 boundary-core "closure" OMITTED G_P (conflated the L-cluster maxgap with the P-small-part safe set). Caught same session.
 
 **What I claimed (WRONG).** That the LRC(14) boundary core {t,..,12t,V} closes via rho_K>0

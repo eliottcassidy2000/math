@@ -1,0 +1,30 @@
+====================================================================================================
+ COURT VERIFICATION: CASE-convergent-not-covering-min  (opus-2026-07-01-S32)
+====================================================================================================
+
+ n=7  S=(1, 2, 5, 6, 7, 8)
+   primitive=True  covering(2..7)=True  |S|=6=n-1? True
+   M_exact = 2/13 = 0.153846  (attained at t=3/13);  claimed 2/13 => match: True
+   grid cross-check (2e6 pts): 0.153846  (|diff| = 3.85e-07)
+   convergent n/Phi6 = 7/43 = 0.162791;  M < convergent? True
+   => counterexample CONFIRMED
+
+ n=8  S=(1, 4, 5, 6, 7, 11, 16)
+   primitive=True  covering(2..8)=True  |S|=7=n-1? True
+   M_exact = 2/15 = 0.133333  (attained at t=7/15);  claimed 2/15 => match: True
+   grid cross-check (2e6 pts): 0.133333  (|diff| = 5.33e-07)
+   convergent n/Phi6 = 8/57 = 0.140351;  M < convergent? True
+   => counterexample CONFIRMED
+
+ n=9  S=(1, 3, 4, 5, 7, 11, 18, 32)
+   primitive=True  covering(2..9)=True  |S|=8=n-1? True
+   M_exact = 4/33 = 0.121212  (attained at t=4/33);  claimed 4/33 => match: True
+   grid cross-check (2e6 pts): 0.121212  (|diff| = 3.03e-07)
+   convergent n/Phi6 = 9/73 = 0.123288;  M < convergent? True
+   => counterexample CONFIRMED
+
+====================================================================================================
+ VERDICT: all three counterexamples CONFIRMED with exact arithmetic (complete breakpoint set).
+ opus-2026-06-30-S1's '14/183 covering-min CONFIRMED' was a RESTRICTED-FAMILY minimum (107-set scan),
+ not the global covering-min. The court case should be GRANTED: convergent != covering-min for n=7,8,9.
+DONE.

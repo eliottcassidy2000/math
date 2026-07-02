@@ -1,0 +1,84 @@
+========================================================================================================
+ (L) THE SIMULTANEOUS-PEEL LEMMA -- exact verification on adversarial splits
+     bound: meas(L_C) >= (1 - j/7) meas(L_low) - (2 c_low/7) sum_{w in F} 1/w
+========================================================================================================
+  low-cores x far-families x w in [20, 47, 101, 211]: 64 exact checks; violations = 0; min slack = 0.026678 (>=0 OK)
+
+  the old blocker, directly: C_low = 9-core + F = {w, w+1} (near-equal far pair):
+    C_low = (1, 2, 3, 4, 5, 7, 8, 9, 11): meas = 0.131452, c_low = 16
+         w    meas(L_C)    new bound      slack   c(L_low+w) (old lever c)
+        20     0.103752    -0.352364   0.456116                         16
+        50     0.096285    -0.087170   0.183455                         24
+       100     0.097333     0.002919   0.094415                         26
+       200     0.096849     0.048294   0.048555                         38
+       400     0.095951     0.071066   0.024885                         66
+    (old one-at-a-time lever error ~ c''/(7(w+1)) with c'' growing ~ w -> does NOT vanish; new bound does.)
+
+========================================================================================================
+ (T) THE TOWER: census m_k (primitive k-cores, max<=15) + recursion M_k, and the 11-core guard table
+========================================================================================================
+  census m_5(max<=15) = 2243/5880 = 0.381463 at (1, 5, 7, 8, 9);  max arc-count seen = 40
+  census m_6(max<=15) = 3029/10780 = 0.280983 at (1, 5, 7, 8, 9, 11);  max arc-count seen = 40
+  census m_7(max<=15) = 45107/229320 = 0.196699 at (1, 5, 7, 8, 9, 11, 13);  max arc-count seen = 38
+  census m_8(max<=15) = 2479/17640 = 0.140533 at (1, 3, 5, 7, 8, 9, 11, 13);  max arc-count seen = 36
+  census m_9(max<=15) = 10601/114660 = 0.092456 at (1, 2, 3, 5, 7, 8, 9, 11, 13);  max arc-count seen = 34
+  census m_10(max<=15) = 14249/252252 = 0.056487 at (1, 2, 3, 5, 7, 8, 9, 11, 12, 13);  max arc-count seen = 32
+  census m_11(max<=15) = 313/9702 = 0.032261 at (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13);  max arc-count seen = 30
+
+  recursion  M_k = min( census_k , min_{1<=j<=6} (1-j/7) M_{k-j} )   [ideal eps->0 at the gap cut]
+     k            M_k      float   binding branch
+     5            2/7   0.285714   trivial 1-k/7
+     6            1/7   0.142857   trivial 1-k/7
+     7           6/49   0.122449   peel j=1
+     8           5/49   0.102041   peel j=2
+     9           4/49   0.081633   peel j=3
+    10   14249/252252   0.056487   census
+    11       313/9702   0.032261   census
+
+  GUARD TABLE for the 11-core (target 1/36 = 0.027778); error budget eps(Lambda) = 22j/(7 Lambda):
+   j far  (1-j/7)M_(11-j)   guard-1/36  eps needed <  Lambda needed
+       1         0.048418     0.020640      0.020640            152
+       2         0.058309     0.030531      0.030531            206
+       3         0.058309     0.030531      0.030531            309
+       4         0.052478     0.024700      0.024700            509
+       5         0.040816     0.013039      0.013039           1205
+       6         0.040816     0.013039      0.013039           1446
+  ALL j=1..6 guards positive? True
+  => with Lambda ~ max column, the gap-split residual is CLOSED for any j<=6 far elements at ANY scales;
+     what remains: gap-free clusters of >=7 elements at unbounded height (+ their <=4-element compact part).
+
+========================================================================================================
+ (P) PROBING THE j>=7 DEEP-CLUSTER RESIDUAL
+========================================================================================================
+ P1. consecutive 11-cluster {N..N+10}: exact meas vs the two-scale limit integral
+    limit integral Int D_11 ~ 0.158059
+    N=  30: meas(L_{N..N+10}) = 0.161515   (gcd=1); vs limit 0.158059  diff +0.003455
+    N=  60: meas(L_{N..N+10}) = 0.159106   (gcd=1); vs limit 0.158059  diff +0.001047
+    N= 120: meas(L_{N..N+10}) = 0.158078   (gcd=1); vs limit 0.158059  diff +0.000019
+    N= 240: meas(L_{N..N+10}) = 0.158154   (gcd=1); vs limit 0.158059  diff +0.000095
+
+ P2. two-scale factorization: C = {1,2,3,4} u {N..N+6};  predict Int_{L_low} D_7(t) dt
+    meas(L_low) = 0.619048;  predicted two-scale value Int_(L_low) D_7 ~ 0.104083
+    N=  30: meas = 0.117511   vs predicted 0.104083   diff +0.013428   > 1/36? True
+    N=  60: meas = 0.106073   vs predicted 0.104083   diff +0.001990   > 1/36? True
+    N= 120: meas = 0.101147   vs predicted 0.104083   diff -0.002936   > 1/36? True
+    N= 240: meas = 0.105377   vs predicted 0.104083   diff +0.001294   > 1/36? True
+
+ P3. worst 7-cluster PATTERN probe (difference-core renormalization): cluster {N + c_i}, varying c;
+     prediction: the worst pattern's difference core is AP-like (the census extremizer's shadow).
+    consecutive {0..6}               meas(low u (N+pat)) = 0.105910   > 1/36? True
+    even spread {0,2,..,12}          meas(low u (N+pat)) = 0.122777   > 1/36? True
+    dilated-AP shadow {0,7,..,42}    meas(low u (N+pat)) = 0.197993   > 1/36? True
+    lacunary {0,1,3,7,15,31,63}      meas(low u (N+pat)) = 0.191995   > 1/36? True
+    random-ish {0,5,9,16,24,33,41}   meas(low u (N+pat)) = 0.215340   > 1/36? True
+    pentagon-diff {0,1,2,3,5,7,9}    meas(low u (N+pat)) = 0.146823   > 1/36? True
+    WORST pattern at N=210: consecutive {0..6} with meas 0.105910 (margin over 1/36: 3.813x)
+
+ P4. D_7 vanishing (the continuous-Fraenkel tiling): consecutive-7 density at t=k/7 (exact):
+    D_7(k=1/7) = 0   (danger arcs tile the circle exactly <=> D=0)
+    D_7(k=2/7) = 0   (danger arcs tile the circle exactly <=> D=0)
+    D_7(k=3/7) = 0   (danger arcs tile the circle exactly <=> D=0)
+    => the 7-cluster CAN tile (D=0) but only at isolated t (tiling breaks under perturbation since
+       arcs move at distinct speeds); the zeros are non-degenerate (linear), so the parent integral
+       Int_(L_low) D stays positive -- quantifying THAT floor is the remaining deep-cluster minimax.
+DONE.
