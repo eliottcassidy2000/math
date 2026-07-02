@@ -29,6 +29,8 @@
 -/
 import TournamentH7.LRCFourteenSkeleton
 import TournamentH7.LRCWitnessCert
+import TournamentH7.LRCCertTable
+import Mathlib.Data.List.GetD
 
 namespace LonelyRunner
 namespace LRC14
@@ -157,6 +159,81 @@ instead, being non-covering.) -/
 theorem covering_block_lonely (V : ℤ) (hV : 15 ≤ V) (hmod : V % 14 ≠ 13) :
     CoveringFamily (blockFamily V) ∧ ∃ t : ℝ, Lonely 14 (blockFamily V) t :=
   ⟨blockFamily_covering V hV hmod, blockFamily_lonely V hV⟩
+
+/-! ## The generic corpus → `Lonely` conversion
+
+Every census row of the (★)-tables becomes an INFINITE family of 13-runner
+`Lonely` instances: the `k = 13` page (91 rows, no small part, 13 offsets each)
+and the `k = 12` page (4732 rows, one small speed + 12 offsets each).  Together
+with the packs, this is the certified sub-universe of the covering branch. -/
+
+/-- The 13-runner family of a no-small-part census row (13 offsets) at reference
+speed `V`: the runners `{V − o : o ∈ offs}`. -/
+def rowFamily13 (K : WitnessCert.CertRow) (V : ℤ) : Fin 13 → ℤ :=
+  fun i => V - K.offs.getD (i : ℕ) 0
+
+/-- The 13-runner family of a one-small-speed census row (1 + 12) at reference
+speed `V`: twelve tail runners `{V − o}` and the small speed. -/
+def rowFamily12 (K : WitnessCert.CertRow) (V : ℤ) : Fin 13 → ℤ :=
+  fun i => if (i : ℕ) < 12 then V - K.offs.getD (i : ℕ) 0 else K.P.getD 0 1
+
+/-- Shape audit of the `k = 13` page: every row has no small part and exactly 13
+offsets. -/
+theorem page13_shape :
+    ∀ K ∈ WitnessCert.page13, K.P.length = 0 ∧ K.offs.length = 13 := by
+  native_decide
+
+/-- Shape audit of the `k = 12` page: every row has exactly one small speed and 12
+offsets. -/
+theorem page12_shape :
+    ∀ K ∈ WitnessCert.page12, K.P.length = 1 ∧ K.offs.length = 12 := by
+  native_decide
+
+/-- **Every `k = 13` census row is an infinite `Lonely` family**: for each of the
+91 rows and EVERY reference speed `V ≥ V*`, the 13 runners `{V − o}` share a
+14-lonely time. -/
+theorem rowFamily13_lonely (K : WitnessCert.CertRow) (hK : K ∈ WitnessCert.page13)
+    (V : ℤ) (hV : K.Vs ≤ V) : ∃ t : ℝ, Lonely 14 (rowFamily13 K V) t := by
+  obtain ⟨τ, -, hO⟩ := WitnessCert.page13_tail K hK V hV
+  refine ⟨τ, lonely_of_norm_forall (fun i => ?_)⟩
+  have hlen : K.offs.length = 13 := (page13_shape K hK).2
+  have hlt : (i : ℕ) < K.offs.length := by rw [hlen]; exact i.isLt
+  have hmem : K.offs.getD (i : ℕ) 0 ∈ K.offs := by
+    rw [List.getD_eq_getElem K.offs 0 hlt]
+    exact List.getElem_mem hlt
+  have hb := hO _ hmem
+  have hcast : ((1/14 : ℚ) : ℝ) = (1 : ℝ) / 14 := by norm_num
+  rw [hcast] at hb
+  exact hb
+
+/-- **Every `k = 12` census row is an infinite `Lonely` family**: for each of the
+4732 rows and EVERY reference speed `V ≥ V*`, the small speed and the 12 tail
+runners `{V − o}` share a 14-lonely time. -/
+theorem rowFamily12_lonely (K : WitnessCert.CertRow) (hK : K ∈ WitnessCert.page12)
+    (V : ℤ) (hV : K.Vs ≤ V) : ∃ t : ℝ, Lonely 14 (rowFamily12 K V) t := by
+  obtain ⟨τ, hP, hO⟩ := WitnessCert.page12_tail K hK V hV
+  refine ⟨τ, lonely_of_norm_forall (fun i => ?_)⟩
+  have hcast : ((1/14 : ℚ) : ℝ) = (1 : ℝ) / 14 := by norm_num
+  unfold rowFamily12
+  by_cases hi : (i : ℕ) < 12
+  · simp only [hi, if_true]
+    have hlen : K.offs.length = 12 := (page12_shape K hK).2
+    have hlt : (i : ℕ) < K.offs.length := by rw [hlen]; exact hi
+    have hmem : K.offs.getD (i : ℕ) 0 ∈ K.offs := by
+      rw [List.getD_eq_getElem K.offs 0 hlt]
+      exact List.getElem_mem hlt
+    have hb := hO _ hmem
+    rw [hcast] at hb
+    exact hb
+  · simp only [hi, if_false]
+    have hlen : K.P.length = 1 := (page12_shape K hK).1
+    have hlt : (0 : ℕ) < K.P.length := by omega
+    have hmem : K.P.getD 0 1 ∈ K.P := by
+      rw [List.getD_eq_getElem K.P 1 hlt]
+      exact List.getElem_mem hlt
+    have hb := hP _ hmem
+    rw [hcast] at hb
+    exact hb
 
 end LRC14
 end LonelyRunner
