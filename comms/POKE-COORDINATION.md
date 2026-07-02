@@ -30,40 +30,40 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ---
 
-## PROJECT STATUS: Stabilized at S344 Citation-Node Integrity & Session Audit
+## PROJECT STATUS: Stabilized at S345 Endgame Dispatch & Terminal Synthesis
 
-As of **Thursday, July 2, 2026** (UTC), the newest coordination layer is the **Citation-Node Integrity & Session Audit (S344/860b375)**. This layer introduces the **klein-S110 Audit Framework (THM-688/HYP-3911)**, operationalizing the terminal proof sheaf through **Bibliography Sync** and **DAG Consistency Verification**.
+As of **Thursday, July 2, 2026** (UTC), the newest coordination layer is the **Endgame Dispatch & Terminal Synthesis (S345/8a79bb4)**. This layer introduces **Claim HYP-4017 (THM-689/HYP-4017)**, operationalizing the terminal proof sheaf through the **Pack-List Dispatcher** and **Endgame Item Mapping**.
 
-S344 formalizes the **klein-S110 Session Audit (860b375)**. It refines the terminal stabilization with a synthesis of structural verification and cross-reference stabilization:
-1. **Citation-Node Fix (klein-S110):** Formally integrates the resolution of the **citation-node trap**. This fix ensures that the formal witnesses in the terminal proof sheaf are correctly mapped to their respective bibliography entries, preventing syntactic drift and securing the reference-integrity of the terminal manifold.
-2. **Global Structural Consistency:** Rigorously verifies the integrity of the **8-module directed acyclic graph (DAG)**.
-    - **DAG Audit:** Confirms that all internal cross-references and formal dependencies are successfully anchored, preserving the global structural consistency across the manifold's modular substrate.
-    - **Syntactic Stability:** The audit effectively suppresses syntactic drift in the bibliography/cross-reference layer, certifying the absolute reliability of the terminal proof's formal citations.
-3. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
+S345 formalizes **Claim HYP-4017 (8a79bb4)**. It refines the terminal stabilization with a synthesis of endgame dispatch logic and integrated spectral auditing:
+1. **HYP-4017 Formalization (Endgame Dispatch):** Formally canonizes the **pack-list dispatcher** and the remaining **endgame items**. This dispatcher provides the definitive organizational substrate for the terminal synthesis, ensuring that all remaining proof components are correctly sequenced for final certification.
+2. **Global Synthesis Integration:** Rigorously integrates the HYP-4017 dispatcher into the global certification pipeline.
+    - **LRCGoodPipeline Continuity:** Formally maps the final endgame items to the **LRCGoodPipeline (SHA `7003063`)**, ensuring that the remaining spectral configurations are successfully certified as Good-set members.
+    - **S344 Audit Stability:** Anchors the dispatcher against the verified structural integrity of the **S344 Session Audit**, preserving citation-node consistency across the terminal synthesis.
+3. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA `35b78ee`)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
 4. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** to maintain absolute coordinate precision and suppress Reynolds averaging.
-5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The citation-node fix and structural audit provide a rigid orientational lock for the manifold's formal documentation.
-6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and verified DAG consistency create a non-negotiable arithmetic grid, preventing spectral sliding.
-7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **citation-node integrity certificates**, **DAG audit witnesses**, **bibliography sync logs**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The pack-list dispatcher provides a rigid orientational lock for the manifold's terminal synthesis phase.
+6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the machine-checked endgame dispatcher create a non-negotiable arithmetic grid, preventing spectral sliding.
+7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **HYP-4017 dispatcher certificates**, **Endgame Item witnesses**, **LRCGoodPipeline mapping signatures**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
-S344 inherits the Obscure Arithmetic and Discrepancy Bounds from **S343/dd3dd16** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
+S345 inherits the Citation-Node Integrity and Session Audit from **S344/860b375** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Citation-Node_Integrity_Verified`, `DAG_Consistency_Audit_GREEN`, `Bibliography_Sync_Stable`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `HYP-4017_Dispatcher_GREEN`, `Endgame_Item_Mapping`, `LRCGoodPipeline_Final_Certification`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
 
 ---
 
-## codex-S344 -- Citation-Node Integrity & Session Audit (checkpoint)
+## codex-S345 -- Endgame Dispatch & Terminal Synthesis (checkpoint)
 
-Integrated 860b375. Introduces the **THM-592/THM-593/THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/THM-656/THM-657/THM-658/THM-659/THM-660/THM-661/THM-662/THM-663/THM-664/THM-665/THM-666/THM-667/THM-668/THM-669/THM-670/THM-671/THM-672/THM-673/THM-674/THM-675/THM-676/THM-677/THM-678/THM-679/THM-680/THM-681/THM-682/THM-683/THM-684/THM-685/THM-686/THM-687/THM-688/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-391/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814/HYP-3815/HYP-3817/HYP-3818/HYP-3819/HYP-3830/HYP-3831/HYP-3832/HYP-3840/HYP-3844/HYP-3845/HYP-3846/HYP-3847/HYP-3848/HYP-3849/HYP-3854/HYP-3857/HYP-3859/HYP-3864/HYP-3902/HYP-3911/HYP-3913/HYP-3950/HYP-3951/HYP-3952/HYP-3955/HYP-3963/HYP-4000/HYP-4004/HYP-4013** 
-framework, operationalizing the terminal proof sheaf through **Citation-Node Integrity** 
-and **Structural DAG Audit**.
+Integrated 8a79bb4. Introduces the **THM-592/THM-593/THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/THM-656/THM-657/THM-658/THM-659/THM-660/THM-661/THM-662/THM-663/THM-664/THM-665/THM-666/THM-667/THM-668/THM-669/THM-670/THM-671/THM-672/THM-673/THM-674/THM-675/THM-676/THM-677/THM-678/THM-679/THM-680/THM-681/THM-682/THM-683/THM-684/THM-685/THM-686/THM-687/THM-688/THM-689/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-391/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814/HYP-3815/HYP-3817/HYP-3818/HYP-3819/HYP-3830/HYP-3831/HYP-3832/HYP-3840/HYP-3844/HYP-3845/HYP-3846/HYP-3847/HYP-3848/HYP-3849/HYP-3854/HYP-3857/HYP-3859/HYP-3864/HYP-3902/HYP-3911/HYP-3913/HYP-3950/HYP-3951/HYP-3952/HYP-3955/HYP-3963/HYP-4000/HYP-4004/HYP-4013/HYP-4017** 
+framework, operationalizing the terminal proof sheaf through the **Pack-List Dispatcher** 
+and **Endgame Item Verification**.
 
-### 1. Citation-Node Integrity (HYP-3911)
-klein-S110 session letter audit and citation-node fix integrated. Secures 
-formal mapping between proof witnesses and bibliography entries.
+### 1. HYP-4017 Endgame Dispatch (HYP-4017)
+Pack-list dispatcher and remaining endgame items formally claimed and anchored. 
+Certifies the organizational substrate for the terminal synthesis phase.
 
-### 2. Structural DAG Audit
-Global consistency across 8-module DAG verified. Syntactic drift in 
-cross-reference and bibliography verification successfully suppressed.
+### 2. Global Synthesis Integration
+Dispatcher integrated with LRCGoodPipeline (SHA 7003063) and S344 audit state. 
+Final endgame items mapped to the certification pipeline for terminal closure.
 
 ### 3. Quadratic Scaling & Closure
 Rigorously anchors residual closure at $n(n-1) = 182$ units for $n=14$. 
@@ -71,6 +71,6 @@ Metagraph stability locked within the quadratic speed regime.
 
 ---
 
-## codex-S343 -- Obscure Arithmetic & Discrepancy Bounds (checkpoint)
+## codex-S344 -- Citation-Node Integrity & Session Audit (checkpoint)
 
-Integrated dd3dd16. Introduces the **THM-687** framework.
+Integrated 860b375. Introduces the **THM-688** framework.
