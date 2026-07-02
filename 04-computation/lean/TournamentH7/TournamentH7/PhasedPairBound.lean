@@ -150,4 +150,97 @@ theorem widthNN_pos_iff {P Q : ℕ} (hP : 0 < (P : ℚ)) (hQ : 0 < (Q : ℚ))
   unfold clip
   simp only [lt_max_iff, lt_irrefl, false_or, sub_pos]
 
+/-- **THM-604(b), the phased pair bound.** -/
+theorem phased_pair_bound {P Q : ℕ} (hcop : Nat.Coprime P Q)
+    (hP : 0 < P) (hQ : 0 < Q) {r φ ψ : ℚ} (hr : 0 ≤ r)
+    (hr2 : 2 * r * ((P : ℚ) + Q) ≤ 1) :
+    length (inter (comb P r φ) (comb Q r ψ)) ≤ 2 * r / Q := by
+  have hPQ : (0 : ℚ) < P := by exact_mod_cast hP
+  have hQQ : (0 : ℚ) < Q := by exact_mod_cast hQ
+  have hc : (0 : ℚ) ≤ 2 * r / Q := by positivity
+  unfold comb inter
+  simp only [List.map_map]
+  rw [length_flatMap, List.map_map]
+  -- abbreviate the inner width function
+  apply sum_le_of_pairwise_zero hc
+  · intro x hx
+    simp only [List.mem_map] at hx
+    obtain ⟨k, -, rfl⟩ := hx
+    simp only [Function.comp_apply]
+    unfold length
+    exact List.sum_nonneg fun y hy => by
+      simp only [List.map_map, List.mem_map] at hy
+      obtain ⟨l, -, rfl⟩ := hy
+      exact le_max_left 0 _
+  · intro x hx
+    simp only [List.mem_map] at hx
+    obtain ⟨k, hkmem, rfl⟩ := hx
+    simp only [List.mem_range] at hkmem
+    simp only [Function.comp_apply]
+    unfold length
+    simp only [List.map_map]
+    apply sum_le_of_pairwise_zero hc
+    · intro y hy
+      simp only [List.mem_map] at hy
+      obtain ⟨l, -, rfl⟩ := hy
+      exact le_max_left 0 _
+    · intro y hy
+      simp only [List.mem_map] at hy
+      obtain ⟨l, -, rfl⟩ := hy
+      simp only [Function.comp_apply]
+      refine le_trans (widthNN_clip_le_right _ _) ?_
+      have hw : ((l : ℚ) + ψ + r) / Q - ((l : ℚ) + ψ - r) / Q = 2 * r / Q := by
+        field_simp
+        ring
+      rw [hw]
+      exact max_le hc (le_refl _)
+    · rw [List.pairwise_map]
+      refine List.pairwise_lt_range.imp_of_mem ?_
+      intro l l' hlm hl'm hll'
+      simp only [List.mem_range] at hlm hl'm
+      by_contra hcon
+      push_neg at hcon
+      obtain ⟨h1, h2⟩ := hcon
+      simp only [Function.comp_apply] at h1 h2
+      have hp1 := (widthNN_pos_iff hPQ hQQ k l).mp
+        (lt_of_le_of_ne (le_max_left 0 _) (Ne.symm h1))
+      have hp2 := (widthNN_pos_iff hPQ hQQ k l').mp
+        (lt_of_le_of_ne (le_max_left 0 _) (Ne.symm h2))
+      exact absurd (meeting_unique hcop hr2 hkmem hlm hkmem hl'm hp1 hp2).2
+        (Nat.ne_of_lt hll')
+  · rw [List.pairwise_map]
+    refine List.pairwise_lt_range.imp_of_mem ?_
+    intro k k' hkm hk'm hkk'
+    simp only [List.mem_range] at hkm hk'm
+    by_contra hcon
+    push_neg at hcon
+    obtain ⟨h1, h2⟩ := hcon
+    unfold length at h1 h2
+    simp only [List.map_map] at h1 h2
+    obtain ⟨y1, hy1, hy1p⟩ := exists_pos_of_sum_pos (fun y hy => by
+        simp only [List.mem_map] at hy
+        obtain ⟨l, -, rfl⟩ := hy
+        exact le_max_left 0 _)
+      (lt_of_le_of_ne (List.sum_nonneg (fun y hy => by
+        simp only [List.mem_map] at hy
+        obtain ⟨l, -, rfl⟩ := hy
+        exact le_max_left 0 _)) (Ne.symm h1))
+    obtain ⟨y2, hy2, hy2p⟩ := exists_pos_of_sum_pos (fun y hy => by
+        simp only [List.mem_map] at hy
+        obtain ⟨l, -, rfl⟩ := hy
+        exact le_max_left 0 _)
+      (lt_of_le_of_ne (List.sum_nonneg (fun y hy => by
+        simp only [List.mem_map] at hy
+        obtain ⟨l, -, rfl⟩ := hy
+        exact le_max_left 0 _)) (Ne.symm h2))
+    simp only [List.mem_map] at hy1 hy2
+    obtain ⟨l, hlm, rfl⟩ := hy1
+    obtain ⟨l', hl'm, rfl⟩ := hy2
+    simp only [List.mem_range] at hlm hl'm
+    have hp1 := (widthNN_pos_iff hPQ hQQ k l).mp hy1p
+    have hp2 := (widthNN_pos_iff hPQ hQQ k' l').mp hy2p
+    exact absurd (meeting_unique hcop hr2 hkm hlm hk'm hl'm hp1 hp2).1
+      (Nat.ne_of_lt hkk')
+
 end PhasedPairBound
+

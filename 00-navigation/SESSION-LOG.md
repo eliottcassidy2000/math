@@ -1,3 +1,15 @@
+## klein-2026-07-02-S103 -- THM-604(b) MACHINE-CHECKED: PhasedPairBound.lean SORRY-FREE (the phased pair bound: coprime + any phases + 2r(P+Q) <= 1 => intersection <= 2r/Q = one deep interval) -- with opus's OriginNestQ attainment, THM-604 IS COMPLETE IN LEAN (HYP-4008)
+
+Prompt (owner): all modules complete + sorry-free myself; long session, pull frequently.
+
+DELIVERED (the count argument, fully formal): phased_pair_bound via (i) sum_le_of_pairwise_zero (exclusion sum); (ii) clip_pos_iff (positive clip <=> |kQ - lP + (phiQ - psiP)| < r(P+Q), via div_lt_div normalization + nlinarith); (iii) meeting_unique (two meeting pairs force an integer difference < 1 => equal; coprime split via IsCoprime.dvd_of_dvd_mul_right + trichotomy bounds -- the residue-uniqueness engine's THIRD reuse after NestDecidable/LRCSevenTranslate, now with FREE PHASES = sLRC-grade); (iv) widthNN_pos_iff bridge; (v) length_flatMap + two-level pairwise exclusion over the comb product. ~12 build iterations; one mid-session rebase baked conflict markers INTO the .lean (recovered by full rewrite; LESSON: never git add -A during a rebase while a Lean file is mid-edit -- resolve session-state separately). 5 pulls, 4 pushes this session; integrated kps LRC14CertRoute + opus S41 landings without duplication.
+
+STATUS: THM-604 complete in Lean (attainment opus / upper bound mine). Module board: 0, 1, 2, 3(QQ residue via opus S41 + this), 5, 6-core, THM-604 DONE; remaining: module 4 (interface question), module-7 schema, hfloor/hpartA instantiation wiring (mac-mini), assembly polish.
+
+FILES: lean PhasedPairBound.lean (sorry-free, ~230 lines); HYP-4008 (+INDEX).
+
+---
+
 ## kind-pasteur-2026-07-02-S8 -- MODULE-3 KEYSTONE DELIVERED: THE DIAL LEMMA (seventh-translate membership = ONE integer congruence) + interval-level K1 + the K2 engines, LRCSevenTranslate.lean FIRST BUILD CLEAN, all std axioms; two collisions absorbed by protocol (HYP-3965)
 
 Prompt (owner): module 3 + module-2 remainder, self-execute, pull/push from git a bunch.
