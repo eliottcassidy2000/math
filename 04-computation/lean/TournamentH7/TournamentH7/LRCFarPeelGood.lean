@@ -215,5 +215,102 @@ theorem base_floor_of_cite (cite : LonelyRunner.LRCUpTo13) (base : Fin 12 → �
       rw [hx', Int.fract]; push_cast; ring
     rwa [heq] at hcase
 
+/-- **THE DENSITY BRIDGE, general arity** (`j ≤ 12`): the base good-region floor from the
+`LRC(≤13)` citation for ANY base of at most 12 positive speeds.  Cite the `j` base speeds → a
+REAL `t0` with margin `1/(j+1) ≥ 1/13`; a rational `x` within `1/(182·ΣB)` of `t0` is STRICTLY
+`1/14`-far from every base multiple (the `1/(j+1) − 1/14 ≥ 1/182` slack), so
+`0 < length (goodRegion2 base (1/14))`.  This is the arity the peels actually consume: removing
+`k` far runners leaves a `(13−k)`-speed base — exactly `j = 13−k ∈ [7,12]` for the `≤ 6`-far
+simultaneous peel.  (`j = 0` is the empty base, good region `[0,1)`, length `1`.) -/
+theorem base_floor_of_cite_gen (cite : LonelyRunner.LRCUpTo13) {j : ℕ} (hj : j ≤ 12)
+    (base : Fin j → ℤ) (hpos : ∀ i, 0 < base i) :
+    0 < length (goodRegion2 (List.ofFn base) (1 / 14)) := by
+  rcases Nat.eq_zero_or_pos j with hj0 | hjpos
+  · -- empty base: goodRegion2 [] (1/14) = [(0,1)], length 1
+    subst hj0
+    have hnil : (List.ofFn base) = ([] : List ℤ) := by
+      apply List.ofFn_zero
+    rw [hnil]
+    show (0 : ℚ) < length (goodRegion2 [] (1 / 14))
+    rw [goodRegion2]
+    simp only [List.flatMap_nil]
+    show (0 : ℚ) < length [((0 : ℚ), 1)]
+    simp only [length, List.map_cons, List.map_nil, List.sum_cons, List.sum_nil]
+    norm_num
+  · -- nonempty base: cite → t0 at margin 1/(j+1), then the density argument
+    obtain ⟨t0, ht0⟩ := cite j hj base (fun i => (hpos i).ne')
+    set V : ℤ := ∑ i, base i with hV
+    have hVpos : 0 < V :=
+      Finset.sum_pos (fun i _ => hpos i) ⟨⟨0, hjpos⟩, Finset.mem_univ _⟩
+    have hVR : (0 : ℝ) < (V : ℝ) := by exact_mod_cast hVpos
+    have hle : ∀ i, base i ≤ V := fun i =>
+      Finset.single_le_sum (fun j _ => (hpos j).le) (Finset.mem_univ i)
+    set δ : ℝ := 1 / (182 * (V : ℝ)) with hδ
+    have hδpos : (0 : ℝ) < δ := by rw [hδ]; positivity
+    obtain ⟨x, hx1, hx2⟩ := exists_rat_btwn (show t0 - δ < t0 + δ by linarith)
+    have hxt : |(x : ℝ) - t0| < δ := by rw [abs_lt]; constructor <;> linarith
+    -- margin 1/(j+1) ≥ 1/13
+    have hjR : ((j : ℝ) + 1) ≤ 13 := by
+      have : (j : ℝ) ≤ 12 := by exact_mod_cast hj
+      linarith
+    have hjRpos : (0 : ℝ) < (j : ℝ) + 1 := by positivity
+    have hmargin : (1 : ℝ) / 13 ≤ 1 / ((j : ℝ) + 1) := one_div_le_one_div_of_le hjRpos hjR
+    have hgoodQ : ∀ i : Fin j, ∀ m : ℤ, (1 : ℚ) / 14 < |(base i : ℚ) * x - m| := by
+      intro i m
+      have hbR : (0 : ℝ) < (base i : ℝ) := by exact_mod_cast hpos i
+      have hble : (base i : ℝ) ≤ (V : ℝ) := by exact_mod_cast hle i
+      have htri : |(base i : ℝ) * t0 - m|
+          ≤ |(base i : ℝ) * (x : ℝ) - m| + (base i : ℝ) * |(x : ℝ) - t0| := by
+        have h1 : (base i : ℝ) * t0 - m
+            = ((base i : ℝ) * (x : ℝ) - m) + (base i : ℝ) * (t0 - (x : ℝ)) := by ring
+        rw [h1]
+        calc |((base i : ℝ) * (x : ℝ) - m) + (base i : ℝ) * (t0 - (x : ℝ))|
+            ≤ |(base i : ℝ) * (x : ℝ) - m| + |(base i : ℝ) * (t0 - (x : ℝ))| := abs_add_le _ _
+          _ = |(base i : ℝ) * (x : ℝ) - m| + (base i : ℝ) * |(x : ℝ) - t0| := by
+              rw [abs_mul, abs_of_pos hbR, abs_sub_comm t0 (x : ℝ)]
+      have hm := ht0 i m
+      push_cast at hm
+      have hbd : (base i : ℝ) * |(x : ℝ) - t0| < 1 / 182 := by
+        calc (base i : ℝ) * |(x : ℝ) - t0| < (base i : ℝ) * δ :=
+              mul_lt_mul_of_pos_left hxt hbR
+          _ ≤ (V : ℝ) * δ := mul_le_mul_of_nonneg_right hble hδpos.le
+          _ = 1 / 182 := by rw [hδ]; field_simp
+      have hgR : (1 : ℝ) / 14 < |(base i : ℝ) * (x : ℝ) - m| := by
+        have h14 : (1 : ℝ) / 13 - 1 / 182 = 1 / 14 := by norm_num
+        linarith
+      have hcastabs : |(base i : ℝ) * (x : ℝ) - (m : ℝ)| = ((|(base i : ℚ) * x - m| : ℚ) : ℝ) := by
+        push_cast; ring_nf
+      rw [hcastabs] at hgR
+      have : ((1 : ℚ) / 14 : ℝ) < ((|(base i : ℚ) * x - m| : ℚ) : ℝ) := by push_cast; linarith
+      exact_mod_cast this
+    set x' : ℚ := Int.fract x with hx'
+    have hx'0 : 0 ≤ x' := Int.fract_nonneg x
+    have hx'1 : x' < 1 := Int.fract_lt_one x
+    refine goodRegion2_length_pos_of_strict ?_ hx'0 hx'1 ?_
+    · intro s hs
+      obtain ⟨i, rfl⟩ := List.mem_ofFn.mp hs
+      exact hpos i
+    · intro s hs m
+      obtain ⟨i, rfl⟩ := List.mem_ofFn.mp hs
+      have hcase := hgoodQ i (m + base i * ⌊x⌋)
+      have heq : (base i : ℚ) * x - ((m + base i * ⌊x⌋ : ℤ) : ℚ)
+          = (base i : ℚ) * x' - (m : ℚ) := by
+        rw [hx', Int.fract]; push_cast; ring
+      rwa [heq] at hcase
+
+/-- **The density bridge, list form.**  For any list `B` of at most 12 positive speeds, the
+`LRC(≤13)` citation gives `0 < length (goodRegion2 B (1/14))`.  This is the shape the peels
+consume: the base of a far-peel (`E = init v`, 12 speeds) or of the simultaneous ≤6-far peel
+(`B`, the `13−|far|` bounded runners) is exactly such a list, so its good-region FLOOR is
+discharged unconditionally by the citation node — no computation of the base region needed. -/
+theorem base_floor_list_of_cite (cite : LonelyRunner.LRCUpTo13) (B : List ℤ)
+    (hpos : ∀ w ∈ B, 0 < w) (hlen : B.length ≤ 12) :
+    0 < length (goodRegion2 B (1 / 14)) := by
+  have hget : List.ofFn (B.get) = B := List.ofFn_get B
+  rw [← hget]
+  refine base_floor_of_cite_gen cite hlen (B.get) ?_
+  intro i
+  exact hpos (B.get i) (List.get_mem B i)
+
 end RatIntervals
 end LonelyRunner
