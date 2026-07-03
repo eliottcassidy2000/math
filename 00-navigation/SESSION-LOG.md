@@ -149,6 +149,20 @@ HONEST STATUS: LRC(14) NOT closed (open research). spread13 closes the all-compa
 
 FILES: LRCSpread13.lean (spread13_lonely + lonely14_of_ratio, registered); 2 numerical probes + outs; HYP-3984 INDEX; reflection; this entry. No canon overridden.
 
+## mac-mini-2026-07-03-S25 -- STEP 1 FULLY FORMALIZED IN LEAN (base_goodRegion_floor, THM-609, kernel-pure) = opus's ONE genuine remaining lemma of the far-peel; step-5 characterized as the compressed case
+
+Prompt (owner): complete steps 2 and 5 + any handoffs.
+
+INTEGRATED: kps-S30 composed steps 2+3+4 (far_peel_lonely) and reduced step 1 to "one rational strict-good point" (goodRegion2_length_pos_of_strict), handing the real->rational bridge to klein/my lane; opus-S50 formalized my THM-608 (LRCScaleSeparation.lean) + slack_of_lonely13. So STEP 2 = DONE (kps damped_peel/goodRegion2_peel_pos). The remaining pieces were step 1 (base floor) + step 5 (finite window).
+
+DELIVERED -- STEP 1 FULLY IN LEAN (LRCBaseFloor.lean, kernel-pure [propext,Classical.choice,Quot.sound], corpus green 8502, root-registered):
+ * exists_strict_good_rat: the real->rational density bridge. From a real t0 with dist(s*t0) >= 1/14 + 1/182, a RATIONAL x in [0,1) with STRICT dist(s*x) > 1/14 (eps = 1/(364V) => bound 1/14 + 1/364; reverse triangle + Int.fract into [0,1)). ~12 build iterations (exists_rat_near gives |t0 - q| not |q - t0|; abs_add->abs_add_le; Int.floor_add_fract; explicit ℚ-cast for norm_cast).
+ * base_goodRegion_floor (= THM-609): 0 < length(goodRegion2 base (1/14)) from LRCUpTo13 for any <=12-speed base. Chains exists_strict_good_rat + the LRC(<=13) slack (1/(len+1) >= 1/13 = 1/14+1/182) + kps goodRegion2_length_pos_of_strict. THIS IS opus-S49's ONE genuine remaining lemma, now machine-checked.
+
+STEP 5 characterized (compressed case, NOT a fixed window): peel closes only DOMINANT far (w > threshold = #pieces/(3*length(base)) ~ 700 for base~400); ALL comparable-magnitude covering families fall in step 5. Step 5 = census (bounded magnitude) + THM-608 (near-equal large cluster, opus-formalized) + the WIDE residual (slow-base vs wide-far, the genuine open crux = OPEN-Q-108 / the 13-comb lever). Base magnitude unbounded => step 5 is not a finite census; it is the compressed residual.
+
+NET: far-peel of CoveringFarLonely 22 is CLOSED for the dominant far case (step1 THM-609 done + kps far_peel_lonely); the residual is step 5 = the compressed case (my THM-608 + census cover near-equal + bounded; the wide residual is open). FILES: LRCBaseFloor.lean (green); THM-609 marked Lean-formalized; step5_window_characterization (py+out); broadcast step 1 done. ~9 push/pull cycles. No canon overridden.
+
 ## mac-mini-2026-07-03-S24 -- THM-609 solves opus's ONE REMAINING LEMMA (base good-region floor) + LRCDilation.lean GREEN (WLOG gcd=1) closes a completeness GAP (HYP-4043) + end-to-end dispatch validation
 
 Prompt (owner): work the genuine crux + anything remaining; long session, many tasks, frequent push/pull, let concurrent work inspire.
