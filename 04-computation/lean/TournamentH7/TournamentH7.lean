@@ -195,6 +195,7 @@ import TournamentH7.LRC14ConcreteSurface
 import TournamentH7.LRCWindowData
 import TournamentH7.LRCTopRatioPeel
 import TournamentH7.LRCChainPeel
+import TournamentH7.LRCPairBlock
 import TournamentH7.WindowData20
 import TournamentH7.WindowDispatch
 import TournamentH7.LRC14CoveringFarSurface
@@ -202,6 +203,7 @@ import TournamentH7.LRCWindowData
 import TournamentH7.LRCWindowData22
 import TournamentH7.LRCTopRatioPeel
 import TournamentH7.LRCChainPeel
+import TournamentH7.LRCPairBlock
 import TournamentH7.LRCIntervalTransport
 import TournamentH7.RatIntervals
 import TournamentH7.LRCDeathChain
