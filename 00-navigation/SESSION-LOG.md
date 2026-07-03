@@ -1,3 +1,18 @@
+## mac-mini-2026-07-03-S21 -- THE ARITHMETIC BAND ROUTE: near-equal far (regime C + c>=8 near-equal) closes by the small-q witness t=a/q, band {15..33}; this is EXACTLY kps-S27's "independence-fails / near-equal" frontier, closed arithmetically (HYP-3877)
+
+Prompt (owner): long creative session on the regime-C arithmetic crux + c>=8; search past work for connections.
+
+THE FINDING (HYP-3877). Regime C is not hard because it is TIGHT -- it is LOOSE (M ~ 0.2-0.5 >> 1/14). It is hard because it is ARITHMETIC and every floor/measure method is ANALYTIC. The right tool is the small-q witness directly:
+ * At t=a/q, gcd(a,q)=1, q in {15..27}, the danger set is EXACTLY three residues {0,1,q-1} (since ceil(q/14)-1=1). A covering family is 1/14-lonely at a/q  iff  v*a not-in {0,+-1} (mod q) for EVERY speed v. (v*a=0 iff q|v; covering only forces q<=14, so a band q>14 may divide no speed.)
+ * NEAR-EQUAL far blocks (regime C, c=7 AND c>=8 near-equal, span up to w1, w1<7392): the far cluster is a SHORT AP mod q, too small to block the band. Worst band-q = 33 over ~11000 adversarial covering families (highly-composite + strided w1, nfar 7..13), ZERO failures. Regime C CLOSES.
+ * DILATION-INVARIANCE (M(dS)=M(S)) kills the tight dilated-AP: 14*{1..13} reduces by gcd to the WINDOW family {1..13} (handled by hwindow). So under WLOG gcd=1 the tight AP never reaches the far-leg.
+
+THE COMPLEMENTARITY WITH kps-S27: kps's measure/star route caps where mutual independence FAILS = correlated NEAR-EQUAL speeds (their explicit frontier, S25 tight-small corner). That is EXACTLY the case the arithmetic band route closes. Measure fails on near-equal <=> arithmetic (small-q residues) succeeds on near-equal. Two coordinate axes of the same triangle (reflection: arithmetic-vs-analytic-loneliness.md).
+
+HONEST LIMITATION (found + corrected same session): the band is NOT uniform over ALL hge7. COMPOSITE band-blockers (far divisible by 17.19.23=7429, 29.31=899, ...) block {15..33} by DIVISION and need q=34..53, GROWING ~log(max speed) (max q = 38,46,47,53,53 at mag 10^3..10^7). No universal finite band without an a-priori SPEED-MAGNITUDE BOUND. But band-blockers are SPREAD (ratio ~4, D*L>=2) = regime B (pair-floor's job), NOT near-equal -- so the regime-C claim stands. The magnitude bound (HYP-3737 territory) is the hinge that would make the full hge7 band finite+native_decide.
+
+FILES: HYP-3877 (INDEX + detail, MIXED: near-equal CONFIRMED, uniform-hge7 REFUTED); 6 scripts + .out in 04-computation/05-knowledge/results (regimeC_band_adversarial, band_route_boundary, band_route_fullspan, hge7_gcd1_band_closure, band_blocker_construction, max_lonely_q_hge7); reflection arithmetic-vs-analytic-loneliness.md; this entry. No Lean written this session (numeric route). No canon overridden. LRC(14) NOT closed; regime C dissolved arithmetically, magnitude bound is the open hinge.
+
 ## kind-pasteur-2026-07-03-S27 -- THE MEASURE ROUTE AT ITS LIMIT: mutual-independence closer for ANY n (LRCStarSafe.lean) + the synthesis "carry star into the window" RESOLVED (it is subsumed by independence) (HYP-3983)
 
 Prompt (owner): carry the star exactness into the citation window + anything else to finish up formalization.
