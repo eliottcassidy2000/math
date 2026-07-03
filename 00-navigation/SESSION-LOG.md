@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-03-S28 -- TWO SHARP CLOSURES toward LRC(14): spread13_lonely (ratio 13, the all-comparable case) + lonely14_of_ratio (the rational-witness sieve) + the BOUNDED-DENOMINATOR discovery (HYP-3984)
+
+Prompt (owner): work on closing LRC(14), be creative.
+
+CREATIVE MATH DELIVERED (LRCSpread13.lean, kernel-pure, corpus 8629 green):
+ 1. **spread13_lonely** -- THE SHARP BOUNDED-RATIO WINDOW: if all absolute speeds lie in a band [a,b] with b <= 13a, the family is lonely at t = 1/(a+b), because every runner lands in the FULL safe band [1/14, 13/14]. This SHARPENS spread7_lonely (ratio 7, t=1/(14a), which wasted the half-band [1/14,1/2]) to ratio 13 -- the EXACT LRC threshold (ratio 14 fails: the smallest runner would sit at < 1/14). Closes the "all comparable" case unconditionally, explicit rational witness, no citation/census/measure.
+ 2. **lonely14_of_ratio** -- THE RATIONAL-WITNESS SIEVE: t = p/q (q>0) is lonely iff every v_i*p stays integer-distance >= q/14 from every multiple of q. Generalizes the covering sieve (t=1/q, p=1) to arbitrary p/q. Elementary, kernel-pure.
+
+THE DISCOVERY (numerical, 05-knowledge/results/lrc14_denominator_bound/stress_kps_S28.out; 0 fails over 407 hard covering-compressed instances): EVERY hard LRC(14) instance is lonely at some t = p/q with q <= 35 -- INDEPENDENT of speed magnitude (clusters up to 1000 still lonely at q<=35, concentrated at q = 17, 19). So LRC(14) reduces to a BOUNDED-DENOMINATOR finite search -- exactly the route the known n <= 13 computational proofs (Sungkawichai-Trakulthongchai etc.) take. lonely14_of_ratio is the Lean foundation of that route.
+
+CREATIVE ANGLES EXPLORED (reflection the-bounded-denominator-route.md): (a) "cluster near 1/2" (t=1/(2 center)) -- far block trivially lonely near 1/2, but small runners land near 0; (b) mod-7 residues (7 consecutive integers hit all residues mod 7) -- the 7-divisor sits at the danger center, conflicts with the fast runner; (c) half-integer t=(2k+1)/(2c) -- closes small far-cluster (found t=5/52 for {1,2,23..29}) but fails for large clusters + tiny runner; (d) the WINNING frame -- small-denominator rational witnesses, always q<=35.
+
+HONEST STATUS: LRC(14) NOT closed (open research). spread13 closes the all-comparable case sharply; the residual is {tiny runner + far cluster} (max/min > 13, not dominant). The bounded-denominator route (prove q<=Q + finite residue check) is the concrete path -- the same computational approach used for n<=13, now with the Lean sieve foundation + empirical bound. The finite check itself is a major computation (residue space astronomical), open.
+
+FILES: LRCSpread13.lean (spread13_lonely + lonely14_of_ratio, registered); 2 numerical probes + outs; HYP-3984 INDEX; reflection; this entry. No canon overridden.
+
 ## mac-mini-2026-07-03-S21 -- THE ARITHMETIC BAND ROUTE: near-equal far (regime C + c>=8 near-equal) closes by the small-q witness t=a/q, band {15..33}; this is EXACTLY kps-S27's "independence-fails / near-equal" frontier, closed arithmetically (HYP-3877)
 
 Prompt (owner): long creative session on the regime-C arithmetic crux + c>=8; search past work for connections.
