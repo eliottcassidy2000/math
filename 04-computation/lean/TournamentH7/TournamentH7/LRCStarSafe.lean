@@ -135,5 +135,32 @@ theorem exists_star_lonely (c : ℕ) (hc1 : 1 ≤ c) (hc7 : c ≤ 7)
   push_neg at hx
   exact hx i hi
 
+/-- **THE STAR LONELY TIME** (real-time bridge): a covering `c ≤ 7` block with a
+`7`-divisible center is `1/14`-lonely at some REAL time `t` — every runner keeps
+integer distance `≥ 1/14`.  This is the err-free measure-theoretic loneliness at the
+critical band, with NO citation, NO window, NO singles-bound loss. -/
+theorem exists_star_lonely_real (c : ℕ) (hc1 : 1 ≤ c) (hc7 : c ≤ 7)
+    (v : ℕ → ℤ)
+    (hv0 : v 0 ≠ 0) (hv0_7 : (7 : ℤ) ∣ v 0)
+    (hvne : ∀ i ∈ Finset.range c, v i ≠ 0)
+    (hvi_n7 : ∀ i ∈ Finset.Ico 1 c, ¬ (7 : ℤ) ∣ v i) :
+    ∃ t : ℝ, ∀ i ∈ Finset.range c, ∀ m : ℤ, (1 : ℝ) / 14 ≤ |(v i : ℝ) * t - m| := by
+  obtain ⟨x, hx⟩ := exists_star_lonely c hc1 hc7 v (fun _ => 0) hv0 hv0_7 hvne hvi_n7
+  obtain ⟨t, rfl⟩ := QuotientAddGroup.mk_surjective x
+  refine ⟨t, ?_⟩
+  intro i hi m
+  have hxi := hx i hi
+  rw [mem_danger] at hxi
+  have hconv : (v i • ((t : ℝ) : UnitAddCircle)) + (0 : UnitAddCircle)
+      = (((v i : ℝ) * t : ℝ) : UnitAddCircle) := by
+    rw [add_zero]
+    rw [show ((v i : ℝ) * t : ℝ) = (v i • t : ℝ) by rw [zsmul_eq_mul]]
+    exact (QuotientAddGroup.mk_zsmul _ t (v i)).symm
+  rw [hconv, Metric.mem_ball, dist_zero_right] at hxi
+  push_neg at hxi
+  rw [UnitAddCircle.norm_eq] at hxi
+  calc (1 : ℝ) / 14 ≤ |(v i : ℝ) * t - round ((v i : ℝ) * t)| := hxi
+    _ ≤ |(v i : ℝ) * t - m| := round_le _ m
+
 end StarSafe
 end LonelyRunner
