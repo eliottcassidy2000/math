@@ -1,3 +1,21 @@
+## kind-pasteur-2026-07-03-S31 -- THE DENSITY BRIDGE (step 1 of the far-peel) CLOSED in Lean at ALL arities <=12; the rational/irrational duality made mechanical (HYP-4048)
+
+Prompt (owner): work back and forth between the density bridge and the step-5 finite window; reconsider prior dualities (irrational/rational, odd/even, positive/negative, addition/multiplication).
+
+DELIVERED (Lean, kernel-pure `[propext, Classical.choice, Quot.sound]`, corpus 8634 green, `LRCFarPeelGood.lean`):
+ * **base_floor_of_cite** (Fin 12) -- step 1 (the base good-region floor) CLOSED. The `LRCUpTo13` citation gives a REAL `t0` lonely at margin `1/13`; the good set is OPEN so `exists_rat_btwn` picks a RATIONAL `x` within `1/(182*SumB)` of `t0` that is STILL strictly `1/14`-far (slack `1/13-1/14=1/182`); its `Int.fract` is a strict-good member => `0 < length(goodRegion2 base 1/14)`. This is mac-mini's THM-609 continuity step, formalized. = THE RATIONAL/IRRATIONAL DUALITY: a real (poss. irrational) lonely point FORCES a rational one because the good set is open. I DISCHARGED klein's S30 handoff (the real->rational density bridge) myself.
+ * **base_floor_of_cite_gen** (Fin j, j<=12) + **base_floor_list_of_cite** (List, len<=12) -- the SAME floor at EVERY arity <=12 (margin `1/(j+1)>=1/13` => same `1/182` slack; j=0 empty base = [0,1), length 1). This is exactly the arity the peels leave: far_peel_lonely's base = init v (12); opus's <=6-far simultaneous peel (`lonely_of_simul_peel`, HYP-3900) leaves B = 13-|far| in [7,12]. So the base floor of BOTH peel routes is now a CITATION COROLLARY -- no base-region computation.
+
+STEP-5 MAP (worked against the density bridge, by OUTLIER COUNT r): r<=6 large-far => opus simul-peel + this floor (done mod the union-fee check); r<=6 bounded-far => bounded-mag census; r>=7 => union floor `1-2h*r<=0` fails => the renormalization TOWER (opus THM-608/scale-sep, HYP-4045/4046). 7 is BOTH the wall denom (`1/14=1/(2*7)`) AND the outlier count the additive union bound survives -- the odd/even x heptagon duality. The far-peel threshold is `~V^2` (piece count ~V times the 1/V floor), so far-peel closes only GENUINELY HUGE runners: the deep well {1..12,182} (182<<V^2) is a step-5 family (opus HYP-4047: lonely only at t*=14/183, census-invisible), NOT peel-closable.
+
+DUALITIES: rational/irrational = the SPINE (density bridge = the open-good-set forcing rational from real; = the two-sided architecture's seam). positive/negative = already formalized (`lonely_abs_iff`, folds signs onto |v|). addition/multiplication = non-covering escapes multiplicatively (t=1/q sieve), covering families beaten additively (comb subtraction); magnitude split is the seam. odd/even = the `2*7` in `1/14` and the `<7` union-floor.
+
+OPEN HANDOFF (my Region-API lane, opus/mac-mini requested for the tower rung, HYP-4046): the QUANTITATIVE floor `length_ge_of_safe_interval` (`length >= 2*delta`, not just `>0`). My `[t0-delta,t0+delta]` construction is ALREADY entirely strict-good (the argument holds for every rational in it). ROUTE: `length good >= length(inter good [(a,b)])` [length_inter_le_left] + `length(inter good [(a,b)]) = b-a` [mem_inter: inter good [(a,b)] and [(a,b)] have the SAME members]. The ONE missing foundational lemma: **Norm length-extensionality** (`same members => same length`, base case = `length_eq_zero_of_no_mem`). NONE exists yet; that's the build. Deferred (opus also deferred it).
+
+Files: `LRCFarPeelGood.lean` (base_floor_of_cite/_gen/_list_of_cite), reflection `the-rational-irrational-duality.md`, HYP-4048 (+INDEX), memory `lrc14-thread.md`.
+
+---
+
 ## opus-2026-07-03-S52 -- THE 13-COMB LEVER IS THE EISENSTEIN RESONANCE (14 = primitive 6th root mod 183=Phi_6(14)); covering-time type = tournament type = number type, a trichotomy (HYP-4047)
 
 Prompt (owner): work the 13-spaced comb lever creatively; think Vitali, rational/irrational & odd/even dualities, how types of numbers relate to tournaments.
