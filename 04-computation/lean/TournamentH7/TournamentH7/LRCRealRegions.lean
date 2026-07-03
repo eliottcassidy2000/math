@@ -204,5 +204,147 @@ theorem clip_cut_pieces_le (p : ℝ × ℝ) {q : ℝ × ℝ} (hq : q.1 ≤ q.2) 
         _ ≤ max 0 (min p.2 s.2 - max p.1 s.1) := le_max_right _ _
 
 
+theorem rlength_inter_nil (B : RRegion) : rlength (rinter B []) = 0 := by
+  induction B with
+  | nil => rfl
+  | cons p B ih =>
+      unfold rinter at ih ⊢
+      simp only [List.flatMap_cons, List.map_nil, List.nil_append]
+      exact ih
+
+/-! ## Stage 1b: the commutation (swap) machinery -/
+
+/-- **THE LIST-LEVEL SWAP for a single window interval**: intersecting with one
+interval after a one-interval subtraction IS subtracting from the intersection —
+the lists are literally equal (per piece, `min`/`max` right-commutativity). -/
+theorem rinter_rdiff1_single (X : RRegion) (q d : ℝ × ℝ) :
+    rinter (rdiff1 X q) [d] = rdiff1 (rinter X [d]) q := by
+  induction X with
+  | nil => rfl
+  | cons x X ih =>
+      have hL : rinter (rdiff1 (x :: X) q) [d]
+          = [rclip (x.1, min x.2 q.1) d, rclip (max x.1 q.2, x.2) d]
+            ++ rinter (rdiff1 X q) [d] := by
+        unfold rdiff1 rinter rcut
+        simp [List.flatMap_cons]
+      have hR : rdiff1 (rinter (x :: X) [d]) q
+          = rcut (rclip x d) q ++ rdiff1 (rinter X [d]) q := by
+        unfold rdiff1 rinter
+        simp [List.flatMap_cons]
+      rw [hL, hR, ih]
+      congr 1
+      unfold rclip rcut
+      have h1 : min (min x.2 q.1) d.2 = min (min x.2 d.2) q.1 := min_right_comm _ _ _
+      have h2 : max (max x.1 q.2) d.1 = max (max x.1 d.1) q.2 := max_right_comm _ _ _
+      rw [h1, h2]
+
+/-- Single-window swap through a whole region subtraction (lists). -/
+theorem rinter_rdiff_single (D : RRegion) (G : RRegion) (d : ℝ × ℝ) :
+    rinter (rdiff G D) [d] = rdiff (rinter G [d]) D := by
+  induction D generalizing G with
+  | nil => rfl
+  | cons q D ih =>
+      have hfoldL : rdiff G (q :: D) = rdiff (rdiff1 G q) D := by
+        unfold rdiff
+        simp [List.foldl_cons]
+      have hfoldR : rdiff (rinter G [d]) (q :: D) = rdiff (rdiff1 (rinter G [d]) q) D := by
+        unfold rdiff
+        simp [List.foldl_cons]
+      rw [hfoldL, hfoldR, ih (rdiff1 G q), rinter_rdiff1_single]
+
+/-- Intersection length is additive in the window list. -/
+theorem rlength_inter_append_right (A B C : RRegion) :
+    rlength (rinter A (B ++ C)) = rlength (rinter A B) + rlength (rinter A C) := by
+  induction A with
+  | nil => simp [rinter, rlength]
+  | cons p A ih =>
+      unfold rinter at ih ⊢
+      simp only [List.flatMap_cons, List.map_append, List.append_assoc, rlength_append]
+      simp only [List.map_append] at ih
+      rw [ih]
+      ring
+
+/-- Cross-vanishing: clips inside `d` never meet a disjoint `q`. -/
+theorem cross_vanish {d q : ℝ × ℝ} (hdis : d.2 ≤ q.1 ∨ q.2 ≤ d.1) (L : RRegion) :
+    rlength (rinter (rinter L [d]) [q]) = 0 := by
+  induction L with
+  | nil => rfl
+  | cons x L ih =>
+      have hsplit : rinter (rinter (x :: L) [d]) [q]
+          = [rclip (rclip x d) q] ++ rinter (rinter L [d]) [q] := by
+        unfold rinter
+        simp [List.flatMap_cons]
+      rw [hsplit, rlength_append, ih]
+      have hzero : rlength [rclip (rclip x d) q] = 0 := by
+        unfold rclip rlength
+        simp only [List.map_cons, List.map_nil, List.sum_cons, List.sum_nil, add_zero]
+        apply max_eq_left
+        rcases hdis with h | h
+        · have h1 : min (min x.2 d.2) q.2 ≤ d.2 := le_trans (min_le_left _ _) (min_le_right _ _)
+          have h2 : q.1 ≤ max (max x.1 d.1) q.1 := le_max_right _ _
+          linarith
+        · have h1 : min (min x.2 d.2) q.2 ≤ q.2 := min_le_right _ _
+          have h2 : d.1 ≤ max (max x.1 d.1) q.1 := le_trans (le_max_right _ _) (le_max_left _ _)
+          linarith
+      rw [hzero]
+      ring
+
+/-- Subtracting an interval `q` lying strictly before every interval of `D` does not
+change the `D`-intersection mass (per-window swap + cross-vanish). -/
+theorem rlength_inter_rdiff1_disjoint (L : RRegion) {q : ℝ × ℝ} (hq : q.1 ≤ q.2) :
+    ∀ (D : RRegion), (∀ d ∈ D, d.2 ≤ q.1 ∨ q.2 ≤ d.1) →
+    rlength (rinter (rdiff1 L q) D) = rlength (rinter L D) := by
+  intro D
+  induction D with
+  | nil =>
+      intro _
+      rw [rlength_inter_nil, rlength_inter_nil]
+  | cons d D ih =>
+      intro hsep
+      have hd := hsep d (List.mem_cons_self ..)
+      have htail : ∀ r ∈ D, r.2 ≤ q.1 ∨ q.2 ≤ r.1 :=
+        fun r hr => hsep r (List.mem_cons_of_mem _ hr)
+      have hcons : (d :: D : RRegion) = [d] ++ D := rfl
+      rw [hcons, rlength_inter_append_right, rlength_inter_append_right, ih htail]
+      have hhead : rlength (rinter (rdiff1 L q) [d]) = rlength (rinter L [d]) := by
+        rw [rinter_rdiff1_single]
+        have hpart := rlength_diff1_add_inter (rinter L [d]) hq
+        have hcross := cross_vanish hd L
+        linarith
+      rw [hhead]
+
+/-- Pairwise separation of a region's intervals (sorted teeth: each interval ends
+before the next begins). -/
+def SortedSep : RRegion → Prop
+  | [] => True
+  | q :: D => (∀ d ∈ D, q.2 ≤ d.1) ∧ SortedSep D
+
+/-- **THE EXACT REGION PARTITION** (separated subtrahend): subtracting a region of
+sorted separated live intervals removes EXACTLY the intersection mass — the
+sequential ledger has no loss terms. -/
+theorem rlength_rdiff_partition :
+    ∀ (D : RRegion) (L : RRegion), (∀ r ∈ D, r.1 ≤ r.2) → SortedSep D →
+    rlength (rdiff L D) = rlength L - rlength (rinter L D) := by
+  intro D
+  induction D with
+  | nil =>
+      intro L _ _
+      rw [rlength_inter_nil]
+      simp [rdiff]
+  | cons q D ih =>
+      intro L hlive hsep
+      obtain ⟨hqd, hsep'⟩ := hsep
+      have hq : q.1 ≤ q.2 := hlive q (List.mem_cons_self ..)
+      have hfold : rdiff L (q :: D) = rdiff (rdiff1 L q) D := by
+        unfold rdiff
+        rw [List.foldl_cons]
+      rw [hfold, ih (rdiff1 L q) (fun r hr => hlive r (List.mem_cons_of_mem _ hr)) hsep']
+      have hswap : rlength (rinter (rdiff1 L q) D) = rlength (rinter L D) :=
+        rlength_inter_rdiff1_disjoint L hq D (fun d hd => Or.inr (hqd d hd))
+      have hpart := rlength_diff1_add_inter L hq
+      have hcons : (q :: D : RRegion) = [q] ++ D := rfl
+      rw [hswap, hcons, rlength_inter_append_right]
+      linarith
+
 end RealRegion
 end LonelyRunner
