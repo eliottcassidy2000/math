@@ -19,6 +19,7 @@
   Kernel-pure; no `sorry`, no `native_decide`.
 -/
 import TournamentH7.LRCPeelAssembly
+import TournamentH7.LRC13Citation
 
 namespace LonelyRunner
 namespace RatIntervals
@@ -146,6 +147,73 @@ theorem goodRegion2_length_pos_of_strict {speeds : List ℤ} {h : ℚ}
     (hgood : ∀ s ∈ speeds, ∀ m : ℤ, h < |(s : ℚ) * x - m|) :
     0 < length (goodRegion2 speeds h) :=
   length_pos_of_mem (good2_mem_of_strict hpos hx0 hx1 hgood)
+
+/-- **THE DENSITY BRIDGE** (step 1, closed in Lean): the base good-region floor from the
+`LRC(≤13)` citation.  Cite the 12 base speeds → a REAL `t0` with margin `1/13`; a rational
+`x` within `1/(182·ΣB)` of `t0` (density) is STRICTLY `1/14`-far from every base multiple
+(the `1/13 − 1/14 = 1/182` slack); its fractional part is a strict-good point in `[0,1)`,
+so `0 < length (goodRegion2 base (1/14))`.  This is mac-mini's THM-609 continuity step,
+and the crisp rational/irrational reading: a REAL lonely point (possibly irrational) forces
+a RATIONAL one because the good set is open (opus-S50: bounded magnitude = rational census,
+large magnitude = irrational sweep). -/
+theorem base_floor_of_cite (cite : LonelyRunner.LRCUpTo13) (base : Fin 12 → ℤ)
+    (hpos : ∀ i, 0 < base i) :
+    0 < length (goodRegion2 (List.ofFn base) (1 / 14)) := by
+  obtain ⟨t0, ht0⟩ := cite 12 (by norm_num) base (fun i => (hpos i).ne')
+  set V : ℤ := ∑ i, base i with hV
+  have hVpos : 0 < V := Finset.sum_pos (fun i _ => hpos i) ⟨0, Finset.mem_univ 0⟩
+  have hVR : (0 : ℝ) < (V : ℝ) := by exact_mod_cast hVpos
+  have hle : ∀ i, base i ≤ V := fun i =>
+    Finset.single_le_sum (fun j _ => (hpos j).le) (Finset.mem_univ i)
+  set δ : ℝ := 1 / (182 * (V : ℝ)) with hδ
+  have hδpos : (0 : ℝ) < δ := by rw [hδ]; positivity
+  obtain ⟨x, hx1, hx2⟩ := exists_rat_btwn (show t0 - δ < t0 + δ by linarith)
+  have hxt : |(x : ℝ) - t0| < δ := by rw [abs_lt]; constructor <;> linarith
+  -- strict good at x (real), for every base speed
+  have hgoodQ : ∀ i : Fin 12, ∀ m : ℤ, (1 : ℚ) / 14 < |(base i : ℚ) * x - m| := by
+    intro i m
+    have hbR : (0 : ℝ) < (base i : ℝ) := by exact_mod_cast hpos i
+    have hble : (base i : ℝ) ≤ (V : ℝ) := by exact_mod_cast hle i
+    have htri : |(base i : ℝ) * t0 - m|
+        ≤ |(base i : ℝ) * (x : ℝ) - m| + (base i : ℝ) * |(x : ℝ) - t0| := by
+      have h1 : (base i : ℝ) * t0 - m
+          = ((base i : ℝ) * (x : ℝ) - m) + (base i : ℝ) * (t0 - (x : ℝ)) := by ring
+      rw [h1]
+      calc |((base i : ℝ) * (x : ℝ) - m) + (base i : ℝ) * (t0 - (x : ℝ))|
+          ≤ |(base i : ℝ) * (x : ℝ) - m| + |(base i : ℝ) * (t0 - (x : ℝ))| := abs_add_le _ _
+        _ = |(base i : ℝ) * (x : ℝ) - m| + (base i : ℝ) * |(x : ℝ) - t0| := by
+            rw [abs_mul, abs_of_pos hbR, abs_sub_comm t0 (x : ℝ)]
+    have hm13 := ht0 i m
+    have hcast : (1 : ℝ) / (13 : ℕ) = 1 / 13 := by norm_num
+    rw [hcast] at hm13
+    have hbd : (base i : ℝ) * |(x : ℝ) - t0| < 1 / 182 := by
+      calc (base i : ℝ) * |(x : ℝ) - t0| < (base i : ℝ) * δ :=
+            mul_lt_mul_of_pos_left hxt hbR
+        _ ≤ (V : ℝ) * δ := mul_le_mul_of_nonneg_right hble hδpos.le
+        _ = 1 / 182 := by rw [hδ]; field_simp
+    have hgR : (1 : ℝ) / 14 < |(base i : ℝ) * (x : ℝ) - m| := by
+      have : (1 : ℝ) / 13 - 1 / 182 = 1 / 14 := by norm_num
+      linarith
+    have hcastabs : |(base i : ℝ) * (x : ℝ) - (m : ℝ)| = ((|(base i : ℚ) * x - m| : ℚ) : ℝ) := by
+      push_cast; ring_nf
+    rw [hcastabs] at hgR
+    have : ((1 : ℚ) / 14 : ℝ) < ((|(base i : ℚ) * x - m| : ℚ) : ℝ) := by push_cast; linarith
+    exact_mod_cast this
+  -- fractional part: strict good preserved, lands in [0,1)
+  set x' : ℚ := Int.fract x with hx'
+  have hx'0 : 0 ≤ x' := Int.fract_nonneg x
+  have hx'1 : x' < 1 := Int.fract_lt_one x
+  refine goodRegion2_length_pos_of_strict ?_ hx'0 hx'1 ?_
+  · intro s hs
+    obtain ⟨i, rfl⟩ := List.mem_ofFn.mp hs
+    exact hpos i
+  · intro s hs m
+    obtain ⟨i, rfl⟩ := List.mem_ofFn.mp hs
+    have hcase := hgoodQ i (m + base i * ⌊x⌋)
+    have heq : (base i : ℚ) * x - ((m + base i * ⌊x⌋ : ℤ) : ℚ)
+        = (base i : ℚ) * x' - (m : ℚ) := by
+      rw [hx', Int.fract]; push_cast; ring
+    rwa [heq] at hcase
 
 end RatIntervals
 end LonelyRunner
