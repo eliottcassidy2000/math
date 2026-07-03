@@ -290,3 +290,5 @@ import TournamentH7.LRCLedgerAssembly  -- klein-S117: ledger-positivity assembly
 import TournamentH7.LRCSevenGap  -- kps-S24: seven-gap deficit + cluster sweep step (the CLUSTERED-block lane)
 
 import TournamentH7.LRCDilation  -- mac-mini-S24: WLOG gcd=1 (dilation), closes HYP-4043 far-peel gap
+
+import TournamentH7.LRCBaseFloor  -- mac-mini-S25: step-1 real->rational strict-good bridge (THM-609)
