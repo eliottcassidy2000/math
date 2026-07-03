@@ -1,3 +1,23 @@
+## opus-2026-07-03-S50 -- THM-608 SCALE-SEPARATION FORMALIZED IN LEAN (kernel-pure, ✔ built): the renormalization core = the large-magnitude side of the two-sided architecture; the free sweep is an EXPLICIT (irrational) witness = exactly the census's blind spot (HYP-4043)
+
+Prompt (owner): continue the formalization; another session of improvements, pulling from git frequently and integrating new ideas.
+
+INTEGRATED the fleet's new architecture (since S49): kps `lrc14_of_magnitude_split` (TWO-SIDED: bounded magnitude = denominator census + large = renormalization) + mac-mini HYP-4040 (NO uniform arithmetic band; q~log max-speed, the lcm family) + mac-mini THM-608 (scale-separation, proved on paper, OFFERED to me as a Lean target) + MISTAKE-096 (kps S28 uniform-q overclaim). Also: step 2 of my S49 roadmap (goodRegion length identity) already landed by the fleet (`goodRegion2_append`, LRCPeelAssembly).
+
+DELIVERED (Lean, kernel-pure, ✔ built 8476 jobs; `#print axioms = [propext, Classical.choice, Quot.sound]`, registered in root): `LRCScaleSeparation.lean` --
+ * `scale_separation` (THM-608): base R lonely at t0 with slack δ (V=max|R|) + FAST (2δN>=V) NEAR-EQUAL (D(t0+δ/V)<6/7) cluster C⊆[N,N+D] => R∪C lonely. The rigorous single-step CORE of the renormalization (HYP-3901) = the large-magnitude side of `lrc14_of_magnitude_split`.
+ * `lonely_of_scale_separation` (family form => `Lonely 14`, directly pluggable).
+ * `slack_of_lonely13` (LRC(13) => slack 1/182 bridge: a <=12-speed base is Lonely 13 by citation, and 1/13=1/14+1/182, so scale_separation's base slack δ is FREE).
+FORMALIZATION INSIGHT (reflection): the proof is IVT-FREE -- the linear sweep gives the EXPLICIT witness t* = (⌈N(t0-δ/V)-1/14⌉+1/14)/N, generically IRRATIONAL = exactly the point the rational bounded-denominator census can NEVER test. So the two-sided split is rational-t search (bounded mag) vs free real-t sweep (large mag); THM-608 is the real-sweep side, kernel-checked. This is WHY the aligned band-blockers (HYP-4040) defeat the census but ARE lonely.
+
+CANON: THM-608 marked LEAN-FORMALIZED (kernel-pure). ENV: analytic files build fine here; the census native_decide packs still segfault (0xC0000005) on this Windows box (S47b forensics, machine-specific).
+
+NEXT: (a) the wide-far + slow-base RESIDUAL (mac-mini's tension) = the t*=14/183 13-spaced comb lever (phase span 12/183<1/14 since 13t*=-1/183; OPEN-Q-108) -- the natural next Lean target; (b) the Fin-13 split plumbing to compose scale_separation + citation into `lrc14_of_magnitude_split`'s hlarge; (c) the tower recursion (log depth = HYP-4013/arXiv:2607.00876).
+
+Files: LRCScaleSeparation.lean (+root), THM-608 canon (formalized), reflection the-renormalization-core-formalized-the-free-sweep-is-an-explicit-witness-opus-20260703.md, HYP-4043 (+INDEX).
+
+---
+
 ## kind-pasteur-2026-07-03-S29 -- DENOMINATOR ROUTE formalized as the TWO-SIDED ARCHITECTURE (integrating mac-mini HYP-4040) + MISTAKE-096 correction + spread13 handoff
 
 Prompt (owner): work the remaining handoffs; get the proof entirely formalized.
