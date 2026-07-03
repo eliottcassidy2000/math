@@ -4,10 +4,12 @@ title: THE ARITHMETIC BAND ROUTE -- the NEAR-EQUAL far case (regime C c=7 AND c>
 status: PARTIALLY-CONFIRMED for NEAR-EQUAL (regime C + c>=8 near-equal): band {15..33}, ~11000 families, 0 failures, dilated-AP control needs large q. REFUTED as a UNIFORM closure of ALL hge7: composite band-blockers push the smallest lonely q to ~53 (grows ~log magnitude, no universal bound). A magnitude-bounded finite band DOES close each fixed-size slice. Contradicts kps-S25 MISTAKE-072 'no floor closes regime C' -- correct (it's not a floor); but the band is not a free lunch for the SPREAD/composite part of hge7 (regime B, still the pair-floor's job).
 source: mac-mini-2026-07-03-S21
 related:
+  - HYP-+2876  # lcm families {1..11,13,lcm(2..X)} = the band-blockers; unbounded witness denom (REFUTED uniform band). THIS is the residual, handled by magnitude split.
   - HYP-3737   # covering-min forced; the band (14, 2n-2]=(14,26] is exactly this denominator band
-  - HYP-3551   # covering-min 14/183 (the TIGHT dilated-AP case the band does NOT close -> pair-floor)
+  - HYP-3983   # kps-S27 mutual-independence closer; near-equal = where independence FAILS = where THIS arithmetic route succeeds (complementary)
   - HYP-3982   # kps star-safe (the c<=7 measure route); this is the ARITHMETIC complement for near-equal
   - HYP-3981   # kps c=7 trichotomy: regime C = the open near-equal-small case THIS closes
+  - HYP-3901   # deep-cluster renormalization (n->8); the large-magnitude route for the >22638 side
   - MISTAKE-072 # kps 'no floor closes regime C' -- true; the band is not a floor, it's the arithmetic witness
 results:
   - 04-computation/regimeC_band_adversarial_macmini_20260703.py     # regime C worst q=33, 0 fail
@@ -85,6 +87,27 @@ it does grow. Band-blockers are SPREAD/composite (ratio `~4`), NOT near-equal, s
 The band condition is DECIDABLE per family (`exists q in {15..Q}, a: forall v, va mod q not in {0,1,q-1}`).
 For a magnitude-bounded slice it reduces to residue classes mod `lcm(15..Q)` -- a `native_decide` census like
 `hwindow`. Regime C (near-equal, `w1<7392`) is such a slice with `Q ~ 46`.
+
+## The magnitude-split synthesis (S21, the constructive way this closes hge7)
+The band-blockers are EXACTLY the lcm families of [[HYP-+2876]] (`{1,..,11,13,lcm(2..X)}`) whose witness
+denominator is unbounded in `X`. HYP-+2876 REFUTED a UNIFORM finite band -- correct, and my growth table
+(`q -> 53` at mag `10^7`) is its quantitative face. But those families have max speed `= lcm(2..X) -> infinity`.
+So split hge7 by MAGNITUDE, not with one band:
+- **max speed `< 22638`** (below kps's singles-bound threshold): the band `{15..50}` closes EVERY covering
+  `gcd=1 hge7` family -- `189128` adversarial families (incl. lcm/band-blockers up to the threshold), `0`
+  failures, worst smallest-lonely-`q = 50`. Finite because `lcm(2..11) = 27720 > 22638` bounds the lcm
+  parameter `X <= 10`, so the witness denominator is bounded there.
+- **max speed `> 22638`**: kps's SINGLES bound (regime B) / `cite_cluster7` (regime A). The unbounded-witness
+  lcm families live here.
+- **NEAR-EQUAL far, ANY magnitude**: band `{15..33}` regardless of `w1` -- a `k`-consecutive cluster is `k`
+  consecutive residues mod `q`, and `k <= 13 < q-3` fits in the safe set `{2,..,q-2}` for `q >= 17`. So
+  near-equal never needs the magnitude split at all.
+
+Net structure: `{max speed < 22638}` -> band `{15..50}`;  `{max speed > 22638}` -> {near-equal: band `{15..33}`;
+spread: singles/cluster}. Every covering `gcd=1 hge7` family is in one bucket -> no gap. This is a CLOSURE
+STRUCTURE (magnitude split), consistent with HYP-+2876 (no *uniform* bound). Rigor still needed: the band-below
+as a finite `native_decide` (the residue space mod `lcm(15..50)` is large -- needs a smarter finite argument or
+the CRT far-blocking count), and kps's singles-above (joint-measure treatment).
 
 ## Honest scope
 SOLID for NEAR-EQUAL (regime C + c>=8 near-equal): band `{15..33}`, `~11000` families, `0` failures, clean
