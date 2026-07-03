@@ -1,0 +1,57 @@
+==============================================================================
+FINITE N* for the simultaneous union-bound peel (h=1/14). fee<floor => lonely.
+==============================================================================
+
+window {1..12}: length(good B)=0.03410 (6617/194040), c_B=12 components
+   j (far)  floor=(1-j/7)|Lb|         N* note
+         1            0.02923        118  fee<floor for all N>=N*
+         2            0.02436        282  fee<floor for all N>=N*
+         3            0.01949        527  fee<floor for all N>=N*
+         4            0.01461        937  fee<floor for all N>=N*
+         5            0.00974       1758  fee<floor for all N>=N*
+         6            0.00487       4221  fee<floor for all N>=N*
+         7            0.00000         --  union floor <=0 (j>=7): DEAD (needs deep-cluster HYP-3901)
+
+window {1..11}: length(good B)=0.05633 (10931/194040), c_B=14 components
+   j (far)  floor=(1-j/7)|Lb|         N* note
+         1            0.04829         83  fee<floor for all N>=N*
+         2            0.04024        199  fee<floor for all N>=N*
+         3            0.03219        372  fee<floor for all N>=N*
+         4            0.02414        662  fee<floor for all N>=N*
+         5            0.01610       1241  fee<floor for all N>=N*
+         6            0.00805       2980  fee<floor for all N>=N*
+         7            0.00000         --  union floor <=0 (j>=7): DEAD (needs deep-cluster HYP-3901)
+
+window {1,2,3,4}: length(good B)=0.61905 (13/21), c_B=6 components
+   j (far)  floor=(1-j/7)|Lb|         N* note
+         1            0.53061         23  fee<floor for all N>=N*
+         2            0.44218         23  fee<floor for all N>=N*
+         3            0.35374         23  fee<floor for all N>=N*
+         4            0.26531         25  fee<floor for all N>=N*
+         5            0.17687         47  fee<floor for all N>=N*
+         6            0.08844        114  fee<floor for all N>=N*
+         7            0.00000         --  union floor <=0 (j>=7): DEAD (needs deep-cluster HYP-3901)
+
+window {1..6}: length(good B)=0.45714 (16/35), c_B=12 components
+   j (far)  floor=(1-j/7)|Lb|         N* note
+         1            0.39184         23  fee<floor for all N>=N*
+         2            0.32653         23  fee<floor for all N>=N*
+         3            0.26122         39  fee<floor for all N>=N*
+         4            0.19592         69  fee<floor for all N>=N*
+         5            0.13061        130  fee<floor for all N>=N*
+         6            0.06531        313  fee<floor for all N>=N*
+         7            0.00000         --  union floor <=0 (j>=7): DEAD (needs deep-cluster HYP-3901)
+
+window AP {1..12}: length(good B)=0.03410 (6617/194040), c_B=12 components
+   j (far)  floor=(1-j/7)|Lb|         N* note
+         1            0.02923        118  fee<floor for all N>=N*
+         2            0.02436        282  fee<floor for all N>=N*
+         3            0.01949        527  fee<floor for all N>=N*
+         4            0.01461        937  fee<floor for all N>=N*
+         5            0.00974       1758  fee<floor for all N>=N*
+         6            0.00487       4221  fee<floor for all N>=N*
+         7            0.00000         --  union floor <=0 (j>=7): DEAD (needs deep-cluster HYP-3901)
+
+=> For j<=6 far runners, N* is FINITE and small (~1e2-1e4): the simultaneous peel closes
+   the middle band 22<N<N* by a finite check. j>=7 dies (1-j/7<=0), the separate residual.
+   This confirms lonely_of_simul_peel's fee<floor hypothesis is dischargeable per class.
