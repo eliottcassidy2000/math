@@ -78,6 +78,20 @@ HONEST STATUS: LRC(14) NOT closed (open research). spread13 closes the all-compa
 
 FILES: LRCSpread13.lean (spread13_lonely + lonely14_of_ratio, registered); 2 numerical probes + outs; HYP-3984 INDEX; reflection; this entry. No canon overridden.
 
+## mac-mini-2026-07-03-S24 -- THM-609 solves opus's ONE REMAINING LEMMA (base good-region floor) + LRCDilation.lean GREEN (WLOG gcd=1) closes a completeness GAP (HYP-4043) + end-to-end dispatch validation
+
+Prompt (owner): work the genuine crux + anything remaining; long session, many tasks, frequent push/pull, let concurrent work inspire.
+
+INTEGRATED the fleet's convergence on my S22/S23 work: kps-S29 formalized my two-sided architecture (lrc14_of_magnitude_split) + filed MISTAKE-096 (their q<=35 overclaim, corrected by my HYP-4040); opus-S49 built LRCFarPeelCore.lean and mapped the endgame -- "the ONE remaining mathematics is CoveringFarLonely 22", decomposed to a single-step peel whose ONLY genuine open lemma is STEP 1 = the base good-region floor, HANDED TO ME.
+
+THM-609 (Base Good-Region Floor, PROVED, = opus's step 1): base B of m<=12 nonzero speeds, V=max|b|; LRCUpTo13 gives t0 with min||b t0||>=1/(m+1)>=1/13; the margin over 1/14 is 1/13-1/14=1/182, so by 1-Lipschitz the whole interval [t0-1/(182V), t0+1/(182V)] is safe at 1/14 => length(goodRegion B (1/14)) >= 1/(91V) > 0. Floor matches opus's 1/(91 max B) EXACTLY. It is THM-608's continuity step at the LRC(13) margin; the slow-runner tension does NOT arise (base closed wholesale by the citation). Verified: actual good len >> floor, far-peel survives removing any far comb.
+
+HYP-4043 + LRCDilation.lean (completeness GAP + fix, GREEN kernel-pure root-registered corpus 8476): opus's CoveringFarLonely has NO gcd=1, so it admits gcd>1 DILATIONS of the tight AP -- e.g. {2,4,..,26}=2*{1..13}: covering (14|14), far entry 26, but M=1/14 EXACTLY (lonely only at isolated t=1/28), so length(goodRegion)=0 -> the positive-length peel CANNOT reach it. FIX: gcd-reduce at the top. LRCDilation.lean: lonely_smul (Lonely (g*v) t <-> Lonely v (g*t)), exists_lonely_smul, exists_lonely_of_dvd (g|all v_i => exists-loneliness gcd-invariant). {2..26}=>{1..13}=window (non-covering, t=1/14). CONNECTION: gcd=1 is also exactly what makes covering-min=14/183 apply (a PRIMITIVE statement) => gcd=1 covering => M>=14/183>1/14 => positive good region, the peel's requirement. Audit: 0/318 gcd=1 covering-far families measure-zero.
+
+END-TO-END dispatch validation (0 failures / 500+ families): {gcd-reduce(LRCDilation) + non-covering(t=1/q) + window census + far-peel(THM-609)} closes everything; {2..26} correctly routes to non-covering after gcd-reduce, NOT the far-peel.
+
+NET: the LRC(14) endgame is nearly assembled -- THM-609 removes the last GENUINE lemma (step 1); LRCDilation closes the gcd gap (machine-checked); what remains is opus's Region bookkeeping (step 2), the finite window / compressed case (step 5, = my THM-608 renormalization + the census), and the LRC(<=13) citation (policy). FILES: THM-609; LRCDilation.lean (green); HYP-4043; 5 S24 scripts+outputs (reconcile removed, thm609_farpeel_verify, farpeel_completeness_audit, measurezero_goodregion_gap, endgame_dispatch_e2e); messaged opus x2 (THM-609 + the gcd gap). ~11 push/pull cycles. No canon overridden.
+
 ## mac-mini-2026-07-03-S23 -- THM-608 SCALE-SEPARATION LEMMA PROVED (rigorous core of the renormalization: R lonely w/ slack + fast near-equal cluster => R u C lonely) + reconciled kps-S28's bounded-denominator route (q<=35 under-sampled; the census-breakers are LOOSE -> renormalization, not census) => HYP-4041 architecture
 
 Prompt (owner): improve the LRC(14) proof creatively.
