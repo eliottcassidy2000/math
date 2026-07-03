@@ -1,0 +1,16 @@
+STEP 5 characterization: peel largest far w; threshold = #pieces/(3*length(base)). step3 vs step5.
+================================================================================================
+               family (sorted)   w=max  #pieces  len(base)  threshold    route
+   [46, 58, 76, 92, 93, 140]..     322      344     0.1665      688.8    step5
+  [1, 19, 59, 143, 155, 180]..     353      390     0.1629      798.3    step5
+[19, 80, 125, 126, 138, 141]..     370      348     0.1531      757.9    step5
+   [14, 25, 33, 36, 44, 118]..     376      316     0.1540      683.9    step5
+
+over the sample: step3 (peel closes) = 0, step5 (residual) = 4
+step-5 max-speeds: min=322, max=376 -- these are the
+   COMPRESSED/comparable families (largest runner not far above the base threshold).
+
+=> step 5 = the compressed case (w not >> base). Bounded per family, but the base magnitude is
+   unbounded, so step 5 is NOT a fixed finite window -- it is exactly the compressed/near-equal
+   residual handled by THM-608 (renormalization, near-equal cluster) + the bounded-magnitude census.
+   Peeling the LARGEST helps only for DOMINANT far runners; comparable-magnitude families need THM-608.

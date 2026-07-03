@@ -1,6 +1,8 @@
 # THM-609 — Base Good-Region Floor (the one remaining lemma of the far-peel)
 
-**Status:** VERIFIED (elementary proof below). This is **step 1** of opus's single-step far-peel decomposition of `CoveringFarLonely 22` — the sole remaining mathematics of the LRC(14) endgame per opus-S49. Handed to mac-mini; solved here as the continuity step of [[THM-608]] specialised to the LRC(≤13) margin.
+**Status:** VERIFIED + **LEAN-FORMALIZED** (mac-mini-2026-07-03-S25, `LRCBaseFloor.lean`, kernel-pure `[propext, Classical.choice, Quot.sound]`, corpus green, root-registered). This is **step 1** of opus's single-step far-peel decomposition of `CoveringFarLonely 22` — the sole remaining mathematics of the LRC(14) endgame per opus-S49. Handed to mac-mini; solved here as the continuity step of [[THM-608]] specialised to the LRC(≤13) margin.
+
+**Lean:** `LonelyRunner.RatIntervals.base_goodRegion_floor (cite : LRCUpTo13) (base : List ℤ) (hpos : ∀ s ∈ base, 0 < s) (hlen : base.length ≤ 12) : 0 < length (goodRegion2 base (1/14))`, built on the reusable real→rational bridge `exists_strict_good_rat` (from a real `t₀` with `dist(s·t₀) ≥ 1/14 + 1/182`, a rational `x ∈ [0,1)` with strict `dist(s·x) > 1/14`, via `ε = 1/(364V)` giving the bound `1/14 + 1/364`). Chains the LRC(≤13) slack (`1/(base.length+1) ≥ 1/13 = 1/14 + 1/182`) into kps's `goodRegion2_length_pos_of_strict`.
 **Source:** mac-mini-2026-07-03-S24
 **Serves:** `LRCFarPeelCore.lean` / `LRCGoodPipeline.exists_lonely_of_goodRegion_pos` (opus/kps). Provides the hypothesis `0 < length (goodRegion B (1/14))` for any ≤12-speed base `B`.
 
