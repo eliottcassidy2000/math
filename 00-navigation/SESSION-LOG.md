@@ -1,3 +1,19 @@
+## opus-2026-07-03-S52 -- THE 13-COMB LEVER IS THE EISENSTEIN RESONANCE (14 = primitive 6th root mod 183=Phi_6(14)); covering-time type = tournament type = number type, a trichotomy (HYP-4047)
+
+Prompt (owner): work the 13-spaced comb lever creatively; think Vitali, rational/irrational & odd/even dualities, how types of numbers relate to tournaments.
+
+DELIVERED (exact, verified `comb13_eisenstein_resonance…S52.py`; reflection): the wide-far/slow-base residual (OPEN-Q-108/110) is ONE arithmetic fact -- **14 is a primitive 6th root of unity mod 183 = Phi_6(14) = 14^2-14+1 = 3*61** (powers {14,13,-1,-14,-13,1} = the Eisenstein units). So 13=14^2, 14*13=14^3=-1 mod 183 => ||13 t*||=1/183 => a 13-spaced comb {w+13k} has phases at t*=14/183 in an AP of step 1/183, span (r-1)/183 <= 12/183 < 1/14 (fits ONE danger-arc). DECISIVE: the DEEP WELL {1..12,182} (182=13*14) is lonely ONLY at t*=14/183 (M=14/183, denom 183); the small-q census (q<=45) FAILS (best 1/15 < 1/14). The certificate is the single Eisenstein rational 14/Phi_6(14), invisible to bounded-q = mac-mini HYP-4040 (q=Phi_6(max-speed)->inf).
+
+THE TRICHOTOMY (via the Cayley transform: tournament -> SO(n), eigenvalues on the unit circle -- eigenvalue number-type = tournament type = covering-time type): rational/root-of-unity=transitive=census; **cyclotomic Eisenstein Phi_6=6th-root sublattice=THIS lever**; Gauss i*sqrt p=Paley=heptagon; generic irrational=mixing=free sweep (THM-608). ODD/EVEN: order(14 mod 183)=6=2*3 = antipode(14^3=-1; binding pair (1,182) antipodal since 182=-1) x Eisenstein(14^2=13). 183=3*61 (Eisenstein sqrt-3) meets 14=2*7 (heptagon sqrt-7) => covering binds at the compositum Q(sqrt-3,sqrt-7), cross sqrt21 (my S27-S30). VITALI/three-gap: rational t* => phases on the finite lattice (1/183)Z (partition, uniform gap); irrational t => equidistribution (the sweep).
+
+STATE: r=1 (deep well) certificate ALREADY formalized (kps deepWell_lonely, LadderPackData, window at 14/183). kps-S31 closed the single-far CoveringFarLonely (base_floor_of_cite, the rational/irrational duality: open good set => real lonely forces rational).
+
+NEXT: the r>=2 PHASE-SPREAD THM-608 variant (a resonant sweep in the 1/13 window; phase spread (r-1)/183 small vs speed spread 13(r-1) large -- exactly why THM-608's speed-spread (ii) misses it) -- the next Lean target for the renormalization's resonant branch.
+
+Files: comb13_eisenstein_resonance_opus_20260703_S52.py (+.out), reflection the-13-comb-lever-is-the-eisenstein-resonance-types-of-numbers-and-tournaments-opus-20260703.md, HYP-4047 (+INDEX), OPEN-Q-110 update.
+
+---
+
 ## opus-2026-07-03-S51 -- HANDOFFS (b)+(c) LANDED IN LEAN (kernel-pure): compose THM-608 + citation => discharges hlarge's fast-near-equal slice (b); + the SLACK-PRESERVING tower rung (c) (HYP-4046)
 
 Prompt (owner): work handoffs (b) and (c) for a long session.

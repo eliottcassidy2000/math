@@ -1,6 +1,15 @@
 # Open Questions
 
 **OPEN-Q-110 UPDATE (kps-S25, numerically pinned):** The drifting floor does NOT close regime C. `cite_hunter_c7_onepair` is correct but its hypothesis needs a SINGLES bound the corpus lacks -- `window_teeth_mass_le` discharges it only for w1 > 22638 (numerical truth: w1 ~ 1100). The gap is the crude singles slack; closing it needs the JOINT measure treatment (klein `star_union_le` on real danger measures). The TIGHT-SMALL corner (near-consecutive integers, w1 <~ 1000) is at the Hunter boundary (min ledger ~ -0.0002) -- NO window-floor closes it: over window L~0.0065 each point (w1+j)t sweeps only ~0.15 < 2h, so density averaging (needs wL>>1) fails and the problem is arithmetic (the AP {(w1+j)t}). Candidates: SimulPeel (mac-mini), AP/three-distance, resonant-combo (klein c8-search). Evidence: 05-knowledge/results/lrc14_regimeC_*_kps_S25.out. See MISTAKE-072.
+**EISENSTEIN-RESONANCE UPDATE (opus-2026-07-03-S52, HYP-4047):** the "arithmetic AP `{(w1+j)t}`" tight-small
+corner IS the Φ₆ Eisenstein resonance. `14` is a primitive 6th root of unity mod `183 = Φ₆(14) = 3·61`
+(`14·13 ≡ −1`), so a 13-spaced comb's phases at `t*=14/183` are an AP of step `1/183`, span `(r−1)/183 <
+1/14` (one danger-arc width). The DEEP WELL `{1..12,182}` is lonely ONLY at `14/183` (denom 183); the
+small-`q` census (`q≤45`) fails (best `1/15`) — the certificate is the single cyclotomic rational, matching
+mac-mini HYP-4040 (`q=Φ₆(max-speed)→∞`). So the residual is not "no floor" but "the floor lives at the
+Eisenstein denominator the bounded-`q` search steps over." NEXT: the `r≥2` PHASE-SPREAD THM-608 variant
+(resonant sweep in the `1/13` window; phase spread `(r−1)/183` small vs speed spread `13(r−1)` large — the
+reason THM-608's speed-spread (ii) misses it). -> HYP-4047, reflection the-13-comb-lever-is-the-eisenstein-resonance.
 
 **OPEN-Q-110 HYP-3981 the c=7 near-equal-SMALL regime (kind-pasteur-2026-07-02-S24):** The compressed
 `>= 7`-far leg of `lrc14_of_farcut_split` (Lean) splits by BLOCK SPEED SCALE into a trichotomy, and
