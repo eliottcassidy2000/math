@@ -524,5 +524,126 @@ theorem cluster_sweep_step (w1 w2 w3 w4 w5 w6 w7 : ℤ) (hw1 : 0 < w1)
         _ = |(w7 : ℝ) * t' - m| + |(((w7 - w1 : ℤ)) : ℝ) * (t' - τ)| := by rw [abs_neg]
     linarith [hpt, htri, habs_drift]
 
+/-! ## Stage C — the citation assembly: a clustered 7-far block is lonely -/
+
+open LRC14
+
+/-- The sum-combo of a 7-tuple: `Σⱼ(wⱼ − w₁) = w₂+…+w₇ − 6w₁`. -/
+def sumCombo (w1 w2 w3 w4 w5 w6 w7 : ℤ) : ℤ := w2 + w3 + w4 + w5 + w6 + w7 - 6 * w1
+
+/-- **THE CLUSTERED-BLOCK CLOSER**: a covering family of 13 nonzero speeds whose far
+block is exactly seven *distinct* clustered integers `w₁ < … < w₇`
+(`1232·(w₇−w₁) ≤ w₁`, so `w₁ ≥ 7392`) and whose remaining `k ≤ 11` runners are bounded
+by `B` with `364·B ≤ w₁` — is lonely.
+
+Cite the `k` bounded runners together with the sum-combo `C₀ = Σ(wⱼ−w₁)` (one extra
+slot, `k+1 ≤ 12`); this pins `C₀` off the origin at `τ = t₀`, which by
+`cluster_sweep_step` forces a good sweep point `t'` for all seven far runners in a
+window of width `2/w₁`.  The bounded runners drift only `B·2/w₁ ≤ 1/182`, so their
+citation margin `1/(k+2) ≥ 1/13` survives to exactly `1/14`. -/
+theorem cite_cluster7_lonely (cite : LRCUpTo13) (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)
+    (k : ℕ) (hk : k ≤ 11) (B : ℤ) (hB : 0 < B)
+    (hcited : ∀ i : Fin 13, (i : ℕ) < k → |v i| ≤ B)
+    (w1 w2 w3 w4 w5 w6 w7 : ℤ) (hw1 : 0 < w1)
+    (h12 : w1 ≤ w2) (h23 : w2 ≤ w3) (h34 : w3 ≤ w4) (h45 : w4 ≤ w5)
+    (h56 : w5 ≤ w6) (h67 : w6 ≤ w7) (hlt : w1 < w7)
+    (hclu : 1232 * (w7 - w1) ≤ w1) (hbig : 364 * B ≤ w1)
+    (hsplit : ∀ i : Fin 13, (i : ℕ) < k ∨
+      |v i| ∈ ([w1, w2, w3, w4, w5, w6, w7] : List ℤ)) :
+    ∃ t : ℝ, Lonely 14 v t := by
+  have hw1R : (0 : ℝ) < (w1 : ℝ) := by exact_mod_cast hw1
+  have hBR : (0 : ℝ) < (B : ℝ) := by exact_mod_cast hB
+  have hbigR : (364 : ℝ) * (B : ℝ) ≤ (w1 : ℝ) := by exact_mod_cast hbig
+  set C0 : ℤ := sumCombo w1 w2 w3 w4 w5 w6 w7 with hC0
+  have hC0pos : 0 < C0 := by
+    rw [hC0, sumCombo]; omega
+  -- the citation tuple: k bounded runners, then C0
+  have hk13 : k ≤ 13 := by omega
+  set wc : Fin (k + 1) → ℤ :=
+    Fin.snoc (fun j : Fin k => v (Fin.castLE hk13 j)) C0 with hwc
+  have hwcne : ∀ i, wc i ≠ 0 := by
+    intro i
+    refine Fin.lastCases ?_ ?_ i
+    · rw [hwc, Fin.snoc_last]; omega
+    · intro j
+      rw [hwc, Fin.snoc_castSucc]; exact hv _
+  obtain ⟨t₀, hcite⟩ := cite (k + 1) (by omega) wc hwcne
+  -- the sweep window
+  set L : ℝ := 2 / (w1 : ℝ) with hL
+  have hsweep : 2 ≤ (w1 : ℝ) * L := by
+    rw [hL, mul_div_cancel₀ _ (ne_of_gt hw1R)]
+  -- margin on C0 at τ = t₀ (last citation entry), weakened to 1/14
+  have hcombo : ∀ m : ℤ, (1 : ℝ) / 14 ≤ |((sumCombo w1 w2 w3 w4 w5 w6 w7 : ℤ) : ℝ) * t₀ - m| := by
+    intro m
+    have hlast := hcite (Fin.last k) m
+    rw [hwc, Fin.snoc_last] at hlast
+    have hkk : (1 : ℝ) / 14 ≤ 1 / ((k + 1 : ℕ) + 1 : ℕ) := by
+      apply one_div_le_one_div_of_le (by positivity)
+      have : ((k + 1 : ℕ) + 1 : ℕ) ≤ 14 := by omega
+      exact_mod_cast this
+    rw [← hC0]
+    calc (1 : ℝ) / 14 ≤ 1 / ((k + 1 : ℕ) + 1 : ℕ) := hkk
+      _ ≤ |(C0 : ℝ) * t₀ - m| := hlast
+  obtain ⟨t', ht'1, ht'2, hgood⟩ := cluster_sweep_step w1 w2 w3 w4 w5 w6 w7 hw1
+    h12 h23 h34 h45 h56 h67 hclu t₀ L hsweep hcombo
+  refine ⟨t', ?_⟩
+  intro i m
+  rcases hsplit i with hnear | hfar
+  · -- bounded runner: citation margin 1/(k+2) minus drift B·L ≥ 1/14
+    set j : Fin k := ⟨(i : ℕ), hnear⟩ with hj
+    have hidx : Fin.castLE hk13 j = i := by
+      apply Fin.ext; rfl
+    have hcj := hcite (Fin.castSucc j) m
+    rw [hwc, Fin.snoc_castSucc, hidx] at hcj
+    -- hcj : 1/(k+2) ≤ |v i · t₀ - m|
+    have hvB : |(v i : ℝ)| ≤ (B : ℝ) := by
+      rw [← Int.cast_abs]; exact_mod_cast hcited i hnear
+    have htri : |(v i : ℝ) * t₀ - m| ≤ |(v i : ℝ) * t' - m| + |(v i : ℝ)| * |t₀ - t'| := by
+      calc |(v i : ℝ) * t₀ - m|
+          = |((v i : ℝ) * t' - m) + (v i : ℝ) * (t₀ - t')| := by congr 1; ring
+        _ ≤ |(v i : ℝ) * t' - m| + |(v i : ℝ) * (t₀ - t')| := abs_add_le _ _
+        _ = |(v i : ℝ) * t' - m| + |(v i : ℝ)| * |t₀ - t'| := by rw [abs_mul]
+    have hdt : |t₀ - t'| ≤ L := by
+      rw [abs_le]
+      constructor <;> [linarith; linarith]
+    have hLpos : 0 ≤ L := by positivity
+    have hlip : |(v i : ℝ)| * |t₀ - t'| ≤ (B : ℝ) * L := by
+      apply mul_le_mul hvB hdt (abs_nonneg _) hBR.le
+    have hBL : (B : ℝ) * L ≤ 1 / 182 := by
+      rw [hL]
+      have he : (B : ℝ) * (2 / w1) = 2 * B / w1 := by ring
+      rw [he, div_le_iff₀ hw1R]
+      nlinarith [hbigR]
+    have hmarg : (1 : ℝ) / ((k + 1 : ℕ) + 1 : ℕ) ≤ |(v i : ℝ) * t₀ - m| := hcj
+    have h13 : (1 : ℝ) / 13 ≤ 1 / ((k + 1 : ℕ) + 1 : ℕ) := by
+      apply one_div_le_one_div_of_le (by positivity)
+      have : ((k + 1 : ℕ) + 1 : ℕ) ≤ 13 := by omega
+      exact_mod_cast this
+    -- 1/13 - 1/182 = 1/14
+    have hfinal : (1 : ℝ) / 14 ≤ |(v i : ℝ) * t' - m| := by
+      have hchain : (1 : ℝ) / 13 ≤ |(v i : ℝ) * t' - m| + 1 / 182 := by
+        calc (1 : ℝ) / 13 ≤ 1 / ((k + 1 : ℕ) + 1 : ℕ) := h13
+          _ ≤ |(v i : ℝ) * t₀ - m| := hmarg
+          _ ≤ |(v i : ℝ) * t' - m| + |(v i : ℝ)| * |t₀ - t'| := htri
+          _ ≤ |(v i : ℝ) * t' - m| + (B : ℝ) * L := by linarith [hlip]
+          _ ≤ |(v i : ℝ) * t' - m| + 1 / 182 := by linarith [hBL]
+      linarith
+    exact hfinal
+  · -- far runner: sign bridge onto the seven-block good point
+    have hgd := hgood |v i| hfar
+    rcases abs_cases ((v i : ℝ)) with ⟨habs, _⟩ | ⟨habs, _⟩
+    · have hcast : ((|v i| : ℤ) : ℝ) = (v i : ℝ) := by rw [Int.cast_abs, habs]
+      have := hgd m
+      rw [hcast] at this
+      exact this
+    · have hcast : ((|v i| : ℤ) : ℝ) = -(v i : ℝ) := by rw [Int.cast_abs, habs]
+      have := hgd (-m)
+      rw [hcast] at this
+      have heq : |-(v i : ℝ) * t' - ((-m : ℤ) : ℝ)| = |(v i : ℝ) * t' - m| := by
+        rw [show -(v i : ℝ) * t' - ((-m : ℤ) : ℝ) = -((v i : ℝ) * t' - m) by push_cast; ring,
+          abs_neg]
+      rw [heq] at this
+      exact this
+
 end SevenGap
 end LonelyRunner
