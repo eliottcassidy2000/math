@@ -76,8 +76,8 @@ theorem clipLen_tooth_tooth (w₁ w₂ : ℤ) (hw₁ : 0 < w₁) (hw₁₂ : w�
   have habs : (S - |r|) / P = min ((S + r) / P) ((S - r) / P) := by
     rw [← min_add_sub_abs S r]
     rcases le_total (S + r) (S - r) with hxy | hxy
-    · rw [min_eq_left hxy, min_eq_left (by apply div_le_div_of_nonneg_right hxy hmul)]
-    · rw [min_eq_right hxy, min_eq_right (by apply div_le_div_of_nonneg_right hxy hmul)]
+    · rw [min_eq_left hxy, min_eq_left (by apply div_le_div_of_nonneg_right hxy hmul.le)]
+    · rw [min_eq_right hxy, min_eq_right (by apply div_le_div_of_nonneg_right hxy hmul.le)]
   have hplateau : 2 * (1/14) / (w₂ : ℝ) ≤ 2 * (1/14) / (w₁ : ℝ) :=
     div_le_div_of_nonneg_left (by norm_num) hw₁R hw₁₂R
   rw [habs]
@@ -150,7 +150,7 @@ theorem per_tooth_ge_trap (w₁ w₂ : ℤ) (hw₁ : 0 < w₁) (h₁₂ : w₁ �
     rw [← clipLen_tooth_tooth w₁ w₂ hw₁ h₁₂ n m]
     unfold clipLen rclip
     simp only [Function.comp]
-    rw [min_comm, max_comm]
+    rw [min_comm (tooth w₂ m).2 (tooth w₁ n).2, max_comm (tooth w₂ m).1 (tooth w₁ n).1]
   rw [← hval]
   apply List.single_le_sum _ _ hmem'
   intro x hx
@@ -165,7 +165,7 @@ shifted down by `j·D`, mod `w₂`.  Pure `emod` algebra, no induction. -/
 theorem walk_formula (w₁ w₂ D : ℤ) (hD : w₂ = w₁ + D) (m₀ j : ℤ) :
     ((m₀ + j) * w₁) % w₂ = ((m₀ * w₁) % w₂ - j * D) % w₂ := by
   have h1 : (m₀ + j) * w₁ = m₀ * w₁ - j * D + j * w₂ := by rw [hD]; ring
-  rw [h1, Int.add_mul_emod_self]
+  rw [h1, Int.add_mul_emod_self_right]
   conv_rhs => rw [Int.sub_emod, Int.emod_emod_of_dvd _ dvd_rfl, ← Int.sub_emod]
 
 /-- **One wrap of the walk**: from any start `m₀` the descending remainder enters
@@ -212,11 +212,11 @@ theorem walk_one_wrap (w₁ w₂ D T : ℤ) (hw₁ : 0 < w₁) (hD : w₂ = w₁
       have h1 : ((m₀ + j₀ + k) * w₁) % w₂ = (vs - k * D) % w₂ := by
         have := walk_formula w₁ w₂ D hD (m₀ + j₀) k
         rw [hstar] at this
-        convert this using 3
-        ring
+        exact this
       rw [h1]
-      have h2 : (vs - k * D) % w₂ = (vs - k * D + w₂) % w₂ := (Int.add_emod_self).symm
+      have h2 : (vs - k * D) % w₂ = (vs - k * D + w₂) % w₂ := (Int.add_emod_right (vs - k * D) w₂).symm
       rw [h2]
+      have hkD1 : D ≤ k * D := le_mul_of_one_le_left hDpos.le (by omega)
       apply Int.emod_eq_of_lt
       · omega
       · omega
