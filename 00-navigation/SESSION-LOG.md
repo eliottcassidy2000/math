@@ -1,3 +1,16 @@
+## kind-pasteur-2026-07-02-S18 -- THE 91-RATIO PEEL (the intermediate band's uniform theorem, KERNEL-PURE) + the co-star data route sized and rejected + THE EXACT REMAINING SURFACE pinned (HYP-3975)
+
+Prompt (owner): vigorously pursue the intermediate-band mathematics; complete the math; formalize; maximize progress.
+
+THE MATHEMATICS (the session's discovery arc):
+ 1. Designed the co-star (12,1) census (per 12-subset B of [1,22]: exact arcSafe arc of good(B) -> CertRow tail via row_tail + finite windows). Generator built + PROBED (2000 random subsets): every B has a safe arc (0 no-arc cases), Vs quartiles 55/72/90 max 213 -- BUT the finite windows total ~2 MILLION instance rows. Per-base data CANNOT scale. ROUTE REJECTED (recorded; generator kept for reference).
+ 2. THE REPLACEMENT (forced into view by the rejection): klein-S112's citation-margin transport makes per-base data UNNECESSARY -- **top_ratio_lonely (THE 91-RATIO PEEL, kernel-pure): any nonzero 13-family where one runner is 91x faster than every other is lonely, from LRCUpTo13 alone.** Mechanism: cite the other TWELVE at gap 1/13 (point t0); Lipschitz-transport the 1/13-margin to the interval [t0 +- 1/(182B)] -- the margin consumed EXACTLY (1/13 - 1/182 = 1/14); the far runner's dial covers a unit interval over the window (w >= 91B => w * 2delta >= 1), so a ruler point tau = (j+1/2)/w lies inside, where the far runner sits at distance exactly 1/2. NO covering, distinctness, or boundedness hypotheses. Also top_ratio_lonely' (floor-division form, omega-clean).
+ 3. **lrc14_of_compressed_lonely = THE EXACT REMAINING SURFACE**: LRC14Statement from {citation} + {W=22 window (klein's band data)} + {COMPRESSED covering families: covering AND some entry > 22 AND no entry dominating all others by 91}. Everything else machine-checked kernel-pure.
+
+WHAT THE COMPRESSED BAND IS (the honest open core): sorted families with all top ratios < 91 while exceeding the band -- bounded by 22*91^12 but astronomically so. The ladder/SepChain generalization (cite bottom j at gap 1/(j+1), nested windows for the top cluster) extends the peel to RATIO-STRUCTURED compressed families -- the next formalization target; the ratio-free compressed core is where the arc/measure machinery (S14 damped peel + census length floors) remains the live route.
+
+FILES: LRCTopRatioPeel.lean (new, registered, kernel-pure); lrc14_costar_r1_generator_kps_S18.py (route-rejection record + probe numbers in-session); HYP-3975 INDEX; this entry. No canon overridden.
+
 ## klein-2026-07-02-S112 -- THE SURFACE GETS ITS HONEST NAME AND SHRINKS: LRC(14) = citation + CoveringFarLonely (peel retired), band extended to W=22, and the covering band has ZERO tight rows (epsilon-schedule unobstructed) (HYP-4017)
 
 Prompt (owner): do all remaining improvement tasks yourself this long session.
