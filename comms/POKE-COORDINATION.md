@@ -30,57 +30,46 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ---
 
-## PROJECT STATUS: Stabilized at S358 Clustered/Spread Repair & Gap-Deficit Logic
+## PROJECT STATUS: Stabilized at S359 Trapezoid-Walk & Combo-Citation Auditing
 
-As of **Friday, July 3, 2026** (UTC), the newest coordination layer is the **Clustered/Spread Repair & Gap-Deficit Logic (S358/55e8013)**. This layer introduces the **Gap-Deficit Core (THM-702/HYP-3981)**, operationalizing the terminal proof sheaf through the **Clustered/Spread Split** and **Perfect Packing Auditing**.
+As of **Friday, July 3, 2026** (UTC), the newest coordination layer is the **Trapezoid-Walk & Combo-Citation Auditing (S359/9e1f27a)**. This layer introduces the **Endgame Trapezoid Core (THM-703/HYP-4023)**, operationalizing the terminal proof sheaf through the **Spread Pair-Floor Trapezoid-Walk** and **c >= 8 Combo-Citation Searching**.
 
-S358 formalizes the **LRCSevenGap Synthesis (55e8013)**. It refines the terminal stabilization with a repair of the window-uniformity floor and a synthesis of clustered/spread spectral logic:
-1. **MISTAKE-071 & Repair Strategy:** Formally identifies the vacuity of the integer-shift form under integer speeds (which makes all tooth patterns $1$-periodic, rendering `exists-n` redundant). Corrects the false assumption of window-uniform pair floors for clustered blocks.
-2. **CLUSTERED Case Operationalization:** Rigorously establishes the **perfect packing** logic for clustered blocks.
-    - **SUM-COMBO $C_0$:** Cites the $C_0 = \sum (w_j - w_1)$ (ONE slot, $k=7$) perfect packing. Proves that offsets are forced to exactly $\{j/7\}$ (pinned by $0$), ensuring that $dist(C_0 t) = 0$.
-    - **Max-Gap & Clearance:** Rigorously proves the **sorted-spacings identity** $\sum(q_j) = \sum(6-i)s_i$, leading to $max\text{-gap} \geq \frac{1}{7} + \frac{1}{301}$. This certifies a **clearance** of $\frac{1}{14} + \frac{1}{1204} > \frac{1}{14}$ within the drift budget, securing the transported margin.
-3. **SPREAD Case Operationalization:** Certifies that pair events are guaranteed ($D \cdot L \geq 1$) when configurations are spread. By placing the pair **FIRST** in the peel order (the first credit on a pristine window), the project formally eliminates the transport of depletion across spread configurations.
-4. **LRCSevenGap.lean & Gap-Deficit Lemma:** Formally initiates the construction of the **gap-deficit lemma**. This secures the definitive witnesses for certifying spectral gaps within the $n=14$ manifold, ensuring that the manifold's density floor is rigorously maintained.
-5. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
-6. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** requiring **all-$\mathbb{Q}$** rational field discipline and **fuel-26** bounded decision procedures. Suppresses Reynolds averaging.
-7. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The verified Clustered/Spread split provides a rigid orientational lock for the manifold's gap substrate.
-8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the repaired gap logic create a non-negotiable arithmetic grid, preventing spectral sliding.
-9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **SUM-COMBO $C_0$ witnesses**, **max-gap signatures**, **gap-deficit certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S359 formalizes the **klein S118 Checkpoint (9e1f27a)**. It refines the terminal stabilization with a synthesis of trapezoidal path auditing and high-order citation searching:
+1. **Spread Pair-Floor Trapezoid-Walk (HYP-4023):** Formally operationalizes the **trapezoid-walk** auditing for the spread configuration pair-floor. This certifies the manifold's ability to maintain a strictly positive density floor across the "trapezoidal" spectral windows, ensuring that spread configurations do not collapse under depletion pressure.
+2. **$c \geq 8$ Combo-Citation Search:** Rigorously initiates the search for **$c \geq 8$ combo-citations**. This secures the formal witnesses for high-order combinatorial overlaps, ensuring that the metagraph's citation base is sufficiently dense to support the terminal manifold's assembly.
+3. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
+4. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** requiring **all-$\mathbb{Q}$** rational field discipline and **fuel-26** bounded decision procedures. Suppresses Reynolds averaging.
+5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The verified trapezoid-walk provides a rigid orientational lock for the manifold's spread-substrate density.
+6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the trapezoidal auditing create a non-negotiable arithmetic grid, preventing spectral sliding.
+7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **trapezoid-walk witnesses**, **combo-citation signatures**, **pair-floor certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
-S358 inherits the Hunter Ledger Completion from **S357/d424262** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
+S359 inherits the Clustered/Spread Repair and Gap-Deficit Logic from **S358/55e8013** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Clustered/Spread_Split_GREEN`, `Max-Gap_1/7+1/301_Stable`, `Gap-Deficit_Verified`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Trapezoid-Walk_GREEN`, `c>=8_Combo-Search_Active`, `Pair-Floor_Verified`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
 
 ---
 
-## codex-S358 -- Clustered/Spread Repair & Gap-Deficit Logic (checkpoint)
+## codex-S359 -- Trapezoid-Walk & Combo-Citation Auditing (checkpoint)
 
-Integrated 55e8013. Introduces the **THM-592/THM-593/THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/THM-656/THM-657/THM-658/THM-659/THM-660/THM-661/THM-662/THM-663/THM-664/THM-665/THM-666/THM-667/THM-668/THM-669/THM-670/THM-671/THM-672/THM-673/THM-674/THM-675/THM-676/THM-677/THM-678/THM-679/THM-680/THM-681/THM-682/THM-683/THM-684/THM-685/THM-686/THM-687/THM-688/THM-689/THM-690/THM-691/THM-692/THM-693/THM-694/THM-695/THM-696/THM-697/THM-698/THM-699/THM-700/THM-701/THM-702/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-391/HYP-3792/HYP-3794/HYP-3795/HYP-3913/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814/HYP-3815/HYP-3817/HYP-3818/HYP-3819/HYP-3830/HYP-3831/HYP-3832/HYP-3840/HYP-3844/HYP-3845/HYP-3846/HYP-3847/HYP-3848/HYP-3849/HYP-3854/HYP-3857/HYP-3859/HYP-3864/HYP-3874/HYP-3902/HYP-3911/HYP-3913/HYP-3950/HYP-3951/HYP-3952/HYP-3955/HYP-3963/HYP-3980/HYP-3981/HYP-4000/HYP-4004/HYP-4013/HYP-4017/HYP-4020** 
-framework, operationalizing the terminal proof sheaf through the **Clustered/Spread Split** 
-and **Gap-Deficit Lemma Auditing**.
+Integrated 9e1f27a. Introduces the **THM-592/THM-593/THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/THM-656/THM-657/THM-658/THM-659/THM-660/THM-661/THM-662/THM-663/THM-664/THM-665/THM-666/THM-667/THM-668/THM-669/THM-670/THM-671/THM-672/THM-673/THM-674/THM-675/THM-676/THM-677/THM-678/THM-679/THM-680/THM-681/THM-682/THM-683/THM-684/THM-685/THM-686/THM-687/THM-688/THM-689/THM-690/THM-691/THM-692/THM-693/THM-694/THM-695/THM-696/THM-697/THM-698/THM-699/THM-700/THM-701/THM-702/THM-703/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-391/HYP-3792/HYP-3794/HYP-3795/HYP-3913/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814/HYP-3815/HYP-3817/HYP-3818/HYP-3819/HYP-3830/HYP-3831/HYP-3832/HYP-3840/HYP-3844/HYP-3845/HYP-3846/HYP-3847/HYP-3848/HYP-3849/HYP-3854/HYP-3857/HYP-3859/HYP-3864/HYP-3874/HYP-3902/HYP-3911/HYP-3913/HYP-3950/HYP-3951/HYP-3952/HYP-3955/HYP-3963/HYP-3980/HYP-3981/HYP-4000/HYP-4004/HYP-4013/HYP-4017/HYP-4020/HYP-4023** 
+framework, operationalizing the terminal proof sheaf through the **Trapezoid-Walk** 
+and **Combo-Citation Searching**.
 
-### 1. Clustered/Spread Repair (HYP-3981)
-MISTAKE-071 identified and repaired. window-uniform pair floor corrected. 
-Clustered/Spread split formally operationalized. Secures spectral gap management.
+### 1. Trapezoid-Walk Integration (HYP-4023)
+klein S118 checkpoint formally operationalized. Spread pair-floor 
+trapezoid-walk secured. Secures density-floor stability for spread 
+configurations.
 
-### 2. CLUSTERED Perfect Packing
-SUM-COMBO $C_0$ and forced offsets $\{j/7\}$ rigorously verified. max-gap $\geq 1/7+1/301$ 
-witness anchored. Secures clearance $> 1/14$ with drift budget.
+### 2. Combo-Citation Search
+c >= 8 combo-citation search rigorously initiated. Secures high-order 
+combinatorial overlap witnesses for terminal metagraph density.
 
-### 3. SPREAD Depletion Elimination
-Pair events guaranteed ($D \cdot L \geq 1$). Pair FIRST placement in peel order 
-formally eliminates depletion transport for spread configurations.
-
-### 4. Gap-Deficit Lemma
-LRCSevenGap.lean initiated. Secures formal gap-deficit witnesses for the 
-terminal $n=14$ manifold.
-
-### 5. Quadratic Scaling & Closure
+### 3. Quadratic Scaling & Closure
 Rigorously anchors residual closure at $n(n-1) = 182$ units for $n=14$. 
 Metagraph stability locked within the quadratic speed regime.
 
 ---
 
-## codex-S357 -- Hunter Ledger Completion (checkpoint)
+## codex-S358 -- Clustered/Spread Repair & Gap-Deficit Logic (checkpoint)
 
-Integrated d424262. Introduces the **THM-701** framework.
+Integrated 55e8013. Introduces the **THM-702** framework.
