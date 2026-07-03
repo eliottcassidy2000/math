@@ -1,3 +1,23 @@
+## mac-mini-2026-07-03-S20 -- CORRECTED my S19 corpus alarm (corpus BUILDS GREEN) + WIRED the trapezoid area to klein's real trap + mapped the honest c=7 trichotomy remaining surface
+
+Prompt (owner): pull from other agents; long session to get the LRC(14) formalization ALL done and perfect.
+
+CORRECTION (important, corrects my S19 alarm): the CORPUS BUILDS GREEN (8627 jobs) against the pinned mathlib v4.30.0. My S19 'critical mathlib-drift / corpus broken' finding was WRONG. Root cause: klein's LRCSpreadPairFloor.lean was an UNBUILT ORPHAN (not imported by the root), broken vs v4.30.0 by 8 stale lemma names. When my first LRCTrapArea imported it, it failed to compile -> I over-concluded 'corpus-wide drift'. In fact the corpus never built it (orphan) and was green. The pinned mathlib IS authoritative + stable (c5ea00351c since May); the fleet's greens were real.
+
+FIXED LRCSpreadPairFloor (then found kps-S25 did it IDENTICALLY): 8 v4.30.0 renames -- div_le_div_of_nonneg_right +.le; Int.add_mul_emod_self->_right; Int.add_emod_self->add_emod_right; drop extraneous ring after convert; add D<=k*D for omega; explicit min_comm/max_comm args (bare rw hit the outer max 0). CONVERGENT DEBUGGING: kps-S25 (in response to my S19 report) made the EXACT same fixes (down to the explicit min_comm/max_comm args at line 153) -- my commit was absorbed as redundant in the rebase. Strong cross-validation of the fix.
+
+DELIVERED (my non-redundant contribution): WIRED LRCTrapArea to klein's ACTUAL LonelyRunner.SpreadPairFloor.trap. trap_integral (S19, = 1/49) was self-contained (re-declared trap); now it imports LRCSpreadPairFloor + `open SpreadPairFloor`, so `int trap w1 w2 r dr = 1/49` is stated for the REAL pair-floor trap -- directly usable by the pair-floor machinery (per_tooth_ge_trap's residue-walk aggregate). Sorry-free, builds (115s), registered, corpus green.
+
+HONEST STATE MAP (the c=7 trichotomy, kps-S24 HYP-3981 + kps-S25 MISTAKE-072): a 7-far block splits into 3 scale regimes:
+ (A) CLUSTERED-HUGE (w1>=7392): CLOSED unconditionally (kps cite_cluster7_lonely).
+ (B) SPREAD (some pair D*L>=2): reduced to ONE pair floor (kps cite_hunter_c7_onepair); my trapezoid area = its density heart. BUT kps-S25 found the actual bottleneck is the CRUDE SINGLES bound (window_teeth_mass L/7+3/(7w) only discharges w1>22638; ledger closes numerically at w1~1100) -- needs the JOINT-measure singles treatment (klein star_union_le), not the pair floor.
+ (C) NEAR-EQUAL-SMALL (w1<7392, e.g. 23..29): OPEN + HARD. kps-S25: the drifting floor CANNOT close it -- for wL~1 it is ARITHMETIC (the AP {(w1+j)t}), no window-floor works; needs the AP/resonant-combo/SimulPeel route. This is the deep LRC crux.
+ Plus c>=8 (klein's frontier, needs triple-Bonferroni or scale).
+
+VERDICT: LRC(14) is NOT finishable this session -- regime C (near-equal-small arithmetic) + c>=8 are genuine open crux the whole fleet is on. My session: corrected the corpus-health record (it's green), cross-validated the pair-floor file fix, and integrated my trapezoid area into the real pair-floor. The formalization is sorry-free + green, reduced to the c=7 regime-C arithmetic + c>=8.
+
+Files: LRCTrapArea.lean (wired to klein's trap, sorry-free); HYP-3876 (updated + S19 correction). No canon overridden.
+
 ## kind-pasteur-2026-07-03-S25 -- CORPUS FIX (LRCSpreadPairFloor repaired vs pinned mathlib) + REGIME C GROUND TRUTH: the drifting floor CANNOT close it; the bottleneck is SINGLES not pairs (MISTAKE-072)
 
 Prompt (owner): close regime C with a window-adaptive drifting floor + finish tasks blocking perfect formalization.
