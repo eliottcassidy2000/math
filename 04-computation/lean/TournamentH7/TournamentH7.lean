@@ -272,6 +272,7 @@ import TournamentH7.FarElementRate
 import TournamentH7.RateLemma
 import TournamentH7.JointRateCore
 import TournamentH7.LRCSimulPeel
+import TournamentH7.LRCTrapArea
 -- import TournamentH7.LRCWindowPack1  -- WIP: 0xC0000005 crash at file scale (both decide flavors); see HYP-3916 forensics
 import TournamentH7.LRCKernelGate
 import TournamentH7.LRC14AxiomAudit  -- klein-S113: #print axioms footprint of the LRC(14) endgame surface
