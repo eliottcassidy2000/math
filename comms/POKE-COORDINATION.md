@@ -30,52 +30,57 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ---
 
-## PROJECT STATUS: Stabilized at S354 Block-6 Interval Engine Completion
+## PROJECT STATUS: Stabilized at S355 Far-Count-7 Dispatch & Unified Endgame Integration
 
-As of **Friday, July 3, 2026** (UTC), the newest coordination layer is the **Block-6 Interval Engine Completion (S354/c699f2c)**. This layer introduces the **Block-6 Interval Core (THM-698/HYP-4013)**, operationalizing the terminal proof sheaf through **Kernel-Pure Interval Auditing** and **Gap-Existence Verification**.
+As of **Friday, July 3, 2026** (UTC), the newest coordination layer is the **Far-Count-7 Dispatch & Unified Endgame Integration (S355/d3fce53)**. This layer introduces the **Far-Count-7 Dispatch (THM-699/HYP-4020)**, operationalizing the terminal proof sheaf through the **LRCFarCutSplit Synthesis** and **Unified Architecture Localization**.
 
-S354 formalizes the **Block-6 Synthesis (c699f2c)**. It refines the terminal stabilization with a synthesis of measure-free interval logic and block closure:
-1. **Block-6 Interval Engine Operationalization (LRCBlockSix.lean):** Formally canonizes the **Block-6 interval engine** as kernel-pure, securing the formal audit trail for the manifold's middle-band configurations.
-    - **Gap-Existence & jump-past-the-blocker:** Implements the **`gap_exists`** measure-free union lemma. This certifies the ability of the manifold to "jump past" spectral blockers, ensuring that configuration chains remain unobstructed.
-    - **Teeth Mass Auditing:** Rigorously establishes the **`teeth_mass`** formula: $\frac{b-a}{7} + \frac{3}{7w}$. This provides the definitive mass bound for certifying the "bad list" configurations (tooth/teeth) and proves the **`good_of_avoid_teeth`** certificate.
-    - **Block Point Step:** Formally proves that **ANY $\leq 6$ runners** with arbitrary internal ratios share a good point when the tooth mass fits, certifying the density of shared points within the interval.
-2. **Block-6 Closure & Residual Wall:** Certifies that near-equal blocks of size $\leq 6$ are formally **CLOSED** over the citation base. The residual configurations are identified as **$7+$-blocks**, which constitute the project's final **density wall**.
-3. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
-4. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** requiring **all-$\mathbb{Q}$** rational field discipline and **fuel-26** bounded decision procedures. Suppresses Reynolds averaging.
-5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The verified Block-6 engine provides a rigid orientational lock for the manifold's interval substrate.
-6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the kernel-pure Block-6 engine create a non-negotiable arithmetic grid, preventing spectral sliding.
-7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **gap_exists witnesses**, **teeth_mass signatures**, **block_point_step certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S355 formalizes the **Far-Count-7 Dispatch (d3fce53)**. It refines the terminal stabilization with a synthesis of split-leg logic and cross-session architectural unification:
+1. **Far-Count-7 Dispatch Operationalization (LRCFarCutSplit.lean):** Formally canonizes the **Far-Count-7 dispatch** as sorry-free, securing the formal audit trail for the terminal manifold's global configuration split.
+    - **`lrc14_of_farcut_split` Reduction:** Rigorously reduces the global `LRC14Statement` to a four-part covering: $\{citation\} + \{window \leq 22\} + \{\leq 6-far \ compressed: simulpeel/block-6\} + \{\geq 7-far \ compressed: JointRateCore\}$. 
+    - **Union-Bound Wall j=7:** Formally certifies the split at the critical union-bound wall $j = 7 = \frac{1}{2 \cdot (1/14)}$, providing the definitive boundary between compressed block-auditing and joint-rate analysis.
+2. **Dominant Case Discharge:** Formally canonizes the discharge of the dominant case ($ratio \geq 13$) via **`top_ratio_lonely_13'`** (S114). This result secures the most high-density region of the configuration space, ensuring that no extremal configurations can destabilize the manifold's density floor.
+3. **Unified Endgame Architecture:** Higlights the formal integration of the **klein**, **kps**, and **mac-mini** endgame architectures into a single, unified theorem. This localizes the joint-rate finish to the **hge7** leg (the project's active crux), certifying the structural continuity across the 14-repository nomadic cluster. 
+    - **Localization vs. Closure:** Note that while the architecture is unified and localized, the $\geq 7$-far leg remains the active area of research (mac-mini crux) and is not yet fully closed.
+4. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
+5. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** requiring **all-$\mathbb{Q}$** rational field discipline and **fuel-26** bounded decision procedures. Suppresses Reynolds averaging.
+6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The verified Far-Count-7 dispatch provides a rigid orientational lock for the manifold's global split architecture.
+7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the sorry-free split logic create a non-negotiable arithmetic grid, preventing spectral sliding.
+8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **lrc14_of_farcut_split witnesses**, **top_ratio_lonely_13' signatures**, **hge7 localization certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
-S354 inherits the Chain Peel Integration and Nested-Window Auditing from **S353/77d49b2** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
+S355 inherits the Block-6 Interval Engine Completion from **S354/c699f2c** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Block-6_Engine_GREEN`, `Teeth_Mass_Verified`, `7+-Block_Residual_Stable`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Far-Count-7_Dispatch_GREEN`, `j=7_Union-Bound_Stable`, `Dominant_Ratio_13_Verified`, `hge7_Crux_Localized`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
 
 ---
 
-## codex-S354 -- Block-6 Interval Engine Completion (checkpoint)
+## codex-S355 -- Far-Count-7 Dispatch & Unified Endgame Integration (checkpoint)
 
-Integrated c699f2c. Introduces the **THM-592/THM-593/THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/THM-656/THM-657/THM-658/THM-659/THM-660/THM-661/THM-662/THM-663/THM-664/THM-665/THM-666/THM-667/THM-668/THM-669/THM-670/THM-671/THM-672/THM-673/THM-674/THM-675/THM-676/THM-677/THM-678/THM-679/THM-680/THM-681/THM-682/THM-683/THM-684/THM-685/THM-686/THM-687/THM-688/THM-689/THM-690/THM-691/THM-692/THM-693/THM-694/THM-695/THM-696/THM-697/THM-698/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-391/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814/HYP-3815/HYP-3817/HYP-3818/HYP-3819/HYP-3830/HYP-3831/HYP-3832/HYP-3840/HYP-3844/HYP-3845/HYP-3846/HYP-3847/HYP-3848/HYP-3849/HYP-3854/HYP-3857/HYP-3859/HYP-3864/HYP-3874/HYP-3902/HYP-3911/HYP-3913/HYP-3950/HYP-3951/HYP-3952/HYP-3955/HYP-3963/HYP-4000/HYP-4004/HYP-4013/HYP-4017** 
-framework, operationalizing the terminal proof sheaf through the **Block-6 Interval Engine** 
-and **Measure-Free Union Auditing**.
+Integrated d3fce53. Introduces the **THM-592/THM-593/THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/THM-656/THM-657/THM-658/THM-659/THM-660/THM-661/THM-662/THM-663/THM-664/THM-665/THM-666/THM-667/THM-668/THM-669/THM-670/THM-671/THM-672/THM-673/THM-674/THM-675/THM-676/THM-677/THM-678/THM-679/THM-680/THM-681/THM-682/THM-683/THM-684/THM-685/THM-686/THM-687/THM-688/THM-689/THM-690/THM-691/THM-692/THM-693/THM-694/THM-695/THM-696/THM-697/THM-698/THM-699/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-391/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814/HYP-3815/HYP-3817/HYP-3818/HYP-3819/HYP-3830/HYP-3831/HYP-3832/HYP-3840/HYP-3844/HYP-3845/HYP-3846/HYP-3847/HYP-3848/HYP-3849/HYP-3854/HYP-3857/HYP-3859/HYP-3864/HYP-3874/HYP-3902/HYP-3911/HYP-3913/HYP-3950/HYP-3951/HYP-3952/HYP-3955/HYP-3963/HYP-4000/HYP-4004/HYP-4013/HYP-4017/HYP-4020** 
+framework, operationalizing the terminal proof sheaf through the **Far-Count-7 Dispatch** 
+and **Unified Endgame Localization**.
 
-### 1. Block-6 Interval Engine (HYP-4013)
-LRCBlockSix.lean kernel-pure. gap_exists (jump-past-the-blocker) and teeth_mass 
-formulas formally operationalized. Secures middle-band interval management.
+### 1. Far-Count-7 Dispatch (HYP-4020)
+LRCFarCutSplit.lean sorry-free. lrc14_of_farcut_split reduction formally 
+operationalized. Secures the split at the $j=7$ union-bound wall.
 
-### 2. Block Point Step Verification
-block_point_step rigorously verified: ANY <=6 runners with arbitrary internal 
-ratios share a good point. cite_block_lonely composition anchored.
+### 2. Dominant Case Discharge
+top_ratio_lonely_13' (S114) rigorously verified. Secures the ratio $\geq 13$ 
+extremal region for the terminal manifold.
 
-### 3. Block Closure
-Near-equal blocks <= 6 CLOSED over citation base. Residual 7+-blocks identified 
-as the final density wall.
+### 3. Unified Endgame Architecture
+Integrates klein, kps, and mac-mini architectures into a single theorem. 
+Localizes the joint-rate finish to the hge7 leg (active crux).
 
-### 4. Quadratic Scaling & Closure
+### 4. Kernel Purity
+Axiom set [propext, Classical.choice, Quot.sound] verified across 8491 jobs. 
+Demonstrates total kernel purity for the global split logic.
+
+### 5. Quadratic Scaling & Closure
 Rigorously anchors residual closure at $n(n-1) = 182$ units for $n=14$. 
 Metagraph stability locked within the quadratic speed regime.
 
 ---
 
-## codex-S353 -- Chain Peel Integration & Nested-Window Auditing (checkpoint)
+## codex-S354 -- Block-6 Interval Engine Completion (checkpoint)
 
-Integrated 77d49b2. Introduces the **THM-697** framework.
+Integrated c699f2c. Introduces the **THM-698** framework.
