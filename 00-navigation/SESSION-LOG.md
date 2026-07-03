@@ -1,3 +1,21 @@
+## kind-pasteur-2026-07-02-S23 -- THE HUNTER LEDGER FORMALIZED END-TO-END (LRCRealRegions.lean, sorry-free, kernel-pure, corpus 8623 green): exact RR-region calculus (single-window LIST-LEVEL swap + exact partition + exact depletion identity) -> hunter_ledger with DEPLETED pair credits -> hunter_block_step -> cite_hunter_lonely + cite_hunter_shift_lonely + c=7 clean-floors packaging; pair-event run/gap analysis pins the remaining floor leg (HYP-3980)
+
+Prompt (owner): finish up the wall, be creative and persistent, pull/push many times.
+
+THE MATHEMATICS (what is now PROVED in Lean, all [propext, Classical.choice, Quot.sound]):
+ 1. **The single-window swap is a LIST equality**: rinter (rdiff1 X q) [d] = rdiff1 (rinter X [d]) q -- per-piece min/max right-commutativity with IDENTICAL traversal order. (The general-B region swap is FALSE as lists -- traversal orders differ -- and unprovable by naive fold induction; single-window is exactly what the ledger needs. This was the session's key structural unlock.)
+ 2. **The exact partition** (rlength_rdiff_partition): subtracting sorted-separated live teeth removes EXACTLY the intersection mass (cross_vanish kills cross terms).
+ 3. **The exact depletion identity** (rlength_inter_rdiff_expand): rlength(rinter (rdiff X D') Di) = rlength(rinter X Di) - SUM_d rlength(rinter (rinter X [d]) D'). The Hunter credits appear EXACTLY, not as bounds.
+ 4. **hunter_ledger**: surviving mass >= |I| - SUM_i |I inter D_i| + pairCredits (credits measured on the DEPLETED region -- sharper than abstract path-Bonferroni). 
+ 5. **hunter_block_step**: ledger positivity on a window -> common 1/14-good point for the whole block (via rdiff_chain_point_good fold semantics + teeth_sortedSep + good_of_avoid_teeth).
+ 6. **cite_hunter_lonely / cite_hunter_shift_lonely**: full citation assembly; the SHIFT form (cited margins are integer-shift invariant, cited_margin_shift) needs positivity only on SOME integer window translate -- the dischargeable form. **ledger_pos_of_credit_floor**: at c=7 densities cancel exactly (7L/7=L); credits only beat the fees SUM 3/(7w).
+
+THE EVENT-POSITION ANALYSIS (the honest remaining leg, now precisely mapped): pair-overlap events live on residues r = m1w2 - m2w1, |r| < (w1+w2)/14; per-residue period 1/gcd; across residues events cluster in RUNS ~(1/7)/g with GAPS ~(6/7)/g (Bohr sets). So: single-position hledger is NOT dischargeable for near-resonant blocks (use the shift form); block speeds in [3B, ~49B] can dodge even the shift orbit BUT are re-citable (k+1 <= 12 has room: block shrinks to 6 = BlockSix territory); all speeds > 49B => events dense in the orbit => the trapezoid aggregate SUM_r min(2h/q,(h(p+q)-|r|)/(pq)) = 4h^2 = 1/49 per unit (exact) delivers the floor. Remaining formal work: (i) aggregate trapezoid floor on a translate; (ii) re-citation case split; (iii) depletion transport for credits 3..7.
+
+CONCURRENT: klein-S116 landed path_hunter_add_le (LRCHunterLedger.lean, Mathlib-measure abstract form) mid-session -- complementary (their commit lists pair-floor + assembly as remaining; stages 4-6 here ARE the assembly). No collision; merged corpus green.
+
+FILES: LRCRealRegions.lean (~870 lines, new, registered); HYP-3980 INDEX; this entry. 6 checkpoint pushes. No canon overridden.
+
 ## klein-2026-07-02-S116 -- THE PATH-HUNTER (BONFERRONI) MEASURE INEQUALITY: the combinatorial heart of the 7-wall crossing, formalized sorry-free (HYP-4021).
 
 Prompt: work the remaining crux (the >=7-far compressed families / the 7-wall).
