@@ -16,6 +16,30 @@ DELIVERED (LRCFatBlockChain.lean, 2 build rounds, registered, corpus green; ALL 
 WHAT THIS CLOSES: every compressed family decomposable into <= 6-blocks at ANY chain positions with fitting windows -- the S19 singles chain, S20 pair chain, and S21 final-block are all special cases of ONE engine. THE RESIDUAL, precisely: 7+-near-equal levels (fat-mass unfittable), crossed at c = 7 by the Hunter ledger modulo pair floors (JointRateCore), c = 8+ genuinely beyond trees.
 
 FILES: LRCFatBlockChain.lean (new, registered, kernel-pure); HYP-3979 INDEX; this entry. No canon overridden.
+## klein-2026-07-02-S115 -- THE FAR-COUNT-7 DISPATCH: integrated the LRC(14) endgame into ONE sorry-free reduction, splitting the residual at the union-bound wall j=7 (simulpeel vs JointRateCore) (HYP-4020).
+
+Prompt: use simulpeel + JointRateCore to finish the LRC(14) formalization; pull/push frequently to integrate other agents' work.
+
+STATE FOUND (fleet moved fast since S114): the residual (OPEN-Q-108) is TWO pieces split at j=7 = 1/(2*(1/14)) -- the union-bound wall (each danger arc has measure 1/7, so seven tile the circle). Up to 6 far runners: union bound / mac-mini lonely_of_simul_peel (S18) / kps block-6 (S21) all work. >=7: only the JOINT rate (mac-mini JointRateCore S17, Delta-free telescoping) breaks past -- mac-mini is actively wiring its per-cell identity to the concrete drifting arcs.
+
+DELIVERED (LRCFarCutSplit.lean, sorry-free, registered, corpus green 8491 jobs; #print axioms lrc14_of_farcut_split = [propext, Classical.choice, Quot.sound]): lrc14_of_farcut_split (cite : LRCUpTo13) reduces LRC14Statement to exactly four legs, dispatched by farCount22 v = #{i : 22 < |v i|}:
+  (0) the LRC(<=13) citation (owner-sanctioned);
+  (1) hwindow -- bounded |v|<=22 (machine-checked window census, kps/klein);
+  (2) hle6 -- COMPRESSED (no ratio-13 dominant) with <=6 far entries (simulpeel/block-6 territory, union bound holds);
+  (3) hge7 -- COMPRESSED with >=7 far entries (the JointRateCore target -- the last open crux).
+The DOMINANT case (some |v i0| >= 13*|v i| for all i != i0) is discharged UNCONDITIONALLY by my S114 top_ratio_lonely_13'. So the split at farCount22=7 cleanly separates the reducible leg (hle6) from the genuinely-open leg (hge7).
+
+WHY THIS INTEGRATES: one theorem now assembles the whole fleet's endgame -- klein ratio-13 peel (dominant), kps window census + block engine (bounded + <=6 blocks), mac-mini simulpeel (<=6 far) + JointRateCore (>=7 far). It names the two remaining residuals precisely and localizes mac-mini's joint-rate finish to exactly leg hge7.
+
+HONEST: this is INTEGRATION + LOCALIZATION, NOT a closure. It does NOT finish LRC(14). Legs 0-2 are proved/machine-checked (modulo the finite middle band inside 1-2); leg 3 (>=7-far compressed) is the joint-rate crux mac-mini is actively closing. The finish is now one clean lemma (hge7) away.
+
+PUSHES/PULLS: pulled ~5x; integrated the fleet's S17-S21 work (simulpeel, block-6, cite-chain, pairs). No collision (HYP-4020, file LRCFarCutSplit.lean, farCount22 all distinct from others' names).
+
+FILES: 04-computation/lean/TournamentH7/TournamentH7/LRCFarCutSplit.lean (+ import in TournamentH7.lean); HYP-4020.
+
+NEXT: (a) mac-mini's JointRateCore -> hge7 (the >=7-far compressed leg) is THE finish -- support/verify it; (b) discharge hle6 by wiring lonely_of_simul_peel's fee for large far speeds; (c) confirm the finite middle band inside legs 1-2 is censused (W>=24 verified closeable, S113).
+
+---
 
 ## kind-pasteur-2026-07-02-S21 -- THE BLOCK-6 INTERVAL ENGINE (gap_exists measure-free union lemma + explicit teeth + block_point_step for ANY <= 6 runners + cite composition, ALL KERNEL-PURE); near-equal blocks <= 6 CLOSED (HYP-3978)
 
