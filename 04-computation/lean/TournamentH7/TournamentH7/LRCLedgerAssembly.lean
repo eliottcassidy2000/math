@@ -46,6 +46,31 @@ theorem credit_pos {L : ℝ} (hL : 0 < L) {c : ℕ} (hc : c ≤ 7) :
   have h1 : 0 < L * (48 - 6 * (c : ℝ)) := mul_pos hL (by linarith)
   exact div_pos h1 (by norm_num)
 
+/-- **The general ledger, parametrized by the pair overlap `P`.**  This subsumes
+`hledger_pos_of_bounds` (worst-case `P = L/49`, valid only for `c ≤ 7`) and, crucially,
+extends to ANY block size `c` — including `c ≥ 8` — provided the consecutive-pair overlap `P`
+clears the `c`-dependent threshold.  The Hunter ledger `0 < L − Σ singles + credits` holds
+whenever the singles fee plus the pair-error is below `L + (c−1)P`. -/
+theorem hledger_pos_of_pairbound
+    (L singlesSum credits P F E : ℝ) (c : ℕ)
+    (hsingles : singlesSum ≤ (c : ℝ) * (L / 7) + F)
+    (hcredits : ((c : ℝ) - 1) * P - E ≤ credits)
+    (hthresh : (c : ℝ) * (L / 7) + F < L + (((c : ℝ) - 1) * P - E)) :
+    0 < L - singlesSum + credits := by
+  linarith
+
+/-- **The explicit pair-overlap threshold for block size `c`.**  Ignoring the fee terms, the
+ledger closes iff the consecutive-pair overlap `P` exceeds `L·(c−7)/(7(c−1))`.  KEY CONSEQUENCE:
+for `c ≤ 7` the threshold is `≤ 0` (any `P ≥ 0` works — the worst-case floor `L/49` suffices);
+for `c ≥ 8` it is strictly positive and grows toward `L/7` (e.g. `c = 13` needs `P > L/14`), so
+`c ≥ 8` is NOT closable by the worst-case pair-floor `L/49` (`L/49 < L/14`) — it requires the
+NEAR-EQUAL pair overlap, which exceeds `L/49` exactly when the block is tight. -/
+theorem pairbound_threshold (L c P : ℝ) (hc1 : 1 < c)
+    (hP : L * (c - 7) < 7 * (c - 1) * P) :
+    c * (L / 7) < L + (c - 1) * P := by
+  nlinarith [hP]
+
 #print axioms hledger_pos_of_bounds
+#print axioms hledger_pos_of_pairbound
 
 end LonelyRunner.LRC14.Ledger
