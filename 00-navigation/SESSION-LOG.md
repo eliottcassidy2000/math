@@ -1,3 +1,37 @@
+## klein-2026-07-02-S118 -- THE GENERAL LEDGER (c>=8 reduction) + STAR-HUNTER (err-free covering pair-floor for c<=7) + DRIFTING PAIR-FLOOR ANATOMY (HYP-4023).
+
+Prompt (owner): work on proving the general pair-floor and the c>=8 case back and forth in this long overnight session with many pushes and pulls, efficiently integrating new ideas, getting the Lean formalization into a perfect state.
+
+The two things S117 pinned were (1) the pair-floor and (2) c>=8. I worked BOTH, alternating, and pushed the arithmetic/measure side to a perfect (sorry-free) state; the remaining frontier is now sharply named and owned.
+
+DELIVERED (all Lean sorry-free, [propext, Classical.choice, Quot.sound], corpus green):
+
+1. **THE GENERAL LEDGER (the c>=8 reduction)** -- LRCLedgerAssembly.lean:
+   - hledger_pos_of_pairbound (L singlesSum credits P F E)(c): closes the Hunter ledger 0 < L - singlesSum + credits for ANY block size c (incl. c>=8), given the per-pair overlap P clears the threshold. Pure linarith, framework-agnostic.
+   - pairbound_threshold (L c P)(1<c): c*(L/7) < L + (c-1)*P  iff  P > L*(c-7)/(7(c-1)). KEY: for c<=7 the threshold is <=0 (worst-case floor L/49 suffices = my S117 hledger_pos_of_bounds); for c>=8 it is strictly positive, growing toward L/7 (c=13 needs P > L/14, ~7x the L/49 floor). So c>=8 is REDUCED (not closed) to a NEAR-EQUAL pair-overlap lower bound -- the tight-block regime.
+
+2. **THE STAR-HUNTER (err-free covering pair-floor for c<=7)** -- LRCHunterLedger.lean:
+   - star_hunter_add_le: the STAR-tree 2nd-order Bonferroni mu(union_{i<c} A_i) + Sum_{i in Ico 1 c} mu(A_0 cap A_i) <= Sum_{i<c} mu(A_i). Mirror of S116's path-Hunter with A_0 as the tree center. Additive (no ENNReal subtraction), disjointification induction.
+   - star_union_le: its covering specialization -- when every single = 1/7 and every star pair = EXACTLY 1/49 (LRCCommensuration.seven_commensuration, for a 7-divisible star center), mu(union) + (c-1)*(1/49) <= c*(1/7). ERR-FREE exact (c-1)/49 pair-floor, NO equidistribution/discrepancy error. KEY INSIGHT: a covering family MUST contain a 7-divisible runner (to cover residues q=7,14 on the circle), which is exactly the star center that makes seven_commensuration apply to EVERY leaf pair. So the covering c<=7 blocks get the pair-floor for free.
+
+3. **THE DRIFTING PAIR-FLOOR ANATOMY** -- lrc14_spread_pair_floor_pin_klein_S118.py (exact Fractions):
+   - PER-TOOTH IDENTITY + SINGLE-PARTNER: PASS over 200 random near-equal cases. Each w2-tooth overlaps AT MOST ONE w1-tooth, and the overlap equals the trapezoid T(r) = max(0, min(2h/w1, 2h/w2, (h(w1+w2)-|r|)/(w1 w2))); the residual walks r_{m+1} = r_m - D (mod w2), D = w2-w1.
+   - ADVERSARIAL FLOOR SWEEP: min over window phases of pairmass/L in [0.929, 1.000] x (1/49). EXACTLY 1/49 at D=1 (consecutive integers, tight); a GENUINE deficit up to ~7% for D>=2 at small DL, shrinking to 0 as DL grows. So the drifting floor is L/49 - err with err REAL and nonzero (a boundary/telescoping term ~ O(1/DL)). This VALIDATES the fee-aware ledger: the E slack in hledger_pos_of_bounds is necessary, not cosmetic.
+
+THE META-PATTERN (reflection: the-second-order-bonferroni-is-self-calibrating.md): union-bound failure and pair-credit surplus are the SAME phenomenon -- danger-arc CORRELATION -- with opposite signs. The 7-wall breaks worst exactly when the c arcs pile up (tight block), which is exactly when the pairwise overlap P is large enough to clear P > L(c-7)/(7(c-1)). The wall carries its own ladder. So c>=8 is not a gap in the method; it is a demand for a lower bound on P in the tight regime -- the regime that supplies it.
+
+HONEST: CLOSED (sorry-free) = the ledger algebra for all c + the covering-c<=7 err-free pair-floor. NOT closed = (a) the c>=8 near-equal correlation lower bound (does every covering block of c>=8 near-equal runners have P > L(c-7)/(7(c-1))?); (b) the drifting AGGREGATE floor L/49-err transcription for non-covering-center pairs. Both funnel into mac-mini's JointRateCore per-cell drift (the drifting case), whose structural anatomy (one trapezoid per tooth, residual walk step -D) I pinned this session.
+
+PUSHES/PULLS: 2 mid-session checkpoints (general ledger; star-Hunter) + this close-out; fetched origin (no incoming since S117). No collision (HYP-4023, distinct filenames/namespaces).
+
+FILES: LRCLedgerAssembly.lean (+hledger_pos_of_pairbound, pairbound_threshold); LRCHunterLedger.lean (+star_hunter_add_le, star_union_le); 04-computation/lrc14_spread_pair_floor_pin_klein_S118.py + .out; 07-reflections/the-second-order-bonferroni-is-self-calibrating.md; HYP-4023.
+
+MY ENDGAME ARC: S114 ratio-13 peel (dominant, closed) -> S115 far-cut-7 dispatch (integration) -> S116 path-Hunter (7-wall heart) -> S117 ledger assembly (c<=7) -> S118 general ledger (c>=8 reduction) + star-Hunter (covering pair-floor). Each sorry-free, foundational-axioms-only.
+
+NEXT: (a) mac-mini/kps -- transcribe the drifting aggregate floor L/49-err (trapezoid-per-tooth + residual-walk anatomy pinned here) into JointRateCore's per-cell obligation; (b) the c>=8 near-equal correlation lower bound P > L(c-7)/(7(c-1)) for covering blocks -- attack via the star-Hunter route (7-divisible center) which already gives the EXACT (c-1)/49 for c<=7 and needs only extension of seven_commensuration to leaf-leaf pairs, OR a triple-Bonferroni credit; (c) integrate star_hunter_add_le / star_union_le into cite_hunter_lonely's hledger at the concrete teeth level.
+
+---
+
 ## klein-2026-07-02-S117 -- THE LEDGER-POSITIVITY ASSEMBLY: discharge cite_hunter_lonely's hledger from {singles-bound + pair-floor} for c<=7; pin the two genuinely-remaining analytic things (HYP-4022).
 
 Prompt: finish the two remaining things (pair-floor + Hunter wiring).

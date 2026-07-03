@@ -145,7 +145,26 @@ theorem star_hunter_add_le (μ : Measure α) (A : ℕ → Set α)
         _ = (μ S + ∑ i ∈ Finset.Ico 1 n, μ (A 0 ∩ A i)) + μ (A n) := by ring
         _ ≤ (∑ i ∈ Finset.range n, μ (A i)) + μ (A n) := add_le_add ih (le_refl _)
 
+/-- **The err-free covering pair-floor union bound** (star-Hunter specialized to the covering
+case).  When every runner's danger has measure `1/7` and every star pair (center ∩ leaf) has
+measure EXACTLY `1/49` (the `seven_commensuration` value for a `7`-divisible center and non-`7`
+leaves), the union of the `c` danger sets is bounded, EXACTLY and err-free, by
+
+    μ(⋃) + (c−1)·(1/49) ≤ c·(1/7),   i.e.   μ(⋃) ≤ c/7 − (c−1)/49 = (6c+1)/49.
+
+So the safe set has measure `≥ 1 − (6c+1)/49 = (48−6c)/49 > 0` for `c ≤ 7` — the covering
+`c ≤ 7` blocks are lonely on the full circle, with NO discrepancy/equidistribution error. -/
+theorem star_union_le (μ : Measure α) (A : ℕ → Set α) (hA : ∀ i, MeasurableSet (A i)) (c : ℕ)
+    (hs : ∀ i ∈ Finset.range c, μ (A i) = ENNReal.ofReal (1 / 7))
+    (hp : ∀ i ∈ Finset.Ico 1 c, μ (A 0 ∩ A i) = ENNReal.ofReal (1 / 49)) :
+    μ (⋃ i ∈ Finset.range c, A i) + (∑ _i ∈ Finset.Ico 1 c, ENNReal.ofReal (1 / 49))
+      ≤ ∑ _i ∈ Finset.range c, ENNReal.ofReal (1 / 7) := by
+  have h := star_hunter_add_le μ A hA c
+  rw [Finset.sum_congr rfl hp, Finset.sum_congr rfl hs] at h
+  exact h
+
 #print axioms path_hunter_add_le
 #print axioms star_hunter_add_le
+#print axioms star_union_le
 
 end LonelyRunner.LRC14.Hunter

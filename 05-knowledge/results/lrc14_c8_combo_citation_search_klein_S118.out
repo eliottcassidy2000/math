@@ -1,0 +1,11 @@
+c=8 clustered search: d-vectors (0,d2..d8), coeff height A=2
+                          d-vector  #combos   survival    verdict
+  ... 100 vectors, 0 survivors so far
+  ... 200 vectors, 0 survivors so far
+  ... 300 vectors, 0 survivors so far
+  ... 400 vectors, 0 survivors so far
+  ... 500 vectors, 0 survivors so far
+  ... 600 vectors, 0 survivors so far
+  ... 700 vectors, 0 survivors so far
+
+TOTAL: 792 d-vectors, 0 survive all A=2 bounded-combo citations
