@@ -24,6 +24,8 @@ import TournamentH7.LRCRealRegions
 namespace LonelyRunner
 namespace SevenGap
 
+set_option maxHeartbeats 1600000
+
 /-- Mid-gap clearance: the midpoint of a point-free arc `(a, b) ⊆ [0, 1]` keeps
 integer-circle distance `≥ c` from every point of `[0,1)` outside the open arc,
 whenever the arc is `2c` wide. -/
@@ -67,7 +69,7 @@ theorem seven_gap_deficit (q0 q1 q2 q3 q4 q5 q6 θ : ℝ) (hθ : 0 < θ)
     (h01 : q0 ≤ q1) (h12 : q1 ≤ q2) (h23 : q2 ≤ q3) (h34 : q3 ≤ q4)
     (h45 : q4 ≤ q5) (h56 : q5 ≤ q6) (h6 : q6 < 1)
     (hsum : ∀ m : ℤ, θ ≤ |q0 + q1 + q2 + q3 + q4 + q5 + q6 - (m : ℝ)|) :
-    ∃ φ : ℝ, ∀ x ∈ [q0, q1, q2, q3, q4, q5, q6], ∀ m : ℤ,
+    ∃ φ : ℝ, (0 ≤ φ ∧ φ ≤ 1) ∧ ∀ x ∈ [q0, q1, q2, q3, q4, q5, q6], ∀ m : ℤ,
       1 / 14 + θ / 44 ≤ |φ - x - m| := by
   have hq00 : (0 : ℝ) ≤ q0 := le_of_eq h0.symm
   -- the spacing surplus: some circular gap is ≥ 1/7 + θ/22
@@ -84,7 +86,7 @@ theorem seven_gap_deficit (q0 q1 q2 q3 q4 q5 q6 θ : ℝ) (hθ : 0 < θ)
       linarith
   rcases hdisj with hg | hg | hg | hg | hg | hg | hg
   · -- gap case 0
-      refine ⟨(q0 + q1) / 2, ?_⟩
+      refine ⟨(q0 + q1) / 2, ⟨by linarith, by linarith⟩, ?_⟩
       intro x hx m
       simp only [List.mem_cons, List.not_mem_nil, or_false] at hx
       have hgap := mid_gap_clearance q0 q1 (1 / 14 + θ / 44) (by linarith) (by linarith) (by linarith) (by linarith)
@@ -97,7 +99,7 @@ theorem seven_gap_deficit (q0 q1 q2 q3 q4 q5 q6 θ : ℝ) (hθ : 0 < θ)
       · exact hgap x (by linarith) (by linarith) (Or.inr (by linarith)) m
       · exact hgap x (by linarith) (by linarith) (Or.inr (by linarith)) m
   · -- gap case 1
-      refine ⟨(q1 + q2) / 2, ?_⟩
+      refine ⟨(q1 + q2) / 2, ⟨by linarith, by linarith⟩, ?_⟩
       intro x hx m
       simp only [List.mem_cons, List.not_mem_nil, or_false] at hx
       have hgap := mid_gap_clearance q1 q2 (1 / 14 + θ / 44) (by linarith) (by linarith) (by linarith) (by linarith)
@@ -110,7 +112,7 @@ theorem seven_gap_deficit (q0 q1 q2 q3 q4 q5 q6 θ : ℝ) (hθ : 0 < θ)
       · exact hgap x (by linarith) (by linarith) (Or.inr (by linarith)) m
       · exact hgap x (by linarith) (by linarith) (Or.inr (by linarith)) m
   · -- gap case 2
-      refine ⟨(q2 + q3) / 2, ?_⟩
+      refine ⟨(q2 + q3) / 2, ⟨by linarith, by linarith⟩, ?_⟩
       intro x hx m
       simp only [List.mem_cons, List.not_mem_nil, or_false] at hx
       have hgap := mid_gap_clearance q2 q3 (1 / 14 + θ / 44) (by linarith) (by linarith) (by linarith) (by linarith)
@@ -123,7 +125,7 @@ theorem seven_gap_deficit (q0 q1 q2 q3 q4 q5 q6 θ : ℝ) (hθ : 0 < θ)
       · exact hgap x (by linarith) (by linarith) (Or.inr (by linarith)) m
       · exact hgap x (by linarith) (by linarith) (Or.inr (by linarith)) m
   · -- gap case 3
-      refine ⟨(q3 + q4) / 2, ?_⟩
+      refine ⟨(q3 + q4) / 2, ⟨by linarith, by linarith⟩, ?_⟩
       intro x hx m
       simp only [List.mem_cons, List.not_mem_nil, or_false] at hx
       have hgap := mid_gap_clearance q3 q4 (1 / 14 + θ / 44) (by linarith) (by linarith) (by linarith) (by linarith)
@@ -136,7 +138,7 @@ theorem seven_gap_deficit (q0 q1 q2 q3 q4 q5 q6 θ : ℝ) (hθ : 0 < θ)
       · exact hgap x (by linarith) (by linarith) (Or.inr (by linarith)) m
       · exact hgap x (by linarith) (by linarith) (Or.inr (by linarith)) m
   · -- gap case 4
-      refine ⟨(q4 + q5) / 2, ?_⟩
+      refine ⟨(q4 + q5) / 2, ⟨by linarith, by linarith⟩, ?_⟩
       intro x hx m
       simp only [List.mem_cons, List.not_mem_nil, or_false] at hx
       have hgap := mid_gap_clearance q4 q5 (1 / 14 + θ / 44) (by linarith) (by linarith) (by linarith) (by linarith)
@@ -149,7 +151,7 @@ theorem seven_gap_deficit (q0 q1 q2 q3 q4 q5 q6 θ : ℝ) (hθ : 0 < θ)
       · exact hgap x (by linarith) (by linarith) (Or.inr (by linarith)) m
       · exact hgap x (by linarith) (by linarith) (Or.inr (by linarith)) m
   · -- gap case 5
-      refine ⟨(q5 + q6) / 2, ?_⟩
+      refine ⟨(q5 + q6) / 2, ⟨by linarith, by linarith⟩, ?_⟩
       intro x hx m
       simp only [List.mem_cons, List.not_mem_nil, or_false] at hx
       have hgap := mid_gap_clearance q5 q6 (1 / 14 + θ / 44) (by linarith) (by linarith) (by linarith) (by linarith)
@@ -162,7 +164,7 @@ theorem seven_gap_deficit (q0 q1 q2 q3 q4 q5 q6 θ : ℝ) (hθ : 0 < θ)
       · exact hgap x (by linarith) (by linarith) (Or.inl (by linarith)) m
       · exact hgap x (by linarith) (by linarith) (Or.inr (by linarith)) m
   · -- gap case 6
-      refine ⟨(q6 + (1 : ℝ)) / 2, ?_⟩
+      refine ⟨(q6 + (1 : ℝ)) / 2, ⟨by linarith, by linarith⟩, ?_⟩
       intro x hx m
       simp only [List.mem_cons, List.not_mem_nil, or_false] at hx
       have hgap := mid_gap_clearance q6 (1 : ℝ) (1 / 14 + θ / 44) (by linarith) (by linarith) (by linarith) (by linarith)
@@ -184,7 +186,7 @@ the permutation, applies `seven_gap_deficit`.) -/
 theorem gap_deficit_of_mem (L : List ℝ) (hlen : L.length = 7) (h0mem : (0 : ℝ) ∈ L)
     (hrange : ∀ x ∈ L, 0 ≤ x ∧ x < 1) (θ : ℝ) (hθ : 0 < θ)
     (hsum : ∀ m : ℤ, θ ≤ |L.sum - (m : ℝ)|) :
-    ∃ φ : ℝ, ∀ x ∈ L, ∀ m : ℤ, 1 / 14 + θ / 44 ≤ |φ - x - m| := by
+    ∃ φ : ℝ, (0 ≤ φ ∧ φ ≤ 1) ∧ ∀ x ∈ L, ∀ m : ℤ, 1 / 14 + θ / 44 ≤ |φ - x - m| := by
   classical
   set S : List ℝ := L.insertionSort (· ≤ ·) with hS
   have hperm : S.Perm L := List.perm_insertionSort _ L
@@ -229,9 +231,298 @@ theorem gap_deficit_of_mem (L : List ℝ) (hlen : L.length = 7) (h0mem : (0 : �
     rw [← hperm.sum_eq]
     simp only [List.sum_cons, List.sum_nil]
     ring
-  obtain ⟨φ, hφ⟩ := seven_gap_deficit q0 q1 q2 q3 q4 q5 q6 θ hθ hq0z
+  obtain ⟨φ, hφb, hφ⟩ := seven_gap_deficit q0 q1 q2 q3 q4 q5 q6 θ hθ hq0z
     h01 h12 h23 h34 h45 h56.1 hq6lt (by rw [hsumS]; exact hsum)
-  exact ⟨φ, fun x hx m => hφ x (hmemS x hx) m⟩
+  exact ⟨φ, hφb, fun x hx m => hφ x (hmemS x hx) m⟩
+
+/-! ## Stage B2 — the frozen-drift sweep: a clustered 7-block owns a good point
+in any window holding two `w1`-periods, given the transported sum-combo margin -/
+
+/-- **THE CLUSTER SWEEP STEP**: seven ordered speeds within drift budget
+(`1232·(w7−w1) ≤ w1`), a window `[τ, τ+L]` holding two base periods, and the
+transported citation margin `1/14` on the SUM-COMBO `Σ(wⱼ−w1)` at `τ` — then some
+`t'` in the window is `1/14`-good for ALL SEVEN runners.  The probe phase comes
+from the gap-deficit lemma at the frozen offsets; sweeping `w1` to the probe
+costs at most `2/w1` of time, and the offsets drift at most `1/616` — exactly
+the gap-deficit surplus. -/
+theorem cluster_sweep_step (w1 w2 w3 w4 w5 w6 w7 : ℤ) (hw1 : 0 < w1)
+    (h12 : w1 ≤ w2) (h23 : w2 ≤ w3) (h34 : w3 ≤ w4) (h45 : w4 ≤ w5)
+    (h56 : w5 ≤ w6) (h67 : w6 ≤ w7)
+    (hclu : 1232 * (w7 - w1) ≤ w1)
+    (τ L : ℝ) (hsweep : 2 ≤ (w1 : ℝ) * L)
+    (hmargin : ∀ m : ℤ, (1 : ℝ) / 14 ≤ |((w2 + w3 + w4 + w5 + w6 + w7 - 6 * w1 : ℤ) : ℝ) * τ - m|) :
+    ∃ t' : ℝ, τ ≤ t' ∧ t' ≤ τ + L ∧
+      ∀ u ∈ ([w1, w2, w3, w4, w5, w6, w7] : List ℤ), ∀ m : ℤ,
+        (1 : ℝ) / 14 ≤ |(u : ℝ) * t' - m| := by
+  have hw1R : (0 : ℝ) < (w1 : ℝ) := by exact_mod_cast hw1
+  have hz : Int.fract (-(((w1 - w1 : ℤ) : ℝ)) * τ) = 0 := by
+    simp
+  set P : List ℝ := [Int.fract (-(((w1 - w1 : ℤ) : ℝ)) * τ), Int.fract (-(((w2 - w1 : ℤ) : ℝ)) * τ), Int.fract (-(((w3 - w1 : ℤ) : ℝ)) * τ), Int.fract (-(((w4 - w1 : ℤ) : ℝ)) * τ), Int.fract (-(((w5 - w1 : ℤ) : ℝ)) * τ), Int.fract (-(((w6 - w1 : ℤ) : ℝ)) * τ), Int.fract (-(((w7 - w1 : ℤ) : ℝ)) * τ)] with hP
+  have hlen : P.length = 7 := rfl
+  have h0mem : (0 : ℝ) ∈ P := by
+    rw [hP]
+    simp only [List.mem_cons]
+    exact Or.inl hz.symm
+  have hrange : ∀ x ∈ P, 0 ≤ x ∧ x < 1 := by
+    intro x hx
+    rw [hP] at hx
+    simp only [List.mem_cons, List.not_mem_nil, or_false] at hx
+    rcases hx with rfl | rfl | rfl | rfl | rfl | rfl | rfl <;>
+      exact ⟨Int.fract_nonneg _, Int.fract_lt_one _⟩
+  obtain ⟨K, hKdef⟩ : ∃ k : ℤ, k = ⌊-(((w2 - w1 : ℤ) : ℝ)) * τ⌋ + ⌊-(((w3 - w1 : ℤ) : ℝ)) * τ⌋ + ⌊-(((w4 - w1 : ℤ) : ℝ)) * τ⌋ + ⌊-(((w5 - w1 : ℤ) : ℝ)) * τ⌋ + ⌊-(((w6 - w1 : ℤ) : ℝ)) * τ⌋ + ⌊-(((w7 - w1 : ℤ) : ℝ)) * τ⌋ := ⟨_, rfl⟩
+  have hPsum : P.sum = -(((w2 + w3 + w4 + w5 + w6 + w7 - 6 * w1 : ℤ) : ℝ) * τ) - (K : ℝ) := by
+    rw [hP, hKdef]
+    have hf2 := Int.floor_add_fract (-(((w2 - w1 : ℤ) : ℝ)) * τ)
+    have hf3 := Int.floor_add_fract (-(((w3 - w1 : ℤ) : ℝ)) * τ)
+    have hf4 := Int.floor_add_fract (-(((w4 - w1 : ℤ) : ℝ)) * τ)
+    have hf5 := Int.floor_add_fract (-(((w5 - w1 : ℤ) : ℝ)) * τ)
+    have hf6 := Int.floor_add_fract (-(((w6 - w1 : ℤ) : ℝ)) * τ)
+    have hf7 := Int.floor_add_fract (-(((w7 - w1 : ℤ) : ℝ)) * τ)
+    simp only [List.sum_cons, List.sum_nil]
+    rw [hz]
+    push_cast at *
+    linarith
+  have hsumMargin : ∀ m : ℤ, (1 : ℝ) / 14 ≤ |P.sum - (m : ℝ)| := by
+    intro m
+    rw [hPsum]
+    have h := hmargin (-(K + m))
+    have heq : -((((w2 + w3 + w4 + w5 + w6 + w7 - 6 * w1 : ℤ) : ℝ)) * τ) - (K : ℝ) - (m : ℝ)
+        = -(((w2 + w3 + w4 + w5 + w6 + w7 - 6 * w1 : ℤ) : ℝ) * τ - ((-(K + m) : ℤ) : ℝ)) := by
+      push_cast
+      ring
+    rw [heq, abs_neg]
+    exact h
+  obtain ⟨φ, ⟨hφ0, hφ1⟩, hφ⟩ := gap_deficit_of_mem P hlen h0mem hrange (1 / 14)
+    (by norm_num) hsumMargin
+  obtain ⟨t', ht'def⟩ : ∃ x : ℝ, x = ((⌊(w1 : ℝ) * τ⌋ : ℝ) + 1 + φ) / (w1 : ℝ) := ⟨_, rfl⟩
+  have hw1t' : (w1 : ℝ) * t' = (⌊(w1 : ℝ) * τ⌋ : ℝ) + 1 + φ := by
+    rw [ht'def, mul_div_cancel₀ _ (ne_of_gt hw1R)]
+  have hfloor_le := Int.floor_le ((w1 : ℝ) * τ)
+  have hlt_floor := Int.lt_floor_add_one ((w1 : ℝ) * τ)
+  have hτt' : τ ≤ t' := by
+    have h : (w1 : ℝ) * τ ≤ (w1 : ℝ) * t' := by
+      rw [hw1t']
+      linarith
+    exact le_of_mul_le_mul_left h hw1R
+  have ht'L : t' ≤ τ + L := by
+    have h : (w1 : ℝ) * t' ≤ (w1 : ℝ) * (τ + L) := by
+      have e : (w1 : ℝ) * (τ + L) = (w1 : ℝ) * τ + (w1 : ℝ) * L := by ring
+      rw [e, hw1t']
+      linarith
+    exact le_of_mul_le_mul_left h hw1R
+  have ht'τ0 : 0 ≤ t' - τ := by linarith
+  have ht'τ2 : (w1 : ℝ) * (t' - τ) ≤ 2 := by
+    have e : (w1 : ℝ) * (t' - τ) = (w1 : ℝ) * t' - (w1 : ℝ) * τ := by ring
+    rw [e, hw1t']
+    linarith
+  have hcluR : (1232 : ℝ) * ((w7 : ℝ) - (w1 : ℝ)) ≤ (w1 : ℝ) := by exact_mod_cast hclu
+  refine ⟨t', hτt', ht'L, ?_⟩
+  intro u hu m
+  simp only [List.mem_cons, List.not_mem_nil, or_false] at hu
+  rcases hu with hu | hu | hu | hu | hu | hu | hu
+  · rw [hu]
+    have hfl := Int.floor_add_fract (-(((w1 - w1 : ℤ) : ℝ)) * τ)
+    have hfr : Int.fract (-(((w1 - w1 : ℤ) : ℝ)) * τ) = -(((w1 - w1 : ℤ) : ℝ)) * τ - (⌊-(((w1 - w1 : ℤ) : ℝ)) * τ⌋ : ℝ) := by linarith
+    have hpt := hφ (Int.fract (-(((w1 - w1 : ℤ) : ℝ)) * τ)) (by rw [hP]; simp) (m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w1 - w1 : ℤ) : ℝ)) * τ⌋)
+    have hdposZ : (0 : ℤ) ≤ w1 - w1 := by linarith
+    have hdpos : (0 : ℝ) ≤ ((w1 - w1 : ℤ) : ℝ) := by exact_mod_cast hdposZ
+    have hj7Z : (w1 - w1 : ℤ) ≤ w7 - w1 := by linarith
+    have hj7 : (((w1 - w1 : ℤ)) : ℝ) ≤ ((w7 - w1 : ℤ) : ℝ) := by exact_mod_cast hj7Z
+    have hw7w1 : ((w7 - w1 : ℤ) : ℝ) = (w7 : ℝ) - (w1 : ℝ) := by push_cast; ring
+    have hdrift : (((w1 - w1 : ℤ)) : ℝ) * (t' - τ) ≤ 1 / 616 := by
+      have hA := mul_le_mul_of_nonneg_right hj7 ht'τ0
+      have hB := mul_le_mul_of_nonneg_right hcluR ht'τ0
+      rw [hw7w1] at hA
+      nlinarith [ht'τ2]
+    have habs_drift : |(((w1 - w1 : ℤ)) : ℝ) * (t' - τ)| ≤ 1 / 616 := by
+      rw [abs_of_nonneg (mul_nonneg hdpos ht'τ0)]
+      exact hdrift
+    have heq : φ - Int.fract (-(((w1 - w1 : ℤ) : ℝ)) * τ) - ((m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w1 - w1 : ℤ) : ℝ)) * τ⌋ : ℤ) : ℝ)
+        = ((w1 : ℝ) * t' - m) - (((w1 - w1 : ℤ)) : ℝ) * (t' - τ) := by
+      rw [hfr]
+      push_cast
+      linear_combination -hw1t'
+    have htri : |φ - Int.fract (-(((w1 - w1 : ℤ) : ℝ)) * τ) - ((m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w1 - w1 : ℤ) : ℝ)) * τ⌋ : ℤ) : ℝ)|
+        ≤ |(w1 : ℝ) * t' - m| + |(((w1 - w1 : ℤ)) : ℝ) * (t' - τ)| := by
+      rw [heq, sub_eq_add_neg]
+      calc |((w1 : ℝ) * t' - m) + -((((w1 - w1 : ℤ)) : ℝ) * (t' - τ))|
+          ≤ |(w1 : ℝ) * t' - m| + |(-((((w1 - w1 : ℤ)) : ℝ) * (t' - τ)))| := abs_add_le _ _
+        _ = |(w1 : ℝ) * t' - m| + |(((w1 - w1 : ℤ)) : ℝ) * (t' - τ)| := by rw [abs_neg]
+    linarith [hpt, htri, habs_drift]
+  · rw [hu]
+    have hfl := Int.floor_add_fract (-(((w2 - w1 : ℤ) : ℝ)) * τ)
+    have hfr : Int.fract (-(((w2 - w1 : ℤ) : ℝ)) * τ) = -(((w2 - w1 : ℤ) : ℝ)) * τ - (⌊-(((w2 - w1 : ℤ) : ℝ)) * τ⌋ : ℝ) := by linarith
+    have hpt := hφ (Int.fract (-(((w2 - w1 : ℤ) : ℝ)) * τ)) (by rw [hP]; simp) (m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w2 - w1 : ℤ) : ℝ)) * τ⌋)
+    have hdposZ : (0 : ℤ) ≤ w2 - w1 := by linarith
+    have hdpos : (0 : ℝ) ≤ ((w2 - w1 : ℤ) : ℝ) := by exact_mod_cast hdposZ
+    have hj7Z : (w2 - w1 : ℤ) ≤ w7 - w1 := by linarith
+    have hj7 : (((w2 - w1 : ℤ)) : ℝ) ≤ ((w7 - w1 : ℤ) : ℝ) := by exact_mod_cast hj7Z
+    have hw7w1 : ((w7 - w1 : ℤ) : ℝ) = (w7 : ℝ) - (w1 : ℝ) := by push_cast; ring
+    have hdrift : (((w2 - w1 : ℤ)) : ℝ) * (t' - τ) ≤ 1 / 616 := by
+      have hA := mul_le_mul_of_nonneg_right hj7 ht'τ0
+      have hB := mul_le_mul_of_nonneg_right hcluR ht'τ0
+      rw [hw7w1] at hA
+      nlinarith [ht'τ2]
+    have habs_drift : |(((w2 - w1 : ℤ)) : ℝ) * (t' - τ)| ≤ 1 / 616 := by
+      rw [abs_of_nonneg (mul_nonneg hdpos ht'τ0)]
+      exact hdrift
+    have heq : φ - Int.fract (-(((w2 - w1 : ℤ) : ℝ)) * τ) - ((m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w2 - w1 : ℤ) : ℝ)) * τ⌋ : ℤ) : ℝ)
+        = ((w2 : ℝ) * t' - m) - (((w2 - w1 : ℤ)) : ℝ) * (t' - τ) := by
+      rw [hfr]
+      push_cast
+      linear_combination -hw1t'
+    have htri : |φ - Int.fract (-(((w2 - w1 : ℤ) : ℝ)) * τ) - ((m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w2 - w1 : ℤ) : ℝ)) * τ⌋ : ℤ) : ℝ)|
+        ≤ |(w2 : ℝ) * t' - m| + |(((w2 - w1 : ℤ)) : ℝ) * (t' - τ)| := by
+      rw [heq, sub_eq_add_neg]
+      calc |((w2 : ℝ) * t' - m) + -((((w2 - w1 : ℤ)) : ℝ) * (t' - τ))|
+          ≤ |(w2 : ℝ) * t' - m| + |(-((((w2 - w1 : ℤ)) : ℝ) * (t' - τ)))| := abs_add_le _ _
+        _ = |(w2 : ℝ) * t' - m| + |(((w2 - w1 : ℤ)) : ℝ) * (t' - τ)| := by rw [abs_neg]
+    linarith [hpt, htri, habs_drift]
+  · rw [hu]
+    have hfl := Int.floor_add_fract (-(((w3 - w1 : ℤ) : ℝ)) * τ)
+    have hfr : Int.fract (-(((w3 - w1 : ℤ) : ℝ)) * τ) = -(((w3 - w1 : ℤ) : ℝ)) * τ - (⌊-(((w3 - w1 : ℤ) : ℝ)) * τ⌋ : ℝ) := by linarith
+    have hpt := hφ (Int.fract (-(((w3 - w1 : ℤ) : ℝ)) * τ)) (by rw [hP]; simp) (m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w3 - w1 : ℤ) : ℝ)) * τ⌋)
+    have hdposZ : (0 : ℤ) ≤ w3 - w1 := by linarith
+    have hdpos : (0 : ℝ) ≤ ((w3 - w1 : ℤ) : ℝ) := by exact_mod_cast hdposZ
+    have hj7Z : (w3 - w1 : ℤ) ≤ w7 - w1 := by linarith
+    have hj7 : (((w3 - w1 : ℤ)) : ℝ) ≤ ((w7 - w1 : ℤ) : ℝ) := by exact_mod_cast hj7Z
+    have hw7w1 : ((w7 - w1 : ℤ) : ℝ) = (w7 : ℝ) - (w1 : ℝ) := by push_cast; ring
+    have hdrift : (((w3 - w1 : ℤ)) : ℝ) * (t' - τ) ≤ 1 / 616 := by
+      have hA := mul_le_mul_of_nonneg_right hj7 ht'τ0
+      have hB := mul_le_mul_of_nonneg_right hcluR ht'τ0
+      rw [hw7w1] at hA
+      nlinarith [ht'τ2]
+    have habs_drift : |(((w3 - w1 : ℤ)) : ℝ) * (t' - τ)| ≤ 1 / 616 := by
+      rw [abs_of_nonneg (mul_nonneg hdpos ht'τ0)]
+      exact hdrift
+    have heq : φ - Int.fract (-(((w3 - w1 : ℤ) : ℝ)) * τ) - ((m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w3 - w1 : ℤ) : ℝ)) * τ⌋ : ℤ) : ℝ)
+        = ((w3 : ℝ) * t' - m) - (((w3 - w1 : ℤ)) : ℝ) * (t' - τ) := by
+      rw [hfr]
+      push_cast
+      linear_combination -hw1t'
+    have htri : |φ - Int.fract (-(((w3 - w1 : ℤ) : ℝ)) * τ) - ((m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w3 - w1 : ℤ) : ℝ)) * τ⌋ : ℤ) : ℝ)|
+        ≤ |(w3 : ℝ) * t' - m| + |(((w3 - w1 : ℤ)) : ℝ) * (t' - τ)| := by
+      rw [heq, sub_eq_add_neg]
+      calc |((w3 : ℝ) * t' - m) + -((((w3 - w1 : ℤ)) : ℝ) * (t' - τ))|
+          ≤ |(w3 : ℝ) * t' - m| + |(-((((w3 - w1 : ℤ)) : ℝ) * (t' - τ)))| := abs_add_le _ _
+        _ = |(w3 : ℝ) * t' - m| + |(((w3 - w1 : ℤ)) : ℝ) * (t' - τ)| := by rw [abs_neg]
+    linarith [hpt, htri, habs_drift]
+  · rw [hu]
+    have hfl := Int.floor_add_fract (-(((w4 - w1 : ℤ) : ℝ)) * τ)
+    have hfr : Int.fract (-(((w4 - w1 : ℤ) : ℝ)) * τ) = -(((w4 - w1 : ℤ) : ℝ)) * τ - (⌊-(((w4 - w1 : ℤ) : ℝ)) * τ⌋ : ℝ) := by linarith
+    have hpt := hφ (Int.fract (-(((w4 - w1 : ℤ) : ℝ)) * τ)) (by rw [hP]; simp) (m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w4 - w1 : ℤ) : ℝ)) * τ⌋)
+    have hdposZ : (0 : ℤ) ≤ w4 - w1 := by linarith
+    have hdpos : (0 : ℝ) ≤ ((w4 - w1 : ℤ) : ℝ) := by exact_mod_cast hdposZ
+    have hj7Z : (w4 - w1 : ℤ) ≤ w7 - w1 := by linarith
+    have hj7 : (((w4 - w1 : ℤ)) : ℝ) ≤ ((w7 - w1 : ℤ) : ℝ) := by exact_mod_cast hj7Z
+    have hw7w1 : ((w7 - w1 : ℤ) : ℝ) = (w7 : ℝ) - (w1 : ℝ) := by push_cast; ring
+    have hdrift : (((w4 - w1 : ℤ)) : ℝ) * (t' - τ) ≤ 1 / 616 := by
+      have hA := mul_le_mul_of_nonneg_right hj7 ht'τ0
+      have hB := mul_le_mul_of_nonneg_right hcluR ht'τ0
+      rw [hw7w1] at hA
+      nlinarith [ht'τ2]
+    have habs_drift : |(((w4 - w1 : ℤ)) : ℝ) * (t' - τ)| ≤ 1 / 616 := by
+      rw [abs_of_nonneg (mul_nonneg hdpos ht'τ0)]
+      exact hdrift
+    have heq : φ - Int.fract (-(((w4 - w1 : ℤ) : ℝ)) * τ) - ((m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w4 - w1 : ℤ) : ℝ)) * τ⌋ : ℤ) : ℝ)
+        = ((w4 : ℝ) * t' - m) - (((w4 - w1 : ℤ)) : ℝ) * (t' - τ) := by
+      rw [hfr]
+      push_cast
+      linear_combination -hw1t'
+    have htri : |φ - Int.fract (-(((w4 - w1 : ℤ) : ℝ)) * τ) - ((m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w4 - w1 : ℤ) : ℝ)) * τ⌋ : ℤ) : ℝ)|
+        ≤ |(w4 : ℝ) * t' - m| + |(((w4 - w1 : ℤ)) : ℝ) * (t' - τ)| := by
+      rw [heq, sub_eq_add_neg]
+      calc |((w4 : ℝ) * t' - m) + -((((w4 - w1 : ℤ)) : ℝ) * (t' - τ))|
+          ≤ |(w4 : ℝ) * t' - m| + |(-((((w4 - w1 : ℤ)) : ℝ) * (t' - τ)))| := abs_add_le _ _
+        _ = |(w4 : ℝ) * t' - m| + |(((w4 - w1 : ℤ)) : ℝ) * (t' - τ)| := by rw [abs_neg]
+    linarith [hpt, htri, habs_drift]
+  · rw [hu]
+    have hfl := Int.floor_add_fract (-(((w5 - w1 : ℤ) : ℝ)) * τ)
+    have hfr : Int.fract (-(((w5 - w1 : ℤ) : ℝ)) * τ) = -(((w5 - w1 : ℤ) : ℝ)) * τ - (⌊-(((w5 - w1 : ℤ) : ℝ)) * τ⌋ : ℝ) := by linarith
+    have hpt := hφ (Int.fract (-(((w5 - w1 : ℤ) : ℝ)) * τ)) (by rw [hP]; simp) (m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w5 - w1 : ℤ) : ℝ)) * τ⌋)
+    have hdposZ : (0 : ℤ) ≤ w5 - w1 := by linarith
+    have hdpos : (0 : ℝ) ≤ ((w5 - w1 : ℤ) : ℝ) := by exact_mod_cast hdposZ
+    have hj7Z : (w5 - w1 : ℤ) ≤ w7 - w1 := by linarith
+    have hj7 : (((w5 - w1 : ℤ)) : ℝ) ≤ ((w7 - w1 : ℤ) : ℝ) := by exact_mod_cast hj7Z
+    have hw7w1 : ((w7 - w1 : ℤ) : ℝ) = (w7 : ℝ) - (w1 : ℝ) := by push_cast; ring
+    have hdrift : (((w5 - w1 : ℤ)) : ℝ) * (t' - τ) ≤ 1 / 616 := by
+      have hA := mul_le_mul_of_nonneg_right hj7 ht'τ0
+      have hB := mul_le_mul_of_nonneg_right hcluR ht'τ0
+      rw [hw7w1] at hA
+      nlinarith [ht'τ2]
+    have habs_drift : |(((w5 - w1 : ℤ)) : ℝ) * (t' - τ)| ≤ 1 / 616 := by
+      rw [abs_of_nonneg (mul_nonneg hdpos ht'τ0)]
+      exact hdrift
+    have heq : φ - Int.fract (-(((w5 - w1 : ℤ) : ℝ)) * τ) - ((m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w5 - w1 : ℤ) : ℝ)) * τ⌋ : ℤ) : ℝ)
+        = ((w5 : ℝ) * t' - m) - (((w5 - w1 : ℤ)) : ℝ) * (t' - τ) := by
+      rw [hfr]
+      push_cast
+      linear_combination -hw1t'
+    have htri : |φ - Int.fract (-(((w5 - w1 : ℤ) : ℝ)) * τ) - ((m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w5 - w1 : ℤ) : ℝ)) * τ⌋ : ℤ) : ℝ)|
+        ≤ |(w5 : ℝ) * t' - m| + |(((w5 - w1 : ℤ)) : ℝ) * (t' - τ)| := by
+      rw [heq, sub_eq_add_neg]
+      calc |((w5 : ℝ) * t' - m) + -((((w5 - w1 : ℤ)) : ℝ) * (t' - τ))|
+          ≤ |(w5 : ℝ) * t' - m| + |(-((((w5 - w1 : ℤ)) : ℝ) * (t' - τ)))| := abs_add_le _ _
+        _ = |(w5 : ℝ) * t' - m| + |(((w5 - w1 : ℤ)) : ℝ) * (t' - τ)| := by rw [abs_neg]
+    linarith [hpt, htri, habs_drift]
+  · rw [hu]
+    have hfl := Int.floor_add_fract (-(((w6 - w1 : ℤ) : ℝ)) * τ)
+    have hfr : Int.fract (-(((w6 - w1 : ℤ) : ℝ)) * τ) = -(((w6 - w1 : ℤ) : ℝ)) * τ - (⌊-(((w6 - w1 : ℤ) : ℝ)) * τ⌋ : ℝ) := by linarith
+    have hpt := hφ (Int.fract (-(((w6 - w1 : ℤ) : ℝ)) * τ)) (by rw [hP]; simp) (m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w6 - w1 : ℤ) : ℝ)) * τ⌋)
+    have hdposZ : (0 : ℤ) ≤ w6 - w1 := by linarith
+    have hdpos : (0 : ℝ) ≤ ((w6 - w1 : ℤ) : ℝ) := by exact_mod_cast hdposZ
+    have hj7Z : (w6 - w1 : ℤ) ≤ w7 - w1 := by linarith
+    have hj7 : (((w6 - w1 : ℤ)) : ℝ) ≤ ((w7 - w1 : ℤ) : ℝ) := by exact_mod_cast hj7Z
+    have hw7w1 : ((w7 - w1 : ℤ) : ℝ) = (w7 : ℝ) - (w1 : ℝ) := by push_cast; ring
+    have hdrift : (((w6 - w1 : ℤ)) : ℝ) * (t' - τ) ≤ 1 / 616 := by
+      have hA := mul_le_mul_of_nonneg_right hj7 ht'τ0
+      have hB := mul_le_mul_of_nonneg_right hcluR ht'τ0
+      rw [hw7w1] at hA
+      nlinarith [ht'τ2]
+    have habs_drift : |(((w6 - w1 : ℤ)) : ℝ) * (t' - τ)| ≤ 1 / 616 := by
+      rw [abs_of_nonneg (mul_nonneg hdpos ht'τ0)]
+      exact hdrift
+    have heq : φ - Int.fract (-(((w6 - w1 : ℤ) : ℝ)) * τ) - ((m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w6 - w1 : ℤ) : ℝ)) * τ⌋ : ℤ) : ℝ)
+        = ((w6 : ℝ) * t' - m) - (((w6 - w1 : ℤ)) : ℝ) * (t' - τ) := by
+      rw [hfr]
+      push_cast
+      linear_combination -hw1t'
+    have htri : |φ - Int.fract (-(((w6 - w1 : ℤ) : ℝ)) * τ) - ((m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w6 - w1 : ℤ) : ℝ)) * τ⌋ : ℤ) : ℝ)|
+        ≤ |(w6 : ℝ) * t' - m| + |(((w6 - w1 : ℤ)) : ℝ) * (t' - τ)| := by
+      rw [heq, sub_eq_add_neg]
+      calc |((w6 : ℝ) * t' - m) + -((((w6 - w1 : ℤ)) : ℝ) * (t' - τ))|
+          ≤ |(w6 : ℝ) * t' - m| + |(-((((w6 - w1 : ℤ)) : ℝ) * (t' - τ)))| := abs_add_le _ _
+        _ = |(w6 : ℝ) * t' - m| + |(((w6 - w1 : ℤ)) : ℝ) * (t' - τ)| := by rw [abs_neg]
+    linarith [hpt, htri, habs_drift]
+  · rw [hu]
+    have hfl := Int.floor_add_fract (-(((w7 - w1 : ℤ) : ℝ)) * τ)
+    have hfr : Int.fract (-(((w7 - w1 : ℤ) : ℝ)) * τ) = -(((w7 - w1 : ℤ) : ℝ)) * τ - (⌊-(((w7 - w1 : ℤ) : ℝ)) * τ⌋ : ℝ) := by linarith
+    have hpt := hφ (Int.fract (-(((w7 - w1 : ℤ) : ℝ)) * τ)) (by rw [hP]; simp) (m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w7 - w1 : ℤ) : ℝ)) * τ⌋)
+    have hdposZ : (0 : ℤ) ≤ w7 - w1 := by linarith
+    have hdpos : (0 : ℝ) ≤ ((w7 - w1 : ℤ) : ℝ) := by exact_mod_cast hdposZ
+    have hj7Z : (w7 - w1 : ℤ) ≤ w7 - w1 := by linarith
+    have hj7 : (((w7 - w1 : ℤ)) : ℝ) ≤ ((w7 - w1 : ℤ) : ℝ) := by exact_mod_cast hj7Z
+    have hw7w1 : ((w7 - w1 : ℤ) : ℝ) = (w7 : ℝ) - (w1 : ℝ) := by push_cast; ring
+    have hdrift : (((w7 - w1 : ℤ)) : ℝ) * (t' - τ) ≤ 1 / 616 := by
+      have hA := mul_le_mul_of_nonneg_right hj7 ht'τ0
+      have hB := mul_le_mul_of_nonneg_right hcluR ht'τ0
+      rw [hw7w1] at hA
+      nlinarith [ht'τ2]
+    have habs_drift : |(((w7 - w1 : ℤ)) : ℝ) * (t' - τ)| ≤ 1 / 616 := by
+      rw [abs_of_nonneg (mul_nonneg hdpos ht'τ0)]
+      exact hdrift
+    have heq : φ - Int.fract (-(((w7 - w1 : ℤ) : ℝ)) * τ) - ((m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w7 - w1 : ℤ) : ℝ)) * τ⌋ : ℤ) : ℝ)
+        = ((w7 : ℝ) * t' - m) - (((w7 - w1 : ℤ)) : ℝ) * (t' - τ) := by
+      rw [hfr]
+      push_cast
+      linear_combination -hw1t'
+    have htri : |φ - Int.fract (-(((w7 - w1 : ℤ) : ℝ)) * τ) - ((m - (⌊(w1 : ℝ) * τ⌋ + 1) + ⌊-(((w7 - w1 : ℤ) : ℝ)) * τ⌋ : ℤ) : ℝ)|
+        ≤ |(w7 : ℝ) * t' - m| + |(((w7 - w1 : ℤ)) : ℝ) * (t' - τ)| := by
+      rw [heq, sub_eq_add_neg]
+      calc |((w7 : ℝ) * t' - m) + -((((w7 - w1 : ℤ)) : ℝ) * (t' - τ))|
+          ≤ |(w7 : ℝ) * t' - m| + |(-((((w7 - w1 : ℤ)) : ℝ) * (t' - τ)))| := abs_add_le _ _
+        _ = |(w7 : ℝ) * t' - m| + |(((w7 - w1 : ℤ)) : ℝ) * (t' - τ)| := by rw [abs_neg]
+    linarith [hpt, htri, habs_drift]
 
 end SevenGap
 end LonelyRunner
