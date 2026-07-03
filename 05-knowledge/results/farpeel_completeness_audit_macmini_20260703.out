@@ -1,0 +1,15 @@
+FAR-PEEL COMPLETENESS AUDIT: peel largest far runner; does base good region survive?
+================================================================================================
+                      family  covering  #far>22  base good  FULL good  peel OK?
+           tight {1..12,182}      True        1    0.03410   0.023897      True
+       dilated AP x2 {2..26}      True        2    0.03409   0.000000     False
+     dilated AP x3 (non-cov)     False        6    0.03409   0.000000     False
+       aligned blocker ~1000      True        8    0.15441   0.128383      True
+      aligned blocker ~30000    (skip)
+            GW-like doubling     False        5    0.27825   0.251490      True
+           random covering 1      True       13    0.14472   0.124850      True
+           random covering 2      True       13    0.16430   0.141507      True
+
+=> if FULL good > 0 for every COVERING family: the single-step far-peel (base LRC(13) floor THM-609
+   minus the largest far comb) closes them -- opus's CoveringFarLonely 22 route is complete on these.
+   (non-covering families are lonely at t=1/q, q<=14, separately -- not the peel's job.)

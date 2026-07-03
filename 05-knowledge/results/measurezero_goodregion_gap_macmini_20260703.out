@@ -1,0 +1,16 @@
+Searching for a gcd=1 COVERING far-entry family with MEASURE-ZERO good region (M ~ 1/14).
+========================================================================================
+1/14 = 0.071429; 14/183 = 0.076503 (tight covering-min, positive good region)
+----------------------------------------------------------------------------------------
+         {2..26}=2*{1..13}: gcd=2, covering=True, far=2, M=0.070769, goodlen=0.000000
+         {3..39}=3*{1..13}: gcd=3, covering=False, far=6, M=0.070769, goodlen=0.000000
+     {1..12,182} tight g=1: gcd=1, covering=True, far=1, M=0.076484, goodlen=0.023905
+----------------------------------------------------------------------------------------
+tested 318 gcd=1 covering far-entry families
+SMALLEST good-region length found: 0.0239067  (family [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182], M=0.076484)
+# with goodlen < 1e-5 (measure-zero): 0
+
+=> if smallest goodlen > 0 (no measure-zero): gcd=1 covering far families ALL have positive good
+   region => THM-609 + far-peel reaches them; the measure-zero gap is ONLY gcd>1 dilations,
+   removed by WLOG gcd=1 (dilation invariance). opus's CoveringFarLonely NEEDS the gcd=1 hypothesis
+   (or a dilation-reduction lemma) to be provable by the positive-length route.
