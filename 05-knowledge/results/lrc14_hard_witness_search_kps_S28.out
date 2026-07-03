@@ -1,0 +1,7 @@
+instance / covering? / lonely t found (den) / structure
+  {1,2, 23..29} + cover        cov=True  t=5/22  (2*center=46, q/2=11)
+  {1, 100..106} + cover        cov=False  t=1/9  (2*center=202, q/2=4)
+  {2, 100..106} + cover        cov=False  t=1/12  (2*center=202, q/2=6)
+  {1, 500..506} + cover        cov=True  t=4/19  (2*center=1002, q/2=10)
+  {1,2,3, 200..206}            cov=False  t=1/9  (2*center=400, q/2=4)
+  {1, 50..56} + cover          cov=False  t=1/12  (2*center=102, q/2=6)

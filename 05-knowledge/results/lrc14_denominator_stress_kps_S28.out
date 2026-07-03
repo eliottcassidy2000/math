@@ -1,0 +1,4 @@
+tested 264 adversarial covering-compressed instances, 0 fails
+MAX minimal lonely denominator = 26
+worst: speeds=[1, 2, 4, 13, 14, 22, 480, 481, 482, 483, 484, 485, 486]  t=5/26
+min-denominator distribution (top): {16: 1, 17: 112, 19: 60, 21: 5, 22: 5, 23: 1, 26: 13, 27: 2, 32: 2, 34: 2, 35: 1}

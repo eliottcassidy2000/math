@@ -68,5 +68,28 @@ theorem spread13_lonely {ι : Type*} [Nonempty ι] (v : ι → ℤ) (a b : ℤ) 
           have h114 : (1 : ℝ) - 13 / 14 = 1 / 14 := by norm_num
           linarith [htri]
 
+/-- **THE RATIONAL-WITNESS SIEVE**: at `t = p/q` (`q > 0`), the family is lonely iff
+every `v i · p` stays integer-distance `≥ q/14` from every multiple of `q`.  This is
+the general denominator sieve — the covering reduction (`t = 1/q` for a `q` dividing no
+speed) is the special case `p = 1`.  Empirically (kps-S28,
+`lrc14_denominator_bound/stress`) EVERY hard LRC(14) instance is lonely at some `p/q`
+with `q ≤ 35`, so LRC(14) reduces to a finite denominator search — the route the known
+`n ≤ 13` computational proofs take. -/
+theorem lonely14_of_ratio {ι : Type*} (v : ι → ℤ) (p q : ℤ) (hq : 0 < q)
+    (hres : ∀ i, ∀ k : ℤ, q ≤ 14 * |v i * p - k * q|) :
+    Lonely 14 v ((p : ℝ) / q) := by
+  have hqR : (0 : ℝ) < (q : ℝ) := by exact_mod_cast hq
+  intro i m
+  have he : (v i : ℝ) * ((p : ℝ) / q) - m = ((v i * p - m * q : ℤ) : ℝ) / q := by
+    push_cast; field_simp
+  rw [he, abs_div, abs_of_pos hqR, le_div_iff₀ hqR]
+  have hrR : (q : ℝ) ≤ 14 * |((v i * p - m * q : ℤ) : ℝ)| := by
+    have h := hres i m
+    rw [← Int.cast_abs]
+    exact_mod_cast h
+  have h14 : (1 : ℝ) / (14 : ℕ) = 1 / 14 := by norm_num
+  rw [h14]
+  linarith [hrR]
+
 end LRC14
 end LonelyRunner
