@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-02-S20 -- THE PAIR DODGE + BLOCK CHAIN (near-equal PAIRS closed, kernel-pure; the block-chain composition; residual = 3+-blocks) (HYP-3977)
+
+Prompt (owner): long session finishing the near-equal-block regime; push/pull frequently.
+
+THE MATHEMATICS (design decisions of record):
+ - The general near-equal block resists interval arguments for a REASON (it is the coordinated-growth core); the session found the exact boundary of elementary methods: a UNION/CANDIDATE analysis closes blocks of size <= 4 in principle (union bound: good >= L(8-c)/7 - (c-1)/(7 w1), positive iff c <= 4), but GRID RESONANCES (w'/w = 8/3 etc.) break naive candidate grids at c = 4; PAIRS have a bulletproof 3-candidate dodge; triples likely need the sixths grid (recorded, next).
+ - **THE PAIR DODGE** (pair_window_step, KERNEL-PURE): inside [a, a+L] with wL >= 13/7, a pair w <= w' < 3w has a common sub-window of length 1/(14w') keeping BOTH margins >= 1/14. Mechanism: three quarter-candidates tau_k = (j + k/4)/w; the w'-positions are spaced Delta = w'/(4w) in [1/4, 3/4); TWO bad candidates transfer their spacing to |Delta - M| < 2/7 (near_int_of_two_bad), and three bad give also |2Delta - M2| < 2/7 -- the case split M = 0 (Delta < 2/7 -> 2Delta in [1/2, 4/7) -> M2 in empty) / M = 1 (Delta > 5/7 -> 2Delta in (10/7, 3/2) -> M2 in empty) is a pure omega/linarith contradiction. The surviving candidate has ||w' tau|| >= 1/7; the 1/(14w') window spends w'-margin EXACTLY (1/7 - 1/14 = 1/14) and w-margin comfortably (1/4 - 1/14).
+ - **THE BLOCK CHAIN** (BLevel singles/pairs, BChainOK, block_chain): the S19 nesting induction generalized to typed levels (single: entry 3/2, output 1/(2w); pair: entry 13/7, output 1/(14w')).
+ - **cite_blockchain_lonely**: the citation composition over block levels (margin EXACT at 1/14 for every k, as in S19).
+
+WHAT THIS CLOSES: every compressed family whose near-equal structure consists of PAIRS separated by chain-able ratios (entry constants per level type) -- with the S18 91-peel and S19 cite-chain as special cases. THE RESIDUAL CORE, now visibly thinner: families with a 3+-near-equal block (three runners pairwise within ratio 3) above every split. The sixths-grid triple dodge (5 candidates, per-partner kills <= 2 -- resonance analysis recorded) is the next stage; 4-blocks sit at the union-bound boundary; 5+ blocks are genuinely the difference-lattice regime (arc/measure route: S14 damped peel + mac-mini JointRateCore).
+
+FILES: LRCPairBlock.lean (new, registered, kernel-pure, 2 rounds); HYP-3977 INDEX; this entry. Root registration used the FULL-LINE anchor per S19 lore. No canon overridden.
+
 ## kind-pasteur-2026-07-02-S19 -- THE CITE-CHAIN THEOREM (spread-7 dilation + nested-window engine + cite-any-k composition, ALL KERNEL-PURE) + the registration prefix-bug fixed (HYP-3976)
 
 Prompt (owner): long session, formalize the entire compressed core, creative techniques.
