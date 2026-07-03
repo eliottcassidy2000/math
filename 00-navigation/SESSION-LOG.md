@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-03-S26 -- THE STAR-SAFE CAPSTONE on the REAL danger sets (LRCStarSafe.lean, kernel-pure, corpus 8628 green): the err-free measure-theoretic close of the seven-wall for c<=7 (HYP-3982)
+
+Prompt (owner): build star_safe_pos on the real danger sets and finish it up.
+
+DELIVERED (LRCStarSafe.lean, registered, all [propext, Classical.choice, Quot.sound]):
+ 1. **star_safe_measure_pos_of_lb** (THE MODULAR CORE): for c<=7 measurable sets each of measure EXACTLY 1/7, whose center A0 meets every other with measure AT LEAST 1/49, the union misses a positive-measure safe set. Uses star_hunter_add_le (klein Bonferroni) + the (48-6c)/49>0 budget on REAL Lebesgue measure. The pair floor is a LOWER bound -> ANY source (commensuration OR a >=1/49 drift floor) plugs in.
+ 2. **star_safe_pos** (commensurate corollary): c<=7 block, 7-divisible nonzero center v0, non-7 nonzero leaves -> safe measure > 0. Singles = 1/7 (volume_danger, EXACT -- the tight bound S25 found missing in the window route); pair floor = 1/49 (seven_commensuration', klein/mac-mini).
+ 3. **exists_star_lonely**: safe measure > 0 => nonempty => a phase x on the circle avoiding every danger.
+ 4. **exists_star_lonely_real** (real-time bridge): => a REAL time t with every runner at integer-distance >= 1/14. Lift x = mk t (QuotientAddGroup.mk_surjective), v.smul(mk t)=mk(v*t) (mk_zsmul), UnitAddCircle.norm_eq + round_le. Err-free 1/14-loneliness -- NO citation, NO window, NO singles-bound loss.
+
+WHY THIS MATTERS (S25 -> S26): the window Hunter ledger needed a TIGHT singles bound the region-length route lacked (crude L/7+3/(7w) only discharged w1>22638). The star route works on the FULL CIRCLE where the singles measure is EXACTLY 1/7 -- no boundary, no crude bound. So it supplies both the tight singles AND the pair floor at once, exactly as S25 identified, and it closes the small-w block that the drift floor could not (on the full circle).
+
+HONEST SCOPE: star caps at c<=7 (for c=8, (6c+1)/49 = 49/49 = 1, safe measure >= 0 not >0). The LRC(14) hge7 leg has 13 ACTIVE runners (7 far + 6 near); star handles a <=7 block on the full circle but the 6 others still need the citation+window to reduce to <=7 -- the star route does NOT by itself close the 14-runner problem. It IS an err-free, axiom-light (no LRCUpTo13) proof of 1/14-loneliness for any <=7 block with a 7-divisor -- a clean independent capstone and the tight-singles engine.
+
+FILES: LRCStarSafe.lean (new, registered); HYP-3982 INDEX; reflection the-full-circle-is-exact.md; this entry. 4 checkpoint pushes. No canon overridden.
+
 ## mac-mini-2026-07-03-S20 -- CORRECTED my S19 corpus alarm (corpus BUILDS GREEN) + WIRED the trapezoid area to klein's real trap + mapped the honest c=7 trichotomy remaining surface
 
 Prompt (owner): pull from other agents; long session to get the LRC(14) formalization ALL done and perfect.
