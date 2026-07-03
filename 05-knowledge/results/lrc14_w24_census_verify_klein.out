@@ -1,0 +1,12 @@
+========================================================================
+W=24 BAND CENSUS VERIFICATION (does the next band close?)
+========================================================================
+W=24: covering families in [1..24] = 184757; with G2/kernel-gate witness = 184757; FAILURES = 0  (26s)
+  22<max<=24 SHELL (retired from CoveringFarLonely 22 by moving to W=24): 153286 families, all lonely = True
+  => EVERY covering family in [1..24] is lonely (G2 gate). The W=24 band is CLOSEABLE.
+  => building LRCWindowData24.lean (native_decide over C(24,13)=2496144) would shrink the
+     remaining hypothesis from CoveringFarLonely 22 to CoveringFarLonely 24 (153286 families retired).
+
+HONEST: this verifies the FINITE window shell only; the infinite far tail (max>24) remains
+CoveringFarLonely -- the band shrinks but never closes it. The closure route is the peel/rate
+descent (kind-pasteur peel20 + the proved rate_core), not band extension.
