@@ -156,6 +156,96 @@ theorem slack_of_lonely13 {ι : Type*} (w : ι → ℤ) (t0 : ℝ) (h : Lonely 1
   have hcast : (1 : ℝ) / 14 + 1 / 182 = (1 : ℝ) / (13 : ℕ) := by norm_num
   rw [hcast]; exact hi
 
+/-- **THM-608, SLACK-PRESERVING form** (the tower rung). Same as `scale_separation` but on the
+HALF-window and placing the phase at `1/14 + δ/2`: the output family `R ∪ C` is lonely *with slack
+`δ/2`* — so the peel can be ITERATED (each rung halves the slack). Stronger hypotheses: (i') `δN ≥ V`
+(the full sweep over the half-window) and (ii') `D·(t₀+δ/(2V)) ≤ 6/7 − δ` (room for slack on the cluster
+side). This is the rung of the renormalization tower: peel `k` clusters ⟹ slack `δ₀/2^k > 0`. -/
+theorem scale_separation_slack
+    (t0 δ V : ℝ) (hδ : 0 < δ) (hV : 0 < V)
+    (R : List ℤ)
+    (hRV : ∀ r ∈ R, |(r : ℝ)| ≤ V)
+    (hRsafe : ∀ r ∈ R, ∀ m : ℤ, (1 : ℝ) / 14 + δ ≤ |(r : ℝ) * t0 - m|)
+    (N : ℤ) (hN : 0 < N) (D : ℝ) (hD : 0 ≤ D)
+    (C : List ℤ)
+    (hClo : ∀ c ∈ C, (N : ℝ) ≤ (c : ℝ))
+    (hChi : ∀ c ∈ C, (c : ℝ) ≤ (N : ℝ) + D)
+    (hi : V ≤ δ * (N : ℝ))
+    (hii : D * (t0 + δ / (2 * V)) ≤ 6 / 7 - δ)
+    (hwin : δ / (2 * V) ≤ t0) :
+    ∃ t : ℝ,
+      (∀ r ∈ R, ∀ m : ℤ, (1 : ℝ) / 14 + δ / 2 ≤ |(r : ℝ) * t - m|) ∧
+      (∀ c ∈ C, ∀ m : ℤ, (1 : ℝ) / 14 + δ / 2 ≤ |(c : ℝ) * t - m|) := by
+  set ρ : ℝ := δ / (2 * V) with hρdef
+  set y : ℝ := 1 / 14 + δ / 2 with hydef
+  have hρ0 : 0 < ρ := by rw [hρdef]; positivity
+  have hVρ : V * ρ = δ / 2 := by rw [hρdef]; field_simp
+  set A : ℝ := (N : ℝ) with hAdef
+  have hA0 : 0 < A := by rw [hAdef]; exact_mod_cast hN
+  have hs0 : (0 : ℝ) ≤ t0 - ρ := by linarith [hwin]
+  have htmax0 : (0 : ℝ) ≤ t0 + ρ := by linarith [hs0, hρ0]
+  -- δ ≤ 6/7 (from (ii') and D·t_max ≥ 0), hence y = 1/14 + δ/2 ∈ [0,1)
+  have hDtmax0 : 0 ≤ D * (t0 + ρ) := mul_nonneg hD htmax0
+  have hδ67 : δ ≤ 6 / 7 := by nlinarith [hii, hDtmax0]
+  have hy0 : 0 ≤ y := by rw [hydef]; linarith
+  have hy1 : y < 1 := by rw [hydef]; linarith
+  -- (i') ⟹ the half-window's N-image has length ≥ 1
+  have hlen : (1 : ℝ) ≤ A * (2 * ρ) := by
+    have hstep : A * (2 * ρ) = δ * A / V := by rw [hρdef]; field_simp
+    rw [hstep, le_div_iff₀ hV]
+    have hAN : δ * A = δ * (N : ℝ) := by rw [hAdef]
+    linarith [hi, hAN]
+  set k : ℤ := ⌈A * (t0 - ρ) - y⌉ with hkdef
+  have hk_lo : A * (t0 - ρ) - y ≤ (k : ℝ) := Int.le_ceil _
+  have hk_hi : (k : ℝ) < A * (t0 - ρ) - y + 1 := Int.ceil_lt_add_one _
+  set t : ℝ := ((k : ℝ) + y) / A with htdef
+  have hAt : A * t = (k : ℝ) + y := by rw [htdef, mul_div_cancel₀ _ (ne_of_gt hA0)]
+  have ht_ge : t0 - ρ ≤ t := by rw [htdef, le_div_iff₀ hA0]; nlinarith [hk_lo]
+  have ht_le : t ≤ t0 + ρ := by
+    rw [htdef, div_le_iff₀ hA0]
+    have hexp : (t0 + ρ) * A = A * (t0 - ρ) + A * (2 * ρ) := by ring
+    nlinarith [hk_hi, hlen, hexp]
+  have ht0 : |t - t0| ≤ ρ := by rw [abs_le]; constructor <;> linarith [ht_ge, ht_le]
+  have ht_nonneg : 0 ≤ t := by linarith [ht_ge, hs0]
+  refine ⟨t, ?_, ?_⟩
+  · intro r hr m
+    have hrV := hRV r hr
+    have hsafe := hRsafe r hr m
+    have htri : |(r : ℝ) * t0 - m| - |(r : ℝ) * t0 - (r : ℝ) * t| ≤ |(r : ℝ) * t - m| := by
+      have h := abs_sub_abs_le_abs_sub ((r : ℝ) * t0 - (m : ℝ)) ((r : ℝ) * t - (m : ℝ))
+      have he : |((r : ℝ) * t0 - (m : ℝ)) - ((r : ℝ) * t - (m : ℝ))|
+          = |(r : ℝ) * t0 - (r : ℝ) * t| := by congr 1; ring
+      rw [he] at h; linarith [h]
+    have hdist : |(r : ℝ) * t0 - (r : ℝ) * t| ≤ δ / 2 := by
+      rw [show (r : ℝ) * t0 - (r : ℝ) * t = (r : ℝ) * (t0 - t) by ring, abs_mul]
+      have h1 : |(r : ℝ)| * |t0 - t| ≤ V * ρ := by
+        apply mul_le_mul hrV _ (abs_nonneg _) hV.le
+        rw [abs_sub_comm]; exact ht0
+      rw [hVρ] at h1; exact h1
+    linarith [htri, hsafe, hdist]
+  · intro c hc
+    have hclo := hClo c hc
+    have hchi := hChi c hc
+    have hcN : (0 : ℝ) ≤ (c : ℝ) - A := by rw [hAdef]; linarith [hclo]
+    have hcND : (c : ℝ) - A ≤ D := by rw [hAdef]; linarith [hchi]
+    have hoff_nonneg : 0 ≤ ((c : ℝ) - A) * t := mul_nonneg hcN ht_nonneg
+    have hoff_ub : ((c : ℝ) - A) * t ≤ D * (t0 + ρ) := by
+      calc ((c : ℝ) - A) * t ≤ D * t := mul_le_mul_of_nonneg_right hcND ht_nonneg
+        _ ≤ D * (t0 + ρ) := mul_le_mul_of_nonneg_left ht_le hD
+    have hct : (c : ℝ) * t = (y + ((c : ℝ) - A) * t) + (k : ℝ) := by
+      have hsplit : (c : ℝ) * t = A * t + ((c : ℝ) - A) * t := by ring
+      rw [hsplit, hAt]; ring
+    have hfr : Int.fract ((c : ℝ) * t) = y + ((c : ℝ) - A) * t := by
+      rw [hct, Int.fract_add_intCast]
+      apply Int.fract_eq_self.mpr
+      constructor
+      · rw [hydef]; linarith [hoff_nonneg]
+      · rw [hydef]; linarith [hoff_ub, hii]
+    rw [far_iff_fract, hfr]
+    constructor
+    · rw [hydef]; linarith [hoff_nonneg]
+    · rw [hydef]; linarith [hoff_ub, hii]
+
 /-- Loneliness is invariant under an integer shift of `t` (integer speeds). -/
 theorem lonely_add_int {ι : Type*} (n : ℕ) (v : ι → ℤ) (t : ℝ) (kk : ℤ) :
     Lonely n v (t + (kk : ℝ)) ↔ Lonely n v t := by
@@ -235,6 +325,16 @@ theorem lonely14_of_citation_cluster
     rcases hcover i with ⟨j, hj⟩ | hc
     · exact Or.inl (List.mem_ofFn.mpr ⟨j, hj⟩)
     · exact Or.inr hc
+
+/-- **(c) Tower depth ⇒ positive slack.** Iterating `scale_separation_slack` `k` times — each rung peels
+one fast near-equal cluster off the running family and HALVES the slack (`δ → δ/2`) — leaves slack
+`δ₀ / 2^k`, positive for every finite depth `k`. So the renormalization tower keeps the base slack alive
+all the way to the top: as long as the peel depth is finite, the whole large-magnitude family is
+`Lonely 14`. The tower peels `~log(max-speed)` clusters — the all-scales discrepancy cost
+(HYP-4041/mac-mini, HYP-4040 "no uniform band", HYP-4013/opus (R2), arXiv:2607.00876). The RUNG is landed
+(`scale_separation_slack`, kernel-pure); the remaining open input is the STRUCTURAL DECOMPOSITION
+`family = bounded base + nested fast near-equal clusters` (mac-mini/kps's renormalization-depth lane). -/
+theorem tower_slack_pos (δ0 : ℝ) (hδ0 : 0 < δ0) (k : ℕ) : 0 < δ0 / 2 ^ k := by positivity
 
 end ScaleSeparation
 end LonelyRunner
