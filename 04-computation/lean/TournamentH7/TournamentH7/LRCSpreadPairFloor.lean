@@ -96,5 +96,147 @@ theorem clipLen_tooth_tooth (w₁ w₂ : ℤ) (hw₁ : 0 < w₁) (hw₁₂ : w�
       · exact (min_le_right _ _).trans (min_le_right _ _)
       · exact min_le_left _ _
 
+/-! ## Stage 2: membership + the per-tooth lower bound -/
+
+/-- Membership: `tooth w m ∈ teeth w a b` for `m` in the enumeration range. -/
+theorem tooth_mem_teeth (w : ℤ) (a b : ℝ) (m : ℤ)
+    (hlo : ⌈(w : ℝ) * a⌉ - 1 ≤ m) (hhi : m ≤ ⌊(w : ℝ) * b⌋ + 1) :
+    tooth w m ∈ teeth w a b := by
+  unfold teeth
+  rw [List.mem_map]
+  refine ⟨(m - (⌈(w : ℝ) * a⌉ - 1)).toNat, ?_, ?_⟩
+  · rw [List.mem_range]
+    omega
+  · congr 1
+    omega
+
+/-- The window-clip of an interior interval is itself. -/
+theorem rclip_window_interior (a b : ℝ) (q : ℝ × ℝ) (h₁ : a ≤ q.1) (h₂ : q.2 ≤ b) :
+    rclip (a, b) q = q := by
+  unfold rclip
+  simp only
+  rw [max_eq_right h₁, min_eq_right h₂]
+
+/-- **Stage-2 plumbing**: the first-credit term of one interior `w₂`-tooth dominates
+the trapezoid at any partner `n` inside the `w₁` enumeration range. -/
+theorem per_tooth_ge_trap (w₁ w₂ : ℤ) (hw₁ : 0 < w₁) (h₁₂ : w₁ ≤ w₂)
+    (a b : ℝ) (m n : ℤ)
+    (hint₁ : a ≤ (tooth w₂ m).1) (hint₂ : (tooth w₂ m).2 ≤ b)
+    (hnlo : ⌈(w₁ : ℝ) * a⌉ - 1 ≤ n) (hnhi : n ≤ ⌊(w₁ : ℝ) * b⌋ + 1) :
+    trap (w₁ : ℝ) (w₂ : ℝ) (((n * w₂ - m * w₁ : ℤ) : ℝ))
+      ≤ rlength (rinter (rinter [(a, b)] [tooth w₂ m]) (teeth w₁ a b)) := by
+  have hstep₁ : rinter [(a, b)] [tooth w₂ m] = [tooth w₂ m] := by
+    unfold rinter
+    simp only [List.flatMap_cons, List.map_cons, List.map_nil, List.flatMap_nil,
+      List.append_nil]
+    rw [rclip_window_interior a b _ hint₁ hint₂]
+  rw [hstep₁]
+  have hstep₂ : rinter [tooth w₂ m] (teeth w₁ a b)
+      = (teeth w₁ a b).map (fun q => rclip (tooth w₂ m) q) := by
+    unfold rinter
+    simp
+  rw [hstep₂]
+  unfold rlength
+  rw [List.map_map]
+  have hmem : tooth w₁ n ∈ teeth w₁ a b := tooth_mem_teeth w₁ a b n hnlo hnhi
+  have hmem' : ((fun p : ℝ × ℝ => max 0 (p.2 - p.1)) ∘ fun q => rclip (tooth w₂ m) q)
+        (tooth w₁ n)
+      ∈ (teeth w₁ a b).map
+        ((fun p : ℝ × ℝ => max 0 (p.2 - p.1)) ∘ fun q => rclip (tooth w₂ m) q) :=
+    List.mem_map_of_mem hmem
+  have hval : ((fun p : ℝ × ℝ => max 0 (p.2 - p.1)) ∘ fun q => rclip (tooth w₂ m) q)
+        (tooth w₁ n)
+      = trap (w₁ : ℝ) (w₂ : ℝ) (((n * w₂ - m * w₁ : ℤ) : ℝ)) := by
+    rw [← clipLen_tooth_tooth w₁ w₂ hw₁ h₁₂ n m]
+    unfold clipLen rclip
+    simp only [Function.comp]
+    rw [min_comm, max_comm]
+  rw [← hval]
+  apply List.single_le_sum _ _ hmem'
+  intro x hx
+  rw [List.mem_map] at hx
+  obtain ⟨q, -, rfl⟩ := hx
+  exact le_max_left _ _
+
+/-! ## Stage 3: the integer residue walk -/
+
+/-- The walk formula: the remainder of `(m₀+j)·w₁` mod `w₂` is the start remainder
+shifted down by `j·D`, mod `w₂`.  Pure `emod` algebra, no induction. -/
+theorem walk_formula (w₁ w₂ D : ℤ) (hD : w₂ = w₁ + D) (m₀ j : ℤ) :
+    ((m₀ + j) * w₁) % w₂ = ((m₀ * w₁) % w₂ - j * D) % w₂ := by
+  have h1 : (m₀ + j) * w₁ = m₀ * w₁ - j * D + j * w₂ := by rw [hD]; ring
+  rw [h1, Int.add_mul_emod_self]
+  conv_rhs => rw [Int.sub_emod, Int.emod_emod_of_dvd _ dvd_rfl, ← Int.sub_emod]
+
+/-- **One wrap of the walk**: from any start `m₀` the descending remainder enters
+`[0, D)` within `w₂/D + 1` teeth, and the following `k`-run (while `k·D ≤ T`) gives
+consecutive teeth whose lattice residue against SOME partner `n` is `≤ T` in size. -/
+theorem walk_one_wrap (w₁ w₂ D T : ℤ) (hw₁ : 0 < w₁) (hD : w₂ = w₁ + D)
+    (hDpos : 0 < D) (hDT : D ≤ T) (hTw : 2 * T ≤ w₁) (m₀ : ℤ) :
+    ∃ mstar : ℤ, m₀ ≤ mstar ∧ mstar ≤ m₀ + w₂ / D ∧
+      ∀ k : ℤ, 0 ≤ k → k * D ≤ T →
+        ∃ n : ℤ, |n * w₂ - (mstar + k) * w₁| ≤ T := by
+  have hw₂ : 0 < w₂ := by omega
+  set v₀ : ℤ := (m₀ * w₁) % w₂ with hv₀
+  have hv₀nn : 0 ≤ v₀ := Int.emod_nonneg _ (by omega)
+  have hv₀lt : v₀ < w₂ := Int.emod_lt_of_pos _ hw₂
+  set j₀ : ℤ := v₀ / D with hj₀
+  have hj₀nn : 0 ≤ j₀ := Int.ediv_nonneg hv₀nn (le_of_lt hDpos)
+  have hj₀le : j₀ ≤ w₂ / D := Int.ediv_le_ediv hDpos (le_of_lt hv₀lt)
+  refine ⟨m₀ + j₀, by omega, by omega, ?_⟩
+  -- the remainder at mstar is v₀ % D ∈ [0, D)
+  set vs : ℤ := v₀ % D with hvs
+  have hvsnn : 0 ≤ vs := Int.emod_nonneg _ (by omega)
+  have hvslt : vs < D := Int.emod_lt_of_pos _ hDpos
+  have hstar : ((m₀ + j₀) * w₁) % w₂ = vs := by
+    rw [walk_formula w₁ w₂ D hD m₀ j₀, ← hv₀]
+    have : v₀ - j₀ * D = vs := by
+      rw [hvs, hj₀, Int.emod_def]; ring
+    rw [this]
+    exact Int.emod_eq_of_lt hvsnn (by omega)
+  intro k hk hkT
+  rcases eq_or_lt_of_le hk with hk0 | hkpos
+  · -- k = 0: bottom hit, r = -vs, partner n = the Euclidean quotient
+    refine ⟨((m₀ + j₀) * w₁) / w₂, ?_⟩
+    have hdiv : ((m₀ + j₀) * w₁) / w₂ * w₂ = (m₀ + j₀) * w₁ - vs := by
+      rw [← hstar]
+      have := Int.emod_def ((m₀ + j₀) * w₁) w₂
+      linarith [this]
+    rw [← hk0]
+    have : ((m₀ + j₀) * w₁) / w₂ * w₂ - (m₀ + j₀ + 0) * w₁ = -vs := by
+      rw [hdiv]; ring
+    rw [this, abs_neg, abs_of_nonneg hvsnn]
+    omega
+  · -- k ≥ 1: top hit, r = k·D - vs ∈ (0, T], partner = quotient + 1
+    have hwk : ((m₀ + j₀ + k) * w₁) % w₂ = vs - k * D + w₂ := by
+      have h1 : ((m₀ + j₀ + k) * w₁) % w₂ = (vs - k * D) % w₂ := by
+        have := walk_formula w₁ w₂ D hD (m₀ + j₀) k
+        rw [hstar] at this
+        convert this using 3
+        ring
+      rw [h1]
+      have h2 : (vs - k * D) % w₂ = (vs - k * D + w₂) % w₂ := (Int.add_emod_self).symm
+      rw [h2]
+      apply Int.emod_eq_of_lt
+      · omega
+      · omega
+    refine ⟨((m₀ + j₀ + k) * w₁) / w₂ + 1, ?_⟩
+    have hdiv : ((m₀ + j₀ + k) * w₁) / w₂ * w₂
+        = (m₀ + j₀ + k) * w₁ - (vs - k * D + w₂) := by
+      rw [← hwk]
+      have := Int.emod_def ((m₀ + j₀ + k) * w₁) w₂
+      linarith [this]
+    have hr : (((m₀ + j₀ + k) * w₁) / w₂ + 1) * w₂ - (m₀ + j₀ + k) * w₁
+        = k * D - vs := by
+      have expand : (((m₀ + j₀ + k) * w₁) / w₂ + 1) * w₂
+          = ((m₀ + j₀ + k) * w₁) / w₂ * w₂ + w₂ := by ring
+      rw [expand, hdiv]; ring
+    have hkD : D ≤ k * D := by
+      have hk1 : (1 : ℤ) ≤ k := by omega
+      calc D = 1 * D := (one_mul D).symm
+        _ ≤ k * D := mul_le_mul_of_nonneg_right hk1 hDpos.le
+    rw [hr, abs_of_nonneg (by omega)]
+    omega
+
 end SpreadPairFloor
 end LonelyRunner

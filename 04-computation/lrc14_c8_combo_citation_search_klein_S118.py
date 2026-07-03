@@ -71,7 +71,7 @@ def survival(ds, A=2, Cmax=None, ngrid=20000, refine=6):
 print("c=8 clustered search: d-vectors (0,d2..d8), coeff height A=2")
 print(f"{'d-vector':>34} {'#combos':>8} {'survival':>10} {'verdict':>10}")
 survivors = []
-DMAX = 12
+DMAX = 22
 count = 0
 import sys
 for d_rest in itertools.combinations(range(1, DMAX + 1), 7):
