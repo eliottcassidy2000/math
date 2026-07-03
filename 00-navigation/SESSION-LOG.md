@@ -1,3 +1,26 @@
+## klein-2026-07-02-S116 -- THE PATH-HUNTER (BONFERRONI) MEASURE INEQUALITY: the combinatorial heart of the 7-wall crossing, formalized sorry-free (HYP-4021).
+
+Prompt: work the remaining crux (the >=7-far compressed families / the 7-wall).
+
+STATE: the crux (OPEN-Q-108, kps-S22 design) is the 7-wall -- levels of >=7 runners where the union bound dies (each danger arc has measure 2*(1/14)=1/7, so seven tile the circle). kps-S22 (LRCFatBlockChain) DESIGNED the crossing: the path-Bonferroni (Hunter) ledger good >= |I|*(1 - c/7 + (c-1)/49) - fees, POSITIVE at c=7 (48-6*7=6>0), needing the pair-floor |I cap D_i cap D_{i+1}| >= |I|/49 - err (mac-mini's JointRateCore per-cell obligation, actively being wired to the concrete drifting arcs).
+
+DELIVERED (LRCHunterLedger.lean, sorry-free, registered, corpus green 8475 jobs; #print axioms path_hunter_add_le = [propext, Classical.choice, Quot.sound]): the general path-Hunter inequality, which was ABSENT from the repo (LRCBonferroniMeasure had only the PAIRWISE Bonferroni mu(A cap B)>=mu A+mu B-1):
+  path_hunter_add_le (mu : Measure alpha) (A : N -> Set) (measurable): mu(union_{i<n} A_i) + sum_{i in Ico 1 n} mu(A_i cap A_{i-1}) <= sum_{i<n} mu(A_i).
+PROOF: pure disjointification induction, ADDITIVE form (no ENNReal subtraction) -- measure_union_add_inter (mu(S cup T)+mu(S cap T)=mu S+mu T) + monotonicity (A_{i-1} subset union_{j<i}, so the path term A_i cap A_{i-1} is dominated by the running-intersection (union)cap A_i, converted exactly). Only each A_i measurable.
+Plus ledger_coeff: 1 - c/7 + (c-1)/49 = (48-6c)/49; ledger_coeff_pos: >0 for c<=7 -- the exact 7-wall arithmetic.
+
+WHY IT CROSSES THE WALL: union bound gives good >= |I|(1 - c/7) - fees <= 0 for c>=7; Hunter's pair credit gives good >= |I| - [sum singles - sum_path pairs] >= |I|(1 - c/7 + (c-1)/49) - fees = |I|(48-6c)/49 - fees > 0 for c<=7. So near-equal blocks of up to 7 runners are lonely -- past the wall.
+
+HONEST: this formalizes the COMBINATORIAL / measure-theoretic heart (the general Hunter inequality + the ledger arithmetic) -- the reusable input kps's ledger consumes. It does NOT close the crux alone: the ANALYTIC pair-floor (near-equal runners' danger overlap >= |I|/49 - err) is mac-mini's active JointRateCore per-cell work, and wiring {Hunter + singles + pair-floor} into the concrete goodRegion/teeth framework is the remaining assembly. Clean division of labor: I did the Hunter combinatorics, mac-mini does the analytic pair-floor, kps designed the ledger.
+
+PUSHES/PULLS: pulled ~7x; integrated kps-S22 (7-wall design) + mac-mini's joint-rate program. No collision (HYP-4021, LRCHunterLedger.lean, Hunter namespace all distinct).
+
+FILES: 04-computation/lean/TournamentH7/TournamentH7/LRCHunterLedger.lean (+ import in TournamentH7.lean); HYP-4021.
+
+NEXT: (a) mac-mini's pair-floor -> plug into the Hunter ledger -> hge7 (the >=7 leg of my S115 dispatch) -> LRC(14) collapses to {citation}+{census}; (b) wire path_hunter_add_le into the concrete danger-region framework (via LRCEventMeasureBridge) so kps's ledger consumes it directly; (c) the c=8 boundary (48-6*8=0) may need a triple-Bonferroni credit or the scale (large runners => fees->0).
+
+---
+
 ## kind-pasteur-2026-07-02-S22 -- THE WINDOWED BLOCK STEP + THE UNIFIED LEVEL CHAIN (blocks anywhere in a chain, kernel-pure) + THE 7-WALL CROSSING DESIGNED (Hunter/path-Bonferroni, pair-floor interface pinned for JointRateCore) (HYP-3979)
 
 Prompt (owner): finish the 7+-near-equal-block formalization myself, creative methods.

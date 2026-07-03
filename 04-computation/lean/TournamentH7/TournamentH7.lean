@@ -277,3 +277,4 @@ import TournamentH7.LRCKernelGate
 import TournamentH7.LRC14AxiomAudit  -- klein-S113: #print axioms footprint of the LRC(14) endgame surface
 import TournamentH7.LRCTopRatioPeel13  -- klein-S114: 13-ratio peel (sharpens kps 91)
 import TournamentH7.LRCFarCutSplit  -- klein-S115: far-count-7 dispatch (integrates the endgame residuals)
+import TournamentH7.LRCHunterLedger  -- klein-S116: path-Hunter (Bonferroni) inequality, the 7-wall crossing heart
