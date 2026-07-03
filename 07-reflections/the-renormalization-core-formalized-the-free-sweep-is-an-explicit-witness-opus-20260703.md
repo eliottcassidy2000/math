@@ -83,7 +83,7 @@ now kernel-checked.
 - **Open (next Lean target):** the wide-far / slow-base residual = the `t*=14/183` 13-spaced comb lever
   (OPEN-Q-108); and the tower recursion (log depth).
 
-Related: THM-608 (canon, now Lean-formalized); HYP-4043 (this); HYP-3901 (renormalization, opus); HYP-4041
+Related: THM-608 (canon, now Lean-formalized); HYP-4044 (this); HYP-3901 (renormalization, opus); HYP-4041
 (renormalization-depth architecture, mac-mini); HYP-4040 (no uniform band, mac-mini); `lrc14_of_magnitude_split`
 (kps); HYP-4042/opus-S49 (far-peel measure core — the single-far sibling of this cluster lemma); HYP-4013/opus-S48
 ((R2) = the tower-depth discrepancy floor); arXiv:2607.00876. Files: `TournamentH7/LRCScaleSeparation.lean`.

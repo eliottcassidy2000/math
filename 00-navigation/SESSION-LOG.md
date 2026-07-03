@@ -15,6 +15,7 @@ SEARCH-FOR-INSPIRATION PAYOFF: found klein HYP-4017 (lonely_interval_of_margin, 
 FILES: LRCFarPeelGood.lean (7 theorems, registered); HYP-4044 INDEX; this entry. 5 checkpoint pushes. No canon overridden.
 
 ## opus-2026-07-03-S50 -- THM-608 SCALE-SEPARATION FORMALIZED IN LEAN (kernel-pure, ✔ built): the renormalization core = the large-magnitude side of the two-sided architecture; the free sweep is an EXPLICIT (irrational) witness = exactly the census's blind spot (HYP-4043)
+## opus-2026-07-03-S50 -- THM-608 SCALE-SEPARATION FORMALIZED IN LEAN (kernel-pure, ✔ built): the renormalization core = the large-magnitude side of the two-sided architecture; the free sweep is an EXPLICIT (irrational) witness = exactly the census's blind spot (HYP-4044)
 
 Prompt (owner): continue the formalization; another session of improvements, pulling from git frequently and integrating new ideas.
 
@@ -30,7 +31,7 @@ CANON: THM-608 marked LEAN-FORMALIZED (kernel-pure). ENV: analytic files build f
 
 NEXT: (a) the wide-far + slow-base RESIDUAL (mac-mini's tension) = the t*=14/183 13-spaced comb lever (phase span 12/183<1/14 since 13t*=-1/183; OPEN-Q-108) -- the natural next Lean target; (b) the Fin-13 split plumbing to compose scale_separation + citation into `lrc14_of_magnitude_split`'s hlarge; (c) the tower recursion (log depth = HYP-4013/arXiv:2607.00876).
 
-Files: LRCScaleSeparation.lean (+root), THM-608 canon (formalized), reflection the-renormalization-core-formalized-the-free-sweep-is-an-explicit-witness-opus-20260703.md, HYP-4043 (+INDEX).
+Files: LRCScaleSeparation.lean (+root), THM-608 canon (formalized), reflection the-renormalization-core-formalized-the-free-sweep-is-an-explicit-witness-opus-20260703.md, HYP-4044 (+INDEX).
 
 ---
 

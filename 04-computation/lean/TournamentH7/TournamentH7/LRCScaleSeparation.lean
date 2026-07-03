@@ -22,6 +22,7 @@
 -/
 import Mathlib
 import TournamentH7.LonelyRunner
+import TournamentH7.LRC13Citation
 
 namespace LonelyRunner
 namespace ScaleSeparation
@@ -154,6 +155,86 @@ theorem slack_of_lonely13 {ι : Type*} (w : ι → ℤ) (t0 : ℝ) (h : Lonely 1
   have hi := h i m
   have hcast : (1 : ℝ) / 14 + 1 / 182 = (1 : ℝ) / (13 : ℕ) := by norm_num
   rw [hcast]; exact hi
+
+/-- Loneliness is invariant under an integer shift of `t` (integer speeds). -/
+theorem lonely_add_int {ι : Type*} (n : ℕ) (v : ι → ℤ) (t : ℝ) (kk : ℤ) :
+    Lonely n v (t + (kk : ℝ)) ↔ Lonely n v t := by
+  unfold Lonely
+  constructor
+  · intro h i m
+    have hm := h i (m + v i * kk)
+    have he : |(v i : ℝ) * (t + (kk : ℝ)) - ((m + v i * kk : ℤ) : ℝ)|
+        = |(v i : ℝ) * t - (m : ℝ)| := by push_cast; ring_nf
+    rw [he] at hm; exact hm
+  · intro h i m
+    have hm := h i (m - v i * kk)
+    have he : |(v i : ℝ) * (t + (kk : ℝ)) - (m : ℝ)|
+        = |(v i : ℝ) * t - ((m - v i * kk : ℤ) : ℝ)| := by push_cast; ring_nf
+    rw [he]; exact hm
+
+/-- **(b) THE RENORMALIZATION STEP, COMPOSED WITH THE LRC(≤13) CITATION** — discharges the
+fast-near-equal-cluster slice of `lrc14_of_magnitude_split`'s `hlarge`. A family `v` splitting into a
+`≤12`-speed base (closed wholesale by `LRCUpTo13`, giving slack `δ = 1/(m+1) − 1/14 > 0` for free) and a
+fast (i) near-equal (ii) cluster `C ⊆ [N, N+D]` is `Lonely 14`. The base point is shifted into `[1,2)` by
+periodicity so the sweep window sits in `[0,∞)`; hence (ii) is stated with the a-priori bound `t₀' < 2`. -/
+theorem lonely14_of_citation_cluster
+    (cite : LRCUpTo13)
+    {ι : Type*} (v : ι → ℤ)
+    (m : ℕ) (hm : m ≤ 12) (base : Fin m → ℤ) (hbase0 : ∀ i, base i ≠ 0)
+    (V : ℝ) (hV : 0 < V) (hbaseV : ∀ i, |(base i : ℝ)| ≤ V)
+    (hη1 : (1 / ((m : ℝ) + 1) - 1 / 14) / V ≤ 1)
+    (N : ℤ) (hN : 0 < N) (D : ℝ) (hD : 0 ≤ D) (cluster : List ℤ)
+    (hClo : ∀ c ∈ cluster, (N : ℝ) ≤ (c : ℝ))
+    (hChi : ∀ c ∈ cluster, (c : ℝ) ≤ (N : ℝ) + D)
+    (hcover : ∀ i, (∃ j, base j = v i) ∨ v i ∈ cluster)
+    (hi : V ≤ 2 * (1 / ((m : ℝ) + 1) - 1 / 14) * (N : ℝ))
+    (hii : D * (2 + (1 / ((m : ℝ) + 1) - 1 / 14) / V) < 6 / 7) :
+    ∃ t : ℝ, Lonely 14 v t := by
+  set δ : ℝ := 1 / ((m : ℝ) + 1) - 1 / 14 with hδdef
+  have hm14 : ((m : ℝ) + 1) < 14 := by
+    have : (m : ℝ) ≤ 12 := by exact_mod_cast hm
+    linarith
+  have hmpos : (0 : ℝ) < (m : ℝ) + 1 := by positivity
+  have hδ0 : 0 < δ := by
+    rw [hδdef]
+    have h1 : (1 : ℝ) / 14 < 1 / ((m : ℝ) + 1) := one_div_lt_one_div_of_lt hmpos hm14
+    linarith
+  -- base lonely point from the citation, shifted into [1,2)
+  obtain ⟨t0, ht0⟩ := cite m hm base hbase0
+  set t0' : ℝ := t0 + ((1 - ⌊t0⌋ : ℤ) : ℝ) with ht0'def
+  have ht0'lonely : Lonely (m + 1) base t0' :=
+    (lonely_add_int (m + 1) base t0 (1 - ⌊t0⌋)).mpr ht0
+  have hfloor_le : (⌊t0⌋ : ℝ) ≤ t0 := Int.floor_le t0
+  have hlt_floor : t0 < (⌊t0⌋ : ℝ) + 1 := Int.lt_floor_add_one t0
+  have ht0'ge1 : (1 : ℝ) ≤ t0' := by rw [ht0'def]; push_cast; linarith
+  have ht0'lt2 : t0' < 2 := by rw [ht0'def]; push_cast; linarith
+  -- slack: Lonely (m+1) ⟹ 1/14 + δ ≤ |·| (since 1/(m+1) = 1/14 + δ)
+  have hslack : ∀ i, ∀ mm : ℤ, (1 : ℝ) / 14 + δ ≤ |(base i : ℝ) * t0' - (mm : ℝ)| := by
+    intro i mm
+    have hi0 := ht0'lonely i mm
+    have hcast : (1 : ℝ) / 14 + δ = (1 : ℝ) / ((m + 1 : ℕ)) := by
+      rw [hδdef]; push_cast; ring
+    rw [hcast]; exact hi0
+  -- window and (ii) at t0'
+  set η : ℝ := δ / V with hηdef
+  have hwin : δ / V ≤ t0' := le_trans (by rw [← hηdef]; exact hη1) ht0'ge1
+  have hii' : D * (t0' + δ / V) < 6 / 7 := by
+    have hle : D * (t0' + δ / V) ≤ D * (2 + δ / V) :=
+      mul_le_mul_of_nonneg_left (by linarith [ht0'lt2]) hD
+    linarith [hii, hle]
+  -- assemble via the family form (base as a list, plus the cluster)
+  refine lonely_of_scale_separation t0' δ V hδ0 hV (List.ofFn base) ?_ ?_
+    N hN D hD cluster hClo hChi hi hii' hwin v ?_
+  · intro r hr
+    obtain ⟨i, rfl⟩ := List.mem_ofFn.mp hr
+    exact hbaseV i
+  · intro r hr mm
+    obtain ⟨i, rfl⟩ := List.mem_ofFn.mp hr
+    exact hslack i mm
+  · intro i
+    rcases hcover i with ⟨j, hj⟩ | hc
+    · exact Or.inl (List.mem_ofFn.mpr ⟨j, hj⟩)
+    · exact Or.inr hc
 
 end ScaleSeparation
 end LonelyRunner
