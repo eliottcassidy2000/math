@@ -312,5 +312,64 @@ theorem base_floor_list_of_cite (cite : LonelyRunner.LRCUpTo13) (B : List ℤ)
   intro i
   exact hpos (B.get i) (List.get_mem B i)
 
+/-! ## The quantitative floor: an all-good interval survives with its full length
+
+`base_floor_of_cite` gives `0 < length`.  The tower rung (opus HYP-4046) needs the
+QUANTITATIVE floor `length ≥ 2δ`.  The bridge is a pure Region-measure fact:
+`length_ge_of_mem_cover` — if every point of `[a, b)` is a member of a `Norm` region, that
+region has length at least `b − a`.  Combined with `norm_goodRegion2` (below) this upgrades
+the base floor to an explicit lower bound. -/
+
+/-- **Cursor covering lower bound.**  If every point of `[a, b)` is a member of a `Norm`
+region `L`, then `length L ≥ b − a`.  The interval is swept left to right: the first piece
+holding the cursor either reaches `b` (done) or advances the cursor to its right end, and the
+`Norm` gap guarantees the tail covers the remainder.  This is the measure content the fleet
+requested as `length_ge_of_safe_interval` (Norm length-extensionality, covering form). -/
+theorem length_ge_of_mem_cover : ∀ {L : Region}, Norm L → ∀ {a b : ℚ},
+    (∀ x : ℚ, a ≤ x → x < b → mem x L) → b - a ≤ length L := by
+  intro L
+  induction L with
+  | nil =>
+      intro _ a b hcov
+      rcases lt_or_ge a b with hab | hab
+      · exact absurd (hcov a le_rfl hab) (by simp [mem])
+      · have h0 : length ([] : Region) = 0 := rfl
+        rw [h0]; linarith
+  | cons p L' ih =>
+      intro hN a b hcov
+      rcases lt_or_ge a b with hab | hab
+      · have hp12 : p.1 < p.2 := norm_head_lt hN
+        have hlen : length (p :: L') = (p.2 - p.1) + length L' := by
+          simp only [length, List.map_cons, List.sum_cons]
+          rw [max_eq_right (by linarith : (0 : ℚ) ≤ p.2 - p.1)]
+        by_cases hp2a : p.2 ≤ a
+        · -- p is entirely left of the cursor: it covers nothing in [a, b)
+          have hcov' : ∀ x : ℚ, a ≤ x → x < b → mem x L' := by
+            intro x hx1 hx2
+            rcases hcov x hx1 hx2 with ⟨q, hq, hq1, hq2⟩
+            rcases List.mem_cons.mp hq with rfl | hqL'
+            · exact absurd hq2 (not_lt.mpr (by linarith))
+            · exact ⟨q, hqL', hq1, hq2⟩
+          have hrec := ih (norm_tail hN) hcov'
+          rw [hlen]; linarith [length_nonneg L']
+        · push_neg at hp2a
+          have hap : p.1 ≤ a := by
+            rcases hcov a le_rfl hab with ⟨q, hq, hq1, hq2⟩
+            rcases List.mem_cons.mp hq with rfl | hqL'
+            · exact hq1
+            · have := norm_head_le hN q hqL'; linarith
+          by_cases hp2b : b ≤ p.2
+          · rw [hlen]; linarith [length_nonneg L']
+          · push_neg at hp2b
+            have hcov' : ∀ x : ℚ, p.2 ≤ x → x < b → mem x L' := by
+              intro x hx1 hx2
+              rcases hcov x (by linarith) hx2 with ⟨q, hq, hq1, hq2⟩
+              rcases List.mem_cons.mp hq with rfl | hqL'
+              · exact absurd hq2 (not_lt.mpr hx1)
+              · exact ⟨q, hqL', hq1, hq2⟩
+            have hrec := ih (norm_tail hN) hcov'
+            rw [hlen]; linarith
+      · linarith [length_nonneg (p :: L')]
+
 end RatIntervals
 end LonelyRunner
