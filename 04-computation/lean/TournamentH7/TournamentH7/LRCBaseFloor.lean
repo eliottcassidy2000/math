@@ -71,7 +71,47 @@ theorem exists_strict_good_rat (base : List ℤ) (V : ℤ) (hVpos : 0 < V)
   rw [hstep]
   exact key s hs (s * ⌊q⌋ + m)
 
+/-- **STEP 1 (the base good-region floor), from the citation.** A base of `≤ 12` positive speeds has a
+positive-length good region at band `1/14`, by the `LRC(≤13)` citation.  This is THM-609; it discharges the
+`hbig`-free step-1 obligation of the far-element peel (`goodRegion2_length_pos_of_strict`). -/
+theorem base_goodRegion_floor (cite : LonelyRunner.LRCUpTo13) (base : List ℤ)
+    (hpos : ∀ s ∈ base, 0 < s) (hlen : base.length ≤ 12) :
+    0 < length (goodRegion2 base (1 / 14)) := by
+  -- a uniform bound `V` on `|s|`
+  obtain ⟨V, hVpos, hV⟩ : ∃ V : ℤ, 0 < V ∧ ∀ s ∈ base, |s| ≤ V := by
+    have hnn : ∀ x ∈ base.map fun s => |s|, (0 : ℤ) ≤ x := by
+      intro x hx
+      simp only [List.mem_map] at hx
+      obtain ⟨a, _, rfl⟩ := hx
+      exact abs_nonneg a
+    refine ⟨1 + (base.map fun s => |s|).sum, by linarith [List.sum_nonneg hnn], ?_⟩
+    intro s hs
+    have hle : |s| ≤ (base.map fun s => |s|).sum :=
+      List.single_le_sum hnn _ (List.mem_map_of_mem hs)
+    linarith
+  -- the citation point `t₀` for the ≤12-speed base
+  obtain ⟨t0, hL⟩ := cite base.length hlen (fun i => base.get i)
+    (fun i => (hpos _ (base.get_mem i)).ne')
+  -- LRC(≤13) slack: `1/14 + 1/182 ≤ dist` for every base speed
+  have hslack : ∀ s ∈ base, ∀ m : ℤ, (1 : ℝ) / 14 + 1 / 182 ≤ |(s : ℝ) * t0 - (m : ℝ)| := by
+    intro s hs m
+    obtain ⟨i, rfl⟩ := List.mem_iff_get.mp hs
+    have hi := hL i m
+    have hkey : (1 : ℝ) / 14 + 1 / 182 ≤ 1 / ((base.length + 1 : ℕ) : ℝ) := by
+      have h13 : ((base.length + 1 : ℕ) : ℝ) ≤ 13 := by
+        have : base.length + 1 ≤ 13 := by omega
+        exact_mod_cast this
+      have hpos1 : (0 : ℝ) < ((base.length + 1 : ℕ) : ℝ) := by positivity
+      have := one_div_le_one_div_of_le hpos1 h13
+      norm_num at this ⊢; linarith
+    calc (1 : ℝ) / 14 + 1 / 182 ≤ 1 / ((base.length + 1 : ℕ) : ℝ) := hkey
+      _ ≤ |(base.get i : ℝ) * t0 - (m : ℝ)| := hi
+  -- the strictly-good rational point, then kps's positivity lemma
+  obtain ⟨x, hx0, hx1, hgood⟩ := exists_strict_good_rat base V hVpos hV t0 hslack
+  exact goodRegion2_length_pos_of_strict hpos hx0 hx1 hgood
+
 #print axioms exists_strict_good_rat
+#print axioms base_goodRegion_floor
 
 end RatIntervals
 end LonelyRunner
