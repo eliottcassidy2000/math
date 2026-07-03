@@ -1,3 +1,21 @@
+## opus-2026-07-03-S53 -- THE RESONANT CLUSTER PEEL FORMALIZED (phase-spread THM-608 variant = the 13-comb lever's engine, kernel-pure); the four dualities are one covering (HYP-4049)
+
+Prompt (owner): finish the formalization, pull frequently/integrate; consider the dualities irrational/rational, odd/even, positive/negative, addition/multiplication.
+
+INTEGRATED (since S52): kps-S31 closed the base floor at ALL arities (base_floor_of_cite_gen, HYP-4048); mac-mini THM-609 + LRCDilation gcd=1; the single-far CoveringFarLonely is closed; lonely_of_simul_peel (multi-far <=6) is proved. My S49 far_peel_length_pos was superseded by kps goodRegion2_peel_pos (fine).
+
+DELIVERED (Lean, kernel-pure, ✔ built; `#print axioms = [propext, Classical.choice, Quot.sound]`; `LRCScaleSeparation.lean`): **`scale_separation_phase`** + family form **`lonely_of_scale_separation_phase`** -- the PHASE-SPREAD THM-608 variant = the RESONANT cluster peel (the S52 13-comb lever's engine). It peels a cluster PHASE-tight at t0 (∀ c∈C, ∃k, |(c−N)t0−k|<=Δφ) rather than SPEED-tight -- exactly the resonance (13-comb at t*=14/183: 14·13≡−1 mod 183 => phase spread (r−1)/183 tiny while speed spread 13(r−1) huge, so scale_separation's speed-spread (ii) fails but Δφ+D(δ/V)<=3/7 holds). Closes the RESONANT branch of the renormalization that THM-608 alone could not. KEY MOVE: place the fast phase N·t at the band MIDPOINT 1/2 (not edge 1/14) -- the antipode-fixed, +/-symmetric point -- making offsets SIGNED and REMOVING the t>=0 hypothesis (proof got shorter).
+
+THE FOUR DUALITIES ARE ONE (reflection): scale_separation_phase is the SIGNED/CENTERED/cyclotomic-resonant DUAL of scale_separation. The four dualities = four faces of the one binding number t*=14/Φ₆(14): odd/even = Z/2 antipode (14³≡−1, midpoint 1/2, band [1/14,13/14] symmetric about it); add/mult = Z/3 Eisenstein (14²≡13; additive comb +13 tight by multiplicative resonance; Cayley transform skew↦SO(n) = tournament type = eigenvalue number-type); pos/neg = Gauss ±i√p sign / signed placement; rational/irrational = census(bounded-q)/Eisenstein-cyclotomic(this lever)/sweep. 183=3·61 (Eisenstein √−3) meets 14=2·7 (heptagon √−7) => the compositum ℚ(√−3,√−7), cross √21 (S27–S30). Tournament = covering-time = number, one object four ways.
+
+STATE: both peel engines (near-equal scale_separation S50-51, resonant scale_separation_phase S53) are kernel-pure. Remaining open input = the STRUCTURAL DECOMPOSITION (which cluster to peel) + the finite census.
+
+NEXT / HANDOFF: `length_ge_of_safe_interval` (the QUANTITATIVE floor length>=2δ, flagged by kps HYP-4048 + mac-mini for the tower-rung iteration) -- a Region measure-subset lemma that does NOT exist (length_diffF_ge gives only the trivial bound). Route: `length (inter [(a,b)] B) <= length B` (inter-le-RIGHT, missing; only le-left exists at RatIntervals:319) + `[(a,b)] subset B setwise => length(inter)=b−a` via the cursor induction (RatIntervals:198). ~50-100 lines in kps's Region API -- kps may be faster (owns it); I can take it next session.
+
+Files: LRCScaleSeparation.lean (scale_separation_phase + family form), reflection the-resonant-peel-is-the-signed-centered-variant-four-dualities-one-covering-opus-20260703.md, HYP-4049 (+INDEX).
+
+---
+
 ## kind-pasteur-2026-07-03-S31 -- THE DENSITY BRIDGE (step 1 of the far-peel) CLOSED in Lean at ALL arities <=12; the rational/irrational duality made mechanical (HYP-4048)
 
 Prompt (owner): work back and forth between the density bridge and the step-5 finite window; reconsider prior dualities (irrational/rational, odd/even, positive/negative, addition/multiplication).
