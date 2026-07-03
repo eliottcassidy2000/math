@@ -13,14 +13,13 @@
       every covering family has a witness `p/q` with `q ≤ Q`.
 
   This is EXACTLY the route the machine-checked `n ≤ 13` proofs take (a finite search
-  over bounded denominators), and kps-S28's `lrc14_denominator_bound/stress` gives the
-  empirical `Q ≈ 35`: over 407 hard covering-compressed instances, all lonely at some
-  `q ≤ 35`, concentrated at `q = 17, 19`, INDEPENDENT of speed magnitude.
-
-  The obligation `hden` below is the whole remaining content of LRC(14).  It is a
-  FINITE check — `p/q`-loneliness depends only on the speeds' residues mod `q` — but a
-  large one, whose structured reduction (symmetry + covering + case trees) is the open
-  computational frontier.  Kernel-pure; no `sorry`.
+  over bounded denominators).  IMPORTANT (MISTAKE-096, mac-mini HYP-4040): the bound `Q`
+  is NOT uniform — for lcm families `{1..11, 13, lcm(2..X)}` the lcm-runner sits at
+  residue `0` for every `q ≤ X`, so the minimal lonely denominator is `Θ(log max-speed)`,
+  effectively `≤ 41` up to `max-speed ~ 10¹⁷` but genuinely unbounded above.  So a FIXED
+  `Q` closes only the BOUNDED-MAGNITUDE half; the honest reduction (`lrc14_of_magnitude_split`)
+  carries a magnitude cut `M` and hands the large-magnitude tail to the analytic /
+  renormalization route (mac-mini).  Kernel-pure; no `sorry`.
 -/
 import TournamentH7.LRCSpread13
 import TournamentH7.LRC14CertRoute
@@ -68,6 +67,26 @@ theorem bounded_denom_of_not_covering (v : Fin 13 → ℤ)
     _ = 14 * 1 := by ring
     _ ≤ 14 * |v i * 1 - k * q| := by
         apply mul_le_mul_of_nonneg_left h1 (by norm_num)
+
+/-- **THE TWO-SIDED ARCHITECTURE** (mac-mini HYP-4040 + kps denominator route): split
+LRC(14) at a magnitude cut `M`.  BOUNDED magnitude (`|v| ≤ M`) is a finite
+denominator census with a bound `Q = Q(M) ~ log M` (`≤ 41` up to `M ~ 10¹⁷`); LARGE
+magnitude (some `|v| > M`) is handed to the analytic / renormalization closer.  This
+is the honest form: no fixed `Q` suffices (MISTAKE-096), but a magnitude-cut one does. -/
+theorem lrc14_of_magnitude_split (M Q : ℤ)
+    (hsmall : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v → (∀ i, |v i| ≤ M) →
+      ∃ p q : ℤ, 0 < q ∧ q ≤ Q ∧ ∀ i, ∀ k : ℤ, q ≤ 14 * |v i * p - k * q|)
+    (hlarge : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v → (∃ i, M < |v i|) →
+      ∃ t : ℝ, Lonely 14 v t) :
+    LRC14Statement := by
+  apply lrc14_of_covering_lonely
+  intro v hv hcov
+  by_cases hb : ∀ i, |v i| ≤ M
+  · obtain ⟨p, q, hq, _, hres⟩ := hsmall v hv hcov hb
+    exact ⟨(p : ℝ) / q, lonely14_of_ratio v p q hq hres⟩
+  · push_neg at hb
+    obtain ⟨i, hi⟩ := hb
+    exact hlarge v hv hcov ⟨i, hi⟩
 
 end LRC14
 end LonelyRunner

@@ -11,6 +11,14 @@ Format per entry:
 
 ---
 
+## MISTAKE-096: The lonely denominator is NOT uniformly bounded (S28 "q <= 35 for all" overclaim; corrected by mac-mini HYP-4040)
+
+**Session:** kind-pasteur-2026-07-03-S28 (caught S29, integrating mac-mini HYP-4040)
+**What S28 claimed:** "EVERY hard LRC(14) instance is lonely at some t=p/q with q <= 35, INDEPENDENT of speed magnitude" -- so LRC(14) reduces to a FIXED-Q finite denominator search.
+**Why it is wrong:** the S28 stress test only sampled NEAR-EQUAL + random families; it never hit the LCM families. mac-mini HYP-4040: for S_X = {1..11, 13, lcm(2..X)}, any t=p/q with q dividing lcm(2..X) sends the lcm-runner to residue 0 (danger 0, BAD), so the minimal lonely denominator q(S_X) > (largest prime <= X) -> infinity. Verified (kps-S29, lrc14 lcm test): min_q = 41 for max-speed up to 27720, and q > 41 only once a speed is divisible by ALL primes <= 41 (max-speed ~ lcm(2..41) ~ 10^17). So q ~ Theta(log max-speed): EFFECTIVELY <= 41 for any practical magnitude, but genuinely UNBOUNDED asymptotically. NO fixed Q closes LRC(14).
+**Consequence:** lrc14_of_covering_bounded_denom(Q) (LRCDenominatorRoute) is a VALID implication for every fixed Q, but its hypothesis is UNSATISFIABLE for fixed Q (lcm families violate it), so it is vacuous as stated. The denominator route is the BOUNDED-MAGNITUDE half of mac-mini's two-sided architecture: {max-speed <= M: finite census, Q(M) ~ log M} + {large magnitude: analytic/renormalization}. The reduction must carry a magnitude bound (lrc14_of_magnitude_split, S29).
+**Lesson:** an empirical bound is only as uniform as the family generator that produced it. "Independent of magnitude" needed the adversarial magnitude-structured family (lcm = all-small-primes) in the sample, and it was not there. Before claiming a uniform bound, generate the family that is BUILT to break it -- here, the one divisible by everything.
+
 ## MISTAKE-095: The S21 arithmetic band {15..33} for near-equal was too tight -- ALIGNED drifts are band-blockers; the honest band-below is {15..~50} and it GROWS with magnitude
 
 **Session:** mac-mini-2026-07-03-S21 (found + corrected by mac-mini-2026-07-03-S22)
