@@ -336,6 +336,115 @@ all the way to the top: as long as the peel depth is finite, the whole large-mag
 `family = bounded base + nested fast near-equal clusters` (mac-mini/kps's renormalization-depth lane). -/
 theorem tower_slack_pos (δ0 : ℝ) (hδ0 : 0 < δ0) (k : ℕ) : 0 < δ0 / 2 ^ k := by positivity
 
+/-- **THM-608, PHASE-SPREAD form — the RESONANT cluster peel (the 13-comb lever, opus-S52 Eisenstein).**
+Unlike `scale_separation` (which needs the cluster SPEED-tight, `C ⊆ [N,N+D]`, and pays `D·t₀`), this peels
+a cluster that is only PHASE-tight at `t₀`: each `c ∈ C` has `(c−N)·t₀` within `Δφ` of an integer. This is
+the resonance case — e.g. the 13-spaced comb at `t* = 14/183`, where `14·13 ≡ −1 mod 183` makes the phase
+spread `(r−1)/183` tiny even though the speed spread `13(r−1)` is huge (so `scale_separation`'s speed-spread
+condition (ii) fails but this one holds). The proof places the fast phase `N·t` at the band MIDPOINT `1/2`
+(the centered placement — no `t≥0` needed): the cluster then sits in `[1/2−(Δφ+Dη), 1/2+(Δφ+Dη)] ⊆ [1/14,13/14]`
+provided `Δφ + D·(δ/V) ≤ 3/7` (ii'). DUALITIES: rational-resonant placement (the `t*` Eisenstein rational) +
+additive AP (the comb `+13`) + multiplicative cyclotomic tightness (`14` a 6th root); `Δφ` is the additive
+spread, tiny by the multiplicative resonance. -/
+theorem scale_separation_phase
+    (t0 δ V : ℝ) (hδ : 0 < δ) (hV : 0 < V)
+    (R : List ℤ)
+    (hRV : ∀ r ∈ R, |(r : ℝ)| ≤ V)
+    (hRsafe : ∀ r ∈ R, ∀ m : ℤ, (1 : ℝ) / 14 + δ ≤ |(r : ℝ) * t0 - m|)
+    (N : ℤ) (hN : 0 < N) (Δφ Dd : ℝ) (hΔφ : 0 ≤ Δφ) (hDd : 0 ≤ Dd)
+    (C : List ℤ)
+    (hphase : ∀ c ∈ C, ∃ k : ℤ, |((c : ℝ) - (N : ℝ)) * t0 - (k : ℝ)| ≤ Δφ)
+    (hdrift : ∀ c ∈ C, |(c : ℝ) - (N : ℝ)| ≤ Dd)
+    (hi : V ≤ 2 * δ * (N : ℝ))
+    (hii : Δφ + Dd * (δ / V) ≤ 3 / 7) :
+    ∃ t : ℝ,
+      (∀ r ∈ R, ∀ m : ℤ, (1 : ℝ) / 14 ≤ |(r : ℝ) * t - m|) ∧
+      (∀ c ∈ C, ∀ m : ℤ, (1 : ℝ) / 14 ≤ |(c : ℝ) * t - m|) := by
+  set η : ℝ := δ / V with hηdef
+  have hη0 : 0 < η := div_pos hδ hV
+  have hVη : V * η = δ := by rw [hηdef]; field_simp
+  set A : ℝ := (N : ℝ) with hAdef
+  have hA0 : 0 < A := by rw [hAdef]; exact_mod_cast hN
+  have hlen : (1 : ℝ) ≤ A * (2 * η) := by
+    have hstep : A * (2 * η) = 2 * δ * A / V := by rw [hηdef]; ring
+    rw [hstep, le_div_iff₀ hV]
+    have hAN : 2 * δ * A = 2 * δ * (N : ℝ) := by rw [hAdef]
+    linarith [hi, hAN]
+  set k0 : ℤ := ⌈A * (t0 - η) - 1 / 2⌉ with hk0def
+  have hk_lo : A * (t0 - η) - 1 / 2 ≤ (k0 : ℝ) := Int.le_ceil _
+  have hk_hi : (k0 : ℝ) < A * (t0 - η) - 1 / 2 + 1 := Int.ceil_lt_add_one _
+  set t : ℝ := ((k0 : ℝ) + 1 / 2) / A with htdef
+  have hAt : A * t = (k0 : ℝ) + 1 / 2 := by rw [htdef, mul_div_cancel₀ _ (ne_of_gt hA0)]
+  have ht_ge : t0 - η ≤ t := by rw [htdef, le_div_iff₀ hA0]; nlinarith [hk_lo]
+  have ht_le : t ≤ t0 + η := by
+    rw [htdef, div_le_iff₀ hA0]
+    have hexp : (t0 + η) * A = A * (t0 - η) + A * (2 * η) := by ring
+    nlinarith [hk_hi, hlen, hexp]
+  have ht0 : |t - t0| ≤ η := by rw [abs_le]; constructor <;> linarith [ht_ge, ht_le]
+  refine ⟨t, ?_, ?_⟩
+  · intro r hr m
+    have hrV := hRV r hr
+    have hsafe := hRsafe r hr m
+    have htri : |(r : ℝ) * t0 - m| - |(r : ℝ) * t0 - (r : ℝ) * t| ≤ |(r : ℝ) * t - m| := by
+      have h := abs_sub_abs_le_abs_sub ((r : ℝ) * t0 - (m : ℝ)) ((r : ℝ) * t - (m : ℝ))
+      have he : |((r : ℝ) * t0 - (m : ℝ)) - ((r : ℝ) * t - (m : ℝ))|
+          = |(r : ℝ) * t0 - (r : ℝ) * t| := by congr 1; ring
+      rw [he] at h; linarith [h]
+    have hdist : |(r : ℝ) * t0 - (r : ℝ) * t| ≤ δ := by
+      rw [show (r : ℝ) * t0 - (r : ℝ) * t = (r : ℝ) * (t0 - t) by ring, abs_mul]
+      have h1 : |(r : ℝ)| * |t0 - t| ≤ V * η := by
+        apply mul_le_mul hrV _ (abs_nonneg _) hV.le
+        rw [abs_sub_comm]; exact ht0
+      rw [hVη] at h1; exact h1
+    linarith [htri, hsafe, hdist]
+  · intro c hc
+    obtain ⟨kc, hkc⟩ := hphase c hc
+    have hdr := hdrift c hc
+    have hdrift_bd : |((c : ℝ) - A) * (t - t0)| ≤ Dd * η := by
+      rw [abs_mul]
+      have hcA : |(c : ℝ) - A| ≤ Dd := by rw [hAdef]; exact hdr
+      exact mul_le_mul hcA ht0 (abs_nonneg _) hDd
+    set br : ℝ := 1 / 2 + (((c : ℝ) - A) * t0 - (kc : ℝ)) + ((c : ℝ) - A) * (t - t0) with hbrdef
+    have hbr_lo : (1 : ℝ) / 14 ≤ br := by
+      rw [hbrdef]; have h1 := (abs_le.mp hkc).1; have h2 := (abs_le.mp hdrift_bd).1
+      linarith [hii, h1, h2]
+    have hbr_hi : br ≤ 1 - 1 / 14 := by
+      rw [hbrdef]; have h1 := (abs_le.mp hkc).2; have h2 := (abs_le.mp hdrift_bd).2
+      linarith [hii, h1, h2]
+    have hct : (c : ℝ) * t = br + ((k0 + kc : ℤ) : ℝ) := by
+      have hsplit : (c : ℝ) * t = A * t + ((c : ℝ) - A) * t := by ring
+      rw [hsplit, hAt, hbrdef]; push_cast; ring
+    have hfr : Int.fract ((c : ℝ) * t) = br := by
+      rw [hct, Int.fract_add_intCast]
+      exact Int.fract_eq_self.mpr ⟨by linarith [hbr_lo], by linarith [hbr_hi]⟩
+    rw [far_iff_fract, hfr]
+    exact ⟨hbr_lo, hbr_hi⟩
+
+/-- **Phase-spread peel, family form** — a family `v` whose speeds lie in the base `R` (lonely at `t₀` with
+slack) or a PHASE-tight cluster `C` (the resonant/comb case) is `Lonely 14`. The resonant sibling of
+`lonely_of_scale_separation`. -/
+theorem lonely_of_scale_separation_phase
+    (t0 δ V : ℝ) (hδ : 0 < δ) (hV : 0 < V)
+    (R : List ℤ)
+    (hRV : ∀ r ∈ R, |(r : ℝ)| ≤ V)
+    (hRsafe : ∀ r ∈ R, ∀ m : ℤ, (1 : ℝ) / 14 + δ ≤ |(r : ℝ) * t0 - m|)
+    (N : ℤ) (hN : 0 < N) (Δφ Dd : ℝ) (hΔφ : 0 ≤ Δφ) (hDd : 0 ≤ Dd)
+    (C : List ℤ)
+    (hphase : ∀ c ∈ C, ∃ k : ℤ, |((c : ℝ) - (N : ℝ)) * t0 - (k : ℝ)| ≤ Δφ)
+    (hdrift : ∀ c ∈ C, |(c : ℝ) - (N : ℝ)| ≤ Dd)
+    (hi : V ≤ 2 * δ * (N : ℝ))
+    (hii : Δφ + Dd * (δ / V) ≤ 3 / 7)
+    {ι : Type*} (v : ι → ℤ) (hcover : ∀ i, v i ∈ R ∨ v i ∈ C) :
+    ∃ t : ℝ, Lonely 14 v t := by
+  obtain ⟨t, hRs, hCs⟩ :=
+    scale_separation_phase t0 δ V hδ hV R hRV hRsafe N hN Δφ Dd hΔφ hDd C hphase hdrift hi hii
+  refine ⟨t, fun i m => ?_⟩
+  have key : (1 : ℝ) / 14 ≤ |(v i : ℝ) * t - (m : ℝ)| := by
+    rcases hcover i with hR | hC
+    · exact hRs (v i) hR m
+    · exact hCs (v i) hC m
+  simpa using key
+
 end ScaleSeparation
 end LonelyRunner
 
