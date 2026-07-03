@@ -1,0 +1,14 @@
+SMART adversary (lcm-product runners): max witness q over compressed covering gcd=1 vs N.
+====================================================================================
+           N  log10  target band  #cc tested  MAX witness q
+       10000      4       15..58        4073             61
+      100000      5       15..70        3740             71
+     1000000      6       15..82        2965             83
+    10000000      7      15..100        1996            101
+   100000000      8      15..108        1312            109
+  1000000000      9      15..126         768            121
+1000000000000     12      15..166         137            128
+
+MAX-q sequence: [61, 71, 83, 101, 109, 121, 128];  slope ~ 8.99 per decade
+=> slope>0 & growing: compressed q ~ log(mag), UNBOUNDED -> renormalization/log-census is the crux.
+   slope~0 & bounded: fixed census (q<=~128) closes the compressed case entirely.

@@ -1,0 +1,16 @@
+Max witness q over COMPRESSED covering gcd=1 families vs magnitude N (aligned band-blockers).
+==================================================================================
+           N  log10 N #compressed tested  MAX witness q
+        1000        3               ~20k             43
+       10000        4               ~20k             56
+      100000        5               ~20k             41
+     1000000        6               ~20k             47
+    10000000        7               ~20k             51
+   100000000        8               ~20k             39
+  1000000000        9               ~20k             43
+
+MAX-q vs log10(N): sequence [43, 56, 41, 47, 51, 39, 43]
+slope (q per decade) ~ -0.86
+=> slope ~ 0 (q plateaus): compressed q UNIFORMLY BOUNDED -> a FIXED census (q<=~56) closes
+   the compressed case, wide residual = the census, no renormalization needed.
+   slope > 0 (q grows): compressed q ~ log(mag) -> the log-census/deep renormalization is the crux.
