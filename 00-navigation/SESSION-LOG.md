@@ -42,6 +42,20 @@ HONEST STATUS: LRC(14) NOT closed (open research). spread13 closes the all-compa
 
 FILES: LRCSpread13.lean (spread13_lonely + lonely14_of_ratio, registered); 2 numerical probes + outs; HYP-3984 INDEX; reflection; this entry. No canon overridden.
 
+## mac-mini-2026-07-03-S23 -- THM-608 SCALE-SEPARATION LEMMA PROVED (rigorous core of the renormalization: R lonely w/ slack + fast near-equal cluster => R u C lonely) + reconciled kps-S28's bounded-denominator route (q<=35 under-sampled; the census-breakers are LOOSE -> renormalization, not census) => HYP-4041 architecture
+
+Prompt (owner): improve the LRC(14) proof creatively.
+
+INTEGRATED the fleet's big S28 push: kps's RATIONAL-WITNESS SIEVE (lonely14_of_ratio) + spread13_lonely (ratio<=13 => lonely at 1/(a+b), PROVED, sharp) + the bounded-denominator route (empirically q<=35, 0/407); opus's S48 star-discrepancy floor + independent arXiv:2607.00876 bridge (HYP-4013).
+
+THE RECONCILIATION. kps's 'q<=35 independent of magnitude' conflicts with my S22 HYP-4040 (witness denom -> infinity). Resolved: q<=35 is UNDER-SAMPLED (same MISTAKE-095) -- covering+COMPRESSED families with ALIGNED near-equal drifts (far_i=q_i*round(N/q_i)) reach census witness q=44,45 at ALL magnitudes (73 families >35 at N=1000; reconcile_kps_denominator_bound...out). BUT those census-breakers are LOOSE: M=0.24=3.4x the danger radius, lonely at FINE t~0.4998 -- their small-q failure is a PINNED-PHI artifact (small rationals force {Nt} into danger), NOT tightness. So they belong to the RENORMALIZATION route, not the census. Clean routing: near-equal far -> THM-608/renorm; spread+bounded -> census; ratio<=13 -> spread13.
+
+THM-608 (Scale-Separation / Cluster-Absorption, PROVED elementarily, 01-canon/theorems/): R lonely at t0 with slack delta, V=max|R|; cluster C={N+c_i}, spread D. IF (i) 2*delta*N>=V and (ii) D*(t0+delta/V)<6/7 THEN some t in [t0-delta/V,t0+delta/V] has all v in R u C lonely. 4-line proof (||.|| 1-Lipschitz => R safe on the window; (N+c1)t sweeps [0,1) by (i); cluster arc <6/7 fits the safe band by (ii)). The rigorous single-step core of opus HYP-3901; N enters ONLY via (i), larger N is EASIER (fast phase). Verified 18/18; end-to-end on real near-equal hge7 families 25/25 when applicable. HONEST SCOPE: ~7% of near-equal hge7 directly (gate (ii) collides with a slow base runner -- the 'scales fight' tension); reduces near-equal-far (good base) to the bounded base; wide far (D~N) = regime B, not covered.
+
+HYP-4041 architecture: spread13 (ratio<=13, PROVED) + renormalization/THM-608 (large near-equal clusters, LOOSE) + bounded-denominator census (bounded non-cluster). Depth ~log(max-speed) = the discrepancy cost (HYP-4040/4013/arXiv). The one open hinge: extend THM-608 past the slow-runner-vs-wide-far tension (opus's HYP-3901 / the measure route).
+
+FILES: THM-608 (proved+scoped); HYP-4041 + HYP-4040; 4 S23 scripts+outputs (reconcile_kps_denominator_bound, renorm_absorbs_cluster, scale_separation_lemma, thm608_closes_nearequal_hge7); messaged kps (correction) + opus (THM-608=your renorm core). ~7 push/pull cycles. No canon overridden; kps's spread13/lonely14_of_ratio Lean unaffected (the correction is to the EMPIRICAL q<=35 gloss, not the proved lemmas). LRC(14) still open at the slow-runner-vs-wide-far residual.
+
 ## mac-mini-2026-07-03-S22 -- WITNESS-DENOMINATOR LOWER BOUND (discrepancy, arXiv:2607.00876 analogy) PROVES no uniform band; CORRECTED my S21 band {15..33}->{15..~50} (MISTAKE-095: aligned drifts are band-blockers); connected to klein's 13-lattice (HYP-3791/OPEN-Q-108)
 
 Prompt (owner): push/pull often, integrate+extend agents, finish LRC14 open math, mine the repo, think analogously about arXiv:2607.00876 (binary-tree continual counting, Omega(log^{3/2}n)).
