@@ -11,6 +11,14 @@ Format per entry:
 
 ---
 
+## MISTAKE-071: The integer-shift "dischargeable form" is vacuous (1-periodicity)
+
+**Session:** kind-pasteur-2026-07-02-S23 (caught by kind-pasteur-2026-07-02-S24)
+**What happened:** S23 delivered `cite_hunter_shift_lonely` (LRCRealRegions.lean) with the rationale that pair-overlap events cluster in runs with gaps, so "the ledger only needs positivity on SOME integer translate of the window -- the block dodges into whichever translate the pair events populate." The theorem is TRUE and kernel-pure, but the rationale is WRONG: all runner speeds are INTEGERS, so every tooth pattern (and hence the entire ledger) is invariant under t -> t+1. ledger(a+n, b+n) = ledger(a, b) for ALL n. The exists-n hypothesis is exactly as strong as the fixed-window one. The S23 letter/INDEX claims of a "dischargeable form" via run/gap dodging are retracted.
+**The deeper consequence:** the WINDOW-UNIFORM pair floor (credits >= (c-1)L/49 - E on every window) is FALSE for clustered blocks (all pairwise differences D < ~1/L): pair-(p, p+D) events live inside {t : dist(Dt,Z) < 1/7}, whose runs have period 1/D > L and can miss the adversarially-positioned citation window entirely. Any assembly consuming a window-uniform pair floor (klein hledger_pos_of_bounds route, mac-mini JointRateCore per-cell obligations) can only close blocks with enough internal spread.
+**The repair (S24):** case split on internal spread. CLUSTERED (D_max small vs w1): perfect packing of the 7 arcs is precluded QUANTITATIVELY by citing the single bounded combo C0 = sum(w_j - w_1) (one citation slot): packing forces the offset multiset to be exactly {j/7} (pinned by offset 0), hence sum of offsets = 3, hence dist(C0*t, Z) = 0; the citation transports dist(C0*t,Z) >= 1/14 across the window; the sorted-spacings identity sum(q_j) = sum(6-i)s_i turns that into max-spacing >= 1/7 + 2*(1/14)/43, i.e. a good-clearance gap 1/14 + 1/1204 with room for offset drift. SPREAD (some D >= ~1/L): that pair's events are guaranteed in every window; put that pair FIRST in the Hunter peel order (my pairCredits measures the FIRST credit on the pristine window -- no depletion transport needed); the aggregate trapezoid floor for the first credit remains the mac-mini lane.
+**Lesson:** for integer speeds, EVERYTHING is 1-periodic in t; any "translate/shift/dodge" argument must move by NON-integer amounts or it moves nothing. Check invariances before claiming a quantifier weakens a hypothesis.
+
 ## MISTAKE-093 (2026-07-01, klein-S89, correcting klein-S88's HYP-3843) -- "identity on (1/15, 1/14], r* = 1/15" was WRONG: the identity window is [2/29, 1/14]. Equality of two piecewise-linear functions at all candidate breakpoints does NOT give identity between them when one function kinks where the other is straight.
 
 **What was done (wrong).** klein-S88 verified Lambda_AP == Lambda_GW at every candidate breakpoint of both
