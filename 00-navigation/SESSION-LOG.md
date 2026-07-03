@@ -185,6 +185,20 @@ HONEST STATUS: LRC(14) NOT closed (open research). spread13 closes the all-compa
 
 FILES: LRCSpread13.lean (spread13_lonely + lonely14_of_ratio, registered); 2 numerical probes + outs; HYP-3984 INDEX; reflection; this entry. No canon overridden.
 
+## mac-mini-2026-07-03-S26 -- the wide residual PINNED EXACTLY (= the log-census, q~3.6 ln M for compressed) + CORRECTED opus (the deep well is census-able at 3/40, not the Eisenstein 183). Genuine crux sharpened, not yet closed.
+
+Prompt (owner): keep going on step 5's wide residual + census extension, complete the crux, concurrently.
+
+INTEGRATED: step 1 done twice (kps base_floor_of_cite all arities + my S25 base_goodRegion_floor -- concurrent duplicate, kps's is wired); length_ge_of_safe_interval DONE (kps-S32); opus-S52/S53 = the 13-comb Eisenstein resonance + scale_separation_phase (phase-tight peel).
+
+TWO CORRECTIONS that reshaped the crux:
+ 1. THE DEEP WELL {1..12,182} IS CENSUS-ABLE. Lonely at t=3/40 (min-dist 3/40=0.0750 > 1/14; runner 1 tightest; NO runner 13 in the family). M=14/183 is the MAX min-dist, not the only lonely point. opus-S52's 'lonely only at 14/183, census fails (1/15)' measured the p=1 COVERING SIEVE (t=1/q) only; the general p/q census (kps lonely14_of_ratio, p=3) reaches it. So the Eisenstein 183 is NOT the census gap. (Flagged opus, exact Fraction verification.)
+ 2. THE GENUINE GAP = wide-COMPRESSED lcm-blockers. 13 runners ~N (compressed, no ratio-13 dominant), each = lcm(group of band moduli)*round(N/lcm), blocking many small q by residue 0. SMART adversary (lcm-products, not 1 modulus/runner): witness q = 61,71,83,101,109,121,128 at N=10^4..10^12, slope ~9/decade => q ~ 3.6 ln(max-speed), UNBOUNDED. So HYP-4040 (no uniform band) reaches INSIDE the compressed class; no fixed census closes it. (My weak-adversary mid-result 'bounded ~56' was a false floor -- corrected same session.)
+
+THE CRUX, EXACT: every compressed covering gcd=1 family with max|v|=M is lonely at some a/q with q <= Q(M)=O(log M loglog M) [the LOG-CENSUS]. This + far-peel(dominant, THM-609) + citation + non-covering = LRC14. WHY HARD: a FREE MODULUS exists below O(log M loglog M) by prime-counting (13 speeds<=M carry <= 13 logM/log17 primes>14), BUT a free modulus does NOT give the witness -- at a free prime q the bad numerators {a: va in danger} number ~13*q/7 > q (the 13/7>1 over-one margin!), so the crude union bound fails; the good a exists only by the STRUCTURED OVERLAP of the +-k bad sets. That overlap is the open kernel -- the same 13/7>1 that makes LRC hard, reappearing.
+
+HONEST: crux sharpened + a wrong framing corrected; NOT closed (the log-census witness-existence is the genuine open wall, where all routes -- census/renormalization/measure -- meet). FILES: 6 S26 scripts+outputs (wide_residual_coverage/gap_hunt, largeq_wideD, compressed_maxq_extreme/smart); reflection the-compressed-crux-is-the-log-census.md; HYP-4040 extended; messaged opus (deep-well correction + refocus). ~6 push/pull. No canon overridden.
+
 ## mac-mini-2026-07-03-S25 -- STEP 1 FULLY FORMALIZED IN LEAN (base_goodRegion_floor, THM-609, kernel-pure) = opus's ONE genuine remaining lemma of the far-peel; step-5 characterized as the compressed case
 
 Prompt (owner): complete steps 2 and 5 + any handoffs.
