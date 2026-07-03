@@ -1,3 +1,26 @@
+## kind-pasteur-2026-07-02-S24 -- THE CLUSTERED-BLOCK CLOSER (unconditional) + THE SPREAD-7 ONE-PAIR ROUTE + the c=7 TRICHOTOMY (LRCSevenGap.lean & LRCRealRegions additions, sorry-free kernel-pure, corpus 8625 green) (HYP-3981)
+
+Prompt (owner): finish the honest remaining leg / get the Lean in the best state, integrate + extend other agents' work.
+
+FIRST -- MISTAKE-071 logged: S23's cite_hunter_shift_lonely "dischargeable via integer shift" rationale is VACUOUS (integer speeds => all tooth patterns 1-periodic => exists-n adds nothing). The window-uniform pair floor is FALSE for clustered blocks. THE REPAIR is the clustered/spread split, now built:
+
+DELIVERED (all [propext, Classical.choice, Quot.sound], corpus green, registered):
+ 1. **LRCSevenGap.lean** -- THE CLUSTERED LANE:
+    - seven_gap_deficit: sorted pinned circle points (q0=0..q6) whose SUM keeps integer distance theta admit a probe clearing 1/14 + theta/44 from every point (perfect packing forces sum=3; the cited sum-combo margin forces a spacing surplus theta/22). 7x7 generated case grid, pure linarith.
+    - gap_deficit_of_mem: the same for 7 RAW phases (insertionSort/Pairwise destructure + perm transfer of pin/sum/membership).
+    - cluster_sweep_step: 7 distinct clustered integer speeds (drift 1232(w7-w1)<=w1, forcing w1>=7392) + window holding 2 base periods + transported SUM-COMBO margin -> a common 1/14-good sweep point for all 7 (frozen-offset probe; w1-sweep costs <=2/w1; offsets drift <=1/616 = the deficit surplus). maxHeartbeats 1.6M.
+    - **cite_cluster7_lonely: THE UNCONDITIONAL CLUSTERED-BLOCK CLOSER.** A covering 13-family whose far block is 7 distinct clustered integers + k<=11 bounded runners (364B<=w1) is Lonely 14. Cite the k bounded + C0 (k+1<=12 slots); C0 margin at t0 feeds cluster_sweep_step; bounded runners drift B*2/w1<=1/182 so citation margin 1/13 survives to EXACTLY 1/14 (1/13 - 1/182 = 13/182 = 1/14). Sign bridge (far) + reverse-triangle transport (near).
+ 2. **LRCRealRegions.lean additions -- THE SPREAD-7 ROUTE:**
+    - pairCredits_nonneg + pairCredits_ge_first: total pair credit >= the FIRST consecutive pair's pristine-window credit (rest is nonneg).
+    - **cite_hunter_c7_onepair: THE ONE-PAIR SIMPLIFICATION.** For c=7 the density 7*(L/7)=L cancels the window EXACTLY, so ONE pristine-window pair credit already clears the Hunter ledger -- NO depletion transport of pairs 2-6. Reduces the ENTIRE spread-7 case to klein's FIRST pristine pair floor (LRCSpreadPairFloor per_tooth_ge_trap summed over the residue walk). The exact remaining obligation, named.
+
+THE c=7 TRICHOTOMY (the honest structural finding): a 7-far block falls into THREE scale regimes, each with a DIFFERENT mechanism:
+ (A) CLUSTERED-HUGE (w1>=7392, tight drift): cite_cluster7_lonely -- CLOSED unconditionally.
+ (B) SPREAD (some consecutive pair with D*L>=2): cite_hunter_c7_onepair + klein's first pair floor -- reduced to ONE floor (klein Stages 1-3 nearly there).
+ (C) NEAR-EQUAL-SMALL (w1<7392, tight but small, e.g. 23..29): OPEN -- cluster_sweep fails (window 2/w1 too big, offset drift ~0.5 >> 1/616); the one-pair walk has no wraps (D*L<2). This is exactly the drifting-floor / mac-mini JointRateCore / klein near-equal frontier. The 7-wall is NOT fully crossed at c=7 -- regime C remains.
+
+FILES: LRCSevenGap.lean (+cite_cluster7); LRCRealRegions.lean (+3 lemmas); TournamentH7.lean (registered LRCSevenGap); MISTAKE-071; HYP-3981 INDEX; reflection the-c7-trichotomy.md; this entry. 5 checkpoint pushes. No canon overridden.
+
 ## klein-2026-07-02-S118 -- THE GENERAL LEDGER (c>=8 reduction) + STAR-HUNTER (err-free covering pair-floor for c<=7) + DRIFTING PAIR-FLOOR ANATOMY (HYP-4023).
 
 Prompt (owner): work on proving the general pair-floor and the c>=8 case back and forth in this long overnight session with many pushes and pulls, efficiently integrating new ideas, getting the Lean formalization into a perfect state.

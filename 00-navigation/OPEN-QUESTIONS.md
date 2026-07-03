@@ -1,5 +1,21 @@
 # Open Questions
 
+**OPEN-Q-110 HYP-3981 the c=7 near-equal-SMALL regime (kind-pasteur-2026-07-02-S24):** The compressed
+`>= 7`-far leg of `lrc14_of_farcut_split` (Lean) splits by BLOCK SPEED SCALE into a trichotomy, and
+exactly one regime is open. (A) CLUSTERED-HUGE (`w1 >= 7392`, tight): CLOSED unconditionally by
+`cite_cluster7_lonely` (LRCSevenGap.lean) — frozen arcs can't perfectly pack, the sum-combo `C0` citation
+forces a gap. (B) SPREAD (some consecutive `D*L >= 2`): reduced to ONE pristine first-pair floor by
+`cite_hunter_c7_onepair` (LRCRealRegions) — the c=7 density `7*(L/7)=L` cancels exactly, so only the first
+Hunter pair credit is needed (no depletion transport); the floor is klein `LRCSpreadPairFloor`
+Stages 1-3 (nearly done). (C) NEAR-EQUAL-SMALL (`w1 < 7392`, tight but small, e.g. `23..29`): OPEN —
+`cite_cluster7` fails (window `2/w1` too wide, offset drift `~0.5 >> 1/616`) and the one-pair walk has no
+wraps (`D*L < 2`). This is the drifting pair-floor / mac-mini JointRateCore / klein `seven_commensuration`
+frontier: needs a WINDOW-ADAPTIVE (drifting) floor commensurate with the small block. NEXT: (i) the
+drifting aggregate floor `pairmass >= L/49 - err` transcription; (ii) verify the A/B/C regimes exhaust
+c=7 (the gluing calibration). Also OPEN: c >= 8 (klein `hledger_pos_of_pairbound` reduces it to tight
+overlap `P > L(c-7)/(7(c-1))`, needs the near-equal correlation lower bound). -> HYP-3980, HYP-3981,
+klein HYP-4022/4023, mac-mini HYP-3876, MISTAKE-071.
+
 **OPEN-Q-108 HYP-3900/3835 the r=2 residual after the simultaneous peel (opus-2026-07-01-S32):** The
 multi-outlier tail of the 11-core census is CLOSED for any j<=6 far elements by the simultaneous-peel
 lemma (PROVED: meas(L_C) >= (1-j/7)meas(L_low) - (2c_low/7)sum 1/w; scale-free error 22j/(7Lambda) at a
