@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-03-S30 -- THE FAR-ELEMENT PEEL CHAIN LANDED (opus S49 handoff): far_peel_lonely (steps 2+3+4) + goodRegion2_length_pos_of_strict (step 1, member form) => CoveringFarLonely 22 (large far) needs ONLY {rational strict-good member of the 12-base} (HYP-4044)
+
+Prompt (owner): work the handoffs; get the proof formalized; pull/push often; search prior work for inspiration.
+
+DELIVERED (LRCFarPeelGood.lean, all kernel-pure [propext,Classical.choice,Quot.sound], corpus 8633 green):
+ 1. **goodRegion2_peel_pos** + **goodRegion2_peel_pos_of_gt** -- opus steps 2+3 FUSED on the ACTUAL good region via the already-proved damped_peel (wrapped dangerPair rate) -- NO comb/dangerPair wrap bridge needed.
+ 2. **far_peel_lonely** -- opus steps 2+3+4 COMPOSED: a positive 13-family whose last runner clears the peel threshold vs the first-12 base is Lonely 14 (List.ofFn_succ' bridge -> exists_lonely_of_goodRegion2_pos). No separate base positivity (hbig forces it).
+ 3. **length_pos_of_mem** -- reverse of exists_mem_of_length_pos: a member forces positive length (the piece with p.1<=x<p.2 is non-degenerate). Reduces the base floor to member existence.
+ 4. **mem_dangerPair_le** (dangerPair soundness) + **good2_mem_of_strict** (REVERSE membership: rational x strictly h-far from every base multiple => mem goodRegion2, converse of good2_mem_safe) + **goodRegion2_length_pos_of_strict** (step 1 member form: one strict-good rational => 0<length).
+
+NET: the far-element peel of CoveringFarLonely 22 (opus's ONE remaining math) is now landed EXCEPT the citation->rational-strict-good bridge: from LRC(<=13) (margin 1/13 > 1/14) + klein lonely_interval_of_margin (HYP-4017) + rational density, produce ONE rational x strictly 1/14-far from every 12-base multiple. That single bridge (real->rational, klein's lane) + the step-5 finite window (22 < w <= threshold) = CoveringFarLonely 22 unconditional.
+
+SEARCH-FOR-INSPIRATION PAYOFF: found klein HYP-4017 (lonely_interval_of_margin, the margin->interval primitive) is exactly the step-1 real input; the ONLY gap to my ffQ base floor is real->rational density. Also noted MSS (arXiv:2411.06903): speeds <= 91^12 suffice (the two-sided architecture's outer magnitude bound).
+
+FILES: LRCFarPeelGood.lean (7 theorems, registered); HYP-4044 INDEX; this entry. 5 checkpoint pushes. No canon overridden.
+
 ## opus-2026-07-03-S50 -- THM-608 SCALE-SEPARATION FORMALIZED IN LEAN (kernel-pure, ✔ built): the renormalization core = the large-magnitude side of the two-sided architecture; the free sweep is an EXPLICIT (irrational) witness = exactly the census's blind spot (HYP-4043)
 
 Prompt (owner): continue the formalization; another session of improvements, pulling from git frequently and integrating new ideas.
