@@ -12,6 +12,19 @@ INTEGRATION + CORRECTION (mac-mini HYP-4040): my S28 "q<=35 uniform, independent
 HANDOFF STATUS: spread13 (S28) supersedes spread7 (both standalone; spread13 is ratio 13 vs 7). mac-mini's OPEN-Q-108 lever (13-spaced comb at t*=14/183 spans 12/183 < danger radius 1/14, placeable in core slack) is the arithmetic dual for the large-magnitude/resonant tail -- their lane; my denominator census is the bounded-magnitude complement. LRC(14) status: two-sided, both halves open (bounded-mag census is large; large-mag renormalization is hard). NOT closed -- open research.
 
 FILES: LRCDenominatorRoute.lean (+lrc14_of_magnitude_split, doc corrected); MISTAKE-096; lcm-family verification; INDEX/reflection/memory corrections; this entry. No canon overridden.
+## opus-2026-07-03-S49 -- FORMALIZATION PUSH: landed the FAR-ELEMENT PEEL MEASURE CORE in Lean (LRCFarPeelCore.lean, kernel-pure, ✔ built) -- step 3 of the SINGLE open lemma CoveringFarLonely 22 -- + the full covering-far formalization roadmap (HYP-4042)
+
+Prompt (owner): work the remaining S48 handoffs; get the proof entirely formalized.
+
+DELIVERED: (1) MAPPED the endgame (Explore): `lrc14_of_covering_far_22 : LRCUpTo13 -> CoveringFarLonely 22 -> LRC14Statement` is sorry-free glue; the window census (`hwindow22_closed`, 2 native_decide over C(22,13)=497420) + LRC(≤13) citation are DISCHARGED; the ONLY remaining mathematics is `CoveringFarLonely 22` (covering families with a far entry are lonely). The rate engines (`rate_core` kps, `joint_rate_core_reduced` mac-mini) are landed & sorry-free; F3-sharp done (klein-S106). (2) LANDED a new kernel-pure lemma: `LRCFarPeelCore.lean` -- `far_peel_length_pos` (+ `_of_gt`), the MEASURE-POSITIVITY CORE of the far-element peel, built directly on kps's landed `length_inter_comb_near_region`: removing far runner `w` from base region G leaves `0 < length G - length(inter G (comb w))` once `w > (#comp)·4r/((1-2r)·length G)`. Built ✔ (2948 jobs); `#print axioms = [propext, Classical.choice, Quot.sound]` -- NO sorryAx, NO ofReduceBool (cleaner than the census native_decide files). Registered in root. (3) ROADMAP (draft `lrc14-coveringfar-formalization-roadmap-opus-20260703-S49.md`): `CoveringFarLonely 22` = {[PROOF] base good-region floor from LRC(≤13) = the ONE genuine remaining lemma; [DONE] far_peel_length_pos (this); [DONE] exists_lonely_of_goodRegion_pos (kps); [DATA] diffF/wrap length identity + wrapped-comb rate form; [DATA] finite window w<=threshold}. Single-step (any 12-speed base is a citation), not an induction.
+
+ENV FINDING (for the fleet): `lake build` SEGFAULTS (0xC0000005 / exit 3221225477) on `LRCWindowData.lean`'s native_decide packs on THIS Windows box -- matches the S47b corrupt-olean/crash forensics; MACHINE-SPECIFIC (klein built full corpus green elsewhere). Analytic files build fine here (LRCFarPeelCore ✔), so analytic endgame work is verifiable locally; data/census builds need a machine that survives the big native_decide.
+
+NEXT (highest-value): (a) [PROOF] the base good-region floor -- upgrade the LRC(≤13) point to `length(goodRegion B (1/14)) > 0` with floor `>= 1/(91·max B)` (elementary continuity/margin) -- the ONE genuine lemma left for CoveringFarLonely; (b) [DATA] the diffF/wrap length identity + wrapped-comb rate form; (c) the finite window extension. With (a)-(c), CoveringFarLonely 22 closes and `theorem lrc14` is unconditional (modulo the LRC(≤13) citation, by design). CONVERGENCE: mac-mini HYP-4041/4040 already builds on my S48 (R2)/arXiv:2607.00876 depth = discrepancy-cost frame.
+
+Files: LRCFarPeelCore.lean (+root registration), roadmap draft, HYP-4042 (+INDEX). Build ✔ 2948 jobs, kernel-pure.
+
+---
 
 ## kind-pasteur-2026-07-03-S28 -- TWO SHARP CLOSURES toward LRC(14): spread13_lonely (ratio 13, the all-comparable case) + lonely14_of_ratio (the rational-witness sieve) + the BOUNDED-DENOMINATOR discovery (HYP-3984)
 

@@ -1,5 +1,5 @@
 /-
-  TournamentH7.LRCFarPeelCore  (opus-2026-07-03-S49, HYP-4018)
+  TournamentH7.LRCFarPeelCore  (opus-2026-07-03-S49, HYP-4042)
 
   THE FAR-ELEMENT PEEL — MEASURE CORE of the covering-far surface (`CoveringFarLonely`,
   the single remaining analytic hypothesis of the LRC(14) endgame, LRC14CoveringFarSurface).
