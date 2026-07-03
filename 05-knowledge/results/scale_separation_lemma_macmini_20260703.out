@@ -1,0 +1,19 @@
+SCALE-SEPARATION LEMMA verification: (i)+(ii) => S=R u C lonely on the window W.
+============================================================================================
+                  R (base)      t0   delta  cluster N    D  (i)N>=Vr/2d (ii)Dtmax<6/7  M_S on W  lonely
+              [4, 5, 6, 9]  0.0769  0.2363         79    3         True          True   0.28409    True
+                [2, 5, 16]  0.2857  0.3571        101    1         True          True   0.35960    True
+        [5, 9, 11, 13, 14]  0.0526  0.1917        132    2         True          True   0.26316    True
+                [8, 9, 18]  0.0741  0.2619        103    4         True          True   0.28571    True
+                 [3, 7, 8]  0.2000  0.3286         81    2         True          True   0.31097    True
+         [2, 7, 9, 16, 17]  0.3889  0.1508        149    1         True          True   0.21854    True
+            [1, 4, 16, 18]  0.4091  0.2922        127    1         True          True   0.29412    True
+    [5, 8, 14, 16, 18, 19]  0.0909  0.2013        141    5         True          True   0.22500    True
+               [3, 17, 18]  0.1429  0.3571        105    3         True          True   0.29577    True
+
+(i)+(ii) satisfied in 18 trials; S lonely on W in 18/18
+BOUNDARY probe: violate (ii) (cluster too WIDE, D*tmax >> 6/7) -- expect failures on W:
+  violating (ii): 0/300 FAIL to be lonely on W (confirms (ii) is a real, necessary condition)
+
+=> (i)+(ii) => S lonely on W: a clean scale-separation lemma. Reduces a near-equal-cluster family
+   to its bounded base R. Recurse on R -> spread13 / bounded-denominator census. Formalizable.
