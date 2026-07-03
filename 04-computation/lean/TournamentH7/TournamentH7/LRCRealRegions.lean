@@ -346,5 +346,132 @@ theorem rlength_rdiff_partition :
       rw [hswap, hcons, rlength_inter_append_right]
       linarith
 
+/-! ## Stage 3 — the exact depletion identity and THE HUNTER LEDGER -/
+
+/-- Intersection mass decomposes over the window list's singletons. -/
+theorem rlength_inter_singletons (A : RRegion) :
+    ∀ D : RRegion, rlength (rinter A D) = (D.map fun d => rlength (rinter A [d])).sum := by
+  intro D
+  induction D with
+  | nil => rw [rlength_inter_nil]; rfl
+  | cons d D ih =>
+      have hcons : (d :: D : RRegion) = [d] ++ D := rfl
+      rw [hcons, rlength_inter_append_right, ih, List.map_append, List.sum_append]
+      simp
+
+/-- Subtracting one live interval shrinks mass. -/
+theorem rlength_rdiff1_le (L : RRegion) {q : ℝ × ℝ} (hq : q.1 ≤ q.2) :
+    rlength (rdiff1 L q) ≤ rlength L := by
+  have h := rlength_diff1_add_inter L hq
+  have h2 := rlength_nonneg (rinter L [q])
+  linarith
+
+/-- **THE EXACT DEPLETION IDENTITY**: intersecting a subtracted region with a window
+list loses EXACTLY the per-window joint mass with the subtrahend.  (Subtrahend `D'`
+sorted-separated live; the window list `Di` arbitrary.) -/
+theorem rlength_inter_rdiff_expand (D' : RRegion) (hlive : ∀ r ∈ D', r.1 ≤ r.2)
+    (hsep : SortedSep D') (X : RRegion) (Di : RRegion) :
+    rlength (rinter (rdiff X D') Di)
+      = rlength (rinter X Di)
+        - (Di.map fun d => rlength (rinter (rinter X [d]) D')).sum := by
+  induction Di with
+  | nil =>
+      rw [rlength_inter_nil, rlength_inter_nil]
+      simp only [List.map_nil, List.sum_nil]
+      ring
+  | cons d Di ih =>
+      have hconsd : (d :: Di : RRegion) = [d] ++ Di := rfl
+      rw [hconsd, rlength_inter_append_right, rlength_inter_append_right, ih]
+      have hhead : rlength (rinter (rdiff X D') [d])
+          = rlength (rinter X [d]) - rlength (rinter (rinter X [d]) D') := by
+        rw [rinter_rdiff_single, rlength_rdiff_partition D' (rinter X [d]) hlive hsep]
+      rw [hhead]
+      simp only [List.map_append, List.map_cons, List.map_nil, List.sum_append,
+        List.sum_cons, List.sum_nil, add_zero]
+      ring
+
+/-- Depletion monotonicity: subtraction only shrinks any window-intersection mass. -/
+theorem rlength_inter_rdiff_le (D' : RRegion) (hlive : ∀ r ∈ D', r.1 ≤ r.2)
+    (hsep : SortedSep D') (X : RRegion) (B : RRegion) :
+    rlength (rinter (rdiff X D') B) ≤ rlength (rinter X B) := by
+  rw [rlength_inter_rdiff_expand D' hlive hsep X B]
+  have hnn : 0 ≤ (B.map fun d => rlength (rinter (rinter X [d]) D')).sum := by
+    apply List.sum_nonneg
+    intro x hx
+    rw [List.mem_map] at hx
+    obtain ⟨d, _, rfl⟩ := hx
+    exact rlength_nonneg _
+  linarith
+
+/-- The pair credits of the sequential peel: for each CONSECUTIVE pair of danger
+regions, the joint mass of the second's windows with the first, measured on the
+region as depleted so far.  These are the Hunter/path-Bonferroni credit terms. -/
+noncomputable def pairCredits (I : RRegion) : List RRegion → ℝ
+  | [] => 0
+  | [_] => 0
+  | D₁ :: D₂ :: rest =>
+      ((D₂.map fun d => rlength (rinter (rinter I [d]) D₁)).sum)
+        + pairCredits (rdiff I D₁) (D₂ :: rest)
+
+@[simp] theorem pairCredits_nil (I : RRegion) : pairCredits I [] = 0 := rfl
+
+@[simp] theorem pairCredits_single (I : RRegion) (D : RRegion) :
+    pairCredits I [D] = 0 := rfl
+
+theorem pairCredits_cons₂ (I : RRegion) (D₁ D₂ : RRegion) (rest : List RRegion) :
+    pairCredits I (D₁ :: D₂ :: rest)
+      = ((D₂.map fun d => rlength (rinter (rinter I [d]) D₁)).sum)
+        + pairCredits (rdiff I D₁) (D₂ :: rest) := rfl
+
+/-- **THE HUNTER LEDGER** (path-tree Bonferroni, EXACT credits): the surviving mass
+of a sequential peel is at least the window mass, minus each danger's FULL mass on
+the ORIGINAAL window, PLUS the consecutive-pair credits.  No loss terms: the pair
+credits are measured exactly where they arise. -/
+theorem hunter_ledger :
+    ∀ (Ds : List RRegion), (∀ D ∈ Ds, ∀ r ∈ D, r.1 ≤ r.2) → (∀ D ∈ Ds, SortedSep D) →
+    ∀ (I : RRegion),
+    rlength (Ds.foldl rdiff I)
+      ≥ rlength I - (Ds.map fun D => rlength (rinter I D)).sum + pairCredits I Ds := by
+  intro Ds
+  induction Ds with
+  | nil =>
+      intro _ _ I
+      simp
+  | cons D₁ tail ih =>
+      intro hlive hsep I
+      have hliveD₁ : ∀ r ∈ D₁, r.1 ≤ r.2 := hlive D₁ (List.mem_cons_self ..)
+      have hsepD₁ : SortedSep D₁ := hsep D₁ (List.mem_cons_self ..)
+      have hlivetail : ∀ D ∈ tail, ∀ r ∈ D, r.1 ≤ r.2 :=
+        fun D hD => hlive D (List.mem_cons_of_mem _ hD)
+      have hseptail : ∀ D ∈ tail, SortedSep D :=
+        fun D hD => hsep D (List.mem_cons_of_mem _ hD)
+      have hfold : (D₁ :: tail).foldl rdiff I = tail.foldl rdiff (rdiff I D₁) :=
+        List.foldl_cons ..
+      have hI' : rlength (rdiff I D₁) = rlength I - rlength (rinter I D₁) :=
+        rlength_rdiff_partition D₁ I hliveD₁ hsepD₁
+      cases tail with
+      | nil =>
+          simp only [hfold, List.foldl_nil, List.map_cons, List.map_nil, List.sum_cons,
+            List.sum_nil, pairCredits_single]
+          linarith
+      | cons D₂ rest =>
+          have hih := ih hlivetail hseptail (rdiff I D₁)
+          -- expand the D₂-mass on the depleted region: the head credit appears exactly
+          have hexp : rlength (rinter (rdiff I D₁) D₂)
+              = rlength (rinter I D₂)
+                - ((D₂.map fun d => rlength (rinter (rinter I [d]) D₁)).sum) :=
+            rlength_inter_rdiff_expand D₁ hliveD₁ hsepD₁ I D₂
+          -- the rest of the masses only shrink under depletion
+          have hrest : ((rest.map fun D => rlength (rinter (rdiff I D₁) D)).sum)
+              ≤ (rest.map fun D => rlength (rinter I D)).sum := by
+            apply List.sum_le_sum
+            intro D hD
+            exact rlength_inter_rdiff_le D₁ hliveD₁ hsepD₁ I D
+          rw [hfold]
+          rw [pairCredits_cons₂]
+          simp only [List.map_cons, List.sum_cons] at hih ⊢
+          rw [hexp] at hih
+          linarith [hih, hrest, hI']
+
 end RealRegion
 end LonelyRunner
