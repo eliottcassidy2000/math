@@ -89,6 +89,18 @@ peel the top scale, recurse on the (bounded) core; the tower depth `~log(max-spe
 this note lower-bounds. The dyadic band ladder + renormalization tower is the matching upper-bound construction
 (the binary-tree import from arXiv:2607.00876).
 
+## Connection to the measure-side scale-invariance (klein HYP-3791, OPEN-Q-108)
+The arithmetic blowup here is the DUAL of klein's measure-side finding [[HYP-3791]]: the r-far correction is
+self-similar over the **13-lattice** (`13 = n-1 =` the dropped speed `= 1/`first-CF-convergent of
+`t* = 14/183 = [0;13,14]`), and the 13-spaced pair resonance does NOT decay in scale `W` (persists
+`W = 200..50000`) because `13 t* = 182/183 = -1/183 (mod 1)` is a slow resonant phase. That scale-non-decay is
+the measure twin of "aligned band-blockers persist at any magnitude" here. Both are **scale-invariant
+resonances pinned to continued-fraction-convergent lattices** ([[HYP-3762]] three-gap / CF), one seen through
+the danger MEASURE (klein) and one through the residue at the small-`q` WITNESS (this). klein's
+"resonance => redundancy => no multi-far beater" (the [[OPEN-Q-108]] residual) is, arithmetically, "13-spaced
+far runners differ in phase by `~k/183 << 1/14`, so they cover the SAME danger, not new danger." Worth a joint
+measure/arithmetic writeup: the two pictures may close OPEN-Q-108 together (redundancy on both sides).
+
 ## Engineering resonance
 The "cost of covering all scales" is a shared engineering primitive: the binary-tree mechanism pays it as
 `log^{3/2}` noise; LRC pays it as a `Theta(log)` denominator. Both say: to be simultaneously good at every

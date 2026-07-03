@@ -14,6 +14,20 @@ HONEST STATUS: LRC(14) NOT closed (open research). spread13 closes the all-compa
 
 FILES: LRCSpread13.lean (spread13_lonely + lonely14_of_ratio, registered); 2 numerical probes + outs; HYP-3984 INDEX; reflection; this entry. No canon overridden.
 
+## mac-mini-2026-07-03-S22 -- WITNESS-DENOMINATOR LOWER BOUND (discrepancy, arXiv:2607.00876 analogy) PROVES no uniform band; CORRECTED my S21 band {15..33}->{15..~50} (MISTAKE-095: aligned drifts are band-blockers); connected to klein's 13-lattice (HYP-3791/OPEN-Q-108)
+
+Prompt (owner): push/pull often, integrate+extend agents, finish LRC14 open math, mine the repo, think analogously about arXiv:2607.00876 (binary-tree continual counting, Omega(log^{3/2}n)).
+
+THE ARXIV ANALOGY -> A THEOREM (HYP-4040). arXiv:2607.00876: controlling prefix sums at ALL time scales costs Theta(log^{3/2}n), tight via hereditary discrepancy. LRC dual: the smallest lonely DENOMINATOR = cost of dodging danger at ALL moduli (scales). PROVED lower bound: for the lcm family S_X={1..11,13,lcm(2..X)}, any q<=X divides lcm(2..X) => that runner at danger residue 0 => S_X NOT lonely at any a/q, q<=X. So q(S_X) > X -> infinity: NO uniform arithmetic band closes hge7 (RIGORIZES HYP-+2876). max-speed=e^{Theta(X)} => q(S_X)=Theta(log max-speed). Blowup SURVIVES compression (aligned near-equal), so it hits the genuinely-open hge7 obligation, not just the dominant lcm case.
+
+CORRECTION OF MY OWN S21 (MISTAKE-095). HYP-3877's 'near-equal => band {15..33}' used RANDOM drifts. ALIGNED drifts break it: far_i = q_i*round(N/q_i) (span-ratio ~1.00, each ≡0 mod q_i) block band moduli by division -> witness q up to 47,49. Honest band-below = {15..~50} for max-speed<22638 (164k adversarial families, 0 fail). Mechanism + magnitude-split architecture survive; band SIZE corrected 33->~50. Danger set = 2*ceil(q/14)-1 residues (=3={0,1,q-1} only for q<=28). Broadcast to fleet (codex-S368 had restated {15..33}).
+
+REPO MINE -> CONNECTION. klein's HYP-3791 (measure-side) already found the 13-LATTICE self-similarity: r-far correction resonates iff comb-diff in 13ℤ (13=n-1=1/first-CF-convergent of t*=14/183=[0;13,14]), persisting across scale W (no decay) because 13t*=182/183=-1/183. That is the MEASURE twin of my aligned band-blockers persisting across magnitude. Both = scale-invariant resonances on CF-convergent lattices (HYP-3762 three-gap). LEVER for OPEN-Q-108 (multi-far uniform bound = the measure route's residual): a 13-spaced comb of <=13 runners spans only 12/183=0.0656 < 1/14=0.0714 in phase at t*, and the core {1..12} has slack 14/183-1/14=13/2562 -- so the fast comb is safe-PLACEABLE within the core's slack (perturbation/renormalization argument). Handed to klein/opus.
+
+ARCHITECTURE: hge7 is provably two-sided (arithmetic band <~22638 + analytic/renormalization above) -- HYP-4040 says stop hunting a uniform band. RENORMALIZATION READING (dual to opus HYP-3901): near-equal cluster {N+c_i} has far residues Na+{c_i a} = difference core {c_i} shifted by scale Na mod q; peel scale, recurse on bounded core, ~log(max-speed) tower depth = the discrepancy cost.
+
+FILES: HYP-4040 (LB proved) + detail; MISTAKE-095; HYP-3877 corrected; reflection the-cost-of-all-scales-discrepancy-lonely-runner.md; 6 S22 scripts+outputs (lcm_witness_denominator, nearequal_bandblocker_stress, corrected_band_below_threshold, compressed_bandblocker, dyadic_magnitude_ladder, +the comb check). ~7 push/pull cycles. No canon overridden; LRC(14) unchanged on the measure track (hp0cap+hpartA / one finite census, kps-S30).
+
 ## mac-mini-2026-07-03-S21 -- THE ARITHMETIC BAND ROUTE: near-equal far (regime C + c>=8 near-equal) closes by the small-q witness t=a/q, band {15..33}; this is EXACTLY kps-S27's "independence-fails / near-equal" frontier, closed arithmetically (HYP-3877)
 
 Prompt (owner): long creative session on the regime-C arithmetic crux + c>=8; search past work for connections.
