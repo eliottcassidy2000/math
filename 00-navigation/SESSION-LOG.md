@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-02-S19 -- THE CITE-CHAIN THEOREM (spread-7 dilation + nested-window engine + cite-any-k composition, ALL KERNEL-PURE) + the registration prefix-bug fixed (HYP-3976)
+
+Prompt (owner): long session, formalize the entire compressed core, creative techniques.
+
+DELIVERED (LRCChainPeel.lean, 4 build rounds, registered, corpus 8615 green):
+ - **spread7_lonely** (the dilation window): all absolute speeds in [W, 7W] -> lonely at t = 1/(14W) OUTRIGHT (every |v_i| t in [1/14, 1/2]; m != 0 handled by |m| - 1/2 >= 1/2). Zero citations, zero census.
+ - **good_window_step**: inside any interval [a, a+L] with w L >= 3/2, runner w owns the FULL sub-window [(j+1/14)/w, (j+1/14+1/2)/w] (j = ceil(wa - 1/14)) -- every point keeps the 1/14 band with room (>= 1/14 left, >= 3/7 right).
+ - **ChainOK + good_chain** (the nesting engine): the recursive window ledger (head half-covers the window; successors work inside the head 1/(2w)-window -- consecutive RATIO 3 suffices); a ChainOK list digs a common good point out of any base interval.
+ - **cite_chain_lonely** (the composition): cite ANY k <= 12 runners (bounded by B) at gap 1/(k+1); the margin transports to [t0 +- delta], delta = (13-k)/(14(k+1)B), consumed EXACTLY at 1/14 for EVERY k (1/(k+1) - B delta = 1/14 identically); the remaining runners as a ChainOK chain nest inside. k=12 recovers a 91-peel variant; k=0 = the pure lacunary case (no citation needed); mixed k = every ratio-structured compressed family.
+
+WHAT THIS CLOSES: the compressed core RATIO-STRUCTURED stratum in full generality -- any family admitting any split (cited bottom, ratio-3 top chain with the integer-clean entry 4(13-k) w >= 42(k+1) B) is lonely, kernel-pure modulo the citation node. Together with S18 (the 91-peel, now a special case) and spread7, the genuinely remaining core = families where BELOW EVERY split some consecutive ratio drops under 3 AND spread > 7 AND the band is exceeded -- the near-equal-block regime (difference-lattice land; the arc/measure route = S14 damped peel + mac-mini fresh JointRateCore is the live attack; the chain base interval can equally be fed by an ARC instead of a citation point -- the routes compose).
+
+BUG FIXED (mine, fleet lore): the S18 root-registration used a global str.replace anchored on a PREFIX of another import (LRCWindowData matched inside klein LRCWindowData22), mangling it into the dangling LRCTopRatioPeel22 that mac-mini hotfixed; my S19 edit re-mangled it (LRCChainPeel22). RESOLVED: proper import block restored (WindowData22 + TopRatioPeel + ChainPeel), corpus verified green. LORE: registration replaces MUST anchor on the full line including the trailing newline.
+
+FILES: LRCChainPeel.lean (new, registered, kernel-pure); root import repair; HYP-3976 INDEX; this entry. No canon overridden.
+
 ## mac-mini-2026-07-02-S17 -- THE INTERMEDIATE BAND: joint rate_core (sharp-F3) INDEPENDENTLY VERIFIED + mechanism SHARPENED + the telescoping ENGINE formalized (JointRateCore.lean sorry-free) (HYP-3874)
 
 Prompt (owner): vigorously pursue the remaining mathematics of the intermediate band; ensure all math complete; begin formalizing all parts of the proof; make as much progress as possible.
