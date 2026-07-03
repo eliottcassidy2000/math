@@ -507,5 +507,127 @@ theorem length_ge_of_safe_interval {speeds : List ℤ} {h : ℚ}
   obtain ⟨hx0, hx1', hgood⟩ := hsafe x hx1 hx2
   exact good2_mem_of_strict hpos hx0 hx1' hgood
 
+/-- **THE QUANTITATIVE BASE FLOOR from the citation** (explicit bound).  Sharpens
+`base_floor_of_cite`'s `0 < length` to an EXPLICIT lower bound `1/(400·ΣB) ≤ length`: the
+`LRC(≤13)` citation gives a real `t0` at margin `1/13`; a rational `x` within `1/(400·ΣB)` of
+`t0` has fractional part `x'` that is `≥ 1/13 − 1/400`-good, and a one-sided rational interval
+of width `1/(400·ΣB)` beyond `x'` (chosen inside `[0,1)` by casing on `x' ≤ 1/2`) stays
+`> 1/14`-good (slack `1/13 − 1/200 > 1/14`).  `length_ge_of_safe_interval` then gives the
+width as the floor.  This is the tower-rung (opus HYP-4046) quantitative floor, discharged. -/
+theorem base_floor_quant_of_cite (cite : LonelyRunner.LRCUpTo13) (base : Fin 12 → ℤ)
+    (hpos : ∀ i, 0 < base i) :
+    1 / (400 * ((∑ i, base i : ℤ) : ℚ)) ≤ length (goodRegion2 (List.ofFn base) (1 / 14)) := by
+  obtain ⟨t0, ht0⟩ := cite 12 (by norm_num) base (fun i => (hpos i).ne')
+  set V : ℤ := ∑ i, base i with hV
+  have hVpos : 0 < V := Finset.sum_pos (fun i _ => hpos i) ⟨0, Finset.mem_univ 0⟩
+  have hVQ : (0 : ℚ) < (V : ℚ) := by exact_mod_cast hVpos
+  have hV1 : (1 : ℚ) ≤ (V : ℚ) := by
+    have : (1 : ℤ) ≤ V := by omega
+    exact_mod_cast this
+  have hVR : (0 : ℝ) < (V : ℝ) := by exact_mod_cast hVpos
+  have hle : ∀ i, base i ≤ V := fun i =>
+    Finset.single_le_sum (fun j _ => (hpos j).le) (Finset.mem_univ i)
+  set δ : ℝ := 1 / (400 * (V : ℝ)) with hδ
+  have hδpos : (0 : ℝ) < δ := by rw [hδ]; positivity
+  obtain ⟨x, hx1, hx2⟩ := exists_rat_btwn (show t0 - δ < t0 + δ by linarith)
+  have hxt : |(x : ℝ) - t0| < δ := by rw [abs_lt]; constructor <;> linarith
+  set ρ : ℚ := 1 / (400 * (V : ℚ)) with hρ
+  have hρpos : (0 : ℚ) < ρ := by rw [hρ]; positivity
+  set x' : ℚ := Int.fract x with hx'
+  have hx'0 : 0 ≤ x' := Int.fract_nonneg x
+  have hx'1 : x' < 1 := Int.fract_lt_one x
+  -- every rational `y` within `ρ` of `x'` is strictly `1/14`-good for the base
+  have hgoodY : ∀ y : ℚ, |y - x'| ≤ ρ → ∀ i : Fin 12, ∀ m : ℤ,
+      (1 : ℚ) / 14 < |(base i : ℚ) * y - m| := by
+    intro y hy i m
+    have hbR : (0 : ℝ) < (base i : ℝ) := by exact_mod_cast hpos i
+    have hbleR : (base i : ℝ) ≤ (V : ℝ) := by exact_mod_cast hle i
+    set m'' : ℤ := m + base i * ⌊x⌋ with hm''
+    have hcit := ht0 i m''
+    have hcast13 : (1 : ℝ) / (13 : ℕ) = 1 / 13 := by norm_num
+    rw [hcast13] at hcit
+    -- the two-perturbation triangle bound
+    have hkey : (base i : ℝ) * t0 - (m'' : ℝ)
+        = ((base i : ℝ) * (y : ℝ) - (m : ℝ)) + (base i : ℝ) * (t0 - (x : ℝ))
+            + (base i : ℝ) * ((x' : ℝ) - (y : ℝ)) := by
+      have hfr : ((x' : ℚ) : ℝ) = (x : ℝ) - ((⌊x⌋ : ℤ) : ℝ) := by
+        rw [hx']; push_cast [Int.fract]; ring
+      rw [hm'']; push_cast; rw [hfr]; ring
+    have htri : |(base i : ℝ) * t0 - (m'' : ℝ)|
+        ≤ |(base i : ℝ) * (y : ℝ) - (m : ℝ)|
+          + (base i : ℝ) * |t0 - (x : ℝ)| + (base i : ℝ) * |(x' : ℝ) - (y : ℝ)| := by
+      rw [hkey]
+      calc |((base i : ℝ) * (y : ℝ) - (m : ℝ)) + (base i : ℝ) * (t0 - (x : ℝ))
+              + (base i : ℝ) * ((x' : ℝ) - (y : ℝ))|
+          ≤ |((base i : ℝ) * (y : ℝ) - (m : ℝ)) + (base i : ℝ) * (t0 - (x : ℝ))|
+              + |(base i : ℝ) * ((x' : ℝ) - (y : ℝ))| := abs_add_le _ _
+        _ ≤ (|(base i : ℝ) * (y : ℝ) - (m : ℝ)| + |(base i : ℝ) * (t0 - (x : ℝ))|)
+              + |(base i : ℝ) * ((x' : ℝ) - (y : ℝ))| := by
+            have := abs_add_le ((base i : ℝ) * (y : ℝ) - (m : ℝ)) ((base i : ℝ) * (t0 - (x : ℝ)))
+            linarith
+        _ = |(base i : ℝ) * (y : ℝ) - (m : ℝ)|
+              + (base i : ℝ) * |t0 - (x : ℝ)| + (base i : ℝ) * |(x' : ℝ) - (y : ℝ)| := by
+            rw [abs_mul, abs_mul, abs_of_pos hbR]
+    -- perturbation bounds: each ≤ 1/400
+    have hb1 : (base i : ℝ) * |t0 - (x : ℝ)| < 1 / 400 := by
+      calc (base i : ℝ) * |t0 - (x : ℝ)| ≤ (V : ℝ) * |t0 - (x : ℝ)| :=
+            mul_le_mul_of_nonneg_right hbleR (abs_nonneg _)
+        _ < (V : ℝ) * δ := by
+            rw [abs_sub_comm]; exact mul_lt_mul_of_pos_left hxt hVR
+        _ = 1 / 400 := by rw [hδ]; field_simp
+    have hb2 : (base i : ℝ) * |(x' : ℝ) - (y : ℝ)| ≤ 1 / 400 := by
+      have hyR : |((x' : ℚ) : ℝ) - ((y : ℚ) : ℝ)| ≤ ((ρ : ℚ) : ℝ) := by
+        rw [abs_sub_comm]
+        have : |((y : ℚ) : ℝ) - ((x' : ℚ) : ℝ)| = (|y - x'| : ℚ) := by
+          push_cast; ring_nf
+        rw [this]; exact_mod_cast hy
+      calc (base i : ℝ) * |(x' : ℝ) - (y : ℝ)| ≤ (V : ℝ) * ((ρ : ℚ) : ℝ) :=
+            mul_le_mul hbleR hyR (abs_nonneg _) hVR.le
+        _ = 1 / 400 := by rw [hρ]; push_cast; field_simp
+    have hgR : (1 : ℝ) / 14 < |(base i : ℝ) * (y : ℝ) - (m : ℝ)| := by
+      have h14 : (1 : ℝ) / 13 - 1 / 400 - 1 / 400 > 1 / 14 := by norm_num
+      linarith
+    have hcastabs : |(base i : ℝ) * (y : ℝ) - (m : ℝ)|
+        = ((|(base i : ℚ) * y - m| : ℚ) : ℝ) := by push_cast; ring_nf
+    rw [hcastabs] at hgR
+    have : ((1 : ℚ) / 14 : ℝ) < ((|(base i : ℚ) * y - m| : ℚ) : ℝ) := by push_cast; linarith
+    exact_mod_cast this
+  -- the base speeds are positive as a list, and the interval fits in [0,1) by casing
+  have hposL : ∀ s ∈ List.ofFn base, 0 < s := by
+    intro s hs; obtain ⟨i, rfl⟩ := List.mem_ofFn.mp hs; exact hpos i
+  have hρval : (x' + ρ) - x' = ρ := by ring
+  rcases le_or_gt x' (1 / 2) with hhalf | hhalf
+  · -- right interval [x', x' + ρ] ⊆ [0,1)
+    have hsafe : ∀ z : ℚ, x' ≤ z → z < x' + ρ → 0 ≤ z ∧ z < 1 ∧
+        ∀ s ∈ List.ofFn base, ∀ m : ℤ, (1 : ℚ) / 14 < |(s : ℚ) * z - m| := by
+      intro z hz1 hz2
+      have hρsmall : ρ ≤ 1 / 400 := by
+        rw [hρ]
+        exact one_div_le_one_div_of_le (by norm_num) (by nlinarith [hV1])
+      refine ⟨by linarith, by linarith, ?_⟩
+      intro s hs m
+      obtain ⟨i, rfl⟩ := List.mem_ofFn.mp hs
+      exact hgoodY z (by rw [abs_le]; constructor <;> linarith) i m
+    have hlen := length_ge_of_safe_interval hposL (by norm_num : (0:ℚ) ≤ 1/14) hsafe
+    rw [hρval] at hlen
+    calc 1 / (400 * ((∑ i, base i : ℤ) : ℚ)) = ρ := by rw [hρ, hV]
+      _ ≤ length (goodRegion2 (List.ofFn base) (1 / 14)) := hlen
+  · -- left interval [x' - ρ, x'] ⊆ [0,1)
+    have hsafe : ∀ z : ℚ, x' - ρ ≤ z → z < x' → 0 ≤ z ∧ z < 1 ∧
+        ∀ s ∈ List.ofFn base, ∀ m : ℤ, (1 : ℚ) / 14 < |(s : ℚ) * z - m| := by
+      intro z hz1 hz2
+      have hρsmall : ρ ≤ 1 / 400 := by
+        rw [hρ]
+        exact one_div_le_one_div_of_le (by norm_num) (by nlinarith [hV1])
+      refine ⟨by linarith, by linarith, ?_⟩
+      intro s hs m
+      obtain ⟨i, rfl⟩ := List.mem_ofFn.mp hs
+      exact hgoodY z (by rw [abs_le]; constructor <;> linarith) i m
+    have hlen := length_ge_of_safe_interval hposL (by norm_num : (0:ℚ) ≤ 1/14) hsafe
+    have hρval2 : x' - (x' - ρ) = ρ := by ring
+    rw [hρval2] at hlen
+    calc 1 / (400 * ((∑ i, base i : ℤ) : ℚ)) = ρ := by rw [hρ, hV]
+      _ ≤ length (goodRegion2 (List.ofFn base) (1 / 14)) := hlen
+
 end RatIntervals
 end LonelyRunner
