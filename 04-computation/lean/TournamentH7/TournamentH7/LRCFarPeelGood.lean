@@ -79,5 +79,25 @@ theorem far_peel_lonely (v : Fin 13 → ℤ) (hv : ∀ i, 0 < v i)
   rw [← heq] at hpeel
   exact exists_lonely_of_goodRegion2_pos v hv hpeel
 
+/-- **A member forces positive length** (reverse of `exists_mem_of_length_pos`): if a
+rational `x` lies in a region `L`, then `L` has positive length — because the piece
+containing `x` has `p.1 ≤ x < p.2`, hence is non-degenerate.  This reduces the base
+good-region floor (step 1) to producing ONE rational good point. -/
+theorem length_pos_of_mem {L : Region} {x : ℚ} (hx : mem x L) : 0 < length L := by
+  obtain ⟨p, hpL, hp1, hp2⟩ := hx
+  have hpos : (0 : ℚ) < p.2 - p.1 := by linarith
+  unfold length
+  have hnn : ∀ y ∈ L.map fun q => max 0 (q.2 - q.1), (0 : ℚ) ≤ y := by
+    intro y hy
+    rw [List.mem_map] at hy
+    obtain ⟨q, _, rfl⟩ := hy
+    exact le_max_left _ _
+  have hmem : (max 0 (p.2 - p.1)) ∈ L.map fun q => max 0 (q.2 - q.1) :=
+    List.mem_map_of_mem hpL
+  have hle := List.single_le_sum hnn _ hmem
+  have heq : max 0 (p.2 - p.1) = p.2 - p.1 := max_eq_right hpos.le
+  rw [heq] at hle
+  linarith
+
 end RatIntervals
 end LonelyRunner
