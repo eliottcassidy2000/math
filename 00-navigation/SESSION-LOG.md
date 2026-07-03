@@ -11,6 +11,31 @@ THE MATHEMATICS (design decisions of record):
 WHAT THIS CLOSES: every compressed family whose near-equal structure consists of PAIRS separated by chain-able ratios (entry constants per level type) -- with the S18 91-peel and S19 cite-chain as special cases. THE RESIDUAL CORE, now visibly thinner: families with a 3+-near-equal block (three runners pairwise within ratio 3) above every split. The sixths-grid triple dodge (5 candidates, per-partner kills <= 2 -- resonance analysis recorded) is the next stage; 4-blocks sit at the union-bound boundary; 5+ blocks are genuinely the difference-lattice regime (arc/measure route: S14 damped peel + mac-mini JointRateCore).
 
 FILES: LRCPairBlock.lean (new, registered, kernel-pure, 2 rounds); HYP-3977 INDEX; this entry. Root registration used the FULL-LINE anchor per S19 lore. No canon overridden.
+## klein-2026-07-02-S114 -- THE 13-RATIO PEEL: sharpened top_ratio_lonely from 91 to 13, shrinking the remaining COMPRESSED-family gap of LRC(14) by 7x. Sorry-free, foundational-axioms-only (HYP-4019).
+
+Prompt: work on the peel/rate descent (or other techniques) toward a fully unconditional LRC(14); many pushes/pulls.
+
+RESULT (LRCTopRatioPeel13.lean, builds sorry-free, registered in the root module, full corpus green 8490 jobs): sharpened kps-S18's top_ratio_lonely from ratio 91 to ratio 13.
+
+THE IDEA: kps's peel sends the far runner to a HALF-INTEGER (distance 1/2 from Z), which needs its dial to span a FULL unit over the transport window [t0-delta,t0+delta] (delta=1/(182B)) => |v i0| >= 91*B. But Lonely 14 only requires distance >= 1/14, so the far runner's dial need only span the danger width 2*(1/14) = 1/7 to be guaranteed a 1/14-safe phase => |v i0| >= 91/7 * B = 13*B. (Verified arithmetic: margin 1/13-1/14 = 1/182; swept phase |v i0|*2delta = |v i0|/(91B) >= 1/7 <=> |v i0| >= 13B.)
+
+PROVED (sorry-free; #print axioms = [propext, Classical.choice, Quot.sound] ONLY -- pure real analysis + the LRC(<=13) citation as a hypothesis, no sorry, no native_decide):
+  - safe_point_in_interval (lo hi) (1/7 <= hi-lo): every real interval of length >= 1/7 contains a point at distance >= 1/14 from Z (3-case fract argument; the danger set is open intervals of width 1/7).
+  - top_ratio_lonely_13 (cite) (|v i0| >= 13*B): the peel (same 1/13-1/182=1/14 transport as kps, sharper far step, both signs of v i0 handled).
+  - top_ratio_lonely_13' (max-entry form, via Finset.sup' argmax).
+  - lrc14_of_compressed_lonely_13 (cite) (window <=22) (compressed ratio<13): LRC14Statement.
+
+IMPACT: the remaining LRC(14) content after the window census + this peel is the COMPRESSED families with top ratio < 13 (was < 91, kps) -- a 7x smaller gap. 13 is the single-far-runner LIMIT (the margin 1/182 and danger width 1/7 are fixed); going below 13 needs the JOINT rate lemma (mac-mini JointRateCore, HYP-3874: multiple comparable far runners, Delta-free telescoping).
+
+HONEST: this SHRINKS the remaining hypothesis 7x; it does NOT close LRC(14). The compressed (ratio<13, covering, unbounded) families remain the open crux -- squarely joint-rate territory. LRC(14) still = {LRC(<=13) citation} + {window census} + {compressed families}, with the compressed band now 7x smaller.
+
+PUSHES/PULLS: pulled ~6x through the session (stayed synced; caught kps-S19 cite-chain + the fleet's endgame moves). One git snag (an old S104 stash auto-popped on a stash-pull; resolved by checkout HEAD -- the old stashes are not mine).
+
+FILES: 04-computation/lean/TournamentH7/TournamentH7/LRCTopRatioPeel13.lean (+ import in TournamentH7.lean root); HYP-4019.
+
+NEXT: (a) the joint-rate assembly for compressed families (ratio<13) -- coordinate with mac-mini (JointRateCore) + kps; (b) can two far runners peel jointly to push below 13? (c) a finite reduction of the bounded-ratio-but-unbounded compressed families via primitivity/scaling.
+
+---
 
 ## kind-pasteur-2026-07-02-S19 -- THE CITE-CHAIN THEOREM (spread-7 dilation + nested-window engine + cite-any-k composition, ALL KERNEL-PURE) + the registration prefix-bug fixed (HYP-3976)
 
