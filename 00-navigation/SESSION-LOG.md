@@ -1,3 +1,24 @@
+## mac-mini-2026-07-02-S18 -- THE SIMULTANEOUS UNION-BOUND FAR-PEEL, FORMALIZED SORRY-FREE (opus-S32's lemma; the tractable middle-band closer for j<=6) (HYP-3875)
+
+Prompt (owner): make as much progress as possible on transcribing the per-cell identity for the concrete drifting arcs + any remaining tasks; long session.
+
+REFRAME (the session's key move): the per-cell telescoping (sharp joint rate_core, HYP-3874) is the HARD route. Investigating the peel architecture (LRCPeelAssembly) revealed a TRACTABLE alternative that CLOSES the middle band for j<=6 far elements WITHOUT the telescoping: the SIMULTANEOUS UNION-BOUND peel. The program's damped_peel ITERATES (peel one far runner, re-fragment the region -> the #pieces fee compounds to O(1) per peel = the blowup). The UNION bound peels ALL far runners from the FIXED window good region L_B and sums: length(L_B minus union danger) >= |L_B| - Sum length(inter L_B danger_i), each term via kps's single-far rate on the FIXED L_B (no fragmentation). Error O(j*c_B/N), floor (1-2h*j)=(1-j/7) POSITIVE for j<7. = opus-S32 HYP-3900's simultaneous-peel lemma.
+
+FORMALIZED (LRCSimulPeel.lean, SORRY-FREE, registered, corpus green, [propext,Classical.choice,Quot.sound] only):
+ - goodRegion2_append_list: good(B++far) = diffF (good B) (far's dangers) [list generalization of goodRegion2_append].
+ - length_inter_flatMap: length(inter L (l.flatMap f)) = Sum length(inter L (f x)) [danger additivity over ++].
+ - length_inter_dangerPair_le: per-runner bound on a FIXED region, length(inter G (dangerPair w h)) <= 2h*length G + c_G*4h/w [extracted from damped_peel's core, two half-combs via kps's length_inter_comb_near_region].
+ - sum_map_far: the fee sum evaluates to |far|*(2h*|L|) + c_B*4h*Sum(1/w).
+ - goodRegion2_simul_peel (THE THEOREM): length(good(B++far)) >= (1-2h*|far|)*length(good B) - (good B).length*4h*Sum_{w in far}(1/w). ONE length_diffF_ge (no iteration/blowup).
+
+CONVERGENCE (fleet): kps-S20 HYP-3977 "union bound closes c<=4 in principle" (pair dodge + block chain) + klein-S114 HYP-4019 "below ratio 13 needs the JOINT rate" (13 = single-far limit). My general j<=6 union-bound peel is the sorry-free Lean form of the multi-far middle-band closer they both point at.
+
+ALSO (S17, this arc): JointRateCore.lean (the sharp telescoping ENGINE + reduced joint rate_core, HYP-3874) landed sorry-free. The union-bound peel (S18) is the CHEAPER route that closes j<=6 now; the telescoping (S17) is the sharper alt for the tight constant.
+
+REMAINING (named): the positivity corollary + wiring to exists_lonely_of_goodRegion2_pos (loneliness from positive good region; the bridge lonely_of_simul_peel with hsplit: List.ofFn v = B++far); the finite N* sweep per covering class; the j>=7 deep-cluster residual (union floor 1-j/7 dies -> renormalization HYP-3901, separate harder regime).
+
+Files: LRCSimulPeel.lean (registered, sorry-free); HYP-3875; reflection peel-from-the-fixed-region-not-the-shrinking-one.md. HONEST: goodRegion2_simul_peel is the LOWER-bound lemma, fully proved; the loneliness wiring + finite sweep remain. No canon overridden, no court cases.
+
 ## kind-pasteur-2026-07-02-S20 -- THE PAIR DODGE + BLOCK CHAIN (near-equal PAIRS closed, kernel-pure; the block-chain composition; residual = 3+-blocks) (HYP-3977)
 
 Prompt (owner): long session finishing the near-equal-block regime; push/pull frequently.
