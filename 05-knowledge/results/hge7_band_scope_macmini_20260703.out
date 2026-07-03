@@ -1,0 +1,47 @@
+SCOPE of the arithmetic band route over the >=7-far leg. worst band-q per regime.
+====================================================================================
+ nfar     far_kind  far_scale  #tested  #covering  worst band-q  #fail(>400)
+    7   near-equal        200      400        400            25            0
+    7   near-equal       2000      400        400            27            0
+    7   near-equal       7392      400        400            27            0
+    7   near-equal      50000      400        400            27            0
+    7       spread        200      400        400            25            0
+    7       spread       2000      400        400            27            0
+    7       spread       7392      400        400            27            0
+    7       spread      50000      400        400            26            0
+    7        mixed        200      400        400            26            0
+    7        mixed       2000      400        400            26            0
+    7        mixed       7392      400        400            29            0
+    7        mixed      50000      400        400            26            0
+    8   near-equal        200      400        400            29            0
+    8   near-equal       2000      400        400            28            0
+    8   near-equal       7392      400        400            27            0
+    8   near-equal      50000      400        400            27            0
+    8       spread        200      400        400            25            0
+    8       spread       2000      400        400            25            0
+    8       spread       7392      400        400            31            0
+    8       spread      50000      400        400            27            0
+    8        mixed        200      400        400            26            0
+    8        mixed       2000      400        400            28            0
+    8        mixed       7392      400        400            26            0
+    8        mixed      50000      400        400            27            0
+    9   near-equal        200      400        400            28            0
+    9   near-equal       2000      400        400            33            0
+    9   near-equal       7392      400        400            27            0
+    9   near-equal      50000      400        400            33            0
+    9       spread        200      400        400            28            0
+    9       spread       2000      400        400            27            0
+    9       spread       7392      400        400            27            0
+    9       spread      50000      400        400            29            0
+    9        mixed        200      400        400            25            0
+    9        mixed       2000      400        400            27            0
+    9        mixed       7392      400        400            33            0
+    9        mixed      50000      400        400            28            0
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/hge7_band_scope_macmini_20260703.py", line 62, in <module>
+    speeds = gen_covering_hge7(rng, nfar, far_kind, far_scale)
+  File "/Users/e/Documents/GitHub/math/04-computation/hge7_band_scope_macmini_20260703.py", line 38, in gen_covering_hge7
+    drifts = sorted(rng.sample(range(0, 9), nfar))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/random.py", line 482, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative

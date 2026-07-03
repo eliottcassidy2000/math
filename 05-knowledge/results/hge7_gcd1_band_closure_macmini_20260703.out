@@ -1,0 +1,10 @@
+DECISIVE: gcd=1 + covering + >=7 far  =>  band {15..33} closable?  hunting failures.
+========================================================================================
+
+tested 4563 gcd=1 covering hge7 families (236 covering gcd=1 APs among them)
+band FAILURES (no q<=600): 0
+WORST band-q = 32
+   worst family: [11, 150, 391, 1843, 3418, 4342, 5569, 6291, 6876, 7803, 8271, 8400, 8901]
+families needing q in (33,600]: 0
+
+=> gcd=1 + covering + >=7 far  CLOSES  by band {15..32}  (0 failures needed for closure)

@@ -1,0 +1,36 @@
+(1) CONTROL: dilated AP {d,2d,...,13d} -- tight (M=14/183), SPREAD. band should FAIL / need big q
+====================================================================================
+  d=1: [1, 2, 3, 4, 5]... covering=False smallest band-q=None  (14/183=0.07650)
+  d=2: [2, 4, 6, 8, 10]... covering=True smallest band-q=28  (14/183=0.07650)
+  d=3: [3, 6, 9, 12, 15]... covering=False smallest band-q=42  (14/183=0.07650)
+  d=5: [5, 10, 15, 20, 25]... covering=False smallest band-q=70  (14/183=0.07650)
+  d=14: [14, 28, 42, 56, 70]... covering=True smallest band-q=196  (14/183=0.07650)
+  => dilated AP needs a LARGE q (not in {15..33}) -- it's the tight/spread regime B, NOT regime C.
+
+(2) NEAR-EQUAL far families (regime C + c>=8 near-equal): band closes at SMALL q. all nfar.
+====================================================================================
+ nfar  far_scale  #covering  worst band-q min M(scan) sample  #fail
+    7        200        300            25             0.1817      0
+    7       2000        300            29             0.1600      0
+    7       7392        300            25             0.1736      0
+    8        200        300            25             0.2000      0
+    8       2000        300            28             0.1610      0
+    8       7392        300            28             0.2492      0
+    9        200        300            26             0.1616      0
+    9       2000        300            27             0.1680      0
+    9       7392        300            27             0.1285      0
+   10        200        300            26             0.1447      0
+   10       2000        300            27             0.1565      0
+   10       7392        300            30             0.1718      0
+   11        200        300            25             0.1500      0
+   11       2000        300            28             0.2384      0
+   11       7392        300            27             0.1372      0
+   12        200        300            30             0.2738      0
+   12       2000        300            28             0.2367      0
+   12       7392        300            31             0.2628      0
+   13        200        300            27             0.3994      0
+   13       2000        300            30             0.4854      0
+   13       7392        300            33             0.4785      0
+
+OVERALL worst band-q over near-equal families (all nfar 7..13) = 33, failures above shown.
+=> if bounded + 0 fail: band {15..33} closes ALL near-equal far blocks (regime C AND c>=8 near-equal).

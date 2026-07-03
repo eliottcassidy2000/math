@@ -1,0 +1,16 @@
+Max smallest-lonely-q over covering gcd=1 hge7 families, vs speed magnitude bound.
+========================================================================================
+ mag_bound         method  #families  MAX smallest-lonely-q  example q
+      1000  greedy+random      ~120k                     38           
+           example: [11, 17, 258, 432, 475, 588, 851, 858, 899, 900, 904, 910, 989]  -> smallest lonely q = 38
+     10000  greedy+random      ~120k                     46           
+           example: [9, 14, 430, 2691, 3255, 4316, 5084, 6804, 7600, 8730, 9372, 9657, 9792]  -> smallest lonely q = 46
+    100000  greedy+random      ~120k                     47           
+           example: [13, 19, 3240, 6630, 10664, 10944, 21780, 47212, 60816, 69000, 77560, 86100, 98124]  -> smallest lonely q = 47
+   1000000  greedy+random      ~120k                     53           
+           example: [5, 17, 75465, 231896, 242262, 335829, 408408, 597060, 597600, 760334, 766899, 774410, 884526]  -> smallest lonely q = 53
+  10000000  greedy+random      ~120k                     53           
+           example: [18, 19, 516918, 802332, 1429560, 1963724, 1967836, 2607372, 4256448, 4719750, 6278208, 8231760, 8341749]  -> smallest lonely q = 53
+
+=> if MAX-q PLATEAUS as mag grows: uniform band exists (route closes hge7 with a bigger band).
+   if MAX-q GROWS with mag: no uniform band -> band route closes near-equal/generic only, not all hge7.

@@ -1,0 +1,31 @@
+Constructing band-blockers: cover {15..33} by division with <=13 covering gcd=1 speeds.
+========================================================================================
+
+[primes+pp packing] 13 speeds, gcd(reduced)=1, covering=True, far=13
+   speeds (gcd-reduced) = [182, 308, 323, 360, 429, 432, 462, 558, 575, 580, 800, 899, 7429]
+   band moduli blocked by division: [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]  (19/19)
+   smallest BAND q (15..) lonely = 35
+   smallest ANY q lonely = 35 (a=2)   [must exist -- LRC14]
+
+[lcm-dense] 13 speeds, gcd(reduced)=1, covering=True, far=13
+   speeds (gcd-reduced) = [323, 396, 480, 496, 504, 520, 551, 667, 675, 759, 840, 2310, 2730]
+   band moduli blocked by division: [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]  (19/19)
+   smallest BAND q (15..) lonely = 34
+   smallest ANY q lonely = 34 (a=15)   [must exist -- LRC14]
+
+[maximal band cover] 12 speeds, gcd(reduced)=1, covering=True, far=12
+   speeds (gcd-reduced) = [130, 168, 180, 270, 432, 462, 520, 672, 800, 899, 990, 7429]
+   band moduli blocked by division: [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]  (19/19)
+   smallest BAND q (15..) lonely = 34
+   smallest ANY q lonely = 34 (a=3)   [must exist -- LRC14]
+
+========================================================================================
+TARGETED: maximize band moduli blocked by division among COVERING gcd=1 hge7 families.
+========================================================================================
+MAX band moduli blocked by division (over covering gcd=1 hge7) = 19/19
+   family: [175, 736, 2214, 2610, 4131, 4136, 5016, 5712, 5850, 7161, 7650, 7980, 8138]
+   blocked: [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]
+   smallest band-q lonely = 36
+
+=> if MAX blocked < 19, the band {15..33} is NEVER fully division-blocked -> a free q always exists
+   (and the +-1 refinement only needs a generic residue among the ~unblocked moduli).
