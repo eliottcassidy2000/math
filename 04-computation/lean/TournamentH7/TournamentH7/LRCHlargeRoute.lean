@@ -18,6 +18,7 @@
 -/
 import TournamentH7.LRCSpread13
 import TournamentH7.LRC14CertRoute
+import TournamentH7.LRC14ConcreteSurface
 
 namespace LonelyRunner
 namespace HlargeRoute
@@ -56,6 +57,32 @@ theorem hlarge_of_gap (M : ℤ)
       ∃ t : ℝ, Lonely 14 v t := by
   intro v hv hcov hfar
   exact lonely14_of_ratio13_or_gap v hv (fun hnr => hgap v hv hcov hfar hnr)
+
+/-- **`hlarge` reduced to the two ENGINE obligations, by far-count.**  The large-magnitude branch follows
+from exactly two obligations, dispatched by the number of far runners `farCountW M v`:
+ * `hle6` — `1 ≤ farCount ≤ 6`: the union-bound peel (`lonely_of_simul_peel`/`far_peel_lonely`, kps) applies;
+ * `hge7` — `farCount ≥ 7`: the union bound dies at `7 = 1/(2·(1/14))`, so the renormalization TOWER
+   (`scale_separation`/`scale_separation_phase`, opus) applies.
+This is the engine-aligned routing: it splits `hlarge` exactly along the `7 = 1/(2r)` covering threshold that
+separates the additive union bound from the multiplicative renormalization — `7` is both the danger-band
+denominator (`1/14 = 1/(2·7)`) and the outlier count the union bound survives. The `∃ far ⟹ farCount ≥ 1`
+step is `farCountW_eq_zero_iff`. -/
+theorem hlarge_of_farcount (M : ℤ)
+    (hle6 : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v →
+      0 < farCountW M v → farCountW M v ≤ 6 → ∃ t : ℝ, Lonely 14 v t)
+    (hge7 : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v →
+      7 ≤ farCountW M v → ∃ t : ℝ, Lonely 14 v t) :
+    ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v → (∃ i, M < |v i|) →
+      ∃ t : ℝ, Lonely 14 v t := by
+  intro v hv hcov hfar
+  have hpos : 0 < farCountW M v := by
+    rcases Nat.eq_zero_or_pos (farCountW M v) with h0 | hp
+    · exfalso; obtain ⟨i, hi⟩ := hfar
+      have := (farCountW_eq_zero_iff M v).mp h0 i; omega
+    · exact hp
+  by_cases h6 : farCountW M v ≤ 6
+  · exact hle6 v hv hcov hpos h6
+  · exact hge7 v hv hcov (by omega)
 
 end HlargeRoute
 end LonelyRunner
