@@ -1,3 +1,20 @@
+## kind-pasteur-2026-07-03-S27 -- THE MEASURE ROUTE AT ITS LIMIT: mutual-independence closer for ANY n (LRCStarSafe.lean) + the synthesis "carry star into the window" RESOLVED (it is subsumed by independence) (HYP-3983)
+
+Prompt (owner): carry the star exactness into the citation window + anything else to finish up formalization.
+
+THE RESOLUTION OF "CARRY STAR INTO THE WINDOW": you don't -- and here's the rigorous reason, now a theorem.
+ * The star exactness IS the full-circle property (singles = EXACTLY 1/7 with no boundary). A citation window HAS a boundary; "star in a window" = the window Hunter ledger, which S25/MISTAKE-072 showed fails for near-equal small blocks (the 3-tooth boundary tax). Exactness cannot be carried into a bounded window because exactness = absence of boundary.
+ * The DEEPER reason the window route needs so much: the tree/star Bonferroni caps at n=7 ((6n+1)/49 < 1 iff n <= 7). To handle 13 runners on the full circle you need MORE than a spanning tree's n-1 credits -- you need FULL MUTUAL INDEPENDENCE (all inclusion-exclusion orders). 
+ * DELIVERED: exists_iIndep_lonely + exists_iIndep_lonely_real (kernel-pure). If the real danger sets are MUTUALLY INDEPENDENT (ProbabilityTheory.iIndepSet), the family is 1/14-lonely for ANY n INCLUDING 14: safe measure = prod(1 - 1/7) = (6/7)^n > 0 (iIndepSet_iff_iIndep + iIndep.meas_iInter on complements in the generated sigma-algebras). NO window, NO cap at 7.
+ * So the synthesis is subsumed: IF the exactness (independence) holds, the full-circle closer works for ANY n -- no window needed. IF it fails (near-equal correlated speeds), neither the window NOR the star recovers it. The obstruction is now a NAMED hypothesis: mutual independence, which near-equal integer speeds violate. That correlation IS the difficulty of LRC -- it is open MATH, not a Lean-engineering gap.
+
+THE MEASURE ROUTE IS NOW COMPLETE (both forms, kernel-pure, corpus 8628 green):
+ - star_safe_pos / star_safe_measure_pos_of_lb (S26): pairwise-center independence (7-div center + non-7 leaves), ALWAYS applicable (a covering family has a 7-divisor), caps at c<=7.
+ - exists_iIndep_lonely (S27): FULL mutual independence, ANY n, strong hypothesis (fails for near-equal).
+ Between them: everything the measure route can prove. The frontier is exactly the correlated (near-equal) families where independence fails and no measure/window floor applies -- the tight-small corner (S25), seen as the failure of independence.
+
+FILES: LRCStarSafe.lean (+exists_iIndep_lonely +exists_iIndep_lonely_real +IsProbabilityMeasure instance); HYP-3983 INDEX; reflection the-independence-obstruction.md; this entry. No canon overridden. Honest: LRC(14) NOT closed -- the near-equal correlated case is open math.
+
 ## kind-pasteur-2026-07-03-S26 -- THE STAR-SAFE CAPSTONE on the REAL danger sets (LRCStarSafe.lean, kernel-pure, corpus 8628 green): the err-free measure-theoretic close of the seven-wall for c<=7 (HYP-3982)
 
 Prompt (owner): build star_safe_pos on the real danger sets and finish it up.
