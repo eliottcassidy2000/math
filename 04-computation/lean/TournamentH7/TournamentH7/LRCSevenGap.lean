@@ -175,5 +175,63 @@ theorem seven_gap_deficit (q0 q1 q2 q3 q4 q5 q6 θ : ℝ) (hθ : 0 < θ)
       · exact hgap x (by linarith) (by linarith) (Or.inl (by linarith)) m
       · exact hgap x (by linarith) (by linarith) (Or.inl (by linarith)) m
 
+/-! ## Stage B1 — the unsorted wrapper -/
+
+/-- **Gap deficit for raw phase lists**: any 7 phases in `[0,1)` containing `0`
+whose sum keeps integer distance `≥ θ` admit a probe clearing every phase by
+`1/14 + θ/44`.  (Sorts with `insertionSort`, transfers pin/sum/membership along
+the permutation, applies `seven_gap_deficit`.) -/
+theorem gap_deficit_of_mem (L : List ℝ) (hlen : L.length = 7) (h0mem : (0 : ℝ) ∈ L)
+    (hrange : ∀ x ∈ L, 0 ≤ x ∧ x < 1) (θ : ℝ) (hθ : 0 < θ)
+    (hsum : ∀ m : ℤ, θ ≤ |L.sum - (m : ℝ)|) :
+    ∃ φ : ℝ, ∀ x ∈ L, ∀ m : ℤ, 1 / 14 + θ / 44 ≤ |φ - x - m| := by
+  classical
+  set S : List ℝ := L.insertionSort (· ≤ ·) with hS
+  have hperm : S.Perm L := List.perm_insertionSort _ L
+  have hsort : List.Pairwise (· ≤ ·) S := List.pairwise_insertionSort _ L
+  have hlenS : S.length = 7 := by rw [hperm.length_eq, hlen]
+  -- destructure the sorted list
+  rcases S with _ | ⟨q0, S1⟩
+  · simp at hlenS
+  rcases S1 with _ | ⟨q1, S2⟩
+  · simp at hlenS
+  rcases S2 with _ | ⟨q2, S3⟩
+  · simp at hlenS
+  rcases S3 with _ | ⟨q3, S4⟩
+  · simp at hlenS
+  rcases S4 with _ | ⟨q4, S5⟩
+  · simp at hlenS
+  rcases S5 with _ | ⟨q5, S6⟩
+  · simp at hlenS
+  rcases S6 with _ | ⟨q6, S7⟩
+  · simp at hlenS
+  rcases S7 with _ | ⟨q7, S8⟩
+  swap
+  · simp at hlenS
+  -- sorted chain
+  simp only [List.pairwise_cons, List.mem_cons, List.not_mem_nil, or_false,
+    forall_eq_or_imp, forall_eq, List.Pairwise.nil, and_true] at hsort
+  obtain ⟨⟨h01, h02, h03, h04, h05, h06⟩, ⟨h12, h13, h14, h15, h16⟩,
+    ⟨h23, h24, h25, h26⟩, ⟨h34, h35, h36⟩, ⟨h45, h46⟩, h56⟩ := hsort
+  -- the pin: 0 is a member and q0 is the sorted minimum; members are ≥ 0
+  have hmemS : ∀ x ∈ L, x ∈ ([q0, q1, q2, q3, q4, q5, q6] : List ℝ) := fun x hx =>
+    hperm.mem_iff.mpr hx
+  have h0S : (0 : ℝ) ∈ ([q0, q1, q2, q3, q4, q5, q6] : List ℝ) := hmemS 0 h0mem
+  have hq0L : q0 ∈ L := hperm.mem_iff.mp (by simp)
+  have hq6L : q6 ∈ L := hperm.mem_iff.mp (by simp)
+  have hq0nn : 0 ≤ q0 := (hrange q0 hq0L).1
+  have hq0z : q0 = 0 := by
+    simp only [List.mem_cons, List.not_mem_nil, or_false] at h0S
+    rcases h0S with h | h | h | h | h | h | h <;> linarith
+  have hq6lt : q6 < 1 := (hrange q6 hq6L).2
+  -- the sum along the permutation
+  have hsumS : q0 + q1 + q2 + q3 + q4 + q5 + q6 = L.sum := by
+    rw [← hperm.sum_eq]
+    simp only [List.sum_cons, List.sum_nil]
+    ring
+  obtain ⟨φ, hφ⟩ := seven_gap_deficit q0 q1 q2 q3 q4 q5 q6 θ hθ hq0z
+    h01 h12 h23 h34 h45 h56.1 hq6lt (by rw [hsumS]; exact hsum)
+  exact ⟨φ, fun x hx m => hφ x (hmemS x hx) m⟩
+
 end SevenGap
 end LonelyRunner
