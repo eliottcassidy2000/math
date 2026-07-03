@@ -1,0 +1,16 @@
+END-TO-END dispatch: route + closure for hard 13-tuples (incl. gcd>1, tight, aligned, dilated).
+================================================================================================
+                family           route  lonely?  detail
+     tight {1..12,182}        far-peel     True  g=1 maxspeed=182 M=0.07637 (>=14/183=0.07650)
+    dilated x2 {2..26}    non-covering     True  g=2 q=14 min=0.0714
+    dilated x6 tight*6        far-peel     True  g=6 maxspeed=182 M=0.07637 (>=14/183=0.07650)
+     {1..13} (non-cov)    non-covering     True  g=1 q=14 min=0.0714
+                GW-ish    non-covering     True  g=1 q=5 min=0.2000
+            random big    non-covering     True  g=1 q=9 min=0.1111
+
+BULK: 500 random families (gcd>1 allowed) through the dispatch:
+  route counts: {'non-covering': 446, 'far-peel': 54}
+  closure failures: 0/500
+
+=> every family closes via exactly one route (gcd-reduce first); 0 failures => the assembled
+   dispatch {LRCDilation + non-covering + window census + far-peel(THM-609)} is complete on the sample.
