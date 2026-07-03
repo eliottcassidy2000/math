@@ -5,6 +5,17 @@ Three failed in instructive ways and one pointed somewhere real: the lonely time
 always a fraction with a small denominator, and that is the whole conjecture in
 disguise.*
 
+> **CORRECTION (kps-S29, integrating mac-mini HYP-4040 / MISTAKE-096):** the claim
+> below that "the denominator does not grow with the speeds" is FALSE as stated. It
+> holds for near-equal / random families (all tested `≤ 35`), but the LCM family
+> `{1..11, 13, lcm(2..X)}` puts its lcm-runner at residue `0` for every `q ≤ X`, forcing
+> the minimal lonely denominator to `Θ(log max-speed)` — effectively `≤ 41` up to
+> `max-speed ~ 10¹⁷`, but genuinely UNBOUNDED. So no FIXED denominator bound closes
+> LRC(14); the route is the BOUNDED-MAGNITUDE half of a two-sided architecture
+> (`lrc14_of_magnitude_split`), with the large-magnitude tail going to the analytic /
+> renormalization route. The rest of this reflection stands; read "bounded denominator"
+> as "denominator `≤ Q(max-speed) ~ log`, bounded at bounded magnitude."
+
 ## Four constructions
 
 **Cluster near one-half.** A near-equal block `{w, …, w+6}` sits, at `t = 1/(2(w+3))`,

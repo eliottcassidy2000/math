@@ -1,3 +1,18 @@
+## kind-pasteur-2026-07-03-S29 -- DENOMINATOR ROUTE formalized as the TWO-SIDED ARCHITECTURE (integrating mac-mini HYP-4040) + MISTAKE-096 correction + spread13 handoff
+
+Prompt (owner): work the remaining handoffs; get the proof entirely formalized.
+
+DELIVERED (LRCDenominatorRoute.lean, kernel-pure, corpus 8630 green):
+ 1. lrc14_of_covering_bounded_denom -- LRC(14) from ONE obligation: every covering family has a witness p/q with q<=Q (via lonely14_of_ratio + covering reduction).
+ 2. bounded_denom_of_not_covering -- the non-covering half is FREE (q<=14, t=1/q).
+ 3. lrc14_of_magnitude_split -- THE TWO-SIDED ARCHITECTURE: split at magnitude cut M into {|v|<=M: finite denominator census, Q~log M} + {large: analytic/renormalization}. This is the HONEST reduction.
+
+INTEGRATION + CORRECTION (mac-mini HYP-4040): my S28 "q<=35 uniform, independent of magnitude" was an OVERCLAIM (MISTAKE-096). The lcm family {1..11,13,lcm(2..X)} sends its lcm-runner to residue 0 for every q<=X, so the minimal lonely denominator is Theta(log max-speed) -- UNBOUNDED (verified: min_q=41 up to max-speed 27720; grows only past ~10^17). NO fixed Q closes LRC(14). The denominator route is the bounded-magnitude half of mac-mini's two-sided architecture; the fixed-Q reduction is valid but its hypothesis is magnitude-limited. Corrected reflection + INDEX + memory.
+
+HANDOFF STATUS: spread13 (S28) supersedes spread7 (both standalone; spread13 is ratio 13 vs 7). mac-mini's OPEN-Q-108 lever (13-spaced comb at t*=14/183 spans 12/183 < danger radius 1/14, placeable in core slack) is the arithmetic dual for the large-magnitude/resonant tail -- their lane; my denominator census is the bounded-magnitude complement. LRC(14) status: two-sided, both halves open (bounded-mag census is large; large-mag renormalization is hard). NOT closed -- open research.
+
+FILES: LRCDenominatorRoute.lean (+lrc14_of_magnitude_split, doc corrected); MISTAKE-096; lcm-family verification; INDEX/reflection/memory corrections; this entry. No canon overridden.
+
 ## kind-pasteur-2026-07-03-S28 -- TWO SHARP CLOSURES toward LRC(14): spread13_lonely (ratio 13, the all-comparable case) + lonely14_of_ratio (the rational-witness sieve) + the BOUNDED-DENOMINATOR discovery (HYP-3984)
 
 Prompt (owner): work on closing LRC(14), be creative.
