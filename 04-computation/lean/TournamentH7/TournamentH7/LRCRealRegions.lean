@@ -20,6 +20,8 @@ import TournamentH7.LRCFatBlockChain
 namespace LonelyRunner
 namespace RealRegion
 
+open LRC14
+
 /-- A real region: a list of half-open intervals. -/
 abbrev RRegion := List (ℝ × ℝ)
 
@@ -472,6 +474,206 @@ theorem hunter_ledger :
           simp only [List.map_cons, List.sum_cons] at hih ⊢
           rw [hexp] at hih
           linarith [hih, hrest, hI']
+
+/-! ## Stage 4 — the semantic bridge: points of the peeled region are good -/
+
+/-- A region of positive mass contains a nondegenerate interval. -/
+theorem exists_pos_interval_of_rlength_pos {L : RRegion} (h : 0 < rlength L) :
+    ∃ p ∈ L, p.1 < p.2 := by
+  induction L with
+  | nil =>
+      exfalso
+      unfold rlength at h
+      simp at h
+  | cons p L ih =>
+      have hsplit : rlength (p :: L) = max 0 (p.2 - p.1) + rlength L := by
+        unfold rlength
+        rw [List.map_cons, List.sum_cons]
+      rw [hsplit] at h
+      by_cases hplt : p.1 < p.2
+      · exact ⟨p, List.mem_cons_self .., hplt⟩
+      · push_neg at hplt
+        rw [max_eq_left (by linarith)] at h
+        obtain ⟨q, hq, hqlt⟩ := ih (by linarith)
+        exact ⟨q, List.mem_cons_of_mem _ hq, hqlt⟩
+
+/-- **Fold-membership semantics**: any point of any interval of the peeled region
+lies in an original interval and (weakly) avoids every subtracted interval. -/
+theorem rdiff_point_good :
+    ∀ (D : List (ℝ × ℝ)) (L : RRegion) (p' : ℝ × ℝ), p' ∈ rdiff L D →
+    ∀ t : ℝ, p'.1 ≤ t → t ≤ p'.2 →
+    (∃ p ∈ L, p.1 ≤ t ∧ t ≤ p.2) ∧ (∀ q ∈ D, t ≤ q.1 ∨ q.2 ≤ t) := by
+  intro D
+  induction D with
+  | nil =>
+      intro L p' hmem t ht1 ht2
+      have hmem' : p' ∈ L := by simpa [rdiff] using hmem
+      exact ⟨⟨p', hmem', ht1, ht2⟩, fun q hq => absurd hq List.not_mem_nil⟩
+  | cons q D ih =>
+      intro L p' hmem t ht1 ht2
+      have hfold : rdiff L (q :: D) = rdiff (rdiff1 L q) D := by
+        unfold rdiff
+        rw [List.foldl_cons]
+      rw [hfold] at hmem
+      obtain ⟨⟨p'', hp''mem, hp''1, hp''2⟩, havoidD⟩ := ih (rdiff1 L q) p' hmem t ht1 ht2
+      unfold rdiff1 at hp''mem
+      rw [List.mem_flatMap] at hp''mem
+      obtain ⟨p, hpL, hp''cut⟩ := hp''mem
+      unfold rcut at hp''cut
+      simp only [List.mem_cons, List.not_mem_nil, or_false] at hp''cut
+      rcases hp''cut with hpc | hpc
+      · -- left piece: (p.1, min p.2 q.1)
+        subst hpc
+        simp only at hp''1 hp''2
+        have htq : t ≤ q.1 := le_trans hp''2 (min_le_right _ _)
+        have htp2 : t ≤ p.2 := le_trans hp''2 (min_le_left _ _)
+        refine ⟨⟨p, hpL, hp''1, htp2⟩, ?_⟩
+        intro r hr
+        rcases List.mem_cons.mp hr with rfl | hrD
+        · exact Or.inl htq
+        · exact havoidD r hrD
+      · -- right piece: (max p.1 q.2, p.2)
+        subst hpc
+        simp only at hp''1 hp''2
+        have htq : q.2 ≤ t := le_trans (le_max_right _ _) hp''1
+        have htp1 : p.1 ≤ t := le_trans (le_max_left _ _) hp''1
+        refine ⟨⟨p, hpL, htp1, hp''2⟩, ?_⟩
+        intro r hr
+        rcases List.mem_cons.mp hr with rfl | hrD
+        · exact Or.inr htq
+        · exact havoidD r hrD
+
+/-- Chain-level fold semantics: a point of the fully peeled chain avoids every
+interval of every danger region. -/
+theorem rdiff_chain_point_good :
+    ∀ (Ds : List RRegion) (L : RRegion) (p' : ℝ × ℝ), p' ∈ Ds.foldl rdiff L →
+    ∀ t : ℝ, p'.1 ≤ t → t ≤ p'.2 →
+    (∃ p ∈ L, p.1 ≤ t ∧ t ≤ p.2) ∧ (∀ D ∈ Ds, ∀ q ∈ D, t ≤ q.1 ∨ q.2 ≤ t) := by
+  intro Ds
+  induction Ds with
+  | nil =>
+      intro L p' hmem t ht1 ht2
+      exact ⟨⟨p', by simpa using hmem, ht1, ht2⟩, fun D hD => absurd hD List.not_mem_nil⟩
+  | cons D Ds ih =>
+      intro L p' hmem t ht1 ht2
+      rw [List.foldl_cons] at hmem
+      obtain ⟨⟨p'', hp''mem, h1, h2⟩, hrest⟩ := ih (rdiff L D) p' hmem t ht1 ht2
+      obtain ⟨⟨p, hpL, hp1, hp2⟩, hD⟩ := rdiff_point_good D L p'' hp''mem t h1 h2
+      refine ⟨⟨p, hpL, hp1, hp2⟩, ?_⟩
+      intro D' hD'
+      rcases List.mem_cons.mp hD' with rfl | hD'2
+      · exact hD
+      · exact hrest D' hD'2
+
+/-- `SortedSep` for a mapped range with separated consecutive images. -/
+theorem sortedSep_map_range :
+    ∀ (n : ℕ) (f : ℕ → ℝ × ℝ), (∀ i j : ℕ, i < j → j < n → (f i).2 ≤ (f j).1) →
+    SortedSep ((List.range n).map f) := by
+  intro n
+  induction n with
+  | zero =>
+      intro f _
+      simp [SortedSep]
+  | succ n ih =>
+      intro f hsep
+      rw [List.range_succ_eq_map, List.map_cons, List.map_map]
+      refine ⟨?_, ?_⟩
+      · intro d hd
+        rw [List.mem_map] at hd
+        obtain ⟨i, hi, rfl⟩ := hd
+        rw [List.mem_range] at hi
+        exact hsep 0 (i + 1) (Nat.succ_pos i) (by omega)
+      · exact ih (f ∘ Nat.succ) fun i j hij hj =>
+          hsep (i + 1) (j + 1) (by omega) (by omega)
+
+/-- Each tooth is a live interval. -/
+theorem teeth_live {w : ℤ} (hw : 0 < w) (a b : ℝ) :
+    ∀ r ∈ teeth w a b, r.1 ≤ r.2 := by
+  intro r hr
+  have hwR : (0 : ℝ) < (w : ℝ) := by exact_mod_cast hw
+  unfold teeth at hr
+  rw [List.mem_map] at hr
+  obtain ⟨i, _, rfl⟩ := hr
+  unfold tooth
+  simp only
+  gcongr
+  linarith
+
+/-- A runner's teeth are sorted-separated (gap `6/(7w)` between consecutive teeth). -/
+theorem teeth_sortedSep {w : ℤ} (hw : 0 < w) (a b : ℝ) : SortedSep (teeth w a b) := by
+  have hwR : (0 : ℝ) < (w : ℝ) := by exact_mod_cast hw
+  unfold teeth
+  apply sortedSep_map_range
+  intro i j hij _
+  unfold tooth
+  simp only
+  have hij' : (i : ℝ) + 1 ≤ (j : ℝ) := by exact_mod_cast hij
+  gcongr
+  push_cast
+  linarith
+
+/-- The window-intersection mass IS the clipped-teeth sum of `LRCBlockSix`. -/
+theorem rlength_inter_window_clipsum (a b : ℝ) (D : RRegion) :
+    rlength (rinter [(a, b)] D) = (D.map fun p => clipLen p a b).sum := by
+  have hflat : rinter [(a, b)] D = D.map fun q => rclip (a, b) q := by
+    unfold rinter
+    simp [List.flatMap_cons]
+  rw [hflat]
+  unfold rlength
+  rw [List.map_map]
+  congr 1
+  apply List.map_congr_left
+  intro q _
+  unfold rclip clipLen
+  simp only [Function.comp_apply]
+  rw [min_comm b q.2, max_comm a q.1]
+
+/-- **THE HUNTER BLOCK STEP**: if the exact ledger — window mass, minus full teeth
+masses, plus consecutive-pair credits — is positive, the runner block has a common
+1/14-good point in the window. -/
+theorem hunter_block_step (ws : List ℤ) (hpos : ∀ w ∈ ws, 0 < w) (a b : ℝ) (hab : a ≤ b)
+    (hledger : 0 < (b - a)
+        - ((ws.map fun (w : ℤ) => rlength (rinter [(a, b)] (teeth w a b))).sum)
+        + pairCredits [(a, b)] (ws.map fun (w : ℤ) => teeth w a b)) :
+    ∃ t : ℝ, a ≤ t ∧ t ≤ b ∧
+      ∀ w ∈ ws, ∀ m : ℤ, (1 : ℝ) / 14 ≤ |(w : ℝ) * t - m| := by
+  set Ds : List RRegion := ws.map fun (w : ℤ) => teeth w a b with hDs
+  have hlive : ∀ D ∈ Ds, ∀ r ∈ D, r.1 ≤ r.2 := by
+    intro D hD
+    rw [hDs, List.mem_map] at hD
+    obtain ⟨w, hw, rfl⟩ := hD
+    exact teeth_live (hpos w hw) a b
+  have hsep : ∀ D ∈ Ds, SortedSep D := by
+    intro D hD
+    rw [hDs, List.mem_map] at hD
+    obtain ⟨w, hw, rfl⟩ := hD
+    exact teeth_sortedSep (hpos w hw) a b
+  have hIlen : rlength [(a, b)] = b - a := by
+    unfold rlength
+    simp only [List.map_cons, List.map_nil, List.sum_cons, List.sum_nil, add_zero]
+    exact max_eq_right (by linarith)
+  have hled := hunter_ledger Ds hlive hsep [(a, b)]
+  have hsum_eq : (Ds.map fun D => rlength (rinter [(a, b)] D)).sum
+      = (ws.map fun (w : ℤ) => rlength (rinter [(a, b)] (teeth w a b))).sum := by
+    rw [hDs, List.map_map]
+    rfl
+  have hpos' : 0 < rlength (Ds.foldl rdiff [(a, b)]) := by
+    rw [hIlen, hsum_eq] at hled
+    linarith
+  obtain ⟨p', hp'mem, hp'lt⟩ := exists_pos_interval_of_rlength_pos hpos'
+  obtain ⟨⟨p, hpI, hpt1, hpt2⟩, havoid⟩ :=
+    rdiff_chain_point_good Ds [(a, b)] p' hp'mem p'.1 (le_refl _) (le_of_lt hp'lt)
+  have hpab : p = (a, b) := by
+    rcases List.mem_cons.mp hpI with rfl | hf
+    · rfl
+    · exact absurd hf List.not_mem_nil
+  subst hpab
+  simp only at hpt1 hpt2
+  refine ⟨p'.1, hpt1, hpt2, ?_⟩
+  intro w hw m
+  apply good_of_avoid_teeth (hpos w hw) hpt1 hpt2
+  intro r hr
+  exact havoid (teeth w a b) (by rw [hDs, List.mem_map]; exact ⟨w, hw, rfl⟩) r hr
 
 end RealRegion
 end LonelyRunner
