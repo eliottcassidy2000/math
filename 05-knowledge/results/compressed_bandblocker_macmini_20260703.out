@@ -1,0 +1,14 @@
+COMPRESSED hge7 band-blockers: witness denominator vs magnitude scale.
+====================================================================================
+   scale  #band primes    max-speed  compressed  covering  far  q(witness)
+       1             3            -      (no valid compressed blocker found)
+       5             5            -      (no valid compressed blocker found)
+      20             8            -      (no valid compressed blocker found)
+      60            10            -      (no valid compressed blocker found)
+     200            13            -      (no valid compressed blocker found)
+     600            15            -      (no valid compressed blocker found)
+    2000            18            -      (no valid compressed blocker found)
+
+=> if q(witness) GROWS with scale for COMPRESSED families: the REAL hge7 obligation has
+   unbounded-witness families -> arithmetic band CANNOT close hge7 alone (magnitude split forced).
+   if q stays bounded: compressed forces near-equal-ish structure -> band {15..~50} may suffice.

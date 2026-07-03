@@ -1,0 +1,14 @@
+NEAR-EQUAL band-blocker stress: runners ~N each divisible by a band modulus. witness q vs N.
+==========================================================================================
+       N         far runners (aligned to band moduli) span-ratio  q(witness)
+     200            [184, 186, 196, 200, 204, 208]...      1.239          32
+    1000            [980, 986, 988, 989, 990, 992]...      1.047          41
+    5000      [4988, 4992, 4995, 4998, 5000, 5004]...      1.006          41
+   30000 [29975, 29986, 29988, 29992, 29995, 29997]...      1.001          37
+  200000 [199980, 199985, 199990, 199992, 200000, 200004]...      1.000          38
+ 2000000 [1999980, 1999984, 1999988, 1999996, 1999998, 1999999]...      1.000          47
+
+WORST witness q over near-equal (ratio<1.5) band-blockers = 47
+=> if > 33: my S21 regime-C claim 'near-equal => band {15..33}' is REFUTED for ALIGNED drifts;
+   the honest scope is near-equal with GENERIC (small, unaligned) drifts, OR bounded span+magnitude.
+   if <= 33: near-equal genuinely closes at 33 even with aligned drifts (claim robust).

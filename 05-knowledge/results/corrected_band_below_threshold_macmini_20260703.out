@@ -1,0 +1,10 @@
+CORRECTED band-below: worst witness q over covering gcd=1 hge7 with max-speed < 22638
+==========================================================================
+tested 163981 families (incl. ALIGNED near-equal + spread band-blockers)
+band FAILURES (no witness q<=2000): 0
+WORST witness q = 49
+   worst family far part: [2772, 2788, 2790, 2795, 2800, 2806, 2808, 2812, 2816, 2820, 2832]
+   (max-speed 2832, far 11, span-ratio 1.02)
+
+=> CORRECTED band-below = {15..49} (was over-optimistically {15..33} in S21 for near-equal).
+   band {15..49} (max-speed<22638) + singles(>22638) = the honest magnitude-split closure.

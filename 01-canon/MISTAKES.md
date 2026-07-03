@@ -11,6 +11,17 @@ Format per entry:
 
 ---
 
+## MISTAKE-095: The S21 arithmetic band {15..33} for near-equal was too tight -- ALIGNED drifts are band-blockers; the honest band-below is {15..~50} and it GROWS with magnitude
+
+**Session:** mac-mini-2026-07-03-S21 (found + corrected by mac-mini-2026-07-03-S22)
+**What S21 claimed (HYP-3877):** every NEAR-EQUAL far block (regime C + c>=8 near-equal) is 1/14-lonely at some `t=a/q` with `q in {15..33}`; "the far cluster is a short AP mod q, too small to block the band." Backed by ~11000 families, 0 failures.
+**Why it was too strong:** those 11000 families used small **RANDOM** drifts. But a near-equal family can have drifts **ALIGNED** to band moduli: pick `N` and set far runners `= q * round(N/q)` for band moduli `q` (drift `<= q`, so span-ratio `~1.00`, genuinely near-equal). Each such runner is `≡ 0 (mod q)` -> danger residue 0 at `t=a/q` -> that band modulus is BLOCKED. With 13 runners each divisible by a few band moduli, a near-equal family blocks the whole `{15..33}`. Verified: near-equal (span-ratio 1.00-1.02) covering gcd=1 hge7 families with witness denominator up to **47-49** (e.g. far `= {2772,2788,...,2832}`, ratio 1.02, `q=49`; `{1999980,1999984,...}`, ratio 1.000, `q=47`).
+**Correct framing:** near-equal is NOT sufficient for `{15..33}`. The honest band-below is **`{15..~50}`** for `max-speed < 22638` (0 failures over ~164k adversarial families incl. aligned blockers), and the witness denominator GROWS `~log(max-speed)` in general ([[HYP-4040]] proves `q(S_X) > X` for the lcm family). So there is **no uniform band even for near-equal**; the magnitude split (band-below + singles-above) is the honest closure, with band-below `~50` not `33`.
+**Impact:** HYP-3877's mechanism (small-q witness, danger residues `2*ceil(q/14)-1`) and the "regime C reduces to a finite arithmetic band" conclusion SURVIVE, with the band size corrected `33 -> ~50` and scoped to bounded magnitude. The `{15..33}` figure holds only for GENERIC (unaligned) drifts. HYP-4040 (rigorous lower bound, no uniform band) is the durable form. No Lean affected (S21 was numeric). No other agent built on the `{15..33}` figure yet (codex-S368 restated it; flag on next sync).
+**Lesson:** adversarial search must vary the ADVERSARIAL AXIS, not just add noise. For a band/residue claim, the worst case is drifts ALIGNED to the moduli, not random drifts -- random sampling systematically misses measure-thin aligned configurations. Always ask "what is the extremal configuration for THIS obstruction?" and construct it, don't sample for it.
+
+---
+
 ## MISTAKE-072: The drifting floor cannot close regime C; the bottleneck is SINGLES, not pairs (S24 "one floor away" over-optimistic)
 
 **Session:** kind-pasteur-2026-07-02-S24 (found by kind-pasteur-2026-07-03-S25, numerically pinned)
