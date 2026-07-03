@@ -16,6 +16,21 @@ NET: hlarge now reduces to {all-comparable = DONE (spread13)} + {gap/far-count e
 NEXT: the gap-case dispatch (which cluster to peel, the recursion depth) -- the genuinely-hard renormalization architecture; the engines (THM-608 near-equal, scale_separation_phase resonant, simul-peel <=6) are all ready to plug in.
 
 Files: LRCHlargeRoute.lean (3 routing theorems + root), decomp_hardcase_resonance script (deep-well r=1 confirmed Eisenstein 183), HYP-4050 (+INDEX).
+## kind-pasteur-2026-07-03-S32 -- THE QUANTITATIVE FLOOR + REGION-MEASURE FOUNDATION (length_ge_of_safe_interval built via the full Norm-preservation chain; explicit 1/(400·ΣB) floor) (HYP-4050)
+
+Prompt (owner): build length_ge_of_safe_interval via Norm length-extensionality; formalize the remaining gap creatively; pull/push frequently through the long final stretch.
+
+DELIVERED (Lean, kernel-pure `[propext, Classical.choice, Quot.sound]`, corpus 8635 green, all in `LRCFarPeelGood.lean`):
+ * **length_ge_of_mem_cover** -- THE CURSOR COVERING BOUND (the Norm length-extensionality content, covering form): a `Norm` region containing all of `[a,b)` has `length ≥ b−a`. Left-to-right sweep; the first piece holding the cursor either reaches `b` or the `Norm` gap forces the tail to cover the rest. Self-contained induction, no new deps.
+ * **norm_goodRegion2** + full chain (**norm_cons, norm_append, cutF_bounds, norm_cutF, norm_diff1F, norm_diffF**) -- `Norm(goodRegion2)`, the missing hypothesis. KEY INSIGHT: the `diff` design KEEPS degenerate pieces (so plain `diff` isn't `Norm`, why no such lemma existed), but the `F`-variants (`cutF`/`diff1F`/`diffF`) FILTER them (`length_cutF = length_filter_live`) and cutting a live interval out of a sorted-disjoint region preserves order — so `diffF` of `Norm` by LIVE intervals is `Norm`. The filtering introduced for clean LENGTH bookkeeping ALSO gives the `Norm` the MEASURE bound needs.
+ * **length_ge_of_safe_interval** -- THE REQUESTED GENERAL TOOL: `[a,b)` all-good ⟹ `length(goodRegion2) ≥ b−a`. Composes the two above.
+ * **base_floor_quant_of_cite** -- THE EXPLICIT QUANTITATIVE FLOOR: `1/(400·ΣB) ≤ length(goodRegion2 base (1/14))` from the `LRC(≤13)` citation. Applies the tool to a citation-derived safe interval (rational `x` within `1/(400V)` of `t0`; `fract x'` is `(1/13−1/400)`-good; a ONE-SIDED interval of width `1/(400V)` beyond `x'`, kept in `[0,1)` by casing on `x'≤1/2` — the boundary/wrap subtlety — stays `>1/14`-good, slack `1/13−1/200>1/14`). DISCHARGES opus/mac-mini's `length_ge_of_safe_interval` tower-rung request (HYP-4046) with an EXPLICIT bound.
+
+This closes the OPEN quantitative handoff I flagged in HYP-4048/S31. mac-mini S25 built the parallel `>0` floor (`base_goodRegion_floor`); this is its explicit strengthening. opus S54 (`LRCHlargeRoute`) routes hlarge by farCount≤6/≥7 at the `7=1/(2r)` threshold — matches my S31 outlier-count step-5 map.
+
+NEXT (clean handoff): the PIECE-COUNT bound `(goodRegion2 base).length ≤ 1 + 2·ΣB` (via the Norm "cutting by one interval adds ≤1 piece" argument — at most one sorted piece strictly contains a given danger interval) ⟹ with base_floor_quant, an EXPLICIT far-peel threshold `w > ~(#pieces)·400·ΣB` ⟹ step-5 = the concrete window `22 < w ≤ explicit(ΣB)` (mac-mini's `~700`), no longer parametric.
+
+Files: `LRCFarPeelGood.lean` (length_ge_of_mem_cover / norm_* chain / length_ge_of_safe_interval / base_floor_quant_of_cite), reflection `the-rational-irrational-duality.md` (Region-measure section), HYP-4050 (+INDEX), memory `lrc14-thread.md`.
 
 ---
 

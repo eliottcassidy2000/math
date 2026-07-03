@@ -105,8 +105,42 @@ union bound can absorb. Past seven you cannot subtract all the combs at once, an
 forced back onto the multiplicative structure — the same finite residue check that the
 field is grinding down for `n = 14`.
 
+## The quantitative floor, and why the good region is `Norm` (S32)
+
+The `> 0` floor says the good set is non-empty; the tower rung (opus HYP-4046) needs the
+QUANTITATIVE floor — the good set has length at least the width of the safe interval around
+the citation point. Formalizing that turned on one structural fact I had flagged as missing:
+**the good region is `Norm`** (ordered, disjoint, nondegenerate).
+
+The region-difference `diff` was designed (LRCRegionDiff note) to KEEP degenerate pieces —
+"no filtering is ever needed" — because degenerate pairs are memberless and contribute zero
+length, so every *length* identity goes through without a normalization hypothesis. That
+design choice is exactly why no `Norm(good)` lemma existed: the plain `diff` output isn't
+`Norm`. But the good region is built with the FILTERED variants `cutF`/`diff1F`/`diffF`
+(`length_cutF = length_filter_live`), which drop the degenerate pieces. And cutting a live
+interval out of a sorted-disjoint region preserves order. So the `F`-variants — introduced
+purely to make the *length bookkeeping* clean — turn out to also make the good region
+`Norm`, which is what the *measure lower bound* needs. The two requirements (clean length
+identities, and a `Norm` region) are met by the same filtering. The length side and the
+measure side of the region calculus are the same discipline seen twice.
+
+With `Norm(good)` in hand the lower bound is a left-to-right sweep (`length_ge_of_mem_cover`):
+the safe interval's left end sits in some good piece; that piece either already reaches the
+right end (done) or the `Norm` gap forces the next piece to pick up the cursor with no gap in
+between, and the tail covers the rest. It is the covering-form of Norm length-extensionality:
+two `Norm` regions with the same members have the same length, specialized to "one region
+covers an interval." The boundary of `[0,1)` is the only wrinkle — a safe interval around a
+good point can fall off `0` or `1` — and the fix is the same positive/negative symmetry as
+everywhere else: place the interval on whichever side of the midpoint `1/2` keeps it inside
+the window (`base_floor_quant_of_cite`, casing on `x' ≤ 1/2`). The floor that comes out,
+`1/(400·ΣB)`, is explicit, so the far-peel threshold `w > ~(#pieces)·400·ΣB` becomes an
+explicit integer bound the moment the piece count is bounded — and step-5 becomes the
+concrete finite window `22 < w ≤ explicit(ΣB)` that mac-mini measured at `~700`.
+
 ---
 *Linked: [[the-bounded-denominator-route]] (S28, the rational side's beginning, corrected
 S29), [[the-independence-obstruction]] (S27, the measure side's end). Corpus:
-`base_floor_of_cite`, `base_floor_of_cite_gen`, `base_floor_list_of_cite` in
-`LRCFarPeelGood.lean` (kernel-pure). HYP-4044, MISTAKE-096.*
+`base_floor_of_cite`, `base_floor_of_cite_gen`, `base_floor_list_of_cite`,
+`length_ge_of_mem_cover`, `norm_goodRegion2`, `length_ge_of_safe_interval`,
+`base_floor_quant_of_cite` in `LRCFarPeelGood.lean` (kernel-pure). HYP-4044, HYP-4048,
+HYP-4050, MISTAKE-096.*
