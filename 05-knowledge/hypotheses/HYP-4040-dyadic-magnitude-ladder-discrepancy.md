@@ -68,6 +68,27 @@ families live -- `lcm(2..13) = 360360 > 22638`) provably needs a non-band argume
 two-sided architecture (arithmetic band below + analytic/renormalization above) is forced -- a structural fact,
 now with a proof, that the fleet's proof sheaf should encode rather than hunt for a uniform arithmetic closure.
 
+## The blowup survives compression (it is NOT just the already-closed dominant case)
+The lcm family has a >13x dominant runner, so it is discharged by the dominant-runner route, not the hge7
+obligation. But the same witness blowup holds for COMPRESSED families (the real hge7 obligation): **aligned
+near-equal** far runners `far_i = q_i * round(N/q_i)` (span-ratio ~1.00, so no dominant; each `≡ 0 mod q_i`)
+block a band of moduli by division. Numerically these covering gcd=1 hge7 families reach witness `q = 47, 49`
+at `max-speed ~ 2832..2*10^6`, growing with `N` (see MISTAKE-095, `nearequal_bandblocker_stress...out`,
+`corrected_band_below_threshold...out`). Counting: a runner `~N` divisible by `lcm` of `k` band moduli needs
+`lcm <= N`, so `13` runners block `~13*log(N)/log(30)` moduli => witness `q <= 14 + O(log N)`. So the
+compressed obligation ALSO has witness `q -> infinity` at rate `Theta(log max-speed)` -- the lower bound is
+about the genuinely-open case, not an artifact of the dominant lcm family.
+
+## Renormalization reading (why this is the right dual to HYP-3901)
+At `a/q` a near-equal cluster `{N + c_i}` has far residues `N a + {c_i a} (mod q)`: the **difference core**
+`{c_i}` at multiplier `a`, SHIFTED by the scale `N a mod q`. So a large-magnitude near-equal family's
+loneliness = (core placeable in the safe region by the scale-shift). For GENERIC `N` the shift is generic and
+the small core places easily -> small `q`; the BAND-BLOCKERS are exactly the `N` whose shift is ALIGNED against
+the core, forcing `q` up. This is the arithmetic shadow of the deep-cluster renormalization [[HYP-3901]]:
+peel the top scale, recurse on the (bounded) core; the tower depth `~log(max-speed)` is the `Theta(log)` cost
+this note lower-bounds. The dyadic band ladder + renormalization tower is the matching upper-bound construction
+(the binary-tree import from arXiv:2607.00876).
+
 ## Engineering resonance
 The "cost of covering all scales" is a shared engineering primitive: the binary-tree mechanism pays it as
 `log^{3/2}` noise; LRC pays it as a `Theta(log)` denominator. Both say: to be simultaneously good at every
