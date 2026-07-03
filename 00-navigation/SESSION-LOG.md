@@ -1,3 +1,22 @@
+## kind-pasteur-2026-07-02-S21 -- THE BLOCK-6 INTERVAL ENGINE (gap_exists measure-free union lemma + explicit teeth + block_point_step for ANY <= 6 runners + cite composition, ALL KERNEL-PURE); near-equal blocks <= 6 CLOSED (HYP-3978)
+
+Prompt (owner): long session finishing the complete formalization; push/pull frequently.
+
+FLEET CONVERGENCE ABSORBED (pull-first): klein-S114 sharpened my 91-peel to a 13-RATIO PEEL (safe point needs a 1/7-span, not a unit); mac-mini-S18 shipped LRCSimulPeel (the REGION-based simultaneous union peel, j <= 6, over my length_diffF_ge). The INTERVAL-based engine (the citation route feeds RR-intervals, not QQ-regions) was the unowned piece -- this session's delivery.
+
+DELIVERED (LRCBlockSix.lean, 6 build rounds, registered, corpus green; ALL [propext, Classical.choice, Quot.sound]):
+ - **gap_exists** (THE MEASURE-FREE UNION LEMMA over RR): a window whose clipped bad mass is under its length contains a point avoiding every open bad interval. Proof = JUMP-PAST-THE-BLOCKER induction: if the window's left edge sits inside some bad interval, hop to its right end and drop it -- the dropped clipped mass pays for the lost window exactly (clipLen bookkeeping; single_le_sum for the cover-the-window contradiction). No measure theory, no counting, no sorting.
+ - **tooth/teeth + teeth_mass**: a runner's danger teeth meeting a window as an EXPLICIT list (integer indices ceil(wa)-1 .. floor(wb)+1); total clipped mass <= (b-a)/7 + 3/(7w) (Int.toNat_eq_max for the count).
+ - **good_of_avoid_teeth**: avoiding the listed teeth keeps the 1/14 band (in-range teeth by list membership; out-of-range integers are >= 1 away).
+ - **block_point_step**: ANY runners whose total tooth mass fits share a 1/14-good point -- for c <= 6 runners >= w1 the mass hypothesis follows from w1(b-a) > 3c/(7-c) (union density c/7 < 1). ARBITRARY internal ratios -- consecutive integers, resonant pairs, anything.
+ - **cite_block_lonely**: cite k <= 12 bounded runners at 1/(k+1), transport (margin EXACT at 1/14), finish the block inside the interval by block_point_step.
+
+LEAN LORE (2 new items): (1) a lambda `fun i => ...(i : ZZ)...` over List.range makes the elaborator COERCE THE WHOLE LIST monadically (the do-block disease, second sighting) -- always bind explicitly `fun (i : NN) => ...`; (2) implicit endpoint unification in apply can silently pick the wrong window (b := t) -- pass (a := ...) (b := ...) explicitly for interval lemmas.
+
+STATE OF THE CORE: near-equal blocks of size <= 6 (any structure) are now closed over the citation base -- subsuming the S20 pair dodge and rendering the planned triple/quad grid dodges unnecessary. THE RESIDUAL CORE, exactly: families with a 7+-near-equal block above every split -- the union-density wall (7 x 1/7 >= 1), where the arc/measure route (mac-mini SimulPeel over band length floors + JointRateCore) is the designated weapon; note 7+-blocks of CONSECUTIVE integers are spread7-trivial, so the residual is 7+-blocks with spread > 7 -- genuinely coordinated families.
+
+FILES: LRCBlockSix.lean (new, registered, kernel-pure); HYP-3978 INDEX; this entry. No canon overridden.
+
 ## mac-mini-2026-07-02-S18 -- THE SIMULTANEOUS UNION-BOUND FAR-PEEL, FORMALIZED SORRY-FREE (opus-S32's lemma; the tractable middle-band closer for j<=6) (HYP-3875)
 
 Prompt (owner): make as much progress as possible on transcribing the per-cell identity for the concrete drifting arcs + any remaining tasks; long session.
