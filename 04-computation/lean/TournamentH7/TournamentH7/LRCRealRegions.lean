@@ -761,5 +761,139 @@ theorem cite_hunter_lonely (cite : LRCUpTo13) (v : Fin 13 → ℤ) (hv : ∀ i, 
       rw [heq] at this
       exact (by norm_num : (1:ℝ)/(14:ℕ) = 1/14) ▸ this
 
+/-! ## Stage 6 — the shift-dischargeable form and the clean-floors packaging -/
+
+/-- Per-runner window mass never exceeds the position-free bound `L/7 + 3/(7w)`. -/
+theorem window_teeth_mass_le {w : ℤ} (hw : 0 < w) (a b : ℝ) (hab : a ≤ b) :
+    rlength (rinter [(a, b)] (teeth w a b)) ≤ (b - a) / 7 + 3 / (7 * (w : ℝ)) := by
+  rw [rlength_inter_window_clipsum]
+  exact teeth_mass hw a b hab
+
+/-- **Clean-floors packaging**: the Hunter ledger is positive as soon as the pair
+credits beat the mass fees.  At `c = 7` the density terms cancel exactly
+(`7·L/7 = L`), so the floor needed is just `Σ 3/(7w)` — the credits only have to
+beat the boundary fees, not the densities. -/
+theorem ledger_pos_of_credit_floor (ws : List ℤ) (hpos : ∀ w ∈ ws, 0 < w)
+    (a b : ℝ) (hab : a ≤ b)
+    (hfloor : ((ws.map fun (w : ℤ) => (b - a) / 7 + 3 / (7 * (w : ℝ))).sum) - (b - a)
+      < pairCredits [(a, b)] (ws.map fun (w : ℤ) => teeth w a b)) :
+    0 < (b - a)
+      - ((ws.map fun (w : ℤ) => rlength (rinter [(a, b)] (teeth w a b))).sum)
+      + pairCredits [(a, b)] (ws.map fun (w : ℤ) => teeth w a b) := by
+  have hmono : ((ws.map fun (w : ℤ) => rlength (rinter [(a, b)] (teeth w a b))).sum)
+      ≤ ((ws.map fun (w : ℤ) => (b - a) / 7 + 3 / (7 * (w : ℝ))).sum) := by
+    apply List.sum_le_sum
+    intro w hw
+    exact window_teeth_mass_le (hpos w hw) a b hab
+  linarith
+
+/-- Cited margins are invariant under integer time shifts. -/
+theorem cited_margin_shift (w : ℤ) (t₀ : ℝ) (n : ℤ) (c : ℝ)
+    (h : ∀ m : ℤ, c ≤ |(w : ℝ) * t₀ - m|) :
+    ∀ m : ℤ, c ≤ |(w : ℝ) * (t₀ + n) - m| := by
+  intro m
+  have := h (m - w * n)
+  have heq : (w : ℝ) * (t₀ + n) - m = (w : ℝ) * t₀ - ((m - w * n : ℤ) : ℝ) := by
+    push_cast
+    ring
+  rw [heq]
+  exact this
+
+/-- **THE CITE–HUNTER–SHIFT THEOREM**: as `cite_hunter_lonely`, but the ledger only
+has to be positive on SOME integer translate of the window — the citation margins
+are shift-invariant, so the block may dodge into whichever translate the pair
+events populate.  This is the dischargeable form: pair-overlap events of a
+near-resonant pair cluster in runs (period `1/gcd`), and a single window position
+can miss them; the integer orbit of windows cannot be avoided by events of
+spacing `< 1`. -/
+theorem cite_hunter_shift_lonely (cite : LRCUpTo13) (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)
+    (k : ℕ) (hk : k ≤ 12) (B : ℤ) (hB : 0 < B)
+    (hcited : ∀ i : Fin 13, (i : ℕ) < k → |v i| ≤ B)
+    (ws : List ℤ) (hwpos : ∀ w ∈ ws, 0 < w)
+    (hsplit : ∀ i : Fin 13, (i : ℕ) < k ∨ |v i| ∈ ws)
+    (hledger : ∀ a b : ℝ,
+      b - a = 2 * (((13 : ℝ) - k) / (14 * ((k : ℝ) + 1) * (B : ℝ))) →
+      ∃ n : ℤ,
+      0 < (b - a)
+        - ((ws.map fun (w : ℤ) =>
+            rlength (rinter [(a + n, b + n)] (teeth w (a + n) (b + n)))).sum)
+        + pairCredits [(a + n, b + n)]
+            (ws.map fun (w : ℤ) => teeth w (a + n) (b + n))) :
+    ∃ t : ℝ, Lonely 14 v t := by
+  have hk13 : k ≤ 13 := by omega
+  have hBR : (0 : ℝ) < (B : ℝ) := by exact_mod_cast hB
+  have hkR : (k : ℝ) ≤ 12 := by exact_mod_cast hk
+  set δ : ℝ := ((13 : ℝ) - k) / (14 * ((k : ℝ) + 1) * (B : ℝ)) with hδ
+  have hδpos : 0 < δ := by
+    rw [hδ]
+    apply div_pos (by linarith) (by positivity)
+  set wc : Fin k → ℤ := fun j => v (Fin.castLE hk13 j) with hwc
+  have hwcne : ∀ j, wc j ≠ 0 := fun j => hv _
+  obtain ⟨t₀, hcite⟩ := cite k hk wc hwcne
+  obtain ⟨n, hn⟩ := hledger (t₀ - δ) (t₀ - δ + 2 * δ) (by ring)
+  set t₁ : ℝ := t₀ + n with ht₁
+  have hcite₁ : ∀ (j : Fin k) (m : ℤ), (1 : ℝ) / (k + 1 : ℕ) ≤ |(wc j : ℝ) * t₁ - m| :=
+    fun j => cited_margin_shift (wc j) t₀ n _ (hcite j)
+  have hwin : t₀ - δ + (n : ℝ) ≤ t₀ - δ + 2 * δ + (n : ℝ) := by linarith
+  obtain ⟨τ, hτ1, hτ2, hτgood⟩ := hunter_block_step ws hwpos
+    (t₀ - δ + (n : ℝ)) (t₀ - δ + 2 * δ + (n : ℝ)) hwin (by
+      have harith : t₀ - δ + 2 * δ + (n : ℝ) - (t₀ - δ + (n : ℝ))
+          = t₀ - δ + 2 * δ - (t₀ - δ) := by ring
+      rw [harith]
+      exact hn)
+  refine ⟨τ, ?_⟩
+  intro i m
+  rcases hsplit i with hlt | hmem
+  · -- cited leg at the shifted point
+    have hidx : Fin.castLE hk13 ⟨(i : ℕ), hlt⟩ = i := by
+      apply Fin.ext
+      rfl
+    have h0 : (1 : ℝ) / (k + 1 : ℕ) ≤ |(v i : ℝ) * t₁ - m| := by
+      simpa [hwc, hidx] using hcite₁ ⟨(i : ℕ), hlt⟩ m
+    have hvB : |(v i : ℝ)| ≤ (B : ℝ) := by
+      rw [← Int.cast_abs]
+      exact_mod_cast hcited i hlt
+    have htri : |(v i : ℝ) * t₁ - m| ≤ |(v i : ℝ) * τ - m| + |(v i : ℝ)| * |t₁ - τ| := by
+      calc |(v i : ℝ) * t₁ - m|
+          = |((v i : ℝ) * τ - m) + (v i : ℝ) * (t₁ - τ)| := by congr 1; ring
+        _ ≤ |(v i : ℝ) * τ - m| + |(v i : ℝ) * (t₁ - τ)| := abs_add_le _ _
+        _ = |(v i : ℝ) * τ - m| + |(v i : ℝ)| * |t₁ - τ| := by rw [abs_mul]
+    have hwin2 : |t₁ - τ| ≤ δ := by
+      rw [abs_le, ht₁]
+      constructor <;> linarith
+    have hlip : |(v i : ℝ)| * |t₁ - τ| ≤ (B : ℝ) * δ := by
+      apply mul_le_mul hvB hwin2 (abs_nonneg _) hBR.le
+    have hBδ : (B : ℝ) * δ = ((13 : ℝ) - k) / (14 * ((k : ℝ) + 1)) := by
+      rw [hδ]
+      field_simp
+    have hmargin : (1 : ℝ) / (k + 1 : ℕ) - ((13 : ℝ) - k) / (14 * ((k : ℝ) + 1))
+        = 1 / 14 := by
+      have hcast : ((k + 1 : ℕ) : ℝ) = (k : ℝ) + 1 := by push_cast; ring
+      rw [hcast]
+      field_simp
+      ring
+    calc (1 : ℝ) / (14 : ℕ) = 1 / 14 := by norm_num
+      _ = 1 / (k + 1 : ℕ) - ((13 : ℝ) - k) / (14 * ((k : ℝ) + 1)) := hmargin.symm
+      _ ≤ |(v i : ℝ) * τ - m| := by
+          rw [hBδ] at hlip
+          linarith
+  · -- block leg through the sign bridge
+    have hgood := hτgood |v i| hmem
+    rcases abs_cases ((v i : ℝ)) with ⟨habs, _⟩ | ⟨habs, _⟩
+    · have hcast : ((|v i| : ℤ) : ℝ) = (v i : ℝ) := by
+        rw [Int.cast_abs, habs]
+      have := hgood m
+      rw [hcast] at this
+      exact (by norm_num : (1:ℝ)/(14:ℕ) = 1/14) ▸ this
+    · have hcast : ((|v i| : ℤ) : ℝ) = -(v i : ℝ) := by
+        rw [Int.cast_abs, habs]
+      have := hgood (-m)
+      rw [hcast] at this
+      have heq : |-(v i : ℝ) * τ - (-m : ℤ)| = |(v i : ℝ) * τ - m| := by
+        rw [show -(v i : ℝ) * τ - ((-m : ℤ) : ℝ) = -((v i : ℝ) * τ - m) by push_cast; ring,
+          abs_neg]
+      rw [heq] at this
+      exact (by norm_num : (1:ℝ)/(14:ℕ) = 1/14) ▸ this
+
 end RealRegion
 end LonelyRunner
