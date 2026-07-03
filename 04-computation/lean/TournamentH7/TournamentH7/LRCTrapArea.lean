@@ -18,15 +18,15 @@
 import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 import Mathlib.Tactic
+import TournamentH7.LRCSpreadPairFloor
 
 namespace TournamentH7.TrapArea
 
-/-- The trapezoid overlap of two teeth at lattice residue `r` (verbatim from
-`LonelyRunner.SpreadPairFloor.trap`; `h = 1/14`).  Plateau `2h/w₂`, support `|r| < h(w₁+w₂)`. -/
-noncomputable def trap (w₁ w₂ r : ℝ) : ℝ :=
-  max 0 (min (2 * (1/14) / w₂) (((1/14) * (w₁ + w₂) - |r|) / (w₁ * w₂)))
+open LonelyRunner.SpreadPairFloor
 
-theorem trap_nonneg (w₁ w₂ r : ℝ) : 0 ≤ trap w₁ w₂ r := le_max_left _ _
+/- We prove the area for klein's actual `LonelyRunner.SpreadPairFloor.trap` (the two-tooth
+overlap of `LRCSpreadPairFloor` Stage 1), so the result feeds the pair-floor machinery directly.
+`trap w₁ w₂ r = max 0 (min (2h/w₂) ((h(w₁+w₂) − |r|)/(w₁w₂)))`, `h = 1/14`. -/
 
 /-! ## The piecewise characterization of the trapezoid -/
 
