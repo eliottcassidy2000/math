@@ -1,0 +1,22 @@
+window L = 0.006494  (delta=0.003247)
+
+config                                      min_1pair  min_allpair      w1
+consec 23..29 (tight,small)                 -0.026245    -0.011282      23
+consec 100..106                             -0.002194    -0.002197     100
+span60 @100 (100,110,..,160)                -0.000702    -0.000469     100
+span300 @100                                 0.000475    -0.000239     100 [1p+]
+consec 1000..1006                            0.000013    -0.000171    1000 [1p+]
+span300 @1000                                0.000136    -0.000093    1000 [1p+]
+consec 4000..4006                            0.000016    -0.000008    4000 [1p+]
+consec 7400..7406 (regime A edge)            0.000019    -0.000030    7400 [1p+]
+span300 @7400                                0.000150    -0.000014    7400 [1p+]
+span1500 @7400 (spread,large)                0.000140     0.000490    7400  CLOSABLE [1p+]
+span1500 @100 (spread,small)                -0.000261     0.000470     100  CLOSABLE
+
+L/49 (floor density scale) = 0.000133
+  w1=    23: fee~3/w1=0.130435   6L/49(klein budget)=0.000795   fee<budget? False
+  w1=   100: fee~3/w1=0.030000   6L/49(klein budget)=0.000795   fee<budget? False
+  w1=  1000: fee~3/w1=0.003000   6L/49(klein budget)=0.000795   fee<budget? False
+  w1=  3769: fee~3/w1=0.000796   6L/49(klein budget)=0.000795   fee<budget? False
+  w1=  7400: fee~3/w1=0.000405   6L/49(klein budget)=0.000795   fee<budget? True
+  w1= 22556: fee~3/w1=0.000133   6L/49(klein budget)=0.000795   fee<budget? True

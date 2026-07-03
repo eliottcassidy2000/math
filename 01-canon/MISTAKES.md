@@ -11,6 +11,16 @@ Format per entry:
 
 ---
 
+## MISTAKE-072: The drifting floor cannot close regime C; the bottleneck is SINGLES, not pairs (S24 "one floor away" over-optimistic)
+
+**Session:** kind-pasteur-2026-07-02-S24 (found by kind-pasteur-2026-07-03-S25, numerically pinned)
+**What S24 claimed:** the SPREAD c=7 case is "reduced to one floor (klein's, nearly done)" via `cite_hunter_c7_onepair`, and regime C splits into A(closed)/B(one floor)/C(open).
+**What S25 found (numerical ground truth, lrc14_regimeC_driftfloor_probe / _boundary / _sweep):**
+ 1. **The reduction is correct but its hypothesis is FAR from dischargeable with available bounds.** `cite_hunter_c7_onepair` needs `singles < L + firstpair`. The only singles bound in the corpus (`window_teeth_mass_le`: `danger(w) <= L/7 + 3/(7w)`) gives `singles <= L + 3/w1`, and `firstpair >= L/49`. So it discharges ONLY for `3/w1 < L/49`, i.e. **w1 > 22638** (with klein's 6-pair budget, w1 > 3773) -- FAR beyond regime A (w1>=7392, already closed by cluster_sweep). The pair floor is NOT the bottleneck; the CRUDE SINGLES bound is.
+ 2. **Numerical truth is w1 ~ 1100** (consec integers, best/max-gap single pair): the ACTUAL Hunter ledger is positive there. The gap between truth (1100) and crude-provable (22638) is exactly the slack in the singles bound. Closing it needs the JOINT (measure-theoretic) treatment (klein `star_union_le` on actual danger measures), not per-runner region lengths.
+ 3. **The tight-small corner (near-consecutive integers, w1 <~ 1000) is at the Hunter BOUNDARY** -- full all-pair Hunter min ledger ~ -0.0002 (slightly negative) even at w1=1500. Reason (verified): over a window of width L~0.0065, each block point (w1+j)t sweeps only `(w1+j)*L ~ 0.15 < 2h` in phase -- LESS than a danger arc -- so points cannot sweep OUT of danger; the density averaging the drift floor relies on needs `w*L >> 1`. For consecutive small integers `w*L ~ 1`, averaging fails and the problem is arithmetic (the AP `{(w1+j)t}`), not analytic. NO window-floor closes it.
+**Lesson:** a correct reduction whose hypothesis needs bounds you do not have is not "nearly done." Before calling a leg "one floor away," check that the OTHER inputs (here: the singles bound) can actually discharge it at the relevant scale. The drifting floor (pair credit ~L/49) is half the ledger; the tight singles bound is the missing half, and for `wL ~ 1` blocks no floor suffices -- that corner needs the arithmetic/AP or resonant-combo route.
+
 ## MISTAKE-071: The integer-shift "dischargeable form" is vacuous (1-periodicity)
 
 **Session:** kind-pasteur-2026-07-02-S23 (caught by kind-pasteur-2026-07-02-S24)

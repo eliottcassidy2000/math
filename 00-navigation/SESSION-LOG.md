@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-03-S25 -- CORPUS FIX (LRCSpreadPairFloor repaired vs pinned mathlib) + REGIME C GROUND TRUTH: the drifting floor CANNOT close it; the bottleneck is SINGLES not pairs (MISTAKE-072)
+
+Prompt (owner): close regime C with a window-adaptive drifting floor + finish tasks blocking perfect formalization.
+
+CORPUS HEALTH (done, pushed, corpus 8627 green): LRCSpreadPairFloor.lean (klein's spread pair-floor Stages 1-3: per_tooth_ge_trap + walk_one_wrap) was BROKEN vs pinned mathlib v4.30.0 (mac-mini flagged). Repaired 8 mathlib-drift errors (div_le_div_of_nonneg_right ->.le; Int.add_mul_emod_self->_right; Int.add_emod_self->add_emod_right; max_comm hitting outer max 0 -> explicit args; convert-ring->exact; omega given D<=k*D) and REGISTERED. Kernel-pure. Unblocks the drift-floor machinery.
+
+REGIME C -- the honest finding (3 numerical probes, saved to 05-knowledge/results/lrc14_regimeC_*_kps_S25.out):
+ * The drifting floor (Hunter pair credit ~ L/49) does NOT close regime C. cite_hunter_c7_onepair is CORRECT but its hypothesis (singles < L + firstpair) needs a SINGLES bound the corpus lacks: window_teeth_mass_le (L/7 + 3/(7w)) only discharges it for w1 > 22638 (>> regime A). The pair floor is not the bottleneck -- the CRUDE singles bound is.
+ * Numerical truth: the ACTUAL Hunter ledger closes at w1 ~ 1100 (max-gap single pair). The gap 1100 vs 22638 = the singles-bound slack; closing it needs the JOINT measure treatment (klein star_union_le on real danger measures), not region lengths.
+ * The TIGHT-SMALL corner (near-consecutive integers, w1 <~ 1000, e.g. 23..29): at the Hunter BOUNDARY (min ledger ~ -0.0002, slightly negative) even with full all-pair Hunter. Root cause: over window L~0.0065 each point (w1+j)t sweeps only (w1+j)L ~ 0.15 < 2h in phase -- can't sweep OUT of danger; density averaging needs wL >> 1. For wL ~ 1 the problem is ARITHMETIC (the AP {(w1+j)t}), not analytic. No window-floor closes it.
+ * CONCLUSION: "close regime C with a drifting floor" is NOT achievable. The drift floor is half the ledger; tight singles bounds are the missing half (reaches w1~1100 numerically); and the tight-small corner needs the AP/resonant-combo/SimulPeel route, not any floor. MISTAKE-072 corrects S24's "spread-7 one floor away."
+
+DELIVERED: LRCSpreadPairFloor.lean (repaired+registered, kernel-pure); 3 probe scripts + outs; MISTAKE-072; OPEN-Q-110 update; reflection the-density-discreteness-transition.md; coordination to klein/mac-mini. No canon overridden; no false closure claimed.
+
 ## mac-mini-2026-07-02-S19 -- THE TRAPEZOID AREA = 1/49 (drifting pair-floor's analytic heart, SORRY-FREE) + a CRITICAL mathlib-drift corpus-breakage finding (HYP-3876)
 
 Prompt (owner): finish up the Lean formalization; get it in the best state possible; long session, push/pull frequently, integrate + extend other agents' work.

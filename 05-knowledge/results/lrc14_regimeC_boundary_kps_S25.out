@@ -1,0 +1,25 @@
+L=0.006494, 1/L=154.0
+
+CONSECUTIVE integers: smallest w1 that closes (span=6):
+  w1=   23 consec: min_1pair=-0.024803  open
+  w1=   50 consec: min_1pair=-0.009965  open
+  w1=  100 consec: min_1pair=-0.002452  open
+  w1=  200 consec: min_1pair=-0.002134  open
+  w1=  300 consec: min_1pair=-0.000028  open
+  w1=  500 consec: min_1pair=-0.000366  open
+  w1=  700 consec: min_1pair=-0.000082  open
+  w1=  900 consec: min_1pair=-0.000003  open
+  w1= 1100 consec: min_1pair=+0.000001  CLOSE
+  w1= 1500 consec: min_1pair=+0.000012  CLOSE
+  w1= 2000 consec: min_1pair=+0.000019  CLOSE
+
+w1=100 fixed, varying span (7 evenly spaced):
+  span~   6 (step  1): min_1pair=-0.002452  open  (span*L=0.04)
+  span~  30 (step  5): min_1pair=-0.001545  open  (span*L=0.19)
+  span~  60 (step 10): min_1pair=-0.001127  open  (span*L=0.39)
+  span~  96 (step 16): min_1pair=-0.001543  open  (span*L=0.62)
+  span~ 150 (step 25): min_1pair=-0.001026  open  (span*L=0.97)
+  span~ 198 (step 33): min_1pair=-0.001106  open  (span*L=1.29)
+  span~ 246 (step 41): min_1pair=-0.001253  open  (span*L=1.60)
+  span~ 300 (step 50): min_1pair=-0.000541  open  (span*L=1.95)
+  span~ 396 (step 66): min_1pair=-0.000969  open  (span*L=2.57)

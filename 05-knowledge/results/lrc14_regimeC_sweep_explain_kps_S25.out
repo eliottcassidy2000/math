@@ -1,0 +1,15 @@
+L=0.006494, w1*L=1 at w1=154
+
+CONSECUTIVE, FULL all-pair Hunter (strongest), threshold in w1:
+  w1=  100 (w1*L= 0.65): min_allpair=-0.002890 open
+  w1=  300 (w1*L= 1.95): min_allpair=-0.000110 open
+  w1=  500 (w1*L= 3.25): min_allpair=-0.000606 open
+  w1=  700 (w1*L= 4.55): min_allpair=-0.000259 open
+  w1=  900 (w1*L= 5.84): min_allpair=-0.000156 open
+  w1= 1100 (w1*L= 7.14): min_allpair=-0.000303 open
+  w1= 1300 (w1*L= 8.44): min_allpair=-0.000172 open
+  w1= 1500 (w1*L= 9.74): min_allpair=-0.000172 open
+
+CRUDE-bound discharge of one-pair ledger: need F=3/w1 < L/49=0.000133
+  => provable only for w1 > 22638  (>> the numerical closure w1~1100)
+  klein 6-pair budget 6L/49=0.000795 => provable w1 > 3773

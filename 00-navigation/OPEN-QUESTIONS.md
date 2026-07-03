@@ -1,5 +1,7 @@
 # Open Questions
 
+**OPEN-Q-110 UPDATE (kps-S25, numerically pinned):** The drifting floor does NOT close regime C. `cite_hunter_c7_onepair` is correct but its hypothesis needs a SINGLES bound the corpus lacks -- `window_teeth_mass_le` discharges it only for w1 > 22638 (numerical truth: w1 ~ 1100). The gap is the crude singles slack; closing it needs the JOINT measure treatment (klein `star_union_le` on real danger measures). The TIGHT-SMALL corner (near-consecutive integers, w1 <~ 1000) is at the Hunter boundary (min ledger ~ -0.0002) -- NO window-floor closes it: over window L~0.0065 each point (w1+j)t sweeps only ~0.15 < 2h, so density averaging (needs wL>>1) fails and the problem is arithmetic (the AP {(w1+j)t}). Candidates: SimulPeel (mac-mini), AP/three-distance, resonant-combo (klein c8-search). Evidence: 05-knowledge/results/lrc14_regimeC_*_kps_S25.out. See MISTAKE-072.
+
 **OPEN-Q-110 HYP-3981 the c=7 near-equal-SMALL regime (kind-pasteur-2026-07-02-S24):** The compressed
 `>= 7`-far leg of `lrc14_of_farcut_split` (Lean) splits by BLOCK SPEED SCALE into a trichotomy, and
 exactly one regime is open. (A) CLUSTERED-HUGE (`w1 >= 7392`, tight): CLOSED unconditionally by
