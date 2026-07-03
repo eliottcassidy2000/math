@@ -1,0 +1,10 @@
+hge7 band closure BELOW the singles threshold (max speed < 22638). worst smallest-lonely-q.
+========================================================================================
+tested 189128 covering gcd=1 hge7 families with max speed < 22638
+band FAILURES (no lonely q <= 1500): 0
+WORST smallest-lonely-q = 50
+   worst family: [8, 2808, 4275, 5394, 6020, 6540, 10080, 10619, 12936, 16099, 16720, 19646, 21114]
+families needing q > 40: 287
+
+=> if 0 failures: band {15..50} closes ALL covering gcd=1 hge7 with max speed < 22638;
+   combined with kps singles bound (max speed > 22638) => the hge7 leg CLOSES with a FINITE band.
