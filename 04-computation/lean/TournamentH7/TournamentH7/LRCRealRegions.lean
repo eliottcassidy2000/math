@@ -425,6 +425,36 @@ theorem pairCredits_cons₂ (I : RRegion) (D₁ D₂ : RRegion) (rest : List RRe
       = ((D₂.map fun d => rlength (rinter (rinter I [d]) D₁)).sum)
         + pairCredits (rdiff I D₁) (D₂ :: rest) := rfl
 
+/-- Pair credits are nonnegative (each term is a sum of nonneg clip lengths). -/
+theorem pairCredits_nonneg : ∀ (Ds : List RRegion) (I : RRegion), 0 ≤ pairCredits I Ds := by
+  intro Ds
+  induction Ds with
+  | nil => intro I; exact le_of_eq (pairCredits_nil I).symm
+  | cons D₁ tail ih =>
+      intro I
+      cases tail with
+      | nil => exact le_of_eq (pairCredits_single I D₁).symm
+      | cons D₂ rest =>
+          rw [pairCredits_cons₂]
+          apply add_nonneg
+          · apply List.sum_nonneg
+            intro x hx
+            rw [List.mem_map] at hx
+            obtain ⟨d, _, rfl⟩ := hx
+            exact rlength_nonneg _
+          · exact ih (rdiff I D₁)
+
+/-- **One-pair lower bound**: the total pair credit dominates the FIRST consecutive
+pair's credit (the remaining pairs, measured on the depleted region, only add
+nonnegative mass).  For a `c = 7` block this single pristine-window credit already
+clears the density cancellation `7·(L/7) = L` — no depletion transport needed. -/
+theorem pairCredits_ge_first (I D₁ D₂ : RRegion) (rest : List RRegion) :
+    ((D₂.map fun d => rlength (rinter (rinter I [d]) D₁)).sum)
+      ≤ pairCredits I (D₁ :: D₂ :: rest) := by
+  rw [pairCredits_cons₂]
+  have h := pairCredits_nonneg (D₂ :: rest) (rdiff I D₁)
+  linarith
+
 /-- **THE HUNTER LEDGER** (path-tree Bonferroni, EXACT credits): the surviving mass
 of a sequential peel is at least the window mass, minus each danger's FULL mass on
 the ORIGINAAL window, PLUS the consecutive-pair credits.  No loss terms: the pair
@@ -798,6 +828,39 @@ theorem cited_margin_shift (w : ℤ) (t₀ : ℝ) (n : ℤ) (c : ℝ)
     ring
   rw [heq]
   exact this
+
+/-- **THE ONE-PAIR CITE–HUNTER THEOREM** (the spread `c = 7` route).  For a block of
+runners whose FIRST consecutive pair `(w₁, w₂)` already carries enough pristine-window
+overlap credit to clear the singles fees, the family is lonely.  This is the sharp
+form for `c = 7`: the density term `7·(L/7) = L` cancels the window exactly, so the
+Hunter ledger is positive as soon as the SINGLE first-pair credit beats the singles
+sum minus `L` — no depletion transport of the later pairs is needed
+(`pairCredits_ge_first`).  The sole analytic input `hpair` is exactly the first
+pristine pair-overlap floor (klein `LRCSpreadPairFloor`: `per_tooth_ge_trap` summed
+over the residue walk). -/
+theorem cite_hunter_c7_onepair (cite : LRCUpTo13) (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)
+    (k : ℕ) (hk : k ≤ 12) (B : ℤ) (hB : 0 < B)
+    (hcited : ∀ i : Fin 13, (i : ℕ) < k → |v i| ≤ B)
+    (w₁ w₂ : ℤ) (rest : List ℤ)
+    (hwpos : ∀ w ∈ (w₁ :: w₂ :: rest), 0 < w)
+    (hsplit : ∀ i : Fin 13, (i : ℕ) < k ∨ |v i| ∈ (w₁ :: w₂ :: rest))
+    (hpair : ∀ a b : ℝ,
+      b - a = 2 * (((13 : ℝ) - k) / (14 * ((k : ℝ) + 1) * (B : ℝ))) →
+      (((w₁ :: w₂ :: rest).map fun (w : ℤ) =>
+          rlength (rinter [(a, b)] (teeth w a b))).sum)
+        < (b - a) + ((teeth w₂ a b).map fun d =>
+            rlength (rinter (rinter [(a, b)] [d]) (teeth w₁ a b))).sum) :
+    ∃ t : ℝ, Lonely 14 v t := by
+  apply cite_hunter_lonely cite v hv k hk B hB hcited (w₁ :: w₂ :: rest) hwpos hsplit
+  intro a b hab
+  have hfirst := hpair a b hab
+  have hmap : ((w₁ :: w₂ :: rest).map fun (w : ℤ) => teeth w a b)
+      = teeth w₁ a b :: teeth w₂ a b :: (rest.map fun (w : ℤ) => teeth w a b) := by
+    simp only [List.map_cons]
+  rw [hmap]
+  have hge := pairCredits_ge_first [(a, b)] (teeth w₁ a b) (teeth w₂ a b)
+    (rest.map fun (w : ℤ) => teeth w a b)
+  linarith
 
 /-- **THE CITE–HUNTER–SHIFT THEOREM**: as `cite_hunter_lonely`, but the ledger only
 has to be positive on SOME integer translate of the window — the citation margins
