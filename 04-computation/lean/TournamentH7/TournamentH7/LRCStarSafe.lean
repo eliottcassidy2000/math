@@ -154,5 +154,87 @@ theorem exists_star_lonely_real (c : ℕ) (hc1 : 1 ≤ c) (hc7 : c ≤ 7)
   calc (1 : ℝ) / 14 ≤ |(v i : ℝ) * t - round ((v i : ℝ) * t)| := hxi
     _ ≤ |(v i : ℝ) * t - m| := round_le _ m
 
+/-! ## The measure route at its limit — mutual independence closes ANY n -/
+
+/-- The unit circle carries a probability measure. -/
+instance : IsProbabilityMeasure (volume : Measure UnitAddCircle) :=
+  ⟨by have := AddCircle.measure_univ (T := 1); simpa using this⟩
+
+open scoped ProbabilityTheory in
+/-- **THE MUTUAL-INDEPENDENCE CLOSER**: if the real danger sets of a family are
+MUTUALLY INDEPENDENT as events on the circle, the whole family is lonely at the
+critical band `1/14` — for ANY number of runners, including 14.  The safe set has
+measure `∏ (1 − 1/7) = (6/7)ⁿ > 0`.  This is the measure route at its limit: no cap
+at 7, because full independence supplies ALL the inclusion–exclusion credits, not
+just a spanning tree's `n−1`.  The honest obstruction is the hypothesis itself —
+near-equal integer speeds are strongly correlated, NOT independent, and that
+correlation is precisely the difficulty of LRC. -/
+theorem exists_iIndep_lonely {ι : Type*} [Fintype ι] (v : ι → ℤ) (φ : ι → UnitAddCircle)
+    (hvne : ∀ i, v i ≠ 0)
+    (hindep : ProbabilityTheory.iIndepSet
+      (fun i => danger (v i) (φ i) (1 / 14)) volume) :
+    ∃ x : UnitAddCircle, ∀ i, x ∉ danger (v i) (φ i) (1 / 14) := by
+  set A : ι → Set UnitAddCircle := fun i => danger (v i) (φ i) (1 / 14) with hA
+  have hAmeas : ∀ i, MeasurableSet (A i) := fun i => measurableSet_danger _ _ _
+  have hindep' := (ProbabilityTheory.iIndepSet_iff_iIndep A volume).mp hindep
+  -- complements are measurable in the generated σ-algebras
+  have hcompl : ∀ i, MeasurableSet[MeasurableSpace.generateFrom {A i}] ((A i)ᶜ) :=
+    fun i => (MeasurableSpace.measurableSet_generateFrom (Set.mem_singleton _)).compl
+  have hprod := hindep'.meas_iInter hcompl
+  -- each complement has measure 6/7
+  have hcompl_meas : ∀ i, volume ((A i)ᶜ) = ENNReal.ofReal (6 / 7) := by
+    intro i
+    rw [MeasureTheory.measure_compl (hAmeas i) (measure_ne_top _ _)]
+    rw [hA]
+    rw [volume_danger (hvne i) (φ i) (by norm_num) (by norm_num)]
+    have huniv : volume (Set.univ : Set UnitAddCircle) = 1 := by
+      have := AddCircle.measure_univ (T := 1); simpa using this
+    rw [huniv]
+    rw [show (2 : ℝ) * (1 / 14) = 1 / 7 by norm_num]
+    rw [show (1 : ℝ≥0∞) = ENNReal.ofReal 1 from ENNReal.ofReal_one.symm]
+    rw [← ENNReal.ofReal_sub _ (by norm_num)]
+    norm_num
+  -- the safe set has positive measure
+  have hpos : 0 < volume (⋂ i, (A i)ᶜ) := by
+    rw [hprod]
+    rw [Finset.prod_congr rfl (fun i _ => hcompl_meas i)]
+    rw [Finset.prod_const]
+    apply ENNReal.pow_pos
+    simp [ENNReal.ofReal_pos]
+  -- positive measure => nonempty
+  have hne : (⋂ i, (A i)ᶜ).Nonempty := by
+    by_contra h
+    rw [Set.not_nonempty_iff_eq_empty] at h
+    rw [h] at hpos
+    simp at hpos
+  obtain ⟨x, hx⟩ := hne
+  refine ⟨x, fun i => ?_⟩
+  have := Set.mem_iInter.mp hx i
+  rwa [Set.mem_compl_iff, hA] at this
+
+open scoped ProbabilityTheory in
+/-- Real-time form of the independence closer: mutually independent danger sets give a
+real time `t` at which every runner keeps integer-distance `≥ 1/14`. -/
+theorem exists_iIndep_lonely_real {ι : Type*} [Fintype ι] (v : ι → ℤ)
+    (hvne : ∀ i, v i ≠ 0)
+    (hindep : ProbabilityTheory.iIndepSet
+      (fun i => danger (v i) (0 : UnitAddCircle) (1 / 14)) volume) :
+    ∃ t : ℝ, ∀ i, ∀ m : ℤ, (1 : ℝ) / 14 ≤ |(v i : ℝ) * t - m| := by
+  obtain ⟨x, hx⟩ := exists_iIndep_lonely v (fun _ => 0) hvne hindep
+  obtain ⟨t, rfl⟩ := QuotientAddGroup.mk_surjective x
+  refine ⟨t, ?_⟩
+  intro i m
+  have hxi := hx i
+  rw [mem_danger] at hxi
+  have hconv : (v i • ((t : ℝ) : UnitAddCircle)) + (0 : UnitAddCircle)
+      = (((v i : ℝ) * t : ℝ) : UnitAddCircle) := by
+    rw [add_zero, show ((v i : ℝ) * t : ℝ) = (v i • t : ℝ) by rw [zsmul_eq_mul]]
+    exact (QuotientAddGroup.mk_zsmul _ t (v i)).symm
+  rw [hconv, Metric.mem_ball, dist_zero_right] at hxi
+  push_neg at hxi
+  rw [UnitAddCircle.norm_eq] at hxi
+  calc (1 : ℝ) / 14 ≤ |(v i : ℝ) * t - round ((v i : ℝ) * t)| := hxi
+    _ ≤ |(v i : ℝ) * t - m| := round_le _ m
+
 end StarSafe
 end LonelyRunner
