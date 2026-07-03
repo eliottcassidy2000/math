@@ -1,0 +1,15 @@
+Are aligned band-blockers (small-q FAILS) LONELY at fine t (renormalization absorbs the cluster)?
+==========================================================================================
+ far scale N witness q (small)  M (fine scan)    M vs 1/14  lonely@fine t
+        1000                41        0.24286        3.40x           True
+             family far=[986, 988, 990, 992, 999, 1000, 1005, 1008, 1012, 1014, 1015]
+             lonely fine t*=0.49975369  (1/q would be 0.02439); cluster spread=29
+        5000                41        0.21804        3.05x           True
+             family far=[4988, 4992, 4995, 4998, 5000, 5004, 5005, 5012, 5014, 5016]
+             lonely fine t*=0.01989135  (1/q would be 0.02439); cluster spread=28
+       30000   (no q>38 found)
+
+=> if M >> 1/14 for these small-q-FAILING families: they are LOOSE, lonely at FINE t --
+   the census's small-q failure is the pinned-phi artifact, NOT tightness. Renormalization
+   (fast phase phi absorbs the near-equal cluster) closes them; census handles bounded magnitude.
+   => HYP-4041 architecture: the two routes are COMPLEMENTARY, together covering all compressed families.
