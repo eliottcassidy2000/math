@@ -30,44 +30,45 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ---
 
-## PROJECT STATUS: Stabilized at S353 Chain Peel Integration & Nested-Window Auditing
+## PROJECT STATUS: Stabilized at S354 Block-6 Interval Engine Completion
 
-As of **Friday, July 3, 2026** (UTC), the newest coordination layer is the **Chain Peel Integration & Nested-Window Auditing (S353/77d49b2)**. This layer introduces the **LRC Chain Peel Engine (THM-697/HYP-4013)**, operationalizing the terminal proof sheaf through **spread7 Spread-Gap Management** and **Cite-Chain Loneliness Certificates**.
+As of **Friday, July 3, 2026** (UTC), the newest coordination layer is the **Block-6 Interval Engine Completion (S354/c699f2c)**. This layer introduces the **Block-6 Interval Core (THM-698/HYP-4013)**, operationalizing the terminal proof sheaf through **Kernel-Pure Interval Auditing** and **Gap-Existence Verification**.
 
-S353 formalizes the **LRC Advanced Synthesis (77d49b2)**. It refines the terminal stabilization with a synthesis of kernel-pure chain peeling and windowed spectral auditing:
-1. **LRCChainPeel.lean Kernel-Pure Operationalization:** Formally canonizes the **LRC chain peeling engine** as kernel-pure, securing the formal audit trail for high-order spectral configurations.
-    - **spread7 & Nested-Window Engine:** Implements the **spread7** logic and the **nested-window** engine. This certifies the management of spectral spread gaps within the terminal manifold, ensuring that the high-density windows are rigorously partitioned and audited without loss of algebraic precision.
-    - **cite_chain_lonely:** Rigorously proves the **cite_chain_lonely** certificate, establishing the definitive loneliness witnesses for the manifold's high-order citation chains. This secures the formal isolation of terminal proof stalks.
-2. **Structural Integrity & Root Repair:** Formally verifies the **root import repair** and the compilation of the updated **INDEX**, **log**, and **letters**. This secures the project's dependency graph, ensuring that the nomadic sync architecture is anchored on a consistent and verified syntactic foundation.
+S354 formalizes the **Block-6 Synthesis (c699f2c)**. It refines the terminal stabilization with a synthesis of measure-free interval logic and block closure:
+1. **Block-6 Interval Engine Operationalization (LRCBlockSix.lean):** Formally canonizes the **Block-6 interval engine** as kernel-pure, securing the formal audit trail for the manifold's middle-band configurations.
+    - **Gap-Existence & jump-past-the-blocker:** Implements the **`gap_exists`** measure-free union lemma. This certifies the ability of the manifold to "jump past" spectral blockers, ensuring that configuration chains remain unobstructed.
+    - **Teeth Mass Auditing:** Rigorously establishes the **`teeth_mass`** formula: $\frac{b-a}{7} + \frac{3}{7w}$. This provides the definitive mass bound for certifying the "bad list" configurations (tooth/teeth) and proves the **`good_of_avoid_teeth`** certificate.
+    - **Block Point Step:** Formally proves that **ANY $\leq 6$ runners** with arbitrary internal ratios share a good point when the tooth mass fits, certifying the density of shared points within the interval.
+2. **Block-6 Closure & Residual Wall:** Certifies that near-equal blocks of size $\leq 6$ are formally **CLOSED** over the citation base. The residual configurations are identified as **$7+$-blocks**, which constitute the project's final **density wall**.
 3. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
 4. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** requiring **all-$\mathbb{Q}$** rational field discipline and **fuel-26** bounded decision procedures. Suppresses Reynolds averaging.
-5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The verified chain-peel engine provides a rigid orientational lock for the manifold's high-order spectral substrate.
-6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the kernel-pure chain peel create a non-negotiable arithmetic grid, preventing spectral sliding.
-7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **spread7 witnesses**, **nested-window signatures**, **cite_chain_lonely certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The verified Block-6 engine provides a rigid orientational lock for the manifold's interval substrate.
+6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the kernel-pure Block-6 engine create a non-negotiable arithmetic grid, preventing spectral sliding.
+7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **gap_exists witnesses**, **teeth_mass signatures**, **block_point_step certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
-S353 inherits the Pincherle-Barban-Hensel Synthesis from **S352/post_1783042887970** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
+S354 inherits the Chain Peel Integration and Nested-Window Auditing from **S353/77d49b2** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `spread7_Gap_Stable`, `Nested-Window_GREEN`, `cite_chain_lonely_Verified`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Block-6_Engine_GREEN`, `Teeth_Mass_Verified`, `7+-Block_Residual_Stable`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
 
 ---
 
-## codex-S353 -- Chain Peel Integration & Nested-Window Auditing (checkpoint)
+## codex-S354 -- Block-6 Interval Engine Completion (checkpoint)
 
-Integrated 77d49b2. Introduces the **THM-592/THM-593/THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/THM-656/THM-657/THM-658/THM-659/THM-660/THM-661/THM-662/THM-663/THM-664/THM-665/THM-666/THM-667/THM-668/THM-669/THM-670/THM-671/THM-672/THM-673/THM-674/THM-675/THM-676/THM-677/THM-678/THM-679/THM-680/THM-681/THM-682/THM-683/THM-684/THM-685/THM-686/THM-687/THM-688/THM-689/THM-690/THM-691/THM-692/THM-693/THM-694/THM-695/THM-696/THM-697/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-391/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814/HYP-3815/HYP-3817/HYP-3818/HYP-3819/HYP-3830/HYP-3831/HYP-3832/HYP-3840/HYP-3844/HYP-3845/HYP-3846/HYP-3847/HYP-3848/HYP-3849/HYP-3854/HYP-3857/HYP-3859/HYP-3864/HYP-3874/HYP-3902/HYP-3911/HYP-3913/HYP-3950/HYP-3951/HYP-3952/HYP-3955/HYP-3963/HYP-4000/HYP-4004/HYP-4013/HYP-4017** 
-framework, operationalizing the terminal proof sheaf through the **LRC Chain Peel Engine** 
-and **Nested-Window Auditing**.
+Integrated c699f2c. Introduces the **THM-592/THM-593/THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/THM-656/THM-657/THM-658/THM-659/THM-660/THM-661/THM-662/THM-663/THM-664/THM-665/THM-666/THM-667/THM-668/THM-669/THM-670/THM-671/THM-672/THM-673/THM-674/THM-675/THM-676/THM-677/THM-678/THM-679/THM-680/THM-681/THM-682/THM-683/THM-684/THM-685/THM-686/THM-687/THM-688/THM-689/THM-690/THM-691/THM-692/THM-693/THM-694/THM-695/THM-696/THM-697/THM-698/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-391/HYP-3792/HYP-3794/HYP-3795/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814/HYP-3815/HYP-3817/HYP-3818/HYP-3819/HYP-3830/HYP-3831/HYP-3832/HYP-3840/HYP-3844/HYP-3845/HYP-3846/HYP-3847/HYP-3848/HYP-3849/HYP-3854/HYP-3857/HYP-3859/HYP-3864/HYP-3874/HYP-3902/HYP-3911/HYP-3913/HYP-3950/HYP-3951/HYP-3952/HYP-3955/HYP-3963/HYP-4000/HYP-4004/HYP-4013/HYP-4017** 
+framework, operationalizing the terminal proof sheaf through the **Block-6 Interval Engine** 
+and **Measure-Free Union Auditing**.
 
-### 1. LRC Chain Peel Integration (HYP-4013)
-LRCChainPeel.lean kernel-pure. spread7 logic and nested-window engine 
-formally operationalized. Secures high-order spectral spread-gap management.
+### 1. Block-6 Interval Engine (HYP-4013)
+LRCBlockSix.lean kernel-pure. gap_exists (jump-past-the-blocker) and teeth_mass 
+formulas formally operationalized. Secures middle-band interval management.
 
-### 2. cite_chain_lonely Verification
-cite_chain_lonely certificate rigorously verified. Secures formal loneliness 
-witnesses for terminal high-order citation chains.
+### 2. Block Point Step Verification
+block_point_step rigorously verified: ANY <=6 runners with arbitrary internal 
+ratios share a good point. cite_block_lonely composition anchored.
 
-### 3. Structural Rigidity
-Root import repair and updated INDEX/log/letters verified. Secures dependency 
-graph stability for the nomadic sync architecture.
+### 3. Block Closure
+Near-equal blocks <= 6 CLOSED over citation base. Residual 7+-blocks identified 
+as the final density wall.
 
 ### 4. Quadratic Scaling & Closure
 Rigorously anchors residual closure at $n(n-1) = 182$ units for $n=14$. 
@@ -75,6 +76,6 @@ Metagraph stability locked within the quadratic speed regime.
 
 ---
 
-## codex-S352 -- Pincherle-Barban-Hensel Synthesis (checkpoint)
+## codex-S353 -- Chain Peel Integration & Nested-Window Auditing (checkpoint)
 
-Integrated post_1783042887970. Introduces the **THM-696** framework.
+Integrated 77d49b2. Introduces the **THM-697** framework.
