@@ -1,0 +1,53 @@
+==================================================================================================
+ (1) THE EISENSTEIN STRUCTURE OF 183 = Phi_6(14)
+==================================================================================================
+  Phi_6(14) = 14^2-14+1 = 183;  factor 183 = 3 * 61 (both primes = 3 mod 4 ... 3, 61=1 mod4)
+  powers of 14 mod 183: [14, 13, 182, 169, 170, 1]
+  signed:               [14, 13, -1, -14, -13, 1]   <- the 6 Eisenstein units {+-1,+-13,+-14}; ORDER of 14 = 6
+  => 14^2 = 13 (=13), 14^3 = 182 (=182=-1), so 14*13 = 14^3 = -1 mod 183.
+  ODD/EVEN: order 6 = 2 * 3 = (antipode Z/2: 14^3=-1) x (Eisenstein Z/3: 14^2=13). The '2' is the
+           complement/antipode (14 even =2*7), the '3' is the Eisenstein 6th-root (3 | 183).
+
+==================================================================================================
+ (2) THE COMB RESONANCE at t* = 14/183
+==================================================================================================
+  ||13 t*|| = ||182/183|| = ||182/183|| = 1/183  (= 1/183: the tiny step)
+    r  comb span (r-1)/183  < 1/14?
+    2                1/183      YES  (0.0055 vs 0.0714)
+    3                2/183      YES  (0.0109 vs 0.0714)
+    5                4/183      YES  (0.0219 vs 0.0714)
+    8                7/183      YES  (0.0383 vs 0.0714)
+   13                 4/61      YES  (0.0656 vs 0.0714)
+    w=169 (=13*13): comb phases ||.|| at t* (k=0..4) = ['13/183', '14/183', '5/61', '16/183', '17/183']
+    w=260 (=13*20): comb phases ||.|| at t* (k=0..4) = ['20/183', '7/61', '22/183', '23/183', '8/61']
+    w=572 (=13*44): comb phases ||.|| at t* (k=0..4) = ['44/183', '15/61', '46/183', '47/183', '16/61']
+
+==================================================================================================
+ (3) THE BASE {1..12} SLACK AT t*, and (4) the 1/13 collapse
+==================================================================================================
+  min_(v=1..12) ||v*14/183|| = 14/183 = 0.07650;  1/14 = 0.07143;  slack = 13/2562 = 13/2562? True
+  min_(v=1..13) ||v*14/183|| = 1/183  (the covering-min value M=14/183 is attained)
+  at t=1/13: 13-spaced comb collapses -- ||(w+13k)/13|| = ||w/13|| for all k (13k/13 in Z).
+     covering comb has 13|w => ||w/13||=0 = AT THE ORIGIN (dangerous). t*=14/183 shifts off 1/13
+     (1/13=0.07692, t*=0.07650, gap 0.00042) to lift the comb into safe.
+
+==================================================================================================
+ (5) THE RATIONAL CERTIFICATE AT DENOMINATOR 183 (what the small-q census misses)
+==================================================================================================
+  S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]  (THE DEEP WELL; 182 = 13*14 the resonant far runner); covering? True, |S|=13
+    M(S) = 14/183 = 0.07650 at t = 14/183 (DENOMINATOR 183); lonely(>=1/14)? True
+    witness denom 183 vs small-q census cutoff ~45: >>45 => MISSED by the census (needs the Eisenstein certificate)
+    binding runners at the witness (smallest ||v t||): [('14/183', 1), ('14/183', 182), ('5/61', 12), ('28/183', 2)]
+    best q<=45 witness: min-dist = 0.06667 at 1/15 (q=15) -- NOT lonely at small q => the census fails, the Eisenstein 183 certificate is needed
+
+==================================================================================================
+ SYNTHESIS: types of numbers <-> tournaments <-> covering times
+==================================================================================================
+  RATIONAL t=a/q (roots of unity)  <-> TRANSITIVE tournament (Cayley->roots of unity) <-> RESONANT/pinned
+     census; the 13-comb resonates here at the EISENSTEIN t*=14/183=14/Phi_6(14).
+  QUADRATIC IRRATIONAL (Gauss sum i*sqrt p) <-> PALEY tournament (skew spec +-i sqrt p) <-> mixing.
+  GENERIC IRRATIONAL (equidistributed)      <-> regular/mixing tournament <-> FREE sweep (THM-608).
+  The lever: the hardest configs sit at the RESONANT rational (Eisenstein 183); certified either
+  by that exact rational (denominator 183, missed by small-q) OR by a sweep off 1/13 (the two-sided
+  architecture). ODD/EVEN: 14=2*7, order-6 = 2(antipode)*3(Eisenstein); RATIONAL/IRRATIONAL = census/sweep.
+DONE.
