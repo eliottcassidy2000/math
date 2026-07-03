@@ -63,11 +63,22 @@ Using the half-window `W' = [t₀ − η/2, t₀ + η/2]` with the strengthened 
 the top near-equal cluster, drop to the base, repeat. The number of peels is `~ log(max-speed)` — the
 discrepancy depth shared with arXiv:2607.00876 (binary-tree continual counting), cf. [[HYP-4040]], [[HYP-4013]].
 
-## Scope / open
+## Scope / open (honestly measured)
 
-- Handles a **near-equal** cluster (condition (ii), `D` small). A *wide* top cluster (spread `D ~ N`, allowed by
-  "compressed" = top-two within `13×`) violates (ii) and needs a prior split into near-equal sub-clusters
-  (pigeonhole: `≥ 7` runners in `[N, 13N]` contain a near-equal pair) — the remaining analytic detail.
+Applied end-to-end to real covering near-equal hge7 families (`R = ` near `≤6`, `C = ` far `≥7` near-equal),
+the conditions are met for ~`7%` of them, and **every** time they are met `S` is verified lonely (`25/25`,
+`thm608_closes_nearequal_hge7...out`). The gate is (ii): `D·(t₀ + δ/V) < 6/7` needs `t₀ ≲ 6/(7D)`, i.e. a
+*fine* base witness for a wide far spread `D`. This **collides with a slow base runner**: if `R` contains a
+small speed `s` (e.g. `1`), then `R` lonely forces `t₀ ≥ 1/(14 s)`, so (ii) fails once `D ≳ 6s/14·... ` — the
+"scales fight" tension kps-S28 identified. So THM-608 cleanly closes near-equal-far families **whose base has
+no slow runner blocking a fine witness**, and reduces them to the base; it does *not* by itself resolve the
+slow-runner-vs-wide-far core tension.
+
+- A *wide* top cluster (spread `D ~ N`, allowed by "compressed" = top-two within `13×`) violates (ii) entirely
+  and needs the measure/pair-floor route (regime B) — it is not a near-equal cluster.
+- Widening: for large far magnitude `N`, condition (i) is free, so one may trade base slack for a finer base
+  witness `q`; optimizing the witness choice (not done here) would raise the `7%`. The hard residual is
+  precisely `R`-with-slow-runner `×` wide-`D`.
 - The base of the recursion is closed by `spread13_lonely` (ratio `≤ 13`) or the bounded-denominator census
   ([[HYP-4041]]). Both give `R` lonely *with slack* (strict), which is exactly the hypothesis here.
 - **Lean-formalizable**: the proof uses only the `1`-Lipschitz bound on `‖·‖` and the intermediate-value /
