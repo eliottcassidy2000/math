@@ -91,6 +91,61 @@ theorem ledger_coeff_pos {c : ℕ} (hc : c ≤ 7) : 0 < (48 - 6 * (c : ℝ)) / 4
   have : (c : ℝ) ≤ 7 := by exact_mod_cast hc
   apply div_pos (by linarith) (by norm_num)
 
+/-- **The STAR-Hunter inequality** (spanning-star tree centered at `A 0`).  Hunter's inequality
+holds for ANY spanning tree; the STAR gives ALL `c−1` pair credits against a single center `A 0`:
+
+    μ(⋃_{i<c} Aᵢ) + Σ_{i=1}^{c-1} μ(A₀ ∩ Aᵢ) ≤ Σ_{i<c} μ(Aᵢ).
+
+Same disjointification as the path version, with the center `A₀ ⊆ ⋃_{j<i}` in place of the
+predecessor.  THE PAYOFF for LRC(14): a COVERING family always has a `7`-divisible runner (to
+cover `q = 7, 14`); take its danger as `A₀`.  Then every star credit `μ(A₀ ∩ Aᵢ)` is EXACTLY
+`1/49` by `seven_commensuration` (`7 ∣` center, `7 ∤` leaf) — an err-FREE pair-floor, no
+equidistribution.  So `good ≥ 1 − c/7 + (c−1)/49 = (48−6c)/49 > 0` for the covering `c ≤ 7`
+blocks, on the full circle. -/
+theorem star_hunter_add_le (μ : Measure α) (A : ℕ → Set α)
+    (hA : ∀ i, MeasurableSet (A i)) (n : ℕ) :
+    μ (⋃ i ∈ Finset.range n, A i) + ∑ i ∈ Finset.Ico 1 n, μ (A 0 ∩ A i)
+      ≤ ∑ i ∈ Finset.range n, μ (A i) := by
+  induction n with
+  | zero => simp
+  | succ n ih =>
+    rcases Nat.eq_zero_or_pos n with hn | hn
+    · subst hn; simp
+    · have hUunion : (⋃ i ∈ Finset.range (n + 1), A i)
+          = (⋃ i ∈ Finset.range n, A i) ∪ A n := by
+        ext x
+        simp only [Set.mem_iUnion, Finset.mem_range, Set.mem_union]
+        constructor
+        · rintro ⟨i, hi, hx⟩
+          rcases Nat.lt_succ_iff_lt_or_eq.mp hi with h | h
+          · exact Or.inl ⟨i, h, hx⟩
+          · exact Or.inr (h ▸ hx)
+        · rintro (⟨i, hi, hx⟩ | hx)
+          · exact ⟨i, Nat.lt_succ_of_lt hi, hx⟩
+          · exact ⟨n, Nat.lt_succ_self n, hx⟩
+      set S : Set α := ⋃ i ∈ Finset.range n, A i with hS
+      have hkey : μ (S ∪ A n) + μ (S ∩ A n) = μ S + μ (A n) :=
+        measure_union_add_inter S (hA n)
+      have hsub : A 0 ∩ A n ⊆ S ∩ A n := by
+        apply Set.inter_subset_inter_left
+        rw [hS]
+        exact Set.subset_biUnion_of_mem (Finset.mem_range.mpr hn)
+      have htop : μ (A 0 ∩ A n) ≤ μ (S ∩ A n) := measure_mono hsub
+      have hIco : ∑ i ∈ Finset.Ico 1 (n + 1), μ (A 0 ∩ A i)
+          = (∑ i ∈ Finset.Ico 1 n, μ (A 0 ∩ A i)) + μ (A 0 ∩ A n) := by
+        rw [Finset.sum_Ico_succ_top hn]
+      have hRange : ∑ i ∈ Finset.range (n + 1), μ (A i)
+          = (∑ i ∈ Finset.range n, μ (A i)) + μ (A n) := by rw [Finset.sum_range_succ]
+      rw [hUunion, hIco, hRange]
+      calc μ (S ∪ A n) + ((∑ i ∈ Finset.Ico 1 n, μ (A 0 ∩ A i)) + μ (A 0 ∩ A n))
+          ≤ μ (S ∪ A n) + ((∑ i ∈ Finset.Ico 1 n, μ (A 0 ∩ A i)) + μ (S ∩ A n)) :=
+            add_le_add (le_refl _) (add_le_add (le_refl _) htop)
+        _ = (μ (S ∪ A n) + μ (S ∩ A n)) + ∑ i ∈ Finset.Ico 1 n, μ (A 0 ∩ A i) := by ring
+        _ = (μ S + μ (A n)) + ∑ i ∈ Finset.Ico 1 n, μ (A 0 ∩ A i) := by rw [hkey]
+        _ = (μ S + ∑ i ∈ Finset.Ico 1 n, μ (A 0 ∩ A i)) + μ (A n) := by ring
+        _ ≤ (∑ i ∈ Finset.range n, μ (A i)) + μ (A n) := add_le_add ih (le_refl _)
+
 #print axioms path_hunter_add_le
+#print axioms star_hunter_add_le
 
 end LonelyRunner.LRC14.Hunter
