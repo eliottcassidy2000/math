@@ -143,6 +143,18 @@ theorem lonely_of_scale_separation
     · exact hCs (v i) hC m
   simpa using key
 
+/-- **Slack from LRC(13)** — how the LRC(≤13) citation supplies scale_separation's base slack `δ`.
+A family lonely at the `1/13` band has slack `1/182` at the `1/14` band, since `1/13 = 1/14 + 1/182`.
+A `≤ 12`-speed base is `Lonely 13` by the citation node (`LRCUpTo13` with `k+1 = 13`), hence lonely at
+`1/14` with slack `δ = 1/182 > 0` — exactly the `hRsafe` hypothesis of `scale_separation`. So the
+renormalization step composes: (LRC(≤13) base) + (fast near-equal cluster) ⟹ `Lonely 14`. -/
+theorem slack_of_lonely13 {ι : Type*} (w : ι → ℤ) (t0 : ℝ) (h : Lonely 13 w t0) :
+    ∀ i, ∀ m : ℤ, (1 : ℝ) / 14 + 1 / 182 ≤ |(w i : ℝ) * t0 - (m : ℝ)| := by
+  intro i m
+  have hi := h i m
+  have hcast : (1 : ℝ) / 14 + 1 / 182 = (1 : ℝ) / (13 : ℕ) := by norm_num
+  rw [hcast]; exact hi
+
 end ScaleSeparation
 end LonelyRunner
 

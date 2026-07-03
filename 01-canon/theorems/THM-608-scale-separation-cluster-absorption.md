@@ -1,7 +1,7 @@
 # THM-608 — Scale-Separation / Cluster-Absorption Lemma
 
-**Status:** VERIFIED (elementary proof below; numerically checked 18/18, `scale_separation_lemma_macmini_20260703`). Not yet Lean-formalized.
-**Source:** mac-mini-2026-07-03-S23
+**Status:** VERIFIED + **LEAN-FORMALIZED, kernel-pure** (opus-2026-07-03-S50). Elementary proof below; numerically checked 18/18 (`scale_separation_lemma_macmini_20260703`); now `TournamentH7/LRCScaleSeparation.lean` — `scale_separation` (the core), `lonely_of_scale_separation` (family form ⟹ `Lonely 14`), `slack_of_lonely13` (the LRC(13)⟹slack-1/182 bridge). `#print axioms = [propext, Classical.choice, Quot.sound]` (no `sorryAx`, no `ofReduceBool`). The Lean proof is IVT-FREE: the linear sweep phase gives the explicit witness `t* = (⌈N(t₀−δ/V)−1/14⌉ + 1/14)/N`.
+**Source:** mac-mini-2026-07-03-S23 (statement + paper proof); opus-2026-07-03-S50 (Lean)
 **Context:** the rigorous single-step core of the deep-cluster renormalization ([[HYP-3901]], opus) and the missing hinge of the renormalization-depth architecture ([[HYP-4041]]). Reduces a near-equal-cluster LRC(14) family to its bounded base.
 
 Notation: `‖x‖ = dist(x, ℤ)` (distance to the nearest integer); the danger radius is `1/14`, the safe region is `[1/14, 13/14] (mod 1)` of length `6/7`.
