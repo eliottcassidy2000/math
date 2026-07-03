@@ -74,6 +74,24 @@ scales at once costs `Θ(log range)`**, tight via a scale-aligned extremal (the 
 worst set system of the binary-tree continual-counting lower bound). THM-608 is one rung of that tower,
 now kernel-checked.
 
+## Update (S51): the composition and the tower rung, both landed (HYP-4046)
+
+The two follow-ups anticipated above are now kernel-pure Lean:
+- **(b) the composition** — `lonely14_of_citation_cluster`: the "mechanical plumbing" (list conversion,
+  the periodicity shift via the new `lonely_add_int` to put the base point in `[1,2)`) is done, so a
+  covering family = (`≤12`-speed base, closed by the citation with slack `1/182` free) + (fast near-equal
+  cluster) is `Lonely 14`. This **discharges the fast-near-equal-cluster slice of `lrc14_of_magnitude_split`'s
+  `hlarge`** — the renormalization step is now a self-contained endgame lemma.
+- **(c) the tower rung** — `scale_separation_slack`: the half-window / `1/14+δ/2`-placement version that
+  **outputs slack `δ/2`**, so the peel iterates; `tower_slack_pos` records that `k` rungs leave slack
+  `δ₀/2^k > 0`. The "depth reading" above is now literal Lean: each rung halves the slack, finite depth
+  keeps it positive. What remains for the *end-to-end* tower is the **structural decomposition** (`family
+  = bounded base + nested fast near-equal clusters`) — the open input on mac-mini/kps's lane, not a gap in
+  the rung.
+
+So the renormalization is, in Lean: one rung (`scale_separation` / `scale_separation_slack`), composed
+with the citation (`lonely14_of_citation_cluster`), iterated with halving slack (`tower_slack_pos`).
+
 ## Status
 
 - **Landed (Lean, kernel-pure):** `scale_separation` (THM-608), `lonely_of_scale_separation`,
@@ -83,7 +101,7 @@ now kernel-checked.
 - **Open (next Lean target):** the wide-far / slow-base residual = the `t*=14/183` 13-spaced comb lever
   (OPEN-Q-108); and the tower recursion (log depth).
 
-Related: THM-608 (canon, now Lean-formalized); HYP-4044 (this); HYP-3901 (renormalization, opus); HYP-4041
+Related: THM-608 (canon, now Lean-formalized); HYP-4045 (this); HYP-3901 (renormalization, opus); HYP-4041
 (renormalization-depth architecture, mac-mini); HYP-4040 (no uniform band, mac-mini); `lrc14_of_magnitude_split`
 (kps); HYP-4042/opus-S49 (far-peel measure core — the single-far sibling of this cluster lemma); HYP-4013/opus-S48
 ((R2) = the tower-depth discrepancy floor); arXiv:2607.00876. Files: `TournamentH7/LRCScaleSeparation.lean`.

@@ -1,3 +1,21 @@
+## opus-2026-07-03-S51 -- HANDOFFS (b)+(c) LANDED IN LEAN (kernel-pure): compose THM-608 + citation => discharges hlarge's fast-near-equal slice (b); + the SLACK-PRESERVING tower rung (c) (HYP-4046)
+
+Prompt (owner): work handoffs (b) and (c) for a long session.
+
+DELIVERED (Lean, kernel-pure, ✔ built 8477 jobs; `#print axioms = [propext, Classical.choice, Quot.sound]`; all in `LRCScaleSeparation.lean`):
+ * **(b) `lonely14_of_citation_cluster`** -- composes `scale_separation` (THM-608) + the `LRCUpTo13` citation: a covering family that splits into a `<=12`-speed base (Lonely 13 by citation => slack `1/182` FREE) + a fast near-equal cluster is `Lonely 14`. Discharges the fast-near-equal-cluster slice of kps's `lrc14_of_magnitude_split` `hlarge`. Plumbing solved: `lonely_add_int` (periodicity, new) shifts the base point into `[1,2)` so the sweep window sits in `[0,∞)` -- hence (ii) uses the a-priori bound `t0'<2`; `List.ofFn` base bridge; the `LRCUpTo13`-not-imported auto-bound-implicit trap (fixed by importing LRC13Citation).
+ * **(c) `scale_separation_slack`** -- the SLACK-PRESERVING tower RUNG: half-window + phase placed at `1/14+δ/2` => output family lonely WITH slack `δ/2` (stronger hyps (i') `δN>=V`, (ii') `D(t0+δ/(2V))<=6/7-δ`), so the peel ITERATES. `tower_slack_pos`: k rungs leave slack `δ0/2^k>0` -- finite depth keeps the base slack alive to the top. Depth `~log(max-speed)` = all-scales discrepancy cost (HYP-4041/4040/4013, arXiv:2607.00876).
+
+So the renormalization, in Lean = one rung (scale_separation/_slack) + citation composition (b) + slack-halving iteration (c). REMAINING open input for the end-to-end tower: the STRUCTURAL DECOMPOSITION (family = bounded base + nested fast near-equal clusters) -- mac-mini/kps's lane.
+
+COORDINATION: mac-mini solved step 1 (THM-609 base good-region floor) + kps composed my far-peel (far_peel_lonely) => the single-far CoveringFarLonely needs only the citation->rational-strict-good bridge (mac-mini requested `length_ge_of_safe_interval` from me -- flagged, deferred to next session or mac-mini can draft; it is Region-API, their step-1 lane). HYP HYGIENE: resolved the HYP-4043/4044 collisions -- my THM-608 (S50) settled to HYP-4045 (4043=mac-mini-S24, 4044=kps-S30); this session = HYP-4046.
+
+NEXT: (a) the `length_ge_of_safe_interval` Region bridge (closes mac-mini's step 1); (b) the structural decomposition for the end-to-end tower; (c) the wide-far/slow-base residual = the t*=14/183 13-spaced comb lever (OPEN-Q-108).
+
+Files: LRCScaleSeparation.lean (b+c added), HYP-4046 (+INDEX; +collision fixes), reflection updated (S51 section), SESSION-LOG.
+
+---
+
 ## kind-pasteur-2026-07-03-S30 -- THE FAR-ELEMENT PEEL CHAIN LANDED (opus S49 handoff): far_peel_lonely (steps 2+3+4) + goodRegion2_length_pos_of_strict (step 1, member form) => CoveringFarLonely 22 (large far) needs ONLY {rational strict-good member of the 12-base} (HYP-4044)
 
 Prompt (owner): work the handoffs; get the proof formalized; pull/push often; search prior work for inspiration.
