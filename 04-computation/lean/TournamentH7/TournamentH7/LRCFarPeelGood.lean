@@ -629,5 +629,126 @@ theorem base_floor_quant_of_cite (cite : LonelyRunner.LRCUpTo13) (base : Fin 12 
     calc 1 / (400 * ((∑ i, base i : ℤ) : ℚ)) = ρ := by rw [hρ, hV]
       _ ≤ length (goodRegion2 (List.ofFn base) (1 / 14)) := hlen
 
+/-! ### The PIECE-COUNT bound: `(goodRegion2 base).length ≤ 1 + 2·ΣB`
+
+Cutting a `Norm` (sorted-disjoint) region by ONE interval adds at most one piece — at most
+one sorted piece can strictly contain a given interval, by disjointness.  So `diffF` by a
+danger list of `2·ΣB` intervals produces at most `1 + 2·ΣB` pieces.  With `base_floor_quant`
+this makes the far-peel threshold an EXPLICIT integer, so step-5 is a concrete finite window.
+
+**Aligned band blockers.** The families that defeat the bounded-denominator census — the lcm
+family `{1,…,11,13,W}` with `W = lcm(2..X)` huge (mac-mini HYP-4040 / MISTAKE-096) — have a
+FIXED bounded base `{1,…,11,13}` (`ΣB = 79`) and a far runner `W → ∞`.  So `W` clears the
+explicit threshold `~(#pieces)·(1/floor) ~ 79²·const` for all large `X`: the census's nemesis
+is exactly the far-peel's domain.  The two-sided architecture, made quantitative. -/
+
+/-- The comb of speed `v` has exactly `v` arcs. -/
+theorem comb_length (v : ℕ) (r φ : ℚ) : (comb v r φ).length = v := by
+  unfold comb
+  rw [List.length_map, List.length_map, List.length_range]
+
+/-- The danger pair of speed `s` has exactly `2s` arcs. -/
+theorem dangerPair_length (s : ℕ) (h : ℚ) : (dangerPair s h).length = 2 * s := by
+  unfold dangerPair
+  rw [List.length_append, comb_length, comb_length]; ring
+
+/-- A single-interval cut yields at most two pieces. -/
+theorem cutF_length_le_two {p q : ℚ × ℚ} : (cutF p q).length ≤ 2 :=
+  List.length_filter_le _ _
+
+/-- If the cut interval is NOT strictly interior to `p`, the cut yields at most one piece. -/
+theorem cutF_length_le_one_of {p q : ℚ × ℚ} (hp : p.1 < p.2)
+    (hnot : ¬ (p.1 < q.1 ∧ q.2 < p.2)) : (cutF p q).length ≤ 1 := by
+  unfold cutF cut
+  by_cases hL : p.1 < min p.2 q.1
+  · by_cases hR : max p.1 q.2 < p.2
+    · exact absurd ⟨lt_of_lt_of_le hL (min_le_right _ _),
+        lt_of_le_of_lt (le_max_right _ _) hR⟩ hnot
+    · rw [List.filter_cons_of_pos (by simpa using hL),
+          List.filter_cons_of_neg (by simpa using hR), List.filter_nil]
+      simp
+  · rw [List.filter_cons_of_neg (by simpa using hL)]
+    exact le_trans (List.length_filter_le _ _) (by simp)
+
+/-- If a live interval `q` lies entirely to the left of every piece of a `Norm` region, the
+cut leaves the region unchanged. -/
+theorem diff1F_eq_of_right : ∀ {L : Region}, Norm L → ∀ {q : ℚ × ℚ}, q.1 ≤ q.2 →
+    (∀ p ∈ L, q.2 ≤ p.1) → diff1F L q = L := by
+  intro L
+  induction L with
+  | nil => intro _ q _ _; rfl
+  | cons p L' ih =>
+      intro hN q hq h
+      have hp := norm_head_lt hN
+      have hpr := h p List.mem_cons_self
+      have hcut : cutF p q = [p] := by
+        unfold cutF cut
+        have hq1p : q.1 ≤ p.1 := le_trans hq hpr
+        have hleft_dead : ¬ (p.1 < min p.2 q.1) := by
+          push_neg; exact le_trans (min_le_right _ _) hq1p
+        have hmax : max p.1 q.2 = p.1 := max_eq_left hpr
+        rw [List.filter_cons_of_neg (by simpa using hleft_dead),
+            List.filter_cons_of_pos (by simp only [hmax]; simpa using hp), List.filter_nil,
+            hmax]
+      rw [show diff1F (p :: L') q = cutF p q ++ diff1F L' q by
+            unfold diff1F; rw [List.flatMap_cons], hcut,
+          ih (norm_tail hN) hq (fun p'' hp'' => h p'' (List.mem_cons_of_mem _ hp''))]
+      rfl
+
+/-- **Cutting a `Norm` region by one live interval adds at most one piece.** -/
+theorem diff1F_card {q : ℚ × ℚ} (hq : q.1 ≤ q.2) :
+    ∀ {L : Region}, Norm L → (diff1F L q).length ≤ L.length + 1 := by
+  intro L
+  induction L with
+  | nil => intro _; simp [diff1F]
+  | cons p L' ih =>
+      intro hN
+      have hp : p.1 < p.2 := norm_head_lt hN
+      rw [show diff1F (p :: L') q = cutF p q ++ diff1F L' q by unfold diff1F; rw [List.flatMap_cons],
+          List.length_append]
+      by_cases hstrict : p.1 < q.1 ∧ q.2 < p.2
+      · have hright : ∀ p'' ∈ L', q.2 ≤ p''.1 := fun p'' hp'' => by
+          have := norm_head_le hN p'' hp''; linarith [hstrict.2]
+        rw [diff1F_eq_of_right (norm_tail hN) hq hright]
+        have h2 : (cutF p q).length ≤ 2 := cutF_length_le_two
+        simp only [List.length_cons]; omega
+      · have h1 : (cutF p q).length ≤ 1 := cutF_length_le_one_of hp hstrict
+        have hrec := ih (norm_tail hN)
+        simp only [List.length_cons]; omega
+
+/-- **Subtracting a list of live intervals adds at most `|B|` pieces.** -/
+theorem diffF_card : ∀ {B : Region}, ∀ {L : Region}, Norm L → (∀ q ∈ B, q.1 ≤ q.2) →
+    (diffF L B).length ≤ L.length + B.length := by
+  intro B
+  induction B with
+  | nil => intro L hL _; simp [diffF]
+  | cons q B' ih =>
+      intro L hL hlive
+      rw [show diffF L (q :: B') = diffF (diff1F L q) B' by unfold diffF; rw [List.foldl_cons]]
+      have hq := hlive q List.mem_cons_self
+      have hrec := ih (norm_diff1F hL hq) (fun q' hq' => hlive q' (List.mem_cons_of_mem _ hq'))
+      have hc := diff1F_card hq hL
+      simp only [List.length_cons]; omega
+
+/-- **THE PIECE-COUNT BOUND**: the base good region has at most `1 + 2·ΣB` pieces. -/
+theorem goodRegion2_card {speeds : List ℤ} (hpos : ∀ s ∈ speeds, 0 < s) {h : ℚ} (hh : 0 ≤ h) :
+    (goodRegion2 speeds h).length ≤ 1 + (speeds.map fun s => 2 * s.toNat).sum := by
+  unfold goodRegion2
+  have hbase : Norm [((0 : ℚ), 1)] := by unfold Norm; norm_num
+  have hlive : ∀ q ∈ speeds.flatMap (fun s => dangerPair s.toNat h), q.1 ≤ q.2 := by
+    intro q hq
+    rw [List.mem_flatMap] at hq
+    obtain ⟨s, hs, hqs⟩ := hq
+    exact dangerPair_live s.toNat (by have := hpos s hs; omega) hh q hqs
+  have hcard := diffF_card hbase hlive
+  have hdlen : (speeds.flatMap (fun s => dangerPair s.toNat h)).length
+      = (speeds.map fun s => 2 * s.toNat).sum := by
+    rw [List.length_flatMap]
+    congr 1
+    apply List.map_congr_left
+    intro s _; exact dangerPair_length s.toNat h
+  rw [hdlen] at hcard
+  simpa using hcard
+
 end RatIntervals
 end LonelyRunner
