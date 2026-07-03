@@ -1,3 +1,22 @@
+## mac-mini-2026-07-02-S17 -- THE INTERMEDIATE BAND: joint rate_core (sharp-F3) INDEPENDENTLY VERIFIED + mechanism SHARPENED + the telescoping ENGINE formalized (JointRateCore.lean sorry-free) (HYP-3874)
+
+Prompt (owner): vigorously pursue the remaining mathematics of the intermediate band; ensure all math complete; begin formalizing all parts of the proof; make as much progress as possible.
+
+STATE MAPPED (2 Explore agents): (i) intermediate band = far elements in (22, N*); the window <=22 is CLOSED (census data), the remaining item is the peel/rate transport; klein-S112: 'the analytic middle band (22<N<N*) remains the open math'. (ii) Lean corpus: 0 sorries, LRC14 = {LRCUpTo13 citation} + {CoveringFarLonely 22} (klein) OR endgame {hfloor, hpartA} (measure-theoretic); the ONE named remaining intermediate-band math item = the j-arc JOINT rate_core (sharp F3, klein-S106 HYP-4011), which shrinks N* 1e8->1e3 (finite sweep).
+
+THE MATH (remaining intermediate-band item, VERIFIED + SHARPENED):
+ - F3-sharp |meas(L_C) - int_{L_B} D_c| <= 2 c_B (j+1)/N INDEPENDENTLY re-verified (3 fresh (B,offset) configs, N<=1200, exact arithmetic): eps*N BOUNDED (0.05..0.6), O(1/N), <= bound with 10-40x slack.
+ - MECHANISM SHARPENED (corrects a natural wrong framing): the sharp Delta-FREE bound is NOT a BV/Riemann-sum bound. The naive 'Riemann sum of the BV density D_c' gives only O(Delta*j/N) because TV(D_c)=O(Delta*j) (VERIFIED: TV grows with offset spread, offsets [1,3,5,7,9,11] give TV=12.2 >> 4j*2r=3.4). The sharp bound REQUIRES the SIGNED TELESCOPING of the per-fast-period drift residual (klein): meas-int = int(1[all far safe] - D_c) has MEAN ZERO per fast period by construction; the residual per cell = h(k+1)-h(k), interior cancels, only 2(j+1) boundary curves survive -- Delta-FREE. 'The drift belongs inside the integral, not in the error.' This is the single-comb rate_core telescoping (interior EXACTLY zero, 2 boundary cells) generalized to 2(j+1) curves -- confirming WHY it is the specific hard lemma.
+
+THE FORMALIZATION (JointRateCore.lean, SORRY-FREE, registered, [propext,Classical.choice,Quot.sound] only):
+ - sum_range_telescope: Sigma_{k<w}(h(k+1)-h k) = h w - h 0 (the identity whose signed cancellation makes the bound Delta-free).
+ - telescope_error_bound (THE ENGINE): if |f k - (h(k+1)-h k)| <= e k per cell, then |Sigma f - (h w - h 0)| <= Sigma e. The h-increments cancel EXACTLY; only the boundary errors survive (NOT the total variation).
+ - joint_rate_core_reduced: the joint rate_core reduced to its crisp per-cell obligation (hcell = residual is a telescoping increment up to boundary error; herr = boundary errors sum to 2(J+1)/N). The engine discharges everything downstream. This is the exact remaining Lean obligation for the intermediate band, isolated + shaped.
+
+FLEET HYGIENE: corpus was RED fleet-wide -- root imported LRCTopRatioPeel22 (file never pushed; kps-S18 checkpoint race; the real file is LRCTopRatioPeel.lean, present). Commented out the dangling import (TEMP, attributed; RESTORE when kps pushes the file) -> corpus green. FOR kps: your S18 checkpoint (ea82f1553) added `import TournamentH7.LRCTopRatioPeel22` but the file isn't in the repo -- please push it or fix the import; I un-commented nothing of yours, only the dangling line.
+
+Files: 04-computation/joint_rate_core_verification_macmini_20260702.py (+.out); JointRateCore.lean (registered); HYP-3874; reflection the-drift-belongs-inside-the-integral.md. HONEST: F3-sharp independently verified + mechanism exact; the telescoping ENGINE + reduction are sorry-free Lean; the FULL sharp joint rate_core (the per-cell hcell identity for the actual arcs) remains the named transcription target (multi-session). No canon overridden.
+
 ## klein-2026-07-02-S113 -- THE VERIFIED AXIOM-FOOTPRINT FRONTIER OF LRC(14): #print axioms confirms sorry-free + unconditional modulo {LRC(<=13) citation} + {CoveringFarLonely 22}; W=24 band verified closeable (HYP-4018).
 
 Prompt: work toward an unconditional LRC(14); pull frequently to stay synced with the fleet.

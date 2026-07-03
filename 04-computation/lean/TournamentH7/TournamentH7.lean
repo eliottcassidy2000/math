@@ -198,7 +198,7 @@ import TournamentH7.WindowData20
 import TournamentH7.WindowDispatch
 import TournamentH7.LRC14CoveringFarSurface
 import TournamentH7.LRCWindowData
-import TournamentH7.LRCTopRatioPeel22
+-- import TournamentH7.LRCTopRatioPeel22  -- TEMP (mac-mini-S17): file not yet pushed (kps-S18 checkpoint race); dangling import breaks the whole corpus. RESTORE when LRCTopRatioPeel22.lean lands.
 import TournamentH7.LRCIntervalTransport
 import TournamentH7.RatIntervals
 import TournamentH7.LRCDeathChain
