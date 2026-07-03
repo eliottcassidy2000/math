@@ -675,5 +675,91 @@ theorem hunter_block_step (ws : List ℤ) (hpos : ∀ w ∈ ws, 0 < w) (a b : �
   intro r hr
   exact havoid (teeth w a b) (by rw [hDs, List.mem_map]; exact ⟨w, hw, rfl⟩) r hr
 
+/-! ## Stage 5 — the citation composition: THE CITE–HUNTER THEOREM -/
+
+/-- **THE CITE–HUNTER THEOREM**: cite `k ≤ 12` bounded runners; the remaining
+block (near-equal 7-blocks included) shares a good point whenever the Hunter
+ledger — window mass minus full teeth masses plus consecutive-pair credits — is
+positive on every window of width `2δ`.  This crosses the union-density wall
+`c/7 ≥ 1` that defeats every per-runner mass argument: the pair credits are the
+path-Bonferroni correction, measured EXACTLY where they arise. -/
+theorem cite_hunter_lonely (cite : LRCUpTo13) (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)
+    (k : ℕ) (hk : k ≤ 12) (B : ℤ) (hB : 0 < B)
+    (hcited : ∀ i : Fin 13, (i : ℕ) < k → |v i| ≤ B)
+    (ws : List ℤ) (hwpos : ∀ w ∈ ws, 0 < w)
+    (hsplit : ∀ i : Fin 13, (i : ℕ) < k ∨ |v i| ∈ ws)
+    (hledger : ∀ a b : ℝ,
+      b - a = 2 * (((13 : ℝ) - k) / (14 * ((k : ℝ) + 1) * (B : ℝ))) →
+      0 < (b - a)
+        - ((ws.map fun (w : ℤ) => rlength (rinter [(a, b)] (teeth w a b))).sum)
+        + pairCredits [(a, b)] (ws.map fun (w : ℤ) => teeth w a b)) :
+    ∃ t : ℝ, Lonely 14 v t := by
+  have hk13 : k ≤ 13 := by omega
+  have hBR : (0 : ℝ) < (B : ℝ) := by exact_mod_cast hB
+  have hkR : (k : ℝ) ≤ 12 := by exact_mod_cast hk
+  set δ : ℝ := ((13 : ℝ) - k) / (14 * ((k : ℝ) + 1) * (B : ℝ)) with hδ
+  have hδpos : 0 < δ := by
+    rw [hδ]
+    apply div_pos (by linarith) (by positivity)
+  set wc : Fin k → ℤ := fun j => v (Fin.castLE hk13 j) with hwc
+  have hwcne : ∀ j, wc j ≠ 0 := fun j => hv _
+  obtain ⟨t₀, hcite⟩ := cite k hk wc hwcne
+  have hwin : t₀ - δ ≤ t₀ - δ + 2 * δ := by linarith
+  obtain ⟨τ, hτ1, hτ2, hτgood⟩ := hunter_block_step ws hwpos (t₀ - δ) (t₀ - δ + 2 * δ)
+    hwin (hledger (t₀ - δ) (t₀ - δ + 2 * δ) (by ring))
+  refine ⟨τ, ?_⟩
+  intro i m
+  rcases hsplit i with hlt | hmem
+  · -- cited leg: margin transport, exact at 1/14
+    have hidx : Fin.castLE hk13 ⟨(i : ℕ), hlt⟩ = i := by
+      apply Fin.ext
+      rfl
+    have h0 : (1 : ℝ) / (k + 1 : ℕ) ≤ |(v i : ℝ) * t₀ - m| := by
+      simpa [hwc, hidx] using hcite ⟨(i : ℕ), hlt⟩ m
+    have hvB : |(v i : ℝ)| ≤ (B : ℝ) := by
+      rw [← Int.cast_abs]
+      exact_mod_cast hcited i hlt
+    have htri : |(v i : ℝ) * t₀ - m| ≤ |(v i : ℝ) * τ - m| + |(v i : ℝ)| * |t₀ - τ| := by
+      calc |(v i : ℝ) * t₀ - m|
+          = |((v i : ℝ) * τ - m) + (v i : ℝ) * (t₀ - τ)| := by congr 1; ring
+        _ ≤ |(v i : ℝ) * τ - m| + |(v i : ℝ) * (t₀ - τ)| := abs_add_le _ _
+        _ = |(v i : ℝ) * τ - m| + |(v i : ℝ)| * |t₀ - τ| := by rw [abs_mul]
+    have hwin2 : |t₀ - τ| ≤ δ := by
+      rw [abs_le]
+      constructor <;> linarith
+    have hlip : |(v i : ℝ)| * |t₀ - τ| ≤ (B : ℝ) * δ := by
+      apply mul_le_mul hvB hwin2 (abs_nonneg _) hBR.le
+    have hBδ : (B : ℝ) * δ = ((13 : ℝ) - k) / (14 * ((k : ℝ) + 1)) := by
+      rw [hδ]
+      field_simp
+    have hmargin : (1 : ℝ) / (k + 1 : ℕ) - ((13 : ℝ) - k) / (14 * ((k : ℝ) + 1))
+        = 1 / 14 := by
+      have hcast : ((k + 1 : ℕ) : ℝ) = (k : ℝ) + 1 := by push_cast; ring
+      rw [hcast]
+      field_simp
+      ring
+    calc (1 : ℝ) / (14 : ℕ) = 1 / 14 := by norm_num
+      _ = 1 / (k + 1 : ℕ) - ((13 : ℝ) - k) / (14 * ((k : ℝ) + 1)) := hmargin.symm
+      _ ≤ |(v i : ℝ) * τ - m| := by
+          rw [hBδ] at hlip
+          linarith
+  · -- block leg through the sign bridge
+    have hgood := hτgood |v i| hmem
+    rcases abs_cases ((v i : ℝ)) with ⟨habs, _⟩ | ⟨habs, _⟩
+    · have hcast : ((|v i| : ℤ) : ℝ) = (v i : ℝ) := by
+        rw [Int.cast_abs, habs]
+      have := hgood m
+      rw [hcast] at this
+      exact (by norm_num : (1:ℝ)/(14:ℕ) = 1/14) ▸ this
+    · have hcast : ((|v i| : ℤ) : ℝ) = -(v i : ℝ) := by
+        rw [Int.cast_abs, habs]
+      have := hgood (-m)
+      rw [hcast] at this
+      have heq : |-(v i : ℝ) * τ - (-m : ℤ)| = |(v i : ℝ) * τ - m| := by
+        rw [show -(v i : ℝ) * τ - ((-m : ℤ) : ℝ) = -((v i : ℝ) * τ - m) by push_cast; ring,
+          abs_neg]
+      rw [heq] at this
+      exact (by norm_num : (1:ℝ)/(14:ℕ) = 1/14) ▸ this
+
 end RealRegion
 end LonelyRunner
