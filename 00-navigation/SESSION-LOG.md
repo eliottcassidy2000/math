@@ -1,3 +1,21 @@
+## mac-mini-2026-07-02-S19 -- THE TRAPEZOID AREA = 1/49 (drifting pair-floor's analytic heart, SORRY-FREE) + a CRITICAL mathlib-drift corpus-breakage finding (HYP-3876)
+
+Prompt (owner): finish up the Lean formalization; get it in the best state possible; long session, push/pull frequently, integrate + extend other agents' work.
+
+STATE MAPPED (Explore agent + reading): corpus SORRY-FREE; the LRC(14) proof reduces (klein-S115 far-cut dispatch) to {cite, hwindow(done), hle6, hge7}; the two remaining ANALYTIC things (klein-S117) = (1) the PAIR-FLOOR credits >= (c-1)(L/49)-E, (2) c>=8. klein-S118 handed mac-mini the DRIFTING pair-floor's DENSE-EVENTS regime (14D>w1) -- 'transcribe the aggregate floor L/49-err into JointRateCore's per-cell obligation'.
+
+DELIVERED (LRCTrapArea.lean, SORRY-FREE, registered, [propext,Classical.choice,Quot.sound], builds standalone vs pinned mathlib v4.30.0):
+ - trap_eq_plateau / _slope_pos / _slope_neg: the piecewise characterization of klein's two-tooth overlap trap(w1,w2,r) (plateau 2h/w2 for |r|<=h(w2-w1); slopes (h(w1+w2)-|r|)/(w1w2)).
+ - continuous_trap; integral_sub_id/_add_id (linear-piece integrals via hasDerivAt).
+ - trap_integral (THE THEOREM): int_{-S}^{S} trap w1 w2 r dr = 1/49 EXACTLY, INDEPENDENT of w1,w2. Proof: split at +-S0, plateau via integral_const, slopes via hasDerivAt antiderivative; the plateau area 4h^2(w2-w1)/w2 + 2 triangles 4h^2 w1/w2 = 4h^2 = 1/49. The speed-independence = the plateau/triangle trade-off cancels (reflection: the-trapezoid-keeps-its-area). Numerically pre-verified (5 diverse pairs, ratio 1.0000).
+ This is the '4h^2 per unit exact' klein cited -- the density the discrete pair-mass Sum trap(r_m) concentrates on. The LEADING TERM of the drifting pair-floor pairmass >= L/49 - err (the err = discrete-sum discrepancy, the next piece).
+
+CRITICAL FLEET FINDING (reported to klein): the CORPUS DOES NOT BUILD against the PINNED mathlib v4.30.0 (rev c5ea00351c). All recent endgame oleans were MISSING here (LRCSpreadPairFloor, LRCHunterLedger, LRCLedgerAssembly, LRCFarCutSplit, LRCSevenGap); a forced fresh compile of klein's LRCSpreadPairFloor FAILS -- div_le_div_of_nonneg_right arg mismatch (79/80), 'Unknown constant Int.add_mul_emod_self' (168), Int.add_emod_self (218) + cascading. = mathlib DRIFT: the fleet builds against a NEWER mathlib than the committed lake-manifest pins, so 'green' is env-relative and a fresh clone/CI cannot reproduce it. ACTION for fleet: update the committed lake-manifest.json + lean-toolchain to the actually-used mathlib, OR port these files back to v4.30.0. I made LRCTrapArea SELF-CONTAINED (re-declares trap defeq to klein's; stable le_div_iff0/hasDerivAt_pow) so it builds against v4.30.0 AND newer; the area transfers to klein's trap verbatim once their file builds.
+
+HONEST: trap_integral = 1/49 is exact + sorry-free (the pair-floor's analytic heart). It does NOT alone close the pair-floor (the discrete-sum err + wiring into the ledger's credits remain). The corpus-breakage is a real reproducibility finding, not something I fixed (fleet mathlib-alignment needed; porting klein's active files unilaterally would risk their newer-mathlib build).
+
+Files: LRCTrapArea.lean (registered, sorry-free); trap_area_verification_macmini_20260702.py; HYP-3876; reflection the-trapezoid-keeps-its-area.md. Pushed ~5x; reported to klein. No canon overridden.
+
 ## kind-pasteur-2026-07-02-S24 -- THE CLUSTERED-BLOCK CLOSER (unconditional) + THE SPREAD-7 ONE-PAIR ROUTE + the c=7 TRICHOTOMY (LRCSevenGap.lean & LRCRealRegions additions, sorry-free kernel-pure, corpus 8625 green) (HYP-3981)
 
 Prompt (owner): finish the honest remaining leg / get the Lean in the best state, integrate + extend other agents' work.
