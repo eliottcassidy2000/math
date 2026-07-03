@@ -58,5 +58,26 @@ theorem goodRegion2_peel_pos_of_gt (E : List ℤ) (w : ℤ) (hw : 0 < w) {h : �
     0 < length (goodRegion2 (E ++ [w]) h) :=
   goodRegion2_peel_pos E w hw hh0 hh1 hwbig
 
+/-- **THE FAR-ELEMENT PEEL CLOSER** (opus steps 2+3+4 composed): a positive-speed
+`13`-family whose last runner `w = v (Fin.last 12)` clears the peel threshold against
+the base of the first twelve is lonely.  Reduces `CoveringFarLonely` for a large far
+runner to the ONE remaining lemma — the base good-region floor (step 1, from
+`LRC(≤13)`), which makes the threshold `hbig` satisfiable.  (No separate positivity of
+the base is needed: `hbig` forces it, since a zero-length base makes the strict
+inequality `(#pieces)·4h < 0` impossible.) -/
+theorem far_peel_lonely (v : Fin 13 → ℤ) (hv : ∀ i, 0 < v i)
+    (hbig : ((goodRegion2 (List.ofFn (Fin.init v)) (1 / 14)).length : ℚ) * (4 * (1 / 14))
+      < (1 - 2 * (1 / 14)) * length (goodRegion2 (List.ofFn (Fin.init v)) (1 / 14))
+          * ((v (Fin.last 12)).toNat : ℚ)) :
+    ∃ t : ℝ, Lonely 14 v t := by
+  have hw : 0 < v (Fin.last 12) := hv _
+  have hpeel := goodRegion2_peel_pos (List.ofFn (Fin.init v)) (v (Fin.last 12)) hw
+    (by norm_num) (by norm_num) hbig
+  have heq : List.ofFn v = List.ofFn (Fin.init v) ++ [v (Fin.last 12)] := by
+    rw [List.ofFn_succ', List.concat_eq_append]
+    rfl
+  rw [← heq] at hpeel
+  exact exists_lonely_of_goodRegion2_pos v hv hpeel
+
 end RatIntervals
 end LonelyRunner
