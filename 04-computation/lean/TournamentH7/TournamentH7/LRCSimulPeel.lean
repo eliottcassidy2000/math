@@ -144,5 +144,32 @@ theorem goodRegion2_simul_peel (B far : List ℤ) {h : ℚ} (hh0 : 0 < h) (hh1 :
   rw [hgoal_eq]
   linarith [hge, hmapbound]
 
+/-- **Positivity from the simultaneous peel.**  If the far-fee is strictly below the damped
+floor, the fully-peeled good region is nonempty.  (The floor coefficient `1 − 2h·|far|` is
+positive exactly when `|far| < 1/(2h) = 7`, so this is the `≤ 6`-far regime.) -/
+theorem goodRegion2_simul_peel_pos (B far : List ℤ) {h : ℚ} (hh0 : 0 < h) (hh1 : h ≤ 1 / 2)
+    (hpos : ∀ w ∈ far, 0 < w)
+    (hfee : ((goodRegion2 B h).length : ℚ) * (4 * h)
+              * (far.map fun w => 1 / (w.toNat : ℚ)).sum
+            < (1 - 2 * h * (far.length : ℚ)) * length (goodRegion2 B h)) :
+    0 < length (goodRegion2 (B ++ far) h) := by
+  have hpeel := goodRegion2_simul_peel B far hh0 hh1 hpos
+  linarith
+
+/-- **Middle-band loneliness from the simultaneous peel.**  A 13-tuple of positive speeds whose
+speed-list factors as `window ++ far` (`< 7` far runners) clearing the fee threshold at `h = 1/14`
+is `14`-lonely.  Wires `goodRegion2_simul_peel_pos` into `exists_lonely_of_goodRegion2_pos`; the
+`hsplit` ordering hypothesis is discharged upstream by the sign/permutation normalization. -/
+theorem lonely_of_simul_peel (v : Fin 13 → ℤ) (hv : ∀ i, 0 < v i)
+    (B far : List ℤ) (hsplit : List.ofFn v = B ++ far)
+    (hposfar : ∀ w ∈ far, 0 < w)
+    (hfee : ((goodRegion2 B (1 / 14)).length : ℚ) * (4 * (1 / 14))
+              * (far.map fun w => 1 / (w.toNat : ℚ)).sum
+            < (1 - 2 * (1 / 14) * (far.length : ℚ)) * length (goodRegion2 B (1 / 14))) :
+    ∃ t : ℝ, Lonely 14 v t := by
+  apply exists_lonely_of_goodRegion2_pos v hv
+  rw [hsplit]
+  exact goodRegion2_simul_peel_pos B far (by norm_num) (by norm_num) hposfar hfee
+
 end RatIntervals
 end LonelyRunner

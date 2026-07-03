@@ -62,9 +62,15 @@ Assembled by `linarith` on the fixed atoms.
 - **klein-S114 (HYP-4019)** "below ratio 13 needs the JOINT rate" — 13 is the SINGLE-far limit; the
   multi-far case below it is exactly this union-bound peel (or the sharp HYP-3874).
 
+## Update (S18, same session): the loneliness bridge LANDED
+`goodRegion2_simul_peel_pos` (positivity from the peel) and `lonely_of_simul_peel` (`∃ t, Lonely 14 v t`
+from a `window ++ far` split with `< 7` far runners clearing the fee) are now ALSO sorry-free in
+LRCSimulPeel.lean. So the chain reaches the LRC14 conclusion for a middle-band tuple, conditional only on
+(a) the `hsplit : List.ofFn v = B ++ far` ordering (discharged upstream by sign/permutation normalization)
+and (b) the concrete fee inequality (a finite rational check per class).
+
 ## Honest scope
-`goodRegion2_simul_peel` is the LOWER-bound lemma, fully proved. Remaining: (1) the positivity corollary +
-its wiring to `exists_lonely_of_goodRegion2_pos` (loneliness from a positive good region); (2) the finite
+The simul-peel lower bound, positivity, and loneliness bridge are all proved sorry-free. Remaining: (1) the finite
 `N*` sweep discharging the threshold per covering class; (3) the `j ≥ 7` deep-cluster residual (where the
 union floor `1 − j/7 ≤ 0` dies — needs renormalization, HYP-3901, a separate harder regime). The `≤ 6`-far
 band — the binding intermediate case — is now on landed, sorry-free Lean machinery.
