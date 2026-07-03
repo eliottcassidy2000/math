@@ -1,0 +1,13 @@
+================================================================================
+REGIME-C BAND ARGUMENT: smallest q in band {15..} closing covering families
+================================================================================
+tested 2608 covering regime-C families (adversarial near-sets x drift patterns x w1)
+WORST smallest-band-q = 33   (family: near=[17, 18, 19, 20, 21, 22], far=[23, 24, 25, 26, 27, 28, 30])
+=> if worst_q is a small fixed number, regime C closes by checking the FINITE band q in 15..33
+
+================================================================================
+Stress: for a FIXED far w1, how much of the band {15..30} does the family block?
+================================================================================
+near=[15, 16, 17, 18, 19, 20] far=[231, 232, 233, 234, 235, 236, 237] covering=False: band-q that WORK in 15..30 = [22, 23, 24, 25, 27, 28, 30]
+near=[17, 18, 19, 20, 21, 22] far=[391, 392, 393, 394, 395, 396, 397] covering=False: band-q that WORK in 15..30 = [24, 25, 26, 27, 29]
+near=[15, 16, 17, 18, 19, 20] far=[154, 155, 156, 157, 158, 159, 161] covering=True: band-q that WORK in 15..30 = [24, 25, 27, 28, 29, 30]
