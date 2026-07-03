@@ -1,3 +1,24 @@
+## opus-2026-07-03-S54 -- THE hlarge CASE-ROUTING SKELETON (LRCHlargeRoute.lean, kernel-pure): unifies the fleet's peel engines; hlarge now = {all-comparable DONE} + {gap/far-count engine obligations} (HYP-4050)
+
+Prompt (owner): work on structural decomposition and others as needed toward finishing.
+
+MAP (Explore): hlarge is ~95% discharged at the ENGINE level (spread13 ratio<=13, far_peel_lonely single-far, lonely_of_simul_peel <=6-far, scale_separation(_phase) resonant/near-equal, base_floor_of_cite_gen -- ALL landed kernel-pure). The MISSING piece was the ROUTING that dispatches a family to the right engine ("~50-100 lines"; the map named me, the tower owner). length_ge_of_safe_interval is kps's active lane (has length_ge_of_mem_cover, needs Norm(goodRegion2)).
+
+DELIVERED (Lean, kernel-pure, ✔ built 8493; `#print axioms=[propext,Classical.choice,Quot.sound]`; LRCHlargeRoute.lean, root-registered): the hlarge case-routing skeleton --
+ (1) **lonely14_of_ratio13_or_gap** -- route (1) of HYP-4041: all-comparable (∀ i j, |v i|<=13|v j|, i.e. max<=13·min) => spread13_lonely at t=1/(min+max) (min/max via Finset.exists_max/min_image); else deferred to the GAP obligation. Discharges the architecture's base case (no scale to separate).
+ (2) **hlarge_of_gap** -- hlarge <= the single gap obligation (ratio>13 families lonely).
+ (3) **hlarge_of_farcount** -- ENGINE-ALIGNED split: hlarge <= {farCount<=6 => union-bound peel} + {farCount>=7 => renormalization tower}, dispatched at the 7=1/(2·(1/14)) threshold (via farCountW_eq_zero_iff for ∃far=>farCount>=1).
+
+DUALITY (ties S53): 7 is BOTH the danger-band denominator (1/14=1/(2·7), the heptagon prime) AND the outlier count the ADDITIVE union bound survives; above it the MULTIPLICATIVE renormalization (scale_separation) takes over. The add/mult duality is the routing threshold itself.
+
+NET: hlarge now reduces to {all-comparable = DONE (spread13)} + {gap/far-count engine obligations}. The remaining OPEN content = the peel/tower DISPATCH on gap families (the recursion / cluster identification = the structural decomposition, mac-mini/kps + my tower lane) + kps's length_ge (quantitative floor for the tower iteration) + the finite census.
+
+NEXT: the gap-case dispatch (which cluster to peel, the recursion depth) -- the genuinely-hard renormalization architecture; the engines (THM-608 near-equal, scale_separation_phase resonant, simul-peel <=6) are all ready to plug in.
+
+Files: LRCHlargeRoute.lean (3 routing theorems + root), decomp_hardcase_resonance script (deep-well r=1 confirmed Eisenstein 183), HYP-4050 (+INDEX).
+
+---
+
 ## opus-2026-07-03-S53 -- THE RESONANT CLUSTER PEEL FORMALIZED (phase-spread THM-608 variant = the 13-comb lever's engine, kernel-pure); the four dualities are one covering (HYP-4049)
 
 Prompt (owner): finish the formalization, pull frequently/integrate; consider the dualities irrational/rational, odd/even, positive/negative, addition/multiplication.
