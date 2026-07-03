@@ -99,5 +99,53 @@ theorem length_pos_of_mem {L : Region} {x : ℚ} (hx : mem x L) : 0 < length L :
   rw [heq] at hle
   linarith
 
+/-- **dangerPair soundness**: a point of the danger comb is within `h` of some integer
+multiple.  (Boundary-inclusive `≤`; the strict good point below beats it.) -/
+theorem mem_dangerPair_le {s : ℕ} (hs : 0 < s) {h : ℚ} {x : ℚ}
+    (hmem : mem x (dangerPair s h)) : ∃ m : ℤ, |(s : ℚ) * x - m| ≤ h := by
+  rw [dangerPair, mem_union] at hmem
+  rcases hmem with h1 | h2
+  · rw [TournamentH7.CombPatterns.mem_comb hs] at h1
+    obtain ⟨k, _, hlo, hhi⟩ := h1
+    refine ⟨(k : ℤ), ?_⟩
+    rw [abs_le]; push_cast
+    constructor <;> linarith
+  · rw [TournamentH7.CombPatterns.mem_comb hs] at h2
+    obtain ⟨k, _, hlo, hhi⟩ := h2
+    refine ⟨(k : ℤ) + 1, ?_⟩
+    rw [abs_le]; push_cast
+    constructor <;> linarith
+
+/-- **Reverse membership** (good ⟹ in the good region): a rational `x ∈ [0,1)` that is
+STRICTLY `h`-far from every integer multiple of every base speed lies in
+`goodRegion2 base h`.  With `length_pos_of_mem` this closes the base floor (step 1) from a
+single strict-good rational point — which `LRC(≤13)` (margin `1/13 > 1/14`) supplies. -/
+theorem good2_mem_of_strict {speeds : List ℤ} {h : ℚ}
+    (hpos : ∀ s ∈ speeds, 0 < s) {x : ℚ} (hx0 : 0 ≤ x) (hx1 : x < 1)
+    (hgood : ∀ s ∈ speeds, ∀ m : ℤ, h < |(s : ℚ) * x - m|) :
+    mem x (goodRegion2 speeds h) := by
+  rw [goodRegion2, mem_diffF]
+  refine ⟨⟨(0, 1), List.mem_singleton_self _, hx0, hx1⟩, ?_⟩
+  intro q hq hxq
+  rw [List.mem_flatMap] at hq
+  obtain ⟨s, hs, hqs⟩ := hq
+  have hspos := hpos s hs
+  have hsnat : 0 < s.toNat := by omega
+  have hmem : mem x (dangerPair s.toNat h) := ⟨q, hqs, hxq⟩
+  obtain ⟨m, hm⟩ := mem_dangerPair_le hsnat hmem
+  have hcast : ((s.toNat : ℕ) : ℚ) = ((s : ℤ) : ℚ) := by
+    exact_mod_cast Int.toNat_of_nonneg hspos.le
+  rw [hcast] at hm
+  exact absurd hm (not_le.mpr (hgood s hs m))
+
+/-- **THE BASE GOOD-REGION FLOOR from one strict-good rational** (step 1, member form):
+a single rational `x ∈ [0,1)` strictly `h`-far from every base multiple forces
+`0 < length (goodRegion2 base h)`. -/
+theorem goodRegion2_length_pos_of_strict {speeds : List ℤ} {h : ℚ}
+    (hpos : ∀ s ∈ speeds, 0 < s) {x : ℚ} (hx0 : 0 ≤ x) (hx1 : x < 1)
+    (hgood : ∀ s ∈ speeds, ∀ m : ℤ, h < |(s : ℚ) * x - m|) :
+    0 < length (goodRegion2 speeds h) :=
+  length_pos_of_mem (good2_mem_of_strict hpos hx0 hx1 hgood)
+
 end RatIntervals
 end LonelyRunner
