@@ -20,6 +20,7 @@
 -/
 import TournamentH7.LRCPeelAssembly
 import TournamentH7.LRC13Citation
+import TournamentH7.LRCSimulPeel
 
 namespace LonelyRunner
 namespace RatIntervals
@@ -370,6 +371,141 @@ theorem length_ge_of_mem_cover : ∀ {L : Region}, Norm L → ∀ {a b : ℚ},
             have hrec := ih (norm_tail hN) hcov'
             rw [hlen]; linarith
       · linarith [length_nonneg (p :: L')]
+
+/-! ### `Norm (goodRegion2 …)`: the good region is ordered, disjoint, nondegenerate
+
+The region difference keeps degenerate pieces (LRCRegionDiff design note), so the
+un-`F` `diff` is not `Norm`.  But `cutF`/`diff1F`/`diffF` FILTER degenerate pieces
+(`length_cutF = length_filter_live`), and cutting a live interval out of a sorted-disjoint
+region preserves order — so `diffF` of a `Norm` region by LIVE intervals is `Norm`.  This
+chain establishes `Norm (goodRegion2 …)`, the missing hypothesis for the cursor bound. -/
+
+/-- Prepend one interval to a `Norm` region, given it ends at or before every existing
+piece's start. -/
+theorem norm_cons {p : ℚ × ℚ} {L : Region} (hp : p.1 < p.2) (hL : Norm L)
+    (hjoin : ∀ r ∈ L, p.2 ≤ r.1) : Norm (p :: L) := by
+  rcases L with _ | ⟨q, L'⟩
+  · exact hp
+  · exact ⟨hp, hjoin q (List.mem_cons_self), hL⟩
+
+/-- Concatenate two `Norm` regions when every left piece ends at or before every right
+piece's start. -/
+theorem norm_append : ∀ {A : Region}, Norm A → ∀ {B : Region}, Norm B →
+    (∀ a ∈ A, ∀ b ∈ B, a.2 ≤ b.1) → Norm (A ++ B) := by
+  intro A
+  induction A with
+  | nil => intro _ B hB _; simpa using hB
+  | cons p A' ih =>
+      intro hA B hB hjoin
+      have hp : p.1 < p.2 := norm_head_lt hA
+      have hnorm : Norm (A' ++ B) :=
+        ih (norm_tail hA) hB (fun a ha b hb => hjoin a (List.mem_cons_of_mem _ ha) b hb)
+      apply norm_cons hp hnorm
+      intro r hr
+      rw [List.mem_append] at hr
+      rcases hr with hrA' | hrB
+      · exact norm_head_le hA r hrA'
+      · exact hjoin p (List.mem_cons_self) r hrB
+
+/-- Every piece of `cutF p q` lies within `[p.1, p.2]`. -/
+theorem cutF_bounds {p q r : ℚ × ℚ} (hr : r ∈ cutF p q) : p.1 ≤ r.1 ∧ r.2 ≤ p.2 := by
+  unfold cutF cut at hr
+  rw [List.mem_filter] at hr
+  obtain ⟨hmem, _⟩ := hr
+  rcases List.mem_cons.mp hmem with rfl | hmem'
+  · exact ⟨le_refl _, min_le_left _ _⟩
+  · rcases List.mem_singleton.mp hmem' with rfl
+    exact ⟨le_max_left _ _, le_refl _⟩
+
+/-- Cutting a live interval out of one nondegenerate interval yields a `Norm` region. -/
+theorem norm_cutF {p q : ℚ × ℚ} (hp : p.1 < p.2) (hq : q.1 ≤ q.2) : Norm (cutF p q) := by
+  have hmid : min p.2 q.1 ≤ max p.1 q.2 := by
+    have h1 := min_le_right p.2 q.1
+    have h2 := le_max_right p.1 q.2
+    linarith
+  unfold cutF cut
+  by_cases h1 : (p.1 : ℚ) < min p.2 q.1
+  · by_cases h2 : max p.1 q.2 < p.2
+    · rw [List.filter_cons_of_pos (by simpa using h1),
+          List.filter_cons_of_pos (by simpa using h2), List.filter_nil]
+      exact ⟨h1, hmid, h2⟩
+    · rw [List.filter_cons_of_pos (by simpa using h1),
+          List.filter_cons_of_neg (by simpa using h2), List.filter_nil]
+      exact h1
+  · by_cases h2 : max p.1 q.2 < p.2
+    · rw [List.filter_cons_of_neg (by simpa using h1),
+          List.filter_cons_of_pos (by simpa using h2), List.filter_nil]
+      exact h2
+    · rw [List.filter_cons_of_neg (by simpa using h1),
+          List.filter_cons_of_neg (by simpa using h2), List.filter_nil]
+      trivial
+
+/-- Subtracting one live interval preserves `Norm`. -/
+theorem norm_diff1F : ∀ {L : Region}, Norm L → ∀ {q : ℚ × ℚ}, q.1 ≤ q.2 →
+    Norm (diff1F L q) := by
+  intro L
+  induction L with
+  | nil => intro _ q _; trivial
+  | cons p L' ih =>
+      intro hN q hq
+      have hp : p.1 < p.2 := norm_head_lt hN
+      have hstep : diff1F (p :: L') q = cutF p q ++ diff1F L' q := by
+        unfold diff1F; rw [List.flatMap_cons]
+      rw [hstep]
+      apply norm_append (norm_cutF hp hq) (ih (norm_tail hN) hq)
+      intro a ha b hb
+      have hab := cutF_bounds ha
+      unfold diff1F at hb
+      rw [List.mem_flatMap] at hb
+      obtain ⟨p'', hp''L', hbcut⟩ := hb
+      have hbb := cutF_bounds hbcut
+      have hpp'' := norm_head_le hN p'' hp''L'
+      linarith [hab.2, hbb.1, hpp'']
+
+/-- Subtracting a list of live intervals preserves `Norm`. -/
+theorem norm_diffF : ∀ {B : Region}, ∀ {L : Region}, Norm L → (∀ q ∈ B, q.1 ≤ q.2) →
+    Norm (diffF L B) := by
+  intro B
+  induction B with
+  | nil => intro L hL _; exact hL
+  | cons q B' ih =>
+      intro L hL hlive
+      have hstep : diffF L (q :: B') = diffF (diff1F L q) B' := by
+        unfold diffF; rw [List.foldl_cons]
+      rw [hstep]
+      exact ih (norm_diff1F hL (hlive q (List.mem_cons_self)))
+        (fun q' hq' => hlive q' (List.mem_cons_of_mem _ hq'))
+
+/-- **`Norm (goodRegion2 …)`**: for positive speeds and `0 ≤ h`, the good region is a
+`Norm` region — ordered, disjoint, nondegenerate.  (The base window `[0,1)` is `Norm` and
+every `dangerPair` arc is live.) -/
+theorem norm_goodRegion2 {speeds : List ℤ} (hpos : ∀ s ∈ speeds, 0 < s) {h : ℚ}
+    (hh : 0 ≤ h) : Norm (goodRegion2 speeds h) := by
+  unfold goodRegion2
+  have hbase : Norm [((0 : ℚ), 1)] := by unfold Norm; norm_num
+  apply norm_diffF hbase
+  intro q hq
+  rw [List.mem_flatMap] at hq
+  obtain ⟨s, hs, hqs⟩ := hq
+  have hsnat : 0 < s.toNat := by have := hpos s hs; omega
+  exact dangerPair_live s.toNat hsnat hh q hqs
+
+/-- **THE QUANTITATIVE FLOOR (interval-survival form)**: if every point of `[a, b)` is
+`h`-good for the base `speeds` (strictly `h`-far from every multiple, `x ∈ [0,1)`), the good
+region has length at least `b − a`.  This is the strengthening opus/mac-mini requested for
+the TOWER RUNG (`length_ge_of_safe_interval`, HYP-4046): the base floor is not merely
+positive but bounded below by the safe-interval width.  Composes `length_ge_of_mem_cover`
+(the covering measure bound) with `norm_goodRegion2` (the good region is `Norm`) and
+`good2_mem_of_strict` (a strict-good point is a member). -/
+theorem length_ge_of_safe_interval {speeds : List ℤ} {h : ℚ}
+    (hpos : ∀ s ∈ speeds, 0 < s) (hh : 0 ≤ h) {a b : ℚ}
+    (hsafe : ∀ x : ℚ, a ≤ x → x < b → 0 ≤ x ∧ x < 1 ∧
+      ∀ s ∈ speeds, ∀ m : ℤ, h < |(s : ℚ) * x - m|) :
+    b - a ≤ length (goodRegion2 speeds h) := by
+  apply length_ge_of_mem_cover (norm_goodRegion2 hpos hh)
+  intro x hx1 hx2
+  obtain ⟨hx0, hx1', hgood⟩ := hsafe x hx1 hx2
+  exact good2_mem_of_strict hpos hx0 hx1' hgood
 
 end RatIntervals
 end LonelyRunner
