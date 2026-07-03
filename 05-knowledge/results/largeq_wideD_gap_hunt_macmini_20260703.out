@@ -1,0 +1,10 @@
+Joint (min-witness q, far-span D) over compressed covering gcd=1 families. Hunt large-q AND large-D.
+============================================================================================
+tested 5314 compressed covering gcd=1 families
+MAX min-witness q = 41  (D=53, far-span)
+MAX q among WIDE (D>40) families = 41
+families with BOTH q>45 AND D>40 (the potential gap): 0
+
+=> if all large-q families have SMALL D (worst_qD small): large-q => near-equal => THM-608;
+   {census(small q) + THM-608(small D)} COVER the compressed case, wide residual CLOSED, no
+   Eisenstein/scale_sep_phase gap. if bothbig>0: those are the genuine remaining crux.

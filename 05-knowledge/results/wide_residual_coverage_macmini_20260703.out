@@ -1,0 +1,9 @@
+Wide-residual coverage: classify compressed covering gcd=1 families (slow base + far cluster).
+============================================================================================
+route coverage counts:
+                        CENSUS(q<=45): 171
+
+GAP (sweep?) families: 0
+
+=> if GAP=0: census + THM-608 + scale_separation_phase COVER all compressed families (wide residual
+   closed by the three routes). if GAP>0: the generic/sweep case is the genuine remaining crux.

@@ -1,0 +1,8 @@
+Wide-residual gap hunt: classify hard compressed covering gcd=1 families.
+==========================================================================================
+                             census: 145
+
+GAP families (large witness q>45 AND far NOT phase-tight): 0
+
+=> GAP=0: the three routes cover the compressed case (wide residual closed).
+   GAP>0: those families are the genuine remaining crux (lonely only by a large-q witness, no peel).
