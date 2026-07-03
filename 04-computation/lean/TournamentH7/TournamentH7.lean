@@ -272,6 +272,7 @@ import TournamentH7.FarElementRate
 import TournamentH7.RateLemma
 import TournamentH7.JointRateCore
 import TournamentH7.LRCFarPeelCore  -- opus-S49 (HYP-4042): far-peel measure core (kernel-pure) on the landed region rate lemma
+import TournamentH7.LRCScaleSeparation  -- opus-S50 (THM-608): scale-separation/cluster-absorption (kernel-pure) -- the renormalization core, large-magnitude side
 import TournamentH7.LRCSimulPeel
 import TournamentH7.LRCTrapArea
 import TournamentH7.LRCSpreadPairFloor  -- klein-S118 (kps-S25 mathlib-v4.30.0 repair): spread pair-floor Stages 1-3
