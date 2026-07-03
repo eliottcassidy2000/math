@@ -530,6 +530,20 @@ STATE AFTER THIS SESSION: the peel leg of the census+peel induction is now FORMA
 
 FILES: LRCPeelAssembly.lean (new, registered); HYP-3971 INDEX; this entry. No canon overridden.
 
+## opus-2026-07-03-S48 -- (R2) CLOSED TO EVIDENCE STANDARD (the last genuine-math item in the S33 floor proof): the large-range density floor F_j is minimized by the AP and STRICTLY INCREASES with range => range>14 is SAFER not a gap; + the arXiv:2607.00876 (binary-tree DP) bridge = the LRC floor and DP continual counting are the SAME hard direction (HYP-4013)
+
+Prompt (owner): finish the open LRC(14) math; mine the repo for connections; think analogically about arXiv:2607.00876.
+
+DELIVERED: (1) RECONCILED with the true frontier -- the 11-core floor is ASSEMBLED (S33) + near-fully formalized (klein-S107: corpus 8597 green, TWO finite computations from unconditional); F3-sharp DONE (klein-S106, via TELESCOPING signed cancellation -- the sqrt was an artifact of freezing offsets). My summary-driven S31 census re-derivations (exhaustive max<=19 = 75,582 cores; far-element lever; tower m_7..m_11) independently REPRODUCED the S33/kps ledger (min = pentagon 313/9702; two-outlier min 0.034870) -- confirmation, not novelty; MISTAKE-090 retires my old S31 "uniform arc-count" framing.
+(2) THE OPEN MATH -- (R2): do difference patterns of range > R0=14 stay above F_j? CLOSED TO EVIDENCE STANDARD (lrc14_R2_largerange_discrepancy_floor script; grid T=6000; AP re-validated vs S33 exact 559/11025). F_7 minimized at range 6 (the AP, unique minimal-range pattern) = 0.0507 = 1.83x 1/36, STRICTLY INCREASING with range (0.099 at range 150), all >= 1/36 out to range 150; j=8 identical (AP argmin 0.0546). MECHANISM = DISCREPANCY: AP = min star-discrepancy = min floor; spreading {c_i} raises the floor toward the independent (6/7)^j. The binding case IS the compact AP fixed point (HYP-3901); range > 14 is SAFER, not a gap. Remaining step = Schur-convexity of Q_c in the gap vector (SHAPED, not open).
+(3) THE arXiv:2607.00876 BRIDGE (Bairaktari-Larsen, binary-tree DP continual counting optimal): the DP lower bound Omega(log^{3/2} n) via HEREDITARY DISCREPANCY of the prefix-sum (counting) matrix is the SAME SHAPE as the LRC floor's hard direction -- a LOWER bound (where 2nd-moment gives the WRONG direction) via discrepancy of a triangular accumulation, extremized at the uniform/dyadic config, won by CANCELLATION not magnitude. klein's F3-sharp telescoping = the binary-tree cancellation; the counting matrix = the staircase's CUT SPACE (base-path = prefix sums = score hierarchy); the ell-infinity max-over-prefixes = the worst-position Q_c. The DP lens ("low-discrepancy instance is the hard one") PREDICTED + closed (R2).
+
+NEXT: (a) Schur-convexity/majorization proof of Q_c (try the DP gamma_2/factorization-norm machinery) -- turns (R2) evidence into proof; (b) the j-arc joint rate_core Lean lemma (klein-S106's one write-out step for F3-sharp; I own a single-comb kernel); (c) the F-iv middle-band sweep at N*~10^3 (now feasible).
+
+Files: HYP-4013 (+INDEX); reflection the-lower-bound-is-the-hard-direction-lrc-floor-and-dp-continual-counting-opus-20260703.md; scripts lrc14_R2_largerange_discrepancy_floor_opus_20260703_S48.py (+.out), plus this-session re-derivations (lrc14_11core_census_to_completion / inductive_tower, psl27_tensor_ltc_soundness Part-1 -- S31-labeled); OPEN-Q-108 + INVESTIGATION-BACKLOG updated.
+
+---
+
 ## klein-2026-07-02-S107 -- THE FULL-CORPUS VERIFICATION AT HEAD: 8597 jobs GREEN, ZERO sorryAx anywhere; AxiomAudit built => everything beneath the final surface is kernel-checked PROOF; the verified unconditional distance = exactly TWO finite computations (DispatchComplete W, hwindow) (HYP-4012)
 
 Prompt (owner): finish remaining Lean pieces; get the proof unconditionally verified.

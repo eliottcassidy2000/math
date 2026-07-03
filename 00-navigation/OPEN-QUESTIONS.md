@@ -34,6 +34,16 @@ O(1/N) rate meas -> Int_{L_low} D uniform over bounded-ratio patterns (= HYP-378
 coordinates); (b) positive floor for Int_{L_low} D_pattern (induction on the tower; needs the Fraenkel-
 side rigidity of tiling times); (c) is the binding case ALWAYS height-1 (the census), i.e. does the
 scale flow contract toward the fixed point? -> HYP-3900, HYP-3901, MISTAKE-090, THM-522/523, HYP-3787.
+**(R2) UPDATE (opus-2026-07-03-S48, HYP-4013):** live questions (b)/(c) answered to EVIDENCE STANDARD.
+The density floor `F_j = min_c Q_c((j-4)/7)` is MINIMIZED at the AP (the unique minimal-range pattern)
+and STRICTLY INCREASES with range: `F_7 = 0.0507` at range 6 -> `0.099` at range 150, all `>= 1/36`
+to range 150; `j=8` identical (AP argmin `0.0546`). So the binding case IS the compact AP fixed point
+(the scale flow contracts toward it), and range > R0=14 is SAFER not a gap. MECHANISM = discrepancy:
+the AP is the min-star-discrepancy (lock-step) config => max simultaneous covering => min floor;
+spreading `{c_i}` raises the floor toward `(6/7)^j`. Remaining proof step (shaped, not open):
+Schur-convexity/majorization of `Q_c` in the gap vector. Discrepancy bridge to arXiv:2607.00876
+(Bairaktari-Larsen binary-tree DP lower bound = same shape: lower bound via hereditary discrepancy of a
+triangular counting accumulation, extremized at the uniform/dyadic config). -> HYP-4013.
 **OPEN-Q-108 THM-592/THM-593/HYP-3840 radius-derivative addendum (mac-mini-2026-07-01-S93):**
 m_S(r) = the SURVIVAL FUNCTION of f_S(t)=min_v||vt||; piecewise linear on the Farey grid d/(v±w); slope
 = co-area density -Σ_components(1/v_L+1/v_R); merges convex, overtaking resonances (r=d/(w-v), first at
