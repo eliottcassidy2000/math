@@ -1,3 +1,22 @@
+## kind-pasteur-2026-07-02-S22 -- THE WINDOWED BLOCK STEP + THE UNIFIED LEVEL CHAIN (blocks anywhere in a chain, kernel-pure) + THE 7-WALL CROSSING DESIGNED (Hunter/path-Bonferroni, pair-floor interface pinned for JointRateCore) (HYP-3979)
+
+Prompt (owner): finish the 7+-near-equal-block formalization myself, creative methods.
+
+THE MATHEMATICS (the session's design work of record):
+ 1. Surveyed every elementary route across the 7-wall (union density >= 1): dilation sub-blocks (period-1 repetition useless inside short intervals), difference-citation (12 = (13-c)+(c-1) fits BUT the 1/26-vs-1/14 margin wall + the phi-dodge density wall), largest-piece restart peeling (geometric length decay (2/7)^k), inclusion-exclusion depth-2 (wrong direction). ALL fail for genuinely near-base 7+-blocks -- as they must (coordinated growth).
+ 2. **THE CROSSING THAT WORKS: HUNTER'S INEQUALITY (path-tree Bonferroni).** Pointwise: 1_{union D_i} <= Sum 1_{D_i} - Sum_{path} 1_{D_i cap D_i+1} (components >= 1 on a path). Sequential-subtraction form: good >= |I|(1 - c/7 + (c-1)/49) - fees -- POSITIVE AT c = 7 (49 - 49 + 6 = 6 > 0), boundary at c = 8. THE PAIR-OVERLAP FLOORS |I cap D_i cap D_i+1| >= |I|/49 - err are EXACTLY the per-cell obligation of mac-mini's JointRateCore (S17-18) -- interface pinned in the file header and the letter; the ledger construction (sequential partition identity + pair credits + the inter/diff commutation lemma) is the designed next stage.
+ 3. Also mapped: c = 8+ needs beyond-tree Bonferroni or the region/measure route proper.
+
+DELIVERED (LRCFatBlockChain.lean, 2 build rounds, registered, corpus green; ALL [propext, Classical.choice, Quot.sound]):
+ - **teeth_count_le**: the tooth count over ANY window of length L is <= wL + 3, position-free (Int.toNat_eq_max bookkeeping).
+ - **fatTeeth + fatTeeth_mass + window_avoids_of_avoid_fat**: fatten every tooth LEFT by eps; avoiding fat teeth makes the whole [t, t+eps] window avoid the true teeth; mass cost exactly + eps(wL + 3) per runner, position-free.
+ - **block_window_step**: <= 6 runners (arbitrary internal ratios) own a common good SUB-WINDOW of any chosen width whose fat mass fits -- upgrading S21's point-valued step; blocks now sit ANYWHERE in a chain.
+ - **GLevel/GChainOK/glevel_chain/cite_glevel_lonely**: ONE level constructor (ws, out) -- singles, pairs, and <= 6-blocks are the same thing; the ledger is a pure position-free arithmetic check per level; the citation composition on top (margin EXACT at 1/14, as always).
+
+WHAT THIS CLOSES: every compressed family decomposable into <= 6-blocks at ANY chain positions with fitting windows -- the S19 singles chain, S20 pair chain, and S21 final-block are all special cases of ONE engine. THE RESIDUAL, precisely: 7+-near-equal levels (fat-mass unfittable), crossed at c = 7 by the Hunter ledger modulo pair floors (JointRateCore), c = 8+ genuinely beyond trees.
+
+FILES: LRCFatBlockChain.lean (new, registered, kernel-pure); HYP-3979 INDEX; this entry. No canon overridden.
+
 ## kind-pasteur-2026-07-02-S21 -- THE BLOCK-6 INTERVAL ENGINE (gap_exists measure-free union lemma + explicit teeth + block_point_step for ANY <= 6 runners + cite composition, ALL KERNEL-PURE); near-equal blocks <= 6 CLOSED (HYP-3978)
 
 Prompt (owner): long session finishing the complete formalization; push/pull frequently.
