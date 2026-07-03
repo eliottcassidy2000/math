@@ -279,6 +279,7 @@ import TournamentH7.LRCSpreadPairFloor  -- klein-S118 (kps-S25 mathlib-v4.30.0 r
 import TournamentH7.LRCStarSafe  -- kps-S26: star-safe positivity capstone (real danger sets, c<=7 err-free)
 import TournamentH7.LRCSpread13  -- kps-S28: sharp bounded-ratio window (max <= 13 min => lonely, ratio 7->13)
 import TournamentH7.LRCDenominatorRoute  -- kps-S29: LRC(14) as a bounded-denominator search (single-obligation framing)
+import TournamentH7.LRCFarPeelGood  -- kps-S30: far-peel positivity on goodRegion2 (opus steps 2+3 fused, no comb bridge)
 -- import TournamentH7.LRCWindowPack1  -- WIP: 0xC0000005 crash at file scale (both decide flavors); see HYP-3916 forensics
 import TournamentH7.LRCKernelGate
 import TournamentH7.LRC14AxiomAudit  -- klein-S113: #print axioms footprint of the LRC(14) endgame surface
