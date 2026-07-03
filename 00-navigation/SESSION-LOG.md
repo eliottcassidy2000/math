@@ -1,4 +1,26 @@
-## kind-pasteur-2026-07-02-S23 -- THE HUNTER LEDGER FORMALIZED END-TO-END (LRCRealRegions.lean, sorry-free, kernel-pure, corpus 8623 green): exact RR-region calculus (single-window LIST-LEVEL swap + exact partition + exact depletion identity) -> hunter_ledger with DEPLETED pair credits -> hunter_block_step -> cite_hunter_lonely + cite_hunter_shift_lonely + c=7 clean-floors packaging; pair-event run/gap analysis pins the remaining floor leg (HYP-3980)
+## klein-2026-07-02-S117 -- THE LEDGER-POSITIVITY ASSEMBLY: discharge cite_hunter_lonely's hledger from {singles-bound + pair-floor} for c<=7; pin the two genuinely-remaining analytic things (HYP-4022).
+
+Prompt: finish the two remaining things (pair-floor + Hunter wiring).
+
+STATE FOUND: kps-S23 (LRCRealRegions.lean) formalized the Hunter ledger END-TO-END in their kernel-pure region framework -- cite_hunter_lonely is PROVEN, taking hledger (0 < (b-a) - Sum singles + pairCredits) as a hypothesis. So my S116 "wire Hunter into goodRegion" task is SUPERSEDED (kps did their own region port). The two remaining things sharpened to: (1) the PAIR-FLOOR (lower bound on pairCredits), (2) the c>=8 blocks.
+
+DELIVERED (LRCLedgerAssembly.lean, sorry-free, registered, corpus green 8475 jobs; #print axioms hledger_pos_of_bounds = [propext, Classical.choice, Quot.sound]): the fee-aware ARITHMETIC that discharges cite_hunter_lonely's hledger from the two analytic inputs.
+  hledger_pos_of_bounds (L singlesSum credits F E) (c:N) (hc: c<=7): given singlesSum <= c*(L/7)+F (the SINGLES bound, kps teeth_mass) and credits >= (c-1)*(L/49)-E (the PAIR-FLOOR, mac-mini JointRateCore) and F+E < L*(48-6c)/49, then 0 < L - singlesSum + credits. Proof: L - singlesSum + credits >= L - (c*L/7+F) + ((c-1)*L/49-E) = L*(48-6c)/49 - (F+E) > 0 (nlinarith via ledger_coeff). Plus credit_pos: L*(48-6c)/49 > 0 for c<=7.
+
+THE CHAIN NOW: LRC14Statement <= (klein S115 far-cut dispatch) <= {citation}+{census}+{<=6-far leg}+{>=7-far leg}; the >=7-far leg <= (kps-S23 cite_hunter_lonely) given hledger; and hledger <= (this assembly, S117) given {singles-bound + pair-floor} for c<=7. So the whole proof reduces to TWO analytic things:
+
+(1) THE PAIR-FLOOR pairCredits >= (c-1)(L/49) - err for near-equal teeth. The COMMENSURATE case is ALREADY PROVEN -- LRCCommensuration.lean has volume(danger P cap danger Q) = 1/49 EXACTLY. The general/drifting case = mac-mini's JointRateCore per-cell obligation + kps's pair-event run/gap analysis (active).
+(2) THE c>=8 NEAR-EQUAL BLOCKS: the credit 48-6c <= 0, so pairwise Hunter caps at 7. Crossing needs a TRIPLE-Bonferroni credit or the large-scale limit (fees->0 with a sharper argument). Open frontier.
+
+HONEST: I FINISHED the arithmetic assembly of the c<=7 route (the exact bridge {singles + pair-floor} -> hledger), sorry-free. I did NOT prove the pair-floor (mac-mini/kps active, commensurate case done) nor handle c>=8 (open). The two remaining things are now PINNED PRECISELY and each owned. This session's contribution reduces the c<=7 crux to exactly the pair-floor.
+
+MY THREE-SESSION ARC ON THE ENDGAME: S114 ratio-13 peel (dominant case, closed) -> S115 far-cut-7 dispatch (integration) -> S116 path-Hunter inequality (the 7-wall combinatorial heart) -> S117 ledger assembly (singles+pair-floor -> hledger). Each sorry-free, foundational-axioms-only.
+
+PUSHES/PULLS: pulled ~6x; integrated kps-S23 (Hunter ledger end-to-end) + mac-mini's joint-rate + LRCCommensuration (commensurate pair-floor=1/49). No collision (HYP-4022, LRCLedgerAssembly.lean, Ledger namespace).
+
+FILES: 04-computation/lean/TournamentH7/TournamentH7/LRCLedgerAssembly.lean (+ import in TournamentH7.lean); HYP-4022.
+
+NEXT (the finish): (a) the general/drifting pair-floor (mac-mini/kps -- extend LRCCommensuration's 1/49 to the drifting case with a discrepancy err); (b) the c>=8 blocks (a two-predecessor/triple-Bonferroni Hunter extension, or the large-scale (6/7)^c > 0 safe measure -- I can attempt the triple-Hunter next); (c) wire hledger_pos_of_bounds into cite_hunter_lonely's hledger at the concrete teeth level (needs the singles-bound + pair-floor lemmas plugged in).-TO-END (LRCRealRegions.lean, sorry-free, kernel-pure, corpus 8623 green): exact RR-region calculus (single-window LIST-LEVEL swap + exact partition + exact depletion identity) -> hunter_ledger with DEPLETED pair credits -> hunter_block_step -> cite_hunter_lonely + cite_hunter_shift_lonely + c=7 clean-floors packaging; pair-event run/gap analysis pins the remaining floor leg (HYP-3980)
 
 Prompt (owner): finish up the wall, be creative and persistent, pull/push many times.
 
