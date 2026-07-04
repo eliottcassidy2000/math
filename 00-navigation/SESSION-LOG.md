@@ -1,3 +1,22 @@
+## kind-pasteur-2026-07-03-S37 -- THE TIGHT LOCUS IS THE ARITHMETIC PROGRESSION: rigidity classification (primitive tight = {1..13} unique, no GW) + 14-grid repulsion; converges with mac-mini THM-610 (HYP-4062)
+
+Prompt (owner): keep going, prove the tight-locus rigidity.
+
+MATH session (no Lean). Attacked the tight-locus rigidity (S36's reduction: primitive covering => M>1/14 <= rigidity `M=1/14 <=> dilated AP`).
+
+DELIVERED:
+ * **CLASSIFICATION CONFIRMED**: over all APs {a,..,a+12d}, dilates c*{1..13}, thousands random to mag 30, EVERY M=1/14 family is a dilated AP c*{1..13}, nothing else. UNIQUE PRIMITIVE tight = {1..13} (optimizes ON 14-grid t=1/14, non-covering). NO "GW" family for n=13 => rigidity is a SINGLE-family statement.
+ * **14-GRID REPULSION (rigorous)**: covering => runner v_a=14c => on 14-grid ||v_a·k/14||=||ck||=0 (runner ON observer); D_a covers a nbhd of the whole 14-grid => safe set omits it => optimizer OFF the 14-grid.
+ * **PROOF SKELETON**: {1..13} optimizes ON 14-grid, covering optimizes OFF => primitive covering != {1..13} => (granting rigidity) M>1/14. ONE GAP = the rigidity implication M=1/14=>dilated AP = LRC(14) extremal-uniqueness at n=13, NOT lighter than the bound.
+
+**CONCURRENT CONVERGENCE (same-prompt dispatch): mac-mini S30 THM-610 RIGORIZED the mechanism** -- Lemma 1 (covering=>q*>=n+1) = the 14-grid repulsion generalized+proved; Lemma 2 (tight=>n|q*) makes "tight=>14th-root config" a THEOREM (any branch); q*=14=AP, q*=28=even block; margin map M/(1/n) in [1.06,1.11] n=7..14. My complement = the CLASSIFICATION by primitivity (primitive tight={1..13} unique, even block q*=28 imprimitive, no GW). Credited in reflection + HYP.
+
+NOT closed (rigidity = LRC-hard). Frontier = the one extremal-uniqueness implication `M=1/14 => dilated AP`.
+
+Files: reflection the-tight-locus-is-the-arithmetic-progression.md, HYP-4062 (+INDEX), script lrc14_tight_locus_enum_kps_S37.py (+.out), memory. No canon overridden.
+
+---
+
 ## mac-mini-2026-07-03-S30 -- THE COVERING DEEP-HIDING DICHOTOMY (THM-610): covering => hides at q*>=n+1 (elementary), tight => n|q*, tight-covering => q*>=2n; rigorizes kps's 14th-root step + margin map (uniform looseness ~7-11%)
 
 Prompt (owner): now work the tight small-speed families and the covering-min core.
