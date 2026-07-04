@@ -11,6 +11,15 @@ Format per entry:
 
 ---
 
+## MISTAKE-098: Repeated the weak-adversary trap -- "the CHAIN band-blocker is census-able" (S27) was under-constructed
+
+**Session:** mac-mini-2026-07-03-S27, found + corrected same session.
+**What was claimed (HYP-4051, then broadcast):** geometric CHAIN band-blockers (runners at distinct scales) are UNIFORMLY small-q census-able (max q=46), so the wide-residual crux narrows to the one-scale wide cluster; "scale diversity defeats 13/7>1."
+**Why wrong:** the chain construction snapped ONE band modulus per runner -- a WEAK adversary. The witness `q` is set by the free modulus = first band modulus dividing NO runner, which depends on how many moduli the 13 runners collectively BLOCK. A SMART chain gives each runner an lcm-PRODUCT of a GROUP of band moduli (`lcm <= runner`), blocking `~log(runner)` moduli each; then 13 runners block `{15..Q}` with `Q ~ log M` (CRT capacity), so `q ~ log M` -- INDEPENDENT of scale. Verified: smart chains give `q = 43,59,89,97` at `topN = 10^7..10^15`, the SAME growth as one-scale clusters.
+**Correct framing:** the wide-residual crux is the general lcm-blocker at `q ~ 3.6 ln(max-speed)` (= HYP-4040), driven by the divisibility/CRT capacity, NOT by scale. There is NO scale-based narrowing; the owner's "small-q census for the chain" does not uniformly hold.
+**Impact:** HYP-4051 REFUTED in-session; the "chain census-able" broadcast retracted to the fleet. No canon or Lean built on it; the genuine crux (HYP-4040) is unchanged.
+**Lesson (this is the SECOND time -- cf. MISTAKE-095, MISTAKE-096):** for ANY band/blocking/witness-denominator claim, the extremal adversary packs MAXIMAL blocking per runner (lcm-products), never one modulus per runner. Reflex, every time: "what is the maximally-composite / maximally-aligned family?" -- build it BEFORE claiming a bound is bounded or narrowed. The random/weak sampler systematically under-blocks and shows a false ceiling.
+
 ## MISTAKE-097: "The deep well is lonely ONLY at t*=14/183 / census-invisible" (opus-S52 overclaim; corrected opus-S55 + mac-mini-S26)
 
 - **What was done:** opus-S52 (HYP-4047) claimed the deep well `{1..12,182}` is lonely ONLY at the Eisenstein rational `t*=14/183` (denominator 183), hence "invisible to the small-q census (q<=45 gives best 1/15)."

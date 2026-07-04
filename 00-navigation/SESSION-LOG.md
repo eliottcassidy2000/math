@@ -185,6 +185,18 @@ HONEST STATUS: LRC(14) NOT closed (open research). spread13 closes the all-compa
 
 FILES: LRCSpread13.lean (spread13_lonely + lonely14_of_ratio, registered); 2 numerical probes + outs; HYP-3984 INDEX; reflection; this entry. No canon overridden.
 
+## mac-mini-2026-07-03-S27 -- worked the owner's "small-q census for the compressed chain band blocker"; found (and corrected in-session) that the chain does NOT have a uniform small-q census -- the crux is scale-INDEPENDENT (CRT-capacity blocking, q~log M). MISTAKE-098.
+
+Prompt (owner): keep going on the log-census witness-overlap kernel; consider small-q census for the compressed chain band blocker.
+
+WHAT I DID: took the owner's hint literally -- tested whether the geometric CHAIN band-blocker (runners at distinct scales) has a small-q census.
+ - FIRST (HYP-4051, WRONG): my chain construction (snap ONE band modulus per runner) gave q<=46 uniformly => I claimed 'chain census-able, crux narrows to the one-scale cluster' and broadcast it.
+ - CORRECTED same session (MISTAKE-098): a SMART chain (lcm-PRODUCT runners at distinct scales, blocking a GROUP of moduli each) GROWS -- q=43,59,89,97 at topN=10^7..10^15, SAME as the one-scale cluster. The witness q = the free modulus (first band modulus dividing no runner), which depends on how many moduli the 13 runners BLOCK (the lcm-groups), NOT on the scale structure. 13 runners<=M block {15..Q}, Q~log M (CRT capacity). So the chain does NOT uniformly census; the owner's small-q census does not hold for smart chains.
+
+NET (honest): the wide-residual crux is SCALE-INDEPENDENT -- the general lcm-blocker at q~3.6 ln(max-speed) (= HYP-4040), driven by the divisibility/CRT capacity. THE SHARPENED UNDERSTANDING (the salvage): the witness-overlap kernel = the free modulus. Every band modulus q<=Q is BLOCKED because some runner is divisible by it (residue 0 = danger for all a). The first FREE modulus q* dividing no runner is ~log M (13 runners<=M cover ~13 logM/log15 primes>14 by prime-counting). AT q* the witness exists (no runner at residue 0; the +-k residue conditions are satisfiable for generic residues, (6/7)^13 fraction free). The open kernel: proving the adversary cannot ALSO block q* by +-k residue-alignment (13*q/7>q allows tiling) -- bounded by M's CRT capacity. This is HYP-4040, unchanged; the scale-narrowing was a mirage.
+
+ALSO: opus-S55 ACCEPTED my S26 deep-well correction (MISTAKE-097: deep well census-able at 3/40, not Eisenstein-only). FILES: chain_vs_allN_smallq + chain_census_robust (the weak, refuted) + smart_chain_grows (the correction); HYP-4051 REFUTED; MISTAKE-098; broadcast correction. LESSON (2nd time, cf MISTAKE-095/096): always build the MAXIMAL-blocking adversary before claiming bounded. No canon overridden.
+
 ## mac-mini-2026-07-03-S26 -- the wide residual PINNED EXACTLY (= the log-census, q~3.6 ln M for compressed) + CORRECTED opus (the deep well is census-able at 3/40, not the Eisenstein 183). Genuine crux sharpened, not yet closed.
 
 Prompt (owner): keep going on step 5's wide residual + census extension, complete the crux, concurrently.
