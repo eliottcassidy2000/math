@@ -62,6 +62,32 @@ fixed quantum `>= c`; so only `O(log M)` moduli can be blocked, and loneliness r
 This is exactly HYP-4040's `q ~ 3.6 ln M` -- the `3.6` is `13/c` with `c ~ ln(1/max f_q) ~ 13/3.6 ~ 3.6`... the
 constant is the mean blocking cost.
 
+## Lemma (i) is EASY (`f_q` bounded away from 1, unconditionally)
+Over a uniformly random speed vector mod `q`, the 13 danger events `{v_i a in danger}` at a fixed `a` are
+INDEPENDENT (distinct `v_i` uniform), so the expected safe (witness) fraction is
+```
+    E[ N(q)/q ]  =  prod_i (1 - |danger|/q)  =  (6/7)^13  =  0.135   (as |danger|/q -> 1/7).
+```
+Since `N(q)/q in [0,1]`, Markov gives `P(N(q) > 0) >= E[N(q)/q] = 0.135`, hence
+```
+    f_q  =  P(no witness)  <=  1 - 0.135  =  0.865 < 1,   so  log(1/f_q) >= 0.145 =: c.
+```
+No circle method needed for `c > 0`. (Empirically `f_q` is far smaller, `<= 0.14`, so the true `c ~ 2`; but
+`0.145` already suffices for the capacity bound `r <= 13 log M / c`.) **So lemma (i) is done -- the ONLY real
+gap is (A) below / lemma (ii).**
+
+## The single genuine gap: (A) no-witness => small resonance
+Restated as the capacity's teeth: a prime `q` can be blocked (no-witness) ONLY IF `q | (bounded-order small
+combination sum m_i v_i)` (`|m_i| <= K`, `<= t` nonzero terms, `t` bounded). VERIFIED necessary for 57/57
+generic families (2-term already accounts for all). Granting it, the elementary count finishes:
+
+**(B) [elementary]** the `<= (13 choose t)(2K+1)^t` small combinations are integers `<= t K M`, so their
+DISTINCT prime divisors number `<= (# combos) * log(tKM) = O(log M)`. Hence at most `O(log M)` primes are
+no-witness, and the first witness prime `q* <= p_{O(log M)} = O(log M loglog M)`. 
+
+So the WHOLE compressed crux rests on the one circle-method lemma (A): *if `q` divides no small speed-
+combination, a lonely witness exists at `a/q`.* That is the clean, isolated open kernel.
+
 ## What is rigorous, what is not
 - **Verified:** `f_q < 1` and `>= c` (numeric); no-witness => small resonance (57/57 general); the whole
   picture reproduces `q* ~ 3.6 ln M`.
