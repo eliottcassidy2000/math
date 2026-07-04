@@ -1,3 +1,46 @@
+## mac-mini-2026-07-04-S45 -- the dominant/compressed dispatch is a VALUE split (deep well dominant/discharged, compressed floor 7/89); lcm-shadow; flag the "compressed peel" (HYP-4089)
+
+Prompt (owner): spend another session pushing toward closing the proofs.
+
+APPROACH: map the covering-min residual by classifying covering families on opus's actual Lean dispatch
+predicate (`covering_lonely_of_dominant_or_compressed`), computing the exact-M floor of each branch.
+
+FOUND (confirmation): the dominant/compressed cut (`largest` vs `13x second-largest`) is also a VALUE cut.
+ - DOMINANT branch (DISCHARGED, kps HYP-4087) CONTAINS the covering-min extremizer: deep well {1..12,182}
+   is dominant (182 > 13*12 = 156). So the razor-thin 14/183 is INSIDE the already-closed branch.
+ - COMPRESSED branch (kps's sole open leaf `hcomp`) floors at 7/89 = {1..11,13,84}: margin 35/16287 above
+   14/183, 0 families below 14/183 over >15k sampled/structured. Verified by two independent exact-M
+   descents (wide range [1,260]) + full drop-1-add-1 exhaustive, all converging to 7/89.
+
+HONEST OVERLAP: this substantially RE-DERIVES concurrent same-day fleet work -- klein-S129 (HYP-4090:
+non-deep-well >= 7/89, non-sharp), kps-S5 (HYP-4087: "the deep well" is in the discharged far/dominant
+tail), kps-S6+opus-S72 (HYP-4091: hcomp = compressed leaf, sharp only at deep well). NOT a novel result.
+My value-add is narrow: (a) the 7/89 floor computed DIRECTLY on opus's `compressed` predicate (not klein's
+"minimal-tightener" partition) -- so klein's residual and kps's `hcomp` set provably share the floor 7/89;
+(b) the LCM-SHADOW: compressed extremizer {1..11,13,84} uses 84=lcm(12,14) to cover {12,14} together (13
+separate over tight base {1..11}) -- the one-lcm-down twin of the deep well's 182=lcm(13,14). Compressed is
+FORCED off 182 because a single killer covering {13,14} needs 182 > 13*12 = always dominant. So the 14/183
+<-> 7/89 gap = the cost of being denied the 182 move; all razor-thinness is quarantined on the CLOSED side
+of the 13x line (why opus-S72 can close m=2f2 at M>=1/12 and klein-S129 calls the target non-sharp).
+
+FLAGGED (clean open direction): a COMPRESSED PEEL mirroring opus's dominant peel -- prove compressed-
+covering => M >= 1/13 (the 12-runner LRC floor; empirically true since floor 7/89 > 1/13 > 14/183), on the
+grounds that denial of the single {13,14} killer costs one runner-slot => drop to the (n-1)-runner problem.
+That would discharge hcomp from LRC(13) with a clean margin, the compressed twin of the dominant peel,
+finishing the covering side WITHOUT touching 14/183. (The obvious "remove a runner" peel gives M <= 1/13,
+wrong direction; needs the covering+compressed structure to lower-bound. Handed to kps/opus/klein's
+census/confinement line, which is already grinding this core.)
+
+FILES: 04-computation/compressed_covering_min_macmini_20260704.py (+ .out), 04-computation/covmin_
+classification_macmini_20260704.py (+ .out); HYP-4089; reflection the-dominant-compressed-split-is-a-value-
+split; this log.
+
+NEXT: the sole open leaf is hcomp/confinement (kps/opus/klein). Either (a) attempt the compressed peel
+(compressed => M>=1/13 from LRC(13)) as a clean non-sharp closer, or (b) keep certifying multi-killer
+covering-far ladders (klein-S130's line). Coordinate to avoid re-deriving concurrent work (as happened here).
+
+---
+
 ## klein-2026-07-04-S130 -- THE TWO-KILLER (drop-two) COVERING-FAR LADDER, LEAN-CERTIFIED: first multi-killer slice of CoveringFarLonely (HYP-4092)
 
 Prompt (owner): spend another session pushing toward closing the proofs.
