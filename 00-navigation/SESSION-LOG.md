@@ -19,6 +19,22 @@ HONEST: no Fibonacci lever found; the core stays open, unchanged. Value = a clea
 FILES: lrc14_fibonacci_eisenstein_duality_klein_S124.py(+out); INDEX HYP-4076; reflection fibonacci-is-the-covering-mins-foil-not-its-lever; this log.
 
 NEXT (core, unchanged): the loose-U argmax barrier -- Eisenstein-Farey-three-gap, opus/mac-mini active. Geometric (Kershner, S122) and Fibonacci (S124) routes both ruled out; leverage must be Eisenstein/heptagon arithmetic (the argmax non-extremity structure).
+## mac-mini-2026-07-04-S38 -- THE COVERING-MIN IS A 2-TERM OSTROWSKI/CONTINUED-FRACTION LADDER: AP & deep well are its two ends; three-gap theorem = the rigidity; Fibonacci/Zeckendorf unification (HYP-4076)
+
+Prompt (owner): work the remaining core, AND search back through our Fibonacci-connected work for creative relations.
+
+The two turned out to be the SAME object. Mined the repo's Fibonacci threads (HYP-3739 covering-min=Zeckendorf/Ostrowski, HYP-1902/1920 codex Zeckendorf-boundary, THM-536 Sturmian, THM-486 Pisano) and connected them to the remaining core.
+
+DELIVERED (HYP-4076 + reflection):
+ * THE OSTROWSKI LADDER: M_k=[0;n-1,k]=k/(k(n-1)+1). **AP = rung k=1** ([0;13,1]=1/14, LRC bound, non-covering); **deep well = rung k=n** ([0;13,14]=14/183=n/Phi6, covering-min). The ENTIRE razor-thin margin [1/14,14/183] is this continued-fraction ladder. cf(14/183)=[13,14] verified. Ostrowski = CF-generalization of Zeckendorf (=golden [1;1,..]); LRC = 2-term Ostrowski.
+ * THREE-GAP = THE RIGIDITY: at t*=n/Phi6 the deep-well phases are {n*k mod Phi6}={k*alpha} + killer image, with 2 gaps {1/183,14/183} = the CLASSICAL Steinhaus three-gap; a generic covering family has g=5. So g(14)<=3 <=> extremal config is a {k*alpha} progression = 'tight=>AP-like' = the finiteness; Steinhaus counts gaps FOR FREE once {k*alpha} known. The open part is the STRUCTURE, never the gap count.
+ * MECHANISM (verified): covering => killer runner (n-1)n=182 => its image (n-2)n+1=169 lands one unit above the top core point, splitting the wrap-gap into {1,2n} => the UNIT gap IS the +1 in Phi6=(n-1)n+1. No killer (AP) => D=n, M=1/n; killer (covering) => D=Phi6, M=n/Phi6. Phi6's +1 = a three-gap defect from the covering constraint.
+
+NET: unifies covering-min + three-gap + every repo Fibonacci/Ostrowski/Zeckendorf/Sturmian thread into ONE 2-term-Ostrowski-ladder picture, and localizes the open core: BOTH pieces (covering=>M>=M_n and g<=3) reduce to 'prove the extremal config is a {k*alpha} progression' (klein's M-minimization/budget on the Ostrowski rungs). A sharp MAP, not a proof. Golden ratio is the wrong constant (gap-ratio 14 not phi) but the framework is the Fibonacci one at a different CF.
+
+Housekeeping: ceded HYP-4075 to klein-S123 (Lean folding-identity, committed first), renamed mine to HYP-4076. klein-S123 also converged with my S37 loose-U/argmax dichotomy.
+
+Files: HYP-4076, reflection the-covering-min-is-an-ostrowski-ladder, covering_min_continued_fraction_macmini_20260704.py + out.
 
 ---
 

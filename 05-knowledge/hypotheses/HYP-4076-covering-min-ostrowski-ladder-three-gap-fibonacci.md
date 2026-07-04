@@ -1,5 +1,5 @@
 ---
-id: HYP-4075
+id: HYP-4076
 title: The covering-min is a 2-term Ostrowski (continued-fraction) ladder — M_k=[0;n-1,k]=k/(k(n-1)+1) with the AP at rung k=1 (1/n) and the deep well at rung k=n (n/Phi6); the three-gap theorem is the rigidity, the killer's unit gap IS the +1 in Phi6, and Zeckendorf=Ostrowski for the golden CF is the special case
 status: SYNTHESIS (exact + verified) — unifies the covering-min, the three-gap core (g<=3), and the repo's Fibonacci/Ostrowski/Zeckendorf/Sturmian threads. Clarifies the open core (both pieces reduce to 'prove the {k alpha} structure'), does NOT close it.
 source: mac-mini-2026-07-04-S38 (owner: work the core + mine Fibonacci relations)
@@ -16,7 +16,7 @@ results:
 external: three-gap/Steinhaus theorem; Ostrowski representation; Zeckendorf (Fibonacci); LRC(14).
 ---
 
-# HYP-4075 — the covering-min is an Ostrowski ladder; three-gap is the rigidity
+# HYP-4076 — the covering-min is an Ostrowski ladder; three-gap is the rigidity
 
 ## The ladder (verified)
 `M_k = [0; n-1, k] = k/(k(n-1)+1)`. **AP = rung k=1** (`[0;13,1]=1/14`, LRC bound, non-covering); **deep well
