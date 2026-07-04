@@ -1,0 +1,68 @@
+
+===== drop-13: X=182k, t*=(14k+0)/(182k+1), claim M=14k/(182k+1) =====
+  witness M=14k/(182k+1) verified k=1..25: True;  M(k=1)=14/183=0.07650 > 1/14=0.07143: True
+  RESIDUE TABLE (runner v: qq_v, r_v=A*k+B ; need 14k <= r_v <= 168k+1):
+    v=     1: qq=       0  r=14k+0   (samples k=2,3,4: [28, 42, 56])
+    v=     2: qq=       0  r=28k+0   (samples k=2,3,4: [56, 84, 112])
+    v=     3: qq=       0  r=42k+0   (samples k=2,3,4: [84, 126, 168])
+    v=     4: qq=       0  r=56k+0   (samples k=2,3,4: [112, 168, 224])
+    v=     5: qq=       0  r=70k+0   (samples k=2,3,4: [140, 210, 280])
+    v=     6: qq=       0  r=84k+0   (samples k=2,3,4: [168, 252, 336])
+    v=     7: qq=       0  r=98k+0   (samples k=2,3,4: [196, 294, 392])
+    v=     8: qq=       0  r=112k+0   (samples k=2,3,4: [224, 336, 448])
+    v=     9: qq=       0  r=126k+0   (samples k=2,3,4: [252, 378, 504])
+    v=    10: qq=       0  r=140k+0   (samples k=2,3,4: [280, 420, 560])
+    v=    11: qq=       0  r=154k+0   (samples k=2,3,4: [308, 462, 616])
+    v=    12: qq=       0  r=168k+0   (samples k=2,3,4: [336, 504, 672])
+    v=  182k: qq=  14k+-1  r=168k+1   (samples k=2,3,4: [337, 505, 673])
+
+===== drop-12: X=84k, t*=(35k+2)/(84k+5), claim M=7k/(84k+5) =====
+  witness M=7k/(84k+5) verified k=1..25: True;  M(k=1)=7/89=0.07865 > 1/14=0.07143: True
+  RESIDUE TABLE (runner v: qq_v, r_v=A*k+B ; need 7k <= r_v <= 77k+5):
+    v=     1: qq=       0  r=35k+2   (samples k=2,3,4: [72, 107, 142])
+    v=     2: qq=       0  r=70k+4   (samples k=2,3,4: [144, 214, 284])
+    v=     3: qq=       1  r=21k+1   (samples k=2,3,4: [43, 64, 85])
+    v=     4: qq=       1  r=56k+3   (samples k=2,3,4: [115, 171, 227])
+    v=     5: qq=       2  r=7k+0   (samples k=2,3,4: [14, 21, 28])
+    v=     6: qq=       2  r=42k+2   (samples k=2,3,4: [86, 128, 170])
+    v=     7: qq=       2  r=77k+4   (samples k=2,3,4: [158, 235, 312])
+    v=     8: qq=       3  r=28k+1   (samples k=2,3,4: [57, 85, 113])
+    v=     9: qq=       3  r=63k+3   (samples k=2,3,4: [129, 192, 255])
+    v=    10: qq=       4  r=14k+0   (samples k=2,3,4: [28, 42, 56])
+    v=    11: qq=       4  r=49k+2   (samples k=2,3,4: [100, 149, 198])
+    v=    13: qq=       5  r=35k+1   (samples k=2,3,4: [71, 106, 141])
+    v=   84k: qq=  35k+-1  r=77k+5   (samples k=2,3,4: [159, 236, 313])
+
+===== drop-11: X=154k, t*=(56k+1)/(154k+3), claim M=14k/(154k+3) =====
+  witness M=14k/(154k+3) verified k=1..25: True;  M(k=1)=14/157=0.08917 > 1/14=0.07143: True
+  RESIDUE TABLE (runner v: qq_v, r_v=A*k+B ; need 14k <= r_v <= 140k+3):
+    v=     1: qq=       0  r=56k+1   (samples k=2,3,4: [113, 169, 225])
+    v=     2: qq=       0  r=112k+2   (samples k=2,3,4: [226, 338, 450])
+    v=     3: qq=       1  r=14k+0   (samples k=2,3,4: [28, 42, 56])
+    v=     4: qq=       1  r=70k+1   (samples k=2,3,4: [141, 211, 281])
+    v=     5: qq=       1  r=126k+2   (samples k=2,3,4: [254, 380, 506])
+    v=     6: qq=       2  r=28k+0   (samples k=2,3,4: [56, 84, 112])
+    v=     7: qq=       2  r=84k+1   (samples k=2,3,4: [169, 253, 337])
+    v=     8: qq=       2  r=140k+2   (samples k=2,3,4: [282, 422, 562])
+    v=     9: qq=       3  r=42k+0   (samples k=2,3,4: [84, 126, 168])
+    v=    10: qq=       3  r=98k+1   (samples k=2,3,4: [197, 295, 393])
+    v=    12: qq=       4  r=56k+0   (samples k=2,3,4: [112, 168, 224])
+    v=    13: qq=       4  r=112k+1   (samples k=2,3,4: [225, 337, 449])
+    v=  154k: qq=  56k+-1  r=140k+3   (samples k=2,3,4: [283, 423, 563])
+
+===== drop-9: X=126k, t*=(28k+1)/(126k+5), claim M=14k/(126k+5) =====
+  witness M=14k/(126k+5) verified k=1..25: True;  M(k=1)=14/131=0.10687 > 1/14=0.07143: True
+  RESIDUE TABLE (runner v: qq_v, r_v=A*k+B ; need 14k <= r_v <= 112k+5):
+    v=     1: qq=       0  r=28k+1   (samples k=2,3,4: [57, 85, 113])
+    v=     2: qq=       0  r=56k+2   (samples k=2,3,4: [114, 170, 226])
+    v=     3: qq=       0  r=84k+3   (samples k=2,3,4: [171, 255, 339])
+    v=     4: qq=       0  r=112k+4   (samples k=2,3,4: [228, 340, 452])
+    v=     5: qq=       1  r=14k+0   (samples k=2,3,4: [28, 42, 56])
+    v=     6: qq=       1  r=42k+1   (samples k=2,3,4: [85, 127, 169])
+    v=     7: qq=       1  r=70k+2   (samples k=2,3,4: [142, 212, 282])
+    v=     8: qq=       1  r=98k+3   (samples k=2,3,4: [199, 297, 395])
+    v=    10: qq=       2  r=28k+0   (samples k=2,3,4: [56, 84, 112])
+    v=    11: qq=       2  r=56k+1   (samples k=2,3,4: [113, 169, 225])
+    v=    12: qq=       2  r=84k+2   (samples k=2,3,4: [170, 254, 338])
+    v=    13: qq=       2  r=112k+3   (samples k=2,3,4: [227, 339, 451])
+    v=  126k: qq=  28k+-1  r=112k+5   (samples k=2,3,4: [229, 341, 453])
