@@ -772,10 +772,13 @@ exceeds the EXPLICIT integer threshold `(1 + 2ΣB)·400·ΣB / 3` (written divis
 threshold is now a concrete function of the base — so step-5 is the finite window
 `22 < w ≤ (1+2ΣB)·400·ΣB/3`.
 
-**Aligned band blockers close here.** For `{1,…,11,13,W}` the base is fixed (`ΣB = 79`) and
-`W = lcm(2..X) → ∞`, so `W` clears `(1+158)·400·79/3 ≈ 1.67·10⁶` for all `X ≥ 17`: the
-lcm families that the bounded-denominator census can never close (unbounded witness
-denominator, HYP-4040) are closed here by the far-peel. -/
+**Aligned band blockers, one fixed method.** For `{1,…,11,13,W}` the base is fixed (`ΣB =
+79`) and `W = lcm(2..X) → ∞`, so `W` clears `(1+158)·400·79/3 ≈ 1.67·10⁶` for all `X ≥ 17`.
+These diverse-scale lcm families are census-able too (mac-mini HYP-4051: scale diversity
+keeps `q ≤ 46` at reachable magnitudes) but their lonely denominator is UNBOUNDED
+asymptotically (`Θ(log W)`, HYP-4040) — so no FIXED `q` closes the whole family, whereas the
+SAME far-peel closes the entire `W > threshold` tail.  The genuinely open crux is the
+complementary ONE-scale wide cluster (no far runner, so this peel does not apply). -/
 theorem far_peel_lonely_of_cite (cite : LonelyRunner.LRCUpTo13) (v : Fin 13 → ℤ)
     (hv : ∀ i, 0 < v i)
     (hthr : (1 + 2 * (∑ i, Fin.init v i)) * (400 * (∑ i, Fin.init v i))

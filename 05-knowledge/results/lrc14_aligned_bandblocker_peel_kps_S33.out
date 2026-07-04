@@ -1,0 +1,24 @@
+base = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]
+V = sum(base) = 79
+explicit peel threshold  W > (1+2V)*400V/3 = 1,674,800.0
+
+  X    W=lcm(2..X)  W>thr?  census q<=60 peel goodlen>0
+  7            420   False            41           None
+  8            840   False            41           None
+  9          2,520   False            41           None
+ 10          2,520   False            41           None
+ 11         27,720   False            41           None
+ 12         27,720   False            41           None
+ 13        360,360   False            41           None
+ 14        360,360   False            41           None
+ 15        360,360   False            41           None
+ 16        720,720   False            41           None
+ 17     12,252,240    True            41           True
+ 18     12,252,240    True            41           True
+ 19    232,792,560    True            41           True
+ 20    232,792,560    True            41           True
+ 21    232,792,560    True            41           True
+
+READING: once W = lcm(2..X) clears ~1.67M (X>=17), the small-q census FAILS
+(q -> infinity, HYP-4040) but the far-peel closes it (peel_ok=True).
+The two-sided architecture: census for bounded W, far-peel for W > threshold.

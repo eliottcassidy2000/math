@@ -1,3 +1,21 @@
+## kind-pasteur-2026-07-03-S33 -- THE PIECE-COUNT BOUND + EXPLICIT FAR-PEEL THRESHOLD (goodRegion2_card + far_peel_lonely_of_cite, kernel-pure); step-5 is now a concrete finite window (HYP-4053)
+
+Prompt (owner): build the piece-count bound for the explicit far-peel threshold; think aligned band blockers; pull/push frequently.
+
+DELIVERED (Lean, kernel-pure `[propext, Classical.choice, Quot.sound]`, corpus 8636 green, `LRCFarPeelGood.lean`):
+ * **goodRegion2_card** -- THE PIECE-COUNT BOUND: `(goodRegion2 base h).length ≤ 1 + 2·Σ(base.toNat)`. Chain: `comb_length=v` + `dangerPair_length=2s` + `cutF_length_le_two`/`_le_one_of` + `diff1F_eq_of_right` + **diff1F_card** (cutting a `Norm` region by ONE live interval adds ≤1 piece -- at most one sorted piece STRICTLY contains a given danger, by disjointness; when it does, the rest is untouched) + `diffF_card`.
+ * **far_peel_lonely_of_cite** -- THE EXPLICIT THRESHOLD: a positive 13-family whose far runner clears `(1+2ΣB)·(400·ΣB) < 3·w` is lonely. Composes `far_peel_lonely` + `base_floor_quant_of_cite` (length ≥ 1/(400ΣB), HYP-4052) + `goodRegion2_card` (#pieces ≤ 1+2ΣB) + `sum_map_two_toNat` bridge. So STEP-5 is now the CONCRETE window `22 < w ≤ (1+2ΣB)·400ΣB/3`, not parametric.
+
+ALIGNED BAND BLOCKERS (owner's steer): `{1..11,13,W}`, fixed base ΣB=79, threshold ≈1.67·10⁶; `W=lcm(2..X)` clears it for X≥17 (verified `lrc14_aligned_bandblocker_peel_kps_S33.py`, peel_ok=True). REFINED via mac-mini HYP-4051 (S27): these diverse-scale lcm families are census-able too (q≤46 at reachable magnitudes, unbounded Θ(log W) only asymptotically) -- so the far-peel is the FIXED-METHOD closer for the whole large-W tail (no growing q), not a unique closer. The genuinely open crux is the COMPLEMENTARY one-scale WIDE CLUSTER (no far runner ⟹ this peel N/A; q~log N census = mac-mini's crux).
+
+NOTE: HYP-4050 COLLISION -- opus-S54 also claimed HYP-4050 (concurrent same-prompt dispatch); deferred to opus, renumbered my S32 quantitative-floor entry HYP-4050 -> HYP-4052, this session = HYP-4053.
+
+NEXT: the one-scale wide-cluster crux (mac-mini HYP-4051) is the last genuinely-open slice -- no far runner (far-peel N/A) and census q~log N (no fixed q). That is where the renormalization tower (opus scale_separation_phase, HYP-4049) must land.
+
+Files: `LRCFarPeelGood.lean` (comb_length/dangerPair_length/cutF_*/diff1F_*/diffF_card/goodRegion2_card/sum_map_two_toNat/far_peel_lonely_of_cite), `lrc14_aligned_bandblocker_peel_kps_S33.py` (+.out), HYP-4053 (+INDEX, +renumber S32->4052), memory.
+
+---
+
 ## opus-2026-07-03-S54 -- THE hlarge CASE-ROUTING SKELETON (LRCHlargeRoute.lean, kernel-pure): unifies the fleet's peel engines; hlarge now = {all-comparable DONE} + {gap/far-count engine obligations} (HYP-4050)
 
 Prompt (owner): work on structural decomposition and others as needed toward finishing.
