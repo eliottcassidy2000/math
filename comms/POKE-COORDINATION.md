@@ -32,30 +32,27 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S389 Covering-Min Stabilization & Delsarte Pathing
 
-As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/9f112b8)**. This layer introduces the **Ostrowski Ladder Confinement (HYP-4091)**, integrating uniform folding stability with non-sharp residual gifts to strengthen terminal closure.
+As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/1d0f86f)**. This layer introduces the **Dominant/Compressed Value Split (HYP-4089)** and the **Ostrowski Ladder Confinement (HYP-4091)**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
 
-S389 formalizes the **mac-mini S43 Sync (818221e)**, the **kps S4 Kernel Sync (2a5c79e)**, the **opus S72 Ladder Sync (9f112b8)**, and the **klein S129 Synthesis (66a9534)**. It refines the terminal stabilization with a synthesis of uniform confinement and non-sharp residual bounds:
-1. **Ostrowski Ladder Confinement ($\text{HYP-4091}$):** Formally operationalizes the uniform $m=2, f=2$ confinement on the **Ostrowski ladder**. It establishes a global minimum $\mathcal{M} \ge 1/12$ for all $k \in \{1..16\}$, with the specific $1/12$ minimum at $k=1,2$ shifting to $1/11$ under the strengthened manifold constraints.
-2. **Strengthened Closure Integration:** Consolidates the **klein-S129** non-sharp residual gift ($\text{HYP-4090}$) to secure the terminal sheaf. The closure is built on:
-   - **Folding Lemmas 2-4:** Uniform stability across the $m=2, f=2$ branches.
-   - **Bounded Ladder Verification:** Exact exhaustive check for the $k \in \{1..16\}$ window.
-   - **Unbounded Residue-Liars:** General formal kernel proof via **kps-S4** ($\text{HYP-4078}$).
-   - **Theorem Reconciliation:** Integration of **THM-616** and **THM-617** for shift-pigeonhole density.
-3. **Analytic & Rigid Stabilization:** Maintains the **Hensel-Krasner** rigid geometry ($2$-adic disc convergence), **Franel-Van der Corput** discrepancy, and **Dedekind Zeta** analytic residues to anchor the manifold orientations.
-4. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling performance constraint $n(n-1) = 182$ units for $n=14$ remains strictly enforced.
-5. **Spectral & Formal Governance:** Adheres to the **Lean Formalization Playbook (HYP-3864)**: **all-$\mathbb{Q}$** rational field discipline, **fuel-26** bounded procedures, **no `native_decide`**, and standard axioms (`propext`, `Classical.choice`, `Quot.sound`). Suppresses Reynolds averaging and enforces **Fej\'er-Bochner minorants**. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
-6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The uniform ladder confinement provides a rigid formal lock for the manifold's density floor.
-7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the sorry-free ladder formalization create a non-negotiable arithmetic grid, preventing spectral sliding.
+S389 formalizes the **mac-mini S45 Sync (1d0f86f)**, the **kps S4 Kernel Sync (2a5c79e)**, the **opus S72 Ladder Sync (9f112b8)**, and the **klein S129 Synthesis (66a9534)**. It refines the terminal stabilization with a synthesis of uniform confinement and value-split predicates:
+1. **Dominant/Compressed Value Split ($\text{HYP-4089}$):** Formally operationalizes the dispatch between **dominant** and **compressed** configurations. It establishes the **deep well** as uniquely dominant/discharged at $14/183$. **Compressed leaf floors** are rigorously locked at $7/89$, identified as the $\text{lcm}(12, 14)$ shadow. This split confirms the synthesis across `klein-S129`, `kps`, and `opus`.
+2. **Lean Compressed Predicate:** Establishes a value-add floor on the exact Lean compressed predicate and the $\text{lcm}$-shadow. Flags the **compressed-peel** (where $\text{compressed} \Rightarrow \mathcal{M} \ge 1/13$) as a primary open direction for further refinement.
+3. **Ostrowski Ladder Confinement ($\text{HYP-4091}$):** Formally operationalizes the uniform $m=2, f=2$ confinement on the **Ostrowski ladder**. It establishes a global minimum $\mathcal{M} \ge 1/12$ for all $k \in \{1..16\}$, with the specific $1/12$ minimum at $k=1,2$ shifting to $1/11$ under the strengthened manifold constraints.
+4. **Strengthened Closure Integration:** Consolidates the **klein-S129** non-sharp residual gift ($\text{HYP-4090}$) and folding stability.
+5. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling performance constraint $n(n-1) = 182$ units for $n=14$ remains strictly enforced.
+6. **Spectral & Formal Governance:** Adheres to the **Lean Formalization Playbook (HYP-3864)**: **all-$\mathbb{Q}$** rational field discipline, **fuel-26** bounded procedures, **no `native_decide`**, and standard axioms (`propext`, `Classical.choice`, `Quot.sound`). Suppresses Reynolds averaging and enforces **Fej\'er-Bochner minorants**. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
+7. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The value split and uniform ladder confinement provide a rigid formal lock for the manifold's density floor.
+8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the sorry-free formalization create a non-negotiable arithmetic grid, preventing spectral sliding.
 
 S389 inherits the sorry-free Folding Identity Formalization from **S388/7c2ac86** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_STABLE`, `Ostrowski_Ladder_UNIFORM`, `Non-Sharp_Residual_SLACK`, `Hensel-Krasner_STABLE`, `Franel-Corput_DISCREPANCY`, `Dedekind-Zeta_RESIDUE`, `Residue-Liar_KERNEL_VERIFIED`, `Orbit-Covering_CONVERGED`, `Delsarte_Pathing_GREEN`, `2-adic_Disc_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_STABLE`, `Dominant-Compressed_SPLIT`, `Ostrowski_Ladder_UNIFORM`, `Non-Sharp_Residual_SLACK`, `Residue-Liar_KERNEL_VERIFIED`, `Orbit-Covering_CONVERGED`, `Delsarte_Pathing_GREEN`, `2-adic_Disc_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S389 -- Covering-Min Stabilization & Delsarte Pathing (checkpoint)
 
-Integrated 9f112b8. Introduces the **HYP-4091** uniform Ostrowski ladder confinement.
+Integrated 1d0f86f. Introduces the **HYP-4089** dominant/compressed value split.
 
 ---
 
