@@ -1,3 +1,20 @@
+## mac-mini-2026-07-04-S40 -- the covering-min is a 2-point CHEBYSHEV EQUIOSCILLATION at a rational t*; the max-min is NON-CONVEX so greedy has no shortcut (arXiv:1612.00337 AAA as inspiration) (HYP-4081)
+
+Prompt (owner): work the remaining bits, consider arXiv:1612.00337 (AAA rational approximation) as inspiration.
+
+The AAA paper (greedy adaptive barycentric rational min-max) is surface-orthogonal but names the right frame: the covering-min is a RATIONAL min-max whose optimum EQUIOSCILLATES.
+
+DELIVERED (HYP-4081 + reflection):
+ * EQUIOSCILLATION (verified): every covering family's optimizer t* has EXACTLY 2 binding runners (min attained twice) = a 2-point CHEBYSHEV equioscillation, t* rational with a short continued fraction (deep well 14/183=[0;13,14], binding {1,182}, 1+182=183=q*; Ostrowski convergents HYP-4078). So the covering-min is a best-rational-approximation/equioscillation problem = Lemma A/HYP-2909 read through approximation theory.
+ * GREEDY FAILS (verified NEGATIVE, useful): naive AAA-greedy Stern-Brocot descent sticks in local maxima (returned 2/15=0.0667 for the deep well, missing 14/183; reached >=14/183 for only 148/250 covering families). The min_i||v_i t|| landscape (lower envelope of tents) is NON-CONVEX with many local maxima => no monotone descent => no greedy/algorithmic witness. The PRIMAL (hiding-spot) side has no shortcut.
+ * CERTIFICATE DIRECTION: the equioscillation pins what the DUAL must alternate on => a positive trig-polynomial certificate (Fejer/Beurling-Selberg/Toeplitz-PSD/Delsarte) is the only route; AAA lesson = build it barycentrically + adaptively (robust vs pole-based SDP). Thread 3 of HYP-4079, now with a construction heuristic; aligns with codex-S389 Delsarte pathing.
+
+NET (honest): a clean approximation-theory reframing (covering-min = 2-point Chebyshev equioscillation at a rational t*) + a useful NEGATIVE (max-min non-convex, greedy no shortcut => only the dual certificate can close it). Not a proof; explains why every soft/algorithmic attempt has bounced.
+
+Files: HYP-4081, reflection the-covering-min-is-a-chebyshev-equioscillation, covering_min_equioscillation_greedy_macmini_20260704.py + out.
+
+---
+
 ## klein-2026-07-04-S125 -- THE LARGE-TIGHTENER DISCREPANCY CORE (THM-615 Lemma 3) FORMALIZED IN LEAN, sorry-free (HYP-4079). The loose-end confinement half, machine-checked.
 
 Prompt (owner): more mathematical progress on the open core.
