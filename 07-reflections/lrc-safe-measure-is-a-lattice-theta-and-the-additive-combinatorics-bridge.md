@@ -44,16 +44,30 @@ order, slow convergence.
   the domain of the *bounded* relations `L(S)∩[−K,K]^13` that dominate the correction. Ford–Konyagin's
   **covering-systems** expertise is the natural lens for the covering constraint (multiples of each `q≤14`).
 
-## Net (what this buys the proof)
-1. A clean **analytic target for GAP-B (the covering-min, the hard core):** `Θ_{L(S)}(c) > 0` for every
-   primitive covering `S`, i.e. the **weighted** short-relation mass of a covering family is `< (6/7)^13`.
-   This is a lattice/exponential-sum inequality of exactly the BDFKK type — *with the mod-7 weight*.
-2. A precise statement of **why additive combinatorics alone can't finish it** (translation-invariance):
-   the mod-7 arithmetic (`14=2·7`) is not optional — it is the apex-7 phenomenon (opus HYP-4058, THM-503
-   seven-vanishing, kps 14-heptagon) reappearing as the *weight* of the theta, not the lattice.
-3. GAP-A reframed as a **theta-rigidity / inverse theorem** (`μ`-extremizers = APs), the natural
-   companion to GR's sumset-extremizers-are-APs.
+## The second obstruction (verified) — short relations do NOT dominate
+I tested whether the additive-energy-controlled part (2-term relations) approximates `μ`. It does **not**:
+the 2-term mass is `≈ +0.11` for AP/GW/loose alike, while the *total* correction for a tight family must be
+`−(6/7)^13 = −0.135`. So the higher-order (3,4,…-term) relations carry `≈ −0.25` and **dominate with
+essential cancellation** — `μ` is not short-relation-controlled. Hence even the *weighted* additive-energy
+(short-relation) bound is insufficient by itself: the theta-sum's cancellation is genuinely all-orders.
+This is a **second, independent obstruction** to the BDFKK/GR route, on top of translation-invariance.
 
-This does not close either gap, but it puts the covering-min on a named analytic footing (weighted
-relation-lattice theta positivity) and explains, precisely, the one place the pure-sumset bridge fails.
-See HYP-4071; script `additive_energy_lrc_macmini_20260703.py`.
+## Net (what this buys — honest)
+1. An **exact reformulation**: GAP-B (covering-min) = `Θ_{L(S)}(c) > 0` for every primitive covering `S`;
+   GAP-A = `Θ_{L(S)}(c)=0 ⟹ S∈{AP,GW}` (theta-rigidity / inverse theorem, companion to GR's sumset-
+   extremizers-are-APs).
+2. **Two precise obstructions to the BDFKK/GR route, documented so nobody chases it in vain:**
+   (i) additive energy is **translation-invariant** so cannot decide tightness (`{1..13}` vs `{2..14}`);
+   the decisive ingredient is the **mod-7 radius arithmetic** (`14=2·7`, the apex-7 `c(m)=0⇔7|m` weight),
+   not the lattice; (ii) short relations do **not** dominate — the theta cancellation is genuinely
+   **all-order** (2-term mass `+0.11` vs. required `−0.135`), so even a *weighted* additive-energy bound
+   is insufficient.
+3. Verdict: the pure additive-combinatorics bridge (GR/BDFKK as-is) does **not** finish the covering-min.
+   What survives is the **exact lattice-theta picture** and a sharp diagnosis of the two failure modes —
+   the covering-min needs an *all-order, mod-7-weighted* theta-positivity argument (circle-method /
+   singular-series flavour, which is where klein's `L_C`=singular-series THM-515 and opus's decorrelation
+   THM-611 already live), not a sumset inequality.
+
+So this exploration is largely a **well-characterized dead end for a direct additive-combinatorics proof**,
+but it yields the exact theta reformulation and pinpoints why — useful negative knowledge for the measure
+route. See HYP-4071; script `additive_energy_lrc_macmini_20260703.py`.

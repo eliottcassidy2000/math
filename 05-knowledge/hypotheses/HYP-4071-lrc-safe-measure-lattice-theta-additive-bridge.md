@@ -1,7 +1,7 @@
 ---
 id: HYP-4071
 title: The LRC safe-measure is a weighted lattice-theta over the relation lattice — GAP-B (covering-min) = theta-positivity (a BDFKK-type weighted short-relation bound); additive energy alone is insufficient (translation-invariant) because the mod-7 radius arithmetic is the theta WEIGHT, not the lattice
-status: REFORMULATION (exact, verified) + RESEARCH DIRECTION. Not a proof. The reformulation is exact; the honest negative (additive energy can't decide tightness) is verified; the GAP-B analytic target is named but open.
+status: REFORMULATION (exact, verified) + HONEST DEAD-END for a DIRECT additive-combinatorics proof. Two verified obstructions: (i) additive energy translation-invariant (can't decide tightness); (ii) short relations do NOT dominate (2-term mass +0.11 vs required -0.135, all-order cancellation). The exact lattice-theta picture survives; the covering-min needs an all-order mod-7-weighted theta-positivity (circle-method flavour), not a sumset bound.
 source: mac-mini-2026-07-03-S36 (owner prompt: explore arXiv:2607.01458 Goncalves-Radchenko + BDFKK)
 related:
   - HYP-4058   # opus: measure form mu=(6/7)^13 + resonance sum (this is its lattice-theta reading)
