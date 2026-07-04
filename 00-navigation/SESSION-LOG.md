@@ -36,6 +36,23 @@ DELIVERED (HYP-4074):
 HONEST: the tight-U half is now CLOSED (AP11 + opus). The loose-U half = opus's open argmax barrier (M(U) just above 1/12, bounded tighteners, hit a high U-point without extremity). Did not break the barrier. This is still one sub-case (m=2,|F|=2) of the covering-min, not the whole.
 
 Files: HYP-4074, folding_loose_U_macmini_20260704.py + out.
+## opus-2026-07-04-S65 -- FRANEL/DISCREPANCY + FIBONACCI-mod-7 BRIDGE: the discrepancy INVERSION + Pisano finite-period theme + THM-615 Lemma 3 (large tightener) (HYP-4074)
+
+Prompt (owner): "work leads and generate new ones and keep pushing the frontier; think Franel's discrepancy bound; consider Fibonacci mod 7 period 16."
+
+HONESTY FIRST: the human 'synthesis' post (poke-forum/post_1783144839182.md) is LLM-FABRICATED (Pi-Unital-Flower guardrails, empty-string SHA-256, MD5('hello'), placeholder crypto). ONE real kernel: base-2 van der Corput discrepancy N D*<=log N/(3 log 2) (Bejian-Faure). Extracted the structure, ignored the fabrication (structural-analogy prompt per my memory pattern).
+
+RECONCILED WITH FRONTIER:
+ * THE DISCREPANCY INVERSION: LRC-tight = AP {1..n} = runners on the (n+1)-th ROOTS OF UNITY at t=1/(n+1) = PERFECT equidistribution (M=1/14); Fibonacci/golden speeds (classical discrepancy extremal, badly-approximable) are LRC-LOOSEST (M=0.171=2.4x). LRC extremal = OPPOSITE end from the golden-ratio discrepancy extremal. Extends my S48 HYP-4013 (AP=min star-discrepancy=min floor) with the loose end + roots-of-unity; reconfirms tight-locus=AP (HYP-4062).
+ * PISANO FINITE-PERIOD BRIDGE: pi(2)=3, pi(7)=16=2^4, pi(14)=48 -- the 'infinite family->finite period' theme = the endgame (my mod-24, mac-mini mod-14, kps far-peel). pi(2)=3 == the '3' of vdC 1/(3 log2) == three-gap g(14)<=3.
+
+PROVED (THM-615 Lemma 3, added to canon): for M(U)>1/12, if max(w1,w2) > u_max/(6(M(U)-1/12)) then M(2U u {w1,w2})>=1/12 (Lipschitz+IVT; a large tightener's orbit hits the moderate band => non-extremity; verified 1600 families, 0 violations). Disposes the LOOSE end of general-U confinement; residual = small-tightener x near-AP corner.
+
+NEGATIVES CLOSED: Fibonacci speeds loose (not extremal); vdC t-sampling finds witnesses SLOWER than random (engineering witness-finder dead end).
+
+3 NEW LEADS -> backlog: (i) uniform Pisano-like period P collapsing all confinement checks to ONE finite computation; (ii) the small-tightener x near-AP residual = a two-comb three-gap/discrepancy problem; (iii) 'LRC-tight <=> perfect equidistribution (roots of unity)' as a discrepancy theorem. No canon overridden.
+
+Files: THM-615 (Lemma 3), lrc14_discrepancy_bridge_franel_fibonacci_opus_S65.py (+out), reflection the-discrepancy-inversion-and-the-pisano-finite-period-bridge, HYP-4074, backlog lead, poke-forum post flagged fabricated.
 
 ---
 

@@ -1,0 +1,17 @@
+==============================================================================================
+ (2) PISANO PERIODS (infinite->finite-period theme):  pi(2)=3  pi(7)=16=2^4  pi(14)=48=lcm(3,16)
+     pi(2)=3 == the '3' in vdC's 1/(3 log 2) == three-gap g(14)<=3.  7 => pi(7)=2^4 (2-adic).
+==============================================================================================
+
+ (3) THE DISCREPANCY INVERSION (LRC-tight = perfect equidistribution, NOT low-discrepancy seq):
+     AP {1..13} (LRC-TIGHT)         M=0.07143 = 1.000*(1/14)  <-tight(AP=roots of unity)
+     Fibonacci 13-speed (golden)    M=0.17104 = 2.395*(1/14)  <-LOOSE
+     deep well {1..12,182}          M=0.07650 = 1.071*(1/14)  <-LOOSE
+     => golden/Fibonacci (classical discrepancy extremal) is LRC-LOOSEST; the AP (roots of unity,
+        perfect equidistribution) is LRC-TIGHTEST. Opposite ends. Reconfirms tight-locus=AP (HYP-4062).
+
+ (4) vdC witness-finding is SLOWER than random (engineering lead CLOSED):
+     S=..84: vdC 141 samples vs random 68
+     S=..14: vdC 187 samples vs random 27
+
+DONE. (Real Franel kernel = base-2 vdC discrepancy N D*<=log N/(3log2); the rest of the post is fabricated.)

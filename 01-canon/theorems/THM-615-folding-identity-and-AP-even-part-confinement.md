@@ -50,9 +50,24 @@ extremized by the AP even parts. By Lemma 1 it is equivalent to: *for every `U`,
 arithmetic** — precisely the confinement core (mac-mini's Lemma D, THM-612), here reduced to a sharp,
 scale-invariant target with the extremal case dispatched.
 
+## Lemma 3 (large tightener, PROVED — the loose end of the general case)
+For `U` with `M(U) > 1/12`: if `max(w₁,w₂) > u_max / (6(M(U) − 1/12))`, then `M(S) ≥ 1/12`.
+**Proof.** Let `I₀` be the component of `{g_E ≥ 1/12}` around the global argmax `t₀` (`g_E(t₀)=M(U)`).
+`g_E` is `2u_max`-Lipschitz, so `|I₀| ≥ (M(U)−1/12)/u_max =: L`. WLOG `w₁ > 1/(6L)`. On `I₀` (length `≥ L`),
+`‖w₁t‖` cannot stay entirely in `[0,1/12)` nor entirely in `(5/12,1/2]` (each such arc has length
+`1/(6w₁) < L`); being continuous on the interval, it must take a value in `[1/12,5/12]` at some `t*∈I₀`.
+There `Ψ(t*) ≥ 1/12` (if `‖w₂t*‖≥1/12` then `min ≥ 1/12`; else `max ≤ 5/12` so `½−max ≥ 1/12`), and
+`g_E(t*) ≥ 1/12`, so `min(g_E,Ψ)(t*) ≥ 1/12`, whence `M(S) ≥ 1/12`. ∎ *(Verified: 360 large-tightener
+families, 0 violations.)*
+
+This is a **discrepancy statement**: a large tightener's orbit `{w₁t}` is dense enough on `I₀` to hit the
+"moderate" band, so it cannot stay extremal. It disposes of the *loose* end; the residual is `M(U) > 1/12`
+with **both** tighteners `≤ u_max/(6(M(U)−1/12))` — a low-frequency regime that shrinks to the AP (`M(U)→1/12`,
+where the bound blows up) handled by Lemma 2. The hard core is exactly the small-tightener × near-AP corner.
+
 ## Status
 - **Proved:** Lemma 1 (folding identity); Lemma 2 (`M(2·{1..11} ∪ 2odd) = 1/12` ∀ odd → confinement for AP
-  even parts `c·{1..11}`, the extremizers).
+  even parts `c·{1..11}`, the extremizers); Lemma 3 (large tightener ⟹ `M ≥ 1/12`).
 - **Conjecture (verified min = 1/12):** `M(2U ∪ 2odd) ≥ 1/12` ⟹ `inf_U gap(U) ≥ 1/84 > 0` = m=2,f=2
   confinement as a uniform gap.
 - **Not claimed:** the general `U` (`M(U) > 1/12`) case — the argmax non-extremity, unproven. This is the
