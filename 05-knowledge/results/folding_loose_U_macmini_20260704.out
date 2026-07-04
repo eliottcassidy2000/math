@@ -1,0 +1,12 @@
+(1) LOOSE 11-runner U: M(U), hiding-interval width delta, and min M(2U u {w1,w2}) over odd w1,w2<=39:
+           U (first 6)      M(U) delta(1/12-interval)  min M(2Uu2odd)  >=1/12?
+    [1, 2, 3, 4, 5, 6]   0.09091         1/216 0.0046         0.09091     True
+    [1, 2, 3, 4, 5, 6]   0.09091         1/120 0.0083         0.09091     True
+    [1, 2, 3, 4, 5, 6]   0.10000         1/273 0.0037         0.10000     True
+    [1, 2, 3, 4, 5, 6]   0.09091         1/120 0.0083         0.09091     True
+    [1, 2, 3, 4, 5, 6]   0.11111          1/80 0.0125         0.11111     True
+
+(2) the dodge: on a hiding-interval J (width delta) in t, the extremity set X={a<1/12,b>5/12}∪sym is
+    a union of boxes of width <= 1/(6 min(w1,w2)); if delta exceeds the box+gap scale, J has a
+    non-extremity point => M>=1/12. LARGE tighteners: boxes tiny, trivial. SMALL tighteners: need delta big.
+    (opus proved the delta=0 point-only AP case; loose U has delta>0 => interval room.)
