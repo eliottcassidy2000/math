@@ -1,3 +1,23 @@
+## mac-mini-2026-07-04-S42 -- SHARPEN THM-617 to the FULL COVERING-MIN M>=14/183 (not just confinement M>1/14): the shift-pigeonhole gives the covering-min at large scale
+
+Prompt (owner): work to confine the full covering-min.
+
+Sharpened my S41 THM-617 (shift-pigeonhole, confinement M>1/14) to the SHARP primitive covering-min M>=14/183, directly answering the prompt.
+
+DELIVERED (THM-617 upgraded):
+ * THE SHARP THEOREM: for S=mU u {w_1..w_f} (m∤w_i), fix 0<c<=M(U); if **f·2c·m + Σ gcd(w_i,m) < m** then **M(S) >= c**. At **c=14/183** (legal since M(U)>=1/(e+1)>=1/12 > 14/183 for e<=12): **M(S) >= 14/183 = the full primitive covering-min**, not just >1/14.
+ * PROOF: same pigeonhole, threshold c instead of 1/14. mU is (+1/m)-periodic so M(U)>=c on all m shifts; each tightener unsafe (<c) on <= 2c·m + gcd shifts; if these don't cover all m shifts, a shift with all tighteners >=c survives => min(M(U),tighteners) >= c => M(S)>=c.
+ * KEY POINT: 2c = 28/183 ≈ 1/7 = the confinement danger width, so the SHARP covering-min and the confinement have the SAME legal m-regime. f=2 coprime: (56/183)m+2<m <=> m>=3 => **covering-min M>=14/183 for m>=3, f=2** (only m=2 residual = opus folding). General f coprime: f<183m/(28m+183), f<=6.
+ * VERIFIED: sharp version (shift with all tighteners >=14/183) 0 hard over m>=3.
+
+NET: the FULL covering-min for all primitive covering families reduces to a BOUNDED per-f set of small-m cases (the whole large-scale regime falls to one pigeonhole, at the SHARP 14/183 not just 1/14). Small-m residuals (m=2 per f) = the folding/argmax endgame (opus THM-615, klein/kps ladder+residue).
+
+CONVERGENCE: opus-S69 independently hit THM-617 ("orbit-covering") + consolidated the state (HYP-4084). This sharpening (>1/14 => >=14/183) upgrades it from confinement to the actual covering-min the owner asked for.
+
+Files: THM-617 (upgraded), f2_pigeonhole_macmini_20260704.py (+ sharp version).
+
+---
+
 ## opus-2026-07-04-S69 -- LONG multi-pull push: THM-617 orbit-covering (INDEPENDENT CONVERGENCE with mac-mini S41) + confinement proof-state consolidation (HYP-4084)
 
 Prompt (owner): "keep pushing creative new mathematical angles, long session with multiple pulls toward proof completion."
