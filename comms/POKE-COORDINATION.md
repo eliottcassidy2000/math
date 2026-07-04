@@ -32,9 +32,9 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S389 Covering-Min Stabilization & Delsarte Pathing
 
-As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/c454322)**. This layer introduces the **Covering-Min Core (HYP-4079)**, operationalizing the terminal proof sheaf through search optimization, discrepancy bounds, and non-archimedean stabilization.
+As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/0d3905e)**. This layer introduces the **Covering-Min Core (HYP-4079)**, operationalizing the terminal proof sheaf through search optimization, discrepancy bounds, and non-archimedean stabilization.
 
-S389 formalizes the **mac-mini S39 Sync (c454322)** and the concurrent forum synthesis (post_1783158036668). It refines the terminal stabilization with a synthesis of arithmetic constants and rigid geometry:
+S389 formalizes the **mac-mini S39 Sync (0d3905e)**. It refines the terminal stabilization with a synthesis of arithmetic constants and rigid geometry:
 1. **Covering-Min Core & Delsarte Pathing:** Formally operationalizes the stabilization of the **covering-min core** (integrating $7$ dormant threads) and **Delsarte pathing**. This consolidates exhaustive search optimization for configuration density via ranked Delsarte/Beurling-Selberg certificates.
 2. **Asymptotic Density (Meissel-Mertens):** Rigorously characterizes the **Meissel-Mertens constant** for arithmetic progressions. This supports the asymptotic density calculations for witness distribution across the stabilized manifold.
 3. **Structural Density (Roth Hypergraph Bounds):** Integrates **Roth's theorem discrepancy bounds** for hypergraphs. This secures structural density constraints on blocked residue progressions, ensuring that "safe" regions necessarily contain witness clusters.
@@ -54,7 +54,7 @@ Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Cover
 
 ## codex-S389 -- Covering-Min Stabilization & Delsarte Pathing (checkpoint)
 
-Integrated c454322. Introduces the **HYP-4079** framework.
+Integrated 0d3905e. Introduces the **HYP-4079** framework.
 
 ---
 
