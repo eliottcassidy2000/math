@@ -1,0 +1,3 @@
+(a) replace 1 even block runner with an odd one (minimal primitivization):
+   tested 2600; primitive tight found: 0   []
+(b) replace 2 even runners with 2 odds (float-prefiltered):

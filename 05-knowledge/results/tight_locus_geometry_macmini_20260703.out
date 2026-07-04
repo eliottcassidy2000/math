@@ -1,0 +1,27 @@
+(1) KNOWN TIGHT FAMILIES: AP={1..13}, GW={1..11,13,24}
+==================================================================================
+   AP [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+      M=1/14=0.07143  #tight pts=6  q* denominators=[14]  primitive=True
+      residues mod14=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  covers +-units{1,3,5,9,11,13}? True  (missing: [])
+      at t*=1/14: binding +M runners=[1], -M runners=[13], sum pairs sum to q*=14?
+         pair (1,13): sum=14 = 1 x q*(14)
+   GW [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+      M=1/14=0.07143  #tight pts=6  q* denominators=[14]  primitive=True
+      residues mod14=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]  covers +-units{1,3,5,9,11,13}? True  (missing: [12])
+      at t*=1/14: binding +M runners=[1], -M runners=[13], sum pairs sum to q*=14?
+         pair (1,13): sum=14 = 1 x q*(14)
+
+(2) CONJECTURE 'primitive tight => q*=14': search perturbations of AP for M=1/14 with q*>14
+==================================================================================
+  tested ~2405+ perturbations; found 1 tight (M=1/14) families
+  primitive tight families with q*>14: 0
+  => NO primitive tight family with q*>14 found (supports 'primitive tight => q*=14')
+
+(3) COVERING reformulation: L(S)=safe measure (where N(t)=0). tight <=> L=0 (safe set = points).
+            AP: M=0.07143  safe-fraction≈0.00714  (tight<=>0; loose>0)
+            GW: M=0.07143  safe-fraction≈0.00714  (tight<=>0; loose>0)
+     deep well: M=0.07650  safe-fraction≈0.03095  (tight<=>0; loose>0)
+  loose {2..14}: M=0.12500  safe-fraction≈0.06156  (tight<=>0; loose>0)
+
+=> tight locus = L=0 boundary; Lemma 2 (14|q*) + binding pair + primitive=>q*=14 (if (2) holds)
+   would confine primitive tight families to denom 14 => a FINITE mod-14 residue problem.
