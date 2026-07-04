@@ -1,3 +1,26 @@
+## klein-2026-07-04-S130 -- THE TWO-KILLER (drop-two) COVERING-FAR LADDER, LEAN-CERTIFIED: first multi-killer slice of CoveringFarLonely (HYP-4092)
+
+Prompt (owner): spend another session pushing toward closing the proofs.
+
+MAPPED the active Lean route: top surface lrc14_of_covering_far_of_window reduces LRC(14) to
+  (1) hwindow (all |v_i|<=20 lonely) -- DONE (hwindow20_closed, native_decide); and
+  (2) CoveringFarLonely 20 -- every COVERING family with a far entry (>20) is lonely = the covering-min M>=1/14. THE remaining analytic obligation.
+CoveringFarLonely is discharged family-CLASS by class (infinite certified families tiling the covering-far domain): block families {V..V-12} + deep well + kps's SINGLE-swap hexad (drop one j in {8..13}, add one killer lcm(j,14)k). The hexad handles ONE killer.
+
+NEW (this session): the first MULTI-killer certified class. twoKiller K := {1..11, 14, 156K} -- drop BOTH 12 and 13, add TWO killers: 14 (covers q=14) and 156K=12*13*K (covers q=12,13). LRCTwoKillerLadder.lean proves twoKiller_lonely: lonely at t=13K/(156K+1), margin M=13K/(156K+1)>1/14, for ALL K>=1. Kernel-pure [propext, Classical.choice, Quot.sound], no native_decide, corpus green. Same engine as the hexad (kps residue_key/lattice_dist_ge): residue table p=13K, Q=156K+1, kappa=13K -- v=1..11: qq=0,r=13Kv; v=14: qq=1,r=26K-1; v=156K: qq=13K-1,r=143K+1 (binds top); 14kappa=182K>=Q iff K>=1. Binding pair runner-1/killer-156K = THM-618's 2-point equioscillation, now with base {1..11} (opt 1/12) and a SPLIT killer set. k=1 = {1..11,14,156} at 13/157 (a klein-S128 spectrum rung).
+
+WHY PROGRESS: CoveringFarLonely is closed class-by-class; before = block + deep well + single-swap hexad; now + the two-killer (drop-{12,13}) ladder -- a genuinely new infinite slice in the MULTI-killer stratum. Proof-of-concept that split-killer strata are as formalizable as the single-killer hexad (one residue_key lemma each). Also probed the far-cut route's regime C (near-equal-small 7-far, e.g. {23..29}) computationally (that route's residual).
+
+CONTEXT (fleet, same window): opus-S72 closed m=2,f=2 USING my S129 non-sharp gift (the slack reframing was directly useful); kps-S6 assembled LRC(14) <= LRC(13)[cite] + hcomp (confinement), hcomp now the sole open leaf. My two-killer ladder is a valid certified covering class for the CoveringFarLonely route (and useful content for any census/covering leg).
+
+HONEST: one new certified class, NOT the whole obligation. CoveringFarLonely in full still needs the general covering-min proof; residual = the confinement/hcomp leaf (m=2 folding + remaining multi-killer strata: drop-3, other split patterns). No new theorem about the GENERAL bound.
+
+FILES: LRCTwoKillerLadder.lean (twoKiller_lonely, twoKiller156_lonely, kernel-pure); lrc14_regimeC_witness_klein_S130.py; INDEX HYP-4092; reflection the-two-killer-ladder-first-multi-killer-covering-far-certificate; this log.
+
+NEXT: (a) formalize drop-3 / further multi-killer ladders (same residue_key recipe) to keep tiling CoveringFarLonely; (b) the hcomp/confinement leaf (kps/opus) is the sole open leaf -- m=2,f=2 done, remaining = general confinement; (c) register twoKiller as an explicit CoveringFarLonely certified instance (covering+far proof, mirroring coveringFar_deepWell) if the route stays active.
+
+---
+
 ## kind-pasteur-2026-07-04-S6 -- THE FORMAL ENDGAME ASSEMBLED: LRC(14) <= LRC(13) + THE COMPRESSED CASE (HYP-4091)
 
 Prompt (owner): spend another session pushing toward closing the proofs.
