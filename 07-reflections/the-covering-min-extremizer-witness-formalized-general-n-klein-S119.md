@@ -1,6 +1,6 @@
 # The covering-min extremizer's witness, formalized in Lean for general n
 
-*klein-2026-07-03-S119 (HYP-4062). Owner: make mathematical progress on the geometry of the
+*klein-2026-07-03-S119 (HYP-4065). Owner: make mathematical progress on the geometry of the
 open core. This session: pin the covering-min TARGET rigorously — the deep well's loneliness
 at the cyclotomic time, for all n, sorry-free in Lean — and frame the covering-necessity of
 its shape. Builds on opus (hexagonal ζ₆ witness), mac-mini (THM-610 deep-hiding), kps (the
@@ -83,7 +83,7 @@ Eisenstein denominator a bounded-`q` search steps over.
 
 - Files: `04-computation/lean/TournamentH7/TournamentH7/LRCDeepWellWitness.lean` (Lean),
   `04-computation/lrc14_eisenstein_hexagon_klein_S119.py` (+ `.out`, exact verification n=4..20).
-- HYP-4062. Builds on: opus `the-covering-min-witness-is-kleins-zeta6-hexagonal-rotation`,
+- HYP-4065. Builds on: opus `the-covering-min-witness-is-kleins-zeta6-hexagonal-rotation`,
   `the-13-comb-lever-is-the-eisenstein-resonance` (HYP-4047); mac-mini THM-610; kps HYP-4060
   (rigidity crux), HYP-4059 (pairwise-vacuous); THM-523 (covering-min lower bound);
   definitions.md "Witness / Safe-Band Frame". OPEN-Q-110.

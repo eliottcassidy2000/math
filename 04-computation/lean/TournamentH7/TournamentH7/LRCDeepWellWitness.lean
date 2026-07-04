@@ -1,6 +1,6 @@
 /-
   TournamentH7.LRCDeepWellWitness — THE COVERING-MIN EXTREMIZER'S WITNESS, GENERAL n
-  (klein-2026-07-03-S119, HYP-4062).
+  (klein-2026-07-03-S119, HYP-4065; renumbered from HYP-4062 -- collided with kind-pasteur-S37).
 
   The LRC open core is the covering-min lower bound `M(covering) >= n/Phi6(n)` (THM-523),
   whose unique extremizer at `n = 14` is the DEEP WELL `D_n = {1,...,n-2} U {n(n-1)}`

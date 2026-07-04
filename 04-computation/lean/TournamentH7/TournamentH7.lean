@@ -289,6 +289,7 @@ import TournamentH7.LRCFarCutSplit  -- klein-S115: far-count-7 dispatch (integra
 import TournamentH7.LRCHunterLedger  -- klein-S116: path-Hunter (Bonferroni) inequality, the 7-wall crossing heart
 import TournamentH7.LRCLedgerAssembly  -- klein-S117: ledger-positivity assembly (singles + pair-floor -> hledger, c<=7)
 import TournamentH7.LRCDeepWellWitness  -- klein-S119: covering-min extremizer's witness, general n (deep well lonely at t*=n/Phi6(n) via zeta6 rotation)
+import TournamentH7.LRCDeepWellLonely  -- klein-S119b: wires the witness to Lonely 14 (deepWell14 {1..12,182} Lonely at 14/183)
 import TournamentH7.LRCSevenGap  -- kps-S24: seven-gap deficit + cluster sweep step (the CLUSTERED-block lane)
 
 import TournamentH7.LRCDilation  -- mac-mini-S24: WLOG gcd=1 (dilation), closes HYP-4043 far-peel gap

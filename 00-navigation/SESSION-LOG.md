@@ -43,6 +43,22 @@ DELIVERED:
 **CONCESSION (mac-mini S31 THM-612 REFUTED my S37 HYP-4062 "no GW")**: GW={1..11,13,24}=AP[12->24] IS tight (M=1/14 exact, primitive, non-AP, non-covering). My S37 search structurally excluded the one-residue-moved shape = MISTAKE-100 (search-artifact/weak-adversary trap). The S37 reduction + 14-grid repulsion STAND (both AP,GW non-covering, small-speed => frontier map unaffected); only my uniqueness claim was wrong. Corrected HYP-4062, reflection; logged MISTAKE-100; mac-mini's court case granted.
 
 NOT closed (implication LRC-hard). Files: reflection the-implication-is-lrc-hard-but-the-frontier-is-empty.md, HYP-4064 (+INDEX), MISTAKE-100, scripts lrc14_removal_measure/_compressed_frontier_kps_S38.py, memory.
+## klein-2026-07-03-S119b -- WIRED the deep-well witness to `Lonely 14` (deepWell14 = {1..12,182} is Lonely at 14/183, sorry-free) + HYP renumber 4062->4065 (collision with kps-S37)
+
+Prompt (owner): wire ap_runner_dist_real to the concrete Lonely 14 predicate.
+
+DELIVERED (Lean sorry-free, [propext, Classical.choice, Quot.sound], REGISTERED): LRCDeepWellLonely.lean.
+- `deepWell14 : Fin 13 -> Z := fun i => if i.val=12 then 182 else i.val+1` (= {1,2,..,12,182}, the covering-min extremizer; 182=14*13=pronic, 183=Phi6(14)).
+- `bridge (v)(hb: forall m, 14 <= |v*14 - m*183|)(m) : 1/14 <= |v*(14/183) - m|` -- the elementary real bridge (183/14=13.07 <= 14 <= |integer dist|; le_div_iff0).
+- `deepWell14_lonely : LonelyRunner.Lonely 14 deepWell14 (14/183)` -- proved by casing i (defect 182 via defect_runner_lonely; AP j=i.val+1 via ap_runner_lonely), rw phi6_14 (phi6 14=183), then bridge. The general-n witness (HYP-4065) now plugs into the chain's OWN predicate `Lonely 14 v t = (forall i m, 1/14 <= |v i*t - m|)` from LonelyRunner.lean.
+
+So the covering-min extremizer is certified LONELY inside the LRC(14) formalization's native vocabulary -- the handoff item (a) from S119, done. HONEST: still the witness (upper) direction for ONE family; the lower-bound rigidity (M=1/n => tight locus) remains the open crux.
+
+HYP RENUMBER: my HYP-4062 (S119) COLLIDED with kind-pasteur-2026-07-03-S37's HYP-4062 ("no GW", since REFUTED by mac-mini-S31 THM-612). Per coordination norm klein YIELDS: my entry is now HYP-4065 (kps keeps 4062). Updated INDEX header + Lean headers + reflection; HYP-4065 was verified free. Old S119 log/commit refs to "HYP-4062" for klein now read HYP-4065.
+
+FILES: LRCDeepWellLonely.lean (+root import); INDEX HYP-4065 (renumbered); this log.
+
+NEXT: deepWell14_lonely gives `exists t, Lonely 14 deepWell14 t` -- a certified covering-min-extremizer instance for the CoveringFarLonely / census legs. The remaining crux is the covering-min LOWER bound (rigidity), unchanged.
 
 ---
 
