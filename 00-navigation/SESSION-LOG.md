@@ -1,3 +1,23 @@
+## opus-2026-07-03-S59 -- DROP-7 IS NOT THE GLOBAL FLOOR-MINIMIZER: the covering floor is a PRIMITIVE statement + decorrelates per coordinate (THM-611); inf R' = the tight-locus rigidity (HYP-4063)
+
+Prompt (owner): "is drop-7 the global R'-minimizer over all covering families? finish up the proofs."
+
+ANSWER: **NO.** (S58 drop-7 {1..6,8..13,14} R'=0.315 was only the min among the 13 minus-one families of {1..13}.) Greedy 1-swap descent (speeds<=42, exact verify):
+ * UNCONSTRAINED the descent hits **R'=0 on IMPRIMITIVE tight families** `2*{1..13}={2,4,..,26}`: scale-inv `meas(lonely(cV))=meas(lonely V)`, and `{1..13}` is the AP with M=1/14 EXACT => safe set measure 0. So the covering FLOOR, like the covering-MIN (kps HYP-4060), is a **gcd=1 (primitive) statement** -- LRCDilation load-bearing for the floor (floor-side of HYP-4060).
+ * Among PRIMITIVE coverings the global min found is **R'~=0.0763** at `S={2,4,5,6,8,10,14,16,18,20,22,24,26}=2*({1..13}\{6}) u {5}` (near-imprimitive), FAR below 0.315.
+
+PROVED -- **THM-611 (far-runner / coordinate decorrelation)**: `|meas(lonely(R u {w})) - (6/7)m_R| <= A_R/(3w)`, A_R=#arcs of R-lonely (BV bound `|phi_R^(n)|<=A_R/(pi|n|)` x `|c_k|<=1/(pi|k|)`, `sum 1/k^2=pi^2/3`). => r=1: `|R'-1|<=A_R/(36 q m_R)`, so `R'->1` as any single coordinate grows; the floor inf is NOT at infinity in one coordinate (search legit). HONEST non-uniformity: `A_R/m_R` is core-unbounded => NO uniform magnitude bound (that bound would BE the finite reduction = the open problem). This is the measure-side analog of mac-mini THM-610's census-side coordinate dichotomy; the signed sum converges where the absolute one diverges (MISTAKE-078).
+
+inf R' OPEN: a naive primitive approach to the tight AP `S_c={c+1,2c,..,13c}` does NOT drive R'->0 (decorrelates to ~0.53 via the coprime c+1). Whether `inf R'>0` (uniform floor) vs `=0` is EXACTLY the tight-locus rigidity -- **converges with kps-S37/HYP-4062 (primitive tight locus = the AP {1..13}, unique) landing this same session**, and kps HYP-4060. My contribution: this rigidity IS the floor's infimum (the R'-axis meets kps's M-axis).
+
+RECALIBRATION for the floor program: THM-579/HYP-3129's `R'>=0.642` is a per-row (consec) value, NOT a uniform floor -- primitive coverings reach `R'<=0.076`; the low-R' crux is near-imprimitive, not consec, not drop-7.
+
+HONEST: THM-611 + primitivity + drop-7-refutation are exact; `inf R'>0` (the floor) is NOT proved (= LRC(14) hard core), flagged plainly (MISTAKE-097). No canon overridden.
+
+Files: THM-611 (canon), lrc14_floor_global_min / _global_min_anneal / _primitivity_sequence _opus_S59.py (+.out x3), reflection drop-7-is-not-global-the-floor-is-primitive-and-decorrelates, HYP-4063 (+INDEX).
+
+---
+
 ## kind-pasteur-2026-07-03-S37 -- THE TIGHT LOCUS IS THE ARITHMETIC PROGRESSION: rigidity classification (primitive tight = {1..13} unique, no GW) + 14-grid repulsion; converges with mac-mini THM-610 (HYP-4062)
 
 Prompt (owner): keep going, prove the tight-locus rigidity.
