@@ -1,3 +1,23 @@
+## klein-2026-07-04-S127 -- THE ONE-SWAP COVERING STRATUM = 13 formula-closable ladders, FLOORED by the deep well 14/183 (HYP-4082). Because 13 forces the largest defect.
+
+Prompt (owner): creative improvements and progress toward the core.
+
+Pushed the S126 path (near-covering-min families are spread-one-runner ladders; kps closed one by formula) to completion over the WHOLE one-swap stratum F(j,X)=({1..13}\{j}) u {X}.
+
+FINDING (exact, X<=260): the GLOBAL one-swap covering-min is 14/183, achieved UNIQUELY by the deep well {1..12,182} (drop-13). Every drop-j family has min_X M >= 14/183. Per-j the near-min families are a formula LADDER M = a_j k/(b_j k + c_j): drop-13 = 14k/(182k+1) [floor 14/183], drop-12 = 7k/(84k+5) [kps residue-liar, floor 7/89], drop-9 = 14k/(126k+5) [floor 14/131], drop-11 floor 14/157, etc. All floors >= 14/183; all -> ~1/13 as k->inf.
+
+WHY THE DEEP WELL FLOORS IT (clean): the drop determines the forced defect X0 (the added runner must restore j's covering role + cover q=14, which the AP {1..13} misses). j=13 (prime, coprime to 14) forces the LARGEST defect lcm(13,14)=182 => finest comb => tightest bind => smallest M=14/183. The +1 in Phi6(14)=182+1=183 IS the unit gap the maximal defect leaves. So the deep well = covering-min because 13 forces the maximal coprime-to-14 spread.
+
+PROGRESS TOWARD THE CORE: the one-swap covering stratum (a large natural chunk of covering families) is now a finite (13-position) union of formula-closable ladders, deep-well-floored. Two are already Lean-proved (drop-13 = kps far-peel; drop-12 = kps residue-liar); the other 11 have the SAME residue-table shape => formalizing each (one residueLiar-style lemma per j) closes the covering-min on the entire one-swap stratum, uniformly in k, BYPASSING the u_max bound (the crux's obstacle).
+
+HONEST: closes the one-swap stratum (modulo formalizing 11 more ladders); does NOT close the whole core -- residual = MULTI-swap families (drop>=2, spread>=2) + the universal Delsarte dual (mac-mini S40). A large chunk, not the whole.
+
+FILES: lrc14_one_swap_stratum_klein_S127.py(+out); INDEX HYP-4082; reflection the-one-swap-covering-stratum-is-floored-by-the-deep-well; this log. (HYP-4082 free.)
+
+NEXT: (a) formalize the 11 remaining drop-j ladders (kps residue-table method) to close the one-swap stratum in Lean; (b) the multi-swap stratum; (c) the universal Delsarte/Beurling-Selberg dual (mac-mini's pointed route). Ruled-out shortcuts: geometric/Kershner (S122), Fibonacci (S124).
+
+---
+
 ## klein-2026-07-04-S126 -- THE 11-RUNNER EVEN-PART M-SPECTRUM HAS A GAP ABOVE 1/12 (HYP-4080): the residual "near-AP" is DISCRETE, not a continuum. Sharpens the sliver; not a closure.
 
 Prompt (owner): work the single remaining sliver.
