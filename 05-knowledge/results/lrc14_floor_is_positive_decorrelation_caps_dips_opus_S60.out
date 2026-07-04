@@ -1,0 +1,37 @@
+==============================================================================================
+ meas(block u {w}) vs w:  block = 2*({1..13}\{6}),  limit (6/7)m_block, dips bounded by A/(3w)
+==============================================================================================
+  m_block=0.008159  #arcs A=8  decorrelation limit (6/7)m_block=0.006993
+       w       meas   limit-meas (dip)   A/(3w) bound  dip<=bound
+       7   0.006785          +0.000208       0.380952        True
+      21   0.008159          -0.001166       0.126984        True
+      35   0.005453          +0.001540       0.076190        True
+      49   0.007794          -0.000801       0.054422        True
+      63   0.004079          +0.002914       0.042328        True
+      91   0.007088          -0.000095       0.029304        True
+     133   0.006771          +0.000222       0.020050        True
+     203   0.007660          -0.000667       0.013136        True
+     357   0.006635          +0.000358       0.007470        True
+     553   0.007384          -0.000391       0.004822        True
+     777   0.007009          -0.000016       0.003432        True
+    1001   0.006999          -0.000006       0.002664        True
+    2003   0.006991          +0.000002       0.001331        True
+    5005   0.006980          +0.000013       0.000533        True
+   10007   0.006988          +0.000005       0.000266        True
+  => deepest dip 0.00291 at w=63 (meas=0.00408); dips -> 0 as w grows.
+     meas does NOT -> 0 => inf over this family is a POSITIVE resonant dip.
+
+==============================================================================================
+ SLOPE bound meas(lonely S) >= 2(M(S)-1/14)/v_max  (elementary: F=min||vt|| is v_max-Lipschitz)
+==============================================================================================
+  S=[2, 4, 6, 8, 10, 14, 16, 18, 20, 22, 24, 26, 63]
+    meas=0.004079  M=0.08695  v_max=63  2(M-1/14)/v_max=0.000493  holds=True
+  S=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14]
+    meas=0.022672  M=0.09091  v_max=14  2(M-1/14)/v_max=0.002782  holds=True
+  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+    meas=0.023897  M=0.07650  v_max=182  2(M-1/14)/v_max=0.000056  holds=True
+
+  CONCLUSION: the uniform measure floor inf meas(lonely S) > 0 (~0.004), NOT 0. Mechanism =
+  THM-611 decorrelation (caps resonant dips) + rigidity (block measure bounded below). A rigorous
+  uniform proof is >= LRC-hard (two-sided: dominant runner peels; compact/near-tight = the rigidity).
+DONE.
