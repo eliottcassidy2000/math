@@ -1,0 +1,28 @@
+C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\lrc14_inf_gap_near_block_opus_S64.py:51: SyntaxWarning: invalid escape sequence '\{'
+  print("MIN gap over near-block U={1..13}\{i,j} (E=2U), best odd tighteners (float; minimizer exact-verified)")
+MIN gap over near-block U={1..13}\{i,j} (E=2U), best odd tighteners (float; minimizer exact-verified)
+  removed {i,j}    gap(float)   best (w1,w2)
+  (12, 13)           0.011870        (1, 11)
+  (2, 12)            0.011887       (17, 19)
+  (2, 6)             0.015519       (15, 17)
+  (2, 13)            0.015519       (15, 17)
+  (6, 13)            0.015519         (1, 7)
+  (6, 11)            0.019468        (5, 11)
+  (11, 12)           0.019468        (1, 11)
+  (11, 13)           0.019468        (9, 11)
+  (2, 11)            0.019468       (15, 17)
+  (1, 6)             0.023776        (1, 17)
+  ... (showing 10 smallest of 78 pairs)
+
+  SMALLEST gap: removed (12, 13), U=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    S=[1, 2, 4, 6, 8, 10, 11, 12, 14, 16, 18, 20, 22]  M(S) exact=1/12  gap exact=0.011905  =1/14? False  primitive=True
+    1/84=0.011905
+
+  dilation of the smallest-gap shape (c*U), best tighteners re-searched:
+    c=1: u_max= 11 gap(float)=0.011870 (w1,w2)=(1, 11)
+    c=2: u_max= 22 gap(float)=0.011870 (w1,w2)=(11, 21)
+    c=3: u_max= 33 gap(float)=0.011870 (w1,w2)=(1, 11)
+
+READING: if the min near-block gap is bounded away from 0 (~>0.005) and stays so under dilation,
+  inf_U gap(U) > 0 is plausible; if it -> 0 for some {i,j}, inf=0 (uniform gap FALSE).
+DONE.

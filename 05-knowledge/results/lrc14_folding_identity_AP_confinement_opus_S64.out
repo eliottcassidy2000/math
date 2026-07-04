@@ -1,0 +1,20 @@
+==========================================================================================
+ (1) FOLDING IDENTITY  M(S)=max_t min(g_E(t),Psi(t))  -- verify on random t
+==========================================================================================
+  identity verified: True
+
+==========================================================================================
+ (2) AP EVEN PART: M(2*{1..11} u {w1,w2}) = 1/12 for ALL odd w1,w2 (finite check mod 24)
+==========================================================================================
+  g_E: M=1/12 (=1/12? True); 8 argmax pts, denominators [24], period D=24
+  checked 78 odd residue-pairs mod 24: ALL M=1/12? True
+  => M(2*{1..11} u 2odd)=1/12 for ALL odd tighteners (PROVEN). Dilations c*{1..11} by scale-inv.
+
+==========================================================================================
+ (3) STATUS
+==========================================================================================
+  * inf_U gap(U) > 0  <=  M(2U u 2odd) >= 1/12  (=> gap >= 1/84).  min M = 1/12 (verified, S64 descent).
+  * PROVEN for the EXTREMAL AP even parts c*{1..11} (gap=1/84 exactly).
+  * OPEN for general U (M(U)>1/12): the argmax non-extremity condition -- the confinement core.
+    Soft measure bounds are VACUOUS here (lambda(U)~0.05-0.09 << 2/7); needs the arithmetic.
+DONE.
