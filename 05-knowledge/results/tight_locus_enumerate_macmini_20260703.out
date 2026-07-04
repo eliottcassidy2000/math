@@ -1,0 +1,15 @@
+(a) AP[k -> k+14m]: replace one AP speed by a higher lift of the same residue
+   tight so far: 0
+(b) AP[k -> j]: replace one AP speed by a different speed j<=56
+   tight so far: 1
+(c) two moves: replace two AP speeds by lifts/replacements <=42
+   tight so far: 1
+(d) broad numpy-prefiltered random (mixed, up to speed 60)
+   tested 120000 random; tight so far: 1
+
+================================================================================
+DISTINCT tight residue-classes found: 1
+  residues=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]  g=2  [GW-type]  example=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+
+  max #gaps g over all tight families found: 2  (three-gap g(14)<=3 predicts <=3)
+  => tight locus (by residue class): just AP+GW

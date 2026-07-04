@@ -92,7 +92,24 @@ So the geometric skeleton of the open core is: **THM-610 (14|q*) → THM-612 con
 finite mod-14 shell + three-gap `g(14)≤3`**. The two remaining gaps are the confinement (this note's
 conjecture) and `g(14)≤3` (HYP-2913) — both now sharply isolated on the 14th-root grid.
 
+## Addendum (S32) — the tight locus is {AP, GW} with `g≤2`, and the deletion-hiding mechanism
+Thorough exact-`M` enumeration (`tight_locus_enumerate_macmini_20260703.py`): over all single- and
+double-residue swaps/lifts of the AP and `120k` random 13-sets to speed 60, the **only** primitive tight
+families are the **AP** (residues `{1,…,13}`, `g=1`) and **GW = AP[12→24]** (residues `{1,…,11,13}`,
+`g=2`). So empirically the three-gap bound is in fact `g≤2` (**sharper than HYP-2913's `g≤3`**).
+
+**The deletion-hiding mechanism (why the locus is exactly {AP, GW}).** For `k≥7` (so `2k>13`, no other
+multiple of `k` is in `{1,…,13}`), deleting runner `k` from the AP makes `t=1/k` a hiding spot:
+`min_{j≠k}||j/k|| = 1/k > 1/14` (the q-witness lemma, THM-523, at `q=k`). So any tight 13-family built by
+replacing AP runner `k` (`k≥7`) must include a runner that **blocks** `t=1/k`, i.e. a multiple of `k`.
+The unique surviving swap is **`k=12 → 24=2·12`** (`||24/12||=0` blocks `t=1/12`, and `24` opens no new
+spot); the `+14` lift `26` fails (`||26/12||=1/6`, safe, so `t=1/12` stays open ⟹ `M=1/12`, loose). For
+`k≤6` the multiple `2k≤12` already blocks `t=1/k`, and no swap is tight. This q-witness picture *explains*
+GW's uniqueness among AP-neighbors and is the arithmetic engine behind the `g≤2` rigidity.
+
 ## Not claimed
 Confinement is not proved (it is an existence/non-existence statement about the odd-tightener
-construction, not reducible to LRC≤13 by the corollary alone). `g(14)≤3` remains open (HYP-2913).
-This theorem contributes the proved tower lemmas (A,B + corollary) and the confinement reduction.
+construction, not reducible to LRC≤13 by the corollary alone). `g(14)≤3` (empirically `≤2`) remains open
+(HYP-2913); the enumeration confirms the conclusion to speed 60 but not the general finiteness. This
+theorem contributes the proved tower lemmas (A,B,C + corollary), the confinement reduction, and the
+deletion-hiding mechanism for the `{AP,GW}` structure.
