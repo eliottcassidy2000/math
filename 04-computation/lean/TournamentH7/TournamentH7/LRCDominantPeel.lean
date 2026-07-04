@@ -19,6 +19,7 @@
 -/
 import Mathlib
 import TournamentH7.LonelyRunner
+import TournamentH7.LRC13Citation
 
 namespace LonelyRunner
 namespace LRC14
@@ -104,8 +105,55 @@ theorem dominant_lonely (V : Fin 13 → ℤ) (i : Fin 13) (B : ℤ) (tstar : ℝ
     rw [h14]
     linarith [hbi, hstep, hprod]
 
+/-- **hdom CLOSED from the LRC(13) citation.**  Any positive covering family with a runner `i`
+that exceeds `13×` every other runner is `Lonely 14`.  Self-contained: the 12 other runners are
+`13`-lonely by `LRCUpTo13` (`k = 12`), and `dominant_lonely` peels `i` at the sharp threshold.
+This discharges the `hdom` obligation of `covering_lonely_of_dominant_or_compressed` — the WHOLE
+dominant branch, at the linear threshold, no quadratic blow-up. -/
+theorem hdom_closed (cite : LonelyRunner.LRCUpTo13) (V : Fin 13 → ℤ) (hV : ∀ j, 0 < V j)
+    (i : Fin 13) (hdom : ∀ j, j ≠ i → 13 * V j < V i) :
+    ∃ t : ℝ, Lonely 14 V t := by
+  obtain ⟨tstar, htstar⟩ :=
+    cite 12 (by norm_num) (fun idx => V (i.succAbove idx)) (fun idx => (hV _).ne')
+  have hbase : ∀ j, j ≠ i → ∀ m : ℤ, (1 : ℝ) / 13 ≤ |(V j : ℝ) * tstar - m| := by
+    intro j hj m
+    obtain ⟨idx, hidx⟩ := Fin.exists_succAbove_eq hj
+    simpa only [hidx] using htstar idx m
+  obtain ⟨j0, hj0mem, hj0max⟩ := Finset.exists_max_image
+    (Finset.univ.filter (fun j => j ≠ i)) V
+    (by obtain ⟨j, hj⟩ := exists_ne i;
+        exact ⟨j, Finset.mem_filter.mpr ⟨Finset.mem_univ j, hj⟩⟩)
+  have hj0ne : j0 ≠ i := (Finset.mem_filter.mp hj0mem).2
+  refine dominant_lonely V i (V j0) tstar (hV j0) hV ?_ (hdom j0 hj0ne) hbase
+  intro j hj
+  exact hj0max j (Finset.mem_filter.mpr ⟨Finset.mem_univ j, hj⟩)
+
+/-- Loneliness is invariant under negating a speed (`‖−y‖ = ‖y‖` on the circle). -/
+lemma lonely_neg_arg {c y : ℝ} (h : ∀ m : ℤ, c ≤ |y - m|) (m : ℤ) : c ≤ |(-y) - m| := by
+  have hh := h (-m)
+  rwa [show (-y) - (m : ℝ) = -(y - ((-m : ℤ) : ℝ)) by push_cast; ring, abs_neg]
+
+/-- **hdom CLOSED, `|·|`-form.**  The exact `hdom` obligation of
+`covering_lonely_of_dominant_or_compressed`: any nonzero 13-family with a runner exceeding `13×`
+every other in absolute value is `Lonely 14` (from `LRCUpTo13`, sharp linear threshold). -/
+theorem hdom_closed_abs (cite : LonelyRunner.LRCUpTo13) (V : Fin 13 → ℤ) (hV : ∀ j, V j ≠ 0)
+    (i : Fin 13) (hdom : ∀ j, j ≠ i → 13 * |V j| < |V i|) :
+    ∃ t : ℝ, Lonely 14 V t := by
+  obtain ⟨t, ht⟩ := hdom_closed cite (fun j => |V j|) (fun j => abs_pos.mpr (hV j)) i hdom
+  refine ⟨t, fun idx m => ?_⟩
+  have hc : ((|V idx| : ℤ) : ℝ) = |(V idx : ℝ)| := by rw [Int.cast_abs]
+  have h := ht idx
+  rw [hc] at h
+  rcases abs_choice (V idx : ℝ) with he | he
+  · rw [he] at h; exact h m
+  · rw [he, neg_mul] at h
+    have := lonely_neg_arg h m
+    rwa [neg_neg] at this
+
 #print axioms far_safe_point
 #print axioms dominant_lonely
+#print axioms hdom_closed
+#print axioms hdom_closed_abs
 
 end LRC14
 end LonelyRunner
