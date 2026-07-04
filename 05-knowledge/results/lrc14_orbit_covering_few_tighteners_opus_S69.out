@@ -1,0 +1,10 @@
+(1) f<=6 tighteners are USELESS: M(mU u F)=M(U)=1/(e+1) (orbit uncovered):
+   M != 1/(e+1) deviations: 0 (0 => tighteners useless for f<=6, these U)
+(2) m=2,f=2 confinement holds on Ostrowski ladder U={1..10,11k}: min_w M(2U u {w1,w2}) >= 1/12:
+   k=1 M(U)=1/12    min_w M=1/12    >=1/12? True
+   k=2 M(U)=2/23    min_w M=1/12    >=1/12? True
+   k=3 M(U)=3/34    min_w M=3/35    >=1/12? True
+   k=4 M(U)=4/45    min_w M=2/23    >=1/12? True
+   k=5 M(U)=5/56    min_w M=5/57    >=1/12? True
+   k=6 M(U)=6/67    min_w M=3/34    >=1/12? True
+DONE.
