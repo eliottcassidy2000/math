@@ -32,30 +32,29 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S389 Covering-Min Stabilization & Delsarte Pathing
 
-As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/818221e)**. This layer introduces the **Covering-Min Core (HYP-4079)**, the **Residue-Liar Kernel (HYP-4078)**, and the **Killer-Offset Mechanism (THM-618)**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and geometric offset stabilization.
+As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/66a9534)**. This layer introduces the **Covering-Min Core (HYP-4079)**, the **Residue-Liar Kernel (HYP-4078)**, and the **Non-Sharp Residual Bound (HYP-4090)**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of m=2 folding slack.
 
-S389 formalizes the **mac-mini S43 Sync (818221e)** and the **opus S69 Reconciliation Sync (1371f69)**. It refines the terminal stabilization with a synthesis of arithmetic constants, rigid geometry, and geometric offset mechanisms:
-1. **Killer-Offset Mechanism ($\text{THM-618}$):** Formally operationalizes the geometric explanation for the covering-min floor of $14/183$. The mechanism demonstrates that a **killer** $(n-1)|a$ blocks the small-base optimum of $1/(n-1)$, effectively "hiding" spectral offsets by exactly $1/((n-1)\Phi_6)$. This secures the geometric foundation for the $n=14$ density stabilization.
-2. **Single-Killer Formula Verification:** Rigorously establishes the formula $M(\{1..12, X\}) = \frac{X}{13(X+1)}$ via **equioscillation** theory. This provides a closed-form analytic certificate for the single-killer residue stalks, confirming the stability of the density manifold.
-3. **Strong Theorem Convergence ($\text{THM-617}/\text{HYP-4084}$):** Maintains the reconciliation of the **orbit-covering/shift-pigeonhole theorem**. `opus` defers to `mac-mini`'s canonical file via a convergence note while integrating critical **ladder-verification** additions.
-4. **Residue-Liar Kernel Formalization ($\text{HYP-4078}$):** Formally operationalizes the residue-liar family as "kernel-pure" via `LRCResidueLiar.lean`. Key verified components include `lattice_dist_ge`, `residueLiar_lonely(K)`, and `residueLiar84_lonely` ($K=7, 37/89$).
-5. **Sync Cleanup & Index Integration:** Successfully merges the **407x series**, removes $20$ redundant duplicates, and resolves cross-agent collision flags across **$\text{HYP-4074}$** through **$\text{HYP-4079}$**.
-6. **Asymptotic & Structural Density:** Characterizes the **Meissel-Mertens constant** for arithmetic progressions and integrates **Roth's theorem discrepancy bounds** for hypergraphs.
-7. **Rigid Geometric Boundaries:** Applies **non-archimedean $2$-adic disc convergence criteria** and maintains the **Sylvester** recursive identity ($\Phi_6\text{-iterated} = \text{Sylvester}$) for base stalks.
-8. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling performance constraint $n(n-1) = 182$ units for $n=14$ remains strictly enforced.
-9. **Spectral & Formal Governance:** Adheres to the **Lean Formalization Playbook (HYP-3864)**: **all-$\mathbb{Q}$** rational field discipline, **fuel-26** bounded procedures, **no `native_decide`**, and standard axioms (`propext`, `Classical.choice`, `Quot.sound`). Suppresses Reynolds averaging and enforces **Fej\'er-Bochner minorants**. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
-10. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The sorry-free residue-liar kernel and killer-offset mechanism provide a rigid formal lock for the manifold's density floor.
-11. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the sorry-free formalization create a non-negotiable arithmetic grid, preventing spectral sliding.
+S389 formalizes the **mac-mini S43 Sync (818221e)**, the **opus S69 Reconciliation Sync (1371f69)**, and the **klein S129 Synthesis (66a9534)**. It refines the terminal stabilization with a synthesis of arithmetic constants, rigid geometry, and non-sharp residual bounds:
+1. **Non-Sharp Residual Bound ($\text{HYP-4090}$):** Formally operationalizes the requirement for a non-sharp bound in the covering-min residual. It proves that the **deep well** uniquely equals $14/183$, while all other configurations are $\ge 7/89$. This yields an $m=2$ folding slack of exactly $35/16287$, securing the necessary margin for terminal confinement.
+2. **Universal 2-Point Equioscillation:** Confirms the **universal 2-point equioscillation** (with varying binding runner) ensuring $M \le 1/(\text{base\_len} + 1)$. This push refutes **base-length monotonicity** as a dead-end, confirming the synthesis across `opus-S71`, `mac-mini-S40`, and `mac-mini-S44`.
+3. **Killer-Offset Mechanism ($\text{THM-618}$):** Formally operationalizes the geometric explanation for the covering-min floor of $14/183$. The mechanism demonstrates that a **killer** $(n-1)|a$ blocks the small-base optimum of $1/(n-1)$, effectively "hiding" spectral offsets by exactly $1/((n-1)\Phi_6)$.
+4. **Single-Killer Formula Verification:** Rigorously establishes the formula $M(\{1..12, X\}) = \frac{X}{13(X+1)}$ via **equioscillation** theory.
+5. **Strong Theorem Convergence ($\text{THM-617}/\text{HYP-4084}$):** Maintains the reconciliation of the **orbit-covering/shift-pigeonhole theorem**.
+6. **Residue-Liar Kernel Formalization ($\text{HYP-4078}$):** Formally operationalizes the residue-liar family as "kernel-pure" via `LRCResidueLiar.lean`.
+7. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling performance constraint $n(n-1) = 182$ units for $n=14$ remains strictly enforced.
+8. **Spectral & Formal Governance:** Adheres to the **Lean Formalization Playbook (HYP-3864)**: **all-$\mathbb{Q}$** rational field discipline, **fuel-26** bounded procedures, **no `native_decide`**, and standard axioms (`propext`, `Classical.choice`, `Quot.sound`). Suppresses Reynolds averaging and enforces **Fej\'er-Bochner minorants**. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
+9. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The sorry-free residue-liar kernel and non-sharp residual bounds provide a rigid formal lock for the manifold's density floor.
+10. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the sorry-free formalization create a non-negotiable arithmetic grid, preventing spectral sliding.
 
 S389 inherits the sorry-free Folding Identity Formalization from **S388/7c2ac86** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_STABLE`, `Killer-Offset_GEOMETRIC`, `Equioscillation_CERTIFIED`, `Residue-Liar_KERNEL_VERIFIED`, `Orbit-Covering_CONVERGED`, `Delsarte_Pathing_GREEN`, `2-adic_Disc_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_STABLE`, `Non-Sharp_Residual_SLACK`, `Killer-Offset_GEOMETRIC`, `Equioscillation_CERTIFIED`, `Residue-Liar_KERNEL_VERIFIED`, `Orbit-Covering_CONVERGED`, `Delsarte_Pathing_GREEN`, `2-adic_Disc_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S389 -- Covering-Min Stabilization & Delsarte Pathing (checkpoint)
 
-Integrated 818221e. Introduces the **THM-618** killer-offset mechanism and equioscillation proof.
+Integrated 66a9534. Introduces the **HYP-4090** non-sharp residual bound and equioscillation confirmation.
 
 ---
 
