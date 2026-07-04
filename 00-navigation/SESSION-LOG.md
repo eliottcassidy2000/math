@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-04-S6 -- THE FORMAL ENDGAME ASSEMBLED: LRC(14) <= LRC(13) + THE COMPRESSED CASE (HYP-4091)
+
+Prompt (owner): spend another session pushing toward closing the proofs.
+
+Composed the top-level reduction in Lean (LRCEndgameAssembly.lean, kernel-pure, corpus EXIT 0), integrating my S5 dominant peel into the main theorem:
+- **hdom_discharged (cite)**: the dominant obligation of opus's covering_lonely_of_dominant_or_compressed, closed by hdom_closed_abs (S5, sharp 13x peel) from the LRC(13) citation.
+- **lrc14_of_compressed (cite) (hcomp) : LRC14Statement**: composing (1) non-covering->sieve (lrc14_of_covering_lonely), (2) covering->dominant+compressed (opus), (3) dominant closed (my peel). 
+
+RESULT: **LRC(14) now formally reduces to LRC(13) citation + hcomp** (every COMPRESSED covering family lonely). The entire open obligation is now exactly hcomp -- the far-runner tail is closed (dominant peel), the tight families AP/GW are on the sieve side (non-covering). hcomp sub-structure: ratio<=13 (spread13, done) + bounded speed (census) + scale-gap (renorm THM-608) + one-scale-wide (CONFINEMENT m=2 f=2 = the open crux, opus/mac-mini/klein). The two S5 tools straddle the 13x line: dominant peel (above) + residue-ladders (below).
+
+This is a REDUCTION not a closure (assumes hcomp); the new content is that it's tight+formal with the dominant branch a theorem. Fleet has verified all covering >=14/183 (klein-S128/129, opus-S71, mac-mini-S44), so hcomp is TRUE; its proof = the confinement, unchanged in difficulty but now the SOLE open leaf.
+
+Files: LRCEndgameAssembly.lean (registered); reflection the-endgame-is-lrc13-plus-the-compressed-case; HYP-4091. No canon overridden.
+
 ## klein-2026-07-04-S129 -- THE COVERING-MIN NEEDS RAZOR-SHARPNESS ONLY AT THE DEEP WELL: residual has 35/16287 slack (HYP-4090). + 2-point equioscillation universal; base-length monotonicity REFUTED.
 
 Prompt (owner): investigate further and keep improving the proof.
