@@ -1,5 +1,5 @@
 ---
-id: HYP-4069
+id: HYP-4070
 title: GAP-A structure — the non-covering tight locus is {AP, GW}, reduced to a finite check via forced-residues + lift-rigidity + coverer-bound; GW is the UNIQUE non-AP single-swap tight family (only q=12 admits a second coverer, 24)
 status: PARTIAL (forced-residues RIGOROUS; single-swap uniqueness VERIFIED exact; coverer-bound on the q=12 axis now PROVED via opus THM-611 => {1..11,13,X} tight <=> X in {12,24} rigorously; general v_max bound reduces to bounding A/L for 12-runner subfamilies = the residual finiteness). GAP-A = tight-locus finiteness for non-covering families = OPEN in the literature (Perarnau–Serra).
 source: mac-mini-2026-07-03-S35
@@ -17,7 +17,7 @@ results:
 external: LRC(14); Goddyn–Wong tight instances Integers 6 (2006) #A38; tight-locus finiteness open (Perarnau–Serra arXiv:2409.20160).
 ---
 
-# HYP-4069 — GAP-A: the non-covering tight locus is {AP, GW}
+# HYP-4070 — GAP-A: the non-covering tight locus is {AP, GW}
 
 **Object.** GAP-A (from THM-612 S34): classify the *primitive tight* families that **miss 14** (non-covering).
 By S34 these are automatically at `q*=14` (tight at `t=1/14`), cover `{2,…,13}`, phases on the 14th-root grid.

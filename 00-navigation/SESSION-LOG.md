@@ -1,3 +1,23 @@
+## mac-mini-2026-07-03-S35 -- GAP-A: the non-covering tight locus is {AP,GW}, reduced to a finite check; coverer-bound PROVED on the q=12 axis via opus THM-611 (HYP-4070)
+
+Prompt (owner): now work GAP-A: prove the non-covering tight locus is {AP,GW}.
+
+Worked GAP-A (from S34 split): classify primitive tight families that MISS 14 (=> q*=14, phases on 14th-root grid). GAP-A = tight-locus finiteness for non-covering families = open in the literature; made substantial structural progress + one rigorous sub-proof.
+
+DELIVERED (HYP-4070):
+ * FORCED RESIDUES (RIGOROUS): a non-covering tight family's residues ⊇ all odds {1,3,5,7,9,11,13} — units by ±units (HYP-2913), 7 by covering q=7 (7|v => v mod14=7 since miss 14). Odd q∈{3,5,9,11,13} (coprime to 14) force nothing; q=2 forces ≥1 even. Verified AP/GW.
+ * GW UNIQUE (verified exact): replacing AP runner k by a multiple j·k (blocks t=1/k), ONLY k=12→24 is tight; all other k∈{2..11,13} loosen => the AP/GW dichotomy = 'how to cover q=12' (12 or 24). 12 special: 24=2·12 vacates the NON-UNIT residue 12, doubles residue 10.
+ * COVERER-BOUND PROVED (via opus THM-611): far-runner decorrelation meas(lonely(R∪{w}))>=(6/7)meas(lonely R)-A/(3w) applied to a TIGHT S=R∪{w} (measure 0) => w<=7A/(18L). For R={1..11,13} (L=426/35035, A=4): X<=128; finite check 12|X<=128 => X in {12,24}. So {1..11,13,X} tight <=> X in {12,24} is RIGOROUS, GW unique on the q=12 axis PROVED.
+ * MECHANISM: deletion of runner k>=7 opens t=1/k (q-witness); coverers loosen monotonically (M=3/41,4/53,... with X binding); every residue-preserving lift loosens (odd r→r+14 all loose) => minimal lifts. REDUCTION: 7 fixed odds + 6 bounded even coverers => finite check => {AP,GW} (enumeration: exactly {AP,GW} to speed 60/80, g<=2).
+
+RESIDUAL (the finiteness): the general v_max bound (via THM-611: v_max<=7A'/(18L') for S∖{v_max}, 12 runners, loose) reduces to bounding A'/L' for 12-runner subfamilies — the LRC(14) non-covering extremal-uniqueness, open.
+
+Housekeeping: ceded HYP-4069 to klein-S121 (their registered Lean LRCEvenDescent), renamed mine to HYP-4070. (klein-S121 independently CONFIRMS my S34 reframing: 'even-part descent IS the covering-min'.)
+
+Files: HYP-4070, INDEX, gapA_structure / gapA_coverer_bound_macmini_20260703.py + outs.
+
+---
+
 ## klein-2026-07-03-S121 -- THE CONFINEMENT DESCENT'S TOWER STEP FORMALIZED IN LEAN (HYP-4069) + the honest finding: the even-part descent is NOT an independent lever (it IS the covering-min).
 
 Prompt (owner): now attack the confinement descent for the even part.
