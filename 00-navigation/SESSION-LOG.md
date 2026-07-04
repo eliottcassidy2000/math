@@ -1,3 +1,27 @@
+## klein-2026-07-04-S124 -- FIBONACCI IS THE COVERING-MIN'S FOIL, NOT ITS LEVER: the anti-golden Eisenstein sibling (HYP-4076). Creative Fibonacci search, closed honestly.
+
+Prompt (owner): work the remaining core, but also search back through Fibonacci-connected repo work for creative relations.
+
+Did both (fresh computation + repo-wide Explore survey). The remaining core (loose-U argmax barrier, M(2U∪2odd)≥1/12) is Eisenstein-Farey-three-gap arithmetic, LRC(14)-equivalent -- I confirmed (again) I can't shortcut it and did not fake it. The Fibonacci search yielded a clean, HONEST structural finding (not a lever):
+
+(A) RECURRENCE SIBLING (exact, n=4,7,14): covering-min witness powers n^k mod Phi6(n) = 1,n,n-1,-1,-n,1-n (period 6), obeying s_{k+2}=s_{k+1}-s_k = x^2-x+1 (Eisenstein, Heegner -3) -- the SIGN-FLIP of Fibonacci's s_{k+2}=s_{k+1}+s_k = x^2-x-1 (golden, sqrt5). The covering-min lives on Fibonacci's sibling metallic quadratic.
+
+(B) ANTI-GOLDEN POSITION: witness CF n/Phi6(n)=[0;n-1,n]=[0;13,14] has LARGE quotients = FASTEST convergence -- the deliberate OPPOSITE of golden/Fibonacci [0;1,1,1,...] (slowest = three-gap WORST case). The covering-min is the anti-golden rung of the Farey ladder; the Fibonacci ratios (5/8,8/13) are exactly the three-gap-worst small ratios it AVOIDS.
+
+(C) Fibonacci ratios do NOT uniquely maximize the pair-overlap kernel K(a,b) (antipode column b=n-1 peaks it; 7/13,6/13 tie 8/13).
+
+VERDICT (compute + survey of THM-486/491 Pisano, THM-224 golden, THM-387 two-gap, three-gap Stern-Brocot cap-kernel, Farey-ladder, opus metallic/eisenstein): all Fibonacci threads TANGENTIAL/analogy-level. The genuine number-type pairing is EISENSTEIN (x^2-x+1, sqrt-3) x HEPTAGON (sqrt-7 -> sqrt21), NOT Fibonacci (sqrt5). Pisano tower is structurally PARALLEL to LRC ramification (THM-491) but not load-bearing; Zeckendorf is meta-methodology. Fibonacci is the FOIL (opposite CF pole), not a lever on the argmax core.
+
+LESSON: an extremum can sit at the ANTI-GOLDEN (fastest-CF) pole -- here the covering constraint (=divisibility) forces MAXIMAL commensuration (period-6 Eisenstein), the opposite of golden's maximal incommensuration. Bring the arithmetic of the pole your extremum sits at (Eisenstein sqrt-3 + heptagon sqrt-7), not the golden sqrt5 the three-gap difficulty famously lives on.
+
+HONEST: no Fibonacci lever found; the core stays open, unchanged. Value = a clean structural articulation (recurrence sibling + anti-golden positioning) + closing the Fibonacci route so the fleet doesn't chase it.
+
+FILES: lrc14_fibonacci_eisenstein_duality_klein_S124.py(+out); INDEX HYP-4076; reflection fibonacci-is-the-covering-mins-foil-not-its-lever; this log.
+
+NEXT (core, unchanged): the loose-U argmax barrier -- Eisenstein-Farey-three-gap, opus/mac-mini active. Geometric (Kershner, S122) and Fibonacci (S124) routes both ruled out; leverage must be Eisenstein/heptagon arithmetic (the argmax non-extremity structure).
+
+---
+
 ## klein-2026-07-04-S123 -- THE FOLDING-IDENTITY ENGINE (THM-615 Lemma 1) FORMALIZED IN LEAN, sorry-free (HYP-4075). Toward the FORMAL confinement proof.
 
 Prompt (owner): keep pushing creatively toward finishing the mathematical proof.

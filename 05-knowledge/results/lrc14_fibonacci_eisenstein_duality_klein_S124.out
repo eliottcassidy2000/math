@@ -1,0 +1,47 @@
+==============================================================================
+(A) RECURRENCE SIBLING: covering-min powers n^k mod Phi6(n) obey s_{k+2}=s_{k+1}-s_k
+    (x^2-x+1 = Eisenstein), the SIGN-FLIP of Fibonacci s_{k+2}=s_{k+1}+s_k (x^2-x-1).
+==============================================================================
+  n=  4 Phi6=  13: powers(signed) [1, 4, 3, -1, -4, -3, 1]  period6=True  recurrence s_{k+2}=s_{k+1}-s_k mod Phi6: True
+  n=  7 Phi6=  43: powers(signed) [1, 7, 6, -1, -7, -6, 1]  period6=True  recurrence s_{k+2}=s_{k+1}-s_k mod Phi6: True
+  n= 14 Phi6= 183: powers(signed) [1, 14, 13, -1, -14, -13, 1]  period6=True  recurrence s_{k+2}=s_{k+1}-s_k mod Phi6: True
+  Fibonacci: 1,1,2,3,5,8,... obeys s_{k+2}=s_{k+1}+s_k. Same shape, opposite sign.
+  => the covering-min recurrence is the char.poly x^2-x+1 (roots = primitive 6th roots,
+     Eisenstein Z[w], Heegner -3); Fibonacci is x^2-x-1 (roots = golden, Z[phi], sqrt5).
+
+==============================================================================
+(B) GOLDEN / ANTI-GOLDEN on the three-gap cap kernel K(a,b), a,b<=13
+    CF-worst (all-1 quotients = Fibonacci ratios) vs the covering-min's fast CF [0;13,14].
+==============================================================================
+    a/b          CF(a/b)  len all-ones(golden)? Fibonacci pair?
+1/2               [0, 2]    1             False            True 
+2/3            [0, 1, 2]    2             False            True 
+3/5         [0, 1, 1, 2]    3             False            True 
+5/8      [0, 1, 1, 1, 2]    4             False            True 
+8/13    [0, 1, 1, 1, 1, 2]    5             False            True 
+  CF-worst (all-1 = golden) ratios among a,b<=13: []
+  longest all-1 CF: 0 at []  (consecutive Fibonaccis)
+
+  covering-min witness t* = 14/183 = 14/183 : CF = [0, 13, 14] = [0; 13, 14] (LARGE quotients => FAST convergence => ANTI-golden)
+  Its 1/M = Phi6/n = 183/14 : CF = [13, 14] = [13; 14]  (the S71 ladder [n-1; n]).
+
+==============================================================================
+(C) Does the three-gap-worst (Fibonacci ratio) MAXIMIZE the pair-overlap kernel K(a,b)?
+    K(a,b)=meas(D_a cap D_b) with danger half-width h=1/14; K=g/(7ab). Higher K = more
+    overlap = 'harder' pair. Check whether Fibonacci ratios peak g(a,b) (kink count).
+==============================================================================
+    a/b             CF    K(a,b)~   7ab*K=g
+1/13           [0, 13]    0.00000      0.00
+2/13         [0, 6, 2]    0.03846      7.00
+5/13    [0, 2, 1, 1, 2]    0.01538      7.00
+8/13    [0, 1, 1, 1, 1, 2]    0.01923     14.00
+3/11      [0, 3, 1, 2]    0.01515      3.50
+5/11         [0, 2, 5]    0.00909      3.50
+5/8     [0, 1, 1, 1, 2]    0.01250      3.50
+3/5       [0, 1, 1, 2]    0.03333      3.50
+1/2             [0, 2]    0.00000      0.00
+7/13      [0, 1, 1, 6]    0.02198     14.00
+6/13         [0, 2, 6]    0.02564     14.00
+  (8/13, 5/8 = Fibonacci/golden ratios; compare their g to non-Fibonacci at similar size.)
+
+DONE
