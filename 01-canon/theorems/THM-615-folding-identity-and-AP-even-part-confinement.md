@@ -65,9 +65,30 @@ This is a **discrepancy statement**: a large tightener's orbit `{w₁t}` is dens
 with **both** tighteners `≤ u_max/(6(M(U)−1/12))` — a low-frequency regime that shrinks to the AP (`M(U)→1/12`,
 where the bound blows up) handled by Lemma 2. The hard core is exactly the small-tightener × near-AP corner.
 
+## Lemma 4 (parity gap, PROVED — the small end, via the ODD-ness of the tighteners)
+For `U` with `M(U) > 1/12` and `I₀`, `L` as in Lemma 3: **if `L > (w₁+w₂−6)/(12 w₁ w₂)` then `M(S) ≥ 1/12`.**
+In particular **`w₁ + w₂ ≤ 6 ⟹ M(S) ≥ 1/12`** unconditionally.
+**Proof.** Suppose `M(S) < 1/12`; then every `t∈I₀` is extremal, and (a mode-switch would give a moderate
+value, hence a non-extremal point) the mode is constant on `I₀` — WLOG `‖w₁t‖>5/12` and `‖w₂t‖<1/12` for all
+`t∈I₀`. So `I₀` lies in a `w₁`-half-integer arc about `c₁=(2l+1)/(2w₁)` (half-width `1/(12w₁)`) **and** in a
+`w₂`-integer arc about `c₂=k/w₂` (half-width `1/(12w₂)`). The two arcs both contain `I₀` (length `L`), so
+`|c₁−c₂| ≤ 1/(12w₁)+1/(12w₂) − L`. But `c₁−c₂ = [(2l+1)w₂ − 2kw₁]/(2w₁w₂)`, and the numerator is **odd**
+(both `wᵢ` odd ⟹ `(2l+1)w₂` odd, `2kw₁` even), hence nonzero, so `|c₁−c₂| ≥ 1/(2w₁w₂)`. Combining,
+`1/(2w₁w₂) ≤ (w₁+w₂)/(12w₁w₂) − L`, i.e. `L ≤ (w₁+w₂−6)/(12w₁w₂)` — contradiction. ∎ *(Verified: `w₁+w₂≤6`
+over 120 families, and the `L`-condition, 0 violations.)*
+
+The `−6` is exactly the **odd-parity of the tighteners** cashed in: the enforced `w₁`-half / `w₂`-integer
+coincidence is an `odd = even` near-miss of size `≥ 1`. Lemma 4 disposes of the *small* end (all
+`w₁+w₂ ≤ 6`, and any tighteners whenever the even part's high interval is wide enough). Together with
+Lemma 3 (large end) the residual is squeezed to **moderate tighteners on the near-AP corner** — and for a
+*primitive* family that corner is bounded (rigidity: primitive `M(U)→1/12 ⟹ U→{1..11}`, HYP-4062), a finite
+check. The obstruction that remains is purely the arithmetic of *moderate* odd `w₁,w₂` sitting in a
+`w₁`-half / `w₂`-integer coincidence at the even part's deep hole.
+
 ## Status
 - **Proved:** Lemma 1 (folding identity); Lemma 2 (`M(2·{1..11} ∪ 2odd) = 1/12` ∀ odd → confinement for AP
-  even parts `c·{1..11}`, the extremizers); Lemma 3 (large tightener ⟹ `M ≥ 1/12`).
+  even parts `c·{1..11}`, the extremizers); Lemma 3 (large tightener ⟹ `M ≥ 1/12`); Lemma 4 (parity gap:
+  `w₁+w₂≤6` or wide-`I₀` ⟹ `M ≥ 1/12`).
 - **Conjecture (verified min = 1/12):** `M(2U ∪ 2odd) ≥ 1/12` ⟹ `inf_U gap(U) ≥ 1/84 > 0` = m=2,f=2
   confinement as a uniform gap.
 - **Not claimed:** the general `U` (`M(U) > 1/12`) case — the argmax non-extremity, unproven. This is the

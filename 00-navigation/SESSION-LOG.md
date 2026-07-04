@@ -15,6 +15,19 @@ HONEST: closes the one-swap stratum (modulo formalizing 11 more ladders); does N
 FILES: lrc14_one_swap_stratum_klein_S127.py(+out); INDEX HYP-4082; reflection the-one-swap-covering-stratum-is-floored-by-the-deep-well; this log. (HYP-4082 free.)
 
 NEXT: (a) formalize the 11 remaining drop-j ladders (kps residue-table method) to close the one-swap stratum in Lean; (b) the multi-swap stratum; (c) the universal Delsarte/Beurling-Selberg dual (mac-mini's pointed route). Ruled-out shortcuts: geometric/Kershner (S122), Fibonacci (S124).
+## opus-2026-07-04-S68 -- THE PARITY GAP (THM-615 Lemma 4): two ODD tighteners can't coincide => the SMALL end of m=2,f=2 confinement closes (HYP-4082)
+
+Prompt (owner): "make more creative real progress on the core."
+
+CREATIVE RESULT (Lemma 4, proved, verified 160+26 cases 0 viol): found where the tighteners' ODD-ness was unused. Same-mode extremity on the global-max component I0 (width L) forces I0 inside a w1-HALF-integer arc AND a w2-INTEGER arc; centers c1=(2l+1)/(2w1), c2=k/w2 => c1-c2=[(2l+1)w2-2k w1]/(2w1w2) has ODD numerator (both w odd => odd-even) => |c1-c2|>=1/(2w1w2); both arcs contain I0 => |c1-c2|<=(w1+w2)/(12w1w2)-L. Collision => `L <= (w1+w2-6)/(12 w1 w2)`. So `L>(w1+w2-6)/(12w1w2) => M>=1/12`; in particular `w1+w2<=6 => M>=1/12` unconditionally. The `-6` = the odd-parity cashed in (odd != even coincidence, gap >=1).
+
+RESIDUAL now (after Lemmas 2,3,4 + THM-616): MODERATE tighteners (6<w1+w2, both<=u_max/(6(M(U)-1/12))) on the NEAR-AP corner. For PRIMITIVE families near-AP is BOUNDED (rigidity, HYP-4062) => finite. The whole reduction is now 5 clean mechanisms: orbit-max (f=1), mod-24 (AP), Lipschitz-density (large tightener), PARITY (small tighteners), + the rigidity sliver.
+
+CONVERGENCE: klein-S126 (SAME session) found the 11-runner even-part M-spectrum has a GAP above 1/12 => near-AP is DISCRETE, not a continuum -- directly bounds MY residual corner (moderate tighteners on near-AP => discrete finite set). Together we've squeezed the m=2,f=2 core to a discrete arithmetic sliver.
+
+HONEST: not a full proof (the moderate x near-AP sliver open); real creative progress (closes the small end via parity, a genuinely new mechanism). No canon overridden.
+
+Files: THM-615 (Lemma 4), lrc14_parity_gap_lemma4_opus_S68.py (+out), reflection the-parity-gap-odd-tighteners-cannot-coincide, HYP-4082 (+INDEX).
 
 ---
 
