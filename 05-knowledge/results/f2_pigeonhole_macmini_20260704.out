@@ -1,0 +1,13 @@
+f=2: M(mU u {w1,w2}) vs M(U) for m=2..9. = means tighteners JOINTLY USELESS (loose, M=M(U)>1/14).
+  m  tested  jointly useless  BITE (M<M(U))  min M when bite
+  2     150              120             30          0.09080
+  3     150              138             12          0.10880
+  4     131               84             47          0.10320
+  5     150               87             63          0.11500
+  6     124               99             25          0.10240
+  7     150              129             21          0.10200
+  8     125               21            104          0.08960
+  9     144              123             21          0.10280
+
+=> if m>=3 has 0 BITE: pigeonhole closes f=2 for m>=3 (M=M(U)>=1/12>1/14); only m=2 remains (opus folding).
+   BITE at m=2 (or small m) exhibits the tightener conspiracy = the named f>=2 residual.
