@@ -56,4 +56,4 @@ the covering constraint** — the cyclotomic `n²−n+1` is the arithmetic shado
 - **The golden ratio is the wrong constant for LRC(14)** (the ladder is `[0;13,k]`, gap-ratio `14`, not `φ`),
   but the *framework* (Ostrowski, three-gap, Steinhaus) is exactly the Fibonacci framework at a different CF.
 
-See HYP-4076; `covering_min_continued_fraction_macmini_20260704.py`.
+See HYP-4078; `covering_min_continued_fraction_macmini_20260704.py`.
