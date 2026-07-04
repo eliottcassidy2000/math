@@ -1,0 +1,6 @@
+tested 5219 primitive covering families; M<14/183 (exact): 0; min approxM=0.086667 (14/183=0.076503)
+  covered by THM-617 (large-scale m>=3): 0
+  covered by THM-618 (single-killer {1..12}): 0
+  RESIDUAL (neither): 5219  (100%)
+  min-M family: [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14]
+=> the residual = the strata still needing closure (small-m non-single-killer, split-killer, other bases).

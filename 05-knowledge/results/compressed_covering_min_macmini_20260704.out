@@ -1,0 +1,11 @@
+[phase1 random] tested 7939 compressed covering families; below 14/183: 0; floor 0.148515 at [3, 10, 18, 24, 28, 51, 77, 79, 91, 92, 94, 141, 149]
+
+COMPRESSED COVERING-MIN FLOOR (empirical) = 4/49 = 0.081633  at [1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 40, 84]
+  14/183 = 0.076503;  floor - 14/183 = 46/8967 = 0.005130
+  1/13   = 0.076923  (12-runner LRC bound; 1/13-14/183 = 1/2379 = 0.000420)
+  2/25   = 0.080000  ([0;12,2]);  4/49 = 0.081633  ([0;12,4])
+  compressed families with M < 14/183 (exact): 0
+
+VERDICT: COMPRESSED floor 4/49 > 14/183 with margin 0.0051.
+  => kps's open COMPRESSED leaf (HYP-4091) is a NON-razor-thin bound: M >= (floor) > 14/183.
+     The razor-thin 14/183 lives ENTIRELY in the DISCHARGED dominant branch (deep well is dominant).
