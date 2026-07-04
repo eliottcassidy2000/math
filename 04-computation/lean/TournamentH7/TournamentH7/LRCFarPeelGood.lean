@@ -750,5 +750,95 @@ theorem goodRegion2_card {speeds : List ℤ} (hpos : ∀ s ∈ speeds, 0 < s) {h
   rw [hdlen] at hcard
   simpa using hcard
 
+/-- The doubled `toNat` sum of a nonnegative list equals twice its integer sum. -/
+theorem sum_map_two_toNat : ∀ (L : List ℤ), (∀ s ∈ L, 0 ≤ s) →
+    (((L.map fun s => 2 * s.toNat).sum : ℕ) : ℤ) = 2 * L.sum := by
+  intro L
+  induction L with
+  | nil => intro _; simp
+  | cons p L' ih =>
+      intro hpos
+      have hp : (0 : ℤ) ≤ p := hpos p List.mem_cons_self
+      have hih := ih (fun s hs => hpos s (List.mem_cons_of_mem _ hs))
+      simp only [List.map_cons, List.sum_cons, Nat.cast_add, Nat.cast_mul, Nat.cast_ofNat]
+      rw [hih, Int.toNat_of_nonneg hp]
+      ring
+
+/-- **THE EXPLICIT FAR-PEEL CLOSER**: a positive `13`-family whose far runner `v (Fin.last 12)`
+exceeds the EXPLICIT integer threshold `(1 + 2ΣB)·400·ΣB / 3` (written division-free as
+`(1 + 2ΣB)·(400·ΣB) < 3·w`, `ΣB = Σ` of the first twelve) is lonely.  Composes the far-peel
+(`far_peel_lonely`) with the quantitative floor (`base_floor_quant_of_cite`, `length ≥
+1/(400·ΣB)`) and the piece-count bound (`goodRegion2_card`, `#pieces ≤ 1 + 2·ΣB`).  The
+threshold is now a concrete function of the base — so step-5 is the finite window
+`22 < w ≤ (1+2ΣB)·400·ΣB/3`.
+
+**Aligned band blockers close here.** For `{1,…,11,13,W}` the base is fixed (`ΣB = 79`) and
+`W = lcm(2..X) → ∞`, so `W` clears `(1+158)·400·79/3 ≈ 1.67·10⁶` for all `X ≥ 17`: the
+lcm families that the bounded-denominator census can never close (unbounded witness
+denominator, HYP-4040) are closed here by the far-peel. -/
+theorem far_peel_lonely_of_cite (cite : LonelyRunner.LRCUpTo13) (v : Fin 13 → ℤ)
+    (hv : ∀ i, 0 < v i)
+    (hthr : (1 + 2 * (∑ i, Fin.init v i)) * (400 * (∑ i, Fin.init v i))
+        < 3 * v (Fin.last 12)) :
+    ∃ t : ℝ, Lonely 14 v t := by
+  have hbpos : ∀ i, 0 < Fin.init v i := fun i => hv _
+  have hVpos : 0 < ∑ i, Fin.init v i :=
+    Finset.sum_pos (fun i _ => hbpos i) ⟨0, Finset.mem_univ 0⟩
+  have hwpos : 0 < v (Fin.last 12) := hv _
+  have hLbound := base_floor_quant_of_cite cite (Fin.init v) hbpos
+  have hcard := goodRegion2_card (speeds := List.ofFn (Fin.init v))
+    (fun s hs => by obtain ⟨i, rfl⟩ := List.mem_ofFn.mp hs; exact hbpos i)
+    (by norm_num : (0 : ℚ) ≤ 1 / 14)
+  apply far_peel_lonely v hv
+  set V : ℤ := ∑ i, Fin.init v i with hVdef
+  have hVQ : (0 : ℚ) < (V : ℚ) := by exact_mod_cast hVpos
+  set c : ℚ := ((goodRegion2 (List.ofFn (Fin.init v)) (1 / 14)).length : ℚ) with hcDef
+  set L : ℚ := length (goodRegion2 (List.ofFn (Fin.init v)) (1 / 14)) with hLDef
+  set w : ℚ := ((v (Fin.last 12)).toNat : ℚ) with hwDef
+  have hwQ : (0 : ℚ) < w := by
+    rw [hwDef]; exact_mod_cast (by omega : 0 < (v (Fin.last 12)).toNat)
+  -- bridge the ℕ danger-count sum to `2V`
+  set msum : ℕ := ((List.ofFn (Fin.init v)).map (fun s => 2 * s.toNat)).sum with hmsumDef
+  have hbridge : (msum : ℤ) = 2 * V := by
+    rw [hmsumDef,
+        sum_map_two_toNat _ (fun s hs => by
+          obtain ⟨i, rfl⟩ := List.mem_ofFn.mp hs; exact (hbpos i).le),
+        List.sum_ofFn, ← hVdef]
+  -- c ≤ 1 + 2V
+  have hc : c ≤ 1 + 2 * (V : ℚ) := by
+    rw [hcDef]
+    have h2 : (msum : ℚ) = 2 * (V : ℚ) := by exact_mod_cast hbridge
+    rw [← h2]; exact_mod_cast hcard
+  -- 1 ≤ 400·V·L
+  have hLprod : (1 : ℚ) ≤ 400 * (V : ℚ) * L := by
+    have h := hLbound
+    rw [div_le_iff₀ (by positivity : (0 : ℚ) < 400 * (V : ℚ))] at h
+    linarith
+  -- threshold in ℚ, with w = v(last)
+  have hwcast : w = (v (Fin.last 12) : ℚ) := by
+    rw [hwDef]; exact_mod_cast (Int.toNat_of_nonneg hwpos.le)
+  have hthrq : (1 + 2 * (V : ℚ)) * (400 * (V : ℚ)) < 3 * w := by
+    rw [hwcast]; exact_mod_cast hthr
+  -- c·(400V) < 3w
+  have hstep1 : c * (400 * (V : ℚ)) < 3 * w := by
+    have hmul : c * (400 * (V : ℚ)) ≤ (1 + 2 * (V : ℚ)) * (400 * (V : ℚ)) :=
+      mul_le_mul_of_nonneg_right hc (by positivity)
+    linarith
+  -- c < 3·(L·w)
+  have hkey : c < 3 * (L * w) := by
+    have hprod : c * (400 * (V : ℚ)) < 3 * (L * w) * (400 * (V : ℚ)) :=
+      calc c * (400 * (V : ℚ)) < 3 * w := hstep1
+        _ = 3 * w * 1 := by ring
+        _ ≤ 3 * w * (400 * (V : ℚ) * L) :=
+            mul_le_mul_of_nonneg_left hLprod (by positivity)
+        _ = 3 * (L * w) * (400 * (V : ℚ)) := by ring
+    exact lt_of_mul_lt_mul_right hprod (by positivity)
+  -- hbig: c·(2/7) < (6/7)·(L·w)
+  show c * (4 * (1 / 14)) < (1 - 2 * (1 / 14)) * L * w
+  have he1 : c * (4 * (1 / 14)) = (2 / 7) * c := by ring
+  have he2 : (1 - 2 * (1 / 14)) * L * w = (2 / 7) * (3 * (L * w)) := by ring
+  rw [he1, he2]
+  exact mul_lt_mul_of_pos_left hkey (by norm_num)
+
 end RatIntervals
 end LonelyRunner
