@@ -1,3 +1,23 @@
+## klein-2026-07-03-S121 -- THE CONFINEMENT DESCENT'S TOWER STEP FORMALIZED IN LEAN (HYP-4069) + the honest finding: the even-part descent is NOT an independent lever (it IS the covering-min).
+
+Prompt (owner): now attack the confinement descent for the even part.
+
+FINDING (the honest headline): the even-part descent's open residual -- bound v_max(U), THM-612's remaining gap -- IS the covering-min, LRC(14)-EQUIVALENT. mac-mini-S34 already established this circularity (q*>14 tight => covers {2..13} elem + covers 14 (else shallow witness q*=14) => primitive covering with M=1/14 => forbidden by covering-min HYP-4060). So `confinement (q*=14) <=> no primitive tight covering family <=> covering-min`. The 2-adic descent peels a genuine layer per step (elementary tower step), but the termination condition it leaves ("the even part is bounded") is logically equivalent to the theorem itself -- the descent REORGANIZES the covering-min, it does not shrink it. opus-S62 has bound v_max(U) at EVIDENCE only (f=2 tightening gap grows with u_max, 0 hits). So attacking the even-part descent directly = attacking LRC(14); NOT an independent surface. I did NOT close it and did not fake it.
+
+WHAT IS NOW RIGOROUS (Lean, LRCEvenDescent.lean, sorry-free, [propext,Classical.choice,Quot.sound], registered): THM-612 Lemma B's TOWER STEP (loneliness core), built on LonelyRunner.lonely_scale --
+- lonely_subfamily: a sub-family of an n-lonely family is n-lonely (downward closed on the index).
+- even_part_descends: Lonely n (m*U) t => Lonely n U (m*t) (m!=0). The scale-descent, packaged.
+- tower_step: full family v n-lonely at t + e picks an m-divisible sub-family v(e j)=m*U_j => U n-lonely at m*t. The reduction one scale down that drives the confinement tower.
+Reduces the even part; does NOT bound it. The strictly-loose Corollary (needs a general Mreach + LRC<=13; the current Lean Mreach is Fin 13-only) and the residual (covering-min) are unformalized + open.
+
+MY COVERING-MIN LEAN ARC: HYP-4065 (S119 extremizer witness, general n) -> HYP-4068 (S120 THM-613 margin->measure bridge) -> HYP-4069 (S121 tower step). Three rigorous scaffolding pieces around the covering-min; the covering-min itself (M>=14/183, the margin/lower-bound side) is the unchanged open crux and is LRC(14)-equivalent.
+
+FILES: LRCEvenDescent.lean (+root import); HYP-4069; reflection the-even-part-descent-is-not-an-independent-lever-klein-S121; this log.
+
+NEXT (unchanged crux): the covering-min lower bound M(primitive covering) >= 14/183. All framings (confinement, even-part descent, tight-locus) are the SAME LRC(14)-equivalent statement in different coordinates. Genuinely new leverage (not a re-coordinatization) is what's needed -- opus's hexagonal/Kershner covering-optimality bridge is the standing candidate.
+
+---
+
 ## opus-2026-07-03-S62 -- BOUND v_max(U): the f=2 tightening gap GROWS with u_max => evidence the finite confinement check terminates (HYP-4068)
 
 Prompt (owner): "bound v_max(U) -- the even part itself" (mac-mini S33 Lemma D residual: m=2,f=2 confinement is a finite per-U check IF u_max is bounded).
