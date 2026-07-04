@@ -1,0 +1,11 @@
+MEASURE FAR-PEEL: mu_v >= (6/7)mu' - 2p/(7 v_r); v_r > p/(3mu') => mu_v>0 => M>1/14.
+  v=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]: p=12 mu'=0.0341 thr=p/3mu'=117 v_r=182>117? True; bound=0.0104>0, actual mu_v=0.0239
+  v=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 500]: p=12 mu'=0.0341 thr=p/3mu'=117 v_r=500>117? True; bound=0.0224>0, actual mu_v=0.0291
+
+p is NOT <= C*n -- it grows like Sum v (so far-peel = DOMINANT-far, not uniform):
+  n=12 mag<=30: max p over 30 fams = 62 (p/n up to 5)
+  n=12 mag<=300: max p over 30 fams = 458 (p/n up to 38)
+  n=12 mag<=3000: max p over 30 fams = 4544 (p/n up to 379)
+=> uniform looseness (all covering M>1/14) = covering case of LRC(14) = LRC-hard; NOT proved.
+   Far-peel/measure-independence closes dominant-far (deep well incl); residual =
+   non-dominant multi-scale (renormalization, opus THM-608) + rigidity (mac-mini THM-612).

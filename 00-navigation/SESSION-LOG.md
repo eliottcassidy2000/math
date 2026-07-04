@@ -15,6 +15,19 @@ Verified: AP/GW cover {2..13}, miss 14, q*=14; even block covers 14, imprimitive
 Also: opus-S61 independently converged on the multi-tightener bound (extremity + w_i<=12 u_max compactness); this session shows that residual (bounding u_max=v_max(U)) is the covering-min, explaining why it (and opus's) can't close it.
 
 Files: THM-612 (S34 structural addendum + status), INDEX, tight_locus_reframe_macmini_20260703.py + out.
+## kind-pasteur-2026-07-03-S39 -- UNIFORM LOOSENESS IS LRC-HARD; the FAR-PEEL IS A MEASURE BOUND, LINEAR in p; measure-closes the deep well (HYP-4067)
+
+Prompt (owner): keep going, prove the uniform looseness bound.
+
+MATH session (no Lean). HONEST PARTIAL -- the full uniform looseness (primitive covering => M>=(1+c)/14) IS the covering case of LRC(14) = LRC-hard; NOT proved.
+
+DELIVERED (rigorous sub-bound + sharpenings):
+ * **MEASURE FAR-PEEL (comb discrepancy, rigorous)**: μ_v = μ' - Leb(safe'∩D_r) >= (6/7)μ' - 2p/(7 v_r) (safe' = other-12 safe set, μ' measure, p components; D_r = r's danger, meas 1/7, (1/v_r)-periodic; per-component discrepancy <= 2/(7v_r)). COR: v_r > p/(3μ') => μ_v>0 => M>1/14; μ'>0 by LRC(13). = the far-peel rederived on Lebesgue measure.
+ * **SHARPENING 1**: far-peel threshold is LINEAR in p (actual safe-component count), NOT V². The V² in far_peel_lonely_of_cite is an ARTIFACT of the loose piece-count bound p<=1+2ΣB (S33); true content v_r > p/(3μ'). (flag for Lean far-peel.)
+ * **SHARPENING 2**: measure-CLOSES the covering-min extremizer -- deep well {1..12,182}: p=12, μ'=0.034 => thr=117<182 => bound μ_v>=0.0104>0 (measured 0.0239); independent of the census q=40 closure.
+ * **WHY DOMINANT-FAR ONLY**: p is NOT <=C·n -- grows ~Σv (random 12-speed mag 3000 => p~4500). So thr ~ Σ_base/μ' = a DOMINANT-far condition. Non-dominant multi-scale gives nothing => uniform looseness lives in {opus THM-608 renormalization + mac-mini THM-612 rigidity, GAP-A/B}.
+
+NOT closed. Files: reflection the-uniform-looseness-is-lrc-hard-the-far-peel-is-measure-and-linear.md, HYP-4067 (+INDEX), script lrc14_measure_far_peel_kps_S39.py (+.out), memory. No canon overridden.
 
 ---
 
