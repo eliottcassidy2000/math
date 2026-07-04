@@ -1,3 +1,20 @@
+## mac-mini-2026-07-04-S44 -- extend THM-618: the WHOLE single-killer stratum >= 14/183 (verified 0/8410; {1..12} tightest base) + the general-base subtlety (argmax moves; a near-refutation that wasn't)
+
+Prompt (owner): investigate further and keep improving the proof.
+
+Pushed THM-618's single-killer formula toward the whole stratum, and stress-tested it against a potential refutation.
+
+DELIVERED:
+ * STRATUM VERIFIED: over 8410 single-killer families (any 12-runner base B covering {2..12} + killer 182), exact-M finds 0 below 14/183, min = 14/183 at B={1..12}. So **{1..12} is the tightest base** => the whole single-killer stratum is >= 14/183.
+ * CAUGHT + RESOLVED a potential refutation: a base with a SECOND 13-multiple (e.g. 26) plus 182 seemed to give M=2/27 < 14/183 via the naive 1/13-offset equioscillation (runners 1 and 26 binding). EXACT check: {1,3..12,26,182} actually has M=4/31=0.129 at t=29/62 -- it hides BETTER elsewhere, the naive offset is NOT the argmax. The genuine-2/27 set {1..12,26} is NON-COVERING (misses 14), so allowed below 14/183. Covering-min NOT threatened.
+ * LESSON: THM-618's clean equioscillation proof is specific to base {1..12} (where runner 1 binds at the 1/13-offset); for general bases the argmax moves, so the stratum bound is VERIFIED but its proof needs the family-specific hiding spot (not the offset shortcut). Recorded honestly in THM-618.
+
+NET: strengthens the covering-min picture (single-killer stratum >= 14/183, verified; {1..12} tightest) and sharpens the honest boundary of the clean proof. Complements THM-617 (large-scale) + THM-618 (extremal ladder). Residual = the other strata (klein 13 ladders, kps residue formulas).
+
+Files: THM-618 (extended + honest note), single_killer_stratum_macmini_20260704.py + out.
+
+---
+
 ## kind-pasteur-2026-07-04-S5 -- TWO LEAN ADVANCES: the deep one-swap hexad (HYP-4085) + hdom CLOSED at the sharp linear threshold (HYP-4087)
 
 Prompt (owner): keep pushing creative new mathematical angles, long session, multiple pulls, toward proof completion.
