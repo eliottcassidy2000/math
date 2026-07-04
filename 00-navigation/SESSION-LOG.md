@@ -15,6 +15,21 @@ MY COVERING-MIN LEAN ARC: HYP-4065 (S119 extremizer witness, general n) -> HYP-4
 FILES: LRCEvenDescent.lean (+root import); HYP-4069; reflection the-even-part-descent-is-not-an-independent-lever-klein-S121; this log.
 
 NEXT (unchanged crux): the covering-min lower bound M(primitive covering) >= 14/183. All framings (confinement, even-part descent, tight-locus) are the SAME LRC(14)-equivalent statement in different coordinates. Genuinely new leverage (not a re-coordinatization) is what's needed -- opus's hexagonal/Kershner covering-optimality bridge is the standing candidate.
+## opus-2026-07-03-S63 -- REFUTE my own S62 gap-growth (MISTAKE-101): it was a random-sampling artifact; confinement is a UNIFORM gap, NOT a u_max bound
+
+Prompt (owner): "make the gap-growth rigorous."
+
+OUTCOME: attempting the proof, I stress-tested the premise on the COMMENSURATE families random sampling misses -- and it COLLAPSED. The gap-growth is FALSE.
+
+EXACT REFUTATION: dilated APs U=c*{1..11} give M(2c*{1..11} u {w1,w2}) = 1/12 EXACTLY => gap = 1/12-1/14 = 1/84 ≈ 0.0119 CONSTANT for c=1..5 (u_max=22c -> infinity, ALL PRIMITIVE). The tighteners are useless there (M stays at the even part's M({1..11})=1/12). So the gap does NOT grow with u_max => my S62 "u_max effectively bounded / finite check terminates" is a RANDOM-SAMPLING ARTIFACT (random 11-subsets are incommensurate w/ growing gap; the near-extremal families are dilated APs, missed by random sampling). Logged MISTAKE-101 (same failure mode as MISTAKE-095/096/098). HYP-4068 REFUTED.
+
+CORRECTED PICTURE: confinement (m=2,f=2), if it holds, is a UNIFORM POSITIVE gap inf_U gap(U) > 0 (min ~1/84, extremized by dilated APs of UNBOUNDED u_max), NOT a magnitude bound. "Bound v_max(U)" is the WRONG target -- nothing to bound; the extremizers run to infinity with gap pinned at 1/84. mac-mini's Lemma-D finite-per-U check is finite for EACH U but the near-extremal U (all dilations) are infinite => NOT globally finite via magnitude. This AGREES with mac-mini S34 ("confinement is a covering-min piece") and reduces the residual to the scale-invariant uniform gap = the tight-locus AP rigidity (HYP-4062) -- the dilated APs ARE the AP again.
+
+STANDS: the per-family reduction w_i<=12 u_max (S61/THM-614). OPEN (unchanged, reframed): confinement as a uniform gap.
+
+HONEST: this session's deliverable is a NEGATIVE result -- the requested gap-growth doesn't exist -- caught before it propagated (MISTAKE-097 discipline). Value: redirect the fleet off "bound u_max" onto the uniform gap.
+
+Files: lrc14_gap_growth_refuted_dilated_AP_opus_S63.py (+out), reflection the-gap-growth-was-a-sampling-artifact, MISTAKE-101, HYP-4068 (REFUTED).
 
 ---
 
