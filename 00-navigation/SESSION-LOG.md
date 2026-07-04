@@ -1,3 +1,24 @@
+## mac-mini-2026-07-03-S31 -- GEOMETRY OF THE OPEN CORE: THM-612 tight-locus tower (local-max transfer + confinement q*=14) + REFUTED kps HYP-4062 "no GW" (GW is tight, verified exact)
+
+Prompt (owner): work on making more mathematical progress on the geometry of the open core.
+
+Worked the tight-locus rigidity geometry (the open core: M=1/14 => {AP,GW}). Built on THM-610 Lemma 2 (tight => 14|q*).
+
+DELIVERED (THM-612, tight-locus tower -- ceded THM-611 to opus's concurrent decorrelation theorem, renamed):
+ * **Lemma A (binding pair + divisibility):** tight => pair (i,j) with v_i a≡m, v_j a≡-m mod q*=14m => q*|(v_i+v_j) AND m|v_i,m|v_j (binding pair in E={m-divisible runners}). Sharpens HYP-2909. (AP: (1,13) sum14; even block: (2,26) both even.)
+ * **Lemma B (local-max transfer, PROVED, verified exact):** near t*, f_S(t)=g_U(mt) where U=E/m -- the m-divisible sub-family carries the whole local geometry. So a/14 is a local max of g_U at height 1/14, M(U)>=1/14.
+ * **Corollary (via LRC<=13):** primitive + m>=2 => |E|=e<=12 => M(U)>=1/(e+1)>1/14 STRICTLY (U loose). So a primitive tight family with q*>14 = a strictly-loose <=12-runner U dilated by m, re-tightened to 1/14 by <=12 non-E runners.
+ * **Lemma C (shift obstruction, PROVES confinement for ONE tightener):** m=2,|F|=1 impossible -- region R={g_U(2t)>1/14} is (+1/2)-invariant, odd w has ||w(t+1/2)||=1/2-||wt|| so danger@t=>safe@t+1/2, a lone odd runner can't cover it. Verified: E=2*{1..12}+any odd w, 0 tight.
+ * **CONFINEMENT CONJECTURE (primitive tight => q*=14):** Lemma C + exact-M search (~200k q*=28 candidates: 2.6k single + 138k double primitivizations of even block + 60k random mixed-parity; + AP perturbations) = 0 primitive tight with q*>14. PAYOFF: confinement => phases on 14th-root grid => rigidity = FINITE mod-14 problem (R subset {1..13} covering ±units + g(14)<=3 => R in {AP,GW}). Skeleton: THM-610 (14|q*) -> THM-612 (q*=14) -> mod-14 shell + g(14)<=3.
+
+RECONCILIATION (court case filed): kps HYP-4062-S37 claims "tight locus = {AP} unique, NO GW". REFUTED: GW={1..11,13,24}=AP[12->24] is tight (M=1/14 EXACT, verified rational + 5e5 grid), primitive, NOT a dilated AP, 6 tight points at the units {1,3,5,9,11,13}/14, non-covering. kps's search (APs + dilates + random to mag 30) structurally excludes the one-residue-moved GW shape. The REDUCTION and 14-grid repulsion are fine (both AP,GW non-covering); only the "unique/no-GW" classification is wrong. CASE-tight-locus-has-GW-not-just-AP filed.
+
+Two isolated open gaps: full confinement (multi-tightener) + g(14)<=3 (HYP-2913). Both now sharply on the 14th-root grid.
+
+Files: THM-612 (tight-locus tower), CASE-tight-locus-has-GW-not-just-AP, INDEX (+THM-612), 3 scripts _macmini_20260703 (tight_locus_geometry, tight_q28_search) + outputs.
+
+---
+
 ## opus-2026-07-03-S59 -- DROP-7 IS NOT THE GLOBAL FLOOR-MINIMIZER: the covering floor is a PRIMITIVE statement + decorrelates per coordinate (THM-611); inf R' = the tight-locus rigidity (HYP-4063)
 
 Prompt (owner): "is drop-7 the global R'-minimizer over all covering families? finish up the proofs."
