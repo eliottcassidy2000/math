@@ -43,6 +43,19 @@ HONEST: closes the f=1 slice at every scale (real progress); f>=2 open = the rig
 Files: THM-616, lrc14_one_tightener_useless_all_m_opus_S67.py (+out), reflection one-tightener-is-useless-at-every-scale, HYP-4080 (+INDEX).
 
 ---
+## kind-pasteur-2026-07-04-S4 -- THE RESIDUE-LIAR FAMILY FORMALIZED IN LEAN, kernel-pure, no native_decide (HYP-4078). An infinite family of LRC(14) lonely certificates in closed form.
+
+Prompt (owner): work to finish up the formalization.
+
+Finished the specified Lean task (from S2/S3): the census-hard residue-liar family closed-form lonely certificate, kernel-pure. New file **LRCResidueLiar.lean** (registered in root; full corpus build EXIT 0):
+- **lattice_dist_ge** (Q kappa N qq r : ℤ) : `N = qq*Q + r → kappa ≤ r → r ≤ Q - kappa → kappa ≤ |N - m*Q|` for all m. The lattice-distance floor: a residue pinned into [kappa, Q-kappa] stays kappa-far from every multiple of Q. Proof: `le_abs` + sign-trichotomy on (qq-m), each branch `omega`/`nlinarith` (product hint `mul_le_mul_of_nonneg_right`).
+- **residueLiar (K) = ![1,2,...,11,13,12*K]** and **residueLiar_lonely (K)(hK:3<=K) : Lonely 14 (residueLiar K) ((5K+2)/(12K+5))**. Via `lonely14_of_ratio` (p=5K+2, q=12K+5): the 13 hres obligations are discharged by a reusable `key` closer + the residue table (each runner's (qq,r): hEq by `ring`, bounds `K<=r<=Q-K` by `omega`), then `14*K >= 12K+5` for K>=3. `fin_cases i <;> simp only [residueLiar]` (matrix access reduces by defeq -- `exact key <val> ...` matches; no Matrix.cons lemmas needed).
+- **residueLiar84_lonely : Lonely 14 (residueLiar 7) (37/89)** -- the first covering member {1..11,13,84}, 89=F11.
+- **Axioms: [propext, Classical.choice, Quot.sound]** -- NO native_decide, NO ofReduceBool. Cleaner than base12_far_peel (which needed native_decide). This is the kernel-pure INFINITE-family lonely certificate specified in the S2/S3 handoff.
+
+Also cleaned the INDEX 407x MERGE-TANGLE (20 byte-identical dup lines from concurrent pushes removed; my stale pre-renumber 4076 copy removed; the mac-mini-S38-Ostrowski copy that a bad merge put on MY 4078 removed). Remaining cross-agent collisions (4074/4075/4076/4079 each 2 distinct findings; mac-mini S38/S39) FLAGGED for coordinator in INDEX + letter -- did NOT reassign others' numbers.
+
+Files: LRCResidueLiar.lean (+ root import), INDEX HYP-4078 (LEAN DONE note + tangle flag). No canon overridden.
 
 ## klein-2026-07-04-S125 -- THE LARGE-TIGHTENER DISCREPANCY CORE (THM-615 Lemma 3) FORMALIZED IN LEAN, sorry-free (HYP-4079). The loose-end confinement half, machine-checked.
 
