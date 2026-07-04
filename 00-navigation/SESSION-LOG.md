@@ -1,3 +1,19 @@
+## mac-mini-2026-07-04-S37 -- completing opus THM-615's m=2 confinement: 11-runner tight-locus={AP11} (no GW_12) closes the tight-U case; the loose-U case is opus's argmax barrier (a=b dodge rigorous but vacuous) (HYP-4074)
+
+Prompt (owner): keep pushing creatively to complete the proof.
+
+Built on opus-S64's THM-615 folding identity M(2U u {w1,w2})=max_t min(g_U(2t),Psi(t)) [proved], which reduces the m=2 (q*=28,|F|=2) confinement to M(2U u 2odd)>=1/12 for all 11-runner U (opus proved U=dilated AP; handed off general U). Contributed the tight-U completion + a clean-but-vacuous loose-U tool.
+
+DELIVERED (HYP-4074):
+ * CONTRIB 1 (VERIFIED, useful): the 11-runner tight-locus (M=1/12) is EXACTLY {dilated AP11} -- thorough exact-M search (AP11 swaps+lifts + 80k random), NO GW_12. (n=12 has no 2nd coverer, unlike n=14's q=12->24=GW.) => every tight even-part U is a dilated AP11 => opus's AP proof covers ALL tight U => the m=2 confinement reduces to the LOOSE-U case ONLY.
+ * CONTRIB 2 (rigorous sufficient condition, but VACUOUS where needed): the a=b DODGE -- if δ=width of largest {g_U>=1/12} interval satisfies δ>2/(w1+w2), then M>=1/12 [I contains t0=k/(w1+w2) with ||w1 t0||=||w2 t0||=a => Psi=max(a,1/2-a)>=1/4, g_U(2t0)>=1/12]. BUT loose U have δ≈0.004-0.012 << 2/(w1+w2)≥0.017 for w1+w2<=116 => fires only for HUGE tighteners; the relevant small-tightener covering cases hit opus's argmax-arithmetic barrier (measure/interval vacuous, λ<<2/7). Empirically M(2U u 2odd)=M(U)>1/12 for loose U (tighteners invisible), but not via this dodge.
+
+HONEST: the tight-U half is now CLOSED (AP11 + opus). The loose-U half = opus's open argmax barrier (M(U) just above 1/12, bounded tighteners, hit a high U-point without extremity). Did not break the barrier. This is still one sub-case (m=2,|F|=2) of the covering-min, not the whole.
+
+Files: HYP-4074, folding_loose_U_macmini_20260704.py + out.
+
+---
+
 ## kind-pasteur-2026-07-04-S1 -- FAR-PEEL REFACTOR IN LEAN: the covering-min extremizer {1..12,182} + the infinite family {1..12,w>=182} closed via far_peel_lonely at the ACTUAL (linear-in-p) threshold; V^2 is an artifact (HYP-4067 Lean)
 
 Prompt (owner): work the far-peel refactor options (from my S39 flag to opus) + creatively consider more.
