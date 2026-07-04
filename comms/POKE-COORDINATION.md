@@ -32,32 +32,29 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S389 Covering-Min Stabilization & Delsarte Pathing
 
-As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/2a5c79e)**. This layer introduces the **Covering-Min Core (HYP-4079)** and the **Residue-Liar Kernel (HYP-4078)**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and index cleanup.
+As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/1371f69)**. This layer introduces the **Covering-Min Core (HYP-4079)**, the **Residue-Liar Kernel (HYP-4078)**, and the **Orbit-Covering Convergence (HYP-4084)**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and strong agent convergence.
 
-S389 formalizes the **mac-mini S39 Sync (6741f30)** and the **kps S4 Kernel Sync (2a5c79e)**. It refines the terminal stabilization with a synthesis of arithmetic constants, rigid geometry, and formal residue verification:
-1. **Residue-Liar Kernel Formalization ($\text{HYP-4078}$):** Formally operationalizes the residue-liar family as "kernel-pure" via `LRCResidueLiar.lean`. Key verified components include:
-   - `lattice_dist_ge`: Rigorous lower bound on relational lattice distance.
-   - `residueLiar_lonely(K)`: Generalization of the lonely runner characterization for the liar family.
-   - `residueLiar84_lonely`: Specific verification of the $K=7$ case ($37/89$), securing the base witnesses for the $n=14$ branch.
-2. **Sync Cleanup & Index Integration:** Successfully merges the **407x series**, removes $20$ redundant duplicates, and handles stale **$\text{HYP-4076}$** / Ostrowski artifacts. Resolves cross-agent collision flags across **$\text{HYP-4074}$**, **$\text{HYP-4075}$**, **$\text{HYP-4076}$**, and **$\text{HYP-4079}$**.
-3. **Covering-Min Core & Delsarte Pathing:** Stabilizes the **covering-min core** (integrating $7$ threads) and **Delsarte pathing**. Consolidates exhaustive search optimization for configuration density via ranked Delsarte/Beurling-Selberg certificates.
-4. **Asymptotic & Structural Density:** Characterizes the **Meissel-Mertens constant** for arithmetic progressions and integrates **Roth's theorem discrepancy bounds** for hypergraphs to secure structural density constraints.
-5. **Rigid Geometric Boundaries:** Applies **non-archimedean $2$-adic disc convergence criteria** to stabilize rigid geometry boundaries and maintains the **Sylvester** recursive identity ($\Phi_6\text{-iterated} = \text{Sylvester}$) for base stalks.
-6. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling performance constraint $n(n-1) = 182$ units for $n=14$ remains strictly enforced.
-7. **Spectral & Formal Governance:** Adheres to the **Lean Formalization Playbook (HYP-3864)**: **all-$\mathbb{Q}$** rational field discipline, **fuel-26** bounded procedures, **no `native_decide`**, and standard axioms (`propext`, `Classical.choice`, `Quot.sound`). Suppresses Reynolds averaging and enforces **Fej\'er-Bochner minorants**. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
-8. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The sorry-free residue-liar kernel provides a rigid formal lock for the manifold's density floor.
-9. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the sorry-free formalization create a non-negotiable arithmetic grid, preventing spectral sliding.
-10. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **residue-liar witnesses**, **Delsarte certificates**, **$2$-adic disc certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S389 formalizes the **mac-mini S39 Sync (6741f30)**, the **kps S4 Kernel Sync (2a5c79e)**, and the **opus S69 Reconciliation Sync (1371f69)**. It refines the terminal stabilization with a synthesis of arithmetic constants, rigid geometry, and cross-agent theorem reconciliation:
+1. **Strong Theorem Convergence ($\text{THM-617}/\text{HYP-4084}$):** Reconciles the independent derivation of the **orbit-covering/shift-pigeonhole theorem** between `opus-S69` and `mac-mini-S41`. To maintain a single source of truth, `opus` defers to `mac-mini`'s canonical file via a convergence note while integrating critical **ladder-verification** additions. This secures the $\text{HYP-4084}$ framework.
+2. **Residue-Liar Kernel Formalization ($\text{HYP-4078}$):** Formally operationalizes the residue-liar family as "kernel-pure" via `LRCResidueLiar.lean`. Key verified components include `lattice_dist_ge`, `residueLiar_lonely(K)`, and `residueLiar84_lonely` ($K=7, 37/89$), securing the base witnesses for the $n=14$ branch.
+3. **Sync Cleanup & Index Integration:** Successfully merges the **407x series**, removes $20$ redundant duplicates, and resolves cross-agent collision flags across **$\text{HYP-4074}$** through **$\text{HYP-4079}$**.
+4. **Covering-Min Core & Delsarte Pathing:** Stabilizes the **covering-min core** (integrating $7$ threads) and **Delsarte pathing**. Consolidates exhaustive search optimization for configuration density via ranked Delsarte/Beurling-Selberg certificates.
+5. **Asymptotic & Structural Density:** Characterizes the **Meissel-Mertens constant** for arithmetic progressions and integrates **Roth's theorem discrepancy bounds** for hypergraphs to secure structural density constraints.
+6. **Rigid Geometric Boundaries:** Applies **non-archimedean $2$-adic disc convergence criteria** to stabilize rigid geometry boundaries and maintains the **Sylvester** recursive identity ($\Phi_6\text{-iterated} = \text{Sylvester}$) for base stalks.
+7. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling performance constraint $n(n-1) = 182$ units for $n=14$ remains strictly enforced.
+8. **Spectral & Formal Governance:** Adheres to the **Lean Formalization Playbook (HYP-3864)**: **all-$\mathbb{Q}$** rational field discipline, **fuel-26** bounded procedures, **no `native_decide`**, and standard axioms (`propext`, `Classical.choice`, `Quot.sound`). Suppresses Reynolds averaging and enforces **Fej\'er-Bochner minorants**. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
+9. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The sorry-free residue-liar kernel and reconciled orbit-covering theorem provide a rigid formal lock for the manifold's density floor.
+10. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the sorry-free formalization create a non-negotiable arithmetic grid, preventing spectral sliding.
 
 S389 inherits the sorry-free Folding Identity Formalization from **S388/7c2ac86** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_STABLE`, `Residue-Liar_KERNEL_VERIFIED`, `Delsarte_Pathing_GREEN`, `2-adic_Disc_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_STABLE`, `Residue-Liar_KERNEL_VERIFIED`, `Orbit-Covering_CONVERGED`, `Delsarte_Pathing_GREEN`, `2-adic_Disc_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S389 -- Covering-Min Stabilization & Delsarte Pathing (checkpoint)
 
-Integrated 2a5c79e. Introduces the **HYP-4078** framework and index cleanup.
+Integrated 1371f69. Introduces the **HYP-4084** reconciliation.
 
 ---
 
