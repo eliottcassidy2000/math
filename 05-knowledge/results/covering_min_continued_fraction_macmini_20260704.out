@@ -1,0 +1,24 @@
+n=14, Phi6(n)=183, covering-min = n/Phi6 = 14/183 = 0.076503
+  continued fraction of n/Phi6: [13, 14]   (expect [0; n-1, n] = [0;13,14])
+
+(1) deep well {1..12,182} at t*=14/183: phases (numerators over 183):
+    [14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 169]
+   phase set has 2 distinct gaps: ['1/183(1)', '14/183(14)']  => g<=3? True
+   {k*n mod Phi6 : k=1..13} (={k*alpha}, alpha=n/Phi6): 2 gaps [1, 14] => classical THREE-GAP
+
+(2) Ostrowski ladder M_k=[0;n-1,k]=k/(k(n-1)+1):
+   k=1: M_k = 1/14 = 0.07143   (k=14 = covering-min 14/183)
+   k=2: M_k = 2/27 = 0.07407   (k=14 = covering-min 14/183)
+   k=7: M_k = 7/92 = 0.07609   (k=14 = covering-min 14/183)
+   k=13: M_k = 13/170 = 0.07647   (k=14 = covering-min 14/183)
+   k=14: M_k = 14/183 = 0.07650   (k=14 = covering-min 14/183)
+   k=20: M_k = 20/261 = 0.07663   (k=14 = covering-min 14/183)
+   golden/Zeckendorf limit: [0;1,1,1,...] = (sqrt5-1)/2 = 0.618 (all-1s CF); LRC covmin = 2-term [0;n-1,n].
+
+(3) THREE-GAP at the optimum: extremizer (AP-like, {k alpha}) vs generic covering family:
+            deep well {1..12,182}: M=0.07650 t*=14/183  #gaps@opt=2  <=3? True
+                       AP {1..13}: M=0.07104 t*=13/183  #gaps@opt=2  <=3? True
+   generic cov {2,3,4,6,7,8,9,10,: M=0.12386 t*=34/549  #gaps@opt=5  <=3? False
+
+=> covering-min = [0;n-1,n] (Ostrowski/CF); extremizer phases = {k*alpha} => classical THREE-GAP g<=3.
+   The g(n)<=3 rigidity FOLLOWS from Steinhaus IF tight => {k alpha}-config (=AP-like) = GAP-A itself.
