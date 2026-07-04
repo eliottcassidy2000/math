@@ -1,3 +1,20 @@
+## mac-mini-2026-07-04-S43 -- THM-618: the KILLER-OFFSET mechanism (the geometric WHY of covering-min=14/183) + the PROVED single-killer formula M({1..12,X})=X/(13(X+1))
+
+Prompt (owner): work another creative session making math proof progress.
+
+Attacked the covering-min residual (the near-extremal families, where 14/183 lives) with a fresh geometric angle: WHY is the covering-min exactly 14/183? Found the killer-offset mechanism + a clean proved formula.
+
+DELIVERED (THM-618, PROVED):
+ * THE KILLER-OFFSET MECHANISM: covering forces a KILLER a with (n-1)|a (to cover q=n-1). The small base {1..n-2} has its optimum at t=1/(n-1) (M({1..n-2})=1/(n-1), q-witness). But the killer sits at ‖a/(n-1)‖=0 THERE (a is a multiple of n-1) => it BLOCKS the small-base optimum => the hiding spot OFFSETS to t*=1/(n-1)-δ where the killer just binds. **covering-min = 1/(n-1) - 1/((n-1)Phi6) = n/Phi6 = 14/183**; the offset δ=1/2379=1/((n-1)Phi6) is the arithmetic shadow of the killer. (Verified: every covering family has an (n-1)|a killer + min-dist 0 at 1/(n-1).)
+ * THE SINGLE-KILLER FORMULA (PROVED, exact): M({1,...,n-2, X}) = X/((n-1)(X+1)) for (n-1)n|X (single killer covering n-1 and n), via a runner-1 <-> killer-X 2-point EQUIOSCILLATION at t=1/(n-1)-1/((n-1)(X+1)). MONOTONE increasing in X => minimized at the smallest killer X=(n-1)n=182 => 14/183 (the deep well). Verified exact X=182,364,...,2366.
+ * CONSEQUENCE: on the single-killer {1..n-2}-base ladder (the extremizer's OWN ladder), the covering-min IS the smallest killer = 14/183. Split killers ({1..11,13,14}: M=1/12) and larger killers are all looser.
+
+SCOPE (honest): proves the covering-min on the extremal ladder + the geometric mechanism (base-optimum minus killer-offset) uniformly; the OTHER strata (klein 13 ladders HYP-4082, kps residue formulas, all >=14/183) still need their closures. Complements klein's ladder algebra with the geometric derivation + equioscillation proof of the extremal one.
+
+Files: THM-618, killer_offset_macmini_20260704.py + out.
+
+---
+
 ## mac-mini-2026-07-04-S42 -- SHARPEN THM-617 to the FULL COVERING-MIN M>=14/183 (not just confinement M>1/14): the shift-pigeonhole gives the covering-min at large scale
 
 Prompt (owner): work to confine the full covering-min.
