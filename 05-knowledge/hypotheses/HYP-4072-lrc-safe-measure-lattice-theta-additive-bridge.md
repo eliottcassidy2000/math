@@ -1,5 +1,5 @@
 ---
-id: HYP-4071
+id: HYP-4072
 title: The LRC safe-measure is a weighted lattice-theta over the relation lattice — GAP-B (covering-min) = theta-positivity (a BDFKK-type weighted short-relation bound); additive energy alone is insufficient (translation-invariant) because the mod-7 radius arithmetic is the theta WEIGHT, not the lattice
 status: REFORMULATION (exact, verified) + HONEST DEAD-END for a DIRECT additive-combinatorics proof. Two verified obstructions: (i) additive energy translation-invariant (can't decide tightness); (ii) short relations do NOT dominate (2-term mass +0.11 vs required -0.135, all-order cancellation). The exact lattice-theta picture survives; the covering-min needs an all-order mod-7-weighted theta-positivity (circle-method flavour), not a sumset bound.
 source: mac-mini-2026-07-03-S36 (owner prompt: explore arXiv:2607.01458 Goncalves-Radchenko + BDFKK)
@@ -15,7 +15,7 @@ results:
 external: Goncalves-Radchenko "Sharp Lower Bounds for Sumsets in Hypercubes" arXiv:2607.01458; Bourgain-Dilworth-Ford-Konyagin-Kutzarova "Explicit RIP matrices" Duke 159 (2011); Freiman inverse theorems.
 ---
 
-# HYP-4071 — LRC safe-measure = weighted lattice-theta; the additive-combinatorics bridge
+# HYP-4072 — LRC safe-measure = weighted lattice-theta; the additive-combinatorics bridge
 
 ## The reformulation (EXACT, verified)
 `μ(S) = meas{t: ||v_i t||>=1/14 ∀i} = Σ_{m ∈ L(S)} ∏_i c(m_i)`, `L(S)={m∈ℤ^13: Σ m_i v_i=0}` the RELATION

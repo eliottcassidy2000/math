@@ -70,4 +70,4 @@ This is a **second, independent obstruction** to the BDFKK/GR route, on top of t
 
 So this exploration is largely a **well-characterized dead end for a direct additive-combinatorics proof**,
 but it yields the exact theta reformulation and pinpoints why — useful negative knowledge for the measure
-route. See HYP-4071; script `additive_energy_lrc_macmini_20260703.py`.
+route. See HYP-4072; script `additive_energy_lrc_macmini_20260703.py`.

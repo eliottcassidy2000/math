@@ -1,3 +1,22 @@
+## mac-mini-2026-07-03-S36 -- LRC safe-measure = weighted LATTICE-THETA over the relation lattice; the BDFKK/Goncalves-Radchenko additive-combinatorics bridge is a well-characterized DEAD END (two verified obstructions) (HYP-4072)
+
+Prompt (owner): work creatively on the math to finish this up; explore arXiv:2607.01458 (Goncalves-Radchenko, Sharp Lower Bounds for Sumsets in Hypercubes) + Bourgain-Dilworth-Ford-Konyagin-Kutzarova.
+
+Explored the additive-combinatorics connection. Result: an exact + clean reformulation, and an HONEST characterization of why the pure-sumset route can't close the covering-min. (Note: opus-S63 collapsed everything to GAP-A/covering-min = the hard core, so this targets the right object.)
+
+DELIVERED (HYP-4072 + reflection):
+ * EXACT REFORMULATION: mu(S)=meas{t:||v_i t||>=1/14 ∀i} = Σ_{m∈L(S)} ∏ c(m_i), L(S)={m∈ℤ^13: Σ m_i v_i=0} the RELATION LATTICE, c(0)=6/7, c(m)=-sin(πm/7)/(πm) (=0 iff 7|m). A weighted LATTICE THETA (Fourier dual of opus HYP-4058). GAP-A (tight⟺μ=0) = exact theta-cancellation (inverse/rigidity theorem, Freiman-flavoured cf GR extremizers=APs); GAP-B (covering⟹μ>0) = theta positivity.
+ * TWO VERIFIED OBSTRUCTIONS to the BDFKK/GR route: (i) additive energy E(S)=#{a+b=c+d} is TRANSLATION-INVARIANT but μ is not -- {1..13}(tight) & {2..14}(loose) have identical E=1469 => no pure additive functional decides tightness; the mod-7 radius arithmetic (14=2·7, apex-7 weight c(m)=0⇔7|m) is the theta WEIGHT not the lattice. (ii) short relations do NOT dominate -- 2-term mass +0.11 vs required correction -0.135 => all-order cancellation; even a weighted additive-energy bound is insufficient.
+ * VERDICT: pure additive combinatorics (GR/BDFKK as-is) does NOT finish the covering-min; needs an all-order, mod-7-weighted theta-positivity (circle-method/singular-series flavour = where klein THM-515 L_C=singular-series & opus THM-611 decorrelation already live). Well-characterized dead-end; exact theta picture + failure diagnosis survive as useful negative knowledge.
+
+CONVERGENCE: klein-S122 independently ruled out ANOTHER 'nice structure' route (Kershner/hexagonal = analogy not reduction, metric mismatch). Both klein & I found geometric/additive shortcuts to the covering-min fail => the bound stays LRC-equivalent (circle-method territory).
+
+Housekeeping: ceded HYP-4071 to klein-S122 (committed first), renamed mine to HYP-4072.
+
+Files: HYP-4072, reflection lrc-safe-measure-is-a-lattice-theta, additive_energy_lrc_macmini_20260703.py + out.
+
+---
+
 ## klein-2026-07-03-S122 -- THE KERSHNER/HEXAGONAL BRIDGE IS AN ANALOGY, NOT A REDUCTION (HYP-4071): closes it as a proof route (metric mismatch) + a clean covering-min decomposition.
 
 Prompt (owner): try opus's hexagonal/Kershner covering-optimality bridge.
