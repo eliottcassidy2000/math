@@ -221,6 +221,21 @@ HONEST STATUS: LRC(14) NOT closed (open research). spread13 closes the all-compa
 
 FILES: LRCSpread13.lean (spread13_lonely + lonely14_of_ratio, registered); 2 numerical probes + outs; HYP-3984 INDEX; reflection; this entry. No canon overridden.
 
+## mac-mini-2026-07-03-S28 -- THE CAPACITY ARGUMENT: the creative reason the log-census kernel closes, reduced to ONE circle-method lemma (HYP-4054). Blocking a modulus costs a bounded quantum of the speeds' information => O(log M) blockable => witness q*=O(log M).
+
+Prompt (owner): pursue the genuine open kernel; creative mathematical reason, not formalization.
+
+THE CREATIVE REASON (HYP-4054, the capacity argument). Why does a lonely witness appear by q*=O(log M) despite the union bound failing (13/7>1)?
+ * CHARACTER SUM: N(q) = #lonely numerators at a/q = q(6/7)^13 + q*E(q), E(q)=sum_{m!=0, q|sum m_i v_i} prod shat(m_i), shat(m)=-sin(pi m/7)/(pi m). Main term = the INDEPENDENT count.
+ * f_q = fraction of 13-tuples mod q that are NO-WITNESS. LEMMA (i) [EASY, unconditional]: E[N(q)/q] over random tuples = prod(1-1/7) = (6/7)^13 = 0.135 (distinct v_i => independent danger events); Markov => P(witness)>=0.135 => f_q <= 0.865 < 1 => log(1/f_q) >= 0.145 =: c. (empirically f_q<=0.14, c~2.)
+ * CAPACITY CORE: blocking prime p (no-witness) needs the speed-vector in a density-f_p config; distinct primes CRT-INDEPENDENT => blocking p_1..p_r needs density prod f_p => smallest blocking 13-tuple ~ e^{(1/13)sum log(1/f_p)}; a family with max|v|<=M exists only if sum log(1/f_p) <= 13 log M. Since log(1/f_p)>=c, AT MOST O(log M) primes blockable => witness prime q*=O(log M loglog M) = HYP-4040's q~3.6 ln M (3.6 ~ 13/c = mean blocking cost). The speeds' MAGNITUDE bounds their INFORMATION; each blocked modulus spends a quantum.
+
+REDUCED TO ONE LEMMA. The whole compressed crux now rests on the isolated circle-method lemma (A): 'if q divides no small combination sum m_i v_i (|m|<=K, bounded terms), a lonely witness exists at a/q.' VERIFIED necessary (no-witness => small resonance q|(m_i v_i+m_j v_j)) for 57/57 generic families + exactly on the lcm-blockers (counts 37,68,74,82 at N=10^4..10^12). Then (B) [ELEMENTARY]: small combos <= KM have O(log M) prime divisors => no-witness primes = O(log M). (A) is the LRC/singular-series frontier (the tail convergence) but now cleanly isolated.
+
+CONNECTION: the 13/7>1 union wall (kps star-safe budget (48-6c)/49, klein measure floor 2r=1/7/speed, opus tower) IS f_q -- the surviving safe fraction; capacity says the adversary suppresses it only O(log M) times. WHY f_q<1 physically: no-witness => runners pairwise COMMENSURATE mod q (danger arcs lock & tile); commensurabilities are divisors of small speed-combos, of which 13 speeds<=M have O(log M).
+
+FILES: HYP-4054 (+INDEX); resonance_kernel + capacity_fp (py+out); broadcast to fleet. No canon overridden; a creative REDUCTION of the crux to lemma (A), not a full proof.
+
 ## mac-mini-2026-07-03-S27 -- worked the owner's "small-q census for the compressed chain band blocker"; found (and corrected in-session) that the chain does NOT have a uniform small-q census -- the crux is scale-INDEPENDENT (CRT-capacity blocking, q~log M). MISTAKE-098.
 
 Prompt (owner): keep going on the log-census witness-overlap kernel; consider small-q census for the compressed chain band blocker.
