@@ -29,6 +29,20 @@ GAP 1 (full confinement primitive tight => q*=14) -- multi-tightener REDUCED:
 NET: both gaps advanced. Skeleton unchanged (THM-610 14|q* -> THM-612 confinement q*=14 -> mod-14 shell + g<=2). Both gaps stay LRC-hard in full generality (tight-locus finiteness); this session sharpens and mechanizes them.
 
 Files: THM-612 addendum + Lemma C refinement + status, INDEX, 1 new script tight_locus_enumerate_macmini_20260703.py + output.
+## kind-pasteur-2026-07-03-S38 -- THE REMAINING IMPLICATION IS LRC-HARD, BUT THE HARD FAMILY IS EMPTY: runner-removal measure identity + dominant-far = measure-independence + three-route frontier map; CONCEDE GW to mac-mini THM-612 (HYP-4064, MISTAKE-100)
+
+Prompt (owner): work the one remaining implication (M=1/14 => dilated AP).
+
+MATH session (no Lean). SYNTHESIS, not a proof -- the implication is LRC(14)-hard (equality case bundled with the bound).
+
+DELIVERED:
+ * **RUNNER-REMOVAL IDENTITY**: μ_v = μ_{v\r} - Leb(D_r ∩ safe_{v\r}); each danger meas 1/7 => crude μ_v>=μ_{v\r}-1/7 FAILS (deep well: max_r μ_{v\r}=0.103<1/7 yet μ_v=0.024>0; danger sets POSITIVELY correlated => Leb(D_r∩safe)<<1/7 = opus's R).
+ * **DOMINANT-FAR = MEASURE-INDEPENDENCE (clean reduction)**: remove the LARGE runner => its fine comb equidistributes => μ_v ≈ (6/7)μ_{v\r} > 0 (verified deep well: μ_v=0.0239, (6/7)μ({1..12})=0.0292, err 0.005; μ_{v\r}>0 by LRC(13)). = the far-peel in MEASURE form, SHARPER (threshold ~ piece-count not V²).
+ * **FRONTIER MAP -- hard family EMPTY**: large all-comparable families are LOOSE (minimize M over [N,kN], N<=2000, k=2,3 => min M≈0.25-0.33 = 3.5-4.7x radius, nowhere near 1/14). + tight => small-speed => NO large all-comparable tight family => every covering family in 3 closed routes {small tight=census}+{dominant-far=measure-indep}+{large compressed=loose}, NO gap. Residual rigor = 2 computational bounds: census-completeness + uniform looseness (HYP-2566).
+
+**CONCESSION (mac-mini S31 THM-612 REFUTED my S37 HYP-4062 "no GW")**: GW={1..11,13,24}=AP[12->24] IS tight (M=1/14 exact, primitive, non-AP, non-covering). My S37 search structurally excluded the one-residue-moved shape = MISTAKE-100 (search-artifact/weak-adversary trap). The S37 reduction + 14-grid repulsion STAND (both AP,GW non-covering, small-speed => frontier map unaffected); only my uniqueness claim was wrong. Corrected HYP-4062, reflection; logged MISTAKE-100; mac-mini's court case granted.
+
+NOT closed (implication LRC-hard). Files: reflection the-implication-is-lrc-hard-but-the-frontier-is-empty.md, HYP-4064 (+INDEX), MISTAKE-100, scripts lrc14_removal_measure/_compressed_frontier_kps_S38.py, memory.
 
 ---
 

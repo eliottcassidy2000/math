@@ -1,0 +1,11 @@
+1/7 = 0.14286 (each runner's danger measure). Need mu_{v} > 1/7 for SOME r.
+
+             deep well [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+    mu_v(13)=0.02389  max_r mu_(12)=0.10308 (remove 7)  >1/7? False  M=0.07650
+            structured [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 168]
+    mu_v(13)=0.00876  max_r mu_(12)=0.08755 (remove 7)  >1/7? False  M=0.08092
+  FAIL random: [2, 5, 9, 11, 13, 16, 23, 25, 28, 29, 30, 32, 36] max mu_12=0.12914 <= 1/7
+  FAIL random: [4, 7, 11, 13, 14, 18, 20, 23, 24, 31, 32, 38, 39] max mu_12=0.12466 <= 1/7
+
+tested 7 primitive covering families (5 random). max_r mu_(12) > 1/7 for ALL? False
+  min over families of (max_r mu_12) = 0.08755  vs 1/7=0.14286
