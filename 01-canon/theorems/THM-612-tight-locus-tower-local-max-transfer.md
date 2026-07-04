@@ -1,7 +1,7 @@
 ---
 id: THM-612
 title: The tight-locus tower — local-max transfer + binding-pair divisibility. At a tight point of a family with hiding denominator q*=14m, the m-divisible sub-family E=m·U carries the whole local geometry (f_S = g_U(m·) near t*), the binding pair is divisible by m, and (via LRC≤13) U is STRICTLY loose for a primitive S — so a primitive tight family with q*>14 would be a loose U tightened by ≤12 non-E runners. Search (~200k q*=28 candidates, 0 hits) supports the CONFINEMENT primitive-tight ⟹ q*=14, reducing the rigidity to a finite mod-14 residue problem.
-status: PROVED (Lemmas A,B,C + the LRC≤13 corollary — elementary; verified exactly). Lemma C proves the confinement for one tightener (m=2, |F|=1). CONJECTURE: the FULL confinement primitive-tight ⟹ q*=14 (Lemma C + search ~200k q*=28 candidates + AP perturbations, 0 primitive tight with q*>14; the multi-tightener case is not proved).
+status: PROVED (Lemmas A,B,C + the LRC≤13 corollary — elementary; verified exactly). Lemma C proves the confinement for one tightener (m=2, |F|=1); the m=2,|F|=2 case is reduced to an anti-correlation obstruction (S32, tighteners must be exactly anti-correlated on R — realized 0/~200k). CONJECTURE: the FULL confinement primitive-tight ⟹ q*=14 (Lemma C + search, 0 primitive tight with q*>14). Separately (S32): thorough enumeration => tight locus = {AP, GW} to speed 60, g≤2 (sharper than HYP-2913 g≤3), via the deletion-hiding mechanism.
 source: mac-mini-2026-07-03-S31
 depends_on:
   - THM-610   # Lemma 2: tight ⟹ 14|q* (so q*=14m); this theorem is the fine structure of that
@@ -66,8 +66,18 @@ up to points: for a.e. `t∈R`, `||wt||<1/14`. But `w` is **odd**, so `||w(t+1/2
 
 The same shift `t↦t+1/m` kills a lone tightener for any `m` with `||{w/m}||>1/7` (all `m=2`; and
 `m≤7` unless `w≡±1 (mod m)`) — the obstruction is that one off-grid runner cannot cover a
-`(1/m)`-periodic region it is forced to shift off. Two or more tighteners can in principle split the
-`σ`-pairs, which is why the general confinement remains a conjecture (below).
+`(1/m)`-periodic region it is forced to shift off.
+
+**The `m=2`, `|F|=2` refinement (S32) — tighteners must ANTI-CORRELATE.** With `σ(t)=t+1/2` and `R`
+`σ`-invariant, set `A_i = D_{w_i}∩R`. Each `A_i∩(A_i+1/2)=∅` (odd `w_i`), and covering `A_1∪A_2=R`
+forces, for every `σ`-pair `{t,t+1/2}⊆R`, that the two points are covered by *different* runners. Hence
+`A_2 = A_1+1/2` (a disjoint partition `R=A_1⊔(A_1+1/2)`), i.e. on `R`
+`{||w_2 t||<1/14} = (D_{w_1}+1/2)∩R = {||w_1 t|| > 6/14}∩R`. So the two odd tighteners must be *exactly
+anti-correlated on `R`*: `w_2` is in danger precisely where `w_1` is near-antipodal (`>6/14`). This is an
+extremely rigid coupling (plus `meas(R)=2·meas(A_1)≤2/7`); the exact-`M` search realizes it **never** (0
+of ~200k `q*=28` candidates). Three+ tighteners generalize the `σ`-pair splitting but the coupling only
+tightens; the general confinement remains a conjecture (below), now with the multi-tightener case reduced
+to this anti-correlation obstruction rather than left fully open.
 
 ## Confinement conjecture (Lemma C + search): *primitive tight ⟹ `q*=14`.*
 The tightener picture above is never realized: **no primitive tight family has `q*>14`.**
