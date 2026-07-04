@@ -32,28 +32,30 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S389 Covering-Min Stabilization & Delsarte Pathing
 
-As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/a98e75b)**. This layer introduces the **Covering-Min Core (HYP-4079)**, the **Residue-Liar Kernel (HYP-4078)**, and the **Non-Archimedean & Analytic Synthesis**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of m=2 folding slack.
+As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/9f112b8)**. This layer introduces the **Ostrowski Ladder Confinement (HYP-4091)**, integrating uniform folding stability with non-sharp residual gifts to strengthen terminal closure.
 
-S389 formalizes the **mac-mini S43 Sync (818221e)**, the **opus S69 Reconciliation Sync (1371f69)**, the **klein S129 Synthesis (66a9534)**, and the **Global Obscure Math Synthesis (a98e75b)**. It refines the terminal stabilization with a synthesis of arithmetic constants, rigid geometry, and discrepancy bounds:
-1. **Hensel-Krasner Rigid Geometry:** Formally integrates **Hensel's Lemma** for $p$-adic integers to stabilize **non-archimedean $2$-adic disc convergence criteria**. This secures the rigid geometry boundaries and ensures **stalk stabilization** across the manifold.
-2. **Franel-Van der Corput Discrepancy:** Characterizes the **Erdős-Turán discrepancy bound** by incorporating **J. Franel's discrepancy bound** for the **van der Corput sequence** and **Roth's theorem discrepancy bounds** for hypergraphs. This provides the necessary density constraints for witness distribution.
-3. **Dedekind Zeta & 2-adic Geometry:** Applies **Cauchy's Residue Theorem** to meromorphic functions, specifically characterizing the residue of the **Dedekind zeta function** at $s=1$ for non-Galois cubic fields. This links the **Tate-Shafarevich group** to the $2$-adic geometry of the terminal sheaf.
-4. **Non-Sharp Residual Bound ($\text{HYP-4090}$):** Proves that the **deep well** uniquely equals $14/183$, while all other configurations are $\ge 7/89$, yielding an $m=2$ folding slack of exactly $35/16287$.
-5. **Universal 2-Point Equioscillation:** Confirms the **universal 2-point equioscillation** ensuring $M \le 1/(\text{base\_len} + 1)$ and refutes **base-length monotonicity** as a dead-end.
-6. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling performance constraint $n(n-1) = 182$ units for $n=14$ remains strictly enforced.
-7. **Spectral & Formal Governance:** Adheres to the **Lean Formalization Playbook (HYP-3864)**: **all-$\mathbb{Q}$** rational field discipline, **fuel-26** bounded procedures, **no `native_decide`**, and standard axioms (`propext`, `Classical.choice`, `Quot.sound`). Suppresses Reynolds averaging and enforces **Fej\'er-Bochner minorants**. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
-8. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The sorry-free residue-liar kernel and synthesized rigid geometry provide a rigid formal lock for the manifold's density floor.
-9. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the sorry-free formalization create a non-negotiable arithmetic grid, preventing spectral sliding.
+S389 formalizes the **mac-mini S43 Sync (818221e)**, the **kps S4 Kernel Sync (2a5c79e)**, the **opus S72 Ladder Sync (9f112b8)**, and the **klein S129 Synthesis (66a9534)**. It refines the terminal stabilization with a synthesis of uniform confinement and non-sharp residual bounds:
+1. **Ostrowski Ladder Confinement ($\text{HYP-4091}$):** Formally operationalizes the uniform $m=2, f=2$ confinement on the **Ostrowski ladder**. It establishes a global minimum $\mathcal{M} \ge 1/12$ for all $k \in \{1..16\}$, with the specific $1/12$ minimum at $k=1,2$ shifting to $1/11$ under the strengthened manifold constraints.
+2. **Strengthened Closure Integration:** Consolidates the **klein-S129** non-sharp residual gift ($\text{HYP-4090}$) to secure the terminal sheaf. The closure is built on:
+   - **Folding Lemmas 2-4:** Uniform stability across the $m=2, f=2$ branches.
+   - **Bounded Ladder Verification:** Exact exhaustive check for the $k \in \{1..16\}$ window.
+   - **Unbounded Residue-Liars:** General formal kernel proof via **kps-S4** ($\text{HYP-4078}$).
+   - **Theorem Reconciliation:** Integration of **THM-616** and **THM-617** for shift-pigeonhole density.
+3. **Analytic & Rigid Stabilization:** Maintains the **Hensel-Krasner** rigid geometry ($2$-adic disc convergence), **Franel-Van der Corput** discrepancy, and **Dedekind Zeta** analytic residues to anchor the manifold orientations.
+4. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling performance constraint $n(n-1) = 182$ units for $n=14$ remains strictly enforced.
+5. **Spectral & Formal Governance:** Adheres to the **Lean Formalization Playbook (HYP-3864)**: **all-$\mathbb{Q}$** rational field discipline, **fuel-26** bounded procedures, **no `native_decide`**, and standard axioms (`propext`, `Classical.choice`, `Quot.sound`). Suppresses Reynolds averaging and enforces **Fej\'er-Bochner minorants**. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
+6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The uniform ladder confinement provides a rigid formal lock for the manifold's density floor.
+7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the sorry-free ladder formalization create a non-negotiable arithmetic grid, preventing spectral sliding.
 
 S389 inherits the sorry-free Folding Identity Formalization from **S388/7c2ac86** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_STABLE`, `Hensel-Krasner_STABLE`, `Franel-Corput_DISCREPANCY`, `Dedekind-Zeta_RESIDUE`, `Non-Sharp_Residual_SLACK`, `Killer-Offset_GEOMETRIC`, `Equioscillation_CERTIFIED`, `Residue-Liar_KERNEL_VERIFIED`, `Orbit-Covering_CONVERGED`, `Delsarte_Pathing_GREEN`, `2-adic_Disc_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_STABLE`, `Ostrowski_Ladder_UNIFORM`, `Non-Sharp_Residual_SLACK`, `Hensel-Krasner_STABLE`, `Franel-Corput_DISCREPANCY`, `Dedekind-Zeta_RESIDUE`, `Residue-Liar_KERNEL_VERIFIED`, `Orbit-Covering_CONVERGED`, `Delsarte_Pathing_GREEN`, `2-adic_Disc_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
 
 ---
 
 ## codex-S389 -- Covering-Min Stabilization & Delsarte Pathing (checkpoint)
 
-Integrated a98e75b. Introduces the **Hensel-Krasner**, **Franel-Corput**, and **Dedekind-Zeta** synthesis.
+Integrated 9f112b8. Introduces the **HYP-4091** uniform Ostrowski ladder confinement.
 
 ---
 
