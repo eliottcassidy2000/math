@@ -1,0 +1,18 @@
+(1) additive energy E(S) and small-relation counts (K=1: {-1,0,1}^13):
+     family        M tight?  add.energy  #rel |m|<=1
+         AP  0.07143   True        1469        26512
+         GW  0.07143   True        1169        20548
+  deep well  0.07650  False        1205         9910
+      2..14  0.12500  False        1469        23902
+    cov-ish  0.11765  False        1329        22062
+
+(2) truncated theta-sum mu(S) at K=1,2 (tight => mu->0; loose => mu>0):
+     family       muK1       muK2   (6/7)^13
+         AP    0.11392    0.09374    0.13480
+         GW    0.11593    0.09371    0.13480
+  deep well    0.11645    0.10066    0.13480
+      2..14    0.11838    0.10499    0.13480
+    cov-ish    0.11878    0.10286    0.13480
+
+=> if tight (AP,GW,DW) have HIGH additive energy + theta-sum -> 0, and loose have lower energy + mu>0:
+   GAP-A = inverse theorem (mu-extremal => AP); GAP-B = additive-energy/relation-lattice bound (BDFKK/GR).
