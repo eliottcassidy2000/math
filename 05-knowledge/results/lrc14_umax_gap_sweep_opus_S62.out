@@ -1,0 +1,12 @@
+MIN f=2 tightening gap over random 11-runner even parts U', by u_max band (G=8009 float)
+  gap=0 => tight q*=28 family exists; gap>0 with margin => robustly infeasible at that u_max
+    u_max band  #sampled    MIN gap  median gap
+         11-13        18    0.01173     0.02528
+         14-18        18    0.03283     0.04519
+         19-25        18    0.03495     0.05992
+         26-34        18    0.03383     0.07054
+         35-48        18    0.06055     0.08065
+READING: MIN gap rising (or bounded away from 0) with u_max => no tight q*=28 at large u_max =>
+  u_max effectively bounded; the near-feasible threats sit at SMALL u_max (AP-like, near the
+  imprimitive even block). So bounding u_max ~ ruling out small AP-like even parts = the rigidity.
+DONE.

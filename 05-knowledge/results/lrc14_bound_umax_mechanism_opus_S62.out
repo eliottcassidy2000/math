@@ -1,0 +1,23 @@
+========================================================================================================
+ f=2 tightening gap = min_{odd w1,w2} (M(2U u {w1,w2}) - 1/14).  gap=0 <=> tight q*=28 exists.
+========================================================================================================
+  even part U (E=2U)                        u_max  gap=min(M-1/14)       argmin (w1,w2,M)
+  AP-like {1..11}                              11         0.011905 (1, 7, 0.08333333333333333)
+  AP-like {1..13}\{6,12}                       13         0.025346 (1, 5, 0.0967741935483871)
+  AP-like {2..12}                              12         0.033835 (1, 15, 0.10526315789473684)
+  generic {1,2,3,5,7,8,9,10,11,12,13}          13         0.023810 (7, 11, 0.09523809523809523)
+  generic mid {3,4,5,7,8,9,10,11,13,15,17}     17         0.048571          (1, 19, 0.12)
+  larger umax {1,2,3,4,5,7,9,11,13,17,23}      23         0.053571         (5, 23, 0.125)
+  larger umax {1,2,4,5,8,10,13,16,19,22,25}     25         0.105042 (1, 3, 0.17647058823529413)
+
+========================================================================================================
+ READING
+========================================================================================================
+  AP-like gaps: [0.0119, 0.0253, 0.0338]
+  generic/larger-umax gaps: [0.0238, 0.0486, 0.0536, 0.105]
+  * gap=0 for none => 0 tight q*=28 (confirms confinement on this slice).
+  * If AP-like U have the SMALLEST gaps (closest to feasible) => bounding u_max = the tight-locus
+    AP rigidity (the near-feasible threats ARE the dilated APs, which are imprimitive) => NOT a
+    cleaner target than the rigidity. If generic large-umax U have comparably small gaps => u_max
+    genuinely needs bounding (a distinct, possibly cleaner, target).
+DONE.
