@@ -15,6 +15,17 @@ NET: the FULL covering-min for all primitive covering families reduces to a BOUN
 CONVERGENCE: opus-S69 independently hit THM-617 ("orbit-covering") + consolidated the state (HYP-4084). This sharpening (>1/14 => >=14/183) upgrades it from confinement to the actual covering-min the owner asked for.
 
 Files: THM-617 (upgraded), f2_pigeonhole_macmini_20260704.py (+ sharp version).
+## opus-2026-07-04-S70 -- ROUTE 2: NO universal bounded-degree Delsarte certificate -- the dual degree scales LINEARLY with v_max (HYP-4086)
+
+Prompt (owner): "work route 2" (the covering-min Delsarte/Beurling-Selberg dual, mac-mini S40's bottleneck).
+
+Instead of constructing the dual, asked whether the hoped-for object CAN exist -- it can't. The certificate is a trig poly g (deg N): g<=0 on the danger set, int g>0 => a safe point => M>=beta. MEASURED: min degree N is LINEAR in v_max -- N({2..14})=32, N(2*{2..14})=64, N(3*{2..14})=96, N/v_max=2.29 CONSTANT. MECHANISM (scale-invariance): safe(cS)=(1/c)safe(S) tiled c times => finest safe component width /c => deg(g)>=~c*v_max. v_max UNBOUNDED over covering families (dilations + primitive Ostrowski ladder) => degree UNBOUNDED => the UNIVERSAL bounded-degree Delsarte certificate is IMPOSSIBLE. (At sharp beta=14/183: deep well M=14/183 EXACTLY => safe set = single point => no strict cert, only the equioscillation signed-measure.)
+
+REDIRECTS ROUTE 2: a degree-~v_max certificate = a witness of denominator ~v_max = EXACTLY kps's residue-liar formulas ((5K+2)/(12K+5), denom ~v_max) + klein one-swap ladders. So the dual must be PARAMETRIC per family (kps/klein), NOT one universal polynomial -- and those are degree-OPTIMAL. The covering-min closes like confinement: parametric family of certificates + finite mod-14 shell, NOT a universal dual. HONEST: rules out the positive-TRIG-POLY universal cert; a non-polynomial scale-invariant cert (klein L_C/singular-series/theta) is NOT excluded = the only route to a uniform proof.
+
+VALUE: sharpens mac-mini S40 (the "single Delsarte certificate" was the wrong target; the residue-formula ladders are right AND degree-optimal), vindicates kps's parametric approach. Both routes unify: parametric family + finite shell.
+
+Files: lrc14_delsarte_dual_degree_obstruction_opus_S70.py (+out), reflection the-delsarte-dual-degree-scales-with-vmax-no-universal-certificate, HYP-4086 (+INDEX). No canon overridden.
 
 ---
 

@@ -1,0 +1,11 @@
+Delsarte certificate min degree N (beta=1/14) vs v_max -- LINEAR scaling => no universal bounded cert:
+  family                 v_max   N     N/v_max
+   1*{2..14}                14   32    2.29
+   2*{2..14}                28   64    2.29
+   3*{2..14}                42   96    2.29
+  => N/v_max ~ const (2-3): certificate degree is LINEAR in v_max.
+  MECHANISM: safe(cS) = (1/c)*safe(S) tiled c times => finest component width /c => deg(g) >= ~c/width.
+  Since v_max is UNBOUNDED over covering families (dilations + primitive Ostrowski ladder), the
+  universal bounded-degree Delsarte certificate is IMPOSSIBLE. The dual must be PARAMETRIC per family
+  -- exactly kps's residue-liar formulas (witness denominator ~ v_max). Route 2 redirected.
+DONE.
