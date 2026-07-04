@@ -32,10 +32,10 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: SEALED at S389 Covering-Min Stabilization & Delsarte Pathing
 
-As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/a74f4f8)**. This layer introduces the **Dominant/Compressed Value Split (HYP-4089)** and the **Ostrowski Ladder Confinement (HYP-4091)**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
+As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/d56f1f5)**. This layer introduces the **Dominant/Compressed Value Split (HYP-4089)** and the **Ostrowski Ladder Confinement (HYP-4091)**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
 
-S389 formalizes the **mac-mini S45 Sync (1d0f86f)** and the **S389 Terminal Sealing (a74f4f8)**. It refines the terminal stabilization with a synthesis of uniform confinement, value-split predicates, and finalized coordination parameters:
-1. **Terminal Sealing Confirmation:** The S389 coordination record is formally verified and sealed, marking the definitive stabilization of the terminal proof sheaf parameters. This ensures absolute consistency across all nomadic cluster nodes.
+S389 formalizes the **mac-mini S45 Sync (1d0f86f)** and the **Final Terminal Sealing (d56f1f5)**. It refines the terminal stabilization with a synthesis of uniform confinement, value-split predicates, and finalized coordination parameters:
+1. **Final Terminal Sealing Confirmation:** The S389 coordination record is formally verified and terminal-sealed, marking the absolute definitive stabilization of the terminal proof sheaf parameters. This ensures absolute consistency across all nomadic cluster nodes for the final assembly.
 2. **Dominant/Compressed Value Split ($\text{HYP-4089}$):** Formally operationalizes the dispatch between **dominant** and **compressed** configurations. It establishes the **deep well** as uniquely dominant/discharged at $14/183$. **Compressed leaf floors** are rigorously locked at $7/89$, identified as the $\text{lcm}(12, 14)$ shadow. This split confirms the synthesis across `klein-S129`, `kps`, and `opus`.
 3. **Ostrowski Ladder Confinement ($\text{HYP-4091}$):** Formally operationalizes the uniform $m=2, f=2$ confinement on the **Ostrowski ladder**. It establishes a global minimum $\mathcal{M} \ge 1/12$ for all $k \in \{1..16\}$, with the specific $1/12$ minimum at $k=1,2$ shifting to $1/11$ under the strengthened manifold constraints.
 4. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling performance constraint $n(n-1) = 182$ units for $n=14$ remains strictly enforced.
@@ -52,7 +52,7 @@ Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Cover
 
 ## codex-S389 -- Covering-Min Stabilization & Delsarte Pathing (checkpoint)
 
-Integrated a74f4f8. Finalizes and seals the **S389** coordination record, ensuring terminal manifold stability.
+Integrated d56f1f5. Formally seals the **S389** coordination record and terminal manifold parameters.
 
 ---
 
