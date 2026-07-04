@@ -1,3 +1,21 @@
+## mac-mini-2026-07-03-S30 -- THE COVERING DEEP-HIDING DICHOTOMY (THM-610): covering => hides at q*>=n+1 (elementary), tight => n|q*, tight-covering => q*>=2n; rigorizes kps's 14th-root step + margin map (uniform looseness ~7-11%)
+
+Prompt (owner): now work the tight small-speed families and the covering-min core.
+
+Worked the covering-min core. Startup detour (MISTAKE-099): re-derived the Φ6 construction {1..n-2,(n-1)n} (M=n/Φ6 exactly, apex≡-1 mod Φ6, g=2) before recalling I FILED CASE-convergent-not-covering-min (S47, opus CONFIRMED) refuting it. Recovered in ~15 min via canon read; the session then delivered real structure.
+
+DELIVERED:
+ * **THM-610 (deep-hiding dichotomy, PROVED):** Lemma 1 covering => q*>=n+1 (elementary: q-divisible runner sits at 0 for every t=a/q, q<=n => all shallow spots dead => hiding is deep; DUAL of THM-523 q-witness, elementary shadow of THM-566). Lemma 2 tight(M=1/n) => n|q* (min residue-dist q*/n is an integer). Cor: tight covering => q*>=2n (=28 for n=14). Verified: 0/213 covering families violate q*>=15 (min q* seen = 15); AP q*=14, even block q*=28.
+ * **Lemma 2 RIGORIZES kps HYP-4060's "tight config on the 14th-roots / principal branch"**: every tight family (any branch) has 14|q* => runners on a (q*/14)-dilated 14th-root config. q*=14 = AP (principal), q*=28 = even block. So "tight => 14th-root config" is a theorem, not a branch choice.
+ * **Margin map (uniform looseness, evidence for HYP-2566):** annealing (numpy approxM + exact-M finalists, reproduces winners 2/13,2/15) => primitive covering-min ratio M/(1/n) in [1.06,1.11] across n=7..14 -- bounded away from 1. NEW n=11 counterexample 3/31 < 11/111 (extends court table to n=11). Search unreliable at large n (misses 4/33 at n=9) => n=14 non-beating of 14/183 is uninformative.
+ * **Court case update + concur GRANT:** cleared the n<=6 "competitors" as M_view grid artifacts (exact+1e5-grid: true M=0.333>n/Φ6, T_n NOT beaten there); added n=11 counterexample; the construction is not the covering-min for n>=7 (exact at n=7,8,9,11).
+
+Placement: THM-610 is the DENOMINATOR-STRUCTURE axis, complementing kps HYP-4060 (value/measure) + opus HYP-4061 (CV floor). The LRC-relevant fact = the bounded margin (looseness); the open core stays tight-locus finiteness/rigidity (HYP-2561/HYP-4060) + uniform c>0 (HYP-2566). Lemma 1 is Lean-able (elementary).
+
+Files: THM-610, MISTAKE-099, INDEX (+THM-610), CASE update, memory covering-min-landscape, 5 scripts _macmini_20260703.py (covering_min_{phi6,verify,tight_locus,anneal}, deep_hiding_lemma) + outputs.
+
+---
+
 ## kind-pasteur-2026-07-03-S36 -- THE MEASURE ROUTE: primitive covering-min = 14/183 (deep well UNIQUE extremizer) + the gcd REFINEMENT + tight-locus mechanism => crux reframed as a rigidity classification (HYP-4060)
 
 Prompt (owner): work the measure route toward closing the tight crux.
