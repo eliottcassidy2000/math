@@ -1,7 +1,7 @@
 ---
 id: THM-612
 title: The tight-locus tower — local-max transfer + binding-pair divisibility. At a tight point of a family with hiding denominator q*=14m, the m-divisible sub-family E=m·U carries the whole local geometry (f_S = g_U(m·) near t*), the binding pair is divisible by m, and (via LRC≤13) U is STRICTLY loose for a primitive S — so a primitive tight family with q*>14 would be a loose U tightened by ≤12 non-E runners. Search (~200k q*=28 candidates, 0 hits) supports the CONFINEMENT primitive-tight ⟹ q*=14, reducing the rigidity to a finite mod-14 residue problem.
-status: PROVED (Lemmas A,B,C,D + the LRC≤13 corollary — elementary; verified exactly). Lemma C proves the confinement for one tightener (m=2, |F|=1); Lemma D (S33) reduces m=2,|F|=2 to a FINITE per-U check (switch-point divisibility w_i|w_j: either w1=w2 contradiction, or both tighteners bounded by even-part data 4N/(7 meas R_U)) — search realizes 0 tight q*=28 over small U with tighteners to 799. CONJECTURE: FULL confinement primitive-tight ⟹ q*=14 (residual gap now = bounding v_max(U), the even part, not the tighteners). Separately (S32): enumeration => tight locus = {AP, GW} to speed 60, g≤2 (sharper than HYP-2913 g≤3), via the deletion-hiding mechanism.
+status: PROVED (Lemmas A,B,C,D + the LRC≤13 corollary — elementary; verified exactly). Lemma C proves the confinement for one tightener (m=2, |F|=1); Lemma D (S33) reduces m=2,|F|=2 to a FINITE per-U check (switch-point divisibility w_i|w_j: either w1=w2 contradiction, or both tighteners bounded by even-part data 4N/(7 meas R_U)) — search realizes 0 tight q*=28 over small U with tighteners to 799. CONJECTURE: FULL confinement primitive-tight ⟹ q*=14 (residual gap now = bounding v_max(U), the even part, not the tighteners). S34 STRUCTURAL: confinement (q*=14) <=> 'no primitive tight COVERING family' = a covering-min PIECE (not an independent gap; q*>14 tight => covers 14 => primitive covering M=1/14, forbidden by HYP-4060). Honest open structure = GAP-A (non-covering tight={AP,GW}? three-gap) + GAP-B (covering-min); Lemmas C,D = elementary partial progress on GAP-B. Separately (S32): tight locus={AP,GW} to speed 60, g≤2, deletion-hiding mechanism.
 source: mac-mini-2026-07-03-S31
 depends_on:
   - THM-610   # Lemma 2: tight ⟹ 14|q* (so q*=14m); this theorem is the fine structure of that
@@ -124,6 +124,35 @@ grid** `{k/14}`, so it is a multiset of residues `R⊆{1,…,13}` (13 runners). 
 So the geometric skeleton of the open core is: **THM-610 (14|q*) → THM-612 confinement (q*=14) →
 finite mod-14 shell + three-gap `g(14)≤3`**. The two remaining gaps are the confinement (this note's
 conjecture) and `g(14)≤3` (HYP-2913) — both now sharply isolated on the 14th-root grid.
+
+## Structural clarification (S34) — the confinement IS a covering-min piece, not an independent gap
+Two elementary facts pin down where `q*>14` tight families can live:
+- **(covers `{2,…,13}`)** A primitive tight `S` (`M=1/14`) has a multiple of every `q∈{2,…,13}`:
+  else, missing `q`, at `t=1/q` all `||v_i/q||≥1/q≥1/13>1/14`, so `M≥1/q>1/14` (THM-523 q-witness).
+- **(miss-14 ⟹ `q*=14`)** If `S` also *misses* 14 (no multiple of 14), then at `t=1/14` all
+  `||v_i/14||≥1/14`, so `t=1/14` is a maximizer: **`q*=14`** (fully elementary).
+
+Contrapositive: **a primitive tight family with `q*>14` must COVER 14** — hence covers `{2,…,14}`,
+i.e. it is a *primitive covering* family with `M=1/14`. But the covering-min (`M≥14/183>1/14` for
+primitive covering, HYP-4060/kps) forbids exactly this. Therefore
+
+> **confinement (`primitive tight ⟹ q*=14`) ⟺ "no primitive tight COVERING family" — a piece of the
+> covering-min itself, NOT an independent gap.** (The imprimitive even block covers 14 with `M=1/14`;
+> `gcd=2` is the loophole, and WLOG-`gcd=1`/HYP-4043 closes it.)
+
+Consequently the honest open structure is **two** gaps, not "confinement + three-gap":
+- **GAP-A (non-covering rigidity / the true three-gap):** classify the primitive tight families that
+  *miss 14* (automatically `q*=14`, phases on the 14th-root grid, cover `±units`) — is it `{AP, GW}`?
+  A finite mod-14 problem (`g≤2` empirically, S32).
+- **GAP-B (the covering-min):** `primitive covering ⟹ M>1/14`. The main hard core (LRC's covering case).
+
+**Lemmas C, D are elementary partial progress on GAP-B**, not on a separate "confinement": they rule
+out (or finitely bound) primitive tight families at `q*=28` — i.e. primitive *covering-tight* families
+with a runner `≡0 (mod 14)` — WITHOUT invoking the covering-min. So the "bound `v_max(U)`" residual is
+literally the covering-min for `M=1/14` covering families, and cannot be closed independently of GAP-B.
+This corrects the earlier "confinement + three-gap" framing (the confinement half was circular with the
+covering-min it feeds). Verified: `tight_locus_reframe` — AP/GW cover `{2..13}`, miss 14, `q*=14`; even
+block covers 14, imprimitive, `q*=28`.
 
 ## Addendum (S32) — the tight locus is {AP, GW} with `g≤2`, and the deletion-hiding mechanism
 Thorough exact-`M` enumeration (`tight_locus_enumerate_macmini_20260703.py`): over all single- and

@@ -1,0 +1,8 @@
+     family        M  prim cov{2..13}  has 14|v  tight@1/14     q*
+         AP  0.07143  True       True     False        True   [14]
+         GW  0.07143  True       True     False        True   [14]
+ even block  0.07143 False       True      True       False   [28]
+
+=> primitive tight => covers {2..13}; miss-14 => q*=14 (elementary); q*>14 => covers 14 =>
+   primitive covering with M=1/14 => forbidden by covering-min. Confinement <=> covering-min piece.
+   GAP-A (non-covering tight = {AP,GW}? three-gap) + GAP-B (covering-min) are the two real gaps.
