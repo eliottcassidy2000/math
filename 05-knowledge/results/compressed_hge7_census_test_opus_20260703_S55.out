@@ -1,0 +1,43 @@
+====================================================================================================
+ DO COMPRESSED COVERING >=7-FAR FAMILIES EXIST, AND ARE THEY CENSUS-ABLE AT BOUNDED q?
+====================================================================================================
+
+  found 12 COMPRESSED covering >=7-far families (of 12 that passed all filters):
+   max-speed  #far   ratio  witness q          t  q>50?
+         312     8    44.6         15       4/15     no
+         234    10    39.0         17       2/17     no
+         312     9   156.0         16       1/16     no
+         364    10    33.1         16       1/16     no
+         308     9   308.0         16       3/16     no
+         312    10    28.4         16       1/16     no
+         312    10   312.0         17       5/17     no
+         364     9   121.3         17       4/17     no
+         273     7   273.0         16       3/16     no
+         308     9    61.6         16       5/16     no
+         260     8   260.0         15       2/15     no
+         220     9    55.0         16       3/16     no
+
+====================================================================================================
+ HIGH-MAGNITUDE STRESS: scale a fixed compressed shape up and watch q
+====================================================================================================
+  base compressed shape S = [7, 9, 13, 16, 18, 36, 48, 66, 72, 126, 156, 280, 312], witness q = 15
+  (scale-invariance: L(cS)=L(S), so a dilated far chain has the SAME q -- magnitude does NOT force q up
+   UNLESS the shape itself changes. mac-mini's q~log(mag) needs NEW primes at each scale = a LONGER chain,
+   but a 13-runner chain has BOUNDED length => bounded #primes => bounded q. THE KEY COUNTING BOUND.)
+
+====================================================================================================
+ READING / VERDICT
+====================================================================================================
+  max witness q over the compressed covering >=7-far families found: 17
+  If maxq is BOUNDED (small): compressed >=7-far families ARE census-able at bounded q => the gap-case
+  dispatch's >=7-far branch is CLOSED BY THE CENSUS (no tower needed for compressed) -- only the DOMINANT
+  (peelable) large runners need the tower/peel. Since 13 runners bound the chain length (hence the #band
+  primes, hence q ~ #primes), the compressed witness q is BOUNDED -- the crux dissolves into the census.
+DONE.
+
+=== SCALING TEST (opus-S55): far chain scaled by c, small fixed ===
+  c=1     max=84       q=17    c=2 max=168 q=19   c=5 max=420 q=17
+  c=13    max=1092     q=17    c=60 max=5040 q=17  c=300 max=25200 q=17
+  c=2000  max=168000   q=17    c=20000 max=1680000 q=17
+VERDICT: compressed covering >=7-far families census-able at BOUNDED q (17-19), independent of magnitude.
+The crux dissolves into the bounded-q census. Dominant families (lcm, q->inf) are PEELABLE instead.

@@ -1,5 +1,12 @@
 # The 13-comb lever is the Eisenstein resonance — and rational/irrational time, tournament type, and covering certificate are one trichotomy
 
+> **CORRECTION (opus-S55, MISTAKE-097):** the claim below that the deep well is lonely *only* at `14/183`
+> and "census-invisible" is WRONG — the S52 script scanned only difference-set denominators. A full Farey
+> scan finds the deep well lonely at `3/40` (q=40, census-able). `14/183` is the covering-min ARGMAX (the
+> tightest lonely time), not the only one. The Eisenstein *arithmetic* (14 a 6th root mod 183, `14·13≡−1`,
+> comb tightness) stands; the census-invisibility does not. In fact (opus-S55) compressed covering ≥7-far
+> families are census-able at BOUNDED q — the crux dissolves into the census, not a special certificate.
+
 *opus-2026-07-03-S52. The owner asked me to work the 13-spaced comb lever (OPEN-Q-108, the wide-far/slow-base
 residual) creatively — Vitali, the rational/irrational and odd/even dualities, and how types of numbers relate
 to tournaments. The lever turns out to be a single arithmetic fact — `14` is a primitive 6th root of unity

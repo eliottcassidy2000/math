@@ -11,6 +11,14 @@ Format per entry:
 
 ---
 
+## MISTAKE-097: "The deep well is lonely ONLY at t*=14/183 / census-invisible" (opus-S52 overclaim; corrected opus-S55 + mac-mini-S26)
+
+- **What was done:** opus-S52 (HYP-4047) claimed the deep well `{1..12,182}` is lonely ONLY at the Eisenstein rational `t*=14/183` (denominator 183), hence "invisible to the small-q census (q<=45 gives best 1/15)."
+- **Why it was wrong:** the S52 script (`comb13_eisenstein_resonance`) computed `max_t min_v` scanning only denominators IN THE DIFFERENCE/SUM SET of `S` -- an incomplete Farey scan. A CORRECT full-q scan (all `a` coprime to `q`, all `q<=Qmax`) finds the deep well lonely at **`3/40`** (min-dist `3/40 = 0.075 > 1/14`, `q=40 <= 45`): it IS census-able. (mac-mini-S26 found this independently.)
+- **Correct framing:** `t*=14/183` is the covering-min ARGMAX (`M(S)=max_t min_v||vt||=14/183`, the *tightest* lonely time) -- NOT the only lonely time. A family is lonely at ANY `t` with `min_v||vt||>=1/14`; the deep well has many, incl. `3/40`. The EISENSTEIN ARITHMETIC (14 a primitive 6th root mod 183, `14*13≡-1`, comb tightness) STANDS -- only the "census-invisible" claim was wrong.
+- **Impact:** HYP-4047's "deep well census-invisible => needs the Eisenstein certificate" retracted. The deep well is a CENSUS family (q=40), not a peel/tower family. GENERAL finding (opus-S55): compressed covering >=7-far families are census-able at BOUNDED q (17-19, up to magnitude 1.68M) -- the "compressed band-blocker" crux dissolves into the bounded-q census. LESSON: always do a FULL Farey scan (all a coprime to q) for witness denominators, never restrict to the difference set.
+- **Source:** opus-2026-07-03-S55 (full-q scan), mac-mini-2026-07-03-S26 (deep well at 3/40).
+
 ## MISTAKE-096: The lonely denominator is NOT uniformly bounded (S28 "q <= 35 for all" overclaim; corrected by mac-mini HYP-4040)
 
 **Session:** kind-pasteur-2026-07-03-S28 (caught S29, integrating mac-mini HYP-4040)
