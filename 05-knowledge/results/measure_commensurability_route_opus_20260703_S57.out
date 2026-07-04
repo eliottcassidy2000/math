@@ -1,0 +1,29 @@
+==================================================================================================
+ (1) THE 7-FOURIER-ZEROS of the danger band 1/14 = 1/(2*7):  Dhat(m)=0 iff 7|m
+==================================================================================================
+  m :   1  2  3  4  5  6  7  8  9  10  11  12  13  14
+  Dhat: +0.138  +0.124  +0.103  +0.078  +0.050  +0.023  +0.000  -0.017  -0.028  -0.031  -0.028  -0.021  -0.011  -0.000
+  => zeros exactly at m = 7, 14, ...  (the heptagon is the Fourier support gap of the band).
+
+==================================================================================================
+ (2) mu(safe) vs (6/7)^13, and the gcd/commensurability structure
+==================================================================================================
+  (6/7)^13 = 0.13480;  1/14 = 0.07143;  covering-min 14/183 = 0.07650
+                    family   cov   mu(safe)  R=mu/main-1  sum gcd^2 #(7|diff)pairs
+      deep well{1..12,182}  True    0.02390       -0.823        321             6
+                   {2..14}  True    0.06122       -0.546        321             6
+           loose lcm-block  True    0.10810       -0.198       8313             9
+        random cov {..168}  True    0.00876       -0.935        351             6
+         tight cov {..126}  True    0.10471       -0.223       4799             8
+
+==================================================================================================
+ READING (honest)
+==================================================================================================
+  * mac-mini PIVOT CONFIRMED: the loose lcm-block is M~0.28 (3.9x the radius), mu=0.108 -- easily lonely,
+    NOT the crux. The TIGHT covering families (deep well, random cov) have small mu (R near -1) = the crux.
+  * mu = (6/7)^13 + resonances (integer sum m_i v_i = 0); the DANGER BAND's Fourier vanishes at 7|m
+    (the heptagon), and the PAIR resonance term ~ g^2/(v_i v_j) is gcd-controlled: commensurate = large g.
+  * commensurability (sum gcd^2) POSITIVELY correlates with mu (angle REAL) -- but does NOT close the crux:
+    the tight families have R near -1 and sign-delicate pair terms; mu>0 (=M>=1/14=LRC14) is unproven here.
+  This is the exact measure-resonance form + the 7/gcd structure feeding the measure route (klein/mac-mini).
+DONE.
