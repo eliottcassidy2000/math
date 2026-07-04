@@ -13,6 +13,22 @@ HARD CORE LOCATED: uniform inf meas>=c is >=LRC-hard, two-sided -- dominant runn
 HONEST: NOT a uniform-floor proof (=LRC hard core); shows the floor is POSITIVE (route not chasing 0) and LOCATES the hardness at the rigidity the fleet already attacks. MISTAKE-097 flagged. No canon overridden.
 
 Files: THM-613 (canon), lrc14_measure_floor_infimum / _descent / lrc14_floor_is_positive_decorrelation_caps_dips _opus_S60.py (+.out x3), reflection the-actual-floor-is-positive-decorrelation-caps-the-dips, HYP-4064 (+INDEX).
+## mac-mini-2026-07-03-S32 -- WORKING THE TWO OPEN GAPS: three-gap sharpened to g<=2 + tight locus={AP,GW} to speed 60 (deletion-hiding mechanism); confinement m=2,|F|=2 reduced to anti-correlation obstruction
+
+Prompt (owner): work the two isolated open gaps [full confinement + three-gap g(14)<=3, from THM-612].
+
+Startup: codex-S384 already propagated my GW refutation (POKE-COORDINATION now states tight locus = {AP,GW}); kps's msg predates it. Court case effectively resolved.
+
+GAP 2 (three-gap g(14)<=3) -- SHARPENED + MECHANIZED:
+ * THOROUGH exact-M enumeration (all single/double AP residue swaps+lifts + 120k random 13-sets to speed 60): tight locus = **{AP, GW} ONLY**, and **g<=2** for both (AP g=1, GW g=2) -- SHARPER than HYP-2913's conjectured g<=3.
+ * DELETION-HIDING MECHANISM (why exactly {AP,GW}): for k>=7 (2k>13, no other multiple of k remains), deleting AP runner k opens the hiding spot t=1/k with min-dist 1/k>1/14 (= the q-witness lemma THM-523 at q=k). A tight swap must therefore ADD a runner BLOCKING t=1/k (a multiple of k). Unique survivor = GW=AP[12->24] (24=2*12 blocks t=1/12; the +14 lift 26 has ||26/12||=1/6 safe, so t=1/12 stays open => M=1/12 loose). For k<=6 the multiple 2k<=12 already blocks t=1/k. This q-witness picture EXPLAINS GW's uniqueness among AP-neighbors.
+
+GAP 1 (full confinement primitive tight => q*=14) -- multi-tightener REDUCED:
+ * m=2, |F|=2 case: the two odd tighteners w1,w2 must be EXACTLY ANTI-CORRELATED on R={g_U(2t)>1/14}: {||w2 t||<1/14} = {||w1 t||>6/14} on R. Derivation: R is (+1/2)-invariant, each odd D_wi misses its own +1/2 shift, so covering forces A2=A1+1/2 (disjoint partition R=A1 u (A1+1/2)); combined with the identity D_w+1/2={||wt||>6/14} for odd w (verified 20k samples). Extremely rigid coupling, realized 0/~200k q*=28 candidates. So the multi-tightener case is now a sharp anti-correlation obstruction, not fully open.
+
+NET: both gaps advanced. Skeleton unchanged (THM-610 14|q* -> THM-612 confinement q*=14 -> mod-14 shell + g<=2). Both gaps stay LRC-hard in full generality (tight-locus finiteness); this session sharpens and mechanizes them.
+
+Files: THM-612 addendum + Lemma C refinement + status, INDEX, 1 new script tight_locus_enumerate_macmini_20260703.py + output.
 
 ---
 
