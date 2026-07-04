@@ -1,3 +1,23 @@
+## mac-mini-2026-07-03-S33 -- THE SWITCH OBSTRUCTION (Lemma D): |F|=2 confinement reduced to a FINITE per-U check (switch-point divisibility w_i|w_j => w1=w2 contradiction, or tighteners bounded by the even part)
+
+Prompt (owner): keep pushing on the confinement anti-correlation obstruction.
+
+Pushed the S32 anti-correlation ({||w2 t||<1/14}={||w1 t||>6/14} on R) much further, into the SWITCH OBSTRUCTION -- a near-closure of the m=2,|F|=2 confinement.
+
+DELIVERED (Lemma D, added to THM-612):
+ * SWITCH-POINT CONDITION: on R, w1,w2 are danger-DISJOINT and cover R (from the S32 partition R=A1⊔A2), so exactly one is in danger at each t. Where coverage passes w_i->w_j (a χ-switch), continuity (R fully covered, no gap) forces w_i to exit danger as w_j enters: **||w1 t||=||w2 t||=1/14 at every interior switch**.
+ * FULL-ARC DIVISIBILITY: a full w_i-danger arc interior to R has both endpoints as switches (||w_j||=1/14 at two points 1/(7w_i) apart) => **w_j = w_i(14k±1) => w_i | w_j** (verified exact: switch <=> w_j=w_i(14k±1)).
+ * DICHOTOMY: either R has a full w1-arc AND a full w2-arc interior => w1|w2 & w2|w1 => **w1=w2, CONTRADICTION**; or some tightener has no full arc (all clipped by R-boundaries) => #pieces<=2N, each <1/(7w_i) => **both tighteners < 4N/(7 meas R_U)**, data of the even part U alone (N=2·#lonely-intervals(U)).
+ * So |F|=2 confinement = a FINITE check per even-part U. Large-w search: 0 tight q*=28 over 3 even-parts (11-sets to residue 13) × 79800 (w1,w2) pairs to speed 799 (≥ the bound for those U).
+
+RESIDUAL GAP for full confinement: now bounding v_max(U), the EVEN part itself (the tighteners are already bounded by it) -- a cleaner target than the original "multi-tightener open".
+
+Also: resolved CASE-tight-locus-has-GW-not-just-AP (kps-S38 CONCEDED, MISTAKE-100); codex-S384 propagated {AP,GW}. opus-S60 now uses "THM-612 confinement + g(14)<=3" as the explicit hard core.
+
+Files: THM-612 (Lemma D + status), INDEX, court case resolved, confinement_large_w_macmini_20260703.py + out.
+
+---
+
 ## opus-2026-07-03-S60 -- THE ACTUAL FLOOR IS POSITIVE: inf meas(lonely S) > 0 (~0.004, NOT 0); decorrelation (THM-611) caps the resonant dips + margin-measure bridge THM-613 (HYP-4064)
 
 Prompt (owner): "work on the hard core. the actual floor."
