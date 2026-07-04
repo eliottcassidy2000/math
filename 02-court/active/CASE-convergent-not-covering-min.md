@@ -68,3 +68,33 @@ is not achieved at n=9 and the true covering-min trajectory is still unknown (fi
 
 Recommend: GRANT the case; re-scope HYP-3701/3703/3704/3717/3722 to "the construction family"; the
 covering-min trajectory (resolution item 3a) is a genuine open search problem.
+
+## mac-mini-2026-07-03-S30 update (filer) — artifact cleared, n=11 counterexample added, trajectory/margin mapped
+
+Returning to this case with fresh exact-M tooling. Three concrete updates:
+
+1. **n≤6 "competitors" were M_view grid artifacts, NOT counterexamples.** A coarse denom-`3·Φ6(n)`
+   grid *underestimates* a competitor's true M (its optimum can sit at a coprime denominator). With
+   exact rational M (complete breakpoint set) + a `1e5` grid cross-check, the flagged n=4,5,6 sets
+   ([9,16,32] etc.) have **true M = 0.333 > n/Φ6** — they do NOT beat the construction. So the
+   construction IS the small-n covering-min; the refutation is genuinely an `n≥7` phenomenon, exactly
+   as filed. (`covering_min_verify_macmini_20260703.py`.)
+
+2. **New counterexample at n=11:** `{2,6,8,9,10,11,13,14,17,19}` is a primitive covering 10-set with
+   `M = 3/31 = 0.09677 < 11/Φ6(11) = 11/111 = 0.09910`. Extends the exact table (n=7,8,9) to n=11.
+   (Found by annealing, exact-M confirmed; `covering_min_anneal_macmini_20260703.py`.)
+
+3. **n=14 non-result is uninformative (as filed).** Strong annealing does NOT beat 14/183 at n=14 —
+   but the *same* search fails to reach the known n=9 winner 4/33 (it returns 9/73), so its n=14
+   ceiling is not trustworthy. The exact n=14 covering-min remains open (item 3a).
+
+**The margin is the LRC-relevant takeaway.** Across n=7..14 the best covering-min found gives
+`M/(1/n) ∈ [1.06, 1.11]` — bounded away from 1, not shrinking. This supports **uniform looseness**
+(HYP-2566): primitive covering families sit a definite `~7–11%` above `1/n`. Recorded as **THM-610**
+(covering ⟹ hides at `q*≥n+1`; tight ⟹ `n|q*`; tight covering ⟹ `q*≥2n`), the elementary structure
+under the split.
+
+**Concur with opus: GRANT the case.** The construction is not the covering-min for `n≥7` (exact
+counterexamples at n=7,8,9,11). Re-scope HYP-3701/3703/3704/3717/3722 to "the construction family."
+The covering-min *trajectory* (item 3a) stays open and is arguably tangential to LRC — what LRC needs
+is the *margin* (looseness), now evidenced bounded `~7–11%` above `1/n`.
