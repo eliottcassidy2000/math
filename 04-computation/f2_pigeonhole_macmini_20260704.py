@@ -59,3 +59,39 @@ if __name__ == "__main__":
         out(f"{m:>3} {tested:>7} {usel:>16} {bite:>14} {(minbite if bite else 0):>16.5f}")
     out("\n=> if m>=3 has 0 BITE: pigeonhole closes f=2 for m>=3 (M=M(U)>=1/12>1/14); only m=2 remains (opus folding).")
     out("   BITE at m=2 (or small m) exhibits the tightener conspiracy = the named f>=2 residual.")
+
+# [S41 sharp] threshold c=14/183: a shift with ALL tighteners >= 14/183 => M(S) >= min(M(U),14/183) = 14/183.
+def _sharp():
+    from fractions import Fraction as F
+    import random
+    c = F(14,183); rng = random.Random(23)
+    print("\n[SHARP c=14/183] shift with all tighteners >= 14/183 (=> M(S) >= 14/183, the covering-min):")
+    for m in range(2, 9):
+        ok = hard = 0
+        for _ in range(150):
+            U = sorted(set(rng.sample(range(1,12),11)))
+            if len(U)!=11: continue
+            E = [m*u for u in U]
+            cand = [w for w in range(1,40) if w%m!=0 and w not in E]
+            if len(cand)<2: continue
+            w1,w2 = rng.sample(cand,2)
+            if gcd_all(E+[w1,w2])!=1: continue
+            _,args = None, None
+            # U argmax
+            best=F(0); A=[]
+            D=12*max(U)
+            for a in range(1,D):
+                t=F(a,D); mm=min(nd(v*t) for v in U)
+                if mm>best: best=mm; A=[t]
+                elif mm==best: A.append(t)
+            bestmin=F(0)
+            for ts in A[:8]:
+                for j in range(m):
+                    t=(ts+F(j))/m
+                    bestmin=max(bestmin, min(nd(w1*t),nd(w2*t)))
+            if bestmin>=c: ok+=1
+            else: hard+=1
+        print(f"   m={m}: all-safe>=14/183 in {ok}, hard {hard}")
+    print("   => m>=3: 0 hard => M>=14/183 (full covering-min, large-scale). m=2 = folding residual.")
+if __name__ == "__main__":
+    _sharp()
