@@ -1,0 +1,8 @@
+14/183 = 0.076503, 1/14 = 0.071429
+PRIMITIVE covering-min found: M = 0.076501  (M*14 = 1.0710)
+  extremizer: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182)
+  is deep well? True
+
+=> PRIMITIVE COVERING-MIN = 14/183 CONFIRMED (deep well), gap above 1/14 = 0.005.
+   The gcd subtlety: imprimitive dilated-AP covering families (14*{1..13}) have M=1/14
+   but reduce to {1..13}=NON-covering=sieve. So PRIMITIVE covering => M>=14/183>1/14.

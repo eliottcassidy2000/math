@@ -1,0 +1,12 @@
+Minimizing M (finding tight families) from random starts <=26:
+                                    family         M   M*14 covering? dilated AP?
+
+Reference tight families:
+        AP {1..13}: M=0.07143 (M*14=1.000), covering=False, dilatedAP=True
+           {1..13}: M=0.07143 (M*14=1.000), covering=False, dilatedAP=True
+         deep well: M=0.07650 (M*14=1.071), covering=True, dilatedAP=False
+
+Tight families found (M<14/183): 0; of these COVERING: 0
+=> MECHANISM CONFIRMED: every family tighter than 14/183 is NON-COVERING.
+   Covering forces M off the tight locus => M >= 14/183. The tight locus (APs & c.)
+   is non-covering because an AP {a..13a} (a coprime 14) misses q=14 (=> t=1/14 lonely).

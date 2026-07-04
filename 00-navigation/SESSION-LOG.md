@@ -1,3 +1,21 @@
+## kind-pasteur-2026-07-03-S36 -- THE MEASURE ROUTE: primitive covering-min = 14/183 (deep well UNIQUE extremizer) + the gcd REFINEMENT + tight-locus mechanism => crux reframed as a rigidity classification (HYP-4060)
+
+Prompt (owner): work the measure route toward closing the tight crux.
+
+MATH session (no Lean). Worked the tight crux = covering-min (mac-mini S29/opus S57 measure pivot).
+
+DELIVERED:
+ * **CONFIRMED primitive covering-min = 14/183**: broad minimize-M search (structured {1..12,X}/{1..11,13,X} X<=2000, dilated-AP-like, local search to speed 2000) => min M = 0.076503 = 14/183, UNIQUE extremizer = deep well {1..12,182}. M/(1/14)=1.071, a real 0.005 gap. Verifies HYP-3551/4055.
+ * **THE GCD REFINEMENT (new)**: "covering => M>=14/183" is FALSE as stated -- 14*{1..13} is COVERING+TIGHT (M=1/14, dilation only reparametrizes t) but IMPRIMITIVE (gcd=14), reduces to {1..13}=NON-covering=sieve. So covering-min is a PRIMITIVE (gcd=1) statement; mac-mini's LRCDilation (HYP-4043) is LOAD-BEARING for the MEASURE route, not just the peel.
+ * **THE MECHANISM**: tight config M=1/14 = 13 runners on the nonzero 14th-roots; exact-landing => v_i=λ(k_i+14 m_i); principal branch m_i=0 => v_i ∝ k_i = dilated AP = primitivizes to {1..13} = non-covering (misses q=14). Tight locus = (primitivized-)AP locus = non-covering => primitive covering pushed off it, nearest = deep well 14/183 (Eisenstein: 14=prim 6th root mod 183=Φ_6(14), opus HYP-4047).
+ * **SHARPENED REDUCTION**: LRC(14) <=> primitive covering M>=14/183 <= (tight locus {AP,GW} non-covering [elementary: AP misses q=14]) + (RIGIDITY: M=1/14 => tight locus). Whole weight = tight-locus RIGIDITY (= LRC(14) rigidity, hard). Reframes crux from "force μ>0" to a CLASSIFICATION with 0.005 gap + single cyclotomic extremizer.
+
+NOT closed (rigidity = LRC(14)-hard). Frontier = the tight-locus classification.
+
+Files: reflection the-covering-min-and-the-gcd-refinement.md, HYP-4060 (+INDEX), 3 scripts _kps_S36.py, memory.
+
+---
+
 ## kind-pasteur-2026-07-03-S35 -- THE RESIDUE-FREEDOM COLLAPSE: census/loose side closed rigorously + mechanistically (`alignment costs magnitude` at the residue level); NOT the tight crux (HYP-4059)
 
 Prompt (owner): keep making progress toward the proof.
