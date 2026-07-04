@@ -28,6 +28,26 @@ DELIVERED (rigorous sub-bound + sharpenings):
  * **WHY DOMINANT-FAR ONLY**: p is NOT <=C·n -- grows ~Σv (random 12-speed mag 3000 => p~4500). So thr ~ Σ_base/μ' = a DOMINANT-far condition. Non-dominant multi-scale gives nothing => uniform looseness lives in {opus THM-608 renormalization + mac-mini THM-612 rigidity, GAP-A/B}.
 
 NOT closed. Files: reflection the-uniform-looseness-is-lrc-hard-the-far-peel-is-measure-and-linear.md, HYP-4067 (+INDEX), script lrc14_measure_far_peel_kps_S39.py (+.out), memory. No canon overridden.
+## klein-2026-07-03-S120 -- THE MARGIN->MEASURE BRIDGE (THM-613) FORMALIZED IN LEAN, sorry-free (HYP-4068); the measure-floor side of the rigidity's "one problem". HONEST: the rigidity itself (confinement) is OPEN, not proved.
+
+Prompt (owner): now prove the covering-min lower bound rigidity.
+
+HONEST FRAMING FIRST: the covering-min lower-bound rigidity -- `M(primitive covering) >= 14/183`, equivalently `M=1/n => tight locus {AP,GW}` -- is LRC(14)-EQUIVALENT (per the fleet's own analysis: THM-612/THM-614 confinement, kps HYP-4060, opus HYP-4066). It is reduced to CONFINEMENT (tight families are bounded => {AP,GW} is a finite check, done to speed 60), whose residual ("bound the even part U itself + all m>=3") is explicitly CONJECTURE and has resisted opus + mac-mini. I did NOT close it and did not fabricate a proof.
+
+WHAT I DID (genuine, rigorous, in my lane): formalized THM-613 -- the margin->measure bridge -- in Lean, sorry-free (LRCMarginMeasure.lean, corpus green 8478 jobs). opus-S60 named the crux "measure floor = margin rigidity, one problem"; THM-613 is the quantitative link and was paper-only. Now:
+- `lonely_of_margin`: the Lipschitz kernel. If at `tstar` every runner is `>= b` from Z, `|v i| <= V`, `1/n <= b`, then every `t` with `|t-tstar| <= (b-1/n)/V` is `n`-lonely. Pure reverse-triangle inequality (`|v_i t - m| >= |v_i tstar - m| - |v_i||t-tstar| >= b-(b-1/n) = 1/n`), no measure theory.
+- `margin_measure_floor`: `ENNReal.ofReal (2*(b-1/n)/V) <= volume {t | Lonely n v t}` -- via Icc-containment + measure_mono + Real.volume_Icc. THM-613 exactly, GENERAL family.
+- `deepWell14_measure_floor`: instantiated at the covering-min extremizer -- `meas(lonely {1..12,182}) >= 13/233142 = 2*(14/183-1/14)/182 = (13/1281)/182 > 0`, a rigorous POSITIVE measure floor, given the extremizer's covering-min `M=14/183` (my HYP-4065 witness).
+
+So the duality is now half-formal: MARGIN (M>1/14) => MEASURE (meas>0) is a Lean theorem; the reverse/the actual bound M>=14/183 (the confinement) is the unchanged open crux. This converts the rigidity's OUTPUT into a measure floor rigorously; it does not prove the rigidity.
+
+MY LEAN ARC ON THE COVERING-MIN: S119 LRCDeepWellWitness (extremizer witness general n) -> S119b LRCDeepWellLonely (wired to Lonely 14) -> S120 LRCMarginMeasure (THM-613 bridge + concrete floor). Each sorry-free, registered.
+
+HYP: used HYP-4068 (4065 mine=witness, 4066 opus, 4067 taken -- concurrent burn).
+
+FILES: LRCMarginMeasure.lean (+root import); HYP-4068; this log.
+
+NEXT (the real crux, unchanged): the confinement descent -- bound v_max(U) for the even part + all m>=3 (THM-612 Lemma D residual). That is the LRC(14)-equivalent core. My THM-613 formalization means: once the confinement gives M>=14/183, the positive measure floor follows in Lean automatically.
 
 ---
 
