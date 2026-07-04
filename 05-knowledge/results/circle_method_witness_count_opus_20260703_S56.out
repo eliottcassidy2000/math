@@ -1,0 +1,40 @@
+==================================================================================================
+ (1) THE IDENTITY: N vs the main term q(6/7)^13, and the resonance (COMMENSURABILITY HELPS)
+==================================================================================================
+  family = [7, 9, 13, 16, 18, 36, 48, 66, 72, 126, 156, 280, 312]   (compressed; note 18=2*9, 36=2*18, 156, 312=2*156 are commensurate pairs)
+      q  N(actual)  q(6/7)^13   N-main  minRes sign(N-main)
+     37         10        5.0      5.0       2 + (overlap helps)
+     41         14        5.5      8.5       2 + (overlap helps)
+     53          8        7.1      0.9       2 + (overlap helps)
+     61         12        8.2      3.8       2 + (overlap helps)
+     71          4        9.6     -5.6       2 - (anti-align)
+     83         10       11.2     -1.2       3 - (anti-align)
+     97         10       13.1     -3.1       3 - (anti-align)
+    101         18       13.6      4.4       2 + (overlap helps)
+    127         14       17.1     -3.1       3 - (anti-align)
+    149         26       20.1      5.9       2 + (overlap helps)
+    199         28       26.8      1.2       3 + (overlap helps)
+    251         36       33.8      2.2       3 + (overlap helps)
+    307         46       41.4      4.6       3 + (overlap helps)
+
+==================================================================================================
+ (2) THE PAIR-ERROR KERNEL = DEDEKIND SUM, O((log q)^2) for badly-approximable directions
+==================================================================================================
+       q  r~q/phi    S(r,q)  (log q)^2  ratio
+     101       62      35.6       21.3   1.67
+     211      130      47.9       28.6   1.67
+     401      248      55.4       35.9   1.54
+     809      500      66.3       44.8   1.48
+    1601      989      82.0       54.4   1.51
+    3203     1980     117.6       65.2   1.80
+
+==================================================================================================
+ READING (honest)
+==================================================================================================
+  * (i) mean = (6/7)^13 > 0 is unconditional (main term).  (A) = the error does not swamp it at a good q.
+  * COMMENSURATE pairs (covering shares 2,3,..) give OVERLAP => N >= main (helps) -- corrects 'resonance bad'.
+  * the pair error kernel is a Dedekind sum ~1.5(log q)^2 (badly-approx r): small vs the O(q) main term for q large.
+  * NOT CLOSED: the no-witness case needs an ADVERSARIAL anti-commensurate tiling of the 13 bad-sets; bounding
+    its frequency to O(log M) moduli (=> a good q at O(log M loglog M)) is mac-mini's capacity argument (HYP-4054).
+  This tool gives (A) its exact circle-method form; the residual is the geometry-of-numbers capacity bound.
+DONE.
