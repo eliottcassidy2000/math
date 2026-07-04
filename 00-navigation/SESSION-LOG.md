@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-04-S5 -- TWO LEAN ADVANCES: the deep one-swap hexad (HYP-4085) + hdom CLOSED at the sharp linear threshold (HYP-4087)
+
+Prompt (owner): keep pushing creative new mathematical angles, long session, multiple pulls, toward proof completion.
+
+Two kernel-pure Lean deliverables, both toward closing the LRC(14) COVERING case:
+
+**(1) DEEP ONE-SWAP HEXAD (HYP-4085, LRCOneSwapLadders.lean).** Formalized klein-S127's one-swap stratum: the 6 drops j in {8,9,10,11,12,13} where j is the UNIQUE base coverer of q=j, so X=lcm(j,14)*k re-covers q=j AND q=14. Each a residue-table ladder, lonely ALL k>=1: drop-13 {1..12,182k}@14k/(182k+1) [KERNEL-PURE deep well, far-peel needed native_decide], drop-12=residueLiar, drop-11@(56k+1)/(154k+3), drop-10@(21k+2)/(70k+7), drop-9@(28k+1)/(126k+5), drop-8@(7k+1)/(56k+7). Engine `residue_key` (extends lattice_dist_ge); `fin_cases i <;> simp only [dropXV]` + defeq-matched exact. drop-8/9/10/11/13_lonely all [propext,Classical.choice,Quot.sound].
+
+**(2) SHARP DOMINANT PEEL -- hdom CLOSED (HYP-4087, LRCDominantPeel.lean).** The covering dispatch = hdom (runner>13x rest => peel) + hcomp (compressed => census). Corpus closed hdom only at QUADRATIC threshold (far_peel V^2 artifact). **CLOSED hdom at the sharp LINEAR 13x threshold**: `far_safe_point` (for any real y, one of y or y+1/7 is >=1/14 from every integer -- danger gaps have width 1/7) + `dominant_lonely` (LRC13 base + Lipschitz good-region width 1/(91B) + far_safe_point => both candidate times in the interval iff v_i>13B, the 13=91/7) + `hdom_closed` (from LRCUpTo13 k=12 via Fin.succAbove) + `hdom_closed_abs` (exact |.|-form obligation, sign reduction lonely_neg_arg). All kernel-pure. Verified numerically (40 families, 0 fail). => the ENTIRE far-runner tail of the covering case is now a theorem from LRC13; residual = hcomp only (compressed core, LRC14-equivalent).
+
+CONVERGENCES integrated: klein-S128 (deep well=GLOBAL covering-min 14/183), opus-S70 (no universal Delsarte => parametric ladders confirm my route), mac-mini-S43 (M({1..12,X})=X/(13(X+1)) = my drop-13 general). The covering-min closes by parametric ladders (kps/klein) + finite shell + dominant peel (this), NOT one global dual.
+
+HYP collisions this session: 4086 triply-claimed (opus-S70, klein-S128, kps commits) => I took 4085 (hexad) + 4087 (dominant); 4086 is opus/klein's. Commits for the dominant peel say 4086 (immutable) -- canonical is 4087.
+
+Files: LRCOneSwapLadders.lean, LRCDominantPeel.lean (both registered, corpus EXIT 0); reflections the-deep-one-swap-hexad-..., the-dominant-case-closes-at-the-sharp-linear-threshold; scripts lrc14_one_swap_witnesses / _deepladder_residue_tables / _dominant_closure_kps (+outs). No canon overridden; LRC(<=13) citation used as intended.
+
 ## mac-mini-2026-07-04-S43 -- THM-618: the KILLER-OFFSET mechanism (the geometric WHY of covering-min=14/183) + the PROVED single-killer formula M({1..12,X})=X/(13(X+1))
 
 Prompt (owner): work another creative session making math proof progress.
