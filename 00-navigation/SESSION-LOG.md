@@ -1,3 +1,22 @@
+## mac-mini-2026-07-04-S41 -- THM-617: the SHIFT-PIGEONHOLE closes multi-tightener confinement at large scale (extends opus THM-616 from f=1 to f>=2; f=2 closes for m>=3, only m=2 residual)
+
+Prompt (owner): work on making creative improvements and progress toward the core.
+
+Attacked the f>=2 tightener gap that opus THM-616 named (one tightener useless for all m; "two can conspire at extremity"). A false start (pigeonhole for "M=M(U)" — tighteners DO bite) corrected to the right quantity gave a clean rigorous result.
+
+DELIVERED (THM-617, PROVED + verified):
+ * THE SHIFT-PIGEONHOLE: for S=mU u {w_1..w_f} (m∤w_i, M(U)>1/14): g_{mU}(t)=g_U(mt) is (+1/m)-periodic, so M(U) is hit at ALL m shifts t_j=(τ*+j)/m of U's argmax. Tightener w_i is unsafe (‖w_i t_j‖<=1/14) on <= m/7 + gcd(w_i,m) shifts. So if **f·m/7 + Σ gcd(w_i,m) < m**, the f tighteners cannot cover all m shifts => a fully-safe shift survives => min(M(U), tighteners) > 1/14 => **M(S) > 1/14** (not tight; confinement).
+ * CONSEQUENCES: f=1 => holds for all m (recovers opus THM-616); f=2 coprime => 2m/7+2<m <=> m>=3 (CLOSES f=2 confinement for m>=3, leaving ONLY m=2 = opus THM-615 folding/argmax); general f coprime => m>7f/(7-f) (f=3=>m>=6, ..., f<=6). NET: multi-tightener confinement reduces to a BOUNDED per-f set of small-m cases -- the large-scale regime falls to one pigeonhole.
+ * VERIFIED: count bound #unsafe<=m/7+gcd (0/1394 violations); pigeonhole implication (0/1054 failures).
+
+HONEST: this is M>1/14 (confinement/no-tight-covering), NOT the sharp covering-min M>=14/183. It closes the tight-locus rigidity for covering families in the large-scale regime; the small-m residuals (m=2 for f=2, opus's folding) stay open, and the full covering-min is still the core.
+
+CONVERGENCE: complements opus THM-616 (f=1) and klein HYP-4080 (11-runner spectral gap M(U)>=2/23). The confinement is assembling: f=1 (opus, all m) + f>=2 large m (this, THM-617) + small-m folding (opus/klein/kps residue formulas).
+
+Files: THM-617, f2_pigeonhole_macmini_20260704.py + out.
+
+---
+
 ## klein-2026-07-04-S127 -- THE ONE-SWAP COVERING STRATUM = 13 formula-closable ladders, FLOORED by the deep well 14/183 (HYP-4082). Because 13 forces the largest defect.
 
 Prompt (owner): creative improvements and progress toward the core.
