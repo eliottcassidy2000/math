@@ -1,0 +1,14 @@
+COVERING-MIN(n) vs n/Phi6(n), Phi6(n)=n^2-n+1.  T_n = {1..n-2, (n-1)n}.
+==========================================================================================
+  n  Phi6(n)    n/Phi6(n)   M(T_n) exact  match? apex mod Phi6  g@opt  search-min match?
+  4       13     0.307692           4/13    True            -1      2  False [9, 16, 32]
+  5       21     0.238095           5/21    True            -1      2 False [9, 10, 18, 36]
+  6       31     0.193548           6/31    True            -1      2 False [7, 40, 47, 54, 59]
+  7       43     0.162791           7/43    True            -1      2              True 
+  8       57     0.140351           8/57    True            -1      2              True 
+  9       73     0.123288           9/73    True            -1      2              True 
+ 10       91     0.109890          10/91    True            -1      2              True 
+
+=> if M(T_n)==n/Phi6(n) for all n AND apex ≡ -1 (mod Phi6): the covering-min is the CYCLOTOMIC Phi6
+   value, tight family {1..n-2,(n-1)n}, binding pair (1,-1) mod Phi6(n). 183=Phi6(14) explained.
+   n=14: 14/183 > 1/14  <=>  183 < 14*14=196  <=>  Phi6(14)=183 < n^2  (covering margin exists).

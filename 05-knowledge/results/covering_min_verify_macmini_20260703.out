@@ -1,0 +1,17 @@
+(1) HIGH-RES check of the n<=6 'competitors' the coarse search flagged below n/Phi6(n):
+  n             family   n/Phi6(n)    M_exact  M_grid(1e5)  < n/Phi6?   >=1/n?
+  4        [9, 16, 32]    0.307692   0.333333     0.333280      False     True  cov=True gcd=1
+  5    [9, 10, 18, 36]    0.238095   0.333333     0.333320      False     True  cov=True gcd=1
+  6 [7, 40, 47, 54, 59]    0.193548   0.242424     0.242400      False     True  cov=True gcd=1
+  4         [1, 2, 12]    0.307692   0.307692     0.307690      False     True  cov=True gcd=1
+  5      [1, 2, 3, 20]    0.238095   0.238095     0.238090      False     True  cov=True gcd=1
+  6   [1, 2, 3, 4, 30]    0.193548   0.193548     0.193540      False     True  cov=True gcd=1
+
+   (M_exact and M_grid are both valid LOWER bounds on true M; if EITHER >= n/Phi6, T_n is NOT beaten by that family)
+
+(2) WIDE search: any covering gcd=1 14-family (13 speeds) with M < 14/183 = 0.076503 ?
+   tested many; families with M<14/183: 0
+   overall min M found = 0.105263 (14/183=0.076503); family [2, 4, 6, 10, 11, 12, 13, 14, 16, 17, 18, 19, 22]
+
+=> if NO covering family beats 14/183 with a VALID (grid-confirmed) M: 14/183 is the covering-min, T_14 tight.
+   if some family has grid-confirmed M<14/183: the covering-min is LOWER -- correct the canon.
