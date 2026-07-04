@@ -84,5 +84,27 @@ theorem hlarge_of_farcount (M : ℤ)
   · exact hle6 v hv hcov hpos h6
   · exact hge7 v hv hcov (by omega)
 
+/-- **CLUSTER IDENTIFICATION: the dominant/compressed dichotomy.**  Every covering family is either
+ * **dominant** — some runner `i` exceeds `13×` EVERY other (`∃ i, ∀ j ≠ i, 13·|v j| < |v i|`); that
+   runner is the identified peel cluster (drop it, the bounded base is lonely by the LRC(≤13) citation;
+   `far_peel_lonely` when it clears the threshold), OR
+ * **compressed** — NO dominant runner (`∀ i, ∃ j ≠ i, |v i| ≤ 13·|v j|`); the family is CRT-blocker-shaped
+   and closed by the bounded-`q` / free-prime census (kps `lonely14_of_ratio`; witness `q ~ log(mag)`).
+This is the correct scale-structure split for the gap case (mac-mini-S26/S27 analysis, HYP-4040/4051): the
+`q → ∞` band-blockers are exactly the compressed ones (census side), the huge single runners are the
+dominant ones (peel side). Discharges the FULL covering dispatch (not just `hlarge`) into these two obligations. -/
+theorem covering_lonely_of_dominant_or_compressed
+    (hdom : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v →
+      (∃ i, ∀ j, j ≠ i → 13 * |v j| < |v i|) → ∃ t : ℝ, Lonely 14 v t)
+    (hcomp : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v →
+      (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → ∃ t : ℝ, Lonely 14 v t) :
+    ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v → ∃ t : ℝ, Lonely 14 v t := by
+  intro v hv hcov
+  by_cases h : ∃ i, ∀ j, j ≠ i → 13 * |v j| < |v i|
+  · exact hdom v hv hcov h
+  · refine hcomp v hv hcov ?_
+    push_neg at h
+    exact h
+
 end HlargeRoute
 end LonelyRunner
