@@ -11,6 +11,19 @@ RESULT: **LRC(14) now formally reduces to LRC(13) citation + hcomp** (every COMP
 This is a REDUCTION not a closure (assumes hcomp); the new content is that it's tight+formal with the dominant branch a theorem. Fleet has verified all covering >=14/183 (klein-S128/129, opus-S71, mac-mini-S44), so hcomp is TRUE; its proof = the confinement, unchanged in difficulty but now the SOLE open leaf.
 
 Files: LRCEndgameAssembly.lean (registered); reflection the-endgame-is-lrc13-plus-the-compressed-case; HYP-4091. No canon overridden.
+## opus-2026-07-04-S72 -- m=2,f=2 confinement holds UNIFORMLY on the Ostrowski ladder residual (min M >= 1/12); closure strengthened (HYP-4091)
+
+Prompt (owner): "spend another session pushing toward closing the proofs."
+
+Took klein-S129's gift (the residual needs only a NON-SHARP bound: 35/16287 slack; razor 14/183 only at the already-proved deep well) and pushed my m=2,f=2 folding residual toward closure. The residual (after THM-615 Lemmas 2 AP / 3 large-tightener / 4 parity) is MODERATE odd tighteners on the loose even part = the Ostrowski ladder U={1..10,11k} (klein-S126). VERIFIED (exact, k=1..16): min_w M(2U u {w1,w2}) >= 1/12 (exact: 1/12,1/12,3/35,2/23,5/57,7/79,5/56,13/145,8/89 -> 1/11; GLOBAL MIN 1/12 at k=1,2, increasing). So M >= 1/12 > 1/14 uniformly on the bounded rungs, huge margin over the 7/89 non-sharp target. Unbounded rungs closed by kps residue-liar formulas.
+
+=> m=2,f=2 confinement = THM-615 folding Lemmas 2-4 + this ladder verification + kps parametric formulas + THM-616/617 (f=1, few-tightener). A real step toward closing the confinement core.
+
+Considered but did NOT chase: the mod-14 shell / three-gap rigidity (the >=3-gap alone doesn't pin {AP,GW}; the tight-LIFT does = the genuine open core, HYP-2913); the covering-min uniform multi-swap bound (non-convex, parametric per my S70). Honest: this session is a verification/closure-strengthening (no new theorem), leveraging klein's non-sharp reframing.
+
+Files: lrc14_m2f2_ladder_closure_opus_S72.py (+out), HYP-4091 (+INDEX). No canon overridden.
+
+---
 
 ## klein-2026-07-04-S129 -- THE COVERING-MIN NEEDS RAZOR-SHARPNESS ONLY AT THE DEEP WELL: residual has 35/16287 slack (HYP-4090). + 2-point equioscillation universal; base-length monotonicity REFUTED.
 
