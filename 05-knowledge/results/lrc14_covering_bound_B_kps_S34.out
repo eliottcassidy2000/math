@@ -1,0 +1,122 @@
+q : coverable by 13 danger-sets? (band k = floor((q-1)/14), |danger|=2k+1)
+q= 15 k= 1 |danger|= 3 13*|d|/q=2.60 : COVER  <== coverable
+q= 16 k= 1 |danger|= 3 13*|d|/q=2.44 : COVER  <== coverable
+q= 17 k= 1 |danger|= 3 13*|d|/q=2.29 : COVER  <== coverable
+q= 18 k= 1 |danger|= 3 13*|d|/q=2.17 : COVER  <== coverable
+q= 19 k= 1 |danger|= 3 13*|d|/q=2.05 : COVER  <== coverable
+q= 20 k= 1 |danger|= 3 13*|d|/q=1.95 : COVER  <== coverable
+q= 21 k= 1 |danger|= 3 13*|d|/q=1.86 : COVER  <== coverable
+q= 22 k= 1 |danger|= 3 13*|d|/q=1.77 : COVER  <== coverable
+q= 23 k= 1 |danger|= 3 13*|d|/q=1.70 : COVER  <== coverable
+q= 24 k= 1 |danger|= 3 13*|d|/q=1.62 : COVER  <== coverable
+q= 25 k= 1 |danger|= 3 13*|d|/q=1.56 : COVER  <== coverable
+q= 26 k= 1 |danger|= 3 13*|d|/q=1.50 : COVER  <== coverable
+q= 27 k= 1 |danger|= 3 13*|d|/q=1.44 : COVER  <== coverable
+q= 28 k= 1 |danger|= 3 13*|d|/q=1.39 : COVER  <== coverable
+q= 29 k= 2 |danger|= 5 13*|d|/q=2.24 : COVER  <== coverable
+q= 30 k= 2 |danger|= 5 13*|d|/q=2.17 : COVER  <== coverable
+q= 31 k= 2 |danger|= 5 13*|d|/q=2.10 : COVER  <== coverable
+q= 32 k= 2 |danger|= 5 13*|d|/q=2.03 : COVER  <== coverable
+q= 33 k= 2 |danger|= 5 13*|d|/q=1.97 : COVER  <== coverable
+q= 34 k= 2 |danger|= 5 13*|d|/q=1.91 : COVER  <== coverable
+q= 35 k= 2 |danger|= 5 13*|d|/q=1.86 : COVER  <== coverable
+q= 36 k= 2 |danger|= 5 13*|d|/q=1.81 : COVER  <== coverable
+q= 37 k= 2 |danger|= 5 13*|d|/q=1.76 : COVER  <== coverable
+q= 38 k= 2 |danger|= 5 13*|d|/q=1.71 : COVER  <== coverable
+q= 39 k= 2 |danger|= 5 13*|d|/q=1.67 : COVER  <== coverable
+q= 40 k= 2 |danger|= 5 13*|d|/q=1.62 : COVER  <== coverable
+q= 41 k= 2 |danger|= 5 13*|d|/q=1.59 : COVER  <== coverable
+q= 42 k= 2 |danger|= 5 13*|d|/q=1.55 : COVER  <== coverable
+q= 43 k= 3 |danger|= 7 13*|d|/q=2.12 : COVER  <== coverable
+q= 44 k= 3 |danger|= 7 13*|d|/q=2.07 : COVER  <== coverable
+q= 45 k= 3 |danger|= 7 13*|d|/q=2.02 : COVER  <== coverable
+q= 46 k= 3 |danger|= 7 13*|d|/q=1.98 : COVER  <== coverable
+q= 47 k= 3 |danger|= 7 13*|d|/q=1.94 : COVER  <== coverable
+q= 48 k= 3 |danger|= 7 13*|d|/q=1.90 : COVER  <== coverable
+q= 49 k= 3 |danger|= 7 13*|d|/q=1.86 : COVER  <== coverable
+q= 50 k= 3 |danger|= 7 13*|d|/q=1.82 : COVER  <== coverable
+q= 51 k= 3 |danger|= 7 13*|d|/q=1.78 : COVER  <== coverable
+q= 52 k= 3 |danger|= 7 13*|d|/q=1.75 : COVER  <== coverable
+q= 53 k= 3 |danger|= 7 13*|d|/q=1.72 : COVER  <== coverable
+q= 54 k= 3 |danger|= 7 13*|d|/q=1.69 : COVER  <== coverable
+q= 55 k= 3 |danger|= 7 13*|d|/q=1.65 : COVER  <== coverable
+q= 56 k= 3 |danger|= 7 13*|d|/q=1.62 : COVER  <== coverable
+q= 57 k= 4 |danger|= 9 13*|d|/q=2.05 : COVER  <== coverable
+q= 58 k= 4 |danger|= 9 13*|d|/q=2.02 : COVER  <== coverable
+q= 59 k= 4 |danger|= 9 13*|d|/q=1.98 : COVER  <== coverable
+q= 60 k= 4 |danger|= 9 13*|d|/q=1.95 : COVER  <== coverable
+q= 61 k= 4 |danger|= 9 13*|d|/q=1.92 : COVER  <== coverable
+q= 62 k= 4 |danger|= 9 13*|d|/q=1.89 : COVER  <== coverable
+q= 63 k= 4 |danger|= 9 13*|d|/q=1.86 : COVER  <== coverable
+q= 64 k= 4 |danger|= 9 13*|d|/q=1.83 : COVER  <== coverable
+q= 65 k= 4 |danger|= 9 13*|d|/q=1.80 : COVER  <== coverable
+q= 66 k= 4 |danger|= 9 13*|d|/q=1.77 : COVER  <== coverable
+q= 67 k= 4 |danger|= 9 13*|d|/q=1.75 : COVER  <== coverable
+q= 68 k= 4 |danger|= 9 13*|d|/q=1.72 : COVER  <== coverable
+q= 69 k= 4 |danger|= 9 13*|d|/q=1.70 : COVER  <== coverable
+q= 70 k= 4 |danger|= 9 13*|d|/q=1.67 : COVER  <== coverable
+q= 71 k= 5 |danger|=11 13*|d|/q=2.01 : COVER  <== coverable
+q= 72 k= 5 |danger|=11 13*|d|/q=1.99 : COVER  <== coverable
+q= 73 k= 5 |danger|=11 13*|d|/q=1.96 : COVER  <== coverable
+q= 74 k= 5 |danger|=11 13*|d|/q=1.93 : COVER  <== coverable
+q= 75 k= 5 |danger|=11 13*|d|/q=1.91 : COVER  <== coverable
+q= 76 k= 5 |danger|=11 13*|d|/q=1.88 : COVER  <== coverable
+q= 77 k= 5 |danger|=11 13*|d|/q=1.86 : COVER  <== coverable
+q= 78 k= 5 |danger|=11 13*|d|/q=1.83 : COVER  <== coverable
+q= 79 k= 5 |danger|=11 13*|d|/q=1.81 : COVER  <== coverable
+q= 80 k= 5 |danger|=11 13*|d|/q=1.79 : COVER  <== coverable
+q= 81 k= 5 |danger|=11 13*|d|/q=1.77 : COVER  <== coverable
+q= 82 k= 5 |danger|=11 13*|d|/q=1.74 : COVER  <== coverable
+q= 83 k= 5 |danger|=11 13*|d|/q=1.72 : COVER  <== coverable
+q= 84 k= 5 |danger|=11 13*|d|/q=1.70 : COVER  <== coverable
+q= 85 k= 6 |danger|=13 13*|d|/q=1.99 : COVER  <== coverable
+q= 86 k= 6 |danger|=13 13*|d|/q=1.97 : COVER  <== coverable
+q= 87 k= 6 |danger|=13 13*|d|/q=1.94 : COVER  <== coverable
+q= 88 k= 6 |danger|=13 13*|d|/q=1.92 : COVER  <== coverable
+q= 89 k= 6 |danger|=13 13*|d|/q=1.90 : COVER  <== coverable
+q= 90 k= 6 |danger|=13 13*|d|/q=1.88 : COVER  <== coverable
+q= 91 k= 6 |danger|=13 13*|d|/q=1.86 : COVER  <== coverable
+q= 92 k= 6 |danger|=13 13*|d|/q=1.84 : COVER  <== coverable
+q= 93 k= 6 |danger|=13 13*|d|/q=1.82 : COVER  <== coverable
+q= 94 k= 6 |danger|=13 13*|d|/q=1.80 : COVER  <== coverable
+q= 95 k= 6 |danger|=13 13*|d|/q=1.78 : COVER  <== coverable
+q= 96 k= 6 |danger|=13 13*|d|/q=1.76 : COVER  <== coverable
+q= 97 k= 6 |danger|=13 13*|d|/q=1.74 : COVER  <== coverable
+q= 98 k= 6 |danger|=13 13*|d|/q=1.72 : COVER  <== coverable
+q= 99 k= 7 |danger|=15 13*|d|/q=1.97 : COVER  <== coverable
+q=100 k= 7 |danger|=15 13*|d|/q=1.95 : COVER  <== coverable
+q=101 k= 7 |danger|=15 13*|d|/q=1.93 : COVER  <== coverable
+q=102 k= 7 |danger|=15 13*|d|/q=1.91 : COVER  <== coverable
+q=103 k= 7 |danger|=15 13*|d|/q=1.89 : COVER  <== coverable
+q=104 k= 7 |danger|=15 13*|d|/q=1.88 : COVER  <== coverable
+q=105 k= 7 |danger|=15 13*|d|/q=1.86 : COVER  <== coverable
+q=106 k= 7 |danger|=15 13*|d|/q=1.84 : COVER  <== coverable
+q=107 k= 7 |danger|=15 13*|d|/q=1.82 : COVER  <== coverable
+q=108 k= 7 |danger|=15 13*|d|/q=1.81 : COVER  <== coverable
+q=109 k= 7 |danger|=15 13*|d|/q=1.79 : COVER  <== coverable
+q=110 k= 7 |danger|=15 13*|d|/q=1.77 : COVER  <== coverable
+q=111 k= 7 |danger|=15 13*|d|/q=1.76 : COVER  <== coverable
+q=112 k= 7 |danger|=15 13*|d|/q=1.74 : COVER  <== coverable
+q=113 k= 8 |danger|=17 13*|d|/q=1.96 : COVER  <== coverable
+q=114 k= 8 |danger|=17 13*|d|/q=1.94 : COVER  <== coverable
+q=115 k= 8 |danger|=17 13*|d|/q=1.92 : COVER  <== coverable
+q=116 k= 8 |danger|=17 13*|d|/q=1.91 : COVER  <== coverable
+q=117 k= 8 |danger|=17 13*|d|/q=1.89 : COVER  <== coverable
+q=118 k= 8 |danger|=17 13*|d|/q=1.87 : COVER  <== coverable
+q=119 k= 8 |danger|=17 13*|d|/q=1.86 : COVER  <== coverable
+q=120 k= 8 |danger|=17 13*|d|/q=1.84 : COVER  <== coverable
+q=121 k= 8 |danger|=17 13*|d|/q=1.83 : COVER  <== coverable
+q=122 k= 8 |danger|=17 13*|d|/q=1.81 : COVER  <== coverable
+q=123 k= 8 |danger|=17 13*|d|/q=1.80 : COVER  <== coverable
+q=124 k= 8 |danger|=17 13*|d|/q=1.78 : COVER  <== coverable
+q=125 k= 8 |danger|=17 13*|d|/q=1.77 : COVER  <== coverable
+q=126 k= 8 |danger|=17 13*|d|/q=1.75 : COVER  <== coverable
+q=127 k= 9 |danger|=19 13*|d|/q=1.94 : COVER  <== coverable
+q=128 k= 9 |danger|=19 13*|d|/q=1.93 : COVER  <== coverable
+q=129 k= 9 |danger|=19 13*|d|/q=1.91 : COVER  <== coverable
+
+MAX q coverable by 13 danger-sets (greedy search): B = 129
+
+If B is a small constant => every free modulus q>B has a witness => the census
+q_min <= max(first_free_modulus, B) = O(log M). The compressed crux is CLOSED to
+`no covering above B` = a FINITE, magnitude-independent covering fact.

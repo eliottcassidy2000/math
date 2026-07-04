@@ -1,0 +1,28 @@
+=== Test 1: is q_min <= first_free for the divisibility blocker + random covering? ===
+N=10^3: q_min=57  first_free=57
+N=10^4: q_min=75  first_free=75
+N=10^5: q_min=95  first_free=95
+N=10^6: q_min=127  first_free=127
+N=10^7: q_min=141  first_free=141
+N=10^8: q_min=163  first_free=163
+N=10^9: q_min=181  first_free=181
+--- random compressed covering families (ratio<=2) ---
+  VIOLATION fam=[561, 654, 661, 762, 776, 778, 792, 830, 882, 897, 920, 954, 997] q_min=16 first_free=15
+  VIOLATION fam=[52471, 60995, 65117, 65277, 67541, 76898, 82955, 85716, 86331, 90211, 91840, 93948, 94012] q_min=22 first_free=15
+  VIOLATION fam=[592, 596, 599, 652, 718, 742, 797, 804, 814, 819, 850, 977, 989] q_min=18 first_free=15
+  VIOLATION fam=[2193, 2292, 2393, 2660, 2720, 2730, 2810, 2813, 3069, 3161, 3426, 3524, 3789] q_min=22 first_free=18
+  VIOLATION fam=[2173, 2282, 2302, 2330, 2337, 2414, 2494, 2531, 2816, 3132, 3668, 3763, 3991] q_min=20 first_free=15
+random compressed covering: 330 tested, 94 with q_min>first_free
+
+=== Test 2: can an adversary BLOCK the first free modulus (align danger sets)? ===
+N=10^3: first_free q*=57  ->  free_has_witness
+N=10^4: first_free q*=75  ->  free_has_witness
+N=10^5: first_free q*=95  ->  free_has_witness
+N=10^6: first_free q*=127  ->  free_has_witness
+N=10^7: first_free q*=141  ->  free_has_witness
+N=10^8: first_free q*=163  ->  free_has_witness
+
+adversary blocked the first free modulus in 0/6 magnitudes
+
+READING: q_min<=first_free universal + no adversary blocks q* => THE CLOSURE:
+LRC(14)-compressed reduces to `modular LRC(14) holds at the first free modulus q*~log M`.

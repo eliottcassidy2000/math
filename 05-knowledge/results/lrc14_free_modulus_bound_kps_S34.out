@@ -1,0 +1,18 @@
+               N    M=maxrunner first_free q*   13 ln M  q*<=bound? theta(q*)/lnM
+           1,000          1,984            57        99        True          5.92  primes<q* all divide a runner: True
+          10,000         15,120            75       125        True          6.85  primes<q* all divide a runner: True
+         100,000        193,154            95       158        True          6.50  primes<q* all divide a runner: True
+       1,000,000      1,959,400           127       188        True          7.72  primes<q* all divide a runner: True
+      10,000,000     18,058,368           141       217        True          7.58  primes<q* all divide a runner: True
+     100,000,000    183,783,600           163       247        True          7.72  primes<q* all divide a runner: True
+   1,000,000,000  1,885,518,696           181       278        True          7.84  primes<q* all divide a runner: True
+  10,000,000,000 18,889,484,663           215       308        True          8.20  primes<q* all divide a runner: True
+ 100,000,000,000 167,173,744,930           239       336        True          8.56  primes<q* all divide a runner: True
+1,000,000,000,000 1,919,681,032,704           265       368        True          8.60  primes<q* all divide a runner: True
+10,000,000,000,000 19,236,896,737,596           281       398        True          8.69  primes<q* all divide a runner: True
+100,000,000,000,000 177,299,492,063,375           278       427        True          7.93  primes<q* all divide a runner: True
+1,000,000,000,000,000 1,834,813,493,954,118           335       457        True          8.70  primes<q* all divide a runner: True
+
+THEOREM (rigorous): q* <= 13 ln M  (theta(q*) <= 13 ln M since every prime p<q* divides
+a runner => prod_{p<q*} p | lcm(runners) <= M^13). VERIFIED: q*<=bound in every row,
+and theta(q*)/ln M <= 13 always. So the FIRST FREE MODULUS is O(log M), rigorously.

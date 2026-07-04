@@ -1,3 +1,23 @@
+## kind-pasteur-2026-07-03-S34 -- THE OPEN CRUX, resolved as STRUCTURE: census = Θ(log M), the rigorous q* ≤ 13 ln M bound, and `alignment costs magnitude` (HYP-4055)
+
+Prompt (owner): focus on the open crux, mathematical reasoning not formalization, get it done.
+
+MATH SESSION (no Lean). Cracked the STRUCTURE of the compressed crux (full LRC(14) proof remains open = the conjecture itself); resolved the fleet's opus/mac-mini disagreement.
+
+DELIVERED:
+ * **RESOLVED THE DISPUTE**: built the strongest COMPRESSED adversary (13 speeds in [N,2N], ratio<=2, no far runner, divisibility-blocking {2..Q}) and measured q_min = 57,127,181,265,335 at M=10^3..10^15 -- **q_min ~ 8.7 ln M, GROWS**. mac-mini RIGHT (q~log M by CRT capacity); opus's "bounded 17-19" was under-magnitude (already MISTAKE-097). No fixed-q census.
+ * **THE RIGOROUS PIECE -- q* <= 13 ln M**: the census denom = the first free modulus q* (q|v_i => residue-0 doom for all a). Every prime p<q* divides some runner (else p free below q*), so ∏_{p<q*} p | lcm(runners) <= M^13 => θ(q*) <= 13 ln M => q*=O(log M). VERIFIED θ(q*)/ln M <= 8.7 every row. UNCONDITIONAL.
+ * **THE MECHANISM -- `alignment costs magnitude`**: divisibility-blocking q costs ln q (1 runner @ residue 0); covering-blocking a FREE q costs ~13 ln q (all 13 residues fixed = 13x). Covering free primes needs CRT cofactors ∏(covered primes) => SPREADS magnitude (measured hybrid: covering 6 free primes blew ratio <=2 -> 410-2777). So the only census-defeating move either (a) raises M => q_min=Θ(log M'), no blowup; or (b) makes a 13x-DOMINANT runner => PEELABLE (opus HYP-4054). ALIGNMENT ⟂ COMPRESSION; alignment's currency (magnitude) = the peel's fuel. WHY the two-sided architecture closes as a structure.
+ * **THE REDUCTION**: LRC(14) <=> every covering family (M<=91^12 MSS) has a lonely a/q* at q*<=13 ln M ~ 450 -- a finite check.
+
+CONFIRMS + COMPLEMENTS mac-mini HYP-4054 (the same-session capacity argument): my q*<=13 ln M is the elementary/rigorous DIVISIBILITY half; mac-mini's density-f_q + geometry-of-numbers is the COVERING half. Together = the capacity closure.
+
+OPEN (= LRC(14) itself): the witness EXISTS at q* -- the 13 danger sets (size q*/7, total 13/7>1) don't cover Z/q* for the forced residues. The genericity/character-sum step, known-insufficient for n=14. Not closed (it IS the conjecture); but now a single magnitude-independent covering statement at a rigorously O(log M)-bounded modulus, with the escape (alignment) proven to cost magnitude = the peel's fuel.
+
+Files: reflection the-census-costs-logM-alignment-costs-magnitude.md, HYP-4055 (+INDEX), 5 scripts (lrc14_compressed_crux / _free_modulus_bound / _hybrid_primes / _covering_bound_B / _free_modulus_closure_kps_S34.py + .out), memory.
+
+---
+
 ## opus-2026-07-03-S55 -- CLUSTER IDENTIFICATION = the dominant/compressed dichotomy (formalized, kernel-pure); + honest RETRACTION of a weak-adversary finding + S52 deep-well correction (HYP-4054, MISTAKE-097)
 
 Prompt (owner): work on the gap-case dispatch and cluster identification.

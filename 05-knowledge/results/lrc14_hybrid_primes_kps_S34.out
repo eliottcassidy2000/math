@@ -1,0 +1,11 @@
+         N  Q_div first_free  qmin_div | want  qmin_hyb  #covered   ratio   clogM
+     1,000     56         57        57 |    6        63         6   410.1     9.1
+    10,000     74         75        75 |    6        77         6  2777.6     8.4
+   100,000     94         95        95 |    6       121         6   501.5    10.5
+ 1,000,000    126        127       127 |    6       148         6    31.3    10.7
+10,000,000    140        141       141 |    6       155         6    42.2     9.6
+100,000,000    162        163       163 |    6       169         6    98.7     9.2
+
+READING: #covered = free primes the adversary blocked by residue-alignment.
+q_min(hybrid) vs c*log(M): if the multiplier stays bounded, census = Theta(log M).
+Covering costs 13x (all 13 residues fixed); divisibility 1x -> adversary reach O(log M).

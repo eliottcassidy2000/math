@@ -1,0 +1,11 @@
+         N  Q_div first_free q_min(div) | q_min(hybrid)  frees_covered  maxratio
+     1,000     56         57         57 | hybrid=crt_fail
+    10,000     74         75         75 | hybrid=crt_fail
+   100,000     94         95         95 | hybrid=crt_fail
+ 1,000,000    126        127        127 | hybrid=crt_fail
+10,000,000    140        141        141 | hybrid=crt_fail
+100,000,000    162        163        163 | hybrid=crt_fail
+
+READING: if hybrid q_min stays ~ C*log(M) (a few free moduli beyond first_free),
+the census is Theta(log M): the adversary CAN cover a FEW free moduli (paying 13x)
+but runs out of CRT capacity -> q_min = O(log M). No fixed-q census, but O(log M) one.
