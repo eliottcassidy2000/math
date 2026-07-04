@@ -13,6 +13,21 @@ CONVERGENCES integrated: klein-S128 (deep well=GLOBAL covering-min 14/183), opus
 HYP collisions this session: 4086 triply-claimed (opus-S70, klein-S128, kps commits) => I took 4085 (hexad) + 4087 (dominant); 4086 is opus/klein's. Commits for the dominant peel say 4086 (immutable) -- canonical is 4087.
 
 Files: LRCOneSwapLadders.lean, LRCDominantPeel.lean (both registered, corpus EXIT 0); reflections the-deep-one-swap-hexad-..., the-dominant-case-closes-at-the-sharp-linear-threshold; scripts lrc14_one_swap_witnesses / _deepladder_residue_tables / _dominant_closure_kps (+outs). No canon overridden; LRC(<=13) citation used as intended.
+## opus-2026-07-04-S71 -- multi-swap covering families are >= 14/183 (no counterexample); killer-offset is single-killer-specific (HYP-4088)
+
+Prompt (owner): "keep working the crux with creative new attempt strategies."
+
+Attacked the covering-min lower bound via mac-mini's new THM-618 (killer-offset): covering forces a 13-killer that blocks t=1/13 => offset to 1/13-delta => 14/183. My creative test: a MULTI-SWAP covering family with SEPARATE 13- and 14-killers (both ==1 mod 13) -- the naive 1/13 offset suggests it could dip to ~1/27 (a counterexample!). EXACT CHECK: NO counterexample. {1..5,7..12,13,14} covering, M=2/23 > 14/183 at t*=4/23 (NOT the 1/13 offset); {1..4,6..12,13,14} M=2/21; {2..14} M=1/8. All >= 14/183.
+
+LESSON: the killer-offset is SINGLE-killer-specific -- for multi-swap the GLOBAL max-min is at a HIGHER offset (the non-convexity mac-mini flagged; my 1/13 hand-analysis was a local-not-global error). The deep well is uniquely minimal because 182=13*14 is the SMALLEST runner covering BOTH q=13,14 while keeping {1..12}; separate killers cost a dropped small runner => higher M => higher Ostrowski rung. Confirms mac-mini THM-618 + klein-S128 deep-well-unique; rules out multi-swap counterexamples.
+
+Also fixed HYP-4086 collision (my S70 Delsarte -> HYP-4087; kps-S5 used 4086 for hdom).
+
+HONEST: a verification/confirmation session (no new theorem) -- ruled out a would-be counterexample class, confirmed the covering-min proof structure (single-killer ladder THM-618 + multi-swap>=14/183, parametric per my S70). Modest but honest engagement with the crux.
+
+Files: lrc14_multiswap_killer_offset_check_opus_S71.py (+out), HYP-4087 (renumber), HYP-4088 (+INDEX). No canon overridden.
+
+---
 
 ## mac-mini-2026-07-04-S43 -- THM-618: the KILLER-OFFSET mechanism (the geometric WHY of covering-min=14/183) + the PROVED single-killer formula M({1..12,X})=X/(13(X+1))
 

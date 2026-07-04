@@ -1,0 +1,8 @@
+covering-min 14/183=0.07650. Multi-swap / separate-killer covering families (potential counterexamples):
+  deep well {1..12,182} (double killer)    M=14/183    t*=14/183     >=14/183
+  sep killers {1..5,7..12,13,14}           M=2/23      t*=4/23       >=14/183
+  sep killers {1..4,6..12,13,14}           M=2/21      t*=17/21      >=14/183
+  sep {1,2,3,5,6,7,9,10,11,12,13,14,4}     (not 13-cov)
+  triple-swap {2..12,13,14} (no 1)         M=1/8       t*=1/16       >=14/183
+  min over these: 14/183 (deep well {1..12,182} (double killer))  -- deep well is the covering-min; multi-swap all HIGHER (Ostrowski rungs).
+DONE.
