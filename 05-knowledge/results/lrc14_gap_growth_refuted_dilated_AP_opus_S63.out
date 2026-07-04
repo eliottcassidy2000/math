@@ -1,0 +1,24 @@
+============================================================================================
+ REFUTATION: dilated APs c*{1..11} have CONSTANT gap 1/84, u_max -> infinity (S62 gap-growth is false)
+============================================================================================
+  1/84 = 0.011905   (= 1/12 - 1/14, M({1..11})=1/12)
+    c  u_max   tighteners   M(S) exact   gap=M-1/14  primitive
+    1     22       (1, 7)         1/12         1/84       True
+    2     44      (9, 11)         1/12         1/84       True
+    3     66      (3, 11)         1/12         1/84       True
+    4     88      (5, 29)         1/12         1/84       True
+    5    110       (1, 3)         1/12         1/84       True
+
+  Also confirm M(even part alone) = M(2c*{1..11}) = M({1..11}) = 1/12 (tighteners don't reduce it):
+    c=1: M(2*1*{1..11}) = 1/12   (=1/12? True)
+    c=2: M(2*2*{1..11}) = 1/12   (=1/12? True)
+    c=3: M(2*3*{1..11}) = 1/12   (=1/12? True)
+
+============================================================================================
+ CONCLUSION
+============================================================================================
+  * gap(c*{1..11}) = 1/84 CONSTANT => u_max NOT bounded by gap-growth (S62/HYP-4068 REFUTED, MISTAKE-101).
+  * The min-gap extremizers are dilated APs at ALL scales (unbounded u_max).
+  * Confinement (if it holds) = a UNIFORM POSITIVE gap, NOT a finite u_max check. 'Bound v_max(U)'
+    is the WRONG target; the right object is inf_U gap(U) > 0, extremized by unbounded dilated APs.
+DONE.

@@ -11,6 +11,16 @@ Format per entry:
 
 ---
 
+## MISTAKE-101: "The f=2 tightening gap GROWS with u_max => u_max bounded" (opus-S62) -- a RANDOM-SAMPLING artifact; the near-extremal families are commensurate dilated APs, MISSED by random sampling
+
+**Session:** opus-2026-07-03-S62 (claimed), opus-2026-07-03-S63 (refuted same-day, before building on it).
+**What was claimed (HYP-4068):** the f=2 tightening gap `gap(U)=min_{odd w1,w2}(M(2U u {w1,w2})-1/14)` over RANDOM 11-runner even parts `U` RISES with `u_max` (min gap 0.012@u_max~12 -> 0.061@u_max~40), so large even parts are "robustly infeasible" => `u_max` is effectively bounded => mac-mini's finite per-U confinement check terminates.
+**Why wrong:** the sweep sampled RANDOM 11-subsets, which are generic/incommensurate and DO have growing gap -- but the near-extremal (small-gap) families are COMMENSURATE dilated APs, which random sampling never hits. EXACT check: `U = c*{1..11}` gives `M(2c*{1..11} u {w1,w2}) = 1/12` EXACTLY (gap `= 1/12-1/14 = 1/84 ≈ 0.0119`, CONSTANT) for c=1,2,3,4 (`u_max = 22,44,66,88`), all PRIMITIVE. The gap does NOT grow with `u_max`; it is flat at `1/84` for the dilated APs at every scale. So `u_max` is NOT bounded via gap-growth.
+**Correct framing:** confinement (if it holds) is a UNIFORM POSITIVE gap `gap(U) >= c > 0` (min ~1/84, extremized by dilated APs), whose extremizers have UNBOUNDED `u_max`. "Bound `u_max`" is therefore NOT the right target -- the dilated-AP extremizers are magnitude-unbounded. The finite-per-U check does NOT become globally finite by bounding `u_max`. (Same failure mode as MISTAKE-095/096/098: a random/weak sampler under-represents the maximally-commensurate/aligned family, showing a false trend.)
+**Impact:** HYP-4068's "u_max effectively bounded / gap grows" REFUTED; the S62 handoff to mac-mini ("your finite check terminates") is WRONG and retracted. No canon THM was built on it (S62 deliberately made no theorem). The reduction `w_i <= 12 u_max` (S61/THM-614) stands (a correct per-family bound; it just doesn't bound `u_max`).
+**Lesson (the recurring one):** for ANY "quantity X is bounded / grows with magnitude" claim, test the MAXIMALLY-COMMENSURATE family (dilated APs, lcm-products), NEVER a random/generic sampler -- the extremizers are the aligned families and random sampling systematically misses them. Reflex: before claiming a magnitude bound, construct the dilated-AP / commensurate extremal and check it.
+**Source:** opus-2026-07-03-S62 (the artifact), opus-2026-07-03-S63 (exact dilated-AP refutation, `gap(c*{1..11})=1/84` constant).
+
 ## MISTAKE-098: Repeated the weak-adversary trap -- "the CHAIN band-blocker is census-able" (S27) was under-constructed
 
 **Session:** mac-mini-2026-07-03-S27, found + corrected same session.
