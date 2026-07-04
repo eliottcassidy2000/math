@@ -1,0 +1,21 @@
+================================================================================================
+ (a) even-block reduction: M and q* (=denominator of argmax t*)
+================================================================================================
+  AP {1..13}                 M=    1/14  =1/14? True  t*=   13/14 q*=  14 primitive=True covering=False
+  even block 2*{1..13}       M=    1/14  =1/14? True  t*=   13/28 q*=  28 primitive=False covering=True
+  2*({1..13}\{6}) u {5}      M=    2/23  =1/14? False  t*=    2/23 q*=  23 primitive=True covering=True
+  deep well {1..12,182}      M=  14/183  =1/14? False  t*=  14/183 q*= 183 primitive=True covering=True
+
+================================================================================================
+ (b) search structured f=2,3,4 primitivizations of even blocks for PRIMITIVE tight q*>14
+================================================================================================
+  searched 938 structured even-block+odd-tightener families (e=10,11,12).
+  PRIMITIVE tight (M=1/14) with q*>14 found: 0
+  => 0 hits (independent confirmation of mac-mini's confinement search on this slice).
+
+================================================================================================
+ (c) covering/extremity facts the proof rests on
+================================================================================================
+  odd w: ||w(t+1/2)|| = 1/2 - ||wt||  (D_w ∩ (D_w+1/2)=∅):  verified True
+  => a single odd tightener covers <=1 of each 2-orbit {t,t+1/2}; f>=2 needed (Lemma C).
+DONE.
