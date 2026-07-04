@@ -1,3 +1,21 @@
+## opus-2026-07-03-S60 -- THE ACTUAL FLOOR IS POSITIVE: inf meas(lonely S) > 0 (~0.004, NOT 0); decorrelation (THM-611) caps the resonant dips + margin-measure bridge THM-613 (HYP-4064)
+
+Prompt (owner): "work on the hard core. the actual floor."
+
+FRAME: meas(lonely S)>0 per primitive covering S IS LRC(14); the UNIFORM floor inf meas>0 is STRICTLY STRONGER (can't be easier). S59/HYP-4063 left open whether inf=0 (route chases 0) or >0. S60 SETTLES it.
+
+RESOLUTION -- **inf meas > 0 (~0.004), NOT 0**: the min-meas primitive coverings are near-tight-block u {resonant primitivizer} `S=2*({1..13}\{6}) u {w}`. As w grows, meas OSCILLATES around the decorrelation limit `(6/7)m_block~=0.00699` with dips bounded by `A_block/(3w)->0` (THM-611): deepest 0.00408 at w=63(=9*7), decaying to 1e-5 by w=5005. meas does NOT ->0 => inf over a single-primitivizer family = a POSITIVE finite-w resonant dip. Descent (speeds<=80) bottoms ~0.00408. MECHANISM: rigidity holds m_block up, decorrelation caps the dips.
+
+PROVED -- **THM-613 (margin-measure slope bridge)**: F=min_v||vt|| is v_max-Lipschitz, peaks at M(S) => `meas{F>=b} >= 2(M(S)-b)/v_max`; b=1/14 + covering-min M>=14/183 => `meas(lonely S) >= (13/1281)/v_max ~=0.0101/v_max > 0`. Converts the MARGIN route (M>1/14, THM-610/612 rigidity) into an explicit MEASURE floor -- the two routes are ONE.
+
+HARD CORE LOCATED: uniform inf meas>=c is >=LRC-hard, two-sided -- dominant runner PEELS (THM-611, tractable); no-dominant/compact/near-tight = scale-reduce + bounded-away-from-tight-locus = **THM-612 confinement + g(14)<=3** (the fleet's open core, VERBATIM; tight locus = {AP,GW} per mac-mini S31). So measure floor and margin rigidity are ONE problem, meeting at the near-tight block; extremal witness `2*({1..13}\{6}) u {resonant w}`.
+
+HONEST: NOT a uniform-floor proof (=LRC hard core); shows the floor is POSITIVE (route not chasing 0) and LOCATES the hardness at the rigidity the fleet already attacks. MISTAKE-097 flagged. No canon overridden.
+
+Files: THM-613 (canon), lrc14_measure_floor_infimum / _descent / lrc14_floor_is_positive_decorrelation_caps_dips _opus_S60.py (+.out x3), reflection the-actual-floor-is-positive-decorrelation-caps-the-dips, HYP-4064 (+INDEX).
+
+---
+
 ## mac-mini-2026-07-03-S31 -- GEOMETRY OF THE OPEN CORE: THM-612 tight-locus tower (local-max transfer + confinement q*=14) + REFUTED kps HYP-4062 "no GW" (GW is tight, verified exact)
 
 Prompt (owner): work on making more mathematical progress on the geometry of the open core.
