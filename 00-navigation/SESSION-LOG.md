@@ -55,6 +55,25 @@ DELIVERED:
 NOT closed (rigidity = LRC-hard). Frontier = the one extremal-uniqueness implication `M=1/14 => dilated AP`.
 
 Files: reflection the-tight-locus-is-the-arithmetic-progression.md, HYP-4062 (+INDEX), script lrc14_tight_locus_enum_kps_S37.py (+.out), memory. No canon overridden.
+## klein-2026-07-03-S119 -- THE COVERING-MIN EXTREMIZER'S WITNESS, FORMALIZED IN LEAN FOR GENERAL n (HYP-4062): deep well lonely at t*=n/Phi6(n) via the zeta6 rotation, sorry-free; + the covering-forcing shape rigidity.
+
+Prompt (owner): work on making more mathematical progress on the geometry of the open core.
+
+CONTEXT (pulled, was 165 behind): the open core is now a RIGIDITY CLASSIFICATION -- LRC(14) <=> every primitive covering family has M >= 14/183 = n/Phi6(n) <=> [tight locus {AP,GW} non-covering (elementary)] + [M=1/n => tight locus (the hard rigidity, LRC(14)-equivalent, HYP-4060/HYP-2561)]. The extremizer = deep well {1..12,182}; opus established its witness is the zeta6 hexagonal rotation (mult-by-n on Z[omega]/(n-omega)=Z/Phi6(n), Phi6=N(n-omega)=|PG(2,n-1)|), AP-image via n^2≡n-1. mac-mini THM-610 (deep-hiding dichotomy), opus HYP-4061 (CV gatekeeper miscalibrated; binding object = actual floor R', minimizer drop-7).
+
+DELIVERED (my lane = rigor/Lean, non-colliding):
+
+1. **LRCDeepWellWitness.lean (sorry-free, [propext,Classical.choice,Quot.sound], REGISTERED)**: the covering-min extremizer's witness, machine-checked for GENERAL n>=3 (fleet had it only on paper/scans for n=14). phi6_dvd_tower (Phi6(n)|n^3-n^2+n = the tower identity n^2≡n-1); dist_multiples_ge (band [n,Phi6-n] => dist>=n to every multiple of Phi6, 3-case); ap_runner_band + defect_runner_band (AP runner j->jn; pronic n(n-1)->Phi6-n≡-n via n^2≡n-1); ap_runner_dist_real (real: every runner at dist >= n/Phi6(n) from Z at t*=n/Phi6); witness_gt_threshold (n/Phi6 > 1/n, margin (n-1)/(n*Phi6) = the entire covering slack of LRC on the extremal family, one cyclotomic fraction).
+
+2. **Covering-forcing shape rigidity (lrc14_eisenstein_hexagon_klein_S119.py, exact, n=4..20)**: confirmed Claims 1-3 (n primitive 6th root mod Phi6; M_omega=[[0,-1],[1,1]] char poly = Phi6(x); M(deep well)=n/Phi6 exactly, t* optimal, Eisenstein short-reps = hexagonal orbit). NEW Claim 4a: single-defect {1..n-2,X} covering <=> n(n-1)|X (since {1..n-2} covers 2..n-2 but never n-1,n => lcm(n-1,n)=n(n-1)|X), min defect = pronic; 4b: M minimized UNIQUELY at k=1=n/Phi6 over {1..n-2,k*n(n-1)}. So the deep well is FORCED (not just found) within the shape -- canon's forced-cover obstruction as a clean rigidity. 4c: confirms drop-2 {1,3,4,..} beats it globally for small n (2/7,2/9) -- n/Phi6 single-defect-specific.
+
+HONEST SCOPE: this hardens the WITNESS (upper) end of the crux -- the extremizer's exact value n/Phi6(n), now a Lean theorem for all n, giving the open lower-bound a fixed verified target. It does NOT close the crux (the lower bound / rigidity over all families) nor the floor-uniformity (HYP-4061 R'-axis). Respected dead ends: pairwise-resonance vacuous (HYP-4059), commensurability weak on crux (HYP-4058) -- did not re-walk.
+
+CONCURRENCY: shared tree, 8 live sessions. My LRCSpreadPairFloor.lean (HYP-4023) was REPAIRED+registered by kps-S25 (the exact 6 fixes I'd diagnosed: hmul.le, Int.add_mul_emod_self_left/right, add_emod_right, outer max_comm, exact this, D<=k*D omega) -- validated, left to owner. All my new work is in a separate file (LRCDeepWellWitness), no collision.
+
+FILES: LRCDeepWellWitness.lean (+root import); lrc14_eisenstein_hexagon_klein_S119.py(+out); reflection the-covering-min-extremizer-witness-formalized-general-n-klein-S119; HYP-4062.
+
+NEXT: (a) wire ap_runner_dist_real to the concrete `Lonely 14` predicate (n=14 instantiation, the deep well as Fin 13 -> Z at t*=14/183) to plug into the fleet's chain; (b) the LOWER-bound crux (rigidity M=1/n => tight locus) remains open -- the hexagonal covering-radius / Kershner optimality bridge (opus) is the geometric route.
 
 ---
 
