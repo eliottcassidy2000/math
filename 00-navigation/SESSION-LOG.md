@@ -1,3 +1,25 @@
+## klein-2026-07-03-S122 -- THE KERSHNER/HEXAGONAL BRIDGE IS AN ANALOGY, NOT A REDUCTION (HYP-4071): closes it as a proof route (metric mismatch) + a clean covering-min decomposition.
+
+Prompt (owner): try opus's hexagonal/Kershner covering-optimality bridge.
+
+I tried it rigorously. RESULT: Kershner (hexagonal lattice = thinnest 2D covering) does NOT reduce the covering-min lower bound. A "close-the-route" negative result + a positive decomposition. Exact computation (lrc14_kershner_bridge_probe_klein_S122.py).
+
+DECISIVE TEST -- two metrics on Z/Phi6(n)=Z[w]/(n-w): Kershner bounds a 2D EUCLIDEAN covering radius (functional of the Eisenstein NORM x^2-xy+y^2); LRC optimizes a 1D DIOPHANTINE min-distance (the residue metric ||r/Phi6||). On Z/183 these DISAGREE: the 6 Eisenstein units (2D-norm 1, the closest 2D points) land at 1D distances {1,14,15}/183 -- r=1 is 2D-nearest but 1D-WORST (1/183), r=14 is the covering-min; 32% of sampled pairs order OPPOSITELY by the two metrics (a reduction needs 0%). And Kershner = transcendental density 2pi/sqrt(27) vs covering-min = rational Farey 14/183: no identity. So the zeta6/hexagonal is the SYMMETRY GROUP of the extremal WITNESS (real/provable: n order 6 mod Phi6, Phi6=N(n-w)) but the extremized functional is 1D-ARITHMETIC, not 2D-GEOMETRIC. Kershner is the wrong theorem (attached to the wrong metric).
+
+POSITIVE (new): exact decomposition `covering-min = n/Phi6(n) = 1/(n-1)*(1 - 1/Phi6(n))` (verified n=4,7,14,20) -- the 1D "(n-1)-phase spread" scale in (1/n,1/(n-1)), arithmetically discounted by (1-1/Phi6). The correct optimality is a 1D arithmetic spreading bound under the covering constraint (three-gap/mac-mini GAP-A), = the covering-min = LRC. No geometric shortcut.
+
+LESSON: a shared symmetry group (zeta6/p6m) is not a shared theorem; optimality theorems are attached to a metric. When importing a theorem across an analogy, check the FUNCTIONAL transfers, not just the symmetry -- else it's a re-coordinatization in disguise.
+
+HONEST: this RULES OUT the geometric (Kershner) route as a proof of the covering-min; the lower bound M>=14/183 stays LRC(14)-equivalent (opus honest barrier). Value = saving the fleet from chasing Kershner + the clean value decomposition.
+
+MY LRC-crux arc (all honest, none claiming closure): S119 extremizer witness (HYP-4065) -> S120 THM-613 margin->measure bridge (HYP-4068) -> S121 tower step + "descent = covering-min" (HYP-4069) -> S122 Kershner ruled out (HYP-4071). Scaffolding + route-pruning around the LRC-equivalent crux.
+
+FILES: lrc14_kershner_bridge_probe_klein_S122.py(+out); INDEX HYP-4071; reflection the-kershner-bridge-is-an-analogy-not-a-reduction; this log.
+
+NEXT: the correct optimality is 1D-arithmetic (three-gap under covering) = mac-mini's GAP-A + GAP-B, unchanged crux. Geometric shortcuts (Kershner) are now ruled out; the leverage must be arithmetic.
+
+---
+
 ## mac-mini-2026-07-03-S35 -- GAP-A: the non-covering tight locus is {AP,GW}, reduced to a finite check; coverer-bound PROVED on the q=12 axis via opus THM-611 (HYP-4070)
 
 Prompt (owner): now work GAP-A: prove the non-covering tight locus is {AP,GW}.

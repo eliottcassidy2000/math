@@ -1,0 +1,51 @@
+==============================================================================
+PART 1 (exact): the covering-min decomposition
+  n/Phi6(n) = 1/(n-1) * (1 - 1/Phi6(n))  -- the (n-1)-point value, arithmetic-discounted
+==============================================================================
+  n=  4: n/Phi6=4/13 (0.307692); 1/(n-1)*(1-1/Phi6)=4/13 (0.307692); equal? True; 1/n=0.250000, 1/(n-1)=0.333333
+  n=  7: n/Phi6=7/43 (0.162791); 1/(n-1)*(1-1/Phi6)=7/43 (0.162791); equal? True; 1/n=0.142857, 1/(n-1)=0.166667
+  n= 14: n/Phi6=14/183 (0.076503); 1/(n-1)*(1-1/Phi6)=14/183 (0.076503); equal? True; 1/n=0.071429, 1/(n-1)=0.076923
+  n= 20: n/Phi6=20/381 (0.052493); 1/(n-1)*(1-1/Phi6)=20/381 (0.052493); equal? True; 1/n=0.050000, 1/(n-1)=0.052632
+  => covering-min sits in (1/n, 1/(n-1)), a 1D circle scale, NOT a 2D-density scale.
+
+==============================================================================
+PART 2 (THE DECISIVE TEST): 1D phase-distance vs 2D Eisenstein-norm on Z/Phi6(14)=Z/183
+  Kershner lives on the Eisenstein NORM (2D). LRC lives on the phase DISTANCE (1D).
+  If the orderings disagree, Kershner's 2D optimum does NOT bound LRC's 1D min.
+==============================================================================
+  Eisenstein UNITS (2D norm 1, the 6 closest 2D vectors) and their 1D phase distances d/q:
+    r=   1  2D-norm=1  1D-dist=1/183 (0.0055)
+    r=  14  2D-norm=1  1D-dist=14/183 (0.0765)
+    r=  15  2D-norm=1  1D-dist=15/183 (0.0820)
+    r= 168  2D-norm=1  1D-dist=15/183 (0.0820)
+    r= 169  2D-norm=1  1D-dist=14/183 (0.0765)
+    r= 182  2D-norm=1  1D-dist=1/183 (0.0055)
+  -> the 6 nearest 2D points have 1D distances [1, 14, 15]/183 (NOT a single value): the 2D and 1D metrics DISAGREE.
+  metric-disagreement rate (sampled pairs ordered OPPOSITELY by 1D-dist vs 2D-norm): 262/819 = 31.99%
+  A genuine reduction needs the SAME ordering (0% inversions). High inversion => Kershner's
+  2D covering radius is a DIFFERENT functional from LRC's 1D min-distance.
+
+==============================================================================
+PART 3: does the deep-well phase set = the 2D-hexagonally-optimal spread, or a 1D-AP spread?
+  deep-well phases at t*=14/183 (from S119): compare to (a) 1D equal-spacing, (b) 2D-nearest
+==============================================================================
+  deep-well 1D distances-from-0 (sorted): [14, 14, 15, 28, 29, 42, 43, 56, 57, 70, 71, 84, 85] (/183)
+  min = 14/183 = M*Phi6 = 14 (= n = 14); these are an AP-like 1D comb
+  1D equal-spacing of 13 points on the circle: min-dist-from-0 ~ 1/(2*13)*q =7.0/183; 
+  the covering-min config instead pins min at n=14 (arithmetic), NOT the 2D hexagonal radius.
+
+==============================================================================
+PART 4: Kershner numeric -- the 2D hexagonal covering radius does NOT reproduce n/Phi6(n)
+==============================================================================
+  Kershner hexagonal covering density = 2pi/sqrt(27) = 1.209200 (transcendental, a density)
+  covering-min = n/Phi6(n) = 0.076503 = the RATIONAL Eisenstein-Farey value 14/183
+  No dimensional/numeric identity links them: Kershner gives a density, LRC a Farey length.
+
+VERDICT (to be read with the reflection): the zeta_6/hexagonal structure is the SYMMETRY GROUP
+of the extremal witness (real, provable: n order 6 mod Phi6, Phi6=N(n-omega)). But the covering-
+min is a 1D Diophantine max-min on the residue metric, NOT a 2D Euclidean covering radius on the
+Eisenstein-norm metric. The two metrics disagree (Part 2), the value is a rational Farey length
+not a Kershner density (Part 4). So Kershner's 2D optimality does NOT reduce the covering-min:
+the bridge is a STRUCTURAL ANALOGY (right group, wrong theorem), not a proof route. The lower
+bound stays LRC-equivalent (opus's honest barrier).
+DONE
