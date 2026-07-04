@@ -1,3 +1,18 @@
+## kind-pasteur-2026-07-04-S1 -- FAR-PEEL REFACTOR IN LEAN: the covering-min extremizer {1..12,182} + the infinite family {1..12,w>=182} closed via far_peel_lonely at the ACTUAL (linear-in-p) threshold; V^2 is an artifact (HYP-4067 Lean)
+
+Prompt (owner): work the far-peel refactor options (from my S39 flag to opus) + creatively consider more.
+
+LEAN. Delivered the S39 measure analysis concretely: LRCFarPeelDeepWell.lean (corpus 8641, kernel-standard + native_decide):
+ * **deepWell_far_peel_lonely** -- the covering-min extremizer {1..12,182} is Lonely 14 via far_peel_lonely at its ACTUAL threshold. Base {1..12} good region has EXACTLY p=12 components + length 6617/194040 (native_decide), so hbig = (24/7 < 86021/16170) TRUE; 182 clears the true threshold p/(3*length)~118, four orders below the V^2~1.63M of far_peel_lonely_of_cite. So the V^2 is a piece-count-bound ARTIFACT.
+ * **base12_far_peel (w) (hw:182<=w)** -- CREATIVE EXTENSION: the WHOLE family {1..12,w} is Lonely for ALL w>=182. One base computation (native_decide on {1..12}) + a monotone w-inequality (24 < 37.24*w for w>=1). Infinite family (covering members w=182k), closed with a single base region.
+ * PIECE-COUNT DATA (goodRegion2 [1..n] (1/14)).length for n=0..13: 1,1,2,4,6,10,12,18,20,20,20,14,12,0 -- small (<=20) for small-speed bases; n=13 gives 0 (the tight family {1..13} has EMPTY good region at margin 1/14).
+
+NET: the far-peel reaches the covering-min extremizer + an infinite family that the V^2 corollary hides => shrinks the census obligation (flag stands to opus, MSG-1102, for the _of_cite threshold refactor: carry actual p, or a tighter piece-count bound). Lean lore: `![..,w]` with free w => `decide` FAILS (not closed); hbase via `rfl`; hv via `fin_cases i <;> simp_all <;> omega`.
+
+Files: LRCFarPeelDeepWell.lean (+root), INDEX (HYP-4067 Lean note), memory. No canon overridden.
+
+---
+
 ## opus-2026-07-03-S64 -- inf_U gap(U)>0 (m=2,f=2 confinement as UNIFORM gap): FOLDING IDENTITY + M(2U u 2odd)>=1/12 conjecture; AP even part PROVEN (THM-615, HYP-4073)
 
 Prompt (owner): "prove inf_U gap(U) > 0 scale-invariantly" (the correct frame post-MISTAKE-101).
