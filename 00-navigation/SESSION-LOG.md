@@ -1,3 +1,21 @@
+## opus-2026-07-03-S55 -- CLUSTER IDENTIFICATION = the dominant/compressed dichotomy (formalized, kernel-pure); + honest RETRACTION of a weak-adversary finding + S52 deep-well correction (HYP-4054, MISTAKE-097)
+
+Prompt (owner): work on the gap-case dispatch and cluster identification.
+
+DELIVERED (Lean, kernel-pure, ✔ built; LRCHlargeRoute.lean): **covering_lonely_of_dominant_or_compressed** -- the CORRECT cluster-identification dichotomy: every covering family is DOMINANT (∃ i, ∀ j≠i, 13|v j|<|v i| -- the peel cluster: drop it, base lonely by citation, far_peel when it clears threshold) or COMPRESSED (∀ i, ∃ j≠i, |v i|<=13|v j| -- CRT-blocker-shaped, closed by the bounded-q/free-prime census). A clean by_cases+push_neg split of the FULL covering dispatch into two obligations; ISOLATES the compressed crux (hard side) from the dominant (mostly closed). This is the scale-structure cluster-ID mac-mini's analysis established.
+
+HONEST CORRECTIONS (this session, important):
+ * MISTAKE-097: my S52 (HYP-4047) claim "deep well lonely ONLY at 14/183, census-invisible" was WRONG -- the S52 script scanned only difference-set denominators; a FULL Farey scan finds the deep well lonely at 3/40 (q=40, census-able). 14/183 is the covering-min ARGMAX, not the only lonely time. The Eisenstein arithmetic (14 a 6th root mod 183) stands; the census-invisibility does not. (mac-mini-S26 found this independently.)
+ * RETRACTED my own S55 first finding "compressed covering >=7-far families census-able at BOUNDED q (17-19), crux dissolves" -- a WEAK-ADVERSARY ARTIFACT (my chain {24c,30c,...} blocks ONE modulus/runner; mac-mini HYP-4051 shows SMART lcm-product chains grow q~3.6 ln M). The crux does NOT dissolve; magnitude split IS forced. TWO LESSONS in MISTAKE-097: full Farey scan always; test the SMART CRT/lcm-product adversary, never a hand chain.
+
+STATE OF THE CRUX (mac-mini's lane, understood): the gap-case hard obligation = COMPRESSED families, q~log M by CRT capacity (13 runners block {15..Q}, Q~3.6 ln M; the 13 danger bad-sets v_i^{-1}*danger tile [0,q) iff the AP-directions v_i^{-1} align). Closure = free-prime witness where they don't align (mac-mini). My diagnostic (free-prime witness) was inconclusive for compressed (weak constructor) and showed the free-prime FAILS for consecutive-base lcm families (witness at q=41, not the free prime) -- consistent with the alignment obstruction. Deferred to mac-mini.
+
+STATE: the dispatch = {ratio<=13 spread13 (S54)} + {dominant => peel (kps far_peel, this dichotomy names it)} + {compressed => census, q~log M (mac-mini crux)}. My routing + cluster-ID scaffold is landed; the compressed census-completeness is the open piece.
+
+Files: LRCHlargeRoute.lean (+ covering_lonely_of_dominant_or_compressed), MISTAKE-097, HYP-4054, reflection (retracted-banner), compressed_hge7_census_test script.
+
+---
+
 ## kind-pasteur-2026-07-03-S33 -- THE PIECE-COUNT BOUND + EXPLICIT FAR-PEEL THRESHOLD (goodRegion2_card + far_peel_lonely_of_cite, kernel-pure); step-5 is now a concrete finite window (HYP-4053)
 
 Prompt (owner): build the piece-count bound for the explicit far-peel threshold; think aligned band blockers; pull/push frequently.
