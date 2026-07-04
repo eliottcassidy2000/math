@@ -1,3 +1,21 @@
+## opus-2026-07-03-S64 -- inf_U gap(U)>0 (m=2,f=2 confinement as UNIFORM gap): FOLDING IDENTITY + M(2U u 2odd)>=1/12 conjecture; AP even part PROVEN (THM-615, HYP-4073)
+
+Prompt (owner): "prove inf_U gap(U) > 0 scale-invariantly" (the correct frame post-MISTAKE-101).
+
+REDUCTION TO A NUMBER: gap(U)=min_{odd w1,w2}(M(2U u {w1,w2})-1/14). Since M(S)<=M(2U)=M(U) and (LRC<=13) M(U)>=1/12, target = M(S)>=1/12 => gap>=1/12-1/14=1/84>0. M-min descent (commensurate seeds, no MISTAKE-101 repeat) bottoms EXACTLY at 1/12, extremal = AP even parts. So inf gap = 1/84 (conjecturally), scale-invariant.
+
+PROVED (THM-615):
+ * FOLDING IDENTITY: M(2U u {w1,w2})=max_t min(g_E(t),Psi(t)), g_E=min_u||2ut|| (+1/2)-periodic, Psi=max(min(a,b),1/2-max(a,b)), a=||w1t||,b=||w2t|| [odd w: ||w(t+1/2)||=1/2-||wt||; max(min(g,X),min(g,Y))=min(g,max(X,Y))]. Psi>=1/12 <=> NOT extremity. So M(S)>=1/12 <=> some g_E>=1/12 point is non-extremity. (verified exact)
+ * AP EVEN PART: M(2*{1..11} u {w1,w2})=1/12 for ALL odd w1,w2 -- FINITE mod-24 check (g_E max 1/12 at 8 pts denom 24; all 78 odd residue-pairs mod 24 give 1/12; equal-residue => Psi>=1/4). By scale-inv => dilations c*{1..11} (the MIN-GAP EXTREMIZERS) => confinement PROVEN for AP even parts.
+
+WHY GENERAL CASE HARD (honest): soft/measure proofs VACUOUS -- meas{Psi<b}<=4b needs lambda(U)=meas(lonely U)>2/7, but 11-runner U have lambda~0.05-0.09 << 2/7 (danger sets nearly cover). Needs the ARGMAX/commensurability arithmetic = the confinement core (mac-mini Lemma D/THM-612), now localized to "hit a short list of high points without extremity."
+
+STATUS: NOT a full proof. Folding identity + AP-extremal case PROVED; general U (M(U)>1/12) open. MISTAKE-097 flagged. Complements mac-mini Lemma D (R-covering view). No canon overridden.
+
+Files: THM-615, lrc14_folding_identity_AP_confinement / lrc14_M11even2odd_floor / lrc14_inf_gap_near_block _opus_S64.py (+outs), reflection the-folding-identity-reduces-confinement-to-M-geq-1-over-12, HYP-4073 (+INDEX).
+
+---
+
 ## mac-mini-2026-07-03-S36 -- LRC safe-measure = weighted LATTICE-THETA over the relation lattice; the BDFKK/Goncalves-Radchenko additive-combinatorics bridge is a well-characterized DEAD END (two verified obstructions) (HYP-4072)
 
 Prompt (owner): work creatively on the math to finish this up; explore arXiv:2607.01458 (Goncalves-Radchenko, Sharp Lower Bounds for Sumsets in Hypercubes) + Bourgain-Dilworth-Ford-Konyagin-Kutzarova.
