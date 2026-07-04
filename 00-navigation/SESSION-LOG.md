@@ -35,6 +35,21 @@ NET: unifies covering-min + three-gap + every repo Fibonacci/Ostrowski/Zeckendor
 Housekeeping: ceded HYP-4075 to klein-S123 (Lean folding-identity, committed first), renamed mine to HYP-4076. klein-S123 also converged with my S37 loose-U/argmax dichotomy.
 
 Files: HYP-4076, reflection the-covering-min-is-an-ostrowski-ladder, covering_min_continued_fraction_macmini_20260704.py + out.
+## kind-pasteur-2026-07-04-S2 -- THE RESIDUE-LIAR FAMILY CLOSES BY A FORMULA (M({1..11,13,12k})=k/(12k+5), lonely t=(5k+2)/(12k+5)); PROVES the GAP-A coverer magnitude bound; Fibonacci denominators [owner's hint] (HYP-4076)
+
+Prompt (owner): keep working creative new routes at the endgame + hint: Fibonacci mod 7 has period 16.
+
+MATH (creative route from the owner's hint). Followed the Fibonacci hint to the census-hard single-swap coverers {1..11,13,X}, 12|X (the GAP-A family: AP=X12, GW=X24).
+
+DELIVERED:
+ * **CLOSED FORM (sharpens mac-mini HYP-4070 value-list to a proven formula)**: M({1..11,13,12k}) = k/(12k+5) EXACT for k>=3 (verified k=3..15), lonely at t=(5k+2)/(12k+5). k/(12k+5)>1/14 iff k>=3 => lonely for ALL k, strictly loose k>=3; M->1/12.
+ * **PROOF (residue table, no native_decide, kernel-Lean-able)**: at t=(5k+2)/(12k+5), runner v sits at r_v/(12k+5), r_v=v(5k+2) mod (12k+5) LINEAR in k; r_v-k>=0 AND (12k+5)-r_v-k>=0 for k>=3 (termwise) => dist>=k, binding at v=5 (r=k) & v=12k (r=11k+5). 13 linear inequalities in k.
+ * **ENDGAME**: PROVES mac-mini's "coverers magnitude-bounded" for the single-swap family (X>=36 => M>1/14, tight only X in {12,24}=AP,GW) -- one of GAP-A's two open pieces, a theorem now not a search. Residual = general tight-locus (Perarnau-Serra), open.
+ * **FIBONACCI (owner's hint lands)**: 12k+5 Fibonacci at k=7,19,31 (89=F11,233=F13,377=F14); k=7 = first COVERING member {1..11,13,84} (84=6*14), lonely 37/89, M=7/89, 89=F11. phi order 16 in F_49 (x^2-x-1 irred mod 7) = the loose/golden pole DUAL to opus's Eisenstein Phi_6 cyclotomic pole. Consecutive-Fib families {F_k..F_{k+12}} MAXIMALLY loose (M~0.198).
+
+LEAN TASK (specified, feasible, KERNEL-PURE via lonely14_of_ratio): helper `lattice_dist_ge` (N=qq*Q+r, k<=r<=Q-k => k<=|N-mQ| all m) + 13 runner cases (residue table gives qq,r per runner, verify by ring + omega) => an infinite-family lonely certificate with NO native_decide (cleaner than base12).
+
+Files: reflection the-residue-liar-family-closes-by-formula-fibonacci-in-the-denominator.md, HYP-4076 (+INDEX), 3 scripts (residue_liar_formula/_family, fibonacci_mod7), memory. No canon overridden.
 
 ---
 

@@ -1,0 +1,39 @@
+Test the residue-liar formula {1..11,13,84m} lonely at t=7m/(84m+5):
+  m    X=84m     t=7m/(84m+5)   min margin  >=1/14?  cov?
+  1       84             7/89         2/89    False  True
+  2      168           14/173        9/173    False  True
+  3      252           21/257       16/257    False  True
+  4      336           28/341       23/341    False  True
+  5      420             7/85         6/85    False  True
+  6      504           42/509       37/509     True  True
+  7      588           49/593       44/593     True  True
+  8      672           56/677       51/677     True  True
+  9      756           63/761       58/761     True  True
+ 10      840           14/169         1/13     True  True
+ 11      924           77/929       72/929     True  True
+ 12     1008          84/1013      79/1013     True  True
+
+FORMULA t=7m/(84m+5) gives margin>=1/14 for ALL m=1..12? False
+  => {1..11,13,84m} is an INFINITE covering family, lonely by ONE formula (census-free).
+
+Denominators 84m+5 and numerators 7m:
+  dens = [89, 173, 257, 341, 425, 509, 593, 677, 761, 845, 929, 1013]
+  89=F11? 89 is Fibonacci: True
+  84 = 4*21 = 4*F8 (21=F8); 84m+5, 5=F5; the '5' offset + 84=2^2*3*7 (kills 14-grid)
+  84m+5 mod 7 = [5, 5, 5, 5, 5, 5, 5] (all 5, since 84=0 mod 7) -- CONSTANT mod 7!
+  84m+5 mod 14 = [5, 5, 5, 5, 5, 5, 5]
+
+Mechanism at m=1, t=7/89: runner positions v*t mod 1 (as k/89):
+  v=  1: 1*7/89 = 7/89, dist-to-int = 7/89 (>=89/14=6.4? True)
+  v=  2: 2*7/89 = 14/89, dist-to-int = 14/89 (>=89/14=6.4? True)
+  v=  3: 3*7/89 = 21/89, dist-to-int = 21/89 (>=89/14=6.4? True)
+  v=  4: 4*7/89 = 28/89, dist-to-int = 28/89 (>=89/14=6.4? True)
+  v=  5: 5*7/89 = 35/89, dist-to-int = 35/89 (>=89/14=6.4? True)
+  v=  6: 6*7/89 = 42/89, dist-to-int = 42/89 (>=89/14=6.4? True)
+  v=  7: 7*7/89 = 49/89, dist-to-int = 40/89 (>=89/14=6.4? True)
+  v=  8: 8*7/89 = 56/89, dist-to-int = 33/89 (>=89/14=6.4? True)
+  v=  9: 9*7/89 = 63/89, dist-to-int = 26/89 (>=89/14=6.4? True)
+  v= 10: 10*7/89 = 70/89, dist-to-int = 19/89 (>=89/14=6.4? True)
+  v= 11: 11*7/89 = 77/89, dist-to-int = 12/89 (>=89/14=6.4? True)
+  v= 13: 13*7/89 = 2/89, dist-to-int = 2/89 (>=89/14=6.4? False)
+  v= 84: 84*7/89 = 54/89, dist-to-int = 35/89 (>=89/14=6.4? True)
