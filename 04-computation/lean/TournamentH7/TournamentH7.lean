@@ -281,6 +281,7 @@ import TournamentH7.LRCSpread13  -- kps-S28: sharp bounded-ratio window (max <= 
 import TournamentH7.LRCHlargeRoute  -- opus-S54: hlarge case-routing skeleton (route 1 = ratio<=13 => spread13; reduce to the gap obligation), kernel-pure
 import TournamentH7.LRCDenominatorRoute  -- kps-S29: LRC(14) as a bounded-denominator search (single-obligation framing)
 import TournamentH7.LRCFarPeelGood  -- kps-S30: far-peel positivity on goodRegion2 (opus steps 2+3 fused, no comb bridge)
+import TournamentH7.LRCFarPeelDeepWell
 -- import TournamentH7.LRCWindowPack1  -- WIP: 0xC0000005 crash at file scale (both decide flavors); see HYP-3916 forensics
 import TournamentH7.LRCKernelGate
 import TournamentH7.LRC14AxiomAudit  -- klein-S113: #print axioms footprint of the LRC(14) endgame surface
