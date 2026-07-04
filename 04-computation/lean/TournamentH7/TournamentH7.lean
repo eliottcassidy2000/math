@@ -294,6 +294,7 @@ import TournamentH7.LRCDeepWellLonely  -- klein-S119b: wires the witness to Lone
 import TournamentH7.LRCMarginMeasure  -- klein-S120: THM-613 margin->measure bridge formalized (meas lonely >= 2(M-1/14)/vmax; deep well >= 13/233142)
 import TournamentH7.LRCEvenDescent  -- klein-S121: THM-612 tower step formalized (even part of a lonely family descends to U lonely at m*t)
 import TournamentH7.LRCFolding  -- klein-S123: THM-615 folding-identity engine (reach half-shift for odd, even (+1/2)-periodicity, lattice fold, Psi/extremity)
+import TournamentH7.LRCLargeTightener  -- klein-S125: THM-615 Lemma 3 discrepancy core (large multiplier hits reach=1/6 => folded value >= 1/12; the loose-end confinement half)
 import TournamentH7.LRCSevenGap  -- kps-S24: seven-gap deficit + cluster sweep step (the CLUSTERED-block lane)
 
 import TournamentH7.LRCDilation  -- mac-mini-S24: WLOG gcd=1 (dilation), closes HYP-4043 far-peel gap

@@ -1,3 +1,24 @@
+## klein-2026-07-04-S125 -- THE LARGE-TIGHTENER DISCREPANCY CORE (THM-615 Lemma 3) FORMALIZED IN LEAN, sorry-free (HYP-4079). The loose-end confinement half, machine-checked.
+
+Prompt (owner): more mathematical progress on the open core.
+
+opus-S65 PROVED THM-615 Lemma 3 (large tightener => M(2U u {w1,w2}) >= 1/12; the LOOSE END of the m=2,f=2 confinement) on paper. I formalized its DISCREPANCY CORE in Lean, sorry-free, building on my S123 folding engine + S120 margin (LRCLargeTightener.lean, registered):
+- exists_reach_eq_sixth: for w>=1, EVERY length-1/w interval [c,c+1/w] contains t with reach(w*t)=1/6 (w*t sweeps a full period, meets k0+1/6; Int.ceil bounds + reach_add_int). The discrepancy hit.
+- large_tightener_folded_ge: if the even-part band gv>=1/12 on a length-1/w1 interval, then some t there has min(gv, Psi) >= 1/12 (Psi=max(min a b,1/2-max a b)) -- because reach(w1 t)=1/6 in [1/12,5/12] is NON-extremity, via my psi_ge_of_not_extremity.
+So a tightener whose comb fits inside the good band cannot force extremity everywhere = Lemma 3's mechanism, machine-checked. Assembly to M(2U u 2odd)>=1/12: this + LRCMarginMeasure.lonely_of_margin (band I0 length >= 2(M(U)-1/12)/u_max) with 1/w1 <= |I0| (w1 large).
+
+HONEST: large-tightener case ONLY. The small-tightener x near-AP residual (opus's argmax barrier) is the last open sliver -- LRC(14)-equivalent, unproved. Everything else in the confinement is now closed/formalized: tight-U={AP11} (mac-mini S37), AP even parts (opus S64), large tightener (opus S65 + this Lean), deep-well family (kps far-peel), residue-liar families (kps S2 formula), covering-min=Ostrowski ladder [0;n-1,k] (mac-mini S38).
+
+MY COVERING-MIN LEAN ARC (five formal pieces): HYP-4065 (witness) -> HYP-4068 (THM-613 margin->measure) -> HYP-4069 (THM-612 tower step) -> HYP-4075 (THM-615 folding engine) -> HYP-4079 (THM-615 Lemma 3 large-tightener core). The formal scaffold of the confinement is now largely in place; the residual (small-tightener near-AP argmax non-extremity) is the single remaining mathematical crux.
+
+HYP: 4077,4078 taken concurrently (fast burn); I used 4079. HYP-4076 is TRIPLY claimed (klein-S124, mac-mini-S38, kps-S2) -- flagged for coordinator; my S124 stands.
+
+FILES: LRCLargeTightener.lean (+root import); INDEX HYP-4079; this log.
+
+NEXT (the last sliver): small-tightener x near-AP argmax non-extremity (opus/mac-mini active). Ruled-out routes: geometric/Kershner (S122), Fibonacci/golden (S124, it's the anti-golden foil). The leverage must be Eisenstein/heptagon argmax arithmetic on the near-AP corner.
+
+---
+
 ## opus-2026-07-04-S66 -- {12,24} vs {7,21}: the base + uniquely-exceptional smallest-special-multiple analogy (cross-mandate, HYP-4077)
 
 Prompt (owner): "think about possible analogies between {12,24} and the tournament forbidden H set {7,21}."
