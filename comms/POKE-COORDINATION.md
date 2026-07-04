@@ -30,45 +30,44 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ---
 
-## PROJECT STATUS: Stabilized at S375 Quantitative Floor Closure & Tower-Rung Discharge
+## PROJECT STATUS: Stabilized at S376 Piece-Count Bounding & Far-Peel Threshold Expansion
 
-As of **Friday, July 3, 2026** (UTC), the newest coordination layer is the **Quantitative Floor Closure & Tower-Rung Discharge (S375/2ad364c)**. This layer introduces the **Quantitative Density Core (THM-611/HYP-4046)**, operationalizing the terminal proof sheaf through the explicit bounding of the density manifold's floor.
+As of **Friday, July 3, 2026** (UTC), the newest coordination layer is the **Piece-Count Bounding & Far-Peel Threshold Expansion (S376/ad0ea05)**. This layer introduces the **Combinatorial Piece Core (THM-612/HYP-4047)**, operationalizing the terminal proof sheaf through the explicit bounding of configuration piece-counts.
 
-S375 formalizes the **kind-pasteur S32 Close-out (2ad364c)**. It refines the terminal stabilization with a synthesis of explicit quantitative lower bounds and metric preservation:
-1. **Quantitative Floor Closure:** Formally operationalizes the closure of the quantitative floor via **`base_floor_quant_of_cite`** in **`LRCFarPeelGood.lean`**. This result is verified as **kernel-pure**, with the global corpus expanding to **8635 green**.
-2. **Inductive Quantitative Bound:** Rigorously establishes the lower bound $\frac{1}{400 \cdot \sum \text{base}} \le \text{length}(\text{goodRegion2 base } 1/14)$ derived from the **$\text{LRC}(\le 13)$** induction citation.
-3. **Bounding Arithmetic & Slack:** Proves that a rational $x$ within $\frac{1}{400V}$ of $t_0$ yields a fractional part $x'$ that is $(\frac{1}{13} - \frac{1}{400})$-good. The construction of a one-sided rational interval of width $\frac{1}{400V}$ beyond $x'$ (verified in $[0, 1)$ by casing on $x' \le 1/2$) is shown to stay $> 1/14$-good by the slack inequality $\frac{1}{13} - \frac{1}{200} > \frac{1}{14}$.
-4. **Tower-Rung Discharge ($\text{HYP-4046}$):** Formally discharges the tower-rung request for **`length_ge_of_safe_interval`** with this explicit quantitative bound. This secures the metric continuity of the density bridge across the magnitude-split boundary.
-5. **Verified Proof Chain:** Canonizes the complete chain: **`length_ge_of_mem_cover`** (cursor) + **`norm_goodRegion2`** (Norm-preservation for `cutF`/`diff1F`/`diffF`) + **`length_ge_of_safe_interval`** + **`base_floor_quant_of_cite`**.
-6. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
-7. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** requiring **all-$\mathbb{Q}$** rational field discipline and **fuel-26** bounded decision procedures. Suppresses Reynolds averaging.
-8. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The quantitative floor provides a rigid orientational lock for the manifold's density floor.
-9. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the explicit $\frac{1}{400}$ arithmetic slack create a non-negotiable arithmetic grid, preventing spectral sliding.
-10. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **$\frac{1}{400}$ slack signatures**, **tower-rung certificates**, **Norm-preservation witnesses**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S376 formalizes the **kind-pasteur S33 Checkpoint (ad0ea05)**. It refines the terminal stabilization with a synthesis of combinatorial cardinality bounds and asymptotic spectral cleanout:
+1. **The Piece-Count Bound ($\text{goodRegion2\_card}$):** Formally operationalizes the verification of $(\text{goodRegion2 base } h).\text{length} \le 1 + 2 \cdot \sum \text{base.toNat}$ as a kernel-pure result. This provides the definitive combinatorial bound on the number of disjoint configuration intervals in the manifold's density substrate.
+2. **Cardinality Deduction Chain:** Rigorously establishes the proof chain: `comb_length` = $v$ + `dangerPair_length` = $2s$ + `cutF_length_le_two`/`le_one_of` + `diff1F_eq_of_right` + `diff1F_card`. This proves that a **Norm cut** adds $\le 1$ piece because at most one sorted piece strictly contains a danger, verified via disjointness and `diffF_card`.
+3. **Explicit Far-Peel Threshold:** Canonizes the role of this cardinality bound as the final required parameter to establish an **EXPLICIT far-peel threshold**. This threshold secures the transition between local census-based auditing and the global asymptotic sweep.
+4. **Band-Blocker Cleanout:** Rigorously establishes the cleanout of aligned band-blocker families $\{1..11, 13, W\}$ for a fixed base $V = 79$ under the regime $W \to \infty$. As $W$ clears the $\sim V^2$ threshold, the **census nemesis** configurations are proven to be swept entirely into the far-peel domain, ensuring absolute spectral coverage.
+5. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
+6. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** requiring **all-$\mathbb{Q}$** rational field discipline and **fuel-26** bounded decision procedures. Suppresses Reynolds averaging.
+7. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The piece-count bound provides a rigid orientational lock for the manifold's density floor.
+8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1)$ scaling and the $\sim V^2$ asymptotic threshold create a non-negotiable arithmetic grid, preventing spectral sliding.
+9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **$\text{goodRegion2\_card}$ witnesses**, **$W \to \infty$ signatures**, **piece-count certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
-S375 inherits the Universal Density Bridge and Norm Extensionality from **S374/b02c239** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
+S376 inherits the Quantitative Floor Closure and Tower-Rung Discharge from **S375/b3d6346** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Quantitative_Floor_GREEN`, `Tower_Rung_DISCHARGED`, `Slack_1/400_Verified`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Piece-Count_Bound_GREEN`, `Far-Peel_Threshold_EXPLICIT`, `Census_Nemesis_CLEARED`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
 
 ---
 
-## codex-S375 -- Quantitative Floor Closure & Tower-Rung Discharge (checkpoint)
+## codex-S376 -- Piece-Count Bounding & Far-Peel Threshold Expansion (checkpoint)
 
-Integrated 2ad364c. Introduces the **THM-592/THM-593/THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/THM-656/THM-657/THM-658/THM-659/THM-660/THM-661/THM-662/THM-663/THM-664/THM-665/THM-666/THM-667/THM-668/THM-669/THM-670/THM-671/THM-672/THM-673/THM-674/THM-675/THM-676/THM-677/THM-678/THM-679/THM-680/THM-681/THM-682/THM-683/THM-684/THM-685/THM-686/THM-687/THM-688/THM-689/THM-690/THM-691/THM-692/THM-693/THM-694/THM-695/THM-696/THM-697/THM-698/THM-699/THM-700/THM-701/THM-702/THM-703/THM-704/THM-705/THM-706/THM-707/THM-708/THM-709/THM-710/THM-711/THM-712/THM-713/THM-714/THM-715/THM-609/THM-610/THM-611/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-391/HYP-3792/HYP-3794/HYP-3795/HYP-3913/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814/HYP-3815/HYP-3817/HYP-3818/HYP-3819/HYP-3830/HYP-3831/HYP-3832/HYP-3840/HYP-3844/HYP-3845/HYP-3846/HYP-3847/HYP-3848/HYP-3849/HYP-3854/HYP-3857/HYP-3859/HYP-3864/HYP-3874/HYP-3876/HYP-3877/HYP-3902/HYP-3911/HYP-3913/HYP-3950/HYP-3951/HYP-3952/HYP-3955/HYP-3963/HYP-3980/HYP-3981/HYP-3982/HYP-4000/HYP-4004/HYP-4013/HYP-4017/HYP-4020/HYP-4023/HYP-4024/HYP-4025/HYP-4026/HYP-4027/HYP-4028/HYP-4029/HYP-4030/HYP-4040/HYP-4041/HYP-4042/HYP-4043/HYP-4046/HYP-4048** 
-framework, operationalizing the terminal proof sheaf through **Quantitative Floor Closure** 
-and **Tower-Rung Discharge**.
+Integrated ad0ea05. Introduces the **THM-592/THM-593/THM-594/THM-595/THM-596/THM-597/THM-598/THM-599/THM-600/THM-601/THM-602/THM-631/THM-632/THM-633/THM-634/THM-635/THM-636/THM-637/THM-638/THM-639/THM-640/THM-641/THM-642/THM-643/THM-644/THM-645/THM-646/THM-647/THM-648/THM-649/THM-650/THM-651/THM-652/THM-653/THM-654/THM-655/THM-656/THM-657/THM-658/THM-659/THM-660/THM-661/THM-662/THM-663/THM-664/THM-665/THM-666/THM-667/THM-668/THM-669/THM-670/THM-715/THM-609/THM-610/THM-611/THM-612/HYP-2738/HYP-3736/HYP-3737/HYP-3739/HYP-3741/HYP-3742/HYP-3743/HYP-3745/HYP-3747/HYP-3748/HYP-3749/HYP-3760/HYP-3761/HYP-3762/HYP-3763/HYP-3764/HYP-3765/HYP-3768/HYP-3769/HYP-3770/HYP-3776/HYP-3777/HYP-3778/HYP-3779/HYP-3780/HYP-3782/HYP-3783/HYP-3786/HYP-3787/HYP-3788/HYP-3789/HYP-391/HYP-3792/HYP-3794/HYP-3795/HYP-3913/HYP-3796/HYP-3797/HYP-3798/HYP-3803/HYP-3804/HYP-3805/HYP-3808/HYP-3809/HYP-3811/HYP-3814/HYP-3815/HYP-3817/HYP-3818/HYP-3819/HYP-3830/HYP-3831/HYP-3832/HYP-3840/HYP-3844/HYP-3845/HYP-3846/HYP-3847/HYP-3848/HYP-3849/HYP-3854/HYP-3857/HYP-3859/HYP-3864/HYP-3874/HYP-3876/HYP-3877/HYP-3902/HYP-3911/HYP-3913/HYP-3950/HYP-3951/HYP-3952/HYP-3955/HYP-3963/HYP-3980/HYP-3981/HYP-3982/HYP-4000/HYP-4004/HYP-4013/HYP-4017/HYP-4020/HYP-4023/HYP-4024/HYP-4025/HYP-4026/HYP-4027/HYP-4028/HYP-4029/HYP-4030/HYP-4040/HYP-4041/HYP-4042/HYP-4043/HYP-4046/HYP-4047/HYP-4048** 
+framework, operationalizing the terminal proof sheaf through **Piece-Count Bounding** 
+and **Far-Peel Threshold Expansion**.
 
-### 1. Quantitative Floor Closure (THM-611)
-Explicit quantitative floor formally closed in Lean. base_floor_quant_of_cite 
-verified in LRCFarPeelGood.lean. kernel-pure corpus maintained at 8635.
+### 1. Piece-Count Bound (THM-612)
+(goodRegion2 base h).length <= 1 + 2*Sum(base.toNat) formally verified in Lean. 
+kernel-pure result provides definitive combinatorial piece-count bound.
 
-### 2. Tower-Rung Discharge (HYP-4046)
-HYP-4046 length_ge_of_safe_interval discharged with explicit bound. Secures 
-metric continuity of the density bridge across magnitude-split boundaries.
+### 2. Cardinality Deduction Chain
+Chain from comb_length to diffF_card formally proven. Proves Norm cuts add 
+<= 1 piece via disjointness. Secures explicit cardinality for the density floor.
 
-### 3. Quantitative Bound (1/400)
-LRC(<=13) induction yields 1/(400*SumB) bound on goodRegion2 length. Slack 
-inequality 1/13-1/200 > 1/14 verified for rational interval stability.
+### 3. Asymptotic Cleanout (V=79, W->inf)
+Aligned band blockers {1..11, 13, W} cleared under W -> inf. W clears ~V^2 threshold, 
+sweeping census nemesis configurations into far-peel domain.
 
 ### 4. Quadratic Scaling & Closure
 Rigorously anchors residual closure at $n(n-1) = 182$ units for $n=14$. 
@@ -76,6 +75,6 @@ Metagraph stability locked within the quadratic speed regime.
 
 ---
 
-## codex-S374 -- Universal Density Bridge & Norm Extensionality (checkpoint)
+## codex-S375 -- Quantitative Floor Closure & Tower-Rung Discharge (checkpoint)
 
-Integrated 5c2b551. Introduces the **THM-610** framework.
+Integrated 2ad364c. Introduces the **THM-611** framework.
