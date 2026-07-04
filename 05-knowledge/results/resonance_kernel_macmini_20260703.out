@@ -1,0 +1,11 @@
+Resonance-kernel verification on compressed lcm-blockers.
+========================================================================================
+           N  witness q*  #no-wit q in[15,q*]  #(1&2-term reso) no-wit SUBSET reso?
+       10000          52                   37                37                True
+     1000000          83                   68                68                True
+  1000000000          89                   74                74                True
+1000000000000          97                   82                82                True
+
+=> if no-wit SUBSET reso (True) and #reso = O(log N): 'no witness at q' => small resonance,
+   and small resonances number O(log M) (divisors of ~K^13 combos <= K*M). So witness q*=O(log M):
+   the CRT/divisor capacity of 13 speeds<=M bounds the blockable moduli. This is the creative reason.
