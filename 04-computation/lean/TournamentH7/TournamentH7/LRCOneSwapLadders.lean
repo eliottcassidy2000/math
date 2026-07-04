@@ -104,13 +104,62 @@ theorem drop13_lonely (k : ℤ) (hk : 1 ≤ k) :
   · exact residue_key _ _ (14*k) m 12 0 (168*k) (by omega) (by omega) (by ring) (by omega) (by omega)
   · exact residue_key _ _ (14*k) m (182*k) (14*k-1) (168*k+1) (by omega) (by omega) (by ring) (by omega) (by omega)
 
+/-! ### drop-8 : `{1,…,7,9,…,13, 56k}`, lonely at `(7k+1)/(56k+7)`, `M = 7k/(56k+7)`. -/
+
+def drop8 (k : ℤ) : Fin 13 → ℤ := ![1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 56 * k]
+
+theorem drop8_lonely (k : ℤ) (hk : 1 ≤ k) :
+    Lonely 14 (drop8 k) (((7 * k + 1 : ℤ) : ℝ) / ((56 * k + 7 : ℤ) : ℝ)) := by
+  apply lonely14_of_ratio (drop8 k) (7 * k + 1) (56 * k + 7) (by omega)
+  intro i m
+  fin_cases i <;> simp only [drop8]
+  · exact residue_key _ _ (7*k) m 1  0 (7*k+1)   (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 2  0 (14*k+2)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 3  0 (21*k+3)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 4  0 (28*k+4)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 5  0 (35*k+5)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 6  0 (42*k+6)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 7  0 (49*k+7)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 9  1 (7*k+2)   (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 10 1 (14*k+3)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 11 1 (21*k+4)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 12 1 (28*k+5)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 13 1 (35*k+6)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m (56*k) (7*k) (7*k) (by omega) (by omega) (by ring) (by omega) (by omega)
+
+/-! ### drop-10 : `{1,…,9,11,12,13, 70k}`, lonely at `(21k+2)/(70k+7)`, `M = 7k/(70k+7)`. -/
+
+def drop10 (k : ℤ) : Fin 13 → ℤ := ![1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 70 * k]
+
+theorem drop10_lonely (k : ℤ) (hk : 1 ≤ k) :
+    Lonely 14 (drop10 k) (((21 * k + 2 : ℤ) : ℝ) / ((70 * k + 7 : ℤ) : ℝ)) := by
+  apply lonely14_of_ratio (drop10 k) (21 * k + 2) (70 * k + 7) (by omega)
+  intro i m
+  fin_cases i <;> simp only [drop10]
+  · exact residue_key _ _ (7*k) m 1  0 (21*k+2)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 2  0 (42*k+4)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 3  0 (63*k+6)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 4  1 (14*k+1)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 5  1 (35*k+3)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 6  1 (56*k+5)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 7  2 (7*k)     (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 8  2 (28*k+2)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 9  2 (49*k+4)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 11 3 (21*k+1)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 12 3 (42*k+3)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m 13 3 (63*k+5)  (by omega) (by omega) (by ring) (by omega) (by omega)
+  · exact residue_key _ _ (7*k) m (70*k) (21*k-1) (63*k+7) (by omega) (by omega) (by ring) (by omega) (by omega)
+
 /-- Concrete deep well: `{1,…,12,182}` is lonely at `14/183` (kernel-pure). -/
 theorem deepWell183_lonely : Lonely 14 (drop13 1) ((14 : ℝ) / 183) := by
   have h := drop13_lonely 1 (by norm_num); norm_num at h; exact h
 
+#print axioms drop8_lonely
 #print axioms drop9_lonely
+#print axioms drop10_lonely
 #print axioms drop11_lonely
 #print axioms drop13_lonely
+#print axioms deepWell183_lonely
 
 end LRC14
 end LonelyRunner

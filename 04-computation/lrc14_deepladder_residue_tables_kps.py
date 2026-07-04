@@ -43,3 +43,46 @@ for j,P in LAD.items():
     for (v,vlabel,A,B,qqA,qqB,rs) in rows:
         qqstr = f"{qqA}k+{qqB}" if qqA!=0 else f"{qqB}"
         print(f"    v={vlabel:>6}: qq={qqstr:>8}  r={A}k+{B}   (samples k=2,3,4: {rs})")
+
+# --- drop-8 (X0=56=lcm(8,14)) and drop-10 (X0=70=lcm(10,14)): complete the unique-coverer hexad ---
+print("\n\n########## drop-8, drop-10 (complete deep hexad) ##########")
+def resd(a,q): r=a%q; return min(r,q-r)
+for j,X0 in [(8,56),(10,70)]:
+    base=[v for v in range(1,14) if v!=j]
+    print(f"\n===== drop-{j}: X={X0}k =====")
+    # find witness at k=1,2,3 by search, fit p,q,md linear
+    from math import gcd
+    data=[]
+    for k in range(1,5):
+        X=X0*k; V=base+[X]; best=(0,0,1,0)
+        for q in range(2,200*k+80):
+            for p in range(1,q):
+                if gcd(p,q)!=1: continue
+                md=min(resd(v*p,q) for v in V)
+                if md*best[2]>best[0]*q: best=(md,p,q,md)
+        md,p,q,_=best
+        data.append((k,X,p,q,md))
+        print(f"  k={k}: X={X} t*={p}/{q} M={md}/{q}={md/q:.5f} md={md}")
+    # fit q=qa*k+qb, p=pa*k+pb, md=ma*k
+    (k1,_,p1,q1,m1),(k2,_,p2,q2,m2)=data[0],data[1]
+    qa=q2-q1; qb=q1-qa; pa=p2-p1; pb=p1-pa; ma=m2-m1
+    print(f"  FIT: t*=({pa}k+{pb})/({qa}k+{qb}) M={ma}k/({qa}k+{qb}); kappa={ma}k, q-kappa={qa-ma}k+{qb}")
+    print(f"  verify k=1..20:", end=" ")
+    okv=True
+    for k in range(1,21):
+        X=X0*k; V=base+[X]; p=pa*k+pb; q=qa*k+qb
+        if min(resd(v*p,q) for v in V)!=ma*k: okv=False
+    print("OK" if okv else "FAIL")
+    # residue table
+    print(f"  residue table (v: qq, r=Ak+B; need {ma}k<=r<={qa-ma}k+{qb}):")
+    for v in base+['X']:
+        vv=(lambda k:X0*k) if v=='X' else (lambda k,v=v:v)
+        rs=[];qqs=[]
+        for k in [2,3,4]:
+            p=pa*k+pb;q=qa*k+qb;N=vv(k)*p; rs.append(N%q);qqs.append(N//q)
+        from fractions import Fraction
+        A=Fraction(rs[1]-rs[0],1);B=rs[0]-A*2
+        qqA=Fraction(qqs[1]-qqs[0],1);qqB=qqs[0]-qqA*2
+        lbl=f"{X0}k" if v=='X' else str(v)
+        qstr=f"{qqA}k+{qqB}" if qqA!=0 else f"{qqB}"
+        print(f"    v={lbl:>5}: qq={qstr:>7} r={A}k+{B}")
