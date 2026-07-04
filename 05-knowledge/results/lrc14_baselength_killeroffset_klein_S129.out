@@ -1,0 +1,45 @@
+deep well 14/183 = 0.076503
+509 covering families. Testing: M <= 1/(base_len+1), and min-M => longest base.
+==========================================================================================
+
+M <= 1/(base_len+1) holds for all 509 families? True
+==========================================================================================
+base r base-opt 1/(r+1)  min M at this r       offset        argmin family
+     0                1              1/9          8/9  [2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 16]
+     1              1/2             3/26         5/13  [1, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 15, 20]
+     2              1/3             1/11         8/33  [1, 2, 4, 5, 6, 7, 9, 11, 12, 13, 14, 16, 20]
+     3              1/4             2/19        11/76  [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+     4              1/5             1/11         6/55  [1, 2, 3, 4, 6, 7, 8, 10, 11, 12, 14, 18, 26]
+     5              1/6             2/23       11/138  [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14]
+     6              1/7             1/11         4/77  [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14]
+     7              1/8             2/25        9/200  [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 16, 84]
+     8              1/9             2/23        5/207  [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 13, 18, 84]
+     9             1/10             7/89       19/890  [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 20, 84]
+    10             1/11             1/12        1/132  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 22, 182]
+    11             1/12             7/89       5/1068  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+    12             1/13           14/183       1/2379  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+==========================================================================================
+GLOBAL min M = 1/8 at base length r=0: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  is it the LONGEST base (r=12, deep well)? False
+  base-optimum 1/(r+1) = 1/13 = 0.076923; killer-offset = 1/13 - 14/183 = 1/2379 = 1/2379
+
+MONOTONICITY: min-M by base length (should DECREASE as r increases toward 12):
+  r= 0: min M = 1/9 (~0.111111)
+  r= 1: min M = 3/26 (~0.115385)  (up)
+  r= 2: min M = 1/11 (~0.090909)  (down/eq)
+  r= 3: min M = 2/19 (~0.105263)  (up)
+  r= 4: min M = 1/11 (~0.090909)  (down/eq)
+  r= 5: min M = 2/23 (~0.086957)  (down/eq)
+  r= 6: min M = 1/11 (~0.090909)  (up)
+  r= 7: min M = 2/25 (~0.080000)  (down/eq)
+  r= 8: min M = 2/23 (~0.086957)  (up)
+  r= 9: min M = 7/89 (~0.078652)  (down/eq)
+  r=10: min M = 1/12 (~0.083333)  (up)
+  r=11: min M = 7/89 (~0.078652)  (down/eq)
+  r=12: min M = 14/183 (~0.076503)  (down/eq)
+
+READING: if M <= 1/(base_len+1) universally and min-M sits at the LONGEST base r=12
+(the deep well), then covering-min = base-optimum - killer-offset (THM-618 mechanism) with
+the base-length as the order parameter. This EXPLAINS S128's swap-depth monotonicity
+(swap = base-shortening) via the killer-offset geometry, unifying THM-618 + S128.
+DONE

@@ -1,3 +1,25 @@
+## klein-2026-07-04-S129 -- THE COVERING-MIN NEEDS RAZOR-SHARPNESS ONLY AT THE DEEP WELL: residual has 35/16287 slack (HYP-4090). + 2-point equioscillation universal; base-length monotonicity REFUTED.
+
+Prompt (owner): investigate further and keep improving the proof.
+
+Ran into HEAVY fleet convergence (opus-S71 independently confirmed multi-swap >= 14/183 same window; mac-mini-S40 already had the 2-point equioscillation; mac-mini-S44 extended THM-618 to the whole single-killer stratum). So most of what I re-derived is confirmation. The genuinely useful new piece is a REFRAMING of the residual, plus a documented dead-end.
+
+USEFUL NEW PIECE -- the residual only needs a NON-sharp bound. Over all 509 minimal-tightener covering families (klein-S128): the deep well {1..12,182} is the UNIQUE family attaining 14/183; every OTHER covering family is >= 7/89 (gap 35/16287 ~ 0.00215). The deep well is single-killer, already PROVED (THM-618 + mac-mini-S44 whole-stratum 0/8410). CONSEQUENCE: the razor-sharp 14/183 is attained at exactly one, already-proved family => the m=2 folding residual (opus) only has to clear 14/183 for families that are ACTUALLY >= 7/89 -- i.e. with 35/16287 slack in every inequality. THE RESIDUAL IS A NON-SHARP BOUND. Folding/pigeonhole lose constants and can't hit a razor edge but CAN clear a margin. (7/89 = drop-12 residue-liar {1..11,13,84}, also PROVED, kps; so the two lowest rungs are proved; residual = nothing sneaks below the proved rungs.)
+
+CONFIRMATIONS (credit): (a) 2-POINT equioscillation (small runner + killer) is universal -- 53/60 lowest are 2-point (rest 3-point), confirms mac-mini-S40. NEW detail: the binding small runner VARIES (runner-1 for deep well/THM-618; runner-5 for {1..11,13,84}/residue-liar at t*=37/89; runner-2/3/7/11 elsewhere) => THM-618 & residue-liar are the SAME equioscillation with different binding runner. Confirms opus-S70's parametric route (Delsarte is dead). (b) multi-swap >= 14/183, deep well unique -- opus-S71 same window.
+
+MINOR: M(S) <= 1/(base_len+1) universally (509/509; sub-family {1..r} has M=1/(r+1), adding runners lowers M). Deep well saturates: longest base r=12 (covering forbids {1..13}) => M<=1/13, THM-618 offset 1/2379 lands 14/183. Equivalently Q/r <= 183/14 at the optimum, maximized uniquely by the deep well.
+
+REFUTED (dead-end, documented per "never waste ideas"): covering-min is NOT monotone in base-length r. Per-r minima: r=9->7/89 (0.0787) but r=10->1/12 (0.0833) UP, r=11->7/89, r=12->14/183. Base-length is NOT the covering-min order parameter (S128's swap-depth monotonicity is a per-depth minimal-tightener property, not a base-length law). Do not pursue base-length.
+
+HONEST: no new theorem, no Lean; mostly confirmation given the crowded frontier. Transferable: (1) the residual needs only a NON-sharp bound (35/16287 slack; sharp point = proved deep well) -- a real simplification for opus's m=2 folding; (2) binding small runner varies (THM-618 = residue-liar); (3) base-length is a dead-end.
+
+FILES: lrc14_equioscillation_structure_klein_S129.py(+out), lrc14_baselength_killeroffset_klein_S129.py(+out); INDEX HYP-4090; reflection the-covering-min-needs-razor-sharpness-only-at-the-deep-well; this log.
+
+NEXT: opus's m=2 folding is the open core -- now known to have 35/16287 slack (target the slacker >= 7/89 for non-deep-well m=2 families, not the razor 14/183). The single-killer sharp point is already proved (THM-618/mac-mini-S44), so the folding never needs razor-sharpness.
+
+---
+
 ## mac-mini-2026-07-04-S44 -- extend THM-618: the WHOLE single-killer stratum >= 14/183 (verified 0/8410; {1..12} tightest base) + the general-base subtlety (argmax moves; a near-refutation that wasn't)
 
 Prompt (owner): investigate further and keep improving the proof.
