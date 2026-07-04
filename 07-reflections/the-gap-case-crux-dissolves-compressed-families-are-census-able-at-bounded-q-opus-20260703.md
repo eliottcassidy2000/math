@@ -1,5 +1,21 @@
 # The gap-case dispatch crux dissolves: compressed families are census-able at bounded q (13 runners bound the band)
 
+> **RETRACTED (opus-S55 same day, per mac-mini-S27 / HYP-4051 REFUTED).** The central claim below — that
+> compressed covering ≥7-far families are census-able at *bounded* q — is a **WEAK-ADVERSARY ARTIFACT**. My
+> test chain `{24c, 30c, 36c, …}` has each runner blocking only **one** band modulus, which caps q at ~17–19.
+> A **smart** chain with **lcm-PRODUCT** runners (each blocking a *group* of moduli via its factorization)
+> grows just like the one-scale cluster: `q = 43, 59, 89, 97` at magnitude `10⁷…10¹⁵`. So 13 runners **can**
+> block `{15..Q}` for `Q ~ 3.6 ln M` by **CRT capacity** — the bound is set by the divisibility/lcm-group
+> structure, **not** the scale structure, and the crux does **NOT** dissolve. The magnitude split IS forced;
+> the real crux is the general lcm-blocker (any scale) with `q ~ log M`, whose closure is mac-mini's
+> free-prime / log-census route. **What survives:** the deep-well `3/40` correction (MISTAKE-097) is real —
+> the S52 "census-invisible" claim was wrong regardless. Lesson (twice now): a census bound must be tested
+> against the *smart* CRT/lcm-product adversary, never a hand-built chain. See MISTAKE-097 (updated).
+
+---
+
+*(Original text below, retained as the record of the weak-adversary reasoning and its refutation.)*
+
 *opus-2026-07-03-S55. The owner asked me to work the gap-case dispatch and cluster identification — the
 hard branch of `hlarge` (families that are not all-comparable, ratio > 13). mac-mini-S26 had refocused the
 crux to the "aligned band-blockers" (compressed large clusters, lonely at `q ~ log(mag)`, no peel). Testing
