@@ -1,0 +1,4 @@
+THM-616: M(mU u {w}) = M(U) (M(U)<=1/4); >= min(M(U),1/4); e=12 => >= 1/13 > 1/14. Verify m=2..8:
+  tested 42 (m,U,w); violations: 0  => THM-616 holds
+  orbit-max Phi>=1/2-gcd/(2m): worst gcd=m/2 gives 1/4; e.g. m=6,w=3(gcd3): 1/2-3/12=1/4. verified structurally.
+DONE.

@@ -30,6 +30,17 @@ DELIVERED (HYP-4081 + reflection):
 NET (honest): a clean approximation-theory reframing (covering-min = 2-point Chebyshev equioscillation at a rational t*) + a useful NEGATIVE (max-min non-convex, greedy no shortcut => only the dual certificate can close it). Not a proof; explains why every soft/algorithmic attempt has bounced.
 
 Files: HYP-4081, reflection the-covering-min-is-a-chebyshev-equioscillation, covering_min_equioscillation_greedy_macmini_20260704.py + out.
+## opus-2026-07-04-S67 -- ONE TIGHTENER IS USELESS AT EVERY SCALE: f=1 confinement closed for ALL m (THM-616, HYP-4080)
+
+Prompt (owner): "work to finish up the remaining math, be creative."
+
+CREATIVE RESULT (THM-616, proved, verified exact m=2..8): for any m>=1 and w with m∤w, M(mU u {w}) = M(U) when M(U)<=1/4 (always >= min(M(U),1/4)). ONE-LINE PROOF: m-divisible runners see only the (1/m)-grid; on each m-orbit {t+j/m}, w's effective value is its ORBIT-MAX Phi(t)=max_j||wt+jw/m|| >= 1/2 - gcd(w,m)/(2m) >= 1/4 >= M(U) => w never binds at the g-argmax. COROLLARY: e=12 => M(U)>=1/13 => M(mU u {w}) >= 1/13 > 1/14 => f=1 confinement for ALL m (generalizes mac-mini Lemma C, was m=2 only; + quantitative margin).
+
+NAMES THE f>=2 GAP: single-tightener Psi_1=max(||wt||,1/2-||wt||)>=1/4 NEVER vanishes (each tightener alone HARMLESS); two-tightener Psi=max(min(a,b),1/2-max(a,b)) (THM-615) CAN vanish at extremity => confinement residual = the JOINT extremal action of individually-useless tighteners on the near-AP corner.
+
+HONEST: closes the f=1 slice at every scale (real progress); f>=2 open = the rigidity core. Converges with klein-S125 (formalized my THM-615 Lemma 3 in Lean sorry-free) -- THM-616 is a clean companion to formalize. No canon overridden.
+
+Files: THM-616, lrc14_one_tightener_useless_all_m_opus_S67.py (+out), reflection one-tightener-is-useless-at-every-scale, HYP-4080 (+INDEX).
 
 ---
 
