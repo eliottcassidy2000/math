@@ -260,6 +260,18 @@ HONEST STATUS: LRC(14) NOT closed (open research). spread13 closes the all-compa
 
 FILES: LRCSpread13.lean (spread13_lonely + lonely14_of_ratio, registered); 2 numerical probes + outs; HYP-3984 INDEX; reflection; this entry. No canon overridden.
 
+## mac-mini-2026-07-03-S29 -- CORRECTION: the census/log-census was a RED HERRING. Compressed >=7-far families are LOOSE; the crux is the MEASURE route (easy here), not the rational witness (HYP-4055).
+
+Prompt (owner): prove lemma (A) / push toward a large-sieve bound, close the crux.
+
+I pursued lemma (A) and the pursuit REDIRECTED the crux (honest correction of my own S26-S28 direction):
+ * Built the OPTIMAL lcm-packing adversary (3rd weak-adversary correction this stretch: earlier q*~97 was under-built). The true RATIONAL-WITNESS denominator q* grows FAST -- >4000 at M>=10^20, blocking ~1900 free moduli by 2-term tiling. So HYP-4040's 'q~3.6 ln M' and my S29 mid-result 'q*=Q_pack+O(1)' were BOTH weak-adversary under-estimates. (q* = Q_pack(lcm-packing, ~8 ln M) only for small M; tiling explodes the gap at large M.)
+ * BUT the lcm-packed compressed families are VERY LOOSE: M(view)=0.25-0.32 = 3.5-4.5x the danger radius. And MIN M over 279 compressed >=7-far covering families = 0.111 = 1.56x. So HGE7 (compressed >=7-far) is UNIFORMLY LOOSE.
+ * => THE CENSUS DIRECTION MEASURED THE WRONG QUANTITY. q* (rational witness denominator) is unbounded but IRRELEVANT: the families are loose (lonely at some t with big margin; positive safe measure, just avoiding small-denominator rationals). The right quantity is the SAFE MEASURE (positive for covering => M>=14/183>1/14). So compressed >=7-far crux = the MEASURE route (klein/kps/opus 13/7>1) -- and EASY here (>=1.5x margin).
+ * THE REAL CRUX = the TIGHT families (M~14/183): small-speed AP {1..13}, deep well {1..12,182}, GW -- NOT compressed >=7-far. They live in the WINDOW/<=6-far/far-peel legs (census q<=45 reaches the deep well at 3/40; far-peel+THM-609 the single-far), handled there. The covering-min tightness is carried by the small-speed legs, not the >=7-far tower.
+
+HONEST NET: my S26-S28 log-census/capacity program (HYP-4040/4054) was aimed at a LOOSE (easy) case, chasing an irrelevant denominator. HYP-4040 stays TRUE (unbounded rational witness) but IRRELEVANT to loneliness. The lesson (4th weak-adversary encounter, MISTAKE-095/096/098): build the maximal adversary AND check WHICH quantity matters (measure vs rational witness). FILES: primepacking_capacity + lcm_packing_capacity + M-view (py+out); HYP-4055; HYP-4040/4054 reframed; broadcast. No canon overridden.
+
 ## mac-mini-2026-07-03-S28 -- THE CAPACITY ARGUMENT: the creative reason the log-census kernel closes, reduced to ONE circle-method lemma (HYP-4054). Blocking a modulus costs a bounded quantum of the speeds' information => O(log M) blockable => witness q*=O(log M).
 
 Prompt (owner): pursue the genuine open kernel; creative mathematical reason, not formalization.
