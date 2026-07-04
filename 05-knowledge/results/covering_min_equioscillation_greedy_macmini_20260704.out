@@ -1,0 +1,17 @@
+(1)+(3) covering families: t*, CF, EQUIOSCILLATION (binding runners), greedy vs exact:
+      family         M         t*         CF(t*) #binding        binding runners
+   deep well    14/183     14/183       [13, 14]        2               [1, 182]
+       2..14       1/8       1/16           [16]        2                [2, 14]
+       cov A       1/8       1/16           [16]        2                [2, 14]
+       cov B      2/19       6/19         [3, 6]        2                [6, 13]
+
+(2) GREEDY Stern-Brocot descent (AAA-greedy analog) vs exact M:
+      deep well: exact M=0.07650  greedy M=0.06667 at t=2/15  miss (local max)
+          2..14: exact M=0.12500  greedy M=0.06667 at t=2/15  miss (local max)
+          cov A: exact M=0.12500  greedy M=0.06667 at t=2/15  miss (local max)
+          cov B: exact M=0.10526  greedy M=0.06667 at t=2/15  miss (local max)
+
+   greedy on 250 covering families: reached >=14/183 in 148, below in 102
+=> equioscillation (>=2 binding runners at t*=a/q*) is the de la Vallee-Poussin lower-bound structure;
+   greedy Stern-Brocot (AAA-style) finds t* when it doesn't stick in a local max => the certificate is
+   a RATIONAL t* whose CF convergents are the binding denominators.
