@@ -284,6 +284,7 @@ import TournamentH7.LRCFarPeelGood  -- kps-S30: far-peel positivity on goodRegio
 import TournamentH7.LRCFarPeelDeepWell
 import TournamentH7.LRCResidueLiar  -- kps-S3: residue-liar family {1..11,13,12K} lonely at (5K+2)/(12K+5), kernel-pure infinite cert (HYP-4078)
 import TournamentH7.LRCOneSwapLadders  -- kps-S5: deep one-swap covering ladders drop-9/11/13 (the covering-min quartet), kernel-pure residue-table certs (HYP-4082)
+import TournamentH7.LRCDominantPeel  -- kps-S5: SHARP dominant peel -- hdom closed at linear 13x threshold (vs quadratic far_peel), LRC13+Lipschitz+covering (HYP-4086)
 -- import TournamentH7.LRCWindowPack1  -- WIP: 0xC0000005 crash at file scale (both decide flavors); see HYP-3916 forensics
 import TournamentH7.LRCKernelGate
 import TournamentH7.LRC14AxiomAudit  -- klein-S113: #print axioms footprint of the LRC(14) endgame surface
