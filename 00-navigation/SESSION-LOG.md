@@ -1,3 +1,22 @@
+## opus-2026-07-03-S61 -- MULTI-TIGHTENER CONFINEMENT: partial (extremity + compactness) -- INDEPENDENT CONVERGENCE with mac-mini Lemma D; NOT closed (HYP-4066, THM-614 as convergence note)
+
+Prompt (owner): "prove confinement for the multi-tightener case" (THM-612 open gap: primitive tight => q*=14; f=1 done by Lemma C, f>=2 open).
+
+HONEST OUTCOME: did NOT close it, and mac-mini (S32/S33 Lemma D, SAME PROMPT) reached the same partial FIRST and went FURTHER. My independent convergence:
+ * Setup (m=2,q*=28): S=2U u F, F odd; on U-loose R={g_U(2t)>1/14} ((+1/2)-invariant) tightness forces F to COVER R; odd w: ||w(t+1/2)||=1/2-||wt||.
+ * PROVED: f>=2 & f>=7 meas(R); **EXTREMITY LEMMA (f=2)**: on R one tightener <=1/14, other >=3/7 (=mac-mini S32 anti-correlation; verified 3728 pts) => single-tightener components => **COMPACTNESS w_1,w_2<=12 u_max** (via THM-613 slope on the global-max component + M(U)>=1/12).
+ * Independent exact-M/q* search: 938 structured even-block+odd-tightener families, 0 primitive tight q*>14.
+
+WHY NOT CLOSED: the shift argument uses ONLY "F covers R" (necessary, not sufficient -- single-loose-arc U makes it easy); the real obstruction = global tightness (M(S)<=1/14 off R) + attained-denominator q*=28 + primitivity, invisible to the shift; m>=3 untouched.
+
+CONVERGENCE/CREDIT: mac-mini Lemma D (THM-612) SUBSUMES mine + adds switch-divisibility w_i|w_j => FINITE per-U check (residual: bound v_max(U) itself). I made THM-614 a CONVERGENCE NOTE (superseded, cite Lemma D), not a competing canon theorem. My net add: independent confirmation + the clean closed-form w_i<=12 u_max.
+
+HONEST: confinement stays CONJECTURE => tight-locus rigidity + measure floor stay open. MISTAKE-097 flagged. No canon overridden.
+
+Files: THM-614 (convergence note), lrc14_confinement_setup_opus_S61.py (+out), reflection the-multitightener-shift-obstruction-and-why-it-does-not-close, HYP-4066 (+INDEX).
+
+---
+
 ## mac-mini-2026-07-03-S33 -- THE SWITCH OBSTRUCTION (Lemma D): |F|=2 confinement reduced to a FINITE per-U check (switch-point divisibility w_i|w_j => w1=w2 contradiction, or tighteners bounded by the even part)
 
 Prompt (owner): keep pushing on the confinement anti-correlation obstruction.

@@ -1,65 +1,42 @@
 ---
 id: THM-614
-title: Partial multi-tightener confinement (THM-612 open gap). For a primitive tight family with q*=28 (m=2) and f=2 tighteners, the EXTREMITY LEMMA holds — on the U-loose region R, exactly one odd tightener is ≤1/14 and the other ≥3/7 — forcing every component of R to be single-tightener and giving the MAGNITUDE BOUND w_i ≤ 12·u_max (both tighteners bounded by the even part's scale). General f: f ≥ 2 and f ≥ 7·meas(R). These CONSTRAIN the multi-tightener case but do NOT close it — the residual is the global tightness (M(S)≤1/14 off R) + primitivity, not captured by the covering-of-R shift argument. Confinement (primitive tight ⟹ q*=14) remains a CONJECTURE.
-status: PARTIAL — the Extremity Lemma, the single-tightener component structure, the magnitude bound w_i ≤ 12 u_max (f=2), and f ≥ max(2, 7·meas R) are PROVED (elementary; verified). Full confinement is NOT proved. Independent search (938 structured even-block+odd-tightener families, e=10,11,12) finds 0 primitive tight with q*>14, consistent with THM-612.
+title: (CONVERGENCE NOTE — SUPERSEDED BY THM-612 Lemma D.) Independent re-derivation of the m=2, f=2 confinement structure — the extremity dichotomy on the U-loose region and the "tighteners bounded by the even part" compactness — which mac-mini reached first (S32 anti-correlation + S33 Lemma D switch obstruction) and carried further to a finite per-U check. Retained only as an independent-convergence record; the canonical statement is THM-612 (Lemma D). Contributes an alternative closed-form compactness bound w_i ≤ 12·u_max and independent search confirmation.
+status: CONVERGENCE / SUPERSEDED. The results here (extremity lemma; single-tightener components; w_i ≤ 12 u_max for f=2; f ≥ max(2, 7 meas R)) are PROVED and CORRECT but were reached independently and are subsumed by THM-612 Lemma D (mac-mini S32/S33), which additionally gives the switch-point divisibility w_i|w_j and the finite per-U reduction. Full confinement remains CONJECTURE. Do NOT cite this as a separate result; cite THM-612 Lemma D.
 source: opus-2026-07-03-S61
 depends_on:
-  - THM-612   # the tower + Lemma C (f=1); this extends the shift obstruction toward f≥2
-  - THM-610   # tight ⟹ 14|q* (so q*=14m)
-  - LRCUpTo13 # M(U) ≥ 1/(e+1): forces U loose and bounds the magnitude
+  - THM-612   # Lemma D (mac-mini S33) — the canonical, stronger statement; this converges with it
 related:
-  - THM-613   # the same Lipschitz slope idea powers the magnitude bound here
-  - HYP-4062  # kps: tight locus rigidity (confinement ⟹ the finite mod-14 problem)
-  - HYP-2913  # g(14)≤3, the other open gap
+  - THM-613   # the Lipschitz slope idea behind the w_i ≤ 12 u_max form
+  - HYP-4066  # opus-S61: the honest convergence record + non-closure
 results:
   - 04-computation/lrc14_confinement_setup_opus_S61.py
   - 05-knowledge/results/lrc14_confinement_setup_opus_S61.out
 ---
 
-# THM-614 — partial multi-tightener confinement
+# THM-614 — convergence note (superseded by THM-612 Lemma D)
 
-**Setup (THM-612, m=2).** `S` primitive, tight (`M(S)=1/14`), `q*=28`. `E` = even runners `= 2U`,
-`F` = odd tighteners, `f=|F|`, `e=|E|=13−f`. `R = {t : g_U(2t) > 1/14}`, `g_U(τ)=min_{u∈U}‖uτ‖`.
-On `R` the `E`-runners are strictly safe, so tightness forces `R ⊆ ⋃_{w∈F} D_w`, `D_w={‖wt‖≤1/14}`.
-Two facts: `R` is `(+1/2)`-invariant (`g_U(2(t+1/2))=g_U(2t+1)=g_U(2t)`); and for odd `w`,
-`‖w(t+1/2)‖ = 1/2 − ‖wt‖` (so `D_w ∩ (D_w+1/2) = ∅`) — a single tightener covers ≤ one of each pair
-`{t, t+1/2}`, whence **`f ≥ 2`** (reproving Lemma C) and, by the measure/union bound, **`f ≥ 7·meas(R)`**.
+**This is not an independent theorem.** Working the owner's "prove multi-tightener confinement" prompt, I
+independently re-derived the `m=2, f=2` structure that mac-mini had already reached (S32 anti-correlation)
+and extended (S33 **Lemma D**, now in THM-612). Recorded here only as an independent-convergence check;
+**the canonical statement is THM-612 Lemma D**, which is strictly stronger.
 
-## Extremity Lemma (f=2, PROVED)
-> For every `t ∈ R`: **exactly one of `‖w_1t‖, ‖w_2t‖` is `≤ 1/14`, and the other is `≥ 3/7`.**
+## What converged (proved, but not new)
+For primitive tight `S=2U∪F`, `q*=28`, `f=2`, on `R={g_U(2t)>1/14}` ((+1/2)-invariant):
+- **Extremity dichotomy** — at every `t∈R`, exactly one tightener is `≤1/14`, the other `≥3/7`
+  (`= ` mac-mini's S32 anti-correlation `{‖w_2t‖<1/14}={‖w_1t‖>6/14}` on `R`). Verified on 3728 points.
+- **Single-tightener components**, types swapped by `+1/2`.
+- **Compactness** — the tighteners are bounded by the even part. My closed form: applying the Lipschitz
+  slope bound (THM-613) to the component at `U`'s global max (length `≥(M(U)−1/14)/u_max`, and `≤1/(7w_i)`),
+  with `M(U)≥1/12`, gives `w_1,w_2 ≤ 12·u_max`. mac-mini's Lemma D gives the sharper
+  `w_i < 4N/(7 meas R_U)` (`N=2·#lonely-intervals(U)`) plus the **switch-point divisibility**
+  `w_i | w_j` (which I did not obtain) reducing `f=2` to a finite per-`U` check.
+- `f ≥ 2` and `f ≥ 7·meas(R)` (elementary union/reflection bounds).
 
-**Proof.** `t` and `t+1/2` both lie in `R`, so both are covered. If `‖w_1t‖≤1/14`: then covering
-`t+1/2` needs `‖w_1(t+1/2)‖≤1/14` or `‖w_2(t+1/2)‖≤1/14`; the first is `1/2−‖w_1t‖ ≥ 6/14 > 1/14`,
-impossible, so `‖w_2(t+1/2)‖≤1/14`, i.e. `‖w_2t‖ = 1/2 − ‖w_2(t+1/2)‖ ≥ 3/7`. Symmetrically if
-`‖w_1t‖>1/14` then `‖w_2t‖≤1/14` and `‖w_1t‖≥3/7`. ∎ *(verified on 3728 doubly-covered points.)*
+## Independent confirmation (the one genuinely useful artifact)
+Exact-`M`/`q*` search over 938 structured even-block + odd-tightener families (`e=10,11,12`): **0**
+primitive tight with `q*>14` — an independent check of mac-mini's confinement search on this slice.
 
-## Corollary — single-tightener components and the magnitude bound (f=2, PROVED)
-Since `‖w_1t‖` is continuous on `R` and never lands in `(1/14, 3/7)`, each connected component `I` of `R`
-has `‖w_1t‖` entirely `≤1/14` (a "`w_1`-danger" component, `w_2` then `≥3/7`) or entirely `≥3/7`
-(a "`w_2`-danger" component); the `(+1/2)`-shift swaps the two types. A single-type component lies inside
-ONE arc of the corresponding danger set, of length `1/(7w_i)`.
-
-Apply this to the component `I_0 ∋ t_g := τ_0/2` where `τ_0 = argmax g_U` (`g_U(τ_0)=M(U)`). Since
-`g_U(2·)` is `2u_max`-Lipschitz and peaks at `t_g`, `I_0 ⊇ (t_g−ρ, t_g+ρ)` with
-`ρ=(M(U)−1/14)/(2u_max)`, so `|I_0| ≥ (M(U)−1/14)/u_max`. If `I_0` is `w_1`-danger,
-`|I_0| ≤ 1/(7w_1)`, giving `w_1 ≤ u_max/(7(M(U)−1/14))`. With `e=11` runners, `M(U) ≥ 1/12` (LRC≤13),
-so `M(U)−1/14 ≥ 1/84` and
-> **`w_1, w_2 ≤ 12·u_max`.**
-
-So a `q*=28`, `f=2`, primitive tight family is **compact**: its odd tighteners are bounded by `12×` the
-even part's largest speed. (General `e`: the tightener covering the largest `R`-component is
-`≤ [2(e+1)/(13−e)]·u_max`.)
-
-## What this does and does not do
-- **Does (proved):** reduces a hypothetical `q*=28` `f=2` tight family to a *compact* one (tighteners
-  `≤ 12 u_max`) with a rigid extremity/component structure; reproves `f≥2`; gives `f ≥ 7 meas(R)`.
-  Independent search (938 structured families) finds none, matching THM-612.
-- **Does NOT (honest):** close confinement. The shift argument only uses that `F` **covers `R`**; it does
-  not use the full tightness `M(S) ≤ 1/14` *off* `R`, nor that the max is *attained* at denominator `28`,
-  nor primitivity beyond `E` even. A single-loose-arc `U` makes covering-of-`R` by two tighteners
-  structurally easy, so the real obstruction lives in the global/attained/primitivity conditions the shift
-  argument cannot see. `m ≥ 3` is untouched (the clean `1/2−‖wt‖` reflection is `m=2`-specific).
-
-**Confinement (`primitive tight ⟹ q*=14`) remains a CONJECTURE** (THM-612). This note contributes the
-extremity structure, the compactness bound `w_i ≤ 12 u_max`, and independent search confirmation — a
-proper subset of the gap, clearly scoped.
+## Honest status
+Full confinement (`primitive tight ⟹ q*=14`) is **not proved** (THM-612): the residual is mac-mini's
+"bound `v_max(U)`, the even part itself", plus all `m≥3`. This note claims no closure — see THM-612
+Lemma D for the live, stronger line, and HYP-4066 for the convergence record.
