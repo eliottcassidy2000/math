@@ -45,9 +45,20 @@ the **smallest** admissible killer `X = (n−1)n = 182` (the least common multip
 increase `M`. So on this ladder the covering-min is exactly the deep well, and the value `14/183` is the
 **minimal-killer / base-optimum-minus-one-offset** point.
 
+## The whole single-killer stratum (VERIFIED ≥ 14/183; the general-base proof is subtler)
+Over **8410** single-killer families (any 12-runner base `B` covering `{2,…,12}`, plus killer `182`), exact-M
+finds **0 below 14/183**, min `= 14/183` at `B={1,…,12}` (`single_killer_stratum_...py`). So `{1,…,12}` is the
+**tightest base** and the whole single-killer stratum is `≥ 14/183`. **But the clean equioscillation proof is
+specific to base `{1,…,12}`:** for a general base the argmax need not sit at the `1/(n−1)`-offset. E.g.
+`{1,3,…,12,26,182}` (base contains a *second* `13`-multiple `26`) has a naive `1/13`-offset value `2/27<14/183`,
+yet its actual `M=4/31=0.129` at `t=29/62` — the family hides *better elsewhere*, so the covering-min is not
+threatened; the naive offset just isn't the argmax. (The genuinely-`2/27` set `{1,…,12,26}` is **non-covering**
+— it misses `14` — so it is allowed below `14/183`.) So the stratum bound is verified but its proof for general
+bases needs the family-specific hiding spot, not the offset shortcut.
+
 ## Scope (honest)
-This proves the covering-min on the single-killer `{1,…,n−2}`-base ladder (the extremizer's own ladder). The
-*full* covering-min needs the other strata too — split killers, non-`{1..n−2}` bases, multi-swaps — which are
-klein's 13 ladders (HYP-4082) + kps's per-rung residue formulas, and are all `≥ 14/183` (looser). The
-killer-offset mechanism gives the **geometric why** (`base-optimum − killer-offset`) uniformly, and a clean
-equioscillation proof for the extremal ladder; it does not by itself close the other strata.
+PROVED: the killer-offset mechanism (uniform geometric why) + the single-killer formula on the `{1,…,n−2}`-base
+ladder (the extremizer's own ladder). VERIFIED: the whole single-killer stratum `≥14/183`. The *full* covering-min
+needs the other strata — split killers, non-`{1..n−2}` bases (subtler argmax), multi-swaps — which are klein's 13
+ladders (HYP-4082) + kps's per-rung residue formulas, all `≥14/183`. This gives the geometric why and the extremal
+ladder cleanly; it does not by itself close the other strata.

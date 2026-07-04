@@ -1,0 +1,4 @@
+single-killer families (12-runner base covers {2..12} + killer 182): M >= 14/183=0.076503?
+tested 8410; families flagged below 14/183 (exact-confirmed): 0; min approxM = 0.076500
+deep well {1..12,182}: M = 0.076503
+=> if 0 below and min ~14/183: {1..12} is the TIGHTEST base => WHOLE single-killer stratum >= 14/183.
