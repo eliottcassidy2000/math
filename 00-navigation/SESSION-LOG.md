@@ -36,6 +36,25 @@ Files: reflection the-residue-freedom-collapse.md, HYP-4059 (+INDEX), 5 scripts 
 
 ---
 
+## opus-2026-07-03-S58 -- THE CV GATEKEEPER IS MISCALIBRATED ON COVERING FAMILIES: answered klein HYP-3554 #2, filled the r=1 deep-well row, found the floor-deficit minimizer is DROP-7 (HYP-4061); NOT a floor proof (honest)
+
+Prompt (owner): lower-bound the tight-family measure floor.
+
+INTEGRATED (pulled): the fleet is FAR more developed on the measure floor than my S57 realized -- THM-579 (mac-mini: covering floor as CV-of-sheet-count criterion, PROVED inequality, open piece = uniform CV bound), HYP-3554 (klein: CV(N_R) UNBOUNDED, sup 8.74, => uniform CV FALSE, motivates Gamma_0(N)), kps signed-CS => OPEN-Q-108 (near-tight cores x non-resonant combs, 1/1260..1/36 window), MISTAKE-078 (abs-bound diverges = the wall I re-derived in S57), kps HYP-4059 (pairwise-resonance VACUOUS for census f_q), kps HYP-4060 (PRIMITIVE covering-min=14/183, UNIQUE extremizer = deep well {1..12,182}; imprimitive 14*{1..13} covering+tight but gcd-reduces to non-covering -- the scale-invariance I'd derived, subsumed). So I built ON THM-579's crisp open piece, not reinvent.
+
+CONTRIBUTED (exact arithmetic; lrc14_floor_CV_r1_deepwell + lrc14_floor_dense_R_covering_crux scripts):
+ * THE r=1 SIMPLIFICATION: single far runner => m_Q=6/7 ALWAYS => threshold EXACTLY 6, gatekeeper = CV^2(R)<6. The DEEP WELL {1..12,182} (kps's unique covering-min extremizer) IS the r=1 config R={1..12},Q={13} (182=14*13) -- mac-mini's table skipped r=1. FILLED: CV^2=1.095<6, PASSES, CS bound +0.573, R'=0.818. (Exact CV^2 via Var(N_R)=14 sum_d A(d/14)-(14 m_R)^2, A=R-safe autocorrelation.)
+ * ANSWERED klein HYP-3554 #2 (YES): gatekeeper-FAILING dense R ({1..13}\{6} CV^2=7.76, \{12} CV^2=8.74) DO complete to genuine covering families ({1..5,7..13,14}, {1..11,13,84}) => CV gatekeeper NOT uniform even on the real family; need exact-SPEC/Gamma_0(N) (HYP-3553/THM-580). Actual R'>0 on all (1.167, 0.514) -- klein robustness confirmed EXACTLY.
+ * THE MISCALIBRATION (new): the covering family with the LOWEST actual floor R'=0.315 is {1..13}\{7} (DROP SPEED 7) -- and it PASSES the gatekeeper (CV^2=3.63<6). So CV^2>6 does NOT track the floor deficit; it flags the WRONG families. A uniform floor proof must REPLACE the CV proxy, not repair it.
+ * SPEED 7 = one apex-7 phenomenon: Fourier-zero of the band 1/14=1/(2*7) (my HYP-4058), sheet-folder in Var(N_R) (7*a/14=a/2, klein's amplifier), AND floor-minimizer in R'. The covering floor is thinnest at drop-7.
+ * FOUR distinct axes on covering families, do NOT coincide: (i) meas(S), (ii) CV gatekeeper, (iii) actual R' [the binding one], (iv) covering-min M [kps, deep well]. The R'-minimizer (drop-7) is invisible to the other three.
+
+HONEST: NOT a uniform lower bound on R' (= the tight-family measure floor = LRC(14) hard core). Maps WHERE the floor is hard (drop-7/apex-7) and rules OUT the CV proxy as the tool -- repositions the route to Gamma_0(N)/exact-SPEC. Given MISTAKE-097 (prior overclaims) I flag the non-closure plainly.
+
+Files: lrc14_floor_CV_r1_deepwell_opus_S58.py (+.out), lrc14_floor_dense_R_covering_crux_opus_S58.py (+.out), reflection the-cv-gatekeeper-is-miscalibrated-on-covering-families, HYP-4061 (+INDEX).
+
+---
+
 ## opus-2026-07-03-S57 -- COVERING-COMMENSURABILITY on the MEASURE ROUTE (mac-mini-S29 pivot integrated) + the danger band's 7-FOURIER-ZEROS (HYP-4058); NOT a closure (honest)
 
 Prompt (owner): pursue the covering-commensurability angle further.
