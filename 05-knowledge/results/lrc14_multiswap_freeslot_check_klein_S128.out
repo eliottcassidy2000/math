@@ -1,0 +1,16 @@
+deep well 14/183 = 0.076503
+FREE-SLOT drop-sets (|missing(A)| < d): fill missing minimally, pad with smallest fresh.
+====================================================================================
+  checked 1417 free-slot families
+  WORST (min M) free-slot family: M=1/11 (~0.090909)  d=3  [1, 2, 3, 4, 7, 9, 10, 11, 12, 13, 14, 15, 16]
+  >= 14/183 ? True
+====================================================================================
+
+BOUNDED CROSS-CHECK: all covering systems with <=13 elements, every element <= B.
+  (small-element regime -- independent of the minimal-tightener assumption)
+  B=28: 48 covering systems (with prefix 1..7); MIN M = 3/31 (~0.096774)  at [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 14, 24]
+         >= 14/183 ? True
+  B=30: 72 covering systems (with prefix 1..7); MIN M = 3/31 (~0.096774)  at [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 14, 24]
+         >= 14/183 ? True
+
+DONE

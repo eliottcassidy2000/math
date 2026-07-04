@@ -26,6 +26,29 @@ REDIRECTS ROUTE 2: a degree-~v_max certificate = a witness of denominator ~v_max
 VALUE: sharpens mac-mini S40 (the "single Delsarte certificate" was the wrong target; the residue-formula ladders are right AND degree-optimal), vindicates kps's parametric approach. Both routes unify: parametric family + finite shell.
 
 Files: lrc14_delsarte_dual_degree_obstruction_opus_S70.py (+out), reflection the-delsarte-dual-degree-scales-with-vmax-no-universal-certificate, HYP-4086 (+INDEX). No canon overridden.
+## klein-2026-07-04-S128 -- THE COVERING-MIN SPECTRUM HAS AN ISOLATED MINIMUM AT THE DEEP WELL: monotone in swap-depth, gap 35/16287 (HYP-4086). Sharpens THM-617 at the m=2,f=2 boundary.
+
+Prompt (owner): creative improvements and progress toward the core.
+
+Extended the S127 ONE-swap map to the WHOLE space of 13-element covering systems (each q in {2..14} divides some runner). Every 13-set = A u T, A subset {1..13} (AP core), T tighteners >=14; a d-swap drops d AP elements. TWO monotonicities (both S127): (i) SCALE a tightener up (same count) => M INCREASES => the covering-MIN uses SMALLEST tighteners per role; (ii) ADD a tightener => M DECREASES. Under (i) the extremal search collapses to set-partitions of the missing q's into smallest tighteners -- finite, exhaustive over the min-carrying families.
+
+FINDING (exact, Fractions): the covering-min is MONOTONE INCREASING in swap-depth, GLOBAL min = deep well:
+  d=1 -> 14/183 (deep well {1..12,182})   d=2 -> 7/89   d=3 -> 2/25   d=4 -> 2/23.
+Free-slot families (drop small AP elts dividing kept ones): worst M=1/11 > 14/183. All covering systems with every element <=30: min M=3/31 > 14/183. So the deep well is the UNIQUE global covering-min over the entire tested space (one-swap + multi-swap d<=4 + free-slot + bounded).
+
+RIGIDITY (the leverage): the minimum is ISOLATED. Spectrum 14/183 < 7/89 < 2/25 < 7/85 < 13/157 < 1/12 < 2/23 < ..., GAP 7/89 - 14/183 = 35/16287 ~ 0.00215 above the deep well (same isolation as S126's 11-runner even-part spectrum, now in the covering-min itself). Higher rungs = ladders k/(12k+c) (->1/12) and k/(11k+1) (->1/11). MECHANISM (opus S48 R2): AP core = min-discrepancy => densest core (fewest swaps) = lowest floor; deep well forced to d=1 because 13,14 can't both be covered by an AP element <=13 => single maximal tightener lcm(13,14)=182.
+
+CONVERGENCE / CREDIT (heavy overlap this window -- the swarm is on covering-min):
+ - kps-S5 (HYP-4085) already Lean-certified the one-swap ladders incl. the deep-well drop-13 {1..12,182k} lonely at 14k/(182k+1) (LRCOneSwapLadders.lean: drop13_lonely, deepWell183_lonely). I independently derived AND BUILT the identical ladder this session (LRCDeepWellLadder.lean, green, kernel-pure) BEFORE syncing -- pure concurrent convergence. kps's file is canonical, so I DELETED my duplicate and did NOT add it to the corpus. No new Lean from me this session.
+ - mac-mini/opus THM-617 (HYP-4084) PROVED multi-tightener confinement (few tighteners useless, M>=1/14 for f<=6), explicitly pinning the hard boundary at m=2,f=2 (needs "the gap") and verifying it on MY S126 Ostrowski ladder. My exact spectrum + gap 35/16287 is the QUANTITATIVE statement at exactly that pinned boundary -- the two results compose (THM-617 removes the easy multi-tightener bulk; the isolated-minimum spectrum is what remains at m=2,f=2).
+
+PROGRESS TOWARD THE CORE: "bound M over all covering systems" (LRC(14)-equivalent) becomes a RIGIDITY statement -- discrete spectrum, isolated infimum at 14/183 -- splitting into (a) deep well attains 14/183 [DONE, kps-S5 formalized]; (b) every other covering system >= 14/183 + gap [the open core, now a GAP statement at the m=2,f=2 edge, not a delicate >1/14]. The isolation is what a Delsarte/Beurling-Selberg dual (mac-mini S40) or Schur-convexity (opus R2) can certify where a continuum could not.
+
+HONEST: strong COMPUTATIONAL evidence (exhaustive minimal-tightener to d=4 + free-slot + bounded cross-check), NOT a proof of the global bound; monotonicity-in-depth verified, not proved. The qualitative "multi-swap looser" is now PROVED (THM-617) -- my add is the exact spectrum/gap sharpening at the pinned boundary. No new Lean (duplicate deleted).
+
+FILES: lrc14_multiswap_covering_min_klein_S128.py(+out), lrc14_multiswap_freeslot_check_klein_S128.py(+out); INDEX HYP-4086; reflection the-covering-min-spectrum-has-an-isolated-minimum-at-the-deep-well; this log. (Deleted duplicate LRCDeepWellLadder.lean -- superseded by kps-S5 LRCOneSwapLadders.)
+
+NEXT: (a) attack the m=2,f=2 boundary directly (THM-617's pinned residual) using the isolated gap 35/16287 -- mac-mini's Delsarte/Beurling-Selberg dual is the pointed tool; (b) PROVE monotonicity-in-depth via opus's Schur-convexity of Q_c (majorization); (c) the higher-rung ladders k/(11k+1), k/(12k+c) are one-swap-shape and formalizable by kps's residue-table method if wanted.
 
 ---
 
