@@ -1,0 +1,34 @@
+================================================================================================
+ (1) R' = 0 on IMPRIMITIVE tight families c*{1..13}  (meas(lonely)=meas({1..13})=0)
+================================================================================================
+   c=  1  S=c*[1..13]  covering=False  primitive=True  meas(lonely S)=0.000000
+   c=  2  S=c*[1..13]  covering=True  primitive=False  meas(lonely S)=0.000000
+   c=  6  S=c*[1..13]  covering=True  primitive=False  meas(lonely S)=0.000000
+   c= 14  S=c*[1..13]  covering=True  primitive=False  meas(lonely S)=0.000000
+   => the covering floor R'=meas/(m_R m_Q) -> 0 on these; the floor is a gcd=1 statement.
+
+================================================================================================
+ (2) primitive approach S_c = {c+1, 2c, ..., 13c}: does R' -> 0 as c grows?  (NO -- decorrelates)
+================================================================================================
+      c  prim   cov        R'    meas(S)  maxspeed
+      2  True  True   0.50958   0.059524        26
+      4  True  True   0.52501   0.060714        52
+      6  True  True   0.55264   0.062925        78
+      8  True  True   0.52400   0.058532       104
+     10  True  True   0.52499   0.058442       130
+     12  True  True   0.53716   0.060440       156
+     16  True  True   0.53015   0.060399       208
+     20  True  True   0.53813   0.061054       260
+     30  True  True   0.53552   0.061214       390
+     40  True  True   0.53653   0.061150       520
+     60  True  True   0.53627   0.061222       780
+   => R' stabilizes ~0.53, NOT ->0: the coprime c+1 de-resonates (THM-611 single-coord decorrelation).
+
+================================================================================================
+ (3) the primitive global-min family (S59 descent) is near-imprimitive, small R', small magnitude
+================================================================================================
+   S=[2, 4, 5, 6, 8, 10, 14, 16, 18, 20, 22, 24, 26]
+   = 2*({1..13}\{6}) u {5};  covering=True primitive=True  R'=0.07628  meas(S)=0.005453
+   drop-7 {1..6,8..13,14} R'=0.31528  => drop-7 NOT global (0.076 < 0.315).
+   inf R' over primitive coverings: <= 0.076 (searched); >0 vs =0 is the tight-locus rigidity (HYP-4060). OPEN.
+DONE.
