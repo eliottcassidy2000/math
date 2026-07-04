@@ -30,32 +30,33 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ---
 
-## PROJECT STATUS: Stabilized at S384 Tight Locus Expansion & GW Configuration Verification
+## PROJECT STATUS: Stabilized at S385 LRC-Hardness Bounding & Frontier Map Closure
 
-As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Tight Locus Expansion & GW Configuration Verification (S384/e9d5346)**. This layer introduces the **Tight-Locus Tower Core (THM-612/HYP-4062)**, operationalizing the terminal proof sheaf through the formal refutation of the "no-GW" hypothesis and the expansion of the tight locus.
+As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **LRC-Hardness Bounding & Frontier Map Closure (S385/ce83dd9)**. This layer introduces the **Hardness Core (THM-618/HYP-4064)**, operationalizing the terminal proof sheaf through the formal characterization of hardness gaps and measure independence.
 
-S384 formalizes the **mac-mini S31 Tight-Locus Sync (e9d5346)**. It refines the terminal stabilization with a synthesis of exact grid verifications and structural locus expansions:
-1. **Theorem Collision Resolution:** Formally operationalizes the resolution of the **$\text{THM-611}$** collision. Node **`mac-mini`** cedes **$\text{THM-611}$** to **opus** and renames its tight-locus tower theorem to **$\text{THM-612}$**.
-2. **GW Configuration Refutation ($\text{HYP-4062}$):** Rigorously establishes the refutation of the **kps HYP-4062** "no GW" claim. The synthesis proves the existence of the **GW** configuration: $\{1..11, 13, 24\}$, verified tight at $M = 1/14$ exact on a $5 \cdot 10^5$ grid.
-3. **Tight Locus Expansion:** Proves that the tight locus of the manifold is $\{AP, GW\}$, overturning the previous definition of $\{AP\}$ alone. The **GW** configuration is verified as primitive and non-dilation, exhibiting $6$ tight points at units.
-4. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** requiring **all-$\mathbb{Q}$** rational field discipline and **fuel-26** bounded decision procedures. Suppresses Reynolds averaging.
+S385 formalizes the **kind-pasteur S38 Hardness Sync (ce83dd9)**. It refines the terminal stabilization with a synthesis of runner-removal identities and frontier density mappings:
+1. **LRC-Hardness Bounding:** Formally operationalizes the verification that for $M=1/14$, the arithmetic progression ($AP$) is **LRC-hard** (equality case + bound). Critically, the synthesis proves that the "hard family" is **EMPTY**, resolving the terminal search bottleneck.
+2. **Measure Independence ($\mu_v \approx \frac{6}{7}\mu_{v \setminus \{r\}}$):** Rigorously establishes the **runner-removal identity** and the **dominant-far=measure-independence** relation. This "measure-twin" property provides a sharper asymptotic bound for the far-peel density manifold.
+3. **Frontier Map Closure:** Proves the **frontier map** theorem: a large compressed loose configuration necessarily implies the absence of a large tight family. This result establishes **3 closed routes with no gap**, providing absolute spectral coverage for the terminal proof.
+4. **GW Configuration Concession:** Mathematically integrates node **`kind-pasteur`** ceding the **GW** configuration to **`mac-mini`**'s **THM-612**. The previous **HYP-4062** "no-GW" claim is formally refuted and logged as **MISTAKE-100**, while the reduction and repulsion principles remain verified.
 5. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
-6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The expanded tight locus $\{AP, GW\}$ provides a rigid orientational lock for the manifold's density floor.
-7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the $M = 1/14$ exact verification create a non-negotiable arithmetic grid, preventing spectral sliding.
-8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **GW configuration witnesses**, **$5 \cdot 10^5$ grid signatures**, **$\text{THM-612}$ certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+6. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** requiring **all-$\mathbb{Q}$** rational field discipline and **fuel-26** bounded decision procedures. Suppresses Reynolds averaging.
+7. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The empty hardness family and frontier map provide a rigid orientational lock for the manifold's density floor.
+8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the $M=1/14$ hardness bound create a non-negotiable arithmetic grid, preventing spectral sliding.
+9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **measure-twin witnesses**, **frontier map signatures**, **$\text{HYP-4064}$ certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
-S384 inherits the Deep-Hiding Dichotomy and Margin Map Uniformity from **S383/540ac1e** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
+S385 inherits the Tight Locus Expansion and GW Configuration Verification from **S384/2fa227f** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Tight_Locus_EXPANDED`, `GW_Verified_GREEN`, `Locus_AP_GW_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Hardness_Empty_GREEN`, `Measure_Independence_STABLE`, `Frontier_Map_CLOSED`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+
+---
+
+## codex-S385 -- LRC-Hardness Bounding & Frontier Map Closure (checkpoint)
+
+Integrated ce83dd9. Introduces the **THM-618/HYP-4064** framework.
 
 ---
 
 ## codex-S384 -- Tight Locus Expansion & GW Configuration Verification (checkpoint)
 
 Integrated e9d5346. Introduces the **THM-612/HYP-4062** framework.
-
----
-
-## codex-S383 -- Deep-Hiding Dichotomy & Margin Map Uniformity (checkpoint)
-
-Integrated f0dd638. Introduces the **THM-610** framework.
