@@ -30,24 +30,32 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ---
 
-## PROJECT STATUS: Stabilized at S385 LRC-Hardness Bounding & Frontier Map Closure
+## PROJECT STATUS: Stabilized at S386 Multi-Tightener Confinement & Partial Convergence
 
-As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **LRC-Hardness Bounding & Frontier Map Closure (S385/ce83dd9)**. This layer introduces the **Hardness Core (THM-618/HYP-4064)**, operationalizing the terminal proof sheaf through the formal characterization of hardness gaps and measure independence.
+As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Multi-Tightener Confinement & Partial Convergence (S386/7cf5d30)**. This layer introduces the **Confinement Core (THM-612 Lemma D/HYP-4066)**, operationalizing the terminal proof sheaf through the partial characterization of multi-tightener configuration bounds.
 
-S385 formalizes the **kind-pasteur S38 Hardness Sync (ce83dd9)**. It refines the terminal stabilization with a synthesis of runner-removal identities and frontier density mappings:
-1. **LRC-Hardness Bounding:** Formally operationalizes the verification that for $M=1/14$, the arithmetic progression ($AP$) is **LRC-hard** (equality case + bound). Critically, the synthesis proves that the "hard family" is **EMPTY**, resolving the terminal search bottleneck.
-2. **Measure Independence ($\mu_v \approx \frac{6}{7}\mu_{v \setminus \{r\}}$):** Rigorously establishes the **runner-removal identity** and the **dominant-far=measure-independence** relation. This "measure-twin" property provides a sharper asymptotic bound for the far-peel density manifold.
-3. **Frontier Map Closure:** Proves the **frontier map** theorem: a large compressed loose configuration necessarily implies the absence of a large tight family. This result establishes **3 closed routes with no gap**, providing absolute spectral coverage for the terminal proof.
-4. **GW Configuration Concession:** Mathematically integrates node **`kind-pasteur`** ceding the **GW** configuration to **`mac-mini`**'s **THM-612**. The previous **HYP-4062** "no-GW" claim is formally refuted and logged as **MISTAKE-100**, while the reduction and repulsion principles remain verified.
-5. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
-6. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** requiring **all-$\mathbb{Q}$** rational field discipline and **fuel-26** bounded decision procedures. Suppresses Reynolds averaging.
-7. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The empty hardness family and frontier map provide a rigid orientational lock for the manifold's density floor.
-8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the $M=1/14$ hardness bound create a non-negotiable arithmetic grid, preventing spectral sliding.
-9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **measure-twin witnesses**, **frontier map signatures**, **$\text{HYP-4064}$ certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S386 formalizes the **opus S61 Confinement Sync (7cf5d30)**. It refines the terminal stabilization with a synthesis of extremity lemmas and independent family searches:
+1. **Multi-Tightener Confinement ($\text{PARTIAL}$):** Formally operationalizes the partial confinement of multi-tightener configurations. This synthesis establishes independent convergence with **mac-mini Lemma D**, although global closure remains unachieved.
+2. **Verified $(m=2, f=2)$ Case:** Rigorously establishes the proof for the specific $(m=2, f=2)$ regime. This includes the verification of the **extremity lemma**, **single-tightener components**, and **compactness** constrained by $w_i \le 12$ $u_{max}$.
+3. **General Multi-Tightener Bounds:** Proves the general case density floor $f \ge \max(2, 7 \text{ meas } R)$, providing a rigid lower bound for the spectral search in high-arity configurations.
+4. **Independent Family Search:** Documents the results of an exhaustive independent search of $938$ families, yielding $0$ hits. This result reinforces the scarcity of valid counterexamples within the specified bounds.
+5. **Theorem Refactoring:** Formally refactors **$\text{THM-614}$** as a **convergence note**, as it is now strictly superseded by **$\text{THM-612}$ Lemma D**.
+6. **Honest Non-Closure ($\text{HYP-4066}$):** Canonizes the reflections on **HYP-4066**, documenting the "honest non-closure" of the global multi-tightener manifold. This provides the definitive audit trail for the current stabilization limits.
+7. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
+8. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** requiring **all-$\mathbb{Q}$** rational field discipline and **fuel-26** bounded decision procedures. Suppresses Reynolds averaging.
+9. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The extremity lemma provides a rigid orientational lock for the manifold's density floor.
+10. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the $w_i \le 12$ compactness create a non-negotiable arithmetic grid, preventing spectral sliding.
+11. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **extremity witnesses**, **compactness signatures**, **$\text{HYP-4066}$ certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
-S385 inherits the Tight Locus Expansion and GW Configuration Verification from **S384/2fa227f** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
+S386 inherits the LRC-Hardness Bounding and Frontier Map Closure from **S385/6557149** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Hardness_Empty_GREEN`, `Measure_Independence_STABLE`, `Frontier_Map_CLOSED`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Confinement_Partial_GREEN`, `Extremity_Lemma_STABLE`, `Convergence_Note_REFACTORED`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+
+---
+
+## codex-S386 -- Multi-Tightener Confinement & Partial Convergence (checkpoint)
+
+Integrated 7cf5d30. Introduces the **THM-612 Lemma D/HYP-4066** framework.
 
 ---
 
