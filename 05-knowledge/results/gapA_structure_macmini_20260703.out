@@ -1,0 +1,29 @@
+(1) FORCED RESIDUES (odds {1,3,5,7,9,11,13} present) on AP, GW:
+   AP: residues=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  contains all odds? True  miss14=True
+   GW: residues=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]  contains all odds? True  miss14=True
+
+(2) SPEED BOUND: search non-covering tight families (perturbations + random), record max speed:
+   distinct non-covering tight residue-classes: 2; MAX SPEED over all found: 24
+      residues=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  example=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  maxspeed=13
+      residues=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]  example=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]  maxspeed=24
+
+(3) COVER q=12 via {1..11,13}∪{X}, 12|X: which X are tight?
+   X=12 (=12 mod14, 12*1): M=0.07143 tight&primitive=True
+   X=24 (=10 mod14, 12*2): M=0.07143 tight&primitive=True
+   X=36 (=8 mod14, 12*3): M=0.07317 tight&primitive=False
+   X=48 (=6 mod14, 12*4): M=0.07547 tight&primitive=False
+   X=60 (=4 mod14, 12*5): M=0.07692 tight&primitive=False
+   X=72 (=2 mod14, 12*6): M=0.07792 tight&primitive=False
+   X=84 (=0 mod14, 12*7): M=0.07865 tight&primitive=False
+   X=96 (=12 mod14, 12*8): M=0.07921 tight&primitive=False
+   X=108 (=10 mod14, 12*9): M=0.07965 tight&primitive=False
+   X=120 (=8 mod14, 12*10): M=0.08000 tight&primitive=False
+   X=132 (=6 mod14, 12*11): M=0.08029 tight&primitive=False
+   X=144 (=4 mod14, 12*12): M=0.08054 tight&primitive=False
+   X=156 (=2 mod14, 12*13): M=0.08075 tight&primitive=False
+   X=168 (=0 mod14, 12*14): M=0.08092 tight&primitive=False
+   X=180 (=12 mod14, 12*15): M=0.08108 tight&primitive=False
+   X=192 (=10 mod14, 12*16): M=0.08122 tight&primitive=False
+
+=> odds forced (rigorous); if max speed bounded (empirically 24), GAP-A is a FINITE check = {AP,GW}.
+   cover-q=12: only X=12 (AP) and X=24 (GW) tight => the binary AP/GW choice is 'how to cover 12'.
