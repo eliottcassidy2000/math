@@ -1,0 +1,25 @@
+(1) LRC: {1..11,13,X} tight (M=1/14) <=> X in {12,24}, both q*=14:
+   X= 12  M=1/14     tight=True   q*=14
+   X= 24  M=1/14     tight=True   q*=14
+   X= 36  M=3/41     tight=False  q*=41
+   X= 48  M=4/53     tight=False  q*=53
+   X= 60  M=1/13     tight=False  q*=65
+   X= 72  M=6/77     tight=False  q*=77
+   tight X = [12, 24]
+
+(2) Doubling a single AP {1..13} runner j->2j is tight ONLY for j=12 (=> 24):
+   double  7 -> 14 : M=1/11     
+   double  8 -> 16 : M=2/23     
+   double  9 -> 18 : M=2/23     
+   double 10 -> 20 : M=2/27     
+   double 11 -> 22 : M=2/25     
+   double 12 -> 24 : M=1/14     TIGHT
+   double 13 -> 26 : M=2/27     
+   tightness-preserving doublings: [12] (only j=12)
+
+(3) THE ANALOGY (base + uniquely-exceptional smallest-special-multiple):
+     {7,21}:  base 7 (forbidden atom) + 3*7 (only permanent multiple; 5*7=35 transient). mult 3=1+2.
+     {12,24}: base 12 (AP completion)  + 2*12 (only tight multiple; 3*12=36 loose).       mult 2 (2-adic).
+     grid: 2-power monoid {1+2^k} (H) vs 14th-root q*=14 (LRC).  resonance: 14 = 2*7 = mult*base.
+     honest: opposite roles (forbidden vs tight), diff mechanisms, no bijection (leads -> backlog).
+DONE.

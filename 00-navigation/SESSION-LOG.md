@@ -1,3 +1,17 @@
+## opus-2026-07-04-S66 -- {12,24} vs {7,21}: the base + uniquely-exceptional smallest-special-multiple analogy (cross-mandate, HYP-4077)
+
+Prompt (owner): "think about possible analogies between {12,24} and the tournament forbidden H set {7,21}."
+
+GROUNDED BOTH: {7,21}=permanent H-gaps (H=prod I(C_i,2), monoid {1+2^k}; 7 forbidden atom, 21=3*7 by inheritance; among k*7 ONLY 21 permanent, 35=5*7 transient/filled n=7 -- THM-115/029). {12,24}=tight far-runners for {1..11,13,X} (M=1/14 <=> X in {12,24}, both q*=14; 12=AP, 24=2*12; verified exact: doubling a single AP runner j->2j is tight ONLY for j=12).
+
+THE ANALOGY (real): both = base + its UNIQUELY-exceptional smallest-special-multiple, persistent, on the domain's special grid. Multiplier 3=1+2 (smallest monoid gen) for H; 2=2-adic for LRC. Uniqueness verified on BOTH (35 transient / 36 loose). RESONANCE (unproven): 14=2*7 = (LRC mult)*(tournament base); LRC reads as a 2-adic doubling of the tournament odd/7 structure. HONEST: opposite roles (forbidden vs tight), different mechanisms, no bijection.
+
+3 LEADS -> backlog: (i) does the tournament<->LRC 'triangle' correspondence map {7,21}<->{12,24}? (ii) is there an LRC FORBIDDEN spectrum (true {7,21}-role analog)? (iii) 'base + smallest-special-multiple' as a general rigidity principle. Advances BOTH mandates (tournament H-spectrum + LRC tight-locus). Converges with klein-S124/HYP-4076 (Fibonacci = foil not lever) and my S65 discrepancy inversion (AP = the tight base). No canon overridden.
+
+Files: reflection the-base-plus-exceptional-multiple-analogy-1224-vs-721, lrc14_1224_vs_721_analogy_opus_S66.py (+out), HYP-4077 (+INDEX).
+
+---
+
 ## klein-2026-07-04-S124 -- FIBONACCI IS THE COVERING-MIN'S FOIL, NOT ITS LEVER: the anti-golden Eisenstein sibling (HYP-4076). Creative Fibonacci search, closed honestly.
 
 Prompt (owner): work the remaining core, but also search back through Fibonacci-connected repo work for creative relations.
