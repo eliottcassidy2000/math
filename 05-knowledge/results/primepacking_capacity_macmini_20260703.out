@@ -1,0 +1,12 @@
+Optimal prime-packing: Q_div (packing capacity) vs q* (first witness) vs tiling correction.
+========================================================================================
+             M  log10 M  #blocked primes  max blocked prime    q* tiling corr (q*-firstfree)
+       1000000 (no valid covering packer)
+    1000000000 (no valid covering packer)
+ 1000000000000 (no valid covering packer)
+1000000000000000 (no valid covering packer)
+1000000000000000000 (no valid covering packer)
+
+=> q* tracks the prime-packing capacity (# distinct primes 13 speeds<=M can hold = O(log M/loglog));
+   tiling correction (free primes that are no-witness) BOUNDED => the crux is ELEMENTARY prime-packing
+   + a bounded circle-method correction. q* = O(log M loglog M), constant from the packing.

@@ -1,0 +1,14 @@
+LCM-packing capacity: max Q blockable (lcm(2..Q) in 13 bins<=M) vs actual first witness q*.
+==================================================================================
+               M  log10 M Q_pack (max blockable) q* (first witness)  q*-Q_pack
+           10000        4                    102                  6        -96  cov=False len=13
+         1000000        5                    172                  6       -166  cov=False len=13
+      1000000000        8                    240                  6       -234  cov=False len=13
+   1000000000000       11                    336                  6       -330  cov=False len=13
+1000000000000000       14                    420                  6       -414  cov=False len=13
+1000000000000000000       17                    520                332       -188  cov=False len=13
+
+=> Q_pack = O(log M) (lcm(2..Q)~e^Q <= M^13 => Q<=13 log M) is the ELEMENTARY capacity.
+   if q* ~ Q_pack (small bounded gap): the crux is ELEMENTARY lcm-packing + bounded tiling correction.
+   q* CANNOT exceed Q_pack by much: beyond Q_pack some modulus divides no speed (lcm exhausted) =>
+   witness there unless a bounded 2-term tiling, which is a p<=~95 correction (circle method, bounded).
