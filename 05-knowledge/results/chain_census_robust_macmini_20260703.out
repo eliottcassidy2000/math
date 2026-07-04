@@ -1,0 +1,31 @@
+Robust chain census: min-witness q over adversarial distinct-scale chains (ratio-step <=13).
+====================================================================================
+ratio-step    top scale ~ #cov gcd1 tested  MAX witness q  #q>40
+         2         ~16384             1028             33      0
+         2         ~20480             1068             31      0
+         2         ~12288              988             37      0
+         2         ~16384              964             33      0
+         3       ~1062882             1147             31      0
+         3       ~2657205             1205             35      0
+         3       ~1594323             1174             37      0
+         3       ~1062882             1164             31      0
+         5     ~244140625             1173             35      0
+         5     ~244140625             1187             41      1
+         5    ~1220703125             1348             37      0
+         5     ~732421875             1329             37      0
+         8  ~137438953472             1389             43      3
+         8  ~137438953472             1373             38      0
+         8   ~68719476736             1331             41      1
+         8  ~274877906944             1412             37      0
+        12 ~17832200896512             1344             41      3
+        12 ~8916100448256             1368             35      0
+        12 ~26748301344768             1333             46      2
+        12 ~17832200896512             1383             37      0
+        13 ~69894255367443             1469             37      0
+        13 ~69894255367443             1442             38      0
+        13 ~23298085122481             1447             43      1
+        13 ~46596170244962             1468             37      0
+
+OVERALL max witness q over ALL adversarial chains = 46
+=> if bounded (~<=40): the compressed CHAIN is UNIFORMLY census-able at small q (owner's small-q
+   census); the crux is ONLY the all-~N one-scale wide cluster. Scale diversity defeats 13/7>1.
