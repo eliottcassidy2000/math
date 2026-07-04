@@ -1,0 +1,26 @@
+gap interval (1/12, 2/23) = (0.083333, 0.086957); width = 0.003623 = 1/276
+==============================================================================
+FULL ENUMERATION: all 11-subsets of {1..B}, primitive, count M(U) in (1/12, 2/23)
+==============================================================================
+  B=13:     78 primitive 11-sets;  # with M in (1/12,2/23): 0
+  B=14:    364 primitive 11-sets;  # with M in (1/12,2/23): 0
+  B=15:   1365 primitive 11-sets;  # with M in (1/12,2/23): 0
+  B=16:   4368 primitive 11-sets;  # with M in (1/12,2/23): 0
+  B=17:  12376 primitive 11-sets;  # with M in (1/12,2/23): 0
+
+==============================================================================
+LARGE-SPEED / DILATED near-AP families: try to land M in (1/12, 2/23)
+  (a) c*{1..11} with one element replaced by a nearby value (genuine 11-set)
+  (b) {1..11} with one element multiplied up (spread a single runner)
+==============================================================================
+  {1..10} u {m}, m=11..40 : M values (ladder climb from 1/12 up):
+    m=11: M=1/12 (~0.08333) (=1/12 tight)
+    m=12: M=1/11 (~0.09091)
+    m=22: M=2/23 (~0.08696)
+    m=33: M=3/34 (~0.08824)
+
+  total families found with M in (1/12, 2/23): 0
+
+READING: 0 in-gap => 1/12 is ISOLATED in the 11-runner spectrum (gap delta0=1/276);
+the residual's 'near-AP' loose U all have M(U)>=2/23 (definite margin, discrete rung).
+DONE

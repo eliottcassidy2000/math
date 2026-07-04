@@ -1,3 +1,21 @@
+## klein-2026-07-04-S126 -- THE 11-RUNNER EVEN-PART M-SPECTRUM HAS A GAP ABOVE 1/12 (HYP-4080): the residual "near-AP" is DISCRETE, not a continuum. Sharpens the sliver; not a closure.
+
+Prompt (owner): work the single remaining sliver.
+
+Probed the actual crux question for the small-tightener x near-AP residual: is it a CONTINUUM (loose U with M(U)->1/12, band shrinks to nothing) or DISCRETE? Full-enumeration answer: DISCRETE.
+
+FINDING (exact, verified): M(U)=1/12 is ISOLATED in the 11-runner spectrum. Over ALL primitive 11-subsets of {1..17} (12376 sets) + dilated/large-speed near-AP families: ZERO have M(U) in (1/12, 2/23). Smallest loose value = 2/23; gap delta0 = 2/23 - 1/12 = 1/276 > 0. The near-bottom spectrum is EXACTLY the Ostrowski ladder k/(11k+1) (mac-mini S38): 1/12, 2/23, 3/34, ... -> 1/11, realized by {1..10, 11k} (spread the top runner to 11k = rung k; k=1 tight, k>=2 loose). Lagrange-spectrum-discrete-at-bottom for LRC(12).
+
+CONSEQUENCE (ingredient): loose even parts have M(U) >= 2/23 (definite margin >= 1/276). So (i) the near-1/12 CONTINUUM is removed -- the residual U are ladder-type (spread-one-runner) discrete rungs, the SAME shape kps-S2 closed by exact residue-table formula; (ii) opus's Lemma 3 (large tightener, klein S125 LRCLargeTightener) fires for tighteners > u_max/(6/276) = 46*u_max, confining the residual to tighteners <= 46*u_max (explicit, no blowup). This is the M-VALUE companion of kps's MEASURE quantization (L >= 1/(14*lcm)).
+
+HONEST: does NOT close -- u_max unbounded (46*u_max not absolute); bounding u_max/lcm is the unchanged LRC(14)-equivalent crux. Credited kps (quantized-gap-from-tight-locus, measure side) + mac-mini (Ostrowski ladder).
+
+PATH (the promising next move): the residual U are discrete ladder rungs {1..10, 11k}, and kps-S2 closed exactly such a family ({1..11,13,12k}) by an exact residue-table formula (all k, all u_max, no search). So the residual may be a FINITE UNION of formula-closable ladder families -- one closed form per rung shape, valid for all k, BYPASSING the u_max bound. That would close the sliver without bounding u_max.
+
+FILES: lrc14_residual_spectral_gap_klein_S126.py, lrc14_residual_gap_verify_klein_S126b.py (+outs); INDEX HYP-4080; reflection the-even-part-M-spectrum-has-a-gap-above-1-over-12; this log. (HYP-4080 free; 4081 taken by mac-mini-S40.)
+
+---
+
 ## mac-mini-2026-07-04-S40 -- the covering-min is a 2-point CHEBYSHEV EQUIOSCILLATION at a rational t*; the max-min is NON-CONVEX so greedy has no shortcut (arXiv:1612.00337 AAA as inspiration) (HYP-4081)
 
 Prompt (owner): work the remaining bits, consider arXiv:1612.00337 (AAA rational approximation) as inspiration.

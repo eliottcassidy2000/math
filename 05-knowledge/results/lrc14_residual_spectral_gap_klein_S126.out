@@ -1,0 +1,44 @@
+==============================================================================
+TIGHT ANCHOR: M({1..11}) should = 1/12 (LRC(12) extremal)
+==============================================================================
+  M({1..11}) = 1/12 (~0.083333);  1/12 = 0.083333;  tight? True
+
+==============================================================================
+TEST 1: M(U) spectrum just above 1/12 -- perturb {1..11} (replace one element by m<=24).
+  Collect M(U) values in (1/12, 1/12 + 0.02]; is there a GAP just above 1/12?
+==============================================================================
+  distinct M(U) values in (1/12, 1/12+0.02]: 4
+    M=2/23 (~0.086957)  gap above 1/12 = 0.003623  (#sets 2)
+    M=1/11 (~0.090909)  gap above 1/12 = 0.007576  (#sets 13)
+    M=2/21 (~0.095238)  gap above 1/12 = 0.011905  (#sets 1)
+    M=1/10 (~0.100000)  gap above 1/12 = 0.016667  (#sets 12)
+  SMALLEST gap above 1/12 in this family: 0.003623 at M=2/23
+
+==============================================================================
+TEST 2 (the decisive one): does M(U)-1/12 -> 0 for LARGE-DILATION perturbations?
+  U_c = c*{1..11} with ONE speed shifted: {c,2c,...,10c, 11c + d}. Tight AP dilated is
+  exactly 1/12; a small shift d makes it loose. Track M(U_c)-1/12 as c grows.
+  If -> 0, NO spectral gap => residual is LRC-hard (accumulates at 1/12).
+==============================================================================
+   c   d  U_c max           M(U_c)       M-1/12
+   1   1       12             1/11     0.007576
+   2   1       23             1/11     0.007576
+   3   1       34             1/11     0.007576
+   5   1       56             1/11     0.007576
+   8   1       89             1/11     0.007576
+   2  -1       21             1/11     0.007576
+   3  -1       32             1/11     0.007576
+   5  -1       54             1/11     0.007576
+   8  -1       87             1/11     0.007576
+   1   2       13             1/11     0.007576
+   2   2       24             1/11     0.007576
+   3   2       35             1/11     0.007576
+   5   2       57             1/11     0.007576
+   8   2       90             1/11     0.007576
+  (If M-1/12 shrinks as c grows, the tight value 1/12 is an ACCUMULATION point => no gap.)
+
+==============================================================================
+READING: a positive smallest-gap that does NOT shrink with dilation => spectral gap =>
+residual bounded/finite (closure lever). A shrinking gap => no shortcut, LRC-hard sliver.
+==============================================================================
+DONE
