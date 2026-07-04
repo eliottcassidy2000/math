@@ -1,3 +1,28 @@
+## klein-2026-07-04-S123 -- THE FOLDING-IDENTITY ENGINE (THM-615 Lemma 1) FORMALIZED IN LEAN, sorry-free (HYP-4075). Toward the FORMAL confinement proof.
+
+Prompt (owner): keep pushing creatively toward finishing the mathematical proof.
+
+I worked opus-S64's sharpest sub-target, the confinement core `M(2U ∪ {w1,w2}) ≥ 1/12` (THM-615), via the TIGHT/LOOSE dichotomy on the even part U + a measure/Bonferroni angle. CONFIRMED opus's assessment (and CONVERGED with mac-mini-S37, who executed the same dichotomy this window): the tight-U case reduces to the 11-runner tight-locus = {AP11} (mac-mini closed it), and the loose-U case is the ARGMAX BARRIER (measure route vacuous: λ(U)≈0.05≪2/7; a=b dodge rigorous but vacuous). I could not shortcut the argmax arithmetic and did not fake it.
+
+CONCRETE contribution (toward the eventual FORMAL proof, which IS "finishing" for a fleet on an open problem): formalized THM-615 Lemma 1's ENGINE -- the folding identity's algebraic core, paper-only until now -- sorry-free in Lean (LRCFolding.lean, registered). With `reach x = dist(x,ℤ) = min(fract x, 1-fract x)`:
+- reach_add_half: reach(x+½) = ½ - reach x (the reflection).
+- reach_odd_add_half: w ODD => reach(w(t+½)) = ½ - reach(wt) (the tightener FLIP -- the heart of the fold).
+- reach_even_add_half: reach((2u)(t+½)) = reach((2u)t) (even-part (+½)-PERIODICITY).
+- min_min_fold: max(min g X)(min g Y) = min g (max X Y) (the lattice fold).
+- folded_pair: single odd tightener's folded value over {t,t+½} = min(gv, max(reach, ½-reach)).
+- psi_ge_of_not_extremity: Ψ = max(min a b, ½-max a b) ≥ b unless extremity (one reach<b, other >½-b).
+These are exactly the pieces opus's folding identity `M(2U∪{w1,w2}) = max_t min(g_E, Ψ)` is assembled from.
+
+HONEST: infrastructure for the eventual formal confinement proof; does NOT prove M(2U∪2odd)≥1/12 (the loose-U argmax barrier, opus's active line, LRC(14)-equivalent).
+
+MY COVERING-MIN LEAN ARC (four load-bearing pieces of the eventual formal proof; crux stays open): HYP-4065 (extremizer witness, general n) -> HYP-4068 (THM-613 margin->measure bridge) -> HYP-4069 (THM-612 tower step) -> HYP-4075 (THM-615 folding engine). The crux -- the loose-U argmax arithmetic / covering-min -- is LRC(14)-equivalent and remains the open frontier (mac-mini/opus active).
+
+FILES: LRCFolding.lean (+root import); INDEX HYP-4075; this log. (HYP: 4074 taken concurrently by mac-mini-S37; I used 4075.)
+
+NEXT: the loose-U argmax barrier is the crux. The formal scaffolding (witness, measure bridge, tower step, folding engine) is now in place, so once the argmax arithmetic is found (opus/mac-mini), the formal proof can assemble from these Lean pieces.
+
+---
+
 ## mac-mini-2026-07-04-S37 -- completing opus THM-615's m=2 confinement: 11-runner tight-locus={AP11} (no GW_12) closes the tight-U case; the loose-U case is opus's argmax barrier (a=b dodge rigorous but vacuous) (HYP-4074)
 
 Prompt (owner): keep pushing creatively to complete the proof.
