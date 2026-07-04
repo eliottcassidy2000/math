@@ -16,6 +16,23 @@ HYP: 4077,4078 taken concurrently (fast burn); I used 4079. HYP-4076 is TRIPLY c
 FILES: LRCLargeTightener.lean (+root import); INDEX HYP-4079; this log.
 
 NEXT (the last sliver): small-tightener x near-AP argmax non-extremity (opus/mac-mini active). Ruled-out routes: geometric/Kershner (S122), Fibonacci/golden (S124, it's the anti-golden foil). The leverage must be Eisenstein/heptagon argmax arithmetic on the near-AP corner.
+## mac-mini-2026-07-04-S39 -- IDEA GENERATION: seven dormant repo threads into the covering-min core; anchors Phi6-iterated=Sylvester (greedy Egyptian, twin of my Ostrowski/Zeckendorf ladder) + ladder-quantization fails (HYP-4079)
+
+Prompt (owner): work the remaining core, AND search prior work (related or unrelated) to generate ideas.
+
+Idea-generation pass. Mined the repo's dormant threads and connected them to the covering-min core (covering => M>=14/183 = extremal config is {k*alpha}).
+
+DELIVERED (HYP-4079 + reflection):
+ * ANCHORS (verified): (a) Phi6 iterated from 2 = SYLVESTER'S SEQUENCE 2,3,7,43,1807 (greedy Egyptian 1=1/2+1/3+1/7+1/43+...) => covering-min n/Phi6 is a DOUBLE GREEDY fixed point: Egyptian/Sylvester + my CF/Ostrowski-Zeckendorf ladder [0;n-1,n] (S38). (b) Ostrowski-ladder quantization M_k=k/((n-1)k+1) FAILS (0/497 covering families off-ladder) => the ladder is the EXTREMAL LOCUS only (honest form of M-uniqueness).
+ * SEVEN THREADS ranked by proof-likelihood: (3) Delsarte-LP/Toeplitz-PSD/Beurling-Selberg positive-polynomial certificate [opus, MOST PROMISING rigorous = measure-route endgame; obstacle = LP gives upper not lower covering-radius, need dual existence SDP] > (2) Ostrowski⊗Sylvester greedy duality [NOVEL, needs covering-system<->Egyptian-greedy dictionary] > (5) all-moduli Erdos-Turan equidistribution [opus, grounded coarse] > (6) Stern-Brocot/Farey geodesic induction > (1) covering-radius/Ramanujan slack [dynamic not static, weak] > (7) tournament chi2-orbit rigidity [orthogonal, wild] > (4) heptagon Q(cos2pi/7) Galois [speculative].
+
+NET: covering-min = double greedy (CF+Egyptian) fixed point, to be certified by a Fejer/Beurling-Selberg positive polynomial, apex-7 arithmetic, Steinhaus rigidity. A MAP of promising directions, not a proof (core open).
+
+CONVERGENCE: kps-S2 (owner's Fibonacci hint) PROVED my GAP-A coverer magnitude bound by formula M({1..11,13,12k})=k/(12k+5) k>=3 (=> tight only X in {12,24}={AP,GW}); found Fibonacci denominators 89=F11. Exactly this session's Ostrowski/Fibonacci theme, now rigorous.
+
+Housekeeping: ceded S38 Ostrowski HYP-4076->4078 (triple collision klein+kps+me); S39 at HYP-4079.
+
+Files: HYP-4079, reflection seven-dormant-threads, covering_min_threads_macmini_20260704.py + out.
 
 ---
 
