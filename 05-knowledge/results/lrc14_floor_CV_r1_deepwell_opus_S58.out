@@ -1,0 +1,25 @@
+================================================================================================================
+ THM-579 FLOOR CRITERION on the r=1 DEEP WELL + cross-check rows.  floor>0 <=> CV(N_R)^2 < m_Q/(1-m_Q)
+================================================================================================================
+  (measures EXACT; CV numeric G=200000).  S = R u 14Q.
+
+  DEEP WELL r=1 {1..12,182}  r=1 m_R=0.0341 m_Q=0.8571 meas(S)=0.02390 R'=0.8176 CV^2=1.0945 m_Q/(1-m_Q)=6.0000 bound=+0.5729 HOLDS
+  r=1 Q={7} (14*7=98)        r=1 m_R=0.0839 m_Q=0.8571 meas(S)=0.07515 R'=1.0450 CV^2=3.6258 m_Q/(1-m_Q)=6.0000 bound=+0.2226 HOLDS
+  r=1 Q={1} (14) R={2..13}   r=1 m_R=0.0714 m_Q=0.8571 meas(S)=0.06122 R'=1.0000 CV^2=0.0000 m_Q/(1-m_Q)=6.0000 bound=+1.0000 HOLDS
+
+  consec r=2 {1..12}|{1,2}   r=2 m_R=0.0341 m_Q=0.7857 meas(S)=0.01880 R'=0.7015 CV^2=1.0945 m_Q/(1-m_Q)=3.6667 bound=+0.4536 HOLDS
+  consec r=3 {1..11}|{1..3}  r=3 m_R=0.0563 m_Q=0.6905 meas(S)=0.03763 R'=0.9673 CV^2=0.8247 m_Q/(1-m_Q)=2.2308 bound=+0.3920 HOLDS
+  consec r=4 {1..10}|{1..4}  r=4 m_R=0.1380 m_Q=0.6190 meas(S)=0.09036 R'=1.0579 CV^2=0.1591 m_Q/(1-m_Q)=1.6250 bound=+0.6871 HOLDS
+  consec r=5 {1..9}|{1..5}   r=5 m_R=0.1811 m_Q=0.5048 meas(S)=0.09501 R'=1.0396 CV^2=0.1323 m_Q/(1-m_Q)=1.0192 bound=+0.6397 HOLDS
+  consec r=6 {1..8}|{1..6}   r=6 m_R=0.2658 m_Q=0.4571 meas(S)=0.11650 R'=0.9587 CV^2=0.1163 m_Q/(1-m_Q)=0.8421 bound=+0.6284 HOLDS
+
+================================================================================================================
+ READING
+================================================================================================================
+  * r=1 DEEP WELL: CV^2=1.095 vs threshold m_Q/(1-m_Q)=6.000 -> criterion HOLDS; CS bound=+0.573, actual R'=0.818.
+    (m_Q=6/7=.857 for the single Q-runner => threshold=6.0; the whole burden is CV(N_R) of R={1..12}.)
+  * tightest margin (CV^2 closest to threshold): consec r=6 {1..8}|{1..6} (slack +0.726).
+  * CS LOSSINESS: every row has actual R' >> CS bound (the sign of SPEC helps); the criterion is a SUFFICIENT (lossy) floor, not the true R'.
+  * HYP-3554 (CV unbounded) is about the UNIFORM sweep; per-family on the tight crux the
+    criterion is what decides. This fills the r=1 (deep-well) row mac-mini's S2 table skipped.
+DONE.

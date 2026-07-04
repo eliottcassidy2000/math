@@ -1,0 +1,36 @@
+==============================================================================================================
+ klein HYP-3554 #2:  do gatekeeper-FAILING dense R occur as genuine covering families?  (r=1: thresh=6.0)
+==============================================================================================================
+  R                          m_R    CV^2  <6?  cover q        S=Ru{14q}   meas(S)      R'
+  {1..13}\1               0.0714   0.000    Y        1 [2, 3, 4, 5, 6,    0.06122   1.000
+  {1..13}\2               0.0302   1.364    Y        1 [1, 3, 4, 5, 6,    0.03022   1.167
+  {1..13}\3               0.0403   0.773    Y        1 [1, 2, 4, 5, 6,    0.03009   0.871
+  {1..13}\4               0.0242   4.289    Y        1 [1, 2, 3, 5, 6,    0.02423   1.167
+  {1..13}\5               0.0360   0.983    Y        1 [1, 2, 3, 4, 6,    0.02581   0.836
+  {1..13}\6               0.0082   7.755    N        1 [1, 2, 3, 4, 5,    0.00816   1.167
+  {1..13}\7               0.0839   3.626    Y        1 [1, 2, 3, 4, 5,    0.02267   0.315
+  {1..13}\8               0.0452   1.838    Y        4 [1, 2, 3, 4, 5,    0.03499   0.903
+  {1..13}\9               0.0584   0.289    Y        9 [1, 2, 3, 4, 5,    0.05045   1.008
+  {1..13}\10              0.0241   1.963    Y        5 [1, 2, 3, 4, 5,    0.01594   0.772
+  {1..13}\11              0.0619   0.154    Y       11 [1, 2, 3, 4, 5,    0.05171   0.974
+  {1..13}\12              0.0122   8.736    N        6 [1, 2, 3, 4, 5,    0.00536   0.514
+  {1..13}\13              0.0341   1.095    Y       13 [1, 2, 3, 4, 5,    0.02390   0.818
+
+==============================================================================================================
+ READING
+==============================================================================================================
+  * YES -- 2 gatekeeper-FAILING dense R DO complete to genuine 13-speed covering families:
+      R={1..13}\6: CV^2=7.76>6  =>  S=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14]  covering, meas(S)=0.00816, actual R'=1.167>0
+      R={1..13}\12: CV^2=8.74>6  =>  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]  covering, meas(S)=0.00536, actual R'=0.514>0
+    => klein #2 answered YES: the CV gatekeeper is NOT uniform even on the REAL covering family;
+       these families need the exact SPEC / Gamma_0(N) route (HYP-3553), NOT the CV proxy.
+    => BUT the actual floor R' stays > 0 on all of them (klein HYP-3554 robustness confirmed EXACTLY).
+  * MISCALIBRATION: the LOWEST actual floor is R'=0.315 at R={1..13}\7 (dropping speed 7), CV^2=3.63 -> gatekeeper PASSES.
+    So CV^2>6 (gatekeeper failure) does NOT track the true floor deficit: the worst actual floor
+    PASSES the CV test, while CV-failing families have higher R'. The CV proxy flags the WRONG families;
+    the exact-SPEC/Gamma_0(N) route is not merely 'more uniform', it tracks a DIFFERENT (correct) quantity.
+  * The DEEP WELL (R={1..12}, CV^2=1.09<6, meas=0.0239) PASSES; several minus-one covering families have
+    SMALLER meas(S) (0.005-0.008) -- small safe-measure and CV-failure are yet another distinct axis.
+  Three distinct axes now mapped on covering families: (i) safe-measure meas(S), (ii) CV(N_R) gatekeeper,
+  (iii) actual floor R'. They do NOT coincide -- the crux family differs by which you optimize.
+DONE.
