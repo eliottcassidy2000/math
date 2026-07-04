@@ -1,7 +1,7 @@
 ---
 id: THM-612
 title: The tight-locus tower — local-max transfer + binding-pair divisibility. At a tight point of a family with hiding denominator q*=14m, the m-divisible sub-family E=m·U carries the whole local geometry (f_S = g_U(m·) near t*), the binding pair is divisible by m, and (via LRC≤13) U is STRICTLY loose for a primitive S — so a primitive tight family with q*>14 would be a loose U tightened by ≤12 non-E runners. Search (~200k q*=28 candidates, 0 hits) supports the CONFINEMENT primitive-tight ⟹ q*=14, reducing the rigidity to a finite mod-14 residue problem.
-status: PROVED (Lemmas A,B,C + the LRC≤13 corollary — elementary; verified exactly). Lemma C proves the confinement for one tightener (m=2, |F|=1); the m=2,|F|=2 case is reduced to an anti-correlation obstruction (S32, tighteners must be exactly anti-correlated on R — realized 0/~200k). CONJECTURE: the FULL confinement primitive-tight ⟹ q*=14 (Lemma C + search, 0 primitive tight with q*>14). Separately (S32): thorough enumeration => tight locus = {AP, GW} to speed 60, g≤2 (sharper than HYP-2913 g≤3), via the deletion-hiding mechanism.
+status: PROVED (Lemmas A,B,C,D + the LRC≤13 corollary — elementary; verified exactly). Lemma C proves the confinement for one tightener (m=2, |F|=1); Lemma D (S33) reduces m=2,|F|=2 to a FINITE per-U check (switch-point divisibility w_i|w_j: either w1=w2 contradiction, or both tighteners bounded by even-part data 4N/(7 meas R_U)) — search realizes 0 tight q*=28 over small U with tighteners to 799. CONJECTURE: FULL confinement primitive-tight ⟹ q*=14 (residual gap now = bounding v_max(U), the even part, not the tighteners). Separately (S32): enumeration => tight locus = {AP, GW} to speed 60, g≤2 (sharper than HYP-2913 g≤3), via the deletion-hiding mechanism.
 source: mac-mini-2026-07-03-S31
 depends_on:
   - THM-610   # Lemma 2: tight ⟹ 14|q* (so q*=14m); this theorem is the fine structure of that
@@ -75,9 +75,32 @@ forces, for every `σ`-pair `{t,t+1/2}⊆R`, that the two points are covered by 
 `{||w_2 t||<1/14} = (D_{w_1}+1/2)∩R = {||w_1 t|| > 6/14}∩R`. So the two odd tighteners must be *exactly
 anti-correlated on `R`*: `w_2` is in danger precisely where `w_1` is near-antipodal (`>6/14`). This is an
 extremely rigid coupling (plus `meas(R)=2·meas(A_1)≤2/7`); the exact-`M` search realizes it **never** (0
-of ~200k `q*=28` candidates). Three+ tighteners generalize the `σ`-pair splitting but the coupling only
-tightens; the general confinement remains a conjecture (below), now with the multi-tightener case reduced
-to this anti-correlation obstruction rather than left fully open.
+of ~200k `q*=28` candidates).
+
+## Lemma D (switch obstruction, S33) — the `m=2,|F|=2` case is a FINITE check per `U` (contradiction or bounded tighteners)
+Sharpen the anti-correlation via the *coverage transitions*. Since `A_1∩A_2=∅` (danger-disjoint on `R`)
+and `A_1∪A_2=R`, exactly one tightener is in danger at each `t∈R`. At a **χ-switch** (coverage passes
+`w_i→w_j` inside `R`), continuity of "some tightener in danger" (no uncovered gap, since `R` is covered)
+forces `w_i` to *exit* danger exactly as `w_j` *enters*: **`||w_i t|| = ||w_j t|| = 1/14`** at the switch.
+
+**(full-arc divisibility)** A full `w_i`-danger arc lying in `R`'s interior has *both* endpoints as
+switches, so `||w_j||=1/14` at two points a distance `1/(7w_i)` apart. Solving `||w_j(c±1/(14w_i))||=1/14`
+gives `w_j ≡ ±w_i (mod 14 w_i)`, i.e. **`w_j = w_i(14k±1)`, so `w_i | w_j`** (verified exactly:
+`switch ⟺ w_j=w_i(14k±1)`).
+
+**(dichotomy)** *Either* `R` contains a full `w_1`-arc **and** a full `w_2`-arc interior — then `w_1|w_2`
+and `w_2|w_1` ⟹ **`w_1=w_2`, contradiction** — *or* some tightener `w_i` has all its `R`-coverage clipped
+by `R`-boundaries (no full arc): then its pieces number `≤2N` (`N`=#components of `R`) and each has width
+`<1/(7w_i)`, so `meas(R)/2 = meas(A_i) < 2N/(7w_i)` ⟹ **`w_i < 4N/(7·meas R)`**; and if the other has a
+full arc, `w_j|w_i` ⟹ `w_j≤w_i`, so **both tighteners are bounded by `4N/(7·meas R_U)`** — data of the
+even part `U` alone (`N=2·#lonely-intervals(U)`, `meas R_U=L_U`).
+
+**So the `|F|=2` confinement is a FINITE check for each `U`:** either the divisibility contradiction, or the
+tighteners are bounded by an explicit `U`-datum. Exact-`M` search realizes neither a tight family: **0** over
+small even parts `U` (11-sets to residue 13) with tighteners to speed 799 (`≥` the bound for those `U`).
+`|F|≥3` generalizes the `σ`-pair splitting and switch analysis; the coupling only tightens. The residual
+gap for full confinement is now bounding the even part `v_max(U)` itself (the tighteners are already bounded
+by it) — not the tighteners.
 
 ## Confinement conjecture (Lemma C + search): *primitive tight ⟹ `q*=14`.*
 The tightener picture above is never realized: **no primitive tight family has `q*>14`.**

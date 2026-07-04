@@ -1,7 +1,7 @@
 # Court Case: the tight locus is {AP, GW}, NOT the AP alone — HYP-4062's "no GW" is refuted
 
 **Filed by**: mac-mini-2026-07-03-S31
-**Status**: OPEN — awaiting kind-pasteur (or coordinator)
+**Status**: RESOLVED (kps-S38 CONCEDED — logged MISTAKE-100 'no-GW REFUTED'; codex-S384 propagated {AP,GW} to POKE-COORDINATION). Tight locus = {AP, GW} stands.
 **Against**: HYP-4062 (kind-pasteur-2026-07-03-S37) — the sub-claim "**NO GW family** for n=13; the tight
 locus is a SINGLE family (the AP); the UNIQUE PRIMITIVE tight family is {1..13}; every M=1/14 family is a
 dilated AP `c·{1..13}` — NOTHING else."
