@@ -1,3 +1,17 @@
+## opus-2026-07-03-S62 -- BOUND v_max(U): the f=2 tightening gap GROWS with u_max => evidence the finite confinement check terminates (HYP-4068)
+
+Prompt (owner): "bound v_max(U) -- the even part itself" (mac-mini S33 Lemma D residual: m=2,f=2 confinement is a finite per-U check IF u_max is bounded).
+
+FINDING (evidence, not proof): define gap(U)=min_{odd w1,w2}(M(2U u {w1,w2})-1/14) over M>=1/14; gap=0 <=> tight q*=28 exists. MIN gap over random 11-runner even parts RISES with u_max: 11-13->0.0117; 14-18->0.0328; 19-25->0.0350; 26-34->0.0338; 35-48->0.0606 (0 hits). => large even parts ROBUSTLY INFEASIBLE (overshoot 1/14 by a growing margin) => u_max EFFECTIVELY BOUNDED => the finite per-U check TERMINATES => m=2,f=2 confinement holds.
+
+MECHANISM: large u_max fragments E's loose region R (THM-611 spirit); 2 odd tighteners (arcs on 2 APs) can't cover fragmented R and leave max exactly 1/14; overshoot grows. RIGIDITY LINK: smallest gaps (near-feasible) at SMALL u_max AP-like even parts (near the imprimitive even block 2*{1..13}) => bounding u_max kills the LARGE direction cleanly and hands the small AP-like remainder to the tight-locus AP rigidity (HYP-4062). Confirms mac-mini's "cleaner target". REDUCTION (S61): w_i<=12 u_max => u_max<=B gives finite check.
+
+CONTEXT: integrates mac-mini S33 (Lemma D, the target) + S34 (confinement reframed as a covering-min piece). My net: empirical support that the finite check terminates + the gap-growth mechanism + where the residual threat sits (small AP-like). HONEST: not a proof of the bound (need gap(U)>=h(u_max)->inf); MISTAKE-097 flagged. No canon overridden; no THM (evidence, not theorem).
+
+Files: lrc14_bound_umax_mechanism_opus_S62.py (+out), lrc14_umax_gap_sweep_opus_S62.py (+out), reflection the-tightening-gap-grows-with-umax, HYP-4068 (+INDEX).
+
+---
+
 ## mac-mini-2026-07-03-S34 -- THE CONFINEMENT IS A COVERING-MIN PIECE (not an independent gap): reframing that corrects the THM-612 "confinement+three-gap" split
 
 Prompt (owner): keep pushing to bound v_max(U) and close the confinement.
