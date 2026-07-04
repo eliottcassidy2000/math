@@ -1,0 +1,8 @@
+covering-min = 1/(n-1) - 1/((n-1)Phi6) = 14/183 = n/Phi6 = 14/183
+single-killer formula M({1..12,X}) = X/((n-1)(X+1)):
+  X=  182: M=14/183 pred=14/183 match=True t*=14/183 (offset 1/13-t*=1/2379)
+  X=  364: M=28/365 pred=28/365 match=True t*=28/365 (offset 1/13-t*=1/4745)
+  X=  546: M=42/547 pred=42/547 match=True t*=42/547 (offset 1/13-t*=1/7111)
+  X=  728: M=56/729 pred=56/729 match=True t*=56/729 (offset 1/13-t*=1/9477)
+  X= 2366: M=182/2367 pred=182/2367 match=True t*=182/2367 (offset 1/13-t*=1/30771)
+=> monotone increasing in X => min at smallest killer X=(n-1)n=182 => 14/183 (deep well).
