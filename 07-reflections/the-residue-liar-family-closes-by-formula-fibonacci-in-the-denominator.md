@@ -83,4 +83,4 @@ near AP) up toward `1/12` (k large, relaxed). The owner's hint named the far pol
 *Linked: [[the-tight-locus-is-the-arithmetic-progression]] (S37), [[the-uniform-looseness-is-lrc-hard-the-far-peel-is-measure-and-linear]]
 (S39). Sharpens mac-mini HYP-4070 (GAP-A value-list → closed formula + proof), opus HYP-4047
 (Eisenstein/`Φ₆` is the cyclotomic pole; golden/`F₄₉` is the loose pole). Scripts:
-`lrc14_residue_liar_formula`, `lrc14_fibonacci_mod7_kps.py`. HYP-4076.*
+`lrc14_residue_liar_formula`, `lrc14_fibonacci_mod7_kps.py`. HYP-4078 (renumbered from 4076).*

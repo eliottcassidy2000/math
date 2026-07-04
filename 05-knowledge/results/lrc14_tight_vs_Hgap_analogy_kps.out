@@ -1,0 +1,17 @@
+AP residues mod14: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+GW residues mod14: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 10] (collision at 10: runners 10 & 24; missing 12)
+  AP: H(rotational tournament, n=13) = 2641713  ; H mod 7 = 4, mod 21 = 18, /7=-
+  GW: NOT a valid tournament (collision => not simple); H undefined at the collision config
+
+STRUCTURAL ANALOGY:
+  {12,24} = 12*{1,2}   base=12=n-2 (n=14), mult set {1,2}, ratio 2 (GW=double)
+  {7,21}  =  7*{1,3}   base=7=n/2  (n=14), mult set {1,3}, ratio 3
+  MEETING POINT: 84 = 12*7 = 4*21  = the FIRST COVERING residue-liar {1..11,13,84}
+    84 = 6*14 (blocks 14-grid); lonely at 37/89, 89=F11; 84=12*7=(tight base)*(heptagon)=4*21
+  H-formula H=1+2a1+4a2: H=7<=>a1=3 (forbidden); H=21<=>a1+2a2=10 (six-way block)
+  M-formula M=k/(12k+5): tight (1/14) at k=1(X=12,AP),2(X=24,GW); loose k>=3
+  => tight k in {1,2} <-> forbidden cycle-count {3,10} (a1 or a1+2a2)?  3,10 vs 1,2: ?
+  ratios: 24/12=2, 21/7=3; 2*3=6=ord(14 mod Phi6=183) [Eisenstein]; golden ord=16 [F49]
+
+  {1..11,13,36} residues [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 8]: collision (X%14=8) => degenerate
+  {1..11,13,84} residues [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]: H=2941087 (mod7=2)

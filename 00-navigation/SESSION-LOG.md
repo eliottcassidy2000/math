@@ -11,6 +11,19 @@ THE ANALOGY (real): both = base + its UNIQUELY-exceptional smallest-special-mult
 Files: reflection the-base-plus-exceptional-multiple-analogy-1224-vs-721, lrc14_1224_vs_721_analogy_opus_S66.py (+out), HYP-4077 (+INDEX).
 
 ---
+## kind-pasteur-2026-07-04-S3 -- {12,24} <-> {7,21}: TWO EXCEPTIONAL PAIRS, SAME SHAPE, ONE PROVED ONE OPEN (+ HYP collision cleanup 4076->4078)
+
+Prompt (owner): think about possible analogies between {12,24} (tight LRC coverers = AP, GW) and the tournament forbidden-H set {7,21}.
+
+RESULT (reflection two-exceptional-pairs-12-24-and-7-21-forcing-proved-vs-open.md):
+- LITERAL BRIDGE FALSE (computed lrc14_tight_vs_Hgap_analogy_kps.py): the tight LRC families do NOT map to the forbidden-H tournaments. AP's tight config (13 nonzero 14th-roots) has rotational tournament with H = 2,641,713 (Paley-scale, =4 mod7); GW's tight config has a residue collision (24=10=10 mod14) so isn't even a tournament. Tight families are HIGH-H -- the OPPOSITE of the H-hole. Not the same object in two languages.
+- STRUCTURAL ANALOGY REAL: both are 2-element exceptional sets of form base*{1,m}. {12,24}=12*{1,2} (base 12=n-2, m=2 GW-doubles; OPEN rigidity; residue-forcing). {7,21}=7*{1,3} (base 7=n/2, m=3; PROVED H-gap THM-029 [H=7]+THM-079 [H=21]; cycle-forcing). Each is small BECAUSE a combinatorial forcing kicks in beyond it.
+- REAL LEAD (method transfer): the H-gap is the SETTLED instance of exactly the problem the LRC rigidity is stuck on ("prove a 2-element exceptional set is ALL of it"), settled by EXHAUSTIVE DECOMPOSITION-BLOCKING (THM-079 six-way block). My HYP-4078 residue-liar formula M=k/(12k+5) is the single-swap analogue of the H=7 case (THM-029, one obstruction closed by explicit forcing). => The template for the full LRC rigidity is THM-079's blocking.
+- RESONANCES (flagged NOT-theorems): 84=12*7=4*21 = the first COVERING residue-liar {1..11,13,84} (=6*14, lonely 37/89=F11); multipliers 2*3=6 = order(14 mod Phi6=183) = opus's Eisenstein lever.
+
+HOUSEKEEPING: resolved a 3-way same-Fibonacci-prompt HYP-4076 collision (klein-S124 Fibonacci-foil = first-pusher OWNS 4076; mac-mini-S38 Ostrowski-ladder + kps-S2 residue-liar both dup'd). Renumbered MY entry 4076->4078 (INDEX/log/reflections/memory). FLAG: mac-mini's Ostrowski content is duplicated at BOTH 4075 (stale line) and 4076 -- mac-mini/klein to reconcile their 4075/4076 (klein-S123 LRCFolding also claimed 4075). Left their lines untouched.
+
+Files: reflection two-exceptional-pairs-12-24-and-7-21-forcing-proved-vs-open.md, script lrc14_tight_vs_Hgap_analogy_kps.py(+out), INDEX HYP-4078 (renumbered), memory.
 
 ## klein-2026-07-04-S124 -- FIBONACCI IS THE COVERING-MIN'S FOIL, NOT ITS LEVER: the anti-golden Eisenstein sibling (HYP-4076). Creative Fibonacci search, closed honestly.
 
@@ -49,7 +62,7 @@ NET: unifies covering-min + three-gap + every repo Fibonacci/Ostrowski/Zeckendor
 Housekeeping: ceded HYP-4075 to klein-S123 (Lean folding-identity, committed first), renamed mine to HYP-4076. klein-S123 also converged with my S37 loose-U/argmax dichotomy.
 
 Files: HYP-4076, reflection the-covering-min-is-an-ostrowski-ladder, covering_min_continued_fraction_macmini_20260704.py + out.
-## kind-pasteur-2026-07-04-S2 -- THE RESIDUE-LIAR FAMILY CLOSES BY A FORMULA (M({1..11,13,12k})=k/(12k+5), lonely t=(5k+2)/(12k+5)); PROVES the GAP-A coverer magnitude bound; Fibonacci denominators [owner's hint] (HYP-4076)
+## kind-pasteur-2026-07-04-S2 -- THE RESIDUE-LIAR FAMILY CLOSES BY A FORMULA (M({1..11,13,12k})=k/(12k+5), lonely t=(5k+2)/(12k+5)); PROVES the GAP-A coverer magnitude bound; Fibonacci denominators [owner's hint] (HYP-4078, renumbered from 4076: klein-S124 first-pusher owns 4076)
 
 Prompt (owner): keep working creative new routes at the endgame + hint: Fibonacci mod 7 has period 16.
 
