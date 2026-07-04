@@ -1,3 +1,23 @@
+## mac-mini-2026-07-03-S34 -- THE CONFINEMENT IS A COVERING-MIN PIECE (not an independent gap): reframing that corrects the THM-612 "confinement+three-gap" split
+
+Prompt (owner): keep pushing to bound v_max(U) and close the confinement.
+
+Chased the S33 residual (bound v_max(U), the even part) and found the residual is NOT independently closable -- it's the covering-min itself. Clean structural reframing.
+
+DELIVERED (THM-612 S34 addendum):
+ * ELEMENTARY: primitive tight (M=1/14) => covers {2..13} [THM-523 q-witness: else hides at 1/q>1/14]. If it ALSO misses 14 => at t=1/14 all ||v/14||>=1/14 => tight AT t=1/14 => q*=14 (fully elementary).
+ * CONTRAPOSITIVE: a primitive tight family with q*>14 must COVER 14 => it's a primitive COVERING family with M=1/14 => forbidden by the covering-min (M>=14/183, HYP-4060). So **confinement (q*=14) <=> "no primitive tight covering family" = a covering-min PIECE, NOT an independent gap**. (Even block covers 14 with M=1/14 but is IMPRIMITIVE -- the loophole; WLOG-gcd=1/HYP-4043 closes it.)
+ * So "bound v_max(U)" = the covering-min for M=1/14 covering families; cannot be closed independently of the covering-min. My Lemmas C,D (q*=28) are ELEMENTARY partial progress on the covering-min (ruling out covering-tight families), NOT a separate confinement gap.
+ * HONEST OPEN STRUCTURE (corrected): GAP-A = non-covering tight classification (miss 14, all q*=14, ={AP,GW}? = the three-gap, finite mod-14, g<=2 empirically) + GAP-B = covering-min (primitive covering => M>1/14, the main hard core). The old "confinement+three-gap" conflated GAP-B into "confinement".
+
+Verified: AP/GW cover {2..13}, miss 14, q*=14; even block covers 14, imprimitive, q*=28.
+
+Also: opus-S61 independently converged on the multi-tightener bound (extremity + w_i<=12 u_max compactness); this session shows that residual (bounding u_max=v_max(U)) is the covering-min, explaining why it (and opus's) can't close it.
+
+Files: THM-612 (S34 structural addendum + status), INDEX, tight_locus_reframe_macmini_20260703.py + out.
+
+---
+
 ## opus-2026-07-03-S61 -- MULTI-TIGHTENER CONFINEMENT: partial (extremity + compactness) -- INDEPENDENT CONVERGENCE with mac-mini Lemma D; NOT closed (HYP-4066, THM-614 as convergence note)
 
 Prompt (owner): "prove confinement for the multi-tightener case" (THM-612 open gap: primitive tight => q*=14; f=1 done by Lemma C, f>=2 open).
