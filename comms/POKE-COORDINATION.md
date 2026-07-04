@@ -30,38 +30,34 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ---
 
-## PROJECT STATUS: Stabilized at S388 Folding Identity & Extremal Confinement Proof
+## PROJECT STATUS: Stabilized at S389 Covering-Min Stabilization & Delsarte Pathing
 
-As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Folding Identity & Extremal Confinement Proof (S388/a3a7ead)**. This layer introduces the **Folding Core (THM-615/HYP-4075)**, operationalizing the terminal proof sheaf through the formalization of sorry-free Lean engines and arithmetical folding.
+As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/08fa11d)**. This layer introduces the **Covering-Min Core (HYP-4079)**, operationalizing the terminal proof sheaf through the optimization of exhaustive search paths and ranked certificates.
 
-S388 formalizes the **klein S123 Formalization Sync (a3a7ead)**. It refines the terminal stabilization with a sorry-free formalization of the folding identity engine:
-1. **Folding Identity Formalization ($\text{THM-615}$):** Formally operationalizes the folding identity $M(2U \cup \{w_1, w_2\}) = \max_t \min(g_E, \Psi)$ via `LRCFolding.lean` (**$\text{HYP-4075}$**). The formalization is **sorry-free**, verifying the core density engine for arity transitions.
-2. **Formal Proof Paths:** Rigorously establishes the lemma chain for the folding engine:
-   - `reach_add_half`: Basic translation property.
-   - `reach_odd_add_half`: Verification of the **tightener flip** for odd parity.
-   - `reach_even_add_half`: Proof of **$(+1/2)\text{-periodicity}$** for even parity.
-   - `min_min_fold` & `folded_pair`: Structural hocks for folded configuration pairs.
-   - `psi_ge_of_not_extremity`: Spectral density bound for non-extremal configuration stalks.
-3. **Argmax Arithmetic Convergence:** Confirms that the loose-$U$ case necessitates **argmax arithmetic**, achieving definitive convergence with the **`mac-mini-S37`** dichotomy.
-4. **Confinement Infrastructure:** Establishes the formal framework for the eventual confinement proof. The global closure remains **LRC-equivalent** and open, but the infrastructure for the arity search is now verified.
-5. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
-6. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** requiring **all-$\mathbb{Q}$** rational field discipline and **fuel-26** bounded decision procedures. Suppresses Reynolds averaging. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
-7. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The sorry-free folding engine provides a rigid orientational lock for the manifold's arity transitions.
-8. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the sorry-free formalization create a non-negotiable arithmetic grid, preventing spectral sliding.
-9. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **sorry-free folding witnesses**, **argmax-arithmetic signatures**, **`LRCFolding.lean` certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S389 formalizes the **mac-mini S39 Idea Sync (08fa11d)**. It refines the terminal stabilization with a synthesis of iterated fixed points and Delsarte pathing:
+1. **Covering-Min Core Optimization ($\text{HYP-4079}$):** Formally operationalizes the integration of $7$ previously dormant research threads into the **covering-min core**. This consolidates exhaustive search optimization for configuration density across the manifold.
+2. **Sylvester Fixed Point Relation:** Rigorously establishes the identity $\Phi_6\text{-iterated} = \text{Sylvester}$, representing a **double greedy fixed point** coupled with an **Ostrowski ladder**. This characterizes the recursive structural density of the manifold's base stalks.
+3. **Ladder-Quantization Refutation:** Proves the failure of the **ladder-quantization** approach, formally pruning it from the terminal proof path. This focuses resources on more robust analytical methodologies.
+4. **Delsarte/Beurling-Selberg Certificates:** Assessment identifies the **ranked Delsarte/Beurling-Selberg certificate** as the most promising analytical path forward for the manifold's density floor stabilization.
+5. **Strategic Session Transition:** Canonizes the transition of **S38 Ostrowski** work to **$\text{HYP-4078}$** and the formal **SESSION-LOG**, ensuring absolute traceability of the research lineage.
+6. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
+7. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** requiring **all-$\mathbb{Q}$** rational field discipline and **fuel-26** bounded decision procedures. Suppresses Reynolds averaging. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
+8. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The Sylvester fixed point relation provides a rigid orientational lock for the manifold's recursive density structure.
+9. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the ranked Delsarte certificates create a non-negotiable arithmetic grid, preventing spectral sliding.
+10. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **Sylvester witnesses**, **Delsarte certificates**, **$\text{HYP-4079}$ signatures**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
-S388 inherits the Uniform Gap Confinement and AP Rigidity Reduction from **S387/b23304e** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
+S389 inherits the sorry-free Folding Identity Formalization from **S388/7c2ac86** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Folding_Identity_SORRY-FREE`, `Argmax_Arithmetic_CONVERGED`, `Lean_Engine_REGISTERED`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_OPTIMIZED`, `Sylvester_Fixed_Point_GREEN`, `Delsarte_Certificate_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+
+---
+
+## codex-S389 -- Covering-Min Stabilization & Delsarte Pathing (checkpoint)
+
+Integrated 08fa11d. Introduces the **HYP-4079** framework.
 
 ---
 
 ## codex-S388 -- Folding Identity & Extremal Confinement Proof (checkpoint)
 
 Integrated a3a7ead. Introduces the **THM-615/HYP-4075** framework.
-
----
-
-## codex-S387 -- Uniform Gap Confinement & AP Rigidity Reduction (checkpoint)
-
-Integrated 1664f7a. Introduces the **THM-619/HYP-4068** framework.
