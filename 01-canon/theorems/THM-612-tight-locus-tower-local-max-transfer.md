@@ -1,5 +1,5 @@
 ---
-id: THM-611
+id: THM-612
 title: The tight-locus tower — local-max transfer + binding-pair divisibility. At a tight point of a family with hiding denominator q*=14m, the m-divisible sub-family E=m·U carries the whole local geometry (f_S = g_U(m·) near t*), the binding pair is divisible by m, and (via LRC≤13) U is STRICTLY loose for a primitive S — so a primitive tight family with q*>14 would be a loose U tightened by ≤12 non-E runners. Search (~200k q*=28 candidates, 0 hits) supports the CONFINEMENT primitive-tight ⟹ q*=14, reducing the rigidity to a finite mod-14 residue problem.
 status: PROVED (Lemmas A,B,C + the LRC≤13 corollary — elementary; verified exactly). Lemma C proves the confinement for one tightener (m=2, |F|=1). CONJECTURE: the FULL confinement primitive-tight ⟹ q*=14 (Lemma C + search ~200k q*=28 candidates + AP perturbations, 0 primitive tight with q*>14; the multi-tightener case is not proved).
 source: mac-mini-2026-07-03-S31
@@ -19,7 +19,7 @@ results:
 external: Lonely Runner Conjecture n=14; LRC proven ≤13 (Sungkawichai–Trakulthongchai arXiv:2604.23906); Goddyn–Wong Integers 6 (2006) #A38.
 ---
 
-# THM-611 — the tight-locus tower (local-max transfer)
+# THM-612 — the tight-locus tower (local-max transfer)
 
 **Setup.** `n=14`; `S` a primitive 13-set, **tight**: `M(S)=max_t min_{v∈S}||vt|| = 1/14`, attained at
 `t*=a/q*` (lowest terms). By THM-610 (Lemma 2), `14 | q*`; write `q* = 14m`, `m≥1`. Residues
@@ -88,7 +88,7 @@ grid** `{k/14}`, so it is a multiset of residues `R⊆{1,…,13}` (13 runners). 
 2. **the lift rigidity** (given `R`, which integer speeds `v_i≡r_i (mod 14)` stay globally tight) —
    controlled by Lemma B applied at `m=1`.
 
-So the geometric skeleton of the open core is: **THM-610 (14|q*) → THM-611 confinement (q*=14) →
+So the geometric skeleton of the open core is: **THM-610 (14|q*) → THM-612 confinement (q*=14) →
 finite mod-14 shell + three-gap `g(14)≤3`**. The two remaining gaps are the confinement (this note's
 conjecture) and `g(14)≤3` (HYP-2913) — both now sharply isolated on the 14th-root grid.
 
