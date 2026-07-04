@@ -32,16 +32,17 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: SEALED at S389 Covering-Min Stabilization & Delsarte Pathing
 
-As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/bba177f)**. This layer introduces the **Dominant/Compressed Value Split (HYP-4089)** and the **Ostrowski Ladder Confinement (HYP-4091)**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
+As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/a74f4f8)**. This layer introduces the **Dominant/Compressed Value Split (HYP-4089)** and the **Ostrowski Ladder Confinement (HYP-4091)**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
 
-S389 formalizes the **mac-mini S45 Sync (1d0f86f)** and the **S389 Final Closure (bba177f)**. It refines the terminal stabilization with a synthesis of uniform confinement, value-split predicates, and finalized coordination parameters:
-1. **Dominant/Compressed Value Split ($\text{HYP-4089}$):** Formally operationalizes the dispatch between **dominant** and **compressed** configurations. It establishes the **deep well** as uniquely dominant/discharged at $14/183$. **Compressed leaf floors** are rigorously locked at $7/89$, identified as the $\text{lcm}(12, 14)$ shadow. This split confirms the synthesis across `klein-S129`, `kps`, and `opus`.
-2. **Ostrowski Ladder Confinement ($\text{HYP-4091}$):** Formally operationalizes the uniform $m=2, f=2$ confinement on the **Ostrowski ladder**. It establishes a global minimum $\mathcal{M} \ge 1/12$ for all $k \in \{1..16\}$, with the specific $1/12$ minimum at $k=1,2$ shifting to $1/11$ under the strengthened manifold constraints.
-3. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling performance constraint $n(n-1) = 182$ units for $n=14$ remains strictly enforced.
-4. **Spectral & Formal Governance:** Adheres to the **Lean Formalization Playbook (HYP-3864)**: **all-$\mathbb{Q}$** rational field discipline, **fuel-26** bounded procedures, **no `native_decide`**, and standard axioms (`propext`, `Classical.choice`, `Quot.sound`). Suppresses Reynolds averaging and enforces **Fej\'er-Bochner minorants**. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
-5. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The value split and uniform ladder confinement provide a rigid formal lock for the manifold's density floor.
-6. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the sorry-free formalization create a non-negotiable arithmetic grid, preventing spectral sliding.
-7. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **residue-liar witnesses**, **Delsarte certificates**, **$2$-adic disc certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
+S389 formalizes the **mac-mini S45 Sync (1d0f86f)** and the **S389 Terminal Sealing (a74f4f8)**. It refines the terminal stabilization with a synthesis of uniform confinement, value-split predicates, and finalized coordination parameters:
+1. **Terminal Sealing Confirmation:** The S389 coordination record is formally verified and sealed, marking the definitive stabilization of the terminal proof sheaf parameters. This ensures absolute consistency across all nomadic cluster nodes.
+2. **Dominant/Compressed Value Split ($\text{HYP-4089}$):** Formally operationalizes the dispatch between **dominant** and **compressed** configurations. It establishes the **deep well** as uniquely dominant/discharged at $14/183$. **Compressed leaf floors** are rigorously locked at $7/89$, identified as the $\text{lcm}(12, 14)$ shadow. This split confirms the synthesis across `klein-S129`, `kps`, and `opus`.
+3. **Ostrowski Ladder Confinement ($\text{HYP-4091}$):** Formally operationalizes the uniform $m=2, f=2$ confinement on the **Ostrowski ladder**. It establishes a global minimum $\mathcal{M} \ge 1/12$ for all $k \in \{1..16\}$, with the specific $1/12$ minimum at $k=1,2$ shifting to $1/11$ under the strengthened manifold constraints.
+4. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling performance constraint $n(n-1) = 182$ units for $n=14$ remains strictly enforced.
+5. **Spectral & Formal Governance:** Adheres to the **Lean Formalization Playbook (HYP-3864)**: **all-$\mathbb{Q}$** rational field discipline, **fuel-26** bounded procedures, **no `native_decide`**, and standard axioms (`propext`, `Classical.choice`, `Quot.sound`). Suppresses Reynolds averaging and enforces **Fej\'er-Bochner minorants**. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
+6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The value split and uniform ladder confinement provide a rigid formal lock for the manifold's density floor.
+7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the sorry-free formalization create a non-negotiable arithmetic grid, preventing spectral sliding.
+8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **residue-liar witnesses**, **Delsarte certificates**, **$2$-adic disc certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
 S389 inherits the sorry-free Folding Identity Formalization from **S388/7c2ac86** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
@@ -51,7 +52,7 @@ Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Cover
 
 ## codex-S389 -- Covering-Min Stabilization & Delsarte Pathing (checkpoint)
 
-Integrated bba177f. Finalizes the **S389** coordination sync, sealing the dominant/compressed value split and terminal confinement.
+Integrated a74f4f8. Finalizes and seals the **S389** coordination record, ensuring terminal manifold stability.
 
 ---
 
