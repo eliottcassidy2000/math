@@ -1,3 +1,22 @@
+## opus-2026-07-03-S56 -- THE COMPRESSED WITNESS AS A CIRCLE-METHOD COUNT + "commensurability helps": the exact form of, and a possible angle past, the open witness-existence kernel (HYP-4057); NOT a closure (honest)
+
+Prompt (owner): work to close the crux yourself, pulling ideas from concurrent agent work.
+
+INTEGRATED (pulled): mac-mini HYP-4054 (capacity: blocking q costs log(1/f_q), CRT caps at 13 log M => witness q*=O(log M loglog M); reduced to lemma (A) 'no small resonance => witness'); kps HYP-4055 (RIGOROUS q* <= 13 ln M via theta(q*)<=13 ln M by PNT; LRC(14) <=> finite check 'witness exists at q*<=~450'; the open kernel = witness-existence, KNOWN-INSUFFICIENT for n=14).
+
+DID NOT CLOSE the crux (it is essentially LRC(14) itself; the witness-existence step is known-insufficient by standard character sums). CONTRIBUTED (exact + verified, circle_method_witness_count script):
+ * THE EXACT FORM of lemma (A)/the open kernel: N(V,q) = #{a: all v_i a avoid danger mod q} = q*sum_{sum h_i v_i=0 mod q} prod c(h_i), c(0)=6/7, c(h)=-d(h) (danger Dirichlet kernel). MAIN TERM q(6/7)^13 (= mac-mini lemma (i), the mean). ERROR = resonances.
+ * THE PAIR ERROR IS A DEDEKIND SUM sum_h 1/(h||hr/q||), r=v_j/v_i mod q; VERIFIED ~1.5(log q)^2 for badly-approximable r -- negligible vs the O(q) main term at the log-census scale.
+ * THE CORRECTION / possible ANGLE: a SMALL resonance = a COMMENSURATE pair (v_j=2v_i) => the danger bad-sets OVERLAP => union SHRINKS => MORE witnesses (N > main term, verified). A COVERING family SHARES small factors, so it CARRIES helpful commensurability -- which the standard (insufficient) generic character-sum IGNORES. Exploiting covering's forced commensurability is a possible route past the n=14 wall.
+
+HONEST: given MISTAKE-097 (two prior overclaims on this same crux -- S52 census-invisible, S55 compressed-bounded-q, both weak-adversary/incomplete-scan artifacts) I flag the NON-closure plainly. This session's outputs are the exact analytic form + a verified error kernel + the commensurate-helps angle, all supporting kps/mac-mini's active reduction, NOT a proof.
+
+HYP HYGIENE: my S55 dominant/compressed dichotomy renumbered HYP-4054 -> HYP-4056 (collision with mac-mini S28 capacity=HYP-4054); this session = HYP-4057.
+
+Files: circle_method_witness_count_opus_20260703_S56.py (+.out), reflection the-compressed-witness-is-a-circle-method-count-and-commensurability-helps, HYP-4057 (+INDEX), HYP-4056 renumber.
+
+---
+
 ## kind-pasteur-2026-07-03-S34 -- THE OPEN CRUX, resolved as STRUCTURE: census = Θ(log M), the rigorous q* ≤ 13 ln M bound, and `alignment costs magnitude` (HYP-4055)
 
 Prompt (owner): focus on the open crux, mathematical reasoning not formalization, get it done.
