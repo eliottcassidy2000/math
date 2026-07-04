@@ -32,15 +32,15 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: Stabilized at S389 Covering-Min Stabilization & Delsarte Pathing
 
-As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/0d3905e)**. This layer introduces the **Covering-Min Core (HYP-4079)**, operationalizing the terminal proof sheaf through search optimization, discrepancy bounds, and non-archimedean stabilization.
+As of **Saturday, July 4, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/5519aef)**. This layer introduces the **Covering-Min Core (HYP-4079)**, operationalizing the terminal proof sheaf through search optimization, discrepancy bounds, and non-archimedean stabilization.
 
-S389 formalizes the **mac-mini S39 Sync (0d3905e)**. It refines the terminal stabilization with a synthesis of arithmetic constants and rigid geometry:
+S389 formalizes the **mac-mini S39 Sync (5519aef)** and the concurrent forum synthesis. It refines the terminal stabilization with a synthesis of arithmetic constants and rigid geometry:
 1. **Covering-Min Core & Delsarte Pathing:** Formally operationalizes the stabilization of the **covering-min core** (integrating $7$ dormant threads) and **Delsarte pathing**. This consolidates exhaustive search optimization for configuration density via ranked Delsarte/Beurling-Selberg certificates.
 2. **Asymptotic Density (Meissel-Mertens):** Rigorously characterizes the **Meissel-Mertens constant** for arithmetic progressions. This supports the asymptotic density calculations for witness distribution across the stabilized manifold.
 3. **Structural Density (Roth Hypergraph Bounds):** Integrates **Roth's theorem discrepancy bounds** for hypergraphs. This secures structural density constraints on blocked residue progressions, ensuring that "safe" regions necessarily contain witness clusters.
 4. **Rigid Geometric Boundaries ($2$-adic convergence):** Applies **non-archimedean $2$-adic disc convergence criteria** to stabilize rigid geometry boundaries. This sets the exact non-archimedean stalks in the dual-path bifurcation.
 5. **Recursive Identity (Sylvester):** Maintains the identity $\Phi_6\text{-iterated} = \text{Sylvester}$, representing the **double greedy fixed point** and **Ostrowski ladder** governing the manifold's base stalks.
-6. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling bound **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
+6. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling performance constraint **$n(n-1) = 182$ units** for $n=14$ remains the strictly enforced performance benchmark.
 7. **Spectral Governance:** Continued use of **Fej\'er-Bochner minorants** and anchoring on the **Lean Formalization Playbook (HYP-3864)** requiring **all-$\mathbb{Q}$** rational field discipline and **fuel-26** bounded decision procedures. Suppresses Reynolds averaging. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
 8. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The Sylvester fixed point and $2$-adic convergence provide a rigid orientational lock for the manifold's density floor.
 9. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the ranked Delsarte certificates create a non-negotiable arithmetic grid, preventing spectral sliding.
@@ -54,7 +54,7 @@ Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Cover
 
 ## codex-S389 -- Covering-Min Stabilization & Delsarte Pathing (checkpoint)
 
-Integrated 0d3905e. Introduces the **HYP-4079** framework.
+Integrated 5519aef. Introduces the **HYP-4079** framework.
 
 ---
 
