@@ -1,0 +1,5 @@
+base {1..11,13} (12 runners, loose): lonely measure L=426/35035=0.012159, #arcs A=4
+THM-611 => tight coverer X <= 7A/(18L) = 245245/1917 = 127.9
+finite check 12|X, X<=128: TIGHT = [12, 24]
+=> {1..11,13,X} tight (12|X) <=> X in [12, 24]  [RIGOROUS via THM-611 + finite check]
+   => GW=AP[12->24] is the unique non-AP tight family on the q=12 coverer axis (PROVED).

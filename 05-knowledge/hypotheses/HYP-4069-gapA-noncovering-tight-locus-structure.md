@@ -1,15 +1,17 @@
 ---
 id: HYP-4069
 title: GAP-A structure — the non-covering tight locus is {AP, GW}, reduced to a finite check via forced-residues + lift-rigidity + coverer-bound; GW is the UNIQUE non-AP single-swap tight family (only q=12 admits a second coverer, 24)
-status: PARTIAL (forced-residues RIGOROUS; single-swap uniqueness VERIFIED exact; the two contingent pieces — odd/even lift-rigidity and the coverer magnitude bound — have strong evidence + the single-swap proof, not a full proof). GAP-A = tight-locus finiteness for non-covering families = OPEN in the literature (Perarnau–Serra).
+status: PARTIAL (forced-residues RIGOROUS; single-swap uniqueness VERIFIED exact; coverer-bound on the q=12 axis now PROVED via opus THM-611 => {1..11,13,X} tight <=> X in {12,24} rigorously; general v_max bound reduces to bounding A/L for 12-runner subfamilies = the residual finiteness). GAP-A = tight-locus finiteness for non-covering families = OPEN in the literature (Perarnau–Serra).
 source: mac-mini-2026-07-03-S35
 related:
   - THM-612   # the tight-locus tower; S34 reframing split the open core into GAP-A (this) + GAP-B (covering-min)
   - THM-523   # q-witness lemma — gives "covers {2..13}" and the deletion-hiding mechanism
+  - THM-611   # opus far-runner decorrelation — PROVES the coverer magnitude bound (single-coverer axis)
   - HYP-2913  # ±units-covering (gives the units ⊆ residues) + three-gap
   - HYP-2561  # tight-locus finiteness (inf L=1/1260, locus={AP,GW})
 results:
   - 04-computation/gapA_structure_macmini_20260703.py
+  - 04-computation/gapA_coverer_bound_macmini_20260703.py
   - 05-knowledge/results/gapA_structure_macmini_20260703.out
   - 04-computation/tight_locus_enumerate_macmini_20260703.py
 external: LRC(14); Goddyn–Wong tight instances Integers 6 (2006) #A38; tight-locus finiteness open (Perarnau–Serra arXiv:2409.20160).
@@ -52,10 +54,15 @@ max speed 24, `g≤2`**.
 
 ## What is rigorous vs. open
 - **RIGOROUS**: §1 (odds forced); §2 (single-swap uniqueness of GW, exact); "covers {2..13}", "miss-14 ⟹ q*=14".
-- **STRONG EVIDENCE, not proved**: the two magnitude bounds of §3 (lift-rigidity: minimal lifts; coverer-bound:
-  coverers `≤` explicit `B`) — each holds on the single-swap axis (proved) and over all searches, but the
-  general (multi-swap, arbitrary lift) bound is the residual = the finiteness itself. Closing §3 in general
-  closes GAP-A. This is the LRC(14) non-covering extremal-uniqueness — open in the literature.
+- **COVERER-BOUND PROVED on the single-coverer axis (via opus THM-611):** THM-611's far-runner
+  decorrelation `meas(lonely(R∪{w})) ≥ (6/7)meas(lonely(R)) − A_R/(3w)` applied to a TIGHT `S=R∪{w}`
+  (lonely measure 0) gives `w ≤ 7A_R/(18 L_R)`. For `R={1..11,13}` (loose, `L=426/35035`, `A=4`) this is
+  `X ≤ 128`; the finite check `12|X≤128` gives exactly `X∈{12,24}`. So **`{1..11,13,X}` tight ⟺ X∈{12,24}
+  is RIGOROUS** (not just evidence), and GW is the unique non-AP tight family on the q=12 axis, PROVED.
+- **STILL OPEN in general**: the same THM-611 bound gives, for a tight `S`, `v_max ≤ 7A'/(18 L')` with
+  `A',L'` the lonely data of `S∖{v_max}` (12 runners, loose by LRC(13) ⟹ `L'>0`). This bounds `v_max` by
+  the *rest* of the family; making it an ABSOLUTE bound needs `A'/L'` bounded for all 12-runner subfamilies
+  (missing 14) — the residual = the finiteness itself (LRC(14) non-covering extremal-uniqueness, open).
 
 NET: GAP-A is reduced to **two magnitude bounds** (minimal lifts + bounded coverers) on the 14th-root grid,
 both rigorous on the single-swap axis and strongly evidenced generally; granting them, GAP-A = {AP, GW}.
