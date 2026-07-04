@@ -1,0 +1,19 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_dominant_closure_kps.py:2: SyntaxWarning: invalid escape sequence '\{'
+  then V is lonely (M>=1/14). Proof idea: base U=V\{v_i} (12 runners) has M(U)>=1/13 (LRC13) at some t*;
+Testing dominant closure: V = base(12 runners, all <= B) + v_i > 13*B  =>  M(V) > 1/14 ?
+1/14 = 0.07143
+  base(max 19) + vi=372: M=1/5=0.20000  >1/14: True  [vi/Bmax=19.6]
+  base(max 13) + vi=175: M=2/17=0.11765  >1/14: True  [vi/Bmax=13.5]
+  base(max 13) + vi=311: M=1/8=0.12500  >1/14: True  [vi/Bmax=23.9]
+  base(max 19) + vi=409: M=46/419=0.10979  >1/14: True  [vi/Bmax=21.5]
+  base(max 29) + vi=528: M=8/49=0.16327  >1/14: True  [vi/Bmax=18.2]
+  base(max 13) + vi=192: M=1/11=0.09091  >1/14: True  [vi/Bmax=14.8]
+
+40 dominant families tested, 0 failures (M<=1/14).
+
+Boundary check (base={1..12}, Bmax=12, 13*Bmax=156):
+  vi=150 (dominant iff >156): M=1/13=0.07692 >1/14:True
+  vi=156 (dominant iff >156): M=12/157=0.07643 >1/14:True
+  vi=157 (dominant iff >156): M=1/13=0.07692 >1/14:True
+  vi=170 (dominant iff >156): M=1/13=0.07692 >1/14:True
+  vi=182 (dominant iff >156): M=14/183=0.07650 >1/14:True
