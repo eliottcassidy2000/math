@@ -1,0 +1,15 @@
+             N    q*              freedoms(|A_i|) adversary covers q* within [N,2N]?
+         1,000    57 [1, 1, 1, 1, 1, 1, 1, 1, 1, 18, 19, 20, 21] YES -- q_min>q* (adversary blocks q*)
+        10,000    75 [1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 4, 6] NO (best leaves 6 uncovered) -> WITNESS at q*
+       100,000    95 [1, 1, 1, 1, 1, 1, 1, 1, 1, 12, 14, 16, 19] NO (best leaves 8 uncovered) -> WITNESS at q*
+     1,000,000   127 [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 4] NO (best leaves 12 uncovered) -> WITNESS at q*
+    10,000,000   141 [1, 1, 1, 1, 1, 1, 2, 4, 4, 4, 5, 8, 13] NO (best leaves 6 uncovered) -> WITNESS at q*
+   100,000,000   163 [1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 4, 32] NO (best leaves 18 uncovered) -> WITNESS at q*
+ 1,000,000,000   181 [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 4, 5, 9] NO (best leaves 26 uncovered) -> WITNESS at q*
+10,000,000,000   215 [1, 1, 1, 1, 1, 1, 2, 5, 6, 7, 13, 20, 29] NO (best leaves 2 uncovered) -> WITNESS at q*
+100,000,000,000   239 [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 7, 37, 84] NO (best leaves 18 uncovered) -> WITNESS at q*
+
+READING: NO in every row => the extremal adversary CANNOT cover q* within its own
+magnitude (freedom<q* per runner blocks the alignment) => q_min=q* is FORCED at the
+extremal. The compressed crux at the extremal reduces to `the forced residues don't
+cover Z/q*`, and here the adversary provably can't force a cover without more magnitude.

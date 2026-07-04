@@ -1,0 +1,32 @@
+=== (1) arc-covering density f_q (random nonzero residues) ===
+   q        f_q    q*f_q main (6/7)^13 E[#safe]/q est
+  15    0.43475     6.52       0.13480
+  17    0.13980     2.38       0.13480
+  19    0.05280     1.00       0.13480
+  23    0.00305     0.07       0.13480
+  29    0.11610     3.37       0.13480
+  37    0.00605     0.22       0.13480
+  43    0.03510     1.51       0.13480
+  53    0.00050     0.03       0.13480
+  67    0.00070     0.05       0.13480
+  83    0.00020     0.02       0.13480
+ 101    0.00025     0.03       0.13480
+ 127    0.00020     0.03       0.13480
+
+=== (2) resonance dichotomy on random residues ===
+   q  #cover  #no_reson cover&no_reson no_reson=>witness?
+  17     530          0              0        OK (0 viol)
+  19     185          0              0        OK (0 viol)
+  23      10          0              0        OK (0 viol)
+  29     507          0              0        OK (0 viol)
+  37      29          0              0        OK (0 viol)
+  43     144          0              0        OK (0 viol)
+  53       1          0              0        OK (0 viol)
+  67       2          0              0        OK (0 viol)
+  83       0          0              0        OK (0 viol)
+ 101       1          0              0        OK (0 viol)
+ 127       0          0              0        OK (0 viol)
+
+READING (1): if q*f_q stays bounded => f_q=O(1/q) (2nd-moment-provable arc-covering lemma).
+READING (2): 0 violations => THEOREM `no small pairwise resonance mod q => witness exists`;
+  then LRC(14)-compressed reduces to families WITH a small pairwise resonance at q*.

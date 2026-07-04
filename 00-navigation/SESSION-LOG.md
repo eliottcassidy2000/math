@@ -1,3 +1,23 @@
+## kind-pasteur-2026-07-03-S35 -- THE RESIDUE-FREEDOM COLLAPSE: census/loose side closed rigorously + mechanistically (`alignment costs magnitude` at the residue level); NOT the tight crux (HYP-4059)
+
+Prompt (owner): keep making progress toward the proof.
+
+MATH session (no Lean). Pushed the census route from S34 (q*<=13 ln M) down to the residue level, and integrated the fleet's S29/S57 pivot to the measure route.
+
+DELIVERED:
+ * **THE RESIDUE-FREEDOM COLLAPSE**: for the strongest COMPRESSED divisibility-blocker at magnitude M, runner i's residue freedom mod q* = ⌊M/F_i⌋ (F_i = divisibility part). At the extremal ∏F_i~M^13 forces freedom<q* for ALL 13 (verified 13/13, median 1-4). ∏freedom~M^13/∏F_i = a 10^-19 sliver of q*^13 configs -- the adversary can't CHOOSE residues, they're forced by the primes.
+ * **DECISIVE TEST**: greedy-search over each runner's achievable residues A_i={F_i c mod q*} for a cover of Z/q* -- NO for every M>=10^4 (2-26 uncovered) => the extremal adversary CANNOT cover q* within its magnitude => witness FORCED at q* (q_min=q*). `alignment costs magnitude` literal: covering needs F_i<=M/q*, contradicting ∏F_i~M^13.
+ * **arc-covering f_q->0** (P(random 13 danger-sets cover Z/q): 0.43@15 -> 1e-4@127; 2nd moment E[#safe]~0.135q, Var=o(q^2)).
+ * **DEAD END recorded**: pairwise resonance m_i v_i+m_j v_j=0 mod q (|m|<=7) is VACUOUS -- every residue vector has one at q<=127 (7644 conditions ~1/q each); doesn't characterize no-witness. The real driver is arc-measure, not resonance rarity.
+
+HONEST PLACEMENT (integrating mac-mini S29 + opus S57): the lcm/divisibility-blockers are LOOSE (M~0.25-0.32>>1/14), so the growing q* is a RED HERRING for the TIGHT crux. This work CLOSES the LOOSE side rigorously (they ARE lonely, at q*<=13 ln M) -- the easy leg. The TIGHT crux (M->1/14, mu->0, deep well isolated 14/183) is the MEASURE route (opus HYP-4058 mu=(6/7)^13+R, mu>0<=>R>-(6/7)^13<=>LRC(14)), NOT closed here.
+
+GAPS: (i) greedy-search=>infeasibility proof (sub-q* AP danger sets can't tile Z/q*); (ii) extremal=>all families; (iii) small M direct census. Frontier = the measure route's R>-(6/7)^13 (the known-hard Fourier wall for n=14).
+
+Files: reflection the-residue-freedom-collapse.md, HYP-4059 (+INDEX), 5 scripts _kps_S34/S35.py, memory.
+
+---
+
 ## opus-2026-07-03-S57 -- COVERING-COMMENSURABILITY on the MEASURE ROUTE (mac-mini-S29 pivot integrated) + the danger band's 7-FOURIER-ZEROS (HYP-4058); NOT a closure (honest)
 
 Prompt (owner): pursue the covering-commensurability angle further.
