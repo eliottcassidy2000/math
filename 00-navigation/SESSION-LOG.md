@@ -37,6 +37,20 @@ HOUSEKEEPING: HYP cascade rode 4 collisions mid-session; settled 4099=klein-S134
 FILES: lrc_multilift_leg_macmini_S52.py, lrc_multilift_floor_macmini_S52.py (+.outs), lrc_ladder_certificates_macmini_S52.md, reflection the-multi-lift-floor-and-the-14r-ladder-macmini-S52.md; HYP-4103 (+INDEX). No canon overridden.
 
 NEXT: (a) the l=3..6 floor-level domains (T_l bounded; same harness, bigger volumes -- expect 2/25 to hold, the 2nd harmonic seems to be THE lift floor); (b) the Fin-12 fee transcription; (c) prove M({4,6}-block) = 2/25 as the lift-side 2nd-harmonic extremal (kps's second_value_loose machinery should adapt); (d) the l >= 7 spread residual (ratio gate + sieve strain -- possibly a one-session finite check).
+## kind-pasteur-2026-07-05-S3 -- CERTIFICATE COMPLETENESS (the modulus bound, formal) + THE GAP FILTERS kernel-pure: not-loose forces covering in every direction + mod-q near-unit pinning for ALL q <= 25 + the +-pair covering; merge exclusion d >= 3, v+w >= 38 (HYP-4105)
+
+Prompt (owner): next brick (bound the modulus s) or whatever closes LRC(14); math first, then formalize.
+
+THE LEAN (LRCCertCompleteness.lean, registered, corpus green 8660, all [propext, Classical.choice, Quot.sound]):
+ - **cert_of_margin + loose_branch_cert_exists**: the S2 atom's COMPLETENESS converse with the explicit modulus bound s <= B/(2(beta'-beta)) + 1 (margin beta' anywhere => integer certificate at (round(s t*), s, ceil(beta s))). At the rigidity slack (14/169 vs 2/25): s ~ 176B. Margin language = integer-certificate language, both directions, explicit bounds; the dichotomy's loose branch is formally a BOUNDED integer search. Proof = Lipschitz transfer + abs_sub_round only.
+ - **THE GAP FILTERS** (not_loose_eval/dvd/near_unit/pinning_13/pinning_14/pair_pinning_13): what the loose branch's FAILURE forces, at every direction a: q | v_i a for q <= 12; v_i a = 0,+-1 mod q for ALL q <= 25; with no 13-multiples every unit +-pair class mod 13 is hit. Extends opus's exact-tight pinning INTO the gap (any M < 2/25, not just M = 1/13). At p = 23: 11 pair classes vs 12 elements -- a gap violator must impersonate the AP at every prime simultaneously.
+ - MISTAKE-CLASS CATCH (in-session): my first exact-M grid skipped non-reduced d/(v+w) -- the binding time need not be in lowest terms ({6,10,18,54} binds at t = 1/4 = 4/16, pair 6+10). Fixed; grid-vs-fine-scan 400/400 clean. Confirms the equioscillation time denominator is exactly v_i + v_j.
+
+THE MATH NOTE (prose, rests on THM-592): gap values M in (1/13, 2/25) have merge form d/(v+w) with d = 1, 2 EMPTY windows => d >= 3, v+w >= 38 => any gap violator has w_max >= 19 and binding depth >= 3. Filtered census [1,24]: 488894 pass all filters, 0 in the gap (min filtered M = 1/12 (near-dilated {1,2,4,...,22} family)).
+
+HONEST: the spectral gap itself (M in (1/13, 2/25) empty) remains THE open crux; this session delivered the interrogation kit (necessary conditions, formal) + the completeness bound (the flagged next brick), not the conviction. The conviction is covering-efficiency geometry = the fleet's tower/CRT lane.
+
+FILES: LRCCertCompleteness.lean; lrc_gap_filters_kps_S3.py + results/.out; reflection the-gap-violator-wears-handcuffs-at-every-prime-kps-S3; HYP-4105 (INDEX). Two checkpoints + close-out. No canon overridden.
 
 ## kind-pasteur-2026-07-05-S2 -- THE RATIONAL-POINT MARGIN CERTIFICATE (the loose branch's universal decidable atom) + THE RATIO-GATE REDUCTION: TightLooseDichotomy provably shrinks to SPREAD bases; the sharpened surface lrc14_of_spread_dichotomy_and_corner kernel-pure (HYP-4102)
 

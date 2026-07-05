@@ -9,3 +9,7 @@ HYP-4105: cert completeness + gap filters + merge exclusion
       d=3, v+w=38: 3/38 = 0.078947
       d=4, v+w=51: 4/51 = 0.078431
       => minimal depth d = 3, minimal sum v+w = 38 (gap violator's binding pair sums >= 38 => w_max >= 19)
+[P4] census [1,24]: 2704155 primitive 12-subsets; 596542 covering; 488894 pass ALL gap filters; 0 in the gap (MUST be 0)
+      min M among filter-passers: 1/12 at [(1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22), (2, 3, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22), (2, 4, 5, 6, 8, 10, 12, 14, 16, 18, 20, 22)]
+==========================================================================
+SUMMARY: P1 OK; P2 OK; P3 OK; P4 OK
