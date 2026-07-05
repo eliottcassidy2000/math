@@ -42,6 +42,8 @@ static int killer_r[NCELLS][26], killer_mu[NCELLS][26], killer_n[NCELLS];
 static long long nodes=0, sols=0;
 static long long node_cap, sol_cap;
 static int assigned_mu[13];        /* -1 = unassigned */
+static int opt_cnt[NCELLS];        /* # killers at unassigned positions (incremental) */
+static int killers_at_r[13][NCELLS]; /* how many of cell i's killers sit at position r */
 
 static void dfs(bs covered, int nassigned){
     if(nodes>node_cap || sols>=sol_cap) return;
@@ -52,13 +54,11 @@ static void dfs(bs covered, int nassigned){
         int have = popcount_and(&covered,&COLMASK[b]);
         if(169-have > 26*nrem) return;
     }
-    /* least-options uncovered cell */
+    /* least-options uncovered cell (incremental counts) */
     int best=-1, bestn=99;
     for(int i=0;i<NCELLS;i++){
         if(bs_get(&covered,i)) continue;
-        int n=0;
-        for(int k=0;k<killer_n[i];k++)
-            if(assigned_mu[killer_r[i][k]]<0) n++;
+        int n=opt_cnt[i];
         if(n<bestn){ bestn=n; best=i; if(n<=1) break; }
     }
     if(best<0||bestn==0) return;
@@ -66,8 +66,10 @@ static void dfs(bs covered, int nassigned){
         int r=killer_r[best][k], mu=killer_mu[best][k];
         if(assigned_mu[r]>=0) continue;
         assigned_mu[r]=mu;
+        for(int i=0;i<NCELLS;i++) opt_cnt[i]-=killers_at_r[r][i];
         bs nc = covered; bs_or(&nc,&KM[r][mu]);
         dfs(nc,nassigned+1);
+        for(int i=0;i<NCELLS;i++) opt_cnt[i]+=killers_at_r[r][i];
         assigned_mu[r]=-1;
         if(nodes>node_cap || sols>=sol_cap) return;
     }
@@ -106,6 +108,11 @@ int main(int argc,char**argv){
             }
         }
     for(int r=1;r<13;r++) assigned_mu[r]=-1;
+    memset(killers_at_r,0,sizeof killers_at_r);
+    for(int i=0;i<NCELLS;i++){
+        opt_cnt[i]=killer_n[i];
+        for(int k=0;k<killer_n[i];k++) killers_at_r[killer_r[i][k]][i]++;
+    }
     bs empty; memset(&empty,0,sizeof empty);
     dfs(empty,0);
     printf("kappa=[");

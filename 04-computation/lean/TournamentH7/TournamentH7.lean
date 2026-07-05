@@ -325,3 +325,4 @@ import TournamentH7.LRCMultiKillerWindow13
 import TournamentH7.LRCLiftPigeonhole
 import TournamentH7.LRCGapDescent
 import TournamentH7.LRCLiftRowsL7
+import TournamentH7.LRCTowerLift
