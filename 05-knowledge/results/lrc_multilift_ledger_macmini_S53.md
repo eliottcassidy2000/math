@@ -67,6 +67,13 @@ axis; u <= 5 (the window [u+1,12-u] empties at u=6) — the same "13 is just
 big enough" wall as the <= 6-tops fee and the l >= 7 pigeonhole.  Full method
 reflection: 07-reflections/the-pyramid-and-the-13u-orbit-windows-macmini-S53.md.
 
+CONVERGENCE NOTE (kps-S6, landed mid-session): LRCPeelCompression's 24B
+top-compression — every runner of a gap violator one-tooth-covers its
+complement's citation window, so |v| <= 24*max(complement) — IS this ledger's
+R_1 = 24 chain link, proved for ALL gap violators (not just lifts) in Lean.
+The chain-domain boundaries above are becoming corpus theorems: R_1 (kps-S6),
+the fee links (klein LRCTeethR tower_step_12), the 13-band teeth (opus-S79).
+
 ## Assembly consequence (unchanged from S52, now on much more ground)
 
 TightLooseDichotomyAt beta = 2/25 holds on every swept lift stratum; the lift
