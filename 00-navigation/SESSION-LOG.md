@@ -1,3 +1,20 @@
+## mac-mini-2026-07-05-S55 -- THE Q50 CONJECTURE (the absolute-height mechanism, named and finite-shaped): profile => witness at q <= 50 (511,947/511,947 census + 12,095/12,095 at heights to 1.16e14); POLE NECESSITY proved (floating 7-cluster, CRT-frozen rays) => no residue filter can anchor height; l>=7 bounded stratum CLEAN (7.07M); I=3 walk ceded to kps-S9 (HYP-4119)
+
+Prompt (owner): attack the absolute-height mechanism via mod-575 CRT; overall scale + bottom-6 alignment; the l>=7 assembly lemma and grid stratum; T_l pole necessity at l <= 6; the I=3 walk.
+
+ALL FIVE ITEMS LANDED (one ceded):
+ (1) MOD-575 CRT ROUTE -> executed as WITNESS SPECTROSCOPY: instrumented the census (first-witness-q histogram + composite-CRT-only gate (q >= 26 dividing p*p', pinned p,p' in [13,25]) + bottom-6/scale stats).  RESULT: 100.000% of the 511,947 [25,48] full-profile survivors witness at q <= 45; 100% at composite-CRT moduli; witnesses NEVER at q <= 25 (the pinning bans them -- profile and witness moduli are complementary).  THE Q50 CONJECTURE: profile => margin-2/25 witness at q <= 50.  HIGH-SCALE TEST (the census can't reach): CRT-lift census seeds by multiples of L = lcm(2..25) to heights up to 1.16e14 -- 12,095/12,095 profile-passing lifts witness at q <= 35.  Height-independent, as periodicity predicts.
+ (2) SCALE + BOTTOM-6: survivors are TWO-BAND (w_min <= 4, spread-forced; bottom-6 outside [1,12] in 99.45%; bottom-6-max concentrated [19,25]) -- the descent's input shape, measured.  Overall scale freedom is REAL (see 4) -- and that is exactly why Q50 must carry the mechanism.
+ (3) l>=7 ASSEMBLY + GRID STRATUM: the bounded residual of opus-S81's descent (all lifted values <= 133) forced to 46 patterns (C subset {1..9}: values 14r > 133 exclude r in {10,11,12}; k_r = r on C n {7,8,9}) -- 7,071,570 sets swept: ALL witness-certified >= 2/25, zero exact escalations, ZERO sub-2/25.  The l>=7 remaining open piece = exactly opus's high ratio-cluster leg.
+ (4) T_l POLE NECESSITY (ladder side; opus-S81's ceiling is the fee side): THE FLOATING 7-CLUSTER {1,2,3,4,5} u {20,21,24,25,45,46,66}*S, S == 1 mod lcm(2..25): the FULL profile passes at EVERY frozen scale (verified to 2.7e14) with w_(7)/w_(8) -> infinity => no C_7 exists.  COROLLARY (the session's structural fact): THE PROFILE IS PERIODIC ON CRT-FROZEN RAYS -- no residue/ratio filter anchors height, ever.  THE PERIODICITY REDUCTION: gap emptiness = Q50 (finite template check, single scale) + cluster descent (multi-scale).  First construction attempt FAILED instructively (unfrozen scales rotate residues); the frozen-ray fix is the lesson.
+ (5) I=3 WALK: CEDED mid-claim to kps-S9 (they reserved the triple walk via walk_core recursion concurrently -- their machinery, their home).
+
+PROOF MAP updated: crux section 1d rewritten (named Q50, finite shape, remaining work list); l>=7 entry updated.
+
+FILES: lrc_gap_census40_S54.c (spectroscopy mode), lrc_pole_necessity_macmini_S55.py, lrc_q50_highscale_macmini_S55.py, lrc_l7_bounded_stratum_macmini_S55.py (+4 .outs), reflection the-q50-conjecture-and-the-periodicity-reduction-macmini-S55.md; HYP-4119 (+INDEX); proof map edit.  No canon overridden.  (l=4 workers STILL in flight -- hours-long; collection instructions stand.)
+
+NEXT: (a) THE Q50 TEMPLATE CHECK at q = 26..33 (enumerate mod-q templates consistent with pinned divisors, verify clearing-dilation existence -- the finite verification that would CLOSE the single-scale half); (b) opus's high ratio-cluster leg; (c) compose Q50 + descent in klein's assembly language (the dichotomy's loose branch as two named finite hypotheses); (d) l=4/l=5/6 collection.
+
 ## klein-2026-07-05-S137 -- THE MERGE-GRID ATTAINMENT THEOREM (THM-592's Lean face): M is attained at m/(v_i+v_j), kernel-pure -- every exact-M sweep in the project is now grid-justified by a theorem (HYP-4114)
 
 Prompt (owner): another frontier session, everything myself, no waiting on other agents.
