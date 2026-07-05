@@ -208,9 +208,73 @@ theorem lrc14_of_dichotomy_and_corner (cite : LonelyRunner.LRCUpTo13)
     LRC14Statement :=
   lrc14_of_compressed cite (hcomp_of_dichotomy_and_corner hdich hcorner)
 
-#print axioms tight_free_rider'
-#print axioms hcomp_of_dichotomy_and_corner
-#print axioms lrc14_of_dichotomy_and_corner
+/-! ## The β-parametric surface
 
-end HcompSurface
-end LonelyRunner
+The margin 2/25 above is one instantiation; the assembly works for ANY loose margin
+β > 1/14, trading dichotomy strength against corner size (threshold `B/(14(β−1/14))`).
+The parametric form lets the rigidity lane land at whatever margin it can prove. -/
+
+/-- The dichotomy at loose margin `β`. -/
+def TightLooseDichotomyAt (β : ℝ) : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v →
+    (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → tupleGcd v = 1 →
+    ∀ istar : Fin 13, (∀ i, |v i| ≤ |v istar|) →
+      (∃ c : ℤ, 2 ≤ c ∧ ∀ i, i ≠ istar → ∃ j : ℤ, 1 ≤ j ∧ j ≤ 12 ∧ |v i| = c * j) ∨
+      (∃ tstar : ℝ, ∀ i, i ≠ istar → ∀ m : ℤ, β ≤ |(v i : ℝ) * tstar - m|)
+
+/-- The corner at loose margin `β`: killer below the one-window threshold. -/
+def CornerLonelyAt (β : ℝ) : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v →
+    (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → tupleGcd v = 1 →
+    ∀ istar : Fin 13, (∀ i, |v i| ≤ |v istar|) →
+    ∀ B : ℤ, (∀ i, i ≠ istar → |v i| ≤ B) → (∃ i, i ≠ istar ∧ |v i| = B) →
+      (∃ tstar : ℝ, ∀ i, i ≠ istar → ∀ m : ℤ, β ≤ |(v i : ℝ) * tstar - m|) →
+      14 * (β - 1/14) * |(v istar : ℝ)| ≤ (B : ℝ) →
+      ∃ t : ℝ, Lonely 14 v t
+
+/-- **The β-parametric assembly**: `hcomp` from the dichotomy and corner at ANY
+loose margin `β > 1/14`. -/
+theorem hcomp_of_dichotomy_and_corner_at (β : ℝ) (hβ : 1/14 < β)
+    (hdich : TightLooseDichotomyAt β) (hcorner : CornerLonelyAt β) :
+    ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v →
+      (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → ∃ t : ℝ, Lonely 14 v t := by
+  apply hcomp_of_primitive
+  intro v hv hcov hcomp hprim
+  obtain ⟨istar, -, hmaxmem⟩ :=
+    Finset.exists_max_image (Finset.univ : Finset (Fin 13)) (fun i => |v i|)
+      ⟨0, Finset.mem_univ 0⟩
+  have hmax : ∀ i, |v i| ≤ |v istar| := fun i => hmaxmem i (Finset.mem_univ i)
+  rcases hdich v hv hcov hcomp hprim istar hmax with ⟨c, hc, hbase⟩ | ⟨tstar, hloose⟩
+  · exact tight_free_rider' v istar c hc hbase
+      (gcd_killer_of_primitive v istar c hc hbase hprim)
+  · have hne : (Finset.univ.erase istar).Nonempty := by
+      rw [← Finset.card_pos, Finset.card_erase_of_mem (Finset.mem_univ istar)]
+      simp
+    obtain ⟨ibase, hibmem, hibmax⟩ :=
+      Finset.exists_max_image (Finset.univ.erase istar) (fun i => |v i|) hne
+    have hibne : ibase ≠ istar := Finset.ne_of_mem_erase hibmem
+    set B : ℤ := |v ibase| with hB
+    have hBbound : ∀ i, i ≠ istar → |v i| ≤ B := by
+      intro i hi
+      exact hibmax i (Finset.mem_erase.mpr ⟨hi, Finset.mem_univ i⟩)
+    have hBpos : 0 < B := by
+      rw [hB]
+      exact abs_pos.mpr (hv ibase)
+    by_cases hthr : (B : ℝ) < 14 * (β - 1/14) * |(v istar : ℝ)|
+    · refine lonely_of_window_margin v istar tstar β ((B : ℤ) : ℝ)
+        hβ hloose ?_ (by exact_mod_cast hBpos) (hv istar) hthr
+      intro i hi
+      have := hBbound i hi
+      calc |(v i : ℝ)| = ((|v i| : ℤ) : ℝ) := by push_cast; rfl
+        _ ≤ ((B : ℤ) : ℝ) := by exact_mod_cast this
+    · exact hcorner v hv hcov hcomp hprim istar hmax B hBbound
+        ⟨ibase, hibne, rfl⟩ ⟨tstar, hloose⟩ (le_of_not_gt hthr)
+
+/-- **The β-parametric pinned surface**. -/
+theorem lrc14_of_dichotomy_and_corner_at (cite : LonelyRunner.LRCUpTo13)
+    (β : ℝ) (hβ : 1/14 < β)
+    (hdich : TightLooseDichotomyAt β) (hcorner : CornerLonelyAt β) :
+    LRC14Statement :=
+  lrc14_of_compressed cite (hcomp_of_dichotomy_and_corner_at β hβ hdich hcorner)
+
+#print axioms tight_free_rider'
