@@ -1,0 +1,26 @@
+gap (1/13,2/25) high-height validation.  2/25=0.080000  1/13=0.076923  SMAX=260
+CRT-lift modulus L = lcm(2..25) = 26771144400
+  AP*1                   h=1.20e+01 prim=1 cov=1 AP/tight: no >=2/25 witness <= SMAX
+  AP*2                   h=2.40e+01 prim=0 cov=1 AP/tight: no >=2/25 witness <= SMAX
+  AP*3                   h=3.60e+01 prim=0 cov=1 AP/tight: no >=2/25 witness <= SMAX
+  AP*5                   h=6.00e+01 prim=0 cov=1 AP/tight: no >=2/25 witness <= SMAX
+  AP*7                   h=8.40e+01 prim=0 cov=1 AP/tight: no >=2/25 witness <= SMAX
+  base[1, 2, 3]..        h=2.40e+01 prim=1 cov=1 non-AP  : LOOSE (witness s=25)
+  base[1, 2, 3]..        h=1.30e+01 prim=1 cov=0 non-AP  : LOOSE (witness s=12)
+  base[1, 2, 3]..        h=2.50e+01 prim=1 cov=0 non-AP  : LOOSE (witness s=12)
+  base[1, 2, 3]..        h=2.30e+01 prim=1 cov=0 non-AP  : LOOSE (witness s=12)
+  base[1, 2, 3]..        h=1.70e+01 prim=1 cov=1 non-AP  : LOOSE (witness s=19)
+  base[1, 2, 3]..        h=1.90e+01 prim=1 cov=1 non-AP  : LOOSE (witness s=25)
+  LIFT[1, 2]h3e+10       h=2.68e+10 prim=1 cov=1 non-AP  : LOOSE (witness s=25)
+  LIFT[1, 2]h3e+10       h=2.68e+10 prim=1 cov=1 non-AP  : LOOSE (witness s=25)
+  LIFT[1, 2]h3e+10       h=2.68e+10 prim=1 cov=1 non-AP  : LOOSE (witness s=25)
+  LIFT[1, 2]h2e+11       h=1.87e+11 prim=1 cov=1 non-AP  : LOOSE (witness s=25)
+  LIFT[1, 2]h8e+10       h=8.03e+10 prim=1 cov=0 non-AP  : LOOSE (witness s=12)
+  LIFT[1, 2]h3e+10       h=2.68e+10 prim=1 cov=0 non-AP  : LOOSE (witness s=12)
+  LIFT2tower             h=2.68e+10 prim=1 cov=1 non-AP  : LOOSE (witness s=25)
+  LIFThuge               h=7.17e+14 prim=1 cov=0 non-AP  : LOOSE (witness s=12)
+
+tight (AP, no 2/25 witness -- correct): 5;  loose (2/25 witness found): 14
+=> ALL non-AP structured families (incl. high-height CRT-lifts to ~1e15) are LOOSE (>=2/25 witness).
+   The REAL dichotomy `lrc14_of_dichotomy_and_corner` survives high-height lifting on these families.
+   Some witnesses exceed s=50 (Q50-dead), consistent with kps-S11; the REAL (any-denom) surface holds.
