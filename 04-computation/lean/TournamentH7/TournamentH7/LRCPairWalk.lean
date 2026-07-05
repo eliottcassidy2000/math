@@ -38,7 +38,7 @@ open TournamentH7.LRCWitness GridAttainment CertCompleteness TeethR
 
 /-- A tooth's right end is never covered by its own comb: at `e = (m₀ + r)/w`
 every integer is at scaled distance `≥ r`. -/
-private lemma boundary_uncovered (w : ℤ) (hw : 0 < w) (m₀ : ℤ) (m : ℤ) :
+lemma boundary_uncovered (w : ℤ) (hw : 0 < w) (m₀ : ℤ) (m : ℤ) :
     (2 : ℝ) / 25 ≤ |(w : ℝ) * (((m₀ : ℝ) + 2/25) / w) - m| := by
   have hwR : (0 : ℝ) < (w : ℝ) := by exact_mod_cast hw
   have heq : (w : ℝ) * (((m₀ : ℝ) + 2/25) / w) = (m₀ : ℝ) + 2/25 := by
@@ -59,7 +59,7 @@ private lemma boundary_uncovered (w : ℤ) (hw : 0 < w) (m₀ : ℤ) (m : ℤ) :
 /-- One walk step: a point covered by comb `w` lies strictly left of its tooth's
 right end `e := (round(w·p) + r)/w`, with `e − p < 2r/w`; and if the point sits at
 a previous same-comb boundary height `(n + r)/w'`… (kept inline below). -/
-private lemma step_data (w : ℤ) (hw : 0 < w) (p : ℝ) (m : ℤ)
+lemma step_data (w : ℤ) (hw : 0 < w) (p : ℝ) (m : ℤ)
     (hm : |(w : ℝ) * p - m| < 2/25) :
     p < ((m : ℝ) + 2/25) / w ∧ ((m : ℝ) + 2/25) / w - p < (4/25) / (w : ℝ) := by
   have hwR : (0 : ℝ) < (w : ℝ) := by exact_mod_cast hw

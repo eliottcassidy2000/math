@@ -319,6 +319,7 @@ import TournamentH7.LRCMergeExclusion  -- kps-S5(2026-07-05): the merge exclusio
 import TournamentH7.LRCPeelCompression  -- kps-S6(2026-07-05): the 24B top-compression of gap violators (citation floor 1/12 beats gap ceiling 2/25 by 1/300; real-dialect interval escape + peel; gap_compressed_24) (HYP-4112)
 import TournamentH7.LRCGapLadder  -- kps-S7(2026-07-05): the l>=2 peel ladder at rho=2/25 on klein's S136 stack (gap_tower_step + gap_ladder_rung: order-statistic compression C_l = 150l(13-l)/((2l-1)(25-4l)), l<=6) (HYP-4115)
 import TournamentH7.LRCPairWalk  -- kps-S8(2026-07-05): the pair walk (3-step tooth-boundary walk, linarith kill) => gap_pair_rung: every pair of a gap violator has min <= 22B -- 3x sharper than the S7 density C_2 (HYP-4117)
+import TournamentH7.LRCTripleWalk  -- kps-S9(2026-07-05): the l=3 walk by recursion into the pair walk (revisit gap covered by the other two = walk_core; balance 4max<=7min saturates at 21/25 exactly) => gap_triple_rung: balanced triples min <= 12B (HYP-4118)
 import TournamentH7.LRCMultiKillerWindow13
 import TournamentH7.LRCLiftPigeonhole
 import TournamentH7.LRCGapDescent
