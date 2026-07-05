@@ -1,3 +1,23 @@
+## klein-2026-07-04-S131 -- THE COMPRESSED TARGET "M>=1/13" NEEDS PRIMITIVITY: non-primitive counterexample {2..24,182}=7/92; resolves by scale->sieve so hcomp still holds (HYP-4093)
+
+Prompt (owner): keep working toward closure.
+
+TARGETED the sole open LRC(14) leaf: hcomp (kps-S6 lrc14_of_compressed) = every COMPRESSED covering family lonely (compressed = v_max <= 13*v_second). mac-mini-S46/S47's clean tight target: compressed => M >= 1/13 (dilated deep-wells attain it, floor 1/13).
+
+FINDING: that target is FALSE without PRIMITIVITY. {2,4,6,...,24,182} is compressed (182 <= 13*24=312) + covering (q=2..14) with M = 7/92 ~ 0.076087 -- BELOW 1/13 (0.076923) AND below the deep well 14/183 (0.076503), but above 1/14 (still lonely; witness 7/184). Verified exactly. It is non-primitive (gcd=2) = 2*{1..12,91}, M(2W)=M(W). So the minimal-tightener enumerations (klein-S128/S129 "covering-min=14/183"; mac-mini-S46 "floor 1/13") were implicitly PRIMITIVE; the non-primitive dilated class (elements in the (13,26] band, e.g. 14,16,..,24) dips lower. mac-mini-S47 focused on the c=3 (gcd=1, primitive) dilation {3..36,182}=1/13 and missed the c=2 (gcd=2) one at 7/92.
+
+RESOLUTION (hcomp STILL HOLDS -- the useful part): compressed covering v, c=gcd(v), w=v/c primitive (and compressed, same ratios). Two cases: (i) w covering => w is a PRIMITIVE compressed covering family => M(w)>=1/13 (mac-mini's target, correctly primitive-scoped) => M(v)=M(w)>=1/13>1/14; (ii) w NOT covering => some q<=14 divides no w_i => sieve gives w lonely at 1/q, clearance >=1/14 => v lonely. Verified: {2..24,182}/2={1..12,91} misses q=14 (sieve); {2..22,26,364}/2={1..11,13,182} misses q=12 (sieve). Either way lonely. So the hcomp proof must SPLIT ON PRIMITIVITY: the sharp >=1/13 only for PRIMITIVE compressed covering; every non-primitive one reduces via the dispatch's existing scale normalization (lonely_exists_of_scale) to a primitive family that is either primitive-compressed-covering (>=1/13) or non-covering (sieve_one_div, >=1/14).
+
+CORRECTED TARGET (pinned): PRIMITIVE compressed covering => M >= 1/13 (tight; {3..36,182} primitive at 1/13). The uniform "compressed => M>=1/13" over-reaches -- it tries to prove for non-primitive families a bound they don't satisfy but don't need (they were already peeled by scale->sieve).
+
+HONEST: no new theorem; a SCOPE CORRECTION + constructive resolution using only existing corpus lemmas (scale, sieve) + mac-mini's (primitive) >=1/13. Did NOT prove primitive=>1/13 (mac-mini's open peel-route target, now correctly scoped). Retracts my earlier same-session "compressed floors at 7/89" pass (same minimal-tightener-scope error). This is the PRIMITIVITY variant of MISTAKE-102 (sampling/enumeration misses structured families).
+
+FILES: lrc14_compressed_extremizers_klein_S131.py, lrc14_compressed_floor_klein_S131.py, lrc14_nonprimitive_compressed_klein_S131.py (+outs); INDEX HYP-4093; reflection the-compressed-leaf-floors-above-1-over-13; this log.
+
+NEXT (mac-mini/kps): (a) re-scope the hcomp target to PRIMITIVE compressed covering => M>=1/13 in the peel argument; (b) add the primitivity split to the Lean proof (non-primitive -> scale -> {primitive covering >=1/13} or {non-covering -> sieve}); (c) prove primitive compressed => M>=1/13 (the CRT free-rider peel, mac-mini's open target).
+
+---
+
 ## mac-mini-2026-07-04-S47 -- push the compressed peel toward closure: n=13 tight locus = AP (CRT case complete), 12-runner spectrum (2/25 not 1/12), floor 1/13 confirmed by structured descent; MISTAKE-102 (sampling misses structured families, recurred from 101)
 
 Prompt (owner): keep pushing to complete the proof.

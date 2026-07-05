@@ -1,0 +1,5 @@
+(1) minimal-tightener COMPRESSED covering families: 1396; min M=7/89 (~0.078652) at [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 20, 84]
+(2) COMPRESSED covering blocks V=14..110: 91; min M=1/8 (~0.125000) at [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+GLOBAL min over compressed tested = 7/89 (~0.078652)
+  >=1/13? True   >=7/89? True   >=1/14? True
+DANGER ZONE (1/14,1/13) hits: 0; BELOW 1/14: 0

@@ -1,0 +1,21 @@
+1/14=0.071429  14/183=0.076503  1/13=0.076923
+======================================================================================
+(a) DILATED DEEP-WELLS c*{1..12} u {182d}: compressed? covering? M?
+  c  killer  compressed  covering  primitive          M
+  1     182       False      True       True     14/183
+  1     364       False      True       True     28/365
+  1     546       False      True       True     38/495
+  2     182        True      True      False       7/92
+  2     364       False      True      False     14/183
+  2     546       False      True      False     20/261
+  3     182        True      True       True       1/13 <-- 1/13 extremizer
+  3     364        True      True       True       1/13 <-- 1/13 extremizer
+  3     546       False      True      False     27/353
+  4     182        True      True      False       1/13 <-- 1/13 extremizer
+  4     364        True      True      False       7/92
+  4     546        True      True      False       1/13 <-- 1/13 extremizer
+  5     182        True      True       True       1/13 <-- 1/13 extremizer
+  5     364        True      True       True       1/13 <-- 1/13 extremizer
+  5     546        True      True       True       1/13 <-- 1/13 extremizer
+======================================================================================
+(b) broad compressed covering search INCLUDING dilations c*U for small U -- any M < 1/13?

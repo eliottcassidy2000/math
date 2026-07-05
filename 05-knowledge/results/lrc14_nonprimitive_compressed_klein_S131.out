@@ -1,0 +1,4 @@
+checked 708 dilated compressed covering (c*base, c=1..6, drop<=2)
+MIN M = 7/89 (~0.078652) at [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 20, 84]
+  >=1/14 LRC-safe? True   >=1/13? True   >=14/183? True
+  below 1/14 (REFUTES LRC): 0
