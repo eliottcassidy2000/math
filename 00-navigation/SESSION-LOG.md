@@ -48,6 +48,18 @@ HOUSEKEEPING: HYP cascade rode 4 collisions mid-session; settled 4099=klein-S134
 FILES: lrc_multilift_leg_macmini_S52.py, lrc_multilift_floor_macmini_S52.py (+.outs), lrc_ladder_certificates_macmini_S52.md, reflection the-multi-lift-floor-and-the-14r-ladder-macmini-S52.md; HYP-4103 (+INDEX). No canon overridden.
 
 NEXT: (a) the l=3..6 floor-level domains (T_l bounded; same harness, bigger volumes -- expect 2/25 to hold, the 2nd harmonic seems to be THE lift floor); (b) the Fin-12 fee transcription; (c) prove M({4,6}-block) = 2/25 as the lift-side 2nd-harmonic extremal (kps's second_value_loose machinery should adapt); (d) the l >= 7 spread residual (ratio gate + sieve strain -- possibly a one-session finite check).
+## kind-pasteur-2026-07-05-S5 -- THE MERGE EXCLUSION FORMAL: gap_forces_big_pair kernel-pure (margin > 1/13 somewhere + no 2/25 point => some |v_i|+|v_j| >= 38, incl. the k=2 parity kill by omega); the whole S3 gap analysis is now machine-checked (HYP-4110)
+
+Prompt (owner): keep going, finish the proof up.
+
+THE LEAN (LRCMergeExclusion.lean, registered, corpus green 8662, kernel-pure): distZ_rat_den (distZ(a/s) = k/s integer) + margin_rat_den (inf' attainment) + **gap_forces_big_pair**: via HYP-4108's maximizer_on_grid, a spectral-gap value is kappa/s on the merge grid s = |v_i|+|v_j|; 13 kappa > s and 25 kappa < 2s close by omega (kappa=1 empty window, kappa=2 parity, kappa>=3 => s >= 38). COMPLETES the S3 exclusion: the gap-violator profile (covering all q <= 12 every direction, 0/+-1 pinning all q <= 25, ratio > 23/2, binding pair >= 38, w_max >= 19) is now ENTIRELY formal across S2+S3+S4+S5.
+
+COLLISION: 4109 -> mac-mini-S53 first-pushed; renumbered to 4110; flagged that 4108 = kps-S4 CONFIRMED (mac-mini's stub note wrongly held it for klein).
+
+THE DAY'S CHAIN (kps S2-S5, all kernel-pure, corpus 8655 -> 8662): rational_point_margin atom + ratio gate (4102) -> cert completeness 176B + gap filters (4105) -> grid attainment + 2B zero-slack certs (4108) -> merge exclusion formal (4110). The dichotomy's loose side: decidable, bounded, both directions; its failure: fully profiled. REMAINING CRUX unchanged and honest: the spectral gap emptiness itself (the conviction) = the fleet's tower/CRT/window lane.
+
+FILES: LRCMergeExclusion.lean; HYP-4110 (INDEX). One checkpoint + close-out. No canon overridden.
+
 ## kind-pasteur-2026-07-05-S4 -- THM-592 GRID ATTAINMENT IN LEAN: the margin max is attained at m/(|v_i|+|v_j|) (perturbation proof, kernel-pure) => grid_margin_domination + THE 2B CERTIFICATE (zero slack; supersedes S3's 176B) (HYP-4108)
 
 Prompt (owner): formalize the THM-592 grid attainment next + finish the proof up.
