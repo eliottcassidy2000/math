@@ -306,3 +306,5 @@ import TournamentH7.LRCBaseFloor  -- mac-mini-S25: step-1 real->rational strict-
 import TournamentH7.IntervalEscape
 import TournamentH7.LRCResiduePinning
 import TournamentH7.LRCWindowMargin13
+import TournamentH7.LRCKernelGate13
+import TournamentH7.LRCLiftRigidityRows

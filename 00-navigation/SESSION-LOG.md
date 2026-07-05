@@ -1,3 +1,15 @@
+## opus-2026-07-05-S77 -- THE CORRECTION ARC + HDICH'S FINITE LEG IN LEAN: mac-mini's floor 14/169 CONFIRMED (attribution fixed: the argmin is {1..11,168} = the n=13 DEEP WELL at the range corner) => MISTAKE-104 (mine); then LRCKernelGate13 + all 144 lift rows kernel-pure (HYP-4101)
+
+Prompt: keep working remaining tasks; pull/push many times; extend other agents' work.
+
+THE CORRECTION ARC (extend-and-be-corrected, both directions): mac-mini-S51's sweep floor 14/169 contradicted my S74 gap 1/156. Full exact 144-sweep: their VALUE is right, my S74 was wrong (k<=8 convenience sweep; the extremal sits at the corner (r=12,k=12), invisible below k=12), and their ATTRIBUTION was a slip ({1..11,25} has M = 1/12 exactly, witness t=1/12 -- verified again). The true argmin {1..11,168} is structurally beautiful: killer 168 = 13^2 - 1, witness 14/169 = 14/13^2, equioscillating at v=1 and v=168 -- the DEEP WELL recursing one level down the tower (mirror of {1..12,182}, 182 = 183-1). MISTAKE-104 logged: sweep to the STRUCTURAL cutoff (the S76 threshold 144 => k <= 12), and check range corners first. Also renumbered my S76 HYP-4099 -> 4100 (klein first-committed 4099; triple collision flagged).
+
+THE LEAN (builds green, kernel-pure): LRCKernelGate13.lean -- speedOK13 (STRICT integer check den < 13*min(r, den-r)) + strictLonely13_of_kernelWitness (reuses S47's int_dist_ge); LRCLiftRigidityRows.lean -- ALL 144 single lifts kernel-checked strictly loose at their exact max-min witnesses (python pre-verified 144/144; floor row liftRow_143 = the deep well at 14/169). NOTE: 144 rows with ![...] literals + kernel decide compiled clean here -- the S47 crash-class did not fire at Fin 12 scale, consistent with the machine-specific diagnosis. Axioms: standard trio (liftRow_0 and liftRow_143 audited). Corpus green 8657, both files registered.
+
+HDICH: all four legs now formal -- residue pinning (S75) + sieve (corpus) + 13-band window (S76) + the 144-row finite leg (THIS). Remaining for the leaf: klein's assembly wiring (S134 skeleton) + CornerLonely. Remaining for LRC(14): those two + the citation.
+
+Files: LRCKernelGate13.lean, LRCLiftRigidityRows.lean (new, sorry-free, registered); MISTAKE-104; HYP-4101 (+INDEX); HYP-4099->4100 renumber. No canon overridden.
+
 ## mac-mini-2026-07-05-S51 -- hdich's PER-R SWEEP COMPLETE: 144/144 lifts strictly loose (hdich TRUE, zero violations) -- but the FLOOR CORRECTED to 14/169 = 14/13^2 at the DEEP-WELL LIFT {1..11,25} (gap 1/169, not 1/156); the r>=7 k=1 survivors are the deep-well ladder; THM-610 niche thread paid off (HYP-4098)
 
 Prompt (owner): work what remains creatively; pull concurrent work; explore niche past threads.
