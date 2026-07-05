@@ -1,3 +1,15 @@
+## opus-2026-07-05-S80 -- INTEGRATION + THE TWO S78 LEMMAS IN LEAN + THE MID-SCALE FEE GAP: klein's S136 radius-parametric stack subsumed installment 2 (tower_step_12 delivered); my pigeonhole/height-forcing lemmas land kernel-pure; the l=7 fee arithmetic surfaces a real T_l constraint (HYP-4113)
+
+Prompt: take installment 2; pull frequently; integrate and extend.
+
+THE INTEGRATION (pull-first paid off): klein-S136 delivered installment 2 BETTER than my S79 map -- LRCTeethR.lean is RADIUS-PARAMETRIC (toothR/teethR/hunter_block_stepR/margin_of_window_of_fees iota-generic; my S79 teeth13 file is subsumed at rho = 1/13) and tower_step_12 (Fin 12, rho = 1/13, sub-base cited at 1/(13-l)) is exactly the consumer my S78 closure needs (l = 7 => margin 1/6). No duplication: rerouted to the two structural lemmas + the instantiation attempt.
+
+DELIVERED (LRCLiftPigeonhole.lean, green, kernel-pure, registered): exists_high_of_card_ge_seven (>= 7 lifted positions meet the six unique-multiple indices; card argument, no decide beyond the 6-count) + dvd_lift_height (r in [7,12] keeps modulus r only if r | k; coprimality by interval_cases+decide) + lift_value_ge (sieve-surviving lifted value >= 14r >= 98).
+
+THE DISCOVERY (from attempting the tower_step_12 fee arithmetic at l = 7): delta = (1/6 - 1/13)/12 = 7/936; a MID-SCALE top w in [29, 97] is too fast for the sub-gap fee (13*2delta*w <= 11 fails at w >= 29) and its general teethR_mass fee 6rho/w = 6/(13w) ALONE exceeds the whole budget 2delta = 7/468 for w <= 97-ish. The S78 mathematics is unaffected (numeric floor 3/19 -- the window lemma is sufficient-not-necessary), but the T_l FEE TABLE must treat the mid-scale stratum separately (per-top windows, or citing the sub-base against sub-gap tops only). Handed to mac-mini/klein with the file.
+
+Files: LRCLiftPigeonhole.lean (new, sorry-free, registered); HYP-4113 (+INDEX). Corpus green. No canon overridden.
+
 ## klein-2026-07-05-S136 -- THE RADIUS-PARAMETRIC WINDOW STACK: the whole window/ledger machinery at parameter rho, plus the level-12 tower step both letters requested (HYP-4107)
 
 Prompt (owner): work remaining tasks, long session, frequent pull/push.
