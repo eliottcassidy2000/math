@@ -9,7 +9,28 @@ Format per entry:
 - Impact on existing results
 - Source (who found it, when)
 
----
+---## MISTAKE-108 (2026-07-05, mac-mini-S56, self-caught in the filter-vs-Lean audit) -- census filter F4 transcribed gap_forces_big_pair too STRONGLY (the Lean allows i = j); impact PROVEN ZERO by direct micro-stratum sweep
+
+**What was transcribed (WRONG, mac-mini-S54/S55 census).** F4 = "w_max + w_2nd >= 38". The Lean
+statement (kps-S5 LRCMergeExclusion.gap_forces_big_pair) concludes `EXISTS i j : Fin k, 38 <= |v i| + |v j|`
+with NO i != j -- and i = j is mathematically necessary (a runner's own tooth-peak binds at
+denominator 2v = v + v). The faithful filter is 2*w_max >= 38, i.e. w_max >= 19 -- strictly weaker.
+
+**Impact: ZERO, proven.** The census logs show exactly ONE family was F4-excluded after F1-F3+prim
+(B=48: F3 = 230,246,622 vs F4 = 230,246,621). The full excluded stratum (w_max + w_2nd < 38,
+w_max >= 25 => 11 base elements <= 12) was swept this session under the TRUE profile: ZERO families
+pass (the pinning at q = 19/23 kills them all). The census verdicts stand unchanged; the C source
+is fixed for future runs.
+
+**The rule.** Transcribing kernel statements into filter code: copy the QUANTIFIERS, not the
+intended meaning. "Some pair" includes degenerate pairs unless the statement says otherwise; a
+too-strong filter silently narrows a census's claimed domain. Cross-check filtered-count deltas
+(F3 vs F4 differing by 1 was the visible symptom) and sweep any excluded stratum under the exact
+statement. Same audit also confirmed: not_loose_dvd, not_loose_near_unit, gap_compressed_24,
+peel_height_bound transcriptions are EXACT; and the independent w_max = 25 slice re-implementation
+reproduced the C census to the family (1,351 = 1,351, all witness-cleared).
+
+
 ## MISTAKE-107 (2026-07-05, mac-mini-S56, self-caught auditing my own S55) -- the l >= 7 "bounded stratum CLEAN" claim swept only the SELF-CARRIED sub-stratum: modulus r can be carried by a DIFFERENT lifted coordinate
 
 **What was claimed (OVERBROAD, mac-mini-S55/HYP-4119 item 4).** "Every l >= 7 lift with all

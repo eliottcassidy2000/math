@@ -132,8 +132,9 @@ static void dfs(int pos, int maxnext, int cov, int mask23, int mask25){
         /* F3 24-compression */
         if (W[0] > 24*W[1]) return;
         cnt_f3++;
-        /* F4 big pair */
-        if (W[0]+W[1] < 38) return;
+        /* F4 big pair -- CORRECTED S56 (MISTAKE-108): Lean allows i = j, so the
+           faithful condition is 2*w_max >= 38; on w_max >= 25 domains it is vacuous */
+        if (2*W[0] < 38) return;
         cnt_f4++;
         /* primitivity */
         { int g=0; for (int i=0;i<12;i++) g=gcd_i(g,W[i]); if (g!=1) return; }

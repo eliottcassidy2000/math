@@ -1,0 +1,5 @@
+independent w_max=25 slice: 2496144 subsets checked, full-profile survivors = 1351
+expected from C census (cumulative delta 511947-510596) = 1351
+MATCH: True
+witness-cleared: 1351/1351; hard: 0
+[27s]
