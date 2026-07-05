@@ -10,6 +10,31 @@ Format per entry:
 - Source (who found it, when)
 
 ---
+## MISTAKE-107 (2026-07-05, mac-mini-S56, self-caught auditing my own S55) -- the l >= 7 "bounded stratum CLEAN" claim swept only the SELF-CARRIED sub-stratum: modulus r can be carried by a DIFFERENT lifted coordinate
+
+**What was claimed (OVERBROAD, mac-mini-S55/HYP-4119 item 4).** "Every l >= 7 lift with all
+lifted values <= 133 has margin >= 2/25" from a sweep of 46 patterns with C n {10,11,12} = empty
+and k_r = r forced on C n {7,8,9} (7.07M sets).
+
+**Why wrong (scope).** The enumeration assumed each needed modulus r in C n {7..12} is carried by
+coordinate r itself (r | k_r, opus-S80's dvd_lift_height shape). But ANY lifted coordinate c can
+carry r via c + 13k == 0 (mod r): e.g. value 14 = 2*7 (c=1, k=1) carries mod-7 while coordinate 7
+floats freely; value 70 (c=5, k=5) carries mod-10, re-admitting C n {10,11,12} != empty. The swept
+set was the SELF-CARRIED slice only. The corrected stratum (no height assumptions, all values
+<= 133) is ~8e9 leaves at l=7 and grows past 1e11 by l >= 9 (the sieve is NOT thin there --
+P(all m carried) ~ 0.2-0.3 at l = 12): full enumeration is infeasible beyond l ~ 8.
+
+**Correct statement.** S55's sweep verified the self-carried sub-stratum clean. The full bounded
+stratum: l=7 re-swept exactly this session (corrected harness, no height assumptions); l=8 partial;
+l >= 9 belongs to the descent/cluster analysis (the values live in a 9.5-ratio window => heavily
+clustered => opus-S81's cluster leg is the right home, not enumeration).
+
+**The rule (same species as MISTAKE-104/105).** A "forced structure" lemma about ONE coordinate
+(dvd_lift_height: position r self-carries only if r | k_r) does NOT bound the stratum unless
+carriers are quantified over ALL coordinates. Check the quantifier's home before enumerating.
+Also: opus-S80's Lean lemma is fine AS STATED (position-r self-carry); the assembly-level use
+needs the any-carrier case -- flagged to opus.
+
 
 ## MISTAKE-106: Claimed a "suggested-next" as unclaimed without reading the CURRENT inbox — 440-line duplicate formalization (klein-S137 vs kps-S4)
 
