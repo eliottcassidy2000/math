@@ -284,6 +284,7 @@ import TournamentH7.LRCEndgameAssembly
 import TournamentH7.LRCHcompSurface  -- klein-S133: hcomp <= TightLooseDichotomy + CornerLonely; LRC(14) <= citation + the two (HYP-4096)
 import TournamentH7.LRCTightAPFreeRider  -- klein-S132: CRT tight-AP free-rider (extremal half of hcomp, mac-mini S47 handoff)
 import TournamentH7.LRCOneWindowPeel  -- klein-S132: one-window peel (killer threshold B/(14(beta-1/14))) + S131 primitivity split (HYP-4095)  -- kps-S6: LRC(14) <= LRC(13) + compressed (dominant peel discharges hdom); pins the open leaf (HYP-4091)
+import TournamentH7.LRCBandMargin  -- kps-S1(2026-07-05): reciprocal-window margin a/(a+b) + spread12_lonely13; tight-locus rigidity's 1st necessary condition tight=>w_max>=12 w_min (HYP-4096)
 -- import TournamentH7.LRCWindowPack1  -- WIP: 0xC0000005 crash at file scale (both decide flavors); see HYP-3916 forensics
 import TournamentH7.LRCKernelGate
 import TournamentH7.LRC14AxiomAudit  -- klein-S113: #print axioms footprint of the LRC(14) endgame surface

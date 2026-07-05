@@ -1,0 +1,30 @@
+==============================================================================
+HARDENED LRC(13) TIGHT-LOCUS RIGIDITY  (kps-S1, HYP-4096)
+==============================================================================
+
+[A] RESIDUE-SYSTEM adversaries: W with {w mod 13 : w in W} = {1..12}.
+    Build W by choosing, for each nonzero residue r in 1..12, an element
+    w ≡ r (mod 13) with w in {r, r+13, r+26} (i.e. r, r+13, r+26).
+    These are the sets that CAN be optimal at t=1/13.  Tight ones?
+    scanned 531376 primitive residue-system sets (lifts in {r,r+13,r+26});
+    TIGHT among them: 1
+       (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)   = AP {1..12}
+
+[B] DILATION: c*{1..12} tight for c up to 30 (should all be tight):
+    non-tight dilations c in [1,30]: NONE (all tight, as expected)
+
+[C] SPREAD-BOUND partial proof: tight => w_max <= 78*w_2nd ?
+    Also: max observed spread ratio w_max/w_2nd and w_max/w_min over tight sets.
+    exhaustive primitive 12-subsets of [1,20] scanned: 125970
+    total distinct primitive TIGHT sets collected: 1
+    max w_max/w_2nd over tight sets: 12/11 (~1.091)  [bound 78]
+    max w_max/w_min  over tight sets: 12 (~12.000)
+    spread-bound (w_max<=78 w_2nd) violations: 0
+    => all tight sets found are EXACTLY the AP (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) (spread 12/11 and 12).
+
+[D] BIG random hunt, entries up to 200 (catch any large-height tight set):
+    399965 primitive sets (entries<=200) scanned; NON-AP tight: 0
+
+CONCLUSION: primitive 12-set tight <=> W={1..12}  --  no counterexample in
+any stress test (residue-systems, dilations, height<=200, exhaustive [1,20]).
+DONE.
