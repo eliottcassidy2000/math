@@ -847,6 +847,34 @@ THM-523, LTI-398, LTT-298, OPEN-Q-108.
 
 ---
 
+## T-S83-A (opus): Character-sum control of cover counts (Polya-Vinogradov lever)
+The level-l cover flexibility is governed by incomplete character sums Sum_{x<=12} chi(x)
+mod 13^l (S = log(+-[1,12]); Fourier bias computed in multiplicative_tower_opus_S83.out).
+Bound the count of non-shadow covers per level; find the first level where it hits 0.
+General-p shape: LRC(p+1) tight rigidity <= incomplete character sums over [1,p-1] mod p^l.
+Status: fresh. Next: compute the level-3 count (probe running S83); if 0, prove via P-V.
+
+## T-S83-B (opus): The level-3 sliver kill (finite lambda-check)
+If the tower dichotomy holds at level 3, alignment-sliver members (values in [169,1605],
+all < 2197) on a level-3 shadow must EQUAL lambda*i mod 2197 exactly: >= 3 same-scale
+values within ratio 26/11 of the form (lambda*i mod 2197) = a finite Diophantine sweep
+over lambda in units(2197), i in [1,12]. Write the sweep; if dichotomy fails at 3, repeat
+at 4 (values < 28561 covers the sliver with room).
+Status: blocked on the S83 level-3 probe. Next: the lambda-sweep script.
+
+## T-S83-C (opus): Pencil re-coherence / Bohr windows for same-scale clusters
+Same-scale cluster teeth = a pencil; coherent near t = 0 and near every t = k/d (d = pair
+difference). Choose the base citation point near re-coherence points: the good window
+lives in Bohr sets B(d_ij; eps) which are generalized APs -- CRT-compatible with the
+bounded base (speeds <= 12 are lcm-smooth). Alternative to T-S83-B if arithmetic fails.
+Status: idea. Next: numeric probe of coherence width vs cluster spread at scale 169-1605.
+
+## T-S83-D (opus): The merged cover variety (mirror quotient) as a metagraph object
+Port spine/ribs/sea analysis to the cover variety: distance-to-shadow-helix distribution,
+mutation-connectivity of the sea (is every cover a shadow + <= k defects at level 2?),
+stabilizers (self-symmetric covers = the SC analogue). Tooling exists (S82 orbit census).
+Status: fresh. Next: run distance histogram on the full census once mac-mini's C job lands.
+
 ## Combinatorics & Structure
 
 **T822** #baby-hodge #moment-problem #compatibility #flag-algebra #faulhaber #hankel #repunits #HYP-2530 #OPEN-Q-101 | certainty: exact `n=6` convex hole certificate + exact Faulhaber Hankel positivity; packet inequality still open | source: monad-explorer-2026-06-15-S10

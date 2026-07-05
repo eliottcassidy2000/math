@@ -536,6 +536,8 @@ LTI-443, LTT-343, OPEN-Q-108.
 
 - **[opus-S81] l >= 7 lift-rigidity REOPENED at leg 3 + corrected architecture** -- six-top ceiling (HYP-4116) kills the S78 fee route (MISTAKE-105); replacement: spread/invisible tops via gap descent (LRCGapDescent.lean GREEN), bottom/visible cluster via a/169 grid rows over (r, k mod 13) patterns (12/12 probe strict, room >= 19/169). NEXT: (i) the grid-row stratum -- enumerate/prove column-coverage failure for >= 7 visible lifts (S77 machinery one level up; mac-mini row harness fits); (ii) the assembly lemma: sort tops, descend where ratio >= 26/11 and w >= 134, grid the rest (bounded!); (iii) strictness pass (interior points give dist > rho). Source: six_top_ceiling_gap_descent_opus_S81.{py,out}.
 
+- **[opus-S83] The multiplicative tower: witness-lifting is one-way; dichotomy is asymptotic** -- kills = translates of +-[1,12]; log-CRT covering picture; witnesses LIFT with margin (covers project down) => tower-limit covers are 13-adic; conjecture: limit = 13-adic dilations only; FIRST-LEVEL question: does the dichotomy hold at level 3? (probe in multiplicative_tower_opus_S83). If yes: sliver dies by finite lambda-sweep (T-S83-B); character-sum lever for the general proof (T-S83-A). Connects: mac-mini Q50 witness spectroscopy (same species: witness-side mechanisms), Paley/QR thread, Monsky 13-adic coloring.
+
 ## Lead codex-2026-06-29: private-firewall Nerode audit
 
 **Status:** EVIDENCE / finite quotient reconstruction scout; not proof

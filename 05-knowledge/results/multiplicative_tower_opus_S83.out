@@ -1,0 +1,11 @@
+PART 1: K(v) = v^-1 * (+-[1,12]) verified on 40 units: True
+PART 2: primitive root mod 169: g = 2
+  |S| = 24; elements per column (mod 12): {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2, 7: 2, 8: 2, 9: 2, 10: 2, 11: 2}
+  shadows = diagonal shifts of the standard solution: False
+PART 3: level-2 witness (>=14/169) lifts to level-3 witness (>=170/2197): True
+PART 4: level-3 refinement census above level-2 covers
+LEVEL-3 COLUMN FEASIBILITY (True = coverable alone, False = INFEASIBLE => class dies, None = undecided at cap):
+  shadow lam=14: columns ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?'] => no column certificate (all checked feasible/undecided)  [33s]
+  nonshadow #1: columns ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?'] => no column certificate (all checked feasible/undecided)  [28s]
+  nonshadow #2: columns ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?'] => no column certificate (all checked feasible/undecided)  [28s]
+  nonshadow #3: columns ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?'] => no column certificate (all checked feasible/undecided)  [28s]

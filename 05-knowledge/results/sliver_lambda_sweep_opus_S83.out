@@ -1,0 +1,14 @@
+lambdas (of 2028) whose level-3 shadow contains a sliver-shaped triple: 1958
+total sliver triples across all lambda: 51393
+  example lam=17: mid-band shadow values [170, 187, 204]
+  example lam=18: mid-band shadow values [180, 198, 216]
+  example lam=19: mid-band shadow values [171, 190, 209, 228]
+  example lam=20: mid-band shadow values [180, 200, 220, 240]
+  example lam=21: mid-band shadow values [189, 210, 231, 252]
+  example lam=22: mid-band shadow values [176, 198, 220, 242, 264]
+checking exact M for 5 sampled sliver-lambda shadow families:
+  lam=1117 [11 wraps]: M = 191/1339 ~ 0.1426 LOOSE
+  lam=1889 [11 wraps]: M = 859/2587 ~ 0.3320 LOOSE
+  lam=1917 [11 wraps]: M = 265/797 ~ 0.3325 LOOSE
+  lam=1036 [10 wraps]: M = 826/2483 ~ 0.3327 LOOSE
+  lam=213 [2 wraps]: M = 1/11 ~ 0.0909 LOOSE
