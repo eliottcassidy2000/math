@@ -1,3 +1,19 @@
+## mac-mini-2026-07-05-S56 -- THE COMPUTATIONAL VALIDITY AUDIT (owner directive): MISTAKE-107 caught+FIXED (l=7 corrected re-sweep 4.57B leaves, HARD=0 -- my S55 sweep was the self-carried slice), MISTAKE-108 proven zero-impact (F4 vs Lean i=j), census independently re-verified TO THE FAMILY, reroute onto the new template surface (HYP-4122)
+
+Prompt (owner): carefully consider recent/current agent work AND ITS VALIDITY; best formal state; push/pull, synthesize, reroute.
+
+THE AUDIT (report: 03-artifacts/drafts/lrc14-validity-audit-macmini-S56.md):
+ FINDING 1 (MISTAKE-107, mine, FIXED): S55's l>=7 bounded sweep assumed self-carried moduli (k_r = r).  Any coordinate can carry r (14 carries mod-7; 70 carries mod-10 => C n {10,11,12} readmitted).  CORRECTED l=7: 4,570,156,404 leaves, no height assumptions, all patterns -- 3.89B sieved, 679,381,289 witness-cleared, ZERO hard.  650x the flawed sweep, same verdict (and 679M more Q50 clearings).  l=8 in flight; l>=9 (~1e11+, sieve density 0.2-0.3) handed honestly to the descent/cluster leg.
+ FINDING 2 (MISTAKE-108, mine, ZERO impact proven): census F4 = "w_max + w_2nd >= 38" vs the Lean's EXISTS i j (i = j ALLOWED: own-tooth-peak binds at 2v).  Faithful form: w_max >= 19.  The excluded stratum swept under the TRUE profile: EMPTY (pinning at q=19/23 kills it).  Census verdicts unchanged; C fixed; the F3-F4 delta of exactly 1 in the logs was the symptom.
+ POSITIVE: independent fresh-code re-implementation (for-all-a pinning form, brute C(24,11)) reproduces the C census EXACTLY on the w_max=25 slice: 1,351 = 1,351, all witness-cleared.  Transcription diff: dvd/near_unit/compressed_24/peel_height EXACT.  Fleet spot-checks: kps 22B pair rung re-derived OK; opus descent constants shape-consistent; klein tower constants = my S53 caps.
+ SCOPES stated: Q50 = conjecture (evidence: exhaustive<=48 + 1.97M<=52 + 12,095 CRT-lifts to 1.16e14 + 679M l=7); periodicity/pole = single-ray; l=2 single-implementation risk noted (low).
+
+REROUTE (synthesis of the fleet's concurrent day): the pinned surface is NOW lrc14_of_template_and_corner (kps-S10, HYP-4127: TemplateDichotomy = my S55 Q50 as THE named decidable open predicate -- crux formalized within hours of being named).  l=5/6 tails + l>=9 bounded: RETRACTED from enumeration (l=4 exact-volume audit shows my S53 estimate low; workers 8+ hours) -> walk-rung (kps S8/S9 pair/triple walks) + descent theory.  NUMBERING PROTOCOL ADOPTED (kps-S10): per-machine residue mod 10; mac-mini = 2; this session 4122, next 4132.  Fleet hygiene ran in parallel (klein-S138 MISTAKE-106 Lean-side dedup) -- the audit day was fleet-wide.
+
+FILES: lrc_l7_bounded_corrected_S56.c (+.out), lrc_census_indep_verify + lrc_f4_microstratum outs, the audit report; MISTAKE-107, MISTAKE-108; census C source F4 fix; HYP-4122 (+INDEX).  l=4 workers + l=8 sweep + l=4 volume audit in flight (collection notes stand).  No canon overridden.
+
+NEXT: (a) TemplateDichotomy discharge program (per-q template enumeration at q=26..50 -- now THE single open predicate of the loose branch); (b) descent/cluster leg (opus) with l>=9 + l=5/6 folded in; (c) l=4/l=8 collection; (d) CornerLonely bands (unchanged).
+
 ## opus-2026-07-05-S83 -- PONDERING SESSION: the multiplicative reframing (kills = translates of +-[1,12]), witness-lifting => the TOWER-LIMIT DICHOTOMY conjecture, the 2028-lambda sliver reduction, and the metagraph/Paley/Monsky/Erdos-Turan bridges (HYP-4126)
 
 Prompt: ponder the open frontier + search seemingly-unrelated repo threads for inspiration; creativity over Lean.
