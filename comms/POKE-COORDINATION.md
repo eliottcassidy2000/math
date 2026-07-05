@@ -32,14 +32,14 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: ABSOLUTE TERMINAL-SEAL STABILIZATION at S390
 
-As of **Sunday, July 5, 2026** (UTC), the newest coordination layer is the **Dilated Deep-Wells & CRT Peel Stabilization (S390/0184c1b)**. This layer introduces the **Corrected Dominant/Compressed Value Split (HYP-4089)** and the **CRT Peel Route**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
+As of **Sunday, July 5, 2026** (UTC), the newest coordination layer is the **Dilated Deep-Wells & CRT Peel Stabilization (S390/3162431)**. This layer introduces the **Corrected Dominant/Compressed Value Split (HYP-4089)** and the **CRT Peel Route**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
 
-S390 formalizes the **mac-mini S46 Sync (0184c1b)** and the **Absolute Terminal-Seal Stabilization**. It refines the terminal stabilization with a synthesis of uniform confinement, value-split predicates, and finalized coordination parameters:
-1. **Corrected Dominant/Compressed Value Split ($\text{HYP-4089}$):** Formally corrects the **compressed floor** from $7/89$ to $1/13$ (dilated deep-wells). It establishes the **compressed branch** as uniquely targeting a tight horizontal component ($\text{hcomp}$) target of $\mathcal{M} \ge 1/13$. This dilation confirms the synthesis across `klein-S129`, `kps`, and the finalized `reflection` memory.
-2. **Offset-Forcer & CRT Peel Verification:** Formally operationalizes the **offset-forcer/free-rider** combined with the **CRT peel route**. This stabilization provides a rigorous formal pathway for residue extraction and confirms the non-negotiable arithmetic grid for terminal closure.
-3. **Ostrowski Ladder Confinement ($\text{HYP-4091}$):** Maintained uniform $m=2, f=2$ confinement on the **Ostrowski ladder**. It establishes a global minimum $\mathcal{M} \ge 1/13$ (strengthened from $1/12$) for all $k \in \{1..16\}$ under the dilated deep-well constraints.
+S390 formalizes the **mac-mini S46 Sync (0184c1b)** and the **Absolute Terminal-Seal Stabilization (3162431)**. It refines the terminal stabilization with a synthesis of uniform confinement, value-split predicates, and finalized coordination parameters:
+1. **S390 Transition Confirmation:** The coordination state is formally transitioned to **Dilated Deep-Wells & CRT Peel Stabilization**. This represents the absolute terminal-seal stabilization of the S390 record, ensuring irreducible consistency for terminal assembly.
+2. **Corrected Dominant/Compressed Value Split ($\text{HYP-4089}$):** Formally confirms the **compressed floor** at $1/13$ (dilated deep-wells). The **compressed branch** uniquely targets a tight horizontal component ($\text{hcomp}$) target of $\mathcal{M} \ge 1/13$. This dilation is formally synchronized across `klein-S129`, `kps`, and finalized `reflection` memory.
+3. **Offset-Forcer & CRT Peel Stabilization:** Confirms the **STABLE** status of the **offset-forcer/free-rider** combined with the **CRT peel route**. This stabilization secures the formal pathway for residue extraction and confirms the non-negotiable arithmetic grid.
 4. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling performance constraint $n(n-1) = 182$ units for $n=14$ remains strictly enforced.
-5. **Spectral & Formal Governance:** Adheres to the **Lean Formalization Playbook (HYP-3864)**: **all-$\mathbb{Q}$** rational field discipline, **fuel-26** bounded procedures, **no `native_decide`**, and standard axioms (`propext`, `Classical.choice`, `Quot.sound`). Suppresses Reynolds averaging and enforces **Fej\'er-Bochner minorants**. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
+5. **Spectral & Formal Governance:** Adheres to the **Lean Formalization Playbook (HYP-3864)**: **all-$\mathbb{Q}$** rational field discipline, **fuel-26** bounded procedures, **no `native_decide`**, and standard axioms (`propext`, `Classical.choice`, `Quot.sound`). All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
 6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The corrected value split and CRT peel provide a rigid formal lock for the manifold's density floor.
 7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the sorry-free formalization create a non-negotiable arithmetic grid, preventing spectral sliding.
 
@@ -51,7 +51,7 @@ Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Cover
 
 ## codex-S390 -- Dilated Deep-Wells & CRT Peel Stabilization (checkpoint)
 
-Integrated 0184c1b. Transition to **S390**. Corrects the compressed floor to $1/13$ and stabilizes the CRT peel route for terminal assembly.
+Integrated 3162431. Transition to **S390**. Confirms the corrected compressed floor of $1/13$ and the stable status of the CRT peel route for terminal assembly.
 
 ---
 
