@@ -111,6 +111,18 @@ HOUSEKEEPING: HYP cascade rode 4 collisions mid-session; settled 4099=klein-S134
 FILES: lrc_multilift_leg_macmini_S52.py, lrc_multilift_floor_macmini_S52.py (+.outs), lrc_ladder_certificates_macmini_S52.md, reflection the-multi-lift-floor-and-the-14r-ladder-macmini-S52.md; HYP-4103 (+INDEX). No canon overridden.
 
 NEXT: (a) the l=3..6 floor-level domains (T_l bounded; same harness, bigger volumes -- expect 2/25 to hold, the 2nd harmonic seems to be THE lift floor); (b) the Fin-12 fee transcription; (c) prove M({4,6}-block) = 2/25 as the lift-side 2nd-harmonic extremal (kps's second_value_loose machinery should adapt); (d) the l >= 7 spread residual (ratio gate + sieve strain -- possibly a one-session finite check).
+## kind-pasteur-2026-07-05-S7 -- THE l >= 2 PEEL LADDER kernel-pure: gap_tower_step (rho = 2/25 on klein's S136 stack) + gap_ladder_rung (order-statistic compression at every l <= 6; C_l = 64.7..572.7); the gap violator is squeezed at every scale (HYP-4113)
+
+Prompt (owner): the l >= 2 peel ladder + remaining fleet tasks.
+
+THE LEAN (LRCGapLadder.lean, registered, corpus green 8668, kernel-pure): **gap_tower_step** = klein's tower_step_12 mirrored at rho = 2/25 (sub-base of 12-l cited at 1/(13-l) > 2/25 for ALL l >= 1; conclusion = the dichotomy's LOOSE BRANCH) + **gap_ladder_rung** (contrapositive, integer form): a no-2/25-point 12-family has, in EVERY l-subset S (l <= 6) with complement bound B, some j with (2l-1)(25-4l)|v_j| <= 150 l (13-l) B. Taking S = top-l: w_(l) <= C_l w_(l+1), C_2..C_6 = 1100/17, 900/13, 600/7, 400/3, 6300/11 (~64.7..572.7); l=1 keeps S6's sharp 24. The budget dies at l=7 (4l >= 25): six rungs is the whole ladder.
+
+LEAN LORE (worth recording): the fee criterion SATURATES EXACTLY -- l*K = 2*delta is an identity (field_simp), so the strict inequality must come from the INTEGER BUMP (+1) in the contrapositive, delivered via List.sum_lt_sum per-element; any attempt to get strictness from the constants fails by construction. Also: Int.cast_abs bridges klein's cast-of-abs to my abs-of-cast; mirror-don't-reinvent worked (the tower step compiled on the first structural pass).
+
+CONSEQUENCE (with S2-S6): the gap violator's order statistics are chained top-down at every scale (cumulative w_max <= 7e11 w_(7)) while the whole set must be spread (> 11.5x) and pinned everywhere. Remaining freedom: overall scale + bottom-6 structure -- census-shaped.
+
+FILES: LRCGapLadder.lean; results/lrc_gap_ladder_kps_S7.out; HYP-4113 (INDEX). One checkpoint + close-out. No canon overridden.
+
 ## kind-pasteur-2026-07-05-S6 -- ATTACKING THE GAP CRUX: THE 24B TOP-COMPRESSION kernel-pure (citation floor 1/12 beats the gap ceiling 2/25 by exactly 1/300 => every gap-violator runner <= 24x its complement's max; gap_compressed_24) (HYP-4112)
 
 Prompt (owner): work on the spectral gap emptiness crux itself.

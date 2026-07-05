@@ -1,0 +1,9 @@
+THE LADDER (C_l = 150 l (13-l)/((2l-1)(25-4l))):
+  l=1: C_l = 600/7 = 85.7   [l=1 sharp one-tooth: 24 (S6)]
+  l=2: C_l = 1100/17 = 64.7
+  l=3: C_l = 900/13 = 69.2
+  l=4: C_l = 600/7 = 85.7
+  l=5: C_l = 400/3 = 133.3
+  l=6: C_l = 6300/11 = 572.7
+rung holds on dilated APs (the entire no-2/25 locus), all l: True
+cumulative w_max <= 7.037e+11 * w_(7)  (24 * prod C_2..C_6)
