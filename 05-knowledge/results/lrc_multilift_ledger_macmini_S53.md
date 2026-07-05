@@ -18,8 +18,9 @@ Residue pinning (opus-S75): tight-from-above primitive 12-sets with no
 |      | w3 <= 24 w2): 13.3B cells, all residue-class certified   | 14s; python cross-check independent)       |     |
 | 4    | FULL chain domain (w1 <= 2400/7, chain 300/13, 1100/51,  | [pending: parallel run in flight]          | S53 |
 |      | 24): C pyramid, 6-way parallel                           |                                            |     |
-| 5    | BOX k <= 4 (811,008) + corners; chain tail OPEN          | box clean; anchor w1 <= 1600/3 ~ 533       | S53 |
-| 6    | BOX k <= 3 (673,596) + corners; chain tail OPEN          | box clean; anchor w1 <= 2291               | S53 |
+| 5    | BOX k <= 4 (811,008) + corners; chain tail OPEN          | box+corners clean; corner floor 1/12 at the | S53 |
+|      |                                                          | ODD BLOCK {1,3,5,7,9}+13; anchor 1600/3     |     |
+| 6    | BOX k <= 3 (673,596) + corners; chain tail OPEN          | box+corners clean; anchor 25200/11 ~ 2291   | S53 |
 | >= 7 | FULL (pigeonhole: some r in {7..12} lifted => r | k_r    | floor 3/19 ~ 0.158 (2x the 2/25 threshold) | opus-S78 |
 |      | => value >= 14r >= 98; citation-1/6 multi-far window)    |                                            |     |
 | all, k_r <= 2 | FULL 3^12 hypercube (rigidity level)            | AP-unique tight                            | kps-S1 |
@@ -30,6 +31,16 @@ formal gap-violator profile (S2-S5: covering all q <= 12, 0/+-1 mod all
 q <= 25, pair-covering mod 13, spread ratio > 23/2, binding pair sum >= 38)
 and the 488k census to height 24: a violator must be an l = 5 or 6 lift in
 the chain-tail (below), pass every filter, and have w_max >= 19.
+
+CORNER ANATOMY (386 structured corners, all >= 2/25): floor 1/12 at the odd
+block {1,3,5,7,9}+13 (l=5); the 14r TOWERS keep margin numerator 14 beyond the
+single-lift ladder — (11,12)-tower 14/155, (10,12) 14/143, (10,11)/(10,11,12)
+14/141 — a multi-tower ladder wanting its own closed form (next session).
+PER-PATTERN RECIPROCAL ANCHORS (the big lever): l=5 drops to 95 at
+C={1,2,3,4,12} (base {5..11}, margin 5/16), 337/540 patterns improve over the
+citation anchor; l=6 drops to 474 at C={1,2,3,4,11,12} (base margin 1/3),
+342/714 improve.  The l=5 tail is smaller than the citation-anchor estimate
+suggested — per-pattern anchor tables are in lrc_l56_box_macmini_S53.out.
 
 ## The open shapes (exact, for whoever closes them)
 
