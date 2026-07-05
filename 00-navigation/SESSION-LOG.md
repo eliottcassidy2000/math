@@ -1,3 +1,19 @@
+## klein-2026-07-05-S135 -- THE SPARSE-TOP SHARPENING: teeth_mass_far (sub-gap windows carry ONE tooth), the abstract-fee window, and UNLIMITED sparse tops (the 7-wall vanishes in the sparse regime) (HYP-4104)
+
+Prompt (owner): sharpen the multi-killer criterion ~3x for far tops + remaining tasks.
+
+DELIVERED (LRCMultiKillerWindow.lean extended, kernel-pure, corpus green; Python-verified 4000 adversarial cases, 0 violations):
+ - **teeth_mass_far**: 7*(b-a)*w <= 6 (window shorter than one inter-tooth gap) => clipped teeth mass <= 1/(7w) -- no density term, no +3 boundary fee. Proof stack: sum_le_single_bound (a list whose elements pairwise cannot both be positive sums to <= the cap) + tooth_clip_pos_edges + tooth_clip_disjoint (two teeth clipping positive force b-a > 6/(7w); lt_div_iff + linarith, case-free).
+ - **lonely_of_window_of_fees**: the ABSTRACT-FEE window -- per-top mass bounds fee(j), Sum fee < 2delta => Lonely 14. Decouples the accounting from the window/hunter composition; the S134 density criterion and today's sparse criterion are both instances.
+ - **lonely_of_window_multi_far**: tops in the sub-gap regime compose with NO cardinality constraint -- the 7-wall vanishes (density term absent). A single sparse top recovers EXACTLY the S132 sharp threshold B/(14(beta-1/14)) through the ledger: the measure route now matches the arc route's constant.
+ - REGIME MAP: teeth_mass (density; huge tops, fee negligible) + teeth_mass_far (sub-gap; the mid-scale killers where +3/(7v) dominated, e.g. the dilated-deep-well scale) = best constants at every scale. The naming correction from my S134 letter: the problematic tops were MID-scale (sub-gap), not far -- huge tops were always fine.
+
+CONCURRENT WORK INTEGRATED (state as of this session): opus-S77 -- ALL FOUR single-lift hdich legs formal (pinning + sieve + window HYP-4100 + 144 kernel-checked rows; the n=13 deep well {1..11,168} at 14/169 found; MISTAKE-104 logged); kps-S2 -- the harmonic-gate atom (rational_point_margin, one decidable inequality schema for ALL loose witnesses) + the SPREAD REDUCTION (dichotomy needs only ratio > 23/2 bases) + lrc14_of_spread_dichotomy_and_corner = the new top surface; mac-mini-S52 -- multi-lift leg claimed (HYP-4103, in flight); numbering cascade resolved (mine settled 4104).
+
+hdich WIRING ASSESSMENT (the remaining distance): the full dichotomy wiring waits on exactly TWO in-flight pieces -- mac-mini's multi-lift leg (HYP-4103) and kps's modulus bound (next-brick, unclaimed). Once either lands, the wiring session composes: spread reduction -> pinning -> {single-lift rows + window leg + sieve} + {multi-lift leg} -> TightLooseDichotomyAt -> lrc14_of_spread_dichotomy_and_corner. My S134 height-dependence finding stands: the pinning discharge needs the trichotomy to supply the height bound.
+
+FILES: LRCMultiKillerWindow.lean (extended: 5 new theorems); HYP-4104; this entry. Two pushes. No canon overridden.
+
 ## mac-mini-2026-07-05-S52 -- THE MULTI-LIFT LEG DISCHARGED: lift-stratum floor = 2/25 ATTAINED at the +13 block lift {4,6}->{17,19} (BELOW the single-lift 14/169); the 14r LADDER law (13-r)a == -14 mod 13(r+1), binders (13-r, 14r); single-lift floor cutoff-completed at 2016; l=2 closed on full structural domains; spectral gap (1/13, 2/25) EMPTY everywhere swept (HYP-4103)
 
 Prompt (owner): work what remains of LRC(14) creatively; pull concurrent work; explore niche past threads.
