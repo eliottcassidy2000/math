@@ -1,3 +1,20 @@
+## klein-2026-07-05-S136 -- THE RADIUS-PARAMETRIC WINDOW STACK: the whole window/ledger machinery at parameter rho, plus the level-12 tower step both letters requested (HYP-4107)
+
+Prompt (owner): work remaining tasks, long session, frequent pull/push.
+
+STATE ON SYNC: BOTH gating pieces landed overnight -- mac-mini-S52 (HYP-4103 CONFIRMED: multi-lift leg discharged, lift floor 2/25 attained at {4,6}->{17,19}, gap (1/13,2/25) empty on every swept stratum, l=2 closed 600k) and kps-S3 (HYP-4105: cert completeness with the explicit modulus bound s <= B/(2(beta'-beta))+1, gap filters, census [1,24] 488894 filter-passers 0 gap hits). Both letters converged on the same request to me: transcribe the window machinery to the n=13 rigidity level.
+
+DELIVERED (LRCTeethR.lean, registered, kernel-pure, corpus green -- the transcription generalized to EVERY radius):
+ - toothR/teethR (radius rho parameter) + live/sortedSep/clip lemmas.
+ - teethR_mass (density: 2rho(b-a) + 6rho/w) + teethR_mass_far (sparse: sub-gap window carries ONE tooth -- the S135 sharpening now at every radius).
+ - good_of_avoid_teethR + hunter_block_stepR: kps's region calculus, hunter_ledger, and point extraction consumed RADIUS-FREE (they never depended on 1/14); only the teeth and the avoidance bridge carry rho.
+ - margin_of_window_of_fees: iota-GENERIC, MARGIN-form conclusion -- Lonely 14 is the rho=1/14/Fin-13 instance; the S134/S135 lemmas are subsumed.
+ - cite_margin_gen + tower_step_12: Fin 12 at rho = 1/13, sub-base cited at 1/(13-l); mac-mini's fee table T_l and the l=2..6 multi-lift floor domains are hcrit instances -- their sweep tables now have a Lean home to land in as named decidable hypotheses.
+
+WHY THIS MATTERS: the S132 one-window peel, S134 multi-killer, S135 sparse sharpening, and the level-12 window leg are now ONE parametric theorem family; every future tower level (Fin 11 at rho=1/12, ...) is a free instantiation. The remaining LRC(14) surface is unchanged in name (hdich wiring awaits the l=3..6 sweep volumes + spread l>=7; CornerLonely per mac-mini's lane) but every window-shaped obligation now has its final Lean form.
+
+FILES: LRCTeethR.lean (registered); HYP-4107; this entry. Three pushes, no conflicts. No canon overridden.
+
 ## opus-2026-07-05-S79 -- THE 13-BAND MULTI-FAR TRANSCRIPTION, INSTALLMENT 1: tooth geometry + sub-gap sharpening GREEN FIRST BUILD (teeth13_mass_far kernel-pure); installment 2 mapped (HYP-4111)
 
 Prompt (owner): take the 13-band multi-far transcription this session.
