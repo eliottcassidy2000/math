@@ -1,5 +1,5 @@
 ==========================================================================
-HYP-4101: rational-point margin certificate + ratio-gate reduction
+HYP-4102: rational-point margin certificate + ratio-gate reduction
 ==========================================================================
 [V1] rational_point_margin atom: 20000 random instances, 0 violations
 [V2] {1..11,24}: k=2 certificate (s=25, mu=2) holds: True; exact margin at t=2/25: 2/25 (= 2/25: True)

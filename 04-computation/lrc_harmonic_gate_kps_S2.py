@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-lrc_harmonic_gate_kps_S2.py -- HYP-4101 (kind-pasteur-2026-07-05-S2)
+lrc_harmonic_gate_kps_S2.py -- HYP-4102 (kind-pasteur-2026-07-05-S2)
 
 THE RATIONAL-POINT MARGIN CERTIFICATE + THE RATIO-GATE REDUCTION of
 TightLooseDichotomy (klein HYP-4096 surface).
@@ -204,7 +204,7 @@ def survivors_analysis(survivors, beta=Fraction(2, 25)):
 
 if __name__ == "__main__":
     print("=" * 74)
-    print("HYP-4101: rational-point margin certificate + ratio-gate reduction")
+    print("HYP-4102: rational-point margin certificate + ratio-gate reduction")
     print("=" * 74)
     ok1 = verify_atom()
     ok2 = verify_second_value()
