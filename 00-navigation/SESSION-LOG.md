@@ -1,3 +1,21 @@
+## kind-pasteur-2026-07-05-S11 -- THE Q50 CONJECTURE IS FALSE: no fixed-modulus template closes the loose branch (refutes HYP-4119 mac-mini + HYP-4127 kps-S10, both as stated) -- reroute to the real-valued TightLooseDichotomy (HYP-4137, MISTAKE-110)
+
+Prompt (owner): work LRC(14) proof progress + long session on frontiers; synthesize past/incoming work; explore creative connections; CLOSE key open math via reframes and challenging assumptions; be rigorously certain of directions; push/pull often; reroute as needed.
+
+REROUTED THE CRUX. The fleet was converging on Q50 ("every gap-profile family has a 2/25 witness at modulus <= 50", the proof-map's item-1d "absolute-height mechanism", pinned into my own S10 LRCTemplateSurface). I set out to sharpen it (parity-split reframe at composite even moduli q=2p) and instead REFUTED it.
+
+WHAT I PROVED (all independently verified, fresh predicate implementations):
+ (1) Q50 / TemplateDichotomy at bound 50 is FALSE. Explicit SINGLE-SCALE (ratio 12, like the AP) Fin-13 family at height ~1e22 satisfies EVERY hypothesis (nonzero, CoveringFamily 2..14, compressed, primitive, argmax istar), is NOT tight-shaped, has NO 2/25 witness at any denom s<=50 (true min witness 53). => lrc14_of_template_and_corner (HYP-4127) rests on a FALSE hypothesis (dead reduction). Script: lrc_q50_refutation_kps_S11.py.
+ (2) MECHANISM = MISTAKE-096 at the witness layer. Profile pins residues only mod q<=25. Witnesses split: PINNED-ONLY q (all prime-power factors <=25 <=> q | L=lcm(2..25), height-INDEPENDENT) vs FREE q (27,32,49, primes 29..47,53,...) whose witness depends on residues the profile does NOT control -> killable by CRT lift. mac-mini's high-scale test used weak DIAGONAL lifts, missing the free-residue-pinning adversary.
+ (3) THE PINNED-ONLY REPAIR IS ALSO DEAD (Q0=inf). First it looked like "pinned-only witness q|L, q<=Q0" was a clean height-independent fix (census max Q0=69 over all 511,947 B=48 survivors). But a runner ==0 mod L blocks EVERY pinned-only witness (==0 mod every q|L); it makes F5+covering vacuous, freeing the other 11 runners to pin every free q<=N by CRT. So no witness <= N for ANY N: the loose witness modulus is UNBOUNDED (hill-climb reaches Q0=208). Verified family + script lrc_q50_pinned_only_dead_kps_S11.py. NO fixed-modulus template (any flavor) works. (I broadcast the repair, then retracted it same session -- honest two-step.)
+ (4) VERDICT: the REAL-valued TightLooseDichotomy (loose = EXISTS real tstar) is the ONLY viable surface and is UNAFFECTED (every counterexample has a real witness; the first at t=13/53). lrc14_of_dichotomy_and_corner STANDS. LRC(14) is NOT threatened -- only the bounded-denominator TEMPLATE refinement fails. Proof-map 1d's "single absolute-height mechanism at a fixed bound" does not exist; reroute to the real surface or a height-dependent q<=Q(height)~c*ln(height) (MISTAKE-096 two-sided architecture).
+
+BY-PRODUCT (clean, Lean-able, mac-mini already used it): mod-2p 2/25-witness reduces EXACTLY to a two-color avoidance mod p (evens avoid E_p={0,+-2}, odds avoid O_p={+-1,+-3}); verified exact 100k tests -> mac-mini's ban-tournament HYP-4132.
+
+DELIVERABLES: MISTAKE-110; HYP-4137 (CONFIRMED); reflection the-filter-witness-asymmetry-and-why-no-fixed-template-closes-lrc14; result lrc14_q50_refutation_kps_S11.md; LRCTemplateSurface.lean correction banner; scripts lrc_q50_{refutation,pinned_only_dead}_kps_S11.py + lrc_q50_parity_analysis_kps_S11.c; two fleet broadcasts (claim + retraction-of-repair). No canon overridden without notice; the correction is to two CONJECTURES (mine + mac-mini's) via explicit counterexample, fully documented.
+
+NEXT: fleet should drop the template lane and consolidate on the real-witness TightLooseDichotomy + CornerLonely surface; the genuine open math is the real dichotomy (tight classification) and the height-dependent covering-census, not a fixed template.
+
 ## klein-2026-07-05-S138 -- THE VALUE FORM: exact-M claims become finite rational computations (margin_le_of_grid kernel-pure) + M({1..12}) = 1/13 EXACTLY machine-checked + owning MISTAKE-106 (HYP-4121)
 
 Prompt (owner): evaluation-direction brick; carefully assess recent agent work and validity; best formal state; push/pull often.
