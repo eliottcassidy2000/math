@@ -32,19 +32,22 @@ freedom equivalent to height. The methodological gap: the high-scale check
 (12,095 lifts to 1.16e14) used DIAGONAL lifts (`v_i -> v_i + mL`, uniform shift), which
 never pin the free residues -- the CRT/aligned adversary was not in the sample.
 
-**Correct framing (constructive).** The witness modulus is NOT unbounded -- every
-pinned-only `q | L`, so a pinned-only witness is height-independent and cannot be lifted
-away. Replace "`s <= 50` (any modulus)" with "PINNED-ONLY `q | L`, `q <= Q0`". This is
-CLEANER than Q50 hoped (manifestly height-independent, a finite residue-only check).
-Evidence: over ALL 511,947 B=48 census survivors the smallest pinned-only witness is
-`<= 69` (max 69 at `{1,3,4,5,7,8,9,11,12,19,23,30}`); F1's exact bound is 55. So the
-right bound is `Q0 >= 69`, not 50; whether `Q0 < inf` over all (incl. high-height) shapes
-is the sharpened crux. LRC(14) is NOT threatened: the counterexample has a REAL witness
-at `t = 13/53`, so `TightLooseDichotomy` (loose = EXISTS real tstar) and
-`lrc14_of_dichotomy_and_corner` are UNAFFECTED -- only the bounded-denominator TEMPLATE
-refinement fails. mac-mini's pole-necessity/periodicity result STANDS (it is about the
-profile FILTERS, which are indeed CRT-ray-periodic -- exactly why the witness must be
-pinned-only to inherit that height-independence).
+**Correct framing.** First it looked like the fix was "PINNED-ONLY `q | L`, `q <= Q0`"
+(height-independent; census max `Q0 = 69` over all 511,947 B=48 survivors). BUT THAT
+REPAIR IS ALSO DEAD (verified same session): a runner `== 0 (mod L)` is `== 0 (mod q)`
+for EVERY pinned-only `q | L`, so it is always in the danger band and BLOCKS every
+pinned-only witness -- `Q0 = inf`. The family `base = {L, 1,3,4,5,7,8,9,11,13,17,19}`,
+`istar = 2L` satisfies every `TemplateDichotomy` hypothesis (covering 2..14, compressed,
+primitive, not tight) with NO pinned-only witness at any `q | L`. Moreover an `L`-runner
+makes `F5`+covering VACUOUS, freeing the other 11 runners to pin every free modulus `<= N`
+by CRT -- so for any `N` there is a valid profile family with no witness `<= N`: the
+loose-branch witness modulus is UNBOUNDED. Hence NO fixed modulus bound (bound-50,
+pinned-only, or any fixed set) closes the loose branch. The ONLY viable surface is the
+REAL-valued `TightLooseDichotomy` (loose = EXISTS real tstar) -- `lrc14_of_dichotomy_and_corner`
+is UNAFFECTED (every counterexample here has a real witness) -- or a HEIGHT-DEPENDENT
+`q <= Q(height) ~ c*ln(height)` (the MISTAKE-096 two-sided architecture). LRC(14) is NOT
+threatened. mac-mini's pole-necessity/periodicity result STANDS (it is about the profile
+FILTERS, CRT-ray-periodic); the witness side simply inherits no such height-independence.
 
 **Lesson (the recurring one, now at the witness/template layer).** For ANY "witness at a
 bounded modulus" claim, the modulus set splits into what the profile CONTROLS (here `q | L`)

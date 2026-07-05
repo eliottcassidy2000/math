@@ -72,44 +72,47 @@ so it systematically missed this family. *(Exactly the recurring trap: an
 empirical bound is only as uniform as its generator; the aligned/CRT adversary
 was not in the sample. Cf. MISTAKE-095/096/098/101/102.)*
 
-## 4. The correction — the pinned-only witness (height-independent)
+## 4. The pinned-only "repair" is ALSO dead (Q₀ = ∞) — the honest conclusion
 
-The witness modulus is **not** unbounded: every pinned-only `q` divides `L`, so a
-pinned-only witness is height-independent and cannot be lifted away. The right
-statement replaces "`q ≤ 50`" with "**pinned-only** `q ≤ Q₀`":
+At first the fix looked clean: every pinned-only `q | L`, so a pinned-only
+witness is height-independent, and over all **511,947** B=48 census survivors the
+smallest pinned-only witness is `≤ 69` (max 69 at `{1,3,4,5,7,8,9,11,12,19,23,30}`;
+F1's exact bound is 55). That suggested "pinned-only witness at `q ≤ Q₀`, `Q₀ ≈ 69`".
 
-> **Corrected conjecture (Q\*).** Every profile shape has a `2/25`-witness at a
-> PINNED-ONLY modulus `q | L` with `q ≤ Q₀`.
+**But the census is bounded height, and high-height shapes break it.** A hill-climb
+over residue vectors (magnitudes free at high height) finds shapes whose smallest
+pinned-only witness is ≥ 156, achieved by **highly-composite runners** (e.g.
+`5040 = 2⁴·3²·5·7`, `13650 = 2·3·5²·7·13`) that are `≡ 0 (mod q)` for many
+pinned-only `q` and thereby **block** the witness there. Taken to the limit:
 
-This is *cleaner* than Q50 hoped: manifestly height-independent (no scale, no
-MISTAKE-102 tail), a pure finite residue computation over shapes mod `L`.
+> **A single runner `≡ 0 (mod L)` blocks EVERY pinned-only witness.** Since every
+> pinned-only `q | L`, that runner is `≡ 0 (mod q)` — always in the danger band —
+> so no dilation clears it. `Q₀ = ∞` for that shape.
 
-**Evidence on `Q₀`.** The 5 NEEDFREE B=48 shapes have their smallest pinned-only
-witness at `q ∈ {51, 55, 69}`:
+**Verified** (`04-computation/lrc_q50_refutation_kps_S11.py` sibling checks): the
+family `base = {L, 1,3,4,5,7,8,9,11,13,17,19}`, `istar = 2L` satisfies EVERY
+`TemplateDichotomy` hypothesis (covering 2..14, compressed, primitive, not tight)
+and has **no pinned-only witness at any `q | L`** (scanned `≤ 3000`, all blocked by
+the `L`-runner). It is loose only via a FREE witness (`q = 37` here) — height-dependent.
 
-| shape | smallest pinned-only witness |
-|---|---|
-| F1 `{1,3,4,7,10,11,13,16,17,19,23,36}` | 55 = 5·11 |
-| F2 `{1,3,4,5,7,8,9,11,12,19,23,30}` | 69 = 3·23 |
-| F3 `{3,10,13,16,19,22,23,25,29,35,45,48}` | 55 |
-| F4 `{1,17,18,19,21,22,23,37,39,40,41,48}` | 51 = 3·17 |
-| F5 `{1,17,18,19,20,21,22,23,37,39,41,48}` | 51 |
+**Both mechanisms combine → the witness modulus is UNBOUNDED.** An `L`-runner makes
+`F5`-pinning and covering *vacuous* (`has0` at every `q ≤ 25`, `L` covers 2..14), so
+the other 11 runners are unconstrained by the profile. For ANY target `N`: pinned-only
+`q ≤ N` are blocked by `L`; free `q ≤ N` are pinned by choosing the 11 runners' residues
+(each free modulus is pinnable with 11 free runners — verified). Hence a valid non-tight
+covering compressed primitive family with no witness at any `q ≤ N`. `N` arbitrary ⟹
+**no fixed modulus bound (pinned-only, free, or any fixed set) closes the loose branch.**
 
-F1's exact height-independent bound is **55**: pinning free primes up to 59, the
-min witness locks at 55 and cannot rise (verified). So the correct bound is
-`Q₀ ≥ 69`, **not 50**.
+## 5. The only viable surface: real-valued `TightLooseDichotomy`
 
-**Census-wide evidence.** The MAX over all **511,947** B=48 census survivors of
-the smallest pinned-only witness modulus is **exactly 69** (attained at
-`{1,3,4,5,7,8,9,11,12,19,23,30}`). So the corrected conjecture **"pinned-only
-witness at `q ≤ 69`" holds for the entire census** — the template approach is
-*repaired* at bound 69 (height-independent), not dead. CAVEAT: the census is
-bounded height, so it samples only shapes with small representatives; whether
-`Q₀ ≤ 69` (or any finite bound) holds for *all* profile shapes — including the
-high-height shapes with no small representative — is the **sharpened crux**. It
-is now a height-independent, residue-only question (no MISTAKE-102 tail risk).
+The loose branch must use a REAL witness (`∃ tstar ∈ ℝ`, as in `TightLooseDichotomy`
+and `lrc14_of_dichotomy_and_corner`) or a HEIGHT-DEPENDENT bound `q ≤ Q(height) ~ c·ln(height)`
+(the covering-census / analytic-descent route — exactly the two-sided architecture
+MISTAKE-096 already forced). The bounded-denominator TEMPLATE program (Q50 at any fixed
+modulus set) is a dead end. LRC(14) is untouched: every counterexample here is LOOSE
+(has a real witness); only the fixed-bound refinement fails.
 
-## 5. A clean by-product: the parity-split reduction
+## 6. A clean by-product: the parity-split reduction
 
 For `q = 2p` (p odd), a mod-`2p` `2/25`-witness reduces **exactly** to a
 two-color avoidance problem mod `p`: `∃ b ∈ (Z/p)*` with every EVEN base runner
@@ -119,19 +122,27 @@ parity of the `2p`-lift. Verified exact (100,000 tests, 0 mismatches). Pure
 integer arithmetic — Lean-able like the `rational_point_margin` atom. (The
 parity dividend: `0 ∈ E_p` always ⟹ no even runner may be `≡ 0 mod p`.)
 
-## 6. Impact / handoffs
+## 7. Impact / handoffs
 
 - **HYP-4127 (kps-S10)**: `TemplateDichotomy` / `lrc14_of_template_and_corner`
-  rests on a false hypothesis. The Lean is kernel-pure and TRUE as an implication
-  but cannot be discharged — mark as superseded by the pinned-only form.
+  rests on a FALSE hypothesis — a dead reduction. Neither the `s ≤ 50` form nor the
+  pinned-only `q ≤ Q₀` form is provable (Q₀ = ∞). The Lean is kernel-pure and TRUE as
+  an implication but can never be discharged. Superseded by the real-valued surface.
 - **HYP-4119 (mac-mini-S55)**: Q50 at bound 50 refuted; the "absolute-height /
-  no-census-per-height" claim is wrong for free-modulus witnesses. The
-  pole-necessity/periodicity result STANDS (it is about the profile filters,
-  which are indeed CRT-ray-periodic — that is *why* the witness must be
-  pinned-only to be height-independent).
-- **Proof map item 1d (mac-mini-S54)**: the "finite template at bound 50" is
-  replaced by "finite pinned-only template at bound `Q₀`". Highest-leverage next:
-  bound `Q₀` (does every profile shape have a bounded pinned-only witness?).
-- **The real surface is fine.** Reroute the template lane from `s ≤ 50` (any
-  modulus) to `q | L` (pinned-only), and prove/bound `Q₀` — a height-independent,
-  finite, residue-only target.
+  no-census-per-height" claim is wrong. The pole-necessity/periodicity result STANDS
+  (it is about the profile FILTERS, which are indeed CRT-ray-periodic). But note the
+  companion fact: the WITNESS side inherits no such height-independence, because a
+  composite `≡ 0 (mod L)` runner blocks all pinned-only witnesses — the census's
+  `HARD = 0` relies on FREE (height-dependent) witnesses it never exhibits.
+- **Proof map item 1d (mac-mini-S54)**: "finite template at a fixed bound" (any
+  flavor) is DEAD. Reroute to the real-witness `TightLooseDichotomy` (already the
+  main surface) or the height-dependent covering-census `q ≤ Q(height) ~ c·ln(height)`
+  (the MISTAKE-096 two-sided architecture: bounded-magnitude finite census + analytic
+  large-magnitude). The "single absolute-height mechanism" the crux asks for does not
+  exist as a fixed modulus bound.
+- **The real surface is fine.** `lrc14_of_dichotomy_and_corner` (loose = ∃ real tstar)
+  is untouched; every counterexample here has a real witness. The lane to drop is the
+  bounded-denominator template refinement, not the dichotomy itself.
+- ⚠️ **Self-correction**: my initial S11 broadcast suggested repairing at pinned-only
+  bound 69 — that is ALSO wrong (Q₀ = ∞ via composite blocking). The honest verdict is
+  the real surface, not any fixed template.
