@@ -1,3 +1,43 @@
+## mac-mini-2026-07-04-S47 -- push the compressed peel toward closure: n=13 tight locus = AP (CRT case complete), 12-runner spectrum (2/25 not 1/12), floor 1/13 confirmed by structured descent; MISTAKE-102 (sampling misses structured families, recurred from 101)
+
+Prompt (owner): keep pushing to complete the proof.
+
+GOAL: complete the compressed peel (compressed ⟹ M≥1/13) that discharges kps's sole open hcomp leaf.
+
+PROGRESS on the peel structure:
+ - n=13 TIGHT LOCUS = dilated APs ONLY (verified): M(W)=1/13 ⟺ W=c·{1..12}. So the CRT tight-case
+   argument covers the ENTIRE tight locus (no GW-analog at n=13, unlike n=14).
+ - The peel splits: tight-AP base → M=1/13 (CRT free-rider, rigorous-ish); loose base → bounded away.
+ - CONFIRMED floor 1/13 by EXACT descent from STRUCTURED seeds (dilated deep-wells, 2·{1..12}∪{13},
+   {1..11,24,182}, {1..11,13,84}, adversarial 157·{1..12}∪{18382}) -- all converge to 1/13, nothing below.
+
+TWO SELF-CORRECTIONS this session (both = sampling missing structured families, MISTAKE-102, same trap as
+opus's MISTAKE-101):
+ - Transiently thought the 12-runner spectral gap was (1/13,1/12). WRONG: {1..11,24} has M=2/25 ∈ (1/13,1/12)
+   (= 2/(2n-1), the KNOWN second-smallest; it was in the SESSION-LOG all along). Real base-spectrum gap =
+   (1/13, 2/25). Random 120k-sample missed {1..11,24} (prob ~1/C(120,12)).
+ - Reconfirmed S45's 7/89 was the same error (missed dilated deep-wells at 1/13). So the CORRECTED picture:
+   compressed floor = 1/13 (dilated), 7/89 = lowest NON-dilated rung, 2/25 = second 12-base value.
+
+HONEST STATUS: compressed ⟹ M≥1/13 remains a CONJECTURE (tight, floor 1/13). Support = CRT free-rider
+argument (tight-AP base, rigorous) + structured descent + adversarial exact-M. NOT exhaustive -- and can't be
+by sampling (MISTAKE-102). The loose-base case (M(base)≥2/25, killer can't drag M(V) below 1/13) is the
+remaining gap = confinement-like (so the peel is NOT a full bypass of the census; the tight-AP case IS the
+clean part). Covering-min 14/183 UNAFFECTED throughout (1/13 > 14/183).
+
+NET: this session was mostly refinement + self-correction, but it (a) firmed the mechanism (offset-forcer/
+free-rider + CRT), (b) settled n=13 tight locus = AP, (c) corrected the 12-base spectrum (2/25), (d) logged
+MISTAKE-102 (the recurring sampling trap -- important for the whole fleet's floor-hunting).
+
+FILES: compressed_1over13_structure_macmini_S47.out; HYP-4089 (S47 refinements); MISTAKE-102; memory. This log.
+
+NEXT: the loose-base peel (M(base)≥2/25 ⟹ killer-drag can't cross 1/13) is the remaining piece = confinement.
+For a clean closure of hcomp, the tight-AP CRT case is done; the loose case needs the fleet's confinement
+tools (opus THM-615/617, klein spectral gaps, kps residue-liars) -- OR a peel-side width/spread argument.
+Recommend: formalize the CRT tight-AP free-rider lemma (clean, self-contained from LRC13) as a Lean piece.
+
+---
+
 ## mac-mini-2026-07-04-S46 -- CORRECTION: compressed floor is 1/13 not 7/89 (dilated deep-wells); `compressed ⟹ M≥1/13` is the clean TIGHT hcomp target; offset-forcer/free-rider + CRT peel route (HYP-4089 corrected)
 
 Prompt (owner): keep working toward closure creatively.
