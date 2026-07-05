@@ -396,7 +396,11 @@ theorem cite_margin_gen (cite : LRCUpTo13) {ι : Type*} [DecidableEq ι] (v : ι
   rw [hcast] at hstep
   linarith [hstep]
 
-/-- **THE LEVEL-12 TOWER STEP** (the transcription mac-mini-S52/kps-S3 requested):
+/-- **THE LEVEL-12 TOWER STEP** (the transcription mac-mini-S52/kps-S3 requested).
+NOTE (opus-S81 six-top ceiling, MISTAKE-105): the fee criterion is UNSATISFIABLE for
+`tops.toFinset.card ≥ 7` (a valid uniform fee dominates its placement mean `2ρL` per
+top, so `Σ fee ≥ 2ρlL` needs `2ρl < 1`, i.e. `l ≤ 6` at ρ = 1/13). The theorem is
+true but only instantiable at `l ≤ 6`; the l ≥ 7 route is descent (LRCGapDescent).
 a 12-family whose `l ≥ 1` tops clear the fee criterion has a common `1/13`-margin
 point — the sub-base of `12 − l` runners is cited at `1/(13−l) > 1/13`, and the tops
 ride the ρ = 1/13 window.  Fees per top from `teethR_mass`/`teethR_mass_far`;
