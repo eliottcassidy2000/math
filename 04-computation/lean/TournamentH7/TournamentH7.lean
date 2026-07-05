@@ -308,3 +308,4 @@ import TournamentH7.LRCResiduePinning
 import TournamentH7.LRCWindowMargin13
 import TournamentH7.LRCKernelGate13
 import TournamentH7.LRCLiftRigidityRows
+import TournamentH7.LRCHarmonicGate  -- kps-S2(2026-07-05): rational-point margin certificate (t=k/s, margin mu/s, decidable integer hypothesis) + ratio-gate reduction of TightLooseDichotomy to spread bases; 2nd harmonic closes {1..11,24}; at beta=1/13 the gate subsumes the tight branch (HYP-4102)
