@@ -268,6 +268,62 @@ theorem dichotomyAt_13_of_spread_loose
   have : (12 : ℝ) * a < b := by linarith
   exact_mod_cast this
 
+/-! ## Propagation to the pinned surface -/
+
+/-- **THE SHARPENED SURFACE**: LRC(14) ≤ citation + `CornerLonely` + the dichotomy
+on SPREAD bases only (`23a < 2b`, ratio `> 23/2`).  The ratio gate discharges every
+narrow-based compressed family outright; the AP tight locus (ratio `12`) and the
+second value (ratio `24`) both live on the spread side, where the remaining open
+mathematics now provably is. -/
+theorem lrc14_of_spread_dichotomy_and_corner (cite : LonelyRunner.LRCUpTo13)
+    (hspread : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v →
+      (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → tupleGcd v = 1 →
+      ∀ istar : Fin 13, (∀ i, |v i| ≤ |v istar|) →
+      ∀ a b : ℤ, 0 < a → a ≤ b →
+        (∀ i, i ≠ istar → a ≤ |v i|) → (∀ i, i ≠ istar → |v i| ≤ b) →
+        23 * a < 2 * b →
+        (∃ c : ℤ, 2 ≤ c ∧ ∀ i, i ≠ istar → ∃ j : ℤ, 1 ≤ j ∧ j ≤ 12 ∧ |v i| = c * j) ∨
+        (∃ tstar : ℝ, ∀ i, i ≠ istar → ∀ m : ℤ, 2 / 25 ≤ |(v i : ℝ) * tstar - m|))
+    (hcorner : CornerLonely) :
+    LRC14Statement :=
+  lrc14_of_dichotomy_and_corner cite (tightLooseDichotomy_of_spread hspread) hcorner
+
+/-- **The β-parametric sharpened surface**: the same propagation at any loose margin
+`β > 1/14` — spread threshold `a < β·(a+b)`, corner threshold `B/(14(β−1/14))`. -/
+theorem lrc14_of_spread_dichotomy_and_corner_at (cite : LonelyRunner.LRCUpTo13)
+    (β : ℝ) (hβ : 1 / 14 < β)
+    (hspread : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v →
+      (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → tupleGcd v = 1 →
+      ∀ istar : Fin 13, (∀ i, |v i| ≤ |v istar|) →
+      ∀ a b : ℤ, 0 < a → a ≤ b →
+        (∀ i, i ≠ istar → a ≤ |v i|) → (∀ i, i ≠ istar → |v i| ≤ b) →
+        (a : ℝ) < β * ((a : ℝ) + b) →
+        (∃ c : ℤ, 2 ≤ c ∧ ∀ i, i ≠ istar → ∃ j : ℤ, 1 ≤ j ∧ j ≤ 12 ∧ |v i| = c * j) ∨
+        (∃ tstar : ℝ, ∀ i, i ≠ istar → ∀ m : ℤ, β ≤ |(v i : ℝ) * tstar - m|))
+    (hcorner : CornerLonelyAt β) :
+    LRC14Statement :=
+  lrc14_of_dichotomy_and_corner_at cite β hβ
+    (tightLooseDichotomyAt_of_spread β hspread) hcorner
+
+/-! ## The second value, formal -/
+
+/-- **The rigidity spectrum's second value as a theorem**: any base shaped like
+`±c·{1,…,11,24}` — more generally `|v i| ∈ [a, 24a]` avoiding the middle window
+`(11a, 14a)` — is loose at margin `2/25`, at `t = 2/(25a)`.  The gate inequality
+holds with EQUALITY (`(2/25)·25a = 2a`): the second value is the second harmonic's
+extremal instance, exactly as the AP is the first harmonic's. -/
+theorem second_value_loose (v : Fin 13 → ℤ) (istar : Fin 13) (a : ℤ) (ha : 0 < a)
+    (hlo : ∀ i, i ≠ istar → a ≤ |v i|) (hhi : ∀ i, i ≠ istar → |v i| ≤ 24 * a)
+    (hhole : ∀ i, i ≠ istar → |v i| ≤ 11 * a ∨ 14 * a ≤ |v i|) :
+    ∃ tstar : ℝ, ∀ i, i ≠ istar → ∀ m : ℤ, 2 / 25 ≤ |(v i : ℝ) * tstar - m| := by
+  apply loose_branch_of_hole v istar (2 / 25) a (24 * a) ha hlo hhi ?_ (by omega) ?_
+  · intro i hi
+    rcases hhole i hi with h | h
+    · left; omega
+    · right; omega
+  · push_cast
+    linarith
+
 /-! ## The sieve as the degenerate instance -/
 
 /-- The sieve shape recovered from the atom (`μ = 1`, `k = 1`): if `s ∤ v i` for
@@ -292,6 +348,9 @@ theorem sieve_margin {ι : Type*} (v : ι → ℤ) (s : ℤ) (hs : 1 < s)
 #print axioms tightLooseDichotomyAt_of_spread
 #print axioms tightLooseDichotomy_of_spread
 #print axioms loose_branch_of_hole
+#print axioms lrc14_of_spread_dichotomy_and_corner
+#print axioms lrc14_of_spread_dichotomy_and_corner_at
+#print axioms second_value_loose
 
 end HarmonicGate
 end LonelyRunner

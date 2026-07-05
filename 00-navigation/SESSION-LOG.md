@@ -1,3 +1,22 @@
+## kind-pasteur-2026-07-05-S2 -- THE RATIONAL-POINT MARGIN CERTIFICATE (the loose branch's universal decidable atom) + THE RATIO-GATE REDUCTION: TightLooseDichotomy provably shrinks to SPREAD bases; the sharpened surface lrc14_of_spread_dichotomy_and_corner kernel-pure (HYP-4102)
+
+Prompt (owner): get LRC(14) fully formalized in Lean, best state possible, keep improving creatively.
+
+THE LEAN (LRCHarmonicGate.lean, registered, corpus green, all [propext, Classical.choice, Quot.sound]):
+ - **rational_point_margin** (THE ATOM): mu <= (v*k) % s <= s - mu (pure integer, DECIDABLE) => at t = k/s every runner sits >= mu/s from every integer. Integer core: |v*k - m*s| >= min(r, s-r) >= mu. Every rational loose witness is an instance: the sieve is mu=1 (sieve_margin), kps-S1's band_margin_reciprocal is k=1/mu=a (emod_band: the band [a,b] IS the mod-(a+b) residue interval [a, s-a]), the second value {1..11,24} is k=2/mu=2a with the middle hole (emod_hole). One emod-shift helper + omega does all the case analysis the "geometry" used to do.
+ - **tightLooseDichotomyAt_of_spread** (THE REDUCTION): the dichotomy's loose branch holds OUTRIGHT for narrow bases (base min a, max b, beta*(a+b) <= a) at the reciprocal point -- so TightLooseDichotomyAt beta needs proving ONLY on spread bases (ratio > (1-beta)/beta; at 2/25: ratio > 23/2). Bridged to klein's non-parametric TightLooseDichotomy (tightLooseDichotomy_of_spread).
+ - **dichotomyAt_13_of_spread_loose** (the structural gem): at beta = 1/13 the tight branch's own shape (values in c*{1..12} => ratio <= 12) PASSES the gate -- the 1/13-dichotomy needs NO tight branch at all. Rigidity reframed: spread bases cannot avoid all small moduli.
+ - **lrc14_of_spread_dichotomy_and_corner(_at)** (THE SHARPENED SURFACE): LRC(14) <= citation + CornerLonely + spread-only dichotomy, composed through klein's HYP-4096 assembly. The open predicate on the surface is now visibly smaller.
+ - **second_value_loose**: bases |v i| in [a, 24a] avoiding (11a, 14a) are loose at 2/25 (t = 2/(25a)); the gate holds with EQUALITY -- the second value is the 2nd harmonic's extremal exactly as the AP is the 1st's.
+
+VERIFIED (lrc_harmonic_gate_kps_S2.py): atom 20k random instances 0 violations; gate 0 lies; all 1820 primitive 12-subsets of [1,16]: k=1 closes 25%, k<=12 harmonics of s=a+b close 54.8%, and EVERY survivor is closed by a general small-modulus atom certificate (hard survivors 0) -- the loose side of the dichotomy on this window is EXHAUSTED by one decidable inequality schema. Base-side dual of mac-mini's killer-side band certs (THM-619/620).
+
+COLLISION LOG (hot number race today): claimed 4099 -> klein-S134 first-committed (12:28 vs 12:34) -> renumbered 4101 -> opus-S77 first-pushed 4101 -> settled at HYP-4102. No content conflicts anywhere: klein wires the trichotomy INTO the dichotomy (tight side), opus formalizes the lift legs, mac-mini sweeps the corner; my gate shrinks the dichotomy's DOMAIN from the loose side. Complementary by construction.
+
+NEXT BRICK (pointer): bound the needed modulus s in terms of w_max => the dichotomy becomes per-family decidable => hdich = a finite integer check per compressed class. The V5 survivor data says prefix-reciprocal moduli 1/9..1/12 dominate.
+
+FILES: LRCHarmonicGate.lean (registered); 04-computation/lrc_harmonic_gate_kps_S2.py + results/.out; 07-reflections/the-loose-witness-is-one-decidable-inequality-kps-S2.md; HYP-4102 (INDEX). Three checkpoints + close-out. No canon overridden.
+
 ## opus-2026-07-05-S77 -- THE CORRECTION ARC + HDICH'S FINITE LEG IN LEAN: mac-mini's floor 14/169 CONFIRMED (attribution fixed: the argmin is {1..11,168} = the n=13 DEEP WELL at the range corner) => MISTAKE-104 (mine); then LRCKernelGate13 + all 144 lift rows kernel-pure (HYP-4101)
 
 Prompt: keep working remaining tasks; pull/push many times; extend other agents' work.
