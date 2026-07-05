@@ -1,0 +1,11 @@
+SWEEP RESULTS (loose-base space, structured families F1-F5):
+  tight: 1
+  swept_empty: 1566
+  swept_cand: 1
+  bad: 0
+  nonprim: 10
+  below: 0
+  survivors (bases with nonempty band intersection): 1
+   [F5] [2, 4, 6, 8, 10, 12, 13, 14, 16, 18, 20, 22]: candidates [24] bad=[]
+
+TOTAL M(V) < 1/13 violations: 0

@@ -9,6 +9,23 @@ THE DECOMPOSITION (verified exact, 96/96): HALF 1 -- at q=13 PRIME my unit-resid
 WHAT THE ASSEMBLY GETS: hdich = one pigeonhole + sieve_one_div + lonely_of_window_margin + per-r finite checks (<= 12 x small CRT classes); no new analytic input anywhere. BONUS for hcorner: lifted classes floor at 1/12, so the corner's beta can be 1/12 over them (sharper than 2/25). MISTAKE-100 addressed: the computational rigidity now has a proof mechanism.
 
 FILES: lrc14_hdich_lift_rigidity_opus_20260705_S74.py (+.out); drafts/hdich-decomposition-residue-pinning-lift-rigidity-opus-20260705-S74.md; HYP-4097 (+INDEX). No canon overridden.
+## mac-mini-2026-07-04-S49 -- THM-620: hcomp's RESIDUAL EMPTIED -- 1,568 structured loose bases swept through the THM-619 band pipeline: 1,566 EMPTY, one survivor cleared exactly, ZERO violations; the TWO-PIN LEMMA proved (lcm > 13b => instant closure) (HYP-4095)
+
+Prompt (owner): a similar session finishing the residual inside hcomp.
+
+THE SWEEP (structured enumeration, no sampling -- MISTAKE-102 discipline): five families ({1..11,x} x<=60; {1..10,x,y} grid; drop-families {1..13}\{a,b} u {x}; pinless ten-cover extensions {5..14} u {x,y}; dilation-mixed c*{1..11} u {x}) = 1,568 primitive loose bases through THM-619's bands+pins+window pipeline: 1,566 close EMPTY (zero admissible killers in the whole compressed window); 1 tight (routes to the S47 CRT case); 10 non-primitive (route to klein-S131's scale-sieve); EXACTLY ONE survivor: the near-dilated {2,4,6,8,10,12,13,14,16,18,20,22} with single candidate w = 24 -- exact check M(V) >= 1/13 ✓.  TOTAL VIOLATIONS: ZERO.
+
+THE TWO-PIN LEMMA (proved, one line): L = lcm(missed moduli): L > 13 max(B) => zero candidates with NO band geometry (e.g. max(B) < 14 missing 13 and 14); else <= floor(13b/L) explicit candidates.  Two typical pins reduce the window to <= 2 candidates before geometry.
+
+SURVIVOR ANATOMY (the geometric why): near-dilated bases are the only structures whose witness midpoints align with any killer grid -- the same dilated family that carries the floor -- and the aligned killer still extends safely.  The band mechanism is effectively universal.
+
+hcomp AFTER THIS SESSION: tight -> CRT (done) | non-primitive -> scale-sieve (done) | loose -> bands+pins (closed everywhere tested, generic two-pin sectors closed by lemma).  Remaining: the base-space boundedness composition note (far base elements peel first, re-entering this pipeline at smaller scale) -- composition, not geometry.
+
+WORKFLOW: one timeout near-miss avoided by the S93 lesson (killed the tail-piped run before losing output; rerun with direct tee + right-sized grids).
+
+FILES: THM-620; lrc_loosebase_sweep_macmini_S49.py + .out; HYP-4095.
+
+NEXT: (a) the base-space boundedness note (peel composition) -- the last hcomp prose; (b) Lean: the band-membership certificate for the loose branch (decidable integers; klein's dispatch takes it directly); (c) fold the two-pin lemma into the dispatch as the fast path.
 
 ## klein-2026-07-05-S132 -- THREE LEAN PIECES OF hcomp, ALL KERNEL-PURE: the one-window peel lemma (the 13x line IS the one-window line), the S131 primitivity split, and the CRT tight-AP free-rider (mac-mini handoff DONE) (HYP-4095)
 
