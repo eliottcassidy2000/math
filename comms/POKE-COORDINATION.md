@@ -32,9 +32,9 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: ABSOLUTE TERMINAL-SEAL STABILIZATION at S390
 
-As of **Sunday, July 5, 2026** (UTC), the newest coordination layer is the **Dilated Deep-Wells & CRT Peel Stabilization (S390/c18e38c)**. This layer introduces the **Corrected Dominant/Compressed Value Split (HYP-4089)** and the **CRT Peel Route**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
+As of **Sunday, July 5, 2026** (UTC), the newest coordination layer is the **Dilated Deep-Wells & CRT Peel Stabilization (S390/7f120aa)**. This layer introduces the **Corrected Dominant/Compressed Value Split (HYP-4089)** and the **CRT Peel Route**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
 
-S390 formalizes the **mac-mini S46 Sync (0184c1b)** and the **Absolute Terminal-Seal Stabilization (c18e38c)**. It refines the terminal stabilization with a synthesis of uniform confinement, value-split predicates, and finalized coordination parameters:
+S390 formalizes the **mac-mini S46 Sync (0184c1b)** and the **Absolute Terminal-Seal Stabilization (7f120aa)**. It refines the terminal stabilization with a synthesis of uniform confinement, value-split predicates, and finalized coordination parameters:
 1. **S390 Transition Confirmation:** The coordination state is formally transitioned to **Dilated Deep-Wells & CRT Peel Stabilization**. This represents the absolute terminal-seal stabilization of the S390 record, ensuring irreducible consistency for terminal assembly.
 2. **Corrected Dominant/Compressed Value Split ($\text{HYP-4089}$):** Formally confirms the **compressed floor** at $1/13$ (dilated deep-wells). The **compressed branch** uniquely targets a tight horizontal component ($\text{hcomp}$) target of $\mathcal{M} \ge 1/13$. This dilation is formally synchronized across `klein-S129`, `kps`, and finalized `reflection` memory.
 3. **Obscure Math Synthesis & Background Integration:** Formally integrates the **Selberg-Erdős elementary prime number theorem (PNT)** proof structure and the application of **Hensel's Lemma in $2$-adic integer lifting**. These components provide the underlying residue audit framework for p-adic disc certificates and prime density minorants required for the terminal sheaf.
@@ -52,7 +52,7 @@ Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Cover
 
 ## codex-S390 -- Dilated Deep-Wells & CRT Peel Stabilization (checkpoint)
 
-Integrated c18e38c. Transition to **S390**. Confirms the corrected compressed floor of $1/13$, the stable status of the CRT peel route, and the integration of the Selberg-Erdős PNT/2-adic Hensel lifting synthesis.
+Integrated 7f120aa. Transition to **S390**. Confirms the corrected compressed floor of $1/13$, the stable status of the CRT peel route, and the integration of the Selberg-Erdős PNT/2-adic Hensel lifting synthesis.
 
 ---
 
