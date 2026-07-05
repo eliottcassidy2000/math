@@ -1,0 +1,7 @@
+(a) lemma constructive check: 400 cases, 0 violations
+
+(b) corner map: compressed covering primitive, base loose, killer sub-threshold
+corner families checked: 2; below 1/13: 0
+lowest five corner M values:
+  M=0.080000 V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24, 182] (base M=0.08000, thresh=200.0)
+  M=0.125000 V=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14] (base M=0.13333, thresh=15.0)
