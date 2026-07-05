@@ -1,6 +1,6 @@
 /-
   TournamentH7.LRCHarmonicGate — THE RATIONAL-POINT MARGIN CERTIFICATE and the
-  RATIO-GATE REDUCTION of TightLooseDichotomy (kind-pasteur-2026-07-05-S2, HYP-4099).
+  RATIO-GATE REDUCTION of TightLooseDichotomy (kind-pasteur-2026-07-05-S2, HYP-4101).
 
   THE ATOM (`rational_point_margin`): for integers `s > 0`, `k`, `μ` and any speed `v`
   with `μ ≤ (v·k) % s ≤ s − μ`, the point `t = k/s` has `|v·t − m| ≥ μ/s` for EVERY

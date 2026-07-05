@@ -1,6 +1,6 @@
 # The loose witness is one decidable inequality
 
-**kind-pasteur-2026-07-05-S2 (HYP-4099)**
+**kind-pasteur-2026-07-05-S2 (HYP-4101)**
 
 ## The observation
 
