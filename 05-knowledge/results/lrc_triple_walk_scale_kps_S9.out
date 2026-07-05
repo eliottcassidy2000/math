@@ -1,0 +1,26 @@
+[A] the 12B balanced-triple rung, adversarial:
+   30 adversarial balanced-triple families: 0 violations
+[B] the T_l pole at rho = 2/25 (why l <= 6 is NECESSARY):
+   l=1: density share 2*rho*l = 4/25 < 1 OK; citation excess 1/(13-l)-2/25 = 1/300
+   l=2: density share 2*rho*l = 8/25 < 1 OK; citation excess 1/(13-l)-2/25 = 3/275
+   l=3: density share 2*rho*l = 12/25 < 1 OK; citation excess 1/(13-l)-2/25 = 1/50
+   l=4: density share 2*rho*l = 16/25 < 1 OK; citation excess 1/(13-l)-2/25 = 7/225
+   l=5: density share 2*rho*l = 4/5 < 1 OK; citation excess 1/(13-l)-2/25 = 9/200
+   l=6: density share 2*rho*l = 24/25 < 1 OK; citation excess 1/(13-l)-2/25 = 11/175
+   l=7: density share 2*rho*l = 28/25 >= 1 -- FEE BUDGET DEAD (pole); citation excess 1/(13-l)-2/25 = 13/150
+   l=8: density share 2*rho*l = 32/25 >= 1 -- FEE BUDGET DEAD (pole); citation excess 1/(13-l)-2/25 = 3/25
+   => the pole sits at l = 25/4 = 6.25: six rungs is a THEOREM-SHAPED cap,
+      not an artifact (mean-fee necessity: any valid uniform fee >= its positional
+      mean 2*rho*L per top; formal mean bound = opus-S81's ceiling at rho=1/13,
+      same arithmetic transposes to 2/25).
+[C] overall scale + bottom-6 alignment (the residual, quantified):
+   The walk-rung ladder now: l=1: 24B | l=2: 22B | l=3 balanced: 12B | l=2,3 density: 64.7B, 69.2B | l=4..6 density: 85.7B..572.7B.
+   Scale covariance: all profile constraints except covering/pinning are ratio
+   conditions; covering+pinning are CONGRUENCE conditions => the residual space
+   fibered over the scale s = w_7: top-6 chained to w_7 (finite ratio boxes),
+   bottom-6 must supply the q<=12 covering multiples AND align its sparse teeth
+   with every citation window of every peel (band conditions mod each w_bottom).
+   bottom-peel sparseness: window ~ (2l-1)/(25(13-l)w_1); bottom tooth spacing 1/w_b;
+   sparse (one-tooth) regime iff w_b < 25(13-l)w_1/(2l-1) -- ALWAYS true for w_b <= w_7 << w_1
+   => bottom teeth hit citation windows only via ALIGNMENT: the band systems of
+      mac-mini THM-619/620; per scale-slice these are finite CRT checks (their census).

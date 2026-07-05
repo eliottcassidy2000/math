@@ -155,6 +155,20 @@ HOUSEKEEPING: HYP cascade rode 4 collisions mid-session; settled 4099=klein-S134
 FILES: lrc_multilift_leg_macmini_S52.py, lrc_multilift_floor_macmini_S52.py (+.outs), lrc_ladder_certificates_macmini_S52.md, reflection the-multi-lift-floor-and-the-14r-ladder-macmini-S52.md; HYP-4103 (+INDEX). No canon overridden.
 
 NEXT: (a) the l=3..6 floor-level domains (T_l bounded; same harness, bigger volumes -- expect 2/25 to hold, the 2nd harmonic seems to be THE lift floor); (b) the Fin-12 fee transcription; (c) prove M({4,6}-block) = 2/25 as the lift-side 2nd-harmonic extremal (kps's second_value_loose machinery should adapt); (d) the l >= 7 spread residual (ratio gate + sieve strain -- possibly a one-session finite check).
+## kind-pasteur-2026-07-05-S9 -- THE TRIPLE WALK kernel-pure: l=3 by RECURSION into the pair walk (balanced triples min <= 12B); the 2/25 T_l pole table (l <= 6 necessary); overall-scale/bottom-6 alignment notes (HYP-4118)
+
+Prompt (owner): overall scale + bottom-6 alignment, the l>=7 assembly and grid stratum, T_l poles at l<=6 provably necessary, the l=3 walk.
+
+THE LEAN (LRCTripleWalk.lean, registered, corpus green 8671, kernel-pure): **the l=3 walk via recursion** -- a comb revisit exposes its full consecutive gap ((21/25)/p), covered by the OTHER TWO combs, which the S8 walk_core bounds by (4/25)(2/q1+1/q2) <= (21/25)/p under pairwise balance 4max <= 7min: EXACT saturation, strict walk bound => contradiction (revisit_kill). Balanced triple covers never revisit => <= 3 teeth (triple_walk) => **gap_triple_rung: pairwise-balanced 3-subsets of a gap violator have min <= 12B**. THE WALK LADDER: 24B (l=1) | 22B (l=2) | 12B (l=3 balanced) -- constants IMPROVE with depth on balanced strata; density rungs (64.7..572.7, l=2..6) cover the rest.
+
+T_l POLES (owner ask, verified table): at rho = 2/25 the density share 2*rho*l crosses 1 exactly at l = 25/4 => poles at l=7 (28/25) -- the six-rung cap is NECESSARY; formal mean-fee necessity = opus-S81 ceiling (1/13), same arithmetic. l>=7 assembly + 169-grid stratum = opus-S81 confirmed lane.
+
+OVERALL SCALE + BOTTOM-6 (quantified): the profile fibers over the scale w_7 -- ratio boxes above, congruences throughout; the bottom-peel window is ALWAYS sparse for bottom teeth (spacing >> window) => bottom-6 binds only through ALIGNMENT band systems = mac-mini THM-619/620 finite CRT per scale-slice; their census (to height 48, zero in gap) is this program running.
+
+NUMBERING: 4117 confirmed mine (first-committed by 67s); mac-mini S54 -> 4119+ requested.
+
+FILES: LRCTripleWalk.lean; results/lrc_triple_walk_scale_kps_S9.out; HYP-4118 (INDEX). Two checkpoints + close-out. No canon overridden.
+
 ## kind-pasteur-2026-07-05-S8 -- THE PAIR WALK kernel-pure: min(pair) <= 22B for every pair of a gap violator (3-step tooth-boundary walk, pure linarith kill; 3x sharper than the S7 density C_2) + bottom-6 census notes + the 4113->4115 renumber + URGENT klein dedup (HYP-4117)
 
 Prompt (owner): sharper one-tooth rungs + per-scale census + bottom-6 structure.
