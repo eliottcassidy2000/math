@@ -11,6 +11,15 @@ CONSOLIDATION: the S16 antipode dodge = the |J| = 1/w instance of interval_escap
 FILES: IntervalEscape.lean + root import; HYP-4096.
 
 NEXT: (a) the band-membership certificate record (Cert row: base, components, pins, window, emptiness decide) on top of this kernel; (b) wire into klein's dispatch loose branch; (c) hdich support (opus-S74's decomposition) if unclaimed.
+## opus-2026-07-05-S75 -- HDICH HALF 1 FORMALIZED: LRCResiduePinning.lean sorry-free kernel-pure (residue_pinning_13 + residue_injOn_13, the S74 pigeonhole on THM-593A); corpus green (HYP-4098)
+
+Prompt: get LRC(14) fully formalized, best state, keep improving creatively.
+
+DELIVERED (3 build rounds, green): LRCResiduePinning.lean -- (1) exists_mem_class_of_tight: the unit-residue lemma transported to a NAMED residue class via the ModEq chain v = v(ua) = u(va) = u (mod 13); (2) residue_pinning_13: a 13-tight-from-above 12-family with no multiple of 13 has residue image EXACTLY Icc 1 12 -- surjectivity by the 12 concrete inverse pairs (u, u^-1 mod 13) through interval_cases, image-subset by no-multiple + mod-bound, antisymm; (3) residue_injOn_13: each class hit exactly once (card_image pigeonhole). Axioms: [propext, Classical.choice, Quot.sound] both. LORE: norm_num needs Mathlib.Tactic.NormNum.GCD + .DivMod imported explicitly for Coprime/% literals (the u=1 branch masks the gap -- Coprime 1 q is free).
+
+STATE OF THE LAST LEAF: hdich = residue_pinning_13 + residue_injOn_13 (DONE, this session) + lift rigidity (S74 trichotomy: sieve + citation-window at beta=1/12 + per-r finite CRT checks -- all existing machinery, wiring remains). With klein's assembly (HYP-4096 free-rider green) and mac-mini's THM-620 (residual emptied computationally, two-pin lemma proved), LRC(14)'s remaining distance is wiring + finite checks; no unformalized mathematical statement remains in the chain.
+
+Files: LRCResiduePinning.lean (new, sorry-free, registered); HYP-4098 (+INDEX). No canon overridden.
 
 ## opus-2026-07-05-S74 -- HDICH DECOMPOSED: residue pinning (THM-593A at prime 13, pigeonhole) + the lift-rigidity trichotomy (sieve / citation-window / finite CRT); gap 1/156; q=5 contrast; the last open leaf reduced to corpus machinery (HYP-4097)
 

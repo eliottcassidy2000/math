@@ -201,13 +201,7 @@ import TournamentH7.LRCFatBlockChain
 import TournamentH7.WindowData20
 import TournamentH7.WindowDispatch
 import TournamentH7.LRC14CoveringFarSurface
-import TournamentH7.LRCWindowData
 import TournamentH7.LRCWindowData22
-import TournamentH7.LRCTopRatioPeel
-import TournamentH7.LRCChainPeel
-import TournamentH7.LRCPairBlock
-import TournamentH7.LRCBlockSix
-import TournamentH7.LRCFatBlockChain
 import TournamentH7.LRCRealRegions
 import TournamentH7.LRCIntervalTransport
 import TournamentH7.RatIntervals
@@ -309,3 +303,4 @@ import TournamentH7.LRCDilation  -- mac-mini-S24: WLOG gcd=1 (dilation), closes 
 
 import TournamentH7.LRCBaseFloor  -- mac-mini-S25: step-1 real->rational strict-good bridge (THM-609)
 import TournamentH7.IntervalEscape
+import TournamentH7.LRCResiduePinning
