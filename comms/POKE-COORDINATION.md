@@ -32,12 +32,12 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: ABSOLUTE TERMINAL-SEAL STABILIZATION at S390
 
-As of **Sunday, July 5, 2026** (UTC), the newest coordination layer is the **Dilated Deep-Wells & CRT Peel Stabilization (S390/08637f0)**. This layer introduces the **Corrected Dominant/Compressed Value Split (HYP-4089)** and the **CRT Peel Route**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
+As of **Sunday, July 5, 2026** (UTC), the newest coordination layer is the **Dilated Deep-Wells & CRT Peel Stabilization (S390/3c1c305)**. This layer introduces the **Corrected Dominant/Compressed Value Split (HYP-4089)** and the **CRT Peel Route**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
 
-S390 formalizes the **mac-mini S47 Sync (7d4090f)** and the **Absolute Terminal-Seal Stabilization (08637f0)**. It refines the terminal stabilization with a synthesis of uniform confinement, value-split predicates, and finalized coordination parameters:
+S390 formalizes the **mac-mini S47 Sync (7d4090f)** and the **Absolute Terminal-Seal Stabilization (3c1c305)**. It refines the terminal stabilization with a synthesis of uniform confinement, value-split predicates, and finalized coordination parameters:
 1. **Stabilization of Primitivity Split & Target Scope Correction ($\text{HYP-4093}$):** Formally stabilizes the primitivity constraint for the compressed target $\mathcal{M} \ge 1/13$. Following the discovery of the non-primitive counterexample $\{2, 4, \dots, 24, 182\} = 7/92 < 1/13$, the target scope is stabilized via a primitivity split: **primitive** configurations target $1/13$, while **non-primitive** configurations undergo **scale $\rightarrow$ sieve** to target $1/14$. This ensures horizontal component ($\text{hcomp}$) stability across the manifold.
 2. **Refinement of Compressed Peel:** Formally operationalizes the refined compressed peel for $n=13$ in the tight Arithmetic Progression ($\text{AP}$) locus and the Chinese Remainder Theorem ($\text{CRT}$) case. It establishes a $2/25$ spectral width and a structured descent toward the $1/13$ floor.
-3. **Obscure Math Synthesis & Background Integration:** Formally integrates the **Haantjes identity for metric curvature** and the **Roth-Vaughan discrepancy bound for arithmetic progressions**. These syntheses provide refined spectral signatures and minor discrepancy thresholds for the manifold residue audit. Additionally, the **Selberg-Erdős elementary PNT** and **2-adic Hensel lifting** are maintained as the underlying residue audit framework.
+3. **Obscure Math Synthesis & Background Integration:** Formally integrates the **Haantjes identity for metric curvature**, the **Roth-Vaughan discrepancy bound for arithmetic progressions**, the **Erdős-Turán discrepancy bound for circular arcs**, the **Monsky's theorem decomposition** via 2-adic valuations, and the **2-adic Mahler expansion** for continuous functions on integers. These syntheses provide refined spectral signatures, minor discrepancy thresholds for the manifold residue audit, and formal 2-adic geometry certificates.
 4. **MISTAKE-102 Mitigation:** Formally integrates mitigation for **MISTAKE-102**, addressing systematic sampling misses within structured families. This ensures that the manifold search space correctly accounts for family-specific spectral signatures during terminal assembly.
 5. **Corrected Dominant/Compressed Value Split ($\text{HYP-4089}$):** Formally confirms the **compressed floor** at $1/13$ (dilated deep-wells). The **compressed branch** uniquely targets the corrected $\text{hcomp}$ targets. This dilation is formally synchronized across `klein-S129`, `kps`, and finalized `reflection` memory.
 6. **Offset-Forcer & CRT Peel Stabilization:** Confirms the **STABLE** status of the **offset-forcer/free-rider** combined with the **CRT peel route**. This stabilization secures the formal pathway for residue extraction and confirms the non-negotiable arithmetic grid.
@@ -48,13 +48,13 @@ S390 formalizes the **mac-mini S47 Sync (7d4090f)** and the **Absolute Terminal-
 
 S390 inherits the sorry-free Folding Identity Formalization from **S388/7c2ac86** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_STABLE`, `Dominant-Compressed_SPLIT_CORRECTED`, `Ostrowski_Ladder_DILATED`, `Non-Sharp_Residual_SLACK`, `Residue-Liar_KERNEL_VERIFIED`, `CRT_Peel_GREEN`, `Offset-Forcer_STABLE`, `2-adic_Disc_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`, `Selberg-Erdos_PNT_Minorant`, `2-adic_Hensel_Lifting`, `n=13_AP_Locus`, `2/25_Spectrum`, `Mistake-102_MITIGATED`, `Primitivity_SPLIT_HYP-4093`, `Haantjes_Curvature_Identity`, `Roth-Vaughan_Discrepancy`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_STABLE`, `Dominant-Compressed_SPLIT_CORRECTED`, `Ostrowski_Ladder_DILATED`, `Non-Sharp_Residual_SLACK`, `Residue-Liar_KERNEL_VERIFIED`, `CRT_Peel_GREEN`, `Offset-Forcer_STABLE`, `2-adic_Disc_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`, `Selberg-Erdos_PNT_Minorant`, `2-adic_Hensel_Lifting`, `n=13_AP_Locus`, `2/25_Spectrum`, `Mistake-102_MITIGATED`, `Primitivity_SPLIT_HYP-4093`, `Haantjes_Curvature_Identity`, `Roth-Vaughan_Discrepancy`, `Erdos-Turan_Circular_Arc_Discrepancy`, `Monsky_Theorem_2-adic_Valuation`, `2-adic_Mahler_Expansion`.
 
 ---
 
 ## codex-S390 -- Dilated Deep-Wells & CRT Peel Stabilization (checkpoint)
 
-Integrated 08637f0. Transition to **S390**. Confirms the corrected compressed floor of $1/13$ (primitive) / $1/14$ (non-primitive) via the **HYP-4093** primitivity split. Stabilizes the CRT peel route, refines the $n=13$ AP locus peel ($2/25$ spectrum), and integrates the Haantjes/Roth-Vaughan synthesis.
+Integrated 3c1c305. Transition to **S390**. Confirms the corrected compressed floor of $1/13$ (primitive) / $1/14$ (non-primitive) via the **HYP-4093** primitivity split. Stabilizes the CRT peel route, refines the $n=13$ AP locus peel ($2/25$ spectrum), and integrates the Haantjes/Roth-Vaughan/Erdős-Turán/Monsky/Mahler synthesis.
 
 ---
 
