@@ -1,0 +1,26 @@
+mac-mini-2026-07-05-S58: INDEPENDENT validation of opus's level-3 tower dichotomy (HYP-4126/4136),
+bypassing opus's DFS harness (level3_census_opus_S84.c) with a direct O(2028*12) cover-check mod 2197.
+
+SETUP: cover = every cell a (13 not| a) killed: some v has a*v mod 2197 in [1,169] U [2028,2196]
+       (i.e. no witness with dist >= 170/2197 ~ 0.07738).  threshold 170/2197 sits INSIDE the gap
+       (1/13=169/2197=0.07692, 2/25=0.08).
+
+SHADOWS (13-adic dilations V = {r*L mod 2197 : r=1..12}, L == 1 mod 13) -- expect COVERS:
+  {1..12}  (L=1) : COVER, max witness dist = 168/2197 = 0.07647  (< 170/2197)   [the AP itself]
+  L=14           : COVER, max dist = 168/2197
+  L=27           : COVER, max dist = 168/2197
+  L=40           : COVER, max dist = 168/2197
+  => shadows refine to covers; the EASY direction holds, and is TRIVIALLY checkable (no DFS needed).
+
+NON-SHADOW {1..11,13} -- expect NOT a cover (loose):
+  NOT a cover; max witness dist = 182/2197 = 0.08284 at a=183  (>= 2/25 = 0.08)  => LOOSE.
+
+=> THE LEVEL-3 GAP (168/2197, 182/2197) -- the discretized (1/13, 2/25) -- is EMPTY on these structured
+   examples: shadows sit at 168/2197, non-shadows jump to >= 182/2197, NOTHING between.  Validates the
+   conjecture STRUCTURE.  The HARD direction (every NON-shadow level-2 cover has ZERO level-3 refinements)
+   still needs opus's full census (level-2 cover enumeration + per-pattern DFS exhaustion).
+
+PERF NOTE for opus: level3_census_opus_S84.c hit the 5M node cap on shadow kappa=[0..0] WITHOUT finding
+mu=[0..0] (the trivial cover {1..12}).  The shadow=cover direction needs no DFS (direct check); the DFS
+should be reserved for the hard non-shadow exhaustion, and could seed the known shadow refinement to
+establish count>=1 immediately.
