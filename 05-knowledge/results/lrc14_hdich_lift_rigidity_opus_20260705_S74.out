@@ -1,0 +1,44 @@
+====================================================================================================
+ HALF 1 sanity: the AP {1..12} at q=13
+   M({1..12}) = 1/13 at t = 1/13   (tight = 1/13? True)
+
+ HALF 2(a): single lifts over the full-residue base at q=13: v_pos -> r + 13k
+   single lifts checked: 96; TIGHT lifts (M = 1/13): []
+   min M over lifts = 1/12 = 0.083333 at r=12, k=1
+   ALL lifts strictly LOOSE (M > 1/13)? True
+
+   direction check: does every lift INCREASE M (loosen)?
+   lifts with M > 1/13: 96/96
+   min-over-k M per lifted residue r:
+     r= 1: min M = 1/8 = 0.125000
+     r= 2: min M = 2/19 = 0.105263
+     r= 3: min M = 2/17 = 0.117647
+     r= 4: min M = 2/19 = 0.105263
+     r= 5: min M = 2/19 = 0.105263
+     r= 6: min M = 2/23 = 0.086957
+     r= 7: min M = 7/52 = 0.134615
+     r= 8: min M = 14/117 = 0.119658
+     r= 9: min M = 1/9 = 0.111111
+     r=10: min M = 1/10 = 0.100000
+     r=11: min M = 1/11 = 0.090909
+     r=12: min M = 1/12 = 0.083333
+
+ HALF 2(b): the q=5 contrast -- base {1,2,3,4}, single lifts r -> r + 5k
+   tight lifts at q=5: [(2, 7, Fraction(1, 5))]
+   ({1,3,4,7} = lift 2->7 expected among them)
+
+ HALF 2(c/d): the mechanism probe -- for each q=13 lift, WHERE does the sup move?
+   (the lifted family's argmax t and its denominator; tight witnesses are k/13)
+   lift r=1 k=1: M = 1/8 at t = 1/16 (denominator 16; 13-witness? False)
+   lift r=2 k=1: M = 2/19 at t = 9/19 (denominator 19; 13-witness? False)
+   lift r=12 k=1: M = 1/12 at t = 1/12 (denominator 12; 13-witness? False)
+   lift r=6 k=2: M = 1/11 at t = 7/44 (denominator 44; 13-witness? False)
+
+ MECHANISM SUMMARY (to verify above): at q=13, replacing r by r+13k keeps every
+ k/13-witness value EXACTLY (residues unchanged) -- so sup >= 1/13 persists -- while the
+ thinner teeth of the faster runner OPEN a better witness elsewhere: sup STRICTLY exceeds
+ 1/13. Rigidity mechanism = 'lifts strictly loosen'. At q=5, {1,3,4,7}: the lift ALSO
+ keeps 1/5-witnesses, but q=5's small unit group leaves no room for a better witness
+ (4 runners, dense teeth) -- sup stays exactly 1/5. The q=13 claim to prove:
+   ANY proper lift of the full-residue base admits t with min clearance > 1/13.
+DONE.

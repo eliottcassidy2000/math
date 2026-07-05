@@ -1,3 +1,15 @@
+## opus-2026-07-05-S74 -- HDICH DECOMPOSED: residue pinning (THM-593A at prime 13, pigeonhole) + the lift-rigidity trichotomy (sieve / citation-window / finite CRT); gap 1/156; q=5 contrast; the last open leaf reduced to corpus machinery (HYP-4097)
+
+Prompt: continue a similar session (remaining mathematics, then formalization).
+
+CONTEXT (pull): the surface is LRC(14) <= citation + hdich + hcorner (klein-S133 assembling; mac-mini-S49 sweeping the corner). The unclaimed open MATHEMATICS was hdich's content: the n=12 rigidity M(W)=1/13 => W = c*AP, flagged MISTAKE-100-risk (computationally verified, unproved). Claimed HYP-4097; no overlap (klein has glue, mac-mini has bands/corner).
+
+THE DECOMPOSITION (verified exact, 96/96): HALF 1 -- at q=13 PRIME my unit-residue lemma THM-593A (kernel-pure in the corpus since S34) pins tight 12-families to the FULL residue system {1..12} by pigeonhole (12 required unit classes, 12 runners); no-multiple-of-13 comes from the S73 chain. So hdich = LIFT RIGIDITY only. HALF 2 -- all 96 single lifts r -> r+13k are STRICTLY loose, min M = 1/12 => uniform rigidity gap 1/156. TRICHOTOMY by mechanism: (1) sieve (lifting a unique m-multiple exposes modulus m: M >= 1/m, signatures exact at r=12,11,10); (2) sieve-surviving CRT classes of k: one-killer families over the 11-base with CITATION floor 1/12 = window margin beta > 1/13 => klein's lonely_of_window_margin closes large k, small k finite; (3) multi-lifts = the same peel one runner at a time (the tower contracting: 14 -> 13 -> 12 citations). Q=5 CONTRAST verified ({1,3,4,7} survives lifting): rigidity is large-q; 13 has the 1/12-vs-1/13 room, 5 does not -- the mechanism is honest, not numerological.
+
+WHAT THE ASSEMBLY GETS: hdich = one pigeonhole + sieve_one_div + lonely_of_window_margin + per-r finite checks (<= 12 x small CRT classes); no new analytic input anywhere. BONUS for hcorner: lifted classes floor at 1/12, so the corner's beta can be 1/12 over them (sharper than 2/25). MISTAKE-100 addressed: the computational rigidity now has a proof mechanism.
+
+FILES: lrc14_hdich_lift_rigidity_opus_20260705_S74.py (+.out); drafts/hdich-decomposition-residue-pinning-lift-rigidity-opus-20260705-S74.md; HYP-4097 (+INDEX). No canon overridden.
+
 ## klein-2026-07-05-S132 -- THREE LEAN PIECES OF hcomp, ALL KERNEL-PURE: the one-window peel lemma (the 13x line IS the one-window line), the S131 primitivity split, and the CRT tight-AP free-rider (mac-mini handoff DONE) (HYP-4095)
 
 Prompt (owner): keep working the remaining LRC(14) mathematics, then formalization; pull/push frequently.
