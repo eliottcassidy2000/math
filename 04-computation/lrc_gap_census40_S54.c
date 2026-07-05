@@ -33,6 +33,22 @@ static int gcd_i(int a, int b){ while(b){int t=a%b;a=b;b=t;} return a; }
 
 static ll cnt_visit=0, cnt_leaf=0, cnt_f1=0, cnt_f2=0, cnt_f3=0, cnt_f4=0, cnt_f5=0, cnt_prim=0, cnt_scan=0, cnt_hard=0;
 static ll shape_full=0, shape_mult13=0, shape_doubled=0;
+/* spectroscopy */
+static ll firstq_hist[64];              /* first witness q (8..60) */
+static ll comp_ok=0, comp_fail=0;       /* composite-CRT witness exists? */
+static ll compq_hist[640];              /* first composite witness q */
+static ll bot_in12=0, bot_not12=0;      /* bottom-6 inside [1,12]? */
+static ll wmin_hist[64];                /* w_min histogram (scale stat) */
+static ll botmax_hist[160];             /* w_(6) = bottom-6 max histogram */
+static int COMPQ[256]; static int nCOMPQ=0;
+static void init_compq(void){
+    unsigned char seen[640]; memset(seen,0,sizeof seen);
+    for (int a1=13;a1<=25;a1++) for (int b1=a1;b1<=25;b1++){
+        int pr=a1*b1;
+        for (int q=26;q<=600 && q<640;q++) if (pr%q==0 && !seen[q]){ seen[q]=1; }
+    }
+    for (int q=26;q<640;q++) if (seen[q]) COMPQ[nCOMPQ++]=q;
+}
 
 static int W[12];
 
@@ -73,21 +89,23 @@ static int pinning_ok(void){
 
 static int dist_q(int x,int q){ int r=x%q; if(r<0)r+=q; return r<q-r?r:q-r; }
 
-/* rational witness gate: margin >= 2/25 at some t=a/q, q in library */
-static int scan_gate(void){
-    static int qs[64]; int nq=0;
-    for (int q=8;q<=60;q++) qs[nq++]=q;
-    for (int qi=0;qi<nq;qi++){
-        int q=qs[qi], bad=0;
-        for (int i=0;i<12;i++) if (W[i]%q==0){ bad=1; break; }
-        if (bad) continue;
-        for (int a=1;a<=q/2;a++){
-            if (gcd_i(a,q)!=1) continue;
-            int ok=1;
-            for (int i=0;i<12;i++){ if (25*dist_q(W[i]*a,q) < 2*q){ ok=0; break; } }
-            if (ok) return 1;
-        }
+/* rational witness gate: margin >= 2/25 at some t=a/q; returns q or 0 */
+static int witness_at(int q){
+    for (int i=0;i<12;i++) if (W[i]%q==0) return 0;
+    for (int a=1;a<=q/2;a++){
+        if (gcd_i(a,q)!=1) continue;
+        int ok=1;
+        for (int i=0;i<12;i++){ if (25*dist_q(W[i]*a,q) < 2*q){ ok=0; break; } }
+        if (ok) return 1;
     }
+    return 0;
+}
+static int scan_gate(void){
+    for (int q=8;q<=60;q++) if (witness_at(q)) return q;
+    return 0;
+}
+static int comp_gate(void){
+    for (int i=0;i<nCOMPQ;i++) if (witness_at(COMPQ[i])) return COMPQ[i];
     return 0;
 }
 
@@ -134,8 +152,20 @@ static void dfs(int pos, int maxnext, int cov, int mask23, int mask25){
                 if (full) shape_full++; else shape_doubled++;
             }
         }
+        /* spectroscopy: bottom-6, scale, first-q, composite-CRT witness */
+        {
+            int bin12=1;
+            for (int i=6;i<12;i++) if (W[i] > 12) { bin12=0; break; }   /* W desc: W[6..11] = bottom六 */
+            if (bin12) bot_in12++; else bot_not12++;
+            int wmin=W[11], botmax=W[6];
+            if (wmin<64) wmin_hist[wmin]++;
+            if (botmax<160) botmax_hist[botmax]++;
+            int cq = comp_gate();
+            if (cq){ comp_ok++; if (cq<640) compq_hist[cq]++; } else comp_fail++;
+        }
         /* witness gate */
-        if (scan_gate()){ cnt_scan++; return; }
+        { int fq = scan_gate();
+          if (fq){ cnt_scan++; if (fq<64) firstq_hist[fq]++; return; } }
         cnt_hard++;
         printf("HARD");
         for (int i=11;i>=0;i--) printf(" %d", W[i]);
@@ -172,6 +202,8 @@ static void dfs(int pos, int maxnext, int cov, int mask23, int mask25){
 int main(int argc, char **argv){
     if (argc > 1) B = atoi(argv[1]);
     init_pairs();
+    init_compq();
+    fprintf(stderr, "composite-CRT witness moduli: %d in [26,600]\n", nCOMPQ);
     /* w_max >= 25 (census [1,24] done by kps-S3); w_max <= B */
     for (int w0 = B; w0 >= 25; w0--){
         W[0] = w0;
@@ -188,5 +220,16 @@ int main(int argc, char **argv){
            B, cnt_visit, cnt_leaf, cnt_f1, cnt_f2, cnt_f3, cnt_f4, cnt_prim, cnt_f5, cnt_scan, cnt_hard);
     printf("residue shapes mod 13 of fully-filtered: full-system=%lld with-13-mult=%lld DOUBLED-PAIR=%lld\n",
            shape_full, shape_mult13, shape_doubled);
+    printf("SPECTROSCOPY: composite-CRT witness exists: %lld / fails: %lld\n", comp_ok, comp_fail);
+    printf("first-q histogram (q: count):");
+    for (int q=8;q<64;q++) if (firstq_hist[q]) printf(" %d:%lld", q, firstq_hist[q]);
+    printf("\nfirst composite-q histogram:");
+    { int shown=0; for (int q=26;q<640 && shown<40;q++) if (compq_hist[q]){ printf(" %d:%lld", q, compq_hist[q]); shown++; } }
+    printf("\nBOTTOM-6: inside [1,12]: %lld / not: %lld\n", bot_in12, bot_not12);
+    printf("w_min histogram:");
+    for (int v=1;v<64;v++) if (wmin_hist[v]) printf(" %d:%lld", v, wmin_hist[v]);
+    printf("\nbottom-6-max histogram:");
+    for (int v=1;v<160;v++) if (botmax_hist[v]) printf(" %d:%lld", v, botmax_hist[v]);
+    printf("\n");
     return 0;
 }

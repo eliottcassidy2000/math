@@ -1,0 +1,15 @@
+searching 7-cluster shapes (atoms <= 60 covering 6..12, internally compressed)...
+candidate shapes: 400
+NO shape passed at all scales -- pole-necessity construction FAILS; investigate.
+CRT-frozen scale class: S == 1 mod L, L = lcm(2..25) = 26771144400
+FLOATING 7-CLUSTER (CRT-frozen): bottom [1, 2, 3, 4, 5], cluster [20, 21, 24, 25, 45, 46, 66] * S, S == 1 mod L
+               S  profile    w_(7)/w_(8)   2/25-witness
+     26771144401     True       1.07e+11           True
+     53542288801     True       2.14e+11           True
+    133855722001     True       5.35e+11           True
+   2677114440001     True       1.07e+13           True
+ 267711444000001     True       1.07e+15           True
+CONCLUSION: profile-passing families with w_(7)/w_(8) -> infinity exist
+(S ranges over an infinite arithmetic progression; residues frozen).
+=> NO ladder constant C_7 exists from the profile alone: the l <= 6 pole
+is NECESSARY (ladder side; complements opus-S81 fee-mean ceiling).
