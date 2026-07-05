@@ -1,3 +1,27 @@
+## mac-mini-2026-07-05-S53 -- l=3 CLOSED (13.3B cells, DOUBLE-verified py+C with EXACT level-count match); the PYRAMID method (13u orbit windows, kill condition 25d >= 26u <=> d >= u+1 EXACT); l=5/6 boxes + 386 corners clean; the WITNESS-FAMILY CROSSING (multi-towers at q=14r+1 vs singles at 13(r+1), coinciding at the deep well 169); 7 atom rows GREEN kernel-pure; l=4 6-way-parallel in flight at close-out (HYP-4109)
+
+Prompt (owner): work remaining tasks, long session, push/pull frequently.  Pulled/pushed ~15 times; five fleet sessions landed DURING mine and were integrated live (opus-S78/S79/S80, klein-S136(+b), kps-S4/S5/S6(+S7 stub), codex).
+
+THE LANE (opus-S78's entry named it): l=3..6 floor-level lift strata at beta = 2/25 -- the last unswept multi-lift ground after S52 (l=1,2) and opus-S78 (l>=7, floor 3/19).
+
+THE PYRAMID (method contribution): witnesses t = a/(13u) see lift heights only mod u; a coordinate clears for EVERY height iff dist_13(a*c) >= u+1 (EXACT: orbit-min = dist_13(ca), and 25d >= 2*13u <=> d >= u+1 for u <= 24) -- one integer check kills a coordinate axis; window empties at u = 6 = the fee's 2l*beta < 1 wall = opus's l>=7 pigeonhole wall ("13 is just big enough", three ways).  Pyramid = prefix-node kills -> last-axis residue-class clearing (shrinking uncleared list) -> adaptive per-set scan -> exact M.  C implementation ~1B cells/s.
+
+RESULTS (zero violations, zero sub-2/25, ZERO exact-M escalations anywhere -- kps-S3's completeness bound in action):
+ (1) l=3 CLOSED on the full chain domain (anchor 3600/13; caps 1100/51, 24): C 13.3B cells 14s + INDEPENDENT python 822s, EXACT level-count agreement (26730/2040 planes, 5662964/2061819 rows) -- two-language verification.  Domain lemmas re-derived from scratch mid-session and verified; the crude (Lw+1)-teeth fee is UNCONDITIONAL, so opus-S80's mid-scale gap does not touch these domains (it constrains the teethR_mass-SHARPENED instantiation only).
+ (2) l=4: full chain domain (anchor 2400/7; caps 300/13, 1100/51, 24) 6-way-parallel C, zero unresolved cells so far, IN FLIGHT at close-out -- worker outputs at scratchpad l4_part_*.out, post-pass = 04-computation/lrc_l4_postpass_macmini_S53.py (collect next session or late checkpoint).
+ (3) l=5 box k<=4 (811,008) + l=6 box k<=3 (673,596): CLEAN.  (4) 386 STRUCTURED CORNERS all >= 2/25; corner floor 1/12 at the odd block {1,3,5,7,9}+13.
+ (5) THE WITNESS-FAMILY CROSSING (from the corner witnesses): consecutive 14r-towers bind (runner 1, 14r_min) at q = 14 r_min + 1 -- the n=14 construction's OWN witness form ({1..12,182} at 14/183 = 14/(14*13+1)) one level down; single towers bind (13-r, 14r) at q = 13(r+1); the families COINCIDE at r = 12: 169 = 13^2 = 14*12+1.  The deep well is the crossing point of the two mechanisms -- that IS its extremality.
+ (6) OPEN TAILS (l=5,6 chain minus box): ledgered exactly (results/lrc_multilift_ledger_macmini_S53.md) with the RECIPROCAL-ANCHOR sharpening (l=5: 533 -> 95 at C={1,2,3,4,12}; l=6: 2291 -> 474); with klein-S135's 3x fees: one C session each.
+ (7) LEAN: LRCLiftFloorRows.lean GREEN kernel-pure [propext, Classical.choice, Quot.sound], registered -- 7 rational_point_margin rows (block46 >= 2/25 at t = 6/25 + six 14r-ladder rows >= 14/(13(r+1))): the S52 certificates are corpus theorems now.
+
+CONVERGENCES INTEGRATED LIVE: kps-S6's proposed C_l ladder = my chain constants EXACTLY (their 24B = my R1 link, now formal; mid-session coordination letter sent with the exact fractions so nobody re-derives); klein-S136 LRCTeethR + tower_step_12 = the fee table's Lean home; opus-S80 integrated klein's stack and found the mid-scale fee gap (affects sharpened fees only, noted).  NUMBERING: 4107 double-CONFIRMED (opus-S78 first vs klein-S136) flagged; 4111 = opus-S79 (kps's suggestion of 4111 for klein is stale); klein should use 4114+.
+
+WORKFLOW LORE: background shells inherit the persisted cwd (a backgrounded cd+build silently no-oped -- redo with absolute paths and VERIFY the register actually landed); zsh eats bare === echo args (glob); print progress lines in long C loops (the l=4 workers are mute until done -- monitoring pain).
+
+FILES: lrc_l3_floor_macmini_S53.py, lrc_lift_pyramid_S53.c, lrc_l56_box_macmini_S53.py, lrc_l4_postpass_macmini_S53.py (+.outs incl. the C l=3 record), lrc_multilift_ledger_macmini_S53.md, LRCLiftFloorRows.lean (registered), reflection the-pyramid-and-the-13u-orbit-windows.  HYP-4109 (+INDEX).  No canon overridden.
+
+NEXT: (a) collect the l=4 verdict (post-pass script ready); (b) l=5/6 chain tails with sharpened anchors + klein 3x fees (one C session each); (c) the l=4+ extremal species anatomy (expect blocks); (d) kps-S7's LRCGapLadder = the formal chain -- feed it the exact fractions; (e) the multi-tower ladder closed form (witness data in the ledger).
+
 ## opus-2026-07-05-S80 -- INTEGRATION + THE TWO S78 LEMMAS IN LEAN + THE MID-SCALE FEE GAP: klein's S136 radius-parametric stack subsumed installment 2 (tower_step_12 delivered); my pigeonhole/height-forcing lemmas land kernel-pure; the l=7 fee arithmetic surfaces a real T_l constraint (HYP-4113)
 
 Prompt: take installment 2; pull frequently; integrate and extend.
