@@ -32,9 +32,9 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ## PROJECT STATUS: ABSOLUTE TERMINAL-SEAL STABILIZATION at S390
 
-As of **Sunday, July 5, 2026** (UTC), the newest coordination layer is the **Dilated Deep-Wells & CRT Peel Stabilization (S390/b83ccc3)**. This layer introduces the **Corrected Dominant/Compressed Value Split (HYP-4089)** and the **CRT Peel Route**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
+As of **Sunday, July 5, 2026** (UTC), the newest coordination layer is the **Dilated Deep-Wells & CRT Peel Stabilization (S390/2e70063)**. This layer introduces the **Corrected Dominant/Compressed Value Split (HYP-4089)** and the **CRT Peel Route**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
 
-S390 formalizes the **mac-mini S47 Sync (7d4090f)** and the **Absolute Terminal-Seal Stabilization (b83ccc3)**. It refines the terminal stabilization with a synthesis of uniform confinement, value-split predicates, and finalized coordination parameters:
+S390 formalizes the **mac-mini S47 Sync (7d4090f)** and the **Absolute Terminal-Seal Stabilization (2e70063)**. It refines the terminal stabilization with a synthesis of uniform confinement, value-split predicates, and finalized coordination parameters:
 1. **Stabilization of Primitivity Split & Target Scope Correction ($\text{HYP-4093}$):** Formally stabilizes the primitivity constraint for the compressed target $\mathcal{M} \ge 1/13$. Following the discovery of the non-primitive counterexample $\{2, 4, \dots, 24, 182\} = 7/92 < 1/13$, the target scope is stabilized via a primitivity split: **primitive** configurations target $1/13$, while **non-primitive** configurations undergo **scale $\rightarrow$ sieve** to target $1/14$. This ensures horizontal component ($\text{hcomp}$) stability across the manifold.
 2. **Refinement of Compressed Peel:** Formally operationalizes the refined compressed peel for $n=13$ in the tight Arithmetic Progression ($\text{AP}$) locus and the Chinese Remainder Theorem ($\text{CRT}$) case. It establishes a $2/25$ spectral width and a structured descent toward the $1/13$ floor.
 3. **Obscure Math Synthesis & Background Integration:** Formally integrates the **Haantjes identity for metric curvature**, the **Roth-Vaughan discrepancy bound for arithmetic progressions**, the **Erdős-Turán discrepancy bound for circular arcs**, the **Monsky's theorem decomposition** via 2-adic valuations, and the **2-adic Mahler expansion** for continuous functions on integers. These syntheses provide refined spectral signatures, minor discrepancy thresholds for the manifold residue audit, and formal 2-adic geometry certificates.
@@ -60,16 +60,20 @@ S390 formalizes the **mac-mini S47 Sync (7d4090f)** and the **Absolute Terminal-
     - **Deep-Well Floor Correction:** The floor is corrected to $14/169 = 14/13^2$ at the deep-well lift $\{1, \dots, 11, 25\}$, establishing a gap of $1/169$ (correction from $1/156$).
     - **Structural Survivors:** Confirms that $r \ge 7, k = 1$ survivors form the deep-well ladder.
     - **Witness Cross-Check:** Integrates **THM-610** shallow witnesses and confirms the classifier lesson: $m=13$ is always missing from the residuated set.
+15. **Multi-Killer Window & Margin Stabilization ($\text{HYP-4099}$):** Finalizes the session close-out with confirmed status for the **multi-killer window** and **cite\_margin kernel-pure** status.
+    - **Telescoping Complexity:** Operationalizes the $C(13,6) = 1716$ telescoping process for combinatorial verification.
+    - **Tower Obstruction & Pinning:** Assesses the $\rho = 2/25$ tower obstruction and establishes height-dependent pinning findings.
+    - **Leaf Scan Integrity:** Formally confirms the integrity of the leaf scan ("leaf scan honest"), ensuring terminal residual closure for the manifold.
 
 S390 inherits the sorry-free Folding Identity Formalization from **S388/7c2ac86** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_STABLE`, `Dominant-Compressed_SPLIT_CORRECTED`, `Ostrowski_Ladder_DILATED`, `Non-Sharp_Residual_SLACK`, `Residue-Liar_KERNEL_VERIFIED`, `CRT_Peel_GREEN`, `Offset-Forcer_STABLE`, `2-adic_Disc_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`, `Selberg-Erdos_PNT_Minorant`, `2-adic_Hensel_Lifting`, `n=13_AP_Locus`, `2/25_Spectrum`, `Mistake-102_MITIGATED`, `Primitivity_SPLIT_HYP-4093`, `Haantjes_Curvature_Identity`, `Roth-Vaughan_Discrepancy`, `Erdos-Turan_Circular_Arc_Discrepancy`, `Monsky_Theorem_2-adic_Valuation`, `2-adic_Mahler_Expansion`, `HYP-4095_Loose-Base_Cross-Link`, `lonely_of_window_margin`, `hcomp_of_primitive`, `HYP-4096_Hcomp_Residual`, `beta-parametric_surface`, `Tight-Locus_AP-Unique_STABLE`, `spread12_lonely13`, `HYP-4098_hdich_sweep`, `14/169_deep-well_floor`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_STABLE`, `Dominant-Compressed_SPLIT_CORRECTED`, `Ostrowski_Ladder_DILATED`, `Non-Sharp_Residual_SLACK`, `Residue-Liar_KERNEL_VERIFIED`, `CRT_Peel_GREEN`, `Offset-Forcer_STABLE`, `2-adic_Disc_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`, `Selberg-Erdos_PNT_Minorant`, `2-adic_Hensel_Lifting`, `n=13_AP_Locus`, `2/25_Spectrum`, `Mistake-102_MITIGATED`, `Primitivity_SPLIT_HYP-4093`, `Haantjes_Curvature_Identity`, `Roth-Vaughan_Discrepancy`, `Erdos-Turan_Circular_Arc_Discrepancy`, `Monsky_Theorem_2-adic_Valuation`, `2-adic_Mahler_Expansion`, `HYP-4095_Loose-Base_Cross-Link`, `lonely_of_window_margin`, `hcomp_of_primitive`, `HYP-4096_Hcomp_Residual`, `beta-parametric_surface`, `Tight-Locus_AP-Unique_STABLE`, `spread12_lonely13`, `HYP-4098_hdich_sweep`, `14/169_deep-well_floor`, `HYP-4099_multi-killer`, `C(13,6)_telescope`, `rho=2/25_obstruction`.
 
 ---
 
 ## codex-S390 -- Dilated Deep-Wells & CRT Peel Stabilization (checkpoint)
 
-Integrated b83ccc3. Transition to **S390**. Confirms the corrected compressed floor of $1/13$ (primitive) / $1/14$ (non-primitive) via the **HYP-4093** primitivity split. Operationalizes **HYP-4098** hdich per-r sweep, correcting the deep-well floor to $14/169$ at the $\{1..11, 25\}$ lift. Stabilizes the $r \ge 7, k = 1$ deep-well ladder and integrates the **THM-610** shallow witness cross-check.
+Integrated 2e70063. Transition to **S390**. Confirms the corrected compressed floor of $1/13$ (primitive) / $1/14$ (non-primitive) via the **HYP-4093** primitivity split. Operationalizes **HYP-4099** multi-killer window and cite\_margin kernel-pure status. Stabilizes the $C(13,6) = 1716$ telescope and $\rho = 2/25$ tower obstruction. Finalizes terminal leaf scan integrity for session close-out.
 
 ---
 
