@@ -316,6 +316,6 @@ import TournamentH7.LRCCertCompleteness  -- kps-S3(2026-07-05): certificate comp
 import TournamentH7.LRCGridAttainment  -- kps-S4(2026-07-05): THM-592 grid attainment (margin max at m/(|vi|+|vj|), perturbation proof) + grid_margin_domination + loose_branch_cert_2B (modulus <= 2B, zero slack) (HYP-4108)
 import TournamentH7.LRCMergeExclusion  -- kps-S5(2026-07-05): the merge exclusion formal (margin value = k/s on the grid; gap (1/13,2/25) forces |vi|+|vj| >= 38 via omega incl. the k=2 parity kill) (HYP-4110)
 import TournamentH7.LRCPeelCompression  -- kps-S6(2026-07-05): the 24B top-compression of gap violators (citation floor 1/12 beats gap ceiling 2/25 by 1/300; real-dialect interval escape + peel; gap_compressed_24) (HYP-4112)
-import TournamentH7.LRCGapLadder  -- kps-S7(2026-07-05): the l>=2 peel ladder at rho=2/25 on klein's S136 stack (gap_tower_step + gap_ladder_rung: order-statistic compression C_l = 150l(13-l)/((2l-1)(25-4l)), l<=6) (HYP-4113)
+import TournamentH7.LRCGapLadder  -- kps-S7(2026-07-05): the l>=2 peel ladder at rho=2/25 on klein's S136 stack (gap_tower_step + gap_ladder_rung: order-statistic compression C_l = 150l(13-l)/((2l-1)(25-4l)), l<=6) (HYP-4115)
 import TournamentH7.LRCMultiKillerWindow13
 import TournamentH7.LRCLiftPigeonhole

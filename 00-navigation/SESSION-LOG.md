@@ -111,7 +111,7 @@ HOUSEKEEPING: HYP cascade rode 4 collisions mid-session; settled 4099=klein-S134
 FILES: lrc_multilift_leg_macmini_S52.py, lrc_multilift_floor_macmini_S52.py (+.outs), lrc_ladder_certificates_macmini_S52.md, reflection the-multi-lift-floor-and-the-14r-ladder-macmini-S52.md; HYP-4103 (+INDEX). No canon overridden.
 
 NEXT: (a) the l=3..6 floor-level domains (T_l bounded; same harness, bigger volumes -- expect 2/25 to hold, the 2nd harmonic seems to be THE lift floor); (b) the Fin-12 fee transcription; (c) prove M({4,6}-block) = 2/25 as the lift-side 2nd-harmonic extremal (kps's second_value_loose machinery should adapt); (d) the l >= 7 spread residual (ratio gate + sieve strain -- possibly a one-session finite check).
-## kind-pasteur-2026-07-05-S7 -- THE l >= 2 PEEL LADDER kernel-pure: gap_tower_step (rho = 2/25 on klein's S136 stack) + gap_ladder_rung (order-statistic compression at every l <= 6; C_l = 64.7..572.7); the gap violator is squeezed at every scale (HYP-4113)
+## kind-pasteur-2026-07-05-S7 -- THE l >= 2 PEEL LADDER kernel-pure: gap_tower_step (rho = 2/25 on klein's S136 stack) + gap_ladder_rung (order-statistic compression at every l <= 6; C_l = 64.7..572.7); the gap violator is squeezed at every scale (HYP-4115, renumbered from 4113: opus-S80 first-committed)
 
 Prompt (owner): the l >= 2 peel ladder + remaining fleet tasks.
 

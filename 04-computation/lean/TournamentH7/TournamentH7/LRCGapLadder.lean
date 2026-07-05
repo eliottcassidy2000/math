@@ -1,6 +1,6 @@
 /-
   TournamentH7.LRCGapLadder — THE l ≥ 2 PEEL LADDER AT THE GAP THRESHOLD
-  (kind-pasteur-2026-07-05-S7, HYP-4113).
+  (kind-pasteur-2026-07-05-S7, HYP-4115; renumbered from 4113, opus-S80 first-committed).
 
   Extends the S6 top-compression (`gap_compressed_24`, the `l = 1` rung) to the
   full order-statistic ladder, by running klein's radius-parametric window stack
