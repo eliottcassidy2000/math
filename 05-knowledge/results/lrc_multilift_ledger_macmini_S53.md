@@ -39,10 +39,14 @@ L5 TAIL: sorted lifted values 14 <= w1 <= ... <= w5, w1 <= 1600/3, chain
   sharpened fees (teeth_mass_far, ~3x per level => ~250x volume), higher-u
   orbit windows, or a smarter argument.
 L6 TAIL: same with anchor 2291 and one more chain step; ~10^15.
-  MITIGATION available: the anchor for C = {1..6} (the only sieve-free l=6
-  pattern) can use the UNLIFTED-BLOCK RECIPROCAL margin — base {7..12} has
-  margin 7/19 at t = 1/19 (kps band_margin_reciprocal instance) — replacing
-  the citation 1/7 and cutting the anchor ~4.4x (see the .out Part 3 table).
+  MITIGATION available: the anchor for C = {1..6} (the ONLY sieve-free l=6
+  pattern; every other l=6 pattern has a forced coordinate r | k_r => value
+  >= 98, CRT-thinned) can use the UNLIFTED-BLOCK RECIPROCAL margin — base
+  {7..12} has margin 7/19 at t = 1/19 (kps band_margin_reciprocal instance) —
+  giving anchor A = 6*(2/25)*12/((7/19 - 2/25)(1/25)) = 68400/137 ~ 499
+  instead of the citation 2291 (4.6x).  Stacked with klein-S135's ~3x-per-level
+  fee sharpening (3^4-3^5 volume cut), the l=5 tail drops to ~10^10 cells
+  (one C session) and l=6 to ~10^12 (one long C run).  NEXT-SESSION SHAPED.
 
 ## Why the pyramid works (method, short form)
 

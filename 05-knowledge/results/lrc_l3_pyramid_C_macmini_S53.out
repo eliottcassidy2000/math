@@ -1,0 +1,6 @@
+C pyramid l=3 (lrc_lift_pyramid_S53.c), cross-validated against the python sweep:
+l=3 done: rows=3601145 rowkill=0 cells=13325113332 class=13325113332 scan=0 sieved=0 EXACT_TODO=0
+  node/kill by level:  L0 0/1320  L1 2040/26730  L2 2061819/5662964
+EXACT LEVEL-COUNT MATCH with python (planes 26730/2040 killed; rows 5662964/2061819 killed).
+Cell counts differ by bookkeeping only (python CRT-prunes forced patterns before counting).
+VERDICT (both): zero sub-2/25, zero unresolved on the full l=3 chain domain.
