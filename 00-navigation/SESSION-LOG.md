@@ -48,6 +48,22 @@ HOUSEKEEPING: HYP cascade rode 4 collisions mid-session; settled 4099=klein-S134
 FILES: lrc_multilift_leg_macmini_S52.py, lrc_multilift_floor_macmini_S52.py (+.outs), lrc_ladder_certificates_macmini_S52.md, reflection the-multi-lift-floor-and-the-14r-ladder-macmini-S52.md; HYP-4103 (+INDEX). No canon overridden.
 
 NEXT: (a) the l=3..6 floor-level domains (T_l bounded; same harness, bigger volumes -- expect 2/25 to hold, the 2nd harmonic seems to be THE lift floor); (b) the Fin-12 fee transcription; (c) prove M({4,6}-block) = 2/25 as the lift-side 2nd-harmonic extremal (kps's second_value_loose machinery should adapt); (d) the l >= 7 spread residual (ratio gate + sieve strain -- possibly a one-session finite check).
+## kind-pasteur-2026-07-05-S4 -- THM-592 GRID ATTAINMENT IN LEAN: the margin max is attained at m/(|v_i|+|v_j|) (perturbation proof, kernel-pure) => grid_margin_domination + THE 2B CERTIFICATE (zero slack; supersedes S3's 176B) (HYP-4108)
+
+Prompt (owner): formalize the THM-592 grid attainment next + finish the proof up.
+
+THE LEAN (LRCGridAttainment.lean, registered, corpus green 8661, all [propext, Classical.choice, Quot.sound]):
+ - **maximizer_on_grid**: a global maximizer of the loneliness margin with M > 0 has (|v_i| + |v_j|) t* in Z. The proof avoids ALL piecewise-linear/derivative theory: distZ toolbox (distZ = |y - round y|, the anchor bound min(|y-n|, 1-|y-n|) <= distZ, one-sided Lipschitz) + **no_uniform_push**: if every binding runner ascends in direction d, the explicit push by eps = min(binding ? (1-2M)/(2|v_i|) : (distZ_i-M)/(2|v_i|)) strictly raises the margin (climb + roof for binding, Lipschitz for the rest) -- contradiction; so both directions bind, |v_i|t* = n_i - M and |v_j|t* = n_j + M, and the SUM CANCELS M. The M = 1/2 case is the i = j half-integer grid point.
+ - **grid_margin_domination**: margin beta anywhere => margin beta at a merge-grid point. The exact-M search space of every fleet sweep is now a THEOREM (including the S3 non-reduced-fraction trap).
+ - **loose_branch_cert_2B**: the dichotomy's loose branch at ANY beta > 0 gives an integer certificate with modulus s <= 2B, ZERO slack (S3 needed the 14/169 rigidity slack and gave ~176B; at B=24: 48 vs 4226). Engineering note: the REPLACEMENT TRICK (overwrite the killer slot with a copy of a base runner) transports the Fin-13 margin machinery to the 12-runner base with no subtype/equivalence bookkeeping.
+ - Consumed mac-mini's LRCWitnessAttainment (distZ, le_distZ_iff, exists_max_margin) -- exactly what their S25 header hoped ("the decidable heart the band certificates rest on"), now load-bearing.
+
+VERIFIED (lrc_grid_attainment_kps_S4.py): grid attainment 300/300; zero-slack 2B certificates 300/300.
+
+WHAT THIS UNLOCKS: (a) the loose side of TightLooseDichotomy = decidable search over s <= 2B (with HYP-4102's atom: kernel-checkable per family); (b) the S3 merge exclusion (gap values d/(v+w) with d >= 3, v+w >= 38) is one VALUE-form lemma from formal (sup over the finite grid); (c) per-family exact-M claims in sweeps can now be kernel-certified both directions (>= via atom cert, attainment via grid).
+
+FILES: LRCGridAttainment.lean (registered); lrc_grid_attainment_kps_S4.py + results/.out; HYP-4108 (INDEX). Two checkpoints + close-out. No canon overridden.
+
 ## kind-pasteur-2026-07-05-S3 -- CERTIFICATE COMPLETENESS (the modulus bound, formal) + THE GAP FILTERS kernel-pure: not-loose forces covering in every direction + mod-q near-unit pinning for ALL q <= 25 + the +-pair covering; merge exclusion d >= 3, v+w >= 38 (HYP-4105)
 
 Prompt (owner): next brick (bound the modulus s) or whatever closes LRC(14); math first, then formalize.

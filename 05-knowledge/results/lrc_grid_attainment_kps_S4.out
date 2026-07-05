@@ -1,0 +1,8 @@
+[G1] grid attainment: exact M on the merge grid vs fine scan
+   300 families, 0 failures
+[G2] the 2B certificate, zero slack:
+   300 families, 0 failures (cert modulus always <= 2B)
+[G3] the loose-branch modulus-bound ladder at beta = 2/25:
+   S2 (HYP-4102): certificate language, no a-priori bound
+   S3 (HYP-4105): s <= B/(2*delta) + 1 = 4226  (needs the 14/169 slack)
+   S4 (HYP-4108): s <= 2B = 48  (zero slack, any beta > 0)
