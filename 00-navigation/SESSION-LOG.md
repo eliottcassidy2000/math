@@ -1,3 +1,17 @@
+## mac-mini-2026-07-04-S48 -- THM-619: the ALIGNMENT-BAND CONFINEMENT CRITERION (the geometry of hcomp's loose case) -- killer teeth disjoint => one-tooth containment => M(V) < 1/13 = a CRT band system + pins + window; VERIFIED EMPTY on all four tested loose bases (HYP-4094)
+
+Prompt (owner): more mathematical progress on the geometry of the open core of the endgame.
+
+THE OPEN CORE (post klein-S131/S47): hcomp's loose-base case -- killer-drag confinement for M(B) >= 2/25.  THE GEOMETRY FOUND: the killer's radius-1/13 teeth are DISJOINT, so it fully covers an interval only by ONE-TOOTH CONTAINMENT; killing M(V) below 1/13 therefore requires covering EVERY component of L_B(1/13) simultaneously = the CRT BAND SYSTEM ||w c_i|| <= 1/13 - w h_i (midpoints rational on the THM-592 breakpoint grid => residue bands of density ~2/13 per component), intersected with the COVERING PINS (q | w for each q in 2..14 missed by B) inside the compressed window w <= 13 max(B).
+
+VERIFIED (exact pipeline): all four tested loose bases close EMPTY -- {1..11,24} (M=2/25, 2 comps, pins 13&14 => 182 | w: window nearly empty before bands), {1..11,13} (1/12, 4 comps, pins 12&14), {1..10,12,13} (1/11, 10 comps, pins 11&14), {2..13} (2/15, 2 comps, pin 14 => 12 candidates, all killed by bands): ZERO admissible killers in the ENTIRE compressed window each time -- the loose case closes outright per base, with no M-computation needed for survivors (none existed).
+
+NET: the last analytic-looking leaf of LRC(14) is now census-shaped arithmetic: per-base finite band+pin+window intersection.  Remaining quantifier = the loose-base space sweep (finite via the tight case's own compression bookkeeping).
+
+FILES: THM-619; lrc_alignment_band_confinement_macmini_S48.py + .out; HYP-4094.
+
+NEXT: (a) the full loose-base sweep (the base space enumeration + this pipeline per base) -- expected wholesale closure of hcomp's loose case; (b) fold the criterion into the Lean peel as the loose-branch certificate shape (band membership is decidable); (c) klein/kps: the pin-band mechanism slots into the primitivity-split dispatch.
+
 ## klein-2026-07-04-S131 -- THE COMPRESSED TARGET "M>=1/13" NEEDS PRIMITIVITY: non-primitive counterexample {2..24,182}=7/92; resolves by scale->sieve so hcomp still holds (HYP-4093)
 
 Prompt (owner): keep working toward closure.

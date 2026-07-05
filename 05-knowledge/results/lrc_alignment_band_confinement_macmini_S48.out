@@ -1,0 +1,34 @@
+==============================================================================
+ALIGNMENT-BAND CONFINEMENT: loose bases (M(B) >= 2/25), compressed window
+==============================================================================
+--- base the 2/25 base {1..11,24}: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24]
+    M(B) = 2/25 = 0.080000; components of L_B(1/13): 2
+    covering pins on w: multiples of [13, 14]
+    band-intersection candidates in window (w <= 312): 0 -- EMPTY: loose case CLOSED for this base
+--- base {1..11,13}: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]
+    M(B) = 1/12 = 0.083333; components of L_B(1/13): 4
+    covering pins on w: multiples of [12, 14]
+    band-intersection candidates in window (w <= 169): 0 -- EMPTY: loose case CLOSED for this base
+--- base {1..10,12,13}: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13]
+    M(B) = 1/11 = 0.090909; components of L_B(1/13): 10
+    covering pins on w: multiples of [11, 14]
+    band-intersection candidates in window (w <= 169): 0 -- EMPTY: loose case CLOSED for this base
+--- base {2..13}: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/lrc_alignment_band_confinement_macmini_S48.py", line 121, in <module>
+    n, bad = confinement_pipeline(B, lab)
+  File "/Users/e/Documents/GitHub/math/04-computation/lrc_alignment_band_confinement_macmini_S48.py", line 77, in confinement_pipeline
+    print(f"    M(B) = {MB} = {float(MB):.6f}; components of L_B(1/13): {len(comps)}")
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+--- base {1..10,12,13}: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13]
+    M(B) = 1/11 = 0.090909; components of L_B(1/13): 10
+    covering pins on w: multiples of [11, 14]
+    band-intersection candidates in window (w <= 169): 0 -- EMPTY: loose case CLOSED for this base
+--- base {2..13}: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    M(B) = 2/15 = 0.133333; components of L_B(1/13): 2
+    covering pins on w: multiples of [14]
+    band-intersection candidates in window (w <= 169): 0 -- EMPTY: loose case CLOSED for this base
+
+TOTAL violations across tested loose bases: 0
+(criterion: M(V) < 1/13 forces w into the CRT band intersection; the
+ pipeline enumerates it exactly and checks each candidate.)
