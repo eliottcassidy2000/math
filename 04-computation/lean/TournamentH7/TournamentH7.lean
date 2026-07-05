@@ -310,3 +310,4 @@ import TournamentH7.LRCWindowMargin13
 import TournamentH7.LRCKernelGate13
 import TournamentH7.LRCLiftRigidityRows
 import TournamentH7.LRCHarmonicGate  -- kps-S2(2026-07-05): rational-point margin certificate (t=k/s, margin mu/s, decidable integer hypothesis) + ratio-gate reduction of TightLooseDichotomy to spread bases; 2nd harmonic closes {1..11,24}; at beta=1/13 the gate subsumes the tight branch (HYP-4102)
+import TournamentH7.LRCCertCompleteness  -- kps-S3(2026-07-05): certificate completeness (margin => atom cert, modulus bound s <= B/(2(beta'-beta))+1) + gap filters (not_loose covering/near-unit/mod-13,14 pinning INTO the gap, +-pair covering) (HYP-4105)

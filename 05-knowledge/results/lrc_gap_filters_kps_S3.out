@@ -1,0 +1,11 @@
+==========================================================================
+HYP-4105: cert completeness + gap filters + merge exclusion
+==========================================================================
+[P1] certificate completeness: 2000 random instances, 0 failures
+[P1b] rigidity-slack instantiation: delta = 14/169 - 2/25 = 12/4225; s >= B/(2 delta) = 4225/24 B ~= 176.0 B
+[P2] gap filters on dilated APs c*{1..12} (the entire sub-2/25 locus): 0 violations
+[P3] merge-grid attainment (grid >= fine scan q<=130): 400 sets, 0 failures
+[P3b] gap-window merge values d/(v+w) in (1/13, 2/25), v+w <= 60 (NOTE: none with v+w < 38; d >= 3 always):
+      d=3, v+w=38: 3/38 = 0.078947
+      d=4, v+w=51: 4/51 = 0.078431
+      => minimal depth d = 3, minimal sum v+w = 38 (gap violator's binding pair sums >= 38 => w_max >= 19)
