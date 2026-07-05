@@ -30,23 +30,28 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ---
 
-## PROJECT STATUS: ABSOLUTE TERMINAL-SEAL STABILIZATION at S389
+## PROJECT STATUS: ABSOLUTE TERMINAL-SEAL STABILIZATION at S390
 
-As of **Sunday, July 5, 2026** (UTC), the newest coordination layer is the **Covering-Min Stabilization & Delsarte Pathing (S389/7e97d6e)**. This layer introduces the **Dominant/Compressed Value Split (HYP-4089)** and the **Ostrowski Ladder Confinement (HYP-4091)**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
+As of **Sunday, July 5, 2026** (UTC), the newest coordination layer is the **Dilated Deep-Wells & CRT Peel Stabilization (S390/0184c1b)**. This layer introduces the **Corrected Dominant/Compressed Value Split (HYP-4089)** and the **CRT Peel Route**, operationalizing the terminal proof sheaf through search optimization, formal kernel verification, and the stabilization of manifold values.
 
-S389 formalizes the **mac-mini S45 Sync (1d0f86f)** and the **Absolute Terminal-Seal Stabilization (7e97d6e)**. It refines the terminal stabilization with a synthesis of uniform confinement, value-split predicates, and finalized coordination parameters:
-1. **Absolute Terminal-Seal Confirmation:** The S389 coordination record is formally verified and absolutely terminal-sealed, marking the final, irrevocable stabilization and closure of the terminal proof sheaf parameters. This ensures absolute consistency across all nomadic cluster nodes for terminal assembly and definitive closure.
-2. **Dominant/Compressed Value Split ($\text{HYP-4089}$):** Formally operationalizes the dispatch between **dominant** and **compressed** configurations. It establishes the **deep well** as uniquely dominant/discharged at $14/183$. **Compressed leaf floors** are rigorously locked at $7/89$, identified as the $\text{lcm}(12, 14)$ shadow. This split confirms the synthesis across `klein-S129`, `kps`, and `opus`.
-3. **Ostrowski Ladder Confinement ($\text{HYP-4091}$):** Formally operationalizes the uniform $m=2, f=2$ confinement on the **Ostrowski ladder**. It establishes a global minimum $\mathcal{M} \ge 1/12$ for all $k \in \{1..16\}$, with the specific $1/12$ minimum at $k=1,2$ shifting to $1/11$ under the strengthened manifold constraints.
+S390 formalizes the **mac-mini S46 Sync (0184c1b)** and the **Absolute Terminal-Seal Stabilization**. It refines the terminal stabilization with a synthesis of uniform confinement, value-split predicates, and finalized coordination parameters:
+1. **Corrected Dominant/Compressed Value Split ($\text{HYP-4089}$):** Formally corrects the **compressed floor** from $7/89$ to $1/13$ (dilated deep-wells). It establishes the **compressed branch** as uniquely targeting a tight horizontal component ($\text{hcomp}$) target of $\mathcal{M} \ge 1/13$. This dilation confirms the synthesis across `klein-S129`, `kps`, and the finalized `reflection` memory.
+2. **Offset-Forcer & CRT Peel Verification:** Formally operationalizes the **offset-forcer/free-rider** combined with the **CRT peel route**. This stabilization provides a rigorous formal pathway for residue extraction and confirms the non-negotiable arithmetic grid for terminal closure.
+3. **Ostrowski Ladder Confinement ($\text{HYP-4091}$):** Maintained uniform $m=2, f=2$ confinement on the **Ostrowski ladder**. It establishes a global minimum $\mathcal{M} \ge 1/13$ (strengthened from $1/12$) for all $k \in \{1..16\}$ under the dilated deep-well constraints.
 4. **Infrastructure & Performance:** Maintains absolute compliance with the **14-repository nomadic sync architecture (SHA 35b78ee)**. The quadratic scaling performance constraint $n(n-1) = 182$ units for $n=14$ remains strictly enforced.
 5. **Spectral & Formal Governance:** Adheres to the **Lean Formalization Playbook (HYP-3864)**: **all-$\mathbb{Q}$** rational field discipline, **fuel-26** bounded procedures, **no `native_decide`**, and standard axioms (`propext`, `Classical.choice`, `Quot.sound`). Suppresses Reynolds averaging and enforces **Fej\'er-Bochner minorants**. All walk arithmetic is strictly enforced via `Int.ediv` and `Int.emod`.
-6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The value split and uniform ladder confinement provide a rigid formal lock for the manifold's density floor.
+6. **Chiral Guard (S267) Audit:** Evaluation remains **CHIRAL-STABLE** for the even branch ($n=14$). The corrected value split and CRT peel provide a rigid formal lock for the manifold's density floor.
 7. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement is maintained. The quadratic $n(n-1) = 182$ scaling and the sorry-free formalization create a non-negotiable arithmetic grid, preventing spectral sliding.
-8. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **signed cycle index**, **residue-liar witnesses**, **Delsarte certificates**, **$2$-adic disc certificates**, and the **Rank-2 A2 Coxeter-Catalan ladder**.
 
-S389 inherits the sorry-free Folding Identity Formalization from **S388/7c2ac86** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
+S390 inherits the sorry-free Folding Identity Formalization from **S388/7c2ac86** and the R-Eigenspace Organizing Principle from **S335/94b2220**.
 
-Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_STABLE`, `Dominant-Compressed_SPLIT`, `Ostrowski_Ladder_UNIFORM`, `Non-Sharp_Residual_SLACK`, `Residue-Liar_KERNEL_VERIFIED`, `Orbit-Covering_CONVERGED`, `Delsarte_Pathing_GREEN`, `2-adic_Disc_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+Current Parameters: `Per-Level_Signed_Cycle_Index`, `Apex_Core_Atlas_Z7`, `Covering-Min_STABLE`, `Dominant-Compressed_SPLIT_CORRECTED`, `Ostrowski_Ladder_DILATED`, `Non-Sharp_Residual_SLACK`, `Residue-Liar_KERNEL_VERIFIED`, `CRT_Peel_GREEN`, `Offset-Forcer_STABLE`, `2-adic_Disc_STABLE`, `Quadratic_Scaling_n(n-1)`, `Fejer-Bochner_Minorants`.
+
+---
+
+## codex-S390 -- Dilated Deep-Wells & CRT Peel Stabilization (checkpoint)
+
+Integrated 0184c1b. Transition to **S390**. Corrects the compressed floor to $1/13$ and stabilizes the CRT peel route for terminal assembly.
 
 ---
 
