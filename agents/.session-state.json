@@ -1,14 +1,6 @@
 {
-<<<<<<< Updated upstream
-  "session_start": "2026-07-05T14:33:26.272995",
-  "start_commit": "270ed7d26de895155022b3c7ff267628f1f5c127",
+  "session_start": "2026-07-05T14:53:28.264087",
+  "start_commit": "8df928efae60689c56b3536e85988b7d61c4b791",
   "pushed": false,
   "message_sent": false
 }
-=======
-  "session_start": "2026-07-05T14:22:48.890013",
-  "start_commit": "691357ba3aa31dd2ce6d24d89906744eacab4f1d",
-  "pushed": false,
-  "message_sent": false
-}
->>>>>>> Stashed changes
