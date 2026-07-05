@@ -75,6 +75,20 @@ HOUSEKEEPING: HYP cascade rode 4 collisions mid-session; settled 4099=klein-S134
 FILES: lrc_multilift_leg_macmini_S52.py, lrc_multilift_floor_macmini_S52.py (+.outs), lrc_ladder_certificates_macmini_S52.md, reflection the-multi-lift-floor-and-the-14r-ladder-macmini-S52.md; HYP-4103 (+INDEX). No canon overridden.
 
 NEXT: (a) the l=3..6 floor-level domains (T_l bounded; same harness, bigger volumes -- expect 2/25 to hold, the 2nd harmonic seems to be THE lift floor); (b) the Fin-12 fee transcription; (c) prove M({4,6}-block) = 2/25 as the lift-side 2nd-harmonic extremal (kps's second_value_loose machinery should adapt); (d) the l >= 7 spread residual (ratio gate + sieve strain -- possibly a one-session finite check).
+## kind-pasteur-2026-07-05-S6 -- ATTACKING THE GAP CRUX: THE 24B TOP-COMPRESSION kernel-pure (citation floor 1/12 beats the gap ceiling 2/25 by exactly 1/300 => every gap-violator runner <= 24x its complement's max; gap_compressed_24) (HYP-4112)
+
+Prompt (owner): work on the spectral gap emptiness crux itself.
+
+THE MATH (new): the LRC(<=13) citation ONE PEEL DOWN presses on the gap: an 11-subfamily always has margin 1/12 somewhere, and 1/12 > 2/25 (excess exactly 1/300). A gap violator must therefore have EACH runner single-handedly cover its complement's citation window (half-width 1/(300B)); a 2/25-comb of speed > 24B has teeth too narrow ((4/25)/w) => |v_i0| <= 24B. Corollary: **gap violators are 24-compressed** (w_max <= 24 w_2nd) -- the first unconditional height-structure constraint on the crux; no 11-level rigidity, no tower recursion. Verified numerically first ({1..11, w0} and random bases: every w0 > 24B family has a 2/25 point).
+
+THE LEAN (LRCPeelCompression.lean, registered, corpus green 8664, all kernel-pure, GREEN ON FIRST COMPILE): distZ_escape (real-dialect interval escape on the S4 anchor bound -- mac-mini's IntervalEscape is all-Q, this is the R twin) + comb_escape + peel_height_bound (succAbove Fin surgery; citation consumed as hypothesis; margin_transfer from S3; sign absorbed by forall-m) + gap_compressed_24.
+
+THE PROFILE NOW COMPLETE (kps S2-S6, all kernel-pure): a spectral-gap violator is covering (every q <= 12, every direction) + pinned (0,+-1 mod all q <= 25) + spread (> 11.5x overall) + big-paired (some pair >= 38) + top-compressed (<= 24x) + its loose branch decidable (2B moduli). Squeezed from top, bottom, and middle; the remaining freedom is overall scale.
+
+NEXT RUNGS (flagged, unclaimed): l >= 2 peels with klein's S134/S135 fee ledger AT TARGET 2/25 (citation floors 1/(13-l), fees 4l/25, l <= 6) => the full order-statistic compression ladder; then the scale question is census-shaped.
+
+FILES: LRCPeelCompression.lean; reflection the-gap-lives-one-three-hundredth-below-the-citation; HYP-4112 (INDEX). One checkpoint + close-out. No canon overridden.
+
 ## kind-pasteur-2026-07-05-S5 -- THE MERGE EXCLUSION FORMAL: gap_forces_big_pair kernel-pure (margin > 1/13 somewhere + no 2/25 point => some |v_i|+|v_j| >= 38, incl. the k=2 parity kill by omega); the whole S3 gap analysis is now machine-checked (HYP-4110)
 
 Prompt (owner): keep going, finish the proof up.
