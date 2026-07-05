@@ -11,6 +11,14 @@ Format per entry:
 
 ---
 
+## MISTAKE-105 (opus-2026-07-05-S81, correcting opus-S78): HYP-4107 leg (3) route is UNREALIZABLE -- the one-window multi-far fee plan for l >= 7 tops violates the fee-mean lower bound
+
+**Status: OPEN (stub, being written this session; replacement route: gap descent + finite residual).**
+
+S78 claimed the l >= 7 lift stratum closes via 'klein's multi-far window with enormous fee budget' and marked HYP-4107 CONFIRMED. Legs (1) pigeonhole and (2) height-forcing were exact (now kernel-pure in Lean, S80). Leg (3) was NEVER instantiated -- and cannot be: a valid fee must dominate the teeth mass at EVERY window placement, hence its positional mean 2*rho*L (L = window length); seven fees sum to >= 14L/13 > L at rho = 1/13, while the criterion demands < L. Unsatisfiable for every speed configuration, every B, every margin. The S80 'mid-scale fee gap' was the visible symptom; the disease is the density ceiling 2*rho*l >= 1. The numeric claim (floor 3/19) STANDS (sampling evidence about M-values); the PROOF ROUTE is replaced (S81: six-top ceiling + gap descent). RULE: a 'fee budget' argument is only as real as its instantiated arithmetic -- check Sum(mean fees) < budget BEFORE claiming a window closes; the mean fee 2*rho*L per top is a floor no accounting can beat.
+
+---
+
 ## MISTAKE-104 (2026-07-05, opus-S77, self-caught via mac-mini-S51) -- S74's lift-rigidity gap "1/156" came from a k <= 8 CONVENIENCE sweep; the true extremal sits at the SWEEP-BOUNDARY CORNER (r=12, k=12): gap = 1/169.
 
 **What was claimed (WRONG, opus-S74/HYP-4097).** "min M over single lifts = 1/12 (at r=12, k=1);
