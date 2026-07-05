@@ -1,3 +1,88 @@
 ==============================================================================
-E1 -- the height-1 hypercube: W_C = ({1..12}\C) u (C+13), all 4096 C, EXACT
+E1 -- the height-1 hypercube: W_C = ({1..12}\C) u (C+13), all 4096 C
+     (scan-first at 2/25; EXACT on scan-failures = the definitive sub-2/25
+      stratum; exact also on |C|<=2, consecutive blocks, even blocks, sample)
 ==============================================================================
+primitive height-1 lifts: 4094 / 4095; scan(>=2/25) failures: 0; exact-2/25 certs: 2297   [0s]
+
+EXACT M for every scan-failure (the complete candidate sub-2/25 stratum):
+
+height-1 sets with M < 2/25: 0
+HEIGHT-1 FLOOR = not below 2/25 (>= 2/25 everywhere off-AP)
+
+exact M on structured slices (anatomy):
+         M              C (lifted coords)
+      2/25                         [4, 6]  
+      1/12                           [12]  
+      2/23                         [2, 6]  
+      2/23                            [6]  
+      1/11                           [11]  
+      1/11                       [11, 12]  CONSEC
+      2/21                      [4, 5, 6]  CONSEC
+      2/21                         [5, 6]  CONSEC
+      3/31                  [2, 3, 4, 12]  
+      4/41     [4, 5, 6, 7, 8, 9, 10, 11]  CONSEC
+      4/41    [5, 6, 7, 8, 9, 10, 11, 12]  CONSEC
+      1/10                  [3, 4, 8, 10]  
+      1/10                        [4, 10]  
+      1/10                        [6, 10]  
+      1/10                           [10]  
+      1/10                       [10, 11]  CONSEC
+      1/10                   [10, 11, 12]  CONSEC
+      1/10                       [10, 12]  
+      3/29            [1, 3, 5, 8, 9, 12]  
+      2/19                [1, 3, 4, 5, 9]  
+      2/19                         [1, 4]  
+      2/19                            [2]  
+      2/19                         [2, 5]  
+      2/19                        [2, 10]  
+      2/19                        [2, 11]  
+...top 3 loosest: [('1/3', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]), ('1/3', [1, 3, 6, 7, 9, 10, 12]), ('14/39', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])]
+structured-slice sets with M < 14/169: 1: [('2/25', [4, 6])]
+[t = 146s]
+
+==============================================================================
+E2 -- l=2 floor-level closure at beta = 2/25 (complete sub-2/25 stratum)
+==============================================================================
+level 2/25: delta_2 = 1/1100; fee: 1/w_a + 1/w_b < 17/2200; both >= 259 closes
+one-killer window at 2/25 over 11-base: w_a > 24*w_b closes; domain w_b <= 258, w_a <= 24*w_b
+  s=1: {'total': 48469, 'sieved': 21115, 'scanned': 27354, 'exact': 0}  t=1s
+  s=2: {'total': 97299, 'sieved': 42640, 'scanned': 54659, 'exact': 0}  t=4s
+  s=3: {'total': 146490, 'sieved': 63744, 'scanned': 82746, 'exact': 0}  t=6s
+  s=4: {'total': 196042, 'sieved': 85631, 'scanned': 110411, 'exact': 0}  t=9s
+  s=5: {'total': 245974, 'sieved': 106716, 'scanned': 139258, 'exact': 0}  t=12s
+  s=6: {'total': 296267, 'sieved': 128188, 'scanned': 168079, 'exact': 0}  t=15s
+  s=7: {'total': 346940, 'sieved': 171225, 'scanned': 175715, 'exact': 0}  t=16s
+  s=8: {'total': 397974, 'sieved': 213918, 'scanned': 184056, 'exact': 0}  t=16s
+  s=9: {'total': 449388, 'sieved': 257593, 'scanned': 191795, 'exact': 0}  t=17s
+  s=10: {'total': 501163, 'sieved': 304300, 'scanned': 196863, 'exact': 0}  t=18s
+  s=11: {'total': 553299, 'sieved': 351543, 'scanned': 201756, 'exact': 0}  t=18s
+  s=12: {'total': 600756, 'sieved': 393962, 'scanned': 206794, 'exact': 0}  t=19s
+
+l=2 floor-level sweep: {'total': 600756, 'sieved': 393962, 'scanned': 206794, 'exact': 0}
+COMPLETE sub-2/25 stratum of double lifts (structural domain): 0 sets
+
+l=2 floor >= 2/25 everywhere on the domain
+[t = 165s]
+
+==============================================================================
+E3 -- the ladder witness law: a_r = -14*(13-r)^{-1} mod 13(r+1)
+==============================================================================
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/lrc_multilift_floor_macmini_S52.py", line 225, in <module>
+    inv = pow(13 - r, -1, q)
+ValueError: base is not invertible for the given modulus
+==============================================================================
+E3 (fixed) -- ladder witness law as a CONGRUENCE: (13-r)*a == -14 mod 13(r+1)
+  solvable iff g = gcd(13-r, 13(r+1)) divides 14 (holds r=7..12); among the g
+  solutions, base clearance selects the witness
+==============================================================================
+r= 7: q=104, g=2, solutions a in [15, 67], chosen a=89: margin 7/52 (=14/q: True); binders(dist=14): [6, 98]
+r= 8: q=117, g=1, solutions a in [44], chosen a=73: margin 14/117 (=14/q: True); binders(dist=14): [5, 112]
+r= 9: q=130, g=2, solutions a in [29, 94], chosen a=101: margin 7/65 (=14/q: True); binders(dist=14): [4, 126]
+r=10: q=143, g=1, solutions a in [43], chosen a=43: margin 14/143 (=14/q: True); binders(dist=14): [3, 140]
+r=11: q=156, g=2, solutions a in [71, 149], chosen a=85: margin 7/78 (=14/q: True); binders(dist=14): [2, 154]
+r=12: q=169, g=1, solutions a in [155], chosen a=155: margin 14/169 (=14/q: True); binders(dist=14): [1, 168]
+
+(the g>1 rows show WHY the law is a congruence: 13-r shares a factor with 13(r+1);
+ the solvability condition g | 14 is exactly what lets the killer land at +14)

@@ -1,3 +1,27 @@
+## mac-mini-2026-07-05-S52 -- THE MULTI-LIFT LEG DISCHARGED: lift-stratum floor = 2/25 ATTAINED at the +13 block lift {4,6}->{17,19} (BELOW the single-lift 14/169); the 14r LADDER law (13-r)a == -14 mod 13(r+1), binders (13-r, 14r); single-lift floor cutoff-completed at 2016; l=2 closed on full structural domains; spectral gap (1/13, 2/25) EMPTY everywhere swept (HYP-4103)
+
+Prompt (owner): work what remains of LRC(14) creatively; pull concurrent work; explore niche past threads.
+
+PULLED MID-SESSION (5 landings integrated): opus-S76 window leg + opus-S77 kernel rows & MISTAKE-104 (my S51 attribution corrected: floor family is {1..11,168}, k=r survivors, NOT k=1/{1..11,25}; VALUE 14/169 was right) + klein-S134 multi-killer window (fee criterion = the same measure bound I derived independently at n=13 -- the <= 6 tops wall IS my 2l < 13 wall) + klein-S135 teeth_mass_far (~3x fee sharpening; my T_l table is the crude-safe version) + kps-S2 rational-point atom & ratio gate (my certificates emitted in their atom shape) + kps-S3 modulus-bound claim (my ladder moduli q = killer + (14-r) are their supporting data).
+
+THE MATHEMATICS:
+ (1) THE 14r LADDER (single-lift survivors at r >= 7 are k = r, i.e. {1..12}\{r} u {14r} -- S51's 'k=1' mislabel corrected): M = 14/(13(r+1)) EXACT r = 7..12, witness t* = a_r/(13(r+1)) with (13-r)a_r == -14 mod 13(r+1) -- a CONGRUENCE (g = gcd(13-r, 13(r+1)) in {1,2}; solvable precisely because g | 14; the E3 crash pow(13-r,-1,q) at r = 7,9,11 EXPOSED the g=2 structure). Binding pair ALWAYS (13-r, 14r) at -+14: two-point equioscillation (THM-618 species). The r=12 rung IS the n=13 deep well; the n=14 construction {1..12,182} is the r=13 rung with denominator bump 182 -> 183 = Phi6(14) (adjoin vs replace).
+ (2) SINGLE-LIFT FLOOR CLOSED AT FLOOR LEVEL: the 144 cutoff (S51/S77) answers RIGIDITY only; the floor question's structural cutoff is beta*/delta = 2016 = 14*144. Swept k <= 155: NOTHING below 14/169; killers > 2016 window-certified >= 14/169. MISTAKE-104 discipline: sweep to the cutoff of the question being asked (rigidity and floor cutoffs differ by x14).
+ (3) THE FLOOR DROPS AT l=2: M({1..12}\{4,6} u {17,19}) = 2/25 EXACTLY (witness t = 6/25, binders 8 at -2 / 17 at +2 mod 25) -- the lift stratum ATTAINS the global n=12 second value 2/25 = 2/(2*13-1) from inside (kps's emod_hole species). {4,6} is the UNIQUE structured slice below 14/169 ({4,5,6} = 2/21, {11,12} = 1/11, full lift = 14/39).
+ (4) l=2 CLOSED: rigidity domain (155,542 sets) zero violations; FLOOR domain at 2/25 (600,756 sets, w_b <= 258, w_a <= 24 w_b, killers to ~6200 -- far beyond kps-S1's k <= 2): ZERO below 2/25, zero exact escalations. With the fee (both >= 259) and window (w_a > 24 w_b): EVERY double lift >= 2/25.
+ (5) HEIGHT-1 HYPERCUBE (4094 primitive C): >= 2/25 everywhere off-AP, zero scan failures. l=3 probe k <= 4: zero violations.
+ (6) FEE/TOWER TABLE (n=13 rigidity level, crude-safe): T_l = 156(13-l)/(13-2l) = 191/223/281/417/1093 for l = 2..6; 2l < 13 wall = klein's <= 6 tops. l >= 7: fee dies; ratio-gate + kps k <= 2 cover the bottom; spread l >= 7 height >= 3 = the honest open remainder.
+
+ASSEMBLY CONSEQUENCE: the dichotomy's lift-side margin is beta = 2/25 UNIFORM (NOT 14/169 -- that's the single-lift floor only); one constant for lifts and non-lifts; klein's corner stays 25B/3 (THM-619/620 lane unchanged). SPECTRAL GAP (1/13, 2/25) EMPTY on every swept stratum.
+
+CERTIFICATES (engineering leg): 6 ladder atom rows + block-lift certs in kps-S2 rational_point_margin shape (results/lrc_ladder_certificates_macmini_S52.md); modulus-bound data for kps-S3. HANDOFF: transcribe lonely_of_window_multi to Fin 12 / 1/13 level (the fee table's Lean home) -- klein or opus, one session, opus-S76's transcription pattern applies verbatim.
+
+HOUSEKEEPING: HYP cascade rode 4 collisions mid-session; settled 4099=klein-S134, 4100=opus-S76, 4101=opus-S77, 4102=kps-S2, 4103=me-S52, 4104=klein-S135, 4105=kps-S3, my S51 -> 4106 (its 14/169 attribution also corrected per MISTAKE-104).
+
+FILES: lrc_multilift_leg_macmini_S52.py, lrc_multilift_floor_macmini_S52.py (+.outs), lrc_ladder_certificates_macmini_S52.md, reflection the-multi-lift-floor-and-the-14r-ladder-macmini-S52.md; HYP-4103 (+INDEX). No canon overridden.
+
+NEXT: (a) the l=3..6 floor-level domains (T_l bounded; same harness, bigger volumes -- expect 2/25 to hold, the 2nd harmonic seems to be THE lift floor); (b) the Fin-12 fee transcription; (c) prove M({4,6}-block) = 2/25 as the lift-side 2nd-harmonic extremal (kps's second_value_loose machinery should adapt); (d) the l >= 7 spread residual (ratio gate + sieve strain -- possibly a one-session finite check).
+
 ## kind-pasteur-2026-07-05-S2 -- THE RATIONAL-POINT MARGIN CERTIFICATE (the loose branch's universal decidable atom) + THE RATIO-GATE REDUCTION: TightLooseDichotomy provably shrinks to SPREAD bases; the sharpened surface lrc14_of_spread_dichotomy_and_corner kernel-pure (HYP-4102)
 
 Prompt (owner): get LRC(14) fully formalized in Lean, best state possible, keep improving creatively.

@@ -58,45 +58,97 @@ def is_primitive(W):
 
 # ============================================================================
 log("=" * 78)
-log("E1 -- the height-1 hypercube: W_C = ({1..12}\\C) u (C+13), all 4096 C, EXACT")
+log("E1 -- the height-1 hypercube: W_C = ({1..12}\\C) u (C+13), all 4096 C")
+log("     (scan-first at 2/25; EXACT on scan-failures = the definitive sub-2/25")
+log("      stratum; exact also on |C|<=2, consecutive blocks, even blocks, sample)")
 log("=" * 78)
 t0 = time.time()
-rows = []
+E1_QLIST = ([25, 50] + [13 * u for u in range(2, 21)] +
+            [q for q in range(8, 41) if q % 13])
+def scan25(W):
+    for q in E1_QLIST:
+        if any(v % q == 0 for v in W):
+            continue
+        for a in range(1, q // 2 + 1):
+            if gcd(a, q) != 1:
+                continue
+            m = min(dist_q(a * v, q) for v in W)
+            if m * 25 >= 2 * q:
+                return (q, a, F(m, q))
+    return None
+
+fails = []            # scan-failures -> exact (everything possibly < 2/25)
+cert25 = []           # sets whose best cert is exactly 2/25 (floor attainers?)
 n_prim = 0
-for mask in range(1, 4096):            # C = emptyset is the AP itself (tight)
+masks_exact = set()
+for mask in range(1, 4096):
     C = [r for r in range(1, 13) if mask & (1 << (r - 1))]
     W = sorted([v for v in AP if v not in C] + [c + 13 for c in C])
     if not is_primitive(W):
         continue
     n_prim += 1
+    hit = scan25(W)
+    if hit is None:
+        fails.append((tuple(C), tuple(W)))
+        masks_exact.add(mask)
+    elif hit[2] == BETA_BLOCK:
+        cert25.append((tuple(C), hit))
+log(f"primitive height-1 lifts: {n_prim} / 4095; scan(>=2/25) failures: {len(fails)}; "
+    f"exact-2/25 certs: {len(cert25)}   [{time.time()-t0:.0f}s]")
+
+log("\nEXACT M for every scan-failure (the complete candidate sub-2/25 stratum):")
+sub25 = []
+for C, W in fails:
     M = M_exact(W)
-    rows.append((M, tuple(C), tuple(W)))
+    tag = "  << BELOW 2/25" if M < BETA_BLOCK else ""
+    if M <= ONE13:
+        tag = "  !! RIGIDITY VIOLATION"
+    if M < BETA_BLOCK:
+        sub25.append((M, C, W))
+    log(f"   M = {str(M):>10}  C = {list(C)}  W = {list(W)}{tag}")
+sub25.sort()
+log(f"\nheight-1 sets with M < 2/25: {len(sub25)}")
+log(f"HEIGHT-1 FLOOR = {sub25[0][0] if sub25 else 'not below 2/25 (>= 2/25 everywhere off-AP)'}"
+    f"{' at C = ' + str(list(sub25[0][1])) if sub25 else ''}")
+
+log("\nexact M on structured slices (anatomy):")
+def exact_row(C):
+    W = sorted([v for v in AP if v not in C] + [c + 13 for c in C])
+    if not is_primitive(W):
+        return None
+    return M_exact(W), tuple(C), tuple(W)
+slices = []
+for r in range(1, 13):
+    slices.append((r,))
+for r in range(1, 13):
+    for s in range(r + 1, 13):
+        slices.append((r, s))
+for a in range(1, 13):
+    for b in range(a + 2, 13):
+        slices.append(tuple(range(a, b + 1)))       # consecutive blocks len >= 3
+import random
+random.seed(52)
+for _ in range(150):
+    mask = random.randrange(1, 4096)
+    slices.append(tuple(r for r in range(1, 13) if mask & (1 << (r - 1))))
+seen = set()
+rows = []
+for C in slices:
+    if C in seen:
+        continue
+    seen.add(C)
+    row = exact_row(list(C))
+    if row:
+        rows.append(row)
 rows.sort()
-log(f"primitive height-1 lifts: {n_prim} / 4095 nonzero C   [{time.time()-t0:.0f}s]")
-viol = [r for r in rows if r[0] <= ONE13]
-log(f"rigidity violations (M <= 1/13): {len(viol)}")
-log(f"\nHEIGHT-1 FLOOR = {rows[0][0]}   at C = {list(rows[0][1])}   W = {list(rows[0][2])}")
-log("\nbottom 20 of the hypercube:")
-log(f"{'M':>10} {'C (lifted coords)':>28}  W")
-for M, C, W in rows[:20]:
-    log(f"{str(M):>10} {str(list(C)):>28}  {list(W)}")
-log("\ntop 5 (loosest):")
-for M, C, W in rows[-5:]:
-    log(f"{str(M):>10} {str(list(C)):>28}  {list(W)}")
-# species anatomy: are the low rows the CONSECUTIVE/EVEN blocks?
-log("\nanatomy of the bottom 50: |C|, min/max of C, consecutive?, all-even?")
-from collections import Counter
-sig = Counter()
-for M, C, W in rows[:50]:
+log(f"{'M':>10} {'C (lifted coords)':>30}")
+for M, C, W in rows[:25]:
     consec = (list(C) == list(range(C[0], C[0] + len(C))))
-    alleven = all(c % 2 == 0 for c in C)
-    sig[(len(C), consec, alleven)] += 1
-for (l, consec, alleven), cnt in sorted(sig.items()):
-    log(f"  |C|={l:>2}  consecutive={str(consec):>5}  all-even={str(alleven):>5}  x{cnt}")
+    log(f"{str(M):>10} {str(list(C)):>30}  {'CONSEC' if consec and len(C)>1 else ''}")
+log(f"...top 3 loosest: {[(str(M), list(C)) for M, C, W in rows[-3:]]}")
 below_bstar = [r for r in rows if r[0] < BETA_STAR]
-log(f"\nheight-1 lifts with M < 14/169: {len(below_bstar)}")
-for M, C, W in below_bstar[:15]:
-    log(f"   M = {str(M):>8}  C = {list(C)}")
+log(f"structured-slice sets with M < 14/169: {len(below_bstar)}: "
+    f"{[(str(M), list(C)) for M, C, W in below_bstar[:12]]}")
 log(f"[t = {time.time()-T0:.0f}s]")
 
 # ============================================================================
