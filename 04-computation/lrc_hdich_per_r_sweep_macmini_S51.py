@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-mac-mini-2026-07-05-S51 -- HYP-4098: hdich's PER-R FINITE CRT SWEEP
+mac-mini-2026-07-05-S51 -- HYP-4102 (renumbered from 4098; opus-S75 first-committed): hdich's PER-R FINITE CRT SWEEP
 (discharging opus-4097 leg 2's finite content).
 
 hdich after residue pinning: tight 12-families are lifts of {1..12} mod 13.
