@@ -1,0 +1,4 @@
+  ...C 17/220 (1, 3, 10)  {'planes': 2022, 'plane_killed': 298, 'rows': 396312, 'row_killed': 183802, 'cells': 473916527, 'cell_class': 473916527, 'cell_scan': 0, 'cell_exact': 0, 'sieved': 0, 'nonprim': 0}  t=90s
+  ...C 39/220 (1, 6, 11)  {'planes': 4713, 'plane_killed': 564, 'rows': 949966, 'row_killed': 418545, 'cells': 918953758, 'cell_class': 918953758, 'cell_scan': 0, 'cell_exact': 0, 'sieved': 0, 'nonprim': 0}  t=180s
+  ...C 65/220 (2, 4, 5)  {'planes': 7974, 'plane_killed': 830, 'rows': 1638789, 'row_killed': 726176, 'cells': 1337454775, 'cell_class': 1337454775, 'cell_scan': 0, 'cell_exact': 0, 'sieved': 0, 'nonprim': 0}  t=270s
+  ...C 81/220 (2, 6, 8)  {'planes': 9836, 'plane_killed': 892, 'rows': 2048930, 'row_killed': 841432, 'cells': 1777386429, 'cell_class': 1777386429, 'cell_scan': 0, 'cell_exact': 0, 'sieved': 0, 'nonprim': 0}  t=360s
