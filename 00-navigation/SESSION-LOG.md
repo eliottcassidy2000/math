@@ -1,3 +1,21 @@
+## kind-pasteur-2026-07-05-S1 -- TightLooseDichotomy (=HYP-4096 rigidity) VERIFIED DECISIVELY + its FIRST NECESSARY CONDITION formalized kernel-pure (band_margin_reciprocal / spread12_lonely13); partial proof tight => 12 w_min <= w_max <= 12 w_2nd
+
+Prompt (owner): keep working the remaining LRC(14) mathematics, then formalization; pull/push frequently.
+
+CONVERGED with klein-S133 (landed mid-session): klein pinned hcomp to {TightLooseDichotomy + CornerLonely}; TightLooseDichotomy IS the n=12 tight-locus rigidity = my HYP-4096. Independently confirmed (both) it is NOT citation-eligible (arXiv:2604.23906 proves the bound only, no equality classification). My session is the VERIFICATION + PARTIAL PROOF + first Lean brick of klein's open TightLooseDichotomy predicate -- complementary, no content conflict (mac-mini owns CornerLonely).
+
+THE MATH (rigidity = primitive 12-set W tight (M(W)=1/13) <=> W={1..12}):
+ - VERIFIED DECISIVELY: exhaustive over ALL 1820 primitive 12-subsets of [1,16] -> AP-unique; **531376 residue-system adversaries** (the ONLY sets that can be optimal at t=1/13, lifts in {r,r+13,r+26}) -> AP-unique; 400k random to height 200 -> 0 non-AP tight; second value 2/25={1..11,24}=2/(2n-1). The predicate klein pinned is bulletproof-verified.
+ - PARTIAL PROOF (two elementary necessary conditions): (N1) M(W) >= w_min/(w_min+w_max) via the reciprocal-window point t=1/(w_min+w_max) (all w_i/(w_min+w_max) in (0,1), no wrap; margin exact) => tight => **w_max >= 12 w_min** (EQUALITY for AP). (N2) via LRC(12) on the peeled 11-subset + interval-covering => tight => **w_max <= 12 w_2nd**. Together: 12 w_min <= w_max <= 12 w_2nd. The full rigidity's obstruction is HEIGHT (no elementary chaining down the spectrum); it is another face of OPEN-Q-108, not a shortcut.
+
+THE LEAN (LRCBandMargin.lean, registered, corpus green, all [propext, Classical.choice, Quot.sound]):
+ - **band_margin_reciprocal**: speeds in [a,b] (0<a) => at t=1/(a+b) EVERY runner has ||v_i t|| >= a/(a+b) (exact; explicit-margin refinement of klein's spread13_lonely).
+ - **spread12_lonely13**: the LRC(13) twin of spread13 -- ratio b<=12a => Lonely 13 at 1/(a+b). Its contrapositive is (N1): tight => w_max >= 12 w_min. Feeds lonely_of_window_margin with beta=a/(a+b) for any band.
+
+RESIDUAL (unchanged, honest): the FULL TightLooseDichotomy (klein) + CornerLonely (mac-mini) remain open. My (N1)/(N2) prove the top-of-spectrum slice; the height bound (=> finite check => full rigidity) is the open piece = OPEN-Q-108-flavored measure control.
+
+FILES: 04-computation/lrc13_tight_locus_rigidity_kps_S1.py, lrc13_rigidity_hardened_kps_S1.py (+outs); LRCBandMargin.lean (registered); 07-reflections/the-tight-locus-rigidity-of-lrc13-kps-S1.md; HYP-4096 (INDEX). Two checkpoints + close-out. No canon overridden; no HYP renumber (4096 is a shared thread, single INDEX entry = mine).
+
 ## klein-2026-07-05-S133 -- THE hcomp RESIDUAL PINNED: LRC(14) <= citation + TightLooseDichotomy + CornerLonely (kernel-pure), the free-rider generalized to subset-up-to-sign (NO permutation glue), and the rigidity is confirmed NOT citation-eligible (HYP-4096)
 
 Prompt (owner): a session like S132, aiming to finish out the residual inside hcomp.
