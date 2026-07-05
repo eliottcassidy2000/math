@@ -121,5 +121,96 @@ theorem gcd_killer_of_primitive (v : Fin 13 → ℤ) (istar : Fin 13) (c : ℤ) 
   rw [hprim] at hdvd
   exact Nat.dvd_one.mp hdvd
 
+/-! ## The two named residual predicates -/
+
+/-- **THE n=12 RIGIDITY DICHOTOMY at the argmax peel** (the open mathematics of the
+tight side): for every primitive compressed covering family, the base at the argmax
+peel either has all its values inside `c·{1,…,12}` (some dilation `c ≥ 2`) up to sign,
+or carries margin `2/25` at some point.  Empirically TRUE with the 12-runner spectrum
+`1/13 (AP) < 2/25 ({1..11,24}·c) < …` (mac-mini S46/S47); the classification is
+MISTAKE-100-class open math until proved or citation-confirmed. -/
+def TightLooseDichotomy : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v →
+    (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → tupleGcd v = 1 →
+    ∀ istar : Fin 13, (∀ i, |v i| ≤ |v istar|) →
+      (∃ c : ℤ, 2 ≤ c ∧ ∀ i, i ≠ istar → ∃ j : ℤ, 1 ≤ j ∧ j ≤ 12 ∧ |v i| = c * j) ∨
+      (∃ tstar : ℝ, ∀ i, i ≠ istar → ∀ m : ℤ, 2/25 ≤ |(v i : ℝ) * tstar - m|)
+
+/-- **THE SUB-THRESHOLD CORNER** (the alignment-band lane, mac-mini THM-619/S49):
+a loose base (margin `2/25`) whose killer sits BELOW the one-window threshold
+`(25/3)·B`.  Everything above the threshold is closed by `lonely_of_window_margin`. -/
+def CornerLonely : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v →
+    (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → tupleGcd v = 1 →
+    ∀ istar : Fin 13, (∀ i, |v i| ≤ |v istar|) →
+    ∀ B : ℤ, (∀ i, i ≠ istar → |v i| ≤ B) → (∃ i, i ≠ istar ∧ |v i| = B) →
+      (∃ tstar : ℝ, ∀ i, i ≠ istar → ∀ m : ℤ, 2/25 ≤ |(v i : ℝ) * tstar - m|) →
+      3 * |v istar| ≤ 25 * B →
+      ∃ t : ℝ, Lonely 14 v t
+
+/-! ## The assembly -/
+
+/-- **hcomp FROM THE TWO NAMED PREDICATES**: primitivity split → argmax peel →
+dichotomy dispatch → {tight: generalized free-rider} / {loose: one-window lemma above
+the threshold, corner hypothesis below}. -/
+theorem hcomp_of_dichotomy_and_corner
+    (hdich : TightLooseDichotomy) (hcorner : CornerLonely) :
+    ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → CoveringFamily v →
+      (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → ∃ t : ℝ, Lonely 14 v t := by
+  apply hcomp_of_primitive
+  intro v hv hcov hcomp hprim
+  obtain ⟨istar, -, hmaxmem⟩ :=
+    Finset.exists_max_image (Finset.univ : Finset (Fin 13)) (fun i => |v i|)
+      ⟨0, Finset.mem_univ 0⟩
+  have hmax : ∀ i, |v i| ≤ |v istar| := fun i => hmaxmem i (Finset.mem_univ i)
+  rcases hdich v hv hcov hcomp hprim istar hmax with ⟨c, hc, hbase⟩ | ⟨tstar, hloose⟩
+  · exact tight_free_rider' v istar c hc hbase
+      (gcd_killer_of_primitive v istar c hc hbase hprim)
+  · -- loose: build the base max B
+    have hne : (Finset.univ.erase istar).Nonempty := by
+      rw [← Finset.card_pos, Finset.card_erase_of_mem (Finset.mem_univ istar)]
+      simp
+    obtain ⟨ibase, hibmem, hibmax⟩ :=
+      Finset.exists_max_image (Finset.univ.erase istar) (fun i => |v i|) hne
+    have hibne : ibase ≠ istar := Finset.ne_of_mem_erase hibmem
+    set B : ℤ := |v ibase| with hB
+    have hBbound : ∀ i, i ≠ istar → |v i| ≤ B := by
+      intro i hi
+      exact hibmax i (Finset.mem_erase.mpr ⟨hi, Finset.mem_univ i⟩)
+    have hBpos : 0 < B := by
+      rw [hB]
+      exact abs_pos.mpr (hv ibase)
+    by_cases hthr : 25 * B < 3 * |v istar|
+    · -- above threshold: the one-window lemma at β = 2/25
+      refine lonely_of_window_margin v istar tstar (2/25) ((B : ℤ) : ℝ)
+        (by norm_num) hloose ?_ (by exact_mod_cast hBpos) (hv istar) ?_
+      · intro i hi
+        have := hBbound i hi
+        calc |(v i : ℝ)| = ((|v i| : ℤ) : ℝ) := by push_cast; rfl
+          _ ≤ ((B : ℤ) : ℝ) := by exact_mod_cast this
+      · -- (B:ℝ) < 14·(2/25 − 1/14)·|(v istar : ℝ)| = (3/25)·|v istar|
+        have h1 : (25 * B : ℤ) < 3 * |v istar| := hthr
+        have h2 : ((25 * B : ℤ) : ℝ) < ((3 * |v istar| : ℤ) : ℝ) := by exact_mod_cast h1
+        push_cast at h2
+        have habs : |(v istar : ℝ)| = ((|v istar| : ℤ) : ℝ) := by push_cast; rfl
+        rw [show (14 : ℝ) * (2/25 - 1/14) * |(v istar : ℝ)|
+            = (3/25) * |(v istar : ℝ)| by ring, habs]
+        push_cast
+        linarith
+    · exact hcorner v hv hcov hcomp hprim istar hmax B hBbound
+        ⟨ibase, hibne, rfl⟩ ⟨tstar, hloose⟩ (by omega)
+
+/-- **THE PINNED SURFACE**: LRC(14) from the citation node and the two named residual
+predicates.  After S132+S133, the ENTIRE remaining mathematics of LRC(14) is
+`TightLooseDichotomy` (n=12 rigidity) and `CornerLonely` (sub-threshold corner). -/
+theorem lrc14_of_dichotomy_and_corner (cite : LonelyRunner.LRCUpTo13)
+    (hdich : TightLooseDichotomy) (hcorner : CornerLonely) :
+    LRC14Statement :=
+  lrc14_of_compressed cite (hcomp_of_dichotomy_and_corner hdich hcorner)
+
+#print axioms tight_free_rider'
+#print axioms hcomp_of_dichotomy_and_corner
+#print axioms lrc14_of_dichotomy_and_corner
+
 end HcompSurface
 end LonelyRunner
