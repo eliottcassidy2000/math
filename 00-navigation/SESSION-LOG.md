@@ -1,3 +1,22 @@
+## klein-2026-07-05-S133 -- THE hcomp RESIDUAL PINNED: LRC(14) <= citation + TightLooseDichotomy + CornerLonely (kernel-pure), the free-rider generalized to subset-up-to-sign (NO permutation glue), and the rigidity is confirmed NOT citation-eligible (HYP-4096)
+
+Prompt (owner): a session like S132, aiming to finish out the residual inside hcomp.
+
+DELIVERED (LRCHcompSurface.lean, registered, corpus green, all [propext, Classical.choice, Quot.sound]):
+ - **tight_free_rider'**: the tight side needs NO multiset/permutation glue. Base values ANY SUBSET of c*{1..12} up to sign (∀ i≠i*, ∃ j∈[1,12], |v i| = c*j) + gcd(c, killer)=1 => lonely. The per-runner residue argument never needed exhaustion or ordering; the sign is absorbed by the ∀m quantifier. This makes the dichotomy's tight side as WEAK as possible = as PROVABLE as possible.
+ - **gcd_killer_of_primitive**: the free-rider's gcd hypothesis DERIVED from family primitivity (c divides every base entry, so gcd(c,killer) | tupleGcd = 1).
+ - **hcomp_of_dichotomy_and_corner** + **lrc14_of_dichotomy_and_corner**: hcomp <= two named predicates; composed with kps's lrc14_of_compressed: **LRC14Statement <= {LRCUpTo13} + {TightLooseDichotomy} + {CornerLonely}**. Proof: hcomp_of_primitive -> argmax peel -> dichotomy dispatch -> tight: free-rider' / loose: window lemma above the 25B/3 threshold, corner below.
+ - **beta-PARAMETRIC surface** (TightLooseDichotomyAt beta / CornerLonelyAt beta / hcomp_of_dichotomy_and_corner_at / lrc14_of_dichotomy_and_corner_at): the same assembly at ANY loose margin beta > 1/14 -- dichotomy strength trades continuously against corner size (threshold B/(14(beta-1/14))). The rigidity lane can land wherever it can prove.
+ - **CITATION CHECK (honest, closes a question from my S132 letter)**: fetched arXiv 2604.23906 -- the S-T paper proves the BOUND only; NO equality/tightness classification. So the n=12 rigidity is NOT citation-eligible under the owner policy: it is genuinely open mathematics, currently a computationally-verified claim (MISTAKE-100 risk class).
+
+THE REMAINING LRC(14) MATHEMATICS, exactly two predicates:
+ (1) TightLooseDichotomy: every primitive compressed covering family, at the argmax peel, has base values inside c*{1..12} up to sign OR base margin 2/25. (The n=12 rigidity dichotomy; empirical spectrum 1/13 (AP) < 2/25 ({1..11,24}) < 1/12.)
+ (2) CornerLonely: loose base + killer below the one-window threshold (25/3)B. (mac-mini THM-619 alignment bands + S49 sweep = the active lane.)
+
+COORDINATION: mac-mini-S49 claimed HYP-4095 (my S132 confirmed number) -- collision note sent asking them to renumber to 4097; no content conflict (their sweep = CornerLonely instances).
+
+FILES: LRCHcompSurface.lean (registered); HYP-4096; this entry; message to mac-mini. Four pushes. No canon overridden.
+
 ## mac-mini-2026-07-04-S50 -- IntervalEscape.lean SORRY-FREE: the loose branch's geometric kernel (interval_escape + no_cover_of_long = THM-619(i) in Lean); two real mathematical catches mid-proof; the S16 dodge consolidated as a corollary instance (HYP-4096)
 
 Prompt (owner): keep the LRC(14) Lean formalization improving creatively.
