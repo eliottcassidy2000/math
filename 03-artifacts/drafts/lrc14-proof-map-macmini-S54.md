@@ -65,10 +65,10 @@ no-13-mult families are lifts {r + 13 k_r}.  Strata:
     far (S53 workers; post-pass committed).
   - l=5/6: COMP on boxes (k<=4 / k<=3) + 386 corners; chain TAILS **OPEN**
     (exact shapes + sharpened anchors in the S53 ledger; one C session each).
-  - l>=7: legs 1–2 GREEN [LRCLiftPigeonhole: pigeonhole + height-forcing
-    >= 14r >= 98]; leg 3 (window) was UNREALIZABLE (MISTAKE-105, fee-mean
-    ceiling 2ρl >= 1) — replacement = opus-S81 GAP DESCENT (nesting,
-    measure-free) + a finite bottom-cluster residual, **in flight**.
+  - l>=7: legs 1–2 GREEN [LRCLiftPigeonhole]; leg 3 rebuilt: opus-S81 GAP
+    DESCENT (spread tops dodged at any count) + the BOUNDED RESIDUAL SWEPT
+    CLEAN (S55: 46 patterns, 7,071,570 sets, all witness-certified >= 2/25);
+    remaining: the high ratio-cluster leg (opus's).
 
 ### 1c. The non-lift shapes (doubled ± pairs, 13-multiples)
 Outside every lift sweep; constrained by 1a only.  TODAY (S54): the census
@@ -78,15 +78,21 @@ Outside every lift sweep; constrained by 1a only.  TODAY (S54): the census
 [1,24] census: **the spectral gap is empty to height 40** (B=48 extension
 running).  Status: COMP per height window.
 
-### 1d. The remaining crux (OPEN)
-Heights beyond the census with the full profile: "census-shaped per scale."
-The profile has no absolute height anchor yet — the ladder chains the top
-seven ratios, compression bounds the top against the second, but the bottom
-six and the global scale are free.  CANDIDATE ROUTES: (i) an absolute anchor
-from the pinning-at-25-moduli CRT rigidity (the 23- and 25-pair systems
-force near-full residue systems mod 23·25 = 575 — a scale-window enumeration
-at CRT resolution); (ii) opus-S81's gap descent generalized off the lift
-stratum; (iii) covering-efficiency per scale (kps-S6's note).
+### 1d. The remaining crux (OPEN — now NAMED and FINITE-SHAPED, S55)
+**No residue filter can anchor height — proven** (S55 pole-necessity corollary:
+the profile is periodic on CRT-frozen rays; the floating 7-cluster passes at
+every frozen scale).  The mechanism must be witness-side, and the data says it
+is: **THE Q50 CONJECTURE** — every profile-passing family has a margin-2/25
+witness at modulus q <= 50.  Evidence: 511,947/511,947 census survivors
+(first-q <= 45); 100% at composite-CRT moduli; 12,095/12,095 CRT-lifted
+families at heights to 1.16e14 (first-q <= 35).  THE REDUCTION:
+    gap emptiness = Q50 (finite template verification, single scale)
+                  + cluster descent (opus-S81, between scales).
+Remaining work: (i) the per-q template check at q = 26..33 (enumerate mod-q
+templates consistent with pinned divisors, verify clearing-dilation
+existence — bounded, engineering-shaped); (ii) opus-S81's high ratio-cluster
+leg (the bounded residual is swept CLEAN: 7.07M sets, S55); (iii) compose in
+klein's assembly language.
 
 ## Branch 2: hcorner = CornerLonelyAt 2/25
 

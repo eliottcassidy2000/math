@@ -1,0 +1,7 @@
+harvesting low-profile seeds in [1,36]...
+seeds: 59 (from 3000000 tries)  [38s]
+
+high-scale Q50 test: {'lifted': 20000, 'profile_ok': 12095, 'q50_ok': 12095, 'q50_fail': 0}  [40s]
+first-q histogram: {26: 3526, 27: 3710, 28: 1054, 29: 2497, 30: 89, 31: 820, 32: 246, 33: 69, 34: 51, 35: 33}
+heights reached: up to ~115678114952400
+VERDICT: Q50 HOLDS on all high-scale profile samples -- height-independent, as the periodicity reduction predicts (witness sees only residues).

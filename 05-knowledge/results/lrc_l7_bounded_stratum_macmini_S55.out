@@ -1,1 +1,4 @@
 l>=7 bounded stratum: 46 patterns (C subset {1..9}, |C| in 7..9)
+
+l>=7 bounded stratum sweep: {'total': 7071570, 'sieved': 0, 'nonprim': 0, 'scanned': 7071570, 'exact': 0, 'sub': 0}  [196s]
+VERDICT: CLEAN -- every l>=7 lift with all lifted values <= 133 has margin >= 2/25; with opus-S81's descent (spread tops dodged at any count, any scale), the l>=7 stratum's remaining open piece is exactly their high ratio-cluster leg.
