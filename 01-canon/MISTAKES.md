@@ -13,7 +13,17 @@ Format per entry:
 
 ## MISTAKE-105 (opus-2026-07-05-S81, correcting opus-S78): HYP-4107 leg (3) route is UNREALIZABLE -- the one-window multi-far fee plan for l >= 7 tops violates the fee-mean lower bound
 
-**Status: OPEN (stub, being written this session; replacement route: gap descent + finite residual).**
+**Status: RESOLVED (S81 same-session): route replaced by gap descent (LRCGapDescent.lean, green) + the a/169 grid stratum; HYP-4107 entry amended; fleet notified.**
+
+THE CEILING THEOREM (proved S81, verified in six_top_ceiling_gap_descent_opus_S81.out Part 1):
+any fee valid for tower_step_12's hfee (which quantifies over ALL window placements t*)
+dominates the mass MEAN over one period of placements, which is exactly 2*rho*L per top
+(Fubini; teeth width 2rho/w, period 1/w, independent of w). Hence Sum(fees) >= 2*rho*l*L.
+The criterion demands Sum < L, so it is satisfiable only when 2*rho*l < 1: l <= 6 at
+rho = 1/13 (and at 1/14, and at 2/25 -- every band in play). The (13-2l) denominators in
+mac-mini's T_l table are the same wall seen from the mass-bound side; the ceiling shows NO
+sharpened fee crosses it. Verified: sup-fee >= mean at every scanned w; l=7 busts at every
+scanned configuration incl. tops up to 1e12; l=6 fits with tops >= ~6000.
 
 S78 claimed the l >= 7 lift stratum closes via 'klein's multi-far window with enormous fee budget' and marked HYP-4107 CONFIRMED. Legs (1) pigeonhole and (2) height-forcing were exact (now kernel-pure in Lean, S80). Leg (3) was NEVER instantiated -- and cannot be: a valid fee must dominate the teeth mass at EVERY window placement, hence its positional mean 2*rho*L (L = window length); seven fees sum to >= 14L/13 > L at rho = 1/13, while the criterion demands < L. Unsatisfiable for every speed configuration, every B, every margin. The S80 'mid-scale fee gap' was the visible symptom; the disease is the density ceiling 2*rho*l >= 1. The numeric claim (floor 3/19) STANDS (sampling evidence about M-values); the PROOF ROUTE is replaced (S81: six-top ceiling + gap descent). RULE: a 'fee budget' argument is only as real as its instantiated arithmetic -- check Sum(mean fees) < budget BEFORE claiming a window closes; the mean fee 2*rho*L per top is a floor no accounting can beat.
 

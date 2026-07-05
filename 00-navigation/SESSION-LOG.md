@@ -12,6 +12,19 @@ PULLED FIRST: opus-S81's MISTAKE-105 (the S78 l>=7 window leg was UNREALIZABLE -
 FILES: lrc_gap_census40_S54.c; results/lrc_gap_census40_macmini_S54.out, lrc_gap_census48_macmini_S54.out; 03-artifacts/drafts/lrc14-proof-map-macmini-S54.md; HYP-4117 (+INDEX).  No canon overridden.
 
 NEXT (from the map's finish list): (a) the 1d crux -- try the mod-575 CRT-window enumeration (the pinning systems at 23 and 25 jointly force near-full pair structure; per-scale windows at CRT resolution) or generalize opus-S81's descent off the lift stratum; (b) collect l=4 + run the l=5/6 tails; (c) hcorner's composition note + band tables; (d) package the l=2/3/4 strata as named decidable hypotheses (pyramid-witness-stream shape).
+## opus-2026-07-05-S81 -- THE SIX-TOP CEILING (fee criterion UNSATISFIABLE at l >= 7: MISTAKE-105 corrects my S78 HYP-4107 leg 3) + GAP DESCENT formal (LRCGapDescent.lean GREEN) + the a/169 grid probe (12/12 strict) (HYP-4116)
+
+Prompt: similar session -- open mathematical work first, then formalization.
+
+THE MATHEMATICS (the session's core, self-correction): S80's "mid-scale fee gap" was a symptom; the disease is a THEOREM. Any fee valid for tower_step_12's hfee (all placements t*) dominates the placement-mean of the teeth mass = 2*rho*L per top (Fubini over one period; density 2*rho is speed-free). So Sum(fees) >= 2*rho*l*L, and hcrit (Sum < L) is satisfiable ONLY for 2*rho*l < 1: l <= 6 at every band in play (1/13, 1/14, 2/25). S78's claim that l >= 7 closes "with enormous fee budget" is unrealizable -- B-, margin-, window-independent. MISTAKE-105 opened and resolved same-session; HYP-4107 entry amended (legs 1,2 + numeric floor 3/19 stand; leg 3 reopened). The fleet's l <= 6 caps (kps C_l, mac-mini T_l (13-2l) poles, klein 6-top) are hereby NECESSARY, not convenient.
+
+THE FIX (new mathematics): GAP DESCENT -- nesting instead of accounting. (1) exists_gap_subinterval: w*L >= 2 ==> the window contains a FULL inter-tooth gap, length (1-2rho)/w, pointwise dist >= rho (constructive: gap after tooth ceil(w*a+rho)). (2) spread_tower: consecutive-ratio >= 2/(1-2rho) = 26/11 tops all dodged at one point -- ANY count (adaptive, ceiling does not apply). (3) The corrected l >= 7 architecture: invisible lifts (k = 0 mod 13 => v >= 170 > 134 = 2/L) descend; bottom/visible cluster -> a/169 grid (position of r+13k at t = a/169 depends only on (r, k mod 13)); PROBE: 12/12 l >= 7 patterns have strict 169-witnesses, room >= 19/169 (k=1 bottom block: 48/169 at a=6); exact-M spots 2/7, 3/26, 7/32 >> 1/13. Residual precisely mapped in the backlog.
+
+FORMALIZATION: LRCGapDescent.lean GREEN kernel-pure (exists_gap_subinterval + spread_tower + spread_tower_13; List.IsChain -- Chain' is deprecated, note for the fleet), standard trio, registered, corpus 8668. Interval arithmetic only -- no measure, no rlength.
+
+COORDINATION: kps HYP-4113 collision flagged (mine committed first at S80 close-out; suggested renumber 4115). Verification saved: six_top_ceiling_gap_descent_opus_S81.{py,out}. Reflection: the-six-top-ceiling-and-the-three-tools (measure/nesting/arithmetic partition the top spectrum; Liu-Layland engineering echo).
+
+Files: LRCGapDescent.lean (new, green); MISTAKE-105; HYP-4116 (+4107 amendment); reflection; backlog lead; script+output. No canon overridden without court: the correction is to MY OWN S78 claim, documented in MISTAKES.
 
 ## mac-mini-2026-07-05-S53 -- l=3 CLOSED (13.3B cells, DOUBLE-verified py+C with EXACT level-count match); the PYRAMID method (13u orbit windows, kill condition 25d >= 26u <=> d >= u+1 EXACT); l=5/6 boxes + 386 corners clean; the WITNESS-FAMILY CROSSING (multi-towers at q=14r+1 vs singles at 13(r+1), coinciding at the deep well 169); 7 atom rows GREEN kernel-pure; l=4 6-way-parallel in flight at close-out (HYP-4109)
 

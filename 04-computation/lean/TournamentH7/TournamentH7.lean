@@ -320,3 +320,4 @@ import TournamentH7.LRCGapLadder  -- kps-S7(2026-07-05): the l>=2 peel ladder at
 import TournamentH7.LRCPairWalk  -- kps-S8(2026-07-05): the pair walk (3-step tooth-boundary walk, linarith kill) => gap_pair_rung: every pair of a gap violator has min <= 22B -- 3x sharper than the S7 density C_2 (HYP-4117)
 import TournamentH7.LRCMultiKillerWindow13
 import TournamentH7.LRCLiftPigeonhole
+import TournamentH7.LRCGapDescent

@@ -1,0 +1,66 @@
+========================================================================
+PART 1: THE SIX-TOP CEILING (fee-mean lower bound)
+========================================================================
+window L = 2*delta = 7/468 ~ 0.014957   (l=7, beta=1/6, B=12)
+mean fee per top = 2*rho*L = 7/3042 ~ 0.002301
+budget check: l * 2*rho = l * 2/13 >= 1  <=>  l >= 6.5  ==> ceiling at l = 6
+
+ w      sup_fee        mean=2*rho*L   sup>=mean?
+    14  0.01098901   0.00230112   True
+    15  0.01025641   0.00230112   True
+    19  0.00809717   0.00230112   True
+    29  0.00530504   0.00230112   True
+    67  0.00232810   0.00230112   True
+    97  0.00317209   0.00230112   True
+   134  0.00232810   0.00230112   True
+   300  0.00256410   0.00230112   True
+  1000  0.00230769   0.00230112   True
+  2500  0.00233846   0.00230112   True
+ 10000  0.00230769   0.00230112   True
+mean bound holds at every scanned w  ==> sup-fee >= 2*rho*L  ALWAYS
+l=7 tops=[14, 15, 16, 17, 18, 19, 98]: sum fee-lower-bounds = 0.059694  vs budget L = 0.014957  --> BUST (>=L)
+l=7 tops=[134, 317, 750, 1773, 4190, 9904, 23409]: sum fee-lower-bounds = 0.016462  vs budget L = 0.014957  --> BUST (>=L)
+l=7 tops=[1e4..1e12 spread, mean bound]: sum fee-lower-bounds = 0.016108  vs budget L = 0.014957  --> BUST (>=L)
+l = 7: fee criterion UNSATISFIABLE at every scanned configuration  [CONFIRMED]
+l=6 tops=[6000, 24000, 96000, 384000, 1536000, 6144000]: sum fee-UPPER-bounds (mean + 4rho/w) = 0.013875 vs L = 0.014957 --> fits (criterion satisfiable at l=6)
+
+========================================================================
+PART 2: GAP DESCENT (nesting, measure-free)
+========================================================================
+descent ratio 2/(1-2rho) = 26/11 ~ 2.3636; entry w1 >= 2/L = 133.7
+  trial 0: l=10 spread tops in [148,1296298] -- nested to |J|=6.53e-07, midpoint good for all 10 tops  [OK]
+  trial 1: l=13 spread tops in [175,60942637] -- nested to |J|=1.39e-08, midpoint good for all 13 tops  [OK]
+  trial 2: l=9 spread tops in [162,684971] -- nested to |J|=1.24e-06, midpoint good for all 9 tops  [OK]
+  trial 3: l=12 spread tops in [159,31696834] -- nested to |J|=2.67e-08, midpoint good for all 12 tops  [OK]
+  trial 4: l=8 spread tops in [189,216061] -- nested to |J|=3.92e-06, midpoint good for all 8 tops  [OK]
+spread tower: ANY number of spread tops dodged -- no fee, no measure  [CONFIRMED]
+
+bottom-cluster reality check (tops 14..20, window L=7/468):
+  top 14: SLOW (w*L=0.209 < 2); largest-piece bound (L - 6rho/w)/4 = -0.004502  <= 0: DESCENT DIES
+  ==> bottom cluster kills naive descent (residual is REAL)
+
+========================================================================
+PART 3: 169-GRID PROBE for the bottom-cluster residual (l>=7, visible lifts)
+========================================================================
+strict threshold: 14/169 = 0.082840 > 1/13 = 0.076923
+  k=1 lifts at [1, 2, 3, 4, 5, 6, 7] v=[14, 15, 16, 17, 18, 19, 20, 8, 9, 10, 11, 12]  best=48/169 at a=6  [STRICT WITNESS]
+  k=1 lifts at [6, 7, 8, 9, 10, 11, 12] v=[1, 2, 3, 4, 5, 19, 20, 21, 22, 23, 24, 25]  best=19/169 at a=19  [STRICT WITNESS]
+  k=1 lifts at [1, 2, 3, 4, 5, 6, 12] v=[14, 15, 16, 17, 18, 19, 7, 8, 9, 10, 11, 25]  best=35/169 at a=5  [STRICT WITNESS]
+  k=1 lifts at [2, 4, 6, 8, 10, 11, 12] v=[1, 15, 3, 17, 5, 19, 7, 21, 9, 23, 24, 25]  best=36/169 at a=83  [STRICT WITNESS]
+  random l=7                         v=[183, 67, 3, 4, 330, 188, 20, 8, 9, 10, 76, 51]  best=27/169 at a=14  [STRICT WITNESS]
+  random l=8                         v=[1, 2, 16, 4, 5, 71, 33, 73, 48, 335, 102, 51]  best=25/169 at a=27  [STRICT WITNESS]
+  random l=9                         v=[27, 2, 328, 4, 161, 71, 189, 34, 191, 192, 76, 12]  best=23/169 at a=48  [STRICT WITNESS]
+  random l=9                         v=[27, 2, 16, 4, 70, 188, 46, 21, 22, 10, 37, 337]  best=23/169 at a=60  [STRICT WITNESS]
+  random l=9                         v=[1, 184, 42, 30, 44, 71, 189, 333, 74, 10, 11, 337]  best=23/169 at a=53  [STRICT WITNESS]
+  random l=7                         v=[40, 158, 94, 69, 31, 6, 7, 8, 9, 335, 11, 51]  best=24/169 at a=67  [STRICT WITNESS]
+  random l=7                         v=[157, 2, 3, 186, 5, 6, 72, 190, 9, 23, 193, 38]  best=31/169 at a=46  [STRICT WITNESS]
+  random l=8                         v=[157, 2, 159, 329, 44, 6, 7, 47, 191, 166, 11, 337]  best=23/169 at a=64  [STRICT WITNESS]
+==> 12/12 bottom-cluster-type families have a strict a/169 witness
+    (failures, if any, are the deep-well analogues -- the finite row stratum)
+
+spot exact-M floors (breakpoint grid m/(vi+vj), klein HYP-4114 attainment):
+  k=1 lifts at [1, 2, 3, 4, 5, 6, 7] M = 2/7 ~ 0.2857  (vs 1/13 ~ 0.0769, 3/19 ~ 0.158)
+  k=1 lifts at [6, 7, 8, 9, 10, 11, 12] M = 3/26 ~ 0.1154  (vs 1/13 ~ 0.0769, 3/19 ~ 0.158)
+  k=1 lifts at [1, 2, 3, 4, 5, 6, 12] M = 7/32 ~ 0.2188  (vs 1/13 ~ 0.0769, 3/19 ~ 0.158)
+
+ALL PARTS DONE.
