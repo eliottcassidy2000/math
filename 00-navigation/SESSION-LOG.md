@@ -1,3 +1,25 @@
+## klein-2026-07-05-S139 -- VALIDITY AUDIT + SYNTHESIS: the loose branch is IRREDUCIBLY REAL-ANALYTIC (no fixed-modulus template closes it) + a stale-banner catch + an owned misfire (HYP-4141)
+
+Prompt (owner): work remaining tasks, synthesize, challenge assumptions, carefully consider recent agent work AND ITS VALIDITY, get the LRC(14) formalization into the best state; push/pull often.
+
+AUDITED the top surface. Live reduction: LRC(14) <= LRC(<=13)[cited] + TightLooseDichotomy + CornerLonely (klein-S133 lrc14_of_dichotomy_and_corner). Tight anchor M({1..12})=1/13 machine-checked (klein-S138). kps-S10's finite refinement lrc14_of_template_and_corner (TemplateDichotomy, s<=50) is a DEAD reduction (kps-S11 HYP-4137: counterexample min witness s=53, free modulus).
+
+CONFIRMED (independently) the finite-template route is ENTIRELY dead: BOTH s<=50 AND the pinned-only repair (s|lcm(2..25)) fail -- kps found a composite runner ==0 mod L pushing the pinned-only bound Q0->inf (hill-climb 208). NO fixed-modulus template of any bound closes the loose branch.
+
+SYNTHESIS (the strategic pivot -- challenging the census/enumeration assumption): because the covering/compressed profile controls only q<=25 residues (free-modulus witnesses are CRT-killable; pinned-only witnesses forceable arbitrarily high), the loose branch CANNOT be a finite Decidable residue check. It is irreducibly REAL-valued -- the counterexample even has a real witness t=13/53; only the rational-bounded-denominator FORM fails. So mac-mini's 511,947-survivor census + the tower/level-3 sweeps are CONFIRMATION that loose families are lonely, but they PROVABLY CANNOT be assembled into the closing argument. The loose branch must be closed STRUCTURALLY, by mac-mini-S55's pole-necessity / CRT-frozen-ray periodicity (the reason the height-independent real witness EXISTS), not by enumerating a bounded template family. This is what MUST be pursued for the loose branch.
+
+HYGIENE CATCH: LRCTemplateSurface.lean's correction banner is STALE -- it still presents pinned-only (q<=Q0>=69) as "the corrected target," contradicting kps's own later S11 finding that pinned-only is ALSO dead. Would lead the next reader into the same trap. Flagged to kps (owner); not edited (avoid a second collision on their active file).
+
+OWNED MISFIRE (the lesson): I built LRCTemplatePinned.lean (pinned-only s<=69 "fix") + surface, kernel-pure and green, on kps's MID-SESSION S11 commit ("corrected = pinned-only Q0=69") -- then pulled their LATER S11 commits which refute pinned-only too. My "corrected surface" was itself a dead reduction, so I DELETED it (added no dead file to the corpus) and reverted my duplicate docstring edit. Lesson (recurrence of the MISTAKE-106 stale-read pattern): build on current HEAD, re-fetch the LATEST state of a fast-moving thread before formalizing on top of it.
+
+HONEST: no new theorem; NO net Lean change (the surface I built was refuted + removed). Value = the audit + the strategic synthesis (loose branch irreducibly real-analytic => structural close, not census) + the stale-banner catch + the process lesson. Live surface TightLooseDichotomy+CornerLonely (+ machine-checked M({1..12})=1/13) unaffected.
+
+FILES: reflection no-fixed-modulus-template (the-pinned-crux-surface-was-a-dead-reduction-and-the-corrected-surface); INDEX HYP-4141; this log; letter to kps/mac-mini. (Deleted LRCTemplatePinned.lean before commit.)
+
+NEXT: (a) kps -- update the stale LRCTemplateSurface banner (pinned-only ALSO dead; real-valued TightLooseDichotomy only); (b) close the loose branch STRUCTURALLY via pole-necessity/frozen-ray (mac-mini S55) -- NOT a finite template; (c) CornerLonely (tight branch; anchor in hand).
+
+---
+
 ## mac-mini-2026-07-05-S58 -- SYNTHESIS + VALIDITY AUDIT (owner directive): the state map, the canonical vs dead surface, the crux correctly stated (tower-limit dichotomy), the unified 13-adic structure, and a level-3 independent validation
 
 Prompt (owner): work remaining tasks + synthesize + see the big picture + challenge assumptions + consider the fleet's recent work AND ITS VALIDITY + best formal state; push/pull often.
