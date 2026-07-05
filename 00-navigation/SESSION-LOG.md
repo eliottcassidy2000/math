@@ -1,3 +1,19 @@
+## klein-2026-07-05-S137 -- THE MERGE-GRID ATTAINMENT THEOREM (THM-592's Lean face): M is attained at m/(v_i+v_j), kernel-pure -- every exact-M sweep in the project is now grid-justified by a theorem (HYP-4114)
+
+Prompt (owner): another frontier session, everything myself, no waiting on other agents.
+
+CHOICE: mac-mini-S53 and opus-S80 were live on the multi-lift volumes (colliding there = waste), so I took the substantial UNCLAIMED piece kps-S3 named: the merge-grid attainment. It underwrites every exact-M computation the fleet has ever run.
+
+DELIVERED (LRCMergeGridAttainment.lean, registered, kernel-pure, corpus green; Python grid-check 300/300 first):
+ **merge_grid_attainment**: the max-min profile of a positive family is ATTAINED at t* = m/(v_i + v_j), with i = j delivering the half-integer peaks. Hence the finite merge grid {m/(v_i+v_j)} suffices for every exact-M sweep.
+ - Stage A: distZ = |x - round x| with the nearest-point property and **1-Lipschitz continuity** (dodges the piecewise pasting argument entirely); profile = finite inf, continuous (mathlib Continuous.finset_inf'_apply), 1-periodic (round_add_intCast), positive at the constructive t0 = 1/(2W+1); attainment by compactness on [0,1] + Periodic.sub_int_mul_eq transport.
+ - Stage B (peak, M = 1/2): the inf'-achiever sits at exactly 1/2 => (2v_i)t* = 2 round(x) +- 1.
+ - Stage C (interior, M < 1/2) -- the FIBER-PIGEONHOLE LIMIT: window witnesses at t* +- eps0/(k+1) for every k (choose), an infinitely-recurring witness index on each side (Finite.exists_infinite_fiber), round-pinning across the fiber (round_eq_of_abs_lt_half), sign forcing, and le_of_forall_pos_le_add for the limit: the right-descender satisfies m_R - v_R t* = M, the left-ascender v_L t* - m_L = M; equating gives (v_R + v_L)t* = m_R + m_L.
+
+WHY IT MATTERS: (1) kps-S3's merge exclusion (gap violators need binding depth d >= 3, v+w >= 38) rests on THM-592 -- its Lean face now exists; (2) every 'M = value at witness' claim in the census/sweep corpus can now, in principle, be upgraded from float-scan-plus-exact-confirm to a kernel-checkable finite-grid evaluation; (3) with HYP-4107's parametric window stack, the two pillars of the analytic program (windows and grids) are both formal.
+
+FILES: LRCMergeGridAttainment.lean (~440 lines, 3 build iterations); HYP-4114; this entry. Three pushes. No canon overridden.
+
 ## mac-mini-2026-07-05-S54 -- THE GAP CENSUS TO HEIGHT 48: 511,947 full-profile survivors, ALL witness-cleared, ZERO in the gap (doubled kps's 24); the DOUBLED-PAIR stratum's first sweep (310,556 shapes -- the ground outside every lift sweep -- all clean); THE PROOF MAP (every leg, Lean name, status, the 5-item finish list) (HYP-4117)
 
 Prompt (owner): pull from other agents; aim to finish LRC(14), best formalized state.
