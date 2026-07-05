@@ -1,3 +1,21 @@
+## klein-2026-07-05-S132 -- THREE LEAN PIECES OF hcomp, ALL KERNEL-PURE: the one-window peel lemma (the 13x line IS the one-window line), the S131 primitivity split, and the CRT tight-AP free-rider (mac-mini handoff DONE) (HYP-4095)
+
+Prompt (owner): keep working the remaining LRC(14) mathematics, then formalization; pull/push frequently.
+
+STATE FOUND on rebase: kps-S6 assembled LRC(14) <= LRC(13) + hcomp; mac-mini-S46/S47 pinned the compressed peel (tight locus = dilated APs, CRT free-rider route, loose-base open) with my S131 primitivity correction; mac-mini-S48 landed THM-619 alignment bands (loose case = census-shaped arithmetic) CONCURRENTLY with my claim (HYP-4094 collision -- renumbered mine to 4095, priority theirs, cross-linked: their multi-window bands + my one-window threshold are the two sides of the loose case).
+
+THE MATH (new): **the one-window peel lemma.** Base margin beta at a single point + Lipschitz window (beta-1/14)/B vs the killer's bad arc 1/(7v*) gives the killer threshold v* > B/(14(beta-1/14)). At beta = 1/13 (citation floor) the threshold is EXACTLY 13B -- the dominant/compressed line IS the one-window line, which explains why the dominant peel is sharp and why compressed needs either base margin (loose) or structure (tight/CRT). At beta = 2/25 (the 12-runner second rung) the threshold drops to (25/3)B; at beta >= 1/7 every killer passes. Verified constructively 400/400; corner map: structured seeds give only TWO compressed covering primitive families with loose base + sub-threshold killer, both at M >= 2/25 -- consistent with mac-mini's empty band systems.
+
+THE LEAN (all green, kernel-pure, registered, corpus 0 errors):
+ - **LRCOneWindowPeel.lean**: good_point_in_long_interval (constructive: left endpoint or (m0+1/14)/u past the blocking arc) + lonely_of_window_margin (the lemma above) + **hcomp_of_primitive** (S131's split: non-primitive scales to primitive quotient; covering -> hprim, non-covering -> sieve; lonely_exists_of_scale transport). hcomp now consumes PRIMITIVE families only -- this supplies the free-rider's gcd hypothesis.
+ - **LRCTightAPFreeRider.lean** (mac-mini S46/S47 handoff): killer_target (13-not-div-v*: Bezout-aim at m* in {c,c+1} keeping 13-not-div-k; 13|v*: the gcd(c,13u)=1 Bezout splits into IsCoprime c u + IsCoprime 13 c, explicit CRT pins k=1 mod 13, target 13s in [c,c+12]) + tight_ap_free_rider (apKiller c v* lonely at k/(13c); lonely14_of_ratio + per-runner residue_key, base kappa=c uniform). The extremal half of hcomp's compressed peel, pure arithmetic.
+
+RESIDUAL for hcomp (honest): (i) the near-tight corner -- base M in (1/13, ~1/7) with sub-threshold killer; my threshold bounds mac-mini's band enumeration domain, their bands close it per-base; (ii) **the n=12 tight-locus rigidity** (M(W)=1/13 => W = c*AP) -- computationally verified (mac-mini-S47) but NOT proved; MISTAKE-100 risk class; the free-rider covers the whole tight case only modulo this; (iii) the peel GLUE (argmax peel + permutation/sign normalization onto apKiller's canonical order + the tight/loose dispatch) -- mechanical Lean, next session scale.
+
+HOUSEKEEPING: duplicate MISTAKE-071 renumbered to MISTAKE-103 (alias note in place); HYP-4094 collision resolved.
+
+FILES: LRCOneWindowPeel.lean, LRCTightAPFreeRider.lean (both registered); lrc14_one_window_peel_klein_S132.py + .out; HYP-4095; MISTAKES renumber. Six pushes, three rebases (one session-state conflict resolved --theirs). No canon overridden.
+
 ## mac-mini-2026-07-04-S48 -- THM-619: the ALIGNMENT-BAND CONFINEMENT CRITERION (the geometry of hcomp's loose case) -- killer teeth disjoint => one-tooth containment => M(V) < 1/13 = a CRT band system + pins + window; VERIFIED EMPTY on all four tested loose bases (HYP-4094)
 
 Prompt (owner): more mathematical progress on the geometry of the open core of the endgame.
