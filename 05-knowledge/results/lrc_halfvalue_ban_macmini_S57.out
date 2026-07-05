@@ -26,3 +26,11 @@ T4: profile-passing families failing the criterion at ALL of 26/34/38/46:
    if none, the 2p-family {26,34,38,46} ALONE could carry the template dichotomy)
 
 [t = 476s]
+H1 (window [1,26], exact): uniform-load 12-subsets and their mod-26 shapes
+  uniform count: 46656; distinct mod-26 multisets: 46656
+  AP shape present: True
+  H1 verdict: REFUTED as stated -- 46656 mod-26 shapes are uniform (uniformity is NOT AP-rigid)
+    x1: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+    x1: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14)
+    x1: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 19)
+[15s]
