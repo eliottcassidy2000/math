@@ -308,3 +308,4 @@ import TournamentH7.LRCSevenGap  -- kps-S24: seven-gap deficit + cluster sweep s
 import TournamentH7.LRCDilation  -- mac-mini-S24: WLOG gcd=1 (dilation), closes HYP-4043 far-peel gap
 
 import TournamentH7.LRCBaseFloor  -- mac-mini-S25: step-1 real->rational strict-good bridge (THM-609)
+import TournamentH7.IntervalEscape

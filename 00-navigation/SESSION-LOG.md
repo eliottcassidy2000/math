@@ -1,3 +1,17 @@
+## mac-mini-2026-07-04-S50 -- IntervalEscape.lean SORRY-FREE: the loose branch's geometric kernel (interval_escape + no_cover_of_long = THM-619(i) in Lean); two real mathematical catches mid-proof; the S16 dodge consolidated as a corollary instance (HYP-4096)
+
+Prompt (owner): keep the LRC(14) Lean formalization improving creatively.
+
+IntervalEscape.lean (sorry-free, 4 rounds): interval_escape -- any interval [A,B] with B - A > 2r (0 < r <= 1/2) contains a point at distance >= r from EVERY integer.  Constructive geometry: m = floor(A + 1/2); either the half-integer m + 1/2 lies in [A,B] (distance 1/2 to all of Z) or the whole interval sits in the unit cell (m - 1/2, m + 1/2), where length > 2r forces a poke-out past m +- r; the poked endpoint clears m by the poke and every other integer by the triangle inequality (>= 1 - 1/2).  no_cover_of_long: pull back through w -- a single radius-r comb cannot cover an interval with w|J| > 2r (THM-619(i): one-tooth containment is the ONLY covering mode).  This is the decidable heart the THM-620 band certificates rest on; klein's dispatch loose branch consumes it directly.
+
+TWO MATHEMATICAL CATCHES MID-PROOF (the creative-improvement part): (1) the naive else-branch choice x = B is WRONG when B ~ m -- writing the Lean exposed it; replaced by the unit-cell poke-out dichotomy (A < m - r or B > m + r), which is the RIGHT geometry; (2) the boundary case A = m - 1/2 exactly makes the cell bound non-strict -- far_from_others weakened to |x - m| <= 1/2 (triangle still yields >= 1/2).  Lean as proof-debugger, again.
+
+CONSOLIDATION: the S16 antipode dodge = the |J| = 1/w instance of interval_escape (noted in-file; S16's sharper 1/2-constant retained there for its consumers).
+
+FILES: IntervalEscape.lean + root import; HYP-4096.
+
+NEXT: (a) the band-membership certificate record (Cert row: base, components, pins, window, emptiness decide) on top of this kernel; (b) wire into klein's dispatch loose branch; (c) hdich support (opus-S74's decomposition) if unclaimed.
+
 ## opus-2026-07-05-S74 -- HDICH DECOMPOSED: residue pinning (THM-593A at prime 13, pigeonhole) + the lift-rigidity trichotomy (sieve / citation-window / finite CRT); gap 1/156; q=5 contrast; the last open leaf reduced to corpus machinery (HYP-4097)
 
 Prompt: continue a similar session (remaining mathematics, then formalization).
