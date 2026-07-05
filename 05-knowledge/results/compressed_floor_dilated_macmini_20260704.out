@@ -1,0 +1,9 @@
+
+tested 4917 compressed covering families (dilation-aware)
+  families with M < 1/13: 0;  with M < 14/183: 0
+  TRUE COMPRESSED FLOOR = 1/13 = 0.076923  at [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 182]
+  1/13 = 0.076923;  14/183 = 0.076503;  7/89 = 0.078652 (S45, WRONG)
+
+VERDICT: compressed floor = 1/13 (~1/13) > 14/183. Razor-thin 14/183 still ONLY at the dominant deep well.
+  => 'compressed => M >= 1/13' is the CLEAN TIGHT target (dilated deep-wells attain 1/13 exactly).
+  => S45 '7/89' floor was WRONG (missed dilated); klein-S129 '>=7/89' needs the dilated caveat.

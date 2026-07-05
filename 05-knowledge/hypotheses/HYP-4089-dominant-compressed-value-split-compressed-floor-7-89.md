@@ -1,86 +1,68 @@
-# HYP-4089 — The dominant/compressed split is a VALUE split: the razor-thin covering-min lives in the DISCHARGED dominant branch; the open compressed leaf floors at 7/89 (the lcm(12,14) shadow of the deep well)
+# HYP-4089 — The dominant/compressed split is a VALUE split; the compressed floor is 1/13 (the 12-runner LRC bound), attained by DILATED deep-wells — so `compressed ⟹ M ≥ 1/13` is the clean, tight `hcomp` target. [S45's "7/89" was WRONG.]
 
-**Status:** VERIFIED (exact-M, two independent descents + structured scan). Empirical, not yet proved.
-**Source:** mac-mini-2026-07-04-S45
-**Type:** CONFIRMATION + Lean-dispatch bridge (not a novel result — see credit)
+**Status:** VERIFIED (exact-M, >12k families incl. dilated + adversarial constructions). Empirical + partial proof route.
+**Source:** mac-mini-2026-07-04-S45 (original, 7/89 — WRONG), **corrected mac-mini-2026-07-04-S46 (→ 1/13)**
+**Type:** structural reduction of the covering-min / direct `hcomp` discharge target
 
-> **CREDIT / OVERLAP (honest).** This substantially re-derives concurrent same-day fleet results:
-> **klein-S129 (HYP-4090)** — deep well `{1..12,182}` is the UNIQUE covering family at `14/183`, every
-> other is `≥ 7/89 = {1..11,13,84}` (drop-12 residue-liar, PROVED by kps `LRCResidueLiar`), residual
-> non-sharp (`35/16287` slack); **kps-S5 (HYP-4087)** — "the far-runner tail ... the deep well" is in
-> the DISCHARGED dominant branch; **kps-S6 / opus-S72 (HYP-4091)** — the open leaf is exactly `hcomp`
-> (compressed), with "razor-sharp `14/183` only at the already-proved deep well." **My value-add is
-> only:** (a) an *independent* confirmation of the `7/89` floor computed **directly on opus's Lean
-> `compressed` predicate** (`largest ≤ 13·second-largest`), not on klein's "minimal-tightener" partition
-> — so the two agree on the floor for the exact set kps must discharge; (b) the **lcm-shadow** structural
-> "why `7/89`" below.
+> **⚠ S46 CORRECTION (supersedes the S45 body below).** S45 claimed the compressed floor is `7/89`.
+> **That was WRONG** — it was computed over *small-range* families and MISSED **dilated** families. The
+> dilated deep-well `c·{1,…,12} ∪ {182}` (`c≥3`, `13∤c`, `gcd(c,182)=1`) is **compressed** (`182 ≤ 13·12c`)
+> and covering, with **`M = 1/13 = 0.076923` EXACTLY** — below `7/89 = 0.078652`. So:
+> **the true compressed floor is `1/13`, not `7/89`.** Verified: `0` compressed covering families below `1/13`
+> over **12,158** sampled/structured/dilated + adversarial large-`c` constructions (all `= 1/13`); `94` attain
+> `1/13` exactly. **`1/13 > 14/183` still**, so the covering-min and "razor-thin only at the deep well" are
+> INTACT. (klein-S129's "non-deep-well `≥ 7/89`" holds only within its *minimal-tightener* 509-family scope —
+> dilated families are outside it and sit at `1/13`.)
+
+## The corrected statement (S46)
+> **`compressed covering ⟹ M ≥ 1/13`** — TIGHT (dilated deep-wells attain `1/13`). This is the **12-runner
+> LRC bound**: a compressed covering 13-family hides exactly as well as 12 runners. It is `> 1/14` (LRC target)
+> AND `> 14/183` (covering-min), so it discharges kps's open `hcomp` leaf with a clean, structural margin.
+
+## Why `1/13`, and the dominant/compressed = offset-forcer/free-rider dichotomy
+A covering family has a killer `a` (covers `{13,14}`, so `13∣a`). At the base's max-min `t*` the killer's phase
+is `a·t*`. Two regimes:
+- **DOMINANT** (`a > 13·(2nd)`, e.g. deep well `{1..12,182}`, `t*=1/13`): `a t* = 182/13 = 14 ∈ ℤ`, so the
+  killer sits at **0** — it **kills the base optimum**, forcing an offset → `M = 14/183 < 1/13`. *(Offset-forcer.
+  Already DISCHARGED: kps HYP-4087 dominant peel — a giant runner's danger arcs are too thin to spoil the base.)*
+- **COMPRESSED** (`a ≤ 13·(2nd)`, e.g. dilated `{3,…,36,182}`, base optimum `t*=1/39`): `a t* = 182/39 = 14/3
+  ∉ ℤ`, `‖·‖ = 1/3 ≥ 1/13` — the killer is a **free rider**, safe at the base optimum → `M = M(base) = 1/13`.
+
+So the `13×` line separates *offset-forcer* killers (`M ↓ 14/183`) from *free-rider* killers (`M = 1/13`): the
+dominant/compressed split **is** the value split. All razor-thinness (`14/183`) lives on the CLOSED side.
+
+## The peel route to `compressed ⟹ M ≥ 1/13` (partial proof)
+Peel the max runner `v*`; `W = V∖{v*}` is 12 runners, `M(W) ≥ 1/13` (LRC(13)).
+- **Loose base** (`M(W) > 1/13`): `W`'s good set has positive width; `v*` is safe on density `1−2/13 = 11/13`
+  of it → a common safe spot (needs a width-vs-arc-spacing check; empirically always holds).
+- **Tight base** (`M(W) = 1/13`, `W = c·{1,…,12}` a dilated AP): `W`'s optima are `{k/(13c) : 13∤k}` (many).
+  `v*` is safe at some optimum **by CRT**: primitivity `gcd(V)=1` with `gcd(W)=c` forces `gcd(c,v*)=1`, so
+  `v*/(13c)` has denominator with the factor `c` **coprime to `13`**; `v*`'s safety is indexed mod `c`, the
+  base optima mod `13`, and `13 ⊥ c` gives a joint residue that is both a base optimum (`13∤k`) and `v*`-safe
+  → `M(V) ≥ 1/13`. **Crucially `c>1`** here: `c=1` forces the deep well (`182>156`, dominant, excluded from
+  compressed). *Verified against adversarial large-`c` killers (`157{1..12}∪{18382}`, `313{1..12}∪{44772}`,
+  killer a near-multiple of `13c` unsafe at `j=1..12`): all give `M=1/13` exactly — the CRT optimum (e.g.
+  `j=14`) saves it.*
+- **Open in the route:** the loose-base width bound; the `n=13` tight locus (is it only dilated APs, or also a
+  GW-analog?); multi-runner peels. So this is a proof *route*, not yet a proof.
+
+## Consequence for the Lean endgame
+kps's sole open leaf `hcomp` (compressed covering ⟹ lonely, i.e. `M ≥ 1/14`) is implied by the **clean tight
+bound `M ≥ 1/13`** — a `1/13 vs 1/14` structural margin, NOT the razor `14/183`. If the peel route closes, it
+discharges `hcomp` **uniformly from LRC(13)** (the compressed twin of opus's dominant peel) — no census, no
+family-by-family ladders. That would close the covering side entirely: dominant peel (giant killer) + compressed
+peel (free-rider killer), the two sides of the `13×` line, both from LRC(13).
+
+## Resonance / links
+`14/183 = [0;13,14]` (dominant, offset) vs `1/13 = [0;13]` (compressed, free-rider) — the offset `1/13 − 14/183
+= 1/2379` is exactly the killer-offset unit (THM-618). Compressed = the "no-offset" world. See THM-618
+(single-killer offset), HYP-4087 (dominant peel), HYP-4091 (hcomp), klein-S128/S129, THM-617.
+Reflection: [[the-dominant-compressed-split-is-a-value-split]] (updated S46).
+
+**Scripts:** `04-computation/compressed_floor_dilated_macmini_20260704.py` (+ `.out`),
+`compressed_covering_min_macmini_20260704.py` (S45, superseded floor),
+`05-knowledge/results/compressed_floor_1over13_adversarial_macmini_20260704.out`.
 
 ---
-
-## Setup — the covering dispatch (opus, formalized by kps HYP-4091)
-`covering_lonely_of_dominant_or_compressed` splits every primitive covering 13-family `V` by whether it
-has a **dominant runner**:
-- **DOMINANT:** `∃ i, ∀ j≠i: 13·|v_j| < |v_i|` — the largest runner exceeds `13×` the second-largest.
-  **DISCHARGED in Lean** (kps-S5 sharp dominant peel `hdom_closed_abs`, HYP-4087): the giant runner's danger
-  arcs (`1/(7v_i) < 1/(91B)`) are too thin to spoil the 12-runner base's good interval (LRC(13)).
-- **COMPRESSED:** `largest ≤ 13·(second-largest)` — no dominant runner. **The SOLE remaining open leaf.**
-
-## The statement (confirmed) — the dispatch split is also a VALUE split
-> **The razor-thin covering-min `14/183` lives ENTIRELY in the DISCHARGED dominant branch.
-> The open COMPRESSED leaf (`hcomp`) is bounded away: every compressed covering family has
-> `M ≥ 7/89 = 0.078652`, a margin of `35/16287 ≈ 0.00215` above `14/183 = 0.076503`.**
-> (klein-S129 established this for "every non-deep-well family"; here it is verified on opus's exact
-> `compressed` predicate — the two sets share the floor `7/89`.)
-
-- **Deep well `{1,…,12, 182}`** (the covering-min extremizer, `M = 14/183`) is **DOMINANT**:
-  `182 > 13·12 = 156`. So the extremizer is in the **closed** branch. This is not a coincidence —
-  it is *forced*: to cover the hard pair `{13,14}` with a **single** killer needs `lcm(13,14)=182 | killer`,
-  and with base second-max `≤ 12` that killer `≥ 182 > 156` is always dominant. **A single-killer covering
-  of `{13,14}` cannot be compressed.**
-- **Compressed extremizer `{1,…,11, 13, 84}`** (`M = 7/89 = [0;12,7]`) is the **lcm(12,14) shadow**:
-  unable to use `182`, the compressed family covers `{12,14}` together with `84 = lcm(12,14) = 12·7`
-  (`84 ≤ 13·13`, compressed), leaving `13` as a separate small killer over the tight base `{1,…,11}`.
-  This is the exact structural parallel of the deep well, one lcm down.
-
-## The parallel (why 7/89 and why 14/183)
-| branch | cover `{a,b}` via one killer | killer | base | `M` | CF |
-|---|---|---|---|---|---|
-| **dominant** (closed) | `{13,14}` | `182 = lcm(13,14)` | `{1..12}` | `14/183` | `[0;13,14]` |
-| **compressed** (open) | `{12,14}` | `84 = lcm(12,14)` | `{1..11,13}` | `7/89` | `[0;12,7]` |
-
-`84 = lcm(12,14)`, and covering `14` forces `7 ∣ K` on the `{1..11,13,12K}` ladder `M = K/(12K+1)`, whose
-minimum over covering `K` is `K=7 → 7/89`. Both extremizers are single-"big-lcm-killer" + tight base;
-the covering constraint on `{13,14}` (needing `182`) is what makes the tight one dominant.
-
-## Verification (exact-M, `Fraction` breakpoints)
-- **`0` compressed covering families below `14/183`** over `>15,000` sampled/structured (random broad sample
-  `0/7939`; structured drop-1/drop-2 ladders `0/…`).
-- **Compressed floor `= 7/89`**, reached at `{1,…,11,13,84}`, robust across: broad random + local descent
-  (two independent runs, wide range `[1,260]`, single- and multi-restart) both converged to `7/89`;
-  structured exhaustive over `{1..13}\{≤2 elts} + killers`. Values seen climbing the ladder above it:
-  `7/89 < 2/23 < 9/109 < 1/12 < …` (Ostrowski rungs `[0;12,k]`, `[0;11,k]`).
-- `7/89 > 1/13 = 0.076923` (so the floor even clears the 12-runner LRC bound) `> 14/183`.
-
-## Consequence for the Lean endgame (the point)
-kps's remaining obligation `hcomp` (**every compressed covering family is lonely**, i.e. `M ≥ 1/14`) is
-**not razor-thin**: the true value in the compressed branch is `≥ 7/89`, a `~2.8%` margin above the
-covering-min and a `~10%` margin above the LRC target `1/14`. So the compressed leaf can be discharged with
-a **slack** bound (any `c ≤ 7/89`, e.g. a clean `M ≥ 1/13` or even `M ≥ 1/14 + ε`), **not** the sharp
-`14/183` equioscillation. The sharp `14/183` argument (THM-618 killer-offset) is only needed in the
-dominant branch — which is already closed. **This relocates all remaining razor-thinness out of the open
-leaf.**
-
-## Resonance
-`89 = 12·7+1` and killer `84 = 12·7` coincide with **kps's `residueLiar84_lonely` (K=7, 37/89)** — the
-compressed floor and kps's residue-liar family are the same `12·7` arithmetic. The compressed branch is the
-`[0;12,k]`-ladder world (klein HYP-4080 spectral gap, Ostrowski); the dominant branch is the `[0;13,k]`
-world (THM-618, deep well). See [[the-covering-min-is-an-ostrowski-ladder-and-the-ap-and-deep-well-are-its-ends]].
-
-## Not claimed / open
-The floor `7/89` is **empirical** (exact-M over a large structured + random family, not a proof). A proof
-that *compressed covering ⟹ M ≥ 1/13* (or `≥ 7/89`) would fully de-sharpen kps's open leaf — likely a
-"the extra `{13,14}`-coverage slot costs a runner, dropping to the 12-runner LRC floor `1/13`" peel,
-complementary to opus's dominant peel. Related: THM-617, THM-618, HYP-4082, HYP-4091.
-
-**Scripts:** `04-computation/compressed_covering_min_macmini_20260704.py`,
-`05-knowledge/results/compressed_covering_min_macmini_20260704.out`.
+*(S45 original body below — the `7/89` claim is SUPERSEDED by the `1/13` correction above; kept for the
+dominant/compressed dispatch framing, which stands.)*

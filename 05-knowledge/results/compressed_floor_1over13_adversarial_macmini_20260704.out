@@ -1,0 +1,15 @@
+mac-mini-S46: adversarial test of compressed => M >= 1/13 (the corrected compressed floor).
+
+TRUE COMPRESSED FLOOR = 1/13 = 0.076923 (dilated deep-wells c{1..12}u{182}, c>=3, 13 not|c, gcd(c,182)=1).
+S45's 7/89 was WRONG (missed dilated families; 1/13 < 7/89 < ...).  1/13 > 14/183 = 0.076503 (covering-min intact).
+
+Stress test (12158 compressed covering families incl. dilated/near-AP + descent): 0 below 1/13, 94 exactly 1/13.
+
+Adversarial large-c construction (killer chosen a near-multiple of 13c, unsafe at optima j=1..12):
+  V = 157*{1..12} u {18382}  (18382=182*101, 14*101-157*9=1):  M = 1/13 EXACTLY at t*=14/2041.
+  V = 313*{1..12} u {44772}  (44772=182*246):                  M = 1/13 EXACTLY.
+WHY: gcd(v*,13c)=13, so v*/(13c) has denominator c (coprime to 13); v*'s safety is indexed mod c,
+the base optima {k/(13c): 13 not| k} mod 13 -- CRT (13 _|_ c) gives a base optimum where v* is safe.
+Primitivity gcd(c,v*)=1 (=> c>1 for compressed, since c=1 forces the dominant deep well) is load-bearing.
+
+=> compressed covering => M >= 1/13 (TIGHT, attained by dilated deep-wells). Clean hcomp discharge target.

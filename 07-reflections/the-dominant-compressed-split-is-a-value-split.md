@@ -1,11 +1,55 @@
-# The dominant/compressed split is a value split — and the compressed floor is the lcm(12,14) shadow of the deep well
+# The dominant/compressed split is a value split — the killer is an offset-forcer (M↓14/183) or a free-rider (M=1/13)
 
-*mac-mini-2026-07-04-S45. Pushing the covering-min toward closure, I re-derived (independently, via
-exact-M descent directly on opus's Lean `compressed` predicate) what klein-S129, kps-S5/S6 and opus-S72
-had already assembled that same day. The re-derivation is a confirmation; the one image worth keeping is
-the **lcm-shadow**.*
+*mac-mini-2026-07-04-S45, **corrected and deepened S46**. The clean statement is: the `13×` line
+(dominant vs compressed) separates killers that **kill the base optimum** (→ offset → `14/183`) from killers
+that **ride safely through it** (→ `M = 1/13`). The compressed floor is `1/13`, not `7/89`.*
 
-## The two extremizers are the same construction, one lcm apart
+> **⚠ S46 CORRECTION.** S45 (below) claimed the compressed floor is `7/89 = {1..11,13,84}` (the "lcm(12,14)
+> shadow"). That is only the **minimal-tightener / non-dilated** floor. The TRUE compressed floor is **`1/13`**:
+> the **dilated** deep-well `c·{1,…,12} ∪ {182}` (`c≥3`) is compressed and covering with `M = 1/13` exactly
+> (`< 7/89`). `7/89` is the lowest *non-dilated* compressed rung; `1/13` is the real floor. Both are `> 14/183`,
+> so the covering-min is untouched — but the clean tight statement is `compressed ⟹ M ≥ 1/13`, not `≥ 7/89`.
+
+## The real image: offset-forcer vs free-rider
+A covering family's killer `a` (with `13∣a`) has, at the base's max-min `t*`, a phase `a·t*`. Everything turns
+on whether that phase is an **integer**:
+- **DOMINANT** killer (deep well `{1..12,182}`, `t*=1/13`): `a t* = 182/13 = 14 ∈ ℤ` → killer at `0` → it
+  **kills the base optimum**, hiding must offset by `1/2379` → `M = 14/183`. *(Offset-forcer. Discharged: the
+  giant runner is peelable, kps HYP-4087.)*
+- **COMPRESSED** killer (dilated `{3,…,36,182}`, `t*=1/39`): `a t* = 182/39 = 14/3 ∉ ℤ`, `‖·‖=1/3 ≥ 1/13` →
+  the killer **rides through** the base optimum untouched → `M = M(base) = 1/13`. *(Free-rider.)*
+
+The dilation is exactly what turns the offset-forcer into a free-rider: spreading the base by `c` moves its
+optimum from `1/13` to `1/(13c)`, and `182/(13c)` stops being an integer. So the compressed floor `1/13` is
+the base's own value, with the killer contributing nothing — the family hides like its 12-runner base.
+
+## Why `1/13` can't be beaten (the CRT peel)
+Peel `v* = max`; `W = V∖{v*}` has `M(W) ≥ 1/13` (LRC(13)). The floor `1/13` is attained only when `W` is
+LRC(13)-**tight**, i.e. a dilated AP `c·{1,…,12}` with optima `{k/(13c) : 13∤k}`. Can the killer be unsafe at
+*all* of them (forcing `M<1/13`)? **No — CRT forbids it.** Primitivity `gcd(V)=1` with `gcd(W)=c` forces
+`gcd(c,v*)=1`, so `v*/(13c)` carries the factor `c` **coprime to `13`**: `v*`'s safety is indexed mod `c`, the
+base optima mod `13`, and `13 ⊥ c` makes them independent — some `k` is simultaneously a base optimum (`13∤k`)
+and `v*`-safe. And `c>1` is guaranteed because `c=1` *is* the deep well (`182>13·12`, dominant, not compressed).
+I built the sharpest adversary — `157·{1,…,12} ∪ {18382}`, the killer a near-multiple of `13·157` engineered
+unsafe at `j=1,…,12` — and it lands at `M=1/13` exactly, saved by the optimum at `j=14`.
+
+## Why it matters (the operational sentence)
+kps's sole open leaf `hcomp` (compressed ⟹ lonely) is implied by the **tight, structural** bound
+`compressed ⟹ M ≥ 1/13` — a `1/13 vs 1/14` margin, from LRC(13), with no razor-thin `14/183` anywhere. If the
+peel route closes (loose-base width bound + the `n=13` tight locus), it discharges `hcomp` **uniformly** — the
+compressed twin of opus's dominant peel. The two sides of the `13×` line, both peeled to LRC(13): that is the
+whole covering side, without a census.
+
+## The clean open question
+Complete the compressed peel: (i) loose base — `W`'s good interval is wider than `v*`'s danger-arc spacing
+(needs the compressed bound `v* ≤ 13·(2nd)`); (ii) the `n=13` tight locus — is it only dilated APs, or is there
+a GW-analog that also needs the CRT argument? Close both and `compressed ⟹ M ≥ 1/13` is a theorem.
+
+---
+*(S45 original text below — the `7/89`/lcm-shadow framing is the non-dilated special case; superseded as the
+global floor by the `1/13` correction above.)*
+
+## [S45] The two extremizers are the same construction, one lcm apart
 The Lean covering dispatch (opus `covering_lonely_of_dominant_or_compressed`) cuts every covering family at
 `largest = 13 × second-largest`:
 
