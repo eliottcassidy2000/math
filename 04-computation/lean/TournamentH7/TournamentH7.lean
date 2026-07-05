@@ -311,6 +311,7 @@ import TournamentH7.LRCWindowMargin13
 import TournamentH7.LRCKernelGate13
 import TournamentH7.LRCLiftRigidityRows
 import TournamentH7.LRCHarmonicGate  -- kps-S2(2026-07-05): rational-point margin certificate (t=k/s, margin mu/s, decidable integer hypothesis) + ratio-gate reduction of TightLooseDichotomy to spread bases; 2nd harmonic closes {1..11,24}; at beta=1/13 the gate subsumes the tight branch (HYP-4102)
+import TournamentH7.LRCLiftFloorRows  -- mac-mini-S53(2026-07-05): the multi-lift floor certificate rows through the atom -- block46 (the {4,6}->{17,19} floor family, margin >= 2/25 at t=6/25) + the six 14r-ladder rows (margins >= 14/(13(r+1)), r=7..12; r=12 = the n=13 deep well 14/169); all decide-discharged (HYP-4109, certificates from S52/HYP-4103)
 import TournamentH7.LRCCertCompleteness  -- kps-S3(2026-07-05): certificate completeness (margin => atom cert, modulus bound s <= B/(2(beta'-beta))+1) + gap filters (not_loose covering/near-unit/mod-13,14 pinning INTO the gap, +-pair covering) (HYP-4105)
 import TournamentH7.LRCGridAttainment  -- kps-S4(2026-07-05): THM-592 grid attainment (margin max at m/(|vi|+|vj|), perturbation proof) + grid_margin_domination + loose_branch_cert_2B (modulus <= 2B, zero slack) (HYP-4108)
 import TournamentH7.LRCMergeExclusion  -- kps-S5(2026-07-05): the merge exclusion formal (margin value = k/s on the grid; gap (1/13,2/25) forces |vi|+|vj| >= 38 via omega incl. the k=2 parity kill) (HYP-4110)
