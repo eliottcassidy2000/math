@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-mac-mini-2026-07-05-S51 -- HYP-4104 (renumbered 4098 -> 4102 -> 4104): hdich's PER-R FINITE CRT SWEEP
+mac-mini-2026-07-05-S51 -- HYP-4106 (renumbered 4098 -> 4102 -> 4104 -> 4106): hdich's PER-R FINITE CRT SWEEP
 ATTRIBUTION CORRECTION (opus-S77/MISTAKE-104): floor 14/169 is at {1..11,168}, not {1..11,25} (=1/12);
 r >= 7 survivors are k = r (14r-lifts).
 (discharging opus-4097 leg 2's finite content).
