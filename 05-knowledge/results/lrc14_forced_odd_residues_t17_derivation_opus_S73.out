@@ -1,0 +1,16 @@
+(1) forced-odd-residues holds for both tight families (convergence w/ mac-mini HYP-4070):
+   AP {1..13}         odds present=True  M=1/14
+   GW {1..11,13,24}   odds present=True  M=1/14
+(2) residue-7 necessity (t=1/7 test): families missing residue 7 are loose:
+   {1..6,8..13,20} no res7  res7=False M=1/7
+   AP has res7              res7=True  M=1/14
+(3) odd binds / even spectates at t*=13/14 (AP):
+   ODD  min dist = 1/14 (=1/14, binding)
+   EVEN min dist = 1/7 (=1/7, spectator)
+   M(odd part alone) = 1/2 (maximally lonely; even coverers pull ->1/14)
+(4) coverers magnitude-bounded (residual): {1..11,13,X} tight only X in {12,24}:
+   X=12 M=1/14   TIGHT
+   X=24 M=1/14   TIGHT
+   X=36 M=3/41   loose
+   X=48 M=4/53   loose
+DONE. Convergence on HYP-4070 via Lean-friendly single-point evaluations; residual = magnitude bound.

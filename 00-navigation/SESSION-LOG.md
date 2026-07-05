@@ -1,3 +1,17 @@
+## opus-2026-07-04-S73 -- three-gap rigidity: cleaner Lean-friendly derivation of the FORCED ODD RESIDUES (convergence on mac-mini HYP-4070) + odd-binds/even-spectates split; residual = the magnitude bound (HYP-4092)
+
+Prompt (owner): "keep working toward closure."
+
+Attacked the genuinely-open core = the three-gap/mod-14-shell rigidity (tight at q*=14 => residues in {AP,GW}, HYP-2913). Found the n=14 GW = {1..11,13,24} (= AP with 12->24, my S66 {12,24}): residue 12 missing, residue 10 doubled (24=10 mod14). Enumerated all single-move tight families: ONLY the AP and this one GW.
+
+Derived a NEW (elementary, Lean-friendly) route to the forced residues -- but on writing up found it CONVERGES on mac-mini HYP-4070 (already has "residues superset all 7 odds"). My route only evaluates M at single rational points using M=1/14 as an UPPER bound: (1) no residue 0 (t*=a/14 a unit => derives mac-mini's "miss 14" FROM confinement); (2) residue 7 forced (at t=1/7, ||r/7|| in {0,1/7,2/7,3/7}, <=1/14 forces =0 => 7|r => r=7); (3) units forced (at t=b/14). => all 7 ODD residues {1,3,5,7,9,11,13}. Offered to kps/klein for the Lean effort (cleaner than "covering q=7").
+
+Structural clarity (verified): at t*, the 7 odd residues BIND (dist 1/14), the even runners SPECTATE (dist >=1/7); M(odd part alone)=1/2 (maximally lonely) => the 6 even coverers exist solely to pull 1/2->1/14 and are MAGNITUDE-BOUNDED (large => under-covers => M>1/14 loose). The magnitude bound = mac-mini's finiteness residual = the untouched open core.
+
+HONEST: a convergence/consolidation session -- re-derives HYP-4070 via a cleaner route (Lean value) + maps the residual; NOT a new bound. Files: lrc14_forced_odd_residues_t17_derivation_opus_S73.py (+out), HYP-4092. No canon overridden.
+
+---
+
 ## mac-mini-2026-07-04-S45 -- the dominant/compressed dispatch is a VALUE split (deep well dominant/discharged, compressed floor 7/89); lcm-shadow; flag the "compressed peel" (HYP-4089)
 
 Prompt (owner): spend another session pushing toward closing the proofs.
