@@ -54,12 +54,17 @@ static void dfs(bs covered, int nassigned){
         int have = popcount_and(&covered,&COLMASK[b]);
         if(169-have > 26*nrem) return;
     }
-    /* least-options uncovered cell (incremental counts) */
+    /* least-options uncovered cell WITHIN the first incomplete column (column-major:
+       finish column 1 before column 2 etc -- occupancy kills most branches per column) */
     int best=-1, bestn=99;
-    for(int i=0;i<NCELLS;i++){
-        if(bs_get(&covered,i)) continue;
-        int n=opt_cnt[i];
-        if(n<bestn){ bestn=n; best=i; if(n<=1) break; }
+    for(int b=1;b<13 && best<0;b++){
+        for(int i=0;i<NCELLS;i++){
+            if(cellval[i]%13!=b) continue;
+            if(bs_get(&covered,i)) continue;
+            int n=opt_cnt[i];
+            if(n<bestn){ bestn=n; best=i; if(n<=1) break; }
+        }
+        if(bestn<99) break;  /* found an uncovered cell in this column */
     }
     if(best<0||bestn==0) return;
     for(int k=0;k<killer_n[best];k++){

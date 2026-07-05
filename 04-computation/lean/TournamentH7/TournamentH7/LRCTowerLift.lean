@@ -43,7 +43,39 @@ theorem speedOK13_lift {s num : ℤ} {den : ℕ} (h : speedOK13 s num den) :
 theorem rowA_check_2197 : ∀ i, speedOK13 (LiftRowsL7.rowA i) (13 * 6) (13 * 169) :=
   fun i => speedOK13_lift (LiftRowsL7.rowA_check i)
 
+/-- **The strict gap lemma** (assembly item (iii): hdich needs `> 1/13`, and interior
+points of a full inter-tooth gap deliver it -- strictness is free in the nested tower,
+since a nested subinterval's interior is strictly inside every enclosing gap). -/
+theorem gap_interior_strict (ρ w a L : ℝ) (hρ0 : 0 < ρ) (hρ : ρ < 1/2)
+    (hw : 0 < w) (hL : 2 ≤ w * L) :
+    ∃ c d : ℝ, a ≤ c ∧ d ≤ a + L ∧ c < d ∧
+      ∀ t, c < t → t < d → ∀ m : ℤ, ρ < |w * t - m| := by
+  have hk1 : w * a + ρ ≤ ((⌈w * a + ρ⌉ : ℤ) : ℝ) := Int.le_ceil _
+  have hk2 : ((⌈w * a + ρ⌉ : ℤ) : ℝ) < w * a + ρ + 1 := Int.ceil_lt_add_one _
+  refine ⟨(((⌈w * a + ρ⌉ : ℤ) : ℝ) + ρ) / w, (((⌈w * a + ρ⌉ : ℤ) : ℝ) + 1 - ρ) / w,
+    ?_, ?_, ?_, ?_⟩
+  · rw [le_div_iff₀ hw]
+    have hmul : a * w = w * a := mul_comm a w
+    linarith
+  · rw [div_le_iff₀ hw]
+    have hmul : (a + L) * w = w * a + w * L := by ring
+    linarith
+  · rw [← sub_pos, div_sub_div_same]
+    apply div_pos ?_ hw
+    linarith
+  · intro t htc htd m
+    rw [div_lt_iff₀ hw] at htc
+    rw [lt_div_iff₀ hw] at htd
+    have hcomm : w * t = t * w := mul_comm w t
+    by_cases hm : m ≤ ⌈w * a + ρ⌉
+    · have hmR : (m : ℝ) ≤ ((⌈w * a + ρ⌉ : ℤ) : ℝ) := by exact_mod_cast hm
+      exact lt_abs.mpr (Or.inl (by linarith))
+    · have hm1 : (⌈w * a + ρ⌉ : ℤ) + 1 ≤ m := by omega
+      have hmR : ((⌈w * a + ρ⌉ : ℤ) : ℝ) + 1 ≤ (m : ℝ) := by exact_mod_cast hm1
+      exact lt_abs.mpr (Or.inr (by linarith))
+
 #print axioms speedOK13_lift
+#print axioms gap_interior_strict
 
 end TowerLift
 end LonelyRunner

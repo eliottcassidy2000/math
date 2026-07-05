@@ -1,0 +1,11 @@
+mod 169, interval [1,12]: max nontrivial |char sum| = 7.805 (k=19), avg = 2.781, sqrt(12) = 3.464, phi = 156
+mod 2197, interval [1,169] (13-mult excluded, 156 terms): max = 45.899 (k=2023), avg = 9.896, sqrt(156) = 12.490, phi = 2028
+
+level 2: column cells = 13, kills/column = 24 (density 1.85), expected uncovered/column ~ 1.8, P(cover column) ~ e^-1.8, P(cover all 12 columns) ~ 1e-9
+level 3: column cells = 169, kills/column = 312 (density 1.85), expected uncovered/column ~ 22.8, P(cover column) ~ e^-22.8, P(cover all 12 columns) ~ 1e-119
+level 4: column cells = 2197, kills/column = 4056 (density 1.85), expected uncovered/column ~ 296.0, P(cover column) ~ e^-296.0, P(cover all 12 columns) ~ 1e-1542
+
+=> the dichotomy at level 3 is probabilistically inevitable: a generic refinement
+   leaves ~27 uncovered cells PER COLUMN; only exact structural alignment (tight
+   families = perfect covering designs) can cover. Proof lever: occupancy second
+   moment + character-sum equidistribution (max |char sum| above).
