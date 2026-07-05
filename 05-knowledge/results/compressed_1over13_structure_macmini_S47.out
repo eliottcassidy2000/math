@@ -1,0 +1,31 @@
+mac-mini-S47: structure of compressed covering => M >= 1/13 (refining S46 HYP-4089).
+
+VERIFIED (reliable = structured enumeration + exact-M descent from structured seeds; NOT random sampling):
+
+1. n=13 TIGHT LOCUS = dilated APs only. 12-runner primitive families with M=1/13 exactly (range<=16):
+   4 families, ALL dilated APs c*{1..12}. Zero non-AP tight families. (=> CRT tight-case argument is complete.)
+
+2. 12-runner base SPECTRUM near 1/13 (structured):
+     1/13  = dilated AP c*{1..12}                    (tight)
+     2/25  = {1..11,24} = {1..n-2, 2(n-1)}           (= 2/(2n-1), the known second-smallest)
+     1/12  = {1..11,13}, {1..11,22}, {1..11,25}, ... (many)
+   The base-spectrum gap is (1/13, 2/25), NOT (1/13,1/12). [S47 transient "gap to 1/12" was a
+   sampling artifact -- MISTAKE-102, missed {1..11,24}.]
+
+3. COMPRESSED covering floor = 1/13. Exact local descent from structured seeds -- dilated deep-wells
+   c*{1..12}u{182} (c=3,5,7,11), 2*{1..12}u{13}, {1..11,24,182}, {1..11,13,84}, 3*{1..11,13}u{182},
+   adversarial 157*{1..12}u{18382} -- ALL converge to 1/13, NOTHING below.
+   Suspect families verified >= 1/13:
+     {1..11,24,182}      M = 2/25  (base {1..11,24} at 2/25, killer free-rides)
+     2*{1..12}u{13}      M = 1/13  (even-dilated deep-well)
+     3*{1..11,24}u{182}  M = 2/25
+     157*{1..12}u{18382} M = 1/13  (adversarial killer, saved by CRT optimum j=14)
+
+MECHANISM (offset-forcer / free-rider): at the base max-min t*, killer phase a*t* is an INTEGER iff
+dominant (deep well 182/13=14 -> kills optimum -> offset -> 14/183) and NON-integer iff compressed
+(dilated 182/39=14/3 -> free rider -> M=base=1/13). Tight-AP-base case: killer safe at some base optimum
+{k/(13c):13 not|k} by CRT (primitivity gcd(c,v*)=1 spreads the killer phase mod c, coprime to 13).
+
+STATUS: compressed => M >= 1/13 is a CONJECTURE (tight, floor 1/13). Supported by CRT arg (tight-AP base)
++ structured descent + adversarial exact-M. NOT exhaustive (sampling can't verify it -- MISTAKE-102).
+Covering-min 14/183 UNAFFECTED (1/13 > 14/183). Open: loose-base case (M(base)>=2/25) killer-drag bound.

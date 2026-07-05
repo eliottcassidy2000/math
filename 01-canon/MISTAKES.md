@@ -11,6 +11,17 @@ Format per entry:
 
 ---
 
+## MISTAKE-102: RANDOM SAMPLING OF SPEED-SETS MISSES STRUCTURED FAMILIES — recurred twice in mac-mini-S45/S47 (same trap as MISTAKE-101)
+
+- **What was done:** To find the "compressed covering-min floor," I searched by random-sampling 13-subsets of an integer range + local descent. S45 concluded the floor is **7/89**; S47, searching the 12-runner spectrum by random sampling, concluded a "spectral gap M=1/13 or ≥1/12."
+- **Why both were WRONG:** random sampling of `k`-subsets from `[1,B]` hits a *specific* structured family (e.g. `{3,6,…,36,182}` or `{1,…,11,24}`) with probability `~1/C(B,k) ≈ 0` — it essentially NEVER samples the commensurate/dilated/arithmetic families that are the actual extremizers.
+  - S45 missed the **dilated deep-wells** `c·{1..12}∪{182}` (`c≥3`), which are compressed covering with `M = 1/13 < 7/89`. **True compressed floor = 1/13, not 7/89.**
+  - S47 missed `{1,…,11,24}` with `M = 2/25 ∈ (1/13, 1/12)`, so the "gap to 1/12" was false — the real 12-runner second value is `2/25 = 2/(2n−1)` (the known formula), gap `(1/13, 2/25)`.
+- **Correct framing:** for any floor/spectrum/extremizer claim, use **structured enumeration** (dilated APs `c·B`, `{1..n−2, m(n−1)}` families, near-tight bases × dilations × killers) and **exact-M local descent from structured seeds** — NOT random subset sampling. Random sampling is fine only for finding *loose* families / upper bounds, never for the floor.
+- **Impact:** S45 HYP-4089 "floor 7/89" corrected to 1/13 (S46). S47 transient "1/12 gap" never entered canon. The **covering-min 14/183 is UNAFFECTED** throughout (all these families are `≥ 1/13 > 14/183`). `compressed ⟹ M ≥ 1/13` stands (dilated deep-wells attain 1/13; supported by CRT free-rider argument + structured descent — but is a CONJECTURE, since exhaustive verification is exactly what sampling can't do).
+- **This is the SAME trap as MISTAKE-101** (opus-S62: "gap grows with u_max" was a sampling artifact; near-extremal = commensurate dilated APs). It recurred despite 101 being logged — **treat "I sampled and found the floor is X" as UNRELIABLE by default in this project; the extremizers are always arithmetic/commensurate.**
+- **Source:** mac-mini-S47 (self-caught S47 via the prior 2/(2n−1) formula in SESSION-LOG; S45→S46 self-caught via the peel analysis).
+
 ## MISTAKE-101: "The f=2 tightening gap GROWS with u_max => u_max bounded" (opus-S62) -- a RANDOM-SAMPLING artifact; the near-extremal families are commensurate dilated APs, MISSED by random sampling
 
 **Session:** opus-2026-07-03-S62 (claimed), opus-2026-07-03-S63 (refuted same-day, before building on it).

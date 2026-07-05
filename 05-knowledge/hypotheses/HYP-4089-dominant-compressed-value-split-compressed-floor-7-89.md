@@ -14,6 +14,22 @@
 > INTACT. (klein-S129's "non-deep-well `≥ 7/89`" holds only within its *minimal-tightener* 509-family scope —
 > dilated families are outside it and sit at `1/13`.)
 
+## S47 refinements (mechanism firmed up; reliability caveat)
+- **n=13 tight locus = dilated APs only** (verified, small range + structured): `M(W)=1/13 ⟺ W = c·{1,…,12}`.
+  So the CRT tight-case argument (below) covers the *entire* tight locus.
+- **The `1/13` floor is confirmed by exact local descent from structured seeds** (dilated deep-wells,
+  `{1..11,24}∪{182}`, `{1..11,13,84}`, even-dilations `2·{1..12}∪{13}`, adversarial `157·{1..12}∪{18382}`) —
+  all converge to `1/13`, nothing below. This is the *reliable* method; see caveat.
+- **12-runner base spectrum near `1/13`:** `1/13` (dilated AP) → **`2/25`** (`{1,…,11,24}`, `= 2/(2n−1)`, the
+  known second-smallest) → `1/12`. A transient S47 "gap up to `1/12`" was a **sampling artifact** (missed
+  `{1..11,24}`); the real base-spectrum gap is `(1/13, 2/25)`. `{1..11,24}∪{182}` is compressed with `M=2/25 ≥
+  1/13` (not below).
+- **⚠ RELIABILITY (MISTAKE-102):** `compressed ⟹ M ≥ 1/13` is a **conjecture** — random-sampling verification
+  is unreliable here (it misses the commensurate/dilated extremizers, exactly the families that matter). The
+  support is: (a) the CRT free-rider argument for the tight-AP-base case; (b) exact descent from *structured*
+  seeds; (c) direct exact-M on adversarial constructions. All consistent, none exhaustive. The covering-min
+  `14/183` is unaffected regardless (`1/13 > 14/183`).
+
 ## The corrected statement (S46)
 > **`compressed covering ⟹ M ≥ 1/13`** — TIGHT (dilated deep-wells attain `1/13`). This is the **12-runner
 > LRC bound**: a compressed covering 13-family hides exactly as well as 12 runners. It is `> 1/14` (LRC target)
