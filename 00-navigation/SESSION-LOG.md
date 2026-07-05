@@ -1,3 +1,22 @@
+## klein-2026-07-05-S138 -- THE VALUE FORM: exact-M claims become finite rational computations (margin_le_of_grid kernel-pure) + M({1..12}) = 1/13 EXACTLY machine-checked + owning MISTAKE-106 (HYP-4121)
+
+Prompt (owner): evaluation-direction brick; carefully assess recent agent work and validity; best formal state; push/pull often.
+
+VALIDITY PASS FIRST (the session opened with corrections):
+ - **MISTAKE-106 (mine)**: S137 duplicated kps-S4's LRCGridAttainment (their urgent letter was right; I claimed from their S3 'suggested-next' without reading the current inbox). Logged with the process lesson (inbox check + INDEX grep + filename grep BEFORE any claim). HYP-4114 corrected: canonical = kps HYP-4108; my file kept registered as an independent verification (different interior mechanism: fiber-pigeonhole vs no_uniform_push; two kernel-pure proofs of the sweep foundation).
+ - **tower_step_12 docstring** (opus-S81's six-top ceiling, MISTAKE-105): the fee criterion is uninstantiable at l >= 7; noted in-file with the descent pointer.
+ - Numbering: claimed 4121 (4115-4120 consumed by the day's cascade).
+
+THE BRICK (LRCGridValue.lean, registered, corpus green; consumes the CANONICAL stack -- mac-mini's distZ/margin + kps's grid layer):
+ - **distZ_at_rat**: distZ(a/s) = min(a%s, s-a%s)/s EXACTLY (three-case round analysis; the analytic object and integer arithmetic coincide).
+ - **marginQ** (decidable) + **margin_at_rat** (the exact bridge; inf'-cast commute by hand).
+ - **margin_le_of_grid** (kernel-pure): upper bounds from the FINITE fundamental grid -- by_contra + kps grid_margin_domination + margin_add_int periodicity + emod reduction. Together with the witness direction, every exact-M sweep claim is a finite rational computation.
+ - **FLAGSHIP: ap12_margin_eq -- M({1,...,12}) = 1/13 EXACTLY** (upper: 144-pair grid table by native_decide; witness at t = 1/13). Axiom profile: schema all native-free; the flagship = std trio + two NAMED table axioms (standard corpus data-table profile). The rigidity program's anchor fact is now machine-checked.
+
+WHAT THIS FEEDS: mac-mini's S54 finish-list [3] (strata as named decidable hypotheses -- the upper-bound half of 'exact-M' was the missing shape); kps's gap filters (tightness claims in the filters' hypotheses can now be discharged per-family); the doubled-pair census claims (each row's M-value upgradeable to kernel-checked).
+
+FILES: LRCGridValue.lean; MISTAKES (106); INDEX (4114 corrected, 4121); LRCTeethR docstring; letter to kps. Four pushes. No canon overridden.
+
 ## mac-mini-2026-07-05-S56 -- THE COMPUTATIONAL VALIDITY AUDIT (owner directive): MISTAKE-107 caught+FIXED (l=7 corrected re-sweep 4.57B leaves, HARD=0 -- my S55 sweep was the self-carried slice), MISTAKE-108 proven zero-impact (F4 vs Lean i=j), census independently re-verified TO THE FAMILY, reroute onto the new template surface (HYP-4122)
 
 Prompt (owner): carefully consider recent/current agent work AND ITS VALIDITY; best formal state; push/pull, synthesize, reroute.
