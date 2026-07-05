@@ -225,13 +225,17 @@ static int nextperm(int *a, int n){
     return 1;
 }
 
-static void run_level(int l){
+static void run_level_range(int l, int lo, int hi){
     L = l;
+    int cidx = -1;
     memset(st_nodes, 0, sizeof st_nodes); memset(st_killed, 0, sizeof st_killed);
     st_cells = st_class = st_scan = st_exact_todo = st_sieved = st_rows = st_rowkill = 0;
     int idx[8];
     for (int i = 0; i < l; i++) idx[i] = i+1;
     while (1){
+        cidx++;
+        if (cidx >= hi) break;
+        if (cidx < lo) goto nextcombo;
         /* pattern C = idx[0..l-1] */
         for (int i = 0; i < l; i++) Cset[i] = idx[i];
         nbase = 0;
@@ -273,14 +277,15 @@ static void run_level(int l){
             recurse(0);
         } while (nextperm(pa, l));
         /* next combination */
+        nextcombo: ;
         int i = l-1;
         while (i >= 0 && idx[i] == 12 - (l-1-i)) i--;
         if (i < 0) break;
         idx[i]++;
         for (int j = i+1; j < l; j++) idx[j] = idx[j-1] + 1;
     }
-    printf("l=%d done: rows=%lld rowkill=%lld cells=%lld class=%lld scan=%lld sieved=%lld EXACT_TODO=%lld\n",
-           l, st_rows, st_rowkill, st_cells, st_class, st_scan, st_sieved, st_exact_todo);
+    printf("l=%d [%d,%d) done: rows=%lld rowkill=%lld cells=%lld class=%lld scan=%lld sieved=%lld EXACT_TODO=%lld\n",
+           l, lo, hi, st_rows, st_rowkill, st_cells, st_class, st_scan, st_sieved, st_exact_todo);
     printf("  node/kill by level:");
     for (int p = 0; p < l; p++) printf("  L%d %lld/%lld", p, st_killed[p], st_nodes[p]);
     printf("\n"); fflush(stdout);
@@ -290,8 +295,9 @@ int main(int argc, char **argv){
     init_qgen();
     cellout = stdout;
     for (int i = 1; i < argc; i++){
-        int l = atoi(argv[i]);
-        if (l >= 3 && l <= 5) run_level(l);
+        int l, lo = 0, hi = 1000000;
+        if (sscanf(argv[i], "%d:%d:%d", &l, &lo, &hi) < 1) continue;
+        if (l >= 3 && l <= 5) run_level_range(l, lo, hi);
     }
     return 0;
 }
