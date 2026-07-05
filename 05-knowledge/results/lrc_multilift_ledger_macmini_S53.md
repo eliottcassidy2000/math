@@ -35,7 +35,14 @@ the chain-tail (below), pass every filter, and have w_max >= 19.
 CORNER ANATOMY (386 structured corners, all >= 2/25): floor 1/12 at the odd
 block {1,3,5,7,9}+13 (l=5); the 14r TOWERS keep margin numerator 14 beyond the
 single-lift ladder — (11,12)-tower 14/155, (10,12) 14/143, (10,11)/(10,11,12)
-14/141 — a multi-tower ladder wanting its own closed form (next session).
+14/141.  WITNESS STRUCTURE (exact): consecutive-tower pairs bind (runner 1,
+smallest tower 14r) at q = 14r + 1 with a = 14 — THE n=14 CONSTRUCTION'S OWN
+WITNESS FORM (cf. {1..12,182} at 14/(14*13+1) = 14/183) one level down; while
+single towers bind (13-r, 14r) at q = 13(r+1).  THE TWO FAMILIES COINCIDE AT
+r = 12: 14*12+1 = 169 = 13*13 — the deep well {1..11,168} is the CROSSING
+POINT of the two witness mechanisms, which is why it is the single-lift
+extremal.  Non-consecutive pairs ((10,12)) keep the smaller tower's single-rung
+witness (q = 143, binders (3,140)); the larger tower spectates.
 PER-PATTERN RECIPROCAL ANCHORS (the big lever): l=5 drops to 95 at
 C={1,2,3,4,12} (base {5..11}, margin 5/16), 337/540 patterns improve over the
 citation anchor; l=6 drops to 474 at C={1,2,3,4,11,12} (base margin 1/3),
