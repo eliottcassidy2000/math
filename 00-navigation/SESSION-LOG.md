@@ -1,3 +1,50 @@
+## mac-mini-2026-07-04-S46 -- CORRECTION: compressed floor is 1/13 not 7/89 (dilated deep-wells); `compressed ⟹ M≥1/13` is the clean TIGHT hcomp target; offset-forcer/free-rider + CRT peel route (HYP-4089 corrected)
+
+Prompt (owner): keep working toward closure creatively.
+
+STARTED from my S45 flagged "compressed peel" (compressed ⟹ M≥1/13). Realized the peel fails exactly when
+W=V∖{v_max} is LRC(13)-tight (a dilated AP) -- and that residual includes DILATED families my S45 small-range
+search MISSED. Checked: {3,6,…,36,182}=3·{1..12}∪{182} is compressed (182≤13·36) covering with M=1/13 EXACTLY.
+
+CORRECTION (HYP-4089): S45's "compressed floor 7/89" is WRONG. TRUE compressed floor = **1/13** (dilated
+deep-wells attain it; 1/13 < 7/89). Verified: 0 compressed covering families below 1/13 over 12,158
+sampled/structured/dilated + adversarial large-c constructions; 94 attain 1/13. **1/13 > 14/183 still**, so the
+covering-min and "razor-thin only at deep well" are INTACT (klein-S129's 7/89 holds only in its 509
+minimal-tightener scope -- dilated families are outside it, at 1/13).
+
+CLEAN RESULT: `compressed covering ⟹ M ≥ 1/13` (TIGHT, = 12-runner LRC bound). This is a better hcomp target
+than 7/89: cleaner (LRC13 bound), tight, structural.
+
+STRUCTURE (the real image): dominant/compressed = **offset-forcer / free-rider**. At the base max-min t*, the
+killer's phase a·t* is an INTEGER when dominant (deep well 182/13=14 → kills optimum → offset → 14/183) but
+NON-integer when compressed (dilated 182/39=14/3, ‖‖=1/3 ≥1/13 → free rider → M=M(base)=1/13). Dilation moves
+the optimum 1/13→1/(13c), un-aligning the killer. The 13× line IS the integer/non-integer line.
+
+PEEL ROUTE (partial proof of compressed⟹M≥1/13): peel v_max, W=V∖{v_max} has M(W)≥1/13 (LRC13). Tight base
+W=c{1..12}: optima {k/(13c):13∤k}; killer safe at some optimum by CRT -- primitivity gcd(V)=1,gcd(W)=c forces
+gcd(c,v*)=1 so v*/(13c) carries factor c COPRIME to 13; v*-safety (mod c) ⊥ base-optima (mod 13) → common good
+k. c>1 guaranteed (c=1=deep well is dominant, excluded). Built the sharpest adversary 157·{1..12}∪{18382}
+(killer near-multiple of 13·157, unsafe at j=1..12): lands at M=1/13 exactly, saved by the j=14 optimum. OPEN
+in route: loose-base width bound; n=13 tight locus (AP-only or GW-analog?); multi-peel.
+
+WHY IT MATTERS: if the peel closes, it discharges kps's SOLE open leaf hcomp UNIFORMLY from LRC(13) -- the
+compressed twin of opus's dominant peel (HYP-4087). Both sides of the 13× line peeled to LRC(13) = the whole
+covering side, NO census. That is a genuinely different (uniform) route from the fleet's constructive
+ladder/residue-liar closure.
+
+HONEST: corrects my own S45 error; the clean bound is a CONJECTURE (strongly verified, tight) with a PARTIAL
+proof route (tight-AP case via CRT; loose + tight-locus open). Not a closure.
+
+FILES: compressed_floor_dilated_macmini_20260704.py(+out), compressed_floor_1over13_adversarial(+out);
+HYP-4089 corrected; reflection the-dominant-compressed-split-is-a-value-split (updated S46); memory. This log.
+
+NEXT: (a) finish the compressed peel -- loose-base width bound + settle the n=13 tight locus (is it dilated-AP
+only?); if AP-only, the CRT argument + a loose-base density lemma may fully close compressed⟹M≥1/13 from LRC13.
+(b) Coordinate with kps/opus: 1/13 (not 7/89) is the right hcomp target; the peel is a uniform alternative to
+the census. FLEET ALERT: anyone using "7/89" as the compressed/non-deep-well floor should use 1/13 (dilated).
+
+---
+
 ## opus-2026-07-04-S73 -- three-gap rigidity: cleaner Lean-friendly derivation of the FORCED ODD RESIDUES (convergence on mac-mini HYP-4070) + odd-binds/even-spectates split; residual = the magnitude bound (HYP-4092)
 
 Prompt (owner): "keep working toward closure."
