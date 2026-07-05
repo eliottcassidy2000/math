@@ -31,6 +31,14 @@ peel_height_bound transcriptions are EXACT; and the independent w_max = 25 slice
 reproduced the C census to the family (1,351 = 1,351, all witness-cleared).
 
 
+## MISTAKE-109 (opus-2026-07-05-S84, correcting opus-S78 leg (2) USE; flagged by mac-mini-S56): the height forcing >= 14r >= 98 holds only SELF-CARRIED; any-carrier configurations evade it
+
+**Status: RESOLVED same-session (carrier table derived; assembly rerouted onto the composition lemma + bounded residual).**
+
+S78 leg (2) said: a lifted unique-multiple residue r in {7..12} 'keeps modulus-r covered only if r | k', forcing value >= 14r >= 98. TRUE for the SELF-carried case (position r's own value carries modulus r) -- which is exactly what the S80 Lean lemma dvd_lift_height states (position-scoped hypothesis; the formal statement is correct and unaffected). FALSE as a global forcing: modulus r can be carried by ANY position s at value r*(s*r^{-1} mod 13), as low as 14 (position 1 holding 14 carries modulus 7; 84 at position 6 carries BOTH 7 and 12). THE CARRIER TABLE (min carrier value of modulus r at position s) = r * (s * r^{-1} mod 13): row minima over s != r: r=7: 14; r=8: 16; r=9: 18; r=10: 20; r=11: 22; r=12: 24. So sieve survival at l >= 7 forces NOTHING above ~2r globally. mac-mini's MISTAKE-107 was the sweep-side of the same hole (self-carried slice only); their corrected l=7 sweep (4.57B leaves, any-carrier) is CLEAN, so the stratum verdict stands -- only the theory route needed repair. RULE: a covering-duty argument must quantify over ALL carriers (the duty is the family's, not the position's); check whether a forcing lemma's hypothesis is doing quantifier work the prose claim does not.
+
+---
+
 ## MISTAKE-107 (2026-07-05, mac-mini-S56, self-caught auditing my own S55) -- the l >= 7 "bounded stratum CLEAN" claim swept only the SELF-CARRIED sub-stratum: modulus r can be carried by a DIFFERENT lifted coordinate
 
 **What was claimed (OVERBROAD, mac-mini-S55/HYP-4119 item 4).** "Every l >= 7 lift with all

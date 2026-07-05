@@ -92,3 +92,28 @@ choice to necessity: any placement-uniform fee dominates its placement mean 2ρL
 is l = 6.5. kps's C_l ladder stopping at l = 6, mac-mini's T_l = 156(13−l)/(13−2l)
 poles, and klein's 6-top multi-far are all the same theorem seen from three sides.
 No sharpened mass bound crosses it; only adaptivity (descent) or arithmetic (grid) does.
+
+
+## S84 addendum: the composition lemma and the l >= 9 leg (HYP-4136)
+
+**THE COMPOSITION LEMMA (descent with fee-paying passengers; verified 6/6,
+composition_descent_opus_S84.out):** in a window of length L, remove the <= 1 tooth each
+of p SUB-GAP passengers (values with 13*L*w <= 11; teeth split the window into <= p+1
+pieces): the largest passenger-free piece has length >= (L - Sum_p 2rho/w_p)/(p+1), and
+the gap-descent chain runs inside it (passengers stay sub-gap as gaps shrink -- the
+sub-gap condition only improves). One point ends up rho-far for base + passengers + all
+spread tops.
+
+**THE l >= 9 BUDGET TABLE** (base = <= 3 unlifted, margin 1/4, B <= 12, L0 = 3/104):
+p = 0: entry bar 69 | p = 1: bar 224 | p = 2: bar 789 | p >= 3: DEAD (worst-case fees
+14,15,16 exceed L0). So at l >= 9 the descent leg tolerates AT MOST TWO small passengers.
+
+**THE l >= 9 PARTITION:** lifted values split (<= 2 passengers in [14,29]) + (spread
+tops >= bar(p), ratios >= 26/11). RESIDUAL: >= 3 values <= 29, or any value in the mid
+zone [30, bar(p)), or ratio-clusters above the bar. All residual pieces are BOUNDED
+below ~800 except clusters, which go to the level-3 arithmetic (HYP-4126 probes) --
+the bounded residual is a mac-mini-prune-stack sweep, NOT naive (k-ranges to ~60).
+
+**ANY-CARRIER (MISTAKE-109):** the >= 98 height forcing was self-carried-only; the
+carrier table (min value r*(s*r^{-1} mod 13), minima 14..24 for r = 7..12) replaces it.
+The l >= 9 box constraints come from covering-duty matching, not per-position forcing.

@@ -1,0 +1,16 @@
+trial 0: p=2 passengers=[15, 21] fee=0.0176 piece=0.02772 (guar 0.00375) entry~72 tops[7] in [106,44336] -> all rho-far: True
+trial 1: p=1 passengers=[22] fee=0.0070 piece=0.01790 (guar 0.01093) entry~111 tops[8] in [141,122241] -> all rho-far: True
+trial 2: p=1 passengers=[18] fee=0.0085 piece=0.01602 (guar 0.01015) entry~124 tops[9] in [156,264119] -> all rho-far: True
+trial 3: p=1 passengers=[22] fee=0.0070 piece=0.01199 (guar 0.01093) entry~166 tops[5] in [213,10034] -> all rho-far: True
+trial 4: p=1 passengers=[29] fee=0.0053 piece=0.01671 (guar 0.01177) entry~119 tops[9] in [165,348201] -> all rho-far: True
+trial 5: p=2 passengers=[23, 16] fee=0.0163 piece=0.01519 (guar 0.00418) entry~131 tops[8] in [163,101072] -> all rho-far: True
+composition descent verified: 6/6
+
+l>=9 budget table: L0 = 3/104 ~ 0.028846153846153848
+  p=0 worst-case passengers 14..13: fee=0.0000 guaranteed piece=0.02885 entry bar=69
+  p=1 worst-case passengers 14..14: fee=0.0110 guaranteed piece=0.00893 entry bar=224
+  p=2 worst-case passengers 14..15: fee=0.0212 guaranteed piece=0.00253 entry bar=789
+  p=3 worst-case passengers 14..16: fee=0.0309 guaranteed piece=-0.00050 entry bar=inf  <-- DEAD (fee >= L0)
+  p=4 worst-case passengers 14..17: fee=0.0399 guaranteed piece=-0.00221 entry bar=inf  <-- DEAD (fee >= L0)
+  p=5 worst-case passengers 14..18: fee=0.0485 guaranteed piece=-0.00327 entry bar=inf  <-- DEAD (fee >= L0)
+  p=6 worst-case passengers 14..19: fee=0.0566 guaranteed piece=-0.00396 entry bar=inf  <-- DEAD (fee >= L0)
