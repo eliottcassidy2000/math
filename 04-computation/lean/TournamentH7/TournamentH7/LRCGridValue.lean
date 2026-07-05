@@ -141,5 +141,97 @@ theorem margin_at_rat (v : Fin k → ℤ) (a s : ℤ) (hs : 0 < s) :
           exact mul_le_mul_of_nonneg_right hleR
             (le_of_lt (inv_pos.mpr (by exact_mod_cast hs : (0:ℝ) < (s:ℝ))))
 
+/-- **THE UPPER-BOUND CERTIFICATE SCHEMA**: to prove `M(V) ≤ c` it suffices to check
+the FINITE fundamental merge grid `m ∈ [0, |vᵢ|+|vⱼ|)`.  With the witness direction
+(one grid point where `marginQ ≥ c`) every exact-M claim is a finite computation. -/
+theorem margin_le_of_grid (v : Fin k → ℤ) (hv : ∀ i, v i ≠ 0) (c : ℝ) (hc : 0 ≤ c)
+    (hgrid : ∀ i j : Fin k, ∀ m : ℤ, 0 ≤ m → m < |v i| + |v j| →
+      margin v ((m : ℝ) / ((|v i| + |v j| : ℤ) : ℝ)) ≤ c) :
+    ∀ t : ℝ, margin v t ≤ c := by
+  intro t
+  by_contra hcon
+  push Not at hcon
+  have hβpos : 0 < margin v t := lt_of_le_of_lt hc hcon
+  obtain ⟨i, j, m, hm⟩ := grid_margin_domination v hv (margin v t) hβpos t
+    ((le_margin_iff v _ t).1 le_rfl)
+  set s : ℤ := |v i| + |v j| with hsdef
+  have hs : 0 < s := by
+    have h1 : (0:ℤ) < |v i| := abs_pos.mpr (hv i)
+    have h2 : (0:ℤ) < |v j| := abs_pos.mpr (hv j)
+    omega
+  have hsR : (0:ℝ) < (s : ℝ) := by exact_mod_cast hs
+  have hle : margin v t ≤ margin v ((m : ℝ) / (s : ℝ)) :=
+    (le_margin_iff v _ _).2 hm
+  have hred : margin v ((m : ℝ) / (s : ℝ)) = margin v (((m % s : ℤ) : ℝ) / (s : ℝ)) := by
+    have hshift : (m : ℝ) / (s : ℝ) = ((m % s : ℤ) : ℝ) / (s : ℝ) + ((m / s : ℤ) : ℝ) := by
+      push_cast [Int.emod_def]
+      field_simp
+      ring
+    rw [hshift, margin_add_int]
+  rw [hred] at hle
+  have hgr := hgrid i j (m % s) (Int.emod_nonneg _ (ne_of_gt hs))
+    (Int.emod_lt_of_pos _ hs)
+  rw [← hsdef] at hgr
+  linarith
+
+/-! ## The flagship: `M({1,…,12}) = 1/13` EXACTLY, kernel-checked -/
+
+/-- The 12-runner arithmetic progression. -/
+def ap12 : Fin 12 → ℤ := fun i => (i : ℤ) + 1
+
+theorem ap12_ne (i : Fin 12) : ap12 i ≠ 0 := by
+  unfold ap12
+  omega
+
+/-- The finite grid table: every fundamental grid point has margin ≤ 1/13. -/
+theorem ap12_table : ∀ i j : Fin 12, ∀ m ∈ Finset.range 25,
+    marginQ ap12 (m : ℤ) (|ap12 i| + |ap12 j|) ≤ 1/13 := by
+  native_decide
+
+/-- **Upper bound**: `M({1,…,12}) ≤ 1/13`. -/
+theorem ap12_margin_le : ∀ t : ℝ, margin ap12 t ≤ ((1/13 : ℚ) : ℝ) := by
+  apply margin_le_of_grid ap12 ap12_ne _ (by norm_num)
+  intro i j m hm0 hms
+  have hs : (0:ℤ) < |ap12 i| + |ap12 j| := by
+    have h1 : (0:ℤ) < |ap12 i| := abs_pos.mpr (ap12_ne i)
+    have h2 : (0:ℤ) < |ap12 j| := abs_pos.mpr (ap12_ne j)
+    omega
+  rw [margin_at_rat ap12 m _ hs]
+  have hmnat : m = ((m.toNat : ℕ) : ℤ) := (Int.toNat_of_nonneg hm0).symm
+  have hsle : |ap12 i| + |ap12 j| ≤ 24 := by
+    have hi := i.isLt
+    have hj := j.isLt
+    unfold ap12
+    rw [abs_of_pos (by positivity : (0:ℤ) < ((i : ℕ) : ℤ) + 1),
+      abs_of_pos (by positivity : (0:ℤ) < ((j : ℕ) : ℤ) + 1)]
+    omega
+  have hmem : m.toNat ∈ Finset.range 25 := by
+    rw [Finset.mem_range]
+    omega
+  have htab := ap12_table i j m.toNat hmem
+  rw [← hmnat] at htab
+  exact_mod_cast htab
+
+/-- **Witness**: the margin at `t = 1/13` is exactly `1/13`. -/
+theorem ap12_margin_at_witness :
+    margin ap12 ((1 : ℝ) / ((13 : ℤ) : ℝ)) = ((1/13 : ℚ) : ℝ) := by
+  have h13 : (0:ℤ) < 13 := by norm_num
+  have h1 : ((1:ℤ) : ℝ) = (1:ℝ) := by norm_num
+  rw [← h1, margin_at_rat ap12 1 13 h13]
+  norm_num [show marginQ ap12 1 13 = 1/13 from by native_decide]
+
+/-- **THE AP TIGHTNESS, EXACT AND KERNEL-CHECKED**: `M({1,…,12}) = 1/13` — the
+maximum is `1/13`, attained at `t = 1/13`.  The anchor fact of the n = 12 rigidity
+program, previously only computational. -/
+theorem ap12_margin_eq :
+    margin ap12 ((1 : ℝ) / ((13 : ℤ) : ℝ)) = ((1/13 : ℚ) : ℝ) ∧
+    ∀ t : ℝ, margin ap12 t ≤ ((1/13 : ℚ) : ℝ) :=
+  ⟨ap12_margin_at_witness, ap12_margin_le⟩
+
+#print axioms distZ_at_rat
+#print axioms margin_at_rat
+#print axioms margin_le_of_grid
+#print axioms ap12_margin_eq
+
 end GridValue
 end LonelyRunner

@@ -281,6 +281,7 @@ import TournamentH7.LRCOneSwapLadders  -- kps-S5: deep one-swap covering ladders
 import TournamentH7.LRCTwoKillerLadder  -- klein-S130: first MULTI-killer CoveringFarLonely class {1..11,14,156K} lonely at 13K/(156K+1), kernel-pure (HYP-4092)
 import TournamentH7.LRCDominantPeel  -- kps-S5: SHARP dominant peel -- hdom closed at linear 13x threshold (vs quadratic far_peel), LRC13+Lipschitz+covering (HYP-4086)
 import TournamentH7.LRCEndgameAssembly
+import TournamentH7.LRCGridValue  -- klein-S138: the VALUE form (marginQ evaluator + margin_le_of_grid + AP tightness M({1..12})=1/13 EXACT) (HYP-4121)
 import TournamentH7.LRCMergeGridAttainment  -- klein-S137: THM-592 merge-grid attainment (M attained at m/(vi+vj)) (HYP-4114)
 import TournamentH7.LRCTeethR  -- klein-S136: radius-parametric window stack + level-12 tower step (HYP-4107)
 import TournamentH7.LRCMultiKillerWindow  -- klein-S134: multi-killer window (<=6 tops via zero-credit Hunter) + cite_margin (HYP-4099)
