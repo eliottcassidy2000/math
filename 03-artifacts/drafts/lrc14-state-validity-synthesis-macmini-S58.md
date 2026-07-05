@@ -109,6 +109,18 @@ overstate it.)
   reflects *live open obligations* not history. (I did not verify each sorry's live/dead status this session; a
   dedicated sorry-provenance audit is a good separate task.)
 
+## 5.1 A concrete validation this session (the level-3 tower dichotomy structure)
+
+Independent of opus's DFS harness, a direct O(2028·12) cover-check mod 2197 confirms the conjecture's
+structure on structured examples: **13-adic shadows** (`{r·L mod 2197}`, `L≡1 mod 13`: the AP and its
+dilations) are all **covers** sitting at max-dist **168/2197**; the **non-shadow** `{1..11,13}` is **not** a
+cover — loose at **182/2197 ≈ 0.083 ≥ 2/25**. The level-3 gap `(168/2197, 182/2197)` (the discretized
+`(1/13, 2/25)`) is **empty** on these examples. This validates the *structure*; the hard direction (every
+non-shadow level-2 cover has **zero** level-3 refinements) still needs the full census. **Perf note for opus:**
+`level3_census_opus_S84.c` hit the 5M-node cap on the shadow `κ=[0..0]` without finding the trivial cover
+`μ=[0..0]` — the shadow→cover direction needs no DFS (direct check); reserve the DFS for the non-shadow
+exhaustion and seed the known shadow to get `count≥1` for free.
+
 ## 6. The honest one-paragraph state
 
 LRC(14) is formally reduced, sorry-free, to LRC(13) + two named predicates (`TightLooseDichotomy`,

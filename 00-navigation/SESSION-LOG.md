@@ -1,3 +1,56 @@
+## mac-mini-2026-07-05-S58 -- SYNTHESIS + VALIDITY AUDIT (owner directive): the state map, the canonical vs dead surface, the crux correctly stated (tower-limit dichotomy), the unified 13-adic structure, and a level-3 independent validation
+
+Prompt (owner): work remaining tasks + synthesize + see the big picture + challenge assumptions + consider the fleet's recent work AND ITS VALIDITY + best formal state; push/pull often.
+
+DELIVERABLE: 03-artifacts/drafts/lrc14-state-validity-synthesis-macmini-S58.md (the state+validity report).
+
+STATE ESTABLISHED (from source, not build -- lake build ran the whole session, no result; source facts stand):
+ - CANONICAL surface `lrc14_of_dichotomy_and_corner` (LRCHcompSurface.lean): CLEAN, 0 sorry.
+   LRC(14) <= LRCUpTo13 (clean named citation, not sorry) + TightLooseDichotomy + CornerLonely.
+ - DEAD surface `lrc14_of_template_and_corner` (Q50, s<=50): refuted by kps-S11 (unbounded-height CRT-lift);
+   ALREADY correctly marked by kps in the file header (I initially mis-flagged it as unmarked -- my error,
+   corrected: read the FULL header before claiming a hygiene defect).
+ - native_decide surface = 72 files (heavy in the census/table legs); citation + reduction are clean.
+
+THE CRUX, CORRECTLY STATED: TightLooseDichotomy = the n=12 spectral gap (1/13, 2/25) is EMPTY. Proved at
+BOUNDED height (censuses); OPEN at UNBOUNDED height, where the hard families are 13-adic dilations. Q50 (the
+finite-q shortcut) is DEAD. The right route = opus's TOWER-LIMIT DICHOTOMY: the witness-LIFT is already PROVED
+(opus-S84 speedOK13_lift, kernel-pure -- I initially thought it needed proving, corrected); OPEN = the CONVERSE
+(tower-limit covers = 13-adic dilations ONLY), first-level form = opus's level-3 census mod 2197 (handed to the
+mac-mini C harness).
+
+THE UNIFYING INSIGHT (big picture): the borderline families across FOUR threads are ONE genus -- arithmetic
+dilations of bounded bases, witness inherited from the base: my MISTAKE-102 (commensurate families evade
+sampling) + my S46/47 CRT free-rider (coprime dilation c⊥13) + opus tower-lift (13-adic dilation c=13^l) + kps
+CRT-lift (residue-preserving lift by lcm(2..25)). These are COMPLEMENTARY dilation regimes (NOT the same lemma
+-- I corrected an overclaim). Unifying them into one witness-inheritance theorem = the crux.
+
+CONCRETE VALIDATIONS (structured, reliability-correct per MISTAKE-102):
+ (a) high-height gap: structured CRT-lifts to ~1e15 all stay LOOSE (>=2/25 witness); APs stay tight. Honest
+     caveat: simple L-lifts preserve the low-q witness, so don't reproduce kps's NEEDFREE regime (kps did that).
+ (b) level-3 tower dichotomy STRUCTURE (independent of opus's DFS, direct cover-check mod 2197): 13-adic shadows
+     = covers at 168/2197; non-shadow {1..11,13} = loose at 182/2197 >= 2/25; the level-3 gap (168,182)/2197 is
+     EMPTY on examples. Perf note to opus: their DFS hit the 5M cap on the trivial shadow -- shadow=cover needs
+     no DFS; reserve the DFS for the hard non-shadow exhaustion.
+
+WHAT MUST BE PURSUED (priority): (1) the tower-limit dichotomy = the level-3 census mod 2197 (mac-mini C harness,
+in my lane) + fold in the CRT free-rider base + unify the dilation regimes; (2) CornerLonely; (3) formal-state
+consolidation (mark superseded routes; sorry-provenance audit -- 23 sorries across ~23 files, live vs archaeology
+not separated).
+
+HONEST META: this session made NO new theorem; it produced the map + validity audit + 2 validations + the
+unifying frame, and self-corrected THREE of my own in-session claims against the actual Lean state (the
+"unmarked" surface, the "unproven" lift, the "same lemma" unification) -- which is the validity discipline the
+directive asked for, applied to myself.
+
+FILES: synthesis report; gap_highheight_validation_macmini_20260705.py(+out); level3_dichotomy_validation
+(+out). No canon overridden; no Lean edited (kps already handled the Q50 marking).
+
+NEXT: run opus's level-3 census (non-shadow exhaustion) on the C harness -- the sharpest concrete crux
+computation -- coordinating with opus-S84 to avoid duplication.
+
+---
+
 ## kind-pasteur-2026-07-05-S11 -- THE Q50 CONJECTURE IS FALSE: no fixed-modulus template closes the loose branch (refutes HYP-4119 mac-mini + HYP-4127 kps-S10, both as stated) -- reroute to the real-valued TightLooseDichotomy (HYP-4137, MISTAKE-110)
 
 Prompt (owner): work LRC(14) proof progress + long session on frontiers; synthesize past/incoming work; explore creative connections; CLOSE key open math via reframes and challenging assumptions; be rigorously certain of directions; push/pull often; reroute as needed.
