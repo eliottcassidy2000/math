@@ -1,0 +1,4 @@
+CORRECTED l=7 bounded stratum (S56, fixing MISTAKE-107): all lifted values <= 133, NO height
+assumptions, ALL C(12,7) patterns (incl. C with 10/11/12 carried by other coords):
+total=4,570,156,404 leaves | sieve-killed=3,890,708,648 | nonprim=66,467 | witness-cleared=679,381,289 | HARD=0
+ZERO sub-2/25 candidates.  650x the flawed S55 self-carried slice (7.07M).  l=8 in flight; l>=9 = descent leg.
