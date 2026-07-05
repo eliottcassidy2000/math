@@ -187,6 +187,16 @@ HOUSEKEEPING: HYP cascade rode 4 collisions mid-session; settled 4099=klein-S134
 FILES: lrc_multilift_leg_macmini_S52.py, lrc_multilift_floor_macmini_S52.py (+.outs), lrc_ladder_certificates_macmini_S52.md, reflection the-multi-lift-floor-and-the-14r-ladder-macmini-S52.md; HYP-4103 (+INDEX). No canon overridden.
 
 NEXT: (a) the l=3..6 floor-level domains (T_l bounded; same harness, bigger volumes -- expect 2/25 to hold, the 2nd harmonic seems to be THE lift floor); (b) the Fin-12 fee transcription; (c) prove M({4,6}-block) = 2/25 as the lift-side 2nd-harmonic extremal (kps's second_value_loose machinery should adapt); (d) the l >= 7 spread residual (ratio gate + sieve strain -- possibly a one-session finite check).
+## kind-pasteur-2026-07-05-S10 -- SYNTHESIS + REROUTE: the Q50 crux PINNED INTO THE LEAN SURFACE (TemplateDichotomy; LRC(14) <= cite + TemplateDichotomy + CornerLonely; decidable templates end-to-end) + validity audit + dedup + numbering protocol (HYP-4127)
+
+Prompt (owner): a synthesis session -- carefully audit recent/current agent work and validity, reroute as needed, best formal state.
+
+THE AUDIT: (a) mac-mini-S55's pole-necessity construction VERIFIED against my own rungs (the floating 7-cluster {1..5}u{20,21,24,25,45,46,66}S passes every profile filter at every frozen scale => residue filters provably cannot bound w_(7)/w_(8); their corollary stands: the absolute-height mechanism must be witness templates). (b) Q50 consistency spot-checked ({1..11,168}: argmax witness q=169 BUT a 2/25 witness exists at 3/37, q=37 -- Q50 is about some witness). (c) klein-S137 delivered the merge-grid attainment DESPITE my dedup note (likely in flight) -- HYP-4114 = HYP-4108, independent proofs (fiber-pigeonhole vs perturbation); no harm, standardize consumption on 4108 (HYP-4110 already consumes it). (d) The numbering race has collided 6+ times today: PROPOSAL -- per-machine residue classes mod 10 (kps=7, suggest mac-mini=9, opus=1, klein=4); I lead by example: this session = HYP-4127.
+
+THE REROUTE (aligned with mac-mini's S54 proof map, item [1] + [5]): the crux's best current shape is Q50 templates + cluster descent => pin it formally. LRCTemplateSurface.lean (registered, corpus green 8674, kernel-pure, GREEN first compile): TemplateWitness s k (integer-decidable; muInt = (2s+24)/25; Decidable instance; a `by decide` demonstrator on {1..11,24} at (25,2)) + loose_of_template (one line on the HYP-4102 atom) + **TemplateDichotomy** (tight OR template with s <= 50) + **lrc14_of_template_and_corner: LRC(14) <= citation + TemplateDichotomy + CornerLonely** -- THE NEW PINNED SURFACE: the loose side of the last open predicate is now a FIXED FINITE template family; its proof obligation = a finite CRT statement (the census/pyramid shape) + the tight classification.
+
+FILES: LRCTemplateSurface.lean; HYP-4127 (INDEX). One checkpoint + close-out. No canon overridden.
+
 ## kind-pasteur-2026-07-05-S9 -- THE TRIPLE WALK kernel-pure: l=3 by RECURSION into the pair walk (balanced triples min <= 12B); the 2/25 T_l pole table (l <= 6 necessary); overall-scale/bottom-6 alignment notes (HYP-4118)
 
 Prompt (owner): overall scale + bottom-6 alignment, the l>=7 assembly and grid stratum, T_l poles at l<=6 provably necessary, the l=3 walk.
