@@ -450,4 +450,30 @@ theorem tower_step_12 (cite : LRCUpTo13) (v : Fin 12 → ℤ) (hv : ∀ i, v i �
   exact margin_of_window_of_fees v tops fee (1/13) tstar β B
     (by norm_num) (by norm_num) hβgt hbase hB hBpos (fun j _ => hv j) (hfee tstar) hcrit
 
+/-! ## The 1/14 bridge: the legacy stack is definitionally the ρ = 1/14 instance -/
+
+theorem toothR_fourteen (w m : ℤ) : toothR (1/14) w m = tooth w m := rfl
+
+theorem teethR_fourteen (w : ℤ) (a b : ℝ) : teethR (1/14) w a b = teeth w a b := rfl
+
+/-- `Lonely 14` from the parametric window: the ρ = 1/14, `Fin 13` instance of
+`margin_of_window_of_fees` (subsumes the S134/S135 window lemmas). -/
+theorem lonely14_of_margin_window (v : Fin 13 → ℤ) (tops : List (Fin 13))
+    (fee : Fin 13 → ℝ) (tstar β B : ℝ)
+    (hβ : 1/14 < β)
+    (hbase : ∀ i, i ∉ tops → ∀ m : ℤ, β ≤ |(v i : ℝ) * tstar - m|)
+    (hB : ∀ i, i ∉ tops → |(v i : ℝ)| ≤ B) (hBpos : 0 < B)
+    (hv : ∀ j ∈ tops, v j ≠ 0)
+    (hfee : ∀ j ∈ tops,
+      rlength (rinter [(tstar - (β - 1/14) / B, tstar + (β - 1/14) / B)]
+        (teethR (1/14) |v j| (tstar - (β - 1/14) / B) (tstar + (β - 1/14) / B))) ≤ fee j)
+    (hcrit : (tops.map fee).sum < 2 * ((β - 1/14) / B)) :
+    ∃ t : ℝ, Lonely 14 v t := by
+  obtain ⟨t, ht⟩ := margin_of_window_of_fees v tops fee (1/14) tstar β B
+    (by norm_num) (by norm_num) hβ hbase hB hBpos hv hfee hcrit
+  refine ⟨t, fun i m => ?_⟩
+  show (1 : ℝ) / (14 : ℕ) ≤ _
+  push_cast
+  exact ht i m
+
 #print axioms teethR_mass
