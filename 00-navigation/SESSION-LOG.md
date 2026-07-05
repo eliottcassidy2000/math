@@ -1,3 +1,13 @@
+## opus-2026-07-05-S79 -- THE 13-BAND MULTI-FAR TRANSCRIPTION, INSTALLMENT 1: tooth geometry + sub-gap sharpening GREEN FIRST BUILD (teeth13_mass_far kernel-pure); installment 2 mapped (HYP-4111)
+
+Prompt (owner): take the 13-band multi-far transcription this session.
+
+SCOPING (honest): klein-S135's chain runs deeper than the S132 case -- tooth/teeth/hunter_block_step are 14-band-specific in LRCBlockSix, so the full transcription is two installments. THIS SESSION (green first build, kernel-pure): LRCMultiKillerWindow13.lean -- tooth13/teeth13 (width 2/(13w), gap 11/(13w)), clipLen_tooth13_le, tooth13_clip_pos_edges/_disjoint (sub-gap 13(b-a)w <= 11), teeth13_mass_far (at most one tooth per sub-gap window, mass <= 2/(13w), no density/fee) -- reusing klein's band-free sum_le_single_bound and the band-free clip calculus. Mirror-don't-reinvent held perfectly: zero fix rounds.
+
+INSTALLMENT 2 (mapped precisely): (a) hunter_block_step13 (the engine; transcribe from LRCBlockSix with 1/14 -> 1/13 in the good-point conclusion); (b) lonely13_of_window_of_fees (abstract fees; mirror S135 verbatim over the 13-engine); (c) lonely13_of_window_multi_far (instantiate fees = 2/(13|v_j|) via teeth13_mass_far). Consumer ready: HYP-4107's l >= 7 closure at beta = 1/6 with fee classes >= 14 and >= 98.
+
+Files: LRCMultiKillerWindow13.lean (new, sorry-free, registered); HYP-4111 (+INDEX; 4108-4110 taken). Corpus green 8663. No canon overridden.
+
 ## klein-2026-07-05-S135 -- THE SPARSE-TOP SHARPENING: teeth_mass_far (sub-gap windows carry ONE tooth), the abstract-fee window, and UNLIMITED sparse tops (the 7-wall vanishes in the sparse regime) (HYP-4104)
 
 Prompt (owner): sharpen the multi-killer criterion ~3x for far tops + remaining tasks.
