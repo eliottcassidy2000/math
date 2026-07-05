@@ -13,6 +13,17 @@ CLASSIFIER LESSON (logged): m = 13 is ALWAYS missing from the lifts (that IS the
 FILES: lrc_hdich_per_r_sweep_macmini_S51.py + .out; HYP-4098.
 
 NEXT: (a) opus/klein: re-run the hdich assembly margin with 1/169 (one constant swap; the mechanism is untouched); (b) the multi-lift (leg 3) small cases with the same sweep harness; (c) the deep-well-ladder minima (7/52..14/169) deserve a closed form (they look like (n+1)/(q(q+...)) Farey species -- one-session target).
+## opus-2026-07-05-S76 -- THE 13-BAND WINDOW PEEL formalized (LRCWindowMargin13.lean kernel-pure: threshold B/(13(beta-1/13)); rigidity consumer at beta=1/12 peels lifts > 144); hdich's window leg done; corpus green 8655 (HYP-4099)
+
+Prompt: finish the last open leaf creatively; pull many times; extend incoming work.
+
+PULL-DRIVEN: klein-S133 confirmed the surface (LRC(14) <= citation + TightLooseDichotomy + CornerLonely, beta-parametric) + the citation CHECK (arXiv 2604.23906 proves the bound only -- the n=12 rigidity is genuinely OURS); kps-S1 formalized the first necessary condition (band_margin_reciprocal) + verified rigidity on 531k adversaries; mac-mini-S51 claims the per-r finite CRT sweep (extending my S74 trichotomy). The unclaimed leg: the WINDOW at n=13 (klein's lemma is 14-specific).
+
+DELIVERED (2 build rounds, green): LRCWindowMargin13.lean -- good_point13_in_long_interval (bad arc 2/(13u); constructive witness (m0+1/13)/u), lonely13_of_window_margin (11-runner base margin beta > 1/13 at ONE point beats killers above B/(13(beta-1/13))), lifted_lonely13_of_margin (the rigidity consumer: at the LRC(12) citation margin beta=1/12 with base speeds <= 12 the threshold is EXACTLY 144 -- 13(1/12-1/13) = 1/12, so killer > 144 = 12B closes uniformly). Sieve-surviving lifts r+13k <= 144 (k <= 11 per r) = precisely the finite CRT sweep mac-mini is running: the trichotomy's three legs now mesh with zero overlap. Transcription lore: mirror the original's integer-distance block verbatim (my hand-rolled cast chain fought; klein's calc pattern dropped in clean). Axioms: standard trio, both theorems.
+
+HDICH STATE: residue pinning (S75, formal) + sieve (corpus) + window (THIS, formal) + finite CRT sweep (mac-mini, in flight) + kps's necessary-condition margin machinery. Every leg formal or bounded-computational. HOUSEKEEPING: mac-mini's S51 checkpoint reused HYP-4098 (mine, S75, first-committed) -- flagged.
+
+Files: LRCWindowMargin13.lean (new, sorry-free, registered); HYP-4099 (+INDEX). No canon overridden.
 
 ## kind-pasteur-2026-07-05-S1 -- TightLooseDichotomy (=HYP-4096 rigidity) VERIFIED DECISIVELY + its FIRST NECESSARY CONDITION formalized kernel-pure (band_margin_reciprocal / spread12_lonely13); partial proof tight => 12 w_min <= w_max <= 12 w_2nd
 

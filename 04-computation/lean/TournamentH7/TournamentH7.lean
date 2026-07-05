@@ -305,3 +305,4 @@ import TournamentH7.LRCDilation  -- mac-mini-S24: WLOG gcd=1 (dilation), closes 
 import TournamentH7.LRCBaseFloor  -- mac-mini-S25: step-1 real->rational strict-good bridge (THM-609)
 import TournamentH7.IntervalEscape
 import TournamentH7.LRCResiduePinning
+import TournamentH7.LRCWindowMargin13
