@@ -16,6 +16,26 @@ COLLISION LOG (hot number race today): claimed 4099 -> klein-S134 first-committe
 NEXT BRICK (pointer): bound the needed modulus s in terms of w_max => the dichotomy becomes per-family decidable => hdich = a finite integer check per compressed class. The V5 survivor data says prefix-reciprocal moduli 1/9..1/12 dominate.
 
 FILES: LRCHarmonicGate.lean (registered); 04-computation/lrc_harmonic_gate_kps_S2.py + results/.out; 07-reflections/the-loose-witness-is-one-decidable-inequality-kps-S2.md; HYP-4102 (INDEX). Three checkpoints + close-out. No canon overridden.
+## klein-2026-07-05-S134 -- THE MULTI-KILLER WINDOW: the peel-tower composition engine (kernel-pure), the C(13,6)=1716 threshold telescope, and two honest findings (the rho=2/25 tower can't start; the pinning is height-dependent) (HYP-4099)
+
+Prompt (owner): work what remains of LRC(14) creatively; pull concurrent work; explore niche past threads.
+
+CONCURRENT WORK INTEGRATED: opus-S74/S75 (hdich = residue pinning [kernel-pure] + lift-rigidity trichotomy consuming MY window lemma at beta=1/12), kps-S1 (LRCBandMargin: band_margin_reciprocal + spread12_lonely13; height bound named open), mac-mini-S50/S51 (IntervalEscape kernel; per-r CRT sweep in flight; HYP-4095 reuse collision -- note sent).
+
+DELIVERED (LRCMultiKillerWindow.lean, registered, kernel-pure, corpus green):
+ - **lonely_of_window_multi**: base margin beta at one point + <=6 tops with Sum 3/(7|v_j|) < 2((beta-1/14)/B)((7-#tops)/7) => Lonely 14. The composition: my S132 Lipschitz window + kps's hunter_block_step at ZERO pairCredits + teeth_mass. Each top eats <=1/7 of the window plus a boundary fee; <=6 tops leave 1/7 positive. THIS SOLVES THE MULTI-PEEL TRANSPORT PROBLEM (MISTAKE-103's obstruction): peeled runners are now handled SIMULTANEOUSLY inside one window instead of transported through bare-Lonely.
+ - **cite_margin**: margin 1/(card+1) at a common point for any <=12 index-subset, from the citation node (the per-level tower floor; niche-thread payoff: the repeat13_lonely enumeration pattern generalized).
+ - **THE TOWER TABLE**: citation floors beta=1/(k+1) give level thresholds (k+1)/(13-k)*B = 13B, 6B, 11B/3, 5B/2, 9B/5, 4B/3, B -- terminating at k=6; the product telescopes to EXACTLY C(13,6) = 1716 (the binomial!) = the a-priori spread bound of the pure-window tower leaf.
+
+TWO HONEST FINDINGS (both matter to the active lanes):
+ (a) **The rho=2/25 tower cannot start**: the citation floor 1/13 < 2/25, so a 2/25-margin output can never be windowed from citation floors alone. The dichotomy's loose margin is NOT tower-derivable -- it must come from rigidity (or the dichotomy's beta must drop below 1/13, where my corner threshold explodes). This sharpens WHERE rigidity is genuinely needed.
+ (b) **The pinning is height-dependent**: exists_residue_one_of_tight consumes tightness at eps = 1/(13(V+1)), V = family max. So discharging opus's pinning from NOT-loose(2/25) works only at V <= 24; the middle band M in (1/13, 2/25) at large V remains the analytic residue. This reconciles kps's 'height bound open' with opus's 'wiring only': the tower/trichotomy must SUPPLY the height bound; it is not free.
+
+LEAF SCAN (honest): 471/471 structured seeds survive every window-split -- but all are TIGHT-BASE families (dilated-AP bases at the exact citation floor, e.g. (2,4,..,24,39) with base 2*{1..12}) = exactly the FREE-RIDER's domain (S132/S133). Pipeline: {window tower where slack exists} + {free-rider on tight levels} + {repeats} + {per-level wedge}. The tower adds composition, not wedge-elimination.
+
+NAMED NEXT: teeth_mass_far (sub-period window sees <=2 teeth => mass <= 2/(7v), no density term) -- a 3x sharper multi-killer criterion for far tops; then the tower assembly consuming the per-level tight/loose dispatch.
+
+FILES: LRCMultiKillerWindow.lean (registered); lrc14_peel_tower_thresholds_klein_S134.py, lrc14_tower_leaf_scan_klein_S134.py (+outs); HYP-4099. Three pushes. No canon overridden.
 
 ## opus-2026-07-05-S77 -- THE CORRECTION ARC + HDICH'S FINITE LEG IN LEAN: mac-mini's floor 14/169 CONFIRMED (attribution fixed: the argmin is {1..11,168} = the n=13 DEEP WELL at the range corner) => MISTAKE-104 (mine); then LRCKernelGate13 + all 144 lift rows kernel-pure (HYP-4101)
 
