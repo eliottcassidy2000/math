@@ -281,6 +281,7 @@ import TournamentH7.LRCOneSwapLadders  -- kps-S5: deep one-swap covering ladders
 import TournamentH7.LRCTwoKillerLadder  -- klein-S130: first MULTI-killer CoveringFarLonely class {1..11,14,156K} lonely at 13K/(156K+1), kernel-pure (HYP-4092)
 import TournamentH7.LRCDominantPeel  -- kps-S5: SHARP dominant peel -- hdom closed at linear 13x threshold (vs quadratic far_peel), LRC13+Lipschitz+covering (HYP-4086)
 import TournamentH7.LRCEndgameAssembly
+import TournamentH7.LRCMultiKillerWindow  -- klein-S134: multi-killer window (<=6 tops via zero-credit Hunter) + cite_margin (HYP-4099)
 import TournamentH7.LRCHcompSurface  -- klein-S133: hcomp <= TightLooseDichotomy + CornerLonely; LRC(14) <= citation + the two (HYP-4096)
 import TournamentH7.LRCTightAPFreeRider  -- klein-S132: CRT tight-AP free-rider (extremal half of hcomp, mac-mini S47 handoff)
 import TournamentH7.LRCOneWindowPeel  -- klein-S132: one-window peel (killer threshold B/(14(beta-1/14))) + S131 primitivity split (HYP-4095)  -- kps-S6: LRC(14) <= LRC(13) + compressed (dominant peel discharges hdom); pins the open leaf (HYP-4091)

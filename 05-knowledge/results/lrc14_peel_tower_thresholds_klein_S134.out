@@ -1,0 +1,18 @@
+
+=== rho = 2/25 ===
+ k (base size)  beta=1/(k+1)  threshold/B  terminates?
+            12          1/13  (beta<=rho)  CITE-DIRECT
+leaf spread bound (product of thresholds above): 1.0
+kps band-loose spread bound (1-rho)/rho = 11.50
+
+=== rho = 1/14 ===
+ k (base size)  beta=1/(k+1)  threshold/B  terminates?
+            12          1/13       13.000             
+            11          1/12        6.000             
+            10          1/11        3.667             
+             9          1/10        2.500             
+             8           1/9        1.800             
+             7           1/8        1.333             
+             6           1/7        1.000          YES
+leaf spread bound (product of thresholds above): 1716.0
+kps band-loose spread bound (1-rho)/rho = 13.00
