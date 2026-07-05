@@ -847,6 +847,18 @@ THM-523, LTI-398, LTT-298, OPEN-Q-108.
 
 ---
 
+## T-S84-A (opus): Redei parity of the ban-load tournament as a cover obstruction
+mac-mini-S57 built the ban-load tournament B_p(W) (doubling-cycle vertices, load-comparison
+orientation). In opus-S83 log coordinates the doubling cycle IS the unit shift (g = 2
+primitive mod 169), the ban map IS the translate shift, and clearing-miss = covering.
+So B_p(W) is the tournament shadow of the multiplicative covering problem -- and the
+PROJECT DNA question applies: is a Redei-flavored parity invariant (#Ham paths mod 4,
+Slater index, score parity vector) different for coverable vs non-coverable load
+profiles? Test on the S82 level-2 cover census vs random non-covers. If yes: the
+tournament half of the project supplies the cover obstruction the LRC half needs.
+Status: fresh, checkable with existing data. Next: compute B_13 invariants on 100 covers
+vs 100 non-covers.
+
 ## T-S83-A (opus): Character-sum control of cover counts (Polya-Vinogradov lever)
 The level-l cover flexibility is governed by incomplete character sums Sum_{x<=12} chi(x)
 mod 13^l (S = log(+-[1,12]); Fourier bias computed in multiplicative_tower_opus_S83.out).
