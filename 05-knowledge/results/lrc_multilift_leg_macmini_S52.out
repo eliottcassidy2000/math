@@ -1,0 +1,79 @@
+==============================================================================
+PART A -- the deep-well ladder {1..12}\{r} u {14r} (attribution-corrected)
+==============================================================================
+  r  family tail      M exact   14/(13(r+1))  match  witness (t, margin)
+  1        +{14}          1/8           7/13     no  t=1/16, mu=1/8
+  2        +{28}          1/8          14/39     no  t=15/32, mu=1/8
+  3        +{42}          1/8           7/26     no  t=5/16, mu=1/8
+  4        +{56}         2/17          14/65     no  t=4/17, mu=2/17
+  5        +{70}          1/9           7/39     no  t=7/18, mu=1/9
+  6        +{84}         2/19           2/13     no  t=3/19, mu=2/19
+  7        +{98}         7/52           7/52    YES  t=15/104, mu=7/52
+  8       +{112}       14/117         14/117    YES  t=44/117, mu=14/117
+  9       +{126}         7/65           7/65    YES  t=29/130, mu=7/65
+ 10       +{140}       14/143         14/143    YES  t=43/143, mu=14/143
+ 11       +{154}         7/78           7/78    YES  t=71/156, mu=7/78
+ 12       +{168}       14/169         14/169    YES  t=14/169, mu=14/169
+
+ladder closed form M = 14/(13(r+1)) for r = 7..12: CONFIRMED
+
+MISTAKE-104 re-verification:
+  M([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 25]) = 1/12 (expected 1/12) OK
+  M([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 168]) = 14/169 (expected 14/169) OK
+
+==============================================================================
+PART B -- single-lift FLOOR closure to the beta*-level cutoff (k <= 155)
+==============================================================================
+beta* = 14/169; window half-width delta = 1/24336; killer cutoff beta*/delta = 2016
+swept: sieve-closed 825, survivors 1024 (witness-certified 1024, exact 0)
+rigidity violations: 0
+NO single lift below beta* = 14/169 in the full structural domain (k <= 155);
+killers > 2016 window-certified >= beta*.  SINGLE-LIFT FLOOR = 14/169 CLOSED.
+[t = 12.3s]
+
+==============================================================================
+PART C -- double-lift (l=2) RIGIDITY sweep, complete on structural domain
+==============================================================================
+two-killer fee: 1/w_a + 1/w_b < 9*delta_2 = 3/286 (= 3/286); both >= 191 closes
+domain: w_b <= 190, w_b <= w_a <= 12*w_b (outside: window/fee-certified loose)
+  s=1 done  [total 12859, sieved 5566, scanned 7293, exact 0]  t=0s
+  s=2 done  [total 25844, sieved 11141, scanned 14703, exact 0]  t=1s
+  s=3 done  [total 38955, sieved 17000, scanned 21955, exact 0]  t=2s
+  s=4 done  [total 52192, sieved 22728, scanned 29464, exact 0]  t=2s
+  s=5 done  [total 65555, sieved 28566, scanned 36989, exact 0]  t=3s
+  s=6 done  [total 79044, sieved 34427, scanned 44617, exact 0]  t=4s
+  s=7 done  [total 92673, sieved 45310, scanned 47363, exact 0]  t=4s
+  s=8 done  [total 106428, sieved 57306, scanned 49122, exact 0]  t=4s
+  s=9 done  [total 118531, sieved 67813, scanned 50718, exact 0]  t=4s
+  s=10 done  [total 130751, sieved 78443, scanned 52308, exact 0]  t=4s
+  s=11 done  [total 143088, sieved 89154, scanned 53934, exact 0]  t=5s
+  s=12 done  [total 155542, sieved 99795, scanned 55747, exact 0]  t=5s
+
+l=2 sweep complete: {'total': 155542, 'nonprim': 0, 'sieved': 99795, 'scanned': 55747, 'exact': 0, 'viol': 0}
+RIGIDITY: ZERO violations -- every double lift in the structural domain is strictly loose
+scan-certificate floor (over witness-certified sets): 2/25 at (1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 17, 19)
+sample certificates (kps atom shape: t=a/q, margin mu/q):
+   W=[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15]: t=1/26, mu=3/26
+   W=[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 28]: t=2/39, mu=2/13
+   W=[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 41]: t=1/26, mu=3/26
+   W=[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 54]: t=2/39, mu=2/13
+   W=[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 67]: t=1/26, mu=3/26
+[t = 17.1s]
+
+==============================================================================
+PART D -- fee/tower thresholds (l = 2..6) + l=3 probe beyond kps k<=2
+==============================================================================
+  l  base margin      delta_l        fee S_l  all-big T_l
+  2         1/11        1/858          3/286          191
+  3         1/10        1/520          7/520          223
+  4          1/9        1/351          5/351          281
+  5          1/8       5/1248          5/416          417
+  6          1/7        1/182          1/182         1093
+(2l < 13 wall: l <= 6 -- same ceiling as klein-S134's <=6 tops.  l >= 7: fee dies;
+ those strata have <= 5 unlifted elements; kps-S1 swept all l at k <= 2; OPEN beyond.)
+
+l=3 probe: all C(12,3) coordinate triples, k <= 4 each (beyond kps k <= 2):
+l=3 probe: {'total': 14080, 'sieved': 11278, 'scanned': 2802, 'exact': 0, 'viol': 0}  t=0s
+l=3 scan floor: 14/169 at (1, 2, 3, 7, 8, 9, 10, 11, 12, 17, 18, 19)
+
+DONE  [total t = 17.3s]

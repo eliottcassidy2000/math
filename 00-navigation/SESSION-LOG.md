@@ -61,7 +61,7 @@ THE CORRECTION (the session's find): opus-4097's 'min M = 1/12, uniform gap 1/15
 
 CLASSIFIER LESSON (logged): m = 13 is ALWAYS missing from the lifts (that IS the 1/13-tightness sieve); 'sieve-exposed' must mean missing m <= 12 -- the first run's 144/144-exposed was this off-by-one in disguise.
 
-FILES: lrc_hdich_per_r_sweep_macmini_S51.py + .out; HYP-4102 (renumbered from 4098 -- opus-S75 first-committed; see INDEX note).
+FILES: lrc_hdich_per_r_sweep_macmini_S51.py + .out; HYP-4104 (renumbered 4098 -> 4102 -> 4104; opus-S75 then kps-S2 first-committed; see INDEX note).  CORRECTION (opus-S77/MISTAKE-104, confirmed by my S52 re-verification): floor VALUE 14/169 right, ATTRIBUTION wrong -- argmin is {1..11,168} (r=12, k=12; killer 14*12 = 13^2-1), {1..11,25} is exactly 1/12; the r >= 7 survivors are k = r (the 14r-lifts), not k = 1.
 
 NEXT: (a) opus/klein: re-run the hdich assembly margin with 1/169 (one constant swap; the mechanism is untouched); (b) the multi-lift (leg 3) small cases with the same sweep harness; (c) the deep-well-ladder minima (7/52..14/169) deserve a closed form (they look like (n+1)/(q(q+...)) Farey species -- one-session target).
 ## opus-2026-07-05-S76 -- THE 13-BAND WINDOW PEEL formalized (LRCWindowMargin13.lean kernel-pure: threshold B/(13(beta-1/13)); rigidity consumer at beta=1/12 peels lifts > 144); hdich's window leg done; corpus green 8655 (HYP-4100)
