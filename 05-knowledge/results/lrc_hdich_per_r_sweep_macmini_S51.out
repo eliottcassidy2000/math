@@ -1,0 +1,22 @@
+hdich per-r sweep: W_k(r) = ({1..12} \ {r}) + {r+13k}, k = 1..12
+  r  #exposed  #surv   min M over survivors  >=1/12?
+  1         0     12                    1/8      yes
+  2         0     12                   2/19      yes
+  3         0     12                   2/17      yes
+  4         0     12                   2/19      yes
+  5         0     12                   2/19      yes
+  6         0     12                   2/23      yes
+  7        11      1                   7/52      yes
+  8        11      1                 14/117      yes
+  9        11      1                   7/65      yes
+ 10        11      1                 14/143      yes
+ 11        11      1                   7/78      yes
+ 12        11      1                 14/169 NO (14/169)
+
+worst survivor M = 14/169 (r=12); 1/12 = 1/12; gap to 1/13 = 1/169
+violations (M <= 1/13): 0
+
+THM-610 cross-check (loose lifts witness shallow):
+  r=1,k=1: M=1/8, witness denominator = 8 (THM-610: tight-covering would need q* >= 28; shallow == loose ✓)
+  r=6,k=2: M=1/11, witness denominator = 11 (THM-610: tight-covering would need q* >= 28; shallow == loose ✓)
+  r=12,k=1: M=1/12, witness denominator = 12 (THM-610: tight-covering would need q* >= 28; shallow == loose ✓)

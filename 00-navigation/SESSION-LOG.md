@@ -1,3 +1,19 @@
+## mac-mini-2026-07-05-S51 -- hdich's PER-R SWEEP COMPLETE: 144/144 lifts strictly loose (hdich TRUE, zero violations) -- but the FLOOR CORRECTED to 14/169 = 14/13^2 at the DEEP-WELL LIFT {1..11,25} (gap 1/169, not 1/156); the r>=7 k=1 survivors are the deep-well ladder; THM-610 niche thread paid off (HYP-4098)
+
+Prompt (owner): work what remains creatively; pull concurrent work; explore niche past threads.
+
+NICHE THREAD MINED: THM-610 (the covering deep-hiding dichotomy, from my covering-min-landscape memory) -- tight-covering families hide at q* >= 2n; used as the cross-check: all loose lifts witness SHALLOW (q* = 8, 11, 12 sampled) ✓ consistent.
+
+THE SWEEP (opus-4097 leg 2's finite content, discharged): per r = 1..12, k = 1..12: r <= 6: zero sieve-exposed, all 12 survive, minima 1/8 .. 2/23 (comfortable); r >= 7: 11/12 exposed (missing m <= 12), only k = 1 survives, minima = THE DEEP-WELL LADDER: 7/52, 14/117, 7/65, 14/143, 7/78, 14/169.  ZERO violations (every lift STRICTLY loose: hdich's mechanism confirmed).
+
+THE CORRECTION (the session's find): opus-4097's 'min M = 1/12, uniform gap 1/156' is WRONG in the constant -- the true single-lift floor is M({1..11,25}) = 14/169 = 14/13^2, gap to 1/13 EXACTLY 1/169.  The survivor {1..11,25} is the deep-well lift = the (n+1)/q*^2 species of the 14/183 construction ONE LEVEL DOWN (169 = 13^2 in Phi6's role) -- a structured family invisible to spot-verification (the MISTAKE-100/102 species, caught by enumeration).  CONSEQUENCE for the assembly: the large-k window-margin leg (klein's lonely_of_window_margin) must run with beta = 1/169-scale, not the 1/12-based margin; small-k finite checks are DONE by this sweep (k <= 12; only k = 1 survives at r >= 7 anyway).
+
+CLASSIFIER LESSON (logged): m = 13 is ALWAYS missing from the lifts (that IS the 1/13-tightness sieve); 'sieve-exposed' must mean missing m <= 12 -- the first run's 144/144-exposed was this off-by-one in disguise.
+
+FILES: lrc_hdich_per_r_sweep_macmini_S51.py + .out; HYP-4098.
+
+NEXT: (a) opus/klein: re-run the hdich assembly margin with 1/169 (one constant swap; the mechanism is untouched); (b) the multi-lift (leg 3) small cases with the same sweep harness; (c) the deep-well-ladder minima (7/52..14/169) deserve a closed form (they look like (n+1)/(q(q+...)) Farey species -- one-session target).
+
 ## kind-pasteur-2026-07-05-S1 -- TightLooseDichotomy (=HYP-4096 rigidity) VERIFIED DECISIVELY + its FIRST NECESSARY CONDITION formalized kernel-pure (band_margin_reciprocal / spread12_lonely13); partial proof tight => 12 w_min <= w_max <= 12 w_2nd
 
 Prompt (owner): keep working the remaining LRC(14) mathematics, then formalization; pull/push frequently.
