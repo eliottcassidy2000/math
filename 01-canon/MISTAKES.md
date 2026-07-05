@@ -9,6 +9,53 @@ Format per entry:
 - Impact on existing results
 - Source (who found it, when)
 
+---## MISTAKE-110 (2026-07-05, kind-pasteur-S11) -- THE Q50 CONJECTURE IS FALSE AT BOUND 50: "profile => witness at q <= 50" is scale-DEPENDENT (free-modulus witnesses are killable by CRT lift). The MISTAKE-096 trap recurred one level up -- an empirical bound only as uniform as its generator (diagonal high-scale lifts missed the free-residue-pinning adversary).
+
+**What was claimed (WRONG, HYP-4119 mac-mini-S55 + HYP-4127 kps-S10).** Q50 /
+`TemplateDichotomy`: every primitive compressed covering Fin-13 family is tight-shaped
+OR has a `2/25` rational witness at denominator `s <= 50`, claimed SCALE-INDEPENDENT
+("no census-per-height; everything determined by residues mod L' = lcm{q<=50}").
+
+**Why it is wrong.** An explicit, independently-verified single-scale (ratio 12) Fin-13
+family at height ~1e22 satisfies EVERY `TemplateDichotomy` hypothesis (nonzero,
+`CoveringFamily` 2..14, compressed, primitive, argmax istar), is NOT tight-shaped, and
+has NO `2/25`-witness at any `s <= 50` (true min witness `s = 53`). Mechanism: the
+profile pins residues only mod `q <= 25`. Witnesses at PINNED-ONLY moduli (all
+prime-power factors `<= 25` <=> `q | L`) are height-independent, but witnesses at FREE
+moduli (27,32,49 and primes 29,31,37,41,43,47,53,...) depend on residues the profile
+does NOT constrain, and are KILLABLE by choosing the free residues via CRT. A NEEDFREE
+shape (no pinned-only witness `<= 50`; 5 exist in the B=48 census) lifts to high height
+with every free modulus pinned. The reasoning error: "witness at `q` depends only on
+residues mod `q`, profile fixes residues mod `<= 25`, hence residues mod L' determine
+everything" -- FALSE, because the free part of L' (mod 27..47) is a hidden degree of
+freedom equivalent to height. The methodological gap: the high-scale check
+(12,095 lifts to 1.16e14) used DIAGONAL lifts (`v_i -> v_i + mL`, uniform shift), which
+never pin the free residues -- the CRT/aligned adversary was not in the sample.
+
+**Correct framing (constructive).** The witness modulus is NOT unbounded -- every
+pinned-only `q | L`, so a pinned-only witness is height-independent and cannot be lifted
+away. Replace "`s <= 50` (any modulus)" with "PINNED-ONLY `q | L`, `q <= Q0`". This is
+CLEANER than Q50 hoped (manifestly height-independent, a finite residue-only check).
+Evidence: over ALL 511,947 B=48 census survivors the smallest pinned-only witness is
+`<= 69` (max 69 at `{1,3,4,5,7,8,9,11,12,19,23,30}`); F1's exact bound is 55. So the
+right bound is `Q0 >= 69`, not 50; whether `Q0 < inf` over all (incl. high-height) shapes
+is the sharpened crux. LRC(14) is NOT threatened: the counterexample has a REAL witness
+at `t = 13/53`, so `TightLooseDichotomy` (loose = EXISTS real tstar) and
+`lrc14_of_dichotomy_and_corner` are UNAFFECTED -- only the bounded-denominator TEMPLATE
+refinement fails. mac-mini's pole-necessity/periodicity result STANDS (it is about the
+profile FILTERS, which are indeed CRT-ray-periodic -- exactly why the witness must be
+pinned-only to inherit that height-independence).
+
+**Lesson (the recurring one, now at the witness/template layer).** For ANY "witness at a
+bounded modulus" claim, the modulus set splits into what the profile CONTROLS (here `q | L`)
+and what it does NOT (free residues). A bound over the uncontrolled part is scale-dependent
+and falls to a CRT/aligned lift -- test it with an INDEPENDENT-per-runner free-residue
+adversary, never a diagonal/uniform lift. Reflex: before claiming "residues mod M determine
+the witness," check whether the profile actually PINS all of M, or only a divisor of it.
+Source: kind-pasteur-2026-07-05-S11; files `04-computation/lrc_q50_refutation_kps_S11.py`
+(airtight build+verify), `lrc_q50_parity_analysis_kps_S11.c`, result
+`05-knowledge/results/lrc14_q50_refutation_kps_S11.md`. See HYP-4137.
+
 ---## MISTAKE-108 (2026-07-05, mac-mini-S56, self-caught in the filter-vs-Lean audit) -- census filter F4 transcribed gap_forces_big_pair too STRONGLY (the Lean allows i = j); impact PROVEN ZERO by direct micro-stratum sweep
 
 **What was transcribed (WRONG, mac-mini-S54/S55 census).** F4 = "w_max + w_2nd >= 38". The Lean
