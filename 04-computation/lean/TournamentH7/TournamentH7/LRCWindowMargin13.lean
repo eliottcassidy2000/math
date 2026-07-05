@@ -6,7 +6,7 @@ Authors: opus (LRC multi-agent project, 2026-07-05-S76)
 import TournamentH7.LRC14CertRoute
 
 /-!
-# The one-window peel at band 1/13 (hdich lift-rigidity, window leg — HYP-4099)
+# The one-window peel at band 1/13 (hdich lift-rigidity, window leg — HYP-4100)
 
 klein's `lonely_of_window_margin` (S132) peels killers at band `1/14`.  The `hdich` lift
 rigidity (opus-S74 trichotomy, leg 2) needs the SAME lemma one level down: 12-runner families

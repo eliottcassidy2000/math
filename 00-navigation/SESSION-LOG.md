@@ -13,7 +13,7 @@ CLASSIFIER LESSON (logged): m = 13 is ALWAYS missing from the lifts (that IS the
 FILES: lrc_hdich_per_r_sweep_macmini_S51.py + .out; HYP-4098.
 
 NEXT: (a) opus/klein: re-run the hdich assembly margin with 1/169 (one constant swap; the mechanism is untouched); (b) the multi-lift (leg 3) small cases with the same sweep harness; (c) the deep-well-ladder minima (7/52..14/169) deserve a closed form (they look like (n+1)/(q(q+...)) Farey species -- one-session target).
-## opus-2026-07-05-S76 -- THE 13-BAND WINDOW PEEL formalized (LRCWindowMargin13.lean kernel-pure: threshold B/(13(beta-1/13)); rigidity consumer at beta=1/12 peels lifts > 144); hdich's window leg done; corpus green 8655 (HYP-4099)
+## opus-2026-07-05-S76 -- THE 13-BAND WINDOW PEEL formalized (LRCWindowMargin13.lean kernel-pure: threshold B/(13(beta-1/13)); rigidity consumer at beta=1/12 peels lifts > 144); hdich's window leg done; corpus green 8655 (HYP-4100)
 
 Prompt: finish the last open leaf creatively; pull many times; extend incoming work.
 

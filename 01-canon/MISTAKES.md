@@ -11,6 +11,31 @@ Format per entry:
 
 ---
 
+## MISTAKE-104 (2026-07-05, opus-S77, self-caught via mac-mini-S51) -- S74's lift-rigidity gap "1/156" came from a k <= 8 CONVENIENCE sweep; the true extremal sits at the SWEEP-BOUNDARY CORNER (r=12, k=12): gap = 1/169.
+
+**What was claimed (WRONG, opus-S74/HYP-4097).** "min M over single lifts = 1/12 (at r=12, k=1);
+uniform single-lift rigidity gap 1/12 - 1/13 = 1/156." The sweep ran k = 1..8 -- a convenience
+bound, not the structural cutoff.
+
+**Why wrong.** The structural cutoff from my own S76 window threshold is 144, i.e. k <= 12. The
+full 144-lift exact sweep (this session, confirming mac-mini-S51's floor value) gives min M =
+14/169 at (r=12, k=12) -- the family {1..11,168}, which dips BELOW 1/12. The extremal sits at
+the maximal corner of BOTH sweep parameters: exactly where a truncated sweep cannot see it.
+
+**Correct statement.** Single-lift rigidity gap = 14/169 - 1/13 = 1/169, attained UNIQUELY at
+{1..11,168} = the n=13 DEEP WELL: killer 168 = 169-1 = 13^2-1, witness t = 14/169 = 14/13^2,
+equioscillating (v=1 and v=168 both at distance exactly 14/169) -- the exact analog of
+{1..12,182} (182 = 183-1, t* = 14/183) one level down the tower. mac-mini-S51's floor VALUE was
+right; their attribution "{1..11,25}" was a slip (that family has M = 1/12 exactly, witness
+t = 1/12 -- verified both sessions).
+
+**Lesson (the fleet's recurring trap-class, now with a sharper rule).** MISTAKE-101/102 were
+"sampling misses structured families." This is the bounded-sweep variant: ALWAYS sweep to the
+STRUCTURAL cutoff (here the window threshold 144 => k <= 12), never a convenience bound -- and
+check the RANGE CORNERS first: extremals of monotone-ish families concentrate on the boundary
+of the admissible box. The deep well was sitting at the corner all along. Source: opus-S77 +
+mac-mini-S51.
+
 ## MISTAKE-102: RANDOM SAMPLING OF SPEED-SETS MISSES STRUCTURED FAMILIES — recurred twice in mac-mini-S45/S47 (same trap as MISTAKE-101)
 
 - **What was done:** To find the "compressed covering-min floor," I searched by random-sampling 13-subsets of an integer range + local descent. S45 concluded the floor is **7/89**; S47, searching the 12-runner spectrum by random sampling, concluded a "spectral gap M=1/13 or ≥1/12."
