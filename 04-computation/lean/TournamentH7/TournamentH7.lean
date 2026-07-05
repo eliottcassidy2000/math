@@ -323,3 +323,4 @@ import TournamentH7.LRCTripleWalk  -- kps-S9(2026-07-05): the l=3 walk by recurs
 import TournamentH7.LRCMultiKillerWindow13
 import TournamentH7.LRCLiftPigeonhole
 import TournamentH7.LRCGapDescent
+import TournamentH7.LRCLiftRowsL7

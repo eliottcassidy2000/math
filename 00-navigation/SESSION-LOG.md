@@ -14,6 +14,21 @@ PROOF MAP updated: crux section 1d rewritten (named Q50, finite shape, remaining
 FILES: lrc_gap_census40_S54.c (spectroscopy mode), lrc_pole_necessity_macmini_S55.py, lrc_q50_highscale_macmini_S55.py, lrc_l7_bounded_stratum_macmini_S55.py (+4 .outs), reflection the-q50-conjecture-and-the-periodicity-reduction-macmini-S55.md; HYP-4119 (+INDEX); proof map edit.  No canon overridden.  (l=4 workers STILL in flight -- hours-long; collection instructions stand.)
 
 NEXT: (a) THE Q50 TEMPLATE CHECK at q = 26..33 (enumerate mod-q templates consistent with pinned divisors, verify clearing-dilation existence -- the finite verification that would CLOSE the single-scale half); (b) opus's high ratio-cluster leg; (c) compose Q50 + descent in klein's assembly language (the dichotomy's loose branch as two named finite hypotheses); (d) l=4/l=5/6 collection.
+## opus-2026-07-05-S82 -- SHADOW DICHOTOMY REFUTED (covers >> shadows at level 169) + THE CORRECTED l >= 7 ASSEMBLY (v_max strata: bounded sweep / peel / compressed-top sliver) + CLASS-LEVEL KERNEL ROWS GREEN (LRCLiftRowsL7.lean) (HYP-4119)
+
+Prompt: overall scale + bottom-6 alignment; the l >= 7 assembly lemma and grid stratum; document the l <= 6 caps as provably necessary.
+
+THE ARC (conjecture posed, machinery built, conjecture refuted, architecture corrected -- same session): the 169-grid sees only the pattern kappa_r = k_r mod 13; dilated standards lambda{1..12} (lambda >= 3 reach l >= 8, TIGHT, non-primitive -- excluded upstream by primitivity) shadow to witness-free patterns, so I conjectured full covers = the 156 shadows, with primitive shadow-families forced to deviate >= 169 => runner >= 170 => descent. THE SEARCH SAYS NO: exhaustive DFS (column-deficit prune: each position kills EXACTLY 2 cells per column) finds tens of thousands of cover patterns; 400 sampled: all irredundant on all 12 positions, all NON-shadow, none affine/quadratic in r. Per-pattern rows are dead. What survives: cover-class small-reps are LOOSE and comfortable (M = 7/23, 4/17, 2/13 -- witnessed at merge denominators; covers are loose-elsewhere classes), and every non-small class member has a >= 170 runner.
+
+THE CORRECTED ASSEMBLY (draft updated): split by v_max, not pattern. (1) BOUNDED (all <= 168): finite mac-mini-scale C sweep -- handed off with spec (their S54 offer). (2) UNBOUNDED spread top (v_max > 12 v_2nd): S76 peel + recursion. (3) UNBOUNDED compressed top: descent for spread-in-block, kps pair walk for pairs, and THE ALIGNMENT SLIVER (>= 3 same-scale runners, distinct residues, ratio < 26/11, scale [169, ~1605]) as the ONE open case -- mac-mini HYP-4094 territory; fees absorb such blocks only at scale >= ~1605.
+
+BOTTOM-6 ALIGNMENT (user theme, resolved): the grid capacity is PERFECTLY balanced -- every cell has exactly 12 of its 24 killers in the bottom-6 (the involution v <-> 169-v pairs bottom/top kills; 78 coincident kill-set pairs; overlaps quantized {2,4,6,8,12,24}). kps's observed bottom-6 duty concentration is a HEIGHT artifact (bounded height forces small kappa at the bottom), not a mod-169 asymmetry.
+
+FORMALIZATION: LRCLiftRowsL7.lean GREEN first-compile (speedOK13_congr -- rows certify whole congruence classes mod 169; strictLonely13_of_row; rows A-D = the S81 systematic l >= 7 patterns, kernel decide), standard trio, registered, corpus 8671. The row SCHEMA survives the refutation (rows still certify classes; there are just too many cover-adjacent patterns to enumerate).
+
+NECESSITY DOCUMENTED: the assembly draft carries the section 'the l <= 6 caps are theorems' (ceiling => kps C_l stop, mac-mini T_l poles, klein 6-top are one theorem from three sides) -- offered to mac-mini for the proof map.
+
+Files: LRCLiftRowsL7.lean (green, registered); l7-assembly-lemma-opus-S82.md; shadow_dichotomy_169 + shadow_orbit_census scripts + outs; HYP-4119 (mixed: machinery confirmed, dichotomy refuted); census DFS still finishing at close (partial counts in the .out; exact total lands there).
 
 ## klein-2026-07-05-S137 -- THE MERGE-GRID ATTAINMENT THEOREM (THM-592's Lean face): M is attained at m/(v_i+v_j), kernel-pure -- every exact-M sweep in the project is now grid-justified by a theorem (HYP-4114)
 

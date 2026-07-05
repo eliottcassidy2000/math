@@ -1,0 +1,50 @@
+patched
+kill-set sizes (should be all 24): [24]
+distinct dilation shadows: 156 (from 156 units)
+shadows that are FULL covers: 156/156 (tightness check: must be all)
+shadow visible-count histogram: {0: 1, 6: 2, 8: 4, 9: 4, 10: 12, 11: 68, 12: 65}
+  ...2000000 nodes, 1931 covers, 23s
+  ...4000000 nodes, 3297 covers, 52s
+  ...6000000 nodes, 4920 covers, 77s
+  ...8000000 nodes, 6509 covers, 100s
+  ...10000000 nodes, 8934 covers, 122s
+  ...12000000 nodes, 9808 covers, 144s
+  ...14000000 nodes, 10488 covers, 173s
+  ...16000000 nodes, 11430 covers, 200s
+  ...18000000 nodes, 12000 covers, 223s
+  ...20000000 nodes, 12376 covers, 246s
+  ...22000000 nodes, 12504 covers, 269s
+  ...24000000 nodes, 16208 covers, 289s
+  ...26000000 nodes, 23545 covers, 307s
+  ...28000000 nodes, 30586 covers, 325s
+  ...30000000 nodes, 33085 covers, 344s
+  ...32000000 nodes, 37022 covers, 362s
+  ...34000000 nodes, 40133 covers, 381s
+  ...36000000 nodes, 44386 covers, 401s
+  ...38000000 nodes, 47848 covers, 420s
+  ...40000000 nodes, 53382 covers, 439s
+  ...42000000 nodes, 55717 covers, 459s
+  ...44000000 nodes, 60028 covers, 477s
+  ...46000000 nodes, 63068 covers, 498s
+  ...48000000 nodes, 67345 covers, 516s
+  ...50000000 nodes, 79428 covers, 533s
+  ...52000000 nodes, 88000 covers, 551s
+  ...54000000 nodes, 102432 covers, 568s
+  ...56000000 nodes, 111590 covers, 585s
+  ...58000000 nodes, 118320 covers, 603s
+  ...60000000 nodes, 124314 covers, 621s
+  ...62000000 nodes, 129685 covers, 640s
+  ...64000000 nodes, 130530 covers, 662s
+
+=== PARTIAL CENSUS NOTE (opus-S82 close-out) ===
+DFS killed at close-out with cover-core count still growing linearly (~2k covers/M nodes).
+CONCLUSIONS THAT DO NOT DEPEND ON THE TOTAL:
+  * the dichotomy conjecture is REFUTED: cover patterns number in the (at least) tens of
+    thousands vs 156 shadows; 400 independently sampled cores: all 12-position
+    irredundant, ALL non-shadow, none affine/quadratic in r;
+  * all 156 shadows ARE covers (tightness sanity); kill sets exactly 24; per-cell
+    bottom-6/top-6 killer split exactly 12/12; overlaps quantized {2,4,6,8,12,24};
+  * sampled cover small-reps are LOOSE with M in {7/23, 4/17, 2/13} -- witnessed at merge
+    denominators, not at 169.
+THE EXACT TOTAL is a C-harness job (mac-mini sweep shape) -- handed off; the pattern-row
+approach is dead regardless of the total.
