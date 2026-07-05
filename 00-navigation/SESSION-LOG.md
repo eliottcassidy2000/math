@@ -17,6 +17,21 @@ WHAT THIS FEEDS: mac-mini's S54 finish-list [3] (strata as named decidable hypot
 
 FILES: LRCGridValue.lean; MISTAKES (106); INDEX (4114 corrected, 4121); LRCTeethR docstring; letter to kps. Four pushes. No canon overridden.
 
+## mac-mini-2026-07-05-S57 -- THE HALF-VALUE BAN CLOCK: exact search-free criterion at s = 2p (0/7,001 mismatches), the doubling gears (6, 4+4, 9, 11), the ban-load tournament (THM-372 switchboard + THM-378 voltage lift), kps's 5-modulus hope REFUTED, uniform-load rigidity REFUTED with the 6^6 = C(4,2)^6 law (HYP-4132)
+
+Prompt (owner): prioritize creative mathematical reasoning + repo connections + hypothesis testing over massive programs; develop the E_p/O_p parity-split seed; define a meaningful new tournament object.
+
+COORDINATION FIRST: kps-S11 reserved the parity-split reframe (4137) concurrently -- scoped complementary in my claim (they: reduction + 5-modulus test + dividend theorem; me: the counting dual + the object); mid-session handoff letter sent with the criterion + their (ii) answered.
+
+THE MATHEMATICS (all small exact computations, per the directive):
+ (1) THE SEED DECODED: at s = 2p, even runners block through their HALVES on the p-grid (E_p = {0,+-2} always -- so 2p | v kills the modulus, the owner's lever); odd runners block only at +-1 (mu=3: p in {13,17}) or +-1,+-3 (mu=4: {19,23}).
+ (2) THE EXACT CRITERION (0/7,001 vs brute force): witness at 2p <=> no runner == 0 mod 2p AND the ban classes {+-rho(v)^{-1} mod p} (rho = half-value map: v odd -> v; v even -> v/2) MISS a dilation class.  Search-free (12 inversions + set-size).  Ban coincidences <=> half-values agree up to sign; mixed-parity coincidence = the DOUBLING FOLD (w == +-2v).  Doubled-residue families = ban-colliders => the census's q=26 first-witness mass EXPLAINED.
+ (3) AP RIGIDITY SHAPE: the AP is load-uniform at p=13 (fibers = the doubling pairs {1,2},{3,6},{5,10},{4,11},{8,9},{7,12}; ord+-(2) = 6: the classes form a single 6-cycle).  Gears 13/17/19/23 have doubling-cycle types 6, 4+4, 9, 11.
+ (4) REFUTED (kps (ii)): the four 2p-gears alone do NOT clear all profile families -- blocked examples found ({1,15,18,25,33,37,38,40,42,44,46,48}...), each witnessing at DOZENS of other moduli in [28,60] (Q50 unthreatened; the full gear-box with gcd-type split rules is the right template family).
+ (5) REFUTED WITH A LAW (H1): uniform load at 13 is NOT the tight fingerprint -- uniform 12-subsets of [1,26] number EXACTLY 6^6 = C(4,2)^6 (each +-class has exactly 4 representatives per 26-window; uniform = choose 2 of 4 per class).  Tight rigidity needs all gears + profile JOINTLY.
+ (6) THE NEW OBJECT (owner's ask): the BAN-LOAD TOURNAMENT B_p(W): dilation +-classes on the doubling cycle, arcs by load comparison, ties along the clock -- a Tournament Analysis switchboard (THM-372) whose parity structure is a voltage lift (THM-378: mod-2p dilations double-cover mod-p; runners lift by parity; the even-graph duality echo is exact).  Clearing <=> a zero-load vertex; dilation acts by rotation (template invariant).  Candidate invariants: load spectra across gears as template signature; H(B_p) as hardness.
+IN FLIGHT: l=4 workers (still), l=8 corrected sweep, l=4 volume audit.  FILES: lrc_halfvalue_ban_macmini_S57.py (+.out incl. H1 addendum), reflection the-half-value-ban-clock-and-the-doubling-tournament; HYP-4132 (+INDEX); kps handoff letter.  No canon overridden.
+NEXT: (a) the gcd-type split rules at the remaining gear classes (4p, odd prime, prime power) -- each should have a search-free criterion like the 2p one; (b) kps consumes the criterion into TemplateWitness at {26,34,38,46}; (c) the joint-gear rigidity (which load configurations across ALL gears force AP) = the tight-branch fingerprint done right; (d) B_p load-spectrum census (small).
 ## mac-mini-2026-07-05-S56 -- THE COMPUTATIONAL VALIDITY AUDIT (owner directive): MISTAKE-107 caught+FIXED (l=7 corrected re-sweep 4.57B leaves, HARD=0 -- my S55 sweep was the self-carried slice), MISTAKE-108 proven zero-impact (F4 vs Lean i=j), census independently re-verified TO THE FAMILY, reroute onto the new template surface (HYP-4122)
 
 Prompt (owner): carefully consider recent/current agent work AND ITS VALIDITY; best formal state; push/pull, synthesize, reroute.
