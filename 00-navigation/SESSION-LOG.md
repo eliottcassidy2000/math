@@ -139,6 +139,20 @@ HOUSEKEEPING: HYP cascade rode 4 collisions mid-session; settled 4099=klein-S134
 FILES: lrc_multilift_leg_macmini_S52.py, lrc_multilift_floor_macmini_S52.py (+.outs), lrc_ladder_certificates_macmini_S52.md, reflection the-multi-lift-floor-and-the-14r-ladder-macmini-S52.md; HYP-4103 (+INDEX). No canon overridden.
 
 NEXT: (a) the l=3..6 floor-level domains (T_l bounded; same harness, bigger volumes -- expect 2/25 to hold, the 2nd harmonic seems to be THE lift floor); (b) the Fin-12 fee transcription; (c) prove M({4,6}-block) = 2/25 as the lift-side 2nd-harmonic extremal (kps's second_value_loose machinery should adapt); (d) the l >= 7 spread residual (ratio gate + sieve strain -- possibly a one-session finite check).
+## kind-pasteur-2026-07-05-S8 -- THE PAIR WALK kernel-pure: min(pair) <= 22B for every pair of a gap violator (3-step tooth-boundary walk, pure linarith kill; 3x sharper than the S7 density C_2) + bottom-6 census notes + the 4113->4115 renumber + URGENT klein dedup (HYP-4117)
+
+Prompt (owner): sharper one-tooth rungs + per-scale census + bottom-6 structure.
+
+THE LEAN (LRCPairWalk.lean, registered, corpus green 8669, kernel-pure): **walk_core** -- an interval covered by two 2/25-combs with left end on comb u satisfies b - a < (4/25)(2/u + 1/v). The walk: tooth right-ends are at distance EXACTLY 2/25 (never covered by their own comb) => the cover alternates; the 3rd and 4th boundaries force BOTH imbalances (21/25)v < (4/25)u and (21/25)u < (4/25)v, whose SUM is 21/25 < 4/25 -- absurd. Measure-free, subcover-free. **gap_pair_rung**: every pair of a no-2/25-point 12-family has min <= 22B (10-complement cited at 1/11; window 6/(275B)). Sharper than S7's C_2 = 64.7 by 3x and than S6's 24.
+
+SHARPNESS LANDSCAPE (honest): the l=1 walk recovers 24B; l=2 gives 22B; deeper one-tooth rungs need multi-comb chain analysis (the 4-point pigeonhole fails; the general chain needs subcover machinery) -- the S7 density rungs stand for l = 3..6. opus-S81's descent covers the SPREAD-top sectors; the walk kills BALANCED pairs: complementary partition of the pair regime.
+
+BOTTOM-6 (stats + note): at H=24 the covering duty concentrates in the bottom-6 ({1,x,7,8,9,10} dominate); AP-like bottoms never survive the big-pair filter; the dyadic tower is rare (1.4%). The rungs prune NOTHING at H=24 (by design -- they are LARGE-scale height-structure control; the census owns the bounded heights). The bottom-6's real constraints are alignment/band-shaped = mac-mini's pipeline.
+
+HOUSEKEEPING: S7 renumbered 4113 -> 4115 (opus-S80 first-committed); URGENT dedup note to klein (their S137 stub = my delivered HYP-4108 grid attainment) with redirect suggestions.
+
+FILES: LRCPairWalk.lean; results/lrc_pair_walk_bottom6_kps_S8.out; HYP-4117 (INDEX). Two checkpoints + close-out. No canon overridden.
+
 ## kind-pasteur-2026-07-05-S7 -- THE l >= 2 PEEL LADDER kernel-pure: gap_tower_step (rho = 2/25 on klein's S136 stack) + gap_ladder_rung (order-statistic compression at every l <= 6; C_l = 64.7..572.7); the gap violator is squeezed at every scale (HYP-4115, renumbered from 4113: opus-S80 first-committed)
 
 Prompt (owner): the l >= 2 peel ladder + remaining fleet tasks.
