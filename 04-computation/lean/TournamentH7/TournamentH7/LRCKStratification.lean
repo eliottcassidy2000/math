@@ -17,6 +17,7 @@
 -/
 import Mathlib.RingTheory.Int.Basic
 import Mathlib.Tactic
+import TournamentH7.LRCClusterGcd
 
 namespace LonelyRunner
 namespace KStratification
@@ -112,6 +113,20 @@ theorem witness_determined (v m m' : ℤ)
   have hd2 : (2 : ℤ) ∣ (m - m') := h2 (dvd_trans (by norm_num) hdiff)
   have hd19 : (19 : ℤ) ∣ (m - m') := h19' (dvd_trans (by norm_num) hdiff)
   omega
+
+/-- THE k-REDUCTION, COMPOSED (S2): for a no-2/25-point 12-family whose
+    non-k-multiples form S with 1 ≤ |S| ≤ 3 (the k-cluster from binder_dvd
+    fills the complement), the stratification height k is bounded through
+    kps's cluster-gcd rung instantiated at the common divisor d = k.
+    (The |S| ≤ 6 sharp form upgrades this when LRCClusterGcd does.) -/
+theorem k_bounded_of_stratification (cite : LonelyRunner.LRCUpTo13)
+    (v : Fin 12 → ℤ) (hv : ∀ i, v i ≠ 0)
+    (hnl : ∀ t : ℝ, ∃ i, ∃ m : ℤ, |(v i : ℝ) * t - m| < 2 / 25)
+    (k : ℤ) (hk : 0 < k)
+    (S : Finset (Fin 12)) (hS1 : S.Nonempty) (hS3 : S.card ≤ 3)
+    (hstrat : ∀ i, i ∉ S → k ∣ v i) :
+    (25 - 8 * (S.card : ℤ)) * k ≤ 25 * (∑ i ∈ S, |v i| + S.card) :=
+  LonelyRunner.gap_gcd_rung cite v hv hnl S hS1 hS3 k hk hstrat
 
 end KStratification
 end LonelyRunner

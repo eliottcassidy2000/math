@@ -1,0 +1,7 @@
+==============================================================================
+PART A: uniform cell lemma vs real attainers (0 violations expected)
+==============================================================================
+  families tested: 436; DISTINCT attained cells (c,q): 268
+  ZERO violations of (0),(i),(ii),(iii),(iv),(v) -- lemma verified
+  k-spectrum over attainers: {1: 334, 2: 37, 3: 22, 4: 12, 5: 12, 6: 2, 7: 6, 11: 3, 12: 3, 14: 2, 15: 1, 18: 1, 19: 1}
+partA violations after fix: 0

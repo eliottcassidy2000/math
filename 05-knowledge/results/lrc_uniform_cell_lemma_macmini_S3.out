@@ -1,0 +1,49 @@
+==============================================================================
+PART A: uniform cell lemma vs real attainers (0 violations expected)
+==============================================================================
+  families tested: 436; DISTINCT attained cells (c,q): 291
+  VIOLATIONS (29):
+    (iii-kink) missing a binder sign: M=47/113 t=47/113 W=[1, 54, 59]
+    (iii-kink) missing a binder sign: M=30/67 t=14/67 W=[17, 31, 36]
+    (iii-kink) missing a binder sign: M=7/17 t=18/85 W=[31, 35, 54]
+    (iii-kink) missing a binder sign: M=28/73 t=28/73 W=[1, 25, 48]
+    (iii-kink) missing a binder sign: M=37/89 t=14/89 W=[9, 29, 60]
+    (iii-kink) missing a binder sign: M=35/81 t=5/81 W=[7, 24, 57]
+    (iii-kink) missing a binder sign: M=33/79 t=25/79 W=[5, 27, 52]
+    (iii-kink) missing a binder sign: M=15/38 t=9/38 W=[11, 19, 23]
+    (iii-kink) missing a binder sign: M=19/65 t=18/65 W=[2, 17, 24, 41]
+    (iii-kink) missing a binder sign: M=14/39 t=11/39 W=[9, 20, 44, 48]
+    (iii-kink) missing a binder sign: M=34/87 t=5/87 W=[28, 42, 44, 45]
+    (iii-kink) missing a binder sign: M=9/31 t=2/31 W=[7, 11, 21, 24]
+    (iii-kink) missing a binder sign: M=7/18 t=1/36 W=[18, 22, 52, 53]
+    (iii-kink) missing a binder sign: M=9/23 t=8/23 W=[10, 13, 27, 59]
+    (iii-kink) missing a binder sign: M=17/49 t=9/98 W=[4, 16, 18, 26, 49]
+    (iii-kink) missing a binder sign: M=37/103 t=42/103 W=[1, 21, 31, 50, 53]
+    (iii-kink) missing a binder sign: M=40/103 t=19/103 W=[25, 35, 41, 51, 52]
+    (iii-kink) missing a binder sign: M=32/91 t=31/91 W=[25, 34, 43, 51, 57]
+    (iii-kink) missing a binder sign: M=15/49 t=22/49 W=[3, 6, 37, 50, 52]
+    (iii-kink) missing a binder sign: M=31/92 t=19/92 W=[12, 21, 36, 37, 56]
+  k-spectrum over attainers: {1: 324, 2: 41, 3: 21, 4: 12, 5: 14, 6: 4, 7: 6, 11: 4, 12: 3, 13: 1, 14: 2, 15: 1, 18: 1, 19: 1, 26: 1}
+
+==============================================================================
+PART B: anchored realization probe -- cells (3,38),(4,51),(5,63),(5,64),(6,77)
+==============================================================================
+  cell 3/38 (= 0.078947): shapes phi(q)/2 = 9, families tested = 788
+    M < 1/13: 0;  M >= 2/25: 788;  IN-GAP: 0
+    nearest approach to 3/38: |M - c/q| ~ 0.063910 at M ~ 0.142857
+  cell 4/51 (= 0.078431): shapes phi(q)/2 = 16, families tested = 1466
+    M < 1/13: 0;  M >= 2/25: 1466;  IN-GAP: 0
+    nearest approach to 4/51: |M - c/q| ~ 0.053644 at M ~ 0.132075
+  cell 5/63 (= 0.079365): shapes phi(q)/2 = 18, families tested = 1596
+    M < 1/13: 0;  M >= 2/25: 1596;  IN-GAP: 0
+    nearest approach to 5/63: |M - c/q| ~ 0.058566 at M ~ 0.137931
+  cell 5/64 (= 0.078125): shapes phi(q)/2 = 16, families tested = 1464
+    M < 1/13: 0;  M >= 2/25: 1464;  IN-GAP: 0
+    nearest approach to 5/64: |M - c/q| ~ 0.064732 at M ~ 0.142857
+  cell 6/77 (= 0.077922): shapes phi(q)/2 = 30, families tested = 2765
+    M < 1/13: 0;  M >= 2/25: 2765;  IN-GAP: 0
+    nearest approach to 6/77: |M - c/q| ~ 0.049466 at M ~ 0.127389
+
+  ZERO in-gap realizations across all five cells -- the void holds on every anchored template probed.
+
+SUMMARY: partA violations = 29; partB in-gap hits = 0
