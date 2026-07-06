@@ -350,3 +350,4 @@ import TournamentH7.LRCCircleUnshifted
 import TournamentH7.LRCTorusReduction
 import TournamentH7.LRCRankRigidity
 import TournamentH7.LRCAPProtection
+import TournamentH7.LRCDivisorProtection

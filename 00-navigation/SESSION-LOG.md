@@ -18,6 +18,21 @@ HONEST: empirical (bounded k<=3 lifts), the M-minimizer PROOF is the residual th
 FILES: lrc_lift_exhaustive_macmini_S11.py (+.out); drafts/lift-exhaustiveness-m-minimizer-macmini-S11.md; HYP-4362 (+INDEX).  No canon overridden.
 
 NEXT: (a) PROVE the M-minimizer property (smaller realization => lower M within a residue class -- the pinned-modulus (C) closer); (b) coordinate with S12 uniform-lift-rigidity + opus pigeonhole (converging); (c) the shifted CircleClearFloor l=7..11 Mirsky-Newman (the other open piece).
+## opus-2026-07-06-S104 -- THE DIVISOR-PROTECTION LEMMA formalized (general-k, the Farey-ladder mechanism): a k-multiple-free family is LOOSE at 1/k; the tight/window families must all contain a k-multiple (HYP-4366)
+
+Prompt: finish the endgame, pull during downtime, integrate incoming ideas and extend.
+
+DELIVERED (LRCDivisorProtection.lean GREEN, standard trio, corpus 8700), generalizing S103's k=12 AP protection to every modulus k and supporting kps's concurrent ladder census (HYP-4357):
+- int_far_of_not_dvd_k: k nmid s => dist(s/k, Z) >= 1/k (general k; the variable-k division identity needs k != 0, unlike the concrete-12 case where ring computes 12/12=1 -- Lean lore).
+- lonely_of_all_not_dvd: a family with NO multiple of k is lonely at t=1/k with margin 1/k.
+- margin_gt_mediant: 1/k > 2/(2k+1) (the mediant/second Farey rung).
+
+THE STRUCTURAL PAYOFF (the ladder separation): a k-multiple-free family is LOOSE (M >= 1/k, above the whole gap window). Therefore the tight family {1..k} AND every window-candidate MUST contain a k-multiple: {1..k} has k, the second-best {1..k-1,2k} has 2k, the deep well has (k-1)k. Loneliness at the tight value 1/(k+1) is precisely the price of admitting ONE k-multiple to sit at 0 when t=1/k. This is the free-action/divisibility meta-mechanism (S100b) as the general-k engine behind the universal Farey ladder j/(kj+1).
+
+INTEGRATION: kps HYP-4357 (m/(12m+1) ladder + spectral-gap census) is exactly this ladder at k=12; this lemma is its clean formal mechanism. Extends my S103 (k=12) and S100 (the ladder). The endgame's (C)/hdich now has: (A)=>(C) fully formal-reduced (S99/101/102), the AP-completion core (S103), and the general ladder-separation mechanism (this).
+
+Files: LRCDivisorProtection.lean; HYP-4366.
+
 ## opus-2026-07-06-S103 -- CREATIVE toward the crux: THE AP-11 PROTECTION LEMMA formalized (the inductive core of (C)/hdich); the AP is self-protecting at t=1/12, only 12|v breaks it (HYP-4356)
 
 Prompt: work creatively toward the crux.
