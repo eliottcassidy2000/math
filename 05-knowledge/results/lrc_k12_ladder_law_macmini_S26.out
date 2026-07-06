@@ -1,0 +1,12 @@
+k=12 ladder, base {1..11} (plateau M=1/12), outlier x:
+  distinct M-values (rungs) and the x that produce them:
+    M=1/13=0.07692  x=[12] <-- 1/13 floor
+    M=2/25=0.08000  x=[24] <-- 2/25 = 2/(2k+1) WALL (block-lift x=24=2*12)
+    M=3/37=0.08108  x=[36]
+    M=4/49=0.08163  x=[48]
+    M=1/12=0.08333  x=[13, 14, 15, 16, 17, 18] <-- plateau 1/12
+
+  => the ladder has a rung AT 2/25 (the wall 2k+1=25) and jumps to the
+     plateau/floor -- NOTHING strictly between 1/13 and 2/25.  Compare k=7:
+     rung 3/23 lands INSIDE (1/8,2/15).  The k=12 gap is narrower than the
+     rung spacing => the wall rung sits at the boundary, gap empty.

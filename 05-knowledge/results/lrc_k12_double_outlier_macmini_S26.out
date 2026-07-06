@@ -1,0 +1,13 @@
+DOUBLE-OUTLIER k=12: base (10 speeds) + 2 outliers (x,y); gap catch?
+  {1..12}\{11,12}: in-gap double-outlier families = 0
+  {1..12}\{6,12}: in-gap double-outlier families = 0
+  {1..12}\{4,6}: in-gap double-outlier families = 0
+  {1..12}\{11,6}: in-gap double-outlier families = 0
+  {1..12}\{6,7}: in-gap double-outlier families = 0
+  {1..12}\{5,7}: in-gap double-outlier families = 0
+  {1..10}: in-gap double-outlier families = 0
+  {1,3,4,5,7}core+5more: in-gap double-outlier families = 0
+
+  tested ~8805 double-outlier families; total IN-GAP = 0
+  => ZERO double-outlier gap members at k=12 on these bases: the
+     bounded 2-outlier case also empty (consistent with single-outlier).
