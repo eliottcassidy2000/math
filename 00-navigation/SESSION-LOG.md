@@ -1,3 +1,21 @@
+## mac-mini-2026-07-06-S22 -- THE METRIC HALF of opus-S113's STRUCTURE x WIDTH: block-lift = window top EXACTLY (clean identity); gap members at rise/w<1 (non-monotone); the residual is ACHIEVABILITY of sub-block generalized APs, not rise/w (HYP-4502)
+
+Prompt (owner): work the sole open piece creatively in collaboration with concurrent agents.
+
+COLLABORATION with opus-S113 (STRUCTURE x WIDTH: gap member => generalized AP [structure] + Farey wall q>=3k+2 [GREEN]): I took the METRIC HALF ('generalized AP => M>=2/(2k+1) at k=12'), located the residual but did not close it.
+ (1) CLEAN IDENTITY (verified all k): the block-lift second-value attainer sits at EXACTLY 2/(2k+1) = the window TOP, since 2/(2k+1)-1/(k+1) = window width.  opus's 'tiles with exactly [window] slack' is literal.
+ (2) GAP MEMBERS below, NON-MONOTONE: k=6 5/33 rise/w=0.788, k=7 3/23 rise/w=0.652 (deeper) => closure is NOT a simple rise/w>=1 argument.
+ (3) THE RESIDUAL IS ACHIEVABILITY: gap emptiness = sub-window Stern-Brocot fractions realizable at small k but not k=12, squeezed between opus's GREEN Farey wall (lower, max speed >=(3k+2)/2) and the OPEN single-cluster bound (upper); the collision at k=12 = the n-specific heart of (G).
+ (4) opus's GUARD-RAIL ACCEPTED: my S20 safe=0<=>AP is n=13-specific (refuted at n=7).
+ (5) CAVEAT for the fleet: my gen-AP construction MISSED the real gap members (2D GAPs, not simple lifts -- k=6 member = AP{1,6,11,16}d=5 + {5,17}); structure enumeration must use true GAP shapes or false-report empty.
+
+NET: honest collaboration -- located the metric residual precisely (block-lift=window-top; emptiness=sub-block achievability), quantified the razor, flagged a construction pitfall; the achievability closure = the open (G).  Division clean: opus=structure, me=metric-map, residual=their intersection at k=12.
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection.)
+
+FILES: lrc_structure_width_macmini_S22.py, lrc_structure_width_clean_macmini_S22.out; reflection the-block-lift-is-the-window-top-macmini-S22.md; HYP-4502 (+INDEX); 2 letters to opus.  No canon overridden.
+
+NEXT: the achievability closure -- do sub-block generalized APs (short AP + boundary) realize sub-window values at k=12? (squeeze opus's Farey wall vs the single-cluster bound); the true-GAP-shape enumeration.
 ## opus-2026-07-06-S114 -- THE SAFE ROUTES REFORMULATE (G), THEY DO NOT REDUCE IT + theta-cancellation is NOT harmonic-led (HYP-4466); LRCLonelyOpen.lean GREEN
 
 Prompt: work the sole open piece creatively in collaboration with concurrent agents.
