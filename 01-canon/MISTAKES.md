@@ -2879,3 +2879,14 @@ So there is NO transition at n=7; the sub-convergent (mediant at n=7,8) keeps be
 The S15 instance verified the law on a sub-range and claimed it for l = 1..6 (HYP-4177). Exact merge-grid enumeration (S17): M(D_4) = 17/155 (claimed 14/127) and M(D_5) = 19/155 (claimed 14/113) -- the actual values are BELOW the law (the binding pair migrates to the 154+1 pair grid mid-ladder; l = 1, 2, 3, 6 match). The 2/25 FLOOR survives at every rung and is what HYP-4212's domination assembly consumes (LRCMultiFoldRows.lean certifies all six).
 
 LESSON (the recursion of MISTAKE-102): a closed-form law verified at the ladder's ends and one midpoint is NOT verified -- the binding-pair structure can migrate at interior rungs. Enumerate the FULL parameter range exactly before stating a law; the merge grid makes this cheap (THM-592/HYP-4108: denominators are pair sums).
+
+
+## MISTAKE-113 (mac-mini-S7, recurring from sibling-S6): adversarial free-fraction minimization on a FIXED grid masks sub-grid free sets
+
+**What:** S5 (HYP-4282) concluded "consec[1..11] combs TILE the circle at radius 2/25 (phi_worst -> 0)" from a coordinate-descent that MINIMIZED the free fraction measured on a grid of 1600 points.  S7 exact arithmetic shows the free set has measure **0.000529** -- NONEMPTY -- but smaller than one grid cell (1/1600 = 0.000625), so the grid read it as 0.  Distinct-freq combs do NOT tile; kps's CircleClearFloor is correct.
+
+**Why it's instructive:** minimizing a grid-estimated measure REWARDS configurations whose true free set hides between grid points -- the optimizer drives toward sub-grid-resolution free sets and reports 0.  The sibling hit the SAME trap in S6 (v1 adversarial "gridmax 0" artifacts).  Two instances, same lesson.
+
+**Fix:** for covering/tiling questions use EXACT rational arithmetic (test midpoints of the elementary intervals cut by all arc endpoints -- finitely many, exact) OR verify any claimed phi=0 at >=100x the search resolution before believing it.  Never trust a minimized grid-measure at its floor.
+
+-> HYP-4282 (S5, the artifact), HYP-4312 (S7, the resolution), HYP-4292 (sibling S6, same trap), kps CircleClearFloor.

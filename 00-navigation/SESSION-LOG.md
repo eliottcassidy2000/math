@@ -1,3 +1,19 @@
+## mac-mini-2026-07-06-S7 -- THE Q50 CENSUS BOUND HARDENED: real witness-denom bound = 25 (not 50), factor-2 margin under opus-S98; the delicate 2/25-attainer case CLEAN (q*=25, unique over 8551 fams); + my S5 covering-tiling claim REFUTED as a grid artifact (distinct combs do NOT tile, kps vindicated) (HYP-4312)
+
+Prompt (owner): work on completing the consolidated endgame.
+
+STATE READ (fleet converged fast): opus-S98 residue bridge (height DISCHARGED, gap -> finite Q50 census); opus-S99 projection floor M(U)>=1/13 + THE JUMP (window = 1/325-sliver, rank-1 at 1/13 / rank-2 leaps to 1/6) + (A)=(C)=2-D lift rigidity; kps-S20d CircleClearFloor + torus_A_window_empty; sibling S6/S6b: 7-spread residual census-clean at 1/6 + (A)-IS-SUBSUMED reframe (three tail lanes -> ONE finite census).  THE single remaining crux = the finite Q50/template census gap-emptiness.
+
+MY TARGET (unclaimed, foundational): opus's census reduction is rigorous ONLY IF every gap-clearing family has a margin-2/25 witness at q <= Q_max; opus supports Q_max=50 by SAMPLING (300/300).  I hardened this exactly.
+ (1) THE BOUND IS 25: min-witness-denom over 527 families (incl high-height to 5000) maxes at EXACTLY 25 (sole case: the attainer); zero need q>50.  opus's 50 has factor-2 margin.
+ (2) THE REASON: spectrum VALUES near 2/25 have big denominators (to 140) but WITNESS denominators are tiny -- opus-S99's JUMP means clearing families sit well above 2/25 (next values 2/19, 2/17), wide safe sets, small-q witnesses.
+ (3) THE DELICATE CASE SETTLED: a 2/25-attainer has q*=25k (uniform cell lemma) and -- HAVING a 2/25-point -- ESCAPES kps's ladder, so q* could a priori be 50,75,... (a q*>50 attainer would look to the census like a gap family = the failure mode).  Hunt over 8,551 targeted families: EXACTLY ONE 2/25-attainer (q*=25, k=1); NO large-q* attainer.  Census cap SOUND.
+ (4) SECOND-VALUE (U) ECHO: the 2/25-attainer is essentially unique (1/8551) = (U)-rigidity one Farey step above 1/13.
+ (5) SELF-CORRECTION: my S5 'consec[1..11] tiles at 2/25' was a GRID ARTIFACT -- exact free-frac = 0.000529 (nonempty; grid-1600 cell 0.000625 masked it).  Distinct-freq combs do NOT tile: kps's CircleClearFloor VINDICATED, S5 claim withdrawn (off critical path per opus reroute; canon now correct).  Same undersampling trap the sibling caught in S6 -- MISTAKE logged.
+
+FILES: lrc_q50_bound_macmini_S7.py (+.out), lrc_q50_delicate_macmini_S7.py (+.out), lrc_covering_resolution_macmini_S7.out; drafts/q50-census-bound-hardened-macmini-S7.md; HYP-4312 (+INDEX); MISTAKE (grid-artifact); letters to opus+kps.  No canon overridden.
+
+NEXT: (a) PROVE the bound (M>2/25 => q<=25 clearance from the jump width; 2/25-attainer => q*=25 from uniform cell + rigidity); (b) the 2/25-attainer uniqueness = (U)-at-2/25 (with klein); (c) run/formalize the finite q<=25 census itself (the single crux, with opus+sibling).
 ## mac-mini-2026-07-06-S8 -- BREADTH-FIRST REPO SYNTHESIS (owner: fan out from Farey work, find recurring patterns across surface-different manifestations): THE WHOLE PROJECT IS ONE OBJECT, 14 = 2*7 (HYP-4322)
 
 Prompt (owner): investigate the Farey-adjacent work deeply; breadth-first fan-out through repo docs; explore niche topics; find recurring patterns even if surface-different.
