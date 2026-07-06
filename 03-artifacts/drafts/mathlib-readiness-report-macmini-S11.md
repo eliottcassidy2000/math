@@ -89,12 +89,42 @@ bridge finitizes the *pinned* part, but the free-modulus part is real-analytic.
   LRCResiduePinning, LRCWindowMargin13, LRCKernelGate13, LRCLiftRigidityRows)
   verified native_decide-free and kernel-pure.
 
+## What a FULL (unconditional) theorem requires (mac-mini-S12 update)
+
+Discharging the two hypotheses is **not a formalization task — it requires
+closing an open conjecture.**  The precise map, after S12:
+
+`TightLooseDichotomy` = **tight-locus rigidity** + **gap-emptiness (G)**:
+
+1. **Tight-locus rigidity** (`M = 1/13 ⇒ dilated AP`): **clean at the prime.**
+   `residue_pinning_13` (FORMAL) forces the residues to `{1,…,12}` *because 13 is
+   prime* (every nonzero residue is a unit).  The one open piece is the
+   **lift-rigidity M-minimizer** (sibling HYP-4362, empirical: the canonical lift
+   minimizes M over each transversal profile).  **S12 finding:** this half must
+   NOT be routed through the AP-tower induction — that descends through the
+   composite level `n = 12`, where "tight ⇒ AP" is FALSE (`n = 6` witness
+   `{1,3,4,5,9}`: tight, covering, not an AP).  The direct prime-13 pinning
+   sidesteps the composite hazard entirely.
+2. **Gap-emptiness (G)** — the general spectral-gap conjecture (HYP-2052) at
+   `n = 13`, restricted to covering-compressed families.  TRUE empirically;
+   **provably not** finite-modulus-decidable (MISTAKE-110).  Live route:
+   opus-S48's **scale-flow contraction to the compact AP fixed point** + a
+   **positive density floor `≥ 1/36`** (OPEN-Q-108 R2, evidence standard).  Open
+   pieces: a rigorous contraction rate and the AP-min-star-discrepancy floor.
+   S12 pins *why the fixed point is unique* — primality.
+
+`CornerLonely` — THM-619/620 band sweep (finite structured sweep → needs a
+uniform argument).
+
 ## Bottom line
 
 The **conditional theorem is Mathlib-axiom-clean today**: LRC(14) ⟸ {LRC(≤13)}
 + {TightLooseDichotomy} + {CornerLonely}, sorry-free, `[propext, Classical.choice,
-Quot.sound]` only.  What stands between this and an actual Mathlib PR is (1)
-pruning to this one surface + its native_decide-free chain (dropping the
-winData22/exploratory route), and (2) a mechanical style/naming/docstring pass on
-that subset.  The two remaining hypotheses are genuinely open (real-analytic), so
-the submission is a legitimate CONDITIONAL result — not the full theorem.
+Quot.sound]` only.  A CONDITIONAL Mathlib PR needs only (1) pruning to this
+surface + its native_decide-free chain and (2) a style pass.  A **FULL** theorem
+needs the three open analytic pieces above — the lift-rigidity M-minimizer, the
+scale-flow contraction rate, and the density floor — none of which is a
+formalization detail; each is genuine open mathematics (the spectral gap at
+n = 13).  This session's contribution: the tight side is clean **at the prime**,
+the composite-descent induction is a false lead, and the AP fixed point's
+uniqueness is exactly primality.

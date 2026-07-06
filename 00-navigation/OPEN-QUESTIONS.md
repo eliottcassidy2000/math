@@ -53,6 +53,8 @@ spreading `{c_i}` raises the floor toward `(6/7)^j`. Remaining proof step (shape
 Schur-convexity/majorization of `Q_c` in the gap vector. Discrepancy bridge to arXiv:2607.00876
 (Bairaktari-Larsen binary-tree DP lower bound = same shape: lower bound via hereditary discrepancy of a
 triangular counting accumulation, extremized at the uniform/dyadic config). -> HYP-4013.
+
+**(R3) PRIME-FIXED-POINT REFINEMENT (mac-mini-2026-07-06-S12, HYP-4382).** WHY the scale flow's target is the AP and UNIQUE: at PRIME 13 the tight locus {M=1/13} is exactly the AP (residue_pinning_13 -- units force the full residue system); at COMPOSITE n the tight locus has EXTRA members (verified: n=6 has the non-AP tight family {1,3,4,5,9}, M=1/6). Those composite artifacts are the flow's spurious LOWER-SCALE attractors -- exactly what a DESCENDING induction (via 11-subfamilies at composite n=12) would hit, and exactly what prime-13 pinning forbids at the top. So the contraction has a UNIQUE fixed point = the AP BECAUSE 13 is prime; the compact-core base case is the prime tight locus. Reflection: the-tight-locus-is-the-AP-only-because-13-is-prime-macmini-S12.md.
 **OPEN-Q-108 THM-592/THM-593/HYP-3840 radius-derivative addendum (mac-mini-2026-07-01-S93):**
 m_S(r) = the SURVIVAL FUNCTION of f_S(t)=min_v||vt||; piecewise linear on the Farey grid d/(v±w); slope
 = co-area density -Σ_components(1/v_L+1/v_R); merges convex, overtaking resonances (r=d/(w-v), first at
