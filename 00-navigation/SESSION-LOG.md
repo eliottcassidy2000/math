@@ -11,6 +11,21 @@ CONSEQUENCE: bounding height bounds the witness denominator => (G) is a FINITE C
 Lean lore: the maximizer_on_grid/margin/distZ live in LonelyRunner.GridAttainment + TournamentH7.LRCWitness (open both); the cast identity D*(v_l0 tstar - round) = v_l0 m - D*round wants Int.cast_sub/mul (NOT push_cast, which splits |v i|+|v j| and desyncs from hgrid) then linear_combination (v l0)*hgrid.
 
 Files: LRCWitnessDenominator.lean (green); HYP-4416. The remaining open math = the ONE height bound (the density-floor/renorm-rate, mac-mini/kps analytic lane); the lever makes everything below it finite.
+## mac-mini-2026-07-06-S16b -- THE REMAINING OBLIGATION IS ONE DENSITY FLOOR: the finite skeleton of (G) is complete (HYP-4432)
+
+Prompt (owner): work the remaining obligation creatively, pull from the fleet many times.  (Pulled ~9x; integrated opus-S108 coverer_height, kps-S23 residue split + S24 gap_candidate; replied to kps.)
+
+THE SKELETON (four agents' bricks compose): a gap member is (1) DIVISIBILITY-RICH -- contains a multiple of every k<=12 (kps HYP-4417 gap_candidate_has_multiple, GREEN); (2) COVERER-CONSTRAINED -- for r in {7..12} a pinned coverer is =r or >=14r (opus HYP-4406 coverer_height, GREEN); (3) BOUNDED-DENOMINATOR -- M=c/q => q|(v_i+-v_j) or 2v_i => q<=2max (my HYP-4432 lemma); (4) SINGLE-CLUSTER -- a scale gap gives two <=11-parts each M>=1/12>2/25 => decorrelation safe (my HYP-4402).  Together: a gap member is a bounded single-cluster divisibility-rich finite object.
+
+FAST EXACT M (engineering byproduct of my lemma): the witness q is among the O(n^2) pairwise sums/diffs => exact M in O(n^2*max), no profile-solver blowup.  The fleet's new workhorse for gap searches.
+
+SEARCHES (all CLEAN): (a) kps's proposed tight finite system -- all 1/2/3-element covering-preserving perturbations of {1..12} (singles<=200, doubles<=70, triples<=30): 59,633 covering primitive families, ZERO in gap; 2/25 attained (doubled-apex) as hard barrier, 9042 in [2/25,3/25).  (b) high-scale near-AP: the dilated AP is ISOLATED at every scale -- generic perturbation -> LOOSE (M>=1/8, 400/400), structure-preserving -> scale-stable RUNG (1/12,1/11,1/10), 0 in gap.  (Honest: isolation, NOT exact scale-invariance -- I initially over-read; values drift with N but stay loose/rung.)
+
+WHAT REMAINS: the DENSITY FLOOR itself (proving safe(2/25)>0 for non-AP, uniform in height) = the height bound = the contraction rate = opus's Riesz-product all-order estimate.  ONE fact in four languages (additive three-gap / multiplicative roots-of-unity / sum-product theta-lattice).  Every finite/combinatorial reduction is now in place (4 green Lean bricks + multi-scale theorem + fast-M searches); the residue is a single uniform-in-height analytic floor.
+
+DELIVERABLES: reflection the-remaining-obligation-is-one-density-floor-...-macmini-S16; scripts lrc_fastM_highscale_probe / lrc_targeted_gap_search / lrc_highscale_diffcore_probe / lrc_diffcore_scaleinvariance _macmini_S16 (+outs); reply to kps.  No canon overridden.  (HYP-4422 renumbered to 4432, ceding to an earlier S14 stub.)
+
+NEXT: the density floor / Riesz-product estimate is the sole open piece; the fast-M tool + the finite skeleton support a definitive bounded search if a height bound is proven (opus-S106 contraction).
 
 ## mac-mini-2026-07-06-S16 -- THE FOUR DICHOTOMIES as lenses + the PROVEN witness-denominator lever (HYP-4422)
 
