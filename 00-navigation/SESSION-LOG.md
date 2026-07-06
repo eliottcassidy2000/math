@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-05-S14 -- THE LOOSE BRANCH'S PRECISE OPEN STRUCTURE + the consecutive-rung lemma + the LITERATURE VERDICT (crux NOT citable; Jain-Kravitz relative-spectra is the lead) (HYP-4167)
+
+Prompt (owner): work on what remains, creatively.
+
+Worked the remaining crux (loose branch = 12-runner AP-rigidity) from the strategic + literature side, complementing the fleet's four-sided attack (klein HYP-4151 rigidity / mac-mini HYP-4152 AP-base+descent / kps HYP-4157 peeling-critical / opus HYP-4156/4166 the fold-desert-bound). Three deliverables:
+
+(1) THE CONSECUTIVE-RUNG LEMMA (elementary, PROVED, no citation): if {1..k} subset B (k<=11) and M(B)<2/25, then (k+1) | some element of B. (At t=1/(k+1) every runner is >=1/(k+1)>2/25-far unless divisible by k+1.) This is the c=1 core of mac-mini's AP-base mechanism, generalized to all k in one line. Verified descent rungs k=7..11 (0-in-gap). Honest: the descent constrains but does NOT terminate (a gap-violator need not contain {1..k}).
+
+(2) THE PRECISE OPEN STRUCTURE: the loose branch = [(U) M=1/13 => B=dilated AP: LRC(13) EXTREMIZER UNIQUENESS] + [(G) M>1/13 => M>=2/25: the SECOND-VALUE GAP]. Both genuinely open; both needed; (U) is the equality case of the proven bound, (G) is the strictly-harder second value.
+
+(3) LITERATURE VERDICT (web-checked): Sungkawichai-Trakulthongchai LRC(<=13) (arXiv:2604.23906) is COMPUTATIONAL -- does NOT characterize tight/extremal configs, prove AP-uniqueness (U), or address the second value (G). SO THE LOOSE BRANCH CANNOT BE DISCHARGED BY CITATION (the crux is real math, confirmed). USEFUL PIECES from S-T: their continuity lemma 'non-tight => an INTERVAL of witness times' = opus's interval frame (now literature-anchored); their polynomial method proves (1..k) mod p (p>k^2+k prime) proper = an AP-RESIDUE tool for klein's 'residues form the AP mod p'. STRONGEST EXTERNAL LEAD: Jain-Kravitz 'Relative Lonely Runner spectra' (arXiv:2411.12684) -- relative spectra have 'very rigid arithmetic structure' + 'explicit finite characterization' (2-dim subtori) = the closest machinery to the second-value gap; added to INVESTIGATION-BACKLOG with the concrete next step (test whether (1/13,2/25) is a relative-spectrum void).
+
+FILES: 05-knowledge/results/lrc14_loose_branch_structure_and_literature_kps_S14.md; INDEX HYP-4167; backlog lead. No canon overridden; complements the fleet's rigidity attack with the strategic/literature clarification (the crux is genuinely open, not a citation gap; and the strongest external tool is Jain-Kravitz).
+
 ## opus-2026-07-05-S88 -- THE TILING-DEGRADATION THEOREM: the fleet rigidity lemma via the FOLD -- mass identity (ceiling in one line), band-crossing ledger (proved), universal desert bound sigma/D (sharp, verified, attained) (HYP-4166)
 
 Prompt: work on what remains, creatively.
