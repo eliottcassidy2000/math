@@ -1,3 +1,39 @@
+## mac-mini-2026-07-05-S60 -- THE LOOSE-BRANCH SPLIT: the razor-thin 2/25 edge is entirely in the S59-PROVED AP-subfamily case; the all-loose residual has a MARGIN >= 2/23 (recursive) (HYP-4162)
+
+Prompt (owner): push to complete the 14-runner proof.
+
+Continued from S59 (AP-base case proved). Read the fleet's convergence: kps-S13 (HYP-4157) peeling lemma
+covers 99.7% + reduces to CRITICAL configs; opus-S86/S87/S88 reduced the cluster sliver to ONE rigidity
+lemma (opus-S88 now proving it via the FOLD/Mode-A, HYP-4166); klein-S140 Farey window + r=1.
+
+MY CONTRIBUTION (sharpens the critical reduction): SPLIT 12-configs by whether some 11-subfamily is a TIGHT
+dilated AP c*{1..11}:
+ (A) AP-SUBFAMILY (has one) = B=c*{1..11}u{X}: M in {1/13}U[2/25,inf) -- PROVED by S59 (HYP-4152). The
+     razor-thin extremizer {1..11,24}@2/25 is HERE (ladder k=2).
+ (B) ALL-LOOSE (none): M >= 2/23 -- a MARGIN over 2/25 (=4/575), floor {1..13}\{6}@2/23.
+VERIFIED reliably (structured AP-with-holes {1..N}\holes N<=18: min 2/23, 0 below, 0 in gap) + HIGH-HEIGHT
+CRT-lifts of {1..13}\{6} to h~2500 (M goes UP 2/23->0.105->0.166, NEVER toward the gap -- MISTAKE-102 clean).
+
+KEY: 2/23 = 2/(2*12-1) = the 11-runner SECOND VALUE => the split is RECURSIVE (all-loose 12-config inherits
+the 11-runner floor). CONSEQUENCE: the ENTIRE razor-thinness of the loose branch lives in the S59-PROVED
+AP-subfamily case; the residual is a NON-RAZOR margin bound (>= 2/23), which folding/peeling/walks CAN clear
+(a razor edge they cannot). Same shape as my covering-min split (S46/S47): razor value in the dilated/proved
+case, margin in the residual. So the deepest all-peels-fail core (opus's fold rigidity lemma) now only has to
+clear 2/23 for all-loose configs, not the razor 2/25.
+
+HONEST: VERIFIED not proved (all-loose >= 2/23 needs the 11-runner rigidity klein-S126 + peeling@2/23). It
+SHARPENS the reduction (isolates razor-thinness to S59), does not close the crux. Complementary to opus-S88's
+rigidity lemma (which proves the deep core) -- mine says the deep core is non-razor.
+
+FILES: lrc14_loose_split_macmini_S60.py(+out); HYP-4162; reflection the-razor-thin-edge-of-the-loose-branch-
+is-in-the-proved-AP-subfamily-case. No Lean (exact-math-first). No canon overridden.
+
+NEXT: prove all-loose => M >= 2/23 via peeling@2/23 + the 11-runner rigidity (the descent step, now at a
+margin) -- OR help opus close the fold rigidity lemma (HYP-4166) with the margin in hand. Coordinate with
+kps (peeling)/klein (rigidity)/opus (fold).
+
+---
+
 ## kind-pasteur-2026-07-05-S14 -- THE LOOSE BRANCH'S PRECISE OPEN STRUCTURE + the consecutive-rung lemma + the LITERATURE VERDICT (crux NOT citable; Jain-Kravitz relative-spectra is the lead) (HYP-4167)
 
 Prompt (owner): work on what remains, creatively.

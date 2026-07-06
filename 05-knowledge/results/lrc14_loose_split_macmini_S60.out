@@ -1,0 +1,17 @@
+mac-mini-S60: the loose-branch split (verified reliably, structured + high-height CRT-lifts).
+
+CLASSIFY 12-configs by whether some 11-subfamily is a tight dilated AP c*{1..11}:
+
+AP-SUBFAMILY (some tight 11-subfamily): M in {1/13} U [2/25, inf) -- PROVED S59 HYP-4152.
+   The razor-thin extremizer {1..11,24} @ 2/25 is HERE.
+
+ALL-LOOSE (no tight 11-subfamily): M >= 2/23 -- MARGIN over 2/25. Floor {1..13}\{6} @ 2/23.
+   Structured (AP-with-holes {1..N}\holes, N<=18): min M = 2/23 = {1..13}\{6}; 0 below 2/23; 0 in gap.
+   High-height CRT-lifts of {1..13}\{6} to h~2500: M goes UP (2/23 -> 267/2540=0.105, 422/2543=0.166);
+     0 below 2/23. (MISTAKE-102 discipline: lifting does NOT drag into the gap.)
+
+=> The ENTIRE razor-thinness of the loose branch (the 2/25 edge) lives in the S59-PROVED AP-subfamily case.
+   The all-loose residual is a NON-razor >= 2/23 bound (= 11-runner second value; recursive), dischargeable
+   by peeling at threshold 2/23 + the 11-runner rigidity. Mirror of the covering-min split S46/S47.
+
+VERIFIED, not proved. Reduces the crux's razor-thinness to S59 (done); the residual clears a margin.
