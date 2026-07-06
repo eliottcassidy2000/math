@@ -48,11 +48,11 @@ theorem binder_dvd (v m k : ℤ) (hco : IsCoprime k m)
     · have hk1 : k ∣ v * m - 3 * k := hkdvd.trans h
       have h2 : v * m = (v * m - 3 * k) + 3 * k := by ring
       rw [h2]
-      exact dvd_add hk1 (Dvd.intro 3 rfl)
+      exact dvd_add hk1 ⟨3, by ring⟩
     · have hk1 : k ∣ v * m + 3 * k := hkdvd.trans h
       have h2 : v * m = (v * m + 3 * k) - 3 * k := by ring
       rw [h2]
-      exact dvd_sub hk1 (Dvd.intro 3 rfl)
+      exact dvd_sub hk1 ⟨3, by ring⟩
   exact hco.dvd_of_dvd_mul_right hkvm
 
 /-- GRID DIVISIBILITY: if the binder's grid distance 3q/38 is an integer
