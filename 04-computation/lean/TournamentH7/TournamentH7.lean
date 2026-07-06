@@ -332,3 +332,4 @@ import TournamentH7.LRCLiftRowsL7
 import TournamentH7.LRCTowerLift
 import TournamentH7.LRCTelescope
 import TournamentH7.LRCDescentSurface
+import TournamentH7.LRCClearCert
