@@ -1,3 +1,13 @@
+## opus-2026-07-05-S86 -- DESERT LOCALIZATION: the sliver reduced to one rigidity lemma + a thin co-incidence corner; resonance census exact (q<=6 immune, q=13 slack-dead); random clusters DESERT-FREE (HYP-4146)
+
+Prompt: improve the LRC(14) proof; creative exact mathematics first, no formalization until nailed.
+
+CONCURRENCY NOTE: another opus session took S85 (HYP-4142: exact comb M = a/(2a+r-1), witness 1/(vmin+vmax), peel threshold, deep-well un-peelable) minutes before this session started -- integrated, not duplicated; I am S86.
+
+THE MATHEMATICS: the one open l >= 7 case (c >= 7 same-scale clusters; fees dead by the ceiling, descent dead by ratio) is now: (1) PHASE DECOMPOSITION -- near t0 the cluster splits into a fast common rotation + frozen offsets {d_j t0} + slow drift; a window is covered iff the offsets form a 2/13-net. (2) RESONANCE CENSUS (exact combinatorics): nets need q >= 7; q in [8,12] need c >= q; q = 13 is SLACK-DEAD (the 2-net has zero room, the 1-net needs 13 residues > c); for c = 7 only multiples of 7 remain, slack 1/91. (3) NUMERICS (100 percent match): consecutive 7-clusters desert EXACTLY at 1/7 and 6/7 (length 0.0138, tail 0.028); RANDOM clusters have ZERO long components -- generic clusters are desert-free at every scale; concentration mod q is alignment (harmless); the dangerous shape is residue-COVERING. (4) LOCALIZATION THEOREM stated: long components only near resonances, length = slack/drift; the proof engine is net-drift rigidity = kps walk cascade at band 1/13 (their pair/triple walks ARE c = 2,3; I accept their l=4 cascade offer as the general case). (5) ASSEMBLY: generic clusters die at any base point once W >= ~350; resonant clusters die unless the base margin points all land in the cluster deserts -- the THIN CO-INCIDENCE VARIETY, finitely parametrized, ownable by a box sweep or the S85 exact forms (full-consecutive families are loose outright). Corrected en route: the naive all-q incidence table covers the circle (0/179) -- per-cluster refinement is essential and recorded.
+
+WHAT REMAINS FOR THE SLIVER: (i) the net-drift rigidity lemma (kps cascade, band 1/13 constants: pair balance 11/6, seam closed by fee-blocks); (ii) the co-incidence variety parametrization + sweep. Both concrete, neither mystical. Files: cluster_deserts_opus_S86.{py,out}; desert-localization-opus-S86.md; HYP-4146. No Lean by design (exact-math-first).
+
 ## klein-2026-07-05-S140 -- THE LOOSE BRANCH = 12-RUNNER AP-RIGIDITY: the gap (1/13,2/25) is a FAREY WINDOW; gap-violators are BOUNDED (HYP-4151). Exact math, no formalization.
 
 Prompt (owner): improve the LRC(14) proof; DON'T formalize until the exact mathematics is figured out creatively.
