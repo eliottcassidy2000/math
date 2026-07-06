@@ -1,3 +1,15 @@
+## opus-2026-07-05-S88 -- THE TILING-DEGRADATION THEOREM: the fleet rigidity lemma via the FOLD -- mass identity (ceiling in one line), band-crossing ledger (proved), universal desert bound sigma/D (sharp, verified, attained) (HYP-4166)
+
+Prompt: work on what remains, creatively.
+
+THE MOVE (creativity as directed): fold a desert by the SLOWEST comb (x = v_1 t mod 1) -- the repo's own Mode-A renormalization applied to the sliver. Comb 1 becomes a fixed base band; every other comb becomes teeth drifting at slope d_j/W per period; a desert = the strip G x [N] covered, N = l W.
+
+THREE RESULTS: (1) MASS IDENTITY (proved): every comb supplies exactly 2rho per period; slack sigma = 2 rho c - 1: the cluster ceiling c >= 7 becomes a one-line identity and sigma = 1/13 is the per-period overlap budget (measured: the consecutive-7 desert runs at 94.5 percent of it). (2) BAND-CROSSING LEDGER (proved): any tooth completing an x-cycle must transit the base band, at forced overlap 4 rho^2 N per comb -- total 4 rho^2 (c-1) N EXCEEDS the budget sigma N exactly at c = 7: deserts cannot survive a conveyor cycle: l <= (1-2rho)/D outright (crude constant). (3) THE UNIVERSAL DESERT BOUND (sharp): l <= sigma/D + C/W = (2c-13)/(13 D) <= (2c-13)/(13(c-1)) -- verified over 16 configurations (consecutive/2AP/3AP/random/tight-pack; c = 7,9,12; W to 542) with ZERO violations beyond 4/W, ATTAINED by consecutive clusters, and reproducing the S87 worst-case table exactly (1/78 at c=7). Proof outline: per-period near-tiling (elementary interval rigidity) + differential-drift degradation + conveyor wraps paying the ledger; localization (deserts at resonances) falls out as the conveyor q-grid.
+
+SELF-CORRECTION IN-SESSION: a fleet-facing claim that the loose branch has negative slack was WRONG (sigma = 23/25 there; whole-circle folds are vacuous at small v_1) -- caught on re-derivation, corrected in the draft with the honest transpositions (THM-619 one-tooth containment IS the fold's single-comb case; the second-slowest fold for near-tight families is flagged future work).
+
+CONSEQUENCE: the S87 792/792 sliver-core closure now rests on elementary verified bookkeeping instead of the open c-walk cascade. Files: folded_torus_opus_S88.{py,out}; tiling-degradation-theorem-opus-S88.md; HYP-4166. No Lean (exact-math-first holds until the bookkeeping is written).
+
 ## kind-pasteur-2026-07-05-S13 -- THE PEELING LEMMA: loose branch, constructively, from cited LRC(<=13) + reduction to CRITICAL configs + the grand synthesis (regularity-is-extremal) (HYP-4157)
 
 Prompt (owner): work the concrete remaining things; prioritize creativity; look back through repo history for connected threads; synthesize; see the bigger missing picture; hypothesize; come to proofs.
