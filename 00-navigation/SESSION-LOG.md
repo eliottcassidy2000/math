@@ -58,6 +58,18 @@ FORMALIZED (per 'then formalize'): LRCMinimalSumset.lean GREEN kernel-pure (two_
 FILES: lrc_freiman_rigidity_macmini_S20.py (+.out), lrc_dilated_vs_shifted_macmini_S20.out; reflection the-extremizer-is-stricter-than-freiman-macmini-S20.md; LRCMinimalSumset.lean (registered); HYP-4482 (+INDEX).  No canon overridden.
 
 NEXT: the open (U) heart = step 1 'full theta-sum cancellation at 2/25 forces minimal doubling' (additive-combinatorics, cleaner than raw uniqueness); the classical |S+S|=2n-1 => AP characterization (step 2 upper direction) formalizable next.
+## opus-2026-07-06-S113 -- FREIMAN IS NECESSARY-NOT-SUFFICIENT; gap closes by STRUCTURE x WIDTH; the window is a FAREY GAP (q>=3k+2 wall, LRCFareyGap.lean GREEN) (HYP-4456)
+
+Prompt: keep pushing creatively against the frontier, then formalize.
+
+GUARD-RAIL (verified): adversarially tested mac-mini S20 HYP-4482 'safe=0 <=> max additive energy <=> AP'. REFUTED at n=7: the gap member {1,5,6,11,16,17} TILES (M=5/33 in (1/7,2/13), safe=0) yet has additive energy 94 < AP's 146. Freiman/max-energy is NECESSARY but NOT SUFFICIENT (n-blind; predicts empty gap at every n, but nonempty at n=7,8, empty n=13). The member is a generalized AP: {1,6,11,16} AP(d=5) + {5,17} boundary. [Same necessary-not-sufficient pattern as my S111 n-specificity check -- structural lenses cannot close the n-specific gap.]
+
+STRUCTURE x WIDTH frame: the decisive factor is window WIDTH 1/((k+1)(2k+1)) ~ 1/(2k^2). AP tiles with exactly this slack; a deficit family tiles only while the window absorbs its M-rise. k=6 (1/91) admits the gap member; k=12 (1/325) admits nothing. Structure narrows to a generalized AP; the metric width decides survival.
+
+FAREY WALL (GREEN, LRCFareyGap.lean, standard trio): 1/(k+1) & 2/(2k+1) are Farey NEIGHBORS (det=1) => denom_ge_of_between (nothing of denom<b+d between two Farey neighbors, via the identity (pb-aq)d+(cq-pd)b=q(cb-ad)) and gap_witness_denom_ge (M=p/q in the gap => q>=3k+2). This IS mac-mini's clearance-depth wall q>=3n-1, now elementary and formal. CHAINED with my S109 witness lever (q<=2max): a gap member has max|v_i| >= (3k+2)/2 -- a height LOWER bound. So a gap member is trapped BETWEEN the Farey lower bound (now formal) and the single-cluster upper bound (open analytic), in a window shrinking with k.
+
+Files: LRCFareyGap.lean (green); reflection freiman-is-necessary-not-sufficient-the-gap-closes-by-structure-times-width; results freiman_rigidity_nspecific / structure_times_width_law / gap_member_frontier_map _opus_S113; HYP-4456. RESIDUAL unchanged: the metric alignment in the shrinking window (n-specific, beyond structural certs). Two green bricks this arc: the theta-sum backbone (S112) + the Farey wall (S113).
+
 ## opus-2026-07-06-S112 -- THE DENSITY FLOOR IS A RELATION-LATTICE THETA-SUM + honest S19 floor correction (HYP-4446); LRCRelationLattice.lean GREEN
 
 Prompt: work the genuinely open residual; pull often; reroute as needed.

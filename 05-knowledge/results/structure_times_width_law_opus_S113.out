@@ -1,0 +1,23 @@
+k  | AP M=1/(k+1) | tile thr 2/(2k+1) | window width 1/((k+1)(2k+1)) | Farey nbrs? | min q for gap
+ 6 | 1/7         | 2/13             | 1/91        =0.010989    | det=1       | mediant=3/20 (q=20)
+ 7 | 1/8         | 2/15             | 1/120       =0.008333    | det=1       | mediant=3/23 (q=23)
+ 8 | 1/9         | 2/17             | 1/153       =0.006536    | det=1       | mediant=3/26 (q=26)
+ 9 | 1/10        | 2/19             | 1/190       =0.005263    | det=1       | mediant=3/29 (q=29)
+10 | 1/11        | 2/21             | 1/231       =0.004329    | det=1       | mediant=3/32 (q=32)
+11 | 1/12        | 2/23             | 1/276       =0.003623    | det=1       | mediant=3/35 (q=35)
+12 | 1/13        | 2/25             | 1/325       =0.003077    | det=1       | mediant=3/38 (q=38)
+13 | 1/14        | 2/27             | 1/378       =0.002646    | det=1       | mediant=3/41 (q=41)
+
+The Farey structure: 1/(k+1) and 2/(2k+1) ARE neighbors (det=1) at every k => the window is a
+Farey GAP; the coarsest fraction inside is the mediant 3/(3k+2), q=3k+2. A gap member needs
+M=c/q with q>=3k+2 AND realizable by an integer family (q<=2max, opus S109 lever).
+
+STRUCTURE x WIDTH: the n=7 gap member has M=5/33 (q=33). Check q vs 3k+2:
+  k=6: M=5/33, q=33; 3k+2=20; q/(3k+2)=1.65; 2*max=34; q<=2max? True
+
+WHY IT SHRINKS: window width ~ 1/(2k^2). A gap member's M sits at a Farey fraction c/q inside,
+q>=3k+2, so its 'reach' above 1/(k+1) is quantized in steps ~1/((k+1)q) <= width only if q large.
+But q<=2max and single-cluster max~O(k) => q=O(k), while landing in a width-1/(2k^2) window at the
+right ALIGNMENT (leave-one-out, S111) becomes infeasible as k grows: the # of q-values in the
+window is ~width*q_range ~ (1/2k^2)*(k) = 1/(2k) -> 0. THIS is the n-specific death (structure
+alone is n-blind; the width tolerance is the decisive metric factor). Matches mac-mini S17 walls.
