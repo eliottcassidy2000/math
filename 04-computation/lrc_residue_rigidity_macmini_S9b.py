@@ -48,6 +48,25 @@ def exact_M(W):
                 best = mv
     return best
 
+def float_M(W):
+    dens = set()
+    for v, w in itertools.combinations(W, 2):
+        dens.add(v + w)
+        if v != w:
+            dens.add(abs(v - w))
+    for v in W:
+        dens.add(2 * v)
+    best = 0.0
+    for s in dens:
+        if s == 0:
+            continue
+        for j in range(1, s):
+            t = j / s
+            mv = min(abs(v * t - round(v * t)) for v in W)
+            if mv > best:
+                best = mv
+    return best
+
 def nonclearing_mod(W, q):
     thr = F(2, 25) * q
     residues = [v % q for v in W]
@@ -75,6 +94,7 @@ def part_A():
     incomplete_stats = {"gap": 0, "floor": 0, "clear": 0, "below": 0}
     inc_covering = []   # incomplete-mod-13 families that are covering (M>1/13)
     tested = 0
+    fl = float(FLOOR); rh = float(RHO)
     for _ in range(40000):
         W = sorted(random.sample(range(1, 70), 12))
         W = primitive(W)
@@ -83,29 +103,31 @@ def part_A():
         tested += 1
         res13 = set(v % 13 for v in W)
         complete = (res13 == set(range(1, 13)))   # all nonzero residues
-        M = exact_M(W)
-        if FLOOR < M < RHO:
-            bucket = "gap"
-        elif M == FLOOR:
+        fm = float_M(W)
+        if fm > fl + 1e-6 and fm < rh - 1e-6:       # candidate gap or between
+            M = exact_M(W)                          # exact only near/in gap
+            bucket = "gap" if FLOOR < M < RHO else ("floor" if M == FLOOR else ("clear" if M >= RHO else "below"))
+        elif abs(fm - fl) <= 1e-6:
             bucket = "floor"
-        elif M >= RHO:
+        elif fm >= rh - 1e-6:
             bucket = "clear"
         else:
             bucket = "below"
         (complete_stats if complete else incomplete_stats)[bucket] += 1
-        if not complete and M > FLOOR:
-            inc_covering.append((W, M, sorted(res13)))
+        if not complete and bucket == "gap":
+            inc_covering.append((W, bucket, sorted(res13)))
     print(f"  non-clearing-mod-13 families tested: {tested}")
     print(f"  COMPLETE residues {{1..12}} mod 13: {complete_stats}")
     print(f"  INCOMPLETE (misses a residue) mod 13: {incomplete_stats}")
-    print(f"  => incomplete-mod-13 families with M > 1/13 (covering): {len(inc_covering)}")
+    print(f"  => INCOMPLETE-mod-13 GAP members (M in (1/13,2/25)): {len(inc_covering)}")
     if inc_covering:
-        print("    HYPOTHESIS 'covering => complete' is FALSE; examples:")
-        for W, M, r in inc_covering[:6]:
-            print(f"      M={M} res13={r} W={list(W)}")
+        print("    HYPOTHESIS 'gap member => complete mod 13' is FALSE; examples:")
+        for W, b, r in inc_covering[:6]:
+            print(f"      res13={r} W={list(W)}")
     else:
-        print("    HYPOTHESIS SUPPORTED: every covering non-clearing-mod-13 family has")
+        print("    HYPOTHESIS SUPPORTED: every GAP member non-clearing mod 13 has")
         print("    COMPLETE nonzero residues mod 13 (the AP's mod-13 fingerprint).")
+        print(f"    (incomplete-mod-13 families are only floor/clear/below, never in-gap)")
 
 def part_B():
     print()
