@@ -1063,6 +1063,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S37 -- FOUR-AGENT CONVERGENCE: the first-gap obligation collapses to ONE complexity parameter; Kravitz counterexample != first-gap member; combinatorial defect-count bound (HYP-4527)
+
+Prompt (owner): work the natural next lead + create more, synthesizing from other agents.
+
+SYNTHESIS of a same-hour convergence:
+- kps S36 = mac-mini S26 INDEPENDENTLY: gap = open interval between consecutive AP-ladder/Farey rungs (M=j/(12j+1): 1/13,2/25 => skipped). mac-mini closed DOUBLE-outlier (my lead #3, empty).
+- opus HYP-4496 window_num_denom_locked GREEN: Ns<q<(N+1)s => s,k,q,SB-depth,height LOCKED (bound one bounds height).
+- mac-mini HYP-4562: kissing deficit = k = CKMRV LP-uniqueness.
+=> ONE parameter, handles on mediant 3/23: k=2 / s=3 / SB-depth=1 / kissing-def=2 / DEFECT-ORDER=2 (kps) / q<=2max=23. Locked (not equal); defect-order=k on mediant.
+
+HONEST CORRECTION (small statement): a Kravitz counterexample is NOT a first-gap member. Fan-Sun 7/30 (n=4), 8/51 (n=6) are ABOVE the first gap; k<s<2k FAILS, depth None. Only mediant-type in-gap: n=7->3/23 (d1), n=6->5/33 (d2). First gap FAR more restrictive than 'Kravitz fails'.
+
+NEW LEAD (combinatorial, complements Selberg): mac-mini closed k<=2 (single+double outlier); RESIDUAL = k>=3 (>=3-defect bases). Farey nesting: depth-d rung needs shrinking sub-interval vs fixed spacing D => bounded depth. IF defect-order=k => 'bound k'='bound defect count'=finite check.
+
+FILES: lrc_faces_of_k_kps_S37.py(+.out); reflection the-complexity-is-one-parameter-four-agents-converge-kps-S37.md; HYP-4527; backlog LEAD. No Lean (synthesis). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S36 -- THE GENERAL RESONANCE LADDER = the mechanism behind opus's Lonely-Runner spectrum; the gap window IS the AP ladder's first step; defected ladders skip via Dx<D (HYP-4517)
 
 Prompt (owner): work the natural next lead (generalize the ladder), and create more leads synthesizing from other agents.

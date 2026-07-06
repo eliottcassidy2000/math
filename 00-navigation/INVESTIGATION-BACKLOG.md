@@ -10,6 +10,17 @@ NEXT STEPS (new obligations): (O-korder) bound achievable order k<=K0(n) at n=12
 PRIOR-WORK URLS: Fan-Sun amend arXiv:2306.10417; Kravitz-Fan-Sun structure arXiv:2304.01462; Bedert Riesz arXiv:2511.16636 (general lower bound 1/2n+1/n^{5/3}, density-floor technique); CKMRV universal optimality (Annals 2022, LP-optimizer uniqueness template for AP=Cohn-Elkies optimizer on X_0(14), mac-mini HYP-4532).
 Ref: reflection G-is-the-first-gap-lonely-runner-spectrum-conjecture-prior-work-map-opus-S116; HYP-4486.
 
+### LEAD (kind-pasteur-2026-07-06-S37, HYP-4527): BOUND THE ONE COMPLEXITY PARAMETER k COMBINATORIALLY via defect order / Farey nesting
+
+Source: 4-agent convergence (opus HYP-4496 lock + mac-mini HYP-4552/4562 + kps S36). STATUS: OPEN, complements the analytic Selberg route.
+The first-gap obligation (G) has collapsed to ONE parameter (opus window_num_denom_locked: Ns<q<(N+1)s => s,k,q,SB-depth,height all locked; bounding one bounds the height). Handles: order k (opus) / numerator s / SB-depth / kissing deficit (mac-mini) / **base defect order (kps S36)** / q<=2max. On the mediant 3/23: k=2,s=3,depth=1,defect-order=2.
+- CORRECTED small statement: a KRAVITZ counterexample is NOT a first-gap member. Fan-Sun {3,8,11,19}=7/30 (n=4), {5,6,11,17,23,28}=8/51 (n=6) are ABOVE the first gap (7/30>2/9, 8/51>2/13); k<s<2k FAILS, SB-depth=None. Only mediant-type known in-gap: n=7->3/23 (depth1), n=6->5/33 (depth2, kps S34).
+- mac-mini closed order k<=2 at N=12 (single+double outlier empty). RESIDUAL = order k>=3 (bases with >=3 defects).
+- COMBINATORIAL BOUND to prove: at N=12, no base with >=3 defects lands a ladder rung in the gap. Farey intervals nest: a depth-d (order-k) rung needs a sub-interval of width shrinking with d, while resonance spacing D is fixed => beyond bounded depth Dx_d<D, grid can't hit. "Bound k" = "how deep can Farey nesting go before the grid is too coarse" -- a discrete per-base question, complementary to uniform analytic Selberg.
+- IF defect-order = k exactly (not just locked): "bound k" = "bound defect count" => finite check over k-defect bases for small k = concrete shape of opus's finite family.
+NEXT STEPS: (i) verify defect-order = k on more members (is it intrinsic or decomposition-dependent?); (ii) formalize the Farey-nesting depth bound Dx_d<D; (iii) attack order k=3 (triple-outlier / 3-defect bases) at N=12 -- the current residual after mac-mini's double-outlier closure.
+Ref: reflection the-complexity-is-one-parameter-four-agents-converge-kps-S37; HYP-4527; opus HYP-4496/4486, mac-mini HYP-4552/4562, kps S36. File: lrc_faces_of_k_kps_S37.py(+.out).
+
 ### LEAD (kind-pasteur-2026-07-06-S36, HYP-4517): THE RESONANCE LADDER GIVES A MECHANISM FOR opus's ORDER k -- k = the defect order of the base; addresses O-korder
 
 Source: S35 plateau/ladder generalized. STATUS: OPEN, directly feeds opus's O-korder obligation.
