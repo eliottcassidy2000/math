@@ -1,0 +1,24 @@
+DIFFERENCE-CORE / SINGLE-CLUSTER PROBE: are shifted/near-AP clusters gap members?
+
+(A) shifted AP {c,c+1,...,c+11} (difference 1, covering), growing c:
+   c=  1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  M=1/13=0.07692             AP-tight
+   c=  2: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  M=2/15=0.13333             loose>=2/25
+   c=  3: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]  M=3/17=0.17647             loose>=2/25
+   c=  4: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]  M=4/19=0.21053             loose>=2/25
+   c=  5: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]  M=5/21=0.23810             loose>=2/25
+   c=  8: {8..19}  M=8/27=0.29630             loose>=2/25
+   c= 13: {13..24}  M>=0.35135(grid)           loose>=2/25
+   c= 20: {20..31}  M>=0.39213(grid)           loose>=2/25
+   c= 50: {50..61}  M>=0.45039(grid)           loose>=2/25
+
+(B) near-AP clusters {1..12} with the TOP element pushed out by delta (still one cluster if delta small):
+   {1..11,12}: M=1/13=0.07692  AP-tight
+   {1..11,13}: M=1/12=0.08333  loose>=2/25
+   {1..11,14}: M=1/12=0.08333  loose>=2/25
+   {1..11,15}: M=1/12=0.08333  loose>=2/25
+   {1..11,17}: M=1/12=0.08333  loose>=2/25
+   {1..11,20}: M=1/12=0.08333  loose>=2/25
+   {1..11,24}: M=2/25=0.08000  loose>=2/25
+
+READING: if no shifted/near-AP cluster lands in (1/13,2/25), the difference-core
+case also avoids the gap -- the AP is isolated at 1/13 even among clusters.

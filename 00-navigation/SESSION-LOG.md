@@ -11,6 +11,23 @@ INTEGRATED the fleet's fresh (G) results (mac-mini S14 two-scale decorrelation =
 CLOSED faces vs hard kernel: closed = {1..11,v} (kps+S104), far-from-AP clusters loose (M~0.2-0.3), multi-scale (decorrelation), prime tight fixed point; the HARD KERNEL is near-AP FINITE-large-height single clusters -- exactly where the contraction has not yet reached the fixed point; the density-floor contraction rate is the open analytic piece, = my Farey jump.
 
 HONEST: this ILLUMINATES the (G) architecture (a bound on the single contraction rate closes everything) but does NOT close (G) -- genuine open math (spectral-gap conjecture at n=13). Reflection: the-single-scale-residual-is-a-renormalization-flow-to-the-prime-AP-fixed-point. Files: single_cluster_torus_limit / safe_floor_mechanism / self_similar_residual outs; HYP-4386.
+## mac-mini-2026-07-06-S14 -- REASONING ABOUT (G): the safe-measure identity CLOSES the multi-scale case rigorously (gap members are single clusters) (HYP-4402)
+
+Prompt (owner): reason mathematically about what the FULL theorem still needs. (Concurrent mac-mini-S13 took the tight-side strict lift-rigidity HYP-4392; I worked the deeper (G) crux.)
+
+THE ANALYTIC OBJECT: M(S)<beta <=> the beta-arcs COVER the circle <=> safe(S,beta):=|{t: ||v_i t||>=beta all i}| = INT_0^1 prod_i(1-g(v_i t))dt = 0.  So M(S)=inf{beta: safe(S,beta)=0}.  Newman-Fourier: safe = (1-2beta)^m + resonance corrections (additive relations sum k_i v_i=0).
+
+NEW THEOREM (multi-scale collapse of (G), RIGOROUS).  Since F_A(t)=prod_{a in A}(1-g(at)) is an INDICATOR (0/1), safe(A u C,beta)=|Safe(A,beta) INTERSECT Safe(C,beta)|.  For a covering 12-family with a SCALE GAP S=G_low ⊔ G_high (max(low)<<min(high)): both parts have size<=11, so by LRC(<=13) M(part)>=1/12>2/25, so both safe sets have POSITIVE measure; the FINE safe set equidistributes in the COARSE (Erdos-Turan) => |Safe(low) INT Safe(high)| -> product > 0 => Safe(S,2/25) nonempty => M(S)>=2/25 => NOT a gap member.  HENCE EVERY GAP MEMBER IS A SINGLE BOUNDED-RATIO CLUSTER (no scale gap).  Uses ONLY LRC(<=13)+equidistribution -- NO hard analysis; strictly stronger than opus-S48's evidence-standard separated-scale scale-flow.  Verified: 18 scale-separated families all M>=2/25; the exact product limit safe(A u N*B)->safe(A)safe(B) (ratio->1.0000 at N=4001).  ENGINE: a k-subfamily (k<=11) can't cover at 2/25 (M>=1/(k+1)>=1/12>2/25) -- WHY 12 is the threshold size.
+
+RAZOR FINDING (why (G) is harder than LRC(14) itself): covering families have safe<<baseline (1-2b)^12~0.12 (generic {1..11,23}: 0.009, 13x suppression); Bonferroni partials at 2/25 DIVERGE (-0.92,1.37,-2.94,5.18) => NO low-order certificate, UNLIKE the 1/14 threshold (kps 7-wall closes at PAIRS, safe~0.034>0).
+
+DIFFERENCE-CORE PROBE (the remaining single-cluster case also avoids the gap): the consecutive block {c..c+11} has EXACT M=c/(2c+11) (witness t=1/(min+max); endpoints bind) -- 1/13 only at c=1 (AP), jumps to 2/15,3/17,4/19,... every {1..11,top>=13} sits at exactly 1/12 (or 2/25 at 24).  The AP is ISOLATED at 1/13.
+
+HARD KERNEL now ISOLATED to TWO pieces: (1) the single-cluster DIFFERENCE core at large height (opus-S48; a nested-decorrelation attack via the same identity is natural); (2) the compact density floor >=1/36 (AP = unique additive-energy/Fejer maximizer).  Multi-scale is DONE.
+
+DELIVERABLES: reflection what-the-full-theorem-needs-the-safe-measure-identity-and-the-scale-flow-descent-macmini-S14.md; HYP-4402 CONFIRMED; scripts lrc_safe_measure_resonance / lrc_twoscale_decorrelation / lrc_scale_gap_kills_gap_member / lrc_difference_core_probe _macmini_S14 (+outs).  Integrated opus-S48/HYP-4013/OPEN-Q-108, HYP-+2873, kps LRCStarSafe + slice11_loose, LRCGapLadder, my S12 prime tight-locus.  No canon overridden.
+
+NEXT: the difference-core nested decorrelation (safe(cluster) ~ safe(differences) near carrier resonances) + the compact density floor.  The tight side (S13 HYP-4392) proceeds in parallel.
 
 ## opus-2026-07-06-S105 -- THE UNIVERSAL PINNED FLOOR formalized (tight-side anchor, M >= 1/13 on the pinned locus); integrated mac-mini-S12 route correction (full theorem = open G; prime-13 route clean) (HYP-4376)
 

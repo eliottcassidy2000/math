@@ -117,6 +117,14 @@ core:
    expects `safe(cluster) ≈ safe(differences)` — a *nested* decorrelation. Making
    this rigorous (and its contraction toward the AP fixed point, unique at the
    prime — S12) is the harder half of the scale-flow.
+   *Evidence the cluster case also avoids the gap* (`…difference_core_probe…out`):
+   the block of 12 consecutive integers `{c,…,c+11}` has the exact closed form
+   **`M = c/(2c+11)`** (witness `t = 1/(min+max) = 1/(2c+11)`, both endpoints
+   binding at `c/(2c+11)`; middle runners are farther). It equals `1/13` only at
+   `c=1` (the AP) and jumps to `2/15, 3/17, 4/19, …` — never in the gap. Likewise
+   every `{1..11, top}` with `top ≥ 13` sits at exactly `1/12` (or `2/25` at
+   `top=24`). The AP is isolated at `1/13`; any near-AP perturbation jumps clear.
+
 2. **The compact core** (bounded ratio *and* bounded height): a finite family of
    near-AP covering configurations. Here (G) is the **density-floor** statement —
    `safe(·,2/25)=0 ⇒ AP` — equivalently the additive-energy extremal
