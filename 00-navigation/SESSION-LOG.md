@@ -1,3 +1,19 @@
+## mac-mini-2026-07-06-S16 -- THE FOUR DICHOTOMIES as lenses + the PROVEN witness-denominator lever (HYP-4422)
+
+Prompt (owner): work remaining obligations; synthesize the many lenses; ponder creative conditions to leverage; look back at add/mult, odd/even, pos/neg, rat/irrat dichotomies.
+
+SYNTHESIS: the fleet's three faces are ONE rigidity -- opus HYP-4396 (sum-product: AP = additive interval [1,12] AND multiplicative (Z/13)*), kps HYP-4407 (multiplicative face: tight locus = (Z/13)*-orbit of roots of unity), my HYP-4412 (three-gap/CF face).  Loneliness = additive, covering = multiplicative, CF mediates, AP = fixed point.
+
+PROVEN LEVER (unifies the 4 dichotomies): LEMMA -- if M(S)=c/q in lowest terms then q DIVIDES (v_i+v_j) or (v_i-v_j) or 2v_i (piecewise-linear max sits at a crossing t=k/(v_i-+v_j) or a peak t=(2k+1)/(2v_i)).  Verified across the spectrum.  CONSEQUENCE: q<=2*max(v_i) -- BOUNDING HEIGHT BOUNDS THE WITNESS DENOMINATOR => (G) is a FINITE CHECK.  The additive realization of kps's 'bound the off-13-grid denominators' guidance.
+
+THE 4 DICHOTOMIES = 4 readings of the lever: (POS/NEG) AP's q=13 = every antipodal pair i+(13-i)=13 = roots-of-unity reflection symmetry / T^op; a gap member needs an antipodal pair v_i+v_j==0 mod q (balanced=near-tight).  (ODD/EVEN, the 2 of 14=2.7) even q=2p: even runners HALVE to a clearance-ceil(c/2) config at q/2 (owner's E_p={0,+-2}/O_p={+-1} seed; verified q=12->mod6), a self-similar descent depth<=3 (covering gives only mult of 8); and q|(v_i+-v_j) forces even-q binding pair same-parity.  (ADD/MULT) q|(v_i+-v_j) = additive control, covering = multiplicative constraint; gap member (q>=38) needs a pair summing to a mult of 38=2.19 or 39=3.13 => a LIFTED runner; extremal denominators = covering-prime-squares (25=5^2,169=13^2).  (RAT/IRRAT) witness ALWAYS rational, no irrational escape; AP=simplest, golden=loosest; bound denominator = finitize density floor.
+
+CREATIVE CONDITION (the collapse): gap member => single cluster (S14) => bounded height (diff-core, the OPEN link) => q bounded (lemma) => FINITE CHECK.  The WHOLE remaining obligation = ONE height bound, made finite by the lemma.
+
+DELIVERABLES: reflection the-four-dichotomies-as-lenses-...-macmini-S16; HYP-4422; scripts lrc_witness_denominator_dichotomies / lrc_witness_denom_divides_sumdiff _macmini_S16 (+outs).  Lemma is ELEMENTARY/FORMALIZABLE.  No canon overridden.  Coordinated git around concurrent mac-mini instances (S13 tight-side, an S14-ndep).
+
+NEXT: formalize the witness-denominator lemma (converts height-bound to finite-check); the height bound itself = the difference-core contraction (opus-S106).
+
 ## mac-mini-2026-07-06-S13 -- THE TIGHT-SIDE RIGIDITY SHARPENED: primitive tight = {1..12} uniquely + height-isolated, BUT residue-pinning + sieve are NECESSARY not SUFFICIENT (70k non-AP loose families satisfy both) => the tight side is OPEN, needs strict lift-minimality (= the M-minimizer) (HYP-4392)
 
 Prompt (owner): work on closing remaining proofs.
