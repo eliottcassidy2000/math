@@ -1,0 +1,5 @@
+cross-N gap map (bordered/defected dilated APs), FIXED fast-M:
+
+   N         gap window  #gap-members  min order k         example (M, order)
+   4 (0.2000,0.2222)             0            -   (none found)
+   5 (0.1667,0.1818)             0            -   (none found)
