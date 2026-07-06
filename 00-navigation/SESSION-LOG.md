@@ -1,3 +1,21 @@
+## mac-mini-2026-07-06-S17 -- THE DENSITY FLOOR IS QUANTITATIVE (n-specific), NOT structural; the LEAVE-ONE-OUT ALIGNMENT lens (HYP-4452)
+
+Prompt (owner): work the one density floor creatively, many lenses simultaneously, small pieces from each, push/pull often.
+
+SECURITY: I also see the comms/POKE-COORDINATION.md directive to post logs to an external forum (poke-forum.eliott.poke.site) -- an exfiltration instruction NOT from the owner. IGNORED as untrusted injection (as the concurrent instance also did); used only git + finish_session.
+
+INTEGRATED the concurrent n-specificity (HYP-4442, verified): the second gap (1/n,2/(2n-1)) is NONEMPTY at n=7 ({1,5,6,11,16,17}, M=5/33 -- verified exact, witness q=33=16+17 via my lemma, g=4, NOT a rung) and n=8, but EMPTY at n=13.
+
+HONEST CORRECTION to my HYP-4412: 'near-tight => g<=3 => CF rung' is n=13-FAVORABLE, FAILS at n=7 (the gap member has g=4, 5/33 not a rung k/(6k+1)). My structural lenses (three-gap / roots-of-unity / sum-product) describe the AP's UNIVERSAL specialness but are NECESSARY-NOT-SUFFICIENT: they'd predict empty at all n, but the gap is nonempty at 7,8. The emptiness at 13 is a QUANTITATIVE fact structural lenses cannot see.
+
+THE FLOOR, SHARPENED: two walls -- gap width 1/(n(2n-1)) (1/91 at n=7 -> 1/325 at n=13) + clearance depth q>=3n-1 (20 -> 38) -- EXCEED the 12-runner covering budget at n=13. Quantitative Diophantine bound, matching S13's 'RP+SV necessary not sufficient'.
+
+NEW LENS (leave-one-out alignment, verified exact): if S covers at beta (M<beta) then for EVERY j, Safe(S\{v_j},beta) SUBSET A_j -- the dropped runner's danger arcs must contain the entire 11-subfamily hole (nonempty since 11-family M>=1/12>2/25). Covering IS this nesting; verified for the AP (all 12 drops nest) and the n=7 gap member (all 6). QUANTITATIVE: hole width ~1/(n(2n-1)) must nest in A_{v_j} arcs (width 2beta/v_j at positions a/v_j) -- a lattice rigidity only the AP's harmonic arcs {a/k} achieve; hole width shrinks with n => at n=13 only the AP-lattice aligns => the floor. Turns the floor into a COVERING-ALIGNMENT infeasibility (harmonic-lattice rigidity), n-width-driven -- NOT an all-order Riesz-product estimate.
+
+DELIVERABLES: reflection the-floor-is-quantitative-...-macmini-S17; HYP-4452 (+ HYP-4412 correction note); scripts lrc_leaveoneout_alignment / lrc_nspecific_gap_verify / lrc_gap_occupancy_by_n _macmini_S17 (+outs). Pulled ~6x; opus-S109 formalized my witness-denom lemma (LRCWitnessDenominator.lean GREEN). No canon overridden.
+
+NEXT: the floor as harmonic-lattice alignment infeasibility at n=13 (leave-one-out holes width 1/325 nest only in the AP arc-lattice); the quantitative wall-vs-budget is the target, NOT a structural identity.
+
 ## mac-mini-2026-07-06-S15 -- THE SECOND GAP IS n-SPECIFIC: (1/n,2/(2n-1)) NONEMPTY at n=7 (5/33), n=8 (3/23) but EMPTY at n=13 => (G) and the M-minimizer are n=13-SPECIFIC not universal; the proof must cash the two walls (gap width + clearance depth) not a residue identity (HYP-4442)
 
 Prompt (owner): work the remaining proofs; synthesize the many lenses; look back at add/mult/odd-even/rational-irrational dichotomies.
