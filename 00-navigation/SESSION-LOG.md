@@ -519,6 +519,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S21 -- THE m/(12m+1) FAREY LADDER + broad spectral-gap census: the gap edges 1/13, 2/25 are the first two rungs of ONE ladder; ladder_family_loose GREEN (the resonant 12|v case, completing opus's {1..11,v} classification) (HYP-4357)
+
+Prompt (owner): work on proving the remaining crux.
+
+The crux collapsed (fleet: mac-mini subsumption HYP-4342 + opus rank-rigidity HYP-4346 GREEN) to ONE finite object: the 1-D census (no primitive 12-family has M in the open gap (1/13, 2/25)). Every clean sub-lemma is claimed-in-progress by opus/mac-mini. My contribution: INDEPENDENT verification of the census object + the structural reason.
+
+BROAD CENSUS (exact rational M = max over Farey denominators): the open gap is EMPTY over all 18564 primitive 12-subsets of {1..18} + the 2/25-boundary sweep -- 0 gap members. Validated: AP {1..12} -> 1/13, {1..11,24} -> 2/25 (matches mac-mini's spectrum). The AP is the UNIQUE family at 1/13; everything else >= 1/12 or on the ladder.
+
+THE m/(12m+1) FAREY LADDER (the structural WHY): {1..11, 12m} has M = m/(12m+1) EXACTLY (maximizer t = m/(12m+1)). A Stern-Brocot chain -> 1/12, consecutive rungs Farey neighbors (THM-622). The first two rungs m=1 (1/13) and m=2 (2/25) ARE the crux gap edges -- the gap is the Farey interval between them, and the ladder skips it (m>=3 > 2/25). This is WHY the gap is exactly (1/13, 2/25).
+
+LEAN (LRCLadderLoose.lean, GREEN kernel-pure, registered): ladder_family_loose -- for m >= 2, {1..11,12m} clears 2/25 at t = m/(12m+1), PARAMETRIC via rational_point_margin (residues i*m for i<=11 and 11m+1 for the big runner, all in [m, 11m+1]). COMPLEMENTS opus HYP-4356 (12-nmid-v loose): together {1..11,v} is FULLY classified -- loose except v=12 (the unique tight AP). The resonant 12|v case opus's lemma doesn't reach sits on the ladder, avoiding the gap.
+
+STATE: the crux = the 1-D census, now independently confirmed (bounded height) + structurally explained (the Farey ladder). opus's rank-rigidity (A=>C) + AP-11 protection (C inductive core) + this ladder complement are converging on the full dichotomy. corpus 8698.
+
+FILES: LRCLadderLoose.lean; lrc_spectral_gap_census_kps_S21.py, lrc_gap_boundary_sweep_kps_S21b.py (+.outs); HYP-4357 CONFIRMED. No canon overridden.
+
 ## kind-pasteur-2026-07-06-S20g -- torus_decouple_clears (6th thm, GREEN kernel-pure): the l=10,11 distinct-freq slice-tiling (MISTAKE-113) is a RED HERRING -- the sheared-product case DECOUPLES + LRC-clears for ALL l<=11, generic clears via the 1/300-rectangle drift; the seam 1/12-2/25=1/300 IS the clearance margin (HYP-4247)
 
 Prompt (owner): keep pushing the proofs; integrate recent agent work.
