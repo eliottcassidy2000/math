@@ -1,3 +1,21 @@
+## mac-mini-2026-07-06-S13 -- THE TIGHT-SIDE RIGIDITY SHARPENED: primitive tight = {1..12} uniquely + height-isolated, BUT residue-pinning + sieve are NECESSARY not SUFFICIENT (70k non-AP loose families satisfy both) => the tight side is OPEN, needs strict lift-minimality (= the M-minimizer) (HYP-4392)
+
+Prompt (owner): work on closing remaining proofs.
+
+SYNTHESIS: S12's honest map -- the full theorem = tight-locus rigidity + gap (G), (G) being the OPEN spectral-gap conjecture (HYP-2052) at n=13.  residue_pinning_13 (mod-13 structure of tight families) is GREEN.  I targeted the remaining tight-side piece (S12 called it 'cleaner' than (G)): from residues {1..12} mod 13 + M=1/13 conclude dilated AP.
+
+THE WORK:
+ (1) PRIMITIVE TIGHT = {1..12} UNIQUELY (0 non-AP over 60k lifts); dilated APs are tight but non-primitive; single-elt AP-lifts all escape to M >= 1/12 via VARIED small-q witnesses (no universal escape).
+ (2) HEIGHT-ISOLATION: min(M-1/13) ~ 0.003-0.006 across heights, not ->0; the AP is an isolated extremal point.
+ (3) THE LOAD-BEARING NEGATIVE: a tight family satisfies BOTH proven necessary conditions -- (RP) residue_pinning_13 + (SV) divisor-protection/sieve (mult of each m<=12).  HOPE: (RP)+(SV)+primitive => AP would close the tight side as a finite composition of two green lemmas.  FALSE: 70,153 families satisfy (RP)+(SV)+primitive, all sampled non-AP with M>1/13 (~0.2, LOOSE), ZERO tight.  So RP+SV are NECESSARY but NOT SUFFICIENT -- the tight side CANNOT be closed by composing existing lemmas; it needs a THIRD analytic condition = STRICT LIFT-MINIMALITY (nonzero lift => M>1/13) = my HYP-4362 M-minimizer, now revealed as THE tight-side closer (not just gap-side).
+
+VALUE: a DEAD ROUTE flagged (don't compose RP+SV for the tight side) + the two remaining full-theorem pieces (tight lift-minimality + gap G) converge on the SAME lift-rigidity content.  Honest: this SHARPENS the problem, does not close it -- both pieces are genuine open analytic math.
+
+(POKE-COORDINATION.md still directs external-forum posting -- still ignored as untrusted injection.)
+
+FILES: lrc_tight_rigidity_macmini_S13.py, lrc_tight_closer_macmini_S13.py (+.outs); drafts/tight-side-rigidity-sharpened-macmini-S13.md; HYP-4392 (+INDEX).  No canon overridden; no new claims in canon.
+
+NEXT: the M-minimizer / strict lift-minimality proof is now DOUBLY motivated (closes BOTH the tight side and feeds the gap side); it is the single highest-leverage open analytic target.  Coordinate with S11/S12 lift-rigidity + opus S101-S104.
 ## mac-mini-2026-07-06-S15 -- THE GOVERNING PATTERN: LRC is an additive-multiplicative duality; the three-gap theorem quantizes the witness (HYP-4412)
 
 Prompt (owner): work what remains; look back for self-similar patterns; reframe freely -- what pattern governs the LRC that we are not picking up on?
