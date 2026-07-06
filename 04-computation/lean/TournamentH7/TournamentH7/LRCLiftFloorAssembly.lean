@@ -55,55 +55,52 @@ def ladderA : ℕ → ℤ
   | 11 => 71
   | _  => 14
 
-/-- The witness modulus 13(r+1). -/
-def ladderQ (r : ℕ) : ℤ := 13 * ((r : ℤ) + 1)
+/-- The witness modulus 13(r+1), as a real literal per rung. -/
+noncomputable def ladderQR : ℕ → ℝ
+  | 7  => 104
+  | 8  => 117
+  | 9  => 130
+  | 10 => 143
+  | 11 => 156
+  | _  => 169
 
 /-- THE PARAMETRIC LADDER LAW: every single-leg sieve-survivor r ∈ [7,12]
     clears margin 14/(13(r+1)) at its THM-621 witness.  (The six
     LRCLiftFloorRows rows, quantified.) -/
-theorem ladder_law : ∀ r ∈ Finset.Icc 7 12,
+theorem ladder_law : ∀ r ∈ Finset.Icc (7:ℕ) 12,
     ∀ i, ∀ m : ℤ,
-      (14 : ℝ) / (13 * ((r : ℝ) + 1)) ≤
-        |(ladderFamily r i : ℝ) * ((ladderA r : ℝ) / (13 * ((r : ℝ) + 1))) - m| := by
+      (14 : ℝ) / ladderQR r ≤
+        |(ladderFamily r i : ℝ) * ((ladderA r : ℝ) / ladderQR r) - m| := by
   intro r hr i m
-  have hr' := Finset.mem_Icc.mp hr
+  obtain ⟨hlo, hhi⟩ := Finset.mem_Icc.mp hr
   interval_cases r
-  · simpa [ladderFamily, ladderA, show ((13:ℝ) * ((7:ℕ) + 1) : ℝ) = 104 by norm_num]
-      using ladder_margin_r7 i m
-  · simpa [ladderFamily, ladderA, show ((13:ℝ) * ((8:ℕ) + 1) : ℝ) = 117 by norm_num]
-      using ladder_margin_r8 i m
-  · simpa [ladderFamily, ladderA, show ((13:ℝ) * ((9:ℕ) + 1) : ℝ) = 130 by norm_num]
-      using ladder_margin_r9 i m
-  · simpa [ladderFamily, ladderA, show ((13:ℝ) * ((10:ℕ) + 1) : ℝ) = 143 by norm_num]
-      using ladder_margin_r10 i m
-  · simpa [ladderFamily, ladderA, show ((13:ℝ) * ((11:ℕ) + 1) : ℝ) = 156 by norm_num]
-      using ladder_margin_r11 i m
-  · simpa [ladderFamily, ladderA, show ((13:ℝ) * ((12:ℕ) + 1) : ℝ) = 169 by norm_num]
-      using ladder_margin_r12 i m
+  · simpa [ladderFamily, ladderA, ladderQR] using ladder_margin_r7 i m
+  · simpa [ladderFamily, ladderA, ladderQR] using ladder_margin_r8 i m
+  · simpa [ladderFamily, ladderA, ladderQR] using ladder_margin_r9 i m
+  · simpa [ladderFamily, ladderA, ladderQR] using ladder_margin_r10 i m
+  · simpa [ladderFamily, ladderA, ladderQR] using ladder_margin_r11 i m
+  · simpa [ladderFamily, ladderA, ladderQR] using ladder_margin_r12 i m
 
 /-- The uniform floor corollary: every ladder family clears ≥ 14/169
     (the r = 12 deep-well rung is the weakest). -/
-theorem ladder_law_floor : ∀ r ∈ Finset.Icc 7 12,
+theorem ladder_law_floor : ∀ r ∈ Finset.Icc (7:ℕ) 12,
     ∀ i, ∀ m : ℤ,
       (14 : ℝ) / 169 ≤
-        |(ladderFamily r i : ℝ) * ((ladderA r : ℝ) / (13 * ((r : ℝ) + 1))) - m| := by
+        |(ladderFamily r i : ℝ) * ((ladderA r : ℝ) / ladderQR r) - m| := by
   intro r hr i m
-  have hr' := Finset.mem_Icc.mp hr
-  have h12 : (r : ℝ) ≤ 12 := by exact_mod_cast hr'.2
-  have hstep : (14 : ℝ) / 169 ≤ 14 / (13 * ((r : ℝ) + 1)) := by
-    gcongr
-    · norm_num
-    · nlinarith
-  exact hstep.trans (ladder_law r hr i m)
+  obtain ⟨hlo, hhi⟩ := Finset.mem_Icc.mp hr
+  have hstep : (14 : ℝ) / 169 ≤ 14 / ladderQR r := by
+    interval_cases r <;> simp [ladderQR] <;> norm_num
+  exact hstep.trans (ladder_law r (Finset.mem_Icc.mpr ⟨hlo, hhi⟩) i m)
 
 /-- The corrected lift-floor kernel at the dichotomy constant: the ladder
     families clear β = 2/25 (since 14/169 > 2/25), and the tight extremal
     block lift clears exactly 2/25 (block46_margin).  These are the formal
     attainment witnesses of `lift floor = 2/25, tight`. -/
-theorem lift_floor_beta_ladder : ∀ r ∈ Finset.Icc 7 12,
+theorem lift_floor_beta_ladder : ∀ r ∈ Finset.Icc (7:ℕ) 12,
     ∀ i, ∀ m : ℤ,
       (2 : ℝ) / 25 ≤
-        |(ladderFamily r i : ℝ) * ((ladderA r : ℝ) / (13 * ((r : ℝ) + 1))) - m| := by
+        |(ladderFamily r i : ℝ) * ((ladderA r : ℝ) / ladderQR r) - m| := by
   intro r hr i m
   refine le_trans (by norm_num) (ladder_law_floor r hr i m)
 
