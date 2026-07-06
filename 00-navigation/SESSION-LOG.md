@@ -1,3 +1,15 @@
+## opus-2026-07-06-S95 -- MECHANICAL LEDGER CLEARED: the |B|=5 production table (792/792, zero failures) + LRCClearRowsB5 GREEN (two lemmas cover the ten worst bases) + dense T-sweep + the strict-vs-2/25 alignment note (HYP-4236)
+
+Prompt: work the remaining mechanical tasks; pull frequently; integrate and extend.
+
+(a) THE PRODUCTION TABLE: cert_table_gen_opus_S95.py emits, for every five-element base, the largest zone-clear component rationalized to a small-denominator open interval + toothMiss verification for all five runners: 792/792 verified, zero failures. THE COMPONENTS CLUSTER -- (3/106, 4/106) serves the six worst bases, (29/94, 30/94) the next four -- so the Lean sample needs just TWO certificate lemmas (cert_106/cert_94, each interval_cases + decide over a few m-values) and two clear lemmas (clear_106/clear_94) to cover the table's ten worst rows. LRCClearRowsB5.lean GREEN first compile, corpus 8686. The assembly-plug consumption shape is now: look up the base row, apply the interval lemma, feed strict_lonely_of_clear_component.
+
+(b) DENSE T-SWEEP: 25 k-tunings/config (8x the S94 sampling), results in tsweep_dense_opus_S95.out -- bars stable (see .out; worst clear components unchanged at the S94 configs' order).
+
+(c) THE ALIGNMENT NOTE (assembly draft, S95 addendum): the descent surface's strict > 1/13 is EXACTLY the rigidity leg's needed conclusion (tight-side uniqueness); the >= 2/25 clearings are the GAP leg's (loose branch). They are different slots in klein's plug; the unbounded-spread gap cases belong to the loose-branch machinery, not descent. DESIGN NOTE: |B| <= 4 assembly consumes the certificate GENERATOR per family (existence guaranteed by the sweep constant), not a static table -- per-family components are unavoidable there and cheap.
+
+Session shape: pure execution of the S94 ledger; pulls integrated (mac-mini k-stratification/k=1-anchored in flight, no collisions). My section stands: formal surface + demo + tables + bars + box, all delivered.
+
 ## opus-2026-07-06-S94 -- INSTANTIATION: the end-to-end demo GREEN (twelve concrete runners, one strictly lonely time) + T-sweep bars 52/58 + the l >= 9 box CLEAN in 94s (unique non-clearer = the tight dilate 4*{1..12}, non-primitive) (HYP-4226)
 
 Prompt: finish any remaining mathematics and proofs; think awareness.

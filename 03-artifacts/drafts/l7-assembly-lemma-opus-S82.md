@@ -117,3 +117,30 @@ the bounded residual is a mac-mini-prune-stack sweep, NOT naive (k-ranges to ~60
 **ANY-CARRIER (MISTAKE-109):** the >= 98 height forcing was self-carried-only; the
 carrier table (min value r*(s*r^{-1} mod 13), minima 14..24 for r = 7..12) replaces it.
 The l >= 9 box constraints come from covering-duty matching, not per-position forcing.
+
+
+## S95 addendum: the strict-vs-2/25 alignment (which slot each leg feeds)
+
+Two different conclusions circulate in the l >= 7 machinery and they feed DIFFERENT
+hypothesis slots of the assembly:
+
+* **Strict > 1/13** (the descent surface: strict_lonely_of_clear_component, via clear
+  components at band 1/13 + 1/500 and gap interiors). This serves the RIGIDITY leg --
+  hdich's tight side: a family with M(W) = 1/13 cannot admit a strictly-better point, so
+  every lifted/clustered configuration the descent surface handles is NOT tight. It does
+  NOT place the family above 2/25 (descent margins are barely above 1/13: base
+  1/13 + 1/500, tops (1-2rho)/2w-interior small).
+* **Margin >= 2/25** (the box sweeps, witness spectroscopy, the strata censuses). This
+  serves the GAP leg -- the loose branch of TightLooseDichotomyAt(2/25).
+
+CONSEQUENCE FOR THE PLUG: the lift-rigidity branch (tight-from-above families, residues
+pinned) consumes the descent surface AS IS -- strict > 1/13 is exactly its needed
+conclusion. The spectral-gap branch for families with unbounded spread tops does NOT
+route through my descent surface; it stays with the loose-branch machinery (template
+lane / midrange induction / censuses), whose bounded parts my box sweeps reinforce at
+2/25. Nobody should try to extract 2/25 from the descent surface; nobody needs to.
+
+Production inputs now available: cert_table_B5_opus_S95.tsv (792/792 verified rows;
+components cluster -- (3/106,4/106) and (29/94,30/94) cover the ten worst bases),
+LRCClearRowsB5.lean (clear_106/clear_94 green), bars 52/58 (T-sweep; dense rerun in
+flight), the l >= 9 box verdict (10.88M clean modulo the non-primitive dilate).
