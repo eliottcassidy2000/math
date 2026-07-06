@@ -1,3 +1,20 @@
+## mac-mini-2026-07-06-S19 -- THE COMPACTNESS ROUTE to the density floor via EQUICONTINUITY-OF-SAFE: safe is continuous along lift rays (Weyl), >=0.08 for coupled 2-tori, =0 ONLY on the AP-locus => the floor by compactness; using safe not M dissolves the height non-uniformity (HYP-4472)
+
+Prompt (owner): relate equicontinuity to prior equidecomposability/equinumerosity/equioscillation work; integrate + reframe creatively.
+
+SYNTHESIS: a concurrent mac-mini-S18 already surveyed the equi-family (equicontinuity = regularity meta-axis; AP = equi-everything at phi(n) units; safe regular, M jagged; floor = spike-vs-average).  I EXTENDED it into a concrete proof ROUTE, integrating S18 + my S17 (safe doesn't degrade with height) + my S4 (J-K accumulation / 2-tori).
+
+THE ROUTE (verified): M is NOT equicontinuous (why S4's accumulation route stalled).  But safe IS: safe_1d(w^N, 2/25) -> safe_2d(2-torus U) along a lift ray (Weyl equidistribution; N=25..400 converges 0.0335->0.0299 -> safe_2d=0.0272).  So safe is continuous on the Chabauty-compactified space -- compactness works for safe where it failed for M.  UNIFORM FLOOR: safe_2d >= 0.08 for ALL coupled 2-tori (MIN 0.081 over 40, zero near 0); safe_2d = 0 ONLY on the AP-direction locus (pure AP + dilated-AP dir).  THE FLOOR: safe > 0 for non-AP = compactness floor off the AP-locus + (near it) low-height near-AP with safe=0 only AT the AP (tight U, S13) + the 2-torus zeros = product(LRC<=12)+coupled(lift-floor) split (S4).  The height non-uniformity DISSOLVES -- an M-artifact.
+
+FIVE EQUI-NOTIONS, ONE STATEMENT: equicontinuity [route works for safe], equidistribution [ray continuity], equinum/equiosc [zero-locus = AP at phi(n) units], equidecomp [safe=0 <=> arcs tile, only AP], accumulation [2-torus zeros].  safe = a compact-space-continuous functional whose zero-locus is exactly the AP orbit.
+
+HONEST: a proof ROUTE not a proof; rigor = Chabauty+Weyl formalized + safe_2d>0 for ALL coupled tori (lift-floor program) + AP-locus zero => tight (U) (S13 open).  It converts the analytic density floor into a compactness statement whose pieces are the fleet's already-active programs.
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection.)
+
+FILES: lrc_equicont_safe_macmini_S19.py (+.out); reflection the-compactness-route-equicontinuity-of-safe-macmini-S19.md; HYP-4472 (+INDEX).  No canon overridden.
+
+NEXT: (a) safe_2d > 0 for ALL coupled 2-tori = the lift-floor program (kps/opus <=6-lifted + my S5 >=7-residual) -- fold the density floor into it; (b) the AP-locus zero-uniqueness = tight (U) (S13); (c) formalize Chabauty compactness + Weyl continuity of safe.
 ## mac-mini-2026-07-06-S18 -- EQUICONTINUITY is the REGULARITY AXIS of the equi-family; its failure IS the floor, dual to equidistribution (HYP-4462)
 
 Prompt (owner): see how equicontinuity relates to prior equidecomposability/equinumerosity/equioscillation work; integrate + reframe creatively.
