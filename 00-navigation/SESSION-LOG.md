@@ -1,3 +1,21 @@
+## klein-2026-07-05-S141b -- THE SECOND-VALUE INDUCTION (synthesis): razor-quarantine as the campaign's one recurring law; uniqueness is FREE from the split; the 11.5 meeting point verified exact; middle strip clear at margin (HYP-4161 cont.)
+
+Prompt (owner): explore incoming and past progress for common patterns and deeper structural insight; keep pushing.
+
+COMPLETED THE IN-FLIGHT S141 (the midrange witness was green but uncommitted -- pushed), then the synthesis:
+
+THE PATTERN (reflection the-second-value-induction-and-the-razor-quarantine): at EVERY level of this problem the razor-thin extremal values quarantine into a structured PROVABLE stratum and the open residual carries a MARGIN (bands S112; covering-min razor in the dominant stratum; loose-branch razor in mac-mini's proved AP-subfamily stratum; the tight extremizer in the spread region of my midrange split). Equality forces arithmetic; arithmetic is provable; analysis is only ever needed at a margin.
+
+THE INDUCTION: [gap+uniq](n-1) + AP-base(n) [mac-mini S59 mechanism] + drag(n) [window at (rho,beta)=(2/(2n+1), 2/(2n-1))] => [gap+uniq](n). KEY OBSERVATION: **uniqueness(n) is FREE** -- an M=1/(n+1) family cannot be all-loose (drag would force M >= 2/(2n+1) > 1/(n+1)), so it has a tight AP subfamily, and AP-base(n) classifies it to the full AP. NO per-level equioscillation analysis needed (revises my S140 route: the equioscillation rigidity is needed ZERO times if the induction closes). Induction base = grid-checkable (the S138 value form).
+
+THE MEETING POINT (verified exact): the midrange witness closes ratio <= (2n-1)/2 and the drag window threshold is (2n-1)/2 * B' -- THE SAME CONSTANT (both are the Farey datum beta - rho = 4/(4n^2-1) against rho); at n=12 both are 23/2 = 11.5. What survives both = the MIDDLE STRIP (spread overall, compressed at top, all-loose).
+
+THE STRIP PROBE (fast float+exact): 167 primitive strip members, minimum M = 18/199 ~ 0.0905 at {1..10,197,198} -- comfortably >= 2/25 = 0.08 (margin ~0.0105, NOT razor). The strip minimizer is a consecutive-pair-top family (Farey binding 1+198 = 199), exactly the fee/multi-window machinery's shape.
+
+REMAINING (sharpened): drag(12) on the middle strip (margin 4/575 of room; window+fee+finite shell) + the induction base + level-11 inputs (same statements two sizes down, grid-checkable). The fleet's four attacks are the four clauses of: peel until structured, window at the margin, quarantine the razor.
+
+FILES: LRCMidrangeWitness.lean (committed this session); reflections (midrange-split + second-value-induction); lrc14_second_value_induction_klein_S141.py (+out). No canon overridden.
+
 ## opus-2026-07-05-S89 -- LEMMA A (fixed-order telescope) + LEMMA B (event costs) PROVED; the remaining constant posed as a finite optimization; THE DEGENERACY STRATIFICATION rigorously scopes S87's 792/792 as the GENERIC-type closure (HYP-4176)
 
 Prompt: work what remains for my section + another remaining section.

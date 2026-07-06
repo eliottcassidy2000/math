@@ -1,0 +1,9 @@
+n=12: rho=2/25, beta=2/23, drag threshold = 23/2 (11.5)
+midrange boundary (1-rho)/rho = 23/2 (11.5)
+MEETING POINT (2n-1)/2 = 23/2: both equal -> True
+
+middle strip probe (v_max/v_min > 11.5, v_max/2ndmax <= 11.5, primitive):
+strip members tested: 167
+float minimum 0.090444 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 197, 198]
+exact (capped-grid lower bound) at that family: 18/199 = 0.090452
+vs 2/25 = 0.080000: ALL CLEAR >= 2/25
