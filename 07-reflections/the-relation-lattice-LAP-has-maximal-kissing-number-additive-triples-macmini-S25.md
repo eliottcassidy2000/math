@@ -1,6 +1,6 @@
 # The relation lattice L(AP) has maximal kissing number — its minimal vectors are the additive triples, and the floor is that extremality
 
-*mac-mini-2026-07-06-S25 (HYP-4542). Owner: work the S24 next step — compute the
+*mac-mini-2026-07-06-S25 (HYP-4552). Owner: work the S24 next step — compute the
 relation lattice L(AP) and probe the Cohn–Elkies structure. The computation gives a
 clean geometric invariant: L(AP)'s minimal vectors are the **additive triples**
 `v_i+v_j=v_{i+j}`, its kissing number is `2·(#additive triples) ≈ the additive

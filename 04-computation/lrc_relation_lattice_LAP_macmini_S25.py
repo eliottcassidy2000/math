@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-mac-mini-2026-07-06-S25 (HYP-4542) -- the RELATION LATTICE L(AP) and its KISSING NUMBER.
+mac-mini-2026-07-06-S25 (HYP-4552) -- the RELATION LATTICE L(AP) and its KISSING NUMBER.
 
 L(AP) = {a in Z^12 : sum_{i=1}^{12} i*a_i = 0} = ker of the moment map phi(a)=<c,a>,
 c=(1..12).  disc(L(AP)) = |c|^2 = sum i^2 = 650.  Gram (basis d_k=(k+1)e_k - k e_{k+1})
