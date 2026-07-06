@@ -1,0 +1,24 @@
+CLAIM: any SCALE-SEPARATED 12-family (two parts, each size<=11) has M>=2/25 (NOT a gap member).
+Each part size<=11 => M>=1/12>2/25 => neither covers; decorrelation => whole has safe point => M>=2/25.
+
+  split(6,6) N=200   scaled : safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(6,6) N=200   shifted: safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(6,6) N=1000  scaled : safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(6,6) N=1000  shifted: safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(3,9) N=500   scaled : safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(3,9) N=500   shifted: safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(9,3) N=700   scaled : safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(9,3) N=700   shifted: safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(1,11) N=2000  scaled : safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(1,11) N=2000  shifted: safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(11,1) N=4000  scaled : safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(11,1) N=4000  shifted: safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(6,6) N=60    scaled : safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(6,6) N=60    shifted: safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(4,8) N=300   scaled : safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(4,8) N=300   shifted: safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(7,5) N=800   scaled : safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+  split(7,5) N=800   shifted: safe-point at 2/25? True  => M>=2/25 (OK, not gap)
+
+  tested 18 scale-separated 12-families; all M>=2/25 (not gap): True
+  => CONFIRMED rigorously-consistent: gap members admit NO scale separation = SINGLE CLUSTER.

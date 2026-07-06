@@ -7,3 +7,18 @@ PART 1: is the tight locus EXACTLY the dilated APs? (primitive tight != AP?)
     c=3: M=1/13 = 1/13 TIGHT  primitive=False  gcd=3
     c=5: M=1/13 = 1/13 TIGHT  primitive=False  gcd=5
     c=7: M=1/13 = 1/13 TIGHT  primitive=False  gcd=7
+  primitive residue-{1..12} lifts tested: 60000
+  primitive TIGHT families != {1..12}: 0
+    NONE -- primitive tight locus = {1..12} uniquely (on this search).
+    (dilated APs are the only tight families; primitive => c=1 => the AP)
+
+==============================================================================
+PART 2: the ESCAPE WITNESS -- where does a lift of the AP exceed 1/13?
+==============================================================================
+PART 2: single-elt AP-lifts with M>1/13: 500
+  MIN margin=1/12=0.08333 (>1/13=0.07692? True)
+  escape-witness q (top): [(19, 107), (12, 50), (7, 44), (8, 43), (17, 40), (9, 39), (10, 36), (11, 32), (32, 27), (44, 23)]
+PART 3: min(M-1/13) by lift height:
+  h1-2: n=720 MIN=0.00308 median=0.03419
+  h3-4: n=1633 MIN=0.00641 median=0.04808
+  h5-6: n=3647 MIN=0.00592 median=0.06101
