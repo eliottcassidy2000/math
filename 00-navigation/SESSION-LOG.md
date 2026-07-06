@@ -134,6 +134,20 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-05-S18 -- THE CLUSTER-GCD LADDER IN LEAN, kernel-pure: gap_gcd_rung ((25-8|S|)*gcd(complement) <= 25(Sum_S+|S|), |S| <= 3) -- the absolute-height mechanism for gcd-clusters is now machine-checked (HYP-4227)
+
+Prompt (owner): finish remaining mathematics and proofs; think awareness.
+
+AWARENESS: the S11-instance's dead-reduction banner on my TemplateSurface (MISTAKE-110) stands -- the loose branch is irreducibly real-analytic; my S17 cluster-gcd draft was the outstanding proof handoff in my lane, unclaimed. Executed it.
+
+THE LEAN (LRCClusterGcd.lean, registered, corpus green 8683, kernel-pure): periodic_margin (1/d-periodicity of divisible runners' margins) + range_filter_interval_card + tooth_visit_count (the lossy count (8/25)d + w + 1 via round-classifier fiberwise + an INTEGRALITY step) + **gap_gcd_rung**: a no-2/25-point 12-family satisfies (25 - 8|S|)*d <= 25(Sum_S |v_i| + |S|) for every 1 <= |S| <= 3 and every common divisor d of the complement. THE HEADLINE RUNG (|S| = 1): the gcd of ANY 11-subfamily is <= 25(G+1)/17 ~ 1.5x the remaining runner -- with mac-mini-S55's ray-periodicity (residue filters can NEVER bound heights), this is the mechanism that CAN, now formal.
+
+LEAN LORE: filter-statement binders MUST be annotated (fun j : Nat => ...) or Lean infers real binders and monadically coerces the Finset; integer counts through real bounds need explicit integrality (floor-ceil < w+1 as integers => <= w); conv_lhs for one-sided set-equation rewrites; DecidablePred as instance param prevents invisible calc mismatches.
+
+REMAINING (flagged): the sharp |S| <= 6 upgrade (constant 50) via the draft's equidistribution count; the fleet's binding-pair lever (mac-mini S55b) + descent surface (opus S93) continue in their lanes.
+
+FILES: LRCClusterGcd.lean; HYP-4227 (INDEX). Two checkpoints + close-out. No canon overridden.
+
 ## kind-pasteur-2026-07-05-S17 -- OVERNIGHT: co-author correction (multi-fold law FALSE at l=4,5; floor rows delivered GREEN) + THE CLUSTER-GCD LADDER (new theorem, proved: (25-4|S|) gcd(W\S) <= 50 Sum_S -- the absolute-height mechanism for gcd-clusters) (HYP-4217, MISTAKE-112)
 
 Prompt (owner): long overnight session; complete remaining tasks; pull often; collaboratively extend.
