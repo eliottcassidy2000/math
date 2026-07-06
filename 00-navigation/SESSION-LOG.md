@@ -19,6 +19,15 @@ WHY THIS IMPROVES THE PROOF STATE: the loose branch is now a SHARP classical sta
 FILES: lrc14_twelve_runner_rigidity_klein_S140.py(+out), lrc14_gap_boundedness_klein_S140.py(+out); INDEX HYP-4151; reflection the-loose-branch-is-12-runner-AP-rigidity-the-gap-is-a-farey-window; this log. NO Lean (per directive: exact math first).
 
 NEXT: (a) prove the equioscillation/AP-residue rigidity uniform in r (the loose branch) -- OR mine Sungkawichai-Trakulthongchai LRC(13) for extremizer-uniqueness + second-value gap; (b) then formalize; (c) CornerLonely (tight branch, anchor M({1..12})=1/13 in hand).
+## opus-2026-07-05-S85 -- the compressed extremizer is the consecutive comb: EXACT M=v_min/(v_min+v_max), AP the unique compressed min, EXPLICIT THM-608 peel threshold, and Q=w+1=Phi6(n) unification (HYP-4142)
+
+Prompt (owner): "work on improving the state of the LRC 14 proof, don't focus on formalization until you've creatively figured out the exact mathematics."
+
+Attacked the exact math of the compressed leaf (the "arithmetic AP {(w1+j)t}" hard core, regime C). Found the pure comb {w1..w1+12} has the CLEAN CLOSED FORM M = w1/(2w1+12) = v_min/(v_min+v_max), witness t*=1/(v_min+v_max) (all phases cluster symmetrically near 1/2; extreme speeds bind). Generalizes to a universal bound M(S) >= v_min/(v_min+v_max) -- but this is a corollary of THM-526 (my rational witness lies in THM-526's safe interval J). SHARPENINGS (the contribution): (A) EXACT VALUE -- full consecutive combs SATURATE, M({a..a+r-1})=a/(2a+r-1) (verified 9/9); (B) EXTREMIZER -- among v_max<=13 v_min families the min M is 1/14, UNIQUELY at the AP {1..13}; sparse/non-full strictly above; (C) EXACT SLACK -> EXPLICIT THM-608 peel threshold N >= 7 v_max(v_min+v_max)/(13 v_min - v_max); for B={1..12} this is 1092=6*182, and THE DEEP-WELL KILLER 182 SITS BELOW IT => WHY the deep well is the un-peelable extremal (bigger killers peel via THM-608, smaller keep it compressed via THM-526, the deep well is what survives between); (D) UNIFICATION -- single-killer denominator Q=w+1 (killer==-1 mod Q = reflected unit runner), so deep-well 183=Phi6(14)=killer+1=182+1 (max killer w=n(n-1) => w+1=n^2-n+1=Phi6(n)); my S52 Eisenstein and mac-mini's THM-618 offset are one object.
+
+CONVERGENCE (signal): concurrent opus-S74-S77 (hdich in Lean, residue pinning + lift-rigidity) independently found the deep well RECURSES down the tower ({1..12,182}@14/183 -> n=13 {1..11,168}@14/169), noting "182=183-1" = exactly my Q=w+1 (killer=Q-1 at each level). Two independent derivations of "killer is one below the denominator."
+
+HONEST: a consolidation/sharpening session -- exact forms + extremizer + explicit peel threshold + the Phi6=killer+1 unification. Overlaps THM-526 (the >= bound), THM-618 (Q=w+1), HYP-4047/klein-S68 (Eisenstein). Does NOT close the open leaf (THM-619's loose-base small-killer census). Files: lrc14_midrange_witness_comb_extremizer_opus_S85.py (+out), HYP-4142, reflection two-witness-geometries-meet-at-the-AP. No canon overridden.
 
 ---
 

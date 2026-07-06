@@ -1,0 +1,28 @@
+(A) EXACT VALUE for full consecutive combs C={a..a+r-1}: M = a/(2a+r-1) = v_min/(v_min+v_max)
+   { 1..13} (r=13): M=1/14     v_min/(v_min+v_max)=1/14     witness t*=13/14    saturates=True
+   { 2..14} (r=13): M=1/8      v_min/(v_min+v_max)=1/8      witness t*=1/16     saturates=True
+   { 5..17} (r=13): M=5/22     v_min/(v_min+v_max)=5/22     witness t*=1/22     saturates=True
+   { 1..12} (r=12): M=1/13     v_min/(v_min+v_max)=1/13     witness t*=4/13     saturates=True
+   { 2..13} (r=12): M=2/15     v_min/(v_min+v_max)=2/15     witness t*=14/15    saturates=True
+   { 3.. 7} (r= 5): M=3/10     v_min/(v_min+v_max)=3/10     witness t*=9/10     saturates=True
+   { 2.. 4} (r= 3): M=1/3      v_min/(v_min+v_max)=1/3      witness t*=1/6      saturates=True
+   { 7..16} (r=10): M=7/23     v_min/(v_min+v_max)=7/23     witness t*=1/23     saturates=True
+   { 4..12} (r= 9): M=1/4      v_min/(v_min+v_max)=1/4      witness t*=1/16     saturates=True
+   all full consecutive combs saturate: True
+
+(B) EXTREMIZER: among v_max<=13 v_min families, min M = 1/14 UNIQUELY at the AP {1..13}
+    (the only full comb hitting the ratio-13 boundary with v_min=1). Sparse/non-full are strictly above:
+   odd comb (sparse)      M=1/2      bound=1/14      gap above bound=3/7
+   missing 3              M=2/19     bound=1/15      gap above bound=11/285
+   AP {1..13}             M=1/14     bound=1/14      gap above bound=0
+
+(C) EXACT SLACK for THM-608 peeling: a compressed base B has delta = M(B)-1/14 >= v_min/(v_min+v_max)-1/14.
+   B=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] M(B)=1/13    bound=1/13    slack delta=1/182
+   B=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] M(B)=2/15    bound=2/15    slack delta=13/210
+   B=[1, 3, 5, 7, 9, 11, 13]            M(B)=1/2     bound=1/14    slack delta=3/7
+
+(D) SINGLE-KILLER denominator Q=w+1 (killer==-1 mod Q); explains deep-well 183=killer+1=Phi6(14):
+   {1..12,13}: M=1/14     t*=13/14 Q=14  = w+1=14 ? True  (w+1=Phi6(14)? False)
+   {1..12,26}: M=2/27     t*=25/27 Q=27  = w+1=27 ? True  (w+1=Phi6(14)? False)
+   {1..12,182}: M=14/183   t*=14/183 Q=183  = w+1=183 ? True  (w+1=Phi6(14)? True)
+DONE.
