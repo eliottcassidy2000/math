@@ -1,0 +1,12 @@
+family                                          M  #gaps    alpha  arith-defect
+--------------------------------------------------------------------------------
+AP {1..12} (1/13)                         0.07692      2   0.0769        0.0002  ARITHMETIC {k*a}
+doubled-apex (2/25)                       0.08000      2   0.0400        0.0000  ARITHMETIC {k*a}
+block lift (2/25)                         0.08000      3   0.0400        0.0000  ARITHMETIC {k*a}
+deep well (14/169)                        0.08284      3   0.0059        0.4626  NOT arithmetic
+{1..11,23} (1/12)                         0.08333      2   0.0833        0.0000  ARITHMETIC {k*a}
+loose {2,8,12,13,17,18,20,26,27,28,33,34}  0.13333      4   0.0667        0.0001  ARITHMETIC {k*a}
+
+READING: near-tight families' witness phases ARE (near) an arithmetic {k*alpha} orbit
+(low arith-defect, few gaps); loose families are NOT.  So M(near-tight) = the min-gap of a
+{k*alpha} orbit = a continued-fraction convergent = an Ostrowski rung.  The gap is between rungs.

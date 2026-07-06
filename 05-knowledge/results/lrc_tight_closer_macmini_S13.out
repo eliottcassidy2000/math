@@ -2,3 +2,6 @@
 THE TIGHT-SIDE CLOSER: does (RP residue-pinning) + (SV sieve) => AP?
 ==============================================================================
   AP {1..12}: RP=True, SV=True, primitive=True, M=1/13
+  families satisfying RP + SV + primitive found: 70153
+  of those, NON-(dilated-)AP: 4000
+    (RP)+(SV) do NOT force the AP -- non-AP families satisfy both:

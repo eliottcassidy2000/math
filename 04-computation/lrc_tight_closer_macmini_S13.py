@@ -114,16 +114,17 @@ def main():
         tested += 1
         if is_dilated_AP(Wp) or Wp == AP:
             continue
-        # a NON-AP family satisfying both conditions
-        found.append(Wp)
-        M = exact_M(Wp)
-        found_M[M] = found_M.get(M, 0) + 1
+        # a NON-AP family satisfying both conditions (cap the collection)
+        if len(found) < 4000:
+            found.append(Wp)
     print(f"  families satisfying RP + SV + primitive found: {tested}")
     print(f"  of those, NON-(dilated-)AP: {len(found)}")
     if found:
         print("    (RP)+(SV) do NOT force the AP -- non-AP families satisfy both:")
-        # show whether they're tight or not
-        tight = [W for W in found if exact_M(W) == FLOOR]
+        fl = float(FLOOR)
+        # float pre-filter; exact-check only float-near-tight
+        near = [W for W in found if float_M(W) < fl + 1e-6]
+        tight = [W for W in near if exact_M(W) == FLOOR]
         print(f"    of the non-AP RP+SV families: TIGHT (M=1/13): {len(tight)}, non-tight: {len(found)-len(tight)}")
         for W in found[:8]:
             print(f"      M={exact_M(W)} W={list(W)}  (multiples: "
