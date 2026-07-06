@@ -8491,3 +8491,11 @@ on `Phi`, not as a standalone scalar proof.
 - **Fekete points / equilibrium measure / potential theory**: AP+observer = n-th roots of unity = electrostatic ground state; tight value 1/n = equilibrium spacing. Next: quantify the energy gap to the second config.
 - **Monsky's theorem / p-adic equidissection**: the floor is a tiling-impossibility of Monsky's shape; candidate proof via p-adic valuation (p=5 from 2n-1=5^2) + Sperner. Next: set up the valuation-coloring of the clearance band. HIGH-INTEREST (explains n-specificity structurally).
 - **Bohr almost periodicity**: equicontinuous=almost periodic; M's non-equicontinuity = non-uniform almost-periodicity.
+
+
+### NEW LEADS (mac-mini-S24, HYP-4532) -- the density floor is a Cohn-Elkies problem (all 0 prior mentions)
+- **Poisson summation framing**: safe(S,beta)=SUM_{a in L(S)} prod f_hat(a_i) IS Poisson summation over the relation lattice L(S). Status: NAMED (=opus theta HYP-4446). Next: exploit lattice/Fourier duality.
+- **Cohn-Elkies LP / Viazovska magic functions**: the floor = positivity of a Poisson sum over a lattice = the Cohn-Elkies shape; the sharp width-N~2k^2 majorant = a MAGIC FUNCTION from modular forms. HIGH-INTEREST (the framework where such problems ARE solved). Next: is there a modular magic function for L(AP) on X_0(14)?
+- **Relation lattice L(AP) theta on X_0(14)**: the extremal lattice L(AP)={a: sum a_i i=0}; its arc-weighted theta hits 0; the floor = its isolation. Next: compute L(AP)'s Gram matrix / theta, check modularity.
+- **Gauss quadrature**: AP=roots of unity=n-point Gauss nodes; safe=quadrature error, minimized at optimal nodes. Beurling-Selberg=standard error control.
+- **Beurling-Selberg for the explicit formula**: Selberg's original majorant use (bounding sum-over-zeros) is the SAME Poisson-positivity template.
