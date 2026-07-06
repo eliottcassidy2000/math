@@ -1,0 +1,11 @@
+equioscillation count = #distinct t achieving M(S):
+
+  AP {1..12} (n=13)          M=  1/13  #equiosc-points=12  phi(13)=12 (units of Z/13)
+  doubled-apex {1..11,24}    M=  2/25  #equiosc-points=2
+  block {..17,19}            M=  2/25  #equiosc-points=2
+  {1..11,23}                 M=  1/12  #equiosc-points=4
+  AP {1..6} (n=7)            M=   1/7  #equiosc-points=6  phi(7)=6 (units of Z/7)
+  n=7 gap {1,5,6,11,16,17}   M=  5/33  #equiosc-points=2
+
+=> AP = phi(n) equioscillation points (the units); all else 2-4.  Maximal symmetry
+   uniquely at the AP -- the equioscillation face of the tight locus.
