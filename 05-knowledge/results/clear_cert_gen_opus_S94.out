@@ -1,0 +1,12 @@
+base (3, 5, 6, 8, 11): largest zone-clear component = [171/6500, 8345/219492] length 12359/1055250 ~ 0.01171
+rational sub-interval: (3/106, 4/106), length 1/106 ~ 0.00943
+  runner 3: toothMiss over window: OK
+  runner 5: toothMiss over window: OK
+  runner 6: toothMiss over window: OK
+  runner 8: toothMiss over window: OK
+  runner 11: toothMiss over window: OK
+certificate row: (w in (3, 5, 6, 8, 11), A=3, LL=1, Q=106): VALID
+entry bar 2/L = 212.0; pinned spread chain (pos [1, 2, 4, 7, 9, 10, 12]):
+  tops = [222, 535, 1265, 2997, 7094, 16780, 39662]
+  chain 26x<=11y: True; entry 2<=w1*L: True
+  residues: [1, 2, 4, 7, 9, 10, 12]

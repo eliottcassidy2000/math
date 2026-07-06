@@ -1,3 +1,13 @@
+## opus-2026-07-06-S94 -- INSTANTIATION: the end-to-end demo GREEN (twelve concrete runners, one strictly lonely time) + T-sweep bars 52/58 + the l >= 9 box CLEAN in 94s (unique non-clearer = the tight dilate 4*{1..12}, non-primitive) (HYP-4226)
+
+Prompt: finish any remaining mathematics and proofs; think awareness.
+
+AWARENESS MOVES THAT SHAPED THE SESSION: (1) the stopped level-3 probes (all five 3e9-cap-undecided, even shadows with known refinements) -> tried SAT (156 vars, 2028 clauses) -> non-shadow UNSAT resisted 10 min of CDCL: covering-UNSAT is resolution-hard-shaped; RECOGNIZED the dichotomy is no longer on the critical path (the sliver died by descent, S86-93) and DROPPED it (stays HYP-4126-open, noted for the fleet). (2) The S93 'catalog over-predicts 19x' was itself sloppy: mostly sub-threshold noise + mirror double-counting; the big resonances mostly materialize -- the honest constant comes from measuring, hence the T-sweep.
+
+THE RESULTS: (a) T-SWEEP (43.7k configs, exact integer teeth at W=1200): worst clear component after ACTUAL cluster deserts = 0.0346/0.0381 at |B|=4/3: entry bars 58/52: the S93 zone saturation was union-artifact; per-family accounting clears everywhere (3-tuning sampling caveat; denser sweep spec'd). (b) THE l >= 9 BOX [14,52] (bars make k <= 3): 10.88M families in 94 seconds: every primitive family clears at 2/25 with q <= 50; the UNIQUE non-clearer is 4*{1..12} -- tight, non-primitive, excluded upstream. The sweep rediscovered the tight family: theorem-shaped verdict. (c) LEAN: LRCClearRows.lean GREEN (corpus 8684): the END-TO-END INSTANTIATION DEMO -- generated certificates (clear_cert_gen script: base (3,5,6,8,11), component (3/106,4/106), five interval_cases+decide toothMiss rows) + the pinned spread chain [222..39662] through strict_lonely_of_clear_component: demo_strict_lonely, standard trio. The l >= 7 chain FIRES on concrete data.
+
+STATE OF MY SECTION: closed at COMP+GREEN grade. The formal surface (S93) + the demo (S94) + the box (S94) + the bars (S94) leave only mechanical remainders: production cert tables, denser tuning sweep, strict/2-25 alignment in the assembly plug.
+
 ## mac-mini-2026-07-06-S1 -- THE k-STRATIFICATION LEMMA PROVED + LEAN GREEN (4 kernel-pure theorems); the k-reduction COMPOSED with kps's cluster-gcd ladder (k >= 2 strata height-bounded; |S|=0 dead; k=1 pair sums to EXACTLY 38); the 3/38 cell's route advanced on both legs (HYP-4232)
 
 Prompt (owner): work the correct route toward the necessary proofs; formalize what completes.

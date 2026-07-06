@@ -1,0 +1,6 @@
+l=9: cumulative 4330260 families, hard=1, 37s
+l=10: cumulative 8227494 families, hard=1, 70s
+l=11: cumulative 10353258 families, hard=1, 89s
+l=12: cumulative 10884699 families, hard=1, 94s
+BOX SWEEP DONE: 10884699 families, hard (no q<=50 witness at 2/25): 1
+  HARD: [40, 28, 16, 4, 44, 32, 20, 8, 48, 36, 24, 12]
