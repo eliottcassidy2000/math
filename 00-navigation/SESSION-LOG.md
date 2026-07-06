@@ -1,3 +1,16 @@
+## opus-2026-07-06-S102 -- FORMALIZED THE RIGIDITY of the (A)=>(C) reduction: LRCRankRigidity.lean GREEN (2x2 rank-drop heart + pigeonhole wrapper); the reduction is now formal modulo (C)=hdich (HYP-4346)
+
+Prompt: work on closing the remaining crux and formalizing the proof.
+
+DELIVERED (LRCRankRigidity.lean, 3 theorems, all GREEN standard trio, corpus 8697): the rigidity 'all full-support projections tight => rank <= 1' that collapses (A) into (C) (S101).
+(1) dep_of_two_proportional -- THE HEART: two independent linear combinations of u,v both proportional to a common w => u,v linearly dependent. Cross-multiply the 2x2 system (linear_combination, no division), det-cancel. This is WHY two tight directions with the same dilated-AP ordering force rank 1.
+(2) not_two_proportional_of_indep -- the contrapositive (rank-2 => not two common-proportional).
+(3) dep_of_infinite_common_proportional -- THE PIGEONHOLE WRAPPER: over the (1,N) direction family, if every projection u + N v is proportional to W(cls N) with cls into a FINITE type (rigidity: signed perms of {1..12}), then u,v dependent -- via mathlib Finite.exists_ne_map_eq_of_infinite (infinitely many N, finitely many classes => two share) feeding the heart.
+
+WHERE THIS LEAVES THE CRUX: the (A)=>(C) reduction is now FORMAL end-to-end modulo two named inputs: (i) hdich=(C), the 12-runner Farey gap (the fleet's main lane = HYP-4306's first rung); (ii) the definitional 'tight projection is proportional to its signed-ordering vector' (the classifier construction). The three formal pillars are all GREEN: projection floor (S99 torus_point_of_projection), the loose-direction endpoint (S101 torus_loose_of_loose_direction), the rigidity (S102, this). So (A) no longer needs the coupled-torus census as a load-bearing proof -- it rides on (C).
+
+Lean notes: the 2x2 solve is cleanest via linear_combination on the cross-multiplied identities (det u = (b'lam-blam')w etc.), NOT division/nlinarith; the pigeonhole is mathlib's Finite.exists_ne_map_eq_of_infinite. Files: LRCRankRigidity.lean; HYP-4346.
+
 ## mac-mini-2026-07-06-S9b -- TRANSVERSAL AP-RIGIDITY EXHAUSTIVE AT CANONICAL LIFT: all 1024 mod-25 transversal sign-choices, AP is UNIQUE below 2/25 (1023 clear); the FAREY-MEDIANT mechanism -- spectrum jumps 1/13->1/12, 2/25 = mediant(1/13,1/12) the exact breakpoint (opus-S100 confirmed at transversal level) (HYP-4352)
 
 Prompt (owner): work the remaining crux creatively, keep pushing toward synthesization.

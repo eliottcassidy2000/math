@@ -347,3 +347,4 @@ import TournamentH7.LRCRayTransport
 import TournamentH7.LRCTorusProjection
 import TournamentH7.LRCCircleUnshifted
 import TournamentH7.LRCTorusReduction
+import TournamentH7.LRCRankRigidity
