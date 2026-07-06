@@ -1,3 +1,20 @@
+## mac-mini-2026-07-06-S20 -- THE EXTREMIZER IS STRICTER THAN FREIMAN: safe=0 <=> DILATED AP (not just min-doubling); the (U) rigidity factors into [open theta-cancellation => min-doubling] + [classical |S+S|=2n-1 => AP] + [green residue-pinning]; LRCMinimalSumset.lean GREEN (HYP-4482)
+
+Prompt (owner): push creatively against remaining frontier, then formalize.
+
+FRONTIER PUSH (integrating opus-S112's exact theta-sum safe=Sum_{a in L(S)} prod h_hat): tested the natural Freiman reading 'safe=0 <=> max additive energy <=> min doubling <=> AP'.  HALF-RIGHT:
+ (1) the AP IS uniquely minimal-doubling among primitives (|S+S|=23, 0 non-AP), but safe correlates WEAKLY with additive energy (corr -0.03) -- the theta-sum is a SIGNED cancellation not a count.
+ (2) THE SHARP REFINEMENT: safe=0 is STRICTER than min-doubling.  Shifted APs {a,...,a+11d} (a!=d) are min-doubling but safe>0 (M=2/15,1/2,...); ONLY dilated APs c*{1..12} (first term=difference) have safe=0 (M=1/13).
+ (3) WHY: the extremizer needs a==d mod 13 => residues={1..12} (residue_pinning); it is the INTERSECTION of ADDITIVE minimality (Freiman => AP) AND RESIDUE completeness (pinning => a==d) = the single ray c*{1..12} = the sum-product coincidence (opus-S107) made exact.  Neither alone suffices.
+ (4) THE (U) FACTORING: safe=0 => [step 1 OPEN: theta-cancellation => min-doubling] => [step 2 CLASSICAL: |S+S|=2n-1 => AP] => [step 3 GREEN: residue-pinning => dilated AP].  The open heart of (U) is step 1 alone -- sharper than raw uniqueness.
+
+FORMALIZED (per 'then formalize'): LRCMinimalSumset.lean GREEN kernel-pure (two_mul_card_sub_one_le: |S+S| >= 2|S|-1 via (min+S)u(S+max) with intersection {min+max}; standard trio; registered) = step 2's lower bound, the additive-combinatorics anchor of the Freiman frame.
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection.)
+
+FILES: lrc_freiman_rigidity_macmini_S20.py (+.out), lrc_dilated_vs_shifted_macmini_S20.out; reflection the-extremizer-is-stricter-than-freiman-macmini-S20.md; LRCMinimalSumset.lean (registered); HYP-4482 (+INDEX).  No canon overridden.
+
+NEXT: the open (U) heart = step 1 'full theta-sum cancellation at 2/25 forces minimal doubling' (additive-combinatorics, cleaner than raw uniqueness); the classical |S+S|=2n-1 => AP characterization (step 2 upper direction) formalizable next.
 ## opus-2026-07-06-S112 -- THE DENSITY FLOOR IS A RELATION-LATTICE THETA-SUM + honest S19 floor correction (HYP-4446); LRCRelationLattice.lean GREEN
 
 Prompt: work the genuinely open residual; pull often; reroute as needed.
