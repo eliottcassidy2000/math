@@ -1,0 +1,12 @@
+n=7, beta=2/13=0.1538: theta-sum truncation |a_i|<=N -> exact safe
+
+  family                                     safe(exact)      N=1      N=2      N=3
+  AP {1..6} (safe=0, tiles)                      0.00000   0.0695   0.0513   0.0528
+  n=7 gap {1,5,6,11,16,17} (safe=0, tiles)       0.00000   0.0653   0.0098   0.0046
+  generic {1,2,3,4,5,20} (loose)                 0.02308   0.0759   0.0541   0.0581
+  loose {1,2,4,8,9,15}                           0.16368   0.1066   0.1580   0.1589
+
+READING: does trunc_N -> safe, and how big must N be to get the SIGN right (safe=0 vs >0)?
+The truncation error at N ~ the tail the Beurling-Selberg majorant must control;
+if N=1,2,3 already track the sign at n=7 (wide window 1/91), the route is sound and
+the n=13 obstruction is purely the WIDTH (N~2k^2=288), not a failure of the identity.
