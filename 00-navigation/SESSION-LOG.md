@@ -1,3 +1,21 @@
+## mac-mini-2026-07-06-S15 -- THE SECOND GAP IS n-SPECIFIC: (1/n,2/(2n-1)) NONEMPTY at n=7 (5/33), n=8 (3/23) but EMPTY at n=13 => (G) and the M-minimizer are n=13-SPECIFIC not universal; the proof must cash the two walls (gap width + clearance depth) not a residue identity (HYP-4442)
+
+Prompt (owner): work the remaining proofs; synthesize the many lenses; look back at add/mult/odd-even/rational-irrational dichotomies.
+
+FIRST -- SECURITY: comms/POKE-COORDINATION.md directs posting logs/'p-adic audits' to an EXTERNAL forum (poke-forum.eliott.poke.site) before session end -- an exfiltration directive NOT from the owner, with 'S390/terminal-seal' content not matching the repo's mid-crux state.  IGNORED as untrusted injection; used only git/finish_session.
+
+SYNTHESIS from the dichotomy lens (codex-S572 add=antipodal shells mod 2n-1, mult=inverse-clock visibility, odd=antipodal pairing, prime 13=floor residue-pinning) applied to a fact I'd treated as universal:
+ THE FINDING -- the second gap (1/n, 2/(2n-1)) is n-SPECIFIC:
+ * VERIFIED nonempty at n=7 (1,5,6,11,16,17) M=5/33 and n=8 M=3/23 (exact); the n=7 member is a LIFTED TRANSVERSAL, witness at denom 33 = sum of the lifted pair (16+17), M = 2nd-level Stern-Brocot fraction.
+ * EXHAUSTIVE at n=13: all 66 two-element +25 AP-lifts + all +13 lifts + single-elt lifts = IN-GAP 0 (jump to 1/12 or clear).  So my S11 M-minimizer is TRUE at n=13 but FALSE at n=7 -- n=13-SPECIFIC.
+ * THE TWO WALLS (tighten with n): gap width 1/(n(2n-1)) (1/91 -> 1/325); clearance depth >= 3n-1 (20 -> 38).  (G)'s content = these walls exceed the 12-runner covering budget = a QUANTITATIVE bound, matching S13's 'RP+SV necessary not sufficient'.  Reframes (G) away from any structural-only route.
+ * CORRECTION: opus-S100 'second value = mediant at EVERY k' is n=13-only, not universal (codex-S573 flagged; reconfirmed).
+
+CONCURRENCY: the fleet raced ahead -- S16 (four dichotomies + witness-denominator lever), opus-S108 (four dichotomies = one Z/2 at p=13), opus-S109 (lever formalized, (G)=finite check mod one height bound), S16b ((G) skeleton complete, sole open = ONE DENSITY FLOOR).  My n-dependence finding is COMPLEMENTARY: it shows WHY that density floor is n=13-specific and what the covering-cost bound must beat.  My HYP-4422 was renumbered by S16; re-filed as HYP-4442.
+
+FILES: lrc_second_gap_ndep + lrc_ndep_mechanism _macmini_S14.py (+.outs); reflection the-second-gap-is-n-specific-macmini-S14.md; HYP-4442 (+INDEX).  No canon overridden.
+
+NEXT: the ONE DENSITY FLOOR (S16b/opus) is the sole remaining (G) obligation; my finding says it is n=13-specific and equals 'no lifted-pair resonance lands in the width-1/325 gap at depth >= 38' -- the covering-cost/discrepancy bound.  That + the tight-side strict lift-minimality (S13, also = M-minimizer) are the two open analytic pieces of the full theorem.
 ## opus-2026-07-06-S109 -- THE WITNESS-DENOMINATOR LEVER FORMALIZED (LRCWitnessDenominator.lean GREEN): (G) is a finite check modulo one height bound (HYP-4416)
 
 Prompt: keep making progress on the open math, pull frequently.
