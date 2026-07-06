@@ -10,6 +10,24 @@ DELIVERED (LRCRankRigidity.lean, 3 theorems, all GREEN standard trio, corpus 869
 WHERE THIS LEAVES THE CRUX: the (A)=>(C) reduction is now FORMAL end-to-end modulo two named inputs: (i) hdich=(C), the 12-runner Farey gap (the fleet's main lane = HYP-4306's first rung); (ii) the definitional 'tight projection is proportional to its signed-ordering vector' (the classifier construction). The three formal pillars are all GREEN: projection floor (S99 torus_point_of_projection), the loose-direction endpoint (S101 torus_loose_of_loose_direction), the rigidity (S102, this). So (A) no longer needs the coupled-torus census as a load-bearing proof -- it rides on (C).
 
 Lean notes: the 2x2 solve is cleanest via linear_combination on the cross-multiplied identities (det u = (b'lam-blam')w etc.), NOT division/nlinarith; the pigeonhole is mathlib's Finite.exists_ne_map_eq_of_infinite. Files: LRCRankRigidity.lean; HYP-4346.
+## mac-mini-2026-07-06-S11b -- MATHLIB-READINESS CONSOLIDATION: the conditional CORE is Mathlib-axiom-clean TODAY (kernel-pure, sorry-free); native_decide is the only real blocker, CONFINED to the excludable data-census route; MISTAKE-110 integrated (template dead, remaining hypotheses real-analytic) (HYP-4372)
+
+Prompt (owner): get everything built + ready to submit to Mathlib; pull frequently during builds.
+
+FULL-CORPUS AUDIT (machine-checked):
+ (1) SORRY-FREE: zero sorry-in-code across all 213 modules (every 'sorry' is a docstring; AxiomAudit checks no sorryAx).
+ (2) CANONICAL CORE KERNEL-PURE: #print axioms on lrc14_of_dichotomy_and_corner AND lrc14_of_spread_dichotomy_and_corner (LonelyRunner.HcompSurface/HarmonicGate) = [propext, Classical.choice, Quot.sound] ONLY -- NO Lean.ofReduceBool, NO sorryAx.
+ (3) native_decide = the one real Mathlib blocker (204 uses/~40 modules = the Lean.ofReduceBool axiom Mathlib rejects), but CONFINED to the alternate data-census route (31,750-line LRCWindowData22 winData22 + exploratory); the whole dichotomy chain is native_decide-free.
+ (4) MISTAKE-110 integrated: the bounded-modulus template/Q50 census (s<=50) is FALSE (free-modulus witnesses s=53; pinned-only -> inf) -> lrc14_of_template_and_corner is a DEAD reduction; the remaining hypotheses (TightLooseDichotomy = EXISTS real t*, CornerLonely) are IRREDUCIBLY REAL-ANALYTIC.  Honest correction to my S8-S10 'one finite census' framing.
+ (5) LRCTorusRate.lean (my S10) = the LRC-independent Mathlib-general standalone (Lipschitz-net max transfer).
+
+BOTTOM LINE: the conditional theorem 'LRC(14) <= {LRC(<=13)} + {TightLooseDichotomy} + {CornerLonely}' is sorry-free + kernel-pure TODAY.  A real Mathlib PR needs only (a) pruning to this surface + its native_decide-free chain (drop winData22/exploratory) and (b) a mechanical style/naming/docstring pass; the two hypotheses stay genuinely open (real-analytic) => a legitimate CONDITIONAL submission, not the full theorem.
+
+WORKFLOW: pulled frequently during the (slow, 31k-line-data-file) build; resolved a HYP-4362 collision with a concurrent mac-mini-S11 lift-exhaustive session (renumbered mine 4362->4372).
+
+FILES: 03-artifacts/drafts/mathlib-readiness-report-macmini-S11.md; HYP-4372 (+INDEX).  No canon overridden; no new math (consolidation/audit per the directive).
+
+NEXT (for the actual PR, when the hypotheses close): prune to the dichotomy surface, style pass, package LRC(<=13) citations; submit LRCTorusRate as a standalone general lemma.
 
 ## mac-mini-2026-07-06-S9b -- TRANSVERSAL AP-RIGIDITY EXHAUSTIVE AT CANONICAL LIFT: all 1024 mod-25 transversal sign-choices, AP is UNIQUE below 2/25 (1023 clear); the FAREY-MEDIANT mechanism -- spectrum jumps 1/13->1/12, 2/25 = mediant(1/13,1/12) the exact breakpoint (opus-S100 confirmed at transversal level) (HYP-4352)
 

@@ -42,6 +42,25 @@ def exact_M(W):
                 best = mv
     return best
 
+def float_M(W):
+    dens = set()
+    for v, w in itertools.combinations(W, 2):
+        dens.add(v + w)
+        if v != w:
+            dens.add(abs(v - w))
+    for v in W:
+        dens.add(2 * v)
+    best = 0.0
+    for s in dens:
+        if s == 0:
+            continue
+        for j in range(1, s):
+            t = j / s
+            mv = min(abs(v * t - round(v * t)) for v in W)
+            if mv > best:
+                best = mv
+    return best
+
 def primitive(W):
     g = 0
     for v in W:
@@ -95,16 +114,20 @@ def part1_minimizer():
     gap_hits = []
     lowered = []      # profiles where a lift has M < canonical M
     tested_profiles = 0
-    for canM, signs, W in scored[:60]:   # the 60 lowest-canonical-M profiles
+    for canM, signs, W in scored:        # ALL 1023 non-AP profiles
         if signs == ap_signs:
             continue
         tested_profiles += 1
         minM = canM; minLift = W
-        for lift in lifts_of(W, kmax=3, n_random=300, seed=hash(signs) & 0xffff):
+        fl, rh = float(FLOOR), float(RHO)
+        for lift in lifts_of(W, kmax=2, n_random=40, seed=hash(signs) & 0xffff):
             lift = primitive(lift)
             if len(set(lift)) != 12:
                 continue
-            M = exact_M(lift)
+            fm = float_M(lift)
+            if fm > rh + 5e-4:          # safely clears; skip exact
+                continue
+            M = exact_M(lift)           # exact only near/below the window
             if FLOOR < M < RHO:
                 gap_hits.append((signs, lift, M))
             if M < minM:
@@ -139,10 +162,14 @@ def part2_ap_lifts():
     buckets = {"tight": 0, "gap": 0, "clear": 0, "below": 0}
     gap_lifts = []
     tight_nonAP = []
-    for lift in lifts_of(AP, kmax=4, n_random=3000, seed=11):
+    fl, rh = float(FLOOR), float(RHO)
+    for lift in lifts_of(AP, kmax=4, n_random=2000, seed=11):
         lift = primitive(lift)
         if len(set(lift)) != 12:
             continue
+        fm = float_M(lift)
+        if fm > rh + 5e-4:              # safely clears
+            buckets["clear"] += 1; continue
         M = exact_M(lift)
         if M == FLOOR:
             buckets["tight"] += 1

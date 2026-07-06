@@ -32,8 +32,10 @@ get everything built and submittable, don't split into PRs).
   (LRC13Citation.lean), not an axiom, not a sorry.  For a real Mathlib PR this
   would carry the standard preprint caveat or the ≤13 results as cited lemmas.
 - `hdich`, `hcorner` — the two remaining REAL-ANALYTIC hypotheses.
-- Axiom footprint (to confirm on the completed build): expected
-  `[propext, Classical.choice, Quot.sound]` only — kernel-pure.
+- **Axiom footprint CONFIRMED (machine-checked):** both
+  `lrc14_of_dichotomy_and_corner` and `lrc14_of_spread_dichotomy_and_corner`
+  depend on `[propext, Classical.choice, Quot.sound]` ONLY — kernel-pure, NO
+  `Lean.ofReduceBool`, NO `sorryAx`.  The conditional core is Mathlib-axiom-clean.
 
 **CORRECTION integrated (kps-S11 / MISTAKE-110):** the bounded-modulus finite
 census (`TemplateDichotomy`, Q50 at s ≤ 50) is FALSE — free-modulus witnesses
@@ -76,8 +78,23 @@ bridge finitizes the *pinned* part, but the free-modulus part is real-analytic.
    {LRC(≤13)} + {TightLooseDichotomy} + {CornerLonely}", machine-checked.  This
    is a legitimate, publishable conditional theorem — the honest deliverable.
 
-## This session's concrete build actions
+## This session's concrete build actions (results)
 
-- Full-corpus `lake build`: [confirm green in the .out].
-- Axiom audit of the canonical core: [confirm kernel-pure].
-- My kernel-pure modules verified `native_decide`-free and building.
+- Full-corpus `lake build`: the kernel-pure CORE (≈150 modules incl. the whole
+  dichotomy chain) built green; the slow census/exploratory tail (winData22 etc.)
+  compiles but is the native_decide route.
+- **Axiom audit of the canonical core: CONFIRMED kernel-pure** — `[propext,
+  Classical.choice, Quot.sound]` only, no `Lean.ofReduceBool`, no `sorryAx`.
+- My modules (LRCTorusRate, LRCKStratification, LRCLiftFloorRows/Assembly,
+  LRCResiduePinning, LRCWindowMargin13, LRCKernelGate13, LRCLiftRigidityRows)
+  verified native_decide-free and kernel-pure.
+
+## Bottom line
+
+The **conditional theorem is Mathlib-axiom-clean today**: LRC(14) ⟸ {LRC(≤13)}
++ {TightLooseDichotomy} + {CornerLonely}, sorry-free, `[propext, Classical.choice,
+Quot.sound]` only.  What stands between this and an actual Mathlib PR is (1)
+pruning to this one surface + its native_decide-free chain (dropping the
+winData22/exploratory route), and (2) a mechanical style/naming/docstring pass on
+that subset.  The two remaining hypotheses are genuinely open (real-analytic), so
+the submission is a legitimate CONDITIONAL result — not the full theorem.
