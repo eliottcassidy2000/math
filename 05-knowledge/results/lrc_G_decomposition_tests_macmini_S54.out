@@ -1,0 +1,8 @@
+(t1) RUNG LAW: M({c..c+11}) == c/(12c+1)?
+  c=1: M = 1/13 vs 1/13 MATCH
+  c=2: M = 2/15 vs 2/25 MISMATCH
+  c=3: M = 3/17 vs 3/37 MISMATCH
+  c=4: M = 4/19 vs 4/49 MISMATCH
+  c=5: M = 5/21 vs 5/61 MISMATCH
+(t2) 14/169 - 2/25 = 12/4225
+(t4) 2-LIFT minima, k <= 3:
