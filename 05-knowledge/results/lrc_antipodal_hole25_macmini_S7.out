@@ -1,0 +1,7 @@
+(1) LINK-1 check: covering primitive 12-sets missing a UNIT pair mod 25 => M >= 2/25
+  !! MISS-UNIT-PAIR (1, 24) but analytic witness margin 0/25 < 2/25: W=[4, 8, 9, 11, 14, 16, 19, 23, 32, 40, 48, 50] (residue-0? True)
+  !! MISS-UNIT-PAIR (1, 24) but analytic witness margin 0/25 < 2/25: W=[6, 10, 12, 15, 18, 23, 25, 27, 36, 44, 46, 56] (residue-0? True)
+  !! MISS-UNIT-PAIR (3, 22) but analytic witness margin 0/25 < 2/25: W=[4, 26, 30, 36, 44, 48, 49, 50, 51, 52, 55, 56] (residue-0? True)
+  checked 428 unit-pair-missers; M < 2/25 violations: 154 (0 => Link-1 holds: missing a unit pair => safe)
+
+(2) THE NON-UNIT-PAIR HOLE: hit all 10 unit pairs, miss a non-unit pair
