@@ -1,0 +1,16 @@
+CLAIM: the witness denom q (of M=c/q) DIVIDES some (v_i+v_j), (v_i-v_j), or 2*v_i.
+(piecewise-linear max sits at a breakpoint: a half-integer point 2*v_i, or a crossing v_i+-v_j)
+
+AP {1..12}                 M=   1/13 q=  13: q|sum/diff/2v? YES   e.g. ['1+12', '2+11', '3+10', '4+9']
+doubled-apex {1..11,24}    M=   2/25 q=  25: q|sum/diff/2v? YES   e.g. ['1+24']
+block {..17,19}            M=   2/25 q=  25: q|sum/diff/2v? YES   e.g. ['8+17']
+deep well {1..11,168}      M= 14/169 q= 169: q|sum/diff/2v? YES   e.g. ['1+168']
+{1..11,23}                 M=   1/12 q=  12: q|sum/diff/2v? YES   e.g. ['2*6', '1+11', '1+23', '2+10']
+{2..13}                    M=   2/15 q=  15: q|sum/diff/2v? YES   e.g. ['2+13', '3+12', '4+11', '5+10']
+{1..10,12,25}              M=   1/11 q=  11: q|sum/diff/2v? YES   e.g. ['1+10', '1-12', '2+9', '3+8']
+
+=> the witness denominator is a divisor of a pairwise sum/difference (or 2v_i).
+   For a GAP member (q>=38) this forces a pair with |v_i+-v_j| a multiple of q>=38 --
+   near-AP small speeds can't reach it, so a LIFTED (large) runner is required, which is
+   exactly where the covering-multiplicative structure constrains q (odd/even parity of the
+   sum, 13|q via a pair summing to a multiple of 13, etc.).
