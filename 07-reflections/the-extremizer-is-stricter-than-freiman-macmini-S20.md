@@ -92,3 +92,24 @@ the additive-combinatorics anchor of the frame.
 
 -> HYP-4482, HYP-4446/opus-S112 (theta-sum), HYP-4472/S19 (compactness),
 HYP-4452/S17 (safe), residue_pinning_13, HYP-4396/opus-S107 (sum-product).
+
+## S21 addendum: the equality-case core formalized, and the circularity honestly flagged
+
+**Formalized (green, kernel-pure).** `LRCMinimalSumset.lean` now has both:
+- `two_mul_card_sub_one_le`: `|S+S| ≥ 2|S|−1` (the bound);
+- `sumset_eq_translates`: at equality `|S+S| = 2|S|−1`, `S+S = (min S + S) ∪ (S + max S)`
+  EXACTLY — the structural core of "minimal doubling ⟹ AP" (step 2).
+
+The full AP conclusion (translate structure ⟹ arithmetic progression) is the
+classical remainder — a fiddly ordering induction, left for a dedicated pass.
+
+**The circularity, flagged honestly.** The (U)-factoring
+`safe=0 ⟹ [step1] min-doubling ⟹ [step2] AP ⟹ [step3] dilated AP` is
+STRUCTURALLY clean but NOT an independent route to (U): step 1
+(`safe=0 ⟹ min-doubling`) is TRUE (all safe=0 families are dilated APs, which
+are min-doubling `|S+S|=23`, verified c=1..7) but its ONLY known proof routes
+through (U) itself (`safe=0 ⟹ dilated AP ⟹ min-doubling`). An INDEPENDENT proof
+of step 1 — "full theta-sum cancellation at 2/25 forces minimal doubling",
+without assuming (U) — is the genuinely open additive-combinatorics target the
+factoring isolates. So the value of the factoring is diagnostic (it names the
+one open link cleanly) + the formalized classical steps (2 green), not a closure.

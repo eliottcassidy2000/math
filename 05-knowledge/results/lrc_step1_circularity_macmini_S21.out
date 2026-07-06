@@ -1,0 +1,12 @@
+  dilated AP c=1: safe=0.0000 |S+S|(primitivized)=23
+  dilated AP c=2: safe=0.0000 |S+S|(primitivized)=23
+  dilated AP c=3: safe=0.0000 |S+S|(primitivized)=23
+  dilated AP c=4: safe=0.0000 |S+S|(primitivized)=23
+  dilated AP c=5: safe=0.0000 |S+S|(primitivized)=23
+  dilated AP c=6: safe=0.0000 |S+S|(primitivized)=23
+  dilated AP c=7: safe=0.0000 |S+S|(primitivized)=23
+  => all safe=0 families (dilated APs) ARE min-doubling (|S+S|=23);
+     step 1 (safe=0 => min-doubling) is TRUE but its only known proof
+     routes through (U) [safe=0 => dilated AP => min-doubling] = CIRCULAR.
+     An INDEPENDENT proof of step 1 (theta-cancellation => min-doubling,
+     not via (U)) is the genuinely open additive-combinatorics target.
