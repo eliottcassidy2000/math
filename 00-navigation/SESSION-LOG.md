@@ -1,3 +1,14 @@
+## mac-mini-2026-07-06-S3 -- THE rho = 3/38 REALIZATION FRAME: witness-window idea self-caught DEAD (the pair PINS t0); the DENSITY WALL (>= 7 clustered runners forced, verified 0/2000); ANCHORED ABSOLUTE BOUNDS (37*(19/8)^(c-2)); the |S| >= 7 quotient census (44,928 templates, uniform C(31,0..3) structure) (HYP-4252)
+
+Prompt (owner): work the remaining tasks yourself.
+
+BOTH remaining k=1 items executed:
+ (a) THE >60 REALIZATION FRAME -- with a self-caught dead end first: my planned descent-window AT the witness fails structurally (the binding pair pins t0: opposite drift signs break one binder in every neighborhood -- the equioscillation is the local consistency, not a lever).  THE FRAME THAT WORKS: global covering impossibility -- descent dodges spread tops (ratio 19/8 at rho = 3/38, verified 0/500), the DENSITY WALL forces >= 7 runners in one covering cluster (6c/38 < 1 for c <= 6, verified 0/2000), and a pair-containing cluster is ratio-chained to ABSOLUTE bounds 37*(19/8)^(c-2) ~ 2.8e3..3.7e4.  The pair-in-cluster case is FINITE (harness-ready); pair-outside = the two-cluster interaction (opus's leg, 3/38 constants tabled).
+ (b) THE |S| >= 7 QUOTIENT CENSUS: 44,928 templates (<= 5-element mod-38 configs with both-odd pair + level-3-binder), UNIFORM across pairs (31 extra-pool residues each; C(31,0..3) counts); the level-4 demands on the >= 7 non-multiples enumerated.
+LEAN READINESS flagged: teethR at 3/38 (parametric, free), the fee-mean ceiling reused as the cluster-size lower bound, the ratio-chain product -- three small lemmas on existing machinery.
+FILES: lrc_rho38_descent_macmini_S3.py (+.out), drafts/rho38-realization-frame-macmini-S3.md; HYP-4252 (+INDEX).  No canon overridden.
+NEXT: (a) the pair-in-cluster finite census (heights to ~3e3-4e4 per c -- C harness, one session); (b) the three Lean lemmas; (c) the two-cluster case with opus.
+
 ## mac-mini-2026-07-06-S3 -- THE UNIFORM CELL LEMMA PROVED + LEAN GREEN (6 kernel-pure theorems: the stratification apparatus parametric over EVERY Farey cell) + BINDER UNITS & per-cell witness determinism (new) + the 5-cell anchored probe (8,079 families, zero in-gap) (HYP-4252)
 
 Prompt (owner): work the binding-pair route creatively; formalize if finished; pull frequently and extend incoming ideas.
