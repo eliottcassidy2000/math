@@ -1,0 +1,26 @@
+=== Q-census bound validation (MISTAKE-110 mechanism at tractable scale) ===
+  B= 6, c=lcm(1..6)=60:
+    family {c,2c,...,11c,12c+1}: min clearing modulus q = 37 (margin 3/37 = 0.0811) at a=13
+    all q <= 6 FAIL to clear (composite runners k*c == 0 mod q): True
+    => M(F) = 0.0811 >= 2/25 (ABOVE window, loose family); census must reach q = 37 > 6
+  B= 8, c=lcm(1..8)=840:
+    family {c,2c,...,11c,12c+1}: min clearing modulus q = 37 (margin 3/37 = 0.0811) at a=7
+    all q <= 8 FAIL to clear (composite runners k*c == 0 mod q): True
+    => M(F) = 0.0811 >= 2/25 (ABOVE window, loose family); census must reach q = 37 > 8
+  B=10, c=lcm(1..10)=2520:
+    family {c,2c,...,11c,12c+1}: min clearing modulus q = 37 (margin 3/37 = 0.0811) at a=10
+    all q <= 10 FAIL to clear (composite runners k*c == 0 mod q): True
+    => M(F) = 0.0811 >= 2/25 (ABOVE window, loose family); census must reach q = 37 > 10
+  B=12, c=lcm(1..12)=27720:
+    family {c,2c,...,11c,12c+1}: min clearing modulus q = 37 (margin 3/37 = 0.0811) at a=11
+    all q <= 12 FAIL to clear (composite runners k*c == 0 mod q): True
+    => M(F) = 0.0811 >= 2/25 (ABOVE window, loose family); census must reach q = 37 > 12
+
+VERDICT:
+  The family CLEARS (M >= 2/25, ABOVE the window) => NOT a gap member =>
+  HYP-4302's 'no gap member' STANDS (my MISTAKE-110 family is loose, not gap).
+  BUT its witness is at q = (first prime > B), NOT q <= B => a census capped
+  at q <= 50 CANNOT certify families whose composite runners divide lcm(1..50);
+  the census q-bound must exceed 50 (smallest safe: 53) OR use ray-transport
+  to a bounded residue representative (opus HYP-4266's mechanism -- which is
+  exactly what makes the bound ray-LOCAL, not a uniform q <= 50).
