@@ -1,0 +1,6 @@
+=== n=13 generalized-AP census, n=7-SHAPE analogs (base AP length L, spacing d, + end/mid shifts) ===
+  censused 143654 n=7-shape generalized APs; IN GAP: 0
+  nearest above 2/25: 1/12=0.08333
+  window 1/325=0.00308; general law: min jump 1/(k(k+1)) = (2+1/k) x window; at k=12 = 2.083x
+  n=7: 2+1/6=2.167x, but window 1/91 WIDE enough for the clever generalized AP (M-rise 2/231<1/91)
+  => the residual is: can an n=13 generalized AP achieve M-rise < 1/325? census says NO

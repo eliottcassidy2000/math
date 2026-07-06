@@ -939,6 +939,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S32 -- STRUCTURE x WIDTH quantified: n=13 window 1/325 admits NO generalized-AP deficit (~149k census, 0 in gap); converges with mac-mini HYP-4512 Selberg-width ~2k^2 = my window scale (HYP-4477)
+
+Prompt (owner): work the sole open piece collaboratively.
+
+Collaborated on opus's structure x width residual (HYP-4456: Freiman n-n-s; the gap member is a generalized AP; window width decides survival).
+
+THE CENSUS: ~149000 n=13 generalized APs (base AP length L in [4,12], spacing d in [2,9], + near-base defects) => 0 in the open gap (1/13,2/25). QUANTITATIVE LAW: minimal single-defect jump 1/(k(k+1)) = (2+1/k) x window w(k)=1/((k+1)(2k+1)) -- single defects always ~2x overshoot. Multi-defect generalized APs can rise less (n=7 {1,5,6,11,16,17} fits w(6)=1/91); residual = can an n=13 one beat w(12)=1/325? Census: NO.
+
+n-SPECIFICITY: window ~1/(2k^2) shrinks faster than the rise spectrum; crossover at the PRIME 13 (residue-pinning forces genuine AP, killing small-rise escapes that keep n=7,8 nonempty).
+
+CONVERGENCE mac-mini HYP-4512 (same session): theta-sum TAIL-dominated (CORRECTS my S31 'harmonic=leading order'; harmonic route n-specific, n=7 tiler 1 harmonic); Beurling-Selberg majorant width N ~ 2k^2 == 1/w(k) = MY WINDOW SCALE. Selberg width = window inverse = 2k^2. My window (1/325) and their Selberg-width (2k^2) = same scale, two sides.
+
+RESIDUAL (sharp): a metric-alignment inequality (generalized AP M-rise >= c(s)/D > w(12)) = the Selberg-majorant-width-2k^2 tail bound (mac-mini) = the Riesz floor (HYP-4452). HONEST: census decisive over natural families, not a proof.
+
+FILES: reflection structure-times-width-...-kps-S32.md; lrc_generalized_ap_window_kps_S32.py (+.out,+S32b.out); HYP-4477. No Lean (census/frame). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S31 -- A ROUTE for the open (U) link [theta => min-doubling]: the HARMONIC relations are the LEADING ORDER of opus's safe theta-sum; the two reduced pieces meet at vanishing 2nd differences (S30) (HYP-4467)
 
 Prompt (owner): work the open analytic residual, push/pull frequently.

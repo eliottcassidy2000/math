@@ -1,0 +1,19 @@
+gap = (1/13, 2/25); window width = 1/325 = 1/325 = 0.00308
+(n=7 window 1/((7)(13)) = 1/91 = 0.01099; n=13 window ~3.6x narrower)
+
+=== (0) verify the n=7 generalized-AP gap member {1,5,6,11,16,17} ===
+  M([1, 5, 6, 11, 16, 17]) = 5/33 = 0.15152; in (1/7,2/13)=(0.1429,0.1538)? True
+
+=== (1) n=13 generalized APs: base AP d + end perturbations; any in the gap (1/13,2/25)? ===
+  censused 5407 generalized-AP families (base d=1..7, up to 2 end perturbations)
+  IN THE GAP (1/13,2/25): 0
+  nearest-to-1/13 (from above) M = 1/12 = 0.08333  (jump 0.00641 vs window 0.00308)
+
+=== (2) M-RISE of minimal-deficit AP {1..12}+one perturbation vs the window 1/325 ===
+  smallest M-rises of AP+one-perturbation (all must exceed window 0.00308 to be gap-empty):
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]: M=0.08333, rise=0.00641 > window (ejected)
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14]: M=0.08333, rise=0.00641 > window (ejected)
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 12]: M=0.09091, rise=0.01399 > window (ejected)
+
+VERDICT: if 0 in-gap AND every minimal-deficit M-rise > 1/325 => the n=13 window
+is too narrow for ANY generalized-AP deficit -- opus's structure x width, at k=12.
