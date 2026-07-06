@@ -1,3 +1,15 @@
+## opus-2026-07-06-S103 -- CREATIVE toward the crux: THE AP-11 PROTECTION LEMMA formalized (the inductive core of (C)/hdich); the AP is self-protecting at t=1/12, only 12|v breaks it (HYP-4356)
+
+Prompt: work creatively toward the crux.
+
+THE CREATIVE INSIGHT + FORMALIZATION (LRCAPProtection.lean GREEN, standard trio, corpus 8698): the crux (C)/hdich reduces (S100) to the AP-completion step -- adding a 12th runner to the dilated AP {1..11} gives tight (v=12) or loose, never in-window. The mechanism is beautifully simple: at t=1/12 the AP {1..11} sits at margin exactly 1/12, and ANY integer speed v with 12 nmid v ALSO sits at >= 1/12 (dist(v/12,Z)=|v-12m|/12 >= 1/12). So {1..11,v} is LONELY at 1/12 (margin 1/12 > 2/25) => LOOSE for every 12-nmid-v. ONLY 12|v (v=12w) can land on 0 at t=1/12 and break the protection -- and that is exactly the l=1 lift stratum (LRCLiftRigidityRows, already GREEN: w=1 tight 1/13, else M >= 2/25). So the AP-completion step is settled in two clean cases.
+
+int_far_of_not_dvd (12 nmid s => dist(s/12) >= 1/12, |s-12m| >= 1 argument) + ap11_loose_of_not_dvd ({1..11,v} lonely at 1/12 for 12-nmid-v; the twelve listed speeds each 12-nmid by decide/hyp). Both GREEN.
+
+WHY IT MATTERS: this is the 'add-a-runner' heart of (C)/hdich's inductive AP tower (kps-S13: 11-subfamily tight -- forced dilated AP by LRC(12) rigidity -- => complete-the-AP or loose). It exposes the crux's arithmetic cleanly: the AP's loneliness lives at ONE point (1/12), and divisibility by 12 is the exact knife. Generalizes verbatim to every k (protecting denominator k), = the universal AP-completion behind the Farey ladder j/(kj+1) (S100). This is the free-action/divisibility meta-mechanism (S100b) in miniature.
+
+Files: LRCAPProtection.lean (green); reflection the-ap-is-self-protecting-and-only-a-multiple-of-12-breaks-it; ap_completion out; HYP-4356. The crux endgame now has: (A)=>(C) fully formal-reduced (S99/S101/S102), and (C)'s AP-completion core formal (this) -- the remaining (C) piece is the descent to a tight 11-subfamily.
+
 ## opus-2026-07-06-S102 -- FORMALIZED THE RIGIDITY of the (A)=>(C) reduction: LRCRankRigidity.lean GREEN (2x2 rank-drop heart + pigeonhole wrapper); the reduction is now formal modulo (C)=hdich (HYP-4346)
 
 Prompt: work on closing the remaining crux and formalizing the proof.
