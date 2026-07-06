@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-{}
-=======
 {
-  "session_start": "2026-07-06T07:25:18.462345",
-  "start_commit": "b6854d79cd2b1703b1cd22fb3f0f278cf2e277fc",
+  "session_start": "2026-07-06T07:27:07.378627",
+  "start_commit": "cf2d749fb932120cd55fad238f11e77e2186e4d9",
   "pushed": false,
   "message_sent": false
 }
->>>>>>> 7c0ddef37 (mac-mini-2026-07-06-S2: checkpoint - claim HYP-4242 (k=1 anchored kill: binder parity 18->9, witness determinism, anchored sweep, Lean))
