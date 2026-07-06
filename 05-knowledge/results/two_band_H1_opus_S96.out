@@ -1,0 +1,23 @@
+core [1, 2, 3, 4, 5] good measure at 1/14+eps: 0.4909 in 10 components; largest 0.1119
+S=    1: deserts(long) n=0 total=0.0000; largest clear component = 0.11189; witness-at-midpoint margin>1/14: False
+S=    7: deserts(long) n=0 total=0.0000; largest clear component = 0.11189; witness-at-midpoint margin>1/14: False
+S=   20: deserts(long) n=0 total=0.0000; largest clear component = 0.11189; witness-at-midpoint margin>1/14: False
+S=  143: deserts(long) n=0 total=0.0000; largest clear component = 0.11189; witness-at-midpoint margin>1/14: False
+S= 1001: deserts(long) n=0 total=0.0000; largest clear component = 0.11189; witness-at-midpoint margin>1/14: False
+phi(P) = 1632811/5578650 ~ 0.2927; free intervals per period K = 110; largest free interval 0.01050
+largest core component J = (0.0734, 0.1853), |J| = 0.1119
+uniformity threshold S0 = ceil(2K/(phi*|J|)) = 6719
+S=     1: clear measure in J = 0.01915 (predicted >= -219.96725); largest clear sub-interval 0.004444; witness margin > 1/14: True
+S=     3: clear measure in J = 0.03183 (predicted >= -73.30059); largest clear sub-interval 0.003180; witness margin > 1/14: True
+S=     7: clear measure in J = 0.03270 (predicted >= -31.39582); largest clear sub-interval 0.001500; witness margin > 1/14: True
+S=    20: clear measure in J = 0.03270 (predicted >= -10.96725); largest clear sub-interval 0.000525; witness margin > 1/14: True
+S=   143: clear measure in J = 0.03275 (predicted >= -1.50571); largest clear sub-interval 0.000073; witness margin > 1/14: True
+S=  1001: clear measure in J = 0.03275 (predicted >= -0.18703); largest clear sub-interval 0.000010; witness margin > 1/14: True
+S= 30030: clear measure in J = 0.03275 (predicted >= 0.02542); largest clear sub-interval 0.000000; witness margin > 1/14: True
+random survivor-shaped 7-patterns in [19,70]: 300 tested
+  phi range: [0.2996, 0.4020]; min at [22, 31, 45, 46, 57, 68, 70]
+  phi([19, 23, 29, 31, 37, 41, 43]) = 0.3330
+  phi([20, 30, 42, 56, 63, 66, 70]) = 0.3458
+  phi([19, 25, 32, 38, 50, 57, 66]) = 0.3831
+  phi([21, 28, 35, 42, 56, 63, 70]) = 0.3782
+  phi([21, 22, 23, 24, 25, 26, 27]) = 0.2926

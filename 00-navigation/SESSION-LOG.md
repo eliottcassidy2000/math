@@ -15,6 +15,19 @@ CONSEQUENCE: every cell of (G) now has the same finite anchor structure: phi(q)/
 FILES: drafts/uniform-cell-lemma-macmini-S3.md; lrc_uniform_cell_lemma_macmini_S3.py (+ .out, partA_fixed.out); LRCUniformCell.lean (registered); HYP-4252 (+INDEX).  No canon overridden.
 
 NEXT: (a) the c-tail mechanism (the one unbounded dimension of (G) -- stability at both Farey ends? binding-pair sum growth?); (b) the |S| >= 7 residual with the unit-pair sharpening; (c) the sibling's k=1 census lands -> compose with this for the full 3/38 verdict; (d) wire lift_floor_beta_ladder into the dichotomy consumer (S2's spec'd one-liner, still open).
+## opus-2026-07-06-S96 -- THE TWO-BAND THEOREM: the 1d-crux witness mechanism (scale-invariant free fraction + period counting => height-uniform witnesses); the floating 7-cluster dead at ALL scales, elementarily (HYP-4246)
+
+Prompt: remaining tasks, math + hypothesis testing first, then formalization; pull during builds and reroute.
+
+THE ROUTE: the finish list said "(a) the 1d crux -- ... or generalize opus-S81's descent off the lift stratum". Recognized the floating 7-cluster ({20,21,24,25,45,46,66}*S, mac-mini's pole-necessity family) as the ALIGNMENT SLIVER AT n=14 -- and the mechanism is neither descent nor fees but the FREE FRACTION: phi(P) = 1 - |teeth union| is dilation-INVARIANT, so free(S*P) tiles at period 1/S, and a fixed core component J catches >= phi|J| - 2phi/S by PERIOD COUNTING. Every free point in J is a strict 1/14-witness. Uniform for S > 2/|J| (18 here; worst cores ~2184); below: inside verified census ranges.
+
+TESTED (two_band_H1_opus_S96.out): clear measure in J converges to phi|J| = 0.03275 EXACTLY; witnesses verified at S = 1, 3, 7, 20, 143, 1001, 30030. (First-pass bug caught by testing: midpoints of desert-cleared components are NOT witnesses -- short teeth matter; the free-set intersection is the right object, and measuring it revealed the phi-mechanism.)
+
+ROBUSTNESS + THE ECHO: |P| = 7 at band 1/14 sits EXACTLY on the fee-mean ceiling (density sum 1): free measure is pure overlap credit -- the ceiling (worst-case placement) and the free fraction (measure with overlaps) are two sides of one coin; the crux mechanism lives ON the boundary. Pairwise overlaps gcd-independent ((2rho)^2, dilation); coprime patterns phi = (6/7)^7 exactly; 300-pattern scan: [0.2996, 0.402], consecutive minimizes -- desert extremality a third time.
+
+OPEN LEMMA (the one gap, Newman-shaped): distinct-frequency interval-combs never tile (phi > 0 unconditionally) -- disjoint-covering-systems rigidity analogy. Until then: per-shape one-line check.
+
+Draft: two-band-theorem-opus-S96.md. Complements (no collision) the kps/mac-mini template lane: Q0 = single scale, two-band = between scales; together = the periodicity reduction with the witness side proved-modulo-phi.
 
 ## opus-2026-07-06-S95 -- MECHANICAL LEDGER CLEARED: the |B|=5 production table (792/792, zero failures) + LRCClearRowsB5 GREEN (two lemmas cover the ten worst bases) + dense T-sweep + the strict-vs-2/25 alignment note (HYP-4236)
 
