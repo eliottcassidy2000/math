@@ -1,0 +1,23 @@
+Residues mod 13 of block lift: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] (full system => IS a lift)
+M(block {4,6}->{17,19}) = 2/25 = 0.080000
+M(deep well {1..11,168}) = 14/169 = 0.082840
+2/25 = 0.080000 < 14/169 = 0.082840: block < deep well: True
+=> kps-S15 domination 'M(lift) >= 14/169' REFUTED: True
+
+height-1 double lifts (all C(12,2) pairs, k=1 both): exact M, sorted bottom 12:
+  M =     2/25 at C=(4, 6) << BELOW 14/169
+  M =     2/23 at C=(2, 6)
+  M =     1/11 at C=(11, 12)
+  M =     2/21 at C=(5, 6)
+  M =     1/10 at C=(4, 10)
+  M =     1/10 at C=(6, 10)
+  M =     1/10 at C=(10, 11)
+  M =     1/10 at C=(10, 12)
+  M =     2/19 at C=(1, 4)
+  M =     2/19 at C=(2, 5)
+  M =     2/19 at C=(2, 10)
+  M =     2/19 at C=(2, 11)
+
+pairs below 14/169: 1; exactly at 2/25: 1: [(4, 6)]
+CONCLUSION: the lift floor is 2/25 (the dichotomy's own beta -- which is ALL the
+assembly needs); the deep well 14/169 is the SINGLE-LEG floor only (THM-621 intact).
