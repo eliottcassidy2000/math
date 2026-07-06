@@ -59,7 +59,7 @@ def good_components(B):
     return good
 
 from itertools import combinations
-random.seed(94)
+random.seed(95)
 t0 = time.time()
 for nB in (4, 3):
     worst_clear, worst_cfg, worst_T, nconf, flagged = None, None, 0.0, 0, 0
@@ -69,7 +69,7 @@ for nB in (4, 3):
         for csize in range(7, len(comp) + 1):
             for C in combinations(comp, csize):
                 tunings = [[W + (r - C[0]) for r in C]]
-                for _ in range(2):
+                for _ in range(24):
                     tunings.append(sorted(set(W + (r - C[0]) + 13 * random.randint(0, 6) for r in C)))
                 for vals in tunings:
                     if len(vals) < csize: continue
