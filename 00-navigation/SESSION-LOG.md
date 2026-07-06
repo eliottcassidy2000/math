@@ -1,3 +1,18 @@
+## mac-mini-2026-07-06-S18 -- EQUICONTINUITY is the REGULARITY AXIS of the equi-family; its failure IS the floor, dual to equidistribution (HYP-4462)
+
+Prompt (owner): see how equicontinuity relates to prior equidecomposability/equinumerosity/equioscillation work; integrate + reframe creatively.
+
+SURVEY: equicontinuity is the LEAST-explored equi-notion (4 repo mentions vs equidistribution 374, equioscillation 114, equinumerosity 76, equidecomposability 62) -- the gap the owner pointed at.
+
+THE AP IS EQUI-EVERYTHING (one point, five symmetries): (equiosc) f_AP touches max M=1/n at EXACTLY phi(n) points = the UNITS of Z/n -- VERIFIED 12=phi(13) at n=13, 6=phi(7) at n=7; every other config touches at only 2-4 = the unique Chebyshev minimax extremal (kps-S255); (equidistrib) roots of unity, min discrepancy (opus HYP-4074); (equidecomp) arcs TILE the circle (S599); (equinum) max relation lattice (opus HYP-4396); complement symmetry v<->n-v.  All STRUCTURAL + UNIVERSAL.  Codex-S257 forgetting triad: equidistribution SUBSET equinumerosity SUBSET equidecomposability.
+
+EQUICONTINUITY = the REGULARITY meta-axis (not another equivalence): M is NOT equicontinuous (kps-S26; modulus L(d)~height/13, oscillates at freq ~height near the tight locus) => compactness bypass fails, height threshold non-uniform.  THIS IS the analytic form of my S17 'floor is QUANTITATIVE not structural': the equi-invariants are equicontinuous (coarse) => NECESSARY-NOT-SUFFICIENT; the floor lives in the fine height-oscillation they forget; the n-specificity is the signature.
+
+CREATIVE REFRAME (duality): non-equicontinuity of M (pointwise jagged) <=> EQUIDISTRIBUTION of the far runner (averaged smooth: INT(1-g(v_far t))->1-2beta) -- two faces of one fast oscillation.  The AVERAGE safe(S,beta) is smooth+AP-rigid (my decorrelation HYP-4402 = the averaging side, closed multi-scale); the MAX M is jagged, permits the gap spike.  Floor = spike-vs-average tension, met at hole-width 1/(n(2n-1))=1/height (the leave-one-out S17 alignment = the equidecomposition face; tiling tolerance 1/325 finer than any non-AP arc-lattice aligns).
+
+DELIVERABLES: reflection equicontinuity-is-the-regularity-axis-...-macmini-S18; HYP-4462; script lrc_equioscillation_count_macmini_S18 (+out).  Pulled several times; integrated kps-S26/S255, codex-S257, S599/S617.  No canon overridden.
+
+NEXT: the floor as the 'non-equicontinuity budget' (max M-spike into the gap that survives the equidistributed average) = 0 at n=13, positive at n=7; the leave-one-out tiling at hole-width 1/325.
 ## mac-mini-2026-07-06-S17 -- THE DENSITY FLOOR DOES NOT DEGRADE WITH HEIGHT: safe(2/25)=0 ONLY at the AP, min safe ~0.002-0.008 stable across height, minimizers = nearest Farey neighbors; the INDIRECT reduction -- safe >= c0 <= the THIRD GAP (2/25,1/12) empty = the next Farey rung (HYP-4452)
 
 Prompt (owner): work the one density floor creatively; indirect angles; many lenses at once; leverage small pieces from each.
