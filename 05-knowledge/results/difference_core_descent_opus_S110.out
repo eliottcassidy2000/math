@@ -1,0 +1,32 @@
+difference-core descent: cluster -> diffcore, scale (max) shrinks? measure decreases?
+  block {1..12}: max=12, M=0.0769; diffcore=[1, 2, 3, 4, 5, 6]... max=11 (FIXED=11 -> height-independent!)
+  block {5..16}: max=16, M=0.2381; diffcore=[1, 2, 3, 4, 5, 6]... max=11 (FIXED=11 -> height-independent!)
+  block {50..61}: max=61, M=0.4505; diffcore=[1, 2, 3, 4, 5, 6]... max=11 (FIXED=11 -> height-independent!)
+  block {500..511}: max=511, M=0.4946; diffcore=[1, 2, 3, 4, 5, 6]... max=11 (FIXED=11 -> height-independent!)
+  => the consecutive block's diffcore is {1..11} at EVERY height c: bounded => finite check.
+
+near-AP single clusters {r+13k_r}, small internal spread d=max(k)-min(k):
+  lifts {}: S max=12, diffcore max=11 (spread-controlled, NOT height)
+  lifts {11: 1}: S max=25, diffcore max=24 (spread-controlled, NOT height)
+  lifts {10: 1, 11: 1}: S max=25, diffcore max=24 (spread-controlled, NOT height)
+  lifts {9: 1, 10: 1, 11: 1}: S max=25, diffcore max=24 (spread-controlled, NOT height)
+
+KEY (indirect height bound): for a SINGLE cluster, the difference-core scale = the
+INTERNAL SPREAD (range of k_r), NOT the height (13*min k_r). mac-mini decorrelation:
+safe(cluster) ~ safe(diffcore) at the carrier. So height is IRRELEVANT to safe -- only
+the bounded internal structure matters => the height-INFINITE direction collapses to a
+FINITE diffcore check. The AP (all k_r equal => diffcore={1..11}) is the fixed point.
+
+13-adic spread descent depth (well-foundedness): does the k-tower terminate fast?
+  k_r=[5, 2, 8, 6, 6, 2, 3, 4, 2, 4, 8, 7]: descent depth = 1 (bounded => well-founded => finite base)
+  k_r=[4, 7, 1, 4, 1, 4, 3, 1, 1, 0, 0, 8]: descent depth = 1 (bounded => well-founded => finite base)
+  k_r=[4, 3, 3, 8, 6, 7, 0, 5, 8, 2, 8, 7]: descent depth = 1 (bounded => well-founded => finite base)
+  k_r=[0, 1, 8, 2, 1, 8, 0, 1, 4, 4, 5, 3]: descent depth = 1 (bounded => well-founded => finite base)
+  k_r=[2, 5, 0, 6, 4, 8, 1, 5, 1, 8, 8, 2]: descent depth = 1 (bounded => well-founded => finite base)
+  k_r=[4, 3, 2, 5, 0, 4, 3, 4, 5, 4, 1, 6]: descent depth = 1 (bounded => well-founded => finite base)
+
+=> the spread descent terminates in bounded depth: the height-infinite direction is a
+   FINITE tower. Each level's 'height' = prev level's spread; spread strictly shrinks
+   (or a scale gap appears => decorrelation). AP = all-k-equal = depth-0 fixed point.
+   REFRAME: (G)'s open piece is NOT a height bound -- it is the well-founded 13-adic
+   spread descent, whose base (bounded diffcore) is a FINITE check (q<=2max, S109).

@@ -1,0 +1,29 @@
+base AP {1..12}: M = 1/13 (= 1/13 extremal), window (1/13,2/25)
+searching lifts of the AP: add 13 to subsets (single & double lifts), height-bounded...
+single/double-lift covering single-cluster families checked: 17
+GAP-WINDOW HITS (1/13 < M < 2/25): 0
+   => WINDOW EMPTY on this stratum: NO lifted-AP covering single-cluster family lands
+      in (1/13, 2/25). (G) holds on the descent base case (computationally).
+landing distribution: M<=1/13: 0   in-window: 0   M>=2/25(loose): 17
+INTERPRETATION: lifts jump OVER the window (tight AP -> loose), never INTO it.
+This is the discrete Farey-ladder gap: 2/25=mediant(1/13,1/12) has no integer realizer
+between the AP floor and the loose regime -- the window is a FORBIDDEN BAND (S100b).
+
+=== SWEEP 1: lifted-AP, looser gate (ratio<=6, up to +26 lifts) ===
+  checked=176  window-hits=0  (M<=1/13:0  in-window:0  loose:176)
+
+=== SWEEP 2: random covering single-cluster 12-families, height up to 50 ===
+  checked=9842  window-hits=0
+   near/hit: [17, 20, 22, 23, 24, 26, 27, 28, 29, 30, 32, 35] 0.08
+   near/hit: [13, 14, 16, 18, 20, 21, 22, 24, 27, 29, 31, 34] 0.08
+   near/hit: [10, 11, 13, 16, 18, 21, 22, 23, 24, 26, 32, 34] 0.08
+   near/hit: [12, 13, 14, 17, 18, 19, 20, 21, 22, 23, 24, 27] 0.08
+   near/hit: [14, 15, 19, 20, 21, 22, 23, 24, 26, 34, 35, 36] 0.08
+   near/hit: [12, 17, 18, 19, 20, 21, 22, 23, 24, 28, 30, 31] 0.08
+
+=== SWEEP 3: pinned families (residues = permutation of 1..12 mod 13), varied heights ===
+  checked=6493  window-hits=0
+
+TOTAL WINDOW HITS across all sweeps: 0
+If 0: (G) empirically holds across lifted-AP, random-cluster, AND pinned strata --
+strong support that the descent base (bounded-height covering families) is gap-empty.

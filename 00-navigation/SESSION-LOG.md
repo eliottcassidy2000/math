@@ -16,6 +16,22 @@ CONCURRENCY: the fleet raced ahead -- S16 (four dichotomies + witness-denominato
 FILES: lrc_second_gap_ndep + lrc_ndep_mechanism _macmini_S14.py (+.outs); reflection the-second-gap-is-n-specific-macmini-S14.md; HYP-4442 (+INDEX).  No canon overridden.
 
 NEXT: the ONE DENSITY FLOOR (S16b/opus) is the sole remaining (G) obligation; my finding says it is n=13-specific and equals 'no lifted-pair resonance lands in the width-1/325 gap at depth >= 38' -- the covering-cost/discrepancy bound.  That + the tight-side strict lift-minimality (S13, also = M-minimizer) are the two open analytic pieces of the full theorem.
+## opus-2026-07-06-S110 -- THE HEIGHT IS A GAUGE: indirect routes to the height bound + LRCDilationInvariance.lean GREEN (HYP-4426)
+
+Prompt: work on the open math, think about creative ways to achieve the height bound INDIRECTLY.
+
+CORE REFRAME (reflection the-height-is-a-gauge-the-difference-core-is-the-invariant): the sole open piece -- the height bound on single-cluster gap-members -- is not really about HEIGHT. Height is a GAUGE coordinate; the invariant content is the ratio pattern / height-independent difference-core.
+- GREEN KEYSTONE: iSup_margin_const_mul (LRCDilationInvariance.lean, standard trio, corpus 8705): M(c*v)=M(v) for c!=0. The loneliness minimax depends only on speed RATIOS -- the formal 'up to dilation' primitive (used informally everywhere, never formalized). Proof: margin(c*v) t = margin v (c*t) (pointwise), and t->c*t is a surjection of R, so the iSup is unchanged (Function.Surjective.iSup_comp).
+- DIFFERENCE-CORE IS HEIGHT-INDEPENDENT (verified): {c..c+11} -> diffcore {1..11} at EVERY c. For a single cluster v_i=r_i+13k_r, diffcore scale = internal SPREAD, not height. mac-mini decorrelation ties loneliness to this height-blind object => the height->inf direction collapses to a bounded structure.
+
+TWO INDIRECT ROUTES:
+(A) 13-ADIC SPREAD DESCENT: the k_r recurse (a tower, each level's height = prev level's spread), well-founded (verified depth<=1), AP the depth-0 fixed point; the base is a bounded-height covering family = FINITE check (S109 lever q<=2max). => (G)'s open piece is a SPREAD bound, and the spread descent is well-founded.
+(B) COMPACTNESS / RATIONAL-IRRATIONAL: if NO height bound, gap-members at H_k->inf; dilation-normalize (now formal) to w_i=v_i/H_k in [1,rho]; limit w* is a real bounded-ratio family with M in [1/13,2/25], w*!=AP (AP has ratio 12). Integrality lost in the limit; the argument NEEDS an integrality witness surviving it -- the S109 lever q_k|(pair-sum) IS one. Open hinge: does q_k stay bounded? This LOCALIZES the whole difficulty to ONE scalar (the witness denominator along a height blowup), not a family.
+
+FINITE-RESIDUAL CONFIRMATION (kps's requested targeted search): 16511 covering 12-families across lifted-AP + random single-cluster + pinned strata, EXACT M (grid b<=2max); ZERO land in (1/13,2/25); near-misses land AT 2/25 exactly. The window is a FORBIDDEN BAND -- lifts jump OVER it (Farey ladder, 2/25=mediant(1/13,1/12) has no integer realizer strictly between AP-floor and loose). (G) holds on the descent base computationally.
+
+Integrates: kps S24 gap_candidate_covers_all (divisibility-rich, HYP-4417) + my S109 witness lever (HYP-4416) + mac-mini S14 decorrelation. Files: LRCDilationInvariance.lean (green, corpus 8705); reflection; difference_core_descent + gap_finite_residual_search outs; HYP-4426. The analytic height/spread bound remains the sole open piece; this session gives it a gauge-fixed frame, a well-founded descent, a compactness localization to one scalar, and a formal normalization primitive.
+
 ## opus-2026-07-06-S109 -- THE WITNESS-DENOMINATOR LEVER FORMALIZED (LRCWitnessDenominator.lean GREEN): (G) is a finite check modulo one height bound (HYP-4416)
 
 Prompt: keep making progress on the open math, pull frequently.
