@@ -1,3 +1,9 @@
+
 ==============================================================================
-PART A2: hunting large-q* 2/25-attainers (the census bound's failure mode)
+PART B: does distinct-freq {1..L} cover the circle at radius 2/25? (EXACT)
 ==============================================================================
+  L=7 freqs [1, 2, 3, 4, 5, 6, 7]: no cover found in 3000 rational phases
+  L=8 freqs [1, 2, 3, 4, 5, 6, 7, 8]: no cover found in 3000 rational phases
+  L=9 freqs [1, 2, 3, 4, 5, 6, 7, 8, 9]: no cover found in 3000 rational phases
+  L=10 freqs [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]: no cover found in 3000 rational phases
+  L=11 freqs [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]: no cover found in 3000 rational phases

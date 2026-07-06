@@ -63,6 +63,28 @@ def primitive(W):
         g = gcd(g, v)
     return tuple(v // g for v in W) if g > 1 else tuple(W)
 
+def float_M_near(W, target=0.08, tol=0.004):
+    """fast float M via the critical grid; returns True if within tol of target."""
+    dens = set()
+    for v, w in itertools.combinations(W, 2):
+        dens.add(v + w)
+        if v != w:
+            dens.add(abs(v - w))
+    for v in W:
+        dens.add(2 * v)
+    best = 0.0
+    for s in dens:
+        if s == 0:
+            continue
+        for j in range(1, s):
+            t = j / s
+            mv = min(abs(v * t - round(v * t)) for v in W)
+            if mv > best:
+                best = mv
+            if best > target + tol:      # already too high to be ~2/25
+                return False, best
+    return abs(best - target) <= tol, best
+
 def part_A2():
     print("=" * 78)
     print("PART A2: hunting large-q* 2/25-attainers (the census bound's failure mode)")
@@ -103,7 +125,10 @@ def part_A2():
             continue
         seen.add(W)
         tested += 1
-        M, pts = exact_M_and_all_maximizers(W)
+        near, _ = float_M_near(W)          # fast pre-filter to M ~ 2/25
+        if not near:
+            continue
+        M, pts = exact_M_and_all_maximizers(W)   # exact only on candidates
         if M == RHO:
             qstar = min(t.denominator for t in pts)  # smallest maximizer denom
             found.setdefault(qstar, []).append(W)
@@ -189,5 +214,5 @@ def part_B():
             print(f"    covering phase (x{Dtry}): {[p*Dtry for p in covered_found]}")
 
 if __name__ == "__main__":
+    part_B()      # the covering discrepancy first (quick, guaranteed to finish)
     part_A2()
-    part_B()
