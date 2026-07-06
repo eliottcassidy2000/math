@@ -1,4 +1,16 @@
-Newman-Fourier bound: (1-2rho)^l vs R (rho=2/25, (1-2rho)=0.84)
+Newman-Fourier: (1-2rho)^l vs R (K=4); (1-2rho)=0.84; rho=2/25
 
-                           freqset   l  (0.84)^l    R(K=6)   >R? |U|min(T3)
-                              1..7   7    0.2951    1.1868    no
+                   freqset   l   0.84^l        R  main>R?  verdict
+       1..7 (AP, resonant)   7   0.2951   0.9504       no  residual (phase-coupling)
+          2,4,..,14 (2*AP)   7   0.2951   0.9504       no  residual (phase-coupling)
+              primes 2..17   7   0.2951   0.3984       no  residual (phase-coupling)
+1,2,4,8,16,32,64 (lacunary)   7   0.2951   0.3822       no  residual (phase-coupling)
+3,5,9,17,33,65,129 (Sidon-ish)   7   0.2951   0.0817      YES  PROVED (no cover, all shifts)
+             14r-ladder+14   7   0.2951   0.4370       no  residual (phase-coupling)
+
+LACUNARY / Sidon-ish sets (no small signed sums): main term (0.84)^l > R => the
+Newman-Fourier bound PROVES CircleClearFloor for ALL shifts.  RESONANCE-RICH sets
+(APs, the 2*AP, the 14r-ladder = exactly the LRC-relevant frequencies) have R too
+big for the triangle bound; their floor (T3-verified positive) survives via PHASE
+COUPLING -- the adversary cannot independently align the shared-phase resonances.
+[t=6s]
