@@ -1,0 +1,16 @@
+========================================================================================
+THE n-DEPENDENCE MECHANISM: lifted-transversal gap members per n
+========================================================================================
+    n  2n-1     fact #unit shells  k=n-1                  gap member?  nearest-miss above 2/(2n-1)
+    6    11       11            5      5                   NONE FOUND                     +0.01426
+    7    13       13            6      6                   NONE FOUND                     +0.00405
+    8    15      3*5            4      7                   NONE FOUND                           -- (only 4<7 unit shells!)
+n=7 [1, 5, 6, 11, 16, 17]: M=5/33 in gap(1/7,2/13); resonance denom 33=3*11
+n=13 AP-lift analogs (mimic the n=7 two-shell +C lift, C=25):
+  all C(12,2)=66 two-element +25 lifts of AP: IN-GAP=0
+  all 66 two-element +13 lifts of AP: IN-GAP=0
+  single-element AP lifts by +d for d=13,25,26,38:
+    +13: in-gap=0, min M over the 12 lifts = 1/12=0.0833
+    +25: in-gap=0, min M over the 12 lifts = 1/12=0.0833
+    +26: in-gap=0, min M over the 12 lifts = 1/12=0.0833
+    +38: in-gap=0, min M over the 12 lifts = 1/12=0.0833
