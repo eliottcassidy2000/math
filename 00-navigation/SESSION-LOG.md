@@ -33,6 +33,17 @@ gap? the 11-runner gap 2/23 gives slack, but a base tight at 2/23 recurses), or 
 Coordinate with klein (HYP-4151 owner) -- this is their rigidity's AP-base rung.
 
 ---
+## opus-2026-07-05-S87 -- THE LABEL-DRIFT FORMULA (exact desert lengths, worst case 1/78 proved by search) + THE CO-INCIDENCE CLOSURE (l=7 sliver core EMPTY: 792/792) + the ONE-RIGIDITY synthesis (HYP-4156)
+
+Prompt: work the two concrete remaining things; creativity; repo-history threads; synthesize; hypothesize; come to proofs.
+
+THREAD SYNTHESIS FIRST (as directed): THM-619 (mac-mini alignment bands: good-set components impose residue bands on the killer) is the DUAL of my net condition; klein-S140 equioscillation-AP-rigidity and kps walks are the same rigidity at c = 12 and c = 2,3; the concurrent opus-S85 exact combs are its extremal objects. ONE RIGIDITY, THREE NAMES: coverage/extremality persisting over an interval forces AP structure at an explicit rate. The whole fleet needs exactly this lemma.
+
+PROOFS AND EXACT TABLES: (1) THE LABEL-DRIFT FORMULA: at p/q + eps offsets drift at integer rates; the desert is the regime-chained 2/13-net feasibility interval (piecewise-linear; label-splitting at q >= 8 essential); first-regime closed form slack*(1/D+ + 1/D-); consecutive at 1/7 gives EXACTLY (1/91)(7/6) = 1/78. Verified 1.5-8 percent, converging O(1/W). (2) WORST-CASE TABLE by exhaustive pattern search: the maximizer is ALWAYS the consecutive pattern; q=7: 1/78, 1/156, 1/130; up to 9/130 at q=11. (3) FAST-PHASE FATTENING (proved): persistent net-failure is caught within one wrap (relative speed >= v_1): desert = formula + O(1/W). (4) PUMPING localization (proved, constants astronomical): handover-walk state pigeonhole forces simultaneous approximation; kps pair walk = c=2 instance; the SHARP constant = the c-walk cascade (accepted from kps).
+
+THE CO-INCIDENCE COMPUTATION (exact, all strata): |B| = 5 -- the ORIGINAL l = 7 sliver: 792/792 five-runner bases keep a margin-(1/6-) point clear of every possible q=7 desert (exact radii + window 7/936 + 1/134 fast-phase safety): THE SLIVER CORE IS EMPTY, conditional only on sharp localization. |B|=4: 484/495; |B|=3: 176/220; B <= 2 saturate -- but those tables over-grant SIMULTANEOUS resonances at all q: one difference pattern resonating at many q is forced near-CONSECUTIVE = the S85-exact loose families; the 109 failing shapes are the finite simultaneity worklist, not open territory. First-run lesson recorded: point-based margins (Lipschitz needs a POINT, not a window) and p-dependent radii turned 650/792 into 792/792.
+
+REMAINING (from two things to one and a half): (i) the sharp localization lemma (the c-walk cascade -- the fleet-wide crux); (ii) mechanical: q in {14,21} zones, the B <= 4 simultaneity table. Files: label_drift_opus_S87.py.out, coincidence_check_opus_S87.out, label-drift-coincidence-opus-S87.md, HYP-4156. No Lean (exact-math-first).
 
 ## opus-2026-07-05-S86 -- DESERT LOCALIZATION: the sliver reduced to one rigidity lemma + a thin co-incidence corner; resonance census exact (q<=6 immune, q=13 slack-dead); random clusters DESERT-FREE (HYP-4146)
 
