@@ -13,6 +13,17 @@ CREATIVE CONDITION (the collapse): gap member => single cluster (S14) => bounded
 DELIVERABLES: reflection the-four-dichotomies-as-lenses-...-macmini-S16; HYP-4422; scripts lrc_witness_denominator_dichotomies / lrc_witness_denom_divides_sumdiff _macmini_S16 (+outs).  Lemma is ELEMENTARY/FORMALIZABLE.  No canon overridden.  Coordinated git around concurrent mac-mini instances (S13 tight-side, an S14-ndep).
 
 NEXT: formalize the witness-denominator lemma (converts height-bound to finite-check); the height bound itself = the difference-core contraction (opus-S106).
+## opus-2026-07-06-S108 -- THE COVERER DICHOTOMY (sum-product seam as one GREEN lemma) + the four dichotomies unified as one Z/2-structure at p=13 (HYP-4406)
+
+Prompt: work remaining obligations; synthesize the many-lens crux; the add/mult, odd/even, +/-, rational/irrational dichotomies.
+
+THE FOUR DICHOTOMIES = ONE Z/2-structure at the prime 13 (reflection the-four-dichotomies-are-one-z2-structure-and-the-seam-is-covering-forces-height): add/mult (sum-product: {1..12}=additive interval AND (Z/13)*, the SEAM) | +/- (6 antipodal pairs {r,13-r}, dist sees the +/- class, binding pair {1,12}={+-1}) | odd/even (14=2*7: 2 gives +/- complement, 7 gives heptagon/Fejer theta weights) | rational/irrational (band-blocker mult pole vs tight-AP add pole, linked by dilation). All four are the SAME Z/2 involution swapping the poles, over SL(2,Z)/Gamma(2).
+
+THE SEAM MADE CONCRETE + GREEN (LRCCovererDichotomy.lean, standard trio, corpus 8702): coverer_height -- a runner v == r mod 13 (1<=r<=12) that covers q=r (r|v) is EITHER v=r (unlifted) OR 14r <= v. CRT: v=r*m, m==1 mod 13 => m=1 or m>=14. For the UNIQUE coverers r in {7..12} (verified: q=r covered by r alone), a pinned covering family keeps r unlifted OR pushes its coverer to height >= 14r >= 98. MULTIPLICATIVE(covering) FORCES ADDITIVE(height). This unifies my S78 pigeonhole + S80 height-forcing + S104 divisor-protection + S105 floor into ONE seam lemma.
+
+WHY IT MATTERS: the seam LOCALIZES the density floor -- coverer_height shows the only near-tight covering config with no height blow-up is the AP (m=1 for every unique coverer); any deviation raises a coverer >= 14r (leaves the near-AP regime => descent/decorrelation) or drops covering (=> loose). The integer skeleton of why the (G) density-floor minimum sits exactly at the AP. HONEST: does NOT close the floor (the Riesz-product all-order theta estimate remains open); it is the arithmetic backbone of the sum-product rigidity.
+
+Files: LRCCovererDichotomy.lean (green); reflection; covering_constrains_lifts / relation_lattice_sumproduct outs; HYP-4406.
 
 ## mac-mini-2026-07-06-S13 -- THE TIGHT-SIDE RIGIDITY SHARPENED: primitive tight = {1..12} uniquely + height-isolated, BUT residue-pinning + sieve are NECESSARY not SUFFICIENT (70k non-AP loose families satisfy both) => the tight side is OPEN, needs strict lift-minimality (= the M-minimizer) (HYP-4392)
 
