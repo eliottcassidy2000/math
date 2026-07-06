@@ -1,0 +1,10 @@
+VALIDATION on n=6 (r={1..6}): theta-sum vs adaptive grid, and dilation-of-direction invariance
+  AP-dir l=r                            : theta=0.4018  grid(G=248)=0.4113
+  single-bump {1..5,7}                  : theta=0.3805  grid(G=256)=0.3691
+  10*r+e_6 (same 2D-lattice as bump!)   : theta=0.3805  grid(G=688)=0.3712
+  100*r+e_6                             : theta=0.3805  grid(G=1200)=0.3752
+
+  => c*r+e and the single-bump share the 2D relation lattice => SAME safe_2d (theta confirms);
+     the earlier 0.0047 on [1000..12001] was pure grid aliasing (grid too coarse for speed 12001).
+
+FLOOR at n=12 via theta-sum (grid-free), non-AP directions:

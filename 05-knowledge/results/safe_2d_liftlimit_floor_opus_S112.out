@@ -1,0 +1,20 @@
+beta=2/25=0.08, main term (1-2beta)^12=0.1234
+AP-DIRECTION (l = r = {1..12}): expect safe_2d = safe_1d(AP) = 0
+  l=r:            safe_2d = 0.0000
+  l=2r (l prop r):safe_2d = 0.0000   (still AP-direction => 0)
+
+NON-AP DIRECTIONS (r={1..12}, l a genuine bump/permutation) -- expect a FLOOR >= ~0.08:
+  l=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24]: safe_2d=0.0118
+  l=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]: safe_2d=0.0120
+  l=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 19]: safe_2d=0.0119
+  l=[1, 2, 3, 4, 5, 6, 7, 8, 9, 36, 50, 12]: safe_2d=0.0596
+  l=[1, 2, 3, 4, 5, 19, 7, 34, 9, 10, 24, 12]: safe_2d=0.0772
+  l=[1, 2, 3, 43, 5, 6, 46, 21, 9, 10, 11, 12]: safe_2d=0.1042
+  l=[1, 2, 3, 4, 5, 19, 7, 34, 9, 10, 11, 12]: safe_2d=0.0483
+  l=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 51]: safe_2d=0.0120
+
+MIN non-AP-direction safe_2d observed = 0.0118
+READING: if all non-AP directions floor >= ~0.08 while AP-direction = 0, mac-mini S19 (b) holds
+AND my theta-sum EXPLAINS it: 2D lattice strictly smaller than 1D => cancellation incomplete =>
+safe_2d floored; only l~r keeps the maximal lattice => full cancellation => 0. The floor is
+the DEFECT between the maximal (AP) additive energy and any lower-energy lift direction.

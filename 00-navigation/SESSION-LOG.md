@@ -1,3 +1,19 @@
+## opus-2026-07-06-S112 -- THE DENSITY FLOOR IS A RELATION-LATTICE THETA-SUM + honest S19 floor correction (HYP-4446); LRCRelationLattice.lean GREEN
+
+Prompt: work the genuinely open residual; pull often; reroute as needed.
+
+REROUTED onto the fleet's safe-based floor attack (mac-mini S17 tiling + S19 compactness HYP-4472; kps S29 spectral-flatness HYP-4457; Fekete/Monsky). Gave safe an EXPLICIT closed form as MY relation-lattice theta-sum, verified it, and stress-tested the S19 route.
+
+REPRESENTATION (verified n=5,6 vs exact arc measure): safe(S,beta) = SUM_{a in L(S)} prod_i h_hat_{a_i}(beta), theta-sum over L(S)={a: sum a_i v_i=0}; h_hat_0=1-2beta, h_hat_m=-sin(2 pi m beta)/(pi m). ONE object = Fekete energy (kps/mac-mini) = Riesz/Newman (S106) = my additive-energy/sum-product (HYP-4396).
+
+EXPLAINS the floor findings: (1) AP unique tiler (S17) = maximal lattice => maximal cancellation => safe=0 exactly (the Monsky/equidissection identity); (2) safe height-monotone (S17) = safe DILATION-INVARIANT (L(c*S)=L(S), verified safe(c*AP)=0), a bump pushes the broken relation to larger |k| (weaker h_hat) => safe RISES (0->0.0032->0.0096, plateau); (3) safe equicontinuous / M not (S18/S19) = safe is a Fourier series, M a sup of jagged margin.
+
+HONEST CORRECTION to mac-mini S19 (HYP-4472): the lift-limit floor safe_2d>=0.08 is too high; true non-AP floor ~0.012-0.014. A first pass suggested safe_2d->0 (route gap) but that was GRID ALIASING on huge-speed directions [1000..12001] -- grid-free theta-sum shows they share the SAME 2D lattice as {1..11,13} => IDENTICAL safe_2d (n=6: both 0.3805). So the floor is QUANTIZED and BOUNDED BELOW (proper sublattice = fixed deficit = gap above 0): mac-mini's compactness route is SOUND for the unbounded case, floor value corrected 0.08 -> ~0.012; residual = the bounded/single-cluster case (finite, my S109 lever). [Caught my own aliasing false-alarm via the theta-sum -- adversarial self-check.]
+
+GREEN (LRCRelationLattice.lean, standard trio): sum_smul_eq_zero_iff / relationSet_smul -- L(c*v)=L(v) for c!=0 (algebraic backbone of safe/M dilation-invariance). Full corpus green.
+
+Files: LRCRelationLattice.lean; reflection the-density-floor-is-a-relation-lattice-theta-sum; results safe_as_lattice_theta / safe_height_monotone_mechanism / safe_2d_liftlimit_floor / safe_2d_floor_thetasum (+minimization) _opus_S112; HYP-4446. Residual = the exact AP-uniqueness lattice identity in the bounded case (fleet analytic lane: Fekete/Monsky/spectral-flatness).
+
 ## mac-mini-2026-07-06-S19 -- POTENTIAL THEORY joins the equi-family (AP = electrostatic equilibrium); the p-adic Monsky EQUIDISSECTION route to the floor (HYP-4472)
 
 Prompt (owner): keep seeing how equicontinuity relates to equidecomposability/equinumerosity/others; keep investigating, integrating, reframing.

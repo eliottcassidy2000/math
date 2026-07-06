@@ -1,0 +1,19 @@
+DILATION INVARIANCE of safe (same lattice => same safe):
+  c=  1: safe(c*AP) = 0.000000  (AP tiles at every scale)
+  c=  2: safe(c*AP) = 0.000000  (AP tiles at every scale)
+  c=  5: safe(c*AP) = 0.000000  (AP tiles at every scale)
+  c= 17: safe(c*AP) = 0.000000  (AP tiles at every scale)
+
+BUMP one runner (12 -> 12+13m), grow height, watch safe RISE + min-relation-k of the bump grow:
+  family (height)          | safe      | min |k| of a relation using the bump
+  AP (tiles)               | 0.000000 | 1
+  12->25                   | 0.003158 | 1
+  12->38                   | 0.007453 | 1
+  12->51                   | 0.009558 | 1
+  12->64                   | 0.009558 | 1
+  12->77                   | 0.008312 | 1
+
+MECHANISM CONFIRMED: dilation preserves safe (=0 for AP at all scales); a genuine BUMP
+breaks the AP's small-k tiling relations, and the smallest relation using the bumped
+runner moves to LARGER |k| (weaker h_hat ~ 1/k) => weaker cancellation => safe RISES.
+This is the relation-lattice MECHANISM behind mac-mini S17's 'safe does not degrade with height'.

@@ -1,0 +1,39 @@
+=== AP {1..12} (M=1/13, the allowed boundary) ===
+M(AP)=1/13 at t=1/13; covers at 2/25? True
+  drop v_j | M(sub) | lonely tau | dist(v_j*tau)  [nesting needs dist < beta=0.08]
+     1   | 1/7    | 1/14    | 0.07143  NEST-OK
+     2   | 2/15   | 7/15    | 0.06667  NEST-OK
+     3   | 1/8    | 5/16    | 0.06250  NEST-OK
+     4   | 2/17   | 4/17    | 0.05882  NEST-OK
+     5   | 1/9    | 7/18    | 0.05556  NEST-OK
+     6   | 2/19   | 3/19    | 0.05263  NEST-OK
+     7   | 1/7    | 1/7     | 0.00000  NEST-OK
+     8   | 1/8    | 1/8     | 0.00000  NEST-OK
+     9   | 1/9    | 1/9     | 0.00000  NEST-OK
+    10   | 1/10   | 1/10    | 0.00000  NEST-OK
+    11   | 1/11   | 1/11    | 0.00000  NEST-OK
+    12   | 1/12   | 1/12    | 0.00000  NEST-OK
+
+=== {1..11,24} competitor ===
+M=2/25=0.08000 at t=2/25; in gap (1/13,2/25)? False; covers? False
+  leave-one-out NEST-FAIL count: 0/12  (if >0 while covering => contradiction)
+   drop   1: M(sub)=0.15385 tau=1/13     dist(v_j tau)=0.07692 ok
+   drop   2: M(sub)=0.13333 tau=7/15     dist(v_j tau)=0.06667 ok
+   drop   3: M(sub)=0.12500 tau=5/16     dist(v_j tau)=0.06250 ok
+   drop   4: M(sub)=0.11765 tau=4/17     dist(v_j tau)=0.05882 ok
+
+=== {1..11,13} (12->13) ===
+M=1/12=0.08333 at t=1/12; in gap (1/13,2/25)? False; covers? False
+  leave-one-out NEST-FAIL count: 1/12  (if >0 while covering => contradiction)
+   drop   1: M(sub)=0.13333 tau=1/15     dist(v_j tau)=0.06667 ok
+   drop   2: M(sub)=0.11765 tau=8/17     dist(v_j tau)=0.05882 ok
+   drop   3: M(sub)=0.11765 tau=6/17     dist(v_j tau)=0.05882 ok
+   drop   4: M(sub)=0.10526 tau=5/19     dist(v_j tau)=0.05263 ok
+
+=== {1..10,12,25} ===
+M=1/11=0.09091 at t=1/11; in gap (1/13,2/25)? False; covers? False
+  leave-one-out NEST-FAIL count: 2/12  (if >0 while covering => contradiction)
+   drop   1: M(sub)=0.14286 tau=1/14     dist(v_j tau)=0.07143 ok
+   drop   2: M(sub)=0.15385 tau=6/13     dist(v_j tau)=0.07692 ok
+   drop   3: M(sub)=0.12903 tau=11/31    dist(v_j tau)=0.06452 ok
+   drop   4: M(sub)=0.13333 tau=4/15     dist(v_j tau)=0.06667 ok

@@ -358,3 +358,4 @@ import TournamentH7.LRCCovererDichotomy
 import TournamentH7.LRCWitnessDenominator
 import TournamentH7.LRCDilationInvariance
 import TournamentH7.LRCLeaveOneOut
+import TournamentH7.LRCRelationLattice
