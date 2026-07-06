@@ -1,3 +1,19 @@
+## mac-mini-2026-07-06-S9 -- THE TWO-MODULUS NON-CLEARING STRUCTURE: gap members are PAIR-HITTING TRANSVERSALS at BOTH 13 and 25 (mod-13 = the exact analog of the sibling's mod-25 transversal, verified); the two-modulus census leaves ONLY the AP; + I CORRECTED my own S7 Q_max=25 bound (HYP-4342, renamed from a 4332 collision)
+
+Prompt (owner): synthesize other agents' work and work on the remaining crux.
+
+SYNTHESIS (the crux, sharpened by the fleet): opus-S98 residue bridge (gap -> finite census); the sibling-S7 antipodal-transversal (gap member = full transversal mod 25, 2/3 classes killed); opus-S99 projection floor + jump (window = 1/325 sliver, (A)=(C)=2-D lift rigidity); opus-S100 Farey ladder (2/25 = mediant, provably tight); my S7 witness work.
+
+THE WORK (synthesizing all of it into one residue-level structure):
+ (1) A gap member has no clearing witness => (residue bridge) NON-CLEARING mod every q.  Worked out per modulus: q<=12 => a multiple of each m<=12 (THM-369 from the witness angle); q=13 non-clearing <=> residues HIT ALL 6 PAIRS {u,-u} mod 13 (VERIFIED exactly) = THE EXACT ANALOG of the sibling's mod-25 transversal, one modulus down; q=25 = the sibling's 10-unit-pair transversal.  => a gap member is a PAIR-HITTING TRANSVERSAL AT BOTH 13 AND 25.
+ (2) THE CENSUS: 28,750 structured candidates filtered non-clearing mod every q in 2..25: 5 survivors -- 1 AP (M=1/13, boundary), 4 with M>=2/25, ZERO IN-GAP.  The two-modulus pair-hitting + the sieve collapses to the AP = transversal AP-rigidity confirmed at pinned moduli q<=25.
+ (3) SELF-CORRECTION of my S7 Q_max=25: the 4 M>=2/25 survivors are PRIMITIVE (not rays) and clear only at q in {28,29,33,35} > 25.  My S7 sample missed these near-tight AP-perturbations; Q_max=25 is WRONG (= MISTAKE-110's scale-dependence -- free-modulus witnesses like q=29 escape pinned moduli).  The census finiteness is the pinned-modulus + ray structure, NOT a naive q-cap.  S7's 2/25-ATTAINER uniqueness (q*=25) stands (a different object).
+
+COLLISION: another mac-mini-S9 also claimed HYP-4332 (Newman content in CircleClearFloor) -- I renamed mine to HYP-4342.  (And HYP-4312 was double-claimed at S7.)  The fleet is running many concurrent instances; ledger records all.
+
+FILES: lrc_two_modulus_crux_macmini_S9.py (+.out); drafts/two-modulus-noncleaning-crux-macmini-S9.md; HYP-4342 (+INDEX); S7 draft + INDEX retraction banners.  No canon overridden.
+
+NEXT: (a) make the two-modulus census EXHAUSTIVE (residues mod 325 = 13*25; the pair-hitting structure bounds it); (b) PROVE 'pair-hitting at 13 & 25 + sieve => AP' (opus-S99 projection floor localized to transversals = the sibling's transversal AP-rigidity); (c) the free-modulus/ray witnesses via opus-S97 transport.
 ## mac-mini-2026-07-06-S7 -- THE Q50 CENSUS BOUND HARDENED: real witness-denom bound = 25 (not 50), factor-2 margin under opus-S98; the delicate 2/25-attainer case CLEAN (q*=25, unique over 8551 fams); + my S5 covering-tiling claim REFUTED as a grid artifact (distinct combs do NOT tile, kps vindicated) (HYP-4312)
 
 Prompt (owner): work on completing the consolidated endgame.

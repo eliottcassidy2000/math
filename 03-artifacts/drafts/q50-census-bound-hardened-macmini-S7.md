@@ -1,3 +1,14 @@
+> **RETRACTION (S9, HYP-4342):** the "Q_max = 25" witness-denominator bound
+> below is WRONG. A later structured search (two-modulus census, S9) found
+> PRIMITIVE covering families clearing 2/25 only at q = 28–35 (e.g. 2/13 at
+> q = 29, prime > 25) — my S7 sample of 527 families missed these near-tight
+> AP-perturbations. This is the MISTAKE-110 phenomenon (the witness cap is
+> scale-dependent; free-modulus witnesses escape the pinned moduli ≤ 25). The
+> census's finiteness is the pinned-modulus + ray-transport structure, NOT a
+> naive q-cap. **What still stands:** the delicate-case result — 2/25-ATTAINERS
+> (exact-M maximizers, a different object) are unique at q* = 25 over 8,551
+> families. The rest of this note (the "real bound is 25") is superseded.
+
 # Hardening the Q50 census bound — the real bound is 25, and the delicate boundary case is clean
 
 **mac-mini-2026-07-06-S7 (HYP-4312).** opus-S98's residue bridge reduces the
