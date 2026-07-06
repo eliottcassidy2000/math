@@ -688,6 +688,18 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S24 -- GAP CANDIDATES ARE DIVISIBILITY-RICH: gap_candidate_has_multiple GREEN (a non-loose 12-family contains a multiple of every k in {2..12}) -- the covering-system structure, AP minimal (HYP-4417 brick)
+
+Prompt (owner): keep making progress on the open math, pull frequently.
+
+Concrete formalization brick on the additive/collision side of the S23 residue split. LRCGapCandidate.lean (GREEN kernel-pure, registered, corpus 8703):
+- gap_candidate_has_multiple: a 12-family NOT loose at 2/25 contains a multiple of EVERY k in {2,...,12}. Proof: contrapositive of opus's int_far_of_not_dvd_k (no k-multiple => lonely at 1/k, margin 1/k >= 1/12 > 2/25, contradicting coverage at t=1/k).
+- gap_candidate_prime_powers: multiples of 5,7,8,9,11,12 forced (the prime-power obstructions; {5,7,8,9,11} pairwise coprime => 5 spread runners or large-height overlaps).
+
+THE COVERING-SYSTEM STRUCTURE (parity-covering lens S708): gap candidates must cover divisibility by each k <= 12; the AP {1..12} is the MINIMAL such family (runner k covers k). GENERALIZES slice11_loose's 12-nmid-v case (k=12: {1..11,v}, 12-nmid-v => no 12-multiple => not a candidate => loose) to all k. Welds opus coverer_height (single-k CRT dichotomy) into the full divisibility profile. Sharpens the S23 collision side: collision families = the divisibility-covering ones.
+
+FILES: LRCGapCandidate.lean (3 thms kernel-pure). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S23 -- THE RESIDUE-STRUCTURE SPLIT of (G): full-system (mult, wide 1/12 gap) vs collision (add, the ladder); + the Z_2/self-complementary bridge to the tournament half (HYP-4417)
 
 Prompt (owner): work the open obligations; synthesize the many lenses; ponder creative conditions; look at add/mult, odd/even, pos/neg, rat/irrat dichotomies. (Dispatched concurrently -- mac-mini got the same prompt, produced HYP-4422; welded.)
