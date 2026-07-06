@@ -1,0 +1,9 @@
+==============================================================================
+PART 1: is the tight locus EXACTLY the dilated APs? (primitive tight != AP?)
+==============================================================================
+  dilated APs c*{1..12}:
+    c=1: M=1/13 = 1/13 TIGHT  primitive=True  gcd=1
+    c=2: M=1/13 = 1/13 TIGHT  primitive=False  gcd=2
+    c=3: M=1/13 = 1/13 TIGHT  primitive=False  gcd=3
+    c=5: M=1/13 = 1/13 TIGHT  primitive=False  gcd=5
+    c=7: M=1/13 = 1/13 TIGHT  primitive=False  gcd=7
