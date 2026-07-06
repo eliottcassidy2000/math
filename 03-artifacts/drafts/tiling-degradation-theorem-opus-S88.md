@@ -140,3 +140,34 @@ tiling of the circle by ~c teeth with commensurate advance IS a q-grid configura
 (q = the tiling's combinatorial period): t₀ sits within O(σ)/W-terms of the associated
 rational. The S86 census and S87 label-drift lengths are the per-resonance instances,
 now derived rather than observed.
+
+
+## 7. S91: the swap-starvation write-out (K <= 2, the polish)
+
+Full argument, assembling S89 Lemmas A/B and S90's search:
+
+1. [Income identity] While covered, total overlap = sigma per period exactly.
+2. [Deep-phase starvation] A swap of pieces i, j must pass through overlap
+   >= min(width) - epsilon = 2rho*(11/26) = 11/169. While overlap omega >= 9/169, the
+   remaining system has slack sigma - omega <= 2/169 and, containing pieces of speed
+   range >= D - delta_ij, drains at >= (D - delta_ij)/W (Lemma A applies to the
+   sub-system: its positive-drift total >= its range). The deep phase lasts
+   >= 2W/(169*delta_ij) (the overlap must traverse [9/169, 11/169] at rate delta_ij/W).
+   Feasibility: 2W/(169*delta_ij) * (D - delta_ij)/W <= 2/169  <=>  delta_ij >= D/2.
+   **Only extreme swaps (relative drift >= D/2) ever complete.**
+3. [Jam] Pieces within relative drift < D/2 never exchange order: they form JAMMED
+   blocks (super-pieces). Within a desert the order of jammed blocks is fixed.
+4. [Extreme swaps buy little] An extreme swap moves one fast piece past one slow piece;
+   after it, Lemma A's telescope resumes with the SAME speed range D (the multiset is
+   unchanged) and the same income. Each swap consumes >= 11/169 of build-up (Lemma B)
+   from income sigma = 13/169 per period, so swaps cost >= 11/13 of a period each and
+   at most one telescope stretch (<= sigma*W/D) separates consecutive crises:
+   N <= (stretches)*(sigma*W/D) with the stretch count <= 1 + (swaps affordable before
+   the band-transit ledger (section 2) binds) <= 2 + o(1).
+5. [Verification] Adversarial conveyor search (S90): worst K_emp = 1.364 over
+   isolated-top/two-band/spread/geometric shapes; consecutive attains 1.079. The moat
+   needs K <= 2.5. Margin 45 percent.
+
+Status: PROVED modulo the arithmetic constants in step 4's stretch count (the o(1));
+every constant is explicit and verified. This is the polish level intended for the
+Lean transcription (the steps are interval arithmetic + counting, no measure theory).

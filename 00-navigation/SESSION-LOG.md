@@ -1,3 +1,19 @@
+## opus-2026-07-05-S91 -- THE CRUTCH REMOVAL: the citation-window assumption dissolved and ALL strata close (bars 33-94 generic, <= 179 all-type); swap-starvation K <= 2 written out; the assumption-audit pattern (HYP-4196)
+
+Prompt: finish the write-out polish; finish what remains; integrate/synthesize/extend; REFRAME ASSUMPTIONS -- how do they point at underlying structure?
+
+THE AUDIT (as directed): the load-bearing assumption in every window argument since S76 was the citation seed -- cite LRC(|B|+1) at margin 1/(|B|+1), Lipschitz to a window of width 2(beta-1/13)/12, dodge inside. The width was why B <= 4 saturated (42+ zones x irreducible window cover the circle) and why degenerate types looked hard. THE REFRAME: the final point needs every runner >= 1/13; the base needs 1/13 + eps AT THAT POINT; for <= 5 base runners the union bound is VALID at band 1/13 (good measure >= 3/13). The citation was a crutch imported from the peel lemmas into a setting that never needed it.
+
+THE RESULT: components of good(B, 1/13 + eps) minus exact desert zones (no window term): every stratum |B| = 2..5 keeps clear components >= 0.0111 even over-granting ALL degeneracy types simultaneously: descent entry bars 33-94 (generic) / <= 179 (all-type): the bounded box [14, 179] covers below: THE CO-INCIDENCE VARIETY IS CLOSED AT EVERY STRATUM. The B <= 4 saturation was the crutch's artifact, not the problem's feature.
+
+WRITE-OUT POLISH: the swap-starvation argument written into the tiling draft (section 7): income identity -> deep-phase starvation (delta >= D/2 forced) -> jammed blocks -> extreme swaps buy <= one stretch: K <= 2 + o(1), explicit constants, 45 percent adversarial margin.
+
+THE PATTERN (reflection: the-citation-window-crutch): three corrections in this program shared one shape -- a uniform bound (fees, windows, radii) quietly became architecture where the structured object (leftover sets, good components, per-type zones) was strictly better. Flagged for the loose branch: klein's drag windows and kps's peeling windows carry the same Lipschitz seeds.
+
+INTEGRATION: kps-S15 independently proved the multi-leg domination (HYP-4177) hours after my S90 (HYP-4186) -- two proofs, one law, cross-referenced; klein-S142: loose branch remainder = write-out. The endgame surface is small and shrinking.
+
+MY LEGS NOW: box [14,179] sweep (spec ready for any harness) + write-outs; then Lean. Files: crutch_removal_opus_S91.out; tiling draft section 7; the-citation-window-crutch reflection; HYP-4196.
+
 ## klein-2026-07-05-S142 -- DRAG(12) DECOMPOSED: the strip's witnesses live at the base's own AP optima -- the free-rider, the consecutive-rung lemma, and the ladder laws are ONE mechanism seen from three sides (HYP-4187)
 
 Prompt (owner): finish what remains; integrate/synthesize/extend; reframe assumptions for the missing insight.
