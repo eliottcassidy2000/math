@@ -1,0 +1,18 @@
+=== theta-sum leading-order vs exact safe (n=6, the AP {1..6} vs perturbations) ===
+  AP {1..6} v=[1, 2, 3, 4, 5, 6]: exact safe=0.39200; theta(|a|<=2)=0.33388 (443 rels); main(a=0)=0.35130
+  lift 6->7 v=[1, 2, 3, 4, 5, 7]: exact safe=0.30819; theta(|a|<=2)=0.30727 (407 rels); main(a=0)=0.35130
+  lift 6->8 v=[1, 2, 3, 4, 5, 8]: exact safe=0.36733; theta(|a|<=2)=0.33889 (375 rels); main(a=0)=0.35130
+  no-3AP v=[1, 2, 4, 5, 7, 8]: exact safe=0.34400; theta(|a|<=2)=0.38255 (335 rels); main(a=0)=0.35130
+  far lift v=[1, 2, 3, 4, 5, 12]: exact safe=0.38400; theta(|a|<=2)=0.33229 (263 rels); main(a=0)=0.35130
+
+=== the (1,-2,1) HARMONIC relations: present for AP, absent for non-AP ===
+  AP [1, 2, 3, 4, 5, 6]: 4/4 consecutive 2nd-differences vanish  (ALL => AP, S30)
+  lift 6->7 [1, 2, 3, 4, 5, 7]: 3/4 consecutive 2nd-differences vanish  (GAP => not AP)
+  no-3AP [1, 2, 4, 5, 7, 8]: 0/4 consecutive 2nd-differences vanish  (GAP => not AP)
+  dilated AP [2, 4, 6, 8, 10, 12]: 4/4 consecutive 2nd-differences vanish  (ALL => AP, S30)
+  far lift [1, 2, 3, 4, 5, 12]: 3/4 consecutive 2nd-differences vanish  (GAP => not AP)
+
+=== leading-order mechanism: safe=0 needs the harmonic terms; missing => safe>0 ===
+  the theta main term (1-2beta)^n = 0.35130 > 0 (n=6); the AP's harmonic
+  relations supply the negative correction to reach ~0; a family MISSING them cannot
+  cancel the main term at leading order, so safe > 0 -- the [theta=>min-doubling] route.

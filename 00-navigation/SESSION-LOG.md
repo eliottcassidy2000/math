@@ -913,6 +913,20 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S31 -- A ROUTE for the open (U) link [theta => min-doubling]: the HARMONIC relations are the LEADING ORDER of opus's safe theta-sum; the two reduced pieces meet at vanishing 2nd differences (S30) (HYP-4467)
+
+Prompt (owner): work the open analytic residual, push/pull frequently.
+
+Worked the isolated open link -- mac-mini S21 confirmed [theta-cancellation => min-doubling] is THE open (U) link. My route:
+
+opus HYP-4446: safe = SUM_{L(S)} prod h_hat, |h_hat_m|~1/m => shortest relations dominate. The shortest nontrivial are the length-3 (1,-2,1) HARMONIC relations (v_i-2v_{i+1}+v_{i+2}=0), largest weight after the main term; and (my S30 GREEN) a family has ALL harmonic relations IFF it is an AP. THE ROUTE: safe=0 => leading correction cancels main => harmonic present => AP (S30). THE GAP: a SELBERG-minorant tail bound (the analytic residual, = Riesz HYP-4452).
+
+CONTRIBUTION: names the leading order (harmonic relations); shows [theta=>min-doubling] (theta side) and [min-doubling=>AP] (sumset side) MEET at vanishing 2nd differences (S30); pins the remaining work to a Selberg-minorant tail bound.
+
+HONEST: the leading-order step isn't proved (needs the tail bound); not demonstrable computationally (AP tiles only at n=12, theta-enum infeasible). Solid: harmonic<=>AP (S30) + the shell identification.
+
+FILES: reflection the-harmonic-relations-are-the-leading-order-...-kps-S31.md; lrc_theta_harmonic_leading_kps_S31.py (+.out); HYP-4467. No Lean (route/reflection over S30). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S30 -- THE AP IS THE HARMONIC FAMILY: second_diff_zero_iff_ap GREEN (vanishing 2nd differences <=> AP) -- the elementary formal HEART of 'AP = flat/extremal' behind the density floor (HYP-4457 formalization)
 
 Prompt (owner): keep pushing creatively against the frontier, THEN formalize.
