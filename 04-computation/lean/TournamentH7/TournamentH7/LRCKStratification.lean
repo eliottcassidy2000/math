@@ -73,5 +73,41 @@ theorem pair_sum_dvd (vi vj m : ℤ)
     rwa [heq] at hadd
   exact hm.dvd_of_dvd_mul_right hsum
 
+/-- BINDER PARITY (S2): a runner binding at ±3 on the 38-grid is ODD — an even
+    v gives v·m ≡ even (mod 38, even modulus preserves parity), never ±3.
+    The 18 k=1 pair shapes collapse to the 9 both-odd ones. -/
+theorem binder_odd (v m : ℤ)
+    (h : (38 : ℤ) ∣ (v * m - 3) ∨ (38 : ℤ) ∣ (v * m + 3)) :
+    ¬ (2 : ℤ) ∣ v := by
+  intro ⟨u, hu⟩
+  rcases h with ⟨c, hc⟩ | ⟨c, hc⟩ <;> subst hu <;> omega
+
+/-- WITNESS DETERMINISM (S2): the binder fixes the dilation class — from
+    v·m ≡ 3 (mod 38), any two dilations m, m' binding the same v agree mod 38
+    (v is odd hence a unit… stated as the cancellation form: 38 ∣ v·(m − m')
+    with v odd and 19 ∤ v forces 38 ∣ (m − m')). -/
+theorem witness_determined (v m m' : ℤ)
+    (hm : (38 : ℤ) ∣ (v * m - 3)) (hm' : (38 : ℤ) ∣ (v * m' - 3))
+    (hodd : ¬ (2 : ℤ) ∣ v) (h19 : ¬ (19 : ℤ) ∣ v) :
+    (38 : ℤ) ∣ (m - m') := by
+  have hdiff : (38 : ℤ) ∣ v * (m - m') := by
+    have h := dvd_sub hm hm'
+    have heq : (v * m - 3) - (v * m' - 3) = v * (m - m') := by ring
+    rwa [heq] at h
+  -- 38 = 2·19; v odd and 19 ∤ v ⟹ v coprime to 38 ⟹ cancel
+  have h2 : (2 : ℤ) ∣ v * (m - m') → (2 : ℤ) ∣ (m - m') := by
+    intro hd
+    rcases (Int.Prime.dvd_mul' (by norm_num) hd) with h | h
+    · exact absurd h hodd
+    · exact h
+  have h19' : (19 : ℤ) ∣ v * (m - m') → (19 : ℤ) ∣ (m - m') := by
+    intro hd
+    rcases (Int.Prime.dvd_mul' (by norm_num) hd) with h | h
+    · exact absurd h h19
+    · exact h
+  have hd2 : (2 : ℤ) ∣ (m - m') := h2 (dvd_trans (by norm_num) hdiff)
+  have hd19 : (19 : ℤ) ∣ (m - m') := h19' (dvd_trans (by norm_num) hdiff)
+  omega
+
 end KStratification
 end LonelyRunner
