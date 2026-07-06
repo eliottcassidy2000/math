@@ -1,0 +1,54 @@
+=== S36: GENERAL RESONANCE LADDER  M(B+x)=mu*x/(x+rho), in opus s/(ns+k) form ===
+
+BASE {1,2,3,4,5,7}  (S35): M(B)=1/6 at t=1/6, n(after +x)=7, gap=(1/8,2/15)
+  rho (empirical, from M=mu*x/(x+rho)): [2.0, 4.0, 5.0]
+    j= 1 x=  6  M=     1/8  (s,k)=(1,1)          
+    j= 2 x= 12  M=     1/8  (s,k)=(1,1)          
+    j= 3 x= 18  M=    3/23  (s,k)=(3,2)  k<s<2k  <== IN GAP
+    j= 4 x= 24  M=    4/29  (s,k)=(4,1)          
+    j= 5 x= 30  M=     1/7  (s,k)=(1,0)          
+    j= 6 x= 36  M=    6/41  (s,k)=(6,-1)          
+    j= 7 x= 42  M=    7/47  (s,k)=(7,-2)          
+    j= 8 x= 48  M=    8/53  (s,k)=(8,-3)          
+    j= 9 x= 54  M=    9/59  (s,k)=(9,-4)          
+
+BASE {1,2,3,4,5}    (AP5): M(B)=1/6 at t=1/6, n(after +x)=6, gap=(1/7,2/13)
+  rho (empirical, from M=mu*x/(x+rho)): [1.0]
+    j= 1 x=  6  M=     1/7  (s,k)=(1,1)          
+    j= 2 x= 12  M=    2/13  (s,k)=(2,1)          
+    j= 3 x= 18  M=    3/19  (s,k)=(3,1)          
+    j= 4 x= 24  M=    4/25  (s,k)=(4,1)          
+    j= 5 x= 30  M=    5/31  (s,k)=(5,1)          
+    j= 6 x= 36  M=    6/37  (s,k)=(6,1)          
+    j= 7 x= 42  M=    7/43  (s,k)=(7,1)          
+    j= 8 x= 48  M=    8/49  (s,k)=(8,1)          
+    j= 9 x= 54  M=    9/55  (s,k)=(9,1)          
+
+BASE {1,2,3,4,5,6}  (AP6): M(B)=1/7 at t=1/7, n(after +x)=7, gap=(1/8,2/15)
+  rho (empirical, from M=mu*x/(x+rho)): [1.0]
+    j= 1 x=  7  M=     1/8  (s,k)=(1,1)          
+    j= 2 x= 14  M=    2/15  (s,k)=(2,1)          
+    j= 3 x= 21  M=    3/22  (s,k)=(3,1)          
+    j= 4 x= 28  M=    4/29  (s,k)=(4,1)          
+    j= 5 x= 35  M=    5/36  (s,k)=(5,1)          
+    j= 6 x= 42  M=    6/43  (s,k)=(6,1)          
+    j= 7 x= 49  M=    7/50  (s,k)=(7,1)          
+    j= 8 x= 56  M=    8/57  (s,k)=(8,1)          
+    j= 9 x= 63  M=    9/64  (s,k)=(9,1)          
+
+BASE {1,2,3,4,5,6,8}: M(B)=1/7 at t=1/7, n(after +x)=8, gap=(1/9,2/17)
+  rho (empirical, from M=mu*x/(x+rho)): [2.0]
+    j= 1 x=  7  M=     1/9  (s,k)=(1,1)          
+    j= 2 x= 14  M=     1/8  (s,k)=(1,0)          
+    j= 3 x= 21  M=    3/23  (s,k)=(3,-1)          
+    j= 4 x= 28  M=    2/15  (s,k)=(2,-1)          
+    j= 5 x= 35  M=    5/37  (s,k)=(5,-3)          
+    j= 6 x= 42  M=    3/22  (s,k)=(3,-2)          
+    j= 7 x= 49  M=    7/51  (s,k)=(7,-5)          
+    j= 8 x= 56  M=    4/29  (s,k)=(4,-3)          
+    j= 9 x= 63  M=    9/65  (s,k)=(9,-7)          
+
+======================================================================
+READING: rho is constant per base (a binding-runner speed) => the ladder
+M=mu*x/(x+rho) holds; rungs realize opus's s/(ns+k); the unique in-gap rung
+is opus's minimal (k=2,s=3)=mediant.  Next block drives the n=12 crux.

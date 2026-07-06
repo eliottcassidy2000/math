@@ -1,0 +1,20 @@
+=== (1) THE GAP IS THE AP LADDER'S FIRST STEP (n=12) ===
+  base AP{1..11}: mu=1/12 at t=1/12, rho=1 => ladder M=j/(12j+1):
+     j=1: x=12  M=1/13 = LO (gap bottom)
+     j=2: x=24  M=2/25 = HI (gap top)
+     j=3: x=36  M=3/37 (above gap)
+  => the two gap endpoints 1/13, 2/25 ARE consecutive AP-ladder rungs; nothing strictly inside.
+
+=== (2) Dx (gap-crossing x-window width) vs D (resonance spacing) at n=12 ===
+  base                           mu  rho   D  Dx=gap x-width  Dx<D?
+  AP{1..11}                    1/12    1  12          12.000  False
+  AP{1..10}+{12}               1/11    2  11           3.667   True
+  AP{1..10}+{13}               1/11    1  11           1.833   True
+  AP{1..9}+{11,13}             1/10    7  10           4.667   True
+  AP{1..9}+{11,20}             2/23    3  23          11.500   True
+  AP{1..8}+{10,12,14}           1/9    2   9           0.643   True
+
+  READING: for the pure AP, Dx = D (samples hit the endpoints exactly).  For defected
+  bases Dx <= D, and where Dx < D the resonance grid (spacing D) SKIPS the crossing
+  window => no interior rung.  This is 'window too narrow' (kps S32) in x-space, and the
+  uniform statement 'Dx < D for every n=12 base' = mac-mini's Selberg spacing (HYP-4512).

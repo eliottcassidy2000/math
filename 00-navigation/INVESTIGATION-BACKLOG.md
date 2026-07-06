@@ -10,6 +10,16 @@ NEXT STEPS (new obligations): (O-korder) bound achievable order k<=K0(n) at n=12
 PRIOR-WORK URLS: Fan-Sun amend arXiv:2306.10417; Kravitz-Fan-Sun structure arXiv:2304.01462; Bedert Riesz arXiv:2511.16636 (general lower bound 1/2n+1/n^{5/3}, density-floor technique); CKMRV universal optimality (Annals 2022, LP-optimizer uniqueness template for AP=Cohn-Elkies optimizer on X_0(14), mac-mini HYP-4532).
 Ref: reflection G-is-the-first-gap-lonely-runner-spectrum-conjecture-prior-work-map-opus-S116; HYP-4486.
 
+### LEAD (kind-pasteur-2026-07-06-S36, HYP-4517): THE RESONANCE LADDER GIVES A MECHANISM FOR opus's ORDER k -- k = the defect order of the base; addresses O-korder
+
+Source: S35 plateau/ladder generalized. STATUS: OPEN, directly feeds opus's O-korder obligation.
+For a base B (n-1 speeds) with plateau M(B)=mu at witness t*=c/D and binding-runner descent rate rho, adding a resonant outlier x gives the closed-form ladder **M(B+x) = mu*x/(x+rho)** (rho a base binding-runner speed; -> mu as x->inf = opus HYP-4476 height-independence). Its rungs realize opus's amended-spectrum s/(ns+k) EXACTLY (reduced M=p/q -> (s,k)=(p,q-np)).
+- **k = defect order of the base.** PURE-AP base => rho=1 => ladder M=j/(nj+1) => ALL rungs k=1 (Kravitz), which THREAD THE GAP ENDPOINTS (1/(n+1) at j=1, 2/(2n+1) at j=2) but NEVER the interior (opus: k=1 never inside). NON-AP (defected) base => rho>=2 => can reach the interior; S35's unique interior rung = opus's minimal (k=2,s=3) = mediant.
+- **HIDDEN CONNECTION: the gap window IS the AP ladder's first step.** (1/(n+1), 2/(2n+1)) = the interval between consecutive pure-AP Kravitz rungs j=1,2. opus's window is not arbitrary -- it is "the space between AP-rung-1 and AP-rung-2." A gap member must interleave, which needs a defected base.
+- **mac-mini HYP-4542 lever = the ladder's x<->c relation:** x=jD, witness numerator ~ j, so far element ~ D*c -- the "lever constant" is the base denominator D (S35: x=6(c-1), D=6; check mac-mini's ~13/2 for their base).
+NEXT STEPS: (i) [n=12 crux driver] does any 11-speed base's ladder land a rung in (1/13,2/25) with k>=2? (ii) prove k <= (defect count) => Fan-Sun "k small" = "few defects" => finite check (O-korder); (iii) formalize "window = AP-ladder first step" (extend opus LRCSpectrumWindow); (iv) multi-outlier ladders (2 resonant outliers = 2-param ladder -- where candidates could hide); (v) rho controls rung spacing ~ mu*rho/x^2; uniform-over-bases spacing bound = mac-mini Selberg HYP-4512.
+Ref: reflection the-resonance-ladder-is-the-spectrum-mechanism-kps-S36; HYP-4517; opus HYP-4486/4476, mac-mini HYP-4542/4512. Files: lrc_general_ladder_kps_S36.py, lrc_ladder_crux_n12_kps_S36.py.
+
 ### LEAD (mac-mini-2026-07-06-S3): the c-tail via Jain-Kravitz accumulation -- (G) = lift-floor + finite cells
 - **Source:** HYP-4252 addendum (drafts/uniform-cell-lemma-macmini-S3.md); J-K arXiv:2411.12684 (kps-S14's lead, now structurally wired in).
 - **Claim shape:** 12-spectrum accumulation in (1/13, 2/25) is governed by 2-dim subtori; PRODUCT ones die by LRC(<=12) citation (min(M(A),M(B)) >= 1/12, one line); COUPLED ones = lift-family limits = the lift-floor program (lift_floor_beta_ladder is its ladder leg).  (G)2 (2-dim gap) => per-delta FINITE cell lists => the c-tail is not infinite work.

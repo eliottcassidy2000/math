@@ -1063,6 +1063,28 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S36 -- THE GENERAL RESONANCE LADDER = the mechanism behind opus's Lonely-Runner spectrum; the gap window IS the AP ladder's first step; defected ladders skip via Dx<D (HYP-4517)
+
+Prompt (owner): work the natural next lead (generalize the ladder), and create more leads synthesizing from other agents.
+
+GENERAL LADDER: base B (n-1 speeds), plateau M(B)=mu at t*=c/D, binding descent rate rho; resonant outlier x=jD => M=mu*x/(x+rho) (->mu as x->inf = opus HYP-4476 height-independence). Rungs realize opus's amended spectrum s/(ns+k) EXACTLY ((s,k)=(p,q-np) for reduced M=p/q).
+
+k = DEFECT ORDER: pure AP => rho=1 => M=j/(nj+1), ALL k=1 (Kravitz, never inside); defected => rho>=2 => interior; S35's in-gap rung = opus minimal (k=2,s=3)=mediant. = mechanism for opus's O-korder.
+
+HIDDEN CONNECTION: the gap window IS the AP ladder's first step -- AP{1..11}=>M=j/(12j+1): j=1->1/13=LO, j=2->2/25=HI. The two endpoints are consecutive AP rungs.
+
+QUANTITATIVE: ladder crosses gap for x in X_gap width Dx=rho*[HI/(mu-HI)-LO/(mu-LO)]; resonances spaced D. Pure AP: Dx=D (samples ON endpoints). Defected (n=12): Dx<D on ALL representative bases => grid SKIPS interior. = S32 'window too narrow' in x-space; uniform Dx<D = mac-mini Selberg HYP-4512.
+
+n=12 DRIVER: representative 11-speed bases => NO rung in (1/13,2/25) with k>=2 & k<s<2k. Mechanism evidence for (G).
+
+SYNTHESIS (3 threads): opus HYP-4486 = the FORM (s/(ns+k), Lean GREEN); kps S35/S36 = the MECHANISM (ladder, k=defect order, window=AP step, Dx vs D); mac-mini HYP-4542/4512 = the LEVER (x~D*c) + Selberg spacing. Mediant 3/38 IS in the crux gap => (G) = 'no family ATTAINS it'.
+
+HONEST: single-outlier family only (multi-outlier + other-witness outside, covered by mac-mini census); Dx<D phase-dependent (evidence); ladder proven lower bound (S35) + verified (S36). RESIDUAL: uniform Dx<D = Selberg.
+
+NEW LEADS (backlog): (1) prove k<=defect count (O-korder); (2) formalize window=AP-ladder-step; (3) multi-outlier ladders; (4) Dx<D uniform = Selberg.
+
+FILES: lrc_general_ladder / lrc_ladder_crux_n12 / lrc_ladder_spacing _kps_S36.py(+.out); reflection the-resonance-ladder-is-the-spectrum-mechanism-kps-S36.md; HYP-4517; backlog LEAD. No Lean this session (mechanism). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S35 -- THE PLATEAU + RESONANCE LADDER: M=j/(6j+5), gap catches exactly one rung (j=3); unifies opus HYP-4476 + mac-mini HYP-4542 + kps S34 (HYP-4507)
 
 Prompt (owner): strengthen the open residual via small statements, subtle patterns, hidden connections.

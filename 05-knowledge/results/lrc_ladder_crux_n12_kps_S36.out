@@ -1,0 +1,59 @@
+=== S36 n=12 crux mechanism: 11-speed ladders vs gap (1/13,2/25); opus (s,k), k>=2 & k<s<2k required ===
+
+  AP{1..11}: base=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+     mu=M(B)=1/12 (~0.0833) at t=1/12;  rho=1 (~1.00)
+       (no exact rung landed in the open gap in screened range)
+
+  AP{1..10}+{12}: base=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+     mu=M(B)=1/11 (~0.0909) at t=1/11;  rho=2 (~2.00)
+       (no exact rung landed in the open gap in screened range)
+
+  AP{1..10}+{12}: base=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+     mu=M(B)=1/11 (~0.0909) at t=1/11;  rho=2 (~2.00)
+       (no exact rung landed in the open gap in screened range)
+
+  AP{1..10}+{13}: base=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13]
+     mu=M(B)=1/11 (~0.0909) at t=1/11;  rho=1 (~1.00)
+       (no exact rung landed in the open gap in screened range)
+
+  AP{1..10}+{14}: base=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14]
+     mu=M(B)=1/11 (~0.0909) at t=1/11;  rho=1 (~1.00)
+       (no exact rung landed in the open gap in screened range)
+
+  AP{1..10}+{15}: base=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15]
+     mu=M(B)=1/11 (~0.0909) at t=1/11;  rho=1 (~1.00)
+       (no exact rung landed in the open gap in screened range)
+
+  AP{1..10}+{17}: base=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 17]
+     mu=M(B)=1/11 (~0.0909) at t=1/11;  rho=1 (~1.00)
+       (no exact rung landed in the open gap in screened range)
+
+  AP{1..10}+{20}: base=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20]
+     mu=M(B)=1/11 (~0.0909) at t=1/11;  rho=1 (~1.00)
+       (no exact rung landed in the open gap in screened range)
+
+  AP{1..10}+{24}: base=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 24]
+     mu=M(B)=1/11 (~0.0909) at t=1/11;  rho=1 (~1.00)
+       (no exact rung landed in the open gap in screened range)
+
+  AP{1..9}+{11,13}: base=[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13]
+     mu=M(B)=1/10 (~0.1000) at t=1/10;  rho=7 (~7.00)
+       (no exact rung landed in the open gap in screened range)
+
+  AP{1..9}+{11,20}: base=[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 20]
+     mu=M(B)=2/23 (~0.0870) at t=7/23;  rho=3 (~3.00)
+       (no exact rung landed in the open gap in screened range)
+
+  AP{1..8}+{10,12,14}: base=[1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14]
+     mu=M(B)=1/9 (~0.1111) at t=1/9;  rho=2 (~2.00)
+       (no exact rung landed in the open gap in screened range)
+
+  2*AP{1..10}+{1}: base=[1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+     mu=M(B)=1/11 (~0.0909) at t=1/11;  rho=0 (~0.00)
+       (no exact rung landed in the open gap in screened range)
+
+========================================================================
+RESULT: on these representative 11-speed bases, NO ladder rung lands in the
+n=12 gap with opus-order k>=2 & k<s<2k.  Pure/near-AP bases thread the edges
+(k=1) or overshoot; the interior mediant seat (s,k)=(3,2)=3/38 is not attained.
+MECHANISM evidence for (G), consistent with mac-mini census + opus finite-shapes.
