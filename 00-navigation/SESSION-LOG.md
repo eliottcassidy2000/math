@@ -245,6 +245,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S20 -- THE COUPLED-TORUS SPLIT RUNG kernel-pure (rho-covered coupled 2-torus systems need 2*rho*(#lifted) >= 1) => the (A) window of the J-K reduction is EMPTY of <= 6-lifted coupled values + the forced rectangle for the l >= 7 residual (HYP-4247)
+
+Prompt (owner): work the crux and remaining tasks; pull frequently; integrate and extend.
+
+INTEGRATION FIRST: pulled 6x during the session. opus-S97 bypassed the S96 Newman lemma (dilation transport) mid-session -- dropped that target before starting; mac-mini-S4 extracted the J-K reduction ((G) = (A) coupled-2-torus window + (C) finite census) and retired the wiring one-liner -- my session became the (A)-stratum-1 kill.
+
+THE THEOREM (LRCTorusSplit.lean, registered, kernel-pure, corpus 8690, FIVE theorems): torus_split_rung -- a coupled 2-torus system (base teeth |w_i t - m|, lifted teeth |r_i theta + a_i t - m|, the J-K lift-limit object) that is rho-covered at every (t, theta) with rho <= 1/12 has 2*rho*(#lifted) >= 1. Proof measure-free: citation on the base (<= 11 runners, margin 1/12 > rho at t0) forces the lifted combs alone to theta-cover at t0; the rho-PARAMETRIC sharp visit count (tooth_visit_count_rho, additive-offset form -- simpler than S19's) bounds each lifted comb's grid share by 2*rho*D + 3*r_i; D large closes. COROLLARIES: torus_clear_gap (every coupled system with <= 6 lifted has a 2/25-clear point => the open gap (1/13, 2/25) is EMPTY of <= 6-lifted coupled values -- all l <= 6 lift-floor LIMIT hypotheses in one theorem); torus_product_dead (proper coupled system, all couplings zero => covered by nothing, DOUBLE citation); torus_split_cell38 (mac-mini-S3's density wall >= 7 in the torus dialect, formal); torus_forced_rectangle (the lifted combs must theta-cover an entire t-interval |t - t0|*V <= 1/300 -- 1/12 - 1/300 = 2/25 exactly, the S6 seam -- the rectangle handoff for the l >= 7 residual).
+
+INTEGRATION (concurrent, this session): DISCHARGES mac-mini's HYP-4282(a) STUB (claimed hours after mine, in progress): their measure-one-liner support-6 kill IS torus_clear_gap, already GREEN -- letter sent, they keep (b)(c)(d). CONFIRMS their HYP-4272 313/313 bracket census (data side) with the proof side for l <= 6. Their obs (c) -- the l >= 7 (A)-residual == |S| >= 7 (C)-residual, same 25/4 wall in two coordinates -- is now witnessed by two GREEN files: the k-multiples are the base torus direction, the non-multiples are the lifted runners; LRCClusterGcdSharp and LRCTorusSplit are the height- and torus-coordinate faces of one object.
+
+VERIFIED (lrc_torus_split_rung_kps_S20.py): count 0/20000; clear points 400/400 random l <= 6 coupled systems; walls force l >= 7 at 2/25 AND 3/38; sharpness: random l = 7 systems leave 14-24% theta-uncovered (covering at the pole needs structured frequencies).
+
+THE PICTURE: the pole 25/4 now appears three ways (cluster-gcd ladder |S| <= 6, the fee wall, the torus split l <= 6) -- one mechanism, three dialects. The (A) residual = l >= 7 lifted + base <= 5, on the forced rectangle; opus's two-band transport is its witness mechanism.
+
+FILES: LRCTorusSplit.lean (new, registered); lrc_torus_split_rung_kps_S20.py (+.out); HYP-4247 CONFIRMED. No canon overridden.
+
 ## kind-pasteur-2026-07-06-S19 -- THE FULL CLUSTER-GCD LADDER |S| <= 6 IN LEAN, kernel-pure: gap_gcd_rung_sharp ((25-4|S|)*gcd(complement) <= 75*Sum_S |v|) via the sharp visit count (4/25)D + 3w + the END-TO-END k-reduction composition (k_bounded_of_stratification_sharp) -- the critical-path gap under mac-mini's HYP-4232/4242 closed (HYP-4237)
 
 Prompt (owner): keep reducing the crux creatively; get threads to easily-formalizable state.

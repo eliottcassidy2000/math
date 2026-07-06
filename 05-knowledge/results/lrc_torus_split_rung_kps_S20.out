@@ -1,0 +1,8 @@
+(1) rho-parametric count (2rho)D+3w: violations = 0/20000 (min slack 2.076)
+(2) l<=6 clear-point (2/25) on random coupled systems: 400/400 found, 0 failures
+(3) wall at rho = 2/25: 2*rho*l >= 1 forces l >= 7  (2*2/25*6 = 0.9600 < 1: True)
+(3) wall at rho = 3/38: 2*rho*l >= 1 forces l >= 7  (2*3/38*6 = 0.9474 < 1: True)
+(4) l=7 random systems: min theta-uncovered fraction over 200 samples = 0.23525; full covers seen = 0
+(4b) engineered cover attempt (freqs 1..7, tuned shifts): min uncovered = 0.14167
+     (>0 means even l=7 struggles at these frequencies; the rung only needs l>=7 NECESSARY)
+ALL CHECKS PASSED

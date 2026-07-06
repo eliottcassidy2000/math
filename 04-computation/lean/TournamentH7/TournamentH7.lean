@@ -329,6 +329,7 @@ import TournamentH7.LRCTemplateSurface  -- kps-S10(2026-07-05): the Q50 crux pin
 import TournamentH7.LRCMultiFoldRows  -- kps-S17(2026-07-05): consecutive multi-fold tower floor rows D_2..D_6 >= 2/25 (corrected: the closed-form law is FALSE at l=4,5 -- witnesses 17/155, 19/155; the floor survives) -- the kps side of HYP-4212 (HYP-4217)
 import TournamentH7.LRCClusterGcd  -- kps-S18(2026-07-05): THE CLUSTER-GCD LADDER kernel-pure (gap_gcd_rung: (25-8|S|)*gcd(complement) <= 25(Sum_S+|S|) for |S|<=3; citation + 1/d-periodicity + tooth-visit pigeonhole; the absolute-height mechanism for gcd-clusters) (HYP-4227)
 import TournamentH7.LRCClusterGcdSharp  -- kps-S19(2026-07-06): THE SHARP VISIT COUNT ((4/25)D+3w via block split + coprime permutation + wrapped-arc two-piece clip) => gap_gcd_rung_sharp: (25-4|S|)*gcd(complement) <= 75*Sum_S for |S|<=6 -- the FULL ladder with the pole at 25/4; critical-path for mac-mini's HYP-4232 k-reduction (HYP-4237)
+import TournamentH7.LRCTorusSplit  -- kps-S20(2026-07-06): THE COUPLED-TORUS SPLIT RUNG, rho-parametric (torus_split_rung: rho-covered coupled 2-torus systems need 2*rho*(#lifted) >= 1 via base citation + rho-parametric sharp count) => torus_clear_gap: every coupled 2-torus (lift-limit) system with <= 6 lifted has a 2/25-clear point -- the (A) window of mac-mini's HYP-4262 J-K reduction is EMPTY of <= 6-lifted coupled values; + the 3/38 density-wall dialect (HYP-4247)
 import TournamentH7.LRCMultiKillerWindow13
 import TournamentH7.LRCLiftPigeonhole
 import TournamentH7.LRCGapDescent
