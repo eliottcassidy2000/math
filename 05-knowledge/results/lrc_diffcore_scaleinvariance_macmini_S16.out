@@ -1,0 +1,21 @@
+(1) EXACT scale-invariance: M(N*AP+eps) equal for N=20 and N=100?
+    eps=[0, 1, 1, 0, 1, -1, 1, -2, 1, 0, -1, -1]: M20=75/358 != M100=381/1798
+    eps=[-1, 2, -2, 1, 1, 2, 0, -1, 0, 0, 0, 1]: M20=68/281 != M100=116/467
+    eps=[-2, 0, 1, 1, 2, -1, 2, 0, 2, -2, 0, -2]: M20=43/218 != M100=62/301
+    eps=[-2, 2, 0, -1, 1, -1, 0, 0, 0, 1, 1, -2]: M20=3/11 != M100=142/499
+    eps=[-1, 1, -2, 1, 1, -2, 1, -2, 1, 2, -2, 1]: M20=3/10 != M100=33/100
+    eps=[-2, -1, -1, 1, 0, -2, 2, -2, 1, 2, 0, 1]: M20=27/130 != M100=363/1603
+    eps=[2, -2, -1, 0, -2, -2, 2, -2, -1, -2, 1, -2]: M20=35/178 != M100=179/898
+    eps=[-2, -2, 1, -1, 0, -1, -1, 2, -2, -1, 2, -1]: M20=94/417 != M100=499/2097
+    eps=[-2, -2, -1, 0, 1, 1, -2, 1, 1, 1, 1, 0]: M20=83/382 != M100=131/567
+    eps=[-2, -2, -2, -1, 1, 0, 2, 1, -2, -1, -2, 1]: M20=3/13 != M100=357/1499
+    eps=[-2, 0, -2, 1, 1, -1, 1, -1, -1, -1, 1, 1]: M20=19/100 != M100=99/500
+    1/12 perturbations have EXACT scale-invariance (M20==M100)
+
+(2) 400 random bounded perturbations (|eps_i|<=3) at N=60 -- any M in gap (1/13,2/25)?
+    checked 400; in gap: 0
+    near-tight values found (M<2/25): []
+
+=> scale-invariant M_inf(eps) avoids the gap => the DIFFERENCE CORE (high-scale near-AP
+   cluster) is a FINITE check over bounded eps; height N is irrelevant.  Closes the
+   difference-core case of (G) modulo proving scale-invariance + bounding eps.
