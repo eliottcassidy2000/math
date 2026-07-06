@@ -116,15 +116,37 @@ closing an open conjecture.**  The precise map, after S12:
 `CornerLonely` — THM-619/620 band sweep (finite structured sweep → needs a
 uniform argument).
 
+## The metric-side FINITE SKELETON is now formalized (S21 update)
+
+Between S12 and S21 the fleet formalized the entire *finite* skeleton of the
+gap-emptiness argument — 7 kernel-pure modules (`[propext, Classical.choice,
+Quot.sound]` only, no `native_decide`, verified S21):
+
+| module | fact | author |
+|---|---|---|
+| `LRCWitnessDenominator` | `M=c/q ⇒ q ∣ v_i±v_j` (⇒ height bounds q) | opus (mac-mini lemma) |
+| `LRCLeaveOneOut` | covering ⇒ each 11-subfamily hole nests in the dropped runner's arcs | opus (mac-mini core) |
+| `LRCGapCandidate` | a gap candidate is divisibility-rich (a multiple of every k ≤ 12) | kps |
+| `LRCCovererDichotomy` | a pinned coverer is `v = r` or `≥ 14r` | opus |
+| `LRCHarmonicAP` | vanishing second difference ⇔ AP | kps |
+| `LRCSingleLift` | every single lift of the AP is loose | kps |
+| `LRCNSpecificGap` | the second gap is **nonempty at n = 7** (5/33-lonely witness) | mac-mini |
+
+The last one matters for scope: it **formally proves (G) is n-specific, not
+universal** — so the remaining floor genuinely *is* the quantitative
+wall-vs-budget statement, not any structural identity a lens could supply. The
+combinatorial scaffolding is done; only the analytic beam remains.
+
 ## Bottom line
 
 The **conditional theorem is Mathlib-axiom-clean today**: LRC(14) ⟸ {LRC(≤13)}
 + {TightLooseDichotomy} + {CornerLonely}, sorry-free, `[propext, Classical.choice,
 Quot.sound]` only.  A CONDITIONAL Mathlib PR needs only (1) pruning to this
 surface + its native_decide-free chain and (2) a style pass.  A **FULL** theorem
-needs the three open analytic pieces above — the lift-rigidity M-minimizer, the
-scale-flow contraction rate, and the density floor — none of which is a
-formalization detail; each is genuine open mathematics (the spectral gap at
-n = 13).  This session's contribution: the tight side is clean **at the prime**,
-the composite-descent induction is a false lead, and the AP fixed point's
-uniqueness is exactly primality.
+needs the analytic **density floor** — now the *sole* open piece: the finite
+skeleton (7 modules above) and the tight-locus rigidity are formalized, and the
+n-specificity is proven, so what remains is exactly the uniform-in-height covering
+floor `safe(S, 2/25) > 0` for non-AP families (the fleet's theta-sum / Paley /
+scale-flow / potential-theory route). Not a formalization detail — genuine open
+mathematics (the spectral gap at n = 13), but now cleanly isolated with all its
+finite scaffolding in Lean.

@@ -1,3 +1,17 @@
+## mac-mini-2026-07-06-S21 -- CONSOLIDATION: metric-side FINITE SKELETON builds GREEN + kernel-pure (7 modules); corrected-M spectrum ladder; readiness updated
+
+Prompt (owner): work the next flagged steps, push/pull frequently.
+
+BUILD + AUDIT (flagged verification): the metric-side finite skeleton of (G) -- 7 modules -- all build GREEN and kernel-pure ([propext,Choice,Quot], no native_decide): LRCWitnessDenominator (my q|v_i+-v_j lemma), LRCLeaveOneOut (my covering-as-nesting core), LRCGapCandidate (kps divisibility-rich), LRCCovererDichotomy (opus coverer_height), LRCHarmonicAP (kps 2nd-diff-zero<=>AP), LRCSingleLift (kps), LRCNSpecificGap (my n=7 gap witness). The combinatorial scaffolding of the density-floor argument is DONE in Lean; only the analytic floor remains.
+
+CORRECTED-M SPECTRUM (using the S20-fixed fast-M): the loneliness spectrum near the tight end is a clean discrete OSTROWSKI LADDER -- 1/13, 2/25, 3/37, 4/49, 5/61 all ATTAINED (the {1..11,12k} families = rung k/(12k+1)), plus 1/12, 3/35, 2/23, 4/45, 1/11. The FIRST gap (1/13,2/25) is the widest (0.00308) = the crux (G); the flagged 'third gap (2/25,1/12)' is NOT a single empty gap -- it is FILLED by the ladder rungs 3/37, 4/49 (each inter-rung gap is a separate (G)-type Farey cell).
+
+READINESS UPDATED (get-ready-for-Mathlib thread): the report now documents the 7-module formalized skeleton + that LRCNSpecificGap FORMALLY proves (G) is n-specific (not universal), so the sole open piece is the analytic density floor (fleet's theta-sum/Paley/scale-flow/potential-theory route). The conditional core stays Mathlib-axiom-clean.
+
+DELIVERABLES: readiness report update; spectrum result lrc_spectrum_near_tight_fixedM_macmini_S21.out; axiom audit of 7 metric modules. No canon overridden. (Concurrent mac-mini-S21 is on Freiman/min-doubling HYP-4492 -- non-overlapping.)
+
+NEXT: the density floor (analytic) is the sole open frontier; the finite skeleton is formalized and ready to consume a floor lemma.
+
 ## mac-mini-2026-07-06-S21 -- S20's flagged steps: FORMALIZED the min-doubling equality-case core (sumset_eq_translates GREEN) + honestly flagged step 1's CIRCULARITY (the (U)-factoring is diagnostic, not a closure) (HYP-4492)
 
 Prompt (owner): work on the next flagged steps; push/pull frequently.
