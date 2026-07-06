@@ -2,3 +2,16 @@
 PART 1: is the CANONICAL lift the M-minimizer over each profile?
 (and does any lift drop into the gap?)
 ==============================================================================
+  near-gap profiles tested: 120 (each x ~700 lifts)
+  profiles where SOME lift has M < canonical M: 0 (canonical IS the minimizer)
+  *** lifts landing IN-GAP (1/13, 2/25): 0
+    ZERO gap members across all lifts tested -- the transversal
+    AP-rigidity extends off canonical lift on this scan.
+  non-AP profiles whose lift-min DROPS below 2/25: 0 (all lift-mins >= 2/25: non-AP profiles stay clear)
+
+==============================================================================
+PART 2: the AP profile's lifts -- tight (1/13) or clear, never gap?
+==============================================================================
+  AP-profile lifts: {'tight': 1, 'gap': 0, 'clear': 2048, 'below': 0}
+  other tight (M=1/13) lifts of the AP profile: 0 (the (U) question -- are there non-AP tight families?)
+  ZERO AP-profile lifts in the gap.
