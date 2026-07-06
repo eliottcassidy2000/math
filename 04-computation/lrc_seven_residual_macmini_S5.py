@@ -145,6 +145,42 @@ def report(name, base_speeds, lifted_uv):
     return dict(name=name, nb=nb, nl=nl, distinct=distinct, mb=mb, phi=phi,
                 mU=mU, proper=proper)
 
+def adversarial_min_free(freqs, rho, restarts=40, sweeps=120, sgrid=3000):
+    """min over phase vectors phi of the free fraction of combs
+    {freq_i s + phi_i}: how empty can the s-circle be forced?  Coordinate
+    descent from random restarts (the sibling's anticover pattern).  If this
+    reaches ~0, the combs CAN tile at SOME phase => a free-measure argument
+    CANNOT close the residual; the family's OWN (structured) phases are what
+    save it."""
+    def free_frac(phi):
+        cnt = 0
+        for j in range(sgrid):
+            s = (j + 0.5) / sgrid
+            if all(dist(f * s + p) >= rho for f, p in zip(freqs, phi)):
+                cnt += 1
+        return cnt / sgrid
+    best = 1.0
+    for _ in range(restarts):
+        phi = [random.random() for _ in freqs]
+        cur = free_frac(phi)
+        step = 0.25
+        for _sw in range(sweeps):
+            improved = False
+            for i in range(len(freqs)):
+                for d in (step, -step):
+                    phi2 = list(phi); phi2[i] = (phi2[i] + d) % 1
+                    f = free_frac(phi2)
+                    if f < cur:          # adversary MINIMIZES free fraction
+                        cur, phi = f, phi2; improved = True
+            if not improved:
+                step /= 2
+                if step < 1e-4:
+                    break
+        best = min(best, cur)
+        if best <= 1e-6:
+            break
+    return best
+
 if __name__ == "__main__":
     print("=" * 78)
     print("THE >=7 RESIDUAL: small-base-carries + free-fraction reduction")
