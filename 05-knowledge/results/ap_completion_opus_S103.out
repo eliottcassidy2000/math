@@ -1,0 +1,12 @@
+c=1: base={c..11c}; 12th speed v in [1,59]:
+   tight (M=1/13): [12]  (expect v=12c=12 up to gcd)
+   IN WINDOW (1/13,2/25): NONE
+   loose (M>=2/25): 47
+c=2: base={c..11c}; 12th speed v in [1,59]:
+   tight (M=1/13): [24]  (expect v=12c=24 up to gcd)
+   IN WINDOW (1/13,2/25): NONE
+   loose (M>=2/25): 47
+
+=> if IN WINDOW is empty for all c, the AP-completion step holds: adding a 12th runner
+   to a dilated AP-11 gives tight (complete the AP) or loose (M>=2/25), never in-window.
+   This is the inductive core of (C)/hdich given the 11-subfamily-tight hypothesis.
