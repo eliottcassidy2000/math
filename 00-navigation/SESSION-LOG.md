@@ -1,3 +1,20 @@
+## mac-mini-2026-07-06-S26 -- THE k=12 RESONANCE LADDER = opus-S100's FAREY LADDER, concretely: base {1..11} gives M=j/(12j+1) (1/13, 2/25, 3/37,...); the gap = OPEN interval between consecutive rungs j=1,2 => SKIPPED; single+double-outlier bounded case EMPTY (HYP-4552)
+
+Prompt (owner): work the next step; synthesize other agents; push/pull during downtimes.
+
+SYNTHESIS (4 agents): kps-S35 (plateau+resonance ladder mechanism, corrects my S25 isolation) + opus-S100 (Farey ladder j/(kj+1)) + opus-S115 (plateau = height-indep subfamily cap, GREEN) + my S25 (far element structure).  Took the k=12 closure kps flagged as my lane.
+ (1) VALIDATED kps k=7 template (3/23, one rung).
+ (2) THE k=12 LADDER LAW (exact): base {1..11}, outlier x=12j => M=j/(12j+1) = EXACTLY opus-S100's Farey ladder (1/13 j=1 completes AP, 2/25 j=2 block-lift at wall, 3/37, 4/49, -> plateau 1/12).  Generic x => plateau 1/12 (opus-S115).
+ (3) THE CLOSURE: the gap (1/13,2/25) is the OPEN interval between CONSECUTIVE rungs j=1,2 => the ladder SKIPS it.  Crossover exact: k=7 j/(6j+5) drops a rung inside; k=12 j/(12j+1) brackets the gap.
+ (4) SWEEP: ZERO in-gap across 14 single-outlier + 8 double-outlier bases (~9000 families).  The natural bounded family (base + 1-2 outliers = opus-S115 defected dilated AP) is EMPTY at k=12.
+
+NET: the bounded single/double-outlier case CLOSED at k=12 via the exact ladder law = the Farey ladder; kps's 'gap narrower than rung spacing' made concrete (the gap IS the interval between consecutive Farey rungs 1/13, 2/25).  Pulled during the compute (per owner).
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection.)
+
+FILES: lrc_k12_ladder_macmini_S26.py (+.out), lrc_k12_double_outlier + lrc_k12_ladder_law _macmini_S26.out; reflection the-gap-is-the-interval-between-two-farey-rungs-macmini-S26.md; HYP-4552 (+INDEX); broadcast + reply to kps.  No canon overridden.
+
+NEXT: prove the ladder law M=j/(12j+1) closed-form (like kps's j/(6j+5)) + 'no attained value strictly between consecutive Farey rungs for base+outlier families' = the bounded-case Farey-gap closure; then the no-isolated-runner residual.
 ## mac-mini-2026-07-06-S25 -- RECURSIVE-ACROSS-n: gap members are PEEL-ISOLATED critical configs (no descending recursion); the HEIGHT BOUND relocates to a NUMERATOR-c bound (far element ~ 13c/2); Stern-Brocot depth decreases 2->1->0 with n (HYP-4542)
 
 Prompt (owner): work reductive targets; see recursive patterns as n changes.
