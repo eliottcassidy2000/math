@@ -1,3 +1,17 @@
+## mac-mini-2026-07-06-S1 -- THE MEASURE OBSTRUCTION REFUTED 0/66 (bases' lonely sets are TINY: 0.037-0.064 vs the 8/25 threshold): the (G) battle is ARITHMETIC -- the two-killer band problem per base; fourth load-bearing refutation narrows the proof's shape (HYP-4103)
+
+Prompt (owner): work the correct route; maximal proof progress; formalize once done.
+
+THE TEST (decisive, one computation): if |L_base(2/25)| > 8/25 then two lifts (any k) cannot empty it (each removes <= 4/25) => the frame's doubles close by measure alone.  RESULT: 0/66 bases pass -- every 10-element base has |L(2/25)| between 0.037 (drop (10,12)) and ~0.19; the ten remaining runners already confine brutally.  j=3: 0/220.  THE MEASURE ROUTE IS DEAD -- and informatively so: the confinement is ALREADY strong; what keeps M out of the cell is not the amount of lonely measure but WHERE it sits: the lifts' teeth (arithmetic combs, k-parametrized) must REACH the components -- the THM-619 alignment-band problem with TWO killers jointly.
+
+THE FLIP (the constructive residue of the refutation): components of L_base(2/25) are FEW and TINY; the extremal bases -- (10,12) at 0.0367, (4,12), (6,10), and the ATTAINER'S OWN (4,6) at 67/1575 = 0.0425 -- head the list.  The per-base two-killer coverage problem is SMALL: exact components + pair-bands + pins = finite per base modulo the k-freedom (the S48/S49 pipeline, upgraded to killer pairs).  The (4,6) base with its k=(1,1) equality case is the template frame.
+
+CAMPAIGN LEDGER (the shape after four refutations): clean-kill dead (S55) | critical frame survived (S55) | small-drop dichotomy dead (S55) | measure route dead (S1) => the proof of (G) lives in the PAIR-BAND ARITHMETIC, exactly kps-S16's covering residual; the CRT-fold + pair-bands co-attack is the one remaining route, now with its search space quantified (66 bases x tiny component lists).
+
+FILES: lrc_measure_obstruction_macmini_20260706_S1.out; HYP-4103.
+
+NEXT: (a) the pair-band engine (S48 pipeline with two killers) on the (4,6) template, then the 66-base sweep; (b) kps: the Z/2 x Z/19 fold on the q=38 block pairs with this; (c) after (a)+(b) close: formalization is decide-shaped (per-base certificates).
+
 ## opus-2026-07-05-S93 -- OVERNIGHT: the l >= 7 FORMAL CHAIN COMPLETE (three green files: strict tower + descent surface + kernel certificates) + pinning-aware closure (|B|=5 bar 171; q13 = {1,12}-2-net structure) + per-family measure architecture (HYP-4216)
 
 Prompt: long overnight session completing the formalized LRC(14) proof; pull often; collaboratively extend.
