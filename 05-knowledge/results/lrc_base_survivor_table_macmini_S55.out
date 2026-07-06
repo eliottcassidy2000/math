@@ -1,0 +1,9 @@
+BASE-SURVIVOR TABLE: does any multiplier a survive the fixed base constraints?
+(c-deep witness at q in (12.5c, 13c); base = {1..12} minus j elements)
+  j=2 (base size 10): surviving (c, q, drop, a) count = 1980; examples: [(3, 38, (1, 2), 1), (3, 38, (1, 3), 2), (3, 38, (1, 4), 2), (3, 38, (1, 5), 2)]
+  j=3 (base size 9): surviving (c, q, drop, a) count = 6600; examples: [(3, 38, (1, 2, 3), 1), (3, 38, (1, 2, 4), 1), (3, 38, (1, 2, 5), 1), (3, 38, (1, 2, 6), 1)]
+  j=4 (base size 8): surviving (c, q, drop, a) count = 14850; examples: [(3, 38, (1, 2, 3, 4), 1), (3, 38, (1, 2, 3, 5), 1), (3, 38, (1, 2, 3, 6), 1), (3, 38, (1, 2, 3, 7), 1)]
+  j=5 (base size 7): surviving (c, q, drop, a) count = 23760; examples: [(3, 38, (1, 2, 3, 4, 5), 1), (3, 38, (1, 2, 3, 4, 6), 1), (3, 38, (1, 2, 3, 4, 7), 1), (3, 38, (1, 2, 3, 4, 8), 1)]
+
+TOTAL survivors across j = 2..5, c = 3..12: 47190
+If zero: the multi-lift (G) reduces entirely to this table + strict looseness.
