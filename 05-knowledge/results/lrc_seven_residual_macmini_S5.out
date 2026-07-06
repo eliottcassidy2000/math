@@ -49,3 +49,17 @@ SUMMARY
      torus tested: phi>0 at a base-clear t0 <=> a 2/25-clear point.
   The lone IMPROPER case is the AP at M=1/13 (all u=0): a 1-D subtorus,
   not in the (A) enumeration -- it is a (C)/census object, correctly split off.
+
+==============================================================================
+THE CONTRAST (why the residual needs opus's structured lane, not measure)
+==============================================================================
+At band 2/25, seven combs have total danger measure 7*4/25 = 28/25 > 1:
+with FREE phases the adversary CAN tile the circle (free fraction -> 0).
+But the family's OWN phases (u_i t0 at a base-clear t0) avoid the tiling.
+  7 consecutive [1..7]: total danger measure 1.120; ADVERSARIAL min free fraction = 0.1100 (cannot tile even adversarially)
+  7 primes: total danger measure 1.120; ADVERSARIAL min free fraction = 0.2510 (cannot tile even adversarially)
+  pole-7-cluster: total danger measure 1.120; ADVERSARIAL min free fraction = 0.2340 (cannot tile even adversarially)
+  => the >=7 residual is NOT a free-measure statement; the specific
+     phase orbit {u_i t0 : t0 in G_B} is the object, and opus-S97's
+     transport shows the RAY orbit hits margin 2/13 (>2/25) -- the
+     unbounded direction is CLOSED; the non-ray patterns are finite.

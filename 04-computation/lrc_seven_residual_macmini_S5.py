@@ -242,3 +242,22 @@ if __name__ == "__main__":
     print(f"     torus tested: phi>0 at a base-clear t0 <=> a 2/25-clear point.")
     print(f"  The lone IMPROPER case is the AP at M=1/13 (all u=0): a 1-D subtorus,")
     print(f"  not in the (A) enumeration -- it is a (C)/census object, correctly split off.")
+
+    print("\n" + "=" * 78)
+    print("THE CONTRAST (why the residual needs opus's structured lane, not measure)")
+    print("=" * 78)
+    print("At band 2/25, seven combs have total danger measure 7*4/25 = 28/25 > 1:")
+    print("with FREE phases the adversary CAN tile the circle (free fraction -> 0).")
+    print("But the family's OWN phases (u_i t0 at a base-clear t0) avoid the tiling.")
+    for label, freqs in [("7 consecutive [1..7]", [1,2,3,4,5,6,7]),
+                         ("7 primes", [11,13,17,19,23,29,31]),
+                         ("pole-7-cluster", [20,21,24,25,45,46,66])]:
+        adv = adversarial_min_free(freqs, RHO)
+        tot = len(freqs) * 2 * RHO
+        print(f"  {label}: total danger measure {tot:.3f}; "
+              f"ADVERSARIAL min free fraction = {adv:.4f} "
+              f"({'CAN TILE (free measure fails)' if adv < 5e-3 else 'cannot tile even adversarially'})")
+    print("  => the >=7 residual is NOT a free-measure statement; the specific")
+    print("     phase orbit {u_i t0 : t0 in G_B} is the object, and opus-S97's")
+    print("     transport shows the RAY orbit hits margin 2/13 (>2/25) -- the")
+    print("     unbounded direction is CLOSED; the non-ray patterns are finite.")

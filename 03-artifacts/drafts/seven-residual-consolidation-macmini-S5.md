@@ -55,6 +55,32 @@ machinery.** The reduction is the exact 2-torus generalization of opus's ray
 theorem: opus handles the single-scale ray (S·P); the base runners here supply
 the t-freedom that opus's fixed core J supplied.
 
+### The stronger finding: distinct-frequency combs don't tile at 2/25
+
+Naively, seven danger combs of measure 2ρ = 4/25 have total measure 28/25 > 1,
+so one expects they CAN cover the s-circle at some (adversarial, free) phase —
+making the residual a phase-orbit question. **They cannot.** An adversarial
+coordinate-descent search (40 restarts × 120 sweeps, MINIMIZING the free
+fraction over all phase vectors) leaves the circle uncovered for every tested
+≥7 pattern:
+
+| pattern (s-frequencies) | total danger measure | adversarial min free fraction |
+|---|---|---|
+| 7 consecutive {1..7} | 1.120 | **0.110** |
+| 7 primes {11,13,17,19,23,29,31} | 1.120 | **0.251** |
+| pole-7-cluster {20,21,24,25,45,46,66} | 1.120 | **0.234** |
+
+The free fraction stays bounded away from 0 under the WORST phase — distinct
+frequencies are too rigid to tile despite the measure surplus. This is exactly
+opus-S96's "distinct-frequency interval-combs never tile (φ > 0)" lemma, now
+with direct band-2/25 evidence for the ≥7 case. **If that lemma holds
+universally, the ≥7 residual is empty UNCONDITIONALLY — the phase orbit is not
+even needed** (the combs never cover, so a clear s exists at every base-clear t₀).
+The lemma is a FINITE decidable census (≤ 12 distinct frequencies), so this is a
+bounded verification, not an open analytic frontier. (Search is heuristic —
+strong evidence for opus's lemma, not a proof; opus-S97's transport gives the
+proof on the ray sub-shape.)
+
 ### Verification (6/6 proper residual tori)
 
 Constructed ≥7-lifted tori (the pole-necessity 7-cluster; 9- and 12-lifted
@@ -75,7 +101,7 @@ loose branch's hard half — reduces to exactly these items:
 | 1 | ≤6-lifted / \|S\|≤6 rung (measure one-liner + citation) | **proved, kernel-pure in flight** | kps-4247 |
 | 2 | ≥7-lifted (A) residual ⟹ φ > 0 (small-base-carries) | **reduced, verified 6/6** (this note) | this + opus |
 | 3a | ≥7-comb RAY patterns (s-freqs = S·P) ⟹ clear | **GREEN, formal, φ BYPASSED** (opus-S97 transport) | opus-S97 |
-| 3b | ≥7-comb non-ray (gcd-1) patterns ⟹ φ > 0 | **finite decidable census** (≤12 combs, fixed scale) | opus/template lane |
+| 3b | ≥7-comb non-ray patterns ⟹ φ > 0 ("distinct combs don't tile") | **finite decidable census** (≤12 combs); adversarial φ_worst > 0 confirmed on all tested patterns | opus/template lane |
 | 4 | \|S\|≥7 (C) residual: k-unbounded cluster height | census-shaped; density-wall + anchor bounds | sibling S3 |
 | 5 | The finite 1-dim census per gap value | mechanical, decidable | uniform cell lemma + fleet |
 | 6 | The accumulation principle (eq 4/5) | cite (preprint) or self-contained re-prove | S4 lead |
@@ -117,10 +143,13 @@ on its unbounded direction and finite-census on the rest.
 - **The base could be empty** (|B| = 0, all 12 lifted): then G_B = whole
   circle and step 2 asks the 12 combs to tile at every t — still opus's
   mechanism, now with full t-freedom (the strongest case for φ > 0).
-- The degenerate sub-case (≤ 6 DISTINCT lifted frequencies among ≥ 7 runners)
-  is NOT killed by measure alone (each comb still contributes 4/25); it needs
-  the same φ > 0 — I do not claim a free measure win there. (Verified safe, but
-  via φ > 0, not via a total-measure < 1 bound.)
+- The adversarial search is a HEURISTIC (coordinate descent can miss a global
+  tiling optimum); it is strong evidence that φ_worst > 0 for ≥7 distinct
+  frequencies at 2/25, not a proof. The proof of "distinct combs never tile"
+  is opus's open lemma (with the ray sub-shape already GREEN via S97 transport).
+- The ≤ 6-DISTINCT-frequency sub-case (repeats among ≥ 7 lifted) has even
+  fewer effective combs — a fortiori φ_worst > 0; it is the easy end of the
+  same lemma.
 
 ## Status
 
