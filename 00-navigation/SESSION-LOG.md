@@ -1,3 +1,21 @@
+## mac-mini-2026-07-06-S3 -- THE UNIFORM CELL LEMMA PROVED + LEAN GREEN (6 kernel-pure theorems: the stratification apparatus parametric over EVERY Farey cell) + BINDER UNITS & per-cell witness determinism (new) + the 5-cell anchored probe (8,079 families, zero in-gap) (HYP-4252)
+
+Prompt (owner): work the binding-pair route creatively; formalize if finished; pull frequently and extend incoming ideas.
+
+PULLED + EXTENDED: sibling S1's k-stratification (HYP-4232) + S2's binder parity/witness determinism (HYP-4242, in flight on the 3/38 k=1 kill -- NO COLLISION: I took the two unclaimed extensions); kps-S17/S19 cluster-gcd ladder (consumed as the cell-independent k-reduction); THM-622's cell frame (the lemma now covers its ENTIRE reduction, not just the mediant).
+
+THE WORK:
+ (1) THE UNIFORM CELL LEMMA (proved, elementary; 0 violations on 436 families / 268 DISTINCT attained cells, k-spectrum to 19): for ANY attained M(W) = c/q reduced at maximizer m/q*: q | q*; binders are k-multiples at +-ck; quotient recursion d_{qk}(kx) = k d_q(x); q | quotient binding-pair sum; NEW (iv) BINDER UNITS -- gcd(v', q) = 1 (common prime would divide c against gcd(c,q)=1): at q=38 this is the sibling's both-odd parity PLUS 19 ∤ v'; in general the k=1 anchored shapes are the phi(q)/2 UNIT pairs (9 at 38 -- matching HYP-4242 -- 16/18/16/30 at 51/63/64/77); NEW (v) WITNESS DETERMINISM at every cell by coprime cancellation (m == +-c (v')^{-1} mod q).  The lemma never uses in-gapness: every attained value of every family is a test case.
+ (2) NON-THEOREM (sign-error trap, logged in draft): the mod-4 parity kill of 2-power cells is FALSE (w' == -v' mod q => sum == 0 mod 4 automatically).  Caught pre-claim; the analogous trap exists at every 2-power cell.
+ (3) THE PROBE: 8,079 anchored families over five cells (unit pair as elements + 2..12 covering core clearing at the FORCED witness m + random clearers, heights <= 90): ZERO in-gap; every template lands M >= 0.127 (nearest approach to any cell ~0.05) -- THM-622's integral quantization seen at all five cells; zero families under 1/13 = LRC(13) silently re-verified 8,079 times.
+ (4) LEAN (2 build rounds + lint cleanup): LRCUniformCell.lean GREEN, registered, kernel-pure (standard trio; grid_div_cell and pair_sum_dvd_cell on [propext] alone).  BONUS: dInt_scale_cell needs NO positivity of q (linter caught the unused hypothesis).  binder_unit_cell SIMPLIFIES the sibling's witness_determined: the two explicit non-divisibility hypotheses (odd, 19 ∤ v) can be replaced by one coprimality chain -- noted in the letter, their file untouched (no silent override).
+
+CONSEQUENCE: every cell of (G) now has the same finite anchor structure: phi(q)/2 unit-pair shapes x forced witness class x explicit forbidden residues x ladder-bounded k-strata.  The remaining open dimensions: the c-TAIL (cell index unbounded -- the frontier) + the |S| >= 7 residual (sharpened: quotient side carries a UNIT pair).
+
+FILES: drafts/uniform-cell-lemma-macmini-S3.md; lrc_uniform_cell_lemma_macmini_S3.py (+ .out, partA_fixed.out); LRCUniformCell.lean (registered); HYP-4252 (+INDEX).  No canon overridden.
+
+NEXT: (a) the c-tail mechanism (the one unbounded dimension of (G) -- stability at both Farey ends? binding-pair sum growth?); (b) the |S| >= 7 residual with the unit-pair sharpening; (c) the sibling's k=1 census lands -> compose with this for the full 3/38 verdict; (d) wire lift_floor_beta_ladder into the dichotomy consumer (S2's spec'd one-liner, still open).
+
 ## opus-2026-07-06-S95 -- MECHANICAL LEDGER CLEARED: the |B|=5 production table (792/792, zero failures) + LRCClearRowsB5 GREEN (two lemmas cover the ten worst bases) + dense T-sweep + the strict-vs-2/25 alignment note (HYP-4236)
 
 Prompt: work the remaining mechanical tasks; pull frequently; integrate and extend.
@@ -9,6 +27,21 @@ Prompt: work the remaining mechanical tasks; pull frequently; integrate and exte
 (c) THE ALIGNMENT NOTE (assembly draft, S95 addendum): the descent surface's strict > 1/13 is EXACTLY the rigidity leg's needed conclusion (tight-side uniqueness); the >= 2/25 clearings are the GAP leg's (loose branch). They are different slots in klein's plug; the unbounded-spread gap cases belong to the loose-branch machinery, not descent. DESIGN NOTE: |B| <= 4 assembly consumes the certificate GENERATOR per family (existence guaranteed by the sweep constant), not a static table -- per-family components are unavoidable there and cheap.
 
 Session shape: pure execution of the S94 ledger; pulls integrated (mac-mini k-stratification/k=1-anchored in flight, no collisions). My section stands: formal surface + demo + tables + bars + box, all delivered.
+## mac-mini-2026-07-06-S2 -- THE k=1 ANCHORED KILL phase 1: binder parity (18->9, from pure reasoning) + witness determinism, both LEAN GREEN; the anchored sweep CLEAN to height 60 (23.5B leaves, 547,099 survivors, ZERO hard); the k-reduction composed FORMALLY with kps's kernel-pure rung (HYP-4242)
+
+Prompt (owner): the census-harness next target + remaining math/formalization; reason while builds run.
+
+REASONING FIRST (before any build, as directed): (1) BINDER PARITY -- the 38-grid binding pair must be BOTH-ODD: an even binder gives v*m even, never +-3 (odd) mod 38 (even modulus preserves parity).  The 18 k=1 pair shapes collapse to 9.  (2) WITNESS DETERMINISM -- the binder FORCES the dilation: m == 3 v^{-1} mod 38; hence the other ten runners must avoid the five explicit residues 13v*{0,+-1,+-2} mod 38 (a strong cheap filter, derived not searched).
+
+THE ANCHORED SWEEP (the harness target): lrc_cell38_anchored_S2.c (S54-census harness + anchor preload + determinism filter).  TWO REAL BUGS caught in smoke testing: (a) the anchor preload broke the DFS descending-order invariant (order statistics now computed locally per leaf); (b) an intermediate in-place sort corrupted sibling branches (45x undercount vs the fixed run -- the smoke-test discipline caught it).  RESULT: all 9 anchors, heights [1,60], full gap profile + determinism filter: 31.6B nodes, 23.5B leaves, 472.8M cheap-filter passers, 547,099 full survivors, EVERY ONE witness-cleared >= 2/25, HARD = 0.  **No k=1-structured 3/38-attainer to height 60.**
+
+THE LEAN (while the sweep ran, per the directive): LRCKStratification.lean extended to 7 theorems, all kernel-pure: binder_odd (the parity collapse; the omega-vs-nonlinear-atom fight resolved by a linear key lemma + linear_combination), witness_determined (two binding dilations agree mod 38; prime-by-prime cancellation 2 and 19 then omega), and k_bounded_of_stratification -- THE COMPOSITION: my stratification's k-cluster instantiates kps-S18's kernel-pure gap_gcd_rung at d := k, making the k >= 2 height bound FORMAL at |S| <= 3 (auto-upgrades when their sharp |S| <= 6 lands).
+
+ABSORBED: kps-S18 (LRCClusterGcd kernel-pure + proof-engineering lore), opus-S94/S95 claims (cert-table instantiation, |B|=5 production).
+
+FILES: lrc_cell38_anchored_S2.c, results/lrc_cell38_anchored_macmini_S2.out; LRCKStratification.lean (7 theorems); HYP-4242 (+INDEX).  No canon overridden.
+
+NEXT: (a) the anchored kill's REALIZATION theorem (heights > 60: the pair anchors + determinism + the gcd-ladder strata -- the remaining integral argument); (b) the |S| >= 7 residual's quotient-side census (<= 5-element mod-38 configs, same harness pattern); (c) kps's sharp |S| <= 6 rung when it lands -> upgrade the composition; (d) the l=4 workers STILL alive (6 processes, days-long) -- post-pass stands.
 
 ## opus-2026-07-06-S94 -- INSTANTIATION: the end-to-end demo GREEN (twelve concrete runners, one strictly lonely time) + T-sweep bars 52/58 + the l >= 9 box CLEAN in 94s (unique non-clearer = the tight dilate 4*{1..12}, non-primitive) (HYP-4226)
 

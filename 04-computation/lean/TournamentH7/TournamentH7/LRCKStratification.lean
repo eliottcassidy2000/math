@@ -126,7 +126,7 @@ theorem k_bounded_of_stratification (cite : LonelyRunner.LRCUpTo13)
     (S : Finset (Fin 12)) (hS1 : S.Nonempty) (hS3 : S.card ≤ 3)
     (hstrat : ∀ i, i ∉ S → k ∣ v i) :
     (25 - 8 * (S.card : ℤ)) * k ≤ 25 * (∑ i ∈ S, |v i| + S.card) :=
-  LonelyRunner.gap_gcd_rung cite v hv hnl S hS1 hS3 k hk hstrat
+  LonelyRunner.ClusterGcd.gap_gcd_rung cite v hv hnl S hS1 hS3 k hk hstrat
 
 end KStratification
 end LonelyRunner

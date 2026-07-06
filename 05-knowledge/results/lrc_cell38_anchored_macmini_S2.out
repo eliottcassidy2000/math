@@ -1,0 +1,17 @@
+CENSUS [25..60]: visited=31645423005 leaves=23513782772 | F1(cover)=969530413 F2(spread)=472829037 F3(24comp)=472829037 F4(pair38)=472829037 prim=472829037 F5(pinning)=547099 | witness-ok=547099 HARD=0
+residue shapes mod 13 of fully-filtered: full-system=223 with-13-mult=268078 DOUBLED-PAIR=278798
+SPECTROSCOPY: composite-CRT witness exists: 0 / fails: 0
+first-q histogram (q: count): 26:146793 27:116210 28:75162 29:123890 30:14619 31:49928 32:12349 33:5785 34:1550 35:635 36:51 37:116 38:4 39:3 41:2 42:1 44:1
+first composite-q histogram:
+BOTTOM-6: inside [1,12]: 0 / not: 0
+w_min histogram: 1:233452 2:76687 3:124669 4:69609 5:42682
+bottom-6-max histogram:
+anchor v=1 done: visit=2793863238 leaf=1944772956 F5=8058 scan-ok=8058 HARD=0
+anchor v=3 done: visit=4831862078 leaf=3457991145 F5=26110 scan-ok=26110 HARD=0
+anchor v=5 done: visit=7039064223 leaf=5113764334 F5=38592 scan-ok=38592 HARD=0
+anchor v=7 done: visit=9879888847 leaf=7149875193 F5=40448 scan-ok=40448 HARD=0
+anchor v=9 done: visit=12306032160 leaf=8887663594 F5=80661 scan-ok=80661 HARD=0
+anchor v=11 done: visit=14692031126 leaf=10598708852 F5=189661 scan-ok=189661 HARD=0
+anchor v=13 done: visit=22334200650 leaf=16425712103 F5=270279 scan-ok=270279 HARD=0
+anchor v=15 done: visit=29590093518 leaf=22075979757 F5=387968 scan-ok=387968 HARD=0
+anchor v=17 done: visit=31645423005 leaf=23513782772 F5=547099 scan-ok=547099 HARD=0
