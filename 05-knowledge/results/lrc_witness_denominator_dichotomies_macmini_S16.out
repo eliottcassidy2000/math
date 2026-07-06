@@ -1,0 +1,22 @@
+family                       M=c/q       q      q factored   even?  13|q  5|q
+----------------------------------------------------------------------------------
+AP {1..12}                      1/13=0.0769    13   13           odd   yes  no
+doubled-apex {1..11,24}         2/25=0.0800    25   5^2          odd   no   yes
+block {..17,19}                 2/25=0.0800    25   5^2          odd   no   yes
+{1..11,23}                      1/12=0.0833    12   2^2*3        EVEN  no   no
+{1..11,13}                      1/12=0.0833    12   2^2*3        EVEN  no   no
+deep well {1..11,168}         14/169=0.0828   169   13^2         odd   yes  no
+{1..10,12,25}                   1/11=0.0909    11   11           odd   no   no
+{2..13}                         2/15=0.1333    15   3*5          odd   no   yes
+{1..11,14}                      1/12=0.0833    12   2^2*3        EVEN  no   no
+
+=== ODD/EVEN DESCENT verification (even-q witness => even runners halve to clearance ceil(c/2) at q/2):
+  {1..11,23}: q=12=2*6, c=1, witness a=1; 5 even runners; halved clearance at mod 6 = 1 (predicted ceil(1/2)=1)
+  {1..11,13}: q=12=2*6, c=1, witness a=1; 5 even runners; halved clearance at mod 6 = 1 (predicted ceil(1/2)=1)
+  {1..11,14}: q=12=2*6, c=1, witness a=1; 6 even runners; halved clearance at mod 6 = 1 (predicted ceil(1/2)=1)
+
+READING: the near-tight spectrum lives on denominators that are prime-square /
+small-prime (5,13) structured; the parity descent turns an even witness into a
+HALF-modulus config (the '2' of 14=2.7 acting as renormalization).  The dichotomies
+STRATIFY the off-grid density floor: 13|q (character-sum/pinning), q even (halve),
+q coprime-to-26 (the generic residual).
