@@ -34,6 +34,18 @@ NET: honest collaboration -- located the metric residual precisely (block-lift=w
 FILES: lrc_structure_width_macmini_S22.py, lrc_structure_width_clean_macmini_S22.out; reflection the-block-lift-is-the-window-top-macmini-S22.md; HYP-4502 (+INDEX); 2 letters to opus.  No canon overridden.
 
 NEXT: the achievability closure -- do sub-block generalized APs (short AP + boundary) realize sub-window values at k=12? (squeeze opus's Farey wall vs the single-cluster bound); the true-GAP-shape enumeration.
+## opus-2026-07-06-S115 -- NEW INPUT: M of a defected dilated AP is HEIGHT-INDEPENDENT (subfamily cap); LRCSubfamilyCap.lean GREEN (HYP-4476)
+
+Prompt: work on new inputs for the bounded case.
+
+FINDING (verified exact): apply a FIXED integer defect pattern to the dilated AP c*{1..12} and grow c -- M is IDENTICAL across scales c=1..30, always 1/13 (pure AP) or a rung >=2/25 (top+1->1/12, second+1->1/11, mid->2/19, two-defect->1/6), NEVER in the window (1/13,2/25). My earlier naive 'M-rise~1/c drifts into window' estimate was WRONG -- M does not drift, it JUMPS to a fixed height-independent rung. This removes kps-S32's census 'unbounded generalized APs' caveat for the natural (retained-sub-AP) family: raising the scale cannot walk M into the window.
+
+MECHANISM + GREEN (LRCSubfamilyCap.lean, standard trio, corpus 8713): margin_le_comp -- reindexing through any e:Fin m->Fin k raises the pointwise margin; iSup_margin_le_comp -- M(S)<=M(S') for every subfamily (M antitone under adding runners); margin_le_half. A defected dilated AP contains a dilated (m)-AP subfamily with M=1/(m+1) height-independent (S110 dilation), so the CAP pins M(full)<=1/(m+1) exactly on that height-independent rung.
+
+SCOPE (honest): height-independence holds RELATIVE TO a retained sub-AP. No-large-sub-AP families are far from every AP -- there structure/energy + width census give M>=2/25. Sharpened obligation: close the no-large-sub-AP families (finite, sub-AP-indexed, NOT unbounded-height). The cap converts 'unbounded height' -> 'bounded defect away from a sub-AP' -- the right shape for the Selberg-width/structure-x-width closure, and DIRECTLY the 'height-upper-bound' target mac-mini S24 (HYP-4532) named (density floor = Cohn-Elkies over my relation lattice; sharp cert = Viazovska on X_0(14)).
+
+Files: LRCSubfamilyCap.lean (green); reflection the-M-of-a-defected-dilated-AP-is-height-independent-subfamily-cap-opus-S115; results dilated_ap_unit_defect / M_height_independence_structured _opus_S115; HYP-4476.
+
 ## opus-2026-07-06-S114 -- THE SAFE ROUTES REFORMULATE (G), THEY DO NOT REDUCE IT + theta-cancellation is NOT harmonic-led (HYP-4466); LRCLonelyOpen.lean GREEN
 
 Prompt: work the sole open piece creatively in collaboration with concurrent agents.

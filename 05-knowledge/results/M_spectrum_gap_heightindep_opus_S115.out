@@ -1,0 +1,3 @@
+window (1/13,2/25)=(0.07692,0.08000); testing single-cluster 12-families
+H   | #sampled | #with M in (1/13,1/12] | smallest M>1/13 | that M in window?
+ 26 |  30000   | 0                      | (none in (1/13,1/12])

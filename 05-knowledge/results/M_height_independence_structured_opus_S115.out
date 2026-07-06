@@ -1,0 +1,16 @@
+pattern                        | c=1        c=3        c=10       c=30      | height-indep? | regime
+no defect (dilated AP)         | 1/13       1/13       1/13       1/13      | True          | =1/13 AP
+top +1                         | 1/12       1/12       1/12       1/12      | True          | >=2/25 loose
+top +2                         | 1/12       1/12       1/12       1/12      | True          | >=2/25 loose
+
+(continued) pattern              | c=2       c=5       c=11      c=25     | height-indep?
+second-from-top +1         | 1/11      1/11      1/11      1/11     | True  >=2/25 loose
+two defects (6c+1,12c+1)   | 1/6       1/6       1/6       1/6      | True  >=2/25 loose
+bottom 1,2c,3c..12c        | 1/7       1/7       1/7       1/7      | True  >=2/25 loose
+mid 6c->6c+1               | 2/19      2/19      2/19      2/19     | True  >=2/25 loose
+
+ALL patterns: M height-independent, each either =1/13 (AP) or >=2/25 (loose). NONE in window.
+CONCLUSION: the M of a defected dilated AP is a height-INDEPENDENT rung >= 2/25 (or 1/13).
+Mechanism = antitone monotonicity: M(S)<=M(S') for S'<=S. The family inherits its 11/10-AP
+subfamily's rung (1/12, 2/23, ...), all >= 2/25 -- it JUMPS the window. This is WHY kps's
+bounded-height census is height-robust: increasing the scale c does NOT move M toward 1/13.

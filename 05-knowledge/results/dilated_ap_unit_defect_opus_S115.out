@@ -1,0 +1,21 @@
+window (1/13, 2/25) = (0.07692, 0.08000)
+family {c,2c,...,11c, 12c+1} (dilated AP + unit defect on top), M exact:
+ c  | max  | M           | M-1/13      | in window? | M vs 2/25
+  1 |  13  | 1/12        | +0.006410 | False      | >=2/25 (LOOSE)
+  2 |  25  | 1/12        | +0.006410 | False      | >=2/25 (LOOSE)
+  3 |  37  | 1/12        | +0.006410 | False      | >=2/25 (LOOSE)
+  4 |  49  | 1/12        | +0.006410 | False      | >=2/25 (LOOSE)
+  5 |  61  | 1/12        | +0.006410 | False      | >=2/25 (LOOSE)
+  8 |  97  | 1/12        | +0.006410 | False      | >=2/25 (LOOSE)
+ 12 | 145  | 1/12        | +0.006410 | False      | >=2/25 (LOOSE)
+ 20 | 241  | 1/12        | +0.006410 | False      | >=2/25 (LOOSE)
+ 30 | 361  | 1/12        | +0.006410 | False      | >=2/25 (LOOSE)
+
+variants at c=10: defect position & sign:
+  top +1 {..,120,121}? no: {10..110,121}    : M=1/12=0.08333 LOOSE >=2/25
+  top -1 {10..110,119}                      : M=1/12=0.08333 LOOSE >=2/25
+  mid +1 {10,20,30,40,50,61,70,..,120}      : M=2/19=0.10526 LOOSE >=2/25
+  bottom +1 {11,20,30,..,120}               : M=1/7=0.14286 LOOSE >=2/25
+
+KEY QUESTION: if any M lands in (1/13,2/25) at large c => gap member => (G) issue.
+If M JUMPS to >=2/25 despite the unit defect => that jump IS the new input (why defect forces M up).
