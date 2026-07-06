@@ -1,3 +1,18 @@
+## mac-mini-2026-07-06-S19 -- POTENTIAL THEORY joins the equi-family (AP = electrostatic equilibrium); the p-adic Monsky EQUIDISSECTION route to the floor (HYP-4472)
+
+Prompt (owner): keep seeing how equicontinuity relates to equidecomposability/equinumerosity/others; keep investigating, integrating, reframing.
+
+INTEGRATED the fleet's convergent equi-work: opus-S111 (equi- splits COMBINATORIAL [structure, universal, necessary] vs METRIC [quantity, n-specific, decisive]; (G) on metric side; LRCLeaveOneOut.lean GREEN) + kps-S27 (floor = EQUIDECOMPOSABILITY residual; dodge!=patch: equidistribution covers uniformly but only the AP's roots-of-unity fiber PATCHES; safe doesn't degrade with height) + my S18 (equicontinuity = regularity axis).
+
+NEW VERIFIED FACE -- POTENTIAL THEORY: include the OBSERVER at 0. Then {0} u {v_i/13} for the AP = the 13th ROOTS OF UNITY = the discrete FEKETE/EQUILIBRIUM config: MIN logarithmic energy (AP=-16.672; all 160 perturbations strictly higher) = MAX chord-sum (STOLARSKY: L2-discrepancy + distance-sum = const) = MIN discrepancy (opus-S65). So potential theory UNIFIES the metric equi-family: equidistribution = equilibrium = min-energy = min-discrepancy = the AP; and the tight value 1/n = the EQUILIBRIUM SPACING (observer's gap at electrostatic ground state). The floor = an energy/gap tradeoff (opening the observer's gap costs energy; covering bounds it => forbidden except at 1/13).
+
+NEW ROUTE -- p-adic EQUIDISSECTION (Monsky): the floor is a TILING-IMPOSSIBILITY (only the AP patches, kps). Monsky's thm (square can't be equidissected into ODD # equal triangles) proves this SHAPE via a 2-ADIC valuation + SPERNER. Candidate: p-adic valuation (p=5 from 2n-1=25=5^2, or p=2 from 14=2.7) on the witness residues + Sperner/parity over the clearance band => exact covering at c/q in (1/13,2/25) forces a valuation contradiction; only the AP's valuation-balanced fiber survives. N-SPECIFICITY IS BUILT IN (the valuation sees 2n-1's factorization: 13 prime at n=7 nonempty, 5^2 at n=13 empty) -- explaining WHY structural n-blind lenses fail. ALSO: equicontinuous=almost periodic (Bohr); M's non-equicontinuity = non-uniform almost-periodicity.
+
+THE EQUI-ATLAS, three layers: combinatorial (necessary) / metric (decisive) / potential-theoretic (unifies the metric, gives tight value as equilibrium spacing).
+
+DELIVERABLES: reflection the-AP-is-the-electrostatic-equilibrium-...-macmini-S19; HYP-4472; script lrc_fekete_equilibrium_energy_macmini_S19 (+out); 4 NEW LEADS to backlog (Stolarsky, Fekete, Monsky/p-adic, Bohr -- all 0 prior repo mentions). No canon overridden.
+
+NEXT: the Monsky p-adic route (valuation-color the clearance band, Sperner) is the highest-interest new lead -- it would give a COMBINATORIAL-TOPOLOGICAL proof of the metric floor and structurally explain the n-specificity.
 ## mac-mini-2026-07-06-S19 -- THE COMPACTNESS ROUTE to the density floor via EQUICONTINUITY-OF-SAFE: safe is continuous along lift rays (Weyl), >=0.08 for coupled 2-tori, =0 ONLY on the AP-locus => the floor by compactness; using safe not M dissolves the height non-uniformity (HYP-4472)
 
 Prompt (owner): relate equicontinuity to prior equidecomposability/equinumerosity/equioscillation work; integrate + reframe creatively.
