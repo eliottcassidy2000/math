@@ -1,0 +1,18 @@
+=== n=13, beta=2/25: theta-sum truncated to sparse short relations (|a|<=2, <=4 coords) ===
+  main term (1-2b)^12 = 0.12341
+  family                                  #harm  trunc-theta  #relations
+  AP {1..12} (safe=0, tiles)                 10      0.19641        2512
+  single-lift {1..11,24} (2/25 edge)          9      0.17623        2098
+  generic {1..11,23} (loose, safe>0)          9      0.17745        2064
+  far {1,2,3,4,5,6,7,8,9,10,11,50}            9      0.15987        1826
+
+=== n=7, beta=2/13: main term (1-2b)^6 = 0.11010 ===
+  family                                              #harm  trunc-theta
+  AP {1..6} (safe=0, tiles)                               4      0.08480
+  n=7 GAP MEMBER {1,5,6,11,16,17} (safe=0, tiles!)        1      0.02919
+  generic n=7 {1,2,3,4,5,20} (loose)                      3      0.06470
+
+READING: the AP has the most harmonic relations => most short-shell cancellation.
+The n=7 tiler cancels to safe=0 with FEWER harmonic relations (opus-S113 structure x width):
+its wider window means the LONGER shells finish the cancellation.  The truncated theta
+tracks 'how close to tiling'; the Selberg majorant makes the tail rigorous (N~2k^2).
