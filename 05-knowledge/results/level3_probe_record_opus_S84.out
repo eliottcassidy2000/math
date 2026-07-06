@@ -1,0 +1,16 @@
+kappa=[0,10,5,3,5,3,5,8,7,3,1,11] level3_covering_refinements=0 nodes=3000000001 (NODE CAP HIT: undecided)
+kappa=[0,10,5,3,5,3,3,1,8,3,1,1] level3_covering_refinements=0 nodes=3000000001 (NODE CAP HIT: undecided)
+kappa=[0,10,5,3,5,3,3,8,1,5,1,3] level3_covering_refinements=0 nodes=3000000001 (NODE CAP HIT: undecided)
+kappa=[1,2,3,4,5,6,7,8,9,10,11,12] level3_covering_refinements=0 nodes=3000000001 (NODE CAP HIT: undecided)
+
+=== LEVEL-3 PROBE RECORD (opus-S84) ===
+v3 (cell-driven + incremental + column-major DFS, 3e9-node caps): four classes ZERO
+covers found, caps hit, UNDECIDED -- including shadow lam=14 which provably has >= 13
+covering refinements (lam + 169j): the DFS wanders; 0-in-3e9 on non-shadows is weak
+evidence only. v2/v4 (column-solve-then-filter, exact): stage-1 trees also exceed
+~30 CPU-min/class; killed at session close. LESSON (recorded): solution-count estimates
+(occupancy ~2900 column-1 solutions) do NOT bound refutation-tree size; the level-3
+census needs meet-in-the-middle (6+6 position split, 4.8M half-profiles, column-signature
+join) or the character-sum bound (P-V program, T-S83-A) -- enumeration-by-DFS is the
+wrong tool. All sources committed: level3_census_opus_S84.c (v1-v3 evolution),
+level3_colfilter_opus_S84.c (v4).

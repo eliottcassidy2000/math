@@ -1,3 +1,17 @@
+## opus-2026-07-05-S84 -- C INSTALLED-AND-USED (gcc found): the level-3 probes; MISTAKE-109 (any-carrier evades the 98 forcing; carrier table); THE COMPOSITION LEMMA (descent with <= 2 passengers at l >= 9); LRCTowerLift.lean GREEN (rows migrate up the tower free + strictness free); occupancy => dichotomy probabilistically inevitable (HYP-4136)
+
+Prompt: install C etc.; prioritize creative reasoning + repo connections + hypothesis tests over massive programs; long session, many pulls; leverage incoming work; aim at formalized completeness.
+
+INCOMING LEVERAGED: mac-mini-S56 flagged my S80 dvd_lift_height as position-scoped => derived the ANY-CARRIER CARRIER TABLE (modulus r at position s costs r*(s r^{-1} mod 13); minima 14..24) => MISTAKE-109: the S78 >= 98 forcing is self-carried-only (their corrected 4.57B sweep already covered the practice; this repairs the theory). Their S57 ban-load tournament CONVERGES with my S83 log picture (g = 2: doubling cycle = unit shift; ban map = translate shift) -- the tournament half of the project touches the LRC crux; Redei-parity cover obstruction posed as T-S84-A. kps parity dividend (mod-2p) = my mirror quotient, noted.
+
+NEW MATHEMATICS: (1) THE COMPOSITION LEMMA (verified 6/6): gap descent runs inside the largest passenger-free piece of the window; p sub-gap passengers cost (L - Sum fees)/(p+1); at l >= 9 (base <= 3 unlifted, margin 1/4, L0 = 3/104): entry bars 69/224/789 for p = 0/1/2, DEAD at p >= 3 => the l >= 9 partition (<= 2 passengers + spread tops; residual bounded ~800 + clusters). (2) THE OCCUPANCY ANALYSIS: kill density 1.85 is scale-free but expected uncovered/column explodes 1.8 -> 22.8 -> 296 across levels 2/3/4: non-structured covers at level 3 have probability ~1e-119 -- the tower dichotomy is probabilistically inevitable; tight families cover only as perfect covering designs. Concrete character sums (P-V lever): max 7.8 mod 169, 45.9 mod 2197.
+
+FORMALIZED (LRCTowerLift.lean, green first-compile after one placeholder fix, registered, corpus 8675): speedOK13_lift -- the strict gate transports num/den -> 13num/13den (Int.mul_emod_mul_of_pos + omega-with-min): EVERY kernel row migrates up the 13-adic tower free (rowA auto-valid at 2197); gap_interior_strict -- interior points of full gaps give STRICT dist > rho: the nested tower's strictness (assembly item (iii)) is closed.
+
+C PROBES (the decisive experiment, honest status): gcc 15.2 present (scoop; no install needed). level3_census_opus_S84.c: cell-driven DFS + incremental option counts + column-major branching; 5 classes probed (2 shadows sanity + 3 S82 non-shadow covers) at 3e9-node caps. Verdicts recorded in 04-computation/l3_*.out and the INDEX entry; tree sizes at level 3 are the real obstacle -- the column-solution-enumeration design (solve one column exactly, filter survivors through the rest) is spec'd in the letter for the C-harness if caps hit.
+
+Files: LRCTowerLift.lean (green, registered); MISTAKE-109; composition_descent + charsum_occupancy outs; level3_census C + outs; T-S84-A; assembly draft S84 addendum; HYP-4136.
+
 ## klein-2026-07-05-S139 -- VALIDITY AUDIT + SYNTHESIS: the loose branch is IRREDUCIBLY REAL-ANALYTIC (no fixed-modulus template closes it) + a stale-banner catch + an owned misfire (HYP-4141)
 
 Prompt (owner): work remaining tasks, synthesize, challenge assumptions, carefully consider recent agent work AND ITS VALIDITY, get the LRC(14) formalization into the best state; push/pull often.
