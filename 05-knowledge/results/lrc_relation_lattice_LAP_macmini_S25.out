@@ -1,0 +1,14 @@
+L(AP)=ker(a->sum_{i=1}^{12} i*a_i), rank 11.  disc(L(AP)) = |c|^2 = sum i^2 = 650
+min lattice norm = 3; # min vectors (supp<=3) = 60; examples:
+   [(5, 1), (7, 1), (12, -1)]  (relation: 1*v5 + 1*v7 + -1*v12 = 0)
+   [(4, 1), (8, 1), (12, -1)]  (relation: 1*v4 + 1*v8 + -1*v12 = 0)
+   [(1, 1), (6, 1), (7, -1)]  (relation: 1*v1 + 1*v6 + -1*v7 = 0)
+   [(3, 1), (8, 1), (11, -1)]  (relation: 1*v3 + 1*v8 + -1*v11 = 0)
+
+beta=2/25 theta shells:  main (1-2b)^12 = 0.12341
+  support-2 (MULTIPLICATIVE, e.g. 2v_i=v_2i): 0.49103
+  support-3 (harmonic (1,-2,1) + sum (1,1,-1)): -1.80245
+
+=> MIN NORM 5 = the MULTIPLICATIVE doubling relations (2v_i=v_2i), SHORTER than harmonic (norm 6).
+   The leading theta correction is MULTIPLICATIVE (support-2), not harmonic -- refines kps-S31,
+   aligns with opus-S114 (not harmonic-led).  L(AP)'s geometry = the additive-MULTIPLICATIVE duality.
