@@ -92,3 +92,50 @@ binder_unit_cell, witness_determined_cell).
 -> HYP-4232 (the (3,38) instance), HYP-4242 (parity/determinism at 38),
 HYP-4217/4227 (the ladder), THM-592 (grid attainment), THM-622 (the cell
 frame), OPEN: the c-tail; the |S| ≥ 7 residual.
+
+## Addendum (same session): the c-tail through Jain–Kravitz — the two programs are one
+
+The one dimension the lemma does not bound (the cell index) has a structure
+theorem available through kps-S14's lead (Jain–Kravitz, arXiv:2411.12684:
+relative Lonely Runner spectra; "2-dimensional subtori essentially govern the
+accumulation points"; each relative spectrum finitely characterizable).
+Translated to our frame (M(W) = 1/2 − D(T_W), the 12-spectrum = D-values of
+1-dim subtori of (ℝ/ℤ)¹²):
+
+**Accumulation points of the 12-spectrum in (1/13, 2/25) are M-values of
+2-dimensional subtori.** These split:
+
+1. **Product 2-tori** (speeds split into blocks A ⊔ B with independent
+   times): M(U) = min(M(A), M(B)) ≥ 1/12 > 2/25 by the LRC(≤ 12) citation
+   (every block has ≤ 11 speeds). ONE LINE: products cannot accumulate in
+   the gap.
+2. **Coupled 2-tori**: exactly the limits of LIFT FAMILIES
+   (v_i = r_i + N·ℓ_i, N → ∞ ⟹ U = closure{(r_i t + ℓ_i s)}). Their
+   M(U) = max_{(t,s)} min_i ||r_i t + ℓ_i s|| — the fleet's lift-floor
+   objects. The double-lift 2/25-attainer is the value AT the endpoint;
+   lift_floor_beta_ladder (≥ 2/25, GREEN) is the ladder leg of the needed
+   floor; the HYP-4109-series strata are the rest.
+
+**Consequence (the tail decomposition).** Write (G)₂ for the 2-dim gap
+statement: no coupled 2-subtorus arising from 12 speeds has
+M(U) ∈ (1/13, 2/25). Then:
+- (G)₂ ⟹ the 12-spectrum ∩ [1/13 + δ, 2/25 − δ] is FINITE for every δ > 0
+  (no accumulation point in the closed sub-interval), so the c-tail
+  collapses to finitely many Farey cells per δ — each with this session's
+  finite anchor structure;
+- the endpoint rates (δ → 0) are the stability lanes already assigned:
+  (U)-stability at 1/13 (klein's thread), attainer-stability at 2/25;
+- monotonicity M(U₃) ≥ M(U₂) for U₂ ⊂ U₃ means the 2-dim floor suffices
+  (higher-dim limits contain 2-tori).
+
+The lift-floor program and the Farey-cell program are therefore THE TWO
+HALVES OF (G), joined by the accumulation principle — not parallel bets.
+What needs proving/citing beyond current fleet assets: (a) the accumulation
+principle itself in our normalization (J-K's Theorem, or a self-contained
+compactness proof — Chabauty convergence of 1-subtori + semicontinuity of
+M); (b) (G)₂ over the coupled strata (the lift-floor named hypotheses);
+(c) the per-δ finite cell list, killed by the anchored machinery.
+
+CAVEAT (honest): "essentially govern" is abstract-level language; the exact
+J-K statement and normalization must be checked against the full text
+before (a) is cited in canon. Logged as the next literature task.
