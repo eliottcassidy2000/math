@@ -1,3 +1,18 @@
+## mac-mini-2026-07-06-S5 -- THE COUPLED 2-TORUS BRACKET CENSUS: 313/313 structured directions SAFE-ABOVE (rigorous Lipschitz brackets; zero in-window, zero unresolved) -- (A)'s landscape is CLEAN; kps-S19's sharp rung absorbed (my k-reduction composed end-to-end by them) (HYP-4272)
+
+Prompt (owner): next steps, pull often, push toward final assembly.
+
+PULLED/ABSORBED: a sibling mac-mini-S4 ran the J-K accumulation reduction ((G) = (A) no coupled 2-torus in the window + (C) finite census) and took HYP-4262 -- I am S5.  opus-S97: two_band_transport GREEN -- THE CRT-RAYS DIE height-uniformly (dilation transports margins exactly on S*P top bands; the crux division is now total: rays = opus, single-scale = template lane).  kps-S19: the SHARP |S| <= 6 cluster-gcd rung kernel-pure, INCLUDING k_bounded_of_stratification_sharp -- they composed MY S2 k-reduction end-to-end (constant 75 vs draft 50; the pole unchanged -- and the rung is CELL-AGNOSTIC: every THM-622 cell inherits the formal k >= 2 height bound).  kps-S20 in flight on (A)'s l <= 6 rung proof.
+
+THE WORK (complementary to kps-4247: they prove, I map the exact landscape):
+ THE BRACKET CENSUS for (A): M(U) = max_{(t,s)} min_i ||u_i t + v_i s|| bracketed rigorously (Lipschitz slack (L1 h1 + L2 h2)/2 on doubled grids + local refinement; brackets need only CLEAR the window -- no exactness).  313 directions: all e_i, all 66 e_i+e_j (incl. the attainer's {4,6}), blocks 3..6, the 14r-ladder direction, 200 random sparse.  RESULT: **313/313 SAFE-ABOVE** -- every structured coupling direction sits far above 2/25 (pairs/blocks 0.14-0.38); zero in-window, zero unresolved, zero below.  The S4 single-species retreat (2/17) is the general pattern: the lift-limit tori CANNOT accumulate into the gap along any censused direction.
+
+ASSEMBLY STATE (the map's crux legs): rays DEAD (formal); (A) data-clean everywhere censused + proof rung in flight (kps); k >= 2 FULLY FORMAL at every cell; k = 1 anchored clean to 60 + density-wall/anchor-bound frame; the corner + template lanes as before.
+
+FILES: lrc_torus_bracket_census_macmini_S5.py (+.out); HYP-4272 (+INDEX).  No canon overridden.
+
+NEXT: (a) saturated-lattice ENUMERATION beyond the structured directions (the (A) completeness step: J-K Section 3 parametrizes candidate 2-tori -- bracket-census the full bounded enumeration); (b) the pair-in-cluster finite census (S3 frame, heights to ~4e4); (c) assembly wiring as kps-4247 lands.
+
 ## opus-2026-07-06-S97 -- THE TWO-BAND TRANSPORT GOES EXACT AND FORMAL: LRCTwoBand.lean GREEN (the 1d-crux ray mechanism = four lines on the standard trio); phi bypassed; rays die height-uniformly (HYP-4256)
 
 Prompt: work the crux and remaining tasks, long session, pull frequently, integrate and extend.
