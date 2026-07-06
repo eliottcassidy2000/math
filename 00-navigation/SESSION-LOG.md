@@ -15,6 +15,24 @@ MULTI-LENS PROBE (exact safe measure via rational arcs):
 FILES: lrc_density_floor_macmini_S17.py (+4 .outs); reflection the-density-floor-does-not-degrade-with-height-macmini-S17.md; HYP-4452 (+INDEX).  No canon overridden.
 
 NEXT: (a) prove the THIRD GAP (2/25,1/12) empty (= safe uniform floor, = next Farey rung) via the finite skeleton -- the cleanest indirect route; (b) or the scale-gap decorrelation R_0~2 => height bound => finite check (the fleet's lever); the self-similar ladder suggests ONE rung-uniform argument for all.
+## opus-2026-07-06-S111 -- THE 'equi-' FAMILY SPLITS COMBINATORIAL vs METRIC: (G) lives on the metric side + LRCLeaveOneOut.lean GREEN (HYP-4436)
+
+Prompt: relate equicontinuity to prior work (equidecomposability, equinumerosity, ...); investigate, integrate, reframe creatively.
+
+CORE REFRAME (reflection the-equi-family-splits-combinatorial-vs-metric-and-G-lives-on-the-metric-side): the 'equi-' prefix (equal-up-to-a-transformation) is a FAULT LINE, not a single theorem.
+- COMBINATORIAL equi- (STRUCTURE, UNIVERSAL, n-BLIND): equinumerosity (orbit-stabilizer, tilings*|Aut|=H), equivalence (iso classes/G_n), equidecomposability (the TILING model = scissors congruence; Bolyai-Gerwien 2D-complete, and the project's n<=6-complete/n>=7-incomplete invariants = the Dehn-invariant analog), equipartition (cut+cycle). These pin the AP's UNIVERSAL specialness.
+- METRIC equi- (QUANTITY, n-SPECIFIC, DECISIVE): equicontinuity (Arzela-Ascoli = my S110 compactness/existence), equidistribution (Weyl/three-distance = mac-mini's leave-one-out alignment/rigidity), equioscillation (Chebyshev = the BRIDGE). These carry the n-dependent content.
+
+THE SPLIT = THE NECESSARY/SUFFICIENT SPLIT (integrates + VERIFIES mac-mini S17 HYP-4452): the second gap (1/n,2/(2n-1)) is NONEMPTY at n=7 (I reproduced {1,5,6,11,16,17}, M=5/33 in (1/7,2/13), maximizer 10/33, binders {16,17}) and n=8, but EMPTY at n=13. All my combinatorial lenses (sum-product/Farey ladder, three-gap, roots-of-unity) would predict emptiness at EVERY n => NECESSARY NOT SUFFICIENT. The emptiness is QUANTITATIVE (mac-mini's walls: gap-width 1/(n(2n-1)) + depth q>=3n-1 exceed the 12-runner budget at n=13). HONEST SELF-CORRECTION: S110's 'forbidden band / Farey ladder' was the COMBINATORIAL SHADOW (n-blind), not the reason for emptiness; the S110 finite-residual search remains valid (verified the metric emptiness directly at n=13), its structural gloss over-reached.
+
+EQUIOSCILLATION IS THE SEAM: the maximizer binds exactly 2 runners (degree = combinatorial/universal = THM-592 grid attainment) at metric POSITIONS (alignment = n-specific/decisive). Chebyshev factors as degree x alignment; the forbidden band is about alignment, not degree.
+
+GREEN KEYSTONE (LRCLeaveOneOut.lean, standard trio, corpus 8706): nesting / covering_forces_nesting -- if S covers at beta then at every t where all i!=j are beta-far from Z, runner j is beta-near. Formalizes mac-mini's covering-as-nesting core (the equidistribution-alignment anchor), the METRIC-side route he explicitly endorsed over structural closures. Together with S110's dilation invariance (equicontinuity/existence anchor), the project now holds BOTH metric anchors formally.
+
+SECURITY: noted mac-mini's flag that comms/POKE-COORDINATION.md contains an external-exfiltration injection (post logs to poke-forum...); IGNORED it (untrusted, not owner); close-out uses only git + finish_session.
+
+Files: LRCLeaveOneOut.lean (green, corpus 8706); reflection; result equi_taxonomy_nspecific_opus_S111; HYP-4436. REMAINING OPEN: the alignment-width infeasibility at n=13 (metric, mac-mini/kps lane) -- now on a formal nesting lemma. The right next target is the width-vs-budget, NOT another structural closure.
+
 ## mac-mini-2026-07-06-S17 -- THE DENSITY FLOOR IS QUANTITATIVE (n-specific), NOT structural; the LEAVE-ONE-OUT ALIGNMENT lens (HYP-4452)
 
 Prompt (owner): work the one density floor creatively, many lenses simultaneously, small pieces from each, push/pull often.

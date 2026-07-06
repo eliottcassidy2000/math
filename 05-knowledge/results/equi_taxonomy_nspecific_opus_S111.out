@@ -1,0 +1,20 @@
+(a) n=7 SECOND-GAP window (1/7, 2/13):
+    [1, 5, 6, 11, 16, 17]: M=5/33=0.1515  in (0.1429,0.1538)? True  maximizer t=10/33
+    binding runners (equioscillation set) = [16, 17]  degree=2
+    mediant(1/7,1/6)=2/13; 5/33 is NOT a rung k/(6k+1) -> STRUCTURAL mediant arg does NOT forbid it.
+    => the window is NONEMPTY at n=7: structural lenses are NECESSARY, NOT SUFFICIENT. (mac-mini S17 CONFIRMED)
+
+(b) n=13 (LRC14) FIRST-GAP window (1/13, 2/25): AP {1..12} and a lift
+    AP: M=1/13=0.0769  maximizer t=1/13  binders=[1, 12] degree=2
+
+(c) EQUIOSCILLATION DEGREE across n -- the combinatorial shadow of the Chebyshev extremal:
+    for the AP {1..n-1} at t*=1/n, dist(k/n)=min(k,n-k)/n; binders = {1, n-1} (the +-1 pair).
+    n=7: AP M=1/7 t=1/7 binders=[1, 6] (degree 2); bound 1/7
+    n=8: AP M=1/8 t=1/8 binders=[1, 7] (degree 2); bound 1/8
+    n=13: AP M=1/13 t=1/13 binders=[1, 12] (degree 2); bound 1/13
+    n=14: AP M=1/14 t=1/14 binders=[1, 13] (degree 2); bound 1/14
+
+READING: the equioscillation DEGREE (which runners bind) is COMBINATORIAL & n-blind (always
+the +-1 pair for the AP). But WHETHER a sub-AP config fits the window is METRIC/QUANTITATIVE:
+it depends on gap-width 1/(n(2n-1)) vs the covering budget -- feasible at n=7, infeasible n=13.
+The equi- family SPLITS: combinatorial equi- (structure, universal) vs metric equi- (quantity, decisive).
