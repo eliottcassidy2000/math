@@ -629,6 +629,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S22 -- THE TIGHT LOCUS IS THE (Z/13)*-ORBIT OF THE ROOTS OF UNITY: the multiplicative/geometric face of opus's sum-product reframe + strict-rigidity confirmation + the character-sum bridge (HYP-4407)
+
+Prompt (owner): work on the genuinely open remainder, seeing deep analogies.
+
+Worked the open (G)/rigidity core via a deep analogy, converging with opus's same-session sum-product reframe (HYP-4396).
+
+THE SYNTHESIS (reflection the-tight-locus-is-the-roots-of-unity-orbit-kps-S22): the tight locus (M=1/13) = the orbit of mu_13\{1} (nonzero 13th roots of unity) under (Z/13)* -- at t=1/13 the AP sits at the roots of unity, dilating permutes them (M(d*AP)=1/13, d=1..12 verified). Strict rigidity (HYP-4392) = this config is an ISOLATED discrepancy minimum. PRIMALITY is why: prime => (Z/p)* cyclic, full residue system = AP forced (one orbit); composite => subgroups => non-AP tight ({1,3,4,5,9} at n=6). This is the MULTIPLICATIVE face of opus's sum-product coincidence (AP = additive [1,p-1] AND multiplicative (Z/p)*).
+
+CONFIRMED (lrc_nearap_rigidity_kps_S22, exact fractions): over 15000 residue-fixed 13-lifts, 0 tight non-dilations, 0 in the open gap; single-lift M-values all nice Farey fractions >= 2/25; the tight-locus orbit is isolated.
+
+THE CHARACTER-SUM BRIDGE (opus's requested link, made concrete): a 13-lift of the AP is INVISIBLE at t=a/13 (v_i a/13 == i a/13 mod 1). So the multiplicative pinning (behavior at 13-rationals) is lift-independent = DONE (opus residue bridge); the lift can only help at OTHER denominators = the additive density floor = OPEN. Guidance for mac-mini HYP-4392: the rigidity witness lives OFF the 13-grid => bound those denominators (Lipschitz + 1/300 seam) => finite check.
+
+THREE CLASSICAL SHADOWS: cyclotomy (AP = mu_p\{1} = min discrepancy), covering systems (DMN-Rado rigidity = my CircleClearFloor; razor-thin cancellation = global DMN), the Farey ladder (AP deepest rung). HONEST: does not close (G) (density floor = open hard analysis); delivers the governing multiplicative-geometric face + the bridge + the confirmation.
+
+FILES: reflection + lrc_nearap_rigidity_kps_S22.py (+.out); HYP-4407. No Lean this session (the formalizable bricks -- residue invariance, dilation, M>=1/13 floor -- are already done by opus). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S21b -- slice11_loose GREEN: the ENTIRE {1..11,v} slice loose-classification CLOSED (opus divisor-protection + my ladder exhaust v>=13); a complete face of gap-emptiness (HYP-4357 closure)
 
 Prompt (owner): work on closing remaining proofs.

@@ -1,0 +1,33 @@
+=== (a) single-runner lifts of the AP: {1..12} with runner j -> j+13 ===
+  (mac-mini: all have M >= 2/23; verifying + the mechanism)
+  lift runner 1 (-> 14): M = 1/8 = 0.12500  above
+  lift runner 2 (-> 15): M = 2/19 = 0.10526  above
+  lift runner 3 (-> 16): M = 2/17 = 0.11765  above
+  lift runner 4 (-> 17): M = 2/19 = 0.10526  above
+  lift runner 5 (-> 18): M = 2/19 = 0.10526  above
+  lift runner 6 (-> 19): M = 2/23 = 0.08696  above
+  lift runner 7 (-> 20): M = 1/7 = 0.14286  above
+  lift runner 8 (-> 21): M = 1/8 = 0.12500  above
+  lift runner 9 (-> 22): M = 1/9 = 0.11111  above
+  lift runner 10 (-> 23): M = 1/10 = 0.10000  above
+  lift runner 11 (-> 24): M = 1/11 = 0.09091  above
+  lift runner 12 (-> 25): M = 1/12 = 0.08333  above
+  min single-lift M = 1/12 = 0.08333 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 25]
+
+=== (b) all lifts in {0,13} per runner (block structure), min M over NONZERO lifts ===
+  AP itself M = 1/13
+  over 4095 nonzero {0,13}-lifts: 1 still at 1/13, 0 IN OPEN GAP
+  min nonzero-lift M = 1/13 = 0.07692  (infimum should be 2/25 at block lift)
+     minimizer bits=0b10101010101, v=[14, 2, 16, 4, 18, 6, 20, 8, 22, 10, 24, 12]
+
+=== (c) balance-breaking: the two critical runners (r=1, r=12) and lift direction ===
+  lift r=1 by 1*13, r=12 by 0*13: v[0]=14, v[11]=12, M = 0.12500
+  lift r=1 by 0*13, r=12 by 1*13: v[0]=1, v[11]=25, M = 0.08333
+  lift r=1 by 1*13, r=12 by 1*13: v[0]=14, v[11]=25, M = 0.12500
+  lift r=1 by 2*13, r=12 by 0*13: v[0]=27, v[11]=12, M = 0.13793
+  lift r=1 by 0*13, r=12 by 2*13: v[0]=1, v[11]=38, M = 0.08333
+  lift r=1 by 1*13, r=12 by 2*13: v[0]=14, v[11]=38, M = 0.12500
+  lift r=1 by 2*13, r=12 by 1*13: v[0]=27, v[11]=25, M = 0.13793
+  lift r=1 by 2*13, r=12 by 2*13: v[0]=27, v[11]=38, M = 0.13793
+
+=== (d) density floor: min M over near-AP lifts (each runner in {r, r+13, r+26}) ===
