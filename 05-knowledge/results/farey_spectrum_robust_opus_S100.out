@@ -1,0 +1,23 @@
+Robustness: smallest M strictly above tight 1/(k+1), over primitive k-families to cap
+  k=3 (cap 22): 2nd value = 2/7=0.2857, mediant 2/7=0.2857, EXACT-MEDIANT: True, witness (1, 2, 6); window-values: []
+  k=4 (cap 20): 2nd value = 2/9=0.2222, mediant 2/9=0.2222, EXACT-MEDIANT: True, witness (1, 2, 3, 8); window-values: []
+  k=5 (cap 18): 2nd value = 2/11=0.1818, mediant 2/11=0.1818, EXACT-MEDIANT: True, witness (1, 2, 3, 4, 10); window-values: []
+  k=6 (cap 16): 2nd value = 2/13=0.1538, mediant 2/13=0.1538, EXACT-MEDIANT: True, witness (1, 2, 3, 4, 5, 12); window-values: []
+  k=7 (cap 15): 2nd value = 2/15=0.1333, mediant 2/15=0.1333, EXACT-MEDIANT: True, witness (1, 2, 3, 4, 5, 6, 14); window-values: []
+
+the mediant-achieving family structure (2nd-smallest M):
+  k=3: (1, 2, 6) achieves 2/7  = {1..3} with one shift?
+  k=4: (1, 2, 3, 8) achieves 2/9  = {1..4} with one shift?
+  k=5: (1, 2, 3, 4, 10) achieves 2/11  = {1..5} with one shift?
+  k=6: (1, 2, 3, 4, 5, 12) achieves 2/13  = {1..6} with one shift?
+The Farey ladder j/(kj+1) at k=12 (the LRC-14 rigidity level):
+  j=1: 1/13 = 0.0769
+  j=2: 2/25 = 0.0800
+  j=3: 3/37 = 0.0811
+  j=4: 4/49 = 0.0816
+  j=5: 5/61 = 0.0820
+  => rung 0 (tight) 1/13, rung 1 (mediant) 2/25, rung 2 3/37, ... ; window (1/13,2/25) empty
+project 2/25-attainers vs the clean mediant extremal {1..11,24}:
+  {1..11,24} (mediant extremal): M = 2/25
+  {4,6}->{17,19} block-lift (mac-mini): M = 2/25
+  {1..11, 168} deep well (my S77): M = 14/169

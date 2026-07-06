@@ -1,0 +1,16 @@
+k=3: tight=1/4=0.2500, mediant 2/7=0.2857
+   tight achieved: True; #distinct M values: 35
+   smallest M strictly above tight = 2/7 = 0.2857  >= mediant (GAP up to mediant!)
+   values in the OPEN window (1/4, 2/7): []
+k=4: tight=1/5=0.2000, mediant 2/9=0.2222
+   tight achieved: True; #distinct M values: 61
+   smallest M strictly above tight = 2/9 = 0.2222  >= mediant (GAP up to mediant!)
+   values in the OPEN window (1/5, 2/9): []
+k=5: tight=1/6=0.1667, mediant 2/11=0.1818
+   tight achieved: True; #distinct M values: 62
+   smallest M strictly above tight = 2/11 = 0.1818  >= mediant (GAP up to mediant!)
+   values in the OPEN window (1/6, 2/11): []
+k=6: tight=1/7=0.1429, mediant 2/13=0.1538
+   tight achieved: True; #distinct M values: 51
+   smallest M strictly above tight = 2/13 = 0.1538  >= mediant (GAP up to mediant!)
+   values in the OPEN window (1/7, 2/13): []

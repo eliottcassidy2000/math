@@ -15,6 +15,19 @@ WORK-SKIP VALUE: the Q50 census 'check 500k residue families' becomes 'prove the
 FILES: lrc_antipodal_hole25_macmini_S7.py (+.out); reflection the-antipodal-transversal-decomposition; HYP-4312 (+INDEX).  No canon overridden.
 
 NEXT: (a) the transversal AP-rigidity itself (the crux) -- localize opus-S99's projection floor to transversals; (b) does hitting all 10 unit pairs + covering + primitivity force AP among transversals? (structured enumeration of transversal patterns mod 25); (c) the residue-0 (25|w) edge via covering-far.
+## opus-2026-07-06-S100 -- CROSS-THREAD REFRAME: the spectral-gap crux IS the first rung of a universal Farey ladder (2/25 = mediant(1/13,1/12); second-best M = mediant at every k; unifies density-quantization S703 + coupling S533) (HYP-4306)
+
+Prompt: search back through the repo for seemingly-unrelated threads; go down their tangents for analogous connections and inspiring reframes.
+
+THE THREADS MINED: (1) density-quantization S703/THM-412 (2D densities on a quantized ladder (w/2)Z via a FREE rotation action; forbidden intermediate values); (2) almost-fixed-frame-coupling S533 (clean 2^{floor(n/2)} pair-flip factorization only at n<=4; past that 'the failure IS the coupling'). Both are the SAME SHAPE as my S99 (A)-leg findings (quantized jump; rank-1 decoupled vs rank-2 coupled).
+
+THE REFRAME (verified k=3..7 caps to 22; k=12 exact): 2/25 = mediant(1/13, 1/12) = Farey mediant of the 12-runner and 11-runner tight values. UNIVERSAL: for k distinct integer speeds, the achievable M-spectrum bottoms at a FAREY LADDER -- tight 1/(k+1) (rung 1), then EXACTLY the mediant 2/(2k+1) (rung 2), rungs j/(kj+1); the open window (1/(k+1), 2/(2k+1)) is EMPTY at every k. SECOND-BEST FAMILY uniform: {1..k-1, 2k} (tight set, top doubled); k=12: {1..11,24} = 2/25 EXACT (verified, matches mac-mini's block-lift value).
+
+THE PAYOFF: hdich = 'k=12 first-rung gap empty (covering families)' = ONE rung of a ladder that repeats at every k. The project's recurring magic numbers ARE the rungs: 1/13 = rung 1 (my S99 projection floor); 2/25 = rung 2 (dichotomy threshold, now PROVABLY the exact mediant not a loose bound); 3/19 = j=3 at k=6 (my S78 l>=7 floor); 2/13 = j=2 at k=6 (my S97 cluster margin + mac-mini block-lift); 1/6 = k=5 tight (mac-mini 7-spread census infimum). The numbers were never coincidences.
+
+UNIFICATION: quantization (S703) = the spectrum is a ladder; coupling (S533) = leaving the ground rung costs a whole step; Farey mediant = rung heights j/(kj+1). Quantizer = Stern-Brocot arithmetic (good points at a/(v_i+v_j) => minimax is a mediant). PROOF AVENUE: universal 'second-best = mediant' is hdich's twin at every k -> induction on k + continued-fraction machinery + the {1..k-1,2k} second-certificate. Does NOT close the crux (unbounded covering families still need the census) but makes 2/25 PROVABLY TIGHT and reframes the whole program as 'the LRC Farey ladder's first rung gap is empty'.
+
+Files: reflection the-gap-is-the-first-rung-of-a-farey-ladder; farey_spectrum + robust outs; HYP-4306. Also noted MISTAKE-110 (Q50 false at bound 50, ray-local finiteness) touches my S98 framing -- census-bridge THEOREM intact (any q), only the q<=50 empirical cap needs 'ray-local'.
 
 ## opus-2026-07-06-S99 -- THE (A)-LEG PROJECTION FLOOR (M(U) >= 1/13, formal) + THE JUMP (rank-1 floor vs rank-2 leap to 1/6) + (A) = 2-D LIFT RIGIDITY + the Bonferroni/decouple assessment of kps's circle lemma (HYP-4296)
 
