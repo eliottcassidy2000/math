@@ -1,0 +1,25 @@
+=== (A) DECOUPLING: parallel-coupled consecutive freqs CLEAR (homogeneous LR) ===
+  the lifted, decoupled, are homogeneous ||r_i theta'|| -- LR value >= 1/(l+1):
+    l= 6 freqs 1..6: homogeneous LR M = 0.14285  (LRC bound 1/(l+1) = 0.14286; 2/25 = 0.08000) => CLEARS (> 2/25)
+    l= 7 freqs 1..7: homogeneous LR M = 0.12500  (LRC bound 1/(l+1) = 0.12500; 2/25 = 0.08000) => CLEARS (> 2/25)
+    l= 8 freqs 1..8: homogeneous LR M = 0.11111  (LRC bound 1/(l+1) = 0.11111; 2/25 = 0.08000) => CLEARS (> 2/25)
+    l= 9 freqs 1..9: homogeneous LR M = 0.10000  (LRC bound 1/(l+1) = 0.10000; 2/25 = 0.08000) => CLEARS (> 2/25)
+    l=10 freqs 1..10: homogeneous LR M = 0.09091  (LRC bound 1/(l+1) = 0.09091; 2/25 = 0.08000) => CLEARS (> 2/25)
+    l=11 freqs 1..11: homogeneous LR M = 0.08333  (LRC bound 1/(l+1) = 0.08333; 2/25 = 0.08000) => CLEARS (> 2/25)
+    l=12 freqs 1..12: homogeneous LR M = 0.07692  (LRC bound 1/(l+1) = 0.07692; 2/25 = 0.08000) => IN GAP
+
+=== (B) GENERIC rectangle rigidity: does a slice-tiling persist over t? ===
+  consecutive freqs 1..l, GENERIC couplings a_i, near-tiling shift at t0=0;
+  sweep t in [-w, w], report max_t (rectangle M) -- if > 2/25, the tiling BROKE:
+    l=10, trial 0: slice uncovered@t0=0.0019, max_t rectangle-M over [-1/300,1/300] = 0.08679 => TILING BROKE (clear pt, rigidity holds)
+    l=10, trial 1: slice uncovered@t0=0.0019, max_t rectangle-M over [-1/300,1/300] = 0.08867 => TILING BROKE (clear pt, rigidity holds)
+    l=10, trial 2: slice uncovered@t0=0.0019, max_t rectangle-M over [-1/300,1/300] = 0.08418 => TILING BROKE (clear pt, rigidity holds)
+    l=11, trial 0: slice uncovered@t0=0.0000, max_t rectangle-M over [-1/300,1/300] = 0.08318 => TILING BROKE (clear pt, rigidity holds)
+    l=11, trial 1: slice uncovered@t0=0.0000, max_t rectangle-M over [-1/300,1/300] = 0.08469 => TILING BROKE (clear pt, rigidity holds)
+    l=11, trial 2: slice uncovered@t0=0.0000, max_t rectangle-M over [-1/300,1/300] = 0.08397 => TILING BROKE (clear pt, rigidity holds)
+
+READING:
+  (A) parallel-coupled consecutive freqs have homogeneous LR value > 2/25 for all l<=11
+      => torus_decouple_clears is confirmed: the sheared-product stratum CLEARS.
+  (B) if generic couplings break the slice-tiling within [-1/300,1/300] (rectangle-M > 2/25),
+      the generic l=10,11 case ALSO clears (rectangle rigidity) -- the forced-rectangle route.

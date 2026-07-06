@@ -442,6 +442,20 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S20g -- torus_decouple_clears (6th thm, GREEN kernel-pure): the l=10,11 distinct-freq slice-tiling (MISTAKE-113) is a RED HERRING -- the sheared-product case DECOUPLES + LRC-clears for ALL l<=11, generic clears via the 1/300-rectangle drift; the seam 1/12-2/25=1/300 IS the clearance margin (HYP-4247)
+
+Prompt (owner): keep pushing the proofs; integrate recent agent work.
+
+THE INSIGHT (resolving my own MISTAKE-113): the l>=10 consecutive slice-tiling used ARBITRARY shifts; in the actual (A)-torus the lifted shifts are a_i*t, structurally constrained. torus_decouple_clears (LRCCircleCover.lean, GREEN kernel-pure): when a_i = c*r_i (the sheared product -- the ONE distinct-freq shape whose slice-tiling PERSISTS as t moves), theta' = theta + c*t DECOUPLES base ⊥ lifted; LRC(<=13) on EACH <=11-runner factor gives margin >= 1/12 > 2/25. PROVED for ALL 1 <= |L| <= 11 via DOUBLE citation (base T=complement + lifted L homogeneous), combined at (t0, theta'0 - c*t0). Strictly generalizes torus_product_dead (c=0). NO covering floor needed -- LRC citation on the l<=11 lifted directly.
+
+NUMERICS (lrc_decouple_rectangle_kps_S20g): (A) parallel-coupled consecutive freqs have homogeneous LR value EXACTLY 1/(l+1) -- 1/12 at l=11 (>2/25), 1/13 at l=12 (=the full problem); confirms decoupling clears l<=11. (B) GENERIC (non-parallel) couplings break the slice-tiling within the width-1/300 forced rectangle (6/6 trials, rectangle-M 0.084-0.089 > 2/25) -- so the generic case clears via torus_forced_rectangle too.
+
+THE SEAM (coherence): 1/12 - 2/25 = 25/300 - 24/300 = 1/300 EXACTLY = the forced_rectangle width. The margin by which l=11 clears IS the S6 seam built into torus_forced_rectangle. The geometry closes on itself.
+
+STATE of the distinct-freq (A) window: [l<=6 PROVED density] + [7<=l<=9 slice-floor, Newman-numerical] + [l=10,11 PARALLEL proved (decoupling), GENERIC numerical (rectangle)]. l=12 = the full 12-runner problem at 1/13. Complements mac-mini's multi-class 7-spread (infimum 1/6) + the census. LEAN: 6 thms in LRCCircleCover, all kernel-pure, corpus 8693.
+
+FILES: LRCCircleCover.lean (torus_decouple_clears added); lrc_decouple_rectangle_kps_S20g.py, lrc_consecutive_tile_check_kps_S20f.py (+.outs); MISTAKE-113; INDEX. No canon overridden.
+
 ## kind-pasteur-2026-07-06-S20d -- THE (A)-WINDOW REDUCTION: distinct-freq combs at 2/25 can't cover (numerically dead through l=14) => LRCCircleCover.lean (circle_clear_of_density + CircleClearFloor named obligation + torus_A_window_empty) GREEN kernel-pure; converges with mac-mini HYP-4292 (infimum 1/6) -- the (A) residual is now two covering lemmas, both confirmed safe (HYP-4247 ext)
 
 Prompt (owner): keep pushing the proofs; integrate recent agent work.

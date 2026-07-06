@@ -26,8 +26,22 @@
     at radius `ρ` always leave a clear point.  `circleClearFloor_of_le6`
     discharges it for `l ≤ 6` (density).  It is TRUE (numerically) for
     `7 ≤ l ≤ 9` (the genuine Newman-shaped distinctness lemma, opus's `φ > 0`
-    lane) but FALSE for `l ≥ 10` (consecutive tiles) — so `torus_A_window_empty`
-    below closes the distinct-freq (A) window only up to `|L| ≤ 9`.
+    lane) but FALSE for `l ≥ 10` (consecutive combs tile *a single slice* with
+    arbitrary shifts) — so `torus_A_window_empty` via the FIXED-slice floor
+    closes the distinct-freq (A) window only up to `|L| ≤ 9`.
+
+  * `torus_decouple_clears`: BUT the `l = 10, 11` slice-tiling is a red herring
+    for the actual torus — the tiling shifts `a i · t₀` are structurally
+    constrained.  In the one shape whose slice-tiling PERSISTS as `t` moves
+    (`a i = c · r i`, the sheared product), the substitution `θ' = θ + c·t`
+    DECOUPLES base ⊥ lifted and LRC(≤13) on each `≤ 11`-runner factor clears at
+    `≥ 1/12 > 2/25`.  PROVED for all `1 ≤ |L| ≤ 11`.  The generic
+    (non-parallel) case clears via `torus_forced_rectangle`: the slice-tiling
+    fails to persist over the width-`1/300` rectangle, opening a clear point at
+    margin `≈ 1/12` (verified S20g; the seam `1/12 − 2/25 = 1/300` is exactly
+    the rectangle width — the clearance margin IS the seam).  So the `l = 10,11`
+    concern (MISTAKE-113) is resolved: parallel PROVED, generic numerically
+    clear.
 
   * `torus_A_window_empty`: base citation + `CircleClearFloor (2/25) |L|` ⟹ a
     proper coupled 2-torus system with DISTINCT lifted frequencies has a
@@ -246,10 +260,98 @@ theorem torus_A_window_empty_le6 (cite : LRCUpTo13)
   torus_A_window_empty cite L hL hLne w r a hw hr hdistinct
     (circleClearFloor_of_le6 L.card hL6)
 
+/-! ## the sheared-product stratum: decoupling clears for ALL `l ≤ 11` -/
+
+/-- **THE DECOUPLING CLEAR (sheared product)**: when the lifted couplings are
+PROPORTIONAL to the frequencies, `a i = c · r i` (the "sheared product" — the
+one distinct-frequency shape whose single-slice tiling PERSISTS as `t` moves),
+the substitution `θ' = θ + c·t` DECOUPLES the system into base ⊥ lifted, and
+LRC(≤13) on EACH factor (both `≤ 11` runners) clears it: a `2/25`-clear point
+exists for EVERY proper `L` (`1 ≤ |L| ≤ 11`), with NO covering floor.
+
+This is why the `l = 10, 11` single-slice tiling (MISTAKE-113) does not threaten
+the gap in the parallel case: the tiling shifts `s i = a i · t₀` that would tile
+one slice force the homogeneous lifted `‖r i θ'‖`, which by LRC has a lonely
+point `≥ 1/(|L|+1) ≥ 1/12 > 2/25`.  Strictly generalizes `torus_product_dead`
+(the `c = 0` case). -/
+theorem torus_decouple_clears (cite : LRCUpTo13)
+    (L : Finset (Fin 12)) (hL : L.Nonempty) (hLne : L ≠ Finset.univ)
+    (w r : Fin 12 → ℤ) (c : ℝ)
+    (hw : ∀ i, i ∉ L → w i ≠ 0) (hr : ∀ i, i ∈ L → r i ≠ 0) :
+    ∃ t θ : ℝ, (∀ i, i ∉ L → ∀ m : ℤ, 2/25 ≤ |(w i : ℝ) * t - m|) ∧
+               (∀ i, i ∈ L → ∀ m : ℤ,
+                  2/25 ≤ |(r i : ℝ) * θ + c * (r i : ℝ) * t - m|) := by
+  classical
+  set T : Finset (Fin 12) := Finset.univ \ L with hT
+  have hTmem : ∀ i, i ∈ T ↔ i ∉ L := by
+    intro i; rw [hT, Finset.mem_sdiff]; simp only [Finset.mem_univ, true_and]
+  have hTcard : T.card ≤ 12 := by
+    calc T.card ≤ Finset.univ.card := Finset.card_le_card (Finset.subset_univ T)
+      _ = 12 := by rw [Finset.card_univ, Fintype.card_fin]
+  have hT11 : T.card ≤ 11 := by
+    have hL1 : 1 ≤ L.card := Finset.card_pos.mpr hL
+    have : T.card = 12 - L.card := by
+      rw [hT, Finset.card_univ_diff, Fintype.card_fin]
+    omega
+  have hL11 : L.card ≤ 11 := by
+    have hss : L ⊂ Finset.univ := Finset.ssubset_univ_iff.mpr hLne
+    have := Finset.card_lt_card hss
+    rw [Finset.card_univ, Fintype.card_fin] at this
+    omega
+  have hLcard12 : L.card ≤ 12 := le_trans hL11 (by norm_num)
+  -- cite the base T (complement)
+  obtain ⟨t₀, hmarginB⟩ := cite_margin_gen cite
+    (fun i => if i ∈ L then 1 else w i) T hTcard
+    (fun i hi => by
+      show (if i ∈ L then 1 else w i) ≠ 0
+      rw [if_neg ((hTmem i).mp hi)]
+      exact hw i ((hTmem i).mp hi))
+  have hbase : ∀ i, i ∉ L → ∀ m : ℤ, (2:ℝ)/25 ≤ |(w i : ℝ) * t₀ - m| := by
+    intro i hi m
+    have h := hmarginB i ((hTmem i).mpr hi) m
+    rw [if_neg hi] at h
+    have hcard : ((T.card : ℝ) + 1) ≤ 12 := by
+      have : (T.card : ℝ) ≤ 11 := by exact_mod_cast hT11
+      linarith
+    have h12 : (1:ℝ)/12 ≤ 1 / ((T.card : ℝ) + 1) := by
+      apply div_le_div_of_nonneg_left (by norm_num) ?_ hcard
+      positivity
+    calc (2:ℝ)/25 ≤ 1/12 := by norm_num
+      _ ≤ 1 / ((T.card : ℝ) + 1) := h12
+      _ ≤ |(w i : ℝ) * t₀ - m| := h
+  -- cite the lifted L (homogeneous ‖r i θ'‖)
+  obtain ⟨θ'₀, hmarginL⟩ := cite_margin_gen cite
+    (fun i => if i ∈ L then r i else 1) L hLcard12
+    (fun i hi => by
+      show (if i ∈ L then r i else 1) ≠ 0
+      rw [if_pos hi]; exact hr i hi)
+  have hlift : ∀ i, i ∈ L → ∀ m : ℤ, (2:ℝ)/25 ≤ |(r i : ℝ) * θ'₀ - m| := by
+    intro i hi m
+    have h := hmarginL i hi m
+    rw [if_pos hi] at h
+    have hcard : ((L.card : ℝ) + 1) ≤ 12 := by
+      have : (L.card : ℝ) ≤ 11 := by exact_mod_cast hL11
+      linarith
+    have h12 : (1:ℝ)/12 ≤ 1 / ((L.card : ℝ) + 1) := by
+      apply div_le_div_of_nonneg_left (by norm_num) ?_ hcard
+      positivity
+    calc (2:ℝ)/25 ≤ 1/12 := by norm_num
+      _ ≤ 1 / ((L.card : ℝ) + 1) := h12
+      _ ≤ |(r i : ℝ) * θ'₀ - m| := h
+  -- combine at θ₀ = θ'₀ − c·t₀ : the lifted tooth collapses to the homogeneous one
+  refine ⟨t₀, θ'₀ - c * t₀, hbase, ?_⟩
+  intro i hiL m
+  have h := hlift i hiL m
+  have harg : (r i : ℝ) * (θ'₀ - c * t₀) + c * (r i : ℝ) * t₀ - m
+      = (r i : ℝ) * θ'₀ - m := by ring
+  rw [harg]
+  exact h
+
 #print axioms circle_clear_of_density
 #print axioms circleClearFloor_of_le6
 #print axioms torus_A_window_empty
 #print axioms torus_A_window_empty_le6
+#print axioms torus_decouple_clears
 
 end CircleCover
 end LonelyRunner
