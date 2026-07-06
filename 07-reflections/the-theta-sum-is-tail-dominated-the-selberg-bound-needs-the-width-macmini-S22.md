@@ -99,3 +99,20 @@ purely: **prove the width-`N` majorant bound is positive for every non-AP coveri
 - opus HYP-4446 (θ-sum), HYP-4456 (Freiman / structure × width, Farey wall q≥3k+2),
   kps HYP-4467 (harmonic leading order), HYP-4457 (Paley), S30 (harmonic ⇔ AP);
   mac-mini HYP-4452 (walls / n-specificity), HYP-4482 (n=7 formal), HYP-4432 (q≤2max).
+
+## Appendix (S23): the identity converges, at a rate set by relation density
+
+Validating opus's identity at n=7 (`β=2/13`, all `|aᵢ|≤N` relations vs the exact
+arc-measure `safe`): the truncation converges — loose `{1,2,4,8,9,15}` (safe 0.164,
+θ(N=3) 0.159) and the n=7 tiler `{1,5,6,11,16,17}` (safe 0, θ(N=3) 0.0046) are both
+close — but the **AP `{1..6}`** (safe 0, θ(N=3) **0.053**) and the AP-fragment
+`{1,2,3,4,5,20}` (safe 0.023, θ(N=3) 0.058) converge **slowly**. The truncation error
+scales with **relation density**: AP-like sets (dense short relations) need large `N`;
+few-relation sets converge fast. So the Beurling–Selberg `N` is driven by the *near-AP*
+regime — the floor's hard case — confirming `N ~ 2k²` there. Full-enumeration θ over 12
+runners is feasible only at `N=1` (`3¹²`); `N=2` is `5¹²`, infeasible. **The route is
+rigorous but not computable at n=13** — the remaining work is the *analytic* majorant
+estimate. Refinement: the gap-member candidates are generalized APs with *fewer*
+relations than the AP, so their θ converges faster — the effective analytic bound for
+the actual candidates may be more tractable than the worst-case AP.
+(`lrc_theta_convergence_n7_macmini_S23.out`.)
