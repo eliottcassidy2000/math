@@ -324,6 +324,7 @@ import TournamentH7.LRCGapLadder  -- kps-S7(2026-07-05): the l>=2 peel ladder at
 import TournamentH7.LRCPairWalk  -- kps-S8(2026-07-05): the pair walk (3-step tooth-boundary walk, linarith kill) => gap_pair_rung: every pair of a gap violator has min <= 22B -- 3x sharper than the S7 density C_2 (HYP-4117)
 import TournamentH7.LRCTripleWalk  -- kps-S9(2026-07-05): the l=3 walk by recursion into the pair walk (revisit gap covered by the other two = walk_core; balance 4max<=7min saturates at 21/25 exactly) => gap_triple_rung: balanced triples min <= 12B (HYP-4118)
 import TournamentH7.LRCTemplateSurface  -- kps-S10(2026-07-05): the Q50 crux pinned formally -- TemplateWitness (decidable) + TemplateDichotomy + lrc14_of_template_and_corner: LRC(14) <= cite + TemplateDichotomy + CornerLonely; loose side = fixed finite template family (HYP-4127)
+import TournamentH7.LRCMultiFoldRows  -- kps-S17(2026-07-05): consecutive multi-fold tower floor rows D_2..D_6 >= 2/25 (corrected: the closed-form law is FALSE at l=4,5 -- witnesses 17/155, 19/155; the floor survives) -- the kps side of HYP-4212 (HYP-4217)
 import TournamentH7.LRCMultiKillerWindow13
 import TournamentH7.LRCLiftPigeonhole
 import TournamentH7.LRCGapDescent

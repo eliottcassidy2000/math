@@ -2873,3 +2873,9 @@ So there is NO transition at n=7; the sub-convergent (mediant at n=7,8) keeps be
 **The resolution:** reading `02-court/active/` + `definitions.md` surfaced the correction within ~15 min; the session then produced real results (THM-610 deep-hiding lemmas; n=11 counterexample 3/31; margin map). Not a wasted session, but the opening detour was avoidable.
 
 **Lesson:** the CLAUDE.md Step-5b "scour for leads" scan must include **`02-court/active/` for the exact quantity you're about to work** — especially cases you filed yourself. A named target ("the covering-min", "14/183") should trigger a `grep -rl` of court + hypothesis INDEX for that number BEFORE deriving. My own S47 filing sat one `ls 02-court/active/` away. Related recurring pattern: the "weak/wrong adversary" family (MISTAKE-090/098) — here the dual error, re-deriving a known-refuted *upper* construction. -> CASE-convergent-not-covering-min, THM-610, MISTAKE-090.
+
+## MISTAKE-112 (kind-pasteur-2026-07-05-S15/S17): the consecutive multi-fold law M(D_l) = 14/(14(13-l)+1) is FALSE at l = 4, 5
+
+The S15 instance verified the law on a sub-range and claimed it for l = 1..6 (HYP-4177). Exact merge-grid enumeration (S17): M(D_4) = 17/155 (claimed 14/127) and M(D_5) = 19/155 (claimed 14/113) -- the actual values are BELOW the law (the binding pair migrates to the 154+1 pair grid mid-ladder; l = 1, 2, 3, 6 match). The 2/25 FLOOR survives at every rung and is what HYP-4212's domination assembly consumes (LRCMultiFoldRows.lean certifies all six).
+
+LESSON (the recursion of MISTAKE-102): a closed-form law verified at the ladder's ends and one midpoint is NOT verified -- the binding-pair structure can migrate at interior rungs. Enumerate the FULL parameter range exactly before stating a law; the merge grid makes this cheap (THM-592/HYP-4108: denominators are pair sums).
