@@ -1,3 +1,21 @@
+## mac-mini-2026-07-06-S10 -- THE (A)-SUBSUMPTION IS PREPRINT-FREE: an elementary L/(2N) convergence rate (F Lipschitz + 1/(2N)-dense curve) replaces the Jain-Kravitz lift-limit citation (HYP-4342)
+
+Prompt (owner): work on the subsumption.
+
+THE ADVANCE: my S6b subsumption (2-torus (A) = corollary of the finite 1-D census) rested on FOUR pieces, one soft: (ii) M(v^N) -> M(U), which cited the Jain-Kravitz lift-limit PREPRINT (outside the <=13 policy).  This session ELIMINATES it with an elementary lemma.
+
+THE LEMMA (pure real analysis): F(t,s) = min_i ||r_i t + ell_i s|| on T^2 is L-LIPSCHITZ, L = max_i(|r_i|+|ell_i|), N-INDEPENDENT.  M(v^N) = max_tau min_i ||(r_i+N ell_i)tau|| = max_tau F(tau, N tau) = max over the rational-slope curve C_N = {(tau, N tau)}.  C_N is 1/(2N)-DENSE (explicit: tau = (s0 + round(N t0 - s0))/N).  Hence M(U) - L/(2N) <= M(v^N) <= M(U): convergence FROM BELOW with EXPLICIT rate, NO lift-limit theorem.  (Verified: gap << L/2N on L=12 families; the '<= M(U)? NO' flags are the coarse 2-D grid UNDERESTIMATING M(U) -- M(v^N) is itself the sharper lower bound, consistent with the theorem M(v^N) <= M(U).)
+
+THE PREPRINT-FREE SUBSUMPTION: M(U) in (1/13,2/25] => large-N M(v^N) in (1/13,2/25) STRICTLY (endpoint 2/25: the approaching values are strictly below) => in-window 1-D families at unbounded N => (opus-S98 residue bridge, formal) decided by the finite census => contradiction.  (A) is a COROLLARY of the finite census with NO preprint: trivial containment + this elementary rate + opus's formal bridge + the one open census.
+
+CONSEQUENCE: removes the J-K citation from the (A) leg (S4's whole (A)/(C) reduction rested on it).  With S9's CircleClearFloor 3-way split, BOTH the direct-covering lane and the subsumption lane are clean and terminate at the same single finite object (the residue-family census).  The 2-torus/distinct-freq covering work is confirmed sufficient-not-necessary.
+
+LEAN: a self-contained LRCTorusRate.lean (LipschitzWith + finite net + IsCompact.exists_forall_ge; the containment M(v^N) <= M(U) is a one-liner once both maxima are objects) -- flagged.
+
+FILES: lrc_subsumption_rate_macmini_S10.py (+.out); reflection the-subsumption-is-preprint-free-macmini-S10; HYP-4342 (+INDEX).  No canon overridden.
+
+NEXT: (a) LRCTorusRate.lean (the abstract Lipschitz-net rate + containment -- makes the subsumption a corpus object); (b) with the subsumption preprint-free, the ONLY remaining tail obligation is the finite Q50/template census gap-emptiness -- point everything there.
+
 ## mac-mini-2026-07-06-S9 -- CircleClearFloor SPLITS THREE WAYS: the crux's last covering obligation LOCATED; unshifted l<=11 = LRC citation, additively-generic = Newman-Fourier PROVED, the residual = phase-coupling of resonance-rich (= tight-locus) frequencies (HYP-4332)
 
 Prompt (owner): push another session toward the crux.

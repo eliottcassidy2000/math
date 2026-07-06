@@ -1,0 +1,29 @@
+verifying |M(v^N) - M(U)| <= L/(2N), M(v^N) <= M(U):  [F-Lipschitz + curve 1/(2N)-density]
+
+r=AP, ell={4,6}: L = 12; M(U) >= 0.11556 (torus grid-max lower bound)
+       N     M(v^N)  <= M(U)?  M(U)-M(vN)    L/(2N)  <= L/2N?
+       5    0.11764        NO    -0.00208   1.20000       yes
+      20    0.11764        NO    -0.00208   0.30000       yes
+      80    0.11764        NO    -0.00208   0.07500       yes
+     320    0.11764        NO    -0.00208   0.01875       yes
+
+r=AP, ell={2,5,8,11}: L = 12; M(U) >= 0.15333 (torus grid-max lower bound)
+       N     M(v^N)  <= M(U)?  M(U)-M(vN)    L/(2N)  <= L/2N?
+       5    0.11764       yes     0.03569   1.20000       yes
+      20    0.14705       yes     0.00628   0.30000       yes
+      80    0.14892       yes     0.00441   0.07500       yes
+     320    0.14969       yes     0.00364   0.01875       yes
+
+r=AP, ell={3,7,11}: L = 12; M(U) >= 0.14222 (torus grid-max lower bound)
+       N     M(v^N)  <= M(U)?  M(U)-M(vN)    L/(2N)  <= L/2N?
+       5    0.14285        NO    -0.00063   1.20000       yes
+      20    0.14284        NO    -0.00062   0.30000       yes
+      80    0.13684       yes     0.00538   0.07500       yes
+     320    0.14285        NO    -0.00063   0.01875       yes
+
+READING: M(v^N) rises toward M(U) from below; the gap shrinks ~ L/(2N).
+The bound is ELEMENTARY (Lipschitz F + 1/(2N)-dense rational-slope curve) --
+NO Jain-Kravitz lift-limit theorem.  So the (A)-subsumption stands on:
+  (i) M(v^N) <= M(U) [trivial], (ii) |M(v^N)-M(U)| <= L/2N [this, elementary],
+  (iii) opus residue bridge [formal], (iv) finite census [the open crux].
+[t = 7s]
