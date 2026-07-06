@@ -1,0 +1,9 @@
+==================================================================================
+STRUCTURE x WIDTH: generalized-AP M-rise vs window, across k
+==================================================================================
+    k   floor top 2/(2k+1)     window w   min in-gap M  min rise/w   gap?
+    6     1/7         2/13         1/91     -- (empty)       1.000  empty
+    7     1/8         2/15        1/120     -- (empty)       1.000  empty
+    8     1/9         2/17        1/153     -- (empty)       1.889  empty
+    9    1/10         2/19        1/190     -- (empty)       2.111  empty
+   10    1/11         2/21        1/231     -- (empty)       2.100  empty
