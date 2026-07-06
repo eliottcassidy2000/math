@@ -1,0 +1,17 @@
+1-elt replacements (x<=200): checked 1263, in-gap 0
+  [2-elt time cap]
+after 2-elt (x<=70): checked 28286, in-gap 0
+  [3-elt time cap]
+after 3-elt (x<=30): total checked 59633, in-gap 0
+
+GAP MEMBERS FOUND: 0
+
+near-boundary (2/25<=M<3/25): 9042; tightest few:
+   M=2/25=0.08000 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24]
+   M=2/25=0.08000 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24]
+   M=2/25=0.08000 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24]
+   M=2/25=0.08000 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24]
+   M=2/25=0.08000 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24]
+   M=2/25=0.08000 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24]
+
+[t=181s]  => CLEAN (no gap member in the bounded-height near-AP residual)
