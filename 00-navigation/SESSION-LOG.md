@@ -1,3 +1,21 @@
+## mac-mini-2026-07-06-S12 -- TOWARD THE FULL THEOREM: the prime/composite tight-locus dichotomy corrects the route and isolates the crux (HYP-4382)
+
+Prompt (owner): make LRC(14) a FULL theorem (not conditional); be creative; integrate the fleet during downtime.
+
+WHAT A FULL THEOREM ACTUALLY NEEDS (the honest map, sharpened): TightLooseDichotomy = tight-locus rigidity + gap-emptiness (G). Discharging it is NOT a formalization task -- (G) is the OPEN spectral-gap conjecture (HYP-2052) at n=13. CornerLonely is the third named hypothesis.
+
+FINDING (new, verified two ways): the PRIME/COMPOSITE TIGHT-LOCUS DICHOTOMY.
+ * n=6 (COMPOSITE 2.3): the tight locus {M=1/n} contains a NON-AP family {1,3,4,5,9} (M=1/6 by exact profile AND fine-grid Q=4620; covering; gcd 1). n=7 (PRIME): tight locus = {AP} UNIQUELY.
+ * MECHANISM: at composite n the non-units let a tight family SKIP one residue and REPEAT another (9==3 mod 6, same safe distance at t=1/6); at a PRIME modulus every nonzero residue is a UNIT so tightness forces the full system {1..n-1} = the AP. This IS the content (and the reason for the prime hypothesis) of the corpus's residue_pinning_13.
+ * ROUTE CORRECTION: the AP-tower/rigidity-ladder induction (opus-S103/S104, kps-S13, my S59) assumes 'tight 11-subfamily => dilated AP' ONE LEVEL DOWN = n=12 = COMPOSITE, where it FAILS (the n=6 witness is the small-scale proof). The descending induction is UNSOUND through composite 12. ESCAPE: n=13 is PRIME -- residue_pinning_13 acts DIRECTLY on the 12-set (no 11-subfamily, no descent). The tight side is CLEAN at the prime.
+ * SYNTHESIS: this is WHY the AP is the UNIQUE fixed point of opus-S48's scale-flow (OPEN-Q-108 R2) -- primality makes the contraction target unique; the composite artifacts {1,3,4,5,9} are the spurious lower-scale attractors the descent would hit.
+
+REFINEMENT: the tight locus needs only the STRICT statement 'nonzero 13-lift => M>1/13' (NOT the full M>=2/25). Verified: every single-lift of {1..12} has M>=2/23~0.087, infimum 2/25 at the block lift, all strictly above 1/13~0.077. So the tight side asks a WEAKER, cleaner target than the sibling's (HYP-4362) full 2/25 M-minimizer.
+
+DELIVERABLES: reflection the-tight-locus-is-the-AP-only-because-13-is-prime-macmini-S12.md; HYP-4382 CONFIRMED (INDEX); OPEN-Q-108 (R3) prime-fixed-point refinement; readiness report 'what a FULL theorem requires' map; scripts lrc_peel_lemma / lrc_prime_tight_locus / lrc_aptower_induction _macmini_S12 (+ outs). Integrated opus-S48/S101/S103/S104, sibling HYP-4362, my S59, HYP-2052, Jain-Kravitz (2-torus only, not the gap), the Barely-Lonely refined conjecture (literature: gap open beyond n=4,6).
+
+NEXT (the FULL theorem's three open analytic pieces, all genuine open math): (1) the strict lift-rigidity / M-minimizer proof [tight side]; (2) opus-S48 scale-flow contraction RATE + (3) the AP-min-star-discrepancy density floor >=1/36 [gap-emptiness (G)]. No canon overridden; no new claims put in canon.
+
 ## mac-mini-2026-07-06-S11 -- LIFT-EXHAUSTIVENESS via THE M-MINIMIZER PROPERTY: the canonical realization of each mod-25 transversal MINIMIZES M => S9b's exhaustive canonical result extends to ALL lifts (no gap member); the AP is the UNIQUE tight family (HYP-4362)
 
 Prompt (owner): work the remaining crux, keep pushing toward the proof.

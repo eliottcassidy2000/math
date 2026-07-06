@@ -81,6 +81,14 @@ session:
    (FORMAL) + lift-rigidity **M-minimizer** (sibling HYP-4362, empirical — the
    canonical lift minimizes M over each mod-25 transversal profile). *Open piece:
    the M-minimizer proof.* CLEAN modulo that — no descent, no composite hazard.
+   **S12 refinement:** the tight locus needs only the *strict* statement
+   "a nonzero 13-lift of the AP-residues has `M > 1/13`" — NOT the full
+   `M ≥ 2/25`.  A lift that landed anywhere in the open gap would still leave the
+   tight locus `{M = 1/13}`.  Verified with comfortable margin: every single-lift
+   `{1..12}` with one element `+13` has `M ≥ 2/23 ≈ 0.087` (smallest at runner 6
+   → 19), the infimum over all lifts being `2/25` at the block lift — all
+   strictly above `1/13 ≈ 0.077`.  So the tight side asks *strict rigidity*, a
+   weaker (and cleaner) target than the sibling's `2/25` M-minimizer.
 2. **Gap-emptiness (G)** — the general spectral-gap conjecture HYP-2052 at
    `n = 13`, restricted to covering-compressed families. TRUE empirically;
    **not** finite-modulus-decidable (MISTAKE-110). The live route is opus-S48's
