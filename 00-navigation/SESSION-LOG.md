@@ -1,3 +1,17 @@
+## mac-mini-2026-07-06-S15 -- THE GOVERNING PATTERN: LRC is an additive-multiplicative duality; the three-gap theorem quantizes the witness (HYP-4412)
+
+Prompt (owner): work what remains; look back for self-similar patterns; reframe freely -- what pattern governs the LRC that we are not picking up on?
+
+ANSWER (synthesis of 5 repo threads into ONE duality): LONELINESS M is ADDITIVE-metric (orbit gaps, arcs, three-distance); COVERING/resonance-killing is MULTIPLICATIVE (b|s, dilation, 'force a multiple of 14'); they are DUAL and in TENSION (killing a resonance needs a spread-out speed, spread raises M); CONTINUED FRACTIONS (Ostrowski/Stern-Brocot/three-gap) MEDIATE.  The AP is the unique FIXED POINT (additive interval = multiplicative least-spread killer = roots of unity at t=1/n).  Unified threads: (1) LRC(AP) IS the three-distance theorem (opus 06-30); (2) difference-closed => tight, AP unique primitive (opus avoided-arc); (3) M=1/(smallest surviving resonance), killing-vs-compactness (kps S31p); (4) spectrum = Ostrowski ladder k/(k(n-1)+1), three-gap = rigidity (mac-mini S38); (5) huge tail = core DILATED (Steinhaus self-similarity, S73).
+
+NEW BRICK (three-gap witness rigidity, verified lrc_threegap_witness_rigidity_S15.out): at the witness t*, g(S)=#distinct gap lengths of {0} u {v_i t*}.  NEAR-TIGHT families have g=2-4 (AP g=2, doubled-apex g=2, block g=3, deep well g=3, {1..11,23} g=4 -- a {k*alpha} three-gap signature); LOOSE have g=7-10.  So a near-tight witness is (near) an ARITHMETIC {k*alpha} orbit => M is a CF/Ostrowski RUNG => no value lies strictly inside the Farey cell (1/13,2/25).  The spectrum is THREE-GAP-QUANTIZED.  (g-count is the ROBUST invariant = the actual three-gap statement; a cruder 'phases are multiples of min-gap' probe fails for the deep well because its carrier is dilated -- itself the Steinhaus self-similarity.)
+
+REFRAME of what remains: the density floor / contraction rate (opus-S106 renorm flow) IS the QUANTITATIVE three-gap rigidity ('detuning the AP raises g and jumps M to the next rung').  PROOF PATH for (G): M(S)<2/25 => g<=3 => (converse three-gap / Sos-Swierczkowski-van Ravenstein) phases are {k*alpha} => M a CF convergent => not in the cell.  Routes (G) through CLASSICAL three-gap theory instead of an ad-hoc additive-energy extremal.  DEEPEST LAYER: CF = Gauss map = SL(2,Z); Ostrowski ladder = horocycle; AP = cusp; X_0(14) (cusps {1,2,7,14}, 14=2.7) is the same modular world; universality across n (HYP-2052) = modular scale-invariance.
+
+DELIVERABLES: reflection the-governing-pattern-is-three-gap-quantization-...-macmini-S15; HYP-4412; OPEN-Q-108 (R4); scripts lrc_threegap_witness_rigidity / lrc_witness_is_arithmetic _macmini_S15 (+outs).  Coordinated git with concurrent mac-mini-S13 (tight-side lift-rigidity, HYP-4392) -- stashed/restored their WIP.  No canon overridden.
+
+NEXT: the converse-three-gap rigidity (M<2/25 => g<=3 => {k*alpha}); the difference-core nested self-similarity; both feed the density-floor contraction rate.
+
 ## opus-2026-07-06-S107 -- GOVERNING-PATTERN REFRAME: the LRC is a SUM-PRODUCT RIGIDITY -- the AP is the unique additive-multiplicative coincidence at the prime (3-explorer synthesis) (HYP-4396)
 
 Prompt: work on closing (G); look for self-similar patterns; reframe what we aim to prove; what pattern governs the LRC that we are not picking up on?
