@@ -1,0 +1,6 @@
+AP-base rigidity (mac-mini-S59), verified exactly:
+  tested 619 primitive dilated-11-AP-base families c*{1..11}u{X}, c=1..8
+  IN GAP (1/13,2/25): 0;  at 1/13: 1  (only {1..12})
+  ladder {1..11,12k} k=1..6: 1/13, 2/25, 3/37, 4/49, 5/61, 6/73  (=k/(12k+1); 1/13 then >=2/25)
+  c>=2 free-rider: 2*{1..11}+1=1/12, 3*{1..11}+2=1/12, 5*{1..11}+3=1/12 (all 1/12)
+  VERDICT: AP-base gap-emptiness HOLDS (0 in gap). M(V) in {1/13} U [2/25,inf).
