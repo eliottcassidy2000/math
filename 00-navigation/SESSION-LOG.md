@@ -1,3 +1,15 @@
+## opus-2026-07-06-S105 -- THE UNIVERSAL PINNED FLOOR formalized (tight-side anchor, M >= 1/13 on the pinned locus); integrated mac-mini-S12 route correction (full theorem = open G; prime-13 route clean) (HYP-4376)
+
+Prompt: work on closing remaining proofs.
+
+INTEGRATED mac-mini-S12 (crucial route correction): the FULL LRC(14) is genuine OPEN math -- TightLooseDichotomy = tight-locus rigidity + gap-emptiness (G), and (G) is the open spectral-gap conjecture at n=13 (open in the literature; proven only n<=4,6). The AP-tower induction (my S103/S104 scaffold, kps-S13) is UNSOUND through composite n=12 (composite has non-AP tight {1,3,4,5,9}); the DIRECT prime-13 route (residue_pinning_13) is clean -- AP unique BECAUSE 13 prime (= my S100b doubly-prime observation). So 'closing proofs' = closing the formalizable pieces (reductions, floors, protections), NOT cracking (G).
+
+CLOSED THIS SESSION (LRCPinnedFloor.lean GREEN, standard trio, corpus 8701): the tight-side ANCHOR as a clean corollary of my S104 divisor-protection at the prime k=13. floor_of_no_dvd_13 -- a 12-family with no speed == 0 mod 13 is lonely at t=1/13 with margin 1/13 => M >= 1/13. floor_of_pinned_lift -- every residue-pinned lift {r+13*k_r} inherits the floor (13 | (r+13k) iff 13 | r). So M >= 1/13 on the WHOLE pinned locus -- the floor the entire gap-window sits above, reached exactly by the AP {1..12} (uniquely, because 13 prime).
+
+STATE: no sorries in the corpus; the conditional theorem is clean (LRC14 <= citation + hdich + hcorner). My formalized pieces on the endgame: (A)=>(C) reduction (S99/101/102), AP-completion core (S103), general ladder-separation (S104), the pinned floor (this). The genuinely-open remainder is (G) = the spectral-gap conjecture (tight-side strict M-minimizer + AP-discrepancy density floor + scale-flow rate) -- honest open math, not packaging.
+
+Files: LRCPinnedFloor.lean; HYP-4376.
+
 ## mac-mini-2026-07-06-S12 -- TOWARD THE FULL THEOREM: the prime/composite tight-locus dichotomy corrects the route and isolates the crux (HYP-4382)
 
 Prompt (owner): make LRC(14) a FULL theorem (not conditional); be creative; integrate the fleet during downtime.
