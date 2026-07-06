@@ -15,6 +15,17 @@ THE STRIP PROBE (fast float+exact): 167 primitive strip members, minimum M = 18/
 REMAINING (sharpened): drag(12) on the middle strip (margin 4/575 of room; window+fee+finite shell) + the induction base + level-11 inputs (same statements two sizes down, grid-checkable). The fleet's four attacks are the four clauses of: peel until structured, window at the margin, quarantine the razor.
 
 FILES: LRCMidrangeWitness.lean (committed this session); reflections (midrange-split + second-value-induction); lrc14_second_value_induction_klein_S141.py (+out). No canon overridden.
+## opus-2026-07-05-S90 -- THE CONVEYOR NEVER SUSTAINS (K_emp = 1.364 < 2.5 moat, adversarial) + THE FOURTEEN-FOLD MULTI-LEG LAW (50/50 strictly looser; deep well UNIQUE global min 14/169) (HYP-4186)
+
+Prompt: work the one remaining optimization; work the multi-leg lift through the fourteen-fold lens (do multi-survivors factor?); extend toward closing LRC(14).
+
+(1) THE K-OPTIMIZATION (the sliver's last analytic piece): adversarial conveyor search over the shapes where extreme swaps are ALL feasible (isolated tops D = 12/20/40, two-band, spread-pairs, geometric): worst K_emp = 1.364 vs the moat requirement 2.5 -- 45 percent margin. The swap-starvation argument (extending S89 Lemmas A+B): a swap deep phase (overlap >= 9/169) leaves the rest of the system slack 2/169 draining at >= (D - delta)/W, so feasibility forces delta >= D/2 -- ONLY extreme swaps happen; near-speed pairs JAM (recursive super-pieces); each feasible swap buys at most one more telescope stretch: K <= 2 + o(1). The sliver core closure (S87 792/792) is now backed by proof skeleton + verified margin; remaining = write-out polish.
+
+(2) THE FOURTEEN-FOLD LENS (mac-mini THM-621 extended): tested ALL 50 multi-leg 14r-lift patterns (pairs/triples/quadruples of legs in {7..12}; exact M via merge-grid). VERDICT: multi-survivors do NOT factor down -- they are STRICTLY LOOSER than their worst leg in all 50 cases (lifting removes small runners). Structure: M governed by the SMALLEST leg (pairs: M = 14/(13 r_min + r_next), exceptions (8,10)/(8,12) saturate at the single-leg-8 value; triples introduce numerators 19, 17). THE LAW: M(S) >= 14/169 for every nonempty S, equality IFF S = {12} -- THE DEEP WELL IS THE UNIQUE GLOBAL MINIMUM of the entire fourteen-fold family. The l >= 2 multi-14r corner of hdich CLOSES (all loose with margin >= 14/155; kernel-row certifiable).
+
+(3) LRC(14) STATE after this session: hdich lift-rigidity = single-leg ladder (THM-621) + multi-leg law (this) + non-14-fold machinery (rows/window/descent + mac-mini sweeps l=2..8) + the sliver (generic closed S87; K-margin this session; degenerate = finite structured worklist). The loose branch is klein/kps/mac-mini territory converging via midrange + peeling + second-value induction. What remains fleet-wide is write-out, the structured worklists, and Lean -- bookkeeping, not open mathematics, on my legs.
+
+Files: fourteenfold_factoring_opus_S90.py.out, conveyor_search_opus_S90.out, HYP-4186. No Lean this session (the exact math finished first; Lean next).
 
 ## opus-2026-07-05-S89 -- LEMMA A (fixed-order telescope) + LEMMA B (event costs) PROVED; the remaining constant posed as a finite optimization; THE DEGENERACY STRATIFICATION rigorously scopes S87's 792/792 as the GENERIC-type closure (HYP-4176)
 

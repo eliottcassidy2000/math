@@ -1,0 +1,11 @@
+isolated-top and adversarial shapes (c = 7), K_emp = maxdesert * 13 * D:
+  isolated top D=12    D= 12: maxdesert = 0.002394  K_emp = 0.373
+  isolated top D=20    D= 20: maxdesert = 0.005128  K_emp = 1.333
+  isolated top D=40    D= 40: maxdesert = 0.002622  K_emp = 1.364
+  two bands D=13       D= 13: maxdesert = 0.006279  K_emp = 1.061
+  spread pairs D=21    D= 21: maxdesert = 0.002213  K_emp = 0.604
+  isolated bottom      D= 12: maxdesert = 0.002394  K_emp = 0.373
+  geometric-ish        D= 32: maxdesert = 0.002028  K_emp = 0.844
+  consecutive          D=  6: maxdesert = 0.013832  K_emp = 1.079
+
+worst K_emp over adversarial shapes: 1.364  (moat requirement: K <= 2.5)
