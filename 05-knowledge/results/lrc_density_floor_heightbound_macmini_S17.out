@@ -1,0 +1,16 @@
+PRIMITIVE near-dilated-AP families c*{1..12}+perturbation, by scale c:
+   scale c   height  min safe (primitive perturbs)  # tested
+         1       12                       0.000000        32
+         2       24                       0.000000       297
+         3       36                       0.000000       328
+         5       60                       0.000000       592
+         8       96                       0.000000       600
+        13      156                       0.000000       600
+        21      252                       0.000000       600
+
+  => if min safe stays bounded AWAY from 0 as scale grows, primitive families
+     canNOT hug the dilated-AP locus at high scale => gap members (safe=0) are
+     HEIGHT-BOUNDED => (G) is a finite check (the S16 lever).  If min safe -> 0,
+     the height bound needs the finer near-dilated-AP rigidity.
+
+the min-safe near-AP family [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 19]: M=2/23=0.08696 (M>=2/25, safe tiny but not a gap member)
