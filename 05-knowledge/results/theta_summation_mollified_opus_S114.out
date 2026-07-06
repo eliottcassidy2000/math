@@ -1,0 +1,20 @@
+(a) SHARP theta-sum for AP{1..6}, beta=2/13, by coefficient bound K (naive partial sums):
+    K=1: partial theta-sum = +0.06951   sum|terms| = 0.223  (AP{1..6} M=1/7 so safe>0 here)
+    K=2: partial theta-sum = +0.05132   sum|terms| = 0.503  (AP{1..6} M=1/7 so safe>0 here)
+    K=3: partial theta-sum = +0.05277   sum|terms| = 0.559  (AP{1..6} M=1/7 so safe>0 here)
+    K=4: partial theta-sum = +0.03527   sum|terms| = 0.678  (AP{1..6} M=1/7 so safe>0 here)
+    K=5: partial theta-sum = +0.01342   sum|terms| = 0.824  (AP{1..6} M=1/7 so safe>0 here)
+    K=6: partial theta-sum = +0.00682   sum|terms| = 0.889  (AP{1..6} M=1/7 so safe>0 here)
+    (AP{1..6} at beta=2/13 does NOT tile -- M=1/7<2/13 so it covers, safe=0 actually. Let me note
+     the true value and watch convergence.)
+
+(b) MOLLIFIED theta-sum (h_hat*exp(-(sig m)^2)) -- does harmonic become the leading correction?
+    sig=0.0: main=+0.1101 harm=-0.0678 sum3=-0.0716 s4=+0.0638 | total=+0.0341  main+harm=+0.0423
+    sig=0.15: main=+0.1101 harm=-0.0592 sum3=-0.0669 s4=+0.0658 | total=+0.0579  main+harm=+0.0509
+    sig=0.3: main=+0.1101 harm=-0.0395 sum3=-0.0546 s4=+0.0526 | total=+0.0839  main+harm=+0.0706
+    sig=0.5: main=+0.1101 harm=-0.0151 sum3=-0.0338 s4=+0.0211 | total=+0.0938  main+harm=+0.0950
+
+READING: sig=0 is sharp (shells blow up). As sig grows, shells decay. Watch whether 'main+harm'
+approaches 0 (harmonic-led) at any sig where the tail (s4) is already negligible. If harmonic
+NEVER dominates even mollified, kps's leading-order route needs the sum-type + support-2 shells
+too (a multi-shell tail bound), not just harmonic -- concrete guidance for HYP-4467/4492.

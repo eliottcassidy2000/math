@@ -1,0 +1,35 @@
+
+AP {1..12}: n=12, beta=0.0800, TRUE safe=0.0
+  main(a=0)             : +0.12341   (running truncation: +0.12341)
+  harmonic(1,-2,1)      : -0.07369   (running truncation: +0.04972)
+  sum(1,1,-1)           : -0.04505   (running truncation: +0.00467)
+  supp4                 : +0.98138   (running truncation: +0.98605)
+  supp5                 : -1.57864   (running truncation: -0.59258)
+  (other support2/3)    : -0.28357
+  => truncated theta-sum (supp<=5,|c|<=4) = -0.87615  vs TRUE 0.0
+  KPS LEADING-ORDER TEST: main + harmonic = +0.04972  (if ~0, harmonic-led; if ~main, tail-led)
+
+AP {1..6} (n=7 base): n=6, beta=0.1538, TRUE safe=None
+  main(a=0)             : +0.11010   (running truncation: +0.11010)
+  harmonic(1,-2,1)      : -0.06777   (running truncation: +0.04233)
+  sum(1,1,-1)           : -0.07158   (running truncation: -0.02925)
+  supp4                 : +0.09141   (running truncation: +0.06215)
+  supp5                 : -0.04211   (running truncation: +0.02004)
+  (other support2/3)    : +0.00849
+  => truncated theta-sum (supp<=5,|c|<=4) = +0.02853  vs TRUE None
+  KPS LEADING-ORDER TEST: main + harmonic = +0.04233  (if ~0, harmonic-led; if ~main, tail-led)
+
+n=7 tiler {1,5,6,11,16,17}: n=6, beta=0.1538, TRUE safe=0.0
+  main(a=0)             : +0.11010   (running truncation: +0.11010)
+  harmonic(1,-2,1)      : -0.04066   (running truncation: +0.06944)
+  sum(1,1,-1)           : -0.05965   (running truncation: +0.00979)
+  supp4                 : +0.02433   (running truncation: +0.03412)
+  supp5                 : -0.01810   (running truncation: +0.01602)
+  (other support2/3)    : -0.01044
+  => truncated theta-sum (supp<=5,|c|<=4) = +0.00558  vs TRUE 0.0
+  KPS LEADING-ORDER TEST: main + harmonic = +0.06944  (if ~0, harmonic-led; if ~main, tail-led)
+
+INTERPRETATION: if 'main+harmonic' is nowhere near 0 while the FULL sum is ~0, then the
+cancellation is NOT harmonic-led -- MANY shells (support-2, sum-type, tail) jointly cancel.
+That would mean kps's step-1 leading-order argument needs the FULL signed sum, not a harmonic
+truncation -- i.e. the honest gap is the whole tail, not a small correction. Decisive for HYP-4467.

@@ -1,3 +1,17 @@
+## opus-2026-07-06-S114 -- THE SAFE ROUTES REFORMULATE (G), THEY DO NOT REDUCE IT + theta-cancellation is NOT harmonic-led (HYP-4466); LRCLonelyOpen.lean GREEN
+
+Prompt: work the sole open piece creatively in collaboration with concurrent agents.
+
+Worked kps's [theta => min-doubling] route (HYP-4467) + mac-mini's min-doubling (HYP-4492). Two findings:
+
+FINDING 1 (tested kps): decomposed my safe theta-sum by relation TYPE. The harmonic (1,-2,1) shell is NOT the dominant correction -- AP{1..12} beta=2/25: main +0.123, harmonic -0.074, sum-type -0.045, higher shells ORDER 1 + OSCILLATING (supp4 +0.98, supp5 -1.58); main+harmonic=+0.050 nowhere near true safe=0. Mollifying does NOT isolate harmonic (main+harmonic moves toward main as sig grows). So kps's leading-order PREMISE (harmonic dominance) is unsupported; the route needs the full signed series / a Selberg-Beurling band-limited majorant. Constructive guidance for HYP-4467, not a dead end.
+
+FINDING 2 (meta-clarity, GREEN): the strictly-beta-lonely set is OPEN (margin continuous) => safe(S,beta)>0 <=> M(S)>beta (LRCLonelyOpen: isOpen_lonely, exists_Ioo_lonely, margin_le_of_not_lonely; standard trio, corpus 8712). CONSEQUENCE: both AP (M=1/13) and any gap member (M in (1/13,2/25)) have safe(.,2/25)=0, so safe=0 does NOT distinguish them; 'safe(2/25)=0 => AP' is LOGICALLY EQUAL to (G). The theta-sum/Fekete/Paley/Freiman pictures are faithful REFORMULATIONS (import hard-theorem machinery) but none REDUCES the bounded case.
+
+WHERE THINGS STAND: real reduction = UNBOUNDED case (compactness S19 + quantized floor S112). Irreducible-by-reformulation = BOUNDED/single-cluster case; needs (i) a HEIGHT UPPER bound (finitize) -- S113 Farey gives the LOWER bracket q>=3k+2 => max>=(3k+2)/2, only the upper is missing -- or (ii) the Selberg-majorant tail bound. Both n-specific.
+
+Files: LRCLonelyOpen.lean (green); reflection the-safe-routes-reformulate-G-they-do-not-reduce-it-opus-S114; results theta_shell_decomposition / theta_summation_mollified _opus_S114; HYP-4466. Productive next moves: the height UPPER bound (finitize the bounded case) and the Selberg-majorant formulation -- NOT another reformulation of safe=0.
+
 ## mac-mini-2026-07-06-S21 -- CONSOLIDATION: metric-side FINITE SKELETON builds GREEN + kernel-pure (7 modules); corrected-M spectrum ladder; readiness updated
 
 Prompt (owner): work the next flagged steps, push/pull frequently.
