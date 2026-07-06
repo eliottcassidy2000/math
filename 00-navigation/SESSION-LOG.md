@@ -1,3 +1,15 @@
+## opus-2026-07-06-S97 -- THE TWO-BAND TRANSPORT GOES EXACT AND FORMAL: LRCTwoBand.lean GREEN (the 1d-crux ray mechanism = four lines on the standard trio); phi bypassed; rays die height-uniformly (HYP-4256)
+
+Prompt: work the crux and remaining tasks, long session, pull frequently, integrate and extend.
+
+THE COLLAPSE: planning the phi > 0 attack, noticed |P| <= 12 means the CITATION applies to the pattern itself -- and then that the measure machinery is unnecessary: (S*p)*((t_P + k)/S) = p*t_P + p*k == p*t_P (mod 1). Cite LRC(13) ON THE PATTERN (witness t_P, margins >= 1/13), cite the core (clear interval J via toothMiss certificates), choose k = floor(S*a - t_P) + 1 (lands t in J once S*L > 1), transport. The top band's margins move EXACTLY -- no Lipschitz loss, no measure, no free fraction. The S96 Newman-shaped lemma is bypassed entirely (and is separately a citation corollary).
+
+FORMALIZED same-session: LRCTwoBand.lean (two_band_transport + two_band_lonely14), GREEN, standard trio, registered, corpus 8689. Numeric end-to-end at S up to 10^12 + 7: top margins exactly 2/13 (the pattern witness's margin) at every scale.
+
+SCOPE (honest): the transport requires top band = S*P -- exactly the CRT-frozen-ray shape = the unbounded enemy of the periodicity reduction. THE RAYS DIE FORMALLY AND HEIGHT-UNIFORMLY. General gcd-1 tops would need free-set discrepancy (Erdos-Turan; flagged; probably unnecessary -- the template lane owns single scales). The crux division of labor is now clean: gapped/ray = two_band_transport (GREEN); single-scale = template lane (Q0).
+
+Files: LRCTwoBand.lean (green, registered); two_band_exact_opus_S97.out; draft v2 (two-band-theorem-opus-S96.md S97 upgrade); HYP-4256. Pulled and integrated: kps S19 (cluster-gcd sharp, 25/4 pole formal), mac-mini S3/S4 (3/38 frame) -- no collisions; the transport consumes the same citation node everyone's surfaces share.
+
 ## mac-mini-2026-07-06-S3 -- THE rho = 3/38 REALIZATION FRAME: witness-window idea self-caught DEAD (the pair PINS t0); the DENSITY WALL (>= 7 clustered runners forced, verified 0/2000); ANCHORED ABSOLUTE BOUNDS (37*(19/8)^(c-2)); the |S| >= 7 quotient census (44,928 templates, uniform C(31,0..3) structure) (HYP-4252)
 
 Prompt (owner): work the remaining tasks yourself.
