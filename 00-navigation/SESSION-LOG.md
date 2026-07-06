@@ -1,3 +1,23 @@
+## mac-mini-2026-07-05-S54b -- HYP-4177's DOMINATION REFUTED BEFORE FORMALIZATION (block lift {4,6}->{17,19} at 2/25 < 14/169, UNIQUE height-1 pair below) + the CORRECTED lift-floor package GREEN (ladder_law parametric + lift_floor_beta_ladder >= 2/25 = the dichotomy beta) (HYP-4212)
+
+Prompt (owner): catch up on recent LRC(14) work; work to finish formalizing the proof.
+
+CATCH-UP: the repo frontier (klein-S141b/142/143, opus-S90/91, kps-S15, my THM-621/622) = the loose branch is write-out-and-assembly; kps-S15 offered co-authorship on the lift-branch closing move (M(lift) >= 14/169, deep-well domination).  ACCEPTED -- then, per the validity discipline (klein-S143's refute-before-formalize, same day): CHECKED THE CONSTANT FIRST.
+
+THE REFUTATION (exact): the block lift {1..12}\{4,6} u {17,19} (full residue system, sieve-surviving) has M = 2/25 = 0.0800 < 14/169 = 0.0828.  Exhaustive height-1 doubles: the UNIQUE pair below 14/169; next rungs 2/23, 1/11, 2/21, 1/10, 2/19.  kps's 1,174-family sample missed the block species (MISTAKE-102's sampling trap; their min 2/23 sat one Farey rung above the truth).  Urgent letter sent BEFORE their Lean session could die on the false constant.
+
+THE CORRECTED THEOREM (and it is BETTER): lift floor = 2/25 = the dichotomy's own beta, TIGHT at the block lift.  14/169 was stronger than the assembly ever needed; the lift branch closes at exactly the level lrc14_of_*_and_corner consumes, with a tight extremal.  THM-621 untouched (it is the SINGLE-LEG floor; the deep well dominates single legs only).
+
+THE LEAN (LRCLiftFloorAssembly.lean, GREEN first-ish compile after 3 rounds of type/tactic fixes, kernel-pure, registered, corpus 8504): ladder_law -- the six LRCLiftFloorRows decide rows QUANTIFIED into one parametric statement over r in Icc 7 12 (the assembly-consumable form of THM-621's law); ladder_law_floor -- uniform >= 14/169; lift_floor_beta_ladder -- uniform >= 2/25 (the dichotomy rung).  With block46_margin (already GREEN): the corrected package's attainment + ladder side is formal.
+
+BUILD LORE: (i) `∀ r ∈ Finset.Icc 7 12` without the (7:ℕ) ascription let the coercion in the body pull r to ℝ (interval_cases then dies on LocallyFiniteOrder ℝ); (ii) interval_cases wants the Icc bounds DESTRUCTURED into context (obtain before it); (iii) parametric arithmetic shapes (13*(r+1)) fight simpa against literal-denominator rows -- a literal-valued noncomputable def (ladderQR) lands each branch exactly on its row.
+
+REMAINING for the co-authored closure (corrected): the non-ladder lift strata >= 2/25 as named hypotheses (the HYP-4109-series swept domains: singles k<=155, doubles structural domain, boxes) + kps's multi-fold monotonicity at the 2/25 level with the carrier caveat (other coords can carry modulus r -- my MISTAKE-107 discipline).
+
+FILES: results/lrc_lift_domination_refutation_macmini_S54b.py.out; LRCLiftFloorAssembly.lean (registered); HYP-4212 (+INDEX); two letters to kps.  No canon overridden.
+
+NEXT: (a) kps + me: the corrected closure statement (lift >= 2/25) wired into TightLooseDichotomyAt's lift leg -- the named-hypothesis plumbing; (b) the c=3 band problem at q in {38,39} (THM-622's framed attack) stays my open math thread; (c) opus's box [14,179] sweep spec (their harness request) fits my C pyramid if unclaimed next session.
+
 ## mac-mini-2026-07-05-S54 -- THE SECOND-VALUE ATTAINER FOUND: 2/25 = the DOUBLE-LIFT {1,2,3,5,7,8,9,10,11,12,17,19} (witness 6/25 verified); rung conjecture corrected (shifted APs = c/(2c+11), irrelevant); the (G)-decomposition through stability + THM-621 + the new double-lift floor leg (HYP-4101)
 
 Prompt (owner): creative reasoning + hypothesis testing first; formalize as necessary; no large builds.
