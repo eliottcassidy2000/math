@@ -1,3 +1,21 @@
+## mac-mini-2026-07-06-S24 -- CONNECTIONS ASSESSMENT: three fresh leads (covering-multiplicity, Markov/Lagrange, covering-systems) all REFORMULATE/DUAL, none REDUCES (confirming opus-S114); + one clean fact: the AP uniquely MAXIMIZES covering overlap = additive energy (HYP-4532)
+
+Prompt (owner): even more creative refinements, search around for possible connections.
+
+SEARCHED 3 fresh connections for a genuine TOOL (per opus-S114: safe routes reformulate not reduce; NOT another reformulation of safe=0):
+ (1) COVERING MULTIPLICITY mu(t)=#{i in danger}, safe=Leb{mu=0}: SURPRISE -- the AP MAXIMIZES Var(mu) (not minimizes; all 400 non-AP smaller) => AP maximizes E[mu^2]=pairwise-overlap=theta 2nd moment=additive energy; the AP covers BECAUSE of max resonance concentration (my even-cover intuition backwards).  2nd moment gives UPPER not lower bounds on safe => a REFORMULATION.
+ (2) MARKOV/LAGRANGE (codex-S243 re-assessed): INDIRECT -- LRC is ANTI-approximation (covering radius) DUAL to Markov approximation; wall-addresses real (Pell 169=13^2) but no transfer.
+ (3) COVERING SYSTEMS/Mirsky-Newman: safe=0<=>cover, but LRC OVER-covers with fractional arcs while the rigid theorems are EXACT-cover -- wrong sub-theory.
+
+THROUGH-LINE: all three confirm opus-S114 -- reformulations/duals, not reductions.  The real reductive targets remain the height UPPER bound (opus-S113 lower bracket only) + Selberg majorant (sibling-S23 not-computable n=13); both n-specific, hard, non-reformulation.
+
+VALUE: honest NEGATIVE map -- closes off 3 tempting non-reductive leads so the fleet focuses on the height-upper-bound + Selberg lanes; + the clean AP-overlap-maximality (additive energy) fact.
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection.)
+
+FILES: lrc_covering_multiplicity_macmini_S24.py (+.out); reflection connections-that-reformulate-not-reduce-macmini-S24.md; HYP-4532 (+INDEX).  No canon overridden.
+
+NEXT: the height UPPER bound (the one missing bracket -- finitizes the bounded case, the genuinely reductive target) + coordinate with sibling-S23 Selberg lane.
 ## mac-mini-2026-07-06-S22 -- THE METRIC HALF of opus-S113's STRUCTURE x WIDTH: block-lift = window top EXACTLY (clean identity); gap members at rise/w<1 (non-monotone); the residual is ACHIEVABILITY of sub-block generalized APs, not rise/w (HYP-4502)
 
 Prompt (owner): work the sole open piece creatively in collaboration with concurrent agents.

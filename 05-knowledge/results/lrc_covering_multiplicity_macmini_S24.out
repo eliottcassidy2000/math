@@ -1,0 +1,27 @@
+================================================================================
+COVERING MULTIPLICITY mu(t)=#{i:||v_i t||<2/25}; safe=Leb{mu=0}
+Int(mu) = 24*beta = 1.92 fixed.  Does the AP MINIMIZE Var(mu)?
+================================================================================
+  AP {1..12}: safe=0.00000, E[mu]=1.9200, E[mu^2]=6.5007, Var(mu)=2.8143
+
+  400 non-AP families, sorted by Var(mu) ASC:
+     Var(mu)      safe   family
+      1.6304   0.04407   [3, 5, 8, 11, 14, 17, 19, 20, 23, 27, 31, 39]
+      1.6348   0.05840   [1, 8, 9, 19, 21, 25, 26, 28, 30, 33, 34, 35]
+      1.6485   0.06900   [1, 6, 10, 13, 23, 27, 29, 33, 34, 35, 38, 39]
+      1.6575   0.11513   [10, 16, 19, 22, 23, 28, 29, 31, 33, 35, 36, 37]
+      1.6624   0.09143   [6, 15, 19, 20, 23, 27, 28, 32, 35, 36, 37, 39]
+  ...
+      2.4222   0.14070   [8, 12, 15, 16, 19, 22, 23, 24, 30, 32, 35, 38]
+      2.4637   0.15787   [2, 5, 6, 10, 11, 12, 15, 22, 24, 33, 36, 38]
+      2.5240   0.14727   [2, 3, 4, 5, 6, 7, 12, 13, 14, 28, 31, 35]
+
+  AP Var(mu) = 2.8143; non-AP families with SMALLER Var: 400/400
+  (AP is NOT the Var-minimizer)
+  corr(Var(mu), safe) = +0.584 (does more variance => more safe/gap? the covering handle)
+
+  ASSESSMENT: 2nd moment gives UPPER bounds on safe (Cauchy-Schwarz:
+  Leb{mu>=1} >= E[mu]^2/E[mu^2]); it does NOT lower-bound safe (the
+  density floor needs the full signed theta-series / Selberg minorant).
+  BUT if the AP uniquely minimizes Var(mu), that is a fresh RIGIDITY
+  handle (evenest-cover = equioscillation = AP), independent of safe.
