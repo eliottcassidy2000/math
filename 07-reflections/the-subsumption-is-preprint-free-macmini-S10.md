@@ -74,5 +74,13 @@ The lemma is real analysis on T² (Lipschitz + net), Mathlib-standard:
 M(v⁽ᴺ⁾) = max_{C_N} F needs the max as an object (compactness of the circle,
 `IsCompact.exists_forall_ge`).  The trivial containment M(v⁽ᴺ⁾) ≤ M(U) is a
 one-liner once both maxima are objects (a max over a subset ≤ max over the set).
-Feasible as a self-contained `LRCTorusRate.lean` (not tied to the existing
-`Lonely`-based surface); flagged for a Lean session.
+
+**DONE (the abstract core): `LRCTorusRate.lean` GREEN, kernel-pure** (standard
+trio, first compile): `lipschitz_ge_at_near` (an L-Lipschitz f at a point within
+ε of the maximizer loses ≤ L·ε), `two_point_rate` (|f x − f y| ≤ L·ε), and
+`exists_net_ge` (the max transfers to any ε-dense set with a Lipschitz loss —
+instantiated with the torus maximizer and the curve C_N, this IS
+M(v⁽ᴺ⁾) ≥ M(U) − L/(2N)).  What remains for a full corpus object is only the
+LRC-specific glue: F = minᵢ‖·‖ is L-Lipschitz, and C_N is 1/(2N)-dense — both
+Mathlib-routine — plus wiring M(v⁽ᴺ⁾) = sup_{C_N} F to the corpus's M.  The
+mathematically load-bearing inequality is now formal.
