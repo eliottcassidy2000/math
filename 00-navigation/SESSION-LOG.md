@@ -1,3 +1,21 @@
+## mac-mini-2026-07-06-S8 -- BREADTH-FIRST REPO SYNTHESIS (owner: fan out from Farey work, find recurring patterns across surface-different manifestations): THE WHOLE PROJECT IS ONE OBJECT, 14 = 2*7 (HYP-4322)
+
+Prompt (owner): investigate the Farey-adjacent work deeply; breadth-first fan-out through repo docs; explore niche topics; find recurring patterns even if surface-different.
+
+METHOD: four parallel Explore agents swept (a) Farey/Stern-Brocot/mediant/CF/three-gap, (b) density-quantization THM-412/S703 + frame-coupling S533 + second-value, (c) cyclotomic/roots-of-unity/Delsarte-Beurling-Selberg/Newman, (d) tournament/metagraph core (Cayley-Dickson, THM-589, the triangle).  Synthesized on opus-S100's Farey-ladder unification (HYP-4306).
+
+THE RECURRING PATTERN: every thread is ONE structure in different coordinates, factored 14 = 2 x 7.  THE 2 = involution/parity (complement T^op, time-reversal, half-turn, SC/Z2, the 2 in 2/(2n-1), rank-1<->2 coupling jump, ladder rungs, +-1 antipode shell).  THE 7 = cyclotomic apex (six primitive 14th roots + antipode = Paley tournament on Z/7*; Z7 SOS floor; cap in Q(cos 2pi/7); odd 7-cycle = genus-1 cusp of X0(14); Steinhaus 3-gaps).
+
+FOUR SURFACES OF THE ONE OBJECT: (1) FAREY LADDER = the spectrum's shape (rungs j/(kj+1), 2/(2k+1) = mediant, forbidden bands); (2) DENSITY-QUANTIZATION + COUPLING = why bands forbidden (free action => orbit divisibility; coupling costs a whole rung); (3) THE CYCLOTOMIC COMB = the extremal object (roots-of-unity Dirac comb on X0(14); Z7 Fejer-Bochner SOS; Delsarte LP; Newman covering-impossibility ALREADY the crux tool); (4) TOURNAMENT CORE = same object sheared (staircase = hexagonal A2, ONE lattice, the -1 coupling = the covering constraint; Mode A = Stern-Brocot mediant growth; THM-589 W(n)=H-variance = LRC floor 2nd moment; O=Phi(n-1) = LRC analogue of H, even vs odd parity).
+
+THE HONEST SEPARATION (the load-bearing synthesis): the 2nd-moment/W(n) bridge (the prettiest tournament<->LRC resonance) explains the spectrum's SHAPE but is a DEAD END for the tight-locus -- tightness is POINTWISE (opus-2026-06-30: moments average away the one uncovered hole).  The crux tool is pointwise: Newman covering-impossibility + cyclotomic SOS.  All four surfaces converge on tight-locus rigidity (AP = the roots-of-unity comb = unique tight set / the fattening lemma).
+
+PRIORITIZED LEVERS: (1) Mirsky-Newman on the circle = the l>=7 phi>0 lemma (the ONE remaining covering obligation; port the classical distinct-modulus-covering impossibility to the continuous case); (2) cyclotomic SOS at |T|=3 (Littlewood wall; almost-SOS via the metagraph-controlled 3-term energy); (3) the mediant is EXACT (induction on k + the {1..11,24} 2nd certificate); (4) my S7 antipodal-transversal reduction; (5) DEAD END flagged: moment functionals for the tight-locus, frame-coupling past n=4.
+
+FILES: reflection the-project-is-one-object-14-equals-2-times-7-macmini-S8; HYP-4322 (+INDEX).  No canon overridden; no new computation (pure synthesis, per the exploratory prompt).
+
+NEXT: (a) the Mirsky-Newman circle lemma (lever 1) -- the single cleanest obligation, now clearly the priority; (b) the |T|=3 cyclotomic almost-SOS (lever 2); (c) feed the synthesis to opus/kps (their covering-impossibility + SOS work IS the pointwise crux tool the synthesis endorses).
+
 ## mac-mini-2026-07-06-S7 -- THE ANTIPODAL-TRANSVERSAL DECOMPOSITION (creative reconnection to oracle-S552/S553): gap member => FULL transversal mod 25; two of three classes fall to one-line witnesses (Link-1 surplus + mod-5 filter, PROVED); the hole is LOOSE not delicate; the crux sharpens to transversal AP-rigidity (HYP-4312)
 
 Prompt (owner): keep working the one finite object creatively; search past repo work even seemingly-unrelated for inspiring connections.

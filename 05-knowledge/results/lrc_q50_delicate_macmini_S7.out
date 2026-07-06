@@ -7,3 +7,11 @@ PART B: does distinct-freq {1..L} cover the circle at radius 2/25? (EXACT)
   L=9 freqs [1, 2, 3, 4, 5, 6, 7, 8, 9]: no cover found in 3000 rational phases
   L=10 freqs [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]: no cover found in 3000 rational phases
   L=11 freqs [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]: no cover found in 3000 rational phases
+  L=12 freqs [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]: no cover found in 3000 rational phases
+==============================================================================
+PART A2: hunting large-q* 2/25-attainers (the census bound's failure mode)
+==============================================================================
+  tested 8551 distinct families
+  2/25-EXACT families found, by maximizer q*:
+    q* = 25 (k=1): 1 families; e.g. (1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 17, 19)
+  => MAX maximizer q* among 2/25-attainers = 25 (<= 50: opus Q50 census SOUND for the boundary case)

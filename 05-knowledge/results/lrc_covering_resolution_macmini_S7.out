@@ -1,0 +1,4 @@
+consec[1..11] descent: free-frac at grid 1600 = 0.00000 (S5 read this as ~0)
+  SAME phase, exact free-frac at grid    20000 = 0.000550
+  SAME phase, exact free-frac at grid   200000 = 0.000530
+  SAME phase, exact free-frac at grid  2000000 = 0.000529
