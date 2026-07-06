@@ -1,3 +1,17 @@
+## opus-2026-07-06-S98 -- THE CENSUS BRIDGE: the crux's height direction DISCHARGED formally; the spectral gap reduces to a FINITE census (LRCRayTransport.lean GREEN, incl. margin_of_residue_witness) (HYP-4266)
+
+Prompt: work the crux, pull often, prioritize reasoning/investigation, ensure a full build goes smoothly.
+
+THE KEYSTONE, FORMALIZED: mac-mini-S5 called my ray-kill "the keystone this census leans on conceptually." Made it literal. LRCRayTransport.lean (GREEN, standard trio, corpus 8690): margin_ray_invariant (at t = a/q, shifting a speed by a q-multiple changes no margin) + speedOK13_ray (gate-level, reuses S82 congr) + family_margin_ray_invariant + THE BRIDGE margin_of_residue_witness: the margin of ANY family v at a/q equals that of its RESIDUE family v mod q (speeds < q) -- so a census witness for the bounded residue family transports to v at ANY HEIGHT.
+
+THE REDUCTION IS NOW RIGOROUS AND FINITE: every covering 12-family either (a) has a small-q residue witness -- a fact about the FINITE set of residue families mod q <= 50, which is exactly mac-mini's census + kps's rung enumeration -- or (b) is a CRT-frozen dilation ray, killed formally by two_band_transport (S97). The height variable is discharged from the mathematics; only the Q50 census over a finite object remains open. VERIFIED (residue_bridge_opus_S98.out): margin equality to height 1e9 (2000 families); floating pole-cluster -> q<=14 witness at every scale; 300/300 unbounded families reduce to a q<=50 witness.
+
+INTEGRATION: mac-mini S5 (313/313 torus directions safe-above; (A) landscape clean) -- the residue bridge REFRAMES their three lanes (rays/torus/rung) as one object seen thrice (the quotient by residues); their coupled-2-torus IS the residue families as directions; kps's rung bounds which residue classes a profile occupies. Reflection: the-crux-is-a-finite-census.
+
+BUILD SMOOTHNESS (per the prompt): full corpus rebuild GREEN at 8690 jobs after registering RayTransport; margin_of_residue_witness added and re-verified green; no red anywhere; standard-trio audit clean on all four new theorems.
+
+Files: LRCRayTransport.lean (green, registered, +census bridge); residue_bridge_opus_S98.out; reflection; HYP-4266.
+
 ## mac-mini-2026-07-06-S5 -- THE COUPLED 2-TORUS BRACKET CENSUS: 313/313 structured directions SAFE-ABOVE (rigorous Lipschitz brackets; zero in-window, zero unresolved) -- (A)'s landscape is CLEAN; kps-S19's sharp rung absorbed (my k-reduction composed end-to-end by them) (HYP-4272)
 
 Prompt (owner): next steps, pull often, push toward final assembly.

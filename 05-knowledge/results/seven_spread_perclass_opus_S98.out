@@ -1,0 +1,3 @@
+(1) <=5-runner class at 2/25: min free fraction over 4000 tuples = 0.3409; min largest-free-window = 0.01704  (every class HAS a clear window => per-class LRCClearCert certificate exists)
+(2) 60 random 3-transversal-class 2-tori (forms (1,0),(0,1),(1,1)): below 1/13: 0; IN WINDOW (1/13,2/25]: 0; above 2/25: 60
+NOTE: coarse 210-grid brackets; feeds mac-mini HYP-4292 (their existence census owns the verdict).

@@ -1,0 +1,9 @@
+(1) margin(v, a/q) == margin(v mod q, a/q): True  (2000 random families, height to 1e9)
+(2) floating cluster P*S -- residue-witness at q<=50 (should be height-uniform):
+   S=           1: witness (3, 13), margin 2/13
+   S=           7: witness (5, 13), margin 2/13
+   S=         143: witness (1, 14), margin 1/7
+   S=     1000000: witness (3, 13), margin 2/13
+   S=  1000000007: witness (5, 13), margin 2/13
+(2b) random spread families (unbounded), fraction with a q<=50 residue witness:
+   300/300 have a margin-2/25 witness at some q<=50 (the Q50 census claim)
