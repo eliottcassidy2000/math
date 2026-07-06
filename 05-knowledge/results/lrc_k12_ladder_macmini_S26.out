@@ -1,0 +1,29 @@
+==================================================================================
+VALIDATE kps template at k=7: base {1,2,3,4,5,7}, gap (1/8,2/15)
+==================================================================================
+  M(base)=1/6 (plateau); ladder M=j/(6j+5); sweep x:
+  in-gap rungs: [(Fraction(3, 23), 18)]  (ONE rung (kps confirmed))
+
+==================================================================================
+k=12 (our case): 11-speed bases + outlier; does the gap (1/13,2/25) catch a rung?
+==================================================================================
+                    base  M(base) plateau   in-gap rungs     min M above 1/13 (x)
+             {1..12}\{1}              1/7      0 (empty)              2/17 (x=15)
+             {1..12}\{2}             2/15      0 (empty)              2/19 (x=15)
+             {1..12}\{3}              1/8      0 (empty)               1/9 (x=48)
+             {1..12}\{4}             2/17      0 (empty)              2/21 (x=34)
+             {1..12}\{5}              1/9      0 (empty)              5/49 (x=90)
+             {1..12}\{6}             2/19      0 (empty)              2/23 (x=13)
+             {1..12}\{7}              1/7      0 (empty)              1/10 (x=14)
+             {1..12}\{8}              1/8      0 (empty)              2/21 (x=16)
+             {1..12}\{9}              1/9      0 (empty)              1/11 (x=18)
+            {1..12}\{10}             1/10      0 (empty)              2/23 (x=20)
+            {1..12}\{11}             1/11      0 (empty)              1/12 (x=22)
+            {1..12}\{12}             1/12      0 (empty)              2/25 (x=24)
+                 {1..11}             1/12      0 (empty)              2/25 (x=24)
+  {1,2,3,4,5,6,7,8,9,10,11}\ + 13             1/11      0 (empty)              2/23 (x=22)
+
+  => ZERO in-gap rungs across all k=12 single-outlier bases: the gap
+     (1/13,2/25) catches NO rung of any base's resonance ladder.  The
+     bounded single-outlier case is EMPTY -- the gap is narrower than the
+     rung spacing near the plateau 1/13, uniform over these bases.
