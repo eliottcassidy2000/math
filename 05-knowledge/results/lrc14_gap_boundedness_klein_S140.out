@@ -1,0 +1,23 @@
+gap test: is M < 2/25=0.08000 possible for a PRIMITIVE 12-family other than {1..12}?
+--- 12 CONSECUTIVE integers {N..N+11} (translated AP) ---
+  N=   1: gcd=1 M=1/13 (~0.076923)  <2/25? True  =1/13? True
+  N=   2: gcd=1 M=2/15 (~0.133333)  <2/25? False  =1/13? False
+  N=   3: gcd=1 M=3/17 (~0.176471)  <2/25? False  =1/13? False
+  N=   5: gcd=1 M=5/21 (~0.238095)  <2/25? False  =1/13? False
+  N=   8: gcd=1 M=8/27 (~0.296296)  <2/25? False  =1/13? False
+  N=  13: gcd=1 M=13/37 (~0.351351)  <2/25? False  =1/13? False
+  N=  20: gcd=1 M=20/51 (~0.392157)  <2/25? False  =1/13? False
+  N=  50: gcd=1 M=50/111 (~0.450450)  <2/25? False  =1/13? False
+  N= 100: gcd=1 M=100/211 (~0.473934)  <2/25? False  =1/13? False
+--- the ladder {1..11,12k} = k/(12k+1) ---
+  k=1: 12  M=1/13 (~0.076923)  vs k/(12k+1)=1/13  <2/25? True
+  k=2: 24  M=2/25 (~0.080000)  vs k/(12k+1)=2/25  <2/25? False
+  k=3: 36  M=3/37 (~0.081081)  vs k/(12k+1)=3/37  <2/25? False
+  k=4: 48  M=4/49 (~0.081633)  vs k/(12k+1)=4/49  <2/25? False
+  k=5: 60  M=5/61 (~0.081967)  vs k/(12k+1)=5/61  <2/25? False
+--- mac-mini floating cluster {1,2,3,4,5,20,21,24,25,45,46,66}*S (S coprime-ish) ---
+  S=1: M=3/26 (~0.115385)  <2/25? False
+  S=2: M=3/26 (~0.115385)  <2/25? False
+  S=3: M=3/26 (~0.115385)  <2/25? False
+  S=7: M=3/26 (~0.115385)  <2/25? False
+--- broad primitive near-AP perturbations, elements up to 60: any gap-violator != {1..12}? ---

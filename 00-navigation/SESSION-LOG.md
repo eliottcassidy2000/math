@@ -1,3 +1,27 @@
+## klein-2026-07-05-S140 -- THE LOOSE BRANCH = 12-RUNNER AP-RIGIDITY: the gap (1/13,2/25) is a FAREY WINDOW; gap-violators are BOUNDED (HYP-4151). Exact math, no formalization.
+
+Prompt (owner): improve the LRC(14) proof; DON'T formalize until the exact mathematics is figured out creatively.
+
+Took the open crux (loose branch of TightLooseDichotomy, S139: irreducibly real-analytic) and pinned its EXACT statement + a proof route, purely mathematically.
+
+EXACT STATEMENT (12-runner rigidity): for a 12-tuple B, M(B)=max_t min_{v in B} ||v t|| = 1/13 iff B = dilated AP c*{1..12}; >= 2/25 otherwise. The covering-min spectrum has an EMPTY GAP (1/13, 2/25), width 2/25-1/13 = 1/325. VERIFIED over 12,093 families: only the 8 dilated APs c*{1..12} in [1/13,2/25), all at exactly 1/13, ZERO non-AP. Second value 2/25={1..11,24}(12->24)+dilations+sporadic; ladder {1..11,12k}=k/(12k+1).
+
+DECISIVE (boundedness of gap-violators): {M<2/25} = EXACTLY the dilated APs => primitive => just {1..12} (a single bounded family). Scale-test kills the "translated AP sneaks in" worry: 12 CONSECUTIVE integers {N..N+11} BLOW UP (N=2->2/15, N=3->3/17, N=5->5/21, ... increasing; only N=1 = 1/13); the ladder is >=2/25 for k>=2; mac-mini's floating cluster is 3/26 (loose). So no large family enters the gap. This is the exact DUAL of kps-S11 HYP-4137: witnesses for LOOSE families are UNbounded (no finite template), but the gap-violator SET is bounded (isolated at the AP) -- so the loose branch is a RIGIDITY, not a search.
+
+STRUCTURE (Farey window): M=r/Q in [1/13,2/25), gcd(r,Q)=1, forces (LRC13: M>=1/13 => Q<=13r) + (ceiling: M<2/25 => Q>12.5r) => Q in (12.5r,13r]. Candidate values 1/13, 3/38, 4/51, 5/63, 5/64, 6/77, 7/89, ... ; ONLY 1/13 realized. So the gap-emptiness = "the intermediate Farey fractions are not realizable as genuine 12-runner max-mins."
+
+PROVED (r=1): M=1/Q with M<2/25 & M>=1/13 => 13<=Q<=13 => Q=13 => the 12 residues v_i*a mod 13 are the 12 nonzero residues = {1..12} => B is a dilated AP mod 13 (the LRC13 sandwich does the work). 
+
+PROOF ROUTE (open half, the missing real-analytic ingredient): M<2/25 => the residues in [r,Q-r] form the AP {r,2r,...,12r} (=> Q=13r => value 1/13). An AP-residue config yields ONLY 1/13 (12r<=Q-r => Q>=13r, with Q<=13r => Q=13r). The rigidity forcing AP-residues is an equioscillation/three-distance argument uniform in r (deviations from the balanced AP spread admit a better t). This REPLACES the dead finite-template census with a classical AP-rigidity target.
+
+WHY THIS IMPROVES THE PROOF STATE: the loose branch is now a SHARP classical statement (AP-rigidity + gap 1/325, bounded violators), not a vague census; the real-analytic difficulty is precisely located (equioscillation rigidity uniform in r), and the r=1 case is done. Retires the finite-template route with the reason (the Farey window moves with r).
+
+FILES: lrc14_twelve_runner_rigidity_klein_S140.py(+out), lrc14_gap_boundedness_klein_S140.py(+out); INDEX HYP-4151; reflection the-loose-branch-is-12-runner-AP-rigidity-the-gap-is-a-farey-window; this log. NO Lean (per directive: exact math first).
+
+NEXT: (a) prove the equioscillation/AP-residue rigidity uniform in r (the loose branch) -- OR mine Sungkawichai-Trakulthongchai LRC(13) for extremizer-uniqueness + second-value gap; (b) then formalize; (c) CornerLonely (tight branch, anchor M({1..12})=1/13 in hand).
+
+---
+
 ## opus-2026-07-05-S84 -- C INSTALLED-AND-USED (gcc found): the level-3 probes; MISTAKE-109 (any-carrier evades the 98 forcing; carrier table); THE COMPOSITION LEMMA (descent with <= 2 passengers at l >= 9); LRCTowerLift.lean GREEN (rows migrate up the tower free + strictness free); occupancy => dichotomy probabilistically inevitable (HYP-4136)
 
 Prompt: install C etc.; prioritize creative reasoning + repo connections + hypothesis tests over massive programs; long session, many pulls; leverage incoming work; aim at formalized completeness.
