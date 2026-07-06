@@ -114,13 +114,15 @@ def part1_minimizer():
     gap_hits = []
     lowered = []      # profiles where a lift has M < canonical M
     tested_profiles = 0
-    for canM, signs, W in scored:        # ALL 1023 non-AP profiles
+    # the 120 lowest-canonical-M profiles: where lifting is most likely to
+    # produce a gap member (canonical M closest to 2/25 from above)
+    for canM, signs, W in scored[:121]:
         if signs == ap_signs:
             continue
         tested_profiles += 1
         minM = canM; minLift = W
         fl, rh = float(FLOOR), float(RHO)
-        for lift in lifts_of(W, kmax=2, n_random=40, seed=hash(signs) & 0xffff):
+        for lift in lifts_of(W, kmax=3, n_random=120, seed=hash(signs) & 0xffff):
             lift = primitive(lift)
             if len(set(lift)) != 12:
                 continue
