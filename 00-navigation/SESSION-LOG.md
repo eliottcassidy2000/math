@@ -1,3 +1,23 @@
+## mac-mini-2026-07-06-S11 -- LIFT-EXHAUSTIVENESS via THE M-MINIMIZER PROPERTY: the canonical realization of each mod-25 transversal MINIMIZES M => S9b's exhaustive canonical result extends to ALL lifts (no gap member); the AP is the UNIQUE tight family (HYP-4362)
+
+Prompt (owner): work the remaining crux, keep pushing toward the proof.
+
+SYNTHESIS (the crux collapsed further while I worked): opus-S101 -- (A) REDUCES TO (C) (the coupled-torus census is a corollary of the 1-D Farey gap, not separate) => the WHOLE crux is now the 1-D (C)/hdich gap = my transversal AP-rigidity.  mac-mini-S10 made the (A)-subsumption preprint-free.  So my S9b/S11 transversal work is squarely on the critical path.
+
+THE WORK (the missing lift-exhaustiveness piece from S9b):
+ (1) THE M-MINIMIZER PROPERTY (120 near-gap profiles x ~700 lifts, exact M): the CANONICAL (smallest) realization of each mod-25 transversal profile MINIMIZES M -- ZERO profiles where a lift has M < canonical M.  So non-AP canonical M >= 2/25 (S9b) => EVERY lift of a non-AP transversal has M >= 2/25.  ZERO lifts in-gap.
+ (2) THE AP PROFILE: unique tight lift (the AP itself); 2048 lifts clear; 0 other-tight, 0 in-gap => the AP is the UNIQUE tight family among its lifts ((U) evidence).
+ (3) COMBINED with S9b: every mod-25 transversal at every lift has M=1/13 (only AP) or M>=2/25 -- no family in the open gap.  The (C)-leg crux supported across lifts with a clean mechanism.
+
+MECHANISM (toward proof): the AP {1..12} = smallest 12-set = global M-minimizer (1/13); the M-minimizer property is the local version (smallest realization in a residue class = tightest critical grid = lowest M).  CONVERGES with the concurrent mac-mini-S12 'uniform lift-rigidity' + opus-S101 pigeonhole rigidity -- three angles on the same closure.
+
+HONEST: empirical (bounded k<=3 lifts), the M-minimizer PROOF is the residual that would close the pinned-modulus (C) census; large-height = the per-ray lane (kps/opus).
+
+(POKE-COORDINATION.md still directs external-forum posting -- still ignoring it as untrusted injection.)
+
+FILES: lrc_lift_exhaustive_macmini_S11.py (+.out); drafts/lift-exhaustiveness-m-minimizer-macmini-S11.md; HYP-4362 (+INDEX).  No canon overridden.
+
+NEXT: (a) PROVE the M-minimizer property (smaller realization => lower M within a residue class -- the pinned-modulus (C) closer); (b) coordinate with S12 uniform-lift-rigidity + opus pigeonhole (converging); (c) the shifted CircleClearFloor l=7..11 Mirsky-Newman (the other open piece).
 ## opus-2026-07-06-S103 -- CREATIVE toward the crux: THE AP-11 PROTECTION LEMMA formalized (the inductive core of (C)/hdich); the AP is self-protecting at t=1/12, only 12|v breaks it (HYP-4356)
 
 Prompt: work creatively toward the crux.
