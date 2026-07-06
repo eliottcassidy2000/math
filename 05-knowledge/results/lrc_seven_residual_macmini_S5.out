@@ -1,0 +1,51 @@
+==============================================================================
+THE >=7 RESIDUAL: small-base-carries + free-fraction reduction
+rho = 2/25 = 0.08000
+==============================================================================
+
+(1) POLE-NECESSITY 7-CLUSTER as lifted, small base {1,2,3,4,5}:
+  pole7: |base|=5 |lift|=7 (distinct freq 7) PROPER
+    M(base)=0.1666 (>=1/6? Y);  best free-frac phi=0.2780 at t0~0.219375;  M(U)>=0.1650  [SAFE-ABOVE (rigorous)]
+    reduction predictor: M>=2/25 (phi>0);  CONFIRMS (phi>0 & M>=2/25)
+
+(2) DOUBLE-LIFT residual: base {1,2,3}, 9 lifted distinct freqs:
+  dbl9: |base|=3 |lift|=9 (distinct freq 9) PROPER
+    M(base)=0.2500 (>=1/6? Y);  best free-frac phi=0.2295 at t0~0.919875;  M(U)>=0.2490  [SAFE-ABOVE (rigorous)]
+    reduction predictor: M>=2/25 (phi>0);  CONFIRMS (phi>0 & M>=2/25)
+
+(3) ALL-LIFTED (empty base), 12 distinct freqs (pure lift limit):
+  all12-nocouple: |base|=0 |lift|=12 (distinct freq 12) IMPROPER
+    M(base)=1.0000 (>=1/6? Y);  best free-frac phi=0.0000 at t0~None;  M(U)>=0.0760  [IMPROPER (1-D; not an (A) torus)]
+    reduction predictor: phi~0;  improper: excluded from (A)
+    ^ note: u=0 for all => degenerate (no t-dependence); M = M_1d(1..12) = 1/13
+
+(4) ALL-LIFTED with GENERIC t-couplings (the real double-lift torus):
+  all12-couple: |base|=0 |lift|=12 (distinct freq 12) PROPER
+    M(base)=1.0000 (>=1/6? Y);  best free-frac phi=0.1797 at t0~0.309375;  M(U)>=0.2500  [SAFE-ABOVE (rigorous)]
+    reduction predictor: M>=2/25 (phi>0);  CONFIRMS (phi>0 & M>=2/25)
+
+(5) 7 lifted, base {1,2,3,4,5}, freqs = 7 consecutive (worst tiling):
+  cons7: |base|=5 |lift|=7 (distinct freq 7) PROPER
+    M(base)=0.1666 (>=1/6? Y);  best free-frac phi=0.2988 at t0~0.881875;  M(U)>=0.1650  [SAFE-ABOVE (rigorous)]
+    reduction predictor: M>=2/25 (phi>0);  CONFIRMS (phi>0 & M>=2/25)
+
+(6) DEGENERATE: 8 lifted but only 3 distinct freqs (repeats):
+  degen: |base|=5 |lift|=8 (distinct freq 3) PROPER
+    M(base)=0.1666 (>=1/6? Y);  best free-frac phi=0.4012 at t0~0.080125;  M(U)>=0.1650  [SAFE-ABOVE (rigorous)]
+    reduction predictor: M>=2/25 (phi>0);  CONFIRMS (phi>0 & M>=2/25)
+
+(7) STRESS: 7 lifted primes as freqs, base {1,2,3,4,5}:
+  prime7: |base|=5 |lift|=7 (distinct freq 7) PROPER
+    M(base)=0.1666 (>=1/6? Y);  best free-frac phi=0.2923 at t0~0.221125;  M(U)>=0.1650  [SAFE-ABOVE (rigorous)]
+    reduction predictor: M>=2/25 (phi>0);  CONFIRMS (phi>0 & M>=2/25)
+
+==============================================================================
+SUMMARY
+==============================================================================
+  PROPER 2-tori: 6;  IMPROPER (1-D, excluded from (A)): 1
+  6/6 PROPER tori SAFE-ABOVE (rigorous lower bracket >= 2/25)
+  6/6 PROPER tori have positive free-fraction predictor phi>0
+  => the small-base-carries reduction holds on every proper >=7 residual
+     torus tested: phi>0 at a base-clear t0 <=> a 2/25-clear point.
+  The lone IMPROPER case is the AP at M=1/13 (all u=0): a 1-D subtorus,
+  not in the (A) enumeration -- it is a (C)/census object, correctly split off.

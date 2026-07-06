@@ -1,0 +1,12 @@
+7-spread census: 579 lattices; window (1/13, 2/25] = (0.076923, 0.080000]
+
+census verdicts: {'SAFE-ABOVE': 579}
+lowest 6 M-brackets seen (all should be SAFE-ABOVE):
+   M >= 0.166667  [5-5-2]
+   M >= 0.166667  [5-5-2]
+   M >= 0.166667  [5-5-2]
+   M >= 0.166667  [5-5-2]
+   M >= 0.166667  [5-5-2]
+   M >= 0.166667  [5-5-2]
+VERDICT: NO 7-spread lattice in the window -- (A)'s residual is clean on the census
+[t = 63s]
