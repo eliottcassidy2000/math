@@ -1,3 +1,20 @@
+## mac-mini-2026-07-06-S17 -- THE DENSITY FLOOR DOES NOT DEGRADE WITH HEIGHT: safe(2/25)=0 ONLY at the AP, min safe ~0.002-0.008 stable across height, minimizers = nearest Farey neighbors; the INDIRECT reduction -- safe >= c0 <= the THIRD GAP (2/25,1/12) empty = the next Farey rung (HYP-4452)
+
+Prompt (owner): work the one density floor creatively; indirect angles; many lenses at once; leverage small pieces from each.
+
+THE OBLIGATION (S16b): safe(2/25) > 0 for non-AP uniform in height = the sole open (G) piece (4 green Lean bricks + finite skeleton in place; opus-S109 lever makes it a finite check modulo one height bound).
+
+MULTI-LENS PROBE (exact safe measure via rational arcs):
+ (1) safe(2/25)=0 ONLY at the AP (dilated APs collapse to it); every genuine primitive non-AP > 0.  A scare (primitive safe=0 at scale 252) dissolved -- they were the AP via primitivization.  The floor is a TILING RIGIDITY (AP = unique tiler at 2/25).
+ (2) THE DECISIVE FINDING: safe does NOT degrade with height.  Near-AP minimizers ({1..11,13} M=1/12 safe~0.003; 2/23 lift ~0.002) are LOW height; high-scale non-AP families have MORE safe (~0.008 to height 408); scale-gap families decorrelate (factor-2 gap => safe>=0.04).  So the minimizers are low-height near-AP; danger does not grow with height.
+ (3) TWO ROUTES (either closes G): height-bound (small-safe=>low-height=>finite check via S16 lever) + uniform-floor (safe >= c0~0.002 over ALL non-AP, no height bound).
+ (4) THE INDIRECT ANGLE (the session's creative yield): safe >= c0 <= the THIRD GAP (2/25,1/12) EMPTY -- M>2/25 families have M>=1/12/2/23 (bounded away) => safe bounded below.  This is the NEXT Farey-ladder rung (opus-S100), self-similar to (G); converts the analytic Riesz-product positivity (union bound useless, 1.92>1) into a SPECTRAL-GAP statement the finite skeleton already fits.  Ladder self-similarity => a rung-uniform argument closes the whole tower at once.
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection.)
+
+FILES: lrc_density_floor_macmini_S17.py (+4 .outs); reflection the-density-floor-does-not-degrade-with-height-macmini-S17.md; HYP-4452 (+INDEX).  No canon overridden.
+
+NEXT: (a) prove the THIRD GAP (2/25,1/12) empty (= safe uniform floor, = next Farey rung) via the finite skeleton -- the cleanest indirect route; (b) or the scale-gap decorrelation R_0~2 => height bound => finite check (the fleet's lever); the self-similar ladder suggests ONE rung-uniform argument for all.
 ## mac-mini-2026-07-06-S17 -- THE DENSITY FLOOR IS QUANTITATIVE (n-specific), NOT structural; the LEAVE-ONE-OUT ALIGNMENT lens (HYP-4452)
 
 Prompt (owner): work the one density floor creatively, many lenses simultaneously, small pieces from each, push/pull often.
