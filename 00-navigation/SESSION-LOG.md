@@ -1,3 +1,17 @@
+## klein-2026-07-05-S143 -- HYPOTHESIS REFUTED BEFORE FORMALIZATION: the dilated multi-top free-rider union bound is FALSE (263/3496 counterexamples); the c>=2 stratum needs per-family steering CERTIFICATES, not a theorem (HYP-4192)
+
+Prompt (owner): creative reasoning + hypothesis testing FIRST, then formalize as necessary; avoid large builds.
+
+THE HYPOTHESIS (H2', from the S142 decomposition): for dilated AP bases c*{1..k} (c >= 2) with l <= 6 tops, the steering group {a : gcd(a, k+1) = 1} has per-top unsafe fraction ~4/25, so the union bound l*(4/25) < 1 yields a simultaneous good a -- the residue-domain analog of the 7-wall counting trick.
+
+THE TEST (4000 random dilated-base families, exhaustive a-sweep per family): **FALSE.** 263/3496 families have NO good steering a at Q = (k+1)c; worst good-a fraction 0.000 vs predicted >= 0.04. THE OBSTRUCTION: tops with large gcd(w, Q) have residue orbits confined to few values (e.g. Q | w => R = 0 always; g = gcd large => orbit = g-multiples), so the proportional-band assumption fails -- exactly the ladder-family divisibility structure appearing as orbit confinement.
+
+THE CORRECTED PICTURE: (i) c = 1 is clean and needs NO steering (t = 1/(k+1) outright = kps's consecutive-rung lemma; the S142 residual witnesses confirmed this). (ii) c >= 2 multi-top: the single-level free-rider is a PER-FAMILY DECIDABLE CERTIFICATE (exhibit a; check l residue-band memberships -- same ingestion shape as every other certificate in the corpus), NOT a uniform lemma. (iii) The UNIVERSAL closer for the obstructed families remains the rung CASCADE (obstruction = divisibility => descend k / change modulus) terminating in the LADDER classification -- mac-mini THM-621 + opus-S90 multi-leg law + kps-S15 multi-fold law (which landed this window and collapses the l=2..6 sweeps) -- all proved-paper.
+
+VALUE: 30 minutes of Python killed a plausible-looking theorem before a formalization session died on it (the owner's priority order working as intended). The write-out plan for the c>=2 stratum should be certificate tables + the cascade, not a counting lemma.
+
+FILES: lrc14_dilated_multitop_freerider_klein_S143.py (+out); HYP-4192 (REFUTED-as-uniform / reframed-as-certificate); this entry. No Lean (correctly none). No canon overridden.
+
 ## opus-2026-07-05-S91 -- THE CRUTCH REMOVAL: the citation-window assumption dissolved and ALL strata close (bars 33-94 generic, <= 179 all-type); swap-starvation K <= 2 written out; the assumption-audit pattern (HYP-4196)
 
 Prompt: finish the write-out polish; finish what remains; integrate/synthesize/extend; REFRAME ASSUMPTIONS -- how do they point at underlying structure?

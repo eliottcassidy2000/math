@@ -1,0 +1,11 @@
+tested 3496 dilated-AP-base families (c=2..12, l=1..6 tops)
+families with NO good steering a: 263
+  FAIL k=7 c=3 Q=24 tops=[140, 604, 576, 700, 208]
+  FAIL k=6 c=2 Q=14 tops=[166, 364, 464, 278, 193, 104]
+  FAIL k=9 c=2 Q=20 tops=[440, 105, 306]
+  FAIL k=7 c=5 Q=40 tops=[480, 931, 706, 1327, 513]
+  FAIL k=7 c=9 Q=72 tops=[883, 2811, 1866, 360, 1973]
+  FAIL k=7 c=2 Q=16 tops=[386, 621, 548, 595, 448]
+  FAIL k=7 c=10 Q=80 tops=[1240, 2256, 2341, 2562, 2720]
+  FAIL k=6 c=2 Q=14 tops=[256, 397, 459, 275, 119, 560]
+worst good-a fraction: 0.000 (union-bound prediction >= 0.040 for l=6)
