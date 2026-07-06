@@ -84,3 +84,27 @@ objects of ALL these statements are the same consecutive/AP configurations, met 
 four directions. The missing analytic center is ONE lemma: **coverage/extremality
 persisting over an interval forces AP structure at an explicit rate** — the c-walk
 cascade (or equivalent) proves it; everything downstream is already exact tables.
+
+
+## 6. S89 addendum: the degeneracy stratification (the correct scope of the closure)
+
+The resonance census refines by the difference-gcd type g = gcd(d_2, …, d_c):
+
+* **g = 1 (generic):** q = 14 needs 2 | all differences, q = 21 needs 3 | — so a
+  generic cluster resonates ONLY at q = 7. The S87 792/792 computation is therefore
+  the RIGOROUS closure of the generic type at |B| = 5 (its zone set was exactly right).
+* **g ≥ 2 (degenerate):** deserts appear at p/(7g′)-families (verified: 2AP deserts at
+  odd p/14, length 1/156 + O(1/W); 3AP at p/21, 1/234 + O(1/W); consecutive does NOT
+  desert at 1/14 — measured 0.0015 = an ordinary short component). These clusters have
+  D ≥ 6g (universal deserts ≤ 1/(13·6g)) and all values in one residue class mod g —
+  strong family constraints. Zone-avoidance tables saturate here NOT because of deserts
+  (negligible) but because 42+ windows of irreducible width 2δ cover the circle: the
+  right tool is the DILATION/AFFINE TOWER (a g-degenerate cluster is a scaled copy of a
+  smaller-scale cluster; if g divides every cluster value the fold t → gt drops the
+  cluster to scale W/g = a smaller stratum of the same assembly), plus the same-parity
+  family constraints. The degenerate types join the near-consecutive STRUCTURED
+  WORKLIST: finite, recursive, S85-exact-adjacent.
+
+Net: generic clusters CLOSED by tables (792/792); degenerate clusters = a finite
+structured recursion. The B ≤ 4 saturation (S87) persists for the same window-geometry
+reason and lands in the same structured worklist.

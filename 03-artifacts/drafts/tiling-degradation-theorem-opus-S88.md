@@ -101,3 +101,42 @@ PROVED: §1 identity + ceiling; §2 crude bound (full conveyor cycles impossible
 c = 7). VERIFIED-SHARP, PROOF-OUTLINED: §3 (the near-tiling bookkeeping with wraps is
 elementary but fiddly — the one remaining write-out). The S87 conditional results
 (792/792 sliver core) now rest on §3's outline instead of an open cascade.
+
+
+## 6. S89 addendum: the fixed-order telescope (the section-3 bookkeeping, done honestly)
+
+**Lemma A (fixed-order telescope) — PROVED.** Suppose throughout the desert no two
+pieces exchange circular order and no piece transits the base band. Then the circular
+order is fixed; let g_i(k) be the signed gaps between circularly consecutive pieces
+(coverage ⟺ all g_i ≤ 0; Σ g_i = −σ + O(1/W) by the mass identity). Each g_i is LINEAR
+in k with slope δ_i = (α_{next(i)} − α_i), and Σδ_i = 0 (telescoping). Walking the
+circle, piece speeds rise from 0 (base band) to D/W and return, so the total positive
+drift Σ_{δ_i>0} δ_i ≥ D/W. Each positive-drift gap must stay ≤ 0 for N periods while
+starting ≥ −σ (no single gap can hold more than the whole deficit):
+N·δ_i ≤ −g_i(0) ≤ σ, and summing over the positive-drift gaps with weights:
+**N·D/W ≤ Σ_i N·δ_i⁺ ≤ Σ_i (−g_i(0)) = σ + O(1/W), i.e. N ≤ σW/D + C.** ∎
+
+**Lemma B (event costs) — PROVED.** A SWAP (two pieces exchanging order) or a TRANSIT
+(a piece crossing the base band) forces overlap mass ≥ (2ρβ_i)(2ρβ_j)·W/δ_rel ≥
+4ρ²(11/26)²·W/δ_rel, where δ_rel·(1/W) is the relative drift (β ≥ 11/26 from the
+26/11-ratio cap; the band has β = 1). Cheap events need LARGE δ_rel; events between
+near-speed pieces are ruinous (cost ~ W/δ_rel). ∎
+
+**The remaining single constant (posed, finite).** A desert alternates telescope
+stretches (Lemma A per stretch) with events (Lemma B per event), all paid from the
+exact overlap income σ per period (mass identity — the income is an identity, not a
+bound). The optimization "maximize N subject to income = σN, telescope consumption
+≥ D/W per period between events, each event priced by Lemma B" is a finite LP-shaped
+problem in ≤ c·(c−1)/2 event types. Numerics say its value is K = 1 (the bound σW/D is
+ATTAINED with no events, by consecutive clusters); the naive event-count bound gives
+K ≤ ~19, not yet sharp enough for the |B| = 5 moat (needs K ≤ 2.5). STATUS: the sliver's
+unconditionality now rests on THIS finite optimization — well-posed, bounded, elementary;
+no analytic unknowns remain.
+
+**Localization, proved in the no-event regime:** fixed order + all gaps ≤ 0 + linear
+drifts + total deficit σ pins every gap within σ of zero throughout: the configuration
+stays within σ of an EXACT tiling whose positions advance by the piece slopes — an exact
+tiling of the circle by ~c teeth with commensurate advance IS a q-grid configuration
+(q = the tiling's combinatorial period): t₀ sits within O(σ)/W-terms of the associated
+rational. The S86 census and S87 label-drift lengths are the per-resonance instances,
+now derived rather than observed.
