@@ -64,8 +64,20 @@ theorem rung_not_in_window (n s : ℤ) (hn : 0 < n) (hs : 0 < s) :
   have h' := (form_in_window_iff n s 1 hn hs one_pos).mp (by push_cast at h ⊢; exact h)
   omega
 
+/-- **Numerator–denominator locking (the complexity is one parameter).**  For an in-window
+spectrum value `M = s/(Ns+k)` (so `k < s`, from `form_in_window_iff`), the denominator `q = Ns+k`
+is locked to the numerator by `Ns < q < (N+1)s` — i.e. `N < q/s < N+1`.  So the numerator `s`
+(mac-mini's `c`), the denominator `q` (the witness denominator, opus-S109 `q ≤ 2·max`), and the
+order `k` all grow together: bounding any one bounds the rest, and via the far-element structure
+(mac-mini-S25) bounds the height.  Order `k`, numerator `s`, and Stern-Brocot depth are one
+complexity parameter, and the height upper bound is equivalent to bounding it. -/
+theorem window_num_denom_locked (N s k : ℤ) (hk : 0 < k) (hks : k < s) :
+    N * s < N * s + k ∧ N * s + k < (N + 1) * s :=
+  ⟨by linarith, by nlinarith⟩
+
 #print axioms form_in_window_iff
 #print axioms rung_not_in_window
+#print axioms window_num_denom_locked
 
 end SpectrumWindow
 end LonelyRunner

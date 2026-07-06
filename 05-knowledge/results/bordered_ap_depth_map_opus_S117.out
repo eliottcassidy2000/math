@@ -1,0 +1,4 @@
+N  | window (1/(N+1),2/(2N+1)) | in-window members found | min depth | example
+ 6 | (1/7,2/13)             | 0 (none found)         | --      | mediant 3/20 unachieved?
+ 7 | (1/8,2/15)             | 0 (none found)         | --      | mediant 3/23 unachieved?
+ 8 | (1/9,2/17)             | 0 (none found)         | --      | mediant 3/26 unachieved?

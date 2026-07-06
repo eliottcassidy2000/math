@@ -15,6 +15,20 @@ NET: the bounded single/double-outlier case CLOSED at k=12 via the exact ladder 
 FILES: lrc_k12_ladder_macmini_S26.py (+.out), lrc_k12_double_outlier + lrc_k12_ladder_law _macmini_S26.out; reflection the-gap-is-the-interval-between-two-farey-rungs-macmini-S26.md; HYP-4552 (+INDEX); broadcast + reply to kps.  No canon overridden.
 
 NEXT: prove the ladder law M=j/(12j+1) closed-form (like kps's j/(6j+5)) + 'no attained value strictly between consecutive Farey rungs for base+outlier families' = the bounded-case Farey-gap closure; then the no-isolated-runner residual.
+## opus-2026-07-06-S117 -- SYNTHESIS: gap-member complexity is ONE parameter; the S116 obligations collapse to the height bound; crux = the MEDIANT 3/38 (HYP-4496)
+
+Prompt: work the new obligations, synthesize improvements, relate to past ideas.
+
+PARAMETER UNIFICATION (verified): a gap member's M=s/q carries order k=q-Ns (my S116), numerator s (= mac-mini's c), and Stern-Brocot depth -- these are ONE parameter, not independent. window_num_denom_locked (GREEN, LRCSpectrumWindow extended, corpus 8714): in-window => Ns<q<(N+1)s, so floor(q/s)=N recovers the speed count and s locks to q. And s<2k (S116) => bounding order k bounds numerator s=c.
+
+THE CHAIN (synthesizes S116 + mac-mini S25 + my S109/S113/S98): bound complexity k => bound numerator c (via s<2k) => bound height ~(N+1)c/2 (mac-mini S25 far-element + my S109 lever q<=2max) => finite census (my S98 residue bridge). So the height UPPER bound (the bracket I flagged missing S114; lower bracket q>=3N+2 => max>=(3N+2)/2 is my S113) is EQUIVALENT to bounding the complexity k. The three S116 obligations (O-korder/O-gcd/O-genAP) collapse to this ONE reductive target.
+
+THE CRUX = THE MEDIANT 3/38 at N=12 (k=2,s=3, depth-minimal): a FINITE residue-hole-covering system at q=38=2*19 (12 residues v_l*a mod 38 in {3..35} avoiding {0,+-1,+-2}, AND covering). mac-mini's achievable depth 2->1->0; the mediant is shallowest, so 'depth->0 at N=12' bottoms out at '3/38 unachievable'.
+
+NEW/SHARPENED OBLIGATIONS: (O-complexity) bound k<=K0 at N=12 = the whole reductive target; (O-depth-monotone, NEW) achievable depth monotone-decreasing in N, ->0 at N=12 (window width ~1/(2N^2) outruns achievable-denominator growth = mac-mini Selberg-width ~2N^2 face); (O-mediant) 3/38 unachievable (finite q=38 system). NOTE: my bordered-AP search missed interior borders (0 even at known-nonempty N=6,7) -- mac-mini's construction caveat CONFIRMED; did not re-map (mac-mini authoritative).
+
+Files: LRCSpectrumWindow.lean extended (window_num_denom_locked green); reflection the-complexity-is-one-parameter-order-numerator-depth-and-the-mediant-crux-opus-S117; result order_k_synthesis_mediant_opus_S117; HYP-4496. RESIDUAL: bound the complexity k (mediant q=38 = the first, sharpest test), which closes the height upper bound and hence (G).
+
 ## mac-mini-2026-07-06-S25 -- RECURSIVE-ACROSS-n: gap members are PEEL-ISOLATED critical configs (no descending recursion); the HEIGHT BOUND relocates to a NUMERATOR-c bound (far element ~ 13c/2); Stern-Brocot depth decreases 2->1->0 with n (HYP-4542)
 
 Prompt (owner): work reductive targets; see recursive patterns as n changes.

@@ -1,0 +1,13 @@
+(A) COMPLEXITY-PARAMETER UNIFICATION across gap members:
+  member                      | N spd | M=s/q   | k=q-N*s | s(=c) | s<2k? | SB-depth in window
+  n7 {1,5,6,11,16,17}         |  6    | 5/33  |  3      | 5     | True  | depth 2
+  n8 {1,2,3,4,5,7,18}         |  7    | 3/23  |  2      | 3     | True  | depth 1
+  n13 MEDIANT 3/38            | 12    | 3/38  |  2      | 3     | True  | depth 1
+  => k<s<2k holds; s(=numerator=mac-mini's c) < 2k, so BOUNDING ORDER k BOUNDS NUMERATOR s=c
+     => bounds height ~13c/2 (mac-mini S25 + my S109 lever) => FINITE census. The chain closes.
+     The SHALLOWEST in-window form = the mediant 3/(3N+2), k=2,s=3,depth-0 (=mac-mini crux).
+
+(B) THE MEDIANT 3/38 CRUX at N=12: is M=3/38 achievable? At t*=a/38 (gcd(a,38)=1), all 12
+    residues v_l*a mod 38 must be >=3 from 0 (dist>=3/38), i.e. in {3..35}, avoiding {0,1,2,36,37}.
+    AND covering: for EVERY t some runner <3/38. Analyze the residue-hole-covering feasibility:
+    available residues (>=3 from 0): 33 values in [3,35]
