@@ -85,9 +85,20 @@ The crux is the **transversal rigidity**:
 > the *open* gap) or has M ≥ 2/25.
 
 This is precisely opus-S99's 2-D lift rigidity / the tight-family-is-AP census,
-now localized to the antipodal transversals — a small, finite, structured set
-(≈ one choice per unit pair × the free slots), far smaller than the full Q50
-census.  It is the same crux, but its domain has shrunk from "all residue
+now localized to the antipodal transversals — the 4096 sign patterns
+{±1,±2,…,±12} mod 25 (one residue per pair), far smaller than the full Q50
+census.
+
+**The mod-25 landscape is flat (a caution for the crux).**  All 4096 transversal
+residue-sets have mod-25 margin EXACTLY 1/25 — every transversal hits {1,24}, so
+at the balancing dilation some residue sits at distance 1.  So mod 25 identifies
+the *domain* (gap ⟹ transversal) but cannot *rank* transversals: the AP-vs-rest
+distinction lives at **mod 13** (the AP is tight there, M = 1/13; a non-AP
+transversal is not mod-13-tight and jumps to ≥ 2/25 somewhere).  The transversal
+rigidity is therefore genuinely a two-modulus (13 & 25) statement — the same
+mod-13 residue pinning (THM-593A) that closes hdich's tight case, now needed to
+close its *transversal* case.  The reduction shrinks the domain and peels the
+easy classes; it does not by itself resolve the deep AP-uniqueness.  It is the same crux, but its domain has shrunk from "all residue
 families" to "the antipodal transversals," with two of the three original classes
 peeled off by elementary witnesses.
 
