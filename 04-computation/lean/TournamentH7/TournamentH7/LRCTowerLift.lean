@@ -48,12 +48,12 @@ points of a full inter-tooth gap deliver it -- strictness is free in the nested 
 since a nested subinterval's interior is strictly inside every enclosing gap). -/
 theorem gap_interior_strict (ρ w a L : ℝ) (hρ0 : 0 < ρ) (hρ : ρ < 1/2)
     (hw : 0 < w) (hL : 2 ≤ w * L) :
-    ∃ c d : ℝ, a ≤ c ∧ d ≤ a + L ∧ c < d ∧
+    ∃ c d : ℝ, a ≤ c ∧ d ≤ a + L ∧ c < d ∧ d - c = (1 - 2*ρ)/w ∧
       ∀ t, c < t → t < d → ∀ m : ℤ, ρ < |w * t - m| := by
   have hk1 : w * a + ρ ≤ ((⌈w * a + ρ⌉ : ℤ) : ℝ) := Int.le_ceil _
   have hk2 : ((⌈w * a + ρ⌉ : ℤ) : ℝ) < w * a + ρ + 1 := Int.ceil_lt_add_one _
   refine ⟨(((⌈w * a + ρ⌉ : ℤ) : ℝ) + ρ) / w, (((⌈w * a + ρ⌉ : ℤ) : ℝ) + 1 - ρ) / w,
-    ?_, ?_, ?_, ?_⟩
+    ?_, ?_, ?_, ?_, ?_⟩
   · rw [le_div_iff₀ hw]
     have hmul : a * w = w * a := mul_comm a w
     linarith
@@ -63,6 +63,9 @@ theorem gap_interior_strict (ρ w a L : ℝ) (hρ0 : 0 < ρ) (hρ : ρ < 1/2)
   · rw [← sub_pos, div_sub_div_same]
     apply div_pos ?_ hw
     linarith
+  · rw [div_sub_div_same]
+    congr 1
+    ring
   · intro t htc htd m
     rw [div_lt_iff₀ hw] at htc
     rw [lt_div_iff₀ hw] at htd

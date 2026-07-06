@@ -17,3 +17,29 @@ corrected per-stratum worst q-resonance lengths (blocks <= cmax, doubles allowed
 |B|=5 CORRECTED zones (24): worst clear component 0.01171 (base (3, 5, 6, 8, 11)) => entry bar 171
 |B|=4 CORRECTED zones (28): worst clear component 0.00835 (base (3, 4, 5, 11)) => entry bar 239
 |B|=3 CORRECTED zones (34): worst clear component 0.00584 (base (3, 4, 10)) => entry bar 343
+q=13 revival worst length (c<=9 doubled patterns): 36/845 ~ 0.04260
+|B|=5 FINAL zones (24 incl q13-revival): worst component 0.01171 (base (3, 5, 6, 8, 11)) => entry bar 171
+|B|=4 FINAL zones (30 incl q13-revival): worst component 0.00568 (base (1, 3, 4, 11)) => entry bar 352
+|B|=3 FINAL zones (36 incl q13-revival): worst component 0.00000 (base (1, 3, 4)) => entry bar inf
+PINNING-AWARE final closure (q=13 zones at block-worst, no doubles):
+  |B|=5 (24 zones): worst component 0.01171 (base (3, 5, 6, 8, 11)) => entry bar 171
+  |B|=4 (40 zones): worst component 0.00000 (base (1, 2, 3, 4)) => entry bar inf
+  |B|=3 (46 zones): worst component 0.00000 (base (1, 2, 3)) => entry bar inf
+FULLY PINNING-AWARE closure:
+  |B|=5: q13-vulnerable bases 0; worst clear component 0.01171 (base (3, 5, 6, 8, 11)) => entry bar 171
+  |B|=4: q13-vulnerable bases 35; worst clear component 0.00000 (base (2, 4, 6, 8)) => entry bar inf
+  |B|=3: q13-vulnerable bases 56; worst clear component 0.00000 (base (2, 4, 6)) => entry bar inf
+consecutive c=7: catalog total = 4/15 ~ 0.2667 (26 resonances); measured long-component total (W=400) = 0.0277
+consecutive c=8: catalog total = 458/273 ~ 1.6777 (66 resonances); measured long-component total (W=400) = 0.1006
+consecutive c=9: catalog total = 5896/1365 ~ 4.3194 (130 resonances); measured long-component total (W=400) = 0.2300
+    2/13: 0.05907
+    11/13: 0.05907
+    1/7: 0.04808
+    6/7: 0.04808
+    1/8: 0.04808
+    7/8: 0.04808
+    1/9: 0.04808
+    8/9: 0.04808
+
+VERDICT vs base-good measures: |B|=3: 7/13 = 0.538; |B|=4: 5/13 = 0.385 (minus eps)
+=> per-family clearance margin = base-good - T_max - (component fragmentation)
