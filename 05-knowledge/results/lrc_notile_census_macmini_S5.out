@@ -4,3 +4,4 @@ adversary MINIMIZES free fraction; pattern TILES iff it can reach ~0
 ==============================================================================
   consec7 [1..7]             |L|= 7 meas=1.12  phi_worst = 0.1100   [no-tile]
   consec8 [1..8]             |L|= 8 meas=1.28  phi_worst = 0.0504   [no-tile]
+  consec9 [1..9]             |L|= 9 meas=1.44  phi_worst = 0.0175   [no-tile]
