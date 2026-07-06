@@ -1,0 +1,10 @@
+  family                                       M  kiss maxkiss(AP)  order(s,k)
+  AP {1..12} (12sp, tight)                  1/13    36          36      (1, 1)
+  n=7 {1,3,4,5,7,13,18} (7sp, M=3/23)       3/23     4          12      (3, 2)
+  n=7 {1,5,6,11,16,17} (6sp, M=5/33)        5/33     5           9      (5, 3)
+  AP {1..6} (6sp, tight)                     1/7     9           9      (1, 1)
+  AP {1..7} (7sp, tight)                     1/8    12          12      (1, 1)
+  doubled-apex {1..11,24} (12sp)            2/25    30          36      (2, 1)
+
+  => does order k>=2 (gap member) correlate with kissing DEFICIT (kiss < AP's)?
+     the AP (order k=1) has max kissing; gap members (order k>=2) should have fewer additive triples.
