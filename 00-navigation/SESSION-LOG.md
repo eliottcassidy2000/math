@@ -1001,6 +1001,21 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S34 -- SMALL STATEMENTS on the gap members: the wall IS the mediant; realization = base-AP-bulk + boundary-defect seating; density floor = seating cost (HYP-4497)
+
+Prompt (owner): strengthen understanding via small statements, subtle patterns, hidden connections.
+
+Dissected the only two nonempty gaps (n=7,8) -- five small checkable observations:
+(1) The wall q>=3k+2 IS the mediant's denominator (3k+2=(k+1)+(2k+1)); wall = 'no gap value simpler than the mediant'.
+(2) Wall TIGHT at n=8 (realizes 3/23=mediant at denom 23=3k+2), SLACK at n=7 (mediant 3/20 NOT realized; only 5/33, a level-2 Stern-Brocot descendant).
+(3) BULK+BOUNDARY: n=8 realizer {1,2,3,4,5,7,18} at t=4/23 -- base AP {1..5} -> residue AP {4,8,12,16,20}; defects {7,18} -> boundary residues {5,3}, binding.
+(4) g=3 (three-gap = S29 multiplicity); M-numerator = min residue-distance.
+(5) HIDDEN CONNECTION: density floor = a BOUNDARY-PACKING COST -- M-rise = seating defects at the boundary within window budget ~1/(2k^2); n<=8 fits, k=12 boundary too crowded (base AP takes the roots of unity). Reframes Cohn-Elkies LP (mac-mini HYP-4532) as discrete seating.
+
+CONVERGENCE opus HYP-4476 (same window): M of a DEFECTED DILATED AP is HEIGHT-INDEPENDENT (LRCSubfamilyCap GREEN) -- my S34 bulk+boundary picture IS the mechanism of that height-independence. mac-mini HYP-4542 (height upper bound).
+
+FILES: reflection small-statements-...-kps-S34.md; lrc_sternbrocot_realized_kps_S34.out; HYP-4497. No Lean (observations). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S33 -- CORRECTION+STRENGTHENING of the structure census: the n=8 member reveals base-AP+FAR-outlier shape; broader k=12 census STILL empty (~377k) -- supports mac-mini HYP-4502 (HYP-4487)
 
 Prompt (owner): work on the open residual.

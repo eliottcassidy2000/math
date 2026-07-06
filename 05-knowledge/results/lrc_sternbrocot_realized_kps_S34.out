@@ -1,0 +1,10 @@
+=== n=7 (k=6): gap (1/7,2/13); mediant=3/20=3/(3k+2); min gap denom (opus wall)=20 ===
+  realized gap M-values (value: #families), denom, is-mediant:
+    5/33=0.15152 (x1) denom=33 
+  smallest denom realized = 33 (wall says >= 20)
+
+=== n=8 (k=7): gap (1/8,2/15); mediant=3/23=3/(3k+2); min gap denom (opus wall)=23 ===
+  realized gap M-values (value: #families), denom, is-mediant:
+    3/23=0.13043 (x2) denom=23 <-- MEDIANT
+  smallest denom realized = 23 (wall says >= 23)
+
