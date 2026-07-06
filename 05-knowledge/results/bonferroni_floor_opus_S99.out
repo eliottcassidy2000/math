@@ -1,0 +1,27 @@
+min pairwise overlap (over shifts) of two radius-2/25 combs; (2*rho)^2 = 0.0256
+  freqs (1,2): min overlap = 0.0000  (coprime)
+  freqs (2,3): min overlap = 0.0000  (coprime)
+  freqs (3,5): min overlap = 0.0182  (coprime)
+  freqs (1,7): min overlap = 0.0227  (coprime)
+  freqs (4,6): min overlap = 0.0000  (gcd 2)
+  freqs (5,10): min overlap = 0.0000  (gcd 5)
+  freqs (2,4): min overlap = 0.0000  (gcd 2)
+  freqs (7,11): min overlap = 0.0243  (coprime)
+  freqs (1,12): min overlap = 0.0198  (coprime)
+  observed MIN over these pairs = 0.0000; (2rho)^2 = 0.0256
+
+Hunter-Worsley spanning-tree bound  P(union) <= 2*rho*l - (l-1)*omega < 1 ?
+  l=6: 2rho*l - (l-1)*(2rho)^2 = 0.8320  < 1  => CLEAR POINT EXISTS (proved)
+  l=7: 2rho*l - (l-1)*(2rho)^2 = 0.9664  < 1  => CLEAR POINT EXISTS (proved)
+  l=8: 2rho*l - (l-1)*(2rho)^2 = 1.1008  >= 1 (tree bound insufficient)
+  l=9: 2rho*l - (l-1)*(2rho)^2 = 1.2352  >= 1 (tree bound insufficient)
+  l=10: 2rho*l - (l-1)*(2rho)^2 = 1.3696  >= 1 (tree bound insufficient)
+  l=11: 2rho*l - (l-1)*(2rho)^2 = 1.5040  >= 1 (tree bound insufficient)
+  l=12: 2rho*l - (l-1)*(2rho)^2 = 1.6384  >= 1 (tree bound insufficient)
+
+=> density (union bound) closes l<=6; spanning-tree Bonferroni closes l=7;
+   l=8..11 need denser inclusion (more overlap edges) -- the factor-2 margin (2/25 vs truth 1/6) is the slack.
+  l=8: need > 10.9 overlap-edges of size (2rho)^2; available C(l,2)=28 => FEASIBLE
+  l=9: need > 17.2 overlap-edges of size (2rho)^2; available C(l,2)=36 => FEASIBLE
+  l=10: need > 23.4 overlap-edges of size (2rho)^2; available C(l,2)=45 => FEASIBLE
+  l=11: need > 29.7 overlap-edges of size (2rho)^2; available C(l,2)=55 => FEASIBLE

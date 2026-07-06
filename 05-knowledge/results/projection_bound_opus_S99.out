@@ -1,0 +1,14 @@
+CLAIM 1+2: random rank-2 lattices, M(U) vs best full-support projection, window check
+  window = (1/13=0.0769, 2/25=0.0800]
+  M(U)=0.2310  best-fullsupport-proj=0.2350 (dir (-3, 1))  proj<=M: False
+  M(U)=0.2190  best-fullsupport-proj=0.2220 (dir (0, 1))  proj<=M: False
+  M(U)=0.3310  best-fullsupport-proj=0.3325 (dir (6, 5))  proj<=M: False
+  M(U)=0.2429  best-fullsupport-proj=0.2438 (dir (-1, 5))  proj<=M: False
+  M(U)=0.3310  best-fullsupport-proj=0.3320 (dir (3, 4))  proj<=M: False
+  M(U)=0.2500  best-fullsupport-proj=0.2500 (dir (-7, 6))  proj<=M: True
+  M(U)=0.2500  best-fullsupport-proj=0.2500 (dir (-7, 2))  proj<=M: True
+  M(U)=0.2476  best-fullsupport-proj=0.2500 (dir (-6, 1))  proj<=M: False
+  M(U)=0.2429  best-fullsupport-proj=0.2440 (dir (-2, 5))  proj<=M: False
+  M(U)=0.2524  best-fullsupport-proj=0.2555 (dir (-1, 6))  proj<=M: False
+  M(U)=0.2476  best-fullsupport-proj=0.2500 (dir (-7, 8))  proj<=M: False
+  ==> 0/40 in window (1/13,2/25]; 0/40 below 1/13

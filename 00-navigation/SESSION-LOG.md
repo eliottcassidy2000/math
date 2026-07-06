@@ -1,3 +1,17 @@
+## opus-2026-07-06-S99 -- THE (A)-LEG PROJECTION FLOOR (M(U) >= 1/13, formal) + THE JUMP (rank-1 floor vs rank-2 leap to 1/6) + (A) = 2-D LIFT RIGIDITY + the Bonferroni/decouple assessment of kps's circle lemma (HYP-4296)
+
+Prompt: work the crux, long session, pull frequently, integrate incoming ideas, reasoning over builds.
+
+REASONING (the session's core, three structural facts for the (A) leg = coupled 2-torus M(U) in (1/13, 2/25]?):
+(1) THE PROJECTION FLOOR: restrict the 2-torus to a full-support sub-circle (t,s)=(a tau,b tau) => the family collapses to the 1-D {a u_i + b v_i}; a lonely point lifts. Full-support directions always exist (finitely many perpendiculars); settled LRC(<=13) => M(U) >= 1/13 UNCONDITIONALLY. So the window's LOWER EDGE is exactly the projection floor; (A) is the sliver of width 1/325 above it. FORMALIZED: LRCTorusProjection.lean (margin_of_projection + torus_point_of_projection, GREEN, standard trio) -- lands the settled-LRC citation on any 2-torus.
+CAUGHT MYSELF (MISTAKE-102 discipline): a support-7 direction would give 1/8 > 2/25 and close (A) trivially -- but vanishing coords sit at ||0||=0 on their sub-circle, killing the projected min. The vanishing coords ARE the difficulty; only genuine 2-D motion moves every class off 0. This is why (A) is coupled.
+(2) THE JUMP: tight base {1..12} gives M(U)=1/13 ONLY at rank-1 (degenerate v parallel u); any genuine rank-2 v jumps to >= 0.194 (400 random) / >= 1/6 (structured). The window is the jump gap between the 12-runner tight value and the <=5-runner bound.
+(3) THE IDENTITY: in-window => all full-support projections near-tight = 2-D lift rigidity, the rank-2 cousin of hdich's 1-D residue pinning. (A)+(C) are ONE rigidity principle.
+
+INTEGRATION (kps-S20d CircleClearFloor, mac-mini-S6b HYP-4302): pairwise Bonferroni FAILS past l=6 (min comb overlap = 0 for commensurable pairs -- verified, correcting my hoped-for clean l=7 extension); the arbitrary-shift l=7..11 floor is genuinely Newman. BUT it is STRONGER than (A) needs: torus_A_window_empty applies it only at structured shifts a_i t = the coupled 2-torus (M ~ 0.275, factor 2.08 above window), which my projection floor + mac-mini's census clear directly. REROUTE handed to kps: the coupled route avoids the hard Newman lemma.
+
+Files: LRCTorusProjection.lean (green, registered); reflection the-projection-floor-and-the-window-sliver; projection_bound / window_rigidity / inhomog_covering / bonferroni_floor outs; HYP-4296. Light build (per prompt: reasoning-first) -- only the 2-line projection bridge formalized.
+
 ## mac-mini-2026-07-06-S6 -- THE 7-SPREAD LATTICE RESIDUAL: characterized, census-clean at INFIMUM 1/6 (579 + 652-restart adversarial), reduced to ONE >=3-class covering lemma with factor-2 margin; the (A)-half residual collapsed + good-box bridge for opus's formal composition (HYP-4292)
 
 Prompt (owner): keep going, pull often, integrate/extend toward the proof.

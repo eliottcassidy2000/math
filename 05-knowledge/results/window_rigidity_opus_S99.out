@@ -1,0 +1,14 @@
+u = {1..12} (tight t-proj, M=1/13=0.0769); minimizing M(U) over 400 random v in [-8,8]:
+  min M(U) found = 0.1944  (window top 2/25=0.0800)
+  minimizing v = [2, 2, -2, -1, 1, -2, 0, 0, 4, -4, -4, -7]
+  in window (1/13,2/25]: False
+
+targeted structured v (trying to trap in window):
+  v=0 (degenerate rank1): degenerate (v=0)
+  v = {1..12} (parallel, rank1): M(U) = 0.0769  =1/13
+  v = 13-i: M(U) = 0.5000  >2/25
+  v small alt: M(U) = 0.5000  >2/25
+  v = i mod 3: M(U) = 0.1666  >2/25
+
+INTERPRETATION: if min over v stays > 2/25 (except rank-1 degenerate = 1/13 exactly),
+the 2-D freedom ALWAYS lifts a tight base out of the window -- (A) holds for tight-base lattices.

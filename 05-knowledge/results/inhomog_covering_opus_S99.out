@@ -1,0 +1,6 @@
+l=7: searching for a distinct-freq covering with ARBITRARY shifts (uncovered=0 => CircleClearFloor FALSE as stated)
+  best 7-comb: freqs=[2, 4, 6, 8, 15, 19, 23], min uncovered fraction after annealing = 0.1880
+  ==> arbitrary-shift covering NOT found (uncovered stays > 0)
+
+STRUCTURED shifts phi_j = a_j*t (the real (A) application, t free): l=7
+  worst M over 400 structured 7-systems (coarse grid) = 0.2750  (>2/25=0.0800: True)
