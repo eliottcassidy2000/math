@@ -1,0 +1,32 @@
+CORRECTED target = safe(A)*safe(B)  [cross-scale decorrelation multiplies each scale's OWN safe fraction]  beta=2/25
+
+A={1,2,3},B={1,2}: safe(A)=0.65333 safe(B)=0.76000 target=safe(A)safe(B)=0.49653
+    N=   13: safe=0.504615  ratio=1.0163
+    N=   61: safe=0.492678  ratio=0.9922
+    N=  251: safe=0.497371  ratio=1.0017
+    N= 1009: safe=0.496505  ratio=0.9999
+    N= 4001: safe=0.496586  ratio=1.0001
+
+A={1..6},B={1,2}: safe(A)=0.39200 safe(B)=0.76000 target=safe(A)safe(B)=0.29792
+    N=   13: safe=0.304000  ratio=1.0204
+    N=   61: safe=0.292984  ratio=0.9834
+    N=  251: safe=0.298932  ratio=1.0034
+    N= 1009: safe=0.297717  ratio=0.9993
+    N= 4001: safe=0.297984  ratio=1.0002
+
+A={1,2,3},B={1,2,3}: safe(A)=0.65333 safe(B)=0.65333 target=safe(A)safe(B)=0.42684
+    N=   13: safe=0.436923  ratio=1.0236
+    N=   61: safe=0.422732  ratio=0.9904
+    N=  251: safe=0.427676  ratio=1.0019
+    N= 1009: safe=0.426838  ratio=1.0000
+    N= 4001: safe=0.426897  ratio=1.0001
+
+A={1,2},B={1,2,3}: safe(A)=0.76000 safe(B)=0.65333 target=safe(A)safe(B)=0.49653
+    N=   13: safe=0.502564  ratio=1.0121
+    N=   61: safe=0.493989  ratio=0.9949
+    N=  251: safe=0.497158  ratio=1.0013
+    N= 1009: safe=0.496505  ratio=0.9999
+    N= 4001: safe=0.496573  ratio=1.0001
+
+=> ratio -> 1: the limit IS safe(A)*safe(B).  Covering (safe=0) needs safe(A)=0 OR safe(B)=0
+   -- a two-scale gap member must have a covering SUB-SCALE.  Recurse => single-scale core.

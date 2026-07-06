@@ -1,0 +1,52 @@
+======================================================================
+SAFE MEASURE vs INDEPENDENT BASELINE (1-2beta)^12,  beta near the gap
+======================================================================
+
+AP {1..12}:  M(S) = 1/13 = 0.07692
+   beta=  1/13=0.07692: COVER (M<beta)         baseline(1-2b)^12=0.13471
+   beta=  3/38=0.07895: COVER (M<beta)         baseline(1-2b)^12=0.12717
+   beta=  2/25=0.08000: COVER (M<beta)         baseline(1-2b)^12=0.12341
+   beta=  1/12=0.08333: COVER (M<beta)         baseline(1-2b)^12=0.11216
+   beta=  2/23=0.08696: COVER (M<beta)         baseline(1-2b)^12=0.10100
+
+doubled-apex {1..11,24}:  M(S) = 2/25 = 0.08000
+   beta=  1/13=0.07692: safe=0.00641           baseline(1-2b)^12=0.13471
+   beta=  3/38=0.07895: safe=0.00219           baseline(1-2b)^12=0.12717
+   beta=  2/25=0.08000: COVER (M<beta)         baseline(1-2b)^12=0.12341
+   beta=  1/12=0.08333: COVER (M<beta)         baseline(1-2b)^12=0.11216
+   beta=  2/23=0.08696: COVER (M<beta)         baseline(1-2b)^12=0.10100
+
+block lift:  M(S) = 2/25 = 0.08000
+   beta=  1/13=0.07692: safe=0.00113           baseline(1-2b)^12=0.13471
+   beta=  3/38=0.07895: safe=0.00039           baseline(1-2b)^12=0.12717
+   beta=  2/25=0.08000: COVER (M<beta)         baseline(1-2b)^12=0.12341
+   beta=  1/12=0.08333: COVER (M<beta)         baseline(1-2b)^12=0.11216
+   beta=  2/23=0.08696: COVER (M<beta)         baseline(1-2b)^12=0.10100
+
+generic {1..11,23}:  M(S) = 1/12 = 0.08333
+   beta=  1/13=0.07692: safe=0.01777           baseline(1-2b)^12=0.13471
+   beta=  3/38=0.07895: safe=0.01216           baseline(1-2b)^12=0.12717
+   beta=  2/25=0.08000: safe=0.00924           baseline(1-2b)^12=0.12341
+   beta=  1/12=0.08333: COVER (M<beta)         baseline(1-2b)^12=0.11216
+   beta=  2/23=0.08696: COVER (M<beta)         baseline(1-2b)^12=0.10100
+
+======================================================================
+BONFERRONI ORDER: threshold 1/14 (7-wall) vs gap 2/25
+======================================================================
+
+beta = 1/14 (threshold 1/14); danger per runner = 0.1429; S_1 = 12*0.1429 = 1.7143
+   AP {1..12}: S1=1.714 S2=1.972 S3=3.852 S4=7.251
+      IE partials 1-S1(+S2)(-S3)(+S4): -0.714 1.258 -2.595 4.656   [true safe=0.0341]
+   doubled-apex: S1=1.714 S2=1.866 S3=3.425 S4=6.197
+      IE partials 1-S1(+S2)(-S3)(+S4): -0.714 1.151 -2.274 3.923   [true safe=0.0395]
+
+beta = 2/25 (gap 2/25); danger per runner = 0.1600; S_1 = 12*0.1600 = 1.9200
+   AP {1..12}: S1=1.920 S2=2.291 S3=4.315 S4=8.121
+      IE partials 1-S1(+S2)(-S3)(+S4): -0.920 1.371 -2.944 5.177   [true safe=0.0000]
+   doubled-apex: S1=1.920 S2=2.176 S3=3.847 S4=6.941
+      IE partials 1-S1(+S2)(-S3)(+S4): -0.920 1.256 -2.591 4.350   [true safe=0.0000]
+
+READING: at beta=1/14 the pair term S_2 already dominates (7-wall closes ~c<=7);
+at beta=2/25 the alternating IE partials swing WIDE -- covering needs high-order
+resonance (the AP's additive energy), so no low-order Bonferroni certificate exists.
+This is WHY the gap (G) is strictly harder than the LRC(14) threshold.

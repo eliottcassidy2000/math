@@ -1,0 +1,46 @@
+TWO-SCALE DECORRELATION  safe(A u N*B, beta) -> safe(A,beta)*(1-2beta)^|B|   beta=2/25
+
+A={1,2,3}, B={1,2}:  safe(A)=0.65333  target=safe(A)*(1-2b)^2=0.46099
+        N  safe(A u N*B)  ratio to target
+        7       0.487619           1.0578
+       13       0.504615           1.0946
+       29       0.498851           1.0821
+       61       0.492678           1.0687
+      127       0.497953           1.0802
+      251       0.497371           1.0789
+      509       0.496162           1.0763
+
+A={1,2,3,4}, B={1}:  safe(A)=0.57333  target=safe(A)*(1-2b)^1=0.48160
+        N  safe(A u N*B)  ratio to target
+        7       0.436190           0.9057
+       13       0.487692           1.0127
+       29       0.485057           1.0072
+       61       0.477268           0.9910
+      127       0.482205           1.0013
+      251       0.482390           1.0016
+      509       0.480956           0.9987
+
+A={1,2,3} (loose coarse), B={1,2,3}:  safe(A)=0.65333  target=safe(A)*(1-2b)^3=0.38723
+        N  safe(A u N*B)  ratio to target
+        7       0.426667           1.1018
+       13       0.436923           1.1283
+       29       0.427586           1.1042
+       61       0.422732           1.0917
+      127       0.428241           1.1059
+      251       0.427676           1.1044
+      509       0.426588           1.1016
+
+A={1..6}, B={1,2}:  safe(A)=0.39200  target=safe(A)*(1-2b)^2=0.27660
+        N  safe(A u N*B)  ratio to target
+        7       0.243048           0.8787
+       13       0.304000           1.0991
+       29       0.302621           1.0941
+       61       0.292984           1.0593
+      127       0.298142           1.0779
+      251       0.298932           1.0808
+      509       0.297019           1.0738
+
+READING: safe(A u N*B) converges to safe(A)*(1-2b)^|B| as N grows (fast runners
+decorrelate to their independent baseline).  Since (1-2b)^|B|>0, covering (safe=0)
+FORCES safe(A)=0 -- the coarse scale must already cover.  Rigorous descent: no
+high-height tail can create covering; (G) lives on the bounded coarse near-AP core.
