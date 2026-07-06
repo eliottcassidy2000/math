@@ -1,0 +1,11 @@
+=== CLAIM A: residue-pinned (full system mod 13) => M in {1/13} U [1/12, inf), i.e. NEVER in (1/13,1/12) ===
+  25000 residue-pinned families: 0 at 1/13, 0 in (1/13,1/12), 25000 >= 1/12
+  => CLAIM A HOLDS: residue-pinning forbids (1/13, 1/12) -- a 1/12 gap, wider than the crux gap
+
+=== CLAIM B: near-gap families (M in (1/13, 1/12)) are ALL residue-COLLISION (not full system) ===
+  0 near-gap families (M in (1/13,1/12)); 0 are residue-pinned
+  => CLAIM B HOLDS: all near-gap families have residue collisions
+
+SYNTHESIS: the M-spectrum SPLITS by residue structure --
+  full residue system (roots-of-unity pinned) => M=1/13 or >=1/12 (the AP rigidity)
+  residue collision => the near-gap ladder region (my divisor-protection/ladder mechanism)

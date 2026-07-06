@@ -1,0 +1,32 @@
+=== (1) are all dilated-AP (tight) families sigma-invariant? ===
+  d= 1: residues sigma-invariant = True  (M=0.07692)
+  d= 2: residues sigma-invariant = True  (M=0.07692)
+  d= 3: residues sigma-invariant = True  (M=0.07692)
+  d= 4: residues sigma-invariant = True  (M=0.07692)
+  d= 5: residues sigma-invariant = True  (M=0.07692)
+  d= 6: residues sigma-invariant = True  (M=0.07692)
+  d= 7: residues sigma-invariant = True  (M=0.07692)
+  d= 8: residues sigma-invariant = True  (M=0.07692)
+  d= 9: residues sigma-invariant = True  (M=0.07692)
+  d=10: residues sigma-invariant = True  (M=0.07692)
+  d=11: residues sigma-invariant = True  (M=0.07692)
+  d=12: residues sigma-invariant = True  (M=0.07692)
+
+=== (2) sign-balance: witness reflection symmetry of the AP at t=1/13 ===
+  AP residues        : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  reflected (13 - i) : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  reflection-symmetric point set: True
+  => resonance sum pairs k <-> -k with conjugate Fourier terms => REAL, sign-balanced.
+
+=== (3) does sigma-invariance sharpen tight-vs-loose among residue-pinned families? ===
+  scanned 40000 residue-pinned lifts; near-tight (M<1/12): 0 sigma-symmetric-lift, 0 asymmetric-lift
+  among 3000 lifts, 0 at M=1/13; all reflection-symmetric lifts? n/a
+
+=== (4) the tournament bridge: AP = self-complementary fixed point of LRC Z_2 ===
+  SC tournaments = fixed points of complement (T=T^op up to iso), have -1 anti-aut (THM-024).
+  AP {1..12} = fixed set of sigma:i->-i in (Z/13)*, tight at the roots of unity.
+  Both: the order-2 element of the governing group pins the extremal/fixed configuration.
+
+VERDICT: if all tight = sigma-invariant AND asymmetric lifts are systematically looser
+=> sigma-invariance (LRC self-complementarity) is a genuine tight-locus condition,
+the same Z_2 that governs the tournament SC structure -- one involution, two halves.

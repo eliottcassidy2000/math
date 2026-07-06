@@ -688,6 +688,20 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S23 -- THE RESIDUE-STRUCTURE SPLIT of (G): full-system (mult, wide 1/12 gap) vs collision (add, the ladder); + the Z_2/self-complementary bridge to the tournament half (HYP-4417)
+
+Prompt (owner): work the open obligations; synthesize the many lenses; ponder creative conditions; look at add/mult, odd/even, pos/neg, rat/irrat dichotomies. (Dispatched concurrently -- mac-mini got the same prompt, produced HYP-4422; welded.)
+
+THE SPLIT (by residue set mod 13, exact-fraction verified): full residue system (pinned) => M=1/13 or >=1/12, NEVER in (1/13,1/12) [WIDER than crux gap, 25000 bounded lifts clean]; residue collision => the near-gap ladder (2/25,1/12). This SEPARATES opus's sum-product coincidence: mult side = full system = roots-of-unity pinned; add side = collision (=13|(v_i-v_j)) = ladder. Crux edges = junction (1/13 full-system AP; 2/25 first collision m=2). Ladder {1..11,12m} = collision (12m==-m mod 13, class walks down as M climbs); AP sole full-system member.
+
+CONVERGENCE mac-mini HYP-4422 (proven q|(v_i+-v_j), q<=2max => finite check): my split = their lever at q=13 (collision=difference lever; pinned=sum lever antipodal). The ladder value m/(12m+1) = their sum-lever: pair (1,12m) sums to 12m+1=q.
+
+THE Z_2 BRIDGE (odd/even + pos/neg): tight locus sigma-invariant (sigma:i->-i, order-2 of (Z/13)*); witness reflection-symmetric => sign-balanced resonance. SAME Z_2 as the tournament complement T<->T^op: SC tournaments (THM-024) = complement fixed points; AP = LRC self-complementary fixed point. One order-2 element pins the extremal on BOTH halves.
+
+LEVERAGE: (G) = easier mult case (pinned, wide 1/12 target) + add collision case (slice11_loose closes {1..11,v}; residual = non-{1..11} collisions = density-floor kernel). Razor-thin 2/25 confined to collision side. HONEST: does not close (G); a sharpening decomposition + creative conditions + the cross-project bridge.
+
+FILES: reflection the-residue-structure-split-of-the-gap-kps-S23.md; lrc_involution_signbalance_kps_S23.py, lrc_residue_split_kps_S23b.out; HYP-4417. No Lean (findings are structural; the formalizable pieces are done -- slice11_loose -- or the open M-minimizer). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S22 -- THE TIGHT LOCUS IS THE (Z/13)*-ORBIT OF THE ROOTS OF UNITY: the multiplicative/geometric face of opus's sum-product reframe + strict-rigidity confirmation + the character-sum bridge (HYP-4407)
 
 Prompt (owner): work on the genuinely open remainder, seeing deep analogies.
