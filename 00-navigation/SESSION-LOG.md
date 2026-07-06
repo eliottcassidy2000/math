@@ -1,3 +1,20 @@
+## mac-mini-2026-07-06-S9 -- CircleClearFloor SPLITS THREE WAYS: the crux's last covering obligation LOCATED; unshifted l<=11 = LRC citation, additively-generic = Newman-Fourier PROVED, the residual = phase-coupling of resonance-rich (= tight-locus) frequencies (HYP-4332)
+
+Prompt (owner): push another session toward the crux.
+
+TARGET: the cleanest crux obligation from my S8 synthesis -- CircleClearFloor (kps-S20's l>=7 distinct-frequency covering-impossibility, the density regime l<=6 already Lean-GREEN).
+
+THE SPLIT (three precise cases):
+ (1) UNSHIFTED l <= 11 = a ONE-LINE LRC(<=11) CITATION -- distinct freqs have a point with min ||w_i tau|| >= 1/(l+1) >= 1/12 > 2/25 (clearance >= 1/300; verified clear level 0.13-0.20).  NOT Newman; the "distinctness regime" easy part is just LRC.  (l=12,13 need >= 12 lifted = empty base = degenerate.)
+ (2) FREE-SHIFT ADDITIVELY-GENERIC (Sidon-type) = NEWMAN-FOURIER PROVED.  |U| = INT prod g(w_i tau - phi_i) = (1-2rho)^l + Sum_{k: Sum k_i w_i = 0} prod ghat(k_i) e^{-2pi i Sum k_i phi_i}; triangle bound |U| >= (1-2rho)^l - R for ALL shifts; (1-2rho)^l > R closes it.  {3,5,9,17,33,65,129}: R=0.082 << (0.84)^7=0.295 => PROVED no cover, any shift.
+ (3) FREE-SHIFT RESONANCE-RICH (APs, 2*AP, the 14r ladder = the LRC-relevant sets) = the RESIDUAL.  R > main (0.95, 0.44 > 0.295), triangle bound fails, but the floor is REAL (T3 free-shift adversarial hill-climb leaves 0.20@l7 .. 0.038@l13).  Survives by PHASE COUPLING (each phi_i in many resonances, adversary can't independently align).
+
+KEY: the residual's additive structure (signed subset sums = 0) IS the tightness -- CircleClearFloor's hard case coincides with the tight-locus, one more face of the S8 one-object (the resonances ARE the tightness).  AND CircleClearFloor is SUFFICIENT-NOT-NECESSARY (my S6b: 2-torus <= 1-D census); the direct-proof lane needs the phase-coupling residual, the S6b lane skips it.  ROUTE: a Selberg/Fejer band-limited majorant of g to control the coupled resonance minimum.
+
+FILES: lrc_circleclearfloor_locate + lrc_newman_fourier _macmini_S9.py (+.outs); reflection the-last-covering-obligation-splits-three-ways; HYP-4332 (+INDEX).  No canon overridden.
+
+NEXT: (a) the Selberg/Fejer majorant for the phase-coupling residual (the one genuine open sub-lemma); (b) or lean on S6b + the 1-D census and drop CircleClearFloor entirely; (c) the |T|=3 cyclotomic almost-SOS (S8 lever 2, still untouched).
+
 ## mac-mini-2026-07-06-S9 -- THE TWO-MODULUS NON-CLEARING STRUCTURE: gap members are PAIR-HITTING TRANSVERSALS at BOTH 13 and 25 (mod-13 = the exact analog of the sibling's mod-25 transversal, verified); the two-modulus census leaves ONLY the AP; + I CORRECTED my own S7 Q_max=25 bound (HYP-4342, renamed from a 4332 collision)
 
 Prompt (owner): synthesize other agents' work and work on the remaining crux.
