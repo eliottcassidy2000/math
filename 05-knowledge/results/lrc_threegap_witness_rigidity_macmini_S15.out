@@ -1,0 +1,29 @@
+family                              M(S)        g(#gaps at witness)
+------------------------------------------------------------------------
+AP {1..12} (tight 1/13)              0.07692     g=2
+doubled-apex {1..11,24} (2/25)       0.08000     g=2
+block lift (2/25)                    0.08000     g=3
+deep well {1..11,168}                0.08284     g=3
+{1..11,23} (1/12)                    0.08333     g=4
+{1..11,13} (1/12)                    0.08333     g=3
+
+random covering 12-families (M vs g):
+  M=0.13333  g=7  loose       [2, 8, 12, 13, 17, 18, 20, 26, 27, 28, 33, 34]
+  M=0.15383  g=8  loose       [1, 4, 8, 10, 12, 14, 18, 20, 22, 29, 30, 38]
+  M=0.15787  g=7  loose       [1, 6, 9, 11, 13, 14, 20, 22, 24, 25, 27, 29]
+  M=0.16279  g=7  loose       [7, 12, 16, 17, 18, 20, 23, 26, 27, 31, 33, 36]
+  M=0.16665  g=7  loose       [6, 7, 9, 12, 13, 14, 18, 22, 30, 32, 33, 35]
+  M=0.17020  g=8  loose       [4, 5, 8, 11, 12, 14, 15, 21, 29, 30, 35, 36]
+  M=0.17020  g=8  loose       [8, 9, 11, 14, 18, 24, 25, 30, 33, 35, 38, 39]
+  M=0.17647  g=10 loose       [1, 2, 3, 8, 16, 27, 30, 33, 35, 36, 37, 38]
+  M=0.17777  g=7  loose       [8, 9, 12, 16, 18, 22, 23, 24, 26, 28, 30, 37]
+  M=0.18180  g=10 loose       [2, 3, 6, 9, 11, 16, 20, 24, 28, 32, 34, 39]
+  M=0.18605  g=9  loose       [7, 9, 10, 17, 22, 23, 26, 32, 34, 36, 37, 39]
+  M=0.18750  g=3  loose       [4, 5, 7, 9, 12, 14, 18, 21, 23, 24, 30, 33]
+  M=0.22916  g=7  loose       [11, 13, 15, 17, 18, 21, 24, 26, 30, 35, 36, 37]
+  M=0.26415  g=7  loose       [14, 15, 19, 20, 21, 23, 27, 32, 33, 34, 36, 39]
+
+READING: if g is SMALL (<=3) exactly for near-tight families and grows for loose
+ones, the loneliness spectrum is three-gap-quantized -- the witness of a near-tight
+family is a {k*alpha} orbit, its M is a CF/Ostrowski rung, and no value can sit
+strictly inside the Farey cell (1/13,2/25).  That is the RIGIDITY behind (G).
