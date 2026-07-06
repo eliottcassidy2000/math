@@ -1,3 +1,17 @@
+## mac-mini-2026-07-06-S20 -- CREATIVE PUSH (p-adic, inconclusive) -> CAUGHT+FIXED a fast-M bug (MISTAKE-114) -> FORMALIZED the n-specificity (LRCNSpecificGap.lean GREEN) (HYP-4482)
+
+Prompt (owner): keep pushing creatively against remaining frontiers, then formalize.
+
+CREATIVE PUSH (p-adic/Monsky route from S19): tried to map WHERE the second gap empties across n and correlate with 2n-1's factorization (11,13,3.5,17,19,3.7,23,5^2). INCONCLUSIVE -- no clean valuation pattern; the transition n is not pinned (gap members are rare/special). The p-adic route stays a speculative lead, not confirmed.
+
+CAUGHT A BUG (MISTAKE-114): the push surfaced a fake n=6 'gap member' {1,3,4,5,18} at '4/23'. Independent grid: M=2/11 (the loose BOUNDARY, NOT in gap). Cause: my fast-exact-M helper (offered to the fleet S16) had 'if gcd(a,q)!=1: continue' -- it SKIPPED witnesses at sub-denominators dividing a pairwise sum (q=11 via 22=4+18 as 2a/22), UNDERESTIMATING M. FIX: check ALL a. RE-VERIFIED with fixed M: AP=1/13, doubled-apex=2/25, n=7 {1,5,6,11,16,17}=5/33 (grid-confirmed); S16 near-AP search still 0-in-gap (15,976 families); S18 equioscillation counts UNCHANGED (AP=phi(n) robust); S19 Fekete unaffected. So conclusions HOLD; only this session's n=6 claim corrected. Fixed 4 tool files; warned the fleet.
+
+FORMALIZED (LRCNSpecificGap.lean GREEN, [propext,Choice,Quot] only): the n=7 config {1,5,6,11,16,17} is 5/33-LONELY at t=10/33 (via kps rational_point_margin; residues v*10 mod 33 all in [5,28]) => M>=5/33; + 5/33>1/7 and 5/33<2/13 => M in the second gap (1/7,2/13). FORMAL WITNESS that (G) is n-SPECIFIC, not universal -- the structural equi-lenses are necessary-not-sufficient. First formal counterexample behind the S17 correction.
+
+DELIVERABLES: LRCNSpecificGap.lean (GREEN kernel-pure); HYP-4482; MISTAKE-114; fixed tool files (lrc_fastM_highscale_probe / lrc_leaveoneout_alignment / lrc_witness_denominator_dichotomies / lrc_equioscillation_count); reverify outputs. No canon overridden.
+
+NEXT: the density floor remains the open frontier (fleet saturating: opus theta-sum, kps Paley, my potential-theory/Monsky leads). The finite skeleton + the n-specificity are now formalized; the analytic floor is the residue.
+
 ## mac-mini-2026-07-06-S20 -- THE EXTREMIZER IS STRICTER THAN FREIMAN: safe=0 <=> DILATED AP (not just min-doubling); the (U) rigidity factors into [open theta-cancellation => min-doubling] + [classical |S+S|=2n-1 => AP] + [green residue-pinning]; LRCMinimalSumset.lean GREEN (HYP-4482)
 
 Prompt (owner): push creatively against remaining frontier, then formalize.
