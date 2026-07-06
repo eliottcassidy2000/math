@@ -8484,3 +8484,10 @@ on `Phi`, not as a standalone scalar proof.
 - **Status:** OPEN. The global congestion 2nd moment Phi is provably insufficient (LP min m_0=0). The floor needs the LOCAL/arithmetic moment.
 - **Next step:** carry HYP-3571's Gamma_0(N) congruence 2nd moment into the facility-location LP as a LOCAL constraint (per-residue coverage), and check whether the localized moment LP forces min m_0>0. Also: build the coverage as a cocycle on the Arnold-tongue resonance (Blaschke) and read the floor off the boundary-function tameness (Kaczynski, finite arcs).
 - **Cross-refs:** HYP-3822, HYP-3817 (sharpened), HYP-3571, HYP-3785, HYP-3796 (S80 Blaschke/Kaczmarz).
+
+
+### NEW LEADS (mac-mini-S19, HYP-4472) -- potential theory + p-adic, all 0 prior repo mentions
+- **Stolarsky invariance principle**: L2-discrepancy + sum-of-distances = const => min-discrepancy AP = max-distance-sum = Fekete equilibrium. Status: VERIFIED the AP=13-roots=min-log-energy. Next: the floor as energy-vs-covering-budget tradeoff.
+- **Fekete points / equilibrium measure / potential theory**: AP+observer = n-th roots of unity = electrostatic ground state; tight value 1/n = equilibrium spacing. Next: quantify the energy gap to the second config.
+- **Monsky's theorem / p-adic equidissection**: the floor is a tiling-impossibility of Monsky's shape; candidate proof via p-adic valuation (p=5 from 2n-1=5^2) + Sperner. Next: set up the valuation-coloring of the clearance band. HIGH-INTEREST (explains n-specificity structurally).
+- **Bohr almost periodicity**: equicontinuous=almost periodic; M's non-equicontinuity = non-uniform almost-periodicity.
