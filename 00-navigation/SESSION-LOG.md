@@ -1,3 +1,15 @@
+## mac-mini-2026-07-05-S52 -- THM-621: the FOURTEEN-FOLD LADDER LAW (hdich survivors = the 14r-lifts; M = 14/(13(r+1)) closed form, witness-certified; SELF-REFERENTIAL witness t* = M = 14/169 at r = 12 = the descended deep-well signature) + the S51 set-name CORRECTION (HYP-4099)
+
+Prompt (owner): explore incoming/past progress for patterns and deeper structure; push to close.
+
+THE PATTERN-HUNT PAYOFF (on sight, then verified): S51's survivor ladder 7/52, 14/117, 7/65, 14/143, 7/78, 14/169 normalizes to 14/(13(r+1)) -- denominators 13*(8..13) in arithmetic progression.  Chasing the mechanism EXPOSED AND FIXED my own S51 prose error: the r >= 7 survivor is NOT k = 1 ({1..11,25} is sieve-exposed, M = 1/12 exactly); sieve survival forces 13k = 0 mod r, i.e. k = r: THE SURVIVING LIFT IS THE FOURTEEN-FOLD 14r -- the n = 14 shadow inside the n = 13 rigidity problem.  All six rows verified exact with witnesses on the 13(r+1)-grid (15/104, 44/117, 29/130, 43/143, 71/156, 14/169).  THE JEWEL: at r = 12 the witness POSITION equals the VALUE (t* = M = 14/169), the same self-referential signature as the master construction {1..12, 182} at t* = M = 14/183 -- the ladder is the deep-well family one level down, 13^2 in Phi6's role.  Gap law (13-r)/(13(r+1)); the 1/169 assembly constant CONFIRMED (set name corrected, constants unaffected).
+
+THM-621 filed (law + correction + mechanism: CRT interleaving of the 13- and (r+1)-grids, binding at 14 units; assembly = six decide rows; general-n conjecture parked: (n+1)/(n(r+1))).
+
+FILES: THM-621; HYP-4099; verification inline (fractions).
+
+NEXT: (a) the six decide rows into the hdich assembly (klein/opus); (b) the general-n ladder lemma (one session, would serve the all-n pipeline); (c) the multi-lift leg with the same 14-fold lens (do multi-survivors factor through 14-fold structure?).
+
 ## mac-mini-2026-07-05-S60 -- THE LOOSE-BRANCH SPLIT: the razor-thin 2/25 edge is entirely in the S59-PROVED AP-subfamily case; the all-loose residual has a MARGIN >= 2/23 (recursive) (HYP-4162)
 
 Prompt (owner): push to complete the 14-runner proof.
