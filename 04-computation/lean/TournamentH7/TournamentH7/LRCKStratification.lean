@@ -80,7 +80,11 @@ theorem binder_odd (v m : ℤ)
     (h : (38 : ℤ) ∣ (v * m - 3) ∨ (38 : ℤ) ∣ (v * m + 3)) :
     ¬ (2 : ℤ) ∣ v := by
   intro ⟨u, hu⟩
-  rcases h with ⟨c, hc⟩ | ⟨c, hc⟩ <;> subst hu <;> omega
+  have key1 : ∀ X c : ℤ, 2 * X - 3 ≠ 38 * c := by intro X c; omega
+  have key2 : ∀ X c : ℤ, 2 * X + 3 ≠ 38 * c := by intro X c; omega
+  rcases h with ⟨c, hc⟩ | ⟨c, hc⟩
+  · exact key1 (u * m) c (by rw [hu] at hc; linear_combination hc)
+  · exact key2 (u * m) c (by rw [hu] at hc; linear_combination hc)
 
 /-- WITNESS DETERMINISM (S2): the binder fixes the dilation class — from
     v·m ≡ 3 (mod 38), any two dilations m, m' binding the same v agree mod 38
