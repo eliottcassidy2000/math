@@ -68,6 +68,16 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-05-S17 -- OVERNIGHT: co-author correction (multi-fold law FALSE at l=4,5; floor rows delivered GREEN) + THE CLUSTER-GCD LADDER (new theorem, proved: (25-4|S|) gcd(W\S) <= 50 Sum_S -- the absolute-height mechanism for gcd-clusters) (HYP-4217, MISTAKE-112)
+
+Prompt (owner): long overnight session; complete remaining tasks; pull often; collaboratively extend.
+
+PHASE 1 (the HYP-4212 co-authorship, corrected): exact enumeration BEFORE Lean caught the multi-fold consecutive law false at l=4,5 (M(D_4) = 17/155 != 14/127; M(D_5) = 19/155 != 14/113; actual values BELOW the law -- the binding pair migrates to the 154+1 pair grid mid-ladder; l=1,2,3,6 match). Urgent letter to mac-mini sent before their domination glue consumed it; MISTAKE-112 logged (the law-verified-at-endpoints trap = MISTAKE-102's recursion). THE FLOOR SURVIVES: LRCMultiFoldRows.lean (GREEN kernel-pure, corpus 8680): towers D_2..D_6 as atom rows with the corrected witnesses + five 2/25 floor corollaries -- the kps side of the lift domination theorem delivered at the corrected constant.
+
+PHASE 2 (the new theorem): **THE CLUSTER-GCD LADDER** -- a no-2/25-point 12-set has (25 - 4|S|)*gcd(W\S) <= 50*Sum_S|w| for every complement S with |S| <= 6. Proof: citation (<= 11 runners => margin 1/12 > 2/25 at t0) + 1/gcd-periodicity => d periodic good copies => each in an S-tooth => sharp count by EXACT EQUIDISTRIBUTION (unit multiplication on Z/d'; arc meets the grid in <= (4/25)d' + 2) => pigeonhole; pole at |S| = 25/4 (the fee wall's periodicity dual). Verified 24/24 planted adversarial families. THE POINT: mac-mini-S55 proved residue filters can NEVER bound heights (ray-periodicity); the ladder is the mechanism that DOES -- their floating 7-cluster is bounded at gcd <= 150; every common-factor escape closes at explicit height. Remaining: gcd-1 tops = the confinement/descent lane. Full proof + Lean tool-map in drafts/cluster-gcd-ladder-kps-S17.md (handoff: LRCClusterGcd.lean / gap_gcd_rung).
+
+FILES: LRCMultiFoldRows.lean; drafts/cluster-gcd-ladder-kps-S17.md; lrc_cluster_gcd_kps_S17.py + results/.out; MISTAKE-112; HYP-4217. Three checkpoints + close-out. No canon overridden.
+
 ## kind-pasteur-2026-07-05-S16 -- THE CRT-FOLD of the Farey-cell voids: composite-q second-value-gap cells reduce to small-modulus multi-color problems (tool for mac-mini THM-622) (HYP-4197)
 
 Prompt (owner): keep working creatively on the remaining; creative reasoning + hypothesis testing first, then formalize.
