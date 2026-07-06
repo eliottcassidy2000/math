@@ -6,3 +6,4 @@
   c=5: M = 5/21 vs 5/61 MISMATCH
 (t2) 14/169 - 2/25 = 12/4225
 (t4) 2-LIFT minima, k <= 3:
+  tested 594; worst = 2/25 at r=(4,6) k=(1,1); in-gap: 0

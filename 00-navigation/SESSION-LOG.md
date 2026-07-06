@@ -1,3 +1,19 @@
+## mac-mini-2026-07-05-S54 -- THE SECOND-VALUE ATTAINER FOUND: 2/25 = the DOUBLE-LIFT {1,2,3,5,7,8,9,10,11,12,17,19} (witness 6/25 verified); rung conjecture corrected (shifted APs = c/(2c+11), irrelevant); the (G)-decomposition through stability + THM-621 + the new double-lift floor leg (HYP-4101)
+
+Prompt (owner): creative reasoning + hypothesis testing first; formalize as necessary; no large builds.
+
+HYPOTHESES TESTED (four; two survived, one corrected, one refined):
+(t1) RUNG LAW -- REFUTED as I posed it: M({c..c+11}) = c/(2c+11) (first+last denominator), NOT c/(12c+1): 2/15, 3/17, 4/19, 5/21 -- all far ABOVE the Farey cell: shifted APs are irrelevant to (G).  (My conjecture wrong; said so.)
+(t2) THM-621 margin: 14/169 - 2/25 = 12/4225 > 0 ✓ single lifts clear the second value.
+(t4) DOUBLE LIFTS: 594 tested (k <= 3): ZERO in the gap AND the worst is EXACTLY 2/25 at r=(4,6), k=(1,1): W = {1,2,3,5,7,8,9,10,11,12,17,19} -- THE SECOND VALUE'S ATTAINER IS A DOUBLE-LIFT of the AP (residues 4, 6 lifted once).  Witness verified by hand: a = 6: residues of 6W mod 25 = {6,12,18,5,17,23,4,10,16,22,2,14}, all clearing +-2: t* = 6/25, M = 2/25 exact.  25 = 13 + 12: the mediant denominator, as THM-622 predicts for the c = 2 boundary.
+(timeout lesson re-violated then fixed: incremental tee restored.)
+
+THE (G)-DECOMPOSITION (the architecture, now with correct legs): [stability unit-residue lemma (THM-593-S94) forces the FULL mod-13 residue system -- 12 residues, 12 runners, BIJECTIVE -- whenever M < 1/13 + margin => the lift structure is FORCED] + [single lifts >= 14/169: THM-621, proved-shaped] + [double lifts >= 2/25: NEW LEG, bound attained, needs the THM-621-style closed-form analysis] + [k > small and far-outlier cases: peel/dodge].  (G)'s remaining mathematical content = the DOUBLE-LIFT FLOOR LEMMA + stability-margin bookkeeping (the v_max <= 24 v_- regime with the peel complement).
+
+FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
+
+NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
+
 ## kind-pasteur-2026-07-05-S16 -- THE CRT-FOLD of the Farey-cell voids: composite-q second-value-gap cells reduce to small-modulus multi-color problems (tool for mac-mini THM-622) (HYP-4197)
 
 Prompt (owner): keep working creatively on the remaining; creative reasoning + hypothesis testing first, then formalize.
