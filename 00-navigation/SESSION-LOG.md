@@ -49,6 +49,19 @@ DOMINATION (verified): (a) exhaustive r>=7 m=1 multi-leg (63 families): 0 with M
 PAYOFF (extend to close LRC(14)): the l=2..6 multi-lift strata (mac-mini HYP-4109, the 13.3B-cell sweeps) COLLAPSE to THM-621 (single-leg) + monotone domination -- the deep well is the unique descended extremal, everything else loose (>= 14/155 >> 2/25). No multi-lift sweep needed. MECHANISM: M(lift) ~ M(longest consecutive AP sub-base) tightened by killer+1; single-leg deep well has maximal base {1..11}. OPEN closing move: prove M(lift) >= 14/169 (equality only at the deep well) via base-AP-length monotonicity + THM-621's CRT witness -- offered to co-author with mac-mini.
 
 FILES: 05-knowledge/results/lrc14_multifold_ladder_domination_kps_S15.md; 04-computation/lrc14_multifold_ladder_kps_S15.py; HYP-4177. Note to mac-mini sent. Extends THM-621, uses opus-S85 (Phi6=killer+1); the lift stratum is one branch of hdich (the loose-branch AP-rigidity is the other open crux). No canon overridden.
+## mac-mini-2026-07-05-S53 -- THM-622: the FAREY-CELL REDUCTION of (G) -- 1/13 and 2/25 are Farey NEIGHBORS, the gap is a cell needing numerator >= 3 (mediant 3/38); (G) = spectrum quantization, not an analytic margin; 489-set probe: void EMPTY; the c = 3 covering pigeonhole at q in {38,39} is the framed attack (HYP-4100)
+
+Prompt (owner): finish what remains; integrate/synthesize/extend; reframe assumptions -- what do they point to?
+
+THE REFRAME (the answer to the owner's question): the fleet's implicit assumption -- 'the second-value gap (G) is an analytic MARGIN to be estimated' -- is wrong-framed.  1*25 - 13*2 = -1: 1/13 and 2/25 are FAREY NEIGHBORS, so (1/13, 2/25) is a Farey CELL: every interior rational has reduced numerator c >= 3 and q >= 38 (minimal = the mediant 3/38); c = 1 and c = 2 have NO admissible denominators (q in (12.5,13) and (25,26) are integer-free) -- the boundary values ARE the c = 1, 2 attainments.  So (G) <=> the attainable M-spectrum cannot enter the cell <=> no 12-set sustains a 3-DEEP clearance witness at q in (12.5c, 13c).  QUANTIZATION, not margin.
+
+THE SYNTHESIS (four owned structures + the external lead all say it): THM-596's final-window numerator strata (the identical emptiness one level up); THM-610's hiding-depth bound; THM-621's ladder attaining ONLY boundary mediant-species; Jain-Kravitz relative-spectrum voids (kps-S14's lead: the cell is the descended problem's first void; their finite characterization is the citable scaffolding).  MISSING-INSIGHT POINTER: attainment quantizes on Farey boundaries because interior points demand c-deep simultaneous clearance whose COVERING cost exceeds the 12-runner budget -- the attack is the c = 3 covering pigeonhole at q in {38, 39}: a finite THM-619-style band problem per (c, q), the same machinery one cell down.
+
+THE PROBE (enumerate-don't-sample): 489 structured primitive 12-sets (drops, lifts, the 14-fold ladder, dilation-mixes, two-lifts, 38-grid sets ENGINEERED toward 3/38): ZERO in-gap.  The void holds everywhere structure reaches.
+
+FILES: THM-622; lrc_farey_cell_void_probe_macmini_S53.py + .out; HYP-4100.
+
+NEXT: (a) the c = 3 band problem at q = 38, 39 (THM-619 machinery pointed one cell down -- plausibly one session); (b) same for (U) at the 1/13 boundary (uniqueness = the c = 1 attainment rigidity, klein's thread); (c) Jain-Kravitz ingestion (kps).
 
 ## klein-2026-07-05-S141b -- THE SECOND-VALUE INDUCTION (synthesis): razor-quarantine as the campaign's one recurring law; uniqueness is FREE from the split; the 11.5 meeting point verified exact; middle strip clear at margin (HYP-4161 cont.)
 

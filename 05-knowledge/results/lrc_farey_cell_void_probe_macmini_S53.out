@@ -1,0 +1,4 @@
+Farey adjacency: 1*25 - 13*2 = -1 (neighbors ✓); mediant = 3/38
+
+tested 489 primitive 12-sets; IN-GAP hits: 0
+(G) Farey-cell reframe: SUPPORTED (void empty in all families)

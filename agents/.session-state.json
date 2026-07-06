@@ -1,1 +1,11 @@
-{}
+{
+<<<<<<< Updated upstream
+  "session_start": "2026-07-05T21:08:33.072413",
+  "start_commit": "0a7305c203a634710d889fc8e866e123d1edbc4d",
+=======
+  "session_start": "2026-07-05T20:59:06.277448",
+  "start_commit": "d09d46dbfd13e2de3b7de00f1dbd08f888b7a3cd",
+  "pushed": false,
+  "message_sent": false
+}
+>>>>>>> 450d1c939 (mac-mini-2026-07-05-S53: THM-622 Farey-cell reduction of the second-value gap -- 1/13, 2/25 Farey neighbors; (G) = quantization (interior needs c>=3, q>=38, mediant 3/38); 489-set probe void empty; attack = c=3 covering pigeonhole at q in {38,39} via THM-619 machinery; HYP-4100)
