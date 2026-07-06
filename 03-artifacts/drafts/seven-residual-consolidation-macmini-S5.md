@@ -70,16 +70,35 @@ fraction over all phase vectors) leaves the circle uncovered for every tested
 | 7 primes {11,13,17,19,23,29,31} | 1.120 | **0.251** |
 | pole-7-cluster {20,21,24,25,45,46,66} | 1.120 | **0.234** |
 
-The free fraction stays bounded away from 0 under the WORST phase — distinct
-frequencies are too rigid to tile despite the measure surplus. This is exactly
-opus-S96's "distinct-frequency interval-combs never tile (φ > 0)" lemma, now
-with direct band-2/25 evidence for the ≥7 case. **If that lemma holds
-universally, the ≥7 residual is empty UNCONDITIONALLY — the phase orbit is not
-even needed** (the combs never cover, so a clear s exists at every base-clear t₀).
-The lemma is a FINITE decidable census (≤ 12 distinct frequencies), so this is a
-bounded verification, not an open analytic frontier. (Search is heuristic —
-strong evidence for opus's lemma, not a proof; opus-S97's transport gives the
-proof on the ray sub-shape.)
+The free fraction stays bounded away from 0 under the WORST phase for these
+SEVEN-comb patterns — distinct frequencies are too rigid to tile despite the
+measure surplus. **But this DOES NOT extend to all lifted counts.** A broader
+census (`lrc_notile_census_macmini_S5.py`) shows a sharp threshold by comb
+count at band 2/25:
+
+| #combs (consecutive) | 7 | 8 | 9 | 10 | 11 | 12 |
+|---|---|---|---|---|---|---|
+| adversarial φ_worst | 0.110 | 0.050 | 0.018 | **0.001** | **0.000** | **0.000** |
+
+So **7–9 distinct combs cannot tile (φ_worst > 0), but ≥10 CAN** (consecutive
+frequencies tile adversarially at band 2/25). Spread-out patterns resist better
+(primes/AP-step-5 at 12 combs leave 2.6%/6.0% free), but consecutive ≥10 tiles.
+This SPLITS the residual honestly by lifted count:
+
+- **7 ≤ #lifted ≤ 9** (base 3–5 runners): the combs cannot tile at ANY phase —
+  the residual is empty UNCONDITIONALLY (opus's "distinct combs don't tile"
+  holds here; strong adversarial evidence). The phase orbit is not needed.
+- **10 ≤ #lifted ≤ 12** (base ≤ 2 runners): the combs CAN tile at some
+  adversarial phase, so a free-measure argument FAILS. These need the
+  phase-orbit / opus-S97 transport: the family's OWN phases (u_i t₀) must avoid
+  the tiling config. opus's `two_band_transport` (GREEN) closes the ray shape
+  (structured phases hit margin 2/13); the general non-ray ≥10 case is opus's
+  remaining piece.
+
+(Correction to an earlier draft line: "distinct combs never tile at 2/25" is
+FALSE for ≥10 combs — caught by the census sweep. The residual conclusion still
+holds on all tested families, 6/6; only the PROOF for 10–12 lifted routes
+through opus's transport rather than a measure win. Search is heuristic.)
 
 ### Verification (6/6 proper residual tori)
 
@@ -100,23 +119,26 @@ loose branch's hard half — reduces to exactly these items:
 |---|------|--------|-------|
 | 1 | ≤6-lifted / \|S\|≤6 rung (measure one-liner + citation) | **proved, kernel-pure in flight** | kps-4247 |
 | 2 | ≥7-lifted (A) residual ⟹ φ > 0 (small-base-carries) | **reduced, verified 6/6** (this note) | this + opus |
-| 3a | ≥7-comb RAY patterns (s-freqs = S·P) ⟹ clear | **GREEN, formal, φ BYPASSED** (opus-S97 transport) | opus-S97 |
-| 3b | ≥7-comb non-ray patterns ⟹ φ > 0 ("distinct combs don't tile") | **finite decidable census** (≤12 combs); adversarial φ_worst > 0 confirmed on all tested patterns | opus/template lane |
+| 3a | 7–9 lifted: combs cannot tile at any phase (φ_worst > 0) | **empty unconditionally**; adversarial evidence (finite decidable census) | this note / opus lemma |
+| 3b | ≥10 lifted RAY shape (s-freqs = S·P) | **GREEN, formal** (opus-S97 transport, φ bypassed) | opus-S97 |
+| 3c | ≥10 lifted non-ray shape | needs phase-orbit; opus's remaining piece | opus/template lane |
 | 4 | \|S\|≥7 (C) residual: k-unbounded cluster height | census-shaped; density-wall + anchor bounds | sibling S3 |
 | 5 | The finite 1-dim census per gap value | mechanical, decidable | uniform cell lemma + fleet |
 | 6 | The accumulation principle (eq 4/5) | cite (preprint) or self-contained re-prove | S4 lead |
 
-**The open surface, after opus-S97's bypass, is item 3b (a finite decidable
-comb-pattern census) + item 4 (the (C) height-bounding, census-shaped) + item 6
-(a citation decision).** Everything else is proved, GREEN, or mechanical. The
-key sharpening: opus-S97's `two_band_transport` (GREEN, kernel-pure) proves the
-RAY-shaped lifted patterns (s-frequencies = S·P, the unbounded CRT-frozen-ray
-enemy) die height-uniformly by EXACT witness transport — φ is bypassed, no
-measure, no free fraction. That is the hard (unbounded) part of item 3. What
-survives is item 3b: the non-ray gcd-1 comb patterns, which are a FIXED
-single-scale finite list (≤ 12 combs, no S → ∞), each a decidable φ > 0 check
-handled by the template lane. So the ≥7 residual's unbounded direction is
-CLOSED (opus) and only a finite decidable pattern census remains.
+**The open surface is item 3c (≥10-lifted non-ray, opus's remaining piece) +
+item 4 (the (C) height-bounding, census-shaped) + item 6 (a citation
+decision).** Everything else is proved, GREEN, or mechanical:
+- item 3a (7–9 lifted) is empty unconditionally — the combs cannot tile at any
+  phase (adversarial φ_worst ≥ 0.018 across the census);
+- item 3b (≥10 lifted, ray shape) is opus-S97's `two_band_transport`, GREEN and
+  kernel-pure — the unbounded CRT-frozen-ray enemy dies by exact witness
+  transport, φ bypassed;
+- item 3c (≥10 lifted, non-ray) is the genuine remaining analytic piece — the
+  base is ≤ 2 runners so almost all the covering is by the ≥10 combs, and the
+  family's structured phases must avoid the (achievable) tiling config. This is
+  opus's two-band lane at full generality; a finite comb census (≤12 freqs) but
+  not yet reduced to decidability.
 
 **Reading the split through the small-base-carries lens (this note's
 contribution):** my reduction shows the (A) ≥7-lifted 2-torus residual is

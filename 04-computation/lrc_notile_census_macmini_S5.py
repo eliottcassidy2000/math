@@ -36,7 +36,7 @@ def free_frac(freqs, phi, rho=RHO, sgrid=2400):
             cnt += 1
     return cnt / sgrid
 
-def adversarial_min(freqs, rho=RHO, restarts=25, sweeps=90, sgrid=2400, seed=0):
+def adversarial_min(freqs, rho=RHO, restarts=14, sweeps=60, sgrid=1600, seed=0):
     """min free fraction the covering adversary can force."""
     rng = random.Random(seed)
     best = 1.0

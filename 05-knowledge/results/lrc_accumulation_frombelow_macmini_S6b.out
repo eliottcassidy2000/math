@@ -1,0 +1,30 @@
+ACCUMULATION-FROM-BELOW verification (M(v^N) -> M(U), from below)
+
+window (1/13, 2/25] = (0.07692, 0.08000]
+
+attainer dir {4,6}: 2-torus M(U) >= 0.11500 (rigorous lower bracket)
+  1-D lift values M(v^N), v^N = base + N*ell:
+   N=0:0.0769  N=13:0.0800  N=21:0.1176  N=34:0.1064  N=55:0.1176  N=89:0.1176
+  -> limit approached from MIXED; in-window N: [13]; M(U) above window
+
+single {12}: 2-torus M(U) >= 0.08333 (rigorous lower bracket)
+  1-D lift values M(v^N), v^N = base + N*ell:
+   N=0:0.0769  N=1:0.0833  N=2:0.0833  N=3:0.0833  N=5:0.0833  N=8:0.0833  N=13:0.0833  N=21:0.0833  N=34:0.0833
+  -> limit approached from BELOW; in-window N: none; M(U) above window
+
+block {4,5,6}: 2-torus M(U) >= 0.11500 (rigorous lower bracket)
+  1-D lift values M(v^N), v^N = base + N*ell:
+   N=0:0.0769  N=13:0.0952  N=21:0.1176  N=34:0.1111  N=55:0.1176  N=89:0.1176
+  -> limit approached from MIXED; in-window N: none; M(U) above window
+
+spread {2,5,8,11}: 2-torus M(U) >= 0.15333 (rigorous lower bracket)
+  1-D lift values M(v^N), v^N = base + N*ell:
+   N=0:0.0769  N=3:0.1333  N=13:0.1111  N=21:0.1143  N=34:0.1250  N=55:0.1493  N=89:0.1386
+  -> limit approached from BELOW; in-window N: none; M(U) above window
+
+READING: every 2-torus M(U) sits ABOVE the window; the low 1-D values (in-window,
+e.g. the attainer 2/25) occur at SMALL N (isolated, census-caught), and M(v^N)
+rises toward M(U) from below.  An in-window M(U) WOULD force in-window M(v^N) at
+unbounded N -- exactly the case opus-S98's residue bridge collapses to the finite
+census.  So (A) = corollary of (finite census gap-empty) + (G-K from-below).
+[t = 34s]
