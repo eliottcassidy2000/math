@@ -1,0 +1,28 @@
+=== (1) Lipschitz constant of M on the direction sphere ===
+  sup |dM|/|d direction| over 20000 nearby pairs = 38.064
+  (theoretical bound L <= 1/2 from |t|<=1/2; empirical effective L ~ 38.06)
+
+=== (2) Dirichlet calibration: min family height to approximate a target direction ===
+  height<=~20: closest random direction to the (2/25)-target within r = 0.3266
+  height<=~30: closest random direction to the (2/25)-target within r = 0.3666
+  height<=~45: closest random direction to the (2/25)-target within r = 0.3220
+  height<=~70: closest random direction to the (2/25)-target within r = 0.3111
+  height<=~100: closest random direction to the (2/25)-target within r = 0.3108
+  height<=~150: closest random direction to the (2/25)-target within r = 0.3436
+  height<=~220: closest random direction to the (2/25)-target within r = 0.3577
+  height<=~320: closest random direction to the (2/25)-target within r = 0.3204
+  (r shrinks ~ H^(-12/11); to certify M in a gap-interval of half-width delta need r<~delta/L)
+
+=== (3) the interior finite-check height bound ===
+  gap = (1/13, 2/25) = (0.07692, 0.08000); half-width = 0.001538 = 1/325... (1/600)
+  deepest interior point (mediant 3/38 = 0.07895); dist to nearer edge = 0.001053 = 1/950
+  => ball radius r = delta/L = 0.00003; Dirichlet height bound H ~ r^(-11/12) ~ 15079
+  So a MEDIANT (3/38) gap member, if it existed, exists at height <~ 15079.
+  My S25 hunt (max<=45) covered only the SHALLOW interior; the full interior needs ~15079.
+
+=== (4) THE RESIDUAL: only the two EDGES can need unbounded height ===
+  interior [1/13+delta, 2/25-delta]: finite check to height ~ (L/delta)^(11/12) -- BYPASSED.
+  edge M->1/13: the tight/AP-orbit isolation (density floor near the compact tight locus).
+  edge M->2/25: the {1..11,24}-orbit isolation.
+  => unbounded height is confined to LOCAL isolation of two COMPACT orbits (Lipschitz/derivative,
+     = THM-615 Lemma-3 flavor), NOT a global unbounded search.  The compactness bypass.

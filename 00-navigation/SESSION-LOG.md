@@ -769,6 +769,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S26 -- THE COMPACTNESS BYPASS of the unbounded case: fails by non-equicontinuity (L~height/13), but BRIDGES unbounded<->irrational<->three-gap (HYP-4437)
+
+Prompt (owner): creatively handle the unbounded case or bypass it.
+
+Attempted a compactness/Lipschitz bypass; it fails cheaply, and the failure + the bridge are the finding.
+
+THE SETUP: M scaling-invariant => continuous on the COMPACT direction space P^11(R); gap set open. Tempting bypass: open set has a bounded-height rational (Dirichlet) => finite gap member => finite check.
+
+WHY IT FAILS: M is NOT equicontinuous -- under normalization optimal t ~ |v| ~ height, so Lipschitz L(d) ~ height/13 GROWS (measured L~38 on height<=60). Dirichlet only gives a gap member at height ~(1/delta)^11 (~10^20 for the mediant), astronomical. The non-equicontinuity IS the density floor (freq-~height oscillation near the tight locus). Caution for HYP-4452: the height-threshold is non-uniform.
+
+THE POSITIVE BRIDGE: unbounded-height gap members accumulate (compactness) at IRRATIONAL limit directions -- so the unbounded case IS the irrational (loose-branch) case, where mac-mini's THREE-GAP (HYP-4412) is clean (Sos: <=3 gaps => {k*alpha} => M on a CF rung = my Stern-Brocot denominators, which skip the gap). Don't check unbounded height; TRANSPORT it to the irrational limits where three-gap/CF replaces height induction. Rational gap values (S25 Stern-Brocot) + irrational accumulations (CF/three-gap) = one object, two sides of Q.
+
+RESIDUAL: local isolation of two COMPACT orbits (AP at 1/13, {1..11,24} at 2/25), each a THM-615-L3 local Lipschitz statement (finite L(d)) = the density floor. HONEST: does not bypass the floor (mac-mini S17 confirmed it's quantitative); LOCALIZES it + bridges to three-gap.
+
+FILES: reflection the-compactness-bypass-...-kps-S26.md; lrc_compactness_bypass_kps_S26.py (+.out); HYP-4437. No Lean (analysis/framing). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S25 -- THE GAP VALUES ARE A STERN-BROCOT TREE (mediant 3/38) + the census-blindness flag (gap members need max>=19) + the divisibility-rich noose (0 gap members over max<=45) (HYP-4427)
 
 Prompt (owner): creatively tighten the noose on candidates; see the underlying structure of collision residuals; combine facts into proofs.
