@@ -1,3 +1,24 @@
+## klein-2026-07-05-S142 -- DRAG(12) DECOMPOSED: the strip's witnesses live at the base's own AP optima -- the free-rider, the consecutive-rung lemma, and the ladder laws are ONE mechanism seen from three sides (HYP-4187)
+
+Prompt (owner): finish what remains; integrate/synthesize/extend; reframe assumptions for the missing insight.
+
+THE REFRAME EXECUTED: assumed the strip (spread overall, compressed at top, all-loose) needed the window machinery per-family. Tested it: suffix-split multi-window coverage (fee criteria EXACTLY mirroring LRCTeethR at rho=2/25, beta=1/(13-l)) = only 43/670 (6.4%) -- the big-top regime (e.g. {1..10,197,198}: l=2 sparse tops, criterion holds, Lean-ready). The residual is UNIFORM in shape: small AP base + mid-scale near-equal block ({1..10,117,119}, {1..9,105,107,109}, ...).
+
+THE MISSING INSIGHT (exact-M on the residual): their witnesses are at t = 1/11, 1/10 -- **the base's own AP optimum 1/(k+1)**. The tops FREE-RIDE: at t = a/(k+1) the target 2/25 needs top-residue-dist >= 22/25, i.e. residue != 0 mod (k+1) -- ANY nonzero residue suffices. So:
+ - the free-rider mechanism (my S132 killer_target/CRT steering) closes ALL AP-base strip families except those with (k+1) | some top;
+ - the obstruction is EXACTLY kps-S14's consecutive-rung lemma read contrapositively ({1..k} in B and M < 2/25 => (k+1) | some element) -- the rung lemma IS the free-rider's failure analysis;
+ - the obstructed families (tops divisible by 11, then 10 after peeling, ...) are the LADDER families -- mac-mini's THM-621 closed forms (14r-lifts, M = 14/(13(r+1))-type laws) classify them, all >= 2/25 with margin (opus-S90: deep well 14/169 the unique global min of the whole fourteen-fold family).
+
+THE COMPLETE STRIP DECOMPOSITION (every piece proved or formalized, every piece owned):
+ (i) big tops -> multi-window splits (FORMALIZED: margin_of_window_of_fees at rho=2/25, cite_margin_gen; 43 instances verified);
+ (ii) AP-base -> free-rider at the base optima (formalized mechanism S132) + consecutive-rung obstruction (kps, PROVED) + ladder closed forms (mac-mini THM-621/opus multi-leg law, proved-paper);
+ (iii) non-AP base -> the level-11 corner recursion (drag(n) residual = CornerLonely(n-1): the same predicate one level down -- the bands/pins machinery applies verbatim).
+Together with S141b's induction (uniqueness FREE from the split), the loose branch's remaining work is WRITE-OUT AND ASSEMBLY, not new analysis: each strip stratum has a proved mechanism and an owner.
+
+FILES: lrc14_strip_split_coverage_klein_S142.py (+out); HYP-4187; this entry. No canon overridden.
+
+NEXT (the assembly, for whoever lands it): (a) the level-k free-rider + rung-cascade as ONE Lean theorem (S132's killer_target generalizes: multiple tops, simultaneous CRT, obstruction = divisibility); (b) ladder rows as marginQ certificates (the S138 value form makes each THM-621 row a two-line kernel check); (c) the corner-recursion bookkeeping.
+
 ## klein-2026-07-05-S141b -- THE SECOND-VALUE INDUCTION (synthesis): razor-quarantine as the campaign's one recurring law; uniqueness is FREE from the split; the 11.5 meeting point verified exact; middle strip clear at margin (HYP-4161 cont.)
 
 Prompt (owner): explore incoming and past progress for common patterns and deeper structural insight; keep pushing.
