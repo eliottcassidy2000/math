@@ -1,0 +1,36 @@
+UNIQUE COVERERS: runners r that are the ONLY multiple of some q<=12 in {1..12}:
+  q=2: multiples in {1..12} = [2, 4, 6, 8, 10, 12]
+  q=3: multiples in {1..12} = [3, 6, 9, 12]
+  q=4: multiples in {1..12} = [4, 8, 12]
+  q=5: multiples in {1..12} = [5, 10]
+  q=6: multiples in {1..12} = [6, 12]
+  q=7: multiples in {1..12} = [7] <-- UNIQUE coverer
+  q=8: multiples in {1..12} = [8] <-- UNIQUE coverer
+  q=9: multiples in {1..12} = [9] <-- UNIQUE coverer
+  q=10: multiples in {1..12} = [10] <-- UNIQUE coverer
+  q=11: multiples in {1..12} = [11] <-- UNIQUE coverer
+  q=12: multiples in {1..12} = [12] <-- UNIQUE coverer
+  => unique-coverer moduli q (= the runners r=q for r>=7): [7, 8, 9, 10, 11, 12]
+
+LIFTING a unique coverer r (r>=7) by k: r+13k multiple of r <=> 13k==0 mod r <=> r|k
+(gcd(13,r)=1). So:
+  r=7: r-nmid-k (e.g. k=[1, 2, 3]) => r+13k NOT mult of r => breaks q=7 covering => LOOSE (div-protection 1/7>2/25);  r|k (k=[7, 14]) => value 98 >= 14r=98 (height forcing)
+  r=8: r-nmid-k (e.g. k=[1, 2, 3]) => r+13k NOT mult of r => breaks q=8 covering => LOOSE (div-protection 1/8>2/25);  r|k (k=[8, 16]) => value 112 >= 14r=112 (height forcing)
+  r=9: r-nmid-k (e.g. k=[1, 2, 3]) => r+13k NOT mult of r => breaks q=9 covering => LOOSE (div-protection 1/9>2/25);  r|k (k=[9, 18]) => value 126 >= 14r=126 (height forcing)
+  r=10: r-nmid-k (e.g. k=[1, 2, 3]) => r+13k NOT mult of r => breaks q=10 covering => LOOSE (div-protection 1/10>2/25);  r|k (k=[10]) => value 140 >= 14r=140 (height forcing)
+  r=11: r-nmid-k (e.g. k=[1, 2, 3]) => r+13k NOT mult of r => breaks q=11 covering => LOOSE (div-protection 1/11>2/25);  r|k (k=[11]) => value 154 >= 14r=154 (height forcing)
+  r=12: r-nmid-k (e.g. k=[1, 2, 3]) => r+13k NOT mult of r => breaks q=12 covering => LOOSE (div-protection 1/12>2/25);  r|k (k=[12]) => value 168 >= 14r=168 (height forcing)
+
+THE SEAM (verified): a gap-member (covering + near-tight) that lifts a unique coverer
+r in {7..12} must either r|k (BIG lift >= 98 -- my S78/S80 height forcing) or lose
+covering (=> loose, my S104 divisor-protection). MULTIPLICATIVE (covering) FORCES
+ADDITIVE (lift height). This IS the sum-product rigidity, and it is my formalized chain:
+  LRCLiftPigeonhole (>=7 lifts hit a unique coverer) + dvd_lift_height (r|k => >=14r)
+  + LRCDivisorProtection (no mult of r => loose) + LRCPinnedFloor (M>=1/13).
+
+THE FOUR DICHOTOMIES as ONE Z/2-structure at the prime p=13:
+  add/mult (sum-product): additive interval [1,12] vs multiplicative (Z/13)* -- the SEAM.
+  +/- (antipodal): 12 residues = 6 antipodal pairs {r,13-r}; dist only sees the +/- class.
+  odd/even (2-adic): 14=2*7; the 2 gives +/- (complement), the 7 gives heptagon (Fejer).
+  rational/irrational: the two hard directions = the mult pole (covering band-blocker,
+     rational census) and the add pole (tight AP, irrational sweep), linked by dilation.
