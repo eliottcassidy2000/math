@@ -1,3 +1,39 @@
+## mac-mini-2026-07-05-S59 -- THE AP-BASE CASE of klein's loose-branch rigidity PROVED elementarily (ladder + CRT free-rider); reduces the open half to "all 11-subfamilies loose" (HYP-4152)
+
+Prompt (owner): improve the LRC(14) proof; figure out the EXACT mathematics creatively BEFORE formalizing.
+
+Worked the open crux = klein-S140's loose-branch rigidity (HYP-4151): the n=12 gap (1/13,2/25) is empty;
+open half = "a genuine max-min with M<2/25 forces the residues to the AP." PROVED the AP-BASE sub-case:
+
+  THEOREM: V = c*{1..11} u {X} primitive (a dilated 11-AP base + one runner) => M(V) in {1/13} U [2/25,inf).
+  Never in the gap; = 1/13 only for {1..12}.
+
+PROOF (elementary, verified 0/619 in gap): the 11-AP c*{1..11} has M=1/12 at witnesses t=j/(12c), gcd(j,12)=1.
+X safe at one witness => M>=1/12>2/25. c=1: X unsafe at ALL iff 12|X = the ladder {1..11,12k}, M=k/(12k+1)
+(1/13 at k=1, >=2/25 for k>=2); else M>=1/12. c>=2: at the c witnesses j==1 mod 12, X-residues span
+[e,e+12(c-1)], of which only <=floor(c/6)+1 < c fall in the danger band (-c,c) -- primitivity gcd(c,X)=1
+forbids e=0 -- so X is SAFE at some witness => M=1/12 exactly (verified: 2*{1..11}+X ALL =1/12). This is the
+SAME CRT free-rider as my covering-min work (S46/S47), now load-bearing in the GAP proof.
+
+REDUCTION (what remains): a gap-violator must have EVERY 11-subfamily strictly loose (M>1/12) -- because any
+LRC(12)-tight 11-subfamily is a dilated AP and triggers this theorem. So klein's open half is now exactly the
+"all-11-subfamilies-loose" case. This suggests a DESCENT through the runner count (AP-base rung = proved here;
+all-loose step = open; 11-runner gap 2/23 = klein-S126 = the next rung down). Whether the descent terminates
+cleanly or needs a global input at "all loose" is the sharp open question.
+
+NON-DUP: klein-S140 has the ladder as a computation + the r=1 (LRC13-sandwich) proof; this is the c-dilation
+COMPANION at the family level (the general dilated-AP-base case, via the CRT free-rider) -- a proof, not a
+sweep. The fleet's "route tight-subfamily cases to the S47 CRT case" now HAS its proof.
+
+FILES: lrc14_apbase_rigidity_macmini_S59.py(+out); HYP-4152; reflection the-AP-base-case-of-the-loose-branch-
+rigidity-ladder-plus-CRT-free-rider; this log. No Lean (exact-math-first directive). No canon overridden.
+
+NEXT: the "all-11-subfamilies-loose" case -- either (a) push the descent (does loose-base + X ever enter the
+gap? the 11-runner gap 2/23 gives slack, but a base tight at 2/23 recurses), or (b) find the global input.
+Coordinate with klein (HYP-4151 owner) -- this is their rigidity's AP-base rung.
+
+---
+
 ## opus-2026-07-05-S86 -- DESERT LOCALIZATION: the sliver reduced to one rigidity lemma + a thin co-incidence corner; resonance census exact (q<=6 immune, q=13 slack-dead); random clusters DESERT-FREE (HYP-4146)
 
 Prompt: improve the LRC(14) proof; creative exact mathematics first, no formalization until nailed.
