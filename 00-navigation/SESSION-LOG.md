@@ -15,6 +15,20 @@ NET: a REDUCTIVE finding (relocates the height bound to a clean c-bound / depth-
 FILES: lrc_recursive_ndep_macmini_S25.py (+.out), lrc_peeling_recursion_macmini_S25.out; reflection gap-members-are-peel-isolated-critical-configs-macmini-S25.md; HYP-4542 (+INDEX).  No canon overridden.
 
 NEXT: the NUMERATOR-c bound (= height bound = depth cap): prove achievable gap numerators bounded (bracket opus-S113 Farey wall vs the c-driven far-element); the bordered-AP enumeration to verify depth->0 at n=9..12.
+## opus-2026-07-06-S116 -- PRIOR-WORK MAP: (G) is the first-gap LONELY RUNNER SPECTRUM CONJECTURE; sharpened + new obligations; LRCSpectrumWindow.lean GREEN (HYP-4486)
+
+Prompt: sharpen/create obligations, refine understanding, search prior-work analogies.
+
+MAJOR REFINEMENT (web search + verified): our (G) IS the n=12 first-gap case of Kravitz's LONELY RUNNER SPECTRUM CONJECTURE -- achievable ML below 1/n is a rung s/(ns+1) (= mac-mini's Ostrowski ladder) or >=1/n. Kravitz is FALSE in general (Fan-Sun counterexamples, I VERIFIED with our M_exact: 8/51 n=6, 3/23 n=7, 7/30 n=4 -- all GENERALIZED APs = our S115 defected dilated APs). AMENDED (Fan-Sun): ML=s/(ns+k), k<=n. The n-specificity we kept meeting is a KNOWN feature of the spectrum.
+
+FORMALIZED (LRCSpectrumWindow.lean, standard trio, corpus 8714): form_in_window_iff -- s/(ns+k) in the window <=> k<s<2k; rung_not_in_window -- k=1 rungs never strictly inside. So a first-gap member has ORDER k>=2; minimal k=2,s=3 = mediant 3/(3n+2) = the S113 Farey clearance (both frames agree). (G) sharpens to: no 12-speed family attains s/(12s+k) with k>=2, k<s<2k (45 in-window forms; amended conj permits them => (G) STRICTLY STRONGER).
+
+NEW OBLIGATIONS: (O-korder) bound achievable order k<=K0 at n=12 (Fan-Sun k in {1,2} at n=4) => finite check -- the spectrum twin of my S115 height bound (defect count = order k); (O-gcd) adapt Fan-Sun's n=4 gcd gap-emptiness PROOF TEMPLATE (large-gcd pair => ML>=1/4; gcd=3 except exceptional => ML>=1/4) to n=12 via kps divisibility-richness + my coverer dichotomy; (O-genAP) classify the order-k generalized-AP exceptions and exclude via the subfamily cap.
+
+PRIOR-WORK LEADS (-> backlog): Fan-Sun arXiv:2306.10417 (amend + gcd template), Kravitz-Fan-Sun arXiv:2304.01462 (spectrum structure), Bedert arXiv:2511.16636 (Riesz products, general lower bound 1/2n+1/n^{5/3} -- density-floor technique, asymptotic not fixed-n), CKMRV Annals 2022 (universal optimality = LP-optimizer uniqueness template for AP = Cohn-Elkies optimizer on X_0(14), mac-mini HYP-4532).
+
+Files: LRCSpectrumWindow.lean (green); reflection G-is-the-first-gap-lonely-runner-spectrum-conjecture-prior-work-map-opus-S116; result spectrum_conjecture_mapping_opus_S116; backlog lead; HYP-4486. The productive obligations are now the spectrum-order bound (finitize) + Fan-Sun gcd template (proof route), generalized-AP exceptions via subfamily cap, Riesz/Cohn-Elkies for the floor.
+
 ## mac-mini-2026-07-06-S24 -- CONNECTIONS ASSESSMENT: three fresh leads (covering-multiplicity, Markov/Lagrange, covering-systems) all REFORMULATE/DUAL, none REDUCES (confirming opus-S114); + one clean fact: the AP uniquely MAXIMIZES covering overlap = additive energy (HYP-4532)
 
 Prompt (owner): even more creative refinements, search around for possible connections.

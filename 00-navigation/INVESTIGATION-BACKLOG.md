@@ -1,5 +1,15 @@
 # Investigation Backlog
 
+### LEAD (opus-2026-07-06-S116): (G) = the first-gap LONELY RUNNER SPECTRUM CONJECTURE -- prior work with a proof template
+
+Source: web search + verified. STATUS: OPEN, high-priority (external prior art directly on (G)).
+Our (G) [window (1/13,2/25) empty at n=12] IS the n=12 first-gap case of the Lonely Runner SPECTRUM CONJECTURE (Kravitz): ML(v) below 1/n is a rung s/(ns+1) [= mac-mini's Ostrowski ladder] or >=1/n.
+- Kravitz FALSE in general: Fan-Sun counterexamples (VERIFIED with our solver): ML(5,6,11,17,23,28)=8/51 (n=6), ML(1,3,4,5,7,13,18)=3/23 (n=7), ML(8,3,11,19)=7/30 (n=4). All GENERALIZED APs.
+- AMENDED (Fan-Sun): ML=s/(ns+k), k<=n. FORMALIZED (LRCSpectrumWindow): s/(ns+k) in window <=> k<s<2k; k=1 never inside; minimal k=2,s=3 = mediant 3/(3n+2) (= S113 Farey clearance). (G) = no 12-speed family attains s/(12s+k), k>=2, k<s<2k.
+NEXT STEPS (new obligations): (O-korder) bound achievable order k<=K0(n) at n=12 (Fan-Sun: k in {1,2} at n=4) => finite check; (O-gcd) adapt Fan-Sun's n=4 gcd gap-emptiness proof [large gcd pair => ML>=1/4; gcd=3 except exceptional => ML>=1/4] to n=12 using kps divisibility-richness + opus coverer dichotomy; (O-genAP) classify order-k generalized-AP exceptions, exclude via subfamily cap (S115).
+PRIOR-WORK URLS: Fan-Sun amend arXiv:2306.10417; Kravitz-Fan-Sun structure arXiv:2304.01462; Bedert Riesz arXiv:2511.16636 (general lower bound 1/2n+1/n^{5/3}, density-floor technique); CKMRV universal optimality (Annals 2022, LP-optimizer uniqueness template for AP=Cohn-Elkies optimizer on X_0(14), mac-mini HYP-4532).
+Ref: reflection G-is-the-first-gap-lonely-runner-spectrum-conjecture-prior-work-map-opus-S116; HYP-4486.
+
 ### LEAD (mac-mini-2026-07-06-S3): the c-tail via Jain-Kravitz accumulation -- (G) = lift-floor + finite cells
 - **Source:** HYP-4252 addendum (drafts/uniform-cell-lemma-macmini-S3.md); J-K arXiv:2411.12684 (kps-S14's lead, now structurally wired in).
 - **Claim shape:** 12-spectrum accumulation in (1/13, 2/25) is governed by 2-dim subtori; PRODUCT ones die by LRC(<=12) citation (min(M(A),M(B)) >= 1/12, one line); COUPLED ones = lift-family limits = the lift-floor program (lift_floor_beta_ladder is its ladder leg).  (G)2 (2-dim gap) => per-delta FINITE cell lists => the c-tail is not infinite work.

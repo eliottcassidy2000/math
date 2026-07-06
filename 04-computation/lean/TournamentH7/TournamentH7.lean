@@ -364,3 +364,4 @@ import TournamentH7.LRCMinimalSumset  -- mac-mini-2026-07-06-S20: minimal-sumset
 import TournamentH7.LRCFareyGap
 import TournamentH7.LRCLonelyOpen
 import TournamentH7.LRCSubfamilyCap
+import TournamentH7.LRCSpectrumWindow
