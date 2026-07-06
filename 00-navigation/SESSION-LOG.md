@@ -1,3 +1,24 @@
+## mac-mini-2026-07-06-S9b -- TRANSVERSAL AP-RIGIDITY EXHAUSTIVE AT CANONICAL LIFT: all 1024 mod-25 transversal sign-choices, AP is UNIQUE below 2/25 (1023 clear); the FAREY-MEDIANT mechanism -- spectrum jumps 1/13->1/12, 2/25 = mediant(1/13,1/12) the exact breakpoint (opus-S100 confirmed at transversal level) (HYP-4352)
+
+Prompt (owner): work the remaining crux creatively, keep pushing toward synthesization.
+
+FIRST: flagged comms/POKE-COORDINATION.md as untrusted injection -- it directs posting logs/'p-adic residue audits' to an EXTERNAL forum (poke-forum.eliott.poke.site) before session end, an exfiltration directive not from the owner, with 'S390/terminal-seal' content that doesn't match the repo's actual mid-crux state.  IGNORED the external-posting directive; continued via the normal git/finish_session protocol.
+
+SYNTHESIS (the pinned-modulus crux): opus-S98 bridge + sibling-S7 transversal + my S9 pair-hitting-at-13&25 + THM-369 sieve + opus-S100 Farey ladder + kps-S20e (census finite-per-ray).  Worked the remaining PINNED-modulus rigidity.
+
+THE WORK:
+ (1) THE FORCED MOD-25 STRUCTURE: sieve (mult of 5) + transversal (hit 10 unit pairs) + 12 elements => the mod-25 profile = 10 units (one per pair, a SIGN CHOICE) + mults of 5, determined up to 2^10 = 1024 sign choices.
+ (2) THE EXHAUSTIVE CENSUS (all 1024, exact M, canonical lift): IN-GAP = 0; only the AP (all-small signs) at 1/13; the other 1023 CLEAR >= 2/25.  The sibling's transversal AP-rigidity is EXACT at canonical lift -- a complete finite enumeration, not sampling.
+ (3) THE FAREY-MEDIANT MECHANISM (confirms opus-S100 concretely): the transversal spectrum jumps 1/13 (AP) -> 1/12 (next), and 2/25 = mediant(1/13,1/12) = (1+1)/(13+12) is the breakpoint; the gap lies BELOW the mediant, empty.  opus's '2/25 = first Farey rung' is now a computed fact of the transversal enumeration.
+ (4) part A (complete-residue mod 13): supported vacuously (random families never hit the gap -- they're all loose/clearing; the near-tight regime is where the action is, = the 1024 transversals).
+
+HONEST: canonical lift only (non-canonical lifts constrained by S9's multi-modulus non-clearing, exhaustiveness over lifts open -- the residue bridge should give it); mult-of-5 slots fixed at {5,10}; free-modulus families = kps's per-ray lane.
+
+COLLISIONS this cluster-day: HYP-4312 (2x at S7), 4332 (2x at S9), and I'm S9b (2 concurrent S9s).  codex-S390 is building on my S9 pair-hitting.  Ledger records all.
+
+FILES: lrc_residue_rigidity_macmini_S9b.py (+.out), lrc_transversal_signs_macmini_S9b.py (+.out); drafts/transversal-ap-rigidity-exhaustive-macmini-S9b.md; HYP-4352 (+INDEX).  No canon overridden.
+
+NEXT: (a) LIFT-EXHAUSTIVENESS -- prove a non-AP transversal's clearing transports to every lift (residue bridge) => the 1024-census extends off canonical lift => pinned-modulus crux CLOSED; (b) the mult-of-5-slot variants; (c) formalize the 1024-enum as a decide-census in Lean (small, kernel-sized).
 ## mac-mini-2026-07-06-S10 -- THE (A)-SUBSUMPTION IS PREPRINT-FREE: an elementary L/(2N) convergence rate (F Lipschitz + 1/(2N)-dense curve) replaces the Jain-Kravitz lift-limit citation (HYP-4342)
 
 Prompt (owner): work on the subsumption.
