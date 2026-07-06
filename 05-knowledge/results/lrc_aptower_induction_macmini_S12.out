@@ -1,1 +1,28 @@
 Q1: dichotomy census -- covering primitive 12-bases, M in the open gap (1/13,2/25)?
+  checked 12 covering-primitive 12-bases: in-gap=0, tight(1/13)=0
+  (dichotomy holds on the census: CONFIRMED)
+
+Q2: argmax-peel of tight (dilated-AP) bases -> tight 11-subfamily?
+  c=1: base c*{1..12}, M=1/13; argmax-peel = c*{1..11}, M=1/12 (tight 1/12? True)
+  c=2: base c*{1..12}, M=1/13; argmax-peel = c*{1..11}, M=1/12 (tight 1/12? True)
+  c=3: base c*{1..12}, M=1/13; argmax-peel = c*{1..11}, M=1/12 (tight 1/12? True)
+  c=5: base c*{1..12}, M=1/13; argmax-peel = c*{1..11}, M=1/12 (tight 1/12? True)
+  c=7: base c*{1..12}, M=1/13; argmax-peel = c*{1..11}, M=1/12 (tight 1/12? True)
+  near-boundary (M>=2/25) bases: does any 11-subfamily reach tight 1/12?
+
+Q3: residues mod 13 of M<2/25 bases (should be {1..12} = full system):
+  c=1: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] (full {1..12}? True; 13|any? False)
+  c=2: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] (full {1..12}? True; 13|any? False)
+  c=3: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] (full {1..12}? True; 13|any? False)
+  c=7: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] (full {1..12}? True; 13|any? False)
+  c=11: residues mod 13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] (full {1..12}? True; 13|any? False)
+
+Q4: lift floor -- non-AP lifts of {1..12} mod 13, min M (should be >= 2/25):
+  block {4,6}->{17,19}: M=2/25 = 0.08000  >= 2/25 (full-res-lift? True)
+  deep well {1..11,168}: M=14/169 = 0.08284  >= 2/25 (full-res-lift? True)
+  single {1..11,25}: M=1/12 = 0.08333  >= 2/25 (full-res-lift? True)
+  double {2,6}->{15,19}: M=2/23 = 0.08696  >= 2/25 (full-res-lift? True)
+
+SYNTHESIS: if Q1-Q4 hold, TightLooseDichotomy = residue-pin(13 prime) + lift-floor(2/25);
+the block lift = 2/25 EXACTLY is the tight extremal of the loose branch.
+[t = 97s]
