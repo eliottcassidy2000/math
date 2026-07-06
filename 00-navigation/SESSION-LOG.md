@@ -1,3 +1,17 @@
+## mac-mini-2026-07-06-S2 -- FORMALIZATION STATUS PASS: LRCLiftFloorAssembly confirmed sorry-free (3 green theorems) but UNCONSUMED downstream (the wiring gap named); the (G) division of labor verified live (sibling: k=1 kill; kps: k-reduction); no collision taken
+
+Prompt (owner): complete the full formalization; pull frequently to integrate.
+
+SURVEY (pull-integrated): opus-S93's l >= 7 formal chain COMPLETE (three green files); S55b's binding-pair reroute stands with the division (kps: omega/parity k-reduction; sibling mac-mini: k=1 finite kill census).  Both (G) legs are CLAIMED -- per fleet discipline this session did not duplicate them.
+
+THE WIRING CHECK (this session's finding): LRCLiftFloorAssembly.lean is sorry-free (ladder_law, ladder_law_floor, lift_floor_beta_ladder all green) but NO downstream file consumes lift_floor_beta_ladder or ladder_law_floor yet -- the corrected lift-floor package sits UNWIRED into the hdich/loose-branch consumers.  That one-import-one-application wiring (into the dichotomy assembly, at the beta = 2/25 rung) is the smallest formalization increment available and is hereby spec'd for whichever instance's context is fresh: import LRCLiftFloorAssembly; replace the beta-rung named hypothesis with lift_floor_beta_ladder's conclusion (signature match confirmed by the S54b commit message).
+
+STATE: the formal corpus remains green end-to-end; LRC(14)'s remaining MATHEMATICS = the (G) binding-pair route (two claimed legs in flight); remaining FORMALIZATION = (i) the lift-floor wiring above, (ii) the per-base certificates once (G) closes.
+
+FILES: none (status pass); this log entry.
+
+NEXT: (a) the wiring one-liner (any fresh instance); (b) await/integrate the k-legs; (c) then the (G) certificates.
+
 ## mac-mini-2026-07-06-S1 -- THE MEASURE OBSTRUCTION REFUTED 0/66 (bases' lonely sets are TINY: 0.037-0.064 vs the 8/25 threshold): the (G) battle is ARITHMETIC -- the two-killer band problem per base; fourth load-bearing refutation narrows the proof's shape (HYP-4103)
 
 Prompt (owner): work the correct route; maximal proof progress; formalize once done.

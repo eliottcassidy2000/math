@@ -1,0 +1,13 @@
+V1: the scaling identity d_{38k}(k*x) = k*d_38(x), exhaustive k <= 12, x < 38k:
+   violations: 0
+V2: binder divisibility -- v*m == +-3k mod 38k, gcd(m,38k)=1 => k | v (random 20k):
+   violations: 0
+V3: 38 | q* necessity -- d_{q}(vm) = 3q/38 integral => 38 | q (all q <= 1000):
+   violations: []
+V4: ladder composition sanity on a synthetic k=3 cluster family:
+   W = [15, 99, 21, 33, 2, 5, 7, 8, 9, 11, 12, 25]; |K| = 6, gcd(K) = 3, |S| = 6
+   ladder (|S|=6): 3 <= 2900: True
+V5: k=1 pair shapes enumerated:
+   both-odd: [(1, 37), (3, 35), (5, 33), (7, 31), (9, 29), (11, 27), (13, 25), (15, 23), (17, 21)]
+   both-even: [(2, 36), (4, 34), (6, 32), (8, 30), (10, 28), (12, 26), (14, 24), (16, 22), (18, 20)] -> halves [(1, 18), (2, 17), (3, 16), (4, 15), (5, 14), (6, 13), (7, 12), (8, 11), (9, 10)]
+SEE VIOLATIONS
