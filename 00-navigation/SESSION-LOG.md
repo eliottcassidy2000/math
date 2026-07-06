@@ -786,6 +786,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S27 -- THE EQUI- AXIS: equicontinuity = equidistribution = dodge-not-patch; splits (G) into an equidecomposability residual + explains height-independent density floor (HYP-4447)
+
+Prompt (owner): relate equicontinuity to equidecomposability, equinumerosity; integrate and reframe creatively.
+
+Integrated my S26 (M non-equicontinuous, L~height) with klein-S65 (far element equidistributes, dodge!=patch) and oracle-S617 (equinumerosity vs equidecomposability) into ONE axis:
+
+THE IDENTIFICATION: M's non-equicontinuity (L~height, S26) = the far speed's Weyl equidistribution (w needles width 2r'/w->0, klein S65) -- same fact, two vocabularies. klein's DODGE-NOT-PATCH = S617's EQUINUMEROSITY (blind uniform coverage = dodge) vs EQUIDECOMPOSABILITY (structured fiber patch, which blind needles can't do).
+
+THE SPLIT: (G) = [far-element/unbounded = equidistribution RESOLVES it, dodge!=patch, mac-mini decorrelation HYP-4402] (+) [single-cluster/bounded = equidecomposability residual = the density floor = AP roots-of-unity fiber rigidity]. So the unbounded case IS the equidistribution case, resolved; my S26 compactness 'failure' at the far-element frequency is the decorrelation, not an obstruction.
+
+EMPIRICAL CONFIRMATION (mac-mini S17, same day): safe(2/25)=0 ONLY at AP (unique rigid fiber); min safe ~0.002-0.008 does NOT degrade with height (high-scale MORE safe) = dodge!=patch quantitative (far element grows safe, can't patch); minimizers = Farey neighbors 1/12,2/23. My 'L~height' and their 'safe doesn't degrade with height' = same coin.
+
+THE REFRAME: density floor = equidecomposability (AP fiber = rigid retained-fiber scissors class), same shape as H-spectrum scissors fibers (S617). Riesz/Selberg (HYP-4452) is the tool; the object is a retained fiber; equinumerosity can't manufacture the equidecomposability a gap member needs. HONEST: synthesis/reframe, not new proof.
+
+FILES: reflection the-equi-axis-...-kps-S27.md; HYP-4447. No Lean/numerics (pure synthesis over S26 + klein S65 + oracle S617 + mac-mini S17). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S26 -- THE COMPACTNESS BYPASS of the unbounded case: fails by non-equicontinuity (L~height/13), but BRIDGES unbounded<->irrational<->three-gap (HYP-4437)
 
 Prompt (owner): creatively handle the unbounded case or bypass it.
