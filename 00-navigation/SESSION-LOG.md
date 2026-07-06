@@ -884,6 +884,18 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S30 -- THE AP IS THE HARMONIC FAMILY: second_diff_zero_iff_ap GREEN (vanishing 2nd differences <=> AP) -- the elementary formal HEART of 'AP = flat/extremal' behind the density floor (HYP-4457 formalization)
+
+Prompt (owner): keep pushing creatively against the frontier, THEN formalize.
+
+FORMALIZED the completed core of the spectral-flatness reframe (S29). LRCHarmonicAP.lean (GREEN kernel-pure, registered): second_diff_zero_iff_ap -- a sequence v has vanishing second differences v(i+2)-2v(i+1)+v(i)=0 IFF it is an arithmetic progression v(n)=a+n*d. Three theorems (ap_second_diff_zero [propext only], ap_of_second_diff_zero [two-step induction], second_diff_zero_iff_ap).
+
+WHY IT'S THE HEART: the second-difference operator is the discrete Laplacian; its kernel = the 'harmonic' (flat) sequences = EXACTLY the APs. This is the elementary algebraic core of 'AP = the flat/extremal family' across every lens: flat eigenvalue spectrum (Paley THM-126, my S29), equioscillation (mac-mini HYP-4462), min discrepancy (opus HYP-4074), maximal relation lattice (opus HYP-4446). The (1,-2,1) harmonic relations are in L(AP) and characterize it -- the shortest nontrivial relations, so (|h_hat_m|~1/m) the DOMINANT safe theta-sum terms = the additive-energy heart of safe(AP)=0.
+
+THE 'PUSH THEN FORMALIZE' ARC: pushed the frontier (S29 Paley spectral-flatness reframe + Sos/Weil proof route); the elementary core (harmonic characterization) is COMPLETE, so formalized it, connecting my S29 to opus's relation-lattice framework (HYP-4446). The general floor (the AP-uniqueness IDENTITY, quantitative Weil bound) remains the open analytic residual.
+
+FILES: LRCHarmonicAP.lean (3 thms kernel-pure). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S29 -- THE DENSITY FLOOR IS THE PALEY SPECTRAL-FLATNESS PRINCIPLE (THM-126): the two project halves share one extremal + one Gauss-sum rigidity; converges with mac-mini Fekete/Monsky (HYP-4457)
 
 Prompt (owner): work the general floor creatively, tournament work as inspiration.
