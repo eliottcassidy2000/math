@@ -32,6 +32,19 @@ KEY: the residual's additive structure (signed subset sums = 0) IS the tightness
 FILES: lrc_circleclearfloor_locate + lrc_newman_fourier _macmini_S9.py (+.outs); reflection the-last-covering-obligation-splits-three-ways; HYP-4332 (+INDEX).  No canon overridden.
 
 NEXT: (a) the Selberg/Fejer majorant for the phase-coupling residual (the one genuine open sub-lemma); (b) or lean on S6b + the 1-D census and drop CircleClearFloor entirely; (c) the |T|=3 cyclotomic almost-SOS (S8 lever 2, still untouched).
+## opus-2026-07-06-S101 -- PROOF COMPLETION: unshifted CircleClearFloor l<=11 FORMAL (citation corollary) + THE (A) LEG REDUCES TO THE (C) LEG (coupled-torus census is not a separate obligation) (HYP-4336)
+
+Prompt: work on completing the proof.
+
+TWO concrete completion steps, both GREEN (corpus 8695):
+
+(1) LRCCircleUnshifted.lean (standard trio): circleClear_unshifted_of_le11 -- the unshifted l<=11 CircleClearFloor is a DIRECT LRC(<=13) citation corollary (l distinct nonzero speeds, no shifts => margin 1/(l+1) >= 1/12 > 2/25). Extends kps's density-lane l<=6 to l<=11, isolating the genuinely open piece to the SHIFTED l=7..11 Mirsky-Newman lemma (mac-mini HYP-4332 confirmed this split).
+
+(2) THE (A)=>(C) REDUCTION (the session's real result): the coupled-2-torus (A) leg is a COROLLARY of the 1-D Farey gap (C), not a separate obligation. Combining my S99 projection floor (M(U) >= M_1d of any full-support direction, GREEN torus_point_of_projection) with the 1-D gap (hdich: a 12-family is tight-1/13 OR M_1d >= 2/25): a PROPER rank-2 torus has a non-tight full-support direction (by rigidity), whose projection is loose (M_1d >= 2/25 by the gap), so M(U) >= 2/25 => LOOSE. The rigidity 'all full-support projections tight => rank<=1' is a PIGEONHOLE over the 12! orderings (a tight projection = a dilated-AP ordering; two independent same-ordering directions => 2x2 solve => rank 1; finitely many orderings + infinitely many directions => two share). LRCTorusReduction.lean GREEN (torus_loose_of_loose_direction = the reduction's endpoint). Draft: the-A-leg-reduces-to-the-C-leg-opus-S101.
+
+VERIFIED: 55/55 rank-2 tori have a full-support projection M_1d > 2/25 (worst 7/37=0.19); 0/55 all-tight; rank-1 all-tight (rigidity boundary). CAVEAT caught (MISTAKE-102 discipline): rank-2 CAN have a few (3) tight directions, so the rigidity needs the FULL infinite direction set, not a bounded scan -- the pigeonhole is over infinitely many directions.
+
+NET: the crux collapses -- (A) rides on (C). Remaining: (C)/hdich (the 12-runner Farey gap = HYP-4306's first rung) + the pigeonhole rigidity (clean, formalizable next over Sym 12) + the projection floor (already GREEN). The coupled-torus census (mac-mini 1/6, kps CircleClearFloor) becomes a check, not a load-bearing proof. Files: LRCCircleUnshifted.lean, LRCTorusReduction.lean, draft, two_d_rigidity/tight_rigidity/two_d outs; HYP-4336.
 
 ## mac-mini-2026-07-06-S9 -- THE TWO-MODULUS NON-CLEARING STRUCTURE: gap members are PAIR-HITTING TRANSVERSALS at BOTH 13 and 25 (mod-13 = the exact analog of the sibling's mod-25 transversal, verified); the two-modulus census leaves ONLY the AP; + I CORRECTED my own S7 Q_max=25 bound (HYP-4342, renamed from a 4332 collision)
 

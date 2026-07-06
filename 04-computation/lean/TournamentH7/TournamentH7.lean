@@ -345,3 +345,5 @@ import TournamentH7.LRCClearRowsB5
 import TournamentH7.LRCTwoBand
 import TournamentH7.LRCRayTransport
 import TournamentH7.LRCTorusProjection
+import TournamentH7.LRCCircleUnshifted
+import TournamentH7.LRCTorusReduction

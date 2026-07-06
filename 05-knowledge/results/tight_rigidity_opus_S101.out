@@ -1,0 +1,9 @@
+  FOUND rank-2 with u,v tight + 1 more tight dirs: u=[6, -4, -24, 10, 12, 18, 2, 22, -20, -8, -14, -16], v=[15, 6, -3, -18, -9, -30, -21, 33, -27, -24, -36, 12]
+searched 200k random 'both-axis-tight' rank-2 tori for a THIRD tight direction:
+  counterexample (rank-2, >=3 full-support tight projections): True
+  => rigidity may need care
+
+the pigeonhole logic: tight projection => dilated-AP ordering; two INDEP directions
+with the same ordering sigma => u_{sigma(i)}, v_{sigma(i)} both = (linear in i) =>
+(u_i,v_i) solves a 2x2 with RHS ~ i => (u,v) rank 1. Finitely many orderings +
+infinitely many full-support dirs => two share an ordering => rank 1. QED-shape.

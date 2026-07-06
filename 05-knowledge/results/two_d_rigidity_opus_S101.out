@@ -1,0 +1,9 @@
+rank-2 tori tested: 55
+  ALL-projections-tight (would break reduction): 0
+  have a full-support projection with M_1d > 2/25: 55/55
+  worst (min over tori) best-nontight-projection M_1d = 7/37 = 0.1892 (vs 2/25=0.0800)
+  rank-1 sanity u={1..12},v=2u: tight-proj=40, nontight=0
+  rank-1 sanity u={1..12},v=3u: tight-proj=40, nontight=0
+
+REDUCTION: if every rank-2 torus has a full-support projection with M_1d > 2/25,
+then M(U) >= M_1d > 2/25 => U is LOOSE. (A) follows from: 1-D gap on projections + this.
