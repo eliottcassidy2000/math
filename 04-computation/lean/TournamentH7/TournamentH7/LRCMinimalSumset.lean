@@ -1,15 +1,19 @@
 /-
-  TournamentH7.LRCMinimalSumset — the minimal-sumset bound |S+S| ≥ 2|S|−1.
+  TournamentH7.LRCMinimalSumset — the minimal-sumset bound and its equality case.
 
-  (mac-mini-2026-07-06-S20, HYP-4482.)  The additive-combinatorics anchor of the
-  Freiman frame for the density floor (opus-S112 theta-sum): safe(S,2/25) = 0
-  ⟹ minimal doubling ⟹ (this + the AP characterization) the AP.  This file is
-  step 2's LOWER bound: for a nonempty finite set S of integers,
-  |S + S| ≥ 2|S| − 1, with the AP {1,…,n} attaining equality.
+  (mac-mini-2026-07-06-S20/S21, HYP-4482/4492.)  The additive-combinatorics
+  anchor of the Freiman frame for the density floor (opus-S112 theta-sum):
+  safe(S,2/25) = 0 ⟹ minimal doubling ⟹ (this + the AP characterization) the AP.
 
-  Proof: the translates (m + S) and (S + M), m = min S, M = max S, each have
-  |S| elements, both sit inside S + S, and meet only at m + M.  So their union
-  has 2|S| − 1 elements inside S + S.
+  * `two_mul_card_sub_one_le`: |S + S| ≥ 2|S| − 1 for nonempty finite `S ⊆ ℤ`.
+  * `sumset_eq_translates`: at EQUALITY (|S+S| = 2|S|−1), the sumset is EXACTLY
+    the two translates `(m + S) ∪ (S + M)`, m = min S, M = max S — the
+    structural core of the classical "minimal doubling ⟹ arithmetic progression"
+    (step 2 of the (U)-rigidity factoring).
+
+  Proof: the translates each have |S| elements, both sit inside S + S, and meet
+  only at m + M.  So their union has 2|S| − 1 elements inside S + S; equality
+  forces S + S to BE that union.
 
   Pure Finset arithmetic; no analysis.  Draft: reflection
   the-extremizer-is-stricter-than-freiman-macmini-S20.
@@ -24,63 +28,65 @@ namespace MinimalSumset
 
 variable {S : Finset ℤ}
 
-/-- **Minimal sumset bound.**  A nonempty finite set of integers `S` has
-    `2·|S| − 1 ≤ |S + S|`. -/
-theorem two_mul_card_sub_one_le (hS : S.Nonempty) :
-    2 * S.card - 1 ≤ (S + S).card := by
-  obtain ⟨m, hm, hmin⟩ := S.exists_min_image id hS
-  obtain ⟨M, hM, hmax⟩ := S.exists_max_image id hS
-  -- the two translates, both inside S + S
-  set A := S.image (m + ·) with hA
-  set B := S.image (· + M) with hB
-  have hAsub : A ⊆ S + S := by
-    intro x hx
-    rw [hA, mem_image] at hx
+/-- The two translates `(m + S)` and `(S + M)` (m = min, M = max) sit inside
+    `S + S`, each of size `|S|`, and meet exactly at `{m + M}`. -/
+private lemma translate_facts (hS : S.Nonempty) :
+    let m := S.min' hS; let M := S.max' hS
+    let A := S.image (m + ·); let B := S.image (· + M)
+    A ⊆ S + S ∧ B ⊆ S + S ∧ A.card = S.card ∧ B.card = S.card ∧
+      A ∩ B = {m + M} := by
+  intro m M A B
+  refine ⟨?_, ?_, ?_, ?_, ?_⟩
+  · intro x hx
+    rw [mem_image] at hx
     obtain ⟨s, hs, rfl⟩ := hx
-    exact add_mem_add hm hs
-  have hBsub : B ⊆ S + S := by
-    intro x hx
-    rw [hB, mem_image] at hx
+    exact add_mem_add (S.min'_mem hS) hs
+  · intro x hx
+    rw [mem_image] at hx
     obtain ⟨s, hs, rfl⟩ := hx
-    exact add_mem_add hs hM
-  have hAcard : A.card = S.card :=
-    card_image_of_injective _ (add_right_injective m)
-  have hBcard : B.card = S.card :=
-    card_image_of_injective _ (fun a b h => by simpa using h)
-  -- A ∩ B = {m + M}
-  have hinter : A ∩ B = {m + M} := by
-    apply Subset.antisymm
+    exact add_mem_add hs (S.max'_mem hS)
+  · exact card_image_of_injective _ (add_right_injective m)
+  · exact card_image_of_injective _ (fun a b h => by simpa using h)
+  · apply Subset.antisymm
     · intro x hx
-      rw [mem_inter, hA, hB, mem_image, mem_image] at hx
+      rw [mem_inter, mem_image, mem_image] at hx
       obtain ⟨⟨s, hs, rfl⟩, ⟨t, ht, hteq⟩⟩ := hx
-      -- m + s = t + M, with m ≤ t and s ≤ M ⟹ s = M ∧ t = m
-      have h1 : (id m : ℤ) ≤ id t := hmin t ht
-      have h2 : (id s : ℤ) ≤ id M := hmax s hs
-      simp only [id] at h1 h2
+      have h1 : m ≤ t := S.min'_le t ht
+      have h2 : s ≤ M := S.le_max' s hs
       have heq : m + s = t + M := hteq.symm
       have hsM : s = M := by omega
       rw [hsM, mem_singleton]
     · intro x hx
       rw [mem_singleton] at hx; subst hx
       rw [mem_inter]
-      constructor
-      · rw [hA, mem_image]; exact ⟨M, hM, rfl⟩
-      · rw [hB, mem_image]; exact ⟨m, hm, by ring⟩
-  -- |A ∪ B| = |A| + |B| − |A ∩ B| = 2|S| − 1, and A ∪ B ⊆ S + S
-  have hunion : A ∪ B ⊆ S + S := union_subset hAsub hBsub
-  have hcard_union : (A ∪ B).card = 2 * S.card - 1 := by
-    have := card_union_add_card_inter A B
-    rw [hinter, card_singleton, hAcard, hBcard] at this
-    omega
-  calc 2 * S.card - 1 = (A ∪ B).card := hcard_union.symm
-    _ ≤ (S + S).card := card_le_card hunion
+      exact ⟨mem_image.mpr ⟨M, S.max'_mem hS, rfl⟩,
+             mem_image.mpr ⟨m, S.min'_mem hS, by ring⟩⟩
 
-/- Equality holds for the AP `{1, …, n}` (sumset `{2, …, 2n}`, size `2n − 1`) —
-   the density-floor extremizer is Freiman-minimal.  Verified numerically at
-   n = 12 (`lrc_freiman_rigidity_macmini_S20.py`): the AP is the UNIQUE primitive
-   minimal-doubling family, but `safe = 0` is STRICTER (shifted APs are
-   minimal-doubling yet `safe > 0`; the extremizer needs first-term = difference,
-   i.e. residue-completeness mod 13). -/
+/-- The union of the two translates has exactly `2|S| − 1` elements. -/
+private lemma union_card (hS : S.Nonempty) :
+    (S.image (S.min' hS + ·) ∪ S.image (· + S.max' hS)).card = 2 * S.card - 1 := by
+  obtain ⟨_, _, hA, hB, hI⟩ := translate_facts hS
+  have := card_union_add_card_inter
+    (S.image (S.min' hS + ·)) (S.image (· + S.max' hS))
+  rw [hI, card_singleton, hA, hB] at this
+  omega
+
+/-- **Minimal sumset bound.**  `2|S| − 1 ≤ |S + S|` for nonempty finite `S ⊆ ℤ`. -/
+theorem two_mul_card_sub_one_le (hS : S.Nonempty) :
+    2 * S.card - 1 ≤ (S + S).card := by
+  obtain ⟨hA, hB, _, _, _⟩ := translate_facts hS
+  calc 2 * S.card - 1
+      = (S.image (S.min' hS + ·) ∪ S.image (· + S.max' hS)).card := (union_card hS).symm
+    _ ≤ (S + S).card := card_le_card (union_subset hA hB)
+
+/-- **Equality case (structural core of minimal doubling ⟹ AP).**  When
+    `|S + S| = 2|S| − 1`, the sumset is EXACTLY the two translates
+    `(min S + S) ∪ (S + max S)`. -/
+theorem sumset_eq_translates (hS : S.Nonempty) (heq : (S + S).card = 2 * S.card - 1) :
+    S + S = S.image (S.min' hS + ·) ∪ S.image (· + S.max' hS) := by
+  obtain ⟨hA, hB, _, _, _⟩ := translate_facts hS
+  refine (eq_of_subset_of_card_le (union_subset hA hB) ?_).symm
+  rw [heq, union_card hS]
 
 end MinimalSumset
 end LonelyRunner
