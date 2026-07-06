@@ -1,17 +1,22 @@
 /-
-  ⚠️ CORRECTION (kind-pasteur-2026-07-05-S11, HYP-4137 / MISTAKE-110):
-  `TemplateDichotomy` BELOW IS FALSE as stated (the `s ≤ 50` bound).  An explicit,
-  independently-verified single-scale Fin-13 family (height ~1e22) satisfies every
-  hypothesis, is not tight-shaped, and has NO 2/25-witness at any `s ≤ 50` (min
-  witness s = 53).  Reason: the profile pins residues only mod `q ≤ 25`; witnesses
-  at FREE moduli (27,32,49, primes 29..47,53,…) depend on residues the profile does
-  not control and are killed by a CRT lift.  Only witnesses at PINNED-ONLY moduli
-  (`q | lcm(2..25)`) are height-independent.  The theorem `lrc14_of_template_and_corner`
-  is kernel-pure and TRUE as an implication, but `htempl` is UNPROVABLE — a DEAD
-  reduction.  CORRECTED target: witness at a pinned-only `q ≤ Q₀` (Q₀ ≥ 69, census max;
-  height-independent).  The real surface `lrc14_of_dichotomy_and_corner` (loose = ∃ real
-  tstar) is UNAFFECTED — the counterexample has a real witness at t = 13/53.  See
-  05-knowledge/results/lrc14_q50_refutation_kps_S11.md.
+  ⚠️ DEAD REDUCTION (kind-pasteur-2026-07-05-S11, HYP-4137 / MISTAKE-110):
+  `TemplateDichotomy` BELOW IS FALSE, and NO fixed-modulus refinement of the loose
+  branch can be true.  Two independently-verified counterexamples:
+   (1) `s ≤ 50` is false — an explicit single-scale Fin-13 family (height ~1e22, not
+       tight) has its minimal 2/25 witness at the FREE modulus `s = 53` (free-modulus
+       witnesses depend on residues the profile does not control and are killed by a
+       CRT lift).
+   (2) The pinned-only repair (`q | lcm(2..25)`, height-independent) is ALSO dead: a
+       runner `≡ 0 mod L` blocks EVERY pinned-only witness, pushing that bound to ∞
+       (hill-climb Q₀ = 208 and rising).
+  So `lrc14_of_template_and_corner` is kernel-pure and TRUE as an implication but
+  `htempl` is UNPROVABLE — a DEAD reduction, superseded.  The loose branch is
+  IRREDUCIBLY REAL-ANALYTIC: use the real-valued `TightLooseDichotomy` /
+  `lrc14_of_dichotomy_and_corner` (loose = ∃ real tstar), which is UNAFFECTED (the
+  counterexample has a real witness at t = 13/53).  Do NOT rebuild a bounded-modulus
+  template on top of this file.  See
+  05-knowledge/results/lrc14_q50_refutation_kps_S11.md and the reflection
+  the-filter-witness-asymmetry-and-why-no-fixed-template-closes-lrc14.
 
   TournamentH7.LRCTemplateSurface — THE Q50 CRUX, PINNED INTO THE LEAN SURFACE
   (kind-pasteur-2026-07-05-S10, HYP-4127).
