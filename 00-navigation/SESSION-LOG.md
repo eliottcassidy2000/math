@@ -1,3 +1,43 @@
+## mac-mini-2026-07-06-S6 -- THE 7-SPREAD LATTICE RESIDUAL: characterized, census-clean at INFIMUM 1/6 (579 + 652-restart adversarial), reduced to ONE >=3-class covering lemma with factor-2 margin; the (A)-half residual collapsed + good-box bridge for opus's formal composition (HYP-4292)
+
+Prompt (owner): keep going, pull often, integrate/extend toward the proof.
+
+CATCH-UP + CONVERGENCE: the (A)-half of S4's J-K reduction is being closed from three sides -- kps-S20 torus_split_rung (formal, kills <=6-lifted couplings), sibling mac-mini-S5 HYP-4282 (support-6 kill + phi>0 free-fraction, reducing (A) to 7-spread lattices), opus-S98 HYP-4266 (residue bridge -- the INFINITE HEIGHT variable DISCHARGED, crux -> finite Q50 census).  My contribution: the 7-spread residual's characterization + verdict.
+
+THE MATH:
+ (1) CHARACTERIZATION (derived before computing, broadcast to sharpen the fleet's tool): coord i vanishes in direction (a,b) iff (u_i,v_i) . (a,b) = 0 => 7-spread <=> the 12 pair-vectors (u_i,v_i) fall into direction-classes each <= 5 (>= 3 classes); each class = a 1-D LR system in form tau_D => a 7-spread torus = >= 3 COUPLED <=5-runner LR systems in transversal forms.
+ (2) GENUINE RESIDUAL: GL2-normalizing the largest class to base leaves #lifted >= 7 always (rung needs <=6) -- does NOT reduce to kps's 2-class rung.
+ (3) CENSUS: 579 structured lattices SAFE-ABOVE, INFIMUM EXACTLY 1/6 at 5-5-2 (the <=5-runner LRC bound); adversarial (652 restarts, rigorous bracket after scrapping an undersampling-prone coarse-gridmax v1) also bottoms 1/6 -- factor 2.08 above 2/25.
+ (4) GOOD-BOX BRIDGE for opus: exact witnesses (5-5-2 M=1/6 at (1/6,13/420); 3x4, 4x3 M=1/5), per-class free-fractions all >= 0.34 (matching opus's LRCClearCert) -- every good-box non-empty above the window with an explicit tau_3-good lattice point.
+ (5) THE REDUCTION: (A) = ">=3 transversal <=5-runner systems can't cover T^2 below 1/6"; measure alone fails (transversal strips can tile-cover) but factor-2 margin => crude formal bound suffices; opus's per-class certs + lattice-point arithmetic is the path.
+ (6) UNIFICATION (sibling (c)): 7-spread (A)-residual = |S|>=7 (C)-residual (my S3 44,928-template census) -- ONE lemma closes both.
+
+ASSEMBLY STATE (table in the reflection): rays DEAD (formal); <=6-lifted DEAD (formal); k>=2 bounded (formal); k=1 clean to 60 + density-wall; infinite height DISCHARGED (opus bridge); 7-spread=|S|>=7 residual empirically safe (1/6, factor 2) = the ONE open lemma; corner separate.  The lift/gap branch is the closest to done it has been.
+
+WORKFLOW: caught + fixed a real methodology bug (v1 adversarial minimized a COARSE grid-max, rewarding undersampling -- "gridmax 0" artifacts; the rigorous-bracket objective with bounded speeds is the fix).
+
+FILES: lrc_7spread_census/adversarial/goodbox_bridge_macmini_S6.py (+3 .outs); reflection the-7-spread-torus-residual-macmini-S6; HYP-4292 (+INDEX); broadcast + this.  No canon overridden.
+
+NEXT: (a) the >=3-class covering lemma formally (with opus: per-class LRCClearCert + good-box lattice-point arithmetic -- the good-box witnesses are computed); (b) opus's finite Q50 census is now the single crux -- fold my census/spectroscopy/anchored data into it; (c) the pair-in-cluster S3 finite census.
+
+## mac-mini-2026-07-06-S5 -- THE >=7 RESIDUAL CONSOLIDATION: small-base-carries reduces the (A)-lane's >=7-lifted 2-torus residual to opus's lane (verified 6/6); the 25/4 wall is ONE object in both (A)/(C) coordinates; adversarial finding -- 7 DISTINCT-freq combs CANNOT tile at 2/25 (phi_worst 0.11-0.25) => opus's lemma closes the residual UNCONDITIONALLY if proved (HYP-4282, re-scoped)
+
+Prompt (owner): work the next steps, pull often, push toward final assembly; integrate + extend other agents; long session.
+
+COLLISION HANDLED: a concurrent mac-mini-S5 took HYP-4272 (the 313/313 bracket census, closed) AND kps-4247 (their in-flight torus_split_rung) IS my planned HYP-4282(a) support-6 kill.  I CEDED (a) and re-scoped to the genuinely unclaimed >=7 residual (the pole stratum kps's own file names 'opus's lane').  Pulled ~5x; integrated kps-S19/S20 (sharp rung + torus split), opus-S96/S97 (two-band transport GREEN, phi bypassed), sibling S3/S4 (rho38 frame + J-K reduction).
+
+THE WORK (toward final assembly -- shrinking the open surface):
+ (1) THE 25/4 WALL is literally ONE object in two coordinates: (A)-lane #lifted >= 7, (C)-lane |S| >= 7, both = the pole of gap_gcd_rung_sharp at 25/4 = 6.25.  Same measure fact.
+ (2) SMALL-BASE-CARRIES (the reduction, verified 6/6 proper tori): a >=7-lifted gap torus has <= 5 unlifted base; LRC(<=5) => base-clear t0; gap => the >=7 lifted combs tile the s-circle at t0.  Routes the (A) >=7 residual straight into opus's lane; base-clear interval G_B = the 2-torus analogue of opus's core interval J.
+ (3) THE STRONGER FINDING (adversarial phase search): 7 distinct-freq combs at band 2/25 CANNOT tile even at the worst phase (phi_worst 0.11/0.25/0.23 for consecutive/primes/pole-7) despite total measure 28/25 > 1.  Distinct-frequency rigidity prevents tiling = opus's 'combs never tile' lemma, band-2/25 evidence.  If proved universally (FINITE census, <=12 freqs), the >=7 residual is EMPTY UNCONDITIONALLY -- phase orbit not even needed.
+ (4) THE CONSOLIDATED ENDGAME MAP (draft): (G)'s whole open surface = opus's distinct-combs lemma (item 3b, finite decidable) + the (C) |S|>=7 height-bounding (item 4, census-shaped, sibling's density-wall) + the accumulation citation (item 6).  Items 1/3a/5 (kps <=6 rung / opus ray transport / finite census) are proved/GREEN/mechanical.  The endgame is SMALL and mostly done.
+
+HONEST: the reduction routes to opus's lemma (not a closure); adversarial search is heuristic evidence; (A) >=7-lifted and (C) |S|>=7 share the wall but are LIMIT vs FINITE (distinct).  No Lean this session (the substantive pieces are kps's + opus's; my reduction's Lean content is the trivial min-combinator -- not worth a token file).
+
+FILES: drafts/seven-residual-consolidation-macmini-S5.md; lrc_seven_residual_macmini_S5.py (+.out); HYP-4282 (+INDEX); letters to kps + opus.  No canon overridden.
+
+NEXT: (a) opus's distinct-combs lemma as a FINITE band-2/25 census (the last (A) piece -- the adversarial data says it holds); (b) the (C) |S|>=7 height-bound with the sibling (density-wall + unit-pair quotient); (c) the accumulation citation-or-reprove decision (S4 lead); (d) once (A) closes: (G) is done modulo (C)'s finite list + klein's (U).
+
 ## opus-2026-07-06-S98 -- THE CENSUS BRIDGE: the crux's height direction DISCHARGED formally; the spectral gap reduces to a FINITE census (LRCRayTransport.lean GREEN, incl. margin_of_residue_witness) (HYP-4266)
 
 Prompt: work the crux, pull often, prioritize reasoning/investigation, ensure a full build goes smoothly.

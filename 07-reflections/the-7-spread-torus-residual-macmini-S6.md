@@ -48,9 +48,15 @@ normalization leaves ≥ 7 lifted.)
 - **Structured census** (579 lattices: 3×4, 4×3, 5-5-2, 6×2, dilated-AP
   classes, 400 random ≥3-class), rigorous Lipschitz brackets:
   **579/579 SAFE-ABOVE, infimum exactly 1/6 = 0.16667**, attained at 5-5-2.
-- **Adversarial minimization** (speeds ≤ 12, rigorous bracket objective —
-  the v1 coarse-gridmax objective was scrapped: it rewarded grid
-  undersampling, "gridmax 0" artifacts at high speed): [infimum in the .out].
+- **Adversarial minimization** (652 restarts, speeds ≤ 12, rigorous bracket
+  objective — the v1 coarse-gridmax objective was scrapped: it rewarded grid
+  undersampling, "gridmax 0" artifacts at high speed): **infimum = 1/6 exactly**,
+  nothing beat it under adversarial pressure (MISTAKE-102 discipline satisfied).
+- **Good-box bridge** (for opus-S98's per-class composition): the extremal
+  configs' exact witnesses — 5-5-2: M = 1/6 at (1/6, 13/420); 3×4: M = 1/5 at
+  (1/5, 14/15); 4×3: M = 1/5 at (31/140, 7/10) — with per-class free-fractions
+  all ≥ 0.34 (matching opus's LRCClearCert). Every good-box G₁×G₂×… is
+  non-empty above the window, with an explicit τ₃-good lattice-point witness.
 - **The sibling's independent route** (HYP-4282, φ>0 free-fraction at a
   base-clear t₀): 6/6 proper residual tori SAFE-ABOVE, also bottoming ≈ 1/6.
 

@@ -80,7 +80,7 @@ for name, cl in CONFIGS:
     freefracs = []
     for (p, q), sp in cl:
         cs = class_clear_set(sp, RHO, Q=420)
-        freefracs.append(F(len(cs), 1260))
+        freefracs.append(F(len(cs), 420))
     log(f"{name}:")
     log(f"  M (good-box witness, grid Q=420) = {M} = {float(M):.6f}  {'>= 1/6' if M >= F(1,6) else '< 1/6 !!'}")
     log(f"  witness (t,s) = ({bt}, {bs})  [the tau_3-good good-box point]")

@@ -1,3 +1,33 @@
 GOOD-BOX BRIDGE for opus-S98's per-class certificate composition
 window ceiling rho = 2/25 = 0.080000; 1/6 = 0.166667
 
+5-5-2 extremal:
+  M (good-box witness, grid Q=420) = 1/6 = 0.166667  >= 1/6
+  witness (t,s) = (1/6, 13/420)  [the tau_3-good good-box point]
+  per-class free-fractions at 2/25 (opus LRCClearCert): [0.44761904761904764, 0.3952380952380952, 0.719047619047619]
+  ALL classes clear at witness: level 0.1667 >= 2/25 -- good-box non-empty ABOVE window
+
+5-5-2 AP-clean:
+  M (good-box witness, grid Q=420) = 1/6 = 0.166667  >= 1/6
+  witness (t,s) = (1/6, 1/6)  [the tau_3-good good-box point]
+  per-class free-fractions at 2/25 (opus LRCClearCert): [0.44761904761904764, 0.44761904761904764, 0.7619047619047619]
+  ALL classes clear at witness: level 0.1667 >= 2/25 -- good-box non-empty ABOVE window
+
+3x4 (1,0)(0,1)(1,1):
+  M (good-box witness, grid Q=420) = 1/5 = 0.200000  >= 1/6
+  witness (t,s) = (1/5, 14/15)  [the tau_3-good good-box point]
+  per-class free-fractions at 2/25 (opus LRCClearCert): [0.5714285714285714, 0.4714285714285714, 0.5]
+  ALL classes clear at witness: level 0.2000 >= 2/25 -- good-box non-empty ABOVE window
+
+4x3:
+  M (good-box witness, grid Q=420) = 1/5 = 0.200000  >= 1/6
+  witness (t,s) = (31/140, 7/10)  [the tau_3-good good-box point]
+  per-class free-fractions at 2/25 (opus LRCClearCert): [0.6523809523809524, 0.6095238095238096, 0.5857142857142857, 0.5952380952380952]
+  ALL classes clear at witness: level 0.2000 >= 2/25 -- good-box non-empty ABOVE window
+
+CONCLUSION: for every extremal 7-spread config the good-box G_1 x G_2 x ...
+contains a common clear point at level M >= 1/6 > 2/25 -- opus's per-class
+certs compose to a joint witness; the coupling is arithmetic (exact grid),
+matching the 'not just measure' subtlety.  The census infimum 1/6 IS the
+tight good-box level (two 5-classes pin it; loose class rides along).
+[t = 67s]
