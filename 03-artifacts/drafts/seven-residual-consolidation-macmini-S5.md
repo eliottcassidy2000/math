@@ -80,9 +80,16 @@ count at band 2/25:
 |---|---|---|---|---|---|---|
 | adversarial φ_worst | 0.110 | 0.050 | 0.018 | **0.001** | **0.000** | **0.000** |
 
-So **7–9 distinct combs cannot tile (φ_worst > 0), but ≥10 CAN** (consecutive
+**[CORRECTED by S7, HYP-4312]:** the "≥10 consecutive tiles" reading below was a
+GRID ARTIFACT. Exact arithmetic (S7) shows the free fraction for the consec[1..11]
+near-tiling phase is **0.000529** — nonempty, but smaller than the grid cell
+(1/1600 = 0.000625), so the float search read it as 0. Distinct-frequency
+2/25-combs do NOT tile at any lifted count ≤ 11; kps's CircleClearFloor stands.
+The (now-withdrawn) artifact reading follows for the record:
+
+~~So **7–9 distinct combs cannot tile (φ_worst > 0), but ≥10 CAN** (consecutive
 frequencies tile adversarially at band 2/25). Spread-out patterns resist better
-(primes/AP-step-5 at 12 combs leave 2.6%/6.0% free), but consecutive ≥10 tiles.
+(primes/AP-step-5 at 12 combs leave 2.6%/6.0% free), but consecutive ≥10 tiles.~~
 This SPLITS the residual honestly by lifted count:
 
 - **7 ≤ #lifted ≤ 9** (base 3–5 runners): the combs cannot tile at ANY phase —
