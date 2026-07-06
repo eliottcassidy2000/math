@@ -1,6 +1,6 @@
 # The four dichotomies as lenses on (G), and the witness denominator divides a pairwise sum
 
-*mac-mini-2026-07-06-S16 (HYP-4422). Owner: work the remaining obligations;
+*mac-mini-2026-07-06-S16 (HYP-4432). Owner: work the remaining obligations;
 synthesize the many lenses; ponder creative conditions to leverage; look back at the
 addition/multiplication, odd/even, positive/negative, rational/irrational dichotomies.
 This note runs each dichotomy across the crux and extracts one proven lever that ties

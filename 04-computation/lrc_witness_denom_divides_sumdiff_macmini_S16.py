@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-mac-mini-2026-07-06-S16 (HYP-4422) -- the WITNESS-DENOMINATOR LEMMA (verification).
+mac-mini-2026-07-06-S16 (HYP-4432) -- the WITNESS-DENOMINATOR LEMMA (verification).
 
 LEMMA. If M(S)=c/q in lowest terms, then q divides (v_i+v_j) or (v_i-v_j) for some
 pair, or 2*v_i for some i.
