@@ -1,0 +1,13 @@
+gap occupancy by n via AP-lift transversals (lift j elements of {1..n-1} by multiples of (2n-1)):
+
+   n              gap    width  #gap-members   closest-below (max M<lo)
+   7 (0.1429,0.1538)  0.01099             0   none
+   8 (0.1250,0.1333)  0.00833             0   none
+   9 (0.1111,0.1176)  0.00654             0   none
+  10 (0.1000,0.1053)  0.00526             0   none
+  11 (0.0909,0.0952)  0.00433             0   none
+  12 (0.0833,0.0870)  0.00362             0   none
+  13 (0.0769,0.0800)  0.00308             0   none
+
+=> where the count drops to 0, the lift-transversal trick can no longer engineer a gap value:
+   the wall (narrower gap + deeper clearance) exceeds what the n-1 runners can place. n=13 empty.

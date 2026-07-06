@@ -1,0 +1,26 @@
+LEAVE-ONE-OUT ALIGNMENT: if S covers at beta (M<beta), Safe(S\{v_j}) must be subset of A_j.
+
+AP {1..12} (n=13): S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  M=1/13=0.0769  beta=2/25  covers(M<beta)? True
+    drop v=  1: Safe(sub) meas=0.07333, subset of A_1? True
+    drop v=  2: Safe(sub) meas=0.03636, subset of A_2? True
+    drop v=  3: Safe(sub) meas=0.04339, subset of A_3? True
+    drop v=  4: Safe(sub) meas=0.02869, subset of A_4? True
+    drop v=  5: Safe(sub) meas=0.03448, subset of A_5? True
+    drop v=  6: Safe(sub) meas=0.01385, subset of A_6? True
+    drop v=  7: Safe(sub) meas=0.08511, subset of A_7? True
+    drop v=  8: Safe(sub) meas=0.04904, subset of A_8? True
+    drop v=  9: Safe(sub) meas=0.05655, subset of A_9? True
+    drop v= 10: Safe(sub) meas=0.02713, subset of A_10? True
+    drop v= 11: Safe(sub) meas=0.04390, subset of A_11? True
+    drop v= 12: Safe(sub) meas=0.00956, subset of A_12? True
+n=7 gap member: S=[1, 5, 6, 11, 16, 17]  M=5/33=0.1515  beta=2/13  covers(M<beta)? True
+    drop v=  1: Safe(sub) meas=0.06785, subset of A_1? True
+    drop v=  5: Safe(sub) meas=0.10860, subset of A_5? True
+    drop v=  6: Safe(sub) meas=0.09219, subset of A_6? True
+    drop v= 11: Safe(sub) meas=0.08654, subset of A_11? True
+    drop v= 16: Safe(sub) meas=0.05742, subset of A_16? True
+    drop v= 17: Safe(sub) meas=0.06323, subset of A_17? True
+
+=> the AP covers via ALIGNMENT (each sub-family hole sits inside the dropped runner's arcs).
+   The gap-member (n=7) covers too but via a DIFFERENT alignment (lifted).  The QUANTITATIVE
+   question: can 12 runners align at n=13 for a value in the 1/325 gap?  (n-width threshold).

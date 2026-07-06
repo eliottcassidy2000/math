@@ -1,0 +1,36 @@
+==============================================================================
+PART 1: safe(2/25) for AP vs non-AP (the density-floor object)
+==============================================================================
+  AP {1..12}: safe(2/25) = 0 (expect 0: M(AP)=1/13 < 2/25, arcs TILE)
+  non-AP families sampled: 3000
+  MIN safe(2/25) over non-AP: 1922927/52907400 = 0.03635 at [1, 2, 7, 9, 10, 11, 12, 17, 18, 19, 26, 32]
+  non-AP families with safe = 0 (would be gap/tight): 0
+  smallest 5 safe values (the floor's approach):
+    safe=1922927/52907400=0.03635  [1, 2, 7, 9, 10, 11, 12, 17, 18, 19, 26, 32]
+    safe=184881991/4780561500=0.03867  [2, 3, 10, 11, 14, 16, 17, 18, 21, 23, 38, 39]
+    safe=485957/12226500=0.03975  [2, 4, 7, 9, 10, 12, 13, 17, 22, 26, 32, 38]
+    safe=97127607/2306486000=0.04211  [3, 7, 8, 14, 20, 22, 23, 26, 29, 32, 36, 38]
+    safe=7977083/188491875=0.04232  [1, 2, 7, 8, 11, 12, 17, 18, 19, 25, 26, 37]
+
+==============================================================================
+PART 3: THE SCALE-GAP THRESHOLD R_0 (the height bound)
+(a family with a ratio-R scale gap decorrelates => M >= 2/25 => safe>0)
+==============================================================================
+   ratio R  #tested   safe=0 (no decorr)     min safe
+    (2, 3)      398                    0      0.04192
+    (3, 5)      400                    0      0.05025
+    (5, 8)      400                    0      0.05257
+   (8, 13)      400                    0      0.06455
+  (13, 21)      400                    0      0.06828
+  (21, 40)      400                    0      0.06575
+  => R_0 = the ratio where safe=0 STOPS occurring (decorrelation guaranteed).
+     max element < R_0^11 => (G) is a FINITE CHECK (with the S16 q<=2max lever).
+
+==============================================================================
+PART 4: n-DEPENDENCE -- safe at n=7 (floor FAILS) vs the structure
+==============================================================================
+  n=7 gap member [1, 5, 6, 11, 16, 17]: safe(2/13) = 0 (=0: it's a gap member, floor FAILS at n=7)
+  n=7 AP {1..6}: safe(2/13) = 0 (=0: M(AP6)=1/7 < 2/13, the tiler)
+  n=7 loose (1,2,4,8,9,11): safe(2/13) = 823/5148
+  => at n=7 both the AP AND the gap member have safe=0; the floor is
+     the statement that at n=13, ONLY the AP does (the two walls, S15).
