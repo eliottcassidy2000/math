@@ -115,59 +115,52 @@ def part_A():
     print("PART A: the Q50 witness-denominator bound (exact)")
     print("=" * 78)
     fams = make_families()
-    clearing = []      # (name, W, M, minq)
-    gap_hits = []
-    spectrum_in_band = {}   # M-value -> count, for M in [2/25, 1/6]
-    maxq_exact = []    # M == 2/25 exactly: maximizer denom
+    # (1) MIN-WITNESS-DENOM for ALL families (fast, height-independent) -- the
+    #     bound question.  None => no witness up to Qcap (M < 2/25).
+    clearing = []      # (name, W, minq)
+    nowit = []
+    Qcap = 130
     for nm, W in fams:
+        mq = min_witness_denom(W, Qcap=Qcap)
+        if mq is None:
+            nowit.append((nm, W))
+        else:
+            clearing.append((nm, W, mq))
+    qs = [c[2] for c in clearing]
+    mx = max(qs); argmax = [c for c in clearing if c[2] == mx][0]
+    print(f"  families: {len(fams)};  with a 2/25-witness (M>=2/25): {len(clearing)};  "
+          f"no witness up to q={Qcap} (M<2/25): {len(nowit)}")
+    print(f"  MIN-WITNESS-DENOM: min={min(qs)}, median={sorted(qs)[len(qs)//2]}, MAX={mx}")
+    print(f"    largest min-witness q: {argmax[0]} q={mx}  W={argmax[1]}")
+    over50 = [c for c in clearing if c[2] > 50]
+    print(f"  families needing q > 50: {len(over50)}  "
+          f"({'*** Q50 BOUND VIOLATED (Q_max=%d)'%mx if over50 else 'Q50 bound holds on this sample'})")
+    for c in over50[:8]:
+        print(f"    q={c[2]}: {c[0]}  W={c[1]}")
+    # (2) SPECTRUM in [2/25, 1/6] + (3) 2/25-exact maximizer -- exact M only on
+    #     SMALL-height families (speeds <= 80: exact_M grid is cheap there).
+    print()
+    print("  SPECTRUM in [2/25, 1/6] and 2/25-exact maximizers (small-height subsample):")
+    spectrum_in_band = {}
+    maxq_exact = []
+    small = [(nm, W) for nm, W in fams if max(W) <= 80]
+    for nm, W in small:
         M, t = exact_M_argmax(W)
         if F(1,13) < M < F(2,25):
-            gap_hits.append((nm, W, M, t))
-            continue
-        if M >= F(2,25):
-            mq = min_witness_denom(W)
-            clearing.append((nm, W, M, mq))
-            if F(2,25) <= M <= F(1,6):
-                spectrum_in_band[M] = spectrum_in_band.get(M, 0) + 1
-            if M == F(2,25):
-                maxq_exact.append((nm, W, t.denominator))
-    # report
-    print(f"  families: {len(fams)};  gap hits (M in (1/13,2/25)): {len(gap_hits)}")
-    if gap_hits:
-        for nm,W,M,t in gap_hits[:5]:
-            print(f"    *** GAP: {nm} M={M} W={W}")
-    valid = [c for c in clearing if c[3] is not None]
-    if valid:
-        qs = [c[3] for c in valid]
-        mx = max(qs)
-        argmax = [c for c in valid if c[3] == mx][0]
-        print(f"  clearing families (M >= 2/25): {len(valid)}")
-        print(f"  MIN-WITNESS-DENOM distribution: min={min(qs)}, median={sorted(qs)[len(qs)//2]}, MAX={mx}")
-        print(f"    argmax (largest min-witness q): {argmax[0]} M={argmax[2]} -> q={mx}")
-        over50 = [c for c in valid if c[3] > 50]
-        print(f"  families needing q > 50: {len(over50)}  "
-              f"({'*** Q50 BOUND VIOLATED' if over50 else 'Q50 bound holds on this sample'})")
-        for c in over50[:6]:
-            print(f"    q={c[3]}: {c[0]} M={c[2]} W={c[1]}")
-    none_q = [c for c in clearing if c[3] is None]
-    if none_q:
-        print(f"  families with no witness up to Qcap=400: {len(none_q)} (M>=2/25 but witness beyond cap?)")
-        for c in none_q[:4]:
-            print(f"    {c[0]} M={c[2]} W={c[1]}")
-    print()
-    print("  SPECTRUM VALUES in [2/25, 1/6] (the band just above the gap):")
+            print(f"    *** GAP HIT: {nm} M={M} W={W}")
+        if F(2,25) <= M <= F(1,6):
+            spectrum_in_band[M] = spectrum_in_band.get(M, 0) + 1
+        if M == F(2,25):
+            maxq_exact.append((nm, t.denominator))
     for M in sorted(spectrum_in_band):
         print(f"    {M} = {float(M):.5f}  (denom {M.denominator})  x{spectrum_in_band[M]}")
     dens = [M.denominator for M in spectrum_in_band]
     if dens:
         print(f"  => band denominators: max = {max(dens)} "
-              f"({'all <= 50: Farey-small, the bound reason' if max(dens)<=50 else 'some large!'})")
-    print()
-    print("  M = 2/25 EXACTLY (the delicate boundary case) maximizer denominators:")
-    for nm,W,q in maxq_exact[:10]:
-        print(f"    {nm}: maximizer q* = {q}")
+              f"({'all <= 50 (Farey-small: the bound reason)' if max(dens)<=50 else 'some > 50!'})")
     if maxq_exact:
-        print(f"  => max maximizer q* among 2/25-exact = {max(q for _,_,q in maxq_exact)}")
+        print(f"  M=2/25-exact maximizer q*: max = {max(q for _,q in maxq_exact)} "
+              f"(over {len(maxq_exact)} families)")
 
 if __name__ == "__main__":
     part_A()

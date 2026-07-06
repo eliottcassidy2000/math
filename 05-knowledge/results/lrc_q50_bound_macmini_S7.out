@@ -1,3 +1,9 @@
 ==============================================================================
 PART A: the Q50 witness-denominator bound (exact)
 ==============================================================================
+  families: 527;  with a 2/25-witness (M>=2/25): 527;  no witness up to q=130 (M<2/25): 0
+  MIN-WITNESS-DENOM: min=3, median=9, MAX=25
+    largest min-witness q: attainer 2/25 q=25  W=[1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 17, 19]
+  families needing q > 50: 0  (Q50 bound holds on this sample)
+
+  SPECTRUM in [2/25, 1/6] and 2/25-exact maximizers (small-height subsample):

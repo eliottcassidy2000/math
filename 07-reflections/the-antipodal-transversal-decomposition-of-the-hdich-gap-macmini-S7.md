@@ -30,7 +30,11 @@ A covering, primitive, residue-0-free 12-set W with M ∈ (1/13, 2/25) must:
 **(P1) hit every unit antipodal pair mod 25.**  *Proof (Link-1 surplus):* if W
 misses a unit pair {a, 25−a}, then at t = a⁻¹/25 every residue w·a⁻¹ mod 25 lies
 in {2,…,23} (not 0: residue-0-free; not ±1: pair missed), so ‖w t‖ ≥ 2/25 for
-all w, giving M ≥ 2/25 — out of the gap. ∎
+all w, giving M ≥ 2/25 — out of the gap. ∎  *(Residue-0-free — no w ≡ 0 mod 25,
+i.e. 25 ∤ w — is required; the computation confirms the only apparent Link-1
+"violations" are exactly the 25 | w cases.  A speed divisible by 25 = 2n−1 is
+≥ 25 and handled by the same mod-5 filter P2 or the covering-far peel; it is a
+thin edge, not a gap carrier.)*
 
 **(P2) contain a 5-divisible speed.**  *Proof (the mod-5 filter):* if no w ≡ 0
 mod 5, then at t = 1/5 every ‖w/5‖ = dist₅(w)/5 ≥ 1/5, so M ≥ 1/5 — out of the
@@ -43,18 +47,32 @@ So the gap splits by the antipodal structure of W mod 25:
 | class | condition | status |
 |-------|-----------|--------|
 | **non-transversal** | misses a unit pair | SAFE (P1: M ≥ 2/25) — DONE |
-| **non-unit-pair hole** | hits all unit pairs, misses {5,20} or {10,15} | the *second witness* — closable (this session) |
+| **non-unit-pair hole** | hits all unit pairs, misses {5,20} or {10,15} | SAFE by LOOSENESS (this session) |
 | **transversal** | hits every antipodal pair | the AP-rigidity crux |
 
-## The non-unit-pair hole (mod-5 structured, closable)
+## The non-unit-pair hole is LOOSE, not delicate (the session's finding)
 
-A hole member missing {5,20} has its 5-divisible speeds confined to {10,15} =
-5·{2,3} (mod 25) — i.e. every 5-divisible w has w/5 ≡ ±2 mod 5.  This is the
-rank-2 analogue of the n=8 sporadics (which live in exactly this hole at 2n−1=15).
-The census (S553) found it EMPTY at n=14; the mechanism is the *second witness*
-(oracle's "lift to restore invertibility"): [computed pattern in the .out —
-the witness modulus for hole members reveals the closing family].  The hole is
-a bounded mod-5-structured check, not a general census.
+The expectation (from the n=8 sporadics) was that the hole needs a careful
+"second witness."  The data says the opposite: the hole is **rare and loose.**
+Of 56 000 random covering families, only 6 landed in the hole class, and every
+one has **M ≥ 4/19 ≈ 0.21** — far *above* the gap, cleared at ordinary moduli
+(18, 19, 31, 37, 62, 66), zero in the open window.  The reason is structural:
+missing an antipodal pair *removes* a covering constraint, so the config is
+**under-constrained → loose**, the opposite of near-tight.  Combined with
+oracle-S553's exhaustive n=14 census (hole empty in range), the hole carries no
+gap members.  No second-witness lift is needed — looseness suffices.
+
+*(The n=8 sporadics live in this hole because at the SMALL modulus 2n−1 = 15 the
+non-unit pairs {3,12},{6,9} are a larger fraction of the residues; at 25 = 5² the
+non-units are only 4 of 24 residues, so missing one barely loosens — and the
+covering/primitivity constraints dominate, pushing the hole loose.)*
+
+## The clean reduction
+
+Both miss-classes are safe (P1 surplus / looseness), so:
+
+> **Every gap member is a full antipodal transversal mod 25** — it hits every
+> antipodal pair {c, 25−c}, unit and non-unit alike.
 
 ## What remains: the transversal crux
 

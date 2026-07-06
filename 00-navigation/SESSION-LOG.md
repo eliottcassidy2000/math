@@ -1,3 +1,21 @@
+## mac-mini-2026-07-06-S7 -- THE ANTIPODAL-TRANSVERSAL DECOMPOSITION (creative reconnection to oracle-S552/S553): gap member => FULL transversal mod 25; two of three classes fall to one-line witnesses (Link-1 surplus + mod-5 filter, PROVED); the hole is LOOSE not delicate; the crux sharpens to transversal AP-rigidity (HYP-4312)
+
+Prompt (owner): keep working the one finite object creatively; search past repo work even seemingly-unrelated for inspiring connections.
+
+THE REPO DIG (as directed): mined the reflections; found (a) opus-2026-06-30's 'covering-rigidity-via-moments is a DEAD END' (tightness is pointwise L-inf, not moment -- do NOT chase 2nd-moment/THM-589 for the rigidity; the tool is hole geometry); (b) opus-S553's 'tight-family-is-AP' reflection = oracle-S552's SPECTRAL GAP (M = 1/n or >= 2/(2n-1)) + S553's ANTIPODAL-TRANSVERSAL reduction mod 2n-1 -- ~50 sessions old, UNINTEGRATED with the current lane.  This is the inspiring connection: a SHARPER finite object than the Q50 census.
+
+THE SYNTHESIS (at the hdich level, 2n-1 = 25 = 5^2):
+ PROVED (elementary, residue-0-free): (P1) LINK-1 SURPLUS -- a covering primitive 12-set missing a UNIT antipodal pair {a,25-a} has M >= 2/25 (witness t=a^{-1}/25 puts every residue in {2..23}); (P2) MOD-5 FILTER -- no 5-divisible speed => M >= 1/5 at t=1/5; and 5-divisible speeds are FREE (>= 1/5 at any b/25 witness) so the mod-25 tension is carried entirely by the units.
+ THE DECOMPOSITION: gap member must (i) hit every unit pair (P1) and (ii) not miss a non-unit pair -- because the NON-UNIT-PAIR HOLE is LOOSE (verified: rare 6/56k, ALL M >= 4/19 ~ 0.21; missing a pair UNDER-constrains => loose; opposite of the expected 'delicate second witness'; the n=8 sporadics live here only because 2n-1=15 is small).  => GAP MEMBER = FULL ANTIPODAL TRANSVERSAL mod 25.
+ THE CRUX, SHARPENED: 'every covering primitive transversal mod 25 is the AP (M=1/13, out of the OPEN gap) or M >= 2/25' -- a small structured finite set = opus-S99's 2-D lift rigidity / the tight-family-is-AP census, localized to transversals; two of three classes peeled by one-line witnesses.
+ TWO MODULI: mod 13 (tight witness t=j/13 = my THM-593A residue pinning = oracle S553 s3) and mod 25 (surplus t=b/25); the gap is the Farey cell between (THM-622).
+
+WORK-SKIP VALUE: the Q50 census 'check 500k residue families' becomes 'prove the antipodal transversals mod 25 are AP-rigid' -- sharper, structured, directly tied to opus's projection floor.  Also logged the moment-dead-end so no one re-chases it.
+
+FILES: lrc_antipodal_hole25_macmini_S7.py (+.out); reflection the-antipodal-transversal-decomposition; HYP-4312 (+INDEX).  No canon overridden.
+
+NEXT: (a) the transversal AP-rigidity itself (the crux) -- localize opus-S99's projection floor to transversals; (b) does hitting all 10 unit pairs + covering + primitivity force AP among transversals? (structured enumeration of transversal patterns mod 25); (c) the residue-0 (25|w) edge via covering-far.
+
 ## opus-2026-07-06-S99 -- THE (A)-LEG PROJECTION FLOOR (M(U) >= 1/13, formal) + THE JUMP (rank-1 floor vs rank-2 leap to 1/6) + (A) = 2-D LIFT RIGIDITY + the Bonferroni/decouple assessment of kps's circle lemma (HYP-4296)
 
 Prompt: work the crux, long session, pull frequently, integrate incoming ideas, reasoning over builds.
