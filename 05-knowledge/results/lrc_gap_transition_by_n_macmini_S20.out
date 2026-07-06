@@ -1,0 +1,14 @@
+mapping the second gap (1/n,2/(2n-1)) across n -- broad fast-M search:
+
+   n  2n-1  2n-1 factored #gap-members(bounded search)                example
+   6    11             11                            1 4/23 [1, 3, 4, 5, 18]
+   7    13             13                            0 -
+   8    15            3*5                            0 -
+   9    17             17                            0 -
+  10    19             19                            0 -
+  11    21            3*7                            0 -
+  12    23             23                            0 -
+  13    25            5^2                            0 -
+
+=> where #gap-members drops to 0 = the empty-gap n; correlate with 2n-1's factorization
+   (p-adic route: does a valuation of 2n-1 predict emptiness?).

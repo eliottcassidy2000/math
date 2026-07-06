@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 """
+[FIX S20]: removed the buggy `if gcd(a,q)!=1: continue` -- it skipped witnesses at
+denominators that DIVIDE a pairwise sum/diff (e.g. q=11 via 22=4+18 as the non-coprime 2a/22),
+underestimating M.  Now checks ALL a. See MISTAKE log.
 mac-mini-2026-07-06-S17 (HYP-4452) -- the LEAVE-ONE-OUT ALIGNMENT lens for the density floor.
 
 NECESSARY CONDITION FOR COVERING: if S covers at beta (M(S)<beta), then for EVERY j,
@@ -55,7 +58,6 @@ def Mfast(S):
     Q.discard(0); best=F(0)
     for q in Q:
         for a in range(1,q):
-            if gcd(a,q)!=1: continue
             mn=min(min((v*a)%q,q-((v*a)%q)) for v in S)
             v=F(mn,q)
             if v>best: best=v

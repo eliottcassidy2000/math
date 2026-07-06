@@ -2927,3 +2927,14 @@ LESSON (the recursion of MISTAKE-102): a closed-form law verified at the ladder'
 **Fix:** for covering/tiling questions use EXACT rational arithmetic (test midpoints of the elementary intervals cut by all arc endpoints -- finitely many, exact) OR verify any claimed phi=0 at >=100x the search resolution before believing it.  Never trust a minimized grid-measure at its floor.
 
 -> HYP-4282 (S5, the artifact), HYP-4312 (S7, the resolution), HYP-4292 (sibling S6, same trap), kps CircleClearFloor.
+
+
+---## MISTAKE-114 (2026-07-06, mac-mini-S20) -- the FAST-EXACT-M helper (S16-S19) skipped non-coprime witness numerators, UNDERESTIMATING M.
+
+**What was wrong.** My fast exact-M `Mfast` (offered to the fleet S16 as an O(n^2*max) exact-M via the witness-denominator lemma q|(v_i+-v_j)) had `for a in range(1,q): if gcd(a,q)!=1: continue`. The lemma is CORRECT (M's reduced denominator DIVIDES a pairwise sum/diff), but a witness at a SUB-denominator q' dividing (v_i+-v_j) appears over q=(v_i+-v_j) as a NON-coprime numerator (q/q')*a', which the skip DISCARDED -- so Mfast could MISS the true (larger) M.
+
+**Caught by.** n=6 set {1,3,4,5,18}: Mfast gave 4/23=0.174 (looked like a gap member in the second gap (1/6,2/11)); the independent fine grid gave 2/11=0.1818 (the BOUNDARY, loose). The q=11 witness appears as 2a/22 with 22=4+18, and was skipped -- a FALSE POSITIVE.
+
+**Fix.** Remove the gcd skip; check ALL a in [1,q). Re-verified vs grid: AP=1/13, doubled-apex=2/25, block=2/25, single-lift {1..11,23}=1/12, n=7 {1,5,6,11,16,17}=5/33 all correct.
+
+**Impact (assessed, mostly benign).** (a) This session's 'n=6 gap member' = FALSE (it is 2/11, loose). (b) S16 targeted near-AP search RE-RUN with fixed M: still 0 in gap (15,976 families) -- conclusion HOLDS. (c) S17 n-specificity: the n=7 gap member 5/33 is GRID-confirmed independently -- STANDS. (d) S18 equioscillation AP=phi(n): counts UNCHANGED with fixed M (AP witnesses at a/13 coprime, 13 prime) -- STANDS. (e) S19 Fekete: direct energy, unaffected. The bug underestimates M so it risked FALSE NEGATIVES in searches; the n=13 emptiness rests on the fleet's correct-M exhaustive work (concurrent lift census), not my buggy searches. Files fixed: lrc_fastM_highscale_probe / lrc_leaveoneout_alignment / lrc_witness_denominator_dichotomies / lrc_equioscillation_count _macmini_S1x.py.

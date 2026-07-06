@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 """
+[FIX S20]: removed the buggy `if gcd(a,q)!=1: continue` -- it skipped witnesses at
+denominators that DIVIDE a pairwise sum/diff (e.g. q=11 via 22=4+18 as the non-coprime 2a/22),
+underestimating M.  Now checks ALL a. See MISTAKE log.
 mac-mini-2026-07-06-S18 (HYP-4462) -- the EQUIOSCILLATION COUNT: the AP touches its
 max M(S) at exactly phi(n) points = the units of Z/n; every other config at 2-4.
 
@@ -23,7 +26,6 @@ def Mfast_full(S):
     Q.discard(0); best=F(0); pts=[]
     for q in Q:
         for a in range(1,q):
-            if gcd(a,q)!=1: continue
             mn=min(min((v*a)%q, q-((v*a)%q)) for v in S)
             val=F(mn,q)
             if val>best: best=val; pts=[F(a,q)]

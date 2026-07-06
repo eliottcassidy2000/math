@@ -1,0 +1,15 @@
+DILATED APs c*{1..12} (first term = difference):
+  c=1: safe=0.00000 M=1/13 |S+S|=23
+  c=2: safe=0.00000 M=1/13 |S+S|=23
+  c=3: safe=0.00000 M=1/13 |S+S|=23
+  c=5: safe=0.00000 M=1/13 |S+S|=23
+SHIFTED APs {a, a+d, ..., a+11d} (min-doubling but NOT dilated):
+  a=2,d=1: [2, 3, 4, 5]... safe=0.06154 M=2/15 |S+S|=23 [safe>0]
+  a=1,d=2: [1, 3, 5, 7]... safe=0.11203 M=1/2 |S+S|=23 [safe>0]
+  a=3,d=1: [3, 4, 5, 6]... safe=0.10271 M=3/17 |S+S|=23 [safe>0]
+  a=2,d=3: [2, 5, 8, 11]... safe=0.11945 M=13/37 |S+S|=23 [safe>0]
+  a=5,d=2: [5, 7, 9, 11]... safe=0.13832 M=1/2 |S+S|=23 [safe>0]
+
+=> if shifted APs have safe>0 but |S+S|=23, then safe=0 is STRICTER than
+   min-doubling: safe=0 <=> DILATED AP c*{1..12} (first term = difference).
+   The loneliness extremizer needs the UNIT runner c, not just any AP.

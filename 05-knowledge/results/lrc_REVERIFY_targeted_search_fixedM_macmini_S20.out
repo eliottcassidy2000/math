@@ -1,0 +1,5 @@
+1-elt (x<=120), FIXED M: checked 731, in-gap 0  [5s]
+after 2-elt (x<=45), FIXED M: total checked 15245, in-gap 0  [64s]
+
+GAP MEMBERS (fixed M): 0
+=> CLEAN with corrected M (0 in gap holds)

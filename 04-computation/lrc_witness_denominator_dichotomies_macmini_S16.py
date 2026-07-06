@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 """
+[FIX S20]: removed the buggy `if gcd(a,q)!=1: continue` -- it skipped witnesses at
+denominators that DIVIDE a pairwise sum/diff (e.g. q=11 via 22=4+18 as the non-coprime 2a/22),
+underestimating M.  Now checks ALL a. See MISTAKE log.
 mac-mini-2026-07-06-S16 -- LEVERAGING THE DICHOTOMIES on the (G) crux.
 
 The tight witness is t=1/13 (on the 13-grid; lifts invisible there -- kps S22
@@ -70,7 +73,6 @@ for name,S in spectrum.items():
         # find witness a: some a with min_i ||v_i a/q|| = c/q
         awit=None
         for a in range(1,q):
-            if gcd(a,q)!=1: continue
             mn=min(min((v*a)%q, q-((v*a)%q)) for v in S)
             if mn==c: awit=a; break
         if awit is None:
