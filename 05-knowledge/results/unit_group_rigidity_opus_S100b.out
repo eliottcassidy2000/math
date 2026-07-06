@@ -1,0 +1,18 @@
+tight config {1..k} residues mod (k+1) vs the unit group (Z/(k+1))*:
+  k=4 (k+1=5=prime): tight residues = all nonzero True; |units|=4; FULL UNIT GROUP orbit (cleanest rigidity)
+  k=5 (k+1=6 composite): tight residues = all nonzero True; |units|=2; units=[1, 5] (subset; rigidity via CRT)
+  k=6 (k+1=7=prime): tight residues = all nonzero True; |units|=6; FULL UNIT GROUP orbit (cleanest rigidity)
+  k=11 (k+1=12 composite): tight residues = all nonzero True; |units|=4; units=[1, 5, 7, 11] (subset; rigidity via CRT)
+  k=12 (k+1=13=prime): tight residues = all nonzero True; |units|=12; FULL UNIT GROUP orbit (cleanest rigidity)
+  k=13 (k+1=14 composite): tight residues = all nonzero True; |units|=6; units=[1, 3, 5, 9, 11, 13] (subset; rigidity via CRT)
+  k=16 (k+1=17=prime): tight residues = all nonzero True; |units|=16; FULL UNIT GROUP orbit (cleanest rigidity)
+
+=> at k=12, k+1=13 PRIME: {1..12} = (Z/13)* EXACTLY -- the tight speeds ARE the
+   unit group, one free multiplicative orbit; perturbation breaks the orbit and
+   jumps to the next Farey rung 2/25. This is the 'free action forces divisibility'
+   meta-mechanism (density-quant THM-412, totient THM-416, modular-units HYP-3793)
+   realized concretely as the LRC gap's rigidity.
+
+good-point pair-sum denominators (grid attainment t=a/(v_i+v_j)):
+  k=5: tight {1..5} attains at 1/(1+5) [pair-sum 1+5=6]; 2nd {1..4,10} attains 2/(1+10) [pair-sum 1+10=11]
+  k=12: tight {1..12} attains at 1/(1+12) [pair-sum 1+12=13]; 2nd {1..11,24} attains 2/(1+24) [pair-sum 1+24=25]

@@ -31,6 +31,19 @@ PRIORITIZED LEVERS: (1) Mirsky-Newman on the circle = the l>=7 phi>0 lemma (the 
 FILES: reflection the-project-is-one-object-14-equals-2-times-7-macmini-S8; HYP-4322 (+INDEX).  No canon overridden; no new computation (pure synthesis, per the exploratory prompt).
 
 NEXT: (a) the Mirsky-Newman circle lemma (lever 1) -- the single cleanest obligation, now clearly the priority; (b) the |T|=3 cyclotomic almost-SOS (lever 2); (c) feed the synthesis to opus/kps (their covering-impossibility + SOS work IS the pointwise crux tool the synthesis endorses).
+## opus-2026-07-06-S100b -- BFS FAN-OUT: the Farey gap is ONE face of a meta-mechanism ('regularity => divisibility => quantized ladder => forbidden band'); the DOUBLY-PRIME PEEL; the tower of ladders (HYP-4306 continued)
+
+Prompt: BFS through repo docs, fan out concepts, synthesize connections, niche topics, recurring patterns that manifest differently on the surface.
+
+METHOD: 6 parallel Explore agents over ~275 mediant + ~192 three-gap/renormalization reflections (mediant/Stern-Brocot; three-distance/circle-rotation; renormalization/self-similar; good-point grid/denominators; quantization/roots-of-unity; tight-set rigidity/second-best).
+
+THE RECURRING PATTERN (the deliverable): the Farey ladder is ONE surface of a single mechanism proven >= 9 times across the project -- 'a regularity (equal spacing / free group action / continued-fraction extremality) forces an arithmetic DIVISIBILITY, which QUANTIZES an achievable quantity onto a LADDER with FORBIDDEN inter-rung windows': density-quant THM-412 (free rotation, w|count), totient THM-416 (free mu(K), any dim), lonely-measure THM-522 (lcm), AP-rigidity klein-S140 (Q=13r), congruence-subgroup HYP-3553 (Gamma_0(N)), Ostrowski HYP-4078, modular-units HYP-3793 ((Z/N)*), Farey-cell-void THM-622, primorial-dips THM-539. THREE SKELETONS that keep reappearing: (1) three-distance/Steinhaus = the RIGIDITY ENGINE (extremal={k*alpha}, <=3 gaps; HYP-2913 g(n)<=3 is the OPEN core the crux hinges on); (2) Stern-Brocot/continued-fractions = the ADDRESS SYSTEM (cap kernel walks the CF, HYP-3230; regimes are the SB tree); (3) free-action/divisibility = the ALGEBRAIC HEART (at k=12, 13 prime => tight {1..12} = (Z/13)* free orbit, VERIFIED).
+
+THE NEW LOAD-BEARING INSIGHT -- THE DOUBLY-PRIME PEEL: THM-539's primorial gate (collar dips a/(a(k+1)-1) deepen with the prime factors of k-1) EXPLAINS the reduction's peel. Raw n=14 = 13-runner level, k-1=12 composite => window (1/14,2/27) has the 3/41 dip (the anatomy-of-tight-set Farey neighbor). The peel to the 12-runner rigidity lands on k-1=11 PRIME (no a>=3 dips => window clean) AND k+1=13 PRIME (tight = free unit orbit). 13 being flanked by the primality that makes BOTH the window clean and the tight config a free orbit is why n=14 is provable. (Verified my side: 12-runner candidates all land at 1/13/2/25/above, none in-window; 3/41 dip is THM-539's, cited.)
+
+THE TOWER: ladder(k)={j/(kj+1)}, one per runner-count; the LRC reduction descends it (13-runner ladder(13) deep well 14/183 -> 12-runner ladder(12) deep well 14/169). Every magic number is a rung: 1/13 (S99 floor), 2/25 (mediant/threshold), 3/38 (first SB child = mac-mini HYP-4252 cell), 14/169 (deep well = rung 14), 1/6 (mac-mini census infimum = k=5 tight).
+
+Files: reflection one-mechanism-many-surfaces-the-gap-is-a-forbidden-band; farey/stern-brocot/tower/unit-group/primorial outs; HYP-4306 (+synthesis note). No new claims -- a synthesis session; niche revivals flagged (Beatty-Pell one-layer-below, Eisenstein-cusp three-distance, 7/89 binding modulus, the 21-resonance at dim 12).
 
 ## mac-mini-2026-07-06-S7 -- THE ANTIPODAL-TRANSVERSAL DECOMPOSITION (creative reconnection to oracle-S552/S553): gap member => FULL transversal mod 25; two of three classes fall to one-line witnesses (Link-1 surplus + mod-5 filter, PROVED); the hole is LOOSE not delicate; the crux sharpens to transversal AP-rigidity (HYP-4312)
 

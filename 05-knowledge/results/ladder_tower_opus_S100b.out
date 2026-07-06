@@ -1,0 +1,14 @@
+THE TOWER: ladder(k) = { j/(kj+1) }, one per runner-count k
+  k=11 runners: tight=1/12, mediant=2/23, rungs ['1/12', '2/23', '3/34']; deep-well-analog (j=k+2) = 13/144
+  k=12 runners: tight=1/13, mediant=2/25, rungs ['1/13', '2/25', '3/37']; deep-well-analog (j=k+2) = 14/169
+  k=13 runners: tight=1/14, mediant=2/27, rungs ['1/14', '2/27', '3/40']; deep-well-analog (j=k+2) = 15/196
+
+  n=14 construction level (13 runners): tight 1/14, deep well 14/183 = 14/183 (j=14 of ladder-13)
+  n=12 rigidity level (12 runners): tight 1/13, deep well 14/169 = 14/169 (j=14 of ladder-12)
+  the PEEL (14->13->...->12 rigidity) descends the tower one ladder per removed runner
+
+THREE-GAP rigidity engine (Steinhaus):
+  k=5 tight {1..5} at t*=1/6: phases = perfect AP; #distinct gaps = 2 (Steinhaus <=3; =1 means rigid-even)
+  k=12 tight {1..12} at t*=1/13: phases = perfect AP; #distinct gaps = 2 (Steinhaus <=3; =1 means rigid-even)
+  k=5 2nd-best {1..4,10} at t*=2/11: #distinct gaps = 3 (still <=3 => Steinhaus rigidity holds one rung up)
+  k=12 2nd-best {1..11,24} at t*=2/25: #distinct gaps = 3 (still <=3 => Steinhaus rigidity holds one rung up)

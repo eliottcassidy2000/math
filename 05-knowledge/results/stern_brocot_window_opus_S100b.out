@@ -1,0 +1,34 @@
+window (1/13,2/25); Farey neighbors? det = -1 (==-1/1 => neighbors)
+Stern-Brocot descendants inside the window (the gap-candidate M-values to exclude):
+   6/77 = 0.07792   (mediant-depth 4)
+   5/64 = 0.07812   (mediant-depth 3)
+   9/115 = 0.07826   (mediant-depth 4)
+   4/51 = 0.07843   (mediant-depth 2)
+   11/140 = 0.07857   (mediant-depth 4)
+   7/89 = 0.07865   (mediant-depth 3)
+   10/127 = 0.07874   (mediant-depth 4)
+   3/38 = 0.07895   (mediant-depth 1)
+   11/139 = 0.07914   (mediant-depth 4)
+   8/101 = 0.07921   (mediant-depth 3)
+   13/164 = 0.07927   (mediant-depth 4)
+   5/63 = 0.07937   (mediant-depth 2)
+
+k=12 Farey ladder rungs j/(12j+1):
+   j=1: 1/13 = 0.07692
+   j=2: 2/25 = 0.08000  = rung 2 (window top)
+   j=3: 3/37 = 0.08108
+   j=4: 4/49 = 0.08163
+   j=5: 5/61 = 0.08197
+   j=6: 6/73 = 0.08219
+   j=7: 7/85 = 0.08235
+   j=8: 8/97 = 0.08247
+   j=9: 9/109 = 0.08257
+   j=10: 10/121 = 0.08264
+   j=11: 11/133 = 0.08271
+   j=12: 12/145 = 0.08276
+   j=13: 13/157 = 0.08280
+   j=14: 14/169 = 0.08284  = 14/169 the DEEP WELL (my S77)
+   j=15: 15/181 = 0.08287
+
+3/38 in window: True  (= mediant(1/13,2/25) = True; mac-mini's HYP-4252 cell)
+14/169 = rung 14 of j/(12j+1): True  (the deep well, ABOVE window since 0.0828 > 0.08)
