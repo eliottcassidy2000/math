@@ -851,6 +851,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S29 -- THE DENSITY FLOOR IS THE PALEY SPECTRAL-FLATNESS PRINCIPLE (THM-126): the two project halves share one extremal + one Gauss-sum rigidity; converges with mac-mini Fekete/Monsky (HYP-4457)
+
+Prompt (owner): work the general floor creatively, tournament work as inspiration.
+
+Looked back at THM-126 (Paley uniquely maximizes H via flat Gauss-sum spectrum) and found the LRC density floor is the SAME spectral-flatness principle.
+
+THE PARALLEL (verified, lrc_spectral_flatness_paley_kps_S29): Paley = flat eigenvalues (Gauss sum) = unique H-max; AP = flat orbit-gaps (1 gap, roots of unity) = unique M-min; near-AP has spread (g=2-3, variance 5e-4..5e-3) moving WITH the M-jump.
+
+THE UNIFICATION: mac-mini's three-gap count g (HYP-4412) IS the LRC spectral multiplicity (g=1 flat AP, g>=2 spread). Collapses five equi- notions to one. AP = unique g=1 exactly as Paley = unique flat circulant.
+
+THE PROOF ROUTE (tournament template): qualitative g=1<=>AP = Sos converse three-gap (classical, the analog of THM-126 Gauss-sum flat<=>Paley); quantitative g>=2 => M-jump = Weil/Gauss-sum spread = RAMANUJAN-DEFECT bound. The Gauss sum's rigidity (|g|=sqrt(p), can't interpolate flat<->spread) makes H jump 189->175 AND M jump 1/13->1/12 -- SAME rigidity, both spectra.
+
+CONVERGENCE mac-mini HYP-4472 (same day): AP=Fekete equilibrium (= my flat spectrum, Fekete pts = roots of unity) + Monsky equidissection (= my S27 equidecomposability). Paley/Gauss + Fekete/Monsky + discrepancy = one classical-extremal AP from three directions.
+
+FILES: reflection the-density-floor-is-the-paley-spectral-flatness-principle-kps-S29.md; lrc_spectral_flatness_paley_kps_S29.py (+.out); HYP-4457. No Lean (synthesis/reframe). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S28 -- THE SINGLE-LIFT RIGIDITY: ap_single_lift_loose GREEN (every single-13-lift of the AP is loose at 2/25) -- the formal BASE CASE of the density floor / near-AP fiber rigidity (HYP-4447 brick)
 
 Prompt (owner): work the genuinely open residual (the density floor); pull often, reroute.
