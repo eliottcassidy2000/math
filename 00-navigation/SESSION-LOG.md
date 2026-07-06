@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-05-S13 -- THE PEELING LEMMA: loose branch, constructively, from cited LRC(<=13) + reduction to CRITICAL configs + the grand synthesis (regularity-is-extremal) (HYP-4157)
+
+Prompt (owner): work the concrete remaining things; prioritize creativity; look back through repo history for connected threads; synthesize; see the bigger missing picture; hypothesize; come to proofs.
+
+DEEP SYNTHESIS (2 Explore agents swept the repo history): the loose-branch crux (12-runner AP-rigidity, klein HYP-4151) is ONE object seen 4 ways -- Chebyshev equioscillation on (Z/13)* (kps-S255) / the difference-winding CIRCULANT TOURNAMENT (S2/S36, AP='Paley of the LRC') / three-distance EQUAL-SPACING (HYP-3775) / LRC(13) extremizer-uniqueness one level down. Reflection 'regularity-is-extremal-the-AP-and-paley-are-one-object': the tournament H-maximizer (Paley) and the LRC covering-min-MINIMIZER (AP) are the SAME regular-circulant extremizer, literally bridged by the winding map -- one principle, two shadows.
+
+THE CONCRETE ADVANCE -- THE PEELING LEMMA (PROVED, from cited LRC(<=13)): if W subset B (|W|<=6) and t0 is an optimal time of B\\W with every peeled w at ||w t0||>=2/25, then M(B)>=2/25. (B\\W has M>=1/(13-|W|)>2/25 by cited LRC; min over B at t0 >= 2/25.) Explicit witness; EVADES HYP-4137 (fixed templates die; peeling's witness modulus grows with the family). COVERAGE: 'redundant runner' => certified loose at depth 1; exhaustive [1,16] ALL non-AP certified (depth<=5), 600 random high-B at depth 1, dilated APs correctly excluded (tight). So the NON-CRITICAL loose branch is DISCHARGED CONSTRUCTIVELY.
+
+THE REDUCTION: gap-violators are NECESSARILY CRITICAL (every runner essential; else M(B\\v)=M(B)>=1/12>gap). So loose branch <=> 'only critical config with M<2/25 is the AP' = klein HYP-4151 boundedness, RESTATED via the clean irreducibility notion 'critical'. Critical configs are RARE (4 in [1,14], 20 in [1,16]) and gap-free (only AP below 2/25). INDUCTIVE TOWER LEAD: critical M<2/25 => every 11-subtuple at M>=1/12 (AP-tower signature); if a critical sub-max drop is TIGHT then level-11 rigidity + the ladder {1..11,12k}=k/(12k+1) force B={1..12}. Makes the loose branch a tower of regular-circulant uniqueness statements, each citing LRC one level down.
+
+CONVERGENCE: mac-mini-S59 (HYP-4152) also reduced the open half to '(all) 11-subfamilies loose' -- same peeling flavor, arrived at independently; my angle adds the explicit peeling-lemma witness + the CRITICAL characterization + the constructive 99.7% discharge. klein HYP-4151 remains the canonical rigidity statement; mine + mac-mini's are the constructive/reductive complements.
+
+FILES: 05-knowledge/results/lrc14_peeling_lemma_critical_reduction_kps_S13.md; 04-computation/lrc14_peeling_kps_S13.py; 07-reflections/regularity-is-extremal-the-AP-and-paley-are-one-object-kps-S13; HYP-4157. Note to klein sent. NEXT: the critical case (inductive step 'critical sub-max drop is tight'); or mine Sungkawichai-Trakulthongchai LRC(12/13) for extremizer-uniqueness to seed the induction base.
+
 ## mac-mini-2026-07-05-S59 -- THE AP-BASE CASE of klein's loose-branch rigidity PROVED elementarily (ladder + CRT free-rider); reduces the open half to "all 11-subfamilies loose" (HYP-4152)
 
 Prompt (owner): improve the LRC(14) proof; figure out the EXACT mathematics creatively BEFORE formalizing.
