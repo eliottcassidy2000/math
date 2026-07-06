@@ -1,3 +1,21 @@
+## mac-mini-2026-07-06-S1 -- THE k-STRATIFICATION LEMMA PROVED + LEAN GREEN (4 kernel-pure theorems); the k-reduction COMPOSED with kps's cluster-gcd ladder (k >= 2 strata height-bounded; |S|=0 dead; k=1 pair sums to EXACTLY 38); the 3/38 cell's route advanced on both legs (HYP-4232)
+
+Prompt (owner): work the correct route toward the necessary proofs; formalize what completes.
+
+PULLED FIRST: kps-S17 overnight -- (a) MISTAKE-112 (their multi-fold law FALSE at l=4,5, caught by exact enumeration before Lean; the >= 2/25 floor SURVIVES; my S54b package composes unchanged); (b) THE CLUSTER-GCD LADDER PROVED (HYP-4217): (25-4|S|) gcd(W\S) <= 50 Sum_S|w| -- THE absolute-height mechanism (periodicity of the big side's citation margin + exact equidistribution counting; my floating 7-cluster bounded at gcd <= 150; the surviving escape = gcd-1 = descent).  opus-S93: the l>=7 formal chain COMPLETE (LRCDescentSurface + LRCClearCert + strengthened TowerLift).
+
+THE WORK (the correct route, from my S55b reroute):
+ (1) THE k-STRATIFICATION LEMMA (proved, elementary; verified 0 violations exhaustively/randomized): a 3/38-attainer's maximizer grid is 38k (38 | 3q* => 38 | q*, gcd(3,38)=1); ALL binders divisible by k (v m == +-3k mod 38k + gcd(m,k)=1); the k-multiples' quotients inherit the full mod-38 level-3-with-binder structure via the EXACT scaling identity d_{38k}(kx) = k d_38(x); the binding quotient pair sums to exactly 38.
+ (2) THE k-REDUCTION (the composition with the ladder): S = non-k-multiples: |S|=0 => k=1 by primitivity; 1 <= |S| <= 6 => k <= 50 Sum_S |w|/(25-4|S|): k >= 2 strata HEIGHT-BOUNDED -- the CRT-ray escape is closed by exactly the mechanism the periodicity theorem demanded; 7 <= |S| <= 10 = the named residual (quotient side <= 5 elements carrying a (v',38-v') pair).
+ (3) THE k=1 BASE classified: pair (v, 38-v), 9 both-odd + 9 both-even shapes; both-even halves to (u, 19-u) -- the mod-19/E_p world.
+ (4) LEAN (3 build rounds): LRCKStratification.lean GREEN -- dInt_scale, binder_dvd, grid_div_38 (omega one-liner!), pair_sum_dvd; kernel-pure ([propext] alone for pair_sum_dvd).  Registered.
+
+REMAINING on the cell: the k=1 realization kill (18 anchored shapes x profile x exactness -- census-shaped) + the |S| >= 7 residual.  Both feed klein's induction machinery as alternates.
+
+FILES: drafts/k-stratification-lemma-macmini-S1.md; lrc_kstrat_verify_macmini_S1.py + .out; LRCKStratification.lean (registered); HYP-4232 (+INDEX).  No canon overridden.
+
+NEXT: (a) the k=1 realization kill (my census harness; the 18 shapes are concrete anchors); (b) LRCClusterGcd.lean = kps's if they want it (their proof); (c) the |S| >= 7 residual's quotient-side census.
+
 ## mac-mini-2026-07-06-S2 -- FORMALIZATION STATUS PASS: LRCLiftFloorAssembly confirmed sorry-free (3 green theorems) but UNCONSUMED downstream (the wiring gap named); the (G) division of labor verified live (sibling: k=1 kill; kps: k-reduction); no collision taken
 
 Prompt (owner): complete the full formalization; pull frequently to integrate.
