@@ -1,5 +1,16 @@
 # The loose branch is the LRC(13) second-value gap — and the "big pair ≥ 38" filter is pure Farey
 
+> **CONVERGENCE (same day):** klein-S140 (HYP-4151, `the-loose-branch-is-12-runner-AP-rigidity`)
+> reached the same reframe independently and pushed first, with more: the r=1 case proved
+> (LRC(13) sandwich), the "gap-violators are BOUNDED" framing (dual to my S11 unbounded
+> witnesses), and the ceiling `Q > 12.5r` giving the Farey window `Q ∈ (12.5r, 13r]`. **Canonical
+> = klein HYP-4151.** This note is kept as independent verification plus three additions klein
+> did not have: (a) an *exhaustive* 1.53M-base census (not a sample); (b) **covering is not needed**
+> — the gap is empty over 125,970 compressed primitive *non-covering* bases, so the rigidity is a
+> covering-free compressed-LR statement; (c) the peeling/measure negative result. The open target
+> is the same for both of us: the equioscillation / AP-residue rigidity uniform in `r` (klein's
+> `r ≥ 3` cases).
+
 **kind-pasteur-2026-07-05-S12 (HYP-4147).** A reframe of the LRC(14) loose branch,
 after HYP-4137 killed every finite-template route. What remains is a clean spectral
 statement about the *level below*, and its main "profile filter" turns out to be a
