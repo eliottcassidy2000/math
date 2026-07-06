@@ -339,3 +339,4 @@ import TournamentH7.LRCDescentSurface
 import TournamentH7.LRCClearCert
 import TournamentH7.LRCClearRows
 import TournamentH7.LRCClearRowsB5
+import TournamentH7.LRCTwoBand

@@ -1,0 +1,6 @@
+pattern witness t_P = 3/13, margin = 2/13 (>= 1/13: True)
+J = (0.1157, 0.155) core-clear at 1/14 (dense exact sample): True
+S = 9: t in J: True; core min margin = 0.13675 (>1/14: True); top min margin = 2/13 (== pattern margin: True)
+S = 100: t in J: True; core min margin = 0.12231 (>1/14: True); top min margin = 2/13 (== pattern margin: True)
+S = 1000000: t in J: True; core min margin = 0.11570 (>1/14: True); top min margin = 2/13 (== pattern margin: True)
+S = 1000000000007: t in J: True; core min margin = 0.11570 (>1/14: True); top min margin = 2/13 (== pattern margin: True)

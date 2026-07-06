@@ -73,3 +73,36 @@ Period counting is Finset arithmetic. Free-set membership at scale S is the toot
 integer schema at denominator 14·Q·S (kernel decide; the ClearCert pattern transplants
 with 13 → 14 — a sibling file, mechanical). The per-pattern φ > 0 checks are exact
 rational interval sweeps (decide-able as list computations if wanted).
+
+
+## S97 UPGRADE: the theorem goes EXACT and FORMAL (HYP-4256)
+
+The measure/period-counting version above is superseded by the EXACT TRANSPORT — and
+the open lemma disappears:
+
+**Theorem (two_band_transport, GREEN in LRCTwoBand.lean).** Core clear interval
+(a, a+L) (pointwise > 1/14, certified by toothMiss tables), pattern witness t_P with
+all |p·t_P − m| ≥ 1/13 (supplied by CITING LRC(13) on the pattern: |P| ≤ 12 speeds),
+and any scale S with S·L > 1. Set k = ⌊S·a − t_P⌋ + 1 and t = (t_P + k)/S. Then
+t ∈ (a, a+L) and for every p ∈ P: (S·p)·t = p·t_P + p·k ≡ p·t_P (mod 1) — the top
+band's margins are EXACTLY the pattern's, at every scale. Corollary two_band_lonely14:
+all runners strictly above 1/14.
+
+* No φ, no measure, no Lipschitz on the top band. The S96 free-fraction machinery
+  remains true but is no longer needed; the Newman-shaped φ > 0 lemma is BYPASSED
+  (and is separately a corollary of the citation: the pattern's LRC(13) witness has a
+  free neighborhood of width ≥ 2(1/13 − 1/14)/max(P)).
+* The scale threshold improves to S > 1/L (from 2/|J|); L comes from the citation on
+  the core + Lipschitz, so the gap condition between bands is explicit and small.
+* Verified end-to-end at S up to 10^12 + 7 (two_band_exact_opus_S97.out): top margins
+  exactly 2/13 (the pattern witness's margin, transported without loss).
+* Height-uniformity on CRT-frozen rays is now a FOUR-LINE formal theorem consuming two
+  citation instances (core and pattern) plus integer arithmetic.
+
+REMAINING for the crux: the GAPLESS residual — families where no band split satisfies
+S·L > 1 (all consecutive scale ratios below ~84·B_core-ish). These cannot form frozen
+rays (scaling any sub-block of a ray creates a gap), so they are height-bounded per the
+census's reach or fall to the pinning-sparsification of near-unit constraints — the
+single-scale template lane (Q0, kps/mac-mini) is exactly their home. The division of
+labor is now clean and total: gapped = two-band transport (formal); gapless = single
+scale (template/census).
