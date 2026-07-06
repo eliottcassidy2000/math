@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-05-S16 -- THE CRT-FOLD of the Farey-cell voids: composite-q second-value-gap cells reduce to small-modulus multi-color problems (tool for mac-mini THM-622) (HYP-4197)
+
+Prompt (owner): keep working creatively on the remaining; creative reasoning + hypothesis testing first, then formalize.
+
+Worked mac-mini's THM-622 (the second-value gap (1/13,2/25) = a Farey-cell void: (G) <=> no 12-set attains c/q with c>=3, q in (12.5c,13c)) with the S11 parity-split lens. Creative reasoning + tests:
+
+THE CRT-FOLD (extends my S11 parity-split q=2p to general composite q): every Farey-cell interior point c/q with COMPOSITE q reduces, by CRT, to a small-modulus MULTI-COLOR avoidance problem (the danger band {|r|_q<c} factors into joint (mod a, mod b) color-classes). VERIFIED EXACT: c=3 q=38=2*19 -> mod-19 two-color (even avoid {0,+-2}, odd avoid {+-1}), 0/50k mismatches; c=4 q=51=3*17 -> 3-color mod 3 + avoid mod 17. STRUCTURE: c<=6 cells are ALL composite (38,51,63/64,77) => all fold to small modulus; the FIRST prime (irreducible) core is q=89 (c=7). So mac-mini's first target 3/38 (the mediant) folds to a MOD-19 problem.
+
+MAX-ATTAINED FOLDS TOO: M=3/38=1.5/19 forces M at denom 19 <= 1/19, i.e. B PINNED at +-1 mod 19 (every unit dilation hits {0,+-1} mod 19). So a 3/38-attainer = [pinned +-1 mod 19] + [clearance-3 parity-split witness mod 38] + [covers 2..12] = a finite Z/2 x Z/19 problem + integer covering. CAVEAT (mac-mini's point, confirmed via S11 parity DIVIDEND): mod-19 pinning alone does NOT block the mod-38 witness (satisfiable) -- the contradiction needs the other denom-38 competitors (t=3a/38, a/38+-delta) + covering, all now folded onto Z/2 x Z/19.
+
+FAREY MAP: sigma_2=2/25 neighbors are 1/13 (cell floor, 3/38 the mediant inside), 3/37 & 1/12 (above). Structured covering 38-merge sets attain 3/37 (near-AP tightest) or 2/25 exactly (klein's sporadic {1,2,3,5,7,8,9,10,11,12,17,19}), NEVER the cell interior 3/38 -- attainment quantizes to the cell boundary, as THM-622 predicts.
+
+HONEST: a creative TOOL/reframe for mac-mini's attack (folds the composite-q cells c<=6), NOT a closure of the void (the covering + max-attained contradiction on Z/2 x Z/19 + competitors is the residual, mac-mini's lane). Offered to co-attack. FILES: results/lrc14_crt_fold_farey_cells_kps_S16.md; 04-computation/lrc14_crt_fold_farey_kps_S16.py; HYP-4197. Note to mac-mini sent. Connects S11 (parity-split), THM-622 (mac-mini), THM-621/HYP-4177 (ladder attains only boundaries), HYP-4167 (Jain-Kravitz voids).
+
 ## klein-2026-07-05-S143 -- HYPOTHESIS REFUTED BEFORE FORMALIZATION: the dilated multi-top free-rider union bound is FALSE (263/3496 counterexamples); the c>=2 stratum needs per-family steering CERTIFICATES, not a theorem (HYP-4192)
 
 Prompt (owner): creative reasoning + hypothesis testing FIRST, then formalize as necessary; avoid large builds.
