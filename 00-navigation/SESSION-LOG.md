@@ -584,6 +584,19 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S21b -- slice11_loose GREEN: the ENTIRE {1..11,v} slice loose-classification CLOSED (opus divisor-protection + my ladder exhaust v>=13); a complete face of gap-emptiness (HYP-4357 closure)
+
+Prompt (owner): work on closing remaining proofs.
+
+CLOSED a complete face of gap-emptiness (G): the {1..11,v} slice. slice11_loose (LRCLadderLoose.lean, GREEN kernel-pure, corpus 8701): for EVERY v >= 13, the family {1..11,v} carries a 2/25-margin point (loose, above the gap). Proof by_cases on 12|v:
+  - 12|v (v=12m, m>=2): reuse ladder_family_loose (my HYP-4357, t=m/(12m+1) -> margin m/(12m+1) >= 2/25).
+  - 12-nmid-v: apply opus's int_far_of_not_dvd_k (HYP-4366 divisor protection) at t=1/12 -- all of 1..11 AND v are 12-multiple-free, so margin 1/12 > 2/25.
+The two divisibility cases EXHAUST v >= 13; v=12 is the sole tight AP (M=1/13). So the {1..11,v} face of (G) is COMPLETE.
+
+This is exactly the "closing proofs" move: combining two independently-formalized lemmas (opus HYP-4366 + kps HYP-4357) into a complete closed sub-case. Non-overlapping with the deep open pieces (strict lift-rigidity mac-mini HYP-4392, universal floor opus HYP-4376, gap-emptiness G) -- those remain the open conjecture.
+
+FILES: LRCLadderLoose.lean (slice11_loose added). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S21 -- THE m/(12m+1) FAREY LADDER + broad spectral-gap census: the gap edges 1/13, 2/25 are the first two rungs of ONE ladder; ladder_family_loose GREEN (the resonant 12|v case, completing opus's {1..11,v} classification) (HYP-4357)
 
 Prompt (owner): work on proving the remaining crux.

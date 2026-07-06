@@ -28,6 +28,7 @@
 -/
 import Mathlib
 import TournamentH7.LRCHarmonicGate
+import TournamentH7.LRCDivisorProtection
 
 namespace LonelyRunner
 namespace LadderLoose
@@ -96,7 +97,53 @@ theorem ladder_family_loose (m : ℤ) (hm : 2 ≤ m) :
     nlinarith [hmR2]
   exact le_trans hlb h
 
+/-! ## the full `{1,…,11, v}` slice classification -/
+
+/-- The `{1,…,11, v}` slice as a map `Fin 12 → ℤ`. -/
+def slice11 (v : ℤ) (i : Fin 12) : ℤ :=
+  if (i : ℕ) < 11 then ((i : ℕ) + 1 : ℤ) else v
+
+/-- **THE `{1,…,11, v}` SLICE IS LOOSE FOR EVERY `v ≥ 13`** — the complete
+loose classification, combining opus's divisor protection (`12 ∤ v` ⟹ loose at
+`1/12`) with the Farey ladder (`v = 12m`, `m ≥ 2` ⟹ loose at `2/25`).  Every
+`{1,…,11, v}` with `v ≥ 13` carries a `2/25`-margin point; the only member of the
+slice NOT loose is `v = 12` (the tight AP `{1,…,12}` at `1/13`).  So the slice
+avoids the open gap `(1/13, 2/25)` entirely.
+
+This closes the `{1,…,11, v}` face of gap-emptiness: `12 ∤ v` (opus HYP-4366)
+and `12 ∣ v` (kps HYP-4357) together exhaust `v ≥ 13`. -/
+theorem slice11_loose (v : ℤ) (hv : 13 ≤ v) :
+    ∃ tstar : ℝ, ∀ i : Fin 12, ∀ p : ℤ,
+      (2 : ℝ) / 25 ≤ |(slice11 v i : ℝ) * tstar - p| := by
+  by_cases hdvd : (12 : ℤ) ∣ v
+  · -- the ladder case: v = 12m, m ≥ 2
+    obtain ⟨m, rfl⟩ := hdvd
+    have hm : 2 ≤ m := by omega
+    have heq : slice11 (12 * m) = ladderSpeed m := by
+      funext i; rw [slice11, ladderSpeed]
+    rw [heq]
+    exact ladder_family_loose m hm
+  · -- the divisor-protection case: 12 ∤ v, loose at t = 1/12
+    refine ⟨1 / 12, ?_⟩
+    intro i p
+    have hnd : ¬ (12 : ℤ) ∣ slice11 v i := by
+      rw [slice11]
+      by_cases hi : (i : ℕ) < 11
+      · rw [if_pos hi]
+        intro ⟨c, hc⟩
+        omega
+      · rw [if_neg hi]; exact hdvd
+    have h := DivisorProtection.int_far_of_not_dvd_k 12 (by norm_num) (slice11 v i) hnd p
+    have hval : (slice11 v i : ℝ) * (1 / 12) - p
+        = (slice11 v i : ℝ) / (12 : ℕ) - p := by push_cast; ring
+    rw [hval]
+    have h2 : (2 : ℝ) / 25 ≤ (1 : ℝ) / 12 := by norm_num
+    have h12 : ((12 : ℕ) : ℝ) = (12 : ℝ) := by norm_num
+    rw [h12] at h ⊢
+    linarith [h]
+
 #print axioms ladder_family_loose
+#print axioms slice11_loose
 
 end LadderLoose
 end LonelyRunner
