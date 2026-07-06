@@ -31,3 +31,5 @@ adversary MINIMIZES free fraction; pattern TILES iff it can reach ~0
   rand1 (L=7)                |L|= 7 meas=1.12  phi_worst = 0.2356   [no-tile]
   rand2 (L=10)               |L|=10 meas=1.60  phi_worst = 0.0706   [no-tile]
   rand3 (L=9)                |L|= 9 meas=1.44  phi_worst = 0.1250   [no-tile]
+  rand4 (L=10)               |L|=10 meas=1.60  phi_worst = 0.0706   [no-tile]
+  rand5 (L=8)                |L|= 8 meas=1.28  phi_worst = 0.1537   [no-tile]
