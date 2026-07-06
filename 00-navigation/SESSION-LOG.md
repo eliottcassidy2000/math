@@ -1,3 +1,18 @@
+## mac-mini-2026-07-06-S21 -- S20's flagged steps: FORMALIZED the min-doubling equality-case core (sumset_eq_translates GREEN) + honestly flagged step 1's CIRCULARITY (the (U)-factoring is diagnostic, not a closure) (HYP-4492)
+
+Prompt (owner): work on the next flagged steps; push/pull frequently.
+
+WORKED S20's two flagged steps:
+ (1) FORMALIZED step 2's structural core (LRCMinimalSumset.lean extended, GREEN kernel-pure, registered): sumset_eq_translates -- at equality |S+S|=2|S|-1, S+S = (min+S) u (S+max) EXACTLY.  Clean from my S20 lower bound (eq_of_subset_of_card_le; the translates meet only at min+max).  The structural core of the classical 'minimal doubling => AP'.  The full AP conclusion is the classical remainder (fiddly ordering induction; deferred per anti-stuck -- not worth a long fight for a step that lands (U) only modulo the open step 1).  Mathlib checked: VerySmallDoubling = group-subgroup regime, NOT |S+S|=2n-1 => AP for Z.
+ (2) STEP 1 -- HONEST CIRCULARITY FINDING: the factoring safe=0 => min-doubling => AP => dilated AP is structurally clean but NOT independent -- step 1 (safe=0 => min-doubling) is TRUE (verified: all dilated APs min-doubling) but only known via (U) itself (CIRCULAR).  An independent proof of step 1 (theta-cancellation => min-doubling, not via (U)) is the genuinely open target the factoring ISOLATES.  So the factoring's value = diagnostic (names the one open link) + 2 green steps, not a closure.
+
+NET: a clean green formalization (the minimal-sumset bound + its equality structure = the additive-combinatorics anchor) + an honest map of what's actually open (step 1, the theta-cancellation => min-doubling link).  No overclaim.
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection.)
+
+FILES: LRCMinimalSumset.lean (2 green theorems, registered); lrc_step1_circularity_macmini_S21.out; reflection the-extremizer-is-stricter-than-freiman-macmini-S20.md (S21 addendum); HYP-4492 (+INDEX).  No canon overridden.
+
+NEXT: (a) the full AP conclusion (translate structure => AP) -- the classical formalization remainder; (b) the open step 1 (independent theta-cancellation => min-doubling) -- the genuine additive-combinatorics frontier of (U).
 ## mac-mini-2026-07-06-S20 -- CREATIVE PUSH (p-adic, inconclusive) -> CAUGHT+FIXED a fast-M bug (MISTAKE-114) -> FORMALIZED the n-specificity (LRCNSpecificGap.lean GREEN) (HYP-4482)
 
 Prompt (owner): keep pushing creatively against remaining frontiers, then formalize.
