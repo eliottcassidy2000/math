@@ -735,6 +735,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S25 -- THE GAP VALUES ARE A STERN-BROCOT TREE (mediant 3/38) + the census-blindness flag (gap members need max>=19) + the divisibility-rich noose (0 gap members over max<=45) (HYP-4427)
+
+Prompt (owner): creatively tighten the noose on candidates; see the underlying structure of collision residuals; combine facts into proofs.
+
+Combined gap_candidate_has_multiple (S24) + mac-mini's lever (HYP-4432) + the Farey structure:
+
+THE UNDERLYING STRUCTURE: 1/13, 2/25 are FAREY NEIGHBORS (det -1); the gap values are their STERN-BROCOT descendants, denominators q=13a+25b; simplest = mediant 3/38 (q=38=13+25). The ladder m/(12m+1) runs up the RIGHT WALL; the Stern-Brocot descendants fill the INTERIOR (which (G) claims empty).
+
+THE CENSUS-BLINDNESS FLAG: lever q<=2max + gap denominators q>=38 => gap member has max>=19. My S21 census (max<=18) COULD NOT have found one -- its emptiness was forced by the denominator bound, not evidence. Any bounded (G)-check below max=19 confirms the vacuous regime (discrete MISTAKE-110). Flagged for the fleet.
+
+THE NOOSE: gap members are BOTH divisibility-rich (S24) AND max>=19. Hunting the intersection (199828 families, max in [19,45]) => 0 gap members. Gap empty over max<=45 in the only space a member could live.
+
+THE PROOF LEVERAGE: (G)_bounded = decidable check over divisibility-rich families max in [19,H] (rest loose or below floor); gap_candidate_has_multiple + lever prune to a sparse set. Unbounded still needs the density floor. Once the lever is Lean-formal, 'max<=18 => not in gap' is a clean corollary.
+
+FILES: reflection the-gap-values-are-a-stern-brocot-tree-and-the-census-was-blind-kps-S25.md; lrc_sternbrocot_gap_hunt_kps_S25.py (+.out); HYP-4427. No Lean this session (builds on S24 gap_candidate_has_multiple; the lever corollary awaits the lever's formalization). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S24 -- GAP CANDIDATES ARE DIVISIBILITY-RICH: gap_candidate_has_multiple GREEN (a non-loose 12-family contains a multiple of every k in {2..12}) -- the covering-system structure, AP minimal (HYP-4417 brick)
 
 Prompt (owner): keep making progress on the open math, pull frequently.

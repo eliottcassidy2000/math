@@ -1,0 +1,30 @@
+=== the gap (1/13, 2/25) as a Farey interval: Stern-Brocot descendants ===
+  det check: 1*25 - 2*13 = -1 (Farey neighbors)
+  simplest gap fractions (denominator, value, factorization of q):
+    3/38 = 0.07895   q = 38 = 2*19
+    4/51 = 0.07843   q = 51 = 3*17
+    5/63 = 0.07937   q = 63 = 3*3*7
+    5/64 = 0.07812   q = 64 = 2*2*2*2*2*2
+    6/77 = 0.07792   q = 77 = 7*11
+    7/88 = 0.07955   q = 88 = 2*2*2*11
+    7/89 = 0.07865   q = 89 = 89
+    7/90 = 0.07778   q = 90 = 2*3*3*5
+    8/101 = 0.07921   q = 101 = 101
+    8/103 = 0.07767   q = 103 = 103
+    9/113 = 0.07965   q = 113 = 113
+    9/115 = 0.07826   q = 115 = 5*23
+  => mediant 3/38 (q=38=13+25) is the simplest; gap members need q>=38, so max>=19.
+
+=== HUNT: divisibility-rich families with max >= 19, looking for M in (1/13,2/25) ===
+  MAXH=24: 39849 divisibility-rich families (max>=19); gap members = 0
+  MAXH=28: 39990 divisibility-rich families (max>=19); gap members = 0
+  MAXH=32: 39996 divisibility-rich families (max>=19); gap members = 0
+  MAXH=38: 39997 divisibility-rich families (max>=19); gap members = 0
+  MAXH=45: 39996 divisibility-rich families (max>=19); gap members = 0
+
+TOTAL: 199828 divisibility-rich families probed (max in [19,45]); gap members = 0
+  NO gap member in the divisibility-rich space at max in [19,45].
+  Combined with S21 (max<=18 forced loose/tight), the gap is empty over max<=45
+  in the ONLY space where a member could live (divisibility-rich).
+  tightest divisibility-rich families just above 2/25:
+    v=[1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]  M=0.083333
