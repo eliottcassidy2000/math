@@ -87,25 +87,42 @@ def constraints(ws):
     Z = all(w % 38 != 0 for w in ws)
     return A, B, C, D13, Z
 
+def dq(x, q):
+    x %= q
+    return min(x, q - x)
+
 def sat_score(ws):
     A, B, C, D13, Z = constraints(ws)
     s = 0
-    # count violations granularly for hill-climbing
     s += sum(1 for a in UNITS38 if not any(d38(w * a) <= 3 for w in ws))
     s += 0 if B else 5
     s += sum(1 for b in UNITS39 if not any(d39(w * b) <= 3 for w in ws))
-    if not any(w % 13 == 0 for w in ws):
-        s += sum(1 for b in range(1, 7) if not any(w % 13 in (b, 13 - b) for w in ws))
     s += 0 if Z else 50
+    # FULL level-3/38 pinning: q <= 12: covering (some w == 0 mod q);
+    # q in 13..25: near-unit (every unit a: some w*a in {0,+-1} mod q)
+    for q in range(2, 13):
+        if not any(w % q == 0 for w in ws):
+            s += 3
+    for q in range(13, 26):
+        if any(w % q == 0 for w in ws):
+            continue
+        for b in range(1, q // 2 + 1):
+            if gcd(b, q) != 1:
+                continue
+            if not any(w % q in (b, q - b) for w in ws):
+                s += 1
     return s
 
-log("PHASE 1: randomized + hill-climbing satisfiability hunt over Z/1482 templates")
-M = 2 * 3 * 13 * 19          # 1482
+log("PHASE 1b: hunt with the FULL level-3/38 pinning stack (covering 2..12 + near-unit 13..25)")
+from math import lcm as _lcm
+M = 1
+for q in range(2, 40):
+    M = _lcm(M, q)          # residues mod lcm(2..39): all constraints fold here
 best = None
 found = []
 t0 = time.time()
 restarts = 0
-while time.time() - t0 < 600 and len(found) < 5:
+while time.time() - t0 < 900 and len(found) < 5:
     restarts += 1
     ws = [random.randrange(1, M) for _ in range(12)]
     ws = [w if w % 38 else w + 1 for w in ws]
