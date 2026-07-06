@@ -359,3 +359,4 @@ import TournamentH7.LRCWitnessDenominator
 import TournamentH7.LRCDilationInvariance
 import TournamentH7.LRCLeaveOneOut
 import TournamentH7.LRCRelationLattice
+import TournamentH7.LRCMinimalSumset  -- mac-mini-2026-07-06-S20: minimal-sumset bound |S+S| >= 2|S|-1 (the Freiman base of the density-floor AP-uniqueness; opus-S112 theta-sum frame) (HYP-4482)
