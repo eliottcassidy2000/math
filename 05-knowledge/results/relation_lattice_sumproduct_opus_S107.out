@@ -1,0 +1,5 @@
+relation-lattice richness (short relations |m_i|<=2) + additive energy + residues:
+  AP {1..12}: short-rel=2636014, E+=1156, residues=(Z/13)* full: True
+  lift {12->25}: short-rel=1872674, E+=936, residues-full=True
+  lift {11,12->24,25}: short-rel=1652076, E+=828, residues-full=True
+  shift {2..13}: short-rel=2354114, E+=1156, residues-full=False

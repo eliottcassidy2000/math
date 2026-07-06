@@ -1,3 +1,17 @@
+## opus-2026-07-06-S107 -- GOVERNING-PATTERN REFRAME: the LRC is a SUM-PRODUCT RIGIDITY -- the AP is the unique additive-multiplicative coincidence at the prime (3-explorer synthesis) (HYP-4396)
+
+Prompt: work on closing (G); look for self-similar patterns; reframe what we aim to prove; what pattern governs the LRC that we are not picking up on?
+
+METHOD: 3 parallel explorers (difference-core/renormalization; character-sum/cyclic-group; governing-structure meta) + concrete relation-lattice/sum-product tests, held against mac-mini's fresh (G) results (S14 multi-scale CLOSED; safe=theta over the relation lattice; density floor = Riesz-product, Bedert 2025).
+
+THE REFRAME (the pattern we were not picking up on): LRC is NOT an additive covering problem and NOT a multiplicative residue problem -- it is the RIGIDITY of their COINCIDENCE. (1) The governing object is the RELATION LATTICE L(S)={m: sum m_i v_i=0} (NOT translation-invariant -- AP has 2.64M short relations vs 2.35M for {2..13} at equal energy 1156); safe=theta over L(S); AP maximizes it. (2) At the prime 13, {1..12} is SIMULTANEOUSLY the additive interval [1,12] (max relation lattice = theta-extremal) AND the multiplicative group (Z/13)* (residue-pinned). (3) (G) = the sum-product rigidity of this coincidence: perturb => lose additive richness (theta stops cancelling => safe>0 => loose) OR multiplicative pinning -- never neither. (4) Prime makes [1,p-1]=(Z/p)* (composite fails, {1,3,4,5,9} at n=6); dilation not translation is the symmetry (c=1 minimal).
+
+THE PROOF-STRATEGY HYPOTHESIS: the two sides the fleet works SEPARATELY (analytic theta/Riesz = HARD open; arithmetic residue-pinning = clean/done) are ONE object. The hard density floor (additive) may be the sum-product SHADOW of the clean pinning (multiplicative) -- the productive seam is the CHARACTER-SUM LINK on (Z/13)*, not either side alone. SL(2,Z) unification (explorer 3): additive=Stern-Brocot=SL(2,Z)/Farey; multiplicative=Gamma_0(N); AP = common cusp; 1/13, 2/25, 14/183 = crossing resonances.
+
+EXPLORER SYNTHESIS integrated: difference-core (AP = renorm fixed point, differences of AP = AP); character-sum (safe = lattice theta, AP maximizes all-order additive energy, Riesz-product route); governing-structure (forbidden-band + triangle-lattice + parity-skeleton = one Z/2-quantization; extremality=max-automorphism; the SL(2,Z) missing pattern).
+
+HONEST: does NOT close (G) (open hard analysis). Delivers the governing reframe + the seam to push. Reflection: the-LRC-is-a-sum-product-rigidity-the-AP-is-the-additive-multiplicative-coincidence. Files: difference_core_reduction / relation_lattice_sumproduct outs; HYP-4396.
+
 ## opus-2026-07-06-S106 -- REASONING ABOUT (G): the single-scale residual is a RENORMALIZATION FLOW to the prime-AP fixed point; the density floor IS the quantitative Farey jump (HYP-4386)
 
 Prompt: work on the genuinely open remainder; pull incoming/past work, see deep analogies.

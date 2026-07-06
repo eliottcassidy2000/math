@@ -1,0 +1,15 @@
+(a) difference-core reduction: cluster {13K+r+13*j_r}, internal lifts j_r, growing K:
+  j=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]: K=1:0.3590 K=5:0.4615 K=20:0.4897 K=80:0.4974
+  j=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]: K=1:0.2692 K=5:0.4231 K=20:0.4780 K=80:0.4943
+  j=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]: K=1:0.2692 K=5:0.4231 K=20:0.4780 K=80:0.4943
+  j=[0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]: K=1:0.2692 K=5:0.4231 K=20:0.5000 K=80:0.4943
+  (j=0 => consecutive block M=c/(2c+11)->1/2; internal lifts change the limit)
+
+(b) sum-product probe: {1..12} = additive interval AND (Z/13)* multiplicative group.
+  AP {1..12}: E+ = 1156 (max for interval), E* mod 13 = 1728 (= full group, flat)
+  lift [11, 25]: E+ = 936 (broken interval => lower additive energy)
+  lift [24, 25]: E+ = 828 (broken interval => lower additive energy)
+
+REFRAME: {1..p-1} is the UNIQUE set that is both a full additive interval (max E+)
+AND the full multiplicative group (Z/p)* (residues pinned). LRC extremality + gap =
+the RIGIDITY of this additive-multiplicative coincidence (a sum-product phenomenon at p).
