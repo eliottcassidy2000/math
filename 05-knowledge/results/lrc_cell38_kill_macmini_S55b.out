@@ -1,0 +1,14 @@
+PHASE 1: randomized + hill-climbing satisfiability hunt over Z/1482 templates
+  SAT TEMPLATE: [7, 93, 121, 428, 539, 572, 649, 750, 875, 1119, 1373, 1455]
+  SAT TEMPLATE: [142, 246, 413, 427, 552, 647, 751, 889, 940, 1012, 1022, 1307]
+  SAT TEMPLATE: [146, 150, 182, 222, 343, 478, 621, 677, 821, 995, 1134, 1310]
+  SAT TEMPLATE: [73, 199, 210, 271, 357, 415, 449, 566, 567, 882, 1041, 1342]
+  SAT TEMPLATE: [30, 82, 161, 312, 529, 692, 739, 1311, 1331, 1335, 1474, 1475]
+restarts: 5; best violation score: 0; SAT templates: 5
+=> the 38x39+13 fold does NOT kill alone; integral levers needed on these:
+   [7, 93, 121, 428, 539, 572, 649, 750, 875, 1119, 1373, 1455]  A=True B=True C=True D13=True
+   [142, 246, 413, 427, 552, 647, 751, 889, 940, 1012, 1022, 1307]  A=True B=True C=True D13=True
+   [146, 150, 182, 222, 343, 478, 621, 677, 821, 995, 1134, 1310]  A=True B=True C=True D13=True
+   [73, 199, 210, 271, 357, 415, 449, 566, 567, 882, 1041, 1342]  A=True B=True C=True D13=True
+   [30, 82, 161, 312, 529, 692, 739, 1311, 1331, 1335, 1474, 1475]  A=True B=True C=True D13=True
+[t = 0s]

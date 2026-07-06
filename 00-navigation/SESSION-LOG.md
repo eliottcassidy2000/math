@@ -1,3 +1,20 @@
+## mac-mini-2026-07-05-S55 -- OVERNIGHT (G)-CAMPAIGN: three refutations + two confirmations map the battlefield; the TENSION MECHANISM (deep witness vs capped max) identified; independent convergence onto kps's covering residual; ceiling 2/23 on small-lifting doubles (HYP-4102)
+
+Prompt (owner): long overnight session on the remaining formalization path; pull often; extend collaboratively.
+
+THE CAMPAIGN (hypothesis-testing-first, per the standing directive):
+(R1) CLEAN-KILL HYPOTHESIS REFUTED: 'lifts only add constraints, so the fixed-base survivor table closes (G) with k unbounded' -- FALSE: dropping small elements FREES the multiplier: 47,190 survivor frames (j = 2..5, c = 3..12, q in the bands).  The refutation is load-bearing: it locates exactly where (G) must be fought.
+(R2) THE CRITICAL TEST CLEARED: the sharpest candidate frame {3..12, 14, 15} (3-deep witness at 1/38 verified) has M = 1/6 -- FAR above the cell; all k-variants 1/6, 3/17, 6/31.  (G) survived where it could have died in one line -- and the mechanism surfaced: THE TENSION -- a cell value needs a deep witness (wants small elements ABSENT) and a capped max (needs small elements PRESENT).  The two pull opposite; that tension is the proof's shape.
+(R3) the small-drop dichotomy HALF-refuted: 1,080/1,980 j=2 frames drop only mid elements (the (4,*) family -- the S54 attainer's own species); the clean split fails, the per-frame covering check remains.
+(C1) CEILING LEMMA (small lifts): min M over doubles lifting r in {1,2,3} = 2/23 > 2/25 (at (2,6),(1,1)) -- a real proved-shaped rung.
+(C2) frame k-variants all far above the cell.
+
+NET ARCHITECTURE: (G)-on-lifts = [the 1,980-frame j=2 survivor table + smaller j>=3 tables] x [per-frame COVERING/max-attained contradiction] -- independently converging onto kps-S16's named residual; their CRT-fold (Z/2 x Z/19 composite folding) is the right tool; co-attack accepted.  Each frame's ceiling check is finite (THM-619 bands at the frame's q).
+
+FILES: lrc_base_survivor_table_macmini_S55.out; lrc_G_tension_mechanism_macmini_S55.out; HYP-4102.
+
+NEXT: (a) the per-frame ceiling sweep (1,980 frames x the THM-619 pipeline -- the S49-style overnight run, engine ready); (b) kps co-attack: CRT-fold the c=3 q=38 block first (the attainer's home); (c) the ceiling lemma's THM-621-style closed form for small-lift families (2/23 rung).
+
 ## mac-mini-2026-07-05-S54b -- HYP-4177's DOMINATION REFUTED BEFORE FORMALIZATION (block lift {4,6}->{17,19} at 2/25 < 14/169, UNIQUE height-1 pair below) + the CORRECTED lift-floor package GREEN (ladder_law parametric + lift_floor_beta_ladder >= 2/25 = the dichotomy beta) (HYP-4212)
 
 Prompt (owner): catch up on recent LRC(14) work; work to finish formalizing the proof.
