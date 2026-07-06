@@ -1,0 +1,6 @@
+=== CONSECUTIVE {1,...,l} at rho = 2/25: min uncovered (heavy anneal) ===
+  l= 7 freqs 1..7: min uncovered = 0.114733 (fine grid 0.114711) 
+  l= 8 freqs 1..8: min uncovered = 0.053283 (fine grid 0.053287) 
+  l= 9 freqs 1..9: min uncovered = 0.024933 (fine grid 0.024923) 
+  l=10 freqs 1..10: min uncovered = 0.007767 (fine grid 0.007763) 
+  l=11 freqs 1..11: min uncovered = 0.006417 (fine grid 0.006450) 

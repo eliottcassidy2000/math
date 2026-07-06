@@ -5,11 +5,16 @@
   The torus-split rung (LRCTorusSplit) killed the (A) window for ≤ 6 lifted by
   a DENSITY argument (`2ρl < 1`).  Numerics (lrc_seven_comb_covering_kps_S20b,
   lrc_covering_threshold_kps_S20c) show something stronger: DISTINCT-frequency
-  combs of radius `2/25` leave a POSITIVE uncovered floor for every `l ≤ 14`
-  (0.062 at `l = 11`, 0.051 at `l = 14`) — only REPEATED frequencies (all
-  `r = 1`) can cover.  Since LRC runners are distinct speeds, the lifted
-  frequencies are distinct, so the covering-impossibility should hold for the
-  ENTIRE (A) residual `l ≤ 11`, not just `l ≤ 6`.
+  combs of radius `2/25` leave a positive uncovered floor for `l ≤ 9`
+  (uncovered ≥ 0.025 even for consecutive `{1..9}`).  CORRECTION (S20f, aligns
+  with mac-mini S5's self-correction): at `l ≥ 10` CONSECUTIVE frequencies
+  `{1..l}` TILE at `2/25` (uncovered → 0: 0.0078 at l=10, 0.0064 at l=11) — so
+  the distinct-frequency floor FAILS for `l ≥ 10`.  My earlier "dead through
+  l=14" was a RANDOM-search artifact (random sets avoid the tiling; consecutive
+  tiles).  So the fixed-slice covering-impossibility closes the (A) window only
+  for `l ≤ 9`; `l = 10, 11` join the census/phase-orbit bucket (the clear point
+  must come from the `t`-variation — `torus_forced_rectangle` — not a single
+  base-clear slice).
 
   This file makes the reduction precise:
 
@@ -19,16 +24,18 @@
 
   * `CircleClearFloor ρ l`: the NAMED obligation — `l` distinct-frequency combs
     at radius `ρ` always leave a clear point.  `circleClearFloor_of_le6`
-    discharges it for `l ≤ 6` (density).  For `7 ≤ l ≤ 11` it is the
-    Newman-shaped distinctness lemma (opus's `φ > 0` lane; numerically
-    confirmed here — floor ≥ 0.06).
+    discharges it for `l ≤ 6` (density).  It is TRUE (numerically) for
+    `7 ≤ l ≤ 9` (the genuine Newman-shaped distinctness lemma, opus's `φ > 0`
+    lane) but FALSE for `l ≥ 10` (consecutive tiles) — so `torus_A_window_empty`
+    below closes the distinct-freq (A) window only up to `|L| ≤ 9`.
 
   * `torus_A_window_empty`: base citation + `CircleClearFloor (2/25) |L|` ⟹ a
     proper coupled 2-torus system with DISTINCT lifted frequencies has a
     `2/25`-clear point, i.e. its value is outside the open gap `(1/13, 2/25)`.
     With `circleClearFloor_of_le6` this is UNCONDITIONAL for `|L| ≤ 6`; the
-    DISTINCT-frequency (A) window then reduces to the single named floor at
-    `7 ≤ l ≤ 11`.
+    DISTINCT-frequency (A) window reduces to the named floor at `7 ≤ l ≤ 9`
+    (true, Newman-shaped).  `|L| = 10, 11` do NOT reduce this way (the floor is
+    false there — consecutive tiles), and fall to the `t`-variation / census.
 
   SCOPE (honest, complementary to mac-mini HYP-4292): the `hdistinct`
   hypothesis restricts to lifted runners of DISTINCT θ-frequency — the
@@ -38,8 +45,9 @@
   share a frequency (repeated frequencies, which CAN measure-cover T²).  That
   multi-class stratum is mac-mini HYP-4292 — census-clean at infimum EXACTLY
   `1/6 > 2/25` (the 5-5-2 minimizer), reduced to one ≥3-class covering lemma.
-  Together: distinct-freq (this file, floor ≥ 0.06 numerically) + multi-class
-  (HYP-4292, infimum 1/6) = the full (A) residual, both confirmed safe-above.
+  Together: distinct-freq `l ≤ 9` (this file, floor ≥ 0.025) + `l = 10,11`
+  (t-variation / census, since consecutive tiles) + multi-class (HYP-4292,
+  infimum 1/6) = the full (A) residual.
 
   Kernel-pure; no `sorry`, no `native_decide`.
 -/

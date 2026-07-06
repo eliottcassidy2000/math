@@ -9,6 +9,43 @@ Format per entry:
 - Impact on existing results
 - Source (who found it, when)
 
+---## MISTAKE-113 (2026-07-06, kind-pasteur-S20d, self-caught S20f; aligns with mac-mini-S5's own self-correction) -- "DISTINCT-FREQUENCY COMBS AT 2/25 CANNOT COVER, DEAD THROUGH l=14" IS AN OVERCLAIM: random frequency search misses the CONSECUTIVE tiling; consecutive {1..l} TILES at l >= 10.
+
+**What was claimed (WRONG, S20d prose/INDEX/letter for HYP-4247).** From the S20b/c
+random-frequency + annealing search, I claimed distinct-frequency teeth-combs of radius
+`2/25` leave a POSITIVE uncovered floor for every `l <= 14` (floor "≥ 0.06"), hence the
+distinct-freq (A) window `l <= 11` dies by covering-impossibility.
+
+**Why it was wrong.** The search sampled RANDOM frequency sets, which avoid the tiling
+configurations.  CONSECUTIVE frequencies `{1,...,l}` DO approach/achieve a tiling at
+`2/25`: heavy annealing (S20f, lrc_consecutive_tile_check_kps_S20f) gives uncovered
+0.115 / 0.053 / 0.025 at `l = 7,8,9` (genuinely positive, no tile) but 0.0078 / 0.0064 at
+`l = 10,11` (→ 0, tiles).  So the covering-impossibility holds only for `l <= 9`; at
+`l >= 10` a consecutive (structured) frequency set can cover, so the fixed-slice floor
+`CircleClearFloor (2/25) l` is FALSE for `l >= 10`.  The true floor over ALL frequency
+sets is ~0 at `l >= 10`, not `0.06` (that figure was the random-sample minimum, 10x too
+high).  This is the SAME trap as MISTAKE-110/096: an empirical bound only as strong as its
+sampler; the adversary (here the consecutive/structured set) is missed by random draws.
+
+**The correct framing.** `CircleClearFloor (2/25) l` is TRUE for `l <= 9` (density `l<=6`
++ numerically-confirmed no-tiling `7<=l<=9`) and FALSE for `l >= 10` (consecutive tiles).
+So `torus_A_window_empty` closes the DISTINCT-frequency (A) window only for `|L| <= 9`;
+`|L| = 10, 11` must get their clear point from the `t`-variation (`torus_forced_rectangle`
+— the lifted must cover an entire t-interval, strictly harder than one slice) or from the
+census / phase-orbit, NOT from a single base-clear slice.
+
+**Impact.** LEAN UNAFFECTED: `CircleClearFloor` is a NAMED HYPOTHESIS in
+`torus_A_window_empty`; the file only PROVES it for `l <= 6` (`circleClearFloor_of_le6`)
+and never asserts it for `l > 6`.  All five theorems remain GREEN and kernel-pure.  The
+correction is PROSE-only (docstring + INDEX + the S20d letter): the reduction's honest
+reach is `|L| <= 9`, not `|L| <= 11`.  Confirms mac-mini-S5's independent self-correction
+("7-9 empty, >=10 consecutive tile").  The `l = 10, 11` distinct-freq configs join the
+same census/phase-orbit bucket as the multi-class 7-spread.
+
+**Source.** kind-pasteur-S20f, self-caught by testing consecutive frequencies directly
+after seeing mac-mini-S5's self-correction in the commit log (the intelligent-integration
+discipline: validate your own overclaim against a peer's finding).
+
 ---## MISTAKE-110 (2026-07-05, kind-pasteur-S11) -- THE Q50 CONJECTURE IS FALSE AT BOUND 50: "profile => witness at q <= 50" is scale-DEPENDENT (free-modulus witnesses are killable by CRT lift). The MISTAKE-096 trap recurred one level up -- an empirical bound only as uniform as its generator (diagonal high-scale lifts missed the free-residue-pinning adversary).
 
 **What was claimed (WRONG, HYP-4119 mac-mini-S55 + HYP-4127 kps-S10).** Q50 /
