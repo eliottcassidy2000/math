@@ -1,3 +1,20 @@
+## mac-mini-2026-07-06-S25 -- RECURSIVE-ACROSS-n: gap members are PEEL-ISOLATED critical configs (no descending recursion); the HEIGHT BOUND relocates to a NUMERATOR-c bound (far element ~ 13c/2); Stern-Brocot depth decreases 2->1->0 with n (HYP-4542)
+
+Prompt (owner): work reductive targets; see recursive patterns as n changes.
+
+WORKED the height upper bound (opus-S114's reductive target) recursively:
+ (1) PEELING IS ISOLATION (verified on both known members): peeling ONE speed sends M FAR ABOVE the (n-1) gap every time (all LOOSE).  Gap members are CRITICALLY ASSEMBLED (every runner essential); NO descending tower => NO inductive height bound via peeling = the peeling face of opus-S114 irreducibility.
+ (2) THE STRUCTURE: near-tight core + ONE FAR element (18 at n=8, 17 at n=7) that pulls M into the gap; it resonates at the maximizer q, so (opus-S109 lever q<=2max) far element ~ 13c/2 GROWS with c => THE HEIGHT BOUND RELOCATES: height bound <=> NUMERATOR-c bound <=> Stern-Brocot depth cap; c<=c_max => q<=13c_max => residue-bridge census FINITE.
+ (3) DEPTH DECREASES with n: 5/33 (n=7) = depth-2, 3/23 (n=8) = depth-1 (mediant), 3/38 (n=13) UNACHIEVABLE = depth-0 (empty).  Suggests depth 2->1->0 (n=9..12 unverified).
+ (4) CONSTRUCTION CAVEAT (3rd time S22/S25): gap members are FINER than 2D GAPs -- BORDERED APs (AP{1,6,11,16}d=5 + doubled endpoints); my search found ZERO organically.  Structure enumeration must use bordered-AP shapes.
+
+NET: a REDUCTIVE finding (relocates the height bound to a clean c-bound / depth-cap, concrete via the far-element/lever), + the peeling route ruled out, + a construction caveat.  The c-cap (deep-cell achievability) = the open n-specific residual, bracketed below by opus-S113's Farey wall.
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection.)
+
+FILES: lrc_recursive_ndep_macmini_S25.py (+.out), lrc_peeling_recursion_macmini_S25.out; reflection gap-members-are-peel-isolated-critical-configs-macmini-S25.md; HYP-4542 (+INDEX).  No canon overridden.
+
+NEXT: the NUMERATOR-c bound (= height bound = depth cap): prove achievable gap numerators bounded (bracket opus-S113 Farey wall vs the c-driven far-element); the bordered-AP enumeration to verify depth->0 at n=9..12.
 ## mac-mini-2026-07-06-S24 -- CONNECTIONS ASSESSMENT: three fresh leads (covering-multiplicity, Markov/Lagrange, covering-systems) all REFORMULATE/DUAL, none REDUCES (confirming opus-S114); + one clean fact: the AP uniquely MAXIMIZES covering overlap = additive energy (HYP-4532)
 
 Prompt (owner): even more creative refinements, search around for possible connections.

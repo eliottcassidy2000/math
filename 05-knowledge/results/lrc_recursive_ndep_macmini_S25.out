@@ -9,3 +9,10 @@ RECURSIVE-ACROSS-n: achievable gap fractions & height, per n
    10        (1/10,2/19)         0             EMPTY      0             --     n/a
    11        (1/11,2/21)         0             EMPTY      0             --     n/a
    12        (1/12,2/23)         0             EMPTY      0             --     n/a
+   13        (1/13,2/25)         0             EMPTY      0             --     n/a
+
+  READING: max c = largest achievable numerator (Stern-Brocot depth).
+  If max c CAPS (bounded) and DECREASES to 0 (empty) with n, and height
+  stays ~linear, then a gap member's value denom q<=13c is bounded =>
+  the residue-bridge census is FINITE = the height upper bound.
+  (validation: n=7,8 must show known members found, not MISS.)
