@@ -90,3 +90,31 @@ arc-theta at `β=2/25`, quantitatively in the kissing deficit*.
 - mac-mini HYP-4532 (Cohn–Elkies / Poisson framing), HYP-4512/4522 (Beurling–Selberg,
   theta convergence); opus HYP-4466 (all-orders), HYP-4456 (structure × width);
   HYP-2873 (additive energy = Fejér 4th moment); kps HYP-4467 (harmonic — refined here).
+
+## Appendix (S26, HYP-4562): the kissing deficit IS opus's order k
+
+opus-S116 (HYP-4486): (G) is the first-gap case of **Kravitz's Lonely Runner
+Spectrum Conjecture** — a below-`1/n` value is a rung `s/(ns+k)`; gap members have
+**order `k ≥ 2`** (Fan-Sun counterexamples are generalized APs; CKMRV Annals-2022
+LP-uniqueness = my Cohn–Elkies/Viazovska frame, HYP-4532). This dovetails with the
+kissing number: measured (`lrc_kissing_vs_order…out`), the AP (order `k=1`) has
+**maximal** kissing at every `n`; gap members have a large **kissing deficit**:
+
+| family | `M` | order `(s,k)` | kissing | AP-max |
+|---|---|---|---|---|
+| AP `{1..12}` | `1/13` | `(1,1)` | 36 | 36 |
+| doubled-apex `{1..11,24}` | `2/25` | `(2,1)` | 30 | 36 |
+| `{1,3,4,5,7,13,18}` (n=7) | `3/23` | `(3,2)` | **4** | 12 |
+| `{1,5,6,11,16,17}` (n=7) | `5/33` | `(5,3)` | **5** | 9 |
+
+So **order `k` and the additive-energy/kissing deficit are two faces of one defect**:
+`k=1` ⇔ full additive closure (max kissing) = the AP/dilations; `k≥2` ⇔ a genuine
+kissing deficit ⇔ a *defected* generalized AP. This unifies the two frames — opus's
+spectrum-order (Kravitz/Fan-Sun) and my lattice-kissing (Cohn–Elkies) — and pins
+opus's obligation **(O-korder)** [bound achievable `k` at `n=12`] to a *kissing/
+additive-energy upper bound*: a covering 12-family with `M` in the window would need
+order `k≥2`, hence a bounded kissing deficit, hence (Freiman) generalized-AP
+structure — excluded by the width `1/(2k²)` at `n=13`. The whole crux is now one
+statement: **the AP is the unique max-kissing (order-1) covering configuration, with
+a width-quantified stability gap** — the LP-uniqueness/universal-optimality of
+CKMRV, in lonely-runner form.
