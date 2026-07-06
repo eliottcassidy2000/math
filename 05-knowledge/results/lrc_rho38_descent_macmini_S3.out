@@ -1,0 +1,32 @@
+PART A constants at rho = 3/38:
+  inter-tooth gap fraction: (1-2rho) = 16/19 of 1/w
+  descent cluster ratio:    2/(1-2rho) = 19/8 = 19/8 = 2.375
+  density wall:             2*rho*c >= 1 <=> c >= 19/3 => c >= 7 clustered runners
+  pair-anchored cluster height bounds: 37*(19/8)^(c-2):
+    c = 7: h_max <= 91615663/32768 ~ 2.796e+03
+    c = 8: h_max <= 1740697597/262144 ~ 6.640e+03
+    c = 9: h_max <= 33073254343/2097152 ~ 1.577e+04
+    c = 10: h_max <= 628391832517/16777216 ~ 3.746e+04
+
+A-verify 1: the density inequality on random <= 6-clusters (they CANNOT cover
+a dodged gap of their own scale at radius 3/38):
+  clusters with density-predicted failure that still covered: 0/2000
+
+A-verify 2: spread tops are dodged (ratio >= 19/8): planted spread checks:
+  planted spread-top dodging failures: 0/500
+
+PART B: the |S| >= 7 quotient classification (<= 5-element mod-38 configs)
+  pair (1,37), m = 3: extra pool 31 residues; config counts by |K'|: {2: 1, 3: 31, 4: 465, 5: 4495}
+  pair (3,35), m = 1: extra pool 31 residues; config counts by |K'|: {2: 1, 3: 31, 4: 465, 5: 4495}
+  pair (5,33), m = 31: extra pool 31 residues; config counts by |K'|: {2: 1, 3: 31, 4: 465, 5: 4495}
+  pair (7,31), m = 33: extra pool 31 residues; config counts by |K'|: {2: 1, 3: 31, 4: 465, 5: 4495}
+  pair (9,29), m = 13: extra pool 31 residues; config counts by |K'|: {2: 1, 3: 31, 4: 465, 5: 4495}
+  pair (11,27), m = 21: extra pool 31 residues; config counts by |K'|: {2: 1, 3: 31, 4: 465, 5: 4495}
+  pair (13,25), m = 9: extra pool 31 residues; config counts by |K'|: {2: 1, 3: 31, 4: 465, 5: 4495}
+  pair (15,23), m = 23: extra pool 31 residues; config counts by |K'|: {2: 1, 3: 31, 4: 465, 5: 4495}
+  pair (17,21), m = 27: extra pool 31 residues; config counts by |K'|: {2: 1, 3: 31, 4: 465, 5: 4495}
+  TOTAL feasible quotient templates (|K'| <= 5): 44928
+  (each leaves specific level-4 classes to the >= 7 non-multiples on the
+   fine grid -- the demands; enumerated exactly in the saved data)
+
+[t = 2s]
