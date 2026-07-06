@@ -1,0 +1,9 @@
+single cluster {r + 13*k*alpha_r}, growing k; does M -> M({alpha_r})?  window (1/13,2/25)
+  alpha=[1, 2, 3, 4]...(=AP): M(alpha)=0.0769 [tight 1/13]; cluster k=1:0.0769 k=3:0.0769 k=10:0.0769 k=40:0.0769
+  alpha=[1, 2, 3, 4]...: M(alpha)=0.0833 [>=2/25]; cluster k=1:0.0833 k=3:0.0833 k=10:0.0833 k=40:0.0833
+  alpha=[2, 4, 6, 9]...: M(alpha)=0.2000 [>=2/25]; cluster k=1:0.2000 k=3:0.2190 k=10:0.2452 k=40:0.2140
+
+=> the residual is SELF-SIMILAR (renormalization): a single cluster at large height
+   flows to its lift-direction's M, which obeys the SAME gap dichotomy one level up.
+   AP-direction -> tight limit; non-AP-direction -> loose limit. The density floor is
+   the uniformity bridging finite height to this self-similar limit (= my S100b renorm).

@@ -1,0 +1,12 @@
+single clusters {r+13*k_r} at growing height; window (0.0769,0.0800):
+  dir [4, 1, 5, 5, 4, 1, 3, 1, 2, 4, 3, 4]: H=1:0.2689 H=2:0.2734 H=4:0.2607 H=8:0.2705 H=16:0.2072
+  dir [4, 3, 2, 4, 3, 4, 2, 2, 3, 3, 4, 3]: H=1:0.3152 H=2:0.3235 H=4:0.3282 H=8:0.3254 H=16:0.3294
+  dir [1, 3, 3, 3, 2, 2, 4, 1, 1, 1, 3, 1]: H=1:0.2826 H=2:0.2241 H=4:0.2727 H=8:0.2807 H=16:0.2814
+  dir [2, 3, 4, 5, 3, 5, 3, 4, 4, 4, 2, 2]: H=1:0.2755 H=2:0.2804 H=4:0.2830 H=8:0.2844 H=16:0.2850
+  dir [2, 4, 2, 2, 2, 2, 3, 5, 5, 2, 2, 3]: H=1:0.2673 H=2:0.2760 H=4:0.2807 H=8:0.2822 H=16:0.2840
+  dir [3, 2, 5, 3, 5, 4, 5, 4, 2, 4, 2, 5]: H=1:0.2667 H=2:0.2755 H=4:0.2857 H=8:0.2782 H=16:0.2819
+  => in-window occurrences: 0 (expect 0: single clusters stay OUT of the gap at every height)
+
+INTERPRETATION: if M stays >= 2/25 (or = 1/13 tight) at every height and converges,
+the single-scale residual is bounded by its torus limit -- the (A) leg -- so mac-mini's
+single-scale (G) residual and my (A) reduction are the SAME object at two scales.

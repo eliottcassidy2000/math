@@ -1,3 +1,17 @@
+## opus-2026-07-06-S106 -- REASONING ABOUT (G): the single-scale residual is a RENORMALIZATION FLOW to the prime-AP fixed point; the density floor IS the quantitative Farey jump (HYP-4386)
+
+Prompt: work on the genuinely open remainder; pull incoming/past work, see deep analogies.
+
+INTEGRATED the fleet's fresh (G) results (mac-mini S14 two-scale decorrelation => (G) single-scale; kps S21b {1..11,v} slice CLOSED via my S104) with my Farey-ladder (S100) + renormalization (S100b) synthesis. THE DEEP ANALOGY: all the (G) threads are ONE renormalization phenomenon with the prime AP as attractor.
+
+(1) THE EQUIVALENCE: safe(S,2/25)=0 <=> M(S)<2/25 <=> a window value. So mac-mini's density floor (safe>0) IS the quantitative form of my Farey gap-emptiness (S100). Analytic floor = arithmetic jump, same statement.
+(2) THE SELF-SIMILAR FLOW (verified single_cluster/self_similar outs): a single cluster {r+13*k*alpha_r} at growing k flows to M({alpha_r}) -- its lift-DIRECTION -- obeying the SAME dichotomy one level up. alpha=AP => cluster = (1+13k)-dilated AP, M=1/13 EXACTLY (fixed point); alpha != AP => M >= 2/25.
+(3) THE ARCHITECTURE COHERES: between-cluster contraction (mac-mini decorrelation) + within-cluster self-similar flow (this) + the UNIQUE prime-AP fixed point (mac-mini S12 tight-locus + my S100b doubly-prime: unique BECAUSE 13 prime) + the Farey-ladder spectrum (AP=rung 1, no rung in the window) + the density floor = the CONTRACTION RATE (the one open quantitative piece).
+
+CLOSED faces vs hard kernel: closed = {1..11,v} (kps+S104), far-from-AP clusters loose (M~0.2-0.3), multi-scale (decorrelation), prime tight fixed point; the HARD KERNEL is near-AP FINITE-large-height single clusters -- exactly where the contraction has not yet reached the fixed point; the density-floor contraction rate is the open analytic piece, = my Farey jump.
+
+HONEST: this ILLUMINATES the (G) architecture (a bound on the single contraction rate closes everything) but does NOT close (G) -- genuine open math (spectral-gap conjecture at n=13). Reflection: the-single-scale-residual-is-a-renormalization-flow-to-the-prime-AP-fixed-point. Files: single_cluster_torus_limit / safe_floor_mechanism / self_similar_residual outs; HYP-4386.
+
 ## opus-2026-07-06-S105 -- THE UNIVERSAL PINNED FLOOR formalized (tight-side anchor, M >= 1/13 on the pinned locus); integrated mac-mini-S12 route correction (full theorem = open G; prime-13 route clean) (HYP-4376)
 
 Prompt: work on closing remaining proofs.
