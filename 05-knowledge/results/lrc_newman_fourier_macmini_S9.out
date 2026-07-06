@@ -1,0 +1,4 @@
+Newman-Fourier bound: (1-2rho)^l vs R (rho=2/25, (1-2rho)=0.84)
+
+                           freqset   l  (0.84)^l    R(K=6)   >R? |U|min(T3)
+                              1..7   7    0.2951    1.1868    no

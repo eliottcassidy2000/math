@@ -1,0 +1,24 @@
+==============================================================================
+PART 1: non-clearing characterization at the key moduli (exact)
+==============================================================================
+  mod 13: non-clearing <=> residues hit all 6 pairs {u,-u} (if no mult of 13)
+    characterization VERIFIED (pair-hitting <=> non-clearing mod 13)
+  mod 25: non-clearing => hits all 10 unit pairs {a,25-a} (sibling P1)
+    necessity (non-clearing => hits all 10 unit pairs) VERIFIED
+
+==============================================================================
+SEARCH: covering primitive 12-sets non-clearing mod ALL of [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+(gap members must pass every one; do only AP-structured families survive?)
+==============================================================================
+  AP {1..12}: non-clearing status by modulus {2: True, 3: True, 4: True, 5: True, 6: True, 7: True, 8: True, 9: True, 10: True, 11: True, 12: True, 13: True, 14: True, 15: True, 16: True, 17: True, 18: True, 19: True, 20: True, 21: True, 22: True, 23: True, 24: True, 25: True}; M(AP) = 1/13
+  candidates tested: 28750;  passed ALL non-clearing filters q in 2..25: 5
+    survivors by M: M=1/13 (AP-value): 1;  M>=2/25: 4 (SHOULD be 0 -- they'd clear at some q<=25);  M<1/13: 0;  IN-GAP: 0
+    ZERO in-gap survivors: every family passing all q<=25 non-clearing
+    filters is either the AP-value (1/13) or clears (>=2/25) -- the crux
+    holds at moduli [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25] on this search.
+    M=1/13 survivor: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    M>=2/25 survivors (clear at q>25 -- the ray-local exceptions):
+      M=2/13 min-witness-q=29  gcd(diffs)=1  W=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 25, 132]
+      M=25/277 min-witness-q=35  gcd(diffs)=1  W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 275]
+      M=5/53 min-witness-q=33  gcd(diffs)=1  W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 36, 50]
+      M=8/43 min-witness-q=28  gcd(diffs)=1  W=[5, 16, 18, 19, 20, 21, 22, 23, 24, 25, 27, 32]

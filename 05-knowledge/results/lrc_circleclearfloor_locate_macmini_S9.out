@@ -1,0 +1,28 @@
+T1: 1/(l+1) vs 2/25 = 0.08 (unshifted LRC citation bound):
+   l=7: 1/(l+1) = 0.12500  > 2/25 (clears, CITATION)
+   l=8: 1/(l+1) = 0.11111  > 2/25 (clears, CITATION)
+   l=9: 1/(l+1) = 0.10000  > 2/25 (clears, CITATION)
+   l=10: 1/(l+1) = 0.09091  > 2/25 (clears, CITATION)
+   l=11: 1/(l+1) = 0.08333  > 2/25 (clears, CITATION)
+   l=12: 1/(l+1) = 0.07692  <= 2/25 (LRC insufficient)
+   l=13: 1/(l+1) = 0.07143  <= 2/25 (LRC insufficient)
+
+T2: UNSHIFTED clear level (best tau, phi=0) for random distinct freq sets:
+   l=7: min clear level over samples = 0.20000  (LRC bound 1/(l+1) = 0.12500; combs cover at 2/25? NO)
+   l=9: min clear level over samples = 0.17850  (LRC bound 1/(l+1) = 0.10000; combs cover at 2/25? NO)
+   l=11: min clear level over samples = 0.13025  (LRC bound 1/(l+1) = 0.08333; combs cover at 2/25? NO)
+   l=12: min clear level over samples = 0.13700  (LRC bound 1/(l+1) = 0.07692; combs cover at 2/25? NO)
+
+T3: SHIFTED-ADVERSARIAL -- can FREE shifts make distinct freqs COVER at 2/25?
+    (hill-climb phases to MINIMIZE uncovered fraction; 0 => covered)
+   l=7: min uncovered fraction over freq-sets & shifts = 0.2025  floor remains (Newman)
+   l=9: min uncovered fraction over freq-sets & shifts = 0.1180  floor remains (Newman)
+   l=11: min uncovered fraction over freq-sets & shifts = 0.0530  floor remains (Newman)
+   l=12: min uncovered fraction over freq-sets & shifts = 0.0515  floor remains (Newman)
+   l=13: min uncovered fraction over freq-sets & shifts = 0.0375  floor remains (Newman)
+
+READING:
+ - l <= 11 unshifted: CITATION (1/(l+1) >= 1/12 > 2/25), clearance >= 1/300. Not Newman.
+ - the OPEN content = shifted distinct-frequency covering (T3); locate whether free
+   shifts cover (=> the lemma needs the constrained/lift shift structure).
+[t = 36s]
