@@ -81,6 +81,14 @@ peel_height_bound transcriptions are EXACT; and the independent w_max = 25 slice
 reproduced the C census to the family (1,351 = 1,351, all witness-cleared).
 
 
+## MISTAKE-111 (opus-2026-07-05-S92, correcting opus-S88): the universal desert bound sigma/D with D = the FULL difference range is FALSE for mixed clusters; the correct form is the SUB-CLUSTER maximum
+
+**Status: RESOLVED same-session (catalog test caught it; draft corrected; zone tables re-derived with block-worst radii).**
+
+S88 stated: every covered component of a c-cluster has length <= sigma/D + C/W with D = d_max over the WHOLE cluster, verified on 16 PURE configurations. The catalog test (S92) found a mixed cluster (consecutive-7 block at scale 500 + spread tails 540, 700) with a component of length 0.0144 at 2/13 vs full-D bound (5/13)/200 + 4/W = 0.0099 -- VIOLATED. The desert is sustained by the SUB-BLOCK alone (its sigma_block/D_block = 1/78 + O(1/W) = 0.0144 EXACTLY): spread tails are simply absent from the covering there. CORRECT FORM: length <= max over sub-clusters C' with sigma(C') > 0 of sigma(C')/D(C') + C/W. CONSEQUENCES REPAIRED: (i) per-stratum zone radii must use BLOCK-WORST values (a c-max block can sit at ANY q <= c-max resonance via doubled labels): corrected radii 1/78 / 3/91 / 5/104 at cmax = 7/8/9, closure bars 171/239/343, box [14,343]; (ii) the q = 13 SLACK-DEAD census claim holds only at c = 7: doubled residues revive q = 13 at c >= 8 (measured 0.0144) -- the q = 13 zones remain to be added to the B <= 4 tables (conservative box estimate [14,~450] meanwhile). RULE: a bound verified on pure/extremal configurations must be re-tested on MIXED ones before 'universal' enters the statement; sub-structures can sustain what the whole cannot.
+
+---
+
 ## MISTAKE-109 (opus-2026-07-05-S84, correcting opus-S78 leg (2) USE; flagged by mac-mini-S56): the height forcing >= 14r >= 98 holds only SELF-CARRIED; any-carrier configurations evade it
 
 **Status: RESOLVED same-session (carrier table derived; assembly rerouted onto the composition lemma + bounded residual).**

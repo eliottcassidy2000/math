@@ -1,0 +1,19 @@
+anatomy of isolated-top D=40 (K_emp=1.364): components > 2/W:
+  (interpretation: if the fat component sits at a q<=7 resonance of the JAMMED
+   sub-block {W..W+5} (D_block=5), K_block = L*13*5 is the honest constant)
+
+catalog test, cluster [500, 501, 502, 503, 504, 505, 506, 540, 700] (consec-7 block + spread): components > 5/W:
+  [0.14016,0.15461] len=0.01444 -> PREDICTED at 2/13
+  [0.84539,0.85984] len=0.01444 -> PREDICTED at 11/13
+catalog predicted 4 resonant deserts; measured 2 components > 5/W
+corrected per-stratum worst q-resonance lengths (blocks <= cmax, doubles allowed):
+  cmax=7 q=7: max over p = 1/78 ~ 0.01282
+  cmax=8 q=7: max over p = 3/91 ~ 0.03297
+  cmax=8 q=8: max over p = 3/91 ~ 0.03297
+  cmax=9 q=7: max over p = 5/104 ~ 0.04808
+  cmax=9 q=8: max over p = 5/104 ~ 0.04808
+  cmax=9 q=9: max over p = 5/104 ~ 0.04808
+
+|B|=5 CORRECTED zones (24): worst clear component 0.01171 (base (3, 5, 6, 8, 11)) => entry bar 171
+|B|=4 CORRECTED zones (28): worst clear component 0.00835 (base (3, 4, 5, 11)) => entry bar 239
+|B|=3 CORRECTED zones (34): worst clear component 0.00584 (base (3, 4, 10)) => entry bar 343

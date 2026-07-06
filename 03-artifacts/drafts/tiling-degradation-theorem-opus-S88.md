@@ -42,9 +42,15 @@ holds and is attained.)
 
 ## 3. The tiling-degradation bound (sharp; verified universally; proof outlined)
 
-**Theorem (universal desert bound).** Every covered component satisfies
+**Theorem (universal desert bound — SUB-CLUSTER FORM, corrected S92/MISTAKE-111).**
+Every covered component satisfies
 
-    ℓ ≤ σ/D + C/W,     σ = 2ρc − 1,  D = d_max,
+    ℓ ≤ max_{C′ ⊆ C, σ(C′) > 0} σ(C′)/D(C′) + C/W,
+
+(the desert is sustained by whichever covering sub-cluster maximizes slack/spread;
+mixed clusters violate the full-D form — verified counterexample in
+desert_catalog_opus_S92.out). For PURE clusters this reduces to σ/D, σ = 2ρc − 1,
+D = d_max,
 
 i.e. N ≤ σ·W/D + C. At ρ = 1/13: ℓ ≤ (2c−13)/(13·D). Since the c−1 positive
 differences are distinct, D ≥ c−1, giving the ABSOLUTE bound ℓ ≤ (2c−13)/(13(c−1)).

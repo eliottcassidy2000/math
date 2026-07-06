@@ -11,6 +11,17 @@ THE CORRECTED PICTURE: (i) c = 1 is clean and needs NO steering (t = 1/(k+1) out
 VALUE: 30 minutes of Python killed a plausible-looking theorem before a formalization session died on it (the owner's priority order working as intended). The write-out plan for the c>=2 stratum should be certificate tables + the cascade, not a counting lemma.
 
 FILES: lrc14_dilated_multitop_freerider_klein_S143.py (+out); HYP-4192 (REFUTED-as-uniform / reframed-as-certificate); this entry. No Lean (correctly none). No canon overridden.
+## opus-2026-07-05-S92 -- HYPOTHESIS TESTS FIRST: K = 1 + O(1/W) (the 1.364 was an artifact); the catalog is SOUND; MISTAKE-111 (sub-cluster correction, caught by my own test); LRCTelescope.lean GREEN (HYP-4206)
+
+Prompt: keep working the write-out creatively; hypotheses first, then formalize; avoid large builds.
+
+HYPOTHESES TESTED: (1) is the S90 K_emp = 1.364 a swap-assisted desert or an artifact? ARTIFACT: that component is sub-period (0.0026 < 2/W); no genuine multi-period desert exceeds K = 1.08 anywhere: K = 1 + O(1/W) empirically, the K <= 2 write-out is safe. (2) is the desert CATALOG (regime-chained intervals at resonances) sound? YES on mixed clusters: every measured component > 5/W lies in a predicted interval (over-prediction harmless). (3) The catalog test then CAUGHT MY OWN S88 OVERSTATEMENT: a mixed cluster (consec-7 block + spread tails) deserts at its BLOCK value 1/78, violating the full-D universal bound by 1.5x => MISTAKE-111: the correct universal form is the SUB-CLUSTER maximum. Repairs executed same-session: block-worst zone radii (1/78, 3/91, 5/104 at cmax 7/8/9), corrected closure bars 171/239/343 (box [14,343]); census correction: q = 13 slack-dead ONLY at c = 7 -- doubled residues revive it at c >= 8 (measured 0.0144): those zones pending, conservative box [14,~450].
+
+FORMALIZED (single-file build as directed, then one replay-only corpus pass): LRCTelescope.lean GREEN -- telescope_bound (the abstract heart of the whole S88-S91 chain: gaps <= 0 at both ends of linear drift + total deficit sigma + positive drift >= d => N d <= sigma; pure Finset.sum, kernel-pure, standard trio) + desert_period_bound (the N <= sigma W/D form). Registered, corpus 8678.
+
+THE SESSION'S SHAPE: the test built to verify the catalog instead falsified the universal bound's stated form -- the second time this program's own verification machinery caught its own overstatement (cf. MISTAKE-105). Rule logged: bounds verified on pure configurations must be re-tested on MIXED ones before 'universal' enters the statement.
+
+Files: desert_catalog_opus_S92.out; MISTAKE-111; LRCTelescope.lean (green, registered); HYP-4206.
 
 ## opus-2026-07-05-S91 -- THE CRUTCH REMOVAL: the citation-window assumption dissolved and ALL strata close (bars 33-94 generic, <= 179 all-type); swap-starvation K <= 2 written out; the assumption-audit pattern (HYP-4196)
 
