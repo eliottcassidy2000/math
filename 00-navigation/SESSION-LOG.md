@@ -1,3 +1,20 @@
+## mac-mini-2026-07-05-S55b -- OVERNIGHT: the fold-level pigeonhole for the 3/38 cell is DEAD (template-SAT at EVERY stacking, realization probe wildly loose) -- rerouted to the BINDING-PAIR lever (38k sums; kill k >= 2 by kps's omega/parity, then k = 1 is FINITE) (HYP-4222)
+
+Prompt (owner): long overnight session; complete the formalized proof; pull often; extend collaboratively.
+
+PULLED + EXTENDED: kps-S16's CRT fold (their HYP-4197, two letters to me) -- the c=3 q=38 Farey cell folds to mod-19 two-color = the owner's E_p/O_p seed at p=19, mu=3 (my S57-series half-value ban structure verbatim).  Accepted the co-attack (HYP-4222).  opus-S92 absorbed (desert catalog + MISTAKE-111 + LRCTelescope.lean keystone).
+
+THE WORK (three phases, exact):
+ (1) PHASE 1: the 38x39+13 fold system ((A) 38-grid tight cover in ban language + (B) level-3 witness with binder + (C) 39-grid tightness + mod-13 pair pinning) is TEMPLATE-SAT -- 5 satisfying templates found by hill-climbing at modulus 1482 in seconds.  kps's fold-level caveat extends to the joint 38x39 system.
+ (2) PHASE 1b: adding the FULL level-3/38 pinning stack (covering 2..12 as dist-0 + near-unit pinning at EVERY q in 13..25 -- 3q/38 < 2 throughout) at modulus lcm(2..39): STILL SAT (5 templates).  The S55-series CRT-ray periodicity theorem PREDICTED this: no residue filter is ever unsatisfiable.  The fold-level pigeonhole is dead as a proof route -- a doomed Lean formalization avoided (refute-first, third instance).
+ (3) REALIZATION PROBE: a SAT template's smallest mod-1482 lift has witness margin >= 55/206 ~ 0.267 -- WILDLY loose, nowhere near the cell.  Template data and attained M separate INTEGRALLY: THM-622's quantization mechanism seen live.
+
+THE REROUTE (the session's constructive yield): grid attainment (THM-592, formal) forces a 3/38-attainer's binding pair to sum to 38k with value kappa = 3k.  kps-S5's omega/parity kill (their kappa = 2 argument) is the template for a k >= 2 congruence kill; k = 1 leaves THE BINDING PAIR SUMMING TO EXACTLY 38 -- both elements <= 37, and the cell kill becomes FINITE at the realization level.  Same shape for the other composite cells (51, 63/64, 77).  Division proposed to kps: they take the k-reduction; I take the k = 1 finite kill (census harness).  SOUNDNESS note logged: the 38-grid witness is k=1-necessary only.
+
+FILES: lrc_cell38_kill_macmini_S55b.py (+.out); HYP-4222 (+INDEX); two letters to kps.  No canon overridden.  (l=4 workers: still grinding -- 6 alive at session close; post-pass stands.)
+
+NEXT: (a) the k-reduction + k=1 finite kill with kps (the 3/38 cell's correct route); (b) opus's box [14,343+] sweep spec on my C harness; (c) the corrected lift-floor closure wiring (S54b's remaining named-hypothesis plumbing).
+
 ## mac-mini-2026-07-05-S55 -- OVERNIGHT (G)-CAMPAIGN: three refutations + two confirmations map the battlefield; the TENSION MECHANISM (deep witness vs capped max) identified; independent convergence onto kps's covering residual; ceiling 2/23 on small-lifting doubles (HYP-4102)
 
 Prompt (owner): long overnight session on the remaining formalization path; pull often; extend collaboratively.
