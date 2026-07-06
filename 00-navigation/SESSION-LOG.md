@@ -192,6 +192,18 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S19 -- THE FULL CLUSTER-GCD LADDER |S| <= 6 IN LEAN, kernel-pure: gap_gcd_rung_sharp ((25-4|S|)*gcd(complement) <= 75*Sum_S |v|) via the sharp visit count (4/25)D + 3w + the END-TO-END k-reduction composition (k_bounded_of_stratification_sharp) -- the critical-path gap under mac-mini's HYP-4232/4242 closed (HYP-4237)
+
+Prompt (owner): keep reducing the crux creatively; get threads to easily-formalizable state.
+
+THE GAP CLOSED: mac-mini's k-stratification of the 3/38 Farey cell (S1) and k=1 anchored kill (S2) cite the cluster-gcd ladder at |S| up to 6; only |S| <= 3 was formal (S18's lossy count), and their S2 letter explicitly requested the sharp upgrade. Delivered (LRCClusterGcdSharp.lean, registered, kernel-pure, corpus 8687): tooth_visit_count_sharp -- among D equally-spaced copies a comb w hosts <= (4/25)D + 3w -- by (a) block split D = gcd*p (the visit condition is p-periodic in j; periodic_iterate + filter_range_mul_periodic), (b) coprime permutation k -> w'k mod p (ZMod-free: InjOn via ModEq.cancel_left_of_coprime + image extensionality), (c) wrapped-arc two-piece count <= (4/25)p + 3 (witnesses only M0 = ceil(X - 2/25) and M0+1; the M0+1 interval is the p-translate clipped at p; piece 2 bounded by max(1-A, 0) -- the naive 1-A is FALSE at A > 1, a real bug Lean caught). Then gap_gcd_rung_sharp: citation on the complement + 1/d-periodicity + fiberwise sharp count => (25 - 4|S|) d <= 75 Sum_S |v| for every 1 <= |S| <= 6. THE POLE AT |S| = 25/4 IS FORMAL (draft's 50 needs a case-split clip; 75 only rescales heights). PLUS k_bounded_of_stratification_sharp: the d := k instantiation, so mac-mini's composition upgrades without touching their file.
+
+LEAN LORE (logged in INDEX under HYP-4237): push_cast rewrites Nat-division inside Int-casts via Int.ofNat_div but not inside direct Real-casts -- opacify quotients with set before push_cast; inner inductions inside succ branches revert the outer ih into the motive -- extract helpers; Finset.image_filter does not exist (filter_image, sides swapped).
+
+CONSEQUENCE FOR THE CRUX: every k >= 2 stratum of every Farey cell (mac-mini-S3's uniform cell lemma makes the stratification cell-parametric; my rung was cell-agnostic from birth -- it only uses the 2/25 ceiling) now has a FORMAL absolute-height bound at cluster sizes up to 6. Remaining in the cell lane: the >60-height k=1 realization theorem (mac-mini S2's 9 anchored shapes, sweep clean to 60), |S| >= 7 residual (census-shaped, unit-pair sharpened per S3).
+
+FILES: LRCClusterGcdSharp.lean (new, registered); HYP-4237 CONFIRMED (INDEX). No canon overridden.
+
 ## kind-pasteur-2026-07-05-S18 -- THE CLUSTER-GCD LADDER IN LEAN, kernel-pure: gap_gcd_rung ((25-8|S|)*gcd(complement) <= 25(Sum_S+|S|), |S| <= 3) -- the absolute-height mechanism for gcd-clusters is now machine-checked (HYP-4227)
 
 Prompt (owner): finish remaining mathematics and proofs; think awareness.

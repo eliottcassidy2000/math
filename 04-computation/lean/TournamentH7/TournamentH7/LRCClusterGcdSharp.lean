@@ -529,8 +529,24 @@ theorem gap_gcd_rung_sharp (cite : LRCUpTo13) (v : Fin 12 → ℤ) (hv : ∀ i, 
     nlinarith [hsum]
   exact_mod_cast hcast
 
+/-- **THE k-REDUCTION, SHARP** (upgrades mac-mini-S2's
+`KStratification.k_bounded_of_stratification` from `|S| ≤ 3` to `|S| ≤ 6`,
+as requested in their S2 letter): for a no-`2/25`-point 12-family whose
+non-`k`-multiples form `S` with `1 ≤ |S| ≤ 6` (the k-cluster from
+`binder_dvd` fills the complement), the stratification height `k` is
+bounded through the sharp rung at the common divisor `d = k`. -/
+theorem k_bounded_of_stratification_sharp (cite : LRCUpTo13)
+    (v : Fin 12 → ℤ) (hv : ∀ i, v i ≠ 0)
+    (hnl : ∀ t : ℝ, ∃ i, ∃ m : ℤ, |(v i : ℝ) * t - m| < 2 / 25)
+    (k : ℤ) (hk : 0 < k)
+    (S : Finset (Fin 12)) (hS1 : S.Nonempty) (hS6 : S.card ≤ 6)
+    (hstrat : ∀ i, i ∉ S → k ∣ v i) :
+    (25 - 4 * (S.card : ℤ)) * k ≤ 75 * (∑ i ∈ S, |v i|) :=
+  gap_gcd_rung_sharp cite v hv hnl S hS1 hS6 k hk hstrat
+
 #print axioms tooth_visit_count_sharp
 #print axioms gap_gcd_rung_sharp
+#print axioms k_bounded_of_stratification_sharp
 
 end ClusterGcdSharp
 end LonelyRunner
