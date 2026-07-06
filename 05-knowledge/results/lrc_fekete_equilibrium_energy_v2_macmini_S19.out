@@ -1,0 +1,15 @@
+13-point config {0} u {v_i/13} -- AP = 13th roots of unity (Fekete/equilibrium):
+
+  config                       log-energy(min=Fekete)  chord-sum(max=Fekete)
+  AP (13th roots of unity)                  -16.67217              107.06463
+  jitter +-0.01 (avg of 40)                 -16.56311              107.03278
+  jitter +-0.02 (avg of 40)                 -16.23107              106.94574
+  jitter +-0.04 (avg of 40)                 -14.43515              106.54048
+  jitter +-0.08 (avg of 40)                 -10.40194              105.58668
+
+  perturbations with log-energy >= AP's: 160/160  (AP should be the MINIMIZER)
+
+=> WITH the observer, the AP = the 13th roots of unity = the discrete EQUILIBRIUM /
+   FEKETE config: MIN logarithmic energy, MAX chord-sum (Stolarsky), MIN discrepancy
+   (opus-S65).  The tight locus is the observer+runners at electrostatic equilibrium;
+   the LRC gap 1/13 = the equilibrium spacing.  One classical object under many names.

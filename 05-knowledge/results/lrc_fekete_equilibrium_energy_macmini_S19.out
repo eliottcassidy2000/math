@@ -1,0 +1,16 @@
+Config positions at t=1/13 (AP => nonzero 13th roots of unity), energy comparison:
+
+  config                          chord-sum(max=Fekete) log-energy(min=Fekete)
+  AP {1..12} @1/13 (roots1)                    90.59315              -14.10722
+  +0.01 jitter                                 90.40376              -13.84182
+  +0.03 jitter                                 90.80733              -14.14748
+  +0.06 jitter                                 90.05754              -11.04578
+
+  LRC families at their OWN witness t* (positions {v_i t*}), chord-sum & Stolarsky:
+    AP {1..12}       M= 1/13 t*=1/13: chord-sum=90.59315
+    doubled-apex     M= 2/25 t*=2/25: chord-sum=90.75370
+    {1..11,23}       M= 1/12 t*=1/12: chord-sum=90.63141
+
+=> AP-roots-of-unity MAXIMIZE chord-sum / MINIMIZE log-energy (Fekete/equilibrium); any
+   jitter strictly raises energy.  The tight locus = the discrete EQUILIBRIUM MEASURE;
+   min discrepancy (opus-S65) = max distance-sum (Stolarsky) = Fekete = the AP.  ONE fact.

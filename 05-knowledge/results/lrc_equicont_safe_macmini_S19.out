@@ -1,0 +1,25 @@
+==============================================================================
+PART 1: safe CONTINUITY along a lift ray (equicontinuity of safe)
+==============================================================================
+  2-torus U (base AP, lift {4,6}): safe_2d(2/25) = 0.02720
+  safe_1d(w^N) for w^N = a + N*b, growing N (should -> safe_2d):
+    N=  13: safe_1d = 0.00000  (|safe_1d - safe_2d| = 0.02720)
+    N=  25: safe_1d = 0.03347  (|safe_1d - safe_2d| = 0.00627)
+    N=  50: safe_1d = 0.03327  (|safe_1d - safe_2d| = 0.00607)
+    N= 100: safe_1d = 0.03170  (|safe_1d - safe_2d| = 0.00450)
+    N= 200: safe_1d = 0.03007  (|safe_1d - safe_2d| = 0.00287)
+    N= 400: safe_1d = 0.02990  (|safe_1d - safe_2d| = 0.00270)
+  => convergence safe_1d -> safe_2d confirms safe is CONTINUOUS along
+     the lift ray (Weyl equidistribution) -- the equicontinuity of safe.
+
+==============================================================================
+PART 2: safe_2d(U) > 0 for COUPLED 2-tori (the uniform torus floor)
+==============================================================================
+  coupled 2-tori sampled: 40
+  MIN safe_2d over coupled tori: 0.08093 (lift dir [2, 0, 2, 3, 2, 3, 2, 0, 2, 2, 2, 0])
+  # with safe_2d ~ 0 (< 0.005): 0
+  smallest 4 safe_2d: ['0.0809', '0.0921', '0.0941', '0.0942']
+
+  ZERO-LOCUS check -- AP-direction tori:
+    b=0 (pure AP, N=1): safe_2d = 0.00000 (ZERO -- AP locus)
+    b=a (dilated-AP dir): safe_2d = 0.00000 (ZERO -- AP locus)
