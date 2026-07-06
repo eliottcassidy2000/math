@@ -1032,6 +1032,26 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S35 -- THE PLATEAU + RESONANCE LADDER: M=j/(6j+5), gap catches exactly one rung (j=3); unifies opus HYP-4476 + mac-mini HYP-4542 + kps S34 (HYP-4507)
+
+Prompt (owner): strengthen the open residual via small statements, subtle patterns, hidden connections.
+
+One slice {1,2,3,4,5,7,x} fully solved -- and it caught + corrected my own opening guess.
+
+MECHANISM: base B={1,2,3,4,5,7}, M(B)=1/6 at t=1/6.
+(PLATEAU) generic outlier x (x!=0 mod 6) => M=1/6 for ALL x in 13..49 = opus HYP-4476 height-independence, concrete.
+(RESONANCE) x=0 mod 6 => dist 0 at t=1/6, KILLS the base witness, M drops onto a ladder.
+(CLOSED FORM) x=6j (j>=3): M=j/(6j+5) at t=(j+1)/(6j+5); lower bound closed-form (residue table), equality computational; denoms 6j+5 an AP step 6, M up to 1/6.
+(UNIQUE RUNG) j/(6j+5) in (1/8,2/15) <=> j=3 => x=18, M=3/23 (mediant at wall 23=3k+2). Window catches EXACTLY ONE rung = structure x width explicit.
+
+CORRECTION (honest, in-session): opening guess 'far outlier = additively-isolated, isolation=height-independence in gap' REFUTED -- 2nd n=8 member {1,3,4,5,7,13,18} has M=3/23 yet NO isolated runner (18=5+13). Isolation neither nec. nor suff.; survives only as 'isolated => binding'.
+
+UNIFICATION (three faces): opus HYP-4476 = plateau; mac-mini HYP-4542 = congruence (resonance mod base-denom, kissing/additive-energy); kps S34 = surviving rung = mediant at wall.
+
+TOWARD PROOF: per base, M plateaus at M(B), drops only at mod-(base-denom) resonances onto a ladder ->M(B) from below; k=12 gap narrower than rung spacing near 1/13 => no rung in. = mac-mini Selberg/metric (HYP-4512/4532), now with a concrete ladder to estimate.
+
+FILES: lrc_additive_isolation_kps_S35.py(+.out), lrc_resonance_ladder_kps_S35.py(+.out); reflection the-plateau-and-the-resonance-ladder-kps-S35.md; HYP-4507. No Lean. No canon overridden.
+
 ## kind-pasteur-2026-07-06-S34 -- SMALL STATEMENTS on the gap members: the wall IS the mediant; realization = base-AP-bulk + boundary-defect seating; density floor = seating cost (HYP-4497)
 
 Prompt (owner): strengthen understanding via small statements, subtle patterns, hidden connections.

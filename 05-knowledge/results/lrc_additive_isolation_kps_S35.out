@@ -1,0 +1,56 @@
+=== ADDITIVE ISOLATION on the gap members (kps-S35) ===
+
+n=8 A: v=[1, 2, 3, 4, 5, 7, 18]
+  M=3/23  witness t=4/23  residue-dists={1: 4, 2: 8, 3: 11, 4: 7, 5: 3, 7: 5, 18: 3}
+  additive triples (8): [(1, 1, 2), (1, 2, 3), (1, 3, 4), (1, 4, 5), (2, 2, 4), (2, 3, 5), (2, 5, 7), (3, 4, 7)]
+  ADDITIVELY ISOLATED (kissing-0): [18]
+  BINDING (min dist 3): [5, 18]
+  (A) isolated subset of binders? True
+
+n=8 B: v=[1, 3, 4, 5, 7, 13, 18]
+  M=3/23  witness t=4/23  residue-dists={1: 4, 3: 11, 4: 7, 5: 3, 7: 5, 13: 6, 18: 3}
+  additive triples (4): [(1, 3, 4), (1, 4, 5), (3, 4, 7), (5, 13, 18)]
+  ADDITIVELY ISOLATED (kissing-0): []
+  BINDING (min dist 3): [5, 18]
+  (A) isolated subset of binders? True
+
+n=7 (5/33): (no member found)
+
+=== (B) HEIGHT-INDEPENDENCE: {1,2,3,4,5,7,x}, x=13..40 -- M vs whether x is isolated ===
+  x=13 ISO  M=    1/6  != 3/23
+  x=14      M=    1/6  != 3/23
+  x=15 ISO  M=    1/6  != 3/23
+  x=16 ISO  M=    1/6  != 3/23
+  x=17 ISO  M=    1/6  != 3/23
+  x=18 ISO  M=   3/23  == 3/23
+  x=19 ISO  M=    1/6  != 3/23
+  x=20 ISO  M=    1/6  != 3/23
+  x=21 ISO  M=    1/6  != 3/23
+  x=22 ISO  M=    1/6  != 3/23
+  x=23 ISO  M=    1/6  != 3/23
+  x=24 ISO  M=   4/29  != 3/23
+  x=25 ISO  M=    1/6  != 3/23
+  x=26 ISO  M=    1/6  != 3/23
+  x=27 ISO  M=    1/6  != 3/23
+  x=28 ISO  M=    1/6  != 3/23
+  x=29 ISO  M=    1/6  != 3/23
+  x=30 ISO  M=    1/7  != 3/23
+  x=31 ISO  M=    1/6  != 3/23
+  x=32 ISO  M=    1/6  != 3/23
+  x=33 ISO  M=    1/6  != 3/23
+  x=34 ISO  M=    1/6  != 3/23
+  x=35 ISO  M=    1/6  != 3/23
+  x=36 ISO  M=   6/41  != 3/23
+  x=37 ISO  M=    1/6  != 3/23
+  x=38 ISO  M=    1/6  != 3/23
+  x=39 ISO  M=    1/6  != 3/23
+  x=40 ISO  M=    1/6  != 3/23
+
+  x giving M=3/23: [18]
+    of these, additively isolated: [18]
+    non-isolated: []
+  x giving M!=3/23: [13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+
+READING: if 'M=3/23' coincides with 'x additively isolated', then additive
+isolation (kissing=0) IS opus's height-independence, and the outlier's only
+role is to occupy a boundary seat (my S34). One fact, three faces.
