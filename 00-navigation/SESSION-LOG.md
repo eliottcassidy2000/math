@@ -836,6 +836,18 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S28 -- THE SINGLE-LIFT RIGIDITY: ap_single_lift_loose GREEN (every single-13-lift of the AP is loose at 2/25) -- the formal BASE CASE of the density floor / near-AP fiber rigidity (HYP-4447 brick)
+
+Prompt (owner): work the genuinely open residual (the density floor); pull often, reroute.
+
+Contributed the formal BASE CASE of the density floor = the near-AP fiber rigidity. LRCSingleLift.lean (GREEN kernel-pure, registered): ap_single_lift_loose -- every single-13-lift of the AP {1..12} (replace runner j+1 by j+1+13; a full residue system mod 13 = the residue-pinned side) is LOOSE at 2/25, via 12 rational_point_margin certificates. Witnesses computed (single-lift scan): runner 1->14 at t=1/16, ..., 6->19 at 2/23 (tightest, = mac-mini's safe-minimizer), ..., 12->25 at 1/12. Each margin > 2/25 => the single-lift fiber never enters the gap.
+
+PLACEMENT: this is the BASE CASE of mac-mini HYP-4392 (strict lift-rigidity / M-minimizer, the open density floor): single lifts machine-checked; the general (all lifts, unbounded) remains the open analytic floor. mac-mini S17's safe-minimizers (M=1/12 at runner 12, 2/23 at runner 6) ARE these single lifts, now with explicit clear-point certificates. On the S23 residue split, this is the residue-pinned (multiplicative) side's base case; slice11_loose was the collision (additive) side.
+
+REROUTE NOTE: the density floor's general case is analytic (mac-mini Riesz/equioscillation HYP-4452/4462, opus metric side HYP-4436); I anchored its formal base case rather than duplicate the analysis.
+
+FILES: LRCSingleLift.lean (ap_single_lift_loose + loose_cert, kernel-pure). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S27 -- THE EQUI- AXIS: equicontinuity = equidistribution = dodge-not-patch; splits (G) into an equidecomposability residual + explains height-independent density floor (HYP-4447)
 
 Prompt (owner): relate equicontinuity to equidecomposability, equinumerosity; integrate and reframe creatively.
