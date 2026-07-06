@@ -160,6 +160,28 @@ OPEN (the genuine analytic crux, shared with klein): the equioscillation / AP-re
 
 FILES: 04-computation/lrc_spectral_gap_kps_S12.c; reflection the-loose-branch-is-the-lrc13-second-value-gap-kps-S12 (with convergence note to klein); HYP-4147; LRCTemplateSurface banner fix. No canon overridden; ceded to klein's first-push per collision protocol.
 
+## klein-2026-07-05-S141 -- THE MIDRANGE WITNESS, FORMALIZED (kernel-pure) + the 11.5-RATIO SPLIT of the loose branch (HYP-4161). Pushing math AND formalization.
+
+Prompt (owner): keep pushing the open math AND formalization even further.
+
+TWO deliverables (both fronts):
+
+(1) FORMALIZATION -- LRCMidrangeWitness.lean (Mathlib-only, kernel-pure [propext,Classical.choice,Quot.sound], corpus green, registered): the general MIDRANGE WITNESS. For any speeds v_i in [m,Mx], 0<m<=Mx, at t=1/(m+Mx) every runner clears every integer by m/(m+Mx) -- `midrange_margin`; corollary `midrange_margin_compressed`: vmax<=13 vmin => margin >=1/14. This is the >=-half M(S)>=vmin/(vmin+vmax) (THM-526; opus-S85's comb-saturation lower bound) as a REUSABLE Lean lemma (was paper-only + a skeleton mention). Proof reduces the real ineq to the integer core m<=|v-k(m+Mx)| (cases k<=0/k>=1). This is the general witness the compressed/loose analysis rests on.
+
+(2) MATH -- the midrange witness SPLITS the loose branch at RATIO 11.5. vmin/(vmin+vmax) >= 2/25 <=> vmax <= 11.5 vmin. So EVERY base with vmax <= 11.5 vmin is PROVEN loose (M >= 2/25) by midrange alone (0/400 sampled violate). The AP {1..12} has ratio 12 > 11.5, so it sits in the SPREAD region -- the tight extremizer AND the entire gap (1/13,2/25) live in vmax > 11.5 vmin; the midrange-tight region has NO tight family. This LOCALIZES the residual to SPREAD bases (one far runner => peel to 11-runner (S126) + killer-offset (THM-618); full-comb spread = opus-S85 exact formula a/(2a+r-1); non-comb spread = ladder rungs).
+
+So the loose branch = [midrange-tight vmax<=11.5vmin: PROVEN+FORMALIZED] + [spread vmax>11.5vmin: the AP-rigidity residual, open]. The gap threshold 2/25 = the midrange value at the ratio-11.5 boundary.
+
+CONVERGENCE (same window, credited): kps-S12 HYP-4147 independently reframed the loose branch as the LRC(13) second-value gap (floor 1/13 cited FREE, sigma_2=2/25, gap 1/325 empty, "irreducibly analytic") = my S140, AND fixed the stale LRCTemplateSurface banner I flagged in S139. opus-S86 HYP-4146 integrates opus-S85 combs + klein-S140 (cluster-desert + resonance-immunity q<=6 + measure assembly). My S141 distinct pieces: the FORMALIZED midrange witness (the Lean brick they use on paper) + the 11.5-ratio split.
+
+HONEST: midrange-tight half PROVEN and FORMALIZED; the spread residual (AP-rigidity / gap) is still open (peel-to-11 + killer-offset synthesis, or LRC(13) extremizer-uniqueness citation). Genuine progress on both fronts.
+
+FILES: LRCMidrangeWitness.lean (registered, kernel-pure); reflection the-midrange-witness-splits-the-loose-branch; INDEX HYP-4161; this log. (S140 scripts reused.)
+
+NEXT: (a) the spread residual -- peel the far runner (ratio>11.5) to the 11-runner S126 gap + attach via killer-offset; (b) mine LRC(13) (Sungkawichai-Trakulthongchai) for extremizer-uniqueness+gap to cite the whole loose branch; (c) formalize the spread/peel once the math closes.
+
+---
+
 ## klein-2026-07-05-S140 -- THE LOOSE BRANCH = 12-RUNNER AP-RIGIDITY: the gap (1/13,2/25) is a FAREY WINDOW; gap-violators are BOUNDED (HYP-4151). Exact math, no formalization.
 
 Prompt (owner): improve the LRC(14) proof; DON'T formalize until the exact mathematics is figured out creatively.
