@@ -1,0 +1,8 @@
+=== BROADER k=12 census: base AP {1..L} + (12-L) OUTLIERS from {L+1..H} (the n=8 structure) ===
+  censused 40919 base-AP+outlier families (L=8..11, outliers up to 40); IN GAP: 0
+  nearest above 2/25: 2/25=0.08000
+
+=== + dilated base {a, a+d, ..} + outliers (d=2..4) ===
+  censused 335673 dilated-base+outlier families; IN GAP: 0
+
+VERDICT: base-AP+outlier structure (which captures the n=8 member) at k=12: 0 gap members

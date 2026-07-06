@@ -971,6 +971,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S33 -- CORRECTION+STRENGTHENING of the structure census: the n=8 member reveals base-AP+FAR-outlier shape; broader k=12 census STILL empty (~377k) -- supports mac-mini HYP-4502 (HYP-4487)
+
+Prompt (owner): work on the open residual.
+
+Supporting mac-mini's HYP-4502 (metric half: generalized AP => M>=2/25 at k=12), I computed the min-rise crossover and CAUGHT AN ERROR in my own S32 census.
+
+CORRECTION: S32's generalized-AP census used only +-1,+-2 defects -- TOO NARROW. It found k=6 nonempty but k=7 (n=8) EMPTY, contradicting known n=8-nonempty. Broad search FOUND the n=8 members {1,2,3,4,5,7,18}, {1,3,4,5,7,13,18} (M=3/23 in (1/8,2/15)): base AP {1..5} + NEAR defect (7) + FAR outlier (18). The true shape is base AP + near AND far outliers.
+
+STRENGTHENING: re-censused k=12 with the BROADER structure (base AP L=8..11 + dilated d=2..4, + outliers up to 40) -- ~377000 families => STILL 0 in the gap; nearest above = 2/25. Fixing the narrowness STRENGTHENS the k=12-empty evidence over the CORRECT structure.
+
+CONVERGENCE: mac-mini HYP-4502 (my census turned into a proof), HYP-4512/4522 (Selberg N~2k^2, rigorous-but-not-computable at n=13); opus HYP-4456/4466 (structure x width; safe reformulates; harmonic route refuted). RESIDUAL: the analytic Selberg/metric estimate at n=13.
+
+HONEST: S32 was too narrow (missed n=8 structure); corrected+strengthened; still not a proof (unbounded family), but now covers the correct base-AP+outlier shape.
+
+FILES: lrc_minrise_crossover_kps_S33.py (+.out), lrc_k7_search_kps_S33b.out, lrc_k12_broad_census_kps_S33c.out; HYP-4487. No Lean. No canon overridden.
+
 ## kind-pasteur-2026-07-06-S32 -- STRUCTURE x WIDTH quantified: n=13 window 1/325 admits NO generalized-AP deficit (~149k census, 0 in gap); converges with mac-mini HYP-4512 Selberg-width ~2k^2 = my window scale (HYP-4477)
 
 Prompt (owner): work the sole open piece collaboratively.
