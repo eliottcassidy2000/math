@@ -18,6 +18,21 @@ Together with S141b's induction (uniqueness FREE from the split), the loose bran
 FILES: lrc14_strip_split_coverage_klein_S142.py (+out); HYP-4187; this entry. No canon overridden.
 
 NEXT (the assembly, for whoever lands it): (a) the level-k free-rider + rung-cascade as ONE Lean theorem (S132's killer_target generalizes: multiple tops, simultaneous CRT, obstruction = divisibility); (b) ladder rows as marginQ certificates (the S138 value form makes each THM-621 row a two-line kernel check); (c) the corner-recursion bookkeeping.
+## kind-pasteur-2026-07-05-S15 -- THE MULTI-FOLD LADDER: multi-leg lifts are DOMINATED by the single-leg deep well (extends THM-621; collapses the l=2..6 multi-lift sweeps) (HYP-4177)
+
+Prompt (owner): work the multi-leg lift through the fourteen-fold lens; see if multi-survivors factor; extend to close LRC(14).
+
+Worked mac-mini's THM-621 (fourteen-fold ladder, single-leg lift M=14/(13(r+1)), deep well {1..11,168}=14/169) at MULTI-leg. ANSWER to 'do multi-survivors factor?':
+ - SURVIVAL FACTORS per-coordinate: for a lifted coord r>=7 (unique multiple of r in {1..12}), covering by r forces r|k_r => lifted value r(1+13m), m>=1, INDEPENDENTLY per coord. So the multi-survivor SET is a product of single-leg conditions.
+ - M-VALUES do NOT factor as products/min of single-leg M's. Instead the single-leg deep well DOMINATES.
+
+THE MULTI-FOLD LADDER: top-l lift {1..12-l} u {14(13-l)..14*12} has M = 14/(14(13-l)+1) for l=1,2,3 (169,155,141) = the single-leg law with 12->13-l: killers tighten the CONSECUTIVE AP BASE {1..12-l} by the Phi6 '+1' (opus-S85 killer+1). Each leg SHORTENS the base => M RISES (looser).
+
+DOMINATION (verified): (a) exhaustive r>=7 m=1 multi-leg (63 families): 0 with M<=14/169, min 14/155; (b) higher-m only loosens (14/169->27/325->40/481); (c) GLOBAL sample (1174 covering lift families, ANY coords/ANY k): min M=2/23, 0 below 14/169 => the deep well {1..11,168} is the GLOBAL TIGHTEST lift.
+
+PAYOFF (extend to close LRC(14)): the l=2..6 multi-lift strata (mac-mini HYP-4109, the 13.3B-cell sweeps) COLLAPSE to THM-621 (single-leg) + monotone domination -- the deep well is the unique descended extremal, everything else loose (>= 14/155 >> 2/25). No multi-lift sweep needed. MECHANISM: M(lift) ~ M(longest consecutive AP sub-base) tightened by killer+1; single-leg deep well has maximal base {1..11}. OPEN closing move: prove M(lift) >= 14/169 (equality only at the deep well) via base-AP-length monotonicity + THM-621's CRT witness -- offered to co-author with mac-mini.
+
+FILES: 05-knowledge/results/lrc14_multifold_ladder_domination_kps_S15.md; 04-computation/lrc14_multifold_ladder_kps_S15.py; HYP-4177. Note to mac-mini sent. Extends THM-621, uses opus-S85 (Phi6=killer+1); the lift stratum is one branch of hdich (the loose-branch AP-rigidity is the other open crux). No canon overridden.
 
 ## klein-2026-07-05-S141b -- THE SECOND-VALUE INDUCTION (synthesis): razor-quarantine as the campaign's one recurring law; uniqueness is FREE from the split; the 11.5 meeting point verified exact; middle strip clear at margin (HYP-4161 cont.)
 
