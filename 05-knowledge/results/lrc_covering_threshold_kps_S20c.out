@@ -1,0 +1,34 @@
+=== distinct-frequency covering threshold at rho = 2/25 ===
+  independence model (21/25)^l:
+    l= 6: (21/25)^l = 0.35130
+    l= 7: (21/25)^l = 0.29509
+    l= 8: (21/25)^l = 0.24788
+    l= 9: (21/25)^l = 0.20822
+    l=10: (21/25)^l = 0.17490
+    l=11: (21/25)^l = 0.14692
+    l=12: (21/25)^l = 0.12341
+    l=13: (21/25)^l = 0.10366
+    l=14: (21/25)^l = 0.08708
+    l=15: (21/25)^l = 0.07315
+
+  HARD search (min uncovered found), small freqs (fmax=l+3):
+    l= 6: min uncovered = 0.237000    freqs=[1, 3, 4, 6, 7, 8]
+    l= 7: min uncovered = 0.189575    freqs=[1, 2, 4, 6, 7, 8, 10]
+    l= 8: min uncovered = 0.122250    freqs=[1, 2, 3, 4, 5, 7, 10, 11]
+    l= 9: min uncovered = 0.070800    freqs=[1, 2, 3, 4, 5, 6, 10, 11, 12]
+    l=10: min uncovered = 0.075725    freqs=[1, 2, 3, 5, 6, 7, 8, 9, 10, 12]
+    l=11: min uncovered = 0.062500    freqs=[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
+    l=12: min uncovered = 0.061400    freqs=[1, 2, 4, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+  HARD search, LARGE distinct freqs (fmax=60, independence-favorable):
+    l= 8: min uncovered = 0.207275  
+    l= 9: min uncovered = 0.150150  
+    l=10: min uncovered = 0.115250  
+    l=11: min uncovered = 0.107675  
+    l=12: min uncovered = 0.080875  
+    l=13: min uncovered = 0.063425  
+    l=14: min uncovered = 0.051025  
+
+VERDICT: L*(small freqs) = None, L*(large freqs) = None
+  If both >= 12: the (A) residual is EMPTY (lifted <= 11 can never cover distinct).
+  The relevant bound for LRC: total 12 runners, base >= 1 => lifted <= 11.

@@ -1,0 +1,18 @@
+=== (1) distinct integer freqs 1..12, zero shift, l = 7 ===
+  scanned 792 sets; min uncovered = 0.16115 at freqs (1, 5, 6, 7, 8, 9, 11)
+=== (2) shift-optimized covering attempts, l = 7 ===
+  freqs [1, 2, 3, 4, 5, 6, 7]: min uncovered over shifts = 0.11067
+  freqs [1, 2, 4, 8, 16, 32, 64]: min uncovered over shifts = 0.11347
+  freqs [1, 5, 6, 7, 8, 9, 11]: min uncovered over shifts = 0.14497
+  freqs [1, 2, 3, 5, 7, 11, 13]: min uncovered over shifts = 0.17007
+  freqs [6, 7, 8, 9, 10, 11, 12]: min uncovered over shifts = 0.19630
+=== (3) all r_i = 1, evenly spaced, l = 7 (expect 0) ===
+  uncovered = 0.00000
+=== (4) DISTINCT frequencies, aggressive cover search, l = 7,8,9 ===
+  l=7: min uncovered = 0.162240  [positive uncovered floor]  freqs=[2, 4, 5, 6, 8, 12, 19]
+  l=8: min uncovered = 0.122080  [positive uncovered floor]  freqs=[3, 4, 6, 7, 8, 9, 10, 17]
+  l=9: min uncovered = 0.045960  [positive uncovered floor]  freqs=[1, 2, 3, 4, 6, 8, 10, 13, 21]
+
+VERDICT:
+  l=7 distinct uncovered ~ 0 => residual is HEIGHT-based (J-K finite), density lane ends at 6.
+  positive floor persists => Newman covering-impossibility lives (formalize phi>0 at 2/25).

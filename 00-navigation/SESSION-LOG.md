@@ -299,6 +299,20 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S20d -- THE (A)-WINDOW REDUCTION: distinct-freq combs at 2/25 can't cover (numerically dead through l=14) => LRCCircleCover.lean (circle_clear_of_density + CircleClearFloor named obligation + torus_A_window_empty) GREEN kernel-pure; converges with mac-mini HYP-4292 (infimum 1/6) -- the (A) residual is now two covering lemmas, both confirmed safe (HYP-4247 ext)
+
+Prompt (owner): keep pushing the proofs; integrate recent agent work.
+
+THE DECISIVE EXPERIMENT (lrc_seven_comb_covering_kps_S20b/c): can DISTINCT-frequency combs of radius 2/25 cover the circle? At l = 7: density 28/25 > 1, so measure permits it -- but hard annealing over small AND large frequency ranges finds NO cover for any l <= 14 (uncovered floor 0.11-0.16 at l=7, 0.062 at l=11, 0.051 at l=14). Only REPEATED frequencies (all r=1) cover. LRC runners are distinct speeds; base >= 1 forces lifted <= 11 -- so distinct-freq lifted can NEVER cover. This reshapes the endgame: the (A) residual dies by covering-IMPOSSIBILITY (distinctness), not just density.
+
+THE FORMAL REDUCTION (LRCCircleCover.lean, registered, kernel-pure): circle_clear_of_density (2*rho*|S| < 1 => a clear theta exists, proved at an uncovered GRID point -- no measure theory, reuses tooth_visit_count_rho); CircleClearFloor rho l (the NAMED obligation: l distinct-freq combs always leave a clear point -- PROVED l <= 6 by density via circleClearFloor_of_le6; Newman-shaped for 7 <= l <= 11); torus_A_window_empty (base citation + the floor => a proper coupled 2-torus with DISTINCT lifted freqs has a 2/25-clear point, outside the gap). Honest scope: distinct-freq = the single-lift-class / k-stratification stratum.
+
+THE CONVERGENCE (integrating mac-mini S5/S6): they independently hit the same 'distinct combs don't tile at 2/25' (HYP-4282 phi_worst 0.11-0.25) and CONFIRMED the MULTI-class 7-spread residual (HYP-4292): infimum EXACTLY 1/6 = 0.167 at 5-5-2 (the <=5-runner LR bound), census-clean 579+652 adversarial. Their multi-class stratum (>=3 direction-classes, parallel-in-class = repeated frequencies) + my distinct-freq stratum = the FULL (A) residual. Both confirmed safe-above; both reduce to a covering lemma. opus S98 (HYP-4266) has the ray-transport bridge GREEN (crux height direction discharged => finite census).
+
+STATE: the (A) window is now: [l <= 6: PROVED, my torus_clear_gap] + [distinct-freq 7..11: my named floor, numerically confirmed] + [multi-class 7-spread: mac-mini infimum 1/6, census-clean]. The remaining formal obligation is ONE covering-impossibility lemma (the Newman/>=3-class bound), which the factor-2 margin (2/25 vs 1/6) makes crude-bound-friendly.
+
+FILES: LRCCircleCover.lean (new, registered); lrc_seven_comb_covering_kps_S20b.py, lrc_covering_threshold_kps_S20c.py (+.outs); HYP-4247 extended. No canon overridden.
+
 ## kind-pasteur-2026-07-06-S20 -- THE COUPLED-TORUS SPLIT RUNG kernel-pure (rho-covered coupled 2-torus systems need 2*rho*(#lifted) >= 1) => the (A) window of the J-K reduction is EMPTY of <= 6-lifted coupled values + the forced rectangle for the l >= 7 residual (HYP-4247)
 
 Prompt (owner): work the crux and remaining tasks; pull frequently; integrate and extend.
