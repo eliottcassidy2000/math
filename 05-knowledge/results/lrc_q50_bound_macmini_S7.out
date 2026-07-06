@@ -7,3 +7,37 @@ PART A: the Q50 witness-denominator bound (exact)
   families needing q > 50: 0  (Q50 bound holds on this sample)
 
   SPECTRUM in [2/25, 1/6] and 2/25-exact maximizers (small-height subsample):
+    2/25 = 0.08000  (denom 25)  x2
+    2/19 = 0.10526  (denom 19)  x1
+    2/17 = 0.11765  (denom 17)  x1
+    1/7 = 0.14286  (denom 7)  x2
+    10/69 = 0.14493  (denom 69)  x1
+    6/41 = 0.14634  (denom 41)  x2
+    9/61 = 0.14754  (denom 61)  x1
+    4/27 = 0.14815  (denom 27)  x1
+    11/74 = 0.14865  (denom 74)  x1
+    11/73 = 0.15068  (denom 73)  x1
+    12/79 = 0.15190  (denom 79)  x1
+    7/46 = 0.15217  (denom 46)  x1
+    2/13 = 0.15385  (denom 13)  x2
+    15/97 = 0.15464  (denom 97)  x1
+    5/32 = 0.15625  (denom 32)  x1
+    14/89 = 0.15730  (denom 89)  x1
+    3/19 = 0.15789  (denom 19)  x3
+    7/44 = 0.15909  (denom 44)  x2
+    15/94 = 0.15957  (denom 94)  x1
+    4/25 = 0.16000  (denom 25)  x1
+    17/106 = 0.16038  (denom 106)  x1
+    5/31 = 0.16129  (denom 31)  x2
+    11/68 = 0.16176  (denom 68)  x1
+    6/37 = 0.16216  (denom 37)  x1
+    7/43 = 0.16279  (denom 43)  x1
+    15/92 = 0.16304  (denom 92)  x1
+    9/55 = 0.16364  (denom 55)  x2
+    10/61 = 0.16393  (denom 61)  x1
+    23/140 = 0.16429  (denom 140)  x1
+    12/73 = 0.16438  (denom 73)  x1
+    17/103 = 0.16505  (denom 103)  x1
+    1/6 = 0.16667  (denom 6)  x11
+  => band denominators: max = 140 (some > 50!)
+  M=2/25-exact maximizer q*: max = 25 (over 2 families)

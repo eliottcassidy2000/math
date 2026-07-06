@@ -1,0 +1,19 @@
+distinct transversal residue-sets: 4096
+AP pattern {1..12} mod-25 margin: 1/25 = 0.0400
+mod-25 margin distribution (margin: count):
+     1/25 = 0.0400 : 4096
+
+transversals with mod-25 margin < 2/25 (= 0.08, potential gap-adjacent): 4096
+  (these need a non-25 witness; the AP is the tight extreme at mod 13)
+  of those, AP-dilates: 20; genuinely-non-AP: 4076
+  smallest non-AP-dilate mod-25 margins:
+     1/25 : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]
+     1/25 : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14]
+     1/25 : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14]
+     1/25 : [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15]
+     1/25 : [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 15]
+     1/25 : [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 14, 15]
+
+READING: the AP and its 20 unit-dilates are the mod-25-tight transversals
+(margin 0.0400); the rigidity crux = do the non-AP transversals with
+low mod-25 margin ALL clear >= 2/25 at some OTHER modulus (they must, per census).
