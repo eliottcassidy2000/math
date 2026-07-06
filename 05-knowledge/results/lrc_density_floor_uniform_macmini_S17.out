@@ -1,0 +1,19 @@
+NEAR-AP LIFTS (does safe -> 0 approaching the AP?):
+  2500 near-AP lifts; MIN safe = 0.002424 at [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 19]
+  smallest 3: 0.00242, 0.00242, 0.00242
+  zeros: 0
+
+HIGH-HEIGHT single clusters (divisibility-rich, dense):
+  1500 dense high clusters; MIN safe = 0.094144
+  smallest 3: 0.09414, 0.09517, 0.09696
+  zeros: 0
+
+DILATED AP c*{1..12} (should be safe=0, the other tilers):
+  c=1: safe(2/25)=0 (M=1/13, tiles)
+  c=2: safe(2/25)=0 (M=1/13, tiles)
+  c=3: safe(2/25)=0 (M=1/13, tiles)
+  c=5: safe(2/25)=0 (M=1/13, tiles)
+
+=> if MIN safe stays bounded away from 0 (near-AP AND high-height),
+   the DENSITY FLOOR is a uniform constant c>0 for PRIMITIVE non-dilated-AP
+   families => (G) with NO height bound needed.
