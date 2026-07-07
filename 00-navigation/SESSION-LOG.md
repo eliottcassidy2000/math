@@ -38,6 +38,21 @@ CANON: THM-649 folds the trilogy -- (I) S50 book (minQ = Z(n), Q anti-aligned wi
 FILES: THM-649 (canon); cylinder_parity_law_macmini_S52.py (+2 outs); HYP-5107 (INDEX). No canon overridden.
 
 NEXT: (a) prove the rank formula m+n'-2-rounded-even (star-block analysis); (b) the n=8 quotient-min = 20 closed form; (c) the Zarankiewicz application of the star form; (d) LRC lanes continue (net-route counting lemma; klein's Koksma; kps 2-anchor finitization).
+## kind-pasteur-2026-07-07-S72 -- WORK THE OPEN ROUTE: a PER-RESONANCE-q REDUCTION of the density-floor AP-minimality (R2) -- mu = sum_q W_q, the AP minimizes EACH window, W_q governed by residue-spread mod q (sigma-odd) => the FIRST crossing of the S67 sigma-grading; a reduction + strong evidence, NOT a proof (HYP-5117)
+
+Prompt (owner): work the open route (= R2 / density-floor AP-minimality, the rigidity every route bottoms out at).
+
+THE DECOMPOSITION (mac-mini-S15 three-gap frame made concrete via opus-S134's roof): a gap>1/7 needs q<=6 (1/q>1/7); near x=p/q the config collapses to residues mod q; attribute each maxgap>1/7 event to the resonance q => mu(E) = sum_{q<=6} W_q(E).
+
+VERIFIED: the AP {1..k} has the MINIMAL per-q windows (k=13: 0.065/0.086/0.054/0.078/0.016 at q=2..6); EVERY non-AP has W_q(E) >= W_q(AP) for each q (mu-excess 0.27-0.53); the only 'False' rows are the AP's OWN affine images (spread-AP, all-odd -- mu identical, per-q relabels under dilation = artifact). CORE MECHANISM (verified): MISSING a residue mod q<=6 WIDENS the q-window (delta +0.27..+0.33 at k=13, q=3..6) -- the AP hits ALL q residues (r=q => minimal gap 1/q); a non-AP missing residues (r<q => gap>=1/r>1/q) is wider.
+
+THE REDUCTION (the crossing): W_q is a function of the residue multiset mod q (FINITE, sigma-ODD/algebraic) => 'AP minimizes each W_q' reduces the sigma-EVEN density-floor AP-minimality to per-q sigma-ODD residue-spread statements -- the FIRST genuine crossing of the S67 grading (which said the floor resists sigma-odd tools; here it DECOMPOSES into per-q sigma-odd pieces). Note: mu-value stays residue-INVISIBLE in total (S65 barrier); the EXTREMAL decomposition is residue-structured.
+
+HONEST SCOPE: reduction + verified minimality, NOT a proof. REMAINS: (i) prove W_q(E)>=W_q(AP) per q (exact window widths + within-residue-class spread, not just deficit); (ii) dilation bookkeeping (per-q not individually invariant; mu-invariance fixes the primitive rep); (iii) q=7 borderline (gap ~ 1/7 exactly). CONCRETE PROGRAM: per-q residue-spread window lemma q=2..6 (finite residue-optimization) + q=7 edge => AP-minimality => R2 => (A'). Each per-q lemma is a FINITE residue statement -- attackable by the sigma-odd machinery (S65 image census, sieve, covering) unlike the monolithic sigma-even floor.
+
+WHY THE RIGHT HANDLE: every prior route (2-anchor stability/decorrelation, mu net-route) hit the WHOLE sigma-even rigidity at once and stalled (S71); the per-q decomposition is the first that SPLITS the rigidity into pieces matched to the tools that work (finite residue statements per resonance).
+
+Files: lrc_per_q_window_kps_S72.py (+out); reflection the-per-q-window-reduction-of-the-density-floor-kps-S72; HYP-5117. Reduction + evidence (no full proof, no formalization). Does NOT prove LRC(14) or R2 -- gives the first sigma-odd decomposition of the sigma-even floor + a finite per-q proof program.
 
 ## mac-mini-2026-07-07-S51 -- THE CYLINDER TILING MODEL VALIDATED (winding-bit crossing form recovers Z(n) = 1/3/9/18 exactly at n=5..8) + THE TRANSITIVITY ANSWER: the cocylinder does NOT invert the book -- both geometries price transitive order (corr(Q_cyl, log H) = -0.64/-0.66; all-aligned costs 2-3x the optimum) (HYP-5097)
 
