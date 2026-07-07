@@ -84,5 +84,38 @@ theorem goodSet_measure_ge_mP (E : List ℤ) (hE : E.toFinset.Nonempty) (m D : �
   le_trans (AP20Cert.hlarge_floor_of_diam_le E.toFinset m D hD2 hD30 hEd)
     (volume_goodSet_ge_muGood E hE)
 
+/-! ### The `slowμ` form — the exact measure `witnessG2` uses (`= volume.restrict (Ico 0 1)`). -/
+
+/-- The concrete good event's `slowμ`-measure is `≥ m_P` (bounded diameter).  `slowμ` is the
+skeleton's period probability measure `volume.restrict (Ico 0 1)`; this is EXACTLY the measure the
+`witnessG2` identification (`LRCEventMeasureBridge.hwitness`) uses. -/
+theorem slowμ_goodSet_ge_mP (E : List ℤ) (hE : E.toFinset.Nonempty) (m D : ℤ)
+    (hD2 : 2 ≤ D) (hD30 : D ≤ 30) (hEd : ∀ e ∈ E.toFinset, e - m ∈ Finset.Icc (0 : ℤ) D) :
+    ENNReal.ofReal ((14249:ℝ)/252252) ≤ DenseCovers.slowμ (goodSet E) := by
+  have hmeas : MeasurableSet (goodSet E) := measurableSet_goodSet E
+  have hrestrict : DenseCovers.slowμ (goodSet E) = volume (goodSet E ∩ Set.Ico (0:ℝ) 1) := by
+    rw [DenseCovers.slowμ, Measure.restrict_apply hmeas]
+  rw [hrestrict]
+  have haeq : volume (Good (1/7) E.toFinset ∩ Set.Icc (0:ℝ) 1)
+      = volume (Good (1/7) E.toFinset ∩ Set.Ico (0:ℝ) 1) := by
+    apply measure_congr
+    exact (Filter.EventuallyEq.refl _ (Good (1/7) E.toFinset)).inter Ico_ae_eq_Icc.symm
+  have hfloor := AP20Cert.hlarge_floor_of_diam_le E.toFinset m D hD2 hD30 hEd
+  rw [show muGood (1/7) E.toFinset = volume (Good (1/7) E.toFinset ∩ Set.Icc (0:ℝ) 1) from rfl,
+    haeq] at hfloor
+  exact le_trans hfloor
+    (measure_mono (Set.inter_subset_inter_left _ (Good_subset_goodSet E hE)))
+
+/-- The witnessG2-ready real form: `(slowμ(goodSet E)).toReal ≥ m_P`.  In the pure-cluster case
+(`G_P = univ`), `witnessG2 = (slowμ(goodSet cluster)).toReal`, so this IS the census floor
+`witnessMP ≤ witnessG2` for a nonempty cluster of diameter ≤ 30. -/
+theorem slowμ_goodSet_toReal_ge_mP (E : List ℤ) (hE : E.toFinset.Nonempty) (m D : ℤ)
+    (hD2 : 2 ≤ D) (hD30 : D ≤ 30) (hEd : ∀ e ∈ E.toFinset, e - m ∈ Finset.Icc (0 : ℤ) D) :
+    (14249:ℝ)/252252 ≤ (DenseCovers.slowμ (goodSet E)).toReal := by
+  have h := slowμ_goodSet_ge_mP E hE m D hD2 hD30 hEd
+  have hne : DenseCovers.slowμ (goodSet E) ≠ ⊤ := measure_ne_top _ _
+  have := ENNReal.toReal_mono hne h
+  rwa [ENNReal.toReal_ofReal (by norm_num)] at this
+
 end GoodSetBridge
 end LonelyRunner
