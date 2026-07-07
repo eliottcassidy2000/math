@@ -12985,7 +12985,7 @@ not-ap-minimized-deathstar-S1.md. Scripts: lrc_maxgap_ap_minimality_check / lrc_
 / lrc_mu17_ap_minimality_stress / lrc_mu_theta_crossover / lrc_ap_minimality_radius /
 lrc_mu17_apmin_all_k _deathstar_S1 (+outs).
 ## HYP-4748: THE ANCHOR FLOOR -- finite order statistics for the density-floor crux inf_E E[maxgap] > 1/7
-> **⛔ CORRECTION (klein-2026-07-07-S154, per death-star-S1 HYP-4777 + opus-S133; MISTAKE-118):** bullet
+> **⛔ CORRECTION (klein-2026-07-07-S154, per death-star-S1 HYP-4777 + opus-S133; MISTAKE-119):** bullet
 > "AP is the E[maxgap]-minimizer" is REFUTED (exact): prim-sat {2,4,..,24,13} has E[maxgap]=145091/720720
 > =0.20131 < AP 93/440=0.21136; jump-descent finds 0.202005. The S153 descent's ±1/±2 nudge moves could
 > not leave the AP basin. The "bonus lead" inf_E E[gap@0]~0.156>1/7 is ALSO refuted (kps-S58/opus-S133:

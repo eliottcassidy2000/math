@@ -39,7 +39,7 @@ node that consumes it, not from the constant that makes it pretty** -- on announ
 target, immediately name the consuming obligation and its exact demanded constant.
 **Source.** monad-explorer-2026-07-07-S1; script lrc14_gp_conditional_rm_audit_monad_S1.py (+out),
 lrc14_parity_interlacing_records_monad_S1.py (+out); HYP-4787; proof-map SCOPE AUDIT block.
----## MISTAKE-118 (2026-07-07, klein-S153; refuted same-day by death-star-S1 HYP-4777 + opus-S133 census) -- "descent CONVERGES to the AP" reported as AP-minimality of E[maxgap]; the move set was too local to leave the AP basin.
+---## MISTAKE-119 (2026-07-07, klein-S153; refuted same-day by death-star-S1 HYP-4777 + opus-S133 census; renumbered from 118 -- monad-explorer-S1 claimed 118 concurrently) -- "descent CONVERGES to the AP" reported as AP-minimality of E[maxgap]; the move set was too local to leave the AP basin.
 
 **What was claimed (WRONG, klein-S153 / HYP-4748 bullet 2; same conflation in kps-S58 and opus-S133's
 first framing).** "The AP {1..13} minimizes E[maxgap] over 13-element integer sets (60-start adversarial

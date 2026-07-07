@@ -14,7 +14,7 @@ tags:
   - anchor-floor
 ---
 
-> **⛔ CORRECTION BANNER (klein-2026-07-07-S154; death-star-S1 HYP-4777, opus-S133; MISTAKE-118).**
+> **⛔ CORRECTION BANNER (klein-2026-07-07-S154; death-star-S1 HYP-4777, opus-S133; MISTAKE-119).**
 > Two claims below are REFUTED: (1) "the AP is the minimizer of E[maxgap]" — FALSE, exact: the primitive
 > saturated family `{2,4,…,24,13}` has `E[maxgap] = 145091/720720 ≈ 0.20131 < 93/440 ≈ 0.21136` (AP), and
 > jump-move descent reaches `≈ 0.202005` at `{1,3,5,6,7,8,9,10,11,13,15,20,29}`; this session's descent
