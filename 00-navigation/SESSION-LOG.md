@@ -1,3 +1,26 @@
+## mac-mini-2026-07-06-S37 -- HONEST STATE AUDIT (owner: ensure correctness): the finite-covering route REFRAMES (C), it does NOT reduce it. CoveringComplete <=> (C) exactly; no finite q<=Q0 discharge exists (escape families, verified Q0=39, CONFIRMED by klein-S150 + kps-S51); the analytic core (tight scale-uniform decorrelation) is OPEN; reroute to (A) relocates not resolves (HYP-4687)
+
+Prompt (owner): work all remaining math; deeply consider the state and reroute; ensure correctness; finish formalization.
+
+DID A DEEP CORRECTNESS AUDIT of the LRC14 proof state and found the finite-covering route is a REFRAMING, not a reduction. Confirmed by two other agents this hour.
+
+WHAT IS GREEN (real): the Route-2 skeleton (opus-S129) LRC14<=JK<=(A)<=(C)<=CoveringComplete, all arrows wired; the reach atom (reach_ge_of_covering, S34) + band floor (loose_of_band, kps): clearing at ANY q with mu/q>=2/25 => M>=2/25. The reductions (A)<=(C) (torus) + J-K citation are wired. Skeleton is real.
+
+THE FINDING: opus's CoveringComplete (forall non-AP v, HasCoveringWitness v; HasCoveringWitness = exists q c mu with 2q<=25mu and clears, NO q-bound) is EQUIVALENT to (C): forward GREEN, reverse holds (margin max at rational c/q => witness). So it is a RESTATEMENT of the crux, not a reduction. And NO finite q<=Q0 discharge exists: for every Q0, V={i+L*k_i} (L=lcm(2..Q0), all k_i>=1 varying) is non-AP, COMPRESSED (ratio->2, NOT peeled), ==AP mod L (fails all q<=Q0), clears ONLY at nextprime(Q0), loose M->2/25+. Verified at the fleet's Q0=39 (fails 38 moduli, clears 41). klein-S144's 'compressed cannot be ==AP mod large L without far entry' is FALSE (lift ALL entries uniformly; compressed bounds the lift RANGE not its VALUES). CONFIRMED independently: klein-S150 + kps-S51 (both retracted their finite-covering claims).
+
+THE REROUTE (klein-S150: escape = rank-2 = (A)/decorrelation) is a RELOCATION, not a resolution: (a) escape families are STILL in CruxStatement's domain (all Fin12->Z) -- routing to (A) needs a J-K structural obligation (does J-K only need (C) off the escape subclass?); (b) (A) for them = TIGHT, scale-uniform decorrelation (they approach 2/25, all speeds ~L with NO scale gap), which is UNPROVED. So the irreducible core moves from (C) to (A) but is not closed.
+
+WHY THE COVERING WAS ALWAYS GOING TO FAIL: safe(V,2/25) -> 0 for the escape families (they approach the boundary) => NO uniform positive measure => no finite covering. The genuine statement is theta/Poisson-sum positivity over the relation lattice (Cohn-Elkies shape, my S24), tight against the escapes = ANALYSIS, not a residue check.
+
+CORRECTIONS MADE: LRC14-PROOF-MAP.md corrected (klein-S144 step refuted; CoveringComplete relabeled as (C) restated, not a finite check). My own differ-prime reroute attempt ('V mod p not AP => clears at p') REFUTED (541/3060) -- honest negative.
+
+HONEST STATE: the formalization is a CORRECT conditional skeleton LRC14 <= (C), with (C) the open analytic crux; that is as far as it honestly goes until the decorrelation / theta-positivity is proved. The '(C) is now a finite covering system' framing (opus-S126) is corrected.
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection; git/finish_session only.)
+
+FILES: lrc_escape_verify / lrc_covering_regress / lrc_escape_at_Q39 / lrc_differ_prime_clears _macmini_S36/S37 (+out); reflection the-honest-state-of-LRC14-covering-is-a-reframing-decorrelation-is-the-core-macmini-S37.md; HYP-4687 (+INDEX); LRC14-PROOF-MAP corrected. No canon overridden (opus's GREEN skeleton stands; only the framing corrected).
+
+NEXT (real route): the tight scale-uniform decorrelation for the rank-2 escape families ((A)-branch) OR the theta-sum positivity for (C) -- the actual analytic core; verify the J-K structural obligation (can escape families be excluded from (C)?).
 ## klein-2026-07-06-S150 -- INDEPENDENT CONFIRMATION of mac-mini-S36's covering-escape + the ROUTING synthesis (escape families = rank-2 GAPs => opus's (A), not (C)) (HYP-4651)
 
 Prompt (owner): work the open residual, then formalize; challenge assumptions; pull/push often.

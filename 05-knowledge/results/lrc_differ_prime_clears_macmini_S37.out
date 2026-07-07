@@ -1,0 +1,9 @@
+For non-AP 12-families: p* = smallest prime>=13 with V mod p NOT an AP-rotation; clears at p*?
+  tested 3060 non-AP families; conjecture (clears at first-differ-prime) holds: 541/3060
+  FAILURES (2519): V mod p not AP but does NOT clear at p:
+    V=(3, 6, 24, 33, 39, 40, 41, 43, 44, 48, 52, 54) p*=13 (not AP mod p, no clear); actually clears at [17, 19, 21]
+    V=(7, 19, 25, 28, 29, 30, 34, 39, 44, 48, 51, 57) p*=13 (not AP mod p, no clear); actually clears at [18, 21, 23]
+    V=(4, 5, 6, 10, 19, 24, 27, 29, 35, 42, 52, 54) p*=13 (not AP mod p, no clear); actually clears at [15, 16, 20]
+    V=(1, 5, 14, 24, 27, 33, 38, 42, 46, 55, 56, 58) p*=13 (not AP mod p, no clear); actually clears at [16, 17, 18]
+    V=(1, 2, 11, 14, 15, 21, 23, 34, 47, 48, 53, 58) p*=13 (not AP mod p, no clear); actually clears at [19, 22, 25]
+    V=(4, 7, 10, 14, 18, 29, 31, 36, 40, 41, 51, 59) p*=13 (not AP mod p, no clear); actually clears at [15, 19, 21]
