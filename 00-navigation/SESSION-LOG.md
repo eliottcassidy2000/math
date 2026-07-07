@@ -17,6 +17,20 @@ FILES: 04-computation/lrc14_{cubic_moment_gate,excess_rayleigh_descent,window_co
 NEXT: (a) prove the dominance lemma at m=2 (classical 3-AP compression) then all m -- the finite additive-combinatorial core; (b) derive the second-moment universal weight-2 ceiling U_2 (one page of tent algebra) -> explicit spread-side floor (3/7 - Sigma_3)^2/U_2; (c) the dichotomy assembly at k=8 (my Sigma_3 meter + mac-mini-S54 windows + klein-S156 PZ-on-B); (d) k=13: descent on PZ-on-V to test AP-minimality of the certificate (4.8x headroom means even crude uniform bounds may close the leg); (e) denominator-managed exact Rayleigh for wide shapes.
 
 ---
+## mac-mini-2026-07-07-S55 -- THE RESONANCE-LADDER LAW (the coprime lens exact): config-level window mass is dilation-INVARIANT and redistributes across x-denominators {qd : d | c} (verified to 4 decimals at c=2, every level); the cascades' 'generic mass' IS hidden ladder mass (3-adic minimizer: 12% visible at Q<=6, hidden at Q = 9/15/18) (HYP-5177)
+
+Prompt (owner): rethink past work through coprimality — naive relationships were in fact coprime; keep at the LRC14 bleeding edge.
+
+THE LAW: (i) y = cx substitution => every config functional of cE = that of E: per-collapse-level mass is DILATION-INVARIANT (2 lines). (ii) THE LADDER: E's level-q window mass reappears for cE across x-denominators {qd : d | c}, totals conserved — verified EXACTLY at c=2 on every level (level-1 1/7 splits 0.0714+0.0714 across Q=1,2; level-5 0.0782 splits 0.0391+0.0391 across Q=5,10; levels 2,4,6 -> Q=4,8,12 exact). (iii) The q<=6 accounting is complete ONLY for ladder-trivial families: the 3-adic EU-minimizer shows 12% at Q<=6 with the hidden mass at Q = 9,15,18 (47% by Q<=18); the 2-adic parity record hides at Q = 8,10,12. (iv) OVERLAP CAVEAT: at large Q the leading-order windows overlap (AP 122% by Q<=18) — assembly must be greedy/lower-bound.
+
+RETRO-EXPLANATIONS (the owner's 'we were wrong because coprime'): S41's 'generic' 72% mass = coprime-invisible ladder mass; the c-adic record families = ladder-hiding strategies; MISTAKE-116's CRT escapes = climbing past finite accounting; kps-S72's dilation bookkeeping = this law; kps's per-q extremal artifact (my S54) = comparing families at DIFFERENT ladder positions.
+
+CONSEQUENCE: the structured-side floor assembly must be LADDER-AWARE (config-level attribution, dilation-invariant) — the corrected per-q lemma target: at CONFIG level, is the AP minimal per level among primitive ladder-trivial families, with cascades handled by their own ladder positions? That is the bleeding-edge shaped statement.
+
+FILES: lrc14_resonance_ladder_macmini_S55.py (+out); HYP-5177 (INDEX). No canon overridden.
+
+NEXT: (a) the config-level per-q lemma (ladder-aware restatement — the corrected R2 program); (b) greedy-disjoint window assembly with Farey disjointness bounds; (c) c=3 exact ladder bookkeeping (the 0.4617 overcount decomposed).
+
 ## opus-2026-07-07-S144 -- VALIDITY AUDIT + TWO REFUTATIONS + ONE NEW LAW: (1) per-q minimality (HYP-5117) REFUTED in primitive normalization (near-affine adversaries; q=1 origin ledger W_1(AP_13)=1/7 unreported = 32% of mu; exact W_q(AP_13) = 1/7, 5/77, 3/35, 8/147, 23/294, 4/245 from Farey flanks, sum 477/1078; rate = flank - q identity); (2) THE V_r INVARIANT PROFILE (affine-invariant by construction): exact V_r(AP_13) = 17/99, 41/539, 94/1155, 149/2695, 65/1386, 6/539; DEEP-RESONANCE-TAIL LAW survives (AP maximizes T_5, T_6; T_4 version refuted) -- R2 = "bulk creation beats resonance destruction" (measured exchange ~5-6x); (3) mu = M LADDER COLLAPSE REFUTED: 93 exact separations (|S|=4: 26, first {1,3,4,5} M=2/9 vs mu>=1/4 via {0,2} mod 8; |S|=5: 67); chi_c = 1/M refuted same set; |S|<=3 RIGID (all 325 collapse, pinning chi_c=1/M); surviving form = TIGHT-LOCUS COLLAPSE conjecture (HYP-5137)
 
 Prompt (owner): deep understanding of LRC(14) history + validity; find what we've been missing; extend forgotten factoids; how/why not just if; push/pull often.

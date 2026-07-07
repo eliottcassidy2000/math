@@ -1,0 +1,15 @@
+=== L1/L2: dilation ladder -- windows of cE vs windows of E ===
+  c=2: sum windows E (Q<=6) = 0.4425; sum windows 2E (Q<=12) = 0.4425  (mu = 0.4425 both -- invariance OK)
+    2E per-Q mass: Q1:0.0714 Q2:0.0714 Q3:0.0429 Q4:0.0649 Q5:0.0391 Q6:0.0429 Q8:0.0544 Q10:0.0391 Q12:0.0163
+    ladder prediction (mass q -> 2q): Q2:0.1429 Q4:0.0649 Q6:0.0857 Q8:0.0544 Q10:0.0782 Q12:0.0163
+  c=3: sum windows E (Q<=6) = 0.4425; sum windows 3E (Q<=18) = 0.4617  (mu = 0.4425 both -- invariance CHECK)
+    3E per-Q mass: Q1:0.0476 Q2:0.0216 Q3:0.0952 Q4:0.0181 Q5:0.0261 Q6:0.0433 Q9:0.0857 Q12:0.0363 Q15:0.0522 Q16:0.0060 Q17:0.0132 Q18:0.0163
+    ladder prediction (mass q -> 3q): Q3:0.1429 Q6:0.0649 Q9:0.0857 Q12:0.0544 Q15:0.0782 Q18:0.0163
+
+=== L3/L4: where the cascades hide their window mass ===
+  3-adic EU-min   : mu = 0.9188; window sum Q<=6 = 0.1133 (12% of mu); Q<=18 = 0.4335 (47%)
+      hidden ladder mass: Q8:0.0158 Q9:0.0652 Q10:0.0079 Q11:0.0163 Q12:0.0289 Q13:0.0230 Q15:0.0529 Q17:0.0498 Q18:0.0604
+  parity record   : mu = 0.5306; window sum Q<=6 = 0.3704 (70% of mu); Q<=18 = 0.5644 (106%)
+      hidden ladder mass: Q8:0.0639 Q10:0.0595 Q12:0.0367 Q17:0.0338
+  AP13            : mu = 0.4425; window sum Q<=6 = 0.4425 (100% of mu); Q<=18 = 0.5413 (122%)
+      hidden ladder mass: Q15:0.0095 Q16:0.0179 Q17:0.0397 Q18:0.0317
