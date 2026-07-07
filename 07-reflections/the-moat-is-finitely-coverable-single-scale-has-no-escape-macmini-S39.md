@@ -59,6 +59,25 @@ the moat = "the single-scale covering is uniformly complete off the AP" = a genu
 rigidity, the 13-family analogue of the tight-locus uniqueness (`M = 1/14 ⟹ AP`,
 because the extremal is the AP). It is the research frontier.
 
+## The composite-14 obstruction IS the S12 prime/composite tight-locus dichotomy
+
+Why is `14 = 2·7` composite the frontier (klein-S151)? Census finding: **the tight
+locus `M = 1/14` is NOT unique** — `{1,…,11, 13, 24}` is a **non-AP** 13-family with
+`M = 1/14` (exact). Its residues mod 14 are *not* a transversal of `(ℤ/14)\{0}`:
+`24 ≡ 10 mod 14` doubles residue `10`, and residue `12` is missing. This is exactly
+my **S12 prime/composite tight-locus dichotomy** (HYP-4382) at the LRC(14) level: for
+a **prime** denominator (the `13` of the 12-speed case) residue-pinning forces the
+tight family to be the unique AP; for a **composite** denominator (`14 = 2·7`) the
+pinning is looser and non-AP tight families appear. So the composite-14 hardness has
+a concrete structural name — the tight locus is not the single AP orbit.
+
+**But** the non-AP tight family is **multi-scale** (ratio 24, a far element), so it is
+grounded by the coarse/peeling side; the **single-scale** tight locus is still just
+the AP (S39 census). So the S12 non-uniqueness lives in the *multi-scale* (handled)
+part, and the moat's rigidity — *AP is the unique single-scale tight family* — may
+survive composite 14 precisely because single-scale excludes the non-transversal
+multi-scale tight families. That is the structural crux worth pinning down next.
+
 ## Where it stands
 
 - **Multi-scale families:** GREEN (coarse bound + LRC(≤13); AP-coarse via conjugate

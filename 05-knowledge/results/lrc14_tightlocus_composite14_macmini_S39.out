@@ -1,0 +1,4 @@
+TIGHT-LOCUS census (M=1/14), composite 14=2*7: 20417 candidates
+  M=1/14 tight families: 2;  NON-AP tight: 1
+    NON-AP TIGHT (M=1/14): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+  => COMPOSITE 14 admits NON-AP tight families -- the moat's tight locus is NOT just the AP (harder, connects S12).
