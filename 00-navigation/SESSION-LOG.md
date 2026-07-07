@@ -13,6 +13,19 @@ GATE FINAL SHAPE (k=8): pairs EXACT + triples by the PROVED comb bound (separate
 FILES: 05-knowledge/results/lrc14_dedekind_R_coloring_klein_S166.out (inline script). No Lean (owner directive). No canon overridden.
 
 NEXT: (a) the uniform head bound (the last coupling gap — the head is a LOW-frequency mixed-relation sum: the relation-lattice machinery applies); (b) the Koksma half-page; (c) characterize the no-separated-cherry class; (d) write the rotation-coloring frame into a proper reflection with the Zhu-literature anchors.
+## opus-2026-07-07-S141 -- THE HOMOMORPHISM LADDER: a purely graph-theoretic interpretation of LRC -- a lonely-runner witness IS a linear circular coloring; LRC(14) => GRAPH-14 (chi_c <= 14) => MOTZKIN-14 (mu >= 1/14); the converse = ONE named gap (linearization chi_c = 1/M?); exact data shows NO SLACK AT ANY LEVEL (HYP-4972)
+
+Prompt (owner): come up with a purely graph-theoretical interpretation of the LRC, or something as bold.
+
+THE INTERPRETATION (reflection the-lonely-runner-is-a-circular-coloring-problem): for S the speed set, G_S = Cay(Z, +-S) the distance graph. L1 PROVED: the witness t* yields (i) the circular coloring x -> floor(p frac(t* x)): a hom G_S -> circular clique K_{p/q} whenever q/p <= M => chi_c(G_S) <= 1/M(S); (ii) the independent set {x: frac(t* x) in [0,M)} of density M => mu(S) >= M(S) (Motzkin/Cantor-Gordon), chi_f = 1/mu. THE LADDER: LRC(14) => [GRAPH-14: every 13-generator distance graph has chi_c <= 14 -- no reals, no measure, no time] => [MOTZKIN-14: mu >= 1/14, pure LP]. THE BOLD FORM (GRAPH-LRC): chi_c = 1/M identically -- then LRC IS graph theory; else the linearization defect 1/M - chi_c gives the moat a graph-theoretic location.
+
+DATA (exact; 2 DP bugs found+fixed in-session, documented): (1) periodic Motzkin (exact transfer DP, N<=240) = M on ALL 8 test sets -- zero fractional slack (Haralambis mu > M expectation did NOT appear; cite-checks flagged); (2) repo extremals certified graph-side: GW 1/14 @ (1,14,1), prim-sat 1/13 @ (1,26,2), parity record 1/12 @ (1,24,2), deep well 14/183 @ (14,183,14) -- the tight locus sits AT the fractional bound (moat = tightness not slack at chi_f); (3) tiny-S chi_c probes: nothing beats 1/M. If mu = M is provable, LRC(14) reduces to a transfer-matrix/LP statement -- the softest formulation yet; named target.
+
+ACKNOWLEDGED: THM-647 (monad-S8) + kps-S67 PROVED ANTI-REDEI with the direct involution tau = rev o rho_0 on ALL Ham paths (Fix = anti-symmetric paths; h_beta == H == 1 mod 2 by Redei) -- the 3-line proof I circled around in S140; my S139 conjecture became a theorem in under 24 hours. My S140 sub-lemmas are corollaries.
+
+Files: lrc_graph_interpretation_ladder_opus_S141.py (+out); reflection; HYP-4972. Pulls: 2.
+
+NEXT: (a) the mu = M question (periodic transfer + LP duality attack; cite-check Haralambis/Cantor-Gordon/Liu-Zhu + BGGST/Goddyn-Wong exact statements); (b) chi_c = 1/M on |S| = 2 (should be provable directly -- rotation-number argument); (c) GRAPH-14 as the repo's graph-world flagship alongside the density-floor gates.
 
 ---
 
