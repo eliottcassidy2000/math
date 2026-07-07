@@ -1,0 +1,36 @@
+=== 1. SAME-SIGN law sweep: all coprime pairs q1<q2<=60, theta=1/7 (exhaustive exact) ===
+  tested 1101 coprime pairs: 0 violations
+
+=== 2. MIXED-SIGN law sweep: q1<=40, q2<=40 coprime, theta=1/7 ===
+  tested 979: 0 violations
+
+=== 3. GENERAL theta sweep: theta in {1/4, 1/5, 1/6, 1/9, 2/7, 3/8}, pairs <= 30, both signs ===
+  theta=1/4: tested 555 pairs x 2 signs: 0 violations
+  theta=1/5: tested 555 pairs x 2 signs: 0 violations
+  theta=1/6: tested 555 pairs x 2 signs: 0 violations
+  theta=1/9: tested 555 pairs x 2 signs: 0 violations
+  theta=2/7: tested 555 pairs x 2 signs: 0 violations
+  theta=3/8: tested 555 pairs x 2 signs: 0 violations
+
+=== 4. corollary checks ===
+  same-sign m >= theta^2 on sweep: True;  mixed-sign m <= theta^2 on sweep: True
+  k=8 Hunter floor: 1 - 7*(1/7) + 6*(1/49) = 6/49 = 6/49 ~ 0.1224
+  k=9 CORRECTION (MISTAKE-122): 1 - 8*(1/7) + 7*(1/49) = 0  (bare floor exactly 0, NOT 1/49)
+
+=== 5. TRIPLE-MASS LAW probe: H := (m123 - theta^3 - theta*sum G_ij/(qq)) * q1q2q3 ===
+  residue classes seen: 107; constant: 95; varying: 12
+    class (1, 4, 6): H values [0.282798833819242, 8.997084548104956]
+    class (2, 3, 5): H values [0.011661807580174927, 0.5830903790087464, 13.868804664723031]
+    class (3, 4, 6): H values [0.8483965014577259, 10.991253644314869]
+    class (3, 0, 5): H values [1.7142857142857142, 3.4285714285714284]
+    class (2, 6, 5): H values [1.9825072886297377, 9.839650145772595]
+    class (1, 3, 5): H values [0.0058309037900874635, 0.2915451895043732]
+  H range: [0.0058, 20.0000]  (law form holds iff classes constant)
+
+=== 6. BONFERRONI-3 ENDPOINT FLOOR at k=8 (exact S2, S3 on the 7 endpoint differences) ===
+       AP {1..8}: S2 = 0.7605  S3 = 0.8942  Bonf3 floor = -0.1337   true W_end = 0.3347
+          spread: S2 = 0.4555  S3 = 0.2306  Bonf3 floor = 0.2248   true W_end = 0.3186
+     two-cluster: S2 = 0.5450  S3 = 0.3214  Bonf3 floor = 0.2236   true W_end = 0.3471
+        S155-adv: S2 = 0.4948  S3 = 0.2770  Bonf3 floor = 0.2178   true W_end = 0.3372
+  ADVERSARIAL MIN Bonf3 endpoint floor = -0.1339 at (2, 3, 4, 5, 6, 7, 8, 9)
+    exact confirm: floor = -131/980 = -0.13367  (R-route bar 0.197; Hunter floor 6/49 = 0.1224)
