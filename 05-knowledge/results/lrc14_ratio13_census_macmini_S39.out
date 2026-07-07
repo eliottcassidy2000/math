@@ -1,0 +1,3 @@
+single-scale ratio<=13: 33330 families
+  M=1/14 (AP dilations): 1;  M<1/14 (VIOLATION): 0;  M in (1/14,1/13): 0
+  => (1/14,1/13) EMPTY for single-scale (ratio<=13): AP-dilations (1/14) or M>=1/13. First-gap rigidity.
