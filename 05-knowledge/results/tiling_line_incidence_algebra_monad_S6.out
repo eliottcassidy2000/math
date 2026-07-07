@@ -1,0 +1,31 @@
+n=4: m=3 tilings=8 classes=4 SC=2 types={'pureblue': 1, 'pureblack': 2, 'mixed': 1}
+  PARITY: T odd all: True; B odd<=>SC: True; K even<=>SC: True; pureblack<=>NS: True
+  BLUE  lines: total=2 self={'mixed': 1} cross=1 cross-node-types={('mixed', 'pureblue'): 1}
+  BLACK lines: total=2 self={} cross=2 cross-node-types={('mixed', 'pureblack'): 2}
+  FLIP class-map: functional on 3/4 classes (avg concentration 0.850); single-image = identity: 0, = converse: 0; functional-class types: {'pureblack': 2, 'pureblue': 1}
+
+n=5: m=6 tilings=64 classes=12 SC=8 types={'pureblue': 3, 'pureblack': 4, 'mixed': 5}
+  PARITY: T odd all: True; B odd<=>SC: True; K even<=>SC: True; pureblack<=>NS: True
+  BLUE  lines: total=8 self={} cross=8 cross-node-types={('mixed', 'pureblue'): 5, ('mixed', 'mixed'): 3}
+  BLACK lines: total=24 self={'mixed': 4} cross=20 cross-node-types={('mixed', 'pureblack'): 12, ('mixed', 'mixed'): 8}
+  FLIP class-map: functional on 4/12 classes (avg concentration 0.521); single-image = identity: 0, = converse: 0; functional-class types: {'pureblack': 2, 'pureblue': 2}
+
+n=6: m=10 tilings=1024 classes=56 SC=12 types={'pureblue': 2, 'pureblack': 44, 'mixed': 10}
+  PARITY: T odd all: True; B odd<=>SC: True; K even<=>SC: True; pureblack<=>NS: True
+  BLUE  lines: total=32 self={'mixed': 2} cross=30 cross-node-types={('mixed', 'pureblue'): 2, ('mixed', 'mixed'): 28}
+  BLACK lines: total=480 self={'pureblack': 6} cross=474 cross-node-types={('mixed', 'pureblack'): 156, ('pureblack', 'pureblack'): 308, ('mixed', 'mixed'): 10}
+  FLIP class-map: functional on 6/56 classes (avg concentration 0.240); single-image = identity: 0, = converse: 0; functional-class types: {'pureblue': 2, 'pureblack': 4}
+
+n=7: m=15 tilings=32768 classes=456 SC=88 types={'pureblue': 4, 'pureblack': 368, 'mixed': 84}
+  PARITY: T odd all: True; B odd<=>SC: True; K even<=>SC: True; pureblack<=>NS: True
+  BLUE  lines: total=256 self={} cross=256 cross-node-types={('mixed', 'pureblue'): 6, ('mixed', 'mixed'): 250}
+  BLACK lines: total=16128 self={'pureblack': 26, 'mixed': 18} cross=16084 cross-node-types={('pureblack', 'pureblack'): 10182, ('mixed', 'pureblack'): 5044, ('mixed', 'mixed'): 858}
+  FLIP class-map: functional on 9/456 classes (avg concentration 0.079); single-image = identity: 0, = converse: 0; functional-class types: {'pureblack': 6, 'pureblue': 3}
+
+ALLOCATION vs n (blue total / black total / blue cross / black cross):
+  n=4: blue 2 (cross 1), black 2 (cross 2); nodes pb/mix/pk = 1/1/2
+  n=5: blue 8 (cross 8), black 24 (cross 20); nodes pb/mix/pk = 3/5/4
+  n=6: blue 32 (cross 30), black 480 (cross 474); nodes pb/mix/pk = 2/10/44
+  n=7: blue 256 (cross 256), black 16128 (cross 16084); nodes pb/mix/pk = 4/84/368
+
+DONE.
