@@ -1,3 +1,29 @@
+## mac-mini-2026-07-06-S32 -- kps's mod-25 covering core = a PAIR-BLOCKING RIGIDITY: mod-25 covering fails <=> V blocks all 10 unit +-pairs; the AP is the UNIQUE tight blocker (554/150k blockers, only AP <2/25); three-case closure => AP is the unique 12-family with M<2/25 = (G) (HYP-4622)
+
+Prompt (owner): do a session creatively whittling away the crux.
+
+Attacked kps-S41's open core (HYP-4567: prove near-tight no-mult-25 families are mod-25-clearable; LRCMod25Floor.lean GREEN) with a PAIR-BLOCKING reformulation.
+
+REFORMULATION (exact): at denom 25, clearance-2 forbids residues {0,1,24}. For a UNIT c, v*c in {0,1,24} <=> v ≡ 0,+-c^{-1} mod25. So:
+ (a) NON-UNITS mod25 (0,5,10,15,20) are ALWAYS SAFE (v*c in {5,10,15,20}, never forbidden); only a mult-of-25 hits residue 0.
+ (b) units split into 10 +-PAIRS {1,24}..{12,13}; c clears <=> pair {+-c^{-1}} disjoint from V.
+ => (no mult 25) mod-25 covering FAILS <=> V BLOCKS ALL 10 unit +-pairs. AP {1..12} blocks all 10 (M=1/13, correctly not clearable).
+
+DECISIVE SWEEP (150881 families, height<=50): 554 block all 10 pairs (the ENTIRE residual after kps's floor); of those, EXACTLY ONE has M<2/25 -- the AP (M=1/13). Non-AP blockers >= 1/12 (verified: 0 in [2/25,1/12)). Pair-blocker spectrum = {1/13} u [1/12,inf), AP isolated.
+
+THREE-CASE CLOSURE of the lower bound (M<2/25 => AP):
+ (1) no mult25 + free pair => M>=2/25 [PROVED: kps LRCMod25Floor GREEN]
+ (2) no mult25 + blocks all pairs => AP (1/13) or M>=1/12 [sharp residual = PAIR-BLOCKING RIGIDITY, only AP tight]
+ (3) has mult25 => loose (verified 0/4000 in gap) [kps easy]
+ => the AP is the UNIQUE 12-family with M<2/25 = (G).
+
+CONTRIBUTION: kps's open core ('prove a covering fact') is sharpened to a concrete rigidity 'pair-blocking + M<2/25 => V is the AP {1..12}' -- a mod-25 covering/linear constraint + Freiman tightness (mod-25 face of S12 AP-rigidity), a proof candidate not an analytic estimate. Aligns with opus-S122 (order governs globally): this is the N=12-specific mod-25 face.
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection; git/finish_session only.)
+
+FILES: lrc_pair_blocking_mod25_macmini_S32.py (+.out); reflection the-mod-25-core-is-a-pair-blocking-rigidity-macmini-S32.md; HYP-4622 (+INDEX). No canon overridden.
+
+NEXT: (a) PROVE the pair-blocking rigidity (pair-blocking + M<2/25 => AP) -- the sole residual of the lower-bound half; (b) Lean the reformulation (non-unit safety + free-pair => clear) strengthening LRCMod25Floor; (c) opus's (A)->Mreach citation wiring (S121: J-K citation => LRC14 closes when (C) closes).
 ## opus-2026-07-06-S123 -- THE CRUX WHITTLES TO d=1 and d=2 (defect stratification, d>=3 GREEN) (HYP-4556)
 
 Prompt: creative session whittling away the crux.
