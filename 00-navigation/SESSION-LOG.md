@@ -1,3 +1,29 @@
+## mac-mini-2026-07-06-S28 -- MEDIANT-ATTAINER TRICHOTOMY: opus's bordered-AP F(N)={1..N}\{N-1}u{3(N-1)} is a gap member <=> N=1 mod 6 (verified N=5..30); the LRC(14) crux N=12 fails BY PARITY (12 even => M=3/35>2/25), NOT by 38=2*19 compositeness; my S27 prime hypothesis REFUTED (HYP-4572)
+
+Prompt (owner): keep pushing on the crux.
+
+opus-S118 cracked the bordered-AP construction I missed 4 sessions: the crux mediant 3/(3N+2) attainer is F(N)={1..N}\{N-1} u {3(N-1)} (far element 3(N-1), binding pair {5,3(N-1)}). Verified N=7->{1,2,3,4,5,7,18}, N=13->{1..11,13,36}. I computed M(F(N)) across N and found a clean TRICHOTOMY:
+
+ THE TRICHOTOMY (verified EXACT N=5..30):
+   M(F(N)) = 3/(3N-1)     N even        [binder speed 2 @ Q=3N-1]  -- loose, above gap
+           = 1/N          N=3,5 mod 6   [binder speed 3 @ Q=3N]    -- loose, above gap
+           = 3/(3N+2)=MED N=1 mod 6     [binder speed 5 @ Q=3N+2]  -- IN gap = gap member
+ => F(N) is a gap member <=> N=1 mod 6 (achievable N=7,13,19,25; caveat 5 nmid 3N+2, 1st exception N=31 q=95=5*19).
+
+ MECHANISM: the far element 3(N-1) binds the SMALLEST FEASIBLE small speed s in {2,3,5}, at consecutive denominators Q=3N-1,3N,3N+2 (pair sums to Q). Values 3/(3N-1)>1/N>3/(3N+2); the tight mediant wins ONLY when the two larger die. speed-2 branch feasible <=> Q=3N-1 ODD <=> N EVEN (2b==3 unsolvable mod even Q -- PARITY kill; verified N=5..25). Removal of N-1 forced: (N-1)*3*inv5 = -5*inv5 = -1 mod q (residue -1, dist 1).
+
+ THE CRUX WITH A REASON: N=12 is EVEN => speed-2 branch lives at odd Q=35 => M(F(12))=3/35 > 2/25 => the canonical mediant construction is LOOSE at N=12. So 3/38 is not a gap member FROM THIS FAMILY because 12 is EVEN, not because 38=2*19 is composite. CORRECTS the S27/opus 'composite q=38' framing: the operative arithmetic is the PARITY OF N (= parity of competing Q=3N-1). (Neat: the '38=2*19' is really 3*13-1 at N=13, and its EVENNESS kills speed-2 there => N=13 achieves mediant.)
+
+ REFUTES my S27 prime hypothesis: N=25=5^2 achieves; N=5,17,23 prime FAIL. CONFIRMS+EXPLAINS opus-S118 N=1 mod 6.
+
+SCOPE (honest): governs the CANONICAL family F(N) only -- explains why the canonical construction fails at N=12 (parity). The FULL crux (no family whatsoever at N=12) remains opus-S118's fleet sweep (empty). Residual: do non-canonical families (2D borders, multi-far) obey the same trichotomy so emptiness is N-even-driven universally?
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection; git/finish_session only.)
+
+FILES: lrc_mediant_criterion_macmini_S28.py (+.out), lrc_mediant_trichotomy_macmini_S28.py (+.out); reflection the-mediant-attainer-trichotomy-and-the-parity-of-N-macmini-S28.md; HYP-4572 CONFIRMED (+INDEX); reply to opus. No canon overridden.
+
+NEXT: (a) test whether NON-canonical gap-member families at N=1 mod 6 also fail at N=12 by the same parity gate (would lift the canonical result to the full crux); (b) formalize the trichotomy's parity kill (2b==3 mod even Q unsolvable) as the clean Lean-able core; (c) the mod-3 refinement (why 1/N dies at N=1 mod 6).
+
 ## mac-mini-2026-07-06-S27 -- CROSS-n: the caught single-outlier fraction IS opus's crux MEDIANT 3/(3k+2); HYPOTHESIS -- mediant achievable <=> 3k+2 PRIME (k=7:23, k=13:41 yes; k=12:38=2*19 composite = the crux); a prime/composite dichotomy one Farey level up from S12 (HYP-4562)
 
 Prompt (owner): understand LRC for other n; leverage toward proof progress.

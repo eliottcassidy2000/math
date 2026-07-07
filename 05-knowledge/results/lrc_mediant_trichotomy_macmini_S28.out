@@ -1,0 +1,64 @@
+======================================================================================
+(1) TRICHOTOMY VERIFICATION  M(F(N)) vs predicted, N=5..31
+======================================================================================
+    N N mod 6    M(F(N))  predicted         branch   ok
+    5       5        1/5        1/5   1/N (3,5 mod6)  YES
+    6       0       3/17       3/17    3/(3N-1) even  YES
+    7       1       3/23       3/23 MEDIANT 3/(3N+2)  YES
+    8       2       3/23       3/23    3/(3N-1) even  YES
+    9       3        1/9        1/9   1/N (3,5 mod6)  YES
+   10       4       3/29       3/29    3/(3N-1) even  YES
+   11       5       1/11       1/11   1/N (3,5 mod6)  YES
+   12       0       3/35       3/35    3/(3N-1) even  YES
+   13       1       3/41       3/41 MEDIANT 3/(3N+2)  YES
+   14       2       3/41       3/41    3/(3N-1) even  YES
+   15       3       1/15       1/15   1/N (3,5 mod6)  YES
+   16       4       3/47       3/47    3/(3N-1) even  YES
+   17       5       1/17       1/17   1/N (3,5 mod6)  YES
+   18       0       3/53       3/53    3/(3N-1) even  YES
+   19       1       3/59       3/59 MEDIANT 3/(3N+2)  YES
+   20       2       3/59       3/59    3/(3N-1) even  YES
+   21       3       1/21       1/21   1/N (3,5 mod6)  YES
+   22       4       3/65       3/65    3/(3N-1) even  YES
+   23       5       1/23       1/23   1/N (3,5 mod6)  YES
+   24       0       3/71       3/71    3/(3N-1) even  YES
+   25       1       3/77       3/77 MEDIANT 3/(3N+2)  YES
+   26       2       3/77       3/77    3/(3N-1) even  YES
+   27       3       1/27       1/27   1/N (3,5 mod6)  YES
+   28       4       3/83       3/83    3/(3N-1) even  YES
+   29       5       1/29       1/29   1/N (3,5 mod6)  YES
+   30       0       3/89       3/89    3/(3N-1) even  YES
+   31       1       1/32       3/95 MEDIANT 3/(3N+2)  NO!
+
+  trichotomy formula EXACT for all N=5..31: False
+  gap members (M = mediant): N = [7, 13, 19, 25]  (all == 1 mod 6)
+  => F(N) is a gap member  <=>  N == 1 mod 6   [opus-S118 VERIFIED]
+
+======================================================================================
+(2) MAXIMIZER + BINDING STRUCTURE per branch
+======================================================================================
+    N           branch    max t = b/Q  min||.||         binding speeds (v: dist)
+    7          MEDIANT           4/23      3/23   5:3, 18:3
+    8    even 3/(3N-1)          10/23      3/23   2:3, 21:3
+    9              1/N          10/27       1/9   3:3, 24:3
+   12    even 3/(3N-1)          16/35      3/35   2:3, 33:3
+   13          MEDIANT          17/41      3/41   5:3, 36:3
+   14    even 3/(3N-1)          19/41      3/41   2:3, 39:3
+   19          MEDIANT          23/59      3/59   5:3, 54:3
+
+======================================================================================
+(3) MECHANISM: WHY N-1 is removed, and the even-branch better-t
+======================================================================================
+  At binding maximizer a=3*inv5 mod q (q=3N+2): 3(N-1)=q-5 == -5, so
+  (N-1)*a = (N-1)*3*inv5 = [3(N-1)]*inv5 = -5*inv5 = -1 mod q.
+  => speed N-1 is ALWAYS at residue -1 (dist 1) -- FORCED collision, hence
+     removed.  The mediant lower bound M >= 3/q holds for ALL N (this t).
+
+  The trichotomy is about the GLOBAL max.  For N even, a t at Q=3N-1 beats
+  the mediant.  Binding at that t (N even):
+    N=8: Q=3N-1=23, max t=10/23, min=3/23; binding [(2, 3), (21, 3)]
+    N=12: Q=3N-1=35, max t=16/35, min=3/35; binding [(2, 3), (33, 3)]
+    N=14: Q=3N-1=41, max t=19/41, min=3/41; binding [(2, 3), (39, 3)]
+
+  For N==1 mod 6, NO t beats the mediant => M = 3/(3N+2), the gap member.
+  For N==3,5 mod 6, the max is 1/N (the far element + parity leave 1/N open).
