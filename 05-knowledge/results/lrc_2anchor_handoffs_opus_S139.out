@@ -1,0 +1,40 @@
+====================================================================================================
+(A1) EXACT NEAR-LIMIT SWEEP (spread APs + perturbations)
+====================================================================================================
+  k=8: min exact PA_2 over (a,d) grid = 0.761046 at (a,d)=(3,4)   T^2 limit 0.80169   T_k=0.6185   margin +0.1425
+       one-entry perturbations of the min: best = 0.800718 at [3, 7, 11, 17, 19, 23, 27, 31]   (no deeper)
+  k=9: min exact PA_2 over (a,d) grid = 0.686375 at (a,d)=(5,8)   T^2 limit 0.69274   T_k=0.5057   margin +0.1807
+  k=10: min exact PA_2 over (a,d) grid = 0.569692 at (a,d)=(1,2)   T^2 limit 0.59742   T_k=0.3956   margin +0.1741
+
+====================================================================================================
+(A2) CERTIFIED 2-ANCHOR LIMIT TABLE (grid + Lipschitz certificate)
+====================================================================================================
+  k= 8: 2-anchor limit = 0.801316 ± 0.000280 (certified)   T_k=0.6185   certified margin >= +0.18254
+  k= 9: 2-anchor limit = 0.694422 ± 0.000360 (certified)   T_k=0.5057   certified margin >= +0.18836
+  k=10: 2-anchor limit = 0.597604 ± 0.000450 (certified)   T_k=0.3956   certified margin >= +0.20155
+  k=11: 2-anchor limit = 0.497750 ± 0.000550 (certified)   T_k=0.2747   certified margin >= +0.22250
+  k=12: 2-anchor limit = 0.429229 ± 0.000660 (certified)   T_k=0.1429   certified margin >= +0.28567
+  k=13: 2-anchor limit = 0.366512 ± 0.000780 (certified)   T_k=0.0565   certified margin >= +0.30923
+
+====================================================================================================
+(A3) DOUBLE-COVER RIGIDITY CHAIN: PA_2 >= P(min>1/7) >= P(gap@0 > 2/7); exact 2/7 mass
+====================================================================================================
+  pointwise identity check (20000 random): violations = 0
+  exact 2/7-origin-gap mass (spread-AP limit lower bound for P(min>1/7)):
+    k= 8: E_y[Sigma_(g>2/7) g] = 2321/10290 = 0.225559   vs T_k=0.6185   lossy (chain alone insufficient)
+    k= 9: E_y[Sigma_(g>2/7) g] = 333/1715 = 0.194169   vs T_k=0.5057   lossy (chain alone insufficient)
+    k=10: E_y[Sigma_(g>2/7) g] = 1171/6860 = 0.170700   vs T_k=0.3956   lossy (chain alone insufficient)
+    k=11: E_y[Sigma_(g>2/7) g] = 2081/13720 = 0.151676   vs T_k=0.2747   lossy (chain alone insufficient)
+    k=12: E_y[Sigma_(g>2/7) g] = 2833/20580 = 0.137658   vs T_k=0.1429   lossy (chain alone insufficient)
+    k=13: E_y[Sigma_(g>2/7) g] = 8087/64680 = 0.125031   vs T_k=0.0565   CLEARS (chain suffices on the limit!)
+
+====================================================================================================
+(A4) OBSERVER-RANK vs LEDGER ZONE (kps-S60 intersected bites: k=13 diam<=75)
+====================================================================================================
+   rank \ in-ledger-zone:   True   False
+       0                   36     11
+       1                   35      8
+      2+                    9     21
+   (classifier value = how strongly rank 0 predicts in-zone / rank>=1 predicts spread)
+
+[total 319s]

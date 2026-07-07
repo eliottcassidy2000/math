@@ -1,0 +1,31 @@
+
+===== n=4: m=3, f=1; tilings 8; gridsym 4 (= 2^((m+f)/2) OK); blue lines 2, black lines 2; classes 4 [0s]
+  node types: {'pureblue': 1, 'mixed': 1, 'pureblack': 2}
+  type x transpose-self: {('pureblue', True): 1, ('mixed', True): 1, ('pureblack', False): 2}
+  (type, N mod 2, g mod 2) distribution: {('pureblue', 1, 1): 1, ('mixed', 1, 1): 1, ('pureblack', 1, 0): 2}
+  g(C) spectrum on non-pure-black classes: {1: 1, 3: 1}
+  line endpoints: class-self 1 lines, class-cross 3 lines (blue: self 1, cross 1)
+  classes where flip-partner class is NOT constant: 1 / 4
+
+===== n=5: m=6, f=2; tilings 64; gridsym 16 (= 2^((m+f)/2) OK); blue lines 8, black lines 24; classes 12 [0s]
+  node types: {'pureblue': 3, 'mixed': 5, 'pureblack': 4}
+  type x transpose-self: {('pureblue', True): 3, ('mixed', True): 5, ('pureblack', False): 4}
+  (type, N mod 2, g mod 2) distribution: {('pureblue', 1, 1): 3, ('mixed', 1, 1): 5, ('pureblack', 1, 0): 4}
+  g(C) spectrum on non-pure-black classes: {1: 4, 3: 4}
+  line endpoints: class-self 4 lines, class-cross 28 lines (blue: self 0, cross 8)
+  classes where flip-partner class is NOT constant: 8 / 12
+
+===== n=6: m=10, f=2; tilings 1024; gridsym 64 (= 2^((m+f)/2) OK); blue lines 32, black lines 480; classes 56 [2s]
+  node types: {'pureblue': 2, 'mixed': 10, 'pureblack': 44}
+  type x transpose-self: {('pureblue', True): 2, ('mixed', True): 10, ('pureblack', False): 44}
+  (type, N mod 2, g mod 2) distribution: {('pureblue', 1, 1): 2, ('mixed', 1, 1): 10, ('pureblack', 1, 0): 44}
+  g(C) spectrum on non-pure-black classes: {1: 2, 3: 2, 5: 2, 7: 4, 9: 2}
+  line endpoints: class-self 8 lines, class-cross 504 lines (blue: self 2, cross 30)
+  classes where flip-partner class is NOT constant: 50 / 56
+
+===== n=7 (numpy): m=15, f=3; tilings 32768; gridsym 512 (= 2^((m+f)/2) OK) [25s]
+  classes 456; node types: {'pureblue': 4, 'pureblack': 368, 'mixed': 84}
+  g(C) spectrum on non-pure-black: {1: 10, 3: 12, 5: 16, 7: 32, 9: 18}
+  (type, N mod 2, g mod 2): {('pb', 1, 1): 4, ('pk', 1, 0): 368, ('mx', 1, 1): 84}
+  lines: class-self 44, class-cross 16340 (blue: self 0, cross 256)
+  classes where flip-partner class NOT constant: 447 / 456

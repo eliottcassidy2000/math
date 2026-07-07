@@ -1,0 +1,3 @@
+n=4: (C1) g*|Aut| == H_anti on 4/4 classes;  LEM-003 sanity all pass;  anti-Redei (H_anti odd on selfop) HOLDS  [0s]
+n=5: (C1) g*|Aut| == H_anti on 12/12 classes;  LEM-003 sanity all pass;  anti-Redei (H_anti odd on selfop) HOLDS  [0s]
+n=6: (C1) g*|Aut| == H_anti on 56/56 classes;  LEM-003 sanity all pass;  anti-Redei (H_anti odd on selfop) HOLDS  [2s]
