@@ -1,0 +1,88 @@
+====================================================================================================
+PART 0 -- VALIDATION
+====================================================================================================
+AP_8 exact P(Bad) = 44/735 = 0.059864  (expect 44/735 = 0.059864)  mu = 0.940136
+AP_8 exact moments: E[Y]=863/7560 = 0.114153, E[Y^2]=22163/504000, E[Y^3]=372472463/14817600000
+AP_8 Y-range: [0.000000, 0.875000]
+Dirichlet(1^8) baseline: E[Y]=7/72 = 0.097222 (expect 7/72=0.097222), E[Y^2]=133/10560 = 0.012595 (expect 133/10560=0.012595), E[Y^3]=7021/3294720 = 0.002131
+iid 2-moment Cantelli floor: mu >= 0.6672 (S49 reported 0.6672)
+iid 3-moment dual-cubic floor: mu >= 0.7040 (verified=False, margin=-7.99e-07)
+
+====================================================================================================
+PART 1 -- STRUCTURED BATTERY (k=8; bars: klein 0.675 / kps T_8 0.6185)
+     floors reported: C2 = 2-moment Cantelli, M3 = 3-moment dual cubic, J = joint (Y,Z)
+====================================================================================================
+[AP_8 (conjectured mu-min)]
+E=[0, 1, 2, 3, 4, 5, 6, 7]  mu=0.9401 [P(Bad)=0.05986] P(Y<=thr)=0.32770 | EY=0.11415 sd=0.17591 | floors: C2=0.2306 M3=0.2927 J=0.2927(lam=0.0) | bars (0.675, 0.6185)
+[near-AP one-swap 7->8]
+E=[0, 1, 2, 3, 4, 5, 6, 8]  mu=1.0000 [P(Bad)=0.00000] P(Y<=thr)=0.27432 | EY=0.10810 sd=0.16652 | floors: C2=0.2270 M3=0.2954 J=0.2954(lam=0.0) | bars (0.675, 0.6185)
+[near-AP one-swap 7->13]
+E=[0, 1, 2, 3, 4, 5, 6, 13]  mu=1.0000 [P(Bad)=0.00000] P(Y<=thr)=0.13279 | EY=0.10014 sd=0.13667 | floors: C2=0.2661 M3=0.3689 J=0.3689(lam=0.0) | bars (0.675, 0.6185)
+[near-AP two-defect]
+E=[0, 1, 2, 3, 5, 6, 7, 9]  mu=1.0000 [P(Bad)=0.00000] P(Y<=thr)=0.06037 | EY=0.10751 sd=0.15520 | floors: C2=0.2502 M3=0.3480 J=0.3480(lam=0.0) | bars (0.675, 0.6185)
+[parity interlace (M119)]
+E=[0, 2, 4, 6, 8, 10, 11, 12]  mu=1.0000 [P(Bad)=0.00000] P(Y<=thr)=0.18274 | EY=0.10218 sd=0.14180 | floors: C2=0.2612 M3=0.3540 J=0.3540(lam=0.0) | bars (0.675, 0.6185)
+[parity interlace b]
+E=[0, 2, 4, 6, 7, 8, 10, 12]  mu=1.0000 [P(Bad)=0.00000] P(Y<=thr)=0.22387 | EY=0.09641 sd=0.14250 | floors: C2=0.2331 M3=0.3143 J=0.3143(lam=0.0) | bars (0.675, 0.6185)
+[two-block 4+4 far]
+E=[0, 1, 2, 3, 40, 41, 42, 43]  mu=0.9895 [P(Bad)=0.01053] P(Y<=thr)=0.11603 | EY=0.11945 sd=0.13771 | floors: C2=0.3524 M3=0.4280 J=0.4280(lam=0.0) | bars (0.675, 0.6185)
+[two-block 4+4 near]
+E=[0, 1, 2, 3, 10, 11, 12, 13]  mu=1.0000 [P(Bad)=0.00000] P(Y<=thr)=0.12510 | EY=0.11981 sd=0.14199 | floors: C2=0.3402 M3=0.4428 J=0.4428(lam=0.0) | bars (0.675, 0.6185)
+[single-far]
+E=[0, 1, 2, 3, 4, 5, 6, 40]  mu=0.9992 [P(Bad)=0.00084] P(Y<=thr)=0.15727 | EY=0.10003 sd=0.12797 | floors: C2=0.2920 M3=0.3555 J=0.3555(lam=0.0) | bars (0.675, 0.6185)
+[geometric]
+E=[0, 1, 2, 4, 8, 16, 32, 64]  mu=1.0000 [P(Bad)=0.00000] P(Y<=thr)=0.05090 | EY=0.08672 sd=0.07871 | floors: C2=0.4335 M3=0.5369 J=0.5369(lam=0.0) | bars (0.675, 0.6185)
+[Sidon (perfect diff)]
+E=[0, 1, 3, 7, 12, 20, 30, 44]  mu=1.0000 [P(Bad)=0.00000] P(Y<=thr)=0.00000 | EY=0.09540 sd=0.07569 | floors: C2=0.5121 M3=0.6903 J=0.6903(lam=0.0) | bars (0.675, 0.6185)
+[GW-like 12->24 analog]
+E=[0, 1, 2, 3, 4, 5, 7, 14]  mu=0.9849 [P(Bad)=0.01506] P(Y<=thr)=0.07551 | EY=0.09755 sd=0.12997 | floors: C2=0.2732 M3=0.3934 J=0.3934(lam=0.0) | bars (0.675, 0.6185)
+[dilAP d=3 + defect]
+E=[0, 3, 6, 9, 12, 15, 18, 22]  mu=1.0000 [P(Bad)=0.00000] P(Y<=thr)=0.14732 | EY=0.10062 sd=0.13016 | floors: C2=0.2879 M3=0.3601 J=0.3601(lam=0.0) | bars (0.675, 0.6185)
+[dense-random]
+E=[0, 2, 3, 7, 9, 13, 16, 17]  mu=1.0000 [P(Bad)=0.00000] P(Y<=thr)=0.00000 | EY=0.10584 sd=0.11533 | floors: C2=0.3679 M3=0.5329 J=0.5329(lam=0.0) | bars (0.675, 0.6185)
+
+====================================================================================================
+PART 2 -- LOSS DECOMPOSITION at the binding shapes
+  P(Bad) <= P(Y<=thr) <= moment bound.  loss1 = P(Y<=thr) - P(Bad) (event relaxation),
+  loss2 = bound - P(Y<=thr) (moment truncation).
+====================================================================================================
+AP_8 (conjectured mu-min)    P(Bad)=0.0599 P(Y<=thr)=0.3277 bestbound=0.7073  loss1=0.2678 loss2=0.3796
+near-AP one-swap 7->8        P(Bad)=0.0000 P(Y<=thr)=0.2743 bestbound=0.7046  loss1=0.2743 loss2=0.4303
+near-AP one-swap 7->13       P(Bad)=0.0000 P(Y<=thr)=0.1328 bestbound=0.6311  loss1=0.1328 loss2=0.4983
+near-AP two-defect           P(Bad)=0.0000 P(Y<=thr)=0.0604 bestbound=0.6520  loss1=0.0604 loss2=0.5917
+parity interlace (M119)      P(Bad)=0.0000 P(Y<=thr)=0.1827 bestbound=0.6460  loss1=0.1827 loss2=0.4633
+parity interlace b           P(Bad)=0.0000 P(Y<=thr)=0.2239 bestbound=0.6857  loss1=0.2239 loss2=0.4619
+two-block 4+4 far            P(Bad)=0.0105 P(Y<=thr)=0.1160 bestbound=0.5720  loss1=0.1055 loss2=0.4560
+two-block 4+4 near           P(Bad)=0.0000 P(Y<=thr)=0.1251 bestbound=0.5572  loss1=0.1251 loss2=0.4321
+single-far                   P(Bad)=0.0008 P(Y<=thr)=0.1573 bestbound=0.6445  loss1=0.1564 loss2=0.4873
+geometric                    P(Bad)=0.0000 P(Y<=thr)=0.0509 bestbound=0.4631  loss1=0.0509 loss2=0.4122
+Sidon (perfect diff)         P(Bad)=0.0000 P(Y<=thr)=0.0000 bestbound=0.3097  loss1=0.0000 loss2=0.3097
+GW-like 12->24 analog        P(Bad)=0.0151 P(Y<=thr)=0.0755 bestbound=0.6066  loss1=0.0604 loss2=0.5311
+dilAP d=3 + defect           P(Bad)=0.0000 P(Y<=thr)=0.1473 bestbound=0.6399  loss1=0.1473 loss2=0.4926
+dense-random                 P(Bad)=0.0000 P(Y<=thr)=0.0000 bestbound=0.4671  loss1=0.0000 loss2=0.4671
+
+====================================================================================================
+PART 3 -- ADVERSARIAL DESCENT on the joint floor (JUMP moves, MISTAKE-119 discipline)
+====================================================================================================
+DESCENT WORST: joint floor 0.2927 at [0, 1, 2, 3, 4, 5, 6, 7]
+  detail: mu=0.9401 P(Bad)=0.0599 EY=0.11415 Var=0.030943 M3floor=0.2927
+
+====================================================================================================
+PART 4 -- THE EXCESS-MASS ROUTE: V_theta = sum (g - theta)_+ vanishes EXACTLY on Bad
+  PZ = E[V]^2/E[V^2] (exact rational); AT3 = 3-moment atom-at-zero bound (exact);
+  RAY = Rayleigh over multi-width family {V_theta_j} = a^T M^{-1} a (exact rational).
+====================================================================================================
+AP_8 (conjectured mu-min)    mu=0.9401 | PZ=0.5740 AT3=0.6756 RAY=0.8214  (bars 0.675/0.6185)
+near-AP one-swap 7->8        mu=1.0000 | PZ=0.6022 AT3=0.7172 RAY=0.8616  (bars 0.675/0.6185)
+near-AP one-swap 7->13       mu=1.0000 | PZ=0.6794 AT3=0.7799 RAY=0.9070  (bars 0.675/0.6185)
+near-AP two-defect           mu=1.0000 | PZ=0.6941 AT3=0.8312 RAY=0.8991  (bars 0.675/0.6185)
+parity interlace (M119)      mu=1.0000 | PZ=0.6597 AT3=0.7631 RAY=0.9030  (bars 0.675/0.6185)
+parity interlace b           mu=1.0000 | PZ=0.6344 AT3=0.7417 RAY=0.8851  (bars 0.675/0.6185)
+two-block 4+4 far            mu=0.9895 | PZ=0.7259 AT3=0.8102 RAY=0.8985  (bars 0.675/0.6185)
+two-block 4+4 near           mu=1.0000 | PZ=0.7233 AT3=0.8045 RAY=0.9136  (bars 0.675/0.6185)
+single-far                   mu=0.9992 | PZ=0.6667 AT3=0.7558 RAY=0.8946  (bars 0.675/0.6185)
+geometric                    mu=1.0000 | PZ=0.8273 AT3=0.8839 RAY=0.9701  (bars 0.675/0.6185)
+Sidon (perfect diff)         mu=1.0000 | PZ=0.9118 AT3=0.9572 RAY=0.9764  (bars 0.675/0.6185)
+GW-like 12->24 analog        mu=0.9849 | PZ=0.7207 AT3=0.8251 RAY=0.9097  (bars 0.675/0.6185)
+dilAP d=3 + defect           mu=1.0000 | PZ=0.6689 AT3=0.7609 RAY=0.8963  (bars 0.675/0.6185)
+dense-random                 mu=1.0000 | PZ=0.8443 AT3=0.9280 RAY=0.9551  (bars 0.675/0.6185)
