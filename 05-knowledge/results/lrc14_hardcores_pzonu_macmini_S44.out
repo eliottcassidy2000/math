@@ -1,0 +1,37 @@
+=== 1. exact G_P measures at the two hard cores ===
+meas(G_{9..13})  = 40247/90090 = 0.446742   (monad numeric 0.447)
+meas(G_{10..13}) = 1577/3003 = 0.525142   (monad numeric 0.525)
+
+=== 2. the product-route arithmetic (exact) ===
+k=8: meas(G_P8) * 6/49 = 40247/735735 = 0.054703  vs m_P = 0.056487
+     shortfall = +0.001784  (3.16% of m_P)
+     mu-floor needed at R=1: 71245/563458 = 0.126442 (Hunter 6/49 = 0.122449; gap = +0.003993)
+     R needed at mu = 6/49: 1.0326  (klein-S155 target was R >= 0.75)
+k=9: meas(G_P9) = 0.5251; bare k=9 mu-floor = 0 (MISTAKE-122) => mu-floor needed at R=1: 0.107566
+
+(grid check: |G_P8| = 0.446760, |G_P9| = 0.525140)
+
+=== 3. adversarial G2 at the fixed cores ===
+k=8 core P={9..13}: min G2 = 0.39056 (6.91x m_P) at E = [0, 1, 2, 3, 4, 5, 6, 7]
+    mu = 0.9401  restricted-PZ = 0.26932 (4.77x m_P)  R = 0.9299
+k=9 core P={10..13}: min G2 = 0.37740 (6.68x m_P) at E = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    mu = 0.8401  restricted-PZ = 0.26080 (4.62x m_P)  R = 0.8554
+
+=== 4. shared-spectrum test at the k=8 core: |G2 - mGP*mu| vs SM(E) ===
+E=[0, 1, 2, 3, 4, 5, 6, 7]                     Delta=-0.02944 SM=0.046574 R=0.9299
+E=[0, 1, 2, 3, 4, 5, 6, 120]                   Delta=-0.00219 SM=0.045241 R=0.9951
+E=[0, 20, 83, 91, 94, 102, 141, 150]           Delta=+0.00002 SM=0.044770 R=1.0000
+E=[0, 37, 68, 89, 321, 374, 393, 400]          Delta=+0.00002 SM=0.021800 R=1.0000
+E=[0, 17, 34, 51, 68, 85, 102, 119]            Delta=-0.00076 SM=0.003103 R=0.9982
+E=[0, 1, 2, 3, 4, 5, 6, 7]                     Delta=-0.02944 SM=0.046574 R=0.9299
+corr(|Delta|, SM) = 0.518
+
+=== 5. reversal-symmetrized PZ (owner item): one-line result + rho_rev table ===
+Derivation: V=(U+U∘refl)/2; {V>0} = {U>0} ∪ refl{U>0} has measure <= 2mu;
+PZ(V) => mu >= E[U]^2/(E[U^2]+E[U U∘refl]) <= plain PZ since E[U U∘refl] >= 0.
+=> symmetrization does NOT improve the moment bound; value = search-pruning.
+
+  rho_rev(AP                        ) = 1.0000  (palindrome => 1)
+  rho_rev(monad record              ) = 1.0000  (palindrome => 1)
+  rho_rev(EU-min 3adic (non-palin)  ) = 1.0000  (palindrome => 1)
+  rho_rev(random big                ) = 1.0000  (palindrome => 1)
