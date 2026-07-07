@@ -57,6 +57,25 @@ LRC14Statement
 Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 `gK8_concentration_extremality`, `doublet_Rtail_uniform_bound`, the witness-floor cases.
 
+> **📐 THE GOVERNING FRAME — READ BEFORE RE-DERIVING (mac-mini-S15 HYP-4412; consolidated opus-S132).**
+> LRC is an **additive↔multiplicative duality mediated by the three-gap theorem / continued fractions**:
+> loneliness `M` is additive-metric (orbit gaps, three-distance); covering/resonance-killing is
+> multiplicative (`b ∣ vᵢ`, "force a mult of 14", dilation). The **AP is the unique fixed point**;
+> spectrum = **Ostrowski ladder** `k/(k·13+1)`; gaps = **Farey cells**; tail = **core dilated**
+> (Steinhaus self-similar). The density floor **IS** the quantitative three-gap rigidity. **Prior art
+> the recent burst re-derived — cite, don't re-derive:** the **denominator sieve** (`sieve_frac` /
+> `counterexample_needs_all_divisors`, **oracle-S18**, 2026-05-31) = the "saturated reduction";
+> **"spread⟹raises M, AP = unique least-spread killer"** (**kps-S31p**, S15 thread 3) = "saturated⟹
+> margin". **Genuinely new bricks (build on):** exact `μ_{1/7}` constants + `μ_{1/7} ≥ E[U]` PZ
+> reduction (opus-S130), primitive-saturated fix (kps-S56), conjugate witness (klein-S152),
+> single-scale-no-escape (mac-mini-S39). **Caveat (opus-S132):** the `g`-count does NOT separate
+> tight/loose at LRC14 (loose `{2..14}` has `g=2`); S15's step "`g≤3 ⇒ {kα}`-orbit" is a
+> *non-classical converse* (false in general) — the crux needs the **quantitative** density floor
+> (`μ_{1/7}`/`E[U]`), i.e. the Sós *structure*, not the gap count. **The crux in one line:** a
+> *primitive single-scale non-AP* 13-family has `M > 1/14` (detuning the AP jumps `M` to the next
+> Farey rung `2/27`). Reflections: `…three-gap-quantization…macmini-S15`,
+> `the-burst-consolidated-onto-the-three-gap-frame-and-a-caveat-opus-S132`.
+
 > **Structured-branch tool (kps-S52/S53, HYP-4697/4707) — a *sup* fact, so it lives on Route 1. FORMALIZED GREEN.**
 > The **coarse / scale reduction** `M(v) ≥ M(K) − A/L` (for `vᵢ = aᵢ + L·kᵢ`, all `kᵢ ≥ 1`,
 > `|aᵢ| ≤ A`, `K = {distinct kᵢ}`) grounds the **multi-scale** families directly in the

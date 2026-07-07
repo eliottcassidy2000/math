@@ -7,6 +7,29 @@ REDUCTION (elementary): (1) U>=maxgap-1/7 => E[U]>=E[maxgap]-1/7; (2) reverse-Ma
 MARGIN: inf E[maxgap]~0.203 (adversarial), +0.06 above 1/7 (comfortable, even tight 2*AP has 0.211). One order statistic vs E[U] inclusion-exclusion. Partials: E[maxgap]>=1/13 (length-biased), >=E[gap_0]~1/7 (origin gap). Remaining = three-distance/discrepancy 'max beats typical', with margin.
 
 HONEST: rigorous part = the reduction; inf E[maxgap]>1/7 is the reduced open target. Not a proof. Files: lrc_maxgap_reduction_kps_S57.py(+out); reflection the-density-floor-reduces-to-a-mean-max-gap-reverse-markov-kps-S57.md; HYP-4747.
+## opus-2026-07-07-S132 -- HISTORICAL CONSOLIDATION: the LRC14 burst is re-deriving mac-mini-S15's three-gap frame + oracle-S18 sieve; cite/build-on prior art; + a g-count caveat sharpening the crux
+
+Prompt (owner): keep going along these lines; look for more structural clarifications; look back through past work; ensure contemporary agents are not reinventing the wheel.
+
+Ran a historical audit (Explore over 2031 reflections) + re-read the foundations. FINDING: the last ~2 weeks (S30-S56, opus/kps/mac-mini/klein) have been re-deriving, piecemeal, the synthesis mac-mini-S15 (HYP-4412, 2026-06-06) already wrote down. Consolidated the burst onto S15's frame + credited prior art + added a new caveat.
+
+FIRST, corrected my OWN S131 error (kps-S56 caught it): 'saturated => margin M>=1/12' is a DILATION artifact (2*AP={2,4,..,26} saturated & TIGHT M=1/14; M dilation-invariant, saturation not) + far-element miss ({1..12,182} saturated primitive M=14/183<1/13). FIX = PRIMITIVE saturated (kps LRCSaturatedReduction GREEN). The SIEVE-EASY AP insight stands. (Reflection banner + INDEX note.)
+
+THE FRAME (mac-mini-S15, ALREADY established): LRC = additive M (orbit gaps, three-distance) <-> multiplicative covering (b|v_i, dilation), mediated by three-gap/CF. AP = unique fixed point; spectrum = Ostrowski ladder; gaps = Farey cells; tail = core dilated. 'The density floor IS the quantitative three-gap rigidity.'
+
+WHAT THE BURST RE-DERIVED (now cited): saturated reduction = oracle-S18 denominator sieve (2026-05-31); 'saturated=>spread=>margin' = kps-S31p 'spread raises M, AP unique least-spread killer'; mu_1/7 AP-minimality = 'density floor = quantitative three-gap rigidity' [S15]; Farey ladder = [S15/S26]; coarse bound = [S15 thread 5].
+
+GENUINELY NEW (build on): opus-S130 exact mu_1/7 constants + PZ reduction mu_1/7>=E[U]; klein-S152 provable conjugate witness; kps-S56 primitive-saturated fix; mac-mini-S39 single-scale-no-escape.
+
+NEW CAVEAT (opus-S132, lrc14_gcount_rigidity): extended S15's g-vs-M table from 12-speed to LRC14. 'near-tight=>small g, loose=>large g' DOES NOT survive at the optimal witness -- loose {2..14} (M=1/8) has g=2, loose primes (M=1/2) g=1. So S15's proof-path step 'g<=3 => {k*alpha} orbit' is a NON-CLASSICAL converse and FALSE in general ({2..14} at t=1/16 is g=2 but not an orbit, just a subset). The three-gap theorem is one-directional; the reverse needs the full SOS/van-Ravenstein STRUCTURE (which g<=3 configs occur), not the count. => the QUANTITATIVE density floor (mu_1/7, E[U]) does the work the g-count cannot.
+
+DELIVERABLES: 2 reflections (the-burst-consolidated-onto-the-three-gap-frame-and-a-caveat; correction banner on the-lrc14-tight-family-is-sieve-easy); proof-map GOVERNING FRAME pointer (canonical, prevents re-derivation); broadcast to fleet; 1 script (lrc14_gcount_rigidity). No Lean asserted.
+
+CRUX (one line, consolidated): a PRIMITIVE SINGLE-SCALE NON-AP 13-family has M > 1/14 (detuning the AP jumps M to the next Farey rung 2/27). Tool = quantitative density floor, NOT g-count. Multi-scale handled (coarse+klein), far-element peeled.
+
+NEXT: attack the quantitative density floor on single-scale primitive saturated families (the Sos-structure content) -- the one open crux. Do NOT re-formalize the coarse bound (2x) or the sieve (oracle-S18).
+
+---
 
 ## kind-pasteur-2026-07-07-S56 -- CORRECTION (S130-discipline): opus-S131's 'saturated min M=1/12' is a BOUNDED-RANGE artifact; the deep well {1..12,182} is saturated with M=14/183<1/13 (far-element, far-peel GREEN) -- decomposition STRENGTHENED (HYP-4737)
 
