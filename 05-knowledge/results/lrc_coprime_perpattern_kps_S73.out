@@ -1,0 +1,104 @@
+================================================================================================
+  k=8: PER-PATTERN DOMINANCE  copies(pi,E) <= copies(pi,AP)  (every primitive coprime pi)
+================================================================================================
+  17 primitive patterns (s=i+j<=7).  AP copy-counts:
+    pattern {0,1,2} (s=2): copies(AP_8) = 12
+    pattern {0,1,3} (s=3): copies(AP_8) = 7
+    pattern {0,2,3} (s=3): copies(AP_8) = 7
+    pattern {0,1,4} (s=4): copies(AP_8) = 4
+    pattern {0,3,4} (s=4): copies(AP_8) = 4
+    pattern {0,1,5} (s=5): copies(AP_8) = 3
+    pattern {0,2,5} (s=5): copies(AP_8) = 3
+    pattern {0,3,5} (s=5): copies(AP_8) = 3
+    pattern {0,4,5} (s=5): copies(AP_8) = 3
+    pattern {0,1,6} (s=6): copies(AP_8) = 2
+    pattern {0,5,6} (s=6): copies(AP_8) = 2
+    pattern {0,1,7} (s=7): copies(AP_8) = 1
+    pattern {0,2,7} (s=7): copies(AP_8) = 1
+    pattern {0,3,7} (s=7): copies(AP_8) = 1
+    pattern {0,4,7} (s=7): copies(AP_8) = 1
+    pattern {0,5,7} (s=7): copies(AP_8) = 1
+    pattern {0,6,7} (s=7): copies(AP_8) = 1
+
+  battery (per-pattern violations flagged):
+    AP               copies-sum=  56  ok
+    all-odd          copies-sum=  56  ok
+    spread-d2+bump   copies-sum=  42  VIOL: {0,2,5}:4>3
+    spread-d3+bump   copies-sum=  38  ok
+    AP-1+far         copies-sum=  40  ok
+    Fibonacci        copies-sum=  18  ok
+    Lucas            copies-sum=  11  ok
+    primes           copies-sum=  39  VIOL: {0,1,7}:2>1,{0,4,7}:2>1
+    two-block        copies-sum=   8  ok
+
+  PER-PATTERN dominance violations: 2024
+    spread-d2+bump: [0, 2, 4, 6, 8, 10, 12, 15] has 4 copies of {0,2,5} > AP's 3
+    primes: [0, 1, 3, 5, 9, 11, 15, 17] has 2 copies of {0,1,7} > AP's 1
+    primes: [0, 1, 3, 5, 9, 11, 15, 17] has 2 copies of {0,4,7} > AP's 1
+    rand: [0, 8, 21, 24, 27, 28, 29, 33] has 2 copies of {0,6,7} > AP's 1
+    rand: [0, 3, 4, 7, 23, 30, 36, 38] has 2 copies of {0,4,7} > AP's 1
+    rand: [0, 3, 7, 10, 17, 19, 23, 33] has 2 copies of {0,2,7} > AP's 1
+    rand: [0, 8, 11, 15, 24, 29, 30, 36] has 2 copies of {0,1,7} > AP's 1
+    rand: [0, 8, 11, 15, 24, 29, 30, 36] has 2 copies of {0,3,7} > AP's 1
+    rand: [0, 7, 24, 25, 36, 38, 42, 44] has 2 copies of {0,6,7} > AP's 1
+    rand: [0, 9, 13, 14, 21, 23, 30, 35] has 2 copies of {0,3,7} > AP's 1
+================================================================================================
+  k=13: PER-PATTERN DOMINANCE  copies(pi,E) <= copies(pi,AP)  (every primitive coprime pi)
+================================================================================================
+  17 primitive patterns (s=i+j<=7).  AP copy-counts:
+    pattern {0,1,2} (s=2): copies(AP_13) = 36
+    pattern {0,1,3} (s=3): copies(AP_13) = 22
+    pattern {0,2,3} (s=3): copies(AP_13) = 22
+    pattern {0,1,4} (s=4): copies(AP_13) = 15
+    pattern {0,3,4} (s=4): copies(AP_13) = 15
+    pattern {0,1,5} (s=5): copies(AP_13) = 11
+    pattern {0,2,5} (s=5): copies(AP_13) = 11
+    pattern {0,3,5} (s=5): copies(AP_13) = 11
+    pattern {0,4,5} (s=5): copies(AP_13) = 11
+    pattern {0,1,6} (s=6): copies(AP_13) = 8
+    pattern {0,5,6} (s=6): copies(AP_13) = 8
+    pattern {0,1,7} (s=7): copies(AP_13) = 6
+    pattern {0,2,7} (s=7): copies(AP_13) = 6
+    pattern {0,3,7} (s=7): copies(AP_13) = 6
+    pattern {0,4,7} (s=7): copies(AP_13) = 6
+    pattern {0,5,7} (s=7): copies(AP_13) = 6
+    pattern {0,6,7} (s=7): copies(AP_13) = 6
+
+  battery (per-pattern violations flagged):
+    AP               copies-sum= 206  ok
+    all-odd          copies-sum= 206  ok
+    spread-d2+bump   copies-sum= 181  VIOL: {0,2,5}:12>11,{0,2,7}:7>6,{0,4,7}:7>6
+    spread-d3+bump   copies-sum= 175  VIOL: {0,3,7}:7>6
+    AP-1+far         copies-sum= 174  ok
+    Fibonacci        copies-sum=  23  ok
+    Lucas            copies-sum=  16  ok
+    primes           copies-sum= 121  VIOL: {0,1,7}:7>6
+    two-block        copies-sum=  56  ok
+    GW               copies-sum= 176  ok
+    prim-sat         copies-sum= 194  ok
+
+  PER-PATTERN dominance violations: 117
+    spread-d2+bump: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 25] has 12 copies of {0,2,5} > AP's 11
+    spread-d2+bump: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 25] has 7 copies of {0,2,7} > AP's 6
+    spread-d2+bump: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 25] has 7 copies of {0,4,7} > AP's 6
+    spread-d3+bump: [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 37] has 7 copies of {0,3,7} > AP's 6
+    primes: [0, 1, 3, 5, 9, 11, 15, 17, 21, 27, 29, 35, 39] has 7 copies of {0,1,7} > AP's 6
+    rand: [0, 14, 16, 17, 25, 35, 37, 39, 41, 45, 49, 53, 67] has 8 copies of {0,5,7} > AP's 6
+    rand: [0, 4, 24, 36, 38, 44, 46, 48, 51, 58, 66, 68, 73] has 7 copies of {0,2,7} > AP's 6
+    rand: [0, 3, 9, 12, 16, 17, 19, 23, 26, 28, 40, 49, 74] has 7 copies of {0,4,7} > AP's 6
+    rand: [0, 2, 4, 5, 10, 12, 16, 17, 19, 22, 31, 47, 52] has 9 copies of {0,1,6} > AP's 8
+    hill: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 19] has 7 copies of {0,2,7} > AP's 6
+
+================================================================================================
+  m=2 BASE CASE:  #3-APs(E) = #{(x,y) in E^2, x<y, (x+y)/2 in E}  (midpoint identity)
+  and interval-maximality of the midpoint count.
+================================================================================================
+  midpoint identity holds on 2000 random sets: True
+  k=8: #3-APs(AP)=12; hill-climb max over non-AP = 11 -> AP IS the 3-AP maximizer
+  k=13: #3-APs(AP)=36; hill-climb max over non-AP = 31 -> AP IS the 3-AP maximizer
+
+================================================================================================
+  SUMMARY: per-pattern dominance violations  k=8:2024  k=13:117
+  0 => the AP maximizes copies of EVERY primitive coprime triple-pattern (the clean
+  coprime lemma); cumulative M_m and Sigma_3 AP-maximality follow immediately.
+DONE.

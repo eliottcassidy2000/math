@@ -1,0 +1,11 @@
+============================================================================================
+THE f-LP (rings included): optimal weight function for the gap-histogram floor
+============================================================================================
+  k=8: f-LP floor = 0.89188  (tent 0.7500, honest bar 0.6750) DISCHARGES  [NOT converged (adv found 0.0000), 25 rounds]
+        supp(f*) ~ [0.1199, 0.1429] = [3.36, 4.00]/28; max f* = 0.7331
+  k=9: f-LP floor = 0.85837  (tent 0.4921, honest bar 0.5622) DISCHARGES  [NOT converged (adv found 0.0000), 25 rounds]
+        supp(f*) ~ [0.1077, 0.1429] = [3.01, 4.00]/28; max f* = 0.5000
+  k=10: f-LP floor = 0.84215  (tent 0.2286, honest bar 0.4521) DISCHARGES  [NOT converged (adv found 0.0000), 25 rounds]
+        supp(f*) ~ [0.0964, 0.1429] = [2.70, 4.00]/28; max f* = 0.3333
+  k=11: f-LP floor = 0.83812  (tent 0.0000, honest bar 0.3312) DISCHARGES  [NOT converged (adv found 0.0000), 25 rounds]
+        supp(f*) ~ [0.0862, 0.1429] = [2.41, 4.00]/28; max f* = 0.3176
