@@ -1,0 +1,48 @@
+====================================================================================================
+EXHAUSTIVE EXACT (A') per k: 0-below check + certified equality classes + isolation gaps
+====================================================================================================
+
+ k=8  box {1..18}  classes=19440  bar=691/735
+   below bar: 0   (A) VERIFIED EXACT on box
+   equality classes: 1 -> [(1, 2, 3, 4, 5, 6, 7, 8)]
+   runner-up: (1, 2, 4, 5, 6, 7, 8, 11)  mu = 2143/2205 = 0.971882
+   ISOLATION GAP gamma_8 = 2/63 = 0.031746
+   [227s]
+
+ k=9  box {1..17}  classes=12869  bar=247/294
+   below bar: 0   (A) VERIFIED EXACT on box
+   equality classes: 1 -> [(1, 2, 3, 4, 5, 6, 7, 8, 9)]
+   runner-up: (1, 3, 5, 7, 8, 9, 11, 13, 15)  mu = 1301/1470 = 0.885034
+   ISOLATION GAP gamma_9 = 11/245 = 0.044898
+   [162s]
+
+ k=10  box {1..17}  classes=11440  bar=38/49
+   below bar: 0   (A) VERIFIED EXACT on box
+   equality classes: 1 -> [(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)]
+   runner-up: (1, 2, 3, 4, 5, 6, 7, 8, 9, 17)  mu = 241/294 = 0.819728
+   ISOLATION GAP gamma_10 = 13/294 = 0.044218
+   [169s]
+
+ k=11  box {1..16}  classes=3003  bar=1381/2205
+   below bar: 0   (A) VERIFIED EXACT on box
+   equality classes: 1 -> [(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)]
+   runner-up: (1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)  mu = 3047/4410 = 0.690930
+   ISOLATION GAP gamma_11 = 19/294 = 0.064626
+   [46s]
+
+ k=12  box {1..16}  classes=1365  bar=13823/24255
+   below bar: 0   (A) VERIFIED EXACT on box
+   equality classes: 1 -> [(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)]
+   runner-up: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)  mu = 1381/2205 = 0.626304
+   ISOLATION GAP gamma_12 = 152/2695 = 0.056401
+   [22s]
+
+ k=13  box {1..17}  classes=1820  bar=477/1078
+   below bar: 0   (A) VERIFIED EXACT on box
+   equality classes: 1 -> [(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)]
+   runner-up: (1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)  mu = 2539/5390 = 0.471058
+   ISOLATION GAP gamma_13 = 1/35 = 0.028571
+   [38s]
+
+====================================================================================================
+GRAND VERDICT: (A') exact on all boxes: True; tight locus certified per k above.
