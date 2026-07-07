@@ -1,0 +1,10 @@
+GLOBAL Q0 over all 66 shapes, (a,b) in [0,80)^2 (challenging kps Q0=25):
+  GLOBAL max min-clearing-q = 37  (kps said 25; klein corrected to <=38)
+  escapes (no q<=90): 0
+  worst shape (10,12) a=2 b=26: (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 36, 350)
+  clears at q=37, c=3, mu=3 => M >= 3/37 = 0.08108 > 2/25=0.08000
+  residues (v*3) mod 37: [3, 6, 9, 12, 14, 15, 18, 21, 24, 27, 33, 34]  (all in [3,34]? True)
+
+FORMALIZATION target -- worst (10,12) family {1..9,11,36,350} at q=37:
+  q=37, c=3, mu=3: residues [3, 6, 9, 12, 14, 15, 18, 21, 24, 27, 33, 34]
+  all in [3,34]: True => reach >= 3/37 > 2/25

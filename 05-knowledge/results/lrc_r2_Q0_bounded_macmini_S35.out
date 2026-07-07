@@ -1,0 +1,24 @@
+========================================================================================
+SATURATION: max min-clearing-q for shape (10,12) as (a,b) range widens
+========================================================================================
+  (a,b) in [0,26)^2 : max min-clearing-q = 25   worst (a,b)=(0, 12)
+  (a,b) in [0,40)^2 : max min-clearing-q = 37   worst (a,b)=(2, 26)
+  (a,b) in [0,60)^2 : max min-clearing-q = 37   worst (a,b)=(2, 26)
+  (a,b) in [0,90)^2 : max min-clearing-q = 37   worst (a,b)=(2, 26)
+  (a,b) in [0,130)^2 : max min-clearing-q = 37   worst (a,b)=(2, 26)
+  => if max-q SATURATES, Q0 is bounded (no height bound); if it keeps GROWING, challenge.
+
+========================================================================================
+DIRECT worst-case: search (a mod L, b mod L) for small candidate L to find true Q0
+========================================================================================
+  lcm(6..24) = 5354228880 (too large for full sweep); sample a,b over structured residues
+  (a,b) in [0,200)^2 : max min-clearing-q = 37   worst (a,b)=(2, 26)
+  worst family: (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 36, 350)
+    is mod-25 blocker (q=25 fails): True
+    clears at q=25? False;  clears at q=37? True
+    q<=24 that clear it: NONE -- needs q>=25
+  # (a,b) needing q>=26: 43
+
+  INTERPRETATION: the true Q0 = max min-clearing-q over ALL residue patterns.
+  kps's Q0=25 is from a narrow (a,b) sample; the real Q0 is larger (>=37 seen).
+  The 'no height bound' claim needs Q0 BOUNDED -- i.e. max-q saturates.  Report it.

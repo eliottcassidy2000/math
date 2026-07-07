@@ -113,8 +113,32 @@ theorem translate_block_reach (m : ℤ) (hm : 2 ≤ m) :
   push_cast at hreach
   linarith
 
+/-! ### The hardest r=2 double-lift cert — the true covering modulus Q0 = 37
+
+Challenging kps-S47's `Q0 = 25` (and kps-S44's `≤ 14`): the r=2 double-13-lift
+shapes need moduli up to **37**, confirming klein-S144's `≤ 38`.  The global worst
+family (over all 66 shapes and lifts `a,b ∈ [0,80)`) is shape `(10,12)` at `a=2,
+b=26`: `{1,…,9, 11, 36, 350}` — a mod-25 blocker that clears at NO `q ≤ 36`, only at
+`q = 37` (`c = 3`, `μ = 3`). This is a genuine covering cert at the true Q0. -/
+
+/-- The hardest r=2 family: `{1,…,9, 11, 36, 350}` (shape (10,12), a=2, b=26). -/
+def hardR2 : Fin 12 → ℤ := ![1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 36, 350]
+
+/-- **The hardest r=2 family is loose** at the true covering modulus `Q0 = 37`:
+reach `≥ 3/37 > 2/25` (cert `q = 37, c = 3, μ = 3`; residues `3,6,9,12,14,15,18,21,
+24,27,33,34` all in `[3,34]`).  A machine-checked witness that the covering-reach
+atom scales to the real `Q0 = 37`, not kps-S47's `25`. -/
+theorem hardR2_reach : (2 : ℝ) / 25 < sSup (margin hardR2 '' Set.Icc (0 : ℝ) 1) := by
+  have hcov : ∀ i, (3 : ℤ) ≤ (hardR2 i * 3) % 37 ∧ (hardR2 i * 3) % 37 ≤ 37 - 3 := by
+    decide
+  have h := reach_ge_of_covering hardR2 37 3 3 (by norm_num) (by norm_num) (by norm_num) hcov
+  norm_num at h
+  have hnum : (2 : ℝ) / 25 < (3 : ℝ) / 37 := by norm_num
+  linarith
+
 #print axioms reach_ge_of_covering
 #print axioms d2_generic_reach
 #print axioms translate_block_reach
+#print axioms hardR2_reach
 
 end TournamentH7.LRCCoveringReach

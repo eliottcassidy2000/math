@@ -1,0 +1,37 @@
+========================================================================================
+(B)+(C): min clearing q over (a,b), per shape -- does Q0=25 hold on a WIDE range?
+========================================================================================
+     shape  max clearing q  #escapes(q>60)
+  (10, 12)              37               0  <-- HARD
+    (1, 6)              32               0  <-- HARD
+    (2, 6)              32               0  <-- HARD
+    (3, 6)              32               0  <-- HARD
+    (4, 6)              32               0  <-- HARD
+    (5, 6)              32               0  <-- HARD
+    (6, 7)              32               0  <-- HARD
+    (6, 8)              32               0  <-- HARD
+    (6, 9)              32               0  <-- HARD
+   (6, 10)              32               0  <-- HARD
+   (6, 11)              32               0  <-- HARD
+   (6, 12)              32               0  <-- HARD
+   (1, 12)              25               0  <-- HARD
+   (2, 12)              25               0  <-- HARD
+
+  MAX clearing q over ALL shapes and (a,b) in [0,40)^2: 37
+  ESCAPES (no clear at q<=60): 0  -> Q0<=60 holds
+  => kps Q0=25 CHALLENGED: max q=37 > 25
+
+========================================================================================
+(D): covering STRUCTURE for the hardest shape -- clearing q as fn of (a mod q, b mod q)
+========================================================================================
+  hardest shape (i,j)=(10,12); for each (a,b) in [0,26)^2, the MIN clearing q:
+  min-clearing-q distribution: {10: 552, 12: 111, 23: 7, 25: 5}
+  distinct moduli needed: [10, 12, 23, 25]
+
+  PERIODICITY test (is clearing at q a function of a mod q, b mod q?):
+    q=17: clearing at q depends only on (a mod q, b mod q): True
+    q=19: clearing at q depends only on (a mod q, b mod q): True
+    q=23: clearing at q depends only on (a mod q, b mod q): True
+
+  => if periodic, the covering is a FINITE decidable check over (a,b) mod lcm(moduli);
+     lcm of the needed moduli sets the Lean-decidability (small => decide-able).
