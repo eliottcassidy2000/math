@@ -1,0 +1,6 @@
+full-transversal families: collision-13=17880, distinct-13=5088
+(1) collision-13: max min-clearing-modulus=23; M<2/25 count=0/600  (opus mechanism was OPEN -> supplied)
+(2) distinct-13 non-AP=4956: max min-clearing-modulus=23; M<2/25 count=0/600
+full-transversals with M<2/25 in sample: 46, all = AP {1..12}? True
+RESIDUAL: M<2/25 full-transversal => has mult of each {7..12} (kps LRCSmallModFloor). The AP has
+them as 7,8,9,10,11,12 -- the last hard node = 'mult-of-{7..12} doubly-saturated residual = AP'.

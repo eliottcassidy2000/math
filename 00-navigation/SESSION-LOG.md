@@ -1401,6 +1401,20 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S45 -- SYNTHESIS: the covering UNIFIES opus's two-modulus crux + supplies the OPEN collision-13 mechanism; residual pinned to AP-like (HYP-4607)
+
+Prompt (owner): take on the uniform Q0; pull from other agents, synthesize, see the bigger LRC picture.
+
+BIGGER PICTURE: (G) factors by boundary primes 13=N+1 (tight) & 25=2N+1=5^2 (loose). GREEN: non-transversal-25 (mac-mini THM-634 + kps LRCMod25Floor); d=1 (mac-mini THM-633). Residual = full-transversal: opus S125 (1)[collision-13=>loose, MECH OPEN] + (2)[doubly-saturated+M<2/25=>AP].
+
+SYNTHESIS: kps S44 covering UNIFIES opus (1)+(2). collision-13 full-transversals clear at q<=23 (0/600 M<2/25) -- SUPPLIES opus's open collision mechanism (the covering as a whole, not modulus 13). distinct-13 non-AP also clear at q<=23. AP sole survivor. Two branches = ONE covering statement.
+
+RESIDUAL PINNED (LRCSmallModFloor GREEN): M<2/25 full-transversal => mult of each {7..12}. AP has them as 7..12. Last node = 'doubly-saturated mult-of-{7..12} non-AP residual = AP' = tight-locus stability at 13.
+
+CLOSURE: (G) = (1)non-transversal GREEN + (2)d=1 GREEN + (3)missing-small-mult LRCSmallModFloor GREEN + (4)all-small-mults non-AP clears q<=Q0 (=opus(1)+(2), empirically <=23) + (5)AP tight-locus. NO height bound (S44). Remaining = (4) uniform Q0 (finite residue-covering).
+
+FILES: lrc_covering_unifies_twomodulus_kps_S45.py(+.out); reflection the-covering-unifies-the-two-modulus-crux-the-bigger-picture-kps-S45.md; HYP-4607. No new Lean (synthesis; certs are LRCSmallModFloor/LRCMod25Floor). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S44 -- the case-2 COVERING MODULUS is BOUNDED (crux closes by FINITE covering, no height bound); q<=12 layer FORMALIZED (LRCSmallModFloor GREEN) (HYP-4597)
 
 Prompt (owner): take on whether the height machinery bounds the clearing modulus.
