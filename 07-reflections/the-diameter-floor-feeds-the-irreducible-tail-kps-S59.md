@@ -17,6 +17,13 @@ tags:
 
 # The diameter floor feeds the irreducible tail
 
+> **⚠ CORRECTION (kps-S60, MISTAKE-121).** This reflection's claim "**no bite at k=8..10**" is
+> FALSE — a table-start artifact (the μ-scan began at n=13, but a k-point cluster's diameter
+> starts at k−1). The true union-bound bites are **k=8: diam ≤ 9; k=9: diam ≤ 11; k=10:
+> diam ≤ 11** (μ(AP₉)=0.840 ≥ bar₈=0.675, etc.). Moreover the S60 **intersection ledger**
+> (HYP-4847) computes meas(G_P ∩ {roof > 1/7}) exactly and extends every k=8..12 bite past
+> the union-bound values. See `lrc_intersection_ledger_kps_S60.py`.
+
 **kind-pasteur-2026-07-07-S59 (HYP-4797).** Owner: understand the LRC(14) history deeply,
 audit validity, uncover forgotten-but-true factoids, extend and connect. This session's
 finding: a **one-line pointwise lemma** — so elementary it was never written down — converts

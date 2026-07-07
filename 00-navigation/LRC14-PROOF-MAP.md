@@ -222,8 +222,11 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > `μ_{1/7}(AP_76) = 2314528732/40290957525 ≈ 0.05744 ≥ m_P`, fails first at `n=77`). This uses
 > the AP as a SUBSET, not a minimizer — it survives the death-star capstone and covers
 > THM-527-D's verified extremal-spread domain (~30) with 2.5× margin; every family on the
-> minimizer board (diam 12..40) is inside. Same lemma bites `k=12` (diam ≤ 23), `k=11` (≤ 15);
-> k=8..10 union-bound bars are out of reach (honest). Mean version: `A(n) > 1/7` through `n=22`
+> minimizer board (diam 12..40) is inside. ~~Same lemma bites `k=12` (diam ≤ 23), `k=11` (≤ 15);
+> k=8..10 union-bound bars are out of reach (honest).~~ **[CORRECTED S60, MISTAKE-121: the
+> "no bite at k=8..10" was a table-start artifact (scan began at n=13, but k-clusters have diam
+> from k−1); true union-bound bites: k=8 ≤ 9, k=9 ≤ 11, k=10 ≤ 11 — and superseded by the
+> INTERSECTION LEDGER below.]** Mean version: `A(n) > 1/7` through `n=22`
 > ⟹ prim-diam ≤ 21 has `E[maxgap] > 1/7` (contains the monad record, diam 20); sub-`1/7` records
 > would need diam ≥ 22 (observed minima there: flat ~0.203–0.206). Residual `D > 75` probes at
 > `μ = 0.58–0.97` = 10–17× bar. Deficit frame (exact symmetries): translation forces `Σkᵢ = 0`
@@ -231,6 +234,22 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > the iid value flows through **zero-sum weight-≥3 relations** — additive structure that (Freiman)
 > pulls the diameter back into the proved zone. Scripts: `lrc_diameter_monotonicity_leg_kps_S59.py`,
 > `lrc_tail_diameter_floor_kps_S59.py`; reflection `the-diameter-floor-feeds-the-irreducible-tail-kps-S59`.
+
+> **✂✂ THE INTERSECTION LEDGER (kps-S60, HYP-4847) — the diameter floor extended to the
+> G_P-intersected legs; the k=8,10,11,12 bites beat the union bound (k=9 ties), exactly.** The S59
+> inclusion survives intersection: `ρ*_{1/7}(P,E) = meas(G_P ∩ Good_E) ≥ meas(G_P ∩
+> {roof_{D+1} > 1/7}) =: ILedger(P, D+1)` — an exact rational (G_P = explicit rational
+> intervals, roof superlevel = per-Farey-cell affine pieces; **raw** diameter `D`, since G_P
+> breaks dilation-invariance). Sweeping **all** `C(13,s)` slow parts per size (2379 total):
+> `min_P ILedger(P,n) ≥ m_P` holds through `n = 35/22/18/12/12` at `|P| = 1..5`, giving the
+> **composite hlarge coverage: k=13 diam ≤ 75 (primitive), k=12 ≤ 34, k=11 ≤ 21, k=10 ≤ 17,
+> k=9 ≤ 11, k=8 ≤ 11 — all PROVED modulo the roof (union-bound bites were 23/15/11/11/9).**
+> The k=11 bite (21) covers THM-527-D's verified extremal spread (≈21) exactly. First-failing
+> slow parts expose the anti-correlation anatomy: small-`p`-heavy `P` (`{1,2,3,4,5}` at k=8,
+> `{6}` at k=12) cut precisely the `q ≤ 6` roof windows; exact quasi-independence ratio
+> `R = ILedger/(measG_P·μ)` runs 0.6–1.06 at small `n`, decaying for small-`p` `P` as windows
+> shrink into the cuts. Same Lean shape as the k=13 ledger (finite rational certificate).
+> Script: `lrc_intersection_ledger_kps_S60.py`; MISTAKE-121 corrected en route.
 
 > **🎯 PZ-ON-U: the k=13 tail floor is a CV bound (mac-mini-S41, HYP-4837).**
 > `U(x) = Σ_j (g_j − 1/7)_+ = meas{s : arc(s,s+1/7) empty}`; then `μ_{1/7} = P(U>0) ≥

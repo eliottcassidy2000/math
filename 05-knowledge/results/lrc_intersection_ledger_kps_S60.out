@@ -1,0 +1,44 @@
+================================================================================================
+PART 0 -- sanity: roof reproduction, union-bound domination, Monte-Carlo spot checks
+================================================================================================
+  ILedger(empty, k) == mu(AP_k) exact for k=8..13: True
+  MC spot checks: rho*(P,E) >= ILedger(P, D+1) on random shapes:
+    P=[3, 5, 10] E(diam 19, k=10): rho*=0.6712 >= ILedger=0.1091  OK
+    P=[3, 7] E(diam 13, k=11): rho*=0.7236 >= ILedger=0.2823  OK
+    P=[1, 2, 9, 10, 13] E(diam 13, k=8): rho*=0.4456 >= ILedger=0.1185  OK
+    P=[5, 9] E(diam 14, k=11): rho*=0.7034 >= ILedger=0.2494  OK
+
+================================================================================================
+PART 1 -- per-size ledger: min over ALL P of ILedger(P,n); crossings vs m_P
+================================================================================================
+  m_P = 14249/252252 = 0.056487
+  |P|=1 (k=12): min_P ILedger >= m_P through n = 35  =>  BITE diam 11..34   [union bound gave diam <= 23]   first-failing P = (6,), value 0.055414
+  |P|=2 (k=11): min_P ILedger >= m_P through n = 22  =>  BITE diam 10..21   [union bound gave diam <= 15]   first-failing P = (2, 12), value 0.050860
+  |P|=3 (k=10): min_P ILedger >= m_P through n = 18  =>  BITE diam 9..17   [union bound gave diam <= 11]   first-failing P = (1, 4, 6), value 0.046572
+  |P|=4 (k= 9): min_P ILedger >= m_P through n = 12  =>  BITE diam 8..11   [union bound gave diam <= 11]   first-failing P = (1, 3, 4, 5), value 0.045547
+  |P|=5 (k= 8): min_P ILedger >= m_P through n = 12  =>  BITE diam 7..11   [union bound gave diam <= 9]   first-failing P = (1, 2, 3, 4, 5), value 0.016327
+
+================================================================================================
+PART 2 -- composite hlarge coverage after S59+S60 (+ k=13 from S59/monad-S2)
+================================================================================================
+  leg   bar-object                  coverage now
+  k=13  mu >= m_P                  diam <= 75 PROVED (S59/monad-S2; primitive diam OK)
+  k=12  meas(G_P ∩ Good) >= m_P    diam <= 34 PROVED via ILedger (raw diam; all 13 P of size 1)
+  k=11  meas(G_P ∩ Good) >= m_P    diam <= 21 PROVED via ILedger (raw diam; all 78 P of size 2)
+  k=10  meas(G_P ∩ Good) >= m_P    diam <= 17 PROVED via ILedger (raw diam; all 286 P of size 3)
+  k= 9  meas(G_P ∩ Good) >= m_P    diam <= 11 PROVED via ILedger (raw diam; all 715 P of size 4)
+  k= 8  meas(G_P ∩ Good) >= m_P    diam <= 11 PROVED via ILedger (raw diam; all 1287 P of size 5)
+  (k<=7: pigeonhole, PROVED unconditional -- THM-530)
+
+================================================================================================
+PART 3 -- anti-correlation anatomy: exact quasi-independence ratio R = ILedger/(measGP*mu)
+================================================================================================
+  |P|=5 THM-530-worst P=(1, 5, 7, 8, 9): meas(G_P)=0.3815   n=8: R=1.064   n=12: R=1.010   n=18: R=0.601   n=28: R=0.257
+  |P|=4 THM-530-worst P=(1, 11, 12, 13): meas(G_P)=0.4943   n=9: R=0.834   n=13: R=1.023   n=19: R=0.775   n=29: R=0.517
+  |P|=3 THM-530-worst P=(1, 12, 13): meas(G_P)=0.6044   n=10: R=0.849   n=14: R=0.801   n=20: R=0.627   n=30: R=0.429
+  |P|=2 THM-530-worst P=(1, 13): meas(G_P)=0.7253   n=11: R=0.833   n=15: R=0.925   n=21: R=0.882   n=31: R=0.853
+  |P|=1 THM-530-worst P=(1,): meas(G_P)=0.8571   n=12: R=0.874   n=16: R=0.782   n=22: R=0.748   n=32: R=0.723
+
+  NOTE (honesty): the k=8..12 ledger uses RAW diameter (G_P breaks dilation-invariance);
+  the k=13 leg keeps PRIMITIVE diameter (G_empty = full circle).
+DONE.
