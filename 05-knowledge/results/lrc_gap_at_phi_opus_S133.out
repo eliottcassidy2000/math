@@ -1,0 +1,32 @@
+=== E[gap containing phi] over phi, AP_13 (opus-S133) ===
+1/7=0.14286; E[Sum g^2]=avg over phi ~0.135; E[maxgap]=0.211
+
+  phi=0.000: E[gap_in_phi]=0.21136 <-- >1/7
+  phi=0.020: E[gap_in_phi]=0.18539 <-- >1/7
+  phi=0.040: E[gap_in_phi]=0.16705 <-- >1/7
+  phi=0.060: E[gap_in_phi]=0.15633 <-- >1/7
+  phi=0.080: E[gap_in_phi]=0.15324 <-- >1/7
+  phi=0.100: E[gap_in_phi]=0.15435 <-- >1/7
+  phi=0.120: E[gap_in_phi]=0.15557 <-- >1/7
+  phi=0.140: E[gap_in_phi]=0.15772 <-- >1/7
+  phi=0.160: E[gap_in_phi]=0.15711 <-- >1/7
+  phi=0.180: E[gap_in_phi]=0.15787 <-- >1/7
+  phi=0.200: E[gap_in_phi]=0.16164 <-- >1/7
+  phi=0.220: E[gap_in_phi]=0.15912 <-- >1/7
+  phi=0.240: E[gap_in_phi]=0.15952 <-- >1/7
+  phi=0.260: E[gap_in_phi]=0.15993 <-- >1/7
+  phi=0.280: E[gap_in_phi]=0.16029 <-- >1/7
+  phi=0.300: E[gap_in_phi]=0.16033 <-- >1/7
+  phi=0.320: E[gap_in_phi]=0.16234 <-- >1/7
+  phi=0.340: E[gap_in_phi]=0.16518 <-- >1/7
+  phi=0.360: E[gap_in_phi]=0.16101 <-- >1/7
+  phi=0.380: E[gap_in_phi]=0.16121 <-- >1/7
+  phi=0.400: E[gap_in_phi]=0.16493 <-- >1/7
+  phi=0.420: E[gap_in_phi]=0.16211 <-- >1/7
+  phi=0.440: E[gap_in_phi]=0.16138 <-- >1/7
+  phi=0.460: E[gap_in_phi]=0.16017 <-- >1/7
+  phi=0.480: E[gap_in_phi]=0.16341 <-- >1/7
+  phi=0.500: E[gap_in_phi]=0.17541 <-- >1/7
+
+  sup_phi E[gap_in_phi] = 0.21136 at phi=0.000
+  > 1/7? True  => a fixed-phi bound WORKS (E[maxgap]>=sup_phi>1/7)

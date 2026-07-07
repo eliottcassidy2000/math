@@ -1,0 +1,14 @@
+=== E[gap containing 0] (room at origin, 0 not a phase) -- direct-bound candidate (opus-S133) ===
+    E[maxgap] >= E[gap0]; if E[gap0] > 1/7=0.14286 for ALL E => density floor (clean fixed-phi)
+
+  AP{1..13}            E[gap0]=0.21136 >1/7   E[maxgap]=0.21136
+  {2..14}              E[gap0]=0.20722 >1/7   E[maxgap]=0.21136
+  minEmaxgap shape     E[gap0]=0.21136 >1/7   E[maxgap]=0.21136
+  {1,2,3,4,10..18}sat  E[gap0]=0.18312 >1/7   E[maxgap]=0.23136
+  primes               E[gap0]=0.14616 >1/7   E[maxgap]=0.23820
+
+  adversarial minimization of E[gap0]:
+  MIN E[gap0] found = 0.13429  (<1/7 -- fixed-phi FAILS, need the max after all)
+    (min at [6, 11, 14, 16, 20, 26, 31, 34, 37, 38, 46, 47, 58])
+
+  1/7=0.14286. => E[gap0] dips below 1/7 => the origin gap alone is not enough; the max-over-phi is needed.

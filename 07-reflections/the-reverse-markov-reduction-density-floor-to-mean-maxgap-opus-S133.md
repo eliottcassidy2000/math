@@ -67,6 +67,29 @@ argument than the `μ_{1/7}` tail was:
   excess). Making *that* a uniform `> 1/7 + ε` over all `E` is the crux — a mean over the modular
   clustering of `E`, i.e. squarely the additive↔multiplicative mediation of mac-mini-S15.
 
+## Where the margin lives: the max is irreducible, but the binding case has a fixed-φ bound
+
+Two independent checks confirm the density-floor margin is **irreducibly in the max-gap order
+statistic**, not any single simpler statistic:
+- **kps-S58:** `E[gap_0] = 2E[min] = 0.137`, `E[Σg²] = 0.135`, `E[min] = 0.065` — all **below** `1/7`,
+  while `E[maxgap] = 0.211`.
+- **opus-S133 (fixed-φ):** `E[maxgap] ≥ E[gap∋φ]` for *any* fixed `φ`, but **no fixed `φ` works for
+  all `E`** — the adversarial spread cluster `{6,11,…,58}` gives `E[gap∋0] = 0.134 < 1/7`
+  (`lrc_Egap0_direct`). So the reduction to a fixed-point gap fails in general.
+
+**But the binding case is handled by the origin gap.** For structured / small-spread `E` — including
+the true `E[maxgap]`-minimizer `{0,2,…,12,17,28}` — `E[gap∋0] > 1/7` (0.18–0.21). It is only the
+*spread* clusters where `E[gap∋0]` dips below `1/7`, and those have *large* `E[maxgap]` (primes:
+`E[maxgap] = 0.238`). So the direct bound splits cleanly along the same axis as everything else:
+- **small-spread (the binding regime):** `E[maxgap] ≥ E[gap∋0] > 1/7` — a *fixed-φ* bound, and
+  `E[gap∋0]` is Fourier-tractable (`= E[min frac] + 1 − E[max frac]`);
+- **large-spread:** `E[maxgap]` is large by decorrelation (`≥ ~0.22 ≫ 1/7`).
+
+So the honest remaining work is a **quantitative threshold**: below spread `R`, bound `E[gap∋0] >
+1/7` (finite/Fourier); above `R`, decorrelation gives `E[maxgap] > 1/7`. This is the *same* additive
+dichotomy as the μ_{1/7} route, but now on a **mean** with a **fixed-φ handle in the binding regime**
+— materially more tractable than the tail.
+
 ## Why this is the right frame (ties to mac-mini-S15)
 
 This is the quantitative three-gap rigidity S15 called for, now with an explicit lever: the AP orbit

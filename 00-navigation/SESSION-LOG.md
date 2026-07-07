@@ -19,6 +19,28 @@ RIGHT TOOL for the moat: SIGNED/location -- three-gap rigidity (mac-mini-S15: de
 FILES: lrc14_paleyzygmund_moat / lrc14_pz_schur_energygap / lrc14_resonance_destruction _macmini_S40 (+out); reflection the-moat-is-a-sup-not-an-average-...-macmini-S40.md; HYP-4767 (+INDEX). No canon overridden.
 
 NEXT: don't pursue moment methods on the moat (ruled out); the additive-energy gap-44 is a Freiman certificate 'single-scale family = AP' -- feed it to the sieve; the moat's tool is three-gap/location (S15).
+## opus-2026-07-07-S133 -- REVERSE-MARKOV reduction: the density floor reduces to a MEAN max-gap E[maxgap]>1/7 (owner hint; converged w/ kps-S57/58) (HYP-4762)
+
+Prompt (owner): work the crux, think reverse-Markov reduction.
+
+Reverse Markov (X=maxgap in [0,B], a<E[X]): P(X>a) >= (E[X]-a)/(B-a). With a=1/7, B=1:
+  mu_1/7(E) = P(maxgap>1/7) >= (7/6)(E[maxgap] - 1/7).
+=> DENSITY-FLOOR POSITIVITY <= [E[maxgap] > 1/7]. A MEAN, not the mu_1/7 tail or S130's E[U] -- strictly cleaner.
+
+RIGOROUS PIECES:
+ - E[maxgap(AP_13)] = 93/440 EXACT (three-gap piecewise-rational integration; margin 211/3080 ~48% over 1/7) => reverse-Markov floor mu_17 >= 1477/18480 at the AP.
+ - reverse-Markov inequality itself (elementary, rigorous).
+
+CENSUS CORRECTION (Route-2 discipline; mirrors kps-S56's catch of my S131): E[maxgap] is NOT AP-minimized -- unlike the mu_1/7 TAIL (AP IS its unique min, S130), the MEAN E[maxgap] has 38 shapes below AP at k=8; true inf_E E[maxgap] ~0.205 at stretched {0,2..12,17,28} (<AP 0.2114), still >> 1/7. So the crux is a DIRECT inf_E E[maxgap]>1/7, NOT AP-minimality. Flagged to kps-S58 (who stated 'AP-minimality of E[maxgap]' -- the conflation of two functionals is the error).
+
+MARGIN IRREDUCIBLY IN THE MAX (2 independent confirmations): kps-S58 (E[gap_0], E[sum g^2], E[min] all <1/7, only E[maxgap]>1/7) + opus fixed-phi test (E[maxgap]>=E[gap_in_phi] for any fixed phi, but NO fixed phi clears 1/7 for all E: adversarial spread {6..58} gives E[gap0]=0.134<1/7). BUT the BINDING small-spread case has E[gap0]>1/7 (Fourier-tractable origin gap = E[min frac]+1-E[max frac]); spread case has large E[maxgap] by decorrelation. So the direct bound splits: small-spread origin-gap (fixed-phi) + large-spread decorrelation.
+
+Files: lrc_reverse_markov_maxgap / lrc_Emaxgap_exact / lrc_Emaxgap_apmin / lrc_Emaxgap_min_k13 / lrc_gap_at_phi / lrc_Egap0_direct _opus_S133 (+outs); reflection the-reverse-markov-reduction-density-floor-to-mean-maxgap-opus-S133 (with AP-min correction + fixed-phi refinement); HYP-4762. No Lean asserted.
+
+NEXT: the reduced target inf_E E[maxgap]>1/7 -- prove via small-spread origin-gap bound (E[gap0]>1/7, Fourier) + large-spread decorrelation threshold. Converged with kps (discrepancy angle) -- split the labor.
+
+---
+
 ## kind-pasteur-2026-07-07-S58 -- attempt inf E[maxgap]>1/7 (S57 target): single-statistic bounds FALL SHORT, margin irreducibly in the max; crux = AP-minimality (shared w/ opus) + three-distance AP value (HYP-4757)
 
 Owner: work the former (prove inf E[maxgap]>1/7). CLEAN IDENTITY (reflection x->1-x): E[gap_0]=2*E[min_i frac(e_i x)].
