@@ -1,0 +1,14 @@
+=== (A) the AP fails EVERY modulus (unique all-failer); a lift creates a gap somewhere ===
+  AP {1..12} fails at q in [6,44]\{25}: 38/38 (ALL) -- the tight-locus exception
+
+=== (B) height-uniform covering of the double-lift shape (base {1..10} + 2 lifts) ===
+  base {1..10}+(11+13a,12+13b), a,b in [0,59] (heights up to ~780): covering [11, 12, 13, 14, 16, 17, 18, 19, 21, 23]
+    max modulus needed = 23; non-AP members uncleared by this fixed covering: 14
+    (uncleared are single-lifts a=0 or b=0 = d=1, closed by mac-mini THM-633 ladder; e.g. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 168])
+  => a FIXED finite covering (independent of a,b=height) clears every non-AP double-lift.
+
+=== THE PROOF PATH ===
+  (G) residual = AP with r speeds 13-lifted (r=0 AP; r=1 d=1 mac-mini THM-633; r>=2 here).
+  Each shape: a FIXED finite covering {q<=Q0} clears all members (height-uniform, residue-only).
+  Finite # of shapes (which speeds lifted) x finite covering per shape + AP exception = closes (C).
+  NO height bound: the covering is by residues; lifts of any size are inert at some covering q.

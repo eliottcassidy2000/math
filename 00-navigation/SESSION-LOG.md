@@ -1401,6 +1401,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S46 -- THE PROOF PATH for the uniform-Q0 node: the residual closes by a HEIGHT-UNIFORM LADDER COVERING (no height bound) (HYP-4617)
+
+Prompt (owner): drive the final node; pull from other agents, explore for inspiration.
+
+INSPIRATION (klein S126): residual is DISCRETE (ladder rungs k/(11k+1), gap 1/276 above 1/12), = 'finite union of formula-closable ladder families' = my ladder method. opus S126: finite covering, Erdos-flavoured.
+
+RESIDUAL = AP with r speeds 13-LIFTED (preserve {1..12} mod 13). r=0 AP (tight-locus); r=1 d=1 GREEN (mac-mini THM-633); r>=2 = this session.
+
+MECHANISM: AP fails EVERY modulus (38/38) = tight extremal (three-gap). A lift breaks it (changes residue at every q!=13). DEMONSTRATED: double-lift {1..10}+(11+13a,12+13b) -- FIXED covering {11..23} (indep of a,b=height) clears every non-AP member (heights to ~780; only single-lifts uncleared = d=1 THM-633).
+
+HEIGHT-UNIFORMITY FREE: clearing depends only on v_i mod q; lifts of any size inert at almost every covering q; covering outnumbers lift-blocks = Erdos-covering. BYPASSES the height/u_max/lcm wall -- covers residues not height.
+
+PROOF PATH: (C) <= per lift-shape (finite), a fixed covering {q<=Q0~23} clears all non-AP members (finite residue check, rational_point_margin certs) + AP unique all-failer. r=0 thm, r=1 THM-633, r>=2 residual program (finite, residue-only).
+
+FILES: lrc_ladder_covering_path_kps_S46.py(+.out); reflection the-residual-closes-by-a-height-uniform-ladder-covering-kps-S46.md; HYP-4617. No new Lean (path+demo; certs are existing atoms). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S45 -- SYNTHESIS: the covering UNIFIES opus's two-modulus crux + supplies the OPEN collision-13 mechanism; residual pinned to AP-like (HYP-4607)
 
 Prompt (owner): take on the uniform Q0; pull from other agents, synthesize, see the bigger LRC picture.
