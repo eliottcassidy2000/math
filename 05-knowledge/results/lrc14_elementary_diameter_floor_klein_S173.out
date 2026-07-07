@@ -1,0 +1,8 @@
+constant sum phi(q)c_q = 73/35 = 2.085714  (claim 73/35 = 2.085714); floor = 2*const/span
+          AP13: span  13; PROVED floor 0.3209; true mu 0.4425 [OK ]; in-window totality violations 0/4812
+        record: span  22; PROVED floor 0.1896; true mu 0.5306 [OK ]; in-window totality violations 0/4812
+     spread-x5: span  65; PROVED floor 0.0642; true mu 0.4425 [OK ]; in-window totality violations 0/4812
+   big-span-80: span  80; PROVED floor 0.0521; true mu 0.5509 [OK ]; in-window totality violations 0/4812
+      primes13: span  41; PROVED floor 0.1017; true mu 0.9459 [OK ]; in-window totality violations 0/4812
+
+m_P = 0.056487; floor clears m_P iff span <= 73.85  -> every 13-set with span <= 73 is DISCHARGED elementarily (cf. roof-route ledger <= 75)
