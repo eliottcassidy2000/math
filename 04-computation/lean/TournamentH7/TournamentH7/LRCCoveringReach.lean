@@ -81,7 +81,40 @@ theorem d2_generic_reach (x y : ℤ) (hx : ¬ (11 ∣ x)) (hy : ¬ (11 ∣ y)) :
   have : (2 : ℝ) / 25 < (1 : ℝ) / 11 := by norm_num
   linarith
 
+/-! ### The translate-block bound (opus-S127 branch 3, uniform-k L-lift escape) -/
+
+/-- The consecutive 12-block `{m, m+1, …, m+11}` as `Fin 12 → ℤ`. -/
+def Blk (m : ℤ) : Fin 12 → ℤ := fun i => m + (i.val : ℤ)
+
+/-- **Translate-block bound.**  The consecutive block `{m,…,m+11}` for `m ≥ 2` has
+reach `≥ m/(2m+11) ≥ 2/25` — witness `t = 1/(2m+11)`, clearance `m` (a covering cert
+at `q = 2m+11`, `c = 1`, `μ = m`).  Only `m = 1` (the AP `{1,…,12}`) is tight
+(`1/13`).  So every non-AP translate of the AP — in particular every uniform L-lift
+`{1+Lk,…,12+Lk}` with `k ≥ 1` (`m = 1+Lk ≥ 2`) — is loose.  This closes opus-S127's
+branch-3 uniform-k escape of the finite-covering crux. -/
+theorem translate_block_reach (m : ℤ) (hm : 2 ≤ m) :
+    (2 : ℝ) / 25 ≤ sSup (margin (Blk m) '' Set.Icc (0 : ℝ) 1) := by
+  have hq : (0 : ℤ) < 2 * m + 11 := by linarith
+  have hcov : ∀ i, m ≤ (Blk m i * 1) % (2 * m + 11) ∧
+      (Blk m i * 1) % (2 * m + 11) ≤ (2 * m + 11) - m := by
+    intro i
+    have hi12 : i.val < 12 := i.isLt
+    have hi11 : (i.val : ℤ) ≤ 11 := by exact_mod_cast Nat.lt_succ_iff.mp hi12
+    have hi0 : (0 : ℤ) ≤ (i.val : ℤ) := Int.natCast_nonneg _
+    have hval : Blk m i * 1 = m + (i.val : ℤ) := by simp [Blk]
+    rw [hval, Int.emod_eq_of_lt (by linarith) (by linarith)]
+    exact ⟨by linarith, by linarith⟩
+  have hreach := reach_ge_of_covering (Blk m) (2 * m + 11) 1 m hq (by norm_num)
+    (by linarith) hcov
+  have hmR : (2 : ℝ) ≤ (m : ℝ) := by exact_mod_cast hm
+  have hqR : (0 : ℝ) < 2 * (m : ℝ) + 11 := by linarith
+  have hge : (2 : ℝ) / 25 ≤ (m : ℝ) / (2 * (m : ℝ) + 11) := by
+    rw [le_div_iff₀ hqR]; nlinarith
+  push_cast at hreach
+  linarith
+
 #print axioms reach_ge_of_covering
 #print axioms d2_generic_reach
+#print axioms translate_block_reach
 
 end TournamentH7.LRCCoveringReach
