@@ -1,0 +1,17 @@
+HYP-4747: PALEY-ZYGMUND second-moment reduction of the moat.  beta=1/13~0.0769
+  additive energy E_+(AP{1..13})=1469  (should be the MAX among single-scale)
+  family                                          M    E_+      E[Z]  PZ ratio
+  AP {1..13}                             1/14~0.0714   1469  0.00e+00  0.00e+00
+  {1..11,13,14} skip12                   1/12~0.0833   1389  5.14e-10  4.88e-03
+  {1..12,14} skip13                      1/13~0.0769   1425  6.65e-11  4.76e-03
+  {..11,13,15}                           1/12~0.0833   1353  9.34e-10  4.87e-03
+  {2..14} AP shift                       1/8~0.1250   1469  2.16e-06  3.68e-02
+  skip2                                  2/17~0.1176   1425  1.04e-07  2.08e-02
+  {1..11,12,14}? skip13->14              1/13~0.0769   1425  6.65e-11  4.76e-03
+  skip3                                  2/19~0.1053   1389  2.82e-08  1.83e-02
+  skip6mid                               2/23~0.0870   1329  7.83e-10  3.64e-03
+
+  Over 5912 random NON-AP single-scale families:
+    min M = 0.0769  (moat claims >= 1/13 = 0.0769)
+    max additive energy E_+ = 1425  (AP's = 1469; is AP strictly larger?)
+  => AP UNIQUELY MAXIMIZES additive energy among single-scale.

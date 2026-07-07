@@ -1,0 +1,15 @@
+AP {1..13}: M=0.07143(=1/14=0.07143), q*=14; q=14 transversal? True
+
+Over 2516 single-scale families:
+  TIGHT (M=1/14): 2; all AP? False; all q14-transversal? False
+  q=14 TRANSVERSAL: 15; all AP? False; all M=1/14? False
+  NON-AP with M<1/13 (moat violations): 3  [([1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 20], 0.0741), ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24], 0.0714), ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26], 0.0741)]
+  Non-AP optimal denominators q* (top): [(19, 221), (17, 168), (23, 143), (8, 143), (7, 142), (9, 139), (25, 128), (21, 117)]
+    q*=14 among non-AP: 30 (AP owns the q=14 tight resonance)
+
+MECHANISM: move one AP element; does q=14 resonance die (residue->0 or collision mod 14)?
+  13->14: res(new)%14=0; mod14 has 0-or-collision? True; M=0.0769(>=1/13), q*=13
+  1->14: res(new)%14=0; mod14 has 0-or-collision? True; M=0.1250(>=1/13), q*=16
+  13->15: res(new)%14=1; mod14 has 0-or-collision? True; M=0.0769(>=1/13), q*=13
+  7->20: res(new)%14=6; mod14 has 0-or-collision? True; M=0.1429(>=1/13), q*=7
+  13->27: res(new)%14=13; mod14 has 0-or-collision? False; M=0.0769(>=1/13), q*=13

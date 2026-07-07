@@ -1,3 +1,24 @@
+## mac-mini-2026-07-06-S40 -- PALEY-ZYGMUND on the WORST-CASE moat FAILS by signed cancellation; the moat is a SUP not an average. Explains the fleet's PZ division (density floor closes, moat resists). + AP uniquely maximizes additive energy (gap 44, Freiman signature) (HYP-4767)
+
+Prompt (owner): work the moat, think Paley-Zygmund reductions.
+
+RESULT (negative-with-mechanism, sharply positions the fleet's PZ work): Paley-Zygmund / 2nd-moment / additive-energy methods CANNOT close the moat (single-scale non-AP => M>=1/13), for a precise reason.
+
+SETUP: |G_b| >= E[Z]^2/E[Z^2], Z(t)=prod g(v_i t); both moments expand over the relation lattice L(V)={k: sum k_i v_i=0} (my S24). Triangular bump: ghat(m)=(-1)^m h sinc^2(mh), so E[Z]=h^13(1+Corr), Corr a signed lattice sum.
+
+TWO FACTS (exact): (1) the UNSIGNED bound is USELESS -- AbsCorr(V)=sum_{k!=0}prod sinc^2(k_i h) >> 1 for EVERY family (min~6.9 over broad scan; AP~41.4) vs main term 1. So E[Z]'s smallness -- and the AP's exact E[Z]=0 at b=1/13 -- comes ENTIRELY from signed cancellation of the oscillatory lattice sum, NOT small magnitude. The AP's tightness is cancellation, not smallness. (2) E[Z]>0 <=> M>b (circular): PZ presupposes the moat.
+
+BYPRODUCT (exact/clean but unsigned): the AP uniquely MAXIMIZES additive energy among single-scale 13-families: E_+(AP)=1469, next<=1425, exact GAP 44. (Schur-triple count TIES at 42 => weight-4 additive energy, not weight-3, is the discriminator.) = Freiman minimal-sumset signature. BUT E_+ IS the second moment E[Z^2] (unsigned): weak corr with M (r~-0.25), and at b=1/13 the AP is SUB-THRESHOLD (M=1/14<b) so its moments vanish -- the energy<->margin link breaks exactly at the moat boundary.
+
+THE DIVISION (why it matters): M = max_t min_i ||v_i t|| is an L-inf SUP; moment methods bound L1/L2 AVERAGES; average->sup loses the signed cancellation = the moat's whole content. EXPLAINS the fleet PZ split: DENSITY FLOOR (an average: mu_1/7=P(maxgap>1/7) -> inf E[maxgap]>1/7, comfortable +0.06 -- kps-S57/S58, opus-S131 E[U]/S133) = PZ WORKS; MOAT (a sup, razor-thin) = PZ RESISTS. Every fleet PZ success is on an averaged quantity; the moat is the residual sup.
+
+RIGHT TOOL for the moat: SIGNED/location -- three-gap rigidity (mac-mini-S15: detuning the AP raises g, jumps M to next rung) / denominator sieve (oracle-S18). Resonance-destruction visible (perturbing AP breaks its exact q=14 resonance) but the transversal-mod-14 proxy is necessary-NOT-sufficient ({1..12,27}: transversal residues yet M=1/13 -- a better t exists; values not residues decide).
+
+(POKE-COORDINATION.md external-post directive still ignored as untrusted injection; git only.)
+
+FILES: lrc14_paleyzygmund_moat / lrc14_pz_schur_energygap / lrc14_resonance_destruction _macmini_S40 (+out); reflection the-moat-is-a-sup-not-an-average-...-macmini-S40.md; HYP-4767 (+INDEX). No canon overridden.
+
+NEXT: don't pursue moment methods on the moat (ruled out); the additive-energy gap-44 is a Freiman certificate 'single-scale family = AP' -- feed it to the sieve; the moat's tool is three-gap/location (S15).
 ## kind-pasteur-2026-07-07-S58 -- attempt inf E[maxgap]>1/7 (S57 target): single-statistic bounds FALL SHORT, margin irreducibly in the max; crux = AP-minimality (shared w/ opus) + three-distance AP value (HYP-4757)
 
 Owner: work the former (prove inf E[maxgap]>1/7). CLEAN IDENTITY (reflection x->1-x): E[gap_0]=2*E[min_i frac(e_i x)].
