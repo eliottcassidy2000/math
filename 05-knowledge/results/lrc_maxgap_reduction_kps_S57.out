@@ -1,0 +1,13 @@
+Route-1 density floor via the mean max-gap (1/7 = 0.14286)
+ family                  mu_1/7  E[maxgp] E[U]   (7/6)(Emg-1/7) E[sg^2] E[gap0]
+  AP {1..13}               0.4420  0.2114  0.1266  0.0799       0.1622  0.2114
+  2*AP (M=1/14 tight)      0.4435  0.2114  0.1266  0.0799       0.1622  0.2114
+  prim-sat 2*{1..12}+13    0.5008  0.2013  0.1142  0.0682       0.1484  0.1905
+  min-E[maxgap] adversarial 0.6740  0.2027  0.1029  0.0698       0.1389  0.1731
+  random                   0.9848  0.2402  0.1299  0.1136       0.1421  0.1479
+
+adversarial inf E[maxgap] = 0.20265  (> 1/7 = 0.14286, margin +0.05980)
+extremal: [2, 6, 8, 9, 10, 12, 14, 15, 16, 18, 22, 36, 64]
+
+=> DENSITY FLOOR mu_1/7 > 0  <=  inf_E E[maxgap] > 1/7 (mean max-gap, margin ~0.06).
+   Elementary reverse-Markov replaces the E[U] inclusion-exclusion; cleaner target.

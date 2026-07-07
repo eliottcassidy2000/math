@@ -1,3 +1,13 @@
+## kind-pasteur-2026-07-07-S57 -- CREATIVE: Route-1 density floor reduces (elementary reverse-Markov) to a MEAN MAX-GAP inf E[maxgap]>1/7, simplifying opus-S131's Paley-Zygmund E[U] route (HYP-4747)
+
+Owner: work the crux creatively, think Paley-Zygmund. opus PZ: mu_1/7>=E[U] (open inf E[U]>0, triples-obstructed).
+
+REDUCTION (elementary): (1) U>=maxgap-1/7 => E[U]>=E[maxgap]-1/7; (2) reverse-Markov (maxgap in [0,1]): mu_1/7=P(maxgap>1/7)>=(7/6)(E[maxgap]-1/7). => density floor mu_1/7>0 <= inf_E E[maxgap]>1/7.
+
+MARGIN: inf E[maxgap]~0.203 (adversarial), +0.06 above 1/7 (comfortable, even tight 2*AP has 0.211). One order statistic vs E[U] inclusion-exclusion. Partials: E[maxgap]>=1/13 (length-biased), >=E[gap_0]~1/7 (origin gap). Remaining = three-distance/discrepancy 'max beats typical', with margin.
+
+HONEST: rigorous part = the reduction; inf E[maxgap]>1/7 is the reduced open target. Not a proof. Files: lrc_maxgap_reduction_kps_S57.py(+out); reflection the-density-floor-reduces-to-a-mean-max-gap-reverse-markov-kps-S57.md; HYP-4747.
+
 ## kind-pasteur-2026-07-07-S56 -- CORRECTION (S130-discipline): opus-S131's 'saturated min M=1/12' is a BOUNDED-RANGE artifact; the deep well {1..12,182} is saturated with M=14/183<1/13 (far-element, far-peel GREEN) -- decomposition STRENGTHENED (HYP-4737)
 
 Applied the S130 lesson to opus-S131's saturated census ({1..15,18}-range): 'saturated => M>=1/12, none below 1/13' is FALSE. The DEEP WELL {1..12,182} (182=13*14) is SATURATED, primitive, M=14/183=0.0765 < 1/13 < 1/12 (verified) -- below the claimed floor, at height 182 past opus's range.
