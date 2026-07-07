@@ -1,3 +1,27 @@
+## mac-mini-2026-07-07-S46 -- THM-643 PROVED: the blue/black LINE PARITY STRUCTURE (strict definitions) -- the tiling fibration is determined MOD 2 by Redei + two commuting involutions; pure-black = non-SC at ALL n; new invariant H_sym (self-converse Ham-path count) with mass formula and a conjectured 3-power cap (HYP-4977)
+
+Prompt (owner): explore the even/odd duality in the merged metagraph's blue/black lines (strict explorer defs); which node types they connect (pure-blue/pure-black/mixed); allocation vs n; formulas + subtle combination patterns => know the structure completely; creative niche insights coalescing into a grand restricting picture.
+
+THE FRAME: tiling cube GF(2)^m with two commuting involutions -- sigma = grid transpose (linear; Fix = blue tilings, dim (m+f)/2, f = floor((n-1)/2); downstairs = CONVERSE) and tau = +1 flip (fixed-point-free; orbits = LINES; preserves Fix(sigma)) -- interacting with the S_n fibration (fiber = H/|Aut|, LEM-003).
+
+THEOREMS (THM-643 canon, proofs elementary; verified exhaustively n=3..7, every check TRUE):
+ T1 fibers ODD (Redei x odd |Aut|).
+ T2 PURE-BLACK = NON-SC exactly, all n (sigma on an odd fiber has odd fixed points) -- upgrades the CLAUDE.md n<=7 verified fact to a theorem.
+ T3 blue lines connect only SC nodes.
+ T4 allocation parities: SC (blue odd, black even), NS (0, black odd); EVERY node emits an odd >= 1 number of cross-class line-endpoints (nothing line-isolated; blue min-degree >= 1 on SC) -- the owner's 'blues odd, blacks even' made precise and proved.
+ T5 closed forms: #gridsym = 2^{(m+f)/2}; #blue lines = 2^{(m+f)/2-1}; #black lines = 2^{m-1} - 2^{(m+f)/2-1}.
+ T6 the blue count per SC node = H_sym, the SELF-CONVERSE HAMILTONIAN PATH COUNT -- a new odd tournament invariant; blue mass formula Sum_{SC} = 2^{(m+f)/2} (companion of Sum H/|Aut| = 2^m).
+
+CENSUS (exact n=3..7): (PB,MX,PK) = (2,0,0),(1,1,2),(3,5,4),(2,10,44),(4,84,368); PB+MX = SC; full line allocation tables saved.
+
+CONJECTURES: C1 max H_sym = 3^{floor((n-2)/2)} (1,3,3,9,9 -- Redei's odd deepens to a 3-power cap on the symmetric locus); C2 blue self-loops ONLY at even n (0,1,0,2,0; score-shift mechanism); C3 pure-blue = maximal symmetry (fiber in {1,3}; transitive + circulant-like; blue-graph leaves); C4 odd-spectrum fullness; soft: #gs ~ sqrt(fiber).
+
+UNIFYING PICTURE: sizes, colors, masses, and every allocation parity of the fibration are now DETERMINED; the residual for complete structure = the explicit cross-class matching (line-metagraph) + C1-C4 -- a parity-constrained matching problem, not an open census. Same two involutions run the runner world downstairs (THM-639).
+
+FILES: THM-643 (canon, proofs); gn_lines_parity_census_macmini_S46.py (+out); reflection the-two-involutions-determine-the-fibration-mod-2-macmini-S46; HYP-4977 (INDEX). No Lean (proofs-first). No canon overridden.
+
+NEXT: (a) prove C2 via the score-shift arithmetic (looks one-session); (b) C1 (the 3-power cap) via the sigma-orbit structure on circulant fibers; (c) the line-metagraph matching tables at n=5,6 explicitly (which class pairs); (d) n=8 global row needs only SC(8).
+
 ## klein-2026-07-07-S161 -- BLUE/BLACK LINE STRUCTURE = REDEI PARITY: five theorems PROVED (SC ⟺ gridsym-present; blues odd/blacks even; tripartite; blue count 2^{(m+f)/2-1}) + n=7 census (0 violations) + the Redei refinement (SC tournaments have an ODD number of anti-reversible Ham-path orbits) + 5 new conjectures (HYP-4851)
 
 Prompt (owner): explore the even/odd duality of blue/black lines in the merged metagraph -- line counts, node types (pure-blue/mixed/pure-black), allocation vs n, subtle combining laws, toward complete structural knowledge of the tiling fibration; creative niche insights + small conjectures coalescing into a unifying picture.
