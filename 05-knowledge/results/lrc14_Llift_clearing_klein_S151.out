@@ -1,0 +1,17 @@
+L-lift {1+L..11+L,12+2L}, L=lcm(2..Q): does it CLEAR somewhere (loose => C holds)? at what q?
+  Q nextprime min-clear-q clear>nextprime?
+ 13        17          19             True
+ 16        17          27             True
+ 19        23          25             True
+ 23        29          25            False
+ 25        29          29            False
+ 27        29          32             True
+ 29        31          32             True
+ 31        37          32            False
+ 32        37          37            False
+ 37        41          41            False
+ 41        43          43            False
+ 43        47          47            False
+ 47        53          49            False
+
+Also test the WORST k-pattern per Q (min over patterns of the min-clear-q -- the hardest):
