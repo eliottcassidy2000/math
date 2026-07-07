@@ -23,14 +23,25 @@ from math import gcd
 import time, itertools
 
 def M_exact(S):
+    """Exact M(S): binding-pair theory gives the optimum at t = a/q with q DIVIDING a
+       pair sum s_i+s_j, a pair difference, or a double 2 s_i.  (S143 fix: v1 scanned the
+       sums themselves, not their DIVISORS, missing e.g. q=2 -- so all-odd sets got
+       under-reported: M(3,7) = 1/2 via t = 1/2, not 5/14.)"""
     S = sorted(S)
-    cands = set()
+    base = set()
     for i in range(len(S)):
-        cands.add(2 * S[i])
+        base.add(2 * S[i])
         for j in range(i, len(S)):
-            cands.add(S[i] + S[j])
+            base.add(S[i] + S[j])
             if S[j] > S[i]:
-                cands.add(S[j] - S[i])
+                base.add(S[j] - S[i])
+    cands = set()
+    for b in base:
+        d = 1
+        while d * d <= b:
+            if b % d == 0:
+                cands.add(d); cands.add(b // d)
+            d += 1
     best = F(0)
     for q in sorted(cands):
         if q < 2: continue
