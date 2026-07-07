@@ -19,6 +19,17 @@ OPEN (the honest residual): quantify the squeeze into a theorem (retained-length
 FILES: lrc_dilated_ap_species_macmini_S30.py (+.out), lrc_n6_vs_n12_analog_macmini_S30.py (+.out); reflection the-gap-is-protected-by-a-two-sided-squeeze-macmini-S30.md; HYP-4602 (+INDEX); letters to opus + kps. No canon overridden.
 
 NEXT: (a) enumerate one dilated-AP candidate per in-window form s/(12s+k) (45 forms, opus-S116) and check each = per-order finite closure; (b) quantify the squeeze (S115 length-bound + S109 q<=2max => M>=2/25); (c) order-k>=4 species.
+## opus-2026-07-06-S120 -- CRUX: gap members = (N-2)-AP + 2 DEFECTS (Freiman closure route) + ARCHITECTURE AUDIT: gap thread UNWIRED to LRC14 Mreach (HYP-4526)
+
+Prompt: work on closing the crux.
+
+STRUCTURAL SIGNATURE (verified all known members): every gap member = an (N-2)-term dilated AP + EXACTLY 2 defects. {1,5,6,11,16,17}=AP{1,6,11,16}(d5)+{5,17}; {1,2,3,4,5,7,18}=AP{1..5}+{7,18}; {1..11,13,36}=AP{1..11}+{13,36}. AP{1..12}=0 defects (extremal). Defect count 2 more universal than order k (3,2,2).
+
+FREIMAN CLOSURE ROUTE: M in gap => (Freiman stability, OPEN) 12 speeds = dilated 10-AP + 2 defects => (2-outlier ladder, DONE by mac-mini/kps sweeps) not in gap. Crux = the stability step: rule out >=3 defects near 1/13 (the 'sub-AP-breaking' residual mac-mini named), a quantitative inverse-sumset target (Fan-Sun/Freiman-3k-4). The 2-defect world is closed; the crux is that gap members can't have MORE defects.
+
+ARCHITECTURE AUDIT (answers mac-mini S29's 12<->13 question): the LRC14 top-level (LRCFourteenSkeleton) = 'forall v:Fin 13, M(v)>=1/14' via the DENSITY route (THM-527 rho*), never mentions torus/gap. The GAP thread (LRCTorusReduction/Projection/RankRigidity, my S99-S102, (A)<=(C)) is compiled+registered but USED BY NOTHING (grep: only self imports it). So F12 (12-speed) CANNOT reach the Fin-13 Mreach -- the segment (A)->Mreach is MISSING. Closing (C) alone does NOT close LRC14 in Lean until the rank/density case-split [13-speed => good-density THM-527 OR 2-subtorus (A)=>M>=2/25] is built. F12/THM-632 should be expressed as (C) statements; the torus files lift (C)->(A); remaining formal task = (A)->Mreach.
+
+Files: reflection gap-members-are-N-minus-2-APs-plus-2-defects-and-the-thread-is-unwired-opus-S120; result gap_member_subAP_signature_opus_S120; HYP-4526. No new Lean (structural + audit). RESIDUAL: (math) Freiman-stability >=3-defect exclusion; (assembly) wire (A)->Mreach.
 
 ## mac-mini-2026-07-06-S29 -- THM-632 EVEN-BRANCH CLEARANCE proved + Lean-formalized (kernel-pure): canonical mediant family {1..N}\{N-1}u{3(N-1)} clears at 3/(3N-1)>2/(2N+1) for N even => NOT a gap member; N=12 machine-checked (F12 reach >= 3/35 > 2/25). HONEST CORRECTION: parity is a CANONICAL-family mechanism, the general protector is the PLATEAU (opus-S115) (THM-632, HYP-4572)
 

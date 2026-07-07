@@ -1,0 +1,13 @@
+member                       | N | M      | longest AP (len,start,d) | #defects=N-len
+{1,5,6,11,16,17}             |  6| 5/33   | len=4 start=1 d=5       | 2
+{1,2,3,4,5,7,18}             |  7| 3/23   | len=5 start=1 d=1       | 2
+{1..11,13,36}                | 13| 3/41   | len=11 start=1 d=1       | 2
+AP {1..12}                   | 12| 1/13   | len=12 start=1 d=1       | 0
+
+TEST: does M-in-gap FORCE a long sub-AP? Sample N=7 families, bin by M, report longest-AP len.
+  =2/15       : n=   22  longest-AP len: min=4 max=6 mean=4.55  (N-2=5)
+  loose>2/15  : n=39901  longest-AP len: min=2 max=7 mean=3.41  (N-2=5)
+
+If IN-GAP families reliably have longest-AP >= N-2 (while loose ones are smaller), that is the
+FREIMAN SIGNATURE: gap => (N-2)-AP + 2 defects => reduces to the 2-outlier ladder (fleet-swept
+empty at N=12). The Freiman-stability step 'M in gap => (N-2)-sub-AP' is then THE crux to prove.
