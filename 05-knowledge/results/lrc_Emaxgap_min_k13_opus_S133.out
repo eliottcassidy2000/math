@@ -1,0 +1,9 @@
+=== TRUE min of E[maxgap] over k=13 shapes (opus-S133) ===
+E[maxgap(AP_13)]=0.21136 (=93/440); 1/7=0.14286
+
+TRUE min E[maxgap] (k=13) found: 0.20469  at shape (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17, 28)
+  below AP (0.2114)? True
+  > 1/7=0.14286? True   margin over 1/7: 0.06183
+  reverse-Markov floor at the TRUE min: mu_17 >= 0.07214 > 0
+
+  => density floor holds iff inf_E E[maxgap] > 1/7; the min is NOT the AP but is ~0.205 >> 1/7.

@@ -21,13 +21,20 @@ So **density-floor positivity ⟸ `E[maxgap] > 1/7`** — a *first-moment* bound
 statistic, not the tail. (Compare: S130's `μ_{1/7} ≥ E[U]` used `E[Σ(gap−1/7)_+]`, a truncated sum;
 `E[maxgap]` is the cleaner mean, and the reverse-Markov constant `7/6` is explicit.)
 
-## The binding value is proven exactly (three-gap integration)
+## The AP value, proven exactly — but the AP is NOT the minimizer (corrected)
 
-`E[maxgap]` is minimized at the AP (the most-equidistributed orbit) — verified exhaustively for
-`μ_{1/7}` (S130) and here for the mean (random `k=13` clusters give `E[maxgap] ≥ 0.225 > 0.211`). And
-the AP value is **exact** (`lrc_Emaxgap_exact_opus_S133`, rational three-gap piecewise integration —
-breakpoints = Farey `m/d`, `d≤k`, order changes/wraps, plus pairwise gap crossings; a rigorous
-computation, not a grid):
+> **⚠ Correction (census, same session).** Unlike `μ_{1/7}` (which the AP uniquely *minimizes*, S130),
+> `E[maxgap]` is **NOT** AP-minimized. Exhaustive census (k=8,9,10) finds shapes strictly below the AP
+> (38 at k=8, e.g. an endpoint-stretched AP `{0..6,9}`); the true `k=13` minimum found is
+> `E[maxgap] ≈ 0.2047` at `{0,2,3,…,10,12,17,28}`, below the AP's `0.2114`. A structural distinction:
+> **the AP minimizes the max-gap TAIL (`μ_{1/7}`) but not the max-gap MEAN.** The reduction survives
+> regardless — the true `inf_E E[maxgap] ≈ 0.205` is still `≫ 1/7` (margin `0.062`), giving
+> `μ_{1/7} ≥ (7/6)(0.205 − 1/7) ≈ 0.072 > 0`. So the target is a **direct** `inf_E E[maxgap] > 1/7`,
+> NOT AP-minimality.
+
+The AP value is still a clean exact reference (`lrc_Emaxgap_exact_opus_S133`, rational three-gap
+piecewise integration — breakpoints = Farey `m/d`, `d≤k`, order changes/wraps, plus pairwise gap
+crossings; a rigorous computation, not a grid):
 
 | k | `E[maxgap(AP_k)]` exact | ≈ | margin over `1/7` | reverse-Markov `μ_{1/7} ≥` |
 |---|---|---|---|---|
@@ -46,16 +53,19 @@ So `E[maxgap(AP_13)] = 93/440 > 1/7` **with a 48% margin**, and the reverse-Mark
 The floor `μ_{1/7}(E) > 0` for all clusters now needs only:
 
 > **`inf_E E[maxgap(E)] > 1/7`** — the mean max-gap over every integer cluster exceeds `1/7`.
+> (Empirically `inf ≈ 0.205`, at a stretched shape — *not* the AP; margin `≈ 0.062`.)
 
-Two routes, both cleaner than the `μ_{1/7}` tail:
-1. **AP-minimality of `E[maxgap]`**: `E[maxgap(E)] ≥ E[maxgap(AP_k)] = 93/440 > 1/7`. Strong evidence
-   (AP is the minimizer, like `μ_{1/7}`); a *mean* comparison, more tractable than the tail extremal.
-   The AP value is proven, so this alone closes it.
-2. **A direct mean bound** `E[maxgap(E)] > 1/7`. Note `E[maxgap] ≥ E[Σ gap²]` (= length-biased mean
-   gap) is *too weak* (`= 2/(k+1) = 1/7` at `k=13` for independent points, and *less* for the regular
-   AP), so the direct bound must use the max-gap's excess over the length-biased mean — i.e. the
-   three-gap "few big gaps near small-denominator rationals" structure that makes `E[maxgap(AP)] =
-   93/440 ≫ 1/7`.
+This is a **direct mean bound**, and it is the honest open step. AP-minimality is *not* available
+(the AP is not the `E[maxgap]`-minimizer). But a mean is far more amenable to a moment/Fourier
+argument than the `μ_{1/7}` tail was:
+
+- `E[maxgap] ≥ E[Σ gap²]` (length-biased mean gap) is **too weak** — `E[Σ gap²] = 2/(k+1) = 1/7`
+  exactly at `k=13` for independent points, and *less* for regular clusters. So the bound must use the
+  max-gap's **excess over the length-biased mean**, which is the three-gap "a few big gaps near
+  small-denominator rationals" contribution (`near x = p/q`, `q ≤ 6`, the phases cluster into `≤ q`
+  groups leaving a gap `≥ 1/q ≥ 1/6 > 1/7`; the measure of such `x`, weighted by that gap size, is the
+  excess). Making *that* a uniform `> 1/7 + ε` over all `E` is the crux — a mean over the modular
+  clustering of `E`, i.e. squarely the additive↔multiplicative mediation of mac-mini-S15.
 
 ## Why this is the right frame (ties to mac-mini-S15)
 
@@ -69,8 +79,9 @@ has `E[maxgap] = 93/440`, a *continued-fraction/Farey* quantity (the exact ratio
 
 ## Bottom line
 
-Reverse Markov reduces the LRC(14) density-floor crux to **`E[maxgap] > 1/7`**, a mean bound; the
-binding orbit value `E[maxgap(AP_13)] = 93/440` is **proven exactly** with a 48% margin, giving an
-explicit floor `μ_{1/7} ≥ 1477/18480`. The one remaining step — `E[maxgap]` AP-minimality (a mean
-extremal, strictly cleaner than the tail extremal) — is the honest open piece, and it is now a
-statement about *averages of orbit max-gaps*, squarely in classical three-gap territory.
+Reverse Markov reduces the LRC(14) density-floor crux to **`E[maxgap] > 1/7`**, a mean bound; the AP
+orbit value `E[maxgap(AP_13)] = 93/440` is **proven exactly** (48% margin). The AP is *not* the
+minimizer (census: true `inf_E E[maxgap] ≈ 0.205` at a stretched shape), but `inf ≫ 1/7`, so the
+honest open piece is a **direct** `inf_E E[maxgap] > 1/7` — a statement about *averages of orbit
+max-gaps* (not the tail, not an extremal-at-AP), squarely in classical three-gap territory and open
+to a moment/Fourier attack the `μ_{1/7}` tail resisted.

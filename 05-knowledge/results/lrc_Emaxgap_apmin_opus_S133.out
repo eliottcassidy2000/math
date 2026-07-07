@@ -1,0 +1,5 @@
+=== is E[maxgap] AP-minimized? census (opus-S133) ===
+  k=8: 1716 shapes. E[maxgap(AP)]=0.3071; global min=0.2918; #below AP=38  [(0, 1, 2, 3, 4, 5, 6, 9), (0, 3, 4, 5, 6, 7, 8, 9)]
+  k=9: 495 shapes. E[maxgap(AP)]=0.2798; global min=0.2671; #below AP=16  [(0, 1, 2, 3, 4, 5, 6, 7, 10), (0, 2, 3, 4, 5, 6, 7, 8, 10)]
+  k=10: 55 shapes. E[maxgap(AP)]=0.2639; global min=0.2603; #below AP=4  [(0, 1, 2, 3, 4, 5, 6, 7, 8, 10), (0, 2, 3, 4, 5, 6, 7, 8, 9, 10)]
+  => AP-minimality of E[maxgap] holds if #below AP = 0 (like mu_17). Then E[maxgap(E)]>=E[maxgap(AP)]>1/7.
