@@ -1,0 +1,14 @@
+====================================================================================
+d=2 COVERING SYSTEM for {1,…,10,x,y}: witnesses (q,c,mu), mu/q>=2/25, base cleared
+====================================================================================
+  candidate witnesses (base {1..10} cleared, mu/q>=2/25, q<=39): 36
+  distinct (q,c) witnesses: 36
+  moduli used: [11, 12, 23, 24, 25, 34, 35, 36, 37]
+  Q = lcm(moduli) = 2005126200  (uniform check needs all (x%Q, y%Q))
+  tested (x,y) pairs in [11,271): covered 33669, UNCOVERED 1
+
+  UNCOVERED (x,y) -- check these are the AP / d<=1 / low-M exceptions:
+    ( 11, 12) M=1/13 (0.0769) longestAP=12  <-- M<2/25!
+
+  => the d=2 family {1..10,x,y} is cleared (M>=2/25) by a covering system
+     of 36 witnesses at moduli [11, 12, 23, 24, 25, 34, 35, 36, 37]; uncovered = AP/d<=1 exceptions.

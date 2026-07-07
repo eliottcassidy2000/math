@@ -371,3 +371,4 @@ import TournamentH7.LRCSpectrumWindow
 import TournamentH7.LRCBinderInfeasible
 import TournamentH7.LRCEvenBranchWitness  -- mac-mini-2026-07-06-S29: even-branch clearance, N=12 canonical mediant family {1..10,12,33} reach >= 3/35 > 2/25 => NOT a gap member (parity, not 38=2*19 compositeness) (THM-632, HYP-4572)
 import TournamentH7.LRCLadderD1  -- mac-mini-2026-07-06-S33: the d=1 ladder bound (opus-S123's remaining piece) -- canonical d=1 family {1..11,x} has reach >= 2/25 for all x!=12, two-witness proof (t=1/12 generic; t=k/(12k+1) resonant), kernel-pure (THM-633, HYP-4632)
+import TournamentH7.LRCCoveringReach  -- mac-mini-2026-07-06-S34: covering-reach atom (rational_point_margin -> reach>=mu/q) + d=2 generic (11 nmid x,y => reach>=1/11>2/25); the uniform Lean shape of the q<=39 covering system (HYP-4587)
