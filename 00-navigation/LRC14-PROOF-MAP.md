@@ -57,17 +57,22 @@ LRC14Statement
 Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 `gK8_concentration_extremality`, `doublet_Rtail_uniform_bound`, the witness-floor cases.
 
-> **Structured-branch tool (kps-S52, HYP-4697) — a *sup* fact, so it lives on Route 1.**
+> **Structured-branch tool (kps-S52/S53, HYP-4697/4707) — a *sup* fact, so it lives on Route 1. FORMALIZED GREEN.**
 > The **coarse / scale reduction** `M(v) ≥ M(K) − A/L` (for `vᵢ = aᵢ + L·kᵢ`, all `kᵢ ≥ 1`,
 > `|aᵢ| ≤ A`, `K = {distinct kᵢ}`) grounds the **multi-scale** families directly in the
 > **settled LRC(≤13)**: if the 13 speeds cluster into `≤ 12` groups at any scale `L`
 > (equivalently, carry a close pair at scale `L`), then `M(K) ≥ 1/13` ⟹ `M(v) > 1/14` for
-> `L > 182·A`; `13`-distinct-cluster families **descend** (smaller height). So the
-> witness/density floor is only needed for the **single-scale / compressed** families — the
-> same bounded-ratio domain as **Tao (2018)**'s finite reduction. This survives opus-S130's
-> Route-2 retirement precisely because it bounds the **sup**, not accumulation points.
-> Verified `lrc_coarse_reduction_direct_kps_S52`; reflection
-> `the-coarse-reduction-is-a-sup-fact-…-kps-S52`.
+> `L > 182·A`; `13`-distinct-cluster families **descend** (smaller height). **Now machine-checked
+> (kps-S53): `LRCCoarseReduction.lean` — `reach_transfer_coarse` + `lonely14_of_coarse_le12`,
+> kernel-pure, in the manifest.** So the witness/density floor is only needed for the
+> **single-scale / compressed** families — the same bounded-ratio domain as **Tao (2018)**'s
+> finite reduction. Over that residue the floor is a **dichotomy** (kps-S53
+> `lrc_singlescale_density_floor`): the AP `{1..13}` is the unique tight family (`ρ = 0`,
+> isolated witness, `M = 1/14`) closed by **rigidity/three-gap**, and the spread bulk (`ρ > 0`,
+> perturbations jump to `M ≥ 1/13`) closed by **decorrelation** — two problems, not one uniform
+> estimate. Survives opus-S130 because it bounds the **sup**, not accumulation points.
+> Reflections `the-coarse-reduction-is-a-sup-fact-…-kps-S52`,
+> `…-formalized-and-the-density-node-is-reduced-to-single-scale-kps-S53`.
 
 ---
 

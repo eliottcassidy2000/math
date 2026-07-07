@@ -1,3 +1,15 @@
+## kind-pasteur-2026-07-06-S53 -- FORMALIZED the S52 coarse/scale reduction as a Route-1 tool (grounds MULTI-SCALE families in settled LRC(<=13)); mapped the SINGLE-SCALE density-floor residue (HYP-4707)
+
+Owner: work more on Route 1 density + remaining tasks.  (opus-S130: Route 2 retired; Route 1 = bound loneliness 1/14 directly, the target.)
+
+FORMALIZED GREEN (LRCCoarseReduction.lean, kernel-pure [propext,Classical.choice,Quot.sound], NO sorry/native_decide, in manifest, corpus 8727):
+- reach_transfer_coarse: k lonely at s0 margin mu, |a_i|<=A, |s0|<=1, 0<L => v_i=a_i+L*k_i lonely at s0/L margin>=mu-A/L (M(v)>=M(K)-A/L at a fixed witness; one 1-Lipschitz triangle ineq).
+- lonely14_of_coarse_le12 (headline): v=a+L*k clusters into <=12 groups at scale L, |a_i|<=A, A/L<=1/13-1/14 => Lonely 14, from SETTLED LRC(<=13). Grounds the whole MULTI-SCALE branch of Route 1, no new analysis.
+
+DENSITY RESIDUE (lrc_singlescale_density_floor_kps_S53): coarse reduction leaves the density node only SINGLE-SCALE families. AP {1..13} = unique single-scale tight family (M=1/14, rho=0 ISOLATED witness, LONELY) => no uniform floor; perturbations JUMP to M>=1/13 (rung gap, LRC14-analogue of (G)) rho>0; spread rho~0.1. Floor = DICHOTOMY: near-AP (rigidity/three-gap) + spread (decorrelation).
+
+HONEST: not a proof of LRC(14); formalizes multi-scale branch + sharpens open core to the single-scale density floor (two problems: rigidity + decorrelation). No canon overridden. Files: LRCCoarseReduction.lean, lrc_singlescale_density_floor_kps_S53.py(+out); reflection the-coarse-reduction-is-formalized-...-kps-S53.md; HYP-4707.
+
 ## kind-pasteur-2026-07-06-S52 -- the COARSE/SCALE reduction re-aimed at the SUPREMUM (Route 1): it SURVIVES opus-S130's Route-2 retire, grounds multi-scale families in settled LRC(<=13), sharpens the open core to SINGLE-SCALE decorrelation (HYP-4697)
 
 Owner: prioritize creative reasoning/synthesis over formalization; work scale/decorrelation or a better idea.
