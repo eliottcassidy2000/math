@@ -1,0 +1,10 @@
+=== (1) R >= 0.75 spectral-split criterion at worst cases (FFT, M-split) ===
+                S155-adv: mG=0.397 mu=0.940 true R=0.913 | K_G=21 K_E=4 | M=2000: head=0.0819 tail<=0.0005 -> R-criterion >= 0.779 [PASSES 0.75]
+        hardcore P8 x AP: mG=0.447 mu=0.940 true R=0.930 | K_G=32 K_E=4 | M=2000: head=0.0809 tail<=0.0006 -> R-criterion >= 0.806 [PASSES 0.75]
+    hardcore P8 x spread: mG=0.447 mu=1.000 true R=1.000 | K_G=32 K_E=1 | M=2000: head=0.0000 tail<=0.0000 -> R-criterion >= 1.000 [PASSES 0.75]
+     worstP x sep-cherry: mG=0.505 mu=1.000 true R=1.000 | K_G=10 K_E=1 | M=2000: head=0.0000 tail<=0.0000 -> R-criterion >= 1.000 [PASSES 0.75]
+
+=== (2) dihedral orbit-pairing: E3 with pairing vs raw one-tooth bound ===
+  raw one-tooth bound utilization: worst |E3|/(K*theta/q3) over 120 triples = 0.7551
+  => the observed cancellation factor is >= 1.3x beyond one-tooth-per-component;
+     the pairing lemma (tent evenness) accounts for a PROVABLE 2x; the rest is Koksma-type (open).

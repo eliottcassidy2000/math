@@ -1,3 +1,21 @@
+## klein-2026-07-07-S166 -- THE R-CRITERION PASSES (per-shape spectral-split certificates: >= 0.779/0.806/1.0/1.0 at the adversarial worst cases, proved inequality + explicit tail) + comb-bound cancellation honestly bounded (one-tooth near-tight; dihedral pairing = provable 2x; rest Koksma) + the ROTATION-COLORING frame recorded (HYP-4901)
+
+Prompt (owner): Dedekind/Koksma half-page + R >= 0.75 + magnitude lemma + gate; colorings/dihedral; LRC = a distance graph that may genuinely require n colors is always n-colored by a single rigid rotation (AP = the K_n-clique roots-of-unity tight case).
+
+(1) R >= 0.75 IS NOW A PER-SHAPE CERTIFICATE: |SPEC| <= HEAD(M) (finite exact sum of |c_G||g_E| products) + TAIL(M) (explicit: interval-count-controlled, K_G <= 91). Measured at the worst cases: S155-adv criterion >= 0.779 (true 0.913; head 0.082 vs budget 0.093 — 12% headroom), hardcore P8 x AP >= 0.806, spread/separated >= 1.000. Uniform version = a uniform head bound (open, thin-but-real headroom).
+
+(2) COMB-BOUND CANCELLATION: worst utilization 0.755/1.00 — one-tooth is near-tight for worst triples; the tent-evenness (dihedral) pairing provably halves the paired part; the |H| <= C·q2 sharpening is genuinely Koksma (open). The magnitude lemma stands as proved at (q1+q2)θ/q3 (S165) — the right conditioning was the finest comb.
+
+(3) THE ROTATION-COLORING FRAME (recorded, wired to everything): LRC = G(Z,D) may require n colors (K_n clique at the AP) yet is always n-colored by ONE rigid rotation; density floor = most rotations leave a spare arc; W_i = per-vertex color slack; k=8 criticality = mean color-degree 1; THM-640 = the QR-coloring quotient. External anchor: circular-chromatic (Zhu) literature.
+
+GATE FINAL SHAPE (k=8): pairs EXACT + triples by the PROVED comb bound (separated-cherry per-shape certs) + coupling by R-criterion certs + [diam<=11 PROVED, 12..26 VERIFIED, far skeleton]. Named uniform gaps: uniform head bound; the no-separated-cherry class; the Koksma half-page.
+
+FILES: 05-knowledge/results/lrc14_dedekind_R_coloring_klein_S166.out (inline script). No Lean (owner directive). No canon overridden.
+
+NEXT: (a) the uniform head bound (the last coupling gap — the head is a LOW-frequency mixed-relation sum: the relation-lattice machinery applies); (b) the Koksma half-page; (c) characterize the no-separated-cherry class; (d) write the rotation-coloring frame into a proper reflection with the Zhu-literature anchors.
+
+---
+
 ## monad-explorer-2026-07-07-S9 -- OPERATIONAL TWISTED INVOLUTIONS (HYP-5037): gradient-conjugacy lands in its TRUE form (sign dichotomy conditional on perturbation-coherence, 633/648; mixed-active = the honest boundary); cell symmetrization = free x1.7-1.9 deficit-bound discount; Coxeter I(theta) bridge filed; heartbeat reflection
 
 Prompt (owner): generate ideas around the twisted involution -- 'that concept has heart, reminds me of graph theory and the LRC'.
