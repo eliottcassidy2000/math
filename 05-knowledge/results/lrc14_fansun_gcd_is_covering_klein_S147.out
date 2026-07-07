@@ -1,0 +1,23 @@
+(A) ORDER k = Q - 12r for the low 12-spectrum (M=r/Q lowest terms => M=r/(12r+k)):
+   M=1/13 (AP {1..12}): r=1 Q=13 order k=Q-12r=1  s=r=1  in-window(k<s<2k)? False  in(1/13,2/25)? False
+   M=2/25 ({1..11,24}): r=2 Q=25 order k=Q-12r=1  s=r=2  in-window(k<s<2k)? False  in(1/13,2/25)? False
+   M=3/37 ({1..11,36}): r=3 Q=37 order k=Q-12r=1  s=r=3  in-window(k<s<2k)? False  in(1/13,2/25)? False
+   M=1/12 ({1..11,13}): r=1 Q=12 order k=Q-12r=0  s=r=1  in-window(k<s<2k)? False  in(1/13,2/25)? False
+   M=2/23 ({1..10,13,22}): r=2 Q=23 order k=Q-12r=-1  s=r=2  in-window(k<s<2k)? False  in(1/13,2/25)? False
+   => AP & 2/25 are k=1 (Kravitz rungs, endpoints); a STRICTLY-in-window value needs k>=2 (opus-S116).
+==================================================================================
+(B) DIVISIBILITY = CLEARING: 13-lifts of the AP (v_i -> i + 13*k_i). Clearing modulus vs
+    broken divisibility. A lift that MOVES the unique multiple of some q in {7..12} misses q.
+   tested 39987 non-AP primitive 13-lifts:
+   with a BROKEN small modulus (misses some q in 2..12): 33444
+      of those, clears AT a broken modulus (LRCSmallModFloor, M>=1/q): 33444  (100%)
+   preserving ALL of {2..12}-divisibility (the residual moat): 6543
+      e.g. (clear-q, family): [(17, [8, 11, 18, 19, 20, 23, 28, 29, 30, 38, 40, 48]), (15, [2, 11, 14, 18, 20, 29, 32, 43, 47, 48, 49, 51]), (19, [5, 9, 14, 15, 16, 17, 33, 34, 36, 45, 50, 51]), (25, [2, 5, 11, 17, 22, 32, 36, 38, 40, 42, 46, 47])]
+   => the small-q covering layer IS the Fan-Sun gcd case-split: a broken divisibility = a
+      missed modulus = an immediate clear. The residual is the divisibility-PRESERVING lifts.
+==================================================================================
+(C) THE RESIDUAL (divisibility-preserving lifts): order k of M, and clearing modulus.
+    A lift preserves divisibility by q if it keeps a multiple of q. To preserve ALL of
+    {7,8,9,10,11,12} (unique-multiple moduli), each lift k_i for i in {7..12} must keep i|v:
+    i + 13 k_i == 0 mod i  <=>  13 k_i == 0 mod i  <=>  i | k_i (since gcd(13,i)=1).
+    So preserving-lifts scale the unique carriers by (1 + 13/i * m)?? -- check small cases:

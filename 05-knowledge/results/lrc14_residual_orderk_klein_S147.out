@@ -1,0 +1,5 @@
+sampled 24772 divisibility-preserving non-AP 13-lifts (cover ALL of 2..12 -- the residual moat):
+  max clearing-q = 32 (all cleared at q <= 32)
+  clearing-q histogram: {14: 3505, 15: 3125, 16: 3628, 17: 7983, 18: 1524, 19: 2983, 20: 368, 21: 858, 22: 379, 23: 282, 24: 55, 25: 67, 26: 3, 27: 2, 29: 4, 31: 5, 32: 1}
+  => the divisibility-preserving residual (NOT cleared by the q<=12 gcd layer) clears at
+     bounded q in [13,32] -- the near-AP moat, cleared by the higher-modulus covering.

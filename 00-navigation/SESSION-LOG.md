@@ -1,3 +1,25 @@
+## klein-2026-07-06-S147 -- THE FAN-SUN gcd TEMPLATE = THE FLEET COVERING: "divisibility = clearing" unifies the parallel frames into one two-layer proof (HYP-4621)
+
+Prompt (owner): work the residual; creatively find PAST WORK / analogous connections that unlock the route.
+
+Followed opus-S116's lead (that (C) = the n=12 first-gap Lonely Runner Spectrum case) to the actual external template -- Fan-Sun arXiv:2306.10417 -- pulled its content, and found the connection that UNIFIES the fleet's parallel attacks.
+
+THE UNLOCK: Fan-Sun's n=4 gap-emptiness proof is a gcd/DIVISIBILITY case-split. That case-split IS kps's small-modulus covering layer (LRCSmallModFloor). Made precise:
+ - ORDER = COVERING DENOMINATOR: for n=12, M=r/Q lowest terms => Fan-Sun form M=s/(12s+k), s=r, ORDER k=Q-12r. Window (1/13,2/25) endpoints 1/13 (k=1,s=1) & 2/25 (k=1,s=2) are Kravitz rungs; STRICTLY in-window needs k>=2 (opus-S116's k<s<2k).
+ - DIVISIBILITY = CLEARING (100% verified): a near-AP 13-lift (v_i->i+13k_i, ==AP mod 13) that MOVES the unique multiple of some q in {7..12} BREAKS that divisibility => MISSES q => M>=1/q>2/25 (LRCSmallModFloor). Of 39987 non-AP 13-lifts, ALL 33444 that break a small divisibility clear AT that broken modulus (33444/33444). So Fan-Sun's gcd branch = the covering's q<=12 layer, exactly.
+
+TWO-LAYER STRUCTURE of (C): [break a divisibility => cleared at q<=12 (GREEN, LRCSmallModFloor)] (+) [preserve ALL {2..12}-divisibility => near-AP moat, ==AP mod 13, cleared at q in [13,32]] (+) [AP: covers all q<=12 AND ==self mod 13 => cleared by nothing => M=1/13, sole survivor]. VERIFIED: 24772 divisibility-preserving non-AP lifts all clear at q in [13,32] (peak 17, max 32). So the covering SET is {2..32} -- sharper than {6..39}/{11..23}; refines kps-S46 (moat range [13,32] not {11..23}), same over-optimism I flagged S144.
+
+WHY IT UNLOCKS: collapses the 3 parallel frames (Fan-Sun spectrum-order / kps covering / mac-mini pins+bands) into ONE two-layer covering; imports Fan-Sun's proof template (order-bound k<=K0 + sub-AP cap) for the moat -- a FINITE classification, not analytic rigidity. The q<=12 gcd layer is already GREEN.
+
+RESIDUAL (sharpened): (a) Fan-Sun order-bound k<=K0(12) => finitely many moat forms s/(12s+k); (b) sub-AP cap per form (opus S115) >= 2/25; (c) peel for non-compressed (S144); (d) wiring. 
+
+FILES: lrc14_fansun_gcd_is_covering_klein_S147.py(+out), lrc14_residual_orderk_klein_S147.out; INDEX HYP-4621; reflection the-fan-sun-gcd-template-IS-the-fleet-covering-divisibility-equals-clearing; this log. No Lean (synthesis+connection).
+
+NEXT: carry the Fan-Sun order-bound to n=12 (finitize the moat forms) + wire the two-layer covering ({2..12} gcd GREEN + [13,32] moat) into the (C) Lean theorem. Complements opus S128/mac-mini S34b (translate/uniform-lift branch GREEN).
+
+---
+
 ## mac-mini-2026-07-06-S34b -- THM-635 TRANSLATE-BLOCK BOUND FORMALIZED (kernel-pure): {m..m+11} reach>=m/(2m+11)>=2/25 for m>=2, only AP(m=1) tight; closes opus-S127's branch-3 uniform-k (non-AP translates + uniform L-lifts loose) via the S34 covering-reach atom
 
 Prompt (owner): work on the residual, make progress on the crux creatively.
