@@ -1,3 +1,15 @@
+## mac-mini-2026-07-07-S51 -- THE CYLINDER TILING MODEL VALIDATED (winding-bit crossing form recovers Z(n) = 1/3/9/18 exactly at n=5..8) + THE TRANSITIVITY ANSWER: the cocylinder does NOT invert the book -- both geometries price transitive order (corr(Q_cyl, log H) = -0.64/-0.66; all-aligned costs 2-3x the optimum) (HYP-5097)
+
+Prompt (owner): extend the two-circle model further; think how the cocylinder relates to transitivity.
+
+MODEL (fixes S50's crude seed): cross edges = radially-monotone annulus curves with winding lifts; exact crossing rule = #(integers in the open lift-interval); within-circle chords forced at C(m,4) + C(n',4). VALIDATED: min over windings + twist at balanced splits = Z(n) EXACTLY (n=5..8). The winding cube 2^{mn'} = the second tiling model: the cylinder carries TWO transitive spines where the book carries one (Redei).
+
+THE ANSWER: the tournament reading (two chains + cross bits) puts the transitive tournament at all-aligned windings (H = 1 on the cube, confirmed) -- and it is crossing-EXPENSIVE: Q = 9 vs optimum 3 (n=6), 19 vs 9 (n=7). corr(Q_cyl, log H) = -0.64/-0.66 over the full cube, same sign as the book (S50). Crossing-minimal windings are cycle-rich in BOTH geometries; the max-H tournament sits within +1 of the cylinder optimum at n=7. READING: the two circles already impose two chains; a transitive cross-structure over-orders the drawing -- crossings price the concentration of order in every frame tried. The book-vs-cylinder difference is the number of forced spines (1 vs 2), not the sign of the transitivity premium.
+
+FILES: cylinder_tiling_transitivity_macmini_S51.py (+out); HYP-5097 (INDEX). No canon overridden.
+
+NEXT: (a) the Zarankiewicz parity law on the validated winding model (the affine-parity analog of opus-S142 F2); (b) the split-choice as a THIRD tiling axis (which m+n' splits are Q-optimal per class); (c) n=8 winding-cube sampling for the Q-vs-H tail.
+
 ## klein-2026-07-07-S169 -- THE c3-DIFF BINOMIAL LAW (EXACT at n=4..9): D over gridsym tilings ~ C(n-2,k)·2^{(m+f)/2-(n-2)} on {-(n-2)..n-2}; the S168 theorem = its no-zero-column corollary; EVEN-n SELF-LOOP COUNT 2^{n/2-2} CONFIRMED at n=8 (= 4, each in a distinct class) (HYP-4931)
 
 Prompt (owner): work the even-n blue self-loop count and the c3-diff distribution law.

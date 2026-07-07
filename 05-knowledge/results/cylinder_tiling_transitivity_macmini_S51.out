@@ -1,0 +1,13 @@
+=== Q1: validation -- balanced-split cylinder minimum vs Z(n) ===
+  n=5 (split 2+3): forced = 0, best Q_cyl = 1, Z(n) = 1  MATCH
+  n=6 (split 3+3): forced = 0, best Q_cyl = 3, Z(n) = 3  MATCH
+  n=7 (split 3+4): forced = 1, best Q_cyl = 9, Z(n) = 9  MATCH
+  n=8 (split 4+4): forced = 2, best Q_cyl = 18, Z(n) = 18  MATCH
+
+=== Q2: transitivity -- corr(Q_cyl, log H) over the winding cube ===
+  n=6 (cube 2^9): corr(Q_cyl, log H) = -0.6407 [book model S50 gave -0.76]
+    all-aligned (transitive-ish) Q = 9; global min Q = 3 at H = [41]; max-H tournaments' Q = [5, 6, 13, 14, 15]
+    H at all-aligned = 1; H range on cube = [1, 45]
+  n=7 (cube 2^12): corr(Q_cyl, log H) = -0.6567 [book model S50 gave -0.59]
+    all-aligned (transitive-ish) Q = 19; global min Q = 9 at H = [105, 123, 151]; max-H tournaments' Q = [10]
+    H at all-aligned = 1; H range on cube = [1, 175]
