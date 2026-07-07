@@ -1,3 +1,17 @@
+## klein-2026-07-07-S169 -- THE c3-DIFF BINOMIAL LAW (EXACT at n=4..9): D over gridsym tilings ~ C(n-2,k)·2^{(m+f)/2-(n-2)} on {-(n-2)..n-2}; the S168 theorem = its no-zero-column corollary; EVEN-n SELF-LOOP COUNT 2^{n/2-2} CONFIRMED at n=8 (= 4, each in a distinct class) (HYP-4931)
+
+Prompt (owner): work the even-n blue self-loop count and the c3-diff distribution law.
+
+(1) THE BINOMIAL LAW (exact, six n-values, zero deviations): the c3-diff D = c3(flip t) - c3(t) over the 2^{(m+f)/2} gridsym tilings is distributed EXACTLY as C(n-2, k)·2^{(m+f)/2-(n-2)} on support {-(n-2), ..., n-2} step 2 (n=9: 65536 tilings checked). READING: D = a sum of exactly n-2 independent ±1 orbit-contributions + inert bits; the S168 odd-n no-self-loop theorem is the law's NO-ZERO-COLUMN corollary; the symmetry is free (flip negates D, fixed-point-free — pairing again); at even n the D=0 pool = central column (n=8: C(6,3)·2^6 = 1280 ✓ census-exact). PROOF TARGET (half page): identify the n-2 D-carrying sigma-orbits + independence.
+
+(2) SELF-LOOP COUNT: 1, 2, 4 at n = 4, 6, 8 — 2^{n/2-2} CONFIRMED at n=8 (1280 D=0 candidates iso-checked by refinement canon); each self-loop line sits in a DISTINCT class (4 classes at n=8). Next: identify the classes (rotational/doubly-regular suspects) and prove the count (twisted-involution Burnside).
+
+FILES: 05-knowledge/results/lrc_c3diff_law_selfloops_klein_S169.out (inline script). No Lean (owner directive). No canon overridden.
+
+NEXT: (a) prove the binomial law (identify the D-carrying orbits — the distribution's exactness at six n's makes this a safe half-page target); (b) prove 2^{n/2-2} (Burnside on the twisted flip); (c) identify the self-loop classes; (d) canon fold-in to THM-643/644 with S168.
+
+---
+
 ## klein-2026-07-07-S168 -- THE c3-PARITY LAW PROVED (pairing-with-sign-flip, no census): for gridsym t, c3(flip t) − c3(t) ≡ 1 mod 2 at ODD n ⟹ BLUE SELF-LOOPS IMPOSSIBLE AT ODD n (C1's odd half); + Q = A(T) vs H census (Q odd, Q <= H); bipartite Redei FAILS (HYP-4921)
 
 Prompt (owner): Q-vs-H correlation; prove the even-n mirror-pair structure from the parity law; bipartite two-circle analog; pairing-with-sign-flip converts symmetry directly into existence.

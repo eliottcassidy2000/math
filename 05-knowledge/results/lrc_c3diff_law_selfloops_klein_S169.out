@@ -1,0 +1,18 @@
+=== (1) c3-diff distribution over gridsym tilings ===
+  n=4: gridsym 4 = 2^2; dist {-2: 1, 0: 2, 2: 1}
+        symmetric: True;  BINOMIAL LAW C(n-2,k)*2^{2-(n-2)}: MATCH
+  n=5: gridsym 16 = 2^4; dist {-3: 2, -1: 6, 1: 6, 3: 2}
+        symmetric: True;  BINOMIAL LAW C(n-2,k)*2^{4-(n-2)}: MATCH
+  n=6: gridsym 64 = 2^6; dist {-4: 4, -2: 16, 0: 24, 2: 16, 4: 4}
+        symmetric: True;  BINOMIAL LAW C(n-2,k)*2^{6-(n-2)}: MATCH
+  n=7: gridsym 512 = 2^9; dist {-5: 16, -3: 80, -1: 160, 1: 160, 3: 80, 5: 16}
+        symmetric: True;  BINOMIAL LAW C(n-2,k)*2^{9-(n-2)}: MATCH
+  n=8: gridsym 4096 = 2^12; dist {-6: 64, -4: 384, -2: 960, 0: 1280, 2: 960, 4: 384, 6: 64}
+        symmetric: True;  BINOMIAL LAW C(n-2,k)*2^{12-(n-2)}: MATCH
+  n=9: gridsym 65536 = 2^16; dist {-7: 512, -5: 3584, -3: 10752, -1: 17920, 1: 17920, 3: 10752, 5: 3584, 7: 512}
+        symmetric: True;  BINOMIAL LAW C(n-2,k)*2^{16-(n-2)}: MATCH
+
+=== (2) blue self-loop counts (D=0 candidates, iso-checked), n=4,6,8 ===
+  n=4: D=0 gridsym tilings 2; BLUE SELF-LOOPS = 1   [2^(n/2-2) predicts 1]   distinct self-loop classes: 1
+  n=6: D=0 gridsym tilings 24; BLUE SELF-LOOPS = 2   [2^(n/2-2) predicts 2]   distinct self-loop classes: 2
+  n=8: D=0 gridsym tilings 1280; BLUE SELF-LOOPS = 4   [2^(n/2-2) predicts 4]   distinct self-loop classes: 4
