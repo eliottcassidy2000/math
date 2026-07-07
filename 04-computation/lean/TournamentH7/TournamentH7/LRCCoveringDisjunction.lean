@@ -90,16 +90,23 @@ def HasCoveringWitness (v : Fin 12 → ℤ) : Prop :=
 def CruxStatement : Prop :=
   ∀ v : Fin 12 → ℤ, sSup (margin v '' Set.Icc (0 : ℝ) 1) < 2 / 25 → DilatedAP v
 
-/-- **The covering-completeness obligation.**  Every non-dilated-AP 12-family admits a covering
-witness.  This is the finite mod-`q` residue check (klein-S144: `q ≤ 31` on compressed families, 0
-gaps to height 650 000; `q ≤ 39` in general), the sole remaining content of `(C)`. -/
+/-- **The covering-completeness obligation — ⚠ NOT a FINITE check; `(G)`-equivalent (MISTAKE-116,
+opus-S130).**  Every non-dilated-AP 12-family admits a covering witness (`∃ q`, no bound).  This was
+believed to be a *finite* mod-`q` residue check (`q ≤ 39`), but mac-mini-S36 (verified opus-S130)
+showed the clearing modulus is UNBOUNDED: compressed varying-k families `≡ AP mod lcm(2..Q₀)` escape
+every `q ≤ Q₀` and clear only at `nextprime(Q₀)`.  So `q` is genuinely unbounded, and this statement
+is EQUIVALENT to the analytic `(G)` ("every non-AP 12-family is loose"), NOT a finite reduction of it
+(the klein `q ≤ 31` figure was a height-sampling artifact `≤ 650k`; the escape families sit at height
+`~10¹⁴`).  Still an honest `Prop` obligation — but discharging it needs a **scale-uniform**
+decorrelation/Fourier argument, not a finite pile of certs. -/
 def CoveringComplete : Prop :=
   ∀ v : Fin 12 → ℤ, ¬ DilatedAP v → HasCoveringWitness v
 
-/-- **`(C)` ⟸ covering completeness.**  If every non-AP family admits a covering witness, then the
-crux holds: `M(v) < 2/25 ⟹ v` is a dilated AP.  The AP is exempt precisely because it is the unique
-`M`-minimizer (`1/13`), with no clearing witness at any `q`.  So `(C)` reduces entirely to the finite
-arithmetic obligation `CoveringComplete`. -/
+/-- **`(C)` ⟸ covering completeness.**  If every non-AP family admits a covering witness (at SOME
+modulus `q`, unbounded — see the `CoveringComplete` warning), then the crux holds:
+`M(v) < 2/25 ⟹ v` is a dilated AP.  The AP is exempt precisely because it is the unique `M`-minimizer
+(`1/13`), with no clearing witness at any `q`.  This is a VALID implication, but `CoveringComplete` is
+`(G)`-equivalent (analytic), so this does NOT reduce `(C)` to something finite. -/
 theorem crux_of_covering_complete (h : CoveringComplete) : CruxStatement := by
   intro v hM
   by_contra hnAP

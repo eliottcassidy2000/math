@@ -9,6 +9,84 @@ Format per entry:
 - Impact on existing results
 - Source (who found it, when)
 
+---## MISTAKE-117 (2026-07-06, opus-S130; audit verified against arXiv:2304.01462 abstract) -- THE "J-K REDUCTION" IS NOT A VALID PROOF ROUTE: Giri-Kravitz study ACCUMULATION POINTS, not the SUPREMUM that LRC bounds; Route 2 is DISCONNECTED from LRC(14) at the top.
+
+**What was assumed (WRONG, proof-map S121 + all Route-2 sessions).** That LRC(14) reduces to
+`(A)` ["no rank-2 subtorus has `M(U) in (1/13, 2/25)`"] via a **citable published reduction** --
+"Jain-Kravitz / Giri-Kravitz 2024, the accumulation points of the LRC spectrum are governed by
+rank-2 subtori" -- treated as a CITATION closing the top of Route 2 (proof-map S121: "the J-K
+reduction is a citation, not an unbuilt bridge... the gap thread reaches the top level through a
+citable published reduction").
+
+**Why it is wrong (opus-S130 audit, verified against the primary source).** The papers are REAL
+(Giri-Kravitz "The structure of Lonely Runner spectra", arXiv:2304.01462, 2023; Jain-Kravitz
+"Relative Lonely Runner spectra", arXiv:2411.12684, 2024) but they do NOT support the reduction:
+- **Wrong object.** The LRC is the containment `S(n) subseteq [0, 1/2 - 1/(n+1)]` -- a statement
+  about the SUPREMUM / top of the spectrum. Giri-Kravitz study the ACCUMULATION POINTS (main
+  theorem: `acc(S(n)) = S(n-1)`; the inclusion `acc(S(n)) subseteq S_2(n)` is what "rank-2 governs
+  the structure" means). The extremal LRC value is generically an ISOLATED maximum, NOT an
+  accumulation point, so controlling rank-2 subtori (accumulation-point data) does NOT bound the
+  sup. The abstract says VERBATIM: *"Rather than attack this conjecture, we study the structure of
+  the sets S(n)."*
+- **Not deductive.** Both papers explicitly decline to prove LRC; neither contains a lemma
+  "control rank-2 => a new case of LRC." The numbers `1/13, 2/25` appear NOWHERE in either paper.
+- **Not the real route.** The proved cases n=8..13 use Tao's finite reduction (2018) +
+  Malikiosis-Santos-Schymura (2025) + Rosenfeld/Trakulthongchai sieving/polynomial method;
+  Sungkawichai-Trakulthongchai only name-drop Giri-Kravitz in the bibliography.
+
+**The correct framing.** J-K is DESCRIPTIVE spectrum structure theory about accumulation points,
+NOT a reduction of LRC(n) to rank-2 control. `(A) => LRC(14)` via J-K is UNWARRANTED. Route 2 is
+**disconnected from LRC(14) at the top**: even a full proof of `(C)`/`(A)` would NOT prove LRC(14)
+through this citation. Downgrade J-K from "citation" to "invalid as a proof step / at most a loose
+structural analogy." The correctly-aimed project route is Route 1 (bound `Mreach >= 1/14`
+DIRECTLY -- the sup), which does not have this wrong-object flaw; the recognized external route is
+Tao/MSS + sieving.
+
+**Impact.** Route 2's value AS A PROOF ROUTE collapses (top link invalid). LEAN UNAFFECTED in
+soundness: `Route2Assembly.lrc14_via_route2` is a valid IMPLICATION, but its `JKReduction`
+hypothesis is likely FALSE, not "a citation to pin"; docstring corrected (opus-S130). The rank-2
+rigidity + torus-projection Lean (opus S99/S101/S102/S129) is correct CONDITIONAL math and a true
+statement about rank-2 tori -- it just does not connect to LRC(14). `(C)` remains a true,
+interesting spectrum-gap statement (see MISTAKE-116). Source: opus-S130 audit; owner should
+independently verify against the two arXiv papers before any journal claim.
+
+---## MISTAKE-116 (2026-07-06, mac-mini-S36 HYP-4667, verified by opus-S130) -- THE FINITE COVERING SYSTEM IS NOT COMPLETE: compressed varying-k families escape any {2..Q0}; (C) is NOT a finite residue check.
+
+**What was assumed (WRONG, opus-S126/S127, kps-S43..S49, klein-S144/S147).** That `(C)` reduces to
+a **FINITE covering system** `{2..Q0}` (`Q0 ~ 25..39`) plus the AP exception: every non-AP 12-family
+clears (`M >= 2/25`) at some modulus `q <= Q0`, "no height bound," a finite Lean-ready residue
+check.
+
+**Why it is wrong (mac-mini-S36, independently verified opus-S130 -- lrc_covering_completeness_audit).**
+Fix `L = lcm(2..Q0)`. The family `V = {i + L*k_i : i=1..12}` with ALL `k_i >= 1` and VARYING (e.g.
+`k=(1,2,1,2,...)`) is: (i) `== AP mod L`, so it has the AP's residues at every `q <= Q0` and (since
+the AP clears at NO `q`) FAILS every covering modulus `q <= Q0`; (ii) COMPRESSED (`max/min -> 2`,
+ratio `<= 3`, so it does NOT peel -- kps-S49's `max > 13*min` fails); (iii) NON-translate (`k`
+varies), NON-AP; (iv) clears only at `q = nextprime(Q0) > Q0`. VERIFIED for `Q0 = 12,25,32,37`
+(escapes all `q <= Q0`, clears at 23/29/37/41, `M >= ceil(2q/25)/q > 2/25` LOOSE). So **NO finite
+`Q0` is complete** -- the clearing modulus is UNBOUNDED (grows `~lcm(2..Q0)`; these families sit at
+height `~10^14`). kps-S47 `Q0=25` / klein-S147 `{2..32}` were **height-sampling artifacts**
+(tested `<= 650k`). The precise false step (kps-S50): "compressed => bounded lift `k`" -- compression
+bounds the lift RANGE (`max k_i - min k_i`), NOT the VALUES; as a 13-lift `v_i = i + 13 K_i` the
+family has `K_i = (L/13) k_i ~ 10^13` (huge) yet is compressed. opus-S127's dichotomy
+(uniform-k translate + mixed-k scale-gap) MISSED this all-positive varying-k third case.
+
+**The correct framing.** `(C)` does NOT reduce to a finite covering. "Every non-AP family clears at
+SOME `q`" (unbounded) is EQUIVALENT to the analytic statement `(G)` = "every non-AP 12-family is
+loose (`M >= 2/25`)", NOT a finite reduction of it (clearing at any `q` gives `M >= 2/25`; the
+content is showing it clears SOMEWHERE). The escape families approach `2/25` from ABOVE, so `(G)` is
+TIGHT against them and needs a SCALE-UNIFORM (decorrelation / Fourier) argument -- the irreducible
+analytic core, consistent with LRC being hard. `(C)` itself is still TRUE (opus-S130
+lrc_gap_member_search: `M(AP)=1/13` exact, 0 gap members in 3550 near-AP families, only AP
+permutations attain 1/13 -- the moat is real).
+
+**Impact.** LEAN UNAFFECTED in soundness: `CoveringDisjunction.crux_of_covering_complete` is a valid
+implication and `CoveringComplete` is an honest `Prop` obligation -- but its "finite residue check"
+docstring was WRONG (it is `(G)`-equivalent, analytic); corrected opus-S130. `loose_of_covering_set`,
+the translate bound (S128 / THM-635), and the per-`q` reach atom all stand as valid certs. What
+collapses is the CLAIM that `(C)` was "nearly closed / a finite pile of certs." Source: mac-mini-S36
+(HYP-4667); verified opus-S130.
+
 ---## MISTAKE-113 (2026-07-06, kind-pasteur-S20d, self-caught S20f; aligns with mac-mini-S5's own self-correction) -- "DISTINCT-FREQUENCY COMBS AT 2/25 CANNOT COVER, DEAD THROUGH l=14" IS AN OVERCLAIM: random frequency search misses the CONSECUTIVE tiling; consecutive {1..l} TILES at l >= 10.
 
 **What was claimed (WRONG, S20d prose/INDEX/letter for HYP-4247).** From the S20b/c

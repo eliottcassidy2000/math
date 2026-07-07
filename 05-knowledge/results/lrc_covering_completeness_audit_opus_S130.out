@@ -1,0 +1,36 @@
+=== INDEPENDENT AUDIT of mac-mini-S36 escape families (opus-S130) ===
+
+AP=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]: clears at any q<=200?  (None, None)  (expect None,None = tight locus)
+
+Q0=12: L=lcm(2..12)=27720  nextprime=13
+  k(varying)=[1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2]
+  V (mod small, all ~L): min=27721 max=55452 ratio=2.000  compressed(<=13)? True
+  V == AP mod L? True   (=> same residues as AP at every q|L, i.e. every q<=12)
+  escapes ALL q in [6,12]? True
+  first clearing q (search up to 39): q=23 (rotation c=6)   == nextprime? False
+  covering M lower bound = ceil(2*23/25)/23 = 0.08696   > 2/25=0.08000? True  => LOOSE (not a gap member)
+
+Q0=25: L=lcm(2..25)=26771144400  nextprime=29
+  k(varying)=[1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2]
+  V (mod small, all ~L): min=26771144401 max=53542288812 ratio=2.000  compressed(<=13)? True
+  V == AP mod L? True   (=> same residues as AP at every q|L, i.e. every q<=25)
+  escapes ALL q in [6,25]? True
+  first clearing q (search up to 87): q=29 (rotation c=14)   == nextprime? True
+  covering M lower bound = ceil(2*29/25)/29 = 0.10345   > 2/25=0.08000? True  => LOOSE (not a gap member)
+
+Q0=32: L=lcm(2..32)=144403552893600  nextprime=37
+  k(varying)=[1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2]
+  V (mod small, all ~L): min=144403552893601 max=288807105787212 ratio=2.000  compressed(<=13)? True
+  V == AP mod L? True   (=> same residues as AP at every q|L, i.e. every q<=32)
+  escapes ALL q in [6,32]? True
+  first clearing q (search up to 111): q=37 (rotation c=1)   == nextprime? True
+  covering M lower bound = ceil(2*37/25)/37 = 0.08108   > 2/25=0.08000? True  => LOOSE (not a gap member)
+
+Q0=37: L=lcm(2..37)=5342931457063200  nextprime=41
+  k(varying)=[1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2]
+  V (mod small, all ~L): min=5342931457063201 max=10685862914126412 ratio=2.000  compressed(<=13)? True
+  V == AP mod L? True   (=> same residues as AP at every q|L, i.e. every q<=37)
+  escapes ALL q in [6,37]? True
+  first clearing q (search up to 123): q=41 (rotation c=10)   == nextprime? True
+  covering M lower bound = ceil(2*41/25)/41 = 0.09756   > 2/25=0.08000? True  => LOOSE (not a gap member)
+

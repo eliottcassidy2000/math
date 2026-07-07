@@ -166,10 +166,15 @@ theorem AStatement_of_CBridge (h : CBridge) : AStatement := by
   obtain ⟨S, hS, cls, W, lamf, hbridge⟩ := h u v hrank
   exact torus_loose_of_rank2 u v hrank cls W lamf hbridge
 
-/-- **The J-K reduction obligation.**  The Jain–Kravitz / Giri–Kravitz 2024 rank-2 accumulation
-reduction, at the structural level: if no rank-2 subtorus lands in the gap (`AStatement`), then
-LRC(14) holds.  A **citation**, carried as a `Prop` (the dimension bookkeeping is pinned against the
-paper), never asserted here. -/
+/-- **The J-K reduction obligation — ⚠ LIKELY FALSE, NOT a valid citation (MISTAKE-117, opus-S130).**
+`AStatement → LRC14Target`.  This was believed to be the cited Jain–Kravitz / Giri–Kravitz 2024
+"rank-2 governs the spectrum" reduction, but the S130 audit (verified against arXiv:2304.01462)
+found that Giri–Kravitz study the **accumulation points** of the LR spectrum (`acc(S(n)) = S(n-1)`),
+NOT the **supremum** that the LRC bounds — the abstract says verbatim *"Rather than attack this
+conjecture, we study the structure of the sets S(n)."*  Controlling rank-2 subtori (accumulation-point
+data) does NOT bound the sup, so this implication is UNWARRANTED and probably FALSE.  It is retained
+only as the formal statement of the (broken) top link; **do not treat it as dischargeable**.  The
+theorem below is a valid implication but rests on this likely-false hypothesis. -/
 def JKReduction : Prop := AStatement → LRC14Target
 
 /-- **Route 2, top to bottom (conditional).**  The J-K citation applied to `(A)`, with `(A)` supplied

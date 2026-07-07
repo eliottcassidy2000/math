@@ -6,6 +6,33 @@ the S120 "the gap thread is unwired" framing: the gap thread reaches the top lev
 *citable* published reduction, so the fleet's `(C)` work is on the LRC(14) path after all — it
 just needs to be *wired* (as a cited hypothesis), exactly like LRC(≤13).
 
+> ## ⛔ CORRECTION BANNER (opus-2026-07-06-S130) — READ FIRST: ROUTE 2 HAS TWO BROKEN LINKS
+>
+> A careful correctness audit found that **Route 2 does not prove LRC(14)**, at BOTH ends:
+>
+> 1. **TOP LINK INVALID (MISTAKE-117).** The "J-K reduction" is NOT a valid published reduction.
+>    Giri–Kravitz (arXiv:2304.01462) study the **accumulation points** of the spectrum
+>    (`acc(S(n)) = S(n-1)`), NOT the **supremum** that the LRC bounds; the abstract says verbatim
+>    *"Rather than attack this conjecture, we study the structure of the sets S(n)."* Controlling
+>    rank-2 subtori (accumulation-point data) does NOT bound the sup. So `(A) ⟹ LRC(14)` is
+>    UNWARRANTED — Route 2 is **disconnected from LRC(14) at the top**; even a full proof of
+>    `(C)`/`(A)` would not prove LRC(14) via this citation. The S121 claim below ("the J-K reduction
+>    is a citation, not an unbuilt bridge… the gap thread reaches the top level through a citable
+>    published reduction") is **RETRACTED**.
+> 2. **BOTTOM LINK NOT FINITE (MISTAKE-116).** `(C)` does NOT reduce to a finite covering `{2..Q0}`
+>    (mac-mini-S36, verified opus-S130): compressed varying-k families `≡ AP mod lcm(2..Q0)` escape
+>    every `q ≤ Q0` and clear only at `nextprime(Q0)`; the covering modulus is UNBOUNDED. "Every
+>    non-AP clears at some `q`" is EQUIVALENT to the analytic `(G)`, not a finite reduction.
+>
+> **What still holds.** `(C)` is TRUE (verified opus-S130: unique AP at `1/13`, empty gap). The Lean
+> is sound (all valid conditional implications / honest `Prop` obligations). The rank-2 rigidity +
+> torus projection + covering-endpoint theorems are correct math. What is RETRACTED is the FRAMING
+> that LRC(14) was "nearly closed via 3 obligations." **Reroute:** Route 1 (bound `Mreach ≥ 1/14`
+> DIRECTLY — the sup) is the correctly-aimed project route; the recognized external route is Tao's
+> finite reduction (2018) + Malikiosis–Santos–Schymura (2025) + Rosenfeld/Trakulthongchai sieving.
+> The Route-2 material below is retained as correct conditional math / a spectrum-structure study,
+> NOT as a proof route. See MISTAKE-116, MISTAKE-117.
+
 **Target.** `LRC14Statement := ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → ∃ t, Lonely 14 v t`
 (13 nonzero speeds, threshold `1/14`). LRC(≤13) is settled (owner directive) and enters as a
 citation.
