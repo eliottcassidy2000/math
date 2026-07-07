@@ -1,3 +1,19 @@
+## opus-2026-07-07-S139 -- TWO PARITY THEOREMS GOVERN THE BLUE/BLACK FIBERS (THM-644: gridsym = rho-anti-automorphism PROVED; fiber law g(C)|Aut| = H_anti verified 72/72; ANTI-REDEI conjecture opened, verified n<=7; N(C) odd = Redei + odd-Aut PROVED) + the four 2-anchor handoffs (near-limit dip exact @ (3,4); CERTIFIED limit table; double-cover chain rigorous and SUFFICES for the k=13 leg on the binding class; observer-rank prefilter) (HYP-4952)
+
+Prompt (owner): (A) the four 2-anchor handoffs; (B) blue/black line structure of the merged metagraph -- formulas per n, node types, and the full 'which tilings map to which class' picture; creative niche insights coalescing into a grand restricting picture.
+
+FLEET: mac-mini-S46 (THM-643 line-parity, PROVED same hours) + klein-S161 took the LINE side; my differentiated lane = the FIBER allocation. Convergence on Redei-mod-2 cross-cited.
+
+METAGRAPH FIBER SIDE (THM-644): (a) PROVED 2 lines: gridsym <=> rho(i)=n+1-i anti-automorphism (the explorer predicate is a first-class tournament symmetry; 'non-transpose-self => pure black' now a theorem); (b) FIBER LAW g(C)*|Aut| = H_anti (anti-symmetric Hamiltonian paths) verified on ALL 72 classes n=4..6 -- LEM-003 restricted to the rho-equivariant locus: the allocation is orbit-stabilizer TWICE (N = H/|Aut| all tilings; g = H_anti/|Aut| the blue layer); (c) ANTI-REDEI CONJECTURE: H_anti odd on every T with an anti-automorphism (verified n<=6 all classes + n=7 all-odd g-spectra) -- the sigma-equivariant Redei refinement THM-587 predicted; implies every self-converse class has an anti-symmetric Ham path (existence from parity); (d) PARITY LAW: N(C) ALWAYS ODD (H odd by REDEI + |Aut| odd -- one line!) and g odd-or-zero => the owner's 'blues odd, blacks even' exact; (e) line closed-forms verified, node types 4/84/368 @ n=7, blue class-self lines vanish at odd n, flip-partner map non-constant on most classes (the remaining descriptive layer).
+
+LRC SIDE: (1) near-limit sweep EXACT: the dip below the T^2 limit is resonant -- k=8 min PA_2 = 0.761046 at (a,d)=(3,4), k=9 0.6864 @ (5,8), k=10 0.5697 @ (1,2); margins >= +0.14 = the rigidity lemma's honest constants; (2) CERTIFIED 2-anchor limit table (Lipschitz bars): margins >= +0.1825..+0.3092; (3) DOUBLE-COVER CHAIN rigorous (half-preimage argument; 0/20000): PA_2 >= P(min>1/7) >= P(gap@0>2/7); exact 2/7-masses 2321/10290..8087/64680; k=13 CLEARS its bar => the k=13 leg reduces to a SINGLE-anchor 2/7 tail (simpler object); (4) observer-rank ~79%/70% prefilter (honest). ALSO: S137's a=2 corner completed exact -- min 0.5477 = 9.7x m_P at (1^11,66); kps-S62 corner settled.
+
+Files: THM-644; 3 scripts + outs (+ corner final); reflection two-parity-theorems-govern-the-blue-black-fibers-...; HYP-4952. Pulls: 4.
+
+NEXT: (a) PROVE Anti-Redei (rho-twisted parity involution -- the repo's home move; completes the fiber side); (b) the flip-partner multigraph distribution (last descriptive layer); (c) the k=13 single-anchor 2/7 tail uniform bound (the chain's remaining step); (d) k<=12 two-anchor rigidity at the resonant constants.
+
+---
+
 ## mac-mini-2026-07-07-S46 -- THM-643 PROVED: the blue/black LINE PARITY STRUCTURE (strict definitions) -- the tiling fibration is determined MOD 2 by Redei + two commuting involutions; pure-black = non-SC at ALL n; new invariant H_sym (self-converse Ham-path count) with mass formula and a conjectured 3-power cap (HYP-4977)
 
 Prompt (owner): explore the even/odd duality in the merged metagraph's blue/black lines (strict explorer defs); which node types they connect (pure-blue/pure-black/mixed); allocation vs n; formulas + subtle combination patterns => know the structure completely; creative niche insights coalescing into a grand restricting picture.
