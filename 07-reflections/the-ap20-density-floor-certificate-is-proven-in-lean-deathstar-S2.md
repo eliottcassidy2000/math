@@ -47,6 +47,13 @@ computation; boxeph-S1's `LRCFareyRoofBridge` is reducing it to a superlevel Far
 3. **`hlarge_floor_of_diam_le_19`** — the export: any family whose translate lies in `{0,…,19}`
    has `μ_{1/7}(E) ≥ m_P`, **with no certificate hypothesis**.
 
+4. **`muGood_diam_floor` / `hlarge_floor_of_diam_le` (GENERAL, `2 ≤ D ≤ 30`)** — generalized the
+   two-interval method to arbitrary diameter: `μ_{1/7}(AP_{D+1}) ≥ 12/(7D) ≥ m_P` for `D ≤ 30`
+   (`12/(7·30) = 2/35 = 0.0571 > m_P`). Generic multiplicative empty-arc lemmas
+   `emptyArc_near0_gen`/`near1_gen` (`D·x < 6/7`, no division) + a symbolic-`D` measure assembly.
+   So **every family of diameter ≤ 30 has an unconditional density floor `≥ m_P`** — covering the
+   census (`D ≤ 19`) *and* the peel headroom, with no Farey-cell computation anywhere.
+
 **Axiom audit:** both `ap20_certificate` and `hlarge_floor_of_diam_le_19` depend on exactly
 `[propext, Classical.choice, Quot.sound]` — no `sorryAx`, no `native_decide`. Wired into the root
 `TournamentH7.lean` import; the full project builds green (8476 jobs).

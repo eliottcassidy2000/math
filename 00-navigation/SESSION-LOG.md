@@ -66,6 +66,22 @@ FILES: 04-computation/lrc14_pairwise_moment_lp_klein_S159.py (+out); reflection;
 NEXT: (a) the 5-triple uppers for separated-scale cherries -- THE gate; (b) extract LP dual certificates at the minima (closed-form weighted-cherry theorem?); (c) exact-rational conditional pair/triple masses on the hard cores (all intervals rational -- mechanical); (d) R >= 0.75; (e) exact confirms for the k=9 0.0026 and conditional minima.
 
 ---
+## death-star-2026-07-07-S2 -- FORMALIZATION: the bounded-diameter density floor is now UNCONDITIONAL in Lean (kernel-pure). Proved the AP20 certificate + general muGood_diam_floor (D<=30) via 2 explicit good intervals -- NO Farey computation, NO AP76Certificate needed for the census/bounded regime
+
+Prompt (owner, remote via box): formalize the LRC14 proof; long session; pull from git repeatedly during builds; integrate incoming work; get the formalization into its best possible state; healthy diet from other agents.
+
+Worked the density-floor leg of mac-mini's tail-diameter route (LRCTailDiameter). FOUND: muGood_ge_AP76 always drops to the 76-point AP (razor-thin 1.02x margin), even though the S15 CENSUS families (|v_i|<=20) have DIAMETER <= 19, so they only need mu_{1/7}(AP20) >= m_P -- a 4.5x margin. NEW FILE TournamentH7/LRCAP20Certificate.lean (kernel-pure, no sorry/native_decide, in root import, full project green 8476 jobs):
+ - muGood_ge_APD: bound by AP_{D+1} DIRECTLY (not always AP76) -- the general diameter lemma.
+ - ap20_certificate: UNCONDITIONAL mu_{1/7}(AP20) >= m_P=14249/252252, via 2 explicit good intervals near x=0 (arc a=19x/2+3/7) and x=1 (mirror), disjoint, total 12/133=0.0902>m_P.
+ - hlarge_floor_of_diam_le_19: diameter<=19 (census) density floor UNCONDITIONAL.
+ - GENERAL (D<=30): emptyArc_near0_gen/near1_gen (multiplicative D*x<6/7, no division) + muGood_diam_floor (mu_{1/7}(AP_{D+1}) >= 12/(7D) >= m_P for D<=30) + hlarge_floor_of_diam_le. So EVERY family of diameter <= 30 has an unconditional density floor >= m_P -- census + peel headroom, NO Farey-cell computation.
+AXIOM AUDIT: all theorems depend on exactly [propext, Classical.choice, Quot.sound].
+
+FITS: complements boxeph-S1's LRCFareyRoofBridge (which reduces the general AP76Certificate to a Farey-sum -- needed for the WIDE post-peel regime up to D=75). Mine = the census/bounded regime (D<=30), sharp margin, elementary. Method note for the fleet: DON'T drop to AP76 when the family is bounded -- bound by the tightest AP_{D+1} (muGood_ge_APD), where 2 intervals suffice. The witnessG2=muGood identification (the LRCEventMeasureBridge hwitness hypothesis) can now consume an UNCONDITIONAL diameter-<=30 floor instead of the open razor-thin AP76Certificate.
+
+HONEST: does NOT prove LRC(14). Discharges the census/bounded-diameter density-floor certificate (one leaf) in the muGood formalism. Files: TournamentH7/LRCAP20Certificate.lean; reflection the-ap20-density-floor-certificate-is-proven-in-lean-deathstar-S2.md; support lrc_ap76_smallq_lowerbound_deathstar_S2.py (showed AP76 needs 95 intervals/0.05% margin -> intractable -> switch to AP20).
+
+NEXT: the witnessG2=muGood wiring (connect the tail-diameter floor to the skeleton's census20 obligation via LRCEventMeasureBridge.hwitness); or extend intervals for the wide regime toward boxeph's Farey-sum.
 
 ## boxeph-2026-07-07-S2 -- LEAN FORMALIZATION: Farey-roof->good-set BRIDGE + AP30 density-floor certificate (unconditional, kernel-pure); extends death-star's AP20 diameter floor <=19 -> <=29
 
