@@ -13,6 +13,25 @@ RESIDUAL now = the saturated d>=2 plateau (pair-blocker, longest-AP<=10 => M>=1/
 INTEGRATION notes: shared working directory with concurrent mac-mini-S33 -- its git-add-A swept my uncommitted LRCMod25Transversal.lean into its THM-633 commit (both landed together); I disambiguate as S33b. THM-633 reused HYP-4632 (collides my S32b two-modulus) -- flagged for fleet reconcile. Integrated opus-S124 (mod-25 dichotomy, no-Lean), opus-S125 (residual factors), kps-S43 (defect-agnostic).
 
 Files: LRCMod25Transversal.lean, THM-634-non-transversal-branch-formalized.md, reflection the-non-transversal-branch-of-the-crux-is-now-formalized-macmini-S33b.md, lrc_d1_ladder_reconcile_macmini_S33.py(+out). Updated proof map (branch (a) existence half now formalized). THM-634 / HYP-4642. Next: the saturated d>=2 plateau M>=1/12 (opus-S115 subfamily cap on pair-blockers) is the sole remaining math piece of (C).
+## opus-2026-07-06-S126 -- SYNTHESIS: the bigger picture -- (C) is now a FINITE COVERING SYSTEM, not analytic rigidity (HYP-4596)
+
+Prompt: synthesize recent agents' work, see the bigger picture for the LRC14 proof.
+
+THE SHIFT (assembly-owner synthesis of the last ~dozen sessions): LRC14's crux (C) has gone from 'prove an analytic AP-uniqueness rigidity' to 'verify a FINITE covering system of rational-point certificates.' Every branch is now a Lean-checkable margin cert.
+
+FULL ARCHITECTURE: LRC14 (13 speeds, 1/14) <= [J-K reduction CITATION, Jain-Kravitz 2024] <= (A) rank-2 gap <= (A)<=(C) [projection floor GREEN + pigeonhole lemma] <= (C) the 12-speed gap = 'AP is the unique 12-family with M<2/25'.
+
+(C) = THREE-CASE (mac-mini S32 pair-blocking = my S124 mod-25 dichotomy, from kps S41 core):
+  case1 NON-blocker (unit-speeds miss a +-pair mod 25 => rotation clears => M>=2/25) -- GREEN (kps LRCMod25Floor + mac-mini THM-634 LRCMod25Transversal, explicit witness c=a^-1).
+  case2 BLOCKER (full transversal mod 25) -- THE RESIDUAL.
+  case3 mult-of-25 -- small-denom loose, EASY.
+CASE 2 = FINITE COVERING SYSTEM (kps S43): blockers are DEFECT-AGNOSTIC (span all d, correcting my S123 'd>=3 GREEN via mod-25'); non-AP blockers have M>=1/12; a finite q in {6..39} clears ALL non-AP blockers (0 residual, 27218 sample), each a rational_point_margin cert at t=c/q; only the AP (unique M-minimizer 1/13, since 13 prime) is uncovered. So (C) = union of finitely many margin certs + AP exception. THE CRUX IS NOW FINITE + LEAN-READY.
+
+MY PIECES: S124 dichotomy = the non-blocker/blocker split; S125 two-modulus = the {13,25} slice of kps's {6..39} covering; S119 mediant gate = the k=2 order case. GREEN corpus: LRCMod25Floor, LRCMod25Transversal/THM-634, LRCLadderD1/THM-633, LRCBinderInfeasible, LRCSubfamilyCap, LRCTorusProjection.
+
+OPEN (residual): prove the covering is UNIFORM over all heights (every non-AP blocker clears at q<=Q0=39; a finite mod-q residue condition, ERDOS-COVERING-SYSTEM flavored, checkable not analytic) + AP exception (immediate) + case 3 (easy); (assembly) pigeonhole wrapper, wire [J-K]+(A)<=(C)+(C) to a top-level theorem, pin J-K.
+
+Files: reflection the-bigger-picture-C-is-now-a-finite-covering-system-opus-S126; rewrote 00-navigation/LRC14-PROOF-MAP.md (C) section (superseding S120-S125 layers, kept as collapsed history); HYP-4596. No new Lean (synthesis + map). The hard analysis is replaced by a finite, checkable, arithmetic covering object.
 
 ## mac-mini-2026-07-06-S33 -- THM-633 the d=1 LADDER BOUND FORMALIZED (sorry-free kernel-pure): {1..11,x} reach >= 2/25 for all x!=12, two-witness proof; finishes opus-S123's d=1 piece of (C) + the d=1 slice of opus-S124's near-AP moat
 

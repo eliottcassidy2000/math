@@ -52,50 +52,71 @@ LRC14Statement (near-extremal / rigidity behaviour)
          dilated AP attains 1/13.
 ```
 
-**Status of (C) (the crux), from the fleet:**
-- canonical mediant family excluded — **PROVED** (mac-mini THM-632, parity; N=12 machine-checked).
-- base+outlier, dilated-AP, order-2/3 species — **swept empty** at N=12 (mac-mini, kps ~150k families).
-- ~~structural signature (opus-S120): every gap member = `(N−2)`-AP + 2 defects~~ **REFUTED
-  (opus-S122):** N=7 has a 3-defect gap member `{1,3,4,5,7,13,18}` (`M=3/23`, longest-AP
-  `{1,3,5,7}`=4=N−3). Both N=7 members share `M=3/23` (order 2) but have 2 vs 3 defects — so the
-  *defect count is not the governing parameter; the order is* (two families, same order, different
-  defect counts). The Freiman/defect framing was a mis-read of 3 examples.
-- **RESIDUAL — the DEFECT-STRATIFICATION whittle (opus-S123, synthesizing S120 + mac-mini-S31 +
-  kps-S41).** Stratify 12-families by `d = 12 − (longest sub-AP)`. The strata partition *all*
-  families, and each is excluded from the open gap `(1/13, 2/25)`:
-  - `d = 0`: the whole set is a dilated AP ⟹ `M = 1/13` (the boundary; the AP).
-  - `d = 1`: dilated 11-AP + 1 outlier ⟹ mac-mini's ladder ⟹ `M ∈ {rungs} ∪ {plateau}`, min
-    non-AP `= 2/25` (at `{1..11,24}`) ⟹ `M ≥ 2/25` (verified S123). **[open: prove the ladder bound]**
-  - `d = 2`: dilated 10-AP + 2 outliers ⟹ `M ≥ 2/25` (verified S123; mac-mini's 2-outlier / +0.007
-    margin). **[open: prove the 2-outlier bound]**
-  - `d ≥ 3`: **GREEN — kps `LRCMod25Floor`** (`mod25_covering_floor`/`loose_of_mod25_covering`):
-    a `≥3`-defect family is loose (`M ≥ 2/25`) via a `(ℤ/25)*` rotation (no-mult-of-25 branch) or a
-    small-denominator clearance (mult-of-25 branch). The `25 = 5²` is `2N+1` at `N=12` and is the
-    n-specific reason this closes at `12` but not at `7` (`2·7+1 = 15 = 3·5`, not a prime power —
-    which is exactly why the `n=7` 3-defect member `{1,3,4,5,7,13,18}` slips through).
-  So **(C) at `N=12` reduces to the `d=1` and `d=2` bounds** — a *finite-defect* residual, not the
-  infinite-order gauntlet. The order view (kps HYP-4557) is a different, infinite slicing of the
-  same set; the defect view is finite and has `d≥3` already GREEN.
-- **PAIR-BLOCKING / TWO-MODULUS sharpening of the mod-25 leg (mac-mini S32, HYP-4622 pair-blocking
-  + HYP-4632 two-modulus — two independent same-machine runs, same result).** The mod-25
-  clearing rotation used above (the `d≥3` GREEN and kps-S41) works *exactly* when the family is
-  **not** a full transversal mod 25 (equivalently, does **not** block all 10 unit `±`-pairs): a
-  clearing `c∈(ℤ/25)*` exists ⟺ the unit-speeds **miss** one
-  of the ten `±`-classes; then the explicit witness is `t = a^{-1}/25` for a missed class `[a]`
-  (⟹ `M ≥ 2/25`). So the mod-25 rotation branch is not "all no-mult-of-25 families" (that
-  over-claims — the AP itself is a full transversal and is *not* cleared) but precisely the
-  **non-transversals**, at *any* defect count. The genuine residual across all of `d=0,1,2` is the
-  **full-transversal** families (= mac-mini S7 "gap member ⟹ full transversal mod 25"), for which
-  the top wall is `M<2/25 ⟹ dilated AP` — a mod-13 rigidity (bottom wall). **0 counterexamples in
-  ~15k structured + adversarial full-transversal families**; the AP is the unique full transversal
-  with `M<2/25`. Frame: `2N+1=25` closes the top (miss a class), `N+1=13` pins the bottom (AP);
-  a gap member must thread both and cannot. This makes the mod-25 hypothesis a *decidable residue
-  condition* (Lean-ready against `LRCMod25Floor`) and isolates the `d=1,2` residual as the
-  full-transversal-⟹-AP rigidity.
+**Status of (C) — the current synthesis (opus-S126, superseding the layered history below).**
 
-**Open critical path:** (i) the `≥3`-defect Freiman-stability residual (the crux); (ii) the
-infinite-pigeonhole rigidity wrapper; (iii) *wire* the J-K citation + (A)⟸(C) + (C) into a
-top-level conditional theorem (parallel to Route 1's `lrc14_from_witness_floor`).
+`(C)` has converged, across all agents, to a single statement and a single *finite* residual:
+
+> **`(C)` ⟺ the AP `{1,…,12}` is the unique 12-integer-family (up to dilation) with `M < 2/25`.**
+> Equivalently (kps-S42, via the settled `LRC(≤13)` floor `M ≥ 1/13`): no family attains an
+> `order-k ≥ 2` value in the gap — both gap edges `1/13, 2/25` are `k=1` Kravitz rungs, and every
+> interior value `3/38, 4/51, …` has `k ≥ 2`.
+
+**The three-case split (mac-mini-S32 pair-blocking, from kps-S41's mod-25 core; = opus-S124's
+mod-25 dichotomy).** Split 12-families by their residues mod 25:
+
+1. **NON-blocker** — the unit-speeds miss one of the ten antipodal `±`-pairs mod 25 (`⟺` a
+   clearing rotation `c ∈ (ℤ/25)*` exists, `c = a⁻¹` for a missed pair `{a,−a}`). Then
+   `M ≥ 2/25` at `t = c/25`. **GREEN** — kps `LRCMod25Floor` (`loose_of_mod25_covering`) + mac-mini
+   `LRCMod25Transversal` (THM-634, the explicit miss-a-pair witness).
+2. **BLOCKER (full transversal)** — no mult of 25, and the `±`-residues cover all ten pairs
+   (`= (ℤ/25)*`). **THE RESIDUAL.**
+3. **mult of 25** — a speed `≡ 0 mod 25` sits at residue 0 for every rotation; clears at a small
+   denominator (`M ≥ 2/11, 2/17, …`). **EASY.**
+
+**Case 2 is a FINITE COVERING SYSTEM (kps-S43) — the key reduction.** The blockers are
+*defect-agnostic* (they span every defect count `d ≥ 1`, not just `d = 1,2` — correcting opus-S123's
+"`d≥3` GREEN via mod-25": there are `d≥3` blockers, e.g. `{1,2,3,4,6,7,8,9,10,11,13,55}`, `d=5`,
+that mod-25 does *not* clear). Every non-AP blocker has `M ≥ 1/12`, and:
+
+> **a finite set of moduli `q ∈ {6,…,39}` clears every non-AP blocker** — verified 0 uncleared of
+> 27 218 (sample, height ≤ ~110). Each clearance is a `rational_point_margin` certificate at
+> `t = c/q` (the same Lean atom as `LRCMod25Floor`, just at `q` instead of 25).
+
+So **`(C) = case 1 (GREEN) + case 3 (easy) + case 2 [finite `q ≤ 39` covering + the AP exception]`**,
+and *every branch is a margin certificate.* The AP is the unique uncovered blocker because it is
+the global `M`-minimizer (`1/13`, unique since `13` is prime = the tight locus), so it has no slack
+at any modulus; every other blocker (`M ≥ 1/12`) has a clearing `q ≤ 39`. **The crux is now a
+finite, Lean-ready covering system — not an analytic rigidity.** (opus-S125's two-modulus factoring
+— `q=13` collision-clears the bottom, `q=25` clears the top — is the special case `q ∈ {13, 25}`;
+kps-S43's full `q ∈ {6..39}` achieves 0 residual.)
+
+**Formalized so far (all GREEN, kernel-pure):** `LRCMod25Floor` (kps, case-1 core),
+`LRCMod25Transversal`/THM-634 (mac-mini, case-1 miss-a-pair witness), `LRCLadderD1`/THM-633
+(mac-mini, the `{1..11}+x` ladder — a sub-family of case 2), `LRCBinderInfeasible` (opus, the
+mediant `k=2` parity gate), `LRCSubfamilyCap` (opus, the plateau `M ≤ M(subfamily)`).
+
+**Open critical path for `(C)`:** prove the covering is **uniform over all heights** — every
+non-AP blocker clears at some `q ≤ Q₀` (`39` on the sample). This is a *finite* residue condition
+(clearing at `q` depends only on `v_i mod q`), an **Erdős-covering-system-flavored** statement, not
+analysis — plus the AP-exception (immediate from `M`-minimality) and the easy case 3. Then wire the
+`q≤Q₀` covering + case 1 + case 3 into a Lean theorem `M(V) < 2/25 → V = dilated AP`.
+
+**Open critical path for the top level:** (i) the pigeonhole rigidity wrapper (finishes (A)⟸(C));
+(ii) *wire* `[J-K citation] + (A)⟸(C) + (C)` into a top-level conditional theorem (parallel to
+Route 1's `lrc14_from_witness_floor`); (iii) pin the exact Jain–Kravitz statement.
+
+<details><summary>Superseded layered history (S120–S125)</summary>
+
+- canonical mediant family excluded — PROVED (mac-mini THM-632, parity).
+- opus-S120 "gap member = (N−2)-AP + 2 defects" — REFUTED (opus-S122: 3-defect member
+  `{1,3,4,5,7,13,18}` at N=7). Defect count does not govern; order (or the blocker/non-blocker
+  split) does.
+- opus-S123 defect stratification (`d=0/1/2/≥3`) — subsumed by the blocker split; its "`d≥3` GREEN
+  via mod-25" attribution was imprecise (kps-S43: `d≥3` blockers exist, clear at small denom, not
+  mod-25).
+- opus-S124 mod-25 dichotomy = the case-1/case-2 split; opus-S125 two-modulus = `q ∈ {13,25}` slice
+  of kps-S43's covering.
+</details>
 
 ---
 
