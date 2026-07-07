@@ -1,0 +1,35 @@
+=== corrected bank at theta=1/7 (bars: E[U]>=0.04842, PZ>=0.05649) ===
+family                            E[U]      PZ  (7/6)EU     mu PZ>=(7/6)EU?
+AP {1..13}                      0.1266  0.2720   0.1477  0.443         True
+GW {1..11,13,24}                0.1149  0.2956   0.1340  0.588         True
+death-star 2*{1..12}u{13}       0.1142  0.2787   0.1333  0.500         True
+monad record evens+{11,13}      0.1074  0.2652   0.1253  0.531         True
+opus stretched (13pt, no 11)    0.1049  0.3070   0.1223  0.671         True
+monad S1-min                    0.0994  0.4061   0.1160  0.886         True
+S41p2 EU-min 13pt               0.0942  0.4623   0.1099  0.947         True
+S41p2 PZ-min 13pt               0.1132  0.2606   0.1320  0.515         True
+random big                      0.1356  0.7389   0.1582  0.986         True
+
+=== 13-point descents (enforced) ===
+min E[U] results:
+  0.09380  (0, 30, 36, 45, 50, 54, 60, 63, 70, 72, 81, 90, 108)  (n=13)
+  0.09540  (0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 17, 24, 31)  (n=13)
+  0.09664  (0, 4, 6, 8, 9, 10, 11, 12, 14, 18, 25, 44, 70)  (n=13)
+finalist fine: E[U]=0.09380 (1.94x bar); (7/6)E[U]=0.10944 vs m_P=0.05649; mu=0.919
+min PZ results:
+  0.26058  (0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16)  (n=13)
+  0.26058  (0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16)  (n=13)
+  0.26331  (0, 2, 4, 6, 7, 8, 9, 10, 11, 12, 14, 16, 18)  (n=13)
+finalist fine: PZ=0.26058 (4.61x m_P); E[U]=0.11318; mu=0.515
+
+=== Farey-shell decomposition of E[U] (mechanism) ===
+AP {1..13}                     E[U]=0.1266  mass-> q1:36.3% q2: 8.7% q3: 6.4% q4: 2.7% q5: 2.3% q6: 0.4% q7: 0.0% q8: 0.0% qgen:43.2%
+S41p2 EU-min 13pt              E[U]=0.0942  mass-> q1:10.5% q2: 4.2% q3: 6.2% q4: 2.2% q5: 2.5% q6: 1.5% q7: 0.1% q8: 0.4% qgen:72.4%
+monad record evens+{11,13}     E[U]=0.1074  mass-> q1:33.3% q2:10.2% q3: 7.0% q4: 3.2% q5: 2.6% q6: 1.0% q7: 0.0% q8: 0.9% qgen:41.8%
+random big                     E[U]=0.1356  mass-> q1: 7.0% q2: 1.6% q3: 1.7% q4: 0.9% q5: 1.1% q6: 0.3% q7: 0.8% q8: 0.4% qgen:86.3%
+
+=== sandwich main+w3 <= E[U] <= main+w3+w4 (corrected 13pt families) ===
+AP {1..13}                     lower= -0.4251  E[U]= 0.1266  upper= 0.3625   SANDWICH OK
+monad record evens+{11,13}     lower= -0.3966  E[U]= 0.1074  upper= 0.2648   SANDWICH OK
+opus stretched (13pt, no 11)   lower= -0.3000  E[U]= 0.1049  upper= 0.2107   SANDWICH OK
+S41p2 EU-min 13pt              lower= -0.2043  E[U]= 0.0942  upper= 0.0204   VIOLATED
