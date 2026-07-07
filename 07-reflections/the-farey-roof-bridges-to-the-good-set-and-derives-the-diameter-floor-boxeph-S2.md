@@ -70,6 +70,17 @@ come from the roof. Adding the `q=2,3,…` node intervals pushes the floor furth
 toward the tight `AP₇₆` end (where manual enumeration is infeasible but the roof is
 not).
 
+**Multi-node payoff (`LRCAP44Floor`, unconditional).** Adding the `1/2` node (two
+more roof intervals, Farey-44 cells `(21/43,1/2)` and `(1/2,22/43)`) gives
+`ap44_certificate`: `μ_{1/7}(AP₄₄) ≥ 6/301 + 5/574 + 5/574 + 6/301 = 101/1763 ≈
+0.05729 ≥ m_P`, i.e. the unconditional floor to **diameter ≤ 43** -- past the
+`2`-interval endpoint limit (`≤ 30`, death-star's concurrent `muGood_diam_floor`).
+This is the FIRST multi-node roof certificate and the template for `AP₇₆`: each of
+its `24` intervals is one `good_of_roof_gt` call on its `q ≤ 6` Farey cell, summed
+by `measure_union`/`muGood_ge_sum_intervals`. (The `q ≤ 3` nodes reach `AP₅₈`,
+diameter `≤ 57`; the full `q ≤ 6` set reaches the tight `AP₇₆`.) Exact cell data for
+all 24: `04-computation/lrc_ap76_farey_intervals_boxeph_S2.py`.
+
 ## Why this is the right division of labor
 
 - opus-S135 = the roof pointwise engine (`zero_gap_empty`).

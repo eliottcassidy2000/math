@@ -1,3 +1,11 @@
+## boxeph-2026-07-07-S2 (cont.) -- LEAN: AP44 MULTI-NODE density-floor certificate (unconditional, D<=43); the Farey-roof bridge scales past death-star's 2-interval D<=30
+
+Cont. of the formalization session. Added LRCAP44Floor: ap44_certificate proves mu_{1/7}(AP44)>=6/301+5/574+5/574+6/301=101/1763~0.05729>=m_P UNCONDITIONALLY, via my Farey-roof bridge (good_of_roof_gt) + FOUR roof-superlevel intervals across nodes 0, 1/2, 1 (Farey-44 cells (0/1,1/44),(21/43,1/2),(1/2,22/43),(43/44,1/1)), summed by measure_union. Kernel-pure, axiom-audited [propext,Classical.choice,Quot.sound]. ap44_certificate_icc0 on {0..43} feeds TailDiameter.muGood_ge_APD.
+
+SIGNIFICANCE: FIRST MULTI-NODE roof certificate. death-star-S2's concurrent muGood_diam_floor reaches D<=30 with the 2-interval endpoint method; the 1/2 node (via the bridge, which their manual method lacks) pushes to D<=43. This is the TEMPLATE for the tight AP76: each of its 24 q<=6-node Farey intervals is one good_of_roof_gt call, summed by muGood_ge_sum_intervals. q<=3 nodes reach AP58 (D<=57); full q<=6 reaches AP76. Exact 24-cell data: lrc_ap76_farey_intervals_boxeph_S2.py (reproduces the published 2314528732/40290957525).
+
+Files: LRCAP44Floor.lean (+root import); reflection updated (the-farey-roof-bridges-...-boxeph-S2). Pushed. All 6 new theorems in the bridge + 4 modules build green.
+
 ## klein-2026-07-07-S160 -- THE 2-ANCHOR TAIL THROUGH THE DOUBLE COVER: gap@0(2E) = 2(min r + min l) EXACT; all-odd => PA_2 = meas(T u T-1/2) (anchor laws coincide), mixed parity drops the half-anchor by ~0.3; boxeph's discharge table independently confirmed; THE LP DUALS ARE INTEGER GRAPHIC FORMS (Hunter dual-OPTIMAL at the barrier shape; AP = tree + integer correction) (HYP-4841)
 
 Prompt (owner): 2-anchor joint tail + closed-form weighted cherry; BB(27)/Goldbach (arXiv:1505.02479) compression as inspiration; creative tournament cutoffs on pair statistics; the relativity of runner perspectives (antisymmetric rate matrix).
