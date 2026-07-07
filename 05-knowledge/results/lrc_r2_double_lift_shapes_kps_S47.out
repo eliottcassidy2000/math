@@ -1,0 +1,13 @@
+r=2 double-lift shapes: for each lifted pair (i,j), max clearing modulus over a,b in [0,25]
+(covering INCLUDES q=25 for the non-transversal/boundary members)
+
+WORST max clearing modulus over ALL 66 shapes (a,b in [0,25]): 25
+hardest shapes (max modulus >= 30): []
+  => the hard shapes lift speed 6 or 12 (the even/divisible speeds).
+
+=> a FIXED covering {q <= 25} (incl. 25) clears EVERY r=2 double-lift, ALL shapes, ALL
+   lift heights -- height-uniform (residue-only).  q<=12 layer is GREEN (loose_of_no_multiple);
+   q=25 is GREEN (LRCMod25Floor); 13<=q<=37 are avoid-band rational_point_margin certs.
+
+boundary-case clarification: [1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 17, 19] (shape (4,6), a=b=1) has M=2/25 EXACTLY (not in open gap),
+  transversal? False -- misses a pair mod 25 => cleared at q=25 (case 1, LRCMod25Floor).

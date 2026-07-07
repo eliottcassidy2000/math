@@ -56,9 +56,26 @@ theorem loose_of_no_multiple_12 {ι : Type*} (v : ι → ℤ)
   have h2 : (2 : ℝ) / 25 ≤ (1 : ℝ) / 12 := by norm_num
   exact le_trans h2 (by simpa using h)
 
+/-- **The general small-modulus loose certificate** (`q ≤ 12`, i.e. `2q ≤ 25`, so
+`1/q ≥ 2/25`).  No speed divisible by `q` ⟹ `M ≥ 1/q ≥ 2/25` at `t = 1/q` — LOOSE.
+The `q = 7,8,9,10,11,12` layer of the ladder covering: any family missing a multiple
+of some small `q` clears there. -/
+theorem loose_of_no_multiple {ι : Type*} (v : ι → ℤ) (q : ℤ) (hq : 0 < q) (hq12 : 2 * q ≤ 25)
+    (hnd : ∀ i, 1 ≤ v i % q ∧ v i % q ≤ q - 1) :
+    ∃ t : ℝ, ∀ i, ∀ m : ℤ, (2 : ℝ) / 25 ≤ |(v i : ℝ) * t - m| := by
+  refine ⟨(1 : ℝ) / q, fun i m => ?_⟩
+  have h := no_multiple_floor v q hq hnd i m
+  have hqR : (0 : ℝ) < (q : ℝ) := by exact_mod_cast hq
+  have h2 : (2 : ℝ) / 25 ≤ (1 : ℝ) / q := by
+    rw [div_le_div_iff₀ (by norm_num) hqR]
+    have : (2 : ℝ) * q ≤ 25 := by exact_mod_cast hq12
+    linarith
+  exact le_trans h2 h
+
 #print axioms zero_avoid_floor
 #print axioms no_multiple_floor
 #print axioms loose_of_no_multiple_12
+#print axioms loose_of_no_multiple
 
 end SmallModFloor
 end LonelyRunner

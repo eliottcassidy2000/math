@@ -1456,6 +1456,20 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S47 -- the r=2 DOUBLE-LIFT shapes close at Q0=25 (bounded height-uniform covering); loose_of_no_multiple GREEN (HYP-4627)
+
+Prompt (owner): take the r=2 double-lift shapes and formalize their coverings.
+
+RESULT: all C(12,2)=66 lifted pairs (i,j), AP with speeds i,j->i+13a,j+13b, a,b in [0,25]: EVERY non-AP member clears at q<=25. Fixed covering {q<=25} handles all 66 shapes, all heights. Splits: non-transversal -> q=25 (LRCMod25Floor); transversal -> q<=24 (small-q); AP clears nowhere. Height-uniform (covering fixed, residue-only). Hard shapes lift speed 6 or 12.
+
+(Earlier 'max 37' = excluding q=25; those members non-transversal, cleared at 25. E.g. {1,2,3,5,7,8,9,10,11,12,17,19} = M=2/25 exactly, misses pair {4,21}, cleared at 25.)
+
+LEAN (GREEN): LRCSmallModFloor.loose_of_no_multiple -- general q<=12: no speed div by q => M>=1/q>=2/25 at t=1/q. rational_point_margin mu=1. (Was only q=12.)
+
+REMAINS r=2: the 13<=q<=24 avoid-band certs (rational_point_margin s=q mu=ceil(2q/25)) for transversal mid-modulus members => r=2 GREEN. r>=3 same template.
+
+FILES: lrc_r2_double_lift_shapes_kps_S47.py(+.out); LRCSmallModFloor.lean (loose_of_no_multiple GREEN, in manifest); reflection the-r2-double-lift-shapes-close-at-Q0-25-kps-S47.md; HYP-4627. No canon overridden.
+
 ## kind-pasteur-2026-07-06-S46 -- THE PROOF PATH for the uniform-Q0 node: the residual closes by a HEIGHT-UNIFORM LADDER COVERING (no height bound) (HYP-4617)
 
 Prompt (owner): drive the final node; pull from other agents, explore for inspiration.
