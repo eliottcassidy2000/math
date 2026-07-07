@@ -1,3 +1,23 @@
+## klein-2026-07-07-S157 -- THE VOLTAGE-LIFT READING (owner tiling directive, the face nobody claimed): mean-record families ARE defective c-lifts; the systematic class bottoms out EXACTLY at the record 12907/65520 (+0.0057 over T*, mean sidecar survives); 3-lift runner-up 0.19791; k=9 Hunter positivity by 7-ADIC DESCENT (HYP-4811)
+
+Prompt (owner): proofs before formalization (relayed to fleet); long sessions, careful pulls; apply the tiling-model Hamiltonian-path analysis to lonely runners (a tree on 8 events has 7 edges = the Ham path in an 8-player tournament).
+
+DIFFERENTIATION (pull-first): kps-S62 took the step-gauge face (sorted speeds = base path; reversal=complement PROVED), mac-mini-S43 palindrome/wall-count, opus-S136 order-cells (= movie Ham path; ceded frame naming). I took the remaining face: VOLTAGE LIFTS (THM-378 / SC blowup / double round-robin).
+
+FINDINGS (HYP-4811, reflection the-voltage-lift-reading-records-are-defective-lifts-klein-S157):
+ 1. DICTIONARY: c-lift of base A = c*A (orbit at x = base orbit at cx, a c-sheeted time cover); defective lift = c*A u B. The mean-record families ARE defective 2-lifts (monad's 2*{1..11}u{11,13}, death-star's 2*{1..12}u{13}) -- parity interlacing = imperfect 2-cover; what a defect buys is set by residue-depth (THM-638-graded), the transported triangle-parity lesson.
+ 2. EXACT CLASSIFICATION (8726 primitive lift-defect families, c in {2,3}, numeric screen + exact leaders): CLASS MIN = EXACTLY the known record 12907/65520 = 0.196993 (+0.005719 over T* = 56291/294294) -- the mean sidecar SURVIVES the systematic lift attack; no c<=3 defect pattern erodes further. RUNNER-UP IS A 3-LIFT: 3*{1..11}u{13,23} = 33463369/169080912 = 0.197913 -- trisection with the RIGHT defects nearly ties bisection (defect placement, not parity of c, is the mechanism; scopes opus-S134's 'trisection worse'). Winners' tails mu ~ 0.50-0.61 = 10x m_P: the tail/mean divergence (death-star capstone) at its sharpest. HONEST: c>=4, mixed lifts, non-AP bases unexplored.
+ 3. k=9 POSITIVITY BY 7-ADIC DESCENT (proved + verified 4/4): THM-638's G+ > 0 iff v7(d_a) = v7(d_b) (gcd strips common 7s; unequal valuations leave a resonant reduced part). PROPOSITION: any 9-set with two equal-valuation top-anchored differences has mu_{1/7} >= meas W_top >= G/(49 q_a q_b) > 0 (Hunter tree through that edge; base 1 - 8/7 + 7 theta^2 = 0 exactly); eight distinct valuations force diam >= 7^7 = 823543. Rescues MISTAKE-122's bare-0 arithmetically; k=8 gets a per-shape G-bonus over 6/49 below diam 7^6. Non-uniform (decays with reduced product) -- mechanism result, not the 0.562 bar.
+ 4. Closed forms from the law en route: AP endpoint star/path masses m(1,j) = 1/(7j), both trees sum to (1/7)(H_7 - 1).
+
+FLAGS: monad-S3 reused HYP-4847 (kps-S60's ledger number) for their window factoring -- reads as deliberate extension of the same hypothesis line; owners to confirm. Owner directive relayed: PROOFS BEFORE FORMALIZATION, especially big builds, until the math is done.
+
+FILES: 04-computation/lrc14_lift_defect_mean_class_klein_S157.py (+out); 05-knowledge/results/lrc14_k9_sevenadic_check_klein_S157.out; reflection; HYP-4811. No Lean (per directive). No canon overridden.
+
+NEXT: (a) extend the lift classification to mixed lifts c1*A1 u c2*A2 and non-AP bases (the remaining record-erosion surface); (b) the triple-mass UPPER bound (still the one lemma before Bonferroni-3 closes the k=8 spread residual at the R-route bar); (c) fold the 7-adic descent into the k=8/9 legs systematically (valuation-partitioned Hunter trees); (d) R >= 0.75 at k=8.
+
+---
+
 ## kind-pasteur-2026-07-07-S62 -- THE STEP-GAUGE: LRC(14) viewed from its Hamiltonian path (owner-directed tiling-model transplant) -- reversal=complement PROVED (mu/E[mg] invariant under E -> max+min-E), Wiener staircase 455=C(15,3) with triangle weights l(14-l), a=2 stratum mostly closed via the grid ledger, palindromic-extremizer conjecture opened (HYP-4877)
 
 Prompt (owner): proof work above formalization; long sessions, careful pulls; a tree on 8 events has 7 edges = the Hamiltonian path in an 8-player tournament; the tiling model views a tournament from a Ham path to reveal the symmetry forced by intersubjective binary relation; apply to lonely runners.
