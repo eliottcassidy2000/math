@@ -1,0 +1,55 @@
+==================================================================================================
+PART 0 -- the naive full-circle rule is EXACTLY FAIR; conditioning on Good breaks it
+==================================================================================================
+  E=[1, 2, 3, 5, 8]: full-circle w symmetric (fair)? True   Good-conditioned w symmetric? True
+  sample Good-conditioned w[0][1]=1/2 vs w[1][0]=1/2  (meas Good=1)
+
+==================================================================================================
+PART 1 -- T_good on the zoo (exact, modest diameter): scores, c3, H, regular/SC
+==================================================================================================
+  AP {1..8}                  PAL scores=(0, 1, 2, 3, 4, 5, 6, 7) c3=0 H=1 reg=False SC(rev)=True mu=0.9401 ties=28
+  record-ish {1..7,9}            scores=(0, 1, 2, 3, 4, 5, 6, 7) c3=0 H=1 reg=False SC(rev)=True mu=1.0000 ties=28
+  mirror A (1^6,3)-word          scores=(0, 1, 2, 3, 4, 5, 6, 7) c3=0 H=1 reg=False SC(rev)=True mu=1.0000 ties=28
+  mirror B (3,1^6)-word          scores=(0, 1, 2, 3, 4, 5, 6, 7) c3=0 H=1 reg=False SC(rev)=True mu=1.0000 ties=28
+  primes8                        scores=(0, 1, 2, 3, 4, 5, 6, 7) c3=0 H=1 reg=False SC(rev)=True mu=1.0000 ties=28
+  geom {1,2,4,8,16,32,64,128}     scores=(0, 1, 2, 3, 4, 5, 6, 7) c3=0 H=1 reg=False SC(rev)=True mu=1.0000 ties=28
+  GW-ish {1..6,8}                scores=(0, 1, 2, 3, 4, 5, 6) c3=0 H=1 reg=False SC(rev)=True mu=1.0000 ties=21
+
+==================================================================================================
+PART 2 -- INTERTWINING: T_good(E*) == relabel(T_good(E)^op)?  (E* = max+min - E)
+==================================================================================================
+  AP {1..8}                  T_good(E*) == relabel(comp(T_good(E)))? True   [palindromic] SELF-COMP
+  record-ish {1..7,9}        T_good(E*) == relabel(comp(T_good(E)))? True    
+  mirror A (1^6,3)-word      T_good(E*) == relabel(comp(T_good(E)))? True    
+  mirror B (3,1^6)-word      T_good(E*) == relabel(comp(T_good(E)))? True    
+  primes8                    T_good(E*) == relabel(comp(T_good(E)))? True    
+  geom {1,2,4,8,16,32,64,128} T_good(E*) == relabel(comp(T_good(E)))? True    
+  GW-ish {1..6,8}            T_good(E*) == relabel(comp(T_good(E)))? True    
+
+==================================================================================================
+PART 3 -- the MOD-7 PALEY rule: invariants + agreement with T_good + reversal intertwine
+==================================================================================================
+  AP {1..8}                  mod7: scores=(3, 3, 3, 3, 4, 4, 4, 4) c3=20 H=657 reg=False  rev->comp:True  agree(T_good)=0.61
+  record-ish {1..7,9}        mod7: scores=(3, 3, 3, 3, 4, 4, 4, 4) c3=20 H=657 reg=False  rev->comp:True  agree(T_good)=0.61
+  mirror A (1^6,3)-word      mod7: scores=(3, 3, 3, 3, 4, 4, 4, 4) c3=20 H=657 reg=False  rev->comp:True  agree(T_good)=0.61
+  mirror B (3,1^6)-word      mod7: scores=(3, 3, 3, 3, 4, 4, 4, 4) c3=20 H=657 reg=False  rev->comp:True  agree(T_good)=0.61
+  primes8                    mod7: scores=(2, 3, 3, 3, 4, 4, 4, 5) c3=18 H=521 reg=False  rev->comp:True  agree(T_good)=0.61
+  geom {1,2,4,8,16,32,64,128} mod7: scores=(2, 3, 3, 3, 4, 4, 4, 5) c3=18 H=509 reg=False  rev->comp:True  agree(T_good)=0.54
+  GW-ish {1..6,8}            mod7: scores=(2, 2, 3, 3, 3, 4, 4) c3=12 H=135 reg=False  rev->comp:True  agree(T_good)=0.62
+
+==================================================================================================
+PART 4 -- does a TOURNAMENT invariant of T_good track the density floor mu_{1/7}?
+==================================================================================================
+    mu_1/7 family                      H(T_good)    c3  SC-rev
+    0.9401 AP {1..8}                           1     0    True
+    1.0000 GW-ish {1..6,8}                     1     0    True
+    1.0000 geom {1,2,4,8,16,32,64,128}          1     0    True
+    1.0000 mirror A (1^6,3)-word               1     0    True
+    1.0000 mirror B (3,1^6)-word               1     0    True
+    1.0000 primes8                             1     0    True
+    1.0000 record-ish {1..7,9}                 1     0    True
+
+  (reading: if H or c3 rises with mu, T_good's tournament complexity SEES the floor;
+   if SC-status clusters the palindromic minimizers, the SC-maximizer analogy holds.)
+
+DONE.

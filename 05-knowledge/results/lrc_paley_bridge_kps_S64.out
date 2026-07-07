@@ -1,0 +1,48 @@
+==================================================================================================
+PART 1 -- THE PALEY BRIDGE:  T_modp(AP_{p-1}) == Paley tournament T_p ?  (p = 3 mod 4)
+==================================================================================================
+  p= 3: T_modp(AP_2) scores=(0, 1)  c3=0  H=1   == T_p minus vertex0 (exact:True, iso:True)
+  p= 7: T_modp(AP_6) scores=(2, 2, 2, 3, 3, 3)  c3=8  H=45   == T_p minus vertex0 (exact:True, iso:True)
+  p=11: T_modp(AP_10) scores=(4, 4, 4, 4, 4, 5, 5, 5, 5, 5)  c3=40  H=15745   == T_p minus vertex0 (exact:True, iso:True)
+  p=19: T_modp(AP_18) scores=(8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9)  c3=240  H=skip   == T_p minus vertex0 (exact:True, iso:True)
+  p=23: T_modp(AP_22) scores=(10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11)  c3=440  H=skip   == T_p minus vertex0 (exact:True, iso:True)
+  (T_p itself, full p vertices: p=7 -> H=189 c3=14 regular; the LRC AP builds it.)
+    Paley T_7: scores=(3, 3, 3, 3, 3, 3, 3) c3=14 H=189 (canonical H-maximizer)
+    Paley T_11: scores=(5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5) c3=55 H=95095 (canonical H-maximizer)
+
+==================================================================================================
+PART 2 -- THE COMPOSITE-14 CRT RULE: Z/14* structure and the AP {1..13} image
+==================================================================================================
+  Z/14* = [1, 3, 5, 9, 11, 13], cyclic <3>; QR (even powers) = [1, 9, 11]; -1=13 power 3 (NR)
+  AP {1..13} under CRT-14: scores=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7) c3=88 H=3285381
+    of C(13,2)=78 pairs, 42 have NON-UNIT difference mod 14 (the 2- or 7-divisible
+    = the composite obstruction, klein-S151's 14=2*7, now VISIBLE as the tournament's irregular arcs)
+
+==================================================================================================
+PART 3 -- THE WITNESS-SEMICIRCLE tournament (genuinely cyclic; reads the floor geometry)
+==================================================================================================
+  AP {1..13}             t*=0.0000  scores=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) c3=0 H=1  [palindromic]
+  record                 t*=0.0000  scores=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) c3=0 H=1  [palindromic]
+  GW {1..11,13,24}       t*=1.0000  scores=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) c3=0 H=1  
+  primes13               t*=0.0000  scores=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) c3=0 H=1  
+
+==================================================================================================
+PART 4 -- reversal->complement intertwining for the mod-p and CRT-14 rules (all families)
+==================================================================================================
+  mod7: reversal(E) -> complement(T) [iso] for all tested families: True
+  crt14: reversal(E) -> complement(T) [iso] for all tested families: True
+
+DONE.
+
+==========================================================================================
+OBSERVER-INCLUSIVE PALEY THEOREM: T_modp({0,1,...,p-1}) == full Paley T_p ?
+==========================================================================================
+  p= 3: T_modp({0..2}) == Paley T_3 exact: True   scores=(1, 1, 1) c3=1 H=3
+  p= 7: T_modp({0..6}) == Paley T_7 exact: True   scores=(3, 3, 3, 3, 3, 3, 3) c3=14 H=189
+  p=11: T_modp({0..10}) == Paley T_11 exact: True   scores=(5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5) c3=55 H=95095
+  => the observer-inclusive LRC(p) family, under the QR-mod-p pair cutoff, IS the
+     Paley H-MAXIMIZER. The density-floor M-minimizer (roots of unity) = the H-maximizer.
+
+  SC check (Paley is self-complementary via x->g*x, g a nonresidue):
+    T_7: complement == relabel-by-(x*3)? True  (palindromic-AP -> SELF-COMPLEMENTARY tournament)
+    T_11: complement == relabel-by-(x*2)? True  (palindromic-AP -> SELF-COMPLEMENTARY tournament)

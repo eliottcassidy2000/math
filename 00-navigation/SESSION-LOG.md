@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-07-S64 -- THE PALEY BRIDGE (THM-640): the QR-mod-p pair-cutoff turns the observer-inclusive LRC(p) family {0..p-1} EXACTLY into the Paley tournament T_p => the density-floor M-MINIMIZER = the H-MAXIMIZER; reversal<->complement => palindromic AP is SELF-COMPLEMENTARY; composite-14 = why LRC(14) is hard in tournament language (HYP-4927)
+
+Prompt (owner): pair statistics among integer families can be considered tournaments by deciding creatively a meaningful binary cutoff (arrow directions); be free, feel inspiration from other agents.
+
+DESIGNED 4 cutoffs; the ARITHMETIC one is an identity that closes a THM-126 loop. THE PALEY BRIDGE (THM-640, PROVED elementary): arrow i->j iff (v_j-v_i) mod p in QR_p (p=3 mod 4). On V={0,1,...,p-1}=Z/p this IS the Paley circulant => T_p^QR({0..p-1}) = T_p EXACTLY (verified p=3,7,11; movers-only = T_p minus vertex0 exact p=3,7,11,19,23). So the SAME family {0..p-1}: MINIMIZES M (roots of unity at t=1/p, THM-126 spectral flatness) AND MAXIMIZES H (Paley H(T_7)=189, H(T_11)=95095). Two opposite extremal problems, one object -- THM-126's spectral correspondence made a literal CONSTRUCTION.
+
+INTERTWINING (proved): -QR_p = non-residues (p=3 mod 4) => T^QR((max+min)-V) = order-reversal . complement(T^QR(V)) => PALINDROMIC families -> SELF-COMPLEMENTARY tournaments (Paley SC via x->gx verified) => fuses the LRC palindromic-extremizer phenomenon (HYP-4877) with the tournament SC theory (THM-024).
+
+COMPOSITE-14 SHADOW: 14=2*7 has no residue field => CRT-mod-14 cutoff sends AP{1..13} to a NEAR-REGULAR but NOT regular tournament (c3=88, H=3285381); 42 of 78 pairs have non-unit differences (divisible by 2 or 7) = klein-S151's "k+1 prime" obstruction SEEN as a tournament defect. LRC(14) hard = "the QR-cutoff tournament of its AP cannot be a regular Paley tournament."
+
+HONEST NEGATIVES (converge monad-S5 HYP-4937, extend HYP-4767): the GEOMETRIC cutoffs collapse to TRANSITIVE -- T_good (leader-on-Good_1/7 = consensus total order) and T_witness (semicircle at max-gap t*, transitive because the witness time is a CLUSTERING time). No single-time/single-average orientation separates tight from loose; the floor's info is a MEASURE over all times, not a snapshot. So the bridge relates EXTREMAL PRINCIPLES, not difficulty separators.
+
+INSPIRATION/CONVERGENCE (same-day, owner cutoff directive): mac-mini THM-639 (runner tiling) + S44 (palindrome verdict: valley minimizes, parity obstruction -- exact); monad-S5 HYP-4937 (centering/attention tournaments, differentiated rules). Three agents on the cutoff directive.
+
+Files: lrc_runner_tournaments_kps_S64.py, lrc_paley_bridge_kps_S64.py (+outs); canon THM-640-the-paley-bridge.md; reflection the-paley-bridge-the-M-minimizer-is-the-H-maximizer-kps-S64; HYP-4927. Proof work (no formalization, per owner priority). Does NOT prove LRC(14).
+
 ## mac-mini-2026-07-07-S44 -- OWNER QUEUE EXECUTED (my items): the TWO HARD CORES x PZ-on-U (exact G_P measures; product-route shortfall EXACTLY 3.16pct, needs R >= 1.0326 or Hunter +3.3pct; restricted-PZ 4.6-4.8x floors; spread => R = 1.0000 exact) + EXACT palindromic-extremizer VERDICT (palindrome wins 5/5 when parity allows, ALWAYS the valley arrangement; exchange-monotonicity = the symmetrization inequality, pinned for kps-S63) + reversal-symmetrized moments VACUOUS (one-line proof) (HYP-4917)
 
 Prompt (owner): the fleet queue -- engine-ledger coupling, d-perp pruning, palindromic-extremizer exact testing, corner sweep, symmetrization inequality, mu3 tables, reversal-symmetrized moments, the two hard cores for avoidance-kernel + PZ-on-U, hard cores as tournament-bridge test cases, mixed-lift erosion, triple-mass upper bound, valuation-partitioned Hunter trees, R >= 0.75.  Executed the items routed to my machinery; routed the rest (below).
@@ -12936,6 +12952,48 @@ structured attacker/gentle probes, and denominator-family routing for the
 worst rows.  The live predicate remains
 `mu_1/7(E) >= thr_k := 1 - gp_min(k)`; `max_D rho_D` is kept as a sidecar
 certificate bank rather than a stand-alone positive-measure theorem.
+
+## codex-2026-06-29 -- Lean random031 proof-packet formalization
+
+Prompt: work on formalizing as many of the key LRC related proof work as
+possible.
+
+Added a compiled Lean checkpoint for the current random031 LRC14 interface:
+
+```text
+04-computation/lean/TournamentH7/TournamentH7/LRCRandom031ProofPackets.lean
+```
+
+The module formalizes the HYP-3521 terminal arithmetic
+`282 = 230 ordinary + 40 free-hole + 12 pure-bypass`, the HYP-3511 collapse
+`77 = 64 + 10 + 2 + 1`, the HYP-3522/HYP-3524 owner-emitter chain
+`(23,45,93,113,147,169,173) -> (23,93,113) -> (147,169) -> (45,173)`, the
+HYP-3525 generic `GuardedEmission` fiber-constancy rule, the HYP-3526 route
+guardrail that `I/Q` is private-status only while `R` is the current route
+sidecar, the HYP-3527 eight-clause proof-contract ledger, and the incoming
+HYP-3528 one-red-clause audit including the checksum-only shadow.  The compiled
+contract status histogram is `3` formal-ready clauses, `4` carry-required
+clauses, and exactly `1` open-tail clause:
+`residual_pair_close_tail`.
+The compiled HYP-3528 audit histogram is `5` finite-closed clauses, `2`
+guardrail-closed clauses, `1` open proof debt, and `1` checksum-only shadow,
+again with `residual_pair_close_tail` as the unique open clause.
+
+Tournament-analysis mapping: vertices are proof contracts and sidecar
+obligations, not runners or raw witnesses.  The quotient preserves terminal
+discharge only when the route, owner filtration, free-hole buffer, and vertical
+projection sidecars are retained; it destroys raw row geometry and scalar
+counts, which remain checksums only.  The challenged assumption now recorded
+in Lean is that `I/Q` can replace the route.  It cannot on current data:
+terminal route-bearing clauses retain `R` unless a future reconstruction
+theorem is proved.
+
+Verified with:
+
+```text
+cd 04-computation/lean/TournamentH7
+lake build TournamentH7.LRCRandom031ProofPackets
+```
 
 ## codex-2026-06-29 -- HYP-3523 release-test addendum
 
