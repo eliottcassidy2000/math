@@ -1,0 +1,24 @@
+=== corrected reverse-Markov: fine-scale truncated mean T(theta*) ===
+
+direct: mu_1/7(AP) = 477/1078 = 0.44249  (the sharp floor; AP-minimized)
+
+  theta*   T_AP(t*)   T_PS(t*)  AP<=PS?  floor=(T_AP-1/7)/(t*-1/7)
+ 0.15833    0.13148    0.13523     True          vacuous(T_AP<1/7)
+ 0.16667    0.13462    0.13863     True          vacuous(T_AP<1/7)
+ 0.17000    0.13581    0.13991     True          vacuous(T_AP<1/7)
+ 0.17917    0.13894    0.14324     True          vacuous(T_AP<1/7)
+ 0.18333    0.14029    0.14466     True          vacuous(T_AP<1/7)
+ 0.18500    0.14081    0.14522     True          vacuous(T_AP<1/7)
+
+  ALL truncated-mean floors VACUOUS (T_AP(theta*) < 1/7 for every theta* <= theta*_true~0.185).
+  (direct AP floor 477/1078=0.44249 is sharper; T IS AP-minimized (unlike E[maxgap]),
+   but the reverse-Markov bound from ANY fine-scale mean is VACUOUS => the TAIL mu_1/7 is
+   IRREDUCIBLE. No mean-based reduction closes the floor; AP-minimality of the tail must be
+   proved DIRECTLY (three-gap), not routed through a mean.)
+
+  Non-vacuity scan (T_AP(theta*) vs 1/7):
+    theta*=0.170: T_AP=0.13581  < 1/7 vacuous
+    theta*=0.180: T_AP=0.13921  < 1/7 vacuous
+    theta*=0.185: T_AP=0.14081  < 1/7 vacuous
+    theta*=0.190: T_AP=0.14235  < 1/7 vacuous
+    theta*=0.200: T_AP=0.14521  > 1/7 OK

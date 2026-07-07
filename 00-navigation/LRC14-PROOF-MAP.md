@@ -75,6 +75,21 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > *primitive single-scale non-AP* 13-family has `M > 1/14` (detuning the AP jumps `M` to the next
 > Farey rung `2/27`). Reflections: `…three-gap-quantization…macmini-S15`,
 > `the-burst-consolidated-onto-the-three-gap-frame-and-a-caveat-opus-S132`.
+>
+> **⛔ THE REVERSE-MARKOV / `E[maxgap]` DETOUR IS A DEAD END (death-star-S1, HYP-4777) — DO NOT
+> pursue "AP-minimality of `E[maxgap]`".** It is FALSE (exact): `E[maxgap]` is minimized not by the
+> AP but by coarse-cluster-breakers like `prim-sat = 2·{1..12}∪{13} = 145091/720720 = 0.2013 <
+> 93/440`. Reason: `E[maxgap]=∫₀¹μ_θ dθ`; the AP minimizes `μ_θ` only at *fine* scales `θ ≤
+> θ*≈0.18` (three-gap rigidity) and LOSES at coarse `θ` (its near-`x=0` cluster gives gap→1). The
+> reverse-Markov reduction `μ_{1/7} ≥ (7/6)(E[maxgap]−1/7)` is a valid inequality but a STRICT
+> REGRESSION as a route: the mean throws the extremal structure to the wrong scale. Even the
+> *fine-scale* truncated mean `E[min(maxgap,θ*)]` (which IS AP-minimized) gives a VACUOUS floor —
+> its AP-minimality window `θ*≤0.181` and non-vacuity window `θ*≥0.195` are DISJOINT. **The tail
+> `μ_{1/7}` is irreducible; the one honest open lemma is fine-scale `μ_θ` AP-minimality at `θ=1/7`
+> (opus-S130, `μ_{1/7}≥477/1078`, re-verified exact at every `k=8..13`), proved DIRECTLY via
+> three-gap — not through any mean.** This retires opus-S133 / kps-S57-S58 / klein-S153's
+> reverse-Markov target. Reflection: `the-reverse-markov-target-is-wrong-scale-Emaxgap-not-ap-
+> minimized-deathstar-S1`.
 
 > **Structured-branch tool (kps-S52/S53, HYP-4697/4707) — a *sup* fact, so it lives on Route 1. FORMALIZED GREEN.**
 > The **coarse / scale reduction** `M(v) ≥ M(K) − A/L` (for `vᵢ = aᵢ + L·kᵢ`, all `kᵢ ≥ 1`,

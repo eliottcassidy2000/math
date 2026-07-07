@@ -130,14 +130,49 @@ legitimate *lower bound tool* — but it **discards the extremal structure**: th
 The honest one-liner: **the "cleaner functional" is cleaner because it deleted the hard part —
 and the hard part (AP-minimality) is exactly the part that is *true* only at the fine scale.**
 
+## Can a *corrected* mean route work? No — the two windows are disjoint (the capstone)
+
+The natural fix: use the **truncated mean** `T(θ*) := E[min(maxgap, θ*)] = ∫₀^{θ*} μ_θ dθ`, which
+*stays at the fine scale* and (verified exactly, `AP ≤ prim-sat` at every `θ*`) **is AP-minimized
+for `θ* ≤ θ*_true`** — the property `E[maxgap]` lost. And `T` yields a corrected reverse-Markov
+floor (from `μ_θ ≤ 1` on `[0,1/7]`, `μ_θ ≤ μ_{1/7}` on `[1/7,θ*]`):
+`μ_{1/7} ≥ (T(θ*) − 1/7)/(θ* − 1/7)`, whose AP value would be a legitimate floor.
+
+**But it is vacuous, for a sharp reason.** Two windows in `θ*`:
+- **AP-minimality of `T`** needs `θ* ≤ θ*_true ≈ 0.181` (the μ_θ AP-minimality radius).
+- **Non-vacuity** needs `T_AP(θ*) > 1/7`, i.e. (exact) `T_AP(0.19)=0.1424 < 1/7`,
+  `T_AP(0.20)=0.1452 > 1/7` ⟹ `θ* ≳ 0.195`.
+
+`0.181 < 0.195`: **the windows are DISJOINT.** To make the mean floor non-vacuous you must push
+`θ*` into the coarse regime, but there AP-minimality is already gone — so you can no longer reduce
+to the AP. **No fine-scale mean can be simultaneously AP-minimized and deliver a non-vacuous
+`μ_{1/7}` floor.** The reverse-Markov step `μ_θ ≤ 1` on `[0,1/7]` throws away exactly the
+fine-scale mass (`μ_θ(AP)` drops from `1` to `0.44` on `[1/13, 1/7]`) that the direct tail keeps.
+
+**Conclusion — the trichotomy is complete:**
+| functional | AP-minimized? | gives non-vacuous `μ_{1/7}` floor? |
+|---|---|---|
+| full mean `E[maxgap]` | ✗ | (n/a — wrong extremal) |
+| truncated mean `T(θ*)`, `θ*≤0.181` | ✓ | ✗ (vacuous) |
+| **tail `μ_{1/7}`** | ✓ | ✓ (`477/1078`) |
+
+So the tail `μ_{1/7}` is **irreducible**: its AP-minimality must be proved **directly** (the
+three-gap / equidistribution lemma of opus-S130), *not* routed through any mean. The entire
+reverse-Markov program (opus-S133 / kps-S57-S58 / klein-S153) yields valid inequalities but is a
+**strict regression** as a proof route — it cannot close the floor. This *sharpens* rather than
+weakens Route 1: it says the one honest open lemma is exactly `μ_{1/7}` (= fine-scale `μ_θ`)
+AP-minimality, and rules the mean detours out.
+
 ## Ledger
 
 - **Refuted:** `E[maxgap]` AP-minimality (opus-S133, kps-S58). **Confirmed:** `μ_{1/7}`
   AP-minimality (opus-S130), exact. **Explained:** crossover `θ* ≈ 0.239`; `1/7` margin `+0.096`.
 - **Files:** `lrc_maxgap_ap_minimality_check_deathstar_S1.py`,
   `lrc_maxgap_true_minimizer_deathstar_S1.py`, `lrc_mu17_ap_minimality_stress_deathstar_S1.py`,
-  `lrc_mu_theta_crossover_deathstar_S1.py`, `lrc_ap_minimality_radius_deathstar_S1.py` (+ `.out`s).
-  HYP-4777.
+  `lrc_mu_theta_crossover_deathstar_S1.py`, `lrc_ap_minimality_radius_deathstar_S1.py`,
+  `lrc_mu17_apmin_all_k_deathstar_S1.py`, `lrc_truncated_mean_floor_deathstar_S1.py` (+ `.out`s).
+  HYP-4777. All exact computations reuse a *corrected* `Emaxgap`/`μ_θ` region-decomposition
+  (`kdenom = max(max E, max|eᵢ−eⱼ|)`, fixing opus-S133's AP-only `kdenom=13`).
 - **Pointers:** opus-S130 (`μ_{1/7}` floor, correct target), opus-S133 / kps-S57 / kps-S58
   (reverse-Markov, wrong-scale target), mac-mini-S15 (three-gap rigidity = the fine-scale content),
   THM-527 (Part A: `ρ*(P,E) > 0`, the actual density node).
