@@ -1,0 +1,19 @@
+L = lcm(2..32) = 144403552893600
+CHALLENGE: compressed, all-positive VARYING k (k in {1,2}), == AP mod L, NOT a translate.
+kps-S49 dichotomy: translate (uniform k) OR mixed-k-with-a-zero (non-compressed). Missing this case?
+
+           alt 1,2: compressed=True (ratio 2.00), ==AP mod L=True
+     min clearing q = 37  CLEARS at q=37 >32 !!
+     clears q=37,c=1,mu=3 => M >= 3/37 = 0.0811 >2/25 LOOSE
+     half 1 half 2: compressed=True (ratio 2.00), ==AP mod L=True
+     min clearing q = 37  CLEARS at q=37 >32 !!
+     clears q=37,c=1,mu=3 => M >= 3/37 = 0.0811 >2/25 LOOSE
+             one 2: compressed=True (ratio 2.00), ==AP mod L=True
+     min clearing q = 37  CLEARS at q=37 >32 !!
+     clears q=37,c=1,mu=3 => M >= 3/37 = 0.0811 >2/25 LOOSE
+      k in {1,2,3}: compressed=True (ratio 3.00), ==AP mod L=True
+     min clearing q = 37  CLEARS at q=37 >32 !!
+     clears q=37,c=1,mu=3 => M >= 3/37 = 0.0811 >2/25 LOOSE
+
+  KEY: does the all-positive varying-k family clear at q<=32 (kps right), q>32 (Q0 too small),
+       or NO q (gap member / peels)?  This tests the completeness of the node dichotomy.
