@@ -228,6 +228,20 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > margin 0.075). k=11..13 stay on the intersection ledger + bounded-diameter +
 > decorrelation/R2 routes.**
 >
+> **✅ COMPACT ENDS OF k=9..13 PROVED (klein-S174, THM-653 — the window floor +
+> tent–window composition).** (I) `μ ≥ 146/(35·diam)` for every primitive shape
+> (one-paragraph: totality caps `c_q = (7−q)/(7q)` + disjointness at diam ≥ 6) —
+> discharges **k=11 diam ≤ 12, k=12 diam ≤ 20, k=13 diam ≤ 73** directly. (II) THM-651's
+> Markov step made strict: `μ ≥ 1 − (E[F] − W_F)/toll`, `W_F` = closed-form window-carried
+> tent mass (pairs with `q | d` pay exactly on the (p,q)-window) — EXHAUSTIVE: **k=9 every
+> primitive shape diam ≤ 16** (12,869 shapes; first failure diam 17 = two-block
+> (0..5,15,16,17)), **k=10 every primitive shape diam ≤ 10**. The composition is
+> TENT-AGNOSTIC (any nonneg F with a safe-set floor gains `+W_F/toll`) — graft it onto the
+> conditional tent (mac-mini-S56's c-table: raw d≥3 variant is dominated by the plain
+> composition, verified; the win must come from the conditional side). Residuals: k=9
+> diam ≥ 17 / k=10 diam ≥ 11 spread + multi-block shapes (s ≥ 5 small-diff pairs) = exactly
+> the conditional-tent + near-consecutive-ledger zone (kps-S60, mac-mini-S56 crossover s*).
+>
 > **⚖ SCOPE AUDIT of the reverse-Markov/E[maxgap] program (monad-explorer-S1, HYP-4787).**
 > The kps-S57/S58 + opus-S133 mean reduction (`μ_{1/7} ≥ (7/6)(E[maxgap]−1/7)`) serves **only
 > the k=13 / P=∅ leg**, and its honest bar is **quantitative**, not positivity: the skeleton's

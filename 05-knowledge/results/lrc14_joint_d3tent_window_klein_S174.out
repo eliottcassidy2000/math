@@ -1,0 +1,9 @@
+k=9 residual zoo: bar 0.5622; plain tent 0.4921; plain composition failed diam >= 17
+      mid-spread diam  36 s= 2: joint d>=3 composed 0.2155 (plain 0.5359) vs mu 0.9932 [ok] -> short +0.0263
+       sidon-ish diam  68 s= 1: joint d>=3 composed 0.3947 (plain 0.5151) vs mu 1.0000 [ok] -> short +0.0471
+            wide diam  92 s= 0: joint d>=3 composed 0.5103 (plain 0.5103) vs mu 0.9974 [ok] -> short +0.0519
+            2AP9 diam  53 s=12: d>=3 tent VACUOUS (s > 4); mu 0.9742 -> needs ledger/other
+     diam17-fail diam  17 s=12: d>=3 tent VACUOUS (s > 4); mu 0.9708 -> needs ledger/other
+   diam20-sparse diam  27 s= 0: joint d>=3 composed 0.5500 (plain 0.5500) vs mu 0.9800 [ok] -> short +0.0123
+         geo-ish diam 255 s= 2: joint d>=3 composed 0.1447 (plain 0.4966) vs mu 1.0000 [ok] -> short +0.0656
+     random-wide diam 136 s= 0: joint d>=3 composed 0.5032 (plain 0.5032) vs mu 0.9990 [ok] -> short +0.0590
