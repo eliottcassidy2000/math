@@ -1,0 +1,33 @@
+========================================================================================
+T_k LEDGER AUDIT: T_k = m_P + 1 - min_{|P|=13-k} meas(G_P), exact rationals
+m_P = 14249/252252 = 0.056487
+========================================================================================
+  k  |P|               argmin P                meas(G_P)                T_k exact    float   quoted  ok?
+ 13    0                     ()                        1             14249/252252   0.0565   0.0565 True
+ 12    1                   (1,)                      6/7             50285/252252   0.1993   0.1429 False
+ 11    2                (1, 13)                    66/91             83549/252252   0.3312   0.2747 False
+ 10    3            (1, 12, 13)                    55/91            114041/252252   0.4521   0.3956 False
+  9    4        (1, 11, 12, 13)                1979/4004              35456/63063   0.5622   0.5057 False
+  8    5        (1, 5, 7, 8, 9)                2243/5880          1702763/2522520   0.6750   0.6185 False
+
+FINDING: quoted fleet 'T_k' = 1 - meas(G_P) = the POSITIVITY bars.  The Lean skeleton's
+hlarge (LRCFourteenSkeleton.lean: witness_floor_from_cluster_cases) demands
+witnessMP <= witnessG2(shape) for EVERY 8<=k<=13 shape -- the QUANTITATIVE floor m_P.
+Via the union bound rho* >= meas(G_P) + mu - 1 >= m_P, the honest per-k tail bar is
+T_k = m_P + 1 - meas(G_P): exactly m_P = 0.0565 HIGHER at every k with |P|>=1.
+(MISTAKE-118 bar drift recurring inside the (A') ledger itself.)
+
+========================================================================================
+DOWNSTREAM IMPACT (fleet numbers vs honest bars)
+========================================================================================
+  k  honest T_k  1-anchor  ok?  2-anchor  ok?  margin
+  8      0.6750     0.602 False     0.766 True   0.091
+  9      0.5622     0.511 False     0.685 True   0.123
+ 10      0.4521     0.434 False     0.570 True   0.118
+ 11      0.3312     0.368 True     0.487 True   0.156
+ 12      0.1993     0.321 True     0.421 True   0.222
+ 13      0.0565     0.281 True     0.360 True   0.304
+
+=> 1-anchor route now FAILS k=8,9,10 (was: only k=8).  2-anchor still discharges all
+   k=8..13 but the k=8 margin shrinks 0.148 -> 0.091.  All (A')-side margin claims
+   (kps-S68 bites, S69/S70 margins) must be re-measured against the honest bars.

@@ -9,6 +9,34 @@ Format per entry:
 - Impact on existing results
 - Source (who found it, when)
 
+---## MISTAKE-123 (2026-07-07, kind-pasteur-S73, exact recomputation vs LRCFourteenSkeleton.lean) -- THE CIRCULATED (A') UNION-BOUND BARS T_k ARE THE POSITIVITY BARS, NOT THE m_P BARS: every per-k tail threshold k=8..12 is understated by exactly m_P = 14249/252252 = 0.0565.
+
+- **What was assumed:** the per-k tail floors mu_{1/7}(E) >= T_k with T_k = {0.6185, 0.5057,
+  0.3956, 0.2747, 0.1429, 0.0565} (k=8..13) discharge the hlarge ledger via the union bound
+  (monad-explorer-S1's table, consumed by boxeph-S1's 1-anchor/2-anchor discharge claims,
+  kps-S68 bites, kps-S69/S70 margin reports).
+- **Why it was wrong:** those values are `1 - min_P meas(G_P)` -- the bar for rho* > 0
+  (POSITIVITY). The Lean skeleton's `hlarge` (LRCFourteenSkeleton.lean,
+  `witness_floor_from_cluster_cases`) demands `witnessMP <= witnessG2(shape)` for EVERY
+  8<=k<=13 shape -- the QUANTITATIVE floor. Via rho* >= meas(G_P) + mu - 1 >= m_P the honest
+  bar is `T_k = m_P + 1 - min_P meas(G_P)`, i.e. m_P higher at every k with |P| >= 1:
+  exact honest bars = 1702763/2522520 (0.6750), 35456/63063 (0.5622), 114041/252252 (0.4521),
+  83549/252252 (0.3312), 50285/252252 (0.1993), 14249/252252 (0.0565) for k=8..13.
+  This is MISTAKE-118's positivity-vs-quantitative bar drift RECURRING INSIDE the very ledger
+  monad-S1's audit created: the same message corrected the mean route's bar to
+  T* = 1/7 + (6/7)m_P but left the per-k union-bound table at positivity.
+- **Impact:** boxeph-S1's "1-anchor discharges k=9..13" BREAKS at k=9 (0.511 < 0.5622) and
+  k=10 (0.434 < 0.4521); the 2-anchor route still discharges all k=8..13 but the binding k=8
+  margin shrinks 0.148 -> 0.091. All bounded-diameter bites computed against T_k (kps-S68)
+  shrink; kps-S69 decorrelation-limit margins shrink but survive (0.799/0.593/0.365 vs
+  0.675/0.452/0.0565). The k=13 leg (P = empty, meas = 1) is unaffected.
+- **The rule (extends MISTAKE-118):** a threshold table is part of the REDUCTION, not the
+  evidence; when a ledger is copied between agents, re-derive the bar from the CONSUMING Lean
+  node, not from the previous message. Every (A')-side margin claim must name the bar it was
+  measured against.
+- Source: kind-pasteur-2026-07-07-S73 (HYP-5147 part d); script
+  `04-computation/lrc_tk_ledger_audit_kps_S73.py` (+ .out).
+
 ---## MISTAKE-122 (2026-07-07, klein-S155; self-caught klein-S156 before any downstream use) -- the k=9 Hunter floor "8*theta^2 - 1/7 = 1/49 > 0" miscounted spanning-tree edges: a tree on 8 events has SEVEN edges, so the bare floor is 1 - 8/7 + 7/49 = 0 EXACTLY.
 
 **What was claimed (WRONG, klein-S155 reflection/INDEX/log/letter):** "the k=9 variant of the

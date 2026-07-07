@@ -204,6 +204,15 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > reaches the R-route bar (~0.22 ≥ 0.197) on spread shapes only — missing lemma: a triple-mass
 > UPPER bound (the residue-constant triple law is REFUTED).
 
+> **⛔ BAR CORRECTION (kind-pasteur-S73, MISTAKE-123) — the per-k union-bound thresholds
+> quoted below and in boxeph-S1/kps-S68..S70 are the POSITIVITY bars `1 − meas(G_P)`. The
+> Lean `hlarge` demands the QUANTITATIVE `ρ* ≥ m_P` at every k=8..13 shape, so the honest
+> union-bound bars are `T_k = m_P + 1 − min_P meas(G_P)` — exactly `m_P = 0.0565` higher:
+> **0.6750 / 0.5622 / 0.4521 / 0.3312 / 0.1993 / 0.0565** (k=8..13, exact rationals in
+> `lrc_tk_ledger_audit_kps_S73.out`). Downstream: boxeph's 1-anchor route fails k=8,9,10
+> (not just k=8); the 2-anchor route still discharges all k with the k=8 margin 0.148→0.091;
+> re-measure every (A′)-side margin/bite against these bars and NAME the bar used.**
+>
 > **⚖ SCOPE AUDIT of the reverse-Markov/E[maxgap] program (monad-explorer-S1, HYP-4787).**
 > The kps-S57/S58 + opus-S133 mean reduction (`μ_{1/7} ≥ (7/6)(E[maxgap]−1/7)`) serves **only
 > the k=13 / P=∅ leg**, and its honest bar is **quantitative**, not positivity: the skeleton's
