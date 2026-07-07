@@ -1,0 +1,20 @@
+C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\lrc_F6_tightlocus_swapscan_opus_S134.py:7: SyntaxWarning: invalid escape sequence '\{'
+  Scan (normalized): all 1-swap families {1..k}\{j} u {m}, j=1..k, m=k+1..k+27,
+(0) F7 pointwise identity {max_a gap_at_a>1/7} == {maxgap>1/7}:
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]    disagreement measure = 0.00e+00
+    [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 11,   disagreement measure = 0.00e+00
+    [6, 11, 14, 16, 20, 26, 31, 34, 37, 38, 46,    disagreement measure = 0.00e+00
+
+(1) k=13 1-swap scan (normalized), bar=0.442486
+    scanned 351;  t_F6 below bar: 0;  mu below bar (A'-viol): 0
+    worst t_F6 = 0.44249 (mu=0.44249) at swap j=1->m=14
+(2) k=13 2-swap sample (normalized)
+    scanned 468;  t_F6 below bar: 0
+    worst t_F6 = 0.58390 (mu=0.58537) at (12, 13, 26, 27)
+
+(1) k=12 1-swap scan (normalized), bar=0.569903
+    scanned 324;  t_F6 below bar: 0;  mu below bar (A'-viol): 0
+    worst t_F6 = 0.56990 (mu=0.56990) at swap j=1->m=13
+(2) k=12 2-swap sample (normalized)
+    scanned 396;  t_F6 below bar: 0
+    worst t_F6 = 0.62630 (mu=0.62630) at (2, 3, 14, 13)

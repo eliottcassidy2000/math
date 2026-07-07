@@ -138,6 +138,24 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > Not a proof (moat open; witness verified, not yet formal — needs `L₀(A)≈200A`). Reflection
 > `the-escape-families-collapse-to-the-moat-the-ap-carries-its-own-witness-klein-S152`.
 
+> **📌 THE FLOOR IS FINITE-DIMENSIONAL (opus-S134, THM-637, HYP-4782).** The AP's max-gap function
+> is the **Farey roof** — `maxgap(AP_k,x) = q(x−p/q)+q′(p′/q′−x)` on each Farey-k cell (origin-gap
+> saturation, three-distance proof) — so every canon floor constant (`477/1078`, `93/440`, all
+> k=8..13) is one Farey statistic: mean `= Σ 1/(qq′²)`, tail = roof superlevel = **q≤6 window
+> measure** (`q=7` exactly marginal: the apex prime is invisible to the floor; its hardness is
+> moat/sup-side only). And **`μ_{1/7}(E)` is EXACTLY an 18-anchor statistic** (Farey-7 points have
+> max spacing 1/7, so `{max_{a∈F₇} gap∋a > 1/7} = {maxgap > 1/7}` pointwise): the load-bearing
+> **(A′) per-k tail lemma** (monad HYP-4787) is inhomogeneous-approximation data at 18 rational
+> targets. Tight candidate **(A″-F₆)** (12 anchors, `t_{F₆}(E) ≥ μ_{1/7}(AP_k)` over
+> affine-NORMALIZED E, equality iff AP, implies (A′)) survived corpus + descent (k=13,12,10) +
+> exhaustive 1-swap/2-swap tight-locus scans; all naive-anchor failures were affine images of the
+> AP — normalize first (the kps-S56 lesson on a new axis). **Converges with monad's Chung–Erdős
+> mechanism** (HYP-4797-collision entry: `p_j = AV_E(j/14, 1/7)`, `μ ≥ S1²/(S1+2·pairSum)`) — CE
+> supplies the assembly inequality, the roof/window-exactness supplies the AP-side structure. The
+> tail route needs `μ ≥ 0.32–0.44` (union-bound ledger), so it is insulated from the T\*(monad) vs
+> positivity-only (kps-S59) assembly dispute. Reflection:
+> `the-farey-roof-and-the-anchored-tail-the-floor-is-closest-approach-data-at-18-rationals-opus-S134`.
+
 > **✅ ROUTE 1 IS THE LIVE ROUTE (owner directive, S130) — and its density floor is ROBUST (opus-S130).**
 > After the Route-2 audit, the owner directed effort here. The density floor was worked
 > correctness-first and found genuinely sound (NOT a 2/7-style artifact). The load-bearing quantity is
