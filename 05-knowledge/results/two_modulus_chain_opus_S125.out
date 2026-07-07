@@ -1,0 +1,8 @@
+(1) full-transversal + mod-13 COLLISION: 28148 tested; NOT loose (M<2/25): 0
+    => (1) 'HOLDS: collision => loose'
+(2) full-transversal + DISTINCT mod-13 + M<2/25: 1545 distinct tested; non-AP with M<2/25: 0
+    => (2) 'HOLDS: distinct + M<2/25 => AP'
+
+If BOTH hold: (b) = (1)[collision=>loose] + (2)[distinct+tight=>AP]. (1) is a mod-13-collision
+clearance (kps collision lane); (2) is the pinned-lift rigidity (opus S103-105 + fleet). The
+two-modulus rigidity: full-transversal-mod-25 forces the top (M<2/25), and mod-13 forces the AP.

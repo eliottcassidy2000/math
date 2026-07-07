@@ -18,6 +18,21 @@ SCOPE: canonical difference-1 base; general dilated-11-AP+outlier reduces via op
 FILES: 04-computation/lean/.../LRCLadderD1.lean (kernel-pure) + root import; 01-canon/theorems/THM-633-d1-ladder-bound.md; 05-knowledge/results/lrc_d1_ladder_witnesses_macmini_S33.out; INDEX. No canon overridden.
 
 NEXT: (a) formalize the d=2 bound (10-AP + 2 outliers => M>=2/25) -- the last (C) piece with the plateau; (b) the dilated-11-AP generalization via opus-S110; (c) opus wiring (A)->Mreach + the mod-25 moat rigidity (opus-S124 (b)).
+## opus-2026-07-06-S125 -- THE CRUX RESIDUAL FACTORS BY TWO MODULI (25 top, 13 bottom, AP survivor) (HYP-4576)
+
+Prompt: work on closing (C) of the crux creatively.
+
+FACTORED the S124 residual (b) [full-transversal-mod-25 => M=1/13 or >=1/12] into two modular clearances, making mac-mini S32's two-modulus frame precise. Among full-transversals with M<2/25 (verified all 198 are the AP), split by mod-13:
+  (1) mod-13 COLLISION (v_i==v_j mod 13) => M>=2/25 LOOSE. VERIFIED: 28148 collision full-transversals, 0 with M<2/25.
+  (2) DISTINCT mod 13 (pinned) + M<2/25 => AP. VERIFIED: 1545 distinct full-transversals, 0 non-AP below 2/25.
+=> (C) = (1)[collision => loose] + (2)[doubly-saturated + M<2/25 => AP = pinned-lift rigidity].
+
+TWO-MODULUS PICTURE: gap width = 1/(13*25) = product of the boundary denominators. 25=2N+1 clears the TOP (non-transversal => loose; kps GREEN), 13=N+1 clears the BOTTOM (mod-13 collision => loose; opus verified). The AP is the unique DOUBLY-SATURATED (full transversal mod 25 AND distinct mod 13) family with M<2/25. A gap member would have to evade both clearances (doubly-saturated) AND be a nonzero 13-lift of the AP -- and (2) says no such thing exists.
+
+HONEST: mod-25 clearance GREEN (kps); (1) verified but mechanism is NOT a simple mod-13 rotation (a mod-13 rotation clears only at radius 1/13 < 2/25, too weak) -- the collision-=>-loose uses collision-misses-a-residue + the mod-25 transversal over-constraint jointly; mechanism open. (2) = the pinned-lift rigidity (opus S103-105 + fleet), the last hard node.
+
+Files: reflection the-crux-residual-factors-by-two-moduli-25-top-13-bottom-opus-S125; results two_modulus_chain / (full-transversal explore) _opus_S125; HYP-4576. No new Lean (factoring + verification). RESIDUAL: (1) collision-clearance mechanism + (2) doubly-saturated-lift => AP.
+
 ## mac-mini-2026-07-06-S32 -- kps's mod-25 covering core = a PAIR-BLOCKING RIGIDITY: mod-25 covering fails <=> V blocks all 10 unit +-pairs; the AP is the UNIQUE tight blocker (554/150k blockers, only AP <2/25); three-case closure => AP is the unique 12-family with M<2/25 = (G) (HYP-4622)
 
 Prompt (owner): do a session creatively whittling away the crux.
