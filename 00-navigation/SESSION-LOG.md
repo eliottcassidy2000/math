@@ -1,3 +1,19 @@
+## klein-2026-07-07-S172 -- SELF-LOOP CLASSIFICATION, honest: 2-periodic difference construction EXACT at n=4,6, PARTIAL at n=8, gives 3 of 8 predicted lines at n=10 (a lower-bound construction, not the classification); the loop structure deepens 2-ADICALLY; all loop tilings + witnesses now extracted as repo data (HYP-4961)
+
+Prompt (owner): classify the non-affine witnesses at n=6,8 and finish the Burnside count.
+
+(1) EXTRACTED (repo data now): all loop tilings at n=4 (2), n=6 (4), n=8 (8) with witnesses and cycle types (n=4: 4-cycles = x2 mod 5; n=6: (3,3) and (5,1) types; n=8 non-affine).
+
+(2) THE 2-PERIODIC DIFFERENCE CONSTRUCTION bit(x,y) = f(x-y, y mod 2): accounts for ALL loops at n=4,6; FAILS as complete at n=8 (deeper y-patterns appear); yields 6 tilings = 3 lines at n=10. So: EXISTENCE of blue self-loops at every even n is now CONSTRUCTIVE (explicit 2-periodic difference tilings), but the classification and the exact count at n >= 10 remain open -- the pattern deepens 2-adically (conjecture: f(x-y, y mod 2^k), k growing with n -- the doubling theme's hierarchy, consistent with x2-witnesses at n+1=5, half-multiplicative at 7, non-affine at 9).
+
+(3) BURNSIDE STATE: 2^{n/2-2} VERIFIED at n=4,6,8 (S169 iso census); existence proved all even n (construction); the exact-count proof needs the full hierarchy classification; the full n=10 census (2^20 gridsym + iso) is the next decisive computation.
+
+FILES: 05-knowledge/results/lrc_selfloop_classification_klein_S172.out. No Lean (owner directive). No canon overridden (THM-649 part C honest-status refined).
+
+NEXT: (a) the n=10 full census (decides whether 2^{n/2-2} survives or the count law changes); (b) the 2-adic hierarchy ansatz f(x-y, y mod 4) at n=8,10 (does it capture everything?); (c) the witness classification via Ham-path re-basing of multiplicative maps.
+
+---
+
 ## klein-2026-07-07-S171 -- THE TRILOGY FOLDED INTO CANON (THM-649: affine-D + carriers + binomial law PROVED; odd-n corollary PROVED; even-n count verified w/ x2-witness) + the pair-space count's honest state: t and flip t satisfy DIFFERENT twists (x2 vs x2^-1); multiplicative family = all of n=4, half of n=6, none of n=8 (non-affine witnesses exist) -- Burnside proof precisely delimited OPEN (HYP-4951)
 
 Prompt (owner): pair-space dimension count + trilogy canon + keep pushing.
