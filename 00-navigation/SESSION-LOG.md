@@ -1,10 +1,10 @@
-## mac-mini-2026-07-07-S41 -- PZ-ON-U: the k=13 density floor is a CV BOUND -- mu_{1/7} >= E[U]^2/E[U^2] = 1/(1+CV(U)^2) >= (7/6)E[U]; adversarial floors PZ>=0.2606 (4.61x m_P) / E[U]>=0.0938 (1.94x reduced bar); balanced-lattice truncation is NON-perturbative (dead end, extends HYP-4767 to the density side); cover-or-decorrelate dichotomy proposed for kps-S59's D>75 residual (HYP-4817, MISTAKE-120)
+## mac-mini-2026-07-07-S41 -- PZ-ON-U: the k=13 density floor is a CV BOUND -- mu_{1/7} >= E[U]^2/E[U^2] = 1/(1+CV(U)^2) >= (7/6)E[U]; adversarial floors PZ>=0.2606 (4.61x m_P) / E[U]>=0.0938 (1.94x reduced bar); balanced-lattice truncation is NON-perturbative (dead end, extends HYP-4767 to the density side); cover-or-decorrelate dichotomy proposed for kps-S59's D>75 residual (HYP-4837 [renumbered from 4817, ceded to monad-S2 tail-diameter], MISTAKE-120)
 
 Prompt (owner): long session -- deeply understand LRC14 history/relations/corrections/validity, what we've been missing/misguided, then investigate; forgotten factoids, extend/connect; how/why not just if; push/pull often.
 
 AUDIT PHASE (converged with boxeph-S1/monad-S1/klein-S154 running the same directive concurrently -- ceded overlaps, cited): traced Route-2 rise/retirement (MISTAKE-116/117), THM-527's 2/7->1/7 threshold correction (THM-530), the S130-S134 burst, the two-architecture conflation (monad HYP-4787 published it first; my independent finding ceded). FORGOTTEN TOOLS RECONNECTED: THM-579 (June 29, mine -- CV(N_R) Cauchy-Schwarz for the covering floor) and kps-S6-wf's net-characterization ({U=0} nets only at q>=7 rationals) both slot exactly into the current frontier.
 
-FINDINGS (HYP-4817):
+FINDINGS (HYP-4837):
  1. THE CHAIN: U(x)=sum(g_j-1/7)_+ = meas{s: 1/7-window at s empty}; {U>0}={maxgap>1/7}; mu_{1/7}=P(U>0) >= E[U]^2/E[U^2] (PZ) >= (7/6)E[U] (U<=6/7 pointwise => PZ DOMINATES opus-S131's first moment everywhere). k=13 bar mu>=m_P reduces to ONE linear target: inf_E E[U_{1/7}] >= (6/7)m_P = 0.04842.
  2. FLOORS (descents at the RIGHT functionals, 13-pt enforced): inf E[U]~0.0938 (1.94x) at the 3-ADIC CASCADE (0,30,36,45,...,108) -- same c-fold interlacing mechanism as monad's parity record but mod 3; inf PZ~0.2606 (4.61x). CV(U)^2 <= 2.84 vs 16.7 allowed.
  3. UNIFICATION: monad's Chung-Erdos (HYP-4797 mechanism) IS PZ on the 14-anchor count; U = continuous-anchor limit (E[U]~S1/14 numerically confirmed); no anchor choice, exact piecewise-rational moments.
@@ -17,7 +17,7 @@ FINDINGS (HYP-4817):
 
 MISTAKE-120 (self-caught): "{0,2..12,17,28}" transcribed as 14 points (true family skips 11); two part-2 "records" were 14-pt artifacts; rule = assert len(set(E))==13 + copy explicit lists.
 
-FILES: lrc14_{Uprofile_pz_ladder, EU_balanced_lattice, EU_floor_mechanism, gap_superset_ledger}_macmini_S41.py (+4 .out); reflection the-density-floor-is-a-cv-bound-pz-on-the-avoidance-profile-macmini-S41; HYP-4817 (INDEX); MISTAKE-120; proof-map PZ-ON-U block. No canon overridden. NB: HYP-4797 double-claimed (kps-S59 stub + monad late entry) -- flagged, not resolved by me.
+FILES: lrc14_{Uprofile_pz_ladder, EU_balanced_lattice, EU_floor_mechanism, gap_superset_ledger}_macmini_S41.py (+4 .out); reflection the-density-floor-is-a-cv-bound-pz-on-the-avoidance-profile-macmini-S41; HYP-4837 (INDEX); MISTAKE-120; proof-map PZ-ON-U block. No canon overridden. NB: HYP-4797 double-claimed (kps-S59 stub + monad late entry) -- flagged, not resolved by me.
 
 NEXT: (a) exact-rational port of E[U]/E[U^2] (death-star integrator / kps-S6-wf arcs -- mechanical); (b) the GAP mu-ledger as a finite theorem (2-dim three-distance; (d1,d2)-independence proof); (c) E[U 1_{G_P}] version of THM-579's projection for the k=8..12 legs (s-average kills the same pairs); (d) the D>75 x cover-or-decorrelate assembly.
 

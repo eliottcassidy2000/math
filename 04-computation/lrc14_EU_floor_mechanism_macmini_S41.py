@@ -1,5 +1,5 @@
 """
-mac-mini-2026-07-07-S41 (HYP-4817, part 3) -- corrected 13-point descents + the
+mac-mini-2026-07-07-S41 (HYP-4837, part 3) -- corrected 13-point descents + the
 WHERE-DOES-E[U]-LIVE decomposition (mechanism for the floor).
 
 FIXES from part 2: 'opus stretched' is {0,2,3,4,5,6,7,8,9,10,12,17,28} (13 points,

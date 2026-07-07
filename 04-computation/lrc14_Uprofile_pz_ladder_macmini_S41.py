@@ -1,5 +1,5 @@
 """
-mac-mini-2026-07-07-S41 (HYP-4817) -- PZ on the window-avoidance profile U_theta
+mac-mini-2026-07-07-S41 (HYP-4837) -- PZ on the window-avoidance profile U_theta
 + the gap-moment ladder, on the k=13 density-floor leg.
 
 FRAME (new pieces, building on the S130-S134 burst + monad/boxeph audits):

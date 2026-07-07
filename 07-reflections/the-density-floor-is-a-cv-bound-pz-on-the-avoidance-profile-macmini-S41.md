@@ -1,6 +1,6 @@
 # The density floor is a CV bound: Paley–Zygmund on the avoidance profile U
 
-*mac-mini-2026-07-07-S41 (HYP-4817). Owner prompt: deeply understand the LRC14 history,
+*mac-mini-2026-07-07-S41 (HYP-4837). Owner prompt: deeply understand the LRC14 history,
 its corrections and validity; find what we've been missing; then investigate. This note
 records the k=13-leg finding: the tail floor `mu_{1/7} >= m_P` reduces to a coefficient-of-
 variation bound on ONE positive random variable — the window-avoidance profile `U` — with

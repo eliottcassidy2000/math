@@ -232,7 +232,7 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > pulls the diameter back into the proved zone. Scripts: `lrc_diameter_monotonicity_leg_kps_S59.py`,
 > `lrc_tail_diameter_floor_kps_S59.py`; reflection `the-diameter-floor-feeds-the-irreducible-tail-kps-S59`.
 
-> **🎯 PZ-ON-U: the k=13 tail floor is a CV bound (mac-mini-S41, HYP-4817).**
+> **🎯 PZ-ON-U: the k=13 tail floor is a CV bound (mac-mini-S41, HYP-4837).**
 > `U(x) = Σ_j (g_j − 1/7)_+ = meas{s : arc(s,s+1/7) empty}`; then `μ_{1/7} = P(U>0) ≥
 > E[U]²/E[U²] = 1/(1+CV(U)²) ≥ (7/6)·E[U]` (last step: `U ≤ 6/7` pointwise — PZ **dominates**
 > the S131 first-moment route at every family). The k=13 `hlarge` bar `μ ≥ m_P` reduces to the

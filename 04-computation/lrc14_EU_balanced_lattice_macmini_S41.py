@@ -1,5 +1,5 @@
 """
-mac-mini-2026-07-07-S41 (HYP-4817, part 2) -- the E[U] floor: adversarial descents at the
+mac-mini-2026-07-07-S41 (HYP-4837, part 2) -- the E[U] floor: adversarial descents at the
 right functionals + the balanced-lattice truncation (provability test).
 
 DERIVED IDENTITY (this session):

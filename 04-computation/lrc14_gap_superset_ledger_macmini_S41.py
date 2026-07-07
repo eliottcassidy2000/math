@@ -1,5 +1,5 @@
 """
-mac-mini-2026-07-07-S41 (HYP-4817, part 4) -- seeding the FREIMAN-DICHOTOMY completion
+mac-mini-2026-07-07-S41 (HYP-4837, part 4) -- seeding the FREIMAN-DICHOTOMY completion
 of the k=13 tail floor, on top of kps-S59's diameter floor (HYP-4797).
 
 kps-S59 proved: mu_{1/7}(E) >= mu_{1/7}(AP_{D+1}) for primitive diameter D, >= m_P for
@@ -10,7 +10,7 @@ Residual: D > 75.  PROPOSED COMPLETION (this session):
         of two AP orbits (2-dim three-distance, bounded complexity) -> a finite mu-ledger
         over (n1, n2, d2/d1-class);
   OR E has small additive structure (not GAP-coverable; Freiman)
-     -> sparse balanced lattice -> E[U]/PZ near the iid values (HYP-4817 frame) -> floor.
+     -> sparse balanced lattice -> E[U]/PZ near the iid values (HYP-4837 frame) -> floor.
 QUESTION HERE: is the GAP side plausible? i.e. do 2-dim GAPs (the coarse covers of the
 structured large-diameter families) keep mu_{1/7} >= m_P robustly, including the shapes
 that cover the known record families?
