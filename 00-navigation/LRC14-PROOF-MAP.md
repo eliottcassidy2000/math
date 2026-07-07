@@ -133,6 +133,23 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > branch (AP-minimality + exact constants); mac-mini-S38's `reach_decorr` handles the spread/escape
 > branch. The pieces fit.
 
+> **⚖ SCOPE AUDIT of the reverse-Markov/E[maxgap] program (monad-explorer-S1, HYP-4787).**
+> The kps-S57/S58 + opus-S133 mean reduction (`μ_{1/7} ≥ (7/6)(E[maxgap]−1/7)`) serves **only
+> the k=13 / P=∅ leg**, and its honest bar is **quantitative**, not positivity: the skeleton's
+> `hlarge` consumes `G2 ≥ m_P` (THM-530), so the mean target is
+> `E[maxgap] ≥ T* = 1/7 + (6/7)m_P = 56291/294294 ≈ 0.191275`. Current exact margins over T*:
+> AP +0.0201, death-star's `2·{1..12}∪{13}` +0.0100, crux-class record
+> `2·{1..11}∪{11,13}` = `12907/65520 ≈ 0.196993` → **+0.0057** (parity interlacing: odd
+> elements bisect the even-AP gaps; expect further erosion). For **k=8..12** the union bound
+> `ρ* ≥ meas(G_P)+μ−1` needs `μ > 0.62/0.51/0.40/0.27/0.14` — unreachable by any reverse-Markov
+> (ceiling ~0.18); the G_P-**conditional** reverse-Markov also FAILS adversarially (0.02–0.05
+> < m_P). **The load-bearing open lemma remains (A′) per-k tail minimality**, which via the
+> union bound discharges the whole k=8..13 ledger at `G2 ≥ 0.32–0.44` (comfortable). Part A as
+> stated (pointwise `0<G2 ⟹ reach`) is stronger than the intended argument delivers — needs the
+> quantitative factoring `[G2≥m_P] + [Vmax≥V₀]` + finite check; the O(#arcs/Vmax) correction has
+> no written proof for spread~Vmax shapes (empirical arc growth ~S^0.45, tame). Script:
+> `lrc14_gp_conditional_rm_audit_monad_S1.py`.
+
 ---
 
 ## Route 2 — J-K reduction → rank-2 torus → 1-D gap (RETIRED as a proof route, opus-S130; correct conditional spectrum math)
