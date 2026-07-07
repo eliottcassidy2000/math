@@ -1,0 +1,25 @@
+=== 1. k=8 endpoint PAIRWISE-LP floor (sharp given THM-638 pair data) ===
+           AP {1..8}: LP floor = 0.3347   true W = 0.3347   (cherry S158 ~ varies; Hunter 6/49 = 0.1224)
+              spread: LP floor = 0.1443   true W = 0.3187   (cherry S158 ~ varies; Hunter 6/49 = 0.1224)
+           geometric: LP floor = 0.1315   true W = 0.3442   (cherry S158 ~ varies; Hunter 6/49 = 0.1224)
+         two-cluster: LP floor = 0.2063   true W = 0.3471   (cherry S158 ~ varies; Hunter 6/49 = 0.1224)
+     S158 cherry-adv: LP floor = 0.1309   true W = 0.2925   (cherry S158 ~ varies; Hunter 6/49 = 0.1224)
+  ADVERSARIAL MIN LP floor (k=8) = 0.1233 at (1, 3, 5, 6, 7, 9, 25, 38)   [R-route bar 0.197; full bar 0.675... note LP >= Hunter always]
+
+=== 2. k=9..12 endpoint LP floors (Hunter/cherry base is negative here) ===
+  k= 9 AP: LP floor = 0.2776   (bare Hunter base 1-(k-1)/7 = -0.1429)
+  k=10 AP: LP floor = 0.1908   (bare Hunter base 1-(k-1)/7 = -0.2857)
+  k=11 AP: LP floor = 0.1266   (bare Hunter base 1-(k-1)/7 = -0.4286)
+  k=12 AP: LP floor = 0.0097   (bare Hunter base 1-(k-1)/7 = -0.5714)
+  ADVERSARIAL MIN LP floor (k=9) = 0.0026 at (1, 2, 3, 4, 5, 7, 8, 14, 30)   [does pair info rescue the negative base?]
+
+=== 3. CONDITIONAL LP on the HARD CORES (floor rho*(P,E) directly) ===
+  P8={9..13}: meas(G_P) = 0.4467;  conditional-LP floor on rho*: AP = 0.1526;  adversarial min = 0.0150 at (0, 1, 6, 7, 17, 30, 36, 38)
+     vs bar m_P = 0.0565: BELOW (0.3x)
+  P9={10..13}: meas(G_P) = 0.5251;  conditional-LP floor on rho*: AP = 0.1361;  adversarial min = 0.0104 at (0, 2, 6, 8, 11, 12, 34, 40, 43)
+     vs bar m_P = 0.0565: BELOW (0.2x)
+
+=== 4. the FKG hair: pairwise positive correlation does NOT give the product bound ===
+  W(AP endpoint) = 0.334695  vs product (6/7)^7 = 0.339917  gap = -0.005222
+  (all 21 pair correlations are >= 0 by THM-638, yet the 7-fold product bound fails at the AP:
+   pairwise association does not extend to full association -- the LP/cherry layer is genuinely needed)

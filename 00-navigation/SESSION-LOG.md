@@ -48,6 +48,22 @@ MINE:
 Files: 4 scripts + outs (lrc_exact_rhostar_hardcores / lrc_exact_Usym_PZ / lrc_palindromy_perD_exact / lrc_a2_corner_exact _opus_S137); reflection exact-couplings-the-hard-cores-pinned-and-the-symmetrization-that-wasnt; HYP-4902. Pulls: 4 (one manual conflict resolution). No Lean (owner priority; boxeph took the roof-bridge Lean lane).
 
 NEXT: (a) the 2-anchor tail lemma (boxeph's reduction) is now THE load-bearing object -- prove inf_E P(max(gap@0,gap@1/2)>1/7) >= T_k via the 2-adic/odd-even structure at anchor 1/2 (THM-580 + step-gauge); (b) far-element ladder mu({1..12,w}) exact-in-w closed form (the per-D winners; roof-of-two-scales); (c) corner sweep finalization; (d) triple-mass bound + R>=0.75 remain klein/mac-mini lanes.
+## klein-2026-07-07-S159 -- THE PAIRWISE-INFORMATION BARRIER: cherry deepened to the moment-LP -- exactly tight at the AP (pairs DETERMINE W there), collapses to Hunter at spread shapes (adv min 0.1233 ~ 6/49) => the 5-triple lemma is LP-CERTIFIED NECESSARY; conditional LP FAILS on the hard cores (pairs insufficient); k=9..12 AP floors positive; FKG hair -0.0052 (HYP-4831)
+
+Prompt (owner): explore cherry-tree concepts deeply, extend, work at the hard core.
+
+THE DEEPENING: Hunter + Bukszar-Prekopa cherry = dual-feasible points of the partially-specified-moment LP (min empty-atom mass s.t. exact singles theta + exact THM-638 pairs; 128 atoms at k=8, solved per shape). Its value = the SHARP pairwise floor; its dual = the best possible generalized-cherry certificate.
+
+FINDINGS (HYP-4831, reflection the-pairwise-information-barrier-klein-S159):
+ 1. AT THE AP THE LP IS EXACTLY TIGHT: floor = true W = 0.3347 -- the AP is PAIRWISE-DETERMINED (its nested pair structure pins the whole joint law). Third tightness signature at the AP (cherry S158, F6 opus-S134) -- now information-theoretic.
+ 2. THE BARRIER (rigorous, exhibit + duality + proved pair data): adversarial LP min = 0.1233 at {1,3,5,6,7,9,25,38} -- NO pairwise-only certificate can give a uniform k=8 floor above ~0.1233 (a hair above Hunter's 6/49: the spanning tree is near-dual-optimal at spread shapes; S155's floor was already essentially optimal for its information class). CONSEQUENCE: the 5-triple lemma (S158 handoff a) is THE GATE -- LP-certified necessary for the 0.197 R-route and beyond. Floor hierarchy: Hunter 6/49 (PROVED) <= LP 0.1233 (barrier) << cherry 0.197 (5 triples) << PZ-on-B 0.712 (2-moment) << truth 0.94.
+ 3. k=9..12: disaggregated pairs stay POSITIVE where Hunter's base is negative -- AP floors 0.2776/0.1908/0.1266/0.0097 (beats MISTAKE-122's bare 0 at k=9 information-theoretically); adversarial k=9 min 0.0026 (razor; exact-confirm flagged).
+ 4. HARD CORES (owner's target): conditional LP (atoms restricted to G_P, all data measured within) on P8={9..13}/P9={10..13}: AP values 0.153/0.136 BUT adversarial minima 0.0150/0.0104 < m_P = 0.0565 -- PAIRWISE DATA IS INSUFFICIENT ON THE HARD CORES (true rho* stays ~6x bar there, S158 dossier -- not a threat, a delineation): the engine-to-intersected-ledger coupling MUST carry triple information (conditional cherry or THM-579 R). My pre-run coupling heuristic (cond ~ mG x uncond + O(1/d)) tops at 0.055 ~ m_P razor and the adversary beats it -- documented.
+ 5. FKG HAIR: all 21 same-sign pair correlations >= 0 (THM-638) yet the product bound FAILS at the AP: W = 0.334695 < (6/7)^7 = 0.339917 (gap -0.005222 exactly pinned) -- pairwise association does not extend to full association; independence-domination shortcuts are dead by half a percent.
+
+FILES: 04-computation/lrc14_pairwise_moment_lp_klein_S159.py (+out); reflection; HYP-4831. No Lean (owner directive). No canon overridden.
+
+NEXT: (a) the 5-triple uppers for separated-scale cherries -- THE gate; (b) extract LP dual certificates at the minima (closed-form weighted-cherry theorem?); (c) exact-rational conditional pair/triple masses on the hard cores (all intervals rational -- mechanical); (d) R >= 0.75; (e) exact confirms for the k=9 0.0026 and conditional minima.
 
 ---
 
