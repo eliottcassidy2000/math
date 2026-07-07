@@ -295,6 +295,21 @@ MY DISTINCT FINDINGS (all EXACT, corrected kdenom = max(maxE, max|e_i-e_j|); opu
 HONEST: a validity/scoping audit + structural discovery, NOT a proof of LRC(14). Re-derived the 1/7 threshold from scratch (each runner forbids a 1/14-arc; gap>2*(1/14)=1/7 incl the ruler-at-0 admits a witness) -- confirms 1/7 correct, THM-527's 2/7 conservative (concurs w/ boxeph). Files: lrc_maxgap_ap_minimality_check / lrc_maxgap_true_minimizer / lrc_mu17_ap_minimality_stress / lrc_mu_theta_crossover / lrc_ap_minimality_radius / lrc_mu17_apmin_all_k / lrc_truncated_mean_floor / lrc_Emaxgap_minimizer_structure _deathstar_S1 (+outs); reflection the-reverse-markov-target-is-wrong-scale-Emaxgap-not-ap-minimized-deathstar-S1; HYP-4777; proof-map governing-frame annotation.
 
 NEXT (funnelled by the disjoint-windows result): drop ALL mean/E[maxgap] work; the crux is EITHER a crude uniform mu_{1/7}(E)>=m_P~0.057 (boxeph -- neighborhoods of small-q rationals, three-gap, no sharp extremal) OR the sharp mu_1/7 AP-minimality (opus-S130, three-gap equidistribution) -- both fine-scale TAIL statements, both DIRECT. + boxeph's finite-Vmax Part-A bridge.
+## boxeph-2026-07-07-S1 (cont.) -- (A') REDUCES TO A 2-ANCHOR AVOIDANCE TAIL: mu_{1/7}(E)>=T_k follows from P(max(gap@0,gap@1/2)>1/7)>=T_k (bounded 2-gap, discharges ALL k=8..13), NOT full max-gap AP-minimality (HYP-4801)
+
+Continued per owner: pull often, synthesize + extend the fleet. Fused klein-S153 (anchor floor) + opus-S134 (Farey roof) + death-star (tail is the object) + monad-explorer HYP-4787 (union-bound T_k) into a SIMPLER crux.
+
+REDUCTION (rigorous): maxgap >= max_{a in A} gap_a pointwise => mu_{1/7}(E)=P(maxgap>1/7) >= PA_{|A|}(E):=P(max_{a in A} gap_a > 1/7). Klein's anchor floor, but on the TAIL (what the skeleton consumes) not the knife-edge MEAN (klein stalled at ~0.147).
+
+PER-K (vs T_k={0.6185,0.5057,0.3956,0.2747,0.1429,0.0565}, k=8..13):
+- 1-anchor P(gap@0>1/7) inf={0.602,0.511,0.434,0.368,0.321,0.281}: discharges k=9..13, misses k=8 by 0.017.
+- 2-anchor P(max(gap@0,gap@1/2)>1/7) inf={0.766,0.685,0.570,0.487,0.421,0.360}: discharges ALL k=8..13 (margins 0.15-0.31).
+
+MINIMIZER at every k = spread inhomogeneous AP {a+dj} = TRANSLATED Steinhaus set => each anchor gap is a shifted-origin three-distance gap; opus-S134 Farey roof computes PA_2 exactly. mu, PA translation- AND dilation-invariant => search over shape only.
+
+So (A') reduces from full-max AP-minimality (hard rigidity) to a BOUNDED 2-gap avoidance tail with a three-gap closed form on the minimizer. HONEST: reduction+invariances rigorous; inf_E PA_2>=T_k is adversarial (spread APs + random), not proven -- but far more tractable than the full max. Files: lrc_mu17_lowerbound_routes / lrc_route_A_perk_gap0tail / lrc_route_A_multianchor_tail _boxeph_S1 (+outs); reflection the-load-bearing-tail-lemma-reduces-to-a-two-anchor-avoidance-tail-boxeph-S1; HYP-4801; proof-map annotation.
+
+NEXT (w/ opus): Farey roof from a shifted origin -> EXACT PA_2 per k (rationals); then the only gap is 'spread AP minimizes PA_2' -- a 2-gap rigidity, same three-gap flavor as AP-min but on two fixed gaps not the max.
 
 ## boxeph-2026-07-07-S1 -- DENSITY->REACH THRESHOLD AUDIT: 1/7 is SHARP (2/7 was robust); mu_{1/7} is the comfortable load-bearing object, reverse-Markov E[maxgap] is razor-thin; E[maxgap] NOT AP-min (exact, corrects klein-S153); finite-Vmax V_0<=14 benign (HYP-4760)
 

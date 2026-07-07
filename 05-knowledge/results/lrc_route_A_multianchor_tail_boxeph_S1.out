@@ -1,0 +1,21 @@
+inf_k P(max_{a in A} gap_a > 1/7) vs union-bound thresholds T_k
+  k |     T_k |          {0} |      {0,1/2} |  {0,1/3,2/3}
+----------------------------------------------------------------------
+  8 |  0.6185 |  0.6018  . |  0.7657  Y |  0.8430  Y |
+  9 |  0.5057 |  0.5112  Y |  0.6847  Y |  0.7300  Y |
+ 10 |  0.3956 |  0.4342  Y |  0.5700  Y |  0.6260  Y |
+ 11 |  0.2747 |  0.3680  Y |  0.4873  Y |  0.5240  Y |
+ 12 |  0.1429 |  0.3210  Y |  0.4210  Y |  0.4625  Y |
+ 13 |  0.0565 |  0.2808  Y |  0.3597  Y |  0.3920  Y |
+
+DISCHARGED legs by anchor set:
+  A={0}         : k = [9, 10, 11, 12, 13]  
+  A={0,1/2}     : k = [8, 9, 10, 11, 12, 13]  <== ALL k=8..13
+  A={0,1/3,2/3} : k = [8, 9, 10, 11, 12, 13]  <== ALL k=8..13
+
+Interpretation: if a fixed 2- or 3-anchor TAIL discharges every leg, the whole
+(A') load-bearing lemma reduces from 'full maxgap AP-minimality' to a
+'few-anchor avoidance tail' -- a bounded functional (|A| gaps), and each anchor's
+gap is a translated-Steinhaus three-distance object (opus-S134 Farey roof extends
+to a shifted origin).  That is a materially simpler proof target than the full max.
+

@@ -1,0 +1,13 @@
+  k | inf P(gap0>1/7) |     T_k |  Route A discharges? | minimizer
+------------------------------------------------------------------------------------------
+  8 |          0.6015 |  0.6185 |    no (short +0.017) | [5, 14, 23, 32, 41, 50, 59, 68]
+  9 |          0.5130 |  0.5057 |                  YES | [5, 13, 21, 29, 37, 45, 53, 61, 69]
+ 10 |          0.4358 |  0.3956 |                  YES | [7, 17, 27, 37, 47, 57, 67, 77, 87, 97]
+ 11 |          0.3672 |  0.2747 |                  YES | [7, 17, 27, 37, 47, 57, 67, 77, 87, 97, 107]
+ 12 |          0.3213 |  0.1429 |                  YES | [7, 17, 27, 37, 47, 57, 67, 77, 87, 97, 107, 117]
+ 13 |          0.2810 |  0.0565 |                  YES | [7, 17, 27, 37, 47, 57, 67, 77, 87, 97, 107, 117, 127]
+
+SUMMARY (Route A = single-gap avoidance tail, feeds union bound):
+  Route A discharges legs k = [9, 10, 11, 12, 13]
+  remaining (need AP-minimality, opus-S131 exhaustive k<=10): k = [8]
+  => the (A') ledger splits: single-gap tail (large k) + finite AP-min (small k).

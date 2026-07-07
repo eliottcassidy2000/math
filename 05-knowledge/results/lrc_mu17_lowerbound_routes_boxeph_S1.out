@@ -1,0 +1,21 @@
+==================================================================
+ROUTE A: single-gap tail  mu_{1/7}(E) >= P(gap@0 > 1/7)
+==================================================================
+  AP    mu_1/7=0.4425  P(gap0>1/7)=0.4425  ratio=1.000
+  GW    mu_1/7=0.5884  P(gap0>1/7)=0.4502  ratio=0.765
+  (AP: gap0=maxgap a.e. => P(gap0>1/7)=mu; other families P<mu)
+  adversarial (290 families): inf P(gap0>1/7) = 0.2846 at [5, 13, 21, 29, 37, 45, 53, 61, 69, 77, 85, 93, 101]
+    0 below 1/7; ROUTE A CLEARS m_P=0.057 (needs >= m_P~0.057)
+
+==================================================================
+ROUTE B: universal q<=6 grid window (rigorous, family-indep at rationals)
+  maxgap(p/q) >= 1/q > 1/7 for q<=6 for EVERY integer family.
+==================================================================
+  AP              mu_1/7=0.4425  mass within 1/14 of q<=6 rational=0.4425 (100% of mu)
+  GW              mu_1/7=0.5884  mass within 1/14 of q<=6 rational=0.5754 (98% of mu)
+  primes          mu_1/7=0.9458  mass within 1/14 of q<=6 rational=0.8982 (95% of mu)
+  spreadAP{6+5j}  mu_1/7=0.4427  mass within 1/14 of q<=6 rational=0.4331 (98% of mu)
+
+  => if most mu-mass is near q<=6 rationals for the WORST (near-AP) families,
+     the universal grid window is the load-bearing part; saturated/spread
+     families get extra mass elsewhere (decorrelation).

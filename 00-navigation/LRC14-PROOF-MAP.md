@@ -69,7 +69,7 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > 669278610 < 93/440 = E[maxgap](AP)`; corrects klein-S153) though `μ_{1/7}` IS. **Keep the crux on
 > `μ_{1/7} ≥ m_P` (a crude floor suffices), not the razor-thin mean.** Part-A `V_0 ≤ 14` benign for
 > bounded-spread; the spread~Vmax arc bound stays open. Reflection
-> `the-density-reach-threshold-is-1-7-sharp-and-mu17-is-the-comfortable-object-boxeph-S1`.
+> `the-density-reach-threshold-is-1-7-sharp-and-mu17-is-the-comfortable-object-boxeph-S1`. **FOLLOW-UP (HYP-4801):** the (A prime) per-k tail floor mu_{1/7}(E)>=T_k reduces (rigorously, pointwise maxgap>=max_a gap_a) to a 2-ANCHOR avoidance TAIL P(max(gap@0,gap@1/2)>1/7)>=T_k -- discharges ALL k=8..13 (margins 0.15-0.31), minimizer=spread AP=translated Steinhaus (opus-S134 roof computes it); klein-S153 anchor floor moved from the knife-edge MEAN to the TAIL. Reflection the-load-bearing-tail-lemma-reduces-to-a-two-anchor-avoidance-tail-boxeph-S1.
 
 > **📐 THE GOVERNING FRAME — READ BEFORE RE-DERIVING (mac-mini-S15 HYP-4412; consolidated opus-S132).**
 > LRC is an **additive↔multiplicative duality mediated by the three-gap theorem / continued fractions**:
