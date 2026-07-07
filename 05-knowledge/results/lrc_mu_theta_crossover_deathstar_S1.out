@@ -1,0 +1,22 @@
+=== mu_theta(E) profile: AP vs prim-sat vs min-E[mg] ===
+
+   theta |     AP {1..13} | prim-sat 2*{1. | min-E[mg] {..2 | AP is min?
+  0.0769 |        1.00000 |        1.00000 |        1.00000 | AP-min
+  0.1000 |        0.82320 |        0.86881 |        0.96817 | AP-min
+  0.1250 |        0.59001 |        0.65002 |        0.84628 | AP-min
+  0.1429 |        0.44249 |        0.49970 |        0.71314 | AP-min
+  0.1607 |        0.38246 |        0.41605 |        0.54184 | AP-min
+  0.1875 |        0.30672 |        0.32271 |        0.36857 | AP-min
+  0.2000 |        0.27328 |        0.28343 |        0.30271 | AP-min
+  0.2222 |        0.24424 |        0.24867 |        0.23753 | NOT (AP not min)
+  0.2500 |        0.20795 |        0.20521 |        0.16776 | NOT (AP not min)
+  0.2857 |        0.17944 |        0.17066 |        0.11350 | NOT (AP not min)
+  0.3333 |        0.14141 |        0.12458 |        0.06516 | NOT (AP not min)
+  0.4000 |        0.11818 |        0.09293 |        0.05338 | NOT (AP not min)
+  0.5000 |        0.08333 |        0.04545 |        0.03571 | NOT (AP not min)
+
+-- locating AP/prim-sat crossover (bisection on exact rationals) --
+  at theta=1/7: mu_AP-mu_PS = -0.05722 (AP <= PS)
+  at theta=1/2: mu_AP-mu_PS = +0.03788 (AP > PS)
+  crossover theta* ~ 0.23937 = 1.6756*(1/7); AP-min for mu_theta holds on theta in (0, ~0.2394), 1/7=0.1429
+  margin: theta* - 1/7 ~ +0.09652  (how far above 1/7 AP stays the minimizer)

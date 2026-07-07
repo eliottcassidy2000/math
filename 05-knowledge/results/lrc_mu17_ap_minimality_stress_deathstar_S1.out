@@ -1,0 +1,20 @@
+=== mu_1/7 AP-minimality stress test, K=13 ===
+
+mu_1/7(AP_13) EXACT = 477/1078 = 0.442486   (opus-S130 claims 477/1078=0.442486)
+cross-check: match = True
+
+                      family     mu_1/7 exact        ~      vs AP
+       prim-sat 2*{1..12}+13      48481/97020  0.49970   above/eq
+         S57-adversarial-.42      20463/30380  0.67357   above/eq
+            min-E[mg] {..29}    138377/194040  0.71314   above/eq
+                  {1..12,14}    176234/315315  0.55891   above/eq
+               odd {1,3..25}         477/1078  0.44249   above/eq
+                3*{1..12}+13  1758481/3347190  0.52536   above/eq
+        {1,2,4,8,16,..}+fill 3845042206372699/4030347230906535  0.95402   above/eq
+
+-- adversarial descent minimizing mu_1/7 (numeric screen) --
+  descent winner: (3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+    numeric mu=0.4413   EXACT mu_1/7=477/1078=0.442486
+    vs AP 0.442486: AP-min holds (winner >= AP)
+
+  No structured family dipped below the AP for mu_1/7.

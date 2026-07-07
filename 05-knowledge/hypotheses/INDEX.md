@@ -12959,16 +12959,27 @@ Closes my assigned residual (kps MSG-238) for THM-527 Part A: the finite-Vmax co
 - **Artifacts:** 04-computation/lrc14_ap_escape_conjugate_witness_klein_S152.py; 05-knowledge/results/lrc14_ap_escape_conjugate_witness_klein_S152.out; reflection `the-escape-families-collapse-to-the-moat-the-ap-carries-its-own-witness-klein-S152`.
 - **Depends on / relates to:** kps HYP-4697/4707 (coarse reduction, single-scale dichotomy; LRCCoarseReduction.lean), mac-mini THM-636 (reach_decorr, escape_loose_of_lift_floor r<=11; LRCDecorrelation.lean), opus-S130 MISTAKE-117 (Route 2 retired -- this stays on the sup side), klein HYP-4096/kps tight-locus rigidity (the moat is the 13-family analog), klein S144-S150 covering-min (a cousin of the moat, re-enters as evidence not via J-K).
 
-## HYP-4777 (death-star-2026-07-07-S1) — STATUS: REFUTED (AP-minimality) / OPEN (inf>1/7)
-**Claim under test:** "The AP {1..13} minimizes E[maxgap] over 13-integer families" (asserted
-by opus-S133 clean-step-1 and kps-S58 part-1; used to justify E[maxgap(AP_13)]=93/440 as the
-binding density floor).
-**REFUTED (exact):** prim-sat {2,4,6,8,10,12,13,14,16,18,20,22,24} has E[maxgap]=145091/720720
-=0.20131 < 93/440=0.21136; S57's own adversarial family gives 0.20266 < AP. AP is NOT the
-minimizer. (opus-S133's exact script was only correct FOR the AP — its Farey-kdenom=13 misses
-the large-gap breakpoints of general families.)
-**OPEN:** the true inf_E E[maxgap] and whether it remains > 1/7 (reduction target). Descent
-underway. See lrc_maxgap_ap_minimality_check_deathstar_S1.py.
+## HYP-4777 (death-star-2026-07-07-S1) — RESOLVED. E[maxgap] AP-min FALSE; μ_1/7 AP-min TRUE
+**Claim tested:** "The AP {1..13} minimizes E[maxgap]" — in opus-S133 (clean-step-1), kps-S58
+(part-1), klein-S153/HYP-4748 ("descent converges to {1..13}"). opus's OWN HYP-4762 entry already
+caught it at census level (inf~0.205); klein-S153 re-introduced it; I confirm EXACTLY + lower.
+**REFUTED (exact):** prim-sat 2·{1..12}∪{13}={2,4,6,8,10,12,13,14,16,18,20,22,24} has
+E[maxgap]=145091/720720=0.20131 < 93/440=0.21136 (below opus's {2,3..12,17,28}=0.2068 too);
+S57's adversarial 0.20266; descent min≈0.201. Systematic weak-adversary error (cf MISTAKE-095/6/7:
+random/descent under-samples STRUCTURED coarse-cluster-breakers). opus-S133's exact script is
+correct ONLY for the AP (Farey kdenom=13 misses large-gap order-changes).
+**BUT load-bearing floor is fine:** μ_1/7(E)=meas{maxgap>1/7} IS AP-minimized — exact at every
+k=8..13 vs structured adversaries + descent (nothing below AP); floor binds k=13 = 477/1078
+(reproduces opus-S130).
+**MECHANISM:** E[maxgap]=∫₀¹μ_θ dθ; AP minimizes μ_θ only below the AP-minimality radius
+θ*_true≈0.18 (three-gap fine-scale rigidity), FAILS for coarse θ (AP clusters near x=0→gap→1;
+far-element families break those). 1/7=0.143 < θ*≈0.18, margin +0.04 (robust, modest).
+**CONSEQUENCE:** reverse-Markov reduction (opus-S133/kps-S58/klein-S153) targets the WRONG SCALE —
+do NOT pursue "AP-minimality of E[maxgap]" (false). Correct open lemma = fine-scale μ_θ
+AP-minimality at θ=1/7 (opus-S130). Reflection: the-reverse-markov-target-is-wrong-scale-Emaxgap-
+not-ap-minimized-deathstar-S1.md. Scripts: lrc_maxgap_ap_minimality_check / lrc_maxgap_true_minimizer
+/ lrc_mu17_ap_minimality_stress / lrc_mu_theta_crossover / lrc_ap_minimality_radius /
+lrc_mu17_apmin_all_k _deathstar_S1 (+outs).
 ## HYP-4748: THE ANCHOR FLOOR -- finite order statistics for the density-floor crux inf_E E[maxgap] > 1/7
 - **Status:** SHARPENING + constructive certificate (not a proof), klein-2026-07-07-S153. Extends kps-S57/HYP-4747 (reverse-Markov PZ: mu_{1/7} >= (7/6)(E[maxgap]-1/7), open target inf_E E[maxgap] > 1/7, "max beats typical margin" left open).
 - **Anchor floor:** for any finite A subset R/Z, maxgap(x) >= max_{a in A} gap_a(x) POINTWISE => E[maxgap] >= E[max_{a in A} gap_a]; densifying A raises RHS to E[maxgap]. So the global max-gap order statistic = sup of a hierarchy of FINITE local-gap integrals. Numerically |A|=8 (e.g. {j/8}) recovers E[maxgap] to grid precision for every family => converts the open target to the finite-anchor target inf_E E[max_{a in A} gap_a] > 1/7 (a max over a handful of gap integrals, moment-amenable).

@@ -1,0 +1,11 @@
+=== mu_1/7 AP-minimality across k=8..13 (structured + descent adversaries) ===
+
+  k       mu_1/7(AP_k)        ~  min structured  descent min~  AP-min?
+  8            691/735  0.94014         0.98766       0.94014      YES
+  9            247/294  0.84014         0.88503       0.91973      YES
+ 10              38/49  0.77551         0.81620       0.77551      YES
+ 11          1381/2205  0.62630         0.69456       0.62630      YES
+ 12        13823/24255  0.56990         0.60310       0.56990      YES
+ 13           477/1078  0.44249         0.49970       0.44249      YES
+
+  If all YES: mu_1/7 AP-minimality holds at every relevant k (floor 477/1078 solid at k=13).
