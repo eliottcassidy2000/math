@@ -1,0 +1,64 @@
+====================================================================================================
+PART 1 -- robust ledger RL, arc counts, explicit V0(P, D) at representative shapes
+====================================================================================================
+  k=13 P=                () D= 14:  V0 = 210   (at V0: arcs=5, meas=0.17258)
+  k=13 P=                () D= 43:  V0 = 616   (at V0: arcs=5, meas=0.05288)
+  k=13 P=                () D= 75:  V0 = 1064   (at V0: arcs=5, meas=0.02998)
+  k=12 P=              (6,) D= 13:  V0 = 196   (at V0: arcs=4, meas=0.10227)
+  k=12 P=              (6,) D= 22:  V0 = 322   (at V0: arcs=2, meas=0.04080)
+  k=12 P=              (6,) D= 34:  V0 = 490   (at V0: arcs=2, meas=0.01786)
+  k=11 P=           (2, 12) D= 12:  V0 = 182   (at V0: arcs=4, meas=0.05063)
+  k=11 P=           (2, 12) D= 15:  V0 = 224   (at V0: arcs=2, meas=0.02372)
+  k=11 P=           (2, 12) D= 21:  V0 = 728   (at V0: arcs=10, meas=0.01374)
+  k=10 P=         (1, 4, 6) D= 11:  V0 = 168   (at V0: arcs=2, meas=0.01361)
+  k=10 P=         (1, 4, 6) D= 13:  V0 = 402   (at V0: arcs=8, meas=0.01994)
+  k=10 P=         (1, 4, 6) D= 17:  V0 = 598   (at V0: arcs=6, meas=0.01007)
+  k= 9 P=      (1, 3, 4, 5) D=  9:  V0 = 140   (at V0: arcs=4, meas=0.04572)
+  k= 9 P=      (1, 3, 4, 5) D= 10:  V0 = 180   (at V0: arcs=4, meas=0.02249)
+  k= 9 P=      (1, 3, 4, 5) D= 11:  V0 = 168   (at V0: arcs=2, meas=0.01361)
+  k= 8 P=   (1, 2, 3, 4, 5) D=  9:  V0 = 140   (at V0: arcs=2, meas=0.01701)
+  k= 8 P=   (1, 2, 3, 4, 5) D= 11:  V0 = 485   (at V0: arcs=2, meas=0.00415)
+
+  V0 range over the table: [140, 1064]
+
+  PART 1b -- RIGOROUS forall-V form (PROVEN per-P arc bound A_P = 13 + Sum(p+1);
+  V*meas is monotone in V, so the condition persists for ALL Vmax >= V0abs):
+    k=13 P=                () D= 75 (bite edge):  A_P=13  V0abs = 1064
+    k=12 P=              (6,) D= 34 (bite edge):  A_P=20  V0abs = 784
+    k=11 P=           (2, 12) D= 21 (bite edge):  A_P=29  V0abs = 1047
+    k=10 P=         (1, 4, 6) D= 17 (bite edge):  A_P=27  V0abs = 990
+    k= 9 P=      (1, 3, 4, 5) D= 11 (bite edge):  A_P=30  V0abs = 695
+    k= 8 P=   (1, 2, 3, 4, 5) D= 11 (bite edge):  A_P=33  V0abs = 1106
+    ==> GLOBAL V0abs* (bite edges, worst-P) = 1106
+  THM-530-worst-P rows (bite edge):
+    k=12 P=              (1,) D= 34:  V0 = 490
+    k=11 P=           (1, 13) D= 21:  V0 = 308
+    k=10 P=       (1, 12, 13) D= 17:  V0 = 252
+    k= 9 P=   (1, 11, 12, 13) D= 11:  V0 = 168
+    k= 8 P=   (1, 5, 7, 8, 9) D= 11:  V0 = 168
+
+  ==> GLOBAL V0* over all tabulated shapes = 1064
+
+====================================================================================================
+PART 2 -- THE FACTORED PART A (explicit, per leg)
+====================================================================================================
+  For every covering shape S = P u {Vmax - e}, cluster diam D within the leg's bite:
+    [Vmax >= V0(P, D)  (tabulated above, all <= V0*)]  ==>  M(S) >= 1/14, WITNESSED.
+    [Vmax <  V0(P, D)]  ==>  FINITE CHECK: bounded family (height < V0*, diam <= bite).
+  V0* = 1064: the finite check lives in height < 1064, cluster diam <= 75.
+  The arc bound is ABSOLUTE (<= 13 roof windows + Sum(p+1) <= 83), independent of
+  E's spread -- the o(Vmax) obstruction (monad target 2) is dissolved by SUBSETTING.
+
+====================================================================================================
+PART 3 -- direct verification: concrete covering sets near V0, witness exhibited
+====================================================================================================
+  P=(1, 5, 7, 8, 9) D=11 Vmax=168 (V0=168): witness tau*=17855/37632  min||v tau*|| = 961/4704 = 0.20429  >= 1/14: True
+  P=(1, 5, 7, 8, 9) D=11 Vmax=305 (V0=168): witness tau*=34819/74420  min||v tau*|| = 15691/74420 = 0.21084  >= 1/14: True
+  P=(6,) D=34 Vmax=490 (V0=490): witness tau*=6591/480200  min||v tau*|| = 19773/240100 = 0.08235  >= 1/14: True
+  P=(6,) D=34 Vmax=627 (V0=490): witness tau*=5474/393129  min||v tau*|| = 10948/131043 = 0.08355  >= 1/14: True
+  P=() D=28 Vmax=406 (V0=406): witness tau*=15/11774  min||v tau*|| = 405/841 = 0.48157  >= 1/14: True
+  P=() D=28 Vmax=543 (V0=406): witness tau*=557/589698  min||v tau*|| = 286855/589698 = 0.48644  >= 1/14: True
+  P=(1, 13) D=21 Vmax=308 (V0=308): witness tau*=26511/54208  min||v tau*|| = 7677/54208 = 0.14162  >= 1/14: True
+  P=(1, 13) D=21 Vmax=445 (V0=308): witness tau*=385563/792100  min||v tau*|| = 24093/198025 = 0.12167  >= 1/14: True
+
+DONE.
