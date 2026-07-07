@@ -22,6 +22,18 @@ HONEST: empirical (~19k families height<=40) + targeted dilated-11-AP+defect che
 FILES: lrc_defect_count_vs_M_macmini_S31.py (+.out); reflection the-gap-is-the-defect-0-to-defect-1-jump-macmini-S31.md; HYP-4612 (+INDEX). No canon overridden.
 
 NEXT: (a) PROVE d>=2 => M>=2/25 (the residual; S30 squeeze + S115 cap lower bound); (b) formalize d=0 (cap+LRC => 1/13) and d=1 (ladder => >=2/25) -- the two clean strata are Lean-able; (c) opus's (A)->Mreach wiring composes once (G) closes.
+## opus-2026-07-06-S122 -- SELF-CORRECTION: the 2-defect signature is REFUTED (3-defect gap member exists); crux is the per-ORDER gauntlet (HYP-4546, MISTAKE-115)
+
+Prompt: keep working on the crux.
+
+Attacked the crux (C) via my S120 Freiman route, and EXHAUSTIVELY REFUTED my own S120 signature. At N=7 (exhaustive, 1-based [1,22], 54264 families): TWO gap members, BOTH M=3/23 (order 2) -- {1,2,3,4,5,7,18} (2 defects) AND {1,3,4,5,7,13,18} (3 DEFECTS, longest-AP {1,3,5,7}=4=N-3). So (a) 3-defect gap members EXIST (refuting 'gap member = (N-2)-AP + 2 defects'); (b) the defect count does NOT govern -- two families of the same order have different defect counts. My S120 signature was over-fit to 3 examples. MISTAKE-115 logged; proof-map crux corrected.
+
+EXHAUSTIVE at N=6: exactly ONE gap member {1,5,6,11,16,17}=5/33 (2 defects); no >=3-defect family reaches the gap (53130 families).
+
+CORRECTED CRUX (aligns with kps): (G) at N=12 = the ACHIEVABILITY GAUNTLET (kps HYP-4557) -- in-gap values exist at EVERY order k; (G) is that every order's value s/(12s+k) is UNATTAINED at N=12. A uniform-over-orders exclusion, NOT a bounded-defect one. The mediant (k=2) gate = my S119 mod-30 binder congruence; higher orders = fleet sweeps. {1,3,4,5,7,13,18} is kps's 'no-isolated-runner species'.
+
+Files: results freiman_2defect_exhaustive_N6/N7 _opus_S122; MISTAKE-115; corrected 00-navigation/LRC14-PROOF-MAP.md; HYP-4546. No new Lean (correction + exhaustive verification). The crux is the uniform-over-orders exclusion (kps's gauntlet), and my job (assembly) remains the (A)<=(C) rigidity wrapper + citation-conditional wiring.
+
 ## opus-2026-07-06-S121 -- LRC14 PROOF MAP: two routes reconciled; the J-K reduction is a CITATION => 'LRC14 closes when (C) closes' (HYP-4536)
 
 Prompt: work toward closing the LRC14 proof.

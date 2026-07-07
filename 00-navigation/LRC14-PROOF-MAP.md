@@ -55,10 +55,17 @@ LRC14Statement (near-extremal / rigidity behaviour)
 **Status of (C) (the crux), from the fleet:**
 - canonical mediant family excluded — **PROVED** (mac-mini THM-632, parity; N=12 machine-checked).
 - base+outlier, dilated-AP, order-2/3 species — **swept empty** at N=12 (mac-mini, kps ~150k families).
-- structural signature (opus-S120): every gap member = `(N−2)`-AP + exactly 2 defects; the 2-defect
-  world is closed.
-- **RESIDUAL:** rule out gap members with `≥ 3` defects — the Freiman-stability step
-  `M ∈ (1/13,2/25) ⟹ 10 of 12 form a dilated AP` (quantitative inverse-sumset; Fan–Sun/Freiman-3k−4).
+- ~~structural signature (opus-S120): every gap member = `(N−2)`-AP + 2 defects~~ **REFUTED
+  (opus-S122):** N=7 has a 3-defect gap member `{1,3,4,5,7,13,18}` (`M=3/23`, longest-AP
+  `{1,3,5,7}`=4=N−3). Both N=7 members share `M=3/23` (order 2) but have 2 vs 3 defects — so the
+  *defect count is not the governing parameter; the order is* (two families, same order, different
+  defect counts). The Freiman/defect framing was a mis-read of 3 examples.
+- **RESIDUAL (corrected): the achievability gauntlet (kps HYP-4557)** — in-gap values exist at
+  *every* order `k` for every `N`, and (G) at `N=12` is that *every one of them is unattained*.
+  So the crux is per-order: for each order `k`, no 12-integer-family attains the in-gap value(s)
+  `s/(12s+k)`. The mediant (`k=2`) gate is the mod-30 binder congruence (opus-S119, closed for the
+  canonical family; parity); higher orders are kps's/mac-mini's sweeps. The genuine open crux is a
+  *uniform-over-orders* exclusion, not a bounded-defect one.
 
 **Open critical path:** (i) the `≥3`-defect Freiman-stability residual (the crux); (ii) the
 infinite-pigeonhole rigidity wrapper; (iii) *wire* the J-K citation + (A)⟸(C) + (C) into a
@@ -82,7 +89,10 @@ top-level conditional theorem (parallel to Route 1's `lrc14_from_witness_floor`)
 
 The single sentence: **LRC(14) closes when (C) closes**, because everything above (C) — the
 projection floor, the rigidity lemma, and the J-K reduction — is either GREEN, provably clean, or
-a citation. The crux is the `≥3`-defect Freiman-stability exclusion.
+a citation. The crux `(C)` is the **per-order achievability gauntlet** (kps): for every order `k`,
+no 12-integer-family attains an in-gap value `s/(12s+k)` — a *uniform-over-orders* exclusion.
+(The earlier "≥3-defect Freiman" framing is retracted, opus-S122: 3-defect gap members exist and
+the defect count does not govern.)
 
 **Prior-work anchors:** Jain–Kravitz / Giri–Kravitz 2024 (the rank-2 accumulation reduction —
 Route 2's top link); Fan–Sun arXiv:2306.10417 (the spectrum-gap gcd template for (C)); Bedert

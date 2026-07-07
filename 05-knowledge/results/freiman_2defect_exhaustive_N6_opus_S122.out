@@ -1,0 +1,9 @@
+N=6 window (1/7,2/13); exhaustive over primitive 6-families in [1,26] with 1 in set: 53130 checked
+GAP MEMBERS found: 1
+defect-count histogram of gap members: {2: 1}
+  (2 defects = longest-AP 4=the Freiman signature; any 3+ defect gap member REFUTES it)
+   (1, 5, 6, 11, 16, 17) M=5/33 defects=2
+>>> FREIMAN STEP VERIFIED at N=6: EVERY gap member has exactly 2 defects (longest-AP=N-2).
+
+Checking: do >=3-defect families ever reach the gap? (min M over longest-AP<=3 families)
+   NONE: no >=3-defect (longest-AP<=3) family reaches the gap at N=6. Freiman step holds.

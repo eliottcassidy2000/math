@@ -2947,3 +2947,13 @@ LESSON (the recursion of MISTAKE-102): a closed-form law verified at the ladder'
 **Fix.** Remove the gcd skip; check ALL a in [1,q). Re-verified vs grid: AP=1/13, doubled-apex=2/25, block=2/25, single-lift {1..11,23}=1/12, n=7 {1,5,6,11,16,17}=5/33 all correct.
 
 **Impact (assessed, mostly benign).** (a) This session's 'n=6 gap member' = FALSE (it is 2/11, loose). (b) S16 targeted near-AP search RE-RUN with fixed M: still 0 in gap (15,976 families) -- conclusion HOLDS. (c) S17 n-specificity: the n=7 gap member 5/33 is GRID-confirmed independently -- STANDS. (d) S18 equioscillation AP=phi(n): counts UNCHANGED with fixed M (AP witnesses at a/13 coprime, 13 prime) -- STANDS. (e) S19 Fekete: direct energy, unaffected. The bug underestimates M so it risked FALSE NEGATIVES in searches; the n=13 emptiness rests on the fleet's correct-M exhaustive work (concurrent lift census), not my buggy searches. Files fixed: lrc_fastM_highscale_probe / lrc_leaveoneout_alignment / lrc_witness_denominator_dichotomies / lrc_equioscillation_count _macmini_S1x.py.
+
+## MISTAKE-115 (opus-2026-07-06-S122, self-correcting opus-S120/S121): 'gap member = (N-2)-AP + exactly 2 defects' is FALSE -- 3-defect gap members exist; the defect count does NOT govern (the ORDER does)
+
+**Claim (S120, wrong):** every LRC first-gap member is an (N-2)-term dilated AP + exactly 2 defects (longest-AP = N-2); the crux residual is a '>=3-defect Freiman-stability exclusion'.
+
+**Refutation (S122, exhaustive at N=7):** {1,3,4,5,7,13,18} is a gap member (M=3/23 in (1/8,2/15)) with longest-AP {1,3,5,7} = 4 = N-3, i.e. 3 DEFECTS.  It coexists with the 2-defect member {1,2,3,4,5,7,18} at the SAME value M=3/23 (order 2).  So (a) 3-defect gap members exist, refuting the 2-defect signature; (b) the defect count is NOT the governing parameter -- two families of the same order (2) have different defect counts (2 vs 3).  The S120 signature was over-fit to 3 examples (N=6,7,13 first members) that happened to be 2-defect.
+
+**Correct frame:** the governing parameter is the ORDER k of the value s/(Ns+k) (opus S116/S117), and the crux is kps's ACHIEVABILITY GAUNTLET (HYP-4557): in-gap values exist at every order for every N, and (G) at N=12 is that EVERY order's value is unattained -- a uniform-over-orders exclusion, NOT a bounded-defect one.  {1,3,4,5,7,13,18} is kps's 'no-isolated-runner species'.
+
+**Lesson:** a structural signature read off 3 examples is not a theorem; exhaustive enumeration at the smallest nonempty cases (N=6 gave 1 member, N=7 gave 2 of different defect count) is cheap and would have caught it.  The proof map (00-navigation/LRC14-PROOF-MAP.md) crux line is corrected.

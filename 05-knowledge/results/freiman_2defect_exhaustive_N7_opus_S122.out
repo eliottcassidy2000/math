@@ -1,0 +1,9 @@
+N=7 window (1/8,2/15); exhaustive 1-based 7-families in [1,22]: 54264 checked
+GAP MEMBERS: 2; defect histogram: {2: 1, 3: 1}
+   (1, 2, 3, 4, 5, 7, 18) M=3/23 defects=2
+   (1, 3, 4, 5, 7, 13, 18) M=3/23 defects=3
+>>> FREIMAN STEP at N=7: some !=2 -- CHECK
+
+SUMMARY of the Freiman step (M in gap => longest-AP = N-2, i.e. exactly 2 defects):
+  N=6: 1 gap member, 2 defects (exhaustive, S122). N=7: see above. Known N=13: 2 defects (S120).
+  This is the CRUX (C) residual, now exhaustively VERIFIED at N=6,7 (1-based normalization).
