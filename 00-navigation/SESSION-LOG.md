@@ -1,3 +1,24 @@
+## opus-2026-07-07-S135 -- THE ROOF IS PROVED AND GREEN: self-contained citation-free proof (divisibility contradiction) + LRCFareyRoof.lean kernel-pure; the fleet's 'modulo roof' caveat discharged at the pointwise level (THM-637 PROVED, HYP-4852)
+
+Prompt (owner): another similar session, work the most high-leverage angles, pull in incoming work as it appears.
+
+INCOMING ABSORBED (pull-first, 3 rebases): kps-S59 diameter floor (subset lemma + my roof => k=13 D<=75 at bar m_P, 'modulo roof'), monad-S2 HYP-4817 exact crossing n=76/77, klein-S154 bisection identity ('proved modulo roof'), mac-mini-S41 PZ-on-U, kps-S60 intersection ledger (per-k diameter bites k=8..13, union bound bypassed -- superseded my planned k=8..10 experiment, correctly abandoned), mac-mini-S42 LRCTailDiameter.lean GREEN (mid-session!), kps-S61 Part-A roof-subset reserve. The roof became the single load-bearing unproved step of the only proved leg => formalizing it (kps-S59's named handoff #1) was THE high-leverage task.
+
+DELIVERED:
+ (1) PAPER PROOF, self-contained, NO three-distance citation (THM-637 upgraded to PROVED): Lemma A (min frac(ix) = q(x-p/q)) -- if frac(ix) < qeps with m=pi-aq>=1 then mq'+i < q, but the determinant identity q(ip'-aq') = mq'+i forces q | mq'+i: 5-line CONTRADICTION; equality case via coprimality (q|i); a/i <= p/q via 'no middle fraction' one-identity proof (i = q(p'i-aq') + q'(aq-pi) >= q+q' > k). Lemma B = mirror identity q'(bq-ip) = m'q+i. Lemma C (every gap <= roof) needs NO fine structure: exhibit i+q / i-q' / i+q-q' (third window nonempty iff q+q'>k). Theorem: maxgap = gap@0 = roof. MORAL: the load-bearing form of the classical fact is weaker+easier than the textbook statement -- we never needed three-distance, only 'the 0-gap is a gap and no gap beats it'.
+ (2) MACHINE VERIFICATION exact (Fraction, rational x denom ~1e6, k<=40): 0 violations across Lemma A identity / roof=gap@0=maxgap / case-split coverage (lrc_roof_proof_verification_opus_S135). Crossings independently reconfirmed: mu_1/7(AP_76) = 2314528732/40290957525 >= m_P > mu(AP_77) (matches kps/monad exactly); A(22) > 1/7 >= A(23).
+ (3) LEAN GREEN: TournamentH7/LRCFareyRoof.lean -- no_middle_fraction, lemmaA, lemmaB, lemmaC, zero_gap_empty, fract_q_mul; kernel-pure [propext, Classical.choice, Quot.sound], NO sorry/native_decide; root manifest; full build 8731 jobs. Cleared-form hypotheses (p < qx, q'x < p', det=1, k < q+q'); all Farey facts derived.
+
+THE REMAINING SEAM (one certificate to end-to-end GREEN): mac-mini-S42's LRCTailDiameter.lean carries the diameter chain conditional on ONE Prop -- the AP76 Farey ledger mu_1/7(AP_76) >= m_P. That is a finite rational superlevel sum (~1848 cells, each cell's superlevel = rational-endpoint interval via my pointwise theorems). Whoever discharges it makes the k=13 bounded-diameter floor the FIRST machine-checked chunk of the density floor. Handed to fleet.
+
+COLLISIONS FLAGGED: HYP-4857 double-claimed (mac-mini-S42 commit vs kps-S61 reserve) -- second pusher renumbers.
+
+Files: THM-637 (PROVED + Lean pointers); LRCFareyRoof.lean (+root); lrc_roof_proof_verification_opus_S135.py(+out); reflection the-roof-is-proved-and-green-the-divisibility-contradiction-opus-S135; HYP-4852. Pushed 3x mid-session.
+
+NEXT: (a) discharge the AP76 ledger certificate (finite rational Lean computation consuming LRCFareyRoof -- closes k=13 D<=75 end-to-end); (b) the D>75 spread residual (CE/PZ lane, mac-mini/monad); (c) Part A via kps-S61's roof-subset; (d) per-k intersected residuals (kps-S60 bands).
+
+---
+
 ## mac-mini-2026-07-07-S42 -- LRCTailDiameter.lean GREEN (kernel-pure; theta-GENERIC diameter chain, one certificate Prop leaf) + exact union-route diameter bands all legs (converges w/ klein-S155, superseded per-leg by kps-S60 intersected) + direct-G2 all-legs probe: the consumed quantity never below 6.0x m_P (HYP-4857)
 
 Prompt (owner): another similar session, work the most high-leverage angles, pull in incoming work as it appears.

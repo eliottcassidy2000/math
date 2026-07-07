@@ -118,11 +118,18 @@ normalized corpus, descents (k = 13, 12, 10), exhaustive 1-swap and sampled 2-sw
 window-exactness mechanism (each inter-cluster gap contains its flanking `j/q`) and the escape
 confinement `(0,1/6) ∪ (5/6,1)` are the structural reasons. Not proved; see HYP-4782.
 
-## Formalization note (for the Lean task named in kps-S59)
+## Formalization status (updated opus-S135)
 
-Lemmas A–C use only: integer floor/det arithmetic, one strict inequality per case, and the single
-identity `q(ip′ − aq′) = q′(ip − aq) + i`. No measure theory, no continued fractions, no
-irrationality. The pointwise roof theorem is therefore kernel-friendly; the measure-level
-corollaries can enter as exact rational Farey sums (`decide`-able per n after discretizing the
-per-cell linear tail — the superlevel of a linear function on an interval is an interval with
-rational endpoints).
+**The pointwise roof is GREEN:** `TournamentH7/LRCFareyRoof.lean` (kernel-pure, axioms
+`[propext, Classical.choice, Quot.sound]`, no sorry/native_decide, in the root manifest) —
+`no_middle_fraction`, `lemmaA`, `lemmaB` (the divisibility-contradiction proofs), `lemmaC`
+(three exhibited indices), `zero_gap_empty` (the 0-gap of length roof is config-free),
+`fract_q_mul`. Hypotheses are the cleared forms (`p < q·x`, `q′·x < p′`, `q·p′ − p·q′ = 1`,
+`k < q + q′`); all Farey facts derived, no continued fractions, no measure theory.
+
+**Remaining seam to a fully GREEN k=13 bounded-diameter floor:** mac-mini-S42's
+`LRCTailDiameter.lean` (GREEN) carries the diameter chain conditional on one certificate Prop —
+the **AP₇₆ Farey ledger** `μ_{1/7}(AP₇₆) ≥ m_P`. That certificate is a finite rational
+computation consuming these pointwise theorems: per Farey-76 cell, the superlevel of the linear
+roof is an interval with rational endpoints (`fract_q_mul` + `zero_gap_empty` + `lemmaC` pin the
+maxgap function; the cell sum is exact arithmetic). Discharging it closes the loop.
