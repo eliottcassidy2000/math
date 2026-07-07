@@ -1,0 +1,31 @@
+(1) Lemma A + divisibility identity, exact rational x, k in {5, 8, 13, 21, 40}:
+    k=  5: violations = 0
+    k=  8: violations = 0
+    k= 13: violations = 0
+    k= 21: violations = 0
+    k= 40: violations = 0
+
+(2)+(3)+(4) Roof theorem EXACT at rational x (denominator ~1e6), k=3..13:
+    k= 3: exact roof/gap0/maxgap mismatches or case-split failures = 0
+    k= 4: exact roof/gap0/maxgap mismatches or case-split failures = 0
+    k= 5: exact roof/gap0/maxgap mismatches or case-split failures = 0
+    k= 6: exact roof/gap0/maxgap mismatches or case-split failures = 0
+    k= 7: exact roof/gap0/maxgap mismatches or case-split failures = 0
+    k= 8: exact roof/gap0/maxgap mismatches or case-split failures = 0
+    k= 9: exact roof/gap0/maxgap mismatches or case-split failures = 0
+    k=10: exact roof/gap0/maxgap mismatches or case-split failures = 0
+    k=11: exact roof/gap0/maxgap mismatches or case-split failures = 0
+    k=12: exact roof/gap0/maxgap mismatches or case-split failures = 0
+    k=13: exact roof/gap0/maxgap mismatches or case-split failures = 0
+
+(5) Corollary chain -- exact crossings (independent recomputation):
+    mu_1/7(AP_74) = 12176519786/206826915295 = 0.058873  vs m_P=0.056487  >= m_P
+    mu_1/7(AP_75) = 444614591352/7652595865915 = 0.058100  vs m_P=0.056487  >= m_P
+    mu_1/7(AP_76) = 2314528732/40290957525 = 0.057445  vs m_P=0.056487  >= m_P
+    mu_1/7(AP_77) = 3386550777203/60135183897390 = 0.056316  vs m_P=0.056487  < m_P  <-- crossing
+    mu_1/7(AP_78) = 801470432537/14335632074610 = 0.055908  vs m_P=0.056487  < m_P  <-- crossing
+    [claimed by kps-S59/monad-S2: crossing at n=77; mu(AP_76)=2314528732/40290957525]
+    mu(AP_76) == claimed exact value: True
+    A(21) = E[maxgap(AP_21)] = 89173/604656 = 0.147477  > 1/7
+    A(22) = E[maxgap(AP_22)] = 3029671/21162960 = 0.143159  > 1/7
+    A(23) = E[maxgap(AP_23)] = 7925549/58198140 = 0.136182  <= 1/7  <-- crossing

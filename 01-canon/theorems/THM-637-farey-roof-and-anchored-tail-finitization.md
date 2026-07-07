@@ -1,99 +1,128 @@
 # THM-637 — The Farey roof (AP max-gap mechanism) and the anchored-tail finitization of μ_θ
 
-**Source:** opus-2026-07-07-S134
-**Status:** parts (a),(b),(c) PROVED (elementary, from the three-distance theorem; machine-verified k ≤ 13 to 1e-15);
-part (d) PROVED (3 lines); part (e) VERIFIED-computational (candidate lemma, OPEN).
-**Scripts:** `lrc_farey_roof_apmaxgap_opus_S134.py`, `lrc_anchored_tail_A2_opus_S134.py`,
-`lrc_farey6_anchored_tail_opus_S134.py`, `lrc_F6_tightlocus_swapscan_opus_S134.py` (+ .out in 05-knowledge/results).
+**Source:** opus-2026-07-07-S134; **proofs completed opus-2026-07-07-S135** (self-contained, no
+external citations; every lemma machine-verified in exact rational arithmetic, 0 violations).
+**Status:** parts (a),(b),(c),(d) **PROVED** (complete proofs below); part (e) VERIFIED-computational
+(candidate lemma, OPEN).
+**Load-bearing for:** kps-S59's diameter floor (k=13 leg of `hlarge` for primitive diameter ≤ 75 —
+the "modulo roof" caveat there is discharged by this file), monad-S2's exact crossing, klein-S154's
+LOO composite.
+**Scripts:** `lrc_farey_roof_apmaxgap_opus_S134.py`, `lrc_roof_proof_verification_opus_S135.py`
+(step-by-step proof verification, exact rationals, k ≤ 40), plus the S134 anchored-tail suite.
 
-Throughout: `config(E, x) = {frac(e·x) : e ∈ E}` on the circle, `maxgap` = largest circular gap,
-`gap∋a` = the circular gap containing the point `a`, `μ_θ(E) = Leb{x : maxgap > θ}`.
+Throughout: `config(E, x) = {frac(e·x) : e ∈ E}` on the circle ℝ/ℤ, `maxgap` = largest circular gap,
+`gap∋a` = the circular gap containing the point `a`, `μ_θ(E) = Leb{x ∈ [0,1] : maxgap > θ}`.
+`F_k` = the Farey fractions of order k in [0,1]. For an **open Farey-k cell** `(p/q, p′/q′)`
+(consecutive in `F_k`): `qp′ − pq′ = 1`, `q + q′ > k`, and no fraction with denominator ≤ k lies
+strictly inside. Write `ε = x − p/q`, `ε′ = p′/q′ − x` (so `ε + ε′ = 1/(qq′)`, `ε, ε′ > 0`).
+Note: for `x` in an open cell and `1 ≤ i ≤ k`, `ix ∉ ℤ` (else `x = a/i ∈ F_k`), so `frac(ix) ∈ (0,1)`
+and `frac(−ix) = 1 − frac(ix)`.
 
 ---
 
-## (a) Origin-gap saturation (sharpens klein-S153's a.e. numeric to an identity)
+## Lemma A (first return from above)
 
-**For the AP `E = {1,…,k}` and every irrational `x`: `gap∋0 = maxgap`.**
+**For `x` in the open Farey-k cell `(p/q, p′/q′)` and every `1 ≤ i ≤ k`:
+`frac(ix) ≥ frac(qx) = qε`, with equality iff `q | i` and `i = q`** (multiples `i = tq` give `tqε`,
+minimized at `t = 1`; non-multiples are strictly larger).
 
-*Proof.* In the with-0 config `{frac(i·x) : 0 ≤ i ≤ k}`, the two gaps flanking 0 have lengths
-`δ₁ = ‖q_L x‖` and `δ₂ = ‖q_R x‖`, where `q_L, q_R ≤ k` are the one-sided best-approximation
-denominators of `x` at height `k`. By the three-distance theorem every gap of the with-0 config
-has length in `{δ₁, δ₂, δ₁+δ₂}`. Deleting the point 0 merges its two flanking gaps into one gap
-of length `δ₁+δ₂` — the maximal possible value — and leaves all other gaps unchanged. ∎
+*Proof.* Let `a = ⌊ix⌋`, so `frac(ix) = ix − a` and `a/i ≤ x`. The fraction `a/i` has denominator
+`i ≤ k`, so it cannot lie strictly inside the cell; since `a/i ≤ x < p′/q′`, we get **`a/i ≤ p/q`**.
 
-Consequence: `maxgap(AP_k, x) = m⁺(x) + m⁻(x)` where `m⁺ = min_{i≤k} frac(ix)`,
-`m⁻ = min_{i≤k}(1−frac(ix))` — the **two-sided closest approach of the orbit to the observer**.
-(The observer-lens object; kps-S58's identity `E[gap∋0] = 2E[min]` is its mean.)
+*Case `a/i = p/q`.* Lowest terms force `q | i`, say `i = tq`, `t ≥ 1`; then `a = tp` and
+`frac(ix) = t(qx − p) = t·qε ≥ qε`, equality iff `t = 1`.
 
-## (b) The Farey roof
+*Case `a/i < p/q`.* Let `m := ip − aq ≥ 1`. Then `frac(ix) = ix − a = iε + (ip − aq)/q = iε + m/q`.
+Suppose for contradiction `frac(ix) < qε` (or `= qε`; the argument below excludes both). Then
+`m/q ≤ (q − i)ε`, which forces `i < q`, and since `ε < 1/(qq′)` (open cell):
+`m/q < (q − i)/(qq′)`, i.e. **`mq′ + i < q`**, and trivially `mq′ + i ≥ 1·1 + 1 > 0`.
+Now the determinant identity `qp′ = pq′ + 1` gives
+> `q·(ip′ − aq′) = i(pq′ + 1) − aqq′ = q′(ip − aq) + i = mq′ + i`,
 
-**On each Farey-order-`k` cell `(p/q, p′/q′)`:
-`maxgap(AP_k, x) = q·(x − p/q) + q′·(p′/q′ − x)` — linear, interpolating `1/q → 1/q′`.**
+so `q` divides `mq′ + i` — impossible for `0 < mq′ + i < q`. ∎
+*(Boundary cells `p/q = 0/1` or `p′/q′ = 1/1`: the case split degenerates but the statement is
+immediate — e.g. on `(0, 1/k)`, `a = 0` for all `i` and `frac(ix) = ix ≥ x = qε` with `q = 1`.)*
 
-*Proof.* On the cell, `m⁺(x) = q(x − p/q)` and `m⁻(x) = q′(p′/q′ − x)` (the classical first-return
-facts: the closest approach from above/below at height `k` is realized by the flanking Farey
-denominators); add and use (a). ∎ (Machine-verified to 1e-15, k = 3..13, 4000 random x each.)
+## Lemma B (first return from below)
 
-The roof's node values are `1/q` at each Farey point — **the roof endpoint heights ARE the
-Ostrowski/Kravitz rung heights**; the M-spectrum ladder and the μ-floor are two readings of one
-piecewise-linear function.
+**For `x` in the open cell: `1 − frac(ix) ≥ q′ε′` for every `1 ≤ i ≤ k`, with the minimum
+`q′ε′` attained at `i = q′`.** Equivalently `max_i frac(ix) = frac(q′x) = 1 − q′ε′`.
 
-## (c) Exact closed forms (all k)
+*Proof.* The reflection `x ↦ 1 − x` is an order-reversing bijection of `F_k` preserving
+consecutivity, and maps the cell to the open Farey-k cell `((q′−p′)/q′, (q−p)/q)` whose **left**
+denominator is `q′`, with `(1−x) − (q′−p′)/q′ = ε′`. Since `ix ∉ ℤ`,
+`frac(i(1−x)) = frac(−ix) = 1 − frac(ix)`. Apply Lemma A on the reflected cell:
+`1 − frac(ix) = frac(i(1−x)) ≥ q′ε′`, equality at `i = q′`. ∎
 
-- **`E[maxgap(AP_k)] = Σ 1/(q·q′²) = (1/2) Σ (q+q′)/(q²q′²)`** over consecutive Farey-k
-  denominator pairs. Verified against the canon table: `43/140, 47/168, 19/72, 151/630,
-  796/3465, 93/440` (k = 8..13) — all match; new values k = 1..7: `1, 3/4, 7/12, 1/2, 5/12,
-  23/60, 1/3`.
-- **`E[min_{i≤k} frac(ix)] = (1/2)·E[maxgap(AP_k)]`** (reflection symmetry); e.g. `93/880` at k=13.
-- **`μ_θ(AP_k)` = the roof's superlevel measure**, a per-cell linear-tail sum. Reproduces the
-  canon exactly: `691/735, 247/294, 38/49, 1381/2205, 13823/24255, 477/1078` (θ = 1/7, k = 8..13),
-  and gives e.g. `μ_{2/7}(AP_13) = 829/4620` exactly.
-- Mechanism readout: for the AP, `{maxgap > 1/7}` is **exactly the union of the Farey
-  neighborhoods of rationals with `q ≤ 6`** (roof node `1/q > 1/7` ⟺ `q ≤ 6`). The AP's density
-  floor is pure resonance-window measure; its bulk contribution is zero. Note `q = 7` windows are
-  exactly marginal (roof node `= 1/7`, never counted): **the apex prime 7 is invisible to the
-  density floor** — its hardness lives entirely on the sup/moat side.
+## Lemma C (gap bound — no three-distance fine structure needed)
 
-## (d) The anchored-tail finitization (exact, every E)
+**Every circular gap of `config({1..k}, x)` has length ≤ `qε + q′ε′`.**
 
-Let `F_Q = {p/q ∈ [0,1) : q ≤ Q}`. The maximal spacing of `F₇` is `1/7`, so any circular gap of
-length `> 1/7` contains a point of `F₇`. Hence for **every** finite integer set `E`:
+*Proof.* Fix a config point `u = frac(ax)`, `1 ≤ a ≤ k`; we exhibit a config point at circular
+distance ≤ `qε + q′ε′` above `u` (this bounds the gap above `u`, and every gap lies above some
+config point):
+- if `a + q ≤ k`: `frac((a+q)x) = u + frac(qx) (mod 1)` sits at distance `qε`;
+- else if `a − q′ ≥ 1`: `frac((a−q′)x) = u + (1 − frac(q′x)) (mod 1)` sits at distance `q′ε′`;
+- else `k − q < a ≤ q′` (the two failures are compatible — the window `(k−q, q′]` is nonempty
+  precisely because `q + q′ > k`). Then `b := a + q − q′` satisfies `1 ≤ b ≤ k`
+  (from `a > k − q`: `b > k − q′ ≥ 0`, so `b ≥ 1`; from `a ≤ q′`: `b ≤ q ≤ k`), and
+  `frac(bx) = u + qε + q′ε′ (mod 1)` sits at distance exactly `qε + q′ε′ < 1`. ∎
 
-> **`{x : max_{a∈F₇} gap∋a > 1/7} = {x : maxgap > 1/7}` pointwise (up to the measure-zero
-> boundary), so `μ_{1/7}(E) = P_x(max_{a∈F₇} gap∋a > 1/7)` — an 18-anchor statistic.**
+## Theorem (the Farey roof)
 
-(Verified: zero disagreement on 160k-point grids for AP, parity-interlaced, and spread families.)
-The load-bearing lemma (A′) `μ_{1/7}(E) ≥ μ_{1/7}(AP_k)` is therefore **exactly** a statement
-about the joint law of the config's closest approaches to 18 fixed rationals — inhomogeneous
-approximation data at rational targets, governed by E's residue profile mod lcm(2..7)=420 (mod 60
-for the F₆ part) and its diameter. THM-591 (inhomogeneous-AP linear law) supplies exact AP-side
-control of precisely such shifted targets.
+**For `x` in the open Farey-k cell `(p/q, p′/q′)`:**
+> **`maxgap(config({1..k}, x)) = gap∋0 = qε + q′ε′ = q(x − p/q) + q′(p′/q′ − x)`** —
+> linear on the cell, interpolating the node values `1/q → 1/q′`.
 
-## (e) OPEN candidate (A″-F₆), verified adversarially — tight at the AP
+*Proof.* By Lemmas A and B, the config's minimum is `qε` (at `frac(qx)`) and its maximum is
+`1 − q′ε′` (at `frac(q′x)`), so the gap containing the point 0 has length exactly
+`qε + q′ε′`. By Lemma C no gap is longer. ∎
 
-`F₆` (12 anchors) has max spacing `1/6 > 1/7`; escapes are only gaps of length in `(1/7, 1/6)`
-hiding inside `(0, 1/6) ∪ (5/6, 1)`. Since for the AP the good set is pure q≤6-window and inside
-a window every inter-cluster gap contains its base Farey point (**window-exactness**: for
-`x = p/q ± δ` the q clusters spread one-sidedly by `e·δ`, so each inter-cluster gap contains the
-flanking `j/q`), we get `t_{F₆}(AP_k) = μ_{1/7}(AP_k)` **exactly**.
+**Machine verification (S135):** exact `Fraction` arithmetic at random rational `x` with
+denominators ~10⁶ inside random cells — Lemma A + the divisibility identity: 0 violations
+(k = 5, 8, 13, 21, 40; 300 cells each); roof = gap∋0 = maxgap and Lemma-C case-split coverage:
+0 failures (k = 3..13, 400 cells each). The theorem also gives, on each cell, the identity
+`maxgap = m⁺ + m⁻` (two-sided closest approach to 0 — the observer-lens form; klein-S153's
+a.e. numeric, now an identity on every open cell).
 
-> **(A″-F₆):** for every affine-normalized k-set `E` (min = 1, gcd of differences = 1, k = 8..13):
-> `t_{F₆}(E) := P_x(max_{a∈F₆} gap∋a > 1/7) ≥ μ_{1/7}(AP_k)`, equality iff `E = AP_k`.
-> Since `t_{F₆} ≤ μ_{1/7}` pointwise and `μ` is affine-invariant, (A″-F₆) ⟹ (A′).
+## Corollaries (all exact; machine-verified)
 
-Affine normalization is NECESSARY: every naive-anchor failure found was an affine image of the AP
-(`{2..14} = AP+1`, odds `= 2AP+1`, `{3+7i} = 7AP+3`) — μ is affine-invariant, anchored tails are
-not. (The anchor-side analogue of the kps-S56 dilation-artifact lesson.)
+1. **Mean:** `E[maxgap(AP_k)] = Σ_cells ∫ roof = Σ 1/(q·q′²) = (1/2)Σ(q+q′)/(q²q′²)` over
+   consecutive Farey-k pairs. Values: `1, 3/4, 7/12, 1/2, 5/12, 23/60, 1/3, 43/140, 47/168,
+   19/72, 151/630, 796/3465, 93/440` (k = 1..13). `E[min_i frac(ix)] = half` (reflection).
+2. **Tail:** `μ_θ(AP_k)` = the roof's superlevel measure — per-cell linear tail, exact rationals.
+   Reproduces the canon `691/735, 247/294, 38/49, 1381/2205, 13823/24255, 477/1078` (θ = 1/7,
+   k = 8..13). The good set of the AP is **exactly the q ≤ ⌊1/θ⌋ Farey neighborhoods**: pure
+   resonance-window measure, zero bulk. At θ = 1/7, `q = 7` nodes are exactly marginal — **the
+   apex prime 7 is invisible to the density floor.**
+3. **Diameter floor (with kps-S59's subset lemma — now fully proved end-to-end):** for any
+   integer set `E` with primitive diameter `D`: `μ_θ(E) ≥ μ_θ(AP_{D+1})` and
+   `E[maxgap(E)] ≥ A(D+1)`. Exact crossings (recomputed independently, S135, matching kps-S59 &
+   monad-S2): `μ_{1/7}(AP_n) ≥ m_P = 14249/252252` through **n = 76**
+   (`μ(AP₇₆) = 2314528732/40290957525 ≈ 0.057445`), `< m_P` from n = 77; `A(n) > 1/7` through
+   **n = 22** (`A(22) = 3029671/21162960`), `≤ 1/7` from n = 23. Hence **every 13-element E with
+   primitive diameter ≤ 75 has `μ_{1/7}(E) ≥ m_P`** — the k=13 leg of `hlarge` on bounded
+   diameter, now proved with no outstanding caveats.
 
-**Evidence:** normalized corpus (14 families incl. parity-interlaced record, GW, spread, primes,
-deep well, missing-residue adversaries) — worst is the AP itself; dedicated normalized descent at
-k = 13, 12, 10 converges to the AP at the bar; exhaustive 1-swap scan (351 families, k=13; 324,
-k=12) and 2-swap samples (468/396): **zero below the bar**. Also zero μ-violations anywhere —
-(A′) itself remains unbreached.
+## (d) The anchored-tail finitization (exact, every E) — PROVED
 
-**Honest status:** (A″-F₆) is *logically stronger* than (A′); its value is structural — it
-replaces the full order statistic by 12 closest-approach statistics with sieve-friendly rational
-targets, and its window/bulk decomposition (window mass ↔ residue coverage & diameter;
-bulk capture ≈ 1 with escapes confined to two explicit arcs) is a finite-dimensional version of
-the additive↔multiplicative tradeoff (mac-mini-S15). Not a proof of (A′); a reformulation (d)
-plus a tested extremal candidate (e).
+`F₇` has maximal spacing `1/7` (attained at `(0, 1/7)`), so any circular gap of length `> 1/7`
+contains a point of `F₇`; conversely anchored gaps are gaps. Hence for every finite integer set:
+> `{x : max_{a∈F₇} gap∋a > 1/7} = {x : maxgap > 1/7}` up to boundary, so
+> **`μ_{1/7}(E) = P_x(max_{a∈F₇} gap∋a > 1/7)` — an 18-anchor closest-approach statistic.**
+
+## (e) OPEN candidate (A″-F₆) — unchanged from S134
+
+`t_{F₆}(E) ≥ μ_{1/7}(AP_k)` for affine-normalized k-sets, equality iff AP; implies (A′). Survived
+normalized corpus, descents (k = 13, 12, 10), exhaustive 1-swap and sampled 2-swap scans; the
+window-exactness mechanism (each inter-cluster gap contains its flanking `j/q`) and the escape
+confinement `(0,1/6) ∪ (5/6,1)` are the structural reasons. Not proved; see HYP-4782.
+
+## Formalization note (for the Lean task named in kps-S59)
+
+Lemmas A–C use only: integer floor/det arithmetic, one strict inequality per case, and the single
+identity `q(ip′ − aq′) = q′(ip − aq) + i`. No measure theory, no continued fractions, no
+irrationality. The pointwise roof theorem is therefore kernel-friendly; the measure-level
+corollaries can enter as exact rational Farey sums (`decide`-able per n after discretizing the
+per-cell linear tail — the superlevel of a linear function on an interval is an interval with
+rational endpoints).
