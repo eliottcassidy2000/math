@@ -1,0 +1,34 @@
+======================================================================================
+VALIDATION at N=6: does the dilated-AP construction REPRODUCE {1,5,6,11,16,17}=5/33?
+======================================================================================
+  1898 dilated-AP candidates at N=6; IN-GAP: 1
+  target [1, 5, 6, 11, 16, 17] in candidate set: True
+    IN GAP: M=5/33 (0.1515)  W=[1, 5, 6, 11, 16, 17]  <== the known 5/33 member
+
+======================================================================================
+THE OPEN TEST at N=12: any dilated-AP (spacing d>=2) + defect in the gap (1/13,2/25)?
+======================================================================================
+  tested 14240 dilated-AP candidates at N=12
+    IN GAP:  0
+    above:   14239
+    below:   1
+  => NO dilated-AP order-3+ member in the gap at N=12 (empirical).
+
+  near-gap escape denominators (M just above 2/25): top by count
+    q=12 (even):  9 families
+  fraction of above-gap escapes with an even speed present: 9/14239
+
+  near-gap examples (M in the first sixth above the gap):
+    M=1/12 (0.08333) q=12  W=[2, 3, 4, 6, 8, 10, 12, 14, 16]..
+    M=1/12 (0.08333) q=12  W=[2, 4, 6, 7, 8, 10, 12, 14, 16]..
+    M=1/12 (0.08333) q=12  W=[2, 4, 6, 8, 10, 12, 14, 16, 17]..
+    M=1/12 (0.08333) q=12  W=[3, 6, 7, 9, 12, 15, 18, 21, 24]..
+    M=1/12 (0.08333) q=12  W=[3, 6, 9, 12, 13, 15, 18, 21, 24]..
+    M=1/12 (0.08333) q=12  W=[3, 6, 9, 12, 15, 18, 20, 21, 24]..
+    M=1/12 (0.08333) q=12  W=[4, 7, 8, 12, 16, 20, 24, 28, 32]..
+    M=1/12 (0.08333) q=12  W=[4, 8, 12, 16, 17, 20, 24, 28, 32]..
+
+  INTERPRETATION: N=6 nonempty (order-3 dilated AP) vs N=12 -- if N=12's
+  dilated-AP species is ALSO gap-empty, the difference from N=6 is n-specific
+  arithmetic (the spacing-d resonances at N=12 all overshoot), localizing
+  opus-S119's residual to a finite dilated-AP + overshoot check.
