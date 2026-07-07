@@ -1,0 +1,31 @@
+=== Q1: adversarial inf of E[U_{1/7}] (bar 6/7*m_P = 0.048418) ===
+  coarse E[U]=0.07998  (0, 5, 7, 9, 11, 12, 13, 14, 15, 17, 21, 28, 45, 76)
+  coarse E[U]=0.09417  (0, 30, 36, 45, 50, 54, 60, 63, 70, 72, 75, 90, 108)
+  coarse E[U]=0.09442  (0, 2, 4, 6, 7, 8, 10, 12, 14, 21, 28, 35, 57)
+  coarse E[U]=0.09838  (0, 2, 4, 5, 6, 8, 10, 11, 12, 14, 20, 25, 38)
+finalist fine-grid: E[U]=0.07998 (bar 0.04842, ratio 1.65x)  PZ=0.3506  mu=0.8907  first-moment mu-bound=(7/6)E[U]=0.09331 (m_P=0.05649)
+
+=== Q2: adversarial inf of PZ=E[U]^2/E[U^2] (bar m_P = 0.05649) ===
+  coarse PZ=0.24413  (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 21, 28)
+  coarse PZ=0.26058  (0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16)
+  coarse PZ=0.26331  (0, 2, 4, 6, 7, 8, 9, 10, 11, 12, 14, 16, 18)
+  coarse PZ=0.27072  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15)
+finalist fine-grid: PZ=0.24413 (ratio 4.32x over m_P)  E[U]=0.08718  mu=0.5998
+
+=== Q3: balanced-lattice truncation of E[U_{1/7}] ===
+main=(6/7)^13=0.13480; deficit budget to bar: 0.08638
+family                             E[U] grid   main+w3 main+w3+w4 grid-w3 err grid-w34 err
+AP {1..13}                           0.12662  -0.42512    0.36252     0.55174     -0.23590
+monad record evens+{11,13}           0.10738  -0.39664    0.26485     0.50402     -0.15747
+opus stretched {0,2..12,17,28}       0.09711  -0.39912    0.28065     0.49623     -0.18354
+E[U]-descent finalist                0.07998  -0.22925    0.09868     0.30923     -0.01870
+random big                           0.13578   0.13477    0.14273     0.00102     -0.00695
+
+unsigned triple mass (crude-bound feasibility): sum |per-triple sums|
+  AP {1..13}                         unsigned-w3 mass = 0.56749  (budget 0.08638) exceeds -> need signs/quad
+  monad record evens+{11,13}         unsigned-w3 mass = 0.53888  (budget 0.08638) exceeds -> need signs/quad
+  opus stretched {0,2..12,17,28}     unsigned-w3 mass = 0.54155  (budget 0.08638) exceeds -> need signs/quad
+  E[U]-descent finalist              unsigned-w3 mass = 0.36846  (budget 0.08638) exceeds -> need signs/quad
+  random big                         unsigned-w3 mass = 0.00021  (budget 0.08638) OK
+
+sanity window-identity: U direct=0.00000 vs window-frac=0.00000
