@@ -1,0 +1,24 @@
+=== signed engine validation ===
+  (d1,d2)=(  1, -1): exact =        0 = 0.000000   numeric = 0.000000
+  (d1,d2)=(  1,  2): exact =     1/14 = 0.071429   numeric = 0.071435
+  (d1,d2)=( -3,  4): exact =        0 = 0.000000   numeric = 0.000000
+  (d1,d2)=(  2, -5): exact =        0 = 0.000000   numeric = 0.000000
+  (d1,d2)=(  6,  7): exact =     1/49 = 0.020408   numeric = 0.020412
+  (d1,d2)=( -6, -7): exact =     1/49 = 0.020408   numeric = 0.020412
+
+=== SIGNED Hunter-tree floors at k=8 (rigorous: meas W_i >= tree mass; base 1-7theta=0) ===
+               AP {1..8}: best i=1: Hunter = 0.3109 (exact 457/1470)   true W_i = 0.3347
+     perforated {0,2..8}: best i=8: Hunter = 0.3619 (exact 38/105)   true W_i = 0.4131
+                  spread: best i=41: Hunter = 0.2358 (exact 3481/14760)   true W_i = 0.3777
+         two-cluster 4+4: best i=0: Hunter = 0.2063 (exact 38314999/185693550)   true W_i = 0.3471
+          adv-from-part2: best i=0: Hunter = 0.1850 (exact 23659/127890)   true W_i = 0.3541
+
+=== adversarial min of best-vertex SIGNED Hunter floor (k=8, jump moves) ===
+  min best-vertex Hunter floor = 0.1753 (exact 19279/109956) at (1, 11, 12, 15, 25, 28, 32, 33)
+  => rigorous uniform-candidate: mu_1/7(E_8) >= meas W_i >= this (adversarial; sup proof open)
+
+=== extended universal pair-mass scan (signed; is min m = theta^2 = 1/49 ~ 0.0204?) ===
+  same-sign  min m = 1/49 = 0.020408 at (1, 7)
+  mixed-sign min m = 0 = 0.000000 at (1, -1)
+  (note (1,-1): m = 0 exactly -- antipodal windows are disjoint; excluded by q1!=q2 in same-sign scan;
+   the Hunter tree must avoid +-same-|d| pairs, or use them knowingly as 0-weight edges)

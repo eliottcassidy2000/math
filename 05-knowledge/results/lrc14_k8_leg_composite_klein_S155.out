@@ -1,0 +1,55 @@
+=== (a) EXACT per-leg tail-diameter crossings D_k* (bars need_k = thr_k + m_P) ===
+  k= 8: need_k =    1702763/2522520 = 0.67502   n_k* = 10   D_k* = 9   [mu(AP_10)=0.77551 >= need > mu(AP_11)=0.62630]
+  k= 9: need_k =        35456/63063 = 0.56223   n_k* = 12   D_k* = 11   [mu(AP_12)=0.56990 >= need > mu(AP_13)=0.44249]
+  k=10: need_k =      114041/252252 = 0.45209   n_k* = 12   D_k* = 11   [mu(AP_12)=0.56990 >= need > mu(AP_13)=0.44249]
+  k=11: need_k =       83549/252252 = 0.33121   n_k* = 16   D_k* = 15   [mu(AP_16)=0.34648 >= need > mu(AP_17)=0.30527]
+  k=12: need_k =       50285/252252 = 0.19934   n_k* = 24   D_k* = 23   [mu(AP_24)=0.20422 >= need > mu(AP_25)=0.19187]
+  k=13: need_k =       14249/252252 = 0.05649   n_k* = 76   D_k* = 75   [mu(AP_76)=0.05745 >= need > mu(AP_77)=0.05632]
+  (k=13 row should reproduce monad-S2's 75/76-77: D_13* = 75)
+
+=== (b) FINITE BAND at k=8: exact-screen all affine-normalized shapes, diam in [D8*+1, D0] ===
+  D=10: shapes=    44  min mu = 0.9719 at (0, 1, 3, 4, 5, 6, 7, 10)   margin over need_8: +0.2969
+  D=11: shapes=   110  min mu = 0.9805 at (0, 1, 2, 4, 5, 6, 7, 11)   margin over need_8: +0.3055
+  D=12: shapes=   236  min mu = 0.9719 at (0, 2, 3, 5, 6, 7, 9, 12)   margin over need_8: +0.2969
+  D=13: shapes=   472  min mu = 0.9739 at (0, 2, 4, 6, 7, 9, 11, 13)   margin over need_8: +0.2989
+  D=14: shapes=   867  min mu = 0.9752 at (0, 1, 2, 3, 11, 12, 13, 14)   margin over need_8: +0.3002
+  D=15: shapes=  1519  min mu = 0.9746 at (0, 3, 5, 6, 9, 10, 12, 15)   margin over need_8: +0.2996
+  D=16: shapes=  2516  min mu = 0.9890 at (0, 3, 5, 7, 9, 11, 13, 16)   margin over need_8: +0.3140
+  D=17: shapes=  4032  min mu = 0.9790 at (0, 5, 6, 7, 10, 11, 12, 17)   margin over need_8: +0.3039
+  D=18: shapes=  6200  min mu = 0.9790 at (0, 3, 5, 6, 9, 12, 15, 18)   margin over need_8: +0.3040
+  D=19: shapes=  9324  min mu = 0.9819 at (0, 5, 7, 9, 10, 12, 14, 19)   margin over need_8: +0.3069
+  D=20: shapes= 13564  min mu = 0.9833 at (0, 5, 6, 9, 10, 11, 15, 20)   margin over need_8: +0.3082
+  D=21: shapes= 19439  min mu = 0.9784 at (0, 2, 4, 6, 15, 17, 19, 21)   margin over need_8: +0.3033
+  D=22: shapes= 27082  min mu = 0.9851 at (0, 2, 5, 7, 11, 12, 17, 22)   margin over need_8: +0.3101
+  D=23: shapes= 37389  min mu = 0.9805 at (0, 9, 10, 11, 12, 13, 14, 23)   margin over need_8: +0.3055
+  D=24: shapes= 50316  min mu = 0.9835 at (0, 2, 4, 11, 13, 20, 22, 24)   margin over need_8: +0.3085
+  D=25: shapes= 67408  min mu = 0.9792 at (0, 4, 7, 11, 14, 18, 21, 25)   margin over need_8: +0.3042
+  D=26: shapes= 88188  min mu = 0.9869 at (0, 4, 7, 11, 15, 19, 22, 26)   margin over need_8: +0.3119
+  BAND VERDICT: min over D in [10,26] = 0.9719 at (0, 1, 3, 4, 5, 6, 7, 10)  (ALL CLEAR of need_8 = 0.67502)
+
+=== (c) '7 tame + 1 far': effective crossing constant C_eff (Bis <= 1/7 + C_eff*T0/gap) ===
+  core=AP7 {0..6} (T0=6):
+    far=   19 (gap/T0=  3): mu = 1.0000  Bis = 0.0000  excess over 1/7 = -0.1429  C_eff = 0.000
+    far=   61 (gap/T0= 10): mu = 0.9979  Bis = 0.0021  excess over 1/7 = -0.1407  C_eff = 0.000
+    far=  241 (gap/T0= 40): mu = 0.9956  Bis = 0.0044  excess over 1/7 = -0.1385  C_eff = 0.000
+    far=  961 (gap/T0=160): mu = 0.9958  Bis = 0.0042  excess over 1/7 = -0.1387  C_eff = 0.000
+  core=tame7 {0,1,3,4,7,9,11} (T0=11):
+    far=   34 (gap/T0=  3): mu = 1.0000  Bis = 0.0000  excess over 1/7 = -0.1429  C_eff = 0.000
+    far=  111 (gap/T0= 10): mu = 1.0000  Bis = 0.0000  excess over 1/7 = -0.1429  C_eff = 0.000
+    far=  441 (gap/T0= 40): mu = 1.0000  Bis = 0.0000  excess over 1/7 = -0.1429  C_eff = 0.000
+    far= 1761 (gap/T0=160): mu = 1.0000  Bis = 0.0000  excess over 1/7 = -0.1429  C_eff = 0.000
+  core=tame7 {0,2,3,7,8,12,15} (T0=15):
+    far=   46 (gap/T0=  3): mu = 1.0000  Bis = 0.0000  excess over 1/7 = -0.1429  C_eff = 0.000
+    far=  151 (gap/T0= 10): mu = 1.0000  Bis = 0.0000  excess over 1/7 = -0.1429  C_eff = 0.000
+    far=  601 (gap/T0= 40): mu = 1.0000  Bis = 0.0000  excess over 1/7 = -0.1429  C_eff = 0.000
+    far= 2401 (gap/T0=160): mu = 1.0000  Bis = 0.0000  excess over 1/7 = -0.1429  C_eff = 0.000
+  (lemma shape: Bis <= Ind + C*T0/gap with Ind <= 1/7; crude provable C ~ 21+; measured C_eff below)
+
+=== (d) RESIDUAL + the TRUE object at k=8: rho*, quasi-independence R over joint (P,E) ===
+  adversarial min rho* = 0.3402 at P=(1, 5, 9, 11, 13) E=(1, 2, 3, 4, 5, 6, 7, 8)  (bar m_P = 0.0565)
+    refined: rho*=0.3403 mG=0.3965 mu=0.9402 R=0.913
+  adversarial min R    = 0.913 at P=(1, 5, 9, 11, 13) E=(1, 2, 3, 4, 5, 6, 7, 8)  (THM-530-D probe floor was 0.796)
+    refined: rho*=0.3403 mG=0.3965 mu=0.9402 R=0.913
+  UNION-BOUND WASTE: union needs mu >= 0.6750; if R >= R0 held uniformly, demand drops to
+    R0=0.5: mu >= m_P/(R0*mG_min) = 0.2962
+    R0=0.75: mu >= m_P/(R0*mG_min) = 0.1974

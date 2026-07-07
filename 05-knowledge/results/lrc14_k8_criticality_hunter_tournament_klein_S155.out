@@ -1,0 +1,30 @@
+=== 1. exact edge-count identity: E[#theta-edges] = k(k-1)theta (= 8 at k=8, theta=1/7) ===
+  E=[1, 2, 3, 4, 5, 6, 7, 8]: measured E[#edges] = 7.99973   (exact 8)
+  E=[0, 3, 7, 12, 19, 27, 44, 60]: measured E[#edges] = 7.99973   (exact 8)
+  E=[0, 1, 2, 4, 8, 16, 32, 64]: measured E[#edges] = 7.99973   (exact 8)
+
+=== 2. exact pair-mass engine m_ab vs numeric ===
+  (d1,d2)=(1,2): exact =       1/14 = 0.071429   numeric = 0.071435   theta^2 = 0.020408
+  (d1,d2)=(1,6): exact =       1/42 = 0.023810   numeric = 0.023812   theta^2 = 0.020408
+  (d1,d2)=(6,7): exact =       1/49 = 0.020408   numeric = 0.020412   theta^2 = 0.020408
+  (d1,d2)=(3,11): exact =       2/77 = 0.025974   numeric = 0.025961   theta^2 = 0.020408
+  (d1,d2)=(5,12): exact =       1/42 = 0.023810   numeric = 0.023812   theta^2 = 0.020408
+
+=== 3. HUNTER-TREE floor at k=8 criticality: meas W_i >= max-tree pair mass (exact) ===
+               AP {1..8}: best vertex i=4: Hunter floor = 0.6190 (exact 13/21)   true meas W_i = 0.3096
+     perforated {0,2..8}: best vertex i=4: Hunter floor = 0.6190 (exact 13/21)   true meas W_i = 0.3334
+                  spread: best vertex i=11: Hunter floor = 0.3622 (exact 259/715)   true meas W_i = 0.3256
+         two-cluster 4+4: best vertex i=1: Hunter floor = 0.3024 (exact 5997263/19831350)   true meas W_i = 0.3023
+  ADVERSARIAL MIN of best-vertex Hunter floor: 0.2124 (exact 229127/1078539) at (0, 4, 7, 9, 21, 29, 30, 36)
+  (positive uniformly? floor gives mu >= this rigorously via mu >= meas W_i)
+
+=== 4. universal pair-mass floor: min m_ab over coprime pairs (q1<q2<=40) ===
+  min m_ab = 1/49 = 0.020408 at (q1,q2)=(1, 7)   [theta^2 = 0.020408]
+  => universal-floor lemma candidate: m_ab >= 1/49 for all coprime pairs (to be proved by monotonicity in q)
+
+=== 5. PZ-on-B at k=8 vs need_8 = 0.67502 ===
+               AP {1..8}: E[B]=2.4982 E[B^2]=8.7601 PZ=0.7124  mu=0.9402
+     perforated {0,2..8}: E[B]=2.5770 E[B^2]=8.6768 PZ=0.7654  mu=1.0000
+                  spread: E[B]=2.7378 E[B^2]=8.0947 PZ=0.9260  mu=1.0000
+         two-cluster 4+4: E[B]=2.5886 E[B^2]=8.5241 PZ=0.7861  mu=0.9917
+  ADVERSARIAL MIN PZ-on-B (k=8) = 0.7122 at (0, 1, 2, 3, 4, 5, 6, 7)   (>= need_8 OK)

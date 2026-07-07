@@ -13,6 +13,28 @@ PART 2: 2/7-LOO variant (bisection maxgap_E >= maxgap_{E-e_j}/2 + subset lemma a
 COMPOSITE STATE: every hlarge leg now has an exact bounded-diameter certificate; residual = spread clusters (k=13,12 additionally: all leave-one-outs spread). Lean shape identical to mac-mini-S42's LRCTailDiameter claim (finite rational certificates). NEXT: klein's (C1) exact bisection recursion on the G_P-intersected object for the shallow k=8/9 bites; the spread residual = decorrelation (monad CE / mac-mini PZ-on-U tools).
 
 Files: lrc_intersection_ledger_kps_S60.py, lrc_intersection_ledger_loo27_kps_S60.py (+outs); MISTAKE-121; HYP-4847; proof-map INTERSECTION LEDGER block + S59 correction. Does NOT prove LRC(14).
+## klein-2026-07-07-S155 -- TARGET-1 COMPOSITE on the binding k=8 leg: the PAIR-MASS LAW (exact 49-class table, min = theta^2), the HUNTER-ENDPOINT diameter-free floor 6/49 at the k=8 CRITICALITY (mean theta-out-degree exactly 1), finite band 12..26 clear (+0.30), far case nearly free, PZ-on-B >= 0.712, true rho* >= 6x m_P (HYP-4791)
+
+Prompt (owner): another session like S154 -- attack target 1 (the k=8 window-avoidance inequality), highest-leverage angles, pull in incoming agent work, look for tournament-work analogies.
+
+INTEGRATED MID-SESSION (3 pulls): opus-S135 PROVED the Farey roof (discharges every 'modulo roof' caveat incl. my S154 LOO<=36 composite -- now unconditional); kps-S60's INTERSECTION LEDGER (k=8 bite diam<=11, supersedes my union-route D_8*=9 mid-run; my independently-computed union bites 9/11/11 EXACTLY match their MISTAKE-121-corrected values -- clean cross-validation); mac-mini-S41 PZ-on-U + monad-S2 tail-diameter absorbed.
+
+FINDINGS (HYP-4791, reflection the-k8-leg-composite-criticality-hunter-and-the-pair-mass-law-klein-S155):
+ 1. UNION D_k* TABLE (exact, roof): 9/11/11/15/23/75 (k=8..13) vs kps-S60 intersected 11/11/17/21/34/75 -- intersecting beats the union bound by 2-11 diameters/leg; quantifies the union bound's waste.
+ 2. FINITE BAND: all ~229k affine-normalized 8-shapes diam 10..26 swept -- min mu = 0.9719 (+0.30 over need_8 = 0.67502). With kps-S60, the k=8 leg is open ONLY at diam >= 27 (observed mu >= 0.97 there).
+ 3. FAR CASE NEARLY FREE at k=8: E7 u {far}: measured Bis <= 0.0044 (mu >= 0.9956) -- the 7-core must be in a rare near-net state before the far point matters; explicit-constant skeleton Bis <= (1/7)(1-mu_{2/7}(E7)) + 21·T0/dist => dist >= ~96·T0 => mu >= 0.675. (kps-S60 asked for the bisection tool on the shallow k=8/9 bites -- this is its first instance.)
+ 4. CRITICALITY (tournament bridge): E[#theta-edges of the successor digraph] = k(k-1)·theta EXACTLY for every E (pair-distance exact uniformity) => (k,theta) = (8,1/7) is the MEAN-OUT-DEGREE-1 critical case (k<=7 subcritical + pigeonhole-deterministic; k=13 supercritical 12/7). B = #gaps>theta = #outdeg-0 vertices of the THM-373 phase-clock comparator movie; the movie's walls = the crossing-lemma pieces; observer-source lens (THM-381) per-runner at theta.
+ 5. THE PAIR-MASS LAW (new, exact): same-sign coprime (0,1/7]^2 masses: m(q1,q2) = 1/49 + G(r1,r2)/(q1q2), G = min(r)(7-max(r))/49, r = q mod 7 (0↦7) -- CONSTANT on all 49 residue classes (full q<=40 sweep; q2<=200 min = exactly 1/49). G >= 0; G = 0 iff 7|q1q2 = opus-S134's apex-7 invisibility as the vanishing rows. MIXED-sign masses can VANISH ((1,-1),(-3,4),(2,-5) = 0 exact) => Hunter trees must stay same-sign (endpoint vertices). Proof = elementary lattice count (half page, OPEN).
+ 6. HUNTER-ENDPOINT FLOOR: at k=8 the Bonferroni base 1-7theta = 0 EXACTLY, so Hunter's spanning-tree inequality gives mu_{1/7}(E_8) >= meas W_endpoint >= 6·theta^2 = 6/49 ~ 0.1224 -- the FIRST diameter-free rigorous uniform floor at the binding leg (modulo the pair-mass lemma); k=9 variant 1/49 > 0; dies k>=10. CAUGHT IN-SESSION: my first (unsigned) Hunter computation had a SIGN BUG (mixed-sign hit events conflated -- 'floor' 0.62 > true W_i 0.31 impossible); superseded by the signed engine same session, never pushed as a claim.
+ 7. TRUE OBJECT: adversarial min rho*(P,E) = 0.3403 = 6.0x m_P (at P={1,5,9,11,13}, E=AP); quasi-independence R >= 0.913 (k=8, adversarial). If R >= 0.75 were proved, the mu-demand drops 0.675 -> 0.197 (2-vertex-Hunter range). PZ-ON-B: adversarial min E[B]^2/E[B^2] = 0.7122 >= 0.675 AT THE AP (5.5% margin) => target 1 reduces to two exact-moment bounds -- the k=8 mirror of monad's S1/pairSum program.
+
+HONEST: nothing closes the leg. Three lemma-sized opens: (i) pair-mass lattice count (elementary); (ii) 2-vertex Hunter >= 0.197; (iii) R >= 0.75 (THM-579-shaped). (i)+(ii)+(iii) close the k=8 spread residual at the R-route bar; or PZ-on-B moments at the full bar.
+
+FILES: 04-computation/lrc14_k8_{leg_composite,criticality_hunter_tournament,hunter_signed}_klein_S155.py (+outs); reflection; HYP-4791; backlog target-1 status update; this log. No canon overridden; no Lean asserted.
+
+NEXT: (a) write the pair-mass lattice-count proof (half page) => Hunter 6/49 floor GREEN-able; (b) the 2-vertex Hunter union with exact pair-intersection uppers; (c) R >= 0.75 at k=8 via THM-579-style spectral overlap on spread shapes; (d) push the band D0 higher / port to k=9 (bite 11, Hunter 1/49).
+
+---
 
 ## mac-mini-2026-07-07-S41 -- PZ-ON-U: the k=13 density floor is a CV BOUND -- mu_{1/7} >= E[U]^2/E[U^2] = 1/(1+CV(U)^2) >= (7/6)E[U]; adversarial floors PZ>=0.2606 (4.61x m_P) / E[U]>=0.0938 (1.94x reduced bar); balanced-lattice truncation is NON-perturbative (dead end, extends HYP-4767 to the density side); cover-or-decorrelate dichotomy proposed for kps-S59's D>75 residual (HYP-4837 [renumbered from 4817, ceded to monad-S2 tail-diameter], MISTAKE-120)
 
