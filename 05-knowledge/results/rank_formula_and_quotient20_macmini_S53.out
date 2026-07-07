@@ -1,0 +1,29 @@
+=== (A) rank formula (EXACT Fraction arithmetic) ===
+  (2,2): rank = 2 (twist-independent: True), formula = 2  OK
+  (2,3): rank = 4 (twist-independent: True), formula = 4  OK
+  (3,3): rank = 4 (twist-independent: True), formula = 4  OK
+  (2,4): rank = 4 (twist-independent: True), formula = 4  OK
+  (3,4): rank = 6 (twist-independent: True), formula = 6  OK
+  (4,4): rank = 6 (twist-independent: True), formula = 6  OK
+  (2,5): rank = 6 (twist-independent: True), formula = 6  OK
+  (3,5): rank = 6 (twist-independent: True), formula = 6  OK
+  (4,5): rank = 8 (twist-independent: True), formula = 8  OK
+  A1 (B = share-an-endpoint adjacency, ALL twists, exact): True
+  A2/A3 (proof): B == J(x)I + I(x)J mod 2; kernel = {rowsums==colsums==c}: dim (m-1)(n'-1) + [m==n' mod 2] => rank = m+n'-1-[m==n' mod 2].
+
+=== (B) n=8 quotient-min = 20, certificate ===
+  f = 6 forced (mirror-self crossings); quotient edges = 32; maxcut = 25; min Q|Fix = 6 + 2*(32-25) = 20
+  edge-disjoint odd cycles found: 6 (sizes [3, 3, 3, 3, 3, 3]); need 7
+  greedy insufficient -- certificate incomplete (maxcut exhaustive still proves 20; human-checkable cycle list pending)
+odd cycles available: 22 triangles, 232 5-cycles
+max edge-disjoint odd-cycle packing found: 7 (need 7)
+CERTIFICATE COMPLETE: 7 edge-disjoint odd cycles:
+  cycle 1: [(4, 8), (4, 10), (8, 10)]
+  cycle 2: [(5, 8), (5, 9), (8, 9)]
+  cycle 3: [(6, 2), (6, 9), (9, 2)]
+  cycle 4: [(4, 1), (4, 5), (5, 1)]
+  cycle 5: [(3, 4), (3, 6), (4, 6)]
+  cycle 6: [(6, 8), (6, 11), (7, 8), (7, 10), (10, 11)]
+  cycle 7: [(3, 5), (3, 7), (5, 11), (7, 9), (9, 11)]
+=> every cut leaves >=1 edge uncut per cycle => maxcut <= 32-7 = 25 => q >= 7
+=> min Q|Fix(sigma) = 6 (forced mirror crossings) + 2*7 = 20. QED (human-checkable)

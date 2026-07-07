@@ -1,3 +1,17 @@
+## mac-mini-2026-07-07-S53 -- THM-650: BOTH TRILOGY FOLLOW-UPS PROVED -- (A) pair-space rank = m+n'-1-[m==n' mod 2] (three-case coefficient proof + kernel identification; exact-arithmetic verification after catching a float boundary artifact); (B) n=8 sigma-fixed min = 20 census-free (6 forced mirror-self crossings + 7 explicit edge-disjoint odd cycles pin maxcut = 25) (HYP-5127)
+
+Prompt (owner): prove the rank formula and the n=8 quotient-min = 20 closed form; continue and integrate incoming.
+
+(A) RANK FORMULA (proved): the mod-2 quadratic part of the cylinder crossing form = the share-an-endpoint adjacency of E(K_{m,n'}) at EVERY generic twist (disjoint pairs: second difference 2(floor diff) == 0; shared-inner: [d<0]+[d>0] = 1; shared-outer: [x<0]+[x>0] = 1) = J tensor I + I tensor J mod 2; kernel = row-sums-equal-col-sums matrices, dim (m-1)(n'-1)+[m==n'] => rank = m+n'-1-[m==n' mod 2]. Exact-Fraction verification 3 twists x 9 shapes, ranks all match, twist-independent. METHOD RECORD: float noise at the structurally-INTEGRAL shared-outer endpoints produced spurious coefficients in the first run (S52's tw=0.137 was accidentally benign) — exact arithmetic mandatory at boundary-integral geometry.
+
+(B) QUOTIENT-MIN = 20 (proved, census-free): the 6 sigma-fixed crossing pairs are exactly mirror-self pairs {c, sigma c} (the 3 fixed chords nested, 0 crossings) => same bit => same page => f = 6 FORCED by symmetry alone; Q|Fix = 6 + 2q; SEVEN explicit edge-disjoint odd cycles (5 triangles + 2 pentagons, listed) => maxcut <= 25 => q >= 7, attained => 20 > Z(8) = 18. The pairing-with-sign-flip mechanism of THM-649(II) is now a closed-form theorem.
+
+INCOMING INTEGRATED: klein-S172 constructive self-loop existence at all even n (2-periodic difference tilings; 2-adic hierarchy conjecture; Burnside 2^{n/2-2} verified n=4,6,8) — the constructive complement of my THM-648 parity obstruction; cross-referenced in THM-650. kps-S72 per-resonance-q R2 reduction noted (density-floor lane).
+
+FILES: THM-650 (canon, complete proofs); rank_formula_and_quotient20_macmini_S53.py (+out); HYP-5127 (INDEX). No canon overridden.
+
+NEXT: (a) the Zarankiewicz application of the star form (the rank channels = the obstruction structure); (b) klein's n=10 census decides the self-loop count law; (c) LRC lanes (net-route counting; kps R2 reduction).
+
 ## klein-2026-07-07-S172 -- SELF-LOOP CLASSIFICATION, honest: 2-periodic difference construction EXACT at n=4,6, PARTIAL at n=8, gives 3 of 8 predicted lines at n=10 (a lower-bound construction, not the classification); the loop structure deepens 2-ADICALLY; all loop tilings + witnesses now extracted as repo data (HYP-4961)
 
 Prompt (owner): classify the non-affine witnesses at n=6,8 and finish the Burnside count.
