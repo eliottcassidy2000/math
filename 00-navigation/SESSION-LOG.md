@@ -24,6 +24,15 @@ CEDED: line metagraph to mac-mini-S47. DEFERRED: the two arXiv reads. Files: THM
 NEXT: (a) prove (M) via a q-weighted pairing (even-graph layer -- klein/kps E_n machinery may apply); (b) prove (S/T) via the anti-symmetric contraction digraphs; (c) the D > 37 spread residual of the 2/7 gate; (d) the arXiv reads.
 
 ---
+## monad-explorer-2026-07-07-S8 -- THM-647: ANTI-REDEI PROVED (HYP-5007): every SC tournament has an involutory anti-automorphism, and every involutory twist has an ODD number of anti-palindromic Hamiltonian paths; involutory hypothesis necessary (36 even-Fix examples); line-metagraph = folded-hypercube identification offered to mac-mini
+
+Prompt (owner): prove anti-Redei via the rho-twisted involution; work the line metagraph; keep the gates; abstraction-on-abstraction mindset (+2 arXiv refs).
+
+RESULTS: (1) THM-647 PROVED, two routes: [Sylow+Redei] |Aut| odd => involutory anti-automorphism rho_0 exists (constructively rho^m, m = ord(rho^2) odd); tau = rev o rho_0 is an involution on Ham paths; #HP == #Fix(tau) mod 2 = odd by Redei. [Fiber law] H_anti = B(C)|Aut| (opus THM-644) x B odd on SC (three-engine parity) x |Aut| odd. (2) REDUCTION: non-involutory tau_rho^m = tau_{rho^m} (m odd) -- parity always reads an involutory representative; necessity: 8 (n=6) + 28 (n=7) non-involutory even-Fix examples found. (3) VERIFIED exhaustively: all SC classes n=3..7 (2/2/8/12/88), EVERY involutory twist odd. (4) Corollaries: anti-palindromic Ham path EXISTS for every SC tournament; 'SC never pure black' re-derived census-free; constructive Lean shape flagged. (5) LINE METAGRAPH (mac-mini-S47 claimed the census mid-session -- ceded): offered the identification lines = antipodal pairs => line graph = FOLDED HYPERCUBE FQ_m, line metagraph = FQ_m/S_n = tile-level twin of THM-584's arc-level antipodal split; predicts even-level spectrum + blue = sigma-fixed sublattice. (6) Gates + arXiv refs (2607.04388, 2308.09124): out of session budget, routed in letter.
+
+HYGIENE: 7th collision of the day resolved (my 4997 -> 5007; kps-S66 fled my 4967 into 4997 first). kps-S66 also SOLVED my S6 pure-blue mystery: pure-blue(n) = floor((n+1)/2) - [n even].
+
+FILES: anti_redei_proof_verification_monad_S8.py(+out); THM-647 canon; HYP-5007. No canon overridden (THM-644 conjecture proved, not modified; opus messaged via letter).
 
 ## klein-2026-07-07-S162 -- THM-645 THE OFFSET TENT LAW (proved, 0/9790): pair masses at ARBITRARY rational offsets = theta^2 + (s·Lambda(psi) − r1r2)/(s^2 q1q2); THM-638's signed cases = the tent's PEAK and VALLEY; half-shift psi in {0,1/2} by parity of q; PA_2(AP_k) = mu_{1/7}(AP_k) exactly; half-shift census is 2-adically graded (HYP-4861)
 

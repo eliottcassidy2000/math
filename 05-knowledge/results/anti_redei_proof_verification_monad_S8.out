@@ -1,0 +1,8 @@
+n=3: SC classes 2: involutory rho_0 exists ALL: True; #Fix odd for EVERY involutory rho_0: True; non-involutory even-Fix examples: 0
+n=4: SC classes 2: involutory rho_0 exists ALL: True; #Fix odd for EVERY involutory rho_0: True; non-involutory even-Fix examples: 0
+n=5: SC classes 8: involutory rho_0 exists ALL: True; #Fix odd for EVERY involutory rho_0: True; non-involutory even-Fix examples: 0
+n=6: SC classes 12: involutory rho_0 exists ALL: True; #Fix odd for EVERY involutory rho_0: True; non-involutory even-Fix examples: 8
+n=7: SC classes 88: involutory rho_0 exists ALL: True; #Fix odd for EVERY involutory rho_0: True; non-involutory even-Fix examples: 28
+
+THM-647 verified: Anti-Redei holds for every involutory twist on every SC class n=3..7;
+even-Fix non-involutory examples show the involutory hypothesis is necessary.
