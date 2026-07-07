@@ -366,3 +366,4 @@ import TournamentH7.LRCLonelyOpen
 import TournamentH7.LRCSubfamilyCap
 import TournamentH7.LRCSpectrumWindow
 import TournamentH7.LRCBinderInfeasible
+import TournamentH7.LRCEvenBranchWitness  -- mac-mini-2026-07-06-S29: even-branch clearance, N=12 canonical mediant family {1..10,12,33} reach >= 3/35 > 2/25 => NOT a gap member (parity, not 38=2*19 compositeness) (THM-632, HYP-4572)
