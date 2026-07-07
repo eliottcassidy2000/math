@@ -1,0 +1,23 @@
+=== 1. THE OFFSET TENT LAW: exhaustive verification ===
+  theta=1/7: 4895 (pair,offset) cases: 0 violations
+  theta=2/7: 4895 (pair,offset) cases: 0 violations
+  half-shift corollary check (psi by parity of q1):
+    (q1,q2)=(3,5) q1 odd: m = 1/70 = 0.014286  vs theta^2 = 0.020408  (< (valley side))
+    (q1,q2)=(4,7) q1 even: m = 1/49 = 0.020408  vs theta^2 = 0.020408  (>= (peak side))
+    (q1,q2)=(5,8) q1 odd: m = 3/140 = 0.021429  vs theta^2 = 0.020408  (>= (peak side))
+    (q1,q2)=(6,11) q1 even: m = 5/231 = 0.021645  vs theta^2 = 0.020408  (>= (peak side))
+
+=== 2. PA_2 minimizer-candidate table (AP_k and all-odd AP), vs T_k ===
+  k= 8: PA2(AP_k) = 0.9401  [P(g0)=0.9401, P(g1/2)=0.6068, overlap=0.6068]   PA2(odd-AP) = 0.8323   T_k = 0.6185   margins +0.322/+0.214
+  k= 9: PA2(AP_k) = 0.8402  [P(g0)=0.8402, P(g1/2)=0.5283, overlap=0.5283]   PA2(odd-AP) = 0.7128   T_k = 0.5057   margins +0.334/+0.207
+  k=10: PA2(AP_k) = 0.7755  [P(g0)=0.7755, P(g1/2)=0.4394, overlap=0.4394]   PA2(odd-AP) = 0.5749   T_k = 0.3956   margins +0.380/+0.179
+  k=11: PA2(AP_k) = 0.6263  [P(g0)=0.6263, P(g1/2)=0.3829, overlap=0.3829]   PA2(odd-AP) = 0.5160   T_k = 0.2747   margins +0.352/+0.241
+  k=12: PA2(AP_k) = 0.5699  [P(g0)=0.5699, P(g1/2)=0.3450, overlap=0.3450]   PA2(odd-AP) = 0.4424   T_k = 0.1429   margins +0.427/+0.300
+  k=13: PA2(AP_k) = 0.4425  [P(g0)=0.4425, P(g1/2)=0.3111, overlap=0.3111]   PA2(odd-AP) = 0.3879   T_k = 0.0565   margins +0.386/+0.331
+
+=== 3. half-shift quasi-independence census: R_s = P(T ∩ sT)/P(T)^2 ===
+        AP13: P(T) = 0.4425   P(T ∩ sT) = 0.2101   R_s = 1.073   [union = 0.6748 vs 2P-P^2 = 0.6892]
+    odd-AP13: P(T) = 0.3383   P(T ∩ sT) = 0.2886   R_s = 2.522   [union = 0.3879 vs 2P-P^2 = 0.5621]
+      record: P(T) = 0.4520   P(T ∩ sT) = 0.2958   R_s = 1.448   [union = 0.6082 vs 2P-P^2 = 0.6997]
+      spread: P(T) = 0.3286   P(T ∩ sT) = 0.3284   R_s = 3.041   [union = 0.3288 vs 2P-P^2 = 0.5492]
+      primes: P(T) = 0.3185   P(T ∩ sT) = 0.1722   R_s = 1.697   [union = 0.4649 vs 2P-P^2 = 0.5356]

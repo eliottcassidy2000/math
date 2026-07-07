@@ -1,3 +1,19 @@
+## klein-2026-07-07-S162 -- THM-645 THE OFFSET TENT LAW (proved, 0/9790): pair masses at ARBITRARY rational offsets = theta^2 + (s·Lambda(psi) − r1r2)/(s^2 q1q2); THM-638's signed cases = the tent's PEAK and VALLEY; half-shift psi in {0,1/2} by parity of q; PA_2(AP_k) = mu_{1/7}(AP_k) exactly; half-shift census is 2-adically graded (HYP-4861)
+
+Prompt (owner): back to the LRC frontier carrying the S161 mindset (commuting involutions force parity; quasi-randomness + skeleton completes structure).
+
+THE TRANSPORT: on the time circle the involutions are r(x) = 1−x (reversal/T-op) and s(x) = x+1/2 (the 2-lift deck map); the 2-anchor tail PA_2 = meas(T u sT) on all-odd families (S160); the joint window masses needed THM-638 AT OFFSETS — derived, proved, verified.
+
+THM-645 (canon, full proof; generalizes THM-638): meas(A_{q1}^{(a1)} ∩ A_{q2}^{(a2)}) = theta^2 + (s·Lambda(psi) − r1r2)/(s^2 q1q2), psi = frac(a2·q1 − a1·q2), Lambda = the arc-overlap TENT (peak min(r) = same-sign law; valley (r1+r2−s)+ = mixed-sign law). Verified 0/9790 (theta 1/7 AND 2/7, five offset pairs, all coprime q<=40). SIGN LESSON (in-session): first convention had 1730 violations; a four-convention test isolated psi = frac(a2 q1 − a1 q2) in one step — pin phase conventions by exhaustive test before asserting (cheap, decisive). HALF-SHIFT COROLLARY: psi = 0 (q1 even, peak) or 1/2 (q1 odd; with small residues Lambda = 0: NEGATIVELY correlated, exact) — the even/odd duality as tent phase; the S160 parity dichotomy quantified at the pair level.
+
+APPLICATIONS: (a) PA_2(AP_k) = mu_{1/7}(AP_k) EXACTLY at every k (T_{1/2} ⊂ T_0 for the plain AP — origin saturation makes the half-anchor redundant AT the AP; boxeph's lower infs live at translated APs, consistent); all-odd-AP PA_2 = 0.832..0.388, margins +0.21..+0.33 over T_k. (b) HALF-SHIFT QUASI-INDEPENDENCE CENSUS: R_s = P(T ∩ sT)/P(T)^2 is 2-ADICALLY GRADED — all-even families have sT = T identically (T is 1/2-periodic; R_s = 1/P(T): spread 3.04), odd-AP 2.52, AP13 1.07, primes 1.70. The S161 completion pattern transported: skeleton = 2-adic type; bulk = quasi-random.
+
+FILES: 04-computation/lrc14_offset_tent_law_klein_S162.py (+out); THM-645 canon; HYP-4861. No Lean (owner directive). No canon overridden.
+
+NEXT: (a) Hunter/cherry/LP on W_0 u W_{1/2} with tent pair-masses (all terms now exact) — the 2-anchor floor machinery at k=8; (b) general-offset F7 anchors (opus's 18 anchors' pairwise layer is all tent values); (c) the translated-AP PA_2 exact values via a shifted-origin roof (boxeph's minimizers); (d) triple tent (three-window masses at offsets — the cherry's triple layer at anchors).
+
+---
+
 ## opus-2026-07-07-S139 -- TWO PARITY THEOREMS GOVERN THE BLUE/BLACK FIBERS (THM-644: gridsym = rho-anti-automorphism PROVED; fiber law g(C)|Aut| = H_anti verified 72/72; ANTI-REDEI conjecture opened, verified n<=7; N(C) odd = Redei + odd-Aut PROVED) + the four 2-anchor handoffs (near-limit dip exact @ (3,4); CERTIFIED limit table; double-cover chain rigorous and SUFFICES for the k=13 leg on the binding class; observer-rank prefilter) (HYP-4952)
 
 Prompt (owner): (A) the four 2-anchor handoffs; (B) blue/black line structure of the merged metagraph -- formulas per n, node types, and the full 'which tilings map to which class' picture; creative niche insights coalescing into a grand restricting picture.
