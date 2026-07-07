@@ -57,9 +57,21 @@ LRC14Statement
 Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 `gK8_concentration_extremality`, `doublet_Rtail_uniform_bound`, the witness-floor cases.
 
+> **Structured-branch tool (kps-S52, HYP-4697) — a *sup* fact, so it lives on Route 1.**
+> The **coarse / scale reduction** `M(v) ≥ M(K) − A/L` (for `vᵢ = aᵢ + L·kᵢ`, all `kᵢ ≥ 1`,
+> `|aᵢ| ≤ A`, `K = {distinct kᵢ}`) grounds the **multi-scale** families directly in the
+> **settled LRC(≤13)**: if the 13 speeds cluster into `≤ 12` groups at any scale `L`
+> (equivalently, carry a close pair at scale `L`), then `M(K) ≥ 1/13` ⟹ `M(v) > 1/14` for
+> `L > 182·A`; `13`-distinct-cluster families **descend** (smaller height). So the
+> witness/density floor is only needed for the **single-scale / compressed** families — the
+> same bounded-ratio domain as **Tao (2018)**'s finite reduction. This survives opus-S130's
+> Route-2 retirement precisely because it bounds the **sup**, not accumulation points.
+> Verified `lrc_coarse_reduction_direct_kps_S52`; reflection
+> `the-coarse-reduction-is-a-sup-fact-…-kps-S52`.
+
 ---
 
-## Route 2 — J-K reduction → rank-2 torus → 1-D gap (the recent-work thread; owner's intent)
+## Route 2 — J-K reduction → rank-2 torus → 1-D gap (RETIRED as a proof route, opus-S130; correct conditional spectrum math)
 
 This is the "LRC(14) → n=12 rigidity" route. Its top link is a **citation**.
 

@@ -1,3 +1,16 @@
+## kind-pasteur-2026-07-06-S52 -- the COARSE/SCALE reduction re-aimed at the SUPREMUM (Route 1): it SURVIVES opus-S130's Route-2 retire, grounds multi-scale families in settled LRC(<=13), sharpens the open core to SINGLE-SCALE decorrelation (HYP-4697)
+
+Owner: prioritize creative reasoning/synthesis over formalization; work scale/decorrelation or a better idea.
+
+ABSORBED opus-S130 (MISTAKE-116/117): Route 2 RETIRED -- J-K bounds accumulation points not the sup (closing (C) does NOT close LRC14); correct target = ROUTE 1 (M(v)>=1/14 directly). Key realization: the coarse reduction is a GENERAL SUP fact, so it detaches from Route 2 and applies DIRECTLY to LRC(14) via SETTLED LRC(<=13), J-K FREE.
+
+BOUND (rigorous, verified 0 viol): v_i=a_i+L*k_i, all k_i>=1, |a_i|<=A, K={distinct k_i} => M(v)>=M(K)-A/L (witness t=t_K/L).
+DICHOTOMY: r<=12 clusters => M(K)>=1/13 (LRC<=13) => M(v)>1/14 for L>182A (LONELY, no new analysis); r=13 => DESCEND (smaller height); single-scale/compressed => RESIDUE (bound vacuous). AP {1..13} extremal, M=1/14 exact.
+
+BUYS (honest, NOT a proof): re-grounds compression/peeling on the sup (survives Route-2 retire); grounds clusters-into-<=12 in the settled frontier; SHARPENS the open core -- decorrelation needed ONLY for single-scale families (= Tao-2018 bounded-speed domain; coarse reduction is a self-contained instance).
+
+SYNTHESIS: LRC(14) = STRUCTURED (multi-scale, coarse bound+LRC<=13, grounded) (+) GENERIC (single-scale, decorrelation, open). No formalization this session (owner deprioritized). Files: lrc_coarse_reduction_direct_kps_S52.py(+out); reflection the-coarse-reduction-is-a-sup-fact-...-kps-S52.md; HYP-4697. No canon overridden.
+
 ## mac-mini-2026-07-06-S37 -- HONEST STATE AUDIT (owner: ensure correctness): the finite-covering route REFRAMES (C), it does NOT reduce it. CoveringComplete <=> (C) exactly; no finite q<=Q0 discharge exists (escape families, verified Q0=39, CONFIRMED by klein-S150 + kps-S51); the analytic core (tight scale-uniform decorrelation) is OPEN; reroute to (A) relocates not resolves (HYP-4687)
 
 Prompt (owner): work all remaining math; deeply consider the state and reroute; ensure correctness; finish formalization.

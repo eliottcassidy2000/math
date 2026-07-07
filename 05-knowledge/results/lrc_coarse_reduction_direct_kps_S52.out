@@ -1,0 +1,46 @@
+==============================================================================
+COARSE / SCALE REDUCTION for LRC(14), aimed DIRECTLY at the sup (Route 1)
+Target: M(v) >= 1/14 = 0.07143 for 13 nonzero speeds.  LRC(<=13): M >= 1/13 = 0.07692
+==============================================================================
+
+(1) r <= 12 KILLER: <= 12 clusters at scale L => M(v) >= 1/13 - A/L > 1/14.
+    (grounds in SETTLED LRC(<=13); the r<=12 branch needs NO new analysis)
+    v = {a_i + L*k_i}, 13 speeds, k_i in a set of size r<=12, |a_i| <= A.
+    L    r   M(K)     1/13-A/L   M(v)       >1/14?    k-multiset (clusters)
+    60   7   1/8      -0.12308   0.25000    YES       [1, 1, 1, 1, 2, 2, 3, 4, 5, 5, 5, 6, 7]
+    120  6   1/7      -0.02308   0.24878    YES       [1, 1, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6]
+    120  6   1/3      -0.02308   0.30604    YES       [1, 2, 2, 2, 5, 5, 8, 8, 8, 10, 10, 11, 11]
+    120  8   1/6      -0.02308   0.24051    YES       [1, 2, 3, 3, 4, 4, 5, 7, 7, 7, 8, 8, 9]
+    240  4   1/5      0.02692    0.19983    YES       [1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4]
+    240  8   2/13     0.02692    0.23949    YES       [2, 2, 3, 5, 6, 6, 7, 8, 8, 8, 8, 10, 11]
+
+(2) COARSE BOUND M(v) >= M(K) - A/L holds (verify the inequality directly):
+    r can be up to 13; bound is M(v) >= M(K) - A/L regardless.
+    L=100  r=2   M(K)=1/3     M(K)-A/L=0.23333   M(v)=0.30405   bound holds? YES
+    L=100  r=6   M(K)=2/9     M(K)-A/L=0.12222   M(v)=0.29651   bound holds? YES
+    L=200  r=8   M(K)=2/9     M(K)-A/L=0.17222   M(v)=0.27184   bound holds? YES
+    L=200  r=6   M(K)=1/7     M(K)-A/L=0.09286   M(v)=0.23453   bound holds? YES
+    L=200  r=10  M(K)=1/11    M(K)-A/L=0.04091   M(v)=0.29252   bound holds? YES
+    L=200  r=6   M(K)=1/7     M(K)-A/L=0.09286   M(v)=0.21403   bound holds? YES
+    L=200  r=5   M(K)=1/5     M(K)-A/L=0.15000   M(v)=0.23917   bound holds? YES
+    coarse-bound violations: 0 (expect 0)
+
+(3) r=13 DESCENT: all clusters distinct => K is a SMALLER 13-family, M(v)~M(K).
+    height(K) = max k_i << height(v) ~ L*max k_i.  Recurse -> single-scale base.
+    v height=7194  ->  K=[1, 3, 9, 11, 12, 18, 19, 29, 30, 33, 34, 35, 36] height=36   (ratio ~ L=200)
+    M(v)=0.27974   M(K)=0.14286   |M(v)-M(K)|=0.13689  (< A/L=0.04000)
+
+(4) RESIDUE = single-scale / compressed families (no scale gap): the hard core.
+    The AP {1..13} is the extremal single-scale family: M = 1/14 EXACTLY (tight).
+    M({1..13}) = 1/14 = 0.071429   (= 1/14, the LRC(14) threshold)
+    A single-scale family has k_i=v_i, a_i=0, L=1 => K=v: coarse bound is vacuous.
+    => these need DECORRELATION (Route 1 Fourier floor), NOT the coarse reduction.
+
+==============================================================================
+CONCLUSION.  The coarse reduction, on the CORRECT object (sup M, Route 1):
+  * clusters-into-<=12-groups families  =>  M(v) > 1/14  via SETTLED LRC(<=13).
+  * distinct-13-cluster families        =>  DESCEND (smaller height).
+  * single-scale / compressed families  =>  RESIDUE = the analytic core.
+  J-K FREE.  Does NOT close LRC(14); RE-GROUNDS the compression reduction on the
+  sup, and isolates the decorrelation core.  Survives opus-S130's Route-2 retire.
+==============================================================================
