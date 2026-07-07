@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-07-S60 -- THE INTERSECTION LEDGER: the diameter floor extended to the G_P-intersected legs -- composite hlarge coverage k=13<=75(prim)/k=12<=34/k=11<=21/k=10<=17/k=9<=11/k=8<=11, all exact, all 2379 slow parts swept, union bound bypassed; + 2/7-LOO far-element extension (k=13: any 12-subset<=36 [reproduces klein n2*=37 independently]; k=12: <=13); MISTAKE-121 (HYP-4847)
+
+Prompt (owner): another similar session, most high-leverage angles, pull in incoming work as it appears.
+
+INCOMING ABSORBED: monad-S2 tail-diameter theorem (my S59 trick at the DAG bar, independent engine, credited + renumbered cleanly), mac-mini-S41 PZ-on-U + S42 LRCTailDiameter.lean claim, klein-S154 bisection identity (C1/C2) + LOO-2/7 crossing n2*=37, boxeph threshold audit. Three-way HYP-4817 collision resolved by others; my 4827 claim collided mid-flight with monad's renumber => took 4847.
+
+SELF-CORRECTION FIRST (MISTAKE-121): my S59 'k=8..10 get NO bite' was a TABLE-START artifact -- the mu-scan began at n=13 but a k-point cluster's diameter starts at k-1. True union-bound bites: k=8 diam<=9, k=9<=11, k=10<=11. Rule: a per-k ledger must scan from a k-dependent start (MISTAKE-104 family). S59 reflection + proof-map corrected.
+
+MAIN RESULT (HYP-4847): the S59 pointwise inclusion SURVIVES INTERSECTION with G_P: rho*_{1/7}(P,E) >= meas(G_P cap {roof_{D+1} > 1/7}) =: ILedger(P,D+1) -- EXACT rational (G_P intervals x per-Farey-cell affine roof; RAW diameter, G_P breaks dilation-invariance). Swept ALL C(13,s) slow parts (2379): min_P ILedger >= m_P through n=35/22/18/12/12 at |P|=1..5 => BITES k=12: diam 11..34 (union bound 23), k=11: 10..21 (was 15), k=10: 9..17 (was 11), k=9: 8..11 (tie), k=8: 7..11 (was 9). k=11's bite = THM-527-D's verified extremal spread (~21) EXACTLY. Anatomy: first-failing P are small-p-heavy ({1,2,3,4,5} at k=8; {6} at k=12); exact quasi-independence R = 0.6-1.06 at small n, decaying as roof windows shrink into G_P cuts = THM-530-B anti-correlation quantified at 1/7.
+
+PART 2: 2/7-LOO variant (bisection maxgap_E >= maxgap_{E-e_j}/2 + subset lemma at 2/7): k=13 crossing n=37 (= klein-S154 part 3 EXACTLY, independent cross-validation); k=12 LOO bite <=13; k<=11 NO 2/7 bite (2/7 windows live only near q<=3 rationals -- small-p cuts erase them; honest negative with mechanism).
+
+COMPOSITE STATE: every hlarge leg now has an exact bounded-diameter certificate; residual = spread clusters (k=13,12 additionally: all leave-one-outs spread). Lean shape identical to mac-mini-S42's LRCTailDiameter claim (finite rational certificates). NEXT: klein's (C1) exact bisection recursion on the G_P-intersected object for the shallow k=8/9 bites; the spread residual = decorrelation (monad CE / mac-mini PZ-on-U tools).
+
+Files: lrc_intersection_ledger_kps_S60.py, lrc_intersection_ledger_loo27_kps_S60.py (+outs); MISTAKE-121; HYP-4847; proof-map INTERSECTION LEDGER block + S59 correction. Does NOT prove LRC(14).
+
 ## mac-mini-2026-07-07-S41 -- PZ-ON-U: the k=13 density floor is a CV BOUND -- mu_{1/7} >= E[U]^2/E[U^2] = 1/(1+CV(U)^2) >= (7/6)E[U]; adversarial floors PZ>=0.2606 (4.61x m_P) / E[U]>=0.0938 (1.94x reduced bar); balanced-lattice truncation is NON-perturbative (dead end, extends HYP-4767 to the density side); cover-or-decorrelate dichotomy proposed for kps-S59's D>75 residual (HYP-4837 [renumbered from 4817, ceded to monad-S2 tail-diameter], MISTAKE-120)
 
 Prompt (owner): long session -- deeply understand LRC14 history/relations/corrections/validity, what we've been missing/misguided, then investigate; forgotten factoids, extend/connect; how/why not just if; push/pull often.

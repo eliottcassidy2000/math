@@ -1,0 +1,24 @@
+================================================================================================
+2/7 LOO INTERSECTION LEDGER: min_P meas(G_P cap {roof_n > 2/7}) vs m_P
+================================================================================================
+  m_P = 0.056487;  sanity P=empty crossing should be 37 (klein-S154 part 3)
+  |P|=0 (k=13): ILedger27 >= m_P through n = 37  =>  LOO-bite: some 12-of-13 subset diam <= 36   [first-fail P=() val=0.05638]
+  |P|=1 (k=12): ILedger27 >= m_P through n = 14  =>  LOO-bite: some 12-of-12 subset diam <= 13   [first-fail P=(2,) val=0.04879]
+  |P|=2 (k=11): NO 2/7 bite (fails already at n=10: first-fail P=(1, 2) val=0.04853)
+  |P|=3 (k=10): NO 2/7 bite (fails already at n=9: first-fail P=(1, 2, 12) val=0.03095)
+  |P|=4 (k= 9): NO 2/7 bite (fails already at n=8: first-fail P=(1, 2, 3, 13) val=0.03925)
+  |P|=5 (k= 8): NO 2/7 bite (fails already at n=7: first-fail P=(1, 2, 3, 9, 13) val=0.04151)
+
+================================================================================================
+COMPOSITE TWO-LEVEL COVERAGE (raw-diam bite [S60 part 1]  OR  LOO-2/7 bite [this part])
+================================================================================================
+  k=13: cluster diam <= 75 (primitive)  OR some (k-1)-subset diam <= 36   ==> G2 >= m_P
+  k=12: cluster diam <= 34 (raw)  OR some (k-1)-subset diam <= 13   ==> G2 >= m_P
+  k=11: cluster diam <= 21 (raw)  (no LOO bite)   ==> G2 >= m_P
+  k=10: cluster diam <= 17 (raw)  (no LOO bite)   ==> G2 >= m_P
+  k= 9: cluster diam <= 11 (raw)  (no LOO bite)   ==> G2 >= m_P
+  k= 8: cluster diam <= 11 (raw)  (no LOO bite)   ==> G2 >= m_P
+
+  Residual per leg: diam > raw-bite AND every leave-one-out diam > LOO-bite
+  (= genuinely two-level-spread clusters; THM-527-D says spread raises mu).
+DONE.
