@@ -1,0 +1,11 @@
+Escape family at fleet Q0=39: V={i+L*k_i}, L=lcm(2..39)=5342931457063200, k=alt(1,2)
+  distinct 12 speeds: True; positive: True
+  compressed (max<=13*min): True (ratio 2.000)  => NON-peeling per kps-S49
+  is DilatedAP (sorted is an AP): False  => subject to CoveringComplete (non-AP)
+  fails ALL q<=39: True  (fails 38/38 moduli in [2,39])
+  first q it CLEARS at: 41  (nextprime(39)=41)
+
+  => this non-DilatedAP, compressed (non-peeling) family has NO covering witness q<=39,
+     only at q=41.  So CoveringComplete CANNOT be discharged by a q<=39
+     residue check.  HasCoveringWitness (unbounded q) IS satisfied (q=41), so CoveringComplete
+     as WIRED (unbounded q) = (C) exactly, an honest open obligation -- NOT a finite check.
