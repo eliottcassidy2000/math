@@ -1,0 +1,17 @@
+n=6: sigma-fixed chord lengths = [3, 5] (all odd: True); Q parity on sigma-fixed cube = [1] (CONSTANT); C(n,4) mod 2 = 1; Z(n) = 3 (mod 2 = 1); sigma-fixed minQ = 3
+n=8: sigma-fixed chord lengths = [3, 5, 7] (all odd: True); Q parity on sigma-fixed cube = [0] (CONSTANT); C(n,4) mod 2 = 0; Z(n) = 18 (mod 2 = 0); sigma-fixed minQ = 20
+
+(2) parity compatibility: at n=8, C(8,4)=70 == 0 == Z(8)=18 mod 2 => parity does NOT
+    obstruct sigma-fixed optima; the observed mirror break (strict-blue min 20 > 18)
+    is a STRICTLY QUADRATIC phenomenon -- complements mac-mini-S50's mechanism.
+
+(3) THE DEGREE GAP (citations, no recomputation): on the same GF(2)^m cube,
+    crossing Q = const + affine + QUADRATIC (interleavement form, nontrivial);
+    the LRC deficit has NO quadratic part AT ALL: pair resonances are impossible
+    on the balanced lattice (kps-S59 uniformity; monad-S7 exact LP certificate
+    802/6331 < 1/7 that pair data cannot force the floor); leading term = degree-3
+    (mirrors/3-APs). Every degree-2 tool (T-join repair, parity laws, spectral,
+    MaxCut, Zarankiewicz) grips Q and passes through the deficit. NOTE (trap,
+    walked + closed this session): the half-shift x -> x+1/2 gives NO extra pruning
+    of the balanced lattice -- the candidate parity condition sum_{odd e} m_i == 0
+    mod 2 is AUTOMATIC there (== sum m_i e_i mod 2 = 0). Do not re-walk.

@@ -11,6 +11,19 @@ FILES: 05-knowledge/results/lrc_c3diff_law_selfloops_klein_S169.out (inline scri
 NEXT: (a) prove the binomial law (identify the D-carrying orbits — the distribution's exactness at six n's makes this a safe half-page target); (b) prove 2^{n/2-2} (Burnside on the twisted flip); (c) identify the self-loop classes; (d) canon fold-in to THM-643/644 with S168.
 
 ---
+## monad-explorer-2026-07-07-S10 -- THE DEGREE GAP (HYP-5097): crossing Q is the degree-2 shadow and the LRC deficit the degree-3 shadow of ONE cube geometry (deficit's quadratic part vanishes identically -- why quadratic tools pass through); sigma-fixed parity-constancy lemma PROVED (Q == C(n,4) mod 2 on the sigma-fixed cube; parity COMPATIBLE at n=8 => mirror break is strictly quadratic); half-shift pruning trap walked and closed
+
+Prompt (owner): consider the F1-F4 crossing/tiling fusion deeply while working the LRC-14 bleeding edge.
+
+CONCURRENCY ABSORBED: mac-mini-S50 landed Q-vs-H (anti-correlation, minQ = Z(n)) + the n=8 mirror-break mechanism (pairing quantization) + the two-circle seed mid-session; mac-mini-S48's THM-648 + klein-S168's c3-parity law PROVED my S6 conjecture C1 in full (blue self-loops only at even n). My remaining unique lane delivered:
+
+1. SIGMA-FIXED PARITY-CONSTANCY LEMMA (proved + enumeration-verified): at even n every sigma-fixed chord has ODD length (n+1-2y) => F2's parity carriers (deg_I odd needs l even) are never sigma-fixed, orbits are length-homogeneous => Q == C(n,4) mod 2 CONSTANT on the sigma-fixed cube. Verified n=6 ({1}, minQ 3 = Z(6)) and n=8 ({0}, minQ 20 = F4's strict-blue min). Since C(8,4) == Z(8) mod 2, parity does NOT obstruct sigma-fixed optima at n=8: the even-n mirror breaking is STRICTLY QUADRATIC -- the parity-law route to queued handoff #2 is honestly closed; the mechanism level is mac-mini-S50's.
+
+2. THE DEGREE GAP (the synthesis): same GF(2)^m cube, two functionals -- Q = const + affine + QUADRATIC (interleavement); the LRC deficit has NO quadratic part at all (pair resonances impossible on the balanced lattice: kps-S59 uniformity + my S7 exact LP certificate), leading degree 3 = mirrors. Every degree-2 instrument (T-join, parity laws, spectral, MaxCut, Zarankiewicz) grips Q and provably passes through the deficit. 'Why LRC-14 is hard' as a landscape-degree statement; the even/odd duality acts compatibly on both shadows (F2's even-length carriers <-> the runner 2-adic split).
+
+3. TRAP CLOSED: half-shift x -> x+1/2 gives NO balanced-lattice pruning (candidate parity condition is automatic). Walked, refuted in-session, recorded so nobody re-walks.
+
+HYGIENE: 5047 was triple-claimed (mac-mini S48+S48b wire priority) -> mine renumbered 5097. FILES: degree_gap_and_mirror_parity_monad_S10.out; HYP-5097. No canon overridden.
 
 ## klein-2026-07-07-S168 -- THE c3-PARITY LAW PROVED (pairing-with-sign-flip, no census): for gridsym t, c3(flip t) − c3(t) ≡ 1 mod 2 at ODD n ⟹ BLUE SELF-LOOPS IMPOSSIBLE AT ODD n (C1's odd half); + Q = A(T) vs H census (Q odd, Q <= H); bipartite Redei FAILS (HYP-4921)
 
