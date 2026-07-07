@@ -1,3 +1,19 @@
+## mac-mini-2026-07-06-S33b -- THM-634 the NON-TRANSVERSAL branch of (C) FORMALIZED (LRCMod25Transversal.lean, kernel-pure): miss a ±-pair mod 25 => M>=2/25; supplies the existence half kps's mod25_covering_floor assumed; corrects "d>=3 GREEN" to defect-agnostic (HYP-4642)
+
+Prompt (owner): work on finishing off the crux and once it is done, formalizing it; pull often and integrate.
+
+FINISHED + FORMALIZED the GREEN half of the crux. The crux (C)=(G) splits along opus-S124's mod-25 dichotomy: (a) NON-transversal (misses a ±-pair {a,-a} mod 25) => M>=2/25 [now FULLY Lean]; (b) transversal/pair-blocker => AP (1/13) or plateau (>=1/12) [residual near-AP moat].
+
+THE HOLE I CLOSED: kps-S41's mod25_covering_floor takes a clearing rotation c as a HYPOTHESIS and concludes M>=2/25, but nothing PRODUCED c. LRCMod25Transversal.lean (kernel-pure [propext,Classical.choice,Quot.sound], wired to root) supplies it: covering_of_misses_pair + loose_of_misses_pair -- from the decidable hypothesis "misses pair {a,-a} (no mult 25)", the explicit c=a^-1 clears every speed off {0,±1} mod 25 => M>=2/25 at t=a^-1/25. Proof = one shared `linear_combination a*h - v_i*hinv` (rules out v*c∈{0,1,-1} from a*c=1 and v∉{0,a,-a}) + ZMod.intCast_zmod_eq_zero_iff_dvd + omega. So branch (a) -- every non-transversal 12-family loose, ANY defect count -- is machine-checked.
+
+RECONCILIATION: opus-S123's "d>=3 GREEN via mod-25" is CORRECTED -- ~2% of d>=3 families ARE full transversals (verified 95/4755) and are NOT cleared by the rotation; the clean partition is transversal/non-transversal (cuts across d) = kps-S43 defect-agnostic. Also nailed the d=1 base ladder M({1..11,x}) in {1/13(x=12),2/25(x=24),1/12(else)}, 0 in-gap (concurrent instance formalized it as THM-633).
+
+RESIDUAL now = the saturated d>=2 plateau (pair-blocker, longest-AP<=10 => M>=1/12); d=0 boundary, d=1 formalized (THM-633), non-transversal formalized (THM-634). Since 1/12>2/25, closing that plateau closes (C) => LRC14.
+
+INTEGRATION notes: shared working directory with concurrent mac-mini-S33 -- its git-add-A swept my uncommitted LRCMod25Transversal.lean into its THM-633 commit (both landed together); I disambiguate as S33b. THM-633 reused HYP-4632 (collides my S32b two-modulus) -- flagged for fleet reconcile. Integrated opus-S124 (mod-25 dichotomy, no-Lean), opus-S125 (residual factors), kps-S43 (defect-agnostic).
+
+Files: LRCMod25Transversal.lean, THM-634-non-transversal-branch-formalized.md, reflection the-non-transversal-branch-of-the-crux-is-now-formalized-macmini-S33b.md, lrc_d1_ladder_reconcile_macmini_S33.py(+out). Updated proof map (branch (a) existence half now formalized). THM-634 / HYP-4642. Next: the saturated d>=2 plateau M>=1/12 (opus-S115 subfamily cap on pair-blockers) is the sole remaining math piece of (C).
+
 ## mac-mini-2026-07-06-S33 -- THM-633 the d=1 LADDER BOUND FORMALIZED (sorry-free kernel-pure): {1..11,x} reach >= 2/25 for all x!=12, two-witness proof; finishes opus-S123's d=1 piece of (C) + the d=1 slice of opus-S124's near-AP moat
 
 Prompt (owner): finish off the crux and formalize; pull often, integrate.
