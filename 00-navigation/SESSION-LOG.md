@@ -39,6 +39,19 @@ FILES: lrc14_covering_uniformity_klein_S144.py(+out), lrc14_covering_compressed_
 NEXT: (a) prove compressed-completeness rigidity (the surviving core of S140, CRT-escape closed); (b) formalize the case-2 covering completeness + peel composition (mostly decidable rational_point certs); (c) wire (A)<=(C) + J-K.
 
 ---
+## opus-2026-07-06-S127 -- THE COVERING ESCAPE (== AP mod lcm) IS LOOSE: completing 'AP is the unique survivor' (HYP-4606)
+
+Prompt: work the crux.
+
+Worked kps's finite-covering crux (S43-S46: clearing = height-independent residue condition; covering q<=Q0 clears near-AP blockers; (G)=finite certs+tight-locus, no height bound). Found and closed the ONE gap in the 'AP unique survivor' step.
+
+THE ESCAPE: a family clears at NO q<=Q0 iff its residues mod every q<=Q0 = AP's, i.e. V == AP mod L (L=lcm(q<=Q0)). These L-lifts {i+L*k_i} evade the WHOLE covering, not just the AP -- so 'AP unique survivor' is NOT immediate from the covering. (Verified: 25-lifts DO clear at q=6,8,11,12,16 since +25 changes residues mod q!=25; only full-L-lifts, astronomically large, evade all q<=Q0.)
+
+THE ESCAPE IS LOOSE (two mechanisms): mixed k (base ~1 + lifted ~L => factor-L scale gap => mac-mini S14 decorrelation => M>=2/25); uniform k (TRANSLATE => consecutive block {m..m+11}, VERIFIED m>=2 => M>=2/15, spectrum 2/15,3/17,4/19,...; only m=1=AP tight). So every L-lift with k!=0 is loose; the AP is the unique TIGHT survivor.
+
+COMPLETES (C)'s height-free skeleton: (1) non-blockers mod-25 GREEN; (2) blockers not==AP mod L cleared by covering q<=Q0 (kps residue node); (3) blockers ==AP mod L loose by decorrelation/translate (THIS, closes the L-lift loophole); (4) AP unique tight-locus survivor. NO branch needs a height bound -- so kps's 'no height bound' stands and 'unique survivor' is now airtight.
+
+Files: reflection the-covering-escape-is-loose-completing-the-unique-survivor-opus-S127; result covering_residual_aplifts_opus_S127; HYP-4606. No new Lean (gap-filler + verification). RESIDUAL: the covering-system node (finite residue check q<=39) + formalize (3) + assembly.
 
 ## mac-mini-2026-07-06-S33b -- THM-634 the NON-TRANSVERSAL branch of (C) FORMALIZED (LRCMod25Transversal.lean, kernel-pure): miss a ±-pair mod 25 => M>=2/25; supplies the existence half kps's mod25_covering_floor assumed; corrects "d>=3 GREEN" to defect-agnostic (HYP-4642)
 

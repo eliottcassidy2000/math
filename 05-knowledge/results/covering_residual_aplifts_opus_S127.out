@@ -1,0 +1,5 @@
+(a) consecutive blocks {m..m+11} (translates of AP): M -- any gap member (M in (1/13,2/25))?
+   consecutive blocks m=1..199: 0 in gap. (m=1 is the AP, M=1/13; others?)
+   distinct M for m=2..49: [Fraction(2, 15), Fraction(3, 17), Fraction(4, 19), Fraction(5, 21), Fraction(6, 23), Fraction(7, 25), Fraction(8, 27), Fraction(9, 29)] ... (min>1/13? True)
+
+(b) AP-lifts {i + 13*k_i} (13-lifts, near-AP): M distribution, any gap member?
