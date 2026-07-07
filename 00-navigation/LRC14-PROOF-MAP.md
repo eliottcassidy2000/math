@@ -76,6 +76,20 @@ LRC14Statement (near-extremal / rigidity behaviour)
   So **(C) at `N=12` reduces to the `d=1` and `d=2` bounds** — a *finite-defect* residual, not the
   infinite-order gauntlet. The order view (kps HYP-4557) is a different, infinite slicing of the
   same set; the defect view is finite and has `d≥3` already GREEN.
+- **TWO-MODULUS DICHOTOMY / sharpening of the mod-25 leg (mac-mini S32, HYP-4622).** The mod-25
+  clearing rotation used above (the `d≥3` GREEN and kps-S41) works *exactly* when the family is
+  **not** a full transversal mod 25: a clearing `c∈(ℤ/25)*` exists ⟺ the unit-speeds **miss** one
+  of the ten `±`-classes; then the explicit witness is `t = a^{-1}/25` for a missed class `[a]`
+  (⟹ `M ≥ 2/25`). So the mod-25 rotation branch is not "all no-mult-of-25 families" (that
+  over-claims — the AP itself is a full transversal and is *not* cleared) but precisely the
+  **non-transversals**, at *any* defect count. The genuine residual across all of `d=0,1,2` is the
+  **full-transversal** families (= mac-mini S7 "gap member ⟹ full transversal mod 25"), for which
+  the top wall is `M<2/25 ⟹ dilated AP` — a mod-13 rigidity (bottom wall). **0 counterexamples in
+  ~15k structured + adversarial full-transversal families**; the AP is the unique full transversal
+  with `M<2/25`. Frame: `2N+1=25` closes the top (miss a class), `N+1=13` pins the bottom (AP);
+  a gap member must thread both and cannot. This makes the mod-25 hypothesis a *decidable residue
+  condition* (Lean-ready against `LRCMod25Floor`) and isolates the `d=1,2` residual as the
+  full-transversal-⟹-AP rigidity.
 
 **Open critical path:** (i) the `≥3`-defect Freiman-stability residual (the crux); (ii) the
 infinite-pigeonhole rigidity wrapper; (iii) *wire* the J-K citation + (A)⟸(C) + (C) into a

@@ -16,6 +16,21 @@ This VINDICATES the defect frame (my S120): it was the RIGHT decomposition -- S1
 Also explored (didn't pan out): the gap width 1/325 = 1/(13*25) = product of the Farey-neighbor boundary denominators -- a clean fact, but the 'two-gate divisibility threading' hypothesis was WRONG (known members don't contain mults of 2N+1).
 
 Files: reflection the-crux-whittles-to-d1-and-d2-defect-strata-with-d3-green-opus-S123; result two_gate_threading_325_opus_S123 (+ the defect-strat verification); updated LRC14-PROOF-MAP.md; HYP-4556. No new Lean (synthesis + verification). RESIDUAL: the d=1 ladder bound + the d=2 2-outlier bound.
+## mac-mini-2026-07-06-S32 -- TWO-MODULUS DICHOTOMY of (G): PROVES the non-transversal half (mod-25 clears <=> NOT full transversal; explicit witness t=a^-1/25); residual = full transversals, AP unique (HYP-4622)
+
+Prompt (owner): do a session creatively whittling away the crux.
+
+The crux (C) is now the per-order achievability gauntlet (kps HYP-4557; opus-S122 retracted the defect framing -- ORDER governs; opus-S121 proof map). kps-S41 (HYP-4567) reduced the lower-bound half to a "mod-25 covering fact" (M>=2/25 at t=c/25 when a unit c rotates all speeds off {0,+-1} mod 25) and conjectured every no-mult-of-25 family clears this way. I PINNED the exact characterization and PROVED half of (G):
+
+CHARACTERIZATION: a mod-25 clearing rotation exists <=> the family is NOT a full transversal mod 25 (its unit-speeds miss one of the ten +/- classes {[1],[2],[3],[4],[6],[7],[8],[9],[11],[12]}). Reason: the forbidden c for runner i is {+-v_i^-1}, a +/- class; a clearing c exists iff the union misses a class iff the speeds miss a class (inversion permutes classes). So kps's "all no-mult-of-25 clear" is FALSE precisely for full transversals (incl. the AP itself: units hit all 10 classes, no rotation clears, correctly M=1/13). CORRECTS kps-S41.
+
+PROVED HALF (explicit closed-form witness): miss class [a] (no mult 25) => t=a^-1/25 puts every runner in [2,23]/25 => M>=2/25 (verified: miss [7] clears at t=18/25). = kps's LRCMod25Floor / rational_point_margin atom at s=25,mu=2, with the hypothesis now a DECIDABLE residue condition. So the non-transversal half of (G) is PROVED + Lean-ready.
+
+RESIDUAL = the full transversals (= my S7 "gap member => full transversal mod 25", dual side). Computation: full transversal mod25 & M<2/25 => dilated AP -- 0 in-gap across 10,685 structured >=3-defect + 4,000 adversarial full-transversal families; AP is the UNIQUE full transversal with M<2/25 (boundary 1/13).
+
+FRAME: (G) = a TWO-MODULUS incompatibility -- mod (2N+1)=25 controls the TOP (miss a class => >=2/25), mod (N+1)=13 pins the BOTTOM (AP at 1/13); a gap member must be full-transversal-mod-25 (avoid top) AND non-AP (above bottom), but full transversal => AP => pinch shut. Complements concurrent mac-mini-S31 (HYP-4612 defect-stratified AP-rigidity 'M<2/25 => AP') from the residue side.
+
+Files: lrc_two_modulus_transversal / lrc_transversal_adversarial _macmini_S32.py(+out). Reflection: the-two-modulus-dichotomy-of-G-mod-25-controls-the-top-mod-13-the-bottom-macmini-S32.md. Added attributed bullet to LRC14-PROOF-MAP.md (C)-status. HYP-4622. Next: the full-transversal=>AP residual is a mod-13 rigidity; Lean the "not-full-transversal => clearing-rotation-exists" decidable covering fact (kps has the downstream atom).
 
 ## mac-mini-2026-07-06-S31 -- THE GAP IS THE DEFECT-0 -> DEFECT-1 JUMP: min-M stratified by defect count d=12-longest-sub-AP; d0->1/13 (gap bottom), d1->2/25 (gap top), d>=2->>=2/23; (G) reframed as AP-RIGIDITY 'M<2/25 => AP'; refines opus-S120 into a defect-monotone threshold (HYP-4612)
 
