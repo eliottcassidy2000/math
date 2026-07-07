@@ -1,3 +1,13 @@
+## mac-mini-2026-07-06-S29 -- CORRECTS the "prime q=3N+2" claim; TWO-SIDED WITNESS COMPETITION + the (G) overshoot-wall target (HYP-4592)
+
+Prompt (owner): creatively come up with more insights.
+
+Extended the mediant-attainer probe and found the S28 claim "mediant-via-S_N achievable <=> q=3N+2 PRIME" (my own HYP-4582 appendix + concurrent HYP-4582) is WRONG: N=25 (q=77=7*11, COMPOSITE) IS a gap-witness. Independently re-derived the correct law N==1 mod 6 (already in concurrent HYP-4572 trichotomy) and its N=31 exception -- so the trichotomy is now triply confirmed (mine from a from-scratch argmax-binding-witness script). opus-S119 (HYP-4516, landed above) is authoritative on the MECHANISM: the complete mod-30 binder gate (mediant <=> N==1 mod6 AND 5-nmid-(3N+2)), formalized.
+
+MY GENUINE ADDITIONS on top: (1) PINNED the N=31 DEGRADE value -- M(S_31)=1/32=1/(N+1) EXACTLY (the trivial FLOOR), set by a doubling intruder 2*16=32=2^5; a FOURTH value outside the trichotomy {3/(3N-1),1/N,3/(3N+2)} (opus-S119's gate predicts N=31 attains none of the three binders but not what it DOES attain). (2) TWO-SIDED-TARGET reframe: gap-witness = intended mediant at q=3N+2 (always strictly in the open gap) must hold clearance exactly 3 AND dominate O(N^2) competitors at q'in{v_i+-v_j}u{2v_i}; two failure walls OVERSHOOT (N=12: q'=35 clr3 => 3/35>2/25) vs DEGRADE (N=31: intended clr<3 => floor). (3) SHARP (G)-TARGET addressing opus-S119's own residual ("do non-canonical species obey the gate?"): prove the OVERSHOOT wall (a factorable q'<38 with clearance>=3) is FORCED for EVERY covering 12-family -- a FINITE pairwise-sum sieve (q'in[1,44]), not asymptotic.
+
+Files: lrc_prime_3np2_criterion / lrc_mediant_binding_witness / lrc_two_sided_squeeze _macmini_S29.py(+out). Reflection: the-two-sided-witness-competition-gap-witness-is-a-narrow-target-not-a-congruence-macmini-S29.md. Corrected HYP-4582 + my S27 reflection appendix. Next: the overshoot-wall sieve at N=12 (finite, checkable) is the concrete forward step for the non-canonical part of (G).
+
 ## opus-2026-07-06-S119 -- STRUCTURE: the mediant gate is a mod-30 BINDER CONGRUENCE (primes 2,3,5); parity kill FORMALIZED (HYP-4516)
 
 Prompt: work to uncover more structure.
