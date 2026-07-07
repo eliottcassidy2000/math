@@ -1,0 +1,49 @@
+========================================================================================
+ANCHOR FLOOR for E[maxgap]  (threshold 1/7=0.14286;  2/(k+1) identity)
+========================================================================================
+
+----- k=8  (2/(k+1) = 0.22222) -----
+  AP {1..k}      E[maxgap]=0.3071  | E[gap@0]=0.3071 E[gap@gen]=0.2377 (2/(k+1)=0.2222)
+      anchor floors: {0}=0.3071  {0,1/2}=0.3071  {0,1/2,1/4,3/4}=0.3071  {j/8}=0.3071  {j/16}=0.3071  {j/40}=0.3071  
+  spread#0       E[maxgap]=0.3380  | E[gap@0]=0.2531 E[gap@gen]=0.2188 (2/(k+1)=0.2222)
+      anchor floors: {0}=0.2531  {0,1/2}=0.3064  {0,1/2,1/4,3/4}=0.3375  {j/8}=0.3380  {j/16}=0.3380  {j/40}=0.3380  
+  spread#1       E[maxgap]=0.3395  | E[gap@0]=0.2574 E[gap@gen]=0.2179 (2/(k+1)=0.2222)
+      anchor floors: {0}=0.2574  {0,1/2}=0.3050  {0,1/2,1/4,3/4}=0.3393  {j/8}=0.3395  {j/16}=0.3395  {j/40}=0.3395  
+  spread#2       E[maxgap]=0.3275  | E[gap@0]=0.2388 E[gap@gen]=0.2210 (2/(k+1)=0.2222)
+      anchor floors: {0}=0.2388  {0,1/2}=0.2953  {0,1/2,1/4,3/4}=0.3270  {j/8}=0.3275  {j/16}=0.3275  {j/40}=0.3275  
+
+----- k=10  (2/(k+1) = 0.18182) -----
+  AP {1..k}      E[maxgap]=0.2639  | E[gap@0]=0.2639 E[gap@gen]=0.1989 (2/(k+1)=0.1818)
+      anchor floors: {0}=0.2639  {0,1/2}=0.2639  {0,1/2,1/4,3/4}=0.2639  {j/8}=0.2639  {j/16}=0.2639  {j/40}=0.2639  
+  spread#0       E[maxgap]=0.2908  | E[gap@0]=0.1913 E[gap@gen]=0.1832 (2/(k+1)=0.1818)
+      anchor floors: {0}=0.1913  {0,1/2}=0.2499  {0,1/2,1/4,3/4}=0.2885  {j/8}=0.2908  {j/16}=0.2908  {j/40}=0.2908  
+  spread#1       E[maxgap]=0.2837  | E[gap@0]=0.2087 E[gap@gen]=0.1830 (2/(k+1)=0.1818)
+      anchor floors: {0}=0.2087  {0,1/2}=0.2571  {0,1/2,1/4,3/4}=0.2826  {j/8}=0.2837  {j/16}=0.2837  {j/40}=0.2837  
+  spread#2       E[maxgap]=0.2884  | E[gap@0]=0.1857 E[gap@gen]=0.1833 (2/(k+1)=0.1818)
+      anchor floors: {0}=0.1857  {0,1/2}=0.2463  {0,1/2,1/4,3/4}=0.2861  {j/8}=0.2884  {j/16}=0.2884  {j/40}=0.2884  
+
+----- k=13  (2/(k+1) = 0.14286) -----
+  AP {1..k}      E[maxgap]=0.2114  | E[gap@0]=0.2114 E[gap@gen]=0.1617 (2/(k+1)=0.1429)
+      anchor floors: {0}=0.2114  {0,1/2}=0.2114  {0,1/2,1/4,3/4}=0.2114  {j/8}=0.2114  {j/16}=0.2114  {j/40}=0.2114  
+  spread#0       E[maxgap]=0.2403  | E[gap@0]=0.1574 E[gap@gen]=0.1443 (2/(k+1)=0.1429)
+      anchor floors: {0}=0.1574  {0,1/2}=0.1962  {0,1/2,1/4,3/4}=0.2353  {j/8}=0.2403  {j/16}=0.2403  {j/40}=0.2403  
+  spread#1       E[maxgap]=0.2354  | E[gap@0]=0.1609 E[gap@gen]=0.1425 (2/(k+1)=0.1429)
+      anchor floors: {0}=0.1609  {0,1/2}=0.1915  {0,1/2,1/4,3/4}=0.2289  {j/8}=0.2354  {j/16}=0.2354  {j/40}=0.2354  
+  spread#2       E[maxgap]=0.2380  | E[gap@0]=0.1560 E[gap@gen]=0.1511 (2/(k+1)=0.1429)
+      anchor floors: {0}=0.1560  {0,1/2}=0.1943  {0,1/2,1/4,3/4}=0.2317  {j/8}=0.2380  {j/16}=0.2380  {j/40}=0.2380  
+
+========================================================================================
+WORST-CASE (min E[maxgap]) hunt at k=13 -- is the AP the minimizer, and does a FINITE
+anchor set already exceed 1/7 for it (=> provable floor)?
+========================================================================================
+AP k=13: E[maxgap]=0.21136, E[gap@0]=0.21136 (1/7=0.14286)
+   anchor set {j/8}     (|A|=  8): E[max_a gap_a]=0.21136   margin over 1/7 = +0.06851  >1/7 OK
+   anchor set {j/16}    (|A|= 16): E[max_a gap_a]=0.21136   margin over 1/7 = +0.06851  >1/7 OK
+   anchor set {j/32}    (|A|= 32): E[max_a gap_a]=0.21136   margin over 1/7 = +0.06851  >1/7 OK
+   anchor set {j/64}    (|A|= 64): E[max_a gap_a]=0.21136   margin over 1/7 = +0.06851  >1/7 OK
+   anchor set {j/128}   (|A|=128): E[max_a gap_a]=0.21136   margin over 1/7 = +0.06851  >1/7 OK
+
+READOUT: if E[gap@a]=2/(k+1)=1/7 is structure-independent, and a FINITE anchor set gives
+E[max_a gap_a] > 1/7 for the AP (the minimizer), then inf_E E[maxgap] > 1/7 is provable via
+that finite anchor floor (each anchor's mean is 1/7; the max over anchors is a computable
+order statistic > 1/7). This turns kps-S57's open 'margin' into a finite computation.

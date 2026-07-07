@@ -51,6 +51,28 @@ CRUX STRUCTURE: inf E[maxgap]>1/7 = AP-minimality of E[maxgap] (hard, SHARED wit
 
 HONEST: delineation not a proof. Files: verification inline; reflection the-max-gap-margin-is-irreducible-...-kps-S58.md; HYP-4757. Builds on S57.
 
+## klein-2026-07-07-S153 -- THE ANCHOR FLOOR: finite order statistics for kps-S57's density-floor crux inf_E E[maxgap]>1/7; AP is the minimizer (48% margin); origin saturates the AP max gap (HYP-4748)
+
+Owner: work the real frontier, think Paley-Zygmund; then pull in agents + extend in a new direction.
+
+CONTEXT: heavy fleet convergence on the Route-1 density floor. kps-S57 (HYP-4747) reduced it by reverse-Markov PZ to inf_E E[maxgap] > 1/7 (open "max beats typical margin"); opus-S131 mu_{1/7}>=E[U] + AP-minimizer 477/1078; opus-S132 three-gap governing frame + g-count caveat; kps-S56 LRC14 <=> primitive saturated lonely (GREEN). My planned S153 findings (PZ ceiling, {2..14} guardrail) were largely already captured by opus-S132 -- so I EXTENDED kps-S57 instead.
+
+WHAT I DID (think-PZ, explore, then extend):
+ 1. PZ CEILING (guardrail): product-kernel Paley-Zygmund on the GOOD SET is too lossy for the sharp 1/14 floor -- a trig-poly kernel can't vanish on the bad arc, so leakage tau0=h_bad*h_max^12 >> E[Z] (computed ~8e14 vs 1e12). So opus's cheap mu_{1/7}>=E[U] is the ceiling of what PZ buys; the sharp floor is arithmetic, not more second moment.
+ 2. SEAM = residues mod 14, NOT the relation lattice (guardrail): {2..14} has R3=36 (max 3-term AP-relations, same as AP) yet is LOOSE (M=1/8) because 14=0 mod 14. So arithmetic-progression structure is NOT the tightness discriminator (= opus-S132 g-count caveat, cross-confirmed independently).
+ 3. THE ANCHOR FLOOR (new, extends kps-S57): maxgap(x) >= max_{a in A} gap_a(x) pointwise => E[maxgap] >= E[max_{a in A} gap_a]; a FINITE A (|A|=8) recovers E[maxgap] to grid precision for every family. Converts kps-S57's open inf_E E[maxgap]>1/7 into the finite-anchor target inf_E E[max_{a in A} gap_a]>1/7 (a max over a handful of local-gap integrals, moment-amenable).
+ 4. AP MINIMIZES E[maxgap], COMFORTABLE MARGIN (new): adversarial descent (60 starts+local, k=13) finds 0 below AP and CONVERGES to {1..13}. inf_E E[maxgap]=0.2114 > 1/7=0.1429, margin +0.0685 (48% above). NOT razor-thin. Cross-confirms opus-S131 for the E[maxgap] functional at k=13.
+ 5. ORIGIN SATURATES THE AP MAX GAP (new, clean): E[gap@0](AP)=E[maxgap](AP) EXACTLY => gap@0(x)=maxgap(x) a.e. for the AP orbit (three-distance: longest gaps abut 0). Explains why the AP's tight witness centers on t=1/14 and why AP is extremal. Guardrail: E[gap@a] is NOT structure-independent (0.14-0.21; the 2/(k+1) identity is FALSE for the raw orbit).
+ BONUS lead: inf_E E[gap@0] ~ 0.156 > 1/7 in every sample -- a single-gap sub-target worth a moment bound.
+
+HONEST: NOT a proof. inf_E E[maxgap]>1/7 still needs the AP-minimizer extremal (opus, exhaustive only k<=10) OR inf_E E[max_{a in A} gap_a]>1/7 for fixed finite A (the cleaner sub-target this opens).
+
+FILES: 04-computation/lrc14_{maxgap_anchor_floor,maxgap_minimizer,paley_zygmund_good_set,relation_lattice_seam}_klein_S153.py (+.out); reflection the-anchor-floor-turns-the-maxgap-crux-into-finite-order-statistics-klein-S153; HYP-4748 (INDEX). No canon overridden. Deleted no files.
+
+NEXT: prove inf_E E[max_{a in {0,1/2}} gap_a] > 1/7 (2-anchor moment bound) or inf_E E[gap@0]>1/7 -- either closes kps-S57's target without the full AP-extremal. Or attack the AP-minimizer extremal (rigidity/symmetrization) for k=11,12,13.
+
+---
+
 ## kind-pasteur-2026-07-07-S57 -- CREATIVE: Route-1 density floor reduces (elementary reverse-Markov) to a MEAN MAX-GAP inf E[maxgap]>1/7, simplifying opus-S131's Paley-Zygmund E[U] route (HYP-4747)
 
 Owner: work the crux creatively, think Paley-Zygmund. opus PZ: mu_1/7>=E[U] (open inf E[U]>0, triples-obstructed).

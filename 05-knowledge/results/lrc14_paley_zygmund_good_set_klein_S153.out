@@ -1,0 +1,25 @@
+================================================================================
+PALEY-ZYGMUND GOOD-SET FLOOR (Fejer kernel deg m=13, beta=1/14)
+  h_max=14.00000  h_bad(max on bad arc)=14.00000  h_min(on good arc)=0.00000
+  leakage tau0 = h_bad*h_max^12 = 7.93715e+14   (need tau0 < E[Z] for a rigorous floor)
+  clean-threshold check: h_min^13 = 2.613e-200 vs tau0=7.937e+14  (FAIL: kernel leaks)
+================================================================================
+family                              M  good@1/14      E[Z]    E[Z^2]   PZ floor shortRel(L1)
+-----------------------------------------------------------------------------------------------
+AP {1..13}                    0.07143    0.00000 1.921e+12 1.084e+27          0            3  [leakage tau0=7.937e+14 >= EZ=1.921e+12 (kernel too lossy)]
+dilated 2*AP                  0.07143    0.00000 1.921e+12 1.084e+27          0            3  [leakage tau0=7.937e+14 >= EZ=1.921e+12 (kernel too lossy)]
+near-AP: 13->14               0.07692    0.02390 1.889e+12 1.066e+27          0            3  [leakage tau0=7.937e+14 >= EZ=1.889e+12 (kernel too lossy)]
+near-AP: 7->8dup?no; 6->5swap  0.07143    0.00000 1.921e+12 1.084e+27          0            3  [leakage tau0=7.937e+14 >= EZ=1.921e+12 (kernel too lossy)]
+near-AP: {1..12,15}           0.07692    0.02934 1.856e+12 1.048e+27          0            3  [leakage tau0=7.937e+14 >= EZ=1.856e+12 (kernel too lossy)]
+spread#0                      0.12903    0.07205 1.048e+12 5.912e+26          0            3  [leakage tau0=7.937e+14 >= EZ=1.048e+12 (kernel too lossy)]
+spread#1                      0.12500    0.05981 9.359e+11 5.279e+26          0            3  [leakage tau0=7.937e+14 >= EZ=9.359e+11 (kernel too lossy)]
+spread#2                      0.12500    0.07745 8.618e+11 4.858e+26          0            3  [leakage tau0=7.937e+14 >= EZ=8.618e+11 (kernel too lossy)]
+spread#3                      0.17949    0.09653 9.649e+11 5.442e+26          0            3  [leakage tau0=7.937e+14 >= EZ=9.649e+11 (kernel too lossy)]
+spread#4                      0.16667    0.08344 1.009e+12 5.695e+26          0            3  [leakage tau0=7.937e+14 >= EZ=1.009e+12 (kernel too lossy)]
+
+READOUT:
+  * good@1/14 = 0 for AP/dilated-AP (isolated witness) -> PZ floor 0 (correctly fails at AP).
+  * spread families: good@1/14 > 0, shortest relation LONG (>4 or none <=cap) -> PZ floor > 0.
+  * near-AP: good small, short relation present -> PZ weak; needs rigidity/conjugate-witness.
+  * The discriminator is the SHORTEST ADDITIVE RELATION (opus's 'structure-dependent
+    triple+ overlap' = the relation lattice). AP has L1=4 (3-term); spread has none small.

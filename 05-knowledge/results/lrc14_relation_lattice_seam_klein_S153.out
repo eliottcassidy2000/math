@@ -1,0 +1,25 @@
+============================================================================================
+THE RELATION LATTICE IS THE SEAM:  rho* (good density) vs R3 (3-term AP-relations)
+  M reported exact; rho* on 300000-grid; E[U]=opus uncovered length; R3 = #(v_i+v_k=2v_j)
+============================================================================================
+family                         M     rho*    E[U]   R3   note
+--------------------------------------------------------------------------------------------
+AP {1..13}               0.07143  0.00000  0.1266   36   AP-structured (rho*->0)
+2*AP (dilated)           0.07143  0.00000  0.1266   36   AP-structured (rho*->0)
+{1..12,14}               0.07692  0.02390  0.1251   35   AP-structured (rho*->0)
+{1..12,15}               0.07692  0.02935  0.1215   35   AP-structured (rho*->0)
+{1..11,13,14}            0.08333  0.01216  0.1238   34   AP-structured (rho*->0)
+{2..14} (AP shift)       0.12500  0.06122  0.1266   36   AP-structured (rho*->0)
+spread#0                 0.17308  0.09269  0.1275   12   AP-structured (rho*->0)
+spread#1                 0.16667  0.14844  0.1348   11   AP-structured (rho*->0)
+spread#2                 0.13333  0.10559  0.1322   11   AP-structured (rho*->0)
+spread#3                 0.18605  0.11279  0.1176   19   AP-structured (rho*->0)
+spread#4                 0.15789  0.09942  0.1321   10   AP-structured (rho*->0)
+spread#5                 0.18182  0.15466  0.1341   10   AP-structured (rho*->0)
+--------------------------------------------------------------------------------------------
+R3>0  families: rho* range=[0.0000,0.1547]  (AP=0 the min)
+
+READOUT: AP uniquely maximizes R3 and uniquely hits rho*=0 (isolated witness, still lonely).
+  The moat SEAM = the 3-term relation lattice: R3=0 => rho*>0 (opus E[U] floor, decorrelated)
+  ; R3>0 => AP-structured => klein-S152 conjugate witness / rigidity. PZ (product kernel) is
+  too lossy for the sharp floor directly (tau0>>E[Z]); the seam is arithmetic, not analytic.

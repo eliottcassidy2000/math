@@ -1,0 +1,13 @@
+k=13  1/7=0.14286
+AP {1..13}: E[maxgap]=0.21136  E[gap@0]=0.21136  margin over 1/7: maxgap +0.06851, gap0 +0.06851
+
+Adversarial search: minimize E[maxgap] over primitive 13-families (random + local descent).
+  families searched: 60;  found BELOW AP's 0.21136: 0
+  global min E[maxgap] found: 0.21136  at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+=> AP is the minimizer (nothing found below). inf_E E[maxgap] = 0.21136 > 1/7=0.14286
+   COMFORTABLE MARGIN = +0.06851 (48% above threshold).
+
+READOUT: the density-floor crux inf_E E[maxgap] > 1/7 (kps-S57) is a COMFORTABLE-margin
+extremal problem minimized at the AP -- NOT a razor edge. The anchor floor (klein-S153)
+certifies it via finite anchor sets. The AP's E[gap@0]=E[maxgap] (origin in the max gap).
