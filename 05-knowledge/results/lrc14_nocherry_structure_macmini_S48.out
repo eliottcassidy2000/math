@@ -1,0 +1,9 @@
+=== structure lemma check + residual census (L=50, k=8, diam >= 27) ===
+shapes: 4000; NO-separated-cherry residual: 3998 (100.0%)
+structure lemma e8 < L(e2+e3) on every residual shape: True
+band split (K=100): A(single band) = 3992, B(1-small + cluster) = 6
+
+residual mu_1/7: min = 0.9983 at (3, 8, 9, 25, 26, 31, 32)
+  5 lowest: [(0.9983, (3, 8, 9, '...')), (0.9989, (63, 74, 109, '...')), (0.9994, (74, 77, 83, '...')), (0.9997, (12, 70, 71, '...')), (0.9998, (8, 21, 31, '...'))]
+  fraction below the k=8 leg need 0.675: 0/600
+  residual ever binding? NO — every no-cherry shape clears 0.675 directly

@@ -28,6 +28,20 @@ Files: lrc_graph_interpretation_ladder_opus_S141.py (+out); reflection; HYP-4972
 NEXT: (a) the mu = M question (periodic transfer + LP duality attack; cite-check Haralambis/Cantor-Gordon/Liu-Zhu + BGGST/Goddyn-Wong exact statements); (b) chi_c = 1/M on |S| = 2 (should be provable directly -- rotation-number argument); (c) GRAPH-14 as the repo's graph-world flagship alongside the density-floor gates.
 
 ---
+## mac-mini-2026-07-07-S48 -- TWO SHAPED TARGETS CLOSED: THM-648 PROVED (blue self-loops only at even n -- the mod-2 blue/black program is now COMPLETE) + the no-separated-cherry STRUCTURE LEMMA (klein-S165's k=8 moderate-spread residual is never binding: mu >= 0.998 vs bar 0.675) + the rotational-coloring/dihedral synthesis (HYP-5047)
+
+Prompt (owner): prove the |H| <= C q3 magnitude lemma + assemble the k=8 gate; think colorings/dihedral; explore connections; LRC = rotational n-colorability of distance graphs, AP = roots-of-unity tight case.
+
+PULL-FIRST DIFFERENTIATION: klein-S165 (same hours) PROVED the comb bound |m123 - theta m12| <= (q1+q2)theta/q3 (= the magnitude lemma, q3-conditioned) and assembled the per-shape gate, leaving two residuals: the moderate-spread (no-separated-cherry) class and R >= 0.75. I took the residual + the shaped tournament target (C2) + the coloring synthesis.
+
+DELIVERED:
+ 1. THM-648 (canon, PROVED): blue self-loops exist only at even n. Half-page proof: THM-644's anti-automorphism score relation + THM-646's score-complement law force the endpoint-exchange identity {n-1-a, a} = {n-2-a, a+1} => s(1) = (n-2)/2 => n even. Verified n=3..7 (0/1/0/2/0 loops; even-n condition necessary NOT sufficient: 4/24 at n=6). Settles THM-643-C2 = klein-S161-C1. With THM-643/644/647 + klein-S161/S163: the strict blue/black MOD-2 PROGRAM IS CLOSED.
+ 2. NO-SEPARATED-CHERRY STRUCTURE LEMMA (proved, 3 lines): no triple e_c >= L(e_a+e_b) => whole shape < L(e2+e3) — one bounded band (+ possibly one isolated small speed). CENSUS (4000 shapes, diam >= 27): every no-cherry shape has mu >= 0.9983 (0/600 below the 0.675 bar) => the gate's moderate-spread residual is EMPIRICALLY NEVER BINDING; mechanism = bounded bands => 8-point decorrelation; the remaining proof gap is one shaped statement (single-band 8-shapes at diam >= 27 => mu >= 0.675, 48pct headroom). Sampler caveat recorded.
+ 3. COLORING/DIHEDRAL SYNTHESIS (reflection): the chi_c dictionary made precise (witness t => rotation coloring; AP contains K_n, coloring with zero slack at roots of unity); k=8 criticality = 8 phases vs 7 cells; ONE dihedral action underlies palindromes/tent-evenness/rho-anti-automorphisms/the even-n self-loop law.
+
+FILES: THM-648 (canon); gn_blue_selfloop_parity_macmini_S48.py, lrc14_nocherry_structure_macmini_S48.py (+outs); reflection lrc-as-rotational-coloring-and-the-dihedral-ledger-macmini-S48; HYP-5047 (INDEX). No Lean (proofs-first). No canon overridden.
+
+NEXT: (a) the shaped decorrelation statement (single-band 8-shapes, diam >= 27 => mu >= 0.675) — the last piece of the k=8 gate besides R >= 0.75 and klein's Dedekind half-page; (b) even-n self-loop SUFFICIENCY (which s(1)=(n-2)/2 gridsym tilings loop — the n=6 4/24 pattern); (c) the C1 3-power cap on H_sym (now the only open item of the blue/black program).
 
 ## monad-explorer-2026-07-07-S9 -- OPERATIONAL TWISTED INVOLUTIONS (HYP-5037): gradient-conjugacy lands in its TRUE form (sign dichotomy conditional on perturbation-coherence, 633/648; mixed-active = the honest boundary); cell symmetrization = free x1.7-1.9 deficit-bound discount; Coxeter I(theta) bridge filed; heartbeat reflection
 
