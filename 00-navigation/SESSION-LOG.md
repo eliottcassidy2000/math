@@ -1,3 +1,21 @@
+## mac-mini-2026-07-06-S35 -- r=2 covering Q0 = 37 not 25: CHALLENGED kps-S47 (Q0=25)/kps-S44 (<=14), CONFIRMED klein-S144 (<=38); worst family {1..9,11,36,350} clears ONLY at q=37; Q0 SATURATES (no height bound holds); hardest r=2 cert FORMALIZED (hardR2_reach kernel-pure)
+
+Prompt (owner): work the r=2 hard-shape avoid-band certs; challenge assumptions, gain precise understanding, improve proofs.
+
+CHALLENGED ASSUMPTIONS (3):
+ (1) REFUTED my OWN S34b claim: I told kps 'v_i mod q is independent of the +13k lift for q!=13' -- FALSE. (i+13a) mod q VARIES with a for every q!=13 (verified). So the r=2 certs are a covering-SYSTEM over (a mod q, b mod q), NOT single residue-invariant certs. Retract that claim to kps.
+ (2) CORRECTED kps-S47 Q0=25 (and kps-S44 <=14): over ALL 66 shapes, (a,b) in [0,80)^2, the max min-clearing-q is 37 (0 escapes). This CONFIRMS klein-S144's <=38 and refutes 25/14. The worst family is shape (10,12) at a=2,b=26 = {1,2,3,4,5,6,7,8,9,11,36,350} -- a mod-25 BLOCKER that clears at NO q<=36, only q=37 (c=3, mu=3, residues [3,6,9,12,14,15,18,21,24,27,33,34] all in [3,34]) => M >= 3/37 = 0.0811 > 2/25. The q<=25 sample was a small-(a,b) artifact (worst patterns surface at larger lifts, here height 350).
+ (3) SUPPORTED 'no height bound': Q0 SATURATES at 37 across [0,26)^2 -> [0,200)^2. Clearing at q is periodic in (a mod q, b mod q), so max-over-all-(a,b) = the worst finite residue pattern => Q0 BOUNDED (though its witnessing (a,b) is large). So 'no height bound' holds structurally, at the corrected Q0~37-38.
+
+IMPROVED PROOFS -- FORMALIZED the hardest r=2 cert (LRCCoveringReach.hardR2_reach, kernel-pure [propext,Classical.choice,Quot.sound], decide): the worst family {1..9,11,36,350} reach >= 3/37 > 2/25 via reach_ge_of_covering at the TRUE Q0=37 (q=37,c=3,mu=3). Machine-checked proof that the S34 covering-reach atom scales to Q0=37, not just kps's 25.
+
+STATE: r=2 certs formalize cleanly via the atom, at q up to 37. RESIDUAL = the covering COMPLETENESS at Q0=37 (every (a,b) cleared by some q<=37) -- a residue-check, NOT a flat decide (lcm(6..37) huge); needs per-residue-class certs or klein's compressed height-uniform argument.
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection; git/finish_session only.)
+
+FILES: LRCCoveringReach.lean (+hardR2, hardR2_reach); lrc_r2_covering_precise / lrc_r2_Q0_bounded / lrc_r2_global_Q0 _macmini_S35 (+out); reflection the-r2-covering-modulus-is-37-not-25-macmini-S35.md; INDEX. No canon overridden.
+
+NEXT: (a) the r=2 covering COMPLETENESS at Q0=37 (residue-check per shape); (b) confirm the GLOBAL Q0 over r>=3 shapes (does it exceed 37/38?); (c) reconcile with klein's compressed height-uniform argument.
 ## klein-2026-07-06-S147 -- THE FAN-SUN gcd TEMPLATE = THE FLEET COVERING: "divisibility = clearing" unifies the parallel frames into one two-layer proof (HYP-4621)
 
 Prompt (owner): work the residual; creatively find PAST WORK / analogous connections that unlock the route.
