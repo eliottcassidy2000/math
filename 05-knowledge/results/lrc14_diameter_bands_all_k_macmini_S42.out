@@ -1,0 +1,62 @@
+=== exact bars: mu_{1/7}(E) >= thr_k + m_P discharges leg k via union bound ===
+  k= 8: thr=3637/5880 = 0.61854   bar=thr+m_P = 0.67502
+  k= 9: thr=2025/4004 = 0.50574   bar=thr+m_P = 0.56223
+  k=10: thr=36/91 = 0.39560   bar=thr+m_P = 0.45209
+  k=11: thr=25/91 = 0.27473   bar=thr+m_P = 0.33121
+  k=12: thr=1/7 = 0.14286   bar=thr+m_P = 0.19934
+  k=13: thr=0 = 0.00000   bar=thr+m_P = 0.05649
+
+=== exact mu(AP_m) ladder (monad-S2 engine) and the per-k crossings ===
+  mu(AP_ 8) = 0.94014   clears bars: k=8,k=9,k=10,k=11,k=12
+  mu(AP_ 9) = 0.84014   clears bars: k=8,k=9,k=10,k=11,k=12
+  mu(AP_10) = 0.77551   clears bars: k=8,k=9,k=10,k=11,k=12
+  mu(AP_11) = 0.62630   clears bars: k=9,k=10,k=11,k=12
+  mu(AP_12) = 0.56990   clears bars: k=9,k=10,k=11,k=12
+  mu(AP_13) = 0.44249   clears bars: k=11,k=12
+  mu(AP_14) = 0.40264   clears bars: k=11,k=12
+  mu(AP_15) = 0.37210   clears bars: k=11,k=12
+  mu(AP_16) = 0.34648   clears bars: k=11,k=12
+  mu(AP_17) = 0.30527   clears bars: k=12
+  mu(AP_18) = 0.29347   clears bars: k=12
+  mu(AP_19) = 0.26390   clears bars: k=12
+  mu(AP_20) = 0.25409   clears bars: k=12
+  mu(AP_21) = 0.23803   clears bars: k=12
+  mu(AP_22) = 0.22739   clears bars: k=12
+  mu(AP_23) = 0.20976   clears bars: k=12
+  mu(AP_24) = 0.20422   clears bars: k=12
+  mu(AP_25) = 0.19187   clears bars: -
+  mu(AP_26) = 0.18483   clears bars: -
+  mu(AP_27) = 0.17621   clears bars: -
+  mu(AP_28) = 0.17031   clears bars: -
+  mu(AP_29) = 0.16040   clears bars: -
+  mu(AP_30) = 0.15829   clears bars: -
+  mu(AP_31) = 0.14984   clears bars: -
+  mu(AP_32) = 0.14551   clears bars: -
+  mu(AP_33) = 0.14013   clears bars: -
+  mu(AP_34) = 0.13637   clears bars: -
+  mu(AP_35) = 0.13076   clears bars: -
+
+=== THE DIAMETER BAND TABLE ===
+  k      bar  D0(k)  band [k-1, D0] band size
+  8  0.67502      9   [7,9]                3
+  9  0.56223     11   [8,11]                4
+ 10  0.45209     11   [9,11]                3
+ 11  0.33121     15   [10,15]                6
+ 12  0.19934     23   [11,23]               13
+ 13  0.05649     75   [12,75]             64   (monad-S2 exact)
+
+=== k=8 razor check (exact fractions) ===
+  mu(AP_8) = 691/735 = 0.940136  >= bar_8=0.675025? True
+  mu(AP_9) = 247/294 = 0.840136  >= bar_8=0.675025? True
+  mu(AP_10) = 38/49 = 0.775510  >= bar_8=0.675025? True
+  mu(AP_11) = 1381/2205 = 0.626304  >= bar_8=0.675025? False
+
+=== residual probes: adversarial min mu over k-point families with diam > D0(k) ===
+  k= 8 residual diam>= 10: adversarial min mu ~ 0.9850 (bar 0.6750, 1.46x) at [0, 6, 7, 9, 11, 12, 13, 18]
+  k= 9 residual diam>= 12: adversarial min mu ~ 0.9696 (bar 0.5622, 1.72x) at [0, 2, 4, 6, 7, 8, 9, 11, 13]
+  k=10 residual diam>= 12: adversarial min mu ~ 0.8768 (bar 0.4521, 1.94x) at [0, 2, 4, 6, 7, 8, 9, 10, 12, 14]
+  k=11 residual diam>= 16: adversarial min mu ~ 0.7943 (bar 0.3312, 2.40x) at [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 19]
+  k=12 residual diam>= 24: adversarial min mu ~ 0.8241 (bar 0.1993, 4.13x) at [0, 4, 6, 9, 11, 12, 14, 16, 17, 19, 22, 24]
+
+NOTE: residual mins are NUMERIC lower-envelope probes (grid 60k, 8x300 descent);
+bands are EXACT (Farey-cell engine).
