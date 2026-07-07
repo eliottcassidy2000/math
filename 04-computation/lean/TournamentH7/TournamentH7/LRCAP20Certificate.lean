@@ -160,5 +160,126 @@ theorem hlarge_floor_of_diam_le_19
     ENNReal.ofReal ((14249:ℝ)/252252) ≤ muGood (1/7) E :=
   le_trans ap20_certificate (muGood_ge_APD (1/7) E m 19 hE)
 
+/-! ### 4. The GENERAL bounded-diameter floor (`D ≤ 30`, no Farey computation). -/
+
+/-- Generic near-`0` empty arc, stated multiplicatively (`D·x < 6/7`, no division). -/
+theorem emptyArc_near0_gen (D : ℤ) (hD : 0 ≤ D) {x : ℝ}
+    (hx0 : 0 < x) (hxD : (D:ℝ) * x < 6/7) :
+    EmptyArc (1/7) (Finset.Icc (0:ℤ) D) x ((D:ℝ)*x/2 + 3/7) := by
+  intro e he
+  rw [Finset.mem_Icc] at he
+  obtain ⟨he0, heD⟩ := he
+  have hcast0 : (0:ℝ) ≤ (e:ℝ) := by exact_mod_cast he0
+  have hcastD : (e:ℝ) ≤ (D:ℝ) := by exact_mod_cast heD
+  have hbound : |((e:ℝ) - (D:ℝ)/2) * x| < 3/7 := by
+    rw [abs_mul, abs_of_pos hx0]
+    have h1 : |(e:ℝ) - (D:ℝ)/2| ≤ (D:ℝ)/2 := by rw [abs_le]; constructor <;> linarith
+    calc |(e:ℝ) - (D:ℝ)/2| * x ≤ (D:ℝ)/2 * x :=
+            mul_le_mul_of_nonneg_right h1 (le_of_lt hx0)
+      _ < 3/7 := by nlinarith [hxD]
+  rw [abs_lt] at hbound
+  have hid : (e:ℝ) * x - ((D:ℝ)*x/2 + 3/7) = ((e:ℝ) - (D:ℝ)/2) * x - 3/7 := by ring
+  have hfloor : ⌊(e:ℝ) * x - ((D:ℝ)*x/2 + 3/7)⌋ = (-1 : ℤ) := by
+    refine (Int.floor_eq_iff).mpr ⟨?_, ?_⟩
+    · push_cast; rw [hid]; linarith [hbound.1]
+    · push_cast; rw [hid]; linarith [hbound.2]
+  show (1:ℝ)/7 < Int.fract ((e:ℝ) * x - ((D:ℝ)*x/2 + 3/7))
+  have hfr : Int.fract ((e:ℝ) * x - ((D:ℝ)*x/2 + 3/7))
+      = ((e:ℝ) * x - ((D:ℝ)*x/2 + 3/7)) + 1 := by
+    unfold Int.fract; rw [hfloor]; push_cast; ring
+  rw [hfr, hid]; linarith [hbound.1]
+
+/-- Generic near-`1` empty arc (mirror). -/
+theorem emptyArc_near1_gen (D : ℤ) (hD : 0 ≤ D) {x : ℝ}
+    (hx1 : x < 1) (hxD : (D:ℝ) * (1 - x) < 6/7) :
+    EmptyArc (1/7) (Finset.Icc (0:ℤ) D) x (3/7 - (D:ℝ)*(1-x)/2) := by
+  intro e he
+  rw [Finset.mem_Icc] at he
+  obtain ⟨he0, heD⟩ := he
+  have hcast0 : (0:ℝ) ≤ (e:ℝ) := by exact_mod_cast he0
+  have hcastD : (e:ℝ) ≤ (D:ℝ) := by exact_mod_cast heD
+  have hy0 : 0 < 1 - x := by
+    by_contra h; push_neg at h
+    have hle : (D:ℝ) * (1 - x) ≤ 0 :=
+      mul_nonpos_of_nonneg_of_nonpos (by exact_mod_cast hD) (by linarith)
+    linarith [hxD]
+  have hbound : |((D:ℝ)/2 - (e:ℝ)) * (1 - x)| < 3/7 := by
+    rw [abs_mul, abs_of_pos hy0]
+    have h1 : |(D:ℝ)/2 - (e:ℝ)| ≤ (D:ℝ)/2 := by rw [abs_le]; constructor <;> linarith
+    calc |(D:ℝ)/2 - (e:ℝ)| * (1-x) ≤ (D:ℝ)/2 * (1-x) :=
+            mul_le_mul_of_nonneg_right h1 (le_of_lt hy0)
+      _ < 3/7 := by nlinarith [hxD]
+  rw [abs_lt] at hbound
+  have hid : (e:ℝ) * x - (3/7 - (D:ℝ)*(1-x)/2)
+      = (((D:ℝ)/2 - (e:ℝ)) * (1 - x) - 3/7) + (e:ℝ) := by ring
+  have hfloor : ⌊((D:ℝ)/2 - (e:ℝ)) * (1 - x) - 3/7⌋ = (-1 : ℤ) := by
+    refine (Int.floor_eq_iff).mpr ⟨?_, ?_⟩
+    · push_cast; linarith [hbound.1]
+    · push_cast; linarith [hbound.2]
+  show (1:ℝ)/7 < Int.fract ((e:ℝ) * x - (3/7 - (D:ℝ)*(1-x)/2))
+  rw [hid, Int.fract_add_intCast]
+  have hfr : Int.fract (((D:ℝ)/2 - (e:ℝ)) * (1 - x) - 3/7)
+      = (((D:ℝ)/2 - (e:ℝ)) * (1 - x) - 3/7) + 1 := by
+    unfold Int.fract; rw [hfloor]; push_cast; ring
+  rw [hfr]; linarith [hbound.1]
+
+/-- **THE GENERAL BOUNDED-DIAMETER FLOOR.**  For `2 ≤ D ≤ 30`, `μ_{1/7}(AP_{D+1}) ≥ m_P`,
+proven by the two disjoint good intervals of total length `12/(7D) ≥ m_P` (no Farey computation). -/
+theorem muGood_diam_floor (D : ℤ) (hD2 : 2 ≤ D) (hD30 : D ≤ 30) :
+    ENNReal.ofReal ((14249:ℝ)/252252) ≤ muGood (1/7) (Finset.Icc (0:ℤ) D) := by
+  have hDR2 : (2:ℝ) ≤ (D:ℝ) := by exact_mod_cast hD2
+  have hDR30 : (D:ℝ) ≤ 30 := by exact_mod_cast hD30
+  have hDpos : (0:ℝ) < (D:ℝ) := by linarith
+  have hw : (0:ℝ) < 6/(7*(D:ℝ)) := by positivity
+  have hwhalf : 6/(7*(D:ℝ)) ≤ 1/2 := by
+    rw [div_le_iff₀ (by positivity)]; nlinarith [hDR2]
+  have hkey0 : ∀ x, x < 6/(7*(D:ℝ)) → (D:ℝ) * x < 6/7 := by
+    intro x hx
+    rw [lt_div_iff₀ (by positivity)] at hx; nlinarith [hx]
+  have hkey1 : ∀ x, 1 - 6/(7*(D:ℝ)) < x → (D:ℝ) * (1 - x) < 6/7 := by
+    intro x hx
+    have hlt : 1 - x < 6/(7*(D:ℝ)) := by linarith
+    rw [lt_div_iff₀ (by positivity)] at hlt; nlinarith [hlt]
+  have hnear0 : Set.Ioo (0:ℝ) (6/(7*(D:ℝ))) ⊆ Good (1/7) (Finset.Icc (0:ℤ) D) := fun x hx =>
+    ⟨(D:ℝ)*x/2 + 3/7, emptyArc_near0_gen D (by linarith) hx.1 (hkey0 x hx.2)⟩
+  have hnear1 : Set.Ioo (1 - 6/(7*(D:ℝ))) 1 ⊆ Good (1/7) (Finset.Icc (0:ℤ) D) := fun x hx =>
+    ⟨3/7 - (D:ℝ)*(1-x)/2, emptyArc_near1_gen D (by linarith) hx.2 (hkey1 x hx.1)⟩
+  have h01a : Set.Ioo (0:ℝ) (6/(7*(D:ℝ))) ⊆ Set.Icc (0:ℝ) 1 := fun x hx =>
+    ⟨le_of_lt hx.1, by have := hx.2; linarith [hwhalf]⟩
+  have h01b : Set.Ioo (1 - 6/(7*(D:ℝ))) 1 ⊆ Set.Icc (0:ℝ) 1 := fun x hx =>
+    ⟨by have := hx.1; linarith [hwhalf], le_of_lt hx.2⟩
+  have hsub : Set.Ioo (0:ℝ) (6/(7*(D:ℝ))) ∪ Set.Ioo (1 - 6/(7*(D:ℝ))) 1
+      ⊆ Good (1/7) (Finset.Icc (0:ℤ) D) ∩ Set.Icc 0 1 :=
+    Set.union_subset (Set.subset_inter hnear0 h01a) (Set.subset_inter hnear1 h01b)
+  have hdisj : Disjoint (Set.Ioo (0:ℝ) (6/(7*(D:ℝ)))) (Set.Ioo (1 - 6/(7*(D:ℝ))) 1) := by
+    rw [Set.disjoint_left]; intro x hx hx'
+    have := hx.2; have := hx'.1; linarith [hwhalf]
+  have hvol1 : volume (Set.Ioo (0:ℝ) (6/(7*(D:ℝ)))) = ENNReal.ofReal (6/(7*(D:ℝ))) := by
+    rw [Real.volume_Ioo]; congr 1; ring
+  have hvol2 : volume (Set.Ioo (1 - 6/(7*(D:ℝ))) 1) = ENNReal.ofReal (6/(7*(D:ℝ))) := by
+    rw [Real.volume_Ioo]; congr 1; ring
+  have hmP : (14249:ℝ)/252252 ≤ 6/(7*(D:ℝ)) + 6/(7*(D:ℝ)) := by
+    have heq : 6/(7*(D:ℝ)) + 6/(7*(D:ℝ)) = 12/(7*(D:ℝ)) := by ring
+    rw [heq, div_le_div_iff₀ (by norm_num) (by positivity)]
+    nlinarith [hDR30]
+  calc ENNReal.ofReal ((14249:ℝ)/252252)
+      ≤ ENNReal.ofReal (6/(7*(D:ℝ))) + ENNReal.ofReal (6/(7*(D:ℝ))) := by
+        rw [← ENNReal.ofReal_add (le_of_lt hw) (le_of_lt hw)]
+        exact ENNReal.ofReal_le_ofReal hmP
+    _ = volume (Set.Ioo (0:ℝ) (6/(7*(D:ℝ)))) + volume (Set.Ioo (1 - 6/(7*(D:ℝ))) 1) := by
+        rw [hvol1, hvol2]
+    _ = volume (Set.Ioo (0:ℝ) (6/(7*(D:ℝ))) ∪ Set.Ioo (1 - 6/(7*(D:ℝ))) 1) :=
+        (measure_union hdisj measurableSet_Ioo).symm
+    _ ≤ volume (Good (1/7) (Finset.Icc (0:ℤ) D) ∩ Set.Icc 0 1) := measure_mono hsub
+    _ = muGood (1/7) (Finset.Icc (0:ℤ) D) := rfl
+
+/-- Export: any family whose translate lies in `{0,…,D}` with `2 ≤ D ≤ 30` has `μ_{1/7} ≥ m_P`,
+UNCONDITIONALLY (covers the census `D≤19` and peel headroom to `D≤30`; no Farey computation). -/
+theorem hlarge_floor_of_diam_le
+    (E : Finset ℤ) (m D : ℤ) (hD2 : 2 ≤ D) (hD30 : D ≤ 30)
+    (hE : ∀ e ∈ E, e - m ∈ Finset.Icc (0 : ℤ) D) :
+    ENNReal.ofReal ((14249:ℝ)/252252) ≤ muGood (1/7) E :=
+  le_trans (muGood_diam_floor D hD2 hD30) (muGood_ge_APD (1/7) E m D hE)
+
 end AP20Cert
 end LonelyRunner
