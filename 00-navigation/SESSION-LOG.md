@@ -1,3 +1,27 @@
+## mac-mini-2026-07-06-S31 -- THE GAP IS THE DEFECT-0 -> DEFECT-1 JUMP: min-M stratified by defect count d=12-longest-sub-AP; d0->1/13 (gap bottom), d1->2/25 (gap top), d>=2->>=2/23; (G) reframed as AP-RIGIDITY 'M<2/25 => AP'; refines opus-S120 into a defect-monotone threshold (HYP-4612)
+
+Prompt (owner): work toward closing the LRC14 proof.
+
+Attacked opus-S120's SINGLE open step (rule out gap members with >=3 defects; the 2-defect world is closed). Stratified ~19k 12-families by defect count d(V)=12-longest-dilated-sub-AP, measured MIN M per stratum.
+
+DECISIVE RESULT (N=12): min-M INCREASES with d, and the two lowest strata land EXACTLY on the gap endpoints --
+  d=0 (full 12-term AP): M=1/13 (gap BOTTOM, LRC-tight)
+  d=1 (11-AP + 1 genuine defect): M>=2/25, min = block-lift {1..11,24} (gap TOP)
+  d>=2 (longest sub-AP <=10): M>=2/23 = 0.087 > 2/25 (strictly above, +0.007 margin)
+  0 gap members at ANY defect count.
+=> the gap (1/13,2/25) is EXACTLY the jump between the global-min AP (d=0) and the second-lowest value (d=1), nothing between.
+
+REFRAME of (G) as AP-RIGIDITY: the 12-term AP is the UNIQUE family with M<2/25 (it alone has 1/13); every non-AP family has M>=2/25. I.e. 'M<2/25 => V is the AP' -- sibling of S12 tight-locus rigidity (M=1/13 => AP because 13 prime).
+
+PROVABLE DECOMPOSITION (refines opus-S120's 2-defect route into a defect-MONOTONE THRESHOLD): d=0 [opus-S115 cap M<=1/(13-d)=1/13 + LRC => M=1/13, clean]; d=1 [my S26 Farey ladder j/(12j+1), values <=1/13 or >=2/25; verified 0 dilated-11-AP+defect in gap]; d>=2 [M>=2/23, the residual with +0.007 margin + monotone trend; lower bound via S30 squeeze: fewer defects=tighter=lower M, AP the rigid minimizer]. Closure = 'min M(d)>=2/25 for all d>=1', d=0 the unique sub-2/25 stratum.
+
+HONEST: empirical (~19k families height<=40) + targeted dilated-11-AP+defect check (0 in gap); small non-monotonicity at d=5,7 (all >=2/23); thresholds d0->1/13,d1->2/25,d>=2->>=2/23 load-bearing. Not a proof; converts opus-S120's route into a monotone-threshold form with the residual quantified (2/23, not knife-edge).
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection; git/finish_session only.)
+
+FILES: lrc_defect_count_vs_M_macmini_S31.py (+.out); reflection the-gap-is-the-defect-0-to-defect-1-jump-macmini-S31.md; HYP-4612 (+INDEX). No canon overridden.
+
+NEXT: (a) PROVE d>=2 => M>=2/25 (the residual; S30 squeeze + S115 cap lower bound); (b) formalize d=0 (cap+LRC => 1/13) and d=1 (ladder => >=2/25) -- the two clean strata are Lean-able; (c) opus's (A)->Mreach wiring composes once (G) closes.
 ## opus-2026-07-06-S121 -- LRC14 PROOF MAP: two routes reconciled; the J-K reduction is a CITATION => 'LRC14 closes when (C) closes' (HYP-4536)
 
 Prompt: work toward closing the LRC14 proof.
