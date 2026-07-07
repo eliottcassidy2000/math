@@ -1252,6 +1252,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S42 -- CREATIVE WHITTLING: the gap is WALLED at k=1 (2/25); crux = AP-rigidity 'M<2/25=>AP'; ORDER governs not defects (HYP-4577)
+
+Prompt (owner): creative session whittling the crux.
+
+BOTH GAP EDGES ARE k=1: 1/13 (s=1,k=1), 2/25 (s=2,k=1); interior 3/38,4/51,... all k>=2. So (G) <=> no order-k>=2 value achieved at N=12 <=> 'M<2/25 => AP' (given LRC(13) M>=1/13). = mac-mini S31 AP-rigidity.
+
+THE WALL: broad diverse search (35897 families) => 0 in gap; achievable M pile up at the k=1 WALL 2/25 ({1..11,24}), nothing reaches k>=2.
+
+RECONCILE opus S122 (MISTAKE-115: defect count doesn't govern; {1,3,4,5,7,13,18} N=7 = 3-defect order-2 gap member) vs mac-mini S31 (defect-monotone): ORDER governs (= kps S40 gauntlet); defect-monotone is a symptom at N=12. REPOINTS kps S41 (its defect-framing followed retracted S120; mod-25 certificate stands, frame-independent).
+
+CERTIFICATE AT WALL: {1..11,24} clears mod-25 at c=2, M=2/25 => S41 mod25_covering_floor certifies loose side at the wall. RESIDUAL = mod-25 rigidity: M<2/25 => covers all 10 pairs mod 25; AP is one; rigidity = AP is the ONLY one.
+
+OPEN (sharpened): no order-k>=2 at N=12 -- k=2 done (opus mod-30), k=3 sporadic-empty (S39/S40), k>=4 open = order/height bound.
+
+FILES: lrc_gauntlet_k1wall_kps_S42.py(+.out); reflection the-gap-is-walled-at-k1-and-the-crux-is-ap-rigidity-kps-S42.md; HYP-4577. No Lean this session (structural). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S41 -- toward closing LRC(14): the crux = a LOWER BOUND, sharp core = a mod-25 COVERING fact; LRCMod25Floor.lean GREEN (HYP-4567)
 
 Prompt (owner): work toward closing LRC(14); math first, then Lean as necessary.
