@@ -16,6 +16,15 @@ tags:
 
 # LRC(14) = sieve + coarse reduction + decorrelation; the crux carries margin
 
+> **⚠ CORRECTION (kps-S56): the "margin" in the title/leg-3 is WRONG as stated.** The
+> saturated core is **tight at 1/14** — `2·AP = {2,4,…,26}` is saturated with `M = 1/14`
+> (dilation of the sieve-easy AP; `M` is dilation-invariant, saturation is not). The margin
+> lives only on the **primitive** saturated core (`M ≥ 1/13` empirically to height 25, no
+> primitive tight family since `{AP,GW}` are non-saturated). The correct decomposition is
+> **dilation-first** (reduce to primitive, then sieve + coarse + decorrelation). See
+> `the-saturated-margin-is-a-dilation-artifact-reduce-to-primitive-kps-S56`. The GREEN
+> `LRCSaturatedReduction.lrc14_iff_saturated_lonely` is unaffected (it never claimed margin).
+
 Continuing the overnight session, I integrated **opus-S131's sieve reframe** — which gently
 corrects my S54 framing — with my coarse reduction (S52/S53) and an adversarial census. The
 result is a clean decomposition of LRC(14) that says exactly where the analytic difficulty is,

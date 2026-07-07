@@ -6,6 +6,8 @@ But it is a FAR-ELEMENT family (ratio 182) = my earlier covering-min extremizer,
 
 Files: reflection lrc14-decomposes-...-kps-S55.md (refinement section); verification inline. No new HYP (refines HYP-4737). No canon overridden.
 
+DEEPER (S56 cont.): extended saturated census past its range breaks the 'saturated=>margin' claim of BOTH opus-S131 (1/12) AND my S55 (leg-3 1/12). ROOT CAUSE = DILATION: 2*AP={2,4,..,26} is SATURATED (contains 14,26,22 -- AP misses q=14) with M=1/14 EXACTLY. M dilation-invariant, saturation NOT. So saturated core is TIGHT at 1/14, no margin. FIX = dilation-invariance: LRC14 <=> PRIMITIVE saturated lonely. Primitive saturated floor = 1/13 ({1..25}, extremal 2*{1..12}u{13}, 0 primitive at 1/14); no primitive tight family since {AP,GW} non-saturated. FORMALIZED leg 1: LRCSaturatedReduction.lrc14_iff_saturated_lonely GREEN (LRC14<=>saturated lonely, via counterexample_needs_all_divisors; no margin claim, unaffected). Reflection the-saturated-margin-is-a-dilation-artifact-reduce-to-primitive-kps-S56; S55 reflection banner-corrected.
+
 ## kind-pasteur-2026-07-07-S55 -- SYNTHESIS: LRC(14)=sieve+coarse+decorrelation; absorbed opus-S131 sieve reframe (near-tight=sieve-easy), censused the SATURATED hard core (M>=1/12 margin) (HYP-4737)
 
 Continued overnight. Integrated opus-S131: a counterexample must be SATURATED (mult of every q<=14); non-saturated => M>=1/q>=1/14 (sieve GREEN). My S54 near-tight families all miss q=14 => SIEVE-EASY (corrects my 'rigidity corner' framing).
