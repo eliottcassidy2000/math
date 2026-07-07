@@ -1,0 +1,25 @@
+=== verify the first-order window formula vs direct measurement ===
+            AP13: mu = 0.4425; sum W_q(pred) = 0.2819; sum W_q(measured windows) = 0.2819
+      q=1: predicted 0.07692  measured 0.07692
+      q=2: predicted 0.03846  measured 0.03846
+      q=3: predicted 0.05128  measured 0.05128
+      q=4: predicted 0.03846  measured 0.03846
+      q=5: predicted 0.06044  measured 0.06044
+      q=6: predicted 0.01633  measured 0.01633
+    miss-3-mod-5: mu = 0.8136; sum W_q(pred) = 0.2366; sum W_q(measured windows) = 0.2366
+      q=1: predicted 0.06250  measured 0.06250
+      q=2: predicted 0.03125  measured 0.03125
+      q=3: predicted 0.04167  measured 0.04167
+      q=4: predicted 0.03125  measured 0.03125
+      q=5: predicted 0.05000  measured 0.05000
+      q=6: predicted 0.01994  measured 0.01994
+          record: mu = 0.5306; sum W_q(pred) = 0.1727; sum W_q(measured windows) = 0.1727
+      q=1: predicted 0.04545  measured 0.04545
+      q=2: predicted 0.02273  measured 0.02273
+      q=3: predicted 0.03030  measured 0.03030
+      q=4: predicted 0.02273  measured 0.02273
+      q=5: predicted 0.03636  measured 0.03636
+      q=6: predicted 0.01515  measured 0.01515
+
+(inequality direction: mu >= sum of window masses (windows subset of good set);
+ equality at the AP would confirm the roof decomposition; per-q comparison E vs AP is the open lemma.)

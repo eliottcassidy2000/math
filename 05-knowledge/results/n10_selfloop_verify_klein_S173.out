@@ -1,0 +1,4 @@
+verifying 48 census loop tilings exactly...
+EXACT self-loop tilings: 48 / 48 census claims
+lines = 24  [predicted 2^(n/2-2) = 8]
+flip-closed: True

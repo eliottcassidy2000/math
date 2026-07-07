@@ -1,0 +1,2 @@
+invariant survivors: 14350; EXACT self-loop tilings: 48; lines = 24
+[census canon said 48/24; predicted 2^(n/2-2)=16/8]
