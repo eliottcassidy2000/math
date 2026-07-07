@@ -1,0 +1,12 @@
+=== EXACT E[maxgap(AP_k)] via three-gap integration; reverse-Markov floor (opus-S133) ===
+
+  k    E[maxgap] exact        ~  >1/7 margin  revMarkov mu_17>=
+  8             43/140  0.30714      0.16429            0.19167
+  9             47/168  0.27976      0.13690            0.15972
+ 10              19/72  0.26389      0.12103            0.14120
+ 11            151/630  0.23968      0.09683            0.11296
+ 12           796/3465  0.22973      0.08687            0.10135
+ 13             93/440  0.21136      0.06851            0.07992
+
+  1/7 = 0.14286. All E[maxgap(AP_k)] > 1/7 with margin => reverse-Markov density floor > 0.
+  REDUCTION: density-floor positivity <= [E[maxgap] > 1/7] (mean, not tail). Binding = AP.

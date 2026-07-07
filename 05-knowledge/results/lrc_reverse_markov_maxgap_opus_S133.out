@@ -1,0 +1,18 @@
+=== REVERSE MARKOV reduction: mu_17 >= (E[maxgap]-1/7)/(B-1/7) (opus-S133, owner hint) ===
+    threshold 1/7=0.14286; if E[maxgap] > 1/7 with margin => positive density floor
+
+family (k)                  E[maxgap]   B=max   mu_17 revMarkov LB  >1/7?
+  AP {1..8}                    0.3071  1.0000  0.9401       0.1917   YES
+  AP {1..9}                    0.2798  1.0000  0.8401       0.1597   YES
+  AP {1..10}                   0.2639  1.0000  0.7755       0.1412   YES
+  AP {1..11}                   0.2397  1.0000  0.6263       0.1130   YES
+  AP {1..12}                   0.2297  1.0000  0.5699       0.1013   YES
+  AP {1..13}                   0.2114  1.0000  0.4425       0.0799   YES
+  --- non-AP (should have E[maxgap] even larger) ---
+  {2..14} consec               0.2114  1.0000  0.4425       0.0799   YES
+  {1..4,10..18} sat            0.2314  1.0000  0.7303       0.1033   YES
+
+  min E[maxgap] over 200 random k=13 families: 0.2251  (all > 1/7=0.1429? True)
+  AP is the binding (smallest E[maxgap]) case, like mu_17.
+
+  KEY: if inf_E E[maxgap] > 1/7 provable (mean max-gap of orbit), reverse-Markov => density floor.
