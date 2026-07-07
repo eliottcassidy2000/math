@@ -1,0 +1,26 @@
+========================================================================================
+CRUX TEST (opus-S120): M-vs-DEFECT trend; does d(V) >= 3 => M(V) >= 2/25 ?
+========================================================================================
+  testing 18863 families; computing FULL float-M per defect bucket
+  families by defect count d: {0: 5, 1: 126, 2: 1084, 3: 1437, 4: 2054, 5: 2555, 6: 2922, 7: 1229, 8: 4892, 9: 2557, 10: 2}
+
+  => NO gap members at any defect count (confirms empty).
+
+  MIN M (nearest approach to the gap from above) by defect count d:
+      d longest-AP  min float-M  >2/25?     margin  min-family
+      0         12      0.07692      NO   -0.00308  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      1         11      0.08000     yes   +0.00000  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24]
+      2         10      0.08696     yes   +0.00696  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 18, 22]
+      3          9      0.08696     yes   +0.00696  [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 15, 20]
+      4          8      0.09677     yes   +0.01677  [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 27, 32]
+      5          7      0.09524     yes   +0.01524  [1, 2, 3, 4, 5, 6, 7, 9, 10, 16, 20, 30]
+      6          6      0.10000     yes   +0.02000  [1, 2, 3, 4, 7, 8, 10, 13, 14, 16]..]
+      7          5      0.09524     yes   +0.01524  [1, 3, 5, 6, 7, 8, 9, 13, 19, 20, 26, 27]
+      8          4      0.10909     yes   +0.02909  [1, 9, 10, 16, 17, 19, 20, 21, 22, 29]..]
+      9          3      0.12000     yes   +0.04000  [2, 3, 10, 21, 23, 24, 26, 29, 31, 33]..]
+     10          2      0.19403     yes   +0.11403  [1, 2, 6, 7, 9, 14, 28, 30, 33, 34]..]
+
+  KEY: the gap (1/13,2/25)=(0.0769,0.0800).  If min-M rises with d and
+  d>=3 all sit clearly above 0.08, opus-S120's stability route is solid;
+  the d=0 (AP,1/13) and d=1 (block-lift,2/25) BRACKET the gap with nothing
+  inside -- the structural reason (G) holds at N=12.
