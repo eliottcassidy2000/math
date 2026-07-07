@@ -9,6 +9,21 @@ THE ANSWER: the tournament reading (two chains + cross bits) puts the transitive
 FILES: cylinder_tiling_transitivity_macmini_S51.py (+out); HYP-5097 (INDEX). No canon overridden.
 
 NEXT: (a) the Zarankiewicz parity law on the validated winding model (the affine-parity analog of opus-S142 F2); (b) the split-choice as a THIRD tiling axis (which m+n' splits are Q-optimal per class); (c) n=8 winding-cube sampling for the Q-vs-H tail.
+## klein-2026-07-07-S170 -- THE BINOMIAL LAW PROVED: D is AFFINE in tile bits (exact, all tilings n=4..7), carriers = the staircase LEGS (+1) and APEX (+2), interior inert; gridsym sigma-pairing gives n-2 independent 0/2 contributions = the binomial; THE TWIST = x2 mod (n+1) (invertible iff n even -- the structural why); half-rotation refuted (HYP-4941)
+
+Prompt (owner): prove the binomial law's orbit identification and the twisted-flip Burnside count.
+
+(1) THEOREM (proved; machine-verified EXACT over every tiling, n=4..7): D(t) = c3(flip t) - c3(t) = D(0) + sum_b c_b bit_b with c_b = +1 on the legs ((x,1) and (n,y)), +2 on the apex (n,1), 0 on all interior tiles. PROOF: the quadratic terms in -sum[delta_v s_v + C(delta_v,2)] cancel identically; D = -K + sum_v w_v s^t_v, w_v = 2 s^b_v + tiledeg_v - 1; the per-tile coefficient w_x - w_y is supported exactly where s^b or tiledeg jumps = the path endpoints. (My first verification run used a wrongly-doubled test formula -- caught and corrected in-session; the derivation was right.)
+
+(2) THE BINOMIAL LAW (S169) now PROVED: sigma pairs the legs into n-3 weight-2 orbits + the fixed apex (weight 2) = n-2 independent 0/2 contributions; interior orbits inert; centered by flip ⟹ 2·Binomial(n-2) x 2^{inert}. S168's odd-n theorem = the no-zero-column corollary. THE CARRIERS ARE THE TRIANGLE'S LEGS + APEX -- CLAUDE.md's boundary anatomy now carries the flip-parity structure.
+
+(3) THE TWIST IDENTIFIED: self-loop witnesses at n=4,6 are the DOUBLING MAP v -> 2v mod (n+1) (0-indexed i -> 2i+1 mod n+1); permutation IFF n EVEN (2 invertible mod n+1) -- the structural why of the parity dichotomy, and the 2-adic/doubling theme (S157 voltage lifts, S160 half-shift, S162 tent parity) surfacing at the metagraph's own self-loops. Half-rotation candidate REFUTED (fixed count 0 -- does not preserve path structure). OPEN: the GF(2) fixed-space dimension count in (T, path)-pair space = n/2 - 2 (next half-page).
+
+FILES: 05-knowledge/results/lrc_binomial_proof_burnside_klein_S170.out. No Lean (owner directive). No canon overridden.
+
+NEXT: (a) the x2-twisted Burnside dimension count in pair space (completes 2^{n/2-2}); (b) canon fold-in of S168+S169+S170 as one theorem family (the flip-parity trilogy); (c) the doubling-map lens on the four n=8 self-loop classes (are they the x2-orbit representatives?).
+
+---
 
 ## klein-2026-07-07-S169 -- THE c3-DIFF BINOMIAL LAW (EXACT at n=4..9): D over gridsym tilings ~ C(n-2,k)·2^{(m+f)/2-(n-2)} on {-(n-2)..n-2}; the S168 theorem = its no-zero-column corollary; EVEN-n SELF-LOOP COUNT 2^{n/2-2} CONFIRMED at n=8 (= 4, each in a distinct class) (HYP-4931)
 
