@@ -74,6 +74,22 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > Reflections `the-coarse-reduction-is-a-sup-fact-…-kps-S52`,
 > `…-formalized-and-the-density-node-is-reduced-to-single-scale-kps-S53`.
 
+> **↳ ESCAPE FAMILIES COLLAPSE TO THE MOAT (klein-S152, HYP-4711) — 2.5 open pieces → 1.**
+> The coarse bound fails ONLY when the coarse part `K` is the AP (`M(K)=1/14`, no slack): the
+> perturbed dilated AP `vᵢ = aᵢ + L·(d·i)` (mac-mini's S36/S37 escape / L-lift family; the r=13
+> crux kps's "descend" can't close — descent loses `A/L` at the slackless AP). **NEW:** these carry
+> an explicit **AP-inherited conjugate witness** — the dilated AP's `φ(14)=6` witnesses `t_c=c/(14dL)`
+> each bind one antipodal pair; a shift `δ=O(A/L²)` keeps the pair `≥1/14` iff
+> `a_{i₊}/v_{i₊} ≥ a_{i₋}/v_{i₋}`, and the conjugate `c↦14−c` flips that test, so one always works ⟹
+> `M(v) ≥ 1/14` uniformly (verified 200/200 base; slope predicts winner 100/100; permuted 200/200;
+> the families are in fact LOOSE, true `M≈0.1–0.25` — `a≠0` decorrelates — but the witness gives the
+> `1/14` floor without needing that lift). So the escape families are **not** a separate decorrelation
+> obstruction; answers mac-mini-S38's open item (a) (the "sharper base-structure bound"). **The whole
+> LRC(14) residual is now ONE object — the MOAT:** `{1..13}` is the unique single-scale 13-family
+> (up to dilation) with `M<1/13` (the 13-family `(C)`-analog, used directly as a sup bound = Route 1).
+> Not a proof (moat open; witness verified, not yet formal — needs `L₀(A)≈200A`). Reflection
+> `the-escape-families-collapse-to-the-moat-the-ap-carries-its-own-witness-klein-S152`.
+
 > **✅ ROUTE 1 IS THE LIVE ROUTE (owner directive, S130) — and its density floor is ROBUST (opus-S130).**
 > After the Route-2 audit, the owner directed effort here. The density floor was worked
 > correctness-first and found genuinely sound (NOT a 2/7-style artifact). The load-bearing quantity is

@@ -1,3 +1,26 @@
+## klein-2026-07-06-S152 -- ESCAPE FAMILIES COLLAPSE TO THE MOAT (HYP-4711): the AP carries its own conjugate witness; the whole LRC(14) residual is now ONE open object
+
+Prompt (owner): pull from agents, extend their ideas, attack the LRC(14) proof with the M(V)->M(K) descent (r<12 close pair => LRC(<=12) loose; r=13 => descend).
+
+SCOOPED on the coarse descent, then found the real frontier. Synced first: BOTH kps-S53 (LRCCoarseReduction.lean: reach_transfer_coarse + lonely14_of_coarse_le12, wires LRC(<=13)) AND mac-mini-S38 (LRCDecorrelation.lean: reach_decorr + escape_loose_of_lift_floor r<=11, THM-636) had already FORMALIZED the coarse bound M(v)>=M(K)-A/L. My LRCCoarseDescent.lean was a 3rd duplicate (weaker -- I only took the 1/13 witness as a hypothesis; kps wired the citation via a cardinality argument). DELETED it (S128 lesson; CLAUDE.md no-dup). Not in manifest, clean.
+
+THE REAL CRUX (where BOTH break). The coarse bound is useful only when M(K) has slack; it FAILS exactly when the coarse part K is the AP {1..13} (M(K)=1/14, no slack). That survivor is the perturbed dilated AP  v_i = a_i + L*(d*i)  (mac-mini's S36/S37 escape / L-lift family; the r=13 crux kps's "DESCEND" cannot close -- descent loses A/L per step and the AP has none). [mac-mini's covering-escape families v_i=i+L*k_i with varying k have r<=12 clusters => already closed by the coarse descent; "escape" only for the finite covering = wrong object.]
+
+THE NEW FINDING (HYP-4711): the AP carries its OWN uniform witness.
+ - The dilated AP L*d*{1..13} has exactly phi(14)=6 optimal witnesses t_c = c/(14 d L), c in (Z/14)*={1,3,5,9,11,13}; each binds EXACTLY ONE antipodal pair {i+,i-} (i+ c=+1, i- c=-1 mod 14); the other 11 speeds sit at ||.||>=2/14.
+ - Perturb by a, shift t=t_c+delta: an EXACT (in-branch) computation gives the binding pair stays >=1/14 iff  a_{i+}/v_{i+} >= a_{i-}/v_{i-}  (v_i=a_i+Ldi), with a valid delta=O(A/L^2). The CONJUGATE c->14-c swaps i+<->i- => flips the inequality. So one of each conjugate pair {c,14-c} ALWAYS works => M(v)>=1/14 UNIFORMLY. Non-binding stay >1/14 for L>~200A (= coarse descent's L>182A).
+ - VERIFIED (exact Fraction, lrc14_ap_escape_conjugate_witness_klein_S152): base K={1..13} 200/200 for all (L in {183,500,3600}, A in {1,3,6}); slope test predicts winning c 0/100 mispredict, 0/100 uncertified; permuted AP 200/200; dilated d in {1,2,3,5,7} 100/100 for d<=3, d=5,7 ~1% are 1e-6 GRID artifacts (true M=0.12-0.25, families hugely LOOSE). SHARPNESS: true M of perturbed dilated AP ~0.1-0.25 (a!=0 DECORRELATES, lifts M); the witness certifies the 1/14 floor WITHOUT the decorrelation estimate.
+
+CONSEQUENCE (the structural point). The escape families are NOT a separate open obstruction. The ENTIRE LRC(14) residual collapses onto ONE object -- the MOAT: "{1..13} is the unique single-scale 13-family (up to dilation) with M<1/13; every other single-scale family has M>=1/13" (the 13-family (C)-analog). Used DIRECTLY as a sup bound for single-scale families = Route 1, so correctly aimed, survives opus-S130/MISTAKE-117. (Same rigidity Route 2 used wrongly via J-K; load-bearing here when aimed at the sup. My retracted S144-S150 covering-min work re-enters as EVIDENCE for the moat, not a proof via J-K.) Answers mac-mini-S38's open item (a) (the "sharper base-structure bound" for the threshold case). Corrects kps-S53's "r=13 DESCEND terminates" -- it terminates but does NOT close (margin loss); closes by the witness.
+
+HONEST: NOT a proof of LRC(14). The moat is OPEN (the hard single-scale rigidity/decorrelation core). The witness is analytically derived (exact slope test) + exhaustively verified, but not yet rigorous (needs explicit L0(A)~200A non-binding slack + ||.||-branch bookkeeping; clean, deferred to formalization).
+
+FILES: 04-computation/lrc14_ap_escape_conjugate_witness_klein_S152.py + .out; reflection the-escape-families-collapse-to-the-moat-the-ap-carries-its-own-witness-klein-S152; HYP-4711 (INDEX); LRC14-PROOF-MAP note; memory. Deleted LRCCoarseDescent.lean (dup).
+
+NEXT: (1) formalize the witness lemma M(a+L*d*AP)>=1/14 with explicit L0; (2) attack the MOAT directly (single-scale non-AP 13-family => M>=1/13) -- the one remaining core = Route-1 rigidity; (3) or Route-1 density floor (opus mu_{1/7} AP-minimality) / composite-k+1 sieving (I(k,p,1)).
+
+---
+
 ## mac-mini-2026-07-06-S38 -- DECORRELATION ATOM formalized (owner's descent idea): reach_decorr M(V)>=M(K)-B/L + escape_loose_of_lift_floor (r<=11 escape families LOOSE M>2/25 via LRC<=12 + decorrelation) -- the first rigorous handling of the S36 covering-escape obstruction (THM-636)
 
 Prompt (owner): attack the LRC14 crux with M(V)->M(K), K={distinct k_i}: r<12 (close pair) => LRC(<=12) => loose; r=12 => descend.
