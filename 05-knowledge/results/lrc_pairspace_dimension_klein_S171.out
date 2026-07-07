@@ -1,0 +1,17 @@
+=== GF(2) dimension of the [gridsym]+[x2-twist] system, even n ===
+  n= 4: dim(gridsym only) = 2  dim(x2 only) = 0  dim(JOINT) = 0   [fixed tilings 2^0 vs predicted 2^1 = NO]
+  n= 6: dim(gridsym only) = 6  dim(x2 only) = 0  dim(JOINT) = 0   [fixed tilings 2^0 vs predicted 2^2 = NO]
+  n= 8: dim(gridsym only) = 12  dim(x2 only) = None  dim(JOINT) = None   [fixed tilings 2^None vs predicted 2^3 = NO]
+  n=10: dim(gridsym only) = 20  dim(x2 only) = None  dim(JOINT) = None   [fixed tilings 2^None vs predicted 2^4 = NO]
+  n=12: dim(gridsym only) = 30  dim(x2 only) = 0  dim(JOINT) = 0   [fixed tilings 2^0 vs predicted 2^5 = NO]
+
+  (lines = fixed tilings / 2 when flip acts freely on the fixed set => 2^{n/2-2} lines;
+   gridsym-only dim should equal (m+f)/2 as a cross-check.)
+  n=4: (m+f)/2 = 2
+  n=6: (m+f)/2 = 6
+  n=8: (m+f)/2 = 12
+=== twist-family sweep g in (Z/(n+1))^x: solutions per twist, union total ===
+  n= 4: consistent twists [(2, 1), (3, 1)]; UNION fixed tilings = 2   [2^(n/2-1) = 2: MATCH]
+  n= 6: consistent twists [(2, 1), (4, 1)]; UNION fixed tilings = 2   [2^(n/2-1) = 4: NO]
+  n= 8: consistent twists []; UNION fixed tilings = 0   [2^(n/2-1) = 8: NO]
+  n=10: consistent twists [(3, 1), (4, 1), (5, 1), (9, 1)]; UNION fixed tilings = 4   [2^(n/2-1) = 16: NO]

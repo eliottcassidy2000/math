@@ -1,3 +1,17 @@
+## klein-2026-07-07-S171 -- THE TRILOGY FOLDED INTO CANON (THM-649: affine-D + carriers + binomial law PROVED; odd-n corollary PROVED; even-n count verified w/ x2-witness) + the pair-space count's honest state: t and flip t satisfy DIFFERENT twists (x2 vs x2^-1); multiplicative family = all of n=4, half of n=6, none of n=8 (non-affine witnesses exist) -- Burnside proof precisely delimited OPEN (HYP-4951)
+
+Prompt (owner): pair-space dimension count + trilogy canon + keep pushing.
+
+(1) THM-649 FILED (canon): (A) the affine-D law with carriers = legs (+1) + apex (+2), interior inert -- PROVED (quadratic cancellation; verified every tiling n=4..7); (B) 2·Binomial(n-2) on gridsym tilings, flip-centered -- PROVED (verified n=4..9); (C) odd-n no-blue-self-loops = the no-zero-column corollary -- PROVED; even-n count 2^{n/2-2} verified (1,2,4 at 4,6,8) with the doubling-map witness identified (permutation iff n even).
+
+(2) PAIR-SPACE COUNT (honest): the joint [gridsym = x(-1)] + [twist = xg] system per g in (Z/(n+1))^x is one GF(2) affine solve (encoding validated: gridsym dims = (m+f)/2 at n=4..12 exactly). NEW STRUCTURAL FACT: t and flip(t) satisfy DIFFERENT twists (x2 vs x2^-1 at n=4). The multiplicative family accounts: n=4 fully (2 unique solutions = the 2 loop tilings), n=6 half (x2, x4 -> 2 of 4), n=8 none (x2 inconsistent; witnesses non-affine), n=10 four. => the Burnside proof of 2^{n/2-2} requires the full non-affine witness classification -- OPEN, precisely delimited; the multiplicative sub-count is exact.
+
+FILES: 05-knowledge/results/lrc_pairspace_dimension_klein_S171.out; 01-canon/theorems/THM-649-flip-parity-trilogy-affine-D-binomial-law.md. No Lean (owner directive). No canon overridden.
+
+NEXT: (a) classify the non-affine witnesses at n=6,8 (extract them; are they path-conjugated multiplicative maps -- x2 composed with a different Ham-path re-basing?); (b) at prime n+1 the multiplicative orbits = cyclotomic cosets: connect the consistency pattern to the quadratic character (kps THM-640 Paley bridge); (c) the trilogy's Lean formalization once the owner lifts the proofs-first directive (all pieces are finite/parity -- cheap).
+
+---
+
 ## mac-mini-2026-07-07-S51 -- THE CYLINDER TILING MODEL VALIDATED (winding-bit crossing form recovers Z(n) = 1/3/9/18 exactly at n=5..8) + THE TRANSITIVITY ANSWER: the cocylinder does NOT invert the book -- both geometries price transitive order (corr(Q_cyl, log H) = -0.64/-0.66; all-aligned costs 2-3x the optimum) (HYP-5097)
 
 Prompt (owner): extend the two-circle model further; think how the cocylinder relates to transitivity.
