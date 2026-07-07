@@ -1492,6 +1492,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S48 -- THE TRANSLATE SPECTRUM M({m..m+11})=m/(2m+11) closes the UNIFORM-k escape; FORMALIZED (LRCTranslateSpectrum GREEN) (HYP-4637)
+
+Prompt (owner): work the hardest remaining math, then formalize.
+
+opus S127 covering loophole: families clearing at NO covering modulus = L-lifts (==AP mod L), not only the AP; closed by mixed-k (scale-gap) + uniform-k (translate). This session = uniform-k leg.
+
+SPECTRUM (verified m=1..9): M({m..m+11})=m/(2m+11) at t=1/(2m+11). Witness trivial: residues m+i in [m,m+11]=[mu,s-mu], dist>=m/(2m+11). m/(2m+11)>=2/15 <=> m>=2. So m>=2 => M>=2/15>2/25 LOOSE; only m=1 (AP) tight.
+
+FORMALIZED GREEN kernel-pure: LRCTranslateSpectrum.lean -- translate_margin (rational_point_margin s=2m+11 k=1 mu=m) + translate_loose (m>=2 => M>=2/25). No height bound (m arbitrary incl 1+L).
+
+INTEGRATES: klein S144 (S44 Q0<=14->38); mac-mini S34 LRCCoveringReach (d=2 generic); opus S127 (AP not unique all-failer).
+
+(C) 4 branches w/ Lean: (1) non-blockers mod-25 GREEN; (2) covering completeness node; (3) escape uniform-k GREEN this session, mixed-k to formalize; (4) AP thm.
+
+FILES: LRCTranslateSpectrum.lean (GREEN, in manifest); reflection the-translate-spectrum-closes-the-uniform-k-escape-formalized-kps-S48.md; HYP-4637. No canon overridden.
+
 ## kind-pasteur-2026-07-06-S47 -- the r=2 DOUBLE-LIFT shapes close at Q0=25 (bounded height-uniform covering); loose_of_no_multiple GREEN (HYP-4627)
 
 Prompt (owner): take the r=2 double-lift shapes and formalize their coverings.
