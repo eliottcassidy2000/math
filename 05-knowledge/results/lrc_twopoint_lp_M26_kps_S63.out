@@ -1,0 +1,8 @@
+[dual push] 162770 columns
+  it 5000: best dual = 0.125548
+  it 10000: best dual = 0.126288
+  it 15000: best dual = 0.126406
+  it 20000: best dual = 0.126406
+  it 25000: best dual = 0.126406
+[dual push] FINAL dual lower bound (grid M=26) = 0.126406   vs 1/7 = 0.142857
+  ==> dual still below 1/7 by 0.0165; grid LP value in [0.1264, ~0.144]; genuinely knife-edge, needs exact LP solver

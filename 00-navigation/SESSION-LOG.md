@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-07-S63 -- THREE HERESIES (owner creativity directive): Schur-monotonicity of mu REFUTED (59-77% violations, +0.34 jumps = Wiener-weight resonance cost; (A') is NOT convexity); shortest-relation law REFUTED (theta/counting, not minimum); THE 2-POINT LP QUESTION opened -- grid M=26 value bracketed [0.1264, ~0.144] STRADDLING 1/7 (HYP-4897)
+
+Prompt (owner): even more creative connections; recombine, break apart, challenge all assumptions; explore.
+
+HERESY A ((A') as convexity): position-fixed Robin-Hood transfers toward step equality, EXACT exhaustive D=13/14/15: violations 0%/77%/60%; equalizing transfers into mid-word positions RAISE mu up to +0.34 (0.560->0.903) -- the l(14-l) Wiener physics quantified. (A') is resonance-rugged, not convex; explains every stuck fleet descent. BONUS: D=15 exact minimizer = non-palindromic MIRROR PAIR (1^11,4) -- S62 palindrome conjecture false as stated, refined to record-board palindromy + SC/NS mirror coexistence (independent convergence w/ mac-mini THM-639).
+
+HERESY B (sparse lane via lattice minimum): every random family has an L1-4 zero-sum relation; deficit varies 100x within minrel=4 => the law is the THETA SERIES of L(E) cap {sum k = 0}, not the minimum. The rigorous sparse-lane bound must sum relation counts against the functional's Fourier decay.
+
+HERESY C (is the mean floor a 2-POINT theorem?): pair-uniformity is exact for every integer family -- does E[maxgap]>1/7 follow from it ALONE (all cyclic 13-pt processes)? EXACT M=26 LP: 5,200,300 configs -> 162,770 (maxgap,spectrum) columns x 13 constraints; converged dual 0.126406 < 1/7 < infeasible primal 0.14355 => value straddles, leaning BELOW (weight->=3 usage likely NECESSARY in any proof; the fleet's 2-point-flavored CE/PZ bounds saturating at 0.25-0.26 vs truth 0.44 = the same phenomenon). HANDOFF: the LP is trivial for HiGHS/scipy -- one run decides; a feasible grid primal < 1/7 kills the 2-point route outright.
+
+CATALOG (untested, ranked): CRT bi-polynomial vs composite-14 (does S-T's counting object factor over Z/2 x Z/7?); theta-series sparse-lane theorem; the runner braid (positive braid, crossings |v_i-v_j|, Garside language); LP-reweighted time measure for k=8..10 floors; the consensus coin-flip (majority tournament of runners exactly fair = maximal intersubjectivity); adelic bookkeeping.
+
+Files: lrc_three_heresies_kps_S63.py, lrc_twopoint_lp_M26_kps_S63.py (+outs w/ dual-push addendum); reflection three-heresies-and-a-catalog-kps-S63; HYP-4897. Does NOT prove LRC(14); prunes two tempting routes, opens one sharp question.
+
 ## klein-2026-07-07-S157 -- THE VOLTAGE-LIFT READING (owner tiling directive, the face nobody claimed): mean-record families ARE defective c-lifts; the systematic class bottoms out EXACTLY at the record 12907/65520 (+0.0057 over T*, mean sidecar survives); 3-lift runner-up 0.19791; k=9 Hunter positivity by 7-ADIC DESCENT (HYP-4811)
 
 Prompt (owner): proofs before formalization (relayed to fleet); long sessions, careful pulls; apply the tiling-model Hamiltonian-path analysis to lonely runners (a tree on 8 events has 7 edges = the Ham path in an 8-player tournament).
