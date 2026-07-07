@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-07-S65 -- THE IMAGE CENSUS (THM-642): which tournament iso classes occur under the runner-mapping rules, and the leverage -- residue maps see EXACTLY the sieve (never the density floor), single-time maps see only round tournaments; every finite projection bottoms out before the floor = irreducibly a time-measure (HYP-4957)
+
+Prompt (owner): more creative concept->tournament maps; statements about which iso classes are possible under mapping rules; tricks to restrict the possible set; leverage that as a proof fact.
+
+IMAGE CENSUS (A): the mod-p QR cutoff (THM-640) factors through residues mod p => Image = {induced subtournaments of Paley T_p}. p=7 (composite factor of 14): T_7 ARC-TRANSITIVE => 6-distinct-nonzero-residue families ALL map to the UNIQUE class T_7 minus v (H=45, c3=8); residues {0..6} => FULL Paley T_7 (regular, H=189 = the H-maximizer -- the THM-640 weld lives HERE). CRT-14 image STRATIFIES by saturation pattern (down-set in divisor lattice); every cell but the TOP is provably lonely (missing q-multiple => M>=1/q); LRC14 HARD CORE = the single fully-saturated top cell => the sieve counterexample_needs_all_divisors IS an image census.
+
+THE BARRIER (B, the leverage): residue-mod-N invariants depend on the residue multiset ONLY => BLIND to the density floor. VERIFIED: identical residues mod 14 give M in [1/14 (tight), 0.1176] (fibers = mac-mini-S36 lift/escape families). So residue maps PROVE the sieve, NEVER reach the floor -- prunes the whole residue/covering tournament attack-family, localizes the open problem to the residue-INVISIBLE density axis. Limitation-as-leverage exactly as the owner framed it.
+
+SINGLE-TIME IMAGE (C): = ROUND (locally-transitive) tournaments (verified) -- FORGET gap sizes => loneliness invisible to any snapshot (why S64 geometric cutoffs collapsed); #states/period = Wiener collision count, AP-minimized (364 vs record 564).
+
+META (D): four independently-found barriers are ONE -- residues->sieve, snapshot->round/metric-blind, pairwise->2-point LP (S63 0.126, klein-S159 0.1233). The density floor is invisible to EVERY finite projection (residue/snapshot/pair); irreducibly a measure over all times. DESIGN LAW: restriction <=> information loss.
+
+Two-project weld (THM-640) LOCATED at the top image cell (fully saturated, near-Paley) where loneliness is orthogonal to the tournament invariant -- the bridge relates the extremal PRINCIPLES, the barrier proves it can't relate the DIFFICULTY.
+
+Files: lrc_image_restriction_kps_S65.py (+out); canon THM-642; reflection the-image-census-what-tournament-maps-can-and-cannot-see-kps-S65; HYP-4957. Proof work (no formalization). Does NOT prove LRC(14).
+
 ## mac-mini-2026-07-07-S45 -- THM-641 PROVED: the WEIGHTED ANCHORED PAIR-MASS LAW (the owner's 'closed-form weighted cherry') -- 4 Bernoulli terms, arbitrary widths AND anchors; THM-638 = its 2-point specialization; apex-invisibility at ALL anchors/weights; cross-anchor ANTICORRELATION = the {0,1/2} 2-anchor mechanism (HYP-4947)
 
 Prompt (owner): arXiv:1505.02479/BB(27)/Goldbach as inspiration; work the 2-anchor joint tail + a closed-form weighted cherry theorem; creative tournament cutoffs on pair statistics; the relativity of runner perspectives (antisymmetric rate matrix).

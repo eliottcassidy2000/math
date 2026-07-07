@@ -1,0 +1,60 @@
+==================================================================================================
+PART 1 -- mod-7 IMAGE CENSUS: T_7 arc-transitivity collapse + the defect-vertex split
+==================================================================================================
+  reference T_7 \ v (residues 1..6): scores=(2, 2, 2, 3, 3, 3) c3=8 H=45
+  6-distinct-nonzero-residue -> unique class (arc-transitivity):
+    #iso classes over 5 residue-orderings of {1..6}: 1 (expect 1 = arc-transitive)
+  DEFECT-VERTEX split (residue-0 present <=> multiple of 7 present):
+    no mult of 7 (res 1..6 distinct)  : |V|=6 defect(res0)=False  scores=(2, 2, 2, 3, 3, 3) c3=8 H=45
+    one mult of 7 (add residue 0)     : |V|=7 defect(res0)=True  scores=(3, 3, 3, 3, 3, 3, 3) c3=14 H=189
+    two mult of 7                     : |V|=7 defect(res0)=True  scores=(2, 2, 3, 3, 3, 4, 4) c3=12 H=135
+
+==================================================================================================
+PART 2 -- THE SIEVE LEVERAGE: loose-at-7 <=> no defect vertex (tournament = sieve)
+==================================================================================================
+  family                          has mult 7     M(E)   M>=1/7?  defect vtx
+  AP {1..13}                            True   0.0714     False        True
+  no-mult-7 {1..6,8..13,15}            False   0.1429      True       False
+  record 2*{1..11}u{11,13}              True   0.0833     False        True
+  sat-at-7 has 7,14                     True   0.0832     False        True
+  2*AP {2..26}                          True   0.0714     False        True
+  LEMMA (verified): defect vertex present <=> family has a multiple of 7 <=> NOT loose-at-7
+  (no-mult-7 family: M>=1/7 LOOSE, honest Paley subtournament, no defect; the sieve, as image restriction)
+
+==================================================================================================
+PART 3 -- CRT-14 IMAGE: the (mod2, mod7) defect pattern = the saturation lattice
+==================================================================================================
+  a counterexample must be SATURATED: for each q in 2..14, a multiple of q among speeds.
+  In the CRT-14 tournament the q-defect (residue-0 mod q's prime part) marks 'mult of q present'.
+  strata by (mult2?, mult7?) -- the deepest = both = the 2*7 hard core:
+    AP {1..13}                     mult2=True mult7=True FULLY-saturated(2..14)=False
+    no-mult-7 {1..6,8..13,15}      mult2=True mult7=False FULLY-saturated(2..14)=False
+    record 2*{1..11}u{11,13}       mult2=True mult7=True FULLY-saturated(2..14)=True
+    sat-at-7 has 7,14              mult2=True mult7=True FULLY-saturated(2..14)=False
+    2*AP {2..26}                   mult2=True mult7=True FULLY-saturated(2..14)=True
+  => the image STRATIFIES by which q-defects are present; the LRC14 hard core =
+     the single stratum with ALL defects (2..14) = the deepest image cell.
+     A family missing ANY q-defect is loose (M>=1/q>=1/14) = a shallower, provably-lonely stratum.
+
+==================================================================================================
+PART 4 -- SINGLE-TIME IMAGE = ROUND tournaments (metric-forgetting; why geometry fails)
+==================================================================================================
+  AP {1..13}                    : sampled #image iso classes over t = 23; all ROUND? True
+  no-mult-7 {1..6,8..13,15}     : sampled #image iso classes over t = 44; all ROUND? True
+  record 2*{1..11}u{11,13}      : sampled #image iso classes over t = 26; all ROUND? True
+  Wiener collision counts (= # order-cell states, S62): AP=364, record=564, 2AP=728
+  (AP MINIMIZES collisions => smallest round-tournament necklace; the single-time image is
+   round-only, so it forgets gap SIZES => loneliness invisible to any snapshot. Restriction stated.)
+
+DONE.
+
+==============================================================================================
+ADDENDUM -- RESIDUE-INVISIBILITY: families with IDENTICAL residues mod 14 but different M
+==============================================================================================
+  AP {1..13} (residues 1..13)        residues-mod-14 == AP's? True   M=0.0714
+  lift v13 -> 13+14=27               residues-mod-14 == AP's? True   M=0.0769
+  lift v1 -> 1+14=15                 residues-mod-14 == AP's? True   M=0.1176
+  lift several (+14 each on 3)       residues-mod-14 == AP's? True   M=0.0909
+  => IDENTICAL residues mod 14, M ranges 1/14=0.0714 (tight) up -- the density floor is
+     RESIDUE-INVISIBLE. Any tournament map factoring through residues mod N CANNOT see it
+     (its fibers = the lift/escape families, mac-mini-S36). It sees only the sieve.
