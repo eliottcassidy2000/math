@@ -1,0 +1,33 @@
+
+===== n=3 =====
+  (a) s(rho v) = n-1-s(v) on all 2 gridsym tilings: True
+  (b) bookkeeping identity multiset(c-s) = multiset(s) -{n-1-a,a}+{n-2-a,a+1}: True
+  (c) blue self-loop lines: 0
+      odd n: theorem predicts 0 loops -> CONFIRMED
+
+===== n=4 =====
+  (a) s(rho v) = n-1-s(v) on all 4 gridsym tilings: True
+  (b) bookkeeping identity multiset(c-s) = multiset(s) -{n-1-a,a}+{n-2-a,a+1}: True
+  (c) blue self-loop lines: 1
+      loop at class 2: s = (np.int16(1), np.int16(1), np.int16(2), np.int16(2)), s(1) = 1 ((n-2)/2 = 1.0) OK
+  (d) gridsym tilings with s(1)=(n-2)/2: 2; of these, self-loops: 2 (condition necessary AND sufficient here)
+
+===== n=5 =====
+  (a) s(rho v) = n-1-s(v) on all 16 gridsym tilings: True
+  (b) bookkeeping identity multiset(c-s) = multiset(s) -{n-1-a,a}+{n-2-a,a+1}: True
+  (c) blue self-loop lines: 0
+      odd n: theorem predicts 0 loops -> CONFIRMED
+
+===== n=6 =====
+  (a) s(rho v) = n-1-s(v) on all 64 gridsym tilings: True
+  (b) bookkeeping identity multiset(c-s) = multiset(s) -{n-1-a,a}+{n-2-a,a+1}: True
+  (c) blue self-loop lines: 2
+      loop at class 46: s = (np.int16(2), np.int16(2), np.int16(2), np.int16(3), np.int16(3), np.int16(3)), s(1) = 2 ((n-2)/2 = 2.0) OK
+      loop at class 54: s = (np.int16(2), np.int16(2), np.int16(3), np.int16(2), np.int16(3), np.int16(3)), s(1) = 2 ((n-2)/2 = 2.0) OK
+  (d) gridsym tilings with s(1)=(n-2)/2: 24; of these, self-loops: 4 (condition necessary/NOT sufficient)
+
+===== n=7 =====
+  (a) s(rho v) = n-1-s(v) on all 512 gridsym tilings: True
+  (b) bookkeeping identity multiset(c-s) = multiset(s) -{n-1-a,a}+{n-2-a,a+1}: True
+  (c) blue self-loop lines: 0
+      odd n: theorem predicts 0 loops -> CONFIRMED
