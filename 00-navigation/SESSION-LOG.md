@@ -1,3 +1,26 @@
+## mac-mini-2026-07-07-S41 -- PZ-ON-U: the k=13 density floor is a CV BOUND -- mu_{1/7} >= E[U]^2/E[U^2] = 1/(1+CV(U)^2) >= (7/6)E[U]; adversarial floors PZ>=0.2606 (4.61x m_P) / E[U]>=0.0938 (1.94x reduced bar); balanced-lattice truncation is NON-perturbative (dead end, extends HYP-4767 to the density side); cover-or-decorrelate dichotomy proposed for kps-S59's D>75 residual (HYP-4817, MISTAKE-120)
+
+Prompt (owner): long session -- deeply understand LRC14 history/relations/corrections/validity, what we've been missing/misguided, then investigate; forgotten factoids, extend/connect; how/why not just if; push/pull often.
+
+AUDIT PHASE (converged with boxeph-S1/monad-S1/klein-S154 running the same directive concurrently -- ceded overlaps, cited): traced Route-2 rise/retirement (MISTAKE-116/117), THM-527's 2/7->1/7 threshold correction (THM-530), the S130-S134 burst, the two-architecture conflation (monad HYP-4787 published it first; my independent finding ceded). FORGOTTEN TOOLS RECONNECTED: THM-579 (June 29, mine -- CV(N_R) Cauchy-Schwarz for the covering floor) and kps-S6-wf's net-characterization ({U=0} nets only at q>=7 rationals) both slot exactly into the current frontier.
+
+FINDINGS (HYP-4817):
+ 1. THE CHAIN: U(x)=sum(g_j-1/7)_+ = meas{s: 1/7-window at s empty}; {U>0}={maxgap>1/7}; mu_{1/7}=P(U>0) >= E[U]^2/E[U^2] (PZ) >= (7/6)E[U] (U<=6/7 pointwise => PZ DOMINATES opus-S131's first moment everywhere). k=13 bar mu>=m_P reduces to ONE linear target: inf_E E[U_{1/7}] >= (6/7)m_P = 0.04842.
+ 2. FLOORS (descents at the RIGHT functionals, 13-pt enforced): inf E[U]~0.0938 (1.94x) at the 3-ADIC CASCADE (0,30,36,45,...,108) -- same c-fold interlacing mechanism as monad's parity record but mod 3; inf PZ~0.2606 (4.61x). CV(U)^2 <= 2.84 vs 16.7 allowed.
+ 3. UNIFICATION: monad's Chung-Erdos (HYP-4797 mechanism) IS PZ on the 14-anchor count; U = continuous-anchor limit (E[U]~S1/14 numerically confirmed); no anchor choice, exact piecewise-rational moments.
+ 4. BALANCED-LATTICE IDENTITY (derived): E[U_u] = sum_T (-1)^{|T|}(1-u)^{13-|T|} L_T(u), s-average forces sum m_i = 0 => PAIRS NEVER CONTRIBUTE (kps-S59 factoid, one line); every triple enters via w=(b-c,c-a,a-b)/gcd (3-APs = harmonic (1,-2,1) = largest). random-big deficit ~0 validates.
+ 5. DEAD ENDS (documented, do not pursue): (a) truncation NON-perturbative -- AP: w3=-0.56, w4=+0.79, net deficit -0.008; unsigned w3 mass (0.37-0.57) exceeds the WHOLE budget (0.0864) at every structured family = HYP-4767's signed-cancellation on the density side; PZ evades it (positivity of a positive variable, no lattice sum). (b) Bonferroni-by-weight sandwich VIOLATED at the E[U]-minimizer.
+ 6. MECHANISM (Farey shells): AP keeps 57% of E[U] near q<=8 rationals; the minimizer suppresses to 28% and pushes 72% generic -- avoidance mass MOVES but is not destroyed; that conservation, made uniform, is the open lemma. Near q<=6 rationals U >= 1/q-1/7 >= 1/42 on the whole cell.
+ 7. COVER-OR-DECORRELATE (proposed completion of kps-S59's D>75 residual): E subset small 2-dim GAP => superset monotonicity + FINITE GAP mu-ledger (mu(G) nearly (d1,d2)-INDEPENDENT: (11,2)-grids ~0.306 = 5.4x m_P across all steps; record families cover-dominated); else low additive structure => sparse lattice => PZ near iid. Open constant: the Freiman window (|G| <~ 60 before cover mu hits m_P).
+ 8. LADDER byproduct: maxgap >= (sum g^p)^{1/(p-1)} pointwise; p=3 clears 1/7 on the whole bank (p=2 = kps-S58's failed bound); no p<=6 clears T* -- inherits the mean route's bar problem.
+ META-PATTERN (reflection): every project floor with traction = a CV bound on an avoidance count (THM-579 sheets / monad CE / PZ-on-U; cf THM-589 metagraph H-variance); sups (the moat) have only location/three-gap rigidity. Averages have CV certificates; sups don't.
+
+MISTAKE-120 (self-caught): "{0,2..12,17,28}" transcribed as 14 points (true family skips 11); two part-2 "records" were 14-pt artifacts; rule = assert len(set(E))==13 + copy explicit lists.
+
+FILES: lrc14_{Uprofile_pz_ladder, EU_balanced_lattice, EU_floor_mechanism, gap_superset_ledger}_macmini_S41.py (+4 .out); reflection the-density-floor-is-a-cv-bound-pz-on-the-avoidance-profile-macmini-S41; HYP-4817 (INDEX); MISTAKE-120; proof-map PZ-ON-U block. No canon overridden. NB: HYP-4797 double-claimed (kps-S59 stub + monad late entry) -- flagged, not resolved by me.
+
+NEXT: (a) exact-rational port of E[U]/E[U^2] (death-star integrator / kps-S6-wf arcs -- mechanical); (b) the GAP mu-ledger as a finite theorem (2-dim three-distance; (d1,d2)-independence proof); (c) E[U 1_{G_P}] version of THM-579's projection for the k=8..12 legs (s-average kills the same pairs); (d) the D>75 x cover-or-decorrelate assembly.
+
 ## opus-2026-07-07-S134 -- FAREY ROOF + ANCHORED-TAIL FINITIZATION: maxgap(AP_k) IS the Farey roof (origin-gap saturation, 3-line three-distance proof) => every canon floor constant is one Farey statistic; mu_{1/7} is EXACTLY an 18-anchor (F7) statistic; tight 12-anchor candidate (A''-F6) survives corpus+descent+swap-scans, targeting the load-bearing (A') (THM-637, HYP-4782)
 
 Prompt (owner): long session -- deeply understand LRC14 history/relations/corrections/validity, see what we've been missing/misguided, then investigate; uncover forgotten true factoids, extend/connect; how/why not just if; push/pull often.

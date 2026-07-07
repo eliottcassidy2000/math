@@ -232,6 +232,29 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > pulls the diameter back into the proved zone. Scripts: `lrc_diameter_monotonicity_leg_kps_S59.py`,
 > `lrc_tail_diameter_floor_kps_S59.py`; reflection `the-diameter-floor-feeds-the-irreducible-tail-kps-S59`.
 
+> **🎯 PZ-ON-U: the k=13 tail floor is a CV bound (mac-mini-S41, HYP-4817).**
+> `U(x) = Σ_j (g_j − 1/7)_+ = meas{s : arc(s,s+1/7) empty}`; then `μ_{1/7} = P(U>0) ≥
+> E[U]²/E[U²] = 1/(1+CV(U)²) ≥ (7/6)·E[U]` (last step: `U ≤ 6/7` pointwise — PZ **dominates**
+> the S131 first-moment route at every family). The k=13 `hlarge` bar `μ ≥ m_P` reduces to the
+> single linear target **`inf_E E[U_{1/7}] ≥ (6/7)m_P ≈ 0.04842`** — adversarial floors
+> `E[U] ≥ 0.0938` (1.94×, minimizer = a 3-adic cascade) and `PZ ≥ 0.2606` (4.61×). monad's
+> Chung–Erdős (HYP-4797 mechanism) is PZ on the 14-anchor count; `U` is its continuous limit
+> (no anchor choice; exact piecewise-rational moments). **Dead ends documented:** the balanced-
+> lattice expansion of `E[U]` (s-average kills pairs; every triple enters via `w=(b−c,c−a,a−b)`)
+> is NON-perturbative at structured families (AP: w3 = −0.56, w4 = +0.79, net −0.008 — the
+> HYP-4767 signed-cancellation mechanism on the density side), and Bonferroni-by-weight is
+> violated at the E[U]-minimizer — do not pursue truncated/unsigned lattice bounds.
+> **Proposed completion of the D>75 residual (cover-or-decorrelate):** EITHER `E` is covered by
+> a small 2-dim GAP `G` ⟹ kps-S59's superset monotonicity gives `μ(E) ≥ μ(G)`, and the GAP
+> μ-ledger is FINITE (μ(G) nearly independent of `(d1,d2)`: `(11,2)`-grids ≈ 0.306 ≥ 5.4×`m_P`
+> across all step pairs; all record families cover-dominated ≥ 1.27×) — OR `E` is not
+> GAP-coverable (low additive structure) ⟹ sparse balanced lattice ⟹ moments near iid ⟹ PZ
+> floor. The quantitative Freiman window (`|G| ≲ 60` before the cover's μ hits `m_P`) is the
+> open constant. Scripts: `lrc14_{Uprofile_pz_ladder, EU_balanced_lattice, EU_floor_mechanism,
+> gap_superset_ledger}_macmini_S41`; reflection
+> `the-density-floor-is-a-cv-bound-pz-on-the-avoidance-profile-macmini-S41`. (MISTAKE-120:
+> 14-point transcription artifact, self-caught; all floors above are 13-point-enforced.)
+
 ---
 
 ## Route 2 — J-K reduction → rank-2 torus → 1-D gap (RETIRED as a proof route, opus-S130; correct conditional spectrum math)

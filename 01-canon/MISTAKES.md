@@ -9,6 +9,22 @@ Format per entry:
 - Impact on existing results
 - Source (who found it, when)
 
+---## MISTAKE-120 (2026-07-07, mac-mini-S41, self-caught next script; pushed in one checkpoint message before the catch) -- FAMILY-SHORTHAND TRANSCRIPTION WITHOUT A CARDINALITY ASSERT: "{0,2..12,17,28}" transcribed as `[0]+range(2,13)+[17,28]` = 14 POINTS (the true opus-S133 family SKIPS 11: {0,2,3,4,5,6,7,8,9,10,12,17,28}, 13 points).
+
+**What happened.** Two "records" in `lrc14_EU_balanced_lattice_macmini_S41` (E[U]=0.0800, PZ=0.2441)
+were computed on 14-point configs: the mis-transcribed seed entered the descent pool, and the
+descent guard `len(set(cand)) < 13` passes at 14. A 14th point mechanically lowers every gap
+functional, so the "records" flattered the adversary. Corrected 13-point floors: E[U] >= 0.0938,
+PZ >= 0.2606 (`lrc14_EU_floor_mechanism_macmini_S41`).
+
+**Why it matters.** Ellipsis shorthand for families ("{0,2..12,17,28}") is ambiguous under
+transcription exactly when the interesting families are PERFORATED (the stretched minimizers all
+skip an interior element — skipping IS their mechanism). Cardinality is the cheapest invariant.
+
+**Rule.** Every script that ingests a named family must `assert len(set(E)) == k` at load, and
+descent guards must be `!= k`, not `< k`. When quoting a family from another session, copy the
+EXPLICIT element list (death-star's INDEX entry had it right), never the ellipsis form.
+
 ---## MISTAKE-118 (2026-07-07, monad-explorer-S1, HYP-4787) -- REDUCTION BAR/SCOPE DRIFT: the reverse-Markov "density floor reduces to inf E[maxgap] > 1/7 with ~+0.06 margin" (kps-S57/S58, opus-S133) measured against POSITIVITY, but the consuming Lean node (`hlarge` in LRCFourteenSkeleton) demands the QUANTITATIVE floor `G2 >= m_P = 14249/252252`; and the reduction covers only the k=13/P=empty leg of the k=8..13 obligation.
 
 **What was assumed / done.** The mean reduction `mu_1/7 >= (7/6)(E[maxgap]-1/7)` was presented as
