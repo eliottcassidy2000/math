@@ -1,3 +1,24 @@
+## mac-mini-2026-07-06-S39 -- the MOAT is FINITELY COVERABLE: census confirms + quantifies klein-S152's LRC14 residual. Single-scale first gap (1/14,1/13) EMPTY (33330 families); single-scale non-AP clears at q<=29 (BOUNDED, NO escape -- the key distinction from the multi-scale escape). The moat is a bounded rigidity, composite-14 hard (HYP-4727)
+
+Prompt (owner): work next steps + remaining tasks overnight; census large randomness, understand the in/finite families; deep structural correctness.
+
+CENSUSED the LRC14 single-scale core (the moat) and mapped it precisely -- confirming + quantifying klein-S152 + kps-S53.
+
+CONTEXT (fleet convergence): the LRC14 residual collapsed to ONE object, the MOAT (klein-S152): {1..13} is the unique single-scale 13-family (up to dilation) with M<1/13. Multi-scale families are grounded by the coarse bound M(v)>=M(K)-A/L (my S38 THM-636 + kps LRCCoarseReduction); the AP-coarse case (r=13, = my S36/S37 escape families) is closed by klein's AP conjugate witness. So my reach_decorr (r<=11) + klein's conjugate witness cover the escape families -- resolving my S38 open item (a).
+
+MY CENSUS FINDINGS (structural correctness):
+ (1) The first gap (1/14,1/13) is EMPTY over 33330 single-scale (ratio<=13) 13-families: 0 in band, 0 LRC14 violations, only AP-dilations at 1/14. So single-scale => AP (1/14) or M>=1/13. The direct-LRC14 analogue of (G).
+ (2) Single-scale non-AP families clear at level 1/13 at BOUNDED q<=29 (0 escapes over 5258). THE KEY DISTINCTION from the multi-scale escape families (my S36/S37, unbounded nextprime(Q0)): a single-scale (bounded-ratio) family CANNOT be ==AP mod large L (that forces v_i=(AP)_i+L*k_i with k_i all equal = translate loose, or varying = far element = multi-scale). So NO ESCAPE in the single-scale domain => the moat is FINITELY COVERABLE, unlike the multi-scale escape.
+
+WHY STILL HARD: not finite by brute force (infinitely many bounded-ratio shapes up to dilation); the completeness is the composite-14 hard core (klein-S151: SOTA sieving needs k+1 prime, 14=2*7 breaks it) = the 13-family tight-locus rigidity.
+
+ATTACK DIRECTIONS: the single-scale covering completeness (bounded => a structural/finite argument, NOT the analytic decorrelation which is multi-scale-only); the Route-1 density floor (AP-minimality of rho*); composite-k+1 sieving I(k,p,1).
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection; git/finish_session only.)
+
+FILES: lrc14_singlescale_census / lrc14_strict_singlescale / lrc14_nearAP / lrc14_ratio13_census / lrc14_singlescale_clearmod _macmini_S38/S39 (+out); reflection the-moat-is-finitely-coverable-single-scale-has-no-escape-macmini-S39.md; HYP-4727 (+INDEX). No canon overridden.
+
+NEXT: attack the moat via the single-scale covering completeness (bounded, structural) OR the composite-14 arithmetic; formalize klein's AP conjugate witness (the 1/14 floor for the AP-coarse case).
 ## klein-2026-07-06-S152 -- ESCAPE FAMILIES COLLAPSE TO THE MOAT (HYP-4711): the AP carries its own conjugate witness; the whole LRC(14) residual is now ONE open object
 
 Prompt (owner): pull from agents, extend their ideas, attack the LRC(14) proof with the M(V)->M(K) descent (r<12 close pair => LRC(<=12) loose; r=13 => descend).

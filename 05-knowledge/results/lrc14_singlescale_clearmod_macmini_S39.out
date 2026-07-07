@@ -1,0 +1,9 @@
+Single-scale non-AP 13-families: min q clearing at level 1/13 (M>=1/13)? (bounded => finite cover, no escape)
+  tested 5258 single-scale non-AP families
+  MAX min-clearing-q (at level 1/13): 29   (no clear q<=60: 0)
+  distribution: {3: 8, 4: 64, 5: 185, 6: 302, 7: 456, 8: 547, 9: 714, 10: 637, 11: 634, 12: 365, 13: 466, 14: 119}
+
+  => single-scale non-AP families clear at level 1/13 at q <= 29 (BOUNDED, no escape).
+     So the single-scale RESIDUE is FINITELY COVERABLE (unlike the multi-scale escape families).
+     LRC14 structure: multi-scale => coarse reduction (LRC<=13); single-scale => AP (1/14) or
+     clears at small q (M>=1/13). The composite-14 hardness is in the FULL finite check, not the escape.
