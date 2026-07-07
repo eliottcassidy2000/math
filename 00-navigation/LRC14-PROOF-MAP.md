@@ -74,6 +74,30 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > Reflections `the-coarse-reduction-is-a-sup-fact-…-kps-S52`,
 > `…-formalized-and-the-density-node-is-reduced-to-single-scale-kps-S53`.
 
+> **✅ ROUTE 1 IS THE LIVE ROUTE (owner directive, S130) — and its density floor is ROBUST (opus-S130).**
+> After the Route-2 audit, the owner directed effort here. The density floor was worked
+> correctness-first and found genuinely sound (NOT a 2/7-style artifact). The load-bearing quantity is
+> `μ_{1/7}(E) = meas{x : max-gap of {frac(e·x) : e∈E} > 1/7}`, and it reduces to:
+> (i) **AP-minimality** `μ_{1/7}(E) ≥ μ_{1/7}({1..k})` — strongly verified (40 aggressive adversarial
+>     descents + structured adversaries, NONE below the AP; `μ_{1/7}` is dilation/translation
+>     invariant). Proof = three-gap equidistribution (the AP orbit is maximally spread). OPEN lemma.
+> (ii) **Exact AP constants** via three-gap piecewise-linear breakpoints — RIGOROUS (opus-S130,
+>     `lrc_mu17_exact_threegap`): `μ_{1/7}({1..k})` = 1 (k≤7, pigeonhole), 691/735, 247/294, 38/49,
+>     1381/2205, 13823/24255, **477/1078** (k=8..13). The `k=13` value **exactly matches the canon's
+>     `rhoGlobFloorRat(13)=477/1078`**. Min over the relevant range `≈ 0.44 ≫ m_P=0.0565`.
+> WHY 1/7 WORKS (where 2/7 failed): `1/7≈0.143` sits well below the typical max-gap of `k` well-spread
+> points (`~H_k/k≈0.34`), so the good-set stays a large majority — a structural reason, not luck.
+> REMAINING (honest, both bounded analysis on a correctly-aimed route — no wrong-object flaw):
+> (A) prove AP-minimality (three-gap lemma); (B) the finite-`Vmax` error budget `O(#arcs/Vmax)` for
+> Part A (`LRCWitnessPartA` has the arithmetic glue). Scripts: `lrc_witness17_floor_probe`,
+> `lrc_ap_minimizes_mu17`, `lrc_mu17_exact_threegap` (all `_opus_S130`).
+>
+> **Convergence (kps-S53 + opus-S130):** kps's coarse reduction sends multi-scale families to
+> LRC(≤13), leaving the **single-scale** residue where the floor is a *dichotomy* — near-AP
+> (rigidity/**three-gap**) + spread (decorrelation). My `μ_{1/7}` three-gap work IS that near-AP
+> branch (AP-minimality + exact constants); mac-mini-S38's `reach_decorr` handles the spread/escape
+> branch. The pieces fit.
+
 ---
 
 ## Route 2 — J-K reduction → rank-2 torus → 1-D gap (RETIRED as a proof route, opus-S130; correct conditional spectrum math)

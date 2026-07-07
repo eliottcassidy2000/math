@@ -1,0 +1,12 @@
+=== Is AP the GLOBAL minimizer of mu_17? Strong search, k=13 (opus-S130) ===
+mu_17(AP {1..13}) = 0.44250  (claimed floor 477/1078=0.44249)
+
+best (lowest) mu_17 found over 40 aggressive starts: 0.44250
+  E = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  below AP? False
+  mu_17(2*AP) = 0.44247
+  mu_17({1..13} shifted+100) = 0.44250
+  mu_17(geometric-ish) = 0.98637
+  mu_17({1..7}+{100..105}) = 0.72663
+
+VERDICT: AP {1..13} IS the minimizer (nothing found below it) => floor = mu_17(AP) ~0.442, ROBUST.

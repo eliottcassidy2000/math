@@ -1,0 +1,15 @@
+=== EXACT mu_17(AP {1..k}) via three-gap piecewise-linear breakpoints (opus-S130) ===
+  k= 3: mu_17 = 1 = 1.000000  (>=1/7 always: k<=7 pigeonhole => mu=1)
+  k= 4: mu_17 = 1 = 1.000000  (>=1/7 always: k<=7 pigeonhole => mu=1)
+  k= 5: mu_17 = 1 = 1.000000  (>=1/7 always: k<=7 pigeonhole => mu=1)
+  k= 6: mu_17 = 1 = 1.000000  (>=1/7 always: k<=7 pigeonhole => mu=1)
+  k= 7: mu_17 = 1 = 1.000000  (>=1/7 always: k<=7 pigeonhole => mu=1)
+  k= 8: mu_17 = 691/735 = 0.940136
+  k= 9: mu_17 = 247/294 = 0.840136
+  k=10: mu_17 = 38/49 = 0.775510
+  k=11: mu_17 = 1381/2205 = 0.626304
+  k=12: mu_17 = 13823/24255 = 0.569903
+  k=13: mu_17 = 477/1078 = 0.442486   claimed rhoGlobFloorRat=477/1078=0.44249  MATCH=True
+
+  => exact floor values for k=8..13 (the AP minimizer). These are the rigorous witness-floor
+     constants; the density floor mu_17(E) >= mu_17(AP) > 0 reduces to (i) AP-minimality + (ii) these.

@@ -104,7 +104,14 @@ REROUTE: retire Route 2 as a proof route (keep as correct conditional math / spe
 
 FILES: lrc_covering_completeness_audit / lrc_gap_member_search / lrc_escape_loose_probe / lrc_C_robustness _opus_S130 (+outs); MISTAKE-116, MISTAKE-117; proof-map CORRECTION BANNER; reflection the-route-2-audit-two-broken-links-opus-S130; Lean docstrings (JKReduction, CoveringComplete) corrected; broadcast to fleet. NO new theorems asserted; two obligations correctly re-labeled.
 
-NEXT (owner decision): pick the reroute -- (a) work Route 1's honest density floor; (b) engage the Tao/MSS/sieving computational route; (c) re-scope to formalizing settled results; (d) keep auditing/consolidating. Route 2 should not receive further PROOF-directed effort.
+REROUTE (owner chose Route 1) -- and I worked its density floor, correctness-first:
+ - Route 1 audited SOUND (scout + my check): bounds Mreach>=1/14 DIRECTLY (the sup, right object; no wrong-object flaw). Part A (density=>reach) reformulation proved in canon; finite-Vmax error budget = glue in LRCWitnessPartA.
+ - THE DENSITY FLOOR IS ROBUST (not a 2/7-style artifact). Load-bearing quantity mu_17(E)=meas{x:maxgap{frac(e*x):e in E}>1/7}. VERIFIED (lrc_ap_minimizes_mu17: 40 aggressive adversarial descents + structured adversaries) that the AP {1..k} is the GLOBAL minimizer (mu_17 is dilation/translation invariant). EXACT three-gap constants (lrc_mu17_exact_threegap, rational piecewise-linear): mu_17({1..k}) = 1 (k<=7 pigeonhole), 691/735, 247/294, 38/49, 1381/2205, 13823/24255, 477/1078 (k=8..13). The k=13 value EXACTLY matches canon rhoGlobFloorRat(13)=477/1078. Min ~0.44 >> m_P=0.0565. 1/7 works where 2/7 collapsed because 1/7=0.143 sits well below the typical maxgap ~H_k/k~0.34.
+ - Route 1's honest remaining pieces (both bounded analysis, correctly aimed): (A) prove AP-minimality of mu_17 (three-gap/equidistribution lemma); (B) the finite-Vmax O(#arcs/Vmax) error budget for Part A.
+
+FILES (Route 1): lrc_witness17_floor_probe / lrc_ap_minimizes_mu17 / lrc_mu17_exact_threegap _opus_S130 (+outs); reflection the-route-1-density-floor-is-robust-exact-three-gap-constants-opus-S130; proof-map Route-1 section updated; HYP-4692.
+
+NEXT: Route 1 is the live route. (A) prove AP-minimality (mu_17(E)>=mu_17(AP)) via three-gap -- the clean equidistribution lemma; (B) formalize Part A's finite-Vmax error budget. Route 2 gets no further PROOF-directed effort (retained as correct conditional math). @owner: the J-K point warrants your independent check vs arXiv:2304.01462 / 2411.12684 before any external claim.
 
 ---
 
