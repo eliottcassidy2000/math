@@ -1,3 +1,17 @@
+## boxeph-2026-07-07-S2 -- LEAN FORMALIZATION: Farey-roof->good-set BRIDGE + AP30 density-floor certificate (unconditional, kernel-pure); extends death-star's AP20 diameter floor <=19 -> <=29
+
+Formalization session (owner: formalize LRC14, pull often, integrate the fleet). Took opus-S135's LRCFareyRoof (roof pointwise, zero_gap_empty/THM-637) + mac-mini-S42/monad-S2's LRCTailDiameter (muGood, good_anti/good_translate, muGood_ge_APD) and supplied the MISSING LINK + a certificate it unlocks. Lean 4.30, Mathlib cached, all built green + axiom-audited [propext,Classical.choice,Quot.sound].
+
+NEW MODULES (kernel-pure, no sorry/native_decide):
+1. LRCFareyRoofBridge: good_of_roof_gt (on open Farey-k cell, roof=(qx-p)+(p'-q'x)>theta => x in Good theta (AP_k); witness arc a=(q'x-p')+(roof-theta)/2 seats the theta-arc strictly inside the empty roof-interval, contradiction via zero_gap_empty) + roof_superlevel_subset_good + measure atoms muGood_ge_of_cell_interval / muGood_ge_sum_intervals (roof-superlevel intervals lower-bound muGood, via measure_mono + measure_biUnion_finset). REDUCES AP76Certificate to a decidable sum of Farey-cell interval lengths -- and only cells adjacent to a q<=6 node contribute (roof nodes are 1/q), so ~24 cells not 1776.
+2. LRCAP30Floor: ap30_certificate (mu_{1/7}(AP30)>=6/203+6/203=12/203~0.0591>=m_P=14249/252252) via the 2 endpoint roof intervals (0,6/203),(197/203,1); ap30_certificate_icc0 on {0..29} via good_translate (feeds muGood_ge_APD). DERIVES death-star's hand-built AP20 arcs from opus's roof and EXTENDS the unconditional diameter floor <=19 -> <=29 (2 endpoint intervals clear m_P for all k<=31).
+
+DIVISION OF LABOR: opus=roof engine; mac-mini/monad=muGood+chain; death-star=loose small-D by hand (AP20); THIS=roof->measure bridge + systematic derivation (what the TIGHT AP76 end needs -- its ~24 intervals are each a one-line good_of_roof_gt).
+
+OPEN (fleet): tight AP76 cert = ~24-interval instantiation of muGood_ge_sum_intervals w/ q<=6 Farey-76 cell data (decidable arithmetic); + does the post-far-peel single-scale residual have diameter<=29 (=> AP30 CLOSES the k=13 hlarge leg) or need <=75?
+
+Files: 04-computation/lean/.../LRCFareyRoofBridge.lean, LRCAP30Floor.lean (+root import); reflection the-farey-roof-bridges-to-the-good-set-and-derives-the-diameter-floor-boxeph-S2. Pushed 3 commits.
+
 ## kind-pasteur-2026-07-07-S63 -- THREE HERESIES (owner creativity directive): Schur-monotonicity of mu REFUTED (59-77% violations, +0.34 jumps = Wiener-weight resonance cost; (A') is NOT convexity); shortest-relation law REFUTED (theta/counting, not minimum); THE 2-POINT LP QUESTION opened -- grid M=26 value bracketed [0.1264, ~0.144] STRADDLING 1/7 (HYP-4897)
 
 Prompt (owner): even more creative connections; recombine, break apart, challenge all assumptions; explore.
