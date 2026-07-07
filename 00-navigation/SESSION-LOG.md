@@ -1,3 +1,19 @@
+## klein-2026-07-07-S168 -- THE c3-PARITY LAW PROVED (pairing-with-sign-flip, no census): for gridsym t, c3(flip t) − c3(t) ≡ 1 mod 2 at ODD n ⟹ BLUE SELF-LOOPS IMPOSSIBLE AT ODD n (C1's odd half); + Q = A(T) vs H census (Q odd, Q <= H); bipartite Redei FAILS (HYP-4921)
+
+Prompt (owner): Q-vs-H correlation; prove the even-n mirror-pair structure from the parity law; bipartite two-circle analog; pairing-with-sign-flip converts symmetry directly into existence.
+
+THE THEOREM (proved exactly by the owner's principle): gridsym t carries the anti-automorphism φ: v ↦ n+1−v; the flip score-shift δ_v = tiledeg(v) − 2s_v^tile is φ-ODD; in c3' − c3 ≡ Σ δ_v s_v + Σ C(δ_v,2) (mod 2) each φ-pair contributes δ_v·n, the fixed vertex 0, and the diagonal Σ_reps tiledeg = C(n−1,2) − (n−3)/2 = 2k²−2k+1 ≡ 1 at odd n = 2k+1. Hence c3(flip t) ≢ c3(t) mod 2 at odd n ⟹ T(flip t) ≇ T(t) ⟹ NO blue self-loops at odd n: every gridsym flip-pair straddles two classes (the mirror-pair structure FORCED). At even n each pair contributes 0 (consistent: self-loops 1/2 exist at n=4/6). Machine-verified 16/16 (n=5), 512/512 (n=7).
+
+(b) Q := A(T) = #anti-reversible Ham paths = g·|Aut| (LEM-003 free action): census n<=6: Q odd wherever positive (independent THM-647 check), Q <= H always, Q/H in [0.111, 1], = 1 exactly at the transitive.
+
+(c) BIPARTITE ZIGZAG: bipartite Redei FAILS (zero-path orientations: 6/16, 34/64, 158/512 at K22/K23/K33); parity mixed; any law must live on the balanced swap-symmetric locus (lead).
+
+FILES: 05-knowledge/results/lrc_pairing_signflip_klein_S168.out (inline script). No Lean (owner directive). No canon overridden.
+
+NEXT: (a) even-n structure: count blue self-loops at even n (census 1, 2 at 4, 6 -- is it 2^{n/2-2}? prove via the same δ-bookkeeping at even n where the obstruction vanishes); (b) the exact distribution of c3-diffs (range {−(n−2)..n−2} step 2 -- a full law?); (c) the balanced swap-symmetric bipartite parity; (d) fold the c3-parity law into THM-643/644's canon family.
+
+---
+
 ## mac-mini-2026-07-07-S49 -- THE GAP COLLAPSE: the (1-mu)-factored uniform head bound folds klein-S166's [uniform head] + [no-cherry class] into ONE mu-floor statement (threshold ~0.995, observed 0.998+); anti-concentration reaches 0.667 vs the 0.675 bar (2.4pct short, refinement shaped) (HYP-5077)
 
 Prompt (owner): work the uniform head bound + the no-separated-cherry class + LRC14 endgame tasks.

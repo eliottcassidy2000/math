@@ -1,0 +1,20 @@
+=== (a) c3-parity gap: gridsym tilings, c3(flip t) - c3(t) mod 2, by n ===
+  n=4: gridsym tilings 4; c3-diff parities {0: 4}; distinct diffs [-2, 0, 2]
+  n=5: gridsym tilings 16; c3-diff parities {1: 16}; distinct diffs [-3, -1, 1, 3]
+  n=6: gridsym tilings 64; c3-diff parities {0: 64}; distinct diffs [-4, -2, 0, 2, 4]
+  n=7: gridsym tilings 512; c3-diff parities {1: 512}; distinct diffs [-5, -3, -1, 1, 3, 5]
+  => C1 PROOF TEST: if at odd n ALL diffs are ODD, no gridsym t can have T(flip t) ~ T(t): blue self-loops impossible.
+
+=== (b) Q = A(T) (anti-reversible Ham paths) vs H across metagraph nodes ===
+  n=4: classes 4; Q odd wherever >0: True; Q=0 classes (non-SC): 2; Q/H range 0.600..1.000
+        (Q,H) pairs sample: [(1, 1), (3, 0), (3, 0), (5, 3)] ... law check Q<=H: True
+  n=5: classes 12; Q odd wherever >0: True; Q=0 classes (non-SC): 4; Q/H range 0.111..1.000
+        (Q,H) pairs sample: [(1, 1), (3, 0), (3, 0), (3, 3), (5, 0), (5, 0)] ... law check Q<=H: True
+  n=6: classes 56; Q odd wherever >0: True; Q=0 classes (non-SC): 44; Q/H range 0.189..1.000
+        (Q,H) pairs sample: [(1, 1), (3, 0), (3, 0), (3, 0), (3, 0), (5, 0)] ... law check Q<=H: True
+
+=== (c) bipartite zigzag analog: # alternating Ham paths in orientations of K_{a,b} ===
+  K_2,2: orientations 16; zero-path orientations 6; path-count parity dist {0: 8, 1: 8}
+  K_2,3: orientations 64; zero-path orientations 34; path-count parity dist {0: 52, 1: 12}
+  K_3,3: orientations 512; zero-path orientations 158; path-count parity dist {0: 368, 1: 144}
+  => bipartite Redei FAILS if zero-path orientations exist; the parity law (if any) lives on the balanced swap-symmetric locus.
