@@ -1,0 +1,15 @@
+================================================================================================
+flip-parity tests on beta-symmetric tournaments
+================================================================================================
+  internal : Delta even 1832, Delta ODD 0   PARITY-SAFE
+  s-tie    : Delta even 600, Delta ODD 0   PARITY-SAFE
+  t-tie    : Delta even 600, Delta ODD 0   PARITY-SAFE
+  MIRROR PARITY LEMMA (W_a == W_beta_a mod 2): tested 1832, violations 0  HOLDS
+
+  odd-n probe (n=5,7): h_beta odd on random symmetric tournaments:
+    tested 400, even h_beta: 0  (Main Lemma consistent)
+[2s]
+CROSSING at n=38: mu_2/7(AP_38) = 8688/154105 = 0.056377 < m_P; n-1=37 covered
+last above: n=37: 34609/599760 = 0.057705 >= m_P=0.056487
+=> subset lemma (anchored gaps monotone) + chain: every 13-set with diam <= n*-1 has
+   P(gap@0>2/7) >= mu_2/7(AP_D+1) >= m_P  => PA_2 >= m_P on that diameter range RIGOROUSLY

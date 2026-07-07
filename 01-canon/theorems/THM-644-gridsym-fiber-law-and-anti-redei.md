@@ -48,8 +48,46 @@ pairs restricts to the ρ-equivariant locus — a gridsym tiling in `C` is exact
 Verified: all transpose-self classes, n = 4, 5, 6 (H_anti odd, every class), and at n = 7
 the full g-spectrum `{1:10, 3:12, 5:16, 7:32, 9:18}` is all-odd (via (b), `H_anti/|Aut|`
 odd, and `|Aut|` odd). This is the σ-equivariant refinement of Rédei's theorem — precisely
-the shape THM-587's frame (Rédei is σ-odd, lonely is σ-even) called for. Natural proof
-target: adapt a parity-involution proof of Rédei to the ρ-twisted path set.
+the shape THM-587's frame (Rédei is σ-odd, lonely is σ-even) called for.
+
+### (c′) The reduction structure (opus-S140 — proved pieces + two verified sub-lemmas)
+
+**PROVED:**
+1. *(Partition.)* For any Hamiltonian path `P`, the positional reversal `α_P` is an
+   involution with `n mod 2` fixed points; a path contributes to `H_anti` iff `α_P` is an
+   anti-involution, so `H_anti = Σ_β h_β` over **anti-involutions** β,
+   `h_β = #{P : α_P = β}`. (An anti-involution has ≤ 1 fixed point: two fixed points u,v
+   would force `T(u,v) = T(v,u)`.)
+2. *(Lemma A — oddly many β.)* If `AntiAut(T) ≠ ∅` it is a coset `α·Aut(T)` of odd size;
+   inversion `x ↦ x⁻¹` is an involution of this coset whose fixed points are exactly the
+   anti-involutions; an involution on an odd-cardinality set has an odd number of fixed
+   points. **#anti-involutions is odd.** ∎
+3. *(Center/mirror structure.)* In a β-symmetric Hamiltonian path (n = 2h): an internal
+   pair-arc `(a, βa)` can occur **only as the center arc** (its positional mirror is itself:
+   any other occurrence would repeat a vertex), and every cross arc is used **jointly with
+   its β-tie partner** at mirrored positions. Hence flipping an internal pair bit changes
+   `h_β` by exactly `W_{βa} − W_a`, where `W_x` = #(one-representative-per-other-pair
+   T-paths whose last vertex beats `x`).
+4. *(Base case.)* The transitive tournament admits ρ and has `h_ρ = 1`.
+5. *(Fold algebra.)* β-symmetric tournaments with fixed β form a GF(2) cube (internal bits +
+   tied cross bits `s = T(a,b) ⟷ T(βb,βa)`, `t = T(a,βb) ⟷ T(b,βa)`); the bit
+   `q(A,B) = s ⊕ t` is representative-independent (the even-graph-layer invariant), and
+   over GF(2): `W_a + W_{βa} ≡ Σ_Q q(pair(last(Q)), A)`.
+
+**Hence (proved reduction):** Anti-Rédei follows from Lemma A + *(Main Lemma)* `h_β` odd for
+each anti-involution β; and the Main Lemma follows, via cube-connectivity + the base case,
+from two GF(2) sub-lemmas:
+- **(M) Mirror parity:** `W_a ≡ W_{βa} (mod 2)` — equivalently the q-weighted rep-path count
+  `Σ_Q q(pair(last Q), A)` is even. *Verified 1832/1832 random instances (n = 4,6,8).*
+- **(S/T) Tie-flip parity:** flipping a tied cross pair changes `h_β` evenly — equivalently
+  `h_β` of the two β-anti-symmetric block-contraction digraphs agree mod 2 (contraction of
+  `[a,b]` with mirror `[βb,βa]` stays anti-symmetric — proved). *Verified 1200/1200.*
+
+All flip types tested parity-safe (3032/3032); the Main Lemma itself verified on every
+self-converse class n ≤ 6 (per-β!) with spectra `{1,3}, {1,3}, {1,3,5,7,9}` and on 400
+random symmetric tournaments at n = 5, 7. **Status: Anti-Rédei = two verified GF(2)
+path-parity sub-lemmas on the fold.** Scripts: `anti_redei_decomposition_opus_S140.py`,
+`anti_redei_flip_parity_opus_S140.py`.
 
 ## (d) The parity law of the fiber allocation (PROVED / structured)
 

@@ -11,6 +11,17 @@ META-LEVERAGE recorded: the quotient being trivial WAS the theorem; next same-sh
 FILES: 04-computation/line_metagraph_klein_S163.py (+out with skeleton addendum); reflection the-line-metagraph-is-rigid-klein-S163; HYP-4871. No Lean (owner directive). No canon overridden.
 
 NEXT: (a) the ordered version (2-colored-pair canon) at n=7 for the bulk-ratio scaling; (b) prove the bulk mixing bound (ratio <= C uniformly? the max over large-fiber pairs looks bounded ~2.6); (c) the rho-quotient folded-cube spectral structure (eigenvalues of FQ_m are classical -- does the blue 2-coloring's Fourier support explain the S161 blue-cross concentration?); (d) transport: rigidify opus's order-cell graph.
+## opus-2026-07-07-S140 -- ANTI-REDEI REDUCED TO TWO VERIFIED GF(2) SUB-LEMMAS (Lemma A + partition + center/mirror + fold algebra PROVED; 3032/3032 flips parity-safe; per-beta oddness verified everywhere) + THE 2/7-GATE DIAMETER LEDGER RIGOROUS (PA_2 >= m_P for all diam <= 37 at k=13, crossing n=38) (HYP-4962)
+
+Prompt (owner): prove Anti-Redei via the rho-twisted involution; keep working the gates; the line metagraph; abstraction-on-abstraction; consider two arXiv papers.
+
+ANTI-REDEI (THM-644 part c-prime): the proof is REDUCED, with everything around the reduction proved: partition over anti-involutions (proved); Lemma A #anti-involutions odd (one-line coset-inversion, proved); center/mirror structure (internal pair-arcs only at the center; ties mirrored -- proved) giving internal-flip Delta = W_beta_a - W_a exactly; base case transitive h=1; fold algebra (GF(2) cube; THM-378 voltage blocks; q = s XOR t even-graph invariant; the GF(2) identity W_a + W_beta_a == sum_Q q). REMAINING: (M) mirror parity (1832/1832 verified) + (S/T) tie-flip parity (1200/1200; contractions stay anti-symmetric, proved). Per-beta h_beta odd verified on every self-converse class n<=6. Dead end documented: naive folded insertion slot-parity FAILS (1534/4000).
+
+2/7 GATE: anchored gaps are subset-monotone; with the proved double-cover chain and exact roof superlevel at 2/7: every 13-set with diameter <= 37 has PA_2 >= m_P RIGOROUSLY (crossing exactly at n=38). Residual = spread regime (iid limit 0.0776 > bar).
+
+CEDED: line metagraph to mac-mini-S47. DEFERRED: the two arXiv reads. Files: THM-644 updated; 2 scripts + outs; HYP-4962. Pulls: 3 (one stuck session-state resolved by rewrite).
+
+NEXT: (a) prove (M) via a q-weighted pairing (even-graph layer -- klein/kps E_n machinery may apply); (b) prove (S/T) via the anti-symmetric contraction digraphs; (c) the D > 37 spread residual of the 2/7 gate; (d) the arXiv reads.
 
 ---
 

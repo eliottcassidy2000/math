@@ -1,0 +1,21 @@
+================================================================================================
+(1) per-beta decomposition on all self-converse classes
+================================================================================================
+  n=4: self-converse classes 2; Lemma A (#beta odd) OK; partition SUM=H_anti OK; MAIN LEMMA h_beta odd: HOLDS on all
+        h_beta spectrum: {1: 1, 3: 1}
+  n=5: self-converse classes 8; Lemma A (#beta odd) OK; partition SUM=H_anti OK; MAIN LEMMA h_beta odd: HOLDS on all
+        h_beta spectrum: {1: 8, 3: 8}
+  n=6: self-converse classes 12; Lemma A (#beta odd) OK; partition SUM=H_anti OK; MAIN LEMMA h_beta odd: HOLDS on all
+        h_beta spectrum: {1: 1, 3: 4, 5: 2, 7: 4, 9: 5}
+
+================================================================================================
+(2) folded-insertion slot parity (random probes)
+================================================================================================
+  probes tested: 4000; EVEN slot-counts: 1534   *** slot parity FAILS as stated ***
+
+================================================================================================
+(3) fold algebra: arc ties + q-invariance (exhaustive small check)
+================================================================================================
+  tie + q-invariance violations: 0
+
+[2s]
