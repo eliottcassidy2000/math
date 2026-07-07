@@ -1,0 +1,12 @@
+r=12 K=AP subcase: V={i + L*sigma(i)}, sigma a permutation, k=AP{1..12} (r=12). M(V)?
+  decorrelation gives only M(V)>=M(AP)-12/L = 1/13-12/L < 2/25. Is the TRUE M(V) >= 2/25?
+           sigma      L       M(V)  >2/25? is dilated-AP?
+        identity     30       1/13   False           True
+         reverse     30    196/403    True           True
+          swap12     30        1/5    True          False
+           rand1     30      23/95    True          False
+           rand2     30    169/522    True          False
+
+  => identity sigma = dilated AP (M=1/13, the tight exception, excluded from (C)).
+     non-identity sigma => non-AP; if M(V)>=2/25 always, the r=12 K=AP case is LOOSE
+     (just needs a bound better than the decorrelation's 1/13-12/L).

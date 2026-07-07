@@ -1,0 +1,13 @@
+DECORRELATION LEMMA: V_i = b_i + L*k_i, B=max|b_i| => M(V) >= M(Klift) - B/L. Verify (small L):
+              desc       M(V)  M(Klift)   M(K)-B/L lemma holds
+  b=AP k=r3 L=25:      13/56       1/4    -0.2300        True
+  b=AP k=r3 L=17:      10/41       1/4    -0.4559        True
+  b=AP k=r3 L=13:       4/17       1/4    -0.6731        True
+  b=AP k=r3 L=20:      16/51       1/4    -0.3500        True
+  b=AP k=r3 L=25:     26/113       1/4    -0.2300        True
+  b=AP k=r3 L=17:       8/29       1/4    -0.4559        True
+  b=AP k=r3 L=20:      26/97       1/4    -0.3500        True
+  b=AP k=r3 L=25:     26/105       1/4    -0.2300        True
+
+  => M(V) >= M(Klift) - B/L holds (reverse triangle via witness t_K/L).  With M(Klift)>=1/(r+1):
+     r<=11 => M(V) >= 1/12 - 12/L; L>3600 => M(V) > 2/25 (LOOSE). 1/12-12/3600 = 0.08
