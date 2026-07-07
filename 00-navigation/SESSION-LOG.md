@@ -1603,6 +1603,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S51 -- FORMALIZED covering tool (loose_of_band) + small-mod stratum discharge (smallmod_hasWitness); HONESTLY absorb mac-mini-S36 (finite covering = (G)-restated) (HYP-4677)
+
+Prompt (owner): work all remaining formalization tasks, long session, push/pull frequently, alongside agents.
+
+FORMALIZED GREEN kernel-pure (2 files, pushed via 2 checkpoints + rebase through concurrent pushes):
+- LRCBandFloor.loose_of_band -- unified avoid-band 2/25 cert (2q<=25mu => M>=2/25); subsumes mod-25/small-mod/moat layers; + loose_at_17/loose_at_32.
+- LRCCoveringStrata.smallmod_hasWitness -- no-mult-of-q<=12 => HasCoveringWitness (q,1,1); discharges Fan-Sun small-mod stratum into opus-S129 CoveringComplete.
+
+HONEST CORRECTION (mac-mini S36): finite covering INCOMPLETE. Varying-k V={i+L k_i} (L=lcm(2..Q0)) compressed (ratio->2), non-translate, ==AP mod L => fails all q<=Q0, clears only at nextprime(Q0) unboundedly. REFUTES my S50 (compressed=>bounded lift), S49 (compressed escape=translate), S47 (Q0=25). CoveringComplete (exists q) == (G), NOT a reduction.
+
+STATE: witness=>loose + finite-witness strata mechanized; remaining = CoveringComplete for varying-k core = (G) itself (scale/decorrelation, not a cert). Covering scaffolding complete; (C) back to one genuine statement.
+
+COLLISION: HYP-4667 ceded to mac-mini (renumber -> 4677); rebased through 2 concurrent pushes.
+
+FILES: LRCBandFloor.lean, LRCCoveringStrata.lean (GREEN, pushed); reflection the-covering-tool-and-strata-are-green-but-completeness-is-G-restated-kps-S51.md; HYP-4677. No canon overridden (S49/S50 self-corrected).
+
 ## kind-pasteur-2026-07-06-S50 -- the near-AP MOAT clears by LIFT-VISIBILITY (2nd Fan-Sun layer, unified w/ compression); creative Fan-Sun reframe (HYP-4657)
 
 Prompt (owner): work (a) the covering-node residue check; be creative, reframe, think Fan-Sun.
