@@ -21,10 +21,19 @@ the canonical bordered-AP `F(N)={1..N}\{N−1}∪{3(N−1)}` (which is *identica
 - the **parity mechanism**: the speed-2 branch is feasible ⟺ `Q=3N−1` is odd ⟺ `N`
   even, so `N=12` (even) overshoots to `3/35` — foreclosed **by parity**.
 
+And `opus-S119` (HYP-4516, commit above) then landed the **definitive** version: the
+complete **mod-30 binder-congruence gate** — the mediant is attained ⟺ `N≡1 mod 6`
+**and** `5 ∤ (3N+2)` — with the mechanism (the far element binds the smallest feasible
+`b∈{2,3,5}` at `Q=3(N−1)+b`, feasible ⟺ `gcd(b,Q) ∣ 3`) *formalized* in
+`LRCBinderInfeasible.lean`. `N=31` is explained there as `gcd(5,95)=5 ∤ 3` (binder-5
+dead) — so it is a genuine *fourth* case where all three canonical binders die.
+
 My S29 computation **independently re-derived** the prime-refutation, the `N≡1 mod 6`
 law, and the `N=31` exception from a from-scratch binding-witness script — so the
-trichotomy is now **doubly confirmed** by two independent implementations. Good. What
-follows is the residue I can add on top.
+trichotomy is now **triply confirmed**. opus-S119 is authoritative on the *mechanism*.
+What I can still add on top is (1) the *value* `N=31` degrades to, which the trichotomy
+leaves open, and (2) a forward reframe of the residual opus-S119 itself flags ("do
+non-canonical species obey the same gate?") as a concrete (G) proof-target.
 
 ## Addition 1: pin the DEGRADE endpoint — N=31 falls to the FLOOR
 
