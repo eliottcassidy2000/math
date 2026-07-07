@@ -1,0 +1,50 @@
+======================================================================
+Q1/Q2: sharp threshold of the Vmax-ruler (co-offset config WITH 0)
+  A ruler-period at slow x is GOOD iff exists phi in (1/14,13/14) with
+  ||phi - e x||>=1/14 for all e.  Config seen = {frac(e x): e in E} incl 0.
+  Witness phi EXISTS <=> some gap > 1/7 (each endpoint eats 1/14).
+  => predict SHARP threshold = 1/7 on co-offset-with-0 config.
+======================================================================
+consec5   |E|= 5  limit good-density (EXACT): thr=1/7 -> 1.0000   thr=2/7 -> 0.6429
+          Vmax=  200: ACTUAL good-period frac = 1.0000
+          Vmax= 1000: ACTUAL good-period frac = 1.0000
+
+perf7     |E|= 7  limit good-density (EXACT): thr=1/7 -> 1.0000   thr=2/7 -> 0.3714
+          Vmax=  200: ACTUAL good-period frac = 1.0000
+          Vmax= 1000: ACTUAL good-period frac = 0.9980
+
+APcoff12  |E|=13  limit good-density (EXACT): thr=1/7 -> 0.4425   thr=2/7 -> 0.1794
+          Vmax=  200: ACTUAL good-period frac = 0.4600
+          Vmax= 1000: ACTUAL good-period frac = 0.4400
+
+======================================================================
+Q3: SPEED-config {1..k} vs CO-OFFSET-config {0..k-1}: mu_{1/7} & mu_{2/7} (EXACT)
+======================================================================
+  k | mu17(speed) mu17(coff0) | mu27(speed) mu27(coff0)
+  8 |      0.9401      0.9401 |      0.3327      0.3327
+  9 |      0.8401      0.8401 |      0.2827      0.2827
+ 10 |      0.7755      0.7755 |      0.2526      0.2526
+ 11 |      0.6263      0.6263 |      0.2160      0.2160
+ 12 |      0.5699      0.5699 |      0.2030      0.2030
+ 13 |      0.4425      0.4425 |      0.1794      0.1794
+======================================================================
+Q4: mu_{1/7}(AP) exact vs known, E[maxgap](AP), adversarial AP-minimality
+======================================================================
+  k |         mu17 exact  = known? | E[maxgap]~
+  8 |            691/735       YES |     0.3071
+  9 |            247/294       YES |     0.2798
+ 10 |              38/49       YES |     0.2639
+ 11 |          1381/2205       YES |     0.2397
+ 12 |        13823/24255       YES |     0.2297
+ 13 |           477/1078       YES |     0.2114
+
+Adversarial AP-minimality (k=13): beat mu17(AP)=477/1078=0.4425 or E[maxgap](AP)?
+  AP13: mu17=0.4425  E[maxgap]=0.2114
+  2*AP                 mu17=0.4425   E[maxgap]=0.2114
+  primes<=41           mu17=0.9459   E[maxgap]=0.2382
+  GW {1..11,13,24}     mu17=0.5884   E[maxgap]=0.2098  <<BELOW AP E!
+  split 1..6,20..26    mu17=0.6871   E[maxgap]=0.2381
+  fib-ish              mu17=0.9862   E[maxgap]=0.2293
+  random(120,coarse): 0 beat AP mu17, 0 beat AP E[maxgap]
+  worst mu17=0.4425 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  worst E[maxgap]=0.2114 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]

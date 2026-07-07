@@ -1,0 +1,22 @@
+EXACT E[maxgap] (k=13 families):
+  AP {1..13}                       E[maxgap] =             93/440 = 0.211364
+  GW {1..11,13,24}                 E[maxgap] = 140413631/669278610 = 0.209798
+  13-ladder{1..12,26}              E[maxgap] = 1132979357/5354228880 = 0.211605
+  10-ladder{1..9,11,12,13,20}      E[maxgap] = 117387349/535422888 = 0.219242
+  2*AP {2..26}                     E[maxgap] =             93/440 = 0.211364
+  1..6,20..26                      E[maxgap] = 18898680754427/79377660016200 = 0.238086
+
+AP value = 0.211364 = 1/7 + 0.068506  (1/7=0.142857)
+Below AP?  GW {1..11,13,24}:YES, 13-ladder{1..12,26}:no, 10-ladder{1..9,11,12,13,20}:no, 2*AP {2..26}:no, 1..6,20..26:no
+
+--- one-swap ladder scan  {1..13}\{j} u {j*k}  (E[maxgap] exact) ---
+  best one-swap E[maxgap] = 0.209798 at {1..13}\{12} u {24}=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+
+--- some two-swap near GW ---
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 24]  E[maxgap]=0.219971
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 26]  E[maxgap]=0.212596
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 22, 24]  E[maxgap]=0.222890
+  [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 13, 20, 24]  E[maxgap]=0.225016
+
+SUMMARY: AP minimizes the TAIL mu_{1/7} (confirmed elsewhere) but does the
+MEAN E[maxgap]?  If GW<AP here, 'AP-minimality of E[maxgap]' (kps-S58) is FALSE.
