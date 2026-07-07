@@ -1,0 +1,19 @@
+S_N = {1,..,N-2} u {N, 3(N-1)}:  M(S_N) vs the mediant 3/(3N+2); q=3N+2 factored
+
+   N                          S_N    M(S_N)   mediant  =med?  in gap?   q=3N+2   factored
+   4                 [1, 2, 4, 9]      3/11      3/14  False    False       14        2*7
+   5             [1, 2, 3, 5, 12]       1/5      3/17  False    False       17         17
+   6          [1, 2, 3, 4, 6, 15]      3/17      3/20  False    False       20      2^2*5
+   7       [1, 2, 3, 4, 5, 7, 18]      3/23      3/23   True     True       23         23
+   8    [1, 2, 3, 4, 5, 6, 8, 21]      3/23      3/26  False    False       26       2*13
+   9                  {1..7,9,24}       1/9      3/29  False    False       29         29
+  10                 {1..8,10,27}      3/29      3/32  False    False       32        2^5
+  11                 {1..9,11,30}      1/11      3/35  False    False       35        5*7
+  12                {1..10,12,33}      3/35      3/38  False    False       38       2*19
+  13                {1..11,13,36}      3/41      3/41   True     True       41         41
+  14                {1..12,14,39}      3/41      3/44  False    False       44     2^2*11
+  15                {1..13,15,42}      1/15      3/47  False    False       47         47
+  16                {1..14,16,45}      3/47      3/50  False    False       50      2*5^2
+
+=> where M(S_N)==mediant (in gap) vs loose: reveals the ARITHMETIC criterion on q=3N+2.
+   opus-S118: achievable N=7(q23),13(q41); NOT N=5(17),9(29),12(38=2*19).  Does THIS construction match?

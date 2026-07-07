@@ -90,3 +90,27 @@ reveals.
 - opus HYP-4496 (S117 complexity unification, mediant 3/38, O-depth-monotone/O-mediant),
   HYP-4486 (Kravitz spectrum); mac-mini HYP-4562 (kissing=order), HYP-4552 (kissing),
   the E_p/O_p parity seed (owner, S~6), HYP-4432 (q≤2max).
+
+## Appendix (S28, HYP-4582): the mediant construction fails at N=12 by an intruding witness
+
+opus-S118 corrected the picture: first-gap emptiness is **non-monotonic** in N
+(nonempty at N=6,7,13; empty at N=12) — so it is **arithmetic** (the factorization of
+`q=3N+2`), NOT window-width (which is monotone). It also gave the canonical mediant
+family `S_N = {1,…,N−2} ∪ {N, 3(N−1)}`. Measuring `M(S_N)`:
+
+| N | `M(S_N)` | mediant `3/(3N+2)` | `q=3N+2` | verdict |
+|---|---|---|---|---|
+| 7 | 3/23 | 3/23 | 23 (prime) | **mediant, in gap** |
+| 12 | **3/35** | 3/38 | 38 = 2·19 | **loose** (0.0857 > 2/25) |
+| 13 | 3/41 | 3/41 | 41 (prime) | **mediant, in gap** |
+
+So `S_N` reaches the mediant **only at N=7 and N=13** (prime `q`, `N≡1 mod 6`). At
+**N=12 an intruding witness at `q=35 = 5·7`** gives `M = 3/35`, *above* the gap — the
+far element `33 = 3·11` pairs with `2` to sum to `35`, and (my HYP-4432 lever
+`q ∣ v_i±v_j`) that pair's witness beats the intended `q=38`. N=13's **prime `q=41`**
+admits no such intruding factorable witness, so its mediant survives. This makes
+opus-S118's arithmetic criterion explicit for the canonical construction:
+**mediant-achievable-via-`S_N` ⟺ `3N+2` prime (and `N≡1 mod 6`)**; a composite
+`3N+2` (or a nearby factorable denominator) hands the lever an intruding witness that
+overshoots the gap. (One construction; the full (O-mediant) still needs all
+families — the fleet's ~9k-family sweep is authoritative for N=12 emptiness.)
