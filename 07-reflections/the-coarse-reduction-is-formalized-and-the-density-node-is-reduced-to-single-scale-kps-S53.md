@@ -48,15 +48,27 @@ witness `M(v) ≥ 1/14`. The coarse reduction removes the multi-scale families, 
 node only needs **single-scale (bounded-ratio) families**. I mapped that residue directly on
 the LRC(14) object (`lrc_singlescale_density_floor_kps_S53`):
 
-- **The AP `{1,…,13}` is the unique single-scale tight family:** `M = 1/14` exactly, optimal
-  witness `t* = 1/14`, and `ρ = 0` — the good set is a single **isolated** point, yet the
-  family is **lonely** (equality). So there is **no uniform positive density floor** (any
-  "2/7 uniform ρ" claim is refuted by the AP's zero) — the floor is a **dichotomy**, not a
-  constant.
-- **Every perturbation jumps off the threshold:** bumping one AP speed by `+1, +2, …` sends
-  `M` from `1/14` to `1/13`, with `ρ` jumping to `0.024–0.034 > 0`. So there is a **rung
-  gap** `(1/14, 1/13)` around the AP — the direct-LRC(14) analogue of the `(G)` gap — and
-  the tight locus is the **isolated** AP.
+> **⚠ CORRECTION (kps-S54, 2026-07-07).** The claim below that "the AP is the **unique**
+> single-scale tight family" is **WRONG** — a recurrence of **MISTAKE-100** (a search whose
+> generator can't produce the adversary): my perturbation test only bumped one coordinate by
+> small amounts, missing the `12 → 24` shape. The **M-tight locus is `{AP, GW}`** where
+> `GW = {1..11,13,24} = AP[12→24]` also has `M = 1/14` (mac-mini THM-612, Goddyn-Wong;
+> verified kps-S54, witness `t* = 1/14`). **However, the density-floor claim survives and
+> sharpens:** the AP is the *unique strict minimizer of the density floor* `μ_{1/7}`
+> (`μ_{1/7}(AP) = 477/1078 = 0.4425` vs `μ_{1/7}(GW) = 0.588`), even though both are `M`-tight.
+> So `M`-tightness (locus `{AP, GW}`) and density-floor-minimality (uniquely AP) are
+> **different functionals** — opus's AP-minimality lemma is about `μ_{1/7}`, and is *more*
+> rigid than `M`-minimization. See `the-tight-locus-is-AP-and-GW-…-kps-S54`.
+
+- **The AP `{1,…,13}` is a single-scale tight family** (`M = 1/14` exactly, optimal witness
+  `t* = 1/14`, `ρ = 0` — an **isolated** good point, yet lonely by equality), and it is the
+  **unique strict minimizer of the density floor `μ_{1/7}`**. So there is **no uniform positive
+  `ρ` floor** (any "2/7 uniform ρ" claim is refuted by the AP's zero) — the floor is a
+  **dichotomy**, not a constant. (The full `M`-tight locus is `{AP, GW}` — see the correction
+  above — but GW is *not* a `μ_{1/7}`-minimizer.)
+- **Off the tight locus, `M` jumps to the next Farey rung:** the single-scale spectrum bottom
+  is the **Farey ladder** `1/14 < 2/27 < 1/13 < 2/25 < 1/12 < …` (kps-S54 census), with the
+  gap `(1/14, 2/27)` empty — the direct-LRC(14) analogue of the `(G)` gap.
 - **Spread single-scale families have positive density and are easily lonely:** random
   bounded-ratio 13-families give `ρ ≈ 0.08–0.13` and `M ≫ 1/14`.
 

@@ -1,0 +1,64 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc_rung_families_kps_S54.py:11: SyntaxWarning: invalid escape sequence '\{'
+  (2) ONE-SWAP families {1..13}\{j} u {X}: M as a function of (j, X); closed forms; which
+==============================================================================
+(1) SPECTRUM QUANTIZATION: distinct M-values <= 0.11 for single-scale 13-families
+==============================================================================
+  distinct M-values in (1/14, 0.11]:
+    1/14     = 0.071429  x1    (small-denom Farey rung)
+    1/13     = 0.076923  x7    (small-denom Farey rung)  mediant(prev,this)=2/27
+    2/25     = 0.080000  x8    (small-denom Farey rung)  mediant(prev,this)=3/38
+    1/12     = 0.083333  x30   (small-denom Farey rung)  mediant(prev,this)=3/37
+    3/35     = 0.085714  x13   (LARGER denom -- check)  mediant(prev,this)=4/47
+    2/23     = 0.086957  x197  (small-denom Farey rung)  mediant(prev,this)=5/58
+    1/11     = 0.090909  x421  (small-denom Farey rung)  mediant(prev,this)=3/34
+    3/32     = 0.093750  x49   (LARGER denom -- check)  mediant(prev,this)=4/43
+    2/21     = 0.095238  x771  (small-denom Farey rung)  mediant(prev,this)=5/53
+    3/31     = 0.096774  x92   (LARGER denom -- check)  mediant(prev,this)=5/52
+    1/10     = 0.100000  x2403 (small-denom Farey rung)  mediant(prev,this)=4/41
+    3/29     = 0.103448  x530  (small-denom Farey rung)  mediant(prev,this)=4/39
+    2/19     = 0.105263  x1371 (small-denom Farey rung)  mediant(prev,this)=5/48
+    3/28     = 0.107143  x223  (small-denom Farey rung)  mediant(prev,this)=5/47
+    4/37     = 0.108108  x132  (LARGER denom -- check)  mediant(prev,this)=7/65
+  => all small-denominator Farey rungs (three-gap quantized)? False
+
+==============================================================================
+(2) ONE-SWAP families {1..13}\{j} u {X}: M(j, X)
+==============================================================================
+  remove  1: min M=1/9     at X in [16] ... low(<=1/13): (none)
+  remove  2: min M=3/32    at X in [19] ... low(<=1/13): (none)
+  remove  3: min M=2/19    at X in [14, 17, 20, 34] ... low(<=1/13): (none)
+  remove  4: min M=2/23    at X in [38] ... low(<=1/13): (none)
+  remove  5: min M=2/21    at X in [14, 19, 24, 33] ... low(<=1/13): (none)
+  remove  6: min M=3/40    at X in [69] ... low(<=1/13): X=69:3/40
+  remove  7: min M=1/11    at X in [14] ... low(<=1/13): (none)
+  remove  8: min M=2/23    at X in [16] ... low(<=1/13): (none)
+  remove  9: min M=2/23    at X in [18] ... low(<=1/13): (none)
+  remove 10: min M=2/27    at X in [20] ... low(<=1/13): X=20:2/27
+  remove 11: min M=2/25    at X in [22] ... low(<=1/13): (none)
+  remove 12: min M=1/14    at X in [24] ... low(<=1/13): X=24:1/14, X=36:3/41, X=48:4/53, X=60:1/13
+  remove 13: min M=2/27    at X in [26] ... low(<=1/13): X=14:1/13, X=15:1/13, X=16:1/13, X=17:1/13, X=18:1/13, X=19:1/13
+
+==============================================================================
+(3) The 2/27 first-excited family (remove 10, vary X = c*10?) + closed forms
+==============================================================================
+  {1..9,11,12,13} u {X}, X = 20,30,...,200 (multiples of 10) and neighbours:
+    X=20    M=2/27 = 0.074074
+    X=30    M=3/37 = 0.081081
+    X=40    M=4/47 = 0.085106
+    X=50    M=5/57 = 0.087719
+    X=100   M=10/107 = 0.093458
+    X=200   M=20/207 = 0.096618
+    X=17    M=1/10 = 0.100000
+    X=18    M=1/10 = 0.100000
+    X=19    M=1/10 = 0.100000
+    X=21    M=1/10 = 0.100000
+    X=23    M=1/10 = 0.100000
+
+  INFINITE-FAMILY hunt: remove j, X = X0 + q*t (t=0..6); is M constant along t?
+    remove 10, X=14+27*t: M CONSTANT = 1/10 for t=0..6
+    remove 10, X=14+25*t: M CONSTANT = 1/10 for t=0..6
+    remove 13, X=14+13*t: M CONSTANT = 1/13 for t=0..6
+    remove 13, X=14+14*t: M CONSTANT = 1/13 for t=0..6
+    remove 13, X=14+27*t: M CONSTANT = 1/13 for t=0..6
+
+DONE -- structural readout in the session reflection.

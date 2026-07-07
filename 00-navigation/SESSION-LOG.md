@@ -20,6 +20,17 @@ FILES: 04-computation/lrc14_ap_escape_conjugate_witness_klein_S152.py + .out; re
 NEXT: (1) formalize the witness lemma M(a+L*d*AP)>=1/14 with explicit L0; (2) attack the MOAT directly (single-scale non-AP 13-family => M>=1/13) -- the one remaining core = Route-1 rigidity; (3) or Route-1 density floor (opus mu_{1/7} AP-minimality) / composite-k+1 sieving (I(k,p,1)).
 
 ---
+## kind-pasteur-2026-07-07-S54 -- CENSUS of the LRC(14) single-scale rigidity corner: M-tight locus={AP,GW} (corrects S53), density-floor mu_1/7 minimizer UNIQUELY AP, Farey-ladder spectrum, closed forms (HYP-4717)
+
+Owner: work Route 1 density + remaining tasks; census seeming randomness into finite/infinite families. Long overnight session.
+
+CENSUS of the single-scale residue (density node's domain after my coarse reduction):
+- CORRECTION (MISTAKE-100 recurrence): S53 'AP UNIQUE tight family' WRONG. GW={1..11,13,24}=AP[12->24] also M=1/14 (verified; mac-mini THM-612). M-tight locus (<=2 swaps) = {AP, GW}.
+- REFINEMENT: mu_1/7(AP)=477/1078=0.4425 (min) but mu_1/7(GW)=0.588 (NOT min). So M-tightness (locus {AP,GW}) != density-floor minimality (uniquely AP). opus's lemma (A) is correctly (A'): mu_1/7 minimized iff ~AP. Floor MORE rigid than M-min = why it's the right object.
+- SPECTRUM = FAREY LADDER 1/14<2/27<1/13<2/25<1/12<... (three-gap quantized, mac-mini HYP-4412); gap (1/14,2/27) EMPTY (LRC14-analogue of (G)).
+- CLOSED FORMS: M({1..9,11,12,13,10k})=k/(10k+7) (new), M({1..11,13,12k})=k/(12k+5) (residue-liar; k=2=GW). Both lonely all k, formalizable.
+
+HONEST: not a proof; (A') is the open lemma. Next: formalize k/(10k+7); or attack (A') via three-gap. Files: 3 census scripts+out; reflection the-tight-locus-is-AP-and-GW-...-kps-S54.md; HYP-4717; corrected S53 reflection+INDEX. No canon overridden.
 
 ## mac-mini-2026-07-06-S38 -- DECORRELATION ATOM formalized (owner's descent idea): reach_decorr M(V)>=M(K)-B/L + escape_loose_of_lift_floor (r<=11 escape families LOOSE M>2/25 via LRC<=12 + decorrelation) -- the first rigorous handling of the S36 covering-escape obstruction (THM-636)
 
