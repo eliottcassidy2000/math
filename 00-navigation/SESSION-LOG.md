@@ -24,6 +24,22 @@ RESULT: reconstructed the full C(25,12)=5,200,300 pinned-config enumeration; col
 READING: the barrier catalog gains its first exact-certificate member -- PAIR LEVEL BLIND (joins THM-642's residue/snapshot barriers, kps-S58's single-statistic shortfalls, HYP-4767's moment failure). One-sentence synthesis with the S5 mirror lemma: pair statistics are exactly uniform for every integer family and provably worthless alone; the density floor lives at the mirror (3-AP / weight->=3) level and no lower. All floor effort should target the theta-series of L(E) /\ {sum k=0} (kps-S63 catalog item 2 / my per-center decomposition).
 
 HONEST SCOPE: grid relaxation -- kills the 2-point PROOF ROUTE, not the floor. FILES: lrc14_2point_grid_lp_monad_S7.py(+out), certificate out; HYP-4987. No canon overridden.
+## death-star-2026-07-07-S3 -- FORMALIZATION: the Good ⊆ goodSet bridge connects the muGood diameter floor to the EXACT witnessG2 quantity (slowμ(goodSet)).toReal >= m_P, kernel-pure -- the hlarge density-floor obligation in the pure-cluster case
+
+Prompt (owner, remote via box): work the natural next step (witnessG2=muGood wiring); continue next steps as they come in.
+
+The natural next step: connect my S2 bounded-diameter muGood floor to the skeleton's density-floor obligation. TWO good-set formalisms were disconnected: LRCTailDiameter.Good (real-anchored, what muGood floors bound) vs GoodSet.goodSet (phase-anchored, what witnessG2 measures). NEW FILE TournamentH7/LRCGoodSetBridge.lean (kernel-pure [propext,Classical.choice,Quot.sound], root import, project green 8479 jobs):
+ - Good_subset_goodSet: Good (1/7) E.toFinset ⊆ goodSet E, via c=argmax_e frac(e*x-a) + the u_b-u_c<=0 argument (frac(u_b-u_c) never in (0,1/7]).
+ - FOUND slowμ = volume.restrict (Ico 0 1) -- the EXACT measure witnessG2 uses.
+ - slowμ_goodSet_ge_mP + slowμ_goodSet_toReal_ge_mP: (slowμ(goodSet E)).toReal >= m_P for any nonempty E of diameter <= 30 (via Ico_ae_eq_Icc for the null endpoint).
+
+WHERE IT PLUGS IN: skeleton splits density floor by clusterSize(shapeOf v): k<=7 pigeonhole; k=8..13 = hlarge (open). A census family {8..20} has co-offset cluster {0..12} (k=13, diam<=19), so hlarge = my bounded-big-cluster regime. witnessG2 s = (slowμ(goodSet(cluster s) ∩ GP s)).toReal, so in the PURE-CLUSTER case (P empty, GP=univ) slowμ_goodSet_toReal_ge_mP IS the hlarge floor witnessMP<=witnessG2. NB no file consumes hlarge/AP76Certificate yet -- the leg is open; my chain supplies its measure fact.
+
+REMAINING (mac-mini/kps shape layer): shapeOf->cluster extraction + hwitness for concrete shapes; GP intersection for non-pure-cluster (Bonferroni, nuShape large = pigeonhole for small clusters).
+
+HONEST: does NOT prove LRC(14). Connects the unconditional bounded-diameter floor to the exact witnessG2 measure. Files: LRCGoodSetBridge.lean; reflection the-goodset-bridge-connects-the-mugood-floor-to-witnessG2-deathstar-S3.md.
+
+NEXT: coordinate with mac-mini on the shapeOf/hwitness/GP wiring to discharge hlarge end-to-end; or extend to non-pure-cluster via Bonferroni + the pigeonhole small-cluster nuShape.
 
 ## mac-mini-2026-07-07-S46 -- THM-643 PROVED: the blue/black LINE PARITY STRUCTURE (strict definitions) -- the tiling fibration is determined MOD 2 by Redei + two commuting involutions; pure-black = non-SC at ALL n; new invariant H_sym (self-converse Ham-path count) with mass formula and a conjectured 3-power cap (HYP-4977)
 
