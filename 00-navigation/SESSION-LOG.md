@@ -1096,6 +1096,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S38 -- RECONCILE the ladder with opus's ARITHMETIC obstruction (non-monotonic!); order-3 empty via ladder; GUARD-RAIL the width narrative (MISTAKE-114) (HYP-4537)
+
+Prompt (owner): take on order k=3 + relevant inspired tasks.
+
+opus S118 (HYP-4506) reframed everything: first-gap emptiness is NON-MONOTONIC in N (N=13 NONEMPTY via {1..11,13,36}=3/41, wider N=12 EMPTY) => WIDTH doesn't decide; the ARITHMETIC of 3N+2 does (mediant achievable <=> 3N+2 prime).
+
+RECONCILIATION (solid): opus's N=13 witness {1..11,13,36}=3/41 IS a ladder family -- base {1..11,13} (mu=1/12,rho=5) + outlier 36=3*12 = j=3 rung. Same shape as S35 N=7 {1..5,7}+18. My ladder BUILDS opus's gap members at N=7,13. At N=12 the analog {1..10,12}+33 gives M=3/35 ABOVE gap (escaped) -- consistent with emptiness.
+
+GUARD-RAIL (MISTAKE-114): my S36 Dx<D width narrative is a per-family SYMPTOM (ladder=witness builder), NOT the root; the root is arithmetic (3N+2 prime/composite). Non-monotonicity => width can't decide.
+
+REFUTED (in-session): 'F(N)={1..N-2,N}+3(N-1) gives mediant <=> 3N+2 prime' is FALSE -- F gives mediant only at N=7,13 (needs base rho=5, not universal); primes N=5,9,15 give 1/N; composite N descend to (N-1)-mediant above gap. OPEN: when does {1..N-2,N} have rho=5?
+
+ORDER-3 (assigned task): in-gap order-3 values 4/51, 5/63 (COMPOSITE denoms 3*17, 3^2*7); depth-2 Farey windows narrower; ladder over 1925 order-2 bases => 0 hits. Empty via ladder (subfamily). Extends mac-mini order<=2 closure a step.
+
+FILES: lrc_arith_reconcile_order3_kps_S38.py(+.out), lrc_mediant_ladder_prime_kps_S38.py(+.out); reflection the-arithmetic-is-the-root-the-ladder-is-the-witness-kps-S38.md; HYP-4537; MISTAKE-114. No Lean. No canon overridden (guard-rail refines my own S36 framing).
+
 ## kind-pasteur-2026-07-06-S37 -- FOUR-AGENT CONVERGENCE: the first-gap obligation collapses to ONE complexity parameter; Kravitz counterexample != first-gap member; combinatorial defect-count bound (HYP-4527)
 
 Prompt (owner): work the natural next lead + create more, synthesizing from other agents.

@@ -1,0 +1,36 @@
+=== PART 1: opus's N=13 nonempty witness as a LADDER family ===
+  {1..11,13,36} (13 speeds): M=3/41 at t=17/41   (opus: N=13 mediant 3/41, 41 prime)
+  base {1..11,13} (12 speeds): mu=M(base)=1/12 at t=1/12
+  outlier x=36: 36/D = 36/12 = 3  (resonance iff integer);  implied rho=5
+  => the N=13 mediant IS a ladder rung; at N=13 the base's grid ALIGNS to 3/41 (41 prime).
+
+=== PART 2: the 3N+2 prime/composite dichotomy vs mediant achievability ===
+    N             gap   mediant  3N+2  prime?     opus/mac-mini
+    4       (1/5,2/9)      3/14    14   False                  
+    5      (1/6,2/11)      3/17    17    True                  
+    6      (1/7,2/13)      3/20    20   False                  
+    7      (1/8,2/15)      3/23    23    True    nonempty(3/23)
+    8      (1/9,2/17)      3/26    26   False                  
+    9     (1/10,2/19)      3/29    29    True                  
+   10     (1/11,2/21)      3/32    32   False                  
+   11     (1/12,2/23)      3/35    35   False                  
+   12     (1/13,2/25)      3/38    38   False             EMPTY
+   13     (1/14,2/27)      3/41    41    True    nonempty(3/41)
+   14     (1/15,2/29)      3/44    44   False                  
+   15     (1/16,2/31)      3/47    47    True                  
+   16     (1/17,2/33)      3/50    50   False                  
+  HYPOTHESIS (opus HYP-4506 / mac-mini HYP-4562): mediant 3/(3N+2) achievable <=> 3N+2 prime.
+  N=12: 38=2*19 composite => mediant UNachievable => (G).  The obstruction is ARITHMETIC.
+
+=== PART 3: order-3 residual at N=12 -- targets 4/51, 5/63 (depth-2 SB descendants) ===
+  order-3 in-gap values s/(12s+3), 3<s<6: ['4/51', '5/63']
+    4/51: denom 51 = 51=composite [3, 17]
+    5/63: denom 63 = 63=composite [3, 7]
+  Farey widths: depth-1 gap=1/325 (~0.00308); depth-2 (1/13,3/38)=1/494(~0.00202), (3/38,2/25)=1/950(~0.00105)
+  => depth-2 windows ~1.5-2.9x NARROWER => ladder skip even surer (Dx_2<Dx_1<D).
+  ladder over 1925 order-2 bases (AP+2 defects), rungs targeting 4/51 or 5/63: 0 hit(s)
+
+READING: order-3 targets have COMPOSITE denominators (51=3*17, 63=3^2*7); the ladder over
+order-2 bases finds none; the depth-2 Farey windows are narrower still.  Both the metric
+(Dx skip) and the arithmetic (composite denom) point the same way -- order-3 empty at N=12,
+consistent with opus's ARITHMETIC obstruction (the root cause) over my width narrative (a symptom).

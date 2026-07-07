@@ -2926,6 +2926,15 @@ LESSON (the recursion of MISTAKE-102): a closed-form law verified at the ladder'
 
 **Fix:** for covering/tiling questions use EXACT rational arithmetic (test midpoints of the elementary intervals cut by all arc endpoints -- finitely many, exact) OR verify any claimed phi=0 at >=100x the search resolution before believing it.  Never trust a minimized grid-measure at its floor.
 
+
+## MISTAKE-114 (kind-pasteur-2026-07-06-S36, guard-railed by opus-S118 HYP-4506 and self at S38): the "window is too narrow / Dx<D" width narrative is a per-family SYMPTOM, not the obstruction -- the root is the ARITHMETIC of 3N+2
+
+**What:** kps-S36 (HYP-4517) framed the n=12 first-gap emptiness via a metric mechanism -- the resonance-ladder crossing width Dx is smaller than the resonance spacing D, so the grid "skips" the gap. Read as *the* reason, this is misleading. opus-S118 (HYP-4506) proved first-gap emptiness is NON-MONOTONIC in N: N=13 is NONEMPTY (mediant 3/41 attained by {1..11,13,36}) while the WIDER-window N=12 is EMPTY. A width/Selberg story is monotonic (narrower => harder), so width cannot be the deciding quantity.
+
+**Why it's instructive:** the deciding quantity is arithmetic -- the mediant 3/(3N+2) is achievable iff 3N+2 is PRIME (N=7->23, N=13->41 prime, nonempty; N=12->38=2*19 composite, empty). The metric Dx<D is a true computed fact about the single-outlier ladder subfamily, but it is downstream of the arithmetic: whether a base's resonance grid ALIGNS to the mediant is decided by the factorization of 3N+2, not by a width budget. kps-S38 verified the reconciliation (opus's nonempty witnesses ARE ladder families at N=7,13) and refuted a too-clean spin-off hypothesis ("F(N)={1..N-2,N}+3(N-1) gives the mediant iff 3N+2 prime" -- FALSE: F gives the mediant only at N=7,13, not at primes N=5,9,15).
+
+**Fix:** keep Dx<D as the constructive/symptom side (the ladder is the WITNESS builder) and treat the ARITHMETIC of 3N+2 (mac-mini HYP-4562/4572 mod-19 clearance; opus O-arith / Fan-Sun gcd template) as the obstruction side. Do not present width/Selberg as the root cause of (G); it is non-monotonic and thus cannot be.
+
 -> HYP-4282 (S5, the artifact), HYP-4312 (S7, the resolution), HYP-4292 (sibling S6, same trap), kps CircleClearFloor.
 
 

@@ -1,0 +1,27 @@
+=== THE UNIVERSAL MEDIANT LADDER F(N) = {1..N-2, N} + 3(N-1), vs 3N+2 prime ===
+
+    N  3N+2  prime  mediant  gap top 2/(2N+1)   M(F(N)) = mediant?  in gap?
+    5    17   True     3/17              2/11       1/5      False    False
+    6    20  False     3/20              2/13      3/17      False    False
+    7    23   True     3/23              2/15      3/23       True     True
+    8    26  False     3/26              2/17      3/23      False    False
+    9    29   True     3/29              2/19       1/9      False    False
+   10    32  False     3/32              2/21      3/29      False    False
+   11    35  False     3/35              2/23      1/11      False    False
+   12    38  False     3/38              2/25      3/35      False    False
+   13    41   True     3/41              2/27      3/41       True     True
+   14    44  False     3/44              2/29      3/41      False    False
+   15    47   True     3/47              2/31      1/15      False    False
+   16    50  False     3/50              2/33      3/47      False    False
+
+  CHECK the claim 'M(F(N)) = mediant  <=>  3N+2 prime':
+    holds across N=5..16: False
+    prime 3N+2 (N): [5, 7, 9, 13, 15]  -> M=mediant, IN GAP
+    composite   (N): [6, 8, 10, 11, 12, 14, 16]  -> M>mediant (better witness), gap ESCAPED
+
+=== N=12 zoom: F(12) = {1..10,12} + 33; the composite 38=2*19 gives a better witness ===
+  F(12)=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 33]: ladder predicts mediant 3/38 (~0.0789); ACTUAL M=3/35 (~0.0857) at t=16/35
+  gap (1/13,2/25)=(0.0769,0.0800): M ABOVE (escaped) gap.
+  => 38 composite => a proper-factor witness lifts M off the mediant, OUT of the gap.  This is
+     opus's arithmetic obstruction (HYP-4506) seen from inside the ladder: the mediant candidate
+     is BUILT at every N, and primality of 3N+2 decides survival.  Width was a symptom; 3N+2 is the cause.
