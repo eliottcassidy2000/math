@@ -1,0 +1,26 @@
+m_P = 14249/252252 = 0.056487;  claimed exact mu = 0.057445
+margin (claim - m_P) = 0.000958  (1.7%)
+
+grid mu_{1/7}(AP_76) ~ 0.05760  (claim 0.05745)
+
+cumulative good-measure from p/q neighborhoods, by max q:
+  Q  #fracs  cum_lowerbound  >= m_P?
+  2       1        0.010000    False
+  3       3        0.020750    False
+  4       5        0.027250    False
+  5       9        0.034250    False
+  6      11        0.035750    False
+  7      17        0.037250    False
+  8      21        0.038250    False
+  9      27        0.039750    False
+ 10      31        0.040750    False
+ 11      41        0.043250    False
+ 12      45        0.044250    False
+ 13      57        0.047250    False
+ 14      63        0.048750    False
+ 15      71        0.050750    False
+ 16      79        0.052750    False
+ 17      95        0.056750     True
+
+  => q <= 17 neighborhoods already sum to 0.056750 >= m_P=0.056487.
+     Lean plan: exhibit these 95 good intervals + disjointness + sum.
