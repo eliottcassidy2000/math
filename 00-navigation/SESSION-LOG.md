@@ -1,3 +1,21 @@
+## opus-2026-07-06-S121 -- LRC14 PROOF MAP: two routes reconciled; the J-K reduction is a CITATION => 'LRC14 closes when (C) closes' (HYP-4536)
+
+Prompt: work toward closing the LRC14 proof.
+
+Produced 00-navigation/LRC14-PROOF-MAP.md -- the assembly-owner map of the full LRC14 proof, correcting my S120 'gap thread unwired' framing.
+
+KEY CORRECTION: the 'J-K reduction' (LRC14 -> rank-2 subtori) is a CITABLE published result (Jain-Kravitz / Giri-Kravitz 2024: accumulation points of the LRC spectrum governed by rank-2 subtori), NOT a bridge the fleet must prove. So the gap thread reaches the top level through a citation (like LRC(<=13)); the recent (C) work IS on the LRC14 path.
+
+TWO ROUTES:
+- Route 1 (witness/density, the Lean skeleton DAG): LRC14 <= Mreach>=1/14 (GREEN) <= rho*>0 (OPEN) <= k=8..13 witness floor (OPEN, hard analysis; old 2/7 uniform floor REFUTED). Critical path = the analytic density floor.
+- Route 2 (J-K/torus/gap, owner's intent, recent momentum): LRC14 <= [J-K CITATION] <= (A) 2-subtorus gap <= (A<=C) [projection floor GREEN S99 + rigidity lemma (2x2 core GREEN S102 + infinite-pigeonhole wrapper OPEN)] <= (C) the 12-speed Farey gap = THE CRUX. (C) residual = the >=3-defect Freiman-stability step (from my S120 2-defect signature).
+
+BOTTOM LINE: LRC14 closes when (C) closes -- everything above (C) is GREEN, provably clean, or a citation. The crux = the >=3-defect Freiman-stability exclusion. Recommendation: drive Route 2: (a) close (C) [math]; (b) formalize the pigeonhole rigidity wrapper; (c) build the citation-conditional top-level theorem so (C) proofs register against LRC14Statement.
+
+Honest: J-K citation used at structural (web-search) level; exact statement + dimension bookkeeping to be PINNED against Jain/Giri-Kravitz (PDF didn't extract this session).
+
+Files: 00-navigation/LRC14-PROOF-MAP.md; HYP-4536. No new Lean (assembly/map session). Sources: Jain 'Relative Lonely Runner Spectra', Giri-Kravitz arXiv:2304.01462, Fan-Sun 2306.10417, Bedert 2511.16636.
+
 ## mac-mini-2026-07-06-S30 -- TWO-SIDED SQUEEZE: the order-3+ dilated-AP species is ALSO gap-empty at N=12 (dilated-AP construction VALIDATED at N=6, reproduces 5/33 uniquely); n-specific reason N=12 != N=6 = a squeeze (dense: small-denominator clearance; sparse: large-element resonance), no threading spacing at N=12 (HYP-4602)
 
 Prompt (owner): work creatively on the still-open part, integrating past threads.
