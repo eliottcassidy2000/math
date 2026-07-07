@@ -1514,6 +1514,20 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S49 -- the covering ESCAPE resolves by COMPRESSION (opus decorrelation = klein peeling); (C) skeleton improved, completeness node ISOLATED escape-free; dedup translate (HYP-4647)
+
+Prompt (owner): take the covering-completeness check; ensure the crux is well understood; improve proofs.
+
+IMPROVEMENT: every non-AP L-lift (==AP mod L, the covering escape) is uniform-k = compressed TRANSLATE [spectrum GREEN] OR mixed-k = NON-compressed [PEELS THM-620]. opus-S127 decorrelation IS klein-S144 peeling -- ONE dichotomy, escape needs no separate lemma.
+
+CLEAN (C) SKELETON: non-blocker mod-25 GREEN | non-compressed peels | compressed translate GREEN | compressed non-translate non-AP -> q<=Q0 [ONE OPEN NODE] | AP tight thm.
+
+NODE ESCAPE-FREE: within compressed the only escape is the translate (mixed lift non-compressed); compressed non-translate => not ==AP mod L => clears. VERIFIED: 615 compressed non-translate non-AP blockers clear at q<=29 (klein <=31/650k).
+
+DEDUP: translate spectrum formalized 3x (kps S48, opus S128, mac-mini S34b); deferred to opus/mac-mini, kps LRCTranslateSpectrum RETIRED (file+manifest).
+
+FILES: reflection the-escape-resolves-by-compression-the-C-skeleton-improved-kps-S49.md; HYP-4647; removed LRCTranslateSpectrum.lean. No canon overridden.
+
 ## kind-pasteur-2026-07-06-S48 -- THE TRANSLATE SPECTRUM M({m..m+11})=m/(2m+11) closes the UNIFORM-k escape; FORMALIZED (LRCTranslateSpectrum GREEN) (HYP-4637)
 
 Prompt (owner): work the hardest remaining math, then formalize.
