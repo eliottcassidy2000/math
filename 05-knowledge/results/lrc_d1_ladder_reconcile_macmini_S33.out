@@ -1,0 +1,32 @@
+(a) d=1 ladder  M({1..11,x}):  gap = (1/13,2/25)
+    x= 12: M=   1/13  =1/13 (AP)
+    x= 13: M=   1/12  
+    x= 14: M=   1/12  
+    x= 15: M=   1/12  
+    x= 16: M=   1/12  
+    x= 17: M=   1/12  
+    x= 18: M=   1/12  
+    x= 19: M=   1/12  
+    x= 20: M=   1/12  
+    x= 21: M=   1/12  
+    x= 22: M=   1/12  
+    x= 23: M=   1/12  
+    x= 24: M=   2/25  =2/25 wall
+    x= 25: M=   1/12  
+    x= 26: M=   1/12  
+    x= 27: M=   1/12  
+    x= 28: M=   1/12  
+    x= 29: M=   1/12  
+    x= 30: M=   1/12  
+  min M above 1/13 (x=12..79): 2/25  (target 2/25=2/25);  # IN-GAP: 0
+
+(b) cross-tab defect d=12-longestAP  vs  transversal (pair-blocker) mod 25:
+    tested 4755:
+      d>=3 & transversal (mod-25 FAILS): 95
+      d>=3 & non-transversal (mod-25 clears): 4510
+      d<3 & transversal: 8
+      d<3 & non-transversal: 142
+    d>=3 & transversal families IN GAP: 0
+    => 'd>=3 & transversal'>0 means opus's 'd>=3 GREEN via mod-25' is INCOMPLETE for those
+       (mod-25 rotation fails on transversals); but if none are IN GAP they're still loose
+       via another witness -- the transversal dichotomy is the cleaner PARTITION.

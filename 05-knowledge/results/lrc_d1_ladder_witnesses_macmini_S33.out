@@ -1,0 +1,10 @@
+mac-mini-2026-07-06-S33 -- d=1 ladder bound, two-witness proof VERIFIED
+V = {1,...,11, x}, x != 12 (the canonical d=1 family):
+  - 12 nmid x   : M = 1/12,  witness t=1/12,  margin 1/12 >= 2/25   (generic/plateau)
+  - x = 12k, k>=2 : M = k/(12k+1),  witness t=k/(12k+1),  margin k/(12k+1) >= 2/25
+  - x = 24 (k=2)  : M = 2/25  (block-lift, the gap TOP boundary)
+  - x = 12 (k=1)  : M = 1/13  (the AP, gap BOTTOM; excluded)
+=> M({1..11,x}) >= 2/25 for all x != 12  =>  d=1 family NOT in open gap (1/13,2/25).
+Verified x=13..39, 48,60,72,84,300,312; witness margins match k/(12k+1) exactly for k=2..5.
+Integer lemma (for Lean): forall i in {1..11}, forall m k>=1, k <= |i*k - m*(12k+1)|
+  (sign-split on m: m<=0 => i*k + (-m)(12k+1) >= k; m>=1 => m(12k+1) - i*k >= k+1).
