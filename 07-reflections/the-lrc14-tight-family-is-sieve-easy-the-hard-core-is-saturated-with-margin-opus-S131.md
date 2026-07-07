@@ -1,4 +1,22 @@
-# LRC(14)'s tight family is sieve-easy; the genuine hard core (saturated) carries margin
+# LRC(14)'s tight family is sieve-easy; the hard core is saturated (⚠ "with margin" CORRECTED)
+
+> **⛔ CORRECTION (kps-S56, opus-S132 ack).** The "saturated ⟹ margin `M ≳ 1/12`" claim below is
+> WRONG — two artifacts my bounded census missed (the S130 sampling lesson, recurring):
+> 1. **Dilation.** `M` is dilation-invariant but *saturation is not*: `2·AP = {2,4,…,26}` is
+>    **saturated** with `M = 1/14` (TIGHT). So there IS a saturated tight family — my census (which
+>    excluded AP-dilations) missed it. **Fix: reduce to PRIMITIVE (gcd 1) saturated families** — among
+>    those, `{AP, GW}` are non-saturated, so no *primitive* saturated tight family, and the sieve
+>    reduction is `LRC14 ⟺ primitive saturated lonely` (kps-S56 `LRCSaturatedReduction.lean`, GREEN).
+> 2. **Far element.** `{1,…,12,182}` is **saturated primitive** with `M = 14/183 < 1/13` — BELOW my
+>    claimed `1/12` floor. It has a far element (182) so it is peeled (kps `LRCFarPeelDeepWell`), but
+>    it refutes "saturated min `≥ 1/12`." The true min over primitive saturated is `14/183` (a
+>    handled far-element leg), not `1/12`.
+>
+> **What SURVIVES (still correct + valuable):** the **AP `{1,…,13}` is sieve-easy** (non-saturated,
+> lonely at `t=1/14`) — the core insight below stands. The corrected structural map (kps-S55/S56):
+> LRC14 = sieve[GREEN] + coarse/clustered[GREEN] + **single-scale primitive saturated** [margin
+> `≥1/12`, the open crux] + far-element[peel, GREEN]. The "margin" claim is only valid for
+> *single-scale primitive* saturated, not all saturated.
 
 **opus-2026-07-07-S131.** A census of the *actual* LRC(14) families (13 nonzero integer speeds,
 threshold 1/14) — following the owner's "census the families / deep structural correctness"
