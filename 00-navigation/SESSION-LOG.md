@@ -1216,6 +1216,23 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S41 -- toward closing LRC(14): the crux = a LOWER BOUND, sharp core = a mod-25 COVERING fact; LRCMod25Floor.lean GREEN (HYP-4567)
+
+Prompt (owner): work toward closing LRC(14); math first, then Lean as necessary.
+
+STATE (opus S120 audit): (G) reduces to the FREIMAN step (gap member = (N-2)-AP + exactly 2 defects; <=2-defect swept; residual = rule out >=3 defects); (A)->Mreach bridge UNWIRED.
+
+MATH:
+- CRUX AS LOWER BOUND: LRC(13) => M>=1/13 for all 12-speed families; gap member M in (1/13,2/25); so Freiman step <=> longest-AP-subset<=9 => M>=2/25. Tested 7785 families => 0 in gap.
+- HONEST REDIRECT: S30 harmonic (2nd-diffs) detects only spacing-1 APs; dilated {1,5,6,11,16,17} has 3 nonzero sorted 2nd-diffs. Freiman = SUBSET APs, not discrete Laplacian.
+- MOD-25 REDUCTION: M>=2/25 witnessed at t=c/25 if exists c off {0,+-1} mod 25. ~all >=3-defect clear EXCEPT those with a multiple of 25 (residue 0 for all c), which clear at small denom with M>>2/25. Sharp core = finite mod-25 covering fact (klein's leg).
+
+LEAN (GREEN, kernel-pure): LRCMod25Floor.lean -- mod25_covering_floor + loose_of_mod25_covering (one-line rational_point_margin at s=25,mu=2). Lower-bound half of (G) formally in hand once covering fact proved.
+
+REMAINS: prove mod-25 covering fact (finite, klein) + mult-of-25 easy case => closes (G) with swept <=2-defect; assembly (A)->Mreach.
+
+FILES: lrc_freiman_lowerbound_mod25_kps_S41.py(+.out); LRCMod25Floor.lean (GREEN); reflection the-crux-is-a-lower-bound-and-a-mod-25-covering-fact-kps-S41.md; HYP-4567. No canon overridden.
+
 ## kind-pasteur-2026-07-06-S40 -- THE ACHIEVABILITY GAUNTLET: mediant gate is PERIODIC (mod 30), deeper orders SPORADIC; (G) has no single congruence (HYP-4557)
 
 Prompt (owner): work creatively on the open part, integrating past threads.
