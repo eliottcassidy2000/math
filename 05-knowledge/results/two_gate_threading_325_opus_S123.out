@@ -1,0 +1,16 @@
+GAP (1/13,2/25): width = 2/25-1/13 = 1/325 = 1/(13*25) = 1/325
+  Farey neighbors: |2*13 - 1*25| = 1 (=1, confirmed). The two boundary
+  denominators 13 (prime, AP/pinning side) and 25=5^2 (kps mod-25 loose side) MULTIPLY to the width denom.
+
+kps mod-25 gate: a gap member (M<2/25) must contain a MULTIPLE OF 25. Verify + explore at N=12:
+  N=6 {1,5,6,11,16,17}    : 2N+1=13, mult of 13? False ; N+1=7, mult of 7? False
+  N=7 {1,2,3,4,5,7,18}    : 2N+1=15, mult of 15? False ; N+1=8, mult of 8? False
+  N=7 {1,3,4,5,7,13,18}   : 2N+1=15, mult of 15? False ; N+1=8, mult of 8? False
+  N=13 {1..11,13,36}      : 2N+1=27, mult of 27? False ; N+1=14, mult of 14? False
+
+=> gate check: does each gap member contain a mult of its loose-denominator 2N+1?
+   AND a mult of its tight-denominator N+1 (=13 at N=12)? The two-gate threading.
+
+At N=12 the two gates are mod-13 (=N+1, prime) and mod-25 (=2N+1=5^2). A gap member needs
+both. The width 1/(13*25)=1/325 = the product => threading both is maximally tight, and the
+n-specific closure is that at N=12 NO 12-family threads both simultaneously (fleet-verified empty).

@@ -60,12 +60,22 @@ LRC14Statement (near-extremal / rigidity behaviour)
   `{1,3,5,7}`=4=N−3). Both N=7 members share `M=3/23` (order 2) but have 2 vs 3 defects — so the
   *defect count is not the governing parameter; the order is* (two families, same order, different
   defect counts). The Freiman/defect framing was a mis-read of 3 examples.
-- **RESIDUAL (corrected): the achievability gauntlet (kps HYP-4557)** — in-gap values exist at
-  *every* order `k` for every `N`, and (G) at `N=12` is that *every one of them is unattained*.
-  So the crux is per-order: for each order `k`, no 12-integer-family attains the in-gap value(s)
-  `s/(12s+k)`. The mediant (`k=2`) gate is the mod-30 binder congruence (opus-S119, closed for the
-  canonical family; parity); higher orders are kps's/mac-mini's sweeps. The genuine open crux is a
-  *uniform-over-orders* exclusion, not a bounded-defect one.
+- **RESIDUAL — the DEFECT-STRATIFICATION whittle (opus-S123, synthesizing S120 + mac-mini-S31 +
+  kps-S41).** Stratify 12-families by `d = 12 − (longest sub-AP)`. The strata partition *all*
+  families, and each is excluded from the open gap `(1/13, 2/25)`:
+  - `d = 0`: the whole set is a dilated AP ⟹ `M = 1/13` (the boundary; the AP).
+  - `d = 1`: dilated 11-AP + 1 outlier ⟹ mac-mini's ladder ⟹ `M ∈ {rungs} ∪ {plateau}`, min
+    non-AP `= 2/25` (at `{1..11,24}`) ⟹ `M ≥ 2/25` (verified S123). **[open: prove the ladder bound]**
+  - `d = 2`: dilated 10-AP + 2 outliers ⟹ `M ≥ 2/25` (verified S123; mac-mini's 2-outlier / +0.007
+    margin). **[open: prove the 2-outlier bound]**
+  - `d ≥ 3`: **GREEN — kps `LRCMod25Floor`** (`mod25_covering_floor`/`loose_of_mod25_covering`):
+    a `≥3`-defect family is loose (`M ≥ 2/25`) via a `(ℤ/25)*` rotation (no-mult-of-25 branch) or a
+    small-denominator clearance (mult-of-25 branch). The `25 = 5²` is `2N+1` at `N=12` and is the
+    n-specific reason this closes at `12` but not at `7` (`2·7+1 = 15 = 3·5`, not a prime power —
+    which is exactly why the `n=7` 3-defect member `{1,3,4,5,7,13,18}` slips through).
+  So **(C) at `N=12` reduces to the `d=1` and `d=2` bounds** — a *finite-defect* residual, not the
+  infinite-order gauntlet. The order view (kps HYP-4557) is a different, infinite slicing of the
+  same set; the defect view is finite and has `d≥3` already GREEN.
 
 **Open critical path:** (i) the `≥3`-defect Freiman-stability residual (the crux); (ii) the
 infinite-pigeonhole rigidity wrapper; (iii) *wire* the J-K citation + (A)⟸(C) + (C) into a
@@ -87,12 +97,12 @@ top-level conditional theorem (parallel to Route 1's `lrc14_from_witness_floor`)
   `[J-K citation] + (A) ⟹ LRC14`, with (A)⟸(C) already reducible — so the fleet's (C) proofs
   finally register against `LRC14Statement`.
 
-The single sentence: **LRC(14) closes when (C) closes**, because everything above (C) — the
-projection floor, the rigidity lemma, and the J-K reduction — is either GREEN, provably clean, or
-a citation. The crux `(C)` is the **per-order achievability gauntlet** (kps): for every order `k`,
-no 12-integer-family attains an in-gap value `s/(12s+k)` — a *uniform-over-orders* exclusion.
-(The earlier "≥3-defect Freiman" framing is retracted, opus-S122: 3-defect gap members exist and
-the defect count does not govern.)
+The single sentence: **LRC(14) closes when (C) closes**, and `(C)` now reduces (opus-S123) to the
+**`d=1` and `d=2` defect bounds** — `d≥3` is GREEN (kps `LRCMod25Floor`), `d=0` is the AP. So the
+finite residual is: *a dilated 11-AP + 1 outlier, and a dilated 10-AP + 2 outliers, are never in
+the open gap at `N=12`* — both are ladder-law statements with `M ≥ 2/25`, verified and awaiting
+proof. Everything above `(C)` — projection floor, rigidity lemma, J-K reduction — is GREEN,
+provably clean, or a citation.
 
 **Prior-work anchors:** Jain–Kravitz / Giri–Kravitz 2024 (the rank-2 accumulation reduction —
 Route 2's top link); Fan–Sun arXiv:2306.10417 (the spectrum-gap gcd template for (C)); Bedert

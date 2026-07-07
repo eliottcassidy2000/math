@@ -1,3 +1,22 @@
+## opus-2026-07-06-S123 -- THE CRUX WHITTLES TO d=1 and d=2 (defect stratification, d>=3 GREEN) (HYP-4556)
+
+Prompt: creative session whittling away the crux.
+
+THE WHITTLE (synthesizing opus-S120 + mac-mini-S31 + kps-S41): stratify 12-families by d = 12 - longest-sub-AP. The strata d=0,1,2,>=3 PARTITION all families, each excluded from the open gap (1/13,2/25):
+  d0 = dilated 12-AP => M=1/13 (the AP)
+  d1 = 11-AP + 1 outlier => ladder, min non-AP = 2/25 at {1..11,24} (VERIFIED S123, 0 in gap)   [open: ladder bound]
+  d2 = 10-AP + 2 outliers => M>=2/25 (VERIFIED S123, 0 in gap; mac-mini +0.007 margin)           [open: 2-outlier bound]
+  d>=3 => M>=2/25  -- GREEN (kps LRCMod25Floor: (Z/25)* rotation or small-denom clearance)
+=> (C) at N=12 REDUCES to the d=1 and d=2 ladder bounds -- a FINITE-defect residual, NOT the infinite-order achievability gauntlet. The order view (infinite) and defect view (finite) are different cuts of the same set; the defect cut TERMINATES (d>=3 GREEN), so it's the right endgame frame.
+
+n-SPECIFICITY nailed: kps's d>=3 gate closes at N=12 because 2N+1 = 25 = 5^2 is a PRIME POWER (a (Z/25)* rotation clears no-mult-25 families); at N=7, 2N+1 = 15 = 3*5 is NOT a prime power => the rotation fails => the n=7 3-defect member {1,3,4,5,7,13,18} slips through. So the n-specificity of (G) = the FACTORIZATION of 2N+1 (the loose-boundary companion to my S118 tight-boundary 3N+2 arithmetic).
+
+This VINDICATES the defect frame (my S120): it was the RIGHT decomposition -- S122 showed it needs STRATA (not 'exactly 2 defects'), not that defects are the wrong parameter. Updated LRC14-PROOF-MAP.md: (C) crux = d1 + d2.
+
+Also explored (didn't pan out): the gap width 1/325 = 1/(13*25) = product of the Farey-neighbor boundary denominators -- a clean fact, but the 'two-gate divisibility threading' hypothesis was WRONG (known members don't contain mults of 2N+1).
+
+Files: reflection the-crux-whittles-to-d1-and-d2-defect-strata-with-d3-green-opus-S123; result two_gate_threading_325_opus_S123 (+ the defect-strat verification); updated LRC14-PROOF-MAP.md; HYP-4556. No new Lean (synthesis + verification). RESIDUAL: the d=1 ladder bound + the d=2 2-outlier bound.
+
 ## mac-mini-2026-07-06-S31 -- THE GAP IS THE DEFECT-0 -> DEFECT-1 JUMP: min-M stratified by defect count d=12-longest-sub-AP; d0->1/13 (gap bottom), d1->2/25 (gap top), d>=2->>=2/23; (G) reframed as AP-RIGIDITY 'M<2/25 => AP'; refines opus-S120 into a defect-monotone threshold (HYP-4612)
 
 Prompt (owner): work toward closing the LRC14 proof.
