@@ -1,0 +1,34 @@
+====================================================================================================
+(1) TIGHT-LOCUS COLLAPSE: the bounded repo extremal 13-families + AP controls
+====================================================================================================
+    GW {1..11,13,24}  (TIGHT: M = 1/14)          M =    1/14  *** mu > M: periodic density 1/13 ***
+    prim-sat 2{1..12}+{13}  (M = 1/13)           M =    1/13  mu = M exactly (158 states, wit-cert True)
+    parity record {2..22 even,11,13}  (M = 1/12) M =    1/12  mu = M exactly (124 states, wit-cert True)
+    AP_3 (control, M = 1/4)                      M =     1/4  mu = M exactly (4 states, wit-cert True)
+    AP_4 (control, M = 1/5)                      M =     1/5  mu = M exactly (5 states, wit-cert True)
+    AP_5 (control, M = 1/6)                      M =     1/6  mu = M exactly (6 states, wit-cert True)
+    AP_6 (control, M = 1/7)                      M =     1/7  mu = M exactly (7 states, wit-cert True)
+    AP_7 (control, M = 1/8)                      M =     1/8  mu = M exactly (8 states, wit-cert True)
+    AP_8 (control, M = 1/9)                      M =     1/9  mu = M exactly (9 states, wit-cert True)
+
+====================================================================================================
+(2) NEAR-TIGHT NEIGHBORHOOD of GW: single-element moves (the adversary class)
+====================================================================================================
+    single-move GW neighborhood: mu = M on 13; separations 0
+
+====================================================================================================
+(3) WHERE THE SEPARATIONS LIVE: |S|=4 exceptions' M values vs the tight bar 1/5
+====================================================================================================
+    min M over 26 exceptions: 1/5 at (1, 3, 4, 7)   (tight bar 1/5 = 0.2)
+    max M: 4/15 at (1, 9, 10, 14)
+    exceptions with M < 1/5: 0; with M = 1/5 exactly: 1 [(1, 3, 4, 7)]
+    [every 4-element set has M >= 1/5 iff LRC(5) tight; separations AT the bar
+     would kill even the tight-locus collapse at k=4 -- check above]
+
+====================================================================================================
+(4) |S| = 3 rigidity extension: max <= 18
+====================================================================================================
+    |S|=3, max <= 18, primitive: mu = M on 712; separations 0
+    => the |S| = 3 rigidity persists through max = 18 (conjecture: all |S|=3)
+
+[total 3s]

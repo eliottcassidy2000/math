@@ -174,6 +174,45 @@ is rich. The old "Fibonacci is the covering-min's foil" (C1) returns with a shar
 Fibonacci-closed sets are the *maximal ladder-slack* sets, the opposite pole from the
 AP's slab-realizable optimum. (Observation-level; the exception census is in the .out.)
 
+## 3b. The centerpiece: the GW family separates — the tight locus splits
+
+Testing the tight-locus collapse directly (part-4 run) gave the session's sharpest result:
+
+> **μ(GW) = 1/13 EXACTLY, while M(GW) = 1/14.** The Goddyn–Wong family {1..11, 13, 24} —
+> THE tight non-AP instance of LRC(14) (THM-612, CASE-tight-locus-has-GW) — admits the
+> periodic avoiding set **{0, 12} mod 26** (all differences ≡ ±12 mod 26, never in GW;
+> hand-checkable) of density 1/13, and no periodic set does better (max-cycle-mean test at
+> 1/13: no positive cycle). So χ_f(G_GW) = 13 < 14 = 1/M: **the fractional bound is a full
+> rung loose at the second tight family.**
+>
+> Same split at k = 4: tight {1,2,3,4} collapses; tight **{1,3,4,7} — the Lucas sequence,
+> sum-closed (1+3=4, 3+4=7) — has M = 1/5, μ = 1/4 exactly** ({0,2} mod 8). Both
+> separations are exactly **one unit-fraction rung**: μ = 1/(1/M − 1).
+>
+> Meanwhile prim-sat (M = 1/13), parity record (M = 1/12), every AP prefix k ≤ 8, and all
+> 13 single-move neighbors of GW **collapse** (μ = M exactly). GW is an isolated
+> separation point in its own neighborhood: **tightness-for-M and separation-for-μ
+> co-occur exactly at the non-AP tight instance.**
+
+Two readings. (i) For the program: the tight locus {AP, GW} — which every extremality
+argument must treat as twin equals — is *split* by the fractional relaxation: the AP is
+LP-faithful (its witness slab is Motzkin-optimal), GW is LP-slack (a combinatorial
+periodic set beats every rotation slab by one rung). Any route to LRC(14) through
+μ/χ_f-type relaxations is therefore structurally blind at GW; conversely, a proof
+technique that *distinguishes* slabs from general periodic sets is exactly what the
+GW-side needs. The sum-closure mechanism is visible in both separating tight instances:
+GW's defining substitution 12 → 24 creates the closure **11 + 13 = 24** (and 24 = 2·12,
+the 2-adic doubling move again; the optimal set's period 26 = 2·13 is its shadow); the
+k=4 separator is the Lucas run. (ii) For the S141 record: "the tight families sit AT the
+fractional bound" was a lower-bound certification (witness slab, μ ≥ M) misread as
+equality — the S144 engine shows equality holds at AP/prim-sat/parity-record and *fails*
+at GW. Cite-check before any external claim: GW entered the literature from circular-flow
+theory (Goddyn–Wong 2006, BGGST 1998), and χ_f of these distance graphs may be known
+there or in Liu–Zhu; the named open question left here is **χ_c(G_GW) ∈ [13, 14] —
+which?** (If χ_c(G_GW) = 14, the circular rung stays faithful at the tight locus where
+the fractional rung fails — it would single out χ_c as the right graph invariant for
+LRC; if χ_c < 14, every graph relaxation is blind at GW.)
+
 And the tournament half is standing right there: sum-closure = directed 3-cycle structure
 = the same odd-cycle objects the OCF/H(T) side is built from (a session on the "sum
 tournament" of a speed set — orient a+b → c — may make this precise; the μ > M sets
@@ -198,12 +237,17 @@ should be the odd-cycle-rich ones, the μ = M sets the transitive-like ones).
 - EXACT/NEW: W_q(AP_13) = 1/7, 5/77, 3/35, 8/147, 23/294, 4/245 (Farey-flank closed
   form; identity: closing rate = flank − q); V_r(AP_13) = 17/99, 41/539, 94/1155,
   149/2695, 65/1386, 6/539; T_6(AP_13) = 6/539; both sum exactly to 477/1078.
+  **μ(GW) = 1/13 exactly ({0,12} mod 26); μ({1,3,4,7}) = 1/4 exactly ({0,2} mod 8).**
 - REFUTED: per-q W_q AP-minimality in primitive normalization (near-affine adversaries);
-  T_4 AP-maximality; μ = M collapse (93 exact separations); χ_c = 1/M at |S| = 4.
+  T_4 AP-maximality; μ = M collapse (93 exact separations); χ_c = 1/M at |S| = 4;
+  **the tight-locus collapse itself, at GW** — the surviving equality locus is the
+  AP-side (AP prefixes, prim-sat, parity record, GW's whole single-move neighborhood).
 - SURVIVES (new, open): T_5/T_6 deep-resonance-tail AP-maximality; |S| = 3 ladder
-  rigidity (μ = M ⟹ χ_c = 1/M, all 325 sets in range); tight-locus collapse conjecture.
+  rigidity (μ = M ⟹ χ_c = 1/M, all 712 sets through max = 18); the AP-locus collapse +
+  one-rung law μ = 1/(1/M − 1) at the sum-closed tight instances; χ_c(G_GW) ∈ [13,14].
 - Files: `lrc_per_q_audit_opus_S144.py`, `lrc_per_q_nearaffine_and_Vr_opus_S144.py`,
-  `lrc_resonant_tail_law_opus_S144.py`, `lrc_mu_eq_M_maxcycle_opus_S144.py` (+.outs);
+  `lrc_resonant_tail_law_opus_S144.py`, `lrc_mu_eq_M_maxcycle_opus_S144.py`,
+  `lrc_tight_locus_collapse_opus_S144.py` (+.outs);
   `witness()` fix in `lrc_graph_interpretation_ladder_opus_S141.py`.
 - Builds on: THM-637 roof (the closed forms are its Farey combinatorics), kps-S72
   (the program audited), mac-mini-S54 + klein-S173 (concurrent, reconciled), kps-S67
