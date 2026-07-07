@@ -1,0 +1,17 @@
+=== mu_17: AP minimizer vs INDEPENDENT-points limit (decorrelation tail), opus-S131 ===
+  k   mu17(AP) exact       ~   mu17_indep=1-P        ~   AP < indep?
+  8          691/735  0.9401    823542/823543   1.0000   True
+  9          247/294  0.8401  5764554/5764801   1.0000   True
+ 10            38/49  0.7755 40338999/40353607   0.9996   True
+ 11        1381/2205  0.6263 282020057/282475249   0.9984   True
+ 12      13823/24255  0.5699 1967588629/1977326743   0.9951   True
+ 13         477/1078  0.4425 13678774915/13841287201   0.9883   True
+
+=== empirical: mu_17 of spread-out (decorrelated) E approaches indep limit? (k=8) ===
+   spread<=    20: mean mu_17 = 1.0000 (indep limit 1.0000)
+   spread<=   100: mean mu_17 = 1.0000 (indep limit 1.0000)
+   spread<=  1000: mean mu_17 = 1.0000 (indep limit 1.0000)
+   spread<=100000: mean mu_17 = 1.0000 (indep limit 1.0000)
+
+  STRUCTURE: mu_17 ranges from mu_17(AP) [minimum, most correlated] up to ~indep limit
+  [maximum, decorrelated]. The density floor = the AP minimum. Tail is SAFE (>> 0).
