@@ -1,3 +1,23 @@
+## klein-2026-07-07-S160 -- THE 2-ANCHOR TAIL THROUGH THE DOUBLE COVER: gap@0(2E) = 2(min r + min l) EXACT; all-odd => PA_2 = meas(T u T-1/2) (anchor laws coincide), mixed parity drops the half-anchor by ~0.3; boxeph's discharge table independently confirmed; THE LP DUALS ARE INTEGER GRAPHIC FORMS (Hunter dual-OPTIMAL at the barrier shape; AP = tree + integer correction) (HYP-4841)
+
+Prompt (owner): 2-anchor joint tail + closed-form weighted cherry; BB(27)/Goldbach (arXiv:1505.02479) compression as inspiration; creative tournament cutoffs on pair statistics; the relativity of runner perspectives (antisymmetric rate matrix).
+
+FINDINGS (HYP-4841, reflection the-two-anchor-tail-through-the-double-cover-klein-S160):
+ 1. DOUBLE-COVER DICTIONARY (exact, 1e-16 pointwise): gap@0(2E,x) = 2(min(r0,r_half)+min(l0,l_half)) -- the half-anchor is the second sheet of the Z/2 lift (S157's voltage frame reappearing at the anchors). Corollary chain gap@0(2E) <= 2 min(g0,g_half) <= 2 max(...).
+ 2. PARITY DICHOTOMY: ALL-ODD families satisfy gap@half(x) = gap@0(x+1/2) EXACTLY => identical anchor laws => PA_2 = meas(T u (T-1/2)) with T = {gap@0 > 1/7} -- boxeph's object becomes a union-of-translates of ONE tail set (roof-computable on AP-likes). MIXED-parity families drop P(g_half > 1/7) by 0.29-0.33 (even part crowds 1/2 = the half-speed family's 0-anchor). Proofs of inf PA_2 >= T_k should case-split on 2-adic type; the all-odd case is the clean one.
+ 3. INDEPENDENT CONFIRMATION (jump adversaries): inf PA_2 = 0.798/0.714/0.429 at k=8/9/13 vs boxeph's 0.766/0.685/0.360 -- discharge of ALL legs confirmed from a second engine.
+ 4. WEIGHTED-CHERRY DUALS: the optimal pairwise-LP duals are INTEGER graphic forms. At the barrier shape the dual pair-support is EXACTLY a spanning tree (star-at-13 + path): Hunter is dual-OPTIMAL at spread shapes (upgrades S159's 'near-optimal'). At the AP: tree + integer correction layer ({-1,+1,+2}; +2 at the resonant pair (3,7), +1 at the max-G pair (1,6)) -- closed-form candidate: integer graphic forms with THM-638-law-determined weights. CAVEAT: solver sign convention audit + 128-atom feasibility re-check before asserting the certificate direction (flagged, next).
+ 5. RELATIVITY FRAME: observer loneliness = one row of the antisymmetric d_ij = e_j - e_i weighted tournament on E u {0}; x -> 1-x = T-op; W_i/B (S155) = per-perspective objects; kps THM-640 Paley bridge = the QR-cutoff quotient. Three new cutoff tournaments DEFINED as leads: valuation (7-adic), mass (Hunter-tree weight), anchor (stochastic dominance -- the parity dichotomy says anchor-0 beats anchor-1/2 exactly on mixed families).
+ 6. COMPRESSION NOTE (BB27/Goldbach): the week's shape = infinite quantifiers traded for small exact objects (18-anchor -> 2-anchor; 49-class law; rational ledgers); the additive-pair-structure echo is real (midpoint relations drive everything); MISTAKE-116 = the in-house warning that 'finite' must be proved.
+
+FLAG: HYP-4801 double-filed (my S156 + boxeph-S1) -- boxeph to renumber/cross-annotate.
+
+FILES: 04-computation/lrc14_two_anchor_double_cover_klein_S160.py (+out); reflection; HYP-4841. No Lean (owner directive). No canon overridden.
+
+NEXT: (a) dual sign-audit + feasibility enumeration => state the integer weighted-cherry theorem; (b) the all-odd PA_2 = union-of-translates estimate (meas(T u T-1/2) >= T_k via T's arc structure -- roof-exact on the minimizer class); (c) mixed-parity PA_2 via the half-speed decomposition; (d) test the three cutoff tournaments' invariants against LP/PA_2 minimizers.
+
+---
+
 ## kind-pasteur-2026-07-07-S64 -- THE PALEY BRIDGE (THM-640): the QR-mod-p pair-cutoff turns the observer-inclusive LRC(p) family {0..p-1} EXACTLY into the Paley tournament T_p => the density-floor M-MINIMIZER = the H-MAXIMIZER; reversal<->complement => palindromic AP is SELF-COMPLEMENTARY; composite-14 = why LRC(14) is hard in tournament language (HYP-4927)
 
 Prompt (owner): pair statistics among integer families can be considered tournaments by deciding creatively a meaningful binary cutoff (arrow directions); be free, feel inspiration from other agents.
