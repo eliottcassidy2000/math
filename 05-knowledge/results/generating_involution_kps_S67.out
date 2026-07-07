@@ -1,0 +1,50 @@
+================================================================================================
+PART A -- ANTI-REDEI: H_anti odd on every self-converse class; the involution proof steps
+================================================================================================
+  n=3: 2 classes, 2 self-converse; H_anti ALL ODD: True; H (Redei) all odd: True; every SC class has an involutory anti-aut & odd |Aut|: True
+  n=4: 4 classes, 2 self-converse; H_anti ALL ODD: True; H (Redei) all odd: True; every SC class has an involutory anti-aut & odd |Aut|: True
+  n=5: 12 classes, 8 self-converse; H_anti ALL ODD: True; H (Redei) all odd: True; every SC class has an involutory anti-aut & odd |Aut|: True
+  n=6: 56 classes, 12 self-converse; H_anti ALL ODD: True; H (Redei) all odd: True; every SC class has an involutory anti-aut & odd |Aut|: True
+
+  involution-proof spot check (n=5, an SC class):
+    tau_rho0 maps Ham paths->Ham paths: True; is an involution: True
+    #all Ham paths H = 1 (odd: True); #Fix(tau_rho0) = 1 (odd: True) == H mod 2: True
+    Fix(tau_rho0) = {P: pi_P = rho0} = the anti-symmetric paths for rho0 => odd by Redei parity. QED shape.
+
+================================================================================================
+PART B -- LRC sigma (reversal E->max+min-E): parity of the gap functionals
+================================================================================================
+  functional        E-value    sigma(E)-value    sigma-EVEN?
+  [AP {1..13}] mu17: 0.4420 vs 0.4420 (even: True); E[mg]: 0.2114 vs 0.2114 (even: True)
+  [record] mu17: 0.5310 vs 0.5310 (even: True); E[mg]: 0.1970 vs 0.1970 (even: True)
+  [random] mu17: 0.9720 vs 0.9720 (even: True); E[mg]: 0.2392 vs 0.2392 (even: True)
+  => mu, E[maxgap] are sigma-EVEN (reversal-invariant) = the measure/density HALF.
+     covering/residue predicates (mult-of-q, saturation) are sigma-ODD/algebraic (settled).
+
+================================================================================================
+PART C -- THE GATE sigma-GRADING (the meta-abstraction; structure in the gate-chaos)
+================================================================================================
+  gate                                                 sigma-character        kind       status
+  denominator sieve (counterexample_needs_all_divisors) sigma-ODD (residue)    algebraic  SETTLED (GREEN)
+  small-mod / band floor (LRCSmallModFloor)            sigma-ODD (residue)    algebraic  SETTLED (GREEN)
+  saturated reduction (primitive-saturated)            sigma-ODD (residue)    algebraic  SETTLED (GREEN)
+  coarse/scale reduction -> LRC(<=13)                  sigma-ODD (cluster)    algebraic  SETTLED (GREEN)
+  far-element peel                                     sigma-ODD (scale)      algebraic  SETTLED (GREEN)
+  diameter floor mu>=m_P (S59/S60)                     sigma-EVEN (measure)   analytic   SETTLED on diam<=75 (FINITIZED)
+  intersection ledger k=8..12 (S60)                    sigma-EVEN (measure)   analytic   SETTLED on bounded diam (FINITIZED)
+  Part A witness V0 (S61)                              sigma-EVEN (measure)   analytic   SETTLED on height<~1106 (FINITIZED)
+  density floor inf E[maxgap]>1/7                      sigma-EVEN (measure)   analytic   OPEN (unbounded core)
+  2-anchor rigidity lemma (opus)                       sigma-EVEN (measure)   analytic   OPEN (6 exact constants)
+  spread residual diam>75 / wide-cluster gate          sigma-EVEN (measure)   analytic   OPEN (decorrelation)
+
+  GENERATING PATTERN: sigma-ODD (parity/covering/residue) gates ALWAYS close algebraically;
+  sigma-EVEN (measure/density) gates close ONLY when a FINITENESS reduction applies
+  (bounded diameter / bounded height); the OPEN residual is EXACTLY the un-finitized
+  sigma-even measure core = a discrepancy problem (Aden-Ali 2607.04388: prefix-sum
+  discrepancy = 3 coupled Gaussians ~ the three-gap structure). = the S65 barrier, graded.
+DONE.
+
+STRENGTHENED involution spot-check on a HIGH-H SC class (Paley T_5-type):
+  H=15 (odd:True); tau_rho0 involution on paths: True; maps in: True
+  #Fix(tau_rho0)=3 (odd:True) == H mod 2: True; H_anti(all anti-auts)=15 (odd:True)
+  => non-trivial: an involution on the 15 Ham paths, odd fixed set = the anti-symmetric paths. Anti-Redei confirmed with content.
