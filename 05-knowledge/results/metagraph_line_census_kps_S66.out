@@ -1,0 +1,87 @@
+====================================================================================================
+METAGRAPH LINE/NODE CENSUS (strict grid-sym definition)
+====================================================================================================
+
+--- n=3: |V|=2 (A000568), m=1, tilings=2^1=2 ---
+  SC=2, pure-blue=2, mixed=0, pure-black=0  (pure-black == NS == 0: True)
+  BLUE tilings = 2 = 2^1 ? True   (e(n)=floor((n-1)^2/4)=1, sq)
+  blue lines = 1 = 2^(e-1)=1? True; black lines = 0 = 2^(m-1)-2^(e-1)=0? True
+  fibration  #tilings(C)*|Aut(C)| == H(C) for all C: True
+  even/odd: blue-multiplicity ODD over every SC class: True; ==0 over every NS class: True
+  LINE-NODE-TYPE incidence (endpoints' class types), each line once:
+    blue lines by (type,type): {('pureB', 'pureB'): 1}
+    black lines by (type,type): {}
+
+--- n=4: |V|=4 (A000568), m=3, tilings=2^3=8 ---
+  SC=2, pure-blue=1, mixed=1, pure-black=2  (pure-black == NS == 2: True)
+  BLUE tilings = 4 = 2^2 ? True   (e(n)=floor((n-1)^2/4)=2, pronic)
+  blue lines = 2 = 2^(e-1)=2? True; black lines = 2 = 2^(m-1)-2^(e-1)=2? True
+  fibration  #tilings(C)*|Aut(C)| == H(C) for all C: True
+  even/odd: blue-multiplicity ODD over every SC class: True; ==0 over every NS class: True
+  LINE-NODE-TYPE incidence (endpoints' class types), each line once:
+    blue lines by (type,type): {('mixed', 'mixed'): 1, ('mixed', 'pureB'): 1}
+    black lines by (type,type): {('mixed', 'pureK'): 2}
+
+--- n=5: |V|=12 (A000568), m=6, tilings=2^6=64 ---
+  SC=8, pure-blue=3, mixed=5, pure-black=4  (pure-black == NS == 4: True)
+  BLUE tilings = 16 = 2^4 ? True   (e(n)=floor((n-1)^2/4)=4, sq)
+  blue lines = 8 = 2^(e-1)=8? True; black lines = 24 = 2^(m-1)-2^(e-1)=24? True
+  fibration  #tilings(C)*|Aut(C)| == H(C) for all C: True
+  even/odd: blue-multiplicity ODD over every SC class: True; ==0 over every NS class: True
+  LINE-NODE-TYPE incidence (endpoints' class types), each line once:
+    blue lines by (type,type): {('mixed', 'mixed'): 3, ('mixed', 'pureB'): 5}
+    black lines by (type,type): {('mixed', 'mixed'): 12, ('mixed', 'pureK'): 12}
+
+--- n=6: |V|=56 (A000568), m=10, tilings=2^10=1024 ---
+  SC=12, pure-blue=2, mixed=10, pure-black=44  (pure-black == NS == 44: True)
+  BLUE tilings = 64 = 2^6 ? True   (e(n)=floor((n-1)^2/4)=6, pronic)
+  blue lines = 32 = 2^(e-1)=32? True; black lines = 480 = 2^(m-1)-2^(e-1)=480? True
+  fibration  #tilings(C)*|Aut(C)| == H(C) for all C: True
+  even/odd: blue-multiplicity ODD over every SC class: True; ==0 over every NS class: True
+  LINE-NODE-TYPE incidence (endpoints' class types), each line once:
+    blue lines by (type,type): {('mixed', 'mixed'): 30, ('mixed', 'pureB'): 2}
+    black lines by (type,type): {('mixed', 'mixed'): 10, ('mixed', 'pureK'): 156, ('pureK', 'pureK'): 314}
+
+====================================================================================================
+FORMULA TABLE + residual patterns
+====================================================================================================
+   n    V  SC pureB mixed pureK/NS e(n) blueLines  blackLines
+   3    2   2     2     0        0    1         1           0
+   4    4   2     1     1        2    2         2           2
+   5   12   8     3     5        4    4         8          24
+   6   56  12     2    10       44    6        32         480
+
+  sequences to fit:
+    SC(n):        [2, 2, 8, 12]
+    pure-blue(n): [2, 1, 3, 2]  (+ n=7 = 4 from prior work; seq 2,1,3,2,4)
+    mixed(n):     [0, 1, 5, 10]
+    pure-blue+mixed = SC: [True, True, True, True]
+
+====================================================================================================
+PURE-BLUE STRUCTURE: characterize pure-blue classes (H, |Aut|, tc=H/|Aut|, blue-mult)
+====================================================================================================
+  n=3 pure-blue classes:
+    H=  1 |Aut|= 1 tc=  1 blue-mult=  1 (tc==1? True)
+    H=  3 |Aut|= 3 tc=  1 blue-mult=  1 (tc==1? True)
+    => #SC classes with tc==1 (H==|Aut|): 2   vs pure-blue=2   match: True
+  n=4 pure-blue classes:
+    H=  1 |Aut|= 1 tc=  1 blue-mult=  1 (tc==1? True)
+    => #SC classes with tc==1 (H==|Aut|): 1   vs pure-blue=1   match: True
+  n=5 pure-blue classes:
+    H=  1 |Aut|= 1 tc=  1 blue-mult=  1 (tc==1? True)
+    H=  3 |Aut|= 3 tc=  1 blue-mult=  1 (tc==1? True)
+    H= 15 |Aut|= 5 tc=  3 blue-mult=  3 (tc==1? False)
+    => #SC classes with tc==1 (H==|Aut|): 2   vs pure-blue=3   match: False
+  n=6 pure-blue classes:
+    H=  1 |Aut|= 1 tc=  1 blue-mult=  1 (tc==1? True)
+    H=  9 |Aut|= 9 tc=  1 blue-mult=  1 (tc==1? True)
+    => #SC classes with tc==1 (H==|Aut|): 2   vs pure-blue=2   match: True
+
+====================================================================================================
+FLIP-PARTNER CLASS MAP: does the complement-tiling flip relate H / |Aut| / class of endpoints?
+====================================================================================================
+  n=3: 1 lines; flip stays in same class (self-loop): 0, crosses: 1; H(endpoint1)==H(endpoint2): 0/1 (NOT always)
+  n=4: 4 lines; flip stays in same class (self-loop): 1, crosses: 3; H(endpoint1)==H(endpoint2): 1/4 (NOT always)
+  n=5: 32 lines; flip stays in same class (self-loop): 4, crosses: 28; H(endpoint1)==H(endpoint2): 7/32 (NOT always)
+  n=6: 512 lines; flip stays in same class (self-loop): 8, crosses: 504; H(endpoint1)==H(endpoint2): 53/512 (NOT always)
+DONE.

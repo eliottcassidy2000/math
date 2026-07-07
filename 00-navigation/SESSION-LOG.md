@@ -56,6 +56,19 @@ REMAINING (mac-mini/kps shape layer): shapeOf->cluster extraction + hwitness for
 HONEST: does NOT prove LRC(14). Connects the unconditional bounded-diameter floor to the exact witnessG2 measure. Files: LRCGoodSetBridge.lean; reflection the-goodset-bridge-connects-the-mugood-floor-to-witnessG2-deathstar-S3.md.
 
 NEXT: coordinate with mac-mini on the shapeOf/hwitness/GP wiring to discharge hlarge end-to-end; or extend to non-pure-cluster via Bonferroni + the pigeonhole small-cluster nuShape.
+## kind-pasteur-2026-07-07-S66 -- THE PURE-BLUE COUNT CLOSED FORM + fibration synthesis: 4th-engine confirmation of the blue/black line structure (mac-mini THM-643 / klein HYP-4851 / monad HYP-4967) and the one open piece solved -- pure-blue(n) = floor((n+1)/2) - [n even] (HYP-4997)
+
+Prompt (owner): the complete blue/black line + node-type structure of the merged metagraph; formulas for lines and each node type at each n; the even/odd duality; solve the tiling->iso-class fibration via the line-pair partner; niche conjectures coalescing into a grand unifying picture.
+
+CONVERGENCE (honest): 3-5 agents hit this same structure this burst (mac-mini THM-643, klein HYP-4851, monad HYP-4967, opus-S139). I built a FOURTH independent engine (canon/Aut/Ham from scratch) and confirmed everything exactly; my HYP-4967 collided with monad => renumbered 4997.
+
+CONFIRMED (0 disagreements): BLUE tilings = 2^{e(n)}, e(n)=floor((n-1)^2/4) (square/pronic); blue lines = 2^{e-1} (1,2,8,32); black lines = 2^{m-1}-2^{e-1} (0,2,24,480); pure-black = NS; fibration #tilings*|Aut|=H (LEM-003); even/odd (blue-mult ODD over SC, 0 over NS = 'blues odd, blacks even' = T-join on SC + even graph); LINE-NODE-TYPE incidence exact (blue only mixed-mixed/mixed-pureB; black only mixed-mixed/mixed-pureK/pureK-pureK; mixed = sole interface).
+
+NET-NEW (the piece all 3 flagged as 'the remaining census mystery'): PURE-BLUE COUNT FORMULA (conjecture, verified n=3..7 incl my cheap n=7 blue-sub-cube check): pure-blue(n) = floor((n+1)/2) - [n even] = (n+1)/2 (odd) / n/2-1 (even) = interleave 2,1,3,2,4,3,5,... (predicts n=8=3). Mechanism (confirms mac-mini C3): pure-blue = SC classes with ENTIRE fiber grid-symmetric (blue-mult=tc), tc in {1,3}, H in {|Aut|,3|Aut|} = transitive spine (|Aut|=3^j, j<=floor((n-2)/2)) + Paley/circulant cores = the arithmetically special classes that also carry THM-640's Paley bridge. So mixed = SC - pure-blue = 0,1,5,10,84.
+
+FIBRATION SOLVED (owner's 'which tilings'): blue tilings = EXACTLY the explicit sub-cube Fix(g)=Q_{e(n)} (constant on each of e(n) grid-orbits); distribute over SC by blue-mult; black = the rest (SC even remainder, NS all). flip=complement-TILING partner does NOT preserve H (7/32, 53/512 at n=5,6; self-loops 0,1,4,8) => a genuinely different tournament (quantifies MISTAKE-033); the parity skeleton is fully determined, residual = the black even-graph matching (quasi-random, klein C5).
+
+Niche conjectures PB1-PB5 (pure-blue formula; pendant multiplicity tc; arithmetic backbone = transitive+Paley; three-worlds asymptotics; flip H-decorrelation). Files: metagraph_line_census_kps_S66.py, metagraph_pureblue_n7_kps_S66.py (+outs); reflection the-pure-blue-count-and-the-fibration-solved-kps-S66; HYP-4997. Proof/structure work (no formalization). Confirms mac-mini THM-643 / klein HYP-4851 / monad HYP-4967; extends klein-S13, THM-280/281/282/477, LEM-003, THM-640.
 
 ## mac-mini-2026-07-07-S46 -- THM-643 PROVED: the blue/black LINE PARITY STRUCTURE (strict definitions) -- the tiling fibration is determined MOD 2 by Redei + two commuting involutions; pure-black = non-SC at ALL n; new invariant H_sym (self-converse Ham-path count) with mass formula and a conjectured 3-power cap (HYP-4977)
 

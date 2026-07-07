@@ -1,0 +1,13 @@
+n=5: blue sub-cube 2^4=16 tilings; SC-classes touched=8; PURE-BLUE=3  (conjecture floor((n+1)/2)-[n even]=3: True)
+    pure-blue: H=1 |Aut|=1 tc=1
+    pure-blue: H=3 |Aut|=3 tc=1
+    pure-blue: H=15 |Aut|=5 tc=3
+n=6: blue sub-cube 2^6=64 tilings; SC-classes touched=12; PURE-BLUE=2  (conjecture floor((n+1)/2)-[n even]=2: True)
+    pure-blue: H=1 |Aut|=1 tc=1
+    pure-blue: H=9 |Aut|=9 tc=1
+n=7: blue sub-cube 2^9=512 tilings; SC-classes touched=88; PURE-BLUE=4  (conjecture floor((n+1)/2)-[n even]=4: True)
+    pure-blue: H=1 |Aut|=1 tc=1
+    pure-blue: H=3 |Aut|=3 tc=1
+    pure-blue: H=9 |Aut|=9 tc=1
+    pure-blue: H=15 |Aut|=5 tc=3
+DONE.
