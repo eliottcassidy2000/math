@@ -1,0 +1,32 @@
+============================================================================================
+PART 1 -- anchored-gap subset monotonicity: gap@a(E,x) >= gap@a(F,x) for E subset F
+============================================================================================
+  0 violations / 27000 pointwise anchored-gap checks (expect 0)
+
+============================================================================================
+PART 2 -- PA_2(consecutive AP_n) vs T_k: the per-k diameter bite of the 2-anchor floor
+============================================================================================
+  PA_2(AP_n) sample: n=8:0.794, n=13:0.380, n=20:0.219, n=30:0.137, n=45:0.089, n=60:0.065, n=80:0.049
+
+    k     T_k largest n: PA_2(AP_n)>=T_k  => covers primitive diam <=
+    8  0.6185                          9                            8
+    9  0.5057                         10                            9
+   10  0.3956                         12                           11
+   11  0.2747                         16                           15
+   12  0.1429                         28                           27
+   13  0.0565                         69                           68
+  (subset lemma: any k-cluster E with primitive diam <= that value has PA_2(E) >= PA_2(AP_{diam+1}) >= T_k)
+
+============================================================================================
+PART 3 -- the spread-AP residual PA_2({a+d*j}): is the inf at BOUNDED (a,d)? (finite check?)
+============================================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc_anchored_gap_subset_kps_S68.py", line 114, in <module>
+    v, a, d = grid[0]
+              ~~~~^^^
+IndexError: list index out of range
+PART 3 (fixed) -- spread-AP residual PA_2({a+d*j}): inf at bounded (a,d)?
+  k=8 (T_k=0.6185): min PA_2 over (1<=a<=13,d<=29) = 0.7194 at (a,d)=(5,2); large-d ~ 0.8009; min>=T_k(-.02): True
+  k=10 (T_k=0.3956): min PA_2 over (1<=a<=13,d<=29) = 0.5600 at (a,d)=(11,2); large-d ~ 0.5989; min>=T_k(-.02): True
+  k=13 (T_k=0.0565): min PA_2 over (1<=a<=13,d<=29) = 0.3280 at (a,d)=(13,2); large-d ~ 0.3683; min>=T_k(-.02): True
+  => inf at SMALL (a,d) resonant dip; large d decorrelates >> T_k => FINITE (a,d) check + decorrelation tail.

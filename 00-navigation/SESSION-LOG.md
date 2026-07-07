@@ -42,6 +42,23 @@ DELIVERED:
 FILES: THM-648 (canon); gn_blue_selfloop_parity_macmini_S48.py, lrc14_nocherry_structure_macmini_S48.py (+outs); reflection lrc-as-rotational-coloring-and-the-dihedral-ledger-macmini-S48; HYP-5047 (INDEX). No Lean (proofs-first). No canon overridden.
 
 NEXT: (a) the shaped decorrelation statement (single-band 8-shapes, diam >= 27 => mu >= 0.675) — the last piece of the k=8 gate besides R >= 0.75 and klein's Dedekind half-page; (b) even-n self-loop SUFFICIENCY (which s(1)=(n-2)/2 gridsym tilings loop — the n=6 4/24 pattern); (c) the C1 3-power cap on H_sym (now the only open item of the blue/black program).
+## kind-pasteur-2026-07-07-S68 -- THE ANCHORED-GAP SUBSET LEMMA finitizes the 2-anchor (A') tail for ALL k=8..13 (diameter bites 8/9/11/15/27/68) + THE MECHANISM SYNTHESIS: what worked/failed in the LRC14 proof and WHY, as reusable structural knowledge (HYP-5057)
+
+Prompt (owner): keep working the bleeding-edge LRC14 tasks; synthesize how the proof history changed, which angles worked and which did not and WHY (the mechanisms), then abstractly apply them as structural knowledge.
+
+BLEEDING-EDGE STEP: the live open lemma (A') mu_1/7(E)>=T_k reduces (boxeph-S1) to the 2-ANCHOR tail PA_2(E)=P_x(max(gap@0,gap@1/2)>1/7)>=T_k, open piece 'spread AP minimizes PA_2'. MY MOVE (the S59 finitization ported to the anchored object): ANCHORED-GAP SUBSET LEMMA (proved, 0/27000) -- E subset F => {frac(ex)} subset {frac(fx)} => the gap containing a fixed anchor a is a union of >=1 F-gaps => gap@a(E,x) >= gap@a(F,x) POINTWISE => PA_2(E)>=PA_2(F); with F={0..D}=consecutive AP: PA_2(E) >= PA_2(AP_{diam+1}) EXACT => the 2-anchor (A') tail FINITIZED on bounded diameter for EVERY k=8..13 (bites 8/9/11/15/27/68), extending my diameter floor from the k=13 leg to the FULL (A') ledger. RESIDUAL: spread-AP min PA_2({a+dj}) at BOUNDED (a,d) (dip d=2; large d decorrelates >> T_k) => finite (a,d) check + decorrelation tail = same shape as S61 Part-A V0.
+
+SYNTHESIS -- ARC OF THE PROOF: Route 2 retired (MISTAKE-117: J-K accumulation != sup) -> density floor (2/7 refuted=admissible zeros; 1/7 sharp) -> reductions (coarse/diameter floor/ledger/Part-A finitized) -> mean detour DEAD (death-star: AP-min window disjoint from non-vacuity) -> 2-anchor now (double-cover k=13 opus-S139 + anchored-gap all-k this session).
+
+WORKED + MECHANISM: sieve=algebraic decidability; coarse=self-similar reduction to LRC<=13; diameter/anchor floor=monotone domination by computable extremal (AP); FINITIZATION (V0/diameter bites)=bound the domain => finite check (most-reused win); Part-A=robust few-arc substitution; AP=roots-of-unity=extremum is the symmetry fixed point.
+
+FAILED (each a TYPE MISMATCH) + MECHANISM: Route 2/J-K=wrong invariant (accumulation vs sup; isolated extrema evade); 2/7=non-necessity (degenerate zeros); PZ on moat=norm mismatch (moment vs L-inf sup, signed cancellation); finite covering=unbounded modulus (escape families ==AP mod lcm); single-statistic=order-statistic irreducibility; 2-point LP=pairwise-featureless (weight>=3); Schur=non-convex resonance-rugged (77% uphill).
+
+UNIFYING WHY (S67 sigma-grading): every failure attacked the sigma-even measure core with a sigma-odd/averaging tool; every win used sigma-odd tools on sigma-odd parts OR finitized sigma-even into a decidable check.
+
+ABSTRACT STRUCTURAL KNOWLEDGE (9 reusable principles): grade-by-involution + match-tool-to-grade; finitize-the-measure-part; robustness-beats-exactness; match-the-norm-type; verify-the-invariant-of-imported-tools (isolated extrema evade accumulation); extremum=symmetry-fixed-point; order-statistics-don't-reduce-to-moments; covering-needs-bounded-modulus; domination-is-the-master-tool.
+
+Files: lrc_anchored_gap_subset_kps_S68.py (+out); reflection the-mechanisms-of-the-lrc14-proof-what-worked-what-failed-and-why-kps-S68; HYP-5057. Concrete finitization + synthesis (no formalization). Does NOT prove LRC(14).
 
 ## monad-explorer-2026-07-07-S9 -- OPERATIONAL TWISTED INVOLUTIONS (HYP-5037): gradient-conjugacy lands in its TRUE form (sign dichotomy conditional on perturbation-coherence, 633/648; mixed-active = the honest boundary); cell symmetrization = free x1.7-1.9 deficit-bound discount; Coxeter I(theta) bridge filed; heartbeat reflection
 
