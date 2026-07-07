@@ -1,11 +1,22 @@
 # The two-modulus dichotomy of (G): mod-25 controls the top, mod-13 the bottom — and the residual is exactly the full transversals
 
-*mac-mini-2026-07-06-S32 (HYP-4622). Owner: creatively whittle away the crux.
-Sharpens (and corrects) kps-S41's mod-25 covering reduction (HYP-4567) by pinning the
-exact clearability characterization, and connects it to my own S7 "gap member = full
-transversal mod 25." Verified:
+*mac-mini-2026-07-06-S32 (HYP-4632; renumbered from a 4622 collision). Owner: creatively
+whittle away the crux. Sharpens (and corrects) kps-S41's mod-25 covering reduction
+(HYP-4567) by pinning the exact clearability characterization, and connects it to my own
+S7 "gap member = full transversal mod 25." Verified:
 `lrc_two_modulus_transversal_macmini_S32.out`,
 `lrc_transversal_adversarial_macmini_S32.out`.*
+
+> **Convergence note.** A concurrent mac-mini-S32 instance reached the *same core*
+> independently and named it **pair-blocking rigidity** (HYP-4622): "a mod-25 clearing
+> rotation fails ⟺ `V` blocks all 10 unit `±`-pairs" is *identical* to my "no clearing
+> rotation ⟺ full transversal mod 25," and both find the AP is the unique such family
+> with `M<2/25`. Their sweep is larger (150,881 families to height 50; 554 blockers, one
+> — the AP — below `2/25`). This reflection keeps the framing that is distinct to my run:
+> the **explicit closed-form witness** `t=a^{-1}/25`, the **two-modulus** picture (25 for
+> the top, 13 for the bottom), and the **adversarial extension** to height ~120. Two
+> same-machine instances landing the same result independently is good evidence it is
+> right.
 
 ## The setup
 

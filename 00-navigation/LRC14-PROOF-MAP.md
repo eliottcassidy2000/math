@@ -76,9 +76,11 @@ LRC14Statement (near-extremal / rigidity behaviour)
   So **(C) at `N=12` reduces to the `d=1` and `d=2` bounds** — a *finite-defect* residual, not the
   infinite-order gauntlet. The order view (kps HYP-4557) is a different, infinite slicing of the
   same set; the defect view is finite and has `d≥3` already GREEN.
-- **TWO-MODULUS DICHOTOMY / sharpening of the mod-25 leg (mac-mini S32, HYP-4622).** The mod-25
+- **PAIR-BLOCKING / TWO-MODULUS sharpening of the mod-25 leg (mac-mini S32, HYP-4622 pair-blocking
+  + HYP-4632 two-modulus — two independent same-machine runs, same result).** The mod-25
   clearing rotation used above (the `d≥3` GREEN and kps-S41) works *exactly* when the family is
-  **not** a full transversal mod 25: a clearing `c∈(ℤ/25)*` exists ⟺ the unit-speeds **miss** one
+  **not** a full transversal mod 25 (equivalently, does **not** block all 10 unit `±`-pairs): a
+  clearing `c∈(ℤ/25)*` exists ⟺ the unit-speeds **miss** one
   of the ten `±`-classes; then the explicit witness is `t = a^{-1}/25` for a missed class `[a]`
   (⟹ `M ≥ 2/25`). So the mod-25 rotation branch is not "all no-mult-of-25 families" (that
   over-claims — the AP itself is a full transversal and is *not* cleared) but precisely the

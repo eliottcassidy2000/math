@@ -42,9 +42,11 @@ This VINDICATES the defect frame (my S120): it was the RIGHT decomposition -- S1
 Also explored (didn't pan out): the gap width 1/325 = 1/(13*25) = product of the Farey-neighbor boundary denominators -- a clean fact, but the 'two-gate divisibility threading' hypothesis was WRONG (known members don't contain mults of 2N+1).
 
 Files: reflection the-crux-whittles-to-d1-and-d2-defect-strata-with-d3-green-opus-S123; result two_gate_threading_325_opus_S123 (+ the defect-strat verification); updated LRC14-PROOF-MAP.md; HYP-4556. No new Lean (synthesis + verification). RESIDUAL: the d=1 ladder bound + the d=2 2-outlier bound.
-## mac-mini-2026-07-06-S32 -- TWO-MODULUS DICHOTOMY of (G): PROVES the non-transversal half (mod-25 clears <=> NOT full transversal; explicit witness t=a^-1/25); residual = full transversals, AP unique (HYP-4622)
+## mac-mini-2026-07-06-S32b -- TWO-MODULUS DICHOTOMY of (G): PROVES the non-transversal half (mod-25 clears <=> NOT full transversal; explicit witness t=a^-1/25); residual = full transversals, AP unique (HYP-4632, converged with concurrent HYP-4622 pair-blocking)
 
 Prompt (owner): do a session creatively whittling away the crux.
+
+CONVERGENCE/RENUMBER: a concurrent mac-mini-S32 instance independently reached the SAME core as "PAIR-BLOCKING RIGIDITY" (HYP-4622: mod-25 fails <=> V blocks all 10 unit +/- pairs = full transversal; AP the unique blocker with M<2/25; 150,881-family sweep). Their characterization = mine. I was first-commit by 4min but their sweep is larger; renumbered mine 4622->4632 to cede. My distinct additions kept below: the explicit witness t=a^-1/25, the two-modulus frame, adversarial-to-height-120.
 
 The crux (C) is now the per-order achievability gauntlet (kps HYP-4557; opus-S122 retracted the defect framing -- ORDER governs; opus-S121 proof map). kps-S41 (HYP-4567) reduced the lower-bound half to a "mod-25 covering fact" (M>=2/25 at t=c/25 when a unit c rotates all speeds off {0,+-1} mod 25) and conjectured every no-mult-of-25 family clears this way. I PINNED the exact characterization and PROVED half of (G):
 
@@ -56,7 +58,7 @@ RESIDUAL = the full transversals (= my S7 "gap member => full transversal mod 25
 
 FRAME: (G) = a TWO-MODULUS incompatibility -- mod (2N+1)=25 controls the TOP (miss a class => >=2/25), mod (N+1)=13 pins the BOTTOM (AP at 1/13); a gap member must be full-transversal-mod-25 (avoid top) AND non-AP (above bottom), but full transversal => AP => pinch shut. Complements concurrent mac-mini-S31 (HYP-4612 defect-stratified AP-rigidity 'M<2/25 => AP') from the residue side.
 
-Files: lrc_two_modulus_transversal / lrc_transversal_adversarial _macmini_S32.py(+out). Reflection: the-two-modulus-dichotomy-of-G-mod-25-controls-the-top-mod-13-the-bottom-macmini-S32.md. Added attributed bullet to LRC14-PROOF-MAP.md (C)-status. HYP-4622. Next: the full-transversal=>AP residual is a mod-13 rigidity; Lean the "not-full-transversal => clearing-rotation-exists" decidable covering fact (kps has the downstream atom).
+Files: lrc_two_modulus_transversal / lrc_transversal_adversarial _macmini_S32.py(+out). Reflection: the-two-modulus-dichotomy-of-G-mod-25-controls-the-top-mod-13-the-bottom-macmini-S32.md. Added attributed bullet to LRC14-PROOF-MAP.md (C)-status (credits both HYP-4622 pair-blocking + HYP-4632). HYP-4632 (renumbered from 4622). Next: the full-transversal=>AP residual is a mod-13 / Freiman rigidity; Lean the "not-full-transversal => clearing-rotation-exists" decidable covering fact (kps has the downstream atom).
 
 ## mac-mini-2026-07-06-S31 -- THE GAP IS THE DEFECT-0 -> DEFECT-1 JUMP: min-M stratified by defect count d=12-longest-sub-AP; d0->1/13 (gap bottom), d1->2/25 (gap top), d>=2->>=2/23; (G) reframed as AP-RIGIDITY 'M<2/25 => AP'; refines opus-S120 into a defect-monotone threshold (HYP-4612)
 
