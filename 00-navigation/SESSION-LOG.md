@@ -1,3 +1,19 @@
+## mac-mini-2026-07-07-S56 -- THE CONDITIONAL-TENT c-TABLE (exact): THM-651's k=9/10 discharge fails ONLY at d in {1,2} (all d in [3,250] clear; Koksma tail confirmed); offenders carry the 2-adic/composite-14 signature; repair = [d>=3 tent for few-small-diff clusters] + [ledger for near-consecutive] (HYP-5207)
+
+Prompt (owner): push these and incoming further; see the bigger picture; test suspected patterns.
+
+INCOMING ABSORBED: kps-S73's THM-651 (mu(E_8) >= 3/4 PROVED — the k=8 leg DISCHARGED, 2.3x headroom; shifted-tent + Markov, pair data only) — the week's biggest brick. Its named frontier: the conditional tent for k=9/10 needs the G_P-restricted pair-mass ratio c(d,P) <= 1.7/1.29.
+
+DELIVERED — THE EXACT c-TABLE (rational integration of f_k against G_P pullbacks): k=9 hard core: sup c = 1.7621 at d=2, the ONLY offender (d=1: 1.54 clears; all d in [3,250] <= ~1.45); the 1-containing P: only d=1 (1.86); k=10: offenders exactly {1, 2}. Koksma decay to 1 confirmed in the tails. COPRIME SIGNATURE: the offending differences are the non-coprime-with-14 smallest ones (d=2: gcd 2 with 14) — the composite-14 2-part at minimal scale, the coprime lens again.
+
+THE SHAPED REPAIR: (a) the d>=3 tent variant (drop small-d pair terms; Step-2 loses only gaps realized by adjacent-difference pairs: F' >= (1 - k beta) - s(1/7 - beta)) closes for clusters with few small differences; (b) clusters with MANY d in {1,2} differences are near-consecutive = the kps-S60 ledger zone. The k=9/10 legs reduce to pinning the crossover s* — finite arithmetic.
+
+BIGGER PICTURE (the day's arc, tested real): the resonance ladder (S55) + the tent frontier's d in {1,2} obstruction + the apex-invisibility family are ONE pattern — the composite-14 small-scale gcd structure is where every tool's uniformity breaks, and every 'generic/naive' assumption so far has failed exactly there. The floors that survive (THM-651's tent, the diameter monotonicity, the parity theorems) are the ones whose proofs never assume coprimality they don't have.
+
+FILES: lrc14_conditional_tent_ctable_macmini_S56.py (+out); HYP-5207 (INDEX). No canon overridden.
+
+NEXT: (a) pin s* (the joint tent'/ledger arithmetic) => k=9/10 legs discharge; (b) the same c-table at k=11..13 bars for the intersected-ledger residuals; (c) config-level per-q lemma (S55's target) continues.
+
 ## kind-pasteur-2026-07-07-S73 -- THM-651: THE SHIFTED-TENT GAP-HISTOGRAM FLOOR mu_{1/7}(E_8) >= 3/4 (PROVED, half-page, diameter-free) => THE k=8 (A') LEG IS DISCHARGED; + MISTAKE-123 (the circulated T_k bars were the positivity bars). (HYP-5147)
 
 Prompt (owner): long session -- deeply understand the LRC-14 past work, its relation to other math here, how proof-state changed under corrections; audit validity, find what we missed/where misguided; then investigate; sync git often; extend forgotten factoids; see how/why not just if.
