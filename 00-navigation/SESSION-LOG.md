@@ -1,3 +1,23 @@
+## mac-mini-2026-07-06-S34 -- d=2 as a COVERING SYSTEM + the covering-reach ATOM FORMALIZED: reach_ge_of_covering (rational_point_margin -> reach>=mu/q, uniform shape for kps's q<=39 covering system) + d2_generic_reach (11 nmid x,y => reach>=1/11>2/25); the d=2 family {1..10,x,y} cleared by 9 moduli, only AP uncovered
+
+Prompt (owner): work on d=2.
+
+Took opus-S123's d=2, integrated kps-S43's reframe (crux is DEFECT-AGNOSTIC; case-2 = a FINITE COVERING SYSTEM q<=39 of rational_point_margin certs; the atom already exists in LRCHarmonicGate).
+
+COMPUTED (the d=2 covering): the canonical d=2 family {1..10,x,y} is cleared (M>=2/25) by a covering system of 36 witnesses (q,c,mu), mu/q>=2/25, at moduli {11,12,23,24,25,34,35,36,37}; over 33670 (x,y) EXACTLY ONE uncovered = the AP (11,12) at M=1/13. Small-lcm subsets ({11,12,25}=lcm3300) leave residual classes (cleared at other moduli), so full uniform decidability = nested case analysis, not one flat decide (9-moduli lcm ~2e9).
+
+FORMALIZED (LRCCoveringReach.lean, sorry-free kernel-pure, wired to root):
+ - reach_ge_of_covering (v q c mu): packages kps's rational_point_margin + the compact-sSup wrapper into 'a mod-q clearing cert (mu <= v_i*c %q <= q-mu) => reach >= mu/q'. The UNIFORM Lean shape of EVERY covering certificate (kps's mod-25 floor is the q=25,mu=2 instance).
+ - d2_generic_reach: 11 nmid x AND 11 nmid y => reach(W2 x y) >= 1/11 > 2/25 (the q=11 instance). The d=2 GENERIC bulk closed in Lean.
+The resonant d=2 (11|x or 11|y) cases are further reach_ge_of_covering instances at the other covering moduli (kps q<=39).
+
+INTEGRATION: complements concurrent mac-mini-S33b (THM-634, the cleared/non-transversal branch LRCMod25Transversal) + kps's covering system. The covering-reach atom is the reusable brick both need.
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection; git/finish_session only.)
+
+FILES: 04-computation/lean/.../LRCCoveringReach.lean (kernel-pure) + root import; lrc_d2_covering_macmini_S34.py (+.out), lrc_d2_small_cover_macmini_S34.py (+.out); INDEX. No canon overridden.
+
+NEXT: (a) the resonant d=2 cert instances (11|x cases) as reach_ge_of_covering applications; (b) the UNIFORM covering completeness (nested case analysis or the AP-exception rigidity); (c) assemble the covering pile with the concurrent transversal branch (THM-634) toward (C).
 ## klein-2026-07-06-S144 -- the (C) covering is HEIGHT-UNIFORM on COMPRESSED families; retract my S140 "real-analytic" pessimism; correct kps-S44 "<=14" (HYP-4611)
 
 Prompt (owner): consider the fleet's new work deeply, synthesize, see the bigger picture; best formal state.
