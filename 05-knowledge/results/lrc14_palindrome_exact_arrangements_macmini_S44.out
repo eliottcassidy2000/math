@@ -1,0 +1,30 @@
+== k=13 {2^8,1^4} (record's multiset): 255 words (mod reversal), 165.4s
+   min mu = 17159/32340 = 0.530581 at word (2, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2)  PALINDROME? True  (#tied minimizers: 1)
+   max mu = 0.942857 at (1, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1); arrangement spread = 0.412276
+== k=13 {1^11,2}: 6 words (mod reversal), 151.1s
+   min mu = 176234/315315 = 0.558914 at word (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2)  PALINDROME? False  (#tied minimizers: 1)
+   max mu = 0.859780 at (1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1); arrangement spread = 0.300866
+== k=13 {1^10,2^2}: 36 words (mod reversal), 152.2s
+   min mu = 2539/5390 = 0.471058 at word (2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2)  PALINDROME? True  (#tied minimizers: 1)
+   max mu = 0.876405 at (1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1); arrangement spread = 0.405347
+== k=8 {1^6,2}: 4 words, 0.0s
+   min mu = 1 = 1.000000 at (1, 1, 1, 1, 1, 1, 2) PALIN? False
+   best palindrome 1 = 1.000000 at (1, 1, 1, 2, 1, 1, 1) (excess +0.000000)
+   max mu = 1.000000 at (1, 1, 1, 2, 1, 1, 1)
+== k=8 {1^5,2^2}: 12 words, 0.1s
+   min mu = 2143/2205 = 0.971882 at (2, 1, 1, 1, 1, 1, 2) PALIN? True
+   max mu = 1.000000 at (1, 2, 1, 1, 1, 2, 1)
+== k=8 {1^4,2^3}: 19 words, 0.1s
+   min mu = 1 = 1.000000 at (1, 1, 1, 1, 2, 2, 2) PALIN? False
+   best palindrome 1 = 1.000000 at (1, 1, 2, 2, 2, 1, 1) (excess +0.000000)
+   max mu = 1.000000 at (2, 1, 1, 2, 1, 1, 2)
+== k=8 {3,2,1^5}: 21 words, 0.1s
+   min mu = 2143/2205 = 0.971882 at (1, 2, 1, 1, 1, 1, 3) PALIN? False
+   (no palindrome exists for this multiset -- parity obstruction)
+   max mu = 1.000000 at (2, 1, 1, 1, 1, 1, 3)
+== k=8 {1^3,2^4}: 19 words, 0.2s
+   min mu = 23783/24255 = 0.980540 at (2, 2, 1, 1, 1, 2, 2) PALIN? True
+   max mu = 1.000000 at (2, 1, 2, 1, 2, 1, 2)
+== k=8 {2^6,1} parity-obstructed: 4 words, 0.1s
+   min mu = 61420/63063 = 0.973947 at (2, 2, 2, 1, 2, 2, 2) PALIN? True
+   max mu = 0.989011 at (2, 2, 1, 2, 2, 2, 2)
