@@ -1,0 +1,12 @@
+DENSITY-FLOOR mu_1/7 SPECTRUM over 13-speed families
+============================================================
+  AP {1..13}         mu = 0.44248   GLOBAL MIN (= 477/1078)
+  GW {1..11,13,24}   mu = 0.58838   M-tight, NOT mu-min
+  {1..12,26} (13-ladder k=2) mu = 0.50829
+  {1..9,11,12,13,20} (10-ladder k=2) mu = 0.78048
+  GENERIC (13 indep) mu ~ 0.98826   (uniform-spacings formula = typical value)
+  random 13-sets     mu in [0.976, 0.993], mean 0.987
+
+  ISOLATION: the AP (0.4425) is a STRICT outlier; nearest other family >= 0.51,
+  generic ~0.99.  (A) = 'AP is the unique minimizer' is a RIGIDITY statement about
+  a single isolated point, not a continuum -- the density floor is trivial off it.

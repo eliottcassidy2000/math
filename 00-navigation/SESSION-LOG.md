@@ -73,6 +73,12 @@ CENSUS of the single-scale residue (density node's domain after my coarse reduct
 
 HONEST: not a proof; (A') is the open lemma. Next: formalize k/(10k+7); or attack (A') via three-gap. Files: 3 census scripts+out; reflection the-tight-locus-is-AP-and-GW-...-kps-S54.md; HYP-4717; corrected S53 reflection+INDEX. No canon overridden.
 
+- FORMALIZED GREEN (LRCTenSwapLadder.lean, kernel-pure, in manifest): ap_lonely (AP@1/14), gw_lonely (GW@1/14, the 2nd tight family), thirteenLadder_lonely ({1..12,13k}=k/(13k+1), all k>=1, INCLUDES AP@k=1), tenSwap_lonely ({1..9,11,12,13,10k}=k/(10k+7), k>=2). Both tight families + 3 near-tight ladders.
+- ONE-SWAP TABLE: M({1..13}\{j}u{jk})=k/(jk+b_j) for j>=7 (b_j=8,7,5,7,3,5,1); const for j<=6; only j=12,k=2=GW hits 1/14.
+- DENSITY-FLOOR (mu_1/7) SPECTRUM: [0.4425 (AP, strict isolated min) .. 0.988 (generic)]; GW=0.588 (M-tight, NOT mu-min); nearest ladder >=0.51. So opus's (A) is (A'): AP unique mu_1/7-minimizer = a RIGIDITY statement about a single isolated outlier (floor ~0.99 off it).
+- FIRST GAP (1/14, 2/27) EMPTY (confirmed <=2-swap 0/8385 + max<=20 exhaustive); 2/27 rung = {13-ladder, 10-ladder, AND a two-swap {1..9,11,13,20,24}=AP[10->20,12->24]} => near-tight corner is COMPOSITIONAL, density floor genuinely needed (not a finite cert list).
+
+
 ## mac-mini-2026-07-06-S38 -- DECORRELATION ATOM formalized (owner's descent idea): reach_decorr M(V)>=M(K)-B/L + escape_loose_of_lift_floor (r<=11 escape families LOOSE M>2/25 via LRC<=12 + decorrelation) -- the first rigorous handling of the S36 covering-escape obstruction (THM-636)
 
 Prompt (owner): attack the LRC14 crux with M(V)->M(K), K={distinct k_i}: r<12 (close pair) => LRC(<=12) => loose; r=12 => descend.
