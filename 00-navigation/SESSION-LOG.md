@@ -1,3 +1,23 @@
+## klein-2026-07-06-S150 -- INDEPENDENT CONFIRMATION of mac-mini-S36's covering-escape + the ROUTING synthesis (escape families = rank-2 GAPs => opus's (A), not (C)) (HYP-4651)
+
+Prompt (owner): work the open residual, then formalize; challenge assumptions; pull/push often.
+
+Worked kps-S49's "one open node" (compressed non-translate non-AP blocker => cleared q<=37). First established (finiteness test): these families are UNBOUNDED in height (found to min=1000) => the node is NOT a finite family check but a height-uniform covering. Then probed the boundary and found a rigorous covering-EVADER -- and on sync found mac-mini-S36 (HYP-4667) had JUST closed exactly this out (concurrent convergence), more completely (asymptotic M->2/25+). mac-mini-S36 is CANONICAL for the escape.
+
+MY CONTRIBUTION (honest, post-scoop):
+ - INDEPENDENT CONFIRMATION with a different exact witness: {1+L,...,11+L,12+2L}, L=lcm(2..37); COMPRESSED (ratio 2.0), primitive, non-peelable, mod-25-blocker, non-translate, non-AP; EVADES all q<=37 (==AP mod every q<=37, max M_q=1/13); LOOSE at q=41 (M_41=8/41). Verified by exact modular arithmetic. Confirms unboundedness (raise 37->41 => evader at lcm(2..41)).
+ - THE ROUTING SYNTHESIS (my delta): the escape families are RANK-2 GAPs (base AP generator 1 + lift generator L). So they are precisely opus-S121's (A)-branch object (no coupled rank-2 subtorus has M in (1/13,2/25)), NOT (C) [1-D]. Resolution = a ROUTING correction: compressed L-lifts belong to (A) [rank-2 relative spectrum / decorrelation]; (C) is the genuinely-1-D covering. This reconciles kps-S49 (peel -- WRONG for compressed L-lifts) vs opus-S127 (decorrelation -- RIGHT): the decorrelation branch = opus's (A), REQUIRED not optional.
+
+CONSEQUENCE for the proof route: "finite bounded covering closes (C)" is INCOMPLETE. The correct split: (C) 1-D families => bounded covering q<=37 (finite); rank-2 L-lift GAPs => (A) [J-K relative spectrum / decorrelation], scale-uniform, NOT a fixed covering. The escape families are the irreducible analytic core (mac-mini), now identified with the (A) rank-2 obligation.
+
+HONEST: escape finding is mac-mini's (I confirmed independently); net-new is the (A)-routing + the kps/opus reconciliation. NO new Lean (a claimed-bounded object is unbounded => the bounded-covering formalization is wrong for this class; the correct target is the (A) rank-2 / decorrelation cert, next).
+
+FILES: lrc14_open_node_finiteness_klein_S150.py(+out); INDEX HYP-4651; reflection the-compressed-L-lift-escape-is-unbounded-the-covering-alone-cannot-close-C; this log.
+
+NEXT: formalize/route the compressed L-lifts through (A) [opus's rank-2 LRCRoute2Assembly + the decorrelation/relative-spectrum cert]; keep (C) as the bounded covering for genuinely-1-D families. The Fan-Sun order-2 GAP structure (klein-S147) is the bridge: order-2 = rank-2 = (A).
+
+---
+
 ## mac-mini-2026-07-06-S36 -- CHALLENGE: the FINITE covering of (C) is INCOMPLETE. Compressed, non-translate, non-AP families (==AP mod lcm(2..Q0), varying k) ESCAPE any finite covering {2..Q0}, clearing only at q=nextprime(Q0); (G) still holds (loose, M->2/25+). Refutes 'finite covering, no height bound' (opus-S126, kps-S47/S49/S50, klein-S147) (HYP-4667)
 
 Prompt (owner): work the open math, challenge assumptions, improve proofs.

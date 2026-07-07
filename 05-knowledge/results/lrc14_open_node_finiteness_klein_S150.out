@@ -1,0 +1,28 @@
+Open node: COMPRESSED (max<=13min) NON-TRANSLATE NON-AP mod-25-BLOCKER (M_25<2/25) => cleared.
+Q: bounded height? finite? clearing-q bound?
+====================================================================================
+ min m     window  #blockers(exh/samp)  maxclearq      example blocker (clear-q)
+     1     [1,13]              3 (exh)         19  ([1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13], 19)
+     2     [2,26]         89309 (samp)         34  ([2, 9, 10, 13, 14, 16, 19, 22, 23, 24, 25, 26], 34)
+     3     [3,39]         61909 (samp)         29  ([3, 9, 11, 15, 16, 17, 20, 21, 23, 24, 25, 26], 29)
+     4     [4,52]         82674 (samp)         29  ([4, 17, 20, 23, 27, 28, 31, 38, 44, 47, 48, 50], 29)
+     5     [5,65]         67224 (samp)         29  ([5, 11, 14, 21, 23, 25, 30, 33, 36, 38, 44, 48], 29)
+     6     [6,78]         80019 (samp)         27  ([6, 10, 17, 26, 36, 38, 40, 42, 46, 48, 66, 75], 27)
+     8    [8,104]         78727 (samp)         30  ([8, 40, 44, 51, 54, 69, 75, 76, 78, 84, 87, 96], 30)
+    10   [10,130]         77617 (samp)         27  ([10, 15, 21, 23, 34, 66, 72, 75, 80, 82, 87, 95], 27)
+    15   [15,195]         72496 (samp)         29  ([15, 16, 21, 23, 88, 95, 104, 125, 126, 136, 168, 180], 29)
+    20   [20,260]         75520 (samp)         30  ([20, 68, 75, 87, 110, 115, 129, 168, 196, 216, 228, 248], 30)
+    30   [30,390]         71641 (samp)         29  ([30, 63, 72, 75, 105, 139, 171, 187, 196, 317, 351, 368], 29)
+    50   [50,650]        199924 (samp)         32  ([50, 93, 109, 155, 214, 243, 323, 336, 360, 506, 579, 637], 32)
+   100 [100,1300]        199918 (samp)         37  ([100, 288, 437, 462, 840, 861, 927, 930, 986, 1087, 1107, 1182], 37)
+   300 [300,3900]        199914 (samp)         34  ([300, 1922, 2139, 2376, 3156, 3198, 3238, 3360, 3364, 3378, 3648, 3792], 34)
+  1000 [1000,13000]        199894 (samp)         34  ([1000, 2046, 2679, 5239, 5323, 7329, 7395, 10017, 11592, 12150, 12176, 12288], 34)
+====================================================================================
+largest min m with a compressed non-translate non-AP blocker found: 1000
+overall max clearing-q: 37
+
+READING: if blockers PERSIST at large min (unbounded height) -> the node is NOT a finite family
+check; it needs the height-uniform covering (finite RESIDUE classes). If blockers VANISH above
+some m0 -> the node is a FINITE check (native_decide over m<=m0). Either way max-clear-q bounds
+the covering set. This decides the formalization strategy.
+DONE
