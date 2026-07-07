@@ -15,6 +15,22 @@ FLAG: HYP-4801 double-filed (my S156 + boxeph-S1) -- boxeph to renumber/cross-an
 FILES: 04-computation/lrc14_two_anchor_double_cover_klein_S160.py (+out); reflection; HYP-4841. No Lean (owner directive). No canon overridden.
 
 NEXT: (a) dual sign-audit + feasibility enumeration => state the integer weighted-cherry theorem; (b) the all-odd PA_2 = union-of-translates estimate (meas(T u T-1/2) >= T_k via T's arc structure -- roof-exact on the minimizer class); (c) mixed-parity PA_2 via the half-speed decomposition; (d) test the three cutoff tournaments' invariants against LP/PA_2 minimizers.
+## opus-2026-07-07-S138 -- THE 2-ANCHOR TAIL MADE EXACT on its binding class (shifted-origin roof: exact 1-anchor limit table, k=8 the one miss, 2-anchor rescue +0.183..+0.310) + the PERSONAL-SPACE TOURNAMENT (sum E[PS]=2 conservation; THE OBSERVER BREAKS THE MIRROR) + the BB(27)/Goldbach certificate-compression lens (HYP-4942)
+
+Prompt (owner): work the 2-anchor joint tail; arXiv:1505.02479 (Yedidia-Aaronson)/BB(27)/our Goldbach threads as inspiration; invent pair-statistic tournaments with creative cutoffs; the relativity of perspectives (antisymmetric pairwise rates).
+
+MAIN (boxeph-S1's named joint step "Farey roof from a shifted origin -> exact PA_2"):
+ (1) config({a+dj},x) = Steinhaus C0(y=dx) rotated by z=ax; (y,z) -> Haar(T^2) => the 1-ANCHOR LIMIT = E_y[LONG-GAP MASS L], and with the classical three-distance multiplicities N1=K+1-q / N2=K+1-q' / N3=q+q'-K-1 (machine-verified EXACT 0 violations K<=16; THM-637 values => proof-grade), E_y[L] is EXACT per k: 1041/1715, 888/1715, 2269/5145, 274/735, 873/2695, 15982/56595 (k=8..13). Matches boxeph's numeric inf table; k=8 sits BELOW T_8 by ~0.0115 = the exact reason one anchor misses only k=8.
+ (2) 2-ANCHOR LIMIT E_y[meas(S u (S-1/2))] ~ .8017/.6927/.5974/.4978/.4287/.3665: k=8 rescued (+0.183), margins grow to +0.310. Gain = long gaps decorrelating from their half-shifts.
+ (3) FINITE (a,d) EXACT PA_2: (2,5) at k=8 = 0.79524 dips BELOW the T^2 limit; boxeph's k=9/10 descents also dip ~0.007 below my limits => the true inf carries a finite correction; exact finite sweep flagged. REMAINING GATE (stated exactly): inf_E PA_2 >= T_k, binding class = spread APs at the constants above.
+ (4) HALF-SHIFT PARITY MECHANICS: x -> x+1/2 fixes evens, rotates odds by 1/2 => all-odd gap@1/2(x) = gap@0(x+1/2) exact (= klein-S160's voltage statement, concurrent reserve -- their double-cover/LP-dual angle complementary, cross-cited); the {0,1/2} pair is LEMOINE-SHAPED (the 2-adic-weighted pair slot) -- where the owner's Goldbach pointer lands.
+ (5) BB(27) LENS: LRC(14) effectively Pi_1; the program = machine-size reduction; residual inventory = [2-anchor rigidity @ 6 exact constants] + [Part-A <= V0abs 1106] + [D>75 tail] + [wide-cluster gate]; the anchored reformulation compressed 'max over 13 gaps' to 'floor on 2 fixed gaps'.
+
+CREATIVE (differentiated from monad-S5 centering/exclusive-attention + kps-S64 leader/Paley -- and note kps THM-640's Paley bridge lands the old flip-rank/Paley-heptagon thread): PERSONAL-SPACE TOURNAMENT: PS_i = sum of the two gaps flanking runner i; CONSERVATION sum_i PS_i = 2 EXACT; i->j iff E[PS_i] > E[PS_j] (exact); E[PS_0] = E[gap@0] (AP: 93/440 = THM-637(a)); observer RANK separates (0 for AP/GW/deep-well/far-elt; 1 for parity-record/prim-sat/one mirror member); THE OBSERVER BREAKS THE MIRROR: mirror pair {1..12,20} vs reversal: E[PS_0] = 0.2055 vs 0.1741 -- multiset functionals mirror-blind (S137), observer-anchored ones SEE reversal (mac-mini-S43's symmetry breaking localized to perspectival statistics).
+
+Files: lrc_PA2_shifted_roof / lrc_personal_space_tournament _opus_S138 (+outs); reflection the-two-anchor-tail-made-exact-and-the-observer-breaks-the-mirror-opus-S138; HYP-4942. 3 pulls. No Lean (owner priority).
+
+NEXT: (a) the 2-anchor rigidity lemma inf PA_2 >= T_k -- the analytic gate; exact finite-family sweep of the near-limit dip first ((2,5)-type corrections), then the 2-gap three-distance rigidity proper (klein-S160's LP duals + my exact constants should meet); (b) exact 2-anchor limit table (replace 200k numerics with per-cell exact position bookkeeping); (c) personal-space profile as a certificate (observer rank 0 <=> ledger-zone shapes?).
 
 ---
 
