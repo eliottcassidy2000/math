@@ -1,0 +1,15 @@
+=== LRC(14) three-gap rigidity g-count (extends mac-mini-S15 from 12-speed to 13-speed), opus-S132 ===
+    g = # distinct gap lengths of phases at the M-witness. S15: near-tight => g<=3, loose => g>=7
+
+family                                               M      ~M   g
+  AP {1..13} (tight)                                1/14  0.0714   1   t=1/14
+  GW {1..11,13,24} (2nd tight)                      1/14  0.0714   2   t=1/14
+  2*AP {2..26 even} (sat tight)                     1/14  0.0714   1   t=1/28
+  {1..12,182} (deep well, sat)                    14/183  0.0765   2   t=14/183
+  {1..4,10..18} (sat, min-M ss)                     1/12  0.0833   2   t=5/24
+  {2..14} consec (sat, loose)                        1/8  0.1250   2   t=1/16
+  {1,2,3,4,5,7..14} (sat)                           2/23  0.0870   3   t=4/23
+  generic loose {3,5,7,11,13,17,19,23,29,31,37,41,43}       1/2  0.5000   1   t=1/2
+
+  => if near-tight LRC14 families have g<=3-4 and loose g>=7, S15's three-gap rigidity
+     EXTENDS to 13 speeds; the moat/(G) = converse-three-gap: M near 1/14 => g<=3 => {k*alpha} orbit => M on Farey ladder.
