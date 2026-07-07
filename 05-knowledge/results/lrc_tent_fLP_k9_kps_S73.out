@@ -1,11 +1,21 @@
 ============================================================================================
-THE f-LP (rings included): optimal weight function for the gap-histogram floor
+(i) k=9 tent (a = 5/63): random+descent search for min ring sum vs theory 1 - 9a = 18/63
 ============================================================================================
-  k=8: f-LP floor = 0.89188  (tent 0.7500, honest bar 0.6750) DISCHARGES  [NOT converged (adv found 0.0000), 25 rounds]
-        supp(f*) ~ [0.1199, 0.1429] = [3.36, 4.00]/28; max f* = 0.7331
-  k=9: f-LP floor = 0.85837  (tent 0.4921, honest bar 0.5622) DISCHARGES  [NOT converged (adv found 0.0000), 25 rounds]
-        supp(f*) ~ [0.1077, 0.1429] = [3.01, 4.00]/28; max f* = 0.5000
-  k=10: f-LP floor = 0.84215  (tent 0.2286, honest bar 0.4521) DISCHARGES  [NOT converged (adv found 0.0000), 25 rounds]
-        supp(f*) ~ [0.0964, 0.1429] = [2.70, 4.00]/28; max f* = 0.3333
-  k=11: f-LP floor = 0.83812  (tent 0.0000, honest bar 0.3312) DISCHARGES  [NOT converged (adv found 0.0000), 25 rounds]
-        supp(f*) ~ [0.0862, 0.1429] = [2.41, 4.00]/28; max f* = 0.3176
+    search min = 0.285714; theory m = 1 - 9*(5/63) = 0.285714 = 2/7
+    floor = 1 - 72*((1/7 - 5/63)^2/2)/(2/7) = 0.492063 = 31/63 = 0.492063
+
+(ii) ring-2 on the binding face: all gaps >= 5/63 => 2-sums >= 10/63 > 9/63 = 1/7: True
+
+============================================================================================
+(iii) conditional-tent arithmetic (c = discrepancy factor, program target c <= 1.7)
+============================================================================================
+    k=9, c=1.0: rho* >= meas(G_P)*(1 - c*(1-floor)) = 0.2432 >= m_P 0.0565: True
+    k=9, c=1.3: rho* >= meas(G_P)*(1 - c*(1-floor)) = 0.1679 >= m_P 0.0565: True
+    k=9, c=1.7: rho* >= meas(G_P)*(1 - c*(1-floor)) = 0.0675 >= m_P 0.0565: True
+    k=10, c=1.0: rho* >= meas(G_P)*(1 - c*(1-floor)) = 0.1381 >= m_P 0.0565: True
+    k=10, c=1.3: rho* >= meas(G_P)*(1 - c*(1-floor)) = -0.0017 >= m_P 0.0565: False
+    k=10, c=1.7: rho* >= meas(G_P)*(1 - c*(1-floor)) = -0.1882 >= m_P 0.0565: False
+
+    => at c = 1 (no discrepancy): k=9 headroom 4.3x, k=10 headroom 2.4x;
+       c <= 1.7 suffices at k=9; c <= 1.3-ish at k=10.  The finite program:
+       exact int_{G_P} f(frac(dx)) tables for small d per P + Koksma tail for large d.

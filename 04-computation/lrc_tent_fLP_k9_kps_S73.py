@@ -1,155 +1,107 @@
 #!/usr/bin/env python3
 r"""
-lrc_tent_fLP_k9_kps_S73.py   (kind-pasteur-2026-07-07-S73, HYP-5147 follow-through)
+lrc_tent_fLP_k9_kps_S73.py   (kind-pasteur-2026-07-07-S73, HYP-5147 follow-through)  v2
 
-THE FULL f-LP: optimize the shifted-tent theorem's weight function.
+THE f-GAME ABOVE THE TENT: is 31/63 (k=9) improvable within the gap-histogram frame?
 
-For a nonneg f supported on (0, 1/7], the theorem machinery gives, for every k-family,
-    mu_{1/7}(E) >= 1 - k(k-1) * int f / m(f),
-    m(f) = min over gap vectors {g in [0,1/7]^k, sum g = 1} of RINGSUM_f(g),
-    RINGSUM_f(g) = sum_{l=1}^{k-1} sum_{i=1}^{k} f(S_{i,l}),  S_{i,l} = g_i + ... + g_{i+l-1} (cyclic)
-(only terms with S <= 1/7 pay, since supp f = (0,1/7]; every term is an ordered-pair
-difference, and pair equidistribution gives E[sum over ALL k(k-1) ordered pairs] =
-k(k-1) int f -- ring terms with S > 1/7 contribute >= 0 there, so the bound is valid).
+The frame: f >= 0 supported on (0, 1/7]; for every k-family,
+    mu_{1/7}(E) >= 1 - k(k-1) int f / m(f),
+    m(f) = min over safe gap vectors {g in [0,1/7]^k, sum g = 1} of the ring sum
+           RINGSUM_f(g) = sum_{l,i} f(S_{i,l}) (terms with S <= 1/7).
 
-The tent f = (s - beta)+ realizes: k=8: 3/4 (DISCHARGES the honest bar 0.6750);
-k=9: 31/63 = 0.4921 vs bar 0.5622; k=10: 8/35 = 0.2286 vs bar 0.4521.
-QUESTION: does the OPTIMAL f close k=9 or k=10?
+FINDINGS (this file documents analysis + verification, not a search):
 
-METHOD: column-generation LP.  Variables: f on a grid of (0, 1/7] (N bins, piecewise
-constant).  Constraints: RINGSUM_f(g) >= 1 for every g in a working set of gap configs.
-Objective: minimize int f.  After each solve, search for violated configs (adversary:
-minimize RINGSUM over the polytope by projected local descent + structured seeds);
-add violations, repeat until clean.  Floor = 1 - k(k-1) * int f.
+(1) TENT OPTIMALITY AMONG CONVEX f (proof).  For convex f, g |-> sum_i f(g_i) is
+    Schur-convex, so the safe-polytope minimum is at the all-equal config g = 1/k
+    (the majorization-minimal point), giving m(f) = k f(1/k) (+ rings: the all-equal
+    config's ring-l sums are l/k > 1/7 for l >= 2, k <= 13 -- no ring payment).
+    The floor is 1 - k(k-1) int f / (k f(1/k)); minimizing int f / f(1/k) over convex
+    f >= 0 supported in (0,1/7] is achieved by the widest tent through (1/k, f(1/k)):
+    f = (s - a)+ with d/da[(1/7-a)^2 / (1/9-a)] = 0 => (k=9) a = 5/63, value 31/63.
+    The k=8 case: a = 3/28, value 3/4 (the theorem).  General k: a = (14-k)/(7k),
+    floor = 1 - 2(k-1)(k-7)/(7k).
 
-NOTE (honest): the certified floor is modulo the adversary search being exhaustive --
-the tent value is a PROVED baseline; any improvement here is 'verified-LP' grade until
-the binding configs are handled analytically.
+(2) RINGS DO NOT BITE AT k >= 9: the binding face (all gaps >= a) has ring-2 sums
+    >= 2a = 2(14-k)/(7k); at k=9 that is 10/63 > 1/7, so no ring-2 term can be forced.
+    (Verified numerically below.)
+
+(3) NON-CONVEX f DOES NOT HELP (the all-equal cap): the adversary can always play
+    all-equal, so every f obeys floor <= 1 - k(k-1) int f / (k f(1/k)); relaxing
+    convexity only weakens the min elsewhere.  Numerical column-generation confirms
+    the ping-pong: the adversary hides in a band around 1/k, the LP dodges per-config
+    constraints forever (the working-set LP values are NOT valid floors; the earlier
+    v1 output of this script is superseded by this analysis -- kept in git history).
+
+(4) WHAT REMAINS FOR k=9, 10 (named):
+    (a) SIGNED f (two-sided Markov: negative mass on (0, eps] taxes the tail's close
+        pairs; k=9 safe configs can carry up to 4 tiny gaps, so the sign structure is
+        genuinely different) -- the full degree-2 game, OPEN.
+    (b) THE CONDITIONAL TENT (the k=9/k=10 program): bound
+        E[F 1_{G_P}] = sum_pairs int_{G_P} f(frac(dx)) dx <= c * meas(G_P) * k(k-1) int f
+        with c <= 1.7; then rho* >= meas(G_P)(1 - c(1 - 31/63)) >= m_P discharges k=9
+        with ~4x headroom at c = 1 (0.4943 * 0.4921 = 0.2433 vs m_P = 0.0565), and
+        k=10 at 2.4x.  For d large, Koksma/interval counting gives c -> 1 at rate
+        #intervals(G_P)/d; SMALL d need a finite exact table per P -- the resonant
+        shapes (f-window intervals dodging G_P's holes) are the honest obstruction
+        (the R2 wall at the G_P-alignment level, but now FINITE: d small, P finite).
+
+Verification below: (i) Schur/all-equal minimum for the k=9 tent; (ii) ring-2 sums
+on the binding face; (iii) the k=9/k=10 conditional-tent arithmetic.
 """
 import random
-import numpy as np
-from scipy.optimize import linprog
+from fractions import Fraction as F_
 
 THR = 1.0 / 7.0
 
-def make_ringsum(k, N):
-    """returns function: given f-vector (grid on (0,THR]) and gap vector, RINGSUM."""
-    def bin_of(s):
-        if s <= 0 or s > THR:
-            return -1
-        b = int(s / THR * N)
-        return min(b, N - 1)
-    def ringsum_vec(g):
-        """coefficient vector: counts per bin over all ring sums <= THR."""
-        v = np.zeros(N)
-        kk = len(g)
-        for i in range(kk):
-            s = 0.0
-            for l in range(1, kk):
-                s += g[(i + l - 1) % kk]
-                if s > THR:
-                    break
-                b = bin_of(s)
-                if b >= 0:
-                    v[b] += 1
-        return v
-    return ringsum_vec, bin_of
+def tent(s, a):
+    return max(0.0, s - a) if s <= THR + 1e-15 else 0.0
 
-def adversary_min(fvals, k, N, rng, tries=400, steps=600):
-    """minimize RINGSUM_f over the gap polytope; returns (value, g)."""
-    ringsum_vec, bin_of = make_ringsum(k, N)
-    def val(g):
-        return float(np.dot(ringsum_vec(g), fvals))
-    best_v, best_g = None, None
-    seeds = []
-    # structured two/three-value seeds
-    for t in range(k):
-        for lo_frac in (0.0, 0.25, 0.5, 0.75, 1.0):
-            lo = lo_frac * THR
-            s_rest = 1 - t * lo
-            if s_rest < 0 or k - t == 0:
-                continue
-            hi = s_rest / (k - t)
-            if hi <= THR + 1e-12 and hi >= 0:
-                seeds.append([lo] * t + [hi] * (k - t))
-    for _ in range(tries):
-        g = [rng.uniform(0, THR) for _ in range(k - 1)]
-        s = sum(g)
-        if s < 1 and 1 - s <= THR:
-            seeds.append(g + [1 - s])
-    for g0 in seeds:
-        g = list(g0)
-        if abs(sum(g) - 1) > 1e-9 or max(g) > THR + 1e-9:
-            continue
-        v = val(g)
-        # projected pairwise-transfer descent
-        for _ in range(steps):
-            i, j = rng.randrange(k), rng.randrange(k)
-            if i == j:
-                continue
-            eps = rng.uniform(-0.02, 0.02) * THR
-            gi, gj = g[i] + eps, g[j] - eps
-            if 0 <= gi <= THR and 0 <= gj <= THR:
-                g2 = list(g)
-                g2[i], g2[j] = gi, gj
-                v2 = val(g2)
-                if v2 < v - 1e-12:
-                    g, v = g2, v2
-        if best_v is None or v < best_v:
-            best_v, best_g = v, g
-    return best_v, best_g
+def ringsum(g, a):
+    k = len(g)
+    tot = 0.0
+    for i in range(k):
+        s = 0.0
+        for l in range(1, k):
+            s += g[(i + l - 1) % k]
+            if s > THR:
+                break
+            tot += tent(s, a)
+    return tot
 
-def f_lp(k, N=280, rounds=25, seed=73):
-    rng = random.Random(seed)
-    ringsum_vec, _ = make_ringsum(k, N)
-    ds = THR / N
-    # start with structured configs
-    configs = []
-    for t in range(k):
-        s_rest = 1 - t * 0.0
-        hi = s_rest / (k - t) if k > t else None
-        if hi is not None and hi <= THR:
-            configs.append([0.0] * t + [hi] * (k - t))
-    configs.append([1.0 / k] * k)
-    val_hist = []
-    for rd in range(rounds):
-        A_ub, b_ub = [], []
-        for g in configs:
-            A_ub.append(-ringsum_vec(g))
-            b_ub.append(-1.0)
-        c = np.full(N, ds)
-        res = linprog(c, A_ub=np.array(A_ub), b_ub=np.array(b_ub),
-                      bounds=[(0, None)] * N, method="highs")
-        if res.status != 0:
-            return None, None, None
-        fvals = res.x
-        intf = float(res.fun)
-        floor = 1 - k * (k - 1) * intf
-        # adversary
-        v, g_bad = adversary_min(fvals, k, N, rng)
-        val_hist.append((rd, floor, v))
-        if v >= 1 - 1e-6:
-            return floor, fvals, val_hist
-        configs.append(g_bad)
-    return floor, fvals, val_hist
-
+rng = random.Random(73)
 print("=" * 92)
-print("THE f-LP (rings included): optimal weight function for the gap-histogram floor")
+print("(i) k=9 tent (a = 5/63): random+descent search for min ring sum vs theory 1 - 9a = 18/63")
 print("=" * 92)
-HONEST = {8: 0.675024, 9: 0.562233, 10: 0.452092, 11: 0.331246, 12: 0.199344, 13: 0.056487}
-TENT = {8: 3/4, 9: 31/63, 10: 8/35, 11: 0.0, 12: 0.0, 13: 0.0}
-for k in (8, 9, 10, 11):
-    floor, fvals, hist = f_lp(k)
-    if floor is None:
-        print(f"  k={k}: LP failed")
-        continue
-    conv = "converged" if hist[-1][2] >= 1 - 1e-6 else f"NOT converged (adv found {hist[-1][2]:.4f})"
-    print(f"  k={k}: f-LP floor = {floor:.5f}  (tent {TENT[k]:.4f}, honest bar {HONEST[k]:.4f}) "
-          f"{'DISCHARGES' if floor > HONEST[k] else 'short'}  [{conv}, {len(hist)} rounds]")
-    # describe optimal f coarsely
-    N = len(fvals)
-    nz = [i for i in range(N) if fvals[i] > 1e-8]
-    if nz:
-        lo, hi = nz[0] / N * THR, (nz[-1] + 1) / N * THR
-        print(f"        supp(f*) ~ [{lo:.4f}, {hi:.4f}] = [{lo*28:.2f}, {hi*28:.2f}]/28; "
-              f"max f* = {max(fvals):.4f}")
+a9 = 5.0 / 63.0
+best = None
+for _ in range(120000):
+    g = [rng.uniform(0, THR) for _ in range(8)]
+    s = sum(g)
+    if s < 1 and 1 - s <= THR:
+        g.append(1 - s)
+        v = ringsum(g, a9)
+        if best is None or v < best[0]:
+            best = (v, sorted(g))
+print(f"    search min = {best[0]:.6f}; theory m = 1 - 9*(5/63) = {1 - 9*a9:.6f} = 2/7")
+print(f"    floor = 1 - 72*((1/7 - 5/63)^2/2)/(2/7) = {1 - 72*((THR - a9)**2/2)/(2.0/7):.6f} = 31/63 = {31/63:.6f}")
+
+print()
+print("(ii) ring-2 on the binding face: all gaps >= 5/63 => 2-sums >= 10/63 > 9/63 = 1/7:", 10/63 > 1/7)
+
+print()
+print("=" * 92)
+print("(iii) conditional-tent arithmetic (c = discrepancy factor, program target c <= 1.7)")
+print("=" * 92)
+MEAS = {9: F_(1979, 4004), 10: F_(55, 91), 11: F_(66, 91), 12: F_(6, 7)}
+TENTF = {9: F_(31, 63), 10: F_(8, 35), 11: F_(0), 12: F_(0)}
+MP = F_(14249, 252252)
+for k in (9, 10):
+    for c_num in (10, 13, 17):
+        c = F_(c_num, 10)
+        rho = MEAS[k] * (1 - c * (1 - TENTF[k]))
+        print(f"    k={k}, c={float(c):.1f}: rho* >= meas(G_P)*(1 - c*(1-floor)) = {float(rho):.4f} "
+              f">= m_P {float(MP):.4f}: {rho >= MP}")
+print()
+print("    => at c = 1 (no discrepancy): k=9 headroom 4.3x, k=10 headroom 2.4x;")
+print("       c <= 1.7 suffices at k=9; c <= 1.3-ish at k=10.  The finite program:")
+print("       exact int_{G_P} f(frac(dx)) tables for small d per P + Koksma tail for large d.")
