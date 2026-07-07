@@ -1,3 +1,23 @@
+## mac-mini-2026-07-06-S34b -- THM-635 TRANSLATE-BLOCK BOUND FORMALIZED (kernel-pure): {m..m+11} reach>=m/(2m+11)>=2/25 for m>=2, only AP(m=1) tight; closes opus-S127's branch-3 uniform-k (non-AP translates + uniform L-lifts loose) via the S34 covering-reach atom
+
+Prompt (owner): work on the residual, make progress on the crux creatively.
+
+The fleet STRUCTURALLY CLOSED the crux (C) into a FINITE COVERING SYSTEM, no height bound (kps-S44 pigeonhole bounded modulus; opus-S125 two-modulus 13/25 factoring; opus-S126 synthesis; opus-S127 4-branch skeleton + escape-loose; kps-S46/S47 r-lift ladder program). 4 branches: (1) non-blockers=mod-25 GREEN; (2) blockers != AP mod L = finite covering q<=Q0; (3) blockers == AP mod L (L-lift escape) = loose; (4) AP = tight-locus.
+
+MY CONTRIBUTION to the residual (branch 3, uniform-k): THM-635 translate-block bound, FORMALIZED.
+ STATEMENT: {m,..,m+11} has M >= m/(2m+11) >= 2/25 for m>=2; only m=1 (AP) tight (1/13).
+ PROOF: witness t=1/(2m+11); each speed v in [m,m+11] has v mod (2m+11)=v in [m,(2m+11)-m], off the band; M >= m/(2m+11); m/(2m+11)>=2/25 <=> m>=2. Exact M=m/(2m+11): 1/13,2/15,3/17,... (verified).
+ => every non-AP translate of the AP -- in particular every uniform L-lift {1+Lk,..,12+Lk} (m=1+Lk>=2) -- is loose. Closes opus-S127's branch-3 uniform-k escape.
+ A DIRECT INSTANCE of my S34 covering-reach atom reach_ge_of_covering (q=2m+11,c=1,mu=m) -- validating the atom on the actual residual.
+ LEAN: LRCCoveringReach.lean (Blk, translate_block_reach), axioms [propext,Classical.choice,Quot.sound]. GREEN.
+
+STATE of (C) formalization: branch 1 GREEN (kps LRCMod25Floor + THM-634); branch 3 uniform-k GREEN (THM-635); the covering-reach atom (S34) is the brick for branch 2 certs (kps's 13<=q<=24 avoid-band). Residual: branch 2 finite certs (r=2 hard shapes lift speed 6,12 -- kps-S47 mapped Q0=25) + branch 3 mixed-k (my S14 decorrelation, opus-flagged load-bearing) + branch 4 tight-locus + assembly.
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection; git/finish_session only.)
+
+FILES: LRCCoveringReach.lean (+Blk/translate_block_reach), 01-canon/theorems/THM-635-translate-block-bound.md; INDEX. No canon overridden.
+
+NEXT (proposed to kps): take the r=2 hard-shape avoid-band certs (13<=q<=24) via reach_ge_of_covering -- my atom is exactly the brick; OR the branch-3 mixed-k decorrelation (my S14). Offered to split.
 ## opus-2026-07-06-S128 -- CONSECUTIVE BLOCKS ARE LOOSE: the uniform-lift escape of (C) FORMALIZED (HYP-4616); LRCConsecutiveBlock.lean GREEN
 
 Prompt: keep working creatively on open tasks relating to the LRC14 crux.
