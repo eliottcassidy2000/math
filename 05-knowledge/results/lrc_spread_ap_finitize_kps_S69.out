@@ -1,0 +1,48 @@
+============================================================================================
+PART 1 -- exact PA_2 engine: validate vs numeric + dilation invariance (exact)
+============================================================================================
+  E=[1, 3, 5, 7, 9, 11, 13, 15]: exact=262454/315315=0.83235  numeric=0.83240  match=True
+  E=[2, 5, 8, 11, 14]: exact=227/231=0.98268  numeric=0.98273  match=True
+  E=[5, 7, 9, 11, 13, 15, 17, 19, 21, 23]: exact=890476493/1561650090=0.57022  numeric=0.57000  match=True
+  dilation PA2([3, 5, 7, 9, 11])=0.96825 == PA2([9, 15, 21, 27, 33])=0.96825: True
+
+============================================================================================
+PART 2 -- EXACT resonant minimum over the coprime spread-AP box, per k
+============================================================================================
+  k=8 (T_k~0.6185): EXACT min PA_2 over coprime box (d<=6,a<=21) = 1164298/1616615 = 0.72021 at (a,d)=(5,2); >= T_k: True; margin +0.1017
+  k=10 (T_k~0.3956): EXACT min PA_2 over coprime box (d<=6,a<=21) = 178278085157/323982330210 = 0.55027 at (a,d)=(15,2); >= T_k: True; margin +0.1547
+  k=13 (T_k~0.0565): EXACT min PA_2 over coprime box (d<=6,a<=21) = 14892552877/46727286606 = 0.31871 at (a,d)=(15,2); >= T_k: True; margin +0.2622
+
+============================================================================================
+PART 3 -- the T^2 decorrelated limit PA_2^inf(k) + margin (finitizes the tail)
+============================================================================================
+  k=8: PA_2^inf = 0.7994 (T^2 avg) vs T_k~0.6185: margin +0.1809 (>0 => decorrelated tail clears)
+  k=10: PA_2^inf = 0.5926 (T^2 avg) vs T_k~0.3956: margin +0.1970 (>0 => decorrelated tail clears)
+  k=13: PA_2^inf = 0.3648 (T^2 avg) vs T_k~0.0565: margin +0.3083 (>0 => decorrelated tail clears)
+
+  FINITIZATION: PA_2({a+dj}) is dilation-invariant (=> gcd(a,d)=1), exact-rational per
+  (a,d), and -> PA_2^inf(k) > T_k as max(a,d)->inf (Weyl); by Erdos-Turan (BV indicator)
+  there is an explicit B_0(k) beyond which PA_2 >= T_k, so
+     inf over spread APs = min over {gcd(a,d)=1, max(a,d)<=B_0} of EXACT rationals >= T_k.
+  The resonant min (d=2 dip) is exact-rational and clears T_k with the margins above.
+  Remaining (R2, separate): spread APs are the GLOBAL PA_2-minimizer (boxeph's claim).
+DONE.
+
+DIP-LOCATION CHECK (k=8, T_8=0.6185): min PA_2 per d over a<=40 (watch d=7,11,13 resonances)
+  d= 1: min PA_2 = 0.7743 at a=4
+  d= 2: min PA_2 = 0.7203 at a=5
+  d= 3: min PA_2 = 0.7860 at a=4
+  d= 4: min PA_2 = 0.7659 at a=3
+  d= 5: min PA_2 = 0.7905 at a=4
+  d= 6: min PA_2 = 0.7941 at a=5
+  d= 7: min PA_2 = 0.7995 at a=4 <-- 1/7-RESONANCE d
+  d= 8: min PA_2 = 0.7960 at a=13
+  d= 9: min PA_2 = 0.7976 at a=4
+  d=10: min PA_2 = 0.7949 at a=11
+  d=11: min PA_2 = 0.7984 at a=4
+  d=12: min PA_2 = 0.7952 at a=7
+  d=13: min PA_2 = 0.7996 at a=4
+  d=14: min PA_2 = 0.7995 at a=19 <-- 1/7-RESONANCE d
+  d=15: min PA_2 = 0.7972 at a=4
+  GLOBAL min over d<=15: 0.7203 at d=2,a=5  >= T_8=0.6185: True
+  => the resonant dip is at d=2 (bounded); d=7 does NOT dip below; confirms finite box.

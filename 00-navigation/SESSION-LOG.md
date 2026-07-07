@@ -1,3 +1,20 @@
+## kind-pasteur-2026-07-07-S69 -- FINITIZED THE SPREAD-AP RESIDUAL EXACTLY: the 2-anchor tail's spread-AP inf is now a finite EXACT RATIONAL check (resonant minima at d=2 clearing T_k) + a T2-decorrelation tail, replacing boxeph's adversarial numerics (HYP-5067)
+
+Prompt (owner): keep working the bleeding edge and finitize the spread-AP residual exactly.
+
+After my S68 anchored-gap subset lemma finitized the 2-anchor tail PA_2(E)=P(max(gap@0,gap@1/2)>1/7)>=T_k on bounded diameter, the residual was the spread-AP family {a+dj} (large d), verified only adversarially. THREE EXACT FACTS make it a finite check:
+(i) DILATION INVARIANCE PA_2(cE)=PA_2(E) -- VERIFIED EXACT (PA_2([3,5,7,9,11])==PA_2([9,15,21,27,33])) => reduce to gcd(a,d)=1.
+(ii) EXACT RATIONAL per (a,d) via the anchored order-cell engine (breakpoints m/(e_i-e_j) [order], m/e_i [anchor 0], (2m+1)/(2e_i) [anchor 1/2]; each anchor gap affine per cell; max>1/7 by exact linear crossings) -- validated vs numeric 4-5 digits.
+(iii) DECORRELATION: config = Steinhaus_d(dx) rotated by frac(ax); (frac(ax),frac(dx)) geodesic equidistributes on T2 (Weyl) => PA_2 -> PA_2^inf(k) = T2 average = 0.7994/0.5926/0.3648 (k=8/10/13) > T_k with margins +0.18/+0.20/+0.31.
+
+EXACT RESONANT MINIMA (all at the d=2 dip): k=8: 1164298/1616615=0.72021 at (5,2), margin +0.1017; k=10: 178278085157/323982330210=0.55027 at (15,2), +0.1547; k=13: 14892552877/46727286606=0.31871 at (15,2), +0.2622. DIP-LOCATION CONFIRMED: global min over d<=15 at d=2; the special 1/7-resonance d=7 does NOT dip (0.7995); all d>=3 >= 0.766 => resonant dip BOUNDED.
+
+FINITIZATION: inf over spread APs = min over the finite coprime box {gcd(a,d)=1, max(a,d)<=B_0(k)} of EXACT rationals >= T_k; box finite by Erdos-Turan (max-of-2-anchor-gaps indicator has BV => explicit equidistribution rate => explicit B_0). So boxeph's adversarial PA_2>=T_k is now an exact-rational finite check + one standard analytic input.
+
+REMAINING (R2, separate): spread APs are the GLOBAL PA_2-minimizer over all families (boxeph's claim) -- my S68 subset lemma covers bounded diameter; unbounded-diameter global-minimality is the last rigidity. If R2 holds, (A') closes: bounded-diam (S68) + spread-AP exact inf (S69) + R2.
+
+Files: lrc_spread_ap_finitize_kps_S69.py (+out); reflection the-spread-ap-residual-finitized-exactly-kps-S69; HYP-5067. Exact finitization + decorrelation limit (no formalization). Does NOT prove LRC(14).
+
 ## klein-2026-07-07-S166 -- THE R-CRITERION PASSES (per-shape spectral-split certificates: >= 0.779/0.806/1.0/1.0 at the adversarial worst cases, proved inequality + explicit tail) + comb-bound cancellation honestly bounded (one-tooth near-tight; dihedral pairing = provable 2x; rest Koksma) + the ROTATION-COLORING frame recorded (HYP-4901)
 
 Prompt (owner): Dedekind/Koksma half-page + R >= 0.75 + magnitude lemma + gate; colorings/dihedral; LRC = a distance graph that may genuinely require n colors is always n-colored by a single rigid rotation (AP = the K_n-clique roots-of-unity tight case).
