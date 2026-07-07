@@ -1,0 +1,23 @@
+1/7 = 0.142857
+==================================================================
+Inhomogeneous AP  {a + d*j : j=0..12}   (13 speeds)  -- E[gap@0] exact
+==================================================================
+
+MIN E[gap0] over inhomog-AP grid = 800808555307581425734020157229631105883/4947226213936696485641837567720186842800 = 0.161870
+   at a=17, d=6, E=[17, 23, 29, 35, 41, 47, 53, 59, 65, 71, 77, 83, 89]
+   => inf over inhomog-AP is ABOVE 1/7   (margin +0.019013)
+
+==================================================================
+Test opus-S133's specific claim: spread cluster near {6,11,...}
+==================================================================
+  [6, 11, 16, 21]...66  step 5:  E[gap0]=0.169805
+  [6, 11, 16, 21]...66  step 5:  E[gap0]=0.169805
+  [1, 8, 15, 22]...85  step 7:  E[gap0]=0.169562
+  [1, 7, 13, 19]...73  step 6:  E[gap0]=0.167434
+
+==================================================================
+CONCLUSION LOGIC:
+  If inf E[gap0] < 1/7  -> single-anchor floor FAILS; need multi-anchor /
+     spread-dichotomy (opus-S133).  klein-S153's single-anchor lead is WRONG.
+  If inf E[gap0] > 1/7  -> single anchor {0} already gives E[maxgap]>1/7,
+     nearly closing the crux (klein-S153 correct, opus's 0.134 an outlier).

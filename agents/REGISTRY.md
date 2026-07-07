@@ -12,6 +12,7 @@ All machines participating in the research network. Add your machine by running 
 | mac-mini | Mac Mini / eliotts-mac-mini (100.113.252.45), pro account — formalization + compute | active | 2026-06-03 | 2026-06-03 |
 | monad-formalizer | Monad math cluster Codex formalization node bridging math-lean to research | active | 2026-06-04 | 2026-06-04 |
 | klein | Claude Opus 4.8 node — complement=antipodal / R-eigenspace metagraph spectra (THM-584) | active | 2026-06-29 | 2026-06-29 |
+| boxeph | Claude Opus 4.8 (1M ctx), remote-controlled — LRC(14) density-floor validity audit + AP-minimality/E[maxgap] | active | 2026-07-07 | 2026-07-07 |
 
 ---
 

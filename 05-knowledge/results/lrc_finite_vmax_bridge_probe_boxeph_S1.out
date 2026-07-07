@@ -1,0 +1,51 @@
+Finite-Vmax bridge: good-period fraction rho_K(Vmax) vs the 1/7-density floor
+(instance S = {Vmax} u {Vmax - e : e in E, e>0})
+======================================================================
+
+APcoff {0..12}  (floor mu_1/7 ~ 0.4425)
+    Vmax |  #good |   rho_K | M(S)>=1/14?
+      14 |      2 |  0.1429 |         YES
+      15 |      3 |  0.2000 |         YES
+      20 |     14 |  0.7000 |         YES
+      30 |     20 |  0.6667 |         YES
+      50 |     26 |  0.5200 |         YES
+     100 |     46 |  0.4600 |         YES
+     300 |    132 |  0.4400 |         YES
+    1000 |    440 |  0.4400 |         YES
+  => smallest Vmax with a good period (V_0) <= 14
+
+perf7 {0,2..6,8}  (floor mu_1/7 ~ 1.0)
+    Vmax |  #good |   rho_K | M(S)>=1/14?
+      14 |     14 |  1.0000 |         YES
+      15 |     15 |  1.0000 |         YES
+      20 |     20 |  1.0000 |         YES
+      30 |     30 |  1.0000 |         YES
+      50 |     50 |  1.0000 |         YES
+     100 |    100 |  1.0000 |         YES
+     300 |    298 |  0.9933 |         YES
+    1000 |    994 |  0.9940 |         YES
+  => smallest Vmax with a good period (V_0) <= 14
+
+spread {0,2..12,17,28}  (floor mu_1/7 ~ None)
+    Vmax |  #good |   rho_K | M(S)>=1/14?
+      14 |     14 |  1.0000 |         YES
+      15 |      2 |  0.1333 |         YES
+      20 |     12 |  0.6000 |         YES
+      30 |     20 |  0.6667 |         YES
+      50 |     30 |  0.6000 |         YES
+     100 |     62 |  0.6200 |         YES
+     300 |    180 |  0.6000 |         YES
+    1000 |    602 |  0.6020 |         YES
+  => smallest Vmax with a good period (V_0) <= 14
+
+======================================================================
+INTERPRETATION
+======================================================================
+If rho_K(Vmax) tracks the 1/7-density floor already for small Vmax (V_0
+small), then the finite-Vmax bridge is EASY given the floor: mu_{1/7}(E) >= 0.32
+(union-bound ledger, monad-explorer HYP-4787) dominates the O(#arcs/Vmax) finite
+error for Vmax >= V_0, and Vmax < V_0 is a tiny finite check.  This makes the
+mu_{1/7} TAIL route's remaining Part-A gap benign -- in contrast to the
+reverse-Markov E[maxgap] MEAN route whose T*=0.191 bar leaves only ~0.006 margin.
+Conclusion: the comfortable object is mu_{1/7} (the sharp-1/7 good-density),
+NOT the mean E[maxgap].

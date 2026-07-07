@@ -57,6 +57,20 @@ LRC14Statement
 Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 `gK8_concentration_extremality`, `doublet_Rtail_uniform_bound`, the witness-floor cases.
 
+> **↳ THRESHOLD RECONCILED + STRATEGIC RE-AIM (boxeph-2026-07-07-S1, HYP-4760).** THM-527.A's ruler
+> criterion `maxgap > 2/7` (co-offset config) and the burst's `μ_{1/7}` (speed config) are the SAME
+> object at two clearance levels: **`1/7` is the SHARP threshold** ("a witness `φ` exists"), `2/7` the
+> robust cousin ("witness with `1/7` slack"). VERIFIED exactly: the actual good-period fraction of
+> finite instances converges to the **1/7**-density, not `2/7` (`APcoff{0..12}`: `ρ_K → 0.4425`);
+> speed-config `μ` = co-offset `μ` exactly (`x↦−x`). So the burst is aimed at the correct object.
+> **Strategic:** the tail `μ_{1/7}` needs only `≥ m_P ≈ 0.057` (floor `0.44`, HUGE margin) while the
+> reverse-Markov **mean** `E[maxgap]` needs `> T* ≈ 0.191` (min `≈ 0.197`, razor `≈ 0.006`, eroding —
+> monad-explorer HYP-4787). **`E[maxgap]` is NOT AP-minimized** (exact: `E[maxgap](GW)=140413631/
+> 669278610 < 93/440 = E[maxgap](AP)`; corrects klein-S153) though `μ_{1/7}` IS. **Keep the crux on
+> `μ_{1/7} ≥ m_P` (a crude floor suffices), not the razor-thin mean.** Part-A `V_0 ≤ 14` benign for
+> bounded-spread; the spread~Vmax arc bound stays open. Reflection
+> `the-density-reach-threshold-is-1-7-sharp-and-mu17-is-the-comfortable-object-boxeph-S1`.
+
 > **📐 THE GOVERNING FRAME — READ BEFORE RE-DERIVING (mac-mini-S15 HYP-4412; consolidated opus-S132).**
 > LRC is an **additive↔multiplicative duality mediated by the three-gap theorem / continued fractions**:
 > loneliness `M` is additive-metric (orbit gaps, three-distance); covering/resonance-killing is

@@ -1,3 +1,23 @@
+## boxeph-2026-07-07-S1 -- DENSITY->REACH THRESHOLD AUDIT: 1/7 is SHARP (2/7 was robust); mu_{1/7} is the comfortable load-bearing object, reverse-Markov E[maxgap] is razor-thin; E[maxgap] NOT AP-min (exact, corrects klein-S153); finite-Vmax V_0<=14 benign (HYP-4760)
+
+Prompt (owner, remote via boxeph): long session -- deeply understand the LRC14 work/relations/corrections/validity, find what we've been missing / where misguided, then investigate; push/pull often.
+
+Synced from a stale checkout (was 1692 behind; stashed leftover codex-2026-06-29 WIP). Audited the density-floor -> reach link + the recent reverse-Markov/E[maxgap] burst, all cross-checked EXACTLY. Findings (HYP-4760):
+
+1. THRESHOLD RECONCILED. THM-527.A's ruler `maxgap>2/7` (co-offset config) and the burst's `mu_{1/7}` (speed config) are the SAME object at two clearance levels: 1/7 is SHARP ("a witness phi EXISTS"), 2/7 the robust cousin (1/7 slack). VERIFIED: actual good-period fraction of finite instances -> the 1/7-density, not 2/7 (APcoff{0..12}: rho_K->0.4425). Speed-config mu = co-offset mu EXACTLY (x->-x). So the burst is aimed at the RIGHT object; THM-527's 2/7 was conservative by one clearance.
+
+2. E[maxgap] NOT AP-minimized (EXACT). E[maxgap](AP_13)=93/440=0.211364 but E[maxgap](GW={1..11,13,24})=140413631/669278610=0.209798<AP (the 12->24 one-swap, inside klein's grid precision). Corrects klein-S153's "AP is the minimizer/48% margin"; confirms death-star-S1/opus-S133/monad-explorer HYP-4787. AP minimizes the TAIL mu_{1/7} (uniquely) but NOT the MEAN.
+
+3. ORIGIN-GAP reconciled. E[gap@0](AP_13)=93/440=E[maxgap](AP_13) EXACTLY (klein's "origin saturates AP maxgap" correct; kps-S58's 0.137 not the AP). inf_E E[gap@0]~0.147 KNIFE-EDGE (inhomog-AP 0.162; opus's {6,11,..}=0.170 not 0.134); single-anchor too thin, 2-anchor {0,1/2}=0.187 robust.
+
+4. FINITE-Vmax BRIDGE. V_0<=14 for bounded-spread shapes (good period at the minimal ruler; rho_K tracks the floor by Vmax~100) => Part A benign in the extremal regime; spread~Vmax/compressed-all-big arc bound still open (credit monad-explorer HYP-4787).
+
+5. STRATEGIC. tail mu_{1/7} needs only >=m_P~0.057 (floor 0.44, margin ~0.28 HUGE) vs the reverse-Markov mean >T*~0.191 (min ~0.197, margin ~0.006 razor & eroding) => KEEP THE CRUX ON mu_{1/7}>=m_P (a crude three-gap/Riesz floor suffices, no sharp extremal), de-emphasize the E[maxgap] detour. Concordant with monad-explorer HYP-4787 (same directive, independent).
+
+HONEST: a validity/scoping audit, not a proof. Files: lrc_maxgap_threshold_mechanism_audit / lrc_Emaxgap_exact_apmin / lrc_gap0_anchorfloor_exact / lrc_gap0_inhomog_ap_exact / lrc_finite_vmax_bridge_probe _boxeph_S1 (+outs); reflection the-density-reach-threshold-is-1-7-sharp-...-boxeph-S1; HYP-4760; proof-map annotation. klein-S153 correction flagged (exact certificate; fleet already converging, no court case).
+
+NEXT: a crude uniform mu_{1/7}(E)>=0.057 (neighborhoods of small-q rationals, three-gap; only 0.057 needed so no sharp extremal); or wire the benign V_0/arc bound into LRCWitnessPartA + attack the spread~Vmax arc bound.
+
 ## monad-explorer-2026-07-07-S1 -- SCOPE AUDIT of the reverse-Markov/E[maxgap] program: the mean route serves ONLY k=13/P=empty, its honest bar is T*=1/7+(6/7)m_P~0.19127 (margin +0.0057, not +0.06), the G_P-conditional repair FAILS, and the load-bearing lemma is six WEAKENED per-k tail floors with 1.4x-7.8x slack (HYP-4787, MISTAKE-118)
 
 Prompt (owner): long session -- deeply understand the LRC14 history/corrections/validity, find what we've been missing, then investigate; push/pull often.
