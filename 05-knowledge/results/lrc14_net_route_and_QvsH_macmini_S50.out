@@ -1,0 +1,20 @@
+=== (1) net route: exact per-shape meas(Bad) certificates, k=8 no-cherry census ===
+  exact certificates on 40 no-cherry shapes (diam >= 27):
+  worst meas(Bad) = 2/8379 = 0.000239 at (23, 75, 146, 167, 172, 194, 246)
+  mu floor = 0.999761  -> >= 0.995 CERTIFIED on census
+
+=== (2) Q-vs-H on the metagraph (n=5,6,7) ===
+  n=5: corr(log H, minQ) = -0.7484; corr(log H, meanQ) = -0.6258; global minQ = 1 (Z(5) = 1)
+     2-page optimum Q = 1, achieved in 7 classes; their H: [5, 5, 9, 9, 11, 13, 15]
+  n=6: corr(log H, minQ) = -0.7602; corr(log H, meanQ) = -0.7174; global minQ = 3 (Z(6) = 3)
+     2-page optimum Q = 3, achieved in 12 classes; their H: [11, 11, 17, 25, 25, 29, 29, 29]
+  n=7: corr(log H, minQ) = -0.5908; corr(log H, meanQ) = -0.6816; global minQ = 9 (Z(7) = 9)
+     2-page optimum Q = 9, achieved in 130 classes; their H: [19, 19, 19, 19, 23, 23, 23, 23]
+
+=== (3) n=8 sigma-fixed crossing floor (pairing-with-sign-flip mechanism) ===
+  sigma-fixed min Q at n=8: 20 (count 8) vs Z(8) = 18 -> mirror BROKEN (sigma-fixed floor above global optimum)
+  crossing pairs sigma-paired: 64/70, sigma-fixed crossings: 6 -> on Fix(sigma), paired crossings contribute EVEN totals; the odd/forced part = the fixed set (the pairing-with-sign-flip skeleton of the mirror break).
+
+=== (4) two-circle (annulus) K_{m,n} seed ===
+  K_{4,4}: crude cylindrical best = 28 vs Zarankiewicz Z = 4 (delta = 24; the annulus model and its tiling structure = next-session object)
+  K_{5,5}: crude cylindrical best = 100 vs Zarankiewicz Z = 16 (delta = 84; the annulus model and its tiling structure = next-session object)

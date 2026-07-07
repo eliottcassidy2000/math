@@ -13,6 +13,19 @@ FILES: 05-knowledge/results/lrc_pairing_signflip_klein_S168.out (inline script).
 NEXT: (a) even-n structure: count blue self-loops at even n (census 1, 2 at 4, 6 -- is it 2^{n/2-2}? prove via the same δ-bookkeeping at even n where the obstruction vanishes); (b) the exact distribution of c3-diffs (range {−(n−2)..n−2} step 2 -- a full law?); (c) the balanced swap-symmetric bipartite parity; (d) fold the c3-parity law into THM-643/644's canon family.
 
 ---
+## mac-mini-2026-07-07-S50 -- NET ROUTE CERTIFIES the no-cherry mu-floor EXACTLY (worst meas(Bad) = 2/8379 => mu >= 0.99976, 20x over the 0.995 bar) + Q-vs-H anti-correlation (minQ = Z(n) exact; crossing-minimal = cycle-rich) + n=8 mirror break with the pairing mechanism + the two-circle model defined honestly (HYP-5087)
+
+Prompt (owner): the mu >= 0.995 no-cherry floor via the net route; Q-vs-H on the metagraph; the even-n mirror-pair proof from the parity law; the bipartite two-circle analog; principle: pairing-with-sign-flip converts symmetry into existence -- no measure, no margin, no census.
+
+DELIVERED:
+ 1. NET ROUTE (LRC k=8 coupling, the S49 gap-collapse statement): meas(Bad_E) has EXACT rational interval endpoints (denominators 7|e_i - e_j|) => per-shape exact certificates. Census (40 no-cherry shapes, diam >= 27): worst meas(Bad) = 2/8379 = 0.000239 -> mu >= 0.999761. The single load-bearing coupling statement now has certified-per-shape machinery with 20x headroom; remaining = the uniform counting write-up (windows few + narrow, exact endpoints known).
+ 2. Q-vs-H: corr(log H, minQ) = -0.75/-0.76/-0.59 (n=5/6/7); the tiling-cube minimum EQUALS Z(n) = 1/3/9 -- the 2-page optimum recovered through the fibration; optimum-achieving classes are HIGH-H (cycle-rich): the Redei landscape and the crossing landscape are anti-aligned.
+ 3. n=8 MIRROR BREAK: sigma-fixed min Q = 20 > Z(8) = 18 (exhaustive 2^12). MECHANISM per the owner's principle: 64/70 crossings are sigma-paired => on Fix(sigma) they contribute in equal pairs; +6 fixed crossings => Q|Fix = 2*(quotient) + fixed -- a coarser-quantized landscape that misses the free optimum. The quantization IS the proof shape (symmetry -> existence of the gap); closed form (quotient min = 20) is one session away.
+ 4. TWO-CIRCLE (Zarankiewicz) SEED: naive annulus interleave FAILS (28 vs Z = 4 at K_{4,4}) as it must (Z's drawings are not annular); the right model = monotone annulus curves with a BINARY WINDING bit per edge (= the tile); crossing form quadratic in winding bits. Definition recorded for the follow-up.
+
+FILES: lrc14_net_route_and_QvsH_macmini_S50.py (+out); HYP-5087 (INDEX). No canon overridden.
+
+NEXT: (a) the uniform netting-window counting lemma (finishes the k=8 coupling with klein's Koksma piece); (b) the n=8 quotient-form minimum = 20 closed proof; (c) the winding-bit annulus model worked (Zarankiewicz parity law?); (d) Q-vs-H at n=8 via sampling.
 
 ## mac-mini-2026-07-07-S49 -- THE GAP COLLAPSE: the (1-mu)-factored uniform head bound folds klein-S166's [uniform head] + [no-cherry class] into ONE mu-floor statement (threshold ~0.995, observed 0.998+); anti-concentration reaches 0.667 vs the 0.675 bar (2.4pct short, refinement shaped) (HYP-5077)
 
