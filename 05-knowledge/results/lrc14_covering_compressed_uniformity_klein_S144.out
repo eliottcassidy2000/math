@@ -1,0 +1,22 @@
+CLAIM: the {q<=39} covering is height-uniform on COMPRESSED families (max<=13*min); the
+large-q-clearing near-AP families are NON-compressed (a far element => peels, outside (C)).
+================================================================================
+(1) COMPRESSED non-AP (max<=13min), 18129 families, heights 1..~650000:
+    max clearing-q = 31   covering GAPS (q>39 or none) = 0
+    => compressed non-AP always clears at q<=31 <= 39: covering UNIFORM on (C) domain
+
+(2) ladder {1..11, X} with X=12+13*k (==AP mod 13), NON-compressed (X far):
+    k=1: X=25  max/min=25:1 (far)  clearing-q=12  M(full,small-Qcap)=1/12  (ladder k/(12k+1)=1/13~0.0769)
+    k=3: X=51  max/min=51:1 (far)  clearing-q=12  M(full,small-Qcap)=1/12  (ladder k/(12k+1)=3/37~0.0811)
+    k=10: X=142  max/min=142:1 (far)  clearing-q=12  M(full,small-Qcap)=1/12  (ladder k/(12k+1)=10/121~0.0826)
+    k=100: X=1312  max/min=1312:1 (far)  clearing-q=12  M(full,small-Qcap)=None  (ladder k/(12k+1)=100/1201~0.0833)
+    k=2000: X=26012  max/min=26012:1 (far)  clearing-q=12  M(full,small-Qcap)=None  (ladder k/(12k+1)=2000/24001~0.0833)
+    => these are LOOSE (M~1/12>=2/25 via the ladder witness at q=12k+1, LARGE) but the far
+       element X>13 PEELS (dominant), so they never reach (C) as a compressed 12-family.
+
+SYNTHESIS: the covering is NOT uniform over ALL integer heights (near-AP ladders clear only at
+q=12k+1 -> inf), but IS uniform over COMPRESSED families (the (C) domain) -- because a
+compressed family cannot be ==AP mod large-L (that needs a far entry). Non-compressed near-AP
+=> far element => peels to a smaller family (mac-mini THM-620 composition). So the finite
+covering + the peel together are height-uniform; the covering alone needs the COMPRESSED caveat.
+DONE

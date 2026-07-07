@@ -1,3 +1,25 @@
+## klein-2026-07-06-S144 -- the (C) covering is HEIGHT-UNIFORM on COMPRESSED families; retract my S140 "real-analytic" pessimism; correct kps-S44 "<=14" (HYP-4611)
+
+Prompt (owner): consider the fleet's new work deeply, synthesize, see the bigger picture; best formal state.
+
+RESYNCED my crux model, which the fleet transformed while I was away, and did a validity check on the one open node.
+
+BIGGER PICTURE: Route 2 = LRC(14) <= [J-K citation] + (A) <= (C); (C) = "AP unique 12-family (up to dilation) with M<2/25" (= my S140 rigidity). RETRACTION: my S140 called (C) "irreducibly real-analytic, no finite template." WRONG. The fleet (kps-S43/44, opus-S124/126) showed (C) IS a FINITE COVERING SYSTEM: every non-AP compressed family clears at some q<=39 via an explicit rational_point_margin cert. My S140 error: conflated "finite TEMPLATE" (one modulus, CRT-killable, dead per kps-S11) with "finite COVERING SYSTEM" (union over q<=39, alive). Logged honestly.
+
+VALIDATION of the open node ("covering uniform over all heights"), ~140k non-AP families (heights to 1e6, CRT-lifts ==AP mod L, mod-25-saturated blockers): ZERO covering gaps -- all clear at q<=39.
+
+KEY REFINEMENT (sharpens the node + removes a distraction): the node is NOT uniform over ALL heights. A family ==AP mod lcm(2..39) is obstructed at EVERY q<=39 (matches AP residues) -- a genuine gap -- BUT its entries are ~1e16, NON-compressed, carries a far element, and PEELS (THM-620/THM-608) before reaching (C). It IS uniform over COMPRESSED families (max<=13*min, the post-peel (C) domain): 18129 compressed non-AP families to height 650k => all clear at q<=31, 0 gaps (a compressed family CAN'T be ==AP mod large-L without a far entry). So the node = [compressed non-AP => cleared q<=39 (covering)] (+) [non-compressed => peels (composition)]. Covering (+) peel = height-uniform; covering ALONE needs the COMPRESSED caveat.
+
+CORRECTION: kps-S44's circulating "min-clear-mod <=14" is too low. The covering SET needs q up to 38 (adversarial CRT-lifts ==AP mod lcm(2..12,25)); 31 on compressed. (kps's <=39 headline is safe; the <=14 figure is not.)
+
+RESIDUAL (sharpened): prove "compressed non-AP 12-family => cleared at some q<=39" -- a rigidity (compressed + near-AP-at-every-small-q => AP; the CRT-lift escape is now closed off, those being non-compressed) + wiring + the peel composition + top-level (A)<=(C) + J-K citation. Edited the proof-map open-(C) node with this refinement.
+
+FILES: lrc14_covering_uniformity_klein_S144.py(+out), lrc14_covering_compressed_uniformity_klein_S144.py(+out); INDEX HYP-4611; reflection the-C-covering-is-height-uniform-on-compressed-families-and-my-S140-pessimism-was-wrong; proof-map edit; this log. No Lean.
+
+NEXT: (a) prove compressed-completeness rigidity (the surviving core of S140, CRT-escape closed); (b) formalize the case-2 covering completeness + peel composition (mostly decidable rational_point certs); (c) wire (A)<=(C) + J-K.
+
+---
+
 ## mac-mini-2026-07-06-S33b -- THM-634 the NON-TRANSVERSAL branch of (C) FORMALIZED (LRCMod25Transversal.lean, kernel-pure): miss a ±-pair mod 25 => M>=2/25; supplies the existence half kps's mod25_covering_floor assumed; corrects "d>=3 GREEN" to defect-agnostic (HYP-4642)
 
 Prompt (owner): work on finishing off the crux and once it is done, formalizing it; pull often and integrate.

@@ -101,6 +101,18 @@ non-AP blocker clears at some `q ≤ Q₀` (`39` on the sample). This is a *fini
 analysis — plus the AP-exception (immediate from `M`-minimality) and the easy case 3. Then wire the
 `q≤Q₀` covering + case 1 + case 3 into a Lean theorem `M(V) < 2/25 → V = dilated AP`.
 
+> **Refinement (klein-S144, HYP-4611, validated ~140k families).** The node is *not* uniform over
+> *all* heights, and it should not be: a family `≡ AP mod lcm(2..39)` is obstructed at every `q ≤ 39`
+> (matches the AP's residues) — a genuine covering gap — but its entries differ from `{1,…,12}` by
+> `~10¹⁶`, so it is **non-compressed, carries a far element, and peels** (THM-620 / THM-608) before
+> reaching `(C)`. The correct statement is **uniform over COMPRESSED families** (`max ≤ 13·min`, the
+> post-peel `(C)` domain): those clear at **`q ≤ 31`, 0 gaps to height 650,000** (a compressed family
+> cannot be `≡ AP mod` a large `L` without a far entry). So the node = *compressed non-AP ⟹ cleared
+> at `q ≤ 39`* (covering) **⊕** *non-compressed ⟹ peels* (composition). NB kps-S44's circulating
+> "min-clear-mod ≤ 14" is too low — the covering **set** needs `q` up to `38` (CRT-lifts `≡ AP mod
+> lcm(2..12,25)`); `31` on compressed. Scripts: `lrc14_covering_uniformity_klein_S144.py`,
+> `lrc14_covering_compressed_uniformity_klein_S144.py`.
+
 **Open critical path for the top level:** (i) the pigeonhole rigidity wrapper (finishes (A)⟸(C));
 (ii) *wire* `[J-K citation] + (A)⟸(C) + (C)` into a top-level conditional theorem (parallel to
 Route 1's `lrc14_from_witness_floor`); (iii) pin the exact Jain–Kravitz statement.
