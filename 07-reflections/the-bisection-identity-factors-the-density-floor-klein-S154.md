@@ -132,6 +132,24 @@ And (A′) itself is now equivalent to a **maximal-cumulative-bisection principl
 per-step extremal is classical three-distance insertion — the first form of (A′) in which
 the AP's extremality has a *named classical driver* rather than an empirical census.
 
+## Part 3 (same session): the exact 2/7 crossing and the far-element law
+
+- **`n₂* = 37` (exact, Farey roof; anchors `μ_{2/7}(AP_12) = 1313/6468`, `μ_{2/7}(AP_13) =
+  829/4620` reproduced):** `μ_{2/7}(AP_n) ≥ m_P` through `n = 37` (`34609/599760 ≈ 0.05770`),
+  crossing at `n = 38`. **Composite corollary (proved modulo the roof's formalization,
+  = kps-S59's planned Claims 1–2):** combining my (C2) with kps's subset lemma at `θ = 2/7`,
+  > every 13-set `E` with SOME `j` such that `E∖{e_j}` has primitive diameter `≤ 36`
+  > satisfies `μ_{1/7}(E) ≥ μ_{2/7}(E∖{e_j}) ≥ μ_{2/7}(AP_{D+1}) ≥ m_P`.
+  This covers **"12 tame elements + one arbitrarily far element"** — outside kps-S59's own
+  `D ≤ 75` zone (the far element blows up `diam(E)`). Joint residual for the k=13 leg:
+  sets with full diameter `≥ 76` AND every 12-subset of primitive diameter `≥ 37` —
+  genuinely spread in a strong, two-level sense.
+- **Far-element decay law (target-2 evidence):** `Δ_j·e_j/M` stays `≈ ±0.01–0.03` as `e_j`
+  grows 200× (three bases; `Δ`: `+0.016 → +0.00002` for `AP_7` base as `e_j: 15 → 3501`).
+  So `|Δ_j| ≤ C·M/e_j` with small `C` — matching the crossing-count/Koksma proof skeleton
+  (window endpoints have slopes `≤ ~2M`, `P_j` sweeps at rate `e_j`; per-piece edge effects
+  `O(1/e_j)` × `O(k²M)` pieces).
+
 ## Honest status
 
 - PROVED here: the identity, C1–C4, the exact AP chain arithmetic, the `Ind_j ≤ θ` window

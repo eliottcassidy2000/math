@@ -1,0 +1,59 @@
+=== (A) exact mu_{2/7}(AP_n) via the Farey roof; crossing vs m_P = 14249/252252 ~ 0.05649 ===
+  n=10: mu_2/7(AP_n) =               557/2205 = 0.252608  >= m_P
+  n=11: mu_2/7(AP_n) =                127/588 = 0.215986  >= m_P
+  n=12: mu_2/7(AP_n) =              1313/6468 = 0.202999  >= m_P  ANCHOR MATCH
+  n=13: mu_2/7(AP_n) =               829/4620 = 0.179437  >= m_P  ANCHOR MATCH
+  n=14: mu_2/7(AP_n) =                 76/455 = 0.167033  >= m_P
+  n=15: mu_2/7(AP_n) =             5367/35035 = 0.153190  >= m_P
+  n=16: mu_2/7(AP_n) =               433/3003 = 0.144189  >= m_P
+  n=17: mu_2/7(AP_n) =             3363/25480 = 0.131986  >= m_P
+  n=18: mu_2/7(AP_n) =             6862/54145 = 0.126734  >= m_P
+  n=19: mu_2/7(AP_n) =             7037/59976 = 0.117330  >= m_P
+  n=20: mu_2/7(AP_n) =             2025/18088 = 0.111953  >= m_P
+  n=21: mu_2/7(AP_n) =             1909/18088 = 0.105540  >= m_P
+  n=22: mu_2/7(AP_n) =             4805/47481 = 0.101198  >= m_P
+  n=23: mu_2/7(AP_n) =            9741/102410 = 0.095118  >= m_P
+  n=24: mu_2/7(AP_n) =           19763/214130 = 0.092294  >= m_P
+  n=25: mu_2/7(AP_n) =            9271/106260 = 0.087248  >= m_P
+  n=26: mu_2/7(AP_n) =               746/8855 = 0.084246  >= m_P
+  n=27: mu_2/7(AP_n) =           46367/575575 = 0.080558  >= m_P
+  n=28: mu_2/7(AP_n) =             1211/15525 = 0.078003  >= m_P
+  n=29: mu_2/7(AP_n) =           21317/286650 = 0.074366  >= m_P
+  n=30: mu_2/7(AP_n) =           43112/593775 = 0.072607  >= m_P
+  n=31: mu_2/7(AP_n) =            7699/110838 = 0.069462  >= m_P
+  n=32: mu_2/7(AP_n) =             5951/88102 = 0.067547  >= m_P
+  n=33: mu_2/7(AP_n) =           45921/704816 = 0.065153  >= m_P
+  n=34: mu_2/7(AP_n) =             1883/29667 = 0.063471  >= m_P
+  n=35: mu_2/7(AP_n) =           39639/649264 = 0.061052  >= m_P
+  n=36: mu_2/7(AP_n) =           16001/267344 = 0.059852  >= m_P
+  n=37: mu_2/7(AP_n) =           34609/599760 = 0.057705  >= m_P
+  n=38: mu_2/7(AP_n) =            8688/154105 = 0.056377  < m_P
+  n=39: mu_2/7(AP_n) =         160159/2927995 = 0.054699  < m_P
+  n=40: mu_2/7(AP_n) =           18917/353535 = 0.053508  < m_P
+  n=41: mu_2/7(AP_n) =             1893/36556 = 0.051784  < m_P
+
+  n2* (largest n with mu_2/7(AP_n) >= m_P) = 37
+  => COMPOSITE (C2 + subset lemma, proved modulo roof): every 13-set with SOME
+     leave-one-out of primitive diameter <= 36 has mu_1/7 >= m_P --
+     covers '12 tame + one arbitrarily far element' (outside kps-S59's D<=75 zone).
+
+=== (B) far-element decay: Delta_j = Bis_j - Ind_j vs e_j (theta=1/7) ===
+  base E_j = AP7 {1..7} (M=7):
+    e_j =     15: Bis=0.02040  Ind=0.00413  Delta=+0.01627   Delta*e_j/M = +0.03
+    e_j =     36: Bis=0.00815  Ind=0.00413  Delta=+0.00402   Delta*e_j/M = +0.02
+    e_j =    141: Bis=0.00487  Ind=0.00413  Delta=+0.00074   Delta*e_j/M = +0.01
+    e_j =    701: Bis=0.00438  Ind=0.00413  Delta=+0.00026   Delta*e_j/M = +0.03
+    e_j =   3501: Bis=0.00415  Ind=0.00413  Delta=+0.00002   Delta*e_j/M = +0.01
+  base E_j = AP12 {1..12} (M=12):
+    e_j =     25: Bis=0.01017  Ind=0.01598  Delta=-0.00581   Delta*e_j/M = -0.01
+    e_j =     61: Bis=0.01288  Ind=0.01598  Delta=-0.00309   Delta*e_j/M = -0.02
+    e_j =    241: Bis=0.01637  Ind=0.01598  Delta=+0.00039   Delta*e_j/M = +0.01
+    e_j =   1201: Bis=0.01607  Ind=0.01598  Delta=+0.00009   Delta*e_j/M = +0.01
+    e_j =   6001: Bis=0.01595  Ind=0.01598  Delta=-0.00003   Delta*e_j/M = -0.01
+  base E_j = mixed {1,2,4,7,9,12,15} (M=15):
+    e_j =     31: Bis=0.00000  Ind=0.00000  Delta=+0.00000   Delta*e_j/M = +0.00
+    e_j =     76: Bis=0.00000  Ind=0.00000  Delta=+0.00000   Delta*e_j/M = +0.00
+    e_j =    301: Bis=0.00000  Ind=0.00000  Delta=+0.00000   Delta*e_j/M = +0.00
+    e_j =   1501: Bis=0.00000  Ind=0.00000  Delta=+0.00000   Delta*e_j/M = +0.00
+    e_j =   7501: Bis=0.00000  Ind=0.00000  Delta=+0.00000   Delta*e_j/M = +0.00
+  (law check: Delta*e_j/M roughly constant => |Delta| <= C*M/e_j; C the crossing constant)

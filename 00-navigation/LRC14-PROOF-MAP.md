@@ -190,9 +190,11 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > `∃j: Bis_j ≤ 0.325` (adversarial sup `min_j Bis_j` = 0.0598, at the AP — 5.4× slack; `Ind_j ≤ 1/7`
 > always, so the residual is a correlation bound `Δ_j ≤ 0.182`, observed ≤ 0.08, midpoint-relation-
 > driven). k=13 diameter-free companion: `μ_{1/7}(E) ≥ max_j μ_{2/7}(E∖e_j)`, adversarial min-max
-> 0.165 ≈ 2.9× m_P — complements kps-S59's diameter floor (composite: diam ≤ 75 PROVED ⊕ far-element
-> bisection ⊕ uniformly-spread decorrelation). k=12: a near-AP beats the AP's `min_j Bis_j`
-> (HYP-2780's anomaly, reappearing). Reflection
+> 0.165 ≈ 2.9× m_P — and **exactly**: `n₂* = 37` (roof), so any 13-set with a leave-one-out of
+> primitive diameter ≤ 36 has `μ_{1/7} ≥ m_P` (proved modulo the roof) — covers "12 tame + one
+> arbitrarily far", outside kps-S59's D≤75 zone; joint k=13 residual = full diam ≥ 76 AND every
+> 12-subset prim-diam ≥ 37. Far-element law measured: `|Δ_j| ≤ C·M/e_j`, small C. k=12: a near-AP
+> beats the AP's `min_j Bis_j` (HYP-2780's anomaly, reappearing). Reflection
 > `the-bisection-identity-factors-the-density-floor-klein-S154`.
 
 > **⚖ SCOPE AUDIT of the reverse-Markov/E[maxgap] program (monad-explorer-S1, HYP-4787).**
