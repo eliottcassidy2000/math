@@ -1,3 +1,25 @@
+## mac-mini-2026-07-06-S30 -- TWO-SIDED SQUEEZE: the order-3+ dilated-AP species is ALSO gap-empty at N=12 (dilated-AP construction VALIDATED at N=6, reproduces 5/33 uniquely); n-specific reason N=12 != N=6 = a squeeze (dense: small-denominator clearance; sparse: large-element resonance), no threading spacing at N=12 (HYP-4602)
+
+Prompt (owner): work creatively on the still-open part, integrating past threads.
+
+Worked opus-S119's handed-off residual (do non-canonical species obey the binder gate?) with kps-S39 (order-3 members = dilated APs, spacing=numerator). The tell: 'N even => gap empty' CANNOT be a single binder/parity gate because N=6 is EVEN and NONEMPTY (5/33) -- so the order-3 dilated-AP species is a separate object, worked directly.
+
+FINDINGS:
+ (1) VALIDATION (long-standing caveat resolved): kps-S39's structure (core dilated AP spacing d + boundary defects core[1]-1, core[-1]+1) EXACTLY reproduces N=6's {1,5,6,11,16,17}=5/33 as the UNIQUE gap member of its class, and ONLY at spacing d=5=numerator -- the first construction (after S22/S25/S27) to organically find the interior-defect member.
+ (2) N=12 SWEEP: 0 of 14240 dilated-AP+defect candidates in the gap => order-3+ species ALSO gap-empty. With THM-632 (order-2) => BOTH order-2 and order-3+ species excluded at N=12.
+ (3) n-SPECIFIC REASON (two-sided squeeze): the exact N=6-analog at N=12 (10-term dilated AP + 2 borders) overshoots the intended order-3 value d/(12d+3)~0.078 by 0.05-0.09 for EVERY spacing d, via TWO channels -- DENSE (small d): family avoids 0 at a small denominator, clears there (d=2 avoids 0 mod6 => M=1/6; a small-denominator clearance, <= but not set by the S115 cap); SPARSE (large d): large elements' pairwise sums resonate (d=5: 46+47=93 => M=14/93). N=6's 4-term core threads at d=5; N=12's ~10-term core threads at NO spacing.
+ (4) RIGIDITY: gap member needs M<2/25 (no retained sub-AP length>=12 by S115 antitone, else M<=1/13) yet M near 1/13 (almost the AP) -- a rigidity moat around the AP (cf S12 residue pinning, lift-rigidity).
+
+INTEGRATION: opus-S119 binder gate governs order-2 (parity); a SEPARATE squeeze governs order-3+; unified only as 'every structured species overshoots at N=12'. The two mechanisms + kps-S39's spacing=numerator law suggest a per-in-window-form check (opus-S116: 45 forms; one dilated-AP candidate per form) = a finite structural closure route -- proposed to kps.
+
+OPEN (the honest residual): quantify the squeeze into a theorem (retained-length bound => large elements => resonance forces M>=2/25); order-k for k>=4 (do deeper forms also squeeze?). Finite defect space (Farey-wall height) => concrete target.
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection; git/finish_session only.)
+
+FILES: lrc_dilated_ap_species_macmini_S30.py (+.out), lrc_n6_vs_n12_analog_macmini_S30.py (+.out); reflection the-gap-is-protected-by-a-two-sided-squeeze-macmini-S30.md; HYP-4602 (+INDEX); letters to opus + kps. No canon overridden.
+
+NEXT: (a) enumerate one dilated-AP candidate per in-window form s/(12s+k) (45 forms, opus-S116) and check each = per-order finite closure; (b) quantify the squeeze (S115 length-bound + S109 q<=2max => M>=2/25); (c) order-k>=4 species.
+
 ## mac-mini-2026-07-06-S29 -- THM-632 EVEN-BRANCH CLEARANCE proved + Lean-formalized (kernel-pure): canonical mediant family {1..N}\{N-1}u{3(N-1)} clears at 3/(3N-1)>2/(2N+1) for N even => NOT a gap member; N=12 machine-checked (F12 reach >= 3/35 > 2/25). HONEST CORRECTION: parity is a CANONICAL-family mechanism, the general protector is the PLATEAU (opus-S115) (THM-632, HYP-4572)
 
 Prompt (owner): work towards proofs of the LRC14.

@@ -55,8 +55,11 @@ for d=4,5). The ACTUAL M:
 Every analog **overshoots the intended value by 0.05–0.09** — a catastrophic miss,
 not a near miss. And the overshoot comes from **two opposite channels**:
 
-- **Dense side (small spacing):** the 10-term dilated core retains a long
-  consecutive sub-AP, so opus-S115's subfamily cap pins `M ≥ 1/6` (the plateau).
+- **Dense side (small spacing):** the family concentrates into residues that avoid
+  `0` at a *small* denominator, so it clears there. E.g. the d=2 analog
+  `{1,2,3,5,7,9,11,13,15,17,19,20}` avoids `0 mod 6`, so `M = 1/6` (clearance 1 at
+  `q=6`). (This is a small-denominator clearance, ≤ opus-S115's subfamily-cap upper
+  bound — the cap is consistent with it but does not *set* it.)
 - **Sparse side (large spacing):** the core spreads to large elements whose
   pairwise sums (e.g. `46+47=93`) carry high clearance, giving `M = 14/93` ≫ gap.
 
