@@ -1198,6 +1198,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S40 -- THE ACHIEVABILITY GAUNTLET: mediant gate is PERIODIC (mod 30), deeper orders SPORADIC; (G) has no single congruence (HYP-4557)
+
+Prompt (owner): work creatively on the open part, integrating past threads.
+
+Fleet settled the MEDIANT: opus HYP-4516 gate N==1 mod6 AND 5-nmid-(3N+2) = N mod 30 in {7,13,19,25} (2*3*5); Lean parity kill GREEN; mac-mini THM-632 N=12 misses mediant. Went deeper:
+
+ORDER-3 IS SPORADIC: targeted dilated-AP search N=5..28 => 5/(5N+3) realized at N=6 ONLY, 4/(4N+3) never. NOT a periodic family (unlike mediant). Witness {1,5,6,11,16,17}=5/33: dilated AP {1,6,11,16} step (q+1)/2=17 + boundary defect 17=16+1 binding pair at +-5 mod 33.
+
+COMPLETE N=12 target list by order (k=2: 3/38; k=3: 4/51,5/63; k=4: 5/64,6/76,7/88;...). In-gap VALUES exist at ALL orders for ALL N -- width does NOT thin the list; emptiness is purely achievability (consistent MISTAKE-114).
+
+DEAD END (honest): 'speed=factor of q' NOT the gate (mediant realized N=25 q=77=7*11 WITH factors; fails N=5 q=17 prime). Gate = family binder congruence, not q factorization.
+
+SYNTHESIS: (G) = fail EVERY order's gate. Mediant periodic (N=12 not in gate); deeper sporadic (no N=12 hit). Non-monotonicity: N=6 rescued by sporadic order-3; N=7,13 pass mediant gate; N=12 fails all => EMPTY. No single congruence => why (G) has no one-line proof.
+
+FILES: lrc_order3_achievability_map_kps_S40.py(+.out), lrc_order3_achievability_targeted_kps_S40.out; reflection the-achievability-gauntlet-periodic-mediant-sporadic-depths-kps-S40.md; HYP-4557. No Lean. No canon overridden.
+
 ## kind-pasteur-2026-07-06-S39 -- the ORDER-3 members are DILATED APs + boundary defects; N=12 empty over the RIGHT structure; CORRECTS S38; closes ro=5 sub-q (HYP-4547)
 
 Prompt (owner): keep going (arithmetic / ro=5 threads).

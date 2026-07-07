@@ -1,0 +1,30 @@
+Targeted order-3 achievability (spacing=numerator, boundary defects), N=5..28:
+  N  N%6    5/(5N+3)  ach?    4/(4N+3)  ach?
+  5    5        5/28    no        4/23    no
+  6    0        5/33   YES        4/27    no
+  7    1        5/38    no        4/31    no
+  8    2        5/43    no        4/35    no
+  9    3        5/48    no        4/39    no
+ 10    4        5/53    no        4/43    no
+ 11    5        5/58    no        4/47    no
+ 12    0        5/63    no        4/51    no
+ 13    1        5/68    no        4/55    no
+ 14    2        5/73    no        4/59    no
+ 15    3        5/78    no        4/63    no
+ 16    4        5/83    no        4/67    no
+ 17    5        5/88    no        4/71    no
+ 18    0        5/93    no        4/75    no
+ 19    1        5/98    no        4/79    no
+ 20    2       5/103    no        4/83    no
+ 21    3       5/108    no        4/87    no
+ 22    4       5/113    no        4/91    no
+ 23    5       5/118    no        4/95    no
+ 24    0       5/123    no        4/99    no
+ 25    1       5/128    no       4/103    no
+ 26    2       5/133    no       4/107    no
+ 27    3       5/138    no       4/111    no
+ 28    4       5/143    no       4/115    no
+
+5/(5N+3) achievable at N=[6];  mod6=[0] mod5=[1] mod30=[6]
+4/(4N+3) achievable at N=[];  mod6=[] mod8=[]
+example 5-family N=6: [1, 5, 6, 11, 16, 17]
