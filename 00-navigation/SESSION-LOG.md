@@ -23,6 +23,15 @@ ROUTED (not mine, per fleet assignments): engine-ledger coupling + d-perp short-
 FILES: lrc14_hardcores_pzonu_macmini_S44.py, lrc14_palindrome_exact_arrangements_macmini_S44.py (+2 outs); HYP-4917 (INDEX). No Lean (proofs-first directive). No canon overridden.
 
 NEXT: (a) prove the adjacent-exchange lemma (the symmetrization inequality) -- likely via the order-cell/wall bijection under the exchange (tiling-model move); (b) the +3.3pct Hunter improvement OR the restricted-PZ moment bounds at the cores (close the 3.16pct product gap); (c) exact restricted-PZ moments E[U 1_G], E[U^2 1_G] as balanced-lattice sums with the P-spectrum (THM-579 template).
+## monad-explorer-2026-07-07-S5 -- THE PERSPECTIVE FRAME (HYP-4937): mirror lemma (3-APs = per-runner frame-degeneracies = the (1,-2,1) deficit head; global mirror = reversal = complement); two new runner-tournament rules mapped; honest negative -- orientation statistics cannot see the moat; GW is the exclusive-attention egalitarian outlier
+
+Prompt (owner): pair statistics as tournaments with creative binary cutoffs; the relativity of runner perspectives (antisymmetric relative-velocity matrix).
+
+RESULTS: (1) MIRROR LEMMA: v_j+v_k = 2v_i <=> j,k permanently mirrored in i's frame <=> the (1,-2,1) balanced deficit vectors -- the deficit lattice IS the perspective-degeneracy locus; reversal=complement (THM-639-A) is the global top of the local mirror hierarchy. Mirror counts: 84 (all AP-like difference structures) down to 12 (random). (2) T1 CENTERING tournament: c3 = 18 (AP) .. 85 (random) -- a clean hierarchy index; but GW (tight) sits at 39 beside loose S57: NOT a tightness detector. (3) T2 EXCLUSIVE-ATTENTION tournament (A_ij = time j is i's only close companion -- pure difference dynamics, genuinely asymmetric): intransitive everywhere (c3 72-104); GW = the egalitarian outlier (var 1.39, c3 104 vs AP 3.39/90) -- the two tight families are tournament-structurally FAR APART. (4) SEPARATION VERDICT: all four invariants overlap tight-vs-loose -- extending HYP-4767: the moat's signed cancellation is invisible to every orientation-level proxy tried (winding, residues, energy, centering, attention). (5) POSITIVE LEAD: organize the triple-mass/deficit bounds PER CENTER (each center's mirrors halve its frame's constraints; Freiman-caps the local counts).
+
+Concurrent synthesis honored: kps-S64's HYP-4927 rules are complementary (leader/Paley; my A_ij code offered); opus-S137 + mac-mini-S44 resolved reversal-symmetrized moments as VACUOUS (pointwise U(E,1-x)=U(E,x)) -- consistent with my frame (the global mirror is measure-preserving). My S4 hard-core exact floors were independently reconfirmed by opus-S137 (exact engine match) within the hour.
+
+FILES: lrc14_perspective_tournaments_monad_S5.py(+out); HYP-4937. No canon overridden.
 
 ## boxeph-2026-07-07-S2 -- LEAN FORMALIZATION: Farey-roof->good-set BRIDGE + AP30 density-floor certificate (unconditional, kernel-pure); extends death-star's AP20 diameter floor <=19 -> <=29
 

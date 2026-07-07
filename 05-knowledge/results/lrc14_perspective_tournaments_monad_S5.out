@@ -1,0 +1,39 @@
+================================================================================================
+PERSPECTIVE TOURNAMENTS: T1 centering / T2 exclusive-attention (14 vertices incl observer)
+================================================================================================
+                  AP (tight): mirrors(c_ij)= 84  T1: c3= 18 var=13.68 SC~False  T2: c3= 90 var=3.39 SC~False obs_out=7
+                  GW (tight): mirrors(c_ij)= 72  T1: c3= 39 var=10.68 SC~False  T2: c3=104 var=1.39 SC~False obs_out=7
+     record 2{1..11}+{11,13}: mirrors(c_ij)= 84  T1: c3= 19 var=13.54 SC~False  T2: c3= 78 var=5.11 SC~False obs_out=6
+            ds 2{1..12}+{13}: mirrors(c_ij)= 84  T1: c3= 20 var=13.39 SC~False  T2: c3= 81 var=4.68 SC~False obs_out=6
+             S57 adversarial: mirrors(c_ij)= 70  T1: c3= 39 var=10.68 SC~False  T2: c3= 91 var=3.25 SC~False obs_out=6
+            sat block 14..26: mirrors(c_ij)= 72  T1: c3= 36 var=11.11 SC~False  T2: c3= 94 var=2.82 SC~False obs_out=3
+  hardcore8 {9..13}+AP8@1009: mirrors(c_ij)= 32  T1: c3= 56 var=8.25 SC~False  T2: c3= 89 var=3.54 SC~False obs_out=7
+ hardcore9 {10..13}+AP9@1009: mirrors(c_ij)= 36  T1: c3= 45 var=9.82 SC~False  T2: c3= 72 var=5.96 SC~False obs_out=5
+                  random big: mirrors(c_ij)= 12  T1: c3= 85 var=4.11 SC~False  T2: c3= 97 var=2.39 SC~False obs_out=4
+               loose {2..14}: mirrors(c_ij)= 84  T1: c3= 23 var=12.96 SC~False  T2: c3= 91 var=3.25 SC~False obs_out=7
+
+T2 score sequences (sorted):
+                    AP (tight): [4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9, 9, 10]
+                    GW (tight): [5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8, 8, 9]
+       record 2{1..11}+{11,13}: [2, 2, 4, 6, 6, 6, 7, 8, 8, 8, 8, 8, 9, 9]
+              ds 2{1..12}+{13}: [1, 4, 5, 6, 6, 6, 6, 7, 7, 8, 8, 8, 9, 10]
+               S57 adversarial: [3, 5, 5, 6, 6, 6, 6, 6, 6, 6, 8, 9, 9, 10]
+              sat block 14..26: [3, 4, 5, 5, 6, 6, 7, 7, 7, 8, 8, 8, 8, 9]
+    hardcore8 {9..13}+AP8@1009: [3, 3, 5, 5, 5, 7, 7, 7, 8, 8, 8, 8, 8, 9]
+   hardcore9 {10..13}+AP9@1009: [2, 2, 4, 5, 6, 6, 7, 7, 7, 8, 9, 9, 9, 10]
+                    random big: [4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7, 9, 10]
+                 loose {2..14}: [4, 4, 4, 5, 5, 6, 7, 7, 7, 8, 8, 8, 8, 10]
+
+SEPARATION READOUT: tight = {AP, GW}.  Do any invariants isolate them?
+      T1.c3: tight=[18, 39]  others range [19,85]  overlaps
+      T2.c3: tight=[90, 104]  others range [72,97]  overlaps
+    mirrors: tight=[72, 84]  others range [12,84]  overlaps
+     T2.var: tight=[1.39, 3.39]  others range [2.39,5.96]  overlaps
+
+MIRROR LEMMA numeric check: for 3 random 3-APs in the AP, verify permanent
+mirroring {(vj-vi)x} = -{(vk-vi)x} at 5 random x (exact by construction):
+  center 11, wings (9,13): mirrored at all sampled x: True
+  center 2, wings (1,3): mirrored at all sampled x: True
+  center 5, wings (1,9): mirrored at all sampled x: True
+
+DONE.
