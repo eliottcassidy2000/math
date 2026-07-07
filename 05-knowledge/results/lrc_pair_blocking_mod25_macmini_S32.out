@@ -1,0 +1,27 @@
+========================================================================================
+PAIR-BLOCKING mod 25: which families block all 10 unit +-pairs, and their M?
+========================================================================================
+  generated 150881 12-speed families (height<=50)
+  families BLOCKING all 10 pairs (mod-25 covering fails): 554
+    (the rest -> some pair free -> M>=2/25 by kps's LRCMod25Floor)
+
+  pair-blockers with M < 2/25 (the sharp residual): 1
+    M=1/13 (0.07692) defects=0  W=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  = AP/tight
+
+  MIN M among pair-blockers, by defect count d=12-longestAP:
+      d          min M  <2/25?  min-family
+      0        1/13 (0.0769)     YES  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      1        1/12 (0.0833)      no  [3, 6, 9, 11, 12, 15, 18, 21, 24, 27]..]
+      2        1/11 (0.0909)      no  [3, 6, 8, 9, 12, 15, 18, 21, 24, 27]..]
+      3        3/31 (0.0968)      no  [1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 30, 37]
+      4        2/19 (0.1053)      no  [1, 2, 4, 6, 8, 10, 12, 14, 16, 22, 32, 36]
+      6       12/65 (0.1846)      no  [2, 16, 17, 28, 29, 32, 36, 37, 40, 44]..]
+      7         1/6 (0.1667)      no  [1, 11, 13, 16, 17, 19, 20, 21, 22, 23]..]
+      8        5/37 (0.1351)      no  [2, 13, 15, 16, 17, 19, 22, 26, 29, 32]..]
+      9        2/13 (0.1538)      no  [2, 11, 17, 18, 19, 22, 24, 29, 30, 37]..]
+
+  INTERPRETATION: if the ONLY pair-blockers with M<2/25 are the AP (d<=?)
+  and near-AP families that are ALSO caught by the swept <=2-defect world,
+  then kps's mod-25 core reduces to a clean finite statement: 'blocking all
+  10 unit-pairs mod 25 + M<2/25 => AP-like'.  A d>=3 pair-blocker with
+  M<2/25 would be the crux counterexample (report loudly).

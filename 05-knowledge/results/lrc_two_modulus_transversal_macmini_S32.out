@@ -1,0 +1,18 @@
+TWO-MODULUS analysis of >=3-defect near-tight 12-families (N=12).
+Goal: are full-transversal-mod-25 families (mod-25 FAILS) ever in the gap? what clears them?
+
+generated 10685 candidate families
+
+  IN-GAP families found: 0
+
+  full-transversal mod 25 (mod-25 rotation FAILS, c25=None): 306
+    of these, NO multiple of 25 (kps's supposed-clearable set): 286
+    all have M >= gap-top 2/25?  False
+    min M among transversal-no-mult-25: 1/13
+
+  HARD residual (full transversal, no mult 25, M < 2/25) count: 2
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  M=1/13 (0.0769)  defects=0  ingap=False
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  M=1/13 (0.0769)  defects=0  ingap=False
+
+  => if HARD=0 (or all HARD have M>=2/25 via small-q), the transversal residual is loose the EASY way
+     and (G) = [miss-a-class => mod-25 clears] + [full transversal => loose via small q / AP boundary].
