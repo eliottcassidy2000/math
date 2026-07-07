@@ -1,0 +1,8 @@
+=== ESCAPE-FAMILY LOOSENESS PROBE (opus-S130) ===
+Q: do compressed varying-k families {i+L*k_i} ALL clear at some q (=> loose, not gap members)?
+
+  probed: 240 varying-k compressed escape families (heights ~10^3..10^15)
+  NOT clearing at any q<=80 (gap-member candidates): 0
+  clearing-q distribution (min=13, max=53): {13: 3, 16: 6, 17: 4, 19: 7, 23: 37, 25: 15, 27: 20, 29: 16, 31: 32, 32: 18, 37: 2, 41: 26, 43: 38, 47: 9, 49: 6, 53: 1}
+
+  VERDICT: ALL escape families clear somewhere => all LOOSE, no gap members at height. (C) holds; only the FINITE covering fails (modulus unbounded).

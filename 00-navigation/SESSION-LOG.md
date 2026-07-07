@@ -21,6 +21,28 @@ HONEST STATE: the formalization is a CORRECT conditional skeleton LRC14 <= (C), 
 FILES: lrc_escape_verify / lrc_covering_regress / lrc_escape_at_Q39 / lrc_differ_prime_clears _macmini_S36/S37 (+out); reflection the-honest-state-of-LRC14-covering-is-a-reframing-decorrelation-is-the-core-macmini-S37.md; HYP-4687 (+INDEX); LRC14-PROOF-MAP corrected. No canon overridden (opus's GREEN skeleton stands; only the framing corrected).
 
 NEXT (corrected by opus-S130, concurrent): Route 2 is broken at BOTH ends -- top link (J-K = accumulation points, not the sup; MISTAKE-117) AND bottom link (my S36, MISTAKE-116). (A) does NOT prove LRC14, so the (A)-reroute is MOOT. Correct route = Route 1 (Mreach>=1/14 density floor, direct) + external Tao(2018)+MSS(2025)+sieving. LRC14 is genuinely open (Trakulthongchai: 'needs an entirely new way'). My finding is now canon (opus-S130 confirmed).
+## opus-2026-07-06-S130 -- CORRECTNESS AUDIT: Route 2 does NOT prove LRC(14) -- BOTH links broken (MISTAKE-116 finite covering incomplete; MISTAKE-117 J-K = wrong object). (C) still TRUE. Reroute to Route 1 / Tao.
+
+Prompt (owner): work all remaining math; deeply consider the state of our LRC(14) attempts and their direction; reroute as needed; ensure carefully we have everything correct.
+
+Did a skeptical audit of the Route-2 wiring I had just built (S129). Found Route 2 is broken at BOTH ends -- the most important finding of the session. Both verified with hard evidence.
+
+1. TOP LINK INVALID (MISTAKE-117). The "J-K reduction" ((A) => LRC14) is NOT valid. Verified against the arXiv:2304.01462 (Giri-Kravitz) abstract, VERBATIM: "Rather than attack this conjecture, we study the structure of the sets S(n)." Their theorem is about ACCUMULATION POINTS (acc(S(n))=S(n-1)), not the SUPREMUM the LRC bounds. Sharpened: G-K + settled LRC(<=13) already gives acc(S(13))=S(12)<=1/2-1/13; so a LRC14 counterexample is an ISOLATED point of S(13) above 1/2-1/14 -- exactly what accumulation-point theory cannot exclude. The numbers 1/13,2/25 appear nowhere in the papers. So (A)=>LRC14 is unwarranted; Route 2 is DISCONNECTED from LRC14 at the top (proving (C)/(A) fully would not prove LRC14).
+
+2. BOTTOM LINK NOT FINITE (MISTAKE-116). Independently reproduced mac-mini-S36 (lrc_covering_completeness_audit): compressed varying-k families {i+L*k_i} escape any finite {2..Q0}, clear only at nextprime(Q0); covering modulus UNBOUNDED. "(C) = finite covering" is refuted; it is (G)-equivalent (analytic).
+
+WHAT HOLDS (salvage): (C) is TRUE -- lrc_gap_member_search (0 gap members / 3550 near-AP, exact M) + lrc_escape_loose_probe (240 escape families up to height ~10^15 ALL clear at some q<=80 => all loose). The Lean corpus is SOUND (no sorries; all lrc14_of_* are conditional implications; the obsolete-floor theorem is labeled). Only the FRAMING (docstrings/proof-map calling obligations "citation to pin"/"finite check") was wrong -- corrected in place.
+
+RECONCILIATION with klein-S150: klein routed the escape families to (A) [rank-2]. That reframe does NOT rescue the route: (A) and (C) both reach LRC14 ONLY via J-K, so relocating the hard analytic core from (C) to (A) leaves it equally disconnected. The escape families are genuinely (C)'s object (integer 12-vectors) AND a single loose direction of a rank-2 torus -- loose either way, but neither framing reaches LRC14 without J-K.
+
+REROUTE: retire Route 2 as a proof route (keep as correct conditional math / spectrum study). Route 1 (bound Mreach>=1/14 DIRECTLY -- the sup) is the correctly-aimed surviving project route (verified aimed-right: no wrong-object flaw), though its density-floor nodes are open hard analysis (the 2/7 version was already refuted; 1/7 is the current target). Recognized external route: Tao (2018) + Malikiosis-Santos-Schymura (2025) + Rosenfeld/Trakulthongchai sieving (what actually proved n<=13; the next case needs "an entirely new way" per Trakulthongchai).
+
+FILES: lrc_covering_completeness_audit / lrc_gap_member_search / lrc_escape_loose_probe / lrc_C_robustness _opus_S130 (+outs); MISTAKE-116, MISTAKE-117; proof-map CORRECTION BANNER; reflection the-route-2-audit-two-broken-links-opus-S130; Lean docstrings (JKReduction, CoveringComplete) corrected; broadcast to fleet. NO new theorems asserted; two obligations correctly re-labeled.
+
+NEXT (owner decision): pick the reroute -- (a) work Route 1's honest density floor; (b) engage the Tao/MSS/sieving computational route; (c) re-scope to formalizing settled results; (d) keep auditing/consolidating. Route 2 should not receive further PROOF-directed effort.
+
+---
+
 ## klein-2026-07-06-S150 -- INDEPENDENT CONFIRMATION of mac-mini-S36's covering-escape + the ROUTING synthesis (escape families = rank-2 GAPs => opus's (A), not (C)) (HYP-4651)
 
 Prompt (owner): work the open residual, then formalize; challenge assumptions; pull/push often.
