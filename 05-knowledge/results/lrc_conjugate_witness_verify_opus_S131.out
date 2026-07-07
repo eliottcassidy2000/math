@@ -1,0 +1,7 @@
+=== INDEPENDENT verify + STRESS of klein-S152 conjugate witness (opus-S131) ===
+    escape family v_i = a_i + L*d*i (i=1..13); claim: some c in (Z/14)* gives M>=1/14
+
+tested: 180 escape families (random + adversarial a-patterns)
+families with NO c giving M>=1/14 (within delta-search): 0
+
+VERDICT: conjugate witness HOLDS on all tested (incl adversarial) => mechanism robust
