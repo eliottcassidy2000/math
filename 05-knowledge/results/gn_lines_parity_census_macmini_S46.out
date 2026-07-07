@@ -1,0 +1,83 @@
+
+===== n=3: m=1, f=1, classes=2 (SC=2), tilings=2 =====
+  node types: PURE-BLUE=2  MIXED=0  PURE-BLACK=0   [pure-black == non-SC? True]
+  gridsym tilings = 2 (formula 2^((m+f)/2) = 2); blue lines = 1, black lines = 0 (total 1)
+  THEOREM CHECKS: T1(fiber=H/Aut odd):True  T2(pureblack=nonSC,parity):True  T3(blue on SC):True
+                  T4a(SC blue-odd/black-even):True  T4b(all cross-ends odd):True  T4c(colored cross parities):True  T5(gs count):True
+  line allocation (color, self/cross, endpoint-types): count
+    ('blue', 'cross', ('PB', 'PB')): 1
+  PURE-BLUE classes: [(1, 1, 1), (3, 3, 1)]  (H,|Aut|,fiber)
+  SC-node #blue-tilings distribution: [1, 1]
+  MIXED classes (H,|Aut|,fiber,#gs): []
+
+===== n=4: m=3, f=1, classes=4 (SC=2), tilings=8 =====
+  node types: PURE-BLUE=1  MIXED=1  PURE-BLACK=2   [pure-black == non-SC? True]
+  gridsym tilings = 4 (formula 2^((m+f)/2) = 4); blue lines = 2, black lines = 2 (total 4)
+  THEOREM CHECKS: T1(fiber=H/Aut odd):True  T2(pureblack=nonSC,parity):True  T3(blue on SC):True
+                  T4a(SC blue-odd/black-even):True  T4b(all cross-ends odd):True  T4c(colored cross parities):True  T5(gs count):True
+  line allocation (color, self/cross, endpoint-types): count
+    ('black', 'cross', ('MX', 'PK')): 2
+    ('blue', 'cross', ('MX', 'PB')): 1
+    ('blue', 'self', ('MX', 'MX')): 1
+  PURE-BLUE classes: [(1, 1, 1)]  (H,|Aut|,fiber)
+  SC-node #blue-tilings distribution: [1, 3]
+  MIXED classes (H,|Aut|,fiber,#gs): [(5, 1, 5, 3)]
+
+===== n=5: m=6, f=2, classes=12 (SC=8), tilings=64 =====
+  node types: PURE-BLUE=3  MIXED=5  PURE-BLACK=4   [pure-black == non-SC? True]
+  gridsym tilings = 16 (formula 2^((m+f)/2) = 16); blue lines = 8, black lines = 24 (total 32)
+  THEOREM CHECKS: T1(fiber=H/Aut odd):True  T2(pureblack=nonSC,parity):True  T3(blue on SC):True
+                  T4a(SC blue-odd/black-even):True  T4b(all cross-ends odd):True  T4c(colored cross parities):True  T5(gs count):True
+  line allocation (color, self/cross, endpoint-types): count
+    ('black', 'cross', ('MX', 'MX')): 8
+    ('black', 'cross', ('MX', 'PK')): 12
+    ('black', 'self', ('MX', 'MX')): 4
+    ('blue', 'cross', ('MX', 'MX')): 3
+    ('blue', 'cross', ('MX', 'PB')): 5
+  PURE-BLUE classes: [(1, 1, 1), (3, 3, 1), (15, 5, 3)]  (H,|Aut|,fiber)
+  SC-node #blue-tilings distribution: [1, 1, 1, 1, 3, 3, 3, 3]
+  MIXED classes (H,|Aut|,fiber,#gs): [(9, 1, 9, 1), (9, 1, 9, 3), (11, 1, 11, 3), (15, 3, 5, 1), (13, 1, 13, 3)]
+
+===== n=6: m=10, f=2, classes=56 (SC=12), tilings=1024 =====
+  node types: PURE-BLUE=2  MIXED=10  PURE-BLACK=44   [pure-black == non-SC? True]
+  gridsym tilings = 64 (formula 2^((m+f)/2) = 64); blue lines = 32, black lines = 480 (total 512)
+  THEOREM CHECKS: T1(fiber=H/Aut odd):True  T2(pureblack=nonSC,parity):True  T3(blue on SC):True
+                  T4a(SC blue-odd/black-even):True  T4b(all cross-ends odd):True  T4c(colored cross parities):True  T5(gs count):True
+  line allocation (color, self/cross, endpoint-types): count
+    ('black', 'cross', ('MX', 'MX')): 10
+    ('black', 'cross', ('MX', 'PK')): 156
+    ('black', 'cross', ('PK', 'PK')): 308
+    ('black', 'self', ('PK', 'PK')): 6
+    ('blue', 'cross', ('MX', 'MX')): 28
+    ('blue', 'cross', ('MX', 'PB')): 2
+    ('blue', 'self', ('MX', 'MX')): 2
+  PURE-BLUE classes: [(1, 1, 1), (9, 9, 1)]  (H,|Aut|,fiber)
+  SC-node #blue-tilings distribution: [1, 1, 3, 3, 5, 5, 7, 7, 7, 7, 9, 9]
+  MIXED classes (H,|Aut|,fiber,#gs): [(5, 1, 5, 3), (17, 1, 17, 5), (17, 1, 17, 5), (37, 1, 37, 7), (33, 1, 33, 7), (29, 1, 29, 7), (29, 1, 29, 7), (41, 1, 41, 9), (45, 3, 15, 9), (45, 3, 15, 3)]
+
+===== n=7: m=15, f=3, classes=456 (SC=88), tilings=32768 =====
+  node types: PURE-BLUE=4  MIXED=84  PURE-BLACK=368   [pure-black == non-SC? True]
+  gridsym tilings = 512 (formula 2^((m+f)/2) = 512); blue lines = 256, black lines = 16128 (total 16384)
+  THEOREM CHECKS: T1(fiber=H/Aut odd):True  T2(pureblack=nonSC,parity):True  T3(blue on SC):True
+                  T4a(SC blue-odd/black-even):True  T4b(all cross-ends odd):True  T4c(colored cross parities):True  T5(gs count):True
+  line allocation (color, self/cross, endpoint-types): count
+    ('black', 'cross', ('MX', 'MX')): 858
+    ('black', 'cross', ('MX', 'PK')): 5044
+    ('black', 'cross', ('PK', 'PK')): 10182
+    ('black', 'self', ('MX', 'MX')): 18
+    ('black', 'self', ('PK', 'PK')): 26
+    ('blue', 'cross', ('MX', 'MX')): 250
+    ('blue', 'cross', ('MX', 'PB')): 6
+  PURE-BLUE classes: [(1, 1, 1), (3, 3, 1), (15, 5, 3), (9, 9, 1)]  (H,|Aut|,fiber)
+  SC-node #blue-tilings distribution: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+  MIXED classes (H,|Aut|,fiber,#gs): [(9, 1, 9, 1), (9, 1, 9, 3), (11, 1, 11, 3), (15, 3, 5, 1), (13, 1, 13, 3), (33, 1, 33, 1), (25, 1, 25, 5), (31, 1, 31, 5), (27, 1, 27, 3), (41, 1, 41, 5), (51, 3, 17, 1), (31, 1, 31, 5)]
+
+===== GLOBAL TABLE =====
+ n   m  f  classes   SC   PB   MX     PK  gridsym   blueL    blackL
+ 3   1  1        2    2    2    0      0        2       1         0
+ 4   3  1        4    2    1    1      2        4       2         2
+ 5   6  2       12    8    3    5      4       16       8        24
+ 6  10  2       56   12    2   10     44       64      32       480
+ 7  15  3      456   88    4   84    368      512     256     16128
+
+n=8 by formula: m=21, f=3 -> gridsym = 2^12 = 4096, blue lines = 2048, black lines = 2^20 - 2^11 = 1046528; pure-black = 6880 - SC(8) (SC(8) from census lit).
