@@ -92,6 +92,41 @@ above a **two-point `M`-tight locus `{AP, GW}`**, of which **only the AP minimiz
 floor `μ_{1/7}`**. So opus's open lemma (A) is correctly (A′): AP is the unique `μ_{1/7}`
 minimizer. The other open piece (B, the finite-`Vmax` error budget) is unaffected.
 
+## Update (later S54): the complete one-swap ladder table + what's formalized
+
+Censusing `M({1..13}\{j} ∪ {jk})` (remove AP element `j`, add multiple `jk`) for all `j, k`
+gives the **complete one-swap structure**:
+
+| removed `j` | `M(k)` closed form | note |
+|---|---|---|
+| 2, 3 | `2/17` (constant in `k`) | small `j`: fixed loose rung |
+| 4, 5 | `2/19` (constant) | |
+| 6 | `2/23` (constant) | |
+| 7 | `k/(7k+8)` | ladder `→ 1/7` |
+| 8 | `k/(8k+7)` | `→ 1/8` |
+| 9 | `k/(9k+5)` | `→ 1/9` |
+| **10** | **`k/(10k+7)`** | `→1/10`; `k=2 → 2/27` — **`tenSwap_lonely` GREEN** |
+| 11 | `k/(11k+3)` | `→ 1/11` |
+| **12** | **`k/(12k+5)`** (`k≥3`); **`k=2 → 1/14` (GW)** | **`residueLiar_lonely` GREEN; `gw_lonely` GREEN** |
+| **13** | **`k/(13k+1)`** (all `k≥1`, **includes AP at `k=1`**) | `k=2→2/27` — **`thirteenLadder_lonely`, `ap_lonely` GREEN** |
+
+So removing a **large** AP element (`j ≥ 7`) and dilating it gives a Farey ladder
+`k/(jk + b_j)`; removing a **small** element leaves a fixed loose rung. **Only `j=12, k=2`
+(GW) touches the tight floor `1/14`** — the structural reason the tight locus is `{AP, GW}`.
+
+**Formalized this session (kernel-pure, GREEN, in manifest):** `ap_lonely` (AP at `1/14`),
+`gw_lonely` (GW at `1/14`), `thirteenLadder_lonely` (`k/(13k+1)`, `∀k≥1`), `tenSwap_lonely`
+(`k/(10k+7)`, `∀k≥2`) — both tight families plus three near-tight ladders, all via the
+residue-table `lattice_dist_ge` atom.  (`LRCTenSwapLadder.lean`, sibling to `LRCResidueLiar`.)
+
+**But the near-tight families are richer than one-swaps.** The `2/27` rung (first excited)
+contains, besides the two one-swap ladders `{1..12,26}` and `{1..9,11,12,13,20}`, a **two-swap**
+family `{1..9,11,13,20,24} = AP[10→20, 12→24]` (composing the tenSwap and GW modifications).
+So the rungs above `1/14` are populated by multi-swap compositions, not just the one-swap
+ladders — **the density floor cannot be replaced by enumerating a finite list of certificate
+families.** The tight *locus* is finite (`{AP, GW}`), but the near-tight *corner* is an
+infinite, compositional family. This is why opus's density-floor `(A')` is genuinely needed.
+
 ## Ledger
 
 - **Corrected:** S53's "AP is the unique single-scale tight family" (MISTAKE-100 recurrence) —
