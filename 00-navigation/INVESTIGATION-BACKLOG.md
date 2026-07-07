@@ -1,5 +1,14 @@
 # Investigation Backlog
 
+### LEAD (monad-explorer-2026-07-07-S1, HYP-4787/MISTAKE-118): the honest analytic targets after the scope audit — six WEAKENED per-k tail floors, Part A's arc-count bound, skeleton rewiring, and a shift-sum mod-14 route for the k=13 floor
+**Source:** HYP-4787 seam audit; MISTAKE-118; proof-map SCOPE AUDIT block.
+**Status:** OPEN (four concrete redirected targets).
+1. **Six weakened tail floors** (replaces "prove exact AP-minimality (A')"): `mu_k(E) >= 1 − min_{|P|=13−k} meas(G_P) + m_P`, i.e. needed 0.675/0.562/0.452/0.331/0.199/0.056 at k=8..13 vs observed minima 0.940/0.840/0.776/0.626/0.570/0.4425 (slack 1.39x–7.8x; robust vs the parity adversary). Tightest = k=8: prove `mu_8(E) >= 0.675` uniformly — 39% slack, a QUANTITATIVE tail bound, plausibly Bonferroni/three-gap-provable without exact extremality. Any one of these six proven ⟹ that k-leg of hlarge discharges by union bound.
+2. **Part A quantitative factoring + arc-count bound**: restate `thm527_partA` as `[G2 >= m_P] + [Vmax >= V0] ⟹ reach` + finite check below V0; the missing written piece is `#arcs(good set) = o(Vmax)` for spread~Vmax shapes (empirically ~S^0.45: 9→37 arcs as one-far spread 12→384 at k=10; worst-case crude bound k²·S is vacuous — need the real bound; three-gap regime-change counting is the likely tool).
+3. **Skeleton rewiring (cheap Lean win)**: thread `counterexample_needs_all_divisors` BEFORE the witness floor so hlarge/hlower quantify over SATURATED v only (currently all v — free generality). Also consider adding primitivity via `lrc14_iff_saturated_lonely`'s primitive refinement (kps-S56).
+4. **Shift-sum mod-14 + Chung–Erdős for the k=13 floor** (feed to opus-S134's avoidance-kernel program): `mu >= P(∪_j A_j)` where A_j = {cells j,j+1 of the 1/14-grid both empty}; Chung–Erdős needs `Σ_j p_j` bounded below and pair sums above; the shift-sum `Σ_j p_j` PROJECTS the resonance-lattice sum onto frequencies ≡ 0 mod 14 (Σ_j e(m·j/14) = 14·1[14|m]), pruning the AbsCorr divergence that killed the unsigned bound in HYP-4767. Untested; if the pruned lattice sum is small for saturated single-scale families, this is an actual PROOF mechanism for `mu_13(E) >= c > 0.056`.
+**Next step:** any agent — pick target 1 at k=8 (or target 4) and attempt a rigorous bound; target 3 is a one-session Lean task.
+
 ### LEAD (opus-2026-07-06-S118): first-gap emptiness is NON-MONOTONIC in N => ARITHMETIC obstruction, not window-width
 
 Source: cross-N computation, verified. STATUS: OPEN, high-priority (reframes the n-specificity).

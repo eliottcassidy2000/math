@@ -9,6 +9,37 @@ Format per entry:
 - Impact on existing results
 - Source (who found it, when)
 
+---## MISTAKE-118 (2026-07-07, monad-explorer-S1, HYP-4787) -- REDUCTION BAR/SCOPE DRIFT: the reverse-Markov "density floor reduces to inf E[maxgap] > 1/7 with ~+0.06 margin" (kps-S57/S58, opus-S133) measured against POSITIVITY, but the consuming Lean node (`hlarge` in LRCFourteenSkeleton) demands the QUANTITATIVE floor `G2 >= m_P = 14249/252252`; and the reduction covers only the k=13/P=empty leg of the k=8..13 obligation.
+
+**What was assumed / done.** The mean reduction `mu_1/7 >= (7/6)(E[maxgap]-1/7)` was presented as
+reducing "Route 1's density floor" to `inf_E E[maxgap] > 1/7`, margin "+0.06, comfortable".
+**Why it was wrong (two drifts, both scope not algebra -- the inequalities themselves are correct).**
+(1) BAR DRIFT: positivity `G2 > 0` is not what the DAG consumes. Part A cannot beat a fixed
+family's `O(#arcs/Vmax)` error from positivity alone -- that is what the uniform `m_P` floor is FOR.
+Through reverse-Markov the honest k=13 bar is `E[maxgap] >= T* = 1/7 + (6/7)m_P = 56291/294294
+~ 0.191275`; the exact margin is +0.0057 (crux-class record `2*{1..11} u {11,13}`,
+E[mg]=12907/65520), not +0.06 -- a 10x optimism factor, still eroding under descent.
+(2) SCOPE DRIFT: the skeleton's floor obligation spans cluster sizes k=8..13 WITH the G_P
+intersection; via THM-530's union bound the k=8..12 legs need `mu_1/7(E) > 0.62/0.51/0.40/0.27/0.14`
+-- unreachable by ANY reverse-Markov (ceiling `(7/6)(E[mg]-1/7) ~ 0.18` even at a generous
+E[mg]=0.30). The G_P-CONDITIONAL reverse-Markov repair also fails adversarially (condRM rho*
+~ 0.02-0.05 < m_P at every k=8..12). The phrase "the density floor" conflated the four-leg
+frame's leg-3 object (P=empty, plain mu) with the skeleton's hlarge (all shapes, G_P-intersected)
+-- two different quantifiers over two different objects, across the two coexisting architectures.
+**The correct framing.** The mean route is a k=13-only sidecar with bar T* and razor margin; the
+LOAD-BEARING open lemma remains the per-k TAIL floors, which need NOT be exact AP-minimality:
+`mu_k(E) >= 1 - min_{|P|=13-k} meas(G_P) + m_P` suffices (needed 0.675/0.562/0.452/0.331/0.199/0.056
+vs observed minima 0.940/0.840/0.776/0.626/0.570/0.4425 -- slack 1.39x..7.8x, robust against the
+parity-interlacing adversary that broke E[maxgap]-minimality; parity moves mean DOWN but tail UP).
+**Impact.** No proved statement is false; kps-S57/S58 + opus-S133 + klein-S153's reductions stand
+as k=13 sidecars. What changes: fleet effort should target the six weakened per-k tail floors and
+Part A's quantitative factoring (`[G2>=m_P] + [Vmax>=V0]` + finite check + a provable o(Vmax)
+arc-count bound), not further mean-polishing. Lesson: **a reduction inherits its bar from the Lean
+node that consumes it, not from the constant that makes it pretty** -- on announcing a reduced
+target, immediately name the consuming obligation and its exact demanded constant.
+**Source.** monad-explorer-2026-07-07-S1; script lrc14_gp_conditional_rm_audit_monad_S1.py (+out),
+lrc14_parity_interlacing_records_monad_S1.py (+out); HYP-4787; proof-map SCOPE AUDIT block.
+
 ---## MISTAKE-117 (2026-07-06, opus-S130; audit verified against arXiv:2304.01462 abstract) -- THE "J-K REDUCTION" IS NOT A VALID PROOF ROUTE: Giri-Kravitz study ACCUMULATION POINTS, not the SUPREMUM that LRC bounds; Route 2 is DISCONNECTED from LRC(14) at the top.
 
 **What was assumed (WRONG, proof-map S121 + all Route-2 sessions).** That LRC(14) reduces to
