@@ -14,6 +14,25 @@ FINITIZATION: inf over spread APs = min over the finite coprime box {gcd(a,d)=1,
 REMAINING (R2, separate): spread APs are the GLOBAL PA_2-minimizer over all families (boxeph's claim) -- my S68 subset lemma covers bounded diameter; unbounded-diameter global-minimality is the last rigidity. If R2 holds, (A') closes: bounded-diam (S68) + spread-AP exact inf (S69) + R2.
 
 Files: lrc_spread_ap_finitize_kps_S69.py (+out); reflection the-spread-ap-residual-finitized-exactly-kps-S69; HYP-5067. Exact finitization + decorrelation limit (no formalization). Does NOT prove LRC(14).
+## klein-2026-07-07-S167 -- TWO DECISIVE AUDITS: the unsigned uniform head bound is DEAD (max A(P) = 10.95 at the hard core P={9..13} => demands mu >= 0.997; the coupling's content is SIGNED cancellation); the no-separated-cherry class is NEARLY EVERYTHING but its mu ~ 1.0 (the unproved region is the easiest in truth); + THE HONEST LRC(14) REMAINING-WORK LEDGER (HYP-4911)
+
+Prompt (owner): work the uniform head bound + the no-separated-cherry class + any other tasks to finish the LRC(14) proof.
+
+HONESTY FIRST: LRC(14) is NOT finished this session; what this session delivers is the precise map of what remains.
+
+(1) UNSIGNED HEAD BOUND DEAD (exact table, all 1287 |P|=5): A(P,2000) in [6.23, 10.95], max AT THE HARD CORE {9..13}; absolute-value route demands mu >= 0.997 > union bound's 0.675. Measured heads ~0.08 = 100x below the unsigned cap: the R-coupling's content is SIGNED CANCELLATION (mac-mini-S40's lesson recurring one layer up). R >= 0.75 stays per-shape-certifiable (S166); uniform = a signed-head estimate (open).
+
+(2) CHERRY ACCOUNTING EXACT: bare books absorb ZERO clustered triples (0.1924 < 0.197 by 0.005); tiny-pair G-credits (q1q2 <= 4) are the only rescue.
+
+(3) THE NO-SEPARATED-CHERRY CLASS = 3990/4000 of moderate-spread shapes (the 50x gate is thin) -- but their mu is UNIFORMLY ~1.0 (min 0.9987): the unproved region is the easiest in truth. THE k=8 RESIDUAL, precisely: uniform mu >= 0.675 for diam >= 27 moderate-spread (30%+ true slack), pairs provably insufficient (S159 barrier) => ONE genuinely new estimate needed (signed head / Koksma triple / net anti-concentration).
+
+THE FULL HONEST LEDGER (LRC-14, all routes): k=8 as above; k=9..12 same shape, lower bars, ledgers to diam 11/17/21/34; k=13 diam <= 75 PROVED + spread residual (10x slack); Part A quantitative + arc bound (kps-S61 active); (A') exact-verified 49937 classes, unproved; the moat open. Sharply-drawn frontier; MISTAKE-116 discipline on every 'finite'.
+
+FILES: 05-knowledge/results/lrc14_head_constant_cherry_class_klein_S167.out (inline script). No Lean (owner directive). No canon overridden.
+
+NEXT (the three candidate keys, in order of my judgment): (a) the SIGNED head estimate at the hard-core P's (the same signed-cancellation object recurs at every layer -- one good idea closes coupling everywhere); (b) net anti-concentration for spread shapes (P(all 8 gaps <= 1/7) <= 0.325 with 30% slack -- triple-level, the S159 barrier says nothing less works); (c) extend the verified band 27..D by compute (brute confidence while the analysis matures).
+
+---
 
 ## klein-2026-07-07-S166 -- THE R-CRITERION PASSES (per-shape spectral-split certificates: >= 0.779/0.806/1.0/1.0 at the adversarial worst cases, proved inequality + explicit tail) + comb-bound cancellation honestly bounded (one-tooth near-tight; dihedral pairing = provable 2x; rest Koksma) + the ROTATION-COLORING frame recorded (HYP-4901)
 

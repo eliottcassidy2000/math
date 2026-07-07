@@ -1,0 +1,22 @@
+=== (1) head constant A(P, M=2000) over all C(13,5)=1287 small parts ===
+  A(P): min 6.231 at (2, 4, 6, 8, 12);  median 9.056;  MAX 10.949 at (9, 10, 11, 12, 13)
+  with A = 10.95: R >= 0.75 guaranteed when mu >= 0.997  (union bound needs 0.675)
+  with A = 9.06: R >= 0.75 guaranteed when mu >= 0.996  (union bound needs 0.675)
+  VERDICT: the bare uniform head route demands mu near 1 -- WORSE than the union bound;
+  the R-route's strength is per-shape (measured heads ~0.08 << 2(1-mu)A worst case);
+  a uniform theorem needs cancellation in the head (signed sum), not absolute values.
+
+=== (2) clustered-triple cherry accounting (bare books) ===
+  0 clustered triples: bare cherry floor = 0.2099  (>= 0.197)
+  1 clustered triples: bare cherry floor = 0.1924  (BELOW 0.197)
+  2 clustered triples: bare cherry floor = 0.1749  (BELOW 0.197)
+  => bare books absorb ZERO clustered triples (0.1924 at c=1); pair-G credits must cover
+     ~0.005 per clustered triple; a single G>=1 credit on a small pair (1/(49*q1q2)) covers it
+     iff q1q2 <= ~4 -- i.e., only shapes with tiny difference-pairs. The no-separated-cherry
+     class therefore splits: [>=1 small pair: absorbable] / [no small pair + clustered: the residual].
+
+=== (3) residual-class probe: how special are they, and what is their mu? ===
+  residual-class members found: 3990/4000 random 8-sets (diam>26, no sep-cherry, no small pair)
+  their mu: min 0.9987, median 1.0000  (bar 0.675; R-bar 0.197)
+  => the residual class is COMMON (most moderate-spread shapes) but its mu is uniformly high;
+     it needs either the Koksma sharpening (separated-cherry relaxation) or the direct band extension.
