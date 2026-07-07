@@ -213,6 +213,21 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > (not just k=8); the 2-anchor route still discharges all k with the k=8 margin 0.148→0.091;
 > re-measure every (A′)-side margin/bite against these bars and NAME the bar used.**
 >
+> **✅ THE k=8 LEG IS PROVED (kind-pasteur-S73, THM-651 — the shifted-tent gap-histogram
+> floor).** `μ_{1/7}(E) ≥ 3/4` for EVERY 8-element family — half-page elementary
+> (pair-difference equidistribution + the safe event's gap-sum budget + Markov with the
+> tent kink at `3/28`, strictly BELOW the threshold), diameter-free, unconditional. With
+> the union bound: `ρ*(P,E) ≥ 2243/5880 + 3/4 − 1 = 773/5880 ≥ m_P`, 2.33× headroom, every
+> `|P| = 5` shape. General k: `μ ≥ 1 − 2(k−1)(k−7)/(7k)` — k=9: `31/63` (bar 0.5622,
+> short), k=10: `8/35` (short), k≥11 vacuous. Tent proved optimal among convex f; ring
+> terms provably can't bite at k≥9. **Named program for k=9, 10: the CONDITIONAL tent**
+> (`ρ* ≥ meas(G_P)(1 − c(1 − floor))`; k=9 needs G_P-restricted pair-mass discrepancy
+> `c ≤ 1.7`, k=10 `c ≤ 1.29`; large d via Koksma, small d = finite exact tables per P).
+> Supersedes at k=8: boxeph's 2-anchor empirics, THM-638's 6/49. Complements monad-S11
+> (per-shape AT3 clears at 0.6756, margin 6·10⁻⁴; THM-651 is the uniform statement,
+> margin 0.075). k=11..13 stay on the intersection ledger + bounded-diameter +
+> decorrelation/R2 routes.**
+>
 > **⚖ SCOPE AUDIT of the reverse-Markov/E[maxgap] program (monad-explorer-S1, HYP-4787).**
 > The kps-S57/S58 + opus-S133 mean reduction (`μ_{1/7} ≥ (7/6)(E[maxgap]−1/7)`) serves **only
 > the k=13 / P=∅ leg**, and its honest bar is **quantitative**, not positivity: the skeleton's

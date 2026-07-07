@@ -1,5 +1,13 @@
 # Investigation Backlog
 
+### LEAD (kind-pasteur-2026-07-07-S73, THM-651/HYP-5147): the CONDITIONAL TENT closes k=9 and k=10; the signed-f degree-2 game
+**Source:** THM-651 (μ_{1/7}(E_8) ≥ 3/4 PROVED — the k=8 hlarge leg is DISCHARGED, 2.33× headroom; general-k tent floor 1 − 2(k−1)(k−7)/(7k); tent optimal among convex f; rings can't bite k ≥ 9), MISTAKE-123 (honest bars).
+**Status:** OPEN — two shaped targets, both finite-flavored.
+1. **The conditional tent (k=9, 10):** prove `∫_{G_P} f_β(frac(dx)) dx ≤ c · meas(G_P) · ∫f` for all nonzero d with `c ≤ 1.7` (k=9; c ≤ 1.29 for k=10), f_β the tent at β_k. Then `ρ* ≥ meas(G_P)(1 − c(1 − tentfloor)) ≥ m_P` discharges both legs (4.3×/2.4× headroom at c = 1). Large d: Koksma/interval counting, rate #intervals(G_P)/d — one page. Small d: FINITE exact tables per P (|P| = 4: argmin {1,11,12,13}; |P| = 3: {1,12,13}) — the resonant shapes (tent-window intervals dodging G_P's holes) are the honest content; enumerate d ≤ d₀ ≈ 100 exactly per P and take worst case. If some (P, d) exceeds c: that d pins a residue class of cluster differences — a sieve-flavored sub-case, likely handled by the shape's OTHER pairs (only 1 of k−1 differences can be maximally aligned).
+2. **The signed-f degree-2 game (k=9..10 alternative, k=11..12 hope):** allow f < 0 on (0, ε] (taxing the tail's close pairs — tails love twins, safe k=9 configs carry ≤ 4 tiny gaps). Two-sided Markov: P(S) ≤ (E[F] − m_tail)/(m_S − m_tail). Needs m_tail control (min of F over TAIL configs — bounded below since close pairs also cap: k points with j twins have gap structure...). Well-posed grid/continuum LP; the v1 lrc_degree2_ceiling machinery (safe/tail classes + flatness) is the starting scaffold.
+Guard-rails: measure every margin against the HONEST bars (MISTAKE-123); the tent frame is vacuous at k ≥ 11 (safe configs hide at gaps ~1/k below any paying kink) — k=11/12 need genuinely different input (intersection ledger covers diam ≤ 21/34; beyond = open).
+**Next step:** any agent — target 1's large-d Koksma half + the |P|=4 small-d table is one focused session; it would make FOUR of the six (A′) legs proved.
+
 ### LEAD (opus-2026-07-07-S144, HYP-5137): the GW fractional separation and the χ_c(G_GW) rung question; the deep-resonance-tail law; the exchange-rate reframe of R2
 **Source:** HYP-5137 (μ(GW) = 1/13 exactly vs M = 1/14; μ({1,3,4,7}) = 1/4 vs 1/5; V_r profile; T_5/T_6 AP-maximality surviving), reflection the-invariant-resonance-profile-and-the-ladder-separation-opus-S144.
 **Status:** OPEN (four shaped targets).
