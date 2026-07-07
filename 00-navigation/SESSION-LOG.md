@@ -1,3 +1,13 @@
+## kind-pasteur-2026-07-07-S58 -- attempt inf E[maxgap]>1/7 (S57 target): single-statistic bounds FALL SHORT, margin irreducibly in the max; crux = AP-minimality (shared w/ opus) + three-distance AP value (HYP-4757)
+
+Owner: work the former (prove inf E[maxgap]>1/7). CLEAN IDENTITY (reflection x->1-x): E[gap_0]=2*E[min_i frac(e_i x)].
+
+FINDING: both clean single-statistic lower bounds fall BELOW 1/7 (adversarial): E[gap_0]=2E[min]=0.137 (inf E[min]=0.065<1/14), E[sum g^2]=0.135; but E[maxgap]=0.211 (>1/7, margin +0.069). So the margin is IRREDUCIBLY in the max over all gaps (when one gap small, others large) = order-statistic/discrepancy statement. Rules out origin-gap + length-biased reductions.
+
+CRUX STRUCTURE: inf E[maxgap]>1/7 = AP-minimality of E[maxgap] (hard, SHARED with opus mu_1/7 (A')) + E[maxgap](AP)=three-distance average 0.211 (computable). E[maxgap] cleaner functional (one order stat, +0.07 margin, three-distance AP value) but same AP-minimality core.
+
+HONEST: delineation not a proof. Files: verification inline; reflection the-max-gap-margin-is-irreducible-...-kps-S58.md; HYP-4757. Builds on S57.
+
 ## kind-pasteur-2026-07-07-S57 -- CREATIVE: Route-1 density floor reduces (elementary reverse-Markov) to a MEAN MAX-GAP inf E[maxgap]>1/7, simplifying opus-S131's Paley-Zygmund E[U] route (HYP-4747)
 
 Owner: work the crux creatively, think Paley-Zygmund. opus PZ: mu_1/7>=E[U] (open inf E[U]>0, triples-obstructed).
