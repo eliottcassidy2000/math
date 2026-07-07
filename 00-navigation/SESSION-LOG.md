@@ -11,6 +11,23 @@ HERESY C (is the mean floor a 2-POINT theorem?): pair-uniformity is exact for ev
 CATALOG (untested, ranked): CRT bi-polynomial vs composite-14 (does S-T's counting object factor over Z/2 x Z/7?); theta-series sparse-lane theorem; the runner braid (positive braid, crossings |v_i-v_j|, Garside language); LP-reweighted time measure for k=8..10 floors; the consensus coin-flip (majority tournament of runners exactly fair = maximal intersubjectivity); adelic bookkeeping.
 
 Files: lrc_three_heresies_kps_S63.py, lrc_twopoint_lp_M26_kps_S63.py (+outs w/ dual-push addendum); reflection three-heresies-and-a-catalog-kps-S63; HYP-4897. Does NOT prove LRC(14); prunes two tempting routes, opens one sharp question.
+## klein-2026-07-07-S158 -- THE CHERRY-TREE FLOOR (Bukszar-Prekopa, 11 pairs - 5 CHOSEN triples) supersedes Hunter at the k=8 criticality: EXACTLY TIGHT at the AP (0.3347 = true W), adversarial min 0.1969 ~ the R-route bar; generic triple-conditioning REFUTED (C~6.9, non-decaying); mixed lifts DO NOT erode the record (0/30597); hard-core dossier 6.9x/8.3x (HYP-4821)
+
+Prompt (owner): worklist -- engine-to-ledger coupling, d-perp pruning, palindrome testing/symmetrization, mu3 tables, reversal moments, hard cores as targets, tournament bridge, mixed-lift erosion, triple upper bound, valuation trees, R >= 0.75. Took my lanes (triple bound, erosion, dossier, valuation-fold); kps/mac-mini/opus concurrently took palindrome/step/order-cell + PZ lanes.
+
+FINDINGS (HYP-4821, reflection the-cherry-tree-floor-is-tight-at-the-ap-klein-S158):
+ 1. CHERRY-TREE FLOOR: W_end >= Sum(11 cherry pairs) - Sum(5 cherry triples) at k=8 (S1 = 1 exactly); greedy-optimal cherry is EXACTLY TIGHT at the AP (0.3347 = true W -- correct-extremal-formulation signature, cf. opus F6 anchors); bank 0.218-0.335; adversarial min 0.1969 at {3,4,5,7,8,9,14,22} ~ the conservative 0.197 bar (true requirement ~0.162 at measured R = 0.913). Lemma stack left: Bukszar-Prekopa (classical), THM-638 pairs (PROVED), 5 ADAPTIVE triple uppers, R >= 0.75. Hunter's 6/49 stands as the unconditional floor; cherry is the 2.7x sharper conditional layer. 7-adic G-bonus applies to cherry pairs identically (valuation lane folded).
+ 2. GENERIC TRIPLE-CONDITIONING = DEAD END (documented): m123 <= theta*m23 + C*theta*q1/q3 has sharp C ~ 6.9 and the error is NON-DECAYING for comparable frequencies; 35-triple chain assembly gives floors -12..-18 (vs true Bonf3 +0.22). WHY the cherry works: its 5 triples are CHOSEN -- separated-scale triples only. Do not re-walk the generic route.
+ 3. MIXED-LIFT EROSION: 0/30597 candidates below the record 12907/65520 (mixed c1{1..a1} u c2{1..a2} u B, c <= 5, + 2-lifted perforated-AP bases). With S157's pure sweep: the mean sidecar's +0.0057 margin is CLASS-STRUCTURAL. Remaining surface: c >= 6, exotic bases, free search.
+ 4. HARD-CORE DOSSIER (monad-S3's two ledger-hard P, for opus avoidance-kernel + mac-mini PZ-on-U): P8={9..13}: measG 0.4467, adv min rho* 0.3906 AT THE AP, R 0.930, 6.9x m_P; P9={10..13}: 0.5251/0.4689/0.950/8.3x. The hard cores are hard for the ILedger MECHANISM, not the truth. Mean theta-degree 1 (critical) / 8/7.
+
+FLAG: HYP-4917 is double-claimed (monad-S4 renumber landed 10:0x; mac-mini-S44 claim minutes later) -- 6th collision today; owners please resolve; grep-after-pull before claiming (monad's protocol note).
+
+FILES: 04-computation/lrc14_{triple_upper_and_dossier,cherrytree_floor}_klein_S158.py (+outs); reflection; HYP-4821. No Lean (owner directive). No canon overridden.
+
+NEXT: (a) prove the 5-triple uppers for separated-scale cherries (the conditioning error IS provable there -- q1 << q3 by construction); (b) R >= 0.75 at k=8 (the other half of the R-route); (c) free-search record erosion beyond the lift ansatz; (d) cherry floor at k=9..12 (base 1-(k-1)/7 goes negative -- does the cherry's triple credit rescue what Hunter cannot?).
+
+---
 
 ## klein-2026-07-07-S157 -- THE VOLTAGE-LIFT READING (owner tiling directive, the face nobody claimed): mean-record families ARE defective c-lifts; the systematic class bottoms out EXACTLY at the record 12907/65520 (+0.0057 over T*, mean sidecar survives); 3-lift runner-up 0.19791; k=9 Hunter positivity by 7-ADIC DESCENT (HYP-4811)
 

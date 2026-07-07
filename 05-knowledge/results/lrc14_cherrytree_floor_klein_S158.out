@@ -1,0 +1,11 @@
+=== cherry-tree floor at k=8 (W_end >= sum 11 pairs - sum 5 chosen triples) ===
+         shape  cherry floor  Hunter 6/49   true W   (R-route bar 0.197)
+     AP {1..8}        0.3347       0.1224   0.3347   [>=0.197 OK]
+        spread        0.2274       0.1224   0.3186   [>=0.197 OK]
+     geometric        0.2181       0.1224   0.3444   [>=0.197 OK]
+   two-cluster        0.2761       0.1224   0.3471   [>=0.197 OK]
+          mild        0.2631       0.1224   0.3513   [>=0.197 OK]
+
+  ADVERSARIAL MIN cherry floor = 0.1969 at (3, 4, 5, 7, 8, 9, 14, 22)
+  (if >= 0.197 uniformly: the k=8 R-route needs only R >= 0.75 + the 5-triple bounds;
+   if >= 0 at the AP: cherry replaces Hunter everywhere with a better constant)

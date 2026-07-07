@@ -1,0 +1,25 @@
+=== (1a) conditional error constant C: meas(I ∩ A2 ∩ A3) - w*m23 <= C*theta/q3 ===
+  sharp measured C over 300 random triples x all q1-intervals: C = 6.863 at (q1,q2,q3,j)=(2, 2, 104, 0)
+  => CONDITIONAL LEMMA candidate: meas(I∩A2∩A3) <= w*m23 + 6.9*theta/q3
+
+=== (1b) assembled Bonferroni-3 with the C-chain vs exact, on spread 8-sets ===
+      spread: S2=0.4555 S3=0.2306 Bonf3=0.2249 | chain S3<= 13.0653 -> floor >= -12.6099 (bar 0.197)
+   geometric: S2=0.4378 S3=0.1299 Bonf3=0.3079 | chain S3<= 18.8400 -> floor >= -18.4023 (bar 0.197)
+        mild: S2=0.4965 S3=0.2406 Bonf3=0.2560 | chain S3<= 15.3594 -> floor >= -14.8629 (bar 0.197)
+
+=== (2) MIXED-LIFT EROSION vs T* = 0.191275 ===
+  candidates: 30597
+  numeric leaders:
+    E[mg]~0.196993  (2, 4, 6, 8, 10, 11, 12, 13, 14, 16, 18, 20, 22)
+    E[mg]~0.201314  (2, 4, 6, 8, 10, 12, 13, 14, 16, 18, 20, 22, 24)
+    E[mg]~0.201909  (2, 4, 6, 8, 9, 10, 11, 12, 13, 14, 16, 18, 20)
+    E[mg]~0.203072  (2, 4, 6, 8, 9, 10, 12, 14, 15, 16, 18, 20, 22)
+    E[mg]~0.203565  (2, 4, 5, 6, 8, 10, 15, 20, 25, 30, 35, 40, 45)
+    E[mg]~0.204066  (2, 4, 6, 7, 8, 10, 12, 14, 16, 17, 18, 20, 22)
+  candidates numerically below the record 0.196993: 0  -> mixed lifts DO NOT erode the record on this sweep
+
+=== (3) HARD-CORE DOSSIER: P8={9..13} (k=8), P9={10..13} (k=9) ===
+  P8={9..13}: meas(G_P) = 0.4467; adversarial min rho* = 0.3906 at E=(1, 2, 3, 4, 5, 6, 7, 8)
+     mu(E) = 0.9402; R = 0.930; rho*/m_P = 6.91x; mean theta-degree = 1.000 (critical)
+  P9={10..13}: meas(G_P) = 0.5251; adversarial min rho* = 0.4689 at E=(15, 17, 18, 19, 20, 21, 22, 23, 24)
+     mu(E) = 0.9402; R = 0.950; rho*/m_P = 8.30x; mean theta-degree = 1.143 (supercritical)
