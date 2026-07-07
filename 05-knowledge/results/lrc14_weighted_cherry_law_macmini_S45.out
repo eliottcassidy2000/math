@@ -1,0 +1,30 @@
+=== convention reconciliation (try sign patterns / phi orientation) ===
+  signs=(1, -1, -1, 1) phisign=1: no
+  signs=(-1, 1, 1, -1) phisign=1: MATCH on 5 probes
+  signs=(1, -1, -1, 1) phisign=-1: no
+  signs=(-1, 1, 1, -1) phisign=-1: no
+verified convention: signs=(-1, 1, 1, -1), phi=+(q1*b - q2*a)
+
+=== (i) broad verification: q<=24 coprime pairs x widths x anchors ===
+  156 random cases: 0 failures
+
+=== (ii) reproduce THM-638 same-sign law at (theta,theta,0,0), theta=1/7 ===
+  489 coprime pairs q<=40: 0 mismatches vs THM-638
+
+=== (iii) mixed-sign (window (-theta,0] x (0,theta]) via anchoring ===
+  277 pairs: 0 closed-vs-brute mismatches (THE theorem test); 0 brute-vs-klein-encoding diffs (convention, flagged not asserted)
+
+=== (iv) {0,1/2}-anchor pair table (theta=1/7 windows), sample ===
+  (q1,q2)        (0,0)      (0,1/2)    (1/2,1/2)  (all exact; corr x 2N shown)
+( 1, 2)         10/49        -4/49        -4/49
+( 2, 3)         16/49        16/49       -12/49
+( 3, 4)         18/49       -17/49       -17/49
+( 5, 7)             0            0            0
+( 6, 7)             0            0            0
+( 9,13)          4/49         4/49         4/49
+(10,13)          6/49         6/49        -1/49
+(11,13)          8/49        -6/49         8/49
+(12,13)         10/49        10/49        -4/49
+
+=== (v) width-swept pair-marginal LP at klein-S159's barrier shape ===
+  2-width (3-bin) pair LP floor at barrier shape: 0.00000 (single-width barrier 0.1233; Hunter 6/49 = 0.12245)
