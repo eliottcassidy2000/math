@@ -7,3 +7,13 @@ PART 5 -- DESCENT ON RAY (k=8). bars: klein 0.675 / kps T_8 0.6185. AP_8 RAY = 0
   seed [0, 1, 2, 3, 5, 6, 7, 9]                   RAY=0.8991 PZ=0.6941 AT3=0.8312
   seed [0, 2, 4, 6, 8, 10, 11, 12]                RAY=0.9030 PZ=0.6597 AT3=0.7631
   seed [0, 2, 4, 6, 7, 8, 10, 12]                 RAY=0.8851 PZ=0.6344 AT3=0.7417
+  seed [0, 1, 2, 3, 40, 41, 42, 43]               RAY=0.8985 PZ=0.7259 AT3=0.8102
+  seed [0, 1, 2, 3, 10, 11, 12, 13]               RAY=0.9136 PZ=0.7233 AT3=0.8045
+  seed [0, 1, 2, 3, 4, 5, 6, 40]                  RAY=0.8946 PZ=0.6667 AT3=0.7558
+
+NOTE (session close): the jump-descent phase after seed 9 stalled on wide seeds -- the
+9-width pure-Fraction Rayleigh explodes in denominator size on shapes with diffs ~64.
+The completed evidence: 9 structured seeds all RAY >= 0.8214 with the AP the minimum,
+plus the main-script battery (14 shapes, RAY in [0.8214, 0.9764], min = AP).  A
+denominator-managed (or float-verified-then-exact) implementation is the engineering
+next step for a full descent.  Killed at session close; partial output above is valid.
