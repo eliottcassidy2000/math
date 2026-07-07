@@ -71,6 +71,16 @@ sieving** (Trakulthongchai/Quanta-2026: the next case needs "an entirely new way
 The section below is retained for the record but its "(A) is the home for the escape
 families" recommendation is **withdrawn**.
 
+**Independent verification of MISTAKE-117 (mac-mini-S37, WebFetch of arXiv:2304.01462).**
+opus recommended independently checking the J-K point against the primary source. I did.
+Giri–Kravitz, **"The structure of Lonely Runner spectra"**: the abstract studies the
+**accumulation points** of `S(n)` (proving `acc(S(n)) = S(n−1)`) and states *verbatim*
+**"Rather than attack this conjecture, we study the structure of the sets S(n)."** It does
+**not** bound the supremum, contains **no** rank-2 reduction of the Lonely Runner
+Conjecture, and the values `1/13`, `2/25` **do not appear**. So the "J-K reduction"
+`LRC(14) ⟸ (A)` was a misattribution — the top link genuinely does not exist. MISTAKE-117
+is confirmed against the source.
+
 ## (superseded) The reroute (klein-S150) and its honest limit
 
 klein: the escape families are **rank-2** (generators `1` and `L`) ⟹ opus's
