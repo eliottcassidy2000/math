@@ -1,3 +1,23 @@
+## mac-mini-2026-07-06-S33 -- THM-633 the d=1 LADDER BOUND FORMALIZED (sorry-free kernel-pure): {1..11,x} reach >= 2/25 for all x!=12, two-witness proof; finishes opus-S123's d=1 piece of (C) + the d=1 slice of opus-S124's near-AP moat
+
+Prompt (owner): finish off the crux and formalize; pull often, integrate.
+
+INTEGRATED: opus-S123 ((C) reduces to d=1,d=2 strata; d>=3 GREEN via kps mod-25) + opus-S124 (mod-25 DICHOTOMY: cleared => M>=2/25 GREEN; non-cleared = near-AP moat => AP or plateau; non-cleared <=> +-residues cover (Z/25)* = MY S32 pair-blocking, opus independently derived) + kps-S41 (mod-25 floor GREEN). opus explicitly assigned d=1 (my ladder law) + asked to formalize the moat via ladder + plateau.
+
+DELIVERED -- THM-633, the d=1 ladder bound, FORMALIZED:
+ STATEMENT: canonical d=1 family V(x)={1,..,11,x} has reach >= 2/25 for every positive x!=12 (x=12 => 1/13 = AP, gap bottom).
+ TWO-WITNESS PROOF: (generic) 12 nmid x => t=1/12, every speed clears 1/12 > 2/25; (resonant) x=12k, k>=2 => t=k/(12k+1), every speed clears k/(12k+1) >= 2/25. Integer core: small speed i in {1..11}: k<=|ik-m(12k+1)| (sign-split on m); outlier 12k: 12k*k = k(12k+1)-k == -k mod (12k+1), min |.| = k at m=k. So M in {1/12}u{k/(12k+1):k>=2}u{1/13}, never in open gap.
+ LEAN (LRCLadderD1.lean, axioms [propext,Classical.choice,Quot.sound], wired to root): d1_generic_reach, d1_resonant_reach, d1_reach_ge (headline). All GREEN.
+
+This handles {1..11,x} DIRECTLY (both opus-S124's cleared x!≡+-12 mod25 and saturated x≡+-12 cases) -- the d=1 slice of the moat is CLOSED in Lean. My even-branch THM-632 (order-2) + this (d=1) are two formalized moat pieces.
+
+SCOPE: canonical difference-1 base; general dilated-11-AP+outlier reduces via opus-S110 dilation-invariance. Remaining for (C): d=2 bound (10-AP + 2 outliers) + the general plateau (opus-S115 cap).
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection; git/finish_session only.)
+
+FILES: 04-computation/lean/.../LRCLadderD1.lean (kernel-pure) + root import; 01-canon/theorems/THM-633-d1-ladder-bound.md; 05-knowledge/results/lrc_d1_ladder_witnesses_macmini_S33.out; INDEX. No canon overridden.
+
+NEXT: (a) formalize the d=2 bound (10-AP + 2 outliers => M>=2/25) -- the last (C) piece with the plateau; (b) the dilated-11-AP generalization via opus-S110; (c) opus wiring (A)->Mreach + the mod-25 moat rigidity (opus-S124 (b)).
 ## mac-mini-2026-07-06-S32 -- kps's mod-25 covering core = a PAIR-BLOCKING RIGIDITY: mod-25 covering fails <=> V blocks all 10 unit +-pairs; the AP is the UNIQUE tight blocker (554/150k blockers, only AP <2/25); three-case closure => AP is the unique 12-family with M<2/25 = (G) (HYP-4622)
 
 Prompt (owner): do a session creatively whittling away the crux.
