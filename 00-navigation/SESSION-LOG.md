@@ -13,6 +13,20 @@ FILES: 04-computation/lrc14_offset_tent_law_klein_S162.py (+out); THM-645 canon;
 NEXT: (a) Hunter/cherry/LP on W_0 u W_{1/2} with tent pair-masses (all terms now exact) — the 2-anchor floor machinery at k=8; (b) general-offset F7 anchors (opus's 18 anchors' pairwise layer is all tent values); (c) the translated-AP PA_2 exact values via a shifted-origin roof (boxeph's minimizers); (d) triple tent (three-window masses at offsets — the cherry's triple layer at anchors).
 
 ---
+## mac-mini-2026-07-07-S47 -- THM-646 PROVED: the LINE METAGRAPH is GENERATED, not chaotic -- score-complement law s + s' = (n-2, n-1,...,n-1, n) on every line; the matching = the deterministic involution s -> c-s pulled through the class-over-scores fibration; even-graph shadow = translation by K* (= K_n at odd n, K_n minus the consecutive matching at even n); klein-S161 C5 quasi-randomness REFUTED at n=7; transitive-partner H pattern 2^{n-2}+1 BREAKS at n=7 (HYP-5017)
+
+Prompt (owner): work the line metagraph; apply the meta-abstraction move -- find broad families in supposed chaos, then the structure pattern that GENERATES them.
+
+DELIVERED (THM-646 canon):
+ (i) THE SCORE-COMPLEMENT LAW (proved, 3 lines; verified on every tiling n=4..7): line endpoints' labeled scores sum to the FIXED vector c = (n-2, n-1, ..., n-1, n). Hard support constraint on the kernel N(C,D) (12342/104196 pairs realized at n=7); transitive's partner stratum = {1,2,...,n-3,n-2,n-2} exactly at all n.
+ (ii) THE META-MOVE: on labeled score vectors the line map IS the involution s -> c-s -- zero entropy; all apparent chaos = the geometry of how iso classes fiber over labeled scores (Landau polytope vs the base path). The multiset projection already loses determinism (17/59 strata unique at n=7) -- the 'randomness' is projection loss, not matching freedom. THE LINE METAGRAPH IS GENERATED: (Landau score geometry) x (s -> c-s) x (THM-643/644 parity skeleton).
+ (iii) EVEN-GRAPH SHADOW (proved via the parity count k(n-k)-1 mod 2): addr(flip t) = addr(t) XOR K*; K* = K_n at odd n (K_n IS an even graph exactly then), K_n minus {(1,2),(3,4),...} at even n. The even/odd duality at its sharpest; mechanism site for C2 (blue self-loops only at even n).
+ (iv) REFUTATION (honest, exact): klein-S161's C5 near-fiber-proportionality FAILS -- corr 0.50/0.47/0.29 at n=5/6/7, deviations to 1309x; assortativity survives, proportionality does not; the kernel is CONSTRAINT-DOMINATED.
+ (v) DATUM (MISTAKE-115/119 family): transitive's line-partner H = 5, 9, 17, 31 -- the 2^{n-2}+1 pattern breaks at n=7 (31 != 33): the principal-line flip-neighbor and the tau-line partner are different objects.
+
+FILES: THM-646 (canon, proofs); gn_line_metagraph_macmini_S47.py (+out); HYP-5017 (INDEX). No Lean (proofs-first). No canon overridden (C5 was a conjecture in HYP-4851, refuted with data + refinement).
+
+NEXT: (a) the class-over-labeled-scores fibration as its own object (the TRUE remaining geometry -- Landau polytope refined by the base path; its symmetries generate everything); (b) prove C2 via K*'s matching deficiency at even n; (c) N(C,D) modeled as stratum-restricted contingency tables (the correct null after C5's refutation); (d) n=8 spot-checks of the law (trivially true by proof) and the K* count.
 
 ## opus-2026-07-07-S139 -- TWO PARITY THEOREMS GOVERN THE BLUE/BLACK FIBERS (THM-644: gridsym = rho-anti-automorphism PROVED; fiber law g(C)|Aut| = H_anti verified 72/72; ANTI-REDEI conjecture opened, verified n<=7; N(C) odd = Redei + odd-Aut PROVED) + the four 2-anchor handoffs (near-limit dip exact @ (3,4); CERTIFIED limit table; double-cover chain rigorous and SUFFICES for the k=13 leg on the binding class; observer-rank prefilter) (HYP-4952)
 

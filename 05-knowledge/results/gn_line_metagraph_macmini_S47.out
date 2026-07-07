@@ -1,0 +1,40 @@
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py:3045: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py:3046: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+
+===== n=4: m=3, classes=4, tilings=8 =====
+  SCORE-COMPLEMENT LAW s + s' = c, c = (np.int64(2), np.int64(3), np.int64(3), np.int64(4)): HOLDS on all 8 tilings
+  line-kernel support: 4 class-pairs (of 10 possible; c-compatible pairs (sampled nec. cond.): 4)
+  quasi-randomness on support: corr(N, fiber-product model) = nan; sum ratio = 1.164; max |N/E| dev = 0.60
+  transitive partner: H = 5 (2^(n-2)+1 = 5), score multiset (np.int16(1), np.int16(1), np.int16(2), np.int16(2)) (predicted (np.int64(1), np.int64(1), np.int64(2), np.int64(2)))
+  STRATA QUOTIENT: 4 score-multiset nodes, 4 stratum-edges; per-stratum partner-multiset degree distribution: [1, 1, 1, 4]
+    strata with a UNIQUE partner multiset: 3/4 (non-deterministic)
+  even-graph projection: address(flip t) = address(t) XOR K* : True; K* edge count = 4 (of 6)
+
+===== n=5: m=6, classes=12, tilings=64 =====
+  SCORE-COMPLEMENT LAW s + s' = c, c = (np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5)): HOLDS on all 64 tilings
+  line-kernel support: 26 class-pairs (of 78 possible; c-compatible pairs (sampled nec. cond.): 34)
+  quasi-randomness on support: corr(N, fiber-product model) = 0.5011; sum ratio = 1.419; max |N/E| dev = 6.11
+  transitive partner: H = 9 (2^(n-2)+1 = 9), score multiset (np.int16(1), np.int16(1), np.int16(2), np.int16(3), np.int16(3)) (predicted (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)))
+  STRATA QUOTIENT: 9 score-multiset nodes, 12 stratum-edges; per-stratum partner-multiset degree distribution: [1, 1, 1, 1, 1, 2, 2, 6, 7]
+    strata with a UNIQUE partner multiset: 5/9 (non-deterministic)
+  even-graph projection: address(flip t) = address(t) XOR K* : True; K* edge count = 10 (of 10)
+
+===== n=6: m=10, classes=56, tilings=1024 =====
+  SCORE-COMPLEMENT LAW s + s' = c, c = (np.int64(4), np.int64(5), np.int64(5), np.int64(5), np.int64(5), np.int64(6)): HOLDS on all 1024 tilings
+  line-kernel support: 370 class-pairs (of 1596 possible; c-compatible pairs (sampled nec. cond.): 716)
+  quasi-randomness on support: corr(N, fiber-product model) = 0.4747; sum ratio = 2.246; max |N/E| dev = 67.27
+  transitive partner: H = 17 (2^(n-2)+1 = 17), score multiset (np.int16(1), np.int16(1), np.int16(2), np.int16(3), np.int16(4), np.int16(4)) (predicted (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)))
+  STRATA QUOTIENT: 22 score-multiset nodes, 42 stratum-edges; per-stratum partner-multiset degree distribution: [1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 6, 6, 8, 8, 12, 12]
+    strata with a UNIQUE partner multiset: 9/22 (non-deterministic)
+  even-graph projection: address(flip t) = address(t) XOR K* : True; K* edge count = 12 (of 15)
+
+===== n=7: m=15, classes=456, tilings=32768 =====
+  SCORE-COMPLEMENT LAW s + s' = c, c = (np.int64(5), np.int64(6), np.int64(6), np.int64(6), np.int64(6), np.int64(6), np.int64(7)): HOLDS on all 32768 tilings
+  line-kernel support: 12342 class-pairs (of 104196 possible; c-compatible pairs (sampled nec. cond.): 40707)
+  quasi-randomness on support: corr(N, fiber-product model) = 0.2930; sum ratio = 4.751; max |N/E| dev = 1309.72
+  transitive partner: H = 31 (2^(n-2)+1 = 33), score multiset (np.int16(1), np.int16(1), np.int16(2), np.int16(3), np.int16(4), np.int16(5), np.int16(5)) (predicted (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(5)))
+  STRATA QUOTIENT: 59 score-multiset nodes, 153 stratum-edges; per-stratum partner-multiset degree distribution: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 6, 7, 7, 8, 8, 8, 8, 8, 8, 8, 9, 12, 12, 13, 13, 14, 14, 18, 19, 19]
+    strata with a UNIQUE partner multiset: 17/59 (non-deterministic)
+  even-graph projection: address(flip t) = address(t) XOR K* : True; K* edge count = 21 (of 21)
