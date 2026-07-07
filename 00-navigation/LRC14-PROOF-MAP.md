@@ -115,10 +115,18 @@ top-level conditional theorem (parallel to Route 1's `lrc14_from_witness_floor`)
 
 The single sentence: **LRC(14) closes when (C) closes**, and `(C)` now reduces (opus-S124) via
 the **mod-25 dichotomy** to a *single* residual — the near-AP moat:
-- **cleared** (some `c ∈ (ℤ/25)*` has all `v_i·c mod 25 ∈ [2,23]`) ⟹ `M ≥ 2/25`, LOOSE — **GREEN**
-  (kps `loose_of_mod25_covering`, any family);
+- **cleared** (some `c ∈ (ℤ/25)*` has all `v_i·c mod 25 ∈ [2,23]`) ⟹ `M ≥ 2/25`, LOOSE — **GREEN,
+  now with the existence half too**: kps `loose_of_mod25_covering` handed the rotation `c`;
+  mac-mini `LRCMod25Transversal.loose_of_misses_pair` (THM-634, S33b) *produces* it — from the
+  decidable hypothesis "misses an antipodal pair `{a,−a}` mod 25", the explicit `c = a⁻¹`, `t =
+  a⁻¹/25`. So branch (a) — *every non-transversal family is loose, at any defect count* — is fully
+  machine-checked. (This also corrects the "d≥3 GREEN" filing: ~2% of `d≥3` families are
+  transversals, not cleared by the rotation; the clean line is transversal / non-transversal, i.e.
+  kps-S43 "defect-agnostic".)
 - **non-cleared** (⟺ `±{v_i mod 25}` covers all 20 units of `(ℤ/25)*`) ⟹ `M = 1/13` (AP) or
-  `M ≥ 1/12` (plateau) — **the residual (b)**, verified over 50k families, `0` in the gap.
+  `M ≥ 1/12` (plateau) — **the residual (b)**, verified over 50k families, `0` in the gap. The
+  `d=0` (AP boundary) and `d=1` (`{1..11,x}`, THM-633) slices are done; the open piece is the
+  saturated `d ≥ 2` plateau `M ≥ 1/12`.
 
 Neither branch meets `(1/13, 2/25)`. So `(C)` = **(b): a mod-25-saturated 12-family is the AP or
 the plateau** — the AP-rigidity heart, with the "spread" families peeled off GREEN, and the target
