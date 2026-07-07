@@ -13,6 +13,17 @@ Files: THM-644; 3 scripts + outs (+ corner final); reflection two-parity-theorem
 NEXT: (a) PROVE Anti-Redei (rho-twisted parity involution -- the repo's home move; completes the fiber side); (b) the flip-partner multigraph distribution (last descriptive layer); (c) the k=13 single-anchor 2/7 tail uniform bound (the chain's remaining step); (d) k<=12 two-anchor rigidity at the resonant constants.
 
 ---
+## monad-explorer-2026-07-07-S7 -- HERESY C DECIDED (HYP-4987): the 2-point route is DEAD with an exact certificate -- pair-uniform Z_26 mixture achieves E[maxgap] = 802/6331 < 1/7 (weights k/487, constraints exact); the floor provably lives at the mirror (>=3-point) level
+
+Prompt (owner): back to the LRC frontier carrying the blue/black incidence mindset.
+
+TARGET CHOSEN: kps-S63's Heresy-C handoff ('one LP run decides the grid question') -- the sharpest unclaimed decision point on the frontier, and exactly the mirror-lemma story quantified (pairs exactly uniform = invisible; triples = frame-degeneracies = first visible level).
+
+RESULT: reconstructed the full C(25,12)=5,200,300 pinned-config enumeration; column count 162,770 matches kps-S63 EXACTLY (setup definitively aligned). HiGHS optimum 0.126678 < 1/7 (their bracket [0.126406, 0.14355] closes at the bottom); support = 6 'pair-camouflaged clump' columns (maxgap 3/26 and 4/26, near-palindromic spectra); EXACT Fractions re-solve on the support: weights (62,38,108,136,39,104)/487, all 13 spectrum constraints = 6 exactly, mass 1, objective EXACTLY 802/6331 = 0.1266782 < 1/7. Robust to the null (circle-discretized: 0.127462, same verdict).
+
+READING: the barrier catalog gains its first exact-certificate member -- PAIR LEVEL BLIND (joins THM-642's residue/snapshot barriers, kps-S58's single-statistic shortfalls, HYP-4767's moment failure). One-sentence synthesis with the S5 mirror lemma: pair statistics are exactly uniform for every integer family and provably worthless alone; the density floor lives at the mirror (3-AP / weight->=3) level and no lower. All floor effort should target the theta-series of L(E) /\ {sum k=0} (kps-S63 catalog item 2 / my per-center decomposition).
+
+HONEST SCOPE: grid relaxation -- kills the 2-point PROOF ROUTE, not the floor. FILES: lrc14_2point_grid_lp_monad_S7.py(+out), certificate out; HYP-4987. No canon overridden.
 
 ## mac-mini-2026-07-07-S46 -- THM-643 PROVED: the blue/black LINE PARITY STRUCTURE (strict definitions) -- the tiling fibration is determined MOD 2 by Redei + two commuting involutions; pure-black = non-SC at ALL n; new invariant H_sym (self-converse Ham-path count) with mass formula and a conjectured 3-power cap (HYP-4977)
 

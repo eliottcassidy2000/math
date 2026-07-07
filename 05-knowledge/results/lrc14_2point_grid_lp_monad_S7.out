@@ -1,0 +1,30 @@
+configs: 5200300 (expect 5200300)
+distinct (maxgap, spectrum) columns: 162770 (kps: 162770)
+
+NULL (a): equal bins, count_d = 6 for all d=1..13 (kps-S63's constraints)
+[equal-bins] status=0 (Optimization terminated successfully. (HiGHS Status 7: Optimal))
+  LP value = 0.126678  vs 1/7 = 0.142857  (BELOW -- pair data CANNOT force the floor)
+  support: 6 columns; top by weight:
+    w=0.2793 maxgap=3/26=0.1154 spectrum=[6, 5, 9, 5, 4, 7, 7, 4, 5, 9, 5, 6, 6]
+    w=0.2218 maxgap=3/26=0.1154 spectrum=[6, 4, 6, 6, 9, 5, 5, 9, 6, 6, 4, 6, 6]
+    w=0.2136 maxgap=4/26=0.1538 spectrum=[8, 7, 5, 7, 5, 4, 4, 5, 7, 5, 7, 8, 6]
+    w=0.1273 maxgap=3/26=0.1154 spectrum=[2, 10, 3, 9, 5, 7, 7, 5, 9, 3, 10, 2, 6]
+    w=0.0801 maxgap=4/26=0.1538 spectrum=[8, 6, 2, 4, 6, 10, 10, 6, 4, 2, 6, 8, 6]
+    w=0.0780 maxgap=3/26=0.1154 spectrum=[5, 6, 7, 4, 9, 5, 5, 9, 4, 7, 6, 5, 6]
+
+NULL (b): circle-discretized, count_d = 78*2/25 (d<=12), 78/25 (d=13)
+[circle-null] status=0 (Optimization terminated successfully. (HiGHS Status 7: Optimal))
+  LP value = 0.127462  vs 1/7 = 0.142857  (BELOW -- pair data CANNOT force the floor)
+  support: 13 columns; top by weight:
+    w=0.1921 maxgap=4/26=0.1538 spectrum=[8, 7, 5, 8, 7, 6, 5, 4, 6, 6, 8, 5, 3]
+    w=0.1741 maxgap=3/26=0.1154 spectrum=[6, 4, 6, 6, 8, 4, 6, 10, 6, 7, 6, 5, 4]
+    w=0.1221 maxgap=3/26=0.1154 spectrum=[6, 5, 9, 5, 4, 8, 8, 5, 7, 8, 4, 5, 4]
+    w=0.1115 maxgap=4/26=0.1538 spectrum=[8, 7, 4, 6, 5, 6, 6, 5, 6, 5, 8, 7, 5]
+    w=0.1001 maxgap=3/26=0.1154 spectrum=[6, 5, 8, 5, 7, 8, 6, 7, 6, 4, 7, 7, 2]
+    w=0.0894 maxgap=3/26=0.1154 spectrum=[4, 8, 6, 5, 8, 4, 10, 4, 7, 6, 5, 9, 2]
+    w=0.0671 maxgap=3/26=0.1154 spectrum=[6, 6, 10, 5, 6, 8, 4, 6, 8, 4, 6, 7, 2]
+    w=0.0424 maxgap=3/26=0.1154 spectrum=[4, 8, 6, 6, 6, 5, 9, 4, 8, 6, 6, 7, 3]
+
+VERDICT: kps-S63 Heresy-C bracket was [0.126406, ~0.14355].
+  equal-bins LP  = 0.126678 -> 2-POINT ROUTE DEAD on the grid
+  circle-null LP = 0.127462 -> consistent
