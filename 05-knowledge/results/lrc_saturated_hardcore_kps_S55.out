@@ -1,0 +1,15 @@
+SATURATED hard-core M-floor (exhaustive small range):
+  {1..18}:    966 saturated, min M = 1/12 = 0.08333, #below 1/13 = 0
+  {1..20}:   6084 saturated, min M = 1/12 = 0.08333, #below 1/13 = 0
+  {1..22}:  31471 saturated, min M = 1/12 = 0.08333, #below 1/13 = 0
+           extremal = (1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18)
+
+consecutive blocks {a..a+12} (saturated when they contain a mult of 14): margin grows
+  a=2   {2..14} saturated=True  M=1/8=0.1250
+  a=3   {3..15} saturated=True  M=1/6=0.1667
+  a=5   {5..17} saturated=True  M=5/22=0.2273
+  a=8   {8..20} saturated=True  M=2/7=0.2857
+  a=14  {14..26} saturated=True  M=7/20=0.3500
+  a=28  {28..40} saturated=True  M=7/17=0.4118
+
+=> saturated margin >= 1/12 robust; crux = spread single-scale saturated (leg 3), with margin.

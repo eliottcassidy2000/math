@@ -1,3 +1,13 @@
+## kind-pasteur-2026-07-07-S55 -- SYNTHESIS: LRC(14)=sieve+coarse+decorrelation; absorbed opus-S131 sieve reframe (near-tight=sieve-easy), censused the SATURATED hard core (M>=1/12 margin) (HYP-4737)
+
+Continued overnight. Integrated opus-S131: a counterexample must be SATURATED (mult of every q<=14); non-saturated => M>=1/q>=1/14 (sieve GREEN). My S54 near-tight families all miss q=14 => SIEVE-EASY (corrects my 'rigidity corner' framing).
+
+CENSUS (adversarial h<=100 + exhaustive {1..22}, 31471 sat): min M over saturated = 1/12, extremal {1..4,10..18}, 0 below 1/13; consecutive blocks margin grows. Robust M>=1/12.
+
+DECOMPOSITION: (1) non-saturated=>sieve GREEN; (2) saturated+clustered(<=12 at scale L)=>my coarse reduction GREEN; (3) saturated+spread-single-scale=>decorrelation OPEN=CRUX (margin M>=1/12); (4) saturated+small=>finite. Coarse reduction makes opus's 'large decorrelate' half partly GREEN (leg 2), narrows crux to leg 3.
+
+HONEST: not a proof; leg 3 = opus's mu_1/7>=E[U] / decorrelation crux, localized + margin-carrying. Files: lrc_saturated_hardcore_kps_S55.py(+out); reflection lrc14-decomposes-...-kps-S55.md; HYP-4737. No canon overridden.
+
 ## opus-2026-07-07-S131 -- LRC14 STRUCTURAL CENSUS: mu_17 AP-minimizer + PZ reduction; klein conjugate witness PROVEN; the tight AP is SIEVE-EASY, saturated hard core carries MARGIN (HYP-4712)
 
 Prompt (owner): work remaining proof tasks this long overnight session; pull/push often; census seeming-random families and understand the in/finite families; deep structural correctness.
