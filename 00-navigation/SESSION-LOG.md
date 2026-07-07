@@ -1,3 +1,26 @@
+## mac-mini-2026-07-07-S45 -- THM-641 PROVED: the WEIGHTED ANCHORED PAIR-MASS LAW (the owner's 'closed-form weighted cherry') -- 4 Bernoulli terms, arbitrary widths AND anchors; THM-638 = its 2-point specialization; apex-invisibility at ALL anchors/weights; cross-anchor ANTICORRELATION = the {0,1/2} 2-anchor mechanism (HYP-4947)
+
+Prompt (owner): arXiv:1505.02479/BB(27)/Goldbach as inspiration; work the 2-anchor joint tail + a closed-form weighted cherry theorem; creative tournament cutoffs on pair statistics; the relativity of runner perspectives (antisymmetric rate matrix).
+
+THM-641 (canon, PROVED, half page): for coprime q1,q2, widths alpha,beta, anchors a,b, phi = q1 b - q2 a:
+  meas{frac(q1 x) in (a,a+alpha], frac(q2 x) in (b,b+beta]} = alpha*beta + [-B2(phi+q1 beta) + B2(phi) + B2(phi + q1 beta - q2 alpha) - B2(phi - q2 alpha)]/(2 q1 q2).
+Proof: CRT/Bezout offset sweep (offsets (j+phi)/N each once) + Bernoulli periodization of the overlap trapezoid ((B2/2)'' = 1 - delta on the circle) + Raabe's multiplication theorem. VERIFIED EXACT: 156/156 broad (widths x anchors x q<=24); THM-638 same-sign 489/489, mixed-sign 277/277 (klein's law = the (theta,theta,0,0)/(theta,theta,-theta,0) specializations of the four-parameter family).
+
+COROLLARIES:
+ (C2) APEX-INVISIBILITY GENERALIZED: q2*alpha in Z => correction IDENTICALLY 0 for every beta, every anchor pair (one line from the formula). Extends THM-637/638's apex-7 rows: apex speeds are invisible to ALL pair statistics, however weighted or anchored.
+ (C3) CROSS-ANCHOR ANTICORRELATION (the 2-anchor mechanism): exact {0,1/2}-anchor table has NEGATIVE corrections at even/odd interplays ((1,2) at (0,1/2): -4/49; (3,4): -17/49) => P(A_0 u A_{1/2}) BEATS independence exactly where parity interleaves -- the quantitative reason {0,1/2} is the robust anchor pair (boxeph 0.187) and the exact input layer for the load-bearing 2-anchor tail lemma. The 7|q rows stay 0 at all anchor combos.
+ (C4) width sweep = the COMPLETE two-phase joint law in closed form (maximal pairwise information).
+
+HONEST NEGATIVES: (a) my width-swept pairwise LP at klein-S159's barrier shape is NON-comparable to their 128-atom LP (mine returned 0 = my event algebra loses their structural constraints); whether full pair marginals move the 0.1233 barrier is OPEN -- well-posed handoff = klein's exact LP + THM-641 constraints. (b) an in-session phi-sign bug: B2-evenness made symmetric probes sign-insensitive; caught by asymmetric-anchor verification -- probe sets must force every convention DOF (lesson recorded).
+
+UNIFICATION NOTE (the owner's two prompts are one object): the creative AHEAD-TOURNAMENT WALK T(t) (i -> j iff frac((v_j - v_i)t) in (0,1/2); genuinely antisymmetric = the relativity of perspectives made combinatorial) flips arrows exactly at the anchor-1/2 walls, while opus-S136's order-cell walk flips at the anchor-0 walls (collisions) -- the order-walk + ahead-walk TOGETHER are the {0,1/2} 2-anchor system. The 2-anchor tail lemma is asking about the joint structure of the runner system's two canonical tournament walks. (Walk statistics deferred -- monad-S5 took the static perspective tournaments; the walk is the differentiated future item.)
+
+BB(27)/GOLDBACH LENS (owner): the 2-anchor lemma is a small-machine finitization -- an infinite (A')-type quantification compressed to a finite 2-window criterion, the anchor pair {0,1/2} playing the two-summand role; same compression shape as encoding a Pi_1 conjecture in a 27-state machine.
+
+FILES: 01-canon/theorems/THM-641-weighted-anchored-pair-mass-law.md (proof); lrc14_weighted_cherry_law_macmini_S45.py (+out); HYP-4947 (INDEX). No Lean (proofs-first). No canon overridden.
+
+NEXT: (a) THE 2-ANCHOR ASSEMBLY: Bonferroni/Hunter for P(A_0 u A_{1/2}) with THM-641 pair inputs, per-leg vs T_k -- the load-bearing lemma now has its complete closed-form input layer; (b) klein: rerun your exact LP with width-swept THM-641 constraints (barrier question); (c) the ahead-tournament walk statistics; (d) weighted-window OPTIMIZATION in the 2-anchor tail (the weights are now free parameters with exact laws).
+
 ## boxeph-2026-07-07-S2 (cont.) -- LEAN: AP44 MULTI-NODE density-floor certificate (unconditional, D<=43); the Farey-roof bridge scales past death-star's 2-interval D<=30
 
 Cont. of the formalization session. Added LRCAP44Floor: ap44_certificate proves mu_{1/7}(AP44)>=6/301+5/574+5/574+6/301=101/1763~0.05729>=m_P UNCONDITIONALLY, via my Farey-roof bridge (good_of_roof_gt) + FOUR roof-superlevel intervals across nodes 0, 1/2, 1 (Farey-44 cells (0/1,1/44),(21/43,1/2),(1/2,22/43),(43/44,1/1)), summed by measure_union. Kernel-pure, axiom-audited [propext,Classical.choice,Quot.sound]. ap44_certificate_icc0 on {0..43} feeds TailDiameter.muGood_ge_APD.
