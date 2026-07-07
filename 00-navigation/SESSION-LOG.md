@@ -1,3 +1,18 @@
+## mac-mini-2026-07-07-S42 -- LRCTailDiameter.lean GREEN (kernel-pure; theta-GENERIC diameter chain, one certificate Prop leaf) + exact union-route diameter bands all legs (converges w/ klein-S155, superseded per-leg by kps-S60 intersected) + direct-G2 all-legs probe: the consumed quantity never below 6.0x m_P (HYP-4857)
+
+Prompt (owner): another similar session, work the most high-leverage angles, pull in incoming work as it appears.
+
+INCOMING ABSORBED (fleet moved fast): monad-S2 Theorem A (tail-diameter, k=13 closed diam<=75, handoff a = "someone take LRCTailDiameter.lean"); kps-S59 diameter floor + kps-S60 intersected ledger; klein-S154 bisection identity + S155 k=8 composite; boxeph-S1 threshold audit; 3-way HYP-collision hygiene (my S41 claim renumbered 4787->4817->4837, both times losing a push race by minutes; monad's 4817 Theorem A keeps the number).
+
+DELIVERED (HYP-4857):
+ 1. LEAN GREEN (the requested biggest-new-GREEN): LRCTailDiameter.lean, all theorems on [propext, Classical.choice, Quot.sound] only. good_anti (subset antitonicity of the empty-arc good set = pure set inclusion), good_translate (rotation invariance, explicit witness shift), muGood_ge_AP76 (diam<=75 chain -- stated for EVERY theta: kps-S60/klein-S154 can consume the same lemma at 2/7), hlarge_floor_of_diam_le (mu_1/7 >= m_P for all diam<=75, conditional ONLY on the AP76 Farey-ledger certificate Prop; m_P comparison norm_num). Measure theory only via measure_mono. Two build bugs found+fixed (ENNReal scoped notation; a vacuous bridge def removed -- honesty: an opaque witnessG2 admits no bridge theorem).
+ 2. EXACT UNION-ROUTE BANDS (monad-S2 engine, bars thr_k+m_P): D0 = 9/11/11/15/23/75, k=8 razor exact (AP_10 = 38/49 clears 0.67502, AP_11 = 1381/2205 fails). Concurrent-convergent with klein-S155 (exact match) and superseded per-leg by kps-S60's intersected 11/11/17/21/34/75 -- cite theirs for consumption.
+ 3. DIRECT-G2 PROBE, ALL LEGS (new scope; klein-S155 had k=8): joint (P,E) descent on the consumed quantity G2 = meas(G_P and Good_E), THM-530-pathology seeds: min 0.339-0.427 = 6.0-7.6x m_P across k=8..12; R = G2/(product) in [0.796, 0.912], floor exactly reproducing THM-530's 0.796. monad-S1's condRM surrogate failure = bound artifact; no hidden G2 pathology. Program risk now provably concentrated in (A')-beyond-bands + Part-A glue.
+
+FILES: LRCTailDiameter.lean (+root import), lrc14_diameter_bands_all_k_macmini_S42.py, lrc14_directG2_joint_adversarial_macmini_S42.py (+2 outs); HYP-4857 (INDEX); S41 renumber hygiene (4837). No canon overridden.
+
+NEXT: (a) discharge AP76Certificate by formalizing the Farey-cell decomposition (or an interval-arithmetic native_decide port of monad's engine); (b) reuse muGood_ge_AP76 at theta=2/7 for klein-S154's LOO composite (one-line Lean corollary each); (c) the diam>=76 spread residual (10x slack) via Erdos-Turan; (d) k=8 leg: klein-S155's three lemma-sized pieces.
+
 ## kind-pasteur-2026-07-07-S60 -- THE INTERSECTION LEDGER: the diameter floor extended to the G_P-intersected legs -- composite hlarge coverage k=13<=75(prim)/k=12<=34/k=11<=21/k=10<=17/k=9<=11/k=8<=11, all exact, all 2379 slow parts swept, union bound bypassed; + 2/7-LOO far-element extension (k=13: any 12-subset<=36 [reproduces klein n2*=37 independently]; k=12: <=13); MISTAKE-121 (HYP-4847)
 
 Prompt (owner): another similar session, most high-leverage angles, pull in incoming work as it appears.

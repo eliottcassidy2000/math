@@ -1,0 +1,16 @@
+=== direct G2(P,E) joint adversarial, bar m_P = 0.05649 ===
+seeds include THM-530's 2/7-pathology shapes (perforated near-AP E, small-heavy P)
+
+k= 8 (|P|=5): min G2 = 0.3390 ( 6.00x m_P)  at P=(1, 9, 10, 11, 13) E=(0, 1, 2, 3, 4, 5, 6, 7)
+        meas(G_P)=0.3952  mu(E)=0.9401  indep product=0.3716  corr ratio R=0.912
+k= 9 (|P|=4): min G2 = 0.3405 ( 6.03x m_P)  at P=(1, 10, 11, 12) E=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+        meas(G_P)=0.4985  mu(E)=0.8401  indep product=0.4188  corr ratio R=0.813
+k=10 (|P|=3): min G2 = 0.3877 ( 6.86x m_P)  at P=(1, 11, 12) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+        meas(G_P)=0.6060  mu(E)=0.7755  indep product=0.4700  corr ratio R=0.825
+k=11 (|P|=2): min G2 = 0.3620 ( 6.41x m_P)  at P=(1, 12) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+        meas(G_P)=0.7261  mu(E)=0.6263  indep product=0.4548  corr ratio R=0.796
+k=12 (|P|=1): min G2 = 0.4270 ( 7.56x m_P)  at P=(1,) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+        meas(G_P)=0.8571  mu(E)=0.5699  indep product=0.4885  corr ratio R=0.874
+
+WORST direct G2 across all legs: 0.3390 at k=8 = 6.00x m_P
+(numeric probe, grid 80k, 250-step descents x 9 seed pairs per k)
