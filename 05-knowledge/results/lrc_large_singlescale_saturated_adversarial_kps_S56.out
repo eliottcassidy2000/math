@@ -1,0 +1,13 @@
+kps-2026-07-07-S56 adversarial search: LARGE single-scale (bounded-ratio) saturated families, min M by scale.
+HONEST CAVEAT: random sampling is a WEAK adversary (draws decorrelated=large-M families); tested ratio R<=5 only; ratio 5..182 band UNTESTED (structured small-M families could live there). Confirms leg-3 margin weakly, does NOT prove it. The known structured sub-1/12 saturated adversary (deep well {1..12,182}) is FAR-element (ratio 182), leg-2/far-peel-handled.
+
+LARGE single-scale saturated families -- can M approach 1/14=0.07143?
+  ratio R = max/min bounded (single-scale); scale N growing:
+  N~20   R=3: min M found = 1/4 = 0.25000 (ratio 3.0) (>= 1/12, margin holds)
+  N~50   R=3: min M found = 1/4 = 0.25000 (ratio 3.0) (>= 1/12, margin holds)
+  N~100  R=4: min M found = 27/133 = 0.20301 (ratio 4.0) (>= 1/12, margin holds)
+  N~200  R=4: min M found = 323/1473 = 0.21928 (ratio 3.7) (>= 1/12, margin holds)
+  N~400  R=5: min M found = 12/55 = 0.21818 (ratio 3.9) (>= 1/12, margin holds)
+
+=> does a LARGE single-scale saturated family reach M < 1/12 (toward 1/14)?
+   if min M stays >= ~1/12 at all scales: large saturated => margin (leg-3 comfortable).
