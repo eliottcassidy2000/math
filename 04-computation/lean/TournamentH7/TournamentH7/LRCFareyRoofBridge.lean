@@ -35,6 +35,8 @@ namespace LonelyRunner
 namespace FareyRoofBridge
 
 open TailDiameter
+open MeasureTheory
+open scoped ENNReal
 
 /-- **The roof→good bridge.**  On the open Farey-`k` cell `(p/q, p'/q')` (encoded in
 cleared form `p < q·x`, `q'·x < p'`, determinant `q·p' − p·q' = 1`, `k < q + q'`),
@@ -77,6 +79,51 @@ theorem roof_superlevel_subset_good
         θ < ((q : ℝ) * x - p) + ((p' : ℝ) - q' * x)} ⊆ Good θ (Finset.Icc (1 : ℤ) k) := by
   rintro x ⟨hx, hx', hroof⟩
   exact good_of_roof_gt hq hq' hdet hsum hx hx' hroof
+
+/-- **Bridge → measure atom.**  If the open interval `(c, d) ⊆ [0,1]` lies inside the
+Farey-`k` cell and the roof exceeds `θ` throughout it, then that interval's length is a
+lower bound for the good-set measure `μ_θ(AP_k)`.  Summing this atom over the finitely
+many roof-superlevel intervals (only cells adjacent to a `q ≤ 6` node contribute, since
+the roof node values are `1/q`) reduces the `AP₇₆` certificate to a pure interval-length
+arithmetic — exactly the Farey-cell sum the fleet computed numerically. -/
+theorem muGood_ge_of_cell_interval {p q p' q' k : ℤ} {θ c d : ℝ}
+    (hq : 0 < q) (hq' : 0 < q') (hdet : q * p' - p * q' = 1) (hsum : k < q + q')
+    (hc0 : 0 ≤ c) (hd1 : d ≤ 1)
+    (hcell : ∀ x ∈ Set.Ioo c d, (p : ℝ) < q * x ∧ (q' : ℝ) * x < p')
+    (hroof : ∀ x ∈ Set.Ioo c d, θ < ((q : ℝ) * x - p) + ((p' : ℝ) - q' * x)) :
+    ENNReal.ofReal (d - c) ≤ muGood θ (Finset.Icc (1 : ℤ) k) := by
+  have hsub : Set.Ioo c d ⊆ Good θ (Finset.Icc (1 : ℤ) k) ∩ Set.Icc (0 : ℝ) 1 := by
+    intro x hx
+    refine ⟨?_, ?_⟩
+    · obtain ⟨hx1, hx2⟩ := hcell x hx
+      exact good_of_roof_gt hq hq' hdet hsum hx1 hx2 (hroof x hx)
+    · rcases hx with ⟨hcx, hxd⟩
+      exact ⟨le_of_lt (lt_of_le_of_lt hc0 hcx), le_of_lt (lt_of_lt_of_le hxd hd1)⟩
+  calc ENNReal.ofReal (d - c)
+      = volume (Set.Ioo c d) := (Real.volume_Ioo).symm
+    _ ≤ volume (Good θ (Finset.Icc (1 : ℤ) k) ∩ Set.Icc (0 : ℝ) 1) := measure_mono hsub
+    _ = muGood θ (Finset.Icc (1 : ℤ) k) := rfl
+
+/-- **The aggregator.**  A finite family of pairwise-disjoint open intervals, each contained
+in `Good θ E ∩ [0,1]`, contributes the SUM of its lengths as a lower bound for `μ_θ(E)`.
+Instantiated with the roof-superlevel intervals of the contributing Farey cells (each
+membership discharged by `good_of_roof_gt`), this turns the `AP₇₆` certificate into a single
+decidable interval-length sum. -/
+theorem muGood_ge_sum_intervals {θ : ℝ} {E : Finset ℤ} {ι : Type*} (s : Finset ι)
+    (c d : ι → ℝ)
+    (hsub : ∀ i ∈ s, Set.Ioo (c i) (d i) ⊆ Good θ E ∩ Set.Icc (0 : ℝ) 1)
+    (hdisj : (↑s : Set ι).PairwiseDisjoint (fun i => Set.Ioo (c i) (d i))) :
+    ∑ i ∈ s, ENNReal.ofReal (d i - c i) ≤ muGood θ E := by
+  have hunion : (⋃ i ∈ s, Set.Ioo (c i) (d i)) ⊆ Good θ E ∩ Set.Icc (0 : ℝ) 1 := by
+    simpa only [Set.iUnion_subset_iff] using hsub
+  have hmeas : volume (⋃ i ∈ s, Set.Ioo (c i) (d i)) = ∑ i ∈ s, volume (Set.Ioo (c i) (d i)) :=
+    measure_biUnion_finset hdisj (fun i _ => measurableSet_Ioo)
+  calc ∑ i ∈ s, ENNReal.ofReal (d i - c i)
+      = ∑ i ∈ s, volume (Set.Ioo (c i) (d i)) :=
+        Finset.sum_congr rfl (fun i _ => (Real.volume_Ioo).symm)
+    _ = volume (⋃ i ∈ s, Set.Ioo (c i) (d i)) := hmeas.symm
+    _ ≤ volume (Good θ E ∩ Set.Icc (0 : ℝ) 1) := measure_mono hunion
+    _ = muGood θ E := rfl
 
 end FareyRoofBridge
 end LonelyRunner
