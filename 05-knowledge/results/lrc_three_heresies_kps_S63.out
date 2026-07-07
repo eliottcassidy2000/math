@@ -1,0 +1,61 @@
+================================================================================================
+PROBE A -- exchange-monotonicity (Schur shape) of mu_1/7, EXACT, exhaustive small D
+================================================================================================
+  D=13: 12 words, 0 transfers checked, VIOLATIONS: 0  (0.0%)
+    global min word: (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2) (mu=0.5589); AP-like (1^12 word exists only at D=12)
+  D=14: 78 words, 132 transfers checked, VIOLATIONS: 102  (77.3%)
+    top position pairs: [((1, 11), 2), ((3, 11), 2), ((4, 11), 2), ((5, 11), 2)]
+    worst: (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3) -> (1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2) at (i,j)=(11, 7): mu 0.5634 -> 0.8554 (+0.2920)
+    global min word: (2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2) (mu=0.4711); AP-like (1^12 word exists only at D=12)
+  D=15: 364 words, 1452 transfers checked, VIOLATIONS: 866  (59.6%)
+    top position pairs: [((6, 9), 19), ((2, 5), 19), ((6, 10), 18), ((1, 5), 18)]
+    worst: (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4) -> (1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 3) at (i,j)=(11, 6): mu 0.5604 -> 0.9028 (+0.3424)
+    global min word: (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4) (mu=0.5604); AP-like (1^12 word exists only at D=12)
+
+================================================================================================
+PROBE B -- deficit vs shortest zero-sum relation (the Poisson/lattice-minimum law)
+================================================================================================
+  family              E[mg]   deficit  shortest rel L1 (sup<=5,|c|<=3)
+  AP                 0.2114    0.0333                                4
+  record             0.1970    0.0476                                4
+  primes             0.2382    0.0064                                4
+  Sidon-greedy       0.2423    0.0023                                6
+  geometric          0.2501   -0.0055                                6
+  GW                 0.2098    0.0348                                4
+  3adic cascade      0.2124    0.0322                                4
+  rand0              0.2460   -0.0014                                4
+  rand1              0.2432    0.0014                                4
+  rand2              0.2428    0.0019                                4
+  rand3              0.2469   -0.0023                                4
+  rand4              0.2461   -0.0015                                4
+  rand5              0.2467   -0.0021                                4
+  rand6              0.2463   -0.0017                                4
+  rand7              0.2473   -0.0027                                4
+
+  envelope check (sorted by relation size): deficit should DECAY as min-relation grows:
+    minrel=   4: deficit=-0.0027  (rand7)
+    minrel=   4: deficit=-0.0023  (rand3)
+    minrel=   4: deficit=-0.0021  (rand5)
+    minrel=   4: deficit=-0.0017  (rand6)
+    minrel=   4: deficit=-0.0015  (rand4)
+    minrel=   4: deficit=-0.0014  (rand0)
+    minrel=   4: deficit=+0.0014  (rand1)
+    minrel=   4: deficit=+0.0019  (rand2)
+    minrel=   4: deficit=+0.0064  (primes)
+    minrel=   4: deficit=+0.0322  (3adic cascade)
+    minrel=   4: deficit=+0.0333  (AP)
+    minrel=   4: deficit=+0.0348  (GW)
+    minrel=   4: deficit=+0.0476  (record)
+    minrel=   6: deficit=-0.0055  (geometric)
+    minrel=   6: deficit=+0.0023  (Sidon-greedy)
+
+================================================================================================
+PROBE C -- can uniform PAIR data alone go below 1/7?  (synthetic process construction)
+================================================================================================
+  components: 350; achieved E[maxgap] = 0.0971  (1/7 = 0.1429)
+  pair-density constraint residual: L2 = 18.2150, Linf = 5.4106 (target per-bin 0.5714)
+  top components: [('jitter0.0', 0.015, 0.077), ('jitter0.0', 0.015, 0.077), ('jitter0.0', 0.015, 0.077), ('jitter0.0', 0.015, 0.077), ('jitter0.0', 0.015, 0.077), ('jitter0.0', 0.015, 0.077)]
+  ==> construction stalls above 1/7 (or constraint unmet) -- evidence toward a
+      2-point (Cohn-Elkies-style) LP floor; needs a true LP to decide.
+
+DONE.
