@@ -1,0 +1,15 @@
+=== (1) COMB BOUND: |m123 - theta*m12| <= (#components)*theta/q3 <= (q1+q2)*theta/q3 ===
+  300 random triples: worst |m123 - theta m12| / (K*theta/q3) = 0.7314  (<= 1 = bound HOLDS)
+
+=== (2) CF-ADVERSARIAL test of |H| <= C*q2: choose q3 to align with N = q1*q2 ===
+  adversarial q3 = k*N +- 1 (slow rotation vs the joint comb) and random control:
+  ADVERSARIAL (q3 = kN+-1): max |H|/q2 = 0.882 at (5, 11, 716)
+  RANDOM control:           max |H|/q2 = 1.190 at (7, 9, 263)
+
+=== (3) GATE ASSEMBLY arithmetic (cherry floor with the PROVED comb bound) ===
+  crude worst-case cherry floor (proved pieces only, 50x separation): 0.0207
+  GATE (stated): for 8-sets whose difference set admits a cherry tree with all 5 triples
+  50x-separated (d_c >= 50(d_a+d_b)), the cherry floor is EXACT-ARITHMETIC-checkable with
+  only proved inputs (THM-638/645 pairs + the comb bound); combined with [diam<=11 proved]
+  + [12..26 verified] + [far skeleton], the k=8 leg residual = moderately-spread shapes
+  (no 50x-separated cherry) at the R-route bar, conditional on R >= 0.75.

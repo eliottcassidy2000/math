@@ -5,6 +5,21 @@ Prompt (owner): generate ideas around the twisted involution -- 'that concept ha
 RESULTS: (1) INSTRUMENT A: for antipodal rotation pairs (c, q-c): margins exactly EVEN (all 648 pairs); slopes anti-correlate in SIGN not magnitude -- my first two formulations (odd slopes 65/432; swap-negate 68/432) REFUTED by my own probes, converging to the true lemma: no perturbation strictly degrades all active constraints at BOTH ends of an antipodal pair (633/648; all 15 violations mixed-active, 2.3%). Single-active => automatic coherence => explains klein-S152's unconditional 200/200. RIGIDITY SHAPE for the moat: near-tight => single-active witnesses => free involution on failures => parity forbids total failure off the affine-AP fixed locus (conjecture shape = THM-647 one level up). (2) INSTRUMENT B: Farey-cell reflection kills the antisymmetric kernel part EXACTLY per cell; measured antisym L1 = 41% (AP) / 47% (record) => permanent x1.7-1.9 discount for theta-series deficit bounds. (3) LITERATURE: Richardson-Springer/Hultman twisted involutions I(theta) -- anti-palindromic Ham paths are tournament I(theta); descent statistics as the grading for the resonance-rugged palindrome landscape. (4) Reflection 'the-twisted-involution-is-the-projects-heartbeat': six sightings unified (Redei, THM-647, conjugate witness, mirror lemma, S7 palindromic camouflage, kps-S67 sigma-grading); the meta-lesson: every proxy has gone blind (moments/residues/orientations/pairs) -- pairing-with-sign-flip is the one tool converting symmetry into existence with no measure, no margin, no census.
 
 FILES: twisted_involution_probes_monad_S9.out (3 runs incl the two refuted drafts -- kept honestly); reflection; HYP-5037. No canon overridden.
+## klein-2026-07-07-S165 -- THE COMB BOUND (the triple layer's first PROVED magnitude lemma: |m123 − θ·m12| <= (q1+q2)θ/q3, one tooth per component) + the k=8 gate assembled as a per-shape certificate scheme with proved inputs; the sharper |H| <= C·q2 survives the CF-adversarial attack (HYP-4891)
+
+Prompt (owner): prove the |H| <= C·q3 magnitude lemma, assemble the k=8 gate; think colorings/dihedral; explore connections.
+
+(a) THE COMB BOUND, PROVED: condition on the FINEST comb q3 (not the smallest q1 — S158's dead end used the wrong conditioning): a q3-periodic comb's integral over any interval deviates from its density by at most ONE TOOTH (θ/q3, elementary), and A1∩A2 has at most q1+q2 components ⟹ |m123 − θ·m12| <= (q1+q2)·θ/q3. Verified: worst ratio 0.73/1.00 over 300 random triples. Unconditional; composes with THM-645 offsets. H-form: |H| <= θ·q1q2(q1+q2).
+
+(b) THE SHARPER LAW |H| <= C·q2 (needed for full summability) SURVIVES the CF-adversarial test: aligned q3 = k·q1q2 ± 1 gives max |H|/q2 = 0.88 — milder than the random control 1.19 (C ~ 1.2-5). The remaining half-page = cancellation across component phases (Dedekind/Koksma; the tent's dihedral evenness Λ(−ψ) = Λ(ψ) halves the sums — the colorings/dihedral hint enters exactly here: components colored by mod-1/q3 phase class, the reversal pairing the colors).
+
+(c) GATE ASSEMBLY (honest): per shape, the cherry floor is now EXACT-ARITHMETIC-CHECKABLE from PROVED inputs alone (exact pair tents + comb bound on 5 chosen triples with d_c >= 50(d_a+d_b)); the uniform bare-θ² version gives only ~0.02. k=8 state: [diam<=11 PROVED] + [12..26 VERIFIED] + [far skeleton] + [separated-cherry per-shape certificates] + TWO named residuals: moderate-spread shapes without separated cherries, and R >= 0.75. Nothing hidden.
+
+FILES: 05-knowledge/results/lrc14_magnitude_lemma_gate_klein_S165.out (inline script). No Lean (owner directive). No canon overridden.
+
+NEXT: (a) the Dedekind/Koksma cancellation half-page (upgrades per-shape to uniform); (b) R >= 0.75; (c) enumerate/bound the moderate-spread residual class (no 50x cherry ⟹ strong shape constraints — possibly finite-band-able); (d) THM canon file for the comb bound next session (proofs-first done, canon write-up cheap).
+
+---
 
 ## klein-2026-07-07-S164 -- THE TRIPLE COLLAPSE IS UNNAMEABLE BY FINITE GRADING, BUT ITS MAGNITUDE OBEYS A LAW: Bezout grading REFUTED (942/1153 classes vary; H goes negative — S156 impression corrected); growth law |H| <= C·q3 (C~5) well-supported => triple correction <= C/(q1q2), summable over cherry triples (HYP-4881)
 
