@@ -1,0 +1,46 @@
+==============================================================================
+PART 1 -- CENSUS: bottom of the single-scale 13-family M-spectrum
+  (primitive 13-subsets of {1..max}; threshold M <= 0.085; 1/14=0.07143 2/27=0.07407 1/13=0.07692)
+==============================================================================
+enumerated 77520 primitive 13-families (max<=20); 79 with M<=0.085
+
+  M (exact)      ~value   count   smallest example                 structure note
+  1/14          0.07143      1   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) = AP {1..13} (TIGHT, M=1/14)
+  2/27          0.07407      1   (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 20) 
+  1/13          0.07692      8   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14) {1..12, 14}
+  2/25          0.08000     12   (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 17) 
+  1/12          0.08333     57   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14) {1..11,13, 14}
+
+  -> the GAP structure just above 1/14:
+     M=1/14=0.071429  (1 families)   gap to next: 0.002646
+     M=2/27=0.074074  (1 families)   gap to next: 0.002849
+     M=1/13=0.076923  (8 families)   gap to next: 0.003077
+     M=2/25=0.080000  (12 families)   gap to next: 0.003333
+     M=1/12=0.083333  (57 families)
+
+==============================================================================
+PART 2 -- opus-S130 density floor mu_{1/7}(E) = meas{x: maxgap{frac(e x)} > 1/7}
+==============================================================================
+
+(reproduce opus's exact AP table via sampling, res=200k):
+   k   mu_1/7(AP={1..k})   opus-exact
+   8   0.94015            0.94014
+   9   0.84015            0.84014
+   10  0.77553            0.77551
+   11  0.62633            0.62630
+   12  0.56993            0.56990
+   13  0.44251            0.44249
+
+AP-MINIMALITY test (k=13): is mu_1/7(AP) the MINIMUM over 13-sets?
+   mu_1/7(AP_13) = 0.44251 (= 477/1078 = 0.44249)
+   geometric      mu_1/7 = 0.97425
+   doubled AP     mu_1/7 = 0.44250
+   dilated AP*7   mu_1/7 = 0.44250
+   {1..12,26}     mu_1/7 = 0.50830
+   primes         mu_1/7 = 0.94590
+   random 13-sets beating AP (by >0.003): 0/200
+
+==============================================================================
+READOUT: the census reveals the near-tight parametric families (Part 1) and
+confirms/tests opus's AP-minimal density floor (Part 2). Structural targets below.
+==============================================================================
