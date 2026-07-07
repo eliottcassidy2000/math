@@ -25,7 +25,7 @@ from math import gcd
 LO, HI = F(1, 13), F(2, 25)  # the second gap
 
 
-def exact_M_and_q(W):
+def _dens(W):
     dens = set()
     for v, w in itertools.combinations(W, 2):
         dens.add(v + w)
@@ -33,11 +33,42 @@ def exact_M_and_q(W):
             dens.add(abs(v - w))
     for v in W:
         dens.add(2 * v)
+    dens.discard(0)
+    return dens
+
+
+def float_M(W):
+    """fast float estimate of M (prefilter)."""
+    best = 0.0
+    for s in _dens(W):
+        for j in range(1, s):
+            t = j / s
+            mv = min(abs(v * t - round(v * t)) for v in W)
+            if mv > best:
+                best = mv
+    return best
+
+
+def classify_fast(W, hi, thresh):
+    """Early-exit classifier: returns 'above' as soon as some t gives min-dist >
+    hi+thresh (family provably clears above the gap); else returns the float max."""
+    cutoff = hi + thresh
+    best = 0.0
+    for s in _dens(W):
+        for j in range(1, s):
+            t = j / s
+            mv = min(abs(v * t - round(v * t)) for v in W)
+            if mv > best:
+                best = mv
+                if best > cutoff:
+                    return ('above', best)
+    return ('scan', best)
+
+
+def exact_M_and_q(W):
     best = F(0)
     seen = set()
-    for s in dens:
-        if s == 0:
-            continue
+    for s in _dens(W):
         for j in range(1, s):
             t = F(j, s)
             if t in seen:
@@ -104,16 +135,28 @@ def main():
     print(f"BORDERED-AP CANDIDATE CLASS at N={N}: is the gap (1/13,2/25) empty, and")
     print(f"is every escape via an odd/competing denominator (THM-632 generalized)?")
     print("=" * 88)
-    fams = bordered_ap_families(N)
-    print(f"  enumerated {len(fams)} bordered-AP candidate families (12 speeds each)")
+    allfams = sorted(bordered_ap_families(N))
+    # sample deterministically for tractability (stride) if very large
+    stride = max(1, len(allfams) // 12000)
+    fams = allfams[::stride]
+    print(f"  enumerated {len(allfams)} bordered-AP candidates; testing {len(fams)} (stride {stride})")
     in_gap = []
     above = 0
     below = 0
     q35 = 0            # escapes at denominator 35 = 3N-1 (the THM-632 competitor)
-    odd_q = 0          # escapes at an ODD denominator
+    odd_q = 0          # escapes at an ODD denominator (near-gap band)
     even_q = 0
     above_examples = []
+    flo, fhi = float(LO), float(HI)
     for W in fams:
+        tag, fm = classify_fast(W, fhi, 0.006)
+        if tag == 'above':
+            above += 1
+            continue
+        # fm is the (near-)true max and it's within ~0.006 of the gap top: exact
+        if fm < flo - 0.01:
+            below += 1
+            continue
         M = exact_M_and_q(W)
         if LO < M < HI:
             in_gap.append((M, W))
@@ -122,11 +165,9 @@ def main():
             q = M.denominator
             if q == 35:
                 q35 += 1
-            if q % 2 == 1:
-                odd_q += 1
-            else:
-                even_q += 1
-            if len(above_examples) < 8 and M < F(1, 11):  # just above the gap
+            odd_q += (q % 2 == 1)
+            even_q += (q % 2 == 0)
+            if len(above_examples) < 10 and M < F(1, 11):  # just above the gap
                 above_examples.append((M, q, W))
         else:
             below += 1

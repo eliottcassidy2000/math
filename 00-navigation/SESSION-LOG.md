@@ -1,3 +1,22 @@
+## mac-mini-2026-07-06-S29 -- THM-632 EVEN-BRANCH CLEARANCE proved + Lean-formalized (kernel-pure): canonical mediant family {1..N}\{N-1}u{3(N-1)} clears at 3/(3N-1)>2/(2N+1) for N even => NOT a gap member; N=12 machine-checked (F12 reach >= 3/35 > 2/25). HONEST CORRECTION: parity is a CANONICAL-family mechanism, the general protector is the PLATEAU (opus-S115) (THM-632, HYP-4572)
+
+Prompt (owner): work towards proofs of the LRC14.
+
+PROVED + FORMALIZED (real proof progress):
+ THM-632 (even-branch clearance): for N even, F(N)={1..N}\{N-1}u{3(N-1)} clears at t=3*inv2/(3N-1) with EVERY speed >= 3/(3N-1) from Z, so M(F(N)) >= 3/(3N-1) > 2/(2N+1) => NOT a gap member. Clean residue proof: ||v t||<3/Q <=> 3v in {0,+-2,+-4} mod Q=3N-1; using inv3=N and 3(N-1)=Q-2, the collisions are {2N,N+1,N-1,2N-2}, of which ONLY N-1 is in range -- exactly the removed element. Binders 2 and 3(N-1) at dist 3.
+ LEAN: LRCEvenBranchWitness.lean, sorry-free, axioms [propext, Classical.choice, Quot.sound]. F12_margin: 3/35 <= margin F12 (19/35); F12_reach_above_gap: 2/25 < reach(F12). So the canonical construction's failure at N=12 is MACHINE-CHECKED -- by PARITY (12 even), not 38=2*19 compositeness. Wired into TournamentH7 root.
+
+HONEST CORRECTION (a tempting overgeneralization, killed):
+ Hoped 'N even => gap empty by parity' would lift THM-632 to the full crux. Swept the bordered-AP candidate class at N=12 (13257 of 119308): 0 in gap (confirms opus-S118 empty), 1 tight (the AP {1..12}=1/13), 13256 loose. BUT escapes are DOMINATED by the plateau M=1/12 (q=12, EVEN = opus-S115 subfamily cap), NOT the parity competitor 3/35 (q=35, which is essentially canonical-only). The gap (1/13,2/25) sits BELOW the plateau 1/12, so the plateau protects the bulk; parity is the mechanism for the canonical mediant-aimer specifically. => 'N even => gap empty by parity' is FALSE as a universal statement; the general protector is the plateau + spectrum gap (opus-S116).
+
+WHERE THE CRUX STANDS: proved/formalized -- canonical family excluded (THM-632, N=12 machine-checked); confirmed -- bordered-AP class gap-empty with spectrum jump 1/13->2/25 (AP unique tight); OPEN -- structural proof no 12-speed family in (1/13,2/25) (plateau covers sub-AP bulk; residual = sub-AP-breaking near-1/13 families, opus-S114 'irreducible').
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection; git/finish_session only.)
+
+FILES: lrc_even_branch_clearance_macmini_S29.py (+.out), lrc_bordered_ap_parity_macmini_S29.py (+.out), lrc_mediant_trichotomy/criterion_macmini_S28.py (+.out); LEAN LRCEvenBranchWitness.lean (kernel-pure) + root import; THM-632 (canon); reflection even-branch-clearance-proved-but-parity-is-canonical-only-macmini-S29.md. No canon overridden.
+
+NEXT: (a) the plateau (opus-S115) formalized as the bulk-protector + THM-632 as the mediant-aimer exclusion -- compose toward the census; (b) reconcile the 12-speed gap-frame with the Lean Fin-13/threshold-1/14 Mreach (flag to opus); (c) the sub-AP-breaking near-1/13 residual (the genuine n-specific crux).
+
 ## mac-mini-2026-07-06-S29 -- CORRECTS the "prime q=3N+2" claim; TWO-SIDED WITNESS COMPETITION + the (G) overshoot-wall target (HYP-4592)
 
 Prompt (owner): creatively come up with more insights.

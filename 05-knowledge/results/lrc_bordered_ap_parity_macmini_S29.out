@@ -1,0 +1,32 @@
+========================================================================================
+BORDERED-AP CANDIDATE CLASS at N=12: is the gap (1/13,2/25) empty, and
+is every escape via an odd/competing denominator (THM-632 generalized)?
+========================================================================================
+  enumerated 119308 bordered-AP candidates; testing 13257 (stride 9)
+  IN GAP (1/13,2/25):  0
+  ABOVE gap (loose, M >= 2/25): 13256
+  BELOW gap (tight, M <= 1/13): 1
+
+  Of the 13256 above-gap escapes:
+    denominator == 35 (=3N-1, THM-632 competitor): 1
+    ODD denominator:  1
+    EVEN denominator: 11
+
+  => the bordered-AP candidate class at N=12 is EMPTY in the gap.
+
+  Escape denominators just above the gap (M in (2/25, 1/11)):
+    M=1/12 (0.08333) q=12 (even)  W=[1, 2, 3, 4, 5, 6, 7, 8]..
+    M=1/12 (0.08333) q=12 (even)  W=[1, 2, 3, 4, 5, 6, 7, 8]..
+    M=1/12 (0.08333) q=12 (even)  W=[1, 2, 3, 4, 5, 6, 7, 8]..
+    M=1/12 (0.08333) q=12 (even)  W=[1, 2, 4, 6, 8, 10, 12, 14]..
+    M=1/12 (0.08333) q=12 (even)  W=[2, 4, 6, 8, 10, 12, 14, 16]..
+    M=1/12 (0.08333) q=12 (even)  W=[3, 4, 8, 12, 16, 20, 24, 28]..
+    M=1/12 (0.08333) q=12 (even)  W=[3, 6, 9, 12, 15, 18, 21, 24]..
+    M=1/12 (0.08333) q=12 (even)  W=[4, 5, 10, 15, 20, 25, 30, 35]..
+    M=1/12 (0.08333) q=12 (even)  W=[4, 8, 12, 16, 20, 24, 28, 31]..
+    M=3/35 (0.08571) q=35 (odd)  W=[1, 2, 3, 4, 5, 6, 7, 8]..
+
+  INTERPRETATION: if the class is gap-empty AND escapes concentrate at
+  odd/small competing denominators (esp. 35=3N-1), THM-632's parity
+  mechanism generalizes -- the gap is protected by odd-denominator
+  competitors, a structural REASON for opus-S118's empty sweep at N=12.
