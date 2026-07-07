@@ -53,14 +53,23 @@ def M_exact(S):
     return best
 
 def witness(S):
-    """(a, q, v) with min_s ||s a/q|| = v/q = M(S)."""
+    """(a, q, v) with min_s ||s a/q|| = v/q = M(S).  (S144 fix: divisor-closed candidate
+       set, matching M_exact -- the raw-sums scan missed divisor denominators like q=2
+       and returned None on all-odd sets; the recurring divisor-closure pattern.)"""
     M = M_exact(S)
-    cands = set()
+    base = set()
     for i in range(len(S)):
-        cands.add(2 * S[i])
+        base.add(2 * S[i])
         for j in range(i, len(S)):
-            cands.add(S[i] + S[j])
-            if S[j] > S[i]: cands.add(S[j] - S[i])
+            base.add(S[i] + S[j])
+            if S[j] > S[i]: base.add(S[j] - S[i])
+    cands = set()
+    for b in base:
+        d = 1
+        while d * d <= b:
+            if b % d == 0:
+                cands.add(d); cands.add(b // d)
+            d += 1
     for q in sorted(cands):
         if q < 2: continue
         for a in range(1, q):

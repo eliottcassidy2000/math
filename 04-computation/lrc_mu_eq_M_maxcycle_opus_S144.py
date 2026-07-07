@@ -155,6 +155,9 @@ def hunt(sets, label):
         wa, wq, wv = witness(list(S))
         wit_ok = certify_witness_indep(S, wa, wq, wv)
         states, tt0, tt1 = build_window_graph(list(S))
+        if len(states) > 250_000:
+            print(f"  (skip {tuple(S)}: {len(states)} states)")
+            continue
         pos, iters = positive_cycle_exists(tt0, tt1, p, q)
         if pos:
             n_gt += 1
@@ -179,9 +182,10 @@ def main():
 
     print("=" * 100)
     print("(0) ENGINE VALIDATION on |S| = 2 (theorem: mu = M = floor((a+b)/2)/(a+b), coprime)")
+    print("    [b <= 12: the window-graph state count grows ~2^b for sparse S]")
     print("=" * 100)
     bad = 0
-    for b in range(2, 31):
+    for b in range(2, 13):
         for a in range(1, b):
             if gcd(a, b) != 1:
                 continue
