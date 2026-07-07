@@ -1,0 +1,72 @@
+====================================================================================================
+  k=8: LAYER-CAKE DOMINANCE  M_m(E) <= M_m(AP)  for m=2..7   (gcd-graded triple counts)
+====================================================================================================
+  AP cumulative M_m (m=2..7): [12, 26, 34, 46, 50, 56]
+  Sigma_3^(<=7)(AP) = 1742/5145 = 0.338581   (theta^2-order gcd-graded triple sum)
+  Pillai closed form check (k=8): 1742/5145
+
+  family                                         M_m (m=2..7)   Sig3<=7   dom?  S3<=AP?
+  AP {0..k-1}                        [12, 26, 34, 46, 50, 56]   0.33858   True     True
+  2*AP (dilated)                     [12, 26, 34, 46, 50, 56]   0.33858   True     True
+  all-odd 1,3,..                     [12, 26, 34, 46, 50, 56]   0.33858   True     True
+  7*AP+3 (dilated)                   [12, 26, 34, 46, 50, 56]   0.33858   True     True
+  spread-d2 +bump                     [9, 21, 27, 38, 40, 42]   0.26161   True     True
+  spread-d3 +bump                     [9, 19, 26, 35, 37, 38]   0.24203   True     True
+  AP-1 +far                           [9, 19, 26, 35, 38, 40]   0.24835   True     True
+  AP-1 +mid-bump                     [10, 21, 29, 39, 42, 52]   0.29786   True     True
+  Fibonacci                             [6, 8, 9, 13, 15, 18]   0.11181   True     True
+  Lucas                                 [5, 7, 8, 10, 10, 11]   0.08081   True     True
+  geometric 2^j                         [0, 6, 6, 10, 10, 20]   0.08630   True     True
+  Sidon-ish                               [0, 4, 6, 8, 8, 10]   0.05141   True     True
+  primes                              [5, 14, 20, 29, 31, 39]   0.20972   True     True
+  two-block                                [4, 8, 8, 8, 8, 8]   0.06803   True     True
+
+  hill-climb max M_7 = 56 (AP 56) at [0, 1, 2, 3, 4, 5, 6, 7]  -> AP MAX
+  hill-climb max Sigma_3^(<=7) = 0.338581 (AP 0.338581) -> AP MAX
+
+  --- RESULTS (k=8) ---
+  M_m DOMINANCE violations (M_m(E) > M_m(AP) for some m): 0
+  Sigma_3^(<=7) AP-MAXIMALITY violations (S3(E) > S3(AP)): 0
+
+====================================================================================================
+  k=13: LAYER-CAKE DOMINANCE  M_m(E) <= M_m(AP)  for m=2..7   (gcd-graded triple counts)
+====================================================================================================
+  AP cumulative M_m (m=2..7): [36, 80, 110, 154, 170, 206]
+  Sigma_3^(<=7)(AP) = 11923/10290 = 1.158698   (theta^2-order gcd-graded triple sum)
+
+  family                                         M_m (m=2..7)   Sig3<=7   dom?  S3<=AP?
+  AP {0..k-1}                    [36, 80, 110, 154, 170, 206]   1.15870   True     True
+  2*AP (dilated)                 [36, 80, 110, 154, 170, 206]   1.15870   True     True
+  all-odd 1,3,..                 [36, 80, 110, 154, 170, 206]   1.15870   True     True
+  7*AP+3 (dilated)               [36, 80, 110, 154, 170, 206]   1.15870   True     True
+  spread-d2 +bump                 [30, 69, 93, 134, 146, 181]   1.00408   True     True
+  spread-d3 +bump                 [30, 66, 92, 130, 142, 175]   0.97580   True     True
+  AP-1 +far                       [30, 66, 91, 128, 142, 174]   0.97051   True     True
+  AP-1 +mid-bump                 [34, 77, 107, 148, 164, 198]   1.11341   True     True
+  Fibonacci                          [11, 13, 14, 18, 20, 23]   0.16283   True     True
+  Lucas                              [10, 12, 13, 15, 15, 16]   0.13183   True     True
+  GW {1..11,13,24}                [31, 69, 95, 131, 145, 176]   0.99242   True     True
+  prim-sat 2*{1..12},13          [36, 76, 104, 144, 158, 194]   1.09815   True     True
+  parity record                  [36, 76, 104, 142, 156, 194]   1.09582   True     True
+  geometric 2^j                       [0, 11, 11, 20, 20, 40]   0.16987   True     True
+  Sidon-ish                             [0, 5, 8, 11, 11, 13]   0.06740   True     True
+  primes                            [13, 41, 60, 86, 96, 121]   0.63309   True     True
+  two-block                          [15, 31, 41, 53, 55, 56]   0.37162   True     True
+
+  hill-climb max M_7 = 206 (AP 206) at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  -> AP MAX
+  hill-climb max Sigma_3^(<=7) = 1.158698 (AP 1.158698) -> AP MAX
+
+  --- RESULTS (k=13) ---
+  M_m DOMINANCE violations (M_m(E) > M_m(AP) for some m): 0
+  Sigma_3^(<=7) AP-MAXIMALITY violations (S3(E) > S3(AP)): 0
+
+====================================================================================================
+  COPRIME-COMPLETENESS READOUT
+====================================================================================================
+  If 0 violations: the AP maximizes the gcd-graded triple count M_m at every m -- i.e.
+  {0..k-1} realizes each reduced pattern (p',q') the MAXIMUM number of times = it is
+  COPRIME-COMPLETE.  This is the correct (coprime) statement where the naive per-q
+  residue-COUNT (S72) was wrong.  Sigma_3(E) <= Sigma_3(AP) follows by Abel summation.
+  k=8:  M_m dom viol=0,  S3-max viol=0
+  k=13: M_m dom viol=0, S3-max viol=0
+DONE.

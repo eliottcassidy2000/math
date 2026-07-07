@@ -1,0 +1,59 @@
+================================================================================================
+FAMILY-ADAPTIVE HUNTER FLOOR, k=8.  Bar: honest T_8 = 0.6750 (MISTAKE-123)
+================================================================================================
+                              family  HunterFloor   float mu (numeric)  floor/T8
+                         AP_8 {1..8}     457/1470  0.3109       0.9402     0.461
+                       spread AP d=2     457/1470  0.3109       0.9398     0.461
+                       spread AP d=5     457/1470  0.3109       0.9405     0.461
+                     GW-ish {1..7,9}       38/105  0.3619       1.0000     0.536
+           prim-sat-ish 2*{1..7}+{7}       38/105  0.3619       1.0000     0.536
+                    nearAP {1..7,15}     457/1470  0.3109       0.9796     0.461
+                       geometric 2^j 1499731/8681085  0.1728       1.0000     0.256
+                              primes     709/2499  0.2837       1.0000     0.420
+                        random small 76339/440220  0.1734       1.0000     0.257
+                        random large 7421027672253705691916447276591/60605059283145672090909159730320  0.1224       1.0000     0.181
+     multiples of 7 (apex-invisible)     457/1470  0.3109       0.9402     0.461
+
+  Reference: bare floor (all G+ = 0) = 6*theta^2 = 6/49 = 0.12244897959183673
+
+(2) MAXIMIZE the adaptive floor over 8-families (hill climb over difference sets):
+    best found: 17/42 = 0.4048 at E = [1, 17, 21, 25, 27, 29, 30, 33]
+    vs T_8 honest = 0.6750  =>  max adaptive Hunter reaches 60% of the bar
+
+(3) both-endpoint UNION (empirical overlap of W_top, W_bot at the AP):
+                           AP_8 {1..8}: P(Wtop)=0.3347 P(Wbot)=0.3347 P(both)=0.3347 union=0.3347
+                          random large: P(Wtop)=0.3408 P(Wbot)=0.3398 P(both)=0.1315 union=0.5492
+
+(4) THE EXACT DEGREE-3 ENDPOINT CEILING (little theorem, proof = finite enumeration):
+    per-edge mass theta^2 + G+(r1,r2)/(49 q1 q2) > 1/14  <=>  G+/(q1q2) > 5/2;
+    G+ <= 12 forces q1*q2 < 24/5; coprime distinct pairs with product <= 4:
+      (1,2): mass = 1/14 = 0.07143  = 1/14 MAX
+      (1,3): mass = 1/21 = 0.04762  
+      (1,4): mass = 1/28 = 0.03571  
+      (2,3): mass = 1/21 = 0.04762  
+    => max per-edge mass = 1/14 EXACTLY, uniquely at reduced (1,2) (doubling pairs).
+    Tree on k-1=7 events has 6 edges => endpoint-Hunter floor <= 6/14 = 3/7 = 0.42857
+    for EVERY 8-family; attained by doubling-difference chains:
+      E = [1, 33, 49, 57, 61, 63, 64, 65] (differences from top = 2^j): floor = 3/7 = 0.4286, mu = 1.0000
+    3/7 = 0.4286 < honest T_8 = 0.6750  (MISTAKE-123 bar)
+
+(5) k-sweep of the endpoint-Hunter ceilings vs honest bars:
+      k    uniform floor (G=0)   adaptive ceiling   honest T_k  reach
+      8                   6/49                3/7       0.6750   0.63
+      9                      0               5/14       0.5622   0.64
+     10                      0                2/7       0.4521   0.63
+     11                      0               3/14       0.3312   0.65
+     12                      0                1/7       0.1993   0.72
+     13                      0               1/14       0.0565   1.26
+
+READING: the adaptive Hunter floor is a DEGREE-3 harvester (shared-endpoint pair
+masses = weight-3 balanced relations anchored at the endpoint -- the leading sector
+of monad's HYP-5097 degree gap).  Its EXACT ceiling is 3/7 at k=8 (doubling chains),
+uniform value 6/49; both far below the honest bar 0.675.  Palindromic families have
+W_top = W_bot EXACTLY (equal difference sets: min_j frac(-mx) over the same m-set),
+so the 2-endpoint union gains NOTHING for the AP (the S62 palindrome symmetry in the
+Hunter frame); spread families gain (union 0.55) but need no help.  Interior anchors
+have mixed-sign differences whose pair masses can VANISH (THM-638 C2) => no degree-3
+floor at all.  THE AP'S TAIL MASS IS CARRIED BY INTERIOR/ROTATING ANCHORS INVISIBLE
+AT DEGREE 3: the responsible gap sits above the Farey-cell element q, which rotates
+with the cell -- no fixed element carries it.  k=8 needs degree >= 4 or k-body tools.

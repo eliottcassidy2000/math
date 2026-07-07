@@ -1,0 +1,33 @@
+================================================================================================
+(1) RESIDUE-BLINDNESS: identical residues mod 420 = lcm(2..7), different mu and W_q
+================================================================================================
+            family       mu                                 W_q (q=1..6)  residues mod 420 equal to AP_13?
+             AP_13   0.4425          0.143 0.065 0.086 0.054 0.078 0.016  True
+          AP12+433   0.5533          0.154 0.078 0.100 0.071 0.099 0.052  True
+         AP12+1273   0.5535          0.154 0.078 0.100 0.071 0.099 0.052  True
+         AP12+4213   0.5541          0.154 0.078 0.101 0.071 0.099 0.052  True
+  => same residue data mod lcm(2..7), different mu AND different per-q attribution:
+     W_q is NOT a function of {e mod q}.  The S72 crossing claim must be weakened to
+     'the RESONANT-CORE window at p/q is residue-driven' (klein-4971's object).
+
+================================================================================================
+(2) THE RESONANCE LEDGER LEMMA: maxgap(E, p/q) = g/q exactly; window iff g > q/7
+================================================================================================
+  (2a) identity maxgap(E,p/q) = g/q: 0 violations in 4000 random trials
+  (2b) window <-> g > q/7: 562 tested, 0 violations
+
+  (2c) the q=7 edge:
+            AP_13 (all residues mod 7): g(1/7) = 1, window at 1/7: False  (marginal iff g = 1: maxgap == 1/7 exactly)
+                  miss residue 0 mod 7: g(1/7) = 2, window at 1/7: True  (marginal iff g = 1: maxgap == 1/7 exactly)
+              AP_8 (k=8, all residues): g(1/7) = 1, window at 1/7: False  (marginal iff g = 1: maxgap == 1/7 exactly)
+
+  (2d) high-q resonance ledger (# of p/q with windows, 8 <= q <= 40):
+               AP_13: 180/472 resonances open a window
+       spread AP d=2: 164/472 resonances open a window
+           random-13: 460/472 resonances open a window
+       geometric 2^j: 460/472 resonances open a window
+
+  => EVERY family has an infinite high-q window ledger; the AP's is the sparsest
+     and merges into the q<=6 neighborhoods (roof linearity).  The per-q program's
+     'within-class spread' = controlling exactly this ledger.  q=7 edge SETTLED:
+     residue-full mod 7 => marginal (no window); the AP_k (k>=7) qualifies.

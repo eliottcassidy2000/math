@@ -1,0 +1,19 @@
+================================================================================================
+THE DEGREE-2 CEILING: min tail weight of pairwise-uniform couplings (14-adic data)
+================================================================================================
+
+  k=8   (honest bar T_8 = 0.6750, MISTAKE-123)
+    G=14 k=8 [continuum-legal (0 coincidence)]: LP infeasible over this class set (5 safe) -- enlarge zoo
+    G=14 k=8 [grid-legal (coincidence folded)]: LP infeasible over this class set (5 safe) -- enlarge zoo
+    G=28 k=8 [continuum-legal (0 coincidence)]: LP infeasible over this class set (43 safe) -- enlarge zoo
+
+  k=13  (honest bar T_13 = 0.0565)
+    G=14 k=13 [continuum-legal (0 coincidence)]: LP infeasible over this class set (8994 safe) -- enlarge zoo
+    G=14 k=13 [grid-legal (coincidence folded)]: LP infeasible over this class set (8994 safe) -- enlarge zoo
+    (curated m=13 gap-word zoo: 4000 classes)
+    G=28 k=13 curated [continuum-legal (0 coincidence)]: LP infeasible over this class set (4000 safe) -- enlarge zoo
+
+READING: the ceiling is the max uniform floor ANY pairwise-only argument can give.
+Compare: honest bars T_8 = 0.675, T_13 = 0.0565; degree-3 endpoint-Hunter ceiling
+3/7 (lrc_adaptive_hunter_kps_S73).  Anchor-event routes (2-anchor PA_2, CE-on-
+anchors) are k-body and NOT graded by this ceiling.
