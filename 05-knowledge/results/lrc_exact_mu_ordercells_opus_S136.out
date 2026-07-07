@@ -35,3 +35,5 @@ S1min CE        111984724486/126388236975  0.886038    1332      43     621    5
       equality classes certify the tight locus (grids cannot).
 
 [total time 14.1s]
+deep well {1..12,182}: exact mu_1/7 = 62305895707676745911/112758632851377443700 = 0.5525598717554479 [2s]
+vs grid estimate 0.5526; vs m_P = 0.05648716363002077
