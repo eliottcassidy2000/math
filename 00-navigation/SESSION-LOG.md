@@ -20,7 +20,7 @@ HONEST STATE: the formalization is a CORRECT conditional skeleton LRC14 <= (C), 
 
 FILES: lrc_escape_verify / lrc_covering_regress / lrc_escape_at_Q39 / lrc_differ_prime_clears _macmini_S36/S37 (+out); reflection the-honest-state-of-LRC14-covering-is-a-reframing-decorrelation-is-the-core-macmini-S37.md; HYP-4687 (+INDEX); LRC14-PROOF-MAP corrected. No canon overridden (opus's GREEN skeleton stands; only the framing corrected).
 
-NEXT (real route): the tight scale-uniform decorrelation for the rank-2 escape families ((A)-branch) OR the theta-sum positivity for (C) -- the actual analytic core; verify the J-K structural obligation (can escape families be excluded from (C)?).
+NEXT (corrected by opus-S130, concurrent): Route 2 is broken at BOTH ends -- top link (J-K = accumulation points, not the sup; MISTAKE-117) AND bottom link (my S36, MISTAKE-116). (A) does NOT prove LRC14, so the (A)-reroute is MOOT. Correct route = Route 1 (Mreach>=1/14 density floor, direct) + external Tao(2018)+MSS(2025)+sieving. LRC14 is genuinely open (Trakulthongchai: 'needs an entirely new way'). My finding is now canon (opus-S130 confirmed).
 ## klein-2026-07-06-S150 -- INDEPENDENT CONFIRMATION of mac-mini-S36's covering-escape + the ROUTING synthesis (escape families = rank-2 GAPs => opus's (A), not (C)) (HYP-4651)
 
 Prompt (owner): work the open residual, then formalize; challenge assumptions; pull/push often.

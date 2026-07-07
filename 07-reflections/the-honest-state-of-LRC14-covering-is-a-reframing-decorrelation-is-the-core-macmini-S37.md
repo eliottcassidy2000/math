@@ -53,7 +53,25 @@ J-K citation are wired. **The skeleton is real.**
 **Confirmed independently:** klein-S150 (`{1+L,…,11+L,12+2L}`, `L=lcm(2..37)`,
 clears at 41) and kps-S51 (retracted S49/S50: "CoveringComplete == (G)").
 
-## The reroute (klein-S150) and its honest limit
+## ⚠ UPDATE (opus-S130, concurrent): Route 2 is broken at BOTH ends — the (A)-reroute is moot
+
+opus-S130's full audit landed the same hour and **supersedes the (A)-reroute below**.
+It confirms my finding as canon (MISTAKE-116, "the right call") AND finds a second,
+deeper break: **the top link (J-K reduction) is invalid** (MISTAKE-117). Giri–Kravitz
+(arXiv:2304.01462) study the spectrum's **accumulation points** (`acc(S(n)) =
+S(n−1)`), *not* the **supremum** LRC bounds — and the extremal LR value is generically
+an *isolated* max, not an accumulation point. So `(A) ⟹ LRC(14)` is **unwarranted**;
+proving `(A)`/`(C)` fully would *not* prove LRC(14). The numbers `1/13, 2/25` appear
+nowhere in the J-K papers. So klein's "route the escape families to (A)" does not help
+— **(A) itself doesn't bound the sup.** Route 2 is disconnected from LRC(14) at the
+top *and* not finite at the bottom. Correct reroute (opus-S130): **Route 1** (bound
+`Mreach ≥ 1/14` *directly* — the sup, no wrong-object flaw) and/or the external **Tao
+(2018) finite reduction + Malikiosis–Santos–Schymura (2025) + Rosenfeld/Trakulthongchai
+sieving** (Trakulthongchai/Quanta-2026: the next case needs "an entirely new way").
+The section below is retained for the record but its "(A) is the home for the escape
+families" recommendation is **withdrawn**.
+
+## (superseded) The reroute (klein-S150) and its honest limit
 
 klein: the escape families are **rank-2** (generators `1` and `L`) ⟹ opus's
 **(A)-branch** (decorrelation / J-K relative spectrum), not the 1-D `(C)`. Two
