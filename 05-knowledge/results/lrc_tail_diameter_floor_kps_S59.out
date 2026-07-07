@@ -1,0 +1,114 @@
+============================================================================================
+PART 1 -- exact mu_{1/7}(AP_n) (Farey roof), n = 13..130; crossings vs the bars
+============================================================================================
+  m_P = 14249/252252 = 0.056487
+    union-bound bar (k=8): mu >= 0.675025
+    union-bound bar (k=9): mu >= 0.562231
+    union-bound bar (k=10): mu >= 0.452092
+    union-bound bar (k=11): mu >= 0.331212
+    union-bound bar (k=12): mu >= 0.199344
+    union-bound bar (k=13): mu >= 0.056487
+  n= 13 (diam  12): mu_1/7(AP_n) = 0.442486   >=477/1078 >=m_P
+  n= 14 (diam  13): mu_1/7(AP_n) = 0.402637   >=m_P
+  n= 15 (diam  14): mu_1/7(AP_n) = 0.372096   >=m_P
+  n= 16 (diam  15): mu_1/7(AP_n) = 0.346484   >=m_P
+  n= 18 (diam  17): mu_1/7(AP_n) = 0.293473   >=m_P
+  n= 20 (diam  19): mu_1/7(AP_n) = 0.254090   >=m_P
+  n= 22 (diam  21): mu_1/7(AP_n) = 0.227389   >=m_P
+  n= 24 (diam  23): mu_1/7(AP_n) = 0.204223   >=m_P
+  n= 26 (diam  25): mu_1/7(AP_n) = 0.184825   >=m_P
+  n= 28 (diam  27): mu_1/7(AP_n) = 0.170314   >=m_P
+  n= 30 (diam  29): mu_1/7(AP_n) = 0.158291   >=m_P
+  n= 34 (diam  33): mu_1/7(AP_n) = 0.136366   >=m_P
+  n= 38 (diam  37): mu_1/7(AP_n) = 0.120075   >=m_P
+  n= 42 (diam  41): mu_1/7(AP_n) = 0.108346   >=m_P
+  n= 46 (diam  45): mu_1/7(AP_n) = 0.098040   >=m_P
+  n= 50 (diam  49): mu_1/7(AP_n) = 0.089348   >=m_P
+  n= 54 (diam  53): mu_1/7(AP_n) = 0.082427   >=m_P
+  n= 58 (diam  57): mu_1/7(AP_n) = 0.076334   >=m_P
+  n= 66 (diam  65): mu_1/7(AP_n) = 0.066705   >=m_P
+  n= 78 (diam  77): mu_1/7(AP_n) = 0.055908   
+  n= 90 (diam  89): mu_1/7(AP_n) = 0.048205   
+  n=102 (diam 101): mu_1/7(AP_n) = 0.042305   
+  n=114 (diam 113): mu_1/7(AP_n) = 0.037693   
+  n=126 (diam 125): mu_1/7(AP_n) = 0.034029   
+  n=130 (diam 129): mu_1/7(AP_n) = 0.032943   
+
+  TAIL FLOOR covers diam <= 73 against bar m_P   (mu(AP_74)=0.05887)
+  bar thr_8+m_P: not met even at n=13
+  bar thr_9+m_P: not met even at n=13
+  bar thr_10+m_P: not met even at n=13
+  TAIL FLOOR covers diam <= 15 against bar thr_11+m_P   (mu(AP_16)=0.34648)
+  TAIL FLOOR covers diam <= 23 against bar thr_12+m_P   (mu(AP_24)=0.20422)
+
+============================================================================================
+PART 2 -- verify tail monotonicity mu_theta(E) >= mu_theta(AP_{D+1}) (numeric sanity)
+============================================================================================
+  AP {1..13}                 primdiam= 12: mu(E)=0.4425 >= mu(AP_13)=0.4425  OK
+  GW {1..11,13,24}           primdiam= 23: mu(E)=0.5883 >= mu(AP_24)=0.2042  OK
+  opus stretch               primdiam= 28: mu(E)=0.5828 >= mu(AP_29)=0.1604  OK
+  death-star prim-sat        primdiam= 22: mu(E)=0.4998 >= mu(AP_23)=0.2098  OK
+  monad record               primdiam= 20: mu(E)=0.5306 >= mu(AP_21)=0.2380  OK
+  kps-S57 adversarial        primdiam= 40: mu(E)=0.6735 >= mu(AP_41)=0.1099  OK
+  random diam  17:          mu(E)=0.8018 >= mu(AP_18)=0.2935  OK
+  random diam  21:          mu(E)=0.9279 >= mu(AP_22)=0.2274  OK
+  random diam  20:          mu(E)=0.9476 >= mu(AP_21)=0.2380  OK
+  random diam  42:          mu(E)=0.9580 >= mu(AP_43)=0.1044  OK
+  random diam  40:          mu(E)=0.9661 >= mu(AP_41)=0.1099  OK
+  random diam  33:          mu(E)=0.9793 >= mu(AP_34)=0.1364  OK
+  violations: 0
+
+============================================================================================
+PART 3 -- per-k bites: diameter range the tail floor covers vs each union-bound bar
+============================================================================================
+  (monotonicity never uses |E|: a k-point cluster E of primitive diameter D has
+   mu_1/7(E) >= mu_1/7(AP_{D+1}); note D >= k-1 always, so the bite starts at D=k-1.)
+  k=8: bar 0.6750 not met at any n -- no bite
+  k=9: bar 0.5622 not met at any n -- no bite
+  k=10: bar 0.4521 not met at any n -- no bite
+  k=11: bar 0.3312  bite = diam 10..15   (mu(AP_n)>=bar up to n=16)
+  k=12: bar 0.1993  bite = diam 11..23   (mu(AP_n)>=bar up to n=24)
+  k=13: bar 0.0565  bite = diam 12..73   (mu(AP_n)>=bar up to n=74)
+
+============================================================================================
+PART 4 -- LEG-B groundwork: exact pair-decorrelation constant (verified)
+============================================================================================
+  LEMMA (Fourier, rigorous): for gcd(p,q)=1, intervals I,J:
+    |meas{x: frac(px) in I, frac(qx) in J} - |I||J|| <= sum_{t>=1} 2/(pi^2 t^2 pq) = 1/(3pq).
+  For speeds e_i, e_j with g = gcd: bound = g^2/(3 e_i e_j).
+  300 random (p,q,I,J): max |err|/bound = 0.685  (<= 1 + numeric noise expected)
+
+  COMPOSITION (the emerging 3-leg tail program for the k=13 floor):
+   LEG A (this session): primitive diam <= D1  =>  mu_1/7 >= mu_1/7(AP_{D+1}) >= m_P  [PROVED]
+   LEG B (residual):     primitive diam > D1   =>  decorrelation via the 1/(3pq) pair bound
+                          + staggered-window Chung-Erdos (monad target 4) -- most pairs are
+                          large when the diameter is large; small-pair clusters re-enter the
+                          multi-scale (P,E)-recursion / peel (canon GREEN).
+   LEG C (upstream):     the bounded-spread compact reduction (THM-527-D) bounds the honest
+                          domain; if its S0 <= D1 the k=13 floor is CLOSED by LEG A alone.
+DONE.
+
+============================================================================================
+ADDENDUM (same session) -- exact m_P crossing + residual-regime probe
+============================================================================================
+Exact rationals pinning D1 (mu_1/7(AP_n) vs m_P = 14249/252252 ~ 0.0564868):
+  n=72: 34819645288711/572406237683280 = 0.060830  >= m_P
+  n=73: 186314370713/3127902938160     = 0.059565  >= m_P
+  n=74: 12176519786/206826915295       = 0.058873  >= m_P
+  n=75: 444614591352/7652595865915     = 0.058100  >= m_P
+  n=76: 2314528732/40290957525         = 0.057445  >= m_P
+  n=77: 3386550777203/60135183897390   = 0.056316  <  m_P   <<< first crossing
+  n=78: 801470432537/14335632074610    = 0.055908  <  m_P
+==> D1 = 75: every 13-element integer E with PRIMITIVE DIAMETER <= 75 has
+    mu_1/7(E) >= mu_1/7(AP_{diam+1}) >= mu_1/7(AP_76) = 2314528732/40290957525 > m_P.
+(mu_1/7(AP_n) is monotone decreasing in n by the SAME subset lemma: AP_n subset AP_{n+1}.)
+
+Residual-regime probe (primitive diam > 75, structured adversaries; numeric res=30000):
+  parity-interlace diam 80: 8*{0..10} u {39,41}   mu = 0.5898
+  stretch diam 90: {0,2..12,17,90}                mu = 0.5908
+  jittered 7*AP diam 84                           mu = 0.8455
+  near-uniform diam 96 (step 8, jitter 1)         mu = 0.8301
+  interlace diam 100: 10*{0..10} u {49,51}        mu = 0.5834
+  random-ish primitive diam 87                    mu = 0.9689
+==> the open residual (primitive diam > 75) sits empirically at mu >= ~0.58 = 10x m_P;
+    the frontier D1=75 is deep inside safe territory.

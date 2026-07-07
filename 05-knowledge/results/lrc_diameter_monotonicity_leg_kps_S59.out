@@ -1,0 +1,88 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc_diameter_monotonicity_leg_kps_S59.py:8: SyntaxWarning: invalid escape sequence '\s'
+  For integer sets E \subseteq F, the point sets nest: {frac(ex)} \subseteq {frac(fx)},
+========================================================================================
+PART 1 -- BRICK 1 pointwise monotonicity  maxgap(E,x) >= maxgap(F,x) for E subset F
+========================================================================================
+  random nested pairs: 0 violations / 16000 pointwise checks
+  record family: numeric E[mg(E)]=0.196993 >= numeric E[mg({0..20})]=0.147477: True
+
+========================================================================================
+PART 2 -- exact A(n)=E[maxgap(AP_n)] (Farey roof), crossings vs 1/7 and vs T*
+========================================================================================
+  1/7 = 0.142857    T* = 1/7+(6/7)m_P = 56291/294294 = 0.191275
+  cross-check n=13: roof=93/440  engine=93/440  match=True
+  cross-check n=14: roof=2081/10296  engine=2081/10296  match=True
+  cross-check n=21: roof=89173/604656  engine=89173/604656  match=True
+  n=13 (diam D=12):  A(n) =                   93/440 = 0.211364          > 1/7  > T*
+  n=14 (diam D=13):  A(n) =               2081/10296 = 0.202117          > 1/7  > T*
+  n=15 (diam D=14):  A(n) =               3461/18018 = 0.192086          > 1/7  > T*
+  n=16 (diam D=15):  A(n) =                 431/2340 = 0.184188          > 1/7  <= T*
+  n=17 (diam D=16):  A(n) =              13813/80080 = 0.172490          > 1/7  <= T*
+  n=18 (diam D=17):  A(n) =           684679/4084080 = 0.167646          > 1/7  <= T*
+  n=19 (diam D=18):  A(n) =               8271/52360 = 0.157964          > 1/7  <= T*
+  n=20 (diam D=19):  A(n) =         2549039/16628040 = 0.153298          > 1/7  <= T*
+  n=21 (diam D=20):  A(n) =             89173/604656 = 0.147477          > 1/7  <= T*
+  n=22 (diam D=21):  A(n) =         3029671/21162960 = 0.143159          > 1/7  <= T*
+  n=23 (diam D=22):  A(n) =         7925549/58198140 = 0.136182    <= 1/7  ***  <= T*
+  n=24 (diam D=23):  A(n) =     178416913/1338557220 = 0.133290    <= 1/7  ***  <= T*
+  n=25 (diam D=24):  A(n) =           442721/3461040 = 0.127916    <= 1/7  ***  <= T*
+  n=26 (diam D=25):  A(n) =       85585121/686439600 = 0.124680    <= 1/7  ***  <= T*
+  n=27 (diam D=26):  A(n) =       26912857/223092870 = 0.120635    <= 1/7  ***  <= T*
+  n=28 (diam D=27):  A(n) =       31159162/264188925 = 0.117943    <= 1/7  ***  <= T*
+  n=29 (diam D=28):  A(n) =   1819470013/16062686640 = 0.113273    <= 1/7  ***  <= T*
+  n=30 (diam D=29):  A(n) =   4726201147/42347082960 = 0.111606    <= 1/7  ***  <= T*
+  n=31 (diam D=30):  A(n) = 41709795143/388181593800 = 0.107449    <= 1/7  ***  <= T*
+  n=32 (diam D=31):  A(n) = 13801901951/131275957176 = 0.105137    <= 1/7  ***  <= T*
+  n=33 (diam D=32):  A(n) = 79098781147/772211512800 = 0.102431    <= 1/7  ***  <= T*
+  n=34 (diam D=33):  A(n) =     570498367/5681823840 = 0.100408    <= 1/7  ***  <= T*
+
+  ==> A(n) stays > 1/7 through n = 22 (diam <= 21); first n <= 1/7 at n = 23
+  ==> A(n) stays > T*  through n = 15 (diam <= 14); first n <= T*  at n = 16
+  LEG (positivity bar): every 13-set E with diam(E) <= 21 has E[maxgap] > 1/7.
+  LEG (m_P bar T*):     every 13-set E with diam(E) <= 14 has E[maxgap] > T*.
+
+========================================================================================
+PART 3 -- known minimizers vs their diameter bound
+========================================================================================
+  AP {1..13}                         diam= 12 gcd=1 primdiam= 12  E[mg]=0.211364  A(13)=0.21136  covered by leg(1/7)
+  GW {1..11,13,24}                   diam= 23 gcd=1 primdiam= 23  E[mg]=0.209798  A(24)=0.13329  NOT covered
+  opus stretch {0,2..12,17,28}       diam= 28 gcd=1 primdiam= 28  E[mg]=0.198838  A(29)=0.11327  NOT covered
+  death-star 2*{1..12}u{13}          diam= 22 gcd=1 primdiam= 22  E[mg]=0.201314  A(23)=0.13618  NOT covered
+  monad record 2*{1..11}u{11,13}     diam= 20 gcd=1 primdiam= 20  E[mg]=0.196993  A(21)=0.14748  covered by leg(1/7)
+  kps-S57 adversarial                diam= 40 gcd=1 primdiam= 40  E[mg]=0.202664  A(41) beyond table  NOT covered
+
+========================================================================================
+PART 4 -- per-primitive-diameter structured descent (does inf dip near/below 1/7?)
+========================================================================================
+    D   best numeric E[mg]   exact (refined)  family
+   18             0.208777          0.208779  [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 18]
+   20             0.207071          0.207072  [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17, 20]
+   22             0.205740          0.205743  [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17, 22]
+   24             0.204408          0.204410  [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17, 24]
+   26             0.205443          0.205446  [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17, 26]
+   28             0.204689          0.204691  [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17, 28]
+   30             0.203844          0.203846  [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17, 30]
+   32             0.203421                --  [0, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 32]
+  (1/7 = 0.142857; T* = 0.191275)
+
+========================================================================================
+PART 5 -- deficit frame: deficit = H_13/13 - E[mg] vs short-relation counts
+========================================================================================
+  iid mean H_13/13 = 1145993/4684680 = 0.244626;  budget to 1/7 = 0.101769
+  family                                 E[mg]   deficit  #3AP  #Schur  energy
+  AP {1..13}                          0.211364  0.033262    36      36    1469
+  GW {1..11,13,24}                    0.209798  0.034827    31      31    1169
+  opus stretch {0,2..12,17,28}        0.198838  0.045788    34      38    1346
+  death-star 2*{1..12}u{13}           0.201314  0.043312    36      30    1229
+  monad record 2*{1..11}u{11,13}      0.196993  0.047632    36      26    1149
+  kps-S57 adversarial                 0.202664  0.041961    31      23     961
+  primes 13                           0.238200  0.006426    13       5     769
+  Sidon-ish (greedy B2)               0.242339  0.002287     0      12     325
+  geometric 2^i                       0.250170 -0.005544     0       0     325
+
+  Pair-uniformity factoid: for ANY distinct integers, each ||(e_i-e_j)x|| is EXACTLY
+  uniform on [0,1/2] in x -- pair statistics are UNIVERSAL; the deficit above is
+  carried entirely by >=3-term relations (loop-vs-torus Fourier: E_x[mg] = H13/13 +
+  sum_{k in L(E), k!=0} mg-hat(k), and pure pair frequencies m(delta_i-delta_j)
+  never lie in L(E) since m(e_i-e_j) != 0).
+DONE.

@@ -179,6 +179,24 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > no written proof for spread~Vmax shapes (empirical arc growth ~S^0.45, tame). Script:
 > `lrc14_gp_conditional_rm_audit_monad_S1.py`.
 
+> **✂ THE DIAMETER FLOOR (kps-S59, HYP-4797) — the bounded-diameter bulk of the k=13 floor is
+> PROVED; (A′) is only open beyond primitive diameter 75.** One-line pointwise lemma: `E ⊆ F` ⟹
+> point sets nest ⟹ `maxgap(E,x) ≥ maxgap(F,x)` ∀x ⟹ `μ_θ(E) ≥ μ_θ(F)` ∀θ. With
+> `F = {0..D} ≅ AP_{D+1}` (D = primitive diameter) and the opus-S134 Farey roof's exact values:
+> **`μ_{1/7}(E) ≥ μ_{1/7}(AP_{D+1}) ≥ m_P` for every 13-set with `D ≤ 75`** (exact crossing:
+> `μ_{1/7}(AP_76) = 2314528732/40290957525 ≈ 0.05744 ≥ m_P`, fails first at `n=77`). This uses
+> the AP as a SUBSET, not a minimizer — it survives the death-star capstone and covers
+> THM-527-D's verified extremal-spread domain (~30) with 2.5× margin; every family on the
+> minimizer board (diam 12..40) is inside. Same lemma bites `k=12` (diam ≤ 23), `k=11` (≤ 15);
+> k=8..10 union-bound bars are out of reach (honest). Mean version: `A(n) > 1/7` through `n=22`
+> ⟹ prim-diam ≤ 21 has `E[maxgap] > 1/7` (contains the monad record, diam 20); sub-`1/7` records
+> would need diam ≥ 22 (observed minima there: flat ~0.203–0.206). Residual `D > 75` probes at
+> `μ = 0.58–0.97` = 10–17× bar. Deficit frame (exact symmetries): translation forces `Σkᵢ = 0`
+> and pair-distance uniformity kills difference modes ⟹ ALL deviation of any gap functional from
+> the iid value flows through **zero-sum weight-≥3 relations** — additive structure that (Freiman)
+> pulls the diameter back into the proved zone. Scripts: `lrc_diameter_monotonicity_leg_kps_S59.py`,
+> `lrc_tail_diameter_floor_kps_S59.py`; reflection `the-diameter-floor-feeds-the-irreducible-tail-kps-S59`.
+
 ---
 
 ## Route 2 — J-K reduction → rank-2 torus → 1-D gap (RETIRED as a proof route, opus-S130; correct conditional spectrum math)
