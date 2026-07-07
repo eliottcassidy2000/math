@@ -1,0 +1,12 @@
+RECONCILE S35 Q0=37: split r=2 lifts by compression (klein: compressed clears q<=32; non-comp PEELS)
+  COMPRESSED (max<=13*min): 25 families, MAX clearing q = 19
+    worst compressed: (2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 14, 17)
+  NON-COMPRESSED (max>13*min): 237509 families, MAX clearing q = 37
+    worst non-compressed: (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 36, 350)  (max/min=350)
+
+  => my S35 q=37 family {1..9,11,36,350}: max/min = 350 => NON-COMPRESSED (PEELS, THM-620), NOT the covering node.
+     The COVERING NODE (compressed) max q = 19 <=32 CONFIRMS klein-S147.
+     So my S35 'Q0=37' was for the PEELING branch, not the covering -- reconciled.
+
+  compressed worst cert: (2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 14, 17) clears q=19,c=1,mu=2 => M>=2/19=0.1053>2/25
+    residues (v*1) mod 19: [2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 14, 17] all in [2,17]
