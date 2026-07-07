@@ -1,0 +1,12 @@
+N=5 q=17 (prime) mediant 3/17: near-exhaustive [1,20], achievers found: 0
+N=9 q=29 (prime) mediant 3/29: targeted search, achievers: 0
+
+SUMMARY of mediant achievability vs prime(3N+2):
+  N=7 (23 prime): YES {1,2,3,4,5,7,18}   N=13 (41 prime): YES {1..11,13,36}
+  N=5 (17 prime): none found (near-exhaustive)
+  N=9 (29 prime): none found (targeted)
+  N=12 (38=2*19 composite): none (fleet-verified empty)
+
+KEY REFRAME: first-gap emptiness is NON-MONOTONIC in N (N=13 NONEMPTY, N=12 empty) and thus
+NOT driven by window width (N=13's window is NARROWER). It is ARITHMETIC: the mediant 3/(3N+2)
+is the shallowest value, and its achievability depends on the FACTORIZATION of q=3N+2.

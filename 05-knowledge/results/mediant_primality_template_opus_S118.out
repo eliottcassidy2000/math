@@ -1,0 +1,17 @@
+N  | q=3N+2 | prime? | mediant 3/q | template {1..N-2,N,far} achieves mediant? (best far)
+ 4 |  14    | comp   | 3/14  | no (this template)
+ 5 |  17    | PRIME  | 3/17  | no (this template)
+ 6 |  20    | comp   | 3/20  | no (this template)
+ 7 |  23    | PRIME  | 3/23  | YES far=18: [1, 2, 3, 4, 5, 7, 18]
+ 8 |  26    | comp   | 3/26  | no (this template)
+ 9 |  29    | PRIME  | 3/29  | no (this template)
+10 |  32    | comp   | 3/32  | no (this template)
+11 |  35    | comp   | 3/35  | no (this template)
+12 |  38    | comp   | 3/38  | no (this template)
+13 |  41    | PRIME  | 3/41  | YES far=36: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36]
+14 |  44    | comp   | 3/44  | no (this template)
+15 |  47    | PRIME  | 3/47  | no (this template)
+
+If 'mediant achievable' tracks 'q=3N+2 prime', that is a CLEAN ARITHMETIC CRITERION for the
+shallowest gap value -- and n=12 (q=38=2*19 composite) failing => the mediant obstruction is
+the factorization of 3N+2. Proof route: the q=3N+2 residue system is infeasible for composite q.

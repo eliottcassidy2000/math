@@ -1,0 +1,13 @@
+N  | window            | first-gap NONEMPTY? | smallest in-gap M (base -> outlier)
+ 6 | (1/7,2/13)     | none found (empty?)  | -- (mediant 3/20, plateau ladder brackets)
+ 7 | (1/8,2/15)     | YES (1 rungs)   | 3/23=0.13043  [1, 2, 3, 4, 5, 7]->18
+ 8 | (1/9,2/17)     | none found (empty?)  | -- (mediant 3/26, plateau ladder brackets)
+ 9 | (1/10,2/19)    | none found (empty?)  | -- (mediant 3/29, plateau ladder brackets)
+10 | (1/11,2/21)    | none found (empty?)  | -- (mediant 3/32, plateau ladder brackets)
+11 | (1/12,2/23)    | none found (empty?)  | -- (mediant 3/35, plateau ladder brackets)
+12 | (1/13,2/25)    | none found (empty?)  | -- (mediant 3/38, plateau ladder brackets)
+13 | (1/14,2/27)    | YES (1 rungs)   | 3/41=0.07317  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]->36
+
+READS the TRANSITION: the N where 'first-gap nonempty' flips to 'empty' is the n-specific
+crossover. At/after it, the shrinking window (~1/2N^2) outruns the densest base's ladder =>
+no integer outlier lands in-gap. N=12 (LRC14) should be on the empty side.

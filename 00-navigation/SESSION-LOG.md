@@ -15,6 +15,22 @@ LEVERAGE: if true, opus's crux collapses to '3/38 unachievable because 38 compos
 FILES: lrc_crossn_spacing_macmini_S27.py (+.out), lrc_mediant_crossn/lrc_mediant_prime_hypothesis _macmini_S27.out; reflection the-mediant-crux-is-a-prime-composite-dichotomy-macmini-S27.md; HYP-4562 (+INDEX); letter to opus.  No canon overridden.
 
 NEXT: test the prime hypothesis -- build ONE k=9(29 prime)/k=11(35 comp) mediant attainer (needs bordered-AP construction, the fleet's recurring gap); if true, prove 3/38 unachievable via the composite-38 non-unit obstruction (S3/S7).
+## opus-2026-07-06-S118 -- CROSS-N: first-gap emptiness is NON-MONOTONIC => ARITHMETIC not window-width; N=13 VERIFIED nonempty (HYP-4506)
+
+Prompt: understand the LRC for numbers other than 14 runners; leverage for proof progress.
+
+MAPPED the first gap (1/(N+1),2/(2N+1)) emptiness across N (speeds). VERIFIED: nonempty at N=6 (5/33), N=7 (3/23), and N=13 ({1..11,13,36}=3/41 = the N=13 mediant, M_exact exact); EMPTY at N=12 (fleet ~9k). 
+
+THE REFRAME (proof leverage): window width ~1/(2N^2) is STRICTLY DECREASING, so window-width-driven emptiness would be MONOTONE. But N=13 has a NARROWER window and is NONEMPTY. So emptiness is NOT metric -- it is ARITHMETIC (factorization of q=3N+2, the mediant denominator). Window width is necessary-NOT-sufficient (same shape as every structural lens): it bounds the in-window complexity/depth but doesn't decide whether the shallowest (mediant) survives.
+
+MEDIANT structure: universal far element 3(N-1), binding pair {5,3(N-1)} sums to q=3N+2. Achievable N=7(q23),13(q41); NOT N=5(q17,near-exhaustive),9,12(q38=2*19). NOT primality (N=5 prime fails). Lead: N==1 mod 6 (2 pts).
+
+PROOF LEVERAGE: (guard-rail) any N=12 closure via window-width/uniform-Selberg alone is incomplete -- N=13 member is the standing counterexample. (route) the right obstruction is ARITHMETIC = Fan-Sun's n=4 gcd/divisibility template: the q=38=2*19 mediant residue-covering system is CRT-obstructed mod 2,19 where q=23,41 feasible. (O-arith, NEW) characterize the arithmetic mediant criterion + prove q=38 fails.
+
+CAVEAT (recorded): weak searches false-report empty (my first 2 base-gens said N=6 empty -- FALSE, 5/33 exists); only diff-d AP base + borders + 3(N-1) far recovered knowns & found N=13. Fleet sweeps authoritative for N=12.
+
+Files (results only, no Lean -- research session): mediant_achievability_across_N / ladder_xspace_width_crossover / first_gap_transition_across_N / first_gap_diffd_bases / mediant_primality_template / mediant_N5_N9_broad _opus_S118; reflection first-gap-emptiness-is-non-monotonic-in-N-arithmetic-not-metric-opus-S118; backlog lead; HYP-4506. RESIDUAL: the arithmetic mediant criterion (q=38 obstruction).
+
 ## mac-mini-2026-07-06-S26 -- THE k=12 RESONANCE LADDER = opus-S100's FAREY LADDER, concretely: base {1..11} gives M=j/(12j+1) (1/13, 2/25, 3/37,...); the gap = OPEN interval between consecutive rungs j=1,2 => SKIPPED; single+double-outlier bounded case EMPTY (HYP-4552)
 
 Prompt (owner): work the next step; synthesize other agents; push/pull during downtimes.

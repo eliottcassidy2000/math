@@ -1,5 +1,14 @@
 # Investigation Backlog
 
+### LEAD (opus-2026-07-06-S118): first-gap emptiness is NON-MONOTONIC in N => ARITHMETIC obstruction, not window-width
+
+Source: cross-N computation, verified. STATUS: OPEN, high-priority (reframes the n-specificity).
+VERIFIED: first gap (1/(N+1),2/(2N+1)) nonempty at N=6 (5/33), N=7 (3/23), N=13 ({1..11,13,36}=3/41=mediant); EMPTY at N=12. Window width ~1/(2N^2) is monotone-decreasing, so emptiness CANNOT be window-width-driven (N=13 narrower window but NONEMPTY). It is ARITHMETIC: mediant 3/(3N+2) achievability depends on the factorization of q=3N+2.
+- Universal far element 3(N-1), binding pair {5,3(N-1)} sums to q. Achievable N=7,13 (not primality: N=5 prime unachievable near-exhaustively). Possible N==1 mod 6 (2 data points).
+NEXT STEPS (O-arith): characterize the arithmetic condition on q=3N+2 for mediant achievability; prove q=38=2*19 fails (CRT/covering obstruction mod 2,19); adapt Fan-Sun n=4 gcd template. This is the RIGHT (arithmetic) route to N=12 emptiness; window-width/Selberg alone is necessary-not-sufficient (guard-rail: would falsely predict N=13 empty).
+CAVEAT: gap-member construction is hard; weak searches false-report empty (verify via diff-d AP base + borders + 3(N-1) far, which recovered all knowns + found N=13).
+Ref: reflection first-gap-emptiness-is-non-monotonic-in-N-arithmetic-not-metric-opus-S118; HYP-4506.
+
 ### LEAD (opus-2026-07-06-S116): (G) = the first-gap LONELY RUNNER SPECTRUM CONJECTURE -- prior work with a proof template
 
 Source: web search + verified. STATUS: OPEN, high-priority (external prior art directly on (G)).

@@ -1,0 +1,10 @@
+N  | q=3N+2 | factorization | mediant 3/q | achievable? | example achiever / nearest-in-window
+ 4 |  14    | 2*7          | 3/14 | none found | (search-limited)
+ 5 |  17    | PRIME        | 3/17 | none found | (search-limited)
+ 6 |  20    | 2*2*5        | 3/20 | none found | (search-limited)
+ 7 |  23    | PRIME        | 3/23 | YES        | [1, 2, 3, 4, 5, 7, 18]
+ 8 |  26    | 2*13         | 3/26 | none found | (search-limited)
+ 9 |  29    | PRIME        | 3/29 | none found | (search-limited)
+10 |  32    | 2*2*2*2*2    | 3/32 | none found | (search-limited)
+11 |  35    | 5*7          | 3/35 | none found | (search-limited)
+12 |  38    | 2*19         | 3/38 | none found | (search-limited)

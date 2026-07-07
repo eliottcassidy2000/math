@@ -1,0 +1,7 @@
+VERIFY known: {1,5,6,11,16,17}= 5/33 (want 5/33); {1,2,3,4,5,7,18}= 3/23 (want 3/23)
+VERIFY N=13 hit {1..11,13,36}: 3/41  window(1/14,2/27)= (0.07143,0.07407)  in? True
+
+N  | window          | first-gap NONEMPTY? | smallest in-gap M
+ 6 | (1/7,2/13)   | YES (1)   | 5/33=0.15152 [1, 5, 6, 11, 16, 17]
+ 7 | (1/8,2/15)   | none in this search | mediant 3/23
+ 8 | (1/9,2/17)   | none in this search | mediant 3/26
