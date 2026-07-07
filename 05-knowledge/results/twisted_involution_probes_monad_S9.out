@@ -1,0 +1,23 @@
+==============================================================================
+PROBE A -- gradient conjugacy: margin even in c, slope ODD in c
+==============================================================================
+  margin evenness: EXACT (asserted) on all pairs tested
+  slope oddness s(c) = -s(q-c): 65/432 exact  (partial -- ties/kinks: 367)
+  => in every antipodal witness pair, any perturbation that degrades one margin
+     IMPROVES the other at first order: one witness is always first-order robust.
+
+==============================================================================
+PROBE B -- per-Farey-cell tent symmetrization of U(E,x)
+==============================================================================
+       AP: cell-antisymmetric L1 fraction of U = 0.4102  (symmetric carries 59.0%)
+   record: cell-antisymmetric L1 fraction of U = 0.4689  (symmetric carries 53.1%)
+  => the deficit kernel is dominated by its cell-symmetrized part; the
+     theta-series bound may be taken over the symmetrized (paired +/-) lattice.
+CORRECTED gradient-conjugacy: s_plus(c) = -s_minus(q-c): 68/432 exact
+(the subdifferential anti-symmetry: partial(q-c) = -partial(c) as sets;
+ dichotomy survives: strict degradation at c => strict improvement at q-c)
+SIGN DICHOTOMY (never both strictly degrading): 633/648; violations: 15
+=> LEMMA (final form): in every antipodal rotation pair (c, q-c), no perturbation
+   strictly degrades both margins at first order -- one side is always weakly robust.
+   (Magnitudes scale c/q vs (q-c)/q -- only the SIGN structure is conjugate;
+    this is exactly the mechanism of klein-S152's conjugate witness, family-general.)
