@@ -1,0 +1,7 @@
+STRICT single-scale (ratio<=2): 27858 13-families; band (1/14,1/13)=(0.0714,0.0769)
+  tight M=1/14: 0
+  M in OPEN (1/14,1/13): 0
+    => (1/14,1/13) EMPTY for strict single-scale (ratio<=2) -- structural gap
+
+  NOTE: AP {1..13} has ratio 13 (max/min=13) -- it is single-scale-EXTREMAL but ratio-13, not ratio-2.
+    So 'single-scale' = bounded ratio must allow up to ratio ~13 (the AP). Re-census ratio<=13:

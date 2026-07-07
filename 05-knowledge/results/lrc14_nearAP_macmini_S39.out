@@ -1,0 +1,5 @@
+near-AP census (AP + <=3 small defects, ratio<=13): 1 families
+  tight M=1/14: 1
+  M in OPEN (1/14,1/13): 0
+    => (1/14,1/13) EMPTY for near-AP small-perturbation single-scale families
+  achievable M in [1/14,1/12]: ['1/14(0.0714)']
