@@ -1,0 +1,11 @@
+RESIDUAL CLASS PROBE: primitive, diam>=76 (Theorem-A complement), single-scale
+also: corrected inequality W >= 14*sum(g-3/14)_+ check
+  seed skipped: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 3]
+  residual min mu   ~ 0.55103 at [7, 14, 21, 26, 28, 35, 42, 49, 56, 63, 70, 77, 84]  (m_P=0.05649)
+  residual min E[U] ~ 0.09974 at [8, 11, 16, 24, 26, 28, 29, 32, 36, 40, 48, 56, 88]  (1/14=0.07143)
+
+ corrected check: min over x of  W - 14*sum(g-3/14)_+  (should be >= 0)
+           AP: min(W-14*U3) = +0.0000
+       record: min(W-14*U3) = +0.0000
+     resid-mu: min(W-14*U3) = +0.0000
+     resid-eu: min(W-14*U3) = +0.0000
