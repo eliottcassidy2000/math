@@ -1,0 +1,35 @@
+========================================================================================
+k=8: AP winner [5, 7, 9, 11, 13, 15, 17, 19], PA_2=0.7203 (T_k=0.6185)
+========================================================================================
+  (A) local-min: best neighbor PA_2 = 0.7203 (winner: [5, 7, 9, 11, 13, 15, 17, 19])
+      => winner is a LOCAL MIN: True
+  (B) structured large-diam min = 0.8049 (spreadAP d=11: [1, 12, 23, 34, 45, 56, 67, 78])
+      below T_k? NO; beats winner? NO
+  (C) EXACT PA_2(winner) = 1164298/1616615 = 0.72021
+
+========================================================================================
+k=13: AP winner [5, 12, 19, 26, 33, 40, 47, 54, 61, 68, 75, 82, 89], PA_2=0.3661 (T_k=0.0565)
+========================================================================================
+  (A) local-min: best neighbor PA_2 = 0.3661 (winner: [5, 12, 19, 26, 33, 40, 47, 54, 61, 68, 75, 82, 89])
+      => winner is a LOCAL MIN: True
+  (B) structured large-diam min = 0.3688 (spreadAP d=11: [1, 12, 23, 34, 45, 56, 67, 78, 89, 100, 111, 122, 133])
+      below T_k? NO; beats winner? NO
+
+VERDICT below.
+k=13 TRUE winner (d=2,a=15) [15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39]: PA_2=0.3188 (T_13=0.0565; S69 exact 0.31871)
+  best neighbor = 0.3188 (winner) => local min: True
+
+================================================================================
+VERDICT (R2):
+  Q1 (what (A') needs): inf PA_2 >= T_k -- HOLDS robustly (0 families below T_k over
+     structured + descent + local-perturbation adversary, k=8 & 13).
+  R2 (spread AP is THE global min): SURVIVES -- verified EXACT local min at k=8
+     (1164298/1616615), d=2 local min at k=13, no structured/large-diam family beats it.
+  BUT: EVIDENCE, not proof. R2 is a global extremal rigidity = same class as the
+     density-floor mu AP-minimality (verified k<=10, open in general); the landscape is
+     resonance-rugged (S63: 77% majorization violations) => NO clean majorization proof.
+  (A') = S68 [bounded diam, ALL families] + S69 [spread-AP inf, exact] + R2 [residual].
+EXACT 1-move local minimality (k=8), winner=[5, 7, 9, 11, 13, 15, 17, 19], PA_2=1164298/1616615=0.72021
+  ALL 16 single-element neighbors have EXACT PA_2 >= winner: True
+  min neighbor: 0.76559 at [3, 7, 9, 11, 13, 15, 17, 19] (winner 0.72021)
+  => the spread AP [5, 7, 9, 11, 13, 15, 17, 19] is a RIGOROUS 1-move local minimum (exact rational).

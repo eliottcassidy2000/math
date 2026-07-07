@@ -1,0 +1,17 @@
+==========================================================================================
+R2 STRESS TEST k=8: T_k=0.6185, spread-AP min=0.7202
+==========================================================================================
+  descent min PA_2 = 0.8573 at [14, 20, 25, 29, 40, 44, 55, 59]
+  GLOBAL min found = 0.7198 (AP a=5 d=2: [5, 7, 9, 11, 13, 15, 17, 19])
+  Q1 -- any family below T_k=0.6185? NO (2-anchor route holds)
+  Q2 -- any NON-AP beats spread-AP min 0.7202? NO (R2 survives: spread AP is the min)
+
+==========================================================================================
+R2 STRESS TEST k=13: T_k=0.0565, spread-AP min=0.3187
+==========================================================================================
+  descent min PA_2 = 0.5955 at [2, 13, 19, 42, 49, 54, 60, 64, 66, 72, 75, 83, 102]
+  GLOBAL min found = 0.3656 (AP a=5 d=7: [5, 12, 19, 26, 33, 40, 47, 54, 61, 68, 75, 82, 89])
+  Q1 -- any family below T_k=0.0565? NO (2-anchor route holds)
+  Q2 -- any NON-AP beats spread-AP min 0.3187? NO (R2 survives: spread AP is the min)
+
+DONE.

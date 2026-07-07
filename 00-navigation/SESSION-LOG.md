@@ -26,6 +26,21 @@ DELIVERED:
 FILES: lrc14_uniform_head_anticonc_macmini_S49.py (+out); HYP-5077 (INDEX; renumbered from 5057, kps-S68 held it). No canon overridden.
 
 NEXT: (a) the mu >= 0.995 no-cherry floor -- now THE single load-bearing k=8 coupling statement; candidate tools: joint-moment Cantelli, or the net-characterization (Bad needs a strict 1/7-net: 8 points netting 7 cells at diam >= 27 = strong rational structure, count the netting windows); (b) the Koksma half-page (klein); (c) kps-S68/S69's 2-anchor finitization continues in parallel.
+## kind-pasteur-2026-07-07-S70 -- R2 (spread APs are the GLOBAL PA_2-minimizer): TESTED HARD, SURVIVES, but NOT PROVED -- it is the density-floor rigidity; the practically-important inf PA_2 >= T_k (Q1) holds robustly, (A') reduced to R2 (HYP-5077)
+
+Prompt (owner): prove R2 (spread APs are the global PA_2-minimizer).
+
+DISCIPLINE (fleet history: Schur/2-7 floor/E[maxgap]-AP-min all refuted by strong adversaries): TEST before claiming. HONEST OUTCOME: I could NOT prove R2; I tested it hard (survives), pinned WHY it is hard, and reduced (A') to it -- reporting honestly, not fabricating a proof.
+
+REFRAME (rigorous identity): gap@0(E,x)>1/7 <=> phase-range max frac(e_i x) - min frac(e_i x) < 6/7; so PA_2 = P(phases avoid a >1/7 arc at 0 OR 1/2).
+
+RESULTS: (Q1, what (A') needs) inf PA_2 >= T_k HOLDS ROBUSTLY -- 0 families below T_k over structured (spread/dilated/defected APs, two-block, geometric, Sidon, GW, interleave, dilated-large) + random + local-descent + winner-perturbation adversary, k=8 (T_8=0.6185) and k=13 (T_13=0.0565). (R2) SURVIVES: the spread AP is a RIGOROUS EXACT 1-MOVE LOCAL MINIMUM at k=8 (all 16 single-element neighbors of {5,7,..,19} have exact PA_2 >= 1164298/1616615, min neighbor 0.7656); local min at k=13 (d=2,a=15, 0.3188); no structured/large-diameter family beats it.
+
+BUT NOT PROVED. R2 is a GLOBAL extremal rigidity = SAME hardness class as the density-floor mu_1/7 AP-minimality (opus-S131 verified k<=10, open in general). My S63 refuted majorization/Schur-monotonicity of this functional (77% uphill) => NO clean rearrangement proof. R2 is the sigma-even measure core (S67) that resists covering/parity/moment tools. First adversary was WEAK (MISTAKE-102 trap: descent stuck at 0.86, never near the AP min 0.72) -- strengthened with local-min + structured.
+
+WHAT STANDS: (A') = S68 [bounded diameter, ALL families, PROVED] + S69 [spread-AP inf, EXACT] + R2 [the single remaining rigidity]; Q1 robustly supports inf PA_2 >= T_k. R2 may be EASIER than full mu AP-minimality (2 anchors vs all gaps); alternative closure = decorrelation (explicit Erdos-Turan) + a stability neighborhood of the spread AP.
+
+Files: lrc_R2_adversary_kps_S70.py, lrc_R2_strong_kps_S70.py (+outs); reflection R2-tested-survives-but-is-the-density-floor-rigidity-kps-S70; HYP-5077. Honest test-and-diagnose (no proof, no formalization). Does NOT prove LRC(14) or R2.
 
 ## kind-pasteur-2026-07-07-S69 -- FINITIZED THE SPREAD-AP RESIDUAL EXACTLY: the 2-anchor tail's spread-AP inf is now a finite EXACT RATIONAL check (resonant minima at d=2 clearing T_k) + a T2-decorrelation tail, replacing boxeph's adversarial numerics (HYP-5067)
 
