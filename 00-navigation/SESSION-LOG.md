@@ -1,3 +1,19 @@
+## mac-mini-2026-07-07-S54 -- THE EXACT W_q WINDOW FORMULA (matches the AP at every q to 4 decimals; W_1(AP) = 1/7 exactly) + COURSE-CORRECTION to kps-S72: 'AP minimizes each W_q' is FALSE for the true local windows (attribution saturation at high mu); robust reformulation = the window-sum LOWER BOUND on the structured side of the dichotomy (HYP-5147)
+
+Prompt (owner): find high-leverage tasks toward LRC(14); pull often and consider deeply what you encounter.
+
+PULLED + CONSIDERED: kps-S72's per-resonance decomposition mu = sum_q W_q with the handoff 'derive the exact window width from residue data + drift'. Executed, and the exactness EXPOSED a flaw in the program's extremal target.
+
+THE FORMULA (leading order): W_q(E) = sum_{p coprime q} sum_{sign} max_s (G_s/q - 1/7)_+/D_s^{sign} — occupied-residue gaps G_s, edge drift rates D_s (max of left cluster minus min of right, per direction). VERIFIED EXACT at the AP for every q (= kps's measured values, 4 decimals; W_1 = (6/7)/12 x 2 = 1/7 exactly), and at the parity-record and all-odd families.
+
+THE CORRECTION: kps's measured W_q used nearest-rational attribution; at high-mu families the attribution cell SATURATES with generic good mass (GW: measured 0.0794 vs true window 0.0649; random: 0.0990 vs 0.0067). For the TRUE local windows the AP does NOT minimize — random's drift rates crush its windows (0.0067 << 0.0649). The per-q extremal lemma as stated is FALSE; what survives: (i) mu >= sum W_q^formula (a lower-bound assembly, attribution-free, disjoint local mass); (ii) it is strong exactly where the floor is hard (structured/near-AP families: windows carry most of mu) and weak where the floor is easy (spread: generic mass dominates) => the program lands back on the STRUCTURED/SPREAD dichotomy with the structured side now FINITE and explicit (residue gaps + drift arithmetic).
+
+REMAINING RIGOR: second-order error control of the linear-drift window (tent/roof machinery THM-637/645 is built for it); then the structured-side floor is residue arithmetic.
+
+FILES: lrc14_Wq_exact_formula_macmini_S54.py (+out); HYP-5147 (INDEX). No canon overridden (kps-S72 was a reduction-with-evidence; the correction sharpens its honest scope).
+
+NEXT: (a) the second-order window bounds (tent composition) => the structured-side floor as finite arithmetic; (b) the dichotomy assembly (windows below threshold => spread => PZ-on-U lane); (c) @kps: restate the per-q program on the formula windows.
+
 ## mac-mini-2026-07-07-S53 -- THM-650: BOTH TRILOGY FOLLOW-UPS PROVED -- (A) pair-space rank = m+n'-1-[m==n' mod 2] (three-case coefficient proof + kernel identification; exact-arithmetic verification after catching a float boundary artifact); (B) n=8 sigma-fixed min = 20 census-free (6 forced mirror-self crossings + 7 explicit edge-disjoint odd cycles pin maxcut = 25) (HYP-5127)
 
 Prompt (owner): prove the rank formula and the n=8 quotient-min = 20 closed form; continue and integrate incoming.

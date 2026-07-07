@@ -1,0 +1,20 @@
+=== AP_13: formula vs measured vs kps-S72 ===
+  measured (nearest-rational attribution): q=1..6 -> [0.1429, 0.0649, 0.0857, 0.0544, 0.0782, 0.0163]; sum = 0.4425 = mu = 0.4425
+  kps-S72 reported W_q(AP_13) q=2..6: 0.065/0.086/0.054/0.078/0.016
+  q=2: formula = 0.0649   measured = 0.0649
+  q=3: formula = 0.0857   measured = 0.0857
+  q=4: formula = 0.0544   measured = 0.0544
+  q=5: formula = 0.0782   measured = 0.0782
+  q=6: formula = 0.0163   measured = 0.0163
+
+=== bank comparison at q=2 (the extremal question) ===
+  AP13            : W_2 formula = 0.0649, measured = 0.0649  (mu = 0.4425)
+  GW              : W_2 formula = 0.0649, measured = 0.0794  (mu = 0.5884)
+  parity record   : W_2 formula = 0.0649, measured = 0.0649  (mu = 0.5306)
+  miss-2 (all odd): W_2 formula = 0.0714, measured = 0.0714  (mu = 0.4425)
+  random          : W_2 formula = 0.0067, measured = 0.0990  (mu = 0.9937)
+
+q=2 structure note: residues mod 2 split E into odd/even classes at x ~ p/2;
+miss (all one parity) => G = 2, gap 1 - 1/7 huge => wide window; full => G = 1,
+gap 1/2 - 1/7, drift = cross-parity edge rates. The extremal comparison is
+(3/14)/D_AP vs family values -- printed above for the dichotomy check.
