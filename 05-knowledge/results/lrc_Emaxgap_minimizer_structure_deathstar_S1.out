@@ -1,0 +1,33 @@
+=== E[maxgap] minimizer structure (exact); AP=93/440=0.21136, 1/7=0.14286 ===
+
+-- 2*{1..12} u {m}, m odd (prim-sat is m=13) --
+   m= 1: E[maxgap]=0.215812  
+   m= 3: E[maxgap]=0.216190  
+   m= 5: E[maxgap]=0.214815  
+   m= 7: E[maxgap]=0.212841  
+   m= 9: E[maxgap]=0.211111  <AP
+   m=11: E[maxgap]=0.208980  <AP
+   m=13: E[maxgap]=0.201314  <AP
+   m=15: E[maxgap]=0.208980  <AP
+   m=17: E[maxgap]=0.211111  <AP
+   m=19: E[maxgap]=0.212841  
+   m=21: E[maxgap]=0.214815  
+   m=23: E[maxgap]=0.216190  
+   m=25: E[maxgap]=0.215812  
+
+-- d*{1..12} u {small odd}: does the 'detuned dilated AP' shape persist? --
+   d=2, detune=6d+1: 0.201314
+   d=3, detune=6d+1: 0.214443
+   d=4, detune=6d+1: 0.211783
+   d=5, detune=6d+1: 0.213282
+
+-- single detuning of 2*AP={2,4,...,26}: replace ONE 2j by t --
+   best single-detune of 2*AP: (4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 22, 24, 26)  E[maxgap]=0.201314
+
+-- exact descent for the true inf E[maxgap] --
+   descent inf (exact): (1, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 23)  E[maxgap]=0.202308
+
+  best E[maxgap] found = 0.201314  (margin over 1/7 = +0.05846)
+  champion prim-sat 2*{1..12}u{13} = 0.201314
+  => inf_E E[maxgap] ~ 0.20 >> 1/7=0.143: the DIRECT route inf>1/7 holds, comfortable +0.06,
+     minimizer = a DETUNED dilated AP (coarse-cluster-breaker), NOT the plain AP.

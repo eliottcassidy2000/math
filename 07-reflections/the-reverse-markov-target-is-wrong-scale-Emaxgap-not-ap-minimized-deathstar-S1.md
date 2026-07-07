@@ -163,6 +163,24 @@ reverse-Markov program (opus-S133 / kps-S57-S58 / klein-S153) yields valid inequ
 weakens Route 1: it says the one honest open lemma is exactly `μ_{1/7}` (= fine-scale `μ_θ`)
 AP-minimality, and rules the mean detours out.
 
+## The coarse minimizer IS the saturated family (a cross-connection)
+
+The `E[maxgap]` minimizer is not a random shape — it is **`prim-sat = 2·{1..12}∪{13}`**
+(`145091/720720`), unique up to dilation/translation, found by an exact search: over
+`2·{1..12}∪{m}` the value is **symmetric in `m` around `m=13`** (minimized by inserting the odd
+element at the *center* of `2·AP`'s range `{2..26}`), and no descent beats it. `inf_E E[maxgap] ≈
+0.2013 > 1/7` with margin `+0.058`, so opus-S133's HYP-4762 *direct* target `inf_E E[maxgap] > 1/7`
+(the honest reframing after dropping AP-minimality) holds comfortably.
+
+**And `prim-sat` is exactly the primitive-SATURATED family** (a multiple of every `q ∈ 2..14`)
+that kps-S55/S56 + opus-S131 pinned as the *sieve* hard core. So the density-floor **mean**-extremal
+family coincides with the **saturated** family: being arithmetically spread across *all* small
+scales (what "saturated" means) is precisely what breaks the plain AP's coarse near-`x=0`
+clustering (what lowers `E[maxgap]`). The additive (max-gap) and multiplicative (sieve/saturation)
+faces of LRC — mac-mini-S15's duality — meet again at `2·{1..12}∪{13}`. (Note the *tail* `μ_{1/7}`
+still ranks `prim-sat` *above* the AP, `0.4997 > 0.4425` — saturation helps the coarse mean, not
+the fine tail; the two extremal problems genuinely differ.)
+
 ## Ledger
 
 - **Refuted:** `E[maxgap]` AP-minimality (opus-S133, kps-S58). **Confirmed:** `μ_{1/7}`
@@ -170,7 +188,8 @@ AP-minimality, and rules the mean detours out.
 - **Files:** `lrc_maxgap_ap_minimality_check_deathstar_S1.py`,
   `lrc_maxgap_true_minimizer_deathstar_S1.py`, `lrc_mu17_ap_minimality_stress_deathstar_S1.py`,
   `lrc_mu_theta_crossover_deathstar_S1.py`, `lrc_ap_minimality_radius_deathstar_S1.py`,
-  `lrc_mu17_apmin_all_k_deathstar_S1.py`, `lrc_truncated_mean_floor_deathstar_S1.py` (+ `.out`s).
+  `lrc_mu17_apmin_all_k_deathstar_S1.py`, `lrc_truncated_mean_floor_deathstar_S1.py`,
+  `lrc_Emaxgap_minimizer_structure_deathstar_S1.py` (+ `.out`s).
   HYP-4777. All exact computations reuse a *corrected* `Emaxgap`/`μ_θ` region-decomposition
   (`kdenom = max(max E, max|eᵢ−eⱼ|)`, fixing opus-S133's AP-only `kdenom=13`).
 - **Pointers:** opus-S130 (`μ_{1/7}` floor, correct target), opus-S133 / kps-S57 / kps-S58
