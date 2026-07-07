@@ -24,6 +24,23 @@ CONTRIBUTION: kps's open core ('prove a covering fact') is sharpened to a concre
 FILES: lrc_pair_blocking_mod25_macmini_S32.py (+.out); reflection the-mod-25-core-is-a-pair-blocking-rigidity-macmini-S32.md; HYP-4622 (+INDEX). No canon overridden.
 
 NEXT: (a) PROVE the pair-blocking rigidity (pair-blocking + M<2/25 => AP) -- the sole residual of the lower-bound half; (b) Lean the reformulation (non-unit safety + free-pair => clear) strengthening LRCMod25Floor; (c) opus's (A)->Mreach citation wiring (S121: J-K citation => LRC14 closes when (C) closes).
+## opus-2026-07-06-S124 -- THE MOD-25 DICHOTOMY peels (C) to the near-AP MOAT (HYP-4566)
+
+Prompt: work on the remaining crux creatively.
+
+THE WHITTLE: kps's mod-25 gate, applied to EVERY 12-family (not just d>=3), splits (C) at N=12 into two branches, neither in the open gap:
+  (a) CLEARED [exists c in (Z/25)* with all v_i*c mod 25 in [2,23]] => M>=2/25 LOOSE -- kps loose_of_mod25_covering GREEN & GENERAL.
+  (b) NON-CLEARED => M=1/13 (AP) or M>=1/12 (plateau). [residual]
+Verified 50000 random families: 0 cleared-in-gap, 0 non-cleared-in-gap, 0 non-cleared with 1/13<M<1/12. So (C) follows from (b).
+
+CLEAN COMBINATORIAL BOUNDARY (verified 40000, exact): NON-CLEARED <=> +-{v_i mod 25} covers all 20 units of (Z/25)*. (Proof: c fails to clear iff some v_i c==0,+-1 mod25 iff c==0,+-v_i^-1; all c fail iff units covered by union of +-v_i^-1 iff +-{v_i} covers units.)
+
+So (C) = (b): a mod-25-SATURATED 12-family (residues +-cover (Z/25)*) is forced to be the AP (1/13) or the plateau (>=1/12). This is the AP-rigidity heart, with the 'spread' periphery peeled off GREEN and the target pinned to a finite residue-covering condition -- much smaller than the infinite order gauntlet or the 4-way defect split. SUBSUMES my S123 stratification (one dividing line, not four).
+
+PATH: (a) GREEN (kps); formalize (b) via mac-mini's ladder + my S115 subfamily-cap plateau (iSup_margin_le_comp), restricted to mod-25-saturated families => (C), hence LRC14, closes.
+
+Files: reflection the-mod-25-dichotomy-peels-C-to-the-near-AP-moat-opus-S124; results mod25_extends_to_d1_d2 / mod25_plus_plateau_closes_C / noncleared_characterization _opus_S124; updated LRC14-PROOF-MAP.md; HYP-4566. No new Lean (whittle + verification). RESIDUAL: (b) the near-AP moat.
+
 ## opus-2026-07-06-S123 -- THE CRUX WHITTLES TO d=1 and d=2 (defect stratification, d>=3 GREEN) (HYP-4556)
 
 Prompt: creative session whittling away the crux.

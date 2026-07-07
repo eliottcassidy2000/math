@@ -1,0 +1,11 @@
+Test 1: random 12-families -- classify by mod-25 clearing; check NON-cleared are never in gap:
+  checked 50000; cleared-and-in-gap: 0 (should be 0: clearing => loose);
+  NON-cleared: 12351; of those IN GAP: 0; non-cleared with M<1/12 (not AP): 0
+
+Test 2: near-AP {1..11}+x for x up to 300, and 2-outlier -- any in gap escaping mod-25+plateau?
+  0 escapes: non-cleared {1..11}+x are all plateau/AP (not in gap).
+
+CONCLUSION: if (a) cleared => loose [kps mod-25] and (b) non-cleared => M>=1/12 or =1/13
+[= the near-AP plateau, my S115 subfamily cap], then NO family is in the open gap => (C) CLOSED.
+The remaining formal pieces: extend kps's mod-25 clearing to all d (not just d>=3), and the
+plateau bound 'non-cleared-by-mod25 => M>=1/12 or AP' (near-AP structure => subfamily cap).

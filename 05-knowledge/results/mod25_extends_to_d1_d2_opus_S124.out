@@ -1,0 +1,25 @@
+d=1 ({1..11}+x, x not a mult of 25): does the mod-25 rotation clear (=> loose)?
+  104 d=1 families (no mult-25) tested; NOT cleared by mod-25: 10
+    x=12: M=1/13 (<=1/13)
+    x=13: M=1/12 (loose)
+    x=37: M=1/12 (loose)
+    x=38: M=1/12 (loose)
+    x=62: M=1/12 (loose)
+    x=63: M=1/12 (loose)
+    x=87: M=1/12 (loose)
+    x=88: M=1/12 (loose)
+
+d=2 (10-AP {1..10}+2 outliers, no mult of 25): mod-25 clears?
+  1596 d=2 families (no mult-25) tested; NOT cleared: 36; of those IN GAP: 0
+    x=11,y=12: M=1/13 (not-in-gap)
+    x=11,y=13: M=1/12 (not-in-gap)
+    x=11,y=37: M=1/12 (not-in-gap)
+    x=11,y=38: M=1/12 (not-in-gap)
+    x=11,y=62: M=1/12 (not-in-gap)
+    x=11,y=63: M=1/12 (not-in-gap)
+    x=12,y=14: M=1/11 (not-in-gap)
+    x=12,y=36: M=1/11 (not-in-gap)
+
+INTERPRETATION: mod-25 clears a family => it is LOOSE (M>=2/25), not in gap. If the ONLY
+non-cleared families are already loose or =AP (never in gap), then mod-25 EXTENDS to d=1,d=2
+=> kps's GREEN gate covers them too, and (C) at N=12 is essentially the mod-25 covering fact.

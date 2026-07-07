@@ -1,0 +1,9 @@
+tested 40000; non-cleared 10144; characterization 'non-cleared <=> +-residues-cover-(Z/25)*' holds: True
+
+So the WHITTLE is clean and combinatorial:
+  (C) at N=12  =  (a) [some c in (Z/25)* clears => M>=2/25, LOOSE -- kps loose_of_mod25_covering, GREEN]
+               OR (b) [+-{v_i mod 25} covers (Z/25)* (all 20 units) => M=1/13 or M>=1/12 -- near-AP rigidity]
+  Neither branch is in the open gap (1/13,2/25). (a) is GREEN & general; (b) is the residual,
+  now a RESIDUE-COVERING condition (the near-AP 'moat'): 12 speeds whose +-residues mod 25 hit
+  every unit are forced to be the AP (1/13) or the plateau (>=1/12). This is mac-mini's ladder
+  + my subfamily cap, restricted to the mod-25-saturated families -- a much smaller target than all of (C).

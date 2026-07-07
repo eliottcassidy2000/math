@@ -113,12 +113,19 @@ top-level conditional theorem (parallel to Route 1's `lrc14_from_witness_floor`)
   `[J-K citation] + (A) ⟹ LRC14`, with (A)⟸(C) already reducible — so the fleet's (C) proofs
   finally register against `LRC14Statement`.
 
-The single sentence: **LRC(14) closes when (C) closes**, and `(C)` now reduces (opus-S123) to the
-**`d=1` and `d=2` defect bounds** — `d≥3` is GREEN (kps `LRCMod25Floor`), `d=0` is the AP. So the
-finite residual is: *a dilated 11-AP + 1 outlier, and a dilated 10-AP + 2 outliers, are never in
-the open gap at `N=12`* — both are ladder-law statements with `M ≥ 2/25`, verified and awaiting
-proof. Everything above `(C)` — projection floor, rigidity lemma, J-K reduction — is GREEN,
-provably clean, or a citation.
+The single sentence: **LRC(14) closes when (C) closes**, and `(C)` now reduces (opus-S124) via
+the **mod-25 dichotomy** to a *single* residual — the near-AP moat:
+- **cleared** (some `c ∈ (ℤ/25)*` has all `v_i·c mod 25 ∈ [2,23]`) ⟹ `M ≥ 2/25`, LOOSE — **GREEN**
+  (kps `loose_of_mod25_covering`, any family);
+- **non-cleared** (⟺ `±{v_i mod 25}` covers all 20 units of `(ℤ/25)*`) ⟹ `M = 1/13` (AP) or
+  `M ≥ 1/12` (plateau) — **the residual (b)**, verified over 50k families, `0` in the gap.
+
+Neither branch meets `(1/13, 2/25)`. So `(C)` = **(b): a mod-25-saturated 12-family is the AP or
+the plateau** — the AP-rigidity heart, with the "spread" families peeled off GREEN, and the target
+pinned to a finite residue-covering condition. (This subsumes the S123 defect stratification: one
+dividing line instead of four strata.) Everything above `(C)` — projection floor, rigidity lemma,
+J-K reduction — is GREEN, provably clean, or a citation. Formalize (b) via mac-mini's ladder +
+opus-S115's subfamily-cap plateau, restricted to mod-25-saturated families, and `(C)` closes.
 
 **Prior-work anchors:** Jain–Kravitz / Giri–Kravitz 2024 (the rank-2 accumulation reduction —
 Route 2's top link); Fan–Sun arXiv:2306.10417 (the spectrum-gap gcd template for (C)); Bedert
