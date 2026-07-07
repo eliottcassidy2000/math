@@ -43,11 +43,14 @@ LRC14Statement (near-extremal / rigidity behaviour)
        the accumulation points of the LRC spectrum are governed by the relative
        spectra of 2-dimensional (rank-2) subtori]
   ⟸ (A)  no coupled proper rank-2 subtorus U has M(U) ∈ (1/13, 2/25)
-  ⟸ (A) ⟸ (C):                                                                 [draft opus-S101]
-       · projection floor                    [GREEN: LRCTorusProjection.torus_point_of_projection, S99]
-       · pigeonhole rigidity lemma           [OPEN in Lean: "all full-support directions tight ⟹ rank≤1";
-          2×2 core GREEN (LRCRankRigidity.dep_of_two_proportional, S102); the infinite-pigeonhole
-          wrapper (finitely many Sym-12 orderings, infinitely many directions ⟹ two share) is unformalized]
+  ⟸ (A) ⟸ (C):                                                                 [WIRED opus-S129: LRCRoute2Assembly.torus_loose_of_rank2, GREEN]
+       · projection floor                    [GREEN: LRCTorusProjection.torus_point_of_projection, S99; consumed via LRCTorusReduction.torus_loose_of_loose_direction]
+       · pigeonhole rigidity lemma           [GREEN: 2×2 core LRCRankRigidity.dep_of_two_proportional (S102) AND
+          the infinite-pigeonhole wrapper LRCRankRigidity.dep_of_infinite_common_proportional (S102, finitely many
+          Sym-12 orderings, infinitely many (1,N) directions ⟹ two share) — BOTH formalized]
+       · the C-bridge                         [the sole OPEN input: "a not-loose (1,N) direction is (after centering)
+          proportional to its finite dilated-AP ordering vector" = (C) in wrapper-ready form; carried as `CBridge` Prop.
+          Centering is what makes the classifier finite (Sym 12, not Sym 12 × ℚ).  S129 composes floor+wrapper: rank-2 + CBridge ⟹ torus loose]
   ⟸ (C)  the 1-D 12-speed Farey gap (THE CRUX): no integer 12-family has M ∈ (1/13, 2/25); only the
          dilated AP attains 1/13.
 ```
@@ -113,9 +116,16 @@ analysis — plus the AP-exception (immediate from `M`-minimality) and the easy 
 > lcm(2..12,25)`); `31` on compressed. Scripts: `lrc14_covering_uniformity_klein_S144.py`,
 > `lrc14_covering_compressed_uniformity_klein_S144.py`.
 
-**Open critical path for the top level:** (i) the pigeonhole rigidity wrapper (finishes (A)⟸(C));
-(ii) *wire* `[J-K citation] + (A)⟸(C) + (C)` into a top-level conditional theorem (parallel to
-Route 1's `lrc14_from_witness_floor`); (iii) pin the exact Jain–Kravitz statement.
+**Open critical path for the top level (updated opus-S129).** (i) DONE — the pigeonhole rigidity
+wrapper was already GREEN (`dep_of_infinite_common_proportional`, S102), and (A)⟸(C) is now WIRED
+(`LRCRoute2Assembly.torus_loose_of_rank2`, S129: rank-2 + `CBridge` ⟹ torus loose, composing the
+GREEN projection floor + GREEN rigidity wrapper). (ii) DONE — `[J-K] + (A)⟸(C) + (C)` is wired into
+the top-level conditional `LRCRoute2Assembly.lrc14_via_route2` (`JKReduction` + `CBridge` ⟹
+`LRC14Target`), parallel to Route 1's `lrc14_from_witness_floor`. The remaining OPEN inputs are now
+just two `Prop` obligations: the **`CBridge`** (= (C) in centered wrapper-ready form — discharge via
+the covering system + a centering lemma) and the **`JKReduction`** citation (pin the exact
+Jain–Kravitz dimension bookkeeping against the paper). (iii) still pending: pin the exact J-K
+statement.
 
 <details><summary>Superseded layered history (S120–S125)</summary>
 
