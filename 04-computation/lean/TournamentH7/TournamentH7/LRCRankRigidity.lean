@@ -97,9 +97,34 @@ theorem dep_of_infinite_common_proportional {n : ℕ} (u v : Fin n → ℝ)
     rw [← hcls] at this
     simpa using this
 
+/-- **The affine pigeonhole wrapper.**  Same as `dep_of_infinite_common_proportional`, but each
+direction `u + N·v` is only proportional to `W(cls N)` **up to an additive constant** `offf N`
+(the `𝟙`-component) — exactly the shape of a *dilated AP* `a + d·(ordering)`, whose offset `a`
+is the `offf`.  Anchoring at coordinate `0` (`x ↦ x − x 0`) annihilates the constant `offf N`, so
+the centered directions are purely proportional and the base wrapper applies: `u, v` are **affinely
+dependent** — some nonzero `(p,q)` makes `p·u + q·v` a constant vector.
+
+This is what removes the centering caveat from the `(A)⟸(C)` bridge: `(C)` says a not-loose
+direction is a dilated AP (the affine form with a genuine offset), and this lemma turns "every
+direction is a dilated AP" into affine dependence of `u,v` **without** assuming the offset away. -/
+theorem dep_of_infinite_common_affine {n : ℕ} [NeZero n] (u v : Fin n → ℝ)
+    {S : Type*} [Finite S] (cls : ℤ → S) (W : S → Fin n → ℝ) (lamf offf : ℤ → ℝ)
+    (hprop : ∀ N : ℤ, ∀ i, u i + (N : ℝ) * v i = lamf N * W (cls N) i + offf N) :
+    ∃ p q : ℝ, (p, q) ≠ (0, 0) ∧ ∀ i, p * u i + q * v i = p * u 0 + q * v 0 := by
+  -- anchor at coordinate 0: the offset `offf N` cancels between `i` and `0`
+  have hprop' : ∀ N : ℤ, ∀ i,
+      (u i - u 0) + (N : ℝ) * (v i - v 0) = lamf N * (W (cls N) i - W (cls N) 0) := by
+    intro N i
+    linear_combination hprop N i - hprop N 0
+  obtain ⟨p, q, hpq, hzero⟩ :=
+    dep_of_infinite_common_proportional (fun i => u i - u 0) (fun i => v i - v 0)
+      cls (fun s j => W s j - W s 0) lamf (by intro N i; simpa using hprop' N i)
+  exact ⟨p, q, hpq, fun i => by have hz := hzero i; simp only at hz; linear_combination hz⟩
+
 #print axioms dep_of_two_proportional
 #print axioms not_two_proportional_of_indep
 #print axioms dep_of_infinite_common_proportional
+#print axioms dep_of_infinite_common_affine
 
 end RankRigidity
 end LonelyRunner

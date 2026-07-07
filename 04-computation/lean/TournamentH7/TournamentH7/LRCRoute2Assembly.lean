@@ -8,7 +8,7 @@ import TournamentH7.LRCRankRigidity
 import TournamentH7.LonelyRunner
 
 /-!
-# Route 2 assembly: `(A) ⟸ (C)` wired end-to-end, and the J-K top-level obligation (HYP-4617x)
+# Route 2 assembly: `(A) ⟸ (C)` wired end-to-end, and the J-K top-level obligation (HYP-4652)
 
 The LRC(14) "Route 2" (owner's intent, `00-navigation/LRC14-PROOF-MAP.md`) is
 
@@ -94,6 +94,46 @@ theorem torus_loose_of_rank2 (u v : Fin 12 → ℤ) (hindep : Rank2 u v)
         (fun i => (u i : ℝ)) (fun i => (v i : ℝ)) cls W lamf hprop
     exact absurd (Prod.ext (hindep p q hzero).1 (hindep p q hzero).2) hpq
 
+/-- `(u,v)` is **affinely rank-2**: no nonzero real combination `p·u + q·v` is a constant vector.
+Equivalently `{u, v, 𝟙}` are `ℝ`-independent — the natural non-degeneracy of a *coupled proper*
+rank-2 subtorus (it is not contained in a coset of the diagonal `𝟙`-direction).  Strictly stronger
+than `Rank2`. -/
+def Rank2Affine (u v : Fin 12 → ℤ) : Prop :=
+  ∀ p q : ℝ, (∀ i, p * (u i : ℝ) + q * (v i : ℝ) = p * (u 0 : ℝ) + q * (v 0 : ℝ)) → p = 0 ∧ q = 0
+
+/-- **`(A) ⟸ (C)`, the honest form.**  Same conclusion as `torus_loose_of_rank2`, but the bridge
+`hbridge` is now *literally* the crux `(C)`'s conclusion — "a not-loose `(1,N)` direction is a
+dilated AP `a + d·(ordering)`" — with **no centering pre-baked**.  The affine rigidity wrapper
+`dep_of_infinite_common_affine` handles the AP's additive offset internally (anchoring at
+coordinate 0), and the offset-direction non-degeneracy is the explicit hypothesis `Rank2Affine`.
+So the three concerns are cleanly separated: `(C)` = `hbridge`, centering = DONE (in the wrapper),
+`𝟙`-exclusion = `Rank2Affine` (tied to J-K's "coupled proper" subtorus). -/
+theorem torus_loose_of_rank2_affine (u v : Fin 12 → ℤ) (hindep : Rank2Affine u v)
+    (hbridge : ∀ N : ℤ, ¬ DirLoose u v N →
+        ∃ a d : ℤ, ∃ σ : Equiv.Perm (Fin 12), ∀ i, u i + N * v i = a + d * ((σ i).val : ℤ)) :
+    TorusLoose u v := by
+  by_cases hsome : ∃ N : ℤ, DirLoose u v N
+  · obtain ⟨N, τ, hτ⟩ := hsome
+    apply TorusReduction.torus_loose_of_loose_direction u v
+    refine ⟨1, N, τ, fun i m => ?_⟩
+    have h1 : (1 * u i + N * v i : ℤ) = u i + N * v i := by ring
+    rw [h1]; exact hτ i m
+  · have hall : ∀ N : ℤ, ¬ DirLoose u v N := fun N hN => hsome ⟨N, hN⟩
+    choose a d σ hAP using fun N => hbridge N (hall N)
+    obtain ⟨p, q, hpq, hconst⟩ :=
+      RankRigidity.dep_of_infinite_common_affine
+        (fun i => (u i : ℝ)) (fun i => (v i : ℝ))
+        σ (fun τ i => ((τ i).val : ℝ)) (fun N => (d N : ℝ)) (fun N => (a N : ℝ))
+        (by
+          intro N i
+          have h := hAP N i
+          have h' : (u i : ℝ) + (N : ℝ) * (v i : ℝ)
+              = (a N : ℝ) + (d N : ℝ) * ((σ N i).val : ℝ) := by exact_mod_cast h
+          simp only []
+          linear_combination h')
+    have hconst' : ∀ i, p * (u i : ℝ) + q * (v i : ℝ) = p * (u 0 : ℝ) + q * (v 0 : ℝ) := hconst
+    exact absurd (Prod.ext (hindep p q hconst').1 (hindep p q hconst').2) hpq
+
 /-! ## The top-level obligations and the J-K wiring
 
 We state `(A)` (no rank-2 torus in the gap — here in the stronger *all rank-2 tori loose* form that
@@ -140,6 +180,7 @@ theorem lrc14_via_route2 (hjk : JKReduction) (hbridge : CBridge) : LRC14Target :
   hjk (AStatement_of_CBridge hbridge)
 
 #print axioms torus_loose_of_rank2
+#print axioms torus_loose_of_rank2_affine
 #print axioms AStatement_of_CBridge
 #print axioms lrc14_via_route2
 

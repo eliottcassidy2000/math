@@ -24,6 +24,31 @@ HONEST SCOPE: does NOT refute (G) -- every escape family is loose (M>2/25). DOES
 FILES: lrc_compressed_vs_peel / lrc_compressed_allpos_challenge / lrc_covering_regress / lrc_escape_verify _macmini_S36 (+out); reflection the-finite-covering-is-incomplete-escape-at-the-next-prime-macmini-S36.md; HYP-4667 (+INDEX). No canon overridden; no Lean (the finding is that the finite-pile formalization is the WRONG target).
 
 NEXT: the scale-uniform (decorrelation/Fourier) argument for the ==AP-mod-L varying-k escape families -- the actual analytic core; reconcile with opus's decorrelation (must cover all-positive varying-k, not just scale-gap).
+## opus-2026-07-06-S129 -- ROUTE 2 WIRED END-TO-END IN LEAN: (A)<=(C) + J-K top-level + branch-2 endpoint + (C)<=covering (HYP-4652); 5 GREEN theorems, corpus 8724
+
+Prompt: work branch 2 and the assembly wiring; pull often and integrate/extend.
+
+Wired the ENTIRE LRC(14) Route-2 skeleton in Lean -- every arrow now GREEN wiring or a named Prop obligation, parallel to Route 1's lrc14_from_witness_floor. Two new files + one extended, all standard trio.
+
+ASSEMBLY (LRCRoute2Assembly.lean):
+  - torus_loose_of_rank2: (A)<=(C) wired -- rank-2 integer torus is loose (M(U)>=2/25) given the C-bridge, composing the GREEN projection floor (TorusReduction.torus_loose_of_loose_direction, S99/S101) + GREEN rigidity wrapper (RankRigidity.dep_of_infinite_common_proportional, S102). by_cases: some (1,N) dir loose -> floor -> torus loose; else bridge -> all proportional -> wrapper -> dependent -> contra.
+  - torus_loose_of_rank2_affine: the HONEST form -- hbridge = literally (C)'s conclusion (not-loose dir => dilated AP a+d*ord), no centering pre-baked; offset non-degeneracy = explicit Rank2Affine ({u,v,1} indep).
+  - lrc14_via_route2: JKReduction(cite) + CBridge => LRC14Target. Top-level conditional.
+
+CENTERING CAVEAT RESOLVED (LRCRankRigidity.lean, extended):
+  - dep_of_infinite_common_affine: affine wrapper -- anchor-at-0 centering (x -> x - x 0) kills the dilated-AP's additive offset, reduces to the base wrapper. Removes the "centering folds into the bridge" caveat I flagged; (C)'s genuine offset is handled internally.
+
+BRANCH 2 (LRCCoveringDisjunction.lean):
+  - loose_of_covering_witness / loose_of_covering_set: the covering-system endpoint -- packages mac-mini's per-q reach_ge_of_covering atom into the OR-over-q disjunction the residue check emits (mu/q>=2/25 folded in). (exists q c mu, avoid-band) => M>=2/25. Cases 1/2/3 all instances of one existential.
+  - loose_of_mod25_instance: case-1 (q=25,mu=2) subsumption sanity check.
+  - crux_of_covering_complete: (C) <= CoveringComplete. CoveringComplete [every non-AP admits a covering witness] => CruxStatement [M<2/25 => dilated AP]. THE EXACT LEAN SHAPE of kps-S49's single open node.
+
+Corrected the stale proof-map: the rigidity wrapper was mis-flagged OPEN (green since S102); (A)<=(C) now WIRED; top-level open-critical-path (i),(ii) DONE.
+
+OPEN LEAVES now precisely three Props: JKReduction (citation to pin), Rank2Affine (1-exclusion, J-K coupled-proper), CoveringComplete (finite residue check, kps/klein lane -- 615 compressed non-translate non-AP blockers clear q<=29). No height bound anywhere.
+
+Convergence: kps-S49 independently reduced (C) to a single open node = my CoveringComplete; kps dedup-retired their translate file in favor of my S128 LRCConsecutiveBlock. Files: LRCRoute2Assembly.lean, LRCCoveringDisjunction.lean (new); LRCRankRigidity.lean (+affine wrapper). HYP-4652.
+
 ## mac-mini-2026-07-06-S35 -- r=2 covering Q0 = 37 not 25: CHALLENGED kps-S47 (Q0=25)/kps-S44 (<=14), CONFIRMED klein-S144 (<=38); worst family {1..9,11,36,350} clears ONLY at q=37; Q0 SATURATES (no height bound holds); hardest r=2 cert FORMALIZED (hardR2_reach kernel-pure)
 
 Prompt (owner): work the r=2 hard-shape avoid-band certs; challenge assumptions, gain precise understanding, improve proofs.

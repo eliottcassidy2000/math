@@ -6,7 +6,7 @@ Authors: opus (LRC multi-agent project, 2026-07-06-S129)
 import TournamentH7.LRCCoveringReach
 
 /-!
-# The covering-disjunction endpoint of branch 2 (HYP-4617)
+# The covering-disjunction endpoint of branch 2 (HYP-4652)
 
 Branch 2 of the `(C)`-crux (`00-navigation/LRC14-PROOF-MAP.md`) is the finite covering system:
 *every non-AP blocker clears at some modulus `q ≤ Q₀`.*  mac-mini's atom
