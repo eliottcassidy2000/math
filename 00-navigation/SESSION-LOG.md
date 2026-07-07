@@ -1314,6 +1314,20 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S43 -- CREATIVE crux work: it is DEFECT-AGNOSTIC (pair-blockers span all d); case-2 reduces to a FINITE COVERING SYSTEM q<=39 (HYP-4587)
+
+Prompt (owner): work on the crux creatively.
+
+CORRECTION of opus S123 'd>=3 GREEN via kps mod-25': d>=3 PAIR-BLOCKERS EXIST (27073/200k, d up to 9, e.g. {1,2,3,4,6,7,8,9,10,11,13,55}=2/17, d=5). They block all 10 pairs mod 25 => NOT mod-25-clearable => LRCMod25Floor does NOT apply; they clear at small denominators. So the crux is DEFECT-AGNOSTIC: residual = mac-mini case-2 (blockers), spanning every d>=1. My mod-25 cert closes NON-blockers (case 1) at every d.
+
+CASE-2 = FINITE COVERING SYSTEM: non-AP blockers have M>=1/12 (only AP<2/25 among 27219 blockers; min non-AP=1/12). Moduli {6..39} clear ALL 27218 non-AP blockers (0 residual). Each clearance = rational_point_margin cert. => (G) = case1 (done) + case3 (mult-25) + case2 (q<=39 covering + AP exception). Crux is now a FINITE Lean-ready covering system, not an analytic rigidity.
+
+AP = unique non-covered blocker (global M-minimizer 1/13, tight-locus, no slack anywhere; others M>=1/12 have a clearing q).
+
+HONEST: empirical (height<=~110); uniform (all-height) covering = residual, but a FINITE mod-q condition (checkable). Target: every non-AP blocker clears at q<=Q0.
+
+FILES: lrc_pairblocker_defect_kps_S43.py(+.out); reflection the-crux-is-defect-agnostic-case2-is-a-finite-covering-system-kps-S43.md; HYP-4587. No new Lean (structural; certs are existing rational_point_margin). No canon overridden (corrects opus's route attribution, not conclusion).
+
 ## kind-pasteur-2026-07-06-S42 -- CREATIVE WHITTLING: the gap is WALLED at k=1 (2/25); crux = AP-rigidity 'M<2/25=>AP'; ORDER governs not defects (HYP-4577)
 
 Prompt (owner): creative session whittling the crux.

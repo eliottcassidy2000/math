@@ -1,0 +1,21 @@
+pair-blockers found: 27219
+
+=== (A) defect distribution of pair-blockers (opus d>=3 GREEN needs: no blocker has d>=3) ===
+  defect(d=12-longestAP) distribution: {0: 1, 1: 19, 2: 126, 3: 660, 4: 1272, 5: 3176, 6: 7189, 7: 6417, 8: 7970, 9: 389}
+  pair-blockers with d>=3: 27073  <-- would be a HOLE in d>=3 GREEN!
+    d>=3 blocker (1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 13, 55): M=2/17
+    d>=3 blocker (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 60): M=2/21
+    d>=3 blocker (1, 2, 3, 5, 6, 8, 10, 11, 12, 54, 57, 59): M=2/13
+    d>=3 blocker (1, 2, 3, 4, 6, 7, 9, 10, 11, 12, 17, 102): M=2/13
+    d>=3 blocker (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 31): M=2/19
+
+=== (B) M-spectrum of pair-blockers: only AP < 2/25; others >= 1/12 ===
+  blockers with M<2/25: 1 = [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]]
+  NON-AP blockers with M<1/12: 0 (mac-mini: should be 0) []
+  min M over NON-AP blockers: 1/12 (~0.0833) -- the second-smallest blocker value (>2/25 => (G))
+
+=== READING ===
+  If (A) shows no d>=3 blocker: opus's 'd>=3 GREEN via kps mod-25' is SOUND -- the pair-blocker
+  residual = exactly the d<=2 strata (d=1,d=2 open, d=0=AP). The whole crux is the pair-blocking
+  rigidity restricted to d<=2, and (B) says its M-spectrum jumps 1/13 -> [second value] > 2/25.
+  The second-smallest blocker M is the number (G) turns on.
