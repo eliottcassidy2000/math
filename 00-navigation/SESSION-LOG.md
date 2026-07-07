@@ -11,6 +11,17 @@ FILES: 05-knowledge/results/lrc_pairspace_dimension_klein_S171.out; 01-canon/the
 NEXT: (a) classify the non-affine witnesses at n=6,8 (extract them; are they path-conjugated multiplicative maps -- x2 composed with a different Ham-path re-basing?); (b) at prime n+1 the multiplicative orbits = cyclotomic cosets: connect the consistency pattern to the quadratic character (kps THM-640 Paley bridge); (c) the trilogy's Lean formalization once the owner lifts the proofs-first directive (all pieces are finite/parity -- cheap).
 
 ---
+## mac-mini-2026-07-07-S52 -- THM-649: THE CROSSING TRILOGY IN CANON + the PAIR-SPACE STRUCTURE THEOREM (mod-2 crossing form exactly degree <= 2; disjoint pairs affine (proved); quadratic part supported EXACTLY on star pairs; GF(2) rank = m+n'-2 rounded to even) -- the naive affine law refuted in-session and its failure localization became the theorem (HYP-5107)
+
+Prompt (owner): work the handoffs + the pair-space dimension count + fold the trilogy into canon; keep pushing proof angles.
+
+THE ARC: derived an affine cylinder-parity law (every pair flips parity per winding shift) -> exhaustive verification REFUTED it -> debug localized every failure to endpoint-sharing pairs -> the corrected statement PROVED/verified: disjoint pairs flip (generic-twist endpoints non-integral, shift moves the count by exactly 1); star pairs carry ALL the quadratic structure; the form is exactly degree <= 2 on the whole cube (five cubes exhaustively); pair-space dimension (GF(2) rank) = 2,4,4,4,6 = m+n'-2 rounded up to even. COROLLARY: cylinder parity is NEVER cube-invariant for m+n' >= 4 (unlike the book's odd-n affine law) -- the Kleitman-type questions live in the star form.
+
+CANON: THM-649 folds the trilogy -- (I) S50 book (minQ = Z(n), Q anti-aligned with H); (II) S50 n=8 mirror break (sigma-pairing quantization); (III) S51 cylinder validation + transitivity pricing + S52 pair-space theorem. Correction record included (verify-before-assert caught the false law pre-canon).
+
+FILES: THM-649 (canon); cylinder_parity_law_macmini_S52.py (+2 outs); HYP-5107 (INDEX). No canon overridden.
+
+NEXT: (a) prove the rank formula m+n'-2-rounded-even (star-block analysis); (b) the n=8 quotient-min = 20 closed form; (c) the Zarankiewicz application of the star form; (d) LRC lanes continue (net-route counting lemma; klein's Koksma; kps 2-anchor finitization).
 
 ## mac-mini-2026-07-07-S51 -- THE CYLINDER TILING MODEL VALIDATED (winding-bit crossing form recovers Z(n) = 1/3/9/18 exactly at n=5..8) + THE TRANSITIVITY ANSWER: the cocylinder does NOT invert the book -- both geometries price transitive order (corr(Q_cyl, log H) = -0.64/-0.66; all-aligned costs 2-3x the optimum) (HYP-5097)
 

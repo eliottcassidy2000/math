@@ -1,0 +1,13 @@
+=== the cylinder parity law: exhaustive mod-2 verification ===
+  (m,n')=(2,3) E=6 (even): affine law FAILS on all 2^6; parity varies (= total-winding functional)  [prediction: functional]
+  (m,n')=(3,3) E=9 (odd): affine law FAILS on all 2^9; parity varies (= total-winding functional)  [prediction: invariant]
+  (m,n')=(2,2) E=4 (even): affine law FAILS on all 2^4; parity varies (= total-winding functional)  [prediction: functional]
+  (m,n')=(3,4) E=12 (even): affine law FAILS on all 2^12; parity varies (= total-winding functional)  [prediction: functional]
+  (m,n')=(2,4) E=8 (even): affine law FAILS on all 2^8; parity varies (= total-winding functional)  [prediction: functional]
+
+  twist robustness (m,n')=(3,3), 5 random twists:
+    tw=0.978: parity-invariance violations 288/512
+    tw=0.055: parity-invariance violations 256/512
+    tw=0.726: parity-invariance violations 256/512
+    tw=0.484: parity-invariance violations 256/512
+    tw=0.942: parity-invariance violations 256/512

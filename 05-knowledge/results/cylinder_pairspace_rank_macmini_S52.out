@@ -1,0 +1,10 @@
+=== the pair-space of the cylinder crossing form mod 2 ===
+  (m,n')=(2,2) E=4: quadratic support = 4 star pairs + 0 NON-star (expect 0); degree<=2 model exact on cube: True; GF(2) pair-space rank = 2
+  (m,n')=(2,3) E=6: quadratic support = 9 star pairs + 0 NON-star (expect 0); degree<=2 model exact on cube: True; GF(2) pair-space rank = 4
+  (m,n')=(3,3) E=9: quadratic support = 18 star pairs + 0 NON-star (expect 0); degree<=2 model exact on cube: True; GF(2) pair-space rank = 4
+  (m,n')=(2,4) E=8: quadratic support = 16 star pairs + 0 NON-star (expect 0); degree<=2 model exact on cube: True; GF(2) pair-space rank = 4
+  (m,n')=(3,4) E=12: quadratic support = 30 star pairs + 0 NON-star (expect 0); degree<=2 model exact on cube: True; GF(2) pair-space rank = 6
+
+CONCLUSION: vertex-disjoint pairs contribute affinely (parity-flip per shift);
+the mod-2 quadratic part is supported on STAR pairs; its GF(2) rank = the
+pair-space dimension; parity invariance <=> rank 0 AND linear part 0.
