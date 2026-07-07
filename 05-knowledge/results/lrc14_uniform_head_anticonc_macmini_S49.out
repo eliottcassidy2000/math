@@ -1,0 +1,17 @@
+=== (A) the uniform head bound: R(mu) curves per core ===
+  P8={9..13} (k=8 leg): M= 60, K_G=32, C_G(M)=4.1959, tailcoef=1.8597 -> mu* = 0.9972
+  P8={9..13} (k=8 leg): M= 91, K_G=32, C_G(M)=4.8138, tailcoef=1.5101 -> mu* = 0.9962
+  P8={9..13} (k=8 leg): M=150, K_G=32, C_G(M)=5.9171, tailcoef=1.1762 -> mu* = 0.9951
+  P9={10..13} (k=9 leg): M= 60, K_G=32, C_G(M)=3.9601, tailcoef=1.8597 -> mu* = 0.9962
+  P9={10..13} (k=9 leg): M= 91, K_G=32, C_G(M)=4.5737, tailcoef=1.5101 -> mu* = 0.9950
+  P9={10..13} (k=9 leg): M=150, K_G=32, C_G(M)=5.6581, tailcoef=1.1762 -> mu* = 0.9936
+
+=== (B) anti-concentration for the no-cherry class (k=8) ===
+  iid k=8: E[sum g^2] = 2/9 = 0.22222; E[Y] = 7/72 = 0.09722
+  E[Y^2] = 133/10560 = 0.012595; one-sided floor (E[Y]-1/56)^2/E[Y^2] = 0.5001
+  vs the k=8 leg bar 0.675: falls short at iid
+  Cantelli: P(Bad) <= Var/(Var+(EY-thr)^2) = 0.3328 => mu >= 0.6672 falls short
+
+  deficits at no-cherry shapes (diam >= 27):
+  worst Cantelli floor over census: 0.4754 at (3, 31, 62, 90, 121, 124, 142) (E[Y]=0.0977, true mu=1.0000)
+  short of 0.675 -- needs the moment-deficit control

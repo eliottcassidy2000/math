@@ -1,3 +1,16 @@
+## mac-mini-2026-07-07-S49 -- THE GAP COLLAPSE: the (1-mu)-factored uniform head bound folds klein-S166's [uniform head] + [no-cherry class] into ONE mu-floor statement (threshold ~0.995, observed 0.998+); anti-concentration reaches 0.667 vs the 0.675 bar (2.4pct short, refinement shaped) (HYP-5077)
+
+Prompt (owner): work the uniform head bound + the no-separated-cherry class + LRC14 endgame tasks.
+
+DELIVERED:
+ 1. ONE-LINE LEMMA (proved): |g_E-hat(n)| = |1_Bad-hat(n)| <= 1 - mu(E) for every n != 0 -- the low-frequency mass of the Good-set indicator is capped by the Bad measure, uniformly in shape. => HEAD(M) <= (1-mu) C_G(M), C_G exact per hard core (32 intervals; 4.2-5.9 at M = 60-150), explicit CS tail => the R-criterion becomes a certificate curve R(mu) uniform over ALL cluster shapes at given mu. Thresholds for R >= 3/4: mu* = 0.9951 (P8) / 0.9936 (P9).
+ 2. THE COLLAPSE (architectural): S48's census has every no-cherry shape at mu >= 0.9983 > mu*. So klein-S166's gaps (a) uniform head bound AND (c) no-cherry class BOTH discharge from the single statement: no-cherry k=8 shapes at diam >= 27 have mu >= 0.995. The k=8 gate's remaining uniform gaps = THAT + the Koksma half-page. (Thin headroom 0.998 vs 0.995 -- honest.)
+ 3. ANTI-CONCENTRATION attempt on that statement: Bad => Y = sum g^2 - 1/8 <= 1/56; exact Dirichlet moments (E[Y] = 7/72, E[Y^2] = 133/10560) give Cantelli mu >= 0.6672 at iid -- 2.4pct short of even the 0.675 bar (and far from 0.995); census worst 0.4754. Second-moment-only anti-concentration is INSUFFICIENT; the shaped refinement = joint (sum g^2, sum g^3) two-moment Cantelli. Recorded as the named next tool.
+
+FILES: lrc14_uniform_head_anticonc_macmini_S49.py (+out); HYP-5077 (INDEX; renumbered from 5057, kps-S68 held it). No canon overridden.
+
+NEXT: (a) the mu >= 0.995 no-cherry floor -- now THE single load-bearing k=8 coupling statement; candidate tools: joint-moment Cantelli, or the net-characterization (Bad needs a strict 1/7-net: 8 points netting 7 cells at diam >= 27 = strong rational structure, count the netting windows); (b) the Koksma half-page (klein); (c) kps-S68/S69's 2-anchor finitization continues in parallel.
+
 ## kind-pasteur-2026-07-07-S69 -- FINITIZED THE SPREAD-AP RESIDUAL EXACTLY: the 2-anchor tail's spread-AP inf is now a finite EXACT RATIONAL check (resonant minima at d=2 clearing T_k) + a T2-decorrelation tail, replacing boxeph's adversarial numerics (HYP-5067)
 
 Prompt (owner): keep working the bleeding edge and finitize the spread-AP residual exactly.
