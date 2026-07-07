@@ -1,0 +1,32 @@
+====================================================================================================
+(1) |S|=2 theorem: M closed form + odd-cycle verification, coprime a<b <= 40
+====================================================================================================
+  checked 489 coprime pairs: closed form + odd-cycle ALL OK
+  => chi_c = 1/M for |S| = 2: bipartite case + odd-(a+b)-cycle case. THEOREM.
+
+====================================================================================================
+(2) parity criterion: gridsym page assignments have Q == C(n,4) mod 2;
+    Z(n) != C(n,4) mod 2 => NO gridsym optimum (mirror breaking FORCED)
+====================================================================================================
+  n= 5: Z=    1 (1)  C(n,4)=    5 (1)   parity-consistent
+  n= 6: Z=    3 (1)  C(n,4)=   15 (1)   parity-consistent
+  n= 7: Z=    9 (1)  C(n,4)=   35 (1)   parity-consistent
+  n= 8: Z=   18 (0)  C(n,4)=   70 (0)   parity-consistent
+  n= 9: Z=   36 (0)  C(n,4)=  126 (0)   parity-consistent
+  n=10: Z=   60 (0)  C(n,4)=  210 (0)   parity-consistent
+  n=11: Z=  100 (0)  C(n,4)=  330 (0)   parity-consistent
+  n=12: Z=  150 (0)  C(n,4)=  495 (1)   *** PARITY-FORCED MIRROR BREAKING ***
+  n=13: Z=  225 (1)  C(n,4)=  715 (1)   parity-consistent
+  n=14: Z=  315 (1)  C(n,4)= 1001 (1)   parity-consistent
+  n=15: Z=  441 (1)  C(n,4)= 1365 (1)   parity-consistent
+  n=16: Z=  588 (0)  C(n,4)= 1820 (0)   parity-consistent
+  n=17: Z=  784 (0)  C(n,4)= 2380 (0)   parity-consistent
+  n=18: Z= 1008 (0)  C(n,4)= 3060 (0)   parity-consistent
+  n=19: Z= 1296 (0)  C(n,4)= 3876 (0)   parity-consistent
+  n=20: Z= 1620 (0)  C(n,4)= 4845 (1)   *** PARITY-FORCED MIRROR BREAKING ***
+  [n=12 breaking is now a THEOREM; n=8 breaking (S142 census) is parity-consistent,
+   so the criterion is sufficient, not necessary -- mac-mini-S50 has the n=8 mechanism]
+
+====================================================================================================
+(3) mu = M hunt: 3-,4-element sets, max <= 14, exact periodic Motzkin N <= 320
+====================================================================================================
