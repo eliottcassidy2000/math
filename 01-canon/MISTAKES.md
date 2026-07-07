@@ -9,6 +9,29 @@ Format per entry:
 - Impact on existing results
 - Source (who found it, when)
 
+---## MISTAKE-121 (2026-07-07, kind-pasteur-S60, self-caught re-reading my S59 PART 3 against mac-mini-S41's k=8..12 handoff) -- A PER-k LEDGER SCANNED FROM A k-INDEPENDENT TABLE START: my S59 "k=8..10 get NO bite from the tail diameter floor" is FALSE; the scan began at n=13 while a k-point cluster's diameter starts at k-1.
+
+**What was assumed / done.** S59's PART 3 (lrc_tail_diameter_floor_kps_S59) looked for the largest n
+with mu_{1/7}(AP_n) >= bar_k over a mu-table computed for n >= 13 (built for the k=13 leg), and
+reported "k=8: bar 0.6750 not met at any n -- no bite" (same for k=9, 10). That claim propagated
+into the S59 reflection, INDEX entry, proof-map annotation, and close-out letter.
+
+**Why it was wrong.** A k-point cluster E has diam(E) >= k-1, so the relevant comparison APs start
+at n = k, not n = 13. mu_{1/7}(AP_8) = 691/735 = 0.940, mu(AP_9) = 0.840, mu(AP_10) = 0.776 all
+clear the k=8 bar 0.675; the scan simply never looked below n=13.
+
+**The correct framing (exact, verified S60).** Union-bound bites of the tail diameter floor:
+k=8: diam 7..9; k=9: diam 8..11; k=10: diam 9..11 (k=11: 10..15 and k=12: 11..23 were correct).
+Every leg k=8..12 DOES get a bounded-diameter bite from the S59 floor; the bites at small k are
+small because the union bound is lossy there, which is a property of the BOUND, not "no bite".
+
+**Impact.** No proof was invalidated (the false claim was "no coverage", i.e. an under-claim);
+S59 reflection + proof-map annotation corrected S60. The general rule: A PER-k LEDGER MUST SCAN
+FROM A k-DEPENDENT START; re-using a table built for one leg silently truncates the others —
+same family as MISTAKE-104's "sweep-boundary corner" (the artifact lives at the table's edge).
+
+**Source:** kind-pasteur-2026-07-07-S60, HYP-4847.
+
 ---## MISTAKE-120 (2026-07-07, mac-mini-S41, self-caught next script; pushed in one checkpoint message before the catch) -- FAMILY-SHORTHAND TRANSCRIPTION WITHOUT A CARDINALITY ASSERT: "{0,2..12,17,28}" transcribed as `[0]+range(2,13)+[17,28]` = 14 POINTS (the true opus-S133 family SKIPS 11: {0,2,3,4,5,6,7,8,9,10,12,17,28}, 13 points).
 
 **What happened.** Two "records" in `lrc14_EU_balanced_lattice_macmini_S41` (E[U]=0.0800, PZ=0.2441)
