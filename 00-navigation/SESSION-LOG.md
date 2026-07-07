@@ -14,6 +14,23 @@ FILES: lrc14_conditional_tent_ctable_macmini_S56.py (+out); HYP-5207 (INDEX). No
 
 NEXT: (a) pin s* (the joint tent'/ledger arithmetic) => k=9/10 legs discharge; (b) the same c-table at k=11..13 bars for the intersected-ledger residuals; (c) config-level per-q lemma (S55's target) continues.
 
+## monad-explorer-2026-07-07-S13 -- S11 HANDOFFS WORKED post-THM-651 (HYP-5207): THM-652 PROVED (midpoint-rank 3-AP bound floor((k-1)^2/4) = the m=2 dominance base; non-AP saturators exist, no uniqueness; m>=3 = a per-b transportation LP, delimited); U_2 = 131/147 EXACT (true but 8x weak alone -- J tent-product atoms named); RATIO-MIXING NO-GO (triple-span tent ratio >= 1.49 vs pair 0.508 => positive mixtures cannot improve k=9; THM-651's signed/conditional game is the real frontier); k=13 PZ descent min = AP EXACT 221828403/815409784 = 0.27205 (4.8x bar, 278 shapes); wide-Rayleigh stall resolved (float-first: 273 shapes diffs<=200, min = AP 0.8214)
+
+Prompt (owner): work the S11 handoffs (a)-(e); integrate related incoming ideas.
+
+CONCURRENCY ABSORBED: kps-S73's THM-651 CLOSED the k=8 leg (shifted tent, kink 3/28 < theta -- my S11 universal pair lemma is its beta = theta vacuous endpoint: the one-parameter near-miss, gracious credit in the theorem's 'why this was missed'); kps-S74 hardened my dominance lemma (per-pattern REFUTED at scale, cumulative holds); mac-mini-S55 resonance ladder + monad-S12 CRT strata + kps-S74 coprime lens = the same gcd-grading as my atom law, seen four ways; another monad instance ran S12, so this is S13.
+
+1. THM-652 (canon, PROVED): #3AP(E) <= Sum_i min(i, k-1-i) = floor((k-1)^2/4) -- per middle element b, a 3-AP pair uses one element below and one above, both maps injective => r(b) <= min(rank, corank); AP saturates. Equality class strictly bigger than APs ({0..6,8} saturates rank-by-rank -- consistent with S11 exhaustive ties at m=2,4). m>=3 honestly delimited: per-pattern minima overshoot (36 > 26); AP m=3 per-rank profile (0,2,5,6,6,5,2,0); binding structure = bipartite slope-constrained incidences (per-b transportation LP is the shaped open core; kps-S74's majorization mechanism is the hint).
+2. U_2 DERIVED EXACT = 131/147 at k=8 (weight-2 two-window universality: both tent moments E[(theta-|dx|)_+] = theta^2, E[(theta-|dx|)_+^2] = 2theta^3/3 shape-free); Bonferroni-valid on the battery; HONEST: ~8x above true E[V^2] -- weight-2 ceilings cannot power the spread floor; the weight-3 J(m,n) = E[(theta-|mx|)_+(theta-|nx|)_+] atoms are the named need.
+3. RATIO-MIXING NO-GO (verified over gamma-grid + shape battery): positive mixtures' Markov ratio = mediant on the common all-equal binding face; triple-span tents run ratio 1.49-2.07 (min at AP_9) vs pair 0.508 => k=9 CANNOT be closed by adding positive triple tents to THM-651's frame; the signed game / conditional tent (c <= 1.7) is the genuine frontier. OFFER: my exact atom engine computes the small-d per-P c-table for kps's conditional tent (one session).
+4. k=13 (the diam >= 76 residual): PZ-on-V jump-descent over 278 shapes -> minimum IS the AP, exact 221828403/815409784 = 0.27205, 4.8x the 0.0565 bar. Certificate-level AP-minimality at k=13 in descent; the residual leg stays PZ-coverable per shape.
+5. Wide-Rayleigh (S11 stall): float-first + exact-confirm engine; 273 shapes with diffs to 200; min RAY = 0.8214 = AP (dilated-AP sanity exact). The stall was implementation, not mathematics.
+
+FILES: 01-canon/theorems/THM-652-midpoint-rank-3AP-dominance.md; 04-computation/lrc14_s13_handoffs_monad.py (+out). No canon overridden.
+
+NEXT: (a) the per-b transportation LP for m>=3 dominance (the one open core of the layer-cake); (b) the small-d per-P c-table for the k=9/10 conditional tent (my engine, kps's program); (c) the signed-tent game (negative mass on close pairs -- THM-651's named open); (d) k=11/12 legs: intersection ledger + PZ hybrid; (e) J-atom law (the weight-3 tent products' gcd-grading).
+
+---
 ## kind-pasteur-2026-07-07-S73 -- THM-651: THE SHIFTED-TENT GAP-HISTOGRAM FLOOR mu_{1/7}(E_8) >= 3/4 (PROVED, half-page, diameter-free) => THE k=8 (A') LEG IS DISCHARGED; + MISTAKE-123 (the circulated T_k bars were the positivity bars). (HYP-5147)
 
 Prompt (owner): long session -- deeply understand the LRC-14 past work, its relation to other math here, how proof-state changed under corrections; audit validity, find what we missed/where misguided; then investigate; sync git often; extend forgotten factoids; see how/why not just if.

@@ -1,0 +1,60 @@
+====================================================================================================
+PART A -- THM-652 verification
+====================================================================================================
+  k=8: #3AP(AP) = 12, floor((k-1)^2/4) = 12, match = True
+  k=9: #3AP(AP) = 16, floor((k-1)^2/4) = 16, match = True
+  k=13: #3AP(AP) = 36, floor((k-1)^2/4) = 36, match = True
+  saturator [0, 1, 2, 3, 4, 5, 6, 8]: #3AP = 12 (= 12: non-AP equality case, as stated)
+  AP_8 m=3 per-middle-rank profile: [0, 2, 5, 6, 6, 5, 2, 0] (sum = 26)
+
+====================================================================================================
+PART B -- U_2 closed form and validity
+====================================================================================================
+  E[(th-|dx|)_+^2] = 2th^3/3 = 0.00194363 for d in (1,2,7,13,40): True
+  U_2(k=8, th=1/7) = 131/147 = 0.891156  (= 131/147: True)
+    AP_8       exact E[V^2] = 0.109019 <= U_2 0.891156: True
+    Sidon      exact E[V^2] = 0.089317 <= U_2 0.891156: True
+    two-block  exact E[V^2] = 0.114152 <= U_2 0.891156: True
+  HONEST: U_2 is TRUE but ~8x above the actual E[V^2] -- the weight-2 ceiling alone
+  cannot power a useful spread-side floor; weight-3 atoms (J tent-products) needed.
+
+====================================================================================================
+PART C -- ratio-mixing no-go at k=9 (positive triple tents cannot help)
+====================================================================================================
+  pair-tent ratio at k=9 (optimal beta): 0.5079 -> floor 31/63 = 0.4921
+  gamma=0.08: min shape-ratio of triple tent = 1.5655 at AP_9 (>= pair 0.508 => mixing cannot improve)
+  gamma=0.11: min shape-ratio of triple tent = 1.5158 at AP_9 (>= pair 0.508 => mixing cannot improve)
+  gamma=0.14: min shape-ratio of triple tent = 1.4879 at AP_9 (>= pair 0.508 => mixing cannot improve)
+  gamma=0.17: min shape-ratio of triple tent = 1.5416 at AP_9 (>= pair 0.508 => mixing cannot improve)
+  gamma=0.20: min shape-ratio of triple tent = 2.0737 at AP_9 (>= pair 0.508 => mixing cannot improve)
+
+====================================================================================================
+PART D -- k=13 PZ-on-V descent (bar m_P = 0.0565)
+====================================================================================================
+  PZ(AP_13) numeric = 0.2720 (exact S11: 0.2720)
+  descent min over 278 shapes: PZ = 0.2720 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  EXACT confirmation of record: PZ = 221828403/815409784 = 0.27205 (bar 0.0565: CLEARS)
+
+====================================================================================================
+PART E -- float-first Rayleigh, WIDE k=8 shapes (S11 stall completed)
+====================================================================================================
+  seed [0, 1, 2, 3, 4, 5, 6, 7]                     RAY(float) = 0.8214
+  seed [0, 1, 2, 4, 8, 16, 32, 64]                  RAY(float) = 0.9701
+  seed [0, 1, 2, 3, 100, 101, 102, 103]             RAY(float) = 0.9039
+  seed [0, 29, 58, 87, 116, 145, 174, 203]          RAY(float) = 0.8214
+  seed [0, 1, 4, 9, 16, 25, 36, 49]                 RAY(float) = 0.9702
+  seed [0, 7, 26, 57, 100, 155, 182, 197]           RAY(float) = 0.9681
+  seed [0, 1, 2, 3, 4, 5, 6, 199]                   RAY(float) = 0.8922
+Traceback (most recent call last):
+  File "/home/bigo/math/04-computation/lrc14_s13_handoffs_monad.py", line 245, in <module>
+    seen[t] = ray_numeric(E2, ngrid=60_000)
+TypeError: ray_numeric() missing 1 required positional argument: 'widths'
+Traceback (most recent call last):
+  File "<string>", line 7, in <module>
+  File "<string>", line 33
+    .read().split("
+                  ^
+SyntaxError: unterminated string literal (detected at line 33)
+PART E (rerun, fixed) -- float-first Rayleigh, WIDE k=8 descent, diffs to 200
+  WIDE-descent min over 273 shapes: RAY = 0.8214 at [0, 1, 2, 3, 4, 5, 6, 7]
+  (AP_8 = 0.8214 exact from S11; min stays at AP; wide shapes all above)

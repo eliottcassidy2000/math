@@ -242,7 +242,7 @@ if __name__ == "__main__":
             continue
         t = tuple(E2)
         if t not in seen:
-            seen[t] = ray_numeric(E2, ngrid=60_000)
+            seen[t] = ray_numeric(E2, wid, ngrid=60_000)
         v = seen[t]
         if v < best[0]:
             best = (v, E2)
