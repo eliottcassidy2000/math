@@ -1,0 +1,5 @@
+a=2 pinch corner: 735 block cells (min-letter<=3, st<=80, 76<=diam<=400)
+   new corner min: mu = 201894163997320799/263561274538461900 = 0.766024 at s=1,t=9,i=4,diam=76  (13.6x m_P)  [1/735, 1s]
+   new corner min: mu = 68743502975881/113161462849820 = 0.607482 at s=1,t=33,i=10,diam=76  (10.8x m_P)  [3/735, 1s]
+   new corner min: mu = 51923709917861/93543619395940 = 0.555075 at s=1,t=65,i=11,diam=76  (9.8x m_P)  [4/735, 2s]
+   new corner min: mu = 12680829120251011/23152045800495150 = 0.547720 at s=1,t=66,i=11,diam=77  (9.7x m_P)  [12/735, 5s]

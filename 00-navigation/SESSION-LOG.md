@@ -32,6 +32,24 @@ RESULTS: (1) MIRROR LEMMA: v_j+v_k = 2v_i <=> j,k permanently mirrored in i's fr
 Concurrent synthesis honored: kps-S64's HYP-4927 rules are complementary (leader/Paley; my A_ij code offered); opus-S137 + mac-mini-S44 resolved reversal-symmetrized moments as VACUOUS (pointwise U(E,1-x)=U(E,x)) -- consistent with my frame (the global mirror is measure-preserving). My S4 hard-core exact floors were independently reconfirmed by opus-S137 (exact engine match) within the hour.
 
 FILES: lrc14_perspective_tournaments_monad_S5.py(+out); HYP-4937. No canon overridden.
+## opus-2026-07-07-S137 -- OWNER WORKLIST: exact rho* ledger coupling (two hard cores DOUBLE-VERIFIED w/ monad-S4, minima at the compressed end inside the proved zone) + symmetrization vacuity (independent w/ mac-mini-S44) + PALINDROMIC-EXTREMIZER REFUTED AT EVEN D (exact: D=18 min = far-element {1..12,19}) + exact E[U]/restricted-PZ firsts + a=2 corner exact sweep (HYP-4902)
+
+Prompt (owner): work the aggregated fleet handoff list (ledger coupling, d-perp pruning, palindrome exact tests, corner sweep, symmetrization inequality, mu3 tables, reversal-symmetrized moments, the two hard cores x avoidance-kernel/PZ, tournament-bridge test cases, mixed-lift erosion, triple-mass bound, valuation Hunter trees, R>=0.75).
+
+FLEET DENSITY NOTE: five agents hit the same list in the same hours (monad-S4 exact hard-core ledgers + mu_{3/14} tables + d-perp head-concentration; mac-mini-S44 cores + vacuity first-push; kps-S63 Schur refutation; klein-S158 mixed-lift 0/30597 + hard-core dossier; boxeph 2-anchor discharge). Positioning below is honest: convergences are cross-validations, uniques are marked.
+
+MINE:
+ (1) EXACT rho*(P,E) ENGINE (intersected-ledger coupling): G_P interval list x order-cell superlevels. Validation: all THM-530 size-minima exact-match; mac-mini-S42's probe min EXACT = 35771/105105. TWO HARD CORES: min rho* = 246287/630630 (CORE-8, 6.9x m_P) / 1619/4290 (CORE-9, 6.7x) at the CONSECUTIVE end (diam 7-8, inside kps-S60's proved zone) -- IDENTICAL exact rationals found independently by monad-S4's exhaustive engine (double-verification); spread/CRT regime R ~ 1.00 (up to 1.013 > 1) with 8-9x headroom, descent cannot breach 0.446/0.524.
+ (2) SYMMETRIZATION VACUITY (2-line proof; mac-mini-S44 minutes earlier -- ceded, independent): config(E,1-x) = reflection => U(E,x) = U(E,1-x) POINTWISE => reversal-symmetrized moments identically plain moments (exact cross/second = 1.000 x10 families); mirror families have IDENTICAL U functions. Owner item resolved-as-vacuous; remaining symmetrization freedom lives in E-space arrangements and CE event families only.
+ (3) EXACT FIRSTS: E[U](AP_13) = 8599/67914 (first exact E[U] anywhere); G_P-restricted PZ = per-family RIGOROUS certificates rho* >= (int U)^2/int U^2 on G_P: 0.261-0.466 = 4.6-8.2x m_P on core shapes.
+ (4) PALINDROMIC-EXTREMIZER CONJECTURE (kps-S62): (a) PARITY: palindromic 12-words have even sum => odd-D minima are mirror pairs BY PARITY (kps-S63's D=15 refinement = the triviality); (b) EVEN-D REFUTATION, exact+exhaustive per D: D=12/14/16 minima palindromic (AP; (2,1^10,2); (2,2,1^8,2,2)) but D=18 (6216 classes): min 26821/48510 = 0.5529 at (1^11,7) = {1..12,19} NON-palindromic (best palindrome 0.5673). TRUE LANDSCAPE: palindromic 2-block interlacings (D=14/16/20/22: incl monad record + prim-sat) vs the FAR-ELEMENT LADDER {1..12,w} (D=15..19), trading lead non-monotonically. Conjecture survives as global-min-only.
+ (5) a=2 PINCH CORNER exact block sweep (735 cells, kps-S62's spec): running through close-out; interim min 0.5477 = 9.7x m_P at (s,t,i)=(1,66,11), consistent w/ kps's 40-sample 9.8x; .out finalizes async.
+
+Files: 4 scripts + outs (lrc_exact_rhostar_hardcores / lrc_exact_Usym_PZ / lrc_palindromy_perD_exact / lrc_a2_corner_exact _opus_S137); reflection exact-couplings-the-hard-cores-pinned-and-the-symmetrization-that-wasnt; HYP-4902. Pulls: 4 (one manual conflict resolution). No Lean (owner priority; boxeph took the roof-bridge Lean lane).
+
+NEXT: (a) the 2-anchor tail lemma (boxeph's reduction) is now THE load-bearing object -- prove inf_E P(max(gap@0,gap@1/2)>1/7) >= T_k via the 2-adic/odd-even structure at anchor 1/2 (THM-580 + step-gauge); (b) far-element ladder mu({1..12,w}) exact-in-w closed form (the per-D winners; roof-of-two-scales); (c) corner sweep finalization; (d) triple-mass bound + R>=0.75 remain klein/mac-mini lanes.
+
+---
 
 ## boxeph-2026-07-07-S2 -- LEAN FORMALIZATION: Farey-roof->good-set BRIDGE + AP30 density-floor certificate (unconditional, kernel-pure); extends death-star's AP20 diameter floor <=19 -> <=29
 

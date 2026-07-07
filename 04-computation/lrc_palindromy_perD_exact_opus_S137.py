@@ -74,11 +74,14 @@ def main():
             elif runner is None or m < runner[0]:
                 runner = (m, canon)
         pal = all(is_palin(t) for t in ties)
+        parity_note = ""
+        if D % 2 == 1:
+            parity_note = "  [odd D: NO palindromic 12-word exists (sum of a palindrome is even) — mirror pair is forced, not a conjecture failure]"
         print(f"\n D={D:2d}: classes={nclass}")
         print(f"   min mu = {best[0]} = {float(best[0]):.6f} at {ties if len(ties)<=3 else ties[:3]}"
               f"{' (+' + str(len(ties)-3) + ' ties)' if len(ties) > 3 else ''}")
         print(f"   minimizer(s) palindromic: {pal}"
-              f"{'   *** NON-PALINDROMIC MINIMIZER ***' if not pal else ''}")
+              f"{parity_note if D % 2 == 1 else ('   *** NON-PALINDROMIC MINIMIZER AT EVEN D ***' if not pal else '')}")
         if runner:
             print(f"   runner-up = {runner[0]} = {float(runner[0]):.6f} at {runner[1]}"
                   f" (palin: {is_palin(runner[1])})")

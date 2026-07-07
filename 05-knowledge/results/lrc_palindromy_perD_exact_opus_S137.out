@@ -1,0 +1,69 @@
+====================================================================================================
+EXACT per-D palindromy sweep, k=13 (all compositions up to reversal, gcd 1)
+====================================================================================================
+
+ D=12: classes=1
+   min mu = 477/1078 = 0.442486 at [(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)]
+   minimizer(s) palindromic: True
+   [0s]
+
+ D=13: classes=6
+   min mu = 176234/315315 = 0.558914 at [(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2)]
+   minimizer(s) palindromic: False  [odd D: NO palindromic 12-word exists (sum of a palindrome is even) — mirror pair is forced, not a conjecture failure]
+   runner-up = 383941/630630 = 0.608821 at (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1) (palin: False)
+   [0s]
+
+ D=14: classes=42
+   min mu = 2539/5390 = 0.471058 at [(2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2)]
+   minimizer(s) palindromic: True
+   runner-up = 27331/48510 = 0.563410 at (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3) (palin: False)
+   [1s]
+
+ D=15: classes=182
+   min mu = 13592/24255 = 0.560379 at [(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4)]
+   minimizer(s) palindromic: False  [odd D: NO palindromic 12-word exists (sum of a palindrome is even) — mirror pair is forced, not a conjecture failure]
+   runner-up = 5419/8820 = 0.614399 at (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3) (palin: False)
+   [4s]
+
+ D=16: classes=693
+   min mu = 4166/8085 = 0.515275 at [(2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2)]
+   minimizer(s) palindromic: True
+   runner-up = 54137/97020 = 0.557998 at (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5) (palin: False)
+   [16s]
+
+ D=17: classes=2184
+   min mu = 26953/48510 = 0.555617 at [(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6)]
+   minimizer(s) palindromic: False  [odd D: NO palindromic 12-word exists (sum of a palindrome is even) — mirror pair is forced, not a conjecture failure]
+   runner-up = 529/882 = 0.599773 at (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 1) (palin: False)
+   [58s]
+
+ D=18: classes=6216
+   min mu = 26821/48510 = 0.552896 at [(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 7)]
+   minimizer(s) palindromic: False   *** NON-PALINDROMIC MINIMIZER AT EVEN D ***
+   runner-up = 2621/4620 = 0.567316 at (2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2) (palin: True)
+   [193s]
+
+ D=19: classes=15912
+   min mu = 272/495 = 0.549495 at [(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 8)]
+   minimizer(s) palindromic: False  [odd D: NO palindromic 12-word exists (sum of a palindrome is even) — mirror pair is forced, not a conjecture failure]
+   runner-up = 1291/2205 = 0.585488 at (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 8, 1) (palin: False)
+   [481s]
+
+====================================================================================================
+D = 20..24: palindromic-exhaustive vs random non-palindromic sample (exact)
+====================================================================================================
+ D=20: palindromic-exhaustive min = 0.530581 at (2, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2)
+        random non-pal sample (300) min = 0.715834 at (1, 3, 3, 1, 2, 1, 1, 1, 1, 2, 1, 3)  [sample >= pal-min OK]
+   [14s]
+ D=21: (odd D: no even-length palindrome; skip)
+        random non-pal sample (300) min = 0.740555 at (2, 2, 2, 1, 1, 2, 2, 2, 2, 1, 1, 3)
+   [11s]
+ D=22: palindromic-exhaustive min = 0.499701 at (2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2)
+        random non-pal sample (300) min = 0.729110 at (1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 8, 3)  [sample >= pal-min OK]
+   [22s]
+ D=23: (odd D: no even-length palindrome; skip)
+        random non-pal sample (300) min = 0.801347 at (1, 1, 1, 7, 1, 1, 1, 1, 5, 2, 1, 1)
+   [13s]
+ D=24: palindromic-exhaustive min = 0.549546 at (4, 2, 2, 1, 1, 2, 2, 1, 1, 2, 2, 4)
+        random non-pal sample (300) min = 0.798529 at (2, 1, 3, 1, 2, 3, 1, 2, 1, 2, 3, 3)  [sample >= pal-min OK]
+   [34s]
