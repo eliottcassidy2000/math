@@ -1,0 +1,37 @@
+=== (a) EXACT AP bisection chain, theta=1/7 (arithmetic from proved constants) ===
+  Bis_end(AP_8) = mu(AP_7) - mu(AP_8) = 44/735 = 0.05986
+  Bis_end(AP_9) = mu(AP_8) - mu(AP_9) = 1/10 = 0.10000
+  Bis_end(AP_10) = mu(AP_9) - mu(AP_10) = 19/294 = 0.06463
+  Bis_end(AP_11) = mu(AP_10) - mu(AP_11) = 47/315 = 0.14921
+  Bis_end(AP_12) = mu(AP_11) - mu(AP_12) = 152/2695 = 0.05640
+  Bis_end(AP_13) = mu(AP_12) - mu(AP_13) = 883/6930 = 0.12742
+  chain total = 601/1078 = 0.55751  (= 1 - mu(AP_13) = 601/1078 ✓)  OK
+
+=== (b) three-distance insertion: does k*x land in a MAXIMAL gap of {1..k-1}x? ===
+  k=8: P(k*x in maximal gap) = 1.0000   P(in max gap | unique >1/7 gap) = 1.0000
+  k=10: P(k*x in maximal gap) = 1.0000   P(in max gap | unique >1/7 gap) = 1.0000
+  k=13: P(k*x in maximal gap) = 1.0000   P(in max gap | unique >1/7 gap) = 1.0000
+
+=== (c) worst-case Delta_j at R3_j = 0 (random + structured probes) ===
+  cases with R3_j=0 probed: 163
+  WORST |Delta_j| at R3=0: +0.0750  at E=(6, 11, 16, 17, 20, 26, 27, 28, 29, 30, 31, 32, 43) j=32
+  (if this stays <<0.238, the k=8 window-avoidance has provable-looking slack; approximate midpoints can still contribute)
+
+=== (d) per-k adversarial beta_k = max_E min_j Bis_j (theta=1/7, jump descent) ===
+  k= 8: beta_k(adv) = 0.0598 at (1, 2, 3, 4, 5, 6, 7, 8)   [AP value 0.0598]
+  k= 9: beta_k(adv) = 0.0999 at (1, 2, 3, 4, 5, 6, 7, 8, 9)   [AP value 0.0999]
+  k=10: beta_k(adv) = 0.0645 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)   [AP value 0.0645]
+  k=11: beta_k(adv) = 0.1494 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)   [AP value 0.1494]
+  k=12: beta_k(adv) = 0.0755 at (1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14)   [AP value 0.0563]
+  k=13: beta_k(adv) = 0.1276 at (3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)   [AP value 0.1276]
+
+  telescoped recursion floors vs per-k needs (need_k = thr_k + m_P):
+  k= 8: floor 1-sum(beta) = 0.9402   need >= 0.6750   margin +0.2652  HOLDS
+  k= 9: floor 1-sum(beta) = 0.8403   need >= 0.5622   margin +0.2780  HOLDS
+  k=10: floor 1-sum(beta) = 0.7758   need >= 0.4521   margin +0.3237  HOLDS
+  k=11: floor 1-sum(beta) = 0.6264   need >= 0.3312   margin +0.2952  HOLDS
+  k=12: floor 1-sum(beta) = 0.5509   need >= 0.1993   margin +0.3516  HOLDS
+  k=13: floor 1-sum(beta) = 0.4233   need >= 0.0565   margin +0.3668  HOLDS
+
+  NOTE: beta_k here is the adversarial-empirical sup of min_j Bis_j; the telescoped
+  floor is a CONJECTURAL uniform bound m_k >= 1 - sum_{i<=k} beta_i pending sup proofs.

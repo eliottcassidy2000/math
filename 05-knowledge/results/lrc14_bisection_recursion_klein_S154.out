@@ -1,0 +1,45 @@
+=== 1. IDENTITY VALIDATION: mu(E) = mu(E_j) - Bis_j (every j) ===
+  max |mu(E) - (mu(E_j)-Bis_j)| over bank x 3 j: 1.11e-16  (grid-exact 0 expected)
+
+=== 2. BISECTION STRUCTURE theta=1/7, k=13 (grids 30011 / 77003) ===
+                      family   mu(E) | best j:  mu(Ej)   Bis_j   Ind_j   Delta R3_j | C2 max_j mu2/7(Ej)
+                  AP {1..13}  0.4425 |  j=  2:  0.6263  0.1837  0.0245 +0.1592    1 |             0.2030   [gridB mu=0.4425]
+      prim-sat 2{1..12}u{13}  0.4997 |  j= 10:  0.9440  0.4443  0.0492 +0.3951    4 |             0.2030   [gridB mu=0.4997]
+  monad rec 2{1..11}u{11,13}  0.5306 |  j=  2:  0.6772  0.1466  0.0188 +0.1278    0 |             0.1922   [gridB mu=0.5306]
+                   dstar min  0.7130 |  j=  1:  0.8744  0.1615  0.0258 +0.1357    0 |             0.2500   [gridB mu=0.7131]
+              spread {6..58}  0.5589 |  j=  6:  0.6263  0.0674  0.0246 +0.0428    0 |             0.2038   [gridB mu=0.5589]
+                  primes<=41  0.9460 |  j=  3:  0.9609  0.0150  0.0230 -0.0080    0 |             0.2849   [gridB mu=0.9459]
+               fibonacci-ish  0.9862 |  j=  2:  0.9956  0.0094  0.0087 +0.0007    1 |             0.2266   [gridB mu=0.9862]
+
+  -- AP: endpoint vs middle drop (alignment mechanism; exact Bis_end(AP13)=6181/48510=0.12742) --
+   drop j=13: mu(E_j)=0.5699  Bis_j=0.1274  Ind_j=0.0160  Delta=+0.1114  R3_j=0
+   drop j= 7: mu(E_j)=0.8997  Bis_j=0.4572  Ind_j=0.0408  Delta=+0.4164  R3_j=6
+   drop j= 1: mu(E_j)=0.5699  Bis_j=0.1274  Ind_j=0.0160  Delta=+0.1114  R3_j=0
+   drop j=12: mu(E_j)=0.6263  Bis_j=0.1837  Ind_j=0.0245  Delta=+0.1592  R3_j=1
+
+=== 3. Delta_j vs midpoint count R3_j (mechanism), 60 random (E,j) ===
+  corr(R3_j, Delta_j) = +0.219
+    mean Delta |   R3=0: +0.0040   (n=29)
+    mean Delta | R3=1-2: +0.0064   (n=29)
+    mean Delta |  R3>=3: +0.0222   (n=2)
+
+=== 4. C2 LEAVE-ONE-OUT 2/7 FLOOR: minimize max_j mu_{2/7}(E_j) (13-sets) ===
+   target: stay >= m_P = 0.0565 (then C2 alone gives the k=13 witness floor)
+                     AP {1..13}: 0.2029
+         prim-sat 2{1..12}u{13}: 0.2030
+     monad rec 2{1..11}u{11,13}: 0.1922
+                      dstar min: 0.2500
+                 spread {6..58}: 0.2037
+                     primes<=41: 0.2848
+                  fibonacci-ish: 0.2265
+   ADVERSARIAL MIN of max_j mu_2/7(E_j): 0.1649 (gridB 0.1651) at (1, 2, 5, 9, 11, 13, 16, 17, 20, 23, 29, 30, 43)
+   -> C2-alone k=13 floor HOLDS on this bank (m_P=0.0565)
+
+=== 5. k=8 LEG from PROVED k=7 base: mu_1/7(E_8) = 1 - Bis_j, need >= thr_8 ===
+   thr_8 = 0.6185  <=>  exists j with Bis_j <= 0.3815
+            consec {1..8}: min_j Bis_j = 0.0598 -> floor 0.9402  (true mu=0.9402)  [OK]
+      perforated {1,3..9}: min_j Bis_j = 0.0000 -> floor 1.0000  (true mu=1.0000)  [OK]
+              2{1..7}u{9}: min_j Bis_j = 0.0000 -> floor 1.0000  (true mu=1.0000)  [OK]
+                   spread: min_j Bis_j = 0.0000 -> floor 1.0000  (true mu=1.0000)  [OK]
+   ADVERSARIAL MAX of min_j Bis_j (8-sets): 0.0598 (gridB 0.0598) at (1, 2, 3, 4, 5, 6, 7, 8)
+   -> uniform k=8 recursion floor 1 - maxminBis = 0.9402 vs thr_8 0.6185  (HOLDS on this bank)

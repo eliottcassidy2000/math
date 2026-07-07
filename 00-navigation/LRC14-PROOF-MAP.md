@@ -180,6 +180,21 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > branch (AP-minimality + exact constants); mac-mini-S38's `reach_decorr` handles the spread/escape
 > branch. The pieces fit.
 
+> **🔁 THE BISECTION IDENTITY — (A′) factored into finite steps (klein-S154, HYP-4781).**
+> `N_θ(E) = N_θ(E∖{e_j}) ⊔ BIS_j` exactly, every j (BIS_j = "the dropped point's θ-middle-window
+> hit of E_j's unique big gap"). Telescoping to the PROVED k≤7 base: `μ_{1/7}(E) = 1 − total
+> bisection mass` (removal-order-independent), so **(A′) ⟺ the rotation orbit maximizes cumulative
+> bisection** — per-step driver = the *classical three-distance insertion rule* (AP's new point
+> lands in a maximal gap, rate exactly 1). Exact AP chain `44/735, 1/10, 19/294, 47/315, 152/2695,
+> 883/6930` (Σ = 601/1078). **The binding k=8 leg (HYP-2602) collapses to ONE inequality**:
+> `∃j: Bis_j ≤ 0.325` (adversarial sup `min_j Bis_j` = 0.0598, at the AP — 5.4× slack; `Ind_j ≤ 1/7`
+> always, so the residual is a correlation bound `Δ_j ≤ 0.182`, observed ≤ 0.08, midpoint-relation-
+> driven). k=13 diameter-free companion: `μ_{1/7}(E) ≥ max_j μ_{2/7}(E∖e_j)`, adversarial min-max
+> 0.165 ≈ 2.9× m_P — complements kps-S59's diameter floor (composite: diam ≤ 75 PROVED ⊕ far-element
+> bisection ⊕ uniformly-spread decorrelation). k=12: a near-AP beats the AP's `min_j Bis_j`
+> (HYP-2780's anomaly, reappearing). Reflection
+> `the-bisection-identity-factors-the-density-floor-klein-S154`.
+
 > **⚖ SCOPE AUDIT of the reverse-Markov/E[maxgap] program (monad-explorer-S1, HYP-4787).**
 > The kps-S57/S58 + opus-S133 mean reduction (`μ_{1/7} ≥ (7/6)(E[maxgap]−1/7)`) serves **only
 > the k=13 / P=∅ leg**, and its honest bar is **quantitative**, not positivity: the skeleton's
