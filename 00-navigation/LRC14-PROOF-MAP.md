@@ -251,6 +251,24 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > shrink into the cuts. Same Lean shape as the k=13 ledger (finite rational certificate).
 > Script: `lrc_intersection_ledger_kps_S60.py`; MISTAKE-121 corrected en route.
 
+> **⚙ PART A FACTORED + SPREAD RESIDUAL STRATIFIED (kps-S61, HYP-4857).** (1) The
+> `O(#arcs/Vmax)` obstruction (monad target 2) **dissolves by subsetting**: the robust
+> ledger subset `G_P^{+3/(7Vmax)} ∩ {roof_{D+1} ≥ 1/7 + 12D/(7Vmax)}` has a **proven**
+> absolute arc bound `≤ 13 + Σ_{p∈P}(p+1)` (Farey-6 mediant separation + cut count) —
+> independent of `E`'s spread — and centers spaced `1/Vmax` give the per-V criterion
+> `Vmax·meas(R) > A_P ⟹ M(S) ≥ 1/14` *witnessed* (monotone in `Vmax` with the proven
+> `A_P`). Explicit tables: sharp `V₀ = 140..1064`; rigorous ∀-V **`V₀abs ≤ 1106` at every
+> bite edge** ⟹ `[shape in bite] + [Vmax ≥ V₀abs] ⟹ M(S) ≥ 1/14`; **the finite check
+> lives below height ~1106** (specified, not executed). 8/8 concrete witnesses verified
+> exactly (clearances 0.082–0.486). (2) **Rank-2 GAP superset ledger** (mac-mini
+> cover-or-decorrelate, handoff b): `μ₂(n₁,n₂)` (step-independent geodesic limit, spreads
+> ≤ 0.035 measured, err ~ C/(d₁d₂)) clears `m_P` at **every** sampled grid `N ≤ ~78` —
+> the `4.3/N` Farey law is rank-independent. Coverability stratifies the diam ≥ 76
+> residual: grid-covered (parity-80 = (11,6)-grid; two-block = (7,2)-grid steps (1,70))
+> vs no-cover = exactly the sparse/decorrelation lane (deep interlace, 3-adic cascade;
+> direct μ 0.5–0.6). Scripts: `lrc_quantitative_partA_kps_S61.py`,
+> `lrc_gap_grid_ledger_kps_S61.py`; reflection `part-a-factored-and-the-spread-residual-stratified-kps-S61`.
+
 > **🎯 PZ-ON-U: the k=13 tail floor is a CV bound (mac-mini-S41, HYP-4837).**
 > `U(x) = Σ_j (g_j − 1/7)_+ = meas{s : arc(s,s+1/7) empty}`; then `μ_{1/7} = P(U>0) ≥
 > E[U]²/E[U²] = 1/(1+CV(U)²) ≥ (7/6)·E[U]` (last step: `U ≤ 6/7` pointwise — PZ **dominates**

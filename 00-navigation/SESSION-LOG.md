@@ -19,6 +19,18 @@ NEXT: (a) discharge the AP76 ledger certificate (finite rational Lean computatio
 
 ---
 
+## kind-pasteur-2026-07-07-S61 -- QUANTITATIVE PART A FACTORED (robust roof-subset: PROVEN <=13+Sum(p+1) arcs dissolves the o(Vmax) obstruction; V0abs <= 1106 at every bite edge; 8/8 witnesses machine-verified) + SPREAD RESIDUAL STRATIFIED (rank-2 GAP ledger mu2 >= m_P through N~78, step-independent) (HYP-4867)
+
+Prompt (owner): work the spread residual and quantitative factoring.
+
+PART A (monad HYP-4787 target 2 RESOLVED): the witness argument needs any positive-measure FEW-ARC subset of the good set -- not the good set (whose arcs grow ~S^0.45). The robust subset R = G_P^{+3/(7Vmax)} cap {roof_{D+1} >= 1/7 + 12D/(7Vmax)} has a PROVEN absolute arc bound <= 13 + Sum_{p in P}(p+1) (roof superlevel <= 13 components since adjacent Farey-6 rationals are separated by their mediant, denom >= 7, where roof <= 1/7; widened-G_P <= Sum(p+1)+1; intersection adds minus 1). Ruler centers spaced 1/Vmax: Vmax*meas(R) > A_P => good period => M(S) >= 1/14 WITNESSED (phi* = widest center-gap center; 0-tooth keeps phi* in (1/14,13/14); conservative drift slacks 6D/(7Vmax) teeth, 3p/(7Vmax) slow). Monotone in Vmax with the proven A_P => forall-V form. TABLES: sharp V0 = 140..1064; RIGOROUS V0abs at bite edges = 1064/784/1047/990/695/1106 (k=13..8) => [shape in bite] + [Vmax >= V0abs <= 1106] => M >= 1/14; FINITE CHECK below height ~1106 (specified, not executed; sharp per-(P,D) V0 as low as 140). VERIFIED: 8/8 concrete covering sets at/above V0 gave exact witnesses tau*, min clearance 0.082-0.486 >= 1/14.
+
+SPREAD RESIDUAL (mac-mini-S41 handoff b): rank-2 GAP superset ledger. E in an (n1,n2)-grid => mu(E) >= mu(grid) -> mu2(n1,n2) STEP-INDEPENDENT (geodesic equidistribution; measured spreads 0.015-0.035 across steps (3,2)..(211,30); err ~ C/(d1 d2), C <= 5 = the S59 pair-bound mechanism). mu2 TABLE: >= m_P at EVERY sampled grid N <= ~78 (n2 <= 6); per-n2 crossings all N ~ 78-80 = the rank-1 AP_76 crossing at equal point count (the 4.3/N Farey-window law is RANK-INDEPENDENT). COVERABILITY stratifies the diam >= 76 residual: parity-80 = (11,6)-grid steps (8,3); two-block {0..5}u{70..76} = (7,2)-grid steps (1,70) mu2=0.62 (search's n2<=6 cap missed the swap; found by hand); NO-cover families (deep interlace 10*{0..10}u{49,51}, mac-mini 3-adic cascade) = exactly the sparse/decorrelation lane (direct mu 0.5-0.6).
+
+NUMBERING: claimed 4857 first on the wire (08:36 micro-commit vs mac-mini-S42 08:42) but self-renumbered ->4867 to spare the closed session churn (their precedent).
+
+OPEN AFTER THIS: the finite check (height < ~1106, in-bite shapes); exact-rational mu2 (2-dim three-distance); sharp-indicator geodesic error bound; the sparse lane (PZ/CE owners unchanged). Files: lrc_quantitative_partA_kps_S61.py, lrc_gap_grid_ledger_kps_S61.py (+outs); reflection part-a-factored-and-the-spread-residual-stratified-kps-S61; proof-map block. Does NOT prove LRC(14).
+
 ## mac-mini-2026-07-07-S42 -- LRCTailDiameter.lean GREEN (kernel-pure; theta-GENERIC diameter chain, one certificate Prop leaf) + exact union-route diameter bands all legs (converges w/ klein-S155, superseded per-leg by kps-S60 intersected) + direct-G2 all-legs probe: the consumed quantity never below 6.0x m_P (HYP-4857)
 
 Prompt (owner): another similar session, work the most high-leverage angles, pull in incoming work as it appears.
