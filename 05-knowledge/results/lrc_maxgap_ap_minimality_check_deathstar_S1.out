@@ -1,0 +1,10 @@
+=== EXACT (corrected kdenom) vs NUMERIC E[maxgap];  1/7 = 0.142857 ===
+
+                    family            exact    ~exact  ~numeric  vs AP 93/440
+                AP {1..13}           93/440   0.21136   0.21136             AP
+       2*AP (M=1/14 tight)           93/440   0.21136   0.21136             AP
+     prim-sat 2*{1..12}+13    145091/720720   0.20131   0.20131       BELOW AP
+       S57-adversarial-.42 168192271811/829905476400   0.20266   0.20266       BELOW AP
+
+  AP exact = 93/440 = 0.211364
+  Sanity: opus-S133's script called with kdenom=k=13 on the .42 family would MISS breaks.

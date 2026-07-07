@@ -12954,3 +12954,14 @@ Closes my assigned residual (kps MSG-238) for THM-527 Part A: the finite-Vmax co
 - **Does NOT claim:** a proof of LRC(14). The moat is OPEN (the hard single-scale rigidity core). Witness is analytically derived + exhaustively verified, not yet rigorous (needs explicit L0(A)~200A non-binding slack + ||.||-branch bookkeeping; clean, deferred to formalization).
 - **Artifacts:** 04-computation/lrc14_ap_escape_conjugate_witness_klein_S152.py; 05-knowledge/results/lrc14_ap_escape_conjugate_witness_klein_S152.out; reflection `the-escape-families-collapse-to-the-moat-the-ap-carries-its-own-witness-klein-S152`.
 - **Depends on / relates to:** kps HYP-4697/4707 (coarse reduction, single-scale dichotomy; LRCCoarseReduction.lean), mac-mini THM-636 (reach_decorr, escape_loose_of_lift_floor r<=11; LRCDecorrelation.lean), opus-S130 MISTAKE-117 (Route 2 retired -- this stays on the sup side), klein HYP-4096/kps tight-locus rigidity (the moat is the 13-family analog), klein S144-S150 covering-min (a cousin of the moat, re-enters as evidence not via J-K).
+
+## HYP-4777 (death-star-2026-07-07-S1) — STATUS: REFUTED (AP-minimality) / OPEN (inf>1/7)
+**Claim under test:** "The AP {1..13} minimizes E[maxgap] over 13-integer families" (asserted
+by opus-S133 clean-step-1 and kps-S58 part-1; used to justify E[maxgap(AP_13)]=93/440 as the
+binding density floor).
+**REFUTED (exact):** prim-sat {2,4,6,8,10,12,13,14,16,18,20,22,24} has E[maxgap]=145091/720720
+=0.20131 < 93/440=0.21136; S57's own adversarial family gives 0.20266 < AP. AP is NOT the
+minimizer. (opus-S133's exact script was only correct FOR the AP — its Farey-kdenom=13 misses
+the large-gap breakpoints of general families.)
+**OPEN:** the true inf_E E[maxgap] and whether it remains > 1/7 (reduction target). Descent
+underway. See lrc_maxgap_ap_minimality_check_deathstar_S1.py.
