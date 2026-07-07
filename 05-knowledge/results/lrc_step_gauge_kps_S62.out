@@ -1,0 +1,77 @@
+================================================================================================
+PART 1 -- step-reversal = the complement symmetry: mu and E[maxgap] invariant (exact/numeric)
+================================================================================================
+  AP {1..13}                   steps=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) [PALINDROMIC]
+      mu: 0.44240 vs reversed 0.44240 (diff 0.00000);  E[mg]: 0.21136 vs 0.21136 (diff 0.00000)
+  GW {1..11,13,24}             steps=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 11) [non-palindromic]
+      mu: 0.58827 vs reversed 0.58827 (diff 0.00000);  E[mg]: 0.20980 vs 0.20980 (diff 0.00000)
+  record 2*{1..11}u{11,13}     steps=(2, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2) [PALINDROMIC]
+      mu: 0.53093 vs reversed 0.53093 (diff 0.00000);  E[mg]: 0.19699 vs 0.19699 (diff 0.00000)
+  stretch {0,2..12,17,28}      steps=(2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 11) [non-palindromic]
+      mu: 0.58280 vs reversed 0.58280 (diff 0.00000);  E[mg]: 0.19884 vs 0.19884 (diff 0.00000)
+  random word                  steps=(3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8) [non-palindromic]
+      mu: 0.97360 vs reversed 0.97360 (diff 0.00000);  E[mg]: 0.24563 vs 0.24563 (diff 0.00000)
+
+================================================================================================
+PART 2 -- palindromic-extremizer test: per-diameter adversarial minima, all vs palindromic
+================================================================================================
+     D  min mu (all)                word                 min mu (palin)  pal-word-is-min?
+    12        0.4435 (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)          0.4435  all-min palindromic: True
+    16        0.5995 (3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3)          0.5155  all-min palindromic: True
+    20        0.6040 (2, 1, 1, 2, 2, 2, 1, 1, 2, 2, 2, 2)          0.5755  all-min palindromic: False
+    24        0.6595 (4, 2, 2, 1, 1, 2, 1, 1, 2, 2, 2, 4)          0.4420  all-min palindromic: False
+
+     D min E[mg] (all)                word                min E[mg] (palin)
+    12          0.2114 (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)            0.2114  all-min palindromic: True
+    20          0.2125 (2, 2, 2, 1, 1, 2, 1, 1, 1, 1, 2, 4)            0.2031  all-min palindromic: False
+
+================================================================================================
+PART 3 -- THE a=2 STRATUM: two-letter step words close via the S61 grid ledger
+================================================================================================
+  split i (copies of s) | grid (i+1)x(13-i) |  N  | mu2 (2-torus) | vs m_P
+    i= 0 (and 12)     |    1 x 13       |  13 |    0.4462    |  OK  
+    i= 1 (and 11)     |    2 x 12       |  24 |    0.2672    |  OK  
+    i= 2 (and 10)     |    3 x 11       |  33 |    0.1820    |  OK  
+    i= 3 (and  9)     |    4 x 10       |  40 |    0.1553    |  OK  
+    i= 4 (and  8)     |    5 x  9       |  45 |    0.1289    |  OK  
+    i= 5 (and  7)     |    6 x  8       |  48 |    0.1265    |  OK  
+    i= 6 (and  6)     |    7 x  7       |  49 |    0.1183    |  OK  
+  worst split mu2 = 0.1183 = 2.1x m_P
+
+  ASSEMBLY per split (s,t; i copies of s, diam = i*s+(12-i)*t):
+   - diam <= 75:            S59 exact diameter floor (PROVED, roof now THM-637)
+   - diam >= 76, st large:  mu >= mu2(split) - C/(s*t); need C/(s*t) < mu2 - m_P
+   - the pinch: minimal s*t given diam >= 76 within the split
+   using empirical C = 5.0 (S61 PART 4):
+    i= 0: mu2=0.4462 margin=0.3897  worst st at diam>=76: (s,t)=(1,7) st=7  err<=0.7143  *** PINCH: needs sharper error or LOO
+    i= 1: mu2=0.2672 margin=0.2107  worst st at diam>=76: (s,t)=(1,7) st=7  err<=0.7143  *** PINCH: needs sharper error or LOO
+    i= 2: mu2=0.1820 margin=0.1255  worst st at diam>=76: (s,t)=(1,8) st=8  err<=0.6250  *** PINCH: needs sharper error or LOO
+    i= 3: mu2=0.1553 margin=0.0988  worst st at diam>=76: (s,t)=(1,9) st=9  err<=0.5556  *** PINCH: needs sharper error or LOO
+    i= 4: mu2=0.1289 margin=0.0724  worst st at diam>=76: (s,t)=(1,9) st=9  err<=0.5556  *** PINCH: needs sharper error or LOO
+    i= 5: mu2=0.1265 margin=0.0700  worst st at diam>=76: (s,t)=(1,11) st=11  err<=0.4545  *** PINCH: needs sharper error or LOO
+    i= 6: mu2=0.1183 margin=0.0619  worst st at diam>=76: (s,t)=(1,12) st=12  err<=0.4167  *** PINCH: needs sharper error or LOO
+    i= 7: mu2=0.1265 margin=0.0700  worst st at diam>=76: (s,t)=(11,1) st=11  err<=0.4545  *** PINCH: needs sharper error or LOO
+    i= 8: mu2=0.1289 margin=0.0724  worst st at diam>=76: (s,t)=(9,1) st=9  err<=0.5556  *** PINCH: needs sharper error or LOO
+    i= 9: mu2=0.1553 margin=0.0988  worst st at diam>=76: (s,t)=(9,1) st=9  err<=0.5556  *** PINCH: needs sharper error or LOO
+    i=10: mu2=0.1820 margin=0.1255  worst st at diam>=76: (s,t)=(8,1) st=8  err<=0.6250  *** PINCH: needs sharper error or LOO
+    i=11: mu2=0.2672 margin=0.2107  worst st at diam>=76: (s,t)=(7,1) st=7  err<=0.7143  *** PINCH: needs sharper error or LOO
+    i=12: mu2=0.4462 margin=0.3897  worst st at diam>=76: (s,t)=(7,1) st=7  err<=0.7143  *** PINCH: needs sharper error or LOO
+  => a=2 stratum: residue at flagged splits (t=1 far-element shapes -> LOO/klein lane)
+
+================================================================================================
+PART 4 -- the crossing staircase: order-cell cost per step position
+================================================================================================
+  pair (i,j) of speeds crosses |v_i - v_j| times per period (difference uniformity);
+  a step at sorted position l is straddled by (l)(13-l) pairs + the 0-runner pairs:
+  AP {1..13} (with 0): total pair crossings per period = 455
+  triangle weights l(14-l) for l=1..13: [13, 24, 33, 40, 45, 48, 49, 48, 45, 40, 33, 24, 13]  (middle steps cost most)
+  sum of weights = 455  (should equal total crossings for unit steps: 455)
+
+DONE.
+
+================================================================================================
+ADDENDUM -- the a=2 pinch corner, sampled directly (t<=3, st<=80, diam>=76; 40 families)
+================================================================================================
+  40 corner samples: min mu = 0.5553 at (i,s,t)=(11, 14, 2) -- 9.8x m_P
+  => the pinch corner is empirically FAR above the bar (grid bound lossy, truth comfortable);
+     corner = FINITE (i<=11, t<=s<=~80, word orders) -- specified for exact sweep, not closed here.
