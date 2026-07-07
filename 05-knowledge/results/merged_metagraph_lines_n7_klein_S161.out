@@ -1,0 +1,58 @@
+
+===== n=4: m=3; lines=4 = blue 2 + black 2  [T5 predicts blue = 2: OK] =====
+  merged nodes = 3; categories: {'mixed': 1, 'pure-black': 1, 'pure-blue': 1}
+  T2/T3 violations: 0   self-loop lines by cat: PB=0, MX=1, PBlue=0
+  line-type x endpoint-type allocation:
+    ('black', 'CROSS', ('mixed', 'pure-black')): 2
+    ('blue', 'CROSS', ('mixed', 'pure-blue')): 1
+    ('blue', 'SELF', 'mixed'): 1
+   pure-blue: count=1, fiber sizes min..max = 1..1, total tilings = 1
+       mixed: count=1, fiber sizes min..max = 5..5, total tilings = 5
+  pure-black: count=1, fiber sizes min..max = 2..2, total tilings = 2
+  gridsym tilings total = 4 (predict 2^((m+f)/2) = 4)
+
+===== n=5: m=6; lines=32 = blue 8 + black 24  [T5 predicts blue = 8: OK] =====
+  merged nodes = 10; categories: {'mixed': 5, 'pure-black': 2, 'pure-blue': 3}
+  T2/T3 violations: 0   self-loop lines by cat: PB=0, MX=4, PBlue=0
+  line-type x endpoint-type allocation:
+    ('black', 'CROSS', ('mixed', 'mixed')): 8
+    ('black', 'CROSS', ('mixed', 'pure-black')): 12
+    ('black', 'SELF', 'mixed'): 4
+    ('blue', 'CROSS', ('mixed', 'mixed')): 3
+    ('blue', 'CROSS', ('mixed', 'pure-blue')): 5
+   pure-blue: count=3, fiber sizes min..max = 1..3, total tilings = 5
+       mixed: count=5, fiber sizes min..max = 5..13, total tilings = 47
+  pure-black: count=2, fiber sizes min..max = 2..10, total tilings = 12
+  gridsym tilings total = 16 (predict 2^((m+f)/2) = 16)
+
+===== n=6: m=10; lines=512 = blue 32 + black 480  [T5 predicts blue = 32: OK] =====
+  merged nodes = 34; categories: {'mixed': 10, 'pure-black': 22, 'pure-blue': 2}
+  T2/T3 violations: 0   self-loop lines by cat: PB=24, MX=2, PBlue=0
+  line-type x endpoint-type allocation:
+    ('black', 'CROSS', ('mixed', 'mixed')): 10
+    ('black', 'CROSS', ('mixed', 'pure-black')): 156
+    ('black', 'CROSS', ('pure-black', 'pure-black')): 290
+    ('black', 'SELF', 'pure-black'): 24
+    ('blue', 'CROSS', ('mixed', 'mixed')): 28
+    ('blue', 'CROSS', ('mixed', 'pure-blue')): 2
+    ('blue', 'SELF', 'mixed'): 2
+   pure-blue: count=2, fiber sizes min..max = 1..1, total tilings = 2
+       mixed: count=10, fiber sizes min..max = 5..41, total tilings = 238
+  pure-black: count=22, fiber sizes min..max = 2..86, total tilings = 784
+  gridsym tilings total = 64 (predict 2^((m+f)/2) = 64)
+
+===== n=7: m=15; lines=16384 = blue 256 + black 16128  [T5 predicts blue = 256: OK] =====
+  merged nodes = 272; categories: {'mixed': 84, 'pure-black': 184, 'pure-blue': 4}
+  T2/T3 violations: 0   self-loop lines by cat: PB=96, MX=18, PBlue=0
+  line-type x endpoint-type allocation:
+    ('black', 'CROSS', ('mixed', 'mixed')): 858
+    ('black', 'CROSS', ('mixed', 'pure-black')): 5044
+    ('black', 'CROSS', ('pure-black', 'pure-black')): 10112
+    ('black', 'SELF', 'mixed'): 18
+    ('black', 'SELF', 'pure-black'): 96
+    ('blue', 'CROSS', ('mixed', 'mixed')): 250
+    ('blue', 'CROSS', ('mixed', 'pure-blue')): 6
+   pure-blue: count=4, fiber sizes min..max = 1..3, total tilings = 6
+       mixed: count=84, fiber sizes min..max = 5..159, total tilings = 7302
+  pure-black: count=184, fiber sizes min..max = 2..306, total tilings = 25460
+  gridsym tilings total = 512 (predict 2^((m+f)/2) = 512)

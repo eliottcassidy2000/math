@@ -1,3 +1,25 @@
+## klein-2026-07-07-S161 -- BLUE/BLACK LINE STRUCTURE = REDEI PARITY: five theorems PROVED (SC ⟺ gridsym-present; blues odd/blacks even; tripartite; blue count 2^{(m+f)/2-1}) + n=7 census (0 violations) + the Redei refinement (SC tournaments have an ODD number of anti-reversible Ham-path orbits) + 5 new conjectures (HYP-4851)
+
+Prompt (owner): explore the even/odd duality of blue/black lines in the merged metagraph -- line counts, node types (pure-blue/mixed/pure-black), allocation vs n, subtle combining laws, toward complete structural knowledge of the tiling fibration; creative niche insights + small conjectures coalescing into a unifying picture.
+
+PRIOR WORK REUSED (step-5b): my own klein-S75 line accounting (n<=6, tripartite + parity rules verified, blue formula checked) -- this session PROVES the rules and adds n=7.
+
+THEOREMS (one-line proofs from Redei odd-H + the grid-reflection involution rho, where rho maps fiber([T]) to fiber([T^op])): T1 fibers odd; T2 SC ⟺ gridsym present (never pure-black) / NS ⟺ none (always pure-black) -- CLAUDE.md's 'VERIFIED n=3..7' claims now proved for all n; T3 blue-cross ODD + black-cross EVEN at SC nodes (the owner's slogan, exact); T4 tripartite prohibitions; T5 #blue lines = 2^{(m+floor((n-1)/2))/2-1}. COROLLARY (headline): every self-complementary tournament has an ODD number of Aut-orbits of anti-reversible Hamiltonian paths -- a Redei-type refinement on the anti-symmetric locus.
+
+CENSUS to n=7 (refinement canonicalizer, validated: class counts 4/12/56/456, NS-merged 184 = canon): node types (PBlue 2,1,3,2,4 / MX 0,1,5,10,84 / PB 0,1,2,22,184); lines (blue 1,2,8,32,256 / black 0,2,24,480,16128); n=7 allocation blue-cross 250 (MX,MX) + 6 (MX,PBlue), black-cross 858/5044/10112, black-self 18+96; fibers PBlue 1..3 / MX 5..159 / PB 2..306; totals = 2^15 exactly.
+
+NEW CONJECTURES: C1 blue SELF-loops only at EVEN n (0,1,0,2,0); C2 pure-blue classes never line-adjacent (n>=4; flip of every pure-blue tiling is MIXED); C3 transitive always pure-blue (PROVED); C4 blue-cross concentrates on (MX,MX) with O(1) pure-blue attachment; C5 the black matching is near-fiber-proportional w/ positive assortativity (quasi-randomness of flip at class level) -- all checkable at n=8.
+
+UNIFYING PICTURE: two commuting involutions (rho, flip) + Redei force ALL parity/adjacency structure; the completion = C5 quasi-randomness + the O(1) blue skeleton; then 'how many and WHICH tilings per class' is determined (H/|Aut| fibers; gridsym sublocus; matching).
+
+COORDINATION: mac-mini-S46 claimed THM-643 (same territory) minutes after my HYP-4851 claim -- my proofs + census feed their canon write-up; letters exchanged.
+
+FILES: 04-computation/merged_metagraph_lines_n7_klein_S161.py (+out); reflection the-blue-black-line-structure-is-redei-parity-klein-S161; HYP-4851. No Lean (owner directive). No canon overridden (CLAUDE.md claims upgraded verified->proved, no contradiction).
+
+NEXT: (a) n=8 census (2^21 tilings -- needs the numpy-vectorized canonicalizer or sampling; decides C1's 2^{n/2-2} and C5's assortativity); (b) prove C1 (odd-n obstruction: score multiset under total flip) and C2; (c) fold into mac-mini's THM-643; (d) the assortativity coefficient as the single remaining structural unknown.
+
+---
+
 ## kind-pasteur-2026-07-07-S65 -- THE IMAGE CENSUS (THM-642): which tournament iso classes occur under the runner-mapping rules, and the leverage -- residue maps see EXACTLY the sieve (never the density floor), single-time maps see only round tournaments; every finite projection bottoms out before the floor = irreducibly a time-measure (HYP-4957)
 
 Prompt (owner): more creative concept->tournament maps; statements about which iso classes are possible under mapping rules; tricks to restrict the possible set; leverage that as a proof fact.
