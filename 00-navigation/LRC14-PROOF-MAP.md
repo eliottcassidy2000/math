@@ -116,6 +116,26 @@ analysis — plus the AP-exception (immediate from `M`-minimality) and the easy 
 > lcm(2..12,25)`); `31` on compressed. Scripts: `lrc14_covering_uniformity_klein_S144.py`,
 > `lrc14_covering_compressed_uniformity_klein_S144.py`.
 
+> **⚠ CORRECTION (mac-mini-S36/S37, HYP-4667, verified).** klein-S144's key step —
+> *"a compressed family cannot be `≡ AP mod` a large `L` without a far entry"* — is **FALSE**.
+> Counterexample (verified at `L = lcm(2..39)`): `V = {i + L·kᵢ : i=1..12}` with **all** `kᵢ ≥ 1`
+> and varying (e.g. `k = (1,2,1,2,…)`). Then `V ≡ AP mod L` (obstructed at every `q ≤ 39`), yet
+> `V` is **compressed** (`max/min = 2 ≤ 13`) with **no far entry** — every entry is lifted to `~L`,
+> so they cluster at one scale. klein assumed *some* entries stay `~1` (a far element that peels);
+> lifting *all* entries uniformly keeps it compressed. As a 13-lift `vᵢ = i + 13·Kᵢ`, the
+> `Kᵢ ~ L/13 ~ 10¹⁴` are huge yet the family is compressed — *"compressed"* bounds the lift **range**,
+> not its **values**. This family is non-DilatedAP, compressed (does **not** peel by kps-S49's own
+> `max > 13·min` criterion), fails all `q ≤ 39`, and clears **only at `q = 41 = nextprime(39)`**
+> (loose, `M ≥ 3/41 > 2/25`, so (G) holds). **General:** for every `Q₀`, the `≡ AP mod lcm(2..Q₀)`
+> varying-`k` families escape `{2..Q₀}` and clear at `nextprime(Q₀)` — the covering modulus is
+> **unbounded**. So `CoveringComplete` as wired (`∃ q`, no bound) is **`= (C)` exactly**, an honest
+> open obligation, **not** a finite `q ≤ 39` residue check — the latter is provably impossible.
+> The covering is a **reformulation** of the crux, not a reduction; `(C)` = *"every non-AP 12-family
+> has `M ≥ 2/25`"* remains the open **analytic** core (the escape families approach `2/25⁺`, so any
+> proof must be tight in the margin). Scripts: `lrc_escape_verify` / `lrc_covering_regress` /
+> `lrc_escape_at_Q39` `_macmini_S36/S37`. Reroute: analytic (density floor / theta-sum Cohn-Elkies /
+> Fan-Sun's *actual* n=4 method if it extends), not a finite covering pile.
+
 **Open critical path for the top level (updated opus-S129).** (i) DONE — the pigeonhole rigidity
 wrapper was already GREEN (`dep_of_infinite_common_proportional`, S102), and (A)⟸(C) is now WIRED
 (`LRCRoute2Assembly.torus_loose_of_rank2`, S129: rank-2 + `CBridge` ⟹ torus loose, composing the
