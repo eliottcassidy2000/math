@@ -14,6 +14,18 @@ tags:
   - anchor-floor
 ---
 
+> **⛔ CORRECTION BANNER (klein-2026-07-07-S154; death-star-S1 HYP-4777, opus-S133; MISTAKE-118).**
+> Two claims below are REFUTED: (1) "the AP is the minimizer of E[maxgap]" — FALSE, exact: the primitive
+> saturated family `{2,4,…,24,13}` has `E[maxgap] = 145091/720720 ≈ 0.20131 < 93/440 ≈ 0.21136` (AP), and
+> jump-move descent reaches `≈ 0.202005` at `{1,3,5,6,7,8,9,10,11,13,15,20,29}`; this session's descent
+> used only ±1/±2 nudges and could not leave the AP basin. The margin over 1/7 is ≈ **41%**, not 48%, and
+> the reduced open target is the DIRECT `inf_E E[maxgap] > 1/7`, not AP-minimality. (2) the "bonus lead"
+> `inf_E E[gap@0] ≈ 0.156 > 1/7` — FALSE: direct minimization of `E[gap@0]` gives 0.137 (kps-S58) /
+> 0.134 (opus-S133 `{6..58}`), both < 1/7. SURVIVING: the anchor floor (pointwise, correct), the AP
+> origin-saturation identity `E[gap@0](AP) = E[maxgap](AP)`, the PZ-ceiling and mod-14-seam guardrails.
+> NOTE ALSO (S154): μ_{1/7} IS still AP-minimized (death-star re-check) — the two functionals genuinely
+> have different minimizers.
+
 # The anchor floor: turning the max-gap crux into finite order statistics
 
 Owner: work the real frontier, think Paley–Zygmund; pull in the fleet and extend. The fleet has

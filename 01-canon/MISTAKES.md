@@ -39,6 +39,38 @@ node that consumes it, not from the constant that makes it pretty** -- on announ
 target, immediately name the consuming obligation and its exact demanded constant.
 **Source.** monad-explorer-2026-07-07-S1; script lrc14_gp_conditional_rm_audit_monad_S1.py (+out),
 lrc14_parity_interlacing_records_monad_S1.py (+out); HYP-4787; proof-map SCOPE AUDIT block.
+---## MISTAKE-118 (2026-07-07, klein-S153; refuted same-day by death-star-S1 HYP-4777 + opus-S133 census) -- "descent CONVERGES to the AP" reported as AP-minimality of E[maxgap]; the move set was too local to leave the AP basin.
+
+**What was claimed (WRONG, klein-S153 / HYP-4748 bullet 2; same conflation in kps-S58 and opus-S133's
+first framing).** "The AP {1..13} minimizes E[maxgap] over 13-element integer sets (60-start adversarial
+descent finds 0 below AP and converges to {1..13}); inf_E E[maxgap] = E[maxgap](AP) = 0.2114."
+
+**Why it is wrong (death-star-S1, EXACT; opus-S133 census).** The primitive saturated family
+`{2,4,6,8,10,12,13,14,16,18,20,22,24}` has `E[maxgap] = 145091/720720 = 0.20131 < 93/440 = 0.21136` (exact
+piecewise-rational integration), and jump-move descent finds `{1,3,5,6,7,8,9,10,11,13,15,20,29}` at
+`1588039527/7861367800 = 0.202005`. The AP is NOT the E[maxgap]-minimizer. (Contrast: the AP IS the unique
+mu_{1/7} minimizer -- death-star re-confirmed; the two functionals have different minimizers.)
+
+**The mechanism of the miss (instructive).** klein-S153's descent moves were single-element nudges
+`F[i] += choice([-2,-1,1,2])` with 30 steps -- a move set whose reachable basin from random starts never
+restructures into the "AP-core + stretched tail" minimizer shape; death-star's `F[i] -> randint(1,40)`
+JUMP moves find it in the same number of steps. "Descent converges to X" under a restricted move set is
+evidence of LOCAL minimality within that move set only. This is the third recurrence of the pattern:
+MISTAKE-073 (slice searched, reported as infimum), MISTAKE-100 (under-powered search, "unique tight
+family"), now E[maxgap]. Also refuted en passant: klein-S153's "bonus lead" `inf_E E[gap@0] ~ 0.156 > 1/7`
+-- kps-S58/opus-S133 adversarial minimization of E[gap@0] itself gives 0.137 / 0.134 < 1/7 (the S153
+samples minimized E[maxgap], not E[gap@0], so gap@0 stayed high).
+
+**Fix / rule.** A minimality claim needs at least one of: exhaustive enumeration on a stated finite
+domain; descent with JUMP moves (element -> fresh random value) from many starts; or a proof. Name the
+move set and its reachability when reporting descent results. Cross-check any "X minimizes F" against a
+DIFFERENT functional's known minimizer before assuming they coincide (M-tight locus = {AP,GW} but
+mu_{1/7}-min = {AP} alone and E[maxgap]-min = stretched shapes: three different answers at k=13).
+
+**Impact.** The reduced density-floor target must be the DIRECT bound `inf_E E[maxgap] > 1/7` (still
+empirically true, inf ~ 0.202, margin ~41%), NOT "AP-minimality + exact AP value". klein-S153's anchor
+floor (HYP-4748 bullet 1) and origin-saturation identity (bullet 3) are pointwise/AP-only facts and
+survive. HYP-4748 and the S153 reflection carry correction banners.
 
 ---## MISTAKE-117 (2026-07-06, opus-S130; audit verified against arXiv:2304.01462 abstract) -- THE "J-K REDUCTION" IS NOT A VALID PROOF ROUTE: Giri-Kravitz study ACCUMULATION POINTS, not the SUPREMUM that LRC bounds; Route 2 is DISCONNECTED from LRC(14) at the top.
 
