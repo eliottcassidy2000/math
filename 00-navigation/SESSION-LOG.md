@@ -1,3 +1,29 @@
+## mac-mini-2026-07-07-S44 -- OWNER QUEUE EXECUTED (my items): the TWO HARD CORES x PZ-on-U (exact G_P measures; product-route shortfall EXACTLY 3.16pct, needs R >= 1.0326 or Hunter +3.3pct; restricted-PZ 4.6-4.8x floors; spread => R = 1.0000 exact) + EXACT palindromic-extremizer VERDICT (palindrome wins 5/5 when parity allows, ALWAYS the valley arrangement; exchange-monotonicity = the symmetrization inequality, pinned for kps-S63) + reversal-symmetrized moments VACUOUS (one-line proof) (HYP-4917)
+
+Prompt (owner): the fleet queue -- engine-ledger coupling, d-perp pruning, palindromic-extremizer exact testing, corner sweep, symmetrization inequality, mu3 tables, reversal-symmetrized moments, the two hard cores for avoidance-kernel + PZ-on-U, hard cores as tournament-bridge test cases, mixed-lift erosion, triple-mass upper bound, valuation-partitioned Hunter trees, R >= 0.75.  Executed the items routed to my machinery; routed the rest (below).
+
+PART 1 -- THE TWO HARD CORES (monad-S3 handoff b):
+ - EXACT: meas(G_{9..13}) = 40247/90090 = 0.446742; meas(G_{10..13}) = 1577/3003 = 0.525142.
+ - PRODUCT-ROUTE ARITHMETIC (exact): mGP8 x (6/49) = 40247/735735 = 0.054703 vs m_P = 0.056487: shortfall EXACTLY 3.16pct. At R=1 need k=8 mu-floor 71245/563458 = 0.126442 (+0.004 over klein's unconditional 6/49); at 6/49 need R >= 1.0326 -- POSITIVE correlation, more than independence: the product route cannot close as-is. Closure options: Hunter +3.3pct (klein-S157 G-bonus) or restricted-PZ direct.
+ - ADVERSARIAL G2 (the consumed object): k=8 min 0.391 = 6.91x m_P; k=9 min 0.377 = 6.68x; both minima AT THE CONSECUTIVE cluster = ledger-covered shapes. Restricted-PZ = E[U 1_G]^2/E[U^2 1_G] >= 0.269/0.261 (4.77x/4.62x m_P) -- the PZ-on-U machinery survives the G_P restriction at the cores with big slack.
+ - MECHANISM (SM test): |G2 - mGP mu| tracks the shared spectral mass on E's difference set (corr 0.52); spread CRT-blockers have R = 1.0000 to grid precision => the spread>108 residual regime is where the coupling is EASIEST; R<1 only at small-diameter (ledger-covered) shapes. k=9 target for klein's G+ route pinned: mu-floor 0.107566 at R=1.
+ - TOURNAMENT-BRIDGE reading (owner item, one paragraph): in the step gauge the hard cores' small parts {9..13}/{10..13} are consecutive top blocks = maximally TRANSITIVE sub-tournaments; the hard cases are exactly 'transitive tail + cluster that must not resonate with it' -- the frame says the enemy is alignment with a transitive fragment, consistent with valley/AP-structure being extremal everywhere else.
+
+PART 2 -- EXACT PALINDROMIC-EXTREMIZER VERDICT (kps-S62 conjecture; opus-S136 engine, credited; 9 multisets swept COMPLETELY):
+ - Whenever the step multiset admits a palindrome, the exact mu-minimizing word IS one (5/5): {2^8,1^4} -> the monad-record word (2^4 1^4 2^4), min = 17159/32340 UNIQUE (matches opus-S136's independent exact value -- engine cross-validation); {1^10,2^2} -> (2,1^10,2); k=8: {1^5,2^2}, {1^3,2^4}, {2^6,1} all palindromic minimizers.
+ - THE PATTERN: always the VALLEY (large steps at the edges, small centered); the MOUNTAIN maximizes. Arrangement spread at fixed multiset is 0.30-0.41 -- the word matters as much as the alphabet.
+ - PARITY OBSTRUCTION (refinement): even-length words admit palindromes iff all multiplicities even; obstructed multisets minimize at the as-valley-as-possible edge-defect word ({1^11,2}: min = (1^11,2), the CENTERED defect is the MAXIMIZER 0.8598).
+ - SATURATION: some k=8 multisets are mu = 1 for all words -- state the conjecture as 'some minimizer is palindromic'.
+ - => SYMMETRIZATION INEQUALITY, precise form for kps-S63's majorization heresy: ADJACENT-EXCHANGE MONOTONICITY -- moving the larger of two adjacent steps toward its nearer edge weakly decreases mu_theta; iterate = valley. Exact data now pins the direction on 9 multisets.
+
+PART 3 -- REVERSAL-SYMMETRIZED MOMENTS (owner item): VACUOUS, proved in one line. U(E,1-x) = U(E,x) IDENTICALLY (e(1-x) = -ex mod 1 + THM-639-A pointwise): every gap functional is already x-reflection symmetric; symmetrized moments = plain moments; rho_rev = 1 always (verified incl non-palindromic families). Corollaries: restrict all engines to [0,1/2] (2x speedup); reversal symmetry acts on family space only; symmetrized-PZ = plain PZ.
+
+ROUTED (not mine, per fleet assignments): engine-ledger coupling + d-perp short-vector pruning -> opus-S136 NEXT (a),(b); corner sweep + mu3 tables -> kps-S62 NEXT; mixed-lift erosion -> klein-S157 NEXT (a); triple-mass upper bound + valuation-partitioned Hunter trees + R >= 0.75 -> klein-S156/S157 NEXT (a),(c),(d).
+
+FILES: lrc14_hardcores_pzonu_macmini_S44.py, lrc14_palindrome_exact_arrangements_macmini_S44.py (+2 outs); HYP-4917 (INDEX). No Lean (proofs-first directive). No canon overridden.
+
+NEXT: (a) prove the adjacent-exchange lemma (the symmetrization inequality) -- likely via the order-cell/wall bijection under the exchange (tiling-model move); (b) the +3.3pct Hunter improvement OR the restricted-PZ moment bounds at the cores (close the 3.16pct product gap); (c) exact restricted-PZ moments E[U 1_G], E[U^2 1_G] as balanced-lattice sums with the P-spectrum (THM-579 template).
+
 ## boxeph-2026-07-07-S2 -- LEAN FORMALIZATION: Farey-roof->good-set BRIDGE + AP30 density-floor certificate (unconditional, kernel-pure); extends death-star's AP20 diameter floor <=19 -> <=29
 
 Formalization session (owner: formalize LRC14, pull often, integrate the fleet). Took opus-S135's LRCFareyRoof (roof pointwise, zero_gap_empty/THM-637) + mac-mini-S42/monad-S2's LRCTailDiameter (muGood, good_anti/good_translate, muGood_ge_APD) and supplied the MISSING LINK + a certificate it unlocks. Lean 4.30, Mathlib cached, all built green + axiom-audited [propext,Classical.choice,Quot.sound].
