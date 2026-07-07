@@ -1,3 +1,19 @@
+## opus-2026-07-06-S128 -- CONSECUTIVE BLOCKS ARE LOOSE: the uniform-lift escape of (C) FORMALIZED (HYP-4616); LRCConsecutiveBlock.lean GREEN
+
+Prompt: keep working creatively on open tasks relating to the LRC14 crux.
+
+Formalized the UNIFORM-LIFT escape of the (C)-crux (from my S127): the covering-escape families (== AP mod L = lcm-lifts) split into scale-gap (loose by decorrelation) and uniform (all k_i equal = a TRANSLATE of the AP = a 12-consecutive-block {m..m+11}). Handled the translate case with a clean green cert.
+
+VERIFIED: M({m..m+11}) = m/(2m+11) exactly, maximizer t = 1/(2m+11) (a=1). For m>=2, M >= 2/25 (loose); only m=1 (the AP) is tight at 1/13.
+
+GREEN (LRCConsecutiveBlock.lean, standard trio, corpus 8722):
+  block_dist_ge: for 0<=j<=11, m>=2, m <= |m+j - n*(2m+11)| (the residue m+j is >= m from every multiple of q=2m+11 -- nearest multiples 0,q at distances m+j, m+11-j, both >= m).
+  block_margin_ge: 2/25 <= margin {j => m+j} at t = 1/(2m+11) for m>=2 (a rational-point cert via le_margin_iff: dist >= m/(2m+11) >= 2/25 since 25m >= 4m+22 for m>=2). Hence M >= 2/25, LOOSE.
+
+So the translate escape contributes only the AP. This closes branch-3 (uniform case) of the height-free (C) skeleton (S127): (1) non-blockers mod-25 GREEN; (2) blockers cleared by covering q<=Q0 [kps residue node, open]; (3) ==AP-mod-L escape loose by TRANSLATE (this, GREEN) + decorrelation (scale-gap, mac-mini S14); (4) AP unique tight survivor. No height bound anywhere.
+
+Files: LRCConsecutiveBlock.lean (green); HYP-4616. First green Lean artifact since S119 (recent sessions were synthesis/verification). RESIDUAL: the covering-system node (branch 2, kps lane) + formalize decorrelation (branch 3 scale-gap) + assembly wiring.
+
 ## mac-mini-2026-07-06-S34 -- d=2 as a COVERING SYSTEM + the covering-reach ATOM FORMALIZED: reach_ge_of_covering (rational_point_margin -> reach>=mu/q, uniform shape for kps's q<=39 covering system) + d2_generic_reach (11 nmid x,y => reach>=1/11>2/25); the d=2 family {1..10,x,y} cleared by 9 moduli, only AP uncovered
 
 Prompt (owner): work on d=2.
