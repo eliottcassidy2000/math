@@ -1532,6 +1532,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S50 -- the near-AP MOAT clears by LIFT-VISIBILITY (2nd Fan-Sun layer, unified w/ compression); creative Fan-Sun reframe (HYP-4657)
+
+Prompt (owner): work (a) the covering-node residue check; be creative, reframe, think Fan-Sun.
+
+klein S147: (C) = [q<=12 Fan-Sun gcd = kps LRCSmallModFloor GREEN] + [near-AP MOAT q in [13,32]] + [AP]. Moat = remaining. (mac-mini S35 corrected my S47 Q0=25 -> 37; small-sample artifact.)
+
+MOAT = AP + 13k-LIFTS. V==AP mod q <=> lift invisible <=> q|k_i (gcd(q,13)=1, q!=26).
+
+MECHANISM (VERIFIED 100%, 113903): a moat family clears at EXACTLY the q in [14,32] where it DIFFERS from AP (lift VISIBLE). Clears<=>differs, 100%. Visible lift breaks AP's perfect pair-coverage => clearing rotation. The 2nd Fan-Sun layer (analog of q<=12 breaking a divisibility, one range up).
+
+UNIFICATION: escapes both layers only if invisible everywhere => k_i==0 mod lcm => L-lift => non-compressed => PEELS. So compressed => bounded k => visible somewhere => clears. Fan-Sun gcd + moat + escape = ONE fact via lift visibility + compression.
+
+VERIFIED: 151890 divisibility-preserving 13-lifts clear q in [14,25] (0 uncleared).
+
+FILES: reflection the-moat-clears-by-lift-visibility-the-second-fan-sun-layer-kps-S50.md; HYP-4657. No Lean (mechanism+verification; certs are existing avoid-band rational_point_margins). No canon overridden.
+
 ## kind-pasteur-2026-07-06-S49 -- the covering ESCAPE resolves by COMPRESSION (opus decorrelation = klein peeling); (C) skeleton improved, completeness node ISOLATED escape-free; dedup translate (HYP-4647)
 
 Prompt (owner): take the covering-completeness check; ensure the crux is well understood; improve proofs.
