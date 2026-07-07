@@ -1,0 +1,9 @@
+=== Part 1: clean sub-result -- no multiple of q => clears at q (q<=12), M>=1/q>2/25 ===
+  q=7: clearance band 2q/25=0.560<1 => avoid only residue 0; nonzero residue has margin>=1/7=0.1429>2/25
+  q=9: clearance band 2q/25=0.720<1 => avoid only residue 0; nonzero residue has margin>=1/9=0.1111>2/25
+  q=10: clearance band 2q/25=0.800<1 => avoid only residue 0; nonzero residue has margin>=1/10=0.1000>2/25
+  q=11: clearance band 2q/25=0.880<1 => avoid only residue 0; nonzero residue has margin>=1/11=0.0909>2/25
+  q=12: clearance band 2q/25=0.960<1 => avoid only residue 0; nonzero residue has margin>=1/12=0.0833>2/25
+  => any family with no multiple of {7,9,10,11,12} clears (M>=1/12). Residual = has such multiples.
+
+=== Part 2: ADVERSARIAL high-height super-blockers -- minimal clearing modulus vs height ===

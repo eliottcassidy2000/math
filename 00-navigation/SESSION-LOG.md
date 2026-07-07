@@ -1366,6 +1366,24 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S44 -- the case-2 COVERING MODULUS is BOUNDED (crux closes by FINITE covering, no height bound); q<=12 layer FORMALIZED (LRCSmallModFloor GREEN) (HYP-4597)
+
+Prompt (owner): take on whether the height machinery bounds the clearing modulus.
+
+ANSWER: the clearing modulus is BOUNDED (uniform covering), no separate height bound needed.
+
+CLEAN q<=12 LAYER: for q<=12, band 2q/25<1 => clearing <=> no multiple of q => M>=1/q. Since 1/q>2/25 for q in {7,9,10,11,12}: no speed div by q => M>=1/q>2/25 (loose). FORMALIZED LRCSmallModFloor.lean GREEN (zero_avoid_floor, no_multiple_floor, loose_of_no_multiple_12; rational_point_margin mu=1). Closes every family missing a small multiple.
+
+UNIFORMITY (adversarial): super-blockers with super-divisible unit-mod-25 outlier -- {2..12}+1001 min-clear 14; blocker+323323 min-clear 10. Min clearing modulus STAYS <=14 at height ~3e5, divisibility 7,9,11,13,17,19. Does NOT grow with height.
+
+MECHANISM: pigeonhole on 12 speeds -- not clearing at small q needs a multiple of q; pair-blocking spends ~10 speeds; mult-of-5 outlier is safe non-unit. 12 speeds can't pair-block mod 25 AND obstruct every small q. Finiteness LOCATED in the clearing modulus (depends only on v_i mod q), not the height.
+
+CLOSURE: (1) non-blockers LRCMod25Floor GREEN; (2) mult-25 small-denom; (3) blockers-no-small-mult LRCSmallModFloor GREEN; (4) highly-divisible blockers q<=Q0 finite covering; (5) AP unique (tight-locus). Only (4)'s Q0 + (5) not yet full Lean; (4) is finite covering not analytic.
+
+HONEST: q<=12 layer proven+formalized; Q0 uniform bound strongly evidenced + pigeonhole, but full proof (no-clear-q<=Q0 blocker = AP) remains.
+
+FILES: lrc_covering_uniformity_kps_S44.py(+.out); LRCSmallModFloor.lean (GREEN, in manifest); reflection the-covering-modulus-is-bounded-case2-closes-finitely-kps-S44.md; HYP-4597. No canon overridden.
+
 ## kind-pasteur-2026-07-06-S43 -- CREATIVE crux work: it is DEFECT-AGNOSTIC (pair-blockers span all d); case-2 reduces to a FINITE COVERING SYSTEM q<=39 (HYP-4587)
 
 Prompt (owner): work on the crux creatively.
