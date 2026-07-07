@@ -1,0 +1,37 @@
+====================================================================================================
+(Q1) verify the structural facts
+====================================================================================================
+  n= 6: F1 True  F2(deg formula True, #pairs=C(n,4) True, parity law True)  F3 True  F4 True   parity-carrying chord lengths: [2, 4]
+  n= 7: F1 True  F2(deg formula True, #pairs=C(n,4) True, parity law True)  F3 True  F4 True   parity-carrying chord lengths: []
+  n= 8: F1 True  F2(deg formula True, #pairs=C(n,4) True, parity law True)  F3 True  F4 True   parity-carrying chord lengths: [2, 4, 6]
+  n= 9: F1 True  F2(deg formula True, #pairs=C(n,4) True, parity law True)  F3 True  F4 True   parity-carrying chord lengths: []
+  n=10: F1 True  F2(deg formula True, #pairs=C(n,4) True, parity law True)  F3 True  F4 True   parity-carrying chord lengths: [2, 4, 6, 8]
+  n=12: F1 True  F2(deg formula True, #pairs=C(n,4) True, parity law True)  F3 True  F4 True   parity-carrying chord lengths: [2, 4, 6, 8, 10]
+  n=14: F1 True  F2(deg formula True, #pairs=C(n,4) True, parity law True)  F3 True  F4 True   parity-carrying chord lengths: [2, 4, 6, 8, 10, 12]
+
+====================================================================================================
+(Q2) minima over subcubes vs Guy Z(n)   [pages on l>=2 chords; l=1 fixed page 0 wlog]
+====================================================================================================
+  n=6: Z(n)=3   min all=3  even=3  BLUE=3  blue&even=3   BLUE ATTAINS   B&E ATTAINS
+  n=7: Z(n)=9   min all=9  even=9  BLUE=9  blue&even=9   BLUE ATTAINS   B&E ATTAINS
+  n=8: Z(n)=18   min all=18  even=21  BLUE=20  blue&even=22   blue does NOT attain   
+
+====================================================================================================
+(Q3) parity corollary: Z(n) vs C(n,4) mod 2 (must differ by an even page-1 count of
+     parity-carrying chords; if Z(n) != C(n,4) mod 2, the optimum needs an ODD count)
+====================================================================================================
+  n= 5: Z=1 (1), C(n,4)=5 (1)  -> optimal page-1 parity-chord count is EVEN
+  n= 6: Z=3 (1), C(n,4)=15 (1)  -> optimal page-1 parity-chord count is EVEN
+  n= 7: Z=9 (1), C(n,4)=35 (1)  -> optimal page-1 parity-chord count is EVEN
+  n= 8: Z=18 (0), C(n,4)=70 (0)  -> optimal page-1 parity-chord count is EVEN
+  n= 9: Z=36 (0), C(n,4)=126 (0)  -> optimal page-1 parity-chord count is EVEN
+  n=10: Z=60 (0), C(n,4)=210 (0)  -> optimal page-1 parity-chord count is EVEN
+  n=11: Z=100 (0), C(n,4)=330 (0)  -> optimal page-1 parity-chord count is EVEN
+  n=12: Z=150 (0), C(n,4)=495 (1)  -> optimal page-1 parity-chord count is ODD
+  n=13: Z=225 (1), C(n,4)=715 (1)  -> optimal page-1 parity-chord count is EVEN
+  n=14: Z=315 (1), C(n,4)=1001 (1)  -> optimal page-1 parity-chord count is EVEN
+
+[23s]
+n=6: #tile-optima=12, all spine-completable to even pages: True, sigma-FIXED optima: 4, non-fixed (in sigma-pairs): 8
+n=7: #tile-optima=140, all spine-completable to even pages: True, sigma-FIXED optima: 12, non-fixed (in sigma-pairs): 128
+n=8: #tile-optima=16, all spine-completable to even pages: True, sigma-FIXED optima: 0, non-fixed (in sigma-pairs): 16  <-- MIRROR BROKEN

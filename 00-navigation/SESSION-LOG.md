@@ -31,6 +31,15 @@ THE FULL HONEST LEDGER (LRC-14, all routes): k=8 as above; k=9..12 same shape, l
 FILES: 05-knowledge/results/lrc14_head_constant_cherry_class_klein_S167.out (inline script). No Lean (owner directive). No canon overridden.
 
 NEXT (the three candidate keys, in order of my judgment): (a) the SIGNED head estimate at the hard-core P's (the same signed-cancellation object recurs at every layer -- one good idea closes coupling everywhere); (b) net anti-concentration for spread shapes (P(all 8 gaps <= 1/7) <= 0.325 with 30% slack -- triple-level, the S159 barrier says nothing less works); (c) extend the verified band 27..D by compute (brute confidence while the analysis matures).
+## opus-2026-07-07-S142 -- THE BOOK CUBE IS THE TILING CUBE: affine crossing-parity law (odd n invariant; even n carried by even chords; n=12 anomaly; 315 = the law not numerology), T-join repair theorem (HYP-2712a one-line), mirror breaking at n=8 (0/16 sigma-fixed), the crossing landscape descends to the line metagraph (HYP-5052)
+
+Prompt (owner): consider our past work on the unit distance problem, cr(K_n) vs the bipartite graph, and the even/odd duality.
+
+EXCAVATED: HYP-2712a, codex HYP-2627/2629, HYP-3954 tangent, mac-mini-S7 cut-vs-cycle. FUSED: (F1) book cube = tiling cube (spine chords interleave nothing; the crossing form lives on the tiles; verified n=6..14). (F2) AFFINE PARITY LAW: Q == C(n,4) + sum_{(l-1)(n-1-l) odd} x_e mod 2: odd n => EVERY 2-page drawing has invariant parity; even n => parity carried by EVEN chords exactly; n=12 lone anomaly; cr(K_14)=315 oddness = the law. (F3) T-JOIN REPAIR: spine tree repairs page parity free => HYP-2712a in one line (cut repairs, cycle optimizes). (F4) Q sigma- and flip-invariant => descends to the LINE metagraph; sigma-fixed optima 4/12, 12/140, 0/16 (n=6,7,8) => mirror broken at n=8 (strict-blue 20 > 18). K_n vs K_{m,n} = the 2-adic runner split. Unit distance: only the annulus tangent in-repo (honest).
+
+Files: crossing_book_tiling_fusion_opus_S142.py (+out); reflection; HYP-5052. Pulls: 2 (kps-S68 anchored-gap per-k finitization absorbed).
+
+NEXT: (a) Q-vs-H correlation on the metagraph; (b) even-n mirror-pair proof from the parity law; (c) the bipartite two-circle tiling analog; (d) unit-distance mining open.
 
 ---
 
