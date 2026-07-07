@@ -1,0 +1,26 @@
+=== E[U] = E_x[uncovered length] as a PROVABLE lower bound on mu_17 (mu_17 >= E[U]), opus-S131 ===
+
+  k                      E    mu_17     E[U]  (mu_17>=E[U])
+  8            AP {0..k-1}   0.9401   0.2501
+  9            AP {0..k-1}   0.8401   0.2115
+ 10            AP {0..k-1}   0.7755   0.1826
+ 11            AP {0..k-1}   0.6263   0.1580
+ 12            AP {0..k-1}   0.5699   0.1413
+ 13            AP {0..k-1}   0.4425   0.1266
+
+ 13                     AP   0.4425   0.1266
+ 13             12AP+out20   0.5639   0.1193
+ 13             two6blocks   0.7302   0.1450
+ 13              hole@6+13   0.8598   0.1337
+ 13                  step3   0.4425   0.1266
+
+k=13: E[U](AP)=0.1266; min E[U] over structured+40 random = 0.1185 (at step3)
+  => if inf_E E[U] > 0, then mu_17 >= E[U] gives a UNIFORM density floor (positivity).
+
+=== analytic: E[U] = 1 - E[covered]; I-E = k/7 - C(k,2)*3/196 + (triples...) ===
+  k=8: 1 - [k/7 - C(k,2)*3/196] = 0.2857  (2-term I-E estimate of E[U], triples+ correct it)
+  k=9: 1 - [k/7 - C(k,2)*3/196] = 0.2653  (2-term I-E estimate of E[U], triples+ correct it)
+  k=10: 1 - [k/7 - C(k,2)*3/196] = 0.2602  (2-term I-E estimate of E[U], triples+ correct it)
+  k=11: 1 - [k/7 - C(k,2)*3/196] = 0.2704  (2-term I-E estimate of E[U], triples+ correct it)
+  k=12: 1 - [k/7 - C(k,2)*3/196] = 0.2959  (2-term I-E estimate of E[U], triples+ correct it)
+  k=13: 1 - [k/7 - C(k,2)*3/196] = 0.3367  (2-term I-E estimate of E[U], triples+ correct it)

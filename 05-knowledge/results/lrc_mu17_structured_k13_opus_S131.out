@@ -1,0 +1,21 @@
+C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\lrc_mu17_structured_k13_opus_S131.py:21: SyntaxWarning: invalid escape sequence '\{'
+  "AP with hole {0..12}\{6}+{13}": [i for i in range(13) if i!=6]+[13],
+=== k=13 STRUCTURED adversary test vs AP-minimality (opus-S131) ===
+mu_17(AP {0..12}) = 0.44249 = 477/1078 = 0.44249
+
+  AP {0..12}                         mu_17=0.44249  = AP
+  12-AP + outlier@20                 mu_17=0.56396
+  12-AP + outlier@100                mu_17=0.55475
+  12-AP + outlier@1000               mu_17=0.55389
+  11-AP + 2 out @{50,51}             mu_17=0.58150
+  two 6-blocks {0..5}+{50..56}       mu_17=0.73022
+  two 6-blocks gap100                mu_17=0.72307
+  AP step2 {0,2,..,24}               mu_17=0.44247  = AP
+  AP with 1 internal gap {0..5,7..13} mu_17=0.85977
+  AP with hole {0..12}\{6}+{13}      mu_17=0.85977
+  near-AP jitter                     mu_17=0.55892
+  near-AP jitter2                    mu_17=0.85110
+  3 blocks of 4-ish                  mu_17=0.74285
+  geometric                          mu_17=0.98601
+
+VERDICT: AP-minimality HOLDS (no structured adversary below AP).
