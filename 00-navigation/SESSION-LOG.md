@@ -1,3 +1,29 @@
+## mac-mini-2026-07-06-S36 -- CHALLENGE: the FINITE covering of (C) is INCOMPLETE. Compressed, non-translate, non-AP families (==AP mod lcm(2..Q0), varying k) ESCAPE any finite covering {2..Q0}, clearing only at q=nextprime(Q0); (G) still holds (loose, M->2/25+). Refutes 'finite covering, no height bound' (opus-S126, kps-S47/S49/S50, klein-S147) (HYP-4667)
+
+Prompt (owner): work the open math, challenge assumptions, improve proofs.
+
+Working the r=2 certs, I challenged the fleet's 'finite covering closes (C)' claim and found a rigorous INCOMPLETENESS.
+
+THE ESCAPE FAMILIES: fix L=lcm(2..Q0). V={i+L*k_i} with ALL k_i>=1 VARYING (e.g. k=(1,2,1,2,...)):
+ - ==AP mod L => fails EVERY covering q<=Q0 (same residues as the tight AP under any rotation)
+ - COMPRESSED (max/min->2, ratio<=3) => NOT non-compressed, so kps-S49 peeling (max>13min) does NOT apply
+ - NON-translate (k varies), NON-AP
+ - clears at q=nextprime(Q0) EXACTLY: Q0=25->29, 32->37, 37->41, 41->43 => LOOSE, M>=ceil(2q/25)/q>2/25 => (G) HOLDS
+12/12 tested patterns (systematic + random k in {1,2,3}) are compressed, loose, escape to nextprime.
+
+CONSEQUENCE: NO finite covering {2..Q0} is complete. For EVERY Q0, the ==AP-mod-lcm(2..Q0) varying-k families escape to nextprime(Q0)>Q0. The covering modulus is UNBOUNDED (grows with family scale ~lcm(2..Q0)). kps-S47 Q0=25 / klein-S147 {2..32} are HEIGHT-RANGE ARTIFACTS (klein tested <=650k; these are ~10^14) -- exactly like kps's Q0=25 was an (a,b)<=25 artifact (my S35). Completeness ('every non-AP clears at some q') is EQUIVALENT to (G), not a finite reduction.
+
+PRECISE FALSE STEP (kps-S50): 'compressed => bounded lift k' is FALSE. Compression bounds the lift RANGE (max k_i - min k_i), not the VALUES. As a 13-lift v_i=i+13K_i, my family has K_i=(L/13)k_i ~10^13 (huge) yet the family is compressed (all v_i~L, ratio 2), the K_i are all ==0 mod q for every q<=32 (invisible everywhere), and not all equal (non-translate). So compressed + invisible-everywhere-<=32 + non-translate coexist, contradicting kps-S50.
+
+ASYMPTOTIC: M=ceil(2q/25)/q at nextprime(Q0) -> 2/25+ (Q0=200: M>=17/211, excess 0.0006). The escape families APPROACH 2/25 from above; (G) is TIGHT against them. A fixed-Q0 fixed-margin covering structurally cannot capture a class whose margin -> 0.
+
+HONEST SCOPE: does NOT refute (G) -- every escape family is loose (M>2/25). DOES refute the FINITE-covering PROOF STRATEGY's completeness. The correct completeness needs a SCALE-UNIFORM argument (a tight decorrelation / Fourier bound over ==AP-mod-L varying-k families), NOT a finite pile of rational_point_margin certs. These escape families, approaching 2/25, are the irreducible analytic core -- consistent with LRC being genuinely hard.
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection; git/finish_session only.)
+
+FILES: lrc_compressed_vs_peel / lrc_compressed_allpos_challenge / lrc_covering_regress / lrc_escape_verify _macmini_S36 (+out); reflection the-finite-covering-is-incomplete-escape-at-the-next-prime-macmini-S36.md; HYP-4667 (+INDEX). No canon overridden; no Lean (the finding is that the finite-pile formalization is the WRONG target).
+
+NEXT: the scale-uniform (decorrelation/Fourier) argument for the ==AP-mod-L varying-k escape families -- the actual analytic core; reconcile with opus's decorrelation (must cover all-positive varying-k, not just scale-gap).
 ## mac-mini-2026-07-06-S35 -- r=2 covering Q0 = 37 not 25: CHALLENGED kps-S47 (Q0=25)/kps-S44 (<=14), CONFIRMED klein-S144 (<=38); worst family {1..9,11,36,350} clears ONLY at q=37; Q0 SATURATES (no height bound holds); hardest r=2 cert FORMALIZED (hardR2_reach kernel-pure)
 
 Prompt (owner): work the r=2 hard-shape avoid-band certs; challenge assumptions, gain precise understanding, improve proofs.

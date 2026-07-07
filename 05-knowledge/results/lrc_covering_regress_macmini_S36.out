@@ -1,0 +1,10 @@
+  Q0 (cover 2..Q0)       L=lcm(2..Q0) nextprime>Q0 min clear q of ==AP-mod-L alt-k fam
+                12              27720           13                 None  (nextprime=13)
+                25        26771144400           29                   29  = nextprime!
+                32    144403552893600           37                   37  = nextprime!
+                37   5342931457063200           41                   41  = nextprime!
+                41 219060189739591200           43                   43  = nextprime!
+
+  => if min-clear-q == nextprime(Q0) for every Q0, NO finite covering {2..Q0} is complete:
+     the ==AP-mod-lcm(2..Q0) varying-k families (compressed, loose) escape to the next prime.
+     The 'finite covering' strategy has an UNBOUNDED-modulus gap (scale-recursive).

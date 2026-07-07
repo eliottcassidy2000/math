@@ -1,0 +1,27 @@
+L=lcm(2..32)=144403552893600; nextprime(32)=37
+VERIFY escape families ==AP mod L (compressed, varying k): all LOOSE? peeling-compressed?
+     alt12 k=[1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2]: ratio=2.00 compressed=True clearq=37 M>=3/37=0.0811 LOOSE
+    blocks k=[1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2]: ratio=2.00 compressed=True clearq=37 M>=3/37=0.0811 LOOSE
+      one2 k=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]: ratio=2.00 compressed=True clearq=37 M>=3/37=0.0811 LOOSE
+    123cyc k=[1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3]: ratio=3.00 compressed=True clearq=37 M>=3/37=0.0811 LOOSE
+      rand k=[1, 1, 2, 1, 2, 2, 2, 2, 1, 1, 2, 1]: ratio=2.00 compressed=True clearq=37 M>=3/37=0.0811 LOOSE
+      rand k=[2, 2, 1, 2, 2, 1, 1, 2, 1, 1, 1, 1]: ratio=2.00 compressed=True clearq=37 M>=3/37=0.0811 LOOSE
+      rand k=[2, 1, 2, 1, 1, 2, 2, 1, 2, 1, 1, 2]: ratio=2.00 compressed=True clearq=37 M>=3/37=0.0811 LOOSE
+      rand k=[2, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 2]: ratio=2.00 compressed=True clearq=37 M>=3/37=0.0811 LOOSE
+      rand k=[2, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2]: ratio=2.00 compressed=True clearq=37 M>=3/37=0.0811 LOOSE
+      rand k=[1, 1, 2, 2, 2, 1, 2, 1, 2, 2, 1, 1]: ratio=2.00 compressed=True clearq=37 M>=3/37=0.0811 LOOSE
+      rand k=[1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 2, 1]: ratio=2.00 compressed=True clearq=37 M>=3/37=0.0811 LOOSE
+      rand k=[1, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1]: ratio=2.00 compressed=True clearq=37 M>=3/37=0.0811 LOOSE
+
+  ALL loose (M>2/25, (G) holds): True
+  ALL compressed (max<=13min, so NOT peeling per kps-S49): True
+  ALL clear ONLY at q=37=nextprime(32) (escape >32): True
+
+  ASYMPTOTIC: M-lower-bound = ceil(2q/25)/q at q=nextprime(Q0) -> 2/25+ as Q0 grows:
+    Q0=25: nextprime=29, M >= 3/29 = 0.10345  (gap top 2/25=0.08000; excess 0.02345)
+    Q0=32: nextprime=37, M >= 3/37 = 0.08108  (gap top 2/25=0.08000; excess 0.00108)
+    Q0=50: nextprime=53, M >= 5/53 = 0.09434  (gap top 2/25=0.08000; excess 0.01434)
+    Q0=100: nextprime=101, M >= 9/101 = 0.08911  (gap top 2/25=0.08000; excess 0.00911)
+    Q0=200: nextprime=211, M >= 17/211 = 0.08057  (gap top 2/25=0.08000; excess 0.00057)
+    Q0=500: nextprime=503, M >= 41/503 = 0.08151  (gap top 2/25=0.08000; excess 0.00151)
+  => escape families approach 2/25 from above; (G) is TIGHT against them but holds.
