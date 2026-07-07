@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 {
   "session_start": "2026-07-07T14:27:42.456752",
   "start_commit": "c5124696900d9e107047bbcf3b11187e56c60cda",
   "pushed": false,
   "message_sent": false
 }
+=======
+{}
+>>>>>>> 9a874dd75 (mac-mini-2026-07-07-S51: checkpoint - claim HYP-5097 (winding-bit cylinder model; two-spine reading; cylinder vs transitivity))
