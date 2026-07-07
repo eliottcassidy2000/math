@@ -40,6 +40,23 @@ FILES: 04-computation/lrc14_bisection_{recursion,chain}_klein_S154.py (+outs); r
 NEXT: (a) prove sup_E min_j Bis_j <= 0.325 at k=8 (Erdos-Turan on the window vs the relation lattice; 5x slack) -- closes the binding HYP-2602 leg; (b) prove the far-element bisection step (Delta_j -> 0 for e_j >> spread(E_j)) -- with kps-S59 closes k=13 up to the uniformly-spread bulk; (c) exact-rational Bis engine (the roof gives the AP side; general E needs the death-star integrator's breakpoints); (d) formalize the identity (measure-zero bookkeeping only).
 
 ---
+## kind-pasteur-2026-07-07-S59 -- THE DIAMETER FLOOR: one-line subset lemma + Farey roof => the k=13 quantitative tail floor mu_1/7 >= m_P is PROVED for every 13-set of primitive diameter <= 75; deficit carried only by zero-sum weight->=3 relations (HYP-4797)
+
+Prompt (owner): long session -- deeply understand the LRC14 work/relations/corrections/validity, find what we've been missing / where misguided, then investigate; push/pull often. (Same-prompt fan-out day: boxeph/monad-explorer/death-star/mac-mini-S41/opus-S134 ran concurrently; 3-way HYP-number collisions.)
+
+UNDERSTANDING PASS (2h): proof-map + THM-527/530 + skeleton + last 15 sessions + all concurrent pushes. Key validity findings absorbed: Route 1 = hfloor (G2>=m_P, k=8..13) + hpartA (needs quantitative factoring, MISTAKE-118); mean route k=13-only (monad HYP-4787); mean-via-AP-extremality dead (death-star capstone HYP-4777, disjoint windows); record E[mg]=0.196993 at parity-interlaced 2*{1..11}u{11,13} (monad, confirmed opus-S134).
+
+THE BRICK (HYP-4797, proved): E subset F => point sets nest => maxgap(E,x) >= maxgap(F,x) POINTWISE => mu_theta(E) >= mu_theta(F) for every theta AND E[mg(E)] >= E[mg(F)]. With F={0..D} ~ AP_{D+1} (translate; gcd-reduce first) + opus-S134's exact Farey roof: mu_1/7(E) >= mu_1/7(AP_{D+1}). Uses the AP as a SUBSET, not a minimizer -- survives the capstone ("the AP bounds every family from below not because it is smallest but because it is FULLEST").
+
+NUMBERS (exact): mu_1/7(AP_n) >= m_P through n=76 (2314528732/40290957525=0.057445; crossing n=77) => EVERY 13-set with primitive diam <= 75 has mu_1/7 >= m_P -- covers THM-527-D's verified extremal-spread domain (~30) at 2.5x, and every family ever on the minimizer board (diam 12..40). Bites: k=12 diam<=23, k=11 diam<=15; k=8..10 honestly out of union-bound reach. Mean version: A(n)>1/7 through n=22 (A(22)=1/7+6391/21162960, margin 3e-4) => prim diam <=21 has E[mg]>1/7, containing monad's record (diam 20); future sub-1/7 records need diam>=22; per-diam minima flat ~0.203-0.206 at D=22..32. Residual probes (diam 80-100 structured): mu=0.58-0.97 = 10-17x bar.
+
+DEFICIT FRAME (corrected in-session): E_x[gap functional] = iid + sum_{k in L(E)} ghat(k); translation symmetry forces sum k_i = 0, pair-distance exact uniformity (the forgotten universal factoid) kills difference modes => EVERY contributing mode has weight >= 3 zero-sum. Zoo: Sidon 0.2423 (~iid), geometric 0.2502 (ABOVE iid via (2,-3,1)-relations, sign can go both ways), record deficit 0.0476 = 47% of the 0.1018 budget. Adversary needs additive structure which (Freiman) pulls diameter back into the proved zone.
+
+CEDED/COLLISIONS: HYP-4787 ceded to monad-explorer (first push; mac-mini-S41 also claimed it -- needs renumber); my conditional-RM-on-G_P idea independently refuted by monad PART 3 before I ran it (correctly not re-walked); HYP-4797 collision with monad's shift-sum entry -- I was first on the wire (15af5f047), flagged in broadcast, suggest their renumber. monad's shift-sum Chung-Erdos (CE>=0.25, self-stabilizing) is the natural LEG-B partner to my LEG-A diameter floor: bounded diameter EXACT + unbounded diameter CE = the two halves of the k=13 floor.
+
+Files: lrc_diameter_monotonicity_leg_kps_S59.py, lrc_tail_diameter_floor_kps_S59.py (+outs with exact-crossing addendum); reflection the-diameter-floor-feeds-the-irreducible-tail-kps-S59; proof-map annotation; HYP-4797. Does NOT prove LRC(14) or all of (A').
+
+NEXT: (i) formalize the subset lemma + roof (three-distance Claims 1-2) => k=13 bounded-diameter floor GREEN (native_decide-able per n); (ii) LEG B: monad's CE mechanism on diam>75 (their two finite lattice-sum targets); (iii) the k=8..10 legs need genuine per-k floors (monad redirect target 1), untouched by everything today.
 
 ## boxeph-2026-07-07-S1 -- DENSITY->REACH THRESHOLD AUDIT: 1/7 is SHARP (2/7 was robust); mu_{1/7} is the comfortable load-bearing object, reverse-Markov E[maxgap] is razor-thin; E[maxgap] NOT AP-min (exact, corrects klein-S153); finite-Vmax V_0<=14 benign (HYP-4760)
 
