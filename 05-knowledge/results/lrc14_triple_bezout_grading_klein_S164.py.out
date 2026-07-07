@@ -1,0 +1,30 @@
+=== Bezout-grading test: classes (q1; q2 mod 7q1; q3 mod 7q1), pairwise-coprime, q2<q3 ===
+  q1=2: classes seen 48; CONSTANT 0; VARYING 48; max|H| = 118.8688
+  q1=3: classes seen 192; CONSTANT 0; VARYING 192; max|H| = 174.5831
+  q1=4: classes seen 192; CONSTANT 4; VARYING 188; max|H| = 228.4227
+  q1=5: classes seen 721; CONSTANT 207; VARYING 514; max|H| = 278.5714
+    varying class (2, 3, 5): 21 values, e.g. [-5.4169096209912535, 0.011661807580174927, 0.5830903790087464]
+    varying class (2, 3, 7): 15 values, e.g. [0.2857142857142857, 0.5714285714285714, 2.0]
+    varying class (2, 3, 11): 12 values, e.g. [-2.2682215743440235, -0.26822157434402333, 0.3032069970845481]
+    varying class (2, 3, 13): 11 values, e.g. [-5.137026239067056, -1.9941690962099126, -1.1370262390670554]
+    varying class (2, 3, 3): 14 values, e.g. [-2.8338192419825075, -2.5481049562682214, 0.023323615160349854]
+    varying class (2, 3, 9): 13 values, e.g. [-2.501457725947522, -0.21574344023323616, 0.06997084548104957]
+    varying class (2, 3, 1): 13 values, e.g. [-9.536443148688047, -5.2507288629737605, -2.3935860058309038]
+    varying class (2, 5, 7): 17 values, e.g. [-2.2857142857142856, 0.2857142857142857, 0.5714285714285714]
+
+  VERDICT: grading (q1; q2,q3 mod 7q1) is NOT exact (942 varying classes)
+=== growth law: max|H| in bands of q3 (random pairwise-coprime triples, q1<q2<q3) ===
+Traceback (most recent call last):
+  File "<stdin>", line 34, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/random.py", line 370, in randint
+    return self.randrange(a, b+1)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/random.py", line 353, in randrange
+    raise ValueError("empty range for randrange() (%d, %d, %d)" % (istart, istop, width))
+ValueError: empty range for randrange() (10, 10, 0)
+=== growth law: max|H| in bands of q3 (random pairwise-coprime triples, q1<q2<q3) ===
+  q3 in [12,20): n=113  max|H| =    16.01   max|H|/q3(band) ~  0.800.. 1.334   max corr |H|/(q1q2q3) = 0.01183
+  q3 in [20,40): n= 96  max|H| =    74.46   max|H|/q3(band) ~  1.862.. 3.723   max corr |H|/(q1q2q3) = 0.00946
+  q3 in [40,80): n=118  max|H| =   177.71   max|H|/q3(band) ~  2.221.. 4.443   max corr |H|/(q1q2q3) = 0.00864
+  q3 in [80,160): n=107  max|H| =   289.71   max|H|/q3(band) ~  1.811.. 3.621   max corr |H|/(q1q2q3) = 0.00759
+  q3 in [160,320): n= 86  max|H| =   173.72   max|H|/q3(band) ~  0.543.. 1.086   max corr |H|/(q1q2q3) = 0.00242
+(conjectured law: |H| <= C*q3, C ~ 3-5 => triple correction <= C/(q1*q2), summable over separated-scale cherry triples)

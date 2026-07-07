@@ -1,3 +1,19 @@
+## klein-2026-07-07-S164 -- THE TRIPLE COLLAPSE IS UNNAMEABLE BY FINITE GRADING, BUT ITS MAGNITUDE OBEYS A LAW: Bezout grading REFUTED (942/1153 classes vary; H goes negative — S156 impression corrected); growth law |H| <= C·q3 (C~5) well-supported => triple correction <= C/(q1q2), summable over cherry triples (HYP-4881)
+
+Prompt (owner): work the next shaped targets + new ones synthesized from other agents.
+
+SHAPED TARGET EXECUTED (the triple tent's collapse invariant): conjecture 'H constant on (q1; q2,q3 mod 7q1)' — REFUTED decisively (exact rational sweep, pairwise-coprime q <= 90): 942 varying classes; H takes NEGATIVE values (S156's small-range 'all positive' corrected). The shaped move concludes the OTHER way here: the quotient does NOT finitize — the collapse invariant is the continuum 2-torus line phase (arbitrarily deep CRT data). This is kps-S67's 'un-finitized sigma-even core' measured concretely at the triple layer.
+
+THE SALVAGE (what the k=8 gate actually needs): THE GROWTH LAW — 520 random triples in 5 bands to q3 < 320: max|H|/q3 in [0.5, 4.4] with NO growth trend; actual correction |H|/(q1q2q3) decays 0.012 -> 0.0024. CONJECTURE: |H| <= C·q3 (C~5) <=> the genuinely-triple correction to m123 is <= C/(q1·q2) — summable over separated-scale cherry triples; with it, the 5-triple S3-control = finite arithmetic + one magnitude lemma. Proof target = the THM-645 conditioning argument aimed at MAGNITUDE not structure.
+
+ABSORBED (pull-first): monad THM-647 anti-Redei PROVED (the S161 corollary is a theorem; involutory hypothesis necessary); mac-mini THM-646 refutes-and-refines my C5 at n=7 (accepted — census met bigger data); opus-S140 PA_2 diameter ledger rigorous (<=37); kps-S67 sigma-grading synthesis.
+
+FILES: 05-knowledge/results/lrc14_triple_bezout_grading_klein_S164.py.out (grading sweep + growth bands; scripts inline in the out header). No Lean (owner directive). No canon overridden.
+
+NEXT: (a) PROVE |H| <= C·q3 (the conditioning bookkeeping, half page) => the cherry gate's triple layer closes into finite arithmetic; (b) with (a): assemble the k=8 spread-residual floor at the R-route bar end-to-end; (c) R >= 0.75 (still the other half); (d) the 2-torus line-phase object deserves its own study (the sigma-even core's true coordinate).
+
+---
+
 ## kind-pasteur-2026-07-07-S67 -- THE GENERATING INVOLUTION: one sigma (order-reversal) grades BOTH projects and the LRC gate-chaos; anti-Redei verified via the clean single-involution proof; the meta-abstraction with the gate sigma-grading as leverage (HYP-5027)
 
 Prompt (owner): work remaining LRC14 tasks incl proving anti-Redei via the rho-twisted involution; keep working the gates; work the line metagraph; apply the meta-abstraction (abstract upon an abstraction, find structure in chaos + the generating pattern); papers 2607.04388 (online discrepancy) + 2308.09124 (linearity of relation decoding) for inspiration.
