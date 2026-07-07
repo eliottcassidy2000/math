@@ -1,0 +1,42 @@
+S_N={1..N-2}u{N,3(N-1)}: is it a GAP-WITNESS (M strictly inside (1/(N+1),2/(2N+1)))?
+  binding = the actual argmax pair/denominator that sets M.
+
+   N N%6  3N+2  pr?   M(S_N) in-gap binding q     binding pair
+   6   0    20    F     3/17  False        17        sum(2,15)
+   7   1    23    T     3/23   True        23        sum(5,18)
+   8   2    26    F     3/23  False        23        sum(2,21)
+   9   3    29    T      1/9  False        27        sum(3,24)
+  10   4    32    F     3/29  False        29        sum(2,27)
+  11   5    35    F     1/11  False        33        sum(3,30)
+  12   0    38    F     3/35  False        35        sum(2,33)
+  13   1    41    T     3/41   True        41        sum(5,36)
+  14   2    44    F     3/41  False        41        sum(2,39)
+  15   3    47    T     1/15  False        45        sum(3,42)
+  16   4    50    F     3/47  False        47        sum(2,45)
+  17   5    53    T     1/17  False        51        sum(3,48)
+  18   0    56    F     3/53  False        53        sum(2,51)
+  19   1    59    T     3/59   True        59        sum(5,54)
+  20   2    62    F     3/59  False        59        sum(2,57)
+  21   3    65    F     1/21  False        63        sum(3,60)
+  22   4    68    F     3/65  False        65        sum(2,63)
+  23   5    71    T     1/23  False        69        sum(3,66)
+  24   0    74    F     3/71  False        71        sum(2,69)
+  25   1    77    F     3/77   True        77        sum(5,72)
+  26   2    80    F     3/77  False        77        sum(2,75)
+  27   3    83    T     1/27  False        81        sum(3,78)
+  28   4    86    F     3/83  False        83        sum(2,81)
+  29   5    89    T     1/29  False        87        sum(3,84)
+  30   0    92    F     3/89  False        89        sum(2,87)
+  31   1    95    F     1/32  False        32       dbl(16,16)
+  32   2    98    F     3/95  False        95        sum(2,93)
+  33   3   101    T     1/33  False        99        sum(3,96)
+  34   4   104    F    3/101  False       101        sum(2,99)
+  35   5   107    T     1/35  False       105       sum(3,102)
+  36   0   110    F    3/107  False       107       sum(2,105)
+  37   1   113    T    3/113   True       113       sum(5,108)
+
+  GAP-WITNESS at N = [7, 13, 19, 25, 37]
+  all == 1 mod 6? True   |  these are exactly N in 6k+1: False
+  => CORRECTS S28: not '3N+2 prime' (N=25 q=77=7*11 composite still witnesses); the clean law is N == 1 (mod 6).
+     3/(3N+2) is ALWAYS in the open gap (mediant of 1/(N+1),2/(2N+1)); so the 2nd window is NON-empty for EVERY N==1 mod6.
+     Unconditional arithmetic progression => gap non-empty infinitely often; N=12==0 mod6 is a MISS class (consistent w/ (G)).

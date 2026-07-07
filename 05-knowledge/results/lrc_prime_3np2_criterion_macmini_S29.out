@@ -1,0 +1,31 @@
+S_N={1..N-2}u{N,3(N-1)}: mediant 3/(3N+2) achieved <=> 3N+2 prime?
+
+   N  3N+2  prime?   M(S_N)  mediant  ACHIEVED
+   4    14   False     3/11     3/14     False
+   5    17    True      1/5     3/17     False
+   6    20   False     3/17     3/20     False
+   7    23    True     3/23     3/23      True
+   8    26   False     3/23     3/26     False
+   9    29    True      1/9     3/29     False
+  10    32   False     3/29     3/32     False
+  11    35   False     1/11     3/35     False
+  12    38   False     3/35     3/38     False
+  13    41    True     3/41     3/41      True
+  14    44   False     3/41     3/44     False
+  15    47    True     1/15     3/47     False
+  16    50   False     3/47     3/50     False
+  17    53    True     1/17     3/53     False
+  18    56   False     3/53     3/56     False
+  19    59    True     3/59     3/59      True
+  20    62   False     3/59     3/62     False
+  21    65   False     1/21     3/65     False
+  22    68   False     3/65     3/68     False
+  23    71    True     1/23     3/71     False
+  24    74   False     3/71     3/74     False
+  25    77   False     3/77     3/77      True
+  26    80   False     3/77     3/80     False
+
+  mediant ACHIEVED (via S_N) at N = [7, 13, 19, 25]
+  3N+2 PRIME at N = [5, 7, 9, 13, 15, 17, 19, 23]
+  => if these MATCH: mediant-achievable(S_N) <=> 3N+2 prime => by DIRICHLET, achievable for INFINITELY MANY N.
+     The gap is NONEMPTY infinitely often (non-monotonic, arithmetic) -- the LRC is NEVER 'eventually rigid'.

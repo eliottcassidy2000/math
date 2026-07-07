@@ -114,3 +114,10 @@ opus-S118's arithmetic criterion explicit for the canonical construction:
 `3N+2` (or a nearby factorable denominator) hands the lever an intruding witness that
 overshoots the gap. (One construction; the full (O-mediant) still needs all
 families — the fleet's ~9k-family sweep is authoritative for N=12 emptiness.)
+
+**S29 CORRECTION.** The "prime `3N+2`" clause above is WRONG. Extending the range,
+`N=25` (`q=77 = 7·11`, composite) *is* a gap-witness — so prime `q` is neither
+necessary nor governing (it was a coincidence at `N=7,13,19`). The concurrent
+HYP-4572 trichotomy gives the correct law **`N ≡ 1 (mod 6)`**, with a sporadic
+exception at `N=31` (binder-5 degenerate; `M` falls to the floor `1/32`). See
+HYP-4592 / `the-two-sided-witness-competition-...-macmini-S29.md`.

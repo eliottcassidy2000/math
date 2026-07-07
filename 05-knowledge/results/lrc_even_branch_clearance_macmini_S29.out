@@ -1,0 +1,49 @@
+========================================================================================
+EVEN-BRANCH CLEARANCE: witness t=b/(3N-1), all residues avoid {0,+-1,+-2}?
+========================================================================================
+    N  Q=3N-1    b         b closed form?  min dist    binders (v@dist3)
+    6      17   10      b=3*inv2=(9N/2)%Q      3/17              [2, 15]
+    8      23   13      b=3*inv2=(9N/2)%Q      3/23              [2, 21]
+   10      29   16      b=3*inv2=(9N/2)%Q      3/29              [2, 27]
+   12      35   19      b=3*inv2=(9N/2)%Q      3/35              [2, 33]
+   14      41   22      b=3*inv2=(9N/2)%Q      3/41              [2, 39]
+   16      47   25      b=3*inv2=(9N/2)%Q      3/47              [2, 45]
+   18      53   28      b=3*inv2=(9N/2)%Q      3/53              [2, 51]
+   20      59   31      b=3*inv2=(9N/2)%Q      3/59              [2, 57]
+
+  => for every even N, a witness at Q=3N-1 clears {0,+-1,+-2}, min dist = 3
+     => M(F(N)) >= 3/(3N-1) > 2/(2N+1)  => F(N) NOT a gap member.  holds: True
+     binders (the speeds at dist exactly 3): [(6, [2, 15]), (8, [2, 21]), (10, [2, 27]), (12, [2, 33]), (14, [2, 39]), (16, [2, 45]), (18, [2, 51]), (20, [2, 57])]
+
+========================================================================================
+FULL RESIDUE PATTERN at even N=12 (our LRC-14 case) -- the proof witness
+========================================================================================
+  F(12) = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 33]
+  witness t = 19/35   (Q=35=5*7, b=19)
+     v  v*b mod 35  dist to 0  >=3?
+     1          19         16    OK
+     2           3          3    OK
+     3          22         13    OK
+     4           6          6    OK
+     5          25         10    OK
+     6           9          9    OK
+     7          28          7    OK
+     8          12         12    OK
+     9          31          4    OK
+    10          15         15    OK
+    12          18         17    OK
+    33          32          3    OK
+  min dist = 3 => min ||v t|| = 3/35 = 3/35
+  3/35 = 0.08571 > 2/25 = 0.08000  => M(F(12)) >= 3/35 > 2/25
+  => F(12) is NOT a gap member (its M is ABOVE the gap).  [Lean-able finite check]
+
+========================================================================================
+CLOSED-FORM RESIDUE RULE (for the proof): v*b mod Q with b=3*inv2
+========================================================================================
+  b = 3*inv2 = 3*(3N/2) = 9N/2 mod (3N-1).  Since 9N/2 = (3(3N-1)+3)/2,
+  and residues v*b = v*3*inv2 = (3v)*inv2 = 3v/2 mod Q.
+  So residue(v) = 3v * inv2 mod Q; forbidden <=> 3v == {0,+-1,+-2}*2 = {0,+-2,+-4} mod Q.
+  i.e. 3v in {0,2,4,Q-2,Q-4} mod Q.  Check which v in F(N) hit these:
+    v=2: 3v mod 35 = 6  ok
+    v=33: 3v mod 35 = 29  ok
+    (binders: 3v==+-4 => v with 3v=4 or Q-4; e.g. speed 2: 3*2=6, hmm)

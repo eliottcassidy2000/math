@@ -1,0 +1,17 @@
+WITNESS COMPETITION: S_N is a gap-witness iff intended q=3N+2 holds clearance 3 AND no competitor overshoots.
+Two failure modes: OVERSHOOT (M>gap-top, e.g. N=12) vs DEGRADE (intended clearance<3 => M<=floor, e.g. N=31).
+
+    N           gap window   M(S_N)  q=3N+2 clr           M vs gap
+    7 (0.1250,0.1333)     3/23        3/23       ** IN GAP **
+   12 (0.0769,0.0800)     3/35        3/38 OVERSHOOT (too big)
+   13 (0.0714,0.0741)     3/41        3/41       ** IN GAP **
+   19 (0.0500,0.0513)     3/59        3/59       ** IN GAP **
+   25 (0.0385,0.0392)     3/77        3/77       ** IN GAP **
+   31 (0.0312,0.0317)     1/32        2/95  DEGRADE (<=floor)
+   37 (0.0263,0.0267)    3/113       3/113       ** IN GAP **
+   43 (0.0227,0.0230)    3/131       3/131       ** IN GAP **
+
+  N=12: intended q=38 holds clr 3 BUT competitor q=35 (=2+33) also clr 3 => 3/35 OVERSHOOTS the gap-top 2/25.
+  N=31: intended q=95 clearance DROPS below 3 (AP elt collides in width-2 hole) => M falls to floor 1/32.
+  => gap-witness = a NARROW two-sided target; hit only when intended clr=3 AND dominates. No clean congruence:
+     generic 6k+1 hits it, but N=31 (6k+1) misses by a power-of-two doubling intruder. Arithmetic, per opus-S118.
