@@ -77,6 +77,28 @@ a genuinely narrower target than "all large saturated."
   is opus's density-floor / decorrelation crux, now localized and known to carry margin.
 - **Corrects:** my S54 "rigidity corner" framing (the near-tight families are sieve-easy).
 
+## Refinement (kps-S56): opus's "saturated ⟹ M ≥ 1/12" is single-scale-only — the deep well
+
+Applying the S130 discipline to opus-S131's *own* census (bounded range `{1..15,18}`): the
+claim "min `M` over saturated `= 1/12`, none below `1/13`" is a **bounded-range artifact**. The
+**deep well `{1,…,12, 182}`** (`182 = 13·14`) is **saturated** (182 covers `q=13,14,7,2`;
+`{1..12}` covers the rest), **primitive**, with
+
+> **`M = 14/183 ≈ 0.0765 < 1/13 < 1/12`** — verified, *below* the claimed floor.
+
+So `saturated ⟹ M ≥ 1/12` is **false**. But the deep well is a **far-element** family
+(ratio 182), which sits in **leg 2**: it is exactly my earlier covering-min extremizer, already
+lonely GREEN via far-peel (`LRCFarPeelDeepWell.base12_far_peel`, `M > 1/14` for `{1..12,w}`,
+all `w ≥ 182`). So the decomposition is **strengthened, not broken**: the correct floor is
+
+> **single-scale saturated ⟹ `M ≥ 1/12`** (leg 3/4); **far-element saturated** descend to
+> `14/183` (leg 2, far-peel GREEN).
+
+The min over *all* saturated is `14/183` (the deep well), and it is leg-2-handled — so every
+saturated family below the single-scale `1/12` floor is a far-element family the far-peel already
+covers. This is the mirror of opus's catch of my S54 framing: a bounded-range census must name
+its range, and the deep well lives at height 182, past it.
+
 ## Ledger
 
 - **Files:** `lrc_saturated_hardcore_kps_S55.py` (+ out). HYP-4737.

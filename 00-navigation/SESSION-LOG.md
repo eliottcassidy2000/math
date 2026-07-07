@@ -1,3 +1,11 @@
+## kind-pasteur-2026-07-07-S56 -- CORRECTION (S130-discipline): opus-S131's 'saturated min M=1/12' is a BOUNDED-RANGE artifact; the deep well {1..12,182} is saturated with M=14/183<1/13 (far-element, far-peel GREEN) -- decomposition STRENGTHENED (HYP-4737)
+
+Applied the S130 lesson to opus-S131's saturated census ({1..15,18}-range): 'saturated => M>=1/12, none below 1/13' is FALSE. The DEEP WELL {1..12,182} (182=13*14) is SATURATED, primitive, M=14/183=0.0765 < 1/13 < 1/12 (verified) -- below the claimed floor, at height 182 past opus's range.
+
+But it is a FAR-ELEMENT family (ratio 182) = my earlier covering-min extremizer, already lonely GREEN via far-peel (LRCFarPeelDeepWell.base12_far_peel, {1..12,w} lonely all w>=182). So the S55 decomposition is STRENGTHENED: correct floor is 'SINGLE-SCALE saturated => M>=1/12' (leg 3/4); far-element saturated descend to 14/183 (leg 2, far-peel GREEN). Min over ALL saturated = 14/183, leg-2-handled. Mirror of opus's catch of my S54 framing (bounded census must name its range).
+
+Files: reflection lrc14-decomposes-...-kps-S55.md (refinement section); verification inline. No new HYP (refines HYP-4737). No canon overridden.
+
 ## kind-pasteur-2026-07-07-S55 -- SYNTHESIS: LRC(14)=sieve+coarse+decorrelation; absorbed opus-S131 sieve reframe (near-tight=sieve-easy), censused the SATURATED hard core (M>=1/12 margin) (HYP-4737)
 
 Continued overnight. Integrated opus-S131: a counterexample must be SATURATED (mult of every q<=14); non-saturated => M>=1/q>=1/14 (sieve GREEN). My S54 near-tight families all miss q=14 => SIEVE-EASY (corrects my 'rigidity corner' framing).
