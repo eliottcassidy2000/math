@@ -95,7 +95,9 @@ At k=8 the Bonferroni base `1 − 7θ = 0`, so Hunter's inequality on the 7 hit 
 ENDPOINT vertex (all differences same-sign) gives, with any spanning tree T:
 > **`μ_{1/7}(E₈) ≥ meas W_endpoint ≥ Σ_{(a,b)∈T} m(d_a,d_b) ≥ 6·θ² = 6/49 ≈ 0.1224`**
 — the **first diameter-free rigorous uniform floor at the binding leg** (modulo the
-half-page pair-mass lemma). The k=9 variant survives: `≥ 8θ² − 1/7 = 1/49 > 0`; dies at
+half-page pair-mass lemma). ~~The k=9 variant survives: `≥ 8θ² − 1/7 = 1/49 > 0`~~ **[CORRECTED klein-S156, MISTAKE-122:
+a tree on 8 events has 7 edges — the bare k=9 floor is `1 − 8/7 + 7/49 = 0` EXACTLY; positive k=9
+floors need THM-638's G₊-terms or higher Bonferroni]**; dies at
 k ≥ 10 (base too negative). Adversarial min of the best-vertex signed Hunter floor:
 0.1753 (consistent, > 6/49). It does NOT reach 0.675 — its role is the R-route below.
 

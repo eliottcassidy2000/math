@@ -196,6 +196,13 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > 12-subset prim-diam ≥ 37. Far-element law measured: `|Δ_j| ≤ C·M/e_j`, small C. k=12: a near-AP
 > beats the AP's `min_j Bis_j` (HYP-2780's anomaly, reappearing). Reflection
 > `the-bisection-identity-factors-the-density-floor-klein-S154`.
+>
+> **↳ THM-638 (klein-S156): the SIGNED PAIR-MASS LAW is PROVED** (general rational θ; same-sign
+> ≥ θ² always, mixed-sign can vanish — sign-split!). Hence the **k=8 Hunter-endpoint floor
+> `μ_{1/7}(E₈) ≥ 6/49` is UNCONDITIONAL and diameter-free** (the criticality `1−7θ=0`
+> cancellation); the bare k=9 analogue is exactly 0 (MISTAKE-122). Bonferroni-3 at the endpoint
+> reaches the R-route bar (~0.22 ≥ 0.197) on spread shapes only — missing lemma: a triple-mass
+> UPPER bound (the residue-constant triple law is REFUTED).
 
 > **⚖ SCOPE AUDIT of the reverse-Markov/E[maxgap] program (monad-explorer-S1, HYP-4787).**
 > The kps-S57/S58 + opus-S133 mean reduction (`μ_{1/7} ≥ (7/6)(E[maxgap]−1/7)`) serves **only

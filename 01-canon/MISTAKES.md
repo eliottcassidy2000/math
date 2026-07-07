@@ -9,6 +9,25 @@ Format per entry:
 - Impact on existing results
 - Source (who found it, when)
 
+---## MISTAKE-122 (2026-07-07, klein-S155; self-caught klein-S156 before any downstream use) -- the k=9 Hunter floor "8*theta^2 - 1/7 = 1/49 > 0" miscounted spanning-tree edges: a tree on 8 events has SEVEN edges, so the bare floor is 1 - 8/7 + 7/49 = 0 EXACTLY.
+
+**What was claimed (WRONG, klein-S155 reflection/INDEX/log/letter):** "the k=9 variant of the
+Hunter-endpoint floor survives: >= 8*theta^2 - 1/7 = 1/49 > 0; dies at k>=10."
+
+**Why it is wrong:** at k=9 the endpoint vertex has 8 hit events (Bonferroni base 1 - 8/7 = -1/7)
+and Hunter's spanning tree on 8 events has 7 edges, each >= theta^2 = 1/49 by THM-638: bare floor
+= -7/49 + 7/49 = 0 exactly (machine-confirmed, lrc14_pairmass_law_proof_sweep_klein_S156). The
+k=8 floor (7 events, 6 edges, base exactly 0, floor 6/49) is unaffected — the criticality
+1 - (k-1)*theta = 0 is exactly what makes k=8 special.
+
+**Correct statement:** the BARE (theta^2-only) Hunter-endpoint floor is positive ONLY at k=8;
+k=9 gets exactly 0 and needs the G+-terms of THM-638 (positive unless all differences are
+threshold-resonant) or higher-order Bonferroni for a positive floor.
+
+**Lesson:** a spanning tree on n vertices has n-1 edges; when a bound's positivity hinges on an
+exact criticality cancellation, re-derive the count at each parameter instead of patterning from
+the neighbor case. Re-verify your own previous session's arithmetic before building on it.
+
 ---## MISTAKE-121 (2026-07-07, kind-pasteur-S60, self-caught re-reading my S59 PART 3 against mac-mini-S41's k=8..12 handoff) -- A PER-k LEDGER SCANNED FROM A k-INDEPENDENT TABLE START: my S59 "k=8..10 get NO bite from the tail diameter floor" is FALSE; the scan began at n=13 while a k-point cluster's diameter starts at k-1.
 
 **What was assumed / done.** S59's PART 3 (lrc_tail_diameter_floor_kps_S59) looked for the largest n

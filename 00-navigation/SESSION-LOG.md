@@ -1,3 +1,20 @@
+## klein-2026-07-07-S156 -- THM-638 PROVED: the SIGNED PAIR-MASS LAW at general rational thresholds (same-sign >= theta^2 always; mixed-sign can vanish => sign-splitting mandatory) -- the k=8 Hunter floor 6/49 is now UNCONDITIONAL; triple law refuted; Bonf3 fails at AP / holds ~0.22 on spread; MISTAKE-122 owned (HYP-4801)
+
+Prompt (owner): work the lemma-sized targets of S155 (the table-exact law and others), similar session.
+
+THM-638 (PROVED, half page: Bezout offset enumeration + the floor identity floor(y)-floor(y-a-rho) = a + 1[frac(y)<rho], integrate the indicator over the second window): for coprime q1,q2, theta = c/s lowest terms, r_i = c q_i mod s:
+  SAME-SIGN: meas{frac(q1 x), frac(q2 x) in (0,theta]} = theta^2 + min(r)(s-max(r))/(s^2 q1q2) >= theta^2 ALWAYS (equality iff s | c q_i -- THM-637's apex-invisibility = the vanishing rows);
+  MIXED-SIGN: = theta^2 - min(r1r2, (s-r1)(s-r2))/(s^2 q1q2) <= theta^2, exact zeros exist ((1,-1),(-3,4),(2,-5) at 1/7) => SIGN-SPLITTING IS MANDATORY on one-sided windows (theorem-level guardrail);
+  correction always <= 1/(4 q1q2). VERIFIED EXHAUSTIVELY: 1101 same-sign q<=60 + 979 mixed q<=40 at 1/7 + 555 pairs x both signs at each of 1/4, 1/5, 1/6, 1/9, 2/7, 3/8 -- 0 violations. (The 2/7 rows feed kps-S60's ledger pair layer.)
+CONSEQUENCES: the k=8 CRITICALITY FLOOR IS UNCONDITIONAL -- mu_{1/7}(E) >= 6/49 for EVERY 8-element integer set (Hunter proved inline; base 1-7theta = 0 exactly); first diameter-free rigorous uniform floor on the binding THM-530 leg.
+MISTAKE-122 (owned, self-caught before downstream use): my S155 k=9 claim "8theta^2 - 1/7 = 1/49 > 0" counted 8 edges on a tree of 8 events -- trees have n-1 edges; bare k=9 floor = 0 EXACTLY (machine-confirmed). S155 reflection + HYP-4791 bannered. Lead: the k=9 all-resonant case (all endpoint differences = 0 mod 7) collapses by dilation -- G+-positivity otherwise; k=9 may yet get a positive law-based floor.
+TRIPLE LAW REFUTED (simple form): m123 = theta^3 + theta SumG_ij/(q_iq_j) + H/(q1q2q3) with residue-constant H FAILS (12/107 classes vary; H in [0.006, 20], all positive in probes -- genuinely 3-dim lattice geometry). The open route to S3-control is an upper BOUND H <= C(spread), not a law.
+BONFERRONI-3 ENDPOINT (exact S2 - S3, rigorous per shape): AP = -0.134 (S3 = 0.894 explodes, nested differences), spread/two-cluster ~ 0.22 >= 0.197 (R-route bar); adversarial min = -0.134 AT THE AP-TRANSLATE -- Bonf3 fails exactly on shapes ALREADY PROVED (kps-S60 diam<=11) or VERIFIED (S155 band 12-26). (ii)-target rescoped: Bonf3 >= 0.197 for diam >= 27, missing lemma = the triple upper bound (with it, the chain gives >= 16/49 - o(1) for genuinely spread). (iii) R >= 0.75: not advanced (S155 numbers stand).
+FILES: THM-638 canon file (full proof + Hunter inline); 04-computation/lrc14_pairmass_law_proof_sweep_klein_S156.py (+out); MISTAKE-122; HYP-4801; backlog rescope; S155 banners. Pushed 3x.
+NEXT: (a) triple-mass UPPER bound (the one lemma between Bonf3 and the spread residual at the R-route bar); (b) R >= 0.75 at k=8 (THM-579-shaped); (c) Lean: THM-638 is floor-arithmetic -- native_decide-per-instance trivial, symbolic law a small real proof; (d) k=9 law-based floor via G+-positivity + the dilation collapse of the all-resonant case.
+
+---
+
 ## opus-2026-07-07-S135 -- THE ROOF IS PROVED AND GREEN: self-contained citation-free proof (divisibility contradiction) + LRCFareyRoof.lean kernel-pure; the fleet's 'modulo roof' caveat discharged at the pointwise level (THM-637 PROVED, HYP-4852)
 
 Prompt (owner): another similar session, work the most high-leverage angles, pull in incoming work as it appears.
