@@ -1,0 +1,29 @@
+=== PART 1: N=6 witness for 5/33 (residue search, speeds mod 33 in {5..28}) ===
+  total 6-subsets of {5..28} with M=5/33: 0
+
+=== PART 2: NON-MONOTONICITY MAP -- structured gap members by N and order ===
+    N  N%6            gap                  best structured gap member   k
+    5    5     (1/6,2/11)                  (no structured gap member)
+    6    0     (1/7,2/13)                  (no structured gap member)
+    7    1     (1/8,2/15)                 [1, 2, 3, 4, 5, 7, 18]=3/23   2
+    8    2     (1/9,2/17)                  (no structured gap member)
+    9    3    (1/10,2/19)                  (no structured gap member)
+   10    4    (1/11,2/21)                  (no structured gap member)
+   11    5    (1/12,2/23)                  (no structured gap member)
+   12    0    (1/13,2/25)                  (no structured gap member)
+   13    1    (1/14,2/27)  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36]=3/41   2
+   14    2    (1/15,2/29)                  (no structured gap member)
+   15    3    (1/16,2/31)                  (no structured gap member)
+   16    4    (1/17,2/33)                  (no structured gap member)
+
+  by N%6:
+    N==0 mod 6: N=['6', '12']  orders k=['None', 'None']
+    N==1 mod 6: N=['7', '13']  orders k=['2', '2']
+    N==2 mod 6: N=['8', '14']  orders k=['None', 'None']
+    N==3 mod 6: N=['9', '15']  orders k=['None', 'None']
+    N==4 mod 6: N=['10', '16']  orders k=['None', 'None']
+    N==5 mod 6: N=['5', '11']  orders k=['None', 'None']
+
+READING: mediant (k=2) at N==1 mod 6 (mac-mini). Deeper orders fill other residues where
+they can. N=12 (==0 mod 6) shows no structured gap member here => consistent with EMPTY;
+N=6 (==0 mod 6) DID (5/33 order-3) -- so N%6 alone does NOT decide order-3 (the real crux).

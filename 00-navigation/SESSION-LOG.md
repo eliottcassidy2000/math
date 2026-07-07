@@ -1146,6 +1146,22 @@ FILES: lrc_G_decomposition_tests_macmini_S54.out; HYP-4101.
 
 NEXT: (a) the double-lift floor lemma (sieve-survivor characterization + closed form; the (4,6)/a=6 equality seeds it -- one THM-621-style session); (b) the stability-margin regime split written precisely; (c) klein/kps: the (U) thread gets the same frame (c=1 attainment rigidity); the attainer set is a concrete new test case for the rigidity tools.
 
+## kind-pasteur-2026-07-06-S39 -- the ORDER-3 members are DILATED APs + boundary defects; N=12 empty over the RIGHT structure; CORRECTS S38; closes ro=5 sub-q (HYP-4547)
+
+Prompt (owner): keep going (arithmetic / ro=5 threads).
+
+mac-mini HYP-4572 (mediant F(N) gap member <=> N==1 mod 6) CLOSES my S38 ro=5 sub-q. Then went one order deeper:
+
+N=6 ORDER-3 WITNESS FOUND: {1,5,6,11,16,17}=5/33 at t=10/33 = DILATED AP {1,6,11,16} (spacing d=5) + boundary defects {5,17}. Order-3 members are DILATED APs, structurally distinct from mediant spacing-1 ladder families.
+
+SELF-CORRECTION of S38: my S38 order-3 check used spacing-1 LADDER bases -- WRONG structure (cannot make dilated APs). Re-checked PROPERLY: dilated-AP+defect search at N=12 (d=2..7, L=8..11, max<=64) = 146757 families => 0 gap members, 0 order-3. Order-3 EMPTY at N=12 over the correct structure. Conclusion survives; method fixed.
+
+NON-MONOTONICITY: N=6 nonempty (order-3 dilated), N=7,13 (mediant N==1 mod6), N=12 empty (mediant fails by parity AND order-3 dilated absent). Lives in deeper constructions, not the mediant.
+
+OPEN (arithmetic): why dilated-AP order-3 at N=6 (q=33=3*11, speed 11=factor) but not N=12 (51=3*17,63=3^2*7)? Factorization criterion for 4N+3,5N+3 = order-3 analog of N==1 mod6.
+
+FILES: lrc_order3_construction_kps_S39.py(+.out), lrc_order3_dilated_n12_kps_S39.py(+.out); reflection order-3-members-are-dilated-aps-kps-S39.md; HYP-4547. No Lean. No canon overridden (S38 self-corrected).
+
 ## kind-pasteur-2026-07-06-S38 -- RECONCILE the ladder with opus's ARITHMETIC obstruction (non-monotonic!); order-3 empty via ladder; GUARD-RAIL the width narrative (MISTAKE-114) (HYP-4537)
 
 Prompt (owner): take on order k=3 + relevant inspired tasks.

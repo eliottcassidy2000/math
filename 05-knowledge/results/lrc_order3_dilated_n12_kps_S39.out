@@ -1,0 +1,12 @@
+=== N=12 DILATED-AP + defect search for order-3 (4/51,5/63) and ANY gap member ===
+  (N=6 template: AP spacing d=5 + boundary defects; scanning d, length L, defects)
+
+  tested ~146757 dilated-AP+defect families (max<=64)
+  ANY gap member (M in (1/13,2/25)): 0
+  ORDER-3 hits (M in {4/51,5/63}): 0
+
+======================================================================
+RESULT: no dilated-AP+defect family (max<=64) lands in the N=12 gap -- so the order-3
+structure that makes N=6 nonempty (5/33) does NOT reproduce at N=12 up to this height.
+This is the PROPER order-3 check (S38's was over the wrong, spacing-1, structure).
+Consistent with mac-mini census (height 48) + opus emptiness -- now over the right class.
