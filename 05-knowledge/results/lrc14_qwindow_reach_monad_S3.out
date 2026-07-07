@@ -1,0 +1,49 @@
+==============================================================================
+PART 1 -- calibrate the q-window reach boundary D_c/Vmax per q
+==============================================================================
+  predicted sufficient: D_c/Vmax < (7-q)/(14q); measure the TRUE boundary
+  (worst over random cluster shapes at each D_c; P chosen q-surviving)
+  q=2 P=(1, 3, 5) pred<0.1786: 0.25x:0.2442Y 0.50x:0.2385Y 0.90x:0.2288Y 1.50x:0.2117Y 3.00x:0.1592Y 8.00x:0.0047n   [Y = witness >= 1/14 certified on all 24 shapes]
+  q=3 P=(1, 2, 5) pred<0.0952: 0.25x:0.1648Y 0.50x:0.1630Y 0.90x:0.1601Y 1.50x:0.1557Y 3.00x:0.1451Y 8.00x:0.1083Y   [Y = witness >= 1/14 certified on all 24 shapes]
+  q=5 P=(1, 2, 3) pred<0.0286: 0.25x:0.0998Y 0.50x:0.1002Y 0.90x:0.0995Y 1.50x:0.1012Y 3.00x:0.1021Y 8.00x:0.1144Y   [Y = witness >= 1/14 certified on all 24 shapes]
+  q=6 P=(1, 5, 7) pred<0.0119: 0.25x:0.0835Y 0.50x:0.0835Y 0.90x:0.0843Y 1.50x:0.0835Y 3.00x:0.0842Y 8.00x:0.0854Y   [Y = witness >= 1/14 certified on all 24 shapes]
+
+==============================================================================
+PART 2 -- kill-set classification: P with NO surviving q in {2..6}
+==============================================================================
+  |P|=1 (k=12): 0/13 kill-all P's
+  |P|=2 (k=11): 2/78 kill-all P's; e.g. [(5, 12), (10, 12)]
+  |P|=3 (k=10): 25/286 kill-all P's; e.g. [(1, 5, 12), (1, 10, 12), (2, 5, 12), (2, 10, 12)]
+  |P|=4 (k=9): 132/715 kill-all P's; e.g. [(1, 2, 5, 12), (1, 2, 10, 12), (1, 3, 5, 12), (1, 3, 10, 12)]
+  |P|=5 (k=8): 398/1287 kill-all P's; e.g. [(1, 2, 3, 5, 12), (1, 2, 3, 10, 12), (1, 2, 4, 5, 6), (1, 2, 4, 5, 12)]
+
+==============================================================================
+PART 3 -- the genuine hard core: kill-all P + tight cluster; direct M probe
+==============================================================================
+  (these shapes have NO q<=6 window; LRC14 says they are still lonely --
+   measure the actual witness structure at moderate Vmax)
+  P=(5, 12) (k=11 kill-all #1) Vmax=1009 Dc=12: M >= 0.22682 (OK) at tau~0.954636 ~ 21/22
+  P=(5, 12) (k=11 kill-all #1) Vmax=1009 Dc=60: M >= 0.23897 (OK) at tau~0.313419 ~ 11/35
+  P=(5, 12) (k=11 kill-all #1) Vmax=10007 Dc=12: M >= 0.22373 (OK) at tau~0.955254 ~ 43/45
+  P=(5, 12) (k=11 kill-all #1) Vmax=10007 Dc=400: M >= 0.23398 (OK) at tau~0.882359 ~ 15/17
+  P=(10, 12) (k=11 kill-all #2) Vmax=1009 Dc=12: M >= 0.32148 (OK) at tau~0.032386 ~ 1/31
+  P=(10, 12) (k=11 kill-all #2) Vmax=1009 Dc=60: M >= 0.27856 (OK) at tau~0.371166 ~ 13/35
+  P=(10, 12) (k=11 kill-all #2) Vmax=10007 Dc=12: M >= 0.30827 (OK) at tau~0.030846 ~ 1/32
+  P=(10, 12) (k=11 kill-all #2) Vmax=10007 Dc=400: M >= 0.26854 (OK) at tau~0.144044 ~ 1/7
+  P=(4, 5, 6) (k=10 kill-all minimal) Vmax=1009 Dc=12: M >= 0.20927 (OK) at tau~0.052319 ~ 1/19
+  P=(4, 5, 6) (k=10 kill-all minimal) Vmax=1009 Dc=60: M >= 0.21302 (OK) at tau~0.885669 ~ 31/35
+  P=(4, 5, 6) (k=10 kill-all minimal) Vmax=10007 Dc=12: M >= 0.19539 (OK) at tau~0.048846 ~ 2/41
+  P=(4, 5, 6) (k=10 kill-all minimal) Vmax=10007 Dc=400: M >= 0.24472 (OK) at tau~0.082216 ~ 4/49
+  P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13) (m_P-attaining P* (THM-530)) Vmax=1009 Dc=12: M >= 0.10525 (OK) at tau~0.263159 ~ 5/19
+  P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13) (m_P-attaining P* (THM-530)) Vmax=1009 Dc=60: M >= 0.10525 (OK) at tau~0.263159 ~ 5/19
+  P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13) (m_P-attaining P* (THM-530)) Vmax=10007 Dc=12: M >= 0.10525 (OK) at tau~0.263159 ~ 5/19
+  P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13) (m_P-attaining P* (THM-530)) Vmax=10007 Dc=400: M >= 0.10525 (OK) at tau~0.263159 ~ 5/19
+
+==============================================================================
+PART 4 -- verdict inputs
+==============================================================================
+  If Part 1 confirms the (7-q)/(14q) boundary (with a safety factor), the
+  q-window lemma gives EXPLICIT unconditional reach for every mixed shape
+  with a surviving q and tight-enough cluster -- replacing Part A's sketch
+  on that domain.  The honest 1/14 residual = kill-all-P shapes (Part 2 count)
+  + wide clusters (D_c/Vmax above the boundary; recurse via peel/THM-608).

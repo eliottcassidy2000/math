@@ -1,0 +1,25 @@
+COMPOSITE WINDOW CENSUS: clearing (q,c), q in [14-|P|,13], for ALL P (|P|=1..5)
+needs margin >= 1/14 ~ 0.0714 + drift slack; grid room = 2/q - 1/7 > 0 for q<=13
+  |P|=1: worst margin 0 ~ 0.00000 at P=(13,) via None/None (grid room 2/None-1/7 = 13/7 ~ 1.85714); below-bar: 1
+      BELOW: P=(13,) best 0 at None/None
+  |P|=2: worst margin 0 ~ 0.00000 at P=(12, 13) via None/None (grid room 2/None-1/7 = 13/7 ~ 1.85714); below-bar: 3
+      BELOW: P=(5, 13) best 1/12 at 1/12
+      BELOW: P=(7, 13) best 1/12 at 1/12
+      BELOW: P=(12, 13) best 0 at None/None
+  |P|=3: worst margin 0 ~ 0.00000 at P=(11, 12, 13) via None/None (grid room 2/None-1/7 = 13/7 ~ 1.85714); below-bar: 3
+      BELOW: P=(5, 11, 13) best 1/12 at 1/12
+      BELOW: P=(7, 11, 13) best 1/12 at 1/12
+      BELOW: P=(11, 12, 13) best 0 at None/None
+  |P|=4: worst margin 0 ~ 0.00000 at P=(10, 11, 12, 13) via None/None (grid room 2/None-1/7 = 13/7 ~ 1.85714); below-bar: 3
+      BELOW: P=(5, 10, 11, 13) best 1/12 at 1/12
+      BELOW: P=(7, 10, 11, 13) best 1/12 at 1/12
+      BELOW: P=(10, 11, 12, 13) best 0 at None/None
+  |P|=5: worst margin 0 ~ 0.00000 at P=(9, 10, 11, 12, 13) via None/None (grid room 2/None-1/7 = 13/7 ~ 1.85714); below-bar: 3
+      BELOW: P=(5, 9, 10, 11, 13) best 1/12 at 1/12
+      BELOW: P=(7, 9, 10, 11, 13) best 1/12 at 1/12
+      BELOW: P=(9, 10, 11, 12, 13) best 0 at None/None
+
+  OVERALL worst clearing margin: 0 ~ 0.00000 at ((13,), None, None)
+  If 0 below-bar everywhere: LEMMA COMPLETE -- every mixed shape with
+  D_c/Vmax below the explicit room budget reaches 1/14 by construction;
+  no density floor, no Part A, on the tight-cluster domain.

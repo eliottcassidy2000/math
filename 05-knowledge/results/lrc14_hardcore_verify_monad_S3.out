@@ -1,0 +1,17 @@
+PART A -- route classification for ALL P, |P|=1..5
+  |P|=1: midgrid(q<=6): 13  freeslot(q in (13-|P|,13]): 0  HARD (no route): 0
+  |P|=2: midgrid(q<=6): 76  freeslot(q in (13-|P|,13]): 2  HARD (no route): 0
+  |P|=3: midgrid(q<=6): 261  freeslot(q in (13-|P|,13]): 25  HARD (no route): 0
+  |P|=4: midgrid(q<=6): 583  freeslot(q in (13-|P|,13]): 131  HARD (no route): 1
+  |P|=5: midgrid(q<=6): 889  freeslot(q in (13-|P|,13]): 397  HARD (no route): 1
+  HARD small parts: [(10, 11, 12, 13), (9, 10, 11, 12, 13)]
+
+PART B -- the hard cores with CRT-surjective clusters: witness structure probe
+  k=8 core P=(9, 10, 11, 12, 13) cluster[1120..1127] surj={7: True, 8: True, 9: False}: M >= 0.35804 (OK) at tau~0.040498 ~ 7/173 (nearest q<=13 rational 1/13, dist 3.64e-02)
+  k=8 core P=(9, 10, 11, 12, 13) cluster[11200..11207] surj={7: True, 8: True, 9: False}: M >= 0.35880 (OK) at tau~0.039943 ~ 1/25 (nearest q<=13 rational 1/13, dist 3.70e-02)
+  k=9 core P=(10, 11, 12, 13) cluster[1512..1520] surj={7: True, 8: True, 9: True}: M >= 0.35602 (OK) at tau~0.035950 ~ 5/139 (nearest q<=13 rational 0, dist 3.59e-02)
+  k=9 core P=(10, 11, 12, 13) cluster[15120..15128] surj={7: True, 8: True, 9: True}: M >= 0.35672 (OK) at tau~0.964328 ~ 27/28 (nearest q<=13 rational 1, dist 3.57e-02)
+
+PART C -- G_P sizes at the hard cores (the floor demand there is comfortable)
+  meas(G_P) for P=(9, 10, 11, 12, 13): 40247/90090 ~ 0.44674  (vs m_P = 0.05649)
+  meas(G_P) for P=(10, 11, 12, 13): 1577/3003 ~ 0.52514  (vs m_P = 0.05649)

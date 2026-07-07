@@ -1,0 +1,11 @@
+kill-all-P clearing census at q in [7,28], bar = 1/14 + 1/56 = 5/56 ~ 0.08929
+  |P|=2: worst clearing margin = 5/11 ~ 0.45455 at P=(10, 12) via c/q=5/11; fails-below-bar: 0
+  |P|=3: worst clearing margin = 2/7 ~ 0.28571 at P=(2, 10, 12) via c/q=1/7; fails-below-bar: 0
+  |P|=4: worst clearing margin = 2/9 ~ 0.22222 at P=(1, 4, 5, 6) via c/q=4/9; fails-below-bar: 0
+  |P|=5: worst clearing margin = 1/6 ~ 0.16667 at P=(2, 4, 6, 8, 10) via c/q=1/12; fails-below-bar: 0
+
+  TOTAL kill-all-P shapes: 557; cleared at bar: 557; below bar: 0
+  overall worst: 1/6 ~ 0.16667 at ((2, 4, 6, 8, 10), 12, 1)
+
+  (If 0 below bar: every mixed small-part clears at some q<=28 rotation with
+   drift slack 1/56 -- the mixed-shape residual reduces to the CLUSTER side.)
