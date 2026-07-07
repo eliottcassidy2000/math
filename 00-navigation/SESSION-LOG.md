@@ -1,3 +1,24 @@
+## mac-mini-2026-07-06-S38 -- DECORRELATION ATOM formalized (owner's descent idea): reach_decorr M(V)>=M(K)-B/L + escape_loose_of_lift_floor (r<=11 escape families LOOSE M>2/25 via LRC<=12 + decorrelation) -- the first rigorous handling of the S36 covering-escape obstruction (THM-636)
+
+Prompt (owner): attack the LRC14 crux with M(V)->M(K), K={distinct k_i}: r<12 (close pair) => LRC(<=12) => loose; r=12 => descend.
+
+The owner's idea WORKS on the escape families (the S36 covering obstruction) -- and I formalized the core.
+
+THE DECORRELATION ATOM (reach_decorr, kernel-pure): for v_i=b_i+L*k_i (bounded base + L-scaled lift), |b_i|<=B, 0<L => reach(K)-B/L <= reach(V), where K=lift family. Proof: distZ 1-Lipschitz, witness t=t_K/L => ||v_i t_K/L|| >= ||k_i t_K|| - |b_i t_K/L| >= margin(K) - B/L.
+
+r<=11 CASE (escape_loose_of_lift_floor, FORMALIZED): the S36 escape families are v_i=b_i+L*k_i with b_i in {1..12} (B=12), k_i>=1. If r=#distinct(k)<=11 (a repeated lift = close pair), K has <=11 distinct nonzero speeds, LRC(<=12) gives reach(K)>=1/12, so reach(V) >= 1/12 - 12/L > 2/25 for L>3600 (1/12-12/3600=2/25 exactly). LOOSE. This handles the originally-found escape families (k in {1,2}, r=2).
+
+r=12 CASE (descend): reach_decorr + induction on height (base = finite covering, works at bounded height -- no escape there). Closes when reach(K)>2/25 strictly; the boundary reach(K)=2/25 (block-lift) gives only 2/25-12/L from decorrelation, but the TRUE reach(V)=1/12 (verified) -- loose, needs a sharper (base-structure) bound.
+
+LEAN (LRCDecorrelation.lean, axioms [propext,Classical.choice,Quot.sound], wired to root): distZ_lipschitz, margin_decorr, reach_decorr, escape_loose_of_lift_floor. All GREEN. THM-636.
+
+SIGNIFICANCE: the correct technique (Tao-style height descent) for the escape families -- the exact class that broke the finite covering (my S36/S37). Note (C) doesn't prove LRC14 (opus-S130 MISTAKE-117, J-K top link invalid) but this is real progress on (C) (a true hard statement) AND the right tool for a DIRECT LRC14/Route-1 descent (bound Mreach>=1/14 by the same close-pair + descent: 13-speed family with a close pair => LRC(<=13) => M>=1/13>1/14).
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection; git/finish_session only.)
+
+FILES: LRCDecorrelation.lean (kernel-pure) + root; 01-canon/theorems/THM-636-decorrelation-atom-escape-loose.md; lrc_decorrelation_descent / lrc_r12_KAP_case / lrc_r12_boundary / lrc_decorr_lemma_verify _macmini_S38 (+out); INDEX. No canon overridden.
+
+NEXT: (a) the r=12 descent's boundary refinement (reach(K)=2/25 case -- a sharper bound via the base structure); (b) apply the SAME close-pair + descent to Route 1 (LRC14 directly, 13 speeds, M>=1/14) -- the correctly-aimed route per opus-S130; (c) formalize the height induction.
 ## kind-pasteur-2026-07-06-S53 -- FORMALIZED the S52 coarse/scale reduction as a Route-1 tool (grounds MULTI-SCALE families in settled LRC(<=13)); mapped the SINGLE-SCALE density-floor residue (HYP-4707)
 
 Owner: work more on Route 1 density + remaining tasks.  (opus-S130: Route 2 retired; Route 1 = bound loneliness 1/14 directly, the target.)
