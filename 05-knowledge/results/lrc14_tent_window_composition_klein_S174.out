@@ -1,0 +1,29 @@
+
+===== k=9: bar 0.5622; tent alone 0.4921 =====
+         AP9 diam   8: W_F 0.05241; composed 0.6755 vs mu 0.8401 [ok] -> DISCHARGED
+       comp9 diam   8: W_F 0.05241; composed 0.6755 vs mu 0.8401 [ok] -> DISCHARGED
+     gap-mix diam  15: W_F 0.02628; composed 0.5841 vs mu 0.9197 [ok] -> DISCHARGED
+  mid-spread diam  36: W_F 0.01254; composed 0.5359 vs mu 0.9932 [ok] -> short +0.0263
+   sidon-ish diam  68: W_F 0.00659; composed 0.5151 vs mu 1.0000 [ok] -> short +0.0471
+        wide diam  92: W_F 0.00522; composed 0.5103 vs mu 0.9974 [ok] -> short +0.0519
+      prime9 diam  21: W_F 0.02268; composed 0.5714 vs mu 1.0000 [ok] -> DISCHARGED
+        2AP9 diam  53: W_F 0.00352; composed 0.5044 vs mu 0.9742 [ok] -> short +0.0579
+     dil8AP9 diam  64: W_F 0.00786; composed 0.5196 vs mu 0.8401 [ok] -> short +0.0427
+
+===== k=10: bar 0.4521; tent alone 0.2286 =====
+        AP10 diam   9: W_F 0.11744; composed 0.5026 vs mu 0.7755 [ok] -> DISCHARGED
+      comp10 diam   9: W_F 0.11744; composed 0.5026 vs mu 0.7755 [ok] -> DISCHARGED
+     gap-mix diam  17: W_F 0.05776; composed 0.3633 vs mu 0.8401 [ok] -> short +0.0888
+  mid-spread diam  45: W_F 0.02462; composed 0.2860 vs mu 0.9932 [ok] -> short +0.1661
+        wide diam 126: W_F 0.00927; composed 0.2502 vs mu 0.9962 [ok] -> short +0.2019
+     prime10 diam  27: W_F 0.04454; composed 0.3325 vs mu 1.0000 [ok] -> short +0.1196
+       2AP10 diam  54: W_F 0.00838; composed 0.2481 vs mu 0.9119 [ok] -> short +0.2040
+
+=== k=9 UNIFORM worst-case: all 36 diffs at d=diam (impossible but bounding) ===
+  diam   8: worst-case-bound composed 0.5556 < bar
+  diam  12: worst-case-bound composed 0.5344 < bar
+  diam  16: worst-case-bound composed 0.5238 < bar
+  diam  20: worst-case-bound composed 0.5175 < bar
+  diam  30: worst-case-bound composed 0.5090 < bar
+  diam  40: worst-case-bound composed 0.5048 < bar
+  diam  60: worst-case-bound composed 0.5005 < bar

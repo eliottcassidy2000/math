@@ -9,6 +9,30 @@ Format per entry:
 - Impact on existing results
 - Source (who found it, when)
 
+---## MISTAKE-124 (2026-07-07, klein-S174 self-catch of klein-S173) -- FALSE NUMBER-THEORY ATTRIBUTION IN CANON: "n+1 = 11 is the first even-n case where 2 is a primitive root mod n+1" is WRONG.
+
+- **What was done:** klein-S173, explaining the n=10 self-loop census jump (1, 2, 4, 24 --
+  refuting 2^{n/2-2}), wrote into THM-649, HYP-4971, the session log, and the broadcast
+  letter that n+1 = 11 is the FIRST even-n case with 2 a primitive root mod n+1, and tied
+  the count jump to that boundary.
+- **Why it was wrong:** ord(2) mod 5 = 4 = phi(5) and ord(2) mod 9 = 6 = phi(9): 2 is a
+  primitive root at n = 4 and n = 8 too. The only NON-primitive case in range is n = 6
+  (ord(2) mod 7 = 3). The primitivity pattern (P, N, P, P) does not align with the count
+  pattern (1, 2, 4, 24) in any orientation. The "explanation" was a pattern asserted
+  without the 30-second verification.
+- **The correct framing:** the count sequence 1, 2, 4, 24 (n = 4, 6, 8, 10) currently
+  matches NO tested closed form: 2^{n/2-2} = 1,2,4,8 fails at n=10; (n/2-1)! = 1,2,6,24
+  fails at n=8. Two 3/4-matching formulas on four data points = the classic small-case
+  trap; n=12 (2^30 gridsym, ~264M after the affine-D prefilter) would discriminate but is
+  not feasible in-session. The witness classification (affine family: all at n=4, half at
+  n=6, none at n=8) remains the honest route to the mechanism.
+- **Impact:** THM-649 status line, HYP-4971 INDEX entry, S173 session-log entry, S173
+  broadcast letter. All repo copies corrected by klein-S174; the letter correction is in
+  the S174 broadcast.
+- **Lesson:** verify one-line number-theory assertions BEFORE writing them into canon,
+  especially inside big-result write-ups where excitement is high and the claim is
+  decorative. Decorative claims get copied.
+
 ---## MISTAKE-123 (2026-07-07, kind-pasteur-S73, exact recomputation vs LRCFourteenSkeleton.lean) -- THE CIRCULATED (A') UNION-BOUND BARS T_k ARE THE POSITIVITY BARS, NOT THE m_P BARS: every per-k tail threshold k=8..12 is understated by exactly m_P = 14249/252252 = 0.0565.
 
 - **What was assumed:** the per-k tail floors mu_{1/7}(E) >= T_k with T_k = {0.6185, 0.5057,

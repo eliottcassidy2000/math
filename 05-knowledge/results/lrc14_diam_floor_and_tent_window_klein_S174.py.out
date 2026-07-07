@@ -1,0 +1,25 @@
+=== (1) ord(2) mod n+1 ===
+  n=4: ord_2 mod 5 = 4, phi = 4, primitive: True
+  n=6: ord_2 mod 7 = 3, phi = 6, primitive: False
+  n=8: ord_2 mod 9 = 6, phi = 6, primitive: True
+  n=10: ord_2 mod 11 = 10, phi = 10, primitive: True
+  n=12: ord_2 mod 13 = 12, phi = 12, primitive: True
+
+=== (2) DIAM floor: mu >= 146/(35*diam) on clustered sets (span >> diam) ===
+      100..112: diam  12 span  112; floor(diam) 0.3476; mu 0.4425 [OK]
+    1000..1012: diam  12 span 1012; floor(diam) 0.3476; mu 0.4425 [OK]
+    997+record: diam  20 span 1019; floor(diam) 0.2086; mu 0.5306 [OK]
+    interleave: diam 100 span  150; floor(diam) 0.0417; mu 0.7184 [OK]
+
+=== (3) sharpness: minimize mu*diam over 13-sets (jump moves) ===
+  AP13 mu*diam = 5.310; adversarial min found = 5.310 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  proved constant 146/35 = 4.171  -> caps capture 78.6% of worst case
+
+=== (4) tent-window composition at k=9 (bar 0.5622, tent alone 31/63=0.4921) ===
+  beta_9 = 5/63, toll = 2/7, E[F] = 64/441 = 0.14512; need E[F 1_G] >= 0.02004 to close gap
+           AP9: diam   8 mu 0.8401; E[F] 0.14513 (exact 0.14512); E[F 1_G] 0.08657; composed floor 0.7950 >= bar!
+  9-record-ish: diam  12 mu 1.0000; E[F] 0.14513 (exact 0.14512); E[F 1_G] 0.14513; composed floor 1.0000 >= bar!
+       spread9: diam  72 mu 1.0000; E[F] 0.14513 (exact 0.14512); E[F 1_G] 0.14513; composed floor 1.0000 >= bar!
+       primes9: diam  21 mu 1.0000; E[F] 0.14513 (exact 0.14512); E[F 1_G] 0.14513; composed floor 1.0000 >= bar!
+      dilAP9x5: diam  40 mu 0.8401; E[F] 0.14513 (exact 0.14512); E[F 1_G] 0.08657; composed floor 0.7950 >= bar!
+         comp9: diam   8 mu 0.8401; E[F] 0.14513 (exact 0.14512); E[F 1_G] 0.08657; composed floor 0.7950 >= bar!

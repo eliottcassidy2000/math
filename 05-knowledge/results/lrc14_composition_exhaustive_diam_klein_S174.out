@@ -1,0 +1,19 @@
+k=9: W_F threshold = 2950/147147 = 0.02005
+  D = 8: all 1 primitive shapes clear (min W_F = 0.05241 at (0, 1, 2, 3, 4, 5, 6, 7, 8))
+  D = 9: all 8 primitive shapes clear (min W_F = 0.04539 at (0, 1, 2, 4, 5, 6, 7, 8, 9))
+  D = 10: all 36 primitive shapes clear (min W_F = 0.04005 at (0, 1, 2, 3, 4, 7, 8, 9, 10))
+  D = 11: all 120 primitive shapes clear (min W_F = 0.03599 at (0, 1, 2, 3, 4, 8, 9, 10, 11))
+  D = 12: all 330 primitive shapes clear (min W_F = 0.03436 at (0, 1, 2, 5, 6, 7, 10, 11, 12))
+  D = 13: all 792 primitive shapes clear (min W_F = 0.02940 at (0, 1, 2, 3, 4, 10, 11, 12, 13))
+  D = 14: all 1716 primitive shapes clear (min W_F = 0.02498 at (0, 1, 2, 3, 10, 11, 12, 13, 14))
+  D = 15: all 3432 primitive shapes clear (min W_F = 0.02277 at (0, 1, 2, 3, 4, 12, 13, 14, 15))
+  D = 16: all 6434 primitive shapes clear (min W_F = 0.02088 at (0, 1, 2, 3, 4, 13, 14, 15, 16))
+  D = 17: FIRST FAILURE at shape (0, 1, 2, 3, 4, 5, 15, 16, 17) (over 55 primitive shapes scanned)
+  => k=9 composed bound discharges ALL primitive shapes with diam <= 16
+k=10: W_F threshold = 281917/2942940 = 0.09579
+  D = 9: all 1 primitive shapes clear (min W_F = 0.11744 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+  D = 10: all 9 primitive shapes clear (min W_F = 0.10421 at (0, 1, 2, 3, 4, 5, 7, 8, 9, 10))
+  D = 11: FIRST FAILURE at shape (0, 1, 2, 3, 4, 5, 6, 7, 10, 11) (over 3 primitive shapes scanned)
+  => k=10 composed bound discharges ALL primitive shapes with diam <= 10
+
+SUMMARY: k=9 uniform discharge diam <= 16; k=10 uniform discharge diam <= 10
