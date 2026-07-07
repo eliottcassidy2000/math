@@ -1,0 +1,41 @@
+            family  #rel w2/x2 w3/x3 w5/x5 w7/x7   deficit   import-check
+                AP  1262  36/1182   0/1031   0/0     0/0     +0.00818   T1-import exact: False
+ 3-cascade (EUmin)   494  95/399 134/360 170/324   0/0     +0.03215   T1-import exact: False
+            record  1141 1141/0     4/668   0/607   0/0     +0.02742   T1-import exact: False
+         Sidon-ish   166  15/151   0/69    0/89    0/0     +0.00703   T1-import exact: False
+    random-coprime   650   0/0     0/0     0/0     0/368   -0.00696   T1-import exact: n/a
+
+T2 cross-layer thinning (mod-p congruence tax): for a relation with support
+mixing layers, the non-multiple part must satisfy sum m_i e_i == 0 (mod p) --
+a 1/p-measure condition. Null test: random 13-sets, fraction of *candidate*
+(sum m=0, support/coeff pattern) tuples that satisfy full resonance, by mixing type:
+  triples: within/pure strata rate 216/87252 = 0.00248; mixed strata rate 427/170148 = 0.00251
+  (mixed rate should be ~ pure rate: the tax shows in the mod-p PRE-filter --
+   among sum-m=0 patterns, resonance needs p | (cross part); measured directly:)
+  mod-3 pass rate: pure-strata 0.3038 vs mixed 0.3490 (pure passes trivially more often -- the coprimality tax on mixed relations)
+T1 IMPORT LAW debug (AP, p=2):
+  |within-2| = 36, |lifted sub([1, 2, 3, 4, 5, 6])| = 59
+  within-only examples: [((2, 2), (12, 7), (2, 12)), ((2, 4), (12, 6), (2, 8)), ((2, 10), (12, 11), (2, 12))]
+  lifted-only examples: [((6, 2), (8, 3), (4, 5)), ((8, 1), (4, 3), (2, 4)), ((4, 2), (12, 3), (12, 4), (4, 5))]
+  (|Ep| = 6 -- if < 13, sub enumeration allows the same caps; diff must be real -- inspect)
+
+T2 CORRECTED: three-way strata for the (1,-2,1) pattern mod p=3 (random 13-sets, 1..200):
+   all-mult: mod-3 pass rate 3776/3776 = 1.0000
+      mixed: mod-3 pass rate 25915/75845 = 0.3417
+    no-mult: mod-3 pass rate 8780/34779 = 0.2525
+  => WITHIN-layer candidates pass the mod-p gate at rate 1 (automatic);
+     mixed AND no-mult pay the 1/p tax. The amplification: a p-layer of size s
+     contributes relations at the FULL generic rate of an s-element family,
+     p-fold denser than the taxed strata -- cascades farm this (3-cascade w3=134).
+            family  #rel   w2/x2   w3/x3   w5/x5   w7/x7    deficit  T1-import(all p, |Ep|>=3)
+                AP   528   31/440    5/424    0/290    0/178   +0.00818  True
+ 3-cascade (EUmin)   134   37/96   108/26    22/92     0/66    +0.03215  True
+            record   444  297/147    1/320    0/244    0/157   +0.02742  True
+         Sidon-ish    57    5/50     0/29     0/23     0/20    +0.00703  True
+    random-coprime   282    0/0      0/0      0/0      0/71    -0.00696  n/a
+
+READ: T1 import law now EXACT everywhere (the earlier False was the zip bug --
+the trivially-true lemma was the canary that caught the corrupted enumeration).
+The p-layer of size s carries the FULL lattice of an s-family (dilation import,
+tax-free); every mixed relation paid the 1/p mod-p gate (T2: 1.0 vs 0.34/0.25).
+Cascades farm the import; the coprime bulk pays the tax everywhere = sparse lattice.
