@@ -1,6 +1,6 @@
 /-
   TournamentH7.LRCBandFloor — THE GENERAL AVOID-BAND 2/25-FLOOR CERTIFICATE
-  (kind-pasteur-2026-07-06-S51, HYP-4667).
+  (kind-pasteur-2026-07-06-S51, HYP-4677).
 
   The single tool underneath every layer of the (C) covering system.  Clearing a
   family at modulus `q` means finding a rotation `c ∈ (ℤ/q)*` that puts every speed's
