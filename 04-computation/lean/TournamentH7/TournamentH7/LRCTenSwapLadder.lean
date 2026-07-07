@@ -95,9 +95,54 @@ theorem gw_lonely : Lonely 14 gw (((1 : ℤ) : ℝ) / ((14 : ℤ) : ℝ)) := by
   · exact key 13 0 13 (by ring) (by omega) (by omega)
   · exact key 24 1 10 (by ring) (by omega) (by omega)
 
+/-- The **j=13 ladder** `{1,…,12, 13k} = AP[13 → 13k]` — the cleanest one-swap ladder: it
+**contains the AP itself as `k = 1`** (`{1..12,13} = {1..13}`), and has `M = k/(13k+1)` for
+**every `k ≥ 1`** (`→ 1/13`).  Witness `t = k/(13k+1)`; residues `r_v = v·k` for `v ≤ 12`
+(binding lower at `v=1`, `r=k`) and `r = 12k+1` for `v=13k` (binding upper), so lattice
+distance `≥ k`, and `14k ≥ 13k+1 ⟺ k ≥ 1`. -/
+def thirteenLadder (k : ℤ) : Fin 13 → ℤ :=
+  ![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 * k]
+
+/-- **THE j=13 LADDER IS LONELY** at `t = k/(13k+1)` for every `k ≥ 1` — an infinite family
+that includes the arithmetic progression `{1..13}` (at `k=1`, `M = 1/14`) and every dilated
+"top-swap" above it (`{1..12,26}` at `k=2`, `M = 2/27`, …).  Kernel-pure. -/
+theorem thirteenLadder_lonely (k : ℤ) (hk : 1 ≤ k) :
+    Lonely 14 (thirteenLadder k) (((k : ℤ) : ℝ) / ((13 * k + 1 : ℤ) : ℝ)) := by
+  apply lonely14_of_ratio (thirteenLadder k) k (13 * k + 1) (by omega)
+  intro i m
+  have key : ∀ val qq r : ℤ, val * k = qq * (13 * k + 1) + r →
+      k ≤ r → r ≤ (13 * k + 1) - k →
+      (13 * k + 1) ≤ 14 * |val * k - m * (13 * k + 1)| := by
+    intro val qq r hEq hlo hhi
+    have hm : k ≤ |val * k - m * (13 * k + 1)| :=
+      lattice_dist_ge qq r (by omega) hEq hlo hhi m
+    nlinarith [hm, hk]
+  fin_cases i <;> simp only [thirteenLadder]
+  · exact key 1 0 k (by ring) (by omega) (by omega)
+  · exact key 2 0 (2 * k) (by ring) (by omega) (by omega)
+  · exact key 3 0 (3 * k) (by ring) (by omega) (by omega)
+  · exact key 4 0 (4 * k) (by ring) (by omega) (by omega)
+  · exact key 5 0 (5 * k) (by ring) (by omega) (by omega)
+  · exact key 6 0 (6 * k) (by ring) (by omega) (by omega)
+  · exact key 7 0 (7 * k) (by ring) (by omega) (by omega)
+  · exact key 8 0 (8 * k) (by ring) (by omega) (by omega)
+  · exact key 9 0 (9 * k) (by ring) (by omega) (by omega)
+  · exact key 10 0 (10 * k) (by ring) (by omega) (by omega)
+  · exact key 11 0 (11 * k) (by ring) (by omega) (by omega)
+  · exact key 12 0 (12 * k) (by ring) (by omega) (by omega)
+  · exact key (13 * k) (k - 1) (12 * k + 1) (by ring) (by omega) (by omega)
+
+/-- The **arithmetic progression `{1..13}` is lonely at `t = 1/14`** (margin exactly `1/14`),
+recovered as the `k=1` member of the j=13 ladder — the canonical LRC(14) tight family. -/
+theorem ap_lonely : Lonely 14 (thirteenLadder 1) ((1 : ℝ) / 14) := by
+  have h := thirteenLadder_lonely 1 (by norm_num)
+  simpa using h
+
 #print axioms tenSwap_lonely
 #print axioms tenSwap20_lonely
 #print axioms gw_lonely
+#print axioms thirteenLadder_lonely
+#print axioms ap_lonely
 
 end LRC14
 end LonelyRunner
