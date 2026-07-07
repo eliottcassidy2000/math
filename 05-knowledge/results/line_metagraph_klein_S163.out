@@ -1,0 +1,40 @@
+
+===== n=4: m=3; lines=4; LINE CLASSES L(n) = 4 (blue 2, black 2) =====
+  blue/black constant on orbits: True
+  orbit sizes: min..max = 1..1; size parities present: [1]
+  endpoint-pair fibration: 4 class-pairs hit; MAX line-classes over one pair = 1  (injective? True)
+  LG_n: nodes 4, class-level wiggly edges 6
+  quasi-randomness ratio (actual/fiber-product prediction) over class-pairs: median 1.600, min 0.640, max 1.600, n=4
+  tournament classes = 4 (A000568: n=4:4, 5:12, 6:56)
+
+===== n=5: m=6; lines=32; LINE CLASSES L(n) = 32 (blue 8, black 24) =====
+  blue/black constant on orbits: True
+  orbit sizes: min..max = 1..1; size parities present: [1]
+  endpoint-pair fibration: 26 class-pairs hit; MAX line-classes over one pair = 2  (injective? False)
+  LG_n: nodes 32, class-level wiggly edges 96
+  quasi-randomness ratio (actual/fiber-product prediction) over class-pairs: median 1.469, min 0.547, max 7.111, n=26
+  tournament classes = 12 (A000568: n=4:4, 5:12, 6:56)
+
+===== n=6: m=10; lines=512; LINE CLASSES L(n) = 512 (blue 32, black 480) =====
+  blue/black constant on orbits: True
+  orbit sizes: min..max = 1..1; size parities present: [1]
+  endpoint-pair fibration: 370 class-pairs hit; MAX line-classes over one pair = 6  (injective? False)
+  LG_n: nodes 512, class-level wiggly edges 2560
+  quasi-randomness ratio (actual/fiber-product prediction) over class-pairs: median 2.597, min 0.644, max 68.267, n=370
+  tournament classes = 56 (A000568: n=4:4, 5:12, 6:56)
+
+n=5: top-5 assortative endpoint pairs (ratio, #lines, fiberA, fiberB, self?):
+   ratio    7.11  lines   1  fibers (9,1)  self-pair=False
+   ratio    7.11  lines   1  fibers (9,1)  self-pair=False
+   ratio    7.11  lines   1  fibers (1,9)  self-pair=False
+   ratio    4.92  lines   1  fibers (1,13)  self-pair=False
+   ratio    4.27  lines   1  fibers (3,5)  self-pair=False
+   sub-random pairs: 6/26; min ratio 0.547
+
+n=6: top-5 assortative endpoint pairs (ratio, #lines, fiberA, fiberB, self?):
+   ratio   68.27  lines   1  fibers (15,1)  self-pair=False
+   ratio   68.27  lines   1  fibers (15,1)  self-pair=False
+   ratio   60.24  lines   1  fibers (17,1)  self-pair=False
+   ratio   60.24  lines   1  fibers (1,17)  self-pair=False
+   ratio   44.52  lines   1  fibers (23,1)  self-pair=False
+   sub-random pairs: 38/370; min ratio 0.644

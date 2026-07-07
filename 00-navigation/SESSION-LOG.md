@@ -1,3 +1,19 @@
+## klein-2026-07-07-S163 -- THE LINE METAGRAPH IS RIGID: line graph = FOLDED m-CUBE; its iso-quotient is ITSELF (all 2^{m-1} lines pairwise non-isomorphic -- agreement set = base path + directed-path rigidity); no anti-blue lines; #black even; the allocation chaos = deterministic fiber-1 skeleton + quasi-random bulk (HYP-4871)
+
+Prompt (owner): work the line metagraph; apply the abstract-upon-abstraction move -- find families in supposed chaos, then the pattern generating them.
+
+THEOREMS (proved, elementary): L1 lines-with-wiggly-adjacency = FQ_m (single-tile flips commute with the free all-tile flip; classical antipodal quotient; blues 2-color it). L1' RIGIDITY: a line's two tournaments agree EXACTLY on the base path (differ on all m tiles) ⟹ pair-isos preserve the agreement set = the base path, which is rigid ⟹ the only line-iso is the identity: ALL lines pairwise non-isomorphic, the iso-quotient of FQ_m is FQ_m (census: L(n) = 4/32/512 = 2^{m-1}, every orbit size 1 at n=4/5/6). L2: anti-blue (rho t = flip t) is IMPOSSIBLE (sigma-fixed tiles force bit = 1-bit) ⟹ rho fixes exactly the blue lines, acts freely on black ⟹ #black ≡ 0 mod 2 (✓ 2/24/480).
+
+THE PATTERN IN THE CHAOS: rigidity means S161's allocation tables ARE the complete line fibration (nothing collapses above tilings). Decomposition: (a) DETERMINISTIC SKELETON -- every extreme assortativity pair (ratios 68.3/60.2/44.5 at n=6; 7.1 at n=5) involves a FIBER-1 class whose unique tiling has a forced partner; (b) QUASI-RANDOM BULK -- large-fiber pairs at actual/fiber-product ratios in [0.55, 2.6] (38/370 sub-random at n=6). One line: RIGIDITY IN SMALL FIBERS, MIXING IN LARGE ONES -- the S161/S162 completion with the skeleton now characterized, not just observed.
+
+META-LEVERAGE recorded: the quotient being trivial WAS the theorem; next same-shaped targets: opus's order-cell graph mod dihedral time symmetry; THM-645's anchor-window complexes mod tent phase -- in each, find the agreement-set invariant.
+
+FILES: 04-computation/line_metagraph_klein_S163.py (+out with skeleton addendum); reflection the-line-metagraph-is-rigid-klein-S163; HYP-4871. No Lean (owner directive). No canon overridden.
+
+NEXT: (a) the ordered version (2-colored-pair canon) at n=7 for the bulk-ratio scaling; (b) prove the bulk mixing bound (ratio <= C uniformly? the max over large-fiber pairs looks bounded ~2.6); (c) the rho-quotient folded-cube spectral structure (eigenvalues of FQ_m are classical -- does the blue 2-coloring's Fourier support explain the S161 blue-cross concentration?); (d) transport: rigidify opus's order-cell graph.
+
+---
+
 ## klein-2026-07-07-S162 -- THM-645 THE OFFSET TENT LAW (proved, 0/9790): pair masses at ARBITRARY rational offsets = theta^2 + (s·Lambda(psi) − r1r2)/(s^2 q1q2); THM-638's signed cases = the tent's PEAK and VALLEY; half-shift psi in {0,1/2} by parity of q; PA_2(AP_k) = mu_{1/7}(AP_k) exactly; half-shift census is 2-adically graded (HYP-4861)
 
 Prompt (owner): back to the LRC frontier carrying the S161 mindset (commuting involutions force parity; quasi-randomness + skeleton completes structure).
