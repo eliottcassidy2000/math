@@ -10,6 +10,25 @@ DICHOTOMY: r<=12 clusters => M(K)>=1/13 (LRC<=13) => M(v)>1/14 for L>182A (LONEL
 BUYS (honest, NOT a proof): re-grounds compression/peeling on the sup (survives Route-2 retire); grounds clusters-into-<=12 in the settled frontier; SHARPENS the open core -- decorrelation needed ONLY for single-scale families (= Tao-2018 bounded-speed domain; coarse reduction is a self-contained instance).
 
 SYNTHESIS: LRC(14) = STRUCTURED (multi-scale, coarse bound+LRC<=13, grounded) (+) GENERIC (single-scale, decorrelation, open). No formalization this session (owner deprioritized). Files: lrc_coarse_reduction_direct_kps_S52.py(+out); reflection the-coarse-reduction-is-a-sup-fact-...-kps-S52.md; HYP-4697. No canon overridden.
+## klein-2026-07-06-S151 -- THE REAL FRONTIER: n=14 is COMPOSITE and that breaks the proven SOTA method; Route 2 confirmed dead; reroute to the direct-supremum / composite-sieving route (HYP-4661)
+
+Prompt (owner): work all remaining math, push/pull frequently, work concurrently, deeply consider the state + direction and reroute as needed; complete proofs then formalize.
+
+Long session. Spent the first half working Route 2 (CoveringComplete validity: confirmed opus's HasCoveringWitness is honest unbounded-q; refined the L-lift clearing to smallest prime-POWER q not|L, all loose, unbounded modulus, pushed as S151 checkpoint; explored the Jain-Kravitz relative-spectra reroute). Then on sync found opus-S130 (MISTAKE-117) + mac-mini-S37: **Route 2 is disconnected from LRC(14)** -- and pivoted.
+
+THE RESET (confirmed): opus-S130 MISTAKE-117 (Giri-Kravitz arXiv:2304.01462 govern ACCUMULATION points, not the SUPREMUM LRC bounds; even a complete (C)/(A) does not prove LRC14). MY corroboration: this is SUPPORTED by my own isolation results -- klein-S128 (covering-min isolated at deep well, gap 35/16287) + S140 (AP isolated). The extremizer is ISOLATED => not an accumulation point => the J-K accumulation machinery structurally cannot reach the sup. So my whole S144-S150 covering/CBridge/L-lift line is correct SPECTRUM STUDY, not LRC14 critical path (framing retracted). The Jain-Kravitz bottom-reroute is moot (top is broken).
+
+NEW (my contribution beyond the reset) -- THE HONEST REASON n=14 IS HARD, from primary sources: Sungkawichai-Trakulthongchai arXiv:2604.23906 ('Eleven, twelve, and thirteen lonely runners') prove via polynomial method any (u)≡(1..k) mod p with gcd 1 when k+1 AND p>k^2+k are both ODD PRIMES. Proven k=10(n=11),12(n=13) by the method (k+1=11,13 prime); k=11(n=12,k+1=12 composite) by a SEPARATE heavier computation. LRC(14)=k=13, k+1=14=2*7 COMPOSITE => the polynomial method is UNAVAILABLE; n=14 is the composite-k+1 regime (like k=11) but at k=13, p>182 -- the separate computation is far larger. THE COMPOSITENESS OF 14 IS THE OBSTRUCTION, and it is exactly the project's whole fixation (14=2*7, odd/even, Phi6=183, deep well 182=13*14): those are the composite-n obstruction to sieving, seen from inside. Matches Trakulthongchai/Quanta-2026 ('a new way needed'; bottleneck = efficient I(k,p,1)).
+
+REROUTE (direction, not a lemma): RETIRE Route 2 as a proof route (keep as spectrum study). The two correctly-aimed (supremum) routes: (1) Route 1 -- direct Mreach>=1/14 via the witness-density node (thm527_partA..., k=8..13 floor); honest analysis. (2) SOTA composite-k+1 sieving -- adapt the k=11-style separate computation to k=13,p>182, (1..13) mod p; bottleneck = efficient I(k,p,1), a COMPUTATIONAL frontier where the fleet's compute applies. LRC(14) is a HARD research frontier, NOT three obligations from done.
+
+META-LESSON (fleet): convergence on a FRAME (finite covering; J-K citation) is not verification; go to the primary object. The project's deepest true results (deep well, isolation, Phi6) are the fingerprint of the composite-14 obstruction; the error was attaching them to a top link that measures accumulation, not the sup.
+
+FILES: lrc14_Llift_clearing_klein_S151.out; INDEX HYP-4661; reflection the-real-frontier-n14-is-composite-and-that-breaks-the-proven-method; this log. (S151 checkpoint pushed mid-session.)
+
+NEXT (correctly aimed): (a) Route 1 witness-density floor (k=8..13); (b) the SOTA composite-k+1 sieving computation for k=13 (the I(k,p,1) bottleneck) -- fleet compute strength; (c) NOT more covering-min/(C) (spectrum study, wrong object). Broadcast this direction change to the fleet.
+
+---
 
 ## mac-mini-2026-07-06-S37 -- HONEST STATE AUDIT (owner: ensure correctness): the finite-covering route REFRAMES (C), it does NOT reduce it. CoveringComplete <=> (C) exactly; no finite q<=Q0 discharge exists (escape families, verified Q0=39, CONFIRMED by klein-S150 + kps-S51); the analytic core (tight scale-uniform decorrelation) is OPEN; reroute to (A) relocates not resolves (HYP-4687)
 
