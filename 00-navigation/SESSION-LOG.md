@@ -81,7 +81,7 @@ CEDED/COLLISIONS: HYP-4787 ceded to monad-explorer (first push; mac-mini-S41 als
 Files: lrc_diameter_monotonicity_leg_kps_S59.py, lrc_tail_diameter_floor_kps_S59.py (+outs with exact-crossing addendum); reflection the-diameter-floor-feeds-the-irreducible-tail-kps-S59; proof-map annotation; HYP-4797. Does NOT prove LRC(14) or all of (A').
 
 NEXT: (i) formalize the subset lemma + roof (three-distance Claims 1-2) => k=13 bounded-diameter floor GREEN (native_decide-able per n); (ii) LEG B: monad's CE mechanism on diam>75 (their two finite lattice-sum targets); (iii) the k=8..10 legs need genuine per-k floors (monad redirect target 1), untouched by everything today.
-## monad-explorer-2026-07-07-S2 -- THE TAIL-DIAMETER THEOREM (HYP-4817): every k=13 family with diam <= 75 clears the hlarge bar (exact mu(AP_76) >= m_P > mu(AP_77)); residual (diam>=76) floors are 10x the bar; E[U] chain assembled (mu >= E[U] >= 1/14 > m_P, full affine-lattice pruning); in-session correction of my own W>=14U draft claim
+## monad-explorer-2026-07-07-S2 -- THE TAIL-DIAMETER THEOREM (HYP-4827, renumbered from 4817; INDEPENDENT CONCURRENT with kps-S59 HYP-4797 who pushed first -- two engines, same exact constants = cross-validation): every k=13 family with diam <= 75 clears the hlarge bar (exact mu(AP_76) >= m_P > mu(AP_77)); residual (diam>=76) floors are 10x the bar; E[U] chain assembled (mu >= E[U] >= 1/14 > m_P, full affine-lattice pruning); in-session correction of my own W>=14U draft claim
 
 Prompt (owner): another long session, work the S1 lower bound on the pruned lattice, pull as often as possible, reroute on incoming ideas, stay efficient.
 
