@@ -1,0 +1,59 @@
+====================================================================================
+(a)+(b) Roof formula and origin-gap saturation: direct check at random x
+====================================================================================
+  k= 3: max|maxgap-roof| = 3.331e-16   max|maxgap-gap@0| = 1.110e-16
+  k= 4: max|maxgap-roof| = 2.220e-16   max|maxgap-gap@0| = 4.441e-16
+  k= 5: max|maxgap-roof| = 6.661e-16   max|maxgap-gap@0| = 4.441e-16
+  k= 6: max|maxgap-roof| = 6.661e-16   max|maxgap-gap@0| = 8.882e-16
+  k= 7: max|maxgap-roof| = 1.221e-15   max|maxgap-gap@0| = 8.882e-16
+  k= 8: max|maxgap-roof| = 1.221e-15   max|maxgap-gap@0| = 8.882e-16
+  k= 9: max|maxgap-roof| = 1.332e-15   max|maxgap-gap@0| = 8.882e-16
+  k=10: max|maxgap-roof| = 1.221e-15   max|maxgap-gap@0| = 1.776e-15
+  k=11: max|maxgap-roof| = 1.887e-15   max|maxgap-gap@0| = 1.776e-15
+  k=12: max|maxgap-roof| = 1.887e-15   max|maxgap-gap@0| = 1.776e-15
+  k=13: max|maxgap-roof| = 1.887e-15   max|maxgap-gap@0| = 1.776e-15
+
+====================================================================================
+(c) E[maxgap(AP_k)] = sum 1/(q q'^2) over consecutive Farey-k pairs (EXACT)
+====================================================================================
+  k= 1: Farey sum =                1 = 1.000000   numeric=1.000000  sym=OK
+  k= 2: Farey sum =              3/4 = 0.750000   numeric=0.750000  sym=OK
+  k= 3: Farey sum =             7/12 = 0.583333   numeric=0.583333  sym=OK
+  k= 4: Farey sum =              1/2 = 0.500000   numeric=0.500000  sym=OK
+  k= 5: Farey sum =             5/12 = 0.416667   numeric=0.416667  sym=OK
+  k= 6: Farey sum =            23/60 = 0.383333   numeric=0.383333  sym=OK
+  k= 7: Farey sum =              1/3 = 0.333333   numeric=0.333333  sym=OK
+  k= 8: Farey sum =           43/140 = 0.307143   numeric=0.307143  sym=OK  known=43/140  match=YES
+  k= 9: Farey sum =           47/168 = 0.279762   numeric=0.279762  sym=OK  known=47/168  match=YES
+  k=10: Farey sum =            19/72 = 0.263889   numeric=0.263889  sym=OK  known=19/72  match=YES
+  k=11: Farey sum =          151/630 = 0.239683   numeric=0.239683  sym=OK  known=151/630  match=YES
+  k=12: Farey sum =         796/3465 = 0.229726   numeric=0.229726  sym=OK  known=796/3465  match=YES
+  k=13: Farey sum =           93/440 = 0.211364   numeric=0.211364  sym=OK  known=93/440  match=YES
+  => E[min_i frac(ix)] = half of the above; e.g. k=13: 93/880
+
+====================================================================================
+(d) mu_theta(AP_k) from the roof (EXACT per-cell linear tail)
+====================================================================================
+  k= 8: mu_1/7(AP) =       691/735 = 0.940136   match=YES
+  k= 9: mu_1/7(AP) =       247/294 = 0.840136   match=YES
+  k=10: mu_1/7(AP) =         38/49 = 0.775510   match=YES
+  k=11: mu_1/7(AP) =     1381/2205 = 0.626304   match=YES
+  k=12: mu_1/7(AP) =   13823/24255 = 0.569903   match=YES
+  k=13: mu_1/7(AP) =      477/1078 = 0.442486   match=YES
+  bonus mu_2/7 (the refuted-floor threshold), exact from the roof:
+    k=12: mu_2/7(AP) = 1313/6468 = 0.202999
+    k=13: mu_2/7(AP) = 829/4620 = 0.179437
+
+====================================================================================
+(e) why 1/7 works at every k: threshold 2/(k+1) vs pigeonhole 1/k vs iid H_k/k
+====================================================================================
+  k= 4: 1/k=0.2500  2/(k+1)=0.4000  AP mean=0.5000  iid mean=H_k/k=0.5208  [pigeonhole covers; note e^2=7.39 sits at the k=7/8 boundary]
+  k= 5: 1/k=0.2000  2/(k+1)=0.3333  AP mean=0.4167  iid mean=H_k/k=0.4567  [pigeonhole covers; note e^2=7.39 sits at the k=7/8 boundary]
+  k= 6: 1/k=0.1667  2/(k+1)=0.2857  AP mean=0.3833  iid mean=H_k/k=0.4083  [pigeonhole covers; note e^2=7.39 sits at the k=7/8 boundary]
+  k= 7: 1/k=0.1429  2/(k+1)=0.2500  AP mean=0.3333  iid mean=H_k/k=0.3704  [pigeonhole covers; note e^2=7.39 sits at the k=7/8 boundary]
+  k= 8: 1/k=0.1250  2/(k+1)=0.2222  AP mean=0.3071  iid mean=H_k/k=0.3397  [pigeonhole stops; note e^2=7.39 sits at the k=7/8 boundary]
+  k= 9: 1/k=0.1111  2/(k+1)=0.2000  AP mean=0.2798  iid mean=H_k/k=0.3143  [pigeonhole stops; note e^2=7.39 sits at the k=7/8 boundary]
+  k=10: 1/k=0.1000  2/(k+1)=0.1818  AP mean=0.2639  iid mean=H_k/k=0.2929  [pigeonhole stops; note e^2=7.39 sits at the k=7/8 boundary]
+  k=11: 1/k=0.0909  2/(k+1)=0.1667  AP mean=0.2397  iid mean=H_k/k=0.2745  [pigeonhole stops; note e^2=7.39 sits at the k=7/8 boundary]
+  k=12: 1/k=0.0833  2/(k+1)=0.1538  AP mean=0.2297  iid mean=H_k/k=0.2586  [pigeonhole stops; note e^2=7.39 sits at the k=7/8 boundary]
+  k=13: 1/k=0.0769  2/(k+1)=0.1429  AP mean=0.2114  iid mean=H_k/k=0.2446  [pigeonhole stops; note e^2=7.39 sits at the k=7/8 boundary]
