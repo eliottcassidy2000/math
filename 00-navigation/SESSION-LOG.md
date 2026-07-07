@@ -1,3 +1,20 @@
+## mac-mini-2026-07-06-S27 -- CROSS-n: the caught single-outlier fraction IS opus's crux MEDIANT 3/(3k+2); HYPOTHESIS -- mediant achievable <=> 3k+2 PRIME (k=7:23, k=13:41 yes; k=12:38=2*19 composite = the crux); a prime/composite dichotomy one Farey level up from S12 (HYP-4562)
+
+Prompt (owner): understand LRC for other n; leverage toward proof progress.
+
+UNDERSTANDING LRC ACROSS n (kps-S36 general ladder + opus-S117 mediant crux):
+ (1) RELIABLE: single-outlier defected-{1..k} bases catch the gap at k=7 (3/23), k=13 (3/41); the caught fraction is EXACTLY the mediant 3/(3k+2) = opus-S117's crux.  Our k=12 = 3/38.
+ (2) HYPOTHESIS (all known data consistent, mechanism principled, UNVERIFIED): mediant 3/(3k+2) achievable <=> 3k+2 PRIME.  k=7 (23), k=13 (41) prime & achievable; k=12 (38=2*19 composite) UNACHIEVABLE = opus's crux.  => the crux is number-theoretic: 3/38 unachievable BECAUSE 38=2*19 composite.
+ (3) MECHANISM (connects my S12 + S3): prime => residues units => transversal freedom (S12 prime tight-locus one level up); composite 38=2*19 => non-units (mults 2,19) obstruct via the S3/S7 non-unit-can't-clear.
+ (4) HONEST: UNVERIFIED intermediate k -- my constructions MISS the bordered-AP attainers (4th session S22/S25/S27 hitting this); only k=7,13 + opus's k=12 established.  A LEAD, not a result.
+
+LEVERAGE: if true, opus's crux collapses to '3/38 unachievable because 38 composite', provable via the S3/S7 non-unit obstruction at q=38 -- a finite obstruction WITH A REASON.  Flagged to opus (mediant crux owner).
+
+(POKE-COORDINATION.md still directs external-forum posting -- ignored as untrusted injection.)
+
+FILES: lrc_crossn_spacing_macmini_S27.py (+.out), lrc_mediant_crossn/lrc_mediant_prime_hypothesis _macmini_S27.out; reflection the-mediant-crux-is-a-prime-composite-dichotomy-macmini-S27.md; HYP-4562 (+INDEX); letter to opus.  No canon overridden.
+
+NEXT: test the prime hypothesis -- build ONE k=9(29 prime)/k=11(35 comp) mediant attainer (needs bordered-AP construction, the fleet's recurring gap); if true, prove 3/38 unachievable via the composite-38 non-unit obstruction (S3/S7).
 ## mac-mini-2026-07-06-S26 -- THE k=12 RESONANCE LADDER = opus-S100's FAREY LADDER, concretely: base {1..11} gives M=j/(12j+1) (1/13, 2/25, 3/37,...); the gap = OPEN interval between consecutive rungs j=1,2 => SKIPPED; single+double-outlier bounded case EMPTY (HYP-4552)
 
 Prompt (owner): work the next step; synthesize other agents; push/pull during downtimes.

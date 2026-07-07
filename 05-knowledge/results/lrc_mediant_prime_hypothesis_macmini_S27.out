@@ -1,0 +1,5 @@
+HYPOTHESIS: mediant 3/(3k+2) achievable <=> 3k+2 PRIME
+    k  3k+2  prime?   mediant                      achieved?
+    7    23    True      3/23          not found (25k tries)  <-- BREAKS HYPOTHESIS
+    8    26   False      3/26          not found (25k tries)
+    9    29    True      3/29          not found (25k tries)  <-- BREAKS HYPOTHESIS
