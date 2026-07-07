@@ -1,0 +1,7 @@
+verify N=6 {1,5,6,11,16,17}: 5/33 (want 5/33)
+
+N  | window          | bordered-AP in-gap member? | example (M) | N parity
+ 6 | (1/7,2/13)   | YES (1)  | 5/33 [1, 5, 6, 11, 16, 17] | EVEN
+ 7 | (1/8,2/15)   | none in this search    | -- | odd
+ 8 | (1/9,2/17)   | none in this search    | -- | EVEN
+ 9 | (1/10,2/19)  | none in this search    | -- | odd

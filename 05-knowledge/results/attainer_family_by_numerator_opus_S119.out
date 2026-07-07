@@ -1,0 +1,26 @@
+VERIFY mac-mini c=3 trichotomy (F(N)={1..N-2,N,3(N-1)}):
+  N= 6 (N mod6=0): M=3/17=0.17647  loose
+  N= 7 (N mod6=1): M=3/23=0.13043  IN-GAP(mediant)
+  N= 8 (N mod6=2): M=3/23=0.13043  loose
+  N= 9 (N mod6=3): M=1/9=0.11111  loose
+  N=10 (N mod6=4): M=3/29=0.10345  loose
+  N=11 (N mod6=5): M=1/11=0.09091  loose
+  N=12 (N mod6=0): M=3/35=0.08571  loose
+  N=13 (N mod6=1): M=3/41=0.07317  IN-GAP(mediant)
+  N=14 (N mod6=2): M=3/41=0.07317  loose
+  N=15 (N mod6=3): M=1/15=0.06667  loose
+  N=16 (N mod6=4): M=3/47=0.06383  loose
+  N=17 (N mod6=5): M=1/17=0.05882  loose
+  N=18 (N mod6=0): M=3/53=0.05660  loose
+  N=19 (N mod6=1): M=3/59=0.05085  IN-GAP(mediant)
+
+EXTEND: attainer family F_c(N)={1..N-2,N,c(N-1)} by numerator c -- M, in-gap?, gate:
+  c | N range with in-gap value (the numerator-c attainers)
+  2 | in-gap at: none   [N mod 6 in []]
+  3 | in-gap at: N=7(3/23), N=13(3/41), N=19(3/59), N=25(3/77)   [N mod 6 in [1]]
+  4 | in-gap at: none   [N mod 6 in []]
+  5 | in-gap at: none   [N mod 6 in []]
+  6 | in-gap at: none   [N mod 6 in []]
+
+Looking for: does each numerator c have its own residue-class gate (like c=3 -> N=1 mod6)?
+The union over c = the full canonical attainer spectrum; N=12 in-gap for ANY c => not empty.

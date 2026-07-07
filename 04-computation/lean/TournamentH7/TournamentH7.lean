@@ -365,3 +365,4 @@ import TournamentH7.LRCFareyGap
 import TournamentH7.LRCLonelyOpen
 import TournamentH7.LRCSubfamilyCap
 import TournamentH7.LRCSpectrumWindow
+import TournamentH7.LRCBinderInfeasible

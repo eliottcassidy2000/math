@@ -1,3 +1,17 @@
+## opus-2026-07-06-S119 -- STRUCTURE: the mediant gate is a mod-30 BINDER CONGRUENCE (primes 2,3,5); parity kill FORMALIZED (HYP-4516)
+
+Prompt: work to uncover more structure.
+
+VERIFIED + EXTENDED mac-mini's mediant trichotomy to the COMPLETE mod-30 gate: canonical F(N)={1..N-2,N,3(N-1)} attains the mediant 3/(3N+2) <=> N=1 mod6 AND 5-nmid-(3N+2). MECHANISM: far element 3(N-1) binds the smallest feasible small speed b in {2,3,5} at Q=3(N-1)+b={3N-1,3N,3N+2}; feasibility of b is the linear-congruence solvability gcd(b,Q)|3 -- b=2 feasible iff N even, b=3 iff N=3,5 mod6, b=5 iff N!=1 mod5. Tightest (mediant) wins only when b=2,3 dead & b=5 alive. b=4 dominated by b=2. N=31 first exception (95=5*19). S118's 'N=1 mod6' = the mod-6 shadow of this mod-30 truth. The whole gate is the arithmetic of primes<=5 acting as binders.
+
+FORMALIZED (LRCBinderInfeasible.lean, standard trio, corpus 8715): no_solution_of_gcd_not_dvd (b*x==r mod Q unsolvable when gcd(b,Q)-nmid-r, general binder kill); parity_kill (2*x==3 mod Q unsolvable for EVEN Q; only propext+Quot.sound). = mac-mini's requested arithmetic core.
+
+WHY N=12 MISSES THE CANONICAL MEDIANT: N=12 EVEN => speed-2 at Q=35 (odd) feasible => M(F(12))=3/35>2/25 loose => 3/38 missed BY PARITY, not compositeness of 38 (corrects my S118 per mac-mini). Neatly, '38' is really 3*13-1 (the competing denom at N=13), whose EVENNESS kills speed-2 there => N=13 attains 3/41.
+
+SCOPE (honest): governs the CANONICAL family exactly. N=6 (even) is nonempty via the BORDERED-AP species {1,5,6,11,16,17}=5/33 (order 3) -- searches show it SPARSE (none organically N=7,8,9). RESIDUAL: do non-canonical species obey the same binder gate? kps HYP-4417 (every gap candidate contains an even speed) => if the speed-2/parity kill is universal, 'N even => first gap empty' becomes a structural theorem; parity_kill is its first brick (mac-mini's lane).
+
+Files: LRCBinderInfeasible.lean (green); reflection the-mediant-gate-is-a-mod-30-binder-congruence-opus-S119; results attainer_family_by_numerator / bordered_ap_species_across_N _opus_S119; HYP-4516.
+
 ## mac-mini-2026-07-06-S28 -- MEDIANT-ATTAINER TRICHOTOMY: opus's bordered-AP F(N)={1..N}\{N-1}u{3(N-1)} is a gap member <=> N=1 mod 6 (verified N=5..30); the LRC(14) crux N=12 fails BY PARITY (12 even => M=3/35>2/25), NOT by 38=2*19 compositeness; my S27 prime hypothesis REFUTED (HYP-4572)
 
 Prompt (owner): keep pushing on the crux.
