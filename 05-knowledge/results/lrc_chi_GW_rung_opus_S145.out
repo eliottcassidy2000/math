@@ -1,0 +1,32 @@
+(0) k=4 Lucas {1,3,4,7}: mod-8 4-coloring proper: True, covers Z_8: True
+    => chi_c(G_{1,3,4,7}) = 4 < 5 = 1/M  (chi_f = 4 = 1/mu, S144)
+
+(1) GW window graph: 92 states
+    Bellman converged in 25 iterations (no cycle beats 1/13, reconfirmed)
+    tight subgraph (on cycles): 26 nodes, 26 edges
+    out-degrees in tight subgraph: [1]
+    PURE CYCLES: 1 cycle(s); lengths/weights:
+      period 26, 2 elements/period, density 2/26 = 1/13; element offsets in period: [1, 15]  gaps: [14, 12]
+    => ALL optimal periodic sets are these cycles' translates: RIGID
+       (no phase-switch paths exist: out-degree 1 everywhere).
+
+(2) periodic 13-coloring search on circulants Cay(Z_N, +-GW mod N):
+    N=26: no 13-coloring found (60 restarts x 6k tabu)
+    N=39: no 13-coloring found (60 restarts x 6k tabu)
+    N=52: no 13-coloring found (60 restarts x 6k tabu)
+    N=65: no 13-coloring found (60 restarts x 6k tabu)
+    N=78: no 13-coloring found (60 restarts x 6k tabu)
+    N=91: no 13-coloring found (60 restarts x 6k tabu)
+    N=104: no 13-coloring found (60 restarts x 6k tabu)
+    N=117: no 13-coloring found (60 restarts x 6k tabu)
+    N=130: no 13-coloring found (60 restarts x 6k tabu)
+
+VERDICT (evidence): optimal sets RIGID + no periodic 13-coloring found
+=> chi(G_GW) = 14 likely; the matching obstruction argument:
+   a 13-coloring partitions Z into 13 density-1/13 independent sets;
+   every such set must be (asymptotically) a translate of the rigid cycle
+   pattern; a partition of Z_26 into difference-12 pairs = perfect matching
+   on two 13-cycles (odd) -- impossible. Formalize as the next step.
+   Then chi_c in (13, 14] and the (p,q) hunt is the remaining question.
+
+[202s]
