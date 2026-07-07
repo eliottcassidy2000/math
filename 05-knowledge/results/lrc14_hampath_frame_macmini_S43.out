@@ -1,0 +1,30 @@
+=== THM-A/B census: palindromes, wall counts, girth, functionals ===
+budget for THM-D: (6/7)^13 - (6/7)m_P = 0.08638
+family                           palin  walls girth    E[U]     mu  deficit
+AP {1..13}                        True    364     4  0.1266  0.442  -0.0082
+GW {1..11,13,24}                 False    506     4  0.1149  0.588  -0.0199
+death-star 2{1..12}u{13}          True    644     4  0.1142  0.500  -0.0206
+monad record                      True    564     4  0.1074  0.531  -0.0274
+PZ-min S41                        True    432     4  0.1132  0.515  -0.0216
+EU-min 3-adic S41                False   2516     4  0.0938  0.919  -0.0410
+klein k12-anomaly+0              False    416     4  0.1254  0.699  -0.0094
+deep interlace 10{0..10}u{49,51}  True   2804     4  0.1158  0.584  -0.0190
+random big                       False  55664     6  0.1332  0.988  -0.0016
+(AP walls minimum = C(14,3) = 364; walls = sum_k s_k k(13-k))
+
+=== palindrome-constrained E[U] descent (does the record structure persist?) ===
+best palindrome half-steps (5, 1, 3, 1, 2, 3) -> steps (5, 1, 3, 1, 2, 3, 3, 2, 1, 3, 1, 5)
+E[U] = 0.09878 (fine grid) vs S41 unconstrained record 0.0938; mu = 0.7336
+
+=== THM-D: T(W) = sum_{n>=W} P(n)(1+2n/W)^11 with P(n)=u^ceil(n/2) (n<=26), 
+    u^12/(pi(n-24)) beyond; budget 0.08638 ===
+  W= 8: T(W) = 14561633.25920   too big
+  W=10: T(W) = 1327428.55613   too big
+  W=12: T(W) = 189540.53358   too big
+  W=14: T(W) = 36884.85608   too big
+  W=16: T(W) = 9002.76739   too big
+  W=18: T(W) = 2612.26972   too big
+  W=20: T(W) =  868.73393   too big
+  W=22: T(W) =  322.58985   too big
+
+(cross-check above: girth vs measured deficit in the census table)
