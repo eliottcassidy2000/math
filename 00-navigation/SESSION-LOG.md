@@ -32,6 +32,21 @@ Files: lrc_exact_mu_ordercells / lrc_exact_Aprime_exhaustive _opus_S136 (+outs);
 NEXT: (a) (A')-beyond-boxes: extend boxes / couple the exact engine to the intersected ledgers (exact G_P cap mu on demand); (b) the L2 lattice-pruning of monad's CE S1 target (short vectors of d-perp cap {K_1=0}); (c) palindromic-extremizer (kps-S62's conjecture) tested with exact mu; (d) walk-topology invariants (which order-state sequences are realizable).
 
 ---
+## mac-mini-2026-07-07-S43 -- THM-639: the runner world has a TILING MODEL (owner directive executed) -- steps = the Hamiltonian path, balanced relations = the tiles; reversal/palindrome + wall-count/AP-transitivity + Haar-lattice-class PROVED; girth route REFUTED; spontaneous reversal-symmetry breaking discovered (mu extremal self-dual, E[U] extremal a mirror pair) (HYP-4887)
+
+Prompt (owner): proofs before formalization; long sessions, careful pulls; "a tree on 8 events has 7 edges = the Hamiltonian path of an 8-player tournament; the tiling model views a tournament from a Hamiltonian path to reveal the iso-class symmetry forced by the intersubjective binary relation itself -- apply similar analysis to lonely runners."
+
+INCOMING ABSORBED at open: kps-S61 (Part A factored, PROVEN <=13+Sum(p+1) arc bound, V0abs<=1106; GAP-grid ledger = my S41 handoff executed, step-independence confirmed; sparse lane left to me), klein-S156 (THM-638 signed pair-mass law PROVED; k=8 Hunter 6/49 unconditional), opus-S135 (Farey roof THM-637 PROVED + LRCFareyRoof.lean GREEN). 4857 collision resolved in my favor (kps self-renumbered to 4867).
+
+DELIVERED (HYP-4887, THM-639 -- proofs in canon):
+ A. REVERSAL: gap laws invariant under E -> -E = step-sequence reversal => unique minimizers are PALINDROMES. Census: ALL mu/E[mg]-record families palindromic (AP, death-star, monad record, S41 PZ-min); the S41 E[U]-min is NOT => mirror-pair degeneracy, palindrome-constrained floor strictly higher (0.0988 vs 0.0938). SPONTANEOUS SYMMETRY BREAKING: mu resolves reversal self-dually (SC-class analog), E[U] breaks it (NS-pair analog) -- the metagraph spine/sea split appearing in a variational landscape.
+ B. WALL COUNT: sum_{i<j}(e_j-e_i) = sum_r s_r r(k-r) = #cyclic-order flips per period; AP unique minimizer (C(14,3)=364) = the TRANSITIVE TOURNAMENT of the runner world. Explains AP tractability (coarsest order-cell complex) and its master-extremal role.
+ C. LATTICE CLASS (foundation): phase curve = closed subgroup Ann(L(E)), x ~ U pushes to HAAR on it; gap law factors through the balanced lattice L_0(E); L_0 determines span_Q{e,1} => lattice class = rational-affine class = primitive steps up to reversal. One proof unifies every scattered invariance of the burst (dilation/translation/reflection/pairs-dead/difference-uniformity). The tiles of the runner world = L_0; its defining constraints = the invariances forced by the relation itself.
+ D. REFUTED (documented dead end): single-parameter balanced-girth tail bound -- 13 bounded integers are pigeonhole-forced to girth 4 (all bank families girth 4); rank-11 packing count injects 3^11, T(22)~323 vs budget 0.086. Repair = successive-minima profile (open).
+
+FILES: THM-639 (canon, proofs); lrc14_hampath_frame_macmini_S43.py (+out); reflection the-runner-world-has-a-tiling-model-...-macmini-S43; HYP-4887 (INDEX). No Lean this session (owner: proofs first). No canon overridden.
+
+NEXT: (a) the sparse-lane floor via the successive-minima/graded-cycle-spectrum profile (the frame's quantitative continuation); (b) palindrome-symmetric search spaces for all future adversarial censuses (halves the work, checks uniqueness claims); (c) the SC/NS runner classification: which gap functionals resolve reversal self-dually vs break it (predicts extremal structure); (d) kps-S61's finite check below V0abs~1106 (computational sieving).
 
 ## kind-pasteur-2026-07-07-S62 -- THE STEP-GAUGE: LRC(14) viewed from its Hamiltonian path (owner-directed tiling-model transplant) -- reversal=complement PROVED (mu/E[mg] invariant under E -> max+min-E), Wiener staircase 455=C(15,3) with triangle weights l(14-l), a=2 stratum mostly closed via the grid ledger, palindromic-extremizer conjecture opened (HYP-4877)
 
