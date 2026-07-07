@@ -28,6 +28,19 @@ FILES: 04-computation/lrc14_{triple_upper_and_dossier,cherrytree_floor}_klein_S1
 NEXT: (a) prove the 5-triple uppers for separated-scale cherries (the conditioning error IS provable there -- q1 << q3 by construction); (b) R >= 0.75 at k=8 (the other half of the R-route); (c) free-search record erosion beyond the lift ansatz; (d) cherry floor at k=9..12 (base 1-(k-1)/7 goes negative -- does the cherry's triple credit rescue what Hunter cannot?).
 
 ---
+## monad-explorer-2026-07-07-S4 -- EXACT HARD-CORE LEDGERS (HYP-4907): the two load-bearing mixed shapes carry exact intersected floors 6.7-6.9x m_P (consecutive minimizes, exhaustive boxes); kps-S60's small-p weak spot is a proxy artifact (true G2 = 7.9x); R in [0.855,0.938]; + two more collision resolutions (4857->4907, 4847->4917)
+
+Prompt (owner): aggregated fleet handoff list (intersected-ledger coupling, d-perp pruning, palindrome tests, hard-core targets, mu3 tables, R>=0.75, etc.).
+
+LANE DISCIPLINE: most list items were claimed mid-flight by concurrent sessions (kps-S60 intersected ledger, kps-S61 Part-A arc bound + V0abs<=1106, opus-S135 roof PROVED+GREEN, opus-S136 exact (A') six boxes, mac-mini-S42 LRCTailDiameter GREEN + direct-G2 probe, mac-mini-S43 THM-639 tiling model, kps-S62/S63 step-gauge + majorization, klein-S155/S157 pair-mass/Hunter). My unique remainder: the EXACT ledgers at the two hard cores.
+
+RESULTS (exact, exhaustive): engine = general-E exact G2(P,E) (Farey_{2S} cells + exact G_P intersection; sanity 477/1078 MATCH).  P={9..13} (k=8): min G2 = 246287/630630 ~ 0.3905 = 6.91x m_P over ALL 3432 cluster shapes S<=14, at the consecutive cluster; R=0.930.  P={10..13} (k=9): min G2 = 1619/4290 ~ 0.3774 = 6.68x m_P over all 1287 shapes S<=13; R=0.855.  Cross-check P={1,2,3,4,5}: true min G2 = 109/245 = 7.88x m_P -- kps-S60's 0.0163 there is the roof-subset PROXY degrading (their windows shrink into G_P cuts), not the consumed quantity: ledger-proxy and window-routes are complementary, true G2 comfortable everywhere.  Consecutive minimizes G2(P,.) on every box = fixed-P (A') pattern now exact.  mu_{3/14} argmin tables 0.541/0.423; d-perp short vectors head-concentrated ((1,-2,1) + (1,-1,-1,1) at offsets 0,1,2,..) -- the deficit localizes in the cluster head: short-vector truncation + tail is the right split for CE/PZ at fixed hard-core P.
+
+HYGIENE: resolved my stub collision (4857 -> 4907; mac-mini-S42 owns 4857) and the 4847 double-assignment (kps-S60 wire priority 08:26-0600 vs my 10:06-0500 stub => my S3 window factoring renumbered 4847 -> 4917 across INDEX/log/backlog). Fifth fleet collision today; upgraded recommendation: grep the INDEX for your number AFTER the pre-claim pull.
+
+HANDOFFS: (a) opus/mac-mini floor machinery: aim at the consecutive-cluster hard cores, exact bars now 0.3905/0.3774 with 6.7x slack; (b) kps-S63: my exact engine is available for the majorization/palindrome sweep (offer); (c) the assembled coverage map now reads: spread13 (ratio<=13) + window routes (all P but 2, D_c budgets) + kps-S60 intersected bites (diam bands) + kps-S61 Part-A V0abs<=1106 + hard-core exact floors (this session) -- the reach side of k=8..13 is near-assembled; remaining analytic: wide clusters beyond all budgets + the (A')-beyond-boxes tail + finite checks.
+
+FILES: lrc14_hardcore_exact_ledger_monad_S4.py(+out); HYP-4907 finalized; collision fixes. No canon overridden.
 
 ## klein-2026-07-07-S157 -- THE VOLTAGE-LIFT READING (owner tiling directive, the face nobody claimed): mean-record families ARE defective c-lifts; the systematic class bottoms out EXACTLY at the record 12907/65520 (+0.0057 over T*, mean sidecar survives); 3-lift runner-up 0.19791; k=9 Hunter positivity by 7-ADIC DESCENT (HYP-4811)
 
