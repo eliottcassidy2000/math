@@ -1,0 +1,45 @@
+C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\lrc_nearAP_saturated_opus_S131.py:32: SyntaxWarning: invalid escape sequence '\{'
+  "{1..13,14}\{7}": [i for i in range(1,15) if i!=7],
+=== NEAR-AP SATURATED families: the real LRC(14) hard core? (opus-S131) ===
+
+  {1..13} (AP, NON-sat)      M=   1/14=0.07143  t=1/14  saturated=False  
+  {2..14} consecutive        M=    1/8=0.12500  t=1/16  saturated=True  
+  {3..15} consecutive        M=    1/6=0.16667  t=1/18  saturated=True  
+  {7..19} consecutive        M=   7/26=0.26923  t=1/26  saturated=True  
+  {14..26} consecutive       M=   7/20=0.35000  t=1/40  saturated=True  
+  {1..13} swap 1->14         M=    1/8=0.12500  t=1/16  saturated=True  
+  {1..12,14}                 M=   1/13=0.07692  t=1/13  saturated=False  
+  {1..13,14}\{7}             M=   1/11=0.09091  t=3/22  saturated=True  
+
+  systematic 13-consecutive {a..a+12}:
+    a= 1: {1..13} M=0.07143=1/14 t=1/14 [non-sat(sieve)]
+    a= 2: {2..14} M=0.12500=1/8 t=1/16 [SAT]
+    a= 3: {3..15} M=0.16667=1/6 t=1/18 [SAT]
+    a= 4: {4..16} M=0.20000=1/5 t=1/20 [SAT]
+    a= 5: {5..17} M=0.22727=5/22 t=1/22 [SAT]
+    a= 6: {6..18} M=0.25000=1/4 t=1/24 [SAT]
+    a= 7: {7..19} M=0.26923=7/26 t=1/26 [SAT]
+    a= 8: {8..20} M=0.28571=2/7 t=1/28 [SAT]
+    a= 9: {9..21} M=0.30000=3/10 t=1/30 [SAT]
+    a=10: {10..22} M=0.31250=5/16 t=1/32 [SAT]
+    a=11: {11..23} M=0.32353=11/34 t=1/34 [SAT]
+    a=12: {12..24} M=0.33333=1/3 t=1/36 [SAT]
+    a=13: {13..25} M=0.34211=13/38 t=1/38 [SAT]
+    a=14: {14..26} M=0.35000=7/20 t=1/40 [SAT]
+    a=15: {15..27} M=0.35714=5/14 t=1/42 [non-sat(sieve)]
+    a=16: {16..28} M=0.36364=4/11 t=1/44 [SAT]
+    a=17: {17..29} M=0.36957=17/46 t=1/46 [SAT]
+    a=18: {18..30} M=0.37500=3/8 t=1/48 [SAT]
+    a=19: {19..31} M=0.38000=19/50 t=1/50 [SAT]
+    a=20: {20..32} M=0.38462=5/13 t=1/52 [SAT]
+    a=21: {21..33} M=0.38889=7/18 t=1/54 [SAT]
+    a=22: {22..34} M=0.39286=11/28 t=1/56 [SAT]
+    a=23: {23..35} M=0.39655=23/58 t=1/58 [SAT]
+    a=24: {24..36} M=0.40000=2/5 t=1/60 [SAT]
+    a=25: {25..37} M=0.40323=25/62 t=1/62 [SAT]
+    a=26: {26..38} M=0.40625=13/32 t=1/64 [SAT]
+    a=27: {27..39} M=0.40909=9/22 t=1/66 [SAT]
+    a=28: {28..40} M=0.41176=7/17 t=1/68 [SAT]
+    a=29: {29..41} M=0.41429=29/70 t=1/70 [non-sat(sieve)]
+
+  min M over saturated near-AP tested: 1/11=0.09091 (thr 1/14=0.07143); at {1..13,14}\{7}

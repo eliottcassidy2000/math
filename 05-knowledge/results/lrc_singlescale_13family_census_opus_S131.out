@@ -1,0 +1,12 @@
+=== SINGLE-SCALE 13-family census: LRC(14) core (opus-S131) ===
+M(AP {1..13}) = 1/14 = 0.071429  (expect 1/14=0.071429)  threshold 1/14
+
+tested: 747 single-scale 13-families
+M < 1/14 (would REFUTE LRC14): 0   []
+M = 1/14 exactly (tight, = AP class): 1  distinct-up-to-perm: 1
+    tight: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+M in (1/14, 1/14+0.0055] (near-tight moat rim): 2
+    M=0.074074=2/27  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26)
+    M=0.075000=3/40  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 39)
+
+  => AP unique tight & no sub-threshold => single-scale core consistent with LRC14 (structural, not proof)

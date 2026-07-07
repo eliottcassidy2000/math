@@ -1,0 +1,26 @@
+=== structure of the 2nd tight family (opus-S131) ===
+V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+  exact M=1/14=0.071429; witness t=1/14; grid-M=0.071428 (cross-check ~1/14=0.071429)
+  V mod 14 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 10]
+  at t=1/14: values v*t mod 1, dist to Z:
+    v=  1: ||v*t||=1/14 = 0.0714
+    v=  2: ||v*t||=1/7 = 0.1429
+    v=  3: ||v*t||=3/14 = 0.2143
+    v=  4: ||v*t||=2/7 = 0.2857
+    v=  5: ||v*t||=5/14 = 0.3571
+    v=  6: ||v*t||=3/7 = 0.4286
+    v=  7: ||v*t||=1/2 = 0.5000
+    v=  8: ||v*t||=3/7 = 0.4286
+    v=  9: ||v*t||=5/14 = 0.3571
+    v= 10: ||v*t||=2/7 = 0.2857
+    v= 11: ||v*t||=3/14 = 0.2143
+    v= 13: ||v*t||=1/14 = 0.0714
+    v= 24: ||v*t||=2/7 = 0.2857
+
+=== FULL census of tight (M=1/14) single-scale 13-families, bounded ===
+tested 703 bounded families; TIGHT (M=1/14 exactly): 2
+   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)   mod14=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  (repeat mod14? False)
+   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)   mod14=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 13]  (repeat mod14? True)
+
+  AP {1..13} mod14 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  => structural question: are all tight families characterized by their mod-14 residue pattern?

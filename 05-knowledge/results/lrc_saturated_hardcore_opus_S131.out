@@ -1,0 +1,10 @@
+=== SATURATED 13-family census: the genuine sieve-hard core of LRC(14) (opus-S131) ===
+    saturated = a multiple of EVERY q in {2..14} => no single sieve t=1/q works
+
+tested 7825 SATURATED families
+  min M found = 1/11 = 0.090909  (threshold 1/14=0.071429)
+  M < 1/14 (would REFUTE LRC14): 0   []
+  M in [1/14, 1/14+0.008): 0 near-tight saturated families
+  M distribution (rounded): {0.091: 4, 0.094: 2, 0.095: 6, 0.097: 3, 0.098: 1, 0.1: 6, 0.102: 2, 0.103: 3, 0.104: 1, 0.105: 70, 0.106: 8, 0.107: 20}
+
+  => saturated families are the sieve-hard core; min M >= 1/14? True
