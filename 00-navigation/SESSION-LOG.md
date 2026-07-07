@@ -24,6 +24,21 @@ FILES: 05-knowledge/results/lrc_binomial_proof_burnside_klein_S170.out. No Lean 
 NEXT: (a) the x2-twisted Burnside dimension count in pair space (completes 2^{n/2-2}); (b) canon fold-in of S168+S169+S170 as one theorem family (the flip-parity trilogy); (c) the doubling-map lens on the four n=8 self-loop classes (are they the x2-orbit representatives?).
 
 ---
+## kind-pasteur-2026-07-07-S71 -- THE DIAMETER x RESONANCE DECOMPOSITION of (A') + honest finding that the S70 decorrelation half ALSO reduces to R2 + a verified QC flag on the incoming no-cherry mu-claims (HYP-5097)
+
+Prompt (owner): work the concrete next target (Erdos-Turan decorrelation + stability), and synthesize other targets from incoming work.
+
+THE DECOMPOSITION (unifies my S59/S68 finitizations + mac-mini net-route + klein R-criterion + opus-S141 hom-ladder): (A') PA_2/mu >= T_k splits by DIAMETER (bounded <= D_0: subset lemma = hom-monotonicity, PROVED) x RESONANCE (generic decorrelates high; resonant near-AP = S69 spread-AP exact + R2).
+
+HONEST NEGATIVE (the S70 decorrelation half does NOT cleanly close): tested PA_2 vs the smallest zero-sum relation -- the 'min-rel > R_0 => PA_2 > T_k' threshold FAILS because weight-4 relations (a+b=c+d) are UBIQUITOUS (my S63 finding recurring: at k=13 EVERY random family has min-rel=4). The true resonance measure is the ADDITIVE ENERGY (spread AP MAXIMIZES it, mac-mini-S40), and 'PA_2 monotone in additive energy' is R2-hard (S63 resonance-rugged, no monotonicity). So BOTH halves of the S70 target (stability + decorrelation) bottom out at R2 = COMPLETES the diagnosis: (A') via PA_2 = [bounded diameter PROVED] + [R2, irreducibly the additive-energy rigidity].
+
+ROBUST (reconfirmed): PA_2(E) >= PA_2(spread AP) >= T_k for ALL tested families (generic 0.68-0.95, spread AP min 0.72/0.38 at k=8/13, T_k 0.62/0.057).
+
+QC FLAG (verified, for mac-mini-S49/S50 + klein-S167): 'no-cherry => mu ~ 1.0' is RANDOM-sampled and MISSES structured spread APs (MISTAKE-102): spread 8-APs (d=4,7; diam 28,49) are no-cherry, large-diameter, yet mu = mu(AP_8) = 0.94 NOT ~1.0 (translation+dilation invariance); HARMLESS for T_8=0.62 but the true statement is 'no-cherry => mu >= mu(AP_k)' (= the AP-minimality bound = R2), not 'mu ~ 1'.
+
+NET: the fleet's k=8 leg rests on the AP-minimality/R2 rigidity through EVERY route (PA_2 stability, PA_2 decorrelation, mu net-route); R2 is irreducible = the one sigma-even measure core (S67).
+
+Files: lrc_decorrelation_decomp_kps_S71.py (+out); reflection the-decorrelation-half-also-reduces-to-R2-and-a-no-cherry-QC-kps-S71; HYP-5097. Synthesis + honest negative + QC (no proof, no formalization). Does NOT prove LRC(14) or R2.
 
 ## klein-2026-07-07-S169 -- THE c3-DIFF BINOMIAL LAW (EXACT at n=4..9): D over gridsym tilings ~ C(n-2,k)·2^{(m+f)/2-(n-2)} on {-(n-2)..n-2}; the S168 theorem = its no-zero-column corollary; EVEN-n SELF-LOOP COUNT 2^{n/2-2} CONFIRMED at n=8 (= 4, each in a distinct class) (HYP-4931)
 

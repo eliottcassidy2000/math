@@ -1,0 +1,52 @@
+================================================================================================
+PART 1 -- PA_2 vs smallest zero-sum relation (decorrelation): generic => PA_2 -> PA_2^inf
+================================================================================================
+
+  k=8: T_k=0.6185, PA_2^inf=0.7994
+    family                 min-rel L1     PA_2       mu         regime
+    consec AP {1..k}                4   0.9401   0.9401 RESONANT(near-AP)
+    spread AP d=2                   4   0.8320   0.9400 RESONANT(near-AP)
+    spread AP a=5 d=2               4   0.7203   0.9400 RESONANT(near-AP)
+    primes                          4   0.8597   1.0000 RESONANT(near-AP)
+    Sidon-greedy                    6   0.9316   1.0000 generic(decorr)
+    geometric 2^j                   6   0.9524   1.0000 generic(decorr)
+    random-generic-0                6   0.9253   1.0000 generic(decorr)
+    random-generic-1                6   0.9370   1.0000 generic(decorr)
+    random-generic-2                8   0.9239   1.0000 generic(decorr)
+    random-generic-3                6   0.9287   1.0000 generic(decorr)
+    random-generic-4                6   0.9398   1.0000 generic(decorr)
+    random-generic-5                6   0.9271   1.0000 generic(decorr)
+    => generic (min-rel > 4) families have PA_2 near PA_2^inf 0.7994 >> T_k;
+       resonant (min-rel <= 4 = near-AP) families are the S69+R2 core.
+
+  k=13: T_k=0.0565, PA_2^inf=0.3648
+    family                 min-rel L1     PA_2       mu         regime
+    consec AP {1..k}                4   0.4424   0.4424 RESONANT(near-AP)
+    spread AP d=2                   4   0.3877   0.4423 RESONANT(near-AP)
+    spread AP a=5 d=2               4   0.3797   0.4423 RESONANT(near-AP)
+    primes                          4   0.4491   0.9462 RESONANT(near-AP)
+    Sidon-greedy                    6   0.6981   0.9949 generic(decorr)
+    geometric 2^j                   6   0.7694   0.9730 generic(decorr)
+    random-generic-0                4   0.6853   0.9828 RESONANT(near-AP)
+    random-generic-1                4   0.6947   0.9810 RESONANT(near-AP)
+    random-generic-2                4   0.7171   0.9880 RESONANT(near-AP)
+    random-generic-3                4   0.6910   0.9839 RESONANT(near-AP)
+    random-generic-4                4   0.6923   0.9897 RESONANT(near-AP)
+    random-generic-5                4   0.6944   0.9902 RESONANT(near-AP)
+    => generic (min-rel > 4) families have PA_2 near PA_2^inf 0.3648 >> T_k;
+       resonant (min-rel <= 4 = near-AP) families are the S69+R2 core.
+
+================================================================================================
+PART 3 -- QC the incoming 'no-cherry => mu ~ 1.0' (mac-mini/klein, RANDOM-sampled)
+================================================================================================
+  claim: no-cherry (no clustered triple), diam>=27 8-shapes have mu >= 0.9998 (random census).
+  MISTAKE-102 check: spread APs are NO-CHERRY (evenly spaced, no clustered triple) AND
+  large-diameter -- but mu(spread AP) = mu(AP_k) by translation+dilation invariance:
+    consec AP                  [1, 2, 3, 4, 5, 6, 7, 8]: mu = 0.9402 (has cherry? no)
+    spread AP d=4 (diam 28)    [1, 5, 9, 13, 17, 21, 25, 29]: mu = 0.9400 (has cherry? no)
+    spread AP d=7 (diam 49)    [1, 8, 15, 22, 29, 36, 43, 50]: mu = 0.9402 (has cherry? no)
+    => spread 8-APs are no-cherry, diam>=27, yet mu ~ 0.94, NOT ~1.0.  The random census
+       (klein: 3990/4000) MISSES these structured shapes (MISTAKE-102).  HARMLESS for T_8=0.62
+       (0.94 > 0.62), but 'no-cherry => mu~1' overreaches; the true statement is
+       'no-cherry => mu >= mu(AP_k)' (= 0.94 at k=8), the AP-minimality bound again.
+DONE.
