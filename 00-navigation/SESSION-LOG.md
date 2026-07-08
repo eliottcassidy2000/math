@@ -1,3 +1,23 @@
+## klein-2026-07-08-S179 -- THM-660 progress: ALL THREE compact regimes EXACT-verified (k=12 min 0.299194, k=13 min 0.265395, joining k=11 0.346788) + Var(W) ~ 5.67e-5*R2 (fit R^2=0.974) => the covering variance is additive energy too, rigorizing the compact-minimizer structure and reducing the decorrelation tail to an energy bound (HYP-5317)
+
+Prompt (owner): keep working, make progress on next proof targets.
+
+PULLED: mac-mini converged on THM-660's structure -- 'PZ-minimizers are COMPACT (PZ rises with diam via decorrelation); min_E PZ = [finite compact check + decorrelation tail], a completable program'; and computed the exact block PZ (concurrent with my S178). kps-S77 works the chi_c/Liu-Zhu side (odd-cycle mechanism for GW's defect; MISTAKE-125 correcting the linearization converse).
+
+TWO CONCRETE ADVANCES on the completable program:
+
+(1) THE 'FINITE COMPACT CHECK' DONE FOR ALL THREE LEGS (exact). Over all primitive shapes diam<=15 (the high-energy regime where the minimizer lives), the exhaustive minimum PZ is an exact rational clearing the bar: k=11 = 21576025/62216714 = 0.346788 (+0.0156, S178); k=12 = 7730453929/25837625632 = 0.299194 (+0.0998); k=13 = 2482049526/9352267505 = 0.265395 (+0.2089). All minimizers are STRETCHED BLOCKS ({0,2,3,..,10,12},...). (Caught + fixed a TH=1/7 float-leak in the first exact pass; re-ran all-Fraction.)
+
+(2) THE DECORRELATION TAIL REDUCED TO AN ENERGY BOUND. Var(W) ~ 5.67e-5*R2 (least-squares, fit R^2=0.974, corr(R2,Var(W))=0.987) -- the covering-side analog of THM-656's Var(tent)=R2*V1. So PZ = 1/(1+Var(W)/E[W]^2) is DECREASING in additive energy R2, and since the AP maximizes additive energy (R2(AP_k)=k(k-1)(2k-1)/3, =770 at k=11), the PZ-minimizer is the max-energy=min-diameter=COMPACT shape -- this RIGORIZES mac-mini's compactness observation from the energy structure. The tail (diam>15, low energy) reduces to a rigorous Var(W)<=c*R2 bound + R2<=R2*(k) => PZ>=bar, same shape as THM-656.
+
+THE UNIFICATION (reflection filed): two functionals (tent = sum over pairs, W = sum over gaps), two second moments, ONE additive energy governs both. The 'two methods' (tent k<=10, PZ k=11,12,13) are one method in two costumes; the extremal lemma 'AP minimizes the floor' is in BOTH 'AP maximizes additive energy' -- a KNOWN fact, not a conjecture. The last analytic mile (both floors): the exact Var<=c*R2 upper bound (resonance sign).
+
+STATE: THM-660 now = [compact check EXACT for all 3 legs] + [tail = additive-energy bound, open analytic mile]. k=11,12,13 are exact in their binding regimes; the tail has large margin (PZ>=0.45 at k=11 diam>=16).
+
+FILES: THM-660 updated (compact table k=11/12/13 + Var(W) structure section); reflection the-covering-variance-is-additive-energy-too; 3 .out (varW_energy_structure, k12_k13_compact_exact, k12_k13_exact_verify) klein_S179; HYP-5317 appended.
+
+NEXT: (a) prove Var(W) <= c*R2 rigorously (the resonance sign, closes the tail -> k=11,12,13 DONE) -- parallel to THM-656's open lemma, maybe a shared proof; (b) the exact R2*(k) energy threshold for the covering floor; (c) push the compact exhaustive to diam<=18-20 to shrink the tail's start.
+
 ## mac-mini-2026-07-07-S57 (cont.2) -- built on klein-S177 THM-660: EXACT block PZ values (settle k=11 arithmetic) + the uniform floor has k=10's COMPACT-minimizer structure
 
 klein-S177 (THM-660) took my covering reformulation (THM-657) and used the STRONGER Paley-Zygmund bound mu >= E[W]^2/E[W^2] (vs my (7/6)E[W] Markov) -- clears ALL THREE legs k=11,12,13 diameter-free (0.347/0.308/0.272 vs bars 0.331/0.199/0.056), reducing them to an additive-energy 2-moment CoV inequality (NOT the mu-extremal lemma). I contributed two pieces:

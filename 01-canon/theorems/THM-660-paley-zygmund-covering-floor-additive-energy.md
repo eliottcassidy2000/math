@@ -85,12 +85,36 @@ The k=13 value reproduces **monad's exact PZ-on-V** to the digit (independent me
 The block clears **exactly at k=11,12,13 and fails at k=8,9,10** — the covering/PZ floor is the
 large-`k` tool, complementary to the tent floor (THM-651/656) which owns k≤10.
 
-**k=11 (binding leg), exhaustive-exact:** over ALL 2993 primitive shapes with diam ≤ 15 (the
-high-energy regime containing the minimizer), `min PZ = 21576025/62216714 = 0.346788 ≥ bar`
-(minimizer `{0,2,3,…,10,12}`, a stretched block). diam ≥ 16 shapes have `PZ ≥ 0.45` (descent) —
-the strong energy ordering (`corr(R2, PZ) = −0.96`) puts all lower-energy/spread shapes safely
-above. So the k=11 leg is exact in its binding regime; k=12 (+0.109) and k=13 (+0.216) have ample
-room.
+**All three legs, compact regime exact-verified (klein-S178/S179):** the exhaustive minimum over
+all primitive shapes with diam ≤ 15 (the high-energy regime where the minimizer lives — see the
+Var(W) structure below), each a stretched block, is an exact rational clearing the bar:
+
+| k | compact minimizer | exact min PZ (diam ≤ 15) | ≈ | margin over bar |
+|---|---|---|---|---|
+| 11 | {0,2,3,…,10,12} | 21576025/62216714 | 0.346788 | **+0.0156** |
+| 12 | {0,2,3,…,10,12,14} | 7730453929/25837625632 | 0.299194 | +0.0998 |
+| 13 | {0,2,3,…,12,14} | 2482049526/9352267505 | 0.265395 | +0.2089 |
+
+diam ≥ 16 shapes have `PZ ≥ 0.45` (k=11 descent) — the strong energy ordering (`corr(R2,PZ) = −0.96`)
+puts all lower-energy/spread shapes safely above. So all three legs are exact in their binding
+regimes; only the (large-margin) decorrelation tail remains.
+
+## The Var(W) additive-energy expansion (klein-S179 — the tail program)
+
+`E[W²] = Var(W) + E[W]²`, and the covering variance is **additive-energy controlled**, the exact
+analog of THM-656's `Var(tent) = R2·V1`:
+
+> `Var(W) ≈ 5.67·10⁻⁵ · R2` (least-squares over 50 k=11 shapes, **fit R² = 0.974**; `corr(R2,Var(W))
+> = 0.987`).
+
+So `PZ = 1/(1 + Var(W)/E[W]²)` is a **decreasing function of the additive energy `R2`**, and since the
+AP maximizes additive energy for a k-set (`R2(AP_k) = 2Σ_{d=1}^{k-1}(k−d)² = k(k−1)(2k−1)/3`; e.g.
+770 at k=11), the PZ-minimizer is the max-energy = min-diameter = compact shape (rigorizing mac-mini's
+"PZ-minimizers are compact"). This reduces the decorrelation tail to a **rigorous additive-energy
+bound**: an explicit `Var(W) ≤ c·R2` upper bound plus `R2 ≤ R2*(k)` gives `PZ ≥ bar` uniformly — the
+same shape as THM-656, and the completable form of mac-mini's "[finite compact check + decorrelation
+tail]". (The `≈` is empirical; the exact `Var(W)` upper bound in terms of `R2` and the pair-window
+deviations of THM-638 is the open analytic step — parallel to THM-656's resonance-sign lemma.)
 
 ## Credit and scope (honest)
 

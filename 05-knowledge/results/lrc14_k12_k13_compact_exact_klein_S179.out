@@ -1,0 +1,15 @@
+  k=12 diam 11: 1 shapes, float-min PZ=0.30803 
+  k=12 diam 12: 11 shapes, float-min PZ=0.30450 
+  k=12 diam 13: 66 shapes, float-min PZ=0.31560 
+  k=12 diam 14: 286 shapes, float-min PZ=0.29919 
+  k=12 diam 15: 1001 shapes, float-min PZ=0.31423 
+  k=12: compact float-min = 0.29919 at [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14]; EXACT = 0.29919366582357954 = 0.299194; bar=0.199344
+  -> k=12 compact (diam<=15): ALL CLEAR (exact min +0.09985)
+
+  k=13 diam 12: 1 shapes, float-min PZ=0.27205 
+  k=13 diam 13: 12 shapes, float-min PZ=0.27625 
+  k=13 diam 14: 78 shapes, float-min PZ=0.26540 
+  k=13 diam 15: 364 shapes, float-min PZ=0.26994 
+  k=13: compact float-min = 0.26540 at [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14]; EXACT = 0.26539548025945287 = 0.265395; bar=0.056487
+  -> k=13 compact (diam<=15): ALL CLEAR (exact min +0.20891)
+

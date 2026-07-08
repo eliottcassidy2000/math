@@ -1,0 +1,6 @@
+k=12 compact minimizer [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14]:
+   PZ = 7730453929/25837625632 = 0.299194; bar = 0.199344; margin +0.099849 -> CLEARS (EXACT)
+   is exact rational: True
+k=13 compact minimizer [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14]:
+   PZ = 2482049526/9352267505 = 0.265395; bar = 0.056487; margin +0.208908 -> CLEARS (EXACT)
+   is exact rational: True

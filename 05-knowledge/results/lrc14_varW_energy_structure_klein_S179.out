@@ -1,0 +1,17 @@
+k=11: Var(W) vs R2 (energy) and diam -- is Var(W) ~ linear in R2?
+  Var(W) ~ 5.667e-05*R2 + 4.402e-04;  R^2 of fit = 0.9738
+  corr(R2, Var(W)) = 0.987; corr(R2, Var(W)/E[W]^2) = 0.965
+
+  sample (R2, Var(W), E[W], Var/E^2, diam):
+    R2= 182 Var(W)=0.0103 E[W]=0.1815 Var/E^2=0.313 diam=67
+    R2= 182 Var(W)=0.0110 E[W]=0.1805 Var/E^2=0.336 diam=58
+    R2= 182 Var(W)=0.0110 E[W]=0.1805 Var/E^2=0.338 diam=69
+    R2= 190 Var(W)=0.0118 E[W]=0.1832 Var/E^2=0.353 diam=64
+    R2= 194 Var(W)=0.0123 E[W]=0.1800 Var/E^2=0.380 diam=57
+    R2= 194 Var(W)=0.0130 E[W]=0.1814 Var/E^2=0.394 diam=49
+    R2= 554 Var(W)=0.0292 E[W]=0.1586 Var/E^2=1.161 diam=16
+    R2= 558 Var(W)=0.0343 E[W]=0.1667 Var/E^2=1.233 diam=14
+    R2= 674 Var(W)=0.0392 E[W]=0.1655 Var/E^2=1.434 diam=11
+    R2= 678 Var(W)=0.0410 E[W]=0.1531 Var/E^2=1.748 diam=12
+
+(If Var(W)=a*R2 clean, then PZ=1/(1+Var/E^2)>=bar reduces to an R2 bound => rigorous tail.)
