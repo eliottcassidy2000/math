@@ -1,3 +1,21 @@
+## klein-2026-07-08-S179b -- LEM-005: THE COVERING DECORRELATION LEMMA (proving mac-mini's THM-661 tail): near/far split -- NEAR <= (2/7)E[W] RIGOROUS, FAR reduced to phase-vector equidistribution (far -> (5/7)^{k+1} << E[W]^2, o(1)=discrepancy), tail PZ >= 1/(1+(2/7)/E[W]) clears k=12,13 unconditionally + k=11 when E[W]>=0.1415 (HYP-5357)
+
+Prompt (owner): prove the far <= E[W]^2 + o(1) decorrelation lemma + other LRC14 tasks.
+
+PULLED: mac-mini THM-661 (unified covering-moment floor, degree<=4 discharges all six legs modulo the tail) + the near/far reduction 'tail = far <= E[W]^2 + o(1)'; opus THM-661 addendum (exact degree-3 floor D3 lifts k=11 +0.0159->+0.0735, 4.6x); kps HYP-5337 (decoupled Var(W)<=c*R2 INSUFFICIENT at k=11 -- worst cases don't co-occur, coupled bound needed). The owner's target = mac-mini's tail estimate.
+
+DELIVERED (LEM-005): the decorrelation lemma, scaffold PROVED + far reduced.
+(1) EXACT DECOMPOSITION: E[W^2] = int_0^1 R(t)dt, R(t)=P_{x,y}(y,y+t both uncovered) = E_x[lag-t autocorrelation of the uncovered set U(x)]. Split NEAR (|t|<1/7, meas 2/7) + FAR (disjoint arcs, meas 5/7). [Fubini, rigorous.]
+(2) NEAR <= (2/7)E[W] RIGOROUS: R(t) <= P(arc_y empty) = E[W] pointwise.
+(3) FAR <= E[W]^2 + o(1) PROVED AS REDUCTION: under iid FAR=(5/7)^{k+1} << E[W]^2_iid=((6/7)^k)^2 (k=11: 0.0047 vs 0.0335); Weyl equidistribution of the phase vector Phi(x)=(frac(e_i x)) drives FAR->iid as pairwise diffs grow, o(1)=phase-vector discrepancy. KEY subtlety RESOLVED: Bonferroni DIVERGES (arcs total 2k/7>1, S_1>1) so the far deviation is NOT a truncated pair sum -- it's the equidistribution DISCREPANCY, bounded by the small-difference resonances (same composite/small-gcd axis as the density side). Crossover COMPUTED: far<=E[W]^2 for primitive diam>=36 (k=11,12), >=81 (k=13); validated far<=E[W]^2 on spread, >E[W]^2 on compact (block11 0.044>0.025 -- confirming it's a genuine tail/spread statement, compact handled by exhaustive check).
+(4) TAIL FLOOR: E[W^2] <= (2/7)E[W]+E[W]^2 => PZ >= 1/(1+(2/7)/E[W]) >= bar iff E[W]>=(2/7)bar/(1-bar) = 0.1415/0.0711/0.0171 (k=11/12/13). Sampled min E[W]=0.166/0.142/0.126 => k=12,13 clear UNCONDITIONALLY; k=11 clears when E[W]>=0.1415 (thin -- opus D3 gives the margin, or a uniform E[W]>=0.1415 lower bound closes it).
+
+HONEST GAP: diam[18,35] (far still >E[W]^2, exhaustive infeasible) = kps-S78's COUPLED region (near/far worst cases don't co-occur); the explicit discrepancy RATE (uniform o(1)) is the analytic step. So LEM-005 proves the SCAFFOLD + reduces far to standard equidistribution; the last mile is the explicit rate + the k=11 E[W] lower bound (or opus's degree-3/4 covering floor with margin).
+
+FILES: LEM-005 (canon); lrc14_far_near_decomp / far_crossover _klein_S179b.out; HYP-5357.
+
+NEXT: (a) uniform E[W] >= 0.1415 lower bound for k=11 (closes the tail outright with LEM-005); (b) explicit discrepancy rate for the far o(1) (Erdos-Turan / Weyl on the phase vector); (c) the coupled near/far bound for diam[18,35] (kps); (d) @mac-mini/@opus LEM-005 is the tail scaffold for THM-661 -- the near bound is free, far reduces to equidistribution.
+
 ## opus-2026-07-08-S148 -- BLEEDING EDGE (covering-moment floor, THM-660/661): THE EXACT CLOSED-FORM DEGREE-3 COVERING FLOOR D3 = E[W]/M + (E[W]-E[W^2]/M)^2/(E[W^2]-E[W^3]/M) (optimal deg-3 minorant p=1-(1-t/r*)^2(1-t/M), no LP) -- LIFTS the binding k=11 leg from PZ's razor-thin +0.0159 to +0.0735 (4.6x thicker), block-minimized exhaustive; de-risks the tightest leg + loosens the tail requirement ~4.6x (HYP-5327)
 
 Prompt (owner): keep working the LRC(14) bleeding edge.

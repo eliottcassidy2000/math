@@ -1,0 +1,19 @@
+(1) k=11 crossover: min diam where far<=E[W]^2 for sampled shapes + PZ tail bound:
+  k=11 diam[ 10, 13]: max(far-E[W]^2)=+0.0191 far>EW^2; min E[W]=0.1580; tail-PZ 1/(1+(2/7)/E[W])=0.356 >=bar
+  k=11 diam[ 14, 20]: max(far-E[W]^2)=+0.0077 far>EW^2; min E[W]=0.1576; tail-PZ 1/(1+(2/7)/E[W])=0.356 >=bar
+  k=11 diam[ 21, 35]: max(far-E[W]^2)=+0.0014 far>EW^2; min E[W]=0.1708; tail-PZ 1/(1+(2/7)/E[W])=0.374 >=bar
+  k=11 diam[ 36, 80]: max(far-E[W]^2)=-0.0059 FAR<=EW^2 ok; min E[W]=0.1663; tail-PZ 1/(1+(2/7)/E[W])=0.368 >=bar
+  k=11 diam[ 81,200]: max(far-E[W]^2)=-0.0117 FAR<=EW^2 ok; min E[W]=0.1730; tail-PZ 1/(1+(2/7)/E[W])=0.377 >=bar
+
+  k=12 diam[ 11, 13]: max(far-E[W]^2)=+0.0196 far>EW^2; min E[W]=0.1370; tail-PZ 1/(1+(2/7)/E[W])=0.324 >=bar
+  k=12 diam[ 14, 20]: max(far-E[W]^2)=+0.0152 far>EW^2; min E[W]=0.1337; tail-PZ 1/(1+(2/7)/E[W])=0.319 >=bar
+  k=12 diam[ 21, 35]: max(far-E[W]^2)=+0.0043 far>EW^2; min E[W]=0.1364; tail-PZ 1/(1+(2/7)/E[W])=0.323 >=bar
+  k=12 diam[ 36, 80]: max(far-E[W]^2)=-0.0018 FAR<=EW^2 ok; min E[W]=0.1419; tail-PZ 1/(1+(2/7)/E[W])=0.332 >=bar
+  k=12 diam[ 81,200]: max(far-E[W]^2)=-0.0093 FAR<=EW^2 ok; min E[W]=0.1493; tail-PZ 1/(1+(2/7)/E[W])=0.343 >=bar
+
+  k=13 diam[ 12, 13]: max(far-E[W]^2)=+0.0200 far>EW^2; min E[W]=0.1238; tail-PZ 1/(1+(2/7)/E[W])=0.302 >=bar
+  k=13 diam[ 14, 20]: max(far-E[W]^2)=+0.0159 far>EW^2; min E[W]=0.1206; tail-PZ 1/(1+(2/7)/E[W])=0.297 >=bar
+  k=13 diam[ 21, 35]: max(far-E[W]^2)=+0.0079 far>EW^2; min E[W]=0.1135; tail-PZ 1/(1+(2/7)/E[W])=0.284 >=bar
+  k=13 diam[ 36, 80]: max(far-E[W]^2)=+0.0033 far>EW^2; min E[W]=0.1202; tail-PZ 1/(1+(2/7)/E[W])=0.296 >=bar
+  k=13 diam[ 81,200]: max(far-E[W]^2)=-0.0050 FAR<=EW^2 ok; min E[W]=0.1257; tail-PZ 1/(1+(2/7)/E[W])=0.305 >=bar
+
