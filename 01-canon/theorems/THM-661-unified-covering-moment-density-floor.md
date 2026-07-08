@@ -141,3 +141,23 @@ k=13 (needs a scalar `E[W]` floor) from k=11,12 (need the decorrelation) and loc
 density floor to this one barely-covers estimate. File:
 `04-computation/lrc14_PZ_compact_and_tail_macmini_S57.py` (near/far split, rigorous-inequality
 verification, the barely-covers divergence).
+
+## k=12,13 close via a UNIFORM D3 floor; brick (A) for k=11 (mac-mini-S57)
+
+kps-S79 closed the thin k=11 leg with opus's D3 via two bricks (A: max additive energy R2 <=
+614 for prim-diam >= 16; B: R2 <= 614 => D3 >= bar). The **k=12,13 analogs are far easier and
+need NO R2-diameter split** — they close by a UNIFORM D3 floor: the EXACT compact-minimum D3
+(Farey integration over all primitive shapes diam <= 15) is
+- **k=12: D3 = 0.355876 >= bar 0.199344, exact margin +0.156532 (1.8x)** at (0,2,4,5,6,..,12,14);
+- **k=13: D3 = 0.308844 >= bar 0.056487, exact margin +0.252357 (5.5x)** at (0,2,3,4,..,12,14);
+the tail (diam > 15) only rises (D3 -> 1 by decorrelation, LEM-005), so `min_E D3 = ` the compact
+min above, clearing both bars comfortably. So k=12,13 need only [the exact compact D3 check +
+LEM-005 with huge margin], not the delicate energy-diameter extremal argument k=11 requires.
+
+**Brick (A) for k=11 verified (primitive):** max R2 over PRIMITIVE 11-sets with prim-diam >= 16
+is exactly **614** (the 1+10 split `{0,..,9,16}`); the near-2-AP bump (610 at diam 18) stays
+under 614, and diam >= 19 gives R2 = 590 (lone-point differences no longer overlap the block).
+Primitivity is essential — the dilated block `2·{0..10}` has R2 = 770 but prim-diam 10 (excluded).
+The extremal proof (compression/rearrangement; the near-c-AP competitors bounded) is the one
+combinatorial lemma the k=11 leg still needs rigorously; k=12,13 sidestep it entirely.
+File: `04-computation/lrc14_k12_13_D3_analog_bricks_macmini_S57.py`.
