@@ -1,3 +1,19 @@
+## opus-2026-07-08-S153 -- THE E_j MATCHED-TUPLE ENERGIES = the relation lattice; E_2 = R2 EXACT; the resummed E[W] = sum_{n in L}prod psihat(n_i); HONEST non-perturbative wall (exact E_j != uniform bound; reconciles mac-mini LEM-007 + klein-S183) (HYP-5427)
+
+Prompt (owner): derive the E_j triple/quad matched-tuple energies exact.
+
+(1) FULL-SET RELATION-LATTICE FORMULA: E[W] = sum_{n in L}prod_i psihat(n_i), L = {n: sum n=0, sum n_i e_i=0} (psihat(0)=1-theta, psihat(m)=-c_m) -- the RESUMMED form of kps-S83 LEM-008's per-subset E[L_S] (the (1-theta) spectator weights absorb the inclusion-exclusion (-1)^|S|); verified 1e-5 on {0,1,2},{0,1,3},{0,1,2,3}; Sidon L={0}=>E[W]=(6/7)^k iid. Same resummation: Var(W)=sum_{n in L}K(n).
+
+(2) E_2 = R2 EXACT: support-4 relations (1,-1,-1,1) = additive quadruples e_i+e_l=e_j+e_k; full difference energy sum_{all d}r_d^2 = k^2 (d=0 Poisson) + R2 (d!=0), so the pair energy = R2. E_3=support-6 (sextuples), E_4=support-8 = |S|>=3 siblings of R2 (kps LEM-008 = per-subset generators), all exact structural counts.
+
+(3) HONEST NON-PERTURBATIVE WALL (reconciles mac-mini LEM-007 + klein-S183): the support-decomposition of Var(W) does NOT truncate -- |W_2|^2,|W_3|^2,|W_4|^2 = 0.077,0.226,0.932 GROW at k=11, true Var=0.047 from cross-level cancellation. So exact E_j are BUILDING BLOCKS not a convergent series; E_j exact != uniform Var<=c*R2. CORRECTS my S152 1.28-heuristic (not the rigorous |W_2|^2=0.077). ROUTE (fleet consensus): discrepancy (LEM-005) + per-shape (klein-S183), fed by the exact kernels.
+
+HONEST: exact structural identities (E_2=R2, the relation-lattice formulas) + honest reconciliation; the E_j route to a uniform bound is DEAD (mac-mini non-perturbative, klein non-uniform c). kps LEM-008 has the per-subset masses; my full-set resummation + E_2=R2 + the non-perturbative reconciliation are the adds.
+
+NEXT: the discrepancy route (LEM-005) -- controlling Var(W) via the equidistribution of the phases directly (not the moment expansion); klein-S183's per-shape Var<=2.02 E[W]^2 + the block+outlier binding case.
+
+---
+
 ## opus-2026-07-08-S152 -- THE EXACT j-FOLD OVERLAP VARIANCE KERNELS via a tent-power recursion: c_j = int t^j - sum_{r>=1}C(j,r)theta^2r c_{j-r} (int t^j = 2theta^{j+1}/(j+1)); c_2=11/7203, c_3=25/235298 (triple), c_4=321/28824005, ...; the Var(W) = sum_j (1-theta)^{2(k-j)}[C(k,j)+E_j]c_j structure validated (Sidon=diagonal, block=R2-resonance), tight c=6.1e-5 REPRODUCED at k=11 (HYP-5417)
 
 Prompt (owner): derive the triple/quad overlap mass Fourier kernels.
