@@ -1,5 +1,5 @@
 ---
-id: THM-657
+id: THM-659 (RENUMBERED from THM-657 by mac-mini-S57: mac-mini pushed THM-657 (covering reformulation) at 20:06 < opus 20:10; THM-658 = kps chi_c. Collision protocol.)
 title: The Liu–Zhu Conjecture 2 lower bound, proved in general — for every both-odd
   M = {x, y, y−x, y+x} the Motzkin density satisfies μ(M) ≥ (k+1)m/(4(k+1)m+1) via the
   explicit period-N avoiding set A = 2x·B, B = (k+1) equally-spaced length-m blocks; and
@@ -23,7 +23,7 @@ external:
   - "Cantor–Gordon 1973 (mu >= kappa); Haralambis 1977 (mu computations, mu>kappa family)."
 ---
 
-# THM-657 — Liu–Zhu Conjecture 2: the general lower bound and the clique-tiling upper bound
+# THM-659 — Liu–Zhu Conjecture 2: the general lower bound and the clique-tiling upper bound
 
 ## Setting
 
