@@ -147,12 +147,27 @@ not a solved characterization. The Lucas contrast (THM-652b) is the trivial smal
   (`< 13/3`) or refutes the clean equivalence (`= 13/3`). The GW two-speed winding is the
   candidate construction for the defect side; a matching `chi_c = 1/M` lower bound (a
   `1/M`-critical subgraph) would refute it.
-- **The odd-cycle mechanism (why GW's defect works).** opus-THM-652's integrality
-  obstruction at GW is an **odd cycle** (`C_13`, from the `{0,12} mod 26` pairing having
-  `gcd(12,26)=2` = two odd 13-cycles). Odd cycles `C_{2k+1}` have `chi_c = 2+1/k < 3 = chi`,
-  so the *same* Rédei-parity odd cycle that forces `chi > chi_f` is exactly what lets
-  `chi_c < chi`. This is why GW's defect is provable; `{2,3,5,8}`'s obstruction structure
-  (whether similarly odd-cyclic) is the open question.
+- **The odd-cycle mechanism (why GW's defect works), and a refined conjecture.**
+  opus-THM-652's integrality obstruction at GW is an **odd cycle** (`C_13`, from the
+  `{0,12} mod 26` PAIRING having `gcd(12,26)=2` = two odd 13-cycles). Odd cycles `C_{2k+1}`
+  have `chi_c = 2+1/k < 3 = chi`, so the *same* Rédei-parity odd cycle that forces
+  `chi > chi_f` is exactly what lets `chi_c < chi`. This ties the defect to opus-THM-652's
+  parity dichotomy `m/gcd(d,m) mod 2`. The genuine (hard-case) defect needs a **2-point-
+  pairing optimal independent set with an ODD cycle**:
+    - GW: `{0,12} mod 26` (pairing), `26/gcd(12,26) = 13` **odd** → `chi_f < chi = 1/M`,
+      `chi_c < chi` (the genuine defect, proved).
+    - Lucas `{1,3,4,7}`: `{0,2} mod 8` (pairing), `8/gcd(2,8) = 4` **even** → matching
+      exists, `chi = chi_f = 4 < 5 = 1/M` (the *trivial* defect, `chi < 1/M`).
+    - `{2,3,5,8}`: optimal set is **4-POINT** (`{0,1,7,11} mod 17`, density `4/17`), **not a
+      pairing** — so the odd-cycle matching mechanism does not apply, and the refined
+      conjecture PREDICTS **no genuine defect** (`chi_c` possibly `= 1/M = 13/3`), consistent
+      with the empty sub-`1/M` searches. `chi = 5 = ⌈17/4⌉` comes from `4 ∤ 17`, not an odd
+      cycle.
+  > **Refined conjecture.** For `chi(G_S) = 1/M(S)` (the hard case): `chi_c(G_S) < 1/M(S)`
+  > iff the density-optimal independent set is a **2-point pairing whose cycle is odd**
+  > (opus-THM-652's odd `m/gcd(d,m)`). This replaces the false "μ > M" characterization with
+  > the *parity of the pairing* — and correctly predicts GW (odd → defect) vs `{2,3,5,8}`
+  > (4-point → no genuine defect).
 - **The defect construction (general).** A route from a Haralambis `mu > M` witness (a
   denser-than-`M` avoiding set whose translates fail to tile by an odd-cycle parity) to a
   sub-`1/M` variable-speed circular coloring. GW is the template; the general case is open.
