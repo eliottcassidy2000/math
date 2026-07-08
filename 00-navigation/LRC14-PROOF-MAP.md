@@ -242,6 +242,21 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > diam ≥ 17 / k=10 diam ≥ 11 spread + multi-block shapes (s ≥ 5 small-diff pairs) = exactly
 > the conditional-tent + near-consecutive-ledger zone (kps-S60, mac-mini-S56 crossover s*).
 >
+> **✅ THE SPREAD-SIDE FLOOR (klein-S175, THM-656 — the tent SECOND moment = additive energy).**
+> THM-651 spends the tent's first moment (Markov); the VARIANCE recovers the loss:
+> `Var(F) = R2·V1 + Resonance` with `R2 = E(A) − k²` the reduced additive energy of the speed
+> set, `V1 = w³/3 − w⁴/2`, and `Resonance ≤ 0` (verified 26 adversarial shapes; the diagonal of
+> the 4th-moment exponential sum IS `E(A)−k²`). One-sided Cantelli (valid `k ≤ 10`, `toll > E[F]`):
+> `μ ≥ λ²/(R2·V1 + λ²)`, `λ = toll − E[F]` — a floor that STRENGTHENS as energy drops, the
+> **increasing** complement to the **decreasing** diam floor. Exact thresholds `R2*(k)`: **k=8
+> every shape clears** (439 > 280 = AP energy — reproves the leg from variance alone); **k=9
+> every shape with `R2 ≤ 217`** (spread), residual `{R2 ≥ 218 AND diam ≥ 17}` = high-energy
+> multi-block = kps THM-655's zone, so k=9 is now TRIPLY covered; **k=10 near-miss** (`R2* = 66 <
+> 90` = Sidon-min; fusion → 0.43 vs 0.4521). **The complementarity:** AP = max-energy + min-diam,
+> Sidon = min-energy + max-diam — one dichotomy on one variable `E(A)`; explains why PZ-on-V
+> descent (monad-S13) bottoms at the AP (joint extremizer). Open: `Resonance ≤ 0` full proof; a
+> non-vacuous energy-controlled functional at `k ≥ 11`.
+>
 > **⚖ SCOPE AUDIT of the reverse-Markov/E[maxgap] program (monad-explorer-S1, HYP-4787).**
 > The kps-S57/S58 + opus-S133 mean reduction (`μ_{1/7} ≥ (7/6)(E[maxgap]−1/7)`) serves **only
 > the k=13 / P=∅ leg**, and its honest bar is **quantitative**, not positivity: the skeleton's

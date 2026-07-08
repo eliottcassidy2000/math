@@ -1,0 +1,11 @@
+=== (A) k=9 energy floor: beta*=0.0677, R2*=217.67, bar=0.5622 ===
+    provable statement: R2(E) <= 217 => mu(E) >= 0.5622  [via Var<=R2*V1 + Cantelli]
+    scan 300 random k=9 (diam 8-40): 222 have R2<=R2* (2nd-moment covered); 78 residual; floor validity violations 0/20
+    RESIDUAL (R2>217): min diam 8, they are high-energy; R2 range 220-408. These need diam<=16 (THM-653) or conditional tent.
+    of residual, 77 have diam<=16 (THM-653 covers) => TRUE residual = R2>217 AND diam>=17
+
+=== (B) k=10 composition+2nd-moment fusion ===
+     k10-wide diam 126: E[F]=0.3306 E[F']=0.3213 (W_F=0.0093); lam'=0.1072 Var'=0.01524; fused Cantelli=0.4300 vs bar 0.4521 vs mu 0.996 short
+   k10-spread diam  45: E[F]=0.3306 E[F']=0.3060 (W_F=0.0246); lam'=0.1226 Var'=0.02000; fused Cantelli=0.4290 vs bar 0.4521 vs mu 0.993 short
+    k10-sidon diam  95: E[F]=0.3306 E[F']=0.3206 (W_F=0.0101); lam'=0.1080 Var'=0.01888; fused Cantelli=0.3819 vs bar 0.4521 vs mu 1.000 short
+    k10-vwide diam 215: E[F]=0.3306 E[F']=0.3256 (W_F=0.0050); lam'=0.1030 Var'=0.01526; fused Cantelli=0.4101 vs bar 0.4521 vs mu 0.997 short

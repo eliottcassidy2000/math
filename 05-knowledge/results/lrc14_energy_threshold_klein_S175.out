@@ -1,0 +1,18 @@
+=== exact energy threshold R2*(k): Var<=R2*V1 + Cantelli clears bar B iff R2 <= R2* ===
+ k       beta   toll-EF         V1     bar   R2*(k) Sidon-min coverable?
+ 8       3/28    0.1071   1.44e-05  0.6750    384.6        56        YES
+ 9       5/63    0.1406   7.72e-05  0.5622    199.4        72        YES
+10       2/35    0.0980   1.83e-04  0.4521     63.6        90 no (even Sidon fails)
+11       3/77   -0.0223   3.16e-04  0.3312       --       110 NO (toll<EF)
+12       1/42   -0.2211   4.62e-04  0.1993       --       132 NO (toll<EF)
+13       1/91   -0.4992   6.13e-04  0.0565       --       156 NO (toll<EF)
+
+=== optimize beta to MAXIMIZE R2*(k) (best energy threshold) ===
+  k=8: max R2* = 439.2 at beta=0.0955 (=191/2000); Sidon-min=56  -> COVERS spread
+  k=9: max R2* = 217.7 at beta=0.0677 (=203/3000); Sidon-min=72  -> COVERS spread
+  k=10: max R2* = 66.2 at beta=0.0507 (=507/10000); Sidon-min=90  -> insufficient
+
+=== ADVERSARIAL stress test: is Var <= R2*V1 (resonance<=0) robust? ===
+  tested 26 shapes; max Var/(R2*V1) = 0.9844 at rand-k8 [4, 6, 28, 30, 41, 49, 51, 59]
+  #shapes with Var > R2*V1 (resonance POSITIVE): 0/26
+  => Var <= R2*V1 HOLDS on all tested (resonance<=0 robust)

@@ -1,0 +1,18 @@
+         shape  k diam    R2  beta*      Var Cantelli     bar     mu  verdict
+           AP8  8    7   280  0.092  0.00804   0.8164  0.6750  0.940  CLEARS
+           AP9  9    8   408  0.067  0.03433   0.5123  0.5622  0.840  short-0.050
+          AP10 10    9   570  0.051  0.08169   0.1279  0.4521  0.776  short-0.324
+     k9-diam17  9   17   268  0.067  0.02683   0.5735  0.5622  0.971  CLEARS
+     k9-spread  9   36   112  0.067  0.00898   0.8007  0.5622  0.993  CLEARS
+      k9-sidon  9   68    88  0.067  0.00923   0.7963  0.5622  1.000  CLEARS
+        k9-2AP  9   53   288  0.067  0.03259   0.5253  0.5622  0.974  short-0.037
+       k9-wide  9   92    84  0.067  0.00855   0.8084  0.5622  0.997  CLEARS
+     k9-3block  9   42   280  0.067  0.03147   0.5340  0.5622  0.945  short-0.028
+    k10-spread 10   45   146  0.051  0.01953   0.3801  0.4521  0.993  short-0.072
+      k10-wide 10  126    98  0.051  0.01680   0.4163  0.4521  0.996  short-0.036
+       k10-2AP 10   54   410  0.051  0.07815   0.1329  0.4521  0.912  short-0.319
+     k10-sidon 10   95   110  0.051  0.02077   0.3658  0.4521  1.000  short-0.086
+
+NOTE: R2 = sum of squared ordered-difference multiplicities (=additive-energy proxy).
+Low R2 (spread, all differences distinct) => low Var => Cantelli clears.
+High R2 (repeated differences: blocks/APs) => high Var => needs ledger/conditional tent.

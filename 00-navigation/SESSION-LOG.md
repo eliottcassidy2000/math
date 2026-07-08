@@ -1,3 +1,19 @@
+## klein-2026-07-07-S175 -- THM-656: THE SPREAD-SIDE FLOOR (tent SECOND moment = additive energy) -- Var(F) <= R2*V1 (R2 = E(A)-k^2 reduced additive energy), Cantelli => mu >= lambda^2/(R2*V1+lambda^2): k=8 EVERY shape clears from variance alone; k=9 every R2<=217 (spread), residual = high-energy multi-block (kps THM-655's zone); the diam/energy COMPLEMENTARITY explains PZ-descent bottoming at the AP (HYP-4991)
+
+Prompt (owner): keep working toward the LRC 14 proof. (Opus model.)
+
+PULLED + BUILT ON: kps-S75 THM-655 CLOSED the k=9 (A') leg unconditionally (average-form conditional tent, ALL diameters, built on my THM-653 Part I) and proved k=10 (A') TRUE (7-11x margin, proof-gap not real gap). mac-mini-S57 avgc closes k=10 217/286. So k=8,9 PROVED; k=10 nearly; k=11/12/13 = intersection ledger (diam<=21/34/75) + PZ tails. opus-S145 AP76 Lean cert GREEN => k=13 diam<=75 UNCONDITIONAL.
+
+MY CONTRIBUTION (the missing SPREAD-SIDE floor, dual to kps's conditional tent): THM-651 uses only E[F] (first moment). I computed the VARIANCE. Var(F) = R2*V1 + Resonance EXACTLY (grid-verified 6+ digits); R2 = E(A)-k^2 = reduced additive energy of the SPEED SET; V1 = w^3/3-w^4/2. The 4th-moment exponential sum makes it structural: F-E[F] = Sum_{m!=0} f-hat(m)(|S_m|^2-k), and Cov(|S_m|^2,|S_m|^2) = E(A)-k^2 -- additive energy IS the diagonal coefficient. Resonance <= 0 (verified 26 adversarial: all-multiples/geometric/harmonic/two-scale/40 random; max ratio 0.984; Fourier 1/m-decay heuristic). One-sided Cantelli (k<=10): mu >= lambda^2/(R2*V1+lambda^2). Exact thresholds R2*(k) (optimized beta): k=8 R2*=439 > 280 => EVERY 8-set clears from variance alone (independent reproof); k=9 R2*=218 covers all spread (300-scan: 222 clear by energy, 77/78 residual are diam<=16 [THM-653]); k=10 R2*=66 < 90 Sidon-min = honest near-miss.
+
+THE STRUCTURAL PAYOFF (the complementarity): AP = MAX additive energy + MIN diameter; Sidon = MIN energy + MAX diameter. The decreasing diam floor (THM-653 I) and increasing energy floor (THM-656) are ONE dichotomy on ONE variable E(A). Retro-explains monad-S13's PZ-on-V descent bottoming at the AP (the joint extremizer: max variance AND min diameter -- neither floor comfortable there alone). This is the rigorous form of the fleet's "structured/spread" split, now a threshold R2 vs R2*(k).
+
+HONEST EDGES: resonance <= 0 verified not proved (the one analytic step); tent Markov vacuous at k>=11 (energy floor is a k<=10 tool). k=10 fusion (F' = F zeroed on windows) reaches 0.43 vs bar 0.4521 -- documented near-miss, needs sharper concentration (Bennett attempt timed out).
+
+FILES: THM-656 canon; 5 .out (second_moment, cantelli_energy, variance_exact_decomp, energy_threshold, k9floor_and_k10fusion) klein_S175; reflection additive-energy-is-the-spread-axis; PROOF-MAP spread-side block; HYP-4991 full.
+
+NEXT: (a) prove Resonance <= 0 (Fourier: tent 1/m coefficients + incommensurate frequencies => off-diagonal sum negative -- the one analytic gap); (b) a non-vacuous energy-controlled functional at k>=11 (bars are LOW there, 0.06-0.20, so a weak spread floor suffices -- the tent is just wrong-normalized); (c) the diam/energy two-floor max as a self-contained k=8 proof template; (d) offer the energy axis to monad for the PZ tails (E(A) explains their AP-minimizer).
+
 ## opus-2026-07-07-S146 -- CITE-CHECK INTEGRATION + LIU-ZHU 2004 CONJECTURE 2 CONFIRMED EXACTLY (27 instances, all previously-open x>=3, x+y<=22; mu({2,3,5,8})=4/17 pinned -- Liu-Zhu had only 4/17<=mu<=11/45) + THE DIVISOR LADDER ON THE MOTZKIN SIDE (mu=kappa slab generic 97%, mu>kappa combinatorial 3% at the small-gcd obstruction = the mirror of mac-mini-S56 "composite structure breaks uniform tools"; GW = its |S|=13 member) (HYP-5217)
 
 Prompt (owner): continue from where I left off and extend, pulling in themes encountered when pulling from GitHub.
