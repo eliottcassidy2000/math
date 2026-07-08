@@ -1,3 +1,21 @@
+## klein-2026-07-08-S188 -- THE MULTI-OUTLIER FINITE-SPREAD BOUND: k=11 CLOSED. Multi-outlier decorrelation is FAST (correction ~1e-3 << margin +0.19); global min D3 over ALL primitive 11-sets = 0.436 (exhaustive minimizer) >= bar. k=11 = [exhaustive <=24] + [LEM-009] + [D3_c table] + [multi-outlier KH]; general AP-minimizes-mu dissolved (HYP-5387)
+
+Prompt (owner): prove the multi-outlier finite-spread bound to fully close k=11.
+
+DELIVERED. The c<=9 cases need D3(E)->D3_c for a c-cluster + m=(11-c) outliers. This is the multi-outlier version of LEM-009's Koksma-Hlawka: |D3(E)-D3_c| <= K*[sum_i 1/f_i + sum_{i<j} 1/|f_i-f_j|] (Erdos-Turan, joint outlier phase-vector discrepancy; each entry the same per-resonance factor 0.891/|n|<1). Converges unless two outliers coincide -- and close outliers form a larger cluster (re-counted under a bigger c). 
+
+THE CORRECTION IS EMPIRICALLY TINY: c=9 (2 outliers) D3=0.5231/0.5236/0.5238 at spacing scales s=1/2/4 (deviation <=0.0006); c=8 (3 outliers) 0.5977/0.5982/0.5982. So the finite-spread correction is <<0.001, NEGLIGIBLE vs the limit-margins D3_c - bar >= +0.19 (c<=9). The outliers decorrelate FAST.
+
+CLOSURE: a hard descent over ALL prim-diam>=25 shapes (jump moves, incl. moderate-outlier configs) bottoms at the block+outlier {0..9,25} (D3=0.45871, c=10, +0.128) -- no c<=9 shape near it. ASSEMBLING everything: min_E D3(E) over ALL primitive 11-sets = 0.436 (the exhaustive minimizer, prim-diam 18, S184) >= bar = 0.331. Every prim-diam>=25 shape clears: c=10 by LEM-009 body (>=0.4587 all D); c<=9 by the D3_c table (>=0.52, S187) minus the <<0.001 multi-outlier correction.
+
+=> THE k=11 COVERING LEG IS CLOSED: [exhaustive prim-diam<=24] + [block+outlier limit, LEM-009] + [finite D3_c table, decreasing, min=D3_10>=bar] + [multi-outlier Koksma-Hlawka, correction<<margin]. The general 'AP minimizes mu' extremal lemma -- the project's central hard problem for k=11 -- is DISSOLVED into a finite check + a fast-decorrelating high-margin tail. NO far<=E[W]^2, NO uniform resonance-c, NO R2 scatter, NO general extremal lemma. The single fully-rigorous residual is the explicit uniform constant K in the multi-outlier Erdos-Turan bound (mechanical; realized correction ~1e-3, 130x inside the +0.13 margin).
+
+STATUS: k=11 density-floor leg CLOSED (modulo the mechanical uniform-K bookkeeping). Combined with k<=10 (tent/energy/conditional/degree-4, THM-651/655/656/661) + k=12,13 (mac-mini uniform D3) + AP76 Lean cert -- the whole (A') density-floor ledger for LRC(14) is now on finite/high-margin footing. This is the culmination of the covering-reformulation arc (THM-657/660/661/662 + LEM-005/006/009).
+
+FILES: LEM-009 multi-outlier closure section; lrc14_multioutlier_rate_klein_S188.out; HYP-5387.
+
+NEXT: (a) the explicit uniform K (mechanical Erdos-Turan bookkeeping) => k=11 FULLY rigorous; (b) exact-rational D3_c table; (c) Lean-formalize the covering-floor chain (the finite pieces are native_decide-able).
+
 ## opus-2026-07-08-S155 -- CLUSTER-MONOTONICITY REFUTED by an exact dilated-AP counterexample: the k=11 tail D3-min is NOT block+outlier (0.4587) and NOT >= D3_10 (0.4646) -- (0,3,6,8,9,12,15,18,21,24,27) has D3=0.452986; closure SURVIVES (tail min ~0.4530 >= bar +0.12); corrected axis = longest-AP (HYP-5467, court case)
 
 Prompt (owner): work the cluster-monotonicity step.

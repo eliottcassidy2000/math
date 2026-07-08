@@ -1,0 +1,7 @@
+(1) multi-outlier decorrelation: D3(c-block + m outliers) as spacing scale s grows -> limit:
+  c=9 (m=2): s1:0.5231 s2:0.5236 s4:0.5238 s8:0.5237 
+  c=8 (m=3): s1:0.5977 s2:0.5982 s4:0.5982 s8:0.5982 
+
+(2) min D3 over prim-diam>=25 (descent):
+  min D3 = 0.45871 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25] (c=10, diam=25); >= bar +0.1275
+  block+outlier {0..9,25} = 0.45871
