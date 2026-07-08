@@ -130,3 +130,29 @@ correction". Consequently:
 What SURVIVES rigorously: the equivalences (`far ≤ E[W]² ⟺ Var ≤ near`, `Var(W) = Σ|Ŵ(m)|²`),
 the exact overlap Fourier laws (a correct tool for the discrepancy computation), and D3 decreasing
 in m2. The resonance lemma `Var(W) ≤ c·R2` remains open, its difficulty correctly located.
+
+## The two remaining pieces, worked (mac-mini-S57): piece 1 proved, piece 2 collapses
+
+**Piece 1 (off-diagonal pair-resonance kernel) — PROVED (in isolation).** The support-2
+contribution is `Σ_m|Ŵ_2(m)|² = (6/7)^{2(k-2)} Σ_{P,P'} K(d_P,d_{P'})`,
+`K(d,d') = Σ_{s≠0} φ̂((d'/g)s)φ̂((d/g)s)`, `g = gcd(d,d')`, `a=d/g, b=d'/g` coprime. Since
+`φ̂(t) = sin²(πt/7)/(π²t²)` and `Σ_s sin⁴(πcs/7)/(π⁴c⁴s⁴) ≤ (2ζ(4))/(π⁴c⁴) = 1/(45c⁴)`,
+Cauchy–Schwarz gives **`K(d,d') ≤ 1/(45 a²b²)`**. Then, writing `R_d = ` difference
+multiplicity, AM–GM + `Σ_b 1/b² = π²/6` + `Σ_g R_{ga}² ≤ R2/2`:
+`Σ_{P,P'} R_dR_{d'} K ≤ (π⁴/3240)·R2`. So **`Σ_m|Ŵ_2(m)|² ≤ (π⁴/3240)(6/7)^{2(k-2)}·R2`** —
+a rigorous `R2`-linear bound on the pair part (verified: `0.079 ≤ 1.44` block; `0.014 ≤ 0.29`
+spread). This is a clean rigorous result, but it bounds ONLY the support-2 part.
+
+**Piece 2 (support-3,4 cancellation sign) — the hoped-for reduction is FALSE.** The support-
+exactly-r Fourier parts have `Σ_m|Ŵ_r|² = 0.077, 0.226, 0.932, …` (block, r=2,3,4) — GROWING,
+and the truncated `Σ_m|Σ_{r≤4}Ŵ_r|²` OVERSHOOTS the true `Var(W)=0.047` by **12×**. So the
+higher-support terms are large, and `Var(W) ≤ Σ_m|Ŵ_2|²` (which holds numerically, `0.047 <
+0.077`) is NOT a "small correction" — it requires extreme cancellation across all orders. The
+master-law/support route therefore CANNOT yield `Var(W) ≤ c·R2` by truncation: the pair bound
+(piece 1) does not control the exploding tail. This is the barely-covers cancellation in full.
+
+**Net.** Piece 1 gives a rigorous bound on the pair-resonance kernel; piece 2 shows the pair
+kernel does not dominate `Var(W)`, so the Fourier-truncation route to `Var ≤ c·R2` is ruled out.
+The genuinely rigorous path stays klein-S179b LEM-005 (phase-vector DISCREPANCY), whose uniform
+explicit rate is the one remaining analytic mile. The overlap Fourier laws derived here are the
+correct tool for THAT computation (they give the exact `far` integrand), not for a truncation.
