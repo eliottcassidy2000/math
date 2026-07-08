@@ -19,6 +19,22 @@ related:
   - HYP-4972  # S141: the homomorphism ladder LRC(14) => GRAPH-14 => MOTZKIN-14
   - THM-637   # the roof (AP-side exactness; not used here)
 external: none beyond standard longest-path potential arguments (all self-contained).
+attribution_update: |
+  S146 cite-check (web, full-text reads of Goddyn–Wong 2006, Liu–Zhu JGT 47 (2004),
+  Liu 2008 survey, Liu–Robinson 2020, Perarnau–Serra 2024):
+  - Part (b) is a REDISCOVERY: {1,3,4,7} tight is Wills 1968 (uniqueness Y.G. Chen 1991);
+    chi(G_L) = 4 is Kemnitz–Kolberg 1998; chi_c = chi_f = 4 and kappa = 1/5 and mu = 1/4
+    are Liu–Zhu 2004 (Cor 5.3, Cor 5.6, Thm 5.7 — their Type A.3 family {x,y,y−x,y+x}).
+    Part (b) stands as verified arithmetic with the literature as the primary source.
+  - Part (a) chi(G_GW) = 14 and the tight-instance framing appear NEW: GW's set is their
+    published tight T5, but no source computes mu, chi_f, chi, or chi_c for it, and no
+    paper remarks on the kappa-vs-mu / chromatic behavior OF TIGHT INSTANCES.
+  - chi_c < 1/kappa examples are published (Liu–Zhu 2004; punched sets with
+    chi_f < chi_c < 1/kappa all strict, Liu 2008 §4) — the "circular rung blind"
+    phenomenon is known in general; its occurrence AT TIGHT INSTANCES and the odd/even
+    matching dichotomy (part c) are the new content here.
+  - Related named opens in the literature this connects to: Liu 2008 Problem 3
+    (chi_c < 1/kappa at |D| = 3?), Liu–Zhu 2004 Problem 1 (chi_c of A.3 with x,y odd).
 ---
 
 # THM-652 — chi(G_GW) = 14, and the rigidity/matching dichotomy at the tight locus

@@ -1,0 +1,39 @@
+====================================================================================================
+LIU-ZHU 2004 CONJECTURE 2, instance-by-instance exact decision
+  M = {x, y, y-x, y+x}, x = 2k+1, y = 2m+1, gcd(x,y)=1; conjectured
+  mu = (k+1)m/(4(k+1)m+1).  UPPER half (mu <= v) was OPEN for x >= 3.
+====================================================================================================
+  (x,y)=( 1, 3) M=[1, 2, 3, 4]       v=    1/5: mu = v EXACTLY  [control (proved, x=1); 5 states; optimal pattern period 5, offsets [0]]
+  (x,y)=( 1, 5) M=[1, 4, 5, 6]       v=    2/9: mu = v EXACTLY  [control (proved, x=1); 14 states; optimal pattern period 9, offsets [0, 2]]
+  (x,y)=( 3, 5) M=[2, 3, 5, 8]       v=   4/17: mu = v EXACTLY  [OPEN case; 25 states; optimal pattern period 17, offsets [1, 7, 8, 14]]
+  (x,y)=( 1, 7) M=[1, 6, 7, 8]       v=   3/13: mu = v EXACTLY  [control (proved, x=1); 37 states; optimal pattern period 13, offsets [0, 2, 4]]
+  (x,y)=( 3, 7) M=[3, 4, 7, 10]      v=   6/25: mu = v EXACTLY  [OPEN case; 62 states; optimal pattern period 25, offsets [0, 1, 6, 12, 14, 20]]
+  (x,y)=( 5, 7) M=[2, 5, 7, 12]      v=   9/37: mu = v EXACTLY  [OPEN case; 117 states; optimal pattern period 37, offsets [0, 6, 10, 14, 20, 23]...]
+  (x,y)=( 1, 9) M=[1, 8, 9, 10]      v=   4/17: mu = v EXACTLY  [control (proved, x=1); 97 states; optimal pattern period 17, offsets [0, 2, 4, 6]]
+  (x,y)=( 5, 9) M=[4, 5, 9, 14]      v=  12/49: mu = v EXACTLY  [OPEN case; 294 states; optimal pattern period 49, offsets [1, 3, 11, 13, 14, 21]...]
+  (x,y)=( 7, 9) M=[2, 7, 9, 16]      v=  16/65: mu = v EXACTLY  [OPEN case; 538 states; optimal pattern period 65, offsets [1, 7, 11, 15, 19, 25]...]
+  (x,y)=( 1,11) M=[1, 10, 11, 12]    v=   5/21: mu = v EXACTLY  [control (proved, x=1); 254 states; optimal pattern period 21, offsets [0, 2, 4, 6, 8]]
+  (x,y)=( 3,11) M=[3, 8, 11, 14]     v=  10/41: mu = v EXACTLY  [OPEN case; 413 states; optimal pattern period 41, offsets [1, 3, 7, 13, 19, 20]...]
+  (x,y)=( 5,11) M=[5, 6, 11, 16]     v=  15/61: mu = v EXACTLY  [OPEN case; 724 states; optimal pattern period 61, offsets [0, 1, 3, 10, 13, 20]...]
+  (x,y)=( 7,11) M=[4, 7, 11, 18]     v=  20/81: mu = v EXACTLY  [OPEN case; 1384 states; optimal pattern period 81, offsets [3, 9, 11, 17, 19, 25]...]
+  (x,y)=( 9,11) M=[2, 9, 11, 20]     v= 25/101: mu = v EXACTLY  [OPEN case; 2486 states; optimal pattern period 101, offsets [0, 10, 14, 15, 18, 22]...]
+  (x,y)=( 1,13) M=[1, 12, 13, 14]    v=   6/25: mu = v EXACTLY  [control (proved, x=1); 665 states; optimal pattern period 25, offsets [0, 2, 4, 6, 8, 10]]
+  (x,y)=( 3,13) M=[3, 10, 13, 16]    v=  12/49: mu = v EXACTLY  [OPEN case; 1088 states; optimal pattern period 49, offsets [0, 1, 6, 7, 12, 18]...]
+  (x,y)=( 5,13) M=[5, 8, 13, 18]     v=  18/73: mu = v EXACTLY  [OPEN case; 1784 states; optimal pattern period 73, offsets [0, 1, 7, 11, 17, 21]...]
+  (x,y)=( 7,13) M=[6, 7, 13, 20]     v=  24/97: mu = v EXACTLY  [OPEN case; 3428 states; optimal pattern period 97, offsets [1, 3, 5, 15, 17, 19]...]
+  (x,y)=( 9,13) M=[4, 9, 13, 22]     v= 30/121: mu = v EXACTLY  [OPEN case; 6420 states; optimal pattern period 121, offsets [0, 3, 10, 11, 18, 21]...]
+  (x,y)=( 1,15) M=[1, 14, 15, 16]    v=   7/29: mu = v EXACTLY  [control (proved, x=1); 1741 states; optimal pattern period 29, offsets [0, 2, 4, 6, 8, 10]...]
+  (x,y)=( 7,15) M=[7, 8, 15, 22]     v= 28/113: mu = v EXACTLY  [OPEN case; 8440 states; optimal pattern period 113, offsets [0, 1, 3, 5, 14, 17]...]
+  (x,y)=( 1,17) M=[1, 16, 17, 18]    v=   8/33: mu = v EXACTLY  [control (proved, x=1); 4558 states; optimal pattern period 33, offsets [0, 2, 4, 6, 8, 10]...]
+  (x,y)=( 3,17) M=[3, 14, 17, 20]    v=  16/65: mu = v EXACTLY  [OPEN case; 7424 states; optimal pattern period 65, offsets [1, 3, 7, 9, 13, 19]...]
+  (x,y)=( 5,17) M=[5, 12, 17, 22]    v=  24/97: mu = v EXACTLY  [OPEN case; 11911 states; optimal pattern period 97, offsets [0, 6, 7, 10, 16, 20]...]
+  (x,y)=( 1,19) M=[1, 18, 19, 20]    v=   9/37: mu = v EXACTLY  [control (proved, x=1); 11933 states; optimal pattern period 37, offsets [0, 2, 4, 6, 8, 10]...]
+  (x,y)=( 3,19) M=[3, 16, 19, 22]    v=  18/73: mu = v EXACTLY  [OPEN case; 19453 states; optimal pattern period 73, offsets [0, 1, 6, 7, 12, 13]...]
+  (x,y)=( 1,21) M=[1, 20, 21, 22]    v=  10/41: mu = v EXACTLY  [control (proved, x=1); 31241 states; optimal pattern period 41, offsets [0, 2, 4, 6, 8, 10]...]
+
+  instances: 27 confirmed exactly, 0 anomalies
+  => LIU-ZHU CONJECTURE 2 CONFIRMED EXACTLY on every primitive both-odd
+     instance with x + y <= 22 -- including all previously-open x >= 3 cases;
+     each verdict is a machine certificate (no positive cycle at v = upper
+     bound, previously the open half; tight cycle = optimal periodic set).
+[1s]
