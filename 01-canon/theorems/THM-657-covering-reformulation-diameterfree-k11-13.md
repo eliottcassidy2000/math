@@ -91,6 +91,22 @@ association of the Kronecker phases).
   form is the **family-independent** bound `E[W](E) >= 0.0484` for all `E` (empirical min
   `~0.11`, 2.4x slack), NOT "block minimizes `E[W]`". The `mu`-route uses the genuine
   minimizer (the block) via "consecutive minimizes `mu`".
+
+- **The cleanest sufficient form found this session — a FIRST MOMENT.** Since
+  `(maxgap - 1/7)_+ >= maxgap - 1/7` pointwise and `W >= (maxgap - 1/7)_+`, we get
+  `E[W] >= E[maxgap] - 1/7`, so `mu >= (7/6)(E[maxgap] - 1/7)`. The block minimizes `E[maxgap]`
+  (robust: 0/250 random 13-sets below `E[maxgap]_block = 0.2114`; jump-descent stays at
+  `0.2114`), giving `mu >= (7/6)(0.2114 - 1/7) = 0.0799 = 1.41x m_P` — a diameter-free k=13
+  closure through `E[maxgap]`, a **first moment** (far more tractable than a probability).
+  Sufficient family-independent form: `E[maxgap](E) >= 1/7 + (6/7) m_P = 0.1913`.
+- **Sharpening negative result (verified): NO stochastic dominance.** The block does NOT
+  minimize `mu_t = P(maxgap > t)` at every threshold `t` — a perforated AP beats it at
+  `t = 0.30` (`0.143 < 0.168`; 107/200 random families beat the block at SOME `t`). The block
+  minimizes only at the relevant `t = 1/7` AND in the integral `E[maxgap] = int_0^1 mu_t dt`
+  (its excess `mu_t` at small `t` outweighs its deficit at large `t`). So the minimality is
+  threshold-specific + integral, not uniform — the extremal lemma cannot be proved by a
+  blanket coupling. The `E[sum g_i^2] = E[G(y)] <= E[maxgap]` relaxation is too weak
+  (`E[sum g^2]_block = 0.1622 < 0.1913`); one needs `E[maxgap]` directly.
 - **k<=10** already closed/near (THM-651/655/656 + degree-4 moment); the covering frame gives
   an independent diameter-free floor there too (`mu(block) >> bar` at every k).
 - **The k=13 tail (diam >= 76, the exact residual past opus-S145's AP76 Lean certificate):
