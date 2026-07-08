@@ -131,3 +131,21 @@ settled arithmetically (the `+0.0159` margin is a real rational, removing the N=
 numerical caveat). The ONLY remaining gap for the uniform floor is the extremal claim
 "block (or its neighborhood min 0.34679) is the k=11 PZ-minimizer" — now cleanly separated
 from the (now-exact) arithmetic. File: `04-computation/lrc14_block_PZ_exact_macmini_S57.py`.
+
+## The uniform floor has k=10's structure: compact minimizers + decorrelation tail (mac-mini-S57)
+
+`min_E PZ >= bar` (the open uniform statement) is NOT a global search over all families — the
+PZ-minimizers are COMPACT. Verified: PZ RISES monotonically with diameter (k=11: minPZ
+0.347/0.41/0.60/0.69/0.76 at diam ~10/20/40/80/200; k=13: 0.272/0.27/0.42/0.57/0.62), because
+wide families DECORRELATE (`E[W^2] -> E[W]^2`, so `PZ = 1/(1+Var(W)/E[W]^2) -> 1`). So:
+
+> `min_E PZ(E)` is achieved on a **compact** family (diam `<= ~14`, at/near the block), and the
+> uniform floor reduces to **[a FINITE exact check over compact shapes]** (my Farey-cell
+> integrator gives exact rational PZ for ANY family) **+ [a decorrelation tail bound]**
+> (`diam >= D => Var(W)/E[W]^2 <= (1-bar)/bar` via `|E[W^2] - E[W]^2|` controlled by the pair
+> joint-window deviations `|P_ij - 1/49|`, THM-638) — the SAME structure that handles k=10.
+
+This converts "verified by descent" into a completable program: enumerate compact shapes to
+diam D, integrate PZ exactly, confirm `>= bar` (block already exact: 0.347/0.308/0.272); bound
+the tail by decorrelation. The k=11 thinness (+0.0159) is the only tight point, and it is
+exact. File: `04-computation/lrc14_block_PZ_exact_macmini_S57.py` (exact integrator, any family).
