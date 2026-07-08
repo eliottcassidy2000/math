@@ -1,3 +1,21 @@
+## opus-2026-07-08-S148 -- BLEEDING EDGE (covering-moment floor, THM-660/661): THE EXACT CLOSED-FORM DEGREE-3 COVERING FLOOR D3 = E[W]/M + (E[W]-E[W^2]/M)^2/(E[W^2]-E[W^3]/M) (optimal deg-3 minorant p=1-(1-t/r*)^2(1-t/M), no LP) -- LIFTS the binding k=11 leg from PZ's razor-thin +0.0159 to +0.0735 (4.6x thicker), block-minimized exhaustive; de-risks the tightest leg + loosens the tail requirement ~4.6x (HYP-5327)
+
+Prompt (owner): keep working the LRC(14) bleeding edge.
+
+BLEEDING EDGE ID: the covering reformulation (mac-mini THM-657, mu=P(W>0), W=uncovered measure) + moment floors -- klein PZ B_2=E[W]^2/E[W^2] (THM-660), mac-mini unified B_d degree<=4 (THM-661). Six legs k=8..13 = mu>=B_d; single BINDING leg = k=11 (B_2 margin +0.0159 razor-thin).
+
+RESULT: B_d is an LP (best deg-d poly p<=1_{w>0} on [0,6/7]); for d=3 the optimum is CLOSED FORM (no LP): optimal minorant p(t)=1-(1-t/r)^2(1-t/M), M=6/7, feasible for ANY r (both factors >=0, p(0)=0); optimize r -> r*=(m2-m3/M)/(m1-m2/M), giving D3 = m1/M + (m1-m2/M)^2/(m2-m3/M) EXACT RATIONAL (valid when m2-m3/M>0). LP-confirmed to the digit. This is the deg-3 sibling of PZ's 1-(1-t/r)^2.
+
+k=11: B_2 +0.0159 -> D3 +0.0735 (4.6x), block D3=54912120381817/135668932727076=0.404751>=bar. EXHAUSTIVE (diam<=14): BLOCK is the exact D3-minimizer, min 0.404751 uniformly. Closed-form D3 clears ALL SIX legs for the block (+0.00058/+0.0055/+0.033/+0.0735/+0.159/+0.257 at k=8..13; k=8,9 thin -> mac-mini B_4 better there; k=11 = D3's home).
+
+DIRECTLY HELPS @kps-S78's tail gap: with D3's +0.0735 (not B_2's +0.0156), the diam>=D tail needs Var(W)/E[W]^2 <= (1-bar/D3-ish) -- LOOSER by ~4.6x, so the coupled-tail obstruction kps hit at k=11 relaxes. INFRA: generalized mac-mini's block-only integrator to ARBITRARY families (pz_exact, validated to the digit); extended klein's exhaustive PZ compact check to diam<=17 (min 0.3468, all clear).
+
+HONEST: a ROBUSTNESS sharpening of the binding leg (exact closed form + 4.6x margin), NOT a newly-closed leg (k=11 was already thinly discharged by B_2+tail). Filed as THM-661 addendum (mac-mini's umbrella), HYP-5327, reflection.
+
+NEXT: (a) @kps the D3-loosened tail (Var(W)/E[W]^2 <= ~1.7 for diam>=D_11, easier than the B_2 requirement); (b) exact D3 compact-min for k=12,13 (should be even thicker); (c) is there a closed-form B_4 (the k=8,9 legs)? -- the minorant 1-(1-t/r)^2(1-t/s)(1-t/M) two-free-param form; (d) Lean: the covering W identity + the B_2/B_3 Cauchy-Schwarz/factored-poly bounds are formalizable (the block moments are rationals).
+
+---
+
 ## kind-pasteur-2026-07-08-S78 -- BLEEDING EDGE (THM-660 PZ tail, k=11,12,13): the decoupled 'Var(W)<=c*R2 closes the diam>=16 tail' (klein-S179 NEXT-a) is INSUFFICIENT at the binding k=11 leg -- the tail bounds are COUPLED; needs a joint bound or extended exhaustive. (HYP-5337)
 
 Prompt (owner): keep working on the bleeding edge of the LRC-14 proof.
