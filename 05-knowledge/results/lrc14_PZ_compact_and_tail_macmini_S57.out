@@ -1,0 +1,17 @@
+=== (1) EXHAUSTIVE exact compact PZ check, k=12,13 ===
+  k=13: 455 primitive shapes diam<=15; float-min PZ=0.26540 at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+        EXACT min PZ = 2482049526/9352267505 = 0.265395;  bar=0.056487;  margin +0.208908  CLEARS
+
+=== (2) TAIL: what controls PZ -- diameter or min-difference? (k=11, the thin leg) ===
+  tight-cluster+outlier families (small min-diff, large diam):
+    block9+2far              diam= 80 mindiff= 1: PZ=0.4593 >=bar
+    block10+1far             diam=100 mindiff= 1: PZ=0.4045 >=bar
+    2 tight pairs spread     diam=100 mindiff= 1: PZ=0.4905 >=bar
+    block11 (compact)        diam= 10 mindiff= 1: PZ=0.3471 >=bar
+  min PZ over wide (diam>=20) families, binned by min-difference:
+    mindiff=1: min PZ = 0.3860 >=bar
+    mindiff=2: min PZ = 0.6562 >=bar
+    mindiff=3: min PZ = 0.7408 >=bar
+    mindiff=4: min PZ = 0.7243 >=bar
+    mindiff=5: min PZ = 0.7753 >=bar
+    mindiff>=6: min PZ = 0.8037 >=bar

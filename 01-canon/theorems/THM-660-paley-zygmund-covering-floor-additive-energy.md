@@ -173,3 +173,26 @@ This converts "verified by descent" into a completable program: enumerate compac
 diam D, integrate PZ exactly, confirm `>= bar` (block already exact: 0.347/0.308/0.272); bound
 the tail by decorrelation. The k=11 thinness (+0.0159) is the only tight point, and it is
 exact. File: `04-computation/lrc14_block_PZ_exact_macmini_S57.py` (exact integrator, any family).
+
+## k=12,13 exact compact minimizers + the tail is safe (mac-mini-S57)
+
+Completing klein-S178's k=11 exhaustive (diam<=15, min 0.346788): the EXACT compact
+PZ-minimizers (float-search over all primitive shapes diam<=15, exact Farey-confirm) are
+
+| k | exact min PZ (compact) | value | shape | margin over bar |
+|---|---|---|---|---|
+| 11 | (klein-S178) | 0.346788 | diam<=15 | +0.01558 (thin) |
+| 12 | `7730453929/25837625632` | 0.299194 | `(0,2,3,4,5,6,7,8,9,10,12,14)` | +0.099850 |
+| 13 | `2482049526/9352267505` | 0.265395 | `(0,2,3,4,5,6,7,8,9,10,11,12,14)` | +0.208908 |
+
+Both k=12,13 minimizers are PERFORATED blocks (not the pure block — matches "k=13 min is a
+non-block shape 0.262 < block 0.272"). **The tail is safe** and identifies the true structure:
+spreading a family only RAISES PZ (adding spread points improves coverage => W less spiky =>
+PZ up), so the GLOBAL minimizer is the MOST-COMPACT configuration, and wide families are
+strictly higher. Verified (k=11, the thin leg): the worst wide families are the min-difference-1
+tight-cluster+outliers, and they clear at min PZ 0.386 (vs 0.331 bar, +0.055); min-difference>=2
+wide families clear at >= 0.656. So `min_E PZ` = the compact minimum (diam<=15), and the
+uniform floor is `[the exhaustive compact check above, all >= bar] + [wide => PZ > compact-min,
+the decorrelation tail]`. The remaining rigorous piece is the tail bound "diam >= D => PZ >= bar"
+(comfortable target: the worst tail clears by +0.055 even at the thin k=11 leg). Files:
+`04-computation/lrc14_PZ_compact_and_tail_macmini_S57.py`.
