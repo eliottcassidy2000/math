@@ -207,3 +207,33 @@ Koksma-decaying, THM-638/641) rate are established — this is the correct scaff
 explicit uniform rate. The remaining piece is the higher-support tail (`|S| ≥ 3` resonances
 `Σ n_i e_i = 0`), which shares the non-truncation concern of the variance; but the LEADING rate is
 now explicit and difference-based, reducing the mile to a tail bound over the higher resonances.
+
+## Bounding the higher-support resonance tail (mac-mini-S57)
+
+The tail is `Σ_{r≥3} T_r`, `T_r = Σ_{(n): |supp|=r, Σn_i e_i=0} ∫∫_disjoint Π ĝ_B(n_i)`. Two facts:
+
+**(a) Per-term geometric decay (rigorous).** Replacing a zero entry (`ĝ_B(0)=5/7`) by a nonzero
+one (`|ĝ_B(n)| ≤ 2/(π|n|) ≤ 2/π`) costs a factor `(2/π)/(5/7) = 14/(5π) = 0.8913 < 1`. So each term
+of support `r` obeys `|·| ≤ (5/7)^{k+1}·(0.8913)^r/Π|n_i|` — support is geometrically penalized
+(UNLIKE the variance's balanced sum). The generating function `Σ_{Σn·e=0} Π w(n_i) = ∫₀¹ Π_i
+W(θe_i) dθ`, `W(φ)=1−1.783·ln(2 sin π|φ|)`, packages the whole tail in one integral.
+
+**(b) The absolute-value bound loses the cancellation (the obstruction).** Because `T_r`'s terms
+carry signs (`ĝ_B` complex, `y`-dependent), the geometric per-term decay does NOT give a summable
+bound: the resonance COUNT grows, and `∫₀¹ Π_i |W(θe_i)| dθ` DIVERGES-ish (`|W|` has a `ln`
+singularity at `φ=0`, and near `θ=0` all `θe_i→0` simultaneously, giving `∫(ln)^k`). So the tail,
+like the variance, needs the SIGNED cancellation — the `T_r` are individually large and cancel.
+The exact higher-support masses (the triple/quad `L̂_S` laws derived above, WITH their signs) are
+what carry that cancellation; the absolute route is the same barely-covers wall.
+
+**(c) Clean sub-result — dissociated (B_h) families.** If the speed set is `B_h` (no nontrivial
+`Σ n_i e_i = 0` with `Σ|n_i| ≤ h`), then ALL resonances have `Σ|n_i| > h`, so every tail term has
+`Π|n_i| ≥` (a growing bound) and the leading resonance is pushed to high `|n|`: `|far_dev| ≤
+(5/7)^{k+1}·C_h` with `C_h → 0` as `h → ∞`. So for STRONGLY dissociated spread families the tail
+(and `far_dev`) is provably small — a clean rate on a genuine (if restricted) spread class.
+
+**Net.** The tail has rigorous geometric per-term decay (a) and is provably small on dissociated
+families (c); the uniform bound over ALL spread families (b) shares the variance's signed-
+cancellation wall — the exact higher-support overlap laws (derived above) are the tool, but the
+uniform sign control is the same one remaining mile. The leading (pairwise, THM-638/641) rate plus
+the dissociated tail bound close `far ≤ E[W]²` for strongly-dissociated spread families explicitly.
