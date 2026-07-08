@@ -13,6 +13,25 @@ CONSEQUENCE for LRC: the graph-coloring reformulation cannot prove LRC(14) via l
 HANDOFFS: messaged opus (twice) -- the GW resolution + the general characterization, squarely their homomorphism-ladder territory; named the defect-half construction (turn a mu>M Haralambis witness into a sub-1/M variable-speed coloring; GW's two-speed winding is the template). Backlog leads updated (chi_c(G_GW) RESOLVED; new lead = the defect half). Also this session earlier: k=10 (A') characterization (proof-gap not real gap, 7-11x margin) which the fleet then CLOSED (mac-mini HYP-5267 degree-4 + klein THM-656 spread floor = the wide-mu route I pointed to).
 
 Files: lrc_chic_gw_quasiperiodic / lrc_chic_gw_sat / lrc_chic_linearization_locus _kps_S76 (+outs); THM-658 (GW witness + general characterization); reflection the-linearization-defect-is-the-mu-greater-than-M-locus-kps-S76; INDEX HYP-5307; backlog.
+## opus-2026-07-07-S147 -- THE OWNER HANDOFFS: THM-659 LIU-ZHU CONJ-2 GENERAL LOWER BOUND PROVED (A=2x*B, (k+1) length-m blocks; 4 exclusion residues closed-form; {0,x,y,x+y} 4-clique = upper-bound mechanism, tiling verified) + LEAN BRIDGE UPGRADED D<=30->D<=75 (kernel-pure, green, via my AP76 cert) + chi_c(G_GW) resolved by kps-S76 (<=13.5) + Haralambis honest-partial (max 20) + additive-energy 2-axes confirmed (HYP-5277)
+
+Prompt (owner): work the named handoffs (general Liu-Zhu Conj-2, Haralambis>25, chi_c(G_GW), skeleton rewiring, Motzkin side, additive energy) + pull in fleet themes.
+
+(A) THM-659 (canon): Liu-Zhu 2004 Conjecture 2 LOWER BOUND proved IN GENERAL (was only x=1). A = 2x*B mod N, B = (k+1) blocks length m step 2m, N=4(k+1)m+1, avoids M={x,y,y-x,y+x} with density (k+1)m/N. Symbolic: A-A=2x(B-B); B-B = [-(mx-1),mx-1] minus odd-m gaps; (2x)^{-1}M = {-2(k+1)m, -m, mx+1, mx} closed-form (651 instances; pin: y==-2mx mod N); gcd(x,N)=1 proved. UPPER BOUND: {0,x,y,x+y} 4-clique (symbolic x+y<=60) + Z_N tiles into (k+1)m cliques+1 (24 instances) => Conj 2 where tiling holds; lower half unconditional. |S|=4 rung of the divisor ladder; k=0 recovers x=1 slab.
+
+(B) LEAN: LRCGoodSetBridge upgraded D<=30 -> D<=75 (slowmu_goodSet_{ge,toReal_ge}_mP_diam75) via my S145 AP76 cert; kernel-pure, builds green. Full k=13 tail-diameter concrete floor for bounded pure clusters. (Scout: full skeleton discharge needs de-opaquing witnessG2/shapeOf + diameter reduction = open; safe local upgrade landed.)
+
+(C) chi_c(G_GW): RESOLVED by kps-S76 THM-658 (<= 27/2 = 13.5 < 14, explicit two-speed coloring) -- circular rung BLIND to GW tightness; agent stopped as redundant; kps's linearization defect (chi_c<1/M) sits on the mu>M=mu>kappa locus = THM-659's family + GW. THM-652+THM-658+THM-659 = one coherent GW arc.
+
+(D) Haralambis |S|=3: HONEST PARTIAL -- mu=kappa max<=20 (0 counterex, 1052 sets), did NOT beat 25 (window graph ~lambda^max; sub-exp |S|=3 engine = open target).
+
+(E) additive energy: klein-S176 REFUTED the cross-wiring independently (E(A) overlaps slab/combinatorial; real axis is 2-adic) = CONFIRMS my honest "two axes, one relation lattice L(S)" (energy = weight-4 count; 2-adic = other projection).
+
+FILES: 5 scripts+outs; THM-659; Lean D<=75 bridge; reflection the-liu-zhu-block-construction-and-the-relation-lattice-two-views-opus-S147; INDEX HYP-5277.
+
+NEXT: (a) general Conj-2 upper-bound tiling construction (CRT factorization of N; recursive combinatorics); (b) sub-exponential |S|=3 mu-engine to push Haralambis past 25; (c) the skeleton de-opaquing (witnessG2:=slowmu(goodSet), shapeOf concretization) -- turns the D<=75 bridge into a skeleton discharge; (d) kps's linearization defect half (mu>M => chi_c<1/M) -- the two-speed winding generalized; (e) exact chi_c(G_GW) in (13,13.5].
+
+---
 
 ## mac-mini-2026-07-07-S57 (cont.) -- THM-657: THE COVERING REFORMULATION -- mu_{1/7}(E) = P(k arcs of length 1/7 FAIL TO COVER the circle); mu >= (7/6)E[W]; DIAMETER-FREE reduction of k=11,12,13 to ONE lemma ("the AP is the most-efficient coverer"), margins 1.9x/2.9x/7.8x (HYP-5297)
 

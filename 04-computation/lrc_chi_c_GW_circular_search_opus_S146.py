@@ -118,40 +118,117 @@ def linear_scan(pmax=3000, verbose=True):
 # ================================================================= SAT machinery
 _SOLVER = "cadical153"
 
-def _build_cnf(nvert, edges, p, q):
+def _build_cnf(nvert, edges, p, q, fixed=None):
     """CNF for: proper (p,q)-coloring of graph (nvert vertices, edges list of (u,v)).
+       fixed: optional dict {vertex: color} of forced assignments (symmetry breaking).
        Returns (clauses, var(v,c) function via dict, nvars)."""
     from pysat.card import CardEnc, EncType
     from pysat.formula import IDPool
     pool = IDPool()
     def V(v, c):
         return pool.id(('x', v, c))
-    # reserve all color vars first
     for v in range(nvert):
         for c in range(p):
             V(v, c)
     clauses = []
-    # exactly-one color per vertex
     for v in range(nvert):
         lits = [V(v, c) for c in range(p)]
         clauses.append(list(lits))                              # at-least-one
         amo = CardEnc.atmost(lits, bound=1, vpool=pool, encoding=EncType.seqcounter)
         clauses.extend(amo.clauses)                             # at-most-one
-    # edge constraints: forbid |c(u)-c(v)|_p < q
     win = range(-(q - 1), q)                                    # deltas with cdist<q
     for (u, v) in edges:
         for a in range(p):
             for dl in win:
                 b = (a + dl) % p
                 clauses.append([-V(u, a), -V(v, b)])
+    if fixed:
+        for v, c in fixed.items():
+            clauses.append([V(v, c)])                           # force c(v)=c
     return clauses, V, pool.top
 
-def sat_feasible(nvert, edges, p, q, budget=3_000_000, solver=_SOLVER):
+def _build_cnf_order(nvert, edges, p, q, fixed=None, refbreak=None):
+    """ORDER (thermometer) encoding -- much stronger unit propagation for the circular
+       DIFFERENCE constraint |c(u)-c(v)| in [q, p-q].  ge[v][k] == (c(v) >= k), k=1..p-1.
+       Decoder: reads ge chain.  refbreak: (vertex, half) forbids c(vertex) > half (reflection).
+       Returns (clauses, decode(model)->coloring, nvars)."""
+    from pysat.formula import IDPool
+    pool = IDPool()
+    ge = {}
+    for v in range(nvert):
+        for k in range(1, p):
+            ge[(v, k)] = pool.id(('ge', v, k))
+    clauses = []
+    def GE(v, k):
+        if k <= 0: return True
+        if k >= p: return False
+        return ge[(v, k)]
+    def nGE(v, k):
+        g = GE(v, k)
+        return (False if g is True else True if g is False else -g)
+    def addcl(parts):
+        lits = []
+        for x in parts:
+            if x is True: return
+            if x is False: continue
+            lits.append(x)
+        if lits: clauses.append(lits)
+    # monotonicity: c(v)>=k  =>  c(v)>=k-1
+    for v in range(nvert):
+        for k in range(2, p):
+            clauses.append([-ge[(v, k)], ge[(v, k - 1)]])
+    # edges: band A (t): c(u)-c(v) in [q,p-q];  band B (¬t): c(v)-c(u) in [q,p-q]
+    for (u, v) in edges:
+        t = pool.id(('sel', u, v))
+        for k in range(1, p):
+            addcl([-t, nGE(v, k), GE(u, k + q)])            # A: c(u) >= c(v)+q
+            addcl([-t, nGE(u, k), GE(v, k - (p - q))])      # A: c(u) <= c(v)+(p-q)
+            addcl([t,  nGE(u, k), GE(v, k + q)])            # B: c(v) >= c(u)+q
+            addcl([t,  nGE(v, k), GE(u, k - (p - q))])      # B: c(v) <= c(u)+(p-q)
+    # fixed assignments c(v)=col
+    if fixed:
+        for v, cval in fixed.items():
+            for k in range(1, p):
+                clauses.append([ge[(v, k)]] if k <= cval else [-ge[(v, k)]])
+    # reflection break: c(rv) <= half
+    if refbreak:
+        rv, half = refbreak
+        if half + 1 <= p - 1:
+            clauses.append([-ge[(rv, half + 1)]])
+    def decode(model):
+        mset = set(l for l in model if l > 0)
+        col = [0] * nvert
+        for v in range(nvert):
+            c = 0
+            for k in range(1, p):
+                if ge[(v, k)] in mset: c = k
+                else: break
+            col[v] = c
+        return col
+    return clauses, decode, pool.top
+
+def sat_feasible_order(nvert, edges, p, q, budget=3_000_000, solver=_SOLVER,
+                       fixed=None, refbreak=None):
+    from pysat.solvers import Solver
+    clauses, decode, _ = _build_cnf_order(nvert, edges, p, q, fixed=fixed, refbreak=refbreak)
+    s = Solver(name=solver, bootstrap_with=clauses)
+    if budget:
+        s.conf_budget(int(budget)); res = s.solve_limited()
+    else:
+        res = s.solve()
+    if res is None:
+        s.delete(); return 'UNKNOWN', None
+    if not res:
+        s.delete(); return 'UNSAT', None
+    col = decode(s.get_model()); s.delete()
+    return 'SAT', col
+
+def sat_feasible(nvert, edges, p, q, budget=3_000_000, solver=_SOLVER, fixed=None):
     """Return (status, coloring|None). status in {'SAT','UNSAT','UNKNOWN'}.
        Deterministic conflict-budget limiting (the Timer/interrupt path does NOT fire
        reliably on this platform -- verified; conf_budget does).  UNKNOWN = budget hit."""
     from pysat.solvers import Solver
-    clauses, V, _ = _build_cnf(nvert, edges, p, q)
+    clauses, V, _ = _build_cnf(nvert, edges, p, q, fixed=fixed)
     s = Solver(name=solver, bootstrap_with=clauses)
     if budget:
         s.conf_budget(int(budget))
@@ -192,20 +269,31 @@ def segment_edges(L, S=GW):
                 E.append((i, i + s))
     return E
 
-def sat_circulant(p, q, N, budget=3_000_000):
+def clique_prefix(S=GW):
+    """The 12-clique {0,1,...,11} (all pairwise diffs 1..11 in GW). Used for sym-breaking."""
+    return list(range(12))
+
+def sat_circulant(p, q, N, budget=3_000_000, symbreak=True):
     E = circulant_edges(N)
     if E is None:
         return 'SELFLOOP', None
-    st, col = sat_feasible(N, E, p, q, budget)
+    fixed = {0: 0} if symbreak else None          # rotation symmetry c->c+const
+    st, col = sat_feasible(N, E, p, q, budget, fixed=fixed)
     if st == 'SAT':
         ok, why = verify_periodic(col, p, q, N)
         if not ok:
             return 'BUG(' + why + ')', col
     return st, col
 
-def sat_segment(p, q, L, budget=3_000_000):
+def sat_segment(p, q, L, budget=3_000_000, symbreak=True):
     E = segment_edges(L)
-    st, col = sat_feasible(L + 1, E, p, q, budget)
+    fixed = None
+    if symbreak:
+        if q == 1:                                 # ordinary coloring: fix 12-clique to 0..11
+            fixed = {v: v for v in clique_prefix()}  # SOUND: full color-perm symmetry
+        else:                                      # circular: only rotation is a symmetry
+            fixed = {0: 0}                           # SOUND: c->c+const; do NOT fix the clique
+    st, col = sat_feasible(L + 1, E, p, q, budget, fixed=fixed)
     if st == 'SAT':
         ok, why = verify_segment(col, p, q, L)
         if not ok:
@@ -213,6 +301,48 @@ def sat_segment(p, q, L, budget=3_000_000):
     return st, col
 
 # ================================================================= (H) local search finder
+def local_search_fast(p, q, N, restarts=60, iters=4000, seed=0, S=GW):
+    """Vectorized (numpy) min-conflicts finder for a periodic (p,q)-coloring on Z_N.
+       Returns a verified coloring (list) or None.  Much faster than the pure-python one."""
+    import numpy as np
+    if any(s % N == 0 for s in S):
+        return None
+    offs = sorted({s % N for s in S} | {(-s) % N for s in S})
+    offs = [o for o in offs if o != 0]
+    O = np.array(offs, dtype=np.int64)
+    nbr = (np.arange(N)[:, None] + O[None, :]) % N          # (N, deg)
+    rng = np.random.default_rng(seed)
+    for _ in range(restarts):
+        col = rng.integers(0, p, size=N)
+        stall = 0
+        for it in range(iters):
+            nc = col[nbr]
+            d = np.abs(col[:, None] - nc)
+            cd = np.minimum(d, p - d)
+            vconf = (cd < q).sum(axis=1)
+            confv = np.nonzero(vconf > 0)[0]
+            if confv.size == 0:
+                c = col.tolist()
+                ok, _ = verify_periodic(c, p, q, N)
+                return c if ok else None
+            u = int(confv[rng.integers(confv.size)])
+            un = col[nbr[u]]
+            cand = np.arange(p)
+            dd = np.abs(cand[:, None] - un[None, :])
+            cdd = np.minimum(dd, p - dd)
+            cnt = (cdd < q).sum(axis=1)
+            mn = cnt.min()
+            best = np.nonzero(cnt == mn)[0]
+            newc = int(best[rng.integers(best.size)])
+            if newc == col[u]:
+                stall += 1
+                if stall > 30:                              # random walk kick
+                    col[u] = int(rng.integers(p)); stall = 0
+            else:
+                stall = 0
+            col[u] = newc
+    return None
+
 def local_search_periodic(p, q, N, restarts=40, iters=4000, seed=0, S=GW):
     """min-conflicts finder for a periodic (p,q)-coloring on Z_N. Returns coloring|None."""
     E = circulant_edges(N)
@@ -350,7 +480,7 @@ def exp_localsearch_deep(qmax=8):
         Ns = sorted({26 * k for k in range(1, 13)} | {p, 2 * p, 3 * p, 4 * p})
         Ns = [N for N in Ns if 26 <= N <= 340 and circulant_edges(N) is not None]
         for N in Ns:
-            col = local_search_periodic(p, q, N, restarts=14, iters=1600, seed=7)
+            col = local_search_fast(p, q, N, restarts=40, iters=5000, seed=7)
             if col is not None:
                 hit = (N, col); break
         if hit:

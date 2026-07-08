@@ -1,0 +1,28 @@
+SMALL-RANGE (x+y<=16): 24 tiled OK, 0 fail/timeout
+   (3, 5, 17, 'tiled', 4)
+   (3, 7, 25, 'tiled', 6)
+   (5, 7, 37, 'tiled', 9)
+   (5, 9, 49, 'tiled', 12)
+   (7, 9, 65, 'tiled', 16)
+   (3, 11, 41, 'tiled', 10)
+   (5, 11, 61, 'tiled', 15)
+   (7, 11, 81, 'tiled', 20)
+   (9, 11, 101, 'tiled', 25)
+   (3, 13, 49, 'tiled', 12)
+   (5, 13, 73, 'tiled', 18)
+   (7, 13, 97, 'tiled', 24)
+   (9, 13, 121, 'tiled', 30)
+   (11, 13, 145, 'tiled', 36)
+   (7, 15, 113, 'tiled', 28)
+   (11, 15, 169, 'tiled', 42)
+   (13, 15, 197, 'tiled', 49)
+   (3, 17, 65, 'tiled', 16)
+   (5, 17, 97, 'tiled', 24)
+   (7, 17, 129, 'tiled', 32)
+   (9, 17, 161, 'tiled', 40)
+   (11, 17, 193, 'tiled', 48)
+   (13, 17, 225, 'tiled', 56)
+   (15, 17, 257, 'tiled', 64)
+
+4-CLIQUE property {0,x,y,x+y} (symbolic, all x+y<=60):
+  all instances x+y<=60 are cliques: True

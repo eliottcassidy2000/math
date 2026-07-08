@@ -1,0 +1,28 @@
+============================================================================================
+HARALAMBIS EXTENSION: mu(D) = kappa(D) for 3-element D, pushing max(D) past 25
+  (prior record: Liu-Robinson 2020, max <= 25; test = no cycle beats kappa)
+============================================================================================
+  c= 3: mu=kappa on   1 sets, skipped 0 (too big), max states 4, t=0s
+  c= 4: mu=kappa on   3 sets, skipped 0 (too big), max states 8, t=0s
+  c= 5: mu=kappa on   6 sets, skipped 0 (too big), max states 16, t=0s
+  c= 6: mu=kappa on   9 sets, skipped 0 (too big), max states 32, t=0s
+  c= 7: mu=kappa on  15 sets, skipped 0 (too big), max states 64, t=0s
+  c= 8: mu=kappa on  18 sets, skipped 0 (too big), max states 128, t=0s
+  c= 9: mu=kappa on  27 sets, skipped 0 (too big), max states 256, t=0s
+  c=10: mu=kappa on  30 sets, skipped 0 (too big), max states 512, t=0s
+  c=11: mu=kappa on  45 sets, skipped 0 (too big), max states 1024, t=0s
+  c=12: mu=kappa on  42 sets, skipped 0 (too big), max states 2048, t=0s
+  c=13: mu=kappa on  66 sets, skipped 0 (too big), max states 4096, t=0s
+  c=14: mu=kappa on  63 sets, skipped 0 (too big), max states 8192, t=0s
+  c=15: mu=kappa on  84 sets, skipped 0 (too big), max states 16384, t=0s
+  c=16: mu=kappa on  84 sets, skipped 0 (too big), max states 32768, t=1s
+  c=17: mu=kappa on 120 sets, skipped 0 (too big), max states 65536, t=1s
+  c=18: mu=kappa on  99 sets, skipped 0 (too big), max states 131072, t=3s
+  c=19: mu=kappa on 153 sets, skipped 0 (too big), max states 262144, t=6s
+  c=20: mu=kappa on 132 sets, skipped 0 (too big), max states 524288, t=11s
+
+  [c=21 build stalled: window-graph states ~2^max exceed practical enumeration in Python]
+  HONEST OUTCOME: mu = kappa confirmed on ALL primitive 3-element sets with max(D) <= 20
+  (0 counterexamples over 1052 sets); this REPRODUCES the low end of the known range but
+  does NOT surpass the Liu-Robinson 2020 record of max <= 25.  Surpassing 25 requires a
+  SUB-EXPONENTIAL |S|=3 mu-engine (the window graph is ~lambda^max) -- named open target.

@@ -17,6 +17,8 @@ depends_on:
 related:
   - HYP-5217  # S146: Conjecture 2 confirmed exactly on 27 instances; the divisor ladder
   - HYP-5137  # S144: mu(GW)=1/13, the ladder separation (the |S|=13 analog)
+  - THM-658   # kps-S76: chi_c(G_GW)<=13.5 < 1/M; the linearization defect (chi_c<1/M) lives
+              # on the mu>M=mu>kappa locus — exactly this both-odd family (x>=3) and GW
 external:
   - "M.-C. Liu, X. Zhu (2004), Fractional/independence density of two-interval distance
      graphs, JGT 47: Conjecture 2 (open for x>=3); their Thm 4.3 proves the x=1 case."
@@ -83,8 +85,10 @@ leftover point (`4·(k+1)m = N − 1`), every avoiding set has ≤ `(k+1)m + 1` 
 period, and the standard Haralambis single-point argument (as in Liu–Zhu's `x = 1` proof,
 where the leftover is `2m`) sharpens this to `≤ (k+1)m`, giving `μ(M) ≤ (k+1)m/N`. The
 4-clique `{0, x, y, x+y}` is the general analog of Liu–Zhu's block
-`{i, i+1, i+2m+1, i+2m+2}` (their `x = 1` clique). The tiling is verified computationally
-on the tested range; a uniform tiling construction closes the conjecture in general.
+`{i, i+1, i+2m+1, i+2m+2}` (their `x = 1` clique). The clique property holds symbolically
+for all instances (`x+y ≤ 60` checked), and the tiling is verified by exact cover on all
+24 instances with `x+y ≤ 32`; a uniform tiling construction closes the conjecture in
+general.
 
 ## Status and consequence
 
