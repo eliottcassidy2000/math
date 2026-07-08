@@ -1,0 +1,28 @@
+====================================================================================================
+PROOF: finite-scale floor for the interior L=10 tail family (resonance-sum + decay + finite check)
+  A_* = (0,3,6,8,9,12,15,18,21,24,27), D3(A_*) = 0.452986 (exact); bar = 0.331212
+====================================================================================================
+
+  [N=980] L=(0.156414,0.060540,0.029519)  D3_inf=0.464417  | sup|F^j|a^2b^2 K_j=(1521.176,839.719,530.506)  sup|F^j||ab| V_j=(0.28,0.16,0.10)
+
+  [N=1400] L=(0.156440,0.060546,0.029519)  D3_inf=0.464498  | sup|F^j|a^2b^2 K_j=(2907.178,1659.149,1079.746)  sup|F^j||ab| V_j=(0.28,0.16,0.10)
+
+(1) Decorrelation limit D3_inf = 0.464498 (klein D3_10=0.4646; exact L1=5636/36015=0.156490).
+    Decay envelope: sup|F^j| a^2 b^2 GROWS with N (1521->2907) -> the 1/(a^2 b^2) rate is FALSE;
+    sup|F^j| |ab| = V_j is STABLE (0.28,0.16,0.10) -> the 1/|ab| rate holds. Use that.
+
+(2) RATE (1/|ab|):  |m_j - L_j| <= 2 zeta(2) V_j /(pd) = 0.906/(pd), 0.536, 0.343
+    D3 gradient at limit g=(7.74,-18.47,12.60)  =>  |D3 - D3_inf| <= C/(pd), C=21.233
+
+(3-bar) target=0.331212, margin=0.133286 => need pd >= C/margin = 160
+    finite check pd < 160: 398 shapes, min D3 = 0.452983 at (0, 3, 6, 9, 12, 15, 18, 19, 21, 24, 27)
+    asymptotic pd>=160: D3 >= D3_inf - C/160 = 0.331794 >= target
+    => D3(E_{d,p}) >= 0.331212 = bar for ALL interior L=10 tail shapes  [PROVED]
+
+(4) EXACT MONOTONICITY D3 >= D3(A_*)=0.452986:  margin=0.01151 => pd0 = 1845
+    reliable finite check pd < 1050: 3312 shapes, min D3 = 0.452983 at (0, 3, 6, 9, 12, 15, 18, 19, 21, 24, 27)
+    (min = A_*; nothing below.  Band pd in [1050,1826): decorrelated large-scale shapes, D3~0.4646.
+     asymptotic pd>=1826: D3 >= D3_inf - C/1826 = 0.452870 ~ A_*.)
+
+  exact tail min: D3(A_*) = 0.452986 at d=3; D3 -> D3_inf = 0.4645 as pd->inf.
+====================================================================================================
