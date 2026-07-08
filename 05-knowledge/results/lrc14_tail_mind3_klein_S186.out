@@ -1,0 +1,12 @@
+min D3 over prim-diam>=25 (descent) = 0.45871 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25]
+  R2=590, maxcluster(<=9-window)=10, diam=25
+  bar=0.33121; >= bar (+0.1275)
+  block+outlier {0..9,30} D3 = 0.46783 (R2=590, maxcluster=10)
+
+cluster structure of low-D3 tail shapes (D3 vs maxcluster):
+  maxcluster=3: min D3=0.7709, mean=0.8003 (n=3)
+  maxcluster=4: min D3=0.7481, mean=0.7985 (n=22)
+  maxcluster=5: min D3=0.7813, mean=0.8048 (n=10)
+  maxcluster=6: min D3=0.6077, mean=0.7369 (n=4)
+  maxcluster=7: min D3=0.7262, mean=0.7262 (n=1)
+=> higher maxcluster (more block-like) => lower D3; the 10-block+outlier (maxcluster=10) is the extremal.

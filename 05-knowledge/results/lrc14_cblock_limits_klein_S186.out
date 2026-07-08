@@ -1,0 +1,12 @@
+c-block + (11-c) far outliers, D3 as outliers spread (-> decorrelation limit D3_c):
+bar = 0.33121
+
+  c=10 (1 outliers): shape ~[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]+[101]; D3_10 ~ 0.46491 >= bar (+0.1337)
+  c=9 (2 outliers): shape ~[0, 1, 2, 3, 4, 5, 6, 7, 8]+[101, 312]; D3_9 ~ 0.52350 >= bar (+0.1923)
+  c=8 (3 outliers): shape ~[0, 1, 2, 3, 4, 5, 6, 7]+[101, 312, 619]; D3_8 ~ 0.60211 >= bar (+0.2709)
+  c=7 (4 outliers): shape ~[0, 1, 2, 3, 4, 5, 6]+[101, 312, 619, 1020]; D3_7 ~ 0.67850 >= bar (+0.3473)
+
+=> D3_c DECREASES in c (more clustered = lower D3); the densest possible cluster at prim-diam>=25
+   is the 10-block (c=10), giving the GLOBAL min D3_10 = 0.4646 (LEM-009). All c<=10 >= bar.
+   So every prim-diam>=25 shape has D3 >= (its densest-cluster limit) >= D3_10 = 0.4646 >= bar,
+   modulo the finite-spread O(1/spread) correction (Koksma-Hlawka, LEM-009 mechanism per outlier).

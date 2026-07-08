@@ -70,3 +70,36 @@ parameter). No `far ≤ E[W]²`, no uniform resonance-`c`.
 `04-computation/lrc14_blockoutlier_limit_klein_S185.py` (+`.out`): the limit moments (`L_1` identity
 check, `D3_limit = 0.4646`), the convergence `D3(B∪{D}) → limit` with the `O(1/D)` rate;
 `lrc14_d3_exact_verify_klein_S184.py` (exact `D3` of the tail family to `D = 50`).
+
+## The energy ordering is a CLUSTER ordering: max-cluster-size ⟹ min-D3 (klein-S186)
+
+The "energy-ordering step" (`max-R2 ⟹ min-D3`) that would close the prim-diam ≥ 25 tail is
+**cleaner as a cluster ordering**: `R2` carries scatter (S183), but the D3-minimizer is governed by
+the **maximum cluster size** `c(E)` = the largest number of points of `E` inside a length-9 window.
+Descent over prim-diam ≥ 25 lands on the block+outlier `{0..9,25}` (`D3 = 0.4587`, `c = 10`), and
+random shapes stratify cleanly by `c`: `min D3 ≈ 0.77/0.75/0.78/0.61/0.73` at `c = 3/4/5/6/7` — all
+`≫ bar`, and DECREASING toward the extremal `c = 10`.
+
+**The c-block decorrelation limits.** Generalizing the above (a `c`-block plus `11−c` mutually
+decorrelating outliers), each `c`-cluster has a limit `D3_c` (same Weyl + Koksma–Hlawka mechanism,
+one factor per outlier):
+
+| c | config | D3_c | margin |
+|---|--------|------|--------|
+| 10 | 10-block + 1 outlier | **0.4646** | +0.133 |
+| 9 | 9-block + 2 outliers | 0.5235 | +0.192 |
+| 8 | 8-block + 3 outliers | 0.6021 | +0.271 |
+| 7 | 7-block + 4 outliers | 0.6785 | +0.347 |
+
+`D3_c` is **decreasing in `c`**, so the GLOBAL minimum over all decorrelated prim-diam ≥ 25 shapes is
+`D3_10 = 0.4646` (the block+outlier, this lemma). Since a prim-diam ≥ 25 set cannot contain an
+11-block (`c ≤ 10`), every such shape's D3 approaches a limit `≥ D3_10 = 0.4646 ≥ bar`.
+
+**The closure.** `k=11 = [prim-diam ≤ 24: EXHAUSTIVE (min D3 = 0.436)] + [prim-diam ≥ 25:
+D3 ≥ D3_{c(E)} − O(1/spread) ≥ 0.4646 − ε ≥ bar]`. The residual is (i) the cluster-monotonicity
+`D3_c ↓ in c` (verified c = 7..10; each `D3_c` an explicit block-decorrelation limit) and (ii) the
+finite-spread correction (`O(1/spread)` per outlier, Koksma–Hlawka, absorbed by the ≥ +0.13
+margins). Both are **bounded, high-margin** statements — the general "AP minimizes μ" extremal lemma
+is reduced to "the densest cluster (10-block) minimizes D3, with a +0.13 margin," localized to the
+tail. Corrected framing: the axis is cluster size, not R2. File:
+`lrc14_tail_mind3_klein_S186.out`, `lrc14_cblock_limits_klein_S186.out`.

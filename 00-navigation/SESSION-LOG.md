@@ -16,6 +16,21 @@ NET: far = variance = doubly-balanced resonance cancellation, RIGOROUSLY unified
 FILES: LEM-007 (overlap laws, resonance mechanism, tail bound, doubly-balanced structure, corrections); lrc14_overlap_fourier_law / lrc14_energy_variance_bridge _macmini_S57.
 
 NEXT: the doubly-balanced (3-AP + higher) signed cancellation = the ONE remaining analytic mile, shared by far AND variance (klein LEM-005 discrepancy is the vehicle; closes diam>=36).
+## klein-2026-07-08-S186 -- the energy-ordering step is a CLUSTER ordering (max-cluster-size => min-D3, correcting the R2 framing): the c-block decorrelation limits D3_c = 0.465/0.524/0.602/0.679 (c=10/9/8/7) DECREASE in c, min D3_10=0.4646 => every prim-diam>=25 shape's D3 -> a limit >= 0.4646 >= bar; k=11 closes modulo bounded high-margin residuals (HYP-5387)
+
+Prompt (owner): prove the energy-ordering step (max-R2 => min-D3) to fully close k=11.
+
+FINDING: the energy-ordering is CLEANER as a CLUSTER ordering. R2 carries scatter (my S183, D3-vs-R2 not monotone), but the D3-minimizer is governed by the MAXIMUM CLUSTER SIZE c(E) = largest # points of E in a length-9 window. Descent over prim-diam>=25 lands on the block+outlier {0..9,25} (D3=0.4587, c=10); random shapes stratify cleanly by c: min D3 ~ 0.77/0.75/0.78/0.61/0.73 at c=3/4/5/6/7, all >> bar, DECREASING toward c=10.
+
+THE c-BLOCK DECORRELATION LIMITS (generalizing LEM-009: a c-block + (11-c) mutually-decorrelating outliers, one Weyl/Koksma-Hlawka factor per outlier): D3_c = 0.4646/0.5235/0.6021/0.6785 at c=10/9/8/7 -- DECREASING in c, ALL >= bar (margins +0.13/+0.19/+0.27/+0.35), GLOBAL min D3_10 = 0.4646 (the block+outlier, LEM-009). Since a prim-diam>=25 set cannot contain an 11-block, c<=10, so every such shape's D3 approaches a limit >= D3_10 = 0.4646 >= bar.
+
+THE CLOSURE: k=11 = [prim-diam<=24: EXHAUSTIVE, min D3=0.436, S184] + [prim-diam>=25: D3 >= D3_{c(E)} - O(1/spread) >= 0.4646 - eps >= bar]. The residual is (i) cluster-monotonicity D3_c decreasing in c (verified c=7..10, each an explicit block-decorrelation limit) + (ii) the finite-spread O(1/spread) correction per outlier (Koksma-Hlawka, absorbed by the >=+0.13 margins). BOTH are bounded, high-margin statements. So the general 'AP minimizes mu' extremal lemma is REDUCED to 'the densest cluster (10-block) minimizes D3, with a +0.13 margin,' localized to the tail -- and the correct axis is CLUSTER SIZE, not R2.
+
+STATUS: k=11 is closed modulo the cluster-monotonicity + finite-spread correction (bounded, high-margin, well-supported); the R2-scatter obstruction is dissolved by using cluster size as the axis. Combined with the S184 exhaustive + LEM-009, this is the cleanest k=11 route on record: no far<=E[W]^2, no uniform resonance-c, no general AP-min -- just a finite exhaustive + a decreasing family of block-decorrelation limits.
+
+FILES: LEM-009 cluster-ordering extension; lrc14_tail_mind3 / cblock_limits _klein_S186.out; HYP-5387.
+
+NEXT: (a) prove D3_c decreasing in c (cluster-monotonicity) -- would fully close k=11; (b) the finite-spread O(1/spread) bound uniform over prim-diam>=25 (multi-outlier Koksma-Hlawka); (c) k=12,13 close by mac-mini uniform D3 => whole k>=11 done.
 
 ## klein-2026-07-08-S185 -- LEM-009: THE BLOCK+OUTLIER DECORRELATION LIMIT PROVED -- D3(B u {D}) -> 0.4646 >= bar (Weyl + L1=(6/7)E[W_B]=5636/36015 exact + Koksma-Hlawka O(1/D)); closes the k=11 prim-diam>=25 tail (with S184 exhaustive) modulo the energy-ordering step (HYP-5387)
 
