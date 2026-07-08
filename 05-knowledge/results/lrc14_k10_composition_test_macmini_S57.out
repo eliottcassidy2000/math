@@ -1,0 +1,20 @@
+=== k=10: max(conditional-a, window-b) vs m_P=0.05649; E[F]=0.3306, toll=0.4286 ===
+
+testing 2038 candidate residual families per shape
+
+shapes CLOSED by max(a,b) (all tested families >= m_P): 217/286
+min over all (shape,family) of max(a,b) - m_P = -0.07898  at P=(4, 5, 6), E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 50)
+
+worst 12 shapes (deficit, shape, witness family, #a-fails, #both-fail):
+  -0.07898  P=(4, 5, 6)  E=(0, 1, 2, 3)..50  a-fails=1705  both-fail=904
+  -0.06550  P=(3, 4, 5)  E=(0, 1, 2, 3)..50  a-fails=859  both-fail=553
+  -0.06397  P=(4, 5, 12)  E=(0, 1, 2, 3)..50  a-fails=1476  both-fail=365
+  -0.06275  P=(5, 6, 13)  E=(0, 1, 2, 3)..50  a-fails=1893  both-fail=1677
+  -0.06059  P=(5, 12, 13)  E=(0, 1, 2, 3)..20  a-fails=2021  both-fail=1840
+  -0.05699  P=(5, 6, 12)  E=(0, 1, 2, 3)..50  a-fails=1823  both-fail=9
+  -0.05579  P=(4, 5, 13)  E=(0, 1, 2, 3)..50  a-fails=857  both-fail=657
+  -0.05159  P=(3, 5, 12)  E=(0, 1, 2, 3)..20  a-fails=1279  both-fail=690
+  -0.05140  P=(5, 6, 11)  E=(0, 1, 2, 3)..50  a-fails=1689  both-fail=1509
+  -0.04859  P=(5, 11, 12)  E=(0, 1, 2, 3)..20  a-fails=2014  both-fail=1836
+  -0.04488  P=(4, 5, 11)  E=(0, 1, 2, 3)..50  a-fails=577  both-fail=426
+  -0.04462  P=(4, 6, 10)  E=(0, 1, 2, 3)..50  a-fails=1465  both-fail=700
