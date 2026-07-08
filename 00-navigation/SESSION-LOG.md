@@ -1,3 +1,20 @@
+## mac-mini-2026-07-08-S57 (cont.4) -- k=12,13 ANALOG legs CLOSED + the THREE PZ legs UNIFY under one uniform D3 floor; brick (A) verified + shown OPTIONAL (HYP-5357 program)
+
+Prompt (owner): work barely-covers wall, formalize bricks (A)/(B), k=12,13 analogs, Part A/Lean wiring.
+
+INTEGRATED: klein-S179b LEM-005 (near/far decorrelation, far<=E[W]^2+o(1) reduced to phase equidistribution; the lemma I was reducing, pushed to explicit rate); opus-S148 D3 exact closed form; kps-S79 k=11 tail closed via D3 + bricks (A: max R2<=614 diam>=16; B: R2<=614=>D3>=0.458). The barely-covers wall (E[W]>=c / far<=E[W]^2) is the fleet's LEM-005 territory now -- honest status recorded in THM-661 (it's the same difficulty as AP-minimizes-mu; NOT independently cracked).
+
+MY DELIVERABLES:
+1. k=12,13 ANALOGS CLOSED (much easier than thin k=11): UNIFORM D3 floor, NO R2-diameter split. Exact compact-min D3 (Farey) = 0.355876 (k=12) / 0.308844 (k=13) >= bars 0.199344/0.056487, EXACT margins +0.1565/+0.2524 (1.8x/5.5x); minimizers are near-2-APs. Tail (diam>15) rises (LEM-005 decorrelation, huge margin).
+2. THE THREE PZ LEGS UNIFY: min_E D3 is on a COMPACT family for k=11,12,13 (block_11 for k=11: D3=0.404751 exact; near-2-AP for k=12,13), all >= bar. So k=11 closes by the SAME uniform-D3-floor mechanism as k=12,13 (+0.0735), NOT needing kps's delicate R2-diam split -- the block is the k=11 D3-minimizer (max R2 => min D3). Brick (A) becomes OPTIONAL (needed only if routing the tail via R2 not D3).
+3. brick (A) VERIFIED (primitive): max R2 over primitive 11-sets with prim-diam>=16 = 614 (the 1+10 split {0..9,16}); near-2-AP bump 610 at D=18 stays under; PRIMITIVITY excludes dilated blocks (2*block R2=770, prim-diam 10). The exact extremal proof (compression, near-c-AP competitors) is the one combinatorial lemma still open rigorously -- but now OPTIONAL given the D3 unification.
+
+DENSITY FLOOR (A') STATUS: now [B_4 covering-moment floor for k=8,9,10 (THM-661)] + [uniform D3 floor min_E D3>=bar for k=11,12,13], ALL diameter-free via the covering reformulation. Remaining rigor: the LEM-005 tail decorrelation (klein, [18,35] k=11 gap) + the moment-energy D3 lower bound (kps/opus). Part A + Lean assembly = separate (owner: proofs before formalization, no big builds).
+
+FILES: lrc14_k12_13_D3_analog_bricks / lrc14_tail_rigorous_reduction _macmini_S57 (+outs); THM-661 sections (k=12,13, unified D3 floor, honest barely-covers status). No canon overridden.
+
+NEXT: (a) the moment-energy D3 lower bound (brick B rigorous) closes the uniform floor; (b) LEM-005's [18,35] k=11 diam gap; (c) brick (A) compression proof (optional); (d) Part A + Lean wiring when proofs settle.
+
 ## kind-pasteur-2026-07-08-S80 -- FORMALIZED BRICK (A) of the k=11 covering-tail closure (canon THM-662: the additive-energy/diameter extremal bound); brick (B) reduced to the loose moment-energy mile. HONEST: k=11 NOT fully closed (brick B = the shared analytic mile, open). (HYP-5357)
 
 Prompt (owner): formalize bricks (A) and (B) to fully close k=11.
