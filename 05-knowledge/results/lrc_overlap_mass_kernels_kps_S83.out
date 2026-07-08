@@ -1,0 +1,12 @@
+TRIPLE overlap mass kernel (rank-1 primitive triangle):
+     [0, 1, 3]: direct=0.006802  triangle-kernel=0.006803
+     [0, 1, 7]: direct=0.002915  triangle-kernel=0.002915
+    [0, 3, 12]: direct=0.005101  triangle-kernel=0.005102
+    [0, 7, 20]: direct=0.002915  triangle-kernel=0.002915
+QUAD overlap mass kernel (rank-2 additive-relation lattice):
+    [0, 1, 2, 3]: direct=0.006802  lattice-kernel=0.006811
+    [0, 2, 4, 6]: direct=0.006802  lattice-kernel=0.006811
+    [0, 3, 6, 9]: direct=0.006802  lattice-kernel=0.006811
+    [0, 2, 3, 5]: direct=0.004081  lattice-kernel=0.004090
+=> E[L_S] = sum_{m in Lambda_S} prod c_{m_a}, Lambda_S = balanced additive-relation
+   lattice (rank |S|-2). |S|=2 pair = THM-641; |S|=3,4 = this. apex-7 + dilation-invariant.

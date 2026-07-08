@@ -11,6 +11,24 @@ HONEST: the KERNEL half of the resonance lemma is now exact-closed (every order 
 NEXT: the E_j multipliers (triple/quad matched-tuple energies) exact + the uniform Var<=c*R2 upper bound; then brick(B) -> k=11 -> the density floor.
 
 ---
+## kind-pasteur-2026-07-08-S83 -- DERIVED the triple/quad (and general) OVERLAP-MASS FOURIER KERNELS (canon LEM-008): E[L_S] = sum_{m in Lambda_S} prod c_{m_a}, Lambda_S = the balanced additive-relation lattice (rank |S|-2). Triple = rank-1 primitive triangle; quad = rank-2 additive-relation lattice. (HYP-5397)
+
+Prompt (owner): derive the triple/quad overlap mass Fourier kernels, close out the session and push.
+
+RESULT (LEM-008, PROVED + exact-verified): from the S82 Fourier form of the covering overlaps, the mean S-arc overlap has the clean closed form
+  E[L_S] = sum_{m in Lambda_S} prod_{a in S} c_{m_a},  c_m = int_0^{1/7} e(-2pi i m t)dt,
+  Lambda_S = {m in Z^S : sum m_a = 0 AND sum m_a e_a = 0} = the BALANCED ADDITIVE-RELATION LATTICE of S, rank |S|-2.
+SPECIALIZATIONS:
+ - |S|=2: Lambda={0}, E[L_ij]=1/49 (pair-overlap mean; THM-641 is the anchored refinement).
+ - |S|=3 (rank 1): Lambda = Z*(d1,d2,d3)/gcd = the PRIMITIVE TRIANGLE of differences (d1+d2+d3=0); E[L_ijk] = (1/7)^3 + sum_{t!=0} prod c_{t*d/gcd}. Depends only on the primitive triangle (dilation-invariant).
+ - |S|=4 (rank 2): Lambda = triangle vectors + Sidon-violation vectors (e.g. (1,-1,-1,1) when e_i+e_l=e_j+e_k); E[L_ijkl] = sum over the rank-2 lattice, encoding the quad's additive relations.
+ - general |S|: rank |S|-2 lattice of balanced additive relations.
+APEX-7: c_m = 0 for 7|m (THM-637/638 invisibility, generalized). DILATION-INVARIANT (2*AP,3*AP,AP same mass).
+VERIFIED EXACT (direct x-integration vs kernel, 0 mismatch after the primitivity fix): triples {0,1,3}/{0,1,7}/{0,3,12}(gcd 3)/{0,7,20}; quads {0,1,2,3}/{0,2,4,6}/{0,3,6,9}/{0,2,3,5}(Sidon-viol). A GCD BUG was caught+fixed (the triple/quad lattice needs the PRIMITIVE generator, not the raw triangle vectors -- {0,3,12} and {0,2,3,5} initially mismatched).
+
+SCOPE (honest): LEM-008 gives the exact MEAN-overlap kernels (the |S|>=3 extension of THM-641). It is the building block of Var(W) = sum_{|S|,|T|>=2}(-1)^{|S|+|T|}Cov(L_S,L_T), but does NOT by itself prove the brick-(B) resonance lemma Var(W)<=c*R2 -- that needs the 2-window joint masses and is NON-perturbative (my S82: the series diverges under truncation; W is piecewise-linear with Wh(omega)~1/omega^2, so the exact Farey route is the way, not Fourier).
+
+FILES: LEM-008 (canon); lrc_overlap_mass_kernels_kps_S83.py (+out); builds on kps-S82 (HYP-5397), THM-641/657/637. This closes the arc: brick (A) proved (THM-662), brick (B) reduced (klein-S181) + its resonance mile mapped as non-perturbative (S82) with the exact overlap kernels derived (S83, LEM-008); k=11 rests on the Farey-moment resonance sign (fleet-active).
 
 ## mac-mini-2026-07-08-S57 (cont.5) -- DERIVED the S-arc overlap Fourier mass law (THM-641 method) + the RESONANCE MECHANISM: Var(W) ~ c*R2 with EXPLICIT c via the (6/7)^(k-2) inactive-arc damping (LEM-007; HYP-5357)
 
