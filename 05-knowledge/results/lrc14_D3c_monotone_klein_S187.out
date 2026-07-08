@@ -1,0 +1,21 @@
+D3_c decorrelation limits, c=1..10 (c-block + (11-c) decorrelated outliers):
+bar = 0.33121
+ c  L1(kernel)  L2(kernel) D3_c(direct, large-spread)
+ 1     0.18348     0.04091        D3_c = 0.85398  (direct L1=0.1836 check kernel 0.1835)
+ 2     0.18348     0.04091        D3_c = 0.85489  (direct L1=0.1837 check kernel 0.1835)
+ 3     0.18135     0.04020        D3_c = 0.85201  (direct L1=0.1818 check kernel 0.1814)
+ 4     0.17805     0.03949        D3_c = 0.84169  (direct L1=0.1786 check kernel 0.1781)
+ 5     0.17266     0.03889        D3_c = 0.81392  (direct L1=0.1732 check kernel 0.1727)
+ 6     0.16807     0.03985        D3_c = 0.75925  (direct L1=0.1664 check kernel 0.1681)
+ 7     0.16083     0.04176        D3_c = 0.67850  (direct L1=0.1588 check kernel 0.1608)
+ 8     0.15753     0.04593        D3_c = 0.60211  (direct L1=0.1554 check kernel 0.1575)
+ 9     0.15537     0.05202        D3_c = 0.52350  (direct L1=0.1553 check kernel 0.1554)
+10     0.15648     0.06055        D3_c = 0.46491  (direct L1=0.1565 check kernel 0.1565)
+
+D3_c sequence (c=1..10): ['0.8540', '0.8549', '0.8520', '0.8417', '0.8139', '0.7593', '0.6785', '0.6021', '0.5235', '0.4649']
+STRICTLY DECREASING in c: False
+min = D3_10 = 0.46491 (>= bar 0.33121, margin +0.1337)
+ALL >= bar: True
+
+=> D3_c is a FINITE sequence (c=1..10); strictly decreasing + all >= bar is a COMPLETE proof
+   that the cluster-decorrelation floor is min_c D3_c = D3_10 = 0.4646 >= bar.

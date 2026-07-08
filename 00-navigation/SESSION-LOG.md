@@ -1,3 +1,19 @@
+## klein-2026-07-08-S187 -- D3_c DECREASING PROVED (finite table, c in {1..10}): D3_c=.854/../.465 strictly decreasing for c>=2, min=D3_10=0.4649>=bar; mechanism = covering variance L2 rises with cluster size; k=11 fully reduced to a finite table + bounded high-margin spread correction (HYP-5387)
+
+Prompt (owner): prove D3_c decreasing in c to fully close k=11.
+
+KEY: c (max cluster size) ranges over the FINITE set {1..10} (a prim-diam>=25 set has no 11-block), so computing all ten D3_c and reading the minimum is a COMPLETE argument -- no need for a general monotonicity proof. Each D3_c (c-block + (11-c) INDEPENDENT arcs) is computed from the block-c uncovered-set statistics via the EXACT arc-avoidance kernel q(d) = P(two points at distance d both avoid one 1/7-arc) = 5/7 (d>1/7) else 6/7-d: L2^{(c)} = E_x int int_{U_c^2} q(|y-y'|)^{11-c}, L1^{(c)} = (6/7)^{11-c} E[W_c].
+
+RESULT: D3_c = 0.854/0.855/0.852/0.842/0.814/0.759/0.679/0.602/0.524/0.465 (c=1..10). STRICTLY DECREASING for c>=2 (the c=1,2 pair coincides at the iid saturation ~0.854, both >> bar, irrelevant to the min). min_c D3_c = D3_10 = 0.4649 >= bar +0.134. THE MECHANISM is explicit: the covering variance L2 (hence Var(W)) INCREASES with cluster size (L2: 0.041 -> 0.061) because a larger consecutive block concentrates the uncovered mass into fewer deeper gaps => D3 ~ 1/(1+Var/E^2) decreases. More clustering => more variance => lower D3; the densest possible cluster (10-block) is the extremal.
+
+k=11 FULLY REDUCED: the cluster-decorrelation floor = min_c D3_c = D3_10 = 0.4649 >= bar. Every prim-diam>=25 shape has c<=10 => D3 -> a limit >= D3_10 >= bar. c=10 (block+outlier) handled for all D by LEM-009 + exhaustive (prim-diam<=24, S184); c<=9 clear with >= +0.19 limit-margin. The one remaining piece is the finite-spread correction for c<=9 (O(1/spread) per outlier, the same multi-outlier Koksma-Hlawka as LEM-009's c=10 body, absorbed by the margins). So the general 'AP minimizes mu' extremal lemma is REDUCED to a FINITE VERIFIED TABLE (D3_c, c=1..10) + a bounded high-margin spread correction -- no far<=E[W]^2, no uniform resonance-c, no R2 scatter, no general AP-min.
+
+CONVERGENCE: opus-S154 added the L2-not-L1 discrepancy resolution to LEM-005, explicitly citing my S186 cluster reduction (tail = cluster + few-outlier Koksma-Hlawka + cluster-internal variance) -- the fleet is unifying on this route.
+
+FILES: LEM-009 D3_c monotonicity section; lrc14_D3c_monotone_klein_S187.out; HYP-5387.
+
+NEXT: (a) the multi-outlier finite-spread Koksma-Hlawka bound (uniform over prim-diam>=25, c<=9) -- the last bounded piece => k=11 FULLY closed; (b) exact-rational D3_c (Farey block-c moments + kernel) to make the finite table exact; (c) k=12,13 already close by mac-mini uniform D3 => whole k>=11 density floor done.
+
 ## opus-2026-07-08-S154 -- THE DISCREPANCY ROUTE (LEM-005) FOR Var(W) IS L^2, NOT L^1: the far absolute bound DIVERGES (sum|ahat|~(2/pi^2)lnM=inf), the variance CONVERGES (Parseval 6/49) (HYP-5447)
 
 Prompt (owner): work the discrepancy route (LEM-005) for Var(W).

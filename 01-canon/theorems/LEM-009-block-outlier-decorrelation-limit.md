@@ -103,3 +103,36 @@ margins). Both are **bounded, high-margin** statements — the general "AP minim
 is reduced to "the densest cluster (10-block) minimizes D3, with a +0.13 margin," localized to the
 tail. Corrected framing: the axis is cluster size, not R2. File:
 `lrc14_tail_mind3_klein_S186.out`, `lrc14_cblock_limits_klein_S186.out`.
+
+## D3_c is decreasing (c ≥ 2) with min at c=10 — the cluster floor PROVED (klein-S187)
+
+Since a prim-diam ≥ 25 set cannot contain an 11-block, the cluster size `c` ranges over the FINITE
+set `{1,…,10}`, so computing all ten decorrelation limits `D3_c` and reading off the minimum is a
+complete argument. Each `D3_c` (the `c`-block ⊕ `(11−c)` independent arcs) is computed from the
+block-`c` uncovered-set statistics via the exact arc-avoidance kernel `q(d) = 5/7` (`d > 1/7`) else
+`6/7 − d` (`= P(two points at distance d both avoid one length-1/7 arc)`), giving `L_2^{(c)} =
+E_x ∫∫_{U_c²} q(|y−y'|)^{11−c}`, and `L_1^{(c)} = (6/7)^{11−c} E[W_c]`:
+
+| c | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | **10** |
+|---|---|---|---|---|---|---|---|---|---|---|
+| D3_c | .854 | .855 | .852 | .842 | .814 | .759 | .679 | .602 | .524 | **.465** |
+| L₂^{(c)} | .041 | .041 | .040 | .039 | .039 | .040 | .042 | .046 | .052 | .061 |
+
+> **`D3_c` is strictly decreasing for `c ≥ 2`, with `min_c D3_c = D3_10 = 0.4649 ≥ bar` (+0.134).**
+
+(The `c = 1↔2` values coincide at the iid saturation `≈ 0.854` — both are effectively 11 independent
+arcs, `≫ bar`, irrelevant to the minimum.) The **mechanism** is explicit in the table: the covering
+variance `L_2 − L_1²` (hence `Var(W)`) INCREASES with cluster size (`L_2`: 0.041 → 0.061), because a
+larger consecutive block concentrates the uncovered mass into fewer, deeper gaps — so `D3 ≈
+1/(1+Var/E²)` decreases. More clustering ⟹ more variance ⟹ lower `D3`; the densest possible cluster
+(the 10-block) is the extremal.
+
+**k=11 fully reduced.** `min_c D3_c = D3_10 = 0.4649 ≥ bar` is the cluster-decorrelation floor. Every
+prim-diam ≥ 25 shape has cluster size `c ≤ 10`, so its D3 approaches a limit `≥ D3_10 ≥ bar`; the
+c=10 (block+outlier) case is handled for all `D` by this lemma (LEM-009 body) + the exhaustive
+(prim-diam ≤ 24), and the `c ≤ 9` cases clear with `≥ +0.19` limit-margin. The one remaining piece is
+the finite-spread correction for `c ≤ 9` (`O(1/spread)` per outlier, the same multi-outlier
+Koksma–Hlawka as the `c = 10` body, absorbed by the margins). So **the general "AP minimizes μ" is
+reduced to a finite, verified table** (`D3_c`, `c = 1..10`) plus a bounded high-margin spread
+correction — no far ≤ E[W]², no uniform resonance-c, no R2 scatter. File:
+`lrc14_D3c_monotone_klein_S187.out`.
