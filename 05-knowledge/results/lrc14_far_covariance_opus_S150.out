@@ -1,0 +1,19 @@
+================================================================================================
+far <= E[W]^2: covariance reduction + decorrelated limit (k=11, numeric grid)
+  reduction (*): far<=E[W]^2  <=>  int_disjoint Cov <= int_near p*p
+  decorrelated limit: far -> (5/7)E[W]^2 = 0.7143*E[W]^2  (buffer (2/7)E[W]^2)
+================================================================================================
+  family                            E[W]      far   E[W]^2 far/E[W]^2 LHS(disjCov) RHS(nearP2) (*) holds
+  block {0..10} (compact)         0.1581  0.04404  0.02498     1.7630      0.02648     0.00742     False  [far>E[W]^2]
+  spread d=3 {0,3,..,30}          0.1580  0.04403  0.02498     1.7629      0.02648     0.00742     False  [far>E[W]^2]
+  spread rand diam40              0.1815  0.02221  0.03293     0.6743     -0.00078     0.00995      True  [far<=E[W]^2]
+  spread rand diam80              0.1836  0.01982  0.03371     0.5880     -0.00371     0.01018      True  [far<=E[W]^2]
+  wide {0,1,2,..,9, 80}           0.1565  0.03535  0.02448     1.4441      0.01816     0.00729     False  [far>E[W]^2]
+  2-block {0..5, 40..44}          0.1852  0.03966  0.03429     1.1568      0.01582     0.01045     False  [far>E[W]^2]
+
+  READING: spread families have far/E[W]^2 ~ 5/7=0.714 (decorrelated limit) < 1,
+  with LHS(int_disjoint Cov) small/negative <= RHS(int_near p*p ~ (2/7)E[W]^2); compact
+  & 2-block families have far/E[W]^2 > 1 (positive disjoint covariance exceeds the
+  near buffer).  The reduction (*) is an EXACT identity; the sufficient condition is
+  int_disjoint Cov <= int_near p*p, a bounded-decorrelation (Koksma) statement with a
+  (2/7)E[W]^2 buffer -- far cleaner than the razor B_2 tail.

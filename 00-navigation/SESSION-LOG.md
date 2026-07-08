@@ -17,6 +17,17 @@ NET: the k=11 leg = [compact exhaustive prim-diam<=17] + [brick A PROVED] + [bri
 FILES: THM-662 addendum (brick B reduction + 614); reflection the-two-miles-are-one-and-614-is-square-pyramidal; lrc14_D3_R2_envelope_614 / brickB_reduction_far_spread _klein_S181.out; HYP-5377.
 
 NEXT: (a) prove Var(W)<=c*R2 with explicit c (the resonance sign; closes brick B with E[W]>=0.1313); (b) explicit Erdos-Turan discrepancy threshold for far<=E[W]^2 (large min-diff); (c) @kps/@opus brick B needs only E[W]>=0.1313 now, not 0.1415 -- LEM-006 degree-6 gives E[W]>=0.153 for the block, comfortably above.
+## opus-2026-07-08-S150 -- THE k=11 TAIL UNIFIED: far<=E[W]^2 <=> Var(W)<=near (PROVED, exact) => both open routes (my near/far + kps brick B) are ONE Var(W) bound; brick(B)=Var<=c*R2 (PZ coupling-tight -0.007, D3 recovers +0.127); 614 = the tail energy ceiling (770-614=156 energy cost of spreading RAISES D3 = why the tail is easier) (HYP-5387)
+
+Prompt (owner): prove far<=E[W]^2 for spread families; prove brick(B) resonance lemma R2<=614; look back for connections to 614.
+
+The three are ONE question. (a) PROVED (exact algebra): far <= E[W]^2 <=> Var(W) <= near (since far=E[W^2]-near). So my S149 near/far route and kps brick(B) are the SAME statement -- both bound the covering variance Var(W). far<=E[W]^2 = the Var<=near(~0.025) sub-case; brick(B) = the fuller Var<=c*R2<=c*614(~0.037) case. Covariance reduction: far-E[W]^2 = int_disjoint Cov - int_near p*p; decorrelated limit far->(5/7)E[W]^2 (buffer (2/7)E[W]^2; spread disjoint-Cov NEGATIVE like iid). (b) BRICK(B) = Var(W)<=c*R2 (the ONE mile); Var/R2 in [4.9,7.0]e-5 (+-20%) = kps-S78's coupling QUANTIFIED: PZ decoupled worst-case gives 0.324<bar(-0.007) FAILS; D3(opus-S148,+0.0735) gives 0.458 over R2<=614(+0.127) RECOVERS -- brick(B) MUST route through D3. (c) 614 = R2(AP_10)+44 = tail energy ceiling; 770-614=156=12*13 = energy cost of forcing prim-diam>=16; D3 decreases in R2 so the drop RAISES the floor (+0.053) = why the tail is EASIER than the compact block (the global D3-min, R2=770); diameter/energy complementarity quantified. Curio: 614/2016 = p=13 FKG violations (HYP-533).
+
+HONEST: proves the equivalence + reduces everything to Var(W)<=c*R2 + explains PZ/D3 + the 614 structure; does NOT prove the resonance lemma itself (the +-20% coupling; Fourier derivation of c remains). COLLISION: klein-S181 owner-fanned the same 3 targets (HYP-5377); renumbered mine to HYP-5387; coordinate.
+
+NEXT: the resonance lemma Var(W)<=c*R2 (c<=~7e-5) -- the single mile closing far/brickB/k=11 + THM-656; the leading-order Var(W)=c*R2 Fourier derivation (pair-resonance kernel) + the +-20% error bound.
+
+---
 
 ## mac-mini-2026-07-08-S57 (cont.4) -- k=12,13 ANALOG legs CLOSED + the THREE PZ legs UNIFY under one uniform D3 floor; brick (A) verified + shown OPTIONAL (HYP-5357 program)
 

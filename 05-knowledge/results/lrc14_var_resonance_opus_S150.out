@@ -1,0 +1,30 @@
+================================================================================================
+(1) far <= E[W]^2  <=>  Var(W) <= near  (exact identity check)
+================================================================================================
+  E=[0, 1, 2, 3, 4]     ...: Var=0.04699 near=0.02793 far=0.04404 E[W]^2=0.02498  [far<=E[W]^2]=False == [Var<=near]=False: True
+  E=[0, 2, 3, 4, 5]     ...: Var=0.04265 near=0.02535 far=0.03994 E[W]^2=0.02264  [far<=E[W]^2]=False == [Var<=near]=False: True
+  E=[0, 1, 2, 3, 4]     ...: Var=0.03600 near=0.02512 far=0.03527 E[W]^2=0.02439  [far<=E[W]^2]=False == [Var<=near]=False: True
+  E=[0, 1, 2, 3, 4]     ...: Var=0.03573 near=0.03034 far=0.03970 E[W]^2=0.03431  [far<=E[W]^2]=False == [Var<=near]=False: True
+  => far <= E[W]^2  IFF  Var(W) <= near  (unifies my route + brick B: both bound Var).
+
+================================================================================================
+(2) Var(W) vs R2 = sum_d r_d^2 : the resonance relation (klein-S179 fit c~5.67e-5)
+================================================================================================
+  E=[0, 1, 2, 3, 4]     ...: R2=  770  Var(W)=0.046988  Var/R2=6.102e-05  near=0.02793  Var<=near:False
+  E=[0, 2, 3, 4, 5]     ...: R2=  706  Var(W)=0.042647  Var/R2=6.041e-05  near=0.02535  Var<=near:False
+  E=[0, 1, 2, 3, 4]     ...: R2=  590  Var(W)=0.035997  Var/R2=6.101e-05  near=0.02512  Var<=near:False
+  E=[0, 1, 2, 3, 4]     ...: R2=  550  Var(W)=0.035733  Var/R2=6.497e-05  near=0.03034  Var<=near:False
+  E=[0, 4, 6, 8, 10]    ...: R2=  506  Var(W)=0.029862  Var/R2=5.902e-05  near=0.02222  Var<=near:False
+  best c (Var ~ c*R2, through origin) = 6.121e-05  (klein 5.67e-5)
+  => IF Var(W) <= c*R2 with c<=~6e-5, then R2<=614 gives Var<= 0.03758
+
+================================================================================================
+(3) BRICK (B) EXACT REDUCTION: what Var-bound gives D3 >= bar, over R2 <= 614?
+================================================================================================
+  D3 >= PZ = 1/(1 + Var/E[W]^2);  PZ >= bar  <=>  Var <= (1/bar - 1)*E[W]^2
+  (1/bar - 1) = 2.0192;  so need Var <= 2.0192 * E[W]^2
+  min E[W] over compact k=11 (diam<=16): 0.14360 at [0, 2, 4, 6, 7, 8, 9, 10, 12, 14, 16]
+  => Var <= 0.04164 suffices for PZ>=bar (hence D3>=bar).
+     With Var <= c*R2 (c~5.67e-5) and R2<=614: Var <= 0.03481
+     PZ>=bar needs Var <= 0.04164: HOLDS (brick B via PZ closes)
+  [D3 > PZ gives MORE room; the exact D3>=bar threshold is looser than the PZ one above.]

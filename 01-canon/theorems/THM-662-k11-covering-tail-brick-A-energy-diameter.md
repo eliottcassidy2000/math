@@ -148,6 +148,32 @@ already (the global minimizer is the max-energy block). File:
   the compact zone. `614 = 2·307` (307 prime) — the primality is incidental; the pyramidal
   decomposition is the structural content.
 
+## THE UNIFICATION: brick (B) and `far <= E[W]^2` are ONE Var(W) bound (opus-S150, HYP-5387)
+
+Complements klein-S181 above (the `E[W]`-floor reduction and the pyramidal `614` structure).
+The **new** content: the near/far route and brick (B) are the *same statement*. Since
+`far = E[W^2] - near` identically,
+
+> **`far <= E[W]^2  ⟺  Var(W) <= near`** (`Var(W) = E[W^2] - E[W]^2`).
+
+So the **entire k=11 tail is a single bound on the covering variance `Var(W)`**: opus-S149's
+`far <= E[W]^2` is the `Var <= near` (`~0.025`) sub-case; brick (B) is the fuller
+`Var <= c*R2 <= c*614 ~ 0.037` case. One analytic mile — `Var(W) <= c*R2`, shared with THM-656
+(`Var(F) = R2*V1`) — closes everything. (Covariance reduction:
+`far - E[W]^2 = ∫_disjoint Cov − ∫_near p·p`; decorrelated limit `far -> (5/7)E[W]^2`, a
+`(2/7)E[W]^2` buffer — spread families sit at `far/E[W]^2 = 0.59–0.67` with *negative* disjoint
+covariance, like iid.)
+
+**Why the constant matters (kps-S78's coupling, quantified).** `Var(W)/R2 ∈ [4.9, 7.0]·10⁻⁵`
+(±20% scatter, 243 families) — it is *not* exact. With klein's fit `c = 5.67·10⁻⁵` the plain
+`PZ` route just clears (`E[W] >= 0.1313`, above); but with the *worst-case* `c = 7.0·10⁻⁵` the
+decoupled `PZ` bound gives `1/(1 + 0.043/0.144²) = 0.324 < bar` (`−0.007`) — PZ is coupling-tight.
+`D3` (opus-S148, `+0.0735` block margin) is what makes it robust to the scatter: `min_E D3 =
+0.458–0.465` over `R2 <= 614` (`+0.13`). So brick (B) should route through `D3` for safety
+against the `Var/R2` coupling, and `Var(W) <= c*R2` (any `c <= ~7·10⁻⁵`) then suffices. Files:
+`04-computation/lrc14_far_covariance_opus_S150.py`, `lrc14_var_resonance_opus_S150.py`;
+reflection `everything-is-var-W-the-k11-tail-unified-and-614-is-the-energy-ceiling-opus-S150`.
+
 ## Files
 `04-computation/lrc_brickA_energy_diameter_kps_S80.py` (+ `.out`): the exact-integer
 exhaustive `max R2` by primitive diameter (`[16,24]`), the removal-lemma arithmetic, and the
