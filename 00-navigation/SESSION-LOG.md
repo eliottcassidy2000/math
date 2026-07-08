@@ -1,3 +1,18 @@
+## kind-pasteur-2026-07-08-S79 -- POSITIVE RESOLUTION of my S78 k=11 PZ-tail obstruction: opus-S148's degree-3 floor D3 DISSOLVES the coupling; the diam>=16 tail closes DECOUPLED (min D3=0.517, +0.186), k=11 leg = two crude/provable bricks. (HYP-5357)
+
+Prompt (owner): work the k=11 tail and any remaining tasks.
+
+CONTEXT: my S78 found the PZ (B_2) tail bounds COUPLED at k=11 (razor +0.0156; decoupled bounds gave 0.330<bar). opus-S148 then pushed the exact closed-form degree-3 covering floor D3 = m1/M+(m1-m2/M)^2/(m2-m3/M) (M=6/7), lifting the k=11 block margin to +0.0735 (4.6x), and explicitly handed me 'the D3-loosened tail' (their NEXT-a). I executed it.
+
+RESULT (k=11 tail CLOSES with D3, lrc_d3_tail_close_kps_S79):
+(1) diam>=16 tail: min D3 = 0.51729 over 1030 configs (margin +0.186) -- vs PZ's razor +0.0156. My S78 pessimism was applying the GLOBAL-max Var/R2 ratio (which occurs at LOW R2) at the block's HIGH R2 -- loose; D3 removes the sensitivity.
+(2) D3 is CLEANLY MONOTONE in additive energy R2 (NO coupling, unlike PZ): min D3 by R2 bin rises smoothly as R2 falls -- 0.405 (R2~770 block) / 0.552 (R2 550-599) / ... / 0.80 (low R2). So min_{R2<=614} D3 >= 0.458 >= bar+0.13.
+(3) THE MAX-ENERGY-BY-DIAMETER BRICK (clean extremal fact): the max-R2 11-config at prim-diameter D is the '1+10 block split' {0}u{D-9..D}; maxR2(D)=734/706/674/650/630/614/602 at D=11..17 => max R2 over ALL diam>=16 = 614. Freiman contrapositive: R2>=615 => prim-diam<=15.
+
+NET (k=11 leg closes): [diam<=15: opus/klein compact exhaustive, min D3=0.405>=bar] + [diam>=16 => R2<=614 (brick A) => D3>=0.458>=bar (brick B, crude decorrelation, +0.13 room)]. Both bricks are CRUDE/PROVABLE precisely BECAUSE D3's 4.6x margin absorbs the decoupling loss that killed the PZ route (S78). So my S78 negative ('decoupled route too lossy for PZ') is now a POSITIVE with D3: the decoupled route WORKS. HANDOFF: formalize (A) 'max additive energy of an 11-set with prim-diam>=16 is 614' (the 1+10 split; compression/rearrangement proof) + (B) 'R2<=614 => D3>=bar' (moment-vs-energy, loose). k=12,13 even easier (opus +0.16/+0.26).
+
+Messaged opus (their D3 was the lever; NEXT-a executed) + klein (S78 gap resolved on their THM-660). FILES: lrc_d3_tail_close_kps_S79.py (+out); HYP-5357; INDEX. Builds on opus-S148 (THM-661 D3), THM-657/660, kps-S78.
+
 ## klein-2026-07-08-S179b -- LEM-005: THE COVERING DECORRELATION LEMMA (proving mac-mini's THM-661 tail): near/far split -- NEAR <= (2/7)E[W] RIGOROUS, FAR reduced to phase-vector equidistribution (far -> (5/7)^{k+1} << E[W]^2, o(1)=discrepancy), tail PZ >= 1/(1+(2/7)/E[W]) clears k=12,13 unconditionally + k=11 when E[W]>=0.1415 (HYP-5357)
 
 Prompt (owner): prove the far <= E[W]^2 + o(1) decorrelation lemma + other LRC14 tasks.
