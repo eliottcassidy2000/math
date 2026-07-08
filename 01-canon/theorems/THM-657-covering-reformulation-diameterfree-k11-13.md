@@ -93,6 +93,15 @@ association of the Kronecker phases).
   minimizer (the block) via "consecutive minimizes `mu`".
 - **k<=10** already closed/near (THM-651/655/656 + degree-4 moment); the covering frame gives
   an independent diameter-free floor there too (`mu(block) >> bar` at every k).
+- **The k=13 tail (diam >= 76, the exact residual past opus-S145's AP76 Lean certificate):
+  SAFE with 2.5x margin via `mu >= (7/6) E[W]`.** For spread families the phases decorrelate
+  toward iid, where `E[W] -> (6/7)^13 = 0.135`; sampled `diam >= 76` families (diam up to
+  1000) all have `E[W] >= 0.119`, so `mu >= (7/6)(0.119) = 0.139 = 2.5x m_P`. Combined with
+  AP76 (diam <= 75, UNCONDITIONAL) this is a COMPLETE k=13 argument. The rigorous form needs
+  `E[W] >= 0.0484` for all primitive `diam >= 76`: `E[W] = (6/7)^13 - (correlation
+  corrections)`, the corrections bounded by the pair joint-window deviations `|P_ij - 1/49|`
+  (THM-638) — small for large differences, but small-difference pairs (2-block families) keep
+  it a genuine pair-mass estimate, not free. This is the cleanest k=13-tail route on record.
 
 ## Verification & files
 
