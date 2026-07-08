@@ -85,17 +85,32 @@ So both the average form (loose for structured families) and the low-`q` window 
 resonance ladder, not the `q≤6` head — the same "run the full per-family resonance ladder"
 lesson opus-S145 hit for the T₆ localization.
 
-## The shape of a proof (handoff)
+## The shape of a proof (handoff), and why the elementary routes bottom out at the density floor
 
 Since true `ρ* ≥ 0.398` with the minimizer at the **compact** AP₁₀ (diam 9, ledger-covered),
-the residual is only the **wide** families, where `μ(E)` (unconditional) is large. The clean
-target: an **unconditional `μ(E) ≥ 1 − meas(G_P) + m_P ≈ 0.41` floor for wide k=10 families**,
-then the union bound `ρ* ≥ meas(G_P) + μ − 1 ≥ m_P` finishes (no conditional bookkeeping, no
-teeth problem). Candidates: (a) the D_q-window floor summed over the **full** ladder (not
-`q≤6`) with the spread-class handled by a sub-cluster split; (b) klein-S175's second-moment
-spread floor (HYP-4991), which increases with diameter and is the natural wide-family tool;
-(c) a per-family resonance-ladder floor. The compact families stay on the intersection ledger
-(kps-S60, diam ≤ 17). Three regions, three tools — the middle one is the open lemma.
+the residual is the **wide structured** families, where the *unconditional* `μ(E)` is large
+(0.83–1.0; note `μ_{1/7}(AP₁₀) = 38/49 = 0.7755`, not the conditional `ρ* = 0.398` — a value I
+first misread). The clean target: an **unconditional `μ(E) ≥ 1 − min meas(G_P) + m_P = 0.4521`
+floor for wide k=10 families**, then the union bound `ρ* ≥ meas(G_P) + μ − 1 ≥ m_P` finishes —
+using the **unconditional** `μ`, so **no teeth**, no conditional window bookkeeping.
+
+I tested every elementary candidate for that `μ`-floor and they are all too loose:
+- **The average-form tent** gives `μ ≥ 8/35 = 0.229` (unconditional) — short of 0.4521.
+- **The D_q-window floor** (`q ≤ 6`, unconditional, no teeth) gives only **0.05–0.26** on the
+  structured wide families (true `μ` = 0.83–1.0): the `q ≤ 6` head captures a small fraction;
+  the rest of `μ` lives in the **higher-q ladder and the bulk**. So it cannot reach 0.4521.
+- **The union bound alone** then can't fire (the `μ`-input is missing).
+
+**The conclusion that matters:** the k=10 structured-wide residual needs a *strong uniform
+`μ`-floor* — which is exactly the density-floor rigidity the whole (A′) bottoms out at (R2).
+So k=10 is not a technicality one rung below the frontier; its hard core **is** the frontier,
+just with a comfortable numeric margin (need 0.45, truth 0.77). The honest routes to it:
+(a) klein-S175's second-moment / spread floor (HYP-4991) — the natural increasing-in-diameter
+`μ`-floor, the one tool that can climb from the tent's 0.229 toward 0.77; (b) the full
+resonance-ladder `μ`-floor (sum beyond `q ≤ 6`, sub-cluster split for spread classes);
+(c) the density-floor AP-minimality restricted to k=10 (R2). The compact families stay on the
+intersection ledger. **The middle lemma is a genuine density-floor statement, not an
+elementary window count.**
 
 ## Ledger
 
