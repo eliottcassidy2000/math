@@ -1,0 +1,8 @@
+sweeping 121 primitive sets |S|=3,4 (max<=8)
+S                     M   1/M     mu chi  case        defect witness
+[1, 3, 4, 5]        2/9  4.50    1/4   4  easy            chi=4<4.50
+[1, 3, 4, 7]        1/5  5.00    1/4   4  easy            chi=4<5.00
+[2, 3, 5, 8]       3/13  4.33   4/17   5  HARD (9,2) SAT: chi_c<=9/2
+
+mu>M sets: 3; HARD (chi=1/M): 1; hard closed by (2n-1,2): 1
+COUNTEREXAMPLES (mu>M, no sub-1/M coloring): 0 (none -- conjecture holds)

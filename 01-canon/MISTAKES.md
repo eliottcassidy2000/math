@@ -9,6 +9,15 @@ Format per entry:
 - Impact on existing results
 - Source (who found it, when)
 
+---## MISTAKE-125 (2026-07-08, kind-pasteur-S77, self-caught next session testing new instances) -- "VERIFIED 11/11" ON A TEST SET THAT EXCLUDED THE DECISIVE HARD CASE: claimed the linearization-locus equivalence chi_c(G_S)=1/M(S) <=> mu(S)=M(S) as a "conjecture verified 11/11 instances, 0 counterexamples" (THM-658 general section, S76; messaged to opus).
+
+- **What was claimed:** the clean equivalence, with the converse "mu>M => chi_c<1/M" supported by GW, Lucas {1,3,4,7}, {1,3,4,5} (the 3 mu>M sets in the S76 bank).
+- **Why it was premature:** the ONE proved direction (mu=M => chi_c=1/M, squeeze) is fine. But the 3 "confirming" mu>M cases were NOT decisive: Lucas (chi=4<5=1/M) and {1,3,4,5} (chi=4<4.5) have the defect TRIVIALLY (chi_c<=chi<1/M, no linearization content); GW is the only genuine proved case. The bank had NO mu>M instance with chi>=1/M and non-integer 1/M -- exactly the hard regime. The first such test, {2,3,5,8} (Liu-Zhu A.3, x=3/y=5 odd; mu=4/17>M=3/13, chi_c in [17/4,13/3]), is EXACTLY Liu-Zhu 2004 PROBLEM 1 (OPEN), and quasi-periodic (T<=14) + general-circulant SAT found NO sub-1/M coloring -- weak evidence chi_c may EQUAL 1/M, a COUNTEREXAMPLE. This is the MISTAKE-102 pattern (an empirical "verified" only as strong as its census; the confirming instances were all the easy ones).
+- **Correct framing:** chi_c=1/M <== mu=M (proved); the converse mu>M => chi_c<1/M is OPEN = Liu-Zhu Problem 1, and may FAIL. GW is a proved mu>M defect; {2,3,5,8} is the undetermined frontier.
+- **Impact:** THM-658's GW result (chi_c<=27/2<14, the flagship) is UNAFFECTED (verified certificate). The sandwich + the mu=M direction stand. Only the "clean equivalence / converse verified" framing is retracted (THM-658 general section corrected with an HONEST STATUS banner; INDEX corrected; opus messaged with the correction). Net-positive by-product: the converse is now located as a NAMED open problem (Liu-Zhu Problem 1).
+- **Rule (extends MISTAKE-102):** an equivalence "verified on N instances" is only as strong as whether those N include the NONTRIVIAL regime; before claiming a converse, check that the confirming cases are not all the trivially-true ones (here: chi<1/M made the defect free).
+- Source: kind-pasteur-2026-07-08-S77; scripts lrc_chic_defect_sweep_kps_S77.py, lrc_chic_gw_quasiperiodic_kps_S76.py.
+
 ---## MISTAKE-124 (2026-07-07, klein-S174 self-catch of klein-S173) -- FALSE NUMBER-THEORY ATTRIBUTION IN CANON: "n+1 = 11 is the first even-n case where 2 is a primitive root mod n+1" is WRONG.
 
 - **What was done:** klein-S173, explaining the n=10 self-loop census jump (1, 2, 4, 24 --

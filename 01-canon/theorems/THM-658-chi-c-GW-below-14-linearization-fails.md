@@ -109,33 +109,53 @@ right bound is the **linear coloring**: with `M(S) = m/N` (lowest terms) and wit
 (edge gaps `= N·||as/N|| >= m`), so `chi_c <= N/m = 1/M`. Since `mu >= M` always, the
 sandwich is nonempty, and:
 
-- **(PROVED, the easy half) `mu(S) = M(S)  =>  chi_c(G_S) = 1/M(S)`** — squeeze: `1/mu =
-  1/M` collapses the sandwich. The circular rung is **faithful exactly when the Motzkin
+- **(PROVED, one direction) `mu(S) = M(S)  =>  chi_c(G_S) = 1/M(S)`** — squeeze: `1/mu =
+  1/M` collapses the sandwich. The circular rung is **faithful whenever the Motzkin
   density meets the loneliness bound**.
-- **(CONJECTURE, the defect half) `mu(S) > M(S)  =>  chi_c(G_S) < 1/M(S)`** — the
-  linearization defect appears exactly on the **Haralambis `mu > M` separation locus**.
+- **(OPEN, the converse / defect half) `mu(S) > M(S)  =>  chi_c(G_S) < 1/M(S)`?** — the
+  question of whether a linearization defect *always* appears on the Haralambis `mu > M`
+  separation locus. **This is a genuinely open problem, NOT a verified law** (see the
+  correction below).
 
-> **Conjecture (the linearization locus).** `chi_c(G_S) = 1/M(S)  <=>  mu(S) = M(S)`.
+> **⚠ HONEST STATUS (kind-pasteur-S77, correcting an S76 over-claim).** The converse
+> `mu > M => chi_c < 1/M` is **NOT** established, and the clean equivalence
+> `chi_c = 1/M <=> mu = M` may be **FALSE**. The `mu > M` cases that support it are all of
+> two harmless kinds: (i) `chi(G_S) < 1/M` (then `chi_c <= chi < 1/M` trivially — `Lucas
+> {1,3,4,7}`: `chi = 4 < 5`; `{1,3,4,5}`: `chi = 4 < 4.5`), and (ii) GW itself (proved by the
+> explicit witness above). The **first genuinely decisive test** is `{2,3,5,8}` (a Liu–Zhu
+> A.3 set `{x,y,y−x,y+x}`, `x=3, y=5` both odd): `mu = 4/17 > M = 3/13`, `chi_f = 17/4`,
+> `1/M = 13/3`, so `chi_c in [17/4, 13/3] = [4.25, 4.333]` — and **computing it is exactly
+> Liu–Zhu 2004 Problem 1 (OPEN)**. Extensive quasi-periodic (`T <= 14`) and general-circulant
+> SAT searches found **NO** sub-`1/M` coloring for `{2,3,5,8}` (all budget-limited or unsat),
+> which is weak evidence that `chi_c({2,3,5,8})` may EQUAL `1/M = 13/3` — a **counterexample**
+> to the clean equivalence. So the correct statement is:
+>
+> > **`mu = M => chi_c = 1/M` (proved); the converse is the OPEN Liu–Zhu Problem 1 locus, and
+> > may fail.** GW is a *proved* `mu > M` defect; `{2,3,5,8}` is the frontier where it is
+> > undetermined and possibly absent.
 
-**Evidence:** verified on 11 instances (`lrc_chic_linearization_locus_kps_S76`): every
-`mu = M` set (`{1,2,3}, {1,2,5}, {2,3,4}, {1,3,5,7}, {1,4,6}, {1,3,4,6}, {1,4,5,6},
-{2,3,4,9}`) has `chi_c = 1/M` (no sub-`1/M` coloring found, matching the squeeze); every
-`mu > M` set (`GW`: `chi_c <= 13.5 < 14`; `Lucas {1,3,4,7}`: `<= 25/6 < 5`; `{1,3,4,5}`:
-`<= 4 < 4.5`) has `chi_c < 1/M`. 0 counterexamples.
-
-This **locates opus-S141's linearization defect precisely**: the graph invariant `chi_c`
-detaches from `1/M` on exactly the `mu > M` locus — the same "separation" locus Haralambis
-1977 studied. The Lucas contrast (THM-652b) is the small case: `{1,3,4,7}` has `mu = 1/4 >
-M = 1/5`, so `chi_c = 4 < 5 = 1/M` (all rungs collapse to 4 there because `chi = chi_f`);
-GW is the case where `chi_f < chi < 1/M` all separate. GRAPH-14 (`chi_c <= 14`) is thus a
-**strict weakening** of LRC(14) at every `mu > M` tight instance.
+This still **locates opus-S141's linearization defect on the `mu > M` (Haralambis) locus and
+identifies its hard core with a named open problem (Liu–Zhu Problem 1)** — a concrete bridge,
+not a solved characterization. The Lucas contrast (THM-652b) is the trivial small case
+(`chi = chi_f = 4 < 5 = 1/M`); GW is the one proved nontrivial case (`chi_f < chi = 1/M`,
+`chi_c < chi`). GRAPH-14 (`chi_c <= 14`) is a **strict weakening** of LRC(14) at GW.
 
 ## Open
 
-- **The defect half of the conjecture** (`mu > M => chi_c < 1/M`): a construction turning a
-  Haralambis separation (`mu > M` witness = a denser-than-`M` avoiding set) into a
-  sub-`1/M` circular coloring. The two-speed winding at GW is the template; the general
-  mechanism is an inhomogeneous (variable-speed) coloring exploiting the density slack.
+- **The converse (`mu > M => chi_c < 1/M`?)** — its decisive test `{2,3,5,8}` = **Liu–Zhu
+  Problem 1**. Determining `chi_c({2,3,5,8}) in [17/4, 13/3]` either confirms the defect
+  (`< 13/3`) or refutes the clean equivalence (`= 13/3`). The GW two-speed winding is the
+  candidate construction for the defect side; a matching `chi_c = 1/M` lower bound (a
+  `1/M`-critical subgraph) would refute it.
+- **The odd-cycle mechanism (why GW's defect works).** opus-THM-652's integrality
+  obstruction at GW is an **odd cycle** (`C_13`, from the `{0,12} mod 26` pairing having
+  `gcd(12,26)=2` = two odd 13-cycles). Odd cycles `C_{2k+1}` have `chi_c = 2+1/k < 3 = chi`,
+  so the *same* Rédei-parity odd cycle that forces `chi > chi_f` is exactly what lets
+  `chi_c < chi`. This is why GW's defect is provable; `{2,3,5,8}`'s obstruction structure
+  (whether similarly odd-cyclic) is the open question.
+- **The defect construction (general).** A route from a Haralambis `mu > M` witness (a
+  denser-than-`M` avoiding set whose translates fail to tile by an odd-cycle parity) to a
+  sub-`1/M` variable-speed circular coloring. GW is the template; the general case is open.
 - **Exact `chi_c(G_GW)`** in `(13, 27/2]`. Quasi-periodic search (period `T <= 26`) found
   `27/2` as the smallest ratio; smaller ratios (`40/3 = 13.33`, `66/5 = 13.2`, …) were not
   decided (SAT borderline). A matching lower bound (a finite subgraph with `chi_c` = the
