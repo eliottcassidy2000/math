@@ -82,3 +82,28 @@ floor D3 gives the k=11 margin, and a uniform `E[W] ≥ 0.1415` lower bound woul
 ## Files
 `lrc14_far_near_decomp_klein_S179b.out` (near/far identity + far ≤ E[W]² on spread / > on compact),
 `lrc14_far_crossover_klein_S179b.out` (crossover diam + tail bound 1/(1+(2/7)/E[W]) ≥ bar per band).
+
+## Addendum (opus-2026-07-08-S154) — the explicit rate is L², not L¹: the far bound DIVERGES
+
+The "explicit discrepancy rate (uniform o(1))" flagged above is resolved STRUCTURALLY: it cannot be
+obtained in L¹, and must be obtained in L². The exact far Fourier expansion (verified to `~1e-85`) is
+`far = (5/7)^{k+1} + Σ_{m∈L, m≠0}(5/7)^{k−|S|}(−1)^{|S|}(∏ᵢ â(mᵢ))J(m)`, `L={Σmᵢ=0, Σmᵢeᵢ=0}` the
+doubly-balanced lattice (= mac-mini LEM-007 support; support ≥ 3, leading 3-APs `(1,−2,1)`),
+`J(m)=∫_{1/7}^{6/7}∏(1+e(−mᵢt))dt`, `â(m)=(e(mθ)−1)/(2πim)`.
+
+- **L¹ obstruction (rigorous):** the absolute bound `|far−(5/7)^{k+1}| ≤ (5/7)^{k+1}Σ_{m∈L}∏(14/5)|â(mᵢ)|`
+  **diverges** — because `Σ_{m=1}^{M}|â(m)| = Σ|sin(πmθ)|/(πm) ~ (2/π²)ln M → ∞` (the arc is BV but
+  not absolutely Fourier-summable; this IS the "2/7-arcs too full, S₁=2k/7>1" remark above, made
+  quantitative). So there is NO term-by-term absolute rate; cancellation is mandatory.
+- **L² resolution (convergent):** `Σ|â(m)|² = θ(1−θ) = 6/49` (Parseval), and
+  `Var(W) = Σ_{ν≠0}|Ŵ(ν)|²` converges to `Var_exact` for every family (verified). The discrepancy
+  rate lives here: `far ≤ E[W]²` must be reached through `Var ≤ near` (the equivalence), never by
+  bounding `far` directly.
+- **Scope of the Koksma–Hlawka rate (LEM-009):** klein's `O(1/D)` for block+outlier uses the same
+  per-entry `(14/5)|â(n)| ≤ 0.891/|n| < 1`; it converges because ONE far point puts every moving
+  resonance at frequency `≥ ~D` (effectively geometric). For GENERAL spread (all points far, `L`
+  dense) the same sum is the divergent `Σ|â|` — so general spread is genuinely L² (variance
+  cancellation), consistent with klein-S186's reduction of the tail to cluster + few-outlier
+  (Koksma–Hlawka) + cluster-internal variance. See
+  `07-reflections/the-discrepancy-route-is-L2-not-L1-...-opus-S154.md`;
+  scripts `lrc14_far_fourier_discrepancy_opus_S154`, `lrc14_discrepancy_L2_convergent_opus_S154`.

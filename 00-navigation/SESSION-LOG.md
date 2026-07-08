@@ -1,3 +1,23 @@
+## opus-2026-07-08-S154 -- THE DISCREPANCY ROUTE (LEM-005) FOR Var(W) IS L^2, NOT L^1: the far absolute bound DIVERGES (sum|ahat|~(2/pi^2)lnM=inf), the variance CONVERGES (Parseval 6/49) (HYP-5447)
+
+Prompt (owner): work the discrepancy route (LEM-005) for Var(W).
+
+Resolved the STRUCTURE of LEM-005's open "explicit discrepancy rate": it must be L^2, and the naive L^1 route is not lossy but literally DIVERGENT.
+
+(1) EXACT FAR FOURIER FORMULA (verified vs Farey to ~1e-85): far = (5/7)^{k+1} + sum_{m in L,m!=0}(5/7)^{k-|S|}(-1)^|S|(prod ahat(m_i))J(m), L = {sum m_i=0 AND sum m_i e_i=0} the doubly-balanced lattice (= mac-mini LEM-007 support, independent; support>=3, leading 3-APs (1,-2,1)). The explicit integral form of mac-mini's structural "doubly-balanced" result.
+
+(2) L^1 OBSTRUCTION (rigorous): the absolute bound |far-(5/7)^{k+1}| <= (5/7)^{k+1} sum_{m in L}prod(14/5)|ahat| DIVERGES -- PHI grows 1.15->2.5->5.9->10.7->23.5->33 as the cutoff grows, because sum_{m<=M}|ahat(m)| ~ (2/pi^2)ln M -> inf (arc is BV, not absolutely Fourier-summable = the '2/7-arcs too full' remark quantified). No absolute rate exists; cancellation mandatory. SHARPENS mac-mini's "extreme cancellation" -> "the absolute sum is +inf".
+
+(3) L^2 RESOLUTION (convergent): sum|ahat|^2 = theta(1-theta)=6/49 (Parseval), and Var(W)=sum_{nu!=0}|What(nu)|^2 -> Var_exact for EVERY family (ratios 1.00-1.02, incl. compact block). Var dominated by small-difference nu = additive energy (= mac-mini LEM-007/klein THM-656 Var~R2, nu!=0 side). far<=E[W]^2 must go through Var<=near, never bound far directly.
+
+(4) DELINEATES klein LEM-009: the SAME per-entry 0.891/|n|<1 gives Koksma-Hlawka O(1/D) for block+outlier (ONE far point, lowest resonance ~D, geometric) but is my divergent sum|ahat| for general spread (L dense) => general spread is genuinely L^2, supporting klein-S186 cluster-monotonicity.
+
+CONTEXT: fleet converged massively in parallel -- mac-mini LEM-007 (RIGOROUS far_dev on doubly-balanced = variance = ONE wall, leading support-3), klein LEM-009 (block+outlier D3->0.4646 via Koksma-Hlawka O(1/D), PROVED), klein-S186 (cluster-ordering, k=11 closes modulo cluster-monotonicity + finite-spread), kps-S85 (E_3 = order-3 energy, kills uniform-c). My session is corroborative + SHARPENS the obstruction (L^1 log-divergence) + DELINEATES LEM-009's scope. HONEST: does not by itself close k=11; the remaining gap is klein's cluster-monotonicity.
+
+NEXT: cluster-monotonicity (max-cluster-size => min-D3, klein-S186 active) -- the L^2/additive-energy picture SUPPORTS it (bigger cluster => concentrated energy => bigger Var => lower floor) but the ordering is subtler than Var~R2 ("R2 scatter"). Files: lrc14_far_fourier_discrepancy / lrc14_discrepancy_L2_convergent / lrc14_far_discrepancy_criterion (all opus_S154); reflection the-discrepancy-route-is-L2-not-L1-...-opus-S154; LEM-005 addendum.
+
+---
+
 ## kind-pasteur-2026-07-08-S85 -- DERIVE E_3: it is the ORDER-3 ADDITIVE ENERGY (dominant (1,1,-2) form E_i+E_j-2E_l) = opus-S153 support-6 sextuple = mac-mini LEM-007 (1,-2,1); INDEPENDENT confirm of the NON-PERTURBATIVE wall; NET-NEW census kills uniform-c (sup Var/R2=7.2e-5>block 6.1e-5), confirms brick(B) (min D3=0.4917>>0.331), E[W] is the lever (HYP-5437)
 
 Prompt (owner): derive E_3 and send it to opus.
