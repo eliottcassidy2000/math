@@ -1,0 +1,16 @@
+k=11 block: true Var(W) = 0.046988
+  |c_m|^2 = sin^2(pi m/7)/(pi^2 m^2), = 0 at m=0 mod 7 (apex-7 invisibility)
+  pair-m=1 diagonal |c_1|^4*R2 = 0.280146 (overshoots 6x)
+  Fourier truncation Var_trunc (ORD=max|S|, MM=max|m|) -- OSCILLATES, does NOT converge:
+    ORD=2 MM=1: 0.280146  (/true = 5.96)
+    ORD=3 MM=1: 0.280146  (/true = 5.96)
+    ORD=4 MM=1: 0.436813  (/true = 9.30)
+    ORD=2 MM=2: 0.724637  (/true = 15.42)
+    ORD=3 MM=2: 0.312262  (/true = 6.65)
+    ORD=4 MM=2: 1.013639  (/true = 21.57)
+    ORD=2 MM=3: 1.005454  (/true = 21.40)
+    ORD=3 MM=3: 0.371577  (/true = 7.91)
+    ORD=4 MM=3: 1.935321  (/true = 41.19)
+  => the ~96% cancellation is ESSENTIAL (non-perturbative); no truncated c_m-product
+     bound works.  Resonance lemma Var<=c*R2 is the open mile; use exact-moment +
+     decorrelation (opus near/far, klein LEM-005/006), NOT a Fourier resonance bound.
