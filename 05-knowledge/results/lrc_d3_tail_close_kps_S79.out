@@ -1,0 +1,29 @@
+k=11 bar=0.33121; block D3=0.40475 (opus). RESOLVING the S78 PZ-tail obstruction via D3.
+
+(1) diam>=16 tail: 1030 configs, min D3 = 0.51729 (margin +0.18607)
+(2) min D3 by R2 bin (monotone, decoupled):
+    R2 750-799: min D3 = 0.4048 (margin +0.0735)
+    R2 550-599: min D3 = 0.5524 (margin +0.2212)
+    R2 500-549: min D3 = 0.5173 (margin +0.1861)
+    R2 450-499: min D3 = 0.5530 (margin +0.2217)
+    R2 400-449: min D3 = 0.6186 (margin +0.2873)
+    R2 350-399: min D3 = 0.6448 (margin +0.3136)
+    R2 300-349: min D3 = 0.6555 (margin +0.3243)
+    R2 250-299: min D3 = 0.7264 (margin +0.3952)
+    R2 200-249: min D3 = 0.7660 (margin +0.4348)
+    R2 150-199: min D3 = 0.7997 (margin +0.4685)
+(3) max additive energy at diameter D (the 1+10 block split {0} u {D-9..D}):
+    diam 11: R2 = 734
+    diam 12: R2 = 702
+    diam 13: R2 = 674
+    diam 14: R2 = 650
+    diam 15: R2 = 630
+    diam 16: R2 = 614
+    diam 17: R2 = 602
+    diam 18: R2 = 594
+    diam 19: R2 = 590
+    diam 20: R2 = 590
+    => max R2 over diam>=16 = 614; Freiman: R2 >= 615 => prim-diam <= 15
+
+=> k=11 CLOSES: [diam<=15 exhaustive, D3>=0.405] + [diam>=16 => R2<=614 => D3>=0.458>=bar].
+   opus D3 (4.6x margin) makes both bricks crude/decoupled -- the S78 PZ coupling is dissolved.
