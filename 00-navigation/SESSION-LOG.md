@@ -1,3 +1,21 @@
+## opus-2026-07-07-S146 -- CITE-CHECK INTEGRATION + LIU-ZHU 2004 CONJECTURE 2 CONFIRMED EXACTLY (27 instances, all previously-open x>=3, x+y<=22; mu({2,3,5,8})=4/17 pinned -- Liu-Zhu had only 4/17<=mu<=11/45) + THE DIVISOR LADDER ON THE MOTZKIN SIDE (mu=kappa slab generic 97%, mu>kappa combinatorial 3% at the small-gcd obstruction = the mirror of mac-mini-S56 "composite structure breaks uniform tools"; GW = its |S|=13 member) (HYP-5217)
+
+Prompt (owner): continue from where I left off and extend, pulling in themes encountered when pulling from GitHub.
+
+PULLED THEMES (from tonight's fleet commits): monad-S13's "one structure seen four ways" gcd-grading note (triple atom theta^2*gcd/q, mac-mini resonance ladder, monad CRT strata, kps coprime lens) + mac-mini-S56 "the composite-14 small-gcd structure is where every uniform tool breaks" -- both density-floor side. My Liu-Zhu/Motzkin/window-graph thread is the MIRROR side; wired them together.
+
+(1) CITE-CHECK (S145 agent, full-text reads): mu(GW)=1/13 + chi(G_GW)=14 + tight-instance framing = plausibly NEW (GW/BGGST have no density/chromatic content); {1,3,4,5}/{1,3,4,7} separations + chi_c({1,3,4,7})=4 = PUBLISHED (Liu-Zhu 2004 A.3, Kemnitz-Kolberg 1998, {1,3,4,7} tight = Wills 1968) -> THM-652(b) re-attributed (attribution_update block); |S|=3 rigidity = HARALAMBIS 1977 NAMED CONJECTURE (open, verified <=25 by Liu-Robinson 2020, my <=18 subsumed); |S|=2 = Cantor-Gordon 1973.
+
+(2) LIU-ZHU CONJECTURE 2 (mu({x,y,y-x,y+x})=(k+1)m/(4(k+1)m+1), both odd; proved only x=1) CONFIRMED EXACTLY on all 27 primitive instances x+y<=22 via the window-graph max-cycle-mean engine: upper half (the OPEN direction) = no-positive-cycle certificate, lower = tight-cycle = explicit period-(4(k+1)m+1) optimal set. mu({2,3,5,8})=4/17 pinned.
+
+(3) WHY x>=3 was hard: proof-mining shows x=1 => mu=kappa, optimum is a ROTATION SLAB (two-gap Steinhaus signature, C=2m(m+1)); x>=3 both-odd => mu>kappa (13/13), optimum GENUINELY COMBINATORIAL (no slab witness, 3-6 gap alphabet) = Liu-Zhu Thm 5.7 made mechanical. CENSUS: mu=kappa on 465/479 4-sets max<=12 (97% slab); mu>kappa on 14 (3%), ALL A.3-type at the small-gcd obstruction. DIVISOR-LADDER STATEMENT: the rotation slab is the "uniform tool," breaks exactly at small-gcd/composite/2-adic difference sets -- the Motzkin-side mirror; GW (24=2*12) is the |S|=13 member of the same phenomenon; ladder runs |S|=2 -> |S|=4 A.3 -> |S|=13 GW coherently.
+
+FILES: 3 scripts + outs; reflection the-divisor-ladder-on-the-motzkin-side-...-opus-S146; THM-652 attribution_update; INDEX HYP-5217. Honest scope: Conj 2 confirmed instance-wise (not general-proved); Haralambis |S|=3 verified not proved.
+
+NEXT: (a) general Conj-2 proof (uniform C(k,m) upper bound + explicit combinatorial lower-bound set from the tight-cycle structure); (b) extend Haralambis |S|=3 past max 25 (needs an |S|=3-specific encoding -- window-graph states ~2^max); (c) chi_c(G_GW) in (13,14] still open (S145 carry); (d) the exchange-rate inequality (S144/S145 carry, untouched); (e) the skeleton rewiring so hlarge consumes muGood (turns the AP76 leaf into skeleton progress).
+
+---
+
 ## opus-2026-07-07-S145 -- THE NAMED NEXT STEPS: THM-652 PROVED (chi(G_GW) = 14 -- the integer rung is FAITHFUL at GW via rigidity + odd-cycle matching obstruction; ALL rungs blind at Lucas {1,3,4,7}; the discriminator = parity of m/gcd(d,m): 13 odd vs 4 even) + THE AP76 LEAN CERTIFICATE GREEN, KERNEL-PURE -- TailDiameter.AP76Certificate DISCHARGED, the k=13 diam<=75 hlarge leg is UNCONDITIONAL (boxeph-S2 handoff executed, builds first try, 8738 jobs) + audit verdict filed + T_6 localization (HYP-5197)
 
 Prompt (owner): work the named next steps (from S144: chi_c(G_GW), T_6 proof, exchange-rate, cite-checks, AP76 Lean, audit fold).
