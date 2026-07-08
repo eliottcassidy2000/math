@@ -1,0 +1,9 @@
+k=11: bar=0.33121, R2(block)=770
+
+(1) block: E[W]=0.15805 Var=0.04699 Var/R2=6.102e-05 PZ=0.34710
+    max Var/R2 over sample = 7.250e-05; uniform bound at block: PZ >= 0.30913 vs bar 0.33121 => FAILS
+
+(2) maxR2 by primitive diameter: d10:770 d12:706 d15:630 d16:614 d18:606 d20:574 d25:498
+
+(4) tail (diam>=16): R2<=614, Var<=7.3e-05*R2, E[W]>=0.148 => PZ >= 0.32978 vs bar 0.33121: tight/needs sharper
+    => needs (a) maxR2(diam>=16)<=614, (b) Var<=c*R2, (c) E[W]>=0.148 -- all three.
