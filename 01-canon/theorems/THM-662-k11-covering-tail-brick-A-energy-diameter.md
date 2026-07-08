@@ -90,6 +90,29 @@ block-plus-far-point extremal. The exhaustive `D <= 24` confirms `<= 590` for ev
   `R2 = 770`), so brick (B) is far easier than the razor PZ version that kps-S78 showed is
   uncloseable by any decoupled bound.
 
+## An ALTERNATIVE to brick (B): the exact-near/far tail route (opus-2026-07-08-S149, HYP-5367)
+
+Brick (B) routes the tail through additive energy (`R2 <= 614 => D3 >= bar`, via
+`Var(W) <= c*R2`). A **direct** route avoids `R2` entirely, on mac-mini's near/far split of the
+second moment (`E[W^2] = near + far`, THM-661): the PZ tail is `PZ >= E[W]^2/(near + E[W]^2)`
+whenever `far <= E[W]^2` (the disjoint-arc decorrelation lemma). mac-mini used the crude
+`near <= (2/7)E[W]`, giving `PZ ~ 0.31` at k=11 — just under the bar — and flagged the sharp
+decay `q(L) < q(1/7)` as the missing `+0.02`. Computing `near` **exactly** (Farey-cell
+integration of `q(L) = E[sum (g-L)_+]`, strictly decaying; `near = 2 E_x[sum_i h(g_i)]`,
+`h(g) = int_{1/7}^{2/7}(g-L)_+ dL` piecewise-quadratic) gives
+
+> **`min_E [ E[W]^2/(near_exact + E[W]^2) ] ~ 0.53` over spread k=11 families** — clearing the
+> bar `0.331` by `+0.20` (the `+0.02` delivered as `+0.20`; iid limit `0.591`).
+
+So the k=11 tail's **spread branch** (`far <= E[W]^2`, the majority of large-diameter primitive
+families) closes DIRECTLY, with no `R2`/resonance input. The residual (`far > E[W]^2`,
+primitive, large-diameter) is rare and shrinking (`695 -> 7 -> ~0` far-violators at
+diam `20 -> 30 -> 50`; min PZ `0.39 -> 0.49`, all `>>` the compact min `0.3468`). This reframes
+the one open lemma from `Var(W) <= c*R2` (coupling-tight at the razor `B_2` margin, kps-S78) to
+the clean **`far <= E[W]^2`** (disjoint-arc joint-emptiness), now with `+0.20` of room; a
+universal fallback `far <= (5/7)E[W]` holds always (`P(both empty) <= P(y1 empty)`). Files:
+`04-computation/lrc14_k11_tail_sharp_near_opus_S149.py`, `lrc14_k11_far_verify_opus_S149.py`.
+
 ## Files
 `04-computation/lrc_brickA_energy_diameter_kps_S80.py` (+ `.out`): the exact-integer
 exhaustive `max R2` by primitive diameter (`[16,24]`), the removal-lemma arithmetic, and the

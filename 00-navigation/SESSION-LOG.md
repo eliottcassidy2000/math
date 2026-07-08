@@ -14,6 +14,21 @@ DENSITY FLOOR (A') STATUS: now [B_4 covering-moment floor for k=8,9,10 (THM-661)
 FILES: lrc14_k12_13_D3_analog_bricks / lrc14_tail_rigorous_reduction _macmini_S57 (+outs); THM-661 sections (k=12,13, unified D3 floor, honest barely-covers status). No canon overridden.
 
 NEXT: (a) the moment-energy D3 lower bound (brick B rigorous) closes the uniform floor; (b) LEM-005's [18,35] k=11 diam gap; (c) brick (A) compression proof (optional); (d) Part A + Lean wiring when proofs settle.
+## opus-2026-07-08-S149 -- THE k=11 TAIL, EXACT-NEAR ROUTE: a clean ALTERNATIVE to THM-662 brick (B). Computing mac-mini's `near` EXACTLY (not the crude (2/7)E[W]) gives the SPREAD-branch PZ tail = E[W]^2/(near+E[W]^2) ~ 0.53 >> bar 0.331 -- mac-mini was STUCK at 0.31 < bar; the "+0.02 needed" delivered as +0.20. Reframes the one open lemma from Var(W)<=c*R2 (coupling-tight, kps-S78) to the clean far<=E[W]^2, with +0.20 room. (HYP-5367)
+
+Prompt (owner): work on closing remaining legs.
+
+STATE: the single remaining open density-floor leg is the k=11 covering-tail (k=8,9 proved; k=10 tent+deg4; k=12,13 closed via my D3 floor which mac-mini adopted into the unified THM-661 floor; k=11 = [compact exhaustive, done] + [tail]). kps THM-662 split the tail into brick (A) prim-diam>=16 => R2<=614 (PROVED) + brick (B) R2<=614 => D3>=bar (the resonance mile, open; kps-S78: no decoupled Var<=c*R2 closes the razor B_2 version).
+
+MY RESULT (a THIRD route, direct): on mac-mini's near/far split E[W^2]=near+far, PZ >= E[W]^2/(near+E[W]^2) for far<=E[W]^2 (spread). mac-mini used crude near<=(2/7)E[W] => PZ~0.31 (under bar), flagged the strict decay q(L)<q(1/7) as the +0.02 missing. I computed near EXACTLY (Farey integration of q(L)=E[sum(g-L)_+], h(g)=int_{1/7}^{2/7}(g-L)_+dL piecewise-quadratic): min PZ_tail ~ 0.53 over spread k=11, clearing bar by +0.20.
+
+ASSEMBLY: (1) non-primitive: PZ dilation-invariant (verified exact) => primitive; (2) prim-diam<=17: exhaustive, min 0.3468; (3) prim-diam>17, far<=E[W]^2 (majority): sharp near/far PZ>=0.53 -- CLOSED DIRECTLY, no R2; (4) prim-diam>17, far>E[W]^2 (residual): rare & shrinking (695@d20->7@d30->~0@d50, min PZ 0.39->0.49 >> compact 0.3468). => the residual analytic mile is reframed from Var<=c*R2 to the clean far<=E[W]^2 (+0.20 room); universal fallback far<=(5/7)E[W].
+
+HONEST: does NOT fully close k=11 (branch 4 residual + the far<=E[W]^2 lemma remain); closes the spread majority with the most margin of any route + reframes the residual. Filed as THM-662 alternative-brick-B note + HYP-5367.
+
+NEXT: (a) prove far<=E[W]^2 for spread families (the disjoint-arc decorrelation lemma -- cleaner than resonance, Koksma/discrepancy on 2-arc emptiness); (b) the finite far>E[W]^2 residual (extended exhaustive to diam~50, or a sub-structure argument); (c) either closes k=11.
+
+---
 
 ## kind-pasteur-2026-07-08-S80 -- FORMALIZED BRICK (A) of the k=11 covering-tail closure (canon THM-662: the additive-energy/diameter extremal bound); brick (B) reduced to the loose moment-energy mile. HONEST: k=11 NOT fully closed (brick B = the shared analytic mile, open). (HYP-5357)
 

@@ -44,3 +44,4 @@ ASSEMBLY of the k=11 tail:
       min PZ 0.39->0.49, all >> compact min -- finite-checkable / same decorrelation lemma's complement.
   REMAINING: the far <= E[W]^2 decorrelation lemma (mac-mini's, now with +0.20 room not razor +0.02)
   + the finite far>E[W]^2 residual.  The spread branch -- the part mac-mini was stuck on -- is closed.
+  diam  50: 2998 primitive,    0 far-violators (min PZ=none), spread branch min PZ_tail=0.54726
