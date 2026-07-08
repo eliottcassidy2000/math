@@ -1,0 +1,21 @@
+====================================================================================================
+RIGOROUS ABSOLUTE-BOUND CRITERION:  rho_k(1+PHI) <= (1-PSI)^2  =>  far <= E[W]^2  (=> Var<=near)
+  k=11: rho_k = 0.523954;  criterion at PSI~0 is PHI <= 0.9086
+====================================================================================================
+
+(0) CONVERGENCE of PHI,PSI in (Mmax,Smax) on a spread family E=[0,1,3,7,12,20,30,44,60,80,100]:
+    Mmax=2 Smax=4: PHI=1.15081  PSI=0.04788  #rels=52
+    Mmax=3 Smax=4: PHI=2.51485  PSI=0.11204  #rels=130
+    Mmax=3 Smax=5: PHI=5.91254  PSI=0.15472  #rels=772
+    Mmax=4 Smax=5: PHI=10.69970  PSI=0.26013  #rels=2256
+    Mmax=4 Smax=6: PHI=23.53728  PSI=0.32731  #rels=14664
+    Mmax=5 Smax=6: PHI=32.92609  PSI=0.43076  #rels=35594
+
+(1) VALIDATE  |far_exact-(5/7)^{k+1}| <= (5/7)^{k+1} PHI  (PHI is a rigorous upper bound):
+    E=[0, 1, 3, 7, 12]      : |dev|/base=0.0101  PHI=0.6600  [OK]
+    E=[0, 2, 3, 4, 5]       : |dev|/base=0.0158  PHI=1.9329  [OK]
+    E=[0, 1, 4, 9, 11]      : |dev|/base=0.0094  PHI=0.6097  [OK]
+    E=[0, 1, 3, 7, 12, 20]  : |dev|/base=0.0172  PHI=1.5792  [OK]
+
+(2) CROSSOVER: does the criterion hold across the spread tail? (worst PHI per diam band)
+    per band: max PHI, max PSI, #(criterion holds)/#sampled, worst family
