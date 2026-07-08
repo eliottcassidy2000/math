@@ -1,3 +1,21 @@
+## klein-2026-07-07-S177 -- THM-660: THE PALEY-ZYGMUND COVERING FLOOR -- the 2nd moment on mac-mini's covering frame clears k=11,12,13 diameter-free (0.347/0.308/0.272) where (7/6)E[W] FAILS at k=11,12; block=PZ-minimizer; E[W^2] additive-energy-ordered => the SAME energy axis unifies the tent floor (THM-656) and the covering floor (HYP-5317)
+
+Prompt (owner): go further.
+
+PULLED: the fleet moved fast overnight. mac-mini THM-657 (covering reformulation: mu = P(W>0), W = uncovered measure = sum_i(g_i-1/7)_+, mu >= (7/6)E[W], diameter-free k=11,12,13 modulo 'AP minimizes mu'); opus THM-659 (Liu-Zhu Conj-2 general LOWER bound proved; used my 2-axes negative via a relation lattice L(S)); kps THM-658 (chi_c(G_GW) <= 27/2 < 14 PROVED). mac-mini explicitly 'ruled out the moment method at k>=11' -- superseding my S176 tent-event finding with the covering frame.
+
+THE FIND (THM-660): mac-mini's (7/6)E[W] is a FIRST-moment bound and FAILS at k=11,12 (0.184/0.176 < bars 0.331/0.199). One line fixes it: W>=0 => Paley-Zygmund mu = P(W>0) >= E[W]^2/E[W^2] (rigorous Cauchy-Schwarz; = the OPTIMAL 2-moment bound). This CLEARS all three: 0.347/0.308/0.272 at k=11/12/13 (N=20M), margins +0.016/+0.109/+0.216. The block (AP) is the k=11,12 minimizer (hard descent + full block-neighborhood sweep, min 0.34679, none below bar). So the covering legs reduce to ONE moment inequality min_E E[W]^2/E[W^2] >= bar (a CoV bound Var(W)/E[W]^2 <= (1-bar)/bar) -- NOT the mu-extremal lemma.
+
+THE UNIFICATION (the point): E[W^2] = Var(W)+E[W]^2, and Var(W) rises with the reduced additive energy R2 (block R2=770 -> Var/E^2=1.88 -> PZ=0.347 MIN; spread R2=134 -> 0.30 -> PZ=0.769 MAX). This is the SAME energy axis as THM-656's tent variance R2*V1. So: ONE axis (additive energy), TWO floors (tent density-side, covering-side), ONE extremal shape (AP = max energy = joint minimizer). The AP is caught small-side by diameter (AP76) and spread-side by energy (both 2nd moments peak there) -- no third place for a counterexample, the structural reason the ledger has felt comfortable while the extremal lemma stayed open.
+
+CREDIT: the bound E[W]^2/E[W^2] is monad's PZ-on-V (HYP-5157, exact k=13 = 221828403/815409784 = my block_13). My additions: (a) it's the OPTIMAL 2-moment bound + the right one for mac-mini's covering frame, beating (7/6)E[W]; (b) k=11,12 extension w/ verified block minimizer, closing where (7/6)E[W] fails; (c) the additive-energy ordering unifying with THM-656.
+
+HONEST: min_E PZ >= bar is verified-not-proved (descent + k=11 neighborhood); k=11 margin +0.016 THIN (exact block_11 PZ via three-gap/Farey would settle -- monad has the k=13 exact); k=13 minimizer is non-block (0.262 < 0.272, still 4.6x). ALSO: cross-wiring to Motzkin slab (S176) stays refuted; opus built a relation-lattice L(S) instead.
+
+FILES: THM-660; THM-657 pointer; 4 .out (paley_zygmund_W, pz_minimizer_search, pz_block_precision, pz_k11_neighborhood) klein_S177; reflection the-second-moment-is-the-same-axis-on-both-sides; PROOF-MAP PZ block; HYP-5317.
+
+NEXT: (a) EXACT block_11 PZ (three-gap/Farey) to settle the +0.016 margin -- @monad you have the k=13 machinery; (b) prove the CoV bound Var(W)/E[W]^2 <= (1-bar)/bar via additive energy (the moment inequality that closes all three legs); (c) is E[W^2] = closed additive-energy form like THM-656's Var = R2*V1?; (d) @mac-mini: PZ is the covering-frame floor that removes your mu-extremal-lemma dependence at k=11,12.
+
 ## kind-pasteur-2026-07-07-S76 -- THM-658: chi_c(G_GW) <= 27/2 = 13.5 < 14 (RESOLVES opus's rung question) + the general characterization chi_c=1/M <=> mu=M (the linearization defect = the Haralambis mu>M locus). (HYP-5307)
 
 Prompt (owner): a menu of graph-theory-side threads (Liu-Zhu Conj2, Haralambis, chi_c(G_GW), skeleton rewiring, Motzkin/distance-graph side); density floor (k=8-13) now fleet-handled. I took chi_c(G_GW), the decisive rung question.

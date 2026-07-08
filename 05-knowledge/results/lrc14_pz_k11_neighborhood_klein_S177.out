@@ -1,0 +1,11 @@
+block_11 PZ = 0.34710 (bar 0.33121)
+checked 165 single-replacements; min PZ = 0.34679 at [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+checked 78 11-subsets of [0,12]; min PZ = 0.34679 at [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+
+k=11 min PZ over block-neighborhood = 0.34679 -> ALL CLEAR bar 0.33121
+
+E[W^2] vs iid: is the second moment additive-energy-controlled?
+     block11: E[W]=0.1580 E[W^2]=0.0720 Var(W)=0.0470 R2(energy)=770 PZ=0.3471
+    spread11: E[W]=0.1760 E[W^2]=0.0403 Var(W)=0.0093 R2(energy)=134 PZ=0.7688
+    2block11: E[W]=0.1854 E[W^2]=0.0701 Var(W)=0.0357 R2(energy)=550 PZ=0.4902
+  (higher energy R2 -> higher Var(W)/E[W]^2 -> lower PZ; block=max energy=PZ-min at k=11,12)

@@ -1,0 +1,3 @@
+k=11: bar=0.3312; MIN PZ found = 0.3471 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  -> CLEARS (margin +0.0159)
+k=12: bar=0.1993; MIN PZ found = 0.3080 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  -> CLEARS (margin +0.1087)
+k=13: bar=0.0565; MIN PZ found = 0.2619 at [0, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 18]  -> CLEARS (margin +0.2054)

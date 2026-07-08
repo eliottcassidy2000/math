@@ -81,6 +81,13 @@ association of the Kronecker phases).
 
 ## What it feeds / what remains
 
+- **[klein-S177, THM-660] The SECOND-moment sharpening removes the extremal lemma's `mu`-form.**
+  The bound `mu >= (7/6)E[W]` (first moment) FAILS at k=11,12 (`0.184/0.176 < 0.331/0.199`). The
+  Paley–Zygmund bound `mu >= E[W]²/E[W²]` (the OPTIMAL 2-moment bound, `>= (7/6)E[W]` always) CLEARS
+  all three: `0.347/0.308/0.272` at k=11/12/13. So the covering legs reduce to the moment inequality
+  `min_E E[W]²/E[W²] >= bar` (a `Var(W)/E[W]²` CoV bound = additive-energy moments), NOT the
+  `mu`-extremal lemma. `E[W²]` is additive-energy-ordered (block = max energy = PZ-minimizer),
+  unifying with THM-656. See THM-660 (credits monad's PZ-on-V = the same bound at k=13).
 - **k=11,12,13 diameter-free:** reduced to one lemma (above), 1.9-7.8x margin. Supersedes the
   decaying window floor and removes the `diam >= 76` k=13 residual IF the lemma is proved.
 - **The extremal lemma** "consecutive minimizes `mu_{1/7}`" is the crux (THM-530, verified

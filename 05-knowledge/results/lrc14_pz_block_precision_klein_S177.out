@@ -1,0 +1,7 @@
+HIGH-PRECISION block PZ (N=20M):
+  block_11: E[W]=0.158050 E[W^2]=0.071967 PZ=0.34710 (bar 0.33121, margin +0.01589); true mu=0.6263
+  block_12: E[W]=0.141290 E[W^2]=0.064809 PZ=0.30803 (bar 0.19934, margin +0.10868); true mu=0.5699
+  block_13: E[W]=0.126616 E[W^2]=0.058930 PZ=0.27205 (bar 0.05649, margin +0.21556); true mu=0.4425
+
+HARD k=11 minimizer search (many seeds, deep descent):
+  k=11 MIN PZ = 0.34710 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] (bar 0.33121) -> CLEARS +0.01589

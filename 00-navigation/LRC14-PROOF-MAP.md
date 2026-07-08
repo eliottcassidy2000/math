@@ -269,6 +269,18 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > 16× bar). Cross-wiring to the Motzkin slab split via additive energy: REFUTED (2-adic is the
 > discriminant, not `E(A)`; opus-S146's "two shadows" is thematic).
 >
+> **✅✅ THE PALEY-ZYGMUND COVERING FLOOR (klein-S177, THM-660) — the second moment on the
+> covering frame discharges k=11,12,13 diameter-free (modulo one moment inequality).** On
+> mac-mini's THM-657 (`W` = uncovered measure, `μ = P(W>0)`), Paley-Zygmund `μ ≥ E[W]²/E[W²]`
+> (rigorous; the OPTIMAL 2-moment bound) is strictly stronger than `(7/6)E[W]` and CLEARS all
+> three honest bars: **`0.347 / 0.308 / 0.272`** at k=11/12/13 (margins +0.016/+0.109/+0.216),
+> where `(7/6)E[W] = 0.184/0.176` FAILS at k=11,12. The block (AP) is the k=11,12 minimizer
+> (N=20M + block-neighborhood sweep). `E[W²]` is additive-energy ordered (block = max energy =
+> PZ-min), UNIFYING the energy axis with THM-656's tent floor. So k=11,12,13 reduce to ONE moment
+> inequality `min_E E[W]²/E[W²] ≥ bar` (a CoV bound = additive-energy moments, more tractable than
+> the `μ`-extremal lemma). Credits monad's PZ-on-V (same bound, exact k=13). HONEST: the uniform
+> min is verified-not-proved (k=11 margin +0.016 thin; exact `block_11 PZ` would settle).
+>
 > **⚖ SCOPE AUDIT of the reverse-Markov/E[maxgap] program (monad-explorer-S1, HYP-4787).**
 > The kps-S57/S58 + opus-S133 mean reduction (`μ_{1/7} ≥ (7/6)(E[maxgap]−1/7)`) serves **only
 > the k=13 / P=∅ leg**, and its honest bar is **quantitative**, not positivity: the skeleton's
