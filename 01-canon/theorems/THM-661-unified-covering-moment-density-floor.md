@@ -161,3 +161,25 @@ Primitivity is essential — the dilated block `2·{0..10}` has R2 = 770 but pri
 The extremal proof (compression/rearrangement; the near-c-AP competitors bounded) is the one
 combinatorial lemma the k=11 leg still needs rigorously; k=12,13 sidestep it entirely.
 File: `04-computation/lrc14_k12_13_D3_analog_bricks_macmini_S57.py`.
+
+## The THREE PZ legs unify under ONE uniform D3 floor (mac-mini-S57)
+
+Combining the exact compact D3-minima: **min_E D3(E) is achieved on a COMPACT family for all
+three legs, and clears the bar** — no leg needs the R2-diameter extremal brick (A):
+
+| k | exact min D3 | minimizer | bar | exact margin |
+|---|---|---|---|---|
+| 11 | 0.404751 (block_11, = max-R2 config) | `{0,..,10}` | 0.331206 | +0.073545 (1.22x) |
+| 12 | 0.355876 | `{0,2,4,5,..,12,14}` (near-2-AP) | 0.199344 | +0.156532 (1.78x) |
+| 13 | 0.308844 | `{0,2,3,4,..,12,14}` (near-2-AP) | 0.056487 | +0.252357 (5.47x) |
+
+The tail (diam > 15) only RAISES D3 (decorrelation, LEM-005), so `min_E D3 =` the compact
+minimum above. So the k=11 leg closes by the SAME mechanism as k=12,13 — a uniform D3 floor
+whose minimum is a compact family — rather than kps-S79's delicate `[compact <= 15] + [R2 <= 614
+for diam >= 16 => D3 >= 0.458]` split. **The block is the k=11 D3-minimizer** (max additive
+energy => min D3, since D3 decreases in R2 and the block maximizes R2 globally); for k=12,13 the
+minimizer is a near-2-AP slightly below the block (D3 has mild scatter vs R2). Net: the entire
+`k >= 11` density floor is `min_E D3 >= bar`, an EXACT finite compact check (Farey) + the LEM-005
+decorrelation tail — brick (A)'s R2-diameter extremal (still verified: max primitive R2 = 614 at
+diam >= 16) becomes optional, needed only if one routes the tail through R2 instead of D3 directly.
+File: `04-computation/lrc14_k12_13_D3_analog_bricks_macmini_S57.py`.
