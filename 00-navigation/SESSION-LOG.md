@@ -16,6 +16,19 @@ NET: the triple-overlap law is a clean new result (extends THM-638/641). The Var
 FILES: LEM-007 (canon); lrc14_triple_overlap_varW / triple_bernoulli _klein_S182.out; HYP-5387.
 
 NEXT: (a) control the S_3+ cancellation (rigorous Var(W)<=c*R2 with c~6.4e-5) -- the covering wall; (b) the far<=E[W]^2 explicit Erdos-Turan threshold; (c) the general triple Bernoulli closed form (all difference lattices, not just {0,1,n}).
+## opus-2026-07-08-S151 -- THE FOURIER PAIR-RESONANCE KERNEL, EXACT: c_pair = sum_{n!=0}|hhat(n)|^4 = theta^3(2/3-theta) = 11/7203 (via Bernoulli B4; = k=2 tent variance) -- the R2-linear leading term Var_resonance = (R2/2)c_pair; the screening quantified (s(k) 1.00->0.043, Var non-monotone peaks k~9), but the tight c=6e-5 needs the triple/quad masses (kps-S81's target) (HYP-5407)
+
+Prompt (owner): prove the resonance lemma Var(W)<=c*R2 via the Fourier pair-resonance kernel.
+
+Arc Fourier hhat(n)=(1-e(n theta))/(2 pi i n). The 2-arc overlap = tent = autocorrelation of the arc (Fourier coeff |hhat|^2); matched-difference pairs (additive energy) share frequency e(n(e_i-e_j)x) => R2-linear leading term Var_resonance = (R2/2)c_pair, c_pair = sum_{n!=0}|hhat(n)|^4. EXACT CLOSED FORM (3-way verified: numeric, k=2 tent variance, Bernoulli c_pair=(1/4)[1/30+(4/3)B4(1/7)-(1/3)B4(2/7)] via sum cos(2pi n a)/n^4 = -(pi^4/3)B4(a)): c_pair = theta^3(2/3-theta) = 11/7203 = 1.527e-3 -- gives klein THM-641's pair overlap mass its closed value.
+
+SCREENING (kps-S81's 96% cancellation; mac-mini 27x): s(k)=Var(block_k)/Var_resonance falls 1.00->0.043 (s(11)=0.080), each added arc screening by ~5/7=1-2theta; Var(W) NON-MONOTONE in k (peaks k~9, falls to 0 as coverage->inf) while R2 grows -- so Var~c*R2 is LOCAL to k=11; tight c=s(11)c_pair/2=6.1e-5 = the SCREENED value, NOT the pair kernel c_pair/2=7.6e-4.
+
+HONEST: derived the exact pair kernel + quantified the screening; does NOT close the tight Var<=c*R2 (the pair kernel gives leading term + ~12x-loose bound; the tight c needs the triple/quad overlap masses = kps-S81's concrete target, derivable by the same Bernoulli-periodization -- triple mass = 3-hhat product, B6/B4). CONVERGENT with kps-S81 (real-space W=sum_S(-1)^|S|L_S decomposition) + mac-mini LEM-006.
+
+NEXT: the triple/quad overlap mass Fourier kernels (the screening) -- the last analytic step; the triple mass = the 3-arc-overlap Fourier coeff (product of 3 hhat's, frequency-sum-zero, a B6 Bernoulli combination). Sum pair+triple+quad = the tight c.
+
+---
 
 ## klein-2026-07-08-S181 -- BRICK (B) REDUCED to the two shared miles (D3>=PZ>=1/(1+Var/E[W]^2); R2<=614 drops the E[W] requirement 0.1415->0.1313, ~12x margin) + 614 = R2(AP_10)+44 = TWICE the square-pyramidal number + far<=E[W]^2 confirmed for spread (HYP-5377)
 
