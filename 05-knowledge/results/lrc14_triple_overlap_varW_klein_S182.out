@@ -1,0 +1,16 @@
+(1) TRIPLE-OVERLAP iid value E[(1/7-span_3)_+] = 0.002915
+    candidates: (1/7)^2=0.020408; (1/7)^2/1=0.020408; 3*(1/7)^3=0.008746; (1/7)^2 - ? 
+    L^2 * (1 - 2L/3)? L=1/7: 0.018465; L^2*(1-L)?=0.017493
+    actual triple masses (d1,d2) vs iid (large diffs -> iid):
+      (d1,d2)=(1,2): mass=0.010204 (dev from iid +0.007289)
+      (d1,d2)=(3,7): mass=0.002915 (dev from iid -0.000000)
+      (d1,d2)=(10,21): mass=0.002915 (dev from iid -0.000000)
+      (d1,d2)=(50,97): mass=0.002916 (dev from iid +0.000000)
+      (d1,d2)=(1,100): mass=0.002917 (dev from iid +0.000001)
+
+(2) Var(W) STRUCTURE via measure inclusion-exclusion W = 1-k/7 + S_2 - S_3 + ...
+    ov=(1/7-|s|)_+: int ov = 1/49 = 0.020408; int ov^2 = 2/1029 = 0.001944; Var(ov)=0.001527
+    block11: R2=770; Var(W)=0.04699; Var(S_2)=1.25940; leading (R2/2)*Var(ov)=0.58795;
+        Var(W)/R2=6.10e-05 (empirical c); Var(ov)/2=7.64e-04 (leading c); ratio=0.080
+    spread11: R2=134; Var(W)=0.00931; Var(S_2)=0.19598; leading (R2/2)*Var(ov)=0.10232;
+        Var(W)/R2=6.95e-05 (empirical c); Var(ov)/2=7.64e-04 (leading c); ratio=0.091

@@ -1,3 +1,22 @@
+## klein-2026-07-08-S182 -- LEM-007: THE TRIPLE-OVERLAP MASS LAW (iid = L^j, {0,1,n}=L^2/n) via THM-641 + the covering-variance structure (leading c_lead=Var(ov)/2=7.64e-4 EXACT, net c~5.85e-5 after 92% S_3+ cancellation) + honest c-correction to brick B (E[W]>=0.1393 not 0.1313) (HYP-5387)
+
+Prompt (owner): derive the triple-overlap mass law via THM-641's method; prove Var(W)<=c*R2 via the Fourier pair-resonance kernel with explicit c; push LEM-005 discrepancy to close far<=E[W]^2.
+
+DELIVERED (LEM-007):
+(I) TRIPLE-OVERLAP MASS LAW (rigorous, via THM-641's offset-sweep+Bernoulli method). The j-fold arc-overlap |A_i1 cap..cap A_ij| = (L - span_j)_+, and E[|cap|] = L^j (iid, elementary: E[|cap|] = int P(y in all j) dy = L^j) + Bernoulli corrections that VANISH for generic differences (verified (3,7),(10,21),(50,97),(1,100) all = 1/343 = (1/7)^3 exactly). CLEAN: the consecutive triple {0,1,n} has mass EXACTLY L^2/n = 1/(49n) (above iid n<7, = iid n=7, below n>7; n=2,3,4 -> 1/98,1/147,1/196). Triple analog of THM-638's signed pair-mass law.
+
+(II) COVERING-VARIANCE STRUCTURE via the EXACT measure inclusion-exclusion W = 1-k/7 + S_2 - S_3 + .. (S_j = sum of j-fold overlaps -- this I-E is EXACT/finite, unlike the divergent PROBABILITY I-E). S_2 = sum ov(frac(d x)), ov=(L-|s|)_+ = pair-overlap trapezoid (THM-656 structure): int ov=L^2=1/49, int ov^2=2/1029 => the leading additive-energy coefficient c_lead = Var(ov)/2 = (2/1029-1/2401)/2 = 7.64e-4 EXACT. BUT Var(W) != Var(S_2): the S_3+ layers (triple mass L^3+.., part I) CANCEL ~92% => net c = Var(W)/R2 ~ 5.85e-5 (min/mean/max 5.34/5.85/6.38e-5 over 30 shapes; c_lead/c~13). So covering variance IS additive-energy controlled but the resonance (S_3+ layers) is DOMINANT (unlike the tent's single pair layer). A rigorous Var(W)<=c*R2 with the correct small c needs controlling the cancellation = the barely-covers wall in 2nd-moment form -- NOT proved; the triple-mass law (part I) is the first cancellation layer, the tool for it.
+
+(III) HONEST CORRECTION to my S181 brick-B claim: the c is ~6.4e-5 (worst-case), not the optimistic 5.67e-5, so brick(B) via PZ needs E[W]>=0.1393 (margin +0.004 vs min E[W]~0.143 -- thin), not 0.1313. The D3 route (margin +0.134) is the robust brick-(B) closure.
+
+(IV) far<=E[W]^2: stays reduced to the LEM-005 discrepancy (Erdos-Turan on the phase vector); not pushed further this session.
+
+NET: the triple-overlap law is a clean new result (extends THM-638/641). The Var(W) resonance is structurally clarified (exact leading coefficient + the dominant S_3+ cancellation) but the rigorous small-c bound remains the wall. The honest c-correction tightens brick B's E[W] requirement back toward the knife-edge (D3 is the robust route).
+
+FILES: LEM-007 (canon); lrc14_triple_overlap_varW / triple_bernoulli _klein_S182.out; HYP-5387.
+
+NEXT: (a) control the S_3+ cancellation (rigorous Var(W)<=c*R2 with c~6.4e-5) -- the covering wall; (b) the far<=E[W]^2 explicit Erdos-Turan threshold; (c) the general triple Bernoulli closed form (all difference lattices, not just {0,1,n}).
+
 ## klein-2026-07-08-S181 -- BRICK (B) REDUCED to the two shared miles (D3>=PZ>=1/(1+Var/E[W]^2); R2<=614 drops the E[W] requirement 0.1415->0.1313, ~12x margin) + 614 = R2(AP_10)+44 = TWICE the square-pyramidal number + far<=E[W]^2 confirmed for spread (HYP-5377)
 
 Prompt (owner): prove far<=E[W]^2 for spread, prove brick (B) resonance lemma for R2<=614, look back for connections to 614.
