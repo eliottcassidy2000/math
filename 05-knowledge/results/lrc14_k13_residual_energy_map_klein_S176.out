@@ -1,0 +1,12 @@
+(1) mu vs reduced-energy R2 over random PRIMITIVE k=13 shapes, diam>=76:
+   sampled 120 shapes; mu range [0.965,0.999], all >> bar 0.0565
+   20 LOWEST-mu shapes: mean R2 = 280.4, mean mu = 0.970
+   20 HIGHEST-mu shapes: mean R2 = 239.0, mean mu = 0.993
+   corr(mu, R2) = -0.445  (negative => higher energy -> lower mu, energy orders the tail)
+
+(2) descent: minimize mu over diam>=76 primitive k=13 (jump moves), track energy:
+   min mu found over diam>=76 = 0.9253 (energy R2=408), shape diam=150
+   = 16.4x the bar m_P -- the k=13 tail is comfortable; energy of the minimizer is HIGH within the residual
+
+(3) sanity: the OVERALL k=13 mu-minimizer is the AP (max energy):
+   AP_13 mu=0.4425 R2=1300 (max energy);  dilated AP_13 same mu (dilation-invariant), diam can be >=76 but primitive diam=12

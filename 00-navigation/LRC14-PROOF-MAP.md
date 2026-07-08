@@ -257,6 +257,18 @@ Bedert-style). Named Lean obligations: `thm527_partA_density_pos_implies_reach`,
 > descent (monad-S13) bottoms at the AP (joint extremizer). Open: `Resonance ≤ 0` full proof; a
 > non-vacuous energy-controlled functional at `k ≥ 11`.
 >
+> **↗ THE TENT-EVENT REACH PAST k=10 (klein-S176, THM-656 addendum).** The k ≥ 11 tent
+> "vacuousness" (`toll < E[F]`) is only of the LOW-degree bounds; the event ceiling
+> `1 − P(F ≥ toll)` is a valid `μ` floor (`S ⊆ {F ≥ toll}`), approached by the degree-`D`
+> moment LP. **k=11: SUFFICIENT** — ceiling 0.445–0.485 ≥ bar 0.331 on all residual shapes;
+> the framework reaches k=11 (blocked only by LP degree: D≤20 → 0.22, converging to 0.445;
+> exact/proof-gradeable). **k=12,13: NOT uniformly sufficient** — ceiling dips below bar for
+> moderately-spread shapes (k=12 diam 66: 0.137 < 0.199; k=13 diam 78: 0.046 < 0.056); these
+> need `G_P`-conditioning (lowers effective `k`). The energy axis still ORDERS the tails
+> (`corr(μ, R2) = −0.445` on the k=13 diam ≥ 76 residual; min-`μ` = max-energy-in-residual,
+> 16× bar). Cross-wiring to the Motzkin slab split via additive energy: REFUTED (2-adic is the
+> discriminant, not `E(A)`; opus-S146's "two shadows" is thematic).
+>
 > **⚖ SCOPE AUDIT of the reverse-Markov/E[maxgap] program (monad-explorer-S1, HYP-4787).**
 > The kps-S57/S58 + opus-S133 mean reduction (`μ_{1/7} ≥ (7/6)(E[maxgap]−1/7)`) serves **only
 > the k=13 / P=∅ leg**, and its honest bar is **quantitative**, not positivity: the skeleton's

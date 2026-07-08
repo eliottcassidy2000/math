@@ -1,3 +1,23 @@
+## klein-2026-07-07-S176 -- THE TENT-EVENT REACH PAST k=10 (framework reaches k=11; k=12/13 need conditioning) + the additive-energy CROSS-WIRING to the Motzkin slab split is REFUTED (2-adic is the discriminant) + energy ORDERS the k=13 tail (HYP-5287)
+
+Prompt (owner): work Liu-Zhu Conj-2 / Haralambis>25 / chi_c(G_GW) / skeleton rewiring / Motzkin side; additive energy; degree-4 crossover; D_q window; recursive combinatorics; push past k=10 towards k=13.
+
+COORDINATION: opus-S147 had reserved the SAME multi-target (HYP-5277: Liu-Zhu proof / Haralambis>25 / chi_c(G_GW) / skeleton / additive-energy cross-wiring). Messaged opus, took a clean split: opus keeps the four distance-graph proof targets; I took the ADDITIVE-ENERGY CROSS-WIRING (fifth target) + the density-side push past k=10 (HYP-5287). No collision.
+
+THREE FINDINGS (one positive-structural, one negative, one map):
+
+(1) THE TENT-EVENT REACH (positive-structural). My S175 'tent goes vacuous past k=10' was imprecise: MARKOV/CANTELLI go vacuous (toll<E[F]), the EVENT does not. S subset {F>=toll} always => mu >= 1-P(F>=toll) always; that ceiling is approached from below by mac-mini's degree-D moment LP. k=11: ceiling = 0.445-0.485 >= bar 0.331 on ALL residual shapes (moderate/wide/near-unif/max-spread, diam 55-155) => the additive-energy/moment framework REACHES k=11, blocked only by LP degree (D=8/12/16/20 -> 0.13/0.19/0.20/0.22 converging to 0.445; heavy but exact, moments = i-fold additive-energy sums). k=12,13: ceiling DIPS BELOW bar for MODERATELY-spread shapes (k=12 [1,2,4,7..67] diam 66: 0.137<0.199; k=13 diam 78: 0.046<0.056) while wide/near-unif clear -> the plain unconditional tent stops at k=11; k=12/13 need G_P-conditioning (drops effective k).
+
+(2) CROSS-WIRING REFUTED (negative, the useful stop-sign for opus). Additive energy E(A) does NOT discriminate opus-S146's slab (mu=kappa) vs combinatorial (mu>kappa) Motzkin split: over all 479 primitive 4-sets (max<=12), slab energies 28-44 and combinatorial 28-36 FULLY overlap; Sidon sets (energy 28) can be combinatorial ({1,3,4,12},{2,6,7,9}), high-energy (44) can be slab. The real discriminant is 2-ADIC (Liu-Zhu Thm 5.7, mod-4). Density-side additive energy and Motzkin-side 2-adic structure are DIFFERENT axes -- 'one divisor ladder, two shadows' is thematic, not a shared invariant. Saves the fleet from using E(A) as a Conjecture-2 locus predictor.
+
+(3) ENERGY ORDERS THE k=13 TAIL (map). corr(mu,R2)=-0.445 over the diam>=76 residual; the residual mu-minimizer is the HIGHEST-energy shape in the residual (R2=408, mu=0.925=16x bar); global minimizer = AP (max energy). Confirms the diam/energy complementarity governs the tail even where the tent Cantelli is vacuous, and explains monad-S13's PZ-descent bottoming at the AP.
+
+INTEGRATION: mac-mini's degree-4 moment (HYP-5267) is the natural successor to THM-656's degree-2 Cantelli (closed my k=10 near-miss 0.43->0.49); the moment ladder = the additive-energy-moment ladder. mac-mini flagged 'k=10 avgc residual needs klein spread floor' -- the tent-event ceiling is that floor's ceiling.
+
+FILES: 5 .out (additive_energy_slab_discriminant, k13_residual_energy_map, k11_moment_lp, k11_moment_ceiling, tent_event_ceiling_map) klein_S176; THM-656 addendum (reach map + cross-wiring negative); reflection the-tent-event-ceiling-is-the-reach-and-two-axes-not-one; PROOF-MAP reach note; HYP-5287 full.
+
+NEXT: (a) the G_P-CONDITIONAL tent-event ceiling for k=12/13 (conditioning drops effective k -- the route past k=11); (b) a smaller-mean functional (subset/anchor tent) whose ceiling clears at k=13; (c) whether the k=11 moment certificate degree can be cut by using the tent's structure (not just moments); (d) @opus: the 2-adic (not energy) discriminant for your Conjecture-2 upper-bound locus.
+
 ## klein-2026-07-07-S175 -- THM-656: THE SPREAD-SIDE FLOOR (tent SECOND moment = additive energy) -- Var(F) <= R2*V1 (R2 = E(A)-k^2 reduced additive energy), Cantelli => mu >= lambda^2/(R2*V1+lambda^2): k=8 EVERY shape clears from variance alone; k=9 every R2<=217 (spread), residual = high-energy multi-block (kps THM-655's zone); the diam/energy COMPLEMENTARITY explains PZ-descent bottoming at the AP (HYP-4991)
 
 Prompt (owner): keep working toward the LRC 14 proof. (Opus model.)

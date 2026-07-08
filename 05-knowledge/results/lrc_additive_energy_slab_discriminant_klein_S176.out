@@ -1,0 +1,26 @@
+Enumerate primitive 4-sets max<=12, classify slab/combinatorial, compute energy.
+
+slab (mu=kappa): 465;  combinatorial (mu>kappa): 14
+
+         class    n     energy min/med/max   sidon-defect m/M   diff-coinc m/M
+          slab  465   28/32/    44      0/  16         0/  16
+ combinatorial   14   28/32/    36      0/   8         0/   8
+
+ALL 14 combinatorial sets (energy, sidon-defect, diff-coincidence):
+  M=      [1, 3, 4, 5] E= 36 sidon-def= 8 diff-coinc= 8  mu=   1/4 kappa=   2/9
+  M=      [1, 3, 4, 7] E= 32 sidon-def= 4 diff-coinc= 4  mu=   1/4 kappa=   1/5
+  M=      [1, 4, 5, 9] E= 32 sidon-def= 4 diff-coinc= 4  mu=   1/4 kappa=  3/13
+  M=      [1, 7, 8, 9] E= 32 sidon-def= 4 diff-coinc= 4  mu=   1/4 kappa=  4/17
+  M=      [2, 3, 5, 8] E= 32 sidon-def= 4 diff-coinc= 4  mu=  4/17 kappa=  3/13
+  M=     [2, 5, 7, 12] E= 32 sidon-def= 4 diff-coinc= 4  mu=  9/37 kappa=  4/17
+  M=     [3, 4, 7, 10] E= 32 sidon-def= 4 diff-coinc= 4  mu=  6/25 kappa=  4/17
+  M=     [3, 4, 7, 11] E= 32 sidon-def= 4 diff-coinc= 4  mu=   1/4 kappa=   2/9
+  M=     [3, 5, 8, 11] E= 32 sidon-def= 4 diff-coinc= 4  mu=   1/4 kappa=  3/13
+  M=     [1, 3, 4, 12] E= 28 sidon-def= 0 diff-coinc= 0  mu=  4/15 kappa=   1/4
+  M=    [1, 3, 11, 12] E= 28 sidon-def= 0 diff-coinc= 0  mu=  4/15 kappa=  6/23
+  M=      [2, 6, 7, 9] E= 28 sidon-def= 0 diff-coinc= 0  mu=  4/15 kappa=   1/4
+  M=     [2, 6, 9, 11] E= 28 sidon-def= 0 diff-coinc= 0  mu=  5/19 kappa=   1/4
+  M=      [3, 5, 8, 9] E= 28 sidon-def= 0 diff-coinc= 0  mu=  6/23 kappa=   1/4
+
+SIDON-DEFECT: slab max=16, comb min=0 -> OVERLAP (not a clean threshold)
+  slab sets with sidon-defect >= comb-min (0): 465/465 (false positives)

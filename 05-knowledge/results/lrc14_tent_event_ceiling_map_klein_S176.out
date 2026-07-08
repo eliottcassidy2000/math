@@ -1,0 +1,13 @@
+k=11 (bar 0.331):
+      moderate diam  55: ceiling 1-P(F>=toll) = 0.445  >=bar
+          wide diam 155: ceiling 1-P(F>=toll) = 0.463  >=bar
+     near-unif diam 100: ceiling 1-P(F>=toll) = 0.485  >=bar
+    max-spread diam 145: ceiling 1-P(F>=toll) = 0.449  >=bar
+k=12 (bar 0.199):
+      moderate diam  66: ceiling 1-P(F>=toll) = 0.137  < bar (very-spread, true mu~1)
+          wide diam 143: ceiling 1-P(F>=toll) = 0.347  >=bar
+     near-unif diam 143: ceiling 1-P(F>=toll) = 0.347  >=bar
+k=13 (bar 0.056):
+      moderate diam  78: ceiling 1-P(F>=toll) = 0.046  < bar (very-spread, true mu~1)
+          wide diam 168: ceiling 1-P(F>=toll) = 0.208  >=bar
+     near-unif diam 168: ceiling 1-P(F>=toll) = 0.208  >=bar

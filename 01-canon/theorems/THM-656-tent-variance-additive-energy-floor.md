@@ -75,7 +75,40 @@ diameter floor `146/(35·diam)` (THM-653 I). It clears a bar `B` iff `R2 ≤ R2*
   k=9 leg is now **triply covered**: THM-655 (all shapes), THM-653 (diam ≤ 16), THM-656 (R2 ≤ 217).
 - **k = 10 (honest near-miss):** `R2*(10) = 66 < 90` = Sidon minimum, so the plain tent second moment
   covers no k=10 shape; the window-fusion `F' = F·1_{not-window}` raises the floor to ≈ 0.43 (vs bar
-  0.4521, short 0.02). k=10 belongs to the conditional tent (kps-S75: k=10 (A′) is TRUE, a proof-gap).
+  0.4521, short 0.02). k=10 belongs to the conditional tent (kps-S75: k=10 (A′) is TRUE, a proof-gap),
+  and mac-mini's **degree-4 moment LP (HYP-5267)** closes the crossover (0.43 → 0.47/0.49) — degree 4 is
+  the natural successor to this theorem's degree-2 (Cantelli), the moments `E[F^i]` being `i`-fold
+  additive-energy sums.
+
+## The reach past k=10 (klein-S176 map — how far the tent EVENT carries)
+
+The vacuousness at `k ≥ 11` (`toll < E[F]`) is only a vacuousness of the LOW-degree bounds. The
+correct object is the **tent event ceiling** `1 − P(F ≥ toll)`, a valid `μ` lower bound (since
+`S ⊆ {F ≥ toll}`), which the moment LP (mac-mini's degree-`D` method) approaches from below as `D → ∞`.
+Whether the ceiling itself clears the honest bar is the true reach question:
+
+- **k = 11: the tent event is SUFFICIENT.** `1 − P(F ≥ toll) = 0.445–0.485 ≥ bar 0.331` on every
+  residual shape tested (moderate/wide/near-uniform/max-spread, diam 55–155). So the additive-energy /
+  moment framework *reaches k=11* — "past k=10" is a matter of LP degree, not a wall (the degree-`D` LP
+  converges 0.13/0.19/0.20/0.22 at `D = 8/12/16/20` toward 0.445 — degree-heavy but finite/exact/
+  proof-gradeable). The moments are exact `i`-fold additive-energy sums.
+- **k = 12, 13: the tent event is NOT uniformly sufficient.** The ceiling dips below the bar for
+  *moderately*-structured spread shapes (k=12 `[1,2,4,7,…,67]` diam 66: ceiling 0.137 < 0.199; k=13 diam
+  78: 0.046 < 0.056), while wide/near-uniform shapes clear (0.21–0.35). So the plain unconditional tent
+  stops at k=11; k=12/13 need `G_P`-conditioning (which lowers the effective `k`) or a smaller-mean
+  functional. **The energy axis still ORDERS these tails** (klein-S176: `corr(μ, R2) = −0.445` over the
+  k=13 diam ≥ 76 residual; the residual `μ`-minimizer is the highest-energy shape in the residual, at
+  `μ ≈ 0.925 = 16× bar`) — consistent with the complementarity and with monad-S13's PZ-descent finding
+  the AP (max energy) as the global minimizer.
+
+**Cross-wiring to the Motzkin side (klein-S176, NEGATIVE result).** Additive energy does NOT discriminate
+opus-S146's slab (`μ = κ`) vs combinatorial (`μ > κ`) split: over all 479 primitive 4-sets (max ≤ 12),
+slab energies span 28–44 and combinatorial 28–36 (fully overlapping); Sidon sets (energy 28, zero
+additive relations) can be combinatorial (`{1,3,4,12}`) and high-energy sets (44) can be slab. The split
+is **2-adic** (Liu-Zhu Thm 5.7, the mod-4 structure), a genuinely different invariant. So the "one divisor
+ladder, two shadows" picture (opus-S146) is a **thematic** analogy — density-side additive energy and
+Motzkin-side 2-adic structure are distinct arithmetic axes, both "small-gcd breaks" but not the same
+quantity. (Saves the fleet from using `E(A)` as a Conjecture-2 locus predictor.)
 
 ## The complementarity (the structural point)
 

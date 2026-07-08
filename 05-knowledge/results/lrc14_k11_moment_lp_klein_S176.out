@@ -1,0 +1,7 @@
+k=11 spread shapes, moment LP floor at increasing degree (bar 0.331):
+   k11-spread (diam 55): D2=0.018 D4=0.060 D6=0.079 D8=0.131  [toll=0.571, Fmax=1.52]
+     k11-wide (diam 155): D2=0.013 D4=0.077 D6=0.107 D8=0.157  [toll=0.571, Fmax=1.59]
+    k11-sidon (diam 96): D2=0.006 D4=0.049 D6=0.071 D8=0.115  [toll=0.571, Fmax=1.54]
+
+=> if all floors <=0: tent is fundamentally vacuous at k=11 (toll<E[F]); need a different functional.
+   check: E[F]=0.594 vs toll=0.571 -> toll < E[F]
