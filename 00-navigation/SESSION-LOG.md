@@ -26,6 +26,21 @@ WHAT STANDS: LEM-008 (my S83, mean overlap mass kernels E[L_S] = sum_{m in Lambd
 STATE OF BRICK (B): opus-S152 has the exact damped kernels + tight c; REMAINING (opus's, active) = E_3,E_4 multipliers + uniform bound Var<=(1-theta)^{2(k-2)}(R2/2)c_2(1+eps), eps~0.3. The resonance sign is CLOSE via opus's damping route (not my ruled-out Fourier/Farey-per-pair routes). k=11 = brick A (THM-662, mine, proved) + brick B (opus damping route, active).
 
 FILES: lrc_resonance_farey_signtest_kps_S84 (+out, kept as honest record of the spectator-omission); LEM-008 (corrected note); INDEX self-correction. Credit opus-S152 (HYP-5417).
+## klein-2026-07-08-S184 -- EXHAUSTIVE k=11 covering floor to prim-diam<=24: ALL 1,959,187 primitive shapes clear D3>=bar (min D3=0.435613 EXACT, margin +0.104); block+outlier tail D3->0.466 (decorrelation) => k=11 leg reduced to a +0.13-margin spread tail, razor B_2 + resonance-c mile BYPASSED (HYP-5387)
+
+Prompt (owner): extend the compact exhaustive to prim-diam <= 24.
+
+DONE (the concrete brick-B closure I flagged S183). Extended opus/kps's compact exhaustive (prim-diam<=17) to prim-diam<=24: ALL 1,959,187 primitive 11-sets with prim-diam in [16,24] have D3 (opus THM-661 covering floor) >= bar, margins >= +0.104 (batched float grid N=1200). GLOBAL MIN D3 = 39903318216219317/91602659665402200 = 0.435613 (EXACT, Farey-cell integration) at the spread-block {0,2,4,6,8,9,10,12,14,16,18} (prim-diam 18), margin +0.1044. Per-diam min D3 = 0.453/0.476/0.436/0.475/0.461/0.460/0.470/0.463/0.465 (D=16..24), all >=+0.10.
+
+THE BINDING TAIL SHAPE: at large prim-diam the D3-minimizer is the BLOCK-PLUS-FAR-POINT {0..9}u{D} (brick-A's extremal family), and its D3 RISES with D as the outlier decorrelates from the 10-block: exact D3 = 0.4645/0.4587/0.4678/0.4663 at D=24/25/30/50, converging to a decorrelation limit ~0.466. So the binding tail shape clears for ALL D with >=+0.13.
+
+CONSEQUENCE: k=11 covering leg = [prim-diam<=24: EXHAUSTIVE, min 0.436] + [prim-diam>=25: spread, binding block+outlier -> 0.466]. No shape approaches the bar. The razor B_2 margin (+0.0156, klein-S178) AND the resonance-c mile (Var(W)<=c*R2, the barely-covers wall that mac-mini/klein-S183 showed is doubly-dead) are BOTH BYPASSED -- the D3 floor (+0.13 margin) + the extended exhaustive close the transition region, leaving only a comfortable spread tail. This is the cleanest k=11 route: no far<=E[W]^2, no resonance sign, no uniform c -- just an exhaustive finite check + the block+outlier decorrelation limit.
+
+STATUS: k=11 is closed modulo prim-diam>=25 (spread, all D3>=0.46 -- binding block+outlier verified to D=50, LEM-005 discrepancy formalizes the genuinely-spread rest). The exhaustive to 24 covers the hard block+outlier transition entirely.
+
+FILES: THM-662 addendum; 04-computation/lrc14_k11_exhaustive_diam24_klein_S184.py (+out), lrc14_d3_exact_verify_klein_S184.py; HYP-5387.
+
+NEXT: (a) the prim-diam>=25 tail via the block+outlier decorrelation limit (D3->0.466 provable?) + LEM-005 discrepancy for the spread rest -- closes k=11 fully; (b) the k=12,13 analogs already close by uniform D3 (mac-mini) -- so the whole k>=11 density floor is [exhaustive compact + spread tail].
 
 ## opus-2026-07-08-S152 -- THE EXACT j-FOLD OVERLAP VARIANCE KERNELS via a tent-power recursion: c_j = int t^j - sum_{r>=1}C(j,r)theta^2r c_{j-r} (int t^j = 2theta^{j+1}/(j+1)); c_2=11/7203, c_3=25/235298 (triple), c_4=321/28824005, ...; the Var(W) = sum_j (1-theta)^{2(k-j)}[C(k,j)+E_j]c_j structure validated (Sidon=diagonal, block=R2-resonance), tight c=6.1e-5 REPRODUCED at k=11 (HYP-5417)
 

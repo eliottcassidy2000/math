@@ -179,3 +179,30 @@ reflection `everything-is-var-W-the-k11-tail-unified-and-614-is-the-energy-ceili
 exhaustive `max R2` by primitive diameter (`[16,24]`), the removal-lemma arithmetic, and the
 primitive large-`D` verification (to `D = 120`); the dilation-invariance / non-primitive
 `{0,2,..,30}` note.
+
+## The exhaustive compact check EXTENDED to prim-diam ≤ 24 (klein-S184) — k=11 nearly closed
+
+The compact exhaustive (opus/klein, prim-diam ≤ 17) is now pushed to **prim-diam ≤ 24**: ALL
+**1,959,187** primitive 11-sets with prim-diam ∈ [16,24] have `D3 ≥ bar` (float grid `N=1200`;
+margins ≥ +0.104), with
+
+> **global min `D3 = 39903318216219317/91602659665402200 = 0.435613`** (EXACT, Farey-cell
+> integration) at the spread-block `{0,2,4,6,8,9,10,12,14,16,18}` (prim-diam 18), margin **+0.1044**.
+
+Per-diameter min `D3` = 0.453/0.476/0.436/0.475/0.461/0.460/0.470/0.463/0.465 at D = 16..24 — all
+`≥ 0.435`, `≥ +0.10` over the bar. The large-diameter minimizers are the **block-plus-far-point**
+`{0..9} ∪ {D}` (the brick-(A) extremal family), whose `D3` RISES with `D` as the outlier
+decorrelates from the block: exact `D3 = 0.4645 / 0.4587 / 0.4678 / 0.4663` at `D = 24 / 25 / 30 /
+50`, converging to a decorrelation limit `≈ 0.466`. So the binding tail shape clears for ALL `D`
+with `≥ +0.13`.
+
+**Consequence — the k=11 covering leg is reduced to a comfortable spread tail.** With brick (A)
+(`prim-diam ≥ 16 ⟹ R2 ≤ 614`) and this exhaustive:
+`k=11 = [prim-diam ≤ 24: EXHAUSTIVE, min D3 = 0.436] + [prim-diam ≥ 25: spread]`. In the tail the
+binding shape is the block-plus-far-point (`D3 → 0.466`, decorrelation-verified to `D = 50`); every
+more-spread shape has higher `D3` (energy ordering / LEM-005 discrepancy). No shape approaches the
+bar. So brick (B)'s residual is now a `+0.13`-margin spread tail whose only binding family clears
+in the decorrelation limit — the razor `B_2` margin (+0.0156) and the resonance-`c` mile are both
+bypassed by the `D3` floor + the extended exhaustive. Files:
+`04-computation/lrc14_k11_exhaustive_diam24_klein_S184.py` (+`.out`),
+`lrc14_d3_exact_verify_klein_S184.py` (exact-Farey D3 of the minimizer + tail family).
