@@ -1,3 +1,22 @@
+## kind-pasteur-2026-07-08-S85 -- DERIVE E_3: it is the ORDER-3 ADDITIVE ENERGY (dominant (1,1,-2) form E_i+E_j-2E_l) = opus-S153 support-6 sextuple = mac-mini LEM-007 (1,-2,1); INDEPENDENT confirm of the NON-PERTURBATIVE wall; NET-NEW census kills uniform-c (sup Var/R2=7.2e-5>block 6.1e-5), confirms brick(B) (min D3=0.4917>>0.331), E[W] is the lever (HYP-5437)
+
+Prompt (owner): derive E_3 and send it to opus.
+
+DELIVERED. E_3, in the variance decomposition Var(W)=sum_{nu!=0}|What(nu)|^2 indexed by matched-Fourier-vector support size, = RES_33/(s^{2(k-3)} c_3) = the ORDER-3 ADDITIVE ENERGY. Dominant carrier = the balanced double-difference (1,1,-2): the form E_i+E_j-2E_l, L^2 mass sum_nu Q(nu)^2 (triple analog of R2=sum_d r_d^2). Verified tracking Q-energy at k<=8.
+
+CONVERGENCE (three independent derivations, one object): my (1,1,-2) = opus-S153's "support-6 additive sextuple" (a matched (1,1,-2) pair IS the support-6 relation (1,1,-2,-1,-1,2)) = mac-mini LEM-007's leading (1,-2,1) 3-AP. opus-S153 (HYP-5427) got there first via the resummed relation-lattice E[W]=sum_{n in L}prod psihat(n_i) with E_2=R2 exact; I confirm from the nu!=0 Fourier-support side.
+
+NON-PERTURBATIVE WALL -- independent confirmation of my own S82 instinct: per-level E_p GROW (block k=11: E_3=22k, E_4=608k, E_5=8M) and Var=0.047 survives only by coherent inter-level cancellation (opus-S153: |W_j|^2=0.077,0.226,0.932 growing). So Var<=c*R2 is NOT provable by bounding E_j term-by-term. S82 was right for the per-level expansion; opus-S152 damping converges the coherent MEAN, not the per-level variance series. The uniform-E_j route is DEAD (agrees opus/mac-mini/klein).
+
+NET-NEW (exact census, moments_exact, no truncation, 960 spread primitive 11-sets, diam 16..44, R2<=614):
+(1) KILLS uniform-c: max Var/R2 = 7.22e-5 at (0,2,3,6,12,15,18,23,26,32,36) R2=266 -- ABOVE the block's 6.10e-5. So the circulated 6.1e-5 is NOT the sup; a uniform Var<=6.1e-5*R2 is FALSE.
+(2) CONFIRMS brick(B): decisive floor min D3 = 0.4917 >> bar 0.331 (validates block D3=0.404751=THM-661 exactly). Consistent with klein-S184 exhaustive (diam<=24, min 0.4356) + klein-S185 LEM-009 (diam>=25).
+(3) THE LEVER: D3 stays high DESPITE c=7.2e-5 because spread sets have LARGER E[W] (uncovered mass), lifting the floor faster than c lowers it. E[W] vs R2 is the real lever, not c -- EXACTLY klein LEM-009's mechanism (L1=(6/7)E[W]). My census independently reinforces the live decorrelation route.
+
+FILES: lrc14_E3_triple_resonance_kps_S85.py (+ .out); LEM-008 update (kps-S85 section: resummation link + E_3 + wall + census); HYP-5437.
+
+NEXT: brick(B) is essentially closed (klein S184 exhaustive + S185 LEM-009 decorrelation, modulo the energy-ordering step max-energy=>min-D3). The remaining k=11 analytic mile is klein/mac-mini's shared doubly-balanced (3-AP) cancellation, NOT the moment series. My E[W]-lever census supports formalizing the energy-ordering step via E[W] growth.
+
 ## mac-mini-2026-07-08-S57 (cont.6) -- RIGOROUS: far_dev is supported ENTIRELY on DOUBLY-BALANCED resonances = the variance; far<=E[W]^2 and Var(W)<=near are provably ONE wall; leading = 3-APs (support-2 contributes 0) (LEM-007; HYP-5357)
 
 Prompt (owner): bound the higher-support resonance tail; push the dissociated bound to general spread.

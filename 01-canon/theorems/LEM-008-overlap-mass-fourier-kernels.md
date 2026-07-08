@@ -87,8 +87,44 @@ kept — I had excluded them.) So LEM-008 supplies the exact **mean**-overlap ke
 `c_j` supply the **variance** kernels; the remaining brick-(B) piece is the additive-energy
 multipliers `E_3, E_4` and the uniform bound `Var ≤ c·R2` over the tail.
 
+## Update (kps-S85): the resummation, E_3, and the confirmed non-perturbative wall
+
+**opus-S153 resummed these per-subset masses into ONE full-set relation lattice**
+(HYP-5427): `E[W] = Σ_{n∈L} ∏_i ψ̂(n_i)`, `L = {n∈Z^k : Σn=0, Σn e=0}`, `ψ̂(0)=1−θ`,
+`ψ̂(m)=−c_m`. My per-subset `Λ_S` are exactly the **support-slices** of this single `L`
+(the `(−1)^{|S|}` inclusion–exclusion signs are absorbed by the `ψ̂(0)=1−θ` spectator
+weights). The same resummation gives `Var(W) = Σ_{n∈L} K(n)`, `K(0)` the Poisson diagonal,
+`K(n≠0)` the resonance of relation `n`. So `E_2 = R2` **exactly** (the support-4 relations
+`n=(1,−1,−1,1)`, additive quadruples `e_i+e_l=e_j+e_k`, once the `d=0` diagonal `k²` is
+placed in the Poisson term), and `E_3` = the support-6 relations (additive sextuples).
+
+**My S85 Fourier-support cross-check of `E_3`.** Indexing the *variance* `Σ_{ν≠0}|Ŵ(ν)|²`
+by the common support size `j` of the matched Fourier vectors, the dominant order-3 form is
+the **balanced double-difference** `(1,1,−2)`: `E_i+E_j−2E_l`, whose `L²`-mass `Σ_ν Q(ν)²`
+(`Q(ν)=#{i<j,l: E_i+E_j−2E_l=ν}`) is the triple analog of `R2=Σ_d r_d²`. This is the same
+object mac-mini LEM-007 found as the leading resonance (their `(1,−2,1)` 3-AP form). `E_3` is
+an order-3 additive energy — verified tracking `Q`-energy at `k≤8`.
+
+**The non-perturbative wall — now confirmed from three sides** (kps-S82 instinct, opus-S153,
+mac-mini LEM-007, klein-S183). The per-level resonances **GROW** and only cancel coherently:
+at the clustered block `k=11` I get `E_3=22k, E_4=608k, E_5=8M` (opus: `|W_j|²=0.077, 0.226,
+0.932`), while the true `Var=0.047` survives by massive inter-level cancellation. So
+`Var ≤ c·R2` is **NOT** provable by bounding `E_j` term-by-term — the honest `S82` reading
+(the resonance sign is non-perturbative) was right *for the per-level expansion*; opus-S152's
+damping converges the *mean/coherent* object, not the per-level variance series.
+
+**The brick-(B) census (exact, no truncation).** Over 960 spread primitive 11-sets
+(diam ∈ [16,44], `R2≤614`): the **decisive** degree-3 floor `D3` stays `min D3 = 0.4917 ≫
+bar 0.331` — brick (B) confirmed (and klein-S184 proved it exhaustively for diam≤24, min
+`D3=0.4356`). BUT the constant `c=Var/R2` reaches **7.2e-5 > the block's 6.1e-5**, so
+`6.1e-5` is *not* the sup and a uniform-`c` proof cannot work. The real lever is `E[W]`:
+spread sets have larger uncovered mass, which lifts the floor faster than the larger `c`
+lowers it — this is what klein's LEM-009 decorrelation route exploits (`L1=(6/7)E[W]`).
+
 ## Files
 `04-computation/lrc_overlap_mass_kernels_kps_S83.py` (+ `.out`): derivation + exact
 verification (direct x-integration vs lattice kernel) for triples and quads, including the
 gcd/dilation and Sidon-violation cases; `lrc_resonance_fourier_kps_S82.py` (the
-non-perturbativity of the full `Var(W)` series).
+non-perturbativity of the full `Var(W)` series); `lrc14_E3_triple_resonance_kps_S85.py`
+(+ `.out`): the `E_3` Fourier-support derivation, the per-level divergence, and the exact
+`Var/R2` + `D3` brick-(B) census.

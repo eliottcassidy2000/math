@@ -1,0 +1,85 @@
+========================================================================================================
+E_3 TRIPLE RESONANCE MULTIPLIER (kps-S85 v2)  theta=1/7 s=6/7  |w|<=5 pmax=6
+exact kernels: c_2=1.5271e-03, c_3=1.0625e-04, c_4=1.1137e-05, c_5=1.1210e-06, c_6=1.1798e-07
+========================================================================================================
+
+VALIDATION: coherent Fourier Var_model vs exact Var_true, and diagonal-only vs Sidon
+set          k    R2    Var_true   Var_model mdl/true        diag diag/true     res_tot
+--------------------------------------------------------------------------------------------------------
+block k=6    6   110  3.2768e-02  3.2982e-02   1.0065  7.4987e-03    0.2288  2.5483e-02
+block k=8    8   280  4.6446e-02  5.4569e-02   1.1749  8.1044e-03    0.1745  4.6465e-02
+block k=11  11   770  4.6988e-02  4.7632e-01  10.1372  7.0818e-03    0.1507  4.6924e-01
+Sidon k=6    6    30  7.2588e-03  7.0860e-03   0.9762  7.5492e-03    1.0400 -4.6319e-04
+Sidon k=8    8    56  7.8766e-03  9.0112e-03   1.1440  8.1662e-03    1.0368  8.4497e-04
+AP7 d=1      7   182  4.2411e-02  4.3402e-02   1.0234  7.9809e-03    0.1882  3.5421e-02
+
+  * Sidon: res_tot ~ 0, diag/true ~ 1  -> diagonal (Poisson) IS the variance (opus).
+  * blocks: res_tot > 0 dominates -> additive-energy resonance.  mdl/true ~ 1 validates
+    the truncation (|w|<=5) and the whole level machinery.
+
+========================================================================================================
+GRAM BLOCKS: same-level resonance E_p = RES_pp/(s^{2(k-p)} c_p), and cross-level 2Re G[p][q]
+========================================================================================================
+set             E_2   R2/2      E_3      E_4      E_5        X23        X24        X34
+--------------------------------------------------------------------------------------------------------
+block k=6      86.9     55    561.6   2158.6   2339.5 -4.812e-02  4.048e-02 -3.363e-02
+block k=8     248.2    140   3415.3  36500.9 159059.1 -1.107e-01  1.457e-01 -1.879e-01
+block k=11    739.9    385  22308.5 608163.78131368.2 -1.992e-01  3.997e-01 -7.844e-01
+Sidon k=6      11.3     15    135.3    539.6    584.2 -1.317e-02  9.636e-03 -8.886e-03
+Sidon k=8      21.7     28    553.2   5984.7  25596.1 -1.972e-02  2.347e-02 -3.146e-02
+AP7 d=1       155.8     91   1494.4  10282.9  25127.6 -7.754e-02  8.450e-02 -8.907e-02
+
+  E_2 vs R2/2: opus's pair energy.  E_3 = the TRIPLE multiplier (target).
+  Cross-level X_pq: interference between a p-term and q-term relation at equal nu.
+
+========================================================================================================
+E_3 CLOSED FORM: order-3 additive energy of the (1,1,-2) form  E_i+E_j-2E_l
+  Q(nu)=#{i<j,l: E_i+E_j-2E_l=nu};  E_3 should track the offdiag energy sumQ^2-sumQ
+========================================================================================================
+  (1,1,-2) orbit = 31.8% of c_3;  weight-scaled predictor = frac112*(sumQ^2-sumQ)
+set              E_3  sumQ^2 offdiagQ pred=frac*od E_3/pred  E_3/R2
+--------------------------------------------------------------------------------------------------------
+block k=6      561.6     234      174         55.4   10.146   5.105
+block k=8     3415.3    1320     1152        366.5    9.319  12.197
+block k=11   22308.5    8243     7748       2464.8    9.051  28.972
+Sidon k=6      135.3      94       34         10.8   12.508   4.510
+Sidon k=8      553.2     324      156         49.6   11.146   9.878
+AP7 d=1       1494.4     593      488        155.2    9.627   8.211
+
+STATEMENT (E_3):  E_3 = RES_33/(s^{2(k-3)} c_3) is the ORDER-3 ADDITIVE ENERGY -- the
+count of matched balanced 3-term relations sum w_a E_a = sum w'_b E_b (!=0), weighted by
+the tent kernel.  Dominant carrier = the (1,1,-2) form E_i+E_j-2E_l, L^2 mass sum Q(nu)^2
+(the triple analog of R2=sum_d r_d^2); E_3 ~ 9-10x its raw offdiagonal (other order-3
+forms + harmonics).  NOTE E_2 itself is ~1.6x R2/2 (a>=2 harmonics + doublings), so the
+naive energies are LEADING terms, not exact.
+
+!! PER-LEVEL DIVERGENCE (honest caveat) !!  For the CLUSTERED block k=11 the per-level
+   E_p GROW (E_3=22k,E_4=608k,E_5=8M): the series sum_j E_j c_j s^{2(k-j)} does NOT
+   converge term-by-term; Var survives only by full coherent cancellation across ALL
+   levels.  So brick(B) Var<=c*R2 CANNOT be proven by bounding E_3 alone.  This is the
+   real form of kps-S82's 'non-perturbative': the DAMPED/coherent object converges
+   (opus-S152) but the per-level RESONANCE series is asymptotic/divergent for clustered
+   sets.  The block is exactly brick(A)'s EXCLUDED case (diam 10<16).
+
+========================================================================================================
+BRICK (B) REGIME: EXACT Var/R2 census over SPREAD 11-sets (moments_exact, NO truncation)
+  brick(A) delivers primitive diam>=16 => R2<=614; measure the true constant c=Var/R2 there
+========================================================================================================
+  [validate] block k=11 D3 = 0.404751  (THM-661 value 0.404751)
+
+  sampled N=960 primitive 11-sets, diam in [16,44], R2<=614 (brick(B) regime)
+  Var/R2 :  mean=5.769e-05  max=7.222e-05  min=4.724e-05
+  D3     :  mean=0.7289  MIN=0.4917  max=0.8562
+  bar(k=11) = 0.3312   ->  min D3 - bar = +0.1605
+--------------------------------------------------------------------------------------------------------
+  WORST Var/R2 : c=7.2225e-05 R2=266 set=(0, 2, 3, 6, 12, 15, 18, 23, 26, 32, 36)
+  MIN D3       : D3=0.4917 R2=550 c=6.425e-05 set=(0, 2, 4, 6, 8, 9, 10, 12, 13, 14, 16)
+  block ref    : Var/R2=6.10e-5, D3=0.4048 (clustered EXTREME, R2=770 EXCLUDED by brickA)
+
+  READING (brick B, EXACT):  over the spread brick(B) regime the DECISIVE floor D3 stays
+  WELL ABOVE the honest bar 0.331 (min D3 - bar > 0), EVEN THOUGH the constant c=Var/R2
+  reaches ~7.2e-5 (ABOVE the block's 6.1e-5).  So brick(B) [R2<=614 => D3>=bar] is
+  EMPIRICALLY CONFIRMED, but its proof CANNOT go through a uniform c=6.1e-5 (that constant
+  is NOT the sup) -- it must use that spread sets have LARGER E[W] (more uncovered mass),
+  which lifts the PZ/degree-3 floor faster than the larger c lowers it.  E[W] vs R2 is the
+  real lever, not c alone.  <-- key message for opus's uniform bound.
