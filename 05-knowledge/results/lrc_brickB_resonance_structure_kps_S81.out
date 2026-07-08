@@ -1,0 +1,9 @@
+E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]: R2=770
+  Var(W) = 0.046988 = R2*6.10e-05
+  Var(pair-sum) = 1.259402; Var(W)/Var(pair-sum) = 0.0373 => 96.3% higher-order cancellation (= the RESONANCE)
+E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 16]: R2=614
+  Var(W) = 0.035979 = R2*5.86e-05
+  Var(pair-sum) = 1.032852; Var(W)/Var(pair-sum) = 0.0348 => 96.5% higher-order cancellation (= the RESONANCE)
+
+|S|=1 terms (L_i=1/7 const) => 0 to Var; THM-641 gives the pair term exactly;
+residual = the triple/quad arc-overlap mass laws (THM-641's method should extend).
