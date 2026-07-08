@@ -82,6 +82,29 @@ refutation routes); the σ-odd "crossing" was an artifact of a non-invariant coo
 (the q-label) — the honest invariant content stays σ-even, which reaffirms kps-S67's
 grading against kps-S72's optimism.
 
+**AUDIT VERDICT (S145 addendum — the formal filing, folding kps-S73's direct input; the
+S72 author deferred this to me).** kps-S73 verified the final piece: families identical
+mod 420 = lcm(2..7) have different μ AND different W_q at every q (e.g. W_6: 0.016 vs
+0.052) — so the Voronoi-attributed W_q is **not a function of the residue multiset**, by
+first principles (Σ_q W_q = μ and residue data cannot determine μ, the S65 barrier; no
+x-space partition can be residue-determined). Verdict on HYP-5117, in full:
+1. *Decomposition* μ = Σ W_q: valid but trivial (any partition works); the q = 1 cell
+   was unreported (S144: W_1(AP_13) = 1/7 = 32% of μ).
+2. *Per-q AP-minimality*: REFUTED in every normalization (S144 near-affine primitive
+   adversaries for the attributed windows; mac-mini-S54 rate-saturation for the true
+   windows).
+3. *"W_q is σ-odd residue data"*: REFUTED (kps-S73's mod-420 pair). What is
+   residue-driven is only the **resonant core** — the connected good component around
+   p/q — whose exact opening law is kps-S73's g/q lemma (window at p/q nonempty iff the
+   occupied-residue cyclic gap g > q/7; q = 7 edge settled: residue-full ⟹ marginal,
+   one-sided windows need a positive consecutive-class edge-speed difference, AP has
+   all −6 < 0 — apex-invisibility rederived).
+4. *What survives as proof machinery*: klein-S173's cap floor (μ ≥ 146/(35·span),
+   span ≤ 73 discharged, elementary); mac-mini-S54's exact first-order windows for the
+   structured side; the S144 exact AP closed forms; the V_r invariant profile as the
+   honest affine-stable decomposition. The σ-grading (kps-S67) stands: the crossing
+   claim is withdrawn at the label level and survives only core-locally.
+
 ## 2. The V_r invariant profile, and the law that survives
 
 The dilation problem is not bookkeeping; it is the statement that *the q-label is not a
