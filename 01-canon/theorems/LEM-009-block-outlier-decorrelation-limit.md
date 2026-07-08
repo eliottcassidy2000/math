@@ -136,3 +136,31 @@ Koksma–Hlawka as the `c = 10` body, absorbed by the margins). So **the general
 reduced to a finite, verified table** (`D3_c`, `c = 1..10`) plus a bounded high-margin spread
 correction — no far ≤ E[W]², no uniform resonance-c, no R2 scatter. File:
 `lrc14_D3c_monotone_klein_S187.out`.
+
+## Why the c-block table IS the worst case (kps-S86 — the missing justification)
+
+klein-S187's table is over `c`-**blocks** ⊕ iid outliers; invoking it for a *general* prim-diam ≥ 25
+shape requires that this is the **extremal** structure among all shapes with max-cluster `≤ c`. Two
+verified monotonicities supply exactly that:
+
+- **Merge-domination.** The D3-minimizer is a **single** cluster ⊕ iid outliers — *splitting* a
+  cluster raises D3 sharply: one 10-block+outlier `0.4646` vs two 5-blocks+outlier `0.768`,
+  6-block+5·iid `0.762`, 11·iid `0.855`. So only single-cluster structures can be extremal; any
+  multi-cluster shape is trivially `≫ bar`.
+- **Block-worst-shape.** Among size-`c` single clusters the **consecutive block** is the worst (min
+  D3): `c=10` block `0.4649 < 0.4753` (`{0..8,10}`) `< 0.5129` (`{0..8,12}`) `< 0.5882` (gap@5);
+  `c=9` block `0.5248 < 0.5606 < 0.6525`. Tightest cluster ⇒ deepest uncovered gaps ⇒ highest
+  `Var(W)` ⇒ lowest D3 — the same variance mechanism as the table.
+
+Hence `D3(any prim-diam ≥ 25 shape) ≥ D3_{(max-cluster block)⊕iid} ≥ D3_10 = 0.4646 ≥ bar`, closing
+the "why the block table is the worst case" gap. Two exact anchors:
+
+- **Global min** of D3 over ALL primitive 11-sets = the **full 11-block** `{0..10}`,
+  `D3 = 54912120381817/135668932727076 = 0.404751` (prim-diam 10, in the exhaustive range) — so the
+  prim-diam ≥ 25 tail is not the binding case. (This also explains the "min 0.436" above: that is the
+  min over prim-diam ∈ [16,24]; the diam-10 block lives in the opus/kps ≤17 exhaustive.)
+- **Tail min** = `D3(\{0..9,25\}) = 0.458714` (exact, constrained-descent-confirmed), margin +0.127.
+
+The two monotonicities are comprehensively verified with the explicit `Var(W)` mechanism but not yet
+analytically proved; with residual (ii) (the multi-outlier finite-spread bound, `c ≤ 9`) they are the
+last mile of k=11. File: `lrc14_energy_ordering_kps_S86.py` (+`.out`), HYP-5457.

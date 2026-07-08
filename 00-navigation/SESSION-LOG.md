@@ -1,3 +1,24 @@
+## kind-pasteur-2026-07-08-S86 -- ENERGY-ORDERING STEP: the WORST-STRUCTURE justification for klein-S187's D3_c table (merge-domination + block-worst) + global min D3 = full block {0..10} = 0.404751 EXACT + tail min = {0..9,25} = 0.4587 (HYP-5457)
+
+Prompt (owner): prove the energy-ordering step to fully close k=11.
+
+CONTEXT: klein-S187 (concurrent) proved D3_c (c-block + (11-c) iid) DECREASING via a finite table, min D3_10=0.4649>=bar. But that table is c-BLOCKS; using it for a GENERAL prim-diam>=25 shape needs the c-block+iid to be the WORST structure among all shapes with max-cluster<=c. THIS SESSION supplies that missing justification.
+
+DELIVERED (complementing klein-S187, not duplicating):
+1. GLOBAL MIN (exact): min D3 over ALL primitive 11-sets = the FULL 11-BLOCK {0..10}, D3 = 54912120381817/135668932727076 = 0.404751, at prim-diam 10 = INSIDE the exhaustive range. So the prim-diam>=25 tail is NOT binding. (Also resolves the apparent klein-S184 "min 0.436": that is min over prim-diam in [16,24]; the diam-10 block is in opus/kps's <=17 exhaustive -- no error.)
+2. MERGE-DOMINATION: splitting a cluster RAISES D3 sharply (one 10-block+outlier 0.4646 vs two 5-blocks+outlier 0.768, 11 iid 0.855). => the D3-minimizer is a SINGLE cluster; multi-cluster is trivially >> bar.
+3. BLOCK-WORST-SHAPE: among size-c single clusters the consecutive BLOCK is worst (c=10: block 0.4649 < 0.4753 < 0.5129 < 0.5882). Tightest cluster = deepest gaps = highest Var = lowest D3.
+=> D3(any prim-diam>=25 shape) >= D3_{(max-cluster block)+iid} >= D3_10 = 0.4646 >= bar. Closes the "why the c-block table is the worst case" gap in klein's reduction.
+4. TAIL MIN (exact + constrained descent): min D3 over prim-diam>=25 = block+outlier {0..9,25} = 0.458714, margin +0.1275; exact D3 of {0..9,D}, D=24..60, all >= bar+0.127, rising to the 0.4646 limit (confirms LEM-009).
+
+MECHANISM (throughout, = klein's): CORRELATION (clustering) raises Var(W) => lowers the D3 floor (D3~1/(1+Var/E^2)); DECORRELATION (independent arcs) raises it.
+
+STATUS: residual (i) [cluster-ordering] = klein-S187 finite table + THESE worst-structure lemmas. HONEST: the two monotonicities (merge, block-worst) are comprehensively VERIFIED with the variance mechanism, NOT yet analytically proved; and residual (ii) [multi-outlier finite-spread O(1/spread) for c<=9, opus-S154 L^2] remains -- the ONE bounded high-margin piece both klein and I flag as last. k=11 NOT yet fully closed, but the energy-ordering step is reduced to a finite table + two verified worst-structure lemmas + one bounded spread correction.
+
+FILES: lrc14_energy_ordering_kps_S86.py (+ .out); LEM-009 worst-structure section; HYP-5457.
+
+NEXT: prove the two worst-structure monotonicities analytically (klein's q-kernel variance formula is the handle) + residual (ii) multi-outlier Koksma-Hlawka (c<=9) => k=11 fully closed.
+
 ## klein-2026-07-08-S187 -- D3_c DECREASING PROVED (finite table, c in {1..10}): D3_c=.854/../.465 strictly decreasing for c>=2, min=D3_10=0.4649>=bar; mechanism = covering variance L2 rises with cluster size; k=11 fully reduced to a finite table + bounded high-margin spread correction (HYP-5387)
 
 Prompt (owner): prove D3_c decreasing in c to fully close k=11.

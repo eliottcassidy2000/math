@@ -1,0 +1,66 @@
+================================================================================================
+ENERGY-ORDERING STEP for k=11  (kps-S86)   bar = 0.331212 = 83549/252252
+================================================================================================
+
+[RESULT 1] Global min D3 over all primitive 11-sets = the FULL 11-BLOCK {0..10} (EXACT):
+  D3({0..10}) = 54912120381817/135668932727076 = 0.404751   margin +0.073538  (prim-diam 10)
+  D3((0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25)) = 0.458714  margin +0.127502
+  D3((0, 2, 4, 6, 8, 9, 10, 12, 14, 16, 18)) = 0.435613  margin +0.104401
+  => the block (diam 10) is the global minimizer, INSIDE the exhaustive range; the
+     prim-diam>=25 tail (min 0.4587) is strictly ABOVE it. Tail is NOT the binding case.
+
+[RESULT 2] MERGE-DOMINATION: splitting a cluster RAISES D3 (single cluster = worst):
+  full 11-block (1 cluster)          D3_limit ~ 0.4043  margin +0.0731
+  10-block + 1 outlier               D3_limit ~ 0.4632  margin +0.1320
+  two 5-blocks + 1 outlier           D3_limit ~ 0.7681  margin +0.4369
+  6-block + 5 iid outliers           D3_limit ~ 0.7617  margin +0.4305
+  two 3-blocks + 5 iid               D3_limit ~ 0.8475  margin +0.5163
+  11 iid outliers (fully spread)     D3_limit ~ 0.8554  margin +0.5242
+  => merging points into ONE cluster MINIMIZES D3; any split raises it far above bar.
+     So the D3-minimizing decorrelation structure is a SINGLE cluster + iid outliers.
+
+[RESULT 3a] BLOCK-WORST-SHAPE: among size-c clusters, the consecutive block is worst:
+  c=10 (1 outlier):
+     block 0..9   D3 ~ 0.4649  margin +0.1337
+     0..8,+10     D3 ~ 0.4753  margin +0.1441
+     0..8,+12     D3 ~ 0.5129  margin +0.1817
+     gap@5        D3 ~ 0.5882  margin +0.2570
+  c=9 (2 outliers):
+     block 0..8   D3 ~ 0.5248  margin +0.1936
+     0..7,+9      D3 ~ 0.5606  margin +0.2294
+     gap@4        D3 ~ 0.6525  margin +0.3213
+  => the consecutive BLOCK (tightest, smallest internal gaps) is the min at each size.
+
+[RESULT 3b] c-MONOTONICITY: c-block + (11-c) outliers, D3_c DECREASING in c:
+  c= 1: D3_c ~ 0.8550  margin +0.5238
+  c= 2: D3_c ~ 0.8548  margin +0.5236
+  c= 3: D3_c ~ 0.8515  margin +0.5202
+  c= 4: D3_c ~ 0.8387  margin +0.5075
+  c= 5: D3_c ~ 0.8105  margin +0.4793
+  c= 6: D3_c ~ 0.7616  margin +0.4304
+  c= 7: D3_c ~ 0.6775  margin +0.3463
+  c= 8: D3_c ~ 0.6017  margin +0.2705
+  c= 9: D3_c ~ 0.5242  margin +0.1930
+  c=10: D3_c ~ 0.4642  margin +0.1330  <- diam>=25 worst (LEM-009)
+  c=11: D3_c ~ 0.4037  margin +0.0725  <- global min (diam 10, exhaustive)
+  => worst diam>=25 structure = 10-block+outlier, limit ~0.4646 > bar (+0.133).
+
+[RESULT 4] FINITE-SPREAD (residual ii), binding block+outlier {0..9,D}, EXACT D3:
+  D= 24: D3 = 0.464610  margin +0.133398  CLEARS
+  D= 25: D3 = 0.458714  margin +0.127502  CLEARS
+  D= 26: D3 = 0.468849  margin +0.137637  CLEARS
+  D= 28: D3 = 0.467475  margin +0.136262  CLEARS
+  D= 30: D3 = 0.467829  margin +0.136616  CLEARS
+  D= 35: D3 = 0.465101  margin +0.133888  CLEARS
+  D= 40: D3 = 0.464464  margin +0.133251  CLEARS
+  D= 50: D3 = 0.466270  margin +0.135058  CLEARS
+  D= 60: D3 = 0.464634  margin +0.133421  CLEARS
+  => rises toward the 0.4646 limit; min 0.4587 at D=25, ALL >= bar + 0.127.
+     (klein LEM-009: Koksma-Hlawka |D3-limit| <= 0.006 for D>=25 => rigorous for 1 outlier.)
+
+================================================================================================
+REDUCTION SUMMARY: energy-ordering step (residual i) = [merge-domination] + [block-worst]
+  + [c-monotone] => worst diam>=25 limit = 10-block+outlier = 0.4646 > bar.  Mechanism:
+  clustered(correlated) arcs raise Var(W), lower the D3 floor; decorrelated arcs raise it.
+  Residual (ii): binding 1-outlier case rigorous (LEM-009); general spread = opus L^2.
+================================================================================================
