@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-07-S76 -- THM-658: chi_c(G_GW) <= 27/2 = 13.5 < 14 (RESOLVES opus's rung question) + the general characterization chi_c=1/M <=> mu=M (the linearization defect = the Haralambis mu>M locus). (HYP-5307)
+
+Prompt (owner): a menu of graph-theory-side threads (Liu-Zhu Conj2, Haralambis, chi_c(G_GW), skeleton rewiring, Motzkin/distance-graph side); density floor (k=8-13) now fleet-handled. I took chi_c(G_GW), the decisive rung question.
+
+SETUP (opus THM-652): G_GW = Cay(Z, +-{1..11,13,24}); chi_f=13, chi=14=1/M, chi_c in (13,14] OPEN. KEY REDUCTION (kps): rotation/linear colorings cap at 1/M=14 (a witness t IS a rotation (p,q)-coloring, q/p=M), so chi_c<14 iff a NON-rotation coloring exists = opus-S141's linearization question AT GW.
+
+RESULT (THM-658, PROVED): chi_c(G_GW) <= 27/2 = 13.5 < 14. Witness = a quasi-periodic (27,2)-coloring C(x)=c(x mod 3)+(x div 3)*7 mod 27, c=[2,11,0], INDEPENDENTLY verified (0 violations over x in [-500,2000], min GW-edge circ-dist EXACTLY 2). Genuinely non-rotation (increments alternate {9,16}, two speeds). MECHANISM: the two-speed winding holds min gap 2/27=0.0741 > M=1/14=0.0714 -- beating the best single rotation, which no linear coloring can. So the four invariants SEPARATE at GW: chi_f=13 < chi_c<=13.5 < chi=14=1/M; only the INTEGER rung meets 1/M, the circular rung is BLIND (like chi_f). LINEARIZATION chi_c=1/M FAILS at GW (defect >=0.5).
+
+GENERALIZATION (extends THM-658): the universal sandwich 1/mu = chi_f <= chi_c <= 1/M (left=vertex-transitivity, right=the linear coloring c(x)=ax mod N). PROVED easy half: mu=M => chi_c=1/M (squeeze). CONJECTURE: mu>M => chi_c<1/M. So chi_c(G_S)=1/M(S) <=> mu(S)=M(S) -- the circular rung is FAITHFUL exactly on the non-separating locus, DETACHES exactly on the Haralambis mu>M SEPARATION locus. Verified 11/11 (0 counterexamples): 8 mu=M sets have chi_c=1/M; GW/Lucas{1,3,4,7}/{1,3,4,5} (mu>M) have chi_c<1/M. This LOCATES opus-S141's linearization defect precisely = the mu>M locus, and gives Haralambis's phenomenon a graph-coloring meaning.
+
+CONSEQUENCE for LRC: the graph-coloring reformulation cannot prove LRC(14) via linearization -- GRAPH-14 (chi_c<=14) is a strict weakening of LRC at every mu>M tight instance (does NOT refute LRC: GW satisfies it). Redirects the graph route from 'prove LRC' to 'understand the mu>M locus' = the same problem as the linearization defect.
+
+HANDOFFS: messaged opus (twice) -- the GW resolution + the general characterization, squarely their homomorphism-ladder territory; named the defect-half construction (turn a mu>M Haralambis witness into a sub-1/M variable-speed coloring; GW's two-speed winding is the template). Backlog leads updated (chi_c(G_GW) RESOLVED; new lead = the defect half). Also this session earlier: k=10 (A') characterization (proof-gap not real gap, 7-11x margin) which the fleet then CLOSED (mac-mini HYP-5267 degree-4 + klein THM-656 spread floor = the wide-mu route I pointed to).
+
+Files: lrc_chic_gw_quasiperiodic / lrc_chic_gw_sat / lrc_chic_linearization_locus _kps_S76 (+outs); THM-658 (GW witness + general characterization); reflection the-linearization-defect-is-the-mu-greater-than-M-locus-kps-S76; INDEX HYP-5307; backlog.
+
 ## mac-mini-2026-07-07-S57 (cont.) -- THM-657: THE COVERING REFORMULATION -- mu_{1/7}(E) = P(k arcs of length 1/7 FAIL TO COVER the circle); mu >= (7/6)E[W]; DIAMETER-FREE reduction of k=11,12,13 to ONE lemma ("the AP is the most-efficient coverer"), margins 1.9x/2.9x/7.8x (HYP-5297)
 
 Prompt (owner): push past k=10 towards k=13; think NO DIAMETER and VITALI; previous work extensively.
