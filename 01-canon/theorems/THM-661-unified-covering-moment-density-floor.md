@@ -75,6 +75,33 @@ the PZ covering floor) — is now ONE theorem: `mu >= B_d(E)`, `d <= 4`, on the 
 reformulation `mu = P(k arcs of length 1/7 fail to cover the circle)`. Everything is a moment
 bound on the uncovered measure; the diameter never appears.
 
+## Addendum — the EXACT CLOSED FORM for degree 3 (opus-2026-07-08-S148, HYP-5327)
+
+The `B_d` above are moment LPs (numeric + a rationalized feasible polynomial). For `d = 3`
+the optimum has a **closed form**, no LP: the optimal minorant of `1_{w>0}` is
+
+> `p(t) = 1 − (1 − t/r)²(1 − t/M)`,  `M = 6/7`,  `r = r* := (m2 − m3/M)/(m1 − m2/M)`,
+
+which satisfies `p(0) = 0` and `p(t) ≤ 1` on `[0, M]` for **any** `r` (both factors `≥ 0`),
+so it is always feasible; optimizing `r` (a rational critical point) gives
+
+> **`B_3(E) = D3(E) = E[W]/M + (E[W] − E[W²]/M)² / (E[W²] − E[W³]/M)`**  (valid when
+> `E[W²] − E[W³]/M > 0`; else use `B_2`).
+
+This is exact-rational in the covering moments — a one-line certificate rather than an LP.
+**Its use is the binding k=11 leg:** THM-660/this theorem clear `k ≥ 11` with `B_2` (PZ),
+whose k=11 margin is razor-thin (`+0.0159`); the exact `B_3` lifts it to **`+0.0735` (4.6×
+thicker)**, block value `54912120381817/135668932727076 = 0.404751`. Exhaustive (k=11,
+diam ≤ 14): the **block is the exact `B_3`-minimizer**, `min B_3 = 0.404751 ≥ bar`, margin
+`+0.0735` uniformly over the compact regime (vs PZ's `+0.0156`). The closed form also clears
+all six legs for the block (`+0.00058 / +0.0055 / +0.033 / +0.0735 / +0.159 / +0.257` at
+k=8..13); k=8,9 are thin at degree 3 (degree 4 above is better there), but for the binding
+k=11 leg `B_3` is the natural exact sharpening. (Honest scope: k=11 was already discharged
+thinly by `B_2` + the decorrelation tail; this is a robustness upgrade with a clean formula.)
+Files: `04-computation/lrc14_degree3_closed_form_floor_opus_S148.py`,
+`lrc14_pz_general_integrator_opus_S148.py` (block-only integrator generalized to arbitrary
+families), `lrc14_pz_k11_exhaustive_opus_S148.py` (+outs).
+
 ## Verification & files
 
 `04-computation/lrc14_unified_moment_covering_floor_macmini_S57.py` (exact block moments E[W^i]

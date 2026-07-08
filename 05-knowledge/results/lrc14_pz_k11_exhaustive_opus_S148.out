@@ -1,0 +1,20 @@
+============================================================================================
+k=11 EXHAUSTIVE per-diameter min PZ (bar = 83549/252252 = 0.331212)
+  primitive shapes E: 0 = min, D = max, gcd(differences)=1
+============================================================================================
+  diam  10:       1 primitive shapes, min PZ = 3400663/9797402 = 0.347098  margin +0.015886  CLEARS
+            minimizer [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  diam  11:      10 primitive shapes, min PZ = 724901776/1977864749 = 0.366507  margin +0.035295  CLEARS
+            minimizer [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+  diam  12:      55 primitive shapes, min PZ = 21576025/62216714 = 0.346788  margin +0.015576  CLEARS
+            minimizer [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+  diam  13:     220 primitive shapes, min PZ = 5436367544403/14274117900427 = 0.380855  margin +0.049642  CLEARS
+            minimizer [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 13]
+  diam  14:     715 primitive shapes, min PZ = 2876167/8047671 = 0.357391  margin +0.026179  CLEARS
+            minimizer [0, 2, 4, 5, 6, 7, 8, 9, 10, 12, 14]
+  diam  15:    2002 primitive shapes, min PZ = 21951058770003/56548585804396 = 0.388181  margin +0.056968  CLEARS
+            minimizer [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15]
+  diam  16:    5005 primitive shapes, min PZ = 19651489/53053812 = 0.370407  margin +0.039194  CLEARS
+            minimizer [0, 2, 4, 6, 7, 8, 9, 10, 12, 14, 16]
+  diam  17:   11440 primitive shapes, min PZ = 274310747109375/696523390388924 = 0.393828  margin +0.062616  CLEARS
+            minimizer [0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 17]

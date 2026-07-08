@@ -1,0 +1,21 @@
+================================================================================================
+DEGREE-3 COVERING FLOOR vs degree-2 PZ (block k=11,12,13); W in [0,6/7]
+================================================================================================
+  k=11 block:
+    E[W]=0.158050  E[W^2]=0.071967  E[W^3]=0.040335
+    degree-2 PZ  = 0.347098   margin +0.015886
+    degree-3 LP  = 0.404751   margin +0.073538   (improvement +0.057652)   bar 0.331212
+
+  k=12 block:
+    E[W]=0.141290  E[W^2]=0.064809  E[W^3]=0.036445
+    degree-2 PZ  = 0.308028   margin +0.108684
+    degree-3 LP  = 0.358375   margin +0.159030   (improvement +0.050346)   bar 0.199344
+
+  k=13 block:
+    E[W]=0.126616  E[W^2]=0.058930  E[W^3]=0.033243
+    degree-2 PZ  = 0.272045   margin +0.215558
+    degree-3 LP  = 0.313920   margin +0.257433   (improvement +0.041875)   bar 0.056487
+
+  If degree-3 thickens k=11's margin substantially, the binding leg is de-risked
+  (the exact degree-3 bound = a rational LP with the exact E[W^i]; the numeric LP
+   here is the indicative value -- an exact 3-point Markov-Krein rep pins it).
