@@ -1,0 +1,14 @@
+k=11 exhaustive covering floor, prim-diam 16..24; bar=0.33121; grid N=1200
+  prim-diam 16:    5005 primitive shapes; min D3=0.45335 (++0.12214) [OK]; min PZ=0.37036; D3-minimizer=(0, 2, 4, 6, 7, 8, 9, 10, 12, 14, 16)
+  prim-diam 17:   11440 primitive shapes; min D3=0.47632 (++0.14511) [OK]; min PZ=0.39382; D3-minimizer=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17)
+  prim-diam 18:   24310 primitive shapes; min D3=0.43563 (++0.10442) [OK]; min PZ=0.36868; D3-minimizer=(0, 2, 4, 6, 8, 9, 10, 12, 14, 16, 18)
+  prim-diam 19:   48620 primitive shapes; min D3=0.47536 (++0.14415) [OK]; min PZ=0.40414; D3-minimizer=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19)
+  prim-diam 20:   92377 primitive shapes; min D3=0.46054 (++0.12933) [OK]; min PZ=0.38412; D3-minimizer=(0, 4, 6, 8, 9, 10, 12, 14, 16, 18, 20)
+  prim-diam 21:  167960 primitive shapes; min D3=0.46040 (++0.12919) [OK]; min PZ=0.40040; D3-minimizer=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 21)
+  prim-diam 22:  293920 primitive shapes; min D3=0.47037 (++0.13916) [OK]; min PZ=0.40731; D3-minimizer=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 22)
+  prim-diam 23:  497420 primitive shapes; min D3=0.46344 (++0.13223) [OK]; min PZ=0.40344; D3-minimizer=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 23)
+  prim-diam 24:  817135 primitive shapes; min D3=0.46452 (++0.13331) [OK]; min PZ=0.40323; D3-minimizer=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 24)
+
+GLOBAL min D3 over prim-diam 16..24 = 0.43563 at (0, 2, 4, 6, 8, 9, 10, 12, 14, 16, 18) (bar 0.33121, margin +0.10442)
+GLOBAL min PZ = 0.36868 at (0, 2, 4, 6, 8, 9, 10, 12, 14, 16, 18)
+VERDICT: ALL prim-diam<=24 CLEAR -- k=11 leg reduces to prim-diam>=25 spread tail (discrepancy)
