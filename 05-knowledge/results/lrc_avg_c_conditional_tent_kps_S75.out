@@ -1,0 +1,43 @@
+==========================================================================================
+(1) SYMMETRY CHECK: I(-d,P) = I(d,P) (x->1-x invariance of G_P)
+==========================================================================================
+   I(-d,P) == I(d,P) for d=1..39, P=(10, 11, 12, 13): True
+   => the ordered-pair sum = 2 * sum over unordered pairs of the forward integral;
+      the conditional-tent bound consumes the AVERAGE forward c, symmetrization free.
+
+==========================================================================================
+(2) mac-mini-S56 c-table reproduction (forward c, sup over d<=250)
+==========================================================================================
+   k=9 P=(10, 11, 12, 13): meas(G_P)=0.5251, sup_d c = 1.7621 at d=2; c(1)=1.5398 c(2)=1.7621 c(3)=1.3690
+   k=9 P=(1, 11, 12, 13): meas(G_P)=0.4943, sup_d c = 1.8600 at d=1; c(1)=1.8600 c(2)=0.8606 c(3)=1.0431
+   k=10 P=(11, 12, 13): meas(G_P)=0.6241, sup_d c = 1.3723 at d=2; c(1)=1.2933 c(2)=1.3723 c(3)=1.2499
+   k=10 P=(1, 12, 13): meas(G_P)=0.6044, sup_d c = 1.4219 at d=1; c(1)=1.4219 c(2)=0.7294 c(3)=0.9367
+
+==========================================================================================
+(3) MAXIMIZE average-c over primitive clusters beyond klein's composition reach
+==========================================================================================
+
+   k=9 P=(10, 11, 12, 13) diam in [17,45], meas(G_P)=0.5251
+     c*(P) = 1.7570  (need avg c <= c* for rho* >= m_P)
+     max avg-c found = 1.3579  at E=[0, 6, 8, 9, 10, 12, 14, 16, 25] (diam 25)
+     => rho*_bound = 0.16294  vs m_P = 0.05649  => DISCHARGED
+
+   k=9 P=(1, 11, 12, 13) diam in [17,45], meas(G_P)=0.4943
+     c*(P) = 1.7437  (need avg c <= c* for rho* >= m_P)
+     max avg-c found = 1.2247  at E=[0, 10, 11, 12, 19, 20, 21, 30, 31] (diam 31)
+     => rho*_bound = 0.18681  vs m_P = 0.05649  => DISCHARGED
+
+   k=9 P=(1, 2, 12, 13) diam in [17,45], meas(G_P)=0.5504
+     c*(P) = 1.7667  (need avg c <= c* for rho* >= m_P)
+     max avg-c found = 1.1771  at E=[0, 9, 10, 11, 18, 19, 20, 28, 29] (diam 29)
+     => rho*_bound = 0.22130  vs m_P = 0.05649  => DISCHARGED
+
+   k=10 P=(11, 12, 13) diam in [11,45], meas(G_P)=0.6241
+     c*(P) = 1.1790  (need avg c <= c* for rho* >= m_P)
+     max avg-c found = 1.1670  at E=[0, 3, 5, 7, 9, 11, 13, 15, 16, 28] (diam 28)
+     => rho*_bound = 0.06227  vs m_P = 0.05649  => DISCHARGED
+
+   k=10 P=(1, 12, 13) diam in [11,45], meas(G_P)=0.6044
+     c*(P) = 1.1751  (need avg c <= c* for rho* >= m_P)
+     max avg-c found = 1.1266  at E=[0, 1, 7, 8, 9, 15, 16, 20, 21, 29] (diam 29)
+     => rho*_bound = 0.07914  vs m_P = 0.05649  => DISCHARGED
