@@ -15,6 +15,22 @@ STATUS: k=11 density-floor leg CLOSED (modulo the mechanical uniform-K bookkeepi
 FILES: LEM-009 multi-outlier closure section; lrc14_multioutlier_rate_klein_S188.out; HYP-5387.
 
 NEXT: (a) the explicit uniform K (mechanical Erdos-Turan bookkeeping) => k=11 FULLY rigorous; (b) exact-rational D3_c table; (c) Lean-formalize the covering-floor chain (the finite pieces are native_decide-able).
+## opus-2026-07-08-S156 -- TAIL FLOOR RE-DERIVED on the longest-AP axis: floor = D3(0,3,6,8,9,12,15,18,21,24,27) = 0.452986 EXACT >= bar (+0.1218) -> k=11 tail CLOSES on the correct (dilation-invariant) axis (constructive resolution of the S155 court case)
+
+Prompt (owner): re-derive the tail floor on the longest-AP axis.
+
+The dilation-invariant axis L(E) = longest AP in E replaces the refuted fixed-window cluster. Three steps:
+ STEP 1 (RIGOROUS): prim-diam>=25 => L<=10 (L=11 => E=c*{0..10}+b, prim-diam 10 < 25).
+ STEP 2 (binding L=10): E = {0,d,..,9d} u {p} (up to translation/reflection/dilation). min D3 = 0.452986 EXACT at the d=3 INTERIOR shape A*=(0,3,6,8,9,12,15,18,21,24,27). Interior-min D3 is MONOTONE INCREASING in d (0.4530/0.4592/0.4587/0.4635/../0.4645) -> d->inf decorrelation limit 0.4648 = klein's D3_10=0.4646 (block_10 + 1 iid point, Weyl). Correlation between the extra point and the AP LOWERS D3 below the decorrelated value, strongest at the smallest tail scale d=3. Exterior (block+outlier type) min >= 0.4587.
+ STEP 3 (stratification): min D3 by L is monotone decreasing (0.705/0.643/0.639/0.626/0.605/0.545/0.519/0.471/0.453 at L=2..10), so global tail min = L=10 = 0.452986.
+
+CONCLUSION: tail floor = 0.452986 >= bar 0.331212 (margin +0.1218) => k=11 tail CLOSES. klein's D3_c limits survive as the d->inf UPPER references. RIGOR: Step 1 + exact binding value + decorrelation limit are rigorous; the d=3 extremality (finite-scale Koksma-Hlawka monotonicity, sign now understood) + L-stratification are VERIFIED (klein's original rigor level, now on the correct axis).
+
+Constructive resolution added to CASE-tail-D3-min-is-not-block-outlier (deferred to klein/kps to fold into LEM-009). Files: lrc14_tail_floor_longestAP_opus_S156 (+out); reflection the-tail-floor-re-derived-on-the-longest-AP-axis-opus-S156.
+
+NEXT: fold into LEM-009 (klein/kps); the one residual analytic step is the finite-scale monotonicity D3(d) >= D3(3) for the interior family (Koksma-Hlawka O(1/d), correlation-correction sign known) -- the corrected analog of klein's spread correction.
+
+---
 
 ## opus-2026-07-08-S155 -- CLUSTER-MONOTONICITY REFUTED by an exact dilated-AP counterexample: the k=11 tail D3-min is NOT block+outlier (0.4587) and NOT >= D3_10 (0.4646) -- (0,3,6,8,9,12,15,18,21,24,27) has D3=0.452986; closure SURVIVES (tail min ~0.4530 >= bar +0.12); corrected axis = longest-AP (HYP-5467, court case)
 

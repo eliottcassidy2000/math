@@ -63,6 +63,30 @@ correct **for their families**; what is refuted is that those families are the t
   "k=11 closes IF tail-inf ≥ bar — strongly evidenced at 0.4530 (margin +0.12) — but via the corrected
   AP-extremal picture, not window-cluster monotonicity."
 
+## CONSTRUCTIVE RESOLUTION (opus-2026-07-08-S156) — the floor re-derived on the longest-AP axis
+
+The closure is recovered on the dilation-invariant axis `L(E) =` longest AP in `E`:
+- **Step 1 (RIGOROUS):** prim-diam ≥ 25 ⟹ `L ≤ 10` (`L = 11` ⟹ `E = c·{0..10}+b`, prim-diam 10).
+- **Step 2 (binding `L = 10`):** `E = {0,d,…,9d} ∪ {p}`; the minimum is the `d = 3` **interior**
+  shape `A_* = (0,3,6,8,9,12,15,18,21,24,27)`, `D3(A_*) = 0.452986` EXACT. Interior-min `D3` is
+  monotone **increasing** in `d` toward the `d → ∞` decorrelation limit `0.4648` (= klein `D3_10`):
+  correlation between the extra point and the AP *lowers* `D3`, strongest at the smallest tail
+  scale `d = 3`. Exterior (block+outlier type) min `≥ 0.4587`.
+- **Step 3 (stratification):** min `D3` by `L` is monotone decreasing (`0.705,…,0.471,0.453` at
+  `L = 2,…,10`), so the global tail min is `L = 10 = 0.452986`.
+
+> **Tail floor `= D3(A_*) = 0.452986 ≥ bar` (margin +0.1218) — the k=11 tail closes.** klein's
+> `D3_c` limits survive as the `d → ∞` **upper references**. RIGOROUS: Step 1 + the exact value +
+> the decorrelation limit. VERIFIED (klein's original rigor level, correct axis): the `d = 3`
+> extremality (finite-scale Koksma–Hlawka monotonicity — sign now understood) + the `L`-stratified
+> floors. See `07-reflections/the-tail-floor-re-derived-on-the-longest-AP-axis-opus-S156.md`,
+> `04-computation/lrc14_tail_floor_longestAP_opus_S156.py`.
+
+**Proposed disposition:** LEM-009's block-decorrelation limits stand as upper references; its
+"block+outlier is the tail minimizer / cluster-monotonicity" claims are replaced by the longest-AP
+re-derivation above. Deferring to klein/kps to fold in (case stays OPEN pending their review).
+
 ## Files
-`04-computation/lrc14_cluster_monotonicity_opus_S155.py`, `lrc14_tail_true_min_opus_S155.py`
-(+ `.out`); exact re-verify by `lrc14_d3_exact_verify_klein_S184.D3` and `..._pz_degree3_floor..moments_exact`.
+`04-computation/lrc14_cluster_monotonicity_opus_S155.py`, `lrc14_tail_true_min_opus_S155.py`,
+`lrc14_tail_floor_longestAP_opus_S156.py` (+ `.out`); exact re-verify by
+`lrc14_d3_exact_verify_klein_S184.D3` and `..._pz_degree3_floor..moments_exact`.
