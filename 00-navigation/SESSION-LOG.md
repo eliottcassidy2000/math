@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-08-S80 -- FORMALIZED BRICK (A) of the k=11 covering-tail closure (canon THM-662: the additive-energy/diameter extremal bound); brick (B) reduced to the loose moment-energy mile. HONEST: k=11 NOT fully closed (brick B = the shared analytic mile, open). (HYP-5357)
+
+Prompt (owner): formalize bricks (A) and (B) to fully close k=11.
+
+WHAT I DID: formalized brick (A) rigorously (THM-662) and reduced brick (B) to a single loose analytic target. Could NOT fully prove brick (B) -- it is the moment-energy mile (Var(W)<=c*R2 resonance sign) shared with THM-656/klein-S179, genuinely open. So k=11 is DE-RISKED to one easier brick, not fully closed (honest, avoiding a MISTAKE-125-style overclaim).
+
+BRICK (A) -- PROVED (THM-662): for a PRIMITIVE 11-set with primitive diameter D>=16, the reduced additive energy R2 = sum_{d!=0} r_d^2 <= 614 (attained by block-plus-far {0..9}u{16}), and <= 590 for D>=19. PROOF: (i) exact-integer EXHAUSTIVE max R2 by primitive diameter D in [16,24] (5005..817135 configs; maxima 614/602/610/590.. ; max=614 at D=16); (ii) the FAR-POINT REMOVAL LEMMA R2(A)=R2(A\max)+20+4T, T=#overlaps (=0 for D>=19 since the far point's differences D..D-9 are all >9 = no overlap with the block => R2=R2(AP_10)+20=590); (iii) primitive large-D verification to D=120.
+
+KEY FRAMING (dilation-invariance): R2 AND the covering floor D3 (opus THM-661) are DILATION-INVARIANT, so the problem is entirely about PRIMITIVE representatives. The 2-adic {0,2,..,18,30} (R2=630) is NON-primitive (gcd 2), reduces to {0,1,..,9,15} = prim-diam 15 (the compact zone), NOT a diam-30 tail config. So there is NO high-R2 large-diameter config; prim-diam>=16 caps R2 at 614 < 770 (the block/compact max). This is why the tail decouples (resolving my S78 coupling obstruction).
+
+k=11 REDUCTION (the two-brick structure, now explicit): [compact exhaustive prim-diam<=17: opus/klein] + [brick A: prim-diam>=16 => R2<=614, PROVED THM-662] + [brick B: R2<=614 => D3>=bar, RESIDUAL]. Brick B verified (min D3=0.458 at R2<=614, +0.127, DECOUPLED thanks to opus D3) but is the analytic mile -- NOT proved. It is now LOOSE: klein-S179's Var(W)~5.67e-5*R2 gives, at R2<=614, PZ>=0.386>=bar (D3 even more). So if klein proves Var(W)<=5.67e-5*R2 (the resonance sign, their NEXT-a) for R2<=614, k=11 CLOSES.
+
+Messaged klein (their resonance lemma is now the single remaining brick, and loose). @opus/@mac-mini FYI (THM-662 depends on THM-661 D3). FILES: THM-662; lrc_brickA_energy_diameter_kps_S80.py (+out); HYP-5357. Builds on kps-S78/S79 (the D3-tail resolution), opus-S148 (D3), klein-S179 (Var~R2).
+
 ## kind-pasteur-2026-07-08-S79 -- POSITIVE RESOLUTION of my S78 k=11 PZ-tail obstruction: opus-S148's degree-3 floor D3 DISSOLVES the coupling; the diam>=16 tail closes DECOUPLED (min D3=0.517, +0.186), k=11 leg = two crude/provable bricks. (HYP-5357)
 
 Prompt (owner): work the k=11 tail and any remaining tasks.
