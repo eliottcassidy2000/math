@@ -1,0 +1,20 @@
+================================================================================================
+k=11 TAIL: sharp near/far PZ lower bound = E[W]^2/(near + E[W]^2), far<=E[W]^2 (spread)
+  bar = 83549/252252 = 0.331212;  crude near=(2/7)E[W] gave PZ~0.31 (mac-mini, just under)
+================================================================================================
+  IID limit: E[W]=0.18348 near=0.02327 far=0.01764 (far<=E[W]^2=0.03366: True)
+    PZ_tail(far<=E[W]^2) = 0.59127   PZ_tail(exact iid far) = 0.82289   CLEARS bar 0.3312
+
+  min PZ_tail over spread k=11 families (exhaustive small diam, sampled large):
+    diam  12:     55 shapes, min PZ_tail = 0.47182  (E[W]=0.1505 near=0.0253)  CLEARS  argmin [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+    diam  14:    715 shapes, min PZ_tail = 0.47818  (E[W]=0.1454 near=0.0231)  CLEARS  argmin [0, 2, 4, 5, 6, 7, 8, 9, 10, 12, 14]
+    diam  16:   5005 shapes, min PZ_tail = 0.48394  (E[W]=0.1436 near=0.0220)  CLEARS  argmin [0, 2, 4, 6, 7, 8, 9, 10, 12, 14, 16]
+    diam  18:    300 shapes, min PZ_tail = 0.49150  (E[W]=0.1573 near=0.0256)  CLEARS  argmin [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+    diam  20:    300 shapes, min PZ_tail = 0.52251  (E[W]=0.1579 near=0.0228)  CLEARS  argmin [0, 2, 9, 10, 11, 12, 13, 14, 15, 16, 20]
+    diam  25:    300 shapes, min PZ_tail = 0.52393  (E[W]=0.1589 near=0.0230)  CLEARS  argmin [0, 3, 4, 6, 9, 12, 15, 16, 18, 21, 25]
+    diam  30:    299 shapes, min PZ_tail = 0.53415  (E[W]=0.1607 near=0.0225)  CLEARS  argmin [0, 1, 2, 3, 6, 8, 12, 15, 18, 21, 30]
+
+  NOTE: PZ_tail assumes far <= E[W]^2 (mac-mini's one decorrelation lemma, holds for
+  spread families).  If min PZ_tail >= bar for all diam >= D*, then [exhaustive
+  compact diam <= D*] + [this tail] CLOSES k=11.  The sharp near (vs crude (2/7)E[W])
+  is the +0.02 mac-mini flagged as needed.
