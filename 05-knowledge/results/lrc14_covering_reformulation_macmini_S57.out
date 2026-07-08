@@ -1,0 +1,19 @@
+=== (1) identity check: W = sum(g-1/7)_+ , 0 <= W <= 6/7 , mu >= (7/6)E[W] ===
+  block13      : E[W]=0.1266  Wmax=0.8571(<=6/7=0.8571)  (7/6)E[W]=0.1477 <= trueMu=0.4425  OK
+  2blk-far     : E[W]=0.1403  Wmax=0.8571(<=6/7=0.8571)  (7/6)E[W]=0.1637 <= trueMu=0.7502  OK
+  wide-rand    : E[W]=0.1349  Wmax=0.8571(<=6/7=0.8571)  (7/6)E[W]=0.1573 <= trueMu=0.9819  OK
+  perturbed-AP : E[W]=0.1458  Wmax=0.8571(<=6/7=0.8571)  (7/6)E[W]=0.1701 <= trueMu=0.7322  OK
+
+=== (2) diameter-free reduction: mu(block) vs bar vs Stevens iid, k=11,12,13 ===
+   k   mu_iid  mu(block)     bar  block/bar
+  11   0.9984     0.6263  0.3312       1.9x
+  12   0.9951     0.5699  0.1993       2.9x
+  13   0.9883     0.4425  0.0565       7.8x
+
+=== (3) consecutive-minimizes re-verification at k=13 (120 random primitives) ===
+  mu(block_13) = 0.4425; min over 120 random = 0.9624; #below block = 0
+  => consecutive-minimizes HOLDS (block is min); block/bar = 7.8x
+
+=== (4) naive Bonferroni-3 on E[W] FAILS (heavy overlap, k/7=1.86) ===
+  1-k/7=-0.8571, +Spairs=1.5994, -Striples=1.4104
+  Bonf3 (lower) = -0.6682  << true E[W] = 0.1266  => naive inclusion-exclusion useless; the extremal lemma is genuinely needed
