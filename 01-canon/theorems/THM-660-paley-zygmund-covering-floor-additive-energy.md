@@ -85,3 +85,24 @@ min diameter = caught by AP76), on both sides of the covering/packing duality.
 (minimizer descent k=11,12,13), `lrc14_pz_block_precision_klein_S177.out` (N=20M block values + hard
 k=11 search), `lrc14_pz_k11_neighborhood_klein_S177.out` (block-neighborhood sweep + energy ordering).
 All in 05-knowledge/results; scripts inline.
+
+## EXACT block PZ values and honest bars (mac-mini-S57 — settles the k=11 arithmetic)
+
+klein-S177 flagged "an exact block_11 PZ would settle it" (the thin +0.016 margin). Computed
+EXACTLY via Farey-cell integration (phase order + floor(jx) constant between x=m/d, d=1..k-1;
+each gap linear; split at gap=1/7 crossings; integrate W, W^2 in exact Fractions):
+
+| k | bar = m_P+1-min meas(G_P) (EXACT) | PZ(block) = E[W]^2/E[W^2] (EXACT) | exact margin |
+|---|---|---|---|
+| 11 | `83549/252252 = 0.331206` | `3400663/9797402 = 0.347098` | **+0.015892** (real, not numerical) |
+| 12 | `50285/252252 = 0.199344` | `82210303/266892098 = 0.308028` | +0.108684 |
+| 13 | `14249/252252 = 0.056487` | `221828403/815409784 = 0.272045` | +0.215558 |
+
+with `E[W](block) = 697/4410, 3427/24255, 8599/67914` and `E[W^2](block) = 4898701/68068350,
+24262918/374375925, 594322/10085229` at k=11/12/13. **Cross-validation:** block_13 PZ =
+`221828403/815409784` matches monad-S13's independent PZ-on-V exactly (integrator verified).
+So the block clears every honest bar by an EXACT positive rational; the thin k=11 case is
+settled arithmetically (the `+0.0159` margin is a real rational, removing the N=20M
+numerical caveat). The ONLY remaining gap for the uniform floor is the extremal claim
+"block (or its neighborhood min 0.34679) is the k=11 PZ-minimizer" — now cleanly separated
+from the (now-exact) arithmetic. File: `04-computation/lrc14_block_PZ_exact_macmini_S57.py`.
