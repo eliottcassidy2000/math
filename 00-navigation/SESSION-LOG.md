@@ -1,3 +1,17 @@
+## mac-mini-2026-07-08-S57 (cont.3) -- THM-661: THE UNIFIED COVERING-MOMENT DENSITY FLOOR -- one framework (degree-<=4 moment bound on the uncovered measure W) discharges ALL SIX (A') legs k=8..13 diameter-free (HYP-5347)
+
+Prompt (owner): keep pushing, work next proof targets.
+
+Building on my THM-657 (covering reformulation) + klein-S177/178 THM-660 (PZ = degree-2 moment on W clears k>=11): the KEY unification. The degree-d one-sided moment bound B_d = max{sum c_i E[W^i] : sum c_i w^i <= 1_{w>0} on [0,6/7]} is a RIGOROUS diameter-free lower bound on mu=P(W>0) (feasible poly p<=1_{w>0} => E[p(W)]<=P(W>0)). B_2 = Paley-Zygmund. **B_4 CLEARS k=8,9,10** (block EXACT 0.7611/0.6446/0.5531 >= bars 0.6750/0.5622/0.4521 -- where B_2 FAILS 0.574/0.481/0.411), and B_2 clears k=11,12,13. So ONE covering framework, degree <=4, discharges ALL SIX density-floor legs for the block, diameter-free -- SUBSUMING both the tent (THM-651/655/656, k<=10) and the PZ floor (THM-660, k>=11) as low-degree moment bounds from the SAME gap/covering structure.
+
+ALSO delivered this stretch (all building on THM-657/660): EXACT block PZ (settled the thin k=11 arithmetic: bar 83549/252252 < 3400663/9797402, +0.01589; block_13 = monad PZ-on-V exactly, integrator cross-validated); k=12,13 EXACT compact minimizers (0.29919, 0.26540, perforated blocks, clear +0.10/+0.21); the uniform floor has k=10's COMPACT-minimizer structure (PZ rises with diam via decorrelation => min_E PZ = compact min); tail SAFE (worst wide = mindiff-1 clears +0.055 at thin k=11). Exact moments via a general Farey-cell integrator (any family).
+
+STATE OF THE DENSITY FLOOR (A'): now ONE theorem. k=8..13 all discharged for the block by B_{<=4}(covering), diameter-free. Uniform statement = [finite compact exact check (mostly done: k=11 klein diam<=15; k=12,13 mine) + decorrelation tail (worst case +0.055, the one remaining analytic lemma)]. The mu-extremal lemma "AP minimizes mu" is BYPASSED throughout by the moment route.
+
+FILES: THM-661 (canon); THM-660 (klein's, + my exact/compact/tail sections); lrc14_unified_moment_covering_floor / lrc14_block_PZ_exact / lrc14_PZ_compact_and_tail _macmini_S57 (+outs). HYP-5347 CONFIRMED.
+
+NEXT: (a) the decorrelation TAIL lemma (diam>=D => B_d >= bar; the one analytic piece, comfortable +0.055 target) closes the uniform floor for ALL six legs at once; (b) the compact exact check to the needed diameter per leg; (c) Part A (the other half, kps) + the skeleton assembly (opus).
+
 ## klein-2026-07-08-S179 -- THM-660 progress: ALL THREE compact regimes EXACT-verified (k=12 min 0.299194, k=13 min 0.265395, joining k=11 0.346788) + Var(W) ~ 5.67e-5*R2 (fit R^2=0.974) => the covering variance is additive energy too, rigorizing the compact-minimizer structure and reducing the decorrelation tail to an energy bound (HYP-5317)
 
 Prompt (owner): keep working, make progress on next proof targets.
