@@ -1,0 +1,8 @@
+block13 (true E[W]=0.1266, bar 0.05649):
+   degree 4: LB = 0.0223 (short +0.0342)
+   degree 5: LB = 0.0673 >= bar!
+   degree 6: LB = 0.1138 >= bar!
+minEW13 (true E[W]=0.1337, bar 0.05649):
+   degree 4: LB = 0.0626 >= bar!
+   degree 5: LB = 0.0897 >= bar!
+   degree 6: LB = 0.1226 >= bar!

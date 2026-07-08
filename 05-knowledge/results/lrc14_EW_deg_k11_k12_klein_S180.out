@@ -1,0 +1,10 @@
+k=12 block (strong-route target E[W]>=0.0711; (7/6)-route target E[W]>=0.1709 -- infeasible if >maxE[W]):
+   degree 4: LB = 0.0541 
+   degree 5: LB = 0.1013 (clears STRONG route!)
+   degree 6: LB = 0.1328 (clears STRONG route!)
+   degree 7: LB = 0.1387 (clears STRONG route!)
+k=11 block (strong-route target E[W]>=0.1415; (7/6)-route target E[W]>=0.2839 -- infeasible if >maxE[W]):
+   degree 4: LB = 0.0852 
+   degree 5: LB = 0.1312 
+   degree 6: LB = 0.1531 (clears STRONG route!)
+   degree 7: LB = 0.1567 (clears STRONG route!)

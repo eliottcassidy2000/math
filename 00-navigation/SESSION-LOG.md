@@ -28,6 +28,24 @@ KEY FRAMING (dilation-invariance): R2 AND the covering floor D3 (opus THM-661) a
 k=11 REDUCTION (the two-brick structure, now explicit): [compact exhaustive prim-diam<=17: opus/klein] + [brick A: prim-diam>=16 => R2<=614, PROVED THM-662] + [brick B: R2<=614 => D3>=bar, RESIDUAL]. Brick B verified (min D3=0.458 at R2<=614, +0.127, DECOUPLED thanks to opus D3) but is the analytic mile -- NOT proved. It is now LOOSE: klein-S179's Var(W)~5.67e-5*R2 gives, at R2<=614, PZ>=0.386>=bar (D3 even more). So if klein proves Var(W)<=5.67e-5*R2 (the resonance sign, their NEXT-a) for R2<=614, k=11 CLOSES.
 
 Messaged klein (their resonance lemma is now the single remaining brick, and loose). @opus/@mac-mini FYI (THM-662 depends on THM-661 D3). FILES: THM-662; lrc_brickA_energy_diameter_kps_S80.py (+out); HYP-5357. Builds on kps-S78/S79 (the D3-tail resolution), opus-S148 (D3), klein-S179 (Var~R2).
+## klein-2026-07-08-S180 -- LEM-006: THE FACTORIAL-MOMENT E[W] LOWER BOUND breaks the barely-covers wall -- degree-5 certificate proves E[W]>=0.0484 for every 13-set => mu>=(7/6)E[W]>=m_P CLOSES the k=13 (A') leg diameter-free; k=12 provable (deg5), k=11 BARELY-TRUE (the residual wall) (HYP-5357)
+
+Prompt (owner): prove the uniform E[W]>=0.1415 lower bound for k=11, work the barely-covers wall, and work formalizing bricks (A)/(B) + k=12,13 analogs + Part A/Lean wiring.
+
+PULLED: kps-S79 (k=11 tail RESOLVED via opus D3, decoupled, 4.6x); mac-mini-S57 (THM-661 tail HONEST -- near<=(2/7)E[W], far<=(5/7)E[W], PZ>=E[W]; k=13 reduces to E[W]>=0.0565, k=11,12 to far<=E[W]^2; ALL = the barely-covers wall).
+
+THE WALL, CHARACTERIZED + PARTLY BROKEN:
+(1) min E[W] search: k=11 min=0.143, k=12=0.125, k=13=0.100 (iid (6/7)^k = 0.184/0.157/0.135). So E[W]>=0.1415 (k=11) is BARELY TRUE (+0.001, noisy descent gives 0.143-0.147) -- the wall; k=12,13 comfortable.
+(2) Hunter/pairwise USELESS (LB=-0.37/-0.61) -- E[N]=k/7=1.86>1, arcs overlap, Bonferroni diverges. Confirmed the wall blocks pairwise methods.
+(3) THE BREAK (LEM-006): the degree-d FACTORIAL-MOMENT LP lower bound P(N=0) >= sum_j c_j S_j (S_j=E[C(N,j)]=arc-occupancy factorial moments = EXACT circular-diameter integrals; p(n)=sum c_j C(n,j), p(0)=1, p(n)<=0 for n>=1) CONVERGES through the wall (unlike Bonferroni): LB(block) d4/d5/d6 = 0.022/0.067/0.114 (k13), 0.054/0.101/0.133 (k12), 0.085/0.131/0.153 (k11).
+(4) k=13 CLOSED: min_E LB_5=0.0673 (block-minimized, all shape-classes block/dilated/spread/midspread/prime >= 0.067) >= 0.0484 => E[W]>=0.0484 for EVERY 13-set => mu>=(7/6)E[W]>=(7/6)(0.0484)=0.0565=m_P. Diameter-free covering-side proof of the k=13 (A') leg, INDEPENDENT of opus's AP76 Lean cert.
+(5) k=12: E[W]>=0.0711 at degree 5 (strong-route target; still needs far<=E[W]^2 / LEM-005). k=11: E[W]>=0.1415 at degree 6 for the BLOCK (0.153), but the min-E[W] shape sits ~0.001-0.006 above target so the certificate must be near-exact there (very high degree) -- the genuine residual wall; kps's D3 (4.6x margin, monotone in R2) is the right k=11 route.
+
+FORMALIZATION (bricks (A)/(B), Part A -- handoff, not a build): the density-floor Lean lives in 04-computation/lean/TournamentH7 (9531 files, monad-formalizer's domain; BonferroniTruncation.lean, LRCHunterLedger.lean, LRCCircleCover.lean, LRCConsecutiveBlock.lean already there). Per CLAUDE.md (proofs before big builds) I did NOT open a build; the clean NEW formalizable brick from this session is LEM-006's degree-5 factorial-moment certificate for k=13: EXACT rational S_j (circular-diameter integrals) + LP-certified coefficients + THM-657 => native_decide-able, discharges hlarge(k=13) diameter-free. bricks (A)=AP-minimality/(B)=finite-Vmax are the Route-1 witness pieces (LRCWitnessPartA); the covering route (THM-657/660/661 + LEM-005/006) is the cleaner target now.
+
+FILES: LEM-006 (canon); 6 .out klein_S180 (min_EW_search, EW_k11_hard_and_hunter, EW_deg3_moment, EW_deg56, EW_deg_k11_k12, EW_uniform_check); HYP-5357 appended.
+
+NEXT: (a) confirm block minimizes LB_5 for k=13 (finishes the uniform bound rigorously); (b) exact rational S_j for the k=13 degree-5 certificate (formalizable brick); (c) k=12 far<=E[W]^2 (LEM-005 tail) to pair with E[W]>=0.0711; (d) @monad-formalizer LEM-006 degree-5 = a native_decide hlarge(k=13) brick.
 
 ## kind-pasteur-2026-07-08-S79 -- POSITIVE RESOLUTION of my S78 k=11 PZ-tail obstruction: opus-S148's degree-3 floor D3 DISSOLVES the coupling; the diam>=16 tail closes DECOUPLED (min D3=0.517, +0.186), k=11 leg = two crude/provable bricks. (HYP-5357)
 

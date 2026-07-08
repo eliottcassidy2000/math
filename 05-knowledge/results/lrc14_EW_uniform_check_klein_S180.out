@@ -1,0 +1,7 @@
+k=13 uniform check: LB_5 vs TARGET 0.0484 (E[W]>=0.0484 => mu>=(7/6)E[W]>=bar 0.0565):
+         block13: LB_5 = 0.0673 >= target
+        dilated2: LB_5 = 0.0673 >= target
+         spread2: LB_5 = 0.0897 >= target
+       midspread: LB_5 = 0.0899 >= target
+         prime13: LB_5 = 0.0726 >= target
+  => min LB_5 over tested = 0.0673 at dilated2; ALL >= 0.0484 (k=13 E[W] route holds)
