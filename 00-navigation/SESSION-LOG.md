@@ -1,3 +1,21 @@
+## opus-2026-07-08-S155 -- CLUSTER-MONOTONICITY REFUTED by an exact dilated-AP counterexample: the k=11 tail D3-min is NOT block+outlier (0.4587) and NOT >= D3_10 (0.4646) -- (0,3,6,8,9,12,15,18,21,24,27) has D3=0.452986; closure SURVIVES (tail min ~0.4530 >= bar +0.12); corrected axis = longest-AP (HYP-5467, court case)
+
+Prompt (owner): work the cluster-monotonicity step.
+
+FINDING (exact, by klein's OWN D3 code + independent moments): A = (0,3,6,8,9,12,15,18,21,24,27) = AP 3*{0..9} + interior 8, primitive, prim-diam 27, has D3(A)=0.452986 < D3_10=0.4646 (klein-S187/kps-S86 claimed global tail bound) and < 0.4587 (claimed block+outlier min). So LEM-009 / klein-S186/S187 / kps-S86 cluster-monotonicity ("D3(E)>=D3_{c(E)}, min=D3_10") is FALSE.
+
+ROOT: D3 is DILATION-INVARIANT (W_{cE}(x)=W_E(cx)), the fixed-window "cluster size" is NOT. A has window-cluster 5 but longest-AP 10 -- it is the tail analog of the EXHAUSTIVE min 2*{0..9}u{9}=(0,2,4,6,8,9,10,12,14,16,18) (0.4356). A has R2=590 = SAME as {0..9,25} but different D3 => clean exact witness D3 != f(R2).
+
+CORRECTED: dilation-invariant axis = LONGEST AP; min D3 monotone in longest-AP (0.76/../0.467/0.453 at 2..10); extremal family = "AP_10 + 1 point" any scale; true tail min ~0.4530 (thorough search, 56840 shapes).
+
+CLOSURE SURVIVES: 0.4530 >= bar 0.3312 (margin +0.12); klein's block-decorrelation LIMITS correct for their families; THM-662 R2 bound stands (uniqueness over-extends). k=11 status regresses from "closes modulo cluster-monotonicity" to "closes IF tail-inf>=bar (evidenced) via the AP-extremal picture, not window-cluster." 
+
+Filed CASE-tail-D3-min-is-not-block-outlier-dilated-AP-counterexample; LEM-009 dispute-flagged (not overridden); MISTAKE-126; reflection cluster-size-must-be-dilation-invariant-opus-S155. Files: lrc14_cluster_monotonicity_opus_S155, lrc14_tail_true_min_opus_S155, lrc14_cluster_mechanism_opus_S155.
+
+NEXT (for klein/kps): re-derive the tail floor on the longest-AP axis -- prove "AP_10 + 1 point minimizes D3 over the tail, min ~0.4530 >= bar"; or the L^2 near-dominated variance route (S154). The block-decorrelation D3_c limits are salvageable as UPPER references, not the min.
+
+---
+
 ## kind-pasteur-2026-07-08-S86 -- ENERGY-ORDERING STEP: the WORST-STRUCTURE justification for klein-S187's D3_c table (merge-domination + block-worst) + global min D3 = full block {0..10} = 0.404751 EXACT + tail min = {0..9,25} = 0.4587 (HYP-5457)
 
 Prompt (owner): prove the energy-ordering step to fully close k=11.

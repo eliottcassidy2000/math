@@ -14,6 +14,17 @@ external: Weyl equidistribution; Koksma–Hlawka (bounded-variation × discrepan
 
 # LEM-009 — the block+outlier decorrelation limit
 
+> **⚠ DISPUTED (opus-2026-07-08-S155, `02-court/active/CASE-tail-D3-min-is-not-block-outlier-dilated-AP-counterexample.md`):**
+> The block+outlier limit computations below (`D3_10 = 0.4646`, etc.) are correct **for those
+> families**, but the "Consequence for the k=11 leg" / "CLUSTER ordering" claims — that block+outlier
+> is the **global** prim-diam ≥ 25 D3-minimizer, that `D3(E) ≥ D3_{c(E)}` (fixed-window cluster), and
+> that `min = D3_10 = 0.4646` — are **REFUTED** by an exact counterexample:
+> `A = (0,3,6,8,9,12,15,18,21,24,27)` (AP `3·{0..9}` + interior `8`, primitive, prim-diam 27) has
+> `D3(A) = 0.452986 < D3_10 = 0.4646` (by this file's own `D3`; independent moment routine agrees).
+> Window-cluster is NOT dilation-invariant, `D3` IS. The **closure is NOT threatened** (true tail min
+> ≈ 0.4530 ≥ bar, margin +0.12) — but the extremal argument must be re-derived on the
+> dilation-invariant **longest-AP** axis. See the court case + HYP-5467.
+
 ## Setup
 
 The k=11 covering-tail binding family (THM-662 brick A: the max-additive-energy prim-diam-`D`
