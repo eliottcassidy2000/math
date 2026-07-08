@@ -84,8 +84,13 @@ association of the Kronecker phases).
 - **k=11,12,13 diameter-free:** reduced to one lemma (above), 1.9-7.8x margin. Supersedes the
   decaying window floor and removes the `diam >= 76` k=13 residual IF the lemma is proved.
 - **The extremal lemma** "consecutive minimizes `mu_{1/7}`" is the crux (THM-530, verified
-  `k>=8`, unproved). Covering frame + low bar are the new leverage. A weaker sufficient form:
-  "the block minimizes `E[W]`" (a first moment) + `(7/6) E[W_block] = 0.148 >= m_P`.
+  `k>=8`, unproved). Covering frame + low bar are the new leverage. **Caution (verified this
+  session): the block does NOT minimize `E[W]`** — `mu` and `E[W]` have different minimizers
+  (30/150 random 13-sets have `E[W] < E[W_block] = 0.1266`, min `0.1145`; the block is rarely
+  uncovered but by more, others uncovered more often by less). So the `E[W]`-route sufficient
+  form is the **family-independent** bound `E[W](E) >= 0.0484` for all `E` (empirical min
+  `~0.11`, 2.4x slack), NOT "block minimizes `E[W]`". The `mu`-route uses the genuine
+  minimizer (the block) via "consecutive minimizes `mu`".
 - **k<=10** already closed/near (THM-651/655/656 + degree-4 moment); the covering frame gives
   an independent diameter-free floor there too (`mu(block) >> bar` at every k).
 

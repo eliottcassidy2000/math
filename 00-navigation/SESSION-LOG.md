@@ -1,3 +1,19 @@
+## mac-mini-2026-07-07-S57 (cont.) -- THM-657: THE COVERING REFORMULATION -- mu_{1/7}(E) = P(k arcs of length 1/7 FAIL TO COVER the circle); mu >= (7/6)E[W]; DIAMETER-FREE reduction of k=11,12,13 to ONE lemma ("the AP is the most-efficient coverer"), margins 1.9x/2.9x/7.8x (HYP-5297)
+
+Prompt (owner): push past k=10 towards k=13; think NO DIAMETER and VITALI; previous work extensively.
+
+THE MOVE (one sign-flip in interpretation): W = sum(g_i-1/7)_+ is not "excess gap" -- it is UNCOVERED MEASURE. Give each phase frac(e_i x) the 1/7-arc AHEAD of it; a point is uncovered iff its preceding-1/7 arc is empty. So W(x) = 1 - meas(union of k arcs), and mu_{1/7}(E) = P(W>0) = P(the 13 arcs of length 1/7 FAIL TO COVER the circle). The owner's Vitali/covering hint, made literal (classical: Stevens 1939).
+
+THREE PAYOFFS: (1) 0<=W<=6/7 pointwise => mu >= (7/6)E[W], DIAMETER-FREE (the tent THM-651 and energy floor THM-656 both DIE at k>=11 [E[F]>toll; the moment method gives only 0.10 for a wide k=11 family -- verified dead-end]; klein's window floor 146/(35 diam) DECAYS, < m_P at diam>=76 = the exact k=13 residual). (2) The most-efficient coverer is the AP/block (Kronecker phases, maximally anti-clustered), so consecutive minimizes mu (THM-530) => k=11,12,13 ALL reduce to ONE extremal covering lemma: mu(block) = 0.6263/0.5699/0.4425 = 1.9x/2.9x/7.8x the bars. (3) Joins the circle-covering literature (Stevens iid baseline 0.988; the block covers FAR better, being deterministic-spread).
+
+HONEST WALL (relocated, not removed): naive Bonferroni-3 on E[W] = -0.67 (13 arcs total length 1.86 overlap too much -- the S41/cherry-tree wall). SUBTLETY: mu and E[W] have DIFFERENT minimizers -- block minimizes mu but NOT E[W] (30/150 random 13-sets below block, min 0.11). So the mu-route needs the genuine lemma; the E[W]-route needs a family-independent E[W] >= 0.0484 (empirical min 0.11, 2.4x slack). Two clean targets.
+
+THE PATTERN (reflection filed): this rhymes with the same-session "average not sup" (k=9). Both dissolve a wall by refusing a bad way of WRITING the object -- there sum-vs-sup, here uncovered-measure-vs-excess-gap. The tent goes vacuous at k>=11 because E[F] ~ k^2 counts PAIRS when the problem counts ARCS (a k/7-vs-1 balance). Read it as arcs covering a circle and the diameter (only ever a pair-drift artifact) disappears.
+
+FILES: THM-657 (canon); reflection the-density-floor-is-a-circle-covering-problem-macmini-S57; lrc14_covering_reformulation_macmini_S57 (+out). HYP-5297 CONFIRMED. No canon overridden.
+
+NEXT: (a) the extremal covering lemma "AP is the most-efficient coverer" = consecutive minimizes mu (the crux; covering-literature tools: rearrangement, Kronecker negative association, three-gap majorization); (b) OR the family-independent E[W] >= 0.0484 (weaker, 2.4x slack); (c) PZ mu >= E[W]^2/E[W^2] = 0.27 needs an E[W^2] upper bound sharper than (6/7)E[W]; (d) wire mu(block_k) exact via three-gap (the diameter-free floor VALUE).
+
 ## klein-2026-07-07-S176 -- THE TENT-EVENT REACH PAST k=10 (framework reaches k=11; k=12/13 need conditioning) + the additive-energy CROSS-WIRING to the Motzkin slab split is REFUTED (2-adic is the discriminant) + energy ORDERS the k=13 tail (HYP-5287)
 
 Prompt (owner): work Liu-Zhu Conj-2 / Haralambis>25 / chi_c(G_GW) / skeleton rewiring / Motzkin side; additive energy; degree-4 crossover; D_q window; recursive combinatorics; push past k=10 towards k=13.
