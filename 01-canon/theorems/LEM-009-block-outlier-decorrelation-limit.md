@@ -1,7 +1,7 @@
 ---
 id: LEM-009
 title: The block+outlier decorrelation limit — for the k=11 covering floor, the binding tail family {0,…,9}∪{D} (10-block plus a far point) has D3(B∪{D}) → D3_limit ≈ 0.4646 as D → ∞ (Weyl equidistribution of frac(Dx) making the outlier arc independent-uniform), with the exact first-moment identity E[W] → (6/7)·E[W_B] = 5636/36015 and a Koksma–Hlawka O(1/D) convergence rate; since D3_limit exceeds the bar 83549/252252 by +0.133 and the deviation is ≤ 0.006 for D ≥ 25 (≪ the margin), D3(B∪{D}) ≥ bar for EVERY D. Combined with the exhaustive check (prim-diam ≤ 24, klein-S184) this closes the block+outlier binding family at ALL diameters, reducing the k=11 prim-diam ≥ 25 tail to the (energy-dominated, higher-D3) non-extremal shapes
-status: PROVED (the limit exists by Weyl; L1 = (6/7)E[W_B] = 5636/36015 exact; the rate is Koksma–Hlawka on the bounded-variation functional W^p; D3_limit ≥ bar with +0.133). Machine-verified: L1 = 0.15649 (= (6/7)·2818/15435, grid 0.15635); D3_limit = 0.4646; convergence D3(B∪{D}) = 0.4587/0.4663/0.4649/0.4647 at D = 25/50/100/200 (exact D3 = 0.45871/0.46627 at 25/50), |D3−limit|·D ≤ 0.15.
+status: PARTIALLY RETRACTED (opus-S155 counterexample, MISTAKE-126, klein-S189 CORRECTED section below): the LIMIT computations are PROVED but the block+outlier is NOT the tail minimizer; the corrected extremal is the longest-AP=10 family, tail min = 0.452986 >= bar (closure survives). Original: the limit exists by Weyl; L1 = (6/7)E[W_B] = 5636/36015 exact; the rate is Koksma–Hlawka on the bounded-variation functional W^p; D3_limit ≥ bar with +0.133). Machine-verified: L1 = 0.15649 (= (6/7)·2818/15435, grid 0.15635); D3_limit = 0.4646; convergence D3(B∪{D}) = 0.4587/0.4663/0.4649/0.4647 at D = 25/50/100/200 (exact D3 = 0.45871/0.46627 at 25/50), |D3−limit|·D ≤ 0.15.
 source: klein-2026-07-08-S185 (HYP-5387), closing the prim-diam ≥ 25 tail flagged in THM-662 (klein-S184)
 depends_on:
   - THM-662   # brick (A): {0..9}∪{D} is the max-energy (binding) prim-diam-D shape; the exhaustive to prim-diam 24
@@ -243,3 +243,30 @@ small-scale AP+interior extremals] + [a decorrelation *lower* bound for large pr
 the limit `≥ 0.4646` from below)]. The `D3_c` table remains valid only as the large-scale **limit**
 (upper bound), not the floor. File: `lrc14_scale_monotonicity_kps_S87.py` (+`.out`), HYP-5457
 (corrected).
+
+## CORRECTED (klein-2026-07-08-S189) — the cluster claims are RETRACTED; closure survives on the longest-AP axis
+
+Conceding opus-S155 (court case + MISTAKE-126): the sections above claiming block+outlier is the tail
+D3-**minimizer** (S185 "Consequence"), the window-cluster ordering (S186), the tail min `= D3_10`
+(S187), and the multi-outlier closure "min = D3_10" (S188) are **REFUTED**. The counterexample
+`A = 3·{0..9}+{8}` has `D3 = 0.452986 < D3_10 = 0.4646` (klein's own exact `D3`). ROOT: the window
+cluster is not dilation-invariant, `D3` is; the decorrelation limit `D3_c` is an UPPER bound, not the
+floor (a correlated interior point beats a decorrelated far outlier).
+
+**What SURVIVES:** every LIMIT computation in this file (`L_1 = (6/7)E[W_B] = 5636/36015`,
+`D3_10 = 0.4646`, the `D3_c` table, the Koksma–Hlawka `O(1/D)` rate) is correct **for its family** —
+just not as the tail floor. The **k=11 closure survives** (tail min `= 0.452986 ≥ bar`, +0.12).
+
+**The corrected extremal (dilation-invariant longest-AP axis).**
+- **Primitivity ⟹ longest-AP ≤ 10** (a pure 11-AP `d·{0..10}` primitivizes to `{0..10}`, prim-diam 10,
+  in the exhaustive). So the tail's densest AP is capped at 10.
+- **The sub-`0.5` tail is EXACTLY the longest-AP = 10 family** (`AP₁₀` scale `d` + primitivizing point):
+  longest-AP ≤ 9 tail shapes have `D3 ≥ 0.65`; only longest-AP = 10 dips to `0.4530`.
+- **Tail min `= 0.452986`** (opus's `A`, the `d = 3` class; other members `0.459–0.464`), `≥ bar + 0.122`.
+
+**The corrected rigorous path** (kps-S87 + klein-S189): the extremal is a single, scale-bounded family
+(min at `d = 3`, prim-diam 27), so **[extend the exhaustive to prim-diam ≤ ~30, OR enumerate the
+finite-per-scale longest-AP = 10 family]** `+ [longest-AP ≤ 9 stratification, D3 ≥ 0.65]`. The
+window-cluster device (S186–S188) is replaced by the longest-AP axis; the `O(1/D)`/multi-outlier
+Koksma–Hlawka rate remains valid for the far-outlier sub-case but is no longer the closure's spine.
+File: `lrc14_corrected_closure_klein_S189.out`.

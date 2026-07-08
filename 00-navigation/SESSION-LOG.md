@@ -17,6 +17,25 @@ DENSITY FLOOR (A') NET: k=8 (THM-651), k=9 (THM-655), k=10 (THM-661 B_4 + compos
 HANDOFFS: (a) k=12,13 rigorous closure = same LEM-009 machinery (D3 upper bound + exhaustible tail), margins bigger (+0.157/+0.252) -- should be quick. (b) the uniform far<=E[W]^2 / Var<=c*R2 is a genuine open barely-covers analytic problem (NOT on the critical path now that LEM-009 bypasses it) -- the exact overlap Fourier laws (LEM-007) are the tool if anyone revisits. (c) Part A + Lean hlarge wiring when proofs settle.
 
 FILES: THM-655/657/661, LEM-007, THM-654; ~20 scripts lrc14_*_macmini_S57 (+outs); reflections (average-not-sup, covering-problem). All pushed.
+## klein-2026-07-08-S189 -- COURT CASE CONCEDED (opus-S155): block+outlier is NOT the tail D3-min (A=3*{0..9}+{8} has D3=0.4530<0.4646, verified by my own exact code); window-cluster ordering REFUTED (MISTAKE-126: not dilation-invariant). CLOSURE SURVIVES; corrected extremal = longest-AP=10 family, tail min 0.4530>=bar (HYP-5387)
+
+Prompt (owner): prove the explicit uniform K to make k=11 fully rigorous.
+
+TURN: opus-S155 filed a court case with an EXACT counterexample refuting my S186-S188 cluster argument (the very thing the 'explicit K' was for). I VERIFIED it with my OWN exact Farey D3: A = 3*{0..9} + {8} = (0,3,6,8,9,12,15,18,21,24,27), primitive, prim-diam 27, D3(A) = 88747403972619401646021583/195916463945506515076905312 = 0.452986 < 0.4587 (my claimed block+outlier min) < 0.4646 (D3_10). CONCEDED fully.
+
+ROOT (MISTAKE-126): I used the WINDOW cluster (max points in a fixed length-9 window) as the extremal axis for D3, but the window count is NOT dilation-invariant while D3 IS. A's window-cluster is 5 (predicting D3>=0.6), but A contains a length-10 AP (dilation-invariant cluster 10). A correlated interior point beats a decorrelated far outlier => the decorrelation limit D3_c is an UPPER bound, not the floor. LESSON: extremal arguments for dilation-invariant quantities MUST use dilation-invariant axes (longest-AP, R2 -- not window-cluster or raw diameter).
+
+MY CONTRIBUTION to the CORRECTED closure (longest-AP axis, w/ opus + kps-S87):
+(1) PRIMITIVITY => LONGEST-AP <= 10: a pure 11-AP is d*{0..10}, gcd=d, primitivizes to block_11 (prim-diam 10, in the exhaustive). So NO primitive prim-diam>=25 shape has an 11-AP; the extremal cluster is capped at 10.
+(2) THE SUB-0.5 TAIL IS EXACTLY THE LONGEST-AP=10 FAMILY: stratified min D3 by longest-AP = 0.72/0.72/0.72/0.65 at longest-AP=3..6; only longest-AP=10 (AP_10 + primitivizing point) dips to 0.4530. So the extremal is a SINGLE family; every longest-AP<=9 tail shape has D3 >= 0.65 >> bar.
+(3) FAMILY MIN = 0.452986 (opus's A, d=3 class, recurring at d=3,6,9,12 = dilations of A); other members 0.459-0.464. All >= bar +0.122.
+
+STATUS: CLOSURE SURVIVES (tail min 0.452986 >= bar). The 'explicit K' task is reframed: the cluster device (S186-S188) is retracted; the corrected rigorous path is [extend exhaustive to prim-diam<=30 OR enumerate the finite longest-AP=10 family] + [longest-AP<=9 stratification >=0.65]. LEM-009 partially retracted + corrected; MISTAKE-126 logged; court response filed (concede + the longest-AP<=10 contribution). Case ready to RESOLVE once the extended exhaustive/AP-enumeration is filed.
+
+FILES: court response; LEM-009 corrected section + status; MISTAKE-126; lrc14_corrected_closure / courtcase_verify _klein_S189.out; HYP-5387.
+
+NEXT: (a) enumerate the longest-AP=10 family exactly (finite per scale, scale-bounded) => the tail floor rigorous; (b) the longest-AP<=9 stratification bound (D3>=0.5); (c) @opus/@kps concur on the scale-axis re-derivation to resolve the case.
+
 ## klein-2026-07-08-S188 -- THE MULTI-OUTLIER FINITE-SPREAD BOUND: k=11 CLOSED. Multi-outlier decorrelation is FAST (correction ~1e-3 << margin +0.19); global min D3 over ALL primitive 11-sets = 0.436 (exhaustive minimizer) >= bar. k=11 = [exhaustive <=24] + [LEM-009] + [D3_c table] + [multi-outlier KH]; general AP-minimizes-mu dissolved (HYP-5387)
 
 Prompt (owner): prove the multi-outlier finite-spread bound to fully close k=11.

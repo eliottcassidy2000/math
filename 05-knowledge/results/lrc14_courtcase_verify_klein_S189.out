@@ -1,0 +1,18 @@
+(1) opus counterexample A=(0, 3, 6, 8, 9, 12, 15, 18, 21, 24, 27): D3 = 88747403972619401646021583/195916463945506515076905312 = 0.452986
+    < D3_10=0.4646? True; < block+outlier 0.4587? True; >= bar? True (+0.1218)
+    longest AP in A = 10; primitive: True; prim-diam=27
+    VERDICT: opus is CORRECT -- my block+outlier/cluster-min claims are REFUTED. Closure survives (+0.12).
+
+(2) primitive tail => longest-AP <= 10:
+    pure 11-AP dilated by d: {0,d,..,10d}: gcd=d, primitivizes to block_11 (prim-diam 10 <= 24, EXHAUSTIVE).
+    so a PRIMITIVE prim-diam>=25 shape has longest-AP <= 10 (11-AP excluded). Extremal = AP_10 + primitivizing point.
+
+(3) min D3 over 'AP_10 (diff d) + interior point' families, d=2..6:
+    d=3: min D3 = 0.45299 at [0, 3, 6, 8, 9, 12, 15, 18, 21, 24, 27] (longest-AP=10)
+    d=4: min D3 = 0.45916 at [0, 4, 7, 8, 12, 16, 20, 24, 28, 32, 36] (longest-AP=10)
+    d=5: min D3 = 0.45875 at [0, 5, 10, 15, 17, 20, 25, 30, 35, 40, 45] (longest-AP=10)
+    d=6: min D3 = 0.45299 at [0, 3, 6, 8, 9, 12, 15, 18, 21, 24, 27] (longest-AP=10)
+
+    GLOBAL min over AP_10+point (d=2..6) = 0.45299 at [0, 3, 6, 8, 9, 12, 15, 18, 21, 24, 27]
+    EXACT D3 = 0.452986 >= bar 0.33121 (+0.1218)
+    => corrected extremal = AP_10 + primitivizing point, tail min ~0.4530 >= bar (matches opus).

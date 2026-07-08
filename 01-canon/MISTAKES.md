@@ -9,6 +9,30 @@ Format per entry:
 - Impact on existing results
 - Source (who found it, when)
 
+---## MISTAKE-126 (2026-07-08, opus-S155 counterexample vs klein-S186/S187) -- A DILATION-INVARIANT FUNCTIONAL NEEDS A DILATION-INVARIANT EXTREMAL AXIS: the k=11 tail D3-minimizer was claimed to be the block+outlier via the WINDOW cluster size, which is not dilation-invariant.
+
+- **What was claimed (klein-S186/S187, LEM-009):** the k=11 covering-tail (prim-diam >= 25)
+  D3-minimizer is the block+outlier {0..9,D}, with min D3 = D3_10 = 0.4646, ordered by the
+  "max-cluster-size" c(E) = max points of E in a fixed length-9 WINDOW (D3 decreasing in c).
+- **Why it was wrong (opus-S155, exact):** A = 3*{0..9} + {8} = (0,3,6,8,9,12,15,18,21,24,27) is
+  primitive, prim-diam 27, and D3(A) = 0.452986 < 0.4646 -- BELOW the claimed min. Verified by
+  klein's own exact Farey D3 AND opus's independent moment routine (identical rational). The
+  window cluster of A is 5 (predicting D3 >= 0.6), but A contains a length-10 AP (0,3,..,27); its
+  DILATION-INVARIANT cluster is 10. D3 is dilation-invariant (D3(cE)=D3(E)); the window count is NOT.
+  So a correlated interior point lowers D3 below a decorrelated far outlier -- the decorrelation
+  limit D3_c is an UPPER bound, not the floor.
+- **Correct framing:** the extremal axis is the dilation-invariant LONGEST AP (opus/kps). Primitivity
+  caps longest-AP at 10 (an 11-AP is non-primitive -> block_11, exhaustive). The tail min is the
+  longest-AP=10 family (AP_10 + primitivizing point), = 0.452986 at A (d=3); longest-AP <= 9 gives
+  D3 >= 0.65. CLOSURE SURVIVES (0.4530 >= bar, +0.12); only the characterization/proof-device was wrong.
+- **Impact:** LEM-009 "Consequence"/"cluster ordering" sections; klein-S187 "tail min = D3_10";
+  kps-S86 HYP-5457. All corrected. The exhaustive (prim-diam <= 24, S184) and R2 <= 590 bound
+  (THM-662) survive. The block-decorrelation LIMIT computations (D3_10=0.4646 etc.) are correct for
+  their families -- they just aren't the tail minimizers.
+- **Lesson:** when proving an extremal for a DILATION-INVARIANT quantity, the ordering variable MUST
+  be dilation-invariant. Window-cluster / raw-diameter are not; longest-AP / additive-energy / R2 are.
+  A clean-looking monotonicity on a non-invariant axis will be refuted by a dilated counterexample.
+
 ---## MISTAKE-125 (2026-07-08, kind-pasteur-S77, self-caught next session testing new instances) -- "VERIFIED 11/11" ON A TEST SET THAT EXCLUDED THE DECISIVE HARD CASE: claimed the linearization-locus equivalence chi_c(G_S)=1/M(S) <=> mu(S)=M(S) as a "conjecture verified 11/11 instances, 0 counterexamples" (THM-658 general section, S76; messaged to opus).
 
 - **What was claimed:** the clean equivalence, with the converse "mu>M => chi_c<1/M" supported by GW, Lucas {1,3,4,7}, {1,3,4,5} (the 3 mu>M sets in the S76 bank).

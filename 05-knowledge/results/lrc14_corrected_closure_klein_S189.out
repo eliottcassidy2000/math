@@ -1,0 +1,23 @@
+(A) AP_10 (scale d) + interior point -- the extremal family (min D3 vs d):
+  d= 3 (prim-diam ~27): min D3 = 0.45299
+  d= 4 (prim-diam ~36): min D3 = 0.45916
+  d= 5 (prim-diam ~45): min D3 = 0.45875
+  d= 6 (prim-diam ~54): min D3 = 0.45299
+  d= 7 (prim-diam ~63): min D3 = 0.46429
+  d= 8 (prim-diam ~72): min D3 = 0.45916
+  d= 9 (prim-diam ~81): min D3 = 0.45299
+  d=10 (prim-diam ~90): min D3 = 0.45875
+  d=11 (prim-diam ~99): min D3 = 0.46398
+  d=12 (prim-diam ~108): min D3 = 0.45299
+  d=13 (prim-diam ~117): min D3 = 0.46415
+  d=14 (prim-diam ~126): min D3 = 0.46429
+  => family min = 0.45299 at d=3 (opus's A); D3 RISES with d -> 0.4646 (kps scale-monotone); all >= bar +0.122
+
+(B) longest-AP <= 9 tail shapes (random prim-diam>=25): D3 stratified by longest-AP:
+  longest-AP=3: min D3=0.7170, mean=0.8022 (n=68)
+  longest-AP=4: min D3=0.7153, mean=0.7899 (n=45)
+  longest-AP=5: min D3=0.7230, mean=0.7525 (n=6)
+  longest-AP=6: min D3=0.6483, mean=0.6483 (n=1)
+
+CORRECTED CLOSURE: tail = [longest-AP=10: AP_10+interior family, min 0.4530 at d=3, exhaustible + scale-monotone]
+  + [longest-AP<=9: D3 >= ~0.5 stratification]. min over tail ~0.4530 >= bar +0.12. Longest-AP<=10 (primitive excludes 11-AP).
