@@ -1,3 +1,22 @@
+## mac-mini-2026-07-08-S57 (cont.6) -- RIGOROUS: far_dev is supported ENTIRELY on DOUBLY-BALANCED resonances = the variance; far<=E[W]^2 and Var(W)<=near are provably ONE wall; leading = 3-APs (support-2 contributes 0) (LEM-007; HYP-5357)
+
+Prompt (owner): bound the higher-support resonance tail; push the dissociated bound to general spread.
+
+TAIL BOUND findings (LEM-007):
+1. GEOMETRIC per-term decay: each extra nonzero resonance entry costs (2/pi)/(5/7)=0.891<1 (|ghat_B(n)|<=2/(pi|n|) vs ghat_B(0)=5/7). Generating function int_0^1 prod W(theta e_i) dtheta packages the tail.
+2. BUT the absolute bound loses cancellation (int prod|W| diverges, ln singularity) = variance wall.
+3. CLEAN sub-result: dissociated (B_h) families => tail small => far<=E[W]^2 explicit.
+
+THE STRUCTURAL BREAKTHROUGH (pushing dissociated->general spread): the disjoint-arc y-integral f(P,Q) is nonzero ONLY when P+Q=0, and P+Q = Sum n_i. So a resonance (Sum n_i e_i=0) contributes to far_dev ONLY IF Sum n_i=0 too. Hence far_dev is supported ENTIRELY on DOUBLY-BALANCED resonances (Sum n_i=0 AND Sum n_i e_i=0) = EXACTLY the Var(W)=Sum_m|W-hat(m)|^2 structure. So far<=E[W]^2 and Var<=near are not just equivalent scalars -- they are the SAME doubly-balanced resonance sum. Pushing dissociated->general spread IS resolving the variance cancellation (one wall, not separable). Dissociation = the resonance-free special case.
+
+TWO CORRECTIONS (self-caught): (a) "leading far_dev is pairwise (THM-638/641)" WRONG -- support-2 resonances are unbalanced (Sum n_i != 0) => contribute 0; the LEADING is SUPPORT-3, the 3-term-AP pattern n=(1,-2,1) (e_i-2e_j+e_l=0). So far_dev ~ (weighted 3-AP count)+higher = the ADDITIVE structure (R2 link). (b) the element-based gcd^2/(e_i e_j) and difference-based rate both superseded by the doubly-balanced/3-AP object.
+
+NET: far = variance = doubly-balanced resonance cancellation, RIGOROUSLY unified; leading obstruction = 3-APs. Dissociated closed; general spread = the shared variance wall (attack together). Also: overlap Fourier mass laws derived+verified (S-arc L_S-hat(m)=sum_balanced prod hhat, triple exact); LEM-006 collision -> my energy-variance bridge renumbered LEM-007.
+
+FILES: LEM-007 (overlap laws, resonance mechanism, tail bound, doubly-balanced structure, corrections); lrc14_overlap_fourier_law / lrc14_energy_variance_bridge _macmini_S57.
+
+NEXT: the doubly-balanced (3-AP + higher) signed cancellation = the ONE remaining analytic mile, shared by far AND variance (klein LEM-005 discrepancy is the vehicle; closes diam>=36).
+
 ## klein-2026-07-08-S185 -- LEM-009: THE BLOCK+OUTLIER DECORRELATION LIMIT PROVED -- D3(B u {D}) -> 0.4646 >= bar (Weyl + L1=(6/7)E[W_B]=5636/36015 exact + Koksma-Hlawka O(1/D)); closes the k=11 prim-diam>=25 tail (with S184 exhaustive) modulo the energy-ordering step (HYP-5387)
 
 Prompt (owner): prove the block+outlier decorrelation limit to close the prim-diam>=25 tail; hint: each nonzero resonance entry costs (2/pi)/(5/7)=0.891<1 (geometric in support), but the count grows and the abs-value bound loses cancellation.
