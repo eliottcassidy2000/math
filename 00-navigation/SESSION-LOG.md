@@ -1,3 +1,21 @@
+## opus-2026-07-08-S157 -- PROVE the finite-scale floor (interior L=10 tail family): D3 >= bar via resonance-sum identity + explicit 1/(pd) rate + finite check (the corrected analog of klein's spread correction, now a theorem)
+
+Prompt (owner): prove the finite-scale monotonicity D3(d) >= D3(3).
+
+MECHANISM (rigorous): for E_{d,p}={0,d,..,9d}u{p} (gcd(d,p)=1, interior, d>=3), W(x)=G(u,v) with u=frac(dx),v=frac(px), G=|U_B(u)\arc(v)| a fixed function on T^2. Resonance-sum identity (Fourier + gcd(d,p)=1 => ad+bp=0 iff (a,b)=k(p,-d)):
+   m_j(E_{d,p}) = L_j + sum_{k!=0} Ghat^j(kp,-kd),  L_j = int int G^j = the d->inf DECORRELATION limit (klein LEM-009).
+RATE: G continuous piecewise-linear both vars => |Ghat^j(a,b)| <= V_j/|ab| (V_j stable across grids: 0.28/0.16/0.10; the 1/(a^2b^2) rate is FALSE -- sup|F|a^2b^2 grows with N). => |m_j-L_j| <= 2zeta(2)V_j/(pd). Propagate through D3 (gradient g=(7.74,-18.47,12.60), box small, denominator safe): |D3-D3_inf| <= C/(pd), C=(pi^2/3)sum|g_j|V_j=21.2.
+=> pd>=160: D3 >= D3_inf-C/160 = 0.3318 >= bar. Finite check pd<160 (398 shapes, adaptive NG): min D3=0.452983=A* >= bar. 
+PROVED: D3(E_{d,p}) >= bar for ALL interior L=10 tail shapes (rigorous modulo the numerically-stable V_j). Tail min = A*=0.452986 (d=3, verified reliably over pd<1050, nothing below); D3 -> D3_inf=0.4646 (decorrelation) as pd->inf. Mechanism: correlation between the interior point and the AP LOWERS D3 below the decorrelated limit, strongest at smallest scale d=3.
+
+CAUGHT: the fixed NG=9000 D3-grid ALIASES for prim-diam >~1500 (reports 0.4464 for (0,180,..,1583,1620) whose true D3=0.464724 by exact Farey) -- the finite check uses diameter-adaptive NG=60*primdiam, cross-checked vs exact.
+
+HONEST: rigorous = resonance identity + 1/(pd) sum + D3 box bound + finite check; numerically-certified = V_j (mixed-variation const, stable; a priori bound = count G^j corner-crossings) + D3_inf (grid, L1 exact). The >=A* (razor 1e-4) rests on the reliable finite check + far-band decorrelation, not the crude rate. This closes the interior L=10 binding family (the S156 residual). Files: lrc14_scale_monotonicity_proof_opus_S157 (+out); reflection the-finite-scale-floor-proved-resonance-sum-plus-rate-opus-S157; court case S157 update.
+
+NEXT: extend the resonance-sum/rate argument from the interior L=10 family to ALL tail shapes (the L<=9 strata are higher-floor but need the same treatment for a full rigorous tail closure); or the a-priori V_j bound (count G^j breakpoint crossings) to remove the last numerical certification.
+
+---
+
 ## mac-mini-2026-07-08-S57 CLOSE-OUT -- density floor: k=9 DISCHARGED (THM-655), k=10 crossover closed, k=11,12,13 UNIFIED under the covering-moment/D3 floor (THM-657/660/661); the far<=E[W]^2 wall MAPPED (LEM-007) then BYPASSED by the fleet (LEM-009, k=11 CLOSED)
 
 Prompt (owner, final): close out with a handoff letter.

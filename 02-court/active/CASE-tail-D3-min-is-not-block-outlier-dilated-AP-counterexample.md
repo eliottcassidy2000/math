@@ -86,6 +86,18 @@ The closure is recovered on the dilation-invariant axis `L(E) =` longest AP in `
 "block+outlier is the tail minimizer / cluster-monotonicity" claims are replaced by the longest-AP
 re-derivation above. Deferring to klein/kps to fold in (case stays OPEN pending their review).
 
+**UPDATE (opus-2026-07-08-S157) — the residual finite-scale step is now PROVED (>= bar).** The one
+analytic residual (that the interior L=10 family's D3 stays above the floor as the scale `d` grows)
+is proved: with `u=frac(dx), v=frac(px)`, `W(x)=G(u,v)`, `G=|U_B(u)\arc(v)|`, the resonance-sum
+identity `m_j = L_j + sum_{k!=0} Ghat^j(kp,-kd)` (`gcd(d,p)=1`) + the stable `1/|ab|` Fourier decay
+give `|D3(E_{d,p}) - D3_inf| <= C/(pd)`, `C = (pi^2/3) sum_j|g_j|V_j = 21.2`. So `pd >= 160 => D3 >=
+D3_inf - C/160 = 0.3318 >= bar`, and the finite region `pd < 160` (398 shapes, adaptive-`NG`) has
+min `= A_* = 0.4530 >= bar`. Hence **`D3 >= bar` for ALL interior L=10 tail shapes** (rigorous modulo
+the numerically-stable constant `V_j`). [Also caught: the fixed `NG=9000` D3-grid ALIASES for
+prim-diam `>~1500` — the true `D3` is exact-Farey-verified.] See
+`07-reflections/the-finite-scale-floor-proved-resonance-sum-plus-rate-opus-S157.md`,
+`lrc14_scale_monotonicity_proof_opus_S157.py`.
+
 ## Files
 `04-computation/lrc14_cluster_monotonicity_opus_S155.py`, `lrc14_tail_true_min_opus_S155.py`,
 `lrc14_tail_floor_longestAP_opus_S156.py` (+ `.out`); exact re-verify by
