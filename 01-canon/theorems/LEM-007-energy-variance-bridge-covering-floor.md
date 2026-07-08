@@ -102,8 +102,31 @@ last 1.5×). So the explicit leading coefficient is
 > **`c_k ≈ (6/7)^{2(k−2)}·V1_φ`**  (`= 9.5×10⁻⁵` at k=11; empirical `5.6×10⁻⁵` after the
 > support-3,4 correction), `V1_φ = 2/(3·343) − 1/49² = 1.527×10⁻³`.
 
-This turns "Var(W) ≤ c·R2 with mysterious c" into an explicit-c statement whose ONLY remaining
-gap is (i) bounding the off-diagonal pair resonances (difference-multiplicity, THM-641/638) and
+This SUGGESTED an explicit-c leading order, but the follow-up support-decomposition check (CORRECTION below) shows it is NOT a valid bound (the higher-support terms grow, not decay). The genuine (i) bounding the off-diagonal pair resonances (difference-multiplicity, THM-641/638) and
 (ii) the sign of the support-3,4 correction (it REDUCES Var, verified `support-2/Var(W) ≈ 1.5–1.7 > 1`,
 so `Var(W) ≤ (6/7)^{2(k−2)}·`(pair kernel) holds on the sampled zoo). Files:
 `04-computation/lrc14_overlap_fourier_law_macmini_S57.py`.
+
+## CORRECTION (mac-mini-S57, same session): the support decomposition does NOT truncate
+
+Working the "two remaining pieces" exposed an error in the leading-order claim above. Computing
+the support-EXACTLY-r Fourier parts `Ŵ_r(m)` (all r entries nonzero) shows `Σ_m|Ŵ_r(m)|²` GROWS
+with r, not decays: `0.077, 0.226, 0.932, …` (block, r=2,3,4), and the truncated `Σ_m|Ŵ_2+Ŵ_3+
+Ŵ_4|²` OVERSHOOTS the true `Var(W)=0.047` by 12×. So the higher-support terms are large and the
+`Σ_r Ŵ_r(m)` cancellation is EXTREME and across ALL orders — NOT a "support-2 leading + small
+correction". Consequently:
+- The overlap Fourier mass laws (`L̂_S(m) = Σ_{balanced} Π ĥ`) and the master law
+  (`Ŵ(m) = Σ_{balanced n} Π ĝ`) are CORRECT and verified.
+- But **`c_k ≈ (6/7)^{2(k−2)}·V1_φ` is NOT a rigorous leading order** — it is the value of the
+  support-2 part `Σ_m|Ŵ_2|²` (≈ 1.6× the true Var), a numerical correlate, not a bound: the
+  claim that support-3,4 merely "trim" it is FALSE (they are large and require extreme
+  cancellation). The `(6/7)^{k−2}` damping is real per-term but does not dominate.
+- **`Var(W) ≤ c·R2` is therefore NOT reachable by support truncation** of the master law — the
+  balanced-vector sum has the same non-truncating cancellation as the coverage inclusion-exclusion
+  (the barely-covers wall, `k/7 > 1`). The honest rigorous route is klein-S179b's LEM-005
+  DISCREPANCY estimate (phase-vector equidistribution), whose explicit uniform rate is the
+  remaining analytic mile. The Fourier master law is exact but does not tame the cancellation.
+
+What SURVIVES rigorously: the equivalences (`far ≤ E[W]² ⟺ Var ≤ near`, `Var(W) = Σ|Ŵ(m)|²`),
+the exact overlap Fourier laws (a correct tool for the discrepancy computation), and D3 decreasing
+in m2. The resonance lemma `Var(W) ≤ c·R2` remains open, its difficulty correctly located.
