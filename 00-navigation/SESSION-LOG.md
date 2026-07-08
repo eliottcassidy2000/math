@@ -1,3 +1,21 @@
+## opus-2026-07-07-S145 -- THE NAMED NEXT STEPS: THM-652 PROVED (chi(G_GW) = 14 -- the integer rung is FAITHFUL at GW via rigidity + odd-cycle matching obstruction; ALL rungs blind at Lucas {1,3,4,7}; the discriminator = parity of m/gcd(d,m): 13 odd vs 4 even) + THE AP76 LEAN CERTIFICATE GREEN, KERNEL-PURE -- TailDiameter.AP76Certificate DISCHARGED, the k=13 diam<=75 hlarge leg is UNCONDITIONAL (boxeph-S2 handoff executed, builds first try, 8738 jobs) + audit verdict filed + T_6 localization (HYP-5197)
+
+Prompt (owner): work the named next steps (from S144: chi_c(G_GW), T_6 proof, exchange-rate, cite-checks, AP76 Lean, audit fold).
+
+(a) THM-652 (canon): chi(G_GW) = 14. Proof: the tight subgraph of the GW window graph is a SINGLE 26-cycle, out-degree 1 (exact certificates: 92 states, C = 13, transient depth 11) => density-1/13 sets RIGID = translates of {0,12} mod 26; 13-coloring => every class n/13 ± O(1) in EVERY window (potential telescoping) => <= 169 defects/window => a common locked stretch => Z_26 partitioned into difference-12 pairs = perfect matching on TWO 13-CYCLES (odd) -- impossible. chi <= 14 by x mod 14. Lucas k=4: the mod-8 coloring gives chi = chi_c = chi_f = 4 < 5 = 1/M (hand-checkable). THE DICHOTOMY IS A PARITY THEOREM (odd/even m/gcd(d,m)) -- the pairing principle in the coloring world. Named open: chi_c(G_GW) in (13,14].
+
+(b) AP76: generated LRCAP76Certificate.lean (gen script; 24 intervals = boxeph's 22 + the two 1/6-flank cells computed here; sum verified EXACTLY = 2314528732/40290957525); 24 good_of_roof_gt + 276 disjointness + measure_union chain; BUILT FIRST TRY; axioms exactly [propext, Classical.choice, Quot.sound]; ap76_certificate : TailDiameter.AP76Certificate + hlarge_floor_diam75_unconditional; root import added; full build green.
+
+(c) Audit verdict (deferred to me by kps-S73): filed as S144-reflection addendum -- HYP-5117 = valid-but-trivial partition (q=1 unreported) + per-q minimality dead in every normalization + residue-function claim dead (kps mod-420 pair) + the residue content lives ONLY in the resonant core (g/q law); survivors = klein caps / mac-mini windows / S144 exact forms / V_r; sigma-grading stands.
+
+(d) T_6 localization: NOT uniformly q <= 7 (spread+bump2 at q = 12, two-block at q = 19; AP/GW all q = 6) => the proof program = full per-family resonance ladder (convergent, viable, heavier); backlog updated. (e) cite-check agent (GW/BGGST/Liu-Zhu/Haralambis) launched, pending at close-out -- results to the next session.
+
+FILES: THM-652 (canon); lrc_chi_GW_rung_opus_S145.py (+out); gen_ap76_lean_opus_S145.py; LRCAP76Certificate.lean (+root import); audit addendum; INDEX HYP-5197; backlog T_6 update.
+
+NEXT: (a) chi_c(G_GW) in (13,14] -- the remaining rung question (density-(1/14,1/13) classes escape rigidity; holonomy/phase-slip accounting is the candidate tool); (b) T_6 via the full resonance ladder; (c) the exchange-rate inequality (untouched this session); (d) integrate the cite-check results (novelty status of mu(GW) = 1/13, the separations, |S|<=3 rigidity); (e) the skeleton rewiring so hlarge consumes muGood directly (the TailDiameter bridge note's named occasion).
+
+---
+
 ## klein-2026-07-07-S174 -- THM-653: THE TENT-WINDOW COMPOSITION (THM-651's Markov step made strict by the proved windows) -- k=9 (A') leg PROVED for ALL primitive shapes diam <= 16 (12,869 exhaustive), k=10 for diam <= 10; DIAM form of the window floor discharges k=11 diam<=12 / k=12 diam<=20 / k=13 diam<=73; + MISTAKE-124 (S173's primitive-root attribution was false; self-caught) (HYP-4981)
 
 Prompt (owner): push S173 + incoming further; see the bigger picture; ponder abstractly whether suspected patterns are real.
