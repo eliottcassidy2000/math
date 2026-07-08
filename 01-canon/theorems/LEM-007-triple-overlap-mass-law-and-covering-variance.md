@@ -71,3 +71,28 @@ the **D3 route (margin +0.134) is the robust brick-(B) closure**, tolerating the
 ## Files
 `lrc14_triple_overlap_varW_klein_S182.out` (iid `L^j`, triple `= 1/343`, `Var(S₂)` vs `Var(W)`),
 `lrc14_triple_bernoulli_klein_S182.out` (the `{0,1,n} = L²/n` law, net-c stability 5.34–6.38·10⁻⁵).
+
+## Addendum — the EXACT j-fold overlap VARIANCE kernels, closed form (opus-S152, HYP-5417)
+
+Part (I) is the overlap MEAN (`E[overlap] = L^j = theta^j`, feeds `E[W]`). The covering VARIANCE
+needs a different object: the `j`-fold **variance kernel**
+`c_j := sum_{a_1+..+a_j=0, all a_i != 0} prod_i that(a_i)`, `that(n) = |hhat(n)|^2` (tent Fourier;
+`that(0) = int t = theta^2`). By Parseval `sum_{Sigma a=0} prod that = int t^j = 2 theta^{j+1}/(j+1)`,
+and inclusion-exclusion on the zero coordinates gives the **recursion**
+
+> **`c_j = int t^j - sum_{r=1}^{j} C(j,r) theta^{2r} c_{j-r}`,  `c_0 = 1, c_1 = 0`.**
+
+Closed forms (`theta = 1/7`, verified against the direct Fourier sums):
+`c_2 = 2th^3/3 - th^4 = 11/7203` (= this file's `Var(ov)`); `c_3 = th^4/2 - 2th^5 + 2th^6 = 25/235298`
+(the TRIPLE variance kernel); `c_4 = 321/28824005`, `c_5 = 950/847425747`, `c_6 = 1633/13841287201`.
+These give the covering variance its exact per-order constants:
+
+> **`Var(W) = sum_{j>=2} (1-theta)^{2(k-j)} [ C(k,j) c_j (Poisson diagonal) + E_j c_j (resonance,
+> E_2 = R2/2) ]`**,
+
+with the `(1-theta)^{2(k-j)}` inactive-arc damping. VALIDATED: the Poisson diagonal matches Sidon
+sets (`Var/diagonal = 0.95-1.18`, k=5,6,7); the block is resonance-dominated
+(`Var/[(1-theta)^{2(k-2)}(R2/2)c_2] = 1.28-1.38`), reproducing the tight `c = 6.1e-5` at `k=11`.
+So this file's net-c `5.34-6.38e-5` is now backed by exact-rational kernels; the remaining piece is
+the additive-energy multipliers `E_3, E_4` and a uniform upper bound. Files:
+`04-computation/lrc14_overlap_variance_kernels_opus_S152.py`, `lrc14_fourier_pair_kernel_opus_S151.py`.

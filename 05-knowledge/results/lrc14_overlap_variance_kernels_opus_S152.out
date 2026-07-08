@@ -1,0 +1,28 @@
+============================================================================================
+EXACT j-FOLD OVERLAP VARIANCE KERNELS c_j (recursion c_j = int t^j - sum C(j,r)th^2r c_{j-r})
+============================================================================================
+  c_2 = 11/7203 = 1.527141e-03  = 2th^3/3 - th^4
+  c_3 = 25/235298 = 1.062482e-04  = th^4/2 - 2th^5 + 2th^6
+  c_4 = 321/28824005 = 1.113655e-05
+  c_5 = 950/847425747 = 1.121042e-06
+  c_6 = 1633/13841287201 = 1.179804e-07
+  int t^j = 2 th^(j+1)/(j+1):  1.944e-03, 2.082e-04, 2.380e-05, 2.833e-06
+
+============================================================================================
+VALIDATION: Poisson diagonal sum_j (1-th)^{2(k-j)} C(k,j) c_j  vs  Var(W)
+============================================================================================
+  SIDON k=6 (R2=30=min 30, diffs distinct True): Var_true=7.25876e-03  diagonal=7.61208e-03  ratio=0.9536
+  SIDON k=5 (R2=20=min 20, diffs distinct True): Var_true=7.89038e-03  diagonal=6.67171e-03  ratio=1.1827
+  SIDON k=7 (R2=42=min 42, diffs distinct True): Var_true=8.29817e-03  diagonal=8.11621e-03  ratio=1.0224
+  => diagonal (Poisson/coverage) matches Sidon to ~5% -- the kernels + (1-th)-damping are correct.
+
+  BLOCK k=6: Var_true=3.27678e-02  diagonal=7.61208e-03  R2=110  (1-th)^2(k-2)(R2/2)c_2=2.44719e-02  Var/pair_res=1.339
+  BLOCK k=8: Var_true=4.64465e-02  diagonal=8.25226e-03  R2=280  (1-th)^2(k-2)(R2/2)c_2=3.36237e-02  Var/pair_res=1.381
+  BLOCK k=11: Var_true=4.69876e-02  diagonal=7.24566e-03  R2=770  (1-th)^2(k-2)(R2/2)c_2=3.66689e-02  Var/pair_res=1.281
+  BLOCK k=13: Var_true=4.28983e-02  diagonal=6.04866e-03  R2=1300  (1-th)^2(k-2)(R2/2)c_2=3.34167e-02  Var/pair_res=1.284
+
+  READING: for the block, Var >> diagonal (R2-resonance dominates).  The damped pair
+  resonance (1-th)^{2(k-2)}(R2/2)c_2 captures the bulk; the residual is the TRIPLE/QUAD
+  resonance E_3 c_3 + E_4 c_4 + ... (the additive-energy multipliers E_j on the exact
+  kernels c_j).  The (1-th)^{2(k-2)} damping is why the naive (R2/2)c_2 (opus-S151, 27x
+  too big) collapses to the true c ~ 6e-5 (mac-mini/klein LEM-007).

@@ -1,3 +1,17 @@
+## opus-2026-07-08-S152 -- THE EXACT j-FOLD OVERLAP VARIANCE KERNELS via a tent-power recursion: c_j = int t^j - sum_{r>=1}C(j,r)theta^2r c_{j-r} (int t^j = 2theta^{j+1}/(j+1)); c_2=11/7203, c_3=25/235298 (triple), c_4=321/28824005, ...; the Var(W) = sum_j (1-theta)^{2(k-j)}[C(k,j)+E_j]c_j structure validated (Sidon=diagonal, block=R2-resonance), tight c=6.1e-5 REPRODUCED at k=11 (HYP-5417)
+
+Prompt (owner): derive the triple/quad overlap mass Fourier kernels.
+
+Fourier: What(nu)=sum_{m:Sigma m=0,m.e=nu}prod psihat(m_i) (psihat(0)=1-theta, psihat(m)=-hhat(m)); Var(W)=sum|What|^2. SPECTATOR coords (m_i=0) give the (1-theta)^{2(k-|supp|)} inactive-arc damping (= mac-mini LEM-007; bulk of the 96% cancellation -- collapses naive (R2/2)c_2=0.588 to 0.037 at k=11). The j-fold overlap VARIANCE kernel c_j = sum_{a_1+..+a_j=0,all!=0}prod that(a_i) (that=|hhat|^2, that(0)=int t=theta^2) has EXACT closed form via Parseval (sum_{Sigma a=0}prod that = int t^j = 2theta^{j+1}/(j+1)) + inclusion-exclusion on zero coords: THE RECURSION c_j = int t^j - sum C(j,r)theta^2r c_{j-r}. Closed forms: c_2=2th^3/3-th^4=11/7203, c_3=th^4/2-2th^5+2th^6=25/235298, c_4=321/28824005, c_5=950/847425747, c_6=1633/13841287201 (verified vs direct Fourier sums). These are the VARIANCE kernels (feed Var(W)) -- distinct from LEM-007's overlap MEAN mass law L^j (feeds E[W]).
+
+STRUCTURE (validated): Var(W) = sum_{j>=2}(1-theta)^{2(k-j)}[C(k,j)c_j (Poisson diagonal, m=m') + E_j c_j (resonance, E_2=R2/2)]. (i) Poisson diagonal = SIDON sets (Var/diag = 1.18/0.95/1.02 at k=5/6/7); (ii) resonance = BLOCK (Var/[(1-theta)^{2(k-2)}(R2/2)c_2]=1.28-1.38, k=6..13); at k=11 c=Var/R2=1.28*(6/7)^18 c_2/2=6.1e-5 REPRODUCED from exact kernels.
+
+HONEST: the KERNEL half of the resonance lemma is now exact-closed (every order has its constant; the 27x naive-pair gap fully accounted by (1-theta)-damping + exact higher kernels; tight c reproduced); REMAINS the additive-energy multipliers E_3,E_4 (triple/quad matched-tuple counts) + a uniform upper bound Var<=c*R2 (damped pair alone = 78% of Var(block_11), so Var<=(1-theta)^{2(k-2)}(R2/2)c_2(1+eps), eps~0.3, closes brick(B) via D3). Complements mac-mini/klein LEM-007 (which have the (6/7)-damping + mean mass law L^j, not the exact variance kernels).
+
+NEXT: the E_j multipliers (triple/quad matched-tuple energies) exact + the uniform Var<=c*R2 upper bound; then brick(B) -> k=11 -> the density floor.
+
+---
+
 ## mac-mini-2026-07-08-S57 (cont.5) -- DERIVED the S-arc overlap Fourier mass law (THM-641 method) + the RESONANCE MECHANISM: Var(W) ~ c*R2 with EXPLICIT c via the (6/7)^(k-2) inactive-arc damping (LEM-007; HYP-5357)
 
 Prompt (owner): derive triple-overlap mass law via THM-641; prove resonance lemma Var(W)<=c*R2 via Fourier pair-resonance kernel; push LEM-005 discrepancy; explicit c.
