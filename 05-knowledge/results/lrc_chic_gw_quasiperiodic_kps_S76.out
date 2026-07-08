@@ -1,0 +1,21 @@
+==================================================================================
+chi_c(G_GW): quasi-periodic (p,q)-coloring search, 13 < p/q < 14
+  rotation (T=1) gives 14; any T>=2 hit with p/q<14 => chi_c < 14 (linearization FAILS)
+==================================================================================
+c found falsified original clause
+c found falsified original clause
+c found falsified original clause
+c found falsified original clause
+c found falsified original clause
+c found falsified original clause
+c found falsified original clause
+c found falsified original clause
+c found falsified original clause
+c found falsified original clause
+c found falsified original clause
+  p/q=27/2=13.5000: *** SAT ***  T=3 Delta=7  c=[2, 11, 0]
+
+=> chi_c(G_GW) <= 27/2 = 13.50000 < 14  ==>  LINEARIZATION FAILS AT GW.
+   The circular chromatic rung is BLIND to GW's tightness (like chi_f=13);
+   only the INTEGER rung chi=14 sees it (opus THM-652).  Non-rotation witness:
+   C(x) = c(x mod 3) + (x div 3)*7 mod 27,  c = [2, 11, 0]
