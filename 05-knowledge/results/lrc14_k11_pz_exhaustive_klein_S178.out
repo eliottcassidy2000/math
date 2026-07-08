@@ -1,0 +1,10 @@
+k=11 bar = 83549/252252 = 0.331212
+  diam 10: 1 primitive shapes, exact min PZ = 0.347098 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] clears
+  diam 11: 10 primitive shapes, exact min PZ = 0.366507 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11] clears
+  diam 12: 55 primitive shapes, exact min PZ = 0.346788 at [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12] clears
+  diam 13: 220 primitive shapes, exact min PZ = 0.380855 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 13] clears
+  diam 14: 715 primitive shapes, exact min PZ = 0.357391 at [0, 2, 4, 5, 6, 7, 8, 9, 10, 12, 14] clears
+  diam 15: 2002 primitive shapes, exact min PZ = 0.388181 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15] clears
+
+GLOBAL exact min PZ over k=11 diam<=15 = 21576025/62216714 = 0.346788 at [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+bar = 0.331212; margin +0.015576 -> ALL CLEAR (exact)

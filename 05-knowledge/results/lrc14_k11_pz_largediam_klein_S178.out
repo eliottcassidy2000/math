@@ -1,0 +1,7 @@
+k=11 diam>=16: min PZ found in descent = 0.45452 at [0, 6, 8, 10, 11, 12, 14, 15, 16, 20, 24] (diam 24)
+  diam<=15 exact min was 0.34679; bar 0.33121
+  -> diam>=16 min >= diam<=15 min (energy ordering holds; spread clears)
+
+energy ordering (PZ should DECREASE as R2 increases):
+  corr(R2, PZ) = -0.962 over 60 shapes (negative = higher energy -> lower PZ)
+  all sampled PZ >= bar: True; min sampled PZ = 0.4351

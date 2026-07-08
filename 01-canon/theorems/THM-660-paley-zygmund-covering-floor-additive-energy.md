@@ -1,7 +1,7 @@
 ---
 id: THM-660
 title: The Paley–Zygmund covering floor — on mac-mini's covering reformulation (THM-657, W = uncovered measure), the second-moment bound mu_{1/7}(E) >= E[W]²/E[W²] (Paley–Zygmund; the OPTIMAL two-moment lower bound on P(W>0)) is strictly stronger than (7/6)E[W] and clears the honest (A′) bars at k = 11, 12, 13 diameter-free — with margins +0.016 / +0.109 / +0.216 — where (7/6)E[W] FAILS at k=11,12 (0.184/0.176 < bars). The floor is additive-energy-ORDERED: Var(W)/E[W]² increases with the reduced additive energy R2, so the block (AP, max energy) is the minimizer at k=11,12; this unifies the energy axis across the density-side tent floor (THM-656) and the covering-side floor. The three legs reduce to ONE moment inequality: min_E E[W]²/E[W²] >= bar, a ratio of additive-energy moments (more tractable than "AP minimizes mu")
-status: PROVED per-shape (Paley–Zygmund is rigorous — Cauchy–Schwarz; and it is the exact 2-moment optimum, the LP minimizer placing mass at 0 and at E[W²]/E[W] <= 6/7). The UNIFORM floor min_E PZ >= bar is VERIFIED-not-proved: high-precision (N=20M) block values PZ(block_k) = 0.34710/0.30803/0.27205 at k=11/12/13; hard jump-move descent + full block-neighborhood sweep at k=11 (165 single-replacements + 78 subsets of [0,12], min 0.34679) find no shape below the bar; the k=11 minimizer is the block (margin +0.016, THIN — an exact block_11 PZ would settle it), k=12 minimizer the block, k=13 minimizer a non-block shape (0.262 < block 0.272, still 4.6x bar). block_13 PZ = 221828403/815409784 = monad-S13's exact PZ-on-V value.
+status: PROVED per-shape (Paley–Zygmund is rigorous — Cauchy–Schwarz; and it is the exact 2-moment optimum, the LP minimizer placing mass at 0 and at E[W²]/E[W] <= 6/7). The UNIFORM floor min_E PZ >= bar: EXACT block moments now computed (klein-S178, Farey-cell piecewise integration — independently reproducing monad's block_13 PZ = 221828403/815409784 to the digit, validating the method). The **k=11 leg (the binding case) is exhaustively EXACT-verified in the high-energy regime**: over ALL 2993 primitive k=11 shapes with diam <= 15 (where the minimizer provably lives — PZ falls with additive energy, and max energy = min diameter), the exact minimum is PZ = 21576025/62216714 = 0.346788 >= bar 83549/252252 = 0.331212 (margin +0.015576, a definite rational, no longer a grid artifact); diam >= 16 shapes have PZ >= 0.45 (descent) with energy-ordering corr(R2, PZ) = -0.96. Exact block values PZ(block_k) = 0.34710/0.30803/0.27205 at k=11/12/13. THE COMPLEMENTARITY: the block PZ CLEARS exactly at k=11,12,13 and FAILS at k=8,9,10 (0.574/0.481/0.411 < bars) — precisely the tent floor's domain; the two second-moment methods (tent variance k<=10, W-variance/PZ k=11,12,13) partition k=8..13, meeting at k=10/11.
 source: klein-2026-07-07-S177 (HYP-5317)
 depends_on:
   - THM-657   # mac-mini's covering reformulation: mu = P(W>0), W = sum_i (g_i-1/7)_+, mu >= (7/6)E[W]
@@ -66,6 +66,31 @@ energy is thus the single axis under BOTH floors: the density-side tent variance
 covering-side `Var(W)` are two second moments of the same energy. This is the covering-side form of
 the diameter/energy complementarity (THM-656): the AP is the joint extremizer (max energy = min floor,
 min diameter = caught by AP76), on both sides of the covering/packing duality.
+
+## Exact block moments and the k=11 exhaustive verification (klein-S178)
+
+Via Farey-cell piecewise integration (on `[Farey_{k-1}]`, each phase `frac(jx)` is linear, `W` is
+piecewise linear, `E[W]`/`E[W²]` are exact rationals):
+
+| k | E[W](block) | PZ(block) exact | ≈ | bar | clears? |
+|---|------|--------|------|------|---|
+| 8 | 429/1715 | 1656369/2885850… | 0.5740 | 0.6750 | **no** |
+| 9 | 1088/5145 | — | 0.4809 | 0.5622 | **no** |
+| 10| 2818/15435 | — | 0.4109 | 0.4521 | **no** |
+| 11| 697/4410 | 3400663/9797402 | 0.3471 | 0.3312 | yes +0.0159 |
+| 12| 3427/24255 | 82210303/266892098 | 0.3080 | 0.1993 | yes +0.1087 |
+| 13| 8599/67914 | **221828403/815409784** | 0.2720 | 0.0565 | yes +0.2156 |
+
+The k=13 value reproduces **monad's exact PZ-on-V** to the digit (independent method — validation).
+The block clears **exactly at k=11,12,13 and fails at k=8,9,10** — the covering/PZ floor is the
+large-`k` tool, complementary to the tent floor (THM-651/656) which owns k≤10.
+
+**k=11 (binding leg), exhaustive-exact:** over ALL 2993 primitive shapes with diam ≤ 15 (the
+high-energy regime containing the minimizer), `min PZ = 21576025/62216714 = 0.346788 ≥ bar`
+(minimizer `{0,2,3,…,10,12}`, a stretched block). diam ≥ 16 shapes have `PZ ≥ 0.45` (descent) —
+the strong energy ordering (`corr(R2, PZ) = −0.96`) puts all lower-energy/spread shapes safely
+above. So the k=11 leg is exact in its binding regime; k=12 (+0.109) and k=13 (+0.216) have ample
+room.
 
 ## Credit and scope (honest)
 

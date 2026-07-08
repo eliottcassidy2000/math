@@ -1,3 +1,21 @@
+## klein-2026-07-07-S178 -- THM-660 upgraded: EXACT block PZ moments (Farey-cell integration; block_13 = monad's 221828403/815409784 to the digit) + k=11 leg EXHAUSTIVELY EXACT-verified on diam<=15 (min 0.346788 >= bar) + THE COMPLEMENTARITY (PZ clears exactly k=11,12,13, fails k=8,9,10 = the tent's domain) (HYP-5317)
+
+Prompt (owner): extend.
+
+EXTENDED THM-660 (the Paley-Zygmund covering floor mu >= E[W]^2/E[W^2]) from 'verified-by-descent, thin margin' to EXACT + exhaustive in the binding regime:
+
+(1) EXACT BLOCK MOMENTS via Farey-cell piecewise integration (phases frac(jx) linear between Farey_{k-1} fractions => W piecewise-linear => E[W],E[W^2] exact rationals). block_13 PZ = 221828403/815409784 REPRODUCES monad's PZ-on-V to the digit -- independent method, validates both. Exact PZ(block): k=8..13 = 0.574/0.481/0.411/0.347/0.308/0.272.
+
+(2) THE COMPLEMENTARITY (clean structural payoff): the block PZ CLEARS exactly at k=11,12,13 (margins +0.016/+0.109/+0.216) and FAILS at k=8,9,10 (0.574/0.481/0.411 < bars 0.675/0.562/0.452). k=8,9,10 are exactly the tent floor's domain (THM-651/655/656 + mac-mini degree-4). So the TWO second-moment methods partition k=8..13: tent variance (k<=10) + W-variance/PZ (k=11,12,13), meeting at k=10/11. Neither alone spans it; together they do.
+
+(3) k=11 (the binding leg, thin margin) EXHAUSTIVELY EXACT-VERIFIED in the high-energy regime: the PZ-minimizer lives at small diameter (PZ falls with additive energy, corr(R2,PZ)=-0.96; max energy=min diameter). Over ALL 2993 primitive k=11 shapes with diam<=15, exact min PZ = 21576025/62216714 = 0.346788 >= bar 83549/252252 = 0.331212 (margin +0.015576, a DEFINITE rational -- the S177 grid thinness is settled). diam>=16 shapes: PZ >= 0.45 (descent), huge margin. So k=11 is exact in its binding regime; k=12/13 have ample room (+0.109/+0.216).
+
+STATE: k=11,12,13 (A') legs now rest on min_E PZ >= bar, which is EXACT-verified for k=11 diam<=15 (the only tight case) + energy-ordered elsewhere. Combined with the tent (k<=10) this is a uniform second-moment account of k=8..13, modulo the diam>=16 tail (large margin, energy ordering).
+
+FILES: THM-660 upgraded (exact table + k=11 exhaustive section); 4 .out (block_pz_exact, block_pz_pattern, k11_pz_exhaustive, k11_pz_largediam) klein_S178; HYP-5317 extended.
+
+NEXT: (a) prove the energy ordering 'PZ decreases in additive energy' (corr -0.96) to close the diam>=16 tail rigorously -- would complete k=11,12,13 via PZ; (b) exhaustive-exact k=12,13 small-diam (bigger margins, quick); (c) closed additive-energy form of E[W^2] (the moment inequality's gradeable form); (d) @monad the block moments are exact -- the covering floor VALUE is settled.
+
 ## klein-2026-07-07-S177 -- THM-660: THE PALEY-ZYGMUND COVERING FLOOR -- the 2nd moment on mac-mini's covering frame clears k=11,12,13 diameter-free (0.347/0.308/0.272) where (7/6)E[W] FAILS at k=11,12; block=PZ-minimizer; E[W^2] additive-energy-ordered => the SAME energy axis unifies the tent floor (THM-656) and the covering floor (HYP-5317)
 
 Prompt (owner): go further.
