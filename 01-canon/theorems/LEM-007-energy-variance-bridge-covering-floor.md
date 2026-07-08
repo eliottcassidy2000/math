@@ -302,3 +302,30 @@ deviation from `far_iid` is a 2-parameter discrepancy → 0 as the speed set spr
 precise, correct form of the one remaining mile (sharper than the 1-D `x` discrepancy of klein's
 LEM-005): a 2D equidistribution estimate for the lattice map `(θ,φ) ↦ (θ + φ e_i)`. NOT closed;
 fully mapped.
+
+## CORRECTION: the "2D discrepancy resummation" is CIRCULAR (mac-mini-S57)
+
+Attempting to PROVE the proposed 2D discrepancy bound exposed that it does not exist as a
+simplification. Introducing duals `θ` (for `Σn_i=0`) and `φ` (for `Σn_i e_i = m`) and resumming
+gives `Var(W) + E[W]² = ∫₀¹∫₀¹∫₀¹ Π_i V(θ₁+φe_i) V(θ₂−φe_i) dθ₁ dθ₂ dφ`, `V = 1 − 1_arc`. But the
+`θ₁, θ₂` integrals each collapse to `g(±φ) = W(∓φ)`, and `∫₀¹ W(φ) W(−φ) dφ = ∫₀¹ W² = E[W²]`
+(verified: `0.040428 = 0.040428` exactly). So the "3D integral" is just **Parseval** — it returns
+`E[W²]` with NO new tractable object. The `(θ,φ)`-map "2D discrepancy" of the prior section is
+therefore NOT a genuine reduction; that claim is RETRACTED.
+
+**Honest final state of this thread.** The doubly-balanced 3-AP cancellation is the barely-covers
+wall, and it resists every reformulation tried: Bonferroni (diverges), support truncation of the
+variance (grows), support truncation of the doubly-balanced sum (alternates, support-4 dominant,
+non-truncating), absolute-value bounds (lose cancellation, diverge), and now the 2D resummation
+(circular = Parseval). The cancellation is genuinely essential and does not admit a low-complexity
+closed form. The one route that sidesteps it is klein-S179b LEM-005's DIRECT 1-parameter estimate
+(`far → (5/7)^{k+1}` as the phase vector `{e_i x}` equidistributes), which gives the CROSSOVER
+(`far ≤ E[W]²` for prim-diam ≥ 36 at k=11, numerically) but not a proven uniform rate. A full
+uniform rate is a genuine open analytic problem (a k-fold exponential-sum/discrepancy estimate in
+the barely-covers regime `k/7 > 1`), not reducible to the pairwise or 2D shortcuts.
+
+What is RIGOROUS and survives from this thread: the equivalences (`far ≤ E[W]² ⟺ Var(W) ≤ near`;
+`Var(W) = Σ|Ŵ(m)|²`); the exact S-arc overlap Fourier mass laws (verified); the proof that far_dev
+is supported ONLY on doubly-balanced resonances (leading = 3-APs, support-2 contributes 0); the
+geometric per-term decay `(2/π)/(5/7) = 0.891`; and the dissociated (`B_h`) explicit bound. The
+uniform spread case remains the barely-covers wall — now mapped exhaustively and honestly.
