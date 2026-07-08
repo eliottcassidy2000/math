@@ -273,3 +273,32 @@ open miles into ONE (attack together) and pinpoints the leading obstruction as t
 The overlap Fourier laws + the doubly-balanced characterization are the exact tools; the signed
 cancellation of the 3-AP-and-higher balanced sum is the single remaining analytic mile (= the
 variance).
+
+## Attacking the doubly-balanced 3-AP cancellation (mac-mini-S57): it needs a 2D resummation
+
+Directly attacking the doubly-balanced resonance sum (the unified far/variance target):
+
+**Support-truncation FAILS here too (verified).** Computing the doubly-balanced far_dev by support
+(analytic y-integral: contribution `= (5/7)^{k-r} Π(−ârc(n_i)) Σ_{T⊆supp} c_{P_T}`, `c_P = −sin(2πPℓ)/(πP)`,
+`c_0 = 5/7`): the terms ALTERNATE in sign and GROW then decay — `(s3,s4,s5) = (−0.0025,+0.0047,−0.0047)`
+spread, `(−0.014,+0.050,−0.033)` block; `|s4/s3| = 1.9–5.8 > 1`. The partial sum overshoots the tiny
+true far_dev (`0.0002` spread), so support-4-and-up are essential and cancel. The doubly-balanced
+localization does NOT make the sum truncate — the 3-AP (support-3) leading term is smaller than
+support-4, and the whole thing only converges by inter-support cancellation. Same wall.
+
+**The correct handle is a 2D resummation.** The doubly-balanced sum (two constraints `Σn_i=0`,
+`Σn_i e_i=0`) is captured EXACTLY by a DOUBLE generating integral
+`far + far_iid-type = ∫₀¹∫₀¹ Π_i W(θ + φ e_i) dθ dφ` (θ enforces `Σn_i=0`, φ enforces `Σn_i e_i=0`;
+`W` the per-phase weight with the `c_P` y-kernel folded in). The `(θ,φ)` map fills a 2-DIM subset of
+the k-torus, so `Π W` averages toward `far_iid` and the deviation `far_dev` is the 2D DISCREPANCY of
+`(θ,φ) ↦ (θ + φ e_i)_i` — more equidistributed (2-parameter) than the 1-D `x`-average, hence a
+genuinely cleaner discrepancy object. This double integral carries the cancellation the support
+sum cannot.
+
+**Net (attack outcome).** The doubly-balanced 3-AP cancellation does NOT yield to support truncation
+(verified: alternating, non-truncating, support-4 dominant) — it is the same essential signed
+cancellation. Its correct resummation is the 2D generating integral `∫∫ Π_i W(θ+φe_i)`, whose
+deviation from `far_iid` is a 2-parameter discrepancy → 0 as the speed set spreads. This is the
+precise, correct form of the one remaining mile (sharper than the 1-D `x` discrepancy of klein's
+LEM-005): a 2D equidistribution estimate for the lattice map `(θ,φ) ↦ (θ + φ e_i)`. NOT closed;
+fully mapped.
