@@ -77,3 +77,33 @@ cancellation (LEM-005). What is NEW and rigorous here: the three reductions abov
 analytic lemmas" (far, brick B) into ONE scalar covering-energy inequality and expose `R2` as the
 unifying spread parameter (the 614 connection). File:
 `04-computation/lrc14_energy_variance_bridge_macmini_S57.py`.
+
+## The overlap Fourier mass law + the resonance mechanism (mac-mini-S57, HYP-5357)
+
+Deriving the resonance lemma's ingredients via THM-641's method (kps-S81's flagged target):
+expand the uncovered indicator `1{y uncov} = Π_i (1 − h(y − e_i x))`, `h = 1_{[0,1/7)}`,
+`ĥ_n = (1 − e(−n/7))/(2πin)`, `ĥ_0 = 1/7`. The y-integration forces `Σ n_i = 0` (balanced),
+the x-character forces `Σ n_i e_i = m`:
+
+> **`Ŵ(m) = Σ_{(n_i): Σn_i=0, Σn_i e_i=m} Π_i ĝ_{n_i}`**, `ĝ_0 = 1−1/7 = 6/7`, `ĝ_n = −ĥ_n` (n≠0).
+
+Restricting to support `S` gives the **S-arc overlap Fourier law**
+`L̂_S(m) = Σ_{balanced on S} Π_{s∈S} ĥ_{n_s}`; the **triple law** is the balanced sum over
+`n_i d_{ik} + n_j d_{jk} = m` (VERIFIED exactly vs numeric Fourier, `E[L_{ijk}] = L̂(0)`).
+
+**The resonance = the `(6/7)^{k−2}` inactive-arc damping.** In `Ŵ(m)`, the `k − |support(n)|`
+zero entries each carry `ĝ_0 = 6/7`. So the leading (support-2, pair) term is
+`Ŵ(m) ⊇ (6/7)^{k−2} Σ_{i<j: d_{ij}|m} φ̂(m/d_{ij})` (`φ̂ = |ĥ|² = ` arc autocorrelation), and its
+variance contribution is `(6/7)^{2(k−2)} ·` (pair-resonance kernel) `≈ (6/7)^{2(k−2)}·R2·V1_φ`.
+This damping is the BULK of the 96% cancellation: naive `R2·V1_φ = 1.18` (block) → damped
+`(6/7)^{18}·1.18 = 0.073` (a 15× cut) → true `Var(W) = 0.047` (higher-support terms trim the
+last 1.5×). So the explicit leading coefficient is
+
+> **`c_k ≈ (6/7)^{2(k−2)}·V1_φ`**  (`= 9.5×10⁻⁵` at k=11; empirical `5.6×10⁻⁵` after the
+> support-3,4 correction), `V1_φ = 2/(3·343) − 1/49² = 1.527×10⁻³`.
+
+This turns "Var(W) ≤ c·R2 with mysterious c" into an explicit-c statement whose ONLY remaining
+gap is (i) bounding the off-diagonal pair resonances (difference-multiplicity, THM-641/638) and
+(ii) the sign of the support-3,4 correction (it REDUCES Var, verified `support-2/Var(W) ≈ 1.5–1.7 > 1`,
+so `Var(W) ≤ (6/7)^{2(k−2)}·`(pair kernel) holds on the sampled zoo). Files:
+`04-computation/lrc14_overlap_fourier_law_macmini_S57.py`.
