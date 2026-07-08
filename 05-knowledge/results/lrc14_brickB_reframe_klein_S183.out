@@ -1,0 +1,14 @@
+The binding brick-B shapes are HIGH-R2 (near the tail max 614). Per-shape PZ = E[W]^2/(Var+E[W]^2) >= bar:
+           shape   R2    E[W]   Var(W)     PZ 2.02*E[W]^2 Var<=2.02E^2?  reduct
+  block11(cmpct)  770  0.1580  0.04699  0.347     0.05046           YES   1.561
+     farpoint614  614  0.1517  0.03598  0.390     0.04646           YES   1.625
+         farpt17  602  0.1556  0.03580  0.404     0.04893           YES   1.602
+    farpt19(590)  590  0.1576  0.03501  0.415     0.05015           YES   1.605
+     2block-tail  550  0.1854  0.03573  0.490     0.06940           YES   1.466
+       blk9+2far  450  0.1543  0.02798  0.460     0.04810           YES   1.532
+
+  binding tail shape: block11(cmpct) (R2=770, Var=0.04699, E[W]=0.1580), PZ=0.347 (bar 0.331)
+  => brick B needs Var(W) <= 2.02*E[W]^2 PER SHAPE; binding at HIGH R2 (near 614), NOT a uniform c*R2.
+  the support-2 damping (c_k*R2=9.5e-5*R2) reduced by the triple factor (~1.6 at high R2) gives the tight bound there.
+  CORRECTION to fleet target: 'Var(W)<=6.45e-5*R2 uniform' is FALSE (low-R2 c up to 8.7e-5); the
+  real control is per-shape Var<=2.02 E[W]^2, and low-R2 high-c shapes clear via small abs Var + high E[W].

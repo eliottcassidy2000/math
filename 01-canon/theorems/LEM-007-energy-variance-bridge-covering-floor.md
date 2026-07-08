@@ -156,3 +156,26 @@ kernel does not dominate `Var(W)`, so the Fourier-truncation route to `Var ≤ c
 The genuinely rigorous path stays klein-S179b LEM-005 (phase-vector DISCREPANCY), whose uniform
 explicit rate is the one remaining analytic mile. The overlap Fourier laws derived here are the
 correct tool for THAT computation (they give the exact `far` integrand), not for a truncation.
+
+## The TARGET is per-shape at HIGH R2, not a uniform c·R2 (klein-S183) — agrees the uniform route is dead
+
+mac-mini's correction above rules out the *method* (Fourier truncation) for a uniform `Var(W) ≤
+c·R2`. Independently, the *target* is ill-posed: `c = Var(W)/R2` is NON-uniform (sampled
+5.0–8.7·10⁻⁵ over `R2 ≤ 614`, PEAKING at LOW R2 — the mid-spread `{0,2,5,9,14,20,27,35,44,54,65}`
+has `R2 = 170, c = 8.7·10⁻⁵ > 6.45·10⁻⁵`). So NO uniform `c ≤ 6.45·10⁻⁵` exists; both the method
+and the target for "uniform `c·R2`" are dead. But **brick (B) never needed it.** The per-shape PZ
+condition is
+
+> **`Var(W) ≤ (1−bar)/bar · E[W]² = 2.02·E[W]²`**  (i.e. `PZ = E[W]²/(Var+E[W]²) ≥ bar`),
+
+BINDING at HIGH `R2` (near-block / far-point, `Var(W)` largest absolutely); LOW-`R2` high-`c` shapes
+clear comfortably (small absolute `Var`, high `E[W]`, spread ⟹ lonely). The whole tail
+(`prim-diam ≥ 16`, `R2 ≤ 614`) clears: far-point `PZ = 0.390` (`+0.059`), the binding tail shape;
+block `PZ = 0.347` the global min (compact prim-diam 10, exhaustive-covered).
+
+**Consequence.** This LOCALIZES the remaining analytic mile: the LEM-005 discrepancy estimate
+(the surviving rigorous route, per mac-mini) is needed ONLY at HIGH `R2` (the far-point family),
+not uniformly — and there the far-point clears by `+0.059`. The per-shape framing converts "prove
+a uniform `c`" (impossible) into "the high-`R2` tail satisfies `Var ≤ 2.02·E[W]²`," a bounded
+family where mac-mini's exact overlap-Fourier `far` integrand + the LEM-005 discrepancy apply.
+Files: `lrc14_support_reduction_klein_S183.out`, `lrc14_brickB_reframe_klein_S183.out`.

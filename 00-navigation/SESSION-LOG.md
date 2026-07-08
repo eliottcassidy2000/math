@@ -29,6 +29,21 @@ VERIFIED EXACT (direct x-integration vs kernel, 0 mismatch after the primitivity
 SCOPE (honest): LEM-008 gives the exact MEAN-overlap kernels (the |S|>=3 extension of THM-641). It is the building block of Var(W) = sum_{|S|,|T|>=2}(-1)^{|S|+|T|}Cov(L_S,L_T), but does NOT by itself prove the brick-(B) resonance lemma Var(W)<=c*R2 -- that needs the 2-window joint masses and is NON-perturbative (my S82: the series diverges under truncation; W is piecewise-linear with Wh(omega)~1/omega^2, so the exact Farey route is the way, not Fourier).
 
 FILES: LEM-008 (canon); lrc_overlap_mass_kernels_kps_S83.py (+out); builds on kps-S82 (HYP-5397), THM-641/657/637. This closes the arc: brick (A) proved (THM-662), brick (B) reduced (klein-S181) + its resonance mile mapped as non-perturbative (S82) with the exact overlap kernels derived (S83, LEM-008); k=11 rests on the Farey-moment resonance sign (fleet-active).
+## klein-2026-07-08-S183 -- controlling the S_3+ cancellation: the 'Var(W)<=uniform-c*R2' target is ILL-POSED (c non-uniform, peaks at LOW R2); the real brick-B control is per-shape Var(W)<=2.02*E[W]^2 BINDING at HIGH R2, where the triple reduction is stable ~1.6 (LEM-008 collision resolved) (HYP-5387)
+
+Prompt (owner): control the S_3+ cancellation for rigorous Var(W)<=c*R2.
+
+PULLED: opus-S151 (exact Fourier pair kernel c_pair=theta^3(2/3-theta)=11/7203) + mac-mini (the (6/7)^{k-2} inactive-arc damping mechanism, c_k=(6/7)^{2(k-2)}*V1phi=9.5e-5, support-3,4 trims to empirical 5.6e-5) -- both flagged 'tight c needs the triple/quad masses' = my LEM-008 (renamed). COLLISION: mac-mini took LEM-007 (energy-variance bridge); I renumbered my triple-overlap-mass-law to LEM-008 (their bridge has the brick-B ref chain).
+
+MY CONTRIBUTION (the reframing that corrects the target): the S_3+ cancellation cannot be controlled as 'Var(W) <= c*R2 with uniform tight c<=6.45e-5' because THAT IS FALSE -- c=Var(W)/R2 is NON-uniform (sampled 5.0-8.7e-5 over R2<=614) and PEAKS at LOW R2 (mid-spread {0,2,5,9,14,20,27,35,44,54,65}: R2=170, c=8.7e-5 > 6.45e-5). But brick B never needed a uniform c: the per-shape PZ condition is Var(W) <= (1-bar)/bar * E[W]^2 = 2.02*E[W]^2, and this is BINDING at HIGH R2 (near-block/far-point, where Var(W) is largest absolutely). Low-R2 high-c shapes clear comfortably (small abs Var + high E[W] since spread=lonely). Verified: the whole tail (prim-diam>=16, R2<=614) clears -- far-point (R2=614) PZ=0.390 (+0.059), the binding tail shape; block (R2=770, compact) PZ=0.347 is the global min, exhaustive-covered.
+
+THE LOCALIZED MILE: the support-3,4 reduction factor supp2/Var(W) is STABLE ~1.5-1.65 exactly at HIGH R2 (binding) and only scatters (down to 1.1) at LOW R2 (irrelevant). So controlling the cancellation localizes to high R2: prove [supp2 <= c_k*R2 = (6/7)^{2(k-2)}*V1phi*R2, off-diag pair-resonance sign] + [triple reduction >= 1.5, from LEM-008 masses, stable at high R2] => Var(W) <= 9.5e-5*R2/1.5 = 6.3e-5*R2 <= 0.039 < 2.02*E[W]^2 at the far-point. Much more tractable than a uniform bound (which is false).
+
+NET: the mile is not 'uniform tight c' (impossible) but 'per-shape Var<=2.02 E[W]^2 at high R2', where the mac-mini damping + LEM-008 triple reduction (stable ~1.6) delivers it. This corrects the fleet's target and localizes the remaining rigor.
+
+FILES: LEM-007 addendum (mac-mini's, the reframing); LEM-008 (renamed, triple-overlap); lrc14_support_reduction / brickB_reframe _klein_S183.out; HYP-5387.
+
+NEXT: (a) prove supp2 <= c_k*R2 at high R2 (off-diag resonance, THM-638/641); (b) prove the triple reduction >= 1.5 at high R2 (LEM-008 triple masses); together => brick B closes rigorously via the tail's per-shape PZ.
 
 ## mac-mini-2026-07-08-S57 (cont.5) -- DERIVED the S-arc overlap Fourier mass law (THM-641 method) + the RESONANCE MECHANISM: Var(W) ~ c*R2 with EXPLICIT c via the (6/7)^(k-2) inactive-arc damping (LEM-007; HYP-5357)
 

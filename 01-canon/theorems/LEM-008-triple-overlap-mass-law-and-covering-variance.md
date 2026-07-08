@@ -1,6 +1,6 @@
 ---
-id: LEM-007
-title: The triple-overlap mass law and the covering-variance structure — (I) the j-fold arc-overlap mass E[|A_{i1} ∩ … ∩ A_{ij}|] equals the IID value L^j (L = 1/7) plus THM-641-style Bernoulli corrections that VANISH for generic differences; in particular the triple iid mass is (1/7)³ = 1/343, and the consecutive triple {0,1,n} has mass exactly L²/n = 1/(49n) (crossing iid at n=7). (II) Via the exact measure inclusion-exclusion W = 1 − k/7 + S₂ − S₃ + ⋯ (Sⱼ = Σ j-fold overlaps), Var(W) has leading additive-energy coefficient Var(ov)/2 = 7.64·10⁻⁴ (ov = the pair-overlap trapezoid), but the NET coefficient is c = Var(W)/R2 ≈ 5.85·10⁻⁵ (± 5%), an ~92% reduction from the S₃⁺ cancellation — the covering resonance is dominated by the higher inclusion-exclusion layers, not a pair correction
+id: LEM-008
+title: [renumbered LEM-007->008: mac-mini energy-variance-bridge holds LEM-007 by the brick-B ref chain] The triple-overlap mass law and the covering-variance structure — (I) the j-fold arc-overlap mass E[|A_{i1} ∩ … ∩ A_{ij}|] equals the IID value L^j (L = 1/7) plus THM-641-style Bernoulli corrections that VANISH for generic differences; in particular the triple iid mass is (1/7)³ = 1/343, and the consecutive triple {0,1,n} has mass exactly L²/n = 1/(49n) (crossing iid at n=7). (II) Via the exact measure inclusion-exclusion W = 1 − k/7 + S₂ − S₃ + ⋯ (Sⱼ = Σ j-fold overlaps), Var(W) has leading additive-energy coefficient Var(ov)/2 = 7.64·10⁻⁴ (ov = the pair-overlap trapezoid), but the NET coefficient is c = Var(W)/R2 ≈ 5.85·10⁻⁵ (± 5%), an ~92% reduction from the S₃⁺ cancellation — the covering resonance is dominated by the higher inclusion-exclusion layers, not a pair correction
 status: (I) PROVED for the iid values (L^j; elementary) and derived via THM-641's offset-sweep for the correction structure (the {0,1,n} = L²/n law and the vanishing at generic differences machine-verified exactly); (II) the leading coefficient Var(ov)/2 = (2/1029 − 1/2401)/2 is EXACT; the net c ≈ 5.85·10⁻⁵ is EMPIRICAL (stable, 30-shape sample min/mean/max = 5.34/5.85/6.38·10⁻⁵) — a rigorous Var(W) ≤ c·R2 with the correct small c requires controlling the S₃⁺ cancellation (the barely-covers wall in variance form), NOT proved here. HONEST CORRECTION to klein-S181: the brick-(B) c is ≈ 6.4·10⁻⁵ (worst-case), not the optimistic 5.67·10⁻⁵, so brick (B) via PZ needs E[W] ≥ 0.1393 (margin +0.004 vs min E[W] ≈ 0.143), thin — the D3 route (margin +0.134) is the robust one.
 source: klein-2026-07-08-S182 (HYP-5387)
 depends_on:
@@ -14,7 +14,7 @@ related:
 external: Bernoulli polynomials / the three-distance theorem; Stevens iid circle covering (L^j overlaps).
 ---
 
-# LEM-007 — the triple-overlap mass law and the covering variance
+# LEM-008 — the triple-overlap mass law and the covering variance
 
 ## (I) The j-fold overlap mass law
 
