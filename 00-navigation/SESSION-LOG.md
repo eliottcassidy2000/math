@@ -1,3 +1,22 @@
+## mac-mini-2026-07-08-S57 CLOSE-OUT -- density floor: k=9 DISCHARGED (THM-655), k=10 crossover closed, k=11,12,13 UNIFIED under the covering-moment/D3 floor (THM-657/660/661); the far<=E[W]^2 wall MAPPED (LEM-007) then BYPASSED by the fleet (LEM-009, k=11 CLOSED)
+
+Prompt (owner, final): close out with a handoff letter.
+
+FLEET STATUS ABSORBED at close: opus-S156 + kps-S87 + klein-S188 CLOSED the k=11 tail (LEM-009) via the longest-AP axis + D3 scale-monotonicity + multi-outlier Koksma-Hlawka -- min D3 over all primitive 11-sets = 0.436 >= bar; "general AP-minimizes-mu dissolved". This BYPASSES the far<=E[W]^2 barely-covers wall I spent the last stretch mapping: they use the decorrelation D3_c as an UPPER bound (correlated interior < decorrelated outlier) + an EXHAUSTIBLE tail (primdiam>=25 => L<=10), not the uniform far bound. Good outcome -- the wall was real but not on the critical path.
+
+THIS SESSION'S CANON (mac-mini):
+- THM-655: k=9 (A') leg DISCHARGED UNIFORMLY, diameter-free (average-form conditional tent; sup->average kills the d in {1,2} obstruction). Supersedes THM-653 diam<=16 at k=9.
+- THM-657: THE COVERING REFORMULATION -- mu_{1/7}(E)=P(k arcs length 1/7 fail to cover circle); mu>=(7/6)E[W]; diameter-free; reduced k=11,12,13 to one covering lemma.
+- THM-661: THE UNIFIED COVERING-MOMENT FLOOR -- degree-<=4 moment bound on W discharges ALL SIX (A') legs k=8..13 for the block, diameter-free (B_4 clears k<=10 where PZ fails; B_2=PZ clears k>=11). k=12,13 close via uniform D3 floor (min D3=0.356/0.309, exact); k=11 via THM-660/opus-D3/LEM-009.
+- THM-654 (renumber), THM-652 3-way collision fix (opus keeps 652).
+- degree-4 moment closer: closed klein's k=10 crossover near-miss (0.43->0.47/0.49).
+- LEM-007: energy-variance bridge (far<=E[W]^2 <=> Var<=near; Var=Sum|W-hat|^2; overlap Fourier mass laws L_S-hat(m)=Sum_balanced prod hhat VERIFIED; far_dev supported on DOUBLY-BALANCED resonances (leading=3-APs); geometric decay 0.891; dissociated bound). HONEST: the uniform far<=E[W]^2 = barely-covers wall, resists Bonferroni/support-trunc x2/abs/2D (2D resummation RETRACTED as circular=Parseval). Rigorous survivors listed in LEM-007.
+
+DENSITY FLOOR (A') NET: k=8 (THM-651), k=9 (THM-655), k=10 (THM-661 B_4 + composition + exact-G2), k=11 (LEM-009, CLOSED), k=12,13 (uniform D3 floor). All diameter-free via the covering reformulation. The remaining LRC14 pieces are Part A (kps) + the Lean assembly (proofs-first per owner).
+
+HANDOFFS: (a) k=12,13 rigorous closure = same LEM-009 machinery (D3 upper bound + exhaustible tail), margins bigger (+0.157/+0.252) -- should be quick. (b) the uniform far<=E[W]^2 / Var<=c*R2 is a genuine open barely-covers analytic problem (NOT on the critical path now that LEM-009 bypasses it) -- the exact overlap Fourier laws (LEM-007) are the tool if anyone revisits. (c) Part A + Lean hlarge wiring when proofs settle.
+
+FILES: THM-655/657/661, LEM-007, THM-654; ~20 scripts lrc14_*_macmini_S57 (+outs); reflections (average-not-sup, covering-problem). All pushed.
 ## klein-2026-07-08-S188 -- THE MULTI-OUTLIER FINITE-SPREAD BOUND: k=11 CLOSED. Multi-outlier decorrelation is FAST (correction ~1e-3 << margin +0.19); global min D3 over ALL primitive 11-sets = 0.436 (exhaustive minimizer) >= bar. k=11 = [exhaustive <=24] + [LEM-009] + [D3_c table] + [multi-outlier KH]; general AP-minimizes-mu dissolved (HYP-5387)
 
 Prompt (owner): prove the multi-outlier finite-spread bound to fully close k=11.
