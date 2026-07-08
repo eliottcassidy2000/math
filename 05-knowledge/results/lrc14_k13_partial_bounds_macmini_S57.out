@@ -1,0 +1,5 @@
+target E[maxgap] >= 0.1913
+  block         : valid-lb-holds=True; rig-pairwise E[mg]>=0.0767; int-PZ=0.1732 <target; true=0.2109
+  2blk-far(d80) : valid-lb-holds=True; rig-pairwise E[mg]>=0.0767; int-PZ=0.1994 >=target; true=0.2346
+  wide          : valid-lb-holds=True; rig-pairwise E[mg]>=0.0767; int-PZ=0.2236 >=target; true=0.2445
+WALL: deficit lives entirely in t in [1/12,1] (barely-covers, P(A_iA_j)=1/49 exactly, neg-associated) -> extremal lemma unavoidable

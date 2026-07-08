@@ -126,6 +126,33 @@ association of the Kronecker phases).
   (THM-638) — small for large differences, but small-difference pairs (2-block families) keep
   it a genuine pair-mass estimate, not free. This is the cleanest k=13-tail route on record.
 
+## Rigorous partial bounds and the precisely-localized wall (this session)
+
+Chasing a family-independent `E[maxgap] >= 0.1913` produced these rigorous pieces and one
+sharp localization of where the difficulty lives:
+
+- **`mu_t = 1` for `t < 1/k`** (exact, family-independent): `k` arcs of length `t < 1/k`
+  have total length `< 1`, cannot cover. Contributes `int_0^{1/k} 1 dt = 1/k = 0.0769` to
+  `E[maxgap]`, unconditionally.
+- **`mu_t >= t*k*(1 - (k-1)t)` for `t in [1/k, 1/(k-1)]`** (PAIRWISE, rigorous, verified 0
+  violations incl. the block): `N_t = #{gaps > t} <= 1/t`, so `E[N_t^2] <= (1/t)E[N_t]`, and
+  `E[N_t] >= k(1-(k-1)t)` (Bonferroni-2, each `P(phase in arc) = t`); Paley-Zygmund
+  `mu_t >= E[N_t]^2/E[N_t^2] >= t E[N_t]`. Adds only `~0.001` (the window is tiny).
+- **=> rigorous family-independent `E[maxgap] >= 0.0766`** — far below the target `0.1913`
+  (true block value `0.2104`). **The entire deficit lives in `t in [1/(k-1), 1]`**, the
+  "barely-covers" regime where the events are near-independent (`P(A_i A_j) = 1/49 = (1/7)^2`
+  exactly, for every pair — so Hunter/Bonferroni tree bounds give `E[W] >= -0.61`, useless)
+  yet NEGATIVELY associated (block `E[W] = 0.1266 < (6/7)^13 = 0.135`, so even the FKG/iid
+  lower bound fails). This is the precise obstruction: no first-/second-moment or
+  pairwise-tree tool reaches the bulk; the extremal (higher-order) structure is unavoidable.
+- **Integrated PZ-on-`N_t`** (`E[maxgap] >= int E[N_t]^2/E[N_t^2] dt` with the EXACT k-body
+  moments) numerically clears the target on the k=13 TAIL (`diam >= 76`: 2-block-far `0.199`,
+  wide-random `0.222` >= `0.1913`) but NOT the block (`0.173 < 0.1913`, AP76-covered anyway).
+  So the tail has a genuine PZ route IF `E[N_t]`, `E[N_t^2]` (k-body) are controlled for
+  spread families via decorrelation (Koksma on the empty-arc probability), the cleanest
+  rigorous k=13-tail path on record — but `E[N_t]` is the empty-arc probability itself, not
+  pairwise, so this needs the discrepancy estimate, not a shortcut.
+
 ## Verification & files
 
 `04-computation/lrc14_covering_reformulation_macmini_S57.py` (+ `.out`, to be written from the
