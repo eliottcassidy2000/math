@@ -1,0 +1,64 @@
+/Users/e/Documents/GitHub/math/04-computation/lrc14_avgform_conditional_tent_macmini_S57.py:163: DeprecationWarning: Fraction.__float__ returned non-float (type numpy.float64).  The ability to return an instance of a strict subclass of float is deprecated, and may be removed in a future version of Python.
+  print(f"  c({d}) exact = {ex[d]} = {float(ex[d]):.6f}  (float table: {c[d-1]:.6f})")
+/Users/e/Documents/GitHub/math/04-computation/lrc14_avgform_conditional_tent_macmini_S57.py:165: DeprecationWarning: Fraction.__float__ returned non-float (type numpy.float64).  The ability to return an instance of a strict subclass of float is deprecated, and may be removed in a future version of Python.
+  print(f"  greedy from exact top-5: {float(gex):.6f} vs c* {float(cstar_ex):.6f} "
+=== AVERAGE-FORM CONDITIONAL TENT: full-shape sweeps ===
+
+=== k=9: |P|=4 shapes (715), floor=31/63, greedy fill = 8x4+4 of 36 pairs, D0=2000 ===
+  PASS (greedy <= c*): 713/715
+  worst 6 shapes by greedy/c*:
+    P=(3, 4, 5, 11): greedy=1.7636 vs c*=1.7525 (ratio 1.0063); meas=0.5143, K=14, ctail=1.0128, argmax c: d=1 (1.7998)
+    P=(3, 4, 5, 13): greedy=1.7666 vs c*=1.7582 (ratio 1.0048); meas=0.5282, K=16, ctail=1.0142, argmax c: d=1 (1.8888)
+    P=(3, 5, 12, 13): greedy=1.7088 vs c*=1.7617 (ratio 0.9700); meas=0.5372, K=20, ctail=1.0175, argmax c: d=2 (1.8447)
+    P=(4, 5, 6, 13): greedy=1.7101 vs c*=1.7635 (ratio 0.9697); meas=0.5419, K=18, ctail=1.0156, argmax c: d=1 (1.8410)
+    P=(4, 5, 6, 11): greedy=1.7028 vs c*=1.7600 (ratio 0.9675); meas=0.5327, K=16, ctail=1.0141, argmax c: d=1 (1.7377)
+    P=(3, 5, 11, 12): greedy=1.6959 vs c*=1.7581 (ratio 0.9646); meas=0.5279, K=18, ctail=1.0160, argmax c: d=2 (1.7528)
+
+=== k=10: |P|=3 shapes (286), floor=8/35, greedy fill = 9x5+0 of 45 pairs, D0=2000 ===
+  PASS (greedy <= c*): 48/286
+  worst 6 shapes by greedy/c*:
+    P=(6, 8, 10): greedy=1.5024 vs c*=1.1811 (ratio 1.2720); meas=0.6357, K=20, ctail=1.0144, argmax c: d=2 (1.5730)
+    P=(3, 4, 5): greedy=1.5024 vs c*=1.1811 (ratio 1.2720); meas=0.6357, K=10, ctail=1.0072, argmax c: d=1 (1.5730)
+    P=(8, 10, 12): greedy=1.4792 vs c*=1.1832 (ratio 1.2502); meas=0.6476, K=24, ctail=1.0170, argmax c: d=2 (1.5441)
+    P=(4, 5, 6): greedy=1.4792 vs c*=1.1832 (ratio 1.2502); meas=0.6476, K=12, ctail=1.0085, argmax c: d=1 (1.5441)
+    P=(4, 5, 12): greedy=1.4450 vs c*=1.1845 (ratio 1.2199); meas=0.6548, K=14, ctail=1.0098, argmax c: d=3 (1.5273)
+    P=(3, 5, 12): greedy=1.4353 vs c*=1.1824 (ratio 1.2139); meas=0.6429, K=14, ctail=1.0100, argmax c: d=2 (1.5556)
+
+=== exact confirmation, worst k=9 shape P=(3, 4, 5, 11) ===
+  c*(P) exact = 577403/329472 = 1.752510
+  c(1) exact = 1960/1089 = 1.799816  (float table: 1.799816)
+  c(2) exact = 125405/69696 = 1.799314  (float table: 1.799314)
+  c(3) exact = 748405/418176 = 1.789689  (float table: 1.789689)
+  c(4) exact = 243145/139392 = 1.744325  (float table: 1.744325)
+  c(5) exact = 37303/23232 = 1.605673  (float table: 1.605673)
+  c(17) exact = 385/306 = 1.258170  (float table: 1.258170)
+  greedy from exact top-5: 1.763551 vs c* 1.752510 => FAIL
+
+=== k=10 residual: true avgc for extremal families (worst shapes) ===
+  P=(6, 8, 10) (c* = 1.1811):
+    block {0..9}           diam=  9: avgc = 1.1917  FAIL (diam<=10: THM-653)
+    2-AP {0,2,..,18}       diam= 18: avgc = 1.3453  FAIL *RESIDUAL*
+    block+1out d11         diam= 11: avgc = 1.1913  FAIL *RESIDUAL*
+    block+1out d14         diam= 14: avgc = 1.1709  PASS
+    block+1out d20         diam= 20: avgc = 1.1173  PASS
+    block+1out d30         diam= 30: avgc = 1.1442  PASS
+    two-block 5+5 gap12    diam= 16: avgc = 1.0351  PASS
+    spread AP*5            diam= 45: avgc = 0.9692  PASS
+  P=(3, 4, 5) (c* = 1.1811):
+    block {0..9}           diam=  9: avgc = 1.3453  FAIL (diam<=10: THM-653)
+    2-AP {0,2,..,18}       diam= 18: avgc = 1.0000  PASS
+    block+1out d11         diam= 11: avgc = 1.3089  FAIL *RESIDUAL*
+    block+1out d14         diam= 14: avgc = 1.2756  FAIL *RESIDUAL*
+    block+1out d20         diam= 20: avgc = 1.3090  FAIL *RESIDUAL*
+    block+1out d30         diam= 30: avgc = 1.3110  FAIL *RESIDUAL*
+    two-block 5+5 gap12    diam= 16: avgc = 1.1582  PASS
+    spread AP*5            diam= 45: avgc = 0.9109  PASS
+  P=(8, 10, 12) (c* = 1.1832):
+    block {0..9}           diam=  9: avgc = 1.1573  PASS
+    2-AP {0,2,..,18}       diam= 18: avgc = 1.3819  FAIL *RESIDUAL*
+    block+1out d11         diam= 11: avgc = 1.1573  PASS
+    block+1out d14         diam= 14: avgc = 1.1476  PASS
+    block+1out d20         diam= 20: avgc = 1.1017  PASS
+    block+1out d30         diam= 30: avgc = 1.1039  PASS
+    two-block 5+5 gap12    diam= 16: avgc = 1.0632  PASS
+    spread AP*5            diam= 45: avgc = 0.9990  PASS

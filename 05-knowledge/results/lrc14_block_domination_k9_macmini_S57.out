@@ -1,0 +1,30 @@
+  LP-max > c* (residual shapes, need diam+ledger): 215
+    P=(3, 4, 5): LP-max=1.5730 vs c*=1.1811 (block 1.3453); meas=0.6357
+    P=(1, 5, 6): LP-max=1.5585 vs c*=1.1789 (block 1.1421); meas=0.6238
+    P=(4, 5, 6): LP-max=1.5441 vs c*=1.1832 (block 1.3819); meas=0.6476
+    P=(2, 3, 5): LP-max=1.5441 vs c*=1.1832 (block 1.1939); meas=0.6476
+    P=(2, 5, 6): LP-max=1.5441 vs c*=1.1832 (block 1.2106); meas=0.6476
+    P=(1, 4, 5): LP-max=1.5293 vs c*=1.1811 (block 1.1175); meas=0.6357
+    P=(3, 5, 12): LP-max=1.5291 vs c*=1.1824 (block 1.3232); meas=0.6429
+    P=(2, 5, 12): LP-max=1.5228 vs c*=1.1802 (block 1.2297); meas=0.6310
+    P=(3, 4, 10): LP-max=1.5206 vs c*=1.1811 (block 1.2722); meas=0.6357
+    P=(3, 5, 8): LP-max=1.5117 vs c*=1.1778 (block 1.2071); meas=0.6179
+
+=== ENVELOPE-BLOCK BOUND (rigorous sup over ALL families), k=9 ===
+  EnvBlock <= c* (RIGOROUSLY DISCHARGED, no diam): 713/715
+  residual shapes (EnvBlock > c*, need diam route): 2
+    P=(6, 8, 9, 10): EnvBlock=1.7827 vs c*=1.7681 (excess +0.0146); meas=0.5544, K=22
+    P=(8, 9, 10, 12): EnvBlock=1.7724 vs c*=1.7696 (excess +0.0028); meas=0.5583, K=26
+
+=== ENVELOPE-BLOCK BOUND, k=10 ===
+  EnvBlock <= c*: 10/286; residual: 276
+    P=(8, 9, 10): EnvBlock=1.5567 vs c*=1.1800 (excess +0.3766)
+    P=(6, 8, 10): EnvBlock=1.5476 vs c*=1.1811 (excess +0.3665)
+    P=(9, 10, 12): EnvBlock=1.5323 vs c*=1.1821 (excess +0.3502)
+    P=(8, 10, 12): EnvBlock=1.5331 vs c*=1.1832 (excess +0.3499)
+    P=(3, 8, 10): EnvBlock=1.5124 vs c*=1.1778 (excess +0.3347)
+    P=(5, 6, 8): EnvBlock=1.4956 vs c*=1.1802 (excess +0.3153)
+    P=(3, 10, 12): EnvBlock=1.4857 vs c*=1.1807 (excess +0.3050)
+    P=(5, 9, 12): EnvBlock=1.4837 vs c*=1.1801 (excess +0.3036)
+    P=(5, 8, 12): EnvBlock=1.4766 vs c*=1.1826 (excess +0.2940)
+    P=(8, 9, 12): EnvBlock=1.4762 vs c*=1.1861 (excess +0.2901)
