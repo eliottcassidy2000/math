@@ -116,13 +116,28 @@ second moment: `E[W^2] = int int P(y1,y2 both uncovered) = near + far`, where
   empty-arc probability) is EXACT and `<= (2/7)E[W]` (since `q(L) <= q(1/7) = E[W]`);
 - `far = int int_{|y1-y2|>1/7} P(both empty)` (disjoint arcs) `-> E[W]^2` by decorrelation.
 
-For families with `far <= E[W]^2` (genuinely spread — verified: wide-11/13 have far 0.020/0.011
-`<= E[W]^2` 0.034/0.019), this gives the RIGOROUS bound
-`PZ = E[W]^2/E[W^2] >= E[W]^2/(near+E[W]^2) >= 1/(1 + (2/7)/E[W])`, which clears k=12,13 (PZ_lb
-0.589/0.533) and is `~0.31` at k=11 (just under the 0.331 bar — the last +0.02 needs the near
-part's strict decay `q(L) < q(1/7)` for `L>1/7`, which is real). Tight-cluster+outlier families
-(`far > E[W]^2`, block-like) are NOT decorrelated but are dominated by their compact cluster
-(finite-checked). So the tail reduces to ONE decorrelation estimate: `far <= E[W]^2 + o(1)` for
-spread families (a Koksma/discrepancy bound on disjoint-arc emptiness) — the single remaining
-analytic lemma for the complete uniform density floor. File:
-`04-computation/lrc14_PZ_compact_and_tail_macmini_S57.py` (near/far split).
+**RIGOROUSLY PROVED (verified, 0 violations):** `near <= (2/7)E[W]` (since `q(L) <= q(1/7)`),
+`far <= (5/7)E[W]` (since `q_2(y1,y2) = P(A1 ∪ A2 empty) <= P(A1 empty) = q_1(y1)`, integrate),
+hence `E[W^2] <= E[W]` and **`PZ >= E[W]`** unconditionally. Consequence: **k=13 reduces to the
+single bound `E[W] >= m_P = 0.0565`** (then `PZ >= E[W] >= m_P`; actually `PZ >= (7/6)E[W]` needs
+only `E[W] >= 0.0484`). **k=11,12 reduce to `far <= E[W]^2 + o(1)`** (the crude `far <= (5/7)E[W]`
+gives only `PZ >= 0.18 < 0.33/0.20`); with the EXACT near (which is small, `~0.015 << (2/7)E[W]
+~ 0.04`, because `q(L)` decays fast) and `far <= E[W]^2`, `PZ >= E[W]^2/(near+E[W]^2)` clears all
+three (worst wide k=11 clears at `0.46`; sidon-like `0.55-0.58`).
+
+**HONEST STATUS OF THE PROOF — the barely-covers wall.** The two residual inequalities,
+`E[W] >= 0.0565` (k=13) and `far <= E[W]^2 + o(1)` (k=11,12; equivalently `Var(W) <= near + o(1)`),
+are BOTH forms of the same obstruction: with total arc length `k/7 = 13/7 = 1.86 > 1`, the
+inclusion–exclusion for the empty-arc probability DIVERGES (`E[W]` Bonferroni-3 `= 1 - k/7 + S_2 -
+S_3 = -0.857 + 1.599 - 1.413 = -0.671`, vs true `0.127`; the pair masses `P(A_i A_j) = 1/49`
+exactly, so Hunter/tree bounds are useless). The truth is safe by a wide margin (true `E[W] ~
+0.13`, true `far ~ E[W]^2`, true tail `PZ ~ 0.4-0.8`), and the exact Fourier covariance formula
+`far_cov = Σ_{m≠0} Σ_N |V-hat(m,N)|^2 c_N` (`c_N = [N=0](1-2/7) - sin(2πN/7)/(πN)`) reduces it to
+klein's pairwise offset-tent masses (THM-638/645) — but the uniform bound over ALL families is
+the SAME fundamental difficulty as the μ-extremal lemma "AP minimizes μ" (THM-530), now in
+covering/Fourier form. **NOT proved here.** What IS new and rigorous: the reduction (PZ >=
+E[W]^2/(near+far), the exact near, `far <= (5/7)E[W]`, `PZ >= E[W]`), which cleanly SEPARATES
+k=13 (needs a scalar `E[W]` floor) from k=11,12 (need the decorrelation) and localizes the whole
+density floor to this one barely-covers estimate. File:
+`04-computation/lrc14_PZ_compact_and_tail_macmini_S57.py` (near/far split, rigorous-inequality
+verification, the barely-covers divergence).

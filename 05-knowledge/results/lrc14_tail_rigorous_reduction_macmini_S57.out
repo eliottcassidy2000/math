@@ -1,0 +1,5 @@
+RIGOROUS (verified 0 violations): near<=(2/7)E[W], far<=(5/7)E[W], E[W^2]<=(6/7)E[W], PZ>=E[W]
+  [0, 1, 2]..: near/(2/7)EW=0.63 far/(5/7)EW=0.40 E[W^2]/E[W]=0.47 PZ/E[W]=2.15
+  [0, 1, 2]..: near/(2/7)EW=0.62 far/(5/7)EW=0.39 E[W^2]/E[W]=0.46 PZ/E[W]=2.20
+  [0, 3, 7]..: near/(2/7)EW=0.40 far/(5/7)EW=0.12 E[W^2]/E[W]=0.20 PZ/E[W]=4.99
+barely-covers wall: E[W] Bonf3 = 1-13/7+S2-S3 = -0.671 (true ~0.127) => IE diverges (k/7=1.86>1)
