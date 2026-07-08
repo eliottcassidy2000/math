@@ -1,3 +1,21 @@
+## mac-mini-2026-07-08-S57 (cont.5) -- DERIVED the S-arc overlap Fourier mass law (THM-641 method) + the RESONANCE MECHANISM: Var(W) ~ c*R2 with EXPLICIT c via the (6/7)^(k-2) inactive-arc damping (LEM-007; HYP-5357)
+
+Prompt (owner): derive triple-overlap mass law via THM-641; prove resonance lemma Var(W)<=c*R2 via Fourier pair-resonance kernel; push LEM-005 discrepancy; explicit c.
+
+CONTEXT: fleet converged on my LEM-007 picture -- opus-S150 (far<=E[W]^2 <=> Var<=near, same as my LEM-007), kps-S81 (exact Var(W) decomp, 96% cancellation, REFRAMED brick B to 'derive the 3/4-arc overlap mass laws via THM-641' = my task), klein-S180 LEM-006 factorial-moment E[W] bound (CLOSED k=13). LEM-006 COLLISION: klein pushed 10:37 < mine 11:14 => my energy-variance bridge renumbered LEM-007.
+
+DELIVERED (the concrete building block kps flagged):
+1. THE S-ARC OVERLAP FOURIER MASS LAW (derived + VERIFIED): expanding uncovered = prod_i(1-h(y-e_i x)), h=1_{[0,1/7)}, the y-integral forces Sum n_i=0 (balanced), the x-character forces Sum n_i e_i=m => W-hat(m) = Sum_{balanced n, n.e=m} prod ghat_{n_i}, ghat_0=6/7. TRIPLE law: L_ijk-hat(m)=Sum_{n_i d_ik+n_j d_jk=m} hhat*hhat*hhat -- matches numeric Fourier EXACTLY (E[L_ijk]=L-hat(0), spread triple ~ L^3, resonant boosted).
+2. THE RESONANCE MECHANISM = THE (6/7)^(k-2) INACTIVE-ARC DAMPING: the k-|support| zero entries each carry ghat_0=6/7, so the pair term is (6/7)^(k-2)*[pair sum] and Var(W)'s leading = (6/7)^(2(k-2))*pair-resonance-kernel ~ (6/7)^(2(k-2))*R2*V1phi. This is the BULK of the 96% cancellation: naive R2*V1phi=1.18 (block) -> damped 0.073 (15x cut) -> true Var(W)=0.047 (support-3,4 trims last 1.5x).
+3. EXPLICIT c: c_k ~ (6/7)^(2(k-2))*V1phi = 9.5e-5 (k=11); V1phi=2/(3*343)-1/49^2=1.53e-3; empirical 5.6e-5 (off-diagonal + support-3,4 correction). Turns 'Var<=c*R2 mysterious c' into explicit-c; remaining gap = [off-diag pair resonances via difference-multiplicity R2, THM-641/638] + [support-3,4 cancellation sign: REDUCES Var, verified support2/Var=1.5-1.7>1].
+4. far<=E[W]^2 <=> Var(W)<=near (LEM-007), discrepancy = klein LEM-005.
+
+STATUS: tasks 1 (triple law) DONE+verified; 2,4 (resonance mechanism + explicit c) DERIVED to leading order, rigorous bound reduced to off-diagonal+cancellation (shared with klein LEM-005/kps-S81); 3 (far) = the Var<=near equivalence. The resonance lemma's MECHANISM is now explicit (the damping), not mysterious.
+
+FILES: LEM-007 (overlap Fourier law + resonance mechanism sections); lrc14_overlap_fourier_law / lrc14_energy_variance_bridge _macmini_S57 (+outs). LEM-006->LEM-007 collision fix.
+
+NEXT: (a) bound the off-diagonal pair-resonance kernel by R2*V1phi (difference-multiplicity, THM-641 Bernoulli collapse); (b) prove the support-3,4 correction reduces Var (the cancellation sign); together => rigorous Var(W)<=c*R2 with explicit c => closes far + brick B.
+
 ## klein-2026-07-08-S182 -- LEM-007: THE TRIPLE-OVERLAP MASS LAW (iid = L^j, {0,1,n}=L^2/n) via THM-641 + the covering-variance structure (leading c_lead=Var(ov)/2=7.64e-4 EXACT, net c~5.85e-5 after 92% S_3+ cancellation) + honest c-correction to brick B (E[W]>=0.1393 not 0.1313) (HYP-5387)
 
 Prompt (owner): derive the triple-overlap mass law via THM-641's method; prove Var(W)<=c*R2 via the Fourier pair-resonance kernel with explicit c; push LEM-005 discrepancy to close far<=E[W]^2.
