@@ -1,0 +1,18 @@
+=== (1) CONNECTIONS TO 614 ===
+  614 = 2*307 (307 prime); block-plus-far-point {0..9}u{16} R2:
+    R2({0..9,16}) = 614 (should be 614)
+  R2(AP_10)=2*sum(10-d)^2 = 570 = 570; R2(AP_11)=block_11 = 770 = 770
+  removal: R2 = R2(AP_10) + 20 + 4T; D=16: T=6 -> 570+20+24 = 614; D>=19: T=0 -> 570+20 = 590
+  590 = R2(AP_10)+20; 614-590=24=4*6; 770-614=156; 770-590=180=R2 gap block vs far-point
+  R2(AP_k)=k(k-1)(2k-1)/3: k=10->570=570, k=11->770=770
+
+=== (2) D3-vs-R2 LOWER ENVELOPE (brick B: R2<=614 => D3>=bar=0.3312) ===
+  R2 in [100,300): min D3 = 0.7062 (n=245) >=bar
+  R2 in [300,450): min D3 = 0.6483 (n=89) >=bar
+  R2 in [450,550): min D3 = 0.5572 (n=31) >=bar
+  R2 in [550,600): min D3 = 0.5552 (n=8) >=bar
+  R2 in [614,650): min D3 = 0.4650 (n=7) >=bar
+  R2 in [650,720): min D3 = 0.4416 (n=13) >=bar
+  R2 in [720,780): min D3 = 0.4048 (n=9) >=bar
+  ALL R2<=614: min D3 = 0.4650 (bar 0.3312, margin +0.1338) over 374 shapes
+  block R2=770: D3=0.4048; far-point R2=614: D3=0.4650

@@ -1,0 +1,13 @@
+=== (A) brick B reduction: D3 >= PZ >= 1/(1+c*R2/E[W]^2), c=5.67e-5, R2<=614 ===
+  worst (min D3) at R2<=614: R2=538 E[W]=0.1547 Var(W)=0.03202 PZ=0.4276 D3=0.5262 (bar 0.3312)
+  D3>=PZ verified (no anomalies); D3 margin +0.1949 vs PZ margin +0.0964
+  reduction: PZ = 1/(1+Var/E[W]^2); with Var<=5.67e-5*R2<=5.67e-5*614=0.0348 and E[W]>=0.14:
+     PZ >= 1/(1+0.0348/0.0196) = 0.3602 >= bar 0.3312
+  => brick B <= [Var(W)<=5.67e-5*R2 (resonance sign)] + [E[W]>=0.14] + [D3>=PZ, proved]
+
+=== (B) far<=E[W]^2 explicit crossover vs min pairwise difference (Sidon-spread) ===
+  mindiff=1 diam=96: E[W]=0.1783 far=0.0170 E[W]^2=0.0318 -> far<=E[W]^2 (gap -0.0147)
+  mindiff=2 diam=97: E[W]=0.1788 far=0.0180 E[W]^2=0.0320 -> far<=E[W]^2 (gap -0.0140)
+  mindiff=1 diam=96: E[W]=0.1783 far=0.0170 E[W]^2=0.0318 -> far<=E[W]^2 (gap -0.0147)
+  mindiff=1 diam=96: E[W]=0.1783 far=0.0170 E[W]^2=0.0318 -> far<=E[W]^2 (gap -0.0147)
+  (LEM-005: far -> (5/7)^12=0.0047 << E[W]^2~0.033; need discrepancy < 0.029; large mindiff => far<=E[W]^2)

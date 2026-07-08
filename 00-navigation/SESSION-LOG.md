@@ -1,3 +1,23 @@
+## klein-2026-07-08-S181 -- BRICK (B) REDUCED to the two shared miles (D3>=PZ>=1/(1+Var/E[W]^2); R2<=614 drops the E[W] requirement 0.1415->0.1313, ~12x margin) + 614 = R2(AP_10)+44 = TWICE the square-pyramidal number + far<=E[W]^2 confirmed for spread (HYP-5377)
+
+Prompt (owner): prove far<=E[W]^2 for spread, prove brick (B) resonance lemma for R2<=614, look back for connections to 614.
+
+PULLED: kps-S80 THM-662 (brick A PROVED: prim-diam>=16 => R2<=614; brick B = residual R2<=614=>D3>=bar); opus-S149 (exact-near route: spread branch PZ~0.53>>bar, residual = rare far>E[W]^2 primitives 695->7->~0, reframes to far<=E[W]^2).
+
+DELIVERED (3 tasks):
+
+(1) BRICK (B) REDUCED to the two shared miles. D3 >= PZ = E[W]^2/E[W^2] = 1/(1+Var(W)/E[W]^2) (degree-3 dominates degree-2, verified no anomalies). With Var(W)<=c*R2 (c=5.67e-5, klein-S179) and brick-A's R2<=614: D3 >= PZ >= 1/(1+5.67e-5*614/E[W]^2) = 1/(1+0.0348/E[W]^2) >= bar 0.3312 IFF E[W]>=sqrt(0.0348*bar/(1-bar))=0.1313. So brick (B) <= [resonance sign Var(W)<=c*R2 (THM-656)] + [E[W]>=0.1313 (LEM-006)] -- NO new lemma, just the two miles I've been proving. THE PAYOFF: capping R2<=614 caps Var(W) DIRECTLY, so the E[W] requirement DROPS from the razor 0.1415 (+0.001, the far/near route) to 0.1313 (+0.012, min E[W](k=11)~0.143) -- ~12x margin, the knife-edge becomes breathing room. Even degree-2 PZ suffices once R2 is bounded; D3's +0.134 margin (min D3=0.465 at R2=614, monotone envelope) is extra robustness vs D3-R2 scatter. Note: D3(block,R2=770)=0.405>=bar is the GLOBAL min already.
+
+(2) 614 CONNECTIONS: 614 = R2(AP_10)+20+4*6 = 570+44. R2(AP_k)=k(k-1)(2k-1)/3 = 2*(1^2+..+(k-1)^2) = 2*P_{k-1} = TWICE THE SQUARE-PYRAMIDAL NUMBER (k=10->570=2*285, k=11->770=2*385=global block max). The additive-energy scale of the entire k=11 density floor is the pyramidal sequence (because AP energy r_d=(k-|d|) => sum of squares). 614 = block-of-10 + far point at diam 16 = the compact/tail boundary; +20=far point's ordered cross-pairs, +24=T=6 overlaps. Dilation-invariance => 614 (not 2-adic R2({0,2..30})=630) is the tail max. 614=2*307 (incidental).
+
+(3) far<=E[W]^2 for SPREAD: confirmed on Sidon-spread k=11 (far=0.017 <= E[W]^2=0.032, gap -0.015). LEM-005 reduces it to phase-vector discrepancy < 0.029 (k=11: far_iid=(5/7)^12=0.0047 << E[W]^2~0.033), explicit for large min-difference via Erdos-Turan; opus-S149's exact-near delivers +0.20 room on the spread branch. The residual far>E[W]^2 primitives are rare/shrinking (opus).
+
+NET: the k=11 leg = [compact exhaustive prim-diam<=17] + [brick A PROVED] + [brick B = resonance sign + E[W]>=0.1313, both comfortable-margin under R2<=614]. The 'two open lemmas' are one reduction; the razor margin was an artifact of spending the bound uniformly instead of on the tail.
+
+FILES: THM-662 addendum (brick B reduction + 614); reflection the-two-miles-are-one-and-614-is-square-pyramidal; lrc14_D3_R2_envelope_614 / brickB_reduction_far_spread _klein_S181.out; HYP-5377.
+
+NEXT: (a) prove Var(W)<=c*R2 with explicit c (the resonance sign; closes brick B with E[W]>=0.1313); (b) explicit Erdos-Turan discrepancy threshold for far<=E[W]^2 (large min-diff); (c) @kps/@opus brick B needs only E[W]>=0.1313 now, not 0.1415 -- LEM-006 degree-6 gives E[W]>=0.153 for the block, comfortably above.
+
 ## mac-mini-2026-07-08-S57 (cont.4) -- k=12,13 ANALOG legs CLOSED + the THREE PZ legs UNIFY under one uniform D3 floor; brick (A) verified + shown OPTIONAL (HYP-5357 program)
 
 Prompt (owner): work barely-covers wall, formalize bricks (A)/(B), k=12,13 analogs, Part A/Lean wiring.

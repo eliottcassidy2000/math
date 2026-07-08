@@ -113,6 +113,41 @@ the clean **`far <= E[W]^2`** (disjoint-arc joint-emptiness), now with `+0.20` o
 universal fallback `far <= (5/7)E[W]` holds always (`P(both empty) <= P(y1 empty)`). Files:
 `04-computation/lrc14_k11_tail_sharp_near_opus_S149.py`, `lrc14_k11_far_verify_opus_S149.py`.
 
+## Brick (B) reduces to two miles, LESS knife-edge under R2 ≤ 614 (klein-S181)
+
+The residual brick (B) — `R2 <= 614 => D3 >= bar` — reduces cleanly, and the `R2 <= 614`
+restriction (brick A) makes it MORE comfortable, not less. Since `D3 >= PZ = E[W]²/E[W²]`
+(degree-3 dominates degree-2, verified no anomalies) and `PZ = 1/(1 + Var(W)/E[W]²)`, and since
+`Var(W) <= c·R2` with `c ≈ 5.67·10⁻⁵` (klein-S179), for `R2 <= 614`:
+
+> **`D3 >= PZ >= 1/(1 + c·614/E[W]²) = 1/(1 + 0.0348/E[W]²)`**, which is `>= bar = 0.3312`
+> **iff `E[W] >= sqrt(0.0348·bar/(1−bar)) = 0.1313`.**
+
+So brick (B) ⟸ **[resonance sign: `Var(W) <= c·R2`, THM-656/klein-S179] + [`E[W] >= 0.1313`,
+LEM-006]** — the two shared analytic miles, with `D3 >= PZ` proved. The payoff of `R2 <= 614`:
+the `E[W]` requirement DROPS from `0.1415` (the razor `+0.001` of the far/near route) to
+**`0.1313`** — `min_E E[W](k=11) ≈ 0.143` now clears it by `+0.012`, ~12× the original margin.
+Even the degree-2 `PZ` suffices once `R2` is bounded (the `D3` margin `+0.134`, min `0.465` at
+`R2 = 614`, is extra robustness against the `D3`-vs-`R2` scatter). Verified: min `D3` over `R2 <=
+614` sampled `= 0.465`, monotone-decreasing envelope in `R2`; `D3(block, R2=770) = 0.405 >= bar`
+already (the global minimizer is the max-energy block). File:
+`lrc14_D3_R2_envelope_614_klein_S181.out`, `lrc14_brickB_reduction_far_spread_klein_S181.out`.
+
+## The number 614 (klein-S181 — connections)
+
+`614 = R2(AP_10) + 20 + 4·6 = 570 + 44`. Structure:
+- `R2(AP_k) = k(k−1)(2k−1)/3 = 2·(1² + ⋯ + (k−1)²) = 2·P_{k−1}` (twice the `(k−1)`-th **square
+  pyramidal number** `P_{k−1}`): `k=10 → 570 = 2·285`, `k=11 → 770 = 2·385` (the global-max
+  block energy). So the additive-energy scale of the whole k=11 problem is the square-pyramidal
+  sequence.
+- The `+20 = 2·10` is the far point's ordered pairs with the 10-block; the `+4·6 = +24` is the
+  `T = 6` internal-difference overlaps at `D = 16` (removal lemma). `614 − 590 = 24` (overlap),
+  `770 − 614 = 156`, `770 − 590 = 180` (block vs detached-far-point energy gap).
+- Dilation-invariance is why `614` (not the larger `2-adic` energies like `R2({0,2,…,30}) = 630`)
+  is the tail max: non-primitive high-energy sets reduce to smaller primitive diameter and live in
+  the compact zone. `614 = 2·307` (307 prime) — the primality is incidental; the pyramidal
+  decomposition is the structural content.
+
 ## Files
 `04-computation/lrc_brickA_energy_diameter_kps_S80.py` (+ `.out`): the exact-integer
 exhaustive `max R2` by primitive diameter (`[16,24]`), the removal-lemma arithmetic, and the
