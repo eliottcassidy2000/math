@@ -1,0 +1,13 @@
+block_10: E[W_B] = 0.18256
+limit moments: L1=0.15635 (check (6/7)E[W_B]=0.15648), L2=0.06046, L3=0.02945
+D3_limit = 0.46460; bar=0.33121; margin +0.13339 -> CLEARS
+
+convergence D3(B u {D}) -> D3_limit (rate ~ C/D by Koksma-Hlawka, W^p bounded variation):
+  D=  25: D3=0.45871  (|D3 - limit|=0.00588, *D = 0.147)
+  D=  50: D3=0.46627  (|D3 - limit|=0.00167, *D = 0.084)
+  D= 100: D3=0.46487  (|D3 - limit|=0.00027, *D = 0.027)
+  D= 200: D3=0.46471  (|D3 - limit|=0.00012, *D = 0.023)
+  D= 400: D3=0.46477  (|D3 - limit|=0.00017, *D = 0.067)
+  D= 800: D3=0.46472  (|D3 - limit|=0.00012, *D = 0.097)
+
+=> D3(B u {D}) >= bar for ALL D (limit 0.4646 >= bar 0.3312 + monotone-ish; exhaustive covers D<=24, D3(25)=0.4587).

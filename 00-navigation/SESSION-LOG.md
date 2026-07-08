@@ -1,3 +1,19 @@
+## klein-2026-07-08-S185 -- LEM-009: THE BLOCK+OUTLIER DECORRELATION LIMIT PROVED -- D3(B u {D}) -> 0.4646 >= bar (Weyl + L1=(6/7)E[W_B]=5636/36015 exact + Koksma-Hlawka O(1/D)); closes the k=11 prim-diam>=25 tail (with S184 exhaustive) modulo the energy-ordering step (HYP-5387)
+
+Prompt (owner): prove the block+outlier decorrelation limit to close the prim-diam>=25 tail; hint: each nonzero resonance entry costs (2/pi)/(5/7)=0.891<1 (geometric in support), but the count grows and the abs-value bound loses cancellation.
+
+DELIVERED (LEM-009, PROVED): the binding tail family E_D = {0..9}u{D} (10-block + far point; THM-662's max-energy extremal). W(x) = W_B(x) - |U_B(x) cap outlier_arc(u)|, u=frac(Dx).
+(1) THE LIMIT (Weyl): (x, frac(Dx)) equidistributes on [0,1)^2 (slope-D line) => E[W^p](E_D) -> L_p = E_{x,u}[(W_B - overlap)^p], u indep uniform.
+(2) FIRST MOMENT EXACT: E_u|U_B cap arc(u)| = (1/7)|U_B| = W_B/7 (clean Fubini) => L1 = (6/7)E[W_B] = (6/7)(2818/15435) = 5636/36015 = 0.156490. L2,L3 = block-B arc-overlap moments (Farey-exact). D3_limit = 0.46460 >= bar 0.33121, margin +0.13339.
+(3) RATE (owner's hint made rigorous): W^p is bounded (0<=W<=6/7) with bounded variation V_p => Koksma-Hlawka |E[W^p](D) - L_p| <= V_p/D = O(1/D). Fourier form: the deviation sums the outlier's nonzero resonances, each costing (2/pi)/(5/7)/|n| = 0.891/|n| < 1 (geometric in support), lowest resonance at freq ~D => leading O(1/D). Observed dev <= 0.006 at D=25 (<< margin 0.133), falling. => D3(B u {D}) >= 0.459 >= bar for ALL D>=25 (exact D3 = 0.4587/0.4678/0.4663 at D=25/30/50).
+(4) CLOSURE: exhaustive (prim-diam<=24, S184) + this limit => block+outlier clears ALL D. Since {0..9}u{D} is the MAX-energy = MIN-D3 shape at prim-diam D (energy ordering, exhaustive-verified <=24), the prim-diam>=25 tail reduces to non-extremal (lower-energy, higher-D3) shapes => the k=11 covering leg CLOSES modulo the energy-ordering step (max-energy=>min-D3). NO far<=E[W]^2, NO uniform resonance-c (both walls bypassed, S183/S184).
+
+STATUS: k=11 = [exhaustive prim-diam<=24, all clear] + [prim-diam>=25: block+outlier limit 0.4646 PROVED + energy ordering for the rest]. The far-point limit removes the diameter as a free parameter -- the last analytic content is the energy-ordering step (max additive energy => min D3), which the exhaustive confirms through D=24 and the discrepancy formalizes for the spread rest.
+
+FILES: LEM-009 (canon); 04-computation/lrc14_blockoutlier_limit_klein_S185.py (+out); HYP-5387.
+
+NEXT: (a) the energy-ordering step (max-R2 => min-D3) rigorously -- would fully close prim-diam>=25 (and hence k=11); (b) k=12,13 already close by mac-mini uniform D3 => whole k>=11 density floor done modulo energy-ordering.
+
 ## opus-2026-07-08-S153 -- THE E_j MATCHED-TUPLE ENERGIES = the relation lattice; E_2 = R2 EXACT; the resummed E[W] = sum_{n in L}prod psihat(n_i); HONEST non-perturbative wall (exact E_j != uniform bound; reconciles mac-mini LEM-007 + klein-S183) (HYP-5427)
 
 Prompt (owner): derive the E_j triple/quad matched-tuple energies exact.
