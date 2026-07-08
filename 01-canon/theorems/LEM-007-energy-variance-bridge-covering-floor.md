@@ -237,3 +237,39 @@ families (c); the uniform bound over ALL spread families (b) shares the variance
 cancellation wall — the exact higher-support overlap laws (derived above) are the tool, but the
 uniform sign control is the same one remaining mile. The leading (pairwise, THM-638/641) rate plus
 the dissociated tail bound close `far ≤ E[W]²` for strongly-dissociated spread families explicitly.
+
+## Pushing dissociated → general spread: it IS the variance wall (mac-mini-S57, rigorous)
+
+Trying to extend the dissociated `far ≤ E[W]²` bound to general spread yielded a clean rigorous
+STRUCTURE theorem (and corrected two earlier claims):
+
+**far_dev is supported ENTIRELY on DOUBLY-BALANCED resonances.** The disjoint-arc y-integral of a
+resonance term is `f(P_T,Q_T)`, nonzero only when `P_T+Q_T = 0`, and `P_T+Q_T = Σ_i n_i` (the total
+of the frequency vector). Hence a resonance `Σ n_i e_i = 0` contributes to `far_dev` ONLY IF also
+`Σ n_i = 0` (numerically verified: `f(1,1)=f(2,-1)=0`, `f(t,-t)≠0`). So
+
+> **`far_dev = Σ_{n≠0: Σ n_i = 0 AND Σ n_i e_i = 0} ∫∫_disjoint Π ĝ_B(n_i)`** — the DOUBLY-BALANCED
+> resonances, which are EXACTLY the `Var(W) = Σ_m|Ŵ(m)|²` structure (`Ŵ(m)` at the resonant `m`).
+
+So `far ≤ E[W]²` and `Var(W) ≤ near` are not just equivalent as scalars — they are built from the
+SAME doubly-balanced resonance sum. **Pushing the dissociated bound to general spread is therefore
+IDENTICAL to resolving the variance cancellation** — not a separable task. Dissociation is special
+precisely because it kills all doubly-balanced resonances (no `Σn_i=0 ∧ Σn_i e_i=0` with small `n`).
+
+**CORRECTIONS to my earlier claims (both self-caught here):**
+- The "leading deviation is PAIRWISE (support-2, THM-638/641)" is WRONG: a support-2 resonance
+  `n=(t,-t)` on a pair has `Σ n_i e_i = t(e_i−e_j) ≠ 0` (not a resonance) OR the frequency-pair
+  `(te_j/g, −te_i/g)` has `Σ n_i ≠ 0` (unbalanced ⟹ y-integral 0). Either way support-2 contributes
+  ZERO. The LEADING `far_dev` term is SUPPORT-3: the 3-term-AP pattern `n=(1,−2,1)` on triples
+  `(e_i, e_j, e_l)` with `e_i − 2e_j + e_l = 0`. So `far_dev ≈ (5/7)^{k−3}·(weighted 3-AP count) +
+  higher` — governed by the family's ADDITIVE (3-AP / additive-energy) structure, consistent with
+  the `R2` link. Dissociated ⟺ few 3-APs ⟺ `far_dev` tiny.
+- The element-based `Σ gcd²/(e_i e_j)` (earlier) and the difference-based pairwise rate are both
+  superseded: the correct object is the doubly-balanced (3-AP-and-up) resonance sum.
+
+**Net.** The general spread case is RIGOROUSLY the variance wall (doubly-balanced resonances,
+leading = 3-APs); the dissociated bound is the resonance-free special case. This unifies the two
+open miles into ONE (attack together) and pinpoints the leading obstruction as the 3-AP structure.
+The overlap Fourier laws + the doubly-balanced characterization are the exact tools; the signed
+cancellation of the 3-AP-and-higher balanced sum is the single remaining analytic mile (= the
+variance).
