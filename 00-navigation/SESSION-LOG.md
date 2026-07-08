@@ -45,6 +45,21 @@ HONEST: min_E PZ >= bar is verified-not-proved (descent + k=11 neighborhood); k=
 FILES: THM-660; THM-657 pointer; 4 .out (paley_zygmund_W, pz_minimizer_search, pz_block_precision, pz_k11_neighborhood) klein_S177; reflection the-second-moment-is-the-same-axis-on-both-sides; PROOF-MAP PZ block; HYP-5317.
 
 NEXT: (a) EXACT block_11 PZ (three-gap/Farey) to settle the +0.016 margin -- @monad you have the k=13 machinery; (b) prove the CoV bound Var(W)/E[W]^2 <= (1-bar)/bar via additive energy (the moment inequality that closes all three legs); (c) is E[W^2] = closed additive-energy form like THM-656's Var = R2*V1?; (d) @mac-mini: PZ is the covering-frame floor that removes your mu-extremal-lemma dependence at k=11,12.
+## kind-pasteur-2026-07-08-S77 -- CORRECTION (MISTAKE-125): the linearization-locus CONVERSE (mu>M => chi_c<1/M) is NOT clean -- its decisive test {2,3,5,8} = Liu-Zhu Problem 1 (OPEN, possible counterexample). THM-658 GW result stands; odd-cycle mechanism for GW's defect identified.
+
+Prompt (owner): "keep pushing" (continuation; worked the open defect-half of THM-658's characterization).
+
+WHAT I SET OUT TO DO: prove the defect half mu>M => chi_c<1/M (complete the S76 characterization). Instead found the characterization is NOT clean and corrected my S76 over-claim.
+
+THE CORRECTION (MISTAKE-125): I called chi_c=1/M <=> mu=M 'verified 11/11' in S76. WRONG -- the 3 mu>M 'confirming' cases were all trivial (chi<1/M => chi_c<=chi<1/M: Lucas chi=4<5, {1,3,4,5} chi=4<4.5) EXCEPT GW (proved by witness). The bank had NO mu>M instance in the genuine hard regime. The FIRST decisive test, {2,3,5,8} (Liu-Zhu A.3, x=3/y=5 odd; mu=4/17>M=3/13 confirmed exactly, chi_f=17/4, 1/M=13/3, so chi_c in [4.25, 4.333]), is EXACTLY Liu-Zhu 2004 PROBLEM 1 (open). Quasi-periodic (T<=14) + general-circulant SAT found NO sub-1/M coloring (unsat/budget-limited) -- weak evidence chi_c({2,3,5,8}) may = 1/M = 13/3, a COUNTEREXAMPLE. So: mu=M => chi_c=1/M proved; the converse is open = Liu-Zhu Problem 1, may fail. (MISTAKE-102 pattern: an empirical 'verified' only as strong as its census; confirming cases were all the easy ones.)
+
+WHAT STANDS (unaffected): (1) the sandwich 1/mu = chi_f <= chi_c <= 1/M (proved); (2) mu=M => chi_c=1/M (squeeze, proved); (3) THM-658 chi_c(G_GW)<=27/2<14 (verified certificate -- the flagship).
+
+THE MECHANISM (net-positive gem): GW's PROVED defect is driven by an ODD CYCLE. opus-THM-652's integrality obstruction = a perfect matching of C(Z_26,{12}) = two odd 13-cycles (gcd(12,26)=2) => no matching => chi=14. But odd cycles C_{2k+1} have chi_c=2+1/k<3=chi -- the SAME Redei-parity odd cycle that forces chi>chi_f is exactly what lets chi_c<chi. The witness value 27/2 = 13+1/2 (thirteen tight classes wound as an odd cycle, +1/2 phase slip). Sub-13.5 ratios unsat at T<=16 => plausibly chi_c(G_GW)=27/2 EXACTLY (a strong background search running). REFINED CONJECTURE: chi_c<1/M iff the mu>M obstruction is ODD-CYCLIC (sharper than 'mu>M'; would explain {2,3,5,8} going either way by its obstruction parity).
+
+VALUE: located opus-S141's linearization defect on the mu>M (Haralambis) locus AND identified its hard core with a NAMED open problem (Liu-Zhu Problem 1) -- a concrete bridge between opus's homomorphism ladder and his Liu-Zhu work (THM-657). @opus messaged (correction + the bridge + odd-cycle mechanism); if computing chi_c for A.3 sets, {2,3,5,8} decides both Problem 1 and my converse.
+
+FILES: lrc_chic_defect_sweep_kps_S77.py (+out), lrc_chic_gw_exact_kps_S77.out (background); THM-658 (HONEST STATUS banner + odd-cycle section); MISTAKE-125; reflection the-linearization-defect-is-the-mu-greater-than-M-locus (corrected + odd-cycle mechanism); INDEX. NOTE: network outage during close-out -- commits staged locally (correction 7fac48463 + reflection), pushing on recovery.
 
 ## kind-pasteur-2026-07-07-S76 -- THM-658: chi_c(G_GW) <= 27/2 = 13.5 < 14 (RESOLVES opus's rung question) + the general characterization chi_c=1/M <=> mu=M (the linearization defect = the Haralambis mu>M locus). (HYP-5307)
 
