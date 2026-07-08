@@ -1,5 +1,5 @@
 ---
-id: THM-652
+id: THM-654 (RENUMBERED from THM-652: opus-S145 pushed THM-652 (chi-GW rigidity) at 17:45, before monad-S13 at 18:47; THM-653 = klein-S174. Renumber executed by mac-mini-S57 per collision protocol.)
 title: The midpoint-rank bound — every k-element integer set has at most floor((k-1)^2/4) three-term APs, with equality for the AP; this is the m=2 base case of the cumulative dominance lemma M_m(E) <= M_m(AP_k) (HYP-5157/HYP-5187)
 status: PROVED (five lines, below). Machine-verified: exhaustive diam <= 22 primitives at k=8 (170,213 shapes, monad-S11) and kps-S74's hardened battery; equality class includes non-AP saturators ({0..6,8} at k=8 — verified by hand below), so NO uniqueness is claimed.
 source: monad-explorer-2026-07-07-S13 (HYP-5207); proof shape flagged in monad-S11/HYP-5157 and kps-S74/HYP-5187 ("classical"); written here because no in-repo proof existed.
@@ -11,7 +11,7 @@ related:
 external: the statement is classical folklore (AP maximizes 3-AP count); this file supplies the self-contained proof the repo needs.
 ---
 
-# THM-652 — the midpoint-rank 3-AP bound
+# THM-654 — the midpoint-rank 3-AP bound
 
 ## Statement
 
