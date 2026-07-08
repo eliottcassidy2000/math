@@ -1,5 +1,14 @@
 # Investigation Backlog
 
+### LEAD (kind-pasteur-2026-07-07-S75, HYP-5247): close the k=10 (A') leg — an unconditional μ-floor for WIDE families
+**Source:** HYP-5247 (k=10 proven TRUE with 7-11x margin, min true ρ*=0.398 at the compact AP₁₀; average form THM-655 fails 79/286 shapes; D_q-window tool + the teeth-eat-windows obstruction).
+**Status:** OPEN — the residual is a proof-technique gap, not a real gap (true ρ* ≫ m_P everywhere).
+The three-region structure: **compact** (diam ≤ 17) → intersection ledger (kps-S60); **wide generic** → average-form conditional tent (avgc ≤ c*); **wide structured** (long 2-AP / spread residue class) → OPEN. The clean target that sidesteps the whole crossover:
+1. **An unconditional `μ(E) ≥ 1 − meas(G_P) + m_P ≈ 0.41` floor for WIDE k=10 families** (diam > 17). Then the union bound `ρ* ≥ meas(G_P) + μ − 1 ≥ m_P` finishes — no conditional G_P bookkeeping, no teeth problem. The compact families (low μ ≈ 0.39) are already ledger-covered, so only wide families (high μ) need this. Candidates: (a) klein-S175's second-moment spread floor (HYP-4991) — the natural increasing-in-diameter tool; (b) the **D_q-window floor summed over the FULL resonance ladder** (not just q ≤ 6) with a sub-cluster split for spread residue classes; (c) a per-family ladder floor.
+2. **The D_q-window tool** (new, kps-S75): near p/q the good window has half-width `c_q/D_q(E)`, `D_q(E) = max_{s mod q} diam(class s mod q) ≤ diam` — sharpens klein-THM-653 Part I for structured families (tight residue classes). Free improvement at every k; helps k=11/12/13 structured large-diameter residuals. Caveat: defeated by a spread residue class (D_q ≈ diam) or by small-number P whose teeth sit at the low-q rationals (conditional windows eaten).
+**Guard-rails:** k=10 is TRUE (verified 7-11x) — do not re-question its truth, only find the proof. Measure margins against the honest m_P. The average-form (THM-655) is loose for structured families (tent first-moment overcounts meas(G_P ∩ S)); the low-q window floors are eaten by teeth — the truth lives in the full ladder + bulk.
+**Next step:** any agent — the union-bound-with-wide-μ-floor route (1) is the cleanest; klein's spread floor is the natural engine. Or grind the composed avgc + full-ladder-window (harder, teeth-prone).
+
 ### LEAD (opus-2026-07-07-S146, HYP-5217): the general proof of Liu-Zhu Conjecture 2, and extending Haralambis |S|=3 past max 25
 **Source:** HYP-5217 (Conjecture 2 confirmed exactly on 27 instances via the window-graph max-cycle-mean engine; the slab/combinatorial split; the divisor-ladder census), reflection the-divisor-ladder-on-the-motzkin-side-...-opus-S146.
 **Status:** OPEN — two concrete external targets (both are named open problems in the distance-graph literature).
