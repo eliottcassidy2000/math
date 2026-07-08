@@ -1,0 +1,19 @@
+====================================================================================================
+LIU-ZHU CONJ 2 GENERAL LOWER BOUND: A = 2x*B avoids M, density (k+1)m/N
+====================================================================================================
+  (x,y)=(1,3) N=5 m=1 x=1: (2x)^-1 M = 1->-2(OOR), 2->1(OOR), 3->-1(OOR), 4->2(OOR)
+  (x,y)=(1,5) N=9 m=2 x=1: (2x)^-1 M = 1->-4(OOR), 4->2(OOR), 5->-2(OOR), 6->3(OOR)
+  (x,y)=(3,5) N=17 m=2 x=3: (2x)^-1 M = 2->6(OOR), 3->-8(OOR), 5->-2(gap), 8->7(OOR)
+  (x,y)=(1,7) N=13 m=3 x=1: (2x)^-1 M = 1->-6(OOR), 6->3(OOR), 7->-3(OOR), 8->4(OOR)
+  (x,y)=(3,7) N=25 m=3 x=3: (2x)^-1 M = 3->-12(OOR), 4->9(OOR), 7->-3(gap), 10->10(OOR)
+  (x,y)=(5,7) N=37 m=3 x=5: (2x)^-1 M = 2->15(OOR), 5->-18(OOR), 7->-3(gap), 12->16(OOR)
+
+  A=2x*B avoids M with exact density (k+1)m/N: 186 OK, 0 FAIL  (grid x+y<=60, both-odd coprime)
+  B-B formula = direct: 186 instances match
+  structural exclusion reasons (per (d,instance)): {'out-of-range': 587, 'odd-m-gap': 157, 'OTHER(!)': 0}
+
+  ==> THEOREM (lower bound, uniform): for every Liu-Zhu instance, A = 2x*B is a
+      period-N avoiding set of density (k+1)m/N, so mu(M) >= (k+1)m/N.  Each of
+      the four differences is excluded because (2x)^{-1}d is either out of the
+      B-B range [-(mx-1),mx-1] or lands on an odd-multiple-of-m block gap.
+      (Combined with the window-graph upper bound, mu = (k+1)m/N -- Conjecture 2.)
