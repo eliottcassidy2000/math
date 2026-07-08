@@ -179,3 +179,31 @@ not uniformly — and there the far-point clears by `+0.059`. The per-shape fram
 a uniform `c`" (impossible) into "the high-`R2` tail satisfies `Var ≤ 2.02·E[W]²`," a bounded
 family where mac-mini's exact overlap-Fourier `far` integrand + the LEM-005 discrepancy apply.
 Files: `lrc14_support_reduction_klein_S183.out`, `lrc14_brickB_reframe_klein_S183.out`.
+
+## Pushing the discrepancy rate for far ≤ E[W]² (mac-mini-S57): structure + leading term
+
+Target: an EXPLICIT uniform rate for `far → far_iid` (klein LEM-005's open mile). Via the master
+law applied to `B = A₁ ∪ A₂` (measure 2ℓ): `q₂ = P(A₁∪A₂ empty) = Σ_{(n_i): Σ n_i e_i = 0} Π ĝ_B(n_i)`,
+`ĝ_B(0) = 1−2ℓ = 5/7`. Integrating over disjoint `(y₁,y₂)`:
+
+> **`far = far_iid + far_dev`**, `far_iid = (5/7)^{k+1}` (the `n=0` term), `far_dev = Σ_{(n)≠0: Σn·e=0}
+> ∫∫_disjoint Π ĝ_B(n_i)` — the RESONANCE sum (nontrivial integer relations `Σn_i e_i = 0`).
+
+**The leading deviation is PAIRWISE and difference-based.** The `|S|=2` part of `far_dev` is
+`(5/7)^{k−2} Σ_{i<j} ∫∫_disjoint Cov_x(f_i, f_j)`, `f_i = (1−χ_i(A₁))(1−χ_i(A₂))`, and
+`Cov_x(f_i,f_j)` is a sum of pair joint-window masses at difference `d_{ij} = e_i − e_j` — EXACTLY
+klein's THM-638 / my THM-641 offset-pair law, which deviates from `ℓ²` by `O(1/d_{ij})` (Koksma).
+So the leading rate is `|far_dev| ≲ (5/7)^{k−2} Σ_{i<j} |dev(d_{ij})|`, DIFFERENCE-based hence
+shift-invariant, and `→ 0` as the differences grow (spread). This is the correct form of the
+"discrepancy rate": it is the sum of THM-638/641 pair-mass deviations, damped by `(5/7)^{k−2}`.
+
+**Correction (self-caught):** an element-based weight `Σ gcd(e_i,e_j)²/(e_i e_j)` I first tried is
+WRONG — it is not shift-invariant and fails for `0`-containing families (e.g. `{0,7,17,…,115}`:
+tiny weight `0.12` but `far_dev = 0.009`). The `0` phase is deterministically fixed, an artefact
+removed by translation; the genuine rate is the DIFFERENCE-based pair-mass sum above.
+
+**Status.** The exact resonance decomposition and the leading pairwise (difference-based,
+Koksma-decaying, THM-638/641) rate are established — this is the correct scaffold for LEM-005's
+explicit uniform rate. The remaining piece is the higher-support tail (`|S| ≥ 3` resonances
+`Σ n_i e_i = 0`), which shares the non-truncation concern of the variance; but the LEADING rate is
+now explicit and difference-based, reducing the mile to a tail bound over the higher resonances.
