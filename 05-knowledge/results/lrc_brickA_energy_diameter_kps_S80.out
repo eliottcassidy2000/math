@@ -1,0 +1,39 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc_brickA_energy_diameter_kps_S80.py:49: SyntaxWarning: invalid escape sequence '\m'
+  print("(2) THE FAR-POINT REMOVAL LEMMA: R2(A) = R2(A\max) + 20 + 4T")
+==============================================================================
+(1) EXHAUSTIVE max R2 by PRIMITIVE diameter, k=11 (exact integer):
+==============================================================================
+  D=16: maxR2 = 614  (#prim configs    5005)  argmax (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 16)
+  D=17: maxR2 = 602  (#prim configs   11440)  argmax (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17)
+  D=18: maxR2 = 610  (#prim configs   24310)  argmax (0, 2, 4, 6, 8, 9, 10, 12, 14, 16, 18)
+  D=19: maxR2 = 590  (#prim configs   48620)  argmax (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 19)
+  D=20: maxR2 = 590  (#prim configs   92377)  argmax (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 20)
+  D=21: maxR2 = 590  (#prim configs  167960)  argmax (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 21)
+  D=22: maxR2 = 590  (#prim configs  293920)  argmax (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 22)
+  D=23: maxR2 = 590  (#prim configs  497420)  argmax (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 23)
+  D=24: maxR2 = 590  (#prim configs  817135)  argmax (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 24)
+  => max over D in [16,24] = 614 (at D=16); R2<=590 for D in [19,24].
+
+==============================================================================
+(2) THE FAR-POINT REMOVAL LEMMA: R2(A) = R2(A\max) + 20 + 4T
+==============================================================================
+  R2(block_10 {0..9}) = 570 = R2(AP_10) = 570 (AP maximizes 10-set energy)
+  block_10 u {16}: R2 = 614  = 570 + 20 + 4*6  (T=overlaps; T=0 for D>=19)
+  block_10 u {17}: R2 = 602  = 570 + 20 + 4*3  (T=overlaps; T=0 for D>=19)
+  block_10 u {18}: R2 = 594  = 570 + 20 + 4*1  (T=overlaps; T=0 for D>=19)
+  block_10 u {19}: R2 = 590  = 570 + 20 + 4*0  (T=overlaps; T=0 for D>=19)
+  block_10 u {20}: R2 = 590  = 570 + 20 + 4*0  (T=overlaps; T=0 for D>=19)
+  block_10 u {25}: R2 = 590  = 570 + 20 + 4*0  (T=overlaps; T=0 for D>=19)
+  block_10 u {40}: R2 = 590  = 570 + 20 + 4*0  (T=overlaps; T=0 for D>=19)
+
+==============================================================================
+(3) PRIMITIVE large-D verification (targeted search): max R2 stays 590
+==============================================================================
+  D= 25: max R2 (primitive) = 590  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25)
+  D= 30: max R2 (primitive) = 590  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 30)
+  D= 40: max R2 (primitive) = 590  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 40)
+  D= 60: max R2 (primitive) = 590  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 60)
+  D=120: max R2 (primitive) = 590  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 120)
+
+(4) DILATION note: {0,2,4,..,18,30} has R2 = 630 but gcd=2 => NOT primitive; reduces to {0,1,..,9,15}, prim-diam 15 (compact zone).
+    R2 and D3 are dilation-invariant, so only primitive representatives matter.
