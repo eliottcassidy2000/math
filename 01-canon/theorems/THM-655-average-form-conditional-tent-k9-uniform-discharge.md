@@ -93,12 +93,21 @@ so `c(d) -> 1` at rate `~ K_P/d`; the exact table to `d = 5000` plus this tail c
 ## Scope and what it feeds
 
 - **k=9 (A') leg: CLOSED, diameter-free** — supersedes THM-653's diam<=16 exhaustion for k=9.
-- **k=10:** the same average-form bound is necessary but NOT sufficient alone: `c*(P) ~ 1.18`
-  is much tighter (the honest bar `0.4521` is far below `meas(G_P) ~ 0.64`), and `EnvBlock`
-  exceeds it at most shapes. k=10 needs the average-form conditional tent COMPOSED with
-  klein-S174's window mass `W_F` (THM-653) and/or the spread floor (klein-S175 HYP-4991):
-  the compact offenders (block, 2-AP) are diam<=18 so THM-653 covers them; the average form
-  covers the wide families. The k=10 split is the live handoff.
+- **k=10 (mapped this session, verified):** the average-form bound is necessary but NOT
+  sufficient alone: `c*(P) ~ 1.18` is much tighter, and even the CONDITIONAL COMPOSITION with
+  klein-S174's window mass — additive, `rho* >= meas(1 - avgc(1-floor)) + W_F^{G_P}/toll` —
+  closes only 225/286 shapes (primitive, diam>=11; non-primitive families reduce by dilation
+  invariance, primitive diam<=10 are klein-S174 exhaustive). The 61 residual shapes are
+  exactly the SMALL-DENOMINATOR ones (`P` containing `{4,5,6}`-type small parts), where the
+  `G_P` teeth are wide, windows shrink into the cuts, and every tent/window/roof PROXY
+  degrades. But the TRUTH there is easy: Monte-Carlo `rho*` at the worst residuals is
+  `0.42-0.49` = **7.5-8.6x `m_P`** (matching monad-S4's exact `min G2 = 7.88x m_P` at
+  `P={1,2,3,4,5}`). So k=10 is covered by the UNION `[average-form composition: 225 shapes]`
+  ∪ `[monad-S4 exact-G2 engine: small-denominator shapes, ~8x slack]` — two proved tools,
+  needing assembly. The spread floor (klein-S175) or a uniform `R >= 0.75` (per-shape
+  certified; `mu_tent = 8/35 = 0.229 > 0` at k=10 makes it trivial) makes the small-denom
+  side uniform instead of exact-per-shape. See reflection
+  `the-average-not-the-sup-and-the-proxy-truth-gap-macmini-S57`.
 - **k=11,12,13:** the gap-histogram/tent frame is vacuous (`floor_k <= 0`); those legs stay on
   the intersection ledger + bounded diameter (k=13 diam<=75 is UNCONDITIONAL, opus-S145 Lean
   AP76 certificate) + the spread route.
