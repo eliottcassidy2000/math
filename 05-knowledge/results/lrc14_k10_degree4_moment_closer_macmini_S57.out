@@ -1,0 +1,14 @@
+=== k=10 degree-4 moment closer, beta-OPTIMIZED; bar 0.4521 ===
+
+family                  R2  diam-fl  trueMu   deg4*  @beta max(df,d4)   verdict
+AP_10 (block d9)       570   0.4635  0.7755  0.5731  0.086     0.5731      PASS
+AP d10 perf            538   0.4171  0.8401  0.5581  0.086     0.5581      PASS
+AP d11 perf            490   0.3792  0.9401  0.5341  0.086     0.5341      PASS
+2-block 5+5 d13        410   0.3209  0.9311  0.4746  0.082     0.4746      PASS
+AP d12 perf2           406   0.3476  1.0000  0.4908  0.086     0.4908      PASS
+near-Sidon d16         302   0.2607  0.9796  0.4053  0.082     0.4053 true-safe
+Sidon d19              258   0.2195  1.0000  0.3708  0.079     0.3708 true-safe
+
+  ALL crossover families PASS or true-safe => k=10 wide-family mu floor holds
+  compact diam<=10 = klein THM-653 exhaustion; this targets the diam>10 crossover.
+  deg4* strictly sharper than klein Cantelli; where deg4<bar but trueMu>=bar, higher moments/degree close it.
