@@ -1,0 +1,15 @@
+========================================================================================
+k=10 TRUE rho* minimization over primitive 10-clusters x binding slow parts
+m_P = 0.056487
+========================================================================================
+  P= (1, 12, 13) meas(G_P)=0.6044: min rho* ~ 0.39800 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)  [OK]
+  P=(11, 12, 13) meas(G_P)=0.6241: min rho* ~ 0.42392 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)  [OK]
+  P=  (1, 2, 13) meas(G_P)=0.6593: min rho* ~ 0.45294 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)  [OK]
+  P=(10, 11, 12) meas(G_P)=0.6271: min rho* ~ 0.45476 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)  [OK]
+  P=   (1, 2, 3) meas(G_P)=0.6905: min rho* ~ 0.46599 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)  [OK]
+  P= (2, 12, 13) meas(G_P)=0.6218: min rho* ~ 0.41540 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)  [OK]
+  P= (1, 11, 13) meas(G_P)=0.6054: min rho* ~ 0.40518 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)  [OK]
+
+OVERALL min true rho* ~ 0.39800 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], P=(1, 12, 13)
+  vs m_P = 0.05649  =>  margin +0.34151  (7.05x)
+  (numeric; the true minimizer + margin guide the composed-bound proof)

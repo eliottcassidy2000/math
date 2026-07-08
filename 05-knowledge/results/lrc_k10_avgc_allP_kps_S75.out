@@ -1,0 +1,24 @@
+============================================================================================
+k=10: is sup_E avgc(E,P) <= c*(P) for ALL 286 slow parts?  (average-form alone)
+BETA=2/35, 1-tentfloor = 27/35 = 0.7714, m_P=0.05649
+============================================================================================
+
+  #P with sup_E avgc > c* (average-form FAILS alone): 79 of 286
+  #P where even avgc(AP_10) > c*: 65
+
+  Top 12 tightest/failing shapes (avgc_max - c*, P, avgc_max, c*, argmax E):
+    FAIL  gap=+0.1987  P=   (4, 5, 6)  avgc_max=1.3819  c*=1.1832  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)
+    FAIL  gap=+0.1768  P= (5, 12, 13)  avgc_max=1.3550  c*=1.1783  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)
+    FAIL  gap=+0.1746  P=  (5, 6, 13)  avgc_max=1.3536  c*=1.1790  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)
+    FAIL  gap=+0.1700  P=  (4, 5, 12)  avgc_max=1.3544  c*=1.1845  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)
+    FAIL  gap=+0.1642  P=   (3, 4, 5)  avgc_max=1.3453  c*=1.1811  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)
+    FAIL  gap=+0.1624  P=  (5, 6, 12)  avgc_max=1.3500  c*=1.1876  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)
+    FAIL  gap=+0.1536  P= (8, 10, 12)  avgc_max=1.3368  c*=1.1832  E=[0, 2, 4, 6, 8, 10, 12, 14, 16, 21] (diam 21)
+    FAIL  gap=+0.1528  P=  (5, 6, 11)  avgc_max=1.3309  c*=1.1782  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)
+    FAIL  gap=+0.1485  P= (5, 11, 12)  avgc_max=1.3263  c*=1.1779  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)
+    FAIL  gap=+0.1424  P=  (4, 5, 13)  avgc_max=1.3221  c*=1.1797  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)
+    FAIL  gap=+0.1408  P=  (3, 5, 12)  avgc_max=1.3232  c*=1.1824  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (diam 9)
+    FAIL  gap=+0.1310  P=  (6, 8, 10)  avgc_max=1.3121  c*=1.1811  E=[0, 2, 4, 6, 8, 10, 12, 14, 16, 21] (diam 21)
+
+  => 79 shapes need the klein-W_F composition (the compact offenders); the
+     average form covers the wide families.  Those P's are the composition targets.

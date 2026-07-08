@@ -1,0 +1,20 @@
+================================================================================================
+k=10 residual (diam>=18, avgc>c*): does the CONDITIONAL D_q-window floor give rho* >= m_P?
+================================================================================================
+  P= (1, 12, 13): no diam>=18 2-adic offenders found (avgc<=c*)
+  P=(11, 12, 13) c*=1.179:  8 offenders, min D_q-window rho* >= 0.13791 (2.44x m_P)  [CLOSED]  worst E=[0, 2, 4, 5, 6, 7, 8, 10, 19, 20]
+  P=   (1, 2, 3): no diam>=18 2-adic offenders found (avgc<=c*)
+  P=   (4, 5, 6) c*=1.183: 40 offenders, min D_q-window rho* >= 0.00000 (0.00x m_P)  [GAP]  worst E=[0, 2, 4, 6, 8, 9, 10, 11, 12, 48]
+  P= (5, 12, 13) c*=1.178: 40 offenders, min D_q-window rho* >= 0.01012 (0.18x m_P)  [GAP]  worst E=[0, 2, 4, 6, 8, 10, 11, 12, 14, 48]
+  P= (2, 12, 13): no diam>=18 2-adic offenders found (avgc<=c*)
+  P=   (3, 4, 5) c*=1.181: 19 offenders, min D_q-window rho* >= 0.00227 (0.04x m_P)  [GAP]  worst E=[0, 2, 4, 6, 7, 8, 9, 10, 11, 44]
+  P= (1, 11, 13): no diam>=18 2-adic offenders found (avgc<=c*)
+  P=  (6, 8, 10) c*=1.181: 40 offenders, min D_q-window rho* >= 0.00794 (0.14x m_P)  [GAP]  worst E=[0, 2, 4, 6, 8, 10, 12, 14, 31, 54]
+  P= (8, 10, 12) c*=1.183: 40 offenders, min D_q-window rho* >= 0.01389 (0.25x m_P)  [GAP]  worst E=[0, 2, 4, 6, 8, 10, 12, 27, 53, 54]
+
+  Summary: 1/6 binding P's have all diam>=18 offenders closed by the
+  conditional D_q-window floor.  Worst: 0.00000 (0.00x m_P) at P=(4, 5, 6), E=[0, 2, 4, 6, 8, 9, 10, 11, 12, 48]
+
+  READING: if all CLOSED, the k=10 leg = [ledger diam<=17] + [avgc<=c* wide] +
+  [D_q-window for the 2-adic residual] -- three tools, full cover.  The D_q-window is
+  klein-THM-653 with diam -> residue-class-diameter: the structural fix the 2-AP needs.
