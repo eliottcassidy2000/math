@@ -1,0 +1,43 @@
+=== k=9 residual closer: 2 shapes, TRUE compact sup ===
+
+compact search space (9-subsets of [0,18], min=0): 43758 families
+
+P=(6, 8, 9, 10): c* = 1.76814
+  compact (diam<=18) max avgc = 1.36664  (PASS)  arg=(0, 2, 4, 6, 8, 10, 12, 14, 16)
+  wide two-block/outlier max avgc = 1.11811  (PASS)  arg=(0, 1, 2, 3, 4, 8, 9, 10, 11)
+  >>> overall sup avgc = 1.36664 vs c* 1.76814  => DISCHARGED for ALL families
+
+P=(8, 9, 10, 12): c* = 1.76957
+  compact (diam<=18) max avgc = 1.40423  (PASS)  arg=(0, 2, 4, 6, 8, 10, 12, 14, 16)
+  wide two-block/outlier max avgc = 1.11637  (PASS)  arg=(0, 1, 2, 3, 8, 9, 10, 11, 12)
+  >>> overall sup avgc = 1.40423 vs c* 1.76957  => DISCHARGED for ALL families
+
+
+P=(8, 9, 10, 12): c* = 1.76957
+  compact (diam<=18) max avgc = 1.40423  (PASS)  arg=(0, 2, 4, 6, 8, 10, 12, 14, 16)
+  wide two-block/outlier max avgc = 1.11637  (PASS)  arg=(0, 1, 2, 3, 8, 9, 10, 11, 12)
+  >>> overall sup avgc = 1.40423 vs c* 1.76957  => DISCHARGED for ALL families
+
+=== AIRTIGHT hot-difference closure ===
+
+P=(6, 8, 9, 10): c* = 1.76814
+  max_d c(d) = cM = 1.80387 at d=6  (slightly > c*)
+  hot differences H = [6] (all d with c>c*); max H = 6
+  block cap nhot <= N_block(6) = 33 of 36 pairs
+  rigorous avgc bound = 1.80089 vs c* 1.76814  => bound loose; enum sup 1.40<<c* + klein diam<=16 closes
+
+P=(8, 9, 10, 12): c* = 1.76957
+  max_d c(d) = cM = 1.79104 at d=6  (slightly > c*)
+  hot differences H = [6] (all d with c>c*); max H = 6
+  block cap nhot <= N_block(6) = 33 of 36 pairs
+  rigorous avgc bound = 1.78926 vs c* 1.76957  => bound loose; enum sup 1.40<<c* + klein diam<=16 closes
+
+
+P=(6, 8, 9, 10): c* = 1.76814
+  c(6) = 1.80387 (sole hot);  c2 = max_(d!=6) c(d) = 1.55020 at d=8
+  rigorous avgc <= (8*c(6) + 28*c2)/36 = 1.60657 vs c* 1.76814  => *** DISCHARGED (elementary, all families/diam) ***
+
+P=(8, 9, 10, 12): c* = 1.76957
+  c(6) = 1.79104 (sole hot);  c2 = max_(d!=6) c(d) = 1.56716 at d=8
+  rigorous avgc <= (8*c(6) + 28*c2)/36 = 1.61692 vs c* 1.76957  => *** DISCHARGED (elementary, all families/diam) ***
+
