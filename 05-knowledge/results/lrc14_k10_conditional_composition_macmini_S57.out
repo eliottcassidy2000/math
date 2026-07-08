@@ -1,0 +1,21 @@
+=== k=10 CONDITIONAL COMPOSITION on PRIMITIVE diam>=11 (klein covers diam<=10) vs m_P=0.05649 ===
+    12 primitive-diam>=11 residual families x 286 shapes
+    (excluded: 6 non-primitive = dilations, reduce to primitive core;
+     7 primitive diam<=10 = klein-covered)
+
+shapes CLOSED by the composed bound (all residual families >= m_P): 225/286
+min over all (shape,family) of rho_comp - m_P = -0.08274 at P=(4, 5, 6), E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 11)
+
+worst 12 (deficit, shape, family):
+  -0.08274  P=(4, 5, 6)  E=(0, 1, 2, 3)..11
+  -0.06935  P=(5, 12, 13)  E=(0, 1, 2, 3)..11
+  -0.06903  P=(5, 6, 12)  E=(0, 1, 2, 3)..11
+  -0.06851  P=(4, 5, 12)  E=(0, 1, 2, 3)..11
+  -0.06750  P=(5, 6, 13)  E=(0, 1, 2, 3)..11
+  -0.06550  P=(3, 4, 5)  E=(0, 1, 2, 3)..50
+  -0.06044  P=(5, 6, 11)  E=(0, 1, 2, 3)..11
+  -0.05924  P=(5, 11, 12)  E=(0, 1, 2, 3)..11
+  -0.05554  P=(4, 6, 10)  E=(0, 1, 2, 3)..11
+  -0.05350  P=(4, 5, 13)  E=(0, 1, 2, 3)..50
+  -0.05288  P=(3, 5, 12)  E=(0, 1, 2, 3)..11
+  -0.04678  P=(10, 12, 13)  E=(0, 1, 2, 3)..11
