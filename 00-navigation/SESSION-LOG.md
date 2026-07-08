@@ -13,6 +13,19 @@ HONEST: exact structural identities (E_2=R2, the relation-lattice formulas) + ho
 NEXT: the discrepancy route (LEM-005) -- controlling Var(W) via the equidistribution of the phases directly (not the moment expansion); klein-S183's per-shape Var<=2.02 E[W]^2 + the block+outlier binding case.
 
 ---
+## kind-pasteur-2026-07-08-S84 -- attempted the resonance sign via the Farey per-pair route (mixed signs); opus-S152's inactive-arc DAMPING resolves the whole mechanism, SUPERSEDING my S82/S84 negatives (I had excluded the spectator m_i=0 coords). Self-correction + LEM-008 stands as complementary. (HYP-5397)
+
+Prompt (owner): prove the resonance sign via the Farey-cell moment route.
+
+WHAT I DID: attacked the resonance sign Var(W)<=c*R2 as a PER-PAIR Farey covariance sign (Resonance = sum_{d!=+-d'} r_d r_{d'} Cov(g(dx),g(d'x)); r_d r_{d'}>=0 so per-pair Cov<=0 => Resonance<=0). TESTED (grid-exact): the per-pair covariances are MIXED-SIGN -- tent 58/182 positive; overlap 134/182 POSITIVE (large, up to 8e-4). So no clean per-pair sign.
+
+THE RESOLUTION (opus-S152, concurrent -- crediting + correcting my record): opus derived the exact j-fold VARIANCE kernels c_j via a tent-power recursion AND showed the ~96% cancellation is the INACTIVE-ARC DAMPING (1-theta)^{2(k-|supp|)} -- the spectator coords m_i=0 (weight psihat(0)=1-theta per arc NOT in the overlap), reproducing the tight c=6.1e-5 at k=11. THIS SUPERSEDES MY NEGATIVES: my S82 'non-perturbative' was a FRAMING ERROR -- I required all m_i!=0, EXCLUDING the spectators; keeping them gives opus's damping = convergent. My S84 per-pair 'no clean sign' likewise omitted the damping (wrong object). So the resonance sign is NOT non-perturbative; opus has the clean structure. I RETRACTED the 'non-perturbative / no clean route' framing (INDEX + LEM-008 corrected).
+
+WHAT STANDS: LEM-008 (my S83, mean overlap mass kernels E[L_S] = sum_{m in Lambda_S} prod c_m over the balanced additive-relation lattice) -- correct + verified, COMPLEMENTARY to opus's variance kernels (mean vs variance, distinct objects). OFFERED opus the connection for their remaining E_3, E_4 (resonance multipliers): my Lambda_S rank-(|S|-2) additive-relation lattice IS the structure counting the matched j-tuples (E_3 = order-3 additive energy = # matched triples = Sidon-violations; rank |S|-2 = # independent relations multiplying c_j). Happy to derive E_3 if useful (messaged opus).
+
+STATE OF BRICK (B): opus-S152 has the exact damped kernels + tight c; REMAINING (opus's, active) = E_3,E_4 multipliers + uniform bound Var<=(1-theta)^{2(k-2)}(R2/2)c_2(1+eps), eps~0.3. The resonance sign is CLOSE via opus's damping route (not my ruled-out Fourier/Farey-per-pair routes). k=11 = brick A (THM-662, mine, proved) + brick B (opus damping route, active).
+
+FILES: lrc_resonance_farey_signtest_kps_S84 (+out, kept as honest record of the spectator-omission); LEM-008 (corrected note); INDEX self-correction. Credit opus-S152 (HYP-5417).
 
 ## opus-2026-07-08-S152 -- THE EXACT j-FOLD OVERLAP VARIANCE KERNELS via a tent-power recursion: c_j = int t^j - sum_{r>=1}C(j,r)theta^2r c_{j-r} (int t^j = 2theta^{j+1}/(j+1)); c_2=11/7203, c_3=25/235298 (triple), c_4=321/28824005, ...; the Var(W) = sum_j (1-theta)^{2(k-j)}[C(k,j)+E_j]c_j structure validated (Sidon=diagonal, block=R2-resonance), tight c=6.1e-5 REPRODUCED at k=11 (HYP-5417)
 

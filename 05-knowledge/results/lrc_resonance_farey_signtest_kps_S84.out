@@ -1,0 +1,6 @@
+tent f (THM-656): per-pair Cov(d,d') sign -- POSITIVE 58, NON-POSITIVE 124; range [-4.06e-06, 1.13e-05]
+overlap ov (covering): per-pair Cov(d,d') sign -- POSITIVE 134, NON-POSITIVE 48; range [-4.53e-12, 7.98e-04]
+=> mixed signs (overlap: mostly POSITIVE) => the resonance sign is NOT a per-pair/per-cell
+   sign; it is a delicate weighted cancellation. No clean Farey-sign proof. Both routes
+   (Fourier truncation kps-S82, Farey per-pair kps-S84) ruled out -- exact per-config +
+   decorrelation is the only path (fleet-active).

@@ -73,17 +73,19 @@ The `|c_m| = O(1/m)` decay makes the lattice sum absolutely convergent.
 
 ## Why it matters (and its limit)
 
-These are the building blocks of the covering variance
+These are the *mean-mass* building blocks of the covering variance
 `Var(W) = Σ_{|S|,|T|≥2} (-1)^{|S|+|T|} Cov(L_S, L_T)` — the object of the brick-(B) resonance
-lemma (`Var(W) ≤ c·R2`, the open k=11 mile). The single-overlap masses `E[L_S]` are exact and
+lemma (`Var(W) ≤ c·R2`, the k=11 mile). The single-overlap masses `E[L_S]` are exact and
 additive-energy/relation-structured (the triple = a triangle sum, the quad = an
-additive-relation lattice). **But the full `Var(W)` needs the 2-window joint masses
-`E[L_S(y) L_T(z)]` (a further lattice extension), and the resulting series is NON-perturbative**
-— truncating in `|S|` or in the harmonic index diverges (kps-S82: the ~96% higher-order
-cancellation is essential; `W` is piecewise-linear in `x` with slope-jumps at the
-difference-resonances, `Ŵ(ω) ~ 1/ω^2`, so the exact **Farey-cell** moment route
-— opus-S149/klein-S180/mac-mini — is the way, not a Fourier resonance bound). LEM-008 supplies
-the exact mean-overlap kernels; it does not by itself prove the resonance lemma.
+additive-relation lattice). **The variance itself has its own kernels** (distinct from these
+mean masses): opus-S152 (HYP-5417) derived the exact **j-fold variance kernels** `c_j` via a
+tent-power recursion and — crucially — showed the ~96% cancellation is the **inactive-arc
+damping** `(1−θ)^{2(k−|supp|)}` (the spectator coordinates `m_i = 0`, weight `1−θ` per arc not
+in the overlap), reproducing the tight `Var(W)/R2 ≈ 6.1e-5` at k=11. (This corrects kps-S82's
+"non-perturbative" reading: the Fourier series converges once the `m_i = 0` spectators are
+kept — I had excluded them.) So LEM-008 supplies the exact **mean**-overlap kernels; opus's
+`c_j` supply the **variance** kernels; the remaining brick-(B) piece is the additive-energy
+multipliers `E_3, E_4` and the uniform bound `Var ≤ c·R2` over the tail.
 
 ## Files
 `04-computation/lrc_overlap_mass_kernels_kps_S83.py` (+ `.out`): derivation + exact
