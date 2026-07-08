@@ -34,7 +34,7 @@ content.
    strictly above the loneliness `M` (a "separation"); `{1,3,4,5}` is the smallest, GW is a
    `|S|=13` example, Lucas `{1,3,4,7}` another.
 
-## The single fact
+## The single fact (and the honest boundary — S77 correction)
 
 For any finite `S`, two universal bounds sandwich the circular chromatic number:
 
@@ -43,15 +43,35 @@ For any finite `S`, two universal bounds sandwich the circular chromatic number:
 The left is vertex-transitivity (`χ_f = 1/`independence-ratio). The right is the **linear
 coloring** `c(x) = a·x mod N` where `a/N` is the loneliness witness — the rotation coloring,
 the direct image of an LRC witness in the graph world. Since `μ ≥ M` always, the sandwich is
-nonempty, and it collapses precisely on the `μ = M` locus:
+nonempty, and it **collapses on the `μ = M` locus**:
 
-> **`χ_c(G_S) = 1/M(S)  ⟺  μ(S) = M(S)`.**
+> **`μ(S) = M(S)  ⟹  χ_c(G_S) = 1/M(S)`** (proved, squeeze).
 
-The `μ = M ⟹ χ_c = 1/M` half is **proved** (squeeze). The `μ > M ⟹ χ_c < 1/M` half is a
-**conjecture**, verified on 11 instances with zero counterexamples — and at GW I built the
-explicit witness (THM-658): a quasi-periodic `(27,2)`-coloring with two alternating
-color-increments `{9,16}`, holding an effective gap `2/27 > 1/14 = M`, something **no single
-rotation can do**. So `χ_c(G_GW) ≤ 13.5 < 14`.
+I first (S76) claimed the full equivalence `χ_c = 1/M ⟺ μ = M`, "verified 11/11." **That was
+premature (MISTAKE-125).** The converse `μ > M ⟹ χ_c < 1/M` is **open and may fail**: the
+`μ > M` cases that "confirmed" it were all trivial (`χ < 1/M ⟹ χ_c ≤ χ < 1/M`: Lucas, `{1,3,4,5}`)
+except GW. The first decisive test, `{2,3,5,8}` (a Liu–Zhu A.3 set, `x=3, y=5` odd; `μ = 4/17 >
+M = 3/13`, `χ_c ∈ [17/4, 13/3]`), is **exactly Liu–Zhu 2004 Problem 1 (OPEN)** — and every
+sub-`1/M` coloring search came back empty (budget-limited/unsat), weak evidence that
+`χ_c({2,3,5,8})` might *equal* `1/M`, a **counterexample**. So the converse is not a law; it is
+a named open problem. What *is* proved at GW stands: the explicit `(27,2)`-witness (THM-658)
+with two alternating increments `{9,16}` holding gap `2/27 > 1/14 = M` — **`χ_c(G_GW) ≤ 13.5 < 14`**.
+
+## Why GW's defect IS provable: the odd cycle (the mechanism)
+
+The reason GW works — and the likely reason `{2,3,5,8}` is hard — is the **parity of the
+integrality obstruction**. opus-THM-652 forces `χ(G_GW) = 14` because the density-`1/13`
+optimal classes, to `13`-color, must perfectly match the circulant `C(Z₂₆, {12})`, whose
+components are **two odd `13`-cycles** (`gcd(12,26) = 2`; `12` has order `13`). An odd cycle
+has no perfect matching → `χ = 14`. **But an odd cycle `C_{2k+1}` has `χ_c = 2 + 1/k < 3 = χ`** —
+the circular chromatic number *goes around* it with a phase slip. So the **same Rédei-parity
+odd cycle that blocks the integer coloring is exactly what lets the circular coloring beat it.**
+The witness value is telling: `27/2 = 13 + 1/2` — thirteen nearly-tight classes wound as an
+odd cycle, closing with a `1/2` phase slip (odd length forces the half-step). Sub-`13.5`
+searches came back empty (`T ≤ 16`), so plausibly **`χ_c(G_GW) = 27/2` exactly**, the `+1/2`
+being the odd-cycle defect. The refined conjecture this suggests: **`χ_c < 1/M` iff the
+`μ > M` integrality obstruction is odd-cyclic** — sharper than "μ > M", and it would explain
+why `{2,3,5,8}` (whose obstruction parity is not yet checked) could go either way.
 
 ## Why the three strands are one
 
@@ -79,13 +99,17 @@ the tight instances. This redirects the graph route from "prove LRC" to "underst
 
 ## Ledger
 
-- Proved: the sandwich `1/μ ≤ χ_c ≤ 1/M`; the easy half `μ = M ⟹ χ_c = 1/M`; the GW witness
+- Proved: the sandwich `1/μ ≤ χ_c ≤ 1/M`; the direction `μ = M ⟹ χ_c = 1/M`; the GW witness
   `χ_c(G_GW) ≤ 27/2 < 14` (THM-658, verified certificate).
-- Conjectured (11/11, 0 counterexamples): `χ_c = 1/M ⟺ μ = M`; equivalently the defect half
-  `μ > M ⟹ χ_c < 1/M`.
-- Cross-domain: the circular-coloring linearization defect (opus-S141) = the Haralambis
-  `μ > M` separation locus = the room a variable-speed coloring needs. One fact, three names.
-- Open: the defect half in general (a construction from a `μ > M` witness to a sub-`1/M`
-  coloring — GW's two-speed winding is the template); the exact `χ_c(G_GW) ∈ (13, 13.5]`.
+- **Retracted (MISTAKE-125): the clean equivalence `χ_c = 1/M ⟺ μ = M` and the "11/11" —
+  the converse `μ > M ⟹ χ_c < 1/M` is OPEN and may be false.**
+- Cross-domain (survives, refined): the circular-coloring linearization defect (opus-S141)
+  is *located on* the Haralambis `μ > M` locus and *driven by* the odd-cyclic parity of the
+  integrality obstruction (Rédei). Its hard core is a NAMED open problem: Liu–Zhu Problem 1
+  (`χ_c` of A.3 sets with `x,y` odd), decided by `{2,3,5,8}`.
+- Open: `χ_c({2,3,5,8}) ∈ [17/4, 13/3]` (= Liu–Zhu Problem 1 — decides the converse); the
+  refined conjecture `χ_c < 1/M ⟺ obstruction is odd-cyclic`; the exact `χ_c(G_GW)` (likely
+  `27/2` via the odd-cycle `+1/2` slip); a general defect construction from an odd-cyclic
+  `μ > M` witness.
 - Files: `lrc_chic_gw_quasiperiodic`, `lrc_chic_gw_sat`, `lrc_chic_linearization_locus`
-  `_kps_S76`; THM-658.
+  `_kps_S76`, `lrc_chic_defect_sweep_kps_S77`; THM-658; MISTAKE-125.
