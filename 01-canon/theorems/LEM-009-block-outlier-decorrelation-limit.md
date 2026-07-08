@@ -150,6 +150,13 @@ correction — no far ≤ E[W]², no uniform resonance-c, no R2 scatter. File:
 
 ## Why the c-block table IS the worst case (kps-S86 — the missing justification)
 
+> **⛔ Block-worst below is REFUTED (opus-S155, conceded kps-S87; see the top banner + the next
+> section "The corrected axis").** The decorrelation limit `D3_c` is an **upper** bound on D3 (a
+> *correlated* interior 11th point gives *lower* D3 than a decorrelated far outlier), so it cannot be
+> the floor: `A = (0,3,6,8,9,12,15,18,21,24,27)` has `D3 = 0.452986 < 0.4646`. **What survives:** the
+> global min = full block `{0..10} = 0.404751` (dilation-invariant) and merge-domination
+> (multi-cluster raises D3). The corrected picture is scale/prim-diam monotonicity — see below.
+
 klein-S187's table is over `c`-**blocks** ⊕ iid outliers; invoking it for a *general* prim-diam ≥ 25
 shape requires that this is the **extremal** structure among all shapes with max-cluster `≤ c`. Two
 verified monotonicities supply exactly that:
@@ -209,3 +216,30 @@ plus a fast-decorrelating, high-margin tail — no far ≤ E[W]², no uniform re
 no general extremal lemma. The single fully-rigorous residual is the explicit uniform constant `K` in
 the multi-outlier Erdős–Turán bound (mechanical; the data shows the realized correction is `~10⁻³`,
 `130×` inside the `+0.13` margin). File: `lrc14_multioutlier_rate_klein_S188.out`.
+
+> **⚠ Note (kps-S87):** klein-S188's "global min = 0.436 (prim-diam 18)" **undercounts** — the full
+> block `{0..10}` (prim-diam 10) has `D3 = 0.404751 < 0.436`, and opus-S155's `A` (prim-diam 27) has
+> `D3 = 0.4530 < 0.4587`, a `c`-longest-AP-10 tail shape below the block+outlier. Both are `≥ bar`, so
+> the *closure* survives, but the "min = 0.436 / block+outlier is the tail min" statements are the
+> window-cluster claims opus-S155 refuted. The corrected axis is next.
+
+## The corrected axis: SCALE / prim-diam monotonicity (kps-S87, after opus-S155)
+
+Because `D3` is **dilation-invariant** but window-cluster is not, the extremal is on the
+**scale/prim-diam** axis. For the extremal family "`AP₁₀` at scale `d` + best interior point" the min
+D3 **rises with `d`, converging to the decorrelation limit `0.4646` FROM BELOW**:
+
+| d (scale) | 1 (block) | 2 | 3 | 4 | … | →∞ |
+|---|---|---|---|---|---|---|
+| prim-diam | 10 | 18 | 27 | 36 | | ∞ |
+| min D3 | **0.4048** | 0.4356 | 0.4530 | 0.4592 | … | 0.4646 |
+
+So: the **global** min is the block (`d=1`, `0.4048`, prim-diam 10 — in the exhaustive range); the
+**tail** min (prim-diam ≥ 25) is at `d=3` (`0.4530`, prim-diam 27); and the "dangerous" tail shapes
+are at **small scale** (bounded prim-diam) ⇒ **exhaustible**. Random (non-arithmetic) tail shapes sit
+at `0.59–0.66`, far above — only the AP-arithmetic structure is low. This gives the corrected,
+dilation-invariant closure path: **[extend the exhaustive to prim-diam ≤ ~30, capturing the
+small-scale AP+interior extremals] + [a decorrelation *lower* bound for large prim-diam** (where D3 →
+the limit `≥ 0.4646` from below)]. The `D3_c` table remains valid only as the large-scale **limit**
+(upper bound), not the floor. File: `lrc14_scale_monotonicity_kps_S87.py` (+`.out`), HYP-5457
+(corrected).

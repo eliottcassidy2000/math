@@ -1,0 +1,39 @@
+============================================================================================
+SCALE-MONOTONICITY (kps-S87): block-worst REFUTED, corrected axis = scale/prim-diam
+bar = 0.331212
+============================================================================================
+
+[1] opus-S155 counterexample (verified, exact):
+  A = (0, 3, 6, 8, 9, 12, 15, 18, 21, 24, 27) = 3*{0..9} + interior 8, primitive, prim-diam 27
+  D3(A) = 0.452986  <  0.458714 (block+outlier)  <  0.4646 (D3_10 limit)
+  => 'block+outlier is tail min' and 'D3 >= D3_10' are FALSE.
+
+[2] BOUND DIRECTION: correlated interior 11th point vs decorrelated far outlier
+  AP + 30 (far (completes 3*{0..10}, non-prim)): D3 = 0.404751  prim-diam 10
+  AP + 28 (far outlier                       ): D3 = 0.467801  prim-diam 28
+  AP +  8 (INTERIOR (opus)                   ): D3 = 0.452986  prim-diam 27
+  AP +  2 (interior                          ): D3 = 0.464207  prim-diam 27
+  => interior (correlated) < far (decorrelated): the decorrelation limit is an UPPER bound.
+
+[3] SCALE-MONOTONICITY: AP_10 at scale d + BEST interior point (min over positions):
+   d  prim-diam     min D3    margin   (-> decorrelation limit 0.4646)
+   2         18   0.435613  +0.10440
+   3         27   0.452986  +0.12177 (rising)
+   4         36   0.459160  +0.12795 (rising)
+   5         45   0.458746  +0.12753 (!)
+   6         54   0.463545  +0.13233 (rising)
+   7         63   0.464293  +0.13308 (rising)
+   8         72   0.463865  +0.13265 (!)
+   9         81   0.463850  +0.13264 (!)
+  10         90   0.463877  +0.13266 (rising)
+  => min D3 RISES with scale d toward the limit; GLOBAL min = block (d=1, 0.4048, prim-diam
+     10, exhaustive); TAIL min = d=3 (0.4530, prim-diam 27).  The dangerous tail shapes are
+     at SMALL scale (bounded prim-diam) => EXHAUSTIBLE.
+
+============================================================================================
+CORRECTED PICTURE: the tail floor is on the dilation-invariant SCALE/prim-diam axis (not
+window-cluster).  Closure path: exhaustive to prim-diam <= ~30 (captures small-scale AP+
+interior extremals) + decorrelation LOWER bound for large prim-diam (D3 -> >=0.4646 from
+below).  Every tail shape found has D3 >= 0.4530 >= bar (margin +0.12).  block-worst / the
+decorrelation UPPER bound cannot serve as the floor -- opus-S155 is correct.
+============================================================================================

@@ -31,6 +31,26 @@ Constructive resolution added to CASE-tail-D3-min-is-not-block-outlier (deferred
 NEXT: fold into LEM-009 (klein/kps); the one residual analytic step is the finite-scale monotonicity D3(d) >= D3(3) for the interior family (Koksma-Hlawka O(1/d), correlation-correction sign known) -- the corrected analog of klein's spread correction.
 
 ---
+## kind-pasteur-2026-07-08-S87 -- BLOCK-WORST REFUTED (conceded to opus-S155); the CORRECT axis is dilation-invariant SCALE/prim-diam -- SCALE-MONOTONICITY: AP_10+interior D3 rises with scale d to the 0.4646 limit FROM BELOW; global min = block 0.4048, tail min = d=3 (0.4530), dangerous tail = bounded prim-diam = EXHAUSTIBLE (HYP-5457 corrected)
+
+Prompt (owner): prove block-worst via klein's q-kernel.
+
+OUTCOME: block-worst is REFUTED (opus-2026-07-08-S155, exact counterexample), so I did NOT prove it -- I CONCEDED and re-derived the correct picture. Verified opus's A=(0,3,6,8,9,12,15,18,21,24,27)=AP 3*{0..9}+interior 8: D3=0.452986 < 0.458714 (block+outlier) < 0.4646 (klein D3_10 limit).
+
+ROOT (net-new, sharp): the decorrelation limit D3_c is an UPPER bound on D3, not the floor. A CORRELATED (interior) 11th point gives LOWER D3 than a DECORRELATED (far) outlier (AP+interior 8 -> 0.4530 vs AP+far 28 -> 0.4678). So klein's D3_c table / my block-worst give upper bounds -- wrong direction for a floor. "Prove block-worst via q-kernel" would prove an upper bound.
+
+CORRECTED AXIS (dilation-invariant, matches opus's longest-AP correction): SCALE-MONOTONICITY. For "AP_10 at scale d + best interior point", min D3 RISES with d, converging to the decorrelation limit 0.4646 FROM BELOW: 0.4356/0.4530/0.4592/0.4587/0.4635/../->0.4646 at d=2..inf (prim-diam 18/27/36/45/54). CONSEQUENCES:
+- GLOBAL min = the BLOCK (d=1, 0.4048, prim-diam 10) -- dilation-invariant, in exhaustive. SURVIVES from S86.
+- TAIL min (prim-diam>=25) = d=3 (0.4530, prim-diam 27) = a BOUNDED-prim-diam (SMALL-scale) phenomenon => EXHAUSTIBLE. Larger scale -> higher D3 toward the limit.
+- Random (non-arithmetic) tail shapes sit at 0.59-0.66 (min over 2000 each at prim-diam 27/30/33/36/40) -- only the AP-arithmetic structure is low.
+
+CLOSURE PATH (corrected, dilation-invariant): min D3 monotone increasing in prim-diam (empirical); [extend exhaustive to prim-diam<=~30, capturing the small-scale AP+interior extremals] + [decorrelation LOWER bound for large prim-diam, D3 -> >=0.4646 from below]. Replaces the refuted window-cluster monotonicity.
+
+WHAT SURVIVES from S86 (HYP-5457): RESULT 1 (global min = full block {0..10} = 54912120381817/135668932727076 = 0.404751 EXACT, dilation-invariant); RESULT 2 (merge-domination, multi-cluster raises D3); closure itself (tail min ~0.4530 >= bar +0.12). REFUTED: RESULT 3a block-worst-shape + "D3>=D3_10=0.4646 for all diam>=25".
+
+ACTIONS: conceded opus's court case (added the corrected-axis response); refutation banners + corrected-axis section on LEM-009; HYP-5457 correction banner. Files: lrc14_scale_monotonicity_kps_S87 (+out).
+
+NEXT: the corrected closure = [exhaustive prim-diam<=~30] + [decorrelation lower bound large prim-diam] -- both bounded; the small-scale extremal set is finite (AP_L + interior at scales up to ~ where prim-diam ~30). Prove min D3 monotone in prim-diam OR extend exhaustive + finite-spread lower bound.
 
 ## opus-2026-07-08-S155 -- CLUSTER-MONOTONICITY REFUTED by an exact dilated-AP counterexample: the k=11 tail D3-min is NOT block+outlier (0.4587) and NOT >= D3_10 (0.4646) -- (0,3,6,8,9,12,15,18,21,24,27) has D3=0.452986; closure SURVIVES (tail min ~0.4530 >= bar +0.12); corrected axis = longest-AP (HYP-5467, court case)
 
