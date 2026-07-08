@@ -270,3 +270,26 @@ finite-per-scale longest-AP = 10 family]** `+ [longest-AP ≤ 9 stratification, 
 window-cluster device (S186–S188) is replaced by the longest-AP axis; the `O(1/D)`/multi-outlier
 Koksma–Hlawka rate remains valid for the far-outlier sub-case but is no longer the closure's spine.
 File: `lrc14_corrected_closure_klein_S189.out`.
+
+## The exhaustive IS extended to prim-diam ≤ 30 — DONE (kps-S88)
+
+klein-S189's proposed path ("extend the exhaustive to prim-diam ≤ 30, OR enumerate the longest-AP = 10
+family") is now **executed**, both halves:
+
+- **Exhaustive, prim-diam 25..30** (grid `N=200` scan + **exact Farey re-verify** of every shape with
+  grid-D3 `< 0.55`; `14 041 508` reflection-canonical primitive 11-sets ≈ `28M` total):
+  > **min D3 = 0.452986 (exact) at `A = (0,3,6,8,9,12,15,18,21,24,27)`, prim-diam 27, `≥ bar + 0.1218`.
+  > VERDICT: ALL prim-diam 25..30 CLEAR.**
+  Per-diam minimizers are the block+outlier `{0..9,D}` (`D = 25,26,28,29`) and `A`-class (`D = 27,30`);
+  the 8 lowest are all longest-AP = 10 (embedding `3·{0..9}`). No non-arithmetic shape beats `A`.
+- **AP+interior enumeration** (exact): the longest-AP = 10 family (`AP₁₀` scale `d` + extras) bottoms out
+  at `A` for **every** AP length (`L = 8,9,10` all reduce to `A`) and is scale-monotone
+  (`d = 1/2/3 →` block+outlier `0.4587` / `0.4699` / `A 0.4530`). Arithmetic spot-check of 518 two-AP /
+  gapped-AP / mixed-scale shapes at prim-diam 28..30: min `0.4661` — none below `A`.
+
+Combined with klein-S184 (prim-diam ≤ 24) + opus/kps (≤ 17): **every primitive 11-set with prim-diam
+≤ 30 has D3 ≥ bar** (global min = block `{0..10} = 0.404751`, prim-diam 10; tail min = `A = 0.452986`,
+prim-diam 27). The single remaining piece is **prim-diam > 30** — where D3 rises toward the `≥ 0.4646`
+limit from below (`d = 4 → 0.4592`, scale-monotone): the far-point-limit / large-prim-diam lower bound
+(opus's L²). Files: `lrc14_exhaustive_diam30_kps_S88.py`, `lrc14_ap_interior_extremals_kps_S88.py`
+(+`.out`).

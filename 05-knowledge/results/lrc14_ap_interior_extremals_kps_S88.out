@@ -1,0 +1,24 @@
+AP+interior extremals for the k=11 tail, prim-diam <= 30  (bar=0.331212)
+============================================================================================
+
+[L=10 AP at scale d, + 1 extra point]  min D3 over all extra positions, prim-diam in [25,30]:
+   d  AP span  best +p  prim-diam     min D3    margin
+   1        9       25         25   0.458714  +0.12750
+   2       18       25         25   0.469882  +0.13867
+   3       27        8         27   0.452986  +0.12177
+
+[L=9 AP at scale d, + 2 extra points]  min D3, prim-diam in [25,30]:
+   d    best +p,q  prim-diam     min D3    margin
+   1      (9, 25)         25   0.458714  +0.12750
+   2     (18, 25)         25   0.469882  +0.13867
+   3      (8, 27)         27   0.452986  +0.12177
+
+[L=8 AP at scale d, + 3 extra points]  min D3, prim-diam in [25,30] (spot check):
+  d=2 best +(16, 18, 25) prim-diam 25: min D3=0.469882 margin +0.13867
+  d=3 best +(8, 24, 27) prim-diam 27: min D3=0.452986 margin +0.12177
+
+============================================================================================
+TAIL MINIMIZER (AP+interior family, prim-diam 25..30): D3 = 0.452986
+  = 88747403972619401646021583/195916463945506515076905312
+  shape = (0, 3, 6, 8, 9, 12, 15, 18, 21, 24, 27)  prim-diam 27  margin +0.121774  >= bar
+  (opus-S155's A=(0,3,6,8,9,12,15,18,21,24,27)=3*{0..9}+8 gives 0.452986)

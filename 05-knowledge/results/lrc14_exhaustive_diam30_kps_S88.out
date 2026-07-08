@@ -1,0 +1,24 @@
+EXTEND exhaustive k=11 covering floor to prim-diam 30 (kps-S88); bar=0.33121; grid N=200
+  prim-diam 25:    653752 primitive shapes; min grid-D3=0.45745 (margin +0.12623) [OK]; minimizer=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25)
+  prim-diam 26:   1021625 primitive shapes; min grid-D3=0.46774 (margin +0.13653) [OK]; minimizer=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 26)
+  prim-diam 27:   1562275 primitive shapes; min grid-D3=0.45391 (margin +0.12270) [OK]; minimizer=(0, 3, 6, 8, 9, 12, 15, 18, 21, 24, 27)
+  prim-diam 28:   2343405 primitive shapes; min grid-D3=0.46803 (margin +0.13681) [OK]; minimizer=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 28)
+  prim-diam 29:   3453450 primitive shapes; min grid-D3=0.46463 (margin +0.13342) [OK]; minimizer=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 29)
+  prim-diam 30:   5007001 primitive shapes; min grid-D3=0.46727 (margin +0.13606) [OK]; minimizer=(0, 3, 5, 6, 9, 12, 15, 18, 21, 24, 30)
+
+GLOBAL grid-min D3 over prim-diam 25..30 = 0.45391 at (0, 3, 6, 8, 9, 12, 15, 18, 21, 24, 27) (margin +0.12270)
+
+EXACT verification of the 926 shapes with grid-D3 < 0.55:
+  EXACT min over the low shapes = 0.452986 at (0, 3, 6, 8, 9, 12, 15, 18, 21, 24, 27) (margin +0.121774)
+  # distinct low shapes exact-checked: 400
+
+VERDICT: ALL prim-diam 25..30 CLEAR (exact min >= bar)
+  lowest exact D3 shapes:
+    D3=0.452986  prim-diam 27  (0, 3, 6, 8, 9, 12, 15, 18, 21, 24, 27)
+    D3=0.458714  prim-diam 25  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25)
+    D3=0.459705  prim-diam 27  (0, 3, 4, 6, 9, 12, 15, 18, 21, 24, 27)
+    D3=0.460711  prim-diam 27  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 27)
+    D3=0.461489  prim-diam 27  (0, 3, 6, 7, 9, 12, 15, 18, 21, 24, 27)
+    D3=0.464207  prim-diam 27  (0, 2, 3, 6, 9, 12, 15, 18, 21, 24, 27)
+    D3=0.464996  prim-diam 29  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 29)
+    D3=0.466077  prim-diam 30  (0, 3, 5, 6, 9, 12, 15, 18, 21, 24, 30)

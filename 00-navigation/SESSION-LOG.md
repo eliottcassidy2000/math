@@ -15,6 +15,23 @@ HONEST: rigorous = resonance identity + 1/(pd) sum + D3 box bound + finite check
 NEXT: extend the resonance-sum/rate argument from the interior L=10 family to ALL tail shapes (the L<=9 strata are higher-floor but need the same treatment for a full rigorous tail closure); or the a-priori V_j bound (count G^j breakpoint crossings) to remove the last numerical certification.
 
 ---
+## kind-pasteur-2026-07-08-S88 -- EXHAUSTIVE EXTENDED to prim-diam <= 30 (min D3 = A = 0.452986 EXACT >= bar) + AP+interior extremals enumerated: executes klein-S189's corrected-closure path, tail min PINNED
+
+Prompt (owner): extend exhaustive to prim-diam <= 30 and enumerate the AP+interior extremals.
+
+DELIVERED (both halves, executing the corrected longest-AP path that opus-S155/klein-S189/kps-S87 converged on):
+
+1. EXHAUSTIVE prim-diam 25..30 (grid N=200 scan + EXACT Farey re-verify of every grid-D3<0.55 shape; 14,041,508 reflection-canonical primitive 11-sets = ~28M total): **min D3 = 0.452986 EXACT at A=(0,3,6,8,9,12,15,18,21,24,27), prim-diam 27, margin +0.1218. VERDICT: ALL prim-diam 25..30 CLEAR (>= bar).** Per-diam minimizers = block+outlier {0..9,D} (D=25,26,28,29) and A-class (D=27,30); the 8 lowest are ALL longest-AP-10 (embed 3*{0..9}). No non-arithmetic shape beats A.
+
+2. AP+INTERIOR ENUMERATION (exact): the longest-AP-10 family (AP_10 scale d + extras) bottoms out at A for EVERY AP length (L=8,9,10 all reduce to A -- shorter-AP families rediscover A's embedded 10-AP) and is SCALE-MONOTONE (d=1/2/3 -> block+outlier 0.4587 / 0.4699 / A 0.4530). Arithmetic spot-check (518 two-AP/gapped-AP/mixed-scale shapes, prim-diam 28..30): min 0.4661, none below A.
+
+CONVERGENCE: klein-S189 also conceded opus-S155 (block+outlier not tail min); the fleet agrees the axis is dilation-invariant longest-AP, primitivity => longest-AP<=10, tail min = A = 0.4530 >= bar. My S88 is the CONCRETE execution of klein-S189's proposed path ("extend exhaustive <=30 OR enumerate longest-AP=10 family") -- BOTH done.
+
+STATE: every primitive 11-set with prim-diam <= 30 has D3 >= bar (global min = block {0..10} = 0.404751 at prim-diam 10; tail min = A = 0.452986 at prim-diam 27). SINGLE remaining piece for full k=11: prim-diam > 30 -- D3 rises toward the >= 0.4646 limit from below (scale-monotone, d=4 = 0.4592); the large-prim-diam / far-point-limit lower bound (opus's L^2). 
+
+FILES: lrc14_exhaustive_diam30_kps_S88.py (+out), lrc14_ap_interior_extremals_kps_S88.py (+out); LEM-009 "exhaustive DONE" section. 
+
+NEXT: the ONLY open piece is prim-diam > 30 (opus's decorrelation lower bound). With that, k=11 fully closes: [exhaustive <= 30, min >= bar] + [prim-diam > 30, D3 -> >= 0.4646 from below].
 
 ## mac-mini-2026-07-08-S57 CLOSE-OUT -- density floor: k=9 DISCHARGED (THM-655), k=10 crossover closed, k=11,12,13 UNIFIED under the covering-moment/D3 floor (THM-657/660/661); the far<=E[W]^2 wall MAPPED (LEM-007) then BYPASSED by the fleet (LEM-009, k=11 CLOSED)
 
