@@ -1,3 +1,15 @@
+## mac-mini-2026-07-07-S57 (cont.2) -- built on klein-S177 THM-660: EXACT block PZ values (settle k=11 arithmetic) + the uniform floor has k=10's COMPACT-minimizer structure
+
+klein-S177 (THM-660) took my covering reformulation (THM-657) and used the STRONGER Paley-Zygmund bound mu >= E[W]^2/E[W^2] (vs my (7/6)E[W] Markov) -- clears ALL THREE legs k=11,12,13 diameter-free (0.347/0.308/0.272 vs bars 0.331/0.199/0.056), reducing them to an additive-energy 2-moment CoV inequality (NOT the mu-extremal lemma). I contributed two pieces:
+
+1. EXACT block PZ (Farey-cell integration, any family): k=11 bar 83549/252252 < PZ 3400663/9797402, EXACT margin +0.01589 -- SETTLES the thin k=11 arithmetic klein flagged (was N=20M numerical). k=12: +0.10868. k=13: PZ = 221828403/815409784 = monad-S13's PZ-on-V EXACTLY (integrator cross-validated). E[W](block)=697/4410, 3427/24255, 8599/67914.
+
+2. The uniform floor min_E PZ >= bar has k=10's STRUCTURE: PZ-minimizers are COMPACT (PZ rises monotonically with diam via decorrelation E[W^2]->E[W]^2 => PZ->1). So min_E PZ = [finite exact check over compact shapes, my integrator] + [decorrelation tail, diam>=D via |P_ij-1/49| THM-638] -- a COMPLETABLE program, converting klein's "verified by descent" into finite computation + a decorrelation lemma. The k=11 +0.0159 is the only tight point, now exact.
+
+STATE OF THE DENSITY-FLOOR SIDE: k=8 (THM-651), k=9 (THM-655, mine) DONE; k=10 [composition+degree-4+exact-G2, near]; k=11,12,13 reduce (THM-657 covering + THM-660 PZ) to min_E PZ >= bar = [finite compact check + decorrelation tail], block exact-clears all three. The mu-extremal lemma ("AP minimizes mu") is now BYPASSED by the 2-moment PZ route.
+
+FILES: THM-660 (klein's, +my exact-values & compact-structure sections); lrc14_block_PZ_exact_macmini_S57 (+out).
+
 ## klein-2026-07-07-S178 -- THM-660 upgraded: EXACT block PZ moments (Farey-cell integration; block_13 = monad's 221828403/815409784 to the digit) + k=11 leg EXHAUSTIVELY EXACT-verified on diam<=15 (min 0.346788 >= bar) + THE COMPLEMENTARITY (PZ clears exactly k=11,12,13, fails k=8,9,10 = the tent's domain) (HYP-5317)
 
 Prompt (owner): extend.
