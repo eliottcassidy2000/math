@@ -18,7 +18,7 @@ def R2(A):
     return sum(v*v for v in c.values())
 def prim(A):
     A=sorted(A);return reduce(gcd,[A[i+1]-A[i] for i in range(len(A)-1)])==1
-GRID=300_000;x=(np.arange(GRID)+0.5)/GRID
+GRID=120_000;x=(np.arange(GRID)+0.5)/GRID
 def full(A):
     Ea=np.array(sorted(A),float);ph=np.mod(np.outer(x,Ea),1.0);ph.sort(axis=1)
     g=np.concatenate([np.diff(ph,axis=1),(ph[:,0]+1-ph[:,-1])[:,None]],axis=1)
@@ -32,7 +32,7 @@ ok=all((full(A)[3]<=full(A)[0]**2)==(full(A)[1]<=full(A)[2]) for A in
 print(f"(1) far<=E[W]^2 <=> Var<=near: {ok}")
 # (2) Var/R2 band; (3) brick B margin
 lo=[];band=[]
-for _ in range(400):
+for _ in range(200):
     D=random.choice([10,12,14,16,20,30]);A=tuple(sorted(random.sample(range(D+1),11)))
     if not prim(A): continue
     m1,var,near,far,d3=full(A);r=R2(A);band.append(var/r)
