@@ -1,0 +1,18 @@
+=== k=10 small-denominator floor: 20 shapes (min part <= 6) x 15 adversarial families ===
+    m_P = 0.05649
+
+GLOBAL min true rho* over all small-denom (shape,family): 0.3993 = 7.07x m_P
+  at P=(1, 5, 6), E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+  all 20 shapes have min rho* >= 0.3993 (7.1x m_P)  => residual TRUTH-SAFE with >= 7x slack
+
+  10 lowest-floor small-denom shapes (min rho*, x m_P, shape, minimiser):
+    0.3993   7.07x  P=(1, 5, 6)  E=(0, 1, 2)..9(d9)
+    0.4001   7.08x  P=(5, 11, 12)  E=(0, 1, 2)..9(d9)
+    0.4016   7.11x  P=(5, 6, 11)  E=(0, 1, 2)..9(d9)
+    0.4031   7.14x  P=(4, 5, 11)  E=(0, 1, 2)..9(d9)
+    0.4112   7.28x  P=(3, 4, 5)  E=(0, 1, 2)..9(d9)
+    0.4139   7.33x  P=(5, 12, 13)  E=(0, 1, 2)..9(d9)
+    0.4178   7.40x  P=(5, 6, 13)  E=(0, 1, 2)..9(d9)
+    0.4184   7.41x  P=(3, 5, 12)  E=(0, 1, 2)..9(d9)
+    0.4216   7.46x  P=(4, 5, 13)  E=(0, 1, 2)..9(d9)
+    0.4231   7.49x  P=(2, 3, 5)  E=(0, 1, 2)..9(d9)
