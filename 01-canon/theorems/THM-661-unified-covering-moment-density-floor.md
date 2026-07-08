@@ -80,3 +80,22 @@ bound on the uncovered measure; the diameter never appears.
 `04-computation/lrc14_unified_moment_covering_floor_macmini_S57.py` (exact block moments E[W^i]
 via Farey; the degree-d moment LP with rational feasibility check; the B_d table k=8..13).
 `04-computation/lrc14_block_PZ_exact_macmini_S57.py` (the d=2 exact values).
+
+## The decorrelation tail, reduced (mac-mini-S57)
+
+The uniform floor's tail (wide families) has a rigorous handle via a NEAR/FAR split of the
+second moment: `E[W^2] = int int P(y1,y2 both uncovered) = near + far`, where
+- `near = 2 int_{1/7}^{2/7} q(L) dL` (overlapping arcs `|y1-y2|<=1/7`; `q(L)=E[sum(g-L)_+]` the
+  empty-arc probability) is EXACT and `<= (2/7)E[W]` (since `q(L) <= q(1/7) = E[W]`);
+- `far = int int_{|y1-y2|>1/7} P(both empty)` (disjoint arcs) `-> E[W]^2` by decorrelation.
+
+For families with `far <= E[W]^2` (genuinely spread — verified: wide-11/13 have far 0.020/0.011
+`<= E[W]^2` 0.034/0.019), this gives the RIGOROUS bound
+`PZ = E[W]^2/E[W^2] >= E[W]^2/(near+E[W]^2) >= 1/(1 + (2/7)/E[W])`, which clears k=12,13 (PZ_lb
+0.589/0.533) and is `~0.31` at k=11 (just under the 0.331 bar — the last +0.02 needs the near
+part's strict decay `q(L) < q(1/7)` for `L>1/7`, which is real). Tight-cluster+outlier families
+(`far > E[W]^2`, block-like) are NOT decorrelated but are dominated by their compact cluster
+(finite-checked). So the tail reduces to ONE decorrelation estimate: `far <= E[W]^2 + o(1)` for
+spread families (a Koksma/discrepancy bound on disjoint-arc emptiness) — the single remaining
+analytic lemma for the complete uniform density floor. File:
+`04-computation/lrc14_PZ_compact_and_tail_macmini_S57.py` (near/far split).
