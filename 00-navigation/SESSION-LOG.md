@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-08-S78 -- BLEEDING EDGE (THM-660 PZ tail, k=11,12,13): the decoupled 'Var(W)<=c*R2 closes the diam>=16 tail' (klein-S179 NEXT-a) is INSUFFICIENT at the binding k=11 leg -- the tail bounds are COUPLED; needs a joint bound or extended exhaustive. (HYP-5337)
+
+Prompt (owner): keep working on the bleeding edge of the LRC-14 proof.
+
+STATE PULLED: density-floor side -- k=8 (THM-651 mine), k=9 (THM-655 mac-mini), k=10 (mac-mini degree-4 + klein spread) DONE/near; k=11,12,13 reduce (THM-657 mac-mini covering reformulation mu=P(W>0), W=uncovered measure = sum_i(g_i-1/7)_+; THM-660 klein PZ mu>=E[W]^2/E[W^2]) to min_E PZ >= bar = [compact exhaustive diam<=15 DONE] + [diam>=16 tail OPEN]. klein-S179 reduced the tail to 'prove Var(W)<=c*R2' (Var(W)~5.67e-5*R2, the covering analog of THM-656's tent Var=R2*V1).
+
+MY CONTRIBUTION (worked klein's NEXT-a; independently reproduced Var(W)~V_W*R2 then found the closing bound INSUFFICIENT): the decoupled route CANNOT close the tight k=11 margin (+0.0156). Four findings (numerical, lrc_pz_tail_structure_kps_S78):
+(1) Var/R2 is NOT constant: ~6.1e-5 at the block (max R2=770), up to 7.25e-5 at low R2; 58/423 configs EXCEED the block ratio (all low-R2). So a single-c 'Var<=c*R2' with honest max c=7.25e-5 gives PZ>=E[W]^2/(E[W]^2+c*770)=0.309 < bar 0.331 at the block -- FAILS.
+(2) maxR2 by primitive diameter falls SLOWLY: 770/706/630/614/606/574/498 at diam 10/12/15/16/18/20/25 -- 'high R2 => small diam' is weak (diam 20 still reaches R2=574).
+(3) E[W] roughly FLAT (~0.15, min ~0.148 at diam>=16), NOT rising -- so the block is NOT a joint (maxR2,minEW) extremum (I first hypothesized it was; refuted).
+(4) THE KEY: even a THREE-ingredient decoupled bound [maxR2(diam>=16)<=614]+[Var<=7.3e-5*R2]+[E[W]>=0.148] gives PZ>=0.32978 < bar 0.33121 -- STILL fails by 0.0014, because those three worst-cases DON'T co-occur in any single config. Meanwhile klein's actual diam>=16 min PZ is 0.45 (comfortable). So the tail bounds are COUPLED; ANY decoupling is too lossy for k=11.
+
+VERDICT (saves a dead-end): the rigorous diam>=16 tail needs (i) extended exhaustive (klein diam<=15 -> higher, her NEXT-c), or (ii) a genuinely JOINT bound (the exact Var-E[W] coupling), NOT the decoupled 'Var<=c*R2'. k=12,13 have room (+0.10/+0.21) so decoupling may work there; only k=11 (the binding leg) is coupling-tight. Messaged klein (+mac-mini/opus FYI).
+
+FILES: lrc_pz_tail_structure_kps_S78.py (+out); HYP-5337; INDEX. Earlier this conversation: THM-658 (chi_c(G_GW)<=27/2<14), MISTAKE-125 (linearization-converse correction), k=10 characterization (fleet then closed it).
+
 ## mac-mini-2026-07-08-S57 (cont.3) -- THM-661: THE UNIFIED COVERING-MOMENT DENSITY FLOOR -- one framework (degree-<=4 moment bound on the uncovered measure W) discharges ALL SIX (A') legs k=8..13 diameter-free (HYP-5347)
 
 Prompt (owner): keep pushing, work next proof targets.
