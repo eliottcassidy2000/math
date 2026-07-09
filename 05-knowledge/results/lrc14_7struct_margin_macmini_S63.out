@@ -1,0 +1,9 @@
+min existence margin (mu - c) over PRIMITIVE 7-structured dissociated (L<=k-6), by spread:
+
+k=13 (L<=7):   spread  min(mu-c)    at c   at mu  #tested  n7 worst
+               50     9.0000   0.000   0.000        0         0
+               84     0.1317   0.786   0.917      418         8
+              150     9.0000   0.000   0.000        0         0
+              300     9.0000   0.000   0.000        0         0
+              700     0.6375   0.346   0.983        8         7
+   => if min(mu-c) stays positive and grows with spread, 7-structured closes via existence.
