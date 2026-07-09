@@ -139,3 +139,15 @@ additive bound + Lean.
 **Remaining formalization:** discharge the analytic obligations (`native_decide` the finite density-
 floor `B_d` checks and the `ρ*` union bound; transcribe LEM-012's Dirichlet step; the arc-count
 existence) — an engineering task, no new mathematics. The elementary good-period cores are done.
+
+### Correction to the S62 consolidation (MISTAKE-128)
+
+The dissociated-branch residual is NOT "`#arcs/spread < D3`": that certificate is broken for
+7-structured co-offsets (`differences ≡ 0 mod 7` spike `#arcs`; `D3` is too weak a lower bound on
+`μ`; `c/D3 = 1.40`, dilation-invariant — MISTAKE-128, klein-S199). The correct resolution is
+**LEM-013's direct existence with the actual `μ`**: `c < μ` holds (verified, min margin 0.08), and
+the small-spread region is exhausted (`s ≤ 22`, 621k clusters, 0 failures). So the dissociated
+residual is: an a-priori `μ`-floor `> c` (tighter than `D3`, which fails on 7-structured sets) OR
+extending LEM-013's exhaustion — both about the *actual* `μ`, not the `D3` proxy. The large-spread
+`c ≈ 0.22–0.37 ≪ ρ* ≈ 0.96` (S62, actual `ρ*`) stands. Lesson: don't proxy `μ` by a moment lower
+bound inside a tight inequality.
