@@ -1,3 +1,42 @@
+## klein-2026-07-08-S195 -- worked R1, R2, R3 (converged with mac-mini-S60): R2 CLOSED (box bound), R3 RESOLVED (reduces to R1 at k=13), R1 reduced to AP-extremality (worst j*=AP proved; generic hard j*<=6)
+
+Prompt (owner): work R1, R2, and R3.
+
+Worked all three; mac-mini-S60 hit the same targets concurrently (independent convergence).
+
+**R2 -- DONE (k=12,13 density-floor tail, a-priori via the BOX BOUND).** Extended kps-S89's k=11 box
+bound to k=12,13 (LEM-011 exact moments): for the longest-AP=(k-1) family E_d=d*{0..k-2}u{p}, moments
+in [L_i +- Vh_i/d], Vh_i=i(6/7)^{i-1}E[W_B]. Crossover d0=30 (box-min D3 >= bar for d>=30, den>0 the
+binding constraint); finite check d<=29: min D3 = 0.374 (k=12) / 0.326 (k=13) >= bar 0.199/0.056,
+margins +0.175/+0.269. Fully a-priori, no numerical certification. [mac-mini-S60 independently closed
+the SAME leg via opus-S157's C/(pd) rate made a-priori by LEM-011 (pd0=101/65) -- kept BOTH routes in
+LEM-009 as complementary.] => ALL SIX density-floor legs k=8..13 now a-priori. Files:
+lrc14_k1213_{boxbound,finitecheck}_klein_S195.
+
+**R3 -- RESOLVED (P-coupling reduces to R1 at k=13).** The discrete good period needs x=j/Vmax in G_P
+AND cluster maxgap>1/7 (THM-530). Resolution: FOLD P into the co-offset set -- use all 13 co-offsets
+E_full={Vmax-v: v in S}. A gap>1/7 in the all-13 phases avoids EVERY runner (P included); P's co-offsets
+Vmax-p ~ Vmax have phases near 0 (cluster with e_0, harmless). VERIFIED (0 fails, k=8..12, Vmax<=1500):
+the all-13-co-offset good period exists at j<=2. So R3 is SUBSUMED by R1 (the k=13 case). Confirms
+mac-mini's "only j*=O(k) remains." File: lrc14_R3_gp_coupling_klein_S195.
+
+**R1 -- reduced to AP-extremality (the last math gap).** General j*=O(k) = "the AP maximizes j*."
+CHARACTERIZED: the worst-case j* (~k) is achieved ONLY by (near-)exact APs of step ~Vmax/k (mac-mini's
+PROVED case, j*<=ceil(7(k-1)/6)); GENERIC hard clusters open a gap at tiny j (j*<=6 << bound, 0 fails).
+Mechanism: hard regime (j=1 fails => co-offsets Vmax/7-DENSE) FORCES quasi-even (near-AP) spacing since
+k<=13. For the exact AP d=Vmax/k (k prime): j* = min{j: gcd(j,k)>k/7} = k EXACTLY (phases at time j are
+{i*gcd(j,k)/k}, maxgap=gcd(j,k)/k>1/7 <=> gcd(j,k)>k/7) -- the tight worst case. So general j*=O(k)
+reduces to AP-extremality (empirically robust, 0 counterexamples). OPEN. Meanwhile LEM-010(ii) gives
+j*<=3^{k-1} UNCONDITIONALLY, so THM-527-A is closed modulo the bounded finite check {Vmax<=3^12,
+spread>=6Vmax/7}; j*=O(k) shrinks it to Vmax<=O(k). File: lrc14_jstar_general_klein_S195.
+
+NET: the ENTIRE LRC(14) now rests on ONE open math item -- general j*=O(k) (= AP maximizes the
+first-good-period) -- plus Lean. R2 done, R3 resolved. Status doc + LEM-009/010 addenda updated.
+NEXT: prove AP-extremality (the AP's Steinhaus-even orbit is the slowest to develop a >1/7 gap under
+dilation) => j*=O(k) => THM-527-A fully elementary => covering case + LRC<=13 = LRC(14).
+
+---
+
 ## mac-mini-2026-07-08-S60 -- worked the Diophantine lemma (j*=O(k)) + R1/R2/R3: R2 CLOSED (k=12,13 tail a-priori), R3 refines the glue (G_P∩Good_E), j*=O(k) robustly O(k)
 
 Prompt (owner): work the Diophantine lemma (j*=O(k)) + R1 (finite check) + R2 (k=12,13 tail a-priori) + R3 (G_P coupling).
