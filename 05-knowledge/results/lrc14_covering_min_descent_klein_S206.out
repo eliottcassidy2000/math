@@ -1,0 +1,22 @@
+1/14 = 0.071429    repo covering-min 7/89 = 0.078652
+
+(1) EXHAUSTIVE covering-min vs speed cap  (does it descend?)
+ cap  #cov prim      min M      float   /(1/14) argmin
+  15         28       2/23   0.086957    1.2174  (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  16        112       2/23   0.086957    1.2174  (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  17        294       2/23   0.086957    1.2174  (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  18        966       1/12   0.083333    1.1667  (1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18)
+  19       2058       1/12   0.083333    1.1667  (1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18)
+  20       6084       1/12   0.083333    1.1667  (1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18)
+
+(2) HILL-CLIMB at larger speeds (minimise M over primitive covering 13-sets, speeds<=CAP)
+  CAP= 40: best M =         5/47 = 0.106383  ratio/(1/14) = 1.4894
+           S = [3, 7, 8, 10, 11, 13, 14, 19, 23, 24, 29, 33, 36]
+  CAP= 90: best M =         2/17 = 0.117647  ratio/(1/14) = 1.6471
+           S = [4, 13, 21, 31, 33, 39, 41, 46, 48, 52, 54, 65, 70]
+  CAP=200: best M =         4/29 = 0.137931  ratio/(1/14) = 1.9310
+           S = [2, 6, 8, 26, 64, 68, 70, 81, 83, 85, 120, 127, 176]
+
+READING: if the covering-min DESCENDS toward 1/14 as speeds grow, the covering branch is also
+'barely true' and uniform looseness (HYP-2566) is the crux. If it PLATEAUS above 1/14, a margin
+argument suffices there and LRC(14) = [tau=1/q witness on non-covering] + [margin on covering].

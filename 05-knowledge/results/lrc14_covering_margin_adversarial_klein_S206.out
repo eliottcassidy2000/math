@@ -1,0 +1,13 @@
+ADVERSARIAL hill-climb: MINIMIZE the good-period margin over primitive covering 13-sets.
+(margin<=1 would mean a covering set with NO strict good period -- a real gap.)
+
+  CAP= 20: min margin found = 1.4737
+           S = [1, 4, 7, 8, 9, 10, 11, 12, 13, 14, 16, 18, 19]
+  CAP= 30: min margin found = 1.4000
+           S = [5, 6, 10, 11, 13, 14, 15, 17, 18, 20, 21, 24, 25]
+  CAP= 50: min margin found = 1.6383
+           S = [6, 13, 20, 24, 28, 30, 32, 33, 36, 39, 40, 42, 47]
+  CAP=100: min margin found = 1.9895
+           S = [13, 19, 20, 23, 24, 26, 27, 28, 43, 55, 72, 86, 95]
+
+margin > 1 everywhere => the covering branch (the ONLY branch LRC(14) needs) has strict good periods.

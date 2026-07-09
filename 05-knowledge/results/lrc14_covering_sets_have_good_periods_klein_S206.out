@@ -1,0 +1,18 @@
+margin(S) := max_j 7*maxCircGap/Vmax  on the co-offset cluster.  >1 <=> STRICT good period.
+
+(1) EXHAUSTIVE primitive covering 13-sets, speeds <= 18
+    #covering = 966;  #without strict good period = 0;  min margin = 1.2353
+    worst-margin set: (1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 17)
+
+(2) RANDOM primitive covering 13-sets, speeds <= 60
+    sampled 400 covering sets;  #without strict good period = 0;  min margin = 1.9091
+    worst-margin set: [6, 8, 13, 14, 16, 21, 25, 27, 28, 36, 37, 50, 55]
+
+(3) The NON-covering TIGHT sets (the ones every averaging route died on)
+      {1..13} AP (tight, M=1/14): covering=False  margin=0.5385  NO strict good period
+         {1,3,4,5,9,...} GW-like: covering=False  margin=2.8000  has good period
+
+READING: if #without-strict-good-period == 0 over covering sets while the NON-covering tight AP
+fails, then the S201 pathology (and the tight-AP counterexamples that broke arc-count / c<D3 /
+smooth-mean / kissing) lives OUTSIDE the covering case. The covering branch -- the ONLY branch
+LRC(14) actually needs (THM-523) -- has comfortable good periods.
