@@ -1,5 +1,22 @@
 # Open Questions
 
+**🟢 MILESTONE (mac-mini-2026-07-08-S58): the LRC(14) DENSITY FLOOR is fully CLOSED, and the
+COVERING CASE is assembled (THM-663).** All six density-floor legs `μ_{1/7}(E) ≥ bar_k`
+(`k=8..13`) are discharged at the UNIFORM (min-over-families) level, diameter-free, by the
+degree-≤4 covering-moment floor (THM-661) + the LEM-009 longest-AP tail: k=8,9,10 by `B_4`
+(block-minimizer, `min_E = 0.761/0.645/0.553 ≥` bars, margins +0.086/+0.082/+0.101); k=11 by the
+fleet (`D3`, tail min `A=0.4530`); k=12,13 by the LEM-009 machinery this session (`D3`,
+`min_E = 0.3559/0.3088`, margins +0.157/+0.252). This makes THM-530's `k≥8` union-bound branch
+UNCONDITIONAL ⟹ `ρ*_{1/7}(P,E) ≥ m_P = 14249/252252 > 0` for every admissible `(P,E)` ⟹ every
+covering-saturated 13-set is lonely ⟹ **no covering-case counterexample** (THM-663). This CLOSES
+THM-527's "genuine remaining crux" (the uniform floor `c₀>0`), via the direct integer route (no
+compactness / real-vs-integer passage). **The whole covering case now rests on ONE analytic item:
+the finite-`Vmax` glue THM-527-A** (`ρ_K = ρ* + O(#arcs/Vmax)`). NEW: the **bounded-arc-count
+lemma** (`#arcs` is `Vmax`-INDEPENDENT, `≈ k+1`, machine-verified) closes its bounded-spread half;
+the large-spread half is Weyl/decorrelation (THM-518). With the non-covering case = LRC(≤13)
+(SETTLED), **LRC(14) reduces to [THM-527-A finite-`Vmax` glue] + [Lean transcription].**
+→ THM-663, THM-661, LEM-009, THM-527, THM-530. Next: THM-527-A large-spread (Weyl); Lean wiring.
+
 **OPEN-Q-110 UPDATE (kps-S25, numerically pinned):** The drifting floor does NOT close regime C. `cite_hunter_c7_onepair` is correct but its hypothesis needs a SINGLES bound the corpus lacks -- `window_teeth_mass_le` discharges it only for w1 > 22638 (numerical truth: w1 ~ 1100). The gap is the crude singles slack; closing it needs the JOINT measure treatment (klein `star_union_le` on real danger measures). The TIGHT-SMALL corner (near-consecutive integers, w1 <~ 1000) is at the Hunter boundary (min ledger ~ -0.0002) -- NO window-floor closes it: over window L~0.0065 each point (w1+j)t sweeps only ~0.15 < 2h, so density averaging (needs wL>>1) fails and the problem is arithmetic (the AP {(w1+j)t}). Candidates: SimulPeel (mac-mini), AP/three-distance, resonant-combo (klein c8-search). Evidence: 05-knowledge/results/lrc14_regimeC_*_kps_S25.out. See MISTAKE-072.
 **EISENSTEIN-RESONANCE UPDATE (opus-2026-07-03-S52, HYP-4047):** the "arithmetic AP `{(w1+j)t}`" tight-small
 corner IS the Φ₆ Eisenstein resonance. `14` is a primitive 6th root of unity mod `183 = Φ₆(14) = 3·61`

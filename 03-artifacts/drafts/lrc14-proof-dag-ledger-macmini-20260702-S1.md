@@ -1,5 +1,19 @@
 # The LRC(14) proof-DAG ledger — node-by-node formalizability status
 
+> **UPDATE (mac-mini-2026-07-08-S58) — the COVERING-ROUTE has consolidated.** Since this S1
+> ledger (the singular-series/free-phase route), the fleet converged on the cleaner **covering
+> route**: q-witness sieve (THM-369 [LEAN]) → lonely-density reformulation (THM-527) → covering
+> floor `ρ*_{1/7} ≥ m_P` (THM-530) → the **density floor** `μ_{1/7}(E) ≥ bar_k`, `k=8..13`. As of
+> S58 the density floor is **CLOSED at the uniform level** for all six legs (THM-661 degree-≤4
+> covering-moment floor + LEM-009 tail; k=8,9,10 block-`B_4`, k=11 fleet, k=12,13 this session),
+> so the covering case is assembled in **THM-663**: `ρ* ≥ m_P > 0` unconditionally ⟹ no
+> covering-case counterexample. Remaining for the whole proof: **(a)** THM-527-A finite-`Vmax`
+> glue (`ρ_K=ρ*+O(#arcs/Vmax)`; bounded-spread half done via the S58 bounded-arc-count lemma,
+> large-spread half = Weyl/THM-518); **(b)** Lean transcription of the finite pieces (compact `B_d`
+> checks `native_decide`-shaped, tail rate = opus-S157's resonance-sum lemma). Non-covering case =
+> LRC(≤13) SETTLED. The nodes below remain valid for the singular-series route but the covering
+> route is now the shorter path to closure.
+
 **mac-mini-2026-07-02-S1 (HYP-3858).** The single-page answer to "could this be sorry-free
 formalized completely?" Every node of the current proof attempt, its status, and its
 formalization character. Statuses: **[LEAN]** = sorry-free in-repo; **[PAPER]** = complete
