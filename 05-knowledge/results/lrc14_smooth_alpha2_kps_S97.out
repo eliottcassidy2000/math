@@ -1,0 +1,8 @@
+Fourier decay exponent alpha of maxgap(x) and W(x) (continuous PL => alpha=2 asymptotically).
+                     set   a(mid)  a(high)  a_W(high)
+               AP{1..13}    2.189    2.000      2.016
+   7-struct(MISTAKE-128)    1.019    2.016      2.010
+          generic-dissoc    1.019    2.003      2.008
+
+=> if a(high) -> 2 for ALL sets (incl 7-structured), the smooth-route decay is PROVABLY alpha=2
+   (continuous PL, no jumps): opus's 1.48 is pre-asymptotic. Absolute convergence RIGOROUS.

@@ -1,0 +1,10 @@
+|R|/lead vs additive energy R2 and near-resonance/kissing count (support<=3,|n|<=4), V=105.
+        family     R2  lAP  kiss  |R|/lead
+       AP-full   1300   13  7536    0.6108
+      7-struct    420    4  1098    0.0338
+           mid    328    4  1162    0.0728
+         Sidon    236    4  1142    0.0752
+
+corr(|R|, R2)=0.977   corr(|R|, kissing-count)=0.998
+=> |R| governed by additive energy R2 / near-resonance kissing count; AP (max energy) extremal.
+   a-priori |R|<(6/7)^k <= Cohn-Elkies positivity over the grid-relation lattice (mac-mini-S24/S25).

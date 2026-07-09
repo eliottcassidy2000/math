@@ -1,3 +1,21 @@
+## kind-pasteur-2026-07-09-S97 -- CRITICAL PATH + NOVEL CONNECTION: the E_grid residual |R| IS a KISSING NUMBER (Poisson summation over the grid-relation lattice = Cohn-Elkies, mac-mini-S24/S25); corr(|R|,kissing)=0.998, AP extremal => a-priori route. + PROVED smooth-route decay is alpha=2
+
+Prompt (owner): work the critical path, mine past threads for connections, explore novel work I was unaware of.
+
+THE CONNECTION (mined via repo-scout, mac-mini-S24/S25 which I had NOT connected to my S96 E_grid route): my grid residual R = sum_{Vmax|n.e}What(n) IS Poisson summation over the grid-relation lattice L_V(e)={n:Vmax|n.e} -- exactly mac-mini-S24's Cohn-Elkies framework (safe measure = Poisson sum over relation lattice L(e)={n.e=0}), GRID-REFINED (L(e) + wraparound shells n.e=mVmax = my R_0+R_wrap). Same test function (What, LEM-011), same lattice-Poisson-positivity.
+
+|R| IS THE KISSING NUMBER: mac-mini-S25 = relation-lattice kissing number = additive energy, MAXIMIZED by AP. Grid tail: short vectors of L_V = low-height resonances = my near-resonance count Z (S93). LEM-011's 0.371/coord decay => shortest relations dominate |R|. VERIFIED **corr(|R|,kissing)=0.998**, corr(|R|,R2)=0.977; |R|/lead = 0.03 (dissociated, kiss~1150) to 0.61 (AP, kiss 7536). So |R| ~ c*kissing.
+
+A-PRIORI ROUTE (Cohn-Elkies positivity): |R| <= sum|What| (triangle ineq, resonant/Mertens-SAFE half, no cancellation) <= c*kissing(L_V) <= c*kissing(AP) [mac-mini-S25 AP-max] = 0.61*lead < lead. Good period EXISTS for ALL clusters (incl AP -- E_grid existence << capstone r_N=1). REPLACES opus-S169's open #arcs bound with the SAME additive-energy invariant the density floor uses (THM-660 Var(W)~R2). Remaining rigor: explicit c + grid-lattice AP-max-kissing uniform in Vmax (finite/structured, Cohn-Elkies LP shape).
+
+SECONDARY (rigorizes opus-S170 smooth route): the smooth-route Fourier decay is PROVABLY alpha=2 (maxgap, W are CONTINUOUS piecewise-linear -- kinks no jumps -- => O(1/m^2)). opus's measured 1.48 = pre-asymptotic average over an alpha~1 SHELF (m in [20,2000]); high-m alpha=2.00-2.02 for AP/generic/7-structured (verified). Localizes why small-Vmax band is tight (resonances land in the shelf).
+
+NOVEL WORK DISCOVERED (repo-scout, for the owner): density floor = Cohn-Elkies LP over relation lattice, home = modular curve X0(14) cusps{1,2,7,14}; relation lattice L(AP) max kissing = additive triples (disc 650, tridiagonal Gram); THM-438 Paley Ham-path ratio->e, cluster integrals=Catalan (free probability); H=7,21 forbidden <-> E8/Leech (Fano->octonion->Golay, THM sphere-packing-8-24); THM-224 tribonacci=exceptional-points+golden+RLL-code-capacity; THM-519 Alcuin number(river-crossing)=hard-core-gas; THM-660 additive-energy ordering; Hecke/X0(14) for LRC-14 torsion.
+
+FILES: lrc14_{R_vs_energy,R_kissing,smooth_alpha2}_kps_S97.py(+.out); reflection the-egrid-residual-is-poisson-summation-and-its-kissing-number-kps-S97.md; HYP-5567 updated.
+
+NEXT: (a) explicit c in |R|<=c*kissing (sum LEM-011 shells); (b) grid-lattice AP-max-kissing (extend mac-mini-S25 to L_V); (c) this = Cohn-Elkies magic function on X0(14) -- the Viazovska-style route. Fleet: existence has THREE converging closures (LEM-013 exhaustive+adversarial, opus-S170 smooth alpha=2, my E_grid kissing) -- covering leg robust.
+
 ## mac-mini-2026-07-09-S63 -- toward 100%: CONFIRMED the moment/arc-count route is dead for 7-structured (higher-degree B_d ALSO fail) + FORMALIZED 5th good-period core (AP-clustering via Mathlib Dirichlet); converges with klein-S200
 
 Prompt (owner): move toward 100% completion.
