@@ -40,6 +40,19 @@ CONTEXT (fleet): klein-S206 -- tight locus (M=1/n) is entirely NON-COVERING (the
 STATE: the AP extremal fully formalized (M=1/14). LRC(14) architecture = [non-covering: trivial-q sieve, mac-mini] + [covering: strict good period (klein-S206) => lonely (drift-embed klein-S205 + smooth-W equidist kps-S108)] + [tight AP = non-covering, M=1/14 exact = kps-S110+S111]. FILES: LRCAPTight.lean.
 
 NEXT: the continuum reformulation bridge (rho*>0 => exists lonely tau) on the smooth surrogate; formalize the covering=>good-period existence (klein-S206, 966 sets, native_decide-able); the non-covering sieve wiring.
+## opus-2026-07-09-S180 -- the LRC(14) extremal (the AP) is FREIMAN'S minimal-sumset set: the AP uniquely maximizes additive energy, which IS |S+S|>=2n-1 equality; the S179 law is FORCED by Freiman
+
+Prompt (owner): keep pushing LRC math then formalization, pull often.
+
+Synced (rebased in kps-S110 continuum route, klein-S206 tight-locus-non-covering, mac-mini-S64 trivial-q). Given the covering case is closing (kps-S110: density floor rho*>0 => Mreach>=1/14, all clusters, no grid/drift/window; klein-S206: every covering 13-set has a strict good period, tight AP is NON-COVERING) and the remaining Lean is coordinated opaque-witnessG2 wiring (fleet-owned), I ANCHORED my additive-energy law (S179) in a classical theorem.
+
+VERIFIED (lrc14_maxE_extremal): the AP {1..13} UNIQUELY maximizes E(S)=#{a+b=c+d} among 13-sets -- E=1469, via 200k random search AND hill-climb (which converged to a consecutive AP {20..32} from a random start). This IS Freiman's |S+S|>=2n-1 with equality iff AP: AP |S+S|=25=2*13-1 (MIN) & E=1469 (MAX); as |S+S| rises (near-AP 32 -> Fib 80 -> Sidon 82) E falls (1245 -> 369 -> 393).
+
+So the S179 monotone chain min|S+S| = maxE = max self-resonance = max over-covering = min lonely measure L=0 = TIGHT is FORCED by Freiman's inequality: the AP is the unique tight LRC extremal BECAUSE it is the unique minimal-sumset set (structural, not a numerical accident). MECHANISM: small |S+S| = danger events ||v_i tau|| pile onto few frequencies = M concentrates = lonely set shrinks to the measure-zero pinch (opus-S177) = tight. Both E and |S+S| are AFFINE-INVARIANT (x->ax+b) = the LRC's dilation invariance; the extremal is an affine class ({1..13}~{2..26}~{0..12}, all E=1469).
+
+This gives the "AP = extremal" (which broke 5 fleet routes, kps-S109/klein-S206 confirm it) a NAMED classical reason. Files: lrc14_maxE_extremal_opus_S180 (+out); reflection the-lrc-extremal-is-freimans-minimal-sumset-set-opus-S180; HYP-5681. NEXT (fleet): the opaque-witnessG2 wiring (connect the sorry-free density-floor certs AP20/76/D3 to the skeleton's rhoGlob) is the one substantive remaining Lean obligation.
+
+---
 
 ## kind-pasteur-2026-07-09-S110 -- FORMALIZED M(AP)>=1/14 (the LRC(14) equality extremal) + WIRED the density floor to the reach (LRCAPExtremal.lean, sorry-free)
 

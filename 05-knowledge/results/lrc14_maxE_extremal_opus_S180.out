@@ -1,0 +1,13 @@
+AP {1..13}: 1469
+2*AP: 1469
+AP {0..12}: 1469
+adversarial max E over 200k random 13-sets (spread<=60): 1469  at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+hill-climb max E: 1469  at [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]  (is it an AP? diffs=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+hill-climb max E: 1469  at [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]  (is it an AP? diffs=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+
+--- Freiman sumset connection: max E <=> min |S+S| = 2n-1 (equality iff AP) ---
+  AP {1..13}               |S+S|=  25  E= 1469  (2n-1=25)
+  2*AP                     |S+S|=  25  E= 1469  (2n-1=25)
+  near-AP {1..12}+{20}     |S+S|=  32  E= 1245  (2n-1=25)
+  Sidon                    |S+S|=  82  E=  393  (2n-1=25)
+  Fib-ish                  |S+S|=  80  E=  369  (2n-1=25)
