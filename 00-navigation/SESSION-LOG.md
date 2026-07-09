@@ -573,6 +573,48 @@ NOVEL WORK DISCOVERED (repo-scout, for the owner): density floor = Cohn-Elkies L
 FILES: lrc14_{R_vs_energy,R_kissing,smooth_alpha2}_kps_S97.py(+.out); reflection the-egrid-residual-is-poisson-summation-and-its-kissing-number-kps-S97.md; HYP-5567 updated.
 
 NEXT: (a) explicit c in |R|<=c*kissing (sum LEM-011 shells); (b) grid-lattice AP-max-kissing (extend mac-mini-S25 to L_V); (c) this = Cohn-Elkies magic function on X0(14) -- the Viazovska-style route. Fleet: existence has THREE converging closures (LEM-013 exhaustive+adversarial, opus-S170 smooth alpha=2, my E_grid kissing) -- covering leg robust.
+## mac-mini-2026-07-09-S64 (PART 9) -- MISTAKE-131 (my "new" Lean lemma was a duplicate) + HYP-5690 ANSWERED: 3 of 4 route-breaking clusters are NON-COVERING, incl. my own knife-edge; the covering branch has an exact strict cushion min M = 1/12 > 1/14
+
+**(A) MISTAKE-131, self-caught.** My part-8 `LRCTrivialQ.lean` was NOT new. Every lemma already existed
+in this repo, more general: `LonelyRunner.sieve_one_div` (general `n`) = my `lonely_of_not_dvd`;
+`LonelyRunner.counterexample_needs_all_divisors` (general `n`, = canon THM-523) = my
+`lonely_of_not_covering`; `LonelyRunner.sieve_frac` + `LRCBandFloor` subsume my
+`lonely_of_rational_witness` — which additionally never compiled (`sorryAx`). File REMOVED, broadcast
+corrected. Process lesson: grep `TournamentH7/*.lean` for the statement shape BEFORE writing Lean; grep
+canon BEFORE claiming novelty; read `#print axioms` BEFORE broadcasting.
+
+**(B) HYP-5690 ANSWERED (klein-S206's explicit request).** A counterexample must be COVERING (some
+`q ∈ 2..14` dividing no speed ⟹ `t = 1/q` lonely). Checking `S = {Vmax − e}` for every cluster that
+killed a route:
+
+| cluster | Vmax | covering? | missing q → witness |
+|---|---|---|---|
+| tight AP `{0..12}` (MISTAKE-129) | 13 | **NO** | `[14]` → `t=1/14` |
+| 7-structured (MISTAKE-127/128) | 91 | **YES** | — **IN SCOPE** |
+| knife-edge (MISTAKE-130, **mine**) | 49 | **NO** | `[8,9,10,11]` → `t=1/8` |
+| `worst7StructLarge` (klein Lean cert) | 458 | **NO** | `[7,14]` → `t=1/7` |
+
+So a real part of the hard-cluster saga was fought on clusters LRC(14) never needs — including MY OWN
+knife-edge, the configuration that motivated the entire non-strict criterion and
+`LRCGoodPeriodNonStrict.lean`. **That layer is correct but NOT required for LRC(14).** klein's
+`worst7StructLarge_hasGoodPeriod` cert is likewise out of scope (`worst7Struct_hasGoodPeriod` @91 IS in
+scope). MISTAKE-127/128 (7-structured @91) were genuinely in scope — not wasted.
+
+**(C) THE COVERING BRANCH HAS AN EXACT STRICT CUSHION.** Over ALL 966 covering 13-subsets of `[1,18]`
+(klein's count, independently reproduced), the exact `M(S) = max_t min_i ‖v_i t‖` has
+`min M = 1/12 > 1/14`, strict margin exactly `1/84`; the NON-covering tight AP `{1..13}` has
+`M = 1/14` EXACTLY. **The equality locus is entirely non-covering.** Hence on covering clusters the
+STRICT good-period criterion suffices and no knife-edge exists — klein-S206's forced proof shape
+`[exact rational witness t=1/q on non-covering] + [strict margin on covering]`, now scope-checked.
+`M` computed exactly via local maxima at crossings `p/(v_i+v_j)` and peaks `(2m+1)/(2v_i)` — no grids.
+
+**RECOMMENDATION to the fleet:** every cluster-level claim should carry a covering check as a
+precondition; and THM-527/530/663 should state the covering constraint explicitly in their quantifiers
+(asked opus/kps whether the density-floor bars `bar_k` were minimised over covering-derived `E` or over
+ALL primitive `E` — if the latter they are sound but pessimistic and could be relaxed).
+
+Files: `lrc14_hyp5690_covering_scope_macmini_S64.{py,out}`; MISTAKE-131; MISTAKE-130 postscript.
+
 ## mac-mini-2026-07-09-S64 (PART 8) -- TRIVIAL-q LEMMA in Lean (14 ∤ any speed ⟹ LRC(14) at t=1/14); the open window is 2.6× smaller than kps-S109's AND INFINITE; the Odlyzko–te Riele loose/tight synthesis
 
 Owner: work the existential-over-j route, the bounded-window finite check for Vmax ∈ (spread, 2.8·spread],

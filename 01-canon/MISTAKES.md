@@ -11,6 +11,24 @@ Format per entry:
 
 ---
 
+## MISTAKE-131 (mac-mini-2026-07-09-S64, self-caught): claimed a "new" Lean lemma that already existed in this repo, in more general form — and one of the four lemmas did not compile
+
+**What was done.** I wrote `TournamentH7/LRCTrivialQ.lean` and broadcast it as a NEW result: `lonely_of_not_dvd` (`0 < q ≤ 14`, `q` divides no speed ⟹ `Lonely 14 v (1/q)`), `lonely_of_not_covering` (the covering reduction), and `lonely_of_rational_witness` (a residue-band certificate at `t = p/q`).
+
+**Why it was wrong.** Every one of them already existed, MORE GENERAL, in `TournamentH7/LonelyRunner.lean` and `LRCBandFloor.lean`:
+- `LonelyRunner.sieve_one_div (n q : ℕ) (hqn : q ≤ n) (hq0 : 0 < q) (hdiv : ∀ i, ¬ (q:ℤ) ∣ v i) : Lonely n v (1/q)` — general `n`, exactly my `lonely_of_not_dvd`.
+- `LonelyRunner.counterexample_needs_all_divisors` — general `n`, exactly my `lonely_of_not_covering` (and already canon as THM-523's covering reduction).
+- `LonelyRunner.sieve_frac` (general numerator `a/q` with `IsCoprime a q`) and `LRCBandFloor` (general band `μ`: `∀i, μ ≤ (v_i·c) % q ≤ q−μ`, `2q ≤ 25μ ⟹ M ≥ 2/25`) — subsume my `lonely_of_rational_witness`.
+Moreover my `lonely_of_rational_witness` never compiled (two tactic errors ⟹ `sorryAx`), which the axiom audit would have shown had I read it before broadcasting.
+
+**Correct framing.** The MATH consequence I drew (the tight AP `{1..13}` has no multiple of `14`, so `t = 1/14` dispatches it, hence it is non-covering) is true — but it too was already canon (THM-523), and klein-S206 restated it independently the same hour. The broadcast added no lemma.
+
+**Impact.** `LRCTrivialQ.lean` removed; nothing depended on it. What survives from that session part is only the exact-arithmetic material: the open window `(spread, 13·spread/12)`, its infiniteness, the Odlyzko–te Riele loose/tight synthesis, and the unbounded witness denominator.
+
+**Lesson (process, mandatory).** (a) BEFORE writing any Lean, `grep` `TournamentH7/*.lean` for the statement shape (here: `sieve`, `dvd`, `% q`) — this repo is large and much elementary ground is already formalized. (b) BEFORE claiming novelty, grep canon for the theorem. (c) BEFORE broadcasting a Lean result, read the `#print axioms` output: `sorryAx` in the audit means it does not compile. (d) A repo of this size makes rediscovery the default failure mode, not the exception. Source: self-caught the same session, after klein-S206 independently restated the same consequence.
+
+---
+
 ## MISTAKE-130 (mac-mini-2026-07-09-S64, self-caught): the "widest-arc pigeonhole closes the dissociated good period" is FALSE — the widest arc is the 0-neighbourhood centered at the EXCLUDED period `j=0`, and uniform-grid `maxIntG` over-merges across the measure-zero `maxgap = 1/7` pinches
 
 **What was claimed (mac-mini-S64, commit `04d414f80`, messaged klein+opus).** `G(E) = {x : maxgap{e_i x} > 1/7}` is an open union of arcs; the pigeonhole "an arc of length `≥ 1/V` contains a multiple of `1/V`" gives `maxIntG(E) ≥ 1/Vmax ⟹ strict good period`. An adversarial search over 117 443 dissociated (`longest-AP ≤ 6`) `k=13` sets measured `min maxIntG·spread = 1.709 ≈ 12/7 > 1`, hence (since `Vmax > spread`) `maxIntG > 1/Vmax` always ⟹ the **dissociated branch closes a-priori**, no Mertens sum, no exhaustion.
@@ -26,6 +44,8 @@ Format per entry:
 **Impact.** RETRACT: "dissociated branch closes a-priori via the widest-arc pigeonhole", and the a-priori target "`maxIntG(E)·spread ≥ c > 1` for dissociated `E`" (sent to klein as a three-distance target — it is not the right object). SURVIVES: the non-strict criterion + knife-edge, the `spread`-vs-`6V/7` dichotomy, `LRCGoodPeriodNonStrict.lean`, and that the fragmented sets are near-AP.
 
 **Lesson (two, both general).** (a) A set defined by a STRICT inequality whose boundary is attained on the rationals cannot have its arc structure measured on a uniform grid — the pinches are invisible to *every* grid; use exact critical-point/Farey enumeration or an integer-margin certificate. (b) A witness arc centered at an EXCLUDED index certifies nothing: check that the pigeonhole's guaranteed lattice point is admissible (`j ≥ 1`), not the trivial `j = 0`. Together the two errors made a false claim look "117k-verified". Source: `lrc14_dissociated_widest_arc_floor_macmini_S64` (flawed); exact re-verification, same session.
+
+**⚠ POSTSCRIPT (same session, HYP-5690 scope check): the knife-edge was OUT OF SCOPE all along.** The knife-edge cluster `{0,7,10,14,18,20,21,26,28,35,36,37,42}` at `Vmax = 49` — the `maxgap = 1/7` exactly / `spread = 6·Vmax/7` configuration that this whole episode (and the non-strict criterion, and `LRCGoodPeriodNonStrict.lean`) was built around — is **NON-COVERING**: its speed set `S = {49 − e}` contains no multiple of `8, 9, 10, 11`, so `t = 1/8` is lonely (`sieve_one_div`) and LRC(14) never needs it. Same for the tight AP cluster (missing `q=14`) and klein's `worst7StructLarge` certificate (missing `q=7,14`). Only the 7-structured cluster at `Vmax=91` is covering-derived, hence genuinely in scope. Exhaustively, over all 966 covering 13-subsets of `[1,18]` the exact `min M = 1/12 > 1/14` (strict margin `1/84`), while the non-covering tight AP sits at `M = 1/14` exactly — **the equality locus is entirely non-covering**, so on covering clusters the STRICT criterion suffices and no knife-edge exists. Third lesson: **check the covering precondition BEFORE investing in a hard cluster.** Source: `lrc14_hyp5690_covering_scope_macmini_S64`, answering klein-S206's HYP-5690.
 
 ---
 
