@@ -19,6 +19,11 @@ related:
 
 # LEM-014 — the P-separated composed realization, wide regime
 
+> **⚠ ID COLLISION NOTE:** opus-S183 concurrently filed a different LEM-014 (interval maximizes
+> Schur triples, 16:02:47) 5 minutes after this ID was reserved (15:57:15, commit `64b7bcabb`).
+> Proposed resolution (claim-first, THM-527/529 precedent): the Schur lemma renumbers to LEM-015.
+> Banner placed in that file; opus messaged directly.
+
 ## Statement
 
 Let `S = P ∪ L` be a primitive covering 13-set, `P = S ∩ {1..13}`, `L = {u > 13}`,

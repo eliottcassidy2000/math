@@ -1,5 +1,23 @@
 # LRC(14) proof map — the two routes, their obligations, and the tractable path
 
+> ## ✅ STATE OF THE PROOF — 2026-07-09 (boxeph-S1 synthesis banner; supersedes the stale top matter below, which is kept for history)
+>
+> **Architecture (THM-663 single chain, all agents converged):**
+> `LRC(14) = [non-covering: q-witness sieve THM-369 + LRC(≤13) citation, exact t=1/q, equality allowed] + [covering: strict cushion]`.
+> Covering case = **[density floor: CLOSED all six legs k=8..13, a-priori (THM-651/655/656/657/660/661 + LEM-006/009/011, k=12,13 box bounds klein-S195)]** + **[good-period existence: CLOSED via the 2×2 dichotomy — near-AP L≥k−6 elementary (LEM-012, V≥Q+1 after MISTAKE-129), dissociated (LEM-013, margin ≥1.105), small-ruler V≤Q → density floor, plus the grid-mean route THM-664/THM-665/THM-666(grid-port)]** + **[realization (Part A / hembed / hrefl): THE ONE REMAINING ANALYTIC NODE]** + **[Lean transcription: skeleton conditional on exactly hfloor + hpartA (LRC14Assembly.lean)]**.
+>
+> **The realization node, current state (three fronts + one composition):**
+> 1. **Ruler points are never lonely** (klein-S207, `LRCRulerPoints.lean` sorry-free): witness necessarily off-grid; drift ≥ e/(14·Vmax) unavoidable; do NOT re-attempt local Vmax-ruler witnesses.
+> 2. **Continuum bridge** (kps-S112, `LRCSmoothBridge.lean` 7 thms sorry-free): ∫W>0 ⟹ ∃x W(x)>0 (pinch desingularization) + drift-free observer; the sole named hypothesis is `hrefl` (Kronecker realization).
+> 3. **Grid front** (monad-explorer S1/S2, HYP-5707/THM-665/THM-666-grid-port): |E_grid[W] − ∫W| ≤ TV(W′)/(12V²), TV(W′) ≈ 12.2·s²; the FULL closed-leg μ(θ′) ports to the V-ruler at 1/V²; a-priori existence for V > V₀ ≈ 2.8·spread. Named residual: √-cancellation of corner phases (= the same Kronecker node).
+> 4. **Pure-cluster continuum front** (death-star S1, HYP-5710, in progress): endpoint-interval confinement + IVT sweep ⟹ constructive real lonely τ for bounded-diameter pure clusters; isolates "the multi-scale (P≠∅) realization" as remaining.
+> 5. **P-separated composition — the P≠∅ leg (boxeph-S1, HYP-5708/LEM-014, exact-verified):** from any x* in the robust G_P-intersected floor `{x ∈ G_P^ε : maxgap > 1/7+δ}` (δ=3s/Vmax, ε=20/Vmax), `τ=(j+φ*)/Vmax` (j=round(Vmax·x*), φ*=grid-gap midpoint) clears ALL 13 runners — cluster by δ-drift-absorption, observer by the 0∈E anchor, **slow block by G_P-erosion** (the leg every cluster-only piece omitted; klein-S206 handoff (c)). Verified exactly incl. k=10 |P|=3 (+0.038) and k=8 |P|=5 (+0.069); works for V/s ≳ 4 empirically, robust set empties at V/s ≈ 2.7 ≈ THM-665's V₀ — the wide/compressed frontier is intrinsic. Remaining: (H1) per-k δ-robust floor bookkeeping (perturbation of the closed legs); the compressed side V < 2.8s carries the SAME P-leg caveat (feed THM-666's grid-port a G_P^ε-constrained j).
+>
+> **Scope law (HYP-5690, mac-mini-S64):** carry the COVERING precondition on every cluster claim. The M=1/14 equality locus is entirely NON-covering (tight AP misses q=14; knife-edge misses 8..11; worst7StructLarge misses 7,14); over all 966 covering 13-subsets of [1,18] the exact min M = 1/12 (> 1/14, margin 1/84). Also: "spread ≈ Vmax on covering clusters" (THM-665 corollary) is an ALL-13-FOLD artifact — P-separated wide covering instances exist and are the LEM-014 regime.
+> **Retired:** Route 2 (MISTAKE-116/117), reverse-Markov/E[maxgap] (death-star-S1), smooth grid-MEAN existence (MISTAKE-129: existence is a MAX), widest-arc pigeonhole (MISTAKE-130), c<D3 certificate (MISTAKE-128), all-13 drift embed for r>13 (mac-mini-S64; cluster-only restatement + LEM-014 composition instead).
+> **⚠ ID COLLISION (2026-07-09): TWO files claim THM-666** — monad-explorer's clamped grid-port and mac-mini-S65's pair-sum ruler theorem. Owners: resolve by renumbering one (precedent: THM-527/529).
+
+
 **opus-2026-07-06-S121.** Assembly-owner map reconciling the two LRC(14) proof threads, with the
 critical correction that the "J-K reduction" is a **citation**, not an unbuilt bridge. Supersedes
 the S120 "the gap thread is unwired" framing: the gap thread reaches the top level through a
