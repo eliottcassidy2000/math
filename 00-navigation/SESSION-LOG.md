@@ -1,3 +1,19 @@
+## opus-2026-07-09-S182 -- EXTENDED/REDIRECTED the forward lead: the density-floor resonance sum is led by SCHUR TRIPLES a+b=c (E3), NOT doubling/additive-energy E2 -- a SYMMETRY MATCH; the a-priori floor is a sum-free/Schur theorem, not Freiman/3k-4
+
+Prompt (owner): extend ideas related to the forward lead, push often + pull, be inspired to explore.
+
+Synced (mac-mini-S64 part9: covering-branch min M=1/12>1/14 strict cushion, 3/4 route-breakers non-covering; kps-S112: continuum bridge desingularizes grid-pinch+drift). Extended the S181 forward lead and it REDIRECTED.
+
+L(S)=(6/7)^13+R, R=Sum_{n:n.v=0} What(n) = a theta-sum over the resonance lattice Lambda, dominated by its MINIMAL vectors = the height-3 SCHUR TRIPLES a+b=c (norm 3), NOT the height-4 additive-energy relations a+b=c+d (norm 4; fewer arc-coeff factors => larger term). MEASURED (3 scripts): the density-floor deficit (6/7)^13 - L tracks E3=#{a+b=c} (corr +0.79) better than E2 doubling/energy (+0.65).
+
+CLEAN SEPARATOR: sum-free odd {1,3,..,25}=2*{1..13}-1 has MAX E2=1469 (=tight AP) but E3=0 (odd+odd=even) and is LOOSE (deficit 0.019). STRUCTURAL reason = SYMMETRY MATCH: loneliness is dilation-invariant (THM-522) but NOT translation-invariant; E3 has exactly that group (a+b=c broken by x->x+t); E2 is ALSO translation-invariant, so it CANNOT separate the tight AP from its loose translate. A quantity is governed only by an invariant sharing its symmetry group => E3, not E2, governs loneliness. Resolves the S181 translation puzzle; sharpens S180 (AP maximizes E3=78 among nonzero speeds; unrestricted max {0..12}=91 via free triples a+0=a, but 0 illegal).
+
+REDIRECT of HYP-5682: the a-priori density floor is a SCHUR-TRIPLE/SUM-FREE extremal theorem -- (1) E3(S)<=E3(interval)=C(k,2), equality iff dilated interval (additive-triple analogue of Freiman |S+S|>=2n-1); (2) theta-sum bound |R|<=f(E3), f(E3(AP))=(6/7)^13, f increasing => |R|<(6/7)^13 for non-intervals => loose. NOT a Freiman/doubling (BSG,3k-4=E2) theorem. 2nd-order: Schur-sublattice DIMENSION/coherence modulates |R| (corr 0.79 not 1.0; aligned 1-D near-AP triples > spread 2-D GAP triples at equal E3).
+
+NEXT: prove step (1) (interval maximizes Schur triples -- check "max #{a+b=c}" / additive-triple-count literature), make step (2) explicit from LEM-011 arc coefficients. Files: lrc14_resonance_sum_vs_doubling_opus_S182 (+out), lrc14_resonance_is_schur_triples_opus_S182 (+out), lrc14_maxE3_extremal_opus_S182 (out); reflection the-resonance-sum-is-schur-triples-not-doubling-a-symmetry-match-opus-S182; HYP-5683; backlog lead redirected.
+
+---
+
 ## kind-pasteur-2026-07-09-S112 -- FORMALIZED THE CONTINUUM REFORMULATION BRIDGE ON THE SMOOTH SURROGATE (LRCSmoothBridge.lean, 7 thms sorry-free) -- measure->point desingularization + drift-free observer; CONVERGES with klein-S207 (drift = discretisation artefact, equidistribution = sole residue)
 
 Prompt (owner): formalize the continuum reformulation bridge on the smooth surrogate.
