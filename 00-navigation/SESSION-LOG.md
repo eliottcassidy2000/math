@@ -30,6 +30,26 @@ CONVERGENCE: kps-S103/S104 built a PARALLEL toolkit (LRCHlinkList: mem_zipWith_s
 NEXT: good-period-leg's remaining blocker = hembed (THM-527 Part A ruler embedding, shared with density route). Files: LRCHlinkExtract.lean (aggregate-wired); reflection hlink-discharged-mergesort-argmax-and-the-wrapping-gap-opus-S175; HYP-5640.
 
 ---
+## kind-pasteur-2026-07-09-S105 -- hembed (ruler embedding) RESEARCHED + its algebraic core FORMALIZED (LRCSlowFast.lean, sorry-free): it is a FORMALIZATION gap with a WORKING embedding already in hand (scale_separation_phase); hlink DONE by klein-S204
+
+Prompt (owner): prioritize the open math of hembed, research broadly for inspiration over iterations, then wire the maxCircGap assembly to finish hlink; pull frequently.
+
+hlink: DONE. While researching hembed, klein-S204 DISCHARGED hlink (LRCGoodPeriodFreeGap.lean, using my S101 teeth lemmas + the 0-in-E cyc.last=Vmax wrapping simplification). Good-period leg = HasGoodPeriod => Mreach>=1/14 modulo ONLY hembed. So the maxCircGap wiring is complete; I pivoted fully to hembed.
+
+hembed RESEARCH (deep, via agent + reading THM-527/565/530/661):
+- WHAT: THM-527 Part A slow-fast change of variables. tau=(j+phi)/Vmax, view from fastest runner Vmax, split Vmax*tau=j+phi. Turn a good period (teeth gap>1/7) into a real lonely time tau. Shared blocker with the density floor.
+- EXACT ALGEBRA (matches my derivation): nearInt(u_i*tau)=nearInt((phi-c_i) - e_i*phi/Vmax), drift=e_i*phi/Vmax <= spread/Vmax. Negligible small-spread, O(1) in the good-period window (Vmax~7spread/6 => drift~6/7), so a SINGLE phi can't absorb it there -- need the safe-arc/density. This is why THM-527 uses the >2/7 criterion (room for drift) while >1/7 carries rho*_{1/7}>=m_P=14249/252252 (PROVED: THM-530 Bonferroni + THM-661 floor).
+- STATUS = FORMALIZATION GAP, not open analysis. Math essentially PROVED (limit + finite-Vmax reduced 3 ways to a bounded finite check V*~234 THM-565 / <=1106 kps-S61 arc-bound<=83 / <=3^12 LEM-010). #arcs(G*)=O(spread) LINEAR (Davenport-Schinzel envelope). LEAN: the concrete-tau embedding touching minReach is UNWRITTEN (skeleton carries Part A as opaque Prop).
+- CRITICAL: klein's hembed omits the e_i=Vmax-v_i BINDING; as isolated it's FALSE (E unrelated to v). The genuine lemma must add the binding.
+- KEY ASSET: ScaleSeparation.scale_separation_phase (LRCScaleSeparation.lean:349) is a SORRY-FREE kernel-pure ruler embedding -- ceiling period, midpoint phi, 1-Lipschitz slow-safety, drift absorption (Δφ+Dd*(δ/V)<=3/7) => real t all runners safe. hembed = adapt this + the binding.
+
+MY FORMALIZATION (LRCSlowFast.lean, sorry-free): nearInt_int_add (1-periodicity), nearInt_speed_eq_phase_sub (the slow-fast IDENTITY nearInt((Vmax-e)*tau)=nearInt(phi - e*tau)), drift_eq (drift = e*phi/Vmax exact). The algebraic CORE of hembed, matching the research algebra. Pairs with my S99b Mreach_ge_of_lonely_instant (target adapter) + the margin<->minReach bridge.
+
+ROUTE (reflection): (1) reuse scale_separation_phase + add e=Vmax-v binding [highest ROI]; (2) exact rational tau via grid_margin_domination + rational_point_margin => native_decide certificate; (3) finite-Vmax split via ThreeGapSampling + ArcComplexity, finite-check Vmax<=V*; (4) target = Mreach_ge_of_lonely_instant + LRCSlowFast pointwise. INSPIRATION: renormalization (slow-fast eigenbasis), KAM/small-divisors (drift=perturbation, safe-arc=KAM margin, good-period window=resonant regime), three-gap/Davenport-Schinzel (arc count), exact-vs-limit (land on rational tau => finite).
+
+FILES: LRCSlowFast.lean; reflection hembed-the-ruler-embedding-is-a-formalization-gap-with-a-working-embedding-in-hand-kps-S105.md.
+
+NEXT: instantiate scale_separation_phase for hembed with the e=Vmax-v binding + the good-period teeth clearance -> hphase, co-offset -> hdrift; OR the rational-tau native_decide route. This closes the good-period leg (only hembed left).
 
 ## kind-pasteur-2026-07-09-S104 -- hlink UNIFIED reduction tooth_not_in_gap (removes the internal/wrap dispatch), toolkit COMPLETE + assembly surface builds GREEN; finalized LRC(14) state mapped
 
