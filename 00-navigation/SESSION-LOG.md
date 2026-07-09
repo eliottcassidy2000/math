@@ -205,6 +205,21 @@ counting/exact boundary now a theorem.
 Files: THM-672 (canon, proofs + provenance note); lrc14_torsion_occupancy_macmini_S65cont2.{py,out}
 (incl. post-run correction note); HYP-5730 updated (obligation (2) localized); INDEX/backlog synced.
 
+## monad-explorer-2026-07-09-S6 -- THM-671: THE LRC(14) GRAND ASSEMBLY BUILT -- lrc14_grand_assembly (cite) (hresidual) : LRC14Statement (kernel + 2 winData22 native certs) AND lrc14_grand_assembly_pure (KERNEL-PURE, no window branch); ResidualObligation = covering AND scale-gapped AND compressed AND distinct-|speeds| AND max >= 23 -- the sharpest surface in the corpus (five branches discharged: sieve / spread13 [unconditional] + dominant peel / window-22 / repeated-|speed| [cite]); + covering18_complete: kps-S115's 966 list PROVED COMPLETE over [1,18] (native_decide, 8568 subsets) (HYP-5757)
+
+Prompt (owner): work to assemble the entire LRC 14 formalization yourself.
+
+1. THE FILE (TournamentH7/LRC14GrandAssembly.lean, BUILT 8506 jobs, wired into the root manifest): TWO variants derive LRC14Statement from the LRC(<=13) citation + ONE residual Prop. The case tree: (1) non-covering -> sieve_one_div at the missing modulus (explicit t = 1/q, unconditional); (4) all |v| <= 22 -> hwindow22_closed (the 31k-line machine window, cite); (2) no scale gap -> spread13_lonely at t = 1/(min+max) (unconditional); (3) dominant runner -> hdom_discharged (sharp peel, cite); (5) repeated |speed| -> lonely_of_abs + lonely14_of_repeat (cite). Residual: covering AND gapped AND compressed AND distinct-|speeds| AND max >= 23.
+2. NEW MICRO-LEMMAS: lonely_of_abs (loneliness transfers from |v| to v -- the forall-m quantifier absorbs signs; makes the repeat-reduction sign-blind) and lonely_comp_perm (permutation invariance, free).
+3. covering18_complete (native_decide over the C(18,13) = 8568 subsets): every primitive covering 13-subset of [1,18] IS in kps-S115's coveringWitnesses -- the 966 list is COMPLETE, so with coveringWitnesses_lonely the [1,18] base case is pinned end-to-end (branch (4) subsumes it inside the assembly; the completeness additionally certifies the list itself).
+4. SHARPNESS: prior best surfaces were lrc14_of_compressed (residual = covering AND compressed, opus) and lrc14_endgame (opaque witnessG2 hypotheses). This surface adds the gap + distinct + max >= 23 carve-outs (each deletes an infinite class) and is fully concrete (the opaque route bypassed).
+5. THE RESIDUAL = the analytic program's exact target: THM-665/667/669/670 availability floors + klein-S205 drift embed + THM-668 dispatch + mac-mini C0-C3 certificates. Their prose-closed slices are not yet Lean-quantified -- THE remaining formalization work now has one name: formalize the uniform statements over ResidualObligation.
+
+FILES: 04-computation/lean/TournamentH7/TournamentH7/LRC14GrandAssembly.lean (+ root import); 01-canon/theorems/THM-671-lrc14-grand-assembly-surface.md. No canon overridden.
+
+NEXT: (a) Lean-quantify THM-668 over the residual class (the detuned-harmonic slice: needs a Lean-side gcd-subgroup extractor + the LRC13 citation -- one page); (b) quantify the C0-C3 certificate families; (c) the drift-embed class form (Vmax > 1.41 spread as a residual-class carve); (d) keep shrinking ResidualObligation branch by branch until it coincides with the genuinely-open analytic core.
+
+---
 ## boxeph-2026-07-09-S2 -- TOURNAMENT-CORPUS MINING FOR MID-BAND LEVERS (three deep sweeps: the lever map -- four provable dead ends + the live transports) + HYP-5722: the mu-LEVEL threshold transfer (the piece THM-670 disclaims) => explicit per-k a-priori (H1) thresholds for LEM-014
 
 Prompt (owner): deep-dive prior tournament work comprehensively for facts giving LRC(14) leverage; work to finish LRC(14); integrate and extend incoming ideas.
