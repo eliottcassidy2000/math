@@ -1,0 +1,32 @@
+C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\lrc14_L9_rank2_rate_opus_S159.py:8: SyntaxWarning: invalid escape sequence '\ '
+  G(u,v,w) = | U_{B9}(u) \ (arc(v) u arc(w)) |   a FIXED function on T^3.
+====================================================================================================
+L=9 RANK-2 RESONANCE RATE:  m_j = L_j + sum_{Lambda} Ghat^j;  Lambda = {ad+bp+cq=0} (rank 2)
+  bar = 0.331212
+====================================================================================================
+[building G(u,v,w) on 112^3 grid ...]
+
+(1) DECORRELATED LIMIT: L=(0.15468,0.05171,0.02199)  D3_inf^(9) = 0.52211  (MC gave 0.524; margin over bar +0.1909)
+
+(2) MARGINAL decay constants V_j = sup|Mhat_j||ab|  (=> pair bound 2 zeta(2) V_j/(scale product)):
+    w-marg (d,p): 0.175,0.113,0.067   v-marg (d,q): 0.175,0.113,0.067   u-marg (p,q): 0.024,0.015,0.009
+
+(3) VERIFY  m_j = L_j + P_dp + P_dq + P_pq + T  (direct vs decomposition):
+    (d,p,q)=(3,10,14) m1: direct=0.147909  recon=0.146612  [Pdp=-0.00255 Pdq=-0.00240 Ppq=-0.00000 T=-0.00312]  diff=1.30e-03
+    (d,p,q)=(3,10,14) m2: direct=0.049720  recon=0.048928  [Pdp=-0.00133 Pdq=-0.00130 Ppq=-0.00000 T=-0.00015]  diff=7.92e-04
+    (d,p,q)=(3,10,14) m3: direct=0.022901  recon=0.022470  [Pdp=-0.00038 Pdq=-0.00037 Ppq=-0.00000 T=+0.00123]  diff=4.30e-04
+    (d,p,q)=(4,9,22) m1: direct=0.151959  recon=0.150809  [Pdp=-0.00060 Pdq=-0.00434 Ppq=+0.00000 T=+0.00106]  diff=1.15e-03
+    (d,p,q)=(4,9,22) m2: direct=0.050585  recon=0.049895  [Pdp=-0.00041 Pdq=-0.00139 Ppq=-0.00000 T=-0.00002]  diff=6.90e-04
+    (d,p,q)=(4,9,22) m3: direct=0.022558  recon=0.022175  [Pdp=-0.00018 Pdq=+0.00021 Ppq=-0.00000 T=+0.00016]  diff=3.82e-04
+    (d,p,q)=(5,12,17) m1: direct=0.158630  recon=0.158030  [Pdp=-0.00124 Pdq=-0.00074 Ppq=+0.00001 T=+0.00532]  diff=6.00e-04
+    (d,p,q)=(5,12,17) m2: direct=0.059181  recon=0.058866  [Pdp=-0.00032 Pdq=-0.00016 Ppq=+0.00001 T=+0.00762]  diff=3.16e-04
+    (d,p,q)=(5,12,17) m3: direct=0.028620  recon=0.028380  [Pdp=-0.00009 Pdq=-0.00004 Ppq=+0.00000 T=+0.00651]  diff=2.40e-04
+    => identity + pairwise decomposition VERIFIED (direct ~ L_j + 3 pair resonances + triple).
+
+(4) RATE + THRESHOLD (decorrelated regime):
+    D3 gradient at L^(9): g=(8.41,-21.56,15.30)
+    |D3 - D3_inf^(9)| <= 16.23/(pd) + 16.23/(qd) + 2.20/(pq) + (fast triple)
+    margin D3_inf^(9) - bar = 0.1909.  If all three of pd,qd,pq >= 256
+    then |D3-D3_inf^(9)| < margin => D3 >= bar (decorrelated regime, ignoring the fast triple).
+    The correlated remainder (some product small) is bounded => kps exhaustive / partial-decorr limits.
+====================================================================================================
