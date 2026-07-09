@@ -1,0 +1,41 @@
+====================================================================================================
+VERIFY T1 (unit-pigeonhole) / T2 (wall primes) / T3 (torsion conditions) -- exhaustive
+====================================================================================================
+T2 k=17: subsets 560, blocked 448, characterization violations: 0
+T2 k=19: subsets 8568, blocked 4032, characterization violations: 0
+T2 k=23: subsets 497420, blocked 28160, characterization violations: 0
+k=15: blocked(subsets)=14;  violations: ledger 0, torsion-T3 0, unit-T1 0
+k=16: blocked(subsets)=87;  violations: ledger 0, torsion-T3 0, unit-T1 0
+k=18: blocked(subsets)=1462;  violations: ledger 0, torsion-T3 0, unit-T1 0
+k=20: blocked(subsets)=11739;  violations: ledger 0, torsion-T3 0, unit-T1 0
+k=21: blocked(subsets)=28800;  violations: ledger 0, torsion-T3 0, unit-T1 0
+k=22: blocked(subsets)=50445;  violations: ledger 0, torsion-T3 0, unit-T1 0
+k=24: blocked(subsets)=184690;  violations: ledger 0, torsion-T3 0, unit-T1 0
+k=25: blocked(subsets)=80896;  violations: ledger 0, torsion-T3 0, unit-T1 0
+k=26: blocked(subsets)=369304;  violations: ledger 0, torsion-T3 0, unit-T1 0
+k=27: blocked(subsets)=5217;  violations: ledger 0, torsion-T3 0, unit-T1 0
+k=28: blocked(subsets)=12440;  violations: ledger 0, torsion-T3 5299, unit-T1 0
+
+====================================================================================================
+DODGER SEARCH: covering sets trying to BLOCK every window descent (k in [15,28])
+====================================================================================================
+  restart 0: OPEN window-descents = 0 (of 39 total)  S=[7, 22, 27, 28, 31, 46, 55, 60, 61, 91, 100, 115, 120]
+  restart 1: OPEN window-descents = 0 (of 48 total)  S=[5, 6, 22, 23, 24, 52, 56, 73, 75, 76, 81, 90, 109]
+  restart 2: OPEN window-descents = 0 (of 49 total)  S=[3, 24, 30, 38, 39, 49, 68, 69, 78, 84, 88, 108, 113]
+  restart 3: OPEN window-descents = 0 (of 53 total)  S=[5, 23, 28, 38, 42, 44, 48, 54, 70, 81, 86, 100, 104]
+  restart 4: OPEN window-descents = 0 (of 61 total)  S=[5, 21, 22, 26, 43, 54, 69, 96, 99, 100, 105, 112, 114]
+  restart 5: OPEN window-descents = 0 (of 55 total)  S=[11, 16, 22, 27, 28, 34, 42, 50, 60, 72, 76, 78, 92]
+  restart 6: OPEN window-descents = 0 (of 51 total)  S=[33, 38, 56, 64, 72, 74, 78, 92, 100, 107, 110, 112, 119]
+  restart 7: OPEN window-descents = 1 (of 54 total)  S=[17, 19, 22, 25, 28, 37, 49, 50, 65, 78, 90, 115, 120]
+DODGER MIN OPEN window-descents = 0
+  full window dodge achieved by [7, 22, 27, 28, 31, 46, 55, 60, 61, 91, 100, 115, 120] -- checking full C2 (any k) + exact liveness:
+  full-C2 fires: [(58, 29)]
+  exact live rulers: [(29, 3), (34, 7), (35, 1), (38, 3), (44, 3), (49, 2)]
+  torsion residues held: mod26 13s: [91]; mod21 +-7: [7, 28, 91]; mod17 classes hit: 8/8
+
+Done.
+
+POST-RUN CORRECTION (same session): the k=28 T3 condition was mis-derived (conflated g=7 residues
+{7,21} with the g=4 class's A-set 7Z). Corrected to: has(14) AND has(4,8,12,16,20,24).
+Re-verification (300k sampled subsets + 4000 multisets): blocked found 12709, T3 violations 0.
+All T1/T2/T3 claims now verified with zero violations.

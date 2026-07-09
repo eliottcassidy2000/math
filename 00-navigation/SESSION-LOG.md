@@ -41,6 +41,55 @@ ARCHITECTURE STATE (the aggregated modular route, post-S210): [witness = live (q
 FILES: THM-671; lrc14_discrete_quintic_bonferroni_klein_S210.py (+out); HYP-5758 CONFIRMED; backlog updated; memory updated.
 
 NEXT: (a) THM-671 part 6 -- the divisor-count + E3-budget bookkeeping (elementary, the last math item); (b) Lean LRCDiscreteBonferroni.lean (f5 over a histogram, integers only, decide-shaped) wiring into mreach_ge_of_pairsum_band + monad's LRC14GrandAssembly; (c) the (18,30) covering enumeration; (d) optionally run the FULL moment-LP over exact S_d (can only improve on Bonferroni corners).
+## mac-mini-2026-07-09-S65 (cont. 2) -- THM-672 PROVED (descent-window torsion occupancy: master ledger + unit-pigeonhole + wall-prime characterization + per-k torsion table) + the DECISIVE NEGATIVE: covering sets DODGE the [15,28] window because COVERING SUPPLIES THE TORSION OCCUPANTS; every dodger caught at k >= 29
+
+Prompt (owner): prove the large-domain statement (covering + sums > Q0 => C1/C2 fires).
+
+**Honest headline: the statement is LOCALIZED, not proved -- and the localization is a theorem.**
+
+**PROVED (THM-672, elementary, all machine-verified with 0 violations):**
+- **Master ledger:** on descent modulus k in [15,28] (danger {0,+-1}), blocked => 2U + N >= k-1
+  (U = occupied unit +-classes; N = |union of nested non-unit A-sets (k/g)Z \ 0|).
+- **T1 (unit-pigeonhole):** k COMPOSITE + all residues units => NEVER blocked (phi(k) < k-1).
+  C2 fires whenever such k divides a pair sum.
+- **T2 (wall primes, EXACT):** k in {17,19,23}: blocked <=> 0 in R or R hits EVERY +-class
+  (verified exhaustively: 497,420 subsets at k=23, 0 violations).
+- **T3 (torsion table):** blocked mod k forces SMALL-TORSION occupancy -- mod 16: v=8; mod 18:
+  9 AND +-6; mod 20: 10 AND +-4/8; mod 21: +-7 AND +-3/6/9; mod 22: 11 + even; mod 24: 12 AND
+  +-8; mod 25: +-5/10; mod 26: 13 + even; mod 27: +-9; mod 28: 14 AND +-4/8/12. The k=28 row was
+  MIS-DERIVED first (g=7 residues conflated with the g=4 A-set); the exhaustive verification
+  flagged 5299 violations, the row was corrected, re-verified 0/12,709 -- the
+  derive-then-machine-verify loop catching its author.
+- **Conditional theorem:** ANY 13-set with a pair sum divisible by k in [15,28] where the
+  T2/T3 condition FAILS is lonely (C2 fires, witness (q/k)s/q). No covering/primitivity/scale
+  hypotheses; Lean-shaped for kps-S114's mreach_ge_of_pairsum_band.
+
+**THE DECISIVE NEGATIVE (dodger search, cap 120):** full [15,28]-window dodgers exist among
+covering sets -- 7 of 8 hill-climb restarts (e.g. {7,22,27,28,31,46,55,60,61,91,100,115,120}:
+39/39 window descents blocked/dead; 91 = 13 mod 26; 7,28,91 = +-7 mod 21; all 8 classes mod 17
+hit). STRUCTURAL REASON, now precise: **the covering condition SUPPLIES the torsion occupants**
+(an odd multiple of 13 is 13 mod 26; a multiple of 7 prime to 3 is +-7 mod 21; a multiple of 9
+odd is 9 mod 18...) -- covering and window-blocking are ALIGNED, not opposed. That alignment IS
+the deep reason the covering branch of LRC(14) is hard: the hypothesis that forces hardness also
+hands the adversary every blocking ingredient the window needs.
+
+**BUT every dodger found is caught immediately above the window:** full C2 fires at k >= 29
+(the example dodger: q=58, k=29; live rulers 29,34,35,38,44,49). Counting ends at k=28 (for
+k in [29,42] danger = {0,+-1,+-2}, unit cost 4, and 4*phi(k)/2 < k-1 NEVER holds -- no T1
+analog); beyond it exact orbit combinatorics decide: e.g. mod 29 (2 primitive, -1 = 2^14,
+doubling acts as +1 on the Z/14 class cycle): blocked <=> occupied inverse-classes DOMINATE the
+14-cycle (no two consecutive missing). Per-k exact characterizations exist all the way up; no
+uniform counting theorem.
+
+**NET: the large-domain statement = the k >= 29 descent structure** = klein's mid-band
+realization in adaptive-split (THM-667) coordinates; klein-S210's quintic B5-cert (HYP-5758) is
+the right next-order instrument. My three-session arc (THM-668 -> certificates -> THM-672) has
+turned "prove equidistribution rho_K -> rho*" into "prove a cycle-domination statement about
+residue orbits mod k >= 29 dividing pair sums" -- finite-combinatorial at every scale, with the
+counting/exact boundary now a theorem.
+
+Files: THM-672 (canon, proofs + provenance note); lrc14_torsion_occupancy_macmini_S65cont2.{py,out}
+(incl. post-run correction note); HYP-5730 updated (obligation (2) localized); INDEX/backlog synced.
 
 ## boxeph-2026-07-09-S2 -- TOURNAMENT-CORPUS MINING FOR MID-BAND LEVERS (three deep sweeps: the lever map -- four provable dead ends + the live transports) + HYP-5722: the mu-LEVEL threshold transfer (the piece THM-670 disclaims) => explicit per-k a-priori (H1) thresholds for LEM-014
 
