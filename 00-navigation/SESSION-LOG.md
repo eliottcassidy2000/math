@@ -33,6 +33,72 @@ NET-NEW (reflection the-interval-is-the-shared-extremizer-...-kps-S113): the dil
 STATE: int W>0 certified a-priori by DENSITY FLOOR (grid-free, LRCDensityFloorCert wired to exists_pos S112); R_grid = large-V tool only (monad THM-665 + honest skeleton). Kronecker residue = equidistribution node (observer done, realization open). FILES: LRCDensityFloorCert.lean; reflection; schur_interval_maximizer_kps_S113.py/.out.
 
 NEXT: the equidistribution/Kronecker realization (feed density floor to exists_pos); formalize E3=C(n,2)<=>dilated-interval equality char (companion to mreach_AP_eq); add E3 as the dichotomy-dispatcher hardness coordinate (selects exact-check vs good-period cell).
+## mac-mini-2026-07-09-S65 -- THM-668 PAIR-SUM RULER THEOREM: the witness ALWAYS lives at t = p/(v_i+v_j); the SCHUR-TRIPLE KILL RULE mechanizes the E3 law; the AP has exactly ONE live ruler (q=14, its non-covering modulus); + the abstract-object reflection
+
+Prompt (owner): synthesize the bleeding edge of LRC(14) and extend it toward closure; pull often;
+mine past work; name the abstract object we are fundamentally interacting with.
+
+**(A) THM-668 (was THM-666; ceded to monad-explorer's 56-seconds-earlier claim, renamed — no court
+case needed, timestamps decisive).** PROVED elementary: every local max of `m(t) = min_i ||v_i t||`
+is at `t = p/(v_i+v_j)` (i<=j; i=j gives peaks at odd p/(2v_i)). Rising active constraint
+`frac(v_i t) = m` + falling `frac(v_j t) = 1-m` sum to 1 ⟹ `(v_i+v_j)t ∈ Z`. Consequences:
+witness denominator ≤ 2·Vmax (RELATIVE bound; no absolute bound exists, S64 OtR); M(S) rational,
+exact-integer computable (the device S64/klein-S206 used, now proved); LRC(14) restated EXACTLY:
+**for every primitive covering 13-set, some pair-sum modulus q = v_i+v_j and multiplier p put all
+13 residues v_l·p mod q in the band [q/14, 13q/14]**. Verified 300/300 vs full breakpoint
+enumeration (differences/kinks never win). Precedents credited: THM-420 (empirical pair-sum
+witnesses on the shell-free residual).
+
+**(B) klein-S207's "different ruler" mystery is LAWFUL.** Their 91-cluster witness 11/39 = 22/78,
+78 = 24+54, active pair {24,54} (residues ±9 mod 39) — reproduced exactly. Likewise monad-S2's
+detuned-harmonic "foreign ruler" 48/161: 161 | 322 = 140+182 = 154+168 (two pair sums!), m = 2/23
+reproduced. The Vmax-ruler can never host (klein-S207); **the pair-sum rulers always do.**
+
+**(C) THE SCHUR-TRIPLE KILL RULE + LIVE-RULER SUPPLY.** `(v_i+v_j) | v_l` ⟹ every (i,j)-event has
+`||v_l t|| = 0`: ruler DEAD. This is the mechanism behind opus-S182's E3 law (each height-3
+relation deletes one contact sheet). Free facts: rulers q > Vmax are NEVER dead; at p=1 the large
+rulers reproduce exactly spread13_lonely (r ≤ 13) — the open regime r > 13 lives on multipliers
+p ≥ 2. DATA (exact, `lrc14_live_ruler_stats_macmini_S65`): the tight AP has EXACTLY 1 live ruler:
+(q=14, p=1) — its non-covering modulus — with 12 Schur-killed + 12 band-empty; the covering
+91-cluster has 58 live, 0 band-empty. Over the 966 covering [1,18]: min live = 2 (at the near-AP
+{1,2,3,4,5,7,8,...,14}), mean 11.1; witness modulus in (Vmax, 2Vmax] in 89.6%, median
+q*/Vmax = 7/6 (the window constant!). Adversarial min live count (cap 60) = 21. Never 0.
+=> **Schur-budget lead** (backlog): covering caps the kill budget below saturation (composes with
+opus-S183's freshly PROVED LEM-014 E3 ≤ C(k,2) extremal); open problem = sub-saturated budget
+leaves a live banded ruler. A finite residue-geometry statement — no equidistribution quantifier.
+
+**(D) HYP-5720 (realization slack) — honest scope.** sigma = len(lonely component at witness) ×
+(pair sum): AP = 0 exactly (the tangency/pinch in closed form). Covering [1,18]: min 0.049 > 0;
+adversarial dips to 0.0343 (cap 120) — NOT evidently bounded away from 0. SELF-CAUGHT scope note:
+the witness IS an event, so sigma > 0 ⟺ M > 1/14 strict — HYP-5720 reformulates the covering
+cushion, it does not independently deliver realization; the Event-Realization Lemma's |I| ≥ 2/q
+sufficient condition is NOT how most witnesses realize (91-cluster: 0.44 spacings).
+
+**(E) monad-S1's "the bounded window IS the covering case" CORRECTED** (converging with
+boxeph-S1's P-separated note): explicit primitive covering set at Vmax=392 with V/spread = 4.4
+(multiples of 2..14 all near N — covering does not force small speeds). The correct statement:
+the HARD covering clusters are in the window; easy covering clusters exist outside it at every
+scale.
+
+**(F) REFLECTION (the owner's meta-question):** `the-object-is-a-winding-circle-touching-the-
+medial-axis-macmini-S65` — the abstract object is the closed integer-winding circle C_v ⊂ T^13
+(closure = Ann(relation lattice), Haar — THM-639's Theorem C verbatim); LRC(14) = the circle meets
+the middle box; THM-668 = the max of wall-distance is attained on the MEDIAL AXIS, contact times =
+pair-sum events, intersection numbers = v_i+v_j; Schur triples = contact sheets lying inside
+walls; the AP = the maximally coherent circle osculating the box corner (CM/Φ6 thread). Every
+fleet obstruction (drift, pinches, ruler-blindness, Mertens wall) = a non-intrinsic shadow;
+both repo halves study one exact sequence [relations → lattice → hierarchy]. Prescriptions:
+dispatch on the contact lattice (upgrades monad-S1's (d)); the a-priori bridge = Schur-budget
+finite geometry; same object at every n (only the Φ6 cushion thins); engineering: THM-668's event
+enumeration = an exact max-min window algorithm for periodic schedulers (library candidate).
+
+**FLAG for fleet bookkeeping:** LEM-014 is doubly claimed (opus-S183 Schur extremal, now proved +
+Lean, vs boxeph-S1's HYP-5708 "LEM-014 target" P-separated realization stub) — boxeph should
+renumber their target (opus's is proved and filed).
+
+Files: THM-668 canon; `lrc14_pair_sum_ruler_macmini_S65.{py,out}`;
+`lrc14_live_ruler_stats_macmini_S65.{py,out}`; HYP-5720 INDEX; backlog Schur-budget lead;
+reflection. All exact rationals/integers — no grids.
 
 ## opus-2026-07-09-S183 -- PROVED (+ Lean-formalized) LEM-014: the interval maximizes Schur triples -- E3(S)=#{(a,b) in SxS : a+b in S} <= C(k,2), equality iff dilated interval c*{1..k}; step (1) of the redirected forward lead
 

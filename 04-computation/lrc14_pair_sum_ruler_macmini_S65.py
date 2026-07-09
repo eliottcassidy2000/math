@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-lrc14_pair_sum_ruler_macmini_S65.py  --  THM-666 + HYP-5720
+lrc14_pair_sum_ruler_macmini_S65.py  --  THM-668 + HYP-5720
 
-THE PAIR-SUM RULER THEOREM (THM-666, proof in the canon file):
+THE PAIR-SUM RULER THEOREM (THM-668, proof in the canon file):
   m(t) = min_i ||v_i t|| is piecewise linear with slopes +-v_i (never 0), so it has no plateaus
   and its max is a local max at a breakpoint.  At a local max the active constraint on the left
   is RISING (frac(v_i t) = m, slope +v_i) and on the right FALLING (frac(v_j t) = 1 - m, slope
@@ -135,7 +135,7 @@ def primitive(S):
 
 # ================================================================ PART 1: verify the lemma
 print("=" * 100)
-print("PART 1 -- VERIFY THM-666: max over pair-sum events == max over ALL breakpoints")
+print("PART 1 -- VERIFY THM-668: max over pair-sum events == max over ALL breakpoints")
 print("=" * 100)
 fails = 0
 for trial in range(300):

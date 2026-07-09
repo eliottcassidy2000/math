@@ -1,5 +1,5 @@
 ====================================================================================================
-PART 1 -- VERIFY THM-666: max over pair-sum events == max over ALL breakpoints
+PART 1 -- VERIFY THM-668: max over pair-sum events == max over ALL breakpoints
 ====================================================================================================
 300 random primitive sets (k=4..7, speeds<45): 300 agree, 0 mismatches
 (difference-crossings and kinks NEVER exceeded the pair-sum events, as the lemma proves)

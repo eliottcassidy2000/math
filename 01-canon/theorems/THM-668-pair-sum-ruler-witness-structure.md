@@ -1,8 +1,9 @@
-# THM-666 — The pair-sum ruler theorem: the witness always lives at t = p/(v_i+v_j), and LRC(14) is a band statement on pair-sum moduli
+# THM-668 — The pair-sum ruler theorem: the witness always lives at t = p/(v_i+v_j), and LRC(14) is a band statement on pair-sum moduli
 
-**Status:** PROVED (parts 1–4, elementary, proofs below) + VERIFIED (300 random sets: pair-sum max
-= full-breakpoint max, 0 mismatches) + the realization corollary's uniform-slack refinement is
-HYP-5720 (OPEN, exact tests this session).
+**Status:** PROVED (parts 1–4, elementary, proofs below) + VERIFIED (300/300 random sets: pair-sum
+max = full-breakpoint max, exact; klein-S207's 91-cluster witness reproduced and explained; AP
+tangency σ = 0 exact). The uniform-slack refinement HYP-5720 is OPEN (data below — honest scope
+note included: it reformulates the covering cushion rather than independently delivering it).
 **Source:** mac-mini-2026-07-09-S65.
 **Precedents (honest):** THM-420 (opus-S700) observed *empirically* that the shell-free residual's
 witnesses sit at pair-sum resolutions; mac-mini-S64 and klein-S206 *used* the local-max enumeration
@@ -109,14 +110,23 @@ A dead ruler (`q | v_l`) has a zero residue and can never host; covering says ex
 *constant* rulers `q ∈ {2..14}` are all dead-at-`p=1`-in-the-weak-sense (some zero residue). The
 conjecture is that the pair sums always supply a live ruler.
 
-## HYP-5720 — the realization slack (OPEN, tested this session)
+## HYP-5720 — the realization slack (OPEN; first data this session, with an honest scope note)
 
 Define `σ(S)` = (length of the lonely component `{m ≥ 1/14}` at the witness) × (active pair sum).
-`σ(AP) = 0` (tangency). **Conjecture: `σ(S) ≥ c₀ > 0` uniformly over primitive covering 13-sets**
-(equivalently: on covering clusters the witness is never a tangency — the strict-cushion
-counterpart of klein-S206's strict good-period margin ≥ 1.2353 and mac-mini-S64's covering
-`min M = 1/12 > 1/14`). Verification: `04-computation/lrc14_pair_sum_ruler_macmini_S65.py`
-(+ `.out` in 05-knowledge/results/).
+`σ(AP) = 0` (tangency). Conjectured: `σ(S) ≥ c₀ > 0` uniformly over primitive covering 13-sets.
+**Data (exact):** 966 exhaustive covering sets `[1,18]`: min `σ = 0.049` (> 0, at the
+`min M = 1/12` set); adversarial hill-climbs: min `σ = 0.124` (cap 60), **`0.0343` (cap 120)**,
+`0.091` (cap 200). The cap-120 dip below the exhaustive minimum means σ is NOT yet evidently
+bounded away from 0 — OPEN, trend unclear.
+**Honest scope note (self-caught):** since the witness IS an event (Part 1), the lonely component
+at the witness always contains its own event; so `σ > 0 ⟺ M(S) > 1/14` strictly, and HYP-5720 is a
+scale-adjusted reformulation of the covering cushion (klein-S206 margin / mac-mini-S64
+`min M = 1/12`), NOT an independent realization mechanism. The Event-Realization Lemma's
+long-interval hypothesis (`|I| ≥ 2/q`) is sufficient but empirically not how most witnesses
+realize (e.g. the 91-cluster witness component spans only 0.44 event spacings). The counting
+route to the a-priori bridge must therefore use the sharper fact that events sit AT the local
+maxima (attracted, not independent) — see Part 1, and the ruler-supply question in Part 4.
+Verification: `04-computation/lrc14_pair_sum_ruler_macmini_S65.py` (+ `.out`).
 
 ## Consequences for the Lean endgame
 
