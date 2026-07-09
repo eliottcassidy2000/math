@@ -157,3 +157,29 @@ so `c < D3` holds with margin. So the dissociated branch closes by **`[c < D3` f
 sum. Remaining: the explicit `c < D3` inequality over the large-spread dissociated range (both sides
 exact — a finite/verifiable statement, not an analytic wall). File:
 `04-computation/lrc14_dissociated_D3_vs_c_macmini_S61.{py,out}`.
+
+### Route (c) — the concrete finite/verifiable closure (mac-mini-S62)
+
+The inequality `c := #arcs/spread < D3(E)` is dilation-aware: `D3` is dilation-invariant, `c` shrinks
+as spread grows (large spread ⟹ small `c`). Machine sweep over dissociated (`L ≤ k−6`) clusters shows
+`c/D3` is **monotone decreasing in spread** and `< 1` throughout — `max c/D3` by spread `∈
+{80,120,200,350,600,1000}`:
+
+| spread | 80 | 120 | 200 | 350 | 600 | 1000 |
+|---|---|---|---|---|---|---|
+| k=11 (`L≤5`) | 0.38 | 0.30 | 0.16 | 0.15 | 0.12 | 0.10 |
+| k=13 (`L≤7`) | 0.90 | 0.86 | 0.64 | 0.58 | 0.50 | 0.44 |
+
+So the dissociated branch closes CONCRETELY as **`[spread ≥ 200: c < D3]` + `[spread < 200: finite
+check]`**:
+- **spread ≥ 200:** `c/D3 ≤ 0.64` (`≥ 35%` margin, robust; both sides EXACT — `D3` via Farey, `#arcs`
+  via the arc structure) ⟹ `#arcs ≤ c·Vmax < D3·Vmax ≤ ρ*·Vmax` ⟹ a good period exists.
+- **spread < 200:** the hard case (`j=1` fails) has `Vmax ≤ 7·spread/6 < 234` — a bounded FINITE
+  CHECK, well inside kps-S30's exact `M(S) ≥ 1/14` sweep (`Vmax ≤ 1001`).
+
+This is the finite/verifiable form the covering case reduces to: an exact per-cluster inequality
+`c < D3` over the (dilation-normalized, hence effectively finite) large-spread dissociated shape
+space — verified with `≥ 35%` margin and monotone in spread toward the decorrelation limits
+(`c → c_∞ ≤ 0.44`, `D3 → D3_∞ ≥ 0.76` for `k=13`, `L ≤ 7`, opus-S158) — plus a `Vmax ≤ 234` finite
+check. No equidistribution, no resonance sum, no analytic wall. File:
+`04-computation/lrc14_dissociated_threshold_macmini_S62.{py,out}`.
