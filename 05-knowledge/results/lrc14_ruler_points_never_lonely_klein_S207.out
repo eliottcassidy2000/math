@@ -1,0 +1,25 @@
+E    = [0, 7, 14, 21, 26, 29, 37, 44, 51, 58, 67, 75, 82]
+Vmax = 91   v = [91, 84, 77, 70, 65, 62, 54, 47, 40, 33, 24, 16, 9]   (observer 91 present: True)
+
+(1) max_j minReach(v, j/Vmax) over j=0..90  =  0.000000000000   (theory: exactly 0)
+
+(2) EXACT M(S) = 3/13 = 0.230769   at tau* = 11/39 = 0.282051
+    1/14 = 0.071429;   M >= 1/14 ? True
+
+(3) fast phase phi = frac(Vmax*tau*) = 2/3 = 0.666667
+    forced window [1/14, 13/14] = [0.071429, 0.928571];  inside? True
+    => unavoidable drift floor: spread/(14*Vmax) = 82/(14*91) = 0.064364
+       actual max drift at tau*: spread*phi/Vmax = 0.600733
+
+    is tau* a ruler point (denominator | Vmax)? False
+    tau* denominator = 39, Vmax = 91
+
+(4) klein-S205 drift-embed fires at Vmax=91 (spread=82, ratio 1.110)? False
+    (S205 threshold ~1.41*spread = 116 > 91: consistent -- the embed correctly
+     does NOT claim this cluster; mac-mini's counterexample lies inside the open window.)
+
+SYNTHESIS: (1) is the structural cause of mac-mini's counterexample -- the ruler point is
+disqualified because the OBSERVER (v=Vmax) sits on the origin there. (2)-(3) show the offset
+phi>=1/14 is forced, hence the drift is unavoidable. The 1/7 bridge is drift-FREE at a real tau
+(klein-S204 criterion C); the drift is an artefact of evaluating the teeth at j/Vmax. The 2/7
+criterion buys exactly the room to absorb that artefact. No repair of THM-663 is implied.
