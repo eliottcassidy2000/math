@@ -1,0 +1,33 @@
+L=9 REDUCTION BASE CASES; bar = 0.331212
+============================================================================================
+
+(B0) block_9 + 2 iid = D3_inf^{(9)} (S158/S160): ~0.524  margin +0.19  [>= bar]
+
+(B1) INTERMEDIATE 10-POINT-CORE FLOOR: min over (d,p) of D3(block_9(scale d) u {p} + 1 iid):
+     (the reduction peels the far point q, leaving this core + iid; must be >= bar)
+     [decorr ref: d=300 core -> D3 = 0.52370 ~ 0.524]
+     d=  1: min_p D3(core+iid) = 9.90000 at p=None
+     d=  2: min_p D3(core+iid) = 0.50532 at p=7
+     d=  3: min_p D3(core+iid) = 0.51565 at p=16
+     d=  4: min_p D3(core+iid) = 0.50532 at p=14
+     d=  5: min_p D3(core+iid) = 0.51877 at p=12
+     d=  6: min_p D3(core+iid) = 0.50532 at p=21
+     d=  7: min_p D3(core+iid) = 0.52318 at p=11
+     d=  8: min_p D3(core+iid) = 0.50532 at p=28
+     d= 12: min_p D3(core+iid) = 0.50532 at p=42
+     d= 16: min_p D3(core+iid) = 0.50532 at p=56
+     d= 20: min_p D3(core+iid) = 0.50532 at p=70
+     d= 24: min_p D3(core+iid) = 0.50532 at p=84
+
+     (B1) MIN over (d,p) = 0.50548 at (d,p)=(2, 7)  margin +0.17426  [>= bar]
+
+(B2) BOTH-CLOSE finite region (S160 exact conditional): min D3 = 0.467 at block_9(4)+{3,40} [>= bar +0.136]
+
+============================================================================================
+THE FINITE BOUND (explicit).  'Close' for a point x vs the block means the reduced pair
+product x1*d1 (x1=x/gcd(x,d), d1=d/gcd(x,d)) is < T (strong (d,x) resonance).  Then x < T*d/... ;
+BOTH close => d < T and p,q < T => prim-diam = max(8d,p,q) < 8T (BOUNDED) => finite exact check (B2).
+ONE far => peel it (rank-1 Koksma) => core+iid floor (B1) >= bar.  BOTH far => box bound (B0)=0.524.
+
+VERDICT: base floors (B0)=0.524, (B1)=0.5055, (B2)=0.467 all >= bar 0.3312  => the L=9 reduction closes [OK]
+============================================================================================
