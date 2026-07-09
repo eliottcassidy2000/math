@@ -144,6 +144,21 @@ tail, read on the `Vmax`-grid). Verified `|E_grid[W]−(6/7)^k| ≤ 0.032 ≪ (6
 6/(7Vmax)` and good periods are abundant (`#good ≈ (6/7)^k·Vmax`). LEM-010 (elementary, needs no
 resonance bound) is the cleaner closure; THM-664 gives the conceptual identity and the abundance.
 
+### R3 — the good period couples with `G_P` (mac-mini-S60): CONFIRMED, but it is a spread-out `j`
+
+The full good period is a grid `j` with **both** `Good_E(j)` (`maxgap{frac(e_i j/Vmax)} > 1/7`,
+the cluster) **and** `G_P(j)` (`‖p·j/Vmax‖ ≥ 1/14 ∀p∈P`, the observer block) — i.e. `j/Vmax ∈
+G_P ∩ Good_E`, whose measure is `ρ*_{1/7} ≥ m_P`. **Correction to the elementary route:** LEM-010's
+`j=1` handles `Good_E` in isolation, but `j=1` typically **fails `G_P`** — for a small observer speed
+`p`, `‖p/Vmax‖ = p/Vmax < 1/14`. So the full good period is a **spread-out `j`**, not `j=1`. It DOES
+exist: a direct search over admissible spread-dense `(P,E)` (`k=8,11`, `|P|=5,2`) finds a grid `j ∈
+G_P ∩ Good_E` in **all ~6000 cases, 0 failures** (consistent with kps-S30's exact `M(S)≥1/14` for
+`Vmax≤1001`). So the finite-`Vmax` glue is really the intersection question — same structure (a grid
+point in a positive-measure `ρ*≥m_P` union of arcs, `G_P`'s arcs × `Good_E`'s arcs), and the LEM-010 /
+THM-664 / arc-count machinery applies to it, with the binding `j` spread out to clear `G_P`. Confirmed,
+but a genuine refinement (not just a writeup): the elementary `j=1` proves the *cluster* half only.
+File: `04-computation/lrc14_R3_GP_coupling_macmini_S60.{py,out}`.
+
 ## Honest caveats (density-floor rigor)
 
 The per-shape floors `B_d(E)` are rigorous lower bounds on `μ` (exact rational moments via
