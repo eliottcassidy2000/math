@@ -69,6 +69,29 @@ _macmini_S58).
 NEXT: (a) prove j*=O(k) (successive-minima / three-distance on the AP-clustering dilation) =>
 THM-527-A fully elementary; (b) the bounded finite check {Vmax<=531441, spread>=6Vmax/7} (extend
 kps-S30's exact M(S) sweep past V0=1001); (c) opus-S157 a-priori V_j (density-floor tail rate); (d) Lean.
+## kind-pasteur-2026-07-08-S89 (cont.2) -- LEAN: the D3 COVERING FLOOR formalized + kernel-checked (LRCD3FloorCert.lean) -- native_decide bar<=D3 for the anchor extremals + two finite families; block D3 EXACT rational matches Python
+
+Prompt (owner): work on the Lean assembly of the finite pieces.
+
+DELIVERED (BUILDS, kernel-checked). New standalone Lean file TournamentH7/LRCD3FloorCert.lean (import Mathlib only; Mathlib cached, builds in ~17s), porting klein's exact-Q Farey-cell moment machinery (lrc14_d3_exact_verify_klein_S184.py) to Lean in the LyWindowEnum native_decide style:
+ - fareyList / gapsAt / subPts / ABc / cellMoments / moments / D3 -- the full D3 covering floor (THM-661) in exact ratio arithmetic.
+ - #eval D3 [0..10] = 54912120381817 / 135668932727076 (= 0.404751) -- EXACT match to my Python (proves the port is correct).
+ - native_decide THEOREMS (kernel-verified, bar = 83549/252252):
+     block_floor        : bar <= D3 {0..10}                         (the GLOBAL D3-minimizer)
+     A_floor            : bar <= D3 {0,3,6,8,9,12,15,18,21,24,27}   (opus-S155's tail extremal A = 0.452986)
+     blockOutlier_floor : bar <= D3 {0..9,25}
+     blockOutlier_family: bar <= D3 {0..9,D} for ALL D=25..40       (finite-closure slice)
+     A_scale3_family    : bar <= D3 (3*{0..9} u {p}) for all off-lattice p=1..26  (opus's A sub-family, min at p=8)
+
+So the corrected density-floor finite pieces are now IN LEAN and kernel-checked: the D3 floor functional + the anchor extremals (block 0.4048, A 0.4530) + two finite families all clear the bar. This is the Lean formalization of the finite pieces underpinning the k=11 covering-floor closure -- the same exact rationals the Python censuses produced, now native_decide-verified.
+
+BUILD: lake build TournamentH7.LRCD3FloorCert -> success (8475 jobs, ~17s, Mathlib cached); .lake gitignored (only the .lean source commits).
+
+CONTEXT: complements the existing LyWindowEnum.lean (klein's Bonferroni-dual covering census); this adds the DEGREE-3 (D3) floor, which is the tighter/corrected functional. Slots toward the hfloor node (witnessMP <= witnessG2) of LRC14Assembly.lean.
+
+FILES: 04-computation/lean/TournamentH7/TournamentH7/LRCD3FloorCert.lean.
+
+NEXT (Lean): scale the native_decide from anchors/small-families to the full prim-diam<=30 exhaustive (needs a bounded-shape enumerator in Lean, like LyWindowEnum's `shapes k spread`); wire D3 >= bar to the skeleton's witnessG2 >= witnessMP; then the box-bound + conditional-D3 tail (analysis lemmas). The MATH is done; this is the remaining Lean transcription.
 
 ## kind-pasteur-2026-07-08-S89 (cont.) -- the L=9 CORRELATED REMAINDER verified >= bar (opus-S159's stated NEXT): ~190k genuine longest-AP=9 tail shapes, min D3 = 0.467131 (margin +0.136); L=9 stratum CLOSES
 
