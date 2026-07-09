@@ -1,3 +1,50 @@
+## mac-mini-2026-07-08-S58 -- DENSITY FLOOR FULLY CLOSED (all six legs k=8..13, uniform level) + COVERING CASE ASSEMBLED (THM-663): LRC(14) now reduces to ONE analytic item (THM-527-A finite-Vmax) + Lean
+
+Prompt (owner): close k=12,13 with the LEM-009 machinery; then keep aiming to close the LRC(14) proof.
+
+DELIVERED — the density-floor side of LRC(14) is complete, and the covering case is assembled:
+
+1. **k=12,13 tail CLOSED via LEM-009 machinery** (the owner's ask). Mirrored the fleet's k=11
+   closure: [exhaustive compact prim-diam ≤ 18, exact Farey: min_E D3 = 0.355876 (k=12) / 0.308844
+   (k=13)] + [longest-AP=(k−1) tail family {0,d,..,(k-2)d}∪{p}: exact per-scale table, SCALE-MONOTONE
+   (min at d=1, rises with d) -- CLEANER than k=11 (no d=3 dip); family min 0.356593/0.324953 ABOVE
+   the compact min] + [decorrelation limit D3_∞ ≈ 0.38881/0.34432, opus-S157's PROVEN 1/(pd) rate,
+   machine |D3−D3_∞|·D ≤ 0.047/0.044] + [20k-shape backstop: nothing undercuts compact min]. Margins
+   +0.157/+0.252 (2×/4.5× k=11's +0.074). THM-661 tail UPGRADED from asserted-LEM-005 to rigorous;
+   S57 "block is the minimizer / D3 decreases in R2" framing CORRECTED (per klein-S189/MISTAKE-126).
+
+2. **k=8,9,10 UNIFORM floor CLOSED.** THM-661's table gave B_d for the BLOCK; the union bound needs
+   min_E. Exhaustive compact (float pre-filter + exact) + tail backstop: the BLOCK is the B_4-minimizer
+   (unlike k=12,13 near-2-AP), min_E B_4 = 0.761/0.645/0.553 ≥ bars, margins +0.086/+0.082/+0.101.
+   (D3 clears k=8 by only +0.0006 -> B_4 is the honest tool, as THM-661 states.) **ALL SIX legs closed
+   at the uniform level.**
+
+3. **THM-663 -- covering case of LRC(14) CLOSED.** Density floor ⟹ THM-530's k≥8 union bound
+   unconditional (Bonferroni ρ*_{1/7} ≥ meas(G_P)+μ−1 ≥ m_P) ⟹ ρ*_{1/7}(P,E) ≥ m_P = 14249/252252 > 0
+   for EVERY admissible (P,E) ⟹ every covering-saturated 13-set has a global witness maxgap>1/7 ⟹
+   lonely. With non-covering = LRC(≤13) SETTLED, LRC(14) holds modulo THM-527-A + Lean. **This closes
+   THM-527's "genuine remaining crux"** (the uniform floor c₀>0) via the direct integer route (no
+   compactness / real-vs-integer passage) -- THM-527 status updated.
+
+4. **Advance on the sole remaining item (THM-527-A finite-Vmax glue).** The **bounded-arc-count lemma**:
+   the good set G* = {x: maxgap>1/7} has #arcs INDEPENDENT of Vmax -- the combinatorial gap order
+   changes only at coincidences x = m/(e_i−e_j) = m/(cluster-internal-diff), NOT m/Vmax (a phase
+   wrapping through 0 keeps circular gaps continuous). #arcs = O(k²·spread²); machine-verified
+   Vmax-invariant (#arcs ≈ k+1: 12/12/12 blocks, 14 near-2AP). Closes the BOUNDED-SPREAD half
+   (ρ_K → ρ* ≥ m_P); large-spread half = Weyl/THM-518.
+
+STATE: LRC(14) = [covering case CLOSED mod THM-527-A] + [non-covering = LRC(≤13) SETTLED]. The whole
+proof now rests on ONE analytic item (THM-527-A large-spread, a Weyl estimate) + Lean transcription.
+
+FILES: THM-663 (new), THM-661 (k=12,13 rigorous tail + k=8,9,10 uniform), LEM-009 (k12/13 addendum),
+THM-527 (crux-closed update), proof-DAG ledger + OPEN-Q milestone banner + reflection; scripts
+lrc14_lem009_k12_13_{,_scaletable,_backstop}, lrc14_k8910_{uniform_floor,backstop},
+lrc14_bounded_arc_count (all _macmini_S58, + .out).
+
+NEXT: (a) THM-527-A large-spread half (Weyl/decorrelation, THM-518) -> finite-Vmax glue fully closed
+=> covering case unconditional; (b) opus-S157's a-priori V_j bound (remove the tail's last numerical
+certification); (c) Lean transcription of the finite pieces (compact B_d native_decide + the ρ* union bound).
+
 ## opus-2026-07-08-S159 -- THE L=9 PER-L RATE via the RANK-2 resonance sum: it DECOMPOSES into three S157-type marginal (rank-1) pairwise resonances + a fast triple; decorrelated regime PROVED D3>=bar (HYP-5477 cont.)
 
 Prompt (owner): prove the L=9 per-L rate (rank-2 resonance).
