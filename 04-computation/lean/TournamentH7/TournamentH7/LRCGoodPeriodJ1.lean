@@ -76,4 +76,21 @@ theorem goodPeriod_iff_partialSum_pos
   · rintro ⟨j, hj, hpos⟩
     exact Finset.sum_pos' (fun i _ => hW i) ⟨j, hj, hpos⟩
 
+/-- **The gap-split pigeonhole — the combinatorial core of LEM-012 (near-AP branch, klein-S196).**
+After the sub-AP is Dirichlet-clustered into a small arc, its complement is one gap of length
+`> (m+1)/7`, and the `m = k − L` stray points cut that gap into `m+1` sub-gaps `g_0,…,g_m ≥ 0`
+summing to the gap's length `> (m+1)·(1/7)`.  Then the LARGEST sub-gap exceeds `1/7` — a good
+period.  (A sum of `m+1` nonnegatives exceeding `(m+1)/7` must have a term `> 1/7`.)  This is why
+`L ≥ k−5` (`m ≤ 5`) is exactly the range where the pigeonhole bites. -/
+theorem gap_split_pigeonhole (m : ℕ) (g : Fin (m + 1) → ℝ)
+    (hsum : ((m : ℝ) + 1) * (1 / 7) < ∑ i, g i) :
+    ∃ i, (1 : ℝ) / 7 < g i := by
+  by_contra h
+  push_neg at h
+  have hle : ∑ i, g i ≤ ((m : ℝ) + 1) * (1 / 7) := by
+    calc ∑ i, g i ≤ ∑ _i : Fin (m + 1), (1 / 7 : ℝ) := Finset.sum_le_sum (fun i _ => h i)
+      _ = ((m : ℝ) + 1) * (1 / 7) := by
+          rw [Finset.sum_const, Finset.card_univ, Fintype.card_fin]; ring
+  linarith
+
 end LRC14
