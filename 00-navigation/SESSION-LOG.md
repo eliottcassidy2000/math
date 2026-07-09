@@ -1,3 +1,21 @@
+## opus-2026-07-08-S159 -- THE L=9 PER-L RATE via the RANK-2 resonance sum: it DECOMPOSES into three S157-type marginal (rank-1) pairwise resonances + a fast triple; decorrelated regime PROVED D3>=bar (HYP-5477 cont.)
+
+Prompt (owner): prove the L=9 per-L rate (rank-2 resonance).
+
+E = block_9(scale d) + {p,q} => W(x)=G(u,v,w) on T^3, u=frac(dx),v=frac(px),w=frac(qx). RANK-2 identity: m_j = L_j + sum_{(a,b,c) in Lambda\0} Ghat^j(a,b,c), Lambda={ad+bp+cq=0}. 
+
+KEY DECOMPOSITION: Lambda\0 = three punctured coordinate planes (c=0: (d,p) pair; b=0: (d,q); a=0: (p,q)) + generic (triple). Ghat^j(a,b,0) = w-marginal Fourier => EACH plane is an S157 rank-1 pair resonance on a 2D marginal. So m_j - L_j = P_dp + P_dq + P_pq + T, each pair <= 2zeta(2)V/(scale product). VERIFIED (N=112 grid): direct m_j = L_j + P_dp+P_dq+P_pq+T to grid precision ~1e-3, (p,q) term negligible (Vu=0.024 << Vw=Vv=0.175: marginalizing the block leaves only weak point-point).
+
+RATE: |D3 - D3_inf^(9)| <= 16.2/(pd) + 16.2/(qd) + 2.2/(pq) + fast triple; D3_inf^(9)=0.522 (margin +0.19 = 12x the L=10 razor). DECORRELATED REGIME (all products >= 256): PROVED D3 >= bar. Correlated remainder (some product <256): bounded (all<256 => prim-diam<~2048, finite/exhaustive) OR one pair close + one far point => far decorrelates => reduces to block_9+close-point (10-pt) + 1 iid (lower rank).
+
+GENERAL PATTERN: longest-AP L => rank-(11-L) lattice decomposes into C(12-L,2) pairwise MARGINAL resonances (each an S157 rank-1 rate) + faster higher terms. So EVERY stratum's rate = copies of S157's rank-1 rate; margins grow +0.19..+0.52 as L drops.
+
+HONEST: rigorous = the rank-2 identity + the coordinate-plane decomposition + the decorrelated-regime rate; certified (as S157) = the marginal constants Vw,Vv,Vu + D3_inf^(9) (N=112); the correlated remainder uses kps exhaustive + S158 reliable check + the lower-rank reduction, not a pure rate. Context: klein-S190 enumerated L=10 exactly (tail min = A confirmed) + RESOLVED the court case; k=11 tail CLOSED.
+
+NEXT: the correlated-remainder finite bound (prim-diam<2048 for all-products-small) + the lower-rank reduction made rigorous; a-priori decay constants. Files: lrc14_L9_rank2_rate_opus_S159 (+out); reflection the-L9-rank2-resonance-rate-decomposes-into-marginal-pairwise-rates-opus-S159.
+
+---
+
 ## klein-2026-07-08-S190 -- ENUMERATED the longest-AP=10 family exactly: tail min = A = 0.452986 (d=3) >= bar +0.12, confirming opus's A is the true minimizer; caught a failed 1-D reduction (dilation-invariance is integer-c only); k=11 tail CLOSED, court case RESOLVED (HYP-5387)
 
 Prompt (owner): enumerate the longest-AP=10 family exactly to close the tail.
