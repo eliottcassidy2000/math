@@ -1,3 +1,21 @@
+## klein-2026-07-09-S202 -- OCF/decay TRANSPORT worked to the end: PARTIAL (over-covering blocks the tight bound) + the SOUND R0-signed/R_grid-absolute split with the CORRECTED j=0 Lean threshold (fixes kps-S96's vacuous existence). Converges opus-S172 (same negative) + mac-mini-S64 (same split).
+
+Prompt (owner): work the transport of the OCF/decay truncation constant, then formalize; long session, pull often + use fleet work as signal.
+
+Worked opus-S171's flagged NEXT (port THM-076's clean Walsh-OCF truncation constant to the covering residual R to make kps-S96's E_grid good-period route a-priori). RESULT: the constant transports ONLY PARTIALLY -- exactly as far as the covering is DISJOINT.
+
+**THE DIAGNOSIS (matches opus-S172, independently -- strong cross-check).** Tournament OCF (THM-076) = DISJOINT cycle-covering => telescopes cleanly (constant-term identity C(m,j)j!(m-j)!=m!). LRC = OVERLAPPING covering (k/7=13/7=1.86>1, barely-covers). The constant ports through the DISJOINT/smoothness part: Phi(y)=uncovered measure is continuous piecewise-linear => Phi_hat(M)=O(1/M^2) => RIGOROUS R_grid_abs <= TV(Phi')/(12 Vmax^2), TV~12 spread^2 (opus-S172 got 13 spread^2, exp 2.03 -- IDENTICAL). But TV/(12V^2)~1 at the hard boundary (30-50x loose); the multivariate ABSOLUTE grid-residual OVERSHOOTS E[W] by 1.4-1.7x (tightAP 11-14x). So the tight bound at the hard boundary IS the barely-covers wall -- NOT proof-critical (kps-S99 dichotomy; genuine closure = LEM-012/013 maxgap + density-floor/exact-check, klein-S201 2x2).
+
+**THE SOUND SPLIT (klein-S202 = mac-mini-S64 convergent, owner-steered both).** kps-S98's total-absolute Sum_{V|n.e}|What| fails (1.55@s50) because R0 (the n.e=0 EXACT relations = density floor) is large for AP. SPLIT: keep R0 SIGNED inside E[W] (>=0, density floor), take ONLY R_grid absolutely. Corrected for the trivial shift W(0)=6/7 (Sum_{j=1}^{V-1}W(j/V)=V*E_grid-6/7): good period exists <=> V*(E[W]+R_grid)>6/7 <= R_grid_abs < E[W]-(6/7)/Vmax. SOUND: 0 over-claims over ~1400 adversarial hard clusters, correctly EXCLUDES the tight AP {0..12}@V=13 (no good period). mac-mini: V*E_x>=5.65*(6/7) uniform main term (grows linearly); R0=additive-energy/kissing on the winning side.
+
+**MY UNIQUE PIECE + FORMALIZATION.** LRCEgridExistenceCorrected.lean (sorry-free, single-file BUILD_EXIT=0): exists_good_of_grid_residual -- threshold E_grid[W]>(6/7)/Vmax (NOT >0), concludes a NONTRIVIAL j!=0. Fixes the LATENT BUG in kps-S96's exists_good_of_residual_small: its conclusion "exists j in range N, W j>0" is a TAUTOLOGY (j=0 always works, W(0)=6/7) -- the S201/S202 j=0 blind spot, formalized out.
+
+CONVERGENCE (git-as-signal): opus-S172 (same negative, TV~spread^2), mac-mini-S64 (same split), kps-S99 (dichotomy dispatch Lean). All same day. I cross-linked, resolved HYP-5577 (PARTIALLY-TRUE), did NOT re-file the negative as new.
+
+FILES: lrc14_{grid_residual_split,TV_transport,grid_sweep,multivariate_gridres}_klein_S202.py(+outs); LRCEgridExistenceCorrected.lean (built); reflection the-ocf-truncation-constant-transports-only-through-the-disjoint-part-klein-S202; HYP-5577 resolved.
+
+NEXT: the good-period leg is closed by the DICHOTOMY (LEM-012 V>=Q+1 near-AP + LEM-013 dissociated maxgap) + density-floor/exact-check (Vmax<=1001) -- kps-S99 Lean dispatch is the assembly. The residual/E_grid route is ABUNDANCE, not the closure. Owner's transport question: ANSWERED (partial; over-covering is the obstruction; the sound split + corrected Lean is the salvage).
+
 ## opus-2026-07-09-S172 -- the OCF/decay TRANSPORT to an a-priori |R|<(6/7)^k FAILS (honest negative): neither L1 (TV~spread^2) nor L2 (E[(W')^2]~spread^2) reaches main; |R|<main is ARITHMETIC cancellation, because k/7=13/7>1 OVER-COVERING makes W' scale with spread. Corrects opus-S171, converges kps-S98/S99 + mac-mini-S64. Lean resonant_tail_le. Court ack (klein-S201).
 
 Prompt (owner): work the transport of the OCF/decay truncation constant, then formalize; LONG session, pull often, use fleet work as signal for exploration/pondering.
