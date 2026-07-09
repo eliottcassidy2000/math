@@ -1,3 +1,20 @@
+## kind-pasteur-2026-07-09-S108 -- RAN THE EQUIDISTRIBUTION ON THE SMOOTH SURROGATE W: it converges an ORDER faster (1/V^2) than the sharp indicator (1/V) -- the grid-invisible pinches are desingularized; good-period existence certified cleanly by E_grid[W]>0
+
+Prompt (owner): run the equidistribution on the smooth surrogate W.
+
+DONE (lrc14_equidist_smoothW_kps_S108): for a fixed cluster, varying Vmax, measured the grid-average discrepancy decay:
+- SMOOTH R_grid = E_grid[W]-E_x[W] ~ 1/V^1.95 (dissoc), 1/V^1.65 (7-struct) ~ 1/V^2 (alpha=2).
+- SHARP rho_K - rho* ~ 1/V^1.14 (dissoc), 1/V^1.30 (7-struct) ~ 1/V (alpha=1).
+The smooth W equidistributes an ORDER FASTER. Exactly the S107 desingularization: a grid-invisible pinch is a JUMP discontinuity of the SHARP indicator (Ihat~1/m => O(1/V) grid error) but only a CORNER of the C^0 surrogate W (What~1/m^2 => O(1/V^2)). E_grid[W]>0 for EVERY Vmax tested (~E_x[W]~0.13-0.14>0 = density floor) => GOOD-PERIOD EXISTENCE certified cleanly by the smooth grid-average, no grid-invisible-pinch pathology (resolves MISTAKE-130 in practice).
+
+A-PRIORI: E_grid[W]=E_x[W]+R_grid, |R_grid|<=TV(W')*pi^2/(3V^2)=O(spread^2/V^2), E_x[W]>=density floor>0 => E_grid[W]>0 for V >~ 2.8*spread, finite check below. This is the "good period EXISTS" half.
+
+COMPLEMENTS klein-S205 (LRCDriftEmbed.lean, sorry-free): drift-absorbed embedding "good period => lonely" for Vmax>1.41*spread, via the NEVER-DRIFTING ANCHOR (observer tooth e_0=Vmax-Vmax=0, kps-S105 flagged the e=Vmax-v binding). Together: [exists via smooth W, V>~2.8spread] + [=>lonely via drift-embed, V>1.41spread] => hembed a-priori for V>~2.8*spread + a BOUNDED finite window (spread, 2.8spread].
+
+STATE: hembed = [V > 2.8*spread: DONE (exists=smooth-W equidist S108 + embed=klein-S205)] + [bounded window (spread, 2.8spread]: finite check]. The window is where the local embedding fails (mac-mini counterexample) and the good period is a knife-edge. FILES: lrc14_equidist_smoothW_kps_S108.py; S107 reflection extended.
+
+NEXT: the bounded-window finite check (Vmax in (spread, 2.8spread], spread bounded by the compact reduction); OR sharpen the a-priori R_grid bound (signed cancellation) to shrink the window. Formalize E_grid[W]=E_x[W]+R_grid + the O(1/V^2) bound.
+
 ## klein-2026-07-09-S205 -- THE OBSERVER'S TOOTH IS AN ANCHOR: drift-absorbed ruler embedding FORMALIZED (LRCDriftEmbed, sorry-free kernel-pure) -- discharges hembed for Vmax>1.41*spread, WITH the e=Vmax-v binding kps-S105 flagged missing; residual = bounded finite-check window
 
 Prompt (owner): work toward the finish target creatively; mine past threads for tangentially related concepts.

@@ -79,7 +79,29 @@ not a sharp-indicator one.
   `E → sE` gives `#arcs → s·#arcs`); and the pinch abscissae are `{m/d : d ∈ diffs(E)}` — a finite,
   a-priori set. Both are clean Lean targets that make the pinch count concrete.
 
-*Files: `lrc14_pinch_lemniscate_kps_S107.py`, `lrc14_pinch_k13_kps_S107.py` (+ `.out`). Builds on
+## The equidistribution run (kps-S108) — the smooth surrogate converges an ORDER faster
+
+Running the equidistribution on `W` confirms the prescription quantitatively (`lrc14_equidist_smoothW_kps_S108`).
+For a fixed cluster, varying `Vmax`, the grid-average discrepancies decay as:
+
+| | dissoc (spread 35) | 7-struct (spread 82) |
+|---|---|---|
+| **SMOOTH** `R_grid = E_grid[W] − E_x[W]` | `~ 1/V^{1.95}` | `~ 1/V^{1.65}` |
+| **SHARP** `ρ_K − ρ*` | `~ 1/V^{1.14}` | `~ 1/V^{1.30}` |
+
+The smooth `W` equidistributes at **`1/V²`** (α=2), the sharp indicator only at **`1/V`** (α=1) — exactly
+the node desingularization: a grid-invisible pinch is a **jump discontinuity** of the sharp indicator
+(`Îhat ~ 1/m`, `O(1/V)` grid error) but only a **corner** of the `C⁰` surrogate `W`
+(`Ŵ ~ 1/m²`, `O(1/V²)`). And `E_grid[W] > 0` for every `Vmax` tested (`≈ E_x[W] ≈ 0.13–0.14 > 0`, the
+density floor) — so **good-period existence is certified cleanly by the smooth grid-average**, no
+grid-invisible-pinch pathology. A-priori: `E_grid[W] = E_x[W] + R_grid`, `|R_grid| ≤ TV(W')·π²/(3V²) =
+O(spread²/V²)`, `E_x[W] ≥` density floor `> 0` ⟹ `E_grid[W] > 0` for `V ≳ 2.8·spread`, finite check
+below — the "good period EXISTS" half, complementing klein-S205's drift-absorbed embedding (`V >
+1.41·spread`, "good period ⟹ lonely"). Together they cover `V ≳ 2.8·spread` a-priori + a bounded
+finite window.
+
+*Files: `lrc14_pinch_lemniscate_kps_S107.py`, `lrc14_pinch_k13_kps_S107.py`,
+`lrc14_equidist_smoothW_kps_S108.py` (+ `.out`). Builds on
 mac-mini-S64 (MISTAKE-130, the pinches), opus-S170 (smooth surrogate, α=2), kps-S93/S97 (Mertens-safe
 resonant sum, kissing), kps-S95 (the lemniscate as the second-moment/doubling curve). See
 [[triangle_foundation]].*

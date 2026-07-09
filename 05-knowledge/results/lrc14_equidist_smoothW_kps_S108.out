@@ -1,0 +1,24 @@
+
+dissoc k=13 (spread 35): E_x[W]=0.13970 (continuum), rho*=0.9465
+       V  E_grid[W]     R_grid    rho_K  rho_K-rho* good?
+     200    0.14214   +0.00244   0.9600    +0.01353   YES
+     400    0.14052   +0.00081   0.9400    -0.00648   YES
+     800    0.13992   +0.00022   0.9425    -0.00397   YES
+    1600    0.13973   +0.00003   0.9463    -0.00022   YES
+    3200    0.13971   +0.00001   0.9463    -0.00022   YES
+    6400    0.13971   +0.00000   0.9472    +0.00071   YES
+  => SMOOTH W discrepancy R_grid ~ 1/V^1.95   |   SHARP rho_K discrepancy ~ 1/V^1.14
+
+7-struct k=13 (spread 82): E_x[W]=0.12930 (continuum), rho*=0.9145
+       V  E_grid[W]     R_grid    rho_K  rho_K-rho* good?
+     200    0.12889   -0.00041   0.9300    +0.01550   YES
+     400    0.13042   +0.00112   0.9100    -0.00450   YES
+     800    0.12985   +0.00055   0.9125    -0.00201   YES
+    1600    0.12935   +0.00005   0.9137    -0.00076   YES
+    3200    0.12931   +0.00001   0.9150    +0.00050   YES
+    6400    0.12930   +0.00000   0.9144    -0.00013   YES
+  => SMOOTH W discrepancy R_grid ~ 1/V^1.65   |   SHARP rho_K discrepancy ~ 1/V^1.30
+
+=> if smooth p~2 >> sharp q~1: the smooth surrogate W equidistributes an ORDER faster (the
+   grid-invisible pinches are jump-discontinuities for the SHARP indicator = O(1/V), but only
+   corners for the C^0 W = O(1/V^2). Running the equidistribution on W is the desingularized route.
