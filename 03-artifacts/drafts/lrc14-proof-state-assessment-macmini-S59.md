@@ -83,3 +83,24 @@ formalizes LEM-010(i) as the first concrete node.
 
 Net after S60: every analytic constant is a-priori; the covering case rests on the single Diophantine
 `j*=O(k)` lemma (for `G_P ∩ Good_E`), AP case proved, `0` counterexamples; plus Lean.
+
+## S61 update (mac-mini) — the HARD branch of j*=O(k) is now ELEMENTARY (klein-S196)
+
+Major advance. The `j*=O(k)` capstone splits on the longest AP `L`:
+- **Near-AP (`L ≥ k−5`) — the HARD branch (j* largest, ≈k):** now **ELEMENTARY PROVED** (LEM-012,
+  klein-S196): Dirichlet-cluster the `L`-AP into span `< (L−k+6)/7`, its complement is a gap
+  `> (m+1)/7` (`m=k−L ≤ 5`), which the `m` stray points split into `≤ m+1` pieces, the largest
+  `> 1/7`. `j* ≤ ⌈7(L−1)/(L−k+6)⌉`. No Weyl, no resonance sum. Recovers mac-mini's exact-AP case.
+- **Dissociated (`L ≤ k−6`) — the EASY branch:** verified `j* ≤ 3/5` (k=11/13, mac-mini-S61,
+  1400+ clusters). Route (a): dissociated ⟹ few small resonances `n·E≡0` ⟹ small partial-sum
+  correction `Corr_N` ⟹ small `r_N` ⟹ small `j*` — supported by the mac-mini-S61 `r_N` decomposition
+  (`Corr_N` is the near-resonance partial-sum, so few resonances ⟹ small `Corr_N`). Not yet proved.
+
+The two ranges tile all `L`. So **`j*=O(k)` — hence THM-527-A, hence the covering case — is closed
+except the dissociated branch (`L ≤ k−6`, `j* ≤ 5`, verified, "easy")**. This is a big improvement
+over the S60 state ("one hard Diophantine lemma"): the hard part is done elementarily; only a
+tiny-`j*` easy branch (with a clear 𝒲̂-smallness route) and Lean transcription remain.
+
+**Lean:** three good-period nodes now formalized sorry-free (`LRCGoodPeriodJ1.lean`):
+`good_period_j1_wraparound` (LEM-010(i)), `good_gap_of_phases_in_interval` (the arc core, shared by
+j=1 / Dirichlet / AP / LEM-012), and `goodPeriod_iff_partialSum_pos` (opus-S165's `S_N>0` reduction).
