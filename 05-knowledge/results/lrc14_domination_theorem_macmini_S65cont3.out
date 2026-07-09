@@ -1,0 +1,40 @@
+====================================================================================================
+VERIFY THM-674: blocked <=> T*D = G   (primes k = 29, 31, 37, 41 j=2; k = 43, 53 j=3)
+====================================================================================================
+k=29 (j=2, m=14): 170k samples, blocked found 52761, TD-characterization violations 0, min #classes among blocked: 8
+k=31 (j=2, m=15): 170k samples, blocked found 33131, TD-characterization violations 0, min #classes among blocked: 9
+k=37 (j=2, m=18): 170k samples, blocked found 4259, TD-characterization violations 0, min #classes among blocked: 10
+k=41 (j=2, m=20): 170k samples, blocked found 571, TD-characterization violations 0, min #classes among blocked: 11
+k=43 (j=3, m=21): 170k samples, blocked found 14974, TD-characterization violations 0, min #classes among blocked: 9
+k=53 (j=3, m=26): 170k samples, blocked found 367, TD-characterization violations 0, min #classes among blocked: 11
+
+====================================================================================================
+COROLLARY (j=2 primes): blocked => #classes >= per-cycle domination bound
+====================================================================================================
+k=29: ord(2bar)=14, bound >= 7: blocked 70905, violations 0, min observed 8
+k=31: ord(2bar)=5, bound >= 9: blocked 44409, violations 0, min observed 9
+k=37: ord(2bar)=18, bound >= 9: blocked 5686, violations 0, min observed 9
+k=41: ord(2bar)=10, bound >= 10: blocked 753, violations 0, min observed 10
+
+====================================================================================================
+GENERAL LEDGER: |A_r \ 0| = (g-1) + 2g*floor(j/g)  -- verify all k in [29,42], all g | k
+====================================================================================================
+ledger formula exact for all k in [29,42], all r: True
+
+====================================================================================================
+EXTENDED DODGER: covering sets blocking ALL descents k in [15,42]; capture diagnosis
+====================================================================================================
+cap 150: min OPEN [15,42]-descents = 3  S = [2, 22, 26, 31, 33, 37, 58, 68, 100, 114, 126, 140, 144]
+   (no full dodge found at this cap)
+cap 250: min OPEN [15,42]-descents = 0  S = [11, 14, 23, 34, 37, 38, 84, 119, 120, 144, 156, 198, 200]
+   FULL [15,42] dodge -> capture: ['C2 k=49 (q=98) ABOVE-42']
+
+====================================================================================================
+TENSION STATS: covering sets at cap 250 -- occupied-class counts mod primes 29..41
+====================================================================================================
+k=29: occupied classes range [6,12] (domination needs >= 7 + pattern); blocked instances: 55/400
+k=31: occupied classes range [5,12] (domination needs >= 9 + pattern); blocked instances: 25/400
+k=37: occupied classes range [6,13] (domination needs >= 9 + pattern); blocked instances: 3/400
+k=41: occupied classes range [6,13] (domination needs >= 10 + pattern); blocked instances: 1/400
+
+Done.

@@ -1,3 +1,43 @@
+## mac-mini-2026-07-09-S65 (cont. 3) -- THM-674 PROVED: the DOMINATION THEOREM for descent blocking (blocked mod prime k <=> T.D = G); the k=29 CYCLE-DOMINATION statement proved as Corollary 2; tight per-cycle bounds; the dodger ladder climbs one band per cap (caught at 49 = 7^2)
+
+Prompt (owner): prove the k>=29 cycle-domination statement; extend the session.
+
+**THE DOMINATION THEOREM (THM-674, PROVED, elementary).** Prime k > 14, danger radius
+j = ceil(k/14)-1, G = Z_k^*/{+-1} (cyclic, order m = (k-1)/2), C = occupied +-classes,
+D = C^{-1}, T = {classes of 1..j}:
+    **blocked <=> T.D = G**   (log form: union of j translates of ind(D) covers Z/m).
+Proof: s bad for unit r <=> rs = +-d (d <= j) <=> class(s) in T.{class(r^{-1})}. QED.
+- **Corollary 1:** j = 1 recovers THM-672's T2 exactly (window primes: all classes occupied).
+- **Corollary 2 (the owner's ask, PROVED):** k = 29: 2 is a primitive root (2^14 = -1), so
+  ind_2 identifies G with Z/14 and T = {0, 1}: **blocked mod 29 <=> ind(D) u (ind(D)+1) = Z/14
+  <=> the complement of ind(D) has NO TWO CONSECUTIVE elements on the 14-cycle** -- cycle
+  domination. (The AP occupies 13/14 inverse classes -- dominates -- blocked, consistent.)
+- **Corollary 3 (per-cycle counting):** o = ord(2bar): blocked => #occupied classes >=
+  (m/o)*ceil(o/2). k=29: >=7/14; k=31 (o=5): >=9/15; k=37: >=9/18; k=41 (o=10): >=10/20.
+- **General ledger (j >= 2 correction to THM-672 Lemma 1):** |A_r \ 0| = (g-1) + 2g*floor(j/g)
+  -- non-units reach danger elements divisible by g; the [15,28] nesting breaks at j >= 2.
+
+**VERIFICATION (0 violations everywhere):** T.D = G characterization at k = 29/31/37/41 (j=2)
+AND 43/53 (j=3), 170k subsets + 20k multisets each (blocked counts 571..52761); Corollary 3
+TIGHT at k = 31/37/41 (min observed = bound: 9, 9, 10); ledger exact for all k in [29,42], all r.
+
+**THE DODGER LADDER (the empirical law of the hierarchy):** cap-150 covering adversaries CANNOT
+fully dodge [15,42] (min 3 open descents); the one cap-250 full [15,42]-dodger was caught at
+k = 49 = 7^2 (q = 98) -- each band's dodgers die exactly one band up. Blocking probability for
+random covering sets collapses with k: 13.8% (29) -> 6.2% (31) -> 0.75% (37) -> 0.25% (41).
+
+**THE TENSION, NOW A THEOREM-BACKED DICHOTOMY (Part 4 of THM-674):** window blocking (j=1)
+demands torsion CONCENTRATION -- which covering SUPPLIES (THM-672's alignment insight); k >= 29
+blocking demands class SPREAD in a rigid dominating pattern (>= (m/o)ceil(o/2) of at most 13)
+-- which covering does NOT supply. The AP does both because the inverse set of an interval is a
+maximally-spread Farey fan (coherence-extremality again). => **HYP-5765 (the SIMULTANEITY
+CONJECTURE, sharpest known form of the covering branch): no primitive covering 13-set can
+torsion-occupy its whole window AND dominate every prime p >= 29 dividing a pair sum.** That
+single finite-shaped statement is now the covering branch of LRC(14).
+
+Files: THM-674 (canon, proofs + verification numbers + dodger data); HYP-5765;
+lrc14_domination_theorem_macmini_S65cont3.{py,out}.
+
 ## death-star-2026-07-09-S3 -- PLUG-AND-PLAY form of the composed realization: round_time_close + Mreach_ge_of_composed_realization_round (kernel-pure) -- j = round(Vmax*x) and Delta = 3/(2*Vmax) pre-instantiated; consumers now supply ONLY (gap at rounded grid point, drift margin, eroded slow safety)
 
 Prompt (owner): keep pushing forward on the active threads toward LRC 14 complete lean formalization (continuation).
