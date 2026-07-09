@@ -1,0 +1,25 @@
+(1)+(2) near-AP e=d*{0..9}u{1}, Vmax=9d+14: #good/Vmax -> rho*, discrepancy sublinear
+
+   d  spread   Vmax  #arcs    rho*  #good #good/Vmax  |disc| |disc|/#arcs
+   5      45     59     52  0.5951     42     0.7119     6.9       0.1325
+  10      90    104    104  0.5939     60     0.5769    -1.8       0.0170
+  20     180    194    208  0.5955    118     0.6082     2.5       0.0119
+  40     360    374    422  0.5933    226     0.6043     4.1       0.0097
+  80     720    734    844  0.5942    438     0.5967     1.8       0.0022
+ 150    1350   1364   1586  0.5945    814     0.5968     3.1       0.0019
+ 300    2700   2714   3170  0.5946   1612     0.5940    -1.9       0.0006
+
+(3) small resonances a.v = 0 (mod Vmax) are d-INDEPENDENT (AP-internal).
+   v = (0,d,2d,...,9d, p=1, P=1,2).  Enumerate low-weight a on the 10 AP coords,
+   check (9d+14) | d*sum(i*a_i) for several d; the RESONANT a are the SAME set.
+   d=  5 (gcd(d,14)=1): #AP-internal resonances (|a|<=2,<=3nz) = 208
+   d= 11 (gcd(d,14)=1): #AP-internal resonances (|a|<=2,<=3nz) = 208
+   d= 20 (gcd(d,14)=2): #AP-internal resonances (|a|<=2,<=3nz) = 208
+   d= 41 (gcd(d,14)=1): #AP-internal resonances (|a|<=2,<=3nz) = 208
+   d=100 (gcd(d,14)=2): #AP-internal resonances (|a|<=2,<=3nz) = 208
+   resonance sets for d=5 and d=100 IDENTICAL: True
+   sample lowest-weight resonances (i,a_i): [((0, 1),), ((0, -1),), ((0, -2),), ((0, 2),)]
+
+==> #good ~ rho*Vmax (relative disc ->0), disc/#arcs ->0 (arc bound vacuous),
+    and the driving resonances are d-independent => discrepancy bounded uniformly
+    in spread => a good ruler period exists for ALL large d. Arc-count is NOT the tool.

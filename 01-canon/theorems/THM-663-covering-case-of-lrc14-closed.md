@@ -99,21 +99,21 @@ So for **bounded-spread** clusters, `ρ_K = ρ* + O(k/Vmax) → ρ* ≥ m_P > 0`
 `Vmax > V₀ = O(k/m_P)`, with `Vmax ≤ V₀` a finite check — **the bounded-spread half of THM-527-A
 is now clean**. The **large-spread** half (`spread ~ Vmax`) is the residual.
 
-### Advance on item (1), large-spread half: the pigeonhole reduction (klein-S192, THM-527 part H)
+### Advance on item (1), large-spread half: the correct route is Erdős–Turán resonances (klein-S192→S193, THM-527 part H)
 
-The large-spread half reduces cleanly. A good period exists iff the ruler grid `x_j=(j+½)/Vmax`
-meets `G*`; counting grid points in arcs gives `#{good j} ≥ ρ*·Vmax − #arcs(G*)`, so it suffices
-that **`#arcs(G*) < ρ*·Vmax`** (`⇔ maxarc·Vmax > 1`). Two facts make this hold: (a) `#arcs` is
-**LINEAR** in spread, `O(k³·spread)` (maxgap is the upper envelope of `k` gaps ⟹ Davenport–Schinzel
-`O(spread)` threshold-crossings — the earlier `O(spread²)` over-counted; machine-exact `#arcs = 12·scale`
-for `block×scale`, `≈0.2·spread` for random primitive); and (b) for large spread `ρ*` is **large**
-(`μ_{1/7} → μ_iid ≈ 0.9–0.999` for `k≤13`, not the weak `m_P`). Verified at the WORST case
-`Vmax = spread+14`: over `k=11,12,13`, spreads `≤1000`, primitive, with `G_P` — **zero failures**,
-`#good ≥ 30`, `maxarc·Vmax ≥ 4.4`, `ρ* ≥ 0.90`. Honest residual: a-priori `#arcs ≤ c·spread` with
-explicit `c<1` and `ρ* ≥ ρ₀>c` — both Weyl/resonance bounds (same axis as the density floor; the
-a-priori Davenport–Schinzel `O(k³)` and Erdős–Turán constants are too weak, the true ones need the
-resonance structure). Files: `04-computation/lrc14_bounded_arc_count_macmini_S58.py`,
-`lrc14_largespread_{arccount,gridhit}_klein_S192.{py,out}`.
+A good period exists iff the ruler grid `x_j=(j+½)/Vmax` meets `G*`. The arc-count pigeonhole
+`#{good j} ≥ ρ*·Vmax − #arcs(G*)` (S192) works for *generic* clusters but is **VACUOUS on the
+extremal near-dilated-AP family** `E_d=d·{0..9}∪{p}` (klein-S193): there `#arcs ≈ 1.17·spread > spread`
+(so `c<1` is **false**) and `ρ* ≈ 0.60`, giving `ρ*·Vmax − #arcs ≈ −1545` — yet `#good ≈ ρ*·Vmax`
+(`≈1612` at `d=300`) with true discrepancy `|#good − ρ*Vmax| ≤ 7`, NOT `#arcs`. The correct tool is
+**Erdős–Turán** on the structured indicator `1_{G*}=F(frac(v·x))`: `|#good − Vmax·ρ*| ≤ Vmax·D*`,
+`D* ≤ C_m(1/(H+1) + Σ_{0<‖a‖≤H, Vmax|a·v} 1/r(a))`, driven by the **resonances** `Vmax\mid a·v`. PROVED
+structural fact: for near-AP these low-height resonances are **`d`-independent** (AP-supported `a` give
+`a·v=d·Σ i a_i`, and `Vmax=9d+14` forces `Σ i a_i = 0` for bounded `a` — identical resonance set for
+`d=5..100`), so the discrepancy stays `spread`-uniform and `#good/Vmax → ρ*`. Honest residual (corrected):
+the ET resonance-sum bound `D* < ρ*`, NOT any arc-count. Same resonance/L² axis as the density floor;
+mac-mini's THM-518-A Weyl machinery is the tool. Files: `lrc14_largespread_{arccount,gridhit}_klein_S192`,
+`lrc14_nearAP_gridhit_klein_S193`, `lrc14_resonance_reduction_klein_S193`.
 
 ### The large-spread half CLOSED by a DETERMINISTIC good period (mac-mini-S58, LEM-010)
 

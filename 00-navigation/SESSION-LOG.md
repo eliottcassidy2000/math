@@ -61,6 +61,38 @@ L=9 CLOSURE = [exact conditional finite check of the binding region, min 0.467 >
 HONEST: conditional is EXACT in the point direction (matches Farey 1e-5); a-integral Na=250-Riemann (D3 to ~1e-3, inside the +0.14 margin); binding check restricts to the near-point structure (where the min sits); box bound at kps-S89 a-priori-constant rigor. Context: fleet has k=11 CLOSED (klein-S190/S192, kps-S88/S89, mac-mini-S58); this supplies the L=9 exact-conditional confirmation, aliasing-immune. Files: lrc14_L9_conditional_closure_opus_S160 (+out); reflection the-L9-exact-conditional-closure-no-aliasing-opus-S160.
 
 NEXT: full a-priori box constant for the 2-point (rank-2) rate (generalize kps's Vh_i via the 2D orbit discrepancy = S159 resonances); or the exact conditional check widened beyond the near-point binding structure.
+## klein-2026-07-08-S193 -- CORRECTION (MISTAKE-127): the S192 arc-count pigeonhole for THM-527-A large-spread is the WRONG TOOL (vacuous on the extremal near-AP family); the correct route is Erdős–Turán resonances, and the near-AP resonances are PROVED d-independent
+
+Prompt (owner): "prove the linear arc-count bound with explicit c<1."
+
+I could not prove it -- because it is FALSE, and even if true it would be INSUFFICIENT. Honest finding:
+
+1. **The requested bound `#arcs <= c*spread, c<1` is FALSE on the extremal family.** For the
+   near-dilated-AP cluster E_d = d*{0..9}u{p} (the low-rho*, longest-AP=10 extremal that my S192
+   random-cluster test never touched), #arcs ~ 1.17*spread (block-like, (k+1)/(k-1)=12/10 > 1). And
+   the pigeonhole it feeds is VACUOUS there: rho* ~ 0.60, so rho*Vmax - #arcs ~ -1545 (deeply
+   negative). Yet a good ruler period abundantly exists -- #good ~ 1612 ~ rho*Vmax (d=300), never 0.
+   So arc-count is simply the wrong invariant. Logged as MISTAKE-127.
+
+2. **Why the crude bound fails:** |#good - rho*Vmax| <= #arcs is Koksma-Hlawka (grid discrepancy
+   1/(2Vmax) x variation 2#arcs of 1_{G*} as an ARBITRARY interval union). It is BLIND to the fact
+   that the arcs of G* and the ruler grid {(j+1/2)/Vmax} share the SAME Vmax-arithmetic (both from
+   frac(e_i x)), so they are not adversarially aligned. Measured true discrepancy |#good - rho*Vmax|
+   <= 7 (NOT #arcs=3170); #good/Vmax -> rho* = 0.594 (relative discrepancy -> 0).
+
+3. **The CORRECT reduction (Erdős–Turán).** 1_{G*}=F(frac(v.x)) is a structured torus indicator, so
+   |#good - Vmax*rho*| <= Vmax*D*, D* <= C_m(1/(H+1) + sum_{0<||a||<=H, Vmax|a.v} 1/r(a)), driven by
+   the RESONANCES {a: Vmax | a.v}. PROVED structural fact making the discrepancy spread-uniform: for
+   near-AP the low-height resonances are **d-INDEPENDENT** -- an a on the AP coords gives a.v =
+   d*sum(i*a_i), and Vmax=9d+14 with gcd(d,9d+14)=gcd(d,14) forces sum(i*a_i)=0 for bounded a (since
+   |sum|<9d+14); machine-confirmed the resonance set is IDENTICAL for d=5,11,20,41,100. So as
+   spread=9d->inf the ET discrepancy does NOT grow => #good/Vmax -> rho* => good period exists for
+   all large d. Honest residual (corrected): the resonance-sum bound D*<rho*, NOT any arc count --
+   same resonance/L2 axis as the density floor; mac-mini's THM-518-A Weyl machinery is the tool.
+
+Updated THM-527 part H + THM-663 (arc-count -> ET-resonance), MISTAKE-127, memory. Files:
+lrc14_nearAP_gridhit_klein_S193 (pigeonhole vacuous, #good large), lrc14_resonance_reduction_klein_S193
+(#good/Vmax->rho*, discrepancy sublinear, d-independent resonances).
 
 ---
 

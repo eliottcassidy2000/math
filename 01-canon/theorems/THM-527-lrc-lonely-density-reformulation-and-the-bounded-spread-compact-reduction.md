@@ -150,7 +150,7 @@ clean single-variable three-distance density, (ii) is bounded below because `k �
 consecutive floor are proved; the uniform floor on the compact space is the isolated crux —
 the same prize as OPEN-Q-108, now on explicitly compact ground. **LRC(14) remains open.**
 
-## H. THM-527-A, the finite-`Vmax` glue: the large-spread half sharpened to a pigeonhole (klein-S192)
+## H. THM-527-A, the finite-`Vmax` glue: the large-spread half — pigeonhole (klein-S192) is VACUOUS on the extremal family; the correct route is Erdős–Turán resonances (klein-S193)
 
 Item 3 (part G) — the finite-`Vmax` discrepancy `ρ_K = ρ* + O(#arcs/Vmax)` — has two halves.
 mac-mini-S58 closed the **bounded-spread** half (`#arcs` is `Vmax`-free, so `Vmax > #arcs/m_P`
@@ -175,21 +175,41 @@ crossings are bounded by the piece count `O(spread)`, not `spread × spread`.) T
 **essential** — with `spread ~ Vmax`, `O(spread²) ~ Vmax² ≫ ρ*·Vmax` would kill the pigeonhole,
 while `O(spread) ~ c·Vmax` with `c < ρ*` clears it.
 
-**`ρ*` is large for large spread.** As `spread → ∞` the phases `{frac(e_i x)}` equidistribute
-(Weyl), so `μ_{1/7}(E) = meas{maxgap>1/7} → μ_iid = P(k uniform points leave a gap > 1/7)`, a fixed
-constant `≈ 0.90–0.999` for `k ≤ 13` (NOT the weak `m_P = 0.056`); with `ρ* ≥ meas(G_P) + μ_{1/7} − 1`
-and `|P| = 13−k` small (so `meas(G_P)` large), `ρ*` stays `≥ 0.9`.
+**But the pigeonhole is only SUFFICIENT, and it is VACUOUS on the extremal family (klein-S193
+correction).** The `#arcs < ρ*·Vmax` route works for *generic* (random) primitive clusters
+(`#arcs ≈ 0.2·spread`, `ρ* ≈ 0.99`; S192 found zero failures over 25 random clusters/spread, `k=11,12,13`,
+spread ≤ 1000). **It FAILS as a proof tool on the near-dilated-AP family** `E_d = d·{0..9}∪{p}` — the
+extremal low-`ρ*` shape (longest-AP=10): there `#arcs ≈ 1.17·spread` (block-like, `(k+1)/(k−1) > 1`,
+so **`c < 1` is false**) while `ρ* ≈ 0.60`, so `ρ*·Vmax − #arcs ≈ −1545` (deeply negative, the bound
+is **vacuous**). Yet a good period abundantly exists: measured `#good ≈ 1612 ≈ ρ*·Vmax` (`d=300`), and
+`#good/Vmax → ρ* = 0.594` with `|#good − ρ*·Vmax| ≤ 7` — the TRUE discrepancy is `O(1)`, not `#arcs`.
+So the crude Koksma–Hlawka bound `|#good − ρ*Vmax| ≤ #arcs` (variation `2·#arcs` × grid-discrepancy
+`1/(2Vmax)`) is absurdly loose here; **the arc count is the wrong invariant.**
 
-**Verification at the WORST case (`Vmax = spread+14`, `Vmin=14`, primitive, WITH `G_P`).** Over
-`k=11,12,13`, spreads `30..1000`, 25 random primitive clusters each: **zero failures**; MIN
-`#good ruler periods ≥ 30`, `maxarc·Vmax ≥ 4.4` (grows with spread), `ρ* ≥ 0.90`. So the pigeonhole
-holds with `≥ 4×` margin at the tightest possible `Vmax`.
+**The correct reduction — Erdős–Turán on the resonances (klein-S193).** `1_{G*}(x) = F(frac(v_1 x),…,
+frac(v_m x))` is a *structured* torus indicator (`v =` cluster ∪ `P`), so the grid error is governed by
+the exponential sums `(1/Vmax)Σ_j e((a·v)(j+½)/Vmax) = [Vmax\,|\,a·v]·(\text{unit})`, i.e. by the
+**resonances** `{a ≠ 0 : Vmax \mid a·v}`:
 
-**What remains (the honest residual).** Two a-priori bounds, both Weyl-flavored with the familiar
-"a-priori constant is too weak, the true constant needs the Fourier/resonance structure" obstruction
-(cf. LEM-005 opus-S154, LEM-009 klein-S192): (1) the linear arc-count `#arcs ≤ c·spread` with an
-explicit **`c < 1`** (the Davenport–Schinzel `O(k³)` is too large; the true `c ≈ 0.2` for primitive
-clusters needs the resonance count), and (2) `ρ* ≥ ρ₀ > c` uniformly (from `μ_{1/7} → μ_iid`, a
-quantitative Weyl/Erdős–Turán rate on the maxgap functional). Both live on the **same resonance axis**
-as the density floor. Files: `lrc14_largespread_arccount_klein_S192.{py,out}` (arc-count vs spread),
-`lrc14_largespread_gridhit_klein_S192.{py,out}` (worst-case ruler-grid hit, zero fails).
+> **`|#good − Vmax·ρ*| ≤ Vmax·D*`, `D* ≤ C_m(1/(H+1) + Σ_{0<‖a‖_∞≤H,\ Vmax\mid a·v} 1/r(a))`**
+> (Erdős–Turán–Koksma), `r(a)=∏max(|a_i|,1)`. Small discrepancy ⟺ no low-height resonances.
+
+The arc-count pigeonhole is the special case bounding `E` by `#arcs`; the resonance sum is the true
+(tiny) discrepancy. **Key structural fact (PROVED, and it makes the discrepancy `spread`-uniform):**
+for the near-AP family the low-height resonances are **`d`-INDEPENDENT.** An `a` supported on the AP
+coordinates gives `a·v = d·Σ_i i a_i`, and `Vmax = 9d+14` with `gcd(d,9d+14)=gcd(d,14)`, so
+`Vmax \mid d·Σ i a_i ⟺ Σ_{i} i a_i ≡ 0 \pmod{(9d+14)/\gcd(d,14)}`; since `|Σ i a_i| ≤ 45·max|a_i| < 9d+14`
+for bounded `a`, this forces **`Σ_i i a_i = 0`, independent of `d`** — the AP's intrinsic balanced
+relations. Machine-confirmed: the resonance set for `|a|≤2` is IDENTICAL for `d=5,11,20,41,100`. So as
+`spread=9d→∞` the ET discrepancy does **not** grow (the resonances stay fixed), giving `#good/Vmax → ρ*`
+uniformly ⟹ a good period exists for all large `d`. This is why the family clears despite the vacuous
+arc bound.
+
+**What remains (the honest residual, corrected).** NOT a `c<1` arc-count (false). The clean route is
+the Erdős–Turán resonance sum: prove `D* < ρ*` (so `#good > 0`) via **(1)** a uniform bound on the
+low-height resonance sum `Σ 1/r(a)` — `d`-independent for near-AP (proved above), needing the block's
+intrinsic constant `< ρ*`; and **(2)** the tail `1/(H+1)` with `H` chosen against `Var(F)`. This is
+the same resonance/L² axis as the density floor (LEM-005 opus-S154, LEM-009 klein-S192). mac-mini's
+THM-518-A Weyl machinery is the tool. Files: `lrc14_largespread_{arccount,gridhit}_klein_S192`,
+`lrc14_nearAP_gridhit_klein_S193` (pigeonhole vacuous, `#good` large), `lrc14_resonance_reduction_klein_S193`
+(`#good/Vmax→ρ*`, discrepancy sublinear, `d`-independent resonances).
