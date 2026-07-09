@@ -115,6 +115,27 @@ a-priori Davenport–Schinzel `O(k³)` and Erdős–Turán constants are too wea
 resonance structure). Files: `04-computation/lrc14_bounded_arc_count_macmini_S58.py`,
 `lrc14_largespread_{arccount,gridhit}_klein_S192.{py,out}`.
 
+### The large-spread half CLOSED by a DETERMINISTIC good period (mac-mini-S58, LEM-010)
+
+The soft `#arcs < ρ*·Vmax` route (klein-S192) is **not attainable** for all clusters — exact `#arcs`
+for the **2-block** `{0..a}∪{s−b..s}` is `≈1.9·spread (k=11) / 2.6·spread (k=13)`, and for the AP /
+perforated-block `≈1.0·spread`, all with `ρ*≈0.55–0.86`, so `#arcs > ρ*·Vmax` at `Vmax≈spread` and the
+discrepancy bound is **vacuous**; no `c<1` arc bound exists. But the large-spread half does **not need**
+equidistribution at all — a good period is produced **explicitly** (LEM-010):
+
+- **`spread < 6·Vmax/7` ⟹ `j=1` is a good period.** At `j=1` the phases are `{e_i/Vmax} ⊂
+  [0, spread/Vmax]`; the wraparound gap `1 − spread/Vmax > 1/7`. (Elementary; verified 0 failures / 7669.)
+- **`Vmax > 3^{k−1}` ⟹ some `j ≤ 3^{k−1}` is a good period.** Dirichlet pigeonhole: among `j=0..3^{k−1}`
+  two collide in `{0,1,2}^{k−1}`, giving `j*` with `‖e_i j*/Vmax‖ < 1/3 ∀i`, so all phases fit a `2/3`-arc
+  ⟹ empty arc `≥ 1/3 > 1/7`. (Verified: the hard `j=1`-fails clusters need only `j* ≤ 4 ≪ 3^{k−1}`, never absent.)
+
+Since `k ≤ 13`, these two elementary facts leave only the **bounded** region `{Vmax ≤ 3^{12}=531441 AND
+spread ≥ 6Vmax/7}` — a finite check (extends kps-S30's exact `M(S)` verification for `V₀ ≤ 1001`), with
+`ρ*≥m_P` and the empirical `ρ_K ≥ 0.27` (never 0) throughout. **This replaces the vacuous soft bound and
+the quantitative-equidistribution residual with an elementary closure + a bounded finite check** —
+much stronger. Files: `lrc14_deterministic_goodperiod_macmini_S58.{py,out}`,
+`lrc14_finite_vmax_sufficient_macmini_S58.{py,out}`, `lrc14_rhoK_direct_2block_macmini_S58.{py,out}`. See **LEM-010**.
+
 ## Honest caveats (density-floor rigor)
 
 The per-shape floors `B_d(E)` are rigorous lower bounds on `μ` (exact rational moments via
