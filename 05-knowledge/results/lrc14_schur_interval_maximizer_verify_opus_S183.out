@@ -1,0 +1,9 @@
+k=3: max E3=3 (C(k,2)=3), #maximizers=6, all dilated-intervals? True
+   maximizers = [(1, 2, 3), (2, 4, 6), (3, 6, 9), (4, 8, 12), (5, 10, 15), (6, 12, 18)]
+k=4: max E3=6 (C(k,2)=6), #maximizers=6, all dilated-intervals? True
+   maximizers = [(1, 2, 3, 4), (2, 4, 6, 8), (3, 6, 9, 12), (4, 8, 12, 16), (5, 10, 15, 20), (6, 12, 18, 24)]
+k=5: max E3=10 (C(k,2)=10), #maximizers=6, all dilated-intervals? True
+   maximizers = [(1, 2, 3, 4, 5), (2, 4, 6, 8, 10), (3, 6, 9, 12, 15), (4, 8, 12, 16, 20), (5, 10, 15, 20, 25), (6, 12, 18, 24, 30)]
+r-profile {1..5}: [0, 1, 2, 3, 4] (should be 0,1,2,3,4)
+r-profile {2,4,6,8,10}: [0, 1, 2, 3, 4]
+r-profile {1,2,3,4,6}: [0, 1, 2, 3, 3]

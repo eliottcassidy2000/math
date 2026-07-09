@@ -1,3 +1,19 @@
+## opus-2026-07-09-S183 -- PROVED (+ Lean-formalized) LEM-014: the interval maximizes Schur triples -- E3(S)=#{(a,b) in SxS : a+b in S} <= C(k,2), equality iff dilated interval c*{1..k}; step (1) of the redirected forward lead
+
+Prompt (owner): prove the interval maximizes Schur triples.
+
+PROVED cleanly (LEM-014), and formalized the upper bound in Lean (sorry-free, kernel-pure).
+
+STATEMENT: for k distinct POSITIVE reals S={s_1<...<s_k}, the ordered Schur-triple count E3(S)=#{(a,b) in SxS : a+b in S} <= C(k,2), with equality iff s_j = j*s_1 for all j (i.e. S = s_1*{1,..,k}, a dilated interval). For k=13: E3<=78, attained by c*{1..13} (incl. the tight AP).
+
+PROOF (elementary, self-contained, works over any ordered abelian group of positive elements): write r(c)=#{(a,b):a+b=c}, so E3=Sum_{c in S} r(c). Each pair has a=c-b<c (b>0), and (a,b)->a is injective into {a in S: a<c}, so r(s_j)<=j-1; sum => E3<=Sum(j-1)=C(k,2). EQUALITY: forces r(s_j)=j-1 for all j => every a<s_j has s_j-a in S => {s_j-s_i} = {s_1..s_{j-1}}; order-reversal matching gives s_j-s_i=s_{j-i}, i=1 => s_j=s_1+s_{j-1}, induction => s_j=j*s_1. Verified exhaustively k=3,4,5 (maximizers EXACTLY the dilated intervals).
+
+LEAN (LRCSchurTriples.lean, wired to root, axioms [propext,Classical.choice,Quot.sound]): schurTriple_card_le (S:Finset N)(hS:0 not in S): ((S xs S).filter (.1+.2 in S)).card <= S.card.choose 2 -- via the injection (a,b)->{a,a+b} into powersetCard 2 S (b>0 => a<a+b => card 2 + injective, recover b from max-min). schurTriple_interval_13: E3({1..13})=78 by decide. (Equality characterization left paper-only.)
+
+THE ZERO SUBTLETY: over NONnegative reals the max jumps to {0..k-1} (free identity triples a+0=a, E3=C(k+1,2)); 0 is excluded as an LRC speed (would trivially cover the origin) -- exactly why the LRC extremal is the POSITIVE interval {1..k}. This is step (1) of the redirected forward lead (HYP-5683): the AP uniquely maximizes the leading resonance coefficient E3. Step (2) (theta-sum bound |R|<=f(E3) from LEM-011 arc coeffs + Schur-sublattice dimension/coherence) remains. Files: LEM-014; LRCSchurTriples.lean; lrc14_schur_interval_maximizer_verify_opus_S183 (+out).
+
+---
+
 ## opus-2026-07-09-S182 -- EXTENDED/REDIRECTED the forward lead: the density-floor resonance sum is led by SCHUR TRIPLES a+b=c (E3), NOT doubling/additive-energy E2 -- a SYMMETRY MATCH; the a-priori floor is a sum-free/Schur theorem, not Freiman/3k-4
 
 Prompt (owner): extend ideas related to the forward lead, push often + pull, be inspired to explore.
