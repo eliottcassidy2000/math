@@ -1,3 +1,36 @@
+## klein-2026-07-09-S196 -- LEM-012: the near-AP (HARD) branch of j*=O(k) is now ELEMENTARY (Dirichlet + gap-split), closing the branch everyone expected to need the hard analysis
+
+Prompt (owner): keep at it (the LRC(14) capstone = general j*=O(k)).
+
+BREAKTHROUGH: **LEM-012 -- an ELEMENTARY proof of j*=O(k) for longest-AP L >= k-5** (the near-AP branch,
+where j* is LARGEST). This is the branch mac-mini had only for the exact AP and opus reduced to the
+r_N<1 (𝒲̂) verification. Now it's a one-page Dirichlet argument.
+
+THE ARGUMENT (elementary, no Weyl/resonance): E contains an AP of length L, common difference d, with
+m=k-L <= 5 stray points. By DIRICHLET, some j <= Q=ceil(7(L-1)/(L-k+6)) has ||jd/Vmax|| < 1/Q, so the
+L-term AP clusters into a circular arc of span < S=(L-k+6)/7. Its complement is ONE gap of length
+> 1-S = (m+1)/7. The m stray points split this gap into <= m+1 pieces summing to > (m+1)/7, so the
+LARGEST piece > 1/7. => a good period at j <= Q = O(k). (For L=k: Q=ceil(7(k-1)/6) = mac-mini's exact-AP
+bound, recovered.) VERIFIED: the Dirichlet-cluster j leaves a >1/7 gap in 100% of constructed clusters
+(L=k..k-5, m=0..5, k=11,12,13); j*<=Q in all sampled hard clusters with L>=k-5.
+
+THE SPLIT (tiles all L, no gap): [L >= k-5: LEM-012, ELEMENTARY] + [L <= k-6: dissociated, kps-S91,
+verified j*<=5, a-priori via LEM-011 𝒲̂-smallness]. Since k-5, k-6 are consecutive, every L is covered.
+FINDINGS: k=8 has NO hard dissociated sets (LEM-012 covers all k=8); hard dissociated (k>=11) have j*<=5
+(mostly j*=2). So the dissociated branch is the EASY (small-j*) branch; LEM-012 handles the hard one.
+
+CLOSURE PATH: combined j* <= 49 (k<=13). With kps-S30's exact M(S) sweep (Vmax<=1001 >> 49), THM-527-A
+closes ONCE the dissociated branch's a-priori bound is written (kps's 𝒲̂ route, or an elementary
+argument). So LRC(14)'s covering case reduces to: the dissociated (L<=k-6) 𝒲̂-smallness -- the SAME
+LEM-011 object as the density-floor tail. Files: lrc14_gapsplit{,_mechanism}_klein_S196,
+lrc14_dissociated_klein_S196, lrc14_rN_margin_klein_S196; LEM-012 (new) + LEM-010/status.
+
+NEXT: prove the dissociated (L<=k-6) branch -- either (a) the 𝒲̂ correction is small because short
+longest-AP => few resonances n.E=0 (LEM-011), or (b) an elementary "m>=6 dissociated stray points can't
+persistently V/7-grid the clustered gap" argument. Either closes j*=O(k) => THM-527-A => covering case.
+
+---
+
 ## klein-2026-07-08-S195 -- worked R1, R2, R3 (converged with mac-mini-S60): R2 CLOSED (box bound), R3 RESOLVED (reduces to R1 at k=13), R1 reduced to AP-extremality (worst j*=AP proved; generic hard j*<=6)
 
 Prompt (owner): work R1, R2, and R3.
