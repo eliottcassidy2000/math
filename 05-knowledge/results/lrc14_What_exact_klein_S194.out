@@ -1,0 +1,22 @@
+
+===== k=3  (2 phase vars), grid N=84 =====
+  checked 49 freqs |n_i|<=3;  MAX |FFT - formula| = 3.86e-05
+  W_hat(0) FFT=0.629738  formula=0.629738  (6/7)^k=0.629738
+  Parseval: sum|W_hat|^2 = 0.400058   int W^2 = 0.400058   (E[W^2] moment)
+    n=(-2, -3): FFT=-0.00065-0.00000j  formula=-0.00064-0.00000j
+    n=(-2, -2): FFT=-0.00121+0.00000j  formula=-0.00120-0.00000j
+    n=(-2, -1): FFT=-0.00178-0.00000j  formula=-0.00178-0.00000j
+    n=(-2, 0): FFT=+0.01330-0.00000j  formula=+0.01327-0.00000j
+    n=(-2, 1): FFT=-0.00238-0.00000j  formula=-0.00237+0.00000j
+
+===== k=4  (3 phase vars), grid N=42 =====
+  checked 343 freqs |n_i|<=3;  MAX |FFT - formula| = 1.33e-04
+  W_hat(0) FFT=0.539775  formula=0.539775  (6/7)^k=0.539775
+  Parseval: sum|W_hat|^2 = 0.296727   int W^2 = 0.296727   (E[W^2] moment)
+    n=(-2, -1, 0): FFT=-0.00154-0.00000j  formula=-0.00152-0.00000j
+    n=(-2, 0, -3): FFT=-0.00057-0.00000j  formula=-0.00055+0.00000j
+    n=(-2, 0, -2): FFT=-0.00105+0.00000j  formula=-0.00103-0.00000j
+    n=(-2, 0, -1): FFT=-0.00154-0.00000j  formula=-0.00152-0.00000j
+    n=(-2, 0, 0): FFT=+0.01146-0.00000j  formula=+0.01138+0.00000j
+
+If MAX err ~ grid-discretization (small) and W_hat(0)=(6/7)^k, the closed form is CONFIRMED.
