@@ -130,7 +130,30 @@ FILES: lrc14_{R_vs_energy,R_kissing,smooth_alpha2}_kps_S97.py(+.out); reflection
 NEXT: (a) explicit c in |R|<=c*kissing (sum LEM-011 shells); (b) grid-lattice AP-max-kissing (extend mac-mini-S25 to L_V); (c) this = Cohn-Elkies magic function on X0(14) -- the Viazovska-style route. Fleet: existence has THREE converging closures (LEM-013 exhaustive+adversarial, opus-S170 smooth alpha=2, my E_grid kissing) -- covering leg robust.
 ## mac-mini-2026-07-09-S64 -- NON-STRICT criterion DISSOLVES the 7-structured hardness: dissociated tight case = wraparound boundary spread=6V/7 (j=1, maxgap=1/7 EXACTLY); + Z/7 reframe, first-moment ruled out, kps-S97 kissing stress-tested
 
-Prompt (owner): creative angles on the mu-floor + past-work connections; then "continue + extend the ideas incoming from other agents"; then "keep working the handoff, think R0-signed/R_grid-absolute split."
+Prompt (owner): creative angles on the mu-floor + past-work connections; then "continue + extend the ideas incoming from other agents"; then "keep working the handoff, think R0-signed/R_grid-absolute split"; then "work the handoffs, pull often, synthesize, develop new directions."
+
+**HANDOFF (4th part) -- LEAN non-strict layer + a GEOMETRIC route past opus's |R| wall.** Pulled the
+fleet's convergence: kps-S99 (Lean good-period dispatch, sorry-free), opus-S171/S172 + klein-S202
+(the |R|<(6/7)^k route FAILS -- Mertens wall from k/7>1 over-covering, TV(W')~spread^2; opus routes
+around it via my j=1 non-strict). Two contributions:
+ (A) LEAN: LRCGoodPeriodNonStrict.lean (sorry-free, builds 8476 jobs) -- closes the KNIFE-EDGE gap in
+     kps's STRICT dispatch. kps's IsGoodPeriod=7*maxCircGap>Vmax (strict) proves M>1/14 and DROPS the
+     knife-edge {0,7,10,14,18,20,21,26,28,35,36,37,42}@V=49 (spread=6V/7): native_decide confirms it
+     has NON-strict good period but NO strict one. Added IsGoodPeriodNonStrict + M>=1/14 clearance +
+     strict=>nonstrict upgrade + non-strict dichotomy. Belt-and-suspenders: knife-edge mu=0.944
+     density-floor-covered. Messaged kps to wire in.
+ (B) NEW GEOMETRIC ROUTE (past the Mertens wall): the good period = the GRID OUT-RESOLVING G's widest
+     arc. Rigorous pigeonhole: maxIntG(E) >= 1/Vmax => arc contains a grid point => STRICT good period.
+     UNIFIES j=1 (0-nbhd arc 6/(7spread) => Vmax>=7spread/6) + explains generic ease (measured
+     maxIntG*spread>=5 => strict GP at EVERY V>spread, resonant or not, verified) + isolates the hard
+     case to all-residue wraparound-boundary (fragmented G, maxIntG=6/(7spread)) = the knife-edge.
+     NEW A-PRIORI TARGET: maxIntG(E) >= c/spread with c>6/7 (three-gap/Steinhaus MAGNITUDE, not |R|
+     cancellation) => off-boundary clusters have a-priori strict GP for ALL Vmax. Broadcast to fleet
+     (klein owns three-gap). Also worked the R0-signed/R_grid-absolute split (winning side V*E_x grows;
+     R0=additive-energy/AP-max-kissing moves to winning side; but crude R_grid bound hits same Mertens
+     wall -- consistent w/ opus). Reflections: the-good-period-is-the-grid-hitting-the-widest-arc; Coda
+     on the split. Files: LRCGoodPeriodNonStrict.lean, lrc14_{R0signed_Rgrid_split,kissing_resonant_grid,
+     good_set_interval,good_set_interval_allres}_macmini_S64 (+outs).
 
 **HANDOFF CONT. (3rd part) -- the R0-signed/R_grid-absolute split (owner-suggested).** Split kps-S97's
 Weyl residual by how V|n.e holds: R0 (SIGNED, grid-indep) = the exact relations n.e=0 => E_x[W] :=
