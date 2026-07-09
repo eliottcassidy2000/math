@@ -71,7 +71,25 @@ FILES: lrc14_{R_vs_energy,R_kissing,smooth_alpha2}_kps_S97.py(+.out); reflection
 NEXT: (a) explicit c in |R|<=c*kissing (sum LEM-011 shells); (b) grid-lattice AP-max-kissing (extend mac-mini-S25 to L_V); (c) this = Cohn-Elkies magic function on X0(14) -- the Viazovska-style route. Fleet: existence has THREE converging closures (LEM-013 exhaustive+adversarial, opus-S170 smooth alpha=2, my E_grid kissing) -- covering leg robust.
 ## mac-mini-2026-07-09-S64 -- NON-STRICT criterion DISSOLVES the 7-structured hardness: dissociated tight case = wraparound boundary spread=6V/7 (j=1, maxgap=1/7 EXACTLY); + Z/7 reframe, first-moment ruled out, kps-S97 kissing stress-tested
 
-Prompt (owner): creative angles on the mu-floor + past-work connections; then "continue + extend the ideas incoming from other agents."
+Prompt (owner): creative angles on the mu-floor + past-work connections; then "continue + extend the ideas incoming from other agents"; then "keep working the handoff, think R0-signed/R_grid-absolute split."
+
+**HANDOFF CONT. (3rd part) -- the R0-signed/R_grid-absolute split (owner-suggested).** Split kps-S97's
+Weyl residual by how V|n.e holds: R0 (SIGNED, grid-indep) = the exact relations n.e=0 => E_x[W] :=
+(6/7)^k + R0 = continuum mean int W(x)dx; R_grid (ABSOLUTE, grid-dep) = wraparound shells n.e=mV,m!=0
+(decay as V grows). Then E_grid[W] = E_x[W] + R_grid, and -- correcting for the j=0 collapse term
+W(0)=6/7 -- STRICT good period exists <=> V*(E_x + R_grid) > 6/7. KEY (lrc14_R0signed_Rgrid_split):
+ - MAIN TERM V*E_x[W] >= 5.65*(6/7) for EVERY valid V (0 failures) -- continuum floor beats collapse,
+   GROWS LINEARLY in V. min E_x = 0.105 ~ (6/7)^k.
+ - R_grid is a bounded ~0.5-unit correction (of the 4.65-unit surplus); wide-regime surplus >= 4.13
+   => wide regime (spread>6V/7) has STRICT good periods, comfortable, NOT tight.
+ - knife-edge spread=6V/7 = SOLE exact cancellation V*(E_x+R_grid)=6/7 = j=1's non-strict job.
+ - R0 correlates with additive energy R2 (corr 0.717) = kps-S25's kissing (AP-max). So the AP-extremal
+   kissing (additive triples, n.e=0) sits on the WINNING side inside E_x; the residual R_grid (wraparound
+   only) has NO additive triples => kps's 'AP maximizes kissing uniformly in Vmax' worry EVAPORATES for
+   the residual. Sharpens kps's route: winning side = growing V*E_x (not fixed (6/7)^k); residual =
+   decaying wraparound |R_grid| (not full |R|). Messaged kps. Reflection Coda + script/out.
+
+---
 
 **HEADLINE (2nd half, extending kps-S96/S97 kissing route + klein-S201 boundary).** The scary
 7-structured wall (arc-count MISTAKE-128, moments dead S63, |R|/lead->0.87 resonant grid) was a

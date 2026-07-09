@@ -1,0 +1,13 @@
+c=#arcs/spread  vs  |S7|=#{e=0 mod7}  and mod-7 coverage, DISSOCIATED (L<=7), k=13:
+    c-bucket  count  min|S7|  mean|S7| all cover 7res?
+  [0.0,0.1)     104        1       2.9   0/104 have |S7|>=7
+  [0.1,0.2)    4455        1       3.0   157/4455 have |S7|>=7
+  [0.2,0.3)   16224        1       3.3   1302/16224 have |S7|>=7
+  [0.3,0.4)    7350        1       4.0   1277/7350 have |S7|>=7
+  [0.4,0.5)    2125        1       5.2   717/2125 have |S7|>=7
+  [0.5,0.6)     859        1       6.6   456/859 have |S7|>=7
+  [0.6,0.7)     409        1       7.5   287/409 have |S7|>=7
+  [0.7,0.8)     239        1       8.2   197/239 have |S7|>=7
+  [0.8,0.9)     133        2       9.0   123/133 have |S7|>=7
+  [0.9,1.0)     120        2      10.2   116/120 have |S7|>=7
+=> if high-c (c>=0.4) buckets all have |S7|>=k-6=7, the HARD cases close via divide-7 collapse (THM-530 k<=7 pigeonhole at m/7).
