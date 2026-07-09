@@ -85,9 +85,115 @@ theorem good_add_one (θ : ℝ) (E : Finset ℤ) (x : ℝ) :
   · rintro ⟨a, ha⟩; exact ⟨a, (emptyArc_add_one E x a).mp ha⟩
   · rintro ⟨a, ha⟩; exact ⟨a, (emptyArc_add_one E x a).mpr ha⟩
 
--- kernel-purity audit (propext / Classical.choice / Quot.sound only)
-#print axioms good_dilate
-#print axioms good_add_one
+/-- `Good θ E` is invariant under natural-number translation (iterated `good_add_one`). -/
+theorem good_add_natCast (θ : ℝ) (E : Finset ℤ) (n : ℕ) (x : ℝ) :
+    x + (n : ℝ) ∈ Good θ E ↔ x ∈ Good θ E := by
+  induction n with
+  | zero => simp
+  | succ k ih =>
+    have hstep : x + ((k + 1 : ℕ) : ℝ) = (x + (k : ℝ)) + 1 := by push_cast; ring
+    rw [hstep, good_add_one, ih]
+
+/-! ### The measure fold and dilation invariance -/
+
+open MeasureTheory Set
+
+/-- **Periodicity fold.**  For the 1-periodic good set `S = Good θ E`,
+`vol(S ∩ [0,n]) = n · vol(S ∩ [0,1])`.  Proved via `Measure.restrict` additivity (so no
+measurability of `S` is needed) + Lebesgue translation invariance + the integer-translation
+invariance of `Good`. -/
+theorem muGood_fold (θ : ℝ) (E : Finset ℤ) (n : ℕ) :
+    volume (Good θ E ∩ Icc 0 (n : ℝ)) = n • volume (Good θ E ∩ Icc 0 1) := by
+  set S := Good θ E with hS
+  induction n with
+  | zero =>
+    simp only [Nat.cast_zero, zero_smul, Set.Icc_self]
+    exact measure_mono_null (Set.inter_subset_right) (by simp)
+  | succ k ih =>
+    have hcast : ((k + 1 : ℕ) : ℝ) = (k : ℝ) + 1 := by push_cast; ring
+    -- disjoint measurable split  Icc 0 (k+1) = Icc 0 k ∪ Ioc k (k+1)
+    have hdisj : Disjoint (Icc (0 : ℝ) (k : ℝ)) (Ioc (k : ℝ) ((k : ℝ) + 1)) := by
+      rw [Set.disjoint_left]; rintro y ⟨_, hy2⟩ ⟨hy3, _⟩; exact absurd hy3 (not_lt.mpr hy2)
+    have huni : Icc (0 : ℝ) ((k : ℝ) + 1) = Icc 0 (k : ℝ) ∪ Ioc (k : ℝ) ((k : ℝ) + 1) :=
+      (Set.Icc_union_Ioc_eq_Icc (by positivity) (by linarith)).symm
+    -- restrict-additivity: vol(S ∩ (A∪B)) = vol(S∩A) + vol(S∩B), A,B measurable
+    have hrec : volume (S ∩ Icc 0 ((k : ℝ) + 1))
+        = volume (S ∩ Icc 0 (k : ℝ)) + volume (S ∩ Ioc (k : ℝ) ((k : ℝ) + 1)) := by
+      calc volume (S ∩ Icc 0 ((k : ℝ) + 1))
+          = volume (Icc 0 ((k : ℝ) + 1) ∩ S) := by rw [Set.inter_comm]
+        _ = (volume.restrict S) (Icc 0 ((k : ℝ) + 1)) :=
+              (Measure.restrict_apply measurableSet_Icc).symm
+        _ = (volume.restrict S) (Icc 0 (k : ℝ) ∪ Ioc (k : ℝ) ((k : ℝ) + 1)) := by rw [huni]
+        _ = (volume.restrict S) (Icc 0 (k : ℝ)) + (volume.restrict S) (Ioc (k : ℝ) ((k : ℝ) + 1)) :=
+              measure_union hdisj measurableSet_Ioc
+        _ = volume (Icc 0 (k : ℝ) ∩ S) + volume (Ioc (k : ℝ) ((k : ℝ) + 1) ∩ S) := by
+              rw [Measure.restrict_apply measurableSet_Icc, Measure.restrict_apply measurableSet_Ioc]
+        _ = volume (S ∩ Icc 0 (k : ℝ)) + volume (S ∩ Ioc (k : ℝ) ((k : ℝ) + 1)) := by
+              rw [Set.inter_comm S, Set.inter_comm S]
+    -- translation: vol(S ∩ Ioc k (k+1)) = vol(S ∩ Ioc 0 1)
+    have htr : volume (S ∩ Ioc (k : ℝ) ((k : ℝ) + 1)) = volume (S ∩ Ioc 0 1) := by
+      have hpre : (fun h => (k : ℝ) + h) ⁻¹' (S ∩ Ioc (k : ℝ) ((k : ℝ) + 1)) = S ∩ Ioc 0 1 := by
+        ext y
+        simp only [Set.mem_preimage, Set.mem_inter_iff, Set.mem_Ioc]
+        constructor
+        · rintro ⟨hyS, h1, h2⟩
+          refine ⟨?_, by linarith, by linarith⟩
+          have : y + (k : ℝ) ∈ S := by rw [add_comm]; exact hyS
+          exact (good_add_natCast θ E k y).mp this
+        · rintro ⟨hyS, h1, h2⟩
+          refine ⟨?_, by linarith, by linarith⟩
+          rw [hS] at hyS ⊢
+          have : y + (k : ℝ) ∈ Good θ E := (good_add_natCast θ E k y).mpr hyS
+          rw [add_comm] at this; exact this
+      rw [← hpre, measure_preimage_add]
+    -- null: vol(S ∩ Ioc 0 1) = vol(S ∩ Icc 0 1)
+    have hnull : volume (S ∩ Ioc 0 1) = volume (S ∩ Icc (0 : ℝ) 1) := by
+      apply le_antisymm
+      · exact measure_mono (Set.inter_subset_inter_right _ Set.Ioc_subset_Icc_self)
+      · have hsub : S ∩ Icc (0 : ℝ) 1 ⊆ (S ∩ Ioc 0 1) ∪ {0} := by
+          rintro x ⟨hxS, hx0, hx1⟩
+          rcases eq_or_lt_of_le hx0 with h | h
+          · exact Or.inr (by simp [h])
+          · exact Or.inl ⟨hxS, h, hx1⟩
+        calc volume (S ∩ Icc (0:ℝ) 1) ≤ volume ((S ∩ Ioc 0 1) ∪ {(0:ℝ)}) := measure_mono hsub
+          _ ≤ volume (S ∩ Ioc 0 1) + volume ({(0:ℝ)}) := measure_union_le _ _
+          _ = volume (S ∩ Ioc 0 1) := by simp
+    rw [hcast, hrec, htr, hnull, ih, succ_nsmul]
+
+/-- **DILATION INVARIANCE of the good-set measure.**  `muGood θ (c·E) = muGood θ E` for any
+positive integer dilation `c`.  Combines `good_dilate` (set relation), `volume_preimage_mul_left`
+(Lebesgue scaling by `c`), and `muGood_fold` (the `c`-fold cover of the period).  This is the
+covering-side of the S155 dilation-invariance correction, now at the MEASURE level. -/
+theorem muGood_dilate (θ : ℝ) (E : Finset ℤ) {c : ℤ} (hc : 0 < c) :
+    muGood θ (E.image (fun e => c * e)) = muGood θ E := by
+  have hcR : (0 : ℝ) < (c : ℝ) := by exact_mod_cast hc
+  have hnat : (c : ℝ) = ((c.toNat : ℕ) : ℝ) := by exact_mod_cast (Int.toNat_of_nonneg hc.le).symm
+  unfold muGood
+  rw [good_dilate]
+  -- (·c)⁻¹' (Good) ∩ [0,1] = (·c)⁻¹' (Good ∩ [0,c])
+  have hL2 : (fun x => (c : ℝ) * x) ⁻¹' Good θ E ∩ Icc 0 1
+           = (fun x => (c : ℝ) * x) ⁻¹' (Good θ E ∩ Icc 0 (c : ℝ)) := by
+    ext x
+    simp only [Set.mem_inter_iff, Set.mem_preimage, Set.mem_Icc]
+    constructor
+    · rintro ⟨hxS, hx0, hx1⟩
+      exact ⟨hxS, mul_nonneg hcR.le hx0, by nlinarith⟩
+    · rintro ⟨hxS, h0, h1⟩
+      refine ⟨hxS, ?_, ?_⟩
+      · exact le_of_mul_le_mul_left (by rwa [mul_zero]) hcR
+      · exact le_of_mul_le_mul_left (by rwa [mul_one]) hcR
+  rw [hL2, Real.volume_preimage_mul_left (ne_of_gt hcR) _]
+  -- ofReal |c⁻¹| * volume(Good ∩ [0,c]) = volume(Good ∩ [0,1])
+  have hfold : volume (Good θ E ∩ Icc 0 (c : ℝ))
+             = (c.toNat : ℕ) • volume (Good θ E ∩ Icc 0 1) := by
+    rw [hnat]; exact muGood_fold θ E c.toNat
+  rw [hfold, nsmul_eq_mul]
+  have hc0 : |(c : ℝ)⁻¹| = (c : ℝ)⁻¹ := abs_of_pos (by positivity)
+  have hcast : ((c.toNat : ℕ) : ℝ≥0∞) = ENNReal.ofReal (c : ℝ) := by
+    rw [hnat, ENNReal.ofReal_natCast]
+  rw [hc0, hcast, ← mul_assoc, ← ENNReal.ofReal_mul (by positivity),
+      inv_mul_cancel₀ (ne_of_gt hcR), ENNReal.ofReal_one, one_mul]
+
 
 end TailDiameter
 end LonelyRunner

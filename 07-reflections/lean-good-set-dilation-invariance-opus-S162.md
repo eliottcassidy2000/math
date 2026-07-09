@@ -39,12 +39,14 @@ kernel-pure, no `sorryAx`.
 - It is the covering-side companion to the existing `LRCDilationInvariance.iSup_margin_const_mul`
   (`M(c·v) = M(v)`, opus-S110) and to `LRCDilation` (mac-mini-S24, WLOG gcd=1) — but for the good-set
   measure `muGood`/`D3` that the k=11 density-floor tail actually uses.
-- `good_dilate` + `good_add_one` are the STRUCTURAL CORE of `muGood θ (c·E) = muGood θ E`: the map
-  `x ↦ c·x` is a measure-balanced `c`-fold cover of the (1-periodic) good set, so the good-set
-  measure is unchanged. (The final measure step — that the `c`-fold cover preserves `vol` on `[0,1]`
-  — is the standard circle change-of-variables; not carried in this file, which is the kernel-pure
-  set-level layer. It is the one remaining leaf, mirroring how `LRCTailDiameter` isolates the AP₇₆
-  Farey certificate.)
+- `good_dilate` + `good_add_one` are the STRUCTURAL CORE of `muGood θ (c·E) = muGood θ E`, and the
+  full measure statement **`muGood_dilate` is now PROVED** (opus-S163, same file, kernel-pure): the
+  map `x ↦ c·x` is a measure-balanced `c`-fold cover of the (1-periodic) good set. The proof is the
+  circle change-of-variables done at the OUTER-measure level (so no measurability of `Good` is
+  needed): `good_add_natCast` (integer-translation invariance of `Good`), `muGood_fold`
+  (`vol(Good ∩ [0,n]) = n · vol(Good ∩ [0,1])` via `Measure.restrict` additivity + Lebesgue
+  translation invariance `measure_preimage_add`), and `Real.volume_preimage_mul_left` (Lebesgue
+  scaling by `c`), assembled with the `hL2` set identity `(·c)⁻¹'S ∩ [0,1] = (·c)⁻¹'(S ∩ [0,c])`.
 - It formalizes the fact that fixes the LEM-009 error (MISTAKE-126): `muGood`/`D3` is dilation-
   invariant, the fixed-window cluster size is not, so the exact counterexample
   `(0,3,6,8,9,12,15,18,21,24,27)` (a dilate of the compact minimizer) sits below the window-cluster
