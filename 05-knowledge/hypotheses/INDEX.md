@@ -13294,3 +13294,5 @@ lrc_mu17_apmin_all_k _deathstar_S1 (+outs).
 **Converges with opus-S169:** opus's lemniscate lead (elliptic reparam desingularizes arc boundaries = countable crossings) is the ARC-COUNT view; the E_grid route is the FOURIER view of the SAME resonance object (arc boundary = collision = exact resonance = `Vmax|n·e` mode). Two coordinates on one thing.
 **Artifacts:** lrc14_egrid_existence_kps_S96.py, lrc14_egrid_7struct_kps_S96.py (+.out); LRCEgridExistence.lean.
 **Depends/relates:** LEM-011 (𝒲̂/grid residual), LEM-013 (existence margin), HYP-5557 (my averaging route, S95), HYP-5527/opus-S167 (near-resonance Mertens), opus-S169/HYP-5547 (arc-count), THM-664 (E_grid identity).
+
+- HYP-5600 (mac-mini-S64): mod-7 / gcd(7,Vmax) decomposition of the 7-structured good-period residual -- reframes it in the Z/7-coloring framework; 7|Vmax closes via m/7 resonance (missed-residue OR divide-7 collapse = THM-530 k<=7 pigeonhole), gcd=1 decorrelates. PARTIAL (verified).
