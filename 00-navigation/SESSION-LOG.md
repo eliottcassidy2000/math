@@ -19,6 +19,26 @@ kps (S99): your dispatch is wired to Mreach now via LRCGoodPeriodReach; the two 
 FILES: LRCGoodPeriodReach.lean (built, sorry-free); reflection the-good-period-leg-is-assembled-part-A-ruler-embedding-is-the-shared-blocker-klein-S203; LRC14-STATUS R1 updated. Builds on kps-S99/S31, klein LRCGoodPeriodMaxgap, LRCMreachConcrete.
 
 NEXT (the finish target): THM-527 Part A / hpartA -- the Vmax-ruler embedding. Both the good-period and density-floor routes reduce to it. This is the one substantive analytic node left before a complete Lean LRC(14).
+## kind-pasteur-2026-07-09-S101 -- COVERING->LONELY-INSTANT (hlink partial) + mapped the hfloor BONFERRONI assembly (glue DONE, hA/hB remain)
+
+Prompt (owner): keep working the covering->lonely-instant step and the hfloor Bonferroni assembly.
+
+COVERING->LONELY-INSTANT: klein-S203 LRCGoodPeriodReach.mreach_ge_of_goodPeriod wired HasGoodPeriod => Mreach>=1/14, leaving TWO links: hlink (good period => free residue gap >1/7) + hembed (ruler embedding = deep THM-527 Part A). I discharged the GEOMETRIC CORE of hlink's conclusion in LRCTeethGap.lean (sorry-free):
+- teeth_subset_Ico: every tooth in [0,1) (residue < Vmax).
+- free_translate_of_free_subInterval: for a NON-WRAPPING gap (a,a+g) subset [0,1], "no tooth in the gap" => "no INTEGER TRANSLATE of any tooth in the gap" (any translate reaching (0,1) forces n=0). This is exactly the (a,a+g) subset [0,1] case of hlink's conclusion (the forall n:Z condition), reduced to the finite tooth condition.
+Remaining for hlink: the maxCircGap-argmax extraction (mergeSort: the max gap IS a consecutive-residue interom) + the WRAPPING gap case. hembed = the deep reformulation (observer Vmax teeth <-> direct minReach), shared with the density route.
+
+hfloor BONFERRONI (mapped, glue DONE): LRCWitnessBonferroni.witness_floor_from_bonferroni_nodes reduces hfloor (witnessMP<=witnessG2) to THREE inputs:
+- hbonf: Bonferroni meas(A cap B)>=measA+measB-1 (LRCEventMeasureBridge, SORRY-FREE);
+- hA (Lemma A): nuConsec(k) <= nuShape s (the DENSITY FLOOR; nuShape=meas{x:orbit maxgap>1/7}; nuConsec exact rational three-distance table k=8..13);
+- hB (Lemma B): capRat(k) <= measGP s (the GOOD-PERIOD MEASURE floor; measGP=meas(G_P)).
+And bonferroni_floor_ge_mP / floor_ge_mP_of_mem PROVE witnessMP <= nuConsec k + capRat k -1 by native_decide (finite exact rational, worst 1891/5880~0.32 at k=8). So the Bonferroni GLUE is COMPLETE/sorry-free; the remaining hfloor surface = hA (density floor, my D3/opus-S157-158 territory) + hB (good-period measure = rho*, my arc-count/E_grid/dispatch territory), both carried as analytic PARAMETERS.
+
+STATUS: both hfloor and hpartA are now fully MAPPED. hpartA = [good-period dichotomy DONE (kps-S99)] + [reach tail DONE (kps-S99b Mreach_ge_of_lonely_instant + klein-S203)] + [hlink free-gap (kps-S101 non-wrapping core + remaining mergeSort/wrapping)] + [hembed ruler embedding, deep]. hfloor = [Bonferroni glue DONE] + [hA density floor] + [hB GP measure]. The deep analytic remainders (hembed, hA, hB) are the fleet's density-floor/reformulation work.
+
+FILES: LRCTeethGap.lean.
+
+NEXT: hlink's maxCircGap-argmax (mergeSort sortedness => the max gap is a free consecutive interval); the wrapping-gap case; connect my D3 cert to hA (nuShape floor).
 
 ## opus-2026-07-09-S173 -- NEW DIRECTION: the singular-series/lonely-measure RIESZ-PRODUCT route to inf L>0 -- POSITIVE-DEFINITE, sidesteps the covering-W Mertens wall (opus-S172); certificate soundness formalized (LRCRieszCertificate.lean, kernel-pure); naive Riesz reaches ratio 1.07-1.19 (beats 1.41), <1 needs the tuned Bedert-2025 construction
 
