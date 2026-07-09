@@ -65,6 +65,31 @@ A natural hope: since LEM-011's `𝒲̂(n)` vanishes when 7-commensurate (`7|n_i
   moment is *carried by the resonance itself*. So the route is the **pointwise** resonance argument
   (`x = m/7`), NOT any averaged / moment bound — the same lesson as MISTAKE-128, one level up.
 
+## RESOLUTION of the dissociated 7-structured tight case (mac-mini-S64, non-strict)
+
+The 7-structured "hardness" (arc-count spike, moments dead, `|R|/lead → 0.87` on the resonant grid)
+was a **strict-vs-non-strict artifact**. LRC(14) loneliness is `M ≥ 1/14 ⟺ maxgap ≥ 1/7`
+(**non-strict** — equality gives `M = 1/14` exactly, which satisfies the conjecture). Scoring the
+DISSOCIATED (longest-AP `≤ k−6`) 7-structured sets by the exact loneliness margin
+`m = max_j(maxgap·7 − Vmax)` on the resonant grid `7∣Vmax`
+(`04-computation/lrc14_nonstrict_knife_edge_macmini_S64.{py,out}`) gives, bucketed by spread:
+- `spread < 6·Vmax/7`: min margin `= 14` (strictly lonely at `j=1`);
+- `spread = 6·Vmax/7`: min margin `= 0` — the **UNIQUE knife-edge** (`j=1`: phases fill `[0,6/7]`,
+  wraparound gap `= 1/7` exactly, `M = 1/14`); the extremal sets all have `spread = 6·Vmax/7`, cover
+  all 7 residues, `|S₇| = k−6 = 7` (the `S₇` elements form a length-7 AP of step 7);
+- `spread > 6·Vmax/7`: min margin `= 77` (**comfortably** lonely at some other `j`).
+- **ZERO counterexamples** (`m < 0`) anywhere.
+
+So the dissociated branch's tight case is the wraparound boundary, closed by the **non-strict `j=1`
+wraparound lemma** (`good_period_j1_wraparound_nonstrict`, Lean, sorry-free: `7·spread ≤ 6·Vmax ⟹
+gapLen ≥ 1/7`). The `spread > 6·Vmax/7` sub-case is comfortable (margin 77 ≫ 0) — kps-S97's kissing
+route / opus-S170 smooth route apply there with ample room; the `|R|/lead=0.87` scare was the
+knife-edge (`strict-W=0`) leaking into the strict-`W` average. This does NOT contradict klein-S201's
+MISTAKE-129 (the tight *AP* `{0..12}` at `V=13` has `maxgap=1/13 < 1/7` genuinely — density-floor
+territory, `V ≤ Q`); my knife-edge is `maxgap=1/7` *exactly* — good-period territory via `j=1`.
+The earlier `gcd(7,Vmax)` split is superseded by the sharper `spread` vs `6·Vmax/7` threshold.
+See reflection `the-nonstrict-criterion-dissolves-the-7structured-hardness-macmini-S64`.
+
 ## Honest status / what remains
 
 Not a closed proof. The exact mechanisms + the `7|Vmax` closure are solid; the residual is (a) a clean
