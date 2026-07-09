@@ -81,3 +81,30 @@ one everyone expected to need the analysis — is now elementary.
 density-floor tail) — `dissociated ⟹ few small-`n` resonances `n·E≡0` ⟹ the correction is small ⟹
 `E_grid[W] ≈ (6/7)^k > 0` at small `N`); (b) an elementary gap-argument for short-longest-AP hard sets
 (open). Either closes `j*=O(k)` and hence LRC(14)'s covering case outright.
+
+## Route (c) — the dissociated branch closes by ARC-COUNT existence (mac-mini-S61)
+
+The finite-`Vmax` glue needs only that a good period **EXISTS** (any `j ∈ {1,…,Vmax−1}`), not the
+small-`j` bound `j*=O(k)`. For the dissociated branch this is cleaner than routes (a)/(b): the
+**arc-count pigeonhole** (klein-S192, kps-S90)
+
+> `#{good grid j} ≥ ρ*·Vmax − #arcs(Good_E)`,  so a good period exists whenever  `#arcs < ρ*·Vmax`.
+
+Since `spread ≤ Vmax`, this holds iff `c := #arcs/spread < ρ*`. Verified over dissociated
+spread-dense clusters (`L ≤ k−6`, `k=11,13`): **`c ≤ 0.19 (k=11) / 0.51 (k=13)`** while **`ρ* ≥
+0.99 / 0.96`** — `c < ρ*` with a large margin (`≥ 0.45`). So the dissociated branch closes by
+existence. Both inputs are a-priori-backed by established machinery, for LOW longest-AP:
+
+- **`ρ* ≥ ρ_min` (bounded below):** `ρ* = μ_{1/7}(E) ≥ D3(E)` (THM-661), and `D3` is HIGH for low
+  longest-AP — the decorrelation limits `D3_∞^{(L)} = 0.86/0.85/0.84/0.81/0.76/0.68/0.60` at
+  `L=2..8` (opus-S158) DECREASE in `L`, so dissociated (`L ≤ k−6 ≤ 7`) gives `ρ* ≳ 0.6`.
+- **`#arcs ≤ c(L)·spread` (bounded above), `c(L)` increasing in `L`, `Vmax`-INDEPENDENT** (the
+  bounded-arc-count lemma, mac-mini-S58): `#arcs` depends only on the cluster's internal differences;
+  for low longest-AP the coherent gap-events are few, `c(L) ≤ 0.5` for `L ≤ 7`.
+
+The margin `c(k−6) ≤ 0.5 < ρ_min ≈ 0.6` closes the dissociated branch a-priori (non-tight), leaving
+only the explicit `c(L)`/`ρ_min` constants (the same density-floor-tail + arc-count objects, both
+already computed). Since the near-AP branch (`L ≥ k−5`) is LEM-012 (elementary) and the dissociated
+branch (`L ≤ k−6`) is arc-count existence, **both branches of THM-527-A now have a-priori closure
+routes** — LRC(14)'s covering case is closed modulo the two explicit constants + Lean. File:
+`04-computation/lrc14_dissociated_arccount_macmini_S61.{py,out}`.
