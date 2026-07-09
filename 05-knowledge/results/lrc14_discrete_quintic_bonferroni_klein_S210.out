@@ -1,0 +1,51 @@
+==============================================================================
+HYP-5758: the discrete quintic Bonferroni certificate (klein-S210)
+==============================================================================
+
+iid reference: B1(13)=-0.8571  B3(13)=-0.0991  B5(13)=0.1221  (6/7)^13=0.1348
+
+[A] The S209 battlefield (C1∪C4 died here; exact truth was fat):
+  adversarial-worst V=120 (0 certs): V=120
+    moduli q in (V,2V] (step 1): 120; live 120; B1-cert 0; B3-cert 27; B5-cert 120  (100%)
+    best q=231 (classes 13): depth ladder B1=-190 B3=-28 B5=34 B7=34 vs exact LM=34  [B5/q = 0.1472]
+  adversarial V=120 (0 certs): V=120
+    moduli q in (V,2V] (step 1): 120; live 120; B1-cert 0; B3-cert 28; B5-cert 95  (79%)
+    best q=202 (classes 11): depth ladder B1=-113 B3=12 B5=31 B7=32 vs exact LM=32  [B5/q = 0.1535]
+  adversarial V=200 (0 certs): V=200
+    moduli q in (V,2V] (step 1): 200; live 200; B1-cert 0; B3-cert 49; B5-cert 123  (62%)
+    best q=369 (classes 13): depth ladder B1=-290 B3=-8 B5=64 B7=66 vs exact LM=66  [B5/q = 0.1734]
+  7-structured @91: V=91
+    moduli q in (V,2V] (step 1): 91; live 91; B1-cert 0; B3-cert 39; B5-cert 90  (99%)
+    best q=117 (classes 10): depth ladder B1=-16 B3=36 B5=38 B7=38 vs exact LM=38  [B5/q = 0.3248]
+  adversarial V=200 #2: V=200
+    moduli q in (V,2V] (step 1): 200; live 200; B1-cert 0; B3-cert 29; B5-cert 191  (96%)
+    best q=347 (classes 13): depth ladder B1=-278 B3=-44 B5=54 B7=58 vs exact LM=58  [B5/q = 0.1556]
+  adversarial V=280: V=280
+    moduli q in (V,2V] (step 1): 280; live 280; B1-cert 0; B3-cert 8; B5-cert 278  (99%)
+    best q=541 (classes 12): depth ladder B1=-372 B3=-12 B5=82 B7=84 vs exact LM=84  [B5/q = 0.1516]
+
+[B] Scale sweep (random mid-band covering instances):
+    V  inst  avg %B5-cert  min %B5  min bestB5/q  all inst >=1 B5?
+   30     6         74.4%    56.7%        0.1887              True
+   45     6         91.5%    75.6%        0.2051              True
+   60     6         81.4%    58.3%        0.1835              True
+   90     6         79.6%    51.1%        0.1387              True
+  120     6         79.6%    51.7%        0.1373              True
+  180     6         95.4%    77.8%        0.1128              True
+  260     6        100.0%   100.0%        0.1370              True
+
+[C] Structure penalty (E3 = #Schur triples a+b=c in S):
+   E3=  2  %B5-cert=100.0%  best B5/q=0.2077  S=[9, 11, 13, 19, 21, 27, 56, 80, 98, 119, 120, 140, 150]
+   E3=  4  %B5-cert= 92.7%  best B5/q=0.1549  S=[10, 11, 12, 13, 28, 38, 40, 51, 77, 84, 119, 144, 150]
+   E3=  5  %B5-cert= 97.3%  best B5/q=0.1751  S=[10, 11, 12, 13, 21, 56, 77, 81, 88, 90, 144, 147, 150]
+   E3=  4  %B5-cert= 90.7%  best B5/q=0.1753  S=[7, 9, 10, 11, 12, 14, 20, 52, 65, 74, 91, 96, 150]
+   E3=  7  %B5-cert= 56.0%  best B5/q=0.1832  S=[10, 11, 12, 13, 24, 28, 35, 60, 77, 80, 90, 104, 150]
+   E3=  4  %B5-cert= 56.7%  best B5/q=0.1811  S=[7, 9, 10, 11, 12, 32, 40, 46, 72, 112, 122, 143, 150]
+   E3= 42  %B5-cert=  3.8%  best B5/q=0.2143  S=[2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26] (structured)
+
+[D] Histogram forensics (worst instance/modulus with LM>0 but B5<=0, if any):
+   @91 q=96: LM=6 but B5=0 (classes 13, kill density 0.142)
+      hist  = [6, 32, 40, 10, 4, 2, 0, 1, 0, 0, 0, 0, 0, 0]
+      binom = [13.0, 28.0, 27.7, 16.8, 6.9, 2.1, 0.5, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+DONE.
