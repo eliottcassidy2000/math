@@ -1,0 +1,34 @@
+(1) OPEN WINDOW:  spread13_lonely closes Vmax >= 13*spread/12  (i.e. r = Vmax/Vmin <= 13).
+    => genuinely open:  spread < Vmax < 13*spread/12   (2.6x smaller than (spread, 2.8*spread]).
+    tight AP {1..13}: Vmax=13, Vmin=1, r=13 -> CLOSED by spread13_lonely at tau=1/14.
+      check: is_lonely(AP, 1, 14) = True, margin = 1/14 (= 1/14 exactly)
+
+(2) THE OPEN WINDOW IS INFINITE:  v_N = {1, N, ..., N+11}, open for all N>=14, Vmax -> oo.
+    N=  14: Vmax=  25, Vmin=1, r=25 > 13  -> OPEN
+    N=  50: Vmax=  61, Vmin=1, r=61 > 13  -> OPEN
+    N= 200: Vmax= 211, Vmin=1, r=211 > 13  -> OPEN
+
+(3) TRIVIAL-q LEMMA:  for q<=14,  tau=1/q lonely  <=>  q divides no speed.
+    AP {1..13}   (14 divides none): multiples of 14 in v = none;  tau=1/14 lonely? True
+    {2,...,14}   (14 divides 14)  : multiples of 14 in v = [14];  tau=1/14 lonely? False
+    {1..13}      (13 divides 13)  : multiples of 13 in v = [13];  tau=1/13 lonely? False
+    COROLLARY: if 14 divides no speed, LRC(14) holds at tau=1/14.
+    => a HARD set must have, for every q in {2..14}, a speed divisible by q (a covering condition).
+
+(4) CONSTRUCTIVE (Odlyzko--te Riele) WITNESSES tau=p/q, and the failure of bounded-q.
+    the all-small-q-killing set {2,...,14} needs a LARGER q:
+      v=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+        min certificate: tau=1/16, margin=1/8  (>=1/14: True)
+    OtR-style adversarial hill-climb (maximize the minimal q) reached q >= 37, still climbing
+      e.g. v=[2,13,68,79,87,132,216,224,286,299,336,400,409] has min certificate q = 37
+        verified: tau=2/37, margin=4/37 (>=1/14: True)
+    => q is NOT uniformly bounded (cf MISTAKE-116: covering modulus unbounded);
+       hence NO bounded-q finite reduction, and the 'bounded-window' check is a sampling.
+
+(5) THE MERTENS SYNTHESIS.
+    meas(L) = (6/7)^13 + R.  Measure route needs |R| < (6/7)^13 -- SHARP: at the tight AP,
+    meas(L)=0 exactly (lonely set = the single point tau=1/14), so R = -(6/7)^13.
+    But precisely there a rational witness exists (q=14).  So:
+      LOOSE (meas(L)>0)  -> measure/Riesz certificate  (opus-S173/178)
+      TIGHT (meas(L)=0)  -> exact rational witness      (this, Odlyzko--te Riele in spirit)
+    The constructive witness lives exactly where the magnitude bound is sharp.
