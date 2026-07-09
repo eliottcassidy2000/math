@@ -14,6 +14,22 @@ KEY: the loose/tight SEPARATION HAS A GAP (hardest loose 0.79 < 1.00 tight) => i
 CORRECTION: {1..12}U{182} is LOOSE (lonely measure 0.024, direct computation), not tight -- "lonely only at 14/183" is its deepest well; genuine tight anchors {1..13}, 2*{1..13}. LEAN: no new node (opus-S173 riesz_certificate + no_certificate_of_ae_covered already cover the soundness+validity the data confirms). NEXT: the uniform D(S)-scheme (sup_loose inf_R ratio < 1) = inf L>0. Files: lrc14_riesz_push_below_one_opus_S174 (+out); reflection the-riesz-ratio-sharply-decides-looseness-opus-S174; HYP-5630.
 
 ---
+## kind-pasteur-2026-07-09-S102 -- hlink mergeSort ARGMAX + WRAPPING-gap pieces (LRCMaxgapArgmax.lean, sorry-free); paper 2604.21187 = methodological (extremal-witness + Lean certs) inspiration
+
+Prompt (owner): keep working the mergeSort argmax and wrapping-gap case for hlink; read arxiv 2604.21187 for inspiration.
+
+PAPER (2604.21187): "Doubly Saturated Ramsey Graphs" (Przybocki-Mackey-Heule-Subercaseaux) -- SAT + LLM-generated code + Lean formalization of INFINITE FAMILIES, resolving a 1982 Grinstead-Roberts question. NOT circular-gap/three-distance/LRC content; inspiration is METHODOLOGICAL: the EXTREMAL/SATURATION witness characterization + computational certificates formalized in Lean. Applied here: the widest gap = the EXTREMAL WITNESS (foldl_max_pos_mem), matching mac-mini-S64's widest-arc pigeonhole (maxIntG*spread>=1.709 a-priori) and the certificate-in-Lean pattern.
+
+MY NODE (LRCMaxgapArgmax.lean, sorry-free, Mathlib-only):
+- foldl_max_eq_or_mem / foldl_max_pos_mem: a positive foldl max 0 is attained by a LIST MEMBER = the argmax extraction step. maxCircGap = (zipWith (b-a) cyc cyc.tail).foldl max 0 > Vmax/7 > 0 => the widest gap IS a genuine consecutive-difference member.
+- foldl_max_le_of_all / foldl_max_le: the COMPLEMENT direction -- all gaps <= B => maxCircGap <= B. Contrapositive: not-HasGoodPeriod <=> all gaps <= Vmax/7 (the fragmented/near-AP/density-floor regime).
+- free_translate_wrap: the WRAPPING companion to kps-S101's non-wrapping free_translate. For a gap (a,a+g) straddling 1 whose complement holds every tooth (a+g-1<=c<=a), no integer translate lands in (a,a+g). (a+g<=2 turned out UNNECESSARY -- proof closes via the complement bound alone.)
+
+hlink SURFACE now (klein-S203's free-gap link): [foldl argmax: max in zipWith DONE] + [zipWith-membership => consecutive index i (cyc[i],cyc[i+1])] + [mergeSort sorted => nothing strictly between => free interval] + [dispatch: internal gap => S101 free_translate (non-wrap); wraparound gap (ps.last, p0+Vmax) => S102 free_translate_wrap]. I have the foldl membership + BOTH translate reductions (non-wrap S101 + wrap S102); the remaining piece = the zipWith-positional-index + mergeSort-sortedness "nothing between consecutive" extraction (List reasoning, klein has the maxCircGap def).
+
+Good-period Lean cores: mac-mini 5 + klein maxgap/reach + my AP/ArcCount/Egrid/Dispatch/ReachWitness/TeethGap/MaxgapArgmax. FILES: LRCMaxgapArgmax.lean.
+
+NEXT: the zipWith->consecutive-index + sorted-nothing-between extraction (finishes hlink); then hlink dispatches to S101/S102 translate reductions. Note: hembed (ruler embedding, THM-527 Part A) remains the SHARED deep blocker (klein-S203 reframe) for BOTH good-period and density routes.
 
 ## klein-2026-07-09-S203 -- GOOD-PERIOD DICHOTOMY ASSEMBLED end-to-end in Lean; the REFRAME: THM-527 Part A (ruler embedding) is the ONE shared blocker for BOTH routes.
 
