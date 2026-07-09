@@ -20,6 +20,24 @@ SCOPE (honest): this is the [1,18] small-ruler exhaustive base. Larger covering 
 
 NEXT: extend the native_decide leg to [1,N] for larger N (or Vmax<=1001 exact-check as native_decide via THM-668 pair-sum events); mac-mini's Schur-budget/live-ruler theorem; wire E3 (schurCount_eq_choose_iff_dilated, kps-S114) as the cell-selector into the dispatcher.
 
+## monad-explorer-2026-07-09-S5 -- THE PARAMETRIC-THETA D3/E[W] RERUN DELIVERED (n = 11..13) + THM-670 PROVED (the 6-Lipschitz threshold transfer): min D3_theta' stays comfortably positive through r = 1/14 (n=13: 0.309/0.251/0.203/0.154 at r = 0, 1/50, 1/25, 1/14; calibration vs THM-661 exact to 6e-6); min E[W_theta'] >= 0.0608 everywhere; dilated ladders confirm the tail rises at lifted theta => THM-669's n >= 11 input EXISTS with real margins; assembly picture honest: |P| = 0 tight-cluster splits CLOSE uniformly, |P| = 1 short at ledger floors (1/7 bar vs 0.06-0.10) -- needs sharper windows-cap-G_P accounting or per-shape checks (HYP-5747)
+
+Prompt (owner): keep pushing -- run the parametric-theta D3/B4 rerun for n = 11..13.
+
+1. THM-670 (canon, PROVED, 4 lines): at most SIX gaps exceed theta >= 1/7 (seven would sum past 1) => W_theta is 6-Lipschitz in theta => E[W_{theta2}] >= E[W_{theta1}] - 6(theta2 - theta1). The 1/7-leg first moments transfer to every lifted threshold for free; the direct parametric scan beats the backstop by +0.11..0.45 (a backstop doing its job).
+2. THE LEDGER (compact prim-diam <= 15; float-first + exact-confirmed minima; calibration: D3 at 1/7 reproduces THM-661's exact k=12/13 minima 0.355876/0.308844 to 6e-6):
+   min D3_theta' at r = 0 / 1/50 / 1/25 / 1/14:  n=11: 0.4048/0.3272/0.2616/0.1909;  n=12: 0.3559/0.2800/0.2283/0.1683;  n=13: 0.3088/0.2514/0.2026/0.1544.
+   min E[W_theta']:  n=11: 0.1454/0.1152/0.0910/0.0669;  n=12: 0.1293/0.1029/0.0830/0.0630;  n=13: 0.1157/0.0937/0.0771/0.0608.
+   All positive with real margins -- THE n >= 11 INPUT OF THM-669'S ASSEMBLY EXISTS.
+3. TAIL BEHAVIOR AT LIFTED THETA: dilation invariance exact (5-digit stability across c = 1..8 -- engine sanity); stretched-AP diameter ladders RISE (n=12, r=1/25: 0.2565 -> 0.39; n=13, r=0: 0.3139 -> 0.47-0.49) -- LEM-005's decorrelation-tail behavior holds parametrically; the proven rate lemma's theta-genericity is flagged as inherited (not re-derived) -- the one remaining formal-tail item.
+4. THE ASSEMBLY PICTURE (honest, the Part-E lesson): these floors serve the TIGHT-CLUSTER regime r = S_L/Vmax <= 1/14 (Vmax >= 14 spread(L) -- the classic small-P (P,E) shapes). There: |P| = 0 splits CLOSE uniformly (Av_floor >= 0.0608 > 0 = meas(G_empty^c), modulo THM-667's grid port); |P| = 1 splits are SHORT at the ledger floors (bar 1/7 = 0.143 vs 0.06-0.10) -- the mass criterion's RHS (meas(G_P^c) whole) is conservative; the sharper windows-cap-G_P intersection or per-shape exact checks are the instruments. The S2/S3 battery families' full-cluster splits sit at r = 0.74-0.94 -- OUTSIDE this regime, and correctly served by THM-668 + mac-mini's C2 live-ruler certificates (their census already catches my detuned harmonics at k = 23/25 -- healthy redundancy).
+5. HARDENING NOTE (honest): the scan is float-first (20k grid) with exact confirmation of the argmin shapes only; canon-grade = exact top-10 per (n, r) cell. Flagged, not done.
+
+FILES: 01-canon/theorems/THM-670-lipschitz-threshold-transfer.md; 04-computation/lrc14_parametric_D3_rerun_monad_S5.py (+out). No canon overridden.
+
+NEXT: (a) the windows-cap-G_P sharper intersection for |P| = 1 (the one short cell; the P-runner vs window decorrelation is a 1-speed resonance question -- THM-668-adjacent); (b) exact top-10 hardening of the ledger; (c) the theta-generic restatement of the LEM-005 rate lemma (one page, opus-S157's proof shape); (d) the assembled covering-case surface (spread13 | THM-668 | C0-C3 | THM-669+ledger | finite checks) as one Lean-facing disjunction.
+
+---
 ## monad-explorer-2026-07-09-S4 -- THM-669 PROVED: THE REFLECTION AVAILABILITY LEMMA -- Av(E, r) >= intW_{1/7+r}(E)/(1-r^2): pairing x with -x reflects gap positions (a -> 1-a-g) and (u)_+ + (v)_+ >= (u+v)_+ converts the low-anchor position penalty into a THRESHOLD LIFT (r = 0 recovers intW exactly); + layer cake + THE PARAMETRIC TENT (mu_theta(E_n) >= 1 - 2(n-1)(n theta - 1)/n for 1/n < theta <= 2/n -- THM-651 = the (8, 1/7) point) => EXPLICIT STRUCTURE-FREE AVAILABILITY FLOORS: |L| <= 6 positive for r < 1/|L| - 1/7 with NO hypotheses; n = 8/9/10 tent-integrated (9/448 at r=0, n=8); n >= 11 reduces to the parametric-theta moment reruns. Verified: 0 violations zoo x r-grid (exact both sides); tent floors valid; proven-vs-empirical 8.8-137x conservative but POSITIVE (HYP-5737)
 
 Prompt (owner): keep pushing -- prove the uniform low-anchor availability lemma.
