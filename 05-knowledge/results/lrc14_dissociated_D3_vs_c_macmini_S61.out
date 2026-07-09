@@ -1,0 +1,10 @@
+CLEAN a-priori inequality  c=#arcs/spread < D3(E)  over dissociated (L<=k-6) clusters:
+
+k=11 (dissociated L<=5): 250 clusters; c>=D3 (FAILURES): 0; min margin (D3-c) = 0.5752
+   worst c/D3 ratio = 0.270 at ((0, 6, 13, 31, 65), 160, 0.212, 0.788)
+   => c < D3 ALWAYS: dissociated branch CLOSES by the clean a-priori inequality
+
+k=13 (dissociated L<=7): 250 clusters; c>=D3 (FAILURES): 1; min margin (D3-c) = -0.0164
+   worst c/D3 ratio = 1.025 at ((0, 3, 10, 14, 40), 80, 0.675, 0.659)
+   => FAILS -- needs the tighter bound
+
