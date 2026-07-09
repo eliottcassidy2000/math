@@ -43,6 +43,36 @@ theorem good_period_j1_wraparound
     have hle : (e : ℚ) / Vmax ≤ (spread : ℚ) / Vmax := by gcongr
     linarith
 
+/-- **LEM-010(i), non-strict — the knife-edge wraparound good period (mac-mini-S64).**
+The LRC(14) loneliness criterion is `M(S) ≥ 1/14`, i.e. a gap `≥ 1/7` (NON-strict: equality
+`gap = 1/7` gives `M = 1/14` exactly, which satisfies the conjecture).  So the good-period
+hypothesis is the non-strict `7 * spread ≤ 6 * Vmax` (the closed compression `spread ≤ 6·Vmax/7`),
+delivering `gapLen ≥ 1/7`.  This covers the **wraparound-boundary knife-edge** `spread = 6·Vmax/7`
+(e.g. the 7-structured covering set `{0,7,10,14,18,20,21,26,28,35,36,37,42}` at `Vmax = 49`, where
+`spread = 42 = 6·49/7` and `gapLen = 1 − 6/7 = 1/7` exactly) — the extremal case that the strict
+lemma `good_period_j1_wraparound` (`<`, `>`) EXCLUDES.  Verified (`lrc14_nonstrict_knife_edge`):
+over 7-structured dissociated `k=13` covering sets on the resonant grid `7 ∣ Vmax`, the loneliness
+margin `maxgap·7 − Vmax` is `≥ 0` everywhere (no counterexample) with equality achieved exactly at
+this boundary — the genuine `n = 14` knife-edge. -/
+theorem good_period_j1_wraparound_nonstrict
+    (Vmax spread : ℕ) (E : Finset ℕ)
+    (hV : 0 < Vmax)
+    (hE : ∀ e ∈ E, e ≤ spread)
+    (hsmall : 7 * spread ≤ 6 * Vmax) :
+    ∃ gapLen : ℚ, (1 : ℚ) / 7 ≤ gapLen ∧
+      ∀ e ∈ E, (e : ℚ) / Vmax + gapLen ≤ 1 := by
+  have hVQ : (0 : ℚ) < Vmax := by exact_mod_cast hV
+  have hsmallQ : (7 : ℚ) * (spread : ℚ) ≤ 6 * (Vmax : ℚ) := by exact_mod_cast hsmall
+  refine ⟨1 - (spread : ℚ) / Vmax, ?_, ?_⟩
+  · -- 1/7 ≤ 1 - spread/Vmax  ⟺  spread/Vmax ≤ 6/7  ⟺  7·spread ≤ 6·Vmax
+    have h : (spread : ℚ) / Vmax ≤ 6 / 7 := by
+      rw [div_le_iff₀ hVQ]; linarith [hsmallQ]
+    linarith
+  · intro e he
+    have heQ : (e : ℚ) ≤ (spread : ℚ) := by exact_mod_cast hE e he
+    have hle : (e : ℚ) / Vmax ≤ (spread : ℚ) / Vmax := by gcongr
+    linarith
+
 /-- **The good-period core (reusable).** If a finite set `P` of phases all lies in an interval
 `[lo, hi]` of length `< 6/7`, then the complementary circular arc `(hi, lo+1)` — of length
 `1 − (hi − lo) > 1/7` — is empty: a gap `> 1/7`, i.e. a good period.  This is the shared engine of

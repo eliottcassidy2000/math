@@ -1,0 +1,13 @@
+7-struct dissociated k=13, resonant grid 7|V, 13272 (set,V) pairs:
+  MIN best-margin (maxgap*7 - V): 0   [>=0 => LRC14 loneliness holds for covering case]
+  COUNTEREXAMPLES (margin<0): 0     EXACT knife-edges (margin=0, M=1/14): 1
+  extremal (min margin): E=[0, 7, 12, 14, 21, 24, 28, 29, 32, 35, 37, 41, 42] V=49 at j=1
+
+WRAPAROUND-BOUNDARY set (spread=42=6*49/7), V=49:
+  best margin = 0 at j=1   (0 = EXACT M=1/14 knife-edge)
+  residues mod7 = [0, 1, 2, 3, 4, 5, 6] (all 7 => no missed-residue), |S7| = 7
+  => at j=1 the phases fill [0,42/49]=[0,6/7], wraparound gap = 1-6/7 = 1/7 EXACTLY. Loneliness = 1/14.
+
+CONCLUSION: covering case holds NON-STRICTLY (maxgap>=1/7); n=14 is a true knife-edge
+(equality achieved at the wraparound boundary, never violated). The good-period lemma and its
+Lean form must use 7*spread <= 6*Vmax => gapLen >= 1/7 (non-strict), not the strict <.

@@ -1,0 +1,15 @@
+K=13, lead=(6/7)^K=0.134801
+AP step-7 [0, 7, 14, 21, 28]...: longest-AP=13
+   AP V=91 (7|V): E_grid[W]=0.06593  |R|/lead=0.5109
+   AP V=98 (7|V): E_grid[W]=0.11224  |R|/lead=0.1673
+   AP V=98 (7|V): E_grid[W]=0.11224  |R|/lead=0.1673
+
+    grid-class  #sets  sup|R|/lead min E_grid[W]  #(<=0)   worst-set
+        7|Vmax   1848       0.8702       0.01749       0   ([0, 7, 10, 14, 18, 20, 21], 49, np.float64(0.01749), np.float64(0.8702))
+    gcd(7,V)=1   1936       0.5349       0.09041       0   ([0, 5, 8, 21, 28, 30, 35], 60, np.float64(0.2069), np.float64(0.5349))
+
+INTERPRETATION:
+ - sup|R|/lead vs AP's 0.61: if 7|V exceeds it => grid-kissing is NOT AP-extremal at resonance
+   (kps's flagged 'uniform in Vmax' gap is real at 7|V), but...
+ - min E_grid[W] > 0 and #(<=0)=0 => EXISTENCE still holds: the resonance's own W-spike at x=m/7
+   keeps the first moment positive even when |R|/lead is large. |R|<lead is the true threshold.
