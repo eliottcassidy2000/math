@@ -1,0 +1,12 @@
+CLAIM 1: spread < 6*Vmax/7  =>  j=1 is a good period
+
+  tested 7669 clusters with spread<6Vmax/7: j=1 good in ALL but 0 (CLAIM 1 HOLDS)
+
+CLAIM 2: smallest good period j* (Dirichlet bound 3^(k-1)); how small is it REALLY?
+
+  k=8 (3^(k-1)=2187): 0 hard clusters (spread>=6Vmax/7, j=1 fails); max needed j* = 0  (<< 2187); no-good-j-found: 0
+  k=11 (3^(k-1)=59049): 15 hard clusters (spread>=6Vmax/7, j=1 fails); max needed j* = 2  (<< 59049); no-good-j-found: 0
+  k=13 (3^(k-1)=531441): 60 hard clusters (spread>=6Vmax/7, j=1 fails); max needed j* = 4  (<< 531441); no-good-j-found: 0
+
+=> if j=1 covers spread<6Vmax/7 and small j* covers the rest (<< 3^(k-1)),
+   a good period always exists deterministically; only small Vmax needs a finite check.
