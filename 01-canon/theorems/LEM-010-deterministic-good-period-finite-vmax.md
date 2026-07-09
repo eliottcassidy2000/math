@@ -121,3 +121,14 @@ in the all-13 phases is a witness avoiding EVERY runner, `P` included — and `P
 (`lrc14_R3_gp_coupling_klein_S195`): over covering sets with `P≠∅` (`k=8..12`, `Vmax≤1500`), the
 all-13-co-offset good period exists at `j ≤ 2`, **0 fails**. So R3 is **subsumed by R1 at `k=13`** —
 confirming that general `j*=O(k)` is the sole remaining item of the covering case.
+
+## The near-AP branch of j*=O(k) is now ELEMENTARY (LEM-012, klein-S196)
+
+The general `j*=O(k)` (this file's R1 crux) splits on the longest AP `L(E)`, and the HARD branch is now
+proved elementarily: **`L ≥ k−5` ⟹ `j* ≤ ⌈7(L−1)/(L−k+6)⌉ = O(k)`** by Dirichlet clustering of the
+L-term AP + a pigeonhole gap-split (LEM-012) — no Weyl, no resonance sum. This is exactly the near-AP
+regime where `j*` is LARGEST (`≈k`, the exact AP `L=k` giving mac-mini's `⌈7(k−1)/6⌉`). The complement
+`L ≤ k−6` (deeply dissociated, only for `k ≥ 11`, verified `j* ≤ 5`) is the sole remaining piece — its
+a-priori bound via kps-S91's 𝒲̂-smallness (LEM-011) or an elementary argument. The two ranges tile all
+`L`. With the combined `j* ≤ 49` and kps-S30's exact `M(S)` sweep (`Vmax ≤ 1001 ≫ 49`), THM-527-A closes
+once the dissociated branch is made a-priori. See LEM-012.

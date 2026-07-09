@@ -1,0 +1,15 @@
+HARD dissociated sets (longest-AP <= k-6), j* distribution:
+  k     V  #found  maxL  max j*        j* hist (1..)
+  8    91       0  (none)
+  8   200       0  (none)
+  8   500       0  (none)
+ 11    91     300     5       3      {2: 288, 3: 12}
+ 11   200     300     4       3       {2: 294, 3: 6}
+ 11   500     300     4       3       {2: 299, 3: 1}
+ 13    91     300     7       5 {2: 274, 3: 25, 5: 1}
+ 13   200     300     5       3      {2: 287, 3: 13}
+ 13   500     300     4       4 {2: 286, 3: 13, 4: 1}
+
+Candidate: for hard dissociated, is j* <= 7 always? (and what's the worst)
+  worst j* over hard dissociated = 4  at k,V=(11, 1001)
+  worst E = (0, 67, 163, 220, 302, 433, 483, 595)...
