@@ -35,6 +35,25 @@ backlog. NEXT: prove the a-priori c(L)<=c0 (positive low-L arc-count) => route (
 CLOSED; and the Hadwiger K_6-minor build.
 
 ---
+## kind-pasteur-2026-07-09-S93 -- NEAR-RESONANCE COUNT via MERTENS + HADWIGER: the exact resonant/non-resonant split localizes the last mile to a Mertens-type oscillatory sum that the fleet's elementary routes correctly BYPASS
+
+Prompt (owner): work the near-resonance count, consider mertens conjecture and hadwiger conjecture.
+
+THE EXACT SPLIT (corollary of klein LEM-011, verified k=11,12,13 -- lrc14_corr_resonant_split_kps_S93.py):
+  Corr_N = N*(E_grid[W]-(6/7)^k)  +  NR
+- RESONANT part = N * THM-664's grid residual = the DENSITY-FLOOR object (LEM-009/opus-S157), ALREADY CLOSED. For the open Sidon/dissociated branch it is TINY: r_res = 0.03-0.04.
+- NON-RESONANT NR = sum_{n!=0, Vmax!|n.e} What(n) D_N(theta_n) = the whole remaining difficulty: r_nonres = 0.52-0.79.
+- Exact-relation count Z=#{small-support n: n.e=0} discriminates Sidon from AP: **AP 3474 vs Sidon 410** at k=13 (the (1,-2,1) 3-AP relations force n.e=0 = klein's "few resonances" made a number).
+
+MERTENS LENS: NR is a signed (-1)^r sum with ~10x cancellation (|abs|~5x target, signed~0.5) -- the Mertens regime. The natural sqrt-cancellation bound is EXACTLY the step Mertens' conjecture (|M(x)|<sqrt(x), FALSE -- Odlyzko-te Riele 1985) forbids. So NR cannot be closed a-priori by an L^2/average/sqrt heuristic (confirms opus-S154 "L^2 not L^1", klein-S194 "not by itself uniform"); it needs genuine equidistribution (Erdos-Turan, whose Weyl sums ARE D_N -- circular) OR must be bypassed. **The fleet bypasses it**: LEM-012 (Dirichlet clustering) + mac-mini-S61 (arc-count) both prove good-period EXISTENCE without forming NR -- a monotone, Mertens-immune event. My decomposition EXPLAINS why the successful routes are elementary.
+
+HADWIGER LENS: the good-period dichotomy [structured/AP: Dirichlet] vs [dissociated/Sidon: few resonances] is the additive-combinatorial instance of density-implies-structure -- high resonance count (additive energy) => AP/GAP structure (Freiman/BSG), the PROVED shadow of Hadwiger's OPEN coloring dichotomy (chi>=t => K_t minor). The near-resonance count is the density pivot. Exact-AP = the unique rigid extremal (sole r_N=1 boundary; r_res=1.06>1 for the k=13 AP alone) <-> parallelepiped = sole Hadwiger-covering extremal. LRC is finishable BECAUSE its density->structure arrow is a theorem while Hadwiger's is not.
+
+STATUS: both good-period branches already CLOSED elementarily (LEM-012 near-AP + arc-count dissociated), so this is deeper UNDERSTANDING/unification (capstone resonant part = density floor; oscillatory part = Mertens wall), NOT the critical path. Did NOT edit klein's LEM-011 (avoid edit race) -- flagged the split as a corollary to klein in the letter.
+
+FILES: 07-reflections/near-resonance-count-through-mertens-and-hadwiger-kps-S93.md; HYP-5527; lrc14_{near_resonance_count,exact_resonance_count,corr_resonant_split,arccount_vs_resonance}_kps_S93.py (+.out).
+
+NEXT: (opt) an Erdos-Turan/Koksma explicit-constant bound on NR for the finite k<=13, Vmax<=diam-bound window (the ONLY genuinely-a-priori-open piece, though not needed since existence is proved); continue Lean (Dirichlet pigeonhole node).
 
 ## mac-mini-2026-07-09-S61 (cont.) -- CLOSE the easy (dissociated) branch via ARC-COUNT: the clean exact inequality #arcs/spread < D3(E), sidestepping the partial-sum cancellation
 
