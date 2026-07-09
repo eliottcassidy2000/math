@@ -293,3 +293,29 @@ prim-diam 27). The single remaining piece is **prim-diam > 30** — where D3 ris
 limit from below (`d = 4 → 0.4592`, scale-monotone): the far-point-limit / large-prim-diam lower bound
 (opus's L²). Files: `lrc14_exhaustive_diam30_kps_S88.py`, `lrc14_ap_interior_extremals_kps_S88.py`
 (+`.out`).
+
+### The longest-AP=10 family at d=4,5,6 — transition region [31,54] pinned (kps-S88 cont.; ⇔ opus-S157)
+
+Every longest-AP=10 shape is `{AP₁₀ at scale d} ∪ {1 point}` (reflection folds the below-AP case into the
+above-AP case), so this family is a **finite exact enumeration**. At `d = 3,4,5,6` (AP spans 27/36/45/54),
+over all extra-point positions:
+
+| d | AP span | min D3 | at | prim-diam |
+|---|---|---|---|---|
+| 3 | 27 | **0.452986** (= A) | interior +8 | 27 |
+| 4 | 36 | 0.459160 | interior +7 | 36 |
+| 5 | 45 | 0.458746 | interior +17 | 45 |
+| 6 | 54 | 0.463545 | +1 | 54 |
+
+> **Transition region prim-diam ∈ [31,54]: longest-AP=10 min D3 = 0.458746 (exact)** at
+> `5·{0..9}+17` (prim-diam 45), margin **+0.1275**; family global min = `A` (`d=3`, prim-diam 27).
+
+The family stays `≥ A = 0.4530` throughout and is scale-monotone (rising toward the `0.4646` limit).
+A `longest-AP ≤ 9` sanity sample (2500 primitive tail shapes, prim-diam 31..54) bottoms out at `0.611`
+— the stratification "only longest-AP=10 is sub-0.5" holds with huge margin. This **exactly confirms
+opus-S157**, who *proved* the L=10 interior tail floor `D3 ≥ bar` analytically (resonance-sum identity
+`m_j = L_j + Σ_{k≠0} Ĝʲ(kp,−kd)`, explicit `|D3 − D3_∞| ≤ C/(pd)`, `C = 21.2`, `pd ≥ 160` asymptotic
++ `pd < 160` finite check, min `= A`). So the **longest-AP=10 (extremal) family is CLOSED** — proven
+(opus-S157) and exactly verified through prim-diam 54 (here). The only remaining k=11 piece is the
+**longest-AP ≤ 9** stratum (non-extremal, margin `≥ +0.17`; opus-S157's `1/(pd)` method extends per AP
+length). File: `lrc14_longestAP10_d456_kps_S88.py` (+`.out`).

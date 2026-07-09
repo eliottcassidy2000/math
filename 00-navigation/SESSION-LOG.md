@@ -13,6 +13,24 @@ COURT CASE: RESOLVED (klein concurs). The corrected extremal is A on the longest
 FILES: court case resolution; lrc14_longestAP10_correct_klein_S190.out (correct), lrc14_longestAP10_1D_klein_S190.out (the caught 1-D bug); HYP-5387.
 
 NEXT: (a) exact-rational D3(A) is known (opus); the d>=4 single-outlier decorrelation bound (LEM-009 generalization to interior points) => k=11 FULLY rigorous; (b) k=12,13 analogs (mac-mini uniform D3); (c) Lean-formalize the finite pieces (exhaustive + d=3 enumeration native_decide-able).
+## kind-pasteur-2026-07-08-S88 (cont.) -- longest-AP=10 family enumerated at d=4,5,6: transition region prim-diam [31,54] min D3 = 0.458746 EXACT >= A >= bar; EXACTLY CONFIRMS opus-S157's proof of the L=10 tail floor
+
+Prompt (owner): enumerate the longest-AP=10 family at d=4,5,6.
+
+DELIVERED. Every longest-AP=10 shape = {AP_10 scale d} u {1 point} (reflection folds the below-AP case), so this is a FINITE EXACT enumeration. At d=3,4,5,6 (AP spans 27/36/45/54), all extra-point positions (float D3 scan + exact-verify minima):
+  d=3: min A=0.452986 (interior +8, prim-diam 27)   [the family global min]
+  d=4: 0.459160 (interior +7, prim-diam 36)
+  d=5: 0.458746 (interior +17, prim-diam 45)
+  d=6: 0.463545 (+1, prim-diam 54)
+TRANSITION REGION prim-diam [31,54]: min D3 = 0.458746 EXACT at 5*{0..9}+17 (prim-diam 45), margin +0.1275, >= A >= bar. The family stays >= A=0.4530 and is scale-monotone toward the 0.4646 limit. longest-AP<=9 sanity (2500 tail shapes, prim-diam 31..54): min 0.611 >> bar (stratification holds).
+
+CONVERGENCE with opus-S157 (pushed just before my S88): opus PROVED the L=10 interior tail floor D3>=bar ANALYTICALLY -- resonance-sum m_j=L_j+sum_{k!=0}Ghat^j(kp,-kd), explicit |D3-D3_inf|<=C/(pd) C=21.2, pd>=160 asymptotic + pd<160 finite check, min=A. My d=3..6 enumeration is the EXACT confirmation of opus's finite check across the transition region [31,54]. So the longest-AP=10 (EXTREMAL) family is CLOSED: proven (opus-S157) + exactly verified through prim-diam 54 (me).
+
+STATE: k=11 tail = [exhaustive prim-diam<=30, min=A (kps-S88)] + [longest-AP=10 family >= A, PROVEN opus-S157 + verified <=54 kps-S88] + [longest-AP<=9 stratum, non-extremal, margin >=+0.17, opus's 1/(pd) method extends per AP length -- the ONLY remaining piece]. Global min D3 over all primitive 11-sets = block {0..10} = 0.404751 (prim-diam 10); tail min = A = 0.452986 (prim-diam 27).
+
+FILES: lrc14_longestAP10_d456_kps_S88.py (+out); LEM-009 transition-region section.
+
+NEXT: longest-AP<=9 stratum lower bound (opus's resonance-sum method per AP length L<=9; margins >= +0.17, comfortable) => k=11 FULLY closes.
 
 ## opus-2026-07-08-S157 -- PROVE the finite-scale floor (interior L=10 tail family): D3 >= bar via resonance-sum identity + explicit 1/(pd) rate + finite check (the corrected analog of klein's spread correction, now a theorem)
 

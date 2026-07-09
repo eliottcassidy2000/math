@@ -1,0 +1,22 @@
+longest-AP=10 family at d=3,4,5,6 -- k=11 tail transition region (bar=0.331212)
+exhaustive tail min A = 0.452986 (d=3, prim-diam 27); this bounds prim-diam 31..54
+================================================================================================
+  d=3 (AP span 27): overall min D3=0.452986 at +8 (prim-diam 27); region[31,54] min=0.464660 at +41 (prim-diam 41)
+  d=4 (AP span 36): overall min D3=0.459160 at +7 (prim-diam 36); region[31,54] min=0.459160 at +7 (prim-diam 36)
+  d=5 (AP span 45): overall min D3=0.458746 at +17 (prim-diam 45); region[31,54] min=0.458746 at +17 (prim-diam 45)
+  d=6 (AP span 54): overall min D3=0.463545 at +1 (prim-diam 54); region[31,54] min=0.463545 at +1 (prim-diam 54)
+------------------------------------------------------------------------------------------------
+TRANSITION REGION prim-diam [31,54] longest-AP=10 family MIN D3 = 0.458746
+  at (0, 5, 10, 15, 17, 20, 25, 30, 35, 40, 45) (prim-diam 45), margin +0.127534  [>= A >= bar]
+FAMILY GLOBAL MIN (all prim-diam) = 0.452986 at (0, 3, 6, 8, 9, 12, 15, 18, 21, 24, 27) (prim-diam 27) = the d=3 class A
+  => the extremal family stays ABOVE A (0.4530) for prim-diam 31..54; global family min = A at prim-diam 27.
+
+[sanity] longest-AP <= 9 primitive tail shapes, prim-diam 31..54 (random 4000): min D3 --
+  min D3 over 3999 longest-AP<=9 shapes = 0.611089  margin +0.27988  (>> bar (stratification holds))
+
+================================================================================================
+CONCLUSION: the longest-AP=10 family (the only sub-0.5 tail structure) stays >= A = 0.4530 >= bar
+across prim-diam 31..54 (min ~0.4587, the d=5 / d=3-far class); longest-AP<=9 shapes are >> bar.
+With the exhaustive <= 30 (min = A), prim-diam <= 54 is pinned; prim-diam > 54 (d>=7) -> the
+>= 0.4646 decorrelation limit from below (opus's asymptotic lower bound).
+totic lower bound).
