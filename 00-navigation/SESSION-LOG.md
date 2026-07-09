@@ -465,6 +465,47 @@ NOVEL WORK DISCOVERED (repo-scout, for the owner): density floor = Cohn-Elkies L
 FILES: lrc14_{R_vs_energy,R_kissing,smooth_alpha2}_kps_S97.py(+.out); reflection the-egrid-residual-is-poisson-summation-and-its-kissing-number-kps-S97.md; HYP-5567 updated.
 
 NEXT: (a) explicit c in |R|<=c*kissing (sum LEM-011 shells); (b) grid-lattice AP-max-kissing (extend mac-mini-S25 to L_V); (c) this = Cohn-Elkies magic function on X0(14) -- the Viazovska-style route. Fleet: existence has THREE converging closures (LEM-013 exhaustive+adversarial, opus-S170 smooth alpha=2, my E_grid kissing) -- covering leg robust.
+## mac-mini-2026-07-09-S64 (PART 8) -- TRIVIAL-q LEMMA in Lean (14 ∤ any speed ⟹ LRC(14) at t=1/14); the open window is 2.6× smaller than kps-S109's AND INFINITE; the Odlyzko–te Riele loose/tight synthesis
+
+Owner: work the existential-over-j route, the bounded-window finite check for Vmax ∈ (spread, 2.8·spread],
+and attack the Mertens-hard pieces à la Odlyzko–te Riele. Five results; three correct kps-S109's scope.
+
+**(1) NEW LEAN LEMMA** `TournamentH7/LRCTrivialQ.lean` (sorry-free, kernel-pure, 8476 jobs):
+`lonely_of_not_dvd : 0 < q ≤ 14 → (∀ i, ¬ q ∣ v i) → Lonely 14 v (1/q)`. Two-line proof:
+`|v_i/q − m| = |v_i − m·q|/q`, and `v_i − m·q` is a NONZERO integer (that IS `q ∤ v_i`), so `≥ 1`;
+hence `≥ 1/q ≥ 1/14`. COROLLARY `lonely_of_not_dvd_14`: **if 14 divides no speed, LRC(14) holds at
+`t = 1/14`.** So a HARD instance must have, for EVERY `q ∈ {2..14}`, a speed divisible by `q` — a
+covering condition. This is exactly why the equality extremal `{1..13}` is settled by `t = 1/14`.
+
+**(2) THE OPEN WINDOW IS 2.6× SMALLER.** `spread13_lonely` closes `Vmax ≤ 13·Vmin`, i.e. (with
+`spread := Vmax − Vmin`) `Vmax ≥ 13·spread/12`. So the genuinely open window is
+`spread < Vmax < 13·spread/12`, strictly inside kps's `(spread, 2.8·spread]`.
+
+**(3) THE TIGHT AP IS ALREADY CLOSED.** `{1..13}` has `r = Vmax/Vmin = 13 ≤ 13`, so spread13_lonely
+settles it (lonely at `1/(1+13) = 1/14`, margin exactly `1/14`). kps reported it as the in-window
+extremal; it is not in the window.
+
+**(4) THE WINDOW IS INFINITE ⟹ NO "bounded-window finite check" EXISTS.** Open ⟺ `Vmax > 13·Vmin`.
+Take `v_N = {1, N, …, N+11}`: `Vmin=1`, `Vmax=N+11 > 13` for every `N ≥ 14`, `Vmax → ∞`. kps's check is
+a SAMPLING (they flagged this honestly); this makes it structural — it cannot be completed.
+
+**(5) THE ODLYZKO–TE RIELE SYNTHESIS.** Weyl: `meas(L) = Σ_{n·v=0} ∏ĥ(n_i) = (6/7)^13 + R`. The MEASURE
+route (opus Riesz S173/178; kps E_grid S96) needs `|R| < (6/7)^13` — SHARP, and it DIES at the tight
+extremal: for the AP `meas(L) = 0` exactly (lonely set = the single point `1/14`), so `R = −(6/7)^13`.
+That IS the Mertens wall. OtR did not bound their oscillating sum either — they used LLL to CONSTRUCT
+the phase-aligned point. The analog: construct the lonely time as an exact rational witness `τ = p/q`.
+And the witness exists precisely where the measure bound dies (AP: `meas(L)=0` but `q=14` works). So
+    LOOSE (`meas(L)>0`) → measure/Riesz certificate;  TIGHT (`meas(L)=0`) → exact rational witness.
+The loose/tight dichotomy IS the positive-measure / isolated-point dichotomy — this slots opus-S178's
+uniform Riesz margin into the loose half and explains why it cannot reach the tight half.
+HONEST NEGATIVE: the witness denominator `q` is NOT uniformly bounded — random open sets give
+`min-q ≤ 23`, but an OtR-style adversarial hill-climb (maximize the minimal `q`) reaches `q ≥ 37` and
+keeps climbing (`v=[2,13,68,79,87,132,216,224,286,299,336,400,409]` needs `q=37`). Consistent with
+MISTAKE-116 (covering modulus unbounded). So there is no bounded-`q` finite reduction either.
+
+Files: `LRCTrivialQ.lean`; `lrc14_existential_window_otr_macmini_S64.{py,out}`. All exact rationals /
+pure arithmetic — no grids (cf MISTAKE-130). Broadcast to fleet.
+
 ## mac-mini-2026-07-09-S64 (PART 7) -- the 1/7-vs-2/7 tension RESOLVED: the threshold is RATIO-dependent (g > r/7). klein-S205's drift-absorbed hembed is VACUOUS as stated; the local embedding is IMPOSSIBLE in the open regime
 
 Owner: keep working the hembed drift and the 2/7-vs-1/7 tension. Result: the tension dissolves -- BOTH
