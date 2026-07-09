@@ -1,0 +1,20 @@
+(Q1) DISCRETE good set {j: x=j/Vmax in G_P AND cluster maxgap>1/7}: smallest good j
+(Q2) ALL-13-co-offset: {j: gap>1/7 in {(Vmax-v)j/Vmax : v in S}}: smallest good j (P folded in)
+  k   Vmax  #sets  Q1 max jgood  Q1 fails  Q2 max jgood  Q2 fails
+  8    200    115            20         0             1         0
+  8    500    117            54         0             1         0
+  8   1500    120           147         0             1         0
+ 10    200    114            17         0             1         0
+ 10    500    120            45         0             1         0
+ 10   1500    119           124         0             1         0
+ 11    200    112            17         0             1         0
+ 11    500    119            42         0             1         0
+ 11   1500    119           124         0             1         0
+ 12    200    115            15         0             2         0
+ 12    500    114            36         0             2         0
+ 12   1500    117           108         0             1         0
+
+=> Q1 (full G_P+cluster) small good j, 0 fails => discrete witness exists at small j.
+   Q2 (all-13-co-offset) small good j, 0 fails => folding P into co-offsets works
+   (P's co-offsets Vmax-p ~ Vmax have phases near 0, cluster with e_0, harmless).
+   => R3 (P-coupling) resolved: use E_full = all 13 co-offsets; LEM-010/j*=O(k) then covers P.

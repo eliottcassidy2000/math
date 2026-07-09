@@ -500,3 +500,23 @@ So the k=12,13 tail closes identically to k=11: **`pd ≥ pd₀` asymptotic** (`
 `pd < pd₀` finite check** (exhaustible; `pd₀ = 101/65` is SMALLER than k=11's 160, so both halves are
 easier — the bigger margins `D3_∞−bar = 0.19/0.29` dominate the similar `C`). The tail rate is now
 a-priori for all of k=11,12,13. File: `04-computation/lrc14_k1213_tail_apriori_rate_macmini_S60.{py,out}`.
+
+## R2 (second, independent route) — the k=12,13 tail closes a-priori by the BOX BOUND (klein-S195)
+
+The kps-S89 box bound (k=11) extends cleanly to k=12,13 (LEM-011 gives the exact tail moments). For
+the longest-AP=(k−1) family `E_d = d·{0,…,k−2}∪{p}`, moments `m_i(E_d)` lie in the box
+`[L_i ± Vh_i/d]`, `Vh_i = i(6/7)^{i−1}E[W_B]` (block first moment). Computed:
+
+| k | E[W_B] | L1,L2,L3 | D3_∞ | bar_k | margin | box crossover d₀ | finite check d≤29 min D3 |
+|---|--------|----------|------|-------|--------|------------------|--------------------------|
+| 12| 0.15802 | 0.13544, 0.05369, 0.02634 | 0.38891 | 0.199344 | +0.190 | **30** | 0.3743 (`+0.175`) |
+| 13| 0.14125 | 0.12107, 0.04835, 0.02380 | 0.34437 | 0.056487 | +0.288 | **30** | 0.3255 (`+0.269`) |
+
+So `k=12,13` tail = **[box bound `d ≥ 30`: min-box D3 ≥ bar] + [finite check `d ≤ 29`: min D3 =
+0.374/0.326 ≥ bar]** — fully a-priori, no numerical certification. `d₀=30` (vs k=11's `62`) because the
+much lower bars leave the box-positivity of `den = m2−m3/M` as the only binding constraint (`den>0` for
+`d≥30`). Combined with mac-mini-S58's exhaustive compact (prim-diam≤18) and the longest-AP stratification,
+**all six density-floor legs (k=8..13) are now a-priori.** Files: `lrc14_k1213_boxbound_klein_S195.{py,out}`,
+`lrc14_k1213_finitecheck_klein_S195.out`. (The box bound and mac-mini's `C/(pd)` rate above are two
+independent a-priori routes to the same k=12,13 tail closure — the box avoids the mixed-variation
+constant, the rate gives the explicit decay.)

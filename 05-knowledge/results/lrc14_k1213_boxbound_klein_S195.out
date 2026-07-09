@@ -1,0 +1,27 @@
+
+===== k=12: tail = block_11 (+) outlier =====
+  E[W_B](block_11) = 0.15802   L1,L2,L3 = 0.13544,0.05369,0.02634
+  D3_inf = 0.38891   bar_12 = 0.19934   margin = +0.1896
+  Vh = 0.1580, 0.2709, 0.3483
+    d= 10: box-min D3 = -1000000000.0000  (<  bar)
+    d= 20: box-min D3 = -1000000000.0000  (<  bar)
+    d= 30: box-min D3 = 0.2232  (>= bar)
+    d= 40: box-min D3 = 0.2466  (>= bar)
+    d= 50: box-min D3 = 0.2642  (>= bar)
+    d= 62: box-min D3 = 0.2804  (>= bar)
+  ==> crossover d0 = 30  (box bound closes tail for d >= 30; finite check d < 30)
+
+===== k=13: tail = block_12 (+) outlier =====
+  E[W_B](block_12) = 0.14125   L1,L2,L3 = 0.12107,0.04835,0.02380
+  D3_inf = 0.34437   bar_13 = 0.05649   margin = +0.2879
+  Vh = 0.1413, 0.2421, 0.3113
+    d= 10: box-min D3 = -1000000000.0000  (<  bar)
+    d= 20: box-min D3 = -1000000000.0000  (<  bar)
+    d= 30: box-min D3 = 0.1984  (>= bar)
+    d= 40: box-min D3 = 0.2190  (>= bar)
+    d= 50: box-min D3 = 0.2345  (>= bar)
+    d= 62: box-min D3 = 0.2488  (>= bar)
+  ==> crossover d0 = 30  (box bound closes tail for d >= 30; finite check d < 30)
+
+So the k=12,13 tail closes a-priori: [exhaustive compact prim-diam<=18 (mac-mini-S58)] +
+[finite check d<d0 via conditional-D3] + [box bound d>=d0]. Larger margins => smaller d0 than k=11's 62.

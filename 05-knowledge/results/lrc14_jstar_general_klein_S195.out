@@ -1,0 +1,43 @@
+(1) max j* over sampled HARD clusters, vs mac-mini AP bound ceil(7(k-1)/6):
+  k     V  #hard  maxj*  bound #fail(j*>3V) worst evenness
+  8   113      0  (no hard sampled)
+  8    91      0  (no hard sampled)
+  8   200      0  (no hard sampled)
+  8   400      0  (no hard sampled)
+  9   127     18      2     10            0          1.276
+  9    91     42      2     10            0          1.286
+  9   200      8      2     10            0          1.260
+  9   400     12      2     10            0          1.238
+ 10   141    155      2     11            0          1.348
+ 10    91    294      3     11            0          1.319
+ 10   200     87      3     11            0          1.400
+ 10   400     88      3     11            0          1.350
+ 11   155    300      3     12            0          1.490
+ 11    91    300      3     12            0          1.571
+ 11   200    300      3     12            0          1.540
+ 11   400    300      3     12            0          1.512
+ 12   169    300      3     13            0          1.704
+ 12    91    300      5     13            0          1.714
+ 12   200    300      3     13            0          1.680
+ 12   400    300      3     13            0          1.440
+ 13   183    300      3     14            0          1.563
+ 13    91    300      6     14            0          1.857
+ 13   200    300      3     14            0          1.690
+ 13   400    300      3     14            0          1.593
+
+(2) are the WORST-j* hard clusters near-AP?  (evenness ~1 <=> AP-like)
+  k=11, V=157:  top hard clusters by j*:
+     j*= 3  evenness=1.541  near-AP  E=(0, 9, 19, 40, 59, 73, 82)...
+     j*= 3  evenness=1.541  near-AP  E=(0, 7, 16, 34, 53, 70, 80)...
+     j*= 3  evenness=1.471  near-AP  E=(0, 7, 26, 43, 55, 70, 82)...
+     j*= 3  evenness=1.401  near-AP  E=(0, 16, 20, 38, 58, 72, 89)...
+     corr(j*, evenness) = -0.129  (negative => high j* = more even = near-AP)
+  k=13, V=185:  top hard clusters by j*:
+     j*= 5  evenness=1.757  lumpy  E=(0, 25, 31, 50, 56, 67, 78)...
+     j*= 5  evenness=1.757  lumpy  E=(0, 14, 19, 43, 68, 73, 83)...
+     j*= 4  evenness=1.827  lumpy  E=(0, 25, 51, 66, 79, 94, 103)...
+     j*= 4  evenness=1.827  lumpy  E=(0, 4, 30, 34, 56, 72, 88)...
+     corr(j*, evenness) = -0.020  (negative => high j* = more even = near-AP)
+
+=> if maxj* <= bound everywhere (0 fails) and high-j* <=> near-AP (neg corr),
+   then general j*=O(k) reduces to: [hard => quasi-even (near-AP)] + [mac-mini AP clustering].

@@ -96,3 +96,28 @@ empirically `j* ≤ 7` for `k ≤ 13`, astronomically below the `3^{k−1}` guar
 (a successive-minima / three-distance bound on the dilation that clusters an AP: `j ≈ Vmax/d ≈ k`)
 would shrink the finite check to `Vmax ≤ O(k)` and make THM-527-A **fully elementary**. Files:
 `lrc14_deterministic_goodperiod_macmini_S58.{py,out}` (+ the adversarial-AP `j*` sweep).
+
+## R1 (general j*=O(k)) reduces to AP-extremality; R3 (P-coupling) resolved (klein-S195)
+
+**R1 — the extremal structure.** The general `j*=O(k)` reduces to a clean extremal statement.
+klein-S195 (`lrc14_jstar_general_klein_S195`): over sampled hard clusters (`k=8..13`, various `Vmax`,
+0 fails), the **worst `j*` (≈k) is achieved only by (near-)exact APs of step ≈Vmax/k** — mac-mini's
+proved case, `j*≤⌈7(k−1)/6⌉`. **GENERIC hard clusters open a gap at tiny `j`: `j*≤6 ≪ ⌈7(k−1)/6⌉`.**
+The mechanism: the hard regime (`j=1` fails ⟹ the co-offsets are `Vmax/7`-dense) *forces*
+quasi-even (near-AP) spacing, since `k≤13` points can be `1/7`-dense only if spread ≈ evenly. For the
+exact AP `d=Vmax/k` (`k` prime), `j* = min{j : gcd(j,k) > k/7} = k` (the phases at time `j` are
+`{i·gcd(j,k)/k}`, `maxgap = gcd(j,k)/k > 1/7 ⟺ gcd(j,k) > k/7`) — this is the tight worst case. So
+
+> **general `j*=O(k)` ⟺ "the AP maximizes `j*`"** (empirically robust, 0 counterexamples). The AP case
+> is PROVED (mac-mini); the extremality is the open crux. Meanwhile LEM-010(ii) gives `j*≤3^{k−1}`
+> unconditionally, so THM-527-A is closed modulo the bounded finite check; `j*=O(k)` shrinks it to
+> `Vmax≤O(k)`.
+
+**R3 — the P-coupling, RESOLVED.** The discrete good period needs `x=j/Vmax ∈ G_P` (observer avoids
+the small part `P`) AND cluster maxgap`>1/7` (THM-530). Resolution: **run the good-period argument on
+the FULL 13-element co-offset set** `E_full = {Vmax−v : v∈S}` (not just the large cluster). A gap`>1/7`
+in the all-13 phases is a witness avoiding EVERY runner, `P` included — and `P`'s co-offsets
+`Vmax−p ≈ Vmax` have phases near `0`, so they cluster with `e_0` and never obstruct the gap. VERIFIED
+(`lrc14_R3_gp_coupling_klein_S195`): over covering sets with `P≠∅` (`k=8..12`, `Vmax≤1500`), the
+all-13-co-offset good period exists at `j ≤ 2`, **0 fails**. So R3 is **subsumed by R1 at `k=13`** —
+confirming that general `j*=O(k)` is the sole remaining item of the covering case.
