@@ -80,7 +80,34 @@ tight configuration wearing a strict inequality — remove the `>` for a `≥` a
 
 Loneliness allows equality; the runner only has to reach `1/n`, not pass it.
 
+## Coda: the R₀-signed / R_grid-absolute split (the wide regime)
+
+The wide regime `spread > 6·Vmax/7` (where `j=1` fails) is closed by the *strict* route
+`Σ_{j=1}^{V−1} W(j) > 0`, and the cleanest way to see it is to split kps-S97's Weyl residual by the
+two ways `Vmax ∣ n·e` can hold:
+
+- **R₀ (signed, grid-independent)** — the exact relations `n·e = 0`: `E_x[W] := (6/7)^k + R₀` is the
+  **continuum mean** `∫₀¹ W(x)dx`, a fixed positive number depending only on `E`. For dissociated `E`
+  (few additive relations) `R₀` is small, so `E_x[W] ≈ (6/7)^k` (measured min `0.105`).
+- **R_grid (absolute, grid-dependent)** — the wraparound shells `n·e = m·Vmax, m≠0`: recedes as `V`
+  grows (needs `|n| ≳ V/spread`, geometrically suppressed by LEM-011's `0.371`-decay).
+
+Then `E_grid[W] = E_x[W] + R_grid`, and — correcting for the collapse term `W(0)=6/7` that inflates
+the raw average — a **strict good period exists ⟺ `V·(E_x[W] + R_grid) > 6/7`.** The point:
+
+> the **continuum surplus `V·E_x[W] − 6/7` grows linearly in `V`** (slope `≈ (6/7)^k`; measured
+> `V·E_x ≥ 5.65·(6/7)` for every valid `V`, zero failures), while **`V·R_grid` is a bounded
+> correction** (`≈ 0.5` of the `4.65`-unit surplus; wide-regime surplus `≥ 4.13`). The wraparound is
+> the *only* obstruction, and the **knife-edge `spread = 6·Vmax/7` is the sole exact cancellation**
+> `V·(E_x + R_grid) = 6/7` — precisely the `j=1` non-strict case.
+
+This sharpens kps-S97: the winning side is not the fixed `(6/7)^k` but the **growing `V·E_x`** (the
+density-floor object, kept *signed* and whole), and the residual to bound is not the full `|R|` but
+the **decaying wraparound `|R_grid|`** alone. The a-priori item shrinks to "wraparound kissing `<`
+linear continuum surplus" — better-conditioned, and the knife-edge falls out as `j=1`.
+
 *Files: `lrc14_nonstrict_knife_edge_macmini_S64.{py,out}` (the bucketing + margin ≥ 0),
+`lrc14_R0signed_Rgrid_split_macmini_S64.{py,out}` (the split + `V·E_x > 6/7`),
 `lrc14_kissing_resonant_grid_macmini_S64.{py,out}` (the `|R|/lead = 0.87` resonant-grid probe),
 `lrc14_first_moment_vanishing_macmini_S64.{py,out}` (corrections genuinely negative). Lean:
 `good_period_j1_wraparound_nonstrict` in `LRCGoodPeriodJ1.lean`. See HYP-5600 (mod-7 decomposition),
