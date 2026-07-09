@@ -236,3 +236,22 @@ so `mu(E) ≥ bar` for EVERY 14-runner shape at k=12 and k=13, diameter-free. Ma
 k=8,9,10 by the degree-4 moment `B_4` (block, this file); k=11 by the LEM-009 fleet; **k=12,13 by
 this LEM-009 machinery.** Files: `04-computation/lrc14_lem009_k12_13_macmini_S58.py`,
 `..._scaletable_...`, `..._backstop_...` (+ `.out` in `05-knowledge/results/`).
+
+## k=8,9,10 uniform floor CONFIRMED — the block is the B_4-minimizer (mac-mini-S58)
+
+The table above gave `B_4` for the BLOCK; the union bound (THM-530) needs the floor over ALL
+families, `min_E B_4(E) >= bar`. Verified for k=8,9,10 by the same [exhaustive compact + tail
+backstop] used for k=11,12,13:
+- **Exhaustive compact** (prim-diam ≤ k+4, float pre-filter + exact Farey confirm): the
+  `min_E D3` AND `min_E B_4` are both attained at the **BLOCK `{0..k-1}`** — UNLIKE k=12,13 (near-2-AP);
+  k=8,9,10,11 all have the block as minimizer (max additive energy, no near-2-AP dip).
+- `min_E B_4 = 0.761132 / 0.644603 / 0.553111` (block), margins **+0.0861 / +0.0824 / +0.1010**.
+- **Tail backstop** (4k+ large-diameter shapes, prim-diam ≤ 200): nothing undercuts the block value
+  (decorrelation raises the moments), so the block is the GLOBAL `B_4`-minimizer.
+
+Note `D3` (degree 3) technically clears k=8,9 too but by a **razor** (`min_E D3 = 0.675608 / 0.567746`,
+margins `+0.0006 / +0.0055`), so **degree 4 is the honest tool** at k=8,9,10, as the main table states.
+Net: `min_E B_4(E) >= bar` for k=8,9,10 (block-minimizer) and `min_E D3(E) >= bar` for k=11,12,13
+(block / near-2-AP). **ALL SIX (A′) density-floor legs are closed at the UNIFORM level** — the union
+bound's input `mu_{1/7}(E) >= bar_k` (8 ≤ k ≤ 13) holds for EVERY admissible cluster `E`, diameter-free.
+File: `04-computation/lrc14_k8910_uniform_floor_macmini_S58.py`, `..._backstop_...` (+ `.out`s).
