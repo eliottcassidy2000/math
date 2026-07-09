@@ -1,0 +1,41 @@
+================================================================================================
+NEAR-RESONANCE COUNT + the dissociated inequality + the MERTENS cancellation analogy
+================================================================================================
+
+  k=11: N=ceil(7(k-1)/6)=12, target N(6/7)^k = 2.2017
+    longest-AP L | #near-res (supp<=3) | Corr_N | r_N=|Corr|/(N base) | (samples)
+       L= 2        |    126              | 0.6711 | 0.305            | (14)  <- dissociated (few res)
+       L= 3        |    140              | 1.3030 | 0.592            | (3931)  <- dissociated (few res)
+       L= 4        |    160              | 1.8061 | 0.820            | (4634)  <- dissociated (few res)
+       L= 5        |    136              | 1.8061 | 0.820            | (1315)  <- dissociated (few res)
+       L= 6        |    140              | 1.8061 | 0.820            | (445)
+       L= 7        |    124              | 1.8061 | 0.820            | (199)
+       L= 8        |     56              | 1.8061 | 0.820            | (87)  <- near-AP (many res)
+       L= 9        |     54              | 1.8061 | 0.820            | (29)  <- near-AP (many res)
+       L=10        |     52              | 1.8061 | 0.820            | (20)  <- near-AP (many res)
+       L=11        |     70              | 1.3446 | 0.611            | (14)  <- near-AP (many res)
+
+  k=13: N=ceil(7(k-1)/6)=14, target N(6/7)^k = 1.8872
+    longest-AP L | #near-res (supp<=3) | Corr_N | r_N=|Corr|/(N base) | (samples)
+       L= 3        |    190              | 1.1842 | 0.627            | (1578)  <- dissociated (few res)
+       L= 4        |    196              | 1.4670 | 0.777            | (5318)  <- dissociated (few res)
+       L= 5        |    192              | 1.5511 | 0.822            | (2406)  <- dissociated (few res)
+       L= 6        |    184              | 1.5847 | 0.840            | (938)  <- dissociated (few res)
+       L= 7        |    196              | 1.6015 | 0.849            | (384)  <- dissociated (few res)
+       L= 8        |    142              | 1.5595 | 0.826            | (239)
+       L= 9        |    144              | 1.5259 | 0.809            | (104)
+       L=10        |     78              | 1.4670 | 0.777            | (66)  <- near-AP (many res)
+       L=11        |     76              | 0.5128 | 0.272            | (24)  <- near-AP (many res)
+       L=12        |     74              | 1.4754 | 0.782            | (34)  <- near-AP (many res)
+       L=13        |     96              | 1.0469 | 0.555            | (19)  <- near-AP (many res)
+
+================================================================================================
+(2) CANCELLATION: |Corr_N| vs sum of |individual near-resonance terms| (Mertens-like)
+  AP {0..10} scale2 V=21: #near-res=0, |Corr_N|=0.4875, sum|W(j/V)-base|=2.2577  (ratio 4.6x => cancellation)
+  dissociated (Sidon-ish): #near-res=88, |Corr_N|=0.1509, sum|W(j/V)-base|=0.6317  (ratio 4.2x => cancellation)
+
+  READING: dissociated => few near-resonances => small signed |Corr_N|; AP => many, resonant.
+  The ABSOLUTE bound (sum of |terms|) is >> |Corr_N| (Mertens: sum|mu| >> |M(x)|) --
+  cancellation ESSENTIAL (kps-S92). arc-Fourier zeros at 7|m => Mobius/x7-collapse structure.
+  CLEAN ROUTE (mac-mini c): #arcs < rho* V (both a-priori, big margin) sidesteps the cancellation.
+================================================================================================

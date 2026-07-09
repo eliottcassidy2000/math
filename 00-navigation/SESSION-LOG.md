@@ -28,6 +28,19 @@ _macmini_S61 (+outs).
 
 NEXT: prove exact c<D3 over the large-spread dissociated range (a-priori #arcs bound c(L) + D3 floor);
 small-spread sliver = kps-S30 finite check. Then j*=O(k) => THM-527-A => LRC(14) covering case CLOSED.
+## opus-2026-07-09-S167 -- the near-resonance COUNT is MERTENS-HARD (uniform ~150, cancellation is the theorem); the dissociated branch closes via mac-mini's ARC-COUNT fed by opus-S158's D3_inf^{(L)}, INTERLOCKING with klein LEM-012 at L~10 (HYP-5527)
+
+Prompt (owner): work the near-resonance count and the single dissociated-branch inequality; consider Mertens and Hadwiger.
+
+(1) The near-resonance COUNT (small balanced relations, n_i coprime-7, ||n.e/V||<1/2N) is roughly UNIFORM (~150) across longest-AP L -- does NOT track L. So kps-S92's "dissociated=>few near-resonances" is not a COUNT phenomenon; the discriminator is the SIGNED cancellation (r_N<=0.85 uniformly, S165, via 4-5x cancellation; kps's absolute bound 20x). This IS THE MERTENS situation: sum|mu|=x uniform, M(x) cancels o(x); here sum|What| diverges (S154), signed Corr_N cancels. Proving the cancellation IS the theorem. Mod-7 arc-Fourier zeros (b(7m)=0) => n_i coprime-7 => Mobius (klein x7 collapse); no-cancellation extremal = structured complete-residue AP (tight, S164).
+
+(2) SYNTHESIS: => use mac-mini's ARC-COUNT route (c): #arcs<rho* V (no cancellation). Its rho* input IS opus-S158's D3_inf^{(L)}, DECREASING in L => LARGEST for dissociated (low L): rho*=.86/.84/.76/.60 at L=2/4/6/8 vs #arcs/V<=0.5 => margin +.36/+.34/+.26/+.10; drops below 0.5 at L~10 EXACTLY where klein LEM-012 (Dirichlet, near-AP) takes over. The two branches INTERLOCK via D3_inf^{(L)} monotonicity -- my k=11 density-floor theorem IS the good-period rho*. ONE shared result closes both legs, a-priori, big margin, no Mertens-hard cancellation.
+
+(3) MERTENS = genuine structural analogy (absolute-hopeless / cancellation-essential / mod-7 Mobius / extremal-structured) => names WHY r_N is hard, redirects to arc-count. HADWIGER = covering-number analogy (arc-count = few same-length arcs can't cover the grid); speculative theta=1/7 <-> Hadwiger-Nelson 7-coloring thread (THM-418/419), not load-bearing.
+
+NET: the dissociated last mile is CLEAN via arc-count + S158 (not the Mertens-hard r_N); the crossover L~10 is the LEM-012 boundary; density floor and good period share ONE rho* result. NEXT: make #arcs<=c(L)spread (mac-mini S58) + rho*>=D3_inf^{(L)} fully a-priori/Lean; deprioritize r_N. Files: lrc14_near_resonance_count_mertens_opus_S167 (+out); reflection the-near-resonance-count-is-mertens-hard-use-the-arc-count-interlock-opus-S167.
+
+---
 
 ## kind-pasteur-2026-07-09-S92 -- CAPSTONE (finish math): the a-priori ABSOLUTE bound for |Corr_N| is ~20x too lossy => cancellation ESSENTIAL, target = near-resonance count; + FORMALIZE the AP good-period lemma in Lean (builds sorry-free)
 
