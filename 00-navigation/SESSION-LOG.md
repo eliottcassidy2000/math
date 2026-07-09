@@ -1,3 +1,21 @@
+## klein-2026-07-09-S204 -- hlink DISCHARGED (0∈E wrapping simplification) + THM-527 Part A criterion-C CORE formalized (co-offset identity) => Part A reduced to the equidistribution; + arxiv 2604.21187 = Paley/QR resonance + validates the compute→conjecture→autoformalize workflow.
+
+Prompt (owner): formalize THM-527 Part A; keep working the mergeSort argmax + wrapping-gap for hlink; read arxiv 2604.21187 for inspiration.
+
+TWO Lean advances (both sorry-free, kernel-pure [propext,Classical.choice,Quot.sound]):
+
+(1) hlink DISCHARGED -- LRCGoodPeriodFreeGap.lean. goodPeriod_intFreeGap = the mergeSort ARGMAX extraction (foldl_max_mem locates the max gap in zipWith(·-·) cyc cyc.tail; pairwise_mergeSort + pairwise_iff_getElem => adjacency-freeness). THE WRAPPING CASE DISSOLVES under the LRC co-offset convention 0∈E: ps.head=0 => cyc.last=p0+Vmax=Vmax => every gap interval (cyc[i]/Vmax, cyc[i+1]/Vmax) has right endpoint <=1 = a [0,1]-subinterval, so kps-S101's non-wrapping free_translate_of_free_subInterval covers the wrap -- NO cyclic case analysis. hlink_of_goodPeriod + mreach_ge_of_goodPeriod_of_embed => HasGoodPeriod => Mreach>=1/14 modulo ONLY hembed. CONVERGES opus-S175 (independent hlink via direct wrapping; two kernel-pure proofs).
+
+(2) NEW -- THM-527 Part A criterion-C CORE -- LRCCriterionC.lean. nearInt_speed_eq: the co-offset identity nearInt(v_i·τ)=nearInt(frac(Vmax·τ)−frac(e_i·τ)) for e_i=Vmax−v_i (the runner's distance to origin IS the fast phase minus the tooth, mod 1). => minReach_ge_of_fastphase_clears + Mreach_ge_of_fastphase_clears: a fast phase clearing the teeth by 1/14 => Mreach>=1/14. This IDENTIFIES kps-S31 GapReach's nearInt(φ−c) clearance with the concrete minReach, and REDUCES Part A / hembed to its irreducible core: the REALIZATION = ∃ τ whose fast phase frac(Vmax·τ) lands in the good-period gap of the slow teeth {frac(e_i·τ)} = the equidistribution ρ_K→ρ* (O(1/Vmax) correction). => The endgame's single remaining analytic node is the equidistribution, shared by both routes.
+
+(3) arxiv 2604.21187 (doubly-saturated Ramsey graphs, Przybocki-Mackey-Heule-Subercaseaux): NOT LRC, but lands on the project's exact objects+method. Central object = the doubly-saturated R(4,4)-good graph on 13 vertices = PALEY(13) (circulant, distances {1,3,4}=QR mod 13); infinite family circulant {m}∪[2m+1,3m]. Same Paley/QR/Cayley/circulant machinery as the tournament side (Paley tournament, QR difference sets THM-162/134, heptagon Cayley 14=2·7, opus-S171 mod-7 suppression) -- cross-domain resonance. Workflow = SAT small cases -> LLM conjectures construction -> autoformalize Lean (1000+ lines for infinite family) = EXACTLY the fleet's compute->conjecture->formalize loop (validates it; my hlink used the finite-decidable->general path).
+
+kps/opus: hlink done (converged); my NEW piece is the Part-A criterion-C core (LRCCriterionC) -- it reduces hembed/hpartA to the equidistribution ρ_K→ρ*. Whoever formalizes that closes both routes. The co-offset identity nearInt(v_i·τ)=nearInt(frac(Vmax·τ)−frac(e_i·τ)) is the bridge from GapReach's abstract teeth to concrete minReach.
+
+FILES: LRCGoodPeriodFreeGap.lean, LRCCriterionC.lean (built, sorry-free kernel-pure); reflection criterion-C-formalized-part-A-reduced-to-realization-plus-paley-QR-resonance-klein-S204; memory updated.
+
+NEXT: the equidistribution ρ_K→ρ* (criterion-C's realization) -- the single remaining analytic node for LRC(14). Both good-period (hembed) and density (hpartA) routes reduce to it via criterion C.
+
 ## opus-2026-07-09-S175 -- DISCHARGED klein-S203's hlink in Lean (the mergeSort ARGMAX + the WRAPPING-gap case), sorry-free kernel-pure -- good-period -> Mreach>=1/14 now needs ONLY hembed; completes the "mechanical assembly" kps-S104 flagged as opus-active
 
 Prompt (owner): keep pushing the LRC math then formalization, pull often, keep working the mergeSort argmax and wrapping-gap case for hlink; read arXiv:2604.21187 for inspiration.
