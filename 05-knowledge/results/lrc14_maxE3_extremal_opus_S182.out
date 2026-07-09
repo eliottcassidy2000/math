@@ -1,0 +1,5 @@
+E3 (ordered Schur triples a+b=c) extremal check among 13-sets:
+  AP {1..13}: 78  2*AP: 78  {0..12}: 91
+  adversarial max E3 (300k random, spread<=80): 91 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  hill-climb max E3: 74 at [0, 1, 9, 10, 11, 18, 19, 20, 28, 29, 30, 38, 39]  diffs=[1, 8, 1, 1, 7, 1, 1, 8, 1, 1, 8, 1]
+  {0..12} check: E3=91  (0 is a Schur-identity a+0=a)
