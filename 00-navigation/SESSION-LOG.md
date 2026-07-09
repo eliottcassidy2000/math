@@ -404,6 +404,51 @@ NOVEL WORK DISCOVERED (repo-scout, for the owner): density floor = Cohn-Elkies L
 FILES: lrc14_{R_vs_energy,R_kissing,smooth_alpha2}_kps_S97.py(+.out); reflection the-egrid-residual-is-poisson-summation-and-its-kissing-number-kps-S97.md; HYP-5567 updated.
 
 NEXT: (a) explicit c in |R|<=c*kissing (sum LEM-011 shells); (b) grid-lattice AP-max-kissing (extend mac-mini-S25 to L_V); (c) this = Cohn-Elkies magic function on X0(14) -- the Viazovska-style route. Fleet: existence has THREE converging closures (LEM-013 exhaustive+adversarial, opus-S170 smooth alpha=2, my E_grid kissing) -- covering leg robust.
+## mac-mini-2026-07-09-S64 (PART 7) -- the 1/7-vs-2/7 tension RESOLVED: the threshold is RATIO-dependent (g > r/7). klein-S205's drift-absorbed hembed is VACUOUS as stated; the local embedding is IMPOSSIBLE in the open regime
+
+Owner: keep working the hembed drift and the 2/7-vs-1/7 tension. Result: the tension dissolves -- BOTH
+fixed thresholds are red herrings -- and the local slow-fast route dies where it is needed.
+
+**THE THRESHOLD IS RATIO-DEPENDENT.** klein-S205 formalized (sorry-free) the drift-absorbed embedding
+with hypothesis `1/7 + 2*spread*(a+g/2)/Vmax < g` -- a threshold I derived independently and which
+matches exactly. Computing its DOMAIN: gap `(a,a+g) ⊆ [0,1]` gives `g ≤ 1` and `a ≥ 0` gives
+`φ = a+g/2 ≥ g/2`; with the tightest `spread = Vmax − Vmin`,
+    g > 1/7 + spread*g/Vmax  =>  g*(Vmin/Vmax) > 1/7  =>  **g > (1/7)*r**,   r := Vmax/Vmin.
+So `g ≤ 1` forces **r < 7**. Neither `1/7` (needs r<1) nor `2/7` (needs r<2) is the real object.
+
+**IT IS VACUOUS AS STATED.** klein's Lean binds ALL 13 speeds (`v i = Vmax − e i`, `|e i| ≤ spread`),
+so `r` is the all-speeds ratio -- the SAME index set as kps-S28's `spread13_lonely` (`b ≤ 13a ⟹ Lonely
+14`, kernel-pure), which already closes every `r ≤ 13`. `{r<7} ⊊ {r≤13}` ⟹ the lemma never fires on an
+open case. **SALVAGE (sent to klein):** restate it CLUSTER-ONLY (teeth = cluster co-offsets
+`e_i = Vmax − u_i`, `u_i ∈ L`; small part `P` via `G_P`). Then the ratio is `r_L = Vmax/Vmin(L)` over a
+DIFFERENT index set: e.g. `Vmax=200, Vmin(L)=40 ⟹ r_L=5<7` fires while `min P speed = 1 ⟹ r_all=200≫13`
+leaves spread13_lonely inapplicable. The proof body should survive; only the quantifier + a `G_P`
+side-condition on `φ` change.
+
+**THE OPEN REGIME ADMITS NO LOCAL EMBEDDING.** For `r ≥ 7` the hypothesis demands `g > r/7 ≥ 1` --
+impossible for a circular gap. Structural reason: within one ruler period the teeth `t_i = frac(e_i τ)`
+drift by `spread/Vmax = 1 − 1/r`; for `r > 13` that exceeds `12/13`, so the teeth traverse nearly a full
+turn while `φ = frac(Vmax τ)` sweeps once -- there is NO slow-fast separation to exploit. And the
+failure is real, not just a loose bound: worst7Struct at `Vmax=91` (`r=10.1`) has good periods
+`j=5,10,11` whose ENTIRE `φ`-fiber misses loneliness (exact `max_φ minReach = 3/43, 2/31, 1/23 < 1/14`).
+
+**CONCERN RAISED (asked, not asserted) for the THM-663/530 owners.** Loneliness at `τ` is exactly
+`nearInt(v_i τ) = nearInt(φ − t_i)`, `φ = frac(Vmax τ)`, `t_i = frac(e_i τ)`. But `ρ*_{1/7} = meas{x ∈
+G_P : maxgap{frac(e_i x)} > 1/7}` only says the TEETH leave a gap -- NOT that the observer's phase
+`φ(x)` LANDS in it; `φ` and the teeth are coupled through `x`. Steering `φ` into the gap IS the drift
+absorption, so it inherits `r<7`. Direct refutation of the local certification: at the good `x = 5/91`,
+NO `τ` in that ruler period is lonely. So "good `x` ⟹ lonely somewhere in `x`'s ruler period" is FALSE.
+Does THM-663 step (2) (the ASSUMED THM-527/kps-S4 bridge) rely on that form? Also note a measure route
+cannot work in principle: at the tight extremal `M = 1/14` exactly, so the lonely set has measure zero.
+
+**FORWARD.** The per-`j` bridge is dead. What may survive is the EXISTENTIAL over `j` ("among the good
+periods, at least one has a lonely `φ`" -- here `j=25`, minReach 0.2306), i.e. a counting/non-local
+argument, which is a genuinely different and harder statement than what `hlink + hembed` now assemble.
+
+Files: lrc14_drift_domain_vacuous_macmini_S64.{py,out} (incl. the index-set refinement),
+lrc14_hembed_drift_counterexample_macmini_S64.{py,out}. All exact rationals / pure algebra -- no grids
+(cf MISTAKE-130). Broadcast + direct follow-up to klein.
+
 ## mac-mini-2026-07-09-S64 (FINAL PART) -- SELF-RETRACTION (MISTAKE-130) + an EXACT counterexample that refutes hembed's natural embedding: a GOOD PERIOD does NOT certify loneliness at that j
 
 Two results, one negative about my own work, one negative about the fleet's remaining blocker. Both exact.
