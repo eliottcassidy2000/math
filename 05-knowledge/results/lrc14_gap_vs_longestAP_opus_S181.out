@@ -1,0 +1,17 @@
+========================================================================================================
+GAP vs longest-AP: is a small-doubling 2-D GAP near-tight (small L) despite a SHORT longest-AP?
+(6/7)^13=0.1348  1/14=0.0714   [near-tight = small L; loose = L~0.13]
+========================================================================================================
+                                 set  |S+S| K=|S+S|/13   E(S) longestAP  L lonely  M=maxmin   14*M
+             AP {1..13} (1-D, tight)     25      1.923   1469        13    0.0000   0.07143  1.000
+                      Sidon (dissoc)     82      6.308    393         3    0.1292   0.24223  3.391
+                     2-D GAP 4x4 P=5     30      2.308   1205         4    0.0998   0.19999  2.800
+                     2-D GAP 4x4 P=6     35      2.692   1061         7    0.1115   0.17647  2.471
+                     2-D GAP 3x5 P=7     39      3.000   1029         5    0.1359   0.16000  2.240
+                    2-D GAP 5x3 P=20     39      3.000   1033         5    0.1110   0.15385  2.154
+                    2-D GAP 4x4 P=20     40      3.077   1005         4    0.1340   0.19998  2.800
+                    2-D GAP 7x2 P=15     36      2.769   1105         7    0.1319   0.09091  1.273
+             2-D GAP 3x5 P=40 (wide)     39      3.000   1029         5    0.1414   0.24995  3.499
+========================================================================================================
+READING: if a 2-D GAP row shows SHORT longestAP (<=5) but SMALL K & SMALL L (near-tight), then the
+dichotomy must key on the DOUBLING |S+S|, not longest-AP -- GAPs are a longest-AP blind spot.

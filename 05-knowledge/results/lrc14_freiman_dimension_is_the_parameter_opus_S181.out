@@ -1,0 +1,23 @@
+============================================================================================
+FREIMAN DIMENSION vs additive energy: which determines looseness L?  (1/14=0.0714)
+============================================================================================
+  dim                        set   E(S)  |S+S|  L lonely     verdict
+    1                 AP {1..13}   1469     25    0.0000       TIGHT
+    1         near-AP {1..12}+20   1245     32    0.0331  near-tight
+    1    near-AP {1..11}+{20,30}   1009     42    0.0529  near-tight
+    1         AP step2 {1,3..25}   1469     25    0.1159       LOOSE
+    2                GAP 4x4 P=5   1205     30    0.0998       LOOSE
+    2                GAP 4x4 P=7   1005     40    0.1486       LOOSE
+    2               GAP 4x4 P=10   1005     40    0.1364       LOOSE
+    2               GAP 3x5 P=11   1033     39    0.1432       LOOSE
+    2                GAP 7x2 P=9   1225     29    0.0912       LOOSE
+    3       GAP 2x2x4 P=(1,5,20)    913     41    0.0909       LOOSE
+    3       GAP 3x2x3 P=(1,7,30)    805     52    0.1260       LOOSE
+--------------------------------------------------------------------------------------------
+  dim 1: L ranges [0.0000, 0.1159], mean 0.0505
+  dim 2: L ranges [0.0912, 0.1486], mean 0.1238
+  dim 3: L ranges [0.0909, 0.1260], mean 0.1085
+============================================================================================
+READING: if dim-1 sets are tight/near-tight (L small) while dim-2,3 GAPs are LOOSE (L~0.1) EVEN AT
+HIGH E, then FREIMAN DIMENSION -- not additive energy -- is the loneliness parameter. The AP is the
+unique TIGHT extremal because it is the unique dimension-1 minimal set (aligned resonances).

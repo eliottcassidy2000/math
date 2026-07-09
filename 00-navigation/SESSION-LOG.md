@@ -49,6 +49,25 @@ So @kps-S105 / @opus-S176's "tooth wobble" is NOT a bad-parametrisation artefact
 FILES: LRCRulerPoints.lean (built, sorry-free, kernel-pure); lrc14_ruler_points_never_lonely_klein_S207.py(+out); reflection ruler-points-are-never-lonely-the-answer-to-the-1-7-bridge-klein-S207; memory updated.
 
 NEXT: the equidistribution rho_K->rho* on @opus-S170's smooth surrogate W (C^0 through the pinches, Fourier 1/m^2) -- the sole remaining Part-A node. DO NOT re-attempt a local witness on the Vmax-ruler: it is provably impossible.
+## opus-2026-07-09-S181 -- Freiman deep-dive: additive energy is NECESSARY but NOT SUFFICIENT (CORRECTS my S179 "single parameter"); the tight locus is resonance-lattice GEOMETRY, not the scalar E; 4-agent scour reconciles ~6 prior threads; forward lead = BSG->3k-4
+
+Prompt (owner): keep pushing LRC math then formalization, pull often; deep-dive Freiman-set concepts then investigate past work for relations.
+
+Synced (kps-S111 M(AP)=1/14 exact in Lean; klein-S206 tight AP non-covering). Ran a Freiman-neighborhood deep-dive + 4 parallel Explore agents scouring past work for (i) doubling/sumset/Sidon, (ii) Freiman-iso/resonance-lattice, (iii) BSG/Plunnecke/GAP/3k-4, (iv) AP-extremal cross-domain. All returned rich; findings integrated.
+
+KEY (a CORRECTION of my own opus-S179): additive energy E(S)=#{a+b=c+d} is NECESSARY (AP maximizes it, S180/Freiman) but NOT SUFFICIENT for tightness. Two clean counterexamples (lrc14_gap_vs_longestAP, lrc14_freiman_dimension):
+- 2-D GENERALIZED APs have HIGH E (~1000-1225, S179's "near-AP" band) yet are LOOSE (L~0.09-0.15) with SHORT longest-AP (<=7, S179's "dissociated" band) => E and the good-period dichotomy DISAGREE on GAPs. Matched-energy pair: GAP 7x2 (dim2, E=1225, L=0.091) vs near-AP {1..12}+20 (dim1, E=1245, L=0.033) -- same E, 3x looseness.
+- TRANSLATED AP {1,3,..,25}=2*{1..13}-1 has MAX E=1469 (=the tight AP) yet is LOOSE (L=0.116): L is dilation-invariant (THM-522) but NOT translation-invariant.
+
+TRUE law: tight <=> the relation lattice Lambda={t:Sum t_i v_i=0} is 1-DIMENSIONAL (Freiman rank 1) AND COHERENT (a dilate c*{1..13}, THM-610). E is only the order-2 shadow, blind to the dimension penalty (HYP-2637, ~1/2 per dim) and the dilate-vs-translate knife-edge. The tight locus is NARROW, not "all high-E sets."
+
+PROOF UNAFFECTED: LEM-012/013 correctly key on longest-AP (structural), NOT E; LEM-013's longest-AP<=7 census (spread<=22, 621k clusters) already CONTAINS the GAPs (loose, the branch's job). Only my S179 reframing ("additive-energy gap IS the dichotomy") was the overclaim; S180's extremal-POINT anchor (AP=Freiman min-sumset=unique tight extremal) STANDS. Added correction pointer to S179 reflection.
+
+RECONCILES: opus-S113 (Freiman necessary-not-sufficient, tiling side), HYP-2889 (energy AP-facing not monotone), HYP-2637 (Freiman-dimension pockets), THM-610/kps-S37 (tight locus=dilated APs), opus-S112 (L=relation-lattice theta-sum). CROSS-DOMAIN (agent iv): "AP is extremal" is a genuine unified principle (kps-S13 "regularity is extremal": AP=Paley=rotation regular circulant), anchored in Freiman, but "extremality is plural" (AP maps to transitive/rotation/Paley under different tournament functionals; the tight object is {AP,GW} under the fractional relaxation).
+
+FORWARD LEAD (added to backlog, HYP-5682): BSG (energy=>small-doubling subset) -> Freiman 3k-4 (small doubling=>short AP) -> LEM-012 is the UNUSED bridge to make the near-AP branch a-priori (currently empirical census, HYP-2638). BSG/Green-Tao/PFR are parked sidecars, never wired in. Files: 2 scripts+outs; reflection ...necessary-not-sufficient...-opus-S181; HYP-5682.
+
+---
 
 ## klein-2026-07-09-S206 -- THE TIGHT AP IS NOT COVERING (so the counterexample that killed FIVE routes is OUT OF SCOPE); Phi6 "Eisenstein resonance" is UNIVERSAL in n, only its CUSHION n^2/Phi6(n)->1 is n-dependent; the proof shape for LRC(14) is forced
 

@@ -1,5 +1,11 @@
 ---
 source: opus-2026-07-09-S179
+correction: opus-S181 CORRECTS the "SINGLE parameter" claim below -- additive energy is NECESSARY but NOT
+  SUFFICIENT. 2-D GAPs (high E~1000-1225, loose L~0.1) and the translated AP {1,3,..,25} (MAX E=1469,
+  loose L=0.116) refute "E governs L" and "the additive-energy gap IS the dichotomy". The true object is
+  the resonance-lattice GEOMETRY (Freiman dimension + dilate-coherence), not the scalar E; the dichotomy
+  keys on longest-AP (structural), not E. See additive-energy-is-necessary-not-sufficient-...-opus-S181.
+  (The S180 extremal-POINT anchor -- AP = Freiman minimal-sumset = unique tight extremal -- still stands.)
 status: ESTABLISHED the quantitative law -- the relation-lattice ADDITIVE ENERGY E(S)=#{a+b=c+d} is the
   SINGLE parameter monotonically governing looseness. Across the spectrum (Sidon -> dissociated -> near-AP
   -> AP): E(S) rises 369 -> 1469, the lonely measure L(S) falls 0.14 -> 0, and the Riesz ratio
