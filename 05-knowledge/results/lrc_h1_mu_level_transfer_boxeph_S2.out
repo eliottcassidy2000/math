@@ -1,0 +1,75 @@
+HYP-5722: mu-level robust transfer table (exact rationals)
+THM-670 gives E[W] transfer; this supplies the disclaimed mu-level transfer via D3/PZ monotonicity.
+
+=== block8  {0..7}  (k=8, s=7, bar_k=0.6750) ===
+  m1=0.250146 m2=0.109019 m3=0.059679
+  D3_0=0.675608  true mu_1/7=0.940136  (D3_0 >= bar: True)
+  d=0.0075 (V/s= 400): D3_d=0.3468 [below bar]  PZ_d=0.3860  TRUE mu_d=0.8957  (ii)holds=True
+  d=0.0150 (V/s= 200): D3_d=0.2016 [below bar]  PZ_d=0.2352  TRUE mu_d=0.8514  (ii)holds=True
+  d=0.0300 (V/s= 100): D3_d= n/a  [below bar]  PZ_d=0.0451  TRUE mu_d=0.7626  (ii)holds=True
+  d=0.0600 (V/s=  50): D3_d= n/a  [below bar]  PZ_d=0.0000  TRUE mu_d=0.5898  (ii)holds=True
+  d_max(D3_d=bar) ~ 0.00001  => min V/s ~ 329223.8
+
+=== block9  {0..8}  (k=9, s=8, bar_k=0.5622) ===
+  m1=0.211467 m2=0.092995 m3=0.051399
+  D3_0=0.567746  true mu_1/7=0.840136  (D3_0 >= bar: True)
+  d=0.0075 (V/s= 400): D3_d=0.2647 [below bar]  PZ_d=0.2980  TRUE mu_d=0.7901  (ii)holds=True
+  d=0.0150 (V/s= 200): D3_d=0.1444 [below bar]  PZ_d=0.1587  TRUE mu_d=0.7401  (ii)holds=True
+  d=0.0300 (V/s= 100): D3_d= n/a  [below bar]  PZ_d=0.0106  TRUE mu_d=0.6401  (ii)holds=True
+  d=0.0600 (V/s=  50): D3_d= n/a  [below bar]  PZ_d=0.0000  TRUE mu_d=0.4519  (ii)holds=True
+  d_max(D3_d=bar) ~ 0.00009  => min V/s ~ 34080.0
+
+=== block10 {0..9}  (k=10, s=9, bar_k=0.4521) ===
+  m1=0.182572 m2=0.081122 m3=0.045183
+  D3_0=0.485166  true mu_1/7=0.775510  (D3_0 >= bar: True)
+  d=0.0075 (V/s= 400): D3_d=0.2053 [below bar]  PZ_d=0.2333  TRUE mu_d=0.7273  (ii)holds=True
+  d=0.0150 (V/s= 200): D3_d= n/a  [below bar]  PZ_d=0.1056  TRUE mu_d=0.6791  (ii)holds=True
+  d=0.0300 (V/s= 100): D3_d= n/a  [below bar]  PZ_d=0.0001  TRUE mu_d=0.5827  (ii)holds=True
+  d=0.0600 (V/s=  50): D3_d= n/a  [below bar]  PZ_d=0.0000  TRUE mu_d=0.4018  (ii)holds=True
+  d_max(D3_d=bar) ~ 0.00057  => min V/s ~ 5262.0
+
+=== block11 {0..10}  (k=11, s=10, bar_k=0.3312) ===
+  m1=0.158050 m2=0.071967 m3=0.040335
+  D3_0=0.404751  true mu_1/7=0.626304  (D3_0 >= bar: True)
+  d=0.0075 (V/s= 400): D3_d=0.1552 [below bar]  PZ_d=0.1776  TRUE mu_d=0.5772  (ii)holds=True
+  d=0.0150 (V/s= 200): D3_d= n/a  [below bar]  PZ_d=0.0643  TRUE mu_d=0.5281  (ii)holds=True
+  d=0.0300 (V/s= 100): D3_d= n/a  [below bar]  PZ_d=0.0000  TRUE mu_d=0.4449  (ii)holds=True
+  d=0.0600 (V/s=  50): D3_d= n/a  [below bar]  PZ_d=0.0000  TRUE mu_d=0.3277  (ii)holds=True
+  d_max(D3_d=bar) ~ 0.00147  => min V/s ~ 2043.5
+
+=== A11 tail-min  (k=11, s=27, bar_k=0.3312) ===
+  m1=0.152896 m2=0.059797 m3=0.029682
+  D3_0=0.452986  true mu_1/7=0.723770  (D3_0 >= bar: True)
+  d=0.0075 (V/s= 400): D3_d=0.1679 [below bar]  PZ_d=0.1947  TRUE mu_d=0.6750  (ii)holds=True
+  d=0.0150 (V/s= 200): D3_d= n/a  [below bar]  PZ_d=0.0662  TRUE mu_d=0.6262  (ii)holds=True
+  d=0.0300 (V/s= 100): D3_d= n/a  [below bar]  PZ_d=0.0000  TRUE mu_d=0.5336  (ii)holds=True
+  d=0.0600 (V/s=  50): D3_d= n/a  [below bar]  PZ_d=0.0000  TRUE mu_d=0.3728  (ii)holds=True
+  d_max(D3_d=bar) ~ 0.00235  => min V/s ~ 1274.0
+
+=== block12 {0..11}  (k=12, s=11, bar_k=0.1993) ===
+  m1=0.141290 m2=0.064809 m3=0.036445
+  D3_0=0.358375  true mu_1/7=0.569903  (D3_0 >= bar: True)
+  d=0.0075 (V/s= 400): D3_d=0.1255 [below bar]  PZ_d=0.1431  TRUE mu_d=0.5263  (ii)holds=True
+  d=0.0150 (V/s= 200): D3_d= n/a  [below bar]  PZ_d=0.0406  TRUE mu_d=0.4827  (ii)holds=True
+  d=0.0300 (V/s= 100): D3_d= n/a  [below bar]  PZ_d=0.0000  TRUE mu_d=0.4104  (ii)holds=True
+  d=0.0600 (V/s=  50): D3_d= n/a  [below bar]  PZ_d=0.0000  TRUE mu_d=0.3132  (ii)holds=True
+  d_max(D3_d=bar) ~ 0.00401  => min V/s ~ 748.8
+
+=== block13 AP{0..12}  (k=13, s=12, bar_k=0.0565) ===
+  m1=0.126616 m2=0.058930 m3=0.033243
+  D3_0=0.313920  true mu_1/7=0.442486  (D3_0 >= bar: True)
+  d=0.0075 (V/s= 400): D3_d=0.1008 [CLEARS bar]  PZ_d=0.1130  TRUE mu_d=0.4173  (ii)holds=True
+  d=0.0150 (V/s= 200): D3_d= n/a  [below bar]  PZ_d=0.0228  TRUE mu_d=0.3921  (ii)holds=True
+  d=0.0300 (V/s= 100): D3_d= n/a  [below bar]  PZ_d=0.0000  TRUE mu_d=0.3459  (ii)holds=True
+  d=0.0600 (V/s=  50): D3_d= n/a  [below bar]  PZ_d=0.0000  TRUE mu_d=0.2695  (ii)holds=True
+  d_max(D3_d=bar) ~ 0.00964  => min V/s ~ 311.1
+
+=== 7-struct M128 k13  (k=13, s=82, bar_k=0.0565) ===
+  m1=0.129301 m2=0.030231 m3=0.010049
+  D3_0=0.628589  true mu_1/7=0.914522  (D3_0 >= bar: True)
+  d=0.0075 (V/s= 400): D3_d=0.2017 [CLEARS bar]  PZ_d=0.2351  TRUE mu_d=0.8685  (ii)holds=True
+  d=0.0150 (V/s= 200): D3_d=0.0464 [below bar]  PZ_d=0.0511  TRUE mu_d=0.8242  (ii)holds=True
+  d=0.0300 (V/s= 100): D3_d= n/a  [below bar]  PZ_d=0.0000  TRUE mu_d=0.7340  (ii)holds=True
+  d=0.0600 (V/s=  50): D3_d= n/a  [below bar]  PZ_d=0.0000  TRUE mu_d=0.5578  (ii)holds=True
+  d_max(D3_d=bar) ~ 0.01400  => min V/s ~ 214.2
+

@@ -103,6 +103,18 @@ klein-S205), with the SAME P-leg caveat — flagged for the fleet.
 `μ_{1/7} − μ_{1/7+δ}` is 0.015–0.049 at wide V — δ-fattening is perturbative,
 so porting the closed legs to (H1) is bookkeeping, not new analysis.
 
+## (H1) status update (boxeph-S2, HYP-5722 + monad THM-669/670)
+
+The robust-floor bookkeeping is now split cleanly: THM-670 (monad-explorer-S5)
+proves the pointwise/first-moment transfer (slope 6); HYP-5722 (this project)
+adds the mu-LEVEL transfer THM-670 disclaims, via D3/PZ monotonicity with
+explicit moment perturbations (valid for delta <= (m1 - m2/M)/6). Net: **(H1)
+holds a-priori at explicit per-k thresholds** V/s >= 311/749/~1274-2044/5262/
+34080/329224 for k = 13..8 (at the leg extremizers; lossy at small k -- the
+true robust mu clears every bar by 1.3-1.7x at delta = 3/400, so the sharp
+instrument is monad's parametric scan program, THM-669/670). See
+lrc_h1_mu_level_transfer_boxeph_S2.py (+.out) for the exact table.
+
 ## Scope notes
 
 - THM-665's corollary "the a-priori window never fires on covering clusters
