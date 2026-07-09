@@ -23,6 +23,17 @@ THE SHARPENING: true kills sit at the PROPORTIONAL rate |Good|/7 +- <=4% -- so s
 HONEST: mid-session bug caught -- naive gap-center phi WITHOUT the drift-valid interval fails at r ~ 0.27 (clearances 0.008-0.046); monad's phi-interval is not optional at compressed ratios. Also bank 1 is non-covering (structure test only); banks 2/4 are covering+primitive.
 
 HANDOFFS: (1) the D_m discrepancy bound is now the named target -- Erdos-Turan with the comb's exact Fourier (the comb is an arithmetic-progression indicator in j; its correlation with Good's indicator is a resonance sum ONE level simpler than THM-665's); (2) extend the bank: adversarial large-gcd killers (expect zero-survivor = coarse family = monad's dispatch), V up to 5000, and |P~|=5 with ALL FIVE mid-band; (3) compose with death-star's LRCComposedRealization.lean (the realization layer is now Lean-shaped). FILES: lrc_midband_grid_counting_boxeph_S3.py (+.out); HYP-5760.
+## opus-2026-07-09-S186 -- ROUTED hfloor through the PROVED moment floor (THM-661), RETIRING the open Lemma A; formalized kernel-pure (LRCWitnessMomentFloor.lean, first-try build)
+
+Prompt (owner): route hfloor through the proved moment floor.
+
+Done + formalized. Since nu=mu EXACTLY (opus-S185), nu(E) >= D3(E) >= min_E D3(E) >= THM-661's (A') bar momentBar(k)=witnessMP+1-capRat(k). So the Bonferroni reduction (witnessG2 >= nu+measGP-1, PROVED kps-S30) closes with the PROVED moment floor (THM-661) instead of the OPEN Lemma A. The Bonferroni arithmetic momentBar(k)+capRat(k)-1=witnessMP is DEFINITIONAL (THM-661's bar is CONSTRUCTED as witnessMP+1-cap).
+
+FORMALIZED: LRCWitnessMomentFloor.lean (kernel-pure [propext,Classical.choice,Quot.sound], wired to root, BUILT FIRST TRY): witness_floor_from_momentfloor_nodes (hfloor <= Bonferroni + moment floor + Lemma B) + momentBar_add_capRat (definitional arithmetic) + large variant. Structurally identical to witness_floor_from_bonferroni_nodes but the OPEN hA (Lemma A) is replaced by hMoment (THM-661), and the arithmetic node needs no separate proof.
+
+VERIFIED (exact rationals, witnessMP=14249/252252): min D3(k) >= momentBar(k) for all k=8..13 -- razor +0.00058 @k=8 (degree-4 B4=0.7611 has room there), +0.0055 @9, +0.028 @10, +0.069 @11, +0.157 @12, +0.252 @13 (capRat=1 so witnessG2=nu, 0.309>=m_P=0.056 outright). Definitional identity exact for every k.
+
+NET WIN: hfloor's open dependency moves from the never-proved standalone Lemma A (RETIRED, unnecessary) to THM-661 -- the fleet's ACTUAL proved density floor. RESIDUE = THM-661's own decorrelation-tail coupled region (LEM-005 diam[18,35]), shared by EVERY route since nu=mu -- not a new gap, concentrated where the transfer machinery (monad THM-669/670, boxeph mu-level transfer HYP-5722, klein modular supply HYP-5732) is aimed. Files: LRCWitnessMomentFloor.lean, lrc14_momentfloor_bars_check_opus_S186; reflection hfloor-routed-through-the-proved-moment-floor-lemma-A-retired-opus-S186; HYP-5760.
 
 ---
 
