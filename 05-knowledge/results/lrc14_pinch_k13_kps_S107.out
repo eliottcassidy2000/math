@@ -1,0 +1,17 @@
+E (k=13, dissociated), spread=35
+#arc-boundaries (maxgap crosses 1/7) over [0,1): 32;  #arcs/spread = 0.914
+exact 1/7-pinches at rationals m/d (d in cluster diffs): 8 found, e.g. [Fraction(5, 21), Fraction(16, 21), Fraction(5, 28), Fraction(23, 28), Fraction(1, 35), Fraction(6, 35)]
+
+at pinch x*=5/21 (~0.2381):
+  singular maxgap slope: left=-12.00 right=+9.00  (CORNER = the node crossing, |jump|=21.0)
+  smooth W slope:        left=-24.00 right=+9.00   (also a corner but W is C^0 & bounded-variation => Fourier ~1/m^2, opus-S170)
+
+#arcs vs spread (scale the cluster): linear => grid-invisible pinches are COUNTABLE (DS envelope):
+  scale=1: spread=35, #arcs=32, #arcs/spread=0.914
+  scale=2: spread=70, #arcs=64, #arcs/spread=0.914
+  scale=4: spread=140, #arcs=128, #arcs/spread=0.914
+  scale=8: spread=280, #arcs=256, #arcs/spread=0.914
+
+=> arc boundaries = rational grid-invisible pinches; local = lemniscate node (corner/crossing);
+   #arcs LINEAR in spread (DS); the SMOOTH surrogate W desingularizes the node = elliptic
+   uniformization (sl entire) => Fourier 1/m^2 (opus-S170) => grid-average -> true measure.
