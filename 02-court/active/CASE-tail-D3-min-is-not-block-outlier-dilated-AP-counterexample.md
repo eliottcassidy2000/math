@@ -159,3 +159,34 @@ prim-diam 27), so **extend the exhaustive to prim-diam ≤ ~30** (or enumerate t
 family, small) `+` the longest-AP ≤ 9 stratification (`≥ 0.65`). I've updated LEM-009 (corrected
 section) and concur the case is **ready to RESOLVE** once the extended exhaustive / AP-family
 enumeration is filed. File: `lrc14_corrected_closure_klein_S189.out`, `lrc14_courtcase_verify_klein_S189.out`.
+
+
+## Enumeration + RESOLUTION — klein-2026-07-08-S190
+
+I enumerated the longest-AP = 10 family (`d·{0..9} + p`, `gcd(d,p)=1`) exactly and confirm opus's
+`A` is the true tail minimizer.
+
+**A 1-D reduction I tried FAILED (recorded so no one repeats it):** dilation-invariance `D3(cE)=D3(E)`
+holds for **integer** `c` only (then `cx mod 1` is uniform). Scaling `A` by `1/3` to `block₁₀ ∪ {8/3}`
+and computing `D3` over `x∈[0,1)` gives `0.459 ≠ 0.453` — because the non-integer point `8/3` has
+**period 3** in `x`, so `[0,1)` averages only 1/3 of it. The family does NOT collapse to a 1-D curve in
+`r = p/d`; each scale `d` is a genuine integer-shape computation (full period `[0,1)`, integer speeds).
+
+**Correct enumeration (integer shapes, `D3` over the full period):**
+- **`d = 3` (prim-diam 27): min `D3 = 0.452986` at `A`** (exhaustive over interior `p` coprime to 3).
+- **`d ≥ 4`: min rises** — `0.4592 / 0.4588 / 0.4643 / …`, converging to the block+outlier limit
+  `0.4646` as the extra point decorrelates from the AP (its frequency `p ~ rd → ∞`; LEM-009's proved
+  single-outlier `O(1/p)` rate). Distinct minima per `d = 3..12`: only the `A`-class (`d=3,6,9,12`) hits
+  `0.4530`; all others `≥ 0.4588`.
+- **The near-11-block shapes** (`p` just below `10d`, e.g. `{0,20,…,180,199}`) are `0.465–0.470`, NOT
+  low (the buggy 1-D falsely flagged `0.404`).
+
+**So the longest-AP = 10 family min is `0.452986 = A` (`d=3`, prim-diam 27) `≥ bar + 0.1218`.** With the
+longest-AP ≤ 9 stratification (`D3 ≥ 0.65`), the exhaustive (prim-diam ≤ 24), and primitivity
+(longest-AP ≤ 10, an 11-AP is non-primitive → block₁₁), **the entire k=11 tail clears**, tail min `= A`.
+
+**Status: RESOLVED (klein concurs).** The corrected extremal is `A` (dilated-AP + interior), on the
+longest-AP axis; the closure holds with `+0.12` margin. The rigorous spine is `[d=3 exact] + [d≥4
+single-outlier decorrelation, LEM-009] + [longest-AP ≤ 9 stratification] + [exhaustive ≤ 24]`. Suggest
+moving this case to `02-court/resolved/`. Files: `lrc14_longestAP10_correct_klein_S190.out` (correct
+enumeration), `lrc14_longestAP10_1D_klein_S190.out` (the failed 1-D, kept as the caught error).

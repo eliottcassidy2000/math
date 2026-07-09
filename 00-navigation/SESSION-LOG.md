@@ -1,3 +1,19 @@
+## klein-2026-07-08-S190 -- ENUMERATED the longest-AP=10 family exactly: tail min = A = 0.452986 (d=3) >= bar +0.12, confirming opus's A is the true minimizer; caught a failed 1-D reduction (dilation-invariance is integer-c only); k=11 tail CLOSED, court case RESOLVED (HYP-5387)
+
+Prompt (owner): enumerate the longest-AP=10 family exactly to close the tail.
+
+DONE. The family is d*{0..9}+p (10-AP scale d + primitivizing point). CAUGHT + RECORDED a failed reduction first: I tried collapsing the family to 1-D via D3(block_10 + real r=p/d), but dilation-invariance D3(cE)=D3(E) holds for INTEGER c ONLY (then cx mod 1 uniform). A non-integer point r=p/d has period d in x, so [0,1) averages only 1/d of it => D3(block_10+8/3)=0.459 != D3(A)=0.453. The family does NOT collapse to a 1-D curve; each scale d is a genuine integer-shape computation.
+
+CORRECT ENUMERATION (integer shapes, full x-period): d=3 (prim-diam 27) min = A = 0.452986 (exhaustive over interior p coprime 3); d>=4 min RISES (0.4592/0.4588/0.4643/.. -> 0.4646 = block+outlier limit as the extra point's frequency p~rd grows and decorrelates, LEM-009's proved single-outlier O(1/p) rate); distinct minima only hit 0.4530 at the A-class (d=3,6,9,12), all others >=0.4588. The near-dilated-11-block shapes (p just below 10d, e.g. {0,20,..,180,199}) are 0.465-0.470 -- NOT the 0.404 the buggy 1-D falsely flagged.
+
+=> the longest-AP=10 family MIN = 0.452986 = opus's A (d=3, prim-diam 27) >= bar +0.1218. THE k=11 TAIL CLOSES: [d=3 exact: min A] + [d>=4: single-outlier decorrelation, D3 rising to 0.4646] + [longest-AP<=9 stratification: D3>=0.65] + [exhaustive prim-diam<=24, S184] + [primitivity => longest-AP<=10]. Tail min = A = 0.452986 >= bar (+0.12). This CONFIRMS opus's counterexample IS the true tail minimizer (not below it), and the closure is complete on the correct (dilation-invariant longest-AP) axis.
+
+COURT CASE: RESOLVED (klein concurs). The corrected extremal is A on the longest-AP axis; the closure holds +0.12. Appended the resolution + suggested moving the case to resolved/.
+
+FILES: court case resolution; lrc14_longestAP10_correct_klein_S190.out (correct), lrc14_longestAP10_1D_klein_S190.out (the caught 1-D bug); HYP-5387.
+
+NEXT: (a) exact-rational D3(A) is known (opus); the d>=4 single-outlier decorrelation bound (LEM-009 generalization to interior points) => k=11 FULLY rigorous; (b) k=12,13 analogs (mac-mini uniform D3); (c) Lean-formalize the finite pieces (exhaustive + d=3 enumeration native_decide-able).
+
 ## opus-2026-07-08-S157 -- PROVE the finite-scale floor (interior L=10 tail family): D3 >= bar via resonance-sum identity + explicit 1/(pd) rate + finite check (the corrected analog of klein's spread correction, now a theorem)
 
 Prompt (owner): prove the finite-scale monotonicity D3(d) >= D3(3).

@@ -1,0 +1,11 @@
+validate: D3(block_10 + r=8/3) = 0.459364  (opus's A exact = 0.452986)
+          D3(block_10 + r=25) (block+outlier) = 0.458714 (LEM-009 ~0.4587)
+
+1-D scan of D3(block_10 + r), r in [0.05, 20]:  bar=0.33121
+  coarse min over r in [0.05,20] = 0.40437 at r=9.950
+  refined min = 0.403639 at r*=9.9750 (nearby rational 8/3=2.6667)
+  D3 at structured r: 1/3:0.4676 2/3:0.4669 8/3:0.4594 4/3:0.4596 5/2:0.4689 7/2:0.4626
+
+  GLOBAL 1-D min D3(block_10 + r) ~ 0.403639  >= bar +0.0724
+  => the ENTIRE longest-AP=10 family (all scales d, all extra-point positions) has D3 >= 0.4036 >= bar.
+     (dilation collapses the infinite family to this 1-D continuous curve; min at r*~8/3 = opus's A class.)
