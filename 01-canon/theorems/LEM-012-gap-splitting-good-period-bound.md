@@ -196,3 +196,24 @@ space — verified with `≥ 35%` margin and monotone in spread toward the decor
 (`c → c_∞ ≤ 0.44`, `D3 → D3_∞ ≥ 0.76` for `k=13`, `L ≤ 7`, opus-S158) — plus a `Vmax ≤ 234` finite
 check. No equidistribution, no resonance sum, no analytic wall. File:
 `04-computation/lrc14_dissociated_threshold_macmini_S62.{py,out}`.
+
+### ⚠ CORRECTION to route (c): the `c < D3` certificate is BROKEN (MISTAKE-128, klein-S199)
+
+The `c < D3(E)` framing above (mac-mini-S61/S62) is a **broken sufficient certificate**: `D3` is a
+degree-3 moment LOWER bound on `μ`, and for co-offset sets whose **differences are `≡ 0 mod 7`** (a
+step-7 sub-AP), those phases cluster on the `1/7`-grid `y=j/7`, **spiking `#arcs`** while `D3` stays
+far below the true `μ`. Exact counterexample: `E = {0,7,14,21,26,29,37,44,51,58,67,75,82}`
+(longest-AP 4) has `c = #arcs/spread = 72/82 = 0.878 > D3 = 0.629` (`c/D3 = 1.40`) — and `c, D3, μ`
+are all **dilation-invariant**, so no "large spread ⟹ `c < D3`" restriction escapes it. My
+"`c/D3` decreasing in spread" was measured over RANDOM low-`L` sets (increasingly dissociated) and
+MISSED the 7-structured family.
+
+**What survives:** route (c) holds via the **ACTUAL `ρ* = μ`, not the `D3` proxy** — for the
+counterexample `c = 0.878 < μ = 0.915`, and `c < μ` over all sampled hard low-`L` sets. My S62
+large-spread arc-count test (`c ≈ 0.22–0.37 ≪ ρ* ≈ 0.96`) used the actual `ρ*` and so is CORRECT; it
+is only the `c < D3` (D3-as-floor) claim that fails. **And the residual is MOOT:** the 7-structured
+primitive violation sits at small spread (82, in the finite-check region), and **LEM-013 (kps-S94)
+resolves that region DIRECTLY** via a uniform maxgap existence margin (`7·maxgap/Vmax ≥ 1.105`,
+exhaustive `spread ≤ 22`), independent of any `c < D3` certificate. So: **use LEM-013's direct
+`μ`-existence, not `c < D3`.** Lesson: never substitute a moment lower bound for the `μ` it bounds
+inside a tight inequality; test arc-count claims on `differences ≡ 0 mod 7` sets. → MISTAKE-128.
