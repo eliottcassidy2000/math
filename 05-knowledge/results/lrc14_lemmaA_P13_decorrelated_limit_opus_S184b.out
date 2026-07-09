@@ -1,0 +1,5 @@
+P_13 = P(maxgap of 13 iid uniform > 1/7) = 13678774915/13841287201 = 0.98826
+nuConsec(13) = 477/1078 = 0.44249   => decorrelated SLACK = +0.5458
+nu(highly dissociated, spread 3861) = 0.9887  (-> P_13=0.9883)
+nu(geometric 2^i) = 0.9747  (-> P_13)
+nu(consecutive {0..12}) = 0.44248  (= nuConsec, the MIN)

@@ -1,0 +1,22 @@
+nuConsec(13) = 477/1078 = 0.44249
+nu(consecutive {0..12}) coarse = 0.44250
+================================================================================
+ADVERSARIAL min-nu hill-climb (primitive 13-clusters, minimize nu):
+  global min nu found = 0.44250
+  minimizer = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  minimizer diffs = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]  gcd=1  (consecutive => all 1s)
+  is min >= nuConsec? True  (margin +0.00001)
+--------------------------------------------------------------------------------
+min nu by SPREAD (adversarial per spread, 30 climbs each):
+  spread  12: min nu ~ 0.4425  (>= nuConsec)
+  spread  13: min nu ~ 0.4425  (>= nuConsec)
+  spread  14: min nu ~ 0.4425  (>= nuConsec)
+  spread  16: min nu ~ 0.4425  (>= nuConsec)
+  spread  18: min nu ~ 0.4425  (>= nuConsec)
+  spread  20: min nu ~ 0.4711  (>= nuConsec)
+  spread  24: min nu ~ 0.5591  (>= nuConsec)
+  spread  30: min nu ~ 0.5517  (>= nuConsec)
+  spread  40: min nu ~ 0.5578  (>= nuConsec)
+================================================================================
+READING: if global min = consecutive (all-1s diffs, nu=0.4425) and min-nu>=nuConsec at every
+spread, Lemma A holds; the core (nu near 0.4425) is the small-spread near-consecutive band.

@@ -67,6 +67,19 @@ Files: `lrc14_live_ruler_certificates_macmini_S65cont.{py,out}`,
 `lrc14_certificate_stress_macmini_S65cont.{py,out}`,
 `lrc14_blocking_configs_macmini_S65cont.{py,out}`, `lrc14_blocked_pair_conditioned...out`;
 THM-668 addendum; HYP-5730 (PARTIALLY-TRUE, full data); backlog lead updated.
+## opus-2026-07-09-S184 (cont.) -- Lemma A SCOPED + VERIFIED (consecutive is the global min of nu; decorrelated limit P_13=0.988 gives the Bonferroni route a +0.546 tail slack; reduces to finite core + tail); NOT a complete QED
+
+Prompt (owner): prove Lemma A, the compactness minimization.
+
+Attacked Lemma A (nu(E)=meas{maxgap{frac(e_i x)}>1/7} >= nuConsec(13)=477/1078=0.44249, the lone open hfloor node). SCOPED + VERIFIED it, reduced to (finite core + tail), but did NOT close the tail (analytically delicate) -- honest partial.
+
+ESTABLISHED: (1) GLOBAL MIN nu = nuConsec, achieved UNIQUELY by consecutive {0..12} (adversarial hill-climb from 120 random starts + per-spread searches, NEVER beaten). = measure-level LEM-015 (consecutive=max E3). (2) DECORRELATED LIMIT (exact): dissociated E => {e_i x}->13 iid uniform => nu->P_13=P(maxgap 13 uniform>1/7)=13678774915/13841287201=0.98826 (verified: spread-3861 random nu=0.9887, geometric 0.9747). (3) SLACK = P_13-nuConsec = +0.546 ENORMOUS => Lemma A's tail is FAR more forgiving than the moment-LP coupled region. (4) CORE = spread<=~19 (min nu: 0.4425@<=18 -> 0.47@20 -> 0.55@24), FINITE integer-cluster check.
+
+ARCHITECTURE: Lemma A = (finite core exact-rational check spread<=B) + (tail spread>B => nu>=nuConsec). REMAINING GAP (honest): the rigorous tail bound -- maxgap is NOT Fourier-friendly (unlike the moment W=Sum(g_i-1/7)_+), same species as the coupled-region gap (LEM-005/HYP-5337) BUT with 0.546 cushion. Natural attack: coarse "some length-1/7 arc empty" second-moment on the 7 disjoint arcs (each empty ~(6/7)^13), exploiting the cushion the sharp moment route can't afford.
+
+REDIRECT: the Bonferroni/Lemma-A route is PLAUSIBLY the EASIER path to the density floor (its tail can be crude; the moment route needs sharp constants at the coupled region). CONVERGENCE: kps-S114 just formalized the FULL equality char of LEM-015 (E3=C(k,2)<=>dilated interval, LRCSchurRigidity.lean) -- closing the piece I left paper-only. NEXT: the tail second-moment bound (my target) + the finite core enumeration. Files: lrc14_lemmaA_adversarial_min_nu_opus_S184b (+out), lrc14_lemmaA_P13_decorrelated_limit_opus_S184b (+out); reflection lemma-A-scoped-...-opus-S184; HYP-5723.
+
+---
 
 ## kind-pasteur-2026-07-09-S114 -- FORMALIZED E3=C(k,2) <=> dilated interval (LRCSchurRigidity.lean, sorry-free, FULL equality characterization) + THM-668 grid-free pair-sum dispatch Lean leg (mac-mini's ask) + E3 hardness dispatcher script
 
