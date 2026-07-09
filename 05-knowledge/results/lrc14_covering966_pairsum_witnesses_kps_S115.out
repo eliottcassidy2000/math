@@ -1,0 +1,10 @@
+#covering primitive [1,18] 13-sets = 966
+#with pair-sum band witness = 966 / 966
+#missing = 0
+max q used = 24, max p used = 10
+witness re-verification failures = 0
+Traceback (most recent call last):
+  File "C:\Users\Eliott\AppData\Local\Temp\gen966.py", line 49, in <module>
+    with open("/tmp/wit966.json","w") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/wit966.json'

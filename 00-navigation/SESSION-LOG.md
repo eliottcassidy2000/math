@@ -1,3 +1,25 @@
+## kind-pasteur-2026-07-09-S115 -- WIRED mreach_ge_of_pairsum_band into a native_decide leg over ALL 966 covering [1,18] 13-sets: LRCCovering966.lean (sorry-free) machine-proves every covering [1,18] set is lonely (Mreach>=1/14) via grid-free THM-668 pair-sum band witnesses
+
+Prompt (owner): wire mreach_ge_of_pairsum_band into a native_decide leg over the 966 covering sets.
+
+BUILT -- LRCCovering966.lean (sorry-free, builds 29s, 1010 lines): the small-ruler covering BASE CASE of LRC(14), fully machine-checked.
+- Enumerated the 966 primitive covering [1,18] 13-sets (covering = multiple of every q in {2..14}, THM-523; klein-S206 count). For each, found a grid-free pair-sum band witness (p,q): q=v_i+v_j a pair-sum modulus, all residues (v_l*p) mod q in [q/14,13q/14]. ALL 966/966 have one (max q=24, max p=10 -- tiny integers).
+- coveringWitnesses : List (List Int x Int x Int) -- the 966 (velocity set, p, q) triples.
+- coveringWitnesses_count: length = 966 (native_decide, matches klein-S206 exhaustive).
+- coveringWitnesses_valid: each is a genuine primitive covering [1,18] 13-set (native_decide: card 13, nodup, in [1,18], covering, gcd 1).
+- coveringWitnesses_nodup: the 966 velocity sets are distinct (native_decide).
+- coveringWitnesses_band: all 966 band certificates hold (ONE native_decide, integers only).
+- coveringWitnesses_lonely: **every listed set has Mreach>=1/14** -- via mreach_ge_of_pairsum_band (kps-S114, THM-668). Grid-free, exact.
+Together with klein-S206's exhaustive count (966 = ALL primitive covering [1,18] sets), this machine-verifies the COMPLETE small-ruler covering base case: every covering [1,18] 13-set is lonely.
+
+TRUST BASE: [propext, Classical.choice, Quot.sound, Lean.ofReduceBool] -- the standard native_decide compiler trust (evaluating the integer band checks), used across the project.
+
+THIS IS mac-mini's THM-668 ASK REALIZED: "enumerate pair-sum events, not grids -- provably complete, exact integers, composes with your Mreach_ge_of_lonely_instant." The 966 discharge in ONE native_decide over small-integer residues -- no grids, no floats. Complements klein-S206 (good-period MARGIN, existence-only) with EXPLICIT witnesses + a machine loneliness proof.
+
+SCOPE (honest): this is the [1,18] small-ruler exhaustive base. Larger covering clusters (Vmax up to 1001: exact-check kps-S30; Vmax>1001: good-period leg klein-S205/S206 asymptotic) are the other cells. The tight AP is NON-COVERING (klein-S206), handled by the trivial-q sieve (LonelyRunner.sieve_one_div). Files: LRCCovering966.lean; lrc14_covering966_pairsum_witnesses_kps_S115.py/.out.
+
+NEXT: extend the native_decide leg to [1,N] for larger N (or Vmax<=1001 exact-check as native_decide via THM-668 pair-sum events); mac-mini's Schur-budget/live-ruler theorem; wire E3 (schurCount_eq_choose_iff_dilated, kps-S114) as the cell-selector into the dispatcher.
+
 ## monad-explorer-2026-07-09-S4 -- THM-669 PROVED: THE REFLECTION AVAILABILITY LEMMA -- Av(E, r) >= intW_{1/7+r}(E)/(1-r^2): pairing x with -x reflects gap positions (a -> 1-a-g) and (u)_+ + (v)_+ >= (u+v)_+ converts the low-anchor position penalty into a THRESHOLD LIFT (r = 0 recovers intW exactly); + layer cake + THE PARAMETRIC TENT (mu_theta(E_n) >= 1 - 2(n-1)(n theta - 1)/n for 1/n < theta <= 2/n -- THM-651 = the (8, 1/7) point) => EXPLICIT STRUCTURE-FREE AVAILABILITY FLOORS: |L| <= 6 positive for r < 1/|L| - 1/7 with NO hypotheses; n = 8/9/10 tent-integrated (9/448 at r=0, n=8); n >= 11 reduces to the parametric-theta moment reruns. Verified: 0 violations zoo x r-grid (exact both sides); tent floors valid; proven-vs-empirical 8.8-137x conservative but POSITIVE (HYP-5737)
 
 Prompt (owner): keep pushing -- prove the uniform low-anchor availability lemma.
