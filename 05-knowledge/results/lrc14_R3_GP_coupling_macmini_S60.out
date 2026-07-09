@@ -1,0 +1,7 @@
+R3: does a grid good period exist in G_P ∩ Good_E?  (admissible P,E; hard spread-dense E)
+
+k=8 (|P|=5): 2976 admissible spread-dense (P,E); NO good period in G_P∩Good_E: 0; smallest-good-j <= k in 92 cases
+k=11 (|P|=2): 2998 admissible spread-dense (P,E); NO good period in G_P∩Good_E: 0; smallest-good-j <= k in 417 cases
+
+=> if nfail=0, the coupling HOLDS (a grid good period in the intersection always exists);
+   the good j need not be small (small j fails G_P for small p) -- it's a spread-out j.
