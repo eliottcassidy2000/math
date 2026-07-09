@@ -47,6 +47,24 @@ both cover all residues with few `÷7` elements (not the hard high-`c` sets).
 So the 7-structure — which broke the arc-count and the moments — *hands over the good period* when
 `7 | Vmax` (a wide good arc sits on the grid at `m/7`), and is invisible when `gcd(7,Vmax)=1`.
 
+## Sub-result: the first-moment-vanishing path is RULED OUT (mac-mini-S64)
+
+A natural hope: since LEM-011's `𝒲̂(n)` vanishes when 7-commensurate (`7|n_i` or `7|N`), maybe for
+7-structured sets the surviving Weyl corrections are small/nonnegative, so
+`E_grid[W] = (6/7)^k + Σ corrections ≈ (6/7)^k > 0` — forcing a good period with **no moments**
+(`first-moment > 0 ⟹ a positive summand ⟹ a good `j`). **Tested decisively and FALSE**
+(`04-computation/lrc14_first_moment_vanishing_macmini_S64.{py,out}`, exact `Fraction` grid averages,
+300 sampled 7-structured dissociated `k=13` sets):
+- The corrections are **genuinely negative**: 71/134 (`7|Vmax`) and 109/162 (`gcd=1`) sets have
+  full-grid average **below** `(6/7)^k = 0.1348`. The vanishing does *not* leave only helpful terms;
+  it drags the average down to `≈ 0.035` (`7|Vmax`) / `0.089` (`gcd=1`).
+- `min E_grid[W]` over real periods `j=1..V−1` is `> 0` (worst `0.0179` at `7|Vmax`, `0.0674` at
+  `gcd=1`) — but that is *equivalent* to "a good period exists," so it is no easier a-priori.
+- **The mod-7 picture is confirmed, though:** the worst `7|Vmax` case is `V = 49 = 7²`, where the
+  single carrying good period is a **multiple of 7** (`x = m/7`, the resonance). The thin first
+  moment is *carried by the resonance itself*. So the route is the **pointwise** resonance argument
+  (`x = m/7`), NOT any averaged / moment bound — the same lesson as MISTAKE-128, one level up.
+
 ## Honest status / what remains
 
 Not a closed proof. The exact mechanisms + the `7|Vmax` closure are solid; the residual is (a) a clean

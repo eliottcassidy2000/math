@@ -1,0 +1,20 @@
+k=13, (6/7)^k = 0.134801
+
+=== 7 | Vmax ===
+  sampled 134 sets
+  min over sets of  E_grid[W] (j=1..V-1) = 0.017857   (target (6/7)^k=0.134801)
+  min over sets of  E_grid[W] (j=0..V-1) = 0.034985
+  sets with full-grid avg < (6/7)^k: 71/134  (0 => corrections are >=0 i.e. help)
+  worst (min j>=1 avg): E=[0, 6, 7, 10, 13, 14, 18, 21]... V=49  avg1=0.01786 avg0=0.03499
+
+=== gcd(7,Vmax)=1 ===
+  sampled 162 sets
+  min over sets of  E_grid[W] (j=1..V-1) = 0.067353   (target (6/7)^k=0.134801)
+  min over sets of  E_grid[W] (j=0..V-1) = 0.088699
+  sets with full-grid avg < (6/7)^k: 109/162  (0 => corrections are >=0 i.e. help)
+  worst (min j>=1 avg): E=[0, 6, 7, 8, 14, 17, 21, 22]... V=37  avg1=0.06735 avg0=0.08870
+
+INTERPRETATION:
+ - If min E_grid[W](j=1..V-1) > 0 uniformly  => first moment forces a good period (DONE, no moments).
+ - If full-grid avg >= (6/7)^k (below_target0=0) => the surviving corrections are NONNEGATIVE
+   for 7-structured sets: the 7-commensurate vanishing (LEM-011) leaves only helpful terms.

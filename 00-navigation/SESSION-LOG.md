@@ -15,6 +15,42 @@ NOVEL WORK DISCOVERED (repo-scout, for the owner): density floor = Cohn-Elkies L
 FILES: lrc14_{R_vs_energy,R_kissing,smooth_alpha2}_kps_S97.py(+.out); reflection the-egrid-residual-is-poisson-summation-and-its-kissing-number-kps-S97.md; HYP-5567 updated.
 
 NEXT: (a) explicit c in |R|<=c*kissing (sum LEM-011 shells); (b) grid-lattice AP-max-kissing (extend mac-mini-S25 to L_V); (c) this = Cohn-Elkies magic function on X0(14) -- the Viazovska-style route. Fleet: existence has THREE converging closures (LEM-013 exhaustive+adversarial, opus-S170 smooth alpha=2, my E_grid kissing) -- covering leg robust.
+## mac-mini-2026-07-09-S64 -- CREATIVE ANGLE on the 7-structured mu-floor: it IS the Z/7-coloring problem (past-work connection to mac-mini-S6/HYP-2703); mod-7 + gcd(7,Vmax) decomposition reframes + partially closes the last residual
+
+Prompt (owner): creative angles on the mu-floor; look back through past work for connections.
+
+BREAKTHROUGH IN FRAMING (not yet a full closure). The last covering-case residual -- the 7-structured
+dissociated good-period mu-floor (moments PROVEN dead, S63) -- is the project's OLDEST object seen
+finite-Vmax: the **Z/7 vertex-coloring** c(e,x)=floor(7 frac(ex)) with the slope-band decomposition
+(mac-mini-S6/HYP-2703, THM-536 Sturmian). "The cover is the arithmetic of residues mod 7, not the
+geometry of gaps." The 7-structured sets are exactly the ones arithmetically special mod 7.
+
+TWO EXACT RESONANCE MECHANISMS at x=m/7 (phases land on the 7-grid, {(e_i m mod 7)/7}):
+ (a) MISSED RESIDUE: {e_i mod 7} != Z/7 => empty 1/7-slot => maxgap>=2/7>1/7.
+ (b) DIVIDE-7 COLLAPSE => THM-530 k<=7 pigeonhole: |S7|=#{e_i=0 mod7} collapse to phase 0 at m/7;
+     if |S7|>=k-6, effective count <=7 => maxgap>=1/(k-|S7|+1)>1/7.
+Verified: orig counterexample misses {3,6} (mech a); klein worst |S7|=10 (mech b); 628/652 sampled
+7-structured dissociated sets satisfy (a)OR(b); the 24 fails cover-all-residues w/ few divide-7 (not
+the hard high-c sets).
+
+THE gcd(7,Vmax) SPLIT -- the good PERIOD:
+ - 7|Vmax: x=m/7=(m Vmax/7)/Vmax IS a grid point; the mechanism makes it good (margin>=1/5). Verified
+   j=m Vmax/7 good for some m in 83/85 sets.
+ - gcd(7,Vmax)=1: grid never hits a 1/7-resonance => decorrelates, samples the good bulk (mu~0.94);
+   existence 79/79 sampled.
+So the 7-structure HANDS OVER the good period when 7|Vmax (wide good arc on the grid at m/7), invisible
+when gcd(7,Vmax)=1. The moment route died by ignoring the 7; this USES it.
+
+STATE: reframes the last residual in the mod-7/Z-7-coloring/k<=7-pigeonhole framework; 7|Vmax hard case
+= one-line resonance pigeonhole. Residual: (a) clean gcd(7,Vmax)=1 argument (general bulk mu, 100%
+sampled); (b) the 7|Vmax covers-all-residues corner. HYP-5600 + reflection.
+
+FILES: HYP-5600; reflection the-7-structured-mu-floor-is-a-Z7-coloring-problem-macmini-S64; script
+lrc14_mod7_decomposition_macmini_S64 (+out).
+
+NEXT: prove the gcd(7,Vmax)=1 existence a-priori (grid-decorrelation from the 1/7-resonances); the
+7|Vmax closure via the resonance pigeonhole (formalizable, ties to THM-530). Together => 7-structured
+mu-floor closed => LRC(14) covering case closed.
 
 ## mac-mini-2026-07-09-S63 -- toward 100%: CONFIRMED the moment/arc-count route is dead for 7-structured (higher-degree B_d ALSO fail) + FORMALIZED 5th good-period core (AP-clustering via Mathlib Dirichlet); converges with klein-S200
 
