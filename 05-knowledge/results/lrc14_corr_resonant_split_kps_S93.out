@@ -1,0 +1,14 @@
+Corr_N split: RESONANT = N*(E_grid[W]-(6/7)^k) [density-floor residual, ALREADY closed];
+NON-RESONANT = Corr_N - resonant [the new oscillatory Mertens-analog].  All EXACT (grid avg).
+  K  family  lAP    r_N   r_res r_nonres res/Corr
+ 11      AP   11  0.746   0.139    0.884     0.19
+ 11   Sidon    2  0.759   0.028    0.787     0.04
+ 12      AP   12  0.518   0.102    0.417     0.20
+ 12   Sidon    2  0.625   0.044    0.669     0.07
+ 13      AP   13  0.177   0.061    0.116     0.34
+ 13   Sidon    2  0.479   0.042    0.521     0.09
+
+READ: r_res = resonant contribution to r_N (density-floor/THM-664 residual, CLOSED).
+r_nonres = the oscillatory remainder = the genuinely-new last-mile piece.
+For SIDON, r_res tiny => the last mile is ENTIRELY the non-resonant oscillatory sum (Mertens-analog).
+For AP, r_res large => but that branch is handled STRUCTURALLY (Dirichlet, LEM-012).

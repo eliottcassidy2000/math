@@ -1,0 +1,16 @@
+NEAR-RESONANCE COUNT + near/far split of the a-priori absolute bound.
+cut = 1/(2N); NEAR = ||n.e/Vmax|| < cut (the resonances), FAR = the rest.
+  K       cfg longAP    r_N   targ nearAbs/t  farAbs/t  #near   #far
+ 11    dissoc      2  0.052  2.202     2.488     3.249  16352 179068
+ 11        AP     11  0.401  2.202     2.287     3.276  15080 180340
+ 11    random      2  0.043  2.202     2.442     3.288  16230 179190
+ 12    dissoc      2  0.042  2.044     3.003     4.085  20450 247312
+ 12        AP     12  0.458  2.044     2.710     4.242  18150 249612
+ 12    random      2  0.003  2.044     3.016     4.163  20258 247504
+ 13    dissoc      3  0.005  1.887     3.714     5.133  25388 330628
+ 13        AP     13  0.058  1.887     3.477     5.002  26014 330002
+ 13    random      2  0.122  1.887     3.801     5.032  25168 330848
+
+READ: if the 20x lives in FAR (far_abs/t >> near_abs/t) => the bloat is CANCELLATION among
+many far resonances -- the MERTENS TRAP (cannot assume sqrt-cancellation a-priori).
+If NEAR dominates and #near is SMALL for dissoc => the COUNT route works (Mertens-SAFE).

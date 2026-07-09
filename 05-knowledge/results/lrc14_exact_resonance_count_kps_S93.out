@@ -1,0 +1,12 @@
+EXACT-RESONANCE COUNT: Sidon vs AP. Z = #{n.e=0 exact}, M = #{n.e=0 mod V, !=0}.
+resMass = N*|sum_{n.e=0 mod V} What(n)| (the resonant Dirichlet mass, D_N=N terms).
+  K   family longAP    r_N Z(exact) M(wrap)   Zmass resMass/t
+ 11       AP     11  0.746     2200       0   0.169     0.664
+ 11    Sidon      2  0.759      352       0   0.017     0.047
+ 12       AP     12  0.518     2746       0   0.178     0.872
+ 12    Sidon      2  0.625      382       2   0.016     0.056
+ 13       AP     13  0.177     3474       0   0.187     1.062
+ 13    Sidon      2  0.479      410      34   0.014     0.060
+
+EXPECT: AP has Z >> Sidon-Z (the (1,-2,1) 3-AP relations force n.e=0). If Sidon-Z is small
+and Sidon resMass/t < 1 => the COUNT route closes the dissociated branch a-priori.

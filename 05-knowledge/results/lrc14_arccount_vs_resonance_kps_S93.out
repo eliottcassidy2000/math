@@ -1,0 +1,14 @@
+Arc-count (mac-mini route) vs dissociation. maxArcs = max_j #uncovered-gaps; a good period
+needs >=1 gap>1/7 (arcs>=1). Sidon => few additive relations => (claim) small arc spread too.
+  K  family meanArcs maxArcs good?
+ 11      AP    1.494       6   YES
+ 11   Sidon    2.375       5   YES
+ 12      AP    1.270       6   YES
+ 12   Sidon    2.208       5   YES
+ 13      AP    1.085       6   YES
+ 13   Sidon    2.044       5   YES
+
+Both AP and Sidon admit good periods (arcs>=1 for some j) -- the good-period EXISTENCE is
+robust. The near-resonance count governs the FINE r_N value; the arc-count governs EXISTENCE.
+Shared root: few additive relations (Sidon) => the phases spread => gaps open (arcs) AND the
+resonance sum is small. mac-mini's arc-count is the EXISTENCE shadow of the resonance count.
