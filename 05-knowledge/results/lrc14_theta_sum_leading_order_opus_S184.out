@@ -1,0 +1,16 @@
+h(1)=-0.13811  h(2)=-0.12443  h(3)=-0.10344  (6/7)^10=0.2141
+per-Schur-triple leading coefficient c3 = 2*(6/7)^10*h(1)^2*h(-1) = -0.001128
+============================================================================================
+                         set #SchurVec R_lead=c3*n  R=L-main  ratio
+                  AP {1..13}        42     -0.0474   -0.1348   0.35
+                        2*AP        42     -0.0474   -0.1348   0.35
+          near-AP {1..12}+20        39     -0.0440   -0.1017   0.43
+                 GAP 4x4 P=5        35     -0.0395   -0.0351   1.13
+                 GAP 7x2 P=9        36     -0.0406   -0.0436   0.93
+                     Fib-ish        12     -0.0135   -0.0441   0.31
+                   Sidon-ish         4     -0.0045   -0.0056   0.81
+          sum-free {1,3..25}         0     -0.0000   -0.0189   0.00
+============================================================================================
+READING: R_lead (Schur-triple leading term) captures the SIGN and the trend of R; the AP has the
+most Schur vectors and the largest |R|. The GAP between R_lead and R = higher-order relations
+(s=4 additive energy, ...), also AP-maximized. Full |R|<(6/7)^13 = the moment-LP D3 (THM-661, PROVED).

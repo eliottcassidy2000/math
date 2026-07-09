@@ -1,6 +1,7 @@
 ---
-id: LEM-014
+id: LEM-015
 title: The interval maximizes Schur triples — among k distinct positive reals, E₃(S) = #{(a,b)∈S×S : a+b∈S} ≤ C(k,2), with equality iff S is a dilated interval c·{1,…,k}
+note: renamed from LEM-014 (opus-S183→S184) to resolve a numbering collision with boxeph's LEM-014 (P-separated composed realization, wide regime), which reserved the number first.
 status: PROVED (elementary, self-contained; works over any linearly ordered abelian group of positive elements, in particular ℤ⁺ and ℝ⁺). Verified exhaustively for k=3,4,5 (maximizers are EXACTLY the dilated intervals, max E₃ = 3,6,10 = C(k,2)); the AP {1,…,13} attains E₃ = C(13,2) = 78, the value that governs the LRC density-floor resonance sum at leading order (opus-S182). The UPPER BOUND is FORMALIZED IN LEAN (opus-S183, `LRCSchurTriples.lean`, kernel-pure [propext, Classical.choice, Quot.sound], wired to root): `schurTriple_card_le (S : Finset ℕ) (hS : 0 ∉ S) : ((S ×ˢ S).filter (·.1+·.2 ∈ S)).card ≤ S.card.choose 2` via the injection `(a,b) ↦ {a, a+b}` into `powersetCard 2 S`; `schurTriple_interval_13 : E₃({1..13}) = 78 := by decide`. (The equality characterization remains paper-only.)
 source: opus-2026-07-09-S183
 depends_on: []

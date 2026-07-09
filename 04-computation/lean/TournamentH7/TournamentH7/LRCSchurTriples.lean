@@ -6,7 +6,7 @@ Authors: opus (LRC multi-agent project, 2026-07-09-S183)
 import Mathlib
 
 /-!
-# The interval maximizes Schur triples (LEM-014, upper bound)
+# The interval maximizes Schur triples (LEM-015, upper bound)
 
 The LRC density-floor resonance sum `R` (with `L(S) = (6/7)^13 + R`) is a theta-sum over the resonance
 lattice `Λ = {n : Σ nᵢ vᵢ = 0}`, dominated by its minimal vectors — the height-3 **Schur triples**
@@ -30,7 +30,7 @@ namespace LRCSchurTriples
 
 open Finset
 
-/-- **The interval maximizes Schur triples (LEM-014, upper bound).**
+/-- **The interval maximizes Schur triples (LEM-015, upper bound).**
 For a finite set `S` of positive naturals, the number of ordered pairs `(a,b) ∈ S×S` with `a+b ∈ S`
 (the Schur-triple count `E₃`) is at most `C(|S|, 2)`. Equality holds for the interval `{1,…,|S|}`. -/
 theorem schurTriple_card_le (S : Finset ℕ) (hS : 0 ∉ S) :
