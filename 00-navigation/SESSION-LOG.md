@@ -1,3 +1,20 @@
+## kind-pasteur-2026-07-09-S103 -- hlink zipWith-INDEX + sorted NOTHING-BETWEEN, both built (LRCHlinkList.lean sorry-free): the two pieces the owner named are DONE; hlink now has its complete lemma toolkit
+
+Prompt (owner): keep working the zipWith-index and sorted nothing-between extraction to finish hlink.
+
+BUILT (LRCHlinkList.lean, sorry-free, Mathlib-only) -- the exact two pieces asked for:
+- mem_zipWith_sub_adjacency (the zipWith-INDEX): a member x of zipWith(fun a b => b-a) L L.tail equals q-p for a pair ADJACENT in L (L = l1 ++ p::q::l2). Structural recursion on L, no index bookkeeping (the adjacency-decomposition encoding sidesteps List.get index pain).
+- sorted_adjacency_sep (the sorted NOTHING-BETWEEN): in a Pairwise-<= list l1++p::q::l2, every r satisfies r<=p OR q<=r -- nothing lies strictly between adjacent sorted entries. Via List.pairwise_append + pairwise_cons.
+- pairwise_append_singleton_of_le (cyc-sorted helper): ps++[x] stays sorted when x >= all ps => cyc = ps++[p0+Vmax] is sorted (all residues < Vmax <= p0+Vmax).
+
+COMPLETE hlink TOOLKIT now (all sorry-free): foldl_max_pos_mem (S102, maxCircGap in zipWith) + mem_zipWith_sub_adjacency (S103) + sorted_adjacency_sep (S103) + pairwise_append_singleton_of_le (S103) + free_translate_of_free_subInterval (S101, non-wrap) + free_translate_wrap (S102, wrap) + teeth_subset_Ico (S101). Every MATHEMATICAL lemma for hlink is proven.
+
+REMAINING = the mechanical ASSEMBLY (recipe, ~plumbing): from HasGoodPeriod E Vmax = exists j, 7*maxCircGap>Vmax: (1) unfold klein's maxCircGap match (ps = mergeSort residues nonempty since |E|=13, so cyc=ps++[p0+Vmax]); (2) foldl_max_pos_mem => maxCircGap in zipWith cyc cyc.tail; (3) mem_zipWith_sub_adjacency => cyc=l1++p::q::l2, q-p=maxCircGap; (4) cyc sorted (mergeSort sorted + pairwise_append_singleton_of_le) => sorted_adjacency_sep => all residues r: r<=p OR q<=r; (5) a:=p/Vmax, g:=maxCircGap/Vmax>1/7; teeth c=r/Vmax so c<=a OR a+g<=c => c not in (a,a+g); (6) DISPATCH: q<Vmax (internal) => S101 free_translate (a+g<=1); q=p0+Vmax (wrap) => S102 free_translate_wrap (all teeth in [min/V=p0/V, max/V=p, i.e. a+g-1<=c<=a]). The only remaining subtlety = the internal/wrap dispatch + teeth<->residue (toFinset<->mergeSort perm) connection.
+
+Good-period Lean cores: mac-mini 5 + klein maxgap/reach + my AP/ArcCount/Egrid/Dispatch/ReachWitness/TeethGap/MaxgapArgmax/HlinkList. FILES: LRCHlinkList.lean.
+
+NEXT: the assembly plumbing (unfold maxCircGap match + teeth<->residue perm + dispatch) => finishes hlink => HasGoodPeriod => free-gap; then klein's mreach_ge_of_goodPeriod needs only hembed (Part A ruler embedding, the shared deep blocker). Offered klein to wire it.
+
 ## opus-2026-07-09-S174 -- the RIESZ RATIO inf_R ∫M*R/∫R SHARPLY DECIDES looseness: global-opt <1 for LOOSE 13-sets (0.28-0.79), =1 boundary for TIGHT ({1..13}, 2*{1..13} -> 1.001); validity confirms the opus-S173 formalized soundness; loose/tight GAP = numeric evidence for inf L>0
 
 Prompt (owner): keep pushing the LRC math then formalization, pull often.
