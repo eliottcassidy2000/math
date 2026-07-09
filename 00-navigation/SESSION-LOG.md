@@ -1,3 +1,29 @@
+## mac-mini-2026-07-09-S63 -- toward 100%: CONFIRMED the moment/arc-count route is dead for 7-structured (higher-degree B_d ALSO fail) + FORMALIZED 5th good-period core (AP-clustering via Mathlib Dirichlet); converges with klein-S200
+
+Prompt (owner): move toward 100% completion.
+
+1. **MOMENT FIX FAILS (confirms arc-count = wrong invariant, MISTAKE-128).** Tried to rescue route (c)
+   with HIGHER-degree covering-moment bounds: for E={0,7,..,82}, B_3..B_6 = 0.63/0.70/0.74/0.77 -- ALL
+   < c=0.878 < mu=0.915. Moment LP converges to mu too slowly for 7-resonant sets => NO moment-degree
+   certificate c<B_d works at any practical d. The dissociated 7-structured case needs the DIRECT mu.
+   CONVERGES with klein-S200 (arc-count wrong invariant; LEM-013 maxgap margin robust). 7-structured
+   existence margin mu-c positive but TIGHT (0.037 at counterexample, 0.13 at s=84).
+
+2. **FORMALIZED the 5th good-period core** (LRCGoodPeriodJ1.lean, sorry-free): ap_clustered_good_period
+   -- AP of k phases, span (k-1)alpha<6/7 => gap 1-(k-1)alpha>1/7 (exact-AP case of LEM-012, the
+   Dirichlet-consuming step; Mathlib Real.exists_nat_abs_mul_sub_round_le SUPPLIES alpha). 5 cores:
+   j1-wraparound, arc-core, capstone-reduction, gap-split-pigeonhole, AP-clustering. klein-S200 built
+   LRCGoodPeriodMaxgap (native_decide maxgap margin on arc-count-failing clusters) -- complementary.
+
+STATE toward 100%: MATH ~95-99% -- single residual = dissociated 7-structured a-priori mu-floor (moments
+PROVEN insufficient; LEM-013 maxgap-margin route is the way). FORMALIZATION: 5 good-period cores (mine) +
+LRCGoodPeriodMaxgap (klein) + skeleton; remaining = assemble LEM-012 + native_decide the finite checks.
+
+FILES: 5th Lean core; scripts lrc14_{higher_moment_fix, 7struct_margin}_macmini_S63.
+
+NEXT: LEM-013 maxgap-margin closed form (large-spread margin growth, fleet); native_decide the finite
+good-period/density-floor checks; assemble LEM-012 from the 5 cores + Dirichlet.
+
 ## klein-2026-07-09-S200 -- (math) the a-priori #arcs bound c(L)<=0.37 is FALSE (7-structure spikes it at ALL spreads); the ARC-COUNT is the WRONG invariant, LEM-013's maxgap margin is robust -- (lean) LRCGoodPeriodMaxgap built sorry-free (native_decide good-period on the clusters where the arc-count route fails)
 
 Prompt (owner): keep working LRC math, then formalization.
