@@ -119,6 +119,32 @@ genuine open parameters are exactly the two cruxes: **`hMoment`** (density floor
 (reach); the rest (`hbonf` kps-S30, `hB`, `hsmall`, `hsize`, `hR0 = lonely_of_Mreach_ge`) are proved and
 suppliable. Lemma A appears nowhere in this route.
 
+## Discharging the proved legs — and the opaque wall (opus-S186 cont.)
+
+Attempting to shrink `lrc14_from_momentfloor_nodes` to exactly `{hMoment, hpartA}` hits a hard,
+by-design wall. Outcome, honestly:
+
+- **`hR0` DISCHARGED.** Routing through `lrc14_from_witness_floor` (not the `_given_nodes` variant)
+  supplies `hR0 = lonely_of_Mreach_ge` internally (a proved skeleton theorem about the concrete `Mreach`).
+  `lrc14_from_momentfloor_nodes` no longer takes `hR0` — verified building.
+- **`hbonf`, `hB`, `hsmall`, `hsize` are NOT dischargeable here.** They reference the skeleton's
+  `opaque witnessG2 : Shape → ℝ` and `opaque shapeOf`, and `LRCTailDiameter` states plainly: *"the bridge
+  from `muGood` to the skeleton's opaque `witnessG2` cannot be a theorem."* An opaque symbol admits no
+  unfolding, so no inequality about it is provable. This CORRECTS the opus-S186 letter's claim that these
+  were "suppliable" — they are proved *mathematically* but not as Lean proof terms against an opaque
+  `witnessG2`/`shapeOf`.
+- **Under concretization they all close** (`witnessG2 s := (slowμ (GOOD s ∩ G_P s)).toReal`, `shapeOf`
+  concrete): `hbonf = LRCBonferroniMeasure.toReal_bonferroni`; `hB` = Lemma B on the concrete `G_P`;
+  `hsmall` = the `k ≤ 7` pigeonhole (`GOOD = univ ⟹ witnessG2 = measGP ≥ …`); `hsize` = the concrete
+  cluster length `≤ 13`. But concretizing `witnessG2`/`shapeOf` is a **coordinated skeleton change** — it
+  also re-states `hpartA` (which reads `0 < witnessG2 → …`) — carried via the `LRCEventMeasureBridge`
+  `hwitness` hypothesis. That is the fleet's known "concretize the opaque witnessG2" step; I flag it, not
+  do it unilaterally.
+
+So the honest terminal state of this route: `{hbonf, hMoment, hB, hsmall, hsize, hpartA}` with `hR0`
+discharged; `hMoment` (density floor = THM-661) and `hpartA` (reach) are the two mathematical cruxes, and
+`hbonf/hB/hsmall/hsize` collapse to proof terms the moment `witnessG2`/`shapeOf` are made concrete.
+
 ## Ledger
 
 - FORMALIZED `witness_floor_from_momentfloor_nodes` + `lrc14_from_momentfloor_nodes` (LRCWitnessMomentFloor.lean,

@@ -57,6 +57,19 @@ branch (klein-S211), and the AP itself is non-covering: the ends meet at the sam
 
 Files: THM-675 (canon, proofs + Part B stress-test record);
 lrc14_hyp5765_test_and_burden_macmini_S65cont4.{py,out}; HYP-5765 INDEX updated.
+## opus-2026-07-09-S186 (cont.2) -- DISCHARGED hR0 (lonely_of_Mreach_ge) in lrc14_from_momentfloor_nodes; but {hMoment,hpartA} is BLOCKED by the OPAQUE witnessG2/shapeOf (honest: corrects my "suppliable" over-claim)
+
+Prompt (owner): discharge the proved parameters to leave {hMoment, hpartA}.
+
+Partial + honest. DISCHARGED hR0: routed lrc14_from_momentfloor_nodes through lrc14_from_witness_floor (not the _given_nodes variant), which supplies hR0 = lonely_of_Mreach_ge internally (proved skeleton theorem, concrete Mreach). hR0 removed; builds, LRC14Statement conclusion.
+
+BLOCKED for the rest: hbonf, hB, hsmall, hsize all reference the skeleton's OPAQUE witnessG2 : Shape -> R and OPAQUE shapeOf. LRCTailDiameter states plainly "the bridge from muGood to the skeleton's opaque witnessG2 CANNOT be a theorem" -- an opaque symbol admits no unfolding, so no inequality about it is provable. This CORRECTS my S186 letter's "proved and suppliable" -- they are proved MATHEMATICALLY but not as Lean terms against opaque witnessG2/shapeOf.
+
+UNDER CONCRETIZATION they all close (witnessG2 := (slowmu(GOOD cap G_P)).toReal, shapeOf concrete): hbonf = LRCBonferroniMeasure.toReal_bonferroni; hB = Lemma B on concrete G_P; hsmall = k<=7 pigeonhole (GOOD=univ); hsize = concrete cluster length <=13. But that concretization is a COORDINATED SKELETON CHANGE (it also re-states hpartA, which reads 0<witnessG2 -> ...), carried via the LRCEventMeasureBridge hwitness hypothesis. That is the fleet's known "concretize the opaque witnessG2" step -- FLAGGED, not done unilaterally.
+
+TERMINAL STATE of this route: {hbonf, hMoment, hB, hsmall, hsize, hpartA} with hR0 discharged; hMoment (density floor=THM-661) + hpartA (reach) are the 2 math cruxes; hbonf/hB/hsmall/hsize collapse to proof terms the moment witnessG2/shapeOf are made concrete. So reaching {hMoment,hpartA} = the concretization step, a coordinated change (@monad grand-assembly HYP-5757 owner + skeleton owners). Files: LRCWitnessMomentFloor.lean (hR0 discharged); reflection updated (discharge section). -> LRCTailDiameter (opaque bridge), LRCEventMeasureBridge (hwitness), LRCBonferroniMeasure/kps-S30, THM-661, opus-S186.
+
+---
 
 ## opus-2026-07-09-S186 (cont.) -- SWAPPED the moment-floor node into the skeleton's witness-route CASE-SPLIT: lrc14_from_momentfloor_nodes : ... -> LRC14Statement (kernel-pure), density-floor dependency is now THM-661, NOT Lemma A
 
