@@ -1,3 +1,41 @@
+## klein-2026-07-09-S199 -- MISTAKE-128: route (c)'s c<D3 certificate is SEVERELY broken (7-structured co-offsets => c/D3=1.40, dilation-invariant), converging with + strengthening kps-S94/LEM-013's resolution
+
+Prompt (owner): keep working LRC(14), same mindset (Mertens/Hadwiger lenses), explore related themes.
+
+Worked the remaining a-priori piece (the arc-count c(L)<ρ_min for the Sidon branch) with the additive-
+energy/Freiman lens -- and RIGOROUSLY BROKE mac-mini's route (c) certificate, converging with kps-S94.
+
+**THE FINDING (MISTAKE-128).** Route (c) closes the dissociated branch via `c:=#arcs/spread < D3(E)`
+(mac-mini-S61/S62, ρ*>=D3). Testing this with the ADDITIVE-ENERGY lens (Freiman theme: #arcs should
+track additive structure, not k^3): the arc-count is SPIKED by co-offset differences ≡0 mod 7 (a step-7
+sub-AP resonating with the 1/7 threshold). EXACT counterexample: E={0,7,14,21,26,29,37,44,51,58,67,75,82}
+(hard, primitive, longest-AP=4, four co-offsets ≡0 mod 7) has #arcs=72 (grid-STABLE Nx=1e5..2e6),
+spread=82 => c=0.878, but D3(E)=0.629 => c/D3=1.40 -- c<D3 FALSE (severe; cf kps's milder ~1.02 sliver).
+KEY: c, D3, μ are ALL DILATION-INVARIANT (verified: t·E has #arcs=72t, spread=82t, c=0.878, D3=0.629,
+μ=0.915 for t=1..4). So the D3-certificate breaks at c/D3=1.40, not marginally. (Primitivity caveat: the
+dilates t·E are NON-primitive gcd=t => excluded; the primitive violation is at spread 82 < 200, mac-mini's
+finite-check region.) Route (c) STILL holds via the ACTUAL μ: c=0.878 < μ=0.915 (over 4691 hard low-L
+sets, c<μ always, min margin 0.081). So the D3 proxy is too weak; the true condition is c<μ (a
+decorrelation μ-lower-bound, μ≳0.9), NOT D3.
+
+**CONVERGENCE + RESOLUTION.** kps-S94/LEM-013 (landed concurrently) independently found the c>=D3 sliver
+and RESOLVED it: dissociated (L<=7) good-period EXISTENCE holds DIRECTLY with uniform maxgap margin
+7·maxgap/Vmax >= 1.105 (exhaustive spread<=22: 621k clusters 0 fails; adversarial spread<=200: min 1.355),
+independent of the broken c<D3 certificate. So c>=D3 is a sufficient-CERTIFICATE artifact, not a covering
+gap. My counterexample (c/D3=1.40, the 7-structure MECHANISM, dilation-invariance) is a SEVERE instance
+strengthening the case to abandon c<D3 for LEM-013's direct margin. Updated MISTAKE-128 + LEM-012 route(c)
+correction (both now credit LEM-013 as the resolution).
+
+**THEMES (same mindset).** Freiman/Hadwiger: #arcs tracks additive energy (Sidon low c, AP high) -- the
+density=>structure principle; the 7-structure is a *near*-resonance (differences ≡0 mod 7) that the
+additive-energy proxy misses if you don't test mod-7 difference sets. Mertens: the D3-certificate route
+(positive #arcs) was meant to AVOID the Mertens-hard signed sum -- but D3 is too weak, so the positive
+route inherits its own decorrelation μ-bound. NET: capstone existence CLOSED (LEM-012 + LEM-013 + LEM-010);
+the c<D3 certificate is retired. Files: lrc14_{arccount_energy,interlock,interlock_hard,interlock_gap}_klein_S199.
+NEXT: the a-priori μ>=c (decorrelation) if a certificate is wanted; else LEM-013's direct margin suffices.
+
+---
+
 ## kind-pasteur-2026-07-09-S94 -- CRITICAL PATH: mac-mini's Route-(c) `c>=D3` sliver is a SUFFICIENT-CERTIFICATE ARTIFACT, not a covering-leg gap -- dissociated good-period EXISTENCE holds directly with uniform margin >=1.105 (LEM-013)
 
 Prompt (owner): work the critical path.

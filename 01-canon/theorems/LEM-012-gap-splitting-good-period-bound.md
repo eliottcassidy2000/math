@@ -115,15 +115,14 @@ VACUOUS for the near-AP branch — MISTAKE-127 — but is the RIGHT tool here: l
 > it fails at **ALL spreads by dilation**, not just in a finite-check window. `c=#arcs/spread`, `D3`,
 > `μ` are all **dilation-invariant**. Counterexample: `E={0,7,14,21,26,29,37,44,51,58,67,75,82}` (hard,
 > longest-AP=4, four co-offsets `≡0 mod 7`) has `#arcs=72` (grid-stable), spread 82 ⟹ `c=0.878`, but
-> `D3(E)=0.629`, so `c/D3=1.40`. Dilating (`t·E`, `#arcs=72t`, spread `82t`) keeps `c/D3=1.40` at spread
-> `≥200` — so the "spread ≥200 ⟹ c<D3" claim (mac-mini-S62) is contradicted; its "c/D3 decreasing in
-> spread" was over random sets, missing this 7-structured dilated family. CAUSE: co-offset differences
-> `≡0 mod 7` (step-7 sub-AP) resonate with the `1/7` threshold, spiking `#arcs`, while `D3(E)` (a moment
-> LOWER bound) stays ≪ the true `μ`. **Route (c) still holds via the ACTUAL `ρ*=μ`** (`c=0.878 < μ=0.915`;
-> over 4691 hard low-L sets `c<μ` always, min margin 0.081). So the a-priori closure needs `μ ≥ c` (a
-> decorrelation lower bound `μ≳0.9`), NOT the D3 proxy — route (c) inherits a μ-lower-bound difficulty and
-> is NOT the clean D3 closure it appeared. Existence is unaffected (LEM-010(ii) Dirichlet is the
-> unconditional fallback; LEM-012 covers structured `L≥k−6`).
+> `D3(E)=0.629`, so `c/D3=1.40` — a SEVERE violation (cf. kps-S94's milder `c/D3≈1.02` sliver at spread
+> 80). CAUSE: co-offset differences `≡0 mod 7` (step-7 sub-AP) resonate with the `1/7` threshold, spiking
+> `#arcs`, while `D3(E)` (a moment LOWER bound) stays ≪ the true `μ`. (Primitivity caveat: the dilates
+> `t·E` are non-primitive `gcd=t` ⟹ excluded; the primitive violation is at spread 82, inside mac-mini's
+> `spread<200` finite-check region.) **Route (c) holds via the ACTUAL `ρ*=μ`** (`c=0.878 < μ=0.915`).
+> **RESOLVED by kps-S94/LEM-013:** dissociated existence holds DIRECTLY (maxgap margin `7·maxgap/Vmax ≥
+> 1.105`, exhaustive/adversarial), independent of the broken `c<D3` certificate. So `c ≥ D3` is a
+> sufficient-certificate artifact, not a covering-leg gap — use LEM-013's direct margin, not `c<D3`.
 
 ## Extension to L = k−6 (m=6): the ×7 collapse (klein-S197)
 
