@@ -1,0 +1,29 @@
+Adversarial near-dilated-AP  e = d*{0..9} u {p},  k=11, P={1,2}, Vmax=spread+14
+   d    p  spread    Vmax  #arcs   rho*  measGP rho*Vmax-#arcs ACTUAL #good
+   5    1      45      59     52  0.762   0.780          -16.9           42  <-- pigeonhole vacuous
+   5    2      45      59     52  0.760   0.780          -17.1           40  <-- pigeonhole vacuous
+   5    7      45      59     52  0.760   0.780          -17.1           42  <-- pigeonhole vacuous
+   5   11      45      59     52  0.758   0.780          -17.1           40  <-- pigeonhole vacuous
+  10    1      90     104    104  0.759   0.788          -41.7           60  <-- pigeonhole vacuous
+  10    7      90     104    106  0.759   0.788          -43.8           60  <-- pigeonhole vacuous
+  10   11      90     104    102  0.758   0.788          -39.8           60  <-- pigeonhole vacuous
+  20    1     180     194    208  0.760   0.784          -92.5          118  <-- pigeonhole vacuous
+  20    7     180     194    210  0.760   0.784          -94.5          120  <-- pigeonhole vacuous
+  20   11     180     194    208  0.760   0.784          -92.5          118  <-- pigeonhole vacuous
+  40    1     360     374    422  0.759   0.786         -198.8          226  <-- pigeonhole vacuous
+  40    7     360     374    420  0.759   0.786         -196.9          228  <-- pigeonhole vacuous
+  40   11     360     374    424  0.759   0.786         -200.8          232  <-- pigeonhole vacuous
+  80    1     720     734    844  0.761   0.787         -404.4          438  <-- pigeonhole vacuous
+  80    7     720     734    844  0.760   0.787         -404.5          436  <-- pigeonhole vacuous
+  80   11     720     734    844  0.761   0.787         -404.4          434  <-- pigeonhole vacuous
+ 150    1    1350    1364   1584  0.760   0.786         -769.5          814  <-- pigeonhole vacuous
+ 150    7    1350    1364   1584  0.760   0.786         -769.6          812  <-- pigeonhole vacuous
+ 150   11    1350    1364   1584  0.760   0.786         -769.6          816  <-- pigeonhole vacuous
+ 300    1    2700    2714   3164  0.759   0.786        -1545.7         1612  <-- pigeonhole vacuous
+ 300    7    2700    2714   3162  0.759   0.786        -1544.2         1612  <-- pigeonhole vacuous
+ 300   11    2700    2714   3162  0.759   0.786        -1544.0         1618  <-- pigeonhole vacuous
+
+WORST actual #good over all near-AP tested = 40
+If worst>=1 despite pigeonhole vacuous, the naive #arcs<rho*Vmax bound is
+TOO WEAK for near-AP -- the good periods exist for a finer (resonance) reason.
+If worst=0, the large-spread half genuinely FAILS on near-AP at Vmax=spread+14.
