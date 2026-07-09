@@ -1,3 +1,43 @@
+## mac-mini-2026-07-09-S65 (cont. 4) -- HYP-5765 STRESS-TESTED (survives, deficit GROWS with scale: 3 -> 5 -> 7) + THM-675 PROVED: the DESCENT-BURDEN theorem -- parity forces >= 11 distinct half-sum moduli, burden = 11 IFF the majority class is an AP; composite sums > 196 never escape
+
+Prompt (owner): prove the simultaneity conjecture HYP-5765; extend the session.
+
+**METHOD NOTE (honest): test before proving.** I had flagged my own formulation's suspected
+defect (clause (b) covers only PRIME moduli >= 29; the cont-3 dodger was captured at composite
+49; smooth-sum adversaries might starve (b)). So before any proof attempt, I hunted for
+(a)&(b)-achievers adversarially. RESULT: **the hunt FAILED to refute HYP-5765, with a growing
+margin** -- min open [(a) window + (b) prime >= 29] descents = 3 (cap 150), 5 (cap 250),
+7 (cap 400). At scale the 91 sums acquire MORE prime divisors >= 29 and THM-674 domination
+incidence collapses (13.8% at 29 -> 0.25% at 41): the adversary cannot tune 13 integers against
+dozens of independent domination demands. The suspected composite gap is extra insurance, not a
+needed repair. HYP-5765 stands, strengthened.
+
+**THM-675 (PROVED, elementary; 0 verification violations):**
+(i) parity pigeonhole: some parity class has >= 7 members => >= 21 EVEN pair sums;
+(ii) FREIMAN BURDEN: pairwise sums of 7 reals take >= 2*7-3 = 11 distinct values => >= 11
+    DISTINCT half-sum moduli h = q/2 > 14 (once sums > 28), each a PROPER divisor of its sum;
+(iii) any full descent-dodger must BLOCK all of them (THM-672 torsion for h <= 28; THM-674
+    ledger/domination for h >= 29);
+(iv) AP RIGIDITY OF THE MINIMUM: burden = 11 IFF the majority-parity class is an AP -- and then
+    the 11 moduli themselves form an AP of difference d/2; every non-AP structure forces >= 12;
+(v) NO-PRIMALITY ESCAPE: every composite pair sum q > 196 has a proper divisor > 14
+    (q = p*b, b >= sqrt(q) > 14); even sums never escape at any scale (h = q/2); only odd PRIME
+    sums carry no proper descent modulus.
+Verified: Freiman bound + equality <=> AP, 0 violations / 200k random 7-sets; composite fact
+exhaustive to 20,000; real covering sets (cap 250) carry 19-62 forced moduli (floor 11).
+
+**WHERE THE PROOF OF HYP-5765 NOW LIVES (the quantified base camp):** the burden is affordable
+ONLY near AP structure -- and three independent rigidity handles converge on that: E3-global
+(LEM-015/LRCSchurRigidity: E3 = C(k,2) iff dilated interval), E_H-spectral (klein THM-673 C2
+stability target), parity-Freiman local (THM-675(iv), NEW). The missing piece is the STABILITY
+version: near-minimal burden => near-AP => explicit perturbation family => finite check. That is
+Freiman-3k-4 territory -- the parked BSG lead (HYP-5682) now has its concrete target:
+majority-parity classes with <= 12-13 distinct pair sums. Primitivity thins the exact-dilate
+branch (klein-S211), and the AP itself is non-covering: the ends meet at the same rigidity.
+
+Files: THM-675 (canon, proofs + Part B stress-test record);
+lrc14_hyp5765_test_and_burden_macmini_S65cont4.{py,out}; HYP-5765 INDEX updated.
+
 ## opus-2026-07-09-S186 (cont.) -- SWAPPED the moment-floor node into the skeleton's witness-route CASE-SPLIT: lrc14_from_momentfloor_nodes : ... -> LRC14Statement (kernel-pure), density-floor dependency is now THM-661, NOT Lemma A
 
 Prompt (owner): swap this node into the skeleton's witness-route case-split.
