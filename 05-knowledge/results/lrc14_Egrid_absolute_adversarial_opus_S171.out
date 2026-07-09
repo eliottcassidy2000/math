@@ -1,0 +1,16 @@
+============================================================================================
+ADVERSARIAL: max R_abs/main over critical Vmax window; main=(6/7)^13=0.13480
+============================================================================================
+                   dissociated: max R_abs/main = 0.3994  over 291 (cfg,Vmax) checks  => R_abs<main HOLDS
+   7-structured (diffs=0 mod7): max R_abs/main = 0.4147  over 274 (cfg,Vmax) checks  => R_abs<main HOLDS
+
+============================================================================================
+MECHANISM (7-structured): What(m) ~ 0 at 7|m (arc-Fourier b(m)=0 at 7|m, opus-S167)
+============================================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\lrc14_Egrid_absolute_adversarial_opus_S171.py", line 93, in <module>
+    mag_7 = np.mean([abs(F[m]) for m in range(7, 3000, 7)])          # m divisible by 7
+                         ~^^^
+IndexError: index 2723 is out of bounds for axis 0 with size 2721
+e=7*(0..12) (all 0 mod7), Vmax=85: mean|What| at 7|m=1.374e-03, at 7-nmid=1.318e-06, ratio=1042.4614
+dissociated (no mod-7): mean|What| at 7|m=2.270e-04, at 7-nmid=2.726e-04, ratio=0.8327  (~1 => no suppression)

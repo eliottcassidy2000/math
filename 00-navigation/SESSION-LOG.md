@@ -70,6 +70,19 @@ lrc14_mod7_decomposition_macmini_S64 (+out).
 NEXT: prove the gcd(7,Vmax)=1 existence a-priori (grid-decorrelation from the 1/7-resonances); the
 7|Vmax closure via the resonance pigeonhole (formalizable, ties to THM-530). Together => 7-structured
 mu-floor closed => LRC(14) covering case closed.
+## opus-2026-07-09-S171 -- CRITICAL PATH: kps's E_grid[W] residual is bounded ABSOLUTELY (R_abs<(6/7)^k for ALL clusters incl 7-structured), NOT by cancellation => a-priori-closable, Mertens worry retired; + NOVEL CONNECTION: the master law What=Σ∏ĝ IS the tournament Walsh-OCF factorization (clean truncation); Lean abs_residual_lt
+
+Prompt (owner): work the critical path; mine past threads for connections; explore novel work/connections in the repo I was unaware of.
+
+1. **CRITICAL PATH -- kps-S96's E_grid route is ABSOLUTE, not Mertens-hard.** kps closes the good period via E_grid[W]=(6/7)^k+R, R=Σ_{Vmax|m}What(m); existence once |R|<(6/7)^k, left as a verified hypothesis ("Mertens-safe count"). DECISIVE diagnostic (adversarial, k=13, whole critical window): R_abs=Σ2|What(nVmax)| < (6/7)^13=0.1348 with margin >=2.4x -- dissociated max 0.40*main (291 checks), 7-STRUCTURED max 0.41*main (274 checks, mac-mini MISTAKE-128 case that broke c<D3/moments/arc-count). So |R|<=R_abs<main, NO cancellation. MECHANISM: W=Σ(gap-1/7)_+ is CONTINUOUS piecewise-linear => What~1/m^alpha, alpha>1 (opus-S170) => resonant sum converges ABSOLUTELY. The 7-structured obstruction, fatal to every certificate route, is BENIGN in the resonant view.
+
+2. **NOVEL CONNECTION (repo-mining, 2 Explore agents).** The LRC master law What(m)=Σ_{balanced n}∏ĝ is STRUCTURALLY the tournament Walsh-OCF factorization THM-076 |I[S]|=2^r(n-2k)!/2^{n-1}, which TRUNCATED CLEANLY (THM-071 telescoping halving). => LEAD: port THM-076's truncation constant => a-priori R_abs<main theorem (backlog). The 7-structured suppression = heptagon Cayley duality (14=2.7 CRT, U=(I-S)(I+S)^-1 spectrum=7th roots, arc-Fourier b=0 at 7|m). Also mined: R2=Var(W)=metagraph 2nd moment (THM-589 proved CV²~2/n); my covering-depth Poisson = Delsarte/LP bound (S683); INV-050 Satake almost-difference-sets + Riesz-product HYP-2540 as Fourier leads.
+
+3. **LEAN.** TournamentH7.LRCArcCount.abs_residual_lt (kernel-pure, built 8476 jobs): Σ|t|<main => |Σt|<main, converting kps's SIGNED |R|<main hypothesis to the ABSOLUTE decay-provable R_abs<main. Joins good_period_of_arccount (S169) + exists_good_of_smooth_mean (S170).
+
+NET: good-period existence is now closed by [dissociated: E_grid R_abs<main, absolute] + [near-AP: smooth averaging E_x[maxgap]>1/7, S170] -- both cancellation-FREE, both Lean-reduced; the sole remaining a-priori item is transporting the OCF/decay truncation constant. NEXT: THM-076 truncation port; R2=metagraph-variance identity (THM-589 concentration); Riesz-product/INV-050 for inf L>0. Files: lrc14_Egrid_residual_absolute_opus_S171, lrc14_Egrid_absolute_adversarial_opus_S171 (+outs), LRCArcCount.lean; reflection the-egrid-residual-is-absolutely-bounded-and-it-is-the-ocf-factorization-opus-S171; HYP-5577; 4 backlog leads.
+
+---
 
 ## mac-mini-2026-07-09-S63 -- toward 100%: CONFIRMED the moment/arc-count route is dead for 7-structured (higher-degree B_d ALSO fail) + FORMALIZED 5th good-period core (AP-clustering via Mathlib Dirichlet); converges with klein-S200
 

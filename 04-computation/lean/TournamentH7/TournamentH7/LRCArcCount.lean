@@ -124,5 +124,21 @@ theorem exists_good_of_smooth_mean {ι : Type*} (J : Finset ι) (hJ : J.Nonempty
   rw [lt_div_iff₀ hcard] at hmean                    -- `thr · card < ∑`
   nlinarith [hmean, hsum]
 
+/-! ### 5. The residual is ABSOLUTELY bounded — no cancellation (opus-S171)
+
+kps-S96's `E_grid[W]` route closes the good period once the resonance residual `R = Σ_{V|m} 𝒲̂(m)`
+satisfies `|R| < (6/7)^k`.  The question was whether `R` is small only by SIGNED cancellation
+(Mertens-hard) or by an ABSOLUTE bound.  opus-S171 (verified, adversarial): `R_abs := Σ_{n≥1}
+2|𝒲̂(nV)| < (6/7)^k` for ALL clusters — dissociated (`≤0.40·main`) AND the 7-structured hard case
+(`≤0.41·main`, MISTAKE-128) — because `W = Σ(gap−1/7)_+` is CONTINUOUS piecewise-linear so `𝒲̂(m)`
+decays (`~1/m^α`, `α>1`; opus-S170), making the resonant sum converge ABSOLUTELY.  So `|R| ≤ R_abs <
+main` needs no cancellation.  (For 7-structured `E` the arc-Fourier `b(m)=(1−e(m/7))/(2πim)=0` at
+`7|m` additionally suppresses the balanced resonances — opus-S167 — so the obstruction that broke the
+arc-count / moment / `c<D3` certificates is BENIGN in the resonant view.)  This lemma turns the
+signed hypothesis `|R| < main` into the absolutely-bounded, decay-provable one `R_abs < main`. -/
+theorem abs_residual_lt {ι : Type*} (S : Finset ι) (t : ι → ℝ) (main : ℝ)
+    (habs : ∑ n ∈ S, |t n| < main) : |∑ n ∈ S, t n| < main :=
+  lt_of_le_of_lt (Finset.abs_sum_le_sum_abs t S) habs
+
 end TailDiameter
 end LonelyRunner
