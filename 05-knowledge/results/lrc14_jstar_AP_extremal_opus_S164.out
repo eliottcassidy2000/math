@@ -1,0 +1,13 @@
+============================================================================================
+IS THE AP EXTREMAL FOR j*?  (LRC(14) capstone: j*(E) <= j*(AP) = O(k)?)
+  hard region: spread >= 6Vmax/7 (Vmax in (spread, 7spread/6]); good iff maxgap>1/7
+============================================================================================
+  k= 8: AP max j*=  2 (d,V=(1, 8))  random max j*=  7  struct max j*=  7  || GLOBAL max=7 by struct; AP-bound ceil(7(k-1)/6)=9
+  k= 9: AP max j*=  3 (d,V=(1, 9))  random max j*=  7  struct max j*=  3  || GLOBAL max=7 by random; AP-bound ceil(7(k-1)/6)=10
+  k=10: AP max j*=  3 (d,V=(3, 28))  random max j*=  7  struct max j*=  3  || GLOBAL max=7 by random; AP-bound ceil(7(k-1)/6)=11
+  k=11: AP max j*= 11 (d,V=(2, 22))  random max j*=  7  struct max j*= 11  || GLOBAL max=11 by AP; AP-bound ceil(7(k-1)/6)=12
+  k=12: AP max j*= 11 (d,V=(9, 100))  random max j*=  7  struct max j*= 11  || GLOBAL max=11 by AP; AP-bound ceil(7(k-1)/6)=13
+  k=13: AP max j*= 13 (d,V=(2, 26))  random max j*=  7  struct max j*= 13  || GLOBAL max=13 by AP; AP-bound ceil(7(k-1)/6)=14
+
+  READING: if AP max >= random & struct max at every k, the AP is (empirically) extremal
+  for j*, and j*(E) <= j*(AP) = O(k) would close THM-527-A / LRC(14).

@@ -1,0 +1,15 @@
+================================================================================================
+NO-GOOD-PERIOD DICHOTOMY: is every hard-region no-good-period cluster a (tight) full AP?
+================================================================================================
+  k= 8: 77618 (E,Vmax) configs; 0 with NO good period; NON-AP no-good-period: 0
+  k= 9: 79055 (E,Vmax) configs; 0 with NO good period; NON-AP no-good-period: 0
+  k=10: 80987 (E,Vmax) configs; 0 with NO good period; NON-AP no-good-period: 0
+  k=11: 82983 (E,Vmax) configs; 1 with NO good period; NON-AP no-good-period: 0
+        AP no-good-period examples: [((0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 11)]
+  k=12: 83579 (E,Vmax) configs; 0 with NO good period; NON-AP no-good-period: 0
+  k=13: 85678 (E,Vmax) configs; 1 with NO good period; NON-AP no-good-period: 0
+        AP no-good-period examples: [((0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), 13)]
+
+  READING: if NON-AP no-good-period = 0 at every k, the dichotomy holds -- every hard
+  cluster has a good period EXCEPT full APs (the tight M=1/14 cases, cited via LRC<=13).
+  => the good-period lemma is [j*=O(k)] OR [tight AP]; no genuine counterexample.

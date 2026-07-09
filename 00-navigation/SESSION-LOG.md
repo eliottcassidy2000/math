@@ -1,3 +1,21 @@
+## opus-2026-07-08-S164 -- THE GOOD-PERIOD DICHOTOMY: the LRC(14) capstone's exception set is EXACTLY the tight AP (j* governed by longest-AP; AP is NOT the maximizer; 0 non-AP no-good-period over 490k configs) (HYP-5497)
+
+Prompt (owner): work the remaining math creatively.
+
+The whole LRC(14) is reduced (mac-mini-S59) to ONE lemma: good period j*=O(k) (THM-527-A). Characterized it structurally on the DILATION-INVARIANT longest-AP axis (j*(cE,cVmax)=j*(E,Vmax), same gauge as the density floor / my S155-S163).
+
+(1) The AP is NOT the j*-maximizer: at k=8,9,10 random/near-AP clusters reach j*=7 while the AP reaches 2-3 (AP is EASY -- dilates to a cluster fast). Maximizers are near-APs / dilated APs. So "AP maximizes j*" (the natural guess) is FALSE.
+
+(2) j* is GOVERNED by the longest-AP L: small (<=~7) for small L, spikes to ~k (up to ceil(7(k-1)/6)) ONLY for near-APs (L>=6). = kps-S90's interlock, quantified for j* directly.
+
+(3) THE DICHOTOMY (census 490k (E,Vmax) configs, k=8..13): the ONLY no-good-period clusters are the exact full complete-residue APs {0..k-1} at Vmax=k, k PRIME (11,13) -- for k=Vmax prime every j is coprime => all residues => maxgap 1/k < 1/7. ZERO non-AP exceptions. These are EXACTLY the tight M=1/k LRC instances (AP {1..k}), cited via LRC<=13 / tight-locus {AP,GW}. So the good-period lemma = [j*=O(k)] OR [tight AP]; no hidden counterexample (explains mac-mini's 0/90k -- the exceptions are the tight APs, excluded by construction).
+
+PROOF ROUTE exposed: small-L => j*<=O(7) (bounded-resonance pigeonhole, kps-S90 non-vacuous); near-AP (L large, not exact) => j*<=ceil(7(k-1)/6) via the embedded AP (mac-mini's Dirichlet; the defect BREAKS the sole no-good rigidity); exact AP cited. All O(k), dilation-invariant -- unifies mac-mini's AP bound + kps-S90's interlock.
+
+NEXT: prove "small-L => j*<=O(7)" (the genuinely new quantitative piece) + "near-AP => embedded-AP Dirichlet" (mac-mini owns the AP bound; kps owns the interlock -- handed them the exact exception set + the axis). Files: lrc14_jstar_AP_extremal / lrc14_jstar_extremal_structure / lrc14_nogoodperiod_dichotomy_opus_S164 (+outs); reflection the-good-period-dichotomy-exception-is-exactly-the-tight-AP-opus-S164.
+
+---
+
 ## kind-pasteur-2026-07-08-S90 -- PART A frontier: the arc-count pigeonhole (klein-S192 THM-527-A) FAILS for longest-AP>=9; the two remaining LRC(14) residuals INTERLOCK on the longest-AP axis (HYP-5487)
 
 Prompt (owner): work the genuinely non-mechanical frontier. TARGET: Part A large-spread = klein-S192's pigeonhole #arcs(G*) < rho*·Vmax, needing #arcs <= c·spread with c < rho* (true c~0.2, "needs the resonance count").
