@@ -1,0 +1,19 @@
+L=9 correlated-remainder finite check (kps-S89 cont.); bar = 0.331212
+D3_inf^(9) = 0.522 (opus-S159); decorrelated regime (products>=256) PROVED >= bar.
+Here: the CORRELATED small-scale L=9 tail (AP_9 scale d small, prim-diam 31..PDMAX).
+============================================================================================
+  d=1 (span  8): 28710 L=9 tail shapes; min D3 = 0.46747 at +(10,164) prim-diam 164  margin +0.13626
+  d=2 (span 16): 22055 L=9 tail shapes; min D3 = 0.47014 at +(20,37) prim-diam 37  margin +0.13893
+  d=3 (span 24): 26009 L=9 tail shapes; min D3 = 0.47092 at +(30,38) prim-diam 38  margin +0.13971
+  d=4 (span 32): 22250 L=9 tail shapes; min D3 = 0.46713 at +(3,40) prim-diam 40  margin +0.13592
+  d=5 (span 40): 28100 L=9 tail shapes; min D3 = 0.47028 at +(12,50) prim-diam 50  margin +0.13907
+  d=6 (span 48): 20045 L=9 tail shapes; min D3 = 0.47397 at +(1,60) prim-diam 60  margin +0.14275
+  d=7 (span 56): 28595 L=9 tail shapes; min D3 = 0.47442 at +(30,70) prim-diam 70  margin +0.14321
+  d=8 (span 64): 22250 L=9 tail shapes; min D3 = 0.47413 at +(47,80) prim-diam 80  margin +0.14292
+--------------------------------------------------------------------------------------------
+L=9 CORRELATED-REMAINDER MIN D3 (prim-diam 31..250) = 0.467131
+  at (0, 3, 4, 8, 12, 16, 20, 24, 28, 32, 40) prim-diam 40  margin +0.135919  [>= bar]
+  (cf. S88 genuine-L=9 tail extremal 0.466077 at prim-diam 30, just inside exhaustive<=30.)
+
+CONCLUSION: the L=9 correlated small-scale tail stays FAR above bar (margin >> +0.12);
+with opus-S159's decorrelated regime (products>=256) + the lower-rank reduction (close+far => block_9+close = 10pt cluster + 1 iid = L=10, already closed), the L=9 stratum CLOSES.

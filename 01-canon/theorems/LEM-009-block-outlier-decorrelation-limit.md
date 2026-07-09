@@ -463,3 +463,21 @@ small, the triangle bound fails purely by cancellation, and the box enclosure �
 refinement — is what recovers it). Files: `lrc14_Vi_apriori_klein_S192.{py,out}` (triangle bound
 fails; loose-`V_i` box), `lrc14_Vi_combined_klein_S192.{py,out}` (first-order cancellation `C_1 ≤ 2.83`);
 kps `lrc14_L10_explicit_rate_kps_S89`.
+
+## The L=9 correlated remainder — verified ≥ bar (kps-S89 cont.)
+
+For `L=9` (`E = {0,d,…,8d} ∪ {p,q}`, opus-S159's rank-2 stratum), the x-integral reparametrizes
+**exactly** the same way (condition on `a = frac(dx)`; the fiber `x=(a+m)/d` carries the two outliers
+`frac(pa/d)+pm/d`, `frac(qa/d)+qm/d`), so `E[W^i] = mean_a mean_m W(a; ·,·)^i` — an exact conditional
+evaluation (grid on `a` only). opus-S159 proved the **decorrelated** regime (pairwise products `≥ 256`
+⟹ `D3 ≥ bar`, off `D3_∞^{(9)} = 0.522`, margin +0.19); the remaining **correlated** small-scale tail
+is a bounded finite check. Verified over **~190 000** genuine longest-AP=9 tail shapes (`AP_9` scales
+`d = 1..8`, prim-diam `31..250`):
+
+> **`min D3 = 0.467131` (margin +0.136)** at `(0,3,4,8,12,16,20,24,28,32,40)` (prim-diam 40).
+
+Far above bar — the L=9 correlated remainder clears comfortably (per-`d` mins `0.467–0.474`). With the
+decorrelated regime + the lower-rank reduction (one outlier close + one far ⟹ `block_9`+close = a
+10-point cluster + 1 iid = an L=10 shape, already closed), **the L=9 stratum closes**; `L ≤ 8` is
+strictly safer (`D3_∞^{(L)}` grows: 0.60/0.68/… — S88 found the L=8 tail min 0.511). File:
+`lrc14_L9_correlated_remainder_kps_S89.py` (+`.out`).

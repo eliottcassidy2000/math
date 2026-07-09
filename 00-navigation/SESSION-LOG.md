@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-08-S89 (cont.) -- the L=9 CORRELATED REMAINDER verified >= bar (opus-S159's stated NEXT): ~190k genuine longest-AP=9 tail shapes, min D3 = 0.467131 (margin +0.136); L=9 stratum CLOSES
+
+Prompt (owner): work on the remaining mechanical aspects of the LRC.
+
+DELIVERED. The mechanical continuation of the L=10 box closure (S89) to L=9 (opus-S159's rank-2 stratum, stated NEXT = "the correlated-remainder finite bound"). KEY: the x-integral reparametrizes EXACTLY for 2 outliers -- condition on a=frac(dx) (fixes the AP_9 phases {frac(ja)}); the fiber x=(a+m)/d carries the outliers frac(pa/d)+pm/d, frac(qa/d)+qm/d; E[W^i]=mean_a mean_m W(a;.,.)^i (exact, grid on a only). opus-S159 PROVED the decorrelated regime (pairwise products >= 256 => D3>=bar off D3_inf^(9)=0.522, margin +0.19); the remaining CORRELATED small-scale tail is a bounded finite check.
+
+VERIFIED: ~190,000 genuine longest-AP=9 tail shapes (AP_9 scales d=1..8, prim-diam 31..250, conditional-D3): **min D3 = 0.467131 (margin +0.136)** at (0,3,4,8,12,16,20,24,28,32,40) prim-diam 40. Per-d mins 0.467-0.474, all FAR above bar. => the L=9 correlated remainder CLEARS. With opus's decorrelated regime + the lower-rank reduction (close+far outlier => block_9+close = 10-pt cluster + 1 iid = L=10, already closed), the L=9 stratum CLOSES. L<=8 strictly safer (D3_inf^(L) grows 0.60/0.68/..; S88 L=8 tail min 0.511).
+
+CONVERGENCE: klein-S192 (concurrent) RECONCILED with my S89 box closure -- density-floor last-cert DISCHARGED (box bound, no L2 needed), and sharpened the constant (first-order a-priori C1<=2.83 => crossover d>=26, tighter than my d0=62). V_i are fine (a-priori, small); the box/min-over-corners sidesteps the cancellation. Fully aligned.
+
+STATE: k=11 density floor MECHANICALLY COMPLETE -- [exhaustive prim-diam<=30 min=A] + [L=10 box closure d0=62/klein d>=26 + conditional-D3 d<=70] + [L=9 decorrelated (opus-S159) + correlated remainder (here)] + [L<=8 safer]. With mac-mini-S58 (k=12,13) all six density-floor legs closed & mechanically discharged.
+
+FILES: lrc14_L9_correlated_remainder_kps_S89.py (+out); LEM-009 L=9 section.
+
+NEXT: the remaining LRC(14) mechanical work = the Lean assembly of the finite pieces (exhaustive + conditional-D3 finite checks + box bound are native_decide / interval-arithmetic-able); the separate Part A leg (regime C / OPEN-Q-110 Eisenstein resonance) is the non-mechanical frontier.
+
 ## kind-pasteur-2026-07-08-S89 -- klein-S191's "explicit V_i" bookkeeping FINISHED: the L=10 rate closes rigorously for ALL d>=3 with an EXPLICIT constant via a box bound (crossover d0=62) + conditional-D3 finite check d<=70
 
 Prompt (owner): work to finish. TARGET: klein-S191 flagged "the explicit V_i" (total-variation constant) as the last bookkeeping for the k=11 L=10 rate (they used the MEASURED C~0.035, 95x margin, not a rigorous a-priori bound). Made it explicit + closed it.
