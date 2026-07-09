@@ -1,3 +1,41 @@
+## klein-2026-07-08-S194 -- LEM-011: the EXACT Fourier transform of the uncovered-measure function 𝒲 (the shared 𝒲̂-decay, mac-mini THM-664 handoff) + honest LRC(14) status audit (NOT fully proved; reduced to a bounded finite check + Lean, no hard analysis left)
+
+Prompt (owner): work the resonance sum-bound and prove the shared 𝒲̂-decay constant to close both; see if the entire LRC 14 is now proved, and if so formalize.
+
+1. **THE SHARED 𝒲̂-DECAY, MADE EXACT (LEM-011).** mac-mini's THM-664 handoff (a) asked for the a-priori
+   𝒲̂-decay closing BOTH THM-664's grid residual AND opus-S157's density-floor tail. DELIVERED as an
+   EXACT closed form: for 𝒲: T^{k-1}->[0,6/7] the uncovered-measure function,
+     𝒲̂(n) = (-1)^r (6/7)^{k-1-r} [prod_{n_i!=0} b0(n_i)] (1[sigma=0] - c(sigma)),
+   r=#nonzeros, sigma=Sum n_i, b0(m)=(e(m/7)-1)/(2 pi i m) (the 1/7-arc coeff), c(s)=(1-e(-s/7))/(2 pi i s).
+   PROVED (elementary: W = int_0^1 prod(1-1[arc]) dt, expand + FFT in phases) + VERIFIED (FFT match
+   ~1e-4 at k=3,4; 𝒲̂(0)=(6/7)^k exact; Parseval Sum|𝒲̂|^2 = E[W^2] exact). Decay: geometric
+   (7/6)/pi=0.371 per nonzero coord; =0 if 7|n_i or 7|sigma. BOTH resonance sums are now explicit
+   convergent a-priori sums: E[W]-(6/7)^k = Sum_{n.e=0}𝒲̂ (density decorrelation) and
+   E_grid[W]-(6/7)^k = Sum_{Vmax|n.e}𝒲̂ (THM-664 grid) -- VERIFIED truncated sums converge to the
+   directly-computed targets. This upgrades opus-S157/THM-664 "numerically-certified 𝒲̂" to EXACT.
+   HONEST: does not by itself give a single uniform |Sum_res 𝒲̂|<(6/7)^k over all clusters (signed sum
+   depends on the cluster's additive relations) -- but reduces it to a finite low-height check; and the
+   large-spread EXISTENCE does not need it (LEM-010 is elementary). Files: lrc14_What_exact / 
+   resonance_from_What _klein_S194; THM-664 updated.
+
+2. **IS LRC(14) PROVED? -- honest audit (00-navigation/LRC14-STATUS-2026-07-08.md).** NO, not yet a
+   complete rigorous proof, BUT reduced to a short list of finite/mechanical items with NO hard analysis
+   left (both former walls -- density-floor AP-minimality, large-spread Weyl -- are BYPASSED, by
+   exhaustive+box+decorrelation and by LEM-010's elementary Dirichlet resp.). Remaining: (R1) the
+   THM-527-A bounded finite check {Vmax<=3^12, spread>=6Vmax/7} (only Vmax<=1001 done; cleanest closure
+   = prove mac-mini's j*=O(k), empirically j*<=7) -- the largest item; (R2) k=12,13 density tail
+   a-priori writeup (LEM-011 now supplies the exact 𝒲̂; k=8/11 already done); (R3) the G_P/P-coupling in
+   the elementary existence route (analysis says it holds -- at j=1 the small-part phases cluster near 0
+   too; Dirichlet on all 13 works -- writeup item); (R4) Lean. Since not fully proved, did NOT launch
+   big formalization (per CLAUDE.md: math first, Lean = monad-formalizer's domain); LEM-010 + LEM-011 are
+   clean formalization targets for when the math closes.
+
+NEXT (highest leverage to actually CLOSE): (R1) prove j*=O(k) (simultaneous-Diophantine / three-distance
+on the cluster dilation) => THM-527-A fully elementary, no finite check. Then (R2) k=12,13 box writeup,
+(R3) P-coupling writeup, (R4) Lean.
+
+---
+
 ## kind-pasteur-2026-07-08-S89 (cont.3) -- LEAN: exhaustive-slice enumerator shapes11 + native_decide EVERY primitive 11-set prim-diam<=16 (~8000 shapes) clears bar (kernel-checked); D3-floor Lean file now covers the small-diam base
 
 Prompt (owner): keep working on the Lean transcription.

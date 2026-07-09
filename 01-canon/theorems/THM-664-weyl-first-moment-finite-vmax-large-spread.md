@@ -79,12 +79,27 @@ Over structured large-spread clusters (2-block `{0..a}∪{s−b..s}`, AP, `k = 1
 6/(7Vmax)`, with `#good periods ≥ 20` growing `∝ spread`. So `R` never approaches `(6/7)^k`: the
 good period exists, and abundantly.
 
+## The 𝒲̂-decay is now EXACT (LEM-011, klein-S194)
+
+The `𝒲̂(n)` in Step 2 are no longer a placeholder: LEM-011 gives the **exact closed form**
+`𝒲̂(n) = (−1)^r (6/7)^{k−1−r} ∏_{i:n_i≠0} b₀(n_i)·(𝟙[σ=0]−c(σ))` (`b₀(m)=(e(m/7)−1)/(2πim)`,
+`c(σ)=(1−e(−σ/7))/(2πiσ)`, `r=#nonzeros`, `σ=Σn_i`), verified by FFT + Parseval. Consequences for
+this theorem: (a) the main term `𝒲̂(0)=(6/7)^k` is re-derived exactly; (b) the grid residual
+`R = Σ_{n≠0, Vmax|n·e} 𝒲̂(n)` is an **explicit convergent sum** with proven geometric per-coordinate
+decay `(7/6)/π = 0.371`, dominated by low-height `n`, and equal to `[E[W]−(6/7)^k]` (density-floor
+decorrelation) `+` `[pure grid resonances]`; (c) so the "same a-priori resonance-sum constants as the
+density-floor tail" ARE now a-priori — `R` is computable to any accuracy from finitely many exact
+terms. What LEM-011 does **not** give is a single *uniform* `|R| < (6/7)^k` closed-form bound over all
+`(E,Vmax)` (the signed sum's low-height terms depend on the cluster's additive relations `n·e=0`), but
+it reduces even that to a finite low-height check. The abundance verification (`|R| ≤ 0.032 ≪ (6/7)^k`)
+stands. See LEM-011.
+
 ## Honest status & relation to LEM-010
 
 Steps 1–3 are exact theorems; Step 4 is the Weyl limit plus the smallness of `R`. The one
-non-elementary point — a **fully uniform** `|R| < (6/7)^k` for all `(E, Vmax)` — reduces to the same
-a-priori resonance-sum constants as the density-floor tail (opus-S157's `𝒲̂`-decay / mixed-variation
-bounds), which are numerically certified but not yet fully a-priori. So this Weyl route and
+non-elementary point — a **fully uniform** `|R| < (6/7)^k` for all `(E, Vmax)` — is now expressed via
+LEM-011's exact `𝒲̂` (a-priori, an explicit low-height resonance sum), no longer "numerically
+certified." So this Weyl route and
 **LEM-010** (the elementary deterministic `j=1` + Dirichlet closure, which needs NO resonance bound)
 are two independent proofs of the large-spread half; LEM-010 is the cleaner unconditional one, while
 THM-664 is the conceptual statement — *the finite-Vmax glue is the density-floor decorrelation on the
