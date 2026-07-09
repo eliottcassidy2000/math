@@ -1,3 +1,18 @@
+## opus-2026-07-09-S175 -- DISCHARGED klein-S203's hlink in Lean (the mergeSort ARGMAX + the WRAPPING-gap case), sorry-free kernel-pure -- good-period -> Mreach>=1/14 now needs ONLY hembed; completes the "mechanical assembly" kps-S104 flagged as opus-active
+
+Prompt (owner): keep pushing the LRC math then formalization, pull often, keep working the mergeSort argmax and wrapping-gap case for hlink; read arXiv:2604.21187 for inspiration.
+
+DELIVERED: TournamentH7.LRCHlinkExtract (sorry-free, kernel-pure [propext,Classical.choice,Quot.sound], builds 8481 jobs) -- klein-S203's hlink (free-gap extraction) fully discharged.
+1. **mergeSort ARGMAX** (the hard novel part): foldl_max_mem (0<foldl max 0 L => in L) + mem_zipWith_sub_tail (zipWith(·-·) member = y-x for adjacent x,y; ADJACENT-PAIR decomposition c=l1++x::y::l2 dodges List.get index pain) + exists_gap_decomp (unfold maxCircGap match => cyc=l1++x::y::l2, y-x=maxCircGap).
+2. **BOTH freeness branches**: interior (interval subset [0,1] => kps-S101 free_translate_of_free_subInterval) + **WRAPPING gap** (ps.last/Vmax, p0/Vmax+1) overshoots 1, closed DIRECTLY: every residue p0<=r<=ps.last forces both n>=1 and n<=0 => contradiction (the piece kps-S101's non-wrapping lemma could not reach).
+3. hlink_extract = klein's exact hlink; mreach_ge_of_goodPeriod_of_hembed => good-period -> Mreach>=1/14 needs ONLY hembed (THM-527 Part A ruler embedding).
+
+CONVERGENCE: kps-S103/S104 built a PARALLEL toolkit (LRCHlinkList: mem_zipWith_sub_adjacency, sorted_adjacency_sep, tooth_not_in_gap) and explicitly left "the mechanical assembly (unfold maxCircGap + teeth<->residue perm + internal/wrap dispatch)" as OPUS-ACTIVE -- exactly what hlink_extract completes end-to-end. Two independent discharges; mine adds the full argmax->interval->chain assembly. Mathlib API churn navigated (Sorted->Pairwise, pairwise_mergeSort', pairwise_append). Paper arXiv:2604.21187 = same SAT+LLM+Lean paradigm.
+
+NEXT: good-period-leg's remaining blocker = hembed (THM-527 Part A ruler embedding, shared with density route). Files: LRCHlinkExtract.lean (aggregate-wired); reflection hlink-discharged-mergesort-argmax-and-the-wrapping-gap-opus-S175; HYP-5640.
+
+---
+
 ## kind-pasteur-2026-07-09-S104 -- hlink UNIFIED reduction tooth_not_in_gap (removes the internal/wrap dispatch), toolkit COMPLETE + assembly surface builds GREEN; finalized LRC(14) state mapped
 
 Prompt (owner): do the assembly to finish hlink; complete the full LRC14 assembly, finalize + build.
