@@ -1,0 +1,26 @@
+L=9 CONDITIONAL CLOSURE (exact, no grid aliasing); bar = 0.331212
+================================================================================================
+[decorrelated limit] D3_inf^(9) ~ 0.52371  (margin over bar +0.1925)  -- box bound covers large scale
+
+EXACT conditional-D3 finite check of the BINDING L=9 region (block_9(d) + {p,q}):
+  the min sits at a NEAR point + a moderate point (S158: block_9 scale d + {1, ...}).
+  per d: min over (p,q) with longest-AP=9, primitive, prim-diam>30, at least one near point.
+  d=  1: min D3 = (none in region)
+  d=  2: min D3 = 0.50983 at (0, 2, 4, 5, 6, 8, 10, 12, 14, 16, 41)
+  d=  3: min D3 = 0.50424 at (0, 3, 5, 6, 9, 12, 15, 18, 21, 24, 36)
+  d=  4: min D3 = 0.46687 at (0, 3, 4, 8, 12, 16, 20, 24, 28, 32, 40)
+  d=  5: min D3 = 0.47168 at (0, 5, 6, 10, 15, 20, 25, 30, 35, 40, 50)
+  d=  6: min D3 = 0.47377 at (0, 1, 6, 12, 18, 24, 30, 36, 42, 48, 60)
+  d=  7: min D3 = 0.47458 at (0, 7, 13, 14, 21, 28, 35, 42, 49, 56, 70)
+  d=  8: min D3 = 0.47462 at (0, 7, 8, 16, 24, 32, 40, 48, 56, 64, 80)
+  d= 12: min D3 = 0.50377 at (0, 12, 23, 24, 36, 48, 54, 60, 72, 84, 96)
+  d= 16: min D3 = 0.50479 at (0, 16, 32, 33, 48, 64, 72, 80, 96, 112, 128)
+  d= 20: min D3 = 0.50477 at (0, 20, 37, 40, 60, 70, 80, 100, 120, 140, 160)
+  d= 24: min D3 = 0.50493 at (0, 24, 31, 48, 72, 96, 108, 120, 144, 168, 192)
+
+================================================================================================
+BINDING MIN over the exact conditional check = 0.467172 at (0, 3, 4, 8, 12, 16, 20, 24, 28, 32, 40) (d=4,p=3,q=40)
+  margin over bar = +0.135960  [>= bar]
+  (S158 reliable search gave L=9 min 0.4733; exact conditional confirms the binding region.)
+  => L=9 closure = [this exact conditional finite check, no aliasing] + [box bound d large -> 0.524].
+================================================================================================

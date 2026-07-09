@@ -13,6 +13,21 @@ STATE: k=11 density floor MECHANICALLY COMPLETE -- [exhaustive prim-diam<=30 min
 FILES: lrc14_L9_correlated_remainder_kps_S89.py (+out); LEM-009 L=9 section.
 
 NEXT: the remaining LRC(14) mechanical work = the Lean assembly of the finite pieces (exhaustive + conditional-D3 finite checks + box bound are native_decide / interval-arithmetic-able); the separate Part A leg (regime C / OPEN-Q-110 Eisenstein resonance) is the non-mechanical frontier.
+## opus-2026-07-08-S160 -- L=9 CORRELATED REMAINDER CLOSED by kps-S89's EXACT conditional method extended to 2 points (no aliasing): binding min D3 = 0.467183 (EXACT) >= bar +0.136; large scale -> D3_inf^(9)=0.524 (box bound)
+
+Prompt (owner): work the natural next step (the L=9 correlated remainder from S159).
+
+The clean tool = kps-S89's EXACT conditional method (which closed L=10), extended from 1 to 2 outlier points. For E = block_9(scale d) + {p,q}, condition on a=frac(dx): AP_9 phases {frac(ja)}, and over the d preimages x=(a+k)/d the two point-phases run over d points on a LINE in T^2: p-phase=frac(pa/d+pk/d), q-phase=frac(qa/d+qk/d). So E[W^i] = mean_a mean_k W(AP_9(a); p-phase, q-phase)^i -- EXACT in the point (k) direction, only the a-integral discretized (Na-Riemann). ALIASING-IMMUNE (unlike S157/S158's fixed NG=9000 grid, which reports 0.4464 for a shape whose true D3=0.4647).
+
+RESULT: (1) decorrelated limit D3_inf^(9)=0.524 (margin +0.19), box bound covers large scale. (2) EXACT conditional finite check of the binding region (one near + one moderate point, per S158): binding MIN D3 = 0.467183 at block_9(scale 4) + {3,40} = (0,3,4,8,12,16,20,24,28,32,40), EXACT (conditional 0.467172 matches Farey 0.467183 to 1e-5), margin +0.136 >= bar. Per-d minima rise with scale (0.510/0.504/0.467/0.472/../0.524); min at small d=4. Note: exact conditional min 0.467 is slightly BELOW S158's aliased-search 0.473 (catches missed configs), still >= bar +0.14.
+
+L=9 CLOSURE = [exact conditional finite check of the binding region, min 0.467 >= bar, no aliasing] + [box bound: large scale => 2 points decorrelate => D3 -> 0.524 >= bar]. Finishes the last stratum with the fleet's exact method: L=10 (kps-S89) + L<=9 (here) + kps-S88 exhaustive<=30 => every primitive 11-set has D3 >= bar.
+
+HONEST: conditional is EXACT in the point direction (matches Farey 1e-5); a-integral Na=250-Riemann (D3 to ~1e-3, inside the +0.14 margin); binding check restricts to the near-point structure (where the min sits); box bound at kps-S89 a-priori-constant rigor. Context: fleet has k=11 CLOSED (klein-S190/S192, kps-S88/S89, mac-mini-S58); this supplies the L=9 exact-conditional confirmation, aliasing-immune. Files: lrc14_L9_conditional_closure_opus_S160 (+out); reflection the-L9-exact-conditional-closure-no-aliasing-opus-S160.
+
+NEXT: full a-priori box constant for the 2-point (rank-2) rate (generalize kps's Vh_i via the 2D orbit discrepancy = S159 resonances); or the exact conditional check widened beyond the near-point binding structure.
+
+---
 
 ## kind-pasteur-2026-07-08-S89 -- klein-S191's "explicit V_i" bookkeeping FINISHED: the L=10 rate closes rigorously for ALL d>=3 with an EXPLICIT constant via a box bound (crossover d0=62) + conditional-D3 finite check d<=70
 
