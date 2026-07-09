@@ -1,3 +1,23 @@
+## kind-pasteur-2026-07-09-S117 -- LEAN-IFIED the C1 union-bound CONSUMER (LRCLedgerConsumer.lean, sorry-free): turns any pair-sum liveness certificate's blocked-count bound into Mreach>=1/14, native_decide-demonstrated end-to-end. The half that "makes the certificate census a theorem" (mac-mini's ask).
+
+Prompt (owner): Lean-ify mac-mini's C1 gcd-exact ledger certificate.
+
+CONTEXT: mac-mini's C1 = the gcd-exact LEDGER (|B_l|=g(2*floor(m/g)+1), g=gcd(v_l mod q,q), m=ceil(q/14)-1, +-class merge; now THM-672/674 descent-blocking/domination) bounds the BLOCKED multipliers for a pair-sum ruler q; ruler LIVE iff Sum_classes(|B|-1)<q-1. The LEDGER (count bound) is mac-mini's (THM-672/674) + klein's (HYP-5766 signed box) -- actively owned, evolving. mac-mini assigned me: "your mreach_ge_of_pairsum_band is the exact consumer." So I formalized the CONSUMER (the union-bound half that reaches the Mreach socket), NOT the ledger (avoids collision).
+
+BUILT (LRCLedgerConsumer.lean, sorry-free):
+- fires v q p := every runner's residue (v_i*p) mod q in [q/14,13q/14] (= p/q is a lonely instant); Decidable.
+- mreach_ge_of_blocked_lt: over the nonzero multipliers {1..q-1} (= Finset.range (q-1), kept in N so the count is NATIVE_DECIDE-COMPUTABLE), if the number FAILING to fire is < q-1, then SOME p fires => Mreach>=1/14. Pure union-bound/pigeonhole (proper subset has a complement element) => mreach_ge_of_pairsum_band. This is the shared consumer of EVERY liveness certificate C0/C1/C2/C3.
+- mreach_ge_of_live_ruler: the trivial socket (exists firing p => Mreach>=1/14).
+- demo_c1_lonely (native_decide end-to-end): covering set {1,2,3,4,5,6,8,10,11,12,13,14,18} at ruler q=16=2+14 -- native_decide verifies only 13<15=q-1 multipliers blocked (the C1 liveness condition), consumer concludes Mreach>=1/14 WITHOUT exhibiting the firing p. The "certificate census as theorem" shape a general ledger bound plugs into.
+
+DIVISION OF LABOR: mac-mini/klein ledger (count bound: blocked<q-1) + my consumer (count => Mreach>=1/14) = the C1 theorem. My consumer is net-new, non-colliding (they own the count; I own the socket).
+
+LEAN GOTCHA: Finset.Icc(Z) is NOT native_decide-able (noncomputable ConditionallyCompleteLinearOrder) => use Finset.range (N) with N:N and cast multipliers (p:Z)+1; annotate `fun (p:N) =>` or element type infers to Z from the cast and cascades to sorry.
+
+STATE: the pair-sum leg now = [mreach_ge_of_pairsum_band (witness consumer)] + [mreach_ge_of_pairsum_ratioBand (C0 general, ratio<=13)] + [mreach_ge_of_blocked_lt (C1/C2/C3 count consumer)]. Converges with monad-S6 grand assembly (covering18_complete certifies my 966 list) + opus-S186 top-level (2 open params). FILES: LRCLedgerConsumer.lean.
+
+NEXT: when mac-mini/klein push the ledger count bound in Lean, wire it into mreach_ge_of_blocked_lt for a GENERAL (non-enumerative) covering-liveness theorem; the danger-set count |D|=2*ceil(q/14)-1 + coprime per-runner count (=|D|-1) as the substantive ledger ingredients.
+
 ## mac-mini-2026-07-09-S65 (cont. 4) -- HYP-5765 STRESS-TESTED (survives, deficit GROWS with scale: 3 -> 5 -> 7) + THM-675 PROVED: the DESCENT-BURDEN theorem -- parity forces >= 11 distinct half-sum moduli, burden = 11 IFF the majority class is an AP; composite sums > 196 never escape
 
 Prompt (owner): prove the simultaneity conjecture HYP-5765; extend the session.
