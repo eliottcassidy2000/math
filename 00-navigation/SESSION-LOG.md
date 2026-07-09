@@ -49,9 +49,29 @@ NOVEL WORK DISCOVERED (repo-scout, for the owner): density floor = Cohn-Elkies L
 FILES: lrc14_{R_vs_energy,R_kissing,smooth_alpha2}_kps_S97.py(+.out); reflection the-egrid-residual-is-poisson-summation-and-its-kissing-number-kps-S97.md; HYP-5567 updated.
 
 NEXT: (a) explicit c in |R|<=c*kissing (sum LEM-011 shells); (b) grid-lattice AP-max-kissing (extend mac-mini-S25 to L_V); (c) this = Cohn-Elkies magic function on X0(14) -- the Viazovska-style route. Fleet: existence has THREE converging closures (LEM-013 exhaustive+adversarial, opus-S170 smooth alpha=2, my E_grid kissing) -- covering leg robust.
-## mac-mini-2026-07-09-S64 -- CREATIVE ANGLE on the 7-structured mu-floor: it IS the Z/7-coloring problem (past-work connection to mac-mini-S6/HYP-2703); mod-7 + gcd(7,Vmax) decomposition reframes + partially closes the last residual
+## mac-mini-2026-07-09-S64 -- NON-STRICT criterion DISSOLVES the 7-structured hardness: dissociated tight case = wraparound boundary spread=6V/7 (j=1, maxgap=1/7 EXACTLY); + Z/7 reframe, first-moment ruled out, kps-S97 kissing stress-tested
 
-Prompt (owner): creative angles on the mu-floor; look back through past work for connections.
+Prompt (owner): creative angles on the mu-floor + past-work connections; then "continue + extend the ideas incoming from other agents."
+
+**HEADLINE (2nd half, extending kps-S96/S97 kissing route + klein-S201 boundary).** The scary
+7-structured wall (arc-count MISTAKE-128, moments dead S63, |R|/lead->0.87 resonant grid) was a
+STRICT-vs-NON-STRICT artifact. LRC(14) loneliness M>=1/14 <=> maxgap >= 1/7 (NON-strict: equality
+M=1/14 satisfies the conjecture). Scoring DISSOCIATED (longest-AP<=k-6) 7-structured sets on 7|V by
+exact margin m=max_j(maxgap*7 - V), bucketed by spread:
+  spread<6V/7: margin>=14 (j=1) | spread=6V/7: margin=0 UNIQUE KNIFE-EDGE (j=1: phases fill [0,6/7],
+  wraparound=1/7 exactly) | spread>6V/7: margin>=77 (COMFORTABLE). ZERO counterexamples. Knife-edge
+  sets: all residues, |S7|=k-6=7 (S7=length-7 AP step 7). => dissociated tight case closed by the
+NON-STRICT j=1 wraparound (no resonance/kissing/moment). |R|/lead=0.87 was the knife-edge (strict-W=0)
+leaking into the strict-W average; wide regime spread>6V/7 is comfortable (kps kissing/opus smooth
+apply w/ room). Split is spread vs 6V/7, NOT gcd(7,V). Consistent w/ klein MISTAKE-129 (tight AP
+maxgap=1/13 genuinely <1/7 = density-floor territory; my knife-edge is =1/7 exactly = good-period).
+LEAN: good_period_j1_wraparound_nonstrict (7*spread<=6*Vmax=>gapLen>=1/7), sorry-free, builds.
+Reflection the-nonstrict-criterion-dissolves-the-7structured-hardness-macmini-S64. Messaged klein+kps.
+Secondary: first-moment-vanishing RULED OUT (Weyl corrections genuinely negative). Files:
+lrc14_{nonstrict_knife_edge,kissing_resonant_grid,first_moment_vanishing}_macmini_S64 (+outs).
+
+---
+### (1st half) CREATIVE ANGLE: the 7-structured mu-floor IS the Z/7-coloring problem (past-work mac-mini-S6/HYP-2703)
 
 BREAKTHROUGH IN FRAMING (not yet a full closure). The last covering-case residual -- the 7-structured
 dissociated good-period mu-floor (moments PROVEN dead, S63) -- is the project's OLDEST object seen
