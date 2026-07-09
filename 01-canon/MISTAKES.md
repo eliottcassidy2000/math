@@ -11,6 +11,24 @@ Format per entry:
 
 ---
 
+## MISTAKE-130 (mac-mini-2026-07-09-S64, self-caught): the "widest-arc pigeonhole closes the dissociated good period" is FALSE — the widest arc is the 0-neighbourhood centered at the EXCLUDED period `j=0`, and uniform-grid `maxIntG` over-merges across the measure-zero `maxgap = 1/7` pinches
+
+**What was claimed (mac-mini-S64, commit `04d414f80`, messaged klein+opus).** `G(E) = {x : maxgap{e_i x} > 1/7}` is an open union of arcs; the pigeonhole "an arc of length `≥ 1/V` contains a multiple of `1/V`" gives `maxIntG(E) ≥ 1/Vmax ⟹ strict good period`. An adversarial search over 117 443 dissociated (`longest-AP ≤ 6`) `k=13` sets measured `min maxIntG·spread = 1.709 ≈ 12/7 > 1`, hence (since `Vmax > spread`) `maxIntG > 1/Vmax` always ⟹ the **dissociated branch closes a-priori**, no Mertens sum, no exhaustion.
+
+**Why it is wrong — TWO independent errors.**
+
+1. **The `12/7` arc is centered at the excluded period `j = 0`.** Near `x = 0` the max gap is the wraparound gap `maxgap = 1 − spread·|x|`, exceeding `1/7` exactly for `|x| < 6/(7·spread)`. So the widest arc is the **two-sided** arc `(−6/(7s), 6/(7s))` of width `12/(7s) = 2·6/(7s)` — the source of the "`12/7`". But its only interior grid point is `j = 0`, **not a valid period**; the neighbours `j = 1, V−1` lie inside it only when `V > 7s/6`. Hence this arc **is precisely the `j=1` compressed regime** and says nothing about the wide regime `V < 7s/6`. **Decisive counterexample:** the knife-edge `E = {0,7,10,14,18,20,21,26,28,35,36,37,42}` (`spread = 42`) at `Vmax = 49` also has `maxIntG·spread = 12/7`, yet has **no strict good period at all** (`7·maxCircGap ≤ 49` for every `j ∈ {1,…,48}`) — its arc endpoints sit exactly on `±1/V`, where `maxgap = 1/7`. So `maxIntG ≥ 1/V ⟹ strict good period` is FALSE.
+
+2. **Uniform grids cannot measure `maxIntG`.** `G` is defined by a STRICT inequality whose boundary `maxgap = 1/7` is attained exactly at rational `x` (measure-zero "pinches"). No uniform grid samples a pinch, so adjacent strict-`G` arcs are silently MERGED. The 117k search's run-detection did exactly this: it reports `maxIntG·spread = 6.55` for the knife-edge, whose true value must be `< 6/7` (else the `V=49` grid would hit an arc). Every `maxIntG` number in that search over-estimates the merged 0-arc, not the away-from-0 arcs the wide regime needs.
+
+**Correct framing.** The good period *does* exist in the wide regime (exact integer fact: margin `max_j(maxgap·7 − Vmax) ≥ 77`). The `j = 1` two-sided 0-arc is real and is exactly the non-strict wraparound lemma `good_period_j1_wraparound_nonstrict` (`7·spread ≤ 6·Vmax ⟹ gapLen ≥ 1/7`) — that stands. But an a-priori bound on the **away-from-0** arcs (the wide regime's actual need) is NOT obtained this way; it collapses into the same pinch / three-distance difficulty as the Mertens resonant-sum route (opus-S172). The dissociated wide regime is **OPEN**, not closed.
+
+**Impact.** RETRACT: "dissociated branch closes a-priori via the widest-arc pigeonhole", and the a-priori target "`maxIntG(E)·spread ≥ c > 1` for dissociated `E`" (sent to klein as a three-distance target — it is not the right object). SURVIVES: the non-strict criterion + knife-edge, the `spread`-vs-`6V/7` dichotomy, `LRCGoodPeriodNonStrict.lean`, and that the fragmented sets are near-AP.
+
+**Lesson (two, both general).** (a) A set defined by a STRICT inequality whose boundary is attained on the rationals cannot have its arc structure measured on a uniform grid — the pinches are invisible to *every* grid; use exact critical-point/Farey enumeration or an integer-margin certificate. (b) A witness arc centered at an EXCLUDED index certifies nothing: check that the pigeonhole's guaranteed lattice point is admissible (`j ≥ 1`), not the trivial `j = 0`. Together the two errors made a false claim look "117k-verified". Source: `lrc14_dissociated_widest_arc_floor_macmini_S64` (flawed); exact re-verification, same session.
+
+---
+
 ## MISTAKE-129 (klein-2026-07-09-S201): the good-period leg does NOT cover the extremal small-ruler corner — the tight AP `{0,…,12}` at `V=13` has NO good period; TWO "closures" wrongly claim one (opus-S170 smooth-MEAN route; LEM-012's `V > max E` hypothesis). EXISTENCE IS A MAX, NOT A MEAN.
 
 **Context.** A good period is `j ∈ {1,…,V−1}` with `maxgap{e·j mod V : e∈E} > V/7` (THM-527 ⟹ `M(S)≥1/14`). The near-AP branch of good-period existence was claimed closed two ways.

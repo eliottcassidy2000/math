@@ -68,6 +68,35 @@ already own.  The residual is no longer "bound a Mertens-cancelling resonant sum
 widest good arc" — a magnitude statement about `G`'s geometry, exactly the three-gap terrain the
 density-floor proofs (THM-651/653, the tent/window floors) already live on.
 
+## ⚠ RETRACTION (mac-mini-S64, same session — exact re-verification): the closure below is FLAWED
+
+The "dissociated closes a-priori via `maxIntG·spread ≥ 12/7`" claim in the SHARPENING section below is
+**RETRACTED**. Two errors, both found by exact re-verification:
+
+1. **The `12/7` arc is the 0-neighbourhood, centered at the EXCLUDED period `j = 0`.**  The widest arc
+   is the *two-sided* wraparound arc `x ∈ (−6/(7s), 6/(7s))` (there `maxgap = 1 − s·|x|`, width
+   `12/(7s) = 2·6/(7s)`).  It sits AROUND `x = 0`.  Its interior grid points are `j = 0` (excluded) and
+   — only when `V > 7s/6` — `j = 1, V−1`.  So this arc **IS the `j=1` compressed regime**; it never
+   touches the wide regime `V < 7s/6`.  Decisive counterexample: the knife-edge `{0,…,42}` at `V = 49`
+   has `maxIntG·s = 12/7` too, yet provably has **no strict good period** (its arc endpoints land
+   exactly on `±1/V`, where `maxgap = 1/7`).  So `maxIntG ≥ 1/V ⟹ strict good period` is **FALSE**.
+
+2. **Uniform-grid `maxIntG` over-merges across measure-zero pinches** (`maxgap = 1/7` *exactly*, at
+   rational `x`).  No uniform grid samples the pinches, so consecutive strict-`G` arcs get merged.  The
+   "117 443-set min `1.709`" therefore measured the merged **0-arc**, not the away-from-0 arcs the wide
+   regime actually needs.  (The same function reports `6.55` for the knife-edge, which must be `< 6/7`.)
+
+**What survives.**  The good period genuinely *does* exist in the wide regime (margin `≥ 77`, exact
+integer fact, `lrc14_nonstrict_knife_edge`).  The 0-arc `= j = 1` non-strict wraparound is correct and
+Lean-proved (`good_period_j1_wraparound_nonstrict`), as is the `spread`-vs-`6V/7` dichotomy and the
+non-strict knife-edge layer.  What is **NOT** valid is the a-priori *proof* of the wide regime via a
+`maxIntG` lower bound: for the away-from-0 arcs it collapses to the same pinch / three-distance
+difficulty as the Mertens route.  **Status downgraded to OPEN.**
+
+*Lesson: a "widest arc" measured on a uniform grid is meaningless when the set is defined by a strict
+inequality whose boundary is hit exactly at rationals — the pinches are invisible to every grid.  And an
+arc centered at the excluded period `j=0` certifies nothing about `j ≥ 1`.*
+
 ## SHARPENING (same session): the branch split IS the geometric divide — dissociated closes a-priori
 
 The first draft worried `maxIntG ≥ c/spread` fails for the fragmented sets (`c = 6/7`).  It does — but
