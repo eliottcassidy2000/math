@@ -36,6 +36,27 @@ VERIFIED (exact rationals, witnessMP=14249/252252): min D3(k) >= momentBar(k) fo
 NET WIN: hfloor's open dependency moves from the never-proved standalone Lemma A (RETIRED, unnecessary) to THM-661 -- the fleet's ACTUAL proved density floor. RESIDUE = THM-661's own decorrelation-tail coupled region (LEM-005 diam[18,35]), shared by EVERY route since nu=mu -- not a new gap, concentrated where the transfer machinery (monad THM-669/670, boxeph mu-level transfer HYP-5722, klein modular supply HYP-5732) is aimed. Files: LRCWitnessMomentFloor.lean, lrc14_momentfloor_bars_check_opus_S186; reflection hfloor-routed-through-the-proved-moment-floor-lemma-A-retired-opus-S186; HYP-5760.
 
 ---
+## klein-2026-07-09-S211 -- THM-671 PART 6 RUN (THM-673): the supply argument corrected to the AGGREGATED form -- dispersal lemma PROVED (m!=0 mass totals W1(H), V-free); per-modulus envelope prediction REFUTED (corr ~ 0: SIGNS matter -- the Mertens/box lesson at the modular level); the corrected target avg_q B5 > 0 VERIFIED on all generic covering instances (+0.05..+0.12), negative exactly on the (near-)dilated branch which E_H separates 7x and PRIMITIVITY thins
+
+Prompt (owner): run THM-671 part 6.
+
+Two experiments, two honest corrections, one verified corrected target; canonized as THM-673 (MIXED status).
+
+**(1) BINARY RESOLUTION IS VACUOUS.** First attempt posed part 6 as counting 'resolved' moduli (no support-<=5 height-<=H m!=0 resonance). Measured: 100% of moduli in (V,2V] are 'bad' at H=2 -- support-5 height-2 sums j.v are DENSE, every q has thousands of representations, each of tiny envelope weight (1/7)^5. The dichotomy must be WEIGHTED mass, not binary.
+
+**(2) DISPERSAL LEMMA (proved + verified).** Sum_{q in (V,2V]} R_H(S,q) <= W1(H), V-INDEPENDENT (each (j, m!=0) pins exactly one q = (j.v)/m; one-line proof). Measured: 100-143 across V = 91..280 and instances (incl. @91, adversarial, dilated). Markov => per-modulus average mass W1/V -> 0, but W1 ~ 10^2 => per-q envelope control only at V ~ 10^3+.
+
+**(3) THE ENVELOPE REFUTATION (load-bearing negative).** Tested deficit(q) := 0.1221 - B5(S,q)/(q-1) against the per-modulus mass R_H(q): corr = -0.28..+0.40 ~ 0 across 9 instances. The absolute envelope min(1/7, 1/(2|j|)) erases height information for |j| <= 3 and drops SIGNS; the true resonance contributions are signed K-hat products that cancel. Second independent instance of the project's standing lesson (klein-S198 Mertens warning; kps-S89 box: never bound a signed object by absolute envelopes when cancellation is structural). PER-MODULUS a-priori envelope resolution is DEAD -- per-q certification stays computational (THM-671's B5), and the a-priori statement must be AGGREGATED.
+
+**(4) THE CORRECTED TARGET, VERIFIED.** avg_q B5(S,q)/(q-1) over q in (V,2V]: +0.1001 (adv-worst-120, 100% of moduli positive), +0.0639, +0.0506, +0.1206 (@91, 98.9%), +0.0964 (adv-280, 99.3%) -- POSITIVE WITH MARGIN on every generic covering instance; NEGATIVE exactly on the (near-)dilated-interval family (2*{1..13}: -2.19; one-bump perturbation: -2.84). The exact-relation budget E_H (support<=5, height<=2, envelope-weighted) separates the branch by 7x: 1.81 vs 0.07-0.25. STRUCTURAL THINNING: exact dilations c*{1..13} have gcd = c -- IMPRIMITIVE, excluded by normalization; only gcd-breaking perturbations enter the branch. Even branch instances keep max B5/q > 0 (0.22/0.32) -- THM-671's certificate universality is untouched; only the a-priori AVERAGED argument needs the branch.
+
+**CANON: THM-673 (the aggregated-B5 supply skeleton).** (A) dispersal PROVED; (B) envelope prediction REFUTED (documented); (C) aggregated target verified + the two named remaining items: (C1) the SIGNED low-relation box for avg_q S_d (closed-form per exact relation, kps-S89 box pattern -- replaces envelopes); (C2) E_H-rigidity stability (E_H > E0 ~ 0.3-0.5 => within explicit distance of c*{1..13} => imprimitive core + perturbation census; stability version of LEM-015/LRCSchurRigidity); (C3) the finite band enumeration.
+
+COLLISIONS handled at session start: HYP-5758 (opus renamed their colliding 5722 onto my confirmed 5758 -- flagged, wire-priority mine, suggested 5760) + THM-667 (monad grid-port renamed onto my adaptive-split ladder -- flagged, suggested vacant 666). Messages sent; no content disputes.
+
+FILES: THM-673; lrc14_part6_supply_klein_S211.py(+out), lrc14_part6_weighted_mass_klein_S211.py(+out), lrc14_avg_B5_klein_S211.out; HYP-5761 PARTIALLY-TRUE (resolved); log; memory.
+
+NEXT: (a) (C1) the signed box -- exact closed-form contribution of one m=0 relation to avg_q S_d, then box the finite list (THE remaining analysis item; kps/opus's moment machinery is shaped for it); (b) (C2) quantitative Schur-rigidity stability (opus LEM-015 + kps LRCSchurRigidity are the equality case; need the near-equality version); (c) Lean LRCDiscreteBonferroni.lean unchanged priority (decide-shaped, feeds GrandAssembly).
 
 ## death-star-2026-07-09-S2 -- LRCComposedRealization.lean DELIVERED (kernel-pure): the LEAN CORE of LEM-014 -- the P-separated composed realization is now a THEOREM (slow-leg 1-Lipschitz transport + factored per-runner cluster clearance + P∪L composition to Mreach>=1/14 at the explicit LEM-014 time)
 

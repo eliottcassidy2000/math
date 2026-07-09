@@ -1,0 +1,34 @@
+==============================================================================
+HYP-5761 (corrected): weighted resonance mass and the B5 deficit (klein-S211)
+==============================================================================
+
+per-instance summary (H=2, support<=5):
+          name    V     E_H sumR=W1act  W1act/V corr(def,R) minB5/q lowR minB5/q all E_H+minR->pred
+   rand-V120-0  120  0.2532    109.494   0.9125      -0.042          nan      0.0128
+   rand-V120-1  120  0.2494     97.987   0.8166      -0.237          nan      0.0142
+   rand-V120-2  120  0.2455    110.498   0.9208       0.399          nan     -0.3902
+   rand-V200-0  200  0.1637     92.245   0.4612      -0.182          nan      0.0554
+   rand-V200-1  200  0.1279    117.503   0.5875       0.173          nan     -0.0419
+   rand-V200-2  200  0.1189    109.954   0.5498       0.189          nan     -0.0348
+           @91   91  0.2362    118.755   1.3050      -0.280          nan      0.0000
+     adv-worst  120  0.1810    117.466   0.9789      -0.173          nan      0.0116
+      dilAP-2x   26  1.8116    143.133   5.5051       0.147          nan    -15.5686
+
+[Lemma A' verdict] sumR/V = the avg per-modulus m!=0 mass -- small and
+V-shrinking => low-mass moduli abound (Markov).
+
+[Lemma B'/C' verdict] intercept check: min-B5-over-low-mass-moduli vs E_H:
+   E_H= 0.1189  min-lowR-B5/q=     nan  rand-V200-2
+   E_H= 0.1279  min-lowR-B5/q=     nan  rand-V200-1
+   E_H= 0.1637  min-lowR-B5/q=     nan  rand-V200-0
+   E_H= 0.1810  min-lowR-B5/q=     nan  adv-worst
+   E_H= 0.2362  min-lowR-B5/q=     nan  @91
+   E_H= 0.2455  min-lowR-B5/q=     nan  rand-V120-2
+   E_H= 0.2494  min-lowR-B5/q=     nan  rand-V120-1
+   E_H= 0.2532  min-lowR-B5/q=     nan  rand-V120-0
+   E_H= 1.8116  min-lowR-B5/q=     nan  dilAP-2x
+
+   If min-lowR-B5/q ≈ 0.1221 - c1*E_H with a stable c1, Lemma B' holds and
+   E0 = 0.1221/c1 is the branch threshold for Lemma C'.
+
+DONE.

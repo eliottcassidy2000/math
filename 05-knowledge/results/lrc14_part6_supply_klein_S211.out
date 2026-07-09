@@ -1,0 +1,43 @@
+==============================================================================
+HYP-5761 / THM-671 part 6: the a-priori resolved-modulus supply (klein-S211)
+==============================================================================
+
+Lemma A crude bound P(2) <= 26475176  (V-independent).
+
+              instance    V #bad(H=2)   %bad   E_H(S)  #rel  minB5/q good  minB5/q bad all good>0
+             rand-V120  120       120 100.0%   0.2532  1267           nan       0.0128      False
+             rand-V120  120       120 100.0%   0.2494  1449           nan       0.0142      False
+             rand-V120  120       120 100.0%   0.2455  1474           nan      -0.3902      False
+             rand-V200  200       200 100.0%   0.1637   922           nan       0.0554      False
+             rand-V200  200       200 100.0%   0.1279   733           nan      -0.0419      False
+             rand-V200  200       200 100.0%   0.1189   781           nan      -0.0348      False
+             rand-V300  300       300 100.0%   0.1216   802           nan      -0.3256      False
+             rand-V300  300       300 100.0%   0.0674   449           nan       0.0447      False
+             rand-V300  300       300 100.0%   0.0919   471           nan       0.0375      False
+          @91 7-struct   91        91 100.0%   0.2362  1444           nan       0.0000      False
+         adv-worst-120  120       120 100.0%   0.1810  1074           nan       0.0116      False
+  dilated-AP 2*{1..13}   26        26 100.0%   1.8116 10450           nan     -15.5686      False
+
+[Lemma A verdict] #bad is V-independent-ish and << V; P(H) is a gross
+over-count (each (U,j,m) rarely lands an integer q in range).
+
+[Lemma B/C regression] min-good-B5/q vs the exact budget E_H(S):
+   E_H= 0.0674  min-good-B5/q=     nan  deficit-from-iid=     nan   rand-V300
+   E_H= 0.0919  min-good-B5/q=     nan  deficit-from-iid=     nan   rand-V300
+   E_H= 0.1189  min-good-B5/q=     nan  deficit-from-iid=     nan   rand-V200
+   E_H= 0.1216  min-good-B5/q=     nan  deficit-from-iid=     nan   rand-V300
+   E_H= 0.1279  min-good-B5/q=     nan  deficit-from-iid=     nan   rand-V200
+   E_H= 0.1637  min-good-B5/q=     nan  deficit-from-iid=     nan   rand-V200
+   E_H= 0.1810  min-good-B5/q=     nan  deficit-from-iid=     nan   adv-worst-120
+   E_H= 0.2362  min-good-B5/q=     nan  deficit-from-iid=     nan   @91 7-struct
+   E_H= 0.2455  min-good-B5/q=     nan  deficit-from-iid=     nan   rand-V120
+   E_H= 0.2494  min-good-B5/q=     nan  deficit-from-iid=     nan   rand-V120
+   E_H= 0.2532  min-good-B5/q=     nan  deficit-from-iid=     nan   rand-V120
+   E_H= 1.8116  min-good-B5/q=     nan  deficit-from-iid=     nan   dilated-AP 2*{1..13}
+
+   (E0 = the budget level where min-good-B5 crosses 0; instances above it
+    should be the near-dilated-interval family only)
+
+   crude linear fit: deficit ≈ +nan + nan·E_H  (Lemma B's c1)
+
+DONE.

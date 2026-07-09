@@ -1,0 +1,12 @@
+          instance    V  avg B5/q  %q B5>0  max B5/q  min B5/q
+     adv-worst-120  120    0.1001   100.0%    0.1887    0.0116
+          adv-120b  120    0.0639    79.2%    0.1833   -0.0815
+           adv-200  200    0.0506    61.5%    0.2000   -0.2562
+               @91   91    0.1206    98.9%    0.3276    0.0000
+   dilAP-2x (V=26)   26   -2.1941     3.8%    0.2222  -15.5686
+ near-dilAP (V=28)   28   -2.8362    10.7%    0.3158  -14.9434
+           adv-280  280    0.0964    99.3%    0.1830   -0.0102
+
+If avg > 0 uniformly (ex the dilated family), the aggregated theorem
+  Sum_q B5 > 0  is the right a-priori target; the dilated family is the
+  Lemma-C branch (E_H separates it: 1.81 vs 0.07-0.25).
