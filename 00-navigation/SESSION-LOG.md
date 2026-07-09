@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-09-S110 -- FORMALIZED M(AP)>=1/14 (the LRC(14) equality extremal) + WIRED the density floor to the reach (LRCAPExtremal.lean, sorry-free)
+
+Prompt (owner): formalize M(AP)=1/14 and wire the window to the density floor.
+
+BUILT (LRCAPExtremal.lean, sorry-free):
+1. mreach_AP_ge: the AP runner set v_i = i (i=1..13) is LONELY, Mreach >= 1/14, witnessed at tau=1/14 -- nearInt(i/14)=min(i,14-i)/14 >= 1/14. This is the LRC(14) EQUALITY extremal (the >= half = the loneliness LRC asserts; the AP achieves M=1/14 exactly, kps-S109). Via a new general lemma one_div_le_nearInt_of_not_dvd (nearInt(k/n)>=1/n when n does not divide k -- the balanced remainder has |.|>=1) + my S106 le_nearInt_of_forall_int + S99b Mreach_ge_of_lonely_instant.
+2. mreach_ge_of_rhoStar_pos: WIRES the density floor to the reach. Given m_P <= rho* (THM-661, PROVED) + 0 < m_P (THM-530, m_P=14249/252252) + the reformulation bridge (0<rho* => exists lonely tau), yields Mreach >= 1/14. This is the CONTINUUM route -- NO ruler grid, NO slow-fast drift, NO bounded window -- so it covers the window (and EVERY cluster) once the bridge is supplied. The bridge (a point of positive good measure is a lonely time) is the sole remaining Part-A hypothesis, stated at the continuum (kps-S107/S108: run it on the smooth surrogate).
+
+SIGNIFICANCE: the window finite check (kps-S109) is now backed BOTH ways -- (a) directly (M>=1/14 verified, AP=1/14 exact, now the AP half formalized) AND (b) by the density floor (which certifies loneliness for ALL clusters at the continuum, making the window a cross-check not a dependency). The density-floor route sidesteps the drift/window entirely; its only open piece is the continuum reformulation bridge (much cleaner than the finite-Vmax grid version -- no drift, and run on the smooth W it has 1/V^2 not 1/V error, kps-S108).
+
+STATE: good-period leg's window = [directly verified S109 + AP formalized S110] ; density-floor route = [m_P>0 PROVED + reformulation bridge (continuum Part A, the clean shared node)]. FILES: LRCAPExtremal.lean.
+
+NEXT: the M(AP)<=1/14 pigeonhole (14 points {0,tau,...,13tau} => two within 1/14 => full equality); the continuum reformulation bridge (0<rho* => exists lonely tau) -- the clean Part-A node on the smooth surrogate.
+
 ## opus-2026-07-09-S178 -- the DISSOCIATED branch's looseness is UNIFORMLY Riesz-certifiable, DECOMPOSITION-FREE: sup_dissociated inf_R int(M*R)/int(R) <= 0.55 < 1 (margin >= 0.45) => inf L>0 dissociated, NO two-scale/drift (sidesteps mac-mini's r>=7 local-embedding impossibility) + NO Mertens
 
 Prompt (owner): keep pushing LRC math then formalization, pull often.
