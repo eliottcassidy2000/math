@@ -1,0 +1,32 @@
+====================================================================================================
+PART 1 -- THM-668 explicit witnesses (exact rationals)
+====================================================================================================
+  [S2 fail-1: 14*(AP\6) + 83]
+    u* = 4/23 (H-clearance 2/23 = 0.0870), branch j* = 7 (detuned clearance 0.4689)
+    tau* = 165/322, min clearance = 2/23 = 0.08696 >= 1/14 LONELY
+  [S2 fail-2: + 85]
+    u* = 4/23 (H-clearance 2/23 = 0.0870), branch j* = 6 (detuned clearance 0.4845)
+    tau* = 71/161, min clearance = 2/23 = 0.08696 >= 1/14 LONELY
+  [S2 2pert: 14*(AP\5) + 69]
+    u* = 4/19 (H-clearance 2/19 = 0.1053), branch j* = 8 (detuned clearance 0.4662)
+    tau* = 78/133, min clearance = 2/19 = 0.10526 >= 1/14 LONELY
+  [ratio>13: 14*{1..11,20}+167]
+    u* = 1/12 (H-clearance 1/12 = 0.0833), branch j* = 7 (detuned clearance 0.4940)
+    tau* = 85/168, min clearance = 1/12 = 0.08333 >= 1/14 LONELY
+  [ratio>13, gcd7: +161]
+    u* = 1/12 (H-clearance 1/12 = 0.0833), branch j* = 1 (detuned clearance 0.4583)
+    tau* = 13/168, min clearance = 1/12 = 0.08333 >= 1/14 LONELY
+  [g=7: 7*{1..12} + 90]
+    u* = 1/13 (H-clearance 1/13 = 0.0769), branch j* = 3 (detuned clearance 0.4396)
+    tau* = 40/91, min clearance = 1/13 = 0.07692 >= 1/14 LONELY
+  [g=2: 2*{1..12} + 13]
+    u* = 1/13 (H-clearance 1/13 = 0.0769), branch j* = 0 (detuned clearance 0.5000)
+    tau* = 1/26, min clearance = 1/13 = 0.07692 >= 1/14 LONELY
+
+====================================================================================================
+PART 2 -- THE d = 2 FRONTIER (union-coverage hunt, primitive covering, ratio > 13)
+====================================================================================================
+  tested 109 primitive covering ratio>13 d=2 constructions:
+    phi-composition fires: 109
+    branch search (u* + j) fires: 0
+    NEITHER (the true d=2 frontier): 0

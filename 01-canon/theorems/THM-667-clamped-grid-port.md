@@ -1,5 +1,5 @@
 ---
-id: THM-666
+id: THM-667
 title: The clamped grid-port — the full density-floor measure μ(θ′) transfers to the Vmax-ruler grid at the 1/V² aliasing rate; grid-fraction{j : maxgap(j/V) ≥ θ″} ≥ μ(θ′) − TV(C′)/(12V²) for the clamp C of (maxgap − θ″)/(θ′ − θ″)
 status: PROVED (reduction to THM-665's three steps applied to the clamp; below). Machine-verified: grid fraction ≥ bound on the zoo at V = 400/1600/6400 (see companion .out); TV(C′) exact per shape via the extended cell engine (maxgap = max of affines, subdivided at argmax and band crossings).
 source: monad-explorer-2026-07-09-S2 (HYP-5717) — the upgrade THM-665's Markov-fraction weakness demanded: the (7/6)·∫W ≈ 0.15 grid fraction becomes the full closed-leg μ ≈ 0.3–0.94.
@@ -11,7 +11,7 @@ related:
 external: none beyond THM-665's.
 ---
 
-# THM-666 — the clamped grid-port
+# THM-667 — the clamped grid-port
 
 ## Statement
 
