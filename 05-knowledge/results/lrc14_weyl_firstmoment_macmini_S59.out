@@ -1,0 +1,24 @@
+WEYL first-moment: E_grid[W] vs iid (6/7)^k vs threshold 6/(7Vmax), structured large-spread
+
+k=11: iid (6/7)^k = 0.18348
+   2-block  s= 30 Vmax=  31: E_grid[W]=0.15193 (iid 0.1835, dev -0.0316); sum_{j>=1}W=3.853>0? True; >6/(7Vmax)? True
+   2-block  s= 30 Vmax=  37: E_grid[W]=0.16362 (iid 0.1835, dev -0.0199); sum_{j>=1}W=5.197>0? True; >6/(7Vmax)? True
+   2-block  s= 30 Vmax=  61: E_grid[W]=0.18413 (iid 0.1835, dev +0.0007); sum_{j>=1}W=10.375>0? True; >6/(7Vmax)? True
+   2-block  s= 60 Vmax=  61: E_grid[W]=0.15503 (iid 0.1835, dev -0.0285); sum_{j>=1}W=8.600>0? True; >6/(7Vmax)? True
+   2-block  s= 60 Vmax=  67: E_grid[W]=0.17662 (iid 0.1835, dev -0.0069); sum_{j>=1}W=10.977>0? True; >6/(7Vmax)? True
+   2-block  s= 60 Vmax= 121: E_grid[W]=0.19091 (iid 0.1835, dev +0.0074); sum_{j>=1}W=22.243>0? True; >6/(7Vmax)? True
+   2-block  s=120 Vmax= 121: E_grid[W]=0.15723 (iid 0.1835, dev -0.0262); sum_{j>=1}W=18.168>0? True; >6/(7Vmax)? True
+   2-block  s=120 Vmax= 127: E_grid[W]=0.18329 (iid 0.1835, dev -0.0002); sum_{j>=1}W=22.421>0? True; >6/(7Vmax)? True
+   2-block  s=120 Vmax= 241: E_grid[W]=0.18773 (iid 0.1835, dev +0.0043); sum_{j>=1}W=44.386>0? True; >6/(7Vmax)? True
+
+k=13: iid (6/7)^k = 0.13480
+   2-block  s= 30 Vmax=  31: E_grid[W]=0.11625 (iid 0.1348, dev -0.0186); sum_{j>=1}W=2.747>0? True; >6/(7Vmax)? True
+   2-block  s= 30 Vmax=  37: E_grid[W]=0.13044 (iid 0.1348, dev -0.0044); sum_{j>=1}W=3.969>0? True; >6/(7Vmax)? True
+   2-block  s= 30 Vmax=  61: E_grid[W]=0.13821 (iid 0.1348, dev +0.0034); sum_{j>=1}W=7.574>0? True; >6/(7Vmax)? True
+   2-block  s= 60 Vmax=  61: E_grid[W]=0.12401 (iid 0.1348, dev -0.0108); sum_{j>=1}W=6.707>0? True; >6/(7Vmax)? True
+   2-block  s= 60 Vmax=  67: E_grid[W]=0.13792 (iid 0.1348, dev +0.0031); sum_{j>=1}W=8.384>0? True; >6/(7Vmax)? True
+   2-block  s= 60 Vmax= 121: E_grid[W]=0.14946 (iid 0.1348, dev +0.0147); sum_{j>=1}W=17.228>0? True; >6/(7Vmax)? True
+   2-block  s=120 Vmax= 121: E_grid[W]=0.12616 (iid 0.1348, dev -0.0086); sum_{j>=1}W=14.409>0? True; >6/(7Vmax)? True
+   2-block  s=120 Vmax= 127: E_grid[W]=0.14377 (iid 0.1348, dev +0.0090); sum_{j>=1}W=17.402>0? True; >6/(7Vmax)? True
+   2-block  s=120 Vmax= 241: E_grid[W]=0.14729 (iid 0.1348, dev +0.0125); sum_{j>=1}W=34.639>0? True; >6/(7Vmax)? True
+

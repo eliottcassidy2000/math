@@ -1,0 +1,21 @@
+=== (a) exact T(V') vs 1/49, and the closed form ===
+  closed form T(V')=(1+2R)/(7V')-R(R+1)/V'^2, R=floor((V'-1)/7): VERIFIED V'=1..399
+  max |T(V')-1/49| over V'=1..399 = 0.12245 at V'=1
+  max |T(V')-1/49|*V' over V'=1..399 = 0.1224  => |T(V')-1/49| <= 0.122/V'
+  small V': T(1)=0.1429 T(2)=0.0714 T(7)=0.0204 T(14)=0.0204  (1/49=0.0204)
+
+=== (b) E_grid[W] - (6/7)^k = pairwise C_2 + higher-order, structured clusters ===
+k=11 (iid (6/7)^k=0.18348):
+   2-block s= 30 Vmax= 31: E_grid[W]=0.15193 full corr=-0.03155 = pairwise +0.01402 + higher-order -0.04557
+   2-block s= 30 Vmax= 37: E_grid[W]=0.16362 full corr=-0.01986 = pairwise +0.00820 + higher-order -0.02805
+   2-block s= 60 Vmax= 61: E_grid[W]=0.15503 full corr=-0.02845 = pairwise +0.00302 + higher-order -0.03147
+   2-block s= 60 Vmax= 67: E_grid[W]=0.17662 full corr=-0.00686 = pairwise +0.00300 + higher-order -0.00986
+   2-block s=120 Vmax=121: E_grid[W]=0.15723 full corr=-0.02625 = pairwise +0.00077 + higher-order -0.02702
+   2-block s=120 Vmax=127: E_grid[W]=0.18329 full corr=-0.00019 = pairwise +0.00042 + higher-order -0.00061
+k=13 (iid (6/7)^k=0.13480):
+   2-block s= 30 Vmax= 31: E_grid[W]=0.11625 full corr=-0.01855 = pairwise +0.01988 + higher-order -0.03843
+   2-block s= 30 Vmax= 37: E_grid[W]=0.13044 full corr=-0.00436 = pairwise +0.01163 + higher-order -0.01599
+   2-block s= 60 Vmax= 61: E_grid[W]=0.12401 full corr=-0.01079 = pairwise +0.00428 + higher-order -0.01507
+   2-block s= 60 Vmax= 67: E_grid[W]=0.13792 full corr=+0.00312 = pairwise +0.00426 + higher-order -0.00113
+   2-block s=120 Vmax=121: E_grid[W]=0.12616 full corr=-0.00864 = pairwise +0.00511 + higher-order -0.01375
+   2-block s=120 Vmax=127: E_grid[W]=0.14377 full corr=+0.00897 = pairwise +0.00059 + higher-order +0.00838

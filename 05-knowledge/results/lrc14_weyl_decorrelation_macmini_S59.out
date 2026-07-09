@@ -1,0 +1,18 @@
+DECORRELATION: E_grid[W] -> (6/7)^k as spread grows (random primitive, Vmax=spread+7)
+
+k=11: iid (6/7)^k = 0.18348
+   spread=  20: mean|E_grid[W]-iid|=0.01148  meanE_grid[W]=0.19201  min #good periods=26
+   spread=  40: mean|E_grid[W]-iid|=0.02195  meanE_grid[W]=0.16153  min #good periods=44
+   spread=  80: mean|E_grid[W]-iid|=0.00480  meanE_grid[W]=0.18233  min #good periods=82
+   spread= 160: mean|E_grid[W]-iid|=0.00557  meanE_grid[W]=0.17884  min #good periods=164
+   spread= 320: mean|E_grid[W]-iid|=0.00381  meanE_grid[W]=0.18099  min #good periods=324
+   spread= 640: mean|E_grid[W]-iid|=0.00236  meanE_grid[W]=0.18192  min #good periods=642
+
+k=13: iid (6/7)^k = 0.13480
+   spread=  20: mean|E_grid[W]-iid|=0.00991  meanE_grid[W]=0.14126  min #good periods=20
+   spread=  40: mean|E_grid[W]-iid|=0.02173  meanE_grid[W]=0.11307  min #good periods=44
+   spread=  80: mean|E_grid[W]-iid|=0.00701  meanE_grid[W]=0.13249  min #good periods=78
+   spread= 160: mean|E_grid[W]-iid|=0.00741  meanE_grid[W]=0.12805  min #good periods=162
+   spread= 320: mean|E_grid[W]-iid|=0.00317  meanE_grid[W]=0.13278  min #good periods=312
+   spread= 640: mean|E_grid[W]-iid|=0.00124  meanE_grid[W]=0.13462  min #good periods=628
+
