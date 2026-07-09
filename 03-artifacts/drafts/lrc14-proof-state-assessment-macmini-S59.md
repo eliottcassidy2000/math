@@ -64,3 +64,22 @@ But the **ready pieces** are substantial and `native_decide`/elementary-shaped:
 (b) begin the Lean assembly with the covering-case skeleton `[sieve] + [LRC≤13] + [ρ*≥m_P] +
 [good-period]` sorry-parameterized on link 6, then discharge the finite nodes. This session
 formalizes LEM-010(i) as the first concrete node.
+
+## S60 update (mac-mini) — R2 done, R3 refines the glue
+
+- **R2 CLOSED:** the k=12,13 density-floor tail rate is now a-priori. Via LEM-011, `|D3−D3_∞| ≤
+  C/(pd)` with `V_j = 0.25/0.16/0.10` (k=12), `0.24/0.16/0.10` (k=13), `C = 19.1/18.7`, `pd₀ =
+  101/65` — the k=11 computation reproduces opus-S157's `C=21.2, pd₀=160` exactly. Tail a-priori for
+  all of k=11,12,13 (LEM-009 R2 section). Link 5b (density floor) is fully a-priori.
+- **R3 REFINES the finite-`Vmax` glue (not just a writeup):** the good period must lie in `G_P ∩
+  Good_E`, and LEM-010's `j=1` (which clears `Good_E`) typically FAILS `G_P` (`‖p/Vmax‖ < 1/14` for
+  a small observer speed). The full good period is a **spread-out `j`** in the intersection — which
+  DOES exist (0 failures / ~6000 admissible spread-dense `(P,E)`), but the elementary `j=1` proves
+  only the cluster half. So the finite-`Vmax` glue is the *intersection* `G_P ∩ Good_E` grid-nonempty
+  question (measure `ρ*≥m_P`), same structure, and the `j*=O(k)` lemma should be stated for it.
+- **`j*=O(k)` still the one gap, now robustly O(k):** hard adversarial search (40k+ structured
+  clusters) gives `max j* = 7/9` at k=11/13, all `≤ ⌈7(k−1)/6⌉`; AP case proved. The general
+  simultaneous-clustering proof (and its `G_P`-intersection version) is the remaining mathematics.
+
+Net after S60: every analytic constant is a-priori; the covering case rests on the single Diophantine
+`j*=O(k)` lemma (for `G_P ∩ Good_E`), AP case proved, `0` counterexamples; plus Lean.
