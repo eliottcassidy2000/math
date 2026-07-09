@@ -130,6 +130,94 @@ theorem dilated_of_closedUnderDiff {S : Finset ℕ} (hne : S.Nonempty) (h0 : 0 �
   conv_lhs => rw [← hDS]
   rw [hDeq, hmaxk]
 
+/-- The Schur-triple count `E₃(S) = #{(a,b) ∈ S×S : a+b ∈ S}` (opus's `schurTriple_card` count). -/
+def E3 (S : Finset ℕ) : ℕ := ((S ×ˢ S).filter (fun p => p.1 + p.2 ∈ S)).card
+
+/-- **Bijection: `E₃(S) = C(k,2)` iff `S` is closed under positive differences.**  opus's injection
+`(a,b) ↦ {a,a+b}` of Schur pairs into the 2-subsets is a *bijection* exactly when every 2-subset `{x,y}`
+is hit, i.e. `(x, y−x)` is a Schur pair, i.e. `y−x ∈ S`. -/
+theorem schurCount_eq_choose_iff_closedUnderDiff (S : Finset ℕ) (h0 : 0 ∉ S) :
+    E3 S = S.card.choose 2 ↔ ClosedUnderDiff S := by
+  set P : Finset (ℕ × ℕ) := (S ×ˢ S).filter (fun p => p.1 + p.2 ∈ S) with hPdef
+  set φ : ℕ × ℕ → Finset ℕ := fun p => ({p.1, p.1 + p.2} : Finset ℕ) with hφ
+  have hpos : ∀ p ∈ P, 0 < p.2 := by
+    intro p hp
+    simp only [hPdef, Finset.mem_filter, Finset.mem_product] at hp
+    exact Nat.pos_of_ne_zero (fun h => h0 (h ▸ hp.1.2))
+  have hmem : ∀ p ∈ P, p.1 ∈ S ∧ p.2 ∈ S ∧ p.1 + p.2 ∈ S := by
+    intro p hp
+    simp only [hPdef, Finset.mem_filter, Finset.mem_product] at hp
+    exact ⟨hp.1.1, hp.1.2, hp.2⟩
+  have hsub : P.image φ ⊆ S.powersetCard 2 := by
+    intro T hT
+    rw [Finset.mem_image] at hT
+    obtain ⟨p, hp, rfl⟩ := hT
+    obtain ⟨h1, _, h3⟩ := hmem p hp
+    rw [Finset.mem_powersetCard]
+    refine ⟨?_, ?_⟩
+    · intro z hz
+      simp only [hφ, Finset.mem_insert, Finset.mem_singleton] at hz
+      rcases hz with rfl | rfl
+      · exact h1
+      · exact h3
+    · exact Finset.card_pair (by have := hpos p hp; omega)
+  have hinj : Set.InjOn φ P := by
+    intro p hp q hq h
+    simp only [hφ] at h
+    have hp2 := hpos p hp; have hq2 := hpos q hq
+    have m1 : p.1 ∈ ({q.1, q.1 + q.2} : Finset ℕ) := by rw [← h]; simp
+    have m2 : p.1 + p.2 ∈ ({q.1, q.1 + q.2} : Finset ℕ) := by rw [← h]; simp
+    have m3 : q.1 ∈ ({p.1, p.1 + p.2} : Finset ℕ) := by rw [h]; simp
+    simp only [Finset.mem_insert, Finset.mem_singleton] at m1 m2 m3
+    have hp1q1 : p.1 = q.1 := by rcases m1 with h1 | h1 <;> rcases m3 with h3 | h3 <;> omega
+    exact Prod.ext hp1q1 (by rcases m2 with h2 | h2 <;> omega)
+  have hcardI : (P.image φ).card = E3 S := by rw [E3, ← hPdef, Finset.card_image_of_injOn hinj]
+  have hcardPC : (S.powersetCard 2).card = S.card.choose 2 := Finset.card_powersetCard 2 S
+  constructor
+  · intro hE
+    have hIeq : P.image φ = S.powersetCard 2 :=
+      Finset.eq_of_subset_of_card_le hsub (by rw [hcardI, hcardPC, hE])
+    intro x hx y hy hxy
+    have hTpc : ({x, y} : Finset ℕ) ∈ S.powersetCard 2 := by
+      rw [Finset.mem_powersetCard]
+      refine ⟨?_, Finset.card_pair (Nat.ne_of_lt hxy)⟩
+      intro z hz
+      simp only [Finset.mem_insert, Finset.mem_singleton] at hz
+      rcases hz with rfl | rfl
+      · exact hx
+      · exact hy
+    rw [← hIeq, Finset.mem_image] at hTpc
+    obtain ⟨p, hp, hpφ⟩ := hTpc
+    have hp2 := hpos p hp
+    obtain ⟨_, hp2S, hp3S⟩ := hmem p hp
+    simp only [hφ] at hpφ
+    have mx : x ∈ ({p.1, p.1 + p.2} : Finset ℕ) := by rw [hpφ]; simp
+    have my : y ∈ ({p.1, p.1 + p.2} : Finset ℕ) := by rw [hpφ]; simp
+    simp only [Finset.mem_insert, Finset.mem_singleton] at mx my
+    have hyx : y - x = p.2 := by rcases mx with h1 | h1 <;> rcases my with h2 | h2 <;> omega
+    rw [hyx]; exact hp2S
+  · intro hcl
+    have hsup : S.powersetCard 2 ⊆ P.image φ := by
+      intro T hT
+      rw [Finset.mem_powersetCard] at hT
+      obtain ⟨hTS, hT2⟩ := hT
+      obtain ⟨a, b, hab, rfl⟩ := Finset.card_eq_two.mp hT2
+      have haS : a ∈ S := hTS (Finset.mem_insert_self a {b})
+      have hbS : b ∈ S := hTS (Finset.mem_insert_of_mem (Finset.mem_singleton_self b))
+      rw [Finset.mem_image]
+      rcases Nat.lt_or_ge a b with hlt | hge
+      · refine ⟨(a, b - a), ?_, ?_⟩
+        · simp only [hPdef, Finset.mem_filter, Finset.mem_product]
+          exact ⟨⟨haS, hcl a haS b hbS hlt⟩, by rw [Nat.add_sub_cancel' (le_of_lt hlt)]; exact hbS⟩
+        · simp only [hφ]; rw [Nat.add_sub_cancel' (le_of_lt hlt)]
+      · have hlt : b < a := lt_of_le_of_ne hge (Ne.symm hab)
+        refine ⟨(b, a - b), ?_, ?_⟩
+        · simp only [hPdef, Finset.mem_filter, Finset.mem_product]
+          exact ⟨⟨hbS, hcl b hbS a haS hlt⟩, by rw [Nat.add_sub_cancel' (le_of_lt hlt)]; exact haS⟩
+        · simp only [hφ]; rw [Nat.add_sub_cancel' (le_of_lt hlt), Finset.pair_comm]
+    have hIeq : P.image φ = S.powersetCard 2 := Finset.Subset.antisymm hsub hsup
+    rw [← hcardI, hIeq, hcardPC]
+
 /-- **Converse: a dilated interval is closed under positive differences.** -/
 theorem closedUnderDiff_of_dilated {S : Finset ℕ} (h : DilatedInterval S) : ClosedUnderDiff S := by
   obtain ⟨d, hd0, hSeq⟩ := h
@@ -142,5 +230,13 @@ theorem closedUnderDiff_of_dilated {S : Finset ℕ} (h : DilatedInterval S) : Cl
     by_contra hcon; push_neg at hcon
     exact absurd hxy (not_lt.mpr (Nat.mul_le_mul_right d hcon))
   exact ⟨j - i, ⟨by omega, by omega⟩, by rw [Nat.sub_mul]⟩
+
+/-- **The equality case of the Schur-triple maximiser (full characterisation).**  For a finite set of
+positive naturals, `E₃(S) = C(k,2)` — the maximum — **iff** `S` is a dilated interval `{d,2d,…,kd}`.
+The discrete-rigidity companion of `LRCAPTight.mreach_AP_eq` (`M(AP)=1/14`). -/
+theorem schurCount_eq_choose_iff_dilated (S : Finset ℕ) (h0 : 0 ∉ S) (hne : S.Nonempty) :
+    E3 S = S.card.choose 2 ↔ DilatedInterval S := by
+  rw [schurCount_eq_choose_iff_closedUnderDiff S h0]
+  exact ⟨dilated_of_closedUnderDiff hne h0, closedUnderDiff_of_dilated⟩
 
 end LRCSchurRigidity

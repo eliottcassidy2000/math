@@ -1,3 +1,26 @@
+## kind-pasteur-2026-07-09-S114 -- FORMALIZED E3=C(k,2) <=> dilated interval (LRCSchurRigidity.lean, sorry-free, FULL equality characterization) + THM-668 grid-free pair-sum dispatch Lean leg (mac-mini's ask) + E3 hardness dispatcher script
+
+Prompt (owner): formalize E3=C(n,2) <=> dilated interval, add E3 to the dispatcher, keep doing relevant tasks toward completion.
+
+BUILT #1 -- LRCSchurRigidity.lean (sorry-free, 6 theorems): the FULL equality characterization of the Schur-triple maximiser (opus's LEM-015 <= bound => equality case).
+- ClosedUnderDiff / DilatedInterval defs.
+- dvd_of_closedUnderDiff (F1): every element of a difference-closed set is a multiple of min (strong induction, subtract-min).
+- dilated_of_closedUnderDiff (RIGIDITY, the hard direction): difference-closed + 0 not in S => dilated interval {d,2d,..,kd}. Via normalize D=S/d, D difference-closed containing 1 => down-closed to Icc 1 (max D), card pins max=k.
+- closedUnderDiff_of_dilated (easy converse).
+- schurCount_eq_choose_iff_closedUnderDiff (BIJECTION): E3=C(k,2) <=> ClosedUnderDiff, via opus's injection (a,b)->{a,a+b} being SURJECTIVE onto powersetCard 2 at equality (every 2-subset {x,y} => (x,y-x) Schur pair => y-x in S).
+- schurCount_eq_choose_iff_dilated: **E3(S)=C(k,2) <=> DilatedInterval S** -- the literal ask, sorry-free. Discrete-rigidity companion of LRCAPTight.mreach_AP_eq (M(AP)=1/14).
+NET-NEW vs opus-S184 (which used E3 at MEASURE level, nu-E3 corr -0.911 for Lemma A, only MAPPED the Lean endgame) -- the discrete Lean equality char is mine. 3-way E3 convergence (opus/mac-mini/kps) confirmed.
+
+BUILT #2 -- LRCPairSumDispatch.lean (sorry-free, mac-mini's explicit ask): the THM-668 grid-free pair-sum dispatch Lean leg.
+- nearInt_intDiv_ge_of_band: residue (a mod q) in band [q/14,13q/14] (integer ineqs q<=14r<=13q) => nearInt(a/q)>=1/14. Integer-exact, no grid.
+- mreach_ge_of_pairsum_band: pair-sum modulus q, multiplier p, all residues (v_l p mod q) in band => Mreach>=1/14. Composes with Mreach_ge_of_lonely_instant. THM-668 says the witness ALWAYS lives at such a p/q => this is the complete dispatch primitive.
+
+BUILT #3 -- lrc14_e3_dispatcher_kps_S114.py: the E3 HARDNESS-COORDINATE dispatcher. Computes E3 (Schur count = kill budget), enumerates pair-sum moduli (THM-668 complete), finds live rulers (not killed by Schur triples), tests the band, routes {high E3 => exact-check | low E3 => good-period}. VERIFIED: AP (E3=78/78, FEWEST live rulers=13, witness t=1/14, M=1/14, exact-check); 2*AP identical (dilation-invariant); offset odd-AP (E3=0, 25 live, M=1/2, good-period); geometric (E3=12, 79 live, good-period). E3 cleanly selects the cell.
+
+STATE: the Schur-triple maximiser equality case is Lean-formalized (E3=C(k,2)<=>dilated); the THM-668 grid-free dispatch primitive composes with my Mreach lemmas; E3 operationalized as the hardness scalar. FILES: LRCSchurRigidity.lean, LRCPairSumDispatch.lean, lrc14_e3_dispatcher_kps_S114.py/.out.
+
+NEXT: wire mreach_ge_of_pairsum_band into a native_decide dispatch on the 966 covering [1,18] sets (integer residues, grid-free per THM-668); the Schur-budget/live-ruler theorem (mac-mini's step 2: sub-saturated kill budget => live banded ruler); connect schurCount_eq_choose_iff_dilated to opus's measure-level LEM-015 (rigidity <=> the corr -0.911 saturation).
+
 ## opus-2026-07-09-S184 -- step 2 (theta-sum bound) RESOLVED into the moment-LP; MAPPED the LRC(14) formalization endgame (2 cruxes: Lemma A + hrefl window); the Schur BRIDGE for Lemma A (consecutive minimizes nu BECAUSE it maximizes E3, corr -0.911); renamed LEM-014->LEM-015 (boxeph collision)
 
 Prompt (owner): prove step 2 (theta-sum bound); synthesize incoming work, pull often; finish all LRC(14) formalization.
