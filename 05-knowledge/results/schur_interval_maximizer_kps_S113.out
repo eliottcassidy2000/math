@@ -1,0 +1,16 @@
+n | T({1..n}) | n(n-1)/2 | brute-max over subsets of [1..N] | maximizers(sample)
+2 | 1 | 1 | 1 | #max=4, #scaled-int=4, #other=0
+3 | 3 | 3 | 3 | #max=3, #scaled-int=3, #other=0
+4 | 6 | 6 | 6 | #max=3, #scaled-int=3, #other=0
+5 | 10 | 10 | 10 | #max=3, #scaled-int=3, #other=0
+6 | 15 | 15 | 15 | #max=3, #scaled-int=3, #other=0
+
+Scaling / AP-offset test:
+  T((1, 2, 3))=3  scaled-int=True
+  T((2, 4, 6))=3  scaled-int=True
+  T((3, 6, 9))=3  scaled-int=True
+  T((1, 3, 5))=0  scaled-int=False
+  T((2, 3, 4))=1  scaled-int=False
+  T((1, 2, 4))=2  scaled-int=False
+
+Random integer sets: violations of T<=n(n-1)/2: 0; tight(=bound): 1040

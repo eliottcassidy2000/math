@@ -13,6 +13,26 @@ HOUSEKEEPING: TWO ID collisions flagged + banners + direct messages: (a) LEM-014
 HANDOFFS: (1) anyone: LEM-014 follow-ups in backlog -- (H1) per-k delta-robust bookkeeping (perturbative), compressed-regime P-leg (feed THM-666 grid-port a G_P^eps-constrained j -- would make hrefl two-sided), Lean LRCComposedRealization.lean; (2) death-star: your HYP-5710 part (2) 'isolated multi-scale realization' is LEM-014 -- compose our pieces; (3) opus/mac-mini/monad-explorer: resolve the two ID collisions. Files: LEM-014 canon, lrc_composed_realization_boxeph_S1.py+.out, proof-map banner, reflection, HYP-5708, backlog lead.
 
 ---
+## kind-pasteur-2026-07-09-S113 -- DENSITY-FLOOR a-priori cert of int W>0 (grid-free, per klein-S201) + Schur-triple SAME-PROMPT COLLISION (opus-S183 first, deferred) + NET-NEW reflection: the interval is the SHARED extremizer of Schur triples AND LRC loneliness
+
+Prompt (owner): formalize the R_grid bound to certify int W>0 a-priori, work the Kronecker realization; + prove the interval maximizes Schur triples.
+
+REFRAMED by klein-S201: the GRID-AVERAGE route (R_grid) is NOT the a-priori certificate of int W = E_x[W] > 0 -- it FAILS at resonant small rulers (tight AP {0..12} at V=13: grid j/13 lands on maxgap equidistribution NULLS, E_grid=1/13<1/7 while E_x=0.211>1/7, disc=0.134 NOT O(1/V^2)). The CONTINUUM DENSITY FLOOR (Bonferroni m_P, grid-free, holds even at AP mu_good=0.44) is the honest certificate.
+
+BUILT (LRCDensityFloorCert.lean, sorry-free, builds 8478):
+- exists_pos_of_measure_support_pos: 0 < vol{x:0<W x} => exists x, 0<W x. A positive-MEASURE set is NONEMPTY -- the density floor hands a good point DIRECTLY, no grid, no integral-positivity machinery. THE honest replacement for the grid route.
+- mreach_ge_of_good_measure_pos: density floor (0<vol good set) + reformulation => Mreach>=1/14. Continuum, grid-free, no resonant-ruler pathology.
+- continuum_pos_of_grid / grid_pos_of_continuum: the honest ARITHMETIC transfer skeleton (|Eg-Ex|<=B, B<Eg => Ex>0). Always valid; input B=|R_grid|<=TV(W')/(12V^2) is monad-explorer THM-665, sound ONLY for V>=Q+1 (klein-S201 caveat documented).
+
+KRONECKER: the exact slow-fast identity is ALREADY in LRCSlowFast (nearInt_speed_eq_phase_sub: nearInt((Vmax-e)tau)=nearInt(frac(Vmax tau)-e tau), drift-free) -- confirms klein-S207 (drift=discretisation artefact, exact at real tau). Reduction: loneliness <=> orbit {frac(v_i tau)} hits box [1/14,13/14]^13; residue = simultaneous Diophantine approx (the equidistribution node). Observer half done kps-S112 (observer_of_confined).
+
+SCHUR TRIPLES -- SAME-PROMPT COLLISION (memory pattern): opus-S183 ALREADY proved LEM-014 (interval maximizes Schur triples E3=#{(a,b) in SxS:a+b in S}<=C(k,2), schurTriple_card_le, kernel-pure, WIRED TO ROOT, schurTriple_interval_13=78 by decide, injection (a,b)->{a,a+b} into powersetCard 2), verified boxeph-S1. I proved it INDEPENDENTLY sorry-free (offDiag double-injection over R+, 2*schurCount<=n(n-1)) + BRUTE-FORCE verified every maximizer is a dilated interval (0 exceptions n<=6, equality characterization). DEFERRED to opus (removed my duplicate SchurTripleInterval.lean per first-pusher rule + mac-mini LRCTrivialQ lesson). Kept independent verification script.
+
+NET-NEW (reflection the-interval-is-the-shared-extremizer-...-kps-S113): the dilated interval {d,2d,..,nd} = AP {1..n} is the SHARED extremizer of TWO problems -- Schur-triple max (E3=C(n,2), opus LEM-014) AND LRC(14) loneliness (M(AP)=1/14, kps S110/S111). Same object (both scaling-invariant). DEEP reason: additive coherence = resonance. Max Schur triples = max a+b=c incidences = dilates {e_i tau} phase-locked = minimal separation = tightest gap 1/n = LRC extremal. E3 is a HARDNESS COORDINATE: high E3=resonant=tight-AP=hard corner (exact-check/density-floor cell); low E3=dissociated=slack (good-period leg). CONVERGES opus-S182 (E3 governs density-floor resonance sum at leading order), mac-mini-S65 THM-666 (Schur-triple kill rule, AP tangency sigma=0), my LRC AP formalization. Proof-technique echo: rank-bounds-count (r(a_k)<=k-1) = the tournament vertical leg (scores/cut space); interval = every rank-bound tight simultaneously = AP Dirichlet-tight-everywhere.
+
+STATE: int W>0 certified a-priori by DENSITY FLOOR (grid-free, LRCDensityFloorCert wired to exists_pos S112); R_grid = large-V tool only (monad THM-665 + honest skeleton). Kronecker residue = equidistribution node (observer done, realization open). FILES: LRCDensityFloorCert.lean; reflection; schur_interval_maximizer_kps_S113.py/.out.
+
+NEXT: the equidistribution/Kronecker realization (feed density floor to exists_pos); formalize E3=C(n,2)<=>dilated-interval equality char (companion to mreach_AP_eq); add E3 as the dichotomy-dispatcher hardness coordinate (selects exact-check vs good-period cell).
 
 ## opus-2026-07-09-S183 -- PROVED (+ Lean-formalized) LEM-014: the interval maximizes Schur triples -- E3(S)=#{(a,b) in SxS : a+b in S} <= C(k,2), equality iff dilated interval c*{1..k}; step (1) of the redirected forward lead
 
