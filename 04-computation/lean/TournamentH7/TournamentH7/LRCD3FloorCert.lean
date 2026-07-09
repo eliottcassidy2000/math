@@ -113,4 +113,23 @@ theorem A_scale3_family :
         decide (bar ≤ D3 (([0,3,6,9,12,15,18,21,24,27, p]).mergeSort (fun a b => a ≤ b)))) = true := by
   native_decide
 
+/-! ### Exhaustive slices — every primitive 11-set of bounded prim-diameter clears the bar. -/
+
+/-- gcd of a ℤ list (via `natAbs`); `= 1` iff the set is primitive. -/
+def listGcd (E : List ℤ) : ℕ := E.foldr (fun x g => Nat.gcd x.natAbs g) 0
+
+/-- All PRIMITIVE 11-subsets of `{0,…,D}` with min `0` and max `D` (so prim-diam `= D`):
+`0 :: (9-subset of {1,…,D−1}) ++ [D]`, kept when `gcd = 1`. -/
+def shapes11 (D : ℕ) : List (List ℤ) :=
+  ((((List.range (D - 1)).map (fun n => (n : ℤ) + 1)).sublistsLen 9).map
+    (fun mid => (0 : ℤ) :: (mid ++ [(D : ℤ)]))).filter (fun E => listGcd E = 1)
+
+/-- **Exhaustive slice, prim-diam ≤ 16.**  EVERY primitive 11-set with primitive diameter in
+`{10,…,16}` (~8000 shapes) clears the bar — a genuine kernel-checked exhaustive over the
+small-diameter base of the k=11 covering floor. The min is the 11-block `{0..10}`, `D3 = 0.404751`. -/
+theorem exhaustive_le16 :
+    ((List.range 7).map (· + 10)).all
+      (fun D => (shapes11 D).all (fun E => decide (bar ≤ D3 E))) = true := by
+  native_decide
+
 end LRCD3FloorCert

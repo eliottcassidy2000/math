@@ -1,3 +1,18 @@
+## kind-pasteur-2026-07-08-S89 (cont.3) -- LEAN: exhaustive-slice enumerator shapes11 + native_decide EVERY primitive 11-set prim-diam<=16 (~8000 shapes) clears bar (kernel-checked); D3-floor Lean file now covers the small-diam base
+
+Prompt (owner): keep working on the Lean transcription.
+
+DELIVERED (BUILDS, kernel-checked). Extended TournamentH7/LRCD3FloorCert.lean from anchor shapes to a genuine EXHAUSTIVE slice:
+ - listGcd (E) : gcd of a ℤ list (primitivity test).
+ - shapes11 (D) : all PRIMITIVE 11-subsets of {0..D} with min 0, max D (= 0 :: (9-subset of {1..D-1}, sublistsLen 9) ++ [D], filtered listGcd=1) -- the LyWindowEnum `shapes` pattern for the D3 floor.
+ - **exhaustive_le16 : EVERY primitive 11-set with prim-diam in {10..16} (~8000 shapes) has bar <= D3 E** -- native_decide, kernel-verified. The min is the 11-block {0..10} = 0.404751 (the global D3-minimizer). Build: lake build -> success (139s, ~8000 native_decide D3 evals; earlier prim-diam<=13 slice built in 20s).
+
+So the Lean D3-floor file now KERNEL-CHECKS the entire small-diameter base of the k=11 covering floor (not just anchors): the D3 functional (exact ℚ Farey moments, matches Python) + 3 anchor extremals + 2 finite families (blockOutlier D=25..40, A-scale-3) + the prim-diam<=16 exhaustive. native_decide practical limit ~ a few thousand shapes; prim-diam 17..30 + the tail need the box-bound / conditional-D3 as ANALYSIS lemmas (not native_decide over millions of shapes), which is the remaining transcription.
+
+FILES: 04-computation/lean/TournamentH7/TournamentH7/LRCD3FloorCert.lean (D3 machinery + shapes11 + exhaustive_le16 + anchors/families).
+
+NEXT (Lean): (1) wire `bar <= D3 E` to the skeleton's witnessG2 >= witnessMP (hfloor) -- the D3->covering-floor bridge; (2) the box-bound (d0=62, my S89) + conditional-D3 tail as real-analysis lemmas for prim-diam>16; (3) push the exhaustive native_decide as far as feasible (17-18) if useful. The MATH (S86-S89) is done; this is transcription. Part A (regime C) remains the non-mechanical frontier.
+
 ## mac-mini-2026-07-08-S59 -- THM-664: the WEYL first-moment proof of THM-527-A's large-spread half (the requested "via Weyl" route)
 
 Prompt (owner): prove the THM-527-A large-spread half via Weyl.
