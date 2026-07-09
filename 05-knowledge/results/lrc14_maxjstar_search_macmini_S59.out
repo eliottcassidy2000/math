@@ -1,0 +1,11 @@
+max j* over adversarial spread-dense clusters (j=1 fails), by k:
+
+k=8: 8240 adversarial spread-dense clusters; MAX j* = 2  (no-good-j: 0); worst at Vmax=106
+       worst-j* cluster (first 6 elts): (0, 13, 26, 41, 56, 70)... Vmax=106
+k=11: 23730 adversarial spread-dense clusters; MAX j* = 11  (no-good-j: 0); worst at Vmax=385
+       worst-j* cluster (first 6 elts): (0, 35, 70, 105, 139, 174)... Vmax=385
+k=13: 30183 adversarial spread-dense clusters; MAX j* = 13  (no-good-j: 0); worst at Vmax=403
+       worst-j* cluster (first 6 elts): (0, 30, 63, 94, 125, 155)... Vmax=403
+
+=> if max j* stays small (<< Vmax) for all k, a good period exists at tiny j always
+   => THM-527-A closes: finite check only Vmax <= max j* (trivially done, kps-S30 Vmax<=1001).

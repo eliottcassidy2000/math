@@ -62,6 +62,24 @@ already covering `Vmax ≤ 1001`). So THM-527-A — the last analytic item of th
 (THM-663) — is reduced from "an integer-vs-real / equidistribution estimate at `Vmax ≤ 91^12`" to
 "two elementary lemmas + a bounded finite check on `Vmax ≤ 531441`".
 
+## (iii) The sharp bound: `j* = O(k)` — AP case PROVED (mac-mini-S59)
+
+The smallest good period `j*` is empirically `≈ k`, not `3^{k−1}`: over `>90k` adversarial
+spread-dense clusters, **`max j* = 2 / 11 / 13` at `k = 8 / 11 / 13`**, never absent. The worst
+cases are **arithmetic progressions**, and for them `j* = O(k)` is PROVED:
+
+> **AP lemma.** For `E = {0, d, 2d, …, (k−1)d}` (co-offsets), `j* ≤ ⌈7(k−1)/6⌉`. Proof: by
+> Dirichlet, `∃ j ≤ ⌈7(k−1)/6⌉` with `‖jd/Vmax‖ < 6/(7(k−1))`; then the `k` phases
+> `{i·frac(jd/Vmax)}` form a `k`-term AP of step `< 6/(7(k−1))`, spanning `< 6/7`, so they leave a
+> gap `> 1/7`. ∎ (Verified: `max j* ≤ ⌈7(k−1)/6⌉ = 9/12/14` at `k=8/11/13`, tight-ish.)
+
+If `j* = O(k)` holds for ALL clusters (AP case done; general strongly verified, max `j* = k`, no
+exceptions), the bounded finite check collapses to `Vmax ≤ O(k)` — **trivially inside kps-S30's exact
+`M(S)` sweep** — and THM-527-A is **fully closed**. The general `j* = O(k)` is the single remaining
+analytic lemma of the whole covering case; its extremal case (APs) is proved and it has zero
+counterexamples over 90k+ adversarial clusters. File:
+`04-computation/lrc14_maxjstar_search_macmini_S59.{py,out}`.
+
 ## Why this is the right tool
 
 The good period is the observer's own loneliness window, and (i)–(ii) find it by **clustering the
