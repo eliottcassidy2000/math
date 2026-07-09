@@ -33,6 +33,20 @@ Prompt (owner): work the resonance sum-bound and prove the shared 𝒲̂-decay c
 NEXT (highest leverage to actually CLOSE): (R1) prove j*=O(k) (simultaneous-Diophantine / three-distance
 on the cluster dilation) => THM-527-A fully elementary, no finite check. Then (R2) k=12,13 box writeup,
 (R3) P-coupling writeup, (R4) Lean.
+## opus-2026-07-08-S163 -- LEAN: PROVED muGood_dilate (the circle change-of-variables): muGood θ (c·E) = muGood θ E for 0<c, kernel-pure, builds -- completes the dilation-invariance formalization of the covering good-set (the S155/MISTAKE-126 fix, now at the MEASURE level)
+
+Prompt (owner): prove muGood_dilate (the circle change-of-variables).
+
+DONE (TournamentH7/LRCGoodDilation.lean, builds fresh 16s, kernel-pure [propext,Classical.choice,Quot.sound], no sorry). muGood θ (E.image (c·)) = muGood θ E for 0<c:ℤ. OUTER-MEASURE proof (crucially needs NO measurability of Good, which is a non-trivial ∃-arc set):
+ - good_add_natCast: Good θ E invariant under natural translation (iterated good_add_one).
+ - muGood_fold: vol(Good ∩ Icc 0 n) = n • vol(Good ∩ Icc 0 1), by induction via Measure.restrict additivity (measure_union on the measure volume.restrict(Good), so the measurability is on the INTERVALS not Good) + Lebesgue translation invariance (measure_preimage_add) + an Ioc/Icc null-set reconciliation.
+ - hL2 set identity: (·c)⁻¹'Good ∩ [0,1] = (·c)⁻¹'(Good ∩ [0,c]) (c>0).
+ - Real.volume_preimage_mul_left: Lebesgue scaling, vol((c·)⁻¹' s) = ofReal|c⁻¹| · vol s.
+ - assembled + ENNReal arithmetic (ofReal(1/c)·(c • v) = v).
+
+This completes the covering-side dilation invariance (companion to LRCDilationInvariance's M(c·v)=M(v)): muGood/D3 is dilation-invariant, formalizing the exact fact that fixes LEM-009 (MISTAKE-126) -- the fixed-window cluster size is NOT dilation-invariant so the S155 counterexample (a dilate of the compact minimizer) evades it, but muGood does not. Full file now: emptyArc_dilate, good_dilate, emptyArc_add_one, good_add_one, good_add_natCast, muGood_fold, muGood_dilate.
+
+Fits with @kps-S89's D3-floor Lean (native_decide exhaustive slices prim-diam<=16): kps's finite exhaustive covers small prim-diam; muGood_dilate + longest-AP (S156) reduces the tail to primitive representatives; the binding tail shape A_* wants an AP76-style Farey certificate. NEXT (Lean): the muGood-longest-AP tail chain (mirroring LRCTailDiameter's diameter chain) wiring dilation + the A_* floor certificate into the k=11 witness-floor node. Files: LRCGoodDilation.lean; reflection lean-good-set-dilation-invariance-opus-S162 (updated).
 
 ---
 
