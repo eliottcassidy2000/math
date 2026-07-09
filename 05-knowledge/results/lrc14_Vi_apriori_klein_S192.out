@@ -1,0 +1,31 @@
+bar_11 = 0.331212   D3_inf(target) ~ 0.4646
+
+--- (1) verify TV_u[W] = gap-formula  (a sample) ---
+max |TV_grid - TV_gapformula| over sample = 0.00002  (grid discretization)
+
+--- (3) measured V_i = E_a[TV_u W^i]  vs analytic bound i*(6/7)^(i-1)*(12/7) ---
+  i=1:  V_i(measured)=0.2243   analytic bound=1.7143   max_a TV=0.8571
+  i=2:  V_i(measured)=0.1304   analytic bound=2.9388   max_a TV=0.8421
+  i=3:  V_i(measured)=0.0791   analytic bound=3.7784   max_a TV=0.6680
+
+--- (4) limit moments (block_10 (+) independent outlier) ---
+  L1=0.156481  L2=0.060539  L3=0.029506
+  D3_inf = 0.464807   D2_inf = 0.404474   (bar=0.3312)
+  N=0.08585  Delta=0.02611
+  |dD3/dm1|=7.7418  |dD3/dm2|=18.4790  |dD3/dm3|=12.6094
+
+  C (analytic V bound, triangle-ineq) = 115.221
+  C (measured  V,       triangle-ineq) = 5.142
+  required C for d>=26 closure         = (D3inf-bar)*26 = 3.473
+  ==> triangle-ineq bound closes? analytic:False  measured:False
+
+--- (5) direct box bound: m_i in [L_i - V_i/d, L_i + V_i/d], d>=26 ---
+  d= 26: box-min D3 (analytic V) = 0.1057   (bar=0.3312)  clears:False
+  d= 30: box-min D3 (analytic V) = 0.1159   (bar=0.3312)  clears:False
+  d= 40: box-min D3 (analytic V) = 0.1326   (bar=0.3312)  clears:False
+  d= 60: box-min D3 (analytic V) = 0.1492   (bar=0.3312)  clears:False
+  d=100: box-min D3 (analytic V) = 0.1745   (bar=0.3312)  clears:False
+
+--- (5b) D2 (PZ) tail: only needs V_1,V_2 ---
+  |dD2/dm1|=5.1696 |dD2/dm2|=6.6813
+  C2 (analytic V) = 28.497   required = (D2inf-bar)*26 = 1.905   clears:False

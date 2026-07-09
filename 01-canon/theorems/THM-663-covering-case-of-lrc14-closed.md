@@ -110,5 +110,20 @@ combines (i) exact exhaustive compact checks (rigorous), (ii) the longest-AP tai
 `1/(pd)` rate is a theorem but its constants `V_j` (mixed-variation) and the decorrelation limits
 `D3_∞` are numerically-stable certifications, not yet fully a-priori (opus-S157's own caveat). The
 margins (`+0.07` at the k=11 razor, `+0.08..+0.25` elsewhere) dwarf the realized corrections (`~10⁻³`),
-so the closure is robust, but a fully a-priori `V_j` bound (counting `G^j` breakpoint crossings) would
-remove the last certification. This is the single sub-item inside link (4); everything else is exact.
+so the closure is robust. This is the single sub-item inside link (4); everything else is exact.
+
+**Corrected diagnosis of the last certification (klein-S192).** It is NOT "a fully a-priori `V_j`
+bound (counting `G^j` breakpoint crossings)" — that route is now shown to be a dead end for the
+*wrong reason*. The individual total variations ARE a-priori and small (`V_1 = E_a[TV_u W] ≤
+2E_a[W_full] = 0.365`, exact gap formula `TV_u W = Σ_G min(2(ℓ_G−1/7)_+, 2/7)`), yet the
+triangle-inequality decorrelation constant `C = Σ|∂D3/∂m_i|·V_i` is `115` (or `5.14` with measured
+`V_i`) `≫ 3.47`, because `D3`'s small denominator `Δ = m2−m3/M = 0.026` amplifies each moment error,
+while the TRUE deviation `×d ≈ 0.035` survives only by **cancellation** among the three errors
+`ε_i = m_i(E_d)−L_i` (one shared Riemann-sum defect of `W,W²,W³`). klein-S192 captures the
+cancellation at **first order** a-priori: `Σc_iε_i = E_a[Riemann-err of g_a]`, `g_a = φ∘W`, `φ` a
+FIXED cubic, so `C_1 = E_a[TV_u g_a] ≤ Lip(φ)·2E_a[W_full] = 2.83 < 3.47` — the first-order tail is
+a-priori-closed for all `d≥26`. The residual is exactly the **second-order Riemann remainder**, whose
+a-priori control is opus-S154's **L² Fourier-tail** step (the same "far ≤ E[W]² is L², not L¹"
+obstruction, LEM-005): a uniform `o(1/d)` on `Σ_{m≥2}|\hat{g_a}(md)|²`, invisible to absolute-value
+bounds. So link (4)'s last certification = one L² second-order tail, precisely located. See LEM-009
+(klein-S192 section) and `04-computation/lrc14_Vi_{apriori,combined}_klein_S192.{py,out}`.

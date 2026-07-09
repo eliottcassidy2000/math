@@ -408,3 +408,58 @@ CLOSED for every `d ≥ 3`, rigorously, with the explicit constant.** (klein's m
 `350×` below the a-priori `C`; the resonance route (opus-S159) would drop `d₀` further, but is not
 needed — `d₀ = 62` is already inside a trivial finite check.) File: `lrc14_L10_explicit_rate_kps_S89.py`
 (+`.out`).
+
+## Why the triangle bound is loose (cancellation) — and why kps-S89's box bound sidesteps it (klein-S192)
+
+klein-S192 independently attacked the a-priori constant and, comparing with kps-S89 above, pins
+**exactly why** the naive route fails and why the box bound is the right tool.
+
+**The exact structure of `TV_u W` (rigorous, gap formula).** For fixed `a`, sweeping the outlier
+phase `u`, `W(a;u)` is **continuous** piecewise-linear with slopes in `{−1,0,+1}`: adding the
+outlier splits one AP-gap `G=[·,·]` (length `ℓ_G`) at offset `s`, contributing
+`(s−1/7)_+ + (ℓ_G−s−1/7)_+`; across an AP-phase crossing both sides equal `W_full(a)` (no jump).
+Hence `TV_u(W(a;·)) = Σ_G min(2(ℓ_G−1/7)_+, 2/7) ≤ 2·Σ_G(ℓ_G−1/7)_+ = 2·W_full(a)`, so
+`V_1 = E_a[TV_u W] ≤ 2·E_a[W_full] = 0.365` a-priori (measured `V_1 = 0.224`; `E_a[W_full]=0.1825`,
+the block₁₀ first moment, an exact Farey rational). Machine-verified `TV_grid = TV_gapformula`.
+
+**Why the individual-`V_i` triangle bound FAILS (and why that is not the real gap).** The naive
+`|D3(E_d)−D3_∞| ≤ Σ_i |∂D3/∂m_i|·V_i/d` gives `C = Σ|∂_i D3|·V_i` — **`115`** with the a-priori
+`V_i`, and still **`5.14`** with the *measured* `V_i` — because `D3` has a small denominator
+`Δ = m2 − m3/M = 0.0261`, so `|∂D3/∂m2| = 18.5`. Yet the **true** `|D3(E_d)−D3_∞|·d ≈ 0.035` (and
+`≈0.005` for genuine large coprime `(d,p)`). The `~150×` gap is **cancellation**: the three
+errors `ε_i = m_i(E_d)−L_i` are the SAME `d`-point Riemann-sum defect of `W, W², W³`, and they
+cancel in the `D3` combination. Bounding each `|ε_i|` separately (any `V_i`, however tight) throws
+the cancellation away. **So the a-priori bottleneck was never the total-variation constants — those
+are fine (≤ `0.365, ...`); it is the correlated cancellation.**
+
+**Capturing the cancellation at first order (a-priori, rigorous).** Exactly,
+`Σ_i c_i ε_i = E_a[Riemann-error of g_a]`, `g_a(u) = Σ_i c_i W(a;u)^i`, `c_i = ∂D3/∂m_i|_L`
+(`c = (7.74, −18.48, 12.61)`), by linearity of the moment→error map. Since `g_a = φ∘W` with
+`φ(w)=Σ c_i w^i` a **fixed** cubic, `TV_u(g_a) ≤ Lip(φ|_{[0,6/7]})·TV_u(W)`, giving the a-priori
+first-order constant
+
+> **`C_1 := E_a[TV_u g_a] ≤ Lip(φ)·2·E_a[W_full] = 7.742·0.365 = 2.83 < 3.47`** (required
+> `(D3_∞−bar)·26`), so the **first-order** tail deviation is a-priori `≤ 2.83/d` — CLOSED for all
+> `d ≥ 26`. (Measured `C_1 = E_a[TV_u g_a] = 0.474`, so the bound has `6×` slack; the *true*
+> deviation `0.035` has a further `13×` from higher-harmonic cancellation inside the Riemann error.)
+
+**The box bound is the right tool — it captures the cancellation for free; no L² needed for this
+family (reconciliation with kps-S89).** A *linear* `C/d` triangle bound needs the cancellation put
+in by hand (my `C_1 ≤ 2.83` does this at first order; the full linear rate would need opus-S154's L²
+second-order Fourier tail, since the Lagrange remainder `½ε^THε` has `‖H‖` blowing up as `Δ→0`).
+**But kps-S89's box bound needs none of that:** it is a *direct rigorous enclosure* `min D3` over
+`m_i ∈ [L_i ± Vh_i/d]`, so it automatically respects every joint constraint — including the
+cancellation — with no linearization. The one requirement is `Δ = m2−m3/M > 0` over the box, which
+holds once the box is small enough; with the **tight** constants `Vh_i = i(6/7)^{i-1}E[W_B]` (using
+the actual block mean `E[W_B]=0.1826`, **9× smaller** than my loose worst-case `i(6/7)^{i-1}·(12/7)`)
+this is `d ≥ 62`. (My own box scan reported `d ~ 560` **only because I plugged in the loose
+`V_i = 12/7`-bound**; kps's `E[W_B]` bound is the correct a-priori TV, and it closes the box at
+`d₀=62`.) So the L=10 family is **rigorously a-priori closed**: `[finite check d ≤ 61]` (cheap, via
+the conditional-D3 evaluation) `+ [box bound d ≥ 62]`, **no L² tail required**. The L² route (a soft
+`o(1/d)` on `Σ_{m≥2}|\hat{g_a}(md)|²`) would only be needed to push the *linear* constant down — it
+is a refinement, not a prerequisite. **Corrected takeaway:** the "last certification" is discharged
+by kps-S89's box bound; klein-S192's contribution is the *diagnosis* (the `V_i` are a-priori and
+small, the triangle bound fails purely by cancellation, and the box enclosure — not any `V_i`
+refinement — is what recovers it). Files: `lrc14_Vi_apriori_klein_S192.{py,out}` (triangle bound
+fails; loose-`V_i` box), `lrc14_Vi_combined_klein_S192.{py,out}` (first-order cancellation `C_1 ≤ 2.83`);
+kps `lrc14_L10_explicit_rate_kps_S89`.

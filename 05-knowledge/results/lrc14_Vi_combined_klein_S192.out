@@ -1,0 +1,19 @@
+L1,L2,L3 = 0.15645,0.06052,0.02950   D3inf=0.46476  bar=0.33121
+partials c1,c2,c3 = 7.742,-18.480,12.611
+E_a[W_full] = 0.18253   =>  a-priori V1 <= 2*E_a[W_full] = 0.36505
+Lip(phi) on [0,6/7] = 7.7421  (attained at w=0.000)
+
+MEASURED first-order C1 = E_a[TV_u g_a]     = 0.4737
+MEASURED V1 = E_a[TV_u W]                   = 0.2244   (<= 2E[W_full]=0.3651 ok:True)
+a-priori chain  C1 <= Lip(phi)*V1           = 1.7370
+a-priori chain  C1 <= Lip(phi)*2E[W_full]   = 2.8263
+
+--- true |D3(E_d)-D3inf|*d for coprime (d,p) [captures 1st+2nd order] ---
+  d= 30 p= 83: D3=0.46477  |dev|*d=0.0004
+  d= 50 p=133: D3=0.46472  |dev|*d=0.0017
+  d= 80 p=213: D3=0.46472  |dev|*d=0.0032
+  d=120 p=323: D3=0.46472  |dev|*d=0.0041
+  d=200 p=533: D3=0.46471  |dev|*d=0.0096
+
+required C for d>=26: (D3inf-bar)*26 = 3.472
+a-priori first-order C1 bound Lip(phi)*2E[W_full] = 2.826  clears(1st order):True
