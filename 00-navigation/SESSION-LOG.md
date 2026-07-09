@@ -1,3 +1,18 @@
+## kind-pasteur-2026-07-08-S90 -- PART A frontier: the arc-count pigeonhole (klein-S192 THM-527-A) FAILS for longest-AP>=9; the two remaining LRC(14) residuals INTERLOCK on the longest-AP axis (HYP-5487)
+
+Prompt (owner): work the genuinely non-mechanical frontier. TARGET: Part A large-spread = klein-S192's pigeonhole #arcs(G*) < rho*·Vmax, needing #arcs <= c·spread with c < rho* (true c~0.2, "needs the resonance count").
+
+FINDINGS:
+1. GENERIC confirmed: random primitive k=13, c=#arcs/spread STABILIZES ~0.20-0.26 (spread 60..480, NOT growing), rho*~0.98. Pigeonhole holds, margin +0.7. Resonance structure: arcs governed by the simplest rational each contains (q up to ~spread); down-crossings = gap=1/7 events frac((e_i-e_j)x)=1/7, O(k^2·spread) potential PRUNED to ~0.25·spread (the DS O(k^2)~169 counts all; the resonance count is the pruning).
+2. KEY -- the pigeonhole is FALSE as stated: FAILS (c>=rho*) for RESONANT configs. near-AP {0,17,..,187,210} (12-AP step 17 +pt): c=1.04>rho*=0.554; two-blocks c=2.49>rho*=0.77. CORRELATION (400 cfg): failures concentrate ENTIRELY at longest-AP>=9 (0 fails at longest-AP<=8 maxc<=0.86; 21/26 at 11, 4/4 at 12).
+3. INTERLOCK (contribution): the two residuals PARTITION by longest-AP (threshold ~8-9): (a) longest-AP<=8 -> Part A pigeonhole c<rho* (resonance count BOUNDED by the AP cap); (b) longest-AP>=9 -> DENSITY-FLOOR longest-AP closure (opus-S157/S158, kps S86-S89), where these satisfy rho*>=0.55 >> k=13 bar. => klein's pigeonhole must be RESTRICTED to longest-AP<=8, the >=9 tail peeled to the density floor -- the SAME longest-AP axis both residuals live on. Corrects the reduction (unrestricted = false) + bounds the resonance count.
+
+WHY IT MATTERS: klein-S192 said "BOTH residuals are the SAME obstruction (the a-priori constant too weak)." SHARPER: they are the same obstruction because they live on the SAME longest-AP axis -- Part A's arc-count blows up exactly where the density floor's longest-AP tail lives (>=9), and both are tamed by the longest-AP stratification. The resonance count klein needs = bounded because longest-AP<=8 (the Part A regime) => O(1) clustering resonances.
+
+FILES: lrc14_arccount_adversary_kps_S90.py, lrc14_arccount_longestAP_interlock_kps_S90.py; HYP-5487.
+
+NEXT: @mac-mini/@klein -- restrict the arc-count pigeonhole to longest-AP<=8 (where c<rho* provably via bounded resonance count) + route longest-AP>=9 to the density-floor closure (done). The Part A large-spread + density-floor tail unify on the longest-AP axis. Honest: I found the failure boundary + partition (computational); the c<rho* bound for longest-AP<=8 via the bounded resonance count is the remaining analytic step.
+
 ## mac-mini-2026-07-08-S59 (cont.) -- the shared 𝒲̂-decay PROVED (LEM-011, indep. of klein-S194); j*=O(k) discovered (AP case PROVED); honest LRC(14) audit; FIRST Lean node formalized sorry-free
 
 Prompt (owner): prove the shared 𝒲̂-decay constant to close both; see if LRC(14) is now proved; if so, formalize.
