@@ -13274,7 +13274,7 @@ lrc_mu17_apmin_all_k _deathstar_S1 (+outs).
 **Artifacts:** lrc14_{near_resonance_count,exact_resonance_count,corr_resonant_split,arccount_vs_resonance}_kps_S93.py (+ .out).
 **Depends/relates:** LEM-011 (𝒲̂), THM-664 (grid residual), LEM-009 (density-floor tail), LEM-012 (klein near-AP), mac-mini-S61 (arc-count), opus-S165 (capstone), HYP-5517 (my partial-sum identity).
 
-## HYP-5547 (kps-2026-07-09-S95) — averaging existence + the second-moment (lemniscate) lower bound for the dissociated good-period branch
+## HYP-5557 (kps-2026-07-09-S95; renumbered from 5547 — opus-S169 pushed 5547 first for the arc-count route) — averaging existence + the second-moment (lemniscate) lower bound for the dissociated good-period branch
 **Status:** VERIFIED (reduction PROVED elementary + Lean; the average-ratio bound verified adversarially). Complements arc-count (opus-S168 #arcs~spread^0.92) and c<D3 (mac-mini-S62) with a cleaner existence mechanism.
 **Claim.** Good-period existence for dissociated 13-clusters follows from an AVERAGING inequality: if `avg_j maxgap(j) > Vmax/7` then some `j` is good (`max ≥ mean`). Verified `avg_j[maxgap]·7/Vmax ≥ 1.047 > 1` (adversarial hill-climb) across spreads s=17..200 at the critical `Vmax=⌊7s/6⌋`.
 **Second-moment engine (lemniscate cue `(x²+y²)²=x²−y²` ⟺ `r²=cos2θ`):** `maxgap ≥ Σgap²/Vmax` (contraharmonic ≤ max). Dissociation ⟹ uneven gaps ⟹ large `Σgap²` ⟹ big gap. BUT the pure 2nd-moment bound gives `avg·7/Vmax ≈ 0.85 < 1` — NECESSARY not SUFFICIENT; the true `maxgap` (avg 1.047) carries the rest. So the averaging route is not-yet-fully-a-priori (the average maxgap's a-priori lower bound is essentially the ρ*/arc-count content).
@@ -13282,3 +13282,14 @@ lrc_mu17_apmin_all_k _deathstar_S1 (+outs).
 **Exhaustion extended:** s≤23 (691k more clusters, min margin 1.40; global exhaustive min stays 1.1053 at s=17). Band now [24,~100].
 **Artifacts:** lrc14_avgmaxgap_apriori_kps_S95.py, lrc14_exhaustive_s24_kps_S95.py; reflection the-lemniscate-and-the-second-moment-of-gaps-kps-S95.md.
 **Depends/relates:** LEM-013 (existence margin), opus-S168 (arc-count sublinear, HYP-5537), mac-mini-S62 (c<D3 finite/verifiable), THM-661 (ρ*≥D3).
+
+## HYP-5567 (kps-2026-07-09-S96) — the E_grid[W]>0 existence route: dissociated good-period existence closes by |R|<(6/7)^k, SIDESTEPPING the #arcs bound (opus-S169's open item)
+**Status:** VERIFIED + REDUCTION. The a-priori target for the last band is now `|R|<(6/7)^k` (a near-resonance COUNT bound, Mertens-safe), not the arc-count bound.
+**Claim.** Good-period existence at ruler `Vmax` ⟺ `E_grid[W] := (1/Vmax)Σ_{j<Vmax}W(je/Vmax) > 0`. By LEM-011 `E_grid[W]=(6/7)^k + R`, `R=Σ_{Vmax|n·e,n≠0}𝒲̂(n)`. So **`|R|<(6/7)^k ⟹ E_grid[W]>0 ⟹ a good period exists`** — with NO `#arcs`.
+**Why it beats arc-count:** opus-S169's route needs `#arcs<ρ*·Vmax` with `#arcs` bounded a-priori (the OPEN item; trivial bound 200-1300× loose). The E_grid route needs only `|R|<(6/7)^k`, i.e. the resonant residual < the main term — a near-resonance COUNT (kps-S93: the resonant/count part is Mertens-SAFE, small for dissociated) — the non-resonant Mertens wall is NOT involved (only `Vmax|n·e` modes enter).
+**Verified (lrc14_egrid_{existence,7struct}_kps_S96):** `max|R|/(6/7)^k` = 0.38 (generic, s=30-120), and — crucially — **≤ 0.69 for mac-mini's HARD 7-STRUCTURED case** (all diffs ≡0 mod 7, the MISTAKE-128 case that broke c<D3), incl `Vmax≡0 mod 7`. 100% existence, min `E_grid≈0.077>0`. So `E_grid[W]≥0.31·(6/7)^k>0`.
+**Lean:** `LRCEgridExistence.lean` (sorry-free): `gridsum_pos_of_residual_small` (|R|<mean ⟹ Σ>0), `exists_good_of_gridsum_pos` (Σ>0 ⟹ ∃ good), `exists_good_of_residual_small` (the full chain `|R|<(6/7)^k ⟹ ∃ good`).
+**Open (the clean residual):** prove `|R|=|Σ_{Vmax|n·e}𝒲̂(n)|<(6/7)^k` a-priori via a Sidon/B_h near-resonance count bound + LEM-011 geometric tail (0.371/coord). This REPLACES opus-S169's #arcs bound with a count bound (bigger margin 0.69 vs edge; ties to the closed density floor R_0 + the wraparound near-resonances).
+**Converges with opus-S169:** opus's lemniscate lead (elliptic reparam desingularizes arc boundaries = countable crossings) is the ARC-COUNT view; the E_grid route is the FOURIER view of the SAME resonance object (arc boundary = collision = exact resonance = `Vmax|n·e` mode). Two coordinates on one thing.
+**Artifacts:** lrc14_egrid_existence_kps_S96.py, lrc14_egrid_7struct_kps_S96.py (+.out); LRCEgridExistence.lean.
+**Depends/relates:** LEM-011 (𝒲̂/grid residual), LEM-013 (existence margin), HYP-5557 (my averaging route, S95), HYP-5527/opus-S167 (near-resonance Mertens), opus-S169/HYP-5547 (arc-count), THM-664 (E_grid identity).

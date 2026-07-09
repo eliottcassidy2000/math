@@ -1,0 +1,16 @@
+E_grid[W]>0 route: existence <=> E_grid[W]>0; a-priori via |R|=|E_grid-(6/7)^k| < (6/7)^k.
+(6/7)^13 = 0.13480. Report max |R|/(6/7)^k over dissociated clusters at critical V=floor(7s/6).
+      kind   s    V  exist%  max|R|/lead  <1?
+   generic  30   35  100.0%       0.3823  YES
+   generic  50   58  100.0%       0.2992  YES
+   generic  80   93  100.0%       0.2108  YES
+   generic 120  140  100.0%       0.3043  YES
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_egrid_existence_kps_S96.py", line 57, in <module>
+    E=gen(s)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_egrid_existence_kps_S96.py", line 40, in gen_7struct
+    base=sorted(random.sample(range(1,s//7+1),K-2))
+                ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\random.py", line 434, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative

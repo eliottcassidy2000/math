@@ -1,0 +1,14 @@
+E_grid[W]>0 route vs 7-STRUCTURED (mac-mini MISTAKE-128 hard case). V incl multiples of 7.
+(6/7)^13=0.13480. max |R|/(6/7)^k over hard clusters + V in critical window (and V=7m).
+      kind   s  exist%  max|R|/lead  minEgrid  <1?
+      mod7  91  100.0%       0.4292   0.09621  YES
+      mod7 120  100.0%       0.6532   0.07734  YES
+      mod7 150  100.0%       0.6717   0.08240  YES
+      mod7 200  100.0%       0.6855   0.08241  YES
+    subAP7  91  100.0%       0.4500   0.07414  YES
+    subAP7 120  100.0%       0.3324   0.09000  YES
+    subAP7 150  100.0%       0.2880   0.09598  YES
+    subAP7 200  100.0%       0.2550   0.10042  YES
+
+If max|R|/lead<1 even for 7-structured => E_grid[W]>0 a-priori => existence closes the band
+WITHOUT #arcs (the open item in opus-S169). Bound on |R| = near-resonance count (S93), Mertens-safe.
