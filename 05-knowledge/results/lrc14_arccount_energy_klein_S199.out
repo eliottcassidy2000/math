@@ -1,0 +1,11 @@
+k=13: #arcs/spread vs additive energy, longest-AP, Z (Freiman/energy law)
+      kind  spread  #arcs  c=#arcs/sp   E(A)  longAP     Z D3_inf^L(ref)
+   exactAP     156    156       1.000   1469      13   958         0.465
+     Sidon     147     16       0.109    325       2    90         0.860
+    2block     106    260       2.453   1105       7   372         0.680
+    randlo     179     30       0.168    373       3    68         0.850
+ perturbAP     152     56       0.368    453       3    66         0.850
+
+=> if c=#arcs/spread TRACKS additive energy/longest-AP (low for Sidon, high for AP)
+   and c < D3_inf^L (which is HIGH for low L), then route (c) closes a-priori via
+   the additive-energy law -- the Freiman 'density=>structure' shadow, made quantitative.

@@ -9,7 +9,17 @@ Format per entry:
 - Impact on existing results
 - Source (who found it, when)
 
----## MISTAKE-126 (2026-07-08, opus-S155 counterexample vs klein-S186/S187) -- A DILATION-INVARIANT FUNCTIONAL NEEDS A DILATION-INVARIANT EXTREMAL AXIS: the k=11 tail D3-minimizer was claimed to be the block+outlier via the WINDOW cluster size, which is not dilation-invariant.
+---## MISTAKE-128 (klein-2026-07-09-S199): route (c)'s stated a-priori inequality "#arcs/spread < D3(E)" is TOO WEAK -- it FAILS at resonant Vmax; the true condition is #arcs < ρ*·Vmax with the ACTUAL ρ*=μ, not the D3 lower bound
+
+**What was claimed (mac-mini-S61, LEM-012 route c):** the dissociated branch closes a-priori by the clean exact inequality `#arcs/spread < D3(E)` (using ρ* ≥ D3, THM-661), with "big margin for low L" (D3_∞^{(L)} decreasing in L). Read as: for low longest-AP, c := #arcs/spread ≤ 0.5 while D3 ≥ 0.6.
+
+**Why it is wrong (klein-S199, exact):** the arc-count `#arcs` is WORST at **resonant Vmax (7 | Vmax)**, and there `c` can EXCEED `D3(E)`. Precise counterexample: `E = {0,7,14,21,26,29,37,44,51,58,67,75,82}`, `Vmax = 91 = 7·13`, hard (V/7-dense), longest-AP = 4. Then `#arcs = 72`, spread = 82, so `c = 0.878`, but `D3(E) = 0.629` (the FINITE D3(E), far below the large-spread limit `D3_∞^{(4)} = 0.84`). So `c = 0.878 > D3(E) = 0.629` and `#arcs = 72 > D3·Vmax = 57.2` — **the inequality `#arcs/spread < D3(E)` FAILS**. Root: (1) `#arcs` is amplified by resonance (7|Vmax aligns phases with the 1/7-grid), not captured by "low L ⟹ few arcs"; (2) `D3(E)` is a LOOSE (degree-3 moment) lower bound on `ρ*=μ` — the finite `D3(E)` (0.63) is much less than the actual `μ` (0.91).
+
+**What survives / correct framing:** route (c) STILL holds, via the ACTUAL `ρ* = μ_{1/7}(E)`, not the D3 proxy. Verified over 4691 hard low-L sets at resonant `Vmax`: `#arcs < μ·Vmax` (i.e. `c < μ`) ALWAYS, min margin `μ − c = 0.081` (worst set `c = 0.878 < μ = 0.914`). So a good period EXISTS. The a-priori closure of route (c) therefore requires an a-priori **μ ≥ c** bound (`μ ≳ 0.9` for hard dissociated), which D3 does NOT deliver — it is a genuine decorrelation lower bound on `μ` (`μ ≥ μ_iid − discrepancy`), and its WORST case is resonant `Vmax` (the largest discrepancy). So route (c) is NOT a clean escape from decorrelation — it inherits a μ-lower-bound difficulty (thin, `≈0.08` margin at L=4, worst at 7|Vmax). Existence is not threatened (LEM-010(ii) Dirichlet `j*≤3^{k−1}` is the unconditional fallback; LEM-012 covers structured L≥k−6).
+
+**Lesson:** do NOT substitute a moment LOWER bound (D3) for the quantity it bounds (μ=ρ*) inside an inequality you then need tight — the finite `D3(E)` can be far below `μ`. And an arc-count "low for low L" claim must be tested at RESONANT `Vmax` (7|Vmax), where the near-resonance count spikes the arc-count. Files: `lrc14_interlock_hard_klein_S199`, `/tmp`-verified worst set; scan `lrc14_arccount_energy / interlock _klein_S199`.
+
+## MISTAKE-126 (2026-07-08, opus-S155 counterexample vs klein-S186/S187) -- A DILATION-INVARIANT FUNCTIONAL NEEDS A DILATION-INVARIANT EXTREMAL AXIS: the k=11 tail D3-minimizer was claimed to be the block+outlier via the WINDOW cluster size, which is not dilation-invariant.
 
 - **What was claimed (klein-S186/S187, LEM-009):** the k=11 covering-tail (prim-diam >= 25)
   D3-minimizer is the block+outlier {0..9,D}, with min D3 = D3_10 = 0.4646, ordered by the

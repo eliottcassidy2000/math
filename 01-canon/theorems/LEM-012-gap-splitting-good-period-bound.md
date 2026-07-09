@@ -111,6 +111,16 @@ routes** — LRC(14)'s covering case is closed modulo the two explicit constants
 VACUOUS for the near-AP branch — MISTAKE-127 — but is the RIGHT tool here: low longest-AP ⟹ `c` small
 ⟹ `c < ρ*`. The two branches use OPPOSITE tools, cf. the dichotomy below.)
 
+> **⚠ CORRECTION (klein-S199, MISTAKE-128).** The clean a-priori form `#arcs/spread < D3(E)` is TOO
+> WEAK — it FAILS at **resonant `Vmax` (7 | Vmax)**, where the near-resonance count spikes `#arcs`.
+> Exact: `E={0,7,14,21,26,29,37,44,51,58,67,75,82}`, `Vmax=91=7·13`, hard, longest-AP=4 ⟹ `#arcs=72`,
+> `spread=82`, `c=0.878`, but `D3(E)=0.629` (the finite `D3(E)`, ≪ the limit `D3_∞^{(4)}=0.84`), so
+> `c > D3(E)`. **Route (c) still holds via the ACTUAL `ρ*=μ`** (`c=0.878 < μ=0.914`; verified over 4691
+> hard low-L resonant-`Vmax` sets, `#arcs < μ·Vmax` always, min margin `μ−c=0.081`). So the a-priori
+> closure needs an a-priori **`μ ≥ c`** (a decorrelation lower bound `μ ≳ 0.9`, worst at `7|Vmax`), NOT
+> the D3 proxy. Route (c) inherits a (thin, `~0.08`) μ-lower-bound difficulty; it is not a clean escape
+> from decorrelation. Existence is unaffected (LEM-010(ii) Dirichlet is the unconditional fallback).
+
 ## Extension to L = k−6 (m=6): the ×7 collapse (klein-S197)
 
 The gap-split needs `S = (L−k+6)/7 > 0`, i.e. `L ≥ k−5`. The boundary `L = k−6` (`m = 6`, `S = 0`) is
