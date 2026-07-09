@@ -1,3 +1,22 @@
+## klein-2026-07-09-S201 -- COMPLETELY-CLOSE-COVERING audit: the good-period leg does NOT cover the small-ruler corner; opus-S170 smooth-MEAN route REFUTED + LEM-012 hypothesis bug fixed (V>=Q+1). Existence is a MAX not a mean. NO gap (small-V = exact-check).
+
+Prompt (owner): work on completely closing the covering case.
+
+In the route-breaking mindset that killed route (c) + the arc-count, I stress-tested the good-period leg's OWN proposed closures on the one family everyone quotes as the win -- the tight AP {1..13}. Both break, at the same spot.
+
+**THE COUNTEREXAMPLE (exact).** E={0,..,12} (=the EXTREMAL LRC(14) instance, M=1/14) at its ruler V=13 has **NO good period**: every j in {1..12} gives maxgap=1/13=0.077 < 1/7 (the 13 pts equidistribute at every rational j/13). Yet E_x[maxgap]=0.211>1/7. So:
+- **opus-S170 smooth-MEAN route REFUTED:** E_x>1/7 but E_grid[maxgap over j>=1]=1/13=0.077, disc=0.134 NOT <=0.006. At the resonant ruler V=13 the grid j/13 lands on maxgap's equidistribution NULLS (its minima) -- opposite of E_x. The alpha>1 tail bound fails because nV=13,26.. hits the HEAD of maxgap's spectrum (strongly 1/13-periodic), not the tail. E_x>1/7 =/=> good period.
+- **LEM-012 (my S196) hypothesis bug (MISTAKE-129):** stated "V>maxE"; for {0..12} at V=13 (>12) Step-1 Dirichlet j is forced to j=13==0 (mod V), the EXCLUDED trivial period. CORRECT hyp: **V>=Q+1** (Q=ceil(7(L-1)/(L-k+6))). Fixed statement + proof Step 1 in place.
+- max>=mean is ONE-WAY too: 3-struct at V=33 has E_grid=0.106<1/7 yet good period EXISTS (j=11). Grid mean neither necessary nor sufficient at resonant V.
+
+**NO GAP in the covering case.** Small-ruler V<=Q clusters (the extremal tight AP) are the EXACT-CHECK's territory (kps-S30, Vmax<=1001, M(S) direct) / density floor (mu_good({0..12})=0.44>=bar_13). The good-period leg is invoked only for Vmax>1001, where hard => spread>=858 > Q<=49 => V>=Q+1 AUTOMATIC. So the fix is a correctness/formalization patch (forbids stating a false lemma), no closure effect. The dichotomy is a 2x2: {near-AP,dissoc} x {V>=Q+1, V<=Q}; good-period owns 3 cells, density-floor/exact-check owns near-AP-small-ruler.
+
+**FLEET CAUTION.** opus-S170 (smooth mean), kps-S97 (E_grid kissing "exists for ALL clusters incl AP") are BOTH large-Vmax arguments; NEITHER extends to the tight AP at its own V=13 (|R|=rho* there, bound tight). Do NOT formalize "good period for all clusters at all Vmax" (false); the intended large-Vmax claim is fine. exists_good_of_smooth_mean (Lean) is a true tautology but its hypotheses are undischarge-able for the tight AP -- don't formalize it as THE near-AP closure.
+
+FILES: 04-computation/lrc14_smooth_route_and_LEM012_smallV_klein_S201.py (+.out); CASE-good-period-smallV-no-good-period.md (OPEN, for opus); MISTAKE-129; reflection existence-is-a-max-not-a-mean-the-small-ruler-corner-klein-S201.md; LEM-012 + LRC14-STATUS updated.
+
+NEXT: opus to ack/re-scope S170. The covering-case formalization must route small-Vmax (<=1001) to the exact M(S) check EXPLICITLY and state LEM-012/013 with V>=Q+1; the near-AP capstone is the exact-check + LEM-012(V>=Q+1), NOT the smooth mean.
+
 ## kind-pasteur-2026-07-09-S97 -- CRITICAL PATH + NOVEL CONNECTION: the E_grid residual |R| IS a KISSING NUMBER (Poisson summation over the grid-relation lattice = Cohn-Elkies, mac-mini-S24/S25); corr(|R|,kissing)=0.998, AP extremal => a-priori route. + PROVED smooth-route decay is alpha=2
 
 Prompt (owner): work the critical path, mine past threads for connections, explore novel work I was unaware of.

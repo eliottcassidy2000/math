@@ -31,7 +31,14 @@ Suppose `E` contains an **arithmetic progression of length `L`** (common differe
 > period** (every `j ∈ {1,…,12}` gives maxgap `= 1/13 < 1/7`; the 13 points equidistribute at every
 > rational `j/13`). At `V = 13 ≤ Q = 14`, Step 1's Dirichlet `j` is forced to `j = 13 ≡ 0 (mod V)` — the
 > excluded trivial period. Such **small-ruler `V ≤ Q` resonant clusters are handled by the DENSITY-FLOOR
-> leg** (`μ_good({0..12}) = 0.44 ≥ bar_13`), not the good-period leg. The good-period leg owns `V ≥ Q+1`.
+> leg** (`μ_good({0..12}) = 0.44 ≥ bar_13`) / the `Vmax ≤ 1001` EXACT `M(S)` check (kps-S30), not the
+> good-period leg. The good-period leg owns `V ≥ Q+1`.
+>
+> **No gap: `V ≥ Q+1` is AUTOMATIC in the operative range.** The good-period leg is invoked only for
+> `Vmax > 1001` (below that, exact `M(S)`); there **hard** means `spread ≥ 6·Vmax/7 ≥ 858`, and `Q ≤ 49`
+> (`k ≤ 13`), so `V = Vmax > spread ≥ 858 > Q`. The small-ruler corner `V ≤ Q` lives entirely inside the
+> exact-check range. So this fix is a correctness/formalization patch — it forbids stating a false lemma —
+> with no effect on the closure.
 
 ## Proof (elementary)
 
