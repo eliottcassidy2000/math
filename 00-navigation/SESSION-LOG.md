@@ -1,3 +1,26 @@
+## kind-pasteur-2026-07-09-S104 -- hlink UNIFIED reduction tooth_not_in_gap (removes the internal/wrap dispatch), toolkit COMPLETE + assembly surface builds GREEN; finalized LRC(14) state mapped
+
+Prompt (owner): do the assembly to finish hlink; complete the full LRC14 assembly, finalize + build.
+
+BUILT (LRCHlinkList.lean, sorry-free): tooth_not_in_gap -- the UNIFIED translate reduction. A tooth r/Vmax (residue r<Vmax) with sorted-separation (r<=p OR q<=r) + the circular bound q<=r+Vmax has NO integer translate in the gap (p/Vmax, q/Vmax). Covers BOTH internal (q<Vmax) and wraparound (q=p0+Vmax) in ONE lemma -- REMOVES the S101/S102 dispatch (the bound q<=r+Vmax, from q<=p0+Vmax and p0<=r=min residue, makes the n=+-1 translates miss). This is the SINGLE reduction that finishes hlink.
+
+=> hlink REDUCTION TOOLKIT now 100% COMPLETE, all sorry-free: foldl_max_pos_mem (S102) + mem_zipWith_sub_adjacency + sorted_adjacency_sep + pairwise_append_singleton_of_le + tooth_not_in_gap (S103/S104) + teeth_subset_Ico (S101). EVERY mathematical lemma of hlink is proven.
+
+BUILD (finalized state, GREEN): lake build LRC14Assembly + LRCEndgameAssembly + LRCGoodPeriodReach + LRCHlinkList + LRCReachWitness => Build completed successfully (8505 jobs), EXIT 0. The conditional LRC(14) assembly is SORRY-FREE and compiles.
+
+FINALIZED LRC(14) STATE (honest): lrc14_endgame is a SORRY-FREE conditional -- LRC(14) <= [hfloor] + [hpartA] + LRC(13). The open surface is exactly 4 NAMED items, each a fleet analytic thread (NOT sorries, NOT mechanical):
+  1. hlink FINAL match-assembly: connect my complete toolkit to klein's maxCircGap match + teeth toFinset<->mergeSort perm. MECHANICAL plumbing (~100 lines), opus-S175 ACTIVE on it; tooth_not_in_gap is the finisher (no dispatch). RECIPE handed to opus.
+  2. hembed (THM-527 Part A ruler embedding): the SHARED deep blocker (klein-S203) for BOTH good-period and density routes.
+  3. hA (Lemma A, density floor nuConsec<=nuShape): opus-S157/S158 + my D3 cert territory.
+  4. hB (Lemma B, GP measure capRat<=measGP): my arc-count/dispatch + rho* territory.
+A fully sorry-free LRC(14) is NOT achievable this session -- hembed/hA/hB are OPEN MATH (the fleet's ongoing analytic work). "Finalized best complete state" = conditional assembly GREEN + good-period reduction toolkit COMPLETE.
+
+NOTE: opus-S175 also on the hlink extraction (foldl_max_mem, mem_zipWith_sub_tail) -- convergent; my tooth_not_in_gap removes their internal/wrap dispatch. My good-period Lean: 9 nodes (AP/ArcCount/Egrid/Dispatch/ReachWitness/TeethGap/MaxgapArgmax/HlinkList + the split-verify).
+
+FILES: LRCHlinkList.lean (+tooth_not_in_gap).
+
+NEXT: opus/me wire the maxCircGap-match assembly (tooth_not_in_gap finishes it); then hpartA needs only hembed; hfloor needs only hA+hB. The 4 named items are the entire remaining LRC(14) surface.
+
 ## kind-pasteur-2026-07-09-S103 -- hlink zipWith-INDEX + sorted NOTHING-BETWEEN, both built (LRCHlinkList.lean sorry-free): the two pieces the owner named are DONE; hlink now has its complete lemma toolkit
 
 Prompt (owner): keep working the zipWith-index and sorted nothing-between extraction to finish hlink.

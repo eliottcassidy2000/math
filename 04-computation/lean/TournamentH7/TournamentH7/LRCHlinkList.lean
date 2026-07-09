@@ -71,4 +71,49 @@ theorem pairwise_append_singleton_of_le (l : List ℕ) (x : ℕ)
   subst hb
   exact hx a ha
 
+/-- **The unified translate reduction (no internal/wrap dispatch).**  A tooth `r/Vmax` (residue
+`r < Vmax`), with the sorted-separation `r ≤ p ∨ q ≤ r` and the circular bound `q ≤ r + Vmax`,
+has NO integer translate in the open gap `(p/Vmax, q/Vmax)`.  This covers BOTH the internal gap
+(`q < Vmax`) and the wraparound gap (`q = p0 + Vmax`) in one shot: the bound `q ≤ r + Vmax` (from
+`q ≤ p0 + Vmax` and `p0 ≤ r`, the minimum residue) is what makes the `n = ±1` translates miss.
+This is the single reduction that finishes `hlink`, replacing the S101/S102 case split. -/
+theorem tooth_not_in_gap (Vmax p q r : ℕ) (n : ℤ)
+    (hV : 0 < Vmax) (hsep : r ≤ p ∨ q ≤ r) (hqrV : q ≤ r + Vmax) (hrV : r < Vmax) :
+    (r : ℝ) / Vmax + (n : ℝ) ∉ Set.Ioo ((p : ℝ) / Vmax) ((q : ℝ) / Vmax) := by
+  rintro ⟨hlo, hhi⟩
+  have hVR : (0 : ℝ) < (Vmax : ℝ) := by exact_mod_cast hV
+  have hVne : (Vmax : ℝ) ≠ 0 := ne_of_gt hVR
+  -- clear the denominator: p < r + n·Vmax < q  (over ℝ)
+  have h1 : (p : ℝ) < (r : ℝ) + (n : ℝ) * Vmax := by
+    have h := mul_lt_mul_of_pos_right hlo hVR
+    rwa [div_mul_cancel₀ _ hVne, add_mul, div_mul_cancel₀ _ hVne] at h
+  have h2 : (r : ℝ) + (n : ℝ) * Vmax < (q : ℝ) := by
+    have h := mul_lt_mul_of_pos_right hhi hVR
+    rwa [add_mul, div_mul_cancel₀ _ hVne, div_mul_cancel₀ _ hVne] at h
+  have hrR : (r : ℝ) < (Vmax : ℝ) := by exact_mod_cast hrV
+  have hqR : (q : ℝ) ≤ (r : ℝ) + (Vmax : ℝ) := by exact_mod_cast hqrV
+  rcases hsep with hs | hs
+  · have hsR : (r : ℝ) ≤ (p : ℝ) := by exact_mod_cast hs
+    by_cases hn : (n : ℝ) ≤ 0
+    · have : (n : ℝ) * Vmax ≤ 0 := mul_nonpos_of_nonpos_of_nonneg hn (le_of_lt hVR)
+      linarith
+    · have hn' : 0 < (n : ℝ) := not_le.mp hn
+      have hn1 : (1 : ℝ) ≤ (n : ℝ) := by
+        have hz : 0 < n := by exact_mod_cast hn'
+        have : (1 : ℤ) ≤ n := hz
+        exact_mod_cast this
+      have : (Vmax : ℝ) ≤ (n : ℝ) * Vmax := le_mul_of_one_le_left (le_of_lt hVR) hn1
+      linarith
+  · have hsR : (q : ℝ) ≤ (r : ℝ) := by exact_mod_cast hs
+    by_cases hn : 0 ≤ (n : ℝ)
+    · have : (0 : ℝ) ≤ (n : ℝ) * Vmax := mul_nonneg hn (le_of_lt hVR)
+      linarith
+    · have hn' : (n : ℝ) < 0 := not_le.mp hn
+      have hn1 : (n : ℝ) ≤ -1 := by
+        have hz : n < 0 := by exact_mod_cast hn'
+        have : n ≤ -1 := by omega
+        exact_mod_cast this
+      have : (n : ℝ) * Vmax ≤ (-1 : ℝ) * Vmax := mul_le_mul_of_nonneg_right hn1 (le_of_lt hVR)
+      linarith
+
 end LRC14HlinkList
