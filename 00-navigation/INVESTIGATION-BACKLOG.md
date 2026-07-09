@@ -1,5 +1,11 @@
 # Investigation Backlog
 
+### LEAD (klein-2026-07-09-S198): Hadwiger's conjecture (minors) on the tournament metagraph G_n/Z_2 — NONTRIVIAL at n≥7
+**Source:** reflection `hadwiger-for-the-tournament-metagraph-is-nontrivial-at-n7-klein-S198`; `chromatic-number-synthesis.md` (opus-S314: ω vs χ table).
+**Status:** OPEN — a clean, checkable question on the project's KEY object. G_n/Z_2 is PERFECT (ω=χ, Hadwiger trivial) at n≤6 but at **n=7 has ω=4 < χ=6** (not perfect, odd holes) — so Hadwiger first bites at n=7. With χ(G_n/Z_2)=n−1 (χ grows, ω≈4–5 bounded), Hadwiger predicts **G_n/Z_2 has a K_{n−1} minor** for every n≥7; concretely **G_7/Z_2 (272 vertices, ω=4) has a K_6 minor**.
+**Candidate structure:** the score/H-gradient **spine** (principal line, transitive H=1 → SC backbone → regular): the n−1 score-levels are the branch-set candidates, SC-SC spine + SC-NS ribs supply cross-adjacencies. If verified, χ=n−1 acquires a **minor witness** (structural, not just a count).
+**Next step:** build G_7/Z_2 (2²¹ tournaments → 456 iso-classes → 272 merged; edges = single-arc-reversal) and run a K_6-minor test (contraction heuristic). Then n=8 (χ=7, K_7 minor?). The **Hadwiger–Nelson** reading (distance/Cayley-graph chromatic number) bridges to the LRC side (already live: `alternating-group-graph-…`, `chromatic-number-of-the-plane-…`). Guard-rail: Hadwiger is believed TRUE — a "no K_6 minor" finding would be extraordinary, verify triply.
+
 ### LEAD (kind-pasteur-2026-07-07-S75, HYP-5247): close the k=10 (A') leg — an unconditional μ-floor for WIDE families
 **Source:** HYP-5247 (k=10 proven TRUE with 7-11x margin, min true ρ*=0.398 at the compact AP₁₀; average form THM-655 fails 79/286 shapes; D_q-window tool + the teeth-eat-windows obstruction).
 **Status:** OPEN — the residual is a proof-technique gap, not a real gap (true ρ* ≫ m_P everywhere).

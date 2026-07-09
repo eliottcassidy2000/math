@@ -1,0 +1,7 @@
+k=8, V=90, N=3, target=N(6/7)^k=0.8741, H=4
+ longest-AP L  #near-res  #arcs  absBound/tgt  |signed|/tgt  good@N?
+
+READ: #near-res and #arcs INCREASE with longest-AP L (near-AP => many coherent
+resonances; Sidon L=2 => few). absBound/tgt ~20 (Mertens: absolute hopeless);
+|signed|/tgt < 1 (cancellation gives the bound, but MUST be proven, not assumed --
+the Mertens-conjecture lesson). Route (c) uses #arcs (POSITIVE) => no cancellation.

@@ -1,0 +1,12 @@
+k=13: dissociated branch, c(L)=max#arcs/spread vs rho_min(L)=min rho*  (route c, cancellation-free)
+  L  #sets c(L)=max#arcs/sp rho_min(=minmu)   min D3  c<rho?  margin
+  2     60            0.453           0.969    0.720    True   0.516
+  3    484            0.508           0.961    0.681    True   0.453
+  4     56            0.402           0.961    0.707    True   0.559
+  5      2            0.339           0.975    0.720    True   0.636
+
+Near-resonance COUNT (route a target) + Mertens cancellation check:
+  (k=8 dissociated, H=4, N=3): absBound/target vs signed/target -- the Mertens cancellation
+
+=> route(c) c(L)<rho_min (positive, no cancellation) CLOSES the Sidon branch;
+   route(a) needs cancellation (absBound~20x, Mertens-caution) => route(c) is the robust closure.
