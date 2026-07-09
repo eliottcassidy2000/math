@@ -1,0 +1,10 @@
+SOUNDNESS + Vmax0 sweep (k=13 hard clusters). over_claim MUST be 0.
+
+Vmax/sp  #hard #(GP)holds  #realGP #overclaim GP-cover%
+    1.0    612        612      612          0    100.0%
+    1.1    794         31       31          0      3.9%
+
+TOTAL over-claims (GP fires, NO good period) = 0  (MUST be 0 for soundness)
+
+Reading: GP-cover% -> 100 as Vmax/sp grows = Vmax0 boundary. Below it, no-GP clusters (tight-AP-like)
+correctly excluded (exact-check territory). Soundness = 0 over-claims (the tight AP is respected).

@@ -1,0 +1,11 @@
+MULTIVARIATE grid-residual sum (exact LEM-011 |What|) vs E[W]. tight if < E[W].
+
+                           cluster  Vmax    E[W]  R_grid_mv   #res ratio/EW <E[W]?
+    tightAP{0..12}@V=15(Q+1,hasGP)    15  0.1266    1.43921  56622   11.367  False
+         tightAP{0..12}@V=13(noGP)    13  0.1266    1.72193  67080   13.600  False
+             near-AP d=3 @boundary    43  0.1266    0.12663  12076    1.000  False
+               7-struct(M128)@V=91    91  0.1293    0.23039   9392    1.782  False
+                   dissoc@boundary   131  0.1284    0.15838   6456    1.233  False
+
+If R_grid_mv < E[W] at the HARD boundary (esp. 7-struct/dissoc), the multivariate transport is
+TIGHT enough to close a-priori. tightAP@V=13 (no GP) should have R_grid_mv >= E[W]-(6/7)/V region.
