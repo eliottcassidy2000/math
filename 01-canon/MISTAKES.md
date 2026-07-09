@@ -9,7 +9,27 @@ Format per entry:
 - Impact on existing results
 - Source (who found it, when)
 
----## MISTAKE-128 (klein-2026-07-09-S199): route (c)'s inequality "#arcs/spread < D3(E)" is FALSE at ALL spreads for co-offset sets with a 7-structured difference set; it fails by DILATION (c, D3 both dilation-invariant), not just in a finite-check window; route (c) holds only via the ACTUAL ρ*=μ
+---
+
+## MISTAKE-129 (klein-2026-07-09-S201): the good-period leg does NOT cover the extremal small-ruler corner — the tight AP `{0,…,12}` at `V=13` has NO good period; TWO "closures" wrongly claim one (opus-S170 smooth-MEAN route; LEM-012's `V > max E` hypothesis). EXISTENCE IS A MAX, NOT A MEAN.
+
+**Context.** A good period is `j ∈ {1,…,V−1}` with `maxgap{e·j mod V : e∈E} > V/7` (THM-527 ⟹ `M(S)≥1/14`). The near-AP branch of good-period existence was claimed closed two ways.
+
+**Wrong claim 1 (opus-S170, `the-smooth-averaging-route-...`):** good-period existence closes a-priori by the SMOOTH-averaging route — `max ≥ mean` ⟹ it suffices that the grid mean `E_j[maxgap] > 1/7`, and `E_j = E_x[maxgap] + disc` with `|disc| ≤ 0.006` and `E_x[maxgap] > 1/7` (claimed "`1.48×` for the tight AP `{1..13}`, INCLUDING the extremal AP families"). Lean `exists_good_of_smooth_mean`.
+
+**Wrong claim 2 (klein-S196, LEM-012 as ORIGINALLY stated):** `L ≥ k−5` AND `V > max E` ⟹ good period at `j ≤ Q = ⌈7(L−1)/(L−k+6)⌉`.
+
+**Refutation (klein-S201, exact).** The tight AP `E = {0,…,12}` (`= {1..13}` shifted) is the **EXTREMAL LRC(14) instance** (`M = 1/14` exactly), with ruler `V = 13`. There **NO good period exists**: for every `j ∈ {1,…,12}`, `{0·j,…,12·j} mod 13 =` all 13 residues (a permutation), so maxgap `= 1/13 = 0.077 < 1/7`. Against both claims:
+- **vs opus:** `E_x[maxgap] = 0.211 > 1/7` ✓ but `E_grid[maxgap over j=1..12] = 1/13 = 0.077`, so `disc = 0.134`, NOT `≤ 0.006`. At the RESONANT ruler `V=13` the grid `j/13` lands exactly on maxgap's equidistribution NULLS (its minima), the OPPOSITE of the continuum mean. So `E_x > 1/7` does **not** imply a good period. (The `α>1` Fourier-tail bound fails because the resonance `nV = 13,26,…` hits the HEAD of maxgap's spectrum — maxgap is strongly `1/13`-periodic for consecutive velocities — not the tail.)
+- **vs LEM-012:** `V = 13 > max E = 12` (old hypothesis HOLDS), `L = 13`, `Q = 14`; but Step 1's Dirichlet `j` (`‖jd/V‖ < 1/Q`) is forced to `j = 13 ≡ 0 (mod V)` — the EXCLUDED trivial period. **Correct hypothesis: `V ≥ Q+1`.** At `V = 15 = Q+1`, Dirichlet gives a valid `j` and a good period exists (`maxgap = 0.2`). LEM-012 statement + proof Step 1 CORRECTED.
+
+**What survives (no hole in the covering case).** The extremal/resonant small-ruler clusters (`V ≤ Q`) have **no good period** and are the **DENSITY-FLOOR leg's** territory: `μ_good({0..12}) = measure{x : maxgap(xE) > 1/7} = 0.44 ≥ bar_13`. The good-period leg owns `V ≥ Q+1` (LEM-012 near-AP + LEM-013 dissociated, both MAX-based). So the covering case still closes — as good-period (`V ≥ Q+1`) ∪ density-floor (`V ≤ Q`, resonant) — but NEITHER "smooth mean" NOR "`V > max E`" is the closure. `max ≥ mean` is also ONE-WAY: at `V=33` (`3-struct`), `E_grid = 0.106 < 1/7` yet a good period EXISTS (`j=11`), so a low grid mean does not deny existence either.
+
+**Lesson.** Same as MISTAKE-127/S200 (arc-count) one level up: **good-period existence is a MAX statement, never a MEAN/COUNT.** Certify it by exhibiting the best `j` (Dirichlet/collapse with `V ≥ Q+1`, or LEM-013's direct margin), or route the cluster to the density floor. An AVERAGE over `x` (continuum) or over `j` (grid) is fooled by the extremal/resonant cluster — the grid is maximally anti-correlated with maxgap exactly at the resonant ruler. Always test the EXTREMAL tight AP `{0..k−1}` at its own ruler `V=k`, not just large-`V` samples (opus/LEM-012 both only tested `V ≥ 91`). Files: `lrc14_smooth_route_and_LEM012_smallV_klein_S201` (+out); CASE-good-period-smallV-no-good-period.
+
+---
+
+## MISTAKE-128 (klein-2026-07-09-S199): route (c)'s inequality "#arcs/spread < D3(E)" is FALSE at ALL spreads for co-offset sets with a 7-structured difference set; it fails by DILATION (c, D3 both dilation-invariant), not just in a finite-check window; route (c) holds only via the ACTUAL ρ*=μ
 
 **What was claimed (mac-mini-S61/S62, LEM-012 route c):** the dissociated branch closes a-priori by `c := #arcs/spread < D3(E)` (`ρ* ≥ D3`, `#arcs ≤ c·Vmax`), with "`c/D3` MONOTONE DECREASING in spread, `< 1` throughout (max 0.90 at spread 80)", hence the concrete closure `[spread ≥ 200: c < D3, exact] + [spread < 200: Vmax ≤ 234 finite check]`.
 

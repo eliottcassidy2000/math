@@ -1,0 +1,16 @@
+1/7 = 0.14286   (good period exists  <=>  best/V > 1/7)
+
+                       cluster    V   L    E_x  E_grid    disc  best/V  good? mu_good
+      tightAP {0..12} EXTREMAL   13  13  0.211   0.077  -0.134   0.077  False   0.442
+        tightAP {0..12} @V=Q+1   15  13  0.211   0.190  -0.021   0.333   True   0.442
+      3-struct {0,3..30,10,32}   33  11  0.209   0.106  -0.103   0.333   True   0.615
+                      2-struct   22  11  0.214   0.110  -0.103   0.500   True   0.611
+        7-struct dissoc (S200)   91   4  0.234   0.222  -0.011   0.429   True   0.915
+
+LEM-012 Dirichlet j for {0..12} (L=13,k=13 => Q=14):
+  V=13: Q=14, Dirichlet j=13, jd mod V=0, excluded(j==0 mod V)? True   <-- BUG: hyp V>maxE holds but j excluded
+  V=15: Q=14, Dirichlet j=1, jd mod V=1, excluded(j==0 mod V)? False   <-- ok (V>=Q+1)
+
+CONCLUSION: good-period leg needs V>=Q+1 (LEM-012 corrected) / a REAL good period (LEM-013);
+the small-V resonant corner (extremal tight AP) has NO good period and closes via mu_good>=bar.
+opus-S170 smooth-MEAN route: REFUTED (E_x>1/7 =/=> good period; disc=0.137 not 0.006).

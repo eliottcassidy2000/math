@@ -1,0 +1,15 @@
+1/7 = 0.14286;  E_grid[maxgap] > 1/7  <=>  a good period exists
+          family E_x[maxgap]  x/(1/7)
+       AP{1..13}     0.21136    1.480
+primsat 2{1..12}+13     0.20131    1.409
+dilAP 13*{0..12}     0.21136    1.480
+  7-struct(S200)     0.23364    1.635
+    block{0..12}     0.21136    1.480
+          2block     0.23856    1.670
+
+MIN-HUNT E_x[maxgap] over hard k=13 (structured/coarse adversaries) + E_grid check:
+  min E_x[maxgap] found = 0.21503 = 1.505x (1/7)   E=[np.int64(0), np.int64(7), np.int64(8), np.int64(10), np.int64(12), np.int64(14), np.int64(16), np.int64(18), np.int64(20), np.int64(22), np.int64(24), np.int64(38), np.int64(64)]
+  min E_grid[maxgap] over hard rulers = 9.00000 = 63.000x   #(E_grid<=1/7, route FAILS)=0
+
+=> if min E_grid[maxgap] > 1/7 for all hard adversaries, opus's smooth route holds (thin).
+   the a-priori pieces: E_x[maxgap] floor (>1/7) + discrepancy |E_grid-E_x| bound.

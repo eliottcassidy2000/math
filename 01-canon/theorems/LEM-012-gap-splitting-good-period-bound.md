@@ -1,7 +1,7 @@
 ---
 id: LEM-012
 title: The gap-splitting good-period bound — if a k-element co-offset set E contains an arithmetic progression of length L ≥ k−5, then a good period exists at j ≤ ⌈7(L−1)/(L−k+6)⌉ = O(k), by an ELEMENTARY argument (Dirichlet clustering of the sub-AP + a pigeonhole gap-split): cluster the L-term AP into a circular arc of span < (L−k+6)/7 so its complement is a single gap of length > (k−L+1)/7, which the remaining m=k−L ≤ 5 points can split into at most m+1 pieces, the largest > 1/7. This elementarily closes the near-AP branch (longest-AP ≥ k−5) of the general j*=O(k) capstone — including mac-mini's exact-AP case (L=k, bound = ⌈7(k−1)/6⌉) — leaving only the deeply-dissociated case (longest-AP ≤ k−6) to kps-S91; the two ranges tile all L with no gap
-status: PROVED (elementary: Dirichlet's simultaneous-approximation theorem in ONE dimension + a pigeonhole on the split gap; no Weyl / equidistribution / resonance sum). VERIFIED: the Dirichlet-cluster j leaves a >1/7 gap in 100% of constructed long-AP clusters (L=k..k−5, m=0..5, k=11,12,13, Vmax=91/200/400), and j* ≤ Q in all sampled hard clusters with L ≥ k−5. Closes THM-527-A's finite check for the near-AP branch WITHOUT the 𝒲̂-resonance bound
+status: PROVED with a CORRECTED hypothesis (klein-S201, MISTAKE-129): the stated hypothesis `V > max E` is TOO WEAK — the correct hypothesis is **`V ≥ Q+1`** (the ruler must exceed the Dirichlet bound `Q`). Reason: Step 1's Dirichlet `j` satisfies `‖jd/V‖ < 1/Q`, and when `V ≤ Q` the only such `j` can be `j ≡ 0 (mod V)` — the EXCLUDED trivial period. Counterexample to the OLD statement: the extremal tight AP `E={0,…,12}` at `V=13` (`V>maxE=12` holds, `L=13=k`, `Q=14`) has Dirichlet `j=13≡0` and NO good period at all (every `j∈{1,…,12}` gives maxgap `= 1/13 < 1/7`, the 13 points equidistribute). Such small-V (`V ≤ Q`) resonant/dense clusters are the DENSITY-FLOOR leg's territory (`μ_good({0..12})=0.44 ≥ bar_13`), NOT the good-period leg. With `V ≥ Q+1` the mechanism is correct. VERIFIED: the Dirichlet-cluster j leaves a >1/7 gap in 100% of constructed long-AP clusters (L=k..k−5, m=0..5, k=11,12,13, Vmax=91/200/400 — all `≥ Q+1`), and j* ≤ Q in all sampled hard clusters with L ≥ k−5 AND `V ≥ Q+1`. Closes THM-527-A's finite check for the near-AP branch WITH `V ≥ Q+1` (large ruler); small ruler → density floor
 source: klein-2026-07-09-S196
 depends_on:
   - THM-527   # good period j ⟺ maxgap{frac(e_i j/Vmax)} > 1/7; the finite-Vmax glue THM-527-A
@@ -16,14 +16,22 @@ external: Dirichlet's approximation theorem; the three-distance / pigeonhole.
 
 ## Statement
 
-Let `E = {e_0=0, e_1, …, e_{k−1}} ⊂ ℤ` (`k ≤ 13`) be a co-offset set, `V > max E` the ruler. A
+Let `E = {e_0=0, e_1, …, e_{k−1}} ⊂ ℤ` (`k ≤ 13`) be a co-offset set, `V` the ruler. A
 **good period** is `j ∈ {1,…,V−1}` with `maxgap{ e·j mod V : e∈E } > V/7` (THM-527: `⟹ M(S) ≥ 1/14`).
 Suppose `E` contains an **arithmetic progression of length `L`** (common difference `d`), i.e.
 `{a, a+d, …, a+(L−1)d} ⊆ E`, with
 
-> **`L ≥ k − 5`.**   Then a good period exists at some `1 ≤ j ≤ Q := ⌈7(L−1)/(L−k+6)⌉ = O(k)`.
+> **`L ≥ k − 5`  AND  `V ≥ Q+1`**, where `Q := ⌈7(L−1)/(L−k+6)⌉ = O(k)`.
+> Then a good period exists at some `1 ≤ j ≤ Q`.
 
 (`Q ≤ 49` for all `k ≤ 13`; for `L = k`, `Q = ⌈7(k−1)/6⌉` — mac-mini-S59's exact-AP bound, recovered.)
+
+> **The `V ≥ Q+1` hypothesis is NECESSARY (klein-S201, MISTAKE-129).** The weaker `V > max E` is FALSE:
+> the extremal `E = {0,…,12}` at `V = 13` satisfies `V > max E = 12`, `L = 13 = k`, but has **NO good
+> period** (every `j ∈ {1,…,12}` gives maxgap `= 1/13 < 1/7`; the 13 points equidistribute at every
+> rational `j/13`). At `V = 13 ≤ Q = 14`, Step 1's Dirichlet `j` is forced to `j = 13 ≡ 0 (mod V)` — the
+> excluded trivial period. Such **small-ruler `V ≤ Q` resonant clusters are handled by the DENSITY-FLOOR
+> leg** (`μ_good({0..12}) = 0.44 ≥ bar_13`), not the good-period leg. The good-period leg owns `V ≥ Q+1`.
 
 ## Proof (elementary)
 
@@ -31,8 +39,11 @@ Write `m := k − L ≤ 5` (the number of points of `E` off the AP) and `S := (L
 (the hypothesis `L ≥ k−5` is exactly `S > 0`).
 
 **Step 1 — cluster the sub-AP (Dirichlet).** By Dirichlet's approximation theorem, for the integer
-`Q = ⌈(L−1)/S⌉ = ⌈7(L−1)/(L−k+6)⌉` there is `j ∈ {1,…,Q}` with `‖j d / V‖ < 1/Q ≤ S/(L−1)` (this is
-UNCONDITIONAL in `d, V`). Put `s := (jd \bmod V)` in `(−V/2, V/2]`, so `|s| < V·S/(L−1)`. At this
+`Q = ⌈(L−1)/S⌉ = ⌈7(L−1)/(L−k+6)⌉` there is `j ∈ {1,…,Q}` with `‖j d / V‖ < 1/Q ≤ S/(L−1)`.
+**Because `V ≥ Q+1`, this `j ≤ Q ≤ V−1` is a VALID non-trivial period** `j ∈ {1,…,V−1}` (this is the
+step that FAILS when `V ≤ Q`: there the Dirichlet `j` may be forced to `j ≡ 0 (mod V)`, the excluded
+trivial period — see the extremal `{0,…,12}` at `V=13`, MISTAKE-129). Put `s := (jd \bmod V)` in
+`(−V/2, V/2]`, so `|s| < V·S/(L−1)`. At this
 dilation the AP maps to `{(a+id)j \bmod V} = {aj + i·s \bmod V : i=0,…,L−1}` — an AP of step `s`
 spanning `|(L−1)s| < V·S < V`, so it lies in a **single circular arc `A` of length `< S·V`** (no wrap).
 
