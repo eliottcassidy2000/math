@@ -97,10 +97,33 @@ safe. The definitional identity `momentBar + capRat − 1 = witnessMP` holds exa
   concentrates it in THM-661 where the fleet's transfer machinery (monad THM-669/670, boxeph mu-level
   transfer, klein modular supply) is already aimed.
 
+## Swapped into the skeleton's witness-route case-split (opus-S186 cont.)
+
+The skeleton assembles `hfloor` via `lrc14_from_witness_floor_cases_given_nodes`, which splits it into
+`hsmall` (`k ≤ 7` pigeonhole), **`hlarge`** (`8 ≤ k ≤ 13`), `hsize`, plus `hpartA`/`hR0`. The `hlarge` slot
+is exactly the type `large_witness_floor_from_momentfloor_nodes` produces, so the moment-floor node drops
+straight in. `LRCWitnessMomentFloor.lean` now carries the top-level assembly:
+```lean
+theorem lrc14_from_momentfloor_nodes
+    (nuShape measGP : Shape → ℝ)
+    (hbonf …) (hMoment …) (hB …)            -- the large case, via the MOMENT FLOOR (was Lemma A)
+    (hsmall …) (hsize …) (hpartA …) (hR0 …) : LRC14Statement :=
+  lrc14_from_witness_floor_cases_given_nodes hsmall
+    (large_witness_floor_from_momentfloor_nodes nuShape measGP hbonf hMoment hB)
+    hsize hpartA hR0
+```
+Verified: `lrc14_from_momentfloor_nodes : … → LRC14Statement`, kernel-pure
+`[propext, Classical.choice, Quot.sound]`. So there is now a complete top-level LRC(14) assembly whose
+density-floor dependency is `hMoment` (THM-661's proved `(A')` bar) instead of the open Lemma A. The two
+genuine open parameters are exactly the two cruxes: **`hMoment`** (density floor = THM-661) and **`hpartA`**
+(reach); the rest (`hbonf` kps-S30, `hB`, `hsmall`, `hsize`, `hR0 = lonely_of_Mreach_ge`) are proved and
+suppliable. Lemma A appears nowhere in this route.
+
 ## Ledger
 
-- FORMALIZED `witness_floor_from_momentfloor_nodes` (LRCWitnessMomentFloor.lean, kernel-pure, root-wired,
-  first-try build): hfloor ⟸ Bonferroni (kps-S30) + moment floor (THM-661, `ν ≥ momentBar`) + Lemma B;
+- FORMALIZED `witness_floor_from_momentfloor_nodes` + `lrc14_from_momentfloor_nodes` (LRCWitnessMomentFloor.lean,
+  kernel-pure, root-wired, first-try build): hfloor ⟸ Bonferroni (kps-S30) + moment floor (THM-661, `ν ≥
+  momentBar`) + Lemma B, wired through the skeleton's case-split into a top-level `LRC14Statement`;
   Bonferroni arithmetic `momentBar+capRat−1=witnessMP` DEFINITIONAL.
 - VERIFIED min D3(k) ≥ momentBar(k) = witnessMP + 1 − capRat(k) for k=8..13 (k=8 razor +0.00058; degree-4
   B4 has room there). Lemma A RETIRED — unnecessary for the formalization.

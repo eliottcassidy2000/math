@@ -91,6 +91,31 @@ theorem large_witness_floor_from_momentfloor_nodes
   exact witness_floor_from_momentfloor_nodes nuShape measGP hbonf hMoment hB
     (shapeOf v) h8 h13
 
+/-- **The witness-route case-split, with the moment floor swapped in for Lemma A (opus-S186).**
+LRC(14) follows from: the pigeonhole small case (`hsmall`, `k ≤ 7`); the **moment-floor** large case
+(`hbonf` Bonferroni + `hMoment` THM-661 + `hB` Lemma B, `8 ≤ k ≤ 13`) — this is the slot the Lemma-A
+node held; the size bound (`hsize`); and the reach + lonely nodes (`hpartA`, `hR0`). The `hlarge` slot of
+`lrc14_from_witness_floor_cases_given_nodes` is filled by `large_witness_floor_from_momentfloor_nodes`, so
+the OPEN density-floor dependency is now `hMoment` (THM-661's proved bar), NOT the standalone Lemma A. -/
+theorem lrc14_from_momentfloor_nodes
+    (nuShape measGP : Shape → ℝ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hMoment : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (momentBar (clusterSize s) : ℝ) ≤ nuShape s)
+    (hB : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hsmall : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 7 → (witnessMP : ℝ) ≤ witnessG2 (shapeOf v))
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → clusterSize (shapeOf v) ≤ 13)
+    (hpartA : ∀ v : Fin 13 → ℤ, 0 < witnessG2 (shapeOf v) →
+      (1 : ℝ) / 14 ≤ Mreach v)
+    (hR0 : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      (1 : ℝ) / 14 ≤ Mreach v → ∃ t : ℝ, Lonely 14 v t) :
+    LRC14Statement :=
+  lrc14_from_witness_floor_cases_given_nodes hsmall
+    (large_witness_floor_from_momentfloor_nodes nuShape measGP hbonf hMoment hB)
+    hsize hpartA hR0
+
 end MomentFloor
 end LRC14
 end LonelyRunner

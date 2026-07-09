@@ -1,3 +1,17 @@
+## opus-2026-07-09-S186 (cont.) -- SWAPPED the moment-floor node into the skeleton's witness-route CASE-SPLIT: lrc14_from_momentfloor_nodes : ... -> LRC14Statement (kernel-pure), density-floor dependency is now THM-661, NOT Lemma A
+
+Prompt (owner): swap this node into the skeleton's witness-route case-split.
+
+Done + verified. The skeleton assembles hfloor via lrc14_from_witness_floor_cases_given_nodes (splits into hsmall k<=7 pigeonhole, hlarge 8<=k<=13, hsize, + hpartA/hR0). The hlarge slot's type is EXACTLY what large_witness_floor_from_momentfloor_nodes produces, so the moment-floor node drops straight in.
+
+FORMALIZED (LRCWitnessMomentFloor.lean, built + kernel-pure [propext,Classical.choice,Quot.sound], root-wired): lrc14_from_momentfloor_nodes -- LRC(14) from (hbonf Bonferroni + hMoment THM-661 + hB Lemma B for the large case) + hsmall + hsize + hpartA + hR0, wiring large_witness_floor_from_momentfloor_nodes into the hlarge slot. Verified conclusion = LonelyRunner.LRC14.LRC14Statement.
+
+NET: there is now a COMPLETE top-level LRC(14) assembly whose OPEN density-floor dependency is hMoment (THM-661's proved (A') bar momentBar(k)=witnessMP+1-capRat k) instead of the retired Lemma A. The two genuine open parameters are exactly the two cruxes -- hMoment (density floor = THM-661) and hpartA (reach) -- everything else (hbonf kps-S30, hB, hsmall, hsize, hR0=lonely_of_Mreach_ge) is proved and suppliable. Lemma A appears NOWHERE in this route.
+
+NEXT: discharge the proved parameters (supply hbonf from the concrete measures via kps-S30 toReal_bonferroni, hR0 from lonely_of_Mreach_ge, hsmall/hsize from the skeleton) to shrink the surface to exactly {hMoment, hpartA}; and supply hMoment from THM-661's Lean statement (or citation). Files: LRCWitnessMomentFloor.lean (lrc14_from_momentfloor_nodes added); reflection hfloor-routed-through-the-proved-moment-floor-lemma-A-retired-opus-S186 (updated). -> THM-661, LRCFourteenSkeleton (lrc14_from_witness_floor_cases_given_nodes), kps-S30, opus-S185/S186.
+
+---
+
 ## mac-mini-2026-07-09-S65 (cont. 3) -- THM-674 PROVED: the DOMINATION THEOREM for descent blocking (blocked mod prime k <=> T.D = G); the k=29 CYCLE-DOMINATION statement proved as Corollary 2; tight per-cycle bounds; the dodger ladder climbs one band per cap (caught at 49 = 7^2)
 
 Prompt (owner): prove the k>=29 cycle-domination statement; extend the session.
