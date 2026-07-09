@@ -14,6 +14,22 @@ NEXT: prove step (1) (interval maximizes Schur triples -- check "max #{a+b=c}" /
 
 ---
 
+## monad-explorer-2026-07-09-S1 -- THM-665: THE SHARP ALIASING BOUND |E_grid[W] - int W| <= TV(W')/(12 V^2) PROVED (Poisson aliasing exact + BV coefficients) + THE EXACT TV(W') LEDGER: TV = 12.2*spread^2 stable across structure classes => V0 = 2.7-2.8*spread -- kps-S108's window CONFIRMED from the proved side (the pi^2/3 prose envelope is 4pi^2 = 39.5x loose); STRUCTURAL COROLLARY: covering clusters have V/spread = 1 => the a-priori existence route NEVER fires on them -- THE BOUNDED WINDOW IS THE COVERING CASE; the measured 8-418x signed slack = square-root cancellation over ~570 corner phases = THE SAME Kronecker node as the realization (HYP-5707)
+
+Prompt (owner): synthesize the bleeding edge of the LRC-14 proof and contribute to it.
+
+SYNTHESIS ABSORBED (2 days, 284 commits, via sweep + primary reads): all six density-floor legs CLOSED (THM-661/663, degree-d moment bounds on W -- the S11 excess mass carried to completion by mac-mini); my R2 moot (bypassed by moment bounds; the AP is non-covering hence out of scope, klein-S206); hlink DONE; drift embed (V > 1.41*spread) + scale-separation regimes DONE; ruler points never lonely (klein-S207) => witness necessarily non-local; THE SOLE OPEN NODE = hrefl / the equidistribution-Kronecker realization (kps-S112 LRCSmoothBridge's one hypothesis). The kps-S108/S112 NEXT lines both named: formalize/sharpen the R_grid bound. Delivered:
+
+1. THM-665 (canon, PROVED, 3 steps): (i) E_grid[W](V) = Sum_m What(mV) EXACT (absolutely convergent Fourier of the continuous piecewise-linear W; finite geometric sum; legitimate interchange); (ii) |What(r)| <= TV(W')/(4pi^2 r^2) (two IBP; W' BV piecewise-constant-INTEGER); (iii) |R_grid| <= TV(W')/(12V^2). Verified 12/12 rows (kps-S108's two clusters, V=200..6400; slack 8-418x); aliasing identity checked to 1e-5 by exact per-cell Fourier integrals.
+2. THE EXACT LEDGER (S11 cell engine, integer TVs): TV(W') = 14904 (dissoc spr 35), 81860 (7-struct spr 82), 2628 (klein-S206 worst covering spr 16), 1640 (tight AP), 2984 (GW) -- the law TV = 12.2*spread^2 (GW 5.6). => V0 = sqrt(TV/(12 intW)) = 2.65-2.80*spread across the zoo: kps-S108's "V >~ 2.8*spread" CONFIRMED as what the PROVED constant gives; the pi^2/3 envelope in their prose would have given 17*spread -- reconciled, no damage, and the Lean-facing statement is now the sharp (iii).
+3. STRUCTURAL COROLLARY (the honest frame for the endgame): covering velocity sets contain small speeds => co-offsets reach ~Vmax => spread ~ Vmax => V/spread ~ 1 < 2.7 on EVERY covering cluster => the a-priori aliasing route certifies existence only where LRC(14) does not need it; THE ENTIRE COVERING CASE LIVES IN THE BOUNDED WINDOW. The bound's real roles: (a) the formal 1/V^2 convergence statement (Lean-ready shape, one page); (b) per-(E,V) finite checks are sums of exact rationals -- positivity DECIDABLE (certifiable window checks, no float).
+4. THE NAMED ROOM: measured |R_grid| sits 8-418x below (iii); the mechanism is square-root cancellation over the ~TV/avg-jump ~ 570 corner phases (sqrt = 24, matches the generic slack); proving it = equidistribution of the corner positions m/d on the 1/V grid = THE SAME Diophantine/Kronecker statement as the realization node. The two remaining quantitative questions are ONE question. A proven factor 4 (c >= 47 in TV/(cV^2)) shrinks the window to (spread, 1.41*spread] where klein-S205's drift embed takes over.
+
+FILES: 01-canon/theorems/THM-665-sharp-aliasing-bound-smooth-surrogate.md; 04-computation/lrc14_sharp_aliasing_tv_monad_S1.py (+out). No canon overridden; kps-S108's window figure confirmed not corrected.
+
+NEXT: (a) Lean-formalize THM-665(i)-(iii) (self-contained analysis, the exact shape kps-S112's NEXT requested -- offer to kps); (b) the corner-phase square-root cancellation as the unified Kronecker statement (one statement closing both the window and the realization); (c) the P u L drift-embed extension (klein-S206 (c)) remains the other live limb; (d) certified-rational window checks per covering cluster (replace float E_grid sweeps).
+
+---
 ## kind-pasteur-2026-07-09-S112 -- FORMALIZED THE CONTINUUM REFORMULATION BRIDGE ON THE SMOOTH SURROGATE (LRCSmoothBridge.lean, 7 thms sorry-free) -- measure->point desingularization + drift-free observer; CONVERGES with klein-S207 (drift = discretisation artefact, equidistribution = sole residue)
 
 Prompt (owner): formalize the continuum reformulation bridge on the smooth surrogate.
