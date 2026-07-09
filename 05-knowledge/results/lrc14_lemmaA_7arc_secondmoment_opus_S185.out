@@ -1,0 +1,18 @@
+decorrelated: E[N]~7*(6/7)^13=0.9436, E[N^2]~1.4728, PZ~0.6046  (need>=0.4425)
+========================================================================================================
+                     cluster spread   E[N]  E[N^2] PZ bound  P(N>=1)      nu PZ>=nuC?
+         consecutive {0..12}     12  0.840   2.867   0.2461   0.3241  0.4425       no
+                   near-2-AP     14  0.794   2.608   0.2415   0.3232  0.4711       no
+                  {0..11}+20     20  0.810   2.396   0.2738   0.3684  0.5640       no
+                     GAP 4x4     16  0.956   3.102   0.2948   0.4222  0.7709       no
+              2*AP {0,2..24}     24  0.840   2.867   0.2462   0.3241  0.4425       no
+            minhunt spread20     20  0.893   2.584   0.3085   0.4574  0.8969       no
+            minhunt spread24     24  0.836   2.391   0.2922   0.4351  0.8810       no
+            minhunt spread30     30  0.789   1.798   0.3467   0.5016  0.9256       no
+            minhunt spread40     40  0.856   1.866   0.3929   0.5776  0.9850       no
+            minhunt spread60     60  0.861   1.684   0.4403   0.6053  0.9830       no
+           minhunt spread100    100  0.917   1.697   0.4950   0.6419  0.9731      YES
+========================================================================================================
+READING: if PZ bound >= nuConsec=0.4425 for spread>B (adversarial minhunt), the 7-arc second moment
+PROVES the tail (nu>=PZ>=nuConsec); the crossover B scopes the finite core. Near consecutive PZ<nuC
+(expected: PZ<=P(N>=1)<=nu, and nu=nuConsec is the min there) -- that band is the finite core.

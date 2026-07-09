@@ -1,3 +1,17 @@
+## opus-2026-07-09-S185 -- the 7-arc second moment CANNOT prove Lemma A's tail (nu=mu exactly => it's a weak discretized moment bound); CORRECTS my S184 "Lemma A easier" redirect; honest negative + redirect to the proved moment route
+
+Prompt (owner): prove the tail bound via the 7-arc second moment.
+
+Set it up rigorously and it FAILS (honest negative). ARC->GAP LEMMA (rigorous): A_j=[j/7,(j+1)/7) empty => the bracketing points span a gap>1/7 STRICTLY => maxgap>1/7. So with N(x)=#empty arcs: nu(E) >= P(N>=1) >= E[N]^2/E[N^2] (Paley-Zygmund). E[N],E[N^2] = arc-avoidance moments (tractable, unlike maxgap). BUT TOO LOSSY: PZ crosses nuConsec=0.4425 only at spread ~60-100, P(N>=1) at ~24+ => INFEASIBLE core (~C(59,11)~10^11). Two losses: fixed arcs miss straddling gaps (P(N>=1)<<nu), and PZ is loose when empty arcs cluster.
+
+ROOT CAUSE (verified exact): nu(E) = mu(E) = P(W>0) IDENTICALLY (maxgap>1/7 <=> some gap>1/7 <=> W=Sum(g_i-1/7)_+>0). So ANY tractable lower bound on nu IS a moment-route bound; the 7-arc PZ is a weak degree-2 discretized version, strictly weaker than the proved degree-4 moment LP (THM-661). B_d -> mu as d->inf => min_E B_d -> min_E mu = nuConsec=0.4425; Lemma A (nu>=0.4425) = the d->inf TIGHT moment-LP min; proved D3 min=0.3088. => Lemma A's tail IS the moment route's coupled-region difficulty.
+
+CORRECTS opus-S184: the "+0.546 slack => Lemma A easier" redirect is ILLUSORY -- every tractable lower bound (PZ 0.25-0.6, moment LP 0.31-...) sits far below the decorrelated 0.988 and eats the slack. No free lunch; nu=mu closes the door.
+
+REDIRECT (what to actually do): close hfloor via the PROVED THM-661 (mu>=m_P; Lemma A UNNECESSARY if the G_P-cap arithmetic allows -- Bonferroni kps-S30 + D3's mu>=0.3088 >> m_P=0.0565) OR prove Lemma A as a HIGH-degree moment LP (its natural home) -- NOT the 7-arc second moment, which is closed off. FLEET: monad-S6 assembling the grand top theorem (HYP-5757); klein-S209 modular-supply route DELETES the realization leg (HYP-5732); boxeph-S2 D3-monotone mu-level transfer (their HYP-5722, I renamed my colliding one to HYP-5758). Files: lrc14_lemmaA_7arc_secondmoment_opus_S185 (+out), lrc14_lemmaA_nu_equals_mu_opus_S185 (+out); reflection the-7-arc-second-moment-cannot-beat-the-moment-route-nu-equals-mu-opus-S185; HYP-5759.
+
+---
+
 ## boxeph-2026-07-09-S2 -- TOURNAMENT-CORPUS MINING FOR MID-BAND LEVERS (three deep sweeps: the lever map -- four provable dead ends + the live transports) + HYP-5722: the mu-LEVEL threshold transfer (the piece THM-670 disclaims) => explicit per-k a-priori (H1) thresholds for LEM-014
 
 Prompt (owner): deep-dive prior tournament work comprehensively for facts giving LRC(14) leverage; work to finish LRC(14); integrate and extend incoming ideas.

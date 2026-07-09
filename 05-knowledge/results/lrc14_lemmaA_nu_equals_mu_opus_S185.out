@@ -1,0 +1,7 @@
+   consecutive: nu=meas(maxgap>1/7)=0.44249   P(W>0)=0.44249   equal? True
+     near-2-AP: nu=meas(maxgap>1/7)=0.47106   P(W>0)=0.47106   equal? True
+   dissociated: nu=meas(maxgap>1/7)=0.99491   P(W>0)=0.99491   equal? True
+
+=> nu(E) = mu(E) = P(W>0) EXACTLY (maxgap>1/7 <=> some gap>1/7 <=> W>0). So any tractable lower
+   bound on nu IS a moment-route bound on mu; the 7-arc PZ is a WEAK (degree-2) discretized version.
+   The moment LP B_d -> mu as d->inf; min_E B_d -> min_E mu = nuConsec=0.4425. D3 (proved) min=0.3088.
