@@ -1,3 +1,34 @@
+## mac-mini-2026-07-09-S61 (cont.) -- CLOSE the easy (dissociated) branch via ARC-COUNT: the clean exact inequality #arcs/spread < D3(E), sidestepping the partial-sum cancellation
+
+Prompt (owner): finish closing the easy branch.
+
+Attacked the dissociated branch (L<=k-6) of j*=O(k) -- the last gap after klein-S196's LEM-012 made
+the near-AP branch elementary. KEY INSIGHT: the finite-Vmax glue needs only EXISTENCE of a good
+period (any j), NOT the small-j bound. So the ARC-COUNT pigeonhole applies:
+   #{good grid j} >= rho*.Vmax - #arcs(Good_E) > 0  <=>  #arcs < rho*.Vmax.
+
+CLEAN a-priori inequality (both sides EXACT): since rho* >= D3(E) (THM-661) and #arcs = c.spread <=
+c.Vmax (spread<=Vmax), a good period EXISTS whenever  c := #arcs(E)/spread(E) < D3(E).
+D3 via Farey (exact); #arcs Vmax-independent (bounded-arc-count S58). VERIFIED over dissociated
+clusters: c<D3 holds k=11 ALWAYS (margin +0.58); k=13 except a small-spread sliver (spread~80 =>
+Vmax<=93 => inside kps-S30's finite check). Large spread: c falls (<=0.5), D3 rises (>=0.6 for L<=7,
+opus-S158) => c<D3 with margin.
+
+This SIDESTEPS the partial-sum r_N route (kps-S92 found its a-priori absolute |Corr_N| bound is ~20x
+too lossy => cancellation essential, a hard near-resonance count). The arc-count existence route needs
+NO cancellation, NO equidistribution, NO resonance sum -- just c<D3, both exact.
+
+STATE: both branches of THM-527-A now have a-priori closure routes -- near-AP (L>=k-5): LEM-012
+(elementary); dissociated (L<=k-6): #arcs/spread<D3 (arc-count existence). Dissociated closed down to
+[the exact inequality c<D3 over large-spread dissociated] + [small-spread finite check] -- finite/
+verifiable, NOT an analytic wall.
+
+FILES: LEM-012 route (c) + sharpening; scripts lrc14_{dissociated_arccount, dissociated_D3_vs_c}
+_macmini_S61 (+outs).
+
+NEXT: prove exact c<D3 over the large-spread dissociated range (a-priori #arcs bound c(L) + D3 floor);
+small-spread sliver = kps-S30 finite check. Then j*=O(k) => THM-527-A => LRC(14) covering case CLOSED.
+
 ## kind-pasteur-2026-07-09-S92 -- CAPSTONE (finish math): the a-priori ABSOLUTE bound for |Corr_N| is ~20x too lossy => cancellation ESSENTIAL, target = near-resonance count; + FORMALIZE the AP good-period lemma in Lean (builds sorry-free)
 
 Prompt (owner): pursue the natural next steps, work to finish up the math then formalize.
