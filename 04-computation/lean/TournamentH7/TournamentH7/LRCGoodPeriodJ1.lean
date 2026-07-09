@@ -93,4 +93,22 @@ theorem gap_split_pigeonhole (m : ℕ) (g : Fin (m + 1) → ℝ)
           rw [Finset.sum_const, Finset.card_univ, Fintype.card_fin]; ring
   linarith
 
+/-- **The AP clustering good period — the pure-AP case of LEM-012 (exact-AP, mac-mini-S59).**
+For an arithmetic progression of `k` phases `{0, α, 2α, …, (k−1)α}` with a small positive step
+`α ≥ 0`, if the span `(k−1)·α < 6/7` then all `k` phases lie in `[0, (k−1)α] ⊆ [0, 6/7)`, so the
+complement arc — of length `1 − (k−1)α > 1/7` — is an empty gap: a good period.  This is the
+`m = 0` case of `gap_split_pigeonhole` and the Dirichlet-consuming step: after Dirichlet gives a
+dilation `j ≤ ⌈7(k−1)/6⌉` with `‖jd/Vmax‖ = α < 6/(7(k−1))`, this lemma delivers the gap.
+(Mathlib's `Real.exists_nat_abs_mul_sub_round_le` supplies the Dirichlet `α`.) -/
+theorem ap_clustered_good_period (k : ℕ) (α : ℚ) (hα0 : 0 ≤ α)
+    (hspan : ((k : ℚ) - 1) * α < 6 / 7) :
+    ∃ gapLen : ℚ, (1 : ℚ) / 7 < gapLen ∧ ∀ i : ℕ, i < k → (i : ℚ) * α + gapLen ≤ 1 := by
+  refine ⟨1 - ((k : ℚ) - 1) * α, by linarith, ?_⟩
+  intro i hi
+  have hik : (i : ℚ) ≤ (k : ℚ) - 1 := by
+    have : (i : ℚ) + 1 ≤ (k : ℚ) := by exact_mod_cast hi
+    linarith
+  have : (i : ℚ) * α ≤ ((k : ℚ) - 1) * α := mul_le_mul_of_nonneg_right hik hα0
+  linarith
+
 end LRC14
