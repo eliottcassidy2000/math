@@ -93,5 +93,36 @@ theorem arccount_le_of_no_good_period {θ : ℝ} {E : Finset ℤ} {V : ℕ} (hV 
   obtain ⟨j, hj⟩ := good_period_of_arccount hV a b hcover h
   exact hno j hj
 
+/-! ### 4. The SMOOTH averaging route (opus-S170)
+
+The sharp good-set indicator has Fourier decay `~1/m` (L¹-divergent resonant sum ⟹ existence needs
+signed CANCELLATION, Mertens-hard — and the arc-count bound is vacuous on the extremal near-AP family,
+klein MISTAKE-127).  The *smooth* surrogate `maxgap(x)` is continuous piecewise-linear, Fourier decay
+`~1/m^α` with `α>1` (opus-S170: `α≈1.5–2.0`), so its resonant sum converges ABSOLUTELY — no
+cancellation.  A good period is `j` with `maxgap(j/V) > 1/7`; by `max ≥ mean` it suffices that the
+ruler-grid MEAN of `maxgap` exceeds `1/7`, and the grid mean equals the dilation-invariant continuous
+mean `E_x[maxgap]` up to the (small, absolutely-bounded) resonant discrepancy `D`.  Since
+`E_x[maxgap] > 1/7` with a uniform margin (opus-S170: `≥1.047×`, and `≈1.48×` for the extremal AP
+`{1..13}`), `E_j[maxgap] > 1/7` a-priori once `D <` margin. -/
+
+/-- **Smooth averaging existence.**  `g` is the (max-gap) surrogate on a nonempty ruler grid `J`;
+`meanx` its dilation-invariant continuous mean; the grid mean sits within `D` of `meanx`
+(`|mean_J g − meanx| ≤ D`, the resonant discrepancy — absolutely bounded since `α>1`); and the
+a-priori margin `thr + D < meanx` holds.  Then some grid point beats the threshold: a good period. -/
+theorem exists_good_of_smooth_mean {ι : Type*} (J : Finset ι) (hJ : J.Nonempty) (g : ι → ℝ)
+    (thr meanx D : ℝ)
+    (hdisc : |(∑ j ∈ J, g j) / (J.card : ℝ) - meanx| ≤ D)
+    (hmargin : thr + D < meanx) :
+    ∃ j ∈ J, thr < g j := by
+  have hcard : (0 : ℝ) < (J.card : ℝ) := by exact_mod_cast hJ.card_pos
+  rw [abs_le] at hdisc
+  have hmean : thr < (∑ j ∈ J, g j) / (J.card : ℝ) := by linarith [hdisc.1]
+  by_contra h
+  push_neg at h                                     -- `∀ j ∈ J, g j ≤ thr`
+  have hsum : (∑ j ∈ J, g j) ≤ ∑ _j ∈ J, thr := Finset.sum_le_sum (fun j hj => h j hj)
+  rw [Finset.sum_const, nsmul_eq_mul] at hsum        -- `∑ ≤ card · thr`
+  rw [lt_div_iff₀ hcard] at hmean                    -- `thr · card < ∑`
+  nlinarith [hmean, hsum]
+
 end TailDiameter
 end LonelyRunner

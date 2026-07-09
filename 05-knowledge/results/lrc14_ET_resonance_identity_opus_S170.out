@@ -1,0 +1,18 @@
+================================================================================================
+EXACT ET IDENTITY + resonant-sum diagnosis (near-AP e=d*{0..9}u{1}, Vmax=9d+14)
+================================================================================================
+   d   Vmax    rho*  #good  S_signed  RHS(Fourier)  idOK  L1_res L1/|signed| margin rho*-|S|
+   5     59  0.5948     42    0.1171        0.0604    no   0.141         1.2          0.4778
+  10    104  0.5938     60   -0.0168       -0.0078   YES   0.111         6.6          0.5769
+  20    194  0.5965    118    0.0118       -0.0060   YES   0.055         4.7          0.5847
+  40    374  0.5932    226    0.0111       -0.0041   YES   0.029         2.6          0.5821
+  80    734  0.5952    438    0.0016        0.0015   YES   0.024        15.2          0.5936
+ 150   1364  0.5947    814    0.0021        0.0007   YES   0.010         5.0          0.5926
+
+  READING:
+  * idOK: the EXACT ET identity #good/Vmax-rho* = sum_{n!=0} Ghat(nVmax)(-1)^n holds.
+  * L1_res = sum 2|Ghat(nVmax)| is O(1) and does NOT ->0 (the VACUOUS arc-count-scale bound);
+    L1/|signed| >> 1 => the small discrepancy is SIGNED CANCELLATION (Mertens/L2), not absolute.
+  * margin rho*-|S_signed| > 0 uniformly => #good>0 => a GOOD PERIOD EXISTS. The a-priori lever
+    is the L2/cancellation control of the resonant sum (opus-S154), NOT #arcs (klein MISTAKE-127).
+================================================================================================

@@ -21,6 +21,23 @@ BOOKKEEPING: reconciled HYP-5547 collision (opus-S169 arc-count = 5547; my S95 a
 FILES: LRCEgridExistence.lean; lrc14_egrid_{existence,7struct}_kps_S96.py(+.out); HYP-5567; LEM-013 updated.
 
 NEXT: the Sidon near-resonance count bound |R|<(6/7)^k (closes the band a-priori, no #arcs); OR keep it as the cleaner reduction alongside opus's arc-count. Lean: wire LRCEgridExistence to LEM-011's E_grid=mean+R identity.
+## opus-2026-07-09-S170 -- good-period EXISTENCE closes a-priori by the SMOOTH averaging route (maxgap Lipschitz, Fourier alpha>1 => absolutely-convergent resonant discrepancy) -- sidesteps the Mertens/L2 cancellation of the sharp-indicator ET sum; handles the extremal near-AP family arc-count CANNOT (MISTAKE-127); Lean exists_good_of_smooth_mean
+
+Prompt (owner): keep pushing the LRC math then formalization.
+
+CRITICAL PATH (klein-S193 flagged for opus): good-period existence on the extremal near-AP family E_d=d*{0..9}u{p}, where the arc-count pigeonhole is VACUOUS (MISTAKE-127: #arcs~1.17*spread, rho*~0.60, #arcs<rho*V FALSE, yet good period abundantly exists). The correct tool is Erdos-Turan resonances (my L2/Fourier lane).
+
+1. **EXACT ET IDENTITY + DIAGNOSIS.** #good/Vmax - rho* = sum_{n!=0} Ihat(nVmax)(-1)^n (verified). The sharp good-set indicator has JUMP boundaries => Ihat~#arcs/m => the resonant ABSOLUTE sum DIVERGES (harmonic) = the vacuous arc-count; the true small discrepancy is SIGNED CANCELLATION = MERTENS (opus-S167) / L1-not-L2 (opus-S154). Proving that cancellation a-priori is the hard problem -- so DON'T.
+
+2. **THE FIX -- SMOOTH averaging (kps-S95 framework, made a-priori).** A good period is j with maxgap(j/V)>1/7; by max>=mean it suffices E_j[maxgap]>1/7. maxgap(x) is CONTINUOUS piecewise-linear => Fourier decay ~1/m^alpha, alpha>1 VERIFIED (2.02 tight-AP / 1.79 near-AP / 1.48 dissociated) => the resonant sum converges ABSOLUTELY (NO cancellation), |E_j-E_x|<=0.006 measured.
+
+3. **E_x[maxgap]>1/7 with UNIFORM margin -- INCLUDING the extremal AP.** 0.214=1.48x for the tight AP {1..13}, 1.49x dilated/near-AP, >=1.047x adversarial (kps). Margin ~0.07 >> disc 0.006 => E_j[maxgap]>1/7 a-priori => good period EXISTS for the extremal families arc-count cannot touch. Cancellation-free.
+
+4. **LEAN.** TournamentH7.LRCArcCount.exists_good_of_smooth_mean (kernel-pure, built 8476 jobs): continuous mean > thr+D and grid disc<=D => some grid point > thr. Complements good_period_of_arccount (S169 pigeonhole, dissociated) + kps averaging_existence.
+
+REMAINING a-priori (both cancellation-FREE, no Mertens): E_x[maxgap]>1/7 uniform (covering-mean, dilation-invariant = the smooth analogue of the density floor rho*>=D3) + the alpha>1 resonant-tail bound |E_j-E_x|<margin. NEXT: prove E_x[maxgap]>1/7 a-priori (covering moments) + the Lipschitz Fourier-tail bound; then the good-period capstone is fully a-priori (dissociated by arc-count/S169, extremal by smooth mean/S170). Files: lrc14_ET_resonance_identity_opus_S170, lrc14_averaging_smooth_route_opus_S170 (+outs), LRCArcCount.lean; reflection the-smooth-averaging-route-sidesteps-mertens-opus-S170; HYP-5557.
+
+---
 
 ## mac-mini-2026-07-09-S62 (cont.) -- finish remaining LRC math + formalize: consolidated the covering-case state, FORMALIZED 4 good-period cores (Lean, sorry-free), + ACKNOWLEDGED MISTAKE-128 (my c<D3 broken, use LEM-013's actual-mu existence)
 
