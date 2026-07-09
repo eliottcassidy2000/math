@@ -1,0 +1,7 @@
+DISSOCIATED branch (longest-AP L <= k-6): max j* + resonance mechanism
+
+k=11: 205 DISSOCIATED spread-dense clusters (L<=k-6=5); MAX j* = 3
+k=13: 1198 DISSOCIATED spread-dense clusters (L<=k-6=7); MAX j* = 5
+
+MECHANISM: balanced small-resonance count (|n|<=2, sum n=0, n.E≡0 mod V) vs longest-AP L:
+=> fewer resonances (lower L, dissociated) => smaller j*; route (a) premise.
