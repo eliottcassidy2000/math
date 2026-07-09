@@ -22,6 +22,24 @@ So the proof shape is FORCED: [exact tau=1/q on non-covering, equality allowed] 
 FILES: lrc_phi6_resonance_across_n_klein_S206, lrc_covering_min_across_n_klein_S206, lrc14_covering_min_descent_klein_S206, lrc14_covering_sets_have_good_periods_klein_S206, lrc14_covering_margin_adversarial_klein_S206 (+outs); reflection the-tight-AP-is-not-covering-and-Phi6-is-universal-klein-S206; HYP-5690; memory.
 
 NEXT: (a) reconcile HYP-5690 with THM-527 (does the cluster family carry the covering constraint?); (b) if so, re-test the five broken routes on covering-only clusters; (c) extend the drift embed with the slow-runner part R.
+## kind-pasteur-2026-07-09-S111 -- COMPLETED M(AP)=1/14 EXACTLY (mreach_AP_eq, sorry-free) -- the tight <= half via Dirichlet (n=13), the LRC(14) equality extremal fully formalized
+
+Prompt (owner): keep pushing the LRC math then formalization, pull often.
+
+BUILT (LRCAPTight.lean, sorry-free): completed M(AP)=1/14 EXACTLY.
+- nearInt_le_abs_sub: nearInt x <= |x - m| for every integer m (nearInt = distZ = infDist to Z, so <= dist to any integer).
+- minReach_le: minReach v t <= nearInt(v_i t) for each runner i (finite inf <= any term).
+- minReach_AP_le: for every tau, minReach(AP) tau <= 1/14, via Mathlib's Dirichlet Real.exists_nat_abs_mul_sub_round_le with n=13: there is k in {1..13} with |k*tau - round| <= 1/(13+1) = 1/14, so the AP runner v=k is within 1/14 of 0 (14 points {0,tau,..,13tau} force two within 1/14).
+- mreach_AP_le: Mreach(AP) <= 1/14 (csSup over tau).
+- mreach_AP_eq: Mreach(AP) = 1/14 (le_antisymm with kps-S110 mreach_AP_ge).
+
+So the AP {1..13} is now formalized as the LRC(14) EQUALITY extremal, M=1/14 exactly (>= = loneliness kps-S110; <= = Dirichlet tightness kps-S111). Confirms klein-S206: the tight locus M=1/n is the AP, non-covering (sieve/trivial-q), lives OUTSIDE the covering case.
+
+CONTEXT (fleet): klein-S206 -- tight locus (M=1/n) is entirely NON-COVERING (the AP that broke 5 routes is in the sieve, not the covering case); every COVERING 13-set has a strict good period (966 exhaustive, margin 1.2353). mac-mini LRCTrivialQ -- lonely_of_not_dvd (non-covering => lonely at 1/q). My M(AP)=1/14 exact pins the extremal these rely on.
+
+STATE: the AP extremal fully formalized (M=1/14). LRC(14) architecture = [non-covering: trivial-q sieve, mac-mini] + [covering: strict good period (klein-S206) => lonely (drift-embed klein-S205 + smooth-W equidist kps-S108)] + [tight AP = non-covering, M=1/14 exact = kps-S110+S111]. FILES: LRCAPTight.lean.
+
+NEXT: the continuum reformulation bridge (rho*>0 => exists lonely tau) on the smooth surrogate; formalize the covering=>good-period existence (klein-S206, 966 sets, native_decide-able); the non-covering sieve wiring.
 
 ## kind-pasteur-2026-07-09-S110 -- FORMALIZED M(AP)>=1/14 (the LRC(14) equality extremal) + WIRED the density floor to the reach (LRCAPExtremal.lean, sorry-free)
 
