@@ -1,3 +1,19 @@
+## opus-2026-07-09-S176 -- GROUNDED the shared blocker hembed (THM-527 Part A): TRUE, exact two-scale identity, the finite-Vmax "coupling" is ONLY the tooth wobble <= spread/Vmax => a FORMALIZATION gap not open analysis; core identity formalized (LRCHembedIdentity, kernel-pure) -- TRIPLE convergence with kps-S105 + klein-S204
+
+Prompt (owner): keep pushing the LRC math then formalization, pull often.
+
+CONTEXT: good-period leg's hlink DONE (opus-S175/klein-S204/kps toolkit); remaining blocker = hembed = THM-527 Part A ruler embedding, SHARED by good-period AND density routes (klein-S203). Grounded it.
+
+1. **EXACT two-scale identity**: nearInt((Vmax-e)*tau) = nearInt(frac(Vmax*tau) - frac(e*tau)) -- loneliness of runner v=Vmax-e at tau IS the FAST phase frac(Vmax*tau) clearing the SLOW tooth frac(e*tau). NO computational error (nearInt 1-periodic + v*tau=Vmax*tau-e*tau). Formalized: TournamentH7.LRCHembedIdentity (kernel-pure) nearInt_speed_eq_fastPhase_clear + lonely_iff_fastPhase_clears.
+2. **hembed is TRUE** (numeric, lrc14_hembed_ruler_embedding): M(S)=max_tau min_i nearInt(v_i tau) >= 1/14 for every tested cluster (e spread 30, Vmax 31..1000), realized at SOME good period's ruler cell.
+3. **the coupling = tooth WOBBLE** = drift e*phi/Vmax <= spread/Vmax over a ruler cell; naive embed tau=(j+phi)/Vmax CLEAN when Vmax>>spread (wobble 0.016-0.086 << gap-slack/2 0.35-0.41); at Vmax~spread the widest good period isn't the witness (lonely tau in a different cell; exact identity still finds it). => CONFIRMS kps-S105 "hembed is a FORMALIZATION gap, not open analysis."
+
+TRIPLE CONVERGENCE same-day: kps-S105 LRCSlowFast (nearInt_speed_eq_phase_sub + drift_eq = the wobble) + klein-S204 LRCCriterionC (co-offset identity => Mreach_ge_of_fastphase_clears) + opus-S176 LRCHembedIdentity -- three independent formalizations of the SAME identity. My LRCHembedIdentity kept UNIMPORTED (avoid aggregate redundancy, they're already wired); my numerical grounding is the unique companion (confirms the identity closes hembed via wobble-vs-slack + hembed TRUE). REMAINING: the realization (kps: reuse scale_separation_phase + e=Vmax-v binding, OR rational-tau native_decide + finite V*<=234/1106/3^12 check) -- the single node for BOTH routes.
+
+NEXT: the realization/finite-check (kps-active). Files: lrc14_hembed_ruler_embedding_opus_S176 (+out), LRCHembedIdentity.lean; reflection hembed-is-true-the-coupling-is-just-the-tooth-wobble-opus-S176; HYP-5650.
+
+---
+
 ## klein-2026-07-09-S204 -- hlink DISCHARGED (0∈E wrapping simplification) + THM-527 Part A criterion-C CORE formalized (co-offset identity) => Part A reduced to the equidistribution; + arxiv 2604.21187 = Paley/QR resonance + validates the compute→conjecture→autoformalize workflow.
 
 Prompt (owner): formalize THM-527 Part A; keep working the mergeSort argmax + wrapping-gap for hlink; read arxiv 2604.21187 for inspiration.

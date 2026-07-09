@@ -1,0 +1,37 @@
+====================================================================================================
+hembed / THM-527 Part A: does a good period embed into a lonely real time?  1/14 = 0.07143
+  setup: e = co-offset cluster (incl 0), Vmax >= max e, speeds v_i = Vmax - e_i
+====================================================================================================
+
+  Vmax=1000 >> spread 30 (clean):  Vmax=1000, spread(e)=30, #good-periods=943
+    TRUE M(S) = max_tau min nearInt(v_i tau) = 0.49227  (>=1/14 LRC-OK) at tau=0.00051
+    widest good period j=1, gap=0.9700 (slack over 1/7 = 0.8271), phi*=0.5150
+    NAIVE embed tau=(j+phi)/Vmax=0.00152: min nearInt(v_i tau) = 0.46955 (clears 1/14)
+    coupling error e_max*phi/Vmax = 0.0155  vs gap slack/2 = 0.4136  (slack absorbs error)
+    BEST tau in ruler cell [j/Vmax, (j+1)/Vmax): min nearInt = 0.47715 at tau=0.001523 (>=1/14)
+
+  Vmax=200  >  spread 30        :  Vmax=200, spread(e)=30, #good-periods=187
+    TRUE M(S) = max_tau min nearInt(v_i tau) = 0.45942  (>=1/14 LRC-OK) at tau=0.99730
+    widest good period j=1, gap=0.8500 (slack over 1/7 = 0.7071), phi*=0.5750
+    NAIVE embed tau=(j+phi)/Vmax=0.00788: min nearInt(v_i tau) = 0.33875 (clears 1/14)
+    coupling error e_max*phi/Vmax = 0.0862  vs gap slack/2 = 0.3536  (slack absorbs error)
+    BEST tau in ruler cell [j/Vmax, (j+1)/Vmax): min nearInt = 0.37836 at tau=0.008108 (>=1/14)
+
+  Vmax=60   ~2x spread 30       :  Vmax=60, spread(e)=30, #good-periods=55
+    TRUE M(S) = max_tau min nearInt(v_i tau) = 0.33326  (>=1/14 LRC-OK) at tau=0.98889
+    widest good period j=1, gap=0.5000 (slack over 1/7 = 0.3571), phi*=0.7500
+    NAIVE embed tau=(j+phi)/Vmax=0.02917: min nearInt(v_i tau) = 0.02083 (FAILS)
+    coupling error e_max*phi/Vmax = 0.3750  vs gap slack/2 = 0.1786  (ERROR EXCEEDS SLACK)
+    BEST tau in ruler cell [j/Vmax, (j+1)/Vmax): min nearInt = 0.04761 at tau=0.031746 (<1/14)
+
+  Vmax=31   ~ spread 30 (hard)  :  Vmax=31, spread(e)=30, #good-periods=26
+    TRUE M(S) = max_tau min nearInt(v_i tau) = 0.22219  (>=1/14 LRC-OK) at tau=0.59259
+    widest good period j=18, gap=0.3548 (slack over 1/7 = 0.2120), phi*=0.2419
+    NAIVE embed tau=(j+phi)/Vmax=0.58845: min nearInt(v_i tau) = 0.12279 (clears 1/14)
+    coupling error e_max*phi/Vmax = 0.2341  vs gap slack/2 = 0.1060  (ERROR EXCEEDS SLACK)
+    BEST tau in ruler cell [j/Vmax, (j+1)/Vmax): min nearInt = 0.22221 at tau=0.592592 (>=1/14)
+
+  READING: if the naive embed clears 1/14 when slack/2 > coupling error (Vmax >> spread), the
+  embedding is clean there; if Vmax~spread the coupling error may exceed slack (the hard case).
+  BEST-tau-in-cell tells whether SOME tau in the ruler cell realizes loneliness (existence of embed).
+====================================================================================================
