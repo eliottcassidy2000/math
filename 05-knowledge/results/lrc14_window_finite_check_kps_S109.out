@@ -1,0 +1,16 @@
+Bounded-window finite check: M(S) >= 1/14 for Vmax in (spread, 2.8*spread]. 1/14 = 0.07143
+        family  Vmax spread     M(S)    M-1/14  >=1/14?
+     AP{1..13}    13     12  0.07143  -0.00000      YES
+  7-struct(91)    91     82  0.23077  +0.15934      YES
+      win s=12    21     12  0.30000  +0.22857      YES
+      win s=20    49     20  0.37179  +0.30037      YES
+      win s=30    64     30  0.34694  +0.27551      YES
+      win s=45    97     45  0.34899  +0.27756      YES
+      win s=60   110     60  0.31250  +0.24107      YES
+
+ADVERSARIAL min-M (Odlyzko-te Riele phase-align: hill-climb to minimize M in the window):
+  adversarial MIN M(S) in window = 0.10000 (1/14=0.07143); margin +0.02857
+  minimizer v = (2, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18)
+
+=> if min M(S) >= 1/14 across the window (= at the AP, the phase-aligned extremal): the
+   bounded-window finite check PASSES; M=1/14 exactly at the AP = LRC(14) equality case.
