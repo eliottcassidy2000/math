@@ -1,0 +1,9 @@
+=== (1) structural dichotomy: 7-structured dissociated => misses-residue OR |S7|>=k-6? ===
+  k=13: 652 7-structured dissociated; dichotomy holds (misses-res OR |S7|>=k-6): 628/652; BOTH fail: 24
+    both-fail example (covers all 7 residues, |S7|<k-6): ((0, 1, 10, 12, 14, 16), 35, 7, 3)
+
+=== (2) 7|Vmax: is grid point j=m*Vmax/7 good? (mod-7 mechanism) ===
+  7|Vmax: 85 sets; grid point m*V/7 good for some m: 83/85
+
+=== (3) gcd(7,Vmax)=1: existence robust? ===
+  gcd(7,Vmax)=1: 79 sets; good period exists: 79/79
