@@ -1,0 +1,17 @@
+(1) x7 collapse for m=6 (L=k-6): at Dirichlet-cluster j, if BAD, is 7j GOOD?
+  k     V  #hard,L=k-6  #bad@clj  #7j good when bad  maxj*
+  9    91           42         0                  0      3
+  9   200           10         0                  0      3
+  9   400           16         0                  0      2
+ 11    91          120         2                  0      3
+ 11   200          120         0                  0      3
+ 11   400          120         0                  0      3
+ 13    91          120         0                  0      7
+ 13   200          120         0                  0      4
+ 13   400          120         0                  0      4
+
+(2) deeply dissociated m>=7 (L<=k-7): j* and does x7 (or small mult) help?
+  k=11 L=4 (m=7): 100 hard sets, max j* = 3
+  k=11 L=3 (m=8): 100 hard sets, max j* = 3
+  k=13 L=6 (m=7): 100 hard sets, max j* = 5
+  k=13 L=5 (m=8): 100 hard sets, max j* = 3

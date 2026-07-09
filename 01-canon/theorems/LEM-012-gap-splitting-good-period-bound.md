@@ -107,4 +107,32 @@ only the explicit `c(L)`/`ρ_min` constants (the same density-floor-tail + arc-c
 already computed). Since the near-AP branch (`L ≥ k−5`) is LEM-012 (elementary) and the dissociated
 branch (`L ≤ k−6`) is arc-count existence, **both branches of THM-527-A now have a-priori closure
 routes** — LRC(14)'s covering case is closed modulo the two explicit constants + Lean. File:
-`04-computation/lrc14_dissociated_arccount_macmini_S61.{py,out}`.
+`04-computation/lrc14_dissociated_arccount_macmini_S61.{py,out}`. (NB the arc-count pigeonhole was
+VACUOUS for the near-AP branch — MISTAKE-127 — but is the RIGHT tool here: low longest-AP ⟹ `c` small
+⟹ `c < ρ*`. The two branches use OPPOSITE tools, cf. the dichotomy below.)
+
+## Extension to L = k−6 (m=6): the ×7 collapse (klein-S197)
+
+The gap-split needs `S = (L−k+6)/7 > 0`, i.e. `L ≥ k−5`. The boundary `L = k−6` (`m = 6`, `S = 0`) is
+recovered by a companion **×7 argument**. Cluster the `L`-AP TIGHTLY: choose `Q = ⌈49(L−1)/3⌉` so the
+Dirichlet `j ≤ Q` gives super-point width `δ = (L−1)·(jd mod V) < 3V/49`. Then:
+
+- **If that `j` is good, done** (`j* ≤ Q`).
+- **If it is bad** (`maxgap ≤ V/7`): the config is `1` super-point `+ 6` stray `= 7` clumps with all
+  gaps `≤ V/7` summing to `V−δ`, so every gap `∈ [V/7−δ, V/7]` — the clumps are FORCED onto a `V/7`-grid,
+  `q_c = p + c·V/7 + ε_c` with `|ε_c| ≤ δ`. **At dilation `7j`** the grid collapses:
+  `7q_c = 7p + cV + 7ε_c ≡ 7p + 7ε_c \pmod V`, so the whole config lands in an arc of span `≤ 14δ <
+  14·(3V/49) = 6V/7` — a gap `> V/7`. So `7j` is good: **`j* ≤ 7Q = 7⌈49(L−1)/3⌉ = O(k)`.**
+
+Machine-confirmed (`lrc14_times7_klein_S197`): the perfect `V/7`-grid (`maxgap = 1/7` exactly, bad) maps
+entirely to one point under `×7` (`maxgap → 1`); perturbed grids are already good directly. (For `m = 6`
+the clustering-`j` is in fact good `~99%` of the time — the exact-grid bad case, which `×7` handles, is
+rare.) The `×7` works ONLY at `m = 6` (`7` clumps force the grid); for `m ≥ 7` there are `≥ 8` clumps and
+no grid is forced.
+
+**Updated split (the clean dichotomy).** `L ≥ k−6` is now ELEMENTARY (`L ≥ k−5` gap-split + `L = k−6`
+×7 collapse — the "concentrate" mechanism, Dirichlet only). `L ≤ k−7` (deeply dissociated / Sidon-like,
+only `k ≥ 9`, longest-AP `≤ 6` at `k=13`) is the "spread" mechanism, closed by **Route (c)** (arc-count
+existence, `c < ρ*` — mac-mini-S61) or **Route (a)** (𝒲̂ few-resonances, LEM-011). For `k = 8` there are
+NO `L ≤ k−6` sets, so LEM-012 closes `k=8` outright. The two branches use OPPOSITE tools (concentrate a
+long AP vs. exploit the spread of a short-AP set), matching opus-S166's two-mechanism framing.
