@@ -43,4 +43,20 @@ theorem good_period_j1_wraparound
     have hle : (e : ℚ) / Vmax ≤ (spread : ℚ) / Vmax := by gcongr
     linarith
 
+/-- **The good-period core (reusable).** If a finite set `P` of phases all lies in an interval
+`[lo, hi]` of length `< 6/7`, then the complementary circular arc `(hi, lo+1)` — of length
+`1 − (hi − lo) > 1/7` — is empty: a gap `> 1/7`, i.e. a good period.  This is the shared engine of
+LEM-010: `j=1` (phases in `[0, spread/Vmax]`), the Dirichlet pigeonhole (phases in a `2/3`-arc),
+and the AP lemma (a `k`-term AP of small step spans `< 6/7`).  `gapLen := 1 − (hi − lo)` witnesses
+the gap; every phase `p` satisfies `p + gapLen ≤ 1 + lo` (it sits at or before the arc's start). -/
+theorem good_gap_of_phases_in_interval
+    (P : Finset ℚ) (lo hi : ℚ)
+    (hbound : ∀ p ∈ P, lo ≤ p ∧ p ≤ hi)
+    (hlen : hi - lo < 6 / 7) :
+    ∃ gapLen : ℚ, (1 : ℚ) / 7 < gapLen ∧ ∀ p ∈ P, p + gapLen ≤ 1 + lo := by
+  refine ⟨1 - (hi - lo), by linarith, ?_⟩
+  intro p hp
+  have := (hbound p hp).2
+  linarith
+
 end LRC14
