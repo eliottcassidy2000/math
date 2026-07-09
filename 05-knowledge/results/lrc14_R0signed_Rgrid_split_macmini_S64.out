@@ -1,0 +1,24 @@
+K=13  (6/7)^K=0.134801   E_x[W] via fine grid Vf=100003
+
+      regime    V   E_x[W]  R0/lead  |R|/lead  |Rg|/lead  |Rg|/|R| E_x>|Rg|?   margin
+        wide  112  0.12727   -0.056    0.0337     0.0222     0.660      True  0.12427
+        wide  119  0.12727   -0.056    0.0937     0.0378     0.404      True  0.12217
+  compressed  126  0.12727   -0.056    0.0336     0.0895     2.663      True  0.11520
+  compressed  133  0.12727   -0.056    0.1520     0.0961     0.632      True  0.11431
+  compressed  140  0.12727   -0.056    0.0431     0.0990     2.296      True  0.11392
+  compressed  147  0.12727   -0.056    0.0889     0.0330     0.371      True  0.12282
+  compressed  154  0.12727   -0.056    0.1091     0.0533     0.488      True  0.12009
+        wide  105  0.13802    0.024    0.1896     0.1658     0.874      True  0.11567
+       KNIFE   98  0.12629   -0.063    0.0824     0.0192     0.233      True  0.12370
+       KNIFE   49  0.11410   -0.154    0.7405     0.5869     0.793      True  0.03499
+       KNIFE   98  0.12409   -0.079    0.1797     0.1002     0.558      True  0.11058
+       KNIFE   98  0.12442   -0.077    0.2322     0.1552     0.668      True  0.10350
+
+  compressed: n= 1116  sup |R_grid|/E_x = 0.8705  (<1 => E_grid[W]>0 => strict good period);  E_x<=|R_grid| FAILURES: 0
+        wide: n=  245  sup |R_grid|/E_x = 1.0536  (<1 => E_grid[W]>0 => strict good period);  E_x<=|R_grid| FAILURES: 3
+
+READING:
+ R0/lead ~ 0 (dissociated => few exact relations => E_x ~ (6/7)^k, a CLEAN explicit floor).
+ |R_grid|/|R| < 1 => the split strips the (grid-independent) continuum part off the residual.
+ sup|R_grid|/E_x < 1 in a regime => that regime has a STRICT good period via the split (E_grid>0).
+ KNIFE (spread=6V/7): E_x = |R_grid| exactly (E_grid=0) => the split's equality case = j=1's non-strict job.
