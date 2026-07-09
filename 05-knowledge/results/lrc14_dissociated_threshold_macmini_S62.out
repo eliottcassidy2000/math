@@ -1,0 +1,22 @@
+dissociated (L<=k-6): max c/D3 by spread => threshold S0 & finite check Vmax0=ceil(7*S0/6)
+
+k=11 (dissociated L<=5):
+    spread  max c/D3   max c  min D3     n
+        80     0.384   0.300   0.754   120  c<D3 OK
+       120     0.298   0.233   0.776   120  c<D3 OK
+       200     0.158   0.130   0.803   120  c<D3 OK
+       350     0.145   0.120   0.814   120  c<D3 OK
+       600     0.119   0.100   0.833   120  c<D3 OK
+      1000     0.101   0.084   0.829   120  c<D3 OK
+   => threshold S0 ~ 80; hard case spread<S0 has Vmax <= ceil(7*S0/6) = 94 (FINITE CHECK, inside kps-S30 Vmax<=1001)
+
+k=13 (dissociated L<=7):
+    spread  max c/D3   max c  min D3     n
+        80     0.902   0.625   0.666   120  c<D3 OK
+       120     0.856   0.583   0.669   120  c<D3 OK
+       200     0.644   0.450   0.693   120  c<D3 OK
+       350     0.580   0.429   0.732   120  c<D3 OK
+       600     0.504   0.390   0.752   120  c<D3 OK
+      1000     0.439   0.334   0.760   120  c<D3 OK
+   => threshold S0 ~ 80; hard case spread<S0 has Vmax <= ceil(7*S0/6) = 94 (FINITE CHECK, inside kps-S30 Vmax<=1001)
+
