@@ -1,0 +1,18 @@
+====================================================================================================
+TV(W') scaling + the a-priori transport bound.  main=(6/7)^13=0.13480, need TV<1.62*Vmax^2
+====================================================================================================
+   spread   Vmax      TVWp   TV/spr  TV/spr^2  TV/(12V^2)    R_abs bound<main? Rabs<main?
+       30     31  11984.00  399.467   13.3156      1.0392   0.0310          NO        YES
+       50     51  33170.86  663.417   13.2683      1.0628   0.0104          NO        YES
+       80     81  72252.00  903.150   11.2894      0.9177   0.0217          NO        YES
+      120    121 234979.43 1958.162   16.3180      1.3375   0.0047          NO        YES
+      180    181 460660.57 2559.225   14.2179      1.1718   0.0102          NO        YES
+      260    261 871907.43 3353.490   12.8980      1.0666   0.0053          NO        YES
+      380    381 2028958.29 5339.364   14.0510      1.1648   0.0057          NO        YES
+
+  FIT: TV(W') ~ spread^2.03  (exponent <2 => TV/(12Vmax^2) -> 0 as spread grows => a-priori)
+
+  READING: if TV(W')~spread^1 (only the few >1/7 gaps contribute) then TV/(12Vmax^2)~1/(12 spread)
+  -> 0, and the TV bound gives R_abs<main a-priori for large spread. If TV~spread^2, the crude TV
+  bound is useless (~const) and R_abs<main is genuine CANCELLATION (kps-S98 Mertens wall).
+====================================================================================================

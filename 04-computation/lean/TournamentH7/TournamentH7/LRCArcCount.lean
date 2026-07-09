@@ -133,12 +133,71 @@ satisfies `|R| < (6/7)^k`.  The question was whether `R` is small only by SIGNED
 (`≤0.41·main`, MISTAKE-128) — because `W = Σ(gap−1/7)_+` is CONTINUOUS piecewise-linear so `𝒲̂(m)`
 decays (`~1/m^α`, `α>1`; opus-S170), making the resonant sum converge ABSOLUTELY.  So `|R| ≤ R_abs <
 main` needs no cancellation.  (For 7-structured `E` the arc-Fourier `b(m)=(1−e(m/7))/(2πim)=0` at
-`7|m` additionally suppresses the balanced resonances — opus-S167 — so the obstruction that broke the
-arc-count / moment / `c<D3` certificates is BENIGN in the resonant view.)  This lemma turns the
-signed hypothesis `|R| < main` into the absolutely-bounded, decay-provable one `R_abs < main`. -/
+`7|m` additionally suppresses the balanced resonances — opus-S167.)  This lemma turns the signed
+hypothesis `|R| < main` into the absolute one `Σ|t| < main`.
+
+**opus-S172 CORRECTION.**  The S171 "no cancellation" reading was an OVER-CLAIM (parallel to kps-S97→
+S98).  The absolutely-summable object is the *per-frequency* `Σ_m |𝒲̂₁(m)|` (`< main`), NOT the
+*per-covering* `Σ_n |𝒲̂(n)|` (which DIVERGES — the LEM-011 shells grow).  And even the per-frequency
+`R_abs < main` is NOT provable by the crude BV bound `|𝒲̂₁(m)| ≤ TV(W')/(2πm)²`, because
+`TV(W') ~ spread²` (measured 2.03) makes that bound `≈ 8·main` — the true `R_abs` is `40–200×` below by
+CANCELLATION (the Mertens wall).  Root cause: the LRC covering over-covers (`k/7 = 13/7 > 1`).  So
+`abs_residual_lt` remains a true *reduction*, but its hypothesis `Σ|t| < main` is a cancellation fact,
+not an a-priori absolute bound.  The a-priori `|R|<main` is NOT proof-critical (mac-mini-S64's `j=1`
+wraparound + LEM-013 exhaustion close the good period). -/
 theorem abs_residual_lt {ι : Type*} (S : Finset ι) (t : ι → ℝ) (main : ℝ)
     (habs : ∑ n ∈ S, |t n| < main) : |∑ n ∈ S, t n| < main :=
   lt_of_le_of_lt (Finset.abs_sum_le_sum_abs t S) habs
+
+/-! ### 6. The resonant TAIL is a-priori (opus-S172)
+
+What IS rigorous in the resonant sum is the high-frequency TAIL.  If the resonant terms decay as
+`|a n| ≤ C/n²` (the `p=2` BV rate of the smooth `W`), the tail `Σ_{M<n≤N}|a n| ≤ C/M` — a-priori,
+telescoping `1/n² ≤ 1/((n−1)n) = 1/(n−1)−1/n`.  So the resonant residual splits as `|R| ≤ (finite head
+n ≤ M) + C/M`; the tail is the easy part and only the head carries the Mertens cancellation.  This
+delimits exactly where the a-priori boundary lies. -/
+theorem resonant_tail_le {a : ℕ → ℝ} {C : ℝ} (hC : 0 ≤ C) {M N : ℕ} (hM : 1 ≤ M)
+    (hb : ∀ n, M + 1 ≤ n → |a n| ≤ C / (n : ℝ) ^ 2) :
+    ∑ n ∈ Finset.Ico (M + 1) (N + 1), |a n| ≤ C / (M : ℝ) := by
+  have hMpos : (0 : ℝ) < (M : ℝ) := by exact_mod_cast hM
+  set F : ℕ → ℝ := fun k => C / (k : ℝ) with hF
+  -- termwise: |a n| ≤ F(n-1) - F n on the tail range
+  have step : ∀ n ∈ Finset.Ico (M + 1) (N + 1), |a n| ≤ F (n - 1) - F n := by
+    intro n hn
+    rw [Finset.mem_Ico] at hn
+    have h1 : M + 1 ≤ n := hn.1
+    have hn1 : 1 ≤ n := by omega
+    have hn2 : (2 : ℝ) ≤ (n : ℝ) := by exact_mod_cast (show 2 ≤ n by omega)
+    have hp : (0 : ℝ) < (n : ℝ) := by linarith
+    have hp1 : (0 : ℝ) < (n : ℝ) - 1 := by linarith
+    have hcast : ((n - 1 : ℕ) : ℝ) = (n : ℝ) - 1 := by
+      rw [Nat.cast_sub hn1]; simp
+    have hle : C / (n : ℝ) ^ 2 ≤ C / (((n : ℝ) - 1) * (n : ℝ)) := by
+      gcongr
+      nlinarith
+    have heq : C / (((n : ℝ) - 1) * (n : ℝ)) = F (n - 1) - F n := by
+      simp only [hF, hcast]; field_simp; ring
+    exact le_trans (hb n h1) (le_trans hle (le_of_eq heq))
+  refine le_trans (Finset.sum_le_sum step) ?_
+  -- telescoping ∑ (F(n-1) - F n) = F M - F N ≤ F M = C/M
+  have tele : ∀ P, M ≤ P →
+      ∑ n ∈ Finset.Ico (M + 1) (P + 1), (F (n - 1) - F n) = F M - F P := by
+    intro P hP
+    induction P, hP using Nat.le_induction with
+    | base => simp
+    | succ Q hQ ih =>
+      rw [Finset.sum_Ico_succ_top (by omega : M + 1 ≤ Q + 1), ih]
+      simp only [Nat.add_sub_cancel]
+      ring
+  by_cases hMN : M ≤ N
+  · rw [tele N hMN]
+    have hFN : (0 : ℝ) ≤ F N := by
+      simp only [hF]; positivity
+    have hFM : F M = C / (M : ℝ) := rfl
+    linarith
+  · -- N < M ⟹ Ico (M+1) (N+1) empty
+    rw [Finset.Ico_eq_empty (by omega), Finset.sum_empty]
+    positivity
 
 end TailDiameter
 end LonelyRunner

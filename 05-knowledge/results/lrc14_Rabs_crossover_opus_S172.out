@@ -1,0 +1,21 @@
+============================================================================================
+R_abs (per-frequency, CONVERGED) vs spread.  main=(6/7)^13=0.13480  (dissociated k=13)
+============================================================================================
+   spread   Vmax     R_abs R_abs/main   |R_sig| |Rs|/main  ntail  <main?
+       30     31   0.05005      0.371   0.04229     0.314    150     YES
+       40     41   0.03391      0.252   0.02632     0.195    150     YES
+       50     51   0.03336      0.248   0.03319     0.246    150     YES
+       60     61   0.03475      0.258   0.02826     0.210    150     YES
+       70     71   0.01722      0.128   0.01525     0.113    150     YES
+       90     91   0.02399      0.178   0.02147     0.159    150     YES
+      120    121   0.02123      0.158   0.01658     0.123    148     YES
+      160    161   0.01813      0.134   0.01704     0.126    150     YES
+      220    221   0.01006      0.075   0.00600     0.044    150     YES
+      300    301   0.00894      0.066   0.00630     0.047    148     YES
+      400    401   0.00660      0.049   0.00454     0.034    142     YES
+
+  READING: if R_abs/main >1 at small-moderate spread and <1 (=>~0.6) at large spread, my S171
+  'R_abs<main uniformly, no cancellation' was an OVER-CLAIM (truncation) -- converges with kps-S98:
+  small-spread dissociated is the Mertens wall (signed |R| small by cancellation, R_abs>main),
+  closed-form absolute bound only LARGE-spread; small-spread => LEM-013 exhaustion.
+============================================================================================

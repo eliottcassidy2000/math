@@ -1,0 +1,32 @@
+====================================================================================================
+OCF SHELL TRANSPORT: R_abs by r-shell (exact LEM-011 closed form).  main=(6/7)^13=0.13480
+====================================================================================================
+
+  dissociated Sidon     (spread=140, Vmax=141)
+    R_abs^(1)=0.00000  R_abs^(2)=0.01801  R_abs^(3)=0.07797  ratio 2/1=18006517271.813 3/2=4.330
+    multi-dim  R_abs(r<=3) = 0.09597  (0.712 main) | R_signed(r<=3) = -0.00723
+    1-D FFT    R_abs       = 0.01197  (0.089 main) | R_signed        = -0.00456
+    multi-dim R_abs < main? YES   (tight-AP expected NO = the boundary)
+
+  dissociated random    (spread=129, Vmax=130)
+    R_abs^(1)=0.00129  R_abs^(2)=0.01912  R_abs^(3)=0.08793  ratio 2/1=14.779 3/2=4.599
+    multi-dim  R_abs(r<=3) = 0.10834  (0.804 main) | R_signed(r<=3) = -0.01349
+    1-D FFT    R_abs       = 0.01564  (0.116 main) | R_signed        = -0.00552
+    multi-dim R_abs < main? YES   (tight-AP expected NO = the boundary)
+
+  tight AP {0..12}      (spread=12, Vmax=13)
+    R_abs^(1)=0.00050  R_abs^(2)=0.12372  R_abs^(3)=0.89001  ratio 2/1=248.940 3/2=7.194
+    multi-dim  R_abs(r<=3) = 1.01423  (7.524 main) | R_signed(r<=3) = -0.12911
+    1-D FFT    R_abs       = 0.09551  (0.709 main) | R_signed        = -0.06071
+    multi-dim R_abs < main? NO   (tight-AP expected NO = the boundary)
+
+  7-structured =0 mod7  (spread=84, Vmax=85)
+    R_abs^(1)=0.00000  R_abs^(2)=0.02578  R_abs^(3)=0.20423  ratio 2/1=25775633149.518 3/2=7.923
+    multi-dim  R_abs(r<=3) = 0.23001  (1.706 main) | R_signed(r<=3) = -0.05656
+    1-D FFT    R_abs       = 0.00480  (0.036 main) | R_signed        = 0.00480
+    multi-dim R_abs < main? NO   (tight-AP expected NO = the boundary)
+
+  READING: shell ratios <1 => geometric OCF truncation (transport works). multi-dim R_abs<main
+  => the a-priori |.|-per-n bound ALONE closes it (no intra-frequency cancellation needed).
+  tight AP is the boundary (R_abs ~ main). Dissociated: R_abs << main a-priori.
+====================================================================================================
