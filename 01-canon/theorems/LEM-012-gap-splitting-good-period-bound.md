@@ -136,3 +136,24 @@ only `k ≥ 9`, longest-AP `≤ 6` at `k=13`) is the "spread" mechanism, closed 
 existence, `c < ρ*` — mac-mini-S61) or **Route (a)** (𝒲̂ few-resonances, LEM-011). For `k = 8` there are
 NO `L ≤ k−6` sets, so LEM-012 closes `k=8` outright. The two branches use OPPOSITE tools (concentrate a
 long AP vs. exploit the spread of a short-AP set), matching opus-S166's two-mechanism framing.
+
+### Route (c) sharpened — the clean per-cluster inequality `#arcs/spread < D3(E)` (mac-mini-S61)
+
+Route (c) collapses to a SINGLE exact per-cluster inequality. Since `ρ* ≥ D3(E)` (THM-661, exact
+degree-3 covering-moment bound) and `#arcs = c·spread ≤ c·Vmax` (`spread ≤ Vmax`), a good period
+EXISTS whenever
+
+> **`c := #arcs(E)/spread(E) < D3(E)`**   (then `#arcs ≤ c·Vmax < D3·Vmax ≤ ρ*·Vmax`, so
+> `#{good grid} ≥ ρ*·Vmax − #arcs > 0`).
+
+BOTH sides are exact and a-priori — `D3` via Farey-cell integration, `#arcs` via the arc structure
+(`Vmax`-independent, S58). Verified over dissociated (`L ≤ k−6`) clusters: **`c < D3` holds for k=11
+ALWAYS** (min margin `+0.58`), and for **k=13 except a narrow small-spread sliver** (`spread ≈ 80`:
+`c=0.675` vs `D3=0.659`, margin `−0.016`). But small spread ⟹ the hard case has `Vmax ≤ 7·spread/6 ≈
+93` ⟹ **inside the finite check** (kps-S30, `Vmax ≤ 1001`). For large spread `c` falls (toward its
+asymptotic `≤ 0.5`) while `D3` rises (toward the decorrelation limit `≥ 0.6` for `L ≤ 7`, opus-S158),
+so `c < D3` holds with margin. So the dissociated branch closes by **`[c < D3` for spread `≥ ~150] +
+[small-spread finite check]`** — a clean, mostly-a-priori route with NO equidistribution or resonance
+sum. Remaining: the explicit `c < D3` inequality over the large-spread dissociated range (both sides
+exact — a finite/verifiable statement, not an analytic wall). File:
+`04-computation/lrc14_dissociated_D3_vs_c_macmini_S61.{py,out}`.
