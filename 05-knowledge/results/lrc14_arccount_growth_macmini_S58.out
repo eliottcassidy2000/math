@@ -1,0 +1,22 @@
+GROWTH LAW: #arcs vs spread (m_P=0.056487; good period exists if #arcs < Vmax*rho*)
+
+k=11:    spread      #arcs min/med/MAX   rho* min  MAX#arcs/spread
+         50             0 / 4 / 12     0.9826          0.24000
+        100             0 / 6 / 16     0.9908          0.16000
+        300            8 / 16 / 38     0.9933          0.12667
+       1000           36 / 54 / 72     0.9966          0.07200
+       3000         66 / 142 / 204     0.9978          0.06800
+      10000        342 / 440 / 522     0.9981          0.05220
+      30000     1070 / 1284 / 1514     0.9983          0.05047
+
+k=13:    spread      #arcs min/med/MAX   rho* min  MAX#arcs/spread
+         50            8 / 16 / 32     0.9409          0.64000
+        100           12 / 26 / 42     0.9697          0.42000
+        300           44 / 74 / 94     0.9823          0.31333
+       1000        190 / 248 / 350     0.9828          0.35000
+       3000        600 / 732 / 846     0.9848          0.28200
+      10000     1896 / 2448 / 3018     0.9867          0.30180
+      30000     5600 / 6938 / 7558     0.9877          0.25193
+
+INTERPRETATION: if MAX#arcs/spread -> 0, then #arcs = o(spread) <= o(Vmax), so
+#arcs < Vmax*m_P for all Vmax > (small); the large-spread finite-Vmax case CLOSES.

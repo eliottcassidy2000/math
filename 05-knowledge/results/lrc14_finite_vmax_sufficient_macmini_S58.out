@@ -1,0 +1,41 @@
+STRESS TEST: beta=#arcs/spread and rho* on structured clusters (worst case Vmax=spread)
+PASS iff rho* > #arcs/spread (large spread) -- i.e. the binding Vmax=spread has a good period.
+
+k=11:
+   s=   40 block+outlier   : #arcs=   14 beta=0.3500 rho*=0.7639  PASS  (rho*-beta=+0.4139)
+   s=   40 2-block         : #arcs=   68 beta=1.7000 rho*=0.8656  CHECK  (rho*-beta=-0.8344)
+   s=   40 perforated-block: #arcs=   32 beta=0.8000 rho*=0.7592  PASS  (rho*-beta=-0.0408)
+   s=  100 block+outlier   : #arcs=   24 beta=0.2400 rho*=0.7606  PASS  (rho*-beta=+0.5206)
+   s=  100 2-block         : #arcs=  186 beta=1.8600 rho*=0.8576  CHECK  (rho*-beta=-1.0024)
+   s=  400 block+outlier   : #arcs=   74 beta=0.1850 rho*=0.7595  PASS  (rho*-beta=+0.5745)
+   s=  400 2-block         : #arcs=  770 beta=1.9250 rho*=0.8604  CHECK  (rho*-beta=-1.0646)
+   s=  400 perforated-block: #arcs=  368 beta=0.9200 rho*=0.7591  CHECK  (rho*-beta=-0.1609)
+   s= 1600 block+outlier   : #arcs=  268 beta=0.1675 rho*=0.7592  PASS  (rho*-beta=+0.5917)
+   s= 1600 2-block         : #arcs= 3086 beta=1.9287 rho*=0.8605  CHECK  (rho*-beta=-1.0683)
+   s= 1600 perforated-block: #arcs= 1476 beta=0.9225 rho*=0.7593  CHECK  (rho*-beta=-0.1632)
+   s= 6400 block+outlier   : #arcs= 1042 beta=0.1628 rho*=0.7593  PASS  (rho*-beta=+0.5965)
+   s= 6400 2-block         : #arcs=12310 beta=1.9234 rho*=0.8605  CHECK  (rho*-beta=-1.0630)
+   s= 6400 perforated-block: #arcs= 5898 beta=0.9216 rho*=0.7593  CHECK  (rho*-beta=-0.1623)
+   => worst beta (s>=100) = 1.9287  vs rho*_min(large s) ~ 0.98  => margin -0.949
+
+k=13:
+   s=   40 block+outlier   : #arcs=   18 beta=0.4500 rho*=0.5437  PASS  (rho*-beta=+0.0937)
+   s=   40 2-block         : #arcs=   86 beta=2.1500 rho*=0.6927  CHECK  (rho*-beta=-1.4573)
+   s=   40 AP(d=3)         : #arcs=   38 beta=0.9500 rho*=0.5577  PASS  (rho*-beta=-0.3923)
+   s=  100 block+outlier   : #arcs=   24 beta=0.2400 rho*=0.5547  PASS  (rho*-beta=+0.3147)
+   s=  100 2-block         : #arcs=  246 beta=2.4600 rho*=0.7184  CHECK  (rho*-beta=-1.7416)
+   s=  100 perforated-block: #arcs=   90 beta=0.9000 rho*=0.5539  CHECK  (rho*-beta=-0.3461)
+   s=  400 block+outlier   : #arcs=   70 beta=0.1750 rho*=0.5532  PASS  (rho*-beta=+0.3782)
+   s=  400 2-block         : #arcs= 1038 beta=2.5950 rho*=0.7195  CHECK  (rho*-beta=-1.8755)
+   s=  400 AP(d=33)        : #arcs=  418 beta=1.0450 rho*=0.5538  CHECK  (rho*-beta=-0.4912)
+   s= 1600 block+outlier   : #arcs=  232 beta=0.1450 rho*=0.5538  PASS  (rho*-beta=+0.4088)
+   s= 1600 2-block         : #arcs= 4188 beta=2.6175 rho*=0.7180  CHECK  (rho*-beta=-1.8995)
+   s= 1600 AP(d=133)       : #arcs= 1668 beta=1.0425 rho*=0.5539  CHECK  (rho*-beta=-0.4886)
+   s= 6400 block+outlier   : #arcs=  908 beta=0.1419 rho*=0.5540  PASS  (rho*-beta=+0.4121)
+   s= 6400 2-block         : #arcs=16766 beta=2.6197 rho*=0.7184  CHECK  (rho*-beta=-1.9013)
+   s= 6400 AP(d=533)       : #arcs= 6686 beta=1.0447 rho*=0.5539  CHECK  (rho*-beta=-0.4907)
+   s= 6400 perforated-block: #arcs= 5860 beta=0.9156 rho*=0.5539  CHECK  (rho*-beta=-0.3617)
+   => worst beta (s>=100) = 2.6197  vs rho*_min(large s) ~ 0.98  => margin -1.640
+
+If worst beta << rho*_min for all structured shapes, the large-spread half CLOSES:
+#arcs <= beta*spread <= beta*Vmax < rho**Vmax => #{good grid} > 0 => good period exists.

@@ -1,0 +1,19 @@
+#arcs of {y: maxgap{frac(e_i y)}>1/7} vs cluster SPREAD (grid ~ 60*spread, resolves m/(diff))
+
+k=11:  (m_P=0.056487; good period exists if #arcs < Vmax*m_P)
+   spread    #arcs (min/median/max over 40 random k-subsets)   rho* min
+       10                                       12 / 12 / 12     0.6263
+       20                                         0 / 4 / 10     0.9109
+       40                                         0 / 4 / 12     0.9755
+       80                                         0 / 4 / 16     0.9904
+      160                                         0 / 8 / 20     0.9932
+      320                                        6 / 14 / 30     0.9956
+
+k=13:  (m_P=0.056487; good period exists if #arcs < Vmax*m_P)
+   spread    #arcs (min/median/max over 40 random k-subsets)   rho* min
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/lrc14_arccount_vs_spread_macmini_S58.py", line 41, in <module>
+    mid = sorted(random.sample(range(1, spread), k-2))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/random.py", line 482, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative

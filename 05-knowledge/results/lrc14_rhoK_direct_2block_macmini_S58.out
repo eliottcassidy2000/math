@@ -1,0 +1,18 @@
+DIRECT rho_K on the integer grid -- do good periods exist for structured clusters?
+
+k=11 2-block  s= 30 E=[0, 1, 2, 3, 4, 25, 26, 27, 28, 29, 30]
+     over Vmax in [30, 169]: min rho_K = 0.6078 at Vmax=51; #(Vmax with rho_K=0) = 0  (all have a good period)
+k=11 2-block  s= 60 E=[0, 1, 2, 3, 4, 55, 56, 57, 58, 59, 60]
+     over Vmax in [60, 199]: min rho_K = 0.6216 at Vmax=111; #(Vmax with rho_K=0) = 0  (all have a good period)
+k=11 AP       s= 30 E=[0, 1, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+     over Vmax in [30, 169]: min rho_K = 0.4286 at Vmax=42; #(Vmax with rho_K=0) = 0  (all have a good period)
+k=11 AP       s= 60 E=[0, 1, 6, 12, 18, 24, 30, 36, 42, 48, 54]
+     over Vmax in [60, 199]: min rho_K = 0.4286 at Vmax=84; #(Vmax with rho_K=0) = 0  (all have a good period)
+k=13 2-block  s= 30 E=[0, 1, 2, 3, 4, 5, 24, 25, 26, 27, 28, 29, 30]
+     over Vmax in [30, 169]: min rho_K = 0.3878 at Vmax=49; #(Vmax with rho_K=0) = 0  (all have a good period)
+k=13 2-block  s= 60 E=[0, 1, 2, 3, 4, 5, 54, 55, 56, 57, 58, 59, 60]
+     over Vmax in [60, 199]: min rho_K = 0.4495 at Vmax=109; #(Vmax with rho_K=0) = 0  (all have a good period)
+k=13 AP       s= 30 E=[0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]
+     over Vmax in [30, 169]: min rho_K = 0.2727 at Vmax=44; #(Vmax with rho_K=0) = 0  (all have a good period)
+k=13 AP       s= 60 E=[0, 1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]
+     over Vmax in [60, 199]: min rho_K = 0.2727 at Vmax=110; #(Vmax with rho_K=0) = 0  (all have a good period)
