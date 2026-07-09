@@ -1,0 +1,21 @@
+Verify the gap-splitting bound: longest-AP L>=k-5 => j* <= ceil(7(L-1)/(L-k+6)).
+  k     V  #hard  #(L>=k-5)  bound holds max(j*/bound)  #(L<k-5)
+ 10    23    300        129         True         0.167       171
+ 10    91     74          1         True         0.071        73
+ 10   200     25          0         True         0.000        25
+ 11    25    300         66         True         0.143       234
+ 11    91    300          0         True         0.000       300
+ 11   200    110          0         True         0.000       110
+ 12    27    300         36         True         0.158       264
+ 12    91    300          0         True         0.000       300
+ 12   200    300          0         True         0.000       300
+ 13    29    300          8         True         0.071       292
+ 13    91    300          0         True         0.000       300
+ 13   200    300          0         True         0.000       300
+
+Spot-check: the Dirichlet-clustering j actually leaves a >1/7 gap (the mechanism):
+  k=11: over 0 clusters with L>=k-5, the Dirichlet-cluster j leaves a >1/7 gap: 0/0
+  k=13: over 0 clusters with L>=k-5, the Dirichlet-cluster j leaves a >1/7 gap: 0/0
+
+=> if 'bound holds'=True everywhere and mechanism works, general j*=O(k) is PROVED
+   (gap-split for L>=k-5) + (kps-S91 dissociated for L<=k-3); ranges OVERLAP => all L covered.
