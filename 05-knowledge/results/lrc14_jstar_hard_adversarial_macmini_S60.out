@@ -1,0 +1,6 @@
+HARD adversarial max j* search (target: break j*=O(k))
+
+k=11: scanned ~40613 adversarial clusters; MAX j* = 7  (bound ~k=11); at Vmax=153, cluster~(0, 14, 28, 42, 56, 70)
+k=13: scanned ~40613 adversarial clusters; MAX j* = 9  (bound ~k=13); at Vmax=392, cluster~(0, 27, 35, 69, 104, 140)
+
+=> if max j* stays ~k under this hard search, j*=O(k) is robust.
