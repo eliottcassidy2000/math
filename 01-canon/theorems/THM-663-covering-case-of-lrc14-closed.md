@@ -135,8 +135,13 @@ while the TRUE deviation `×d ≈ 0.035` survives only by **cancellation** among
 `ε_i = m_i(E_d)−L_i` (one shared Riemann-sum defect of `W,W²,W³`). klein-S192 captures the
 cancellation at **first order** a-priori: `Σc_iε_i = E_a[Riemann-err of g_a]`, `g_a = φ∘W`, `φ` a
 FIXED cubic, so `C_1 = E_a[TV_u g_a] ≤ Lip(φ)·2E_a[W_full] = 2.83 < 3.47` — the first-order tail is
-a-priori-closed for all `d≥26`. The residual is exactly the **second-order Riemann remainder**, whose
-a-priori control is opus-S154's **L² Fourier-tail** step (the same "far ≤ E[W]² is L², not L¹"
-obstruction, LEM-005): a uniform `o(1/d)` on `Σ_{m≥2}|\hat{g_a}(md)|²`, invisible to absolute-value
-bounds. So link (4)'s last certification = one L² second-order tail, precisely located. See LEM-009
-(klein-S192 section) and `04-computation/lrc14_Vi_{apriori,combined}_klein_S192.{py,out}`.
+a-priori-closed for all `d≥26`. **The full closure is kps-S89's box bound** (a direct rigorous
+enclosure `min D3` over `m_i ∈ [L_i ± Vh_i/d]`, which captures the cancellation with NO
+linearization): with the tight constants `Vh_i = i(6/7)^{i-1}E[W_B]` it clears `bar` for all
+`d ≥ 62`, so `[finite check d ≤ 61] + [box bound d ≥ 62]` **closes the L=10 family a-priori with no
+L² tail needed**. (opus-S154's L² Fourier tail — a uniform `o(1/d)` on `Σ_{m≥2}|\hat{g_a}(md)|²` —
+would only tighten the *linear* `C/d` constant; it is a refinement, not a prerequisite.) So link
+(4)'s last certification is **discharged** (kps-S89 box + finite check); klein-S192's role is the
+diagnosis (the `V_j` are not the obstruction, cancellation is, and the box enclosure recovers it).
+See LEM-009 (kps-S89 + klein-S192 sections) and `04-computation/lrc14_Vi_{apriori,combined}_klein_S192.{py,out}`,
+`lrc14_L10_explicit_rate_kps_S89`.
