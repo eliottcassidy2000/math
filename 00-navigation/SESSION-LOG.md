@@ -1,3 +1,36 @@
+## mac-mini-2026-07-08-S60 -- worked the Diophantine lemma (j*=O(k)) + R1/R2/R3: R2 CLOSED (k=12,13 tail a-priori), R3 refines the glue (G_P∩Good_E), j*=O(k) robustly O(k)
+
+Prompt (owner): work the Diophantine lemma (j*=O(k)) + R1 (finite check) + R2 (k=12,13 tail a-priori) + R3 (G_P coupling).
+
+1. **DIOPHANTINE LEMMA / R1 (j*=O(k)):** HARD adversarial search (40k+ structured clusters:
+   perturbed/interleaved APs, geometric, highly-composite Vmax) => max j*=7/9 at k=11/13, ALL
+   <= ceil(7(k-1)/6). j*=O(k) is ROBUST (worst = pure APs, the PROVEN case). General proof
+   (simultaneous clustering) remains hard -- the k>7 union-bound obstruction. CONVERGES with
+   kps-S90/opus-S164 (j* governed by longest-AP, 𝒲̂-partial-sum route). R1 closes IF general
+   j*<=ceil(7(k-1)/6).
+
+2. **R2 CLOSED -- k=12,13 tail a-priori rate.** LEM-011 makes opus-S157's mixed-variation V_j
+   a-priori. FFT-computed for the (k-1)-AP+outlier tail: k=11 REPRODUCES opus's V=0.28/0.16/0.10,
+   C=21.2, pd0=160 EXACTLY (validation); k=12: V=0.25/0.16/0.10, C=19.1, pd0=101; k=13:
+   0.24/0.16/0.10, C=18.7, pd0=65. |D3-D3_inf|<=C/(pd) a-priori for k=11,12,13; k=12,13 EASIER
+   (bigger margins). Density-floor tail fully a-priori. (LEM-009 R2 section.)
+
+3. **R3 -- G_P coupling: CONFIRMED but a REFINEMENT (not just a writeup).** The full good period
+   needs j in G_P∩Good_E (both cluster maxgap>1/7 AND ||p j/Vmax||>=1/14 for observers). LEM-010's
+   j=1 clears Good_E but FAILS G_P (small p => ||p/Vmax||<1/14). The full good period is a
+   SPREAD-OUT j -- exists in ALL ~6000 admissible spread-dense (P,E) tested (0 failures, consistent
+   with kps-S30 Vmax<=1001). So the finite-Vmax glue is the INTERSECTION question (same structure);
+   the elementary j=1 proves the cluster half only. (THM-663 R3 section.)
+
+STATE: every analytic constant is now a-priori (LEM-011 + R2). The covering case rests on the ONE
+Diophantine lemma j*=O(k) -- now stated for G_P∩Good_E (R3), AP case proved, robustly O(k) (R1). Plus Lean.
+
+FILES: LEM-009 R2 section; THM-663 R3 section; assessment S60 update; scripts
+lrc14_{jstar_hard_adversarial, k1213_tail_apriori_rate, R3_GP_coupling}_macmini_S60 (+outs).
+
+NEXT: general j*=O(k) for G_P∩Good_E (the last gap; converging w/ kps/opus on the longest-AP axis);
+more Lean nodes; the a-priori C write-up (V_j closed-form bound from LEM-011).
+
 ## kind-pasteur-2026-07-08-S90 (cont.) -- j*=O(k) frontier: CONVERGED with opus-S164 (j* governed by longest-AP) + NET-NEW partial-sum/𝒲̂ ANALYTIC route unifying j* with the density-floor tail (one shared constant) (HYP-5507)
 
 Prompt (owner): work the two remaining residuals back and forth, pulling from git for inspiration.
