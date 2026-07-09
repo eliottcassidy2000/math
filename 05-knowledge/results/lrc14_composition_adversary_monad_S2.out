@@ -1,0 +1,20 @@
+====================================================================================================
+ADVERSARY 1 -- primitive perturbations of 14*{1..13} (covering, near-tight)
+====================================================================================================
+  tested 20 primitive covering perturbations: fired 18, FAILED 2
+    FAIL (gap-but-GP-conflict): [14, 28, 42, 56, 70, 83, 98, 112, 126, 140, 154, 168, 182]
+    FAIL (gap-but-GP-conflict): [14, 28, 42, 56, 70, 85, 98, 112, 126, 140, 154, 168, 182]
+
+====================================================================================================
+ADVERSARY 2 -- the @91 covering cluster + 7-structured relatives
+====================================================================================================
+  [@91 7-struct] primitive-covering=True: FIRES margin 0.61538
+  [7*{1..12}+91] primitive-covering=False: FAIL: gap-but-GP-conflict
+  [7*{1..13} patched] primitive-covering=False: FIRES margin 0.23214
+
+====================================================================================================
+ADVERSARY 3 -- hill-climb MINIMIZING the best composition margin (primitive covering)
+====================================================================================================
+  step 1: worst margin -1.00000 (gap-but-GP-conflict) at [14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 181, 182]
+  hill-climb (108 valid): worst = -1.00000 (gap-but-GP-conflict) at [14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 181, 182]
+  full-split recheck of worst: FIRES margin 0.16985
