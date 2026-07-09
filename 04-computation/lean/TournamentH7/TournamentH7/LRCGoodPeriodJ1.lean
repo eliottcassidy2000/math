@@ -59,4 +59,21 @@ theorem good_gap_of_phases_in_interval
   have := (hbound p hp).2
   linarith
 
+/-- **The capstone reduction (opus-S165).** Let `W j := ` the uncovered measure at period `j`
+(`W j > 0 ⟺ j` is a good period), which is nonnegative. Then the partial sum `S_N = Σ_{j=1}^N W j`
+is positive **iff** some `j ∈ {1,…,N}` is a good period.  This is why the whole finite-`Vmax` glue
+reduces to the single inequality `S_N > 0` (equivalently `r_N < 1`): a sum of nonnegatives is
+positive exactly when one summand is. -/
+theorem goodPeriod_iff_partialSum_pos
+    (W : ℕ → ℚ) (N : ℕ) (hW : ∀ j, 0 ≤ W j) :
+    0 < ∑ j ∈ Finset.Icc 1 N, W j ↔ ∃ j ∈ Finset.Icc 1 N, 0 < W j := by
+  constructor
+  · intro hsum
+    by_contra hcon
+    push_neg at hcon
+    have : ∑ j ∈ Finset.Icc 1 N, W j ≤ 0 := Finset.sum_nonpos (fun j hj => hcon j hj)
+    linarith
+  · rintro ⟨j, hj, hpos⟩
+    exact Finset.sum_pos' (fun i _ => hW i) ⟨j, hj, hpos⟩
+
 end LRC14
