@@ -1,3 +1,38 @@
+## mac-mini-2026-07-08-S58 (cont.) -- THM-527-A (the LAST covering-case item) LARGELY CLOSED: LEM-010 deterministic good-period existence dissolves the finite-Vmax glue, no equidistribution
+
+Prompt (owner): work the one remaining item.
+
+The covering case's sole remaining analytic item was THM-527-A: the finite-Vmax glue (does the
+CONTINUOUS good set rho* >= m_P force a good PERIOD j on the ruler grid j/Vmax?). Attacked it and
+LARGELY CLOSED it, elementarily:
+
+REDUCTION: good period j <=> maxgap{frac(e_i j/Vmax)}>1/7. Soft route: #{good j} >= Vmax*rho* -
+#arcs, so suffices #arcs < Vmax*rho*. BOUNDED-ARC-COUNT lemma (S58): #arcs is Vmax-INDEPENDENT
+(gap order changes at x=m/(cluster-internal-diff), NOT m/Vmax). Bounded-spread => #arcs bounded =>
+done. BUT structured large-spread (2-block/AP): #arcs ~ 1-2.6*spread > Vmax*rho* => soft bound
+VACUOUS (corrects klein-S192's "c<1"). Direct rho_K: good periods exist anyway (rho_K>=0.27,
+never 0), so it's a rigor gap, not an obstruction.
+
+THE FIX -- LEM-010 (deterministic, no equidistribution): (i) spread < 6Vmax/7 => j=1 is good (the
+observer's wraparound gap 1-spread/Vmax > 1/7; 0 failures/7669). (ii) Vmax > 3^(k-1) => Dirichlet
+pigeonhole gives j*<=3^(k-1) with all phases in a 2/3-arc => empty arc >=1/3>1/7. Since k<=13, only
+the BOUNDED region {Vmax<=3^12=531441, spread>=6Vmax/7} needs a finite check. Adversarial APs (built
+to defeat j=1) need only j*<=7 (never absent) => strong conjecture j*=O(k) (would make THM-527-A
+FULLY elementary, finite check Vmax<=O(k)).
+
+STATE: covering case = [density floor CLOSED, S58 earlier] + [THM-527-A reduced to 2 elementary
+lemmas + bounded finite check, LEM-010]. From "equidistribution at Vmax<=91^12" down to "elementary
++ Vmax<=531441 check". LRC(14) = covering case (this) + non-covering (LRC<=13 SETTLED) + Lean.
+
+FILES: LEM-010 (new); THM-663 remaining-item section rewritten (deterministic, supersedes the
+equidistribution framing); 6 scripts+outs (lrc14_{arccount_vs_spread,arccount_growth,
+finite_vmax_sufficient,rhoK_direct_2block,deterministic_goodperiod,dirichlet_jstar_adversarial}
+_macmini_S58).
+
+NEXT: (a) prove j*=O(k) (successive-minima / three-distance on the AP-clustering dilation) =>
+THM-527-A fully elementary; (b) the bounded finite check {Vmax<=531441, spread>=6Vmax/7} (extend
+kps-S30's exact M(S) sweep past V0=1001); (c) opus-S157 a-priori V_j (density-floor tail rate); (d) Lean.
+
 ## kind-pasteur-2026-07-08-S89 (cont.) -- the L=9 CORRELATED REMAINDER verified >= bar (opus-S159's stated NEXT): ~190k genuine longest-AP=9 tail shapes, min D3 = 0.467131 (margin +0.136); L=9 stratum CLOSES
 
 Prompt (owner): work on the remaining mechanical aspects of the LRC.
