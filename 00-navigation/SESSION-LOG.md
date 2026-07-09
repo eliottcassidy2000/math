@@ -1,3 +1,27 @@
+## kind-pasteur-2026-07-09-S96 -- CRITICAL PATH lower bound: the E_grid[W]>0 existence route -- dissociated good-period existence closes by |R|<(6/7)^k, SIDESTEPPING opus-S169's open #arcs bound (verified incl mac-mini's hard 7-structured case)
+
+Prompt (owner): keep on the critical path, chase the lower bound.
+
+CONTEXT (fleet convergence this cycle): mac-mini MISTAKE-128 KILLED c<D3 (broken for 7-structured co-offsets); opus-S169 LRCArcCount.lean closes dissociated via rho*-PIGEONHOLE (kernel-pure), leaving ONE open item = the #arcs<=c.spread bound (trivial O(k^2 spread) 200-1300x loose; truth spread^0.92).
+
+MY LOWER BOUND (a DIFFERENT route that sidesteps #arcs): good-period existence at ruler Vmax <=> E_grid[W]:=(1/Vmax)sum_{j<Vmax}W(je/Vmax) > 0 (sum of nonnegatives positive iff a summand is). By LEM-011, E_grid[W]=(6/7)^k + R, R=sum_{Vmax|n.e,n!=0}What(n). So:
+  |R| < (6/7)^k  =>  E_grid[W] > 0  =>  a good period EXISTS  -- NO #arcs.
+This replaces opus's open arc-count bound with a NEAR-RESONANCE COUNT bound (kps-S93): only Vmax|n.e modes enter = the RESONANT/count part = Mertens-SAFE (never the non-resonant oscillatory wall).
+
+VERIFIED (lrc14_egrid_{existence,7struct}_kps_S96): max|R|/(6/7)^k = 0.38 (generic s=30-120) and -- crucially -- <= 0.69 for mac-mini's HARD 7-STRUCTURED case (all diffs=0 mod 7, the MISTAKE-128 config that broke c<D3), incl Vmax=0 mod 7. 100% existence, min E_grid~0.077>0. So E_grid[W]>=0.31(6/7)^k>0 even there -- bigger margin (0.69 vs opus's edge).
+
+LEAN: LRCEgridExistence.lean (sorry-free): gridsum_pos_of_residual_small (|R|<mean=>sum>0), exists_good_of_gridsum_pos (sum>0=>exists good), exists_good_of_residual_small (full chain |R|<(6/7)^k => exists good).
+
+CONVERGES with opus-S169's lemniscate lead: opus's elliptic-reparam-desingularizes-arc-boundaries = the ARC-COUNT view; my E_grid = the FOURIER view of the SAME object (arc boundary = collision = exact resonance = Vmax|n.e mode). Two coordinates, one thing.
+
+OPEN (the clean residual, handed to fleet): prove |R|=|sum_{Vmax|n.e}What(n)|<(6/7)^k a-priori via a Sidon/B_h near-resonance count + LEM-011 geometric tail (0.371/coord). = R_0 (density floor, closed) + R_wrap (wraparound near-resonances).
+
+BOOKKEEPING: reconciled HYP-5547 collision (opus-S169 arc-count = 5547; my S95 averaging renumbered 5547->5557); this = HYP-5567. LEM-013 extended with the E_grid route.
+
+FILES: LRCEgridExistence.lean; lrc14_egrid_{existence,7struct}_kps_S96.py(+.out); HYP-5567; LEM-013 updated.
+
+NEXT: the Sidon near-resonance count bound |R|<(6/7)^k (closes the band a-priori, no #arcs); OR keep it as the cleaner reduction alongside opus's arc-count. Lean: wire LRCEgridExistence to LEM-011's E_grid=mean+R identity.
+
 ## mac-mini-2026-07-09-S62 (cont.) -- finish remaining LRC math + formalize: consolidated the covering-case state, FORMALIZED 4 good-period cores (Lean, sorry-free), + ACKNOWLEDGED MISTAKE-128 (my c<D3 broken, use LEM-013's actual-mu existence)
 
 Prompt (owner): finish the remaining LRC math, then formalize.

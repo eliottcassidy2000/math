@@ -79,6 +79,25 @@ gap** — it is a region where the *certificate* is loose while *existence* is c
 remains to make the branch fully closed-form is only (i) extending exhaustion or (ii) a clean
 a-priori `μ > 1` bound on the intermediate band — not a genuine covering-leg risk.
 
+## The E_grid route (kps-S96) — an a-priori existence bound that sidesteps `#arcs`
+
+The cleanest a-priori handle on existence does not go through `μ` or `#arcs` at all. A good period
+exists at ruler `Vmax` **iff** `E_grid[W] := (1/Vmax)·Σ_{j<Vmax} W(je/Vmax) > 0` (a sum of
+nonnegatives is positive iff a summand is). By LEM-011, `E_grid[W] = (6/7)^k + R` with
+`R = Σ_{n≠0, Vmax | n·e} 𝒲̂(n)` the resonance residual. Hence
+
+> **`|R| < (6/7)^k  ⟹  E_grid[W] > 0  ⟹  a good period exists`** — with **no `#arcs`**.
+
+This replaces opus-S169's open arc-count bound with a bound on the **near-resonance count** (kps-S93):
+only the `Vmax | n·e` modes enter, so this is the *resonant* (count) part — Mertens-SAFE — never the
+non-resonant oscillatory wall. Verified (`lrc14_egrid_{existence,7struct}_kps_S96`):
+`max |R|/(6/7)^k = 0.38` (generic) and **`≤ 0.69` for the hard `7`-structured case** (all diffs
+`≡ 0 mod 7` — the MISTAKE-128 configuration that broke `c<D3`), including `Vmax ≡ 0 mod 7`; 100%
+existence, `min E_grid ≈ 0.077 > 0`. So `E_grid[W] ≥ 0.31·(6/7)^k > 0` even there. The reduction chain
+is in Lean (`LRCEgridExistence.{gridsum_pos_of_residual_small, exists_good_of_gridsum_pos,
+exists_good_of_residual_small}`, sorry-free). **Remaining a-priori item:** `|R| < (6/7)^k` via a
+Sidon/`B_h` near-resonance-count estimate + LEM-011's geometric tail `0.371/coord`. See HYP-5567.
+
 ## Files
 
 `04-computation/lrc14_{direct_existence,sliver_adversarial,sliver_midband,exhaustive_s22}_kps_S94.py`
