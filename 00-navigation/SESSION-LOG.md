@@ -1,3 +1,19 @@
+## opus-2026-07-09-S173 -- NEW DIRECTION: the singular-series/lonely-measure RIESZ-PRODUCT route to inf L>0 -- POSITIVE-DEFINITE, sidesteps the covering-W Mertens wall (opus-S172); certificate soundness formalized (LRCRieszCertificate.lean, kernel-pure); naive Riesz reaches ratio 1.07-1.19 (beats 1.41), <1 needs the tuned Bedert-2025 construction
+
+Prompt (owner): keep pushing the LRC math then formalization, pull often, develop new directions as needed.
+
+CONTEXT: covering case assembled (density floor closed, good-period dichotomy sorry-free kps-S99), its dissociated residual Mertens-walled (opus-S172, fleet routes around via kps-S99 dichotomy + mac-mini-S64 geometric widest-arc). Opened a fresh non-Mertens front in the Fourier lane.
+
+1. **THE W/L DUALITY (the key insight).** Two dual measures at theta=1/7: covering W=Σ(gap-1/7)_+ has SIGNED, L1-divergent Fourier (𝒲̂=∏b₀, Mertens-walled, opus-S172); lonely L(S)=∫∏1_safe(v_i τ) is POSITIVE-DEFINITE (h-hat=1_safe>=0, THM-515A) => the Riesz-product certificate needs NO cancellation. Same 1/7, dual functionals, opposite analytic character. That is WHY inf L>0 is a Riesz-product problem, not a 𝒲̂-resonance one.
+
+2. **THE CERTIFICATE + numeric feasibility** (THM-515C/HYP-2540/Bedert-2025). S loose iff M(τ)=#{v:||vτ||<=1/14} not >=1 a.e.; find R=∏(1+a_m cos2πmτ)>=0 with ∫M*R<∫R => M<1 on positive measure => loose. VERIFIED (ratio ∫M*R/∫R): validity holds (TIGHT {1..12}U{182} gives 1.132>=1, NO false positive); naive coordinate-descent Riesz reaches 1.07-1.19 on loose extremizers -- BEATS the 1.41 hand-built, but <1 needs the TUNED dissociated construction (D adapted to relation-lattice additive energy THM-515B + Bonami hypercontractivity = Bedert-2025 core).
+
+3. **LEAN (first on the singular-series side).** TournamentH7.LRCRieszCertificate (kernel-pure, built): riesz_certificate (R>=0 & ∫M*R<∫R => not(M>=1 a.e.), soundness via integral monotonicity) + no_certificate_of_ae_covered (tight => no certificate, validity). The logical core of the inf L>0 route, checked; the uniform R (analytic content) stays open.
+
+Distinct from + complementary to mac-mini-S64's geometric widest-arc/three-gap good-period route (both sidestep the opus-S172 Mertens wall, different fronts). NEXT (HYP-2540): the tuned dissociated D + Bonami levels toward a uniform ∫M*R<1 => inf L>0. Files: lrc14_riesz_product_certificate_opus_S173 (+out); reflection the-riesz-certificate-is-positive-definite-where-the-covering-is-mertens-opus-S173; HYP-5620.
+
+---
+
 ## kind-pasteur-2026-07-09-S100 -- LEAN ASSEMBLY toward hpartA: LRCReachWitness.lean (lonely instant => Mreach>=1/14, ANY t), sorry-free; + mapped the hfloor/hpartA surface; + independently CONFIRMED the E_x/R_grid split
 
 Prompt (owner): keep working the lean assembly toward hfloor and hpartA, keep pushing the LRC math then formalization, pull often, develop new directions.

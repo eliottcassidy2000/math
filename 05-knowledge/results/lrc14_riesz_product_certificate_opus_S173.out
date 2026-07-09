@@ -1,0 +1,13 @@
+================================================================================================
+RIESZ-PRODUCT certificate: minimize int M*R (target <1 => S loose).  main int M = 13/7 = 1.857
+================================================================================================
+                                       S  best ratio int(MR)/int(R)     bestD          verdict
+      {1..13}\{6} U {56} [LOOSE L~.0056]                     1.1896    speeds       only 1.190
+     {1..12} U {182}     [TIGHT L=0]                         1.1320  lacunary  (tight: >=1 OK)
+     7*{1..12} U {13}    [LOOSE L~.029]                      1.1402 speeds+lac       only 1.140
+     {1..13}             [ref]                               1.0692 speeds+lac       only 1.069
+
+  READING: ratio<1 => positive-measure lonely set => S LOOSE (a valid certificate). TIGHT set
+  {1..12}U{182} must give ratio>=1 (VALIDITY check -- no false positive; M>=1 a.e.). How far
+  coordinate-descent Riesz reaches on LOOSE extremizers = the method's strength vs 2025 optimal.
+================================================================================================
