@@ -190,6 +190,22 @@ NEXT: (a) explicit c in |R|<=c*kissing (sum LEM-011 shells); (b) grid-lattice AP
 
 Prompt (owner): creative angles on the mu-floor + past-work connections; then "continue + extend the ideas incoming from other agents"; then "keep working the handoff, think R0-signed/R_grid-absolute split"; then "work the handoffs, pull often, synthesize, develop new directions."
 
+**HANDOFF (5th part) -- DISSOCIATED branch CLOSES a-priori via the widest-arc pigeonhole (deep-contemplation pivot).**
+Owner: keep pushing, pull often, contemplate pivots. Deep read of THM-527-A surfaced a 1/7-vs-2/7 scare
+(THM-527-A uses via-max 2/7; recent work uses 1/7) -- RESOLVED via THM-530: 1/7 (global-witness, any
+runner lonely) is CORRECT; 2/7 (via-max, anchored at Vmax) is REFUTED as a uniform floor (exact zeros)
+but sufficient. NO threshold error; my work is at the right threshold. This reframed the geometric route:
+the fragmented knife-edge {0,...,42} (maxIntG*spread=6/7) is NEAR-AP (mult-of-7 sub-AP, L=7) = LEM-012
+territory, NOT dissociated. So restricting the widest-arc pigeonhole to the DISSOCIATED branch (L<=k-7=6)
+CLOSES it: adversarial 117,443 dissociated k=13 sets (7-/k-structured biased) => min maxIntG*spread =
+1.709 ~ 12/7 > 1 => maxIntG > 1/Vmax for ALL Vmax>spread => strict good period a-priori (NO Mertens sum,
+NO exhaustion). The good-period DICHOTOMY split (near-AP L>=k-6 / dissociated L<=k-7, kps-S99) IS the
+geometric divide. Clean a-priori TARGET (three-distance, klein's terrain): maxIntG(E)*spread>=c>1 for
+dissociated E -- replaces the dissociated branch's Mertens-walled resonant sum. Messaged klein (target)
++ opus (geometric twin of their Riesz inf-L>0). Files: lrc14_dissociated_widest_arc_floor_macmini_S64
+(+out); reflection sharpened. Good-period leg now: dissociated=widest-arc pigeonhole (a-priori mod target),
+near-AP=LEM-012, boundary=non-strict j=1 (LRCGoodPeriodNonStrict.lean), + density floor.
+
 **HANDOFF (4th part) -- LEAN non-strict layer + a GEOMETRIC route past opus's |R| wall.** Pulled the
 fleet's convergence: kps-S99 (Lean good-period dispatch, sorry-free), opus-S171/S172 + klein-S202
 (the |R|<(6/7)^k route FAILS -- Mertens wall from k/7>1 over-covering, TV(W')~spread^2; opus routes
