@@ -481,3 +481,22 @@ decorrelated regime + the lower-rank reduction (one outlier close + one far ⟹ 
 10-point cluster + 1 iid = an L=10 shape, already closed), **the L=9 stratum closes**; `L ≤ 8` is
 strictly safer (`D3_∞^{(L)}` grows: 0.60/0.68/… — S88 found the L=8 tail min 0.511). File:
 `lrc14_L9_correlated_remainder_kps_S89.py` (+`.out`).
+
+## R2 — the k=12,13 tail rate is A-PRIORI (mac-mini-S60, via LEM-011)
+
+opus-S157 proved the k=11 (L=10) tail rate `|D3(E_{d,p}) − D3_∞| ≤ C/(pd)` with `C = (π²/3)Σ_j|∂_j D3|·V_j`,
+`V_j = sup_{a,b≠0}|ab·Ĝ^j(a,b)|` the mixed-variation of `G = 𝒲` on `T²` (the AP+outlier slice). LEM-011's
+EXACT closed form for `𝒲̂` makes `V_j` **a-priori** (no grid certification). The k=12,13 tail families are
+the SAME structure with `L = k−1` (11-AP / 12-AP + outlier); computing `V_j` by FFT (a-priori-backed):
+
+| k | L=k−1 | V_1 | V_2 | V_3 | C | D3_∞−bar | pd₀ = C/(D3_∞−bar) |
+|---|---|---|---|---|---|---|---|
+| 11 | 10 | 0.276 | 0.163 | 0.105 | 21.1 | 0.133 | 158 (= opus's 160 ✓) |
+| 12 | 11 | 0.251 | 0.159 | 0.104 | 19.1 | 0.190 | **101** |
+| 13 | 12 | 0.243 | 0.159 | 0.104 | 18.7 | 0.288 | **65** |
+
+(k=11 row reproduces opus-S157's `V_j ≈ 0.28/0.16/0.10`, `C = 21.2`, `pd₀ = 160` exactly — validation.)
+So the k=12,13 tail closes identically to k=11: **`pd ≥ pd₀` asymptotic** (`D3 ≥ D3_∞ − C/pd₀ = bar`) **+
+`pd < pd₀` finite check** (exhaustible; `pd₀ = 101/65` is SMALLER than k=11's 160, so both halves are
+easier — the bigger margins `D3_∞−bar = 0.19/0.29` dominate the similar `C`). The tail rate is now
+a-priori for all of k=11,12,13. File: `04-computation/lrc14_k1213_tail_apriori_rate_macmini_S60.{py,out}`.
