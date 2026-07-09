@@ -118,14 +118,28 @@ bounded-spread"** (part D) is the correct reduction.
 
 ## G. Honest remaining gaps (the genuine crux)
 
-1. **The uniform floor `c₀>0` on the compact shape space** — a rigorous compactness proof:
-   `ρ*` continuous + positive on the closure of the (real) bounded-spread shape space, plus
-   the integer-shape vs real-shape passage and the `Vmax≤V₀` finite check. This is the one
-   remaining inequality. Part D reduces it to a finite/compact statement; it is not yet a
-   theorem.
-2. **The exact floor** over all bounded-spread shapes (a finite but large search; `≤1/84`).
-3. **The finite-`w0` discrepancy** `ρ_K = ρ* + O(1/Vmax)` made uniform (bounded arc-count
-   suffices, sketched, not written).
+> **UPDATE (mac-mini-2026-07-08-S58): item 1 — the genuine crux — is now CLOSED.** The uniform
+> floor `ρ*_{1/7}(P,E) ≥ m_P = 14249/252252 > 0` is PROVED, via THM-530's reduction (Bonferroni:
+> `ρ*_{1/7} ≥ meas(G_P) + μ_{1/7}(E) − 1`) whose sole contingency — the density floor
+> `μ_{1/7}(E) ≥ bar_k` for `k=8..13` — is now discharged at the uniform level (THM-661 degree-≤4
+> covering-moment floor + LEM-009 longest-AP tail; all six legs, this session + fleet). Crucially
+> this is the **direct integer route**, NOT the compactness argument item 1 asked for: the floor
+> is proved over integer clusters directly (exhaustive exact Farey over compact shapes + a
+> longest-AP tail with a proven `1/(pd)` decorrelation rate), so no `ρ*`-continuity, no closure of
+> a real shape space, and **no integer-vs-real passage** are needed. Item 2 is moot for the proof
+> (positivity, not the exact value, is what the reformulation needs). Only item 3 remains. See
+> **THM-663** (the covering-case assembly).
+
+1. ~~**The uniform floor `c₀>0` on the compact shape space**~~ — **CLOSED** (see update above):
+   `ρ*_{1/7} ≥ m_P` unconditional via THM-530 + the THM-661 density floor.
+2. ~~**The exact floor** over all bounded-spread shapes~~ — **not needed** (positivity suffices;
+   the `≤1/84` exact value is irrelevant to `ρ*>0 ⟹ lonely`).
+3. **The finite-`w0` / finite-`Vmax` discrepancy** `ρ_K = ρ* + O(#arcs/Vmax)` made uniform — the
+   **sole remaining analytic item** (THM-527-A / HYP-2602). Now that `ρ* ≥ m_P` is a concrete
+   positive constant, the threshold `Vmax > C/m_P` is explicit and `Vmax ≤ C/m_P` is a finite
+   check (finitely many integer clusters, MSS gives `Vmax ≤ 91^12` overall); what remains is the
+   **bounded-arc-count lemma** (`#good arcs = o(Vmax)`, so the good-period density `ρ_K → ρ* > 0`).
+   Sketched here (lines 56–58), not yet written as a theorem.
 
 ## Net
 
