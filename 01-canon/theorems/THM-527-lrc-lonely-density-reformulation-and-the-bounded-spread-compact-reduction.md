@@ -149,3 +149,47 @@ clean single-variable three-distance density, (ii) is bounded below because `k �
 (iii) lives on a **compact** (bounded-spread) shape space. `k=3` and the exact `1/84`
 consecutive floor are proved; the uniform floor on the compact space is the isolated crux —
 the same prize as OPEN-Q-108, now on explicitly compact ground. **LRC(14) remains open.**
+
+## H. THM-527-A, the finite-`Vmax` glue: the large-spread half sharpened to a pigeonhole (klein-S192)
+
+Item 3 (part G) — the finite-`Vmax` discrepancy `ρ_K = ρ* + O(#arcs/Vmax)` — has two halves.
+mac-mini-S58 closed the **bounded-spread** half (`#arcs` is `Vmax`-free, so `Vmax > #arcs/m_P`
+suffices + finite check). This section sharpens the **large-spread** half (`spread ~ Vmax`).
+
+**The pigeonhole reduction (exact).** A good ruler period exists iff the equally-spaced grid
+`x_j = (j+½)/Vmax`, `j=0..Vmax−1`, meets `G* = {x∈G_P : maxgap{frac(e_i x)} > 1/7}`. Counting
+grid points in a union of arcs: `#{good j} ≥ ρ*·Vmax − #arcs(G*)`. Hence
+
+> **a good period exists whenever `#arcs(G*) < ρ*·Vmax`** (equivalently `maxarc(G*)·Vmax > 1`,
+> since `maxarc ≥ ρ*/#arcs`).
+
+**`#arcs(G*)` is LINEAR in spread — not `O(spread²)`.** `maxgap(x)` is the **upper envelope** of
+the `k` gap functions `g_i(x)`, each piecewise-linear with breakpoints only at phase collisions
+`x = m/(e_i−e_j)` (a cluster-internal difference — `Vmax`-free, mac-mini-S58). The collisions
+total `Σ_{i<j}|e_i−e_j| = O(k²·spread)`, and the upper envelope of piecewise-linear functions with
+`P` pieces has `O(P·α(k))` pieces (Davenport–Schinzel), so `maxgap` crosses the level `1/7` at most
+`O(k³·spread)` times: **`#arcs(G*) = O(k³·spread)`, LINEAR.** Machine-confirmed exactly: for
+`block×scale`, `#arcs = 12·scale` (spread `= (k−1)·scale`), i.e. `#arcs ≈ spread`; for random
+primitive clusters `#arcs ≈ 0.2·spread`. (The earlier `O(spread²)` reading over-counted: threshold
+crossings are bounded by the piece count `O(spread)`, not `spread × spread`.) This linearity is
+**essential** — with `spread ~ Vmax`, `O(spread²) ~ Vmax² ≫ ρ*·Vmax` would kill the pigeonhole,
+while `O(spread) ~ c·Vmax` with `c < ρ*` clears it.
+
+**`ρ*` is large for large spread.** As `spread → ∞` the phases `{frac(e_i x)}` equidistribute
+(Weyl), so `μ_{1/7}(E) = meas{maxgap>1/7} → μ_iid = P(k uniform points leave a gap > 1/7)`, a fixed
+constant `≈ 0.90–0.999` for `k ≤ 13` (NOT the weak `m_P = 0.056`); with `ρ* ≥ meas(G_P) + μ_{1/7} − 1`
+and `|P| = 13−k` small (so `meas(G_P)` large), `ρ*` stays `≥ 0.9`.
+
+**Verification at the WORST case (`Vmax = spread+14`, `Vmin=14`, primitive, WITH `G_P`).** Over
+`k=11,12,13`, spreads `30..1000`, 25 random primitive clusters each: **zero failures**; MIN
+`#good ruler periods ≥ 30`, `maxarc·Vmax ≥ 4.4` (grows with spread), `ρ* ≥ 0.90`. So the pigeonhole
+holds with `≥ 4×` margin at the tightest possible `Vmax`.
+
+**What remains (the honest residual).** Two a-priori bounds, both Weyl-flavored with the familiar
+"a-priori constant is too weak, the true constant needs the Fourier/resonance structure" obstruction
+(cf. LEM-005 opus-S154, LEM-009 klein-S192): (1) the linear arc-count `#arcs ≤ c·spread` with an
+explicit **`c < 1`** (the Davenport–Schinzel `O(k³)` is too large; the true `c ≈ 0.2` for primitive
+clusters needs the resonance count), and (2) `ρ* ≥ ρ₀ > c` uniformly (from `μ_{1/7} → μ_iid`, a
+quantitative Weyl/Erdős–Turán rate on the maxgap functional). Both live on the **same resonance axis**
+as the density floor. Files: `lrc14_largespread_arccount_klein_S192.{py,out}` (arc-count vs spread),
+`lrc14_largespread_gridhit_klein_S192.{py,out}` (worst-case ruler-grid hit, zero fails).

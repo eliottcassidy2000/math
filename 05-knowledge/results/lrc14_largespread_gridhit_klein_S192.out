@@ -1,0 +1,31 @@
+Worst-case (Vmax = spread+14, Vmin=14) large-spread test.
+Report MIN over random primitive clusters of: #good_j on the ruler, and maxarc*Vmax.
+
+===== k=11, P=[1, 2] =====
+  s=   30 Vmax=   44: MIN #good_j=    30  (fails:0/25)  min maxarc*Vmax= 9.51  min rho*=0.974
+  s=   60 Vmax=   74: MIN #good_j=    56  (fails:0/25)  min maxarc*Vmax= 9.81  min rho*=0.989
+  s=  120 Vmax=  134: MIN #good_j=   102  (fails:0/25)  min maxarc*Vmax=19.15  min rho*=0.993
+  s=  250 Vmax=  264: MIN #good_j=   206  (fails:0/25)  min maxarc*Vmax=30.93  min rho*=0.994
+  s=  500 Vmax=  514: MIN #good_j=   400  (fails:0/25)  min maxarc*Vmax=33.51  min rho*=0.996
+  s= 1000 Vmax= 1014: MIN #good_j=   792  (fails:0/25)  min maxarc*Vmax=52.31  min rho*=0.998
+
+===== k=12, P=[1] =====
+  s=   30 Vmax=   44: MIN #good_j=    32  (fails:0/25)  min maxarc*Vmax= 7.43  min rho*=0.943
+  s=   60 Vmax=   74: MIN #good_j=    62  (fails:0/25)  min maxarc*Vmax=11.19  min rho*=0.980
+  s=  120 Vmax=  134: MIN #good_j=   110  (fails:0/25)  min maxarc*Vmax=11.87  min rho*=0.987
+  s=  250 Vmax=  264: MIN #good_j=   222  (fails:0/25)  min maxarc*Vmax=14.89  min rho*=0.988
+  s=  500 Vmax=  514: MIN #good_j=   432  (fails:0/25)  min maxarc*Vmax=16.65  min rho*=0.990
+  s= 1000 Vmax= 1014: MIN #good_j=   860  (fails:0/25)  min maxarc*Vmax=28.98  min rho*=0.994
+
+===== k=13, P=[] =====
+  s=   30 Vmax=   44: MIN #good_j=    34  (fails:0/25)  min maxarc*Vmax= 4.44  min rho*=0.899
+  s=   60 Vmax=   74: MIN #good_j=    66  (fails:0/25)  min maxarc*Vmax= 5.94  min rho*=0.951
+  s=  120 Vmax=  134: MIN #good_j=   128  (fails:0/25)  min maxarc*Vmax= 7.15  min rho*=0.973
+  s=  250 Vmax=  264: MIN #good_j=   256  (fails:0/25)  min maxarc*Vmax=12.05  min rho*=0.976
+  s=  500 Vmax=  514: MIN #good_j=   500  (fails:0/25)  min maxarc*Vmax=10.79  min rho*=0.980
+  s= 1000 Vmax= 1014: MIN #good_j=   992  (fails:0/25)  min maxarc*Vmax=17.83  min rho*=0.984
+
+If MIN #good_j >= 1 (no fails) with big margin and maxarc*Vmax>1 across all
+spreads at the WORST Vmax=s+14, the large-spread half holds: a good ruler
+period always exists.  The pigeonhole #good >= rho*Vmax-#arcs then just needs
+the rigorous linear arc-count bound #arcs<=c*spread with c<rho* (~0.2 observed).

@@ -14,6 +14,51 @@ CONTEXT: density floor essentially closed (mac-mini-S58: all six legs k=8..13; k
 FILES: lrc14_L10_explicit_rate_kps_S89.py (+out); LEM-009 "explicit V_i" section.
 
 NEXT: opus's L=9 correlated-remainder (analogous box bound per L, larger margins) => k=11 fully rigorous end-to-end; then the Lean assembly + the Part A leg (regime C / OPEN-Q-110).
+## klein-2026-07-08-S192 -- the two remaining LRC(14) analytic residuals SHARPENED: (a) density-floor last certification RE-DIAGNOSED (V_i are fine, cancellation is the issue -- first-order captured a-priori); (b) THM-527-A large-spread half REDUCED to a pigeonhole + LINEAR arc-count, verified zero-fail at worst case
+
+Prompt (owner): "work to finish."
+
+After mac-mini-S58 assembled THM-663 (covering case closed modulo THM-527-A finite-Vmax + Lean),
+the whole LRC(14) proof rests on exactly two analytic residuals. I sharpened BOTH.
+
+1. **The density-floor "last certification" (LEM-009/THM-663 caveat) RE-DIAGNOSED.** The caveat said
+   "a fully a-priori V_j bound (counting G^j breakpoint crossings) would remove the last certification."
+   FALSE DIAGNOSIS. The individual total variations ARE a-priori and small (exact gap formula
+   `TV_u W = Σ_G min(2(ℓ_G−1/7)_+, 2/7) ≤ 2E_a[W_full] = 0.365`). Yet the triangle-inequality
+   decorrelation constant `C = Σ|∂D3/∂m_i|·V_i` = **115** (or **5.14** with measured V_i) `≫ 3.47`
+   required -- because D3's small denominator `Δ = m2−m3/M = 0.026` makes `|∂D3/∂m2| = 18.5`, while
+   the TRUE deviation×d ≈ 0.035 survives only by **CANCELLATION** among the three moment-errors
+   `ε_i = m_i(E_d)−L_i` (one shared d-point Riemann-sum defect of W,W²,W³). Bounding each |ε_i|
+   separately throws the cancellation away. **Captured the cancellation at FIRST ORDER, a-priori:**
+   `Σc_iε_i = E_a[Riemann-err of g_a]`, `g_a=φ∘W`, `φ(w)=Σc_iw^i` a FIXED cubic, so
+   `C_1 = E_a[TV_u g_a] ≤ Lip(φ)·2E_a[W_full] = 2.83 < 3.47` ⟹ first-order tail a-priori-closed for
+   all d≥26. Residual = the SECOND-order Riemann remainder, whose a-priori control is opus-S154's
+   **L² Fourier-tail** step (Δ blows up the Hessian, so box/triangle bounds fail even at d=560; the
+   higher harmonics that make the true remainder tiny are L², invisible to |·| bounds). So the last
+   certification = one precisely-located L² second-order tail, NOT any V_j refinement. Corrected the
+   LEM-009 + THM-663 caveats. Files: `lrc14_Vi_{apriori,combined}_klein_S192.{py,out}`.
+
+2. **THM-527-A large-spread half REDUCED to a pigeonhole + verified.** mac-mini-S58 closed the
+   bounded-spread half and left large-spread as "the residual, → Weyl/THM-518." Sharpened it:
+   a good ruler period exists iff the grid `x_j=(j+½)/Vmax` meets `G*`, and `#{good j} ≥ ρ*·Vmax −
+   #arcs(G*)`, so it suffices that **`#arcs(G*) < ρ*·Vmax`** (⇔ `maxarc·Vmax>1`). KEY CORRECTION:
+   `#arcs` is **LINEAR** in spread, `O(k³·spread)` (maxgap = upper envelope of k gaps ⟹
+   Davenport–Schinzel O(spread) crossings; machine-EXACT `#arcs=12·scale` for block×scale, `≈0.2·spread`
+   random primitive) -- NOT the `O(spread²)` reading, which would have KILLED the pigeonhole
+   (spread²~Vmax²≫Vmax). For large spread ρ* is LARGE (`μ_{1/7}→μ_iid≈0.9–0.999`, k≤13; not the weak
+   m_P). VERIFIED at the WORST case (Vmax=spread+14, Vmin=14, primitive, WITH G_P): k=11,12,13,
+   spreads ≤1000 -- **ZERO failures**, #good≥30, maxarc·Vmax≥4.4, ρ*≥0.90. Honest residual: a-priori
+   `#arcs≤c·spread` (c<1) + `ρ*≥ρ₀>c` -- both Weyl/resonance (a-priori D-S O(k³) / Erdős–Turán constants
+   too weak, same "true constant needs Fourier" obstruction as #1). THM-527 part H + THM-663 updated.
+   Files: `lrc14_largespread_{arccount,gridhit}_klein_S192.{py,out}`.
+
+**Net:** both LRC(14) analytic residuals now sit on the SAME resonance/L² axis, each reduced to an
+explicit a-priori-constant question (first-order pieces done a-priori; the true small constants need
+the Fourier structure). Empirical margins 100× (density floor) / 4× (large-spread). For mac-mini
+(THM-527-A owner): the large-spread half is a clean pigeonhole `#arcs < ρ*·Vmax` with linear arc-count
+-- your Weyl machinery + a linear-arc-count-with-good-constant lemma closes it.
+
+---
 
 ## mac-mini-2026-07-08-S58 -- DENSITY FLOOR FULLY CLOSED (all six legs k=8..13, uniform level) + COVERING CASE ASSEMBLED (THM-663): LRC(14) now reduces to ONE analytic item (THM-527-A finite-Vmax) + Lean
 

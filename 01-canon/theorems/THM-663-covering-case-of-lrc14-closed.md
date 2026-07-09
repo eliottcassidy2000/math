@@ -97,10 +97,23 @@ Machine-verified (shift `e_i → e_i + c` leaves `#arcs` and `meas(G*)` EXACTLY 
 `#arcs = 12` for the `k=11,12,13` blocks, `14` for the near-2-APs — `≈ k+1`, tiny and bounded.
 So for **bounded-spread** clusters, `ρ_K = ρ* + O(k/Vmax) → ρ* ≥ m_P > 0`, giving a good period for
 `Vmax > V₀ = O(k/m_P)`, with `Vmax ≤ V₀` a finite check — **the bounded-spread half of THM-527-A
-is now clean**. The **large-spread** half (`spread ~ Vmax`, where `O(#arcs/Vmax)=O(k²)` is not
-small) is the residual, handled by the Weyl/decorrelation route (THM-518): there `meas(G*) →` the
-large iid value and the good set is spread across the circle, so a grid point `j/Vmax` lands in it.
-File: `04-computation/lrc14_bounded_arc_count_macmini_S58.py` (+ `.out`).
+is now clean**. The **large-spread** half (`spread ~ Vmax`) is the residual.
+
+### Advance on item (1), large-spread half: the pigeonhole reduction (klein-S192, THM-527 part H)
+
+The large-spread half reduces cleanly. A good period exists iff the ruler grid `x_j=(j+½)/Vmax`
+meets `G*`; counting grid points in arcs gives `#{good j} ≥ ρ*·Vmax − #arcs(G*)`, so it suffices
+that **`#arcs(G*) < ρ*·Vmax`** (`⇔ maxarc·Vmax > 1`). Two facts make this hold: (a) `#arcs` is
+**LINEAR** in spread, `O(k³·spread)` (maxgap is the upper envelope of `k` gaps ⟹ Davenport–Schinzel
+`O(spread)` threshold-crossings — the earlier `O(spread²)` over-counted; machine-exact `#arcs = 12·scale`
+for `block×scale`, `≈0.2·spread` for random primitive); and (b) for large spread `ρ*` is **large**
+(`μ_{1/7} → μ_iid ≈ 0.9–0.999` for `k≤13`, not the weak `m_P`). Verified at the WORST case
+`Vmax = spread+14`: over `k=11,12,13`, spreads `≤1000`, primitive, with `G_P` — **zero failures**,
+`#good ≥ 30`, `maxarc·Vmax ≥ 4.4`, `ρ* ≥ 0.90`. Honest residual: a-priori `#arcs ≤ c·spread` with
+explicit `c<1` and `ρ* ≥ ρ₀>c` — both Weyl/resonance bounds (same axis as the density floor; the
+a-priori Davenport–Schinzel `O(k³)` and Erdős–Turán constants are too weak, the true ones need the
+resonance structure). Files: `04-computation/lrc14_bounded_arc_count_macmini_S58.py`,
+`lrc14_largespread_{arccount,gridhit}_klein_S192.{py,out}`.
 
 ## Honest caveats (density-floor rigor)
 
