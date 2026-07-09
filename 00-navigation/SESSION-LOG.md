@@ -1,3 +1,35 @@
+## mac-mini-2026-07-09-S62 -- finished the finite/verifiable form of the dissociated closure (c<D3, spread>=200 + Vmax<=234 check) + REFLECTION: the broken clock IS the loneliness mechanism
+
+Prompt (owner): work the finite/verifiable exact inequality + small finite check; + the broken-clock/time insight relates to LRC.
+
+1. **FINITE/VERIFIABLE CLOSURE of the dissociated branch.** The arc-count inequality c=#arcs/spread <
+   D3(E) (=> good period exists, since rho*>=D3, #arcs<=c.Vmax) is dilation-aware: D3 dilation-invariant,
+   c shrinks with spread. Sweep: c/D3 MONOTONE DECREASING in spread, <1 throughout (max 0.90 at spread
+   80 k=13, -> 0.44 at spread 1000). Concrete closure:
+     [spread >= 200: c/D3 <= 0.64 (>=35% margin, both exact) => c<D3 => good period] +
+     [spread < 200: hard case Vmax <= 7.spread/6 < 234 => FINITE CHECK, inside kps-S30 Vmax<=1001].
+   The dissociated branch = an exact per-cluster inequality over the (dilation-normalized) large-spread
+   dissociated shape space + a Vmax<=234 finite check. NO analytic wall. CONVERGES with klein-S198 (same
+   "single Sidon-like inequality c(L)<rho_min"; arc-count avoids the MERTENS-cautioned near-resonance
+   count = kps-S92's cancellation issue).
+
+2. **REFLECTION: the broken clock and the lonely runner.** The owner's insight -- stopped clock right
+   twice a day, correct-rate clock ~never -- IS the loneliness mechanism. Cluster = a bank of clocks
+   ticking near true rate Vmax (rate-errors = co-offsets e_i). Near-true clocks coincide rarely =>
+   usually displaced => loneliness common (rho* large). DISSOCIATED = independent clocks (incommensurate,
+   Weyl-equidistribute => gap fast => high D3, c<D3); NEAR-AP = geared clocks (AP errors realign => j*~k,
+   LEM-012); exact-AP = perfect clockwork (never lonely = tight M=1/k, opus-S164's r_N=1). LRC = a bank of
+   distinct near-true clocks is never all-right-at-once; that displaced moment is the lonely runner's.
+
+STATE: both branches of THM-527-A have concrete closures -- near-AP (LEM-012 elementary), dissociated
+(c<D3 for spread>=200 + Vmax<=234 check). LRC(14) covering case = these + LRC<=13 + Lean.
+
+FILES: LEM-012 route (c) concrete closure; reflection the-broken-clock-and-the-lonely-runner-macmini-S62;
+script lrc14_dissociated_threshold_macmini_S62.
+
+NEXT: exact c<D3 verification over spread>=200 dissociated (converge w/ klein-S198's c(L)<rho_min);
+the Vmax<=234 finite check (kps-S30 extend).
+
 ## klein-2026-07-09-S198 -- the single Sidon-like inequality (route c, c(L)<ρ_min) + the near-resonance count is MERTENS-cautioned (⟹ use the positive arc-count) + Hadwiger is nontrivial for the metagraph at n=7
 
 Prompt (owner): work the near-resonance count and the single Sidon-like dissociated-branch inequality;
