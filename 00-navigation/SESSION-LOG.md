@@ -1,3 +1,38 @@
+## mac-mini-2026-07-09-S62 (cont.) -- finish remaining LRC math + formalize: consolidated the covering-case state, FORMALIZED 4 good-period cores (Lean, sorry-free), + ACKNOWLEDGED MISTAKE-128 (my c<D3 broken, use LEM-013's actual-mu existence)
+
+Prompt (owner): finish the remaining LRC math, then formalize.
+
+1. **MATH -- consolidated the covering-case state.** Every link proved/a-priori/cited EXCEPT one:
+   sieve (Lean), non-covering=LRC<=13 (settled), reformulation (THM-527), density floor (CLOSED,
+   a-priori LEM-011/R2), rho*>=m_P (unconditional), good-period near-AP L>=k-5 (LEM-012, PROVED
+   elementary), dissociated L<=k-6 (LEM-013 VERIFIED: exhaustive s<=22, adversarial band, large-spread
+   c~0.22-0.37 << actual rho*~0.96). Single residual: a-priori mu-floor > c for dissociated (or extend
+   LEM-013 exhaustion) -- the fleet's additive-combinatorics work. Both branches bypass the Mertens-hard
+   partial-sum cancellation.
+
+2. **CORRECTED MISTAKE-128 (klein-S199 caught it).** My route (c) "c=#arcs/spread < D3(E)" is a BROKEN
+   certificate: for 7-structured co-offsets (differences=0 mod 7 resonate with 1/7, spiking #arcs), D3
+   (a moment LOWER bound) is too weak -- c/D3=1.40, dilation-invariant. E={0,7,14,21,26,29,37,44,51,58,
+   67,75,82}: c=0.878>D3=0.629. What SURVIVES: c<actual mu (0.878<0.915); my S62 large-spread test used
+   actual rho* (correct); the D3-proxy was the error. RESOLUTION: LEM-013 direct mu-existence (not c<D3).
+   Acknowledged in LEM-012 + assessment. Lesson: don't proxy mu by a moment lower bound in a tight ineq.
+
+3. **FORMALIZATION -- 4 good-period cores sorry-free** (TournamentH7/LRCGoodPeriodJ1.lean, axioms std):
+   good_period_j1_wraparound (LEM-010i), good_gap_of_phases_in_interval (arc core),
+   goodPeriod_iff_partialSum_pos (opus-S165 reduction), + NEW gap_split_pigeonhole (LEM-012's core: m+1
+   gaps summing to >(m+1)/7 => max>1/7). Skeleton LRCFourteenSkeleton derives LRC14Statement from Prop
+   obligations. Remaining formalization = native_decide the finite density-floor/union-bound checks +
+   transcribe LEM-012 Dirichlet + arc-count -- engineering, no new math.
+
+STATE: LRC(14) covering case = [all links proved/a-priori/cited] + [one verified dissociated mu-floor
+residual, fleet-active] + [Lean transcription]. 4 good-period cores + skeleton formalized.
+
+FILES: LEM-012 correction; assessment S62 consolidation + correction; LRCGoodPeriodJ1.lean (4 cores);
+scripts lrc14_dissociated_{threshold, arcs_largespread}_macmini_S62 (+outs).
+
+NEXT: the dissociated mu-floor > c (or LEM-013 exhaustion extension) -- fleet; Lean native_decide the
+finite checks + LEM-012 transcription.
+
 ## klein-2026-07-09-S199 -- MISTAKE-128: route (c)'s c<D3 certificate is SEVERELY broken (7-structured co-offsets => c/D3=1.40, dilation-invariant), converging with + strengthening kps-S94/LEM-013's resolution
 
 Prompt (owner): keep working LRC(14), same mindset (Mertens/Hadwiger lenses), explore related themes.
