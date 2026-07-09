@@ -1,0 +1,14 @@
+(A) SOUNDNESS: when SHARP fires, does the constructed tau give minReach >= 1/14?
+(B) THRESHOLD V0: least Vmax at which some j satisfies the condition.
+
+                   cluster  spread  V0(SHARP)  V0(COARSE)  ratio  sound
+         tightAP e={0..12}      12         18          42   2.33   True
+    7-struct (MISTAKE-128)      82        133         293   2.20   True
+               dissociated     129        194         466   2.40   True
+       near-AP 3*{0..10}+2      32         53         113   2.13   True
+
+ALL SOUND = True   (must be True: the Lean theorem's conclusion)
+
+(C) The ANCHOR: e_0=0 => tooth c_0=0 never drifts; observer safety forces |phi|>=1/14,
+    so the LEAST possible drift is spread/(14*Vmax) -- a 14x floor below the naive spread/Vmax.
+    => the drift-margin threshold V0 improves by up to 14x when the good gap abuts the anchor.

@@ -1,0 +1,13 @@
+Least Vmax at which the drift-absorbed embed FIRES (some j, some free gap).
+hard regime is Vmax <= 7*spread/6 = 1.167*spread (j=1 fails there).
+
+               cluster  spread  V0_sharp  /spread  V0_coarse  /spread  gain   win a  win phi  sound
+     tightAP e={0..12}      12        18    1.500         42    3.500  2.33  0.0000   0.2500   True
+      7-struct (M-128)      82       116    1.415        287    3.500  2.47  0.0000   0.2500   True
+           dissociated     129       182    1.411        452    3.504  2.48  0.0000   0.2500   True
+   near-AP 3*{0..10}+2      32        46    1.438        112    3.500  2.43  0.0000   0.2500   True
+
+READING: V0_sharp/spread ~ the explicit finite-check threshold. 'win a' = where the winning gap
+starts (a=0 would mean the ANCHOR gap wins, giving the 14x drift floor phi~1/14).
+If V0_sharp/spread > 1.167, the drift embed does NOT reach the hard regime -- the residual
+hembed corner is Vmax in (spread, V0_sharp], a BOUNDED finite check once spread is bounded.
