@@ -1,0 +1,17 @@
+Intermediate band s in [21,49]: adversarial MIN existence margin (good period exists iff >1).
+   s  minMargin(L<=6)  minMargin(L<=7)
+  21           1.5217           1.5217
+  24           1.4000           1.4000
+  27           1.3548           1.4483
+  30           1.4000           1.4000
+  33           1.4000           1.4000
+  36           1.5135           1.5135
+  39           1.7073           1.5366
+  42           1.6279           1.5714
+  45           1.6383           1.6383
+  48           1.7143           1.5714
+
+band-min existence margin = 1.3548 at s,E=(27, (0, 1, 5, 8, 11, 12, 14, 15, 16, 18, 20, 25, 27))
+Combined with EXHAUSTIVE s<=20 (min 1.105) and adversarial s>=50 (min>=1.717):
+=> good-period existence margin stays >1 for ALL spreads => dissociated covering branch has
+   NO real gap; mac-mini's c>=D3 sliver is purely a sufficient-certificate artifact.

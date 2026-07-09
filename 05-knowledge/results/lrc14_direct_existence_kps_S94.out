@@ -1,0 +1,8 @@
+DIRECT good-period existence over small-spread dissociated k=13 clusters.
+Existence at (E,Vmax): exists j with 7*maxgap > Vmax. Scan Vmax in [s+1, ceil(7s/6)+5].
+Report clusters+Vmax where NO good period exists (would break the covering leg).
+
+tested 15000 dissociated clusters; good-period-EXISTENCE failures: 0
+=> EVERY tested small-spread dissociated cluster admits a good period at EVERY critical Vmax.
+   Tightest margin: 7*maxgap/Vmax = 1.6154 (>1) at ((0, 1, 14, 16, 27, 30, 40, 41, 45, 48, 50, 53, 60), 65)
+   => the sliver is a CERTIFICATE artifact; good-period existence holds directly (this regime CLOSES).

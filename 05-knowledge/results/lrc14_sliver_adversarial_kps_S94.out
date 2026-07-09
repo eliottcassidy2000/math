@@ -1,0 +1,14 @@
+(A) EXHAUSTIVE dissociated k=13, spread s<=20 (rigorous base):
+    exhausted 117699 dissociated clusters s<=20; MIN existence margin = 1.1053 at ((0, 1, 2, 3, 4, 5, 6, 8, 10, 11, 14, 15, 17), 17)
+    (margin>1 everywhere => good period exists for ALL of them)
+
+(B) ADVERSARIAL min-margin (hill-climb, minimize existence margin) per spread:
+   s= 50: adversarial MIN existence margin = 1.7170   worst E=(0, 9, 12, 19, 21, 30, 32, 33, 38, 39, 42, 46, 50)
+   s= 70: adversarial MIN existence margin = 1.9091   worst E=(0, 1, 9, 14, 22, 25, 29, 48, 50, 59, 66, 68, 70)
+   s= 90: adversarial MIN existence margin = 1.9895   worst E=(0, 18, 27, 42, 57, 59, 61, 64, 67, 75, 85, 87, 90)
+   s=120: adversarial MIN existence margin = 2.0826   worst E=(0, 11, 26, 33, 34, 38, 50, 52, 61, 66, 88, 110, 120)
+   s=160: adversarial MIN existence margin = 2.1739   worst E=(0, 8, 20, 49, 59, 65, 67, 98, 110, 112, 126, 135, 160)
+   s=200: adversarial MIN existence margin = 2.3116   worst E=(0, 4, 15, 23, 52, 69, 100, 133, 154, 161, 168, 174, 200)
+
+=> if all mins stay comfortably >1, good-period existence is ROBUST for dissociated clusters:
+   the mac-mini c>=D3 sliver is a CERTIFICATE artifact, NOT a gap in the covering leg.
