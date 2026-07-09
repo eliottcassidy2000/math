@@ -1,0 +1,39 @@
+======================================================================
+LRC(14) E3-HARDNESS DISPATCHER (THM-668 grid-free pair-sum events)
+======================================================================
+
+AP {1..13} (E3-MAX extremal): v=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  E3=78/78 (norm 1.000)  live pair-sum rulers=13 of 25
+  grid-free band witness: t=1/14
+  M(S)=1/14 (0.0714)   >=1/14? True   -> CELL: EXACT-CHECK (tight/near-AP)
+
+2*AP {2,4,..,26} (dilated interval, same E3): v=[2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26]
+  E3=78/78 (norm 1.000)  live pair-sum rulers=13 of 25
+  grid-free band witness: t=1/28
+  M(S)=1/14 (0.0714)   >=1/14? True   -> CELL: EXACT-CHECK (tight/near-AP)
+
+odd AP (offset, low E3): v=[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25]
+  E3=0/78 (norm 0.000)  live pair-sum rulers=25 of 25
+  grid-free band witness: t=1/2
+  M(S)=1/2 (0.5000)   >=1/14? True   -> CELL: GOOD-PERIOD (dissociated)
+
+near-AP (one shifted): v=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14]
+  E3=77/78 (norm 0.987)  live pair-sum rulers=14 of 26
+  grid-free band witness: t=1/13
+  M(S)=1/13 (0.0769)   >=1/14? True   -> CELL: EXACT-CHECK (tight/near-AP)
+
+geometric (dissociated, E3~0): v=[1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
+  E3=12/78 (norm 0.154)  live pair-sum rulers=79 of 91
+  grid-free band witness: t=1/3
+  M(S)=1/3 (0.3333)   >=1/14? True   -> CELL: GOOD-PERIOD (dissociated)
+
+======================================================================
+SUMMARY (E3 as hardness coordinate; all lonely => LRC(14) holds on these):
+  AP {1..13} (E3-MAX extremal)           E3norm=1.000 live=13 lonely=True cell=EXACT-CHECK 
+  2*AP {2,4,..,26} (dilated interval, sa E3norm=1.000 live=13 lonely=True cell=EXACT-CHECK 
+  odd AP (offset, low E3)                E3norm=0.000 live=25 lonely=True cell=GOOD-PERIOD 
+  near-AP (one shifted)                  E3norm=0.987 live=14 lonely=True cell=EXACT-CHECK 
+  geometric (dissociated, E3~0)          E3norm=0.154 live=79 lonely=True cell=GOOD-PERIOD 
+
+KEY: E3-max (AP) has the FEWEST live rulers (max kill budget) yet is still lonely at its
+single live ruler q=14 (tangency); dissociated sets have MANY live rulers, lonely with margin.
