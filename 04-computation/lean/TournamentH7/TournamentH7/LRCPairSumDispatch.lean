@@ -68,5 +68,26 @@ theorem mreach_ge_of_pairsum_band (v : Fin 13 → ℤ) (p q : ℤ) (hq : 0 < q)
   rw [show ((v i : ℝ) * ((p : ℝ) / (q : ℝ))) = (((v i * p : ℤ)) : ℝ) / (q : ℝ) by push_cast; ring]
   exact hcl
 
+/-- **The bounded-ratio certificate as a pair-sum event (C0 window, mac-mini THM-668 addendum).**
+If every speed lies in `[Vmin, Vmax]` with `0 < Vmin` and ratio `Vmax ≤ 13·Vmin`, then the single
+pair-sum event `t = 1/(Vmin+Vmax)` (`p = 1`, `q = Vmin+Vmax`) clears every runner: each residue is
+`v_i` itself (`v_i < q`), and `v_i ∈ [q/14, 13q/14]` precisely because `Vmax ≤ 13·Vmin`.  So
+`Mreach ≥ 1/14` — for *any* `Vmax` (this is the non-enumerative reach to `Vmax ≤ 1001` on the
+comparable-speed slice).  This routes kps-S28's `spread13_lonely` through the THM-668 dispatch:
+`spread13`'s witness `1/(Vmin+Vmax)` IS the pair-sum event `q = Vmin+Vmax` (mac-mini's C0). -/
+theorem mreach_ge_of_pairsum_ratioBand (v : Fin 13 → ℤ) (Vmin Vmax : ℤ) (hmin : 0 < Vmin)
+    (hlo : ∀ i, Vmin ≤ v i) (hhi : ∀ i, v i ≤ Vmax) (hratio : Vmax ≤ 13 * Vmin) :
+    (1 : ℝ) / 14 ≤ Mreach v := by
+  have hq : 0 < Vmin + Vmax := by have := hlo (0 : Fin 13); have := hhi (0 : Fin 13); linarith
+  apply mreach_ge_of_pairsum_band v 1 (Vmin + Vmax) hq
+  intro i
+  have hvlo := hlo i
+  have hvhi := hhi i
+  have hvpos : (0 : ℤ) ≤ v i := le_trans (le_of_lt hmin) hvlo
+  have hvlt : v i < Vmin + Vmax := by linarith
+  have hres : (v i * 1) % (Vmin + Vmax) = v i := by rw [mul_one]; exact Int.emod_eq_of_lt hvpos hvlt
+  rw [hres]
+  exact ⟨by linarith, by linarith⟩
+
 end LRC14Concrete
 end LonelyRunner

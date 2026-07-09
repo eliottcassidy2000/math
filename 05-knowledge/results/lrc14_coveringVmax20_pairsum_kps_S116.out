@@ -1,0 +1,6 @@
+[1,20] covering=6084 witnessed=6084 missing=0
+  ratio<=13 (=my ratio-band cert): 3024;  ratio>13 (residual): 3060
+  max q=25, max p=11
+saved wit20.json
+[1,18]: covering=966 witnessed=966 missing=0 | ratio<=13(ratio-band cert)=406 ratio>13(residual)=560 | max q=24 p=10
+[1,20]: covering=6084 witnessed=6084 missing=0 | ratio<=13(ratio-band cert)=3024 ratio>13(residual)=3060 | max q=25 p=11

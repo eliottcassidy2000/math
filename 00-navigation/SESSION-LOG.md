@@ -119,6 +119,21 @@ CONCURRENCY (pulled 3x): death-star-S1 pure-cluster subsumption (my LEM-014 P=0 
 HANDOFFS: (1) anyone on the mid-band: read the lever map FIRST -- four dead ends are permanently marked with citations, the live directions are moment-method-across-levels + three-distance on snap points + the entanglement-native instruments; (2) monad-explorer: your parametric D3 ledger + my transfer lemma compose (a-priori inequality + sharp scans); the k=8,9,10 native instruments (B_4/tent) still need their own delta-transfer; (3) klein: your NEXT (b) is done at the extremizer level -- the uniform-over-shapes residue is the D3-partials bound. FILES: reflection (lever map); lrc_h1_mu_level_transfer_boxeph_S2.py (+.out); HYP-5722; LEM-014 (H1) update.
 
 ---
+## kind-pasteur-2026-07-09-S116 -- EXTENDED the pair-sum leg toward Vmax<=1001: general bounded-ratio certificate mreach_ge_of_pairsum_ratioBand (ANY Vmax, ratio<=13) + exhaustive native_decide base extended to Vmax<=20 (LRCCoveringVmax20.lean, 6084 sets, chunked). The reach to 1001 is via GENERAL certificates, not enumeration.
+
+Prompt (owner): extend the native_decide leg to Vmax<=1001 via THM-668 pair-sum events.
+
+KEY REALITY (mac-mini-S65cont handoff): brute native_decide enumeration CANNOT reach Vmax<=1001 (C(1001,13) astronomical; even [1,20]=6084 hits Lean's list-literal recursion limit). The exact-classification domain is Vmax<=~30 (q<=Q0~36); beyond that = mac-mini's C1/C2/C3 counting certificates. "your mreach_ge_of_pairsum_band is the exact consumer." So the reach to 1001 is via GENERAL certificates feeding my dispatch.
+
+BUILT #1 (LRCPairSumDispatch.lean, +mreach_ge_of_pairsum_ratioBand, sorry-free): the general bounded-ratio certificate = mac-mini's C0 window as a THM-668 pair-sum event. For v:Fin 13->Z with speeds in [Vmin,Vmax], 0<Vmin, ratio Vmax<=13*Vmin: the SINGLE pair-sum event t=1/(Vmin+Vmax) (p=1, q=Vmin+Vmax) clears every runner (residue = v_i itself since v_i<q; v_i in [q/14,13q/14] iff Vmax<=13Vmin) => Mreach>=1/14, for ANY Vmax. Routes kps-S28 spread13_lonely through my dispatch (spread13's witness 1/(Vmin+Vmax) IS the pair-sum event q=Vmin+Vmax). Covers the ENTIRE ratio<=13 slice of covering Vmax<=1001 NON-enumeratively.
+
+BUILT #2 (LRCCoveringVmax20.lean, sorry-free, builds 92s): extended the exhaustive native_decide base from Vmax<=18 (966, kps-S115) to Vmax<=20 (6084 primitive covering sets). Each discharged by a grid-free pair-sum band witness (max q=25, p=11) via mreach_ge_of_pairsum_band. coveringWitnesses_count(=6084)/_valid(genuine covering [1,20] sets)/_nodup/_band(one native_decide)/_lonely(Mreach>=1/14). CHUNKED (400/chunk) to beat the elaborator's list-literal recursion limit (a single 6084-deep :: literal overflows).
+
+CENSUS (tiling of covering Vmax<=1001): at [1,20] the 6084 split 3024 ratio<=13 (covered by mreach_ge_of_pairsum_ratioBand at ANY Vmax) + 3060 ratio>13 (the residual = mac-mini's C1/C2/C3, q<=36 exact + q>36 counting). So covering Vmax<=1001 = [ratio<=13: my general cert, any Vmax] + [ratio>13: mac-mini certs -> my dispatch] + [Vmax<=20: exhaustive base]. All witnessed grid-free.
+
+STATE: the pair-sum leg now has (a) the exact consumer mreach_ge_of_pairsum_band, (b) the general bounded-ratio certificate (any Vmax), (c) exhaustive base Vmax<=20. Remaining for full Vmax<=1001: mac-mini's C1/C2/C3 in Lean (ratio>13, feeding (a)). FILES: LRCPairSumDispatch.lean (+ratioBand), LRCCoveringVmax20.lean, lrc14_coveringVmax20_pairsum_kps_S116.py/.out, lrc14_emit_covering_lean_kps_S116.py.
+
+NEXT: Lean-ify mac-mini's C1 (gcd-exact ledger, covers 100% of covering [1,18]) as a general certificate producing (q,p) for mreach_ge_of_pairsum_band => the ratio>13 slice non-enumeratively; then covering Vmax<=1001 closes as C0+C1 feeding the dispatch, no enumeration.
 
 ## kind-pasteur-2026-07-09-S115 -- WIRED mreach_ge_of_pairsum_band into a native_decide leg over ALL 966 covering [1,18] 13-sets: LRCCovering966.lean (sorry-free) machine-proves every covering [1,18] set is lonely (Mreach>=1/14) via grid-free THM-668 pair-sum band witnesses
 
