@@ -96,3 +96,14 @@ The finite-`Vmax` glue's large-spread half is, by THM-664 + LEM-011, *exactly* t
 decorrelation read on the `Vmax`-grid — one `𝒲̂`-resonance sum, now in closed form. Combined with
 LEM-010's elementary closure and the density floor (THM-663), the covering case rests only on the
 bounded finite check `{Vmax ≤ 3^{12}, spread ≥ 6Vmax/7}` and Lean.
+
+## Independent cross-validation (mac-mini-2026-07-08-S59)
+
+Derived independently the same day by a different route — direct swap-of-integrals giving
+`𝒲̂(n) = (6/7)^z ∏_{n_i≠0} b(n_i)·Q(N)` with `b(m)=(1−e(m/7))/(2πim)`, `Q(N)=𝟙[N=0]·(6/7) +
+(e(−N/7)−1)/(2πiN)` — identical to the statement above (`b = −b₀` sign convention; `Q(N)=𝟙[σ=0]−c(σ)`).
+VERIFIED against **direct `T²`/`T³` Fourier integrals** (a check independent of klein's FFT+Parseval):
+`|formula − direct| ≤ 2e-5` at `k=3,4`, `𝒲̂(0)=(6/7)^k` exact, and the `7`-commensurate zeros
+`𝒲̂(7,0)=𝒲̂(1,6)=0` exact. Two independent derivations + two independent numerical checks agree.
+File: `04-computation/lrc14_What_closedform_macmini_S59.{py,out}`. (This file superseded a duplicate
+`LEM-011-uncovered-measure-fourier-closed-form.md` — same result, ceded to this one.)
