@@ -1,0 +1,32 @@
+==============================================================================
+Adversarial stress of C1∪C4 pair-sum certificates on mid-band covering sets
+==============================================================================
+
+-- cap V=120 --
+  restart 0: min #certified=0, maxLM=32, s_mid=6  S=[31, 33, 45, 48, 73, 76, 82, 86, 98, 102, 103, 104, 120]
+  restart 1: min #certified=1, maxLM=34, s_mid=4  S=[13, 35, 56, 57, 79, 82, 88, 93, 100, 107, 108, 115, 120]
+  restart 2: min #certified=1, maxLM=30, s_mid=8  S=[9, 14, 17, 43, 57, 62, 66, 67, 79, 81, 104, 113, 120]
+  restart 3: min #certified=0, maxLM=34, s_mid=5  S=[8, 9, 51, 57, 59, 68, 79, 88, 89, 91, 98, 119, 120]
+  restart 4: min #certified=0, maxLM=30, s_mid=6  S=[12, 33, 46, 47, 68, 73, 79, 81, 85, 87, 91, 112, 120]
+  restart 5: min #certified=0, maxLM=40, s_mid=5  S=[17, 28, 71, 76, 77, 89, 90, 91, 99, 107, 110, 113, 120]
+
+-- cap V=200 --
+  restart 0: min #certified=0, maxLM=54, s_mid=4  S=[9, 12, 64, 110, 123, 127, 146, 149, 155, 169, 182, 185, 200]
+  restart 1: min #certified=0, maxLM=54, s_mid=4  S=[8, 9, 41, 48, 78, 109, 137, 147, 157, 165, 168, 173, 200]
+  restart 2: min #certified=0, maxLM=52, s_mid=10  S=[31, 32, 61, 71, 81, 87, 89, 91, 97, 105, 132, 196, 200]
+  restart 3: min #certified=0, maxLM=60, s_mid=6  S=[43, 44, 47, 96, 112, 128, 135, 156, 162, 166, 178, 183, 200]
+  restart 4: min #certified=0, maxLM=58, s_mid=8  S=[62, 66, 69, 102, 109, 118, 120, 126, 130, 136, 159, 185, 200]
+  restart 5: min #certified=1, maxLM=58, s_mid=5  S=[28, 41, 44, 78, 126, 142, 144, 156, 161, 165, 178, 180, 200]
+
+-- cap V=280 --
+  restart 0: min #certified=0, maxLM=84, s_mid=6  S=[10, 46, 48, 59, 66, 148, 177, 181, 208, 213, 236, 261, 280]
+  restart 1: min #certified=0, maxLM=68, s_mid=9  S=[9, 24, 39, 62, 103, 125, 127, 132, 133, 147, 192, 204, 280]
+  restart 2: min #certified=0, maxLM=68, s_mid=9  S=[17, 35, 43, 63, 92, 101, 121, 141, 156, 176, 238, 245, 280]
+  restart 3: min #certified=0, maxLM=72, s_mid=7  S=[9, 31, 40, 61, 71, 99, 147, 151, 204, 208, 242, 259, 280]
+  restart 4: min #certified=0, maxLM=66, s_mid=8  S=[8, 44, 72, 83, 128, 145, 149, 174, 176, 182, 193, 202, 280]
+  restart 5: min #certified=0, maxLM=70, s_mid=9  S=[27, 51, 66, 79, 83, 112, 160, 162, 171, 192, 208, 241, 280]
+
+GLOBAL adversarial minimum: #certified=0, maxLM=30
+  worst instance: [12, 33, 46, 47, 68, 73, 79, 81, 85, 87, 91, 112, 120]
+  (certificates BROKEN iff #certified reaches 0 while the set is covering)
+DONE.

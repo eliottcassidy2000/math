@@ -1,0 +1,44 @@
+==============================================================================
+HYP-5731: mid-band x pair-sum anatomy + certificate stress (klein-S209)
+==============================================================================
+  [included 7-structured @91 speed set: [9, 16, 24, 33, 40, 47, 54, 62, 65, 70, 77, 84, 91], covering]
+
+instances: 76
+
+[Q1/Q2] strata by mid-band population s_mid (5 = '>=5'):
+ s_mid    n      min M  M>=1/14   witness-entangles-mb   base  avg #live rulers  min maxLM
+     0   11       2/11      YES                      -   0.65              70.3         50
+     1    5        1/5      YES                    0.4   0.65              69.4         62
+     2    3     46/217      YES                   0.33   0.65              68.0         48
+     3    5       5/28      YES                    0.2   0.65              68.2         32
+     4   12       5/27      YES                   0.25   0.65              70.1         32
+     5   40     19/110      YES                   0.85   0.65              71.9         24
+
+  witness-pair entanglement overall: 41/65 = 0.63 vs mean base rate 0.65
+
+[Q3] certificate stress over all 5972 rulers:
+  rulers exactly-live but NOT C1-certified: 5196
+     ... of which C4 (Hunter ledger) certifies: 513
+  instances with >=1 C1-certified ruler: 71/76
+  instances with >=1 C1-or-C4-certified ruler: 76/76
+  instances with NO certificate (but exact truth lonely): 0
+
+[detail] witness anatomy on named/hard instances:
+  S=[9, 16, 24, 33, 40, 47, 54, 62, 65, 70, 77, 84, 91]
+    V=91 mid-band=[9, 16, 24, 33, 40, 47, 54] (s=7)
+    M=3/13=0.23077 witness q=78 (q/V=0.86) p=22 pairs=[(16, 62), (24, 54)] r(q)=2
+    top-supply rulers: q=117 LM=38 c1=n/c4Y, q=156 LM=38 c1=n/c4Y, q=138 LM=28 c1=n
+  S=[8, 9, 10, 12, 20, 39, 47, 63, 89, 122, 165, 168, 240]
+    V=240 mid-band=[20, 39, 47, 63, 89, 122] (s=6)
+    M=57/287=0.19861 witness q=287 (q/V=1.20) p=11 pairs=[(47, 240), (122, 165)] r(q)=2
+    top-supply rulers: q=408 LM=76 c1=n, q=362 LM=64 c1=n, q=405 LM=64 c1=n
+  S=[8, 9, 10, 12, 27, 35, 48, 77, 91, 104, 127, 132, 140]
+    V=140 mid-band=[12, 27, 35, 48, 77] (s=5)
+    M=11/59=0.18644 witness q=118 (q/V=0.84) p=56 pairs=[(27, 91)] r(q)=1
+    top-supply rulers: q=223 LM=44 c1=n, q=272 LM=44 c1=n, q=168 LM=42 c1=n
+  S=[8, 9, 10, 12, 77, 91, 130, 156, 175, 195, 196, 294, 300]
+    V=300 mid-band=[77, 91, 130, 156, 175] (s=5)
+    M=14/53=0.26415 witness q=371 (q/V=1.24) p=18 pairs=[(77, 294), (175, 196)] r(q)=2
+    top-supply rulers: q=594 LM=98 c1=n, q=489 LM=94 c1=n, q=391 LM=86 c1=n
+
+DONE.

@@ -1,0 +1,29 @@
+==============================================================================
+UNIVERSAL SUPRA-VMAX LIVENESS test (klein-S209)
+==============================================================================
+
+instances: 40 (4 adversarial/hard + census)
+[1] PAIR-SUM q > Vmax:   live 1282/1282  (100.00%)
+[2] ARBITRARY q in (Vmax, 2Vmax] (sampled): live 1600/1600  (100.00%)
+[3] minimum live density observed: 0.0101 at q=200 (pair-sum) of S=[10, 11, 12, 13, 28, 34, 54, 70, 100, 108, 110, 152, 160]
+    min over instances of (min over pair-sum q of LM): 2
+[4] sub-Vmax sanity: dead rulers 91/600 sampled (divisibility kills exist below Vmax — the law needs q > Vmax)
+
+If [1] and [2] are 100%: liveness is a property of the MODULUS RANGE
+(q > Vmax), not of the pair-sum structure — pair-sums matter for
+ATTAINMENT (THM-668 Part 1), while the certificate supply is universal.
+The a-priori target then collapses to: ONE modulus class, e.g. prove
+LIVE(S, q) for q = a canonical choice (2Vmax? Vmax+v_min? a prime in
+range?) for every covering 13-set.
+DONE.
+
+[5] EXHAUSTIVE small-Vmax check: primitive covering 13-subsets of [1,18]: 966
+    supra-Vmax moduli tested: 16947; DEAD: 6148 (on 917 sets)
+      dead: q=15 S=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14]
+      dead: q=16 S=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14]
+      dead: q=17 S=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14]
+      dead: q=18 S=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14]
+      dead: q=19 S=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14]
+      dead: q=20 S=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14]
+      dead: q=21 S=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14]
+      dead: q=28 S=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14]

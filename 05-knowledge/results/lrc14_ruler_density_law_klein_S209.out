@@ -1,0 +1,44 @@
+==============================================================================
+The live-multiplier density law on pair-sum rulers (klein-S209)
+==============================================================================
+
+adversarial-worst V=120 (0 certs, maxLM=30): V=120, supra-Vmax rulers analyzed: 50
+  live density: mean 0.1102 vs iid-class baseline mean 0.1605; |d| mean 0.0514
+  corr(deficit, low-height resonance score) = -0.101
+  3 most-deficient rulers:  q=170 c=12 dens=0.036 base=0.157 R3=24.5; q=141 c=12 dens=0.057 base=0.157 R3=23.0; q=133 c=12 dens=0.061 base=0.157 R3=25.0
+  3 most-enriched rulers:   q=154 c=12 dens=0.170 base=0.157 R3=19.5; q=134 c=12 dens=0.165 base=0.157 R3=18.5; q=160 c=11 dens=0.189 base=0.183 R3=23.0
+  max LM = 30; ALL rulers live: True
+
+adversarial V=120 (0 certs): V=120, supra-Vmax rulers analyzed: 57
+  live density: mean 0.1138 vs iid-class baseline mean 0.1604; |d| mean 0.0476
+  corr(deficit, low-height resonance score) = -0.152
+  3 most-deficient rulers:  q=206 c=11 dens=0.078 base=0.183 R3=13.5; q=146 c=12 dens=0.055 base=0.157 R3=17.5; q=240 c=13 dens=0.042 base=0.135 R3=10.5
+  3 most-enriched rulers:   q=159 c=12 dens=0.177 base=0.157 R3=10.0; q=148 c=12 dens=0.163 base=0.157 R3=15.0; q=189 c=12 dens=0.160 base=0.157 R3=11.5
+  max LM = 32; ALL rulers live: True
+
+adversarial V=200 (0 certs): V=200, supra-Vmax rulers analyzed: 59
+  live density: mean 0.1472 vs iid-class baseline mean 0.1565; |d| mean 0.0251
+  corr(deficit, low-height resonance score) = -0.350
+  3 most-deficient rulers:  q=204 c=13 dens=0.030 base=0.135 R3=7.0; q=318 c=12 dens=0.101 base=0.157 R3=10.0; q=400 c=13 dens=0.080 base=0.135 R3=4.0
+  3 most-enriched rulers:   q=268 c=12 dens=0.217 base=0.157 R3=5.0; q=246 c=12 dens=0.212 base=0.157 R3=8.0; q=269 c=12 dens=0.194 base=0.157 R3=4.0
+  max LM = 58; ALL rulers live: True
+
+7-structured @91 (hard cluster): V=91, supra-Vmax rulers analyzed: 39
+  live density: mean 0.1544 vs iid-class baseline mean 0.1655; |d| mean 0.0365
+  corr(deficit, low-height resonance score) = +0.008
+  3 most-deficient rulers:  q=124 c=9 dens=0.146 base=0.250 R3=23.5; q=105 c=12 dens=0.077 base=0.157 R3=33.5; q=140 c=13 dens=0.058 base=0.135 R3=43.0
+  3 most-enriched rulers:   q=117 c=10 dens=0.328 base=0.214 R3=26.5; q=156 c=12 dens=0.245 base=0.157 R3=26.0; q=112 c=12 dens=0.216 base=0.157 R3=26.0
+  max LM = 38; ALL rulers live: True
+
+mid-band-free composite V=280 (S208): V=280, supra-Vmax rulers analyzed: 38
+  live density: mean 0.1139 vs iid-class baseline mean 0.1558; |d| mean 0.0484
+  corr(deficit, low-height resonance score) = -0.130
+  3 most-deficient rulers:  q=282 c=12 dens=0.057 base=0.157 R3=24.0; q=460 c=12 dens=0.061 base=0.157 R3=17.0; q=292 c=12 dens=0.062 base=0.157 R3=17.5
+  3 most-enriched rulers:   q=480 c=11 dens=0.230 base=0.183 R3=15.0; q=530 c=12 dens=0.189 base=0.157 R3=10.5; q=288 c=12 dens=0.181 base=0.157 R3=13.0
+  max LM = 110; ALL rulers live: True
+
+Interpretation: if corr < 0 consistently (more low-height resonances mod q
+=> lower live density) and density ≈ (6/7)^c everywhere with small |d|,
+then the C5 Fourier-ledger certificate + resonance-budget pigeonhole over
+rulers is the right a-priori shape (m≠0 relations pin ~one ruler each).
+DONE.
