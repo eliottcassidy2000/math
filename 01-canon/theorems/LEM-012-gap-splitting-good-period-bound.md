@@ -111,15 +111,19 @@ routes** — LRC(14)'s covering case is closed modulo the two explicit constants
 VACUOUS for the near-AP branch — MISTAKE-127 — but is the RIGHT tool here: low longest-AP ⟹ `c` small
 ⟹ `c < ρ*`. The two branches use OPPOSITE tools, cf. the dichotomy below.)
 
-> **⚠ CORRECTION (klein-S199, MISTAKE-128).** The clean a-priori form `#arcs/spread < D3(E)` is TOO
-> WEAK — it FAILS at **resonant `Vmax` (7 | Vmax)**, where the near-resonance count spikes `#arcs`.
-> Exact: `E={0,7,14,21,26,29,37,44,51,58,67,75,82}`, `Vmax=91=7·13`, hard, longest-AP=4 ⟹ `#arcs=72`,
-> `spread=82`, `c=0.878`, but `D3(E)=0.629` (the finite `D3(E)`, ≪ the limit `D3_∞^{(4)}=0.84`), so
-> `c > D3(E)`. **Route (c) still holds via the ACTUAL `ρ*=μ`** (`c=0.878 < μ=0.914`; verified over 4691
-> hard low-L resonant-`Vmax` sets, `#arcs < μ·Vmax` always, min margin `μ−c=0.081`). So the a-priori
-> closure needs an a-priori **`μ ≥ c`** (a decorrelation lower bound `μ ≳ 0.9`, worst at `7|Vmax`), NOT
-> the D3 proxy. Route (c) inherits a (thin, `~0.08`) μ-lower-bound difficulty; it is not a clean escape
-> from decorrelation. Existence is unaffected (LEM-010(ii) Dirichlet is the unconditional fallback).
+> **⚠ CORRECTION (klein-S199, MISTAKE-128).** The a-priori form `#arcs/spread < D3(E)` is FALSE — and
+> it fails at **ALL spreads by dilation**, not just in a finite-check window. `c=#arcs/spread`, `D3`,
+> `μ` are all **dilation-invariant**. Counterexample: `E={0,7,14,21,26,29,37,44,51,58,67,75,82}` (hard,
+> longest-AP=4, four co-offsets `≡0 mod 7`) has `#arcs=72` (grid-stable), spread 82 ⟹ `c=0.878`, but
+> `D3(E)=0.629`, so `c/D3=1.40`. Dilating (`t·E`, `#arcs=72t`, spread `82t`) keeps `c/D3=1.40` at spread
+> `≥200` — so the "spread ≥200 ⟹ c<D3" claim (mac-mini-S62) is contradicted; its "c/D3 decreasing in
+> spread" was over random sets, missing this 7-structured dilated family. CAUSE: co-offset differences
+> `≡0 mod 7` (step-7 sub-AP) resonate with the `1/7` threshold, spiking `#arcs`, while `D3(E)` (a moment
+> LOWER bound) stays ≪ the true `μ`. **Route (c) still holds via the ACTUAL `ρ*=μ`** (`c=0.878 < μ=0.915`;
+> over 4691 hard low-L sets `c<μ` always, min margin 0.081). So the a-priori closure needs `μ ≥ c` (a
+> decorrelation lower bound `μ≳0.9`), NOT the D3 proxy — route (c) inherits a μ-lower-bound difficulty and
+> is NOT the clean D3 closure it appeared. Existence is unaffected (LEM-010(ii) Dirichlet is the
+> unconditional fallback; LEM-012 covers structured `L≥k−6`).
 
 ## Extension to L = k−6 (m=6): the ×7 collapse (klein-S197)
 
