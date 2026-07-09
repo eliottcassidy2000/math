@@ -1,3 +1,25 @@
+## kind-pasteur-2026-07-09-S112 -- FORMALIZED THE CONTINUUM REFORMULATION BRIDGE ON THE SMOOTH SURROGATE (LRCSmoothBridge.lean, 7 thms sorry-free) -- measure->point desingularization + drift-free observer; CONVERGES with klein-S207 (drift = discretisation artefact, equidistribution = sole residue)
+
+Prompt (owner): formalize the continuum reformulation bridge on the smooth surrogate.
+
+BUILT (LRCSmoothBridge.lean, 7 theorems, sorry-free, builds 8478 jobs):
+- exists_pos_of_integral_pos: W>=0 and integral_0^1 W>0 => exists x, W(x)>0. THE measure->point core (desingularization): a positive MEASURE hands a positive POINT directly, NO grid -- so the grid-invisible pinches (kps-S107, LRCPinch, measure-zero nodes) are bypassed. This is the S107 prescription made rigorous (smooth W's 1/m^2 integral sees THROUGH the pinches; sharp indicator's 1/m jump does not).
+- exists_gap_gt_of_smoothW_pos: W=sum(gap_i-1/7)_+ >0 => exists i, gap_i>1/7 (a genuine wide gap = continuum good period).
+- nearInt_ge_of_mem: c<=y<=1-c => nearInt y>=c (central band helper).
+- observer_of_confined: cluster q_i in arc [a,a+w], w<=1-2c => gap-midpoint phi=a+(1+w)/2 has nearInt(phi-q_i)>=c for all i. THE DRIFT-FREE observer (good period => lonely phase), EXACT in the Vmax->inf continuum (finite-Vmax drift e*phi/Vmax vanished). Mac-mini refuted the FINITE drift; at the continuum the observer is clean.
+- observer_at_threshold: c=1/14 specialisation -- arc<=6/7 (gap>=1/7) => phi clears every runner by >=1/14, the EXACT LRC(14) margin.
+- mreach_ge_of_smooth_surrogate / mreach_ge_of_density_floor: compose with Mreach_ge_of_lonely_instant (kps-S99b) => Mreach>=1/14, packaged from the density-floor constants (0<m_P<=integral W).
+
+THE INSIGHT (reflection the-continuum-bridge-is-where-grid-and-drift-desingularize-together-kps-S112): the two fleet obstructions -- (1) grid-invisible pinches (MISTAKE-130: can't sample sharp G* on a grid) and (2) drift (mac-mini hembed refutation: good period doesn't certify loneliness at finite Vmax) -- are the SAME wall from two sides: both are finite-Vmax artifacts (grid discreteness + finite ruler). The continuum Vmax->inf is the UNIQUE limit removing BOTH: (1) dissolves because you go measure->point (no sampling); (2) dissolves because drift e*phi/Vmax->0. Residue after the 4 lemmas = the KRONECKER REALIZATION (cluster {e_i tau} confinable to a short arc + phi lifts to real tau) = simultaneous Diophantine approx, NOT analytic/grid -- same residue the covering route (klein-S206) lives on.
+
+CONVERGENCE (klein-S207, same burst): RULER POINTS ARE NEVER LONELY -- observer v=Vmax on origin at tau=j/Vmax => minReach=0 (structural cause of mac-mini's counterexample), forces fast phase in [1/14,13/14] => drift>=e_i/(14 Vmax) UNAVOIDABLE at j/Vmax, but "1/7 bridge is DRIFT-FREE at real tau (criterion C exact); drift is the j/Vmax DISCRETISATION artefact; remaining node = equidistribution." That IS my observer_of_confined (drift-free real-tau 1/7 observer) + exists_pos_of_integral_pos (measure->point for the equidistribution node). Two independent derivations converge on the SAME split: drift=finite-ruler artifact (gone at real tau); equidistribution=sole residue.
+
+FLEET NOTE: mac-mini RETRACTED LRCTrivialQ.lean (duplicated canonical general-n LonelyRunner.sieve_one_div / counterexample_needs_all_divisors / sieve_frac). The non-covering sieve = that canonical lemma; tight-AP-non-covering math unchanged (THM-523 + klein-S206). My earlier session logs referencing "mac-mini LRCTrivialQ" should read LonelyRunner.sieve_one_div.
+
+STATE: continuum bridge on the smooth surrogate FORMALIZED (analytic measure->point + geometric drift-free observer both discharged); sole residue = Kronecker/equidistribution realization (number-theoretic, shared with covering route). FILES: LRCSmoothBridge.lean; reflection.
+
+NEXT: the Kronecker realization (cluster {e_i tau} confinable + phi lifts) = the equidistribution node klein-S207/kps-S108 both name; formalize the smooth-W grid-average -> integral (|R_grid|<=TV(W')pi^2/(3V^2), kps-S108) to certify integral W>0 a-priori and feed exists_pos_of_integral_pos.
+
 ## klein-2026-07-09-S207 -- RULER POINTS ARE NEVER LONELY: the structural answer to mac-mini-S64's 1/7-bridge question (no repair of THM-663 implied); the drift is UNAVOIDABLE and S205's 14x floor is NECESSARY (LRCRulerPoints.lean, sorry-free kernel-pure)
 
 Prompt (owner): synthesize and extend incoming convergence; keep pushing the critical LRC(14) proof + formalization.
