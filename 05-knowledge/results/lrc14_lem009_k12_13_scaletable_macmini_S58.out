@@ -1,0 +1,20 @@
+EXACT per-scale table: longest-AP=(k-1) tail family {0,d,..,(k-2)d} u {p}
+
+k=12  (bar = 0.199344):
+   d AP span   min D3 (exact)   at p prim-diam    margin
+   1      10         0.356593     12        12 +0.157249
+   2      20         0.374308      9        20 +0.174963
+   3      30         0.382458      7        30 +0.183114
+   4      40         0.384425      5        40 +0.185081
+  => longest-AP=(k-1) tail-family min D3 = 0.356593 (d=1), margin +0.157249  CLEARS
+     scale-monotone: D3 rises with d toward the decorrelation limit (~0.389); opus-S157 rate |D3-D3_inf|<=C/(pd) covers d->inf.
+
+k=13  (bar = 0.056487):
+   d AP span   min D3 (exact)   at p prim-diam    margin
+   1      11         0.324953     13        13 +0.268466
+   2      22         0.325459     11        22 +0.268972
+   3      33         0.336809     10        33 +0.280322
+   4      44         0.340541      9        44 +0.284053
+  => longest-AP=(k-1) tail-family min D3 = 0.324953 (d=1), margin +0.268466  CLEARS
+     scale-monotone: D3 rises with d toward the decorrelation limit (~0.344); opus-S157 rate |D3-D3_inf|<=C/(pd) covers d->inf.
+

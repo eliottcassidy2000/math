@@ -1,0 +1,41 @@
+======================================================================
+(E) BROAD large-diameter search: does any tail shape undercut compact min?
+======================================================================
+
+  k=12: scanned 20224 tail shapes; min float-D3 = 0.35659 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)
+    compact exact min = 0.355876;  bar = 0.199344
+    tail min >= compact min (tol 2e-3): YES -- tail never undercuts compact min
+    tail min vs bar: margin +0.15725  CLEARS
+
+  k=13: scanned 20246 tail shapes; min float-D3 = 0.31392 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+    compact exact min = 0.308844;  bar = 0.056487
+    tail min >= compact min (tol 2e-3): YES -- tail never undercuts compact min
+    tail min vs bar: margin +0.25743  CLEARS
+
+======================================================================
+(F) longest-AP monotonicity: shorter longest-AP => higher D3 (spot-check)
+======================================================================
+
+  k=12:  min float-D3 grouped by longest-AP length L (large-diam shapes)
+    longest-AP L= 2: min D3 = 0.70618
+    longest-AP L= 3: min D3 = 0.60046
+    longest-AP L= 4: min D3 = 0.53150
+    longest-AP L= 5: min D3 = 0.50185
+    longest-AP L= 6: min D3 = 0.49581
+    longest-AP L= 7: min D3 = 0.47489
+    longest-AP L= 8: min D3 = 0.44417
+    longest-AP L= 9: min D3 = 0.39291
+    => lower L (less additive structure) gives HIGHER min D3; the L=k-1 family is the tail minimizer.
+
+  k=13:  min float-D3 grouped by longest-AP length L (large-diam shapes)
+    longest-AP L= 2: min D3 = 0.67255
+    longest-AP L= 3: min D3 = 0.53596
+    longest-AP L= 4: min D3 = 0.43191
+    longest-AP L= 5: min D3 = 0.43015
+    longest-AP L= 6: min D3 = 0.40821
+    longest-AP L= 7: min D3 = 0.39661
+    longest-AP L= 8: min D3 = 0.36711
+    longest-AP L= 9: min D3 = 0.35353
+    longest-AP L=10: min D3 = 0.37354
+    longest-AP L=11: min D3 = 0.33833
+    => lower L (less additive structure) gives HIGHER min D3; the L=k-1 family is the tail minimizer.

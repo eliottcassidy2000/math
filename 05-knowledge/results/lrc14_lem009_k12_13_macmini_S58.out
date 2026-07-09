@@ -1,0 +1,73 @@
+======================================================================
+PART A -- exact compact-min D3, k=12,13 (reconfirm THM-661)
+======================================================================
+
+  k=12: 364 primitive shapes, prim-diam <= 14
+    exact min D3 = 0.355876  at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14)
+    bar          = 0.199344
+    margin       = +0.156532   CLEARS
+
+  k=13: 455 primitive shapes, prim-diam <= 15
+    exact min D3 = 0.308844  at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+    bar          = 0.056487
+    margin       = +0.252357   CLEARS
+
+======================================================================
+PART B -- block baseline & block+outlier B_D = {0..k-2} u {D} (exact)
+======================================================================
+
+  k=12  (bar=0.199344):
+    D3(full 12-block {0..11}) = 0.358375   margin +0.159030
+    block+outlier B_D = {0..10} u {D}  (longest-AP = k-1):
+      D= 11: D3=0.358375  E[W]=0.14129  margin +0.159030  ok
+      D= 12: D3=0.356593  E[W]=0.13704  margin +0.157249  ok
+      D= 14: D3=0.380522  E[W]=0.13377  margin +0.181178  ok
+      D= 17: D3=0.390812  E[W]=0.13223  margin +0.191468  ok
+      D= 15: D3=0.384423  E[W]=0.13231  margin +0.185078  ok
+      D= 20: D3=0.401612  E[W]=0.13464  margin +0.202268  ok
+      D= 25: D3=0.389909  E[W]=0.13575  margin +0.190564  ok
+      D= 30: D3=0.386304  E[W]=0.13465  margin +0.186959  ok
+      D= 40: D3=0.386835  E[W]=0.13488  margin +0.187490  ok
+      D= 50: D3=0.385974  E[W]=0.13509  margin +0.186630  ok
+
+  k=13  (bar=0.056487):
+    D3(full 13-block {0..12}) = 0.313920   margin +0.257433
+    block+outlier B_D = {0..11} u {D}  (longest-AP = k-1):
+      D= 12: D3=0.313920  E[W]=0.12662  margin +0.257433  ok
+      D= 13: D3=0.324953  E[W]=0.12509  margin +0.268466  ok
+      D= 15: D3=0.332535  E[W]=0.11982  margin +0.276048  ok
+      D= 18: D3=0.339022  E[W]=0.11690  margin +0.282535  ok
+      D= 15: D3=0.332535  E[W]=0.11982  margin +0.276048  ok
+      D= 20: D3=0.350337  E[W]=0.11926  margin +0.293849  ok
+      D= 25: D3=0.348776  E[W]=0.12093  margin +0.292289  ok
+      D= 30: D3=0.344635  E[W]=0.12073  margin +0.288147  ok
+      D= 40: D3=0.344256  E[W]=0.12092  margin +0.287769  ok
+      D= 50: D3=0.341773  E[W]=0.12067  margin +0.285285  ok
+
+======================================================================
+PART C -- extend compact search to prim-diam <= D0 (float pre-filter + exact)
+======================================================================
+
+  k=12: 31824 primitive shapes prim-diam<= 18; 25 within 0.03 of min (float)
+    EXACT compact min D3 = 0.355876 at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14)
+    bar = 0.199344   margin +0.156532   CLEARS
+
+  k=13: 18564 primitive shapes prim-diam<= 18; 57 within 0.03 of min (float)
+    EXACT compact min D3 = 0.308844 at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+    bar = 0.056487   margin +0.252357   CLEARS
+
+======================================================================
+PART D -- longest-AP=(k-1) tail family {0,d,..,(k-2)d} u {p}  (exact D3 min)
+======================================================================
+
+  k=12 (bar=0.199344): longest-AP=(k-1) tail family
+    exact min D3 = 0.356593 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)
+    margin +0.157249   CLEARS
+
+  k=13 (bar=0.056487): longest-AP=(k-1) tail family
+    exact min D3 = 0.313920 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+    margin +0.257433   CLEARS
+
+  decorrelation LIMIT of block+outlier (exact D3 at large D):
+    k=12: D3(B_D) at D=80,160,320 = 0.388749,0.389107,0.388960; limit~0.388812; |D3-L|*D <= 0.047 (Koksma-Hlawka O(1/D))
+    k=13: D3(B_D) at D=80,160,320 = 0.344019,0.344593,0.344457; limit~0.344320; |D3-L|*D <= 0.044 (Koksma-Hlawka O(1/D))
