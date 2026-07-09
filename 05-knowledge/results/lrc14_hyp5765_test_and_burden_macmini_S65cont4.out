@@ -1,0 +1,18 @@
+====================================================================================================
+PART 1 -- HYP-5765 STRESS TEST: hunt covering sets achieving (a) AND (b)
+====================================================================================================
+cap 150: min open[(a)+(b)] = 3  S = [7, 15, 27, 28, 35, 36, 37, 44, 48, 84, 92, 100, 104]
+cap 250: min open[(a)+(b)] = 5  S = [4, 17, 23, 27, 37, 47, 56, 104, 118, 120, 157, 176, 213]
+cap 400: min open[(a)+(b)] = 7  S = [29, 36, 41, 55, 71, 73, 76, 120, 132, 143, 168, 179, 187]
+HYP-5765 as stated: survived this hunt (no (a)&(b) achiever found)
+
+====================================================================================================
+PART 2 -- THM-675 descent-burden verification
+====================================================================================================
+200k random 7-sets: #distinct pairwise sums >= 11 violations: 0; (= 11 <=> AP) violations: 0
+composite q in (196, 20000]: proper-divisor>14 violations: 0
+
+Burden on covering sets (cap 250): distinct half-sum moduli h > 14 from the majority parity
+forced half-sum moduli: min 19, max 62 over 300 covering sets (theorem floor: 11 when majority class has 7 members and sums > 28)
+
+Done.
