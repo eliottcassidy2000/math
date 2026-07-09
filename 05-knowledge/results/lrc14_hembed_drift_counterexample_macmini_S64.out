@@ -1,0 +1,24 @@
+slow-fast identity  nearInt(v*tau) == nearInt(phi*v/Vmax - c): True
+
+E = [0, 7, 14, 21, 26, 29, 37, 44, 51, 58, 67, 75, 82]
+Vmax = 91,  binding v_i = Vmax - e_i,  #good periods (7*maxCircGap>Vmax) = 86
+
+   j  good?    exact max_phi minReach   >= 1/14 ?
+   2   True                      1/11        True
+   5   True                      3/43       False
+  10   True                      2/31       False
+  11   True                      1/23       False
+
+1/14 = 1/14 = 0.071429
+
+GOOD PERIODS THAT ARE **NOT** LONELY AT ANY phi:
+  j=5: 7*maxCircGap=126 > Vmax=91 (good), yet max_phi minReach = 3/43 < 1/14
+  j=10: 7*maxCircGap=105 > Vmax=91 (good), yet max_phi minReach = 2/31 < 1/14
+  j=11: 7*maxCircGap=98 > Vmax=91 (good), yet max_phi minReach = 1/23 < 1/14
+
+=> 'good period at j  ==>  exists phi with minReach((j+phi)/Vmax) >= 1/14'  is FALSE.
+   hembed therefore CANNOT be discharged by embedding at the antecedent's own (j, phi):
+   the drift e_i*phi/Vmax must be absorbed, and a 1/7 teeth-gap does not permit it.
+   (hembed's IMPLICATION may still hold -- its conclusion is exists tau, i.e. LRC14(v) itself,
+    witnessed here at j=25 with minReach=0.2306 -- but that is circular, not a proof.)
+
