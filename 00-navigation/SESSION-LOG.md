@@ -16,6 +16,21 @@ In the route-breaking mindset that killed route (c) + the arc-count, I stress-te
 FILES: 04-computation/lrc14_smooth_route_and_LEM012_smallV_klein_S201.py (+.out); CASE-good-period-smallV-no-good-period.md (OPEN, for opus); MISTAKE-129; reflection existence-is-a-max-not-a-mean-the-small-ruler-corner-klein-S201.md; LEM-012 + LRC14-STATUS updated.
 
 NEXT: opus to ack/re-scope S170. The covering-case formalization must route small-Vmax (<=1001) to the exact M(S) check EXPLICITLY and state LEM-012/013 with V>=Q+1; the near-AP capstone is the exact-check + LEM-012(V>=Q+1), NOT the smooth mean.
+## kind-pasteur-2026-07-09-S98 -- HONEST REFINEMENT of S97: the absolute resonant bound is LARGE-SPREAD-ONLY (not uniform); + 7-structured = scaled relation lattice L(f) (explains mac-mini-S64 mod-7 via kissing)
+
+Prompt (owner): keep working the critical remaining parts of LRC 14.
+
+CONTEXT: klein-S201 -- opus-S170 smooth-mean route REFUTED for extremal tight AP {0..12}@V=13 (perfectly equidistributed, NO good period, routes to density floor); LEM-012 needs V>=Q+1 (MISTAKE-129). Consistent with my E_grid: at that AP@V=13, E_grid[W]=0 => |R|=lead EXACTLY (boundary = density-floor case, NOT good-period regime). My |R|<lead route is for the DISSOCIATED branch only.
+
+TESTED (sharp a-priori question): is the ABSOLUTE resonant sum Sum_{Vmax|n.e}|What(n)| < (6/7)^k for dissociated? If yes => |R|<lead with NO cancellation (triangle ineq). RESULT (lrc14_abs_{resonant_bound,threshold2}_kps_S98): NOT uniform. absRes/lead < 1 for LARGE spread (~0.6 at s>=150) but EXCEEDS 1 at small/mid spread (1.55 at s=50, 1.12 at s=70) while signed |R|~0.1. So even the RESONANT sum carries essential cancellation at small spread -- my S97 "|R|<=c*kissing<=0.61 uniformly" was TOO OPTIMISTIC (0.61 was one specific V). CORRECTED the S97 reflection: the Poisson-summation identity (R=Sum_{L_V}What) and kissing correlation (corr(|R|,kissing)=0.998) STAND; but the NO-CANCELLATION certificate closes only large spread; small/mid spread reverts to LEM-013 exhaustion (SAME split every route hits). The absolute/kissing route does NOT beat arc-count/LEM-013.
+
+POSITIVE (7-structured in the lattice picture, connects mac-mini-S64): a 7-structured cluster e=7f (all e_i=0 mod7) has L(e)=L(f) -- relation lattice of a cluster 7x SMALLER/denser => higher kissing => larger |R| (0.69 vs 0.10 generic). The gcd(7,Vmax) split IS the modulus change: Vmax|7(n.f) is Vmax|n.f (gcd=1) vs (Vmax/7)|n.f (7|Vmax, 7x more resonances) = mac-mini-S64's m/7 grid mechanism.
+
+HONEST STATUS (dissociated existence): [large spread: absolute/arc-count/moments -- a-priori] + [small/mid spread s in [24,~150]: cancellation essential (Mertens-hard), VERIFIED by LEM-013 exhaustion(s<=23)+adversarial(margin>=1.05)+margin-growth]. Closed-form small-spread a-priori remains open for ALL routes; existence VERIFIED not closed-form-proved.
+
+FILES: lrc14_{abs_resonant_bound,abs_threshold2}_kps_S98.py(+.out); S97 reflection corrected (2 sections).
+
+NEXT: small-spread cancellation is the shared Mertens wall; options = extend LEM-013 exhaustion (~s<=25), genuine equidistribution bound, or accept finite check. Lean assembly = pragmatic path to 100%.
 
 ## kind-pasteur-2026-07-09-S97 -- CRITICAL PATH + NOVEL CONNECTION: the E_grid residual |R| IS a KISSING NUMBER (Poisson summation over the grid-relation lattice = Cohn-Elkies, mac-mini-S24/S25); corr(|R|,kissing)=0.998, AP extremal => a-priori route. + PROVED smooth-route decay is alpha=2
 

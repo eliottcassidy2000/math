@@ -66,12 +66,42 @@ The open item `|R| < (6/7)^k` (HYP-5567) becomes a **kissing-number bound**:
 This is a genuine Cohn–Elkies positivity certificate for good-period existence: bound the Poisson
 tail by the lattice kissing number, extremal at the maximal-kissing lattice (AP). It **replaces**
 opus-S169's open `#arcs` bound with a bound on the *same additive-energy invariant* the density floor
-already uses (THM-660: `Var(W) ∝ R2`), and it is Mertens-safe by construction (resonant modes only).
+already uses (THM-660: `Var(W) ∝ R2`).
+
+> **CORRECTION (kps-S98) — step 1's triangle inequality is NOT uniformly sufficient.** The absolute
+> resonant sum `Σ_{n∈L_V}|𝒲̂(n)|` is `< (6/7)^k` only for **large spread** (measured `≈ 0.6` at
+> `s ≳ 150`), but **exceeds 1 at small/mid spread** (`≈ 1.5` at `s=50`, `1.1` at `s=70`) while the
+> *signed* `|R|` stays `≈ 0.1`. So even the resonant sum carries essential cancellation at small
+> spread — the "Mertens-safe" claim holds only asymptotically, not uniformly. What survives: the
+> **Poisson-summation identity** (`R = Σ_{L_V}𝒲̂`) and the **kissing correlation** (`corr(|R|,
+> kissing)=0.998`) are exact; the *no-cancellation* certificate closes only the large-spread half,
+> and small/mid spread reverts to LEM-013 exhaustion (the same split every route hits). The kissing
+> number governs the *magnitude* of `|R|`, but a uniform a-priori bound still needs the small-spread
+> cancellation — Mertens-hard, or finite-checked. `lrc14_abs_{resonant_bound,threshold2}_kps_S98`.
 
 **Remaining rigor** (the honest gap): making step 2's constant `c` explicit and summing the shells,
 and turning mac-mini-S25's "AP maximizes kissing" (proved for the exact lattice `L(e)`) into the
 grid-lattice statement `kissing(L_V(e)) ≤ kissing(L_V(AP))` uniformly in `Vmax`. Both are finite,
 structured, cancellation-free — Cohn–Elkies LP shape, not an analytic wall.
+
+## Why the 7-structured case is hard, in the lattice picture (kps-S98, connecting mac-mini-S64)
+
+The kissing picture explains mac-mini-S64's mod-7 finding. A **7-structured** cluster has all
+`e_i ≡ 0 mod 7`, i.e. `e = 7f` for a smaller cluster `f` (spread `s/7`). Then
+
+> `n·e = 7(n·f)`, so **`L(e) = L(f)`** (the exact relation lattice of `e` is that of the *scaled-down*
+> `f`) and the grid lattice `L_V(e) = {n : Vmax ∣ 7(n·f)}`.
+
+Two consequences, both matching mac-mini-S64:
+1. `f` has spread `s/7` — a **denser** cluster ⟹ **more low-height relations** ⟹ larger kissing number
+   ⟹ larger `|R|` (kps-S96 measured `|R|/lead ≤ 0.69` for 7-structured vs `≤ 0.10` generic). The
+   7-structured cluster inherits the resonance density of a cluster `7×` smaller.
+2. The **`gcd(7, Vmax)` split** is exactly the change of modulus: `Vmax ∣ 7(n·f)` is `Vmax ∣ n·f` when
+   `gcd(7,Vmax)=1`, but `(Vmax/7) ∣ n·f` when `7 ∣ Vmax` — a `7×` smaller modulus, `7×` more
+   resonances. This is mac-mini-S64's "`7∣Vmax ⟹ m/7` grid point is good / `gcd=1 ⟹` grid
+   decorrelates" seen as a Poisson-lattice modulus change. The 7-structured hardness is the relation
+   lattice of a smaller cluster read on a `7`-refinable grid — larger kissing, larger `|R|`, but still
+   `< lead` (existence holds; the a-priori proof is the same small-spread cancellation wall).
 
 ## Secondary: the smooth-route decay is provably α = 2 (rigorizing opus-S170)
 

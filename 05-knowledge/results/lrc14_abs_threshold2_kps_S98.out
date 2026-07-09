@@ -1,0 +1,9 @@
+precomputed 356016 nonzero-What terms (support<=3,|n|<=6).
+    s    V max absRes/lead |R|signed at that E absRes<1?
+   50   58          1.5471              0.0902        NO
+   70   81          1.1205              0.0202        NO
+   90  105          0.9216              0.0739       YES
+  120  140          1.0150              0.0794        NO
+  160  186          0.5926              0.1258       YES
+  220  256          0.5811              0.0621       YES
+=> S* = crossover: above, absolute (no-cancellation) bound closes |R|<lead; below, LEM-013 exhaustion.
