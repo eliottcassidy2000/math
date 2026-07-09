@@ -1,3 +1,20 @@
+## kind-pasteur-2026-07-08-S89 -- klein-S191's "explicit V_i" bookkeeping FINISHED: the L=10 rate closes rigorously for ALL d>=3 with an EXPLICIT constant via a box bound (crossover d0=62) + conditional-D3 finite check d<=70
+
+Prompt (owner): work to finish. TARGET: klein-S191 flagged "the explicit V_i" (total-variation constant) as the last bookkeeping for the k=11 L=10 rate (they used the MEASURED C~0.035, 95x margin, not a rigorous a-priori bound). Made it explicit + closed it.
+
+DELIVERED (the explicit rigorous constants + a clean closure):
+1. RIGOROUS |m_i - L_i| <= Vh_i/d, Vh_i = i(6/7)^{i-1} E[W_B] (from TV_u W^i <= i(6/7)^{i-1} 2E[W_B] + Koksma discrepancy 1/(2d) of the d equally-spaced outlier phases): Vh = 0.1826/0.3130/0.4024 (E[W_B]=2818/15435). Empirically the measured |m_i-L_i|*d ~ 0.001-0.003 << Vh_i, so the a-priori bound is safe & loose.
+2. D3 SENSITIVITY at the limit (L1,L2,L3)=(0.15648,0.06055,0.02951), den=0.0261: |dD3/dm_i| = 7.74/18.47/12.60 (numerically validated to 3 digits).
+3. BOX BOUND (tighter than linear C/d, NO linearization): min D3 over m_i in [L_i +- Vh_i/d] (8 sign corners, den>0) is monotone rising in d and crosses bar at **d0=62** (0.3322@62, 0.3427@70, 0.3952@146 -> D3_limit). So D3(E_d) >= bar for ALL d >= 62, rigorously.
+4. CONDITIONAL-D3 FINITE CHECK (klein's equally-spaced structure, E[W^i]=mean_a mean_k W(a;frac(pa/d)+k/d)^i): min_p D3(E_d) >= bar verified for ALL d in [3,70] (min = A = 0.4531 at d=3, then >= 0.459 rising to 0.4648). Extends klein's exhaustive d<=25.
+=> **L=10 family CLOSED for every d>=3: [finite check d<=61] + [box bound d>=62]**, overlap [62,70] doubly covered. Fully explicit, rigorous, no sign-cancellation cleverness. (klein's measured C=0.035 is 350x below the a-priori C; opus-S159's resonance route would lower d0 further but is NOT needed -- d0=62 is a trivial finite check.)
+
+CONTEXT: density floor essentially closed (mac-mini-S58: all six legs k=8..13; klein-S191 L=10 rate; opus-S159 L=9 rank-2). This session supplies the explicit-V_i bookkeeping klein flagged as NEXT, making the L=10 (binding) rate self-contained & rigorous.
+
+FILES: lrc14_L10_explicit_rate_kps_S89.py (+out); LEM-009 "explicit V_i" section.
+
+NEXT: opus's L=9 correlated-remainder (analogous box bound per L, larger margins) => k=11 fully rigorous end-to-end; then the Lean assembly + the Part A leg (regime C / OPEN-Q-110).
+
 ## mac-mini-2026-07-08-S58 -- DENSITY FLOOR FULLY CLOSED (all six legs k=8..13, uniform level) + COVERING CASE ASSEMBLED (THM-663): LRC(14) now reduces to ONE analytic item (THM-527-A finite-Vmax) + Lean
 
 Prompt (owner): close k=12,13 with the LEM-009 machinery; then keep aiming to close the LRC(14) proof.

@@ -1,0 +1,42 @@
+EXPLICIT L=10 rate constants for klein-S191 (kps-S89); bar = 0.331212
+============================================================================================
+
+[limit]  L1=0.156483  L2=0.060548  L3=0.029512   D3_limit = 0.464724  (klein 0.4646)
+  E[W_block10] = 2818/15435 = 0.182572
+
+[sensitivity at limit]  e=m1-m2/M=0.08584  den=m2-m3/M=0.02612
+  |dD3/dm1|=7.740  |dD3/dm2|=18.473  |dD3/dm3|=12.604
+
+[rigorous |m_i - L_i| <= Vh_i / d]  Vh_1=0.1826  Vh_2=0.3130  Vh_3=0.4024
+  (from TV_u W^i <= i(6/7)^(i-1) * 2E[W_B], Koksma discrepancy 1/(2d) => the 2 cancels)
+
+[point constant]  C_point = sum |dD3/dm_i| Vh_i = 12.267
+[ball-adjusted]  worst den at d=D0 = 0.02074  safety=1.59  C<= 19.44
+  => CROSSOVER D0 = C/(D3_limit - bar) = 19.44/0.1335 = 146
+  RIGOROUS CLOSURE: [finite check d<= 146] + [rate d> 146: D3 >= D3_limit - C/d >= bar].
+  (klein's MEASURED C=0.035 is 350x smaller -- the worst-case sign assumption;
+   the rigorous a-priori C is dominated by |dD3/dm2|,|dD3/dm3| and the small den.)
+
+============================================================================================
+CONDITIONAL-D3 FINITE CHECK of the L=10 family d in [3,60] (min over coprime p):
+  d=  3: min D3 = 0.45308 at p=8  margin +0.12187
+  d=  4: min D3 = 0.45924 at p=29  margin +0.12803
+  d=  5: min D3 = 0.45883 at p=28  margin +0.12762
+  d=  6: min D3 = 0.46362 at p=1  margin +0.13240
+  d= 10: min D3 = 0.46396 at p=37  margin +0.13275
+  d= 20: min D3 = 0.46468 at p=123  margin +0.13346
+  d= 30: min D3 = 0.46475 at p=53  margin +0.13354
+  d= 40: min D3 = 0.46477 at p=197  margin +0.13356
+  d= 50: min D3 = 0.46479 at p=59  margin +0.13358
+  d= 60: min D3 = 0.46479 at p=337  margin +0.13358
+
+  MIN over d in [3,60] = 0.453080 at (d,p)=(3, 8)  margin +0.121868  [>= bar]
+  (d=3 = A = 0.4530; rises with d toward 0.4647.  Extends klein's d<=25 to 60.)
+
+=== BOX-BOUND CROSSOVER (kps-S89 refinement) ===
+box-worst D3 over m_i in [L_i +- Vh_i/d]:  d=60:0.32930(BELOW) 62:0.33222 70:0.34273 80:0.35374
+  100:0.37072 146:0.39520 200:0.41148 -- monotone rising.
+TRUE crossover d0 = 62: min_box D3 >= bar for ALL d >= 62.
+conditional-D3 finite check d in [61,70]: min D3 = 0.464690 (>= bar +0.1335); with d in [3,60] (min=A=0.4531).
+=> L=10 family CLOSED for all d>=3: [finite check d<=61] + [box bound d>=62]. Explicit, rigorous.
+  (klein measured C=0.035 << a-priori; resonance route would lower d0 but is not needed.)

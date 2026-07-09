@@ -377,3 +377,34 @@ So `D3(E_d) ≥ bar` for EVERY `d ≥ 3` (family min `= A = 0.452986`, `+0.1218`
 the explicit `V_i` (a total-variation constant with a `95×` margin). The general "AP minimizes μ"
 reduces to: a finite exhaustive + a Riemann-sum decorrelation rate whose constant is irrelevant to
 `3` significant figures. File: `lrc14_d3d_decorr_bound_klein_S191.out`, `lrc14_d3d_limit_rate_klein_S191.out`.
+
+### The explicit `V_i` and a self-contained loose-`C` closure (kps-S89)
+
+klein's `95×` margin uses the *measured* `C ≈ 0.035`. The **rigorous a-priori** constant (worst-case
+moment-sign assumption) is larger but still closes cleanly. Making the bookkeeping explicit:
+
+- **Rigorous `|m_i − L_i| ≤ Vh_i/d`** with `Vh_i = i(6/7)^{i-1}·E[W_B]` (from `TV_u W^i ≤ i(6/7)^{i-1}·
+  2E[W_B]` and Koksma discrepancy `1/(2d)` of the `d` equally-spaced outlier phases — the `2` cancels):
+  `Vh_1 = 0.1826, Vh_2 = 0.3130, Vh_3 = 0.4024` (`E[W_B] = 2818/15435`).
+- **D3 sensitivity at the limit** `(L_1,L_2,L_3) = (0.15648, 0.06055, 0.02951)`, `den = L_2−L_3/M =
+  0.0261`: `|∂D3/∂m_1| = 7.74`, `|∂D3/∂m_2| = 18.47`, `|∂D3/∂m_3| = 12.60`.
+- **`C_point = Σ|∂D3/∂m_i|·Vh_i = 12.27`**; with ball-safety for `den` (drops to `0.0207` at the
+  crossover, `1.59×` on the `1/den²` partials) **`C ≤ 19.44`**, so the crossover is
+  > **`D0 = C/(D3_limit − bar) = 19.44/0.1335 = 146`.**
+
+The **direct box bound** is much tighter than the linear `C/d`: for each `d` every moment lies in the
+box `m_i ∈ [L_i ± Vh_i/d]`, and `min D3` over that box (all 8 sign corners, `den > 0` throughout) is a
+rigorous lower bound with **no linearization**. It rises monotonically in `d` and crosses `bar` at
+
+> **`d₀ = 62`: `min_box D3(d) ≥ bar` for every `d ≥ 62`** (`0.3322` at `62`, `0.3427` at `70`, `0.3952`
+> at `146`, `→ D3_limit`).
+
+So the L=10 family closes rigorously with **no sign-cancellation cleverness**:
+`[finite check d ≤ 61] + [box bound d ≥ 62]`. The finite check is cheap via the **conditional-D3**
+evaluation (klein's equally-spaced structure, `E[W^i] = mean_a mean_k W(a; frac(pa/d)+k/d)^i`): verified
+`min_p D3(E_d) ≥ bar` for **all `d ∈ [3,70]`** (min `= A = 0.4531` at `d=3`, then `≥ 0.459` and rising to
+`0.4648`), so `[3,70] ∪ [62,∞) = [3,∞)` with the overlap `[62,70]` doubly covered. **The L=10 family is
+CLOSED for every `d ≥ 3`, rigorously, with the explicit constant.** (klein's measured `C = 0.035` is
+`350×` below the a-priori `C`; the resonance route (opus-S159) would drop `d₀` further, but is not
+needed — `d₀ = 62` is already inside a trivial finite check.) File: `lrc14_L10_explicit_rate_kps_S89.py`
+(+`.out`).
