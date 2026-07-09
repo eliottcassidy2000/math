@@ -1,0 +1,63 @@
+====================================================================================================
+PART A -- THM-669(i) verification: Av(E, r) >= intW_{1/7+r}/(1-r^2), exact
+====================================================================================================
+  AP_8 co-offsets {0..7}       r=    0: Av = 0.25015 >= intW_lift/(1-r^2) = 0.25015  OK
+  AP_8 co-offsets {0..7}       r= 1/10: Av = 0.12749 >= intW_lift/(1-r^2) = 0.11604  OK
+  AP_8 co-offsets {0..7}       r=  1/3: Av = 0.05993 >= intW_lift/(1-r^2) = 0.04431  OK
+  hard-core P={9..13} cluster  r=    0: Av = 0.43537 >= intW_lift/(1-r^2) = 0.43537  OK
+  hard-core P={9..13} cluster  r= 1/10: Av = 0.23923 >= intW_lift/(1-r^2) = 0.22044  OK
+  hard-core P={9..13} cluster  r=  1/3: Av = 0.10857 >= intW_lift/(1-r^2) = 0.07759  OK
+  kps dissoc 13                r=    0: Av = 0.13970 >= intW_lift/(1-r^2) = 0.13970  OK
+  kps dissoc 13                r= 1/10: Av = 0.05344 >= intW_lift/(1-r^2) = 0.04505  OK
+  kps dissoc 13                r=  1/3: Av = 0.01685 >= intW_lift/(1-r^2) = 0.00886  OK
+  covering worst {17-v}        r=    0: Av = 0.12185 >= intW_lift/(1-r^2) = 0.12185  OK
+  covering worst {17-v}        r= 1/10: Av = 0.05690 >= intW_lift/(1-r^2) = 0.05081  OK
+  covering worst {17-v}        r=  1/3: Av = 0.02643 >= intW_lift/(1-r^2) = 0.01938  OK
+  tight AP {0..12}             r=    0: Av = 0.12662 >= intW_lift/(1-r^2) = 0.12662  OK
+  tight AP {0..12}             r= 1/10: Av = 0.07051 >= intW_lift/(1-r^2) = 0.06546  OK
+  tight AP {0..12}             r=  1/3: Av = 0.03468 >= intW_lift/(1-r^2) = 0.02584  OK
+  6-cluster                    r=    0: Av = 0.39466 >= intW_lift/(1-r^2) = 0.39466  OK
+  6-cluster                    r= 1/10: Av = 0.21690 >= intW_lift/(1-r^2) = 0.20201  OK
+  6-cluster                    r=  1/3: Av = 0.07442 >= intW_lift/(1-r^2) = 0.04278  OK
+  total violations over zoo x r-grid: 0
+
+====================================================================================================
+PART B -- parametric tent floor vs exact mu_theta
+====================================================================================================
+  n= 8 theta=  1/7: tent floor 0.7500 <= exact mu = 0.9401  OK
+  n= 8 theta= 8/49: tent floor 0.4643 <= exact mu = 0.8193  OK
+  n= 8 theta=  1/6: tent floor 0.4167 <= exact mu = 0.7992  OK
+  n= 8 theta=  1/7: tent floor 0.7500 <= exact mu = 1.0000  OK
+  n= 8 theta= 8/49: tent floor 0.4643 <= exact mu = 0.9000  OK
+  n= 8 theta=  1/6: tent floor 0.4167 <= exact mu = 0.8833  OK
+  n= 9 theta=  1/7: tent floor 0.4921 <= exact mu = 0.8401  OK
+  n= 9 theta= 8/49: tent floor 0.1655 <= exact mu = 0.7040  OK
+  n= 9 theta=  1/6: tent floor 0.1111 <= exact mu = 0.6813  OK
+  n=10 theta=  1/7: tent floor 0.2286 <= exact mu = 0.9916  OK
+  n=10 theta= 8/49: tent floor -0.1388 <= exact mu = 0.9570  OK
+  n=10 theta=  1/6: tent floor -0.2000 <= exact mu = 0.9496  OK
+
+====================================================================================================
+PART C -- the explicit availability floor table (proved, structure-free)
+====================================================================================================
+  n <= 6 (pointwise): Av >= (1/n - 1/7 - r)_+/(1-r^2)
+    n=4: positive for r < 3/28 = 0.1071
+    n=5: positive for r < 2/35 = 0.0571
+    n=6: positive for r < 1/42 = 0.0238
+  7 <= n <= 10 (tent-integrated): Av >= (1-r^2)^-1 int_{1/7+r}^{2/n} tentfloor(n,s) ds
+    n=8, r=    0: Av >= 9/448 = 0.020089
+    n=8, r= 1/50: Av >= 2209/279888 = 0.007892
+    n=8, r= 1/25: Av >= 361/279552 = 0.001291
+    n=9, r=    0: Av >= 961/127008 = 0.007566
+    n=9, r= 1/50: Av >= 73441/79348248 = 0.000926
+    n=9, r= 1/25: tent window empty
+    n=10, r=    0: Av >= 16/11025 = 0.001451
+    n=10, r= 1/50: tent window empty
+    n=10, r= 1/25: tent window empty
+
+====================================================================================================
+PART D -- proven floor vs empirical Av on battery splits (honesty table)
+====================================================================================================
+  S2 split L={0,14,28,42}/182    n=4 r=0.247: PROVEN floor = 0.00225, empirical Av = 0.18745, ratio = 83.2x
+  hard-core L 5-teeth            n=5 r=0.100: PROVEN floor = 0.02726, empirical Av = 0.23923, ratio = 8.8x
+  8-teeth cluster                n=8 r=0.040: PROVEN floor = 0.00129, empirical Av = 0.17755, ratio = 137.5x
