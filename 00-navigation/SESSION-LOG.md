@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-08-S90 (cont.) -- j*=O(k) frontier: CONVERGED with opus-S164 (j* governed by longest-AP) + NET-NEW partial-sum/𝒲̂ ANALYTIC route unifying j* with the density-floor tail (one shared constant) (HYP-5507)
+
+Prompt (owner): work the two remaining residuals back and forth, pulling from git for inspiration.
+
+The two residuals unified (fleet): (1) density-floor 2nd-order tail = a-priori via klein-S194 LEM-011 (exact 𝒲̂ Fourier transform); (2) Part A large-spread = mac-mini LEM-010, reduced to j*=O(k) (AP proven). Both share the 𝒲̂-decay object.
+
+ROUND 1 (converged w/ opus-S164, pushed concurrently): j* is GOVERNED BY longest-AP. max j* <=7 (Vmax-uniform 1k..20k) for longest-AP<=k-2; ~longest-AP (up to ceil(7(k-1)/6)=14) for >=k-1. opus-S164 (HYP-5497) INDEPENDENTLY found the same decomposition + cites my S90 interlock. Ceded.
+
+ROUND 2 (net-new): the PARTIAL-SUM / 𝒲̂ analytic route. j*<=N <=> sum_{j=1}^N W(j/Vmax)>0. By mac-mini THM-664 (finite-N): sum_{j=0}^N W = (N+1)(6/7)^k + sum_{n!=0}𝒲̂(n)D_N(n·e/Vmax). So j* = first N with (N+1)(6/7)^k + correction > 6/7. Leading crosses 6/7 at N~(7/6)^{k-1} (~6.4 at k=13); the correction (bounded a-priori by klein-S194's 𝒲̂-decay) delays it for near-AP (verified: AP d=155 j*=12, correction=-0.895). => explicit j*<=N_k via the SAME 𝒲̂ decay as the density-floor tail. UNIFICATION: mac-mini's "one shared constant closes BOTH residuals" realized -- j* and the density-floor tail are ONE 𝒲̂-decay bound. Complements opus-S164's combinatorial (arc-count) route with an analytic no-case-split route.
+
+METHOD: pulled from git 3x mid-session; opus-S164 + mac-mini-S60 landed during, confirming convergence on the longest-AP axis. Checkpointed twice.
+
+FILES: lrc14_jstar_{longestAP,uniform,partialsum}_kps_S90.py; HYP-5507.
+
+NEXT: formalize the partial-sum bound |correction| <= sum|𝒲̂| via LEM-011 => explicit j*<=N_k analytically (an alternative to opus-S164's pigeonhole); OR the Lean of the finite pieces. The whole covering case is now [density floor closed] + [j*=O(k): opus-S164 combinatorial OR this 𝒲̂ analytic, both modulo the a-priori 𝒲̂ constant] + Lean.
+
 ## opus-2026-07-08-S164 -- THE GOOD-PERIOD DICHOTOMY: the LRC(14) capstone's exception set is EXACTLY the tight AP (j* governed by longest-AP; AP is NOT the maximizer; 0 non-AP no-good-period over 490k configs) (HYP-5497)
 
 Prompt (owner): work the remaining math creatively.
