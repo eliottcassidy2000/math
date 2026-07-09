@@ -1,3 +1,19 @@
+## opus-2026-07-09-S184 -- step 2 (theta-sum bound) RESOLVED into the moment-LP; MAPPED the LRC(14) formalization endgame (2 cruxes: Lemma A + hrefl window); the Schur BRIDGE for Lemma A (consecutive minimizes nu BECAUSE it maximizes E3, corr -0.911); renamed LEM-014->LEM-015 (boxeph collision)
+
+Prompt (owner): prove step 2 (theta-sum bound); synthesize incoming work, pull often; finish all LRC(14) formalization.
+
+COLLISION FIX: boxeph reserved LEM-014 first (P-separated composed realization) -- renamed my Schur-triples lemma to LEM-015 (file+id+Lean comment+root import; boxeph proposed this, we concur). Note: two THM-666 also collided (mac-mini ceded to monad, renamed THM-668).
+
+STEP 2 (RESOLVED, honest, HYP-5721): R=Sum_{t!=0} prod h(t_i) (h(m)=-sin(pi m/7)/(pi m)) has LEADING term = height-3 SCHUR TRIPLES, c3=-0.00113/vector; R_lead=c3*#SchurVec captures SIGN+trend (AP max, sum-free 0), ~35-100%, rest = higher-order MODULATING per S181 dimension effect. FULL |R|<(6/7)^13 NOT provable from the resonance sum (Mertens wall S172, no monotone f(E3) per S181) -- SUBSUMED by the PROVED moment-LP density floor D3 (THM-661). So step 2 = "the floor is proved by MOMENTS; the Schur leading order EXPLAINS why order-3 & AP-extremal."
+
+FORMALIZATION ENDGAME MAP (via dedicated scan): LRC(14) Lean = SORRY-FREE CONDITIONAL (no sorry/admit/sorryAx; native_decide in censuses). lrc14_from_witness_floor reduces to hfloor + hpartA. hpartA -> (proven lemmas) -> the single REALIZATION hrefl/hembed, discharged EXCEPT the binding window Vmax~7spread/6 (THM-608 covers drift-controlled; death-star-S1 just closed the pure-cluster corner => residual only on ratio>13 multi-scale). hfloor -> hbonf (PROVED kps-S30 toReal_bonferroni) + Lemma B (proved) + LEMMA A (LONE open hfloor node). So the ENTIRE remaining surface = {Lemma A} + {hrefl binding window}.
+
+SCHUR BRIDGE for Lemma A (HYP-5722): Lemma A (nu(E)>=nuConsec(k): consecutive cluster MINIMIZES the good-set measure nu) = the MEASURE-level version of LEM-015 (interval MAXIMIZES E3). VERIFIED: consecutive achieves min nu=0.4425 (=all dilated intervals; nu scale+rotation invariant), corr(E3,nu)=-0.911. The AP minimizes nu BECAUSE it maximizes E3 -- resonance => equidistributed orbit => small maxgap => small good-set. 3-WAY convergence on E3 as the hardness coordinate: opus (resonance sum) + kps-S113 (density cert) + mac-mini THM-668 (ruler witnesses).
+
+NEXT: Lemma A rigorous (the compactness minimization -- interval-extremal, my thread's natural target) + hrefl binding window (fleet-active). Files: 3 scripts+outs; reflections step-2-resolves-into-the-moment-lp-... + the-lrc14-formalization-endgame-and-the-schur-bridge-for-lemma-A-...; HYP-5721/5722; LEM-015.
+
+---
+
 ## death-star-2026-07-09-S1 -- THE DELINEATION: the pure-cluster corner of the realization node is CLOSED BY SUBSUMPTION (kps-S28 spread13_lonely; LRCPureClusterCorner.lean kernel-pure) => the Kronecker residual lives ENTIRELY on speeds-ratio>13 multi-scale shapes; + the 07-09 STATUS synthesis; + the abstract-object reflection (one equivariant partition function, two time scales)
 
 Prompt (owner): synthesize the bleeding edge of LRC(14) and extend it toward closure comprehensively; pull often from other agents; mine past work for the bigger picture -- what abstract object are we fundamentally interacting with?

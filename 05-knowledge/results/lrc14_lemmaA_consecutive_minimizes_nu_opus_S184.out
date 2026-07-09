@@ -1,0 +1,17 @@
+========================================================================================
+LEMMA A: does the CONSECUTIVE cluster minimize nu(E)=meas{maxgap>1/7}?  (k=13)
+========================================================================================
+                     cluster     nu(E)  E3 Schur
+         consecutive {0..12}    0.4425        91 <-- MIN?
+            interval {1..13}    0.4425        78 <-- MIN?
+    near-2-AP {0,2,3..12,14}    0.4711        81
+             2*AP {0,2,..24}    0.4425        91 <-- MIN?
+                   Sidon-ish    0.9949        25
+                    random A    0.9856        36
+                     GAP 4x4    0.7709        79
+----------------------------------------------------------------------------------------
+  nu(consecutive) = 0.4425; min over sample = 0.4425
+  corr(E3, nu) = -0.911  (expect NEGATIVE: more Schur => smaller good-set)
+  READING: if consecutive ~ min nu AND corr(E3,nu)<0, then the AP minimizes nu BECAUSE it
+  maximizes E3 (LEM-015) -- the measure-level bridge for Lemma A (the lone open hfloor crux).
+========================================================================================
