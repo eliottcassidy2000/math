@@ -1,0 +1,103 @@
+LEM-014 composed realization - exact verification (boxeph-2026-07-09-S1)
+
+=== AP{0..12} wide ===  
+  S = [7992, 7993, 7994, 7995, 7996, 7997, 7998, 7999, 8000, 8001, 8002, 8003, 8004]
+  covering: True | P=[] k=13 s=12 Vmax=8004 Vmax/s=667.0
+  delta=3s/V=0.004498  eps=20/V=0.002499
+  mu_1/7(E)          = 477/1078 = 0.442486
+  mu_1/7+delta(E)    = 2304667/5392695 = 0.427368   shell=0.015118
+  E[W]               = 8599/67914 = 0.126616
+  one-line bound (7/6)(E[W]-6d) = 0.116234   (vs actual mu_robust 0.427368)
+  P empty: G_P = [0,1]
+  meas(R robust set) = 2304667/5392695 = 0.427368
+  x* = 1327/37352 (interval len 0.0710538)
+  j = 284   grid teeth maxgap = 0.574213 (need > 1/7 + drift: 0.145856)
+  phi* = 0.712894   tau = 379807/10677336
+  min clearance = 127255/444889 = 0.28603764  >= 1/14 OK   margin = +0.21460907
+
+=== 7-structured (M128) wide ===  
+  S = [33963, 33970, 33978, 33987, 33994, 34001, 34008, 34016, 34019, 34024, 34031, 34038, 34045]
+  covering: True | P=[] k=13 s=82 Vmax=34045 Vmax/s=415.2
+  delta=3s/V=0.007226  eps=20/V=0.000587
+  mu_1/7(E)          = 37781565526042232773/41312926283305737060 = 0.914522
+  mu_1/7+delta(E)    = 789623150284515497609609/907418435687189560134000 = 0.870186   shell=0.044335
+  E[W]               = 233828061187585157111977/1808404493174569796906400 = 0.129301
+  one-line bound (7/6)(E[W]-6d) = 0.100271   (vs actual mu_robust 0.870186)
+  P empty: G_P = [0,1]
+  meas(R robust set) = 789623150284515497609609/907418435687189560134000 = 0.870186
+  x* = 8952687/21361690 (interval len 0.0480009)
+  j = 14268   grid teeth maxgap = 0.294522 (need > 1/7 + drift: 0.147674)
+  phi* = 0.653679   tau = 971552629/2318124050
+  min clearance = 169861191/1159062025 = 0.14655056  >= 1/14 OK   margin = +0.07512199
+
+=== knife-edge (M130) wide ===  
+  S = [19122, 19127, 19128, 19129, 19136, 19138, 19143, 19144, 19146, 19150, 19154, 19157, 19164]
+  covering: True | P=[] k=13 s=42 Vmax=19164 Vmax/s=456.3
+  delta=3s/V=0.006575  eps=20/V=0.001044
+  mu_1/7(E)          = 183191/194040 = 0.944089
+  mu_1/7+delta(E)    = 128178256873/143193599640 = 0.895140   shell=0.048949
+  E[W]               = 19657011096269/175943307389850 = 0.111724
+  one-line bound (7/6)(E[W]-6d) = 0.084320   (vs actual mu_robust 0.895140)
+  P empty: G_P = [0,1]
+  meas(R robust set) = 128178256873/143193599640 = 0.895140
+  x* = 6339/626024 (interval len 0.0202516)
+  j = 194   grid teeth maxgap = 0.574828 (need > 1/7 + drift: 0.147240)
+  phi* = 0.712586   tau = 25913/2550409
+  min clearance = 729040/2550409 = 0.28585219  >= 1/14 OK   margin = +0.21442362
+
+=== k=10 P={11,12,13} wide ===  
+  S = [11, 12, 13, 33968, 33985, 34007, 34020, 34030, 34038, 34043, 34047, 34049, 34050]
+  covering: True | P=[11, 12, 13] k=10 s=82 Vmax=34050 Vmax/s=415.2
+  delta=3s/V=0.007225  eps=20/V=0.000587
+  mu_1/7(E)          = 1 = 1.000000
+  mu_1/7+delta(E)    = 1 = 1.000000   shell=0.000000
+  E[W]               = 1210712406948644351467/5697938964396209993280 = 0.212483
+  one-line bound (7/6)(E[W]-6d) = 0.197324   (vs actual mu_robust 1.000000)
+  meas(G_P^eps)      = 0.621380
+  meas(R robust set) = 1210237/1947660 = 0.621380
+  x* = 132809/3408405 (interval len 0.0648365)
+  j = 1327   grid teeth maxgap = 0.220558 (need > 1/7 + drift: 0.147674)
+  phi* = 0.889721   tau = 9042929/231880500
+  min clearance = 2545037/23188050 = 0.10975640  >= 1/14 OK   margin = +0.03832783
+
+=== k=8 P={7,9,11,12,13} wide ===  
+  S = [7, 9, 11, 12, 13, 19129, 19135, 19146, 19154, 19160, 19166, 19169, 19171]
+  covering: True | P=[7, 9, 11, 12, 13] k=8 s=42 Vmax=19171 Vmax/s=456.5
+  delta=3s/V=0.006572  eps=20/V=0.001043
+  mu_1/7(E)          = 1 = 1.000000
+  mu_1/7+delta(E)    = 1 = 1.000000   shell=0.000000
+  E[W]               = 16860611837173/57869947258200 = 0.291354
+  one-line bound (7/6)(E[W]-6d) = 0.293905   (vs actual mu_robust 1.000000)
+  meas(G_P^eps)      = 0.433867
+  meas(R robust set) = 174845753/402993591 = 0.433867
+  x* = 498866/12211927 (interval len 0.0609952)
+  j = 783   grid teeth maxgap = 0.284597 (need > 1/7 + drift: 0.147239)
+  phi* = 0.857702   tau = 15027336/367527241
+  min clearance = 51607882/367527241 = 0.14041920  >= 1/14 OK   margin = +0.06899063
+
+=== Vmax descent scan: AP{0..12}, P empty -- where does the composed construction first fail? ===
+  Vmax=  8000 (V/s= 666.7): mu_rob=0.4274  min clr=0.285930  OK (margin +0.214502)
+  Vmax=  4000 (V/s= 333.3): mu_rob=0.4122  min clr=0.286365  OK (margin +0.214937)
+  Vmax=  2000 (V/s= 166.7): mu_rob=0.3820  min clr=0.285740  OK (margin +0.214311)
+  Vmax=  1000 (V/s=  83.3): mu_rob=0.3298  min clr=0.287552  OK (margin +0.216123)
+  Vmax=   500 (V/s=  41.7): mu_rob=0.2539  min clr=0.291392  OK (margin +0.219963)
+  Vmax=   250 (V/s=  20.8): mu_rob=0.1785  min clr=0.299936  OK (margin +0.228507)
+  Vmax=   126 (V/s=  10.5): mu_rob=0.1082  min clr=0.295918  OK (margin +0.224490)
+  Vmax=    64 (V/s=   5.3): mu_rob=0.0491  min clr=0.294922  OK (margin +0.223493)
+  Vmax=    48 (V/s=   4.0): mu_rob=0.0179  min clr=0.375000  OK (margin +0.303571)
+  Vmax=    32 (V/s=   2.7): robust set EMPTY
+  Vmax=    24 (V/s=   2.0): robust set EMPTY
+  Vmax=    16 (V/s=   1.3): robust set EMPTY
+  Vmax=    14 (V/s=   1.2): robust set EMPTY
+
+=== 7-structured @91 (compressed) ===  expected outside wide regime
+  S = [9, 16, 24, 33, 40, 47, 54, 62, 65, 70, 77, 84, 91]
+  covering: True | P=[] k=13 s=82 Vmax=91 Vmax/s=1.1
+  delta=3s/V=2.703297  eps=20/V=0.219780
+  mu_1/7(E)          = 37781565526042232773/41312926283305737060 = 0.914522
+  mu_1/7+delta(E)    = 0 = 0.000000   shell=0.914522
+  E[W]               = 233828061187585157111977/1808404493174569796906400 = 0.129301
+  one-line bound (7/6)(E[W]-6d) = -18.772226   (vs actual mu_robust 0.000000)
+  P empty: G_P = [0,1]
+  meas(R robust set) = 0 = 0.000000
+  ROBUST SET EMPTY -> construction not attempted (outside wide regime or floor fails)
