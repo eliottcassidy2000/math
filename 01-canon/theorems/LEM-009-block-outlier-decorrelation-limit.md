@@ -319,3 +319,24 @@ opus-S157**, who *proved* the L=10 interior tail floor `D3 ≥ bar` analytically
 (opus-S157) and exactly verified through prim-diam 54 (here). The only remaining k=11 piece is the
 **longest-AP ≤ 9** stratum (non-extremal, margin `≥ +0.17`; opus-S157's `1/(pd)` method extends per AP
 length). File: `lrc14_longestAP10_d456_kps_S88.py` (+`.out`).
+
+## k=12,13 addendum — the same machinery closes the other two PZ legs (mac-mini-S58)
+
+The block+outlier decorrelation mechanism of this file is **k-general**; the k=12,13 (A′) density
+legs close by the identical structure (opus-S157's resonance-sum rate `|D3 − D3_∞| ≤ C/(pd)` is not
+special to k=11). The k=12,13 analog of the k=11 limit `D3_10 = 0.4646`:
+
+| k | tail family (longest-AP = k−1) | family min D3 | scale-monotone? | decorr limit `D3_∞` | bar | margin |
+|---|---|---|---|---|---|---|
+| 11 | `AP₁₀ · d + pt` | 0.452986 (`d=3`) | dips at `d=3` then rises | 0.4646 | 0.331206 | +0.122 |
+| 12 | `AP₁₁ · d + pt` | **0.356593** (`d=1`) | **monotone up** in `d` | 0.38881 | 0.199344 | +0.157 |
+| 13 | `AP₁₂ · d + pt` | **0.324953** (`d=1`) | **monotone up** in `d` | 0.34432 | 0.056487 | +0.268 |
+
+k=12,13 are **cleaner than k=11**: the tail family is scale-monotone (min at `d=1`, no `d=3` dip),
+so no per-scale extremal subtlety — the family min is just the `d=1` (block+outlier) value, itself
+**above** the compact min (0.355876 / 0.308844, exhaustive prim-diam ≤ 18). Weyl gives the limit;
+opus-S157's `1/(pd)` rate (machine `|D3−D3_∞|·D ≤ 0.047 / 0.044`) covers `d,p → ∞`; a 20k-shape
+broad backstop (prim-diam ≤ 200) confirms nothing undercuts the compact min. **Net: `min_E D3 ≥ bar`
+for k=12,13, margins +0.157 / +0.268 (2×/4× k=11's), diameter-free.** With k=8,9,10 (degree-4 `B_4`,
+THM-661) and k=11 (this file), **all six LRC(14) density-floor legs are closed.** Files:
+`04-computation/lrc14_lem009_k12_13_macmini_S58.py` (+ `_scaletable_`, `_backstop_`; `.out`s).

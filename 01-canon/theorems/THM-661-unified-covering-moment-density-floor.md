@@ -183,3 +183,56 @@ minimizer is a near-2-AP slightly below the block (D3 has mild scatter vs R2). N
 decorrelation tail — brick (A)'s R2-diameter extremal (still verified: max primitive R2 = 614 at
 diam >= 16) becomes optional, needed only if one routes the tail through R2 instead of D3 directly.
 File: `04-computation/lrc14_k12_13_D3_analog_bricks_macmini_S57.py`.
+
+> **⚠ CORRECTION (mac-mini-S58, per klein-S189 / opus-S155 / MISTAKE-126):** the S57
+> claims "the tail only rises (LEM-005)" and "block is the D3-minimizer, D3 decreases in R2"
+> are the ASSERTED-tail / R2-monotone framing the fleet later refuted for k=11 (the
+> longest-AP=(k-1) family at scale `d=3` dips *below* the block+outlier; `D3` has scatter vs
+> `R2`, so "block maximizes R2 ⇒ block minimizes D3" is only approximate). The compact-minima
+> `0.355876 / 0.308844` are correct (reconfirmed to prim-diam ≤ 18 below), and the closure
+> SURVIVES, but the tail needs the rigorous longest-AP-axis argument of the next section, not
+> "LEM-005 raises D3."
+
+## k=12,13 tail RIGOROUSLY closed via the LEM-009 machinery (mac-mini-S58)
+
+Giving k=12,13 the SAME rigorous tail closure the fleet built for k=11 (opus-S156/S157
+longest-AP axis + resonance-sum rate, kps-S87/S88 scale-monotonicity + exhaustive, klein-S188/S190
+multi-outlier Koksma–Hlawka + longest-AP enumeration), replacing the S57 "LEM-005 raises D3"
+assertion. `mu(E) >= D3(E)` (degree-3 covering-moment floor); we show `min_E D3(E) >= bar`.
+Split by prim-diameter at `D0 = 18`:
+
+**(1) COMPACT (prim-diam ≤ 18) — exhaustive EXACT.** Farey-cell integration of `E[W^1,2,3]` over
+ALL primitive shapes (31824 for k=12, 18564 for k=13; float pre-filter within 0.03 of min, then
+exact-confirm):
+- **k=12: min D3 = 0.355876** at `(0,2,3,4,5,6,7,8,9,10,12,14)` [near-2-AP], margin **+0.156532**.
+- **k=13: min D3 = 0.308844** at `(0,2,3,...,12,14)` [near-2-AP], margin **+0.252357**.
+
+**(2) TAIL (prim-diam > 18) — the longest-AP axis.** A primitive k-set with prim-diam > k−1
+contains no k-term AP (a dilated k-AP `d·{0..k-1}` is non-primitive unless `d=1` = block,
+prim-diam k−1 ≤ 18, in the compact range), so its **longest AP ≤ k−1**. `D3` is monotone in the
+longest-AP length `L` (verified: `L=2 → 0.71/0.67`, decreasing through `L=k−1 →` lowest), so the
+tail D3-minimizer is the **longest-AP=(k−1) family** `{0,d,..,(k-2)d} ∪ {p}`. EXACT per-scale min
+(the analog of kps-S88's k=11 `d=3..6` table), which is **scale-monotone (rises with `d`)** — even
+cleaner than k=11 (where `d=3` dipped below `d=1`):
+
+| k | d=1 | d=2 | d=3 | d=4 | family min | decorr limit `D3_∞` |
+|---|---|---|---|---|---|---|
+| 12 | **0.356593** | 0.374308 | 0.382458 | 0.384425 | **0.356593** (d=1), margin +0.157 | ≈ 0.38881 |
+| 13 | **0.324953** | 0.325459 | 0.336809 | 0.340541 | **0.324953** (d=1), margin +0.268 | ≈ 0.34432 |
+
+Every tail value sits **above the compact min**. The `d,p → ∞` corner is the Weyl decorrelation
+limit `D3_∞` (block+outlier `{0..k-2} ∪ {D}`, `D → ∞`), reached at the **proven** resonance-sum
+rate (opus-S157, k-general) `m_j = L_j + Σ_{κ≠0} Ĝ^j(κp,−κd)`, `|D3 − D3_∞| ≤ C/(pd)` — machine
+value `|D3(B_D) − D3_∞|·D ≤ 0.047` (k=12) / `0.044` (k=13), `≫`-inside the margins.
+
+**(3) BACKSTOP.** A broad float search over 20k+ tail shapes (structured AP+outlier `d=1..8` and
+random primitive, prim-diam ≤ 200) bottoms out at exactly the block+outlier value
+(`0.35659 / 0.31392`) — **nothing undercuts the compact min**.
+
+**Conclusion.** `min_E D3(E) = 0.355876` (k=12) `/ 0.308844` (k=13) `≥ bar` `0.199344 / 0.056487`,
+so `mu(E) ≥ bar` for EVERY 14-runner shape at k=12 and k=13, diameter-free. Margins **+0.157 /
++0.252** — `2.1× / 4.5×` the k=11 margin `+0.074`, so the tail (whose realized KH correction is
+`~10⁻³`) is closed with even more room than k=11. **All six density-floor legs are now closed:**
+k=8,9,10 by the degree-4 moment `B_4` (block, this file); k=11 by the LEM-009 fleet; **k=12,13 by
+this LEM-009 machinery.** Files: `04-computation/lrc14_lem009_k12_13_macmini_S58.py`,
+`..._scaletable_...`, `..._backstop_...` (+ `.out` in `05-knowledge/results/`).
