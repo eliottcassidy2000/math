@@ -1,0 +1,54 @@
+==============================================================================
+HYP-5766: (C1) the signed low-relation box (klein-S212)
+==============================================================================
+
+T_u factors: T_2=+0.0700, T_3=+0.4898, T_4=-0.2857, T_5=+1.0000
+k(j) values: k(1)=+0.1381, k(2)=+0.1244, k(3)=+0.1034, k(4)=+0.0776, k(5)=+0.0498, k(6)=+0.0230, k(7)=+0.0000
+unit costs: Schur (1,1,-1): -0.001290   midpoint (1,-2,1): -0.001163   ratio (2,-1): +0.001202
+
+[1]/[2] closed form vs measured (H=2 and H=3 predictions):
+                  instance    V   predH2   predH3  meas avg iid(kq)avg meas deficit  avg>0
+             adv-worst-120  120   0.1479   0.4674    0.1001     0.1235       0.0234    YES
+                   adv-200  200   0.0840   0.2712    0.0506     0.1227       0.0721    YES
+                       @91   91   0.1867   0.5811    0.1206     0.1243       0.0038    YES
+                   adv-280  280   0.0645   0.2048    0.0964     0.1225       0.0261    YES
+   20*{1..13} 40->41 V=260  260   0.8763   2.7224   -4.8798     0.1226       5.0025     NO
+   20*{1..13} 20->21 V=260  260   0.8793   2.7034   -4.8678     0.1226       4.9904     NO
+
+[3] per-relation-type ledger on the V=260 near-dilation (20*{..} 40->41):
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/ephrepos/math/04-computation/lrc14_signed_box_klein_S212.py", line 198, in <module>
+    main()
+  File "/Users/e/Documents/GitHub/ephrepos/math/04-computation/lrc14_signed_box_klein_S212.py", line 185, in main
+    pred, ledger = predicted_deficit(S, H)
+NameError: name 'H' is not defined
+                  instance    V   predH2   predH3  meas avg iid(kq)avg meas deficit  avg>0
+             adv-worst-120  120   0.1479   0.4674    0.1001     0.1235       0.0234    YES
+                   adv-200  200   0.0840   0.2712    0.0506     0.1227       0.0721    YES
+                       @91   91   0.1867   0.5811    0.1206     0.1243       0.0038    YES
+                   adv-280  280   0.0645   0.2048    0.0964     0.1225       0.0261    YES
+   20*{1..13} 40->41 V=260  260   0.8763   2.7224   -4.8798     0.1226       5.0025     NO
+   20*{1..13} 20->21 V=260  260   0.8793   2.7034   -4.8678     0.1226       4.9904     NO
+
+[3] per-relation-type ledger on the V=260 near-dilation (20*{..} 40->41):
+   support=5 |j|=(1, 1, 2, 2, 3): total -0.25143
+   support=5 |j|=(1, 1, 1, 2, 3): total -0.18772
+   support=5 |j|=(1, 1, 2, 3, 3): total -0.18144
+   support=5 |j|=(1, 2, 2, 3, 3): total -0.15889
+   support=5 |j|=(1, 1, 1, 2, 2): total -0.14684
+   support=5 |j|=(1, 2, 2, 2, 3): total -0.12348
+   support=3 |j|=(1, 1, 2): total -0.11625
+   support=3 |j|=(1, 2, 3): total -0.11145
+   support=5 |j|=(1, 1, 2, 2, 2): total -0.10216
+   support=5 |j|=(1, 1, 1, 1, 2): total -0.08547
+   TOTAL predicted deficit: +2.7224 vs slack 0.1221
+
+[4] does the CERTIFICATE still fire on the V=260 branch? (max B5 check)
+   40->41: #q with B5>0: 0/260; best q=280 B5/q=-0.1505 (B5=-42)
+   20->21: #q with B5>0: 1/260; best q=300 B5/q=0.0167 (B5=5)
+
+VERDICT: if the large-V near-dilations have measured avg-B5 > 0 and the
+closed form tracks the measured deficit, (C1) is validated and the
+(near-)dilated branch is a SMALL-V artifact -- (C2) rigidity unnecessary;
+the aggregated theorem = [closed form + box + dispersal] at V > V0.
+DONE.

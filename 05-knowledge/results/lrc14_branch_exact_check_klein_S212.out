@@ -1,0 +1,17 @@
+40->41: V=260
+  exact LM over (V,2V]: #live moduli = 244/260
+  live moduli (top): q=280 LM=102, q=420 LM=36, q=340 LM=34, q=380 LM=34, q=392 LM=34, q=448 LM=34
+  exact M(S) = 2/17 = 0.11765 at t=43/340  >= 1/14: True
+  witness modulus 340 IN (V,2V]
+20->21: V=260
+  exact LM over (V,2V]: #live moduli = 260/260
+  live moduli (top): q=280 LM=108, q=448 LM=50, q=504 LM=50, q=392 LM=44, q=336 LM=42, q=300 LM=34
+  exact M(S) = 2/15 = 0.13333 at t=31/300  >= 1/14: True
+  witness modulus 300 IN (V,2V]
+depth escalation on 40->41 (V=260, 244/260 exactly live):
+  B5: #q certified = 0/260; best q=280 B5=-42
+  B7: #q certified = 3/260; best q=280 B7=100
+  B9: #q certified = 4/260; best q=280 B9=102
+  B11: #q certified = 206/260; best q=280 B11=102
+
+(iid references: B5=0.1221, B7=0.1346, B9=0.13478, (6/7)^13=0.13480)
