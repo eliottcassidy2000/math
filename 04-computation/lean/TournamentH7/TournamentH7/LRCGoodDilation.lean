@@ -194,6 +194,28 @@ theorem muGood_dilate (θ : ℝ) (E : Finset ℤ) {c : ℤ} (hc : 0 < c) :
   rw [hc0, hcast, ← mul_assoc, ← ENNReal.ofReal_mul (by positivity),
       inv_mul_cancel₀ (ne_of_gt hcR), ENNReal.ofReal_one, one_mul]
 
+/-- **AFFINE (dilation ∘ translation) invariance — the WLOG-normalize primitive.**
+`muGood θ (c·E + m) = muGood θ E` for any positive integer dilation `c` and shift `m`.  So `muGood`
+(equivalently the degree-3 floor `D3`) depends ONLY on the affine-dilation class of the speed set;
+every family reduces to its PRIMITIVE representative `(E − min E)/gcd`.  This is the reduction the
+whole k=11 covering tail (opus-S155–S164) and the good-period capstone (dilation-invariant `j*`) rest
+on.  Composes `muGood_dilate` (this file) with `muGood_translate` (`LRCTailDiameter`). -/
+theorem muGood_affine (θ : ℝ) (E : Finset ℤ) {c : ℤ} (hc : 0 < c) (m : ℤ) :
+    muGood θ (E.image (fun e => c * e + m)) = muGood θ E := by
+  have himg : E.image (fun e => c * e + m)
+            = (E.image (fun e => c * e)).image (fun e => e + m) := by
+    ext y
+    simp only [Finset.mem_image]
+    constructor
+    · rintro ⟨e, he, rfl⟩; exact ⟨c * e, ⟨e, he, rfl⟩, rfl⟩
+    · rintro ⟨x, ⟨e, he, rfl⟩, rfl⟩; exact ⟨e, he, rfl⟩
+  have htrans : (fun e : ℤ => e + m) = (fun e : ℤ => e - (-m)) := by funext e; ring
+  rw [himg, htrans, muGood_translate θ (E.image (fun e => c * e)) (-m)]
+  exact muGood_dilate θ E hc
+
+-- kernel-purity audit (propext / Classical.choice / Quot.sound only)
+#print axioms muGood_dilate
+#print axioms muGood_affine
 
 end TailDiameter
 end LonelyRunner

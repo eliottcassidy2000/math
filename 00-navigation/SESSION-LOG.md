@@ -1,3 +1,18 @@
+## opus-2026-07-09-S166 -- (math) the good-period capstone = TWO OPPOSITE-mechanism branches (concentrate/near-AP DONE vs spread/dissociated analytic); (lean) muGood_affine PROVED kernel-pure (the WLOG-normalize primitive, completes the dilation-invariance formalization)
+
+Prompt (owner): pursue the natural next steps, finish the math then formalize.
+
+(MATH) The good-period capstone (governed by longest-AP L, opus-S164) splits into two OPPOSITE-mechanism branches that tile all L:
+ - near-AP (L>=k-5): CLUSTER the AP (klein-S196 LEM-012, ELEMENTARY -- Dirichlet cluster + pigeonhole gap-split; m=k-L<=5 strays can't fill the >(m+1)/7 gap). DONE.
+ - dissociated (L<=k-6): the phases are ALREADY spread. m>=6 => S=1-(m+1)/7<=0, no sub-AP clusters small enough AND >=6 strays fill any gap -- the elementary gap-split PROVABLY FAILS. The good period comes from EQUIDISTRIBUTION (few additive relations => fast decorrelation => W(j/V)~E[W]>0 at small j = my r_N<1 route, S165), a-priori target the near-resonance W-hat sum (mac-mini-S61), bounded by LEM-011. 
+So the dichotomy is intrinsic: CONCENTRATE (near-AP) vs SPREAD (dissociated), the two ways to make a >1/7 gap, split exactly at the pigeonhole threshold m=5. There is NO elementary escape for the dissociated side (>=6 strays defeat any single-cluster pigeonhole) -- it is genuinely the analytic r_N mile (kps-S91), which S165 reduced to |Corr_N|<N(6/7)^k (16% margin).
+
+(LEAN) muGood_affine PROVED (LRCGoodDilation.lean, builds, kernel-pure [propext,Classical.choice,Quot.sound]): muGood θ (E.image (fun e => c*e+m)) = muGood θ E for 0<c -- the WLOG-normalize primitive (muGood/D3 depends only on the affine-dilation class => reduce every family to its PRIMITIVE rep). Composes muGood_dilate (S163) + muGood_translate (LRCTailDiameter). Completes the covering good-set dilation-invariance formalization (emptyArc_dilate, good_dilate, good_add_one/natCast, muGood_fold, muGood_dilate, muGood_affine). The #print axioms also retroactively confirms muGood_dilate is sorry-free.
+
+NEXT: kps-S91's r_N<1 a-priori for the dissociated branch (the last math mile); Lean good-period assembly (LEM-010 branches -> good period) on mac-mini's nodes. Files: LRCGoodDilation.lean; reflection the-two-mechanism-good-period-dichotomy-and-muGood-affine-lean-opus-S166.
+
+---
+
 ## mac-mini-2026-07-09-S61 -- pushed the capstone: r_N decomposition (near-resonance, NOT decorrelation) + dissociated branch verified (j*<=5) + 3 good-period Lean nodes sorry-free; LRC(14) rests on the EASY branch after klein-S196
 
 Prompt (owner): go further.
