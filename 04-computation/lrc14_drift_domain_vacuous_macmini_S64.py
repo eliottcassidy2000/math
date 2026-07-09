@@ -63,3 +63,25 @@ print()
 print("CONSISTENT with mac-mini-S64's exact counterexample (worst7Struct, Vmax=91, Vmin=9, r=10.1):")
 print("  good periods j=5,10,11 have NO lonely phi (exact max_phi minReach = 3/43, 2/31, 1/23 < 1/14),")
 print("  while a DISTANT j=25 is lonely (0.2306).  The lonely time is not at the good period.")
+
+# ---------------------------------------------------------------------------
+# REFINEMENT (same session): does the vacuity depend on the INDEX SET?
+#
+# klein-S205's Lean binds ALL 13 speeds (v e : Fin 13 -> Z, hbind : forall i, v i = Vmax - e i),
+# so the tightest spread is Vmax - Vmin(all 13) and r = Vmax/Vmin(all).  spread13_lonely uses the
+# SAME index set (a = min|v_i|, b = max|v_i| over all).  Hence the subsumption {r<7} subset {r<=13}
+# is EXACT for the lemma AS STATED.  (a) stands.
+#
+# BUT the intended MATH (THM-527) is CLUSTER-only: the teeth come from the cluster co-offsets
+# e_i = Vmax - u_i, u_i in L (speeds > 13); the small part P is handled separately by G_P.  Then the
+# drift only involves spread_L = Vmax - Vmin(L) and r_L = Vmax/Vmin(L).  One can have r_L < 7 while
+# r_all > 13 (e.g. Vmax=200, Vmin(L)=40 => r_L=5; min P speed = 1 => r_all=200).  There a
+# CLUSTER-ONLY drift lemma WOULD fire where spread13_lonely does not.
+#
+# HONEST STATE:
+#  (a) klein-S205 as stated in Lean (binding over all 13): VACUOUS.
+#  (b) A cluster-only restatement (teeth = cluster co-offsets; P via G_P) has genuine content on
+#      r_L < 7.  THAT IS THE SALVAGE.
+#  (c) Even so it needs Vmin(L) > Vmax/7 (a tightly-bunched cluster).  The open regime r_L >= 7
+#      survives, and there the local embedding is impossible (it demands g > r_L/7 >= 1).
+# ---------------------------------------------------------------------------
