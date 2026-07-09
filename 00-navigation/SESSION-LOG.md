@@ -1,3 +1,20 @@
+## kind-pasteur-2026-07-09-S100 -- LEAN ASSEMBLY toward hpartA: LRCReachWitness.lean (lonely instant => Mreach>=1/14, ANY t), sorry-free; + mapped the hfloor/hpartA surface; + independently CONFIRMED the E_x/R_grid split
+
+Prompt (owner): keep working the lean assembly toward hfloor and hpartA, keep pushing the LRC math then formalization, pull often, develop new directions.
+
+ASSEMBLY MAP (what "toward hfloor/hpartA" means): LRC14Assembly.lrc14_endgame is a SORRY-FREE conditional -- LRC(14) <= [hfloor: forall v, witnessMP <= witnessG2(shapeOf v)] + [hpartA: 0<witnessG2 => 1/14<=Mreach v]. Both are PARAMETERS (no sorry to fill); the surface = DISCHARGING them from the concrete census/measure machinery. Verified: WitnessPartA/Bonferroni/FloorConcrete/Skeleton have NO real sorry (all matches were "sorry-free" prose) -- the whole assembly is a clean conditional. witnessG2 s = mu(GOOD s cap GP s) (LRCEventMeasureBridge, Bonferroni handoff sorry-free). Mreach = sSup(minReach), minReach v t = inf_i nearInt(v_i t), all PROVED (LRCMreachConcrete).
+
+MY NODE (LRCReachWitness.lean, sorry-free, std axioms, builds on LRCMreachConcrete):
+- le_minReach_iff: c <= minReach v t  <=>  forall i, c <= nearInt(v_i t) (the observer clears every runner iff it clears the nearest; clean unfolding of the inf via le_ciInf_iff).
+- Mreach_ge_of_lonely_instant: (exists t, forall i, 1/14 <= nearInt(v_i t)) => 1/14 <= Mreach v -- at ANY real t (global-sSup form, no [0,1] bookkeeping). This is the REACH TAIL of hpartA in the shape the covering->reach bridge naturally produces (a lonely instant). Composes with lonely_of_Mreach_ge => genuine 14-loneliness.
+So hpartA's reach-tail is now pinned/usable: the remaining hpartA content = [0<witnessG2 => exists a lonely instant] (covering->reach reformulation). hfloor = density floor (Bonferroni: witnessG2 >= nuShape+measGP-1) fed by my D3 cert (LRCD3FloorCert) + the good-period measure (my S99 dispatch).
+
+MATH (independent confirmation, connects my E_grid to the fleet split): E_grid[W] = E_x[W](continuum, V-INDEPENDENT main term ~0.135=(6/7)^13, the density floor) + R_grid(wraparound residual). VERIFIED (lrc14_Egrid_split_verify): E_x stable across V; |R_grid|/E_x <= 0.21, LARGEST near knife-edge V~7s/6, SHRINKS for large V (0.007 at V=5s). So my S97 kissing |R| = R_0 + R_grid splits into R_0 (density-floor, AP-max, mac-mini's WINNING side inside E_x) + R_grid (decaying wraparound). Confirms mac-mini-S64/klein-S202 split; my S98 total-absolute (1.55) was the wrong (lumped, absolute) object.
+
+Good-period Lean cores: mac-mini 5 + klein maxgap + my AP/ArcCount/Egrid/Dispatch/ReachWitness. FILES: LRCReachWitness.lean; lrc14_Egrid_split_verify_kps_S100.py.
+
+NEXT: the covering->lonely-instant step (feeds Mreach_ge_of_lonely_instant => hpartA); the hfloor Bonferroni assembly (D3 cert + good-period measure => witnessG2>=witnessMP). Pull often -- fleet moving fast on the split.
+
 ## klein-2026-07-09-S202 -- OCF/decay TRANSPORT worked to the end: PARTIAL (over-covering blocks the tight bound) + the SOUND R0-signed/R_grid-absolute split with the CORRECTED j=0 Lean threshold (fixes kps-S96's vacuous existence). Converges opus-S172 (same negative) + mac-mini-S64 (same split).
 
 Prompt (owner): work the transport of the OCF/decay truncation constant, then formalize; long session, pull often + use fleet work as signal.
