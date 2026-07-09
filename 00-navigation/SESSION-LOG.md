@@ -1,3 +1,27 @@
+## opus-2026-07-09-S172 -- the OCF/decay TRANSPORT to an a-priori |R|<(6/7)^k FAILS (honest negative): neither L1 (TV~spread^2) nor L2 (E[(W')^2]~spread^2) reaches main; |R|<main is ARITHMETIC cancellation, because k/7=13/7>1 OVER-COVERING makes W' scale with spread. Corrects opus-S171, converges kps-S98/S99 + mac-mini-S64. Lean resonant_tail_le. Court ack (klein-S201).
+
+Prompt (owner): work the transport of the OCF/decay truncation constant, then formalize; LONG session, pull often, use fleet work as signal for exploration/pondering.
+
+GOAL: make kps-S96's E_grid good-period residual bound |R|<(6/7)^k a-priori by porting the tournament Walsh-OCF clean truncation (THM-076) to the covering master law What=Σ_{balanced n}∏ĝ (LEM-011 exact closed form).
+
+RESULT -- the transport does NOT give a crude a-priori bound (honest negative, rigorous):
+1. **per-COVERING sum diverges.** Σ_n|What(n)| by LEM-011 shells GROWS with r (r3/r2~4-8) -- the OCF factorization is not absolutely summable.
+2. **per-FREQUENCY R_abs=Σ_m|What_1d(m)| IS <main** (0.005-0.37 converged) **but not provable by TV**: |What_1d(m)|<=TV(W')/(2πm)^2, TV(W')~spread^2.03 (~13 spread^2 = ~26 spread breakpoints x ~spread/2 jump) => TV/(12Vmax^2)~1.1=8*main.
+3. **L2/Cauchy-Schwarz ALSO fails:** E[(W')^2]~spread^2 => B_L2=2sqrt(E[(W')^2]zeta2)/Vmax ~1.7-2.5=13-19*main. BOTH norms miss main by 200-400x.
+=> **|R|<main is genuine ARITHMETIC cancellation** (which m resonate + signs), beyond any magnitude bound. Delimits opus-S154: L2-not-L1 rescues the FIXED-frequency far-correction, NOT the resonant sum.
+
+STRUCTURAL REASON (resolves Agent-1 lead): LRC covering OVER-covers (k/7=13/7>1) => W usually 0, rare deep excursions => W' scales with spread in TV AND L2 => cancellation; tournament OCF has NO over-cover => truncates cleanly (THM-076). **k/7>1 IS the transport obstruction.**
+
+NOT PROOF-CRITICAL (converges same-day fleet): kps-S99 assembled the good-period leg in Lean sorry-free (LRCGoodPeriodDispatch, LEM-012 U LEM-013 dichotomy, no |R|); mac-mini-S64 j=1 wraparound + winning side V*E_x linear; LEM-011 says |R| is abundance. My negative EXPLAINS why the fleet correctly routes around |R|.
+
+CORRECTIONS/ACKS: corrected opus-S171 "R_abs<main, no cancellation" over-claim (parallel kps-S97->S98); ACKNOWLEDGED klein-S201 court case (my S170 smooth-MEAN route fooled by tight-AP aliasing; existence is a MAX; re-scoped to large-V supplement).
+
+LEAN: LRCArcCount.resonant_tail_le (kernel-pure, built) -- |a n|<=C/n^2 => Σ_{n>M}|a n|<=C/M (telescoping); the honest a-priori TAIL half. abs_residual_lt comment corrected.
+
+PULLS (5x, as signal): klein-S201, kps-S98, mac-mini-S64 (+handoff), kps-S99. NEXT: |R| a-priori route retired (Mertens wall); good-period leg closed by kps-S99 dichotomy dispatch. Files: lrc14_{ocf_shell_transport,Rabs_crossover,TV_Wprime_apriori,L2_route_test}_opus_S172 (+outs); reflection the-ocf-transport-fails-because-k-over-7-exceeds-one-opus-S172; HYP-5610 + HYP-5577 correction; court ack.
+
+---
+
 ## kind-pasteur-2026-07-09-S99 -- LEAN ASSEMBLY: the good-period DICHOTOMY DISPATCH + the clearance BRIDGE core, over klein's concrete HasGoodPeriod predicate (LRCGoodPeriodDispatch.lean, sorry-free)
 
 Prompt (owner): work on the lean assembly of the finite pieces.

@@ -75,6 +75,22 @@ obstruction to transport** — exactly the "barely-covers wall" and the differen
 flagged ("understand why their covering had no `k/7>1` obstruction").  Resolved: the over-covering is
 the reason.
 
+## Neither L1 nor L2 reaches it — the wall is arithmetic
+
+The TV bound is an L¹ estimate.  The natural next move (my own S154 "L²-not-L¹") is Cauchy–Schwarz with
+weight `m²`: `|R| ≤ 2√(Σ_{V|m}|m·𝒲̂₁(m)|²)·(Σ 1/(nV)²)^{1/2} ≤ 2√(E[(W')²]·ζ(2))/Vmax` (Parseval:
+`Σ|m·𝒲̂₁(m)|² = ‖W'‖₂²`).  Tested:
+
+> **`E[(W')²] ~ spread²`** (`√(E[(W')²])/spread ≈ 0.7–1.0`, constant), so **`B_L2 ≈ 1.7–2.5 = 13–19·main`**
+> — the L² route ALSO gives a constant, `200–400×` above the actual `|R| ≈ 0.005`.
+
+So BOTH norms fail identically, because the over-covering makes `W'` scale with spread in *both* `TV`
+and `L²`.  `|R| < main` is therefore genuine **arithmetic cancellation** — the specific arithmetic of
+which `m` are resonant and the signs of `𝒲̂₁(m)` there — beyond *any* analytic magnitude bound.  This
+also delimits my S154 program: "L²-not-L¹" rescues the *far-correction* sum (a fixed-frequency object),
+but NOT the *resonant* sum (whose smallness is which-frequencies-resonate, i.e. Mertens/additive
+combinatorics, not magnitude).
+
 ## Not proof-critical — the fleet routes around |R| (convergence)
 
 Crucially, the a-priori `|R| < main` is a *nice-to-have*, not a gap.  Same-session fleet work closes the
