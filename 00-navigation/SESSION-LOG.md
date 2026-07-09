@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-09-S106 -- hembed INSTANTIATED via scale_separation_phase with the e=Vmax-v binding (LRCHembedScaleSep.lean, sorry-free): discharges hembed in the drift-controlled (large-ruler / cluster-absorption) regime
+
+Prompt (owner): instantiate scale_separation_phase for hembed with the e=Vmax-v binding.
+
+DONE (LRCHembedScaleSep.lean, sorry-free, builds 8480 jobs):
+- mreach_ge_via_scale_separation: for the 13 speeds v : Fin 13 -> Z, ruler Vmax>0, slow time t0, slack δ, phase spread Δφ, drift Dd, IF the co-offsets are bounded (|v_i - Vmax| <= Dd, i.e. e_i <= Dd = THE BINDING), their phases cluster at t0 (|(v_i - Vmax)*t0 - k| <= Δφ = teeth clearance), and the size conditions Vmax <= 2δ*Vmax + Δφ + Dd*(δ/Vmax) <= 3/7 hold, THEN 1/14 <= Mreach v (the family is lonely). Instantiates ScaleSeparation.scale_separation_phase (THM-608) with C = List.ofFn v (the 13 speeds as the cluster), R = [] (single-scale), N = Vmax; the co-offsets e_i = Vmax - v_i enter as (v_i - Vmax) = -e_i in hphase/hdrift = the binding.
+- le_nearInt_of_forall_int helper: (forall m:Z, c <= |x-m|) => c <= nearInt x (the two nearest ints ⌊x⌋, ⌊x⌋+1 give fract, 1-fract). Bridges scale_separation_phase's C-conclusion (forall m, 1/14 <= |c*t-m|) to nearInt, then my S99b le_minReach_iff + Mreach_ge_of_lonely_instant => Mreach>=1/14.
+
+REGIME: this discharges hembed in the DRIFT-CONTROLLED regime Δφ + Dd*(δ/Vmax) <= 3/7 -- the LARGE-RULER / small-relative-spread / cluster-absorption (near-AP) case, where the slow-fast drift spread/Vmax is small. The good-period WINDOW (Vmax ~ 7spread/6 => drift ~ 6/7 saturates the 3/7 budget, forcing Δφ<=0) needs the density/equidistribution route (the fleet's remaining Part-A node). So: hembed is CONSTRUCTIVELY discharged for large Vmax; the tight window is the equidistribution residual.
+
+TRIPLE CONVERGENCE on the identity (all independent, same day): kps-S105 LRCSlowFast + klein-S204 LRCCriterionC (Mreach_ge_of_fastphase_clears) + opus-S176 LRCHembedIdentity -- all formalized nearInt((Vmax-e)*tau)=nearInt(frac(Vmax*tau)-frac(e*tau)), reducing Part A to equidistribution ρ_K->ρ*. My scale_separation route is the CONSTRUCTIVE complement (builds the tau via clustering, no equidistribution needed in the large-ruler regime).
+
+STATE: good-period leg = HasGoodPeriod=>Mreach>=1/14 modulo hembed; hembed now = [large-ruler: DONE constructively via scale_separation (kps-S106)] + [tight window Vmax~7spread/6: equidistribution ρ_K->ρ*, the shared node]. FILES: LRCHembedScaleSep.lean.
+
+NEXT: the equidistribution ρ_K->ρ* for the tight window (ThreeGapSampling.count_pos_of_measure_gt_card + arc bound), OR the rational-tau native_decide route (grid_margin_domination + rational_point_margin). Then hembed fully closes.
+
 ## opus-2026-07-09-S176 -- GROUNDED the shared blocker hembed (THM-527 Part A): TRUE, exact two-scale identity, the finite-Vmax "coupling" is ONLY the tooth wobble <= spread/Vmax => a FORMALIZATION gap not open analysis; core identity formalized (LRCHembedIdentity, kernel-pure) -- TRIPLE convergence with kps-S105 + klein-S204
 
 Prompt (owner): keep pushing the LRC math then formalization, pull often.
