@@ -1,3 +1,23 @@
+## kind-pasteur-2026-07-09-S99 -- LEAN ASSEMBLY: the good-period DICHOTOMY DISPATCH + the clearance BRIDGE core, over klein's concrete HasGoodPeriod predicate (LRCGoodPeriodDispatch.lean, sorry-free)
+
+Prompt (owner): work on the lean assembly of the finite pieces.
+
+STATE of the assembly: LRC14Assembly.lrc14_endgame reduces LRC(14) to [hfloor witness floor]+[hpartA reach] (sorry-free top). LRCEndgameAssembly reduces LRC(14) <= LRC(13) citation + hcomp (compressed covering families lonely). The good-period leg feeds hfloor/hcomp. klein's LRCGoodPeriodMaxgap has the CONCRETE decidable predicate HasGoodPeriod E Vmax := exists j, 7*maxCircGap > Vmax, with native_decide certs on the hard 7-structured clusters (worst7Struct_hasGoodPeriod @Vmax=91, and large-spread @458). But (a) the good-period DICHOTOMY (near-AP LEM-012 U dissociated LEM-013) was NOT assembled in Lean, and (b) the BRIDGE IsGoodPeriod => M(S)>=1/14 was ASSERTED ("THM-527 forces...") not proven.
+
+MY NODE (LRCGoodPeriodDispatch.lean, sorry-free, builds on LRCGoodPeriodMaxgap):
+- hasGoodPeriod_of_dichotomy: for k>=7, the two branches [k-6<=L => HasGoodPeriod] (LEM-012) and [L<=k-7 => HasGoodPeriod] (LEM-013) TILE all longest-AP L (k-7,k-6 consecutive) => HasGoodPeriod unconditionally. The exact surface the two lemmas discharge.
+- isGoodPeriod_clearance: the arithmetic HEART of the bridge -- IsGoodPeriod (7*maxCircGap>Vmax) => the half-gap (observer clearance) (maxCircGap)/(2 Vmax) > 1/14 (normalized). = "good period forces M(S)>=1/14".
+- gap_midpoint_clears: the geometric core -- the midpoint of an empty circular gap of length >1/7 clears both endpoints (the nearest phases) by >1/14 = the 1/14-loneliness witness.
+- example: klein's worst7Struct native_decide cluster feeds the dissociated branch (integration check).
+
+This ASSEMBLES the good-period leg's logic: dichotomy dispatch (finite pieces combine) + the clearance bridge klein left to cite. The analytic branch inputs (LEM-012/LEM-013) enter as hypotheses (honest); the LOGIC is proven.
+
+STATUS toward 100%: good-period cores now = mac-mini's 5 (J1) + klein's maxgap (native_decide hard clusters) + my AP/ArcCount/Egrid/Dispatch. The dispatch + clearance are the leg's glue. Remaining Lean surface = hfloor (witness/density floor census, native_decide) + hpartA (reach) + wiring HasGoodPeriod's maxCircGap clearance to the concrete Mreach/Lonely definitions (my gap_midpoint_clears is the abstract core of that last wire).
+
+FILES: LRCGoodPeriodDispatch.lean.
+
+NEXT: wire isGoodPeriod_clearance/gap_midpoint_clears to LRCGoodDilation's exists_lonely_of_goodRegion_pos (the concrete Lonely bridge); native_decide finite dissociated small-spread checks feeding LEM-013; the hfloor census assembly.
+
 ## klein-2026-07-09-S201 -- COMPLETELY-CLOSE-COVERING audit: the good-period leg does NOT cover the small-ruler corner; opus-S170 smooth-MEAN route REFUTED + LEM-012 hypothesis bug fixed (V>=Q+1). Existence is a MAX not a mean. NO gap (small-V = exact-check).
 
 Prompt (owner): work on completely closing the covering case.
