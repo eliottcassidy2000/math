@@ -1,0 +1,38 @@
+============================================================================================
+RIESZ push below 1: global-opt ratio int(M*R)/int(R) for hard LOOSE sets.  main = 13/7 = 1.857
+============================================================================================
+
+  S = {1..13}\{6} U {56} [LOOSE .0056]
+    D=    speeds13 (|D|=13): best ratio = 0.8778  <<< BELOW 1 (CERTIFIES LOOSE)
+    D=  speeds+lac (|D|=16): best ratio = 0.7952  <<< BELOW 1 (CERTIFIES LOOSE)
+    D=   lac-dense (|D|=10): best ratio = 0.9292  <<< BELOW 1 (CERTIFIES LOOSE)
+    => best over D: 0.7952  (CERTIFICATE FIRES)
+
+  S = {1..12} U {182}     [LOOSE .024] 
+    D=    speeds13 (|D|=13): best ratio = 0.7720  <<< BELOW 1 (CERTIFIES LOOSE)
+    D=  speeds+lac (|D|=16): best ratio = 0.2809  <<< BELOW 1 (CERTIFIES LOOSE)
+    D=   lac-dense (|D|=10): best ratio = 0.4579  <<< BELOW 1 (CERTIFIES LOOSE)
+    => best over D: 0.2809  (CERTIFICATE FIRES)
+
+  S = 7*{1..12} U {13}    [LOOSE .029] 
+    D=    speeds13 (|D|=13): best ratio = 0.7435  <<< BELOW 1 (CERTIFIES LOOSE)
+    D=  speeds+lac (|D|=16): best ratio = 0.4728  <<< BELOW 1 (CERTIFIES LOOSE)
+    D=   lac-dense (|D|=10): best ratio = 1.1364
+    => best over D: 0.4728  (CERTIFICATE FIRES)
+
+  S = {1..13}             [TIGHT lm=0] 
+    D=    speeds13 (|D|=13): best ratio = 1.0024
+    D=  speeds+lac (|D|=16): best ratio = 1.0011
+    D=   lac-dense (|D|=10): best ratio = 1.0407
+    => best over D: 1.0011  (still >= 1)
+
+  S = 2*{1..13}           [TIGHT lm=0] 
+    D=    speeds13 (|D|=13): best ratio = 1.0024
+    D=  speeds+lac (|D|=16): best ratio = 1.0016
+    D=   lac-dense (|D|=10): best ratio = 1.0516
+    => best over D: 1.0016  (still >= 1)
+
+  READING: ratio<1 on a LOOSE set = the Riesz method firing (constructive looseness). The TIGHT
+  set must stay >=1 (validity). If global-opt also stalls >1, the <1 bar genuinely needs the
+  structured dissociated+hypercontractive construction (Bedert 2025), not generic optimization.
+============================================================================================

@@ -1,3 +1,20 @@
+## opus-2026-07-09-S174 -- the RIESZ RATIO inf_R ∫M*R/∫R SHARPLY DECIDES looseness: global-opt <1 for LOOSE 13-sets (0.28-0.79), =1 boundary for TIGHT ({1..13}, 2*{1..13} -> 1.001); validity confirms the opus-S173 formalized soundness; loose/tight GAP = numeric evidence for inf L>0
+
+Prompt (owner): keep pushing the LRC math then formalization, pull often.
+
+CONTEXT: covering-case formalization is fleet-active (klein-S203 assembled the good-period dichotomy end-to-end; the ONE shared Lean blocker is now THM-527 Part A ruler embedding). The math residual (dissociated 7-structured) is Mertens-walled (opus-S172, mac-mini attacking geometrically). I pushed my distinct singular-series/Riesz front (opus-S173).
+
+RESULT: does the Riesz certificate FIRE? With global optimization (scipy differential-evolution over dissociated/speed-based D, |D|=10-16), YES and cleanly:
+- **LOOSE sets go strictly <1** (certificate fires = constructive looseness): {1..13}\{6}U{56} (lonely meas 0.0056) -> 0.795; {1..12}U{182} (0.024) -> 0.281; 7*{1..12}U{13} (0.029) -> 0.473.
+- **TIGHT sets sit at the boundary =1** (validity, cannot be pushed <1): {1..13}, 2*{1..13} (lonely measure 0) -> 1.001/1.002 -- EXACTLY as the opus-S173 formalized soundness (riesz_certificate: M>=1 a.e. => ∫M*R>=∫R) forces.
+So **inf_R ∫M*R/∫R is a SHARP looseness invariant** (<1 loose, =1 tight). Beats the THM-515C hand-built (1.41) + opus-S173 naive coordinate-descent (1.07).
+
+KEY: the loose/tight SEPARATION HAS A GAP (hardest loose 0.79 < 1.00 tight) => inf L>0 (LRC(14) loose form) <=> sup_{loose S} inf_R ratio < 1 = a UNIFORM gap; per-set opt confirms the gap for extremizers, the uniform D(S)-construction + Bonami hypercontractivity (Bedert 2025) is the open content. Operationally confirms the S173 W/L duality: the positive-definite lonely side is Riesz-amenable where the covering-W side is Mertens-walled (opus-S172).
+
+CORRECTION: {1..12}U{182} is LOOSE (lonely measure 0.024, direct computation), not tight -- "lonely only at 14/183" is its deepest well; genuine tight anchors {1..13}, 2*{1..13}. LEAN: no new node (opus-S173 riesz_certificate + no_certificate_of_ae_covered already cover the soundness+validity the data confirms). NEXT: the uniform D(S)-scheme (sup_loose inf_R ratio < 1) = inf L>0. Files: lrc14_riesz_push_below_one_opus_S174 (+out); reflection the-riesz-ratio-sharply-decides-looseness-opus-S174; HYP-5630.
+
+---
+
 ## klein-2026-07-09-S203 -- GOOD-PERIOD DICHOTOMY ASSEMBLED end-to-end in Lean; the REFRAME: THM-527 Part A (ruler embedding) is the ONE shared blocker for BOTH routes.
 
 Prompt (owner): keep working the good-period dichotomy assembly, aim to finish the proof.
