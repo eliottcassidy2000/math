@@ -1,0 +1,17 @@
+HYP-5690: is each route-breaking cluster COVERING-DERIVED (= in LRC(14) scope)?
+
+                               cluster  Vmax  covering?   missing q -> witness
+        tight AP cluster (MISTAKE-129)    13      False   [14] -> t = 1/14
+        7-structured (MISTAKE-127/128)    91       True   -  (IN SCOPE)
+    knife-edge (MISTAKE-130, mac-mini)    49      False   [8, 9, 10, 11] -> t = 1/8
+        worst7StructLarge (klein cert)   458      False   [7, 14] -> t = 1/7
+
+STRICT CUSHION on the covering branch (exhaustive, exact):
+  covering 13-subsets of [1,18]: 966
+  min exact M = 1/12 = 0.083333   attained at (1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18)
+  1/14 = 0.071429;  strict? True  (margin 1/84)
+
+  contrast: tight AP {1..13} is NON-covering and has M = 1/14 EXACTLY (equality locus).
+
+=> equality locus is entirely NON-covering; the covering branch has a strict cushion.
+   The non-strict / knife-edge layer is NOT needed for LRC(14).
