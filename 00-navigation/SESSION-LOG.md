@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-09-S92 -- CAPSTONE (finish math): the a-priori ABSOLUTE bound for |Corr_N| is ~20x too lossy => cancellation ESSENTIAL, target = near-resonance count; + FORMALIZE the AP good-period lemma in Lean (builds sorry-free)
+
+Prompt (owner): pursue the natural next steps, work to finish up the math then formalize.
+
+MATH (the capstone = opus-S165's single inequality |Corr_N| < N(6/7)^k at N=ceil(7(k-1)/6), my S90 partial-sum route sharpened):
+- COMPUTED the a-priori ABSOLUTE bound Sum_{n!=0}|W-hat(n)|*min(N, 1/2||n.e/Vmax||) (via klein-S194 LEM-011 exact W-hat, support<=3, |n_i|<=6) vs the target N(6/7)^k. RESULT: absBound/target ~= 19.8 (dissoc/near-AP/random all ~20), while the SIGNED r_N = 0.08-0.26. So the ABSOLUTE (L^1) route is HOPELESS (~20x too lossy); the CANCELLATION is essential -- confirms klein-S194's "does not by itself give the uniform bound" + opus-S154's L^2-not-L^1 wall. 
+- The a-priori target is therefore the NEAR-RESONANCE count (mac-mini-S61's decomposition: Corr_N dominated by near-resonances ~0.02-0.08), = the small-support near-additive-relations n.e ~= 0 mod Vmax, = the longest-AP/additive-energy resonance structure (kps-S90). REDIRECTS the last-mile effort OFF the absolute |W-hat| bound and ONTO the near-resonance count (bounded for non-AP by the longest-AP cap).
+
+FORMALIZE (the Lean): NEW node TournamentH7/LRCGoodPeriodAP.lean -- good_period_AP: a k-term AP of phases 0,θ,..,(k-1)θ with span (k-1)θ<6/7 leaves a gap 1-(k-1)θ>1/7 (a good period). This is LEM-010's AP case (the extremal/tight instance, cited throughout; the engine of klein-S196 LEM-012's near-AP branch). Builds sorry-free (lake, 16s), companion to mac-mini's LRCGoodPeriodJ1 (j1-wraparound + good-gap core + my partial-sum reduction). + example (k=13, step 1/16).
+
+STATE: LRC(14) covering = [density floor CLOSED] + [good-period: near-AP LEM-012 proved, dissociated j*<=5, r_N<1 VERIFIED (max 0.84) modulo the a-priori near-resonance-count bound] + [Lean: my D3 floor + AP good-period + mac-mini's spine]. The single hard analytic core = the near-resonance count (cancellation), NOT the absolute bound.
+
+FILES: lrc14_capstone_corr_absbound_kps_S92.py; LRCGoodPeriodAP.lean.
+
+NEXT: bound the near-resonance count a-priori for non-AP (longest-AP<=k-6 dissociated) => closes r_N<1; continue Lean (Dirichlet pigeonhole node, D3 exhaustive).
+
 ## opus-2026-07-09-S166 -- (math) the good-period capstone = TWO OPPOSITE-mechanism branches (concentrate/near-AP DONE vs spread/dissociated analytic); (lean) muGood_affine PROVED kernel-pure (the WLOG-normalize primitive, completes the dilation-invariance formalization)
 
 Prompt (owner): pursue the natural next steps, finish the math then formalize.
