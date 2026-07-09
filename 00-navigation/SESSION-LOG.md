@@ -362,6 +362,45 @@ NOVEL WORK DISCOVERED (repo-scout, for the owner): density floor = Cohn-Elkies L
 FILES: lrc14_{R_vs_energy,R_kissing,smooth_alpha2}_kps_S97.py(+.out); reflection the-egrid-residual-is-poisson-summation-and-its-kissing-number-kps-S97.md; HYP-5567 updated.
 
 NEXT: (a) explicit c in |R|<=c*kissing (sum LEM-011 shells); (b) grid-lattice AP-max-kissing (extend mac-mini-S25 to L_V); (c) this = Cohn-Elkies magic function on X0(14) -- the Viazovska-style route. Fleet: existence has THREE converging closures (LEM-013 exhaustive+adversarial, opus-S170 smooth alpha=2, my E_grid kissing) -- covering leg robust.
+## mac-mini-2026-07-09-S64 (FINAL PART) -- SELF-RETRACTION (MISTAKE-130) + an EXACT counterexample that refutes hembed's natural embedding: a GOOD PERIOD does NOT certify loneliness at that j
+
+Two results, one negative about my own work, one negative about the fleet's remaining blocker. Both exact.
+
+**(A) RETRACTED my own dissociated closure (MISTAKE-130, self-caught).** The "widest-arc pigeonhole
+closes the dissociated branch (min maxIntG*spread=1.709~12/7)" claim (commit 04d414f80, messaged
+klein+opus) is FALSE, twice over: (1) the 12/7 arc is the TWO-SIDED 0-neighbourhood (maxgap=1-s|x|),
+CENTERED AT THE EXCLUDED PERIOD j=0 -- so it IS the j=1 compressed regime and says nothing about the
+wide regime; the knife-edge {0..42}@49 has maxIntG*s=12/7 too yet has NO strict good period (its arc
+endpoints land exactly on +-1/V). Hence "maxIntG>=1/V => strict good period" is FALSE. (2) uniform
+grids CANNOT measure maxIntG: G is cut out by a STRICT inequality whose boundary maxgap=1/7 is attained
+at rationals (measure-zero pinches invisible to every grid), so the 117k search over-merged arcs.
+Broadcast retraction + MISTAKE-130 filed. SURVIVES: the non-strict criterion/knife-edge, the
+spread-vs-6V/7 dichotomy, LRCGoodPeriodNonStrict.lean. Wide regime = OPEN.
+
+**(B) hembed's natural embedding is REFUTED (exact, no grids).** Fleet state: klein-S204/opus-S175
+discharged hlink; kps-S105 flagged that hembed omits the binding v_i=Vmax-e_i and warned about drift.
+The warning is right and STRONGER than stated. Slow-fast identity (verified exactly):
+   nearInt(v_i*tau) = nearInt(phi*(v_i/Vmax) - c_i),  tau=(j+phi)/Vmax,  c_i = teeth
+NOT nearInt(phi - c_i); the difference is the drift e_i*phi/Vmax = O(spread/Vmax) = O(1) in the
+good-period window. COUNTEREXAMPLE (worst7Struct, Vmax=91, v_i=91-e_i), exact rationals via
+concave-piece pairwise-crossing enumeration:
+   j=5  (7*maxCircGap=126 > 91, a COMFORTABLE good period): exact max_phi minReach = 3/43 < 1/14
+   j=10 (105 > 91): 2/31 < 1/14      j=11 (98 > 91): 1/23 < 1/14      [j=2: 1/11 >= 1/14, lonely]
+=> "good period at j => exists phi with minReach((j+phi)/Vmax) >= 1/14" is FALSE, even for a wide
+teeth-gap. hembed CANNOT be discharged at the antecedent's own (j,phi). Its implication may still hold
+(its conclusion IS LRC14(v), witnessed at a DISTANT j=25, minReach=0.2306) -- but that is circular.
+FLAGGED to fleet: this is likely why THM-527 Part A uses theta=2/7 (a 2/7 gap leaves margin 1/7, room
+for drift). Architectural tension for the owners of THM-530/663: 2/7 has a valid local bridge but ZERO
+uniform floor (THM-530 refuted it); 1/7 has a positive floor (m_P) but its bridge is the ASSUMED
+THM-527/kps-S4 step -- exactly where my counterexample lands. NOT claiming THM-663 is dead; flagging.
+
+**(C) Lean hygiene.** Removed my LRCSortedGap.lean: superseded by klein's goodPeriod_intFreeGap AND
+broken (used List.Sorted, absent from this Mathlib; committed build-pending during a sandbox outage).
+Lesson recorded: never commit unbuilt Lean, even standalone.
+
+Files: lrc14_hembed_drift_counterexample_macmini_S64.{py,out}; MISTAKE-130; retraction banner in
+reflection the-good-period-is-the-grid-hitting-the-widest-arc-macmini-S64.
+
 ## mac-mini-2026-07-09-S64 -- NON-STRICT criterion DISSOLVES the 7-structured hardness: dissociated tight case = wraparound boundary spread=6V/7 (j=1, maxgap=1/7 EXACTLY); + Z/7 reframe, first-moment ruled out, kps-S97 kissing stress-tested
 
 Prompt (owner): creative angles on the mu-floor + past-work connections; then "continue + extend the ideas incoming from other agents"; then "keep working the handoff, think R0-signed/R_grid-absolute split"; then "work the handoffs, pull often, synthesize, develop new directions."
