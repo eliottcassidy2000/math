@@ -1,3 +1,28 @@
+## klein-2026-07-09-S205 -- THE OBSERVER'S TOOTH IS AN ANCHOR: drift-absorbed ruler embedding FORMALIZED (LRCDriftEmbed, sorry-free kernel-pure) -- discharges hembed for Vmax>1.41*spread, WITH the e=Vmax-v binding kps-S105 flagged missing; residual = bounded finite-check window
+
+Prompt (owner): work toward the finish target creatively; mine past threads for tangentially related concepts.
+
+The finish target (S204) = criterion-C's REALIZATION. Triple convergence (klein-S204/kps-S105/opus-S176) reduced it to the "tooth wobble". I turned that into a PROVED, FORMALIZED embedding + found the structure that makes the wobble small.
+
+**THE EMBEDDING (LRCDriftEmbed.lean, sorry-free, kernel-pure).** Put tau=(j+phi)/Vmax with j:Z, phi in [0,1) => frac(Vmax*tau)=phi is FREE. With the binding v_i=Vmax-e_i:
+    v_i*tau = (phi - t_i - d_i) + j,   t_i = e_i*j/Vmax (tooth),  d_i = e_i*phi/Vmax (DRIFT).
+Placing phi at the midpoint of a tooth-free gap (a,a+g) subset [0,1] gives margin g/2; the drift eats |d_i|. Via nearInt's forall-n characterization (kps-S31 GapReach) this is a plain TRIANGLE INEQUALITY -- no Lipschitz needed:
+    g > 1/7 + 2*spread*phi/Vmax  =>  minReach(v, (j+a+g/2)/Vmax) >= 1/14   [minReach_ge_of_driftGap, Mreach_ge_of_driftGap].
+It CARRIES the e_i=Vmax-v_i BINDING -- the omission @kps-S105 correctly flagged in my S203/S204 abstract hembed (unbound it is FALSE: pick E unrelated to v). Fixed.
+
+**THE CREATIVE HALF (two things the coarse |d_i|<=spread/Vmax bound hides).**
+(1) The drift is PHI-PROPORTIONAL, exactly e_i*phi/Vmax. Low fast phases drift less, linearly.
+(2) THE ANCHOR: the observer is the runner v=Vmax, so its co-offset is e_0=Vmax-Vmax=0; its tooth sits at c_0=0 for EVERY j and NEVER DRIFTS (d_0=0). So 0 is a permanent tooth and the gap above it starts at a=0 -- the lowest, least-drifting placement. The observer's own safety forces phi>=1/14, so the least achievable drift is spread/(14*Vmax) -- a 14x FLOOR below spread/Vmax.
+VERIFIED: the anchor gap WINS in every tested cluster (a=0.0000, g=1/2, phi=1/4); threshold drops 3.5*spread -> 1.41*spread (2.4x); constructed tau gives minReach>=1/14 in 100% of cases (soundness of the Lean conclusion). The realized gain is 2.4x not 14x because the winning anchor gap has g=1/2 (phi=1/4); 14x is the floor.
+
+**HONEST SCOPE.** 1.41 > 7/6=1.167, so the embed does NOT reach the hard regime. It delivers the complementary (and for THM-527 the RELEVANT) half: under the bounded-spread COMPACT REDUCTION (THM-527's own title) Vmax->inf with spread bounded, so Vmax>1.41*spread eventually holds. Residual hembed corner = the BOUNDED window Vmax in (spread, 1.41*spread] -- a finite check, corroborating @kps-S105/@opus-S176's "formalization gap not open analysis" and sharpening their V*<=234/1106/3^12 to an explicit ceil(1.41*spread).
+
+**MINED THREADS.** scale_separation_phase (fast phase pinned at 1/2; its condition fails exactly at spread=6Vmax/7 = mac-mini's knife-edge) -- my embed is its GAP-CENTRED generalization (arbitrary phi), which is what lets the anchor's low phi be exploited. mac-mini's "0-neighbourhood arc" IS the anchor gap -- its geometric cause is now named (e_0=0 pins a tooth at the origin forever). The 13-comb Eisenstein resonance (t*=14/183, phase spread tiny despite huge speed spread) is the dual phenomenon: here the DRIFT is tiny despite huge spread because phi (not spread) is the small factor.
+
+FILES: LRCDriftEmbed.lean (built sorry-free kernel-pure); lrc14_{drift_embed_verify,drift_optimal_gap}_klein_S205.py(+outs); reflection the-observer-tooth-is-the-anchor-drift-absorbed-embed-klein-S205.
+
+NEXT: the bounded corner Vmax in (spread, 1.41*spread] (finite check / native_decide) -- which for the good-period leg IS the whole hard regime. That is where the covering case's realization now lives.
+
 ## opus-2026-07-09-S177 -- GRID-INVISIBLE PINCHES = LEMNISCATE NODES = the LRC extremal (M=1/14): they broke the widest-arc route (mac-mini MISTAKE-130) because they live on the CLOSED/non-strict good set, grid-unmeasurable on the open one -- demonstrated + out-of-box CM synthesis (owner's lemniscate prompt)
 
 Prompt (owner): keep pushing LRC math then formalization, pull often; consider how grid-invisible pinches relate to the lemniscate of Bernoulli; get abstract/out-of-box.
