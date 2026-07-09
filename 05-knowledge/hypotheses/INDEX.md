@@ -13262,7 +13262,7 @@ lrc_mu17_apmin_all_k _deathstar_S1 (+outs).
 - **Artifacts:** 04-computation/lrc14_jstar_{longestAP,uniform,partialsum}_kps_S90.py.
 - **Depends on / relates to:** opus-S164 (HYP-5497, dichotomy + longest-AP decomposition), mac-mini THM-664 (Weyl first-moment, E_grid[W]) + LEM-010 (j*), klein-S194 LEM-011 (exact 𝒲̂ / a-priori decay), kps-S90 (arc-count interlock, HYP-5487).
 
-## HYP-5527 (kps-2026-07-09-S93) — the capstone's resonant/non-resonant split: the Mertens wall is exactly the part the elementary routes avoid — CHARACTERIZATION (verified)
+## HYP-5527 (kps-2026-07-09-S93; CO-DISCOVERY with opus-S167 who pushed 5527 first — this entry = the exact-split refinement, opus's = the Mertens-hardness framing; same object) — the capstone's resonant/non-resonant split: the Mertens wall is exactly the part the elementary routes avoid — CHARACTERIZATION (verified)
 **Status:** VERIFIED decomposition (exact identity + numerics k=11,12,13). Not a conjecture; a structural map of the last analytic mile.
 **Claim.** `Corr_N = N·(E_grid[W]−(6/7)^k) + NR`, where the first term = `N ×` THM-664's grid residual (the density-floor object, CLOSED) and `NR = Σ_{n≠0,Vmax∤n·e}𝒲̂(n)D_N(θ_n)` is the non-resonant oscillatory remainder.
 **Findings.**

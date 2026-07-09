@@ -1,3 +1,20 @@
+## kind-pasteur-2026-07-09-S94 -- CRITICAL PATH: mac-mini's Route-(c) `c>=D3` sliver is a SUFFICIENT-CERTIFICATE ARTIFACT, not a covering-leg gap -- dissociated good-period EXISTENCE holds directly with uniform margin >=1.105 (LEM-013)
+
+Prompt (owner): work the critical path.
+
+THE RESIDUAL I ATTACKED: the dissociated branch (longest-AP<=k-7) of THM-527-A closes by mac-mini-S61 Route-(c) `c:=#arcs/spread < D3(E)` -- but at k=13 it has ONE sampled failure (small-spread sliver, spread~80: c=0.675>=D3=0.659), deferred to "the finite check". Two things un-rigorous: #arcs was grid-SAMPLED (not exact), and c<D3 is only SUFFICIENT.
+
+THE DECISIVE DIAGNOSTIC: skip the c>=D3 proxy; DIRECTLY test good-period EXISTENCE (exists j: 7*maxgap{e_i j mod Vmax} > Vmax) across the critical ruler window Vmax in [s+1, floor(7s/6)] (the ONLY hard window -- below it j=1 wraparound is good, LEM-010(i)). RESULT = LEM-013 (VERIFIED):
+- EXHAUSTIVE spread s<=22: **621,455 primitive dissociated (L<=7) clusters, ZERO existence failures, min margin 7*maxgap/Vmax = 1.1053 = 21/19** (a clean integer near-miss: maxgap=3 > 19/7 at Vmax=19). Pure L<=6: 569,255 clusters, same min 1.1053.
+- ADVERSARIAL min-margin hill-climb (trying to BREAK it): s in [21,49] min 1.355 (s=27); s in [50,200] min 1.717 -> 2.31, **monotone INCREASING in spread**.
+- The margin is MINIMIZED at small spread = exactly the exhaustively-checkable regime. Grows with spread.
+
+PAYOFF: mac-mini's single c>=D3 failure is NOT a gap in the covering leg -- it's a region where the CERTIFICATE is loose while EXISTENCE is comfortable (margin >=1.10). The dissociated branch closes as [c<D3 a-priori for spread>=S1 (mac-mini)] U [existence directly, mu>=1.105, for spread<=S1] -- small half exhaustive (s<=22), intermediate band adversarially margin-robust (mu>=1.355). Remaining to be fully closed-form: extend exhaustion OR a clean a-priori mu>1 on the band s in [22,~100] -- NOT a genuine risk.
+
+FILES: LEM-013; lrc14_{direct_existence,sliver_adversarial,sliver_midband,exhaustive_s22}_kps_S94.py (+.out). Also reconciled HYP-5527 collision (opus-S167 pushed first; relabeled my S93 entry as co-discovery).
+
+NEXT: (opt) push exhaustion to s<=25 (2.5M clusters, background) to shrink the adversarial-only band; a clean a-priori mu>1 bound would fully close the branch. mac-mini/klein: fold LEM-013 into LEM-012 Route-(c) as the sliver resolution.
+
 ## opus-2026-07-09-S168 -- dissociated branch closes by ARC-COUNT (#arcs SUBLINEAR in spread, ~spread^0.92 => c=#arcs/spread->0 << rho*~0.96); the two branches ARE the two BROKEN-CLOCK regimes; caught + corrected a transient regime error
 
 Prompt (owner): deprioritize the Mertens-hard signed-r_N a-priori; finish the dissociated branch via arc-count and D3_inf^{(L)} (both a-priori, big margin), crossover at L~10 matching the LEM-012 boundary; + a BROKEN-CLOCK insight ("stopped clock right twice a day, correct-rate clock ~0 times... they relate to the LRC").
