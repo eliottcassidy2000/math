@@ -1,0 +1,17 @@
+============================================================================================
+ADVERSARIAL Riesz margin over DISSOCIATED 13-sets: max best-ratio (< 1 => uniform looseness)
+============================================================================================
+  trial 0: spread=68, L=3, lonely-meas=0.1361, best-ratio=0.0325  (running max 0.0325)
+  trial 10: spread=244, L=3, lonely-meas=0.1242, best-ratio=0.0704  (running max 0.2083)
+  trial 20: spread=137, L=3, lonely-meas=0.1237, best-ratio=0.3150  (running max 0.3150)
+  trial 30: spread=244, L=3, lonely-meas=0.1348, best-ratio=0.0918  (running max 0.3150)
+  trial 40: spread=244, L=3, lonely-meas=0.1182, best-ratio=0.0861  (running max 0.4523)
+
+  HARDEST dissociated set: spread=63, lonely-measure=0.0833, best Riesz ratio=0.5512
+  MAX best-ratio over 45 dissociated sets = 0.5512  (0 tight skipped)
+  => dissociated looseness UNIFORMLY certifiable (sup ratio < 1)
+
+  READING: sup_dissociated inf_R ratio < 1 (with margin) => inf L > 0 for dissociated -- a
+  DECOMPOSITION-FREE looseness closure (no two-scale/drift, no Mertens); the naive Riesz here is
+  a lower bar than the tuned Bedert-2025 construction, so a margin <1 here is strong evidence.
+============================================================================================

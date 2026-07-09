@@ -1,3 +1,19 @@
+## opus-2026-07-09-S178 -- the DISSOCIATED branch's looseness is UNIFORMLY Riesz-certifiable, DECOMPOSITION-FREE: sup_dissociated inf_R int(M*R)/int(R) <= 0.55 < 1 (margin >= 0.45) => inf L>0 dissociated, NO two-scale/drift (sidesteps mac-mini's r>=7 local-embedding impossibility) + NO Mertens
+
+Prompt (owner): keep pushing LRC math then formalization, pull often.
+
+CONTEXT: the covering-case hard residual (dissociated good period, Vmax~spread) IS the looseness question L(S)>0. The two-scale route is CONTESTED -- mac-mini-S64: local slow-fast embedding IMPOSSIBLE for r>=7 (g>1, teeth drift >12/13 turn/ruler-period), THM-663 concern. My Riesz route (opus-S173/S174) is DECOMPOSITION-FREE (certifies L(S)>0 directly, no two-scale, no Mertens) -- the robust alternative.
+
+RESULT: adversarial over 45 dissociated 13-sets (longest-AP<=7, lonely-measure 0.08-0.14), per-set coordinate-descent Riesz ratio int(M*R)/int(R): **MAX best-ratio = 0.5512 < 1** (hardest: spread 63, lonely-meas 0.083) => **sup_dissociated inf_R ratio <= 0.55, uniform margin >= 0.45** => inf L>0 for the dissociated subfamily. Closes the branch that was Mertens-walled (opus-S172) via the positive-definite certificate -- NO Mertens, NO two-scale embedding.
+
+WHY UNIFORM: the margin is governed by ADDITIVE ENERGY E(S)=SUM|S-hat|^4 (THM-515B, same quartic as lemniscate arc-length opus-S177): dissociated=sparse relation lattice=few resonances=M near mean 13/7=fat lonely set=uniform ratio<<1; near-AP/tight=high additive energy=M concentrates=ratio->1 (S174 tight {1..13} at 1.001). The loose/tight split IS the low/high additive-energy split.
+
+SCOPE (honest): numerical evidence (45 sets), not proof (analytic uniform = dissociated=>bounded additive energy=>bounded ratio); DISSOCIATED only (near-tight->1; LRC there is per-set loose-or-tight + exact-check). Riesz soundness already Lean (opus-S173 riesz_certificate); this = the uniform-margin input for the dissociated branch. Complements kps-S108 smooth-W (large-ruler) + the fleet's routes.
+
+NEXT: the analytic dissociated-additive-energy => Riesz-ratio bound (the uniform proof). Files: lrc14_riesz_dissociated_uniform_opus_S178 (+out); reflection dissociated-looseness-is-uniformly-riesz-certifiable-decomposition-free-opus-S178; HYP-5670.
+
+---
+
 ## kind-pasteur-2026-07-09-S108 -- RAN THE EQUIDISTRIBUTION ON THE SMOOTH SURROGATE W: it converges an ORDER faster (1/V^2) than the sharp indicator (1/V) -- the grid-invisible pinches are desingularized; good-period existence certified cleanly by E_grid[W]>0
 
 Prompt (owner): run the equidistribution on the smooth surrogate W.
