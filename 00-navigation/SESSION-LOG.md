@@ -57,6 +57,23 @@ LEMNISCATE reflection (honest: inspiration not tool): 2nd-moment (real cue, form
 FILES: LRCArcCountExistence.lean; lrc14_{avgmaxgap_apriori,exhaustive_s24}_kps_S95.py(+.out); reflection the-lemniscate-and-the-second-moment-of-gaps-kps-S95.md; HYP-5547; LEM-013 updated.
 
 NEXT: the genuine a-priori closure of the band still wants either exhaustion past s~25 (infeasible naively) or an independent lower bound on avg maxgap (= the arc-count/rho* route, opus/mac-mini own it). Lean: wire the cited hypotheses to mac-mini's good_gap core.
+## opus-2026-07-09-S169 -- arc-count good-period route made partly A-PRIORI/LEAN: PIGEONHOLE HEART formalized kernel-pure; closing inequality is the rho*-pigeonhole NOT c<D3; #arcs<=c.spread is the one open item; LEMNISCATE node = collision = exact resonance (CONVERGES with kps-S94/LEM-013)
+
+Prompt (owner): make bounded-arc-count + c<D3 fully a-priori/Lean; consider the lemniscate (x^2+y^2)^2=x^2-y^2 as a strange source of inspiration.
+
+1. **LEAN: the PIGEONHOLE HEART formalized (kernel-pure, built 8476 jobs).** TournamentH7.LRCArcCount, [propext,Classical.choice,Quot.sound]: good_period_of_arccount (union of N good arcs, total length >N/V => a grid point j/V is Good = a good period); exists_gridpoint_Ico (interval longer than 1/V catches j/V, via Int.ceil); exists_long_Ico (N intervals summing >N/V => one exceeds 1/V); arccount_le_of_no_good_period (contrapositive = the tight-AP obstruction). The REDUCTION [rho*>=D3 + #arcs<=c.spread => good period] is now UNCONDITIONAL Lean; the two inputs enter as hypotheses. What was mac-mini-S58's informal measure/pigeonhole hand-wave is a checked theorem.
+
+2. **TARGET SHARPENED + de-risked (dissociated longest-AP<=k-6, k=11/13, spread 40-1280).** The correct closing inequality is the rho*-pigeonhole (i) #arcs<rho*(spread+1) -- UNIVERSAL, huge margin (c~.04-.7 vs rho*~.94-.998). mac-mini's (ii) c<D3 FAILS at small spread (k=13 spread=40: c=.70>D3=.59, needs the spread<200 carve-out). (iii) min-arc-length route DEAD (min-arc*spread .29->.008). So use rho* directly, NOT D3.
+
+3. **ONE OPEN ITEM, crisp.** #arcs<=c.spread with c<rho*; trivial a-priori #arcs<=2sum|e_i-e_j|=O(k^2 spread) is 200-1300x too loose (c=O(k^2)~121); truth #arcs~spread^0.92 (opus-S168), c->0. The near-tangential 1/7-crossings (short arcs) are the obstruction.
+
+4. **LEMNISCATE (owner).** The node = collision (e_i-e_j)x in Z = maxgap breakpoint = measure-zero exact resonance (S168 clock) = arc boundary -- ONE object, FOUR views. The elliptic arc-length reparam DESINGULARIZES the near-tangential 1/7-crossings into transversal ones -- #arcs is reparam-invariant (topological) but becomes countable-by-crossings there = the concrete lead for the open bound. Do NOT use Euclidean lemniscate distance (breaks LRC, non-isometric).
+
+5. **CONVERGENCE with kps-S94/LEM-013 (same day, independent).** kps hit the SAME c>=D3 sliver (k=13: c=0.675>=D3=0.659) and resolved it exactly as my (i) predicts -- test EXISTENCE directly: exhaustive s<=22 (621,455 clusters, ZERO failures, min margin 1.1053=21/19), margin INCREASES with spread. My good_period_of_arccount is the Lean-checked reduction behind LEM-013's existence; my #arcs~spread^0.92 is the mechanism behind kps's margin-grows-with-spread. Together: [Lean reduction] + [kps inputs verified] = the branch (modulo a clean a-priori mu>1 on s in [22,~100], kps: "not a genuine risk").
+
+NEXT: fold LEM-013 into the Lean (instantiate good_period_of_arccount's hypotheses from kps's exhaustion + the spread^0.92 bound); the a-priori #arcs<=c.spread via lemniscate desingularization is the sole remaining analytic item. Files: lrc14_arccount_apriori_target_opus_S169 (+out), LRCArcCount.lean; reflection the-lemniscate-node-is-the-collision-and-the-arc-count-pigeonhole-opus-S169; HYP-5547.
+
+---
 
 ## kind-pasteur-2026-07-09-S94 -- CRITICAL PATH: mac-mini's Route-(c) `c>=D3` sliver is a SUFFICIENT-CERTIFICATE ARTIFACT, not a covering-leg gap -- dissociated good-period EXISTENCE holds directly with uniform margin >=1.105 (LEM-013)
 

@@ -1,0 +1,27 @@
+====================================================================================================
+A-PRIORI TARGET for bounded-arc-count on the DISSOCIATED branch (longest-AP<=k-6)
+====================================================================================================
+
+  k=11 (dissociated = longest-AP <= 5):
+   spread  #arcs   rho*     D3  c=#/spr (i)#<rho(spr+1)  (ii)c<D3 (iii)minL*spr trivBnd/#arcs
+       40     10  0.974  0.761   0.2500             YES       YES         0.292           804x
+       80     12  0.994  0.822   0.1500             YES       YES         0.033           985x
+      160     20  0.995  0.822   0.1250             YES       YES         0.042          1322x
+      320     22  0.997  0.846   0.0688             YES       YES         0.025          1202x
+      640     50  0.997  0.833   0.0781             YES       YES         0.017          1018x
+     1280     80  0.998  0.855   0.0625             YES       YES         0.008          1107x
+
+  k=13 (dissociated = longest-AP <= 7):
+   spread  #arcs   rho*     D3  c=#/spr (i)#<rho(spr+1)  (ii)c<D3 (iii)minL*spr trivBnd/#arcs
+       40     28  0.940  0.590   0.7000             YES        NO         0.067           184x
+       80     48  0.932  0.649   0.6000             YES       YES         0.017           264x
+      160     56  0.983  0.731   0.3500             YES       YES         0.008           254x
+      320    118  0.983  0.769   0.3688             YES       YES         0.008           252x
+      640    194  0.985  0.770   0.3031             YES       YES         0.008           249x
+     1280    332  0.988  0.771   0.2594             YES       YES         0.008           269x
+
+  READING: (i) pigeonhole #arcs<rho*(spread+1) => good period EXISTS -- the target.
+           (ii) mac-mini c<D3 (cleaner, exact+dilation-invariant). (iii) min-arc*spread:
+           if bounded below by const>0 then #arcs<=rho*/minL=O(spread) with GOOD constant.
+           trivBnd/#arcs = how loose the trivial O(k^2 spread) a-priori bound is (the GAP).
+====================================================================================================
