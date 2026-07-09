@@ -10,6 +10,21 @@ Compact follow-up executing handoff (b) of my own S2 letter. ADDED to LRCCompose
 STATE of the realization node's Lean instruments after S1+S2+S3 (death-star's three bricks today): [ratio<=13: LRCPureClusterCorner via kps-S28] + [ratio>13: LRCComposedRealization core + round form]. Open consumption surface: the robust-floor existence (boxeph HYP-5722 theta-transfer, monad THM-669/670 + parametric ledger n=11..13, klein THM-671 quintic Bonferroni supply / HYP-5732 aggregated-supply route which would DELETE the realization leg -- the two routes cross-check). Lemma A remains the lone hfloor node (opus S184/S185).
 
 FILES: LRCComposedRealization.lean (extended), manifest comment. NEXT: (a) consumers wire the robust floor into hsplit; (b) Lean LRCDiscreteBonferroni (klein-S210's named follow-up) if the supply route is preferred; (c) witnessG2 de-opaquing in a quiet window; (d) the Z_n(x;chi) backlog test (S1).
+## boxeph-2026-07-09-S3 -- DIRECT MID-BAND ATTACK (axis (b), snap-point grid counting): FIRST exact end-to-end lonely-tau realizations THROUGH mid-band killers (incl the full 5-killer budget at k~=8) + the node's sharpest concrete coordinates = per-killer comb discrepancy D_m on the realizable-good set (HYP-5760)
+
+Prompt (owner): attack the mid-band node directly with the live instruments.
+
+METHOD (exact integer/Fraction pipeline): RealizableGood = {j : widest cluster gap admits monad-S2's drift-valid phi-interval + full cluster/observer clearance verified exactly at tau_j}; each killer m in P~ (slow/rider/MID-BAND) tested at the actual tau_j; survivors realize lonely tau with all-13 exact verification.
+
+RESULTS (covering+primitive): [k~=10, THREE mid-band killers ~V/2,V/3,V/5 at V=842]: |Good|=182, per-killer kills 23-30, survivors 118, REALIZED clearance 0.1183 >= 1/14. [k~=8, FULL 5-killer budget 2P+3M at V=1006]: |Good|=349, union kill 188, survivors 161 (overlap-agnostic floor 96 > 0), REALIZED clearance 0.1217. Mid-band members do NOT kill the snap supply on any covering instance tested.
+
+THE SHARPENING: true kills sit at the PROPORTIONAL rate |Good|/7 +- <=4% -- so survival needs only per-killer comb discrepancy D_m <= |Good|(1/|P~| - 1/7) (= 0.057|Good| at |P~|=5; measured <= 0.04). The provable fixed-phi subgroup bound (kill_m <= V/7 + gcd(m,V), 5 lines, overlap-agnostic) closes a-priori only when mu_realizable > |P~|/7; the general node = ONE explicit 1-D Erdos-Turan discrepancy statement per killer (comb {j : ||m tau_j|| < 1/14} vs the realizable-good indicator) -- name six of HYP-5692's one-node-five-names, and the most attackable: both objects explicit, per-instance decidable exact.
+
+HONEST: mid-session bug caught -- naive gap-center phi WITHOUT the drift-valid interval fails at r ~ 0.27 (clearances 0.008-0.046); monad's phi-interval is not optional at compressed ratios. Also bank 1 is non-covering (structure test only); banks 2/4 are covering+primitive.
+
+HANDOFFS: (1) the D_m discrepancy bound is now the named target -- Erdos-Turan with the comb's exact Fourier (the comb is an arithmetic-progression indicator in j; its correlation with Good's indicator is a resonance sum ONE level simpler than THM-665's); (2) extend the bank: adversarial large-gcd killers (expect zero-survivor = coarse family = monad's dispatch), V up to 5000, and |P~|=5 with ALL FIVE mid-band; (3) compose with death-star's LRCComposedRealization.lean (the realization layer is now Lean-shaped). FILES: lrc_midband_grid_counting_boxeph_S3.py (+.out); HYP-5760.
+
+---
 
 ## death-star-2026-07-09-S2 -- LRCComposedRealization.lean DELIVERED (kernel-pure): the LEAN CORE of LEM-014 -- the P-separated composed realization is now a THEOREM (slow-leg 1-Lipschitz transport + factored per-runner cluster clearance + P∪L composition to Mreach>=1/14 at the explicit LEM-014 time)
 

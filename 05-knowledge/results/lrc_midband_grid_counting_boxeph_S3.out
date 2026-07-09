@@ -1,0 +1,38 @@
+HYP-5760: mid-band grid-counting survival -- exact pipeline
+
+=== k~=10, 2P+1M generic ===
+  S=[12, 13, 350, 582, 618, 651, 682, 709, 737, 774, 805, 831, 842]
+  V=842 k~=10 spread(E)=260 (5V/14=301)  covering=False primitive=True
+  killers P~=[12, 13, 350] zones=['P', 'P', 'M']  mid-band=(60,541)
+  |Good|=182 (0.216 of V; need > sum kills)
+    killer     12 (zone P, gcd=   2): true kill among Good =    26  [counting bound V/7+g =   122.3]  <= bound OK
+    killer     13 (zone P, gcd=   1): true kill among Good =    25  [counting bound V/7+g =   121.3]  <= bound OK
+    killer    350 (zone M, gcd=   2): true kill among Good =    31  [counting bound V/7+g =   122.3]  <= bound OK
+  union kill=69  survivors=113  (overlap-agnostic floor |Good|-Sum kills = 100)
+  REALIZED: j=431 tau=645490571/1260066472  min clearance=905689/6495188 = 0.139440  >= 1/14 LONELY OK
+
+=== k~=10, 3M near-resonant ===
+  S=[176, 286, 420, 582, 618, 651, 682, 709, 737, 774, 805, 831, 842]
+  V=842 k~=10 spread(E)=260 (5V/14=301)  covering=True primitive=True
+  killers P~=[176, 286, 420] zones=['M', 'M', 'M']  mid-band=(60,541)
+  |Good|=182 (0.216 of V; need > sum kills)
+    killer    176 (zone M, gcd=   2): true kill among Good =    23  [counting bound V/7+g =   122.3]  <= bound OK
+    killer    286 (zone M, gcd=   2): true kill among Good =    30  [counting bound V/7+g =   122.3]  <= bound OK
+    killer    420 (zone M, gcd=   2): true kill among Good =    24  [counting bound V/7+g =   122.3]  <= bound OK
+  union kill=64  survivors=118  (overlap-agnostic floor |Good|-Sum kills = 105)
+  REALIZED: j=408 tau=916205665/1890099708  min clearance=384157/3247594 = 0.118290  >= 1/14 LONELY OK
+
+(bank 3: exact-harmonic set not covering -- adjusting)
+
+=== k~=8, 2P+3M (5-killer budget) ===
+  S=[11, 13, 120, 225, 434, 730, 787, 839, 886, 928, 965, 993, 1006]
+  V=1006 k~=8 spread(E)=276 (5V/14=359)  covering=True primitive=True
+  killers P~=[11, 13, 120, 225, 434] zones=['P', 'P', 'M', 'M', 'M']  mid-band=(72,647)
+  |Good|=349 (0.347 of V; need > sum kills)
+    killer     11 (zone P, gcd=   1): true kill among Good =    51  [counting bound V/7+g =   144.7]  <= bound OK
+    killer     13 (zone P, gcd=   1): true kill among Good =    64  [counting bound V/7+g =   144.7]  <= bound OK
+    killer    120 (zone M, gcd=   2): true kill among Good =    48  [counting bound V/7+g =   145.7]  <= bound OK
+    killer    225 (zone M, gcd=   1): true kill among Good =    45  [counting bound V/7+g =   144.7]  <= bound OK
+    killer    434 (zone M, gcd=   2): true kill among Good =    45  [counting bound V/7+g =   145.7]  <= bound OK
+  union kill=188  survivors=161  (overlap-agnostic floor |Good|-Sum kills = 96)
+  REALIZED: j=510 tau=1671330873/3295163060  min clearance=80171517/659032612 = 0.121650  >= 1/14 LONELY OK
