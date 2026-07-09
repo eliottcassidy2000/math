@@ -1,0 +1,37 @@
+(A) transport bound R_grid_abs <= TV(Phi')/(12 Vmax^2) ;  (B) (GP) SOUND vs actual good period
+
+[tightAP{0..12}] k=13 spread=12  E[W]=0.12662  TV(Phi')=1640.0  TV/(k*sp)=10.51
+   Vmax  R_grid_abs  TV/(12V^2) bound ok  GP-cond (GP)holds  realGP  sound
+     13     0.09551     0.80868     True  0.06068     False   False   True
+     14     0.03803     0.69728     True  0.06539      True    True   True
+     24     0.06590     0.23727     True  0.09090      True    True   True
+     36     0.02993     0.10545     True  0.10281      True    True   True
+     72     0.00743     0.02636     True  0.11471      True    True   True
+
+[near-AP] k=13 spread=31  E[W]=0.11664  TV(Phi')=11296.0  TV/(k*sp)=28.03
+   Vmax  R_grid_abs  TV/(12V^2) bound ok  GP-cond (GP)holds  realGP  sound
+     32     0.02760     0.91927     True  0.08986      True    True   True
+     35     0.01942     0.76844     True  0.09215      True    True   True
+     62     0.00727     0.24488     True  0.10282      True    True   True
+     93     0.00526     0.10884     True  0.10743      True    True   True
+    186     0.00206     0.02721     True  0.11203      True    True   True
+
+[7-struct(M128)] k=13 spread=82  E[W]=0.12930  TV(Phi')=81860.0  TV/(k*sp)=76.79
+   Vmax  R_grid_abs  TV/(12V^2) bound ok  GP-cond (GP)holds  realGP  sound
+     83     0.01789     0.99023     True  0.11897      True    True   True
+     91     0.01116     0.82377     True  0.11988      True    True   True
+    164     0.01174     0.25363     True  0.12407      True    True   True
+    246     0.00548     0.11273     True  0.12582      True    True   True
+    492     0.00126     0.02818     True  0.12756      True    True   True
+
+[dissoc] k=13 spread=129  E[W]=0.12843  TV(Phi')=231272.0  TV/(k*sp)=137.91
+   Vmax  R_grid_abs  TV/(12V^2) bound ok  GP-cond (GP)holds  realGP  sound
+    130     0.00944     1.14039     True  0.12183      True    True   True
+    142     0.00523     0.95580     True  0.12239      True    True   True
+    258     0.01433     0.28954     True  0.12510      True    True   True
+    387     0.00468     0.12868     True  0.12621      True    True   True
+    774     0.00055     0.03217     True  0.12732      True    True   True
+
+(C) if TV(Phi') <= C0*k*spread uniformly, then R_grid_abs <= C0*k*spread/(12 Vmax^2);
+    for hard clusters spread<=Vmax => R_grid_abs <= C0*k/(12 Vmax) -> a-priori Vmax0.
+SOUND must be True everywhere (never claims GP when none exists -- esp. tight AP small V).
