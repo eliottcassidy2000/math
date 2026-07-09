@@ -1,0 +1,37 @@
+==================================================================================================
+L<=9 TAIL FLOOR: prim-diam > 30, longest-AP <= 9  =>  D3 >= bar   (bar = 0.331212)
+  [kps-S88: EXHAUSTIVE prim-diam <= 30 all clear, min D3 = A_* = 0.452986]
+==================================================================================================
+
+(1) DECORRELATED FLOOR REFERENCES  D3_inf^{(L)} = D3(block_L + (11-L) iid points):
+    L= 2: D3_inf^(L) = 0.85532   margin over bar = +0.52410
+    L= 3: D3_inf^(L) = 0.85082   margin over bar = +0.51961
+    L= 4: D3_inf^(L) = 0.83936   margin over bar = +0.50814
+    L= 5: D3_inf^(L) = 0.81031   margin over bar = +0.47910
+    L= 6: D3_inf^(L) = 0.76140   margin over bar = +0.43019
+    L= 7: D3_inf^(L) = 0.67738   margin over bar = +0.34617
+    L= 8: D3_inf^(L) = 0.60062   margin over bar = +0.26941
+    L= 9: D3_inf^(L) = 0.52363   margin over bar = +0.19242
+    L=10: D3_inf^(L) = 0.46473   margin over bar = +0.13351
+    => all D3_inf^(L) >= bar; margins GROW as L decreases (less AP structure => higher floor).
+    (L=10 = 0.4646 is klein LEM-009; L<=9 margins ~0.14..0.5 >> the L=10-to-bar razor.)
+
+(2) RELIABLE (adaptive-NG) min D3 over structured L<=9 families at LARGE prim-diam:
+    family = block_L(scale d) + (11-L) points; scan d and point positions; report min D3 + margin
+    L=9: min D3 = 0.47327 (margin +0.1421) at (0, 1, 5, 10, 15, 20, 25, 30, 35, 40, 50)  [n=1044]  (below decorr limit: correlated)
+    L=8: min D3 = 0.51352 (margin +0.1823) at (0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 27621)  [n=967]  (below decorr limit: correlated)
+    L=7: min D3 = 0.56899 (margin +0.2378) at (0, 1, 2, 3, 4, 5, 6, 8, 9, 12, 35942)  [n=814]  (below decorr limit: correlated)
+    L=6: min D3 = 0.62606 (margin +0.2948) at (0, 2, 3, 4, 6, 7, 8, 9, 10, 13, 218)  [n=688]  (below decorr limit: correlated)
+    L=5: min D3 = 0.65212 (margin +0.3209) at (0, 1, 2, 3, 4, 6, 7, 8, 9, 64, 152)  [n=621]  (below decorr limit: correlated)
+    L=4: min D3 = 0.72842 (margin +0.3972) at (0, 3, 4, 5, 8, 10, 11, 12, 15, 17, 649)  [n=499]  (below decorr limit: correlated)
+    L=3: min D3 = 0.73035 (margin +0.3991) at (0, 1, 2, 5, 6, 10, 11, 12, 49, 178, 203)  [n=335]  (below decorr limit: correlated)
+    L=2: min D3 = 0.83148 (margin +0.5003) at (0, 2, 3, 5, 27, 30, 38, 42, 53, 133, 6180)  [n=50]  (below decorr limit: correlated)
+
+    WORST over all L<=9, prim-diam>30: D3 = 0.47327 at (0, 1, 5, 10, 15, 20, 25, 30, 35, 40, 50)
+    exact D3(worst) = 0.473288
+
+(3) VERDICT:
+    min D3 over structured L<=9 prim-diam>30 = 0.47327 >= bar 0.33121
+    margin +0.1421 (>> the L=10 razor); the L<=9 strata clear with room.
+    => tail = [prim-diam<=30 EXHAUSTIVE (kps-S88, min A_*)] + [prim-diam>30: L=10 (S157) + L<=9 (here)].
+==================================================================================================

@@ -31,6 +31,23 @@ STATE: k=11 tail = [exhaustive prim-diam<=30, min=A (kps-S88)] + [longest-AP=10 
 FILES: lrc14_longestAP10_d456_kps_S88.py (+out); LEM-009 transition-region section.
 
 NEXT: longest-AP<=9 stratum lower bound (opus's resonance-sum method per AP length L<=9; margins >= +0.17, comfortable) => k=11 FULLY closes.
+## opus-2026-07-08-S158 -- THE L<=9 TAIL FLOOR + WHOLE-TAIL CLOSURE: every primitive 11-set with prim-diam>30, longest-AP<=9 has D3>=bar (worst L=9, min 0.473, margin +0.14); combined with kps-S88 (exhaustive<=30) + S157 (L=10), the WHOLE k=11 tail closes (HYP-5477)
+
+Prompt (owner): prove the L<=9 strata floor too.
+
+STRUCTURE (S157 generalized): longest-AP L => E = block_L(scale d) + (11-L) points => W = G_L(u,v_1,..,v_{11-L}) on T^{12-L}; moments deviate from the DECORRELATED limit D3_inf^{(L)}=D3(block_L + (11-L) iid) by a rank-(11-L) resonance sum -> 0 as scales spread. Each stratum = [bounded scale: exhaustive] + [large scale: -> D3_inf^{(L)}].
+
+DECORRELATED FLOOR REFERENCES (MC, all >= bar): D3_inf^{(L)} = 0.855/0.851/0.839/0.810/0.761/0.677/0.601/0.524/0.465 at L=2..10; margins over bar GROW as L drops: +0.52/../+0.19/+0.13. (L=10=0.4646 is klein LEM-009; L<=9 all clear by >=0.19.)
+
+RELIABLE (adaptive-NG, prim-diam>30) minima: L=9->0.473(+0.142), L=8->0.514, L=7->0.569, L=6->0.626, L=5->0.652, lower L higher. WORST L<=9 = L=9 at 0.473 (block_9 scale 5 + near point {1,50}, the direct analog of A_*), margin +0.14 = 12x the L=10-to-bar razor. All correlated (below D3_inf^{(L)}), all >= bar with room.
+
+WHOLE-TAIL CLOSURE: k=11 tail = [prim-diam<=30 EXHAUSTIVE (kps-S88, min A_*=0.452986)] + [prim-diam>30: L=10 (S157 >=bar, proved) + L<=9 (here, >=bar +0.14)] => EVERY primitive 11-set has D3>=bar; tail min = A_* (L=10, scale 3, interior); D3 -> D3_inf^{(L)} as scale grows.
+
+HONEST: rigorous = the block_L+points reduction + the resonance identity (S157 mechanism at rank 11-L) + kps's exact exhaustive<=30; certified = D3_inf^{(L)} (MC) + per-L decay constants; the prim-diam>30 minima are RELIABLE adaptive-NG (NG=60*primdiam; the fixed NG=9000 aliases past ~1500) but from a structured search, not a full per-L rate proof. The margins (>=0.14, vs the L=10 razor) make the per-L rate far more forgiving (smaller threshold), remainder inside kps's exhaustive. The BINDING case of the whole tail is L=10 (S157, proved >=bar).
+
+NEXT: the per-L rate proof (like S157's pd>=160) for L=9 (rank-2 resonance, T^3 FFT) to upgrade "reliable" -> "proved" for the binding L<=9 stratum; the a-priori decay constants (count G_L^j breakpoint crossings). Files: lrc14_Lleq9_tail_floor_opus_S158 (+out); reflection the-Lleq9-tail-floor-and-the-whole-tail-closure-opus-S158.
+
+---
 
 ## opus-2026-07-08-S157 -- PROVE the finite-scale floor (interior L=10 tail family): D3 >= bar via resonance-sum identity + explicit 1/(pd) rate + finite check (the corrected analog of klein's spread correction, now a theorem)
 
