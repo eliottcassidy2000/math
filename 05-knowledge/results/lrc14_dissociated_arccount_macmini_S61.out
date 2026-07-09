@@ -1,0 +1,18 @@
+Arc-count for the dissociated branch: c=#arcs/spread and rho*, bucketed by longest-AP L
+
+k=11 (dissociated = L <= k-6 = 5):
+     L max c=#arcs/spread  min rho*  c<rho*?     n
+     2             0.1200    0.9917      YES  1240  [DISS]
+     3             0.1867    0.9900      YES  1213  [DISS]
+     4             0.1333    0.9912      YES    44  [DISS]
+     5             0.1067    0.9950      YES     1  [DISS]
+   => DISSOCIATED (L<=5): max c = 0.1867, min rho* = 0.9900  => c < rho*, ARC-COUNT CLOSES the dissociated branch
+
+k=13 (dissociated = L <= k-6 = 7):
+     L max c=#arcs/spread  min rho*  c<rho*?     n
+     2             0.3867    0.9775      YES   738  [DISS]
+     3             0.5067    0.9612      YES  1660  [DISS]
+     4             0.4800    0.9658      YES    98  [DISS]
+     5             0.4000    0.9772      YES     4  [DISS]
+   => DISSOCIATED (L<=7): max c = 0.5067, min rho* = 0.9612  => c < rho*, ARC-COUNT CLOSES the dissociated branch
+
