@@ -1,3 +1,44 @@
+## mac-mini-2026-07-08-S59 (cont.) -- the shared 𝒲̂-decay PROVED (LEM-011, indep. of klein-S194); j*=O(k) discovered (AP case PROVED); honest LRC(14) audit; FIRST Lean node formalized sorry-free
+
+Prompt (owner): prove the shared 𝒲̂-decay constant to close both; see if LRC(14) is now proved; if so, formalize.
+
+DID ALL THREE (partial on the third, since not 100% proved):
+
+1. **𝒲̂-decay closed form PROVED (LEM-011).** Derived (swap-of-integrals) + VERIFIED (direct T²/T³
+   Fourier integrals, |diff|<=2e-5): 𝒲̂(n) = (6/7)^z ∏_{n_i≠0} b(n_i)·Q(N), b(m)=(1-e(m/7))/(2πim),
+   Q(N)=ĝ_N. A-priori decay |𝒲̂(n)|<=(6/7)^z ∏|sin(πn_i/7)|/(π|n_i|)|Q(N)|; vanishes if 7|n_i or 7|N.
+   INDEPENDENTLY converged with klein-S194 (same closed form, FFT+Parseval route) -- collision on
+   LEM-011 reconciled (ceded to klein's more-complete file + my cross-validation note). This makes
+   opus-S157's density-floor tail V_j A-PRIORI and THM-664's grid resonance sum explicit -- ONE shared
+   constant, both certifications discharged.
+
+2. **j*=O(k) discovered; AP case PROVED.** The smallest good period j* (LEM-010) is empirically ~k
+   (max j*=2/11/13 at k=8/11/13 over 90k+ adversarial clusters, NEVER absent). Worst case = APs, and
+   for them PROVED j*<=ceil(7(k-1)/6) (Dirichlet on the single step: ||jd/Vmax||<6/(7(k-1)) => the
+   k-AP spans <6/7 => gap>1/7). If general j*=O(k) holds, THM-527-A's finite check collapses to
+   Vmax<=O(k), inside kps-S30's exact sweep => covering case FULLY closed.
+
+3. **HONEST LRC(14) audit (03-artifacts/drafts/lrc14-proof-state-assessment-macmini-S59.md).** NOT
+   100% proved. Chain: [sieve THM-369 Lean] + [non-cov=LRC≤13 SETTLED] + [reformulation THM-527] +
+   [ρ*≥m_P: k≤7 proved + k≥8 union bound + density floor CLOSED (tail now a-priori via LEM-011)] +
+   [THM-527-A: LEM-010, reduced to j*=O(k)]. The SINGLE remaining math gap = general j*=O(k) (AP case
+   proved, 0 counterexamples/90k). Everything else closed/a-priori/finite/cited. Then Lean.
+
+4. **FIRST Lean node formalized SORRY-FREE.** `TournamentH7/LRCGoodPeriodJ1.lean`:
+   `good_period_j1_wraparound` (LEM-010(i): spread<6Vmax/7 => empty arc (spread/Vmax,1) of length>1/7
+   at j=1). Builds clean (lean4 v4.30.0, 8475 jobs, 120s); `#print axioms` = [propext, Classical.choice,
+   Quot.sound] ONLY (no sorryAx). Wired into root.
+
+STATE: LRC(14) = [all analytic content closed/a-priori] + [ONE Diophantine lemma j*=O(k), AP case
+proved] + [Lean transcription, first node done]. Closest the proof has ever been.
+
+FILES: LEM-011 (reconciled w/ klein); LEM-010(iii) j* bound; assessment draft; LRCGoodPeriodJ1.lean
+(sorry-free); scripts lrc14_{What_closedform, maxjstar_search}_macmini_S59 (+outs).
+
+NEXT: (a) prove general j*=O(k) (the last math gap; Diophantine, ≤13 points, AP case done); (b) more
+Lean nodes (ρ* union bound native_decide, the Dirichlet lemma, LEM-011 structure); (c) opus a-priori
+V_j write-up now that LEM-011 supplies the closed form.
+
 ## klein-2026-07-08-S194 -- LEM-011: the EXACT Fourier transform of the uncovered-measure function 𝒲 (the shared 𝒲̂-decay, mac-mini THM-664 handoff) + honest LRC(14) status audit (NOT fully proved; reduced to a bounded finite check + Lean, no hard analysis left)
 
 Prompt (owner): work the resonance sum-bound and prove the shared 𝒲̂-decay constant to close both; see if the entire LRC 14 is now proved, and if so formalize.
