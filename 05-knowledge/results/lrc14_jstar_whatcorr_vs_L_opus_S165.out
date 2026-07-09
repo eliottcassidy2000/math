@@ -1,0 +1,35 @@
+================================================================================================
+W-hat CORRECTION vs longest-AP: small-L bounded (route wins early) / near-AP large (resonant)
+  = the opus-S154 L^1-converges/diverges dichotomy, driving kps-S90's W-hat route (HYP-5507)
+================================================================================================
+
+  k=11:  (base (6/7)^k = 0.18348)
+    longest-AP L | max j* | max |Corr|/(N base) at N=12 | (count)
+       L= 2      |    1   |      0.282                | (27)  <- small-L: bounded
+       L= 3      |    3   |      0.676                | (9201)  <- small-L: bounded
+       L= 4      |    4   |      0.820                | (11101)  <- small-L: bounded
+       L= 5      |    5   |      0.820                | (3109)  <- small-L: bounded
+       L= 6      |    5   |      0.820                | (1259)  <- small-L: bounded
+       L= 7      |    7   |      0.820                | (557)  <- small-L: bounded
+       L= 8      |    7   |      0.820                | (321)  <- small-L: bounded
+       L= 9      |    7   |      0.820                | (189)  <- small-L: bounded
+       L=10      |    6   |      0.820                | (110)  <- small-L: bounded
+       L=11      |   11   |      0.611                | (22)  <- small-L: bounded
+
+  k=13:  (base (6/7)^k = 0.13480)
+    longest-AP L | max j* | max |Corr|/(N base) at N=14 | (count)
+       L= 3      |    5   |      0.640                | (3911)  <- small-L: bounded
+       L= 4      |    5   |      0.822                | (12604)  <- small-L: bounded
+       L= 5      |    6   |      0.840                | (5758)  <- small-L: bounded
+       L= 6      |    6   |      0.840                | (2577)  <- small-L: bounded
+       L= 7      |    7   |      0.840                | (1009)  <- small-L: bounded
+       L= 8      |    7   |      0.840                | (569)  <- small-L: bounded
+       L= 9      |    7   |      0.822                | (337)  <- small-L: bounded
+       L=10      |    7   |      0.804                | (222)  <- small-L: bounded
+       L=11      |    7   |      0.809                | (188)  <- small-L: bounded
+       L=12      |    7   |      0.813                | (120)  <- small-L: bounded
+       L=13      |   13   |      0.592                | (29)  <- small-L: bounded
+
+  READING: small L -> |Corr|/(N base) < 1 (S_N>0 at small N => j* small, kps route wins);
+  near-AP (L~k) -> ratio >> 1 (resonant, S154 L^1 divergence) => route needs N~ceil(7(k-1)/6)
+  or mac-mini's embedded-AP Dirichlet.  UNIFIES kps-S90 + mac-mini + opus-S154/S164.

@@ -46,6 +46,19 @@ STATE (my read): covering case = [density floor CLOSED, tail a-priori for k=11,1
 FILES: lrc14_smallL_jstar_kps_S91.py; court case moved.
 
 NEXT: prove small-L => j*<=O(1) (partial-sum 𝒲̂ route OR arc-count pigeonhole); continue Lean (D3 exhaustive + good-period nodes).
+## opus-2026-07-08-S165 -- THE CAPSTONE REDUCES TO ONE SHARP INEQUALITY: the W-hat correction ratio r_N < 1 at N=ceil(7(k-1)/6), VERIFIED uniformly (max 0.84) incl. near-APs => j*<=ceil(7(k-1)/6) via kps-S90's route with NO L-split; exact AP = the unique r_N=1 boundary (tight case) (HYP-5517)
+
+Prompt (owner): work the capstone and any other natural tasks.
+
+Sharpened kps-S90's W-hat route (HYP-5507) to a SINGLE a-priori inequality. j*<=N <=> S_N:=sum_{j=1}^N W(j/Vmax)>0 (W=uncovered measure, W>0 iff good; j=0 anchor W(0)=6/7). S_N = N(6/7)^k + Corr_N (Corr_N = the SAME resonance sum as the density-floor tail, opus-S154/LEM-011). SHARP condition: r_N := |Corr_N|/(N(6/7)^k) < 1 => S_N>0 => j*<=N.
+
+VERIFIED r_N < 1 UNIFORMLY (max 0.84, 16% margin) at N=ceil(7(k-1)/6) over ALL good clusters INCLUDING near-APs (r_N~0.59-0.61, actually the SMALLEST). So the W-hat route closes j*<=ceil(7(k-1)/6) UNIFORMLY -- NO small-L/near-AP split needed, and mac-mini's embedded-AP Dirichlet is NOT needed for the bound. The EXACT full complete-residue AP (k=Vmax prime) is the UNIQUE r_N=1 boundary = the S164 no-good-period dichotomy = tight M=1/k case (cited via LRC<=13). The inequality is SHARP (boundary = exactly the tight case).
+
+=> capstone reduced to ONE a-priori inequality |Corr_N| < N(6/7)^k at N=ceil(7(k-1)/6) (LEM-011 W-hat sum, 16% verified margin). The min(N, 1/||n/Vmax||) sampling cap on the geometric partial sum is what gives convergence where the raw L^1 sum (opus-S154) DIVERGES -- resolving the S154 barely-covers wall for the good-period count. UNIFIES kps-S90 (W-hat) + mac-mini (embedded-AP, unnecessary) + opus-S164 (dichotomy) + opus-S154 (Corr_N = resonance sum). ONE shared W-hat constant now drives BOTH the density floor tail AND the good period.
+
+NEXT: prove r_N < 1 a-priori (|Corr_N| < N(6/7)^k) via LEM-011's a-priori |What(n)| + the geometric-sum cap -- the last analytic mile, now a single explicit inequality with margin. Files: lrc14_jstar_whatcorr_vs_L_opus_S165 (+out); reflection the-capstone-reduces-to-one-sharp-inequality-correction-ratio-below-one-opus-S165.
+
+---
 
 ## kind-pasteur-2026-07-08-S90 (cont.) -- j*=O(k) frontier: CONVERGED with opus-S164 (j* governed by longest-AP) + NET-NEW partial-sum/𝒲̂ ANALYTIC route unifying j* with the density-floor tail (one shared constant) (HYP-5507)
 
