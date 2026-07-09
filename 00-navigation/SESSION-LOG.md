@@ -1,3 +1,39 @@
+## mac-mini-2026-07-09-S61 -- pushed the capstone: r_N decomposition (near-resonance, NOT decorrelation) + dissociated branch verified (j*<=5) + 3 good-period Lean nodes sorry-free; LRC(14) rests on the EASY branch after klein-S196
+
+Prompt (owner): go further.
+
+Worked the capstone (r_N<1 / j*=O(k)), converging with the fleet's big S196 advance.
+
+1. **r_N DECOMPOSITION (opus-S165 capstone).** Tested whether r_N reduces to the density-floor tail:
+   NO. Corr_N/N is dominated by the NEAR-RESONANCE partial-sum (~0.02-0.08), NOT the exact-resonance
+   decorrelation (E_grid[W]-(6/7)^k ~ 0.001, negligible). So the capstone is a genuine partial-sum
+   estimate, distinct from R2's tail rate -- a useful clarification (my "R2 bounds r_N" hypothesis was
+   WRONG). The a-priori target is the near-resonance D_N(n.E/Vmax) sum.
+
+2. **DISSOCIATED BRANCH verified.** After klein-S196's LEM-012 closed the near-AP branch (L>=k-5)
+   ELEMENTARILY (Dirichlet cluster + pigeonhole gap-split, the HARD branch where j*~k), only the
+   dissociated branch (L<=k-6) remains. Verified max j*=3/5 (k=11/13) over 1400+ dissociated
+   spread-dense clusters. My r_N decomposition SUPPORTS route (a): dissociated => few small resonances
+   n.E≡0 => small Corr_N => small r_N => small j*.
+
+3. **LEAN: 3 good-period nodes formalized SORRY-FREE** (TournamentH7/LRCGoodPeriodJ1.lean, lean4
+   v4.30.0, axioms=[propext,Classical.choice,Quot.sound] only):
+   - good_period_j1_wraparound (LEM-010(i));
+   - good_gap_of_phases_in_interval (the ARC CORE -- phases in [lo,hi], hi-lo<6/7 => gap>1/7; the
+     shared engine of j=1 / Dirichlet / AP / LEM-012);
+   - goodPeriod_iff_partialSum_pos (opus-S165's S_N>0 reduction, the capstone's logical spine).
+
+STATE (big improvement): the HARD (near-AP) branch of j*=O(k) is now ELEMENTARY (LEM-012). LRC(14)
+rests only on the EASY dissociated branch (L<=k-6, j*<=5, verified) + Lean. Every analytic constant
+a-priori (LEM-011/R2); the capstone's spine + arc-core formalized.
+
+FILES: assessment S61 update; 3 Lean nodes; scripts lrc14_{rN_decomposition, dissociated_branch}
+_macmini_S61 (+outs).
+
+NEXT: close the dissociated branch (route a: dissociated => few resonances => small r_N, my
+decomposition; or an elementary argument -- kps active); Lean-formalize LEM-012 + the density-floor
+union bound.
+
 ## klein-2026-07-09-S196 -- LEM-012: the near-AP (HARD) branch of j*=O(k) is now ELEMENTARY (Dirichlet + gap-split), closing the branch everyone expected to need the hard analysis
 
 Prompt (owner): keep at it (the LRC(14) capstone = general j*=O(k)).
