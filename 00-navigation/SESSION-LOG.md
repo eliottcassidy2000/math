@@ -1,3 +1,16 @@
+## death-star-2026-07-09-S3 -- PLUG-AND-PLAY form of the composed realization: round_time_close + Mreach_ge_of_composed_realization_round (kernel-pure) -- j = round(Vmax*x) and Delta = 3/(2*Vmax) pre-instantiated; consumers now supply ONLY (gap at rounded grid point, drift margin, eroded slow safety)
+
+Prompt (owner): keep pushing forward on the active threads toward LRC 14 complete lean formalization (continuation).
+
+Compact follow-up executing handoff (b) of my own S2 letter. ADDED to LRCComposedRealization.lean (both kernel-pure, build 8488 jobs):
+- **round_time_close**: |((round(Vmax*x) + phi)/Vmax) - x| <= 3/(2*Vmax) for any fast phase phi in [0,1] -- the closeness budget of the LEM-014 construction derived once and for all (|round(y) - y| <= 1/2 + phi <= 1, over the ruler).
+- **Mreach_ge_of_composed_realization_round**: the composition with j := round(Vmax*x), Delta := 3/(2*Vmax) PRE-INSTANTIATED. A consumer (LEM-014's robust floor / kps-S113's cert / THM-669-670 availability) now supplies only: (i) the tooth-free gap (a,a+g) of the cluster teeth at the ROUNDED grid point, (ii) the shared drift margin 1/7 + 2s(a+g/2)/Vmax < g, (iii) per-slow-runner eroded safety 1/14 + |v_i|*3/(2Vmax) <= nearInt(v_i*x). Recovers boxeph's eps = 20/Vmax exactly for slow speeds <= 13 (13*3/2 = 19.5 <= 20).
+- Toolchain note for the fleet: this Mathlib pins abs_add_le (NOT abs_add) for the triangle inequality; div manipulations against composite denominators want a `show ... = (3/2)/V by ring` reshape before div_le_div_iff_of_pos_right.
+
+STATE of the realization node's Lean instruments after S1+S2+S3 (death-star's three bricks today): [ratio<=13: LRCPureClusterCorner via kps-S28] + [ratio>13: LRCComposedRealization core + round form]. Open consumption surface: the robust-floor existence (boxeph HYP-5722 theta-transfer, monad THM-669/670 + parametric ledger n=11..13, klein THM-671 quintic Bonferroni supply / HYP-5732 aggregated-supply route which would DELETE the realization leg -- the two routes cross-check). Lemma A remains the lone hfloor node (opus S184/S185).
+
+FILES: LRCComposedRealization.lean (extended), manifest comment. NEXT: (a) consumers wire the robust floor into hsplit; (b) Lean LRCDiscreteBonferroni (klein-S210's named follow-up) if the supply route is preferred; (c) witnessG2 de-opaquing in a quiet window; (d) the Z_n(x;chi) backlog test (S1).
+
 ## death-star-2026-07-09-S2 -- LRCComposedRealization.lean DELIVERED (kernel-pure): the LEAN CORE of LEM-014 -- the P-separated composed realization is now a THEOREM (slow-leg 1-Lipschitz transport + factored per-runner cluster clearance + P∪L composition to Mreach>=1/14 at the explicit LEM-014 time)
 
 Prompt (owner): keep pushing forward on the active threads toward LRC 14 complete lean formalization.

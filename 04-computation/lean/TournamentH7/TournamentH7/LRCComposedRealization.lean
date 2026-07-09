@@ -163,11 +163,55 @@ theorem Mreach_ge_of_composed_realization
   Mreach_ge_of_minReach v _
     (minReach_ge_of_composed_realization v Vmax j a g s Δ x hV ha hag hgpos hgap hclose hsplit)
 
+/-- **Round-`j` instantiation of the closeness budget** (death-star-S3 convenience, the (b)
+handoff of the S2 letter): with `j = round(Vmax·x)` and any fast phase `φ ∈ [0, 1]`, the LEM-014
+time `(j + φ)/Vmax` is within `3/(2·Vmax)` of the good slow time `x` — the exact `Δ` that
+recovers boxeph's constants (`ε = |v|·3/(2·Vmax) ≤ 20/Vmax` for slow speeds `≤ 13`). -/
+theorem round_time_close (Vmax : ℤ) (hV : 0 < Vmax) (x φ : ℝ) (hφ0 : 0 ≤ φ) (hφ1 : φ ≤ 1) :
+    |(((round ((Vmax : ℝ) * x) : ℤ) : ℝ) + φ) / (Vmax : ℝ) - x| ≤ 3 / (2 * (Vmax : ℝ)) := by
+  have hVR : (0 : ℝ) < (Vmax : ℝ) := by exact_mod_cast hV
+  have hround : |(Vmax : ℝ) * x - ((round ((Vmax : ℝ) * x) : ℤ) : ℝ)| ≤ 1 / 2 :=
+    abs_sub_round ((Vmax : ℝ) * x)
+  have halg : (((round ((Vmax : ℝ) * x) : ℤ) : ℝ) + φ) / (Vmax : ℝ) - x
+      = ((((round ((Vmax : ℝ) * x) : ℤ) : ℝ) - (Vmax : ℝ) * x) + φ) / (Vmax : ℝ) := by
+    field_simp; ring
+  rw [halg, abs_div, abs_of_pos hVR,
+    show (3 : ℝ) / (2 * (Vmax : ℝ)) = (3 / 2) / (Vmax : ℝ) by ring,
+    div_le_div_iff_of_pos_right hVR]
+  have h1 : |(((round ((Vmax : ℝ) * x) : ℤ) : ℝ) - (Vmax : ℝ) * x) + φ|
+      ≤ |((round ((Vmax : ℝ) * x) : ℤ) : ℝ) - (Vmax : ℝ) * x| + |φ| := abs_add_le _ _
+  have h2 : |((round ((Vmax : ℝ) * x) : ℤ) : ℝ) - (Vmax : ℝ) * x| ≤ 1 / 2 := by
+    rwa [abs_sub_comm] at hround
+  have h3 : |φ| ≤ 1 := by rwa [abs_of_nonneg hφ0]
+  linarith
+
+/-- **The composed realization, plug-and-play form**: `j = round(Vmax·x)` and `Δ = 3/(2·Vmax)`
+pre-instantiated, so a consumer supplies only (i) the tooth-free gap of the cluster teeth at the
+rounded grid point, (ii) the shared drift margin, and (iii) the eroded slow safety at `x` with
+the concrete margin `|v i|·3/(2·Vmax)` — exactly what LEM-014's robust floor produces. -/
+theorem Mreach_ge_of_composed_realization_round
+    (v : Fin 13 → ℤ) (Vmax : ℤ) (a g s x : ℝ)
+    (hV : 0 < Vmax)
+    (ha : 0 ≤ a) (hag : a + g ≤ 1) (hgpos : 0 < g)
+    (hgap : 1 / 7 + 2 * (s * (a + g / 2) / (Vmax : ℝ)) < g)
+    (hsplit : ∀ i : Fin 13,
+      (∃ e : ℤ, (v i : ℝ) = (Vmax : ℝ) - (e : ℝ) ∧ |(e : ℝ)| ≤ s ∧
+        ∀ n : ℤ, ((e : ℝ) * ((round ((Vmax : ℝ) * x) : ℤ) : ℝ) / (Vmax : ℝ) + (n : ℝ))
+          ∉ Ioo a (a + g))
+      ∨ (1 / 14 + |(v i : ℝ)| * (3 / (2 * (Vmax : ℝ))) ≤ nearInt ((v i : ℝ) * x))) :
+    (1 : ℝ) / 14 ≤ Mreach v := by
+  have hφ1 : a + g / 2 ≤ 1 := by linarith
+  exact Mreach_ge_of_composed_realization v Vmax (round ((Vmax : ℝ) * x)) a g s
+    (3 / (2 * (Vmax : ℝ))) x hV ha hag hgpos hgap
+    (round_time_close Vmax hV x (a + g / 2) (by linarith) hφ1) hsplit
+
 /-! ## Axiom audit -/
 #print axioms nearInt_ge_of_close
 #print axioms nearInt_clear_of_driftGap_single
 #print axioms minReach_ge_of_composed_realization
 #print axioms Mreach_ge_of_composed_realization
+#print axioms round_time_close
+#print axioms Mreach_ge_of_composed_realization_round
 
 end LRC14Concrete
 end LonelyRunner
