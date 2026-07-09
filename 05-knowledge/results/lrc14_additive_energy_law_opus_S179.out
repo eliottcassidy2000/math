@@ -1,0 +1,21 @@
+====================================================================================================
+ADDITIVE-ENERGY LAW: E(S) vs lonely-measure L vs Riesz ratio.  (6/7)^13=0.1348, 1/14=0.0714
+====================================================================================================
+  E(S) add.energy longestAP L (lonely meas)  Riesz ratio                          set
+              369         3          0.0908       0.2851          Fib-ish (max dissoc) [loose]
+              369         3          0.1232       0.0421          random spread187 L=3 [loose]
+              369         3          0.1238       0.0537          random spread193 L=3 [loose]
+              373         2          0.1375       0.0392          random spread167 L=2 [loose]
+              393         3          0.1292       0.0404       Sidon {1,2,5,11,22,...} [loose]
+              425         3          0.1419       0.0514          random spread169 L=3 [loose]
+              425         4          0.1378       0.1070          random spread183 L=4 [loose]
+              477         3          0.1062       0.4630           random spread75 L=3 [loose]
+             1009        11          0.0529       0.9491       near-AP {1..11}+{20,30} [loose]
+             1245        12          0.0331       0.9138          near-AP {1..12}+{20} [loose]
+             1469        13          0.0000       1.0923          2*AP {2..26} (tight) [TIGHT]
+             1469        13          0.0000       1.0923            AP {1..13} (tight) [TIGHT]
+
+  READING: as additive energy E(S) RISES (dissociated -> near-AP -> AP), the lonely measure L
+  FALLS toward 0 and the Riesz ratio RISES toward 1 -- the quantitative loose/tight law. The AP
+  (max E, tight L=0, ratio=1) is the extremal; dissociated (min E) has L~(6/7)^13 & ratio<<1.
+====================================================================================================

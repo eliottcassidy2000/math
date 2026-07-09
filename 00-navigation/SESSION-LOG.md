@@ -11,6 +11,21 @@ SIGNIFICANCE: the window finite check (kps-S109) is now backed BOTH ways -- (a) 
 STATE: good-period leg's window = [directly verified S109 + AP formalized S110] ; density-floor route = [m_P>0 PROVED + reformulation bridge (continuum Part A, the clean shared node)]. FILES: LRCAPExtremal.lean.
 
 NEXT: the M(AP)<=1/14 pigeonhole (14 points {0,tau,...,13tau} => two within 1/14 => full equality); the continuum reformulation bridge (0<rho* => exists lonely tau) -- the clean Part-A node on the smooth surrogate.
+## opus-2026-07-09-S179 -- the ADDITIVE ENERGY E(S)=#{a+b=c+d} is the SINGLE parameter monotonically governing looseness (lonely measure L & Riesz ratio); the additive-energy GAP IS the good-period dichotomy; AP=max E=the unique extremal
+
+Prompt (owner): keep pushing LRC math then formalization, pull often.
+
+ESTABLISHED the quantitative law (lrc14_additive_energy_law). Across Sidon->dissociated->near-AP->AP: E(S) rises 369->1469, L(S)=meas{tau:min||v_i tau||>1/14} FALLS 0.14->0, Riesz ratio inf_R int(M*R)/int(R) RISES 0.04->1.09 -- ALL MONOTONE in E.
+- Dissociated (min E~369, L-AP<=4): danger events near-INDEPENDENT => L ~ (6/7)^13=0.135 (ideal-gas) & ratio<<1 (easy, opus-S178).
+- AP {1..13} (max E=1469, L-AP=13): L=0 TIGHT (lonely only at the measure-zero pinch=lemniscate node opus-S177) & ratio>=1 (validity, can't certify tight) = the UNIQUE extremal (kps-S109 adversarial min-M -> AP).
+
+THE ADDITIVE-ENERGY GAP (dissociated E<500, near-AP E>1000) IS the good-period DICHOTOMY: low-E dissociated => Riesz/density-floor (opus-S178, ratio<<1 decomposition-free); high-E near-AP => LEM-012 Dirichlet (the E-raising relations ARE the AP structure Dirichlet exploits); max-E AP => tight/exact-check (kps-S109 M=1/14 exact). The 3 proof branches = the 3 additive-energy regimes.
+
+UNIFIES: THM-515B (additive-energy predictor for L, CONFIRMED across the full range, corrects the lambda_1 guess); opus-S178 (Riesz margin monotone in E; sup_loose ratio=1 APPROACHED at near-AP but each loose set <1 => LRC(14) is per-set loose-or-tight, NOT uniform inf-L); opus-S177 (max E=AP=pinch; the quartic SUM|S-hat|^4 = the lemniscate arc-length species); opus-S172 (the Mertens wall lives at high E, exactly where LEM-012 not the resonant sum is the right tool).
+
+NEXT: the analytic dissociated bound (low E => bounded resonant sum => L>0), and whether the near-AP high-E hard end is fully LEM-012-covered. Files: lrc14_additive_energy_law_opus_S179 (+out); reflection additive-energy-is-the-one-parameter-governing-looseness-opus-S179; HYP-5680.
+
+---
 
 ## opus-2026-07-09-S178 -- the DISSOCIATED branch's looseness is UNIFORMLY Riesz-certifiable, DECOMPOSITION-FREE: sup_dissociated inf_R int(M*R)/int(R) <= 0.55 < 1 (margin >= 0.45) => inf L>0 dissociated, NO two-scale/drift (sidesteps mac-mini's r>=7 local-embedding impossibility) + NO Mertens
 
