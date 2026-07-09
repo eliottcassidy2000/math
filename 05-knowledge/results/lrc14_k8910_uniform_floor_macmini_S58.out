@@ -1,0 +1,17 @@
+k=8,9,10 UNIFORM density floor: exhaustive compact min (float pre-filter + exact)
+
+k=8 (bar=0.6750):  D3(block)=0.6756  B4(block)=0.7611
+   792 shapes prim-diam<= 12; float D3 min = 0.6756
+   EXACT min_E D3 = 0.675608 at (0, 1, 2, 3, 4, 5, 6, 7)  margin +0.0006  CLEARS
+   min_E B4 (deg-4) = 0.761132 at (0, 1, 2, 3, 4, 5, 6, 7)  margin +0.0861  CLEARS
+
+k=9 (bar=0.5622):  D3(block)=0.5677  B4(block)=0.6446
+   1287 shapes prim-diam<= 13; float D3 min = 0.5677
+   EXACT min_E D3 = 0.567746 at (0, 1, 2, 3, 4, 5, 6, 7, 8)  margin +0.0055  CLEARS
+   min_E B4 (deg-4) = 0.644603 at (0, 1, 2, 3, 4, 5, 6, 7, 8)  margin +0.0824  CLEARS
+
+k=10 (bar=0.4521):  D3(block)=0.4852  B4(block)=0.5531
+   2002 shapes prim-diam<= 14; float D3 min = 0.4852
+   EXACT min_E D3 = 0.485166 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  margin +0.0331  CLEARS
+   min_E B4 (deg-4) = 0.553111 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  margin +0.1010  CLEARS
+

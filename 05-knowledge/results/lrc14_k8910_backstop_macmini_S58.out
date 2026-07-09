@@ -1,0 +1,14 @@
+k=8,9,10 backstop: does any large-diameter tail shape undercut B4(block)?
+
+k=8 (bar=0.6750, B4 block=0.7611): scanned 4123 tail shapes
+   min tail B4 = 0.76113 at (0, 1, 2, 3, 4, 5, 6, 7)
+   tail >= block (tol 3e-3): YES -- block is global min;  tail margin vs bar +0.0861
+
+k=9 (bar=0.5622, B4 block=0.6446): scanned 4156 tail shapes
+   min tail B4 = 0.64460 at (0, 1, 2, 3, 4, 5, 6, 7, 8)
+   tail >= block (tol 3e-3): YES -- block is global min;  tail margin vs bar +0.0824
+
+k=10 (bar=0.4521, B4 block=0.5531): scanned 4178 tail shapes
+   min tail B4 = 0.55311 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+   tail >= block (tol 3e-3): YES -- block is global min;  tail margin vs bar +0.1010
+
