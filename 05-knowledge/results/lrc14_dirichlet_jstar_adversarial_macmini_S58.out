@@ -1,0 +1,4 @@
+adversarial AP clusters {0,d,..,(k-1)d}, d in [V/14,V/7] (defeat j=1); find j*:
+  k=11: 2041 hard AP clusters; MAX j* = 3  (Dirichlet bound 3^(k-1)=59049); none-found=0
+  k=13: 3410 hard AP clusters; MAX j* = 7  (Dirichlet bound 3^(k-1)=531441); none-found=0
+=> j* <= 7 for k<=13 even adversarially; supports j*=O(k), which would make THM-527-A fully elementary.

@@ -68,6 +68,13 @@ The good period is the observer's own loneliness window, and (i)–(ii) find it 
 cluster**: compress all `k` phases into a `< 6/7` arc so a `> 1/7` window opens. (i) does it for free
 when the cluster is not too spread; (ii) does it by an integer dilation `j*` that simultaneously
 pulls every `e_i j*/Vmax` toward `0`. Neither needs the good set's measure, its arc-count, or its
-equidistribution — the three quantities the soft route stalled on. Open: sharpen `3^{k−1}` to `poly(k)`
-(the empirical `j* ≤ 4` suggests a linear-algebra / successive-minima bound), which would shrink the
-finite check to `Vmax ≤ poly(13)` and make THM-527-A fully elementary.
+equidistribution — the three quantities the soft route stalled on.
+
+**Open (a strong, well-supported conjecture): `j* = O(k)`, not `3^{k−1}`.** The smallest good period
+was measured over the `j=1`-fails clusters INCLUDING the adversarial APs `{0,d,…,(k−1)d}` with
+`d ∈ [Vmax/14, Vmax/7]` (built precisely to defeat `j=1`): `max j* = 3 (k=11) / 7 (k=13)` over
+`≈5.5k` such clusters, and `max j* = 3` over dense/perforated hard clusters — **never absent**. So
+empirically `j* ≤ 7` for `k ≤ 13`, astronomically below the `3^{k−1}` guarantee. Proving `j* ≤ c·k`
+(a successive-minima / three-distance bound on the dilation that clusters an AP: `j ≈ Vmax/d ≈ k`)
+would shrink the finite check to `Vmax ≤ O(k)` and make THM-527-A **fully elementary**. Files:
+`lrc14_deterministic_goodperiod_macmini_S58.{py,out}` (+ the adversarial-AP `j*` sweep).
