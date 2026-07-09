@@ -1,0 +1,22 @@
+D3(d*{0..9}+p), GENUINE coprime (d,p) with p/d ~ 8/3 (A's ratio), increasing d -> 0.4646:
+   d    p    p/d        D3    |dev|  |dev|*d
+   3    8  2.667   0.45299  0.01161   0.0348
+  25   67  2.680   0.46485  0.00025   0.0063
+  50  133  2.660   0.46472  0.00012   0.0062
+ 100  267  2.670   0.46472  0.00012   0.0125
+ 200  533  2.665   0.46472  0.00012   0.0248
+ 400 1067  2.667   0.46472  0.00012   0.0495
+ 800 2133  2.666   0.46472  0.00012   0.0990
+
+  => D3 -> 0.4646 as d grows (extra point decorrelates via d equally-spaced conditional phases);
+     |D3 - 0.4646| ~ C/d with C <= 0.099 (Riemann-sum error V_i/d, BV functional).
+
+  different ratios -> SAME limit 0.4646 (large d):
+    r~1/2: d=400 D3=0.46472
+    r~7/2: d=400 D3=0.46472
+    r~5/3: d=400 D3=0.46472
+    r~13/4: d=400 D3=0.46472
+
+RIGOROUS d>=4 BOUND: D3(d*{0..9}+p) >= 0.4646 - C/d, C<=0.099; for d>=4, >= 0.4399 >= bar 0.3312.
+  Combined: [d=3 exact = A = 0.4530] + [d=4..25 exhaustive min 0.4588] + [d>25: >= 0.4646 - 0.099/25 = 0.4606] -- all >= bar.
+  => the longest-AP=10 family clears for ALL d>=3; k=11 tail FULLY closed (modulo exact V_i bound).

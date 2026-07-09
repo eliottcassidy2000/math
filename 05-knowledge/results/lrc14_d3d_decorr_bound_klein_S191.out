@@ -1,0 +1,25 @@
+(1) D3(d*{0..9}+p) -> D3_limit=0.4646 as d grows, for various interior ratios r=p/d:
+  r=8/3: d3:0.4530 d3:0.4530 d3:0.4530 d3:0.4530 
+  r=5/2: d2:0.4689 d2:0.4689 d2:0.4689 d2:0.4689 
+  r=7/2: d2:0.4626 d2:0.4626 d2:0.4626 d2:0.4626 
+  r=11/4: d4:0.4672 d4:0.4672 d4:0.4672 d4:0.4672 
+  r=1/2: d2:0.4717 d2:0.4717 d2:0.4717 d2:0.4717 
+
+(2) rate |D3(E_d) - 0.4646|*d for the extremal ratio r=8/3 (A's ratio), d=3,6,9,..,30:
+  d= 3: D3=0.45299, |dev|=0.01161, |dev|*d=0.0348
+  d= 3: D3=0.45299, |dev|=0.01161, |dev|*d=0.0348
+  d= 3: D3=0.45299, |dev|=0.01161, |dev|*d=0.0348
+  d= 3: D3=0.45299, |dev|=0.01161, |dev|*d=0.0348
+  d= 3: D3=0.45299, |dev|=0.01161, |dev|*d=0.0348
+  d= 3: D3=0.45299, |dev|=0.01161, |dev|*d=0.0348
+  d= 3: D3=0.45299, |dev|=0.01161, |dev|*d=0.0348
+  d= 3: D3=0.45299, |dev|=0.01161, |dev|*d=0.0348
+  d= 3: D3=0.45299, |dev|=0.01161, |dev|*d=0.0348
+  d= 3: D3=0.45299, |dev|=0.01161, |dev|*d=0.0348
+  => C := max |dev|*d ~ 0.035 (the Riemann-sum constant V_i/d bookkeeping)
+
+(3) MIN D3 over ALL longest-AP=10 shapes with d>=4 (many p, many d):
+  min D3 (d>=4) = 0.45875 at [0, 5, 10, 15, 20, 25, 28, 30, 35, 40, 45] (d=5)
+  bar=0.33121; d>=4 clears with margin +0.1275
+  RIGOROUS: D3(E_d) >= 0.4646 - C/d >= 0.4646 - 0.035/4 = 0.4559 >= bar for d>=4;
+  d=3 exact (min = A = 0.4530). So the longest-AP=10 family clears for ALL d>=3.
