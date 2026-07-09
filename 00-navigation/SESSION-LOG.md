@@ -15,6 +15,23 @@ HONEST: rigorous = the rank-2 identity + the coordinate-plane decomposition + th
 NEXT: the correlated-remainder finite bound (prim-diam<2048 for all-products-small) + the lower-rank reduction made rigorous; a-priori decay constants. Files: lrc14_L9_rank2_rate_opus_S159 (+out); reflection the-L9-rank2-resonance-rate-decomposes-into-marginal-pairwise-rates-opus-S159.
 
 ---
+## kind-pasteur-2026-07-08-S88 (cont.3) -- L=9 and L=8 genuine tail extremals enumerated for opus's finite check: per-L tail floor table [L=10: A=0.4530 | L=9: 0.4661 | L=8: 0.5107], all >= bar, increasing as L decreases; VERIFIES opus-S158's L<=9 closure
+
+Prompt (owner): enumerate the L=9 and L=8 families for opus.
+
+DELIVERED. Each L-family = {AP_L scale d} u {(11-L) points}; filtered to GENUINE longest-AP=L (extras completing a 10-AP are L=10, covered by opus-S157) AND prim-diam >= 25 (tail). Exact per-L tail extremals:
+  L=10: A = 0.452986 at 3*{0..9}+8 (prim-diam 27, margin +0.122)  [opus-S157 PROVED]
+  L=9 : 0.466077 at (0,3,5,6,9,12,15,18,21,24,30) (prim-diam 30, longest-AP 9, margin +0.135) [EXACT]
+  L=8 : 0.510679 at (0,4,7,8,10,12,14,16,20,24,28) (prim-diam 28, longest-AP 8, margin +0.179) [EXACT]
+Per-L tail min INCREASES as L decreases => global tail min is L=10 = A. All strata clear with growing margins.
+
+CONVERGENCE: opus-S158 (concurrent) already CLOSED the L<=9 tail (block_L(scale d)+(11-L)-pts decorrelation, S157 generalized to rank 11-L; whole-tail closure = kps-S88 exhaustive<=30 + S157 L=10 + S158 L<=9). My exact per-L extremals VERIFY it. REFINEMENT: opus-S158 stated worst L=9 = 0.473288, but the genuine L=9 tail min is 0.466077 (my shape) -- LOWER, still >= bar +0.135. No gap: that shape is prim-diam 30, ALREADY in my exhaustive <=30 (it was in that run's lowest-8); opus's rate bound covers prim-diam > 30. So exhaustive<=30 (small pd) + opus rate (large pd) = full per-L coverage.
+
+STATE: k=11 CLOSED (opus-S158). mac-mini-S58: ALL SIX density-floor legs (k=8..13) closed. My session contributed the exhaustive<=30 (tail min PINNED=A) + the AP+interior / longest-AP=10 / L=9 / L=8 enumerations = the exact finite-check anchors underpinning the corrected longest-AP closure.
+
+FILES: lrc14_L9_L8_families_kps_S88.py (+out). 
+
+NEXT: k=11 (and k=8..13) density floor closed; remaining LRC(14) work is the Lean assembly + the other legs (Part A factoring, etc.).
 
 ## klein-2026-07-08-S190 -- ENUMERATED the longest-AP=10 family exactly: tail min = A = 0.452986 (d=3) >= bar +0.12, confirming opus's A is the true minimizer; caught a failed 1-D reduction (dilation-invariance is integer-c only); k=11 tail CLOSED, court case RESOLVED (HYP-5387)
 

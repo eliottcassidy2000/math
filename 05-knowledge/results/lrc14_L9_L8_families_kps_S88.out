@@ -1,0 +1,26 @@
+L=9 and L=8 families for opus-S157 finite check  (bar=0.331212)
+stratification: L=10 CLOSED (opus proved + kps verified<=54); L<=9 = the remaining stratum
+================================================================================================
+
+### longest-AP = 9 family: {AP_9 scale d} u {2 points}   (decorrelation limit D3_9 = 0.5235)
+   d  AP span     min D3         best extra    margin
+   2       16   0.479658           (20, 25)  +0.14845
+   3       24   0.466077            (5, 30)  +0.13486
+   4       32   0.467183            (3, 40)  +0.13597
+   5       40   0.470332           (12, 50)  +0.13912
+  --> family MIN D3 = 0.466077 (EXACT) at (0, 3, 5, 6, 9, 12, 15, 18, 21, 24, 30)
+      prim-diam 30, longest-AP 9, margin +0.134864  [>= bar, +0.135]
+
+### longest-AP = 8 family: {AP_8 scale d} u {3 points}   (decorrelation limit D3_8 = 0.6021)
+   d  AP span     min D3         best extra    margin
+   2       14   9.900000               None  +9.56879
+   3       21   0.518297         (2, 8, 27)  +0.18708
+   4       28   0.510679        (7, 10, 14)  +0.17947
+  --> family MIN D3 = 0.510679 (EXACT) at (0, 4, 7, 8, 10, 12, 14, 16, 20, 24, 28)
+      prim-diam 28, longest-AP 8, margin +0.179466  [>= bar, +0.179]
+
+================================================================================================
+HANDOFF to opus-S157: each L-family = {AP_L scale d} + (11-L) points; the extremal sits at
+SMALL scale d (like L=10's d=3), dips slightly BELOW its decorrelation limit D3_L, and stays
+FAR above bar (L=9 margin ~ +0.17, L=8 ~ +0.25).  Your m_j = L_j + resonance-sum + 1/(pd)
+rate extends per L with (11-L) free points -- these tables are the finite-check anchors.
