@@ -1,3 +1,25 @@
+## klein-2026-07-09-S203 -- GOOD-PERIOD DICHOTOMY ASSEMBLED end-to-end in Lean; the REFRAME: THM-527 Part A (ruler embedding) is the ONE shared blocker for BOTH routes.
+
+Prompt (owner): keep working the good-period dichotomy assembly, aim to finish the proof.
+
+Traced the good-period leg's Lean assembly to the metal and wired it end-to-end. New file **LRCGoodPeriodReach.lean** (sorry-free, kernel-pure [propext,Classical.choice,Quot.sound]):
+- `teeth E Vmax j` = the cluster phases (residues/Vmax) as a Finset ℝ.
+- `reachMargin_of_residueGap`: a free residue gap >1/7 => a fast phase with nearInt clearance >1/14 from every tooth (via kps-S31 GapReach).
+- `mreach_ge_of_goodPeriod`: **HasGoodPeriod E Vmax => 1/14 <= Mreach v**, composing my LRCGoodPeriodMaxgap (decidable predicate) -> GapReach -> Mreach_ge_of_witness, **modulo exactly TWO named links**: `hlink` (free-gap extraction, FINITE) + `hembed` (ruler embedding).
+- `foldl_max_mem` verified (kernel-pure, [propext]) -- the seed helper for hlink.
+
+CHAIN now connected: kps-S99 dispatch (tiling LEM-012 near-AP ∪ LEM-013 dissoc) -> klein HasGoodPeriod + native_decide certs -> GapReach gap->clearance -> witness->Mreach. 
+
+**THE REFRAME (the real endgame signal).** The skeleton reduces LRC(14) to hfloor (density census, machine-checked k=8..13) + **hpartA (0<witnessG2 => Mreach>=1/14, witnessG2 OPAQUE)**. That hpartA IS **THM-527 Part A = the Vmax-ruler embedding** -- the SAME node my good-period `hembed` needs. So BOTH routes bottleneck on ONE shared open node: Part A (the slow-fast realization of the fast-phase gap into a real witness time τ, the deferred equidistribution ρ_K->ρ*). Everything else is proven/cited sorry-free.
+
+=> Finishing the proof = formalizing **Part A**, NOT the good-period branches (LEM-012 proved; LEM-013 verified + exact-check/density-floor covered per klein-S201 2×2) NOR the finite free-gap link `hlink` (~200 lines list plumbing; the `List.Sorted` API shifted -- laborious, not blocking). I did NOT grind hlink: it wouldn't finish the proof (Part A remains regardless) and the sort API moved.
+
+kps (S99): your dispatch is wired to Mreach now via LRCGoodPeriodReach; the two branch hypotheses + the clearance are on one side, the ruler embedding (=your GapReach's deferred Part-A) on the other. Whoever formalizes Part A closes BOTH routes. mac-mini: your non-strict j=1 wraparound folds into the same reach core.
+
+FILES: LRCGoodPeriodReach.lean (built, sorry-free); reflection the-good-period-leg-is-assembled-part-A-ruler-embedding-is-the-shared-blocker-klein-S203; LRC14-STATUS R1 updated. Builds on kps-S99/S31, klein LRCGoodPeriodMaxgap, LRCMreachConcrete.
+
+NEXT (the finish target): THM-527 Part A / hpartA -- the Vmax-ruler embedding. Both the good-period and density-floor routes reduce to it. This is the one substantive analytic node left before a complete Lean LRC(14).
+
 ## opus-2026-07-09-S173 -- NEW DIRECTION: the singular-series/lonely-measure RIESZ-PRODUCT route to inf L>0 -- POSITIVE-DEFINITE, sidesteps the covering-W Mertens wall (opus-S172); certificate soundness formalized (LRCRieszCertificate.lean, kernel-pure); naive Riesz reaches ratio 1.07-1.19 (beats 1.41), <1 needs the tuned Bedert-2025 construction
 
 Prompt (owner): keep pushing the LRC math then formalization, pull often, develop new directions as needed.
