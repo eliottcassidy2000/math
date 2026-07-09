@@ -1,3 +1,41 @@
+## klein-2026-07-09-S198 -- the single Sidon-like inequality (route c, c(L)<ρ_min) + the near-resonance count is MERTENS-cautioned (⟹ use the positive arc-count) + Hadwiger is nontrivial for the metagraph at n=7
+
+Prompt (owner): work the near-resonance count and the single Sidon-like dissociated-branch inequality;
+consider Mertens conjecture and Hadwiger conjecture. Converged with mac-mini-S61(cont.) on route (c).
+
+**THE SINGLE SIDON INEQUALITY (route c, cancellation-free).** A good period EXISTS iff #arcs(Good_E) <
+ρ*·Vmax; since spread<=Vmax it suffices that c(L) := max #arcs/spread < ρ_min(L) := min ρ*. VERIFIED
+(k=13, deeply dissociated L=2,3,4,5): c(L) = 0.34–0.51 while ρ_min = min μ = 0.96–0.98 (even min D3 =
+0.68–0.72) => c(L) < ρ_min with margin >= 0.45 (>= 0.17 vs the D3 floor). Two a-priori inputs, both the
+SAME near-resonance count read POSITIVELY: [#arcs <= c(L)·spread, small for low L] + [ρ* >= D3 >=
+D3_∞^{(L)}, HIGH for low L, opus-S158 decreasing in L]. (mac-mini-S61 converged: #arcs/spread < D3(E).)
+
+**THE NEAR-RESONANCE COUNT + MERTENS.** The near-resonance count NR (small n with n.E ~= 0 mod Vmax,
+bounded by longest-AP / additive energy) drives BOTH the arc-count (#arcs ~ NR, positive) AND the
+partial-sum Corr_N = Σ What(n) G_N (signed). kps-S92: the ABSOLUTE bound Σ|What|·min(N,1/2||.||) ~ 20x
+the target while signed r_N = 0.08–0.26 => CANCELLATION ESSENTIAL. The sign is (-1)^r (support-parity),
+a Mobius-like (-1)^ω => Corr_N is a MERTENS-TYPE signed sum. The MERTENS CONJECTURE (|Σμ(n)|<√n,
+μ=(-1)^ω, DISPROVED Odlyzko-teRiele 1985) is the compass: heuristic √-cancellation in a parity-weighted
+sum CAN FAIL => route (a) (which needs the cancellation) is treacherous; route (c) (positive NR < ρ*·spread,
+no cancellation) is the ROBUST closure. Reflection: the-near-resonance-count-is-mertens-cautioned-...-klein-S198.
+
+**HADWIGER (consider).** Hadwiger's conjecture (every graph has a K_χ minor) is TRIVIAL for perfect
+graphs (χ=ω => K_ω clique). The merged tournament metagraph G_n/Z_2 is perfect at n<=6 (ω=χ) but at
+**n=7 has ω=4 < χ=6** (odd holes) -- so Hadwiger FIRST BITES at n=7, on the project's KEY object. With
+χ(G_n/Z_2)=n−1 (χ grows, ω~4-5 bounded), Hadwiger predicts G_n/Z_2 has a K_{n−1} minor for n>=7;
+concretely G_7/Z_2 (272 vertices, ω=4) has a K_6 minor. Candidate structure: the score/H-gradient SPINE
+(transitive H=1 -> SC backbone -> regular; the n−1 score-levels = branch sets, SC-SC spine + SC-NS ribs =
+cross-adjacencies) => the coloring bound χ=n−1 would acquire a MINOR WITNESS. Reflection + backlog LEAD
+(build G_7/Z_2, K_6-minor test). The Hadwiger-Nelson reading bridges to the LRC distance-graph side.
+
+NET: LRC(14)'s covering case = [structured L>=k-6: LEM-012 elementary] + [Sidon-like L<=k-7: route (c)
+c(L)<ρ_min, cancellation-free, margin>=0.45] + Lean. The near-resonance count is the single invariant;
+Mertens says count it positively. Files: lrc14_{sidon_closure,nearres_mertens}_klein_S198; 2 reflections;
+backlog. NEXT: prove the a-priori c(L)<=c0 (positive low-L arc-count) => route (c) fully a-priori => capstone
+CLOSED; and the Hadwiger K_6-minor build.
+
+---
+
 ## mac-mini-2026-07-09-S61 (cont.) -- CLOSE the easy (dissociated) branch via ARC-COUNT: the clean exact inequality #arcs/spread < D3(E), sidestepping the partial-sum cancellation
 
 Prompt (owner): finish closing the easy branch.
