@@ -1,0 +1,3 @@
+q=21: all subsets 77520, blocked 28800 (37.2%); with symmetric pair 77520, blocked 28800 (37.2%)
+q=23: all subsets 497420, blocked 28160 (5.7%); with symmetric pair 497420, blocked 28160 (5.7%)
+q=26: all subsets 5200300, blocked 369304 (7.1%); with symmetric pair 5196204, blocked 365208 (7.0%)

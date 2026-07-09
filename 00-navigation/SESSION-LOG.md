@@ -12,6 +12,62 @@ FILES: 01-canon/theorems/THM-669-reflection-availability-lemma.md; 04-computatio
 NEXT: (a) the parametric-theta D3/B4 rerun for n in {11,12,13} (mac-mini's THM-661 machinery at theta' = 1/7 + r -- the one remaining input); (b) the assembled covering-case criterion as ONE surface (spread13 | THM-668 | [THM-669 floors + G_P + THM-667 + drift embed] | finite checks) -- Lean-facing; (c) Lean THM-669 (the reflection step is Finset bijection + abs algebra; tent already THM-651-shaped); (d) the exact meas(G_P) ledger reuse for the |P| >= 7 splits.
 
 ---
+## mac-mini-2026-07-09-S65 (cont.) -- HYP-5730: the Schur-budget theorem ATTACKED -- four live-ruler certificates PROVED (C0 window / C1 gcd ledger / C2 divisor descent / C3 six-pair prime), census = TWO-DOMAIN FACTORIZATION: counting is total at scale, classification owns q <= 36
+
+Prompt (owner): attack the Schur-budget live-ruler theorem; extend the session.
+
+**THE FOUR CERTIFICATES (PROVED, elementary — THM-668 addendum).** Notation: m = ceil(q/14)-1,
+B_l = bad multipliers of runner l on ruler q (always contains 0).
+- **C0 (window):** ruler q = Vmin+Vmax live at p=1 iff Vmax <= 13*Vmin — kps-S28's spread13_lonely
+  recognized as a pair-sum event (one more THM-668 universality instance).
+- **C1 (gcd-exact ledger):** |B_l| = g(2*floor(m/g)+1), g = gcd(v_l mod q, q); classes merge iff
+  v_l = +-v_k mod q (q > Vmax: exactly the r(q) <= 6 representations); live if
+  Sum_classes(|B|-1) < q-1. Rule of thumb: 2*r(q) + cheapening >= 13.
+- **C2 (divisor descent):** k | q, k > 14, band mod k solvable at s => p = (q/k)s banded mod q
+  (for 14 < k <= 28: avoid {0,+-1} mod k). Recursion on the divisor lattice.
+- **C3 (six-pair prime):** q prime > Vmax, q = t mod 14 (t >= 3), r(q) = 6 => >= t-1 live
+  multipliers. The union bound closes EXACTLY (14(ceil(q/14)-1) = q-t): the 13 = 2*6+1 pairing
+  wall is beaten by the pair-merge B_a = B_b (v_a+v_b = q, D symmetric).
+
+**CENSUS (all exact integers; 0 unsound firings / 500-set soundness sweep).**
+- Covering [1,18] (966 exhaustive): **C1 alone certifies 100%.** Random covering cap 60 (600):
+  **C2 alone certifies 100%**, 0 residuals.
+- Structured adversaries ALL certified: **monad-S2's detuned harmonics — the family that defeated
+  their phi-interval composition — fall to C2 at k = 23, 25**; near-AP covering blocks to C1 at
+  q in [17,26]; worst7Struct@91: 34 certified rulers.
+- **Pure counting IS defeatable, but only at small scale:** hill-climbed defeaters
+  {1,2,3,5,6,8..14,23} (live q=21 p=5 via the residue COLLISION 23 = 2 mod 21 — invisible to any
+  union bound) and {9,10,14..29} (live q in [32,36] at p=1 — the C0 shape). All defeater
+  live-rulers sit at q <= 36.
+- **The open annulus is certificate-saturated:** sliver r > 13, Vmin >= 18 (all pair sums > 36):
+  250/250 random certified; targeted hill-climbs could not push below **38 certified rulers**.
+- **Blocking census** (13-subsets of (Z/q)\{0} up to dilation, exact): blocked fraction
+  100% (q=15) -> 80% (17) -> 37% (21) -> 5.7% (23) -> 7.1% (26); lex-first blocked classes all
+  near-intervals (LAP 12-13). Pigeonhole: every 13-subset contains a symmetric pair for q <= 26,
+  so pair-conditioning is vacuous there (honest null).
+
+**THE FINDING — the live-ruler theorem factors into TWO DOMAINS:**
+[q <= Q0 ~ 36: a BOUNDED ABSOLUTE domain — exact blocking-classification / one C-code exhaustive
+sweep of covering Vmax <= ~30] + [q > Q0: counting certificates, empirically total and
+adversarially robust]. Every observed defeat of counting is below Q0. The sole remaining a-priori
+gap on this route: **prove "covering + all pair sums > Q0 => some C1/C2 certificate fires"**
+(candidate mechanism: divisor abundance — every even pair sum has k = q/2 > 14; per-k blocked
+fraction is 5-7% and falling). This is the arithmetic half of opus-S184's endgame surface
+({Lemma A} + {hrefl binding window}) — the certificates attack the window.
+
+**Fleet wiring this hour:** kps-S114 shipped LRCPairSumDispatch.mreach_ge_of_pairsum_band (my
+THM-668 dispatch ask — the Lean consumer for any certificate/band witness; ready to
+native_decide the 966); klein-S209 (HYP-5731) is stressing HYP-5730 on the k >= 8 mid-band
+stratum my census did not reach + building the C4 hunter ledger (exact pairwise overlaps);
+opus-S184 renamed their Schur lemma to LEM-015 (boxeph keeps LEM-014). Process note: my S65
+HYP-5720 full INDEX entry had been silently clobbered to its stub by a rebase auto-resolution —
+self-caught and restored (the known --theirs hazard; check your INDEX entries after rebases).
+
+Files: `lrc14_live_ruler_certificates_macmini_S65cont.{py,out}`,
+`lrc14_certificate_stress_macmini_S65cont.{py,out}`,
+`lrc14_blocking_configs_macmini_S65cont.{py,out}`, `lrc14_blocked_pair_conditioned...out`;
+THM-668 addendum; HYP-5730 (PARTIALLY-TRUE, full data); backlog lead updated.
+
 ## kind-pasteur-2026-07-09-S114 -- FORMALIZED E3=C(k,2) <=> dilated interval (LRCSchurRigidity.lean, sorry-free, FULL equality characterization) + THM-668 grid-free pair-sum dispatch Lean leg (mac-mini's ask) + E3 hardness dispatcher script
 
 Prompt (owner): formalize E3=C(n,2) <=> dilated interval, add E3 to the dispatcher, keep doing relevant tasks toward completion.

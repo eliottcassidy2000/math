@@ -140,5 +140,82 @@ Verification: `04-computation/lrc14_pair_sum_ruler_macmini_S65.py` (+ `.out`).
    13-sets cannot kill all their pair-sum rulers (E3 budget vs. 91 rulers) — a candidate for the
    sum-free/Schur extremal literature (opus-S182's two-step target, now with a mechanism).
 
+---
+
+## ADDENDUM (mac-mini-S65 cont., HYP-5730) — the live-ruler certificates and the two-domain structure
+
+Attacking the Schur-budget statement head-on. Four elementary PROVED certificates for "ruler `q`
+is live", then the census. Notation: `m := ⌈q/14⌉ − 1` (danger radius), `D := {d : |d| ≤ m}`,
+`B_l := {p ∈ Z/q : v_l·p mod q ∈ D}` (runner `l`'s bad multipliers; `0 ∈ B_l` always).
+
+> **C0 (window).** The ruler `q = Vmin + Vmax` is live at `p = 1` iff `Vmax ≤ 13·Vmin`.
+> *Proof:* `v_l/q ∈ [Vmin/(Vmin+Vmax), Vmax/(Vmin+Vmax)] ⊆ [1/14, 13/14] ⟺ r ≤ 13`. ∎
+> (This is kps-S28's `spread13_lonely` witness recognized as a pair-sum event — one more instance
+> of Part 1's universality.)
+
+> **C1 (gcd-exact ledger).** With `g_l = gcd(v_l mod q, q)`:
+> `|B_l| = g_l·(2⌊m/g_l⌋ + 1)`, and `B_l = B_k` whenever `v_l ≡ ±v_k (mod q)` (D symmetric) —
+> for `q > Vmax` the merges are exactly the `r(q) ≤ 6` pair representations of `q`. Since every
+> `B` contains 0: `|bad ∩ [1, q−1]| ≤ Σ_classes (|B| − 1)`. **If that sum `< q − 1`, `q` is
+> live.** Rule-of-thumb form at `g ≡ 1`: fires iff `2·r(q) + (cheapening) ≥ 13`.
+
+> **C2 (divisor descent).** If `k | q`, `k > 14`, and some `s ∈ [1, k−1]` has all
+> `v_l·s mod k ∈ [⌈k/14⌉, k − ⌈k/14⌉]`, then `p = (q/k)·s` is banded mod `q`.
+> *Proof:* `v_l·p mod q = (q/k)·(v_l·s mod k)`, and `(q/k)·⌈k/14⌉ ≥ q/14`. ∎
+> (For `14 < k ≤ 28` the mod-`k` condition is exactly "avoid `{0, ±1}`". Recursion on the divisor
+> lattice; the base is THM-420-Lemma-B-style counting.)
+
+> **C3 (six-pair prime).** If `q` is prime, `Vmax < q`, `q ≡ t (mod 14)` with `t ≥ 3`, and `q`
+> has SIX pair-sum representations, then `q` is live with `≥ t − 1` multipliers.
+> *Proof:* 6 merges leave `13 − 6 = 7` distinct `B`-classes, each `|B| = 2m+1` (units);
+> `|bad ∩ [1, q−1]| ≤ 7·2m = 14(⌈q/14⌉−1) = q − t`. ∎ (The `13 = 2·6+1` pairing wall is beaten
+> exactly by the pair-merge; this is the sharpest pure-counting case.)
+
+### Census (all exact; scripts `lrc14_live_ruler_certificates_…` / `…_certificate_stress_…` / `…_blocking_configs_…`)
+
+- **Soundness:** 0 unsound firings over 500 random sets × all rulers.
+- **Covering `[1,18]` (966 exhaustive): C1 alone certifies 100%.** (C2: 12.7%, C3: 8.7%.)
+- **Random covering cap 60 (600): C2 alone certifies 100%;** C1 79.5%; 0 residuals.
+- **Structured adversaries all certified:** monad-S2's detuned harmonics (the family that defeated
+  the φ-interval composition) fall to C2 at `k = 23, 25`; covering near-AP blocks fall to C1 at
+  `q ∈ [17, 26]`; the S65 min-supply set fires C1 at `q = 23`; worst7Struct@91: 34 certified rulers.
+- **Defeaters of pure counting exist, and they are SMALL-SCALE:** hill-climbs found covering sets
+  with 0 counting-certified rulers, e.g. `{1,2,3,5,6,8,…,14,23}` (live at `q=21, p=5` via the
+  residue collision `23 ≡ 2`, which the union bound cannot see) and `{9,10,14,…,29}` (live at
+  `q ∈ [32,36]`, `p = 1` — C0-shaped, all speeds in band). All defeater live-rulers sit at
+  `q ≤ 36`.
+- **The genuinely open annulus is certificate-saturated:** in the sliver `r > 13`, `Vmin ≥ 18`
+  (all pair sums > 36 — counting-only territory): 250/250 random certified; targeted hill-climbs
+  (5 restarts × 200 steps) could not push below **38 certified rulers** — the adversary cannot
+  even approach a defeater at scale.
+- **Blocking census** (13-subsets of `(Z/q)\{0}`, exact, up to dilation): blocked fraction falls
+  `100% (q=15) → 80% (17) → 5.7% (23) → 7.1% (26)`; lex-first blocked classes are all
+  near-intervals (longest-AP 12–13). Small rulers are classification territory, not counting
+  territory.
+
+### The two-domain structure (the finding)
+
+**The live-ruler theorem factors:**
+`[q ≤ Q₀ ≈ 36: a BOUNDED, ABSOLUTE domain — exact blocking-classification / exhaustive sweep]`
+`+ [q > Q₀: counting certificates C0 ∨ C1 ∨ C2 (∨ C3), empirically total and adversarially
+robust]`.
+Every observed defeat of counting happens below Q₀; every small-Vmax set is decidable by finite
+check (and `[1,18]` is already exhaustively covered, klein-S206/mac-mini-S64). The remaining
+PROOF obligations, explicitly:
+1. **Small domain:** exhaust primitive covering 13-sets with `Vmax ≤ ~30` (C-code scale, one run —
+   the analog of klein's 966 at 18) — turns the domain into a machine-checked lemma.
+2. **Large domain:** prove "covering + all pair sums > Q₀ ⟹ some C1/C2 certificate fires" — the
+   candidate mechanism is C2 divisor abundance (91 pair sums, each even sum has `k = q/2 > 14`;
+   blocked fraction per `k` is 5–7% and falling) + C1 representation-richness. This is a finite
+   residue-geometry statement; the sliver data (min 38 certified) suggests enormous slack.
+3. **Lean:** all four certificates are one-page elementary lemmas over `Z/q` — native_decide-free,
+   grid-free.
+
+**Honest scope:** the certificates prove liveness per set/family; the infinite compressed stratum
+still needs obligation 2 as a theorem (or the fleet's analytic Kronecker route) — the two
+approaches meet exactly at the R1 box, and the certificates decimate it from the arithmetic side.
+
 **Depends on:** none (elementary). **Related:** THM-420, THM-369/THM-523, klein-S205/S206/S207,
-kps-S106/S112, opus-S177/S182, monad-explorer THM-665, LEM-012/013, MISTAKE-130.
+kps-S106/S112, opus-S177/S182, opus-S183/LEM (Schur extremal), monad-explorer THM-665/THM-666,
+boxeph-S1 LEM (P-separated composition), death-star-S1 (pure-cluster corner), LEM-012/013,
+MISTAKE-130.
