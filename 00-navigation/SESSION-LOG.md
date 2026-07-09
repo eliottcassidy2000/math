@@ -1,3 +1,17 @@
+## opus-2026-07-09-S168 -- dissociated branch closes by ARC-COUNT (#arcs SUBLINEAR in spread, ~spread^0.92 => c=#arcs/spread->0 << rho*~0.96); the two branches ARE the two BROKEN-CLOCK regimes; caught + corrected a transient regime error
+
+Prompt (owner): deprioritize the Mertens-hard signed-r_N a-priori; finish the dissociated branch via arc-count and D3_inf^{(L)} (both a-priori, big margin), crossover at L~10 matching the LEM-012 boundary; + a BROKEN-CLOCK insight ("stopped clock right twice a day, correct-rate clock ~0 times... they relate to the LRC").
+
+1. **DISSOCIATED BRANCH CLOSES BY ARC-COUNT (confirms opus-S167 + mac-mini-S61/S62).** For genuinely dissociated clusters (longest-AP <= k-6, which REQUIRE spread >> k), c=#arcs/spread -> 0: k=11, spread 30->1920, median c stays ~0.04 (max shrinks 0.40->0.05), rho*=mu ~0.96->0.998, and **#arcs ~ spread^{0.92} (SUBLINEAR)**. So #arcs < rho*.Vmax holds with a huge margin. mac-mini-S62 independently got the cleaner exact form **c < D3(E)** (dilation-aware; c/D3 monotone-decreasing, <1 throughout) + Vmax<=234 finite check -- adopt mac-mini's c<D3 framing (D3 exact + dilation-invariant, no rho* estimate).
+
+2. **THE TWO BRANCHES ARE THE TWO BROKEN-CLOCK REGIMES (owner insight, made precise + connected).** A clock at rate r is "exactly right" at rate |r-1| (crossings of a MEASURE-ZERO value): stopped clock (r=0) right often, near-correct (r~1) almost never. Runners are clocks (d_i=v_i-w). near-AP = SLOW-relative = LINGERING = few long bad blocks = the positive-measure obstruction (klein LEM-012 Dirichlet clustering); dissociated = FAST-relative = many short blocks, #arcs sublinear (mac-mini arc-count). Exact resonance = measure zero = negligible (= mac-mini's near>>exact Corr_N; deprioritize r_N, opus-S167). CONVERGES with mac-mini-S62's own broken-clock reflection.
+
+3. **REGIME ERROR CAUGHT BEFORE FILING.** My first recheck (naive #g<mu*V at spread 12-35) showed R~1-2.3 (apparent failure); that regime FORCES k=11 into near-AP (high #arcs), NOT dissociated. The clock insight identifies the regime; the growth test (spread>=30, dissociated filter) confirms closure. Honest correction recorded in the reflection.
+
+NEXT: adopt mac-mini's c<D3(E) as the canonical dissociated inequality; make #arcs<=c.spread (bounded-arc-count, the spread^0.92 growth) + c<D3 fully a-priori/Lean; near-AP branch is klein LEM-012 (elementary, done to L>=k-6). The good-period capstone is now: [dissociated: arc-count c<D3] + [near-AP: LEM-012] tiling all L, + the finite Vmax<=234 check. Files: lrc14_arccount_recheck_opus_S168, lrc14_arccount_growth_recheck_opus_S168, lrc14_arccount_crossover_opus_S168 (+outs); reflection the-broken-clock-lingering-is-the-lrc-obstruction-opus-S168; HYP-5537.
+
+---
+
 ## mac-mini-2026-07-09-S62 -- finished the finite/verifiable form of the dissociated closure (c<D3, spread>=200 + Vmax<=234 check) + REFLECTION: the broken clock IS the loneliness mechanism
 
 Prompt (owner): work the finite/verifiable exact inequality + small finite check; + the broken-clock/time insight relates to LRC.

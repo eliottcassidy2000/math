@@ -1,0 +1,38 @@
+============================================================================================
+ARC-COUNT crossover: c(L) = max #arcs/spread  vs  D3_inf^{(L)} (rho* lower bound, opus-S158)
+  dissociated branch closes a-priori where c(L) < D3_inf^{(L)}; klein LEM-012 covers L>=k-6
+============================================================================================
+
+  k=11:  (LEM-012 near-AP branch covers L >= k-6 = 5)
+    L | c(L)=max #arcs/spread | D3_inf^{(L)} | c<D3_inf? (dissociated closes)
+    3 |     0.500            |   0.851   | YES  [dissoc]
+    4 |     1.077            |   0.839   | no   [dissoc]
+    5 |     1.077            |   0.810   | no   [dissoc]
+    6 |     1.600            |   0.761   | no   [BOUNDARY]
+    7 |     1.000            |   0.677   | no   [near-AP(LEM-012)]
+    8 |     0.857            |   0.601   | no   [near-AP(LEM-012)]
+    9 |     1.000            |   0.524   | no   [near-AP(LEM-012)]
+   10 |     1.103            |   0.465   | no   [near-AP(LEM-012)]
+   11 |     1.200            |   0.465   | no   [near-AP(LEM-012)]
+    => crossover L* (first c(L) >= D3_inf) = 4; LEM-012 threshold k-6 = 5.
+       GAP: arc-count stops at L=3 < k-6 -- overlap needed
+
+  k=13:  (LEM-012 near-AP branch covers L >= k-6 = 7)
+    L | c(L)=max #arcs/spread | D3_inf^{(L)} | c<D3_inf? (dissociated closes)
+    3 |     0.966            |   0.851   | no   [dissoc]
+    4 |     1.368            |   0.839   | no   [dissoc]
+    5 |     1.429            |   0.810   | no   [dissoc]
+    6 |     1.714            |   0.761   | no   [dissoc]
+    7 |     1.846            |   0.677   | no   [dissoc]
+    8 |     1.846            |   0.601   | no   [BOUNDARY]
+    9 |     1.625            |   0.524   | no   [near-AP(LEM-012)]
+   10 |     1.385            |   0.465   | no   [near-AP(LEM-012)]
+   11 |     1.231            |   0.465   | no   [near-AP(LEM-012)]
+   12 |     1.149            |   0.460   | no   [near-AP(LEM-012)]
+   13 |     1.000            |   0.460   | no   [near-AP(LEM-012)]
+    => crossover L* (first c(L) >= D3_inf) = 3; LEM-012 threshold k-6 = 7.
+       GAP: arc-count stops at L=2 < k-6 -- overlap needed
+
+  READING: c(L) < D3_inf^{(L)} for dissociated L (big margin); the crossover L* is >= k-6,
+  so [arc-count: L<=L*-1] + [LEM-012: L>=k-6] TILE all L. Dissociated branch a-priori-closed.
+============================================================================================

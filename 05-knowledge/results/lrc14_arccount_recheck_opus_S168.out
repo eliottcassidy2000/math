@@ -1,0 +1,30 @@
+============================================================================================
+ARC-COUNT recheck: R(L)=max #g/(mu*spread) < 1 ?  (#g good intervals, mu good measure)
+  good period exists iff #g < mu*V; hard region V~spread => need #g/spread < mu i.e. R<1
+============================================================================================
+
+  k=11:  L | max R=#g/(mu*spread) | (mu, #g, spread at max) | R<1?
+       3 |   0.378              | (mu=0.961, #g=8, spr=22) | YES  (n=57)
+       4 |   1.068              | (mu=0.874, #g=14, spr=15) | NO  (n=161)
+       5 |   1.052              | (mu=0.894, #g=16, spr=17) | NO  (n=93)
+       6 |   1.254              | (mu=0.931, #g=14, spr=12) | NO  (n=58)
+       7 |   1.213              | (mu=0.824, #g=12, spr=12) | NO  (n=28)
+       8 |   0.883              | (mu=0.871, #g=10, spr=13) | YES  (n=18)
+       9 |   1.688              | (mu=0.691, #g=14, spr=12) | NO  (n=19)
+      10 |   1.449              | (mu=0.761, #g=32, spr=29) | NO  (n=7)
+
+  k=13:  L | max R=#g/(mu*spread) | (mu, #g, spread at max) | R<1?
+       3 |   0.573              | (mu=0.963, #g=16, spr=29) | YES  (n=4)
+       4 |   1.372              | (mu=0.802, #g=22, spr=20) | NO  (n=112)
+       5 |   2.282              | (mu=0.767, #g=28, spr=16) | NO  (n=126)
+       6 |   2.014              | (mu=0.851, #g=24, spr=14) | NO  (n=76)
+       7 |   2.286              | (mu=0.687, #g=22, spr=14) | NO  (n=34)
+       8 |   2.222              | (mu=0.831, #g=24, spr=13) | NO  (n=38)
+       9 |   2.182              | (mu=0.655, #g=20, spr=14) | NO  (n=19)
+      10 |   1.883              | (mu=0.735, #g=18, spr=13) | NO  (n=14)
+      11 |   2.021              | (mu=0.609, #g=16, spr=13) | NO  (n=15)
+      12 |   2.058              | (mu=0.555, #g=40, spr=35) | NO  (n=11)
+
+  READING: if R(L)<1 across L, arc-count closes (good period exists); the honest a-priori
+  needs #g<=(bound) and mu>=(floor). Corrects S167's rho*=D3_inf conflation if R>=1 anywhere.
+============================================================================================
