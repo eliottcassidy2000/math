@@ -68,11 +68,40 @@ already own.  The residual is no longer "bound a Mertens-cancelling resonant sum
 widest good arc" — a magnitude statement about `G`'s geometry, exactly the three-gap terrain the
 density-floor proofs (THM-651/653, the tent/window floors) already live on.
 
+## SHARPENING (same session): the branch split IS the geometric divide — dissociated closes a-priori
+
+The first draft worried `maxIntG ≥ c/spread` fails for the fragmented sets (`c = 6/7`).  It does — but
+those are **exactly the near-AP sets**, and restricting to the *dissociated* branch closes it:
+
+> Fragmentation of `G` (`maxIntG` collapsing to the `0`-neighbourhood `6/(7·spread)`) is driven by a
+> long **resonant sub-AP** — the mult-of-7 AP `{0,7,…,42}` in the knife-edge (longest-AP `= 7`).
+> **Dissociated** sets (longest-AP `≤ k−7 = 6`) have no such sub-AP, so `G` keeps a wide arc.
+> **Adversarial search (117 443 dissociated `k=13` sets, 7-/k-structured-biased):
+> `min maxIntG·spread = 1.709 ≈ 12/7`** (`≈ 2×` the `0`-nbhd floor `6/7`), argmin
+> `{0,2,7,12,14,15,18,20,21,23,28,33,35}`.
+
+So `maxIntG·spread ≥ c > 1` on the dissociated branch ⟹ `maxIntG > 1/spread > 1/Vmax` for **every**
+`Vmax > spread` ⟹ the grid hits `G`'s widest arc ⟹ **a strict good period exists a-priori, for all
+`Vmax`** — no Mertens sum (opus-S172), no exhaustion.  The good-period **dichotomy** (near-AP
+`L ≥ k−6` / dissociated `L ≤ k−7`, kps-S99) is *precisely* this geometric divide:
+
+- **dissociated** → the widest-arc pigeonhole (this route), a-priori;
+- **near-AP** → LEM-012 Dirichlet clustering (the fragmented/knife-edge sets live here; the boundary
+  `spread = 6·Vmax/7` is the non-strict `j=1` case).
+
+**The a-priori target is now clean and geometric:** prove `maxIntG(E)·spread ≥ c > 1` (measured `≈ 12/7`)
+for dissociated `E` — a three-distance/Steinhaus lower bound on the widest arc where `k` phases leave a
+`>1/7` gap.  This *replaces* the dissociated branch's Mertens-walled resonant-sum obligation with a
+magnitude statement on `G`'s geometry — the terrain klein's three-gap floors (THM-638/651/653) already
+own.  If proven, the dissociated branch is closed a-priori and only the near-AP/boundary locus (LEM-012
++ non-strict `j=1` + density floor) remains.
+
 The good period was always a covering question; seeing it as *the ruler out-resolving the widest
 uncovered arc* puts it back on the geometric side of the triangle — the hypotenuse `1/7`, where the
 project's constants live.
 
-*Files: `lrc14_good_set_interval_macmini_S64.{py,out}`, `lrc14_good_set_interval_allres_macmini_S64.out`.
+*Files: `lrc14_good_set_interval_macmini_S64.{py,out}`, `lrc14_good_set_interval_allres_macmini_S64.out`,
+`lrc14_dissociated_widest_arc_floor_macmini_S64.{py,out}` (the 117k-set dissociated `min maxIntG·spread = 1.709`).
 See `good_period_j1_wraparound_nonstrict` / `LRCGoodPeriodNonStrict.lean` (the boundary case),
 opus-S172 (the `|R|` wall this routes around), klein-S201/MISTAKE-129 (the resonant ruler), THM-661
 (the density floor `μ ≥ bar`), THM-651/653 (three-gap floors). Related: [[triangle_foundation]].*

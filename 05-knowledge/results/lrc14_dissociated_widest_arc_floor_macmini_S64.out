@@ -1,0 +1,5 @@
+DISSOCIATED (longest-AP<=6), 117443 sets (7-/k-structured biased):
+  min maxIntG*spread = 1.7092   argmin E=[0, 2, 7, 12, 14, 15, 18, 20, 21, 23, 28, 33, 35] (L=6)
+  0-nbhd floor 6/7 = 0.8571;  observed min = 1.99x floor;  12/7 = 1.7143
+  1.709 > 1  =>  maxIntG > 1/Vmax for all Vmax>spread => strict good period A-PRIORI (dissociated).
+  A-priori TARGET (three-distance/Steinhaus): prove maxIntG(E)*spread >= c > 1 for dissociated E.
