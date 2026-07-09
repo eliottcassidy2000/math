@@ -1,0 +1,34 @@
+DOMAIN of klein-S205 minReach_ge_of_driftGap  (necessary condition g > r/7, and g <= 1)
+   ratio r    min gap g needed = r/7   g <= 1 feasible?  spread13_lonely covers?
+         1                       1/7               True                     True
+         2                       2/7               True                     True
+         4                       4/7               True                     True
+         6                       6/7               True                     True
+     69/10                     69/70               True                     True
+         7                         1              False                     True
+        13                      13/7              False                     True
+        14                         2              False                    False
+        20                      20/7              False                    False
+        50                      50/7              False                    False
+
+CONCLUSION
+  drift lemma fires  <=>  r < 7.
+  spread13_lonely closes  all r <= 13   (kps-S28, kernel-pure, one line).
+  {r < 7} is a STRICT SUBSET of {r <= 13}  =>  the drift lemma is VACUOUS for the proof:
+  it never fires on a case spread13_lonely leaves open.
+
+THE OPEN REGIME r > 13:  local drift-absorbed embedding is IMPOSSIBLE
+  r= 13: spread/Vmax = 0.9231 (teeth move 92.3% of a turn per ruler period);  need g > 1.857 > 1  IMPOSSIBLE
+  r= 14: spread/Vmax = 0.9286 (teeth move 92.9% of a turn per ruler period);  need g > 2.000 > 1  IMPOSSIBLE
+  r= 20: spread/Vmax = 0.9500 (teeth move 95.0% of a turn per ruler period);  need g > 2.857 > 1  IMPOSSIBLE
+  r= 50: spread/Vmax = 0.9800 (teeth move 98.0% of a turn per ruler period);  need g > 7.143 > 1  IMPOSSIBLE
+
+RESOLUTION OF THE 1/7-vs-2/7 TENSION
+  The correct threshold is neither 1/7 nor 2/7: it is  g > (1/7) * (Vmax/Vmin),  ratio-dependent.
+  g=1/7 needs r<1 (impossible);  g=2/7 needs r<2;  and g<=1 caps the whole local route at r<7.
+  So the local slow-fast bridge dies at r>=7, strictly inside the regime spread13_lonely
+  already handles.  hembed must be NON-LOCAL in the open regime r>13.
+
+CONSISTENT with mac-mini-S64's exact counterexample (worst7Struct, Vmax=91, Vmin=9, r=10.1):
+  good periods j=5,10,11 have NO lonely phi (exact max_phi minReach = 3/43, 2/31, 1/23 < 1/14),
+  while a DISTANT j=25 is lonely (0.2306).  The lonely time is not at the good period.
