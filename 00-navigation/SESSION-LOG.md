@@ -34,6 +34,17 @@ lrc14_weyl_{firstmoment,tent_bound,decorrelation}_macmini_S59 (+outs).
 NEXT: the shared a-priori 𝒲̂-decay constant (closes both THM-664 uniform bound AND opus-S157's
 density-floor tail certification -- ONE lemma); or just cite LEM-010 for the unconditional closure.
 The bounded finite check {Vmax<=3^12, spread>=6Vmax/7} (LEM-010) still the cleanest residual.
+## opus-2026-07-08-S161/S162 -- L=9 LOWER-RANK REDUCTION + FINITE BOUND (math done); then LEAN: dilation-invariance of the covering good-set formalized (kernel-pure, builds)
+
+Prompt (owner): prove the correlated-remainder finite bound and lower-rank reduction, then work on lean formalization once all math is done.
+
+MATH (S161): the L=9 correlated remainder closes via a NESTED RANK-1 reduction (peel the far point by kps-S89 Koksma, twice), bottoming at 3 base floors all >= bar: (B0) block_9+2iid = 0.524, (B1) intermediate 10-pt-core min over (d,p) of D3(block_9(d)+p+iid) = 0.505 (computed this session, at (d,p)=(2,7)), (B2) both-close exact conditional (S160) = 0.467. FINITE BOUND explicit: both-close (reduced pair products < T) => prim-diam < 8T (bounded, finite exact check); one far => peel => (B1); both far => box bound (B0). All base floors >= bar => L=9 closed. The k=11 tail math is complete at the fleet's rigor (kps-S88 exhaustive<=30 + kps-S89 L=10 + S159/S160/S161 L<=9).
+
+LEAN (S162): formalized DILATION INVARIANCE of the covering good-set (TournamentH7/LRCGoodDilation.lean, builds, KERNEL-PURE [propext,Classical.choice,Quot.sound], no sorryAx): good_dilate (Good θ (c·E) = (x↦c·x)⁻¹ Good θ E) + good_add_one (Good θ E is 1-periodic) + the emptyArc helpers, mirroring LRCTailDiameter's translation invariance. This is the structural core of muGood-dilation invariance (the measure step = the c-fold-cover change-of-variables, the one remaining leaf), and the covering-side companion to LRCDilationInvariance (M(c·v)=M(v)). It formalizes the fact that fixes LEM-009 / MISTAKE-126: muGood/D3 is dilation-invariant, the fixed-window cluster size is NOT. Registered in the aggregate TournamentH7.lean import.
+
+NEXT (Lean): the measure corollary muGood_dilate (circle change-of-variables); then wire dilation + longest-AP into the k=11 witness-floor node (mirroring the k=13 LRCTailDiameter chain: structural lemmas + a Farey-cell floor certificate for A_* = (0,3,6,8,9,12,15,18,21,24,27)). Files: lrc14_L9_reduction_basecases_opus_S161 (+out); LRCGoodDilation.lean; reflections the-L9-reduction-and-finite-bound-nested-rank1-opus-S161, lean-good-set-dilation-invariance-opus-S162.
+
+---
 
 ## mac-mini-2026-07-08-S58 (cont.) -- THM-527-A (the LAST covering-case item) LARGELY CLOSED: LEM-010 deterministic good-period existence dissolves the finite-Vmax glue, no equidistribution
 
