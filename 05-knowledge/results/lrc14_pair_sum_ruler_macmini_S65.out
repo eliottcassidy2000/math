@@ -1,0 +1,55 @@
+====================================================================================================
+PART 1 -- VERIFY THM-666: max over pair-sum events == max over ALL breakpoints
+====================================================================================================
+300 random primitive sets (k=4..7, speeds<45): 300 agree, 0 mismatches
+(difference-crossings and kinks NEVER exceeded the pair-sum events, as the lemma proves)
+
+====================================================================================================
+PART 2 -- klein-S207's 'different ruler' EXPLAINED (worst7Struct @ Vmax=91, covering-derived)
+====================================================================================================
+speeds = [9, 16, 24, 33, 40, 47, 54, 62, 65, 70, 77, 84, 91]
+exact M = 3/13 at t* = 11/39   (klein-S207 reported M = 3/13 at 11/39)
+active rising = [54], active falling = [24]
+witness denominator 39; pair sums divisible by it: [(24, 54)]
+lonely component length = 37/6615 = 0.005593; realization slack sigma = 0.4363
+=> 39 does not divide 91 but 39 | 24+54 = 78: the witness lives on the PAIR-SUM ruler.  LAWFUL.
+
+====================================================================================================
+PART 3 -- the tight AP {1..13}: witness tangency, slack EXACTLY 0
+====================================================================================================
+M = 1/14 at t* = 1/14; lonely component = [1/14] length 0; sigma = 0
+(the pinch/lemniscate-node/tangency: the component is a single point)
+
+====================================================================================================
+PART 4 -- HYP-5720 exhaustive: all primitive covering 13-subsets of [1,18]
+====================================================================================================
+966 primitive covering 13-subsets of [1,18] (klein-S206/mac-mini-S64 count: 966)
+min M = 1/12  (S64 found 1/12)
+5 smallest realization slacks sigma = len(lonely comp) * (pair sum):
+  sigma=0.0490  M=1/12  t*=5/24  len=0.002041  S=(1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18)
+  sigma=0.0622  M=2/23  t*=4/23  len=0.002706  S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  sigma=0.0622  M=2/23  t*=4/23  len=0.002706  S=(1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 14, 18)
+  sigma=0.0622  M=2/23  t*=4/23  len=0.002706  S=(1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15)
+  sigma=0.0622  M=2/23  t*=4/23  len=0.002706  S=(1, 2, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15, 16)
+min sigma over all 966: 0.048980   (HYP-5720: is it bounded away from 0?)
+
+====================================================================================================
+PART 5 -- adversarial: minimize sigma over covering sets, Vmax caps 60 / 120 / 200
+====================================================================================================
+cap 60: 207 evals, min sigma = 0.1245  M = 5/38  S = [7, 12, 15, 19, 24, 26, 31, 33, 37, 42, 45, 50, 54]
+cap 120: 282 evals, min sigma = 0.0343  M = 1/5  S = [3, 12, 14, 17, 62, 88, 89, 91, 100, 103, 108, 115, 117]
+cap 200: 312 evals, min sigma = 0.0910  M = 1/6  S = [1, 10, 13, 48, 50, 61, 63, 95, 117, 143, 145, 168, 190]
+
+====================================================================================================
+PART 6 -- correction to monad-S1's 'the bounded window IS the covering case':
+          a PRIMITIVE COVERING set with V/spread >> 2.8 exists at every scale
+====================================================================================================
+S = [302, 309, 316, 325, 330, 336, 344, 351, 360, 372, 374, 390, 392]
+covering: True   primitive: True   13 distinct: True
+Vmax = 392, spread = 90, V/spread = 4.4  (>> 2.8: OUTSIDE the window)
+M = 151/347 = 0.4352 >= 1/14: True   (drift-embed regime, as expected easy)
+=> covering does NOT force V/spread ~ 1; the correct statement is: the HARD covering
+   clusters (small caps / forced small speeds) are in the window.  At every scale there
+   are also easy covering clusters outside it.
+
+Done.
