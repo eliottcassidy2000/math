@@ -30,6 +30,22 @@ lrc14_{jstar_hard_adversarial, k1213_tail_apriori_rate, R3_GP_coupling}_macmini_
 
 NEXT: general j*=O(k) for G_P∩Good_E (the last gap; converging w/ kps/opus on the longest-AP axis);
 more Lean nodes; the a-priori C write-up (V_j closed-form bound from LEM-011).
+## kind-pasteur-2026-07-08-S91 -- CAPSTONE (small-L j* refinement) + natural cleanup (tail-D3 court case RESOLVED->moved)
+
+Prompt (owner): work the capstone and any other natural tasks.
+
+CAPSTONE (opus-S164 good-period dichotomy: every hard cluster has j*=O(k) OR is a tight complete-residue AP cited; residual = "small-L => j*<=O(7)", the genuinely-new quantitative piece):
+- REFINEMENT: dissociated (longest-AP <= k-3) WELL-DISTRIBUTED clusters have max j* <= 3 (Vmax-uniform 200..5003, k=11,13) -- SHARPER than opus's O(7). The j*~7 cases come from HIGHER longest-AP (near-AP, the embedded-AP O(k) case). Most dissociated configs have j*=1 (random points leave a gap > Vmax/7); the well-distributed (no gap > Vmax/7 at j=1) dissociated ones are rare and still j*<=3.
+- The ANALYTIC path to the small-L bound is my S90 partial-sum route (HYP-5507): for dissociated E the 𝒲̂ correction is small, so Sum_{j=0}^N W = (N+1)(6/7)^k + small crosses 6/7 at N=O(1) => j*=O(1); the a-priori 𝒲̂ bound (klein-S194 LEM-011) is the same object as the density-floor tail. Complements opus's combinatorial arc-count pigeonhole.
+
+NATURAL CLEANUP:
+- Court case CASE-tail-D3-min-is-not-block-outlier (opus-S155): RESOLVED (all parties conceded: opus filed, klein-S189/S190 + kps-S87 concurred; A=0.452986 is the true tail min >= bar, k=11 tail closed on the longest-AP axis). Updated top status header + moved active/ -> resolved/ (4 active cases remain).
+
+STATE (my read): covering case = [density floor CLOSED, tail a-priori for k=11,12,13 via mac-mini-S60 R2 + LEM-011] + [j*=O(k): opus-S164 dichotomy, residual small-L<=O(7)/near-AP-Dirichlet, both O(k)] + [mac-mini-S60 R3: full glue = G_P∩Good_E intersection] + [Lean: my LRCD3FloorCert + mac-mini good_period_j1]. LRC(14) = covering + non-covering (LRC<=13 cited) + Lean.
+
+FILES: lrc14_smallL_jstar_kps_S91.py; court case moved.
+
+NEXT: prove small-L => j*<=O(1) (partial-sum 𝒲̂ route OR arc-count pigeonhole); continue Lean (D3 exhaustive + good-period nodes).
 
 ## kind-pasteur-2026-07-08-S90 (cont.) -- j*=O(k) frontier: CONVERGED with opus-S164 (j* governed by longest-AP) + NET-NEW partial-sum/𝒲̂ ANALYTIC route unifying j* with the density-floor tail (one shared constant) (HYP-5507)
 
