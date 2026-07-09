@@ -1,0 +1,10 @@
+dissociated (L<=k-6): mean #arcs and c=#arcs/spread vs spread (large-spread arc-count)
+
+k=13 (L<=7):   spread  mean #arcs   mean c   max c
+              200        49.3   0.2467  0.3700
+              500       111.6   0.2232  0.3200
+             1200       263.1   0.2192  0.3000
+             3000       657.7   0.2192  0.3127
+             8000      1688.3   0.2110  0.2375
+   => #arcs ~ spread^0.964  (SUBLINEAR (c->0)); c stays << rho*~0.96 => large-spread c<rho* CLOSES
+
