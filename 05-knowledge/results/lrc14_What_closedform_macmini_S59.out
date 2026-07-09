@@ -1,0 +1,29 @@
+VERIFY closed form 𝒲̂(n) = (6/7)^z prod b(n_i) Q(N)
+
+k=3 (T^2), grid 210:
+  n=(0, 0)  : formula=+0.62974+0.00000i  direct=+0.62974+0.00000i  |diff|=4.24e-14 OK
+  n=(1, 0)  : formula=+0.01635+0.00000i  direct=+0.01635-0.00000i  |diff|=1.22e-06 OK
+  n=(0, 1)  : formula=+0.01635+0.00000i  direct=+0.01635+0.00000i  |diff|=1.22e-06 OK
+  n=(1, 1)  : formula=-0.00237+0.00000i  direct=-0.00237+0.00000i  |diff|=5.31e-07 OK
+  n=(1, -1) : formula=+0.01635+0.00000i  direct=+0.01635+0.00000i  |diff|=1.22e-06 OK
+  n=(2, 1)  : formula=-0.00178+0.00000i  direct=-0.00178+0.00000i  |diff|=9.29e-07 OK
+  n=(3, 0)  : formula=+0.00917+0.00000i  direct=+0.00918+0.00000i  |diff|=6.16e-06 OK
+  n=(7, 0)  : formula=+0.00000+0.00000i  direct=-0.00000+0.00000i  |diff|=3.83e-16 OK
+  n=(1, 6)  : formula=-0.00000+0.00000i  direct=+0.00000+0.00000i  |diff|=8.79e-18 OK
+  n=(2, -2) : formula=+0.01327+0.00000i  direct=+0.01328-0.00000i  |diff|=3.96e-06 OK
+  n=(1, 2)  : formula=-0.00178+0.00000i  direct=-0.00178+0.00000i  |diff|=9.29e-07 OK
+
+k=4 (T^3), grid 84:
+  n=(0, 0, 0) : formula=+0.53978+0.00000i  direct=+0.53978+0.00000i  |diff|=6.09e-13 OK
+  n=(1, 0, 0) : formula=+0.01401+0.00000i  direct=+0.01402+0.00000i  |diff|=6.54e-06 OK
+  n=(1, 1, 0) : formula=-0.00203+0.00000i  direct=-0.00204+0.00000i  |diff|=2.85e-06 OK
+  n=(1, 1, -2): formula=-0.00203+0.00000i  direct=-0.00204-0.00000i  |diff|=2.85e-06 OK
+  n=(1, -1, 0): formula=+0.01401+0.00000i  direct=+0.01402+0.00000i  |diff|=6.54e-06 OK
+  n=(1, 1, 1) : formula=+0.00027-0.00000i  direct=+0.00027+0.00000i  |diff|=7.64e-07 OK
+  n=(2, 0, 0) : formula=+0.01138+0.00000i  direct=+0.01140+0.00000i  |diff|=2.12e-05 OK
+  n=(7, 0, 0) : formula=+0.00000+0.00000i  direct=+0.00000+0.00000i  |diff|=8.17e-16 OK
+  n=(1, 2, -3): formula=-0.00152+0.00000i  direct=-0.00153-0.00000i  |diff|=4.98e-06 OK
+
+SANITY: 𝒲̂(0)=(6/7)^k should equal (6/7)^3=0.62974, (6/7)^4=0.53978
+  formula 𝒲̂(0,0)=0.62974  𝒲̂(0,0,0)=0.53978
+  (these are the k=3,4 iid means; note (6/7)^z*Q(0)=(6/7)^{k-1}*(6/7)=(6/7)^k)
