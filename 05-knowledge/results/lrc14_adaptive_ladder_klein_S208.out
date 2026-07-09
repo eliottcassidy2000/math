@@ -1,0 +1,59 @@
+==============================================================================
+ADAPTIVE-SPLIT LADDER verification (klein-S208)
+==============================================================================
+
+[1] Leg A (k~<=7): exact meas(G_P~) vs Lipschitz floor 1/(91 max P~)
+    (P~ = small part + slow cluster members; |P~| up to 12)
+   P~=[8, 9, 10, 12, 22, 26, 35, 49, 60]
+     exact meas(G_P~) = 1991713/8828820 = 0.225592   Lipschitz floor = 1/5460 = 0.000183   positive: True   floor<=meas: True
+   P~=[7, 9, 10, 11, 12, 22, 26, 39, 52, 65]
+     exact meas(G_P~) = 22717/97020 = 0.234148   Lipschitz floor = 1/5915 = 0.000169   positive: True   floor<=meas: True
+   P~=[11, 12, 13, 14, 22, 26, 30, 42, 55]
+     exact meas(G_P~) = 4517/16170 = 0.279344   Lipschitz floor = 1/5005 = 0.000200   positive: True   floor<=meas: True
+   P~=[8, 9, 10, 12, 22, 26, 33, 39, 45, 51, 57]
+     exact meas(G_P~) = 9384703/58198140 = 0.161254   Lipschitz floor = 1/5187 = 0.000193   positive: True   floor<=meas: True
+   P~=[1, 2, 3, 4, 5, 22, 26, 33, 39, 45, 51, 57]
+     exact meas(G_P~) = 325097/1939938 = 0.167581   Lipschitz floor = 1/5187 = 0.000193   positive: True   floor<=meas: True
+
+[2] Leg B (k~>=8): Bonferroni(|P~|=13-k~) + shape-universal floors
+   k~=8: |P~|<=5, meas(G_P~)>=2/7=0.2857, need >0.2389, margin +0.0468  OK
+   k~=9: |P~|<=4, meas(G_P~)>=3/7=0.4286, need >0.3554, margin +0.0732  OK
+   k~=10: |P~|<=3, meas(G_P~)>=4/7=0.5714, need >0.4469, margin +0.1245  OK
+   k~=11: |P~|<=2, meas(G_P~)>=5/7=0.7143, need >0.5952, margin +0.1190  OK
+   k~=12: |P~|<=1, meas(G_P~)>=6/7=0.8571, need >0.6441, margin +0.2130  OK
+   k~=13: |P~|<=0, meas(G_P~)>=1=1.0000, need >0.6912, margin +0.3088  OK
+
+[3] End-to-end composite on mid-band-free covering instances
+    zones: P=[1,13], T=(13,V/14], MID=(V/14,9V/14) EMPTY, cluster=[9V/14,V]
+   S=[8, 9, 10, 12, 14, 189, 200, 220, 230, 252, 260, 270, 280] (covering=True)
+     V=280 r~=3.08 k~=8 |P~|=5
+     measure: legB meas(G_P~)=0.44609 > 1-floor_8=0.23887: True
+     aliasing: intW=0.28356 TV=93032 V0=165.3 fires=True
+     embed(+P~ at tau): FIRES j=7 gap=0.2500
+     ground truth M(S) = 10/47 = 0.21277 >= 1/14: True
+   S=[8, 9, 10, 11, 26, 280, 300, 308, 330, 350, 390, 405, 420] (covering=True)
+     V=420 r~=3.00 k~=8 |P~|=5
+     measure: legB meas(G_P~)=0.43755 > 1-floor_8=0.23887: True
+     aliasing: intW=0.28306 TV=223708 V0=256.6 fires=True
+     embed(+P~ at tau): FIRES j=9 gap=0.3214
+     ground truth M(S) = 73/349 = 0.20917 >= 1/14: True
+
+[4] Mid-band population over random k>=8 covering sets (how big is the residual?)
+   random k>=8 covering instances: 4000
+     #mid-band members = 0: 5 (0.1%)
+     #mid-band members = 1: 33 (0.8%)
+     #mid-band members = 2: 196 (4.9%)
+     #mid-band members = 3: 541 (13.5%)
+     #mid-band members = 4: 935 (23.4%)
+     #mid-band members = 5: 1127 (28.2%)
+     #mid-band members = 6: 732 (18.3%)
+     #mid-band members = 7: 330 (8.2%)
+     #mid-band members = 8: 89 (2.2%)
+     #mid-band members = 9: 12 (0.3%)
+   mid-band-FREE (composite-closable): 5 (0.1%)
+   NOTE: random generation is uniform-ish; the MEASURE of the residual family
+   is not the point -- the point is it is nonempty and characterized:
+   *** the open content of LRC(14) = covering sets with a speed in (V/14, 9V/14)
+       x the realization (Kronecker) node; everything else is closed. ***
+
+DONE.

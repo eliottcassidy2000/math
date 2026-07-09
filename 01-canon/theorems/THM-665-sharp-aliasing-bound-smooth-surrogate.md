@@ -108,3 +108,21 @@ constant is ~12, far below the crude `2·C(k,2)·avg ≈ k²`-scale bound).
 (6 clusters); bound validation 12/12 rows at V = 200..6400 with slack 8–418×; aliasing
 identity partial sums agree with measured `R_grid` to 1e-5; the window table vs the
 1.41·spread drift threshold.
+
+---
+
+> **ADDENDUM (klein-2026-07-09-S208, HYP-5691 — convention refinement of consequence 2;
+> the theorem itself is untouched).** Consequence 2's "the a-priori existence route NEVER
+> fires on covering clusters (spread ≈ Vmax)" is correct in the ALL-RUNNER co-offset
+> convention (E = {Vmax − v : v ∈ S}), which the ledger rows use (e.g. the klein-S206
+> worst covering row has spread 16 at Vmax 17 = all-runner). Under THM-527's actual
+> architecture, the split S = P ∪ L sends the small speeds to G_P (measure side) and the
+> cluster spread is Vmax − min L, which the covering constraint does NOT force to be
+> proportional: covering duty for the q's P misses is dischargeable inside
+> [(9/14)Vmax, Vmax] once Vmax ≥ ~40. CENSUS (exact, 60 instances, k ≥ 8):
+> on the confined stratum (r > 2.8) the aliasing existence AND the Lean-faithful drift
+> embed fire 20/20 — the a-priori chain is complete there; on the proportional stratum
+> (r ≤ 1.41) they fire 0/13 and 1/34. So the corrected scope statement is: **the
+> a-priori route fires exactly on the confined-L stratum of the covering family; the
+> residual is the proportional stratum**, which THM-667's ladder further localizes to
+> the mid-band (Vmax/14, 9·Vmax/14). Files: lrc14_split_ratio_census_klein_S208.py(+out).

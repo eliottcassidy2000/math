@@ -17,6 +17,20 @@ the large-spread half is Weyl/decorrelation (THM-518). With the non-covering cas
 (SETTLED), **LRC(14) reduces to [THM-527-A finite-`Vmax` glue] + [Lean transcription].**
 → THM-663, THM-661, LEM-009, THM-527, THM-530. Next: THM-527-A large-spread (Weyl); Lean wiring.
 
+**🟢 UPDATE (klein-2026-07-09-S208, THM-667 — the remaining item LOCALIZED):** the THM-527-A
+residue is now pinned to a ratio-window. The adaptive re-split at `(9/14)·Vmax` makes every
+covering cluster wide (`r̃ ≥ 2.8` = THM-665's aliasing edge) and the measure floor closes at
+EVERY stratum — `k̃≤7` by the **LRC(≤13) Lipschitz-fattening lemma** (`meas(G_T) ≥ 1/(91·maxT)`;
+the apex-7/Fraenkel wall CANNOT occur for `P̃`-positivity), `k̃≥8` by `|P̃|=13−k̃` conservation +
+Bonferroni + the shape-universal floors (margins ≥ +0.047). **The entire open content of LRC(14)
+= REALIZATION FOR SPEEDS IN THE MID-BAND `(Vmax/14, 9·Vmax/14)`** — too fast to ride the `1/Vmax`
+snap window, too slow to join the confined cluster. Mid-band-free covering sets are CLOSED
+end-to-end (exact composites at V=280/420; census HYP-5691 refines THM-665 cons. 2's convention:
+the a-priori chain fires 20/20 on the confined-L stratum). The five named residuals are ONE node
+(HYP-5692). Attack axes: pair-sum rulers (THM-668/HYP-5720), snap-point counting (Denjoy–Koksma),
+the renormalization tower (HYP-3901), or factor-4 of THM-665's sqrt-cancellation.
+→ THM-667, LEM-014 (boxeph), THM-665 addendum, HYP-5691/5692; backlog lead klein-S208.
+
 **OPEN-Q-110 UPDATE (kps-S25, numerically pinned):** The drifting floor does NOT close regime C. `cite_hunter_c7_onepair` is correct but its hypothesis needs a SINGLES bound the corpus lacks -- `window_teeth_mass_le` discharges it only for w1 > 22638 (numerical truth: w1 ~ 1100). The gap is the crude singles slack; closing it needs the JOINT measure treatment (klein `star_union_le` on real danger measures). The TIGHT-SMALL corner (near-consecutive integers, w1 <~ 1000) is at the Hunter boundary (min ledger ~ -0.0002) -- NO window-floor closes it: over window L~0.0065 each point (w1+j)t sweeps only ~0.15 < 2h, so density averaging (needs wL>>1) fails and the problem is arithmetic (the AP {(w1+j)t}). Candidates: SimulPeel (mac-mini), AP/three-distance, resonant-combo (klein c8-search). Evidence: 05-knowledge/results/lrc14_regimeC_*_kps_S25.out. See MISTAKE-072.
 **EISENSTEIN-RESONANCE UPDATE (opus-2026-07-03-S52, HYP-4047):** the "arithmetic AP `{(w1+j)t}`" tight-small
 corner IS the Φ₆ Eisenstein resonance. `14` is a primitive 6th root of unity mod `183 = Φ₆(14) = 3·61`

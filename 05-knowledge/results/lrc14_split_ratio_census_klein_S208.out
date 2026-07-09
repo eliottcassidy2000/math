@@ -1,0 +1,57 @@
+==============================================================================
+HYP-5691 census: P∪L-split ratios + instrument firing map, k>=8 covering
+==============================================================================
+
+[Q1] Explicit k>=8 covering instances, both strata (exact):
+  confined-L: P=(8, 9, 10, 12), |L|=9, V=1000, minL=952, spread(E)=48, r=20.83, covering=True
+  slow-member-L: P=(8, 9, 10, 12), |L|=9, V=1000, minL=22, spread(E)=978, r=1.02, covering=True
+
+[Q2] Census (random, stratified by style); exact intW/TV where |E| breakpoints allow:
+  total instances: 60
+  r>2.8 (confined): n=20, aliasing fires 20/20 (exact-TV subset), drift-embed fires 20/20
+  1.41<r<=2.8 (window): n=6, aliasing fires 0/4 (exact-TV subset), drift-embed fires 3/6
+  r<=1.41 (proportional): n=34, aliasing fires 0/13 (exact-TV subset), drift-embed fires 1/34
+
+  per-instance detail (first 20):
+   P=(8, 9, 10, 12) k=9 V=260 minL=176 r=3.10 s=0 style=confined intW=0.2512629338076978 TV=102908 V0=184.7 alias=True embed=True ladder=bars(k~=9)+G_Ptilde(|Pt|=4)
+   P=(8, 9, 10, 12) k=8 V=120 minL=84 r=3.33 s=0 style=confined intW=0.2924834160357779 TV=15864 V0=67.2 alias=True embed=True ladder=bars(k~=8)+G_Ptilde(|Pt|=4)
+   P=(8, 9, 10, 12) k=9 V=150 minL=113 r=4.05 s=0 style=confined intW=0.2371995633353838 TV=14280 V0=70.8 alias=True embed=True ladder=bars(k~=9)+G_Ptilde(|Pt|=4)
+   P=(8, 9, 10, 12) k=9 V=120 minL=89 r=3.87 s=0 style=confined intW=0.25075892520516074 TV=9560 V0=56.4 alias=True embed=True ladder=bars(k~=9)+G_Ptilde(|Pt|=4)
+   P=(8, 9, 10, 12) k=8 V=200 minL=18 r=1.10 s=5 style=uniform intW=- TV=- V0=- alias=- embed=False ladder=apex7-wall(G_Ptilde>0 needed, |Pt|=9)
+   P=(8, 9, 10, 12) k=9 V=150 minL=47 r=1.46 s=4 style=uniform intW=0.24712524167987682 TV=99264 V0=183.0 alias=False embed=False ladder=apex7-wall(G_Ptilde>0 needed, |Pt|=8)
+   P=(8, 9, 10, 12) k=8 V=200 minL=21 r=1.12 s=5 style=uniform intW=- TV=- V0=- alias=- embed=False ladder=apex7-wall(G_Ptilde>0 needed, |Pt|=9)
+   P=(8, 9, 10, 12) k=9 V=150 minL=14 r=1.10 s=5 style=uniform intW=- TV=- V0=- alias=- embed=False ladder=apex7-wall(G_Ptilde>0 needed, |Pt|=9)
+   P=(8, 9, 10, 12) k=9 V=120 minL=17 r=1.17 s=4 style=slowheavy intW=0.2532697271673835 TV=140004 V0=214.6 alias=False embed=False ladder=apex7-wall(G_Ptilde>0 needed, |Pt|=8)
+   P=(8, 9, 10, 12) k=8 V=150 minL=20 r=1.15 s=6 style=slowheavy intW=0.29423864568937375 TV=243516 V0=262.6 alias=False embed=False ladder=apex7-wall(G_Ptilde>0 needed, |Pt|=10)
+   P=(8, 9, 10, 12) k=8 V=200 minL=19 r=1.10 s=5 style=slowheavy intW=- TV=- V0=- alias=- embed=False ladder=apex7-wall(G_Ptilde>0 needed, |Pt|=9)
+   P=(8, 9, 10, 12) k=9 V=120 minL=17 r=1.17 s=6 style=slowheavy intW=0.24236700867859443 TV=123880 V0=206.4 alias=False embed=False ladder=apex7-wall(G_Ptilde>0 needed, |Pt|=10)
+   P=(7, 9, 10, 11, 12) k=8 V=260 minL=182 r=3.33 s=0 style=confined intW=0.2859553749281841 TV=62904 V0=135.4 alias=True embed=True ladder=bars(k~=8)+G_Ptilde(|Pt|=5)
+   P=(7, 9, 10, 11, 12) k=8 V=260 minL=192 r=3.82 s=0 style=confined intW=0.2932182317175949 TV=69416 V0=140.5 alias=True embed=True ladder=bars(k~=8)+G_Ptilde(|Pt|=5)
+   P=(7, 9, 10, 11, 12) k=8 V=200 minL=144 r=3.57 s=0 style=confined intW=0.2868755675420093 TV=33168 V0=98.2 alias=True embed=True ladder=bars(k~=8)+G_Ptilde(|Pt|=5)
+   P=(7, 9, 10, 11, 12) k=8 V=260 minL=184 r=3.42 s=0 style=confined intW=0.28845486218458616 TV=51996 V0=122.6 alias=True embed=True ladder=bars(k~=8)+G_Ptilde(|Pt|=5)
+   P=(7, 9, 10, 11, 12) k=9 V=260 minL=59 r=1.29 s=5 style=uniform intW=- TV=- V0=- alias=- embed=False ladder=apex7-wall(G_Ptilde>0 needed, |Pt|=10)
+   P=(7, 9, 10, 11, 12) k=8 V=150 minL=55 r=1.58 s=5 style=uniform intW=0.284756085461241 TV=144228 V0=205.4 alias=False embed=False ladder=apex7-wall(G_Ptilde>0 needed, |Pt|=10)
+   P=(7, 9, 10, 11, 12) k=8 V=120 minL=14 r=1.13 s=5 style=uniform intW=0.286051398528756 TV=134536 V0=198.0 alias=False embed=False ladder=apex7-wall(G_Ptilde>0 needed, |Pt|=10)
+   P=(7, 9, 10, 11, 12) k=9 V=120 minL=32 r=1.36 s=5 style=uniform intW=0.24708075800413357 TV=90564 V0=174.8 alias=False embed=False ladder=apex7-wall(G_Ptilde>0 needed, |Pt|=10)
+
+[Q3] Adaptive-split ladder strata over the census:
+   CLOSED(mu=1,Bonf): 4
+   apex7-wall(G_Ptilde>0 needed, |Pt|=10): 11
+   apex7-wall(G_Ptilde>0 needed, |Pt|=11): 3
+   apex7-wall(G_Ptilde>0 needed, |Pt|=12): 1
+   apex7-wall(G_Ptilde>0 needed, |Pt|=7): 4
+   apex7-wall(G_Ptilde>0 needed, |Pt|=8): 10
+   apex7-wall(G_Ptilde>0 needed, |Pt|=9): 7
+   bars(k~=8)+G_Ptilde(|Pt|=3): 6
+   bars(k~=8)+G_Ptilde(|Pt|=4): 2
+   bars(k~=8)+G_Ptilde(|Pt|=5): 4
+   bars(k~=9)+G_Ptilde(|Pt|=3): 2
+   bars(k~=9)+G_Ptilde(|Pt|=4): 6
+
+[Q4] Ground truth M(S) on small slow-member instances (exact):
+   S=[11, 12, 13, 14, 16, 18, 22, 35, 45, 59, 60]: r=1.30 M=11/48 = 0.22917 >= 1/14? True
+   S=[9, 11, 13, 19, 20, 28, 32, 35, 60, 83, 100]: r=1.23 M=34/183 = 0.18579 >= 1/14? True
+   S=[11, 12, 13, 18, 21, 23, 28, 45, 63, 77, 80]: r=1.29 M=1/5 = 0.20000 >= 1/14? True
+   S=[7, 9, 10, 11, 12, 22, 26, 32, 49, 56, 63, 65, 80]: r=1.38 M=2/11 = 0.18182 >= 1/14? True
+
+DONE.
