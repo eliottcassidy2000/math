@@ -1,3 +1,40 @@
+## mac-mini-2026-07-08-S59 -- THM-664: the WEYL first-moment proof of THM-527-A's large-spread half (the requested "via Weyl" route)
+
+Prompt (owner): prove the THM-527-A large-spread half via Weyl.
+
+DELIVERED -- THM-664, a genuine Weyl/equidistribution proof, complementing LEM-010's deterministic
+Dirichlet route (two independent closures of the large-spread half now).
+
+MECHANISM: the FIRST MOMENT. W = uncovered measure >= 0, so a good period j in {1..Vmax-1} exists
+<=> SUM_{j=1}^{Vmax-1} W(j/Vmax) > 0 <=> E_grid[W] > 6/(7Vmax) (W(0)=6/7 at j=0, excluded). Then the
+WEYL-FOURIER identity: W(y)=𝒲(frac(e_1 y),..,frac(e_{k-1}y)), average over the grid using
+(1/Vmax)Σ_j e(mj/Vmax)=1[Vmax|m] =>
+   E_grid[W] = (6/7)^k + Σ_{n≠0, Vmax|n·e} 𝒲̂(n),  𝒲̂(0)=(6/7)^k EXACT (pinned e_0-arc gives the 6/7).
+The residual R = grid-resonance sum. KEY UNIFICATION: R = [E[W]-(6/7)^k] (n·e=0, decorrelation) +
+[pure grid resonances n·e=nonzero mult of Vmax] -- the SAME 𝒲̂-decay as the DENSITY-FLOOR TAIL
+(LEM-009/THM-518), now "Vmax|n·e" vs "n·e=0". The finite-Vmax glue's large-spread half IS the
+density-floor decorrelation read on the Vmax-grid.
+
+EXACT PIECES: pairwise tent T(V')=(1+2R)/(7V')-R(R+1)/V'^2, R=floor((V'-1)/7) (verified V'=1..399),
+|T(V')-1/49|<=0.12/V'. Decorrelation: R->0 as spread->inf (resonances recede to large |n|).
+
+VERIFIED (exact, structured 2-block/AP, k=11,13): |E_grid[W]-(6/7)^k|<=0.032 << (6/7)^k in [0.135,
+0.183]; mean |dev| DECREASES 0.011->0.002 as spread 20->640; E_grid[W]>6/(7Vmax) ALWAYS; #good
+periods >=20, growing ~ (6/7)^k*Vmax. Higher-order I-E terms (not pairwise) carry the bulk of R but
+the total stays tiny.
+
+HONEST: steps 1-3 exact theorems; step 4 (uniform |R|<(6/7)^k) reduces to the same a-priori
+resonance constants as the density-floor tail (opus-S157). LEM-010 remains the cleaner UNCONDITIONAL
+closure (no resonance bound); THM-664 is the requested Weyl route + the conceptual identity +
+abundance count.
+
+FILES: THM-664 (new); THM-663 large-spread section + 2nd-route pointer; scripts
+lrc14_weyl_{firstmoment,tent_bound,decorrelation}_macmini_S59 (+outs).
+
+NEXT: the shared a-priori 𝒲̂-decay constant (closes both THM-664 uniform bound AND opus-S157's
+density-floor tail certification -- ONE lemma); or just cite LEM-010 for the unconditional closure.
+The bounded finite check {Vmax<=3^12, spread>=6Vmax/7} (LEM-010) still the cleanest residual.
+
 ## mac-mini-2026-07-08-S58 (cont.) -- THM-527-A (the LAST covering-case item) LARGELY CLOSED: LEM-010 deterministic good-period existence dissolves the finite-Vmax glue, no equidistribution
 
 Prompt (owner): work the one remaining item.

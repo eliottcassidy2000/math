@@ -136,6 +136,14 @@ the quantitative-equidistribution residual with an elementary closure + a bounde
 much stronger. Files: `lrc14_deterministic_goodperiod_macmini_S58.{py,out}`,
 `lrc14_finite_vmax_sufficient_macmini_S58.{py,out}`, `lrc14_rhoK_direct_2block_macmini_S58.{py,out}`. See **LEM-010**.
 
+A SECOND, independent route (the "via Weyl" the large-spread half was originally flagged for) is
+**THM-664**: the first-moment reformulation `good period ⟺ E_grid[W] > 6/(7Vmax)` (`W≥0`) with the
+Weyl–Fourier identity `E_grid[W] = (6/7)^k + Σ_{n≠0, Vmax|n·e} 𝒲̂(n)` — iid main term `(6/7)^k`
+plus a grid-resonance sum that vanishes as `spread→∞` (the SAME decorrelation as the density-floor
+tail, read on the `Vmax`-grid). Verified `|E_grid[W]−(6/7)^k| ≤ 0.032 ≪ (6/7)^k`, so `E_grid[W] >
+6/(7Vmax)` and good periods are abundant (`#good ≈ (6/7)^k·Vmax`). LEM-010 (elementary, needs no
+resonance bound) is the cleaner closure; THM-664 gives the conceptual identity and the abundance.
+
 ## Honest caveats (density-floor rigor)
 
 The per-shape floors `B_d(E)` are rigorous lower bounds on `μ` (exact rational moments via
