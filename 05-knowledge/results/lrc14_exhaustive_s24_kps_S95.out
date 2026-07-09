@@ -1,0 +1,3 @@
+  done s=23: cumulative 691536 clusters, min margin 1.4000
+  done s=24: cumulative 2026063 clusters, min margin 1.4000
+EXHAUSTIVE s=23..24 (L<=7): 2026063 clusters, min margin 1.4000 at ((0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 13, 18, 23), 23), failures=0

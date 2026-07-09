@@ -35,6 +35,28 @@ the c<D3 certificate is retired. Files: lrc14_{arccount_energy,interlock,interlo
 NEXT: the a-priori μ>=c (decorrelation) if a certificate is wanted; else LEM-013's direct margin suffices.
 
 ---
+## kind-pasteur-2026-07-09-S95 -- a-priori/Lean glue for the dissociated branch: AVERAGING existence route (max>=mean) + its SECOND-MOMENT engine (lemniscate cue), Lean node LRCArcCountExistence (c<D3 + arc-count + averaging, sorry-free), exhaustion extended to s<=23
+
+Prompt (owner): extend exhaustion or a clean a-priori mu>1 on s in [22,~100]; make bounded-arc-count + c<D3 fully a-priori/Lean; lemniscate (x^2+y^2)^2=x^2-y^2 as inspiration.
+
+AVERAGING EXISTENCE (HYP-5547): reduced dissociated good-period existence to an averaging inequality -- if avg_j maxgap(j) > Vmax/7 then some j is good (max>=mean). VERIFIED adversarially: avg*7/Vmax >= 1.047 > 1 across s=17..200 at critical Vmax=floor(7s/6). Cleaner mechanism than the arc-count certificate; complements opus-S168 (#arcs~spread^0.92) + mac-mini-S62 (c<D3).
+
+SECOND-MOMENT ENGINE (the lemniscate cue): (x^2+y^2)^2=x^2-y^2 <=> r^2=cos2theta = the second-moment/doubling curve. It correctly cues the functional: maxgap >= sum(gap^2)/Vmax (contraharmonic <= max). Dissociation => uneven gaps => large sum gap^2 => big gap. BUT the pure 2nd-moment bound gives avg*7/Vmax ~ 0.85 < 1 -- NECESSARY not SUFFICIENT; the true maxgap (1.047) carries the rest. So the averaging route's lower bound is essentially the rho*/arc-count content, NOT an independent a-priori closure. Honest: the band s in [24,~100] stays adversarially-robust, not closed-form.
+
+LEAN (the owner's "fully a-priori/Lean" ask): NEW node LRCArcCountExistence.lean, builds sorry-free (105s). Formalizes the GLUE:
+  - c_lt_D3_existence: rho*>=D3 & #arcs<=c*Vmax & c<D3 & (#good>=rho*Vmax-#arcs) => 0<#good  [the Route-(c) logic]
+  - arccount_existence, c_lt_D3_forces_arccount [the arc-count payoff]
+  - averaging_existence: mean maxgap > thr => exists good j  [max>=mean]
+  - maxgap_ge_contraharmonic: sum gap^2 / total <= max  [the 2nd-moment/lemniscate inequality]
+The analytic inputs (rho*>=D3 THM-661, #arcs=o(Vmax) mac-mini/opus) remain CITED hypotheses -- the LOGIC is formalized, honestly.
+
+EXHAUSTION extended to s<=23 (kps-S95): +691,536 clusters (L<=7), min margin 1.40; global exhaustive min stays 1.1053 (s=17). Band shrinks to [24,~100].
+
+LEMNISCATE reflection (honest: inspiration not tool): 2nd-moment (real cue, formalized) + doubling/CM (thematic: the x2/x7 dilation-collapse maps; the 7-is-first-non-Fermat-prime coincidence vs lemniscate n-division constructibility) + origin-crossing = Z2 quotient (thematic: the merged-metagraph complement symmetry). varpi = elliptic pi, next constant for a putative elliptic triangle-foundation.
+
+FILES: LRCArcCountExistence.lean; lrc14_{avgmaxgap_apriori,exhaustive_s24}_kps_S95.py(+.out); reflection the-lemniscate-and-the-second-moment-of-gaps-kps-S95.md; HYP-5547; LEM-013 updated.
+
+NEXT: the genuine a-priori closure of the band still wants either exhaustion past s~25 (infeasible naively) or an independent lower bound on avg maxgap (= the arc-count/rho* route, opus/mac-mini own it). Lean: wire the cited hypotheses to mac-mini's good_gap core.
 
 ## kind-pasteur-2026-07-09-S94 -- CRITICAL PATH: mac-mini's Route-(c) `c>=D3` sliver is a SUFFICIENT-CERTIFICATE ARTIFACT, not a covering-leg gap -- dissociated good-period EXISTENCE holds directly with uniform margin >=1.105 (LEM-013)
 

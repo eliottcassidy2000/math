@@ -1,0 +1,17 @@
+A = avg_j(7 maxgap/Vmax); if A>1 => good period EXISTS (max>=avg). B = 2nd-moment lower bound.
+At critical Vmax=floor(7s/6) (hardest). Adversarial: MINIMIZE A over dissociated clusters.
+   s  Vmax    minA    minB  A>1?
+  17    19  1.0643  0.6744   YES
+  20    23  1.1067  0.7134   YES
+  25    29  1.1552  0.7444   YES
+  30    35  1.0471  0.8373   YES
+  40    46  1.2208  0.7985   YES
+  60    70  1.0826  0.8744   YES
+  90   105  1.0718  0.8557   YES
+ 120   140  1.1000  0.8674   YES
+ 160   186  1.4596  0.9115   YES
+ 200   233  1.4858  0.9134   YES
+
+global min avg-maxgap ratio A = 1.0471 at s,Vmax,E=(30, 35, (0, 5, 8, 10, 13, 14, 15, 20, 22, 25, 26, 28, 30))
+If minA>1 for s>=S0 => averaging PROVES existence for spread>=S0 (elementary, no exhaustion).
+Then only s<S0 needs exhaustion. B<=A shows how much the 2nd-moment bound alone gives.

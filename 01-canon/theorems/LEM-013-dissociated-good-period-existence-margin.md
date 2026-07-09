@@ -48,8 +48,17 @@ Route (c)'s `c < D3` holds a-priori (mac-mini). So the window is the entire hard
 |---|---|---|---|---|
 | `s ≤ 22` | **EXHAUSTIVE** (`L ≤ 7`) | **621,455** | **0** | **1.1053** = 21/19 |
 | `s ≤ 22` | exhaustive (pure `L ≤ 6`) | 569,255 | 0 | 1.1053 |
+| `s = 23` | exhaustive (`L ≤ 7`, kps-S95) | 691,536 | 0 | 1.400 |
 | `s ∈ [21,49]` | adversarial min-margin hill-climb | — | 0 | 1.355 (at s=27) |
 | `s ∈ [50,200]` | adversarial min-margin hill-climb | — | 0 | 1.717 → 2.31 (↑ in s) |
+
+**Update (kps-S95):** the averaging route gives an elementary existence *reduction* —
+`avg_j maxgap(j) > Vmax/7 ⟹ ∃ good j` (`max ≥ mean`), verified `avg·7/Vmax ≥ 1.047` adversarially —
+whose engine is the second-moment bound `maxgap ≥ Σgap²/Vmax` (lemniscate cue `r²=cos2θ`). Both are
+now in Lean (`LRCArcCountExistence.{averaging_existence, maxgap_ge_contraharmonic}`), alongside the
+formalized Route-(c) glue `c_lt_D3_existence`. The averaging lower bound is *not* independently
+a-priori (it is essentially the ρ*/arc-count content), so the band `s ∈ [24, ~100]` remains
+adversarially-robust rather than closed-form. See HYP-5547.
 
 The margin is **minimized at small spread** (the exhaustively-checkable regime) and **grows with
 spread** — the opposite of a danger. The exhaustive minimum `μ = 21/19` is a transparent integer
