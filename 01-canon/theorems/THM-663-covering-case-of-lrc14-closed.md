@@ -84,6 +84,24 @@ case closed by LRC(≤13), **LRC(14) has no counterexample**, modulo:
    the `ρ*` union bound) are `decide`/`native_decide`-shaped; the tail rate is opus-S157's
    resonance-sum lemma. No new mathematics, an engineering task.
 
+### Advance on item (1): the bounded-arc-count lemma (mac-mini-S58)
+
+The finite-`Vmax` glue is `ρ_K = ρ* + O(#arcs/Vmax)`, where `#arcs` counts the arcs of the good
+set `G* = {x : maxgap{frac(e_i x)} > 1/7}`. **`#arcs` is INDEPENDENT of `Vmax`** — it depends only
+on the cluster's INTERNAL differences: the combinatorial circular-gap order of `{frac(e_i x)}`
+changes only at coincidences `frac((e_i−e_j)x)=0`, i.e. `x = m/(e_i−e_j) = m/(u_j−u_i)` — a
+cluster-internal difference, NOT `m/Vmax` (a single phase wrapping through 0 leaves every circular
+gap continuous). Within a combinatorial cell each gap is linear with slope a cluster-internal
+difference, so crosses `1/7` `O(spread)` times ⟹ **`#arcs = O(k²·spread²)`, `Vmax`-free**.
+Machine-verified (shift `e_i → e_i + c` leaves `#arcs` and `meas(G*)` EXACTLY unchanged):
+`#arcs = 12` for the `k=11,12,13` blocks, `14` for the near-2-APs — `≈ k+1`, tiny and bounded.
+So for **bounded-spread** clusters, `ρ_K = ρ* + O(k/Vmax) → ρ* ≥ m_P > 0`, giving a good period for
+`Vmax > V₀ = O(k/m_P)`, with `Vmax ≤ V₀` a finite check — **the bounded-spread half of THM-527-A
+is now clean**. The **large-spread** half (`spread ~ Vmax`, where `O(#arcs/Vmax)=O(k²)` is not
+small) is the residual, handled by the Weyl/decorrelation route (THM-518): there `meas(G*) →` the
+large iid value and the good set is spread across the circle, so a grid point `j/Vmax` lands in it.
+File: `04-computation/lrc14_bounded_arc_count_macmini_S58.py` (+ `.out`).
+
 ## Honest caveats (density-floor rigor)
 
 The per-shape floors `B_d(E)` are rigorous lower bounds on `μ` (exact rational moments via

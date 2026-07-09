@@ -1,0 +1,29 @@
+bounded-arc-count: #arcs of {x: maxgap>1/7} is invariant under e_i -> e_i + c
+
+k=11 block {0..10}:
+   +  0: #arcs= 12  meas(good)=0.62630
+   +  7: #arcs= 12  meas(good)=0.62630
+   + 20: #arcs= 12  meas(good)=0.62630
+   + 40: #arcs= 12  meas(good)=0.62630
+
+k=12 block {0..11}:
+   +  0: #arcs= 12  meas(good)=0.56990
+   + 10: #arcs= 12  meas(good)=0.56990
+   + 30: #arcs= 12  meas(good)=0.56990
+
+k=13 block {0..12}:
+   +  0: #arcs= 12  meas(good)=0.44249
+   + 10: #arcs= 12  meas(good)=0.44249
+   + 30: #arcs= 12  meas(good)=0.44249
+
+k=11 near-2AP {0,2,3,..,10,12}:
+   +  0: #arcs= 14  meas(good)=0.69093
+   + 15: #arcs= 14  meas(good)=0.69093
+   + 50: #arcs= 14  meas(good)=0.69093
+
+k=13 near-2AP {0,2,3,..,12,14}:
+   +  0: #arcs= 14  meas(good)=0.47106
+   + 20: #arcs= 14  meas(good)=0.47106
+
+=> #arcs and meas(good) depend ONLY on the cluster's internal differences, NOT Vmax.
+   For bounded-spread clusters #arcs ~ k (small, bounded) => rho_K -> rho* >= m_P > 0.
