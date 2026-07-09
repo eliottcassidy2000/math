@@ -13,6 +13,35 @@ STATE: LRC(14) covering = [density floor CLOSED] + [good-period: near-AP LEM-012
 FILES: lrc14_capstone_corr_absbound_kps_S92.py; LRCGoodPeriodAP.lean.
 
 NEXT: bound the near-resonance count a-priori for non-AP (longest-AP<=k-6 dissociated) => closes r_N<1; continue Lean (Dirichlet pigeonhole node, D3 exhaustive).
+## klein-2026-07-09-S197 -- the ×7 collapse extends LEM-012 to L >= k-6 (ELEMENTARY); k=8 fully closed; the capstone dichotomy = [structured L>=k-6: elementary] vs [Sidon-like L<=k-7: 𝒲̂]
+
+Prompt (owner): continue on the capstone (= the dissociated branch of j*=O(k)).
+
+Converged with opus-S166 (same two-branch framing: concentrate/near-AP DONE vs spread/dissociated
+analytic). Extended the ELEMENTARY branch by one level via a clean new mechanism.
+
+THE ×7 COLLAPSE (extends LEM-012 from L>=k-5 to L=k-6, m=6): cluster the L-AP TIGHTLY (Dirichlet
+Q=ceil(49(L-1)/3), super-point width delta<3V/49). Then either that j is good, OR it's bad => the config
+is 1 super-point + 6 stray = 7 clumps with all gaps <= V/7 summing to V-delta => every gap in
+[V/7-delta, V/7] => the clumps are FORCED onto a V/7-grid, q_c = p + c*V/7 + eps_c, |eps_c|<=delta. Then
+at dilation 7j the grid COLLAPSES: 7*q_c = 7p + cV + 7eps_c ≡ 7p + 7eps_c mod V, so the whole config lands
+in an arc of span <= 14delta < 6V/7 => a gap > V/7. So 7j is good, j* <= 7Q = O(k). CONFIRMED: the perfect
+V/7-grid (maxgap=1/7 exactly, bad) maps ENTIRELY to one point under x7 (maxgap -> 1); perturbed grids are
+good directly. The x7 works ONLY at m=6 (7 clumps force the grid; m>=7 has >=8 clumps, no grid forced).
+
+RESULT: **L >= k-6 is now ELEMENTARY** (LEM-012 gap-split for L>=k-5 + x7 for L=k-6). k=8 has NO L<=k-6
+sets => **k=8 FULLY CLOSED by LEM-012 alone**. Remaining: L <= k-7 (deeply dissociated / Sidon-like, only
+k>=9, L<=6 at k=13), j*<=5 verified, a-priori via LEM-011 𝒲̂-smallness. THE DICHOTOMY is clean and
+matches opus-S166: [structured = has a long AP (L>=k-6) => elementary Dirichlet clustering + gap-split/x7]
+vs [Sidon-like = short longest-AP (L<=k-7) => 𝒲̂ few-resonances (minimal additive energy = fewest
+resonances = smallest correction, the natural analytic regime)].
+
+Combined j* <= 686 (k<=13). With kps-S30's exact M(S) sweep (Vmax<=1001 > 686), THM-527-A closes the
+moment the Sidon-like (L<=k-7) 𝒲̂ bound is written. Files: lrc14_times7_klein_S197; LEM-012 addendum +
+status. NEXT: the Sidon-like L<=k-7 branch -- 𝒲̂-smallness (dissociated => O(k) additive relations =>
+Corr_N small => j*=O(1) at N=3, via LEM-011 + mac-mini's near-resonance decomposition).
+
+---
 
 ## opus-2026-07-09-S166 -- (math) the good-period capstone = TWO OPPOSITE-mechanism branches (concentrate/near-AP DONE vs spread/dissociated analytic); (lean) muGood_affine PROVED kernel-pure (the WLOG-normalize primitive, completes the dilation-invariance formalization)
 
