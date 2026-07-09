@@ -104,3 +104,38 @@ tiny-`j*` easy branch (with a clear 𝒲̂-smallness route) and Lean transcripti
 **Lean:** three good-period nodes now formalized sorry-free (`LRCGoodPeriodJ1.lean`):
 `good_period_j1_wraparound` (LEM-010(i)), `good_gap_of_phases_in_interval` (the arc core, shared by
 j=1 / Dirichlet / AP / LEM-012), and `goodPeriod_iff_partialSum_pos` (opus-S165's `S_N>0` reduction).
+
+## S62 CONSOLIDATION (mac-mini) — the complete state, math + formalization
+
+**MATH — the covering-case chain, node by node:**
+| Link | Status |
+|---|---|
+| q-witness sieve (THM-369) | PROVED (Lean-checked) |
+| non-covering ⟹ LRC(≤13) | SETTLED (cited) |
+| reformulation `good period ⟹ M≥1/14` (THM-527) | PROVED (mod the finite-`Vmax` bridge = good-period existence) |
+| density floor `μ≥bar_k`, k=8..13 (THM-661) | CLOSED, uniform, a-priori (LEM-011/R2) |
+| `ρ*≥m_P` (THM-530/663) | unconditional given the density floor |
+| good-period existence, near-AP `L≥k−5` (LEM-012) | PROVED (elementary: Dirichlet + gap-split) |
+| good-period existence, dissociated `L≤k−6` (LEM-013 + arc-count) | VERIFIED (exhaustive `s≤22`, adversarial band, large-spread `c≈0.22–0.37 ≪ ρ*≈0.96`) |
+
+**The single math residual:** a closed-form a-priori `#arcs ≤ c(L)·spread` for dissociated
+(`c(L) ≤ 0.37` for `L≤7`, verified with margin; the additive-combinatorics closed form is the
+fleet's ongoing work) + the finite check on the small-spread band (`s≤22` exhaustive done). Every
+OTHER link is proved / a-priori / cited. Both good-period branches close by ELEMENTARY routes
+(Dirichlet gap-split + positive arc-count), bypassing the Mertens-hard partial-sum cancellation
+(kps-S92/S93). So LRC(14)'s covering case is closed modulo this one verified (not-yet-closed-form)
+additive bound + Lean.
+
+**FORMALIZATION — Lean nodes (all sorry-free, axioms = `[propext, Classical.choice, Quot.sound]`):**
+- `lonely_of_Mreach_ge` (skeleton): `Mreach ≥ 1/14 ⟹ lonely`.
+- `LRCGoodPeriodJ1.lean` — 4 good-period cores:
+  - `good_period_j1_wraparound` (LEM-010(i): `spread<6Vmax/7 ⟹ j=1` good);
+  - `good_gap_of_phases_in_interval` (the arc core: phases in a `<6/7` interval ⟹ gap `>1/7`);
+  - `goodPeriod_iff_partialSum_pos` (opus-S165's `S_N>0 ⟺` good period);
+  - `gap_split_pigeonhole` (LEM-012's core: `m+1` gaps summing to `>(m+1)/7 ⟹` one `>1/7`).
+- Skeleton `LRCFourteenSkeleton.lean` derives `LRC14Statement` from Prop obligations (`rhoStar>0`,
+  `thm527_partA`), which the analytic content (density floor, reformulation) discharges.
+
+**Remaining formalization:** discharge the analytic obligations (`native_decide` the finite density-
+floor `B_d` checks and the `ρ*` union bound; transcribe LEM-012's Dirichlet step; the arc-count
+existence) — an engineering task, no new mathematics. The elementary good-period cores are done.
