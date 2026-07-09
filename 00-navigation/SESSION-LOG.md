@@ -1,3 +1,34 @@
+## klein-2026-07-09-S200 -- (math) the a-priori #arcs bound c(L)<=0.37 is FALSE (7-structure spikes it at ALL spreads); the ARC-COUNT is the WRONG invariant, LEM-013's maxgap margin is robust -- (lean) LRCGoodPeriodMaxgap built sorry-free (native_decide good-period on the clusters where the arc-count route fails)
+
+Prompt (owner): keep working LRC math, then formalization.
+
+MATH -- resolved opus-S169/mac-mini's "one open item" (the a-priori #arcs<=c(L)spread, c(L)<=0.37):
+it is FALSE. Testing PRIMITIVE 7-structured sets (many co-offset differences =0 mod 7, longest-AP<=7),
+spread up to ~600: essentially ALL have c=#arcs/spread > 0.37, up to c=0.768 (spread 406, primitive) --
+at LARGE spread, so NOT a small-spread finite-check artifact. mac-mini's c~0.22-0.37 sweep was over
+RANDOM dissociated sets, missing the 7-structured family. Route (c) via D3 fails (D3~0.6<c~0.77); via
+the ACTUAL mu holds (mu~0.94>c). BUT the KEY insight: LEM-013's DIRECT maxgap margin 7*maxgap/Vmax is
+UNTOUCHED -- 3.688 (spread 406) / 2.655 (spread 82), far above 1.105. So the 7-structure FRAGMENTS
+Good_E into many thin arcs (#arcs, c spike) WITHOUT lowering the best maxgap (existence margin stays huge).
+=> the ARC-COUNT (a count / discrepancy error-term inflated by near-resonances) is the WRONG invariant;
+the MAXGAP MARGIN (existence, LEM-013) is the RIGHT one. RETIRE route (c)'s arc-count certificate; use
+LEM-013. Reflection: the-arc-count-is-the-wrong-invariant-7-structure-fragments-without-lowering-maxgap-klein-S200.
+CONVERGES with kps-S96 (E_grid[W]>0 route also sidesteps the #arcs bound, verified incl 7-structured).
+
+LEAN -- TournamentH7/LRCGoodPeriodMaxgap.lean, BUILT sorry-free (8475 jobs, 236s). Decidable maxgap
+good-period: maxCircGap (integer circular max gap of {e*j mod Vmax}), IsGoodPeriod (Vmax<7*maxCircGap),
+HasGoodPeriod (exists j in (0,Vmax)); + native_decide WITNESSES worst7Struct_hasGoodPeriod (E={0,7,..,82}
+Vmax=91) and worst7StructLarge (spread 406, Vmax=458) -- the exact clusters where the arc-count route
+FAILS (MISTAKE-128) still have a good period, certified in Lean. The maxgap route is decidable => this is
+the template for the finite-check nodes. Wired into the root import list.
+
+NET: LRC(14) covering case = near-AP (LEM-012 elementary) + dissociated (LEM-013 maxgap margin, robust to
+7-structure; the arc-count route retired) + LEM-010 + density floor + sieve + LRC<=13. Files:
+lrc14_arccount_7struct_klein_S200 + reflection + LRCGoodPeriodMaxgap.lean. NEXT: LEM-013's a-priori
+large-spread margin growth (decorrelation), or native_decide the LEM-013 small-spread finite window.
+
+---
+
 ## kind-pasteur-2026-07-09-S96 -- CRITICAL PATH lower bound: the E_grid[W]>0 existence route -- dissociated good-period existence closes by |R|<(6/7)^k, SIDESTEPPING opus-S169's open #arcs bound (verified incl mac-mini's hard 7-structured case)
 
 Prompt (owner): keep on the critical path, chase the lower bound.
