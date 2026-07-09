@@ -1,0 +1,11 @@
+ALL-RESIDUE-covering dissociated (hardest): maxIntG*spread, and strict good period at non-resonant V?
+ spread  maxIntG*s minV=s+1  strict GP at first 3 coprime-7 V>s
+     40      10.50       41   V=[41, 43, 44] strictGP=[True, True, True]
+     70      17.46       71   V=[71, 72, 73] strictGP=[True, True, True]
+    130      30.34      131   V=[131, 132, 134] strictGP=[True, True, True]
+    250      23.91      251   V=[251, 253, 254] strictGP=[True, True, True]
+    420      14.77      421   V=[421, 422, 423] strictGP=[True, True, True]
+
+min maxIntG*spread over all-residue sets = 10.50  (>1 => grid at non-res V>spread hits G => strict GP a-priori)
+If strictGP=True at all non-resonant V>spread AND maxIntG*spread>1 => non-resonant good period is A-PRIORI.
+Resonant V (7|V) = the knife-edge/pathological grid => non-strict j=1 or density floor.

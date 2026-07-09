@@ -1,0 +1,22 @@
+=== missed-residue dissociated k=13 ===
+ spread  maxIntG*s 1/maxIntG   strict GP @ 3 non-res V>s
+     40       5.18       7.7   V=[41, 43, 44] GP=[True, True, True]
+     70       9.00       7.8   V=[71, 72, 73] GP=[True, True, True]
+    130      19.55       6.7   V=[131, 132, 134] GP=[True, True, True]
+    250      20.19      12.4   V=[251, 253, 254] GP=[True, True, True]
+    420      16.23      25.9   V=[421, 422, 423] GP=[True, True, True]
+  min maxIntG*spread = 5.18
+
+=== ALL-residue (hard) dissociated k=13 ===
+ spread  maxIntG*s 1/maxIntG   strict GP @ 3 non-res V>s
+     40       9.01       4.4   V=[41, 43, 44] GP=[True, True, True]
+     70       7.93       8.8   V=[71, 72, 73] GP=[True, True, True]
+    130      27.25       4.8   V=[131, 132, 134] GP=[True, True, True]
+    250      48.66       5.1   V=[251, 253, 254] GP=[True, True, True]
+    420      46.17       9.1   V=[421, 422, 423] GP=[True, True, True]
+  min maxIntG*spread = 7.93
+
+CONCLUSION: maxIntG >= 1/V => strict good period (rigorous pigeonhole).
+ 0-nbhd: maxIntG >= 6/(7*spread) => V>=7spread/6 (= j=1 wraparound).
+ missed-residue: maxIntG*spread >~ 10 => V>=spread/10 => strict GP at every non-res V>spread.
+ all-residue fragmented-G on V in (spread, 7spread/6): the residual (non-strict j=1 / density floor).
