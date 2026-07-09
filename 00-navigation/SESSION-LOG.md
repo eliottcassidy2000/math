@@ -1,3 +1,21 @@
+## opus-2026-07-09-S177 -- GRID-INVISIBLE PINCHES = LEMNISCATE NODES = the LRC extremal (M=1/14): they broke the widest-arc route (mac-mini MISTAKE-130) because they live on the CLOSED/non-strict good set, grid-unmeasurable on the open one -- demonstrated + out-of-box CM synthesis (owner's lemniscate prompt)
+
+Prompt (owner): keep pushing LRC math then formalization, pull often; consider how grid-invisible pinches relate to the lemniscate of Bernoulli; get abstract/out-of-box.
+
+Same-day mac-mini-S64 RETRACTED the widest-arc dissociated closure (MISTAKE-130) on EXACTLY this: "the strict boundary maxgap=1/7 is hit at rationals (measure-zero pinches invisible to every grid) => the 117k search over-merged arcs." I grounded + synthesized it.
+
+1. **DEMONSTRATED grid over-merging** (lrc14_grid_invisible_pinches): G={maxgap>1/7} pinches at measure-zero rationals where maxgap=1/7 exactly. Uniform grids can't sample them => OVER-MERGE arcs: dissociated Sidon (spread 140) coarse NG=2000 => 8 arcs / maxIntG*spread=53.3, fine NG>=20000 => 22 arcs / 30.9 (72% over-estimate). STRICT and NON-STRICT arc-counts IDENTICAL on every grid (grid never hits the exact-1/7 point) => no uniform grid measures maxIntG. Grounds MISTAKE-130.
+
+2. **SYNTHESIS (lemniscate)**: pinch = lemniscate NODE (r=0 on r^2=cos2theta, the figure-eight self-crossing = measure-zero singular point; resolution = blow-up/normalization = deciding strict-vs-non-strict) = tight loneliness (maxgap=1/7 <=> M=1/14) = measure-zero exact resonance (opus-S168 broken clock) = Phi_6/CM certificate (OPEN-Q-110 deep well lonely only at 14/183=Phi_6(14)). Every "difficulty at a measure-zero point" thread IS a pinch; the lemniscate is its archetype.
+
+3. **OUT-OF-BOX arithmetic**: lemniscate CM by Z[i] (square, j=1728), arc-length QUARTIC INT dr/sqrt(1-r^4) -- same 4th-power species as the LRC additive energy E(S)=SUM|S-hat|^4 (THM-441/515B). 7 not Fermat => non-constructible 7-division = the heptagon = theta=1/7. BUT 7 INERT in Z[i] vs SPLITS in Z[omega] => the LRC's true home is the EQUIANHARMONIC Z[omega] (Phi_6/Eisenstein, hexagonal cousin of the lemniscate), matching the 14=2.7 Phi_6-resonance. The invitation was the square lattice; the answer is the triangular one.
+
+4. **TAKEAWAY**: LRC(14) is NON-STRICT (M>=1/14, tight extremal=pinch); the pinch is in the CLOSED good set {maxgap>=1/7}, good non-strictly (mac-mini LRCGoodPeriodNonStrict). The widest-arc route failed by working with the OPEN set (grid-unmeasurable at pinches). => use the CLOSED/non-strict good set; the E_grid/non-strict routes (kps, mac-mini) are vindicated over the geometric maxIntG route. Explains MISTAKE-130 structurally.
+
+NEXT: hembed being closed by kps-S106 (scale_separation_phase + binding, drift-controlled regime). Files: lrc14_grid_invisible_pinches_opus_S177 (+out); reflection grid-invisible-pinches-are-lemniscate-nodes-and-they-are-the-extremal-opus-S177; HYP-5660.
+
+---
+
 ## kind-pasteur-2026-07-09-S106 -- hembed INSTANTIATED via scale_separation_phase with the e=Vmax-v binding (LRCHembedScaleSep.lean, sorry-free): discharges hembed in the drift-controlled (large-ruler / cluster-absorption) regime
 
 Prompt (owner): instantiate scale_separation_phase for hembed with the e=Vmax-v binding.

@@ -1,0 +1,25 @@
+====================================================================================================
+GRID-INVISIBLE PINCHES: #arcs of G and maxIntG*spread vs grid resolution (should DRIFT as pinches
+resolve).  main claim: coarse grid OVER-MERGES => over-estimates maxIntG (mac-mini MISTAKE-130).
+====================================================================================================
+
+  knife-edge-ish {0,7,14,...}  (spread=82)
+           NG #arcs(strict)  maxIntG*spread #arcs(nonstrict)
+         2000            64          4.8380               64
+        20000            72          4.4075               72  (d=-0.431)
+       200000            72          4.4067               72  (d=-0.001)
+      2000000            72          4.4066               72  (d=-0.000)
+
+  dissociated Sidon             (spread=140)
+           NG #arcs(strict)  maxIntG*spread #arcs(nonstrict)
+         2000             8         53.3400                8
+        20000            22         30.9120               22  (d=-22.428)
+       200000            22         30.9092               22  (d=-0.003)
+      2000000            22         30.9091               22  (d=-0.000)
+  near-AP 3*{0..9}+{1,2,3}    : |E|=14 skip
+
+  READING: if #arcs(strict) RISES and maxIntG*spread FALLS with resolution, the coarse grid was
+  OVER-MERGING across grid-invisible pinches (maxgap dipping to exactly 1/7) -- confirming that no
+  uniform grid measures the true widest arc.  The pinch = the LEMNISCATE NODE = the tight LRC point
+  (M=1/14).  The non-strict good set (>=1/7) INCLUDES the pinches (mac-mini's surviving M>=1/14).
+====================================================================================================
