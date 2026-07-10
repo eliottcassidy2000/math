@@ -1,0 +1,36 @@
+====================================================================================================
+PART 1 -- THE EXACT IDENTITY on small families (full k-enumeration, n = 3, 4)
+====================================================================================================
+  n=3 v=[3, 5, 8] q=8: p-side LM/q = 0/8 = 0.000000; k-side = -0.000000 (im 6.6e-17) MATCH
+  n=3 v=[2, 7, 9] q=9: p-side LM/q = 0/9 = 0.000000; k-side = 0.000000 (im 1.4e-15) MATCH
+  n=4 v=[2, 5, 7, 12] q=12: p-side LM/q = 0/12 = 0.000000; k-side = 0.000000 (im 5.9e-16) MATCH
+  n=4 v=[3, 4, 7, 10] q=7: p-side LM/q = 0/7 = 0.000000; k-side = 0.000000 (im 2.2e-16) MATCH
+
+====================================================================================================
+PART 2 -- THE FLOOR vs TRUE LM/q on core-adversary pair-sum rulers (n = 13)
+====================================================================================================
+  floor at b/q = 6/7 exactly: (6/7)^12*(5/7... ) = 0.11233  [statement form (4/7)(6/7)^12 = 0.08987]
+  [14, 29, 42, 56, 70, ...]: rulers>=28: 44, live: 21; worst (LM/q - floor) = -0.1511 at q=56 (LM/q = 0.0000, floor-minus-offline = 0.1511)
+  [14, 28, 42, 58, 70, ...]: rulers>=28: 46, live: 31; worst (LM/q - floor) = -0.1665 at q=42 (LM/q = 0.0000, floor-minus-offline = 0.1665)
+  [14, 28, 42, 56, 70, ...]: rulers>=28: 45, live: 22; worst (LM/q - floor) = -0.1665 at q=42 (LM/q = 0.0000, floor-minus-offline = 0.1665)
+  [14, 25, 44, 56, 73, ...]: rulers>=28: 66, live: 57; worst (LM/q - floor) = -0.1425 at q=70 (LM/q = 0.0000, floor-minus-offline = 0.1425)
+  [14, 28, 42, 56, 69, ...]: rulers>=28: 46, live: 32; worst (LM/q - floor) = -0.1665 at q=42 (LM/q = 0.0000, floor-minus-offline = 0.1665)
+  min #live rulers across families: 21
+
+====================================================================================================
+PART 3 -- OFF-LINE LEDGERS at dead rulers (where does the mass go?)
+====================================================================================================
+  DEAD ruler q=43 of [14, 29, 42, 56]...: 1554 small off-line relations (C<=3, s<=3); first: [((0, 2), (-3, 1), 0), ((0, 2), (3, -1), 0), ((1, 2), (-3, -1), -3)]
+  DEAD ruler q=56 of [14, 29, 42, 56]...: 10506 small off-line relations (C<=3, s<=3); first: [((0, 2), (-3, 1), 0), ((0, 2), (-2, 2), 1), ((0, 2), (-1, 3), 2)]
+  DEAD ruler q=70 of [14, 29, 42, 56]...: 8370 small off-line relations (C<=3, s<=3); first: [((0, 2), (-3, 1), 0), ((0, 2), (-2, -1), -1), ((0, 2), (-1, -3), -2)]
+  DEAD ruler q=71 of [14, 29, 42, 56]...: 1008 small off-line relations (C<=3, s<=3); first: [((0, 1), (-3, -1), -1), ((0, 1), (3, 1), 1), ((0, 2), (-3, 1), 0)]
+  DEAD ruler q=84 of [14, 29, 42, 56]...: 7016 small off-line relations (C<=3, s<=3); first: [((0, 2), (-3, -3), -2), ((0, 2), (-3, -1), -1), ((0, 2), (-3, 1), 0)]
+  DEAD ruler q=98 of [14, 29, 42, 56]...: 6068 small off-line relations (C<=3, s<=3); first: [((0, 2), (-3, 1), 0), ((0, 2), (-2, 3), 1), ((0, 2), (-1, -2), -1)]
+
+====================================================================================================
+PART 4 -- THE UNION BURDEN PROBE: adversarially kill rulers, watch relations
+====================================================================================================
+  start: live 21/44, near-relations 96
+  step 4: live 15/34, near-relations 0  [14, 28, 42, 56, 70, 84]...
+  minimum live achieved: 15 (near-relations there: 0)
+  (conservation probe: live never -> 0; killing rulers RAISES the relation count)
