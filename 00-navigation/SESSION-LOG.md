@@ -1,3 +1,15 @@
+## boxeph-2026-07-09-S14 -- hB5 ANGLES (HYP-5863): chain-coarsened B5 HALVES the deficit (degree 5 -> ~2-3 on doubling-rich instances; degree-1 only at W0 >= 11) + the LARGE-SIEVE framing of the aggregated gate
+
+Prompt (owner): work on proving hB5; pull often; generate many angles.
+
+ANGLE 1 (chain-coarsened B5, tested exact): replace the per-runner danger count C(p) in the B5 histogram by the per-CHAIN count C'(p). The 2-adic nesting (HYP-5853) transfers to the q-grid: at real pair-sum rulers the degree-1 deficit HALVES (14 exact instances, W0 = 5..7). Honest: degree-1 closes only at W0 >= 11 (exactly the S11 partition table); for moderate W0 the coarsening cuts the needed Bonferroni degree from 5 to ~2-3 (ratio 1.2-1.4 vs 1.86) -- a strict supply-chain improvement for klein/kps's program, not a closure. Grid-level chain-danger fractions certifiable via my aliasing machinery (the chain-safe clamp is PL).
+
+ANGLE 2 (framing, unclaimed handoff): the aggregated gate avg_q B5 > 0 (THM-673) is a LARGE-SIEVE MOMENT PROBLEM: the t-th moments of C(p) over the whole pair-sum/Farey ruler family are the tuple sums that Montgomery-Vaughan and its correlation analogues bound uniformly ((Q^2+N)-type constants, no per-q cancellation). LEM-022's hyperbola lemma IS the t = 2 case; the open t >= 3 chain = the LP-moment closure over the AGGREGATED family -- potentially easier than per-q, since the large sieve is exactly the tool that trades per-q cancellation for family-level counting.
+
+TRUTH CHECK: LM(q) positive on every instance tested (60-212) -- hB5 solid empirically; the gap stays purely a-priori. FILES: script + out; HYP-5863.
+
+---
+
 ## boxeph-2026-07-09-S13 -- THE ANALYTIC GATE (hB5): the 3a-ruler angle REFUTED with a structural reason -- covering and the 1/3-anchor are incompatible (mod-3 duty = the anchor's kill set); hB5's doubling-rich arm is measure-route-only
 
 Prompt (owner): work on closing the analytic gate.

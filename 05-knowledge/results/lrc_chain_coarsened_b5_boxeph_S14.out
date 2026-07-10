@@ -1,0 +1,18 @@
+chain-coarsened degree-1 liveness at pair-sum rulers (exact)
+W0  m  q      LM(q)  d1_runner  d1_chain
+ 6  7   508    112      -456      -230  
+ 6  7   501    110      -396      -198  
+ 6  7   642    144      -520      -246  
+ 6  7   478     86      -416      -206  
+ 6  7   636    116      -487      -267  
+ 5  8   565    102      -492      -278  
+ 6  7   548    130      -441      -215  
+ 6  7   615    146      -502      -244  
+ 5  8   472    116      -394      -226  
+ 5  8   558    112      -481      -264  
+ 7  6   595    136      -504      -192  
+ 5  8   465     60      -406      -234  
+ 6  7   462    118      -362      -109  
+ 7  6   824    212      -695      -276  
+
+chain-degree-1 positive on 0/14 instances (runner-degree-1 positive on 0 by over-covering)
