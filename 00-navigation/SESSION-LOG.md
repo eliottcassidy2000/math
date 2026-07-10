@@ -1,3 +1,20 @@
+## boxeph-2026-07-09-S6 -- FULL GREEN on the aliasing bound (HYP-5778 CONFIRMED): LRCAliasingBound.lean kernel-pure, all 11 draft errors fixed -- THM-665's analytic core is formalized (grid orthogonality + Poisson identity + the SHARP C/(12 V^2) tail via Basel)
+
+Prompt (owner): think deeply about the open frontier, contribute, fix the 11 Lean errors, pursue full green.
+
+DELIVERED (LRCAliasingBound.lean, built 8476 jobs, axiom audit [propext, Classical.choice, Quot.sound] x3, no sorry/native_decide, root-wired):
+- grid_char_sum: grid orthogonality by finite geometric sum (non-dvd case: Complex.exp_eq_one_iff + div_eq_iff + mul_left_cancel_0 -- no fragile field_simp chains).
+- grid_aliasing: the Poisson-aliasing identity conditional on the pointwise absolutely-summable Fourier representation; interchange via Summable.tsum_finsetSum; the divisibility reindex via Function.Injective.tsum_eq with the support-subset hypothesis.
+- aliasing_tail_bound: ||grid average - c 0|| <= C/(12 V^2) -- the sharp 1/12 constant EXACT via hasSum_zeta_two + HasSum.of_nat_of_neg_add_one (Z-Basel = pi^2/3) + Summable.tsum_eq_add_tsum_ite.
+
+ERROR FORENSICS (for the fleet's Lean practice): the 11 draft errors reduced to 3 patterns -- (a) 5x 'extra tactic after goal closed' (field_simp/ring chains where field_simp sometimes finishes): guard with first | (tac1; tac2) | tac1; (b) no-op simp only [] for beta-reduction: use show instead; (c) higher-order unification failure on (hasSum_nat_add_iff 1).mpr: supply f := explicitly. All three are recurring repo idioms worth adopting.
+
+FRONTIER CONTRIBUTION (the deep-consideration ask): aliasing_tail_bound is stated for ABSTRACT coefficients c : Z -> C -- so the same theorem consumes (i) W's coefficients (THM-665 proper), (ii) the clamp C's coefficients (THM-666 grid-port), and (iii) the PRODUCT clamps of the mid-band D_m comb-discrepancy (HYP-5760): min(C_P, C_E) and the killer-comb correlation are continuous PL with BV derivative. THE MID-BAND'S NAMED DISCREPANCY STATEMENT IS NOW ONE BREAKPOINT-DATA COMPUTATION AWAY FROM A FORMALIZED BOUND: compute TV((product-clamp)') per instance (exact integers, my S3 cell engine) and feed it to this file. The remaining input for full THM-665 -- the PL Fourier representation + the TV/(4 pi^2 n^2) coefficient bound from breakpoint data -- is finite exponential-integral algebra (W' is a step function; two DISCRETE summations by parts; no BV theory), one dedicated session.
+
+HANDOFFS: (1) anyone: the PL-input file (LRCPiecewiseLinearFourier.lean) -- representation + coefficient bound from breakpoint lists; consumes nothing analytic beyond intervalIntegral of exp; (2) monad-explorer: your THM-666 clamp port can now cite grid_aliasing/aliasing_tail_bound directly; (3) the D_m route: product-clamp TV ledger (cell engine) + this file = the mid-band discrepancy certificate machinery. FILES: LRCAliasingBound.lean (+root); HYP-5778 CONFIRMED; log.
+
+---
+
 ## klein-2026-07-09-S216 -- THE (PC) PROOF, FIRST LEGS (THM-677 Addendum 2): the TENT IDENTITY collapses (PC) to a smooth one-sided statement; THE WOBBLE IS EMPIRICALLY ABSENT (the object goes FULLY DISCRETE); the second-order grid lemma closes the flat part; two named residues at 4-5x margins
 
 Prompt (owner): run the (PC) hyperuniformity number-variance proof; pull regularly, reframe as needed.
