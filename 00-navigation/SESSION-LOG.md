@@ -31,6 +31,19 @@ RECOMMENDATION @monad: wire THM-678 (d=2,3 detuned dispatch) into lrc14_grand_as
 No Lean changed (computational correction + structural redirect; the fix is THM-678 wiring, monad's lane). Recorded MISTAKE-137, wrote the S208 reflection, annotated the S207 reflection. Files: 2 results .out, MISTAKE-137, 2 reflections. -> opus-S207 (corrected), monad THM-678/682, THM-661, momentLP, hB5.
 
 ---
+## klein-2026-07-10-S240 -- THE CORNER WHOLESALE CLOSURE (THM-691, HYP-5925): the q*-TEST-POINT THEOREM (primality-free) collapses the 794-set corner to FIVE top-block families; their PACKED branch PROVED via the first-window sliver (e_max < 12*pmin, thresholds 108-156); the spread branch censused vs the measure criterion with >= 2x margins -- the two-scale dead-zone question now stands on four proved strata + one censused sliver
+
+Prompt (owner): run the corner wholesale closure.
+
+(A) THE q*-TEST-POINT THEOREM (proved; generalizes THM-690, and PRIMALITY IS NOT NEEDED): q* = max{q in [8,13] : q not in P} (exists for k >= 8). P-side: for p in P, p != q*, a coprime to q*: q* | pa iff q* | p, impossible since p <= 13 < 2q* -- so frac(pa/q*) in [1/q*, (q*-1)/q*], strictly inside the band for every q* <= 13 (1/q* >= 1/13 > 1/14; (q*-1)/q* <= 12/13 < 13/14): a/q* in int(G_P) with clearance >= 1/182. E-side: k < q* => the centers occupy fewer than q* net classes => an empty class => gap >= 2/q* => m_E(a/q*) >= 2/q* - 1/7 (1/91 at q*=13 improving to 3/28 at q*=8). THE COLLAPSE: [q*+1,13] subset P forces k <= q*, with equality ONLY at P = [q*+1, 13] exactly -- the 13-in-P corner (794 sets) collapses to the FIVE TOP-BLOCK FAMILIES {9..13}, {10..13}, {11,12,13}, {12,13}, {13} (k = 8..12). Verified with margins on six non-top-block P's.
+
+(B) THE PACKED BRANCH OF THE FIVE (proved): for P = [b,13] and e_max < 12b: on (0, 6/(7 e_max)) no center wraps and the top gap exceeds 1/7 (small-alpha exclusion), so D misses the sliver [1/(14b), min(1/14, 6/(7 e_max))) -- nonempty exactly when e_max < 12b -- which sits inside the first window W_P subset G_P. mu_inf > 0 for ALL E with e_max < 12*pmin (thresholds 108/120/132/144/156). Every empirically-extremal shape ever found in this program (consecutive, APs, packed variants) lies in this PROVED branch. Consecutive mu_inf at the five: 0.134/0.125/0.126/0.113/0.130 -- all positive, verified.
+
+(C) THE SPREAD BRANCH (e_max >= 12*pmin; census + criterion): exact m_P for the five = 0.4467, 0.5251, 0.6241, 0.7353, 6/7; worst spread meas(D) over adversarial shapes (random spread, far-block, packed+spike; e_max to ~350) = 0.0056, 0.0693, 0.1650, 0.2389, 0.3819 -- every censused shape closes with >= 2x margin. The spread supremum is THE one remaining unproved sliver of the entire two-scale program; its empirical extremals are the packed+spike boundary shapes, continuous with the proved branch; per-class decidable regardless.
+
+STATUS: two-scale dead-zone = [k <= 7: THM-689(A) rigidity] u [pmax <= 12: THM-690] u [corner non-top-block: THM-691(A)] u [five top-blocks packed: THM-691(B)] u [five spread: censused]. Four proved strata, one censused sliver. Composed with THM-685 + kps's strict chain: THE WALL on two-scale slices is proved on four strata. Assembly note: branch (7) dispatches V >= 182*e_max, so the residual-relevant spread shapes are exactly the census's targets.
+
+FILES: THM-691 (canon); lrc14_corner_wholesale_klein_S240.py (+.out); HYP-5925 resolved; memory.
 
 ## opus-2026-07-10-S207 -- THE PRIMITIVE-RESIDUAL FLOOR IS TRUE (inf mu ~ 0.0085 > 0), splits into a large small-Vmax census + a decorrelation tail. Sharpest Lean reduction landed: lrc14_of_measureFloor_primitive (kernel-pure). HONEST: characterization + reduction, NOT a proof of the floor.
 

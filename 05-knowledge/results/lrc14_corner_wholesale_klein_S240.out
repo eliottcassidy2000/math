@@ -1,0 +1,23 @@
+(A) q*-THEOREM verification on non-top-block corner P's:
+    P=[1, 13]: q*=12, k=11: P-side all a/q* in G_P: True; E-side worst m_E = 0.07143 >= bound 0.02381: True
+    P=[1, 12, 13]: q*=11, k=10: P-side all a/q* in G_P: True; E-side worst m_E = 0.15584 >= bound 0.03896: True
+    P=[2, 7, 13]: q*=12, k=10: P-side all a/q* in G_P: True; E-side worst m_E = 0.11905 >= bound 0.02381: True
+    P=[1, 11, 12, 13]: q*=10, k=9: P-side all a/q* in G_P: True; E-side worst m_E = 0.17143 >= bound 0.05714: True
+    P=[1, 5, 7, 8, 13]: q*=12, k=8: P-side all a/q* in G_P: True; E-side worst m_E = 0.17857 >= bound 0.02381: True
+    P=[3, 9, 11, 12, 13]: q*=10, k=8: P-side all a/q* in G_P: True; E-side worst m_E = 0.27143 >= bound 0.05714: True
+
+(B) THE FIVE TOP-BLOCKS: packed branch is PROVED (e_max < 12*pmin); verify the sliver on the packed extremal:
+    P=[9, 10, 11, 12, 13] (pmin=9, k=8): e_max bound 12*pmin = 108; consecutive mu_inf = 0.134351 > 0; sliver len = 0.06349 > 0: True
+    P=[10, 11, 12, 13] (pmin=10, k=9): e_max bound 12*pmin = 120; consecutive mu_inf = 0.125325 > 0; sliver len = 0.06429 > 0: True
+    P=[11, 12, 13] (pmin=11, k=10): e_max bound 12*pmin = 132; consecutive mu_inf = 0.126016 > 0; sliver len = 0.06494 > 0: True
+    P=[12, 13] (pmin=12, k=11): e_max bound 12*pmin = 144; consecutive mu_inf = 0.113013 > 0; sliver len = 0.06548 > 0: True
+    P=[13] (pmin=13, k=12): e_max bound 12*pmin = 156; consecutive mu_inf = 0.130195 > 0; sliver len = 0.06593 > 0: True
+
+(C) SPREAD ADVERSARIES (e_max >= 12*pmin): meas(D) vs m_P:
+    P=[9, 10, 11, 12, 13]: m_P = 0.4467; worst spread meas(D) over 10 shapes = 0.0056 [criterion CLOSES] (worst E head: [0, 111, 114, 117, 120]...)
+    P=[10, 11, 12, 13]: m_P = 0.5251; worst spread meas(D) over 10 shapes = 0.0693 [criterion CLOSES] (worst E head: [0, 1, 2, 3, 4]...)
+    P=[11, 12, 13]: m_P = 0.6241; worst spread meas(D) over 10 shapes = 0.1650 [criterion CLOSES] (worst E head: [0, 1, 2, 3, 4]...)
+    P=[12, 13]: m_P = 0.7353; worst spread meas(D) over 10 shapes = 0.2389 [criterion CLOSES] (worst E head: [0, 1, 2, 3, 4]...)
+    P=[13]: m_P = 0.8571; worst spread meas(D) over 10 shapes = 0.3819 [criterion CLOSES] (worst E head: [0, 1, 2, 3, 4]...)
+
+STATUS: corner = [q*-theorem: all non-top-block P] + [five blocks: packed PROVED via sliver; spread censused vs measure criterion].
