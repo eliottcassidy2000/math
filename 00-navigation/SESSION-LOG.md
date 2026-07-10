@@ -17,6 +17,33 @@ STATE: LRC(14) is now formalized, sorry-free, and depends on NOTHING but Lean's 
 Files: LRC14GrandAssembly.lean (swap resolved + header fixed), LRC14CompletionAudit.lean (verdict updated to foundational-only), LEM-024 (attribution + LANDED), LRC14-STATUS addendum. -> LEM-024, kps-S127, MISTAKE-135, opus-S200/S201/S202, hB5.
 
 ---
+## kind-pasteur-2026-07-10-S127 (cont.6) -- THE FORMALIZATION'S FINAL SHAPE: LRC(14) <= [LRC(<=13) citation] + [ONE measure floor], kernel-pure. LRCResidualMeasureFloor.lean sorry-free, all axioms [propext, Classical.choice, Quot.sound].
+
+Prompt (owner): close out the residual obligation; get the LRC 14 proof formalization into its best possible state.
+
+HONEST: I did NOT close the residual -- it is the open analytic core (the measure/density floor). What I DID: make the formalization state exactly what remains, once, kernel-purely, with nothing else attached.
+
+THE KEY OBSERVATION: Lonely 14 v t unfolds to (forall i m, 1/14 <= |v_i t - m|) -- that is not a statement ABOUT the safe set, it IS membership in it. So ResidualObligation says precisely "every residual family has a NONEMPTY safe set" -- tautological, hence useless. klein's THM-685 (today) changes this: its transfer |LM(q) - q*mu(S)| <= K(S) <= Sum v_l is ELEMENTARY (band-rounding + crossing count + interval sampling; q arbitrary, primality nowhere) and closes the MODULUS side by counting alone, leaving klein's own verdict: "the remaining analytic content of the covering case is exactly the measure floors." So the useful reduction is NOT to nonemptiness (a point -- what you are trying to prove) but to POSITIVE MEASURE (a quantity -- what the analytic machinery actually bounds). That asymmetry is the whole content.
+
+BUILT (LRCResidualMeasureFloor.lean, sorry-free, kernel-pure, 8512 green; namespace LonelyRunner.LRC14Grand):
+- safePeriod v := {t | t in Ico 0 1 and Lonely 14 v t}  (the safe set in one period).
+- IsResidual v := the 9 ResidualObligation hypotheses, bundled.
+- SafeMeasureFloor := forall v, IsResidual v -> 0 < volume (safePeriod v).   <- THE SOLE REMAINING OBLIGATION
+- SafeIntervalFloor := forall v, IsResidual v -> exists a b, a<b and Icc a b subset safePeriod v.  (the shape mac-mini's LRCIntervalBridge / boxeph's mu_L actually produce)
+- lonely_of_safePeriod_measure_pos (pos measure => nonempty => any point IS a witness)
+- safePeriod_measure_pos_of_Icc_subset (volume(Icc a b)=ofReal(b-a)>0 + monotonicity)
+- measureFloor_of_intervalFloor; residualObligation_of_measureFloor
+- lrc14_of_measureFloor  : LRCUpTo13 -> SafeMeasureFloor  -> LRC14Statement
+- lrc14_of_intervalFloor : LRCUpTo13 -> SafeIntervalFloor -> LRC14Statement
+CERTIFIED: lrc14_of_measureFloor, lrc14_of_intervalFloor, lrc14_grand_assembly ALL [propext, Classical.choice, Quot.sound].
+
+Chain: SafeIntervalFloor -> SafeMeasureFloor -> ResidualObligation -> LRC14Statement. The floor is STRICTLY STRONGER than the obligation, which is exactly why it is the right hypothesis: you cannot exhibit the lonely point; you can bound the measure of the set of them.
+
+THE LEDGER (honest): PROVED kernel-pure = the entire assembly, top theorem included (no native_decide, no sorry). CITED = LRC(<=13) (owner directive). OPEN = SafeMeasureFloor alone. The day's arithmetic: window<=22 census -> LEM-024 six-witness pigeonhole (opus-S202 on kps-S127's witnesses; native_decide removed by me this session); modulus side -> THM-685 transfer (klein, today). The two things that looked like walls (a half-million-family census; an infinite family of rulers) both collapsed to counting. What survived is not a wall -- it is a number: mu(S) > 0.
+
+My LRC Lean ~58 nodes, chain S114..S127. FILES: LRCResidualMeasureFloor.lean, reflection the-residual-is-one-measure-floor-kps-S127.
+
+NEXT: the next agent who proves a measure floor for the residual class FINISHES LRC(14) by supplying one hypothesis. Concretely: mac-mini is one measure-theory brick (finite-union volume identity) from SafeIntervalFloor on the interval route; klein's THM-685 Cor 1 turns any floor into explicit rational certificates at every q > Sum v/mu_0, with the small-q bank a priori finite (kps/opus 6-witness machinery).
 
 ## kind-pasteur-2026-07-10-S127 (cont.5) -- APPLIED THE ASSEMBLY SWAP: lrc14_grand_assembly is now FOUNDATIONAL-AXIOMS-ONLY. The two winData22 native_decide axioms are GONE from the LRC(14) top theorem.
 
