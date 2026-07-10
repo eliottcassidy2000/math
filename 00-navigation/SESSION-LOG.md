@@ -1,3 +1,19 @@
+## klein-2026-07-10-S235 -- MEASURE FLOORS RUN (THM-686, HYP-5900): THE WINDOW-22 CENSUS THEOREM -- mu >= 7/858 on ALL 31471 covering families (exhaustive exact, ZERO tight, max q* = 12135 => branch certified at every modulus with THM-685) + THE INSTRUMENT REFUTATION (continuum B5 never fires: S5 explodes 156-172x under relation stacking -- 12th standing-law confirmation) + t=2 deviation lemma proved
+
+Prompt (owner): run the measure floors for the residual families.
+
+THE NEGATIVE RESULT FIRST (decisive, load-bearing): the continuum quintic Bonferroni mu >= B5 = 1 - S1 + S2 - S3 + S4 - S5 (all S_k EXACT via integer-scaled line sweeps + inclusion-exclusion) NEVER fires on raw small-speed covering families: B5 = -6.87 (deep well), -7.89 (worst-covering {1,2,3,4,7..17}), -6.16 (DIL), -0.98 (GEN), 0/49 on the <=18-class spread. Cause quantified: relation stacking explodes the DEEP intersection terms -- S5 = 11.9-13.2 vs iid 0.0766 (156-172x) while S2 elevates only 1.3-1.4x: the truncation cuts exactly where the mass lives. Chain-coarsened B5 (boxeph super-runners, exact chain-danger intersections) comes within -0.00086 on the well but does not fire -- and with 7 chains the full depth-7 chain I-E is exact anyway. THM-671's discrete-B5 domain (per-ruler cluster objects at q in (V,2V]) does NOT port to raw families. 12th standing-law confirmation, now in the continuum. FOR FINITE RESIDUAL CLASSES THE INSTRUMENT IS THE EXACT CENSUS.
+
+THE THEOREM (THM-686(A), exhaustive exact -- integer-scaled rational sweeps, no floats): all 31471 covering 13-sets in [1..22] (14002 min=1 + 17469 min>=2, MATCHING opus/kps counts) have mu(S) >= 7/858 ~ 0.008159, argmin {1..14}\{6} (the near-AP), ZERO families with mu = 0 (no covering family in the window is tight -- exhaustively verified), median 0.0676. Worst transfer threshold max Sum(v)/mu = 12135 => with THM-685: THE ENTIRE WINDOW-22 BRANCH IS CERTIFIED AT EVERY MODULUS by [banks q <= 12135] + [transfer beyond] -- the quantified-margin complement of opus's LEM-024 (they give one witness per family; this gives witnesses at all large moduli, clearance >= 1/14, uniformly).
+
+CROSS-VALIDATIONS (three, all exact): (1) the sweep reproduces boxeph's chain ladder mu_2..mu_5 EXACTLY (11/14, 5/7, 9/14, 33/56); (2) the <=18 sub-class has exactly 966 members = the kps bank domain; (3) THE FLOOR 7/858 EQUALS mac-mini's k=1 engine floor in LRCWitnessFloorRepair -- flagged for mac-mini to confirm the objects are one (if yes: the census IS the engine's floor validation, exhaustively).
+
+THE LEMMA (THM-686(C), proved): |A_inf(a,b) - 36/49| <= (24/7)/max(a,b) for coprime pairs (unfold the larger coordinate, Fubini, Koksma on the exact grid); measured sharp constant 6/49 = (6/7)(1/7) at (1,13) -- proved constant 28x conservative. t>=3 class-uniformity open but NOT needed (census is exact).
+
+HONEST STATE: bounded residual classes = census theorems (window-22 done; repeatable); unbounded residual = hpartA/the analytic node (unchanged); the deep well {1..12,182} certified individually (mu = 4637/194040 exact, q* = 10880).
+
+FILES: THM-686 (canon); lrc14_measure_floors_klein_S235.py + lrc14_window22_mu_census_klein_S235.py (+.outs); HYP-5900 resolved (PARTIALLY-TRUE, honestly scoped); backlog updated; memory.
+
 ## opus-2026-07-10-S205 -- THE RESIDUAL ADMITS DILATES => inf mu = 0 => NO UNIFORM MEASURE FLOOR EXISTS. Fix LANDED: lrc14_of_primitive (LRCPrimitivePeel.lean, kernel-pure). Plus two honest negatives.
 
 Prompt (owner): do the a-priori measure floor for the residual class, work on the difficulty.

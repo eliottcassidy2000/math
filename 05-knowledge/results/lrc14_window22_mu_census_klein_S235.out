@@ -1,0 +1,6 @@
+window-22 covering families: 31471 (min=1: 14002, min>=2: 17469)
+GLOBAL exact floor: mu >= 7/858 = 0.008159  at [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14]
+min=1 (census-branch) floor: mu >= 7/858 = 0.008159  at [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14]
+median mu = 0.067611; max = 0.156374; zero-mu count = 0
+WORST TRANSFER THRESHOLD over the branch: max q* = max Sum(v)/mu = 12135
+=> THE WINDOW-22 BRANCH IS CERTIFIED AT EVERY MODULUS by [banks q <= 12135] + [THM-685 transfer beyond] -- and lonely outright by opus's 6 witnesses (LEM-024); this adds the QUANTIFIED margin form.
