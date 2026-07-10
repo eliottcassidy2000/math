@@ -43,6 +43,17 @@ FORENSICS: <;> [t1; t2; t3] must match goal count exactly; push_cast at the |2y 
 REMAINING mu-LAYER (handoff refreshed): mu_3 = 5/7 (four intervals), general mu_L (interval lists from my S11 script), the 2-set chain-Bonferroni assembly (LRCGoodDilation + LRCDensityFloorCert + this pattern) => the W0 = 11 outright theorem. Each mu_L is now a mechanical copy of this file's pattern with more interval_cases branches.
 
 ---
+## death-star-2026-07-09-S12 -- THE DYADIC ASSEMBLY IN LEAN (harmonic_ratio_sum_mul_le, kernel-pure): LEM-022's Lean surface is now COMPLETE EXCEPT the single Fourier-completion step -- and the Lean proof BEAT the paper constant (20 < 24) via the per-fiber dichotomy
+
+Prompt (owner): keep advancing toward full lean formalization creatively.
+
+EXTENDED LRCHyperbolaBox.lean with LEM-022 Step 3 (my HYP-5870 stage-2): **harmonic_ratio_sum_mul_le** (kernel-pure [propext, Classical.choice, Quot.sound], builds 8475 jobs): (Sum_{k != 0} 1/(cdist k * cdist(wk))) * P <= 20 * (Nat.log 2 q + 1)^2, given the ratio-lattice floor. ZERO complex analysis -- pure Finset/NN/QQ.
+
+**THE CREATIVE BIT: the Lean proof is SIMPLER and SHARPER than my paper proof.** Designing for formalizability found the per-fiber dichotomy: each dyadic class (i,j) is either EMPTY (contributes 0) or contains a witness k0 whose ratio-lattice floor forces P <= cdist k0 * cdist(w k0) < 2^{i+j+2} -- so the class's singleton term 2^{-(i+j)} < 4/P pointwise, no anti-diagonal geometric series needed, and the constant drops 24 -> 20. Fiber machinery: Nat.log-2 dyadic indexing (Nat.pow_log_le_self / Nat.lt_pow_succ_log_self / Nat.log_mono_right), Finset.sum_fiberwise_of_maps_to, the box count (S10) at K = 2^{i+1}, M = 2^{j+1}, and the zero-denominator QQ convention (1/0 = 0 <= bound) absorbing the degenerate cdist(wk) = 0 case for free. One toolchain note: norm_num closes 0 <= 1/2^n outright -- do not stack positivity behind it.
+
+STATE OF LEM-022 IN LEAN after S10+S12: [Step 2 separation/box count: DONE] + [Step 3 dyadic assembly: DONE] + [Step 1 Fourier completion: THE ONLY REMAINING PIECE -- |C_w - b^2/q| <= (q/4)*S via additive characters over ZMod q + the sine bound |B-hat(h)| <= q/(2 cdist h); Mathlib's Analysis.Fourier.ZMod / AddChar orthogonality is the infrastructure]. Once the completion lands, the assembled Lean LEM-022 reads: |C_w - b^2/q| <= 5 q (log2 q + 1)^2 / P(w) -- one constant better than canon.
+
+COLLISION flag: klein-S231 claimed HYP-5870 (t2 canon write-up) -- MY S10 claim-first (LRCHyperbolaBox, delivered); klein renumbers; no work overlap (theirs = canon document, mine = the Lean). FILES: LRCHyperbolaBox.lean (extended, +one_le_cdist + harmonic_ratio_sum_mul_le), manifest comment. NEXT: (a) the Fourier completion (the last LEM-022 Lean piece -- C-comfortable agent or me next session); (b) with it, LEM-022's full inequality assembles in one theorem; (c) the q0-regime banks stand as the fleet's load-bearing item (S11).
 
 ## opus-2026-07-09-S200 -- INVESTIGATED eliminating the two window native_decide axioms via kernel decide: EMPIRICALLY INFEASIBLE (winData22_complete = C(22,13)=497420 census, >13h generation + OOM). Corrected my own S199 overclaim (MISTAKE-135). native_decide is the correct tool.
 

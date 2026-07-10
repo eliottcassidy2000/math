@@ -272,11 +272,190 @@ theorem hyperbola_box_count (w : ZMod q) (K M P : ℕ)
       exact_mod_cast hchain
     rwa [Int.natCast_natAbs] at this
 
+/-! ## The dyadic assembly (LEM-022 Step 3, ℂ-free)
+
+The harmonic ratio sum `S = Σ_{k≠0} 1/(cdist k · cdist (wk))` is what the Fourier completion
+multiplies by `q/4`.  The per-fiber dichotomy makes the assembly SIMPLER than the paper proof:
+an empty dyadic fiber contributes nothing, and a nonempty one contains a witness forcing
+`P ≤ cdist·cdist < 2^{i+j+2}`, so its `2^{−(i+j)}` head is `< 4/P` — no geometric series
+needed.  Final form, division-free: `S · P ≤ 20 · L²` with `L = log₂ q + 1`. -/
+
+/-- Nonzero elements have `cdist ≥ 1`. -/
+theorem one_le_cdist {z : ZMod q} (hz : z ≠ 0) : 1 ≤ cdist z := by
+  have hval : z.val < q := ZMod.val_lt z
+  have hpos : 0 < z.val := ZMod.val_pos.mpr hz
+  unfold cdist
+  omega
+
+/-- **The dyadic assembly of the harmonic ratio sum** (LEM-022 Step 3):
+`(Σ_{k≠0} 1/(cdist k · cdist(wk))) · P ≤ 20·(log₂ q + 1)²`, given the ratio-lattice floor
+`P ≤ cdist h · cdist (wh)` for all `h ≠ 0`.  Together with the Fourier completion
+(`error ≤ (q/4)·S`, the remaining ℂ step) this yields LEM-022's
+`|C_w − b²/q| ≤ 5·q·(log₂q + 1)²/P`. -/
+theorem harmonic_ratio_sum_mul_le (w : ZMod q) (P : ℕ)
+    (hPmin : ∀ h : ZMod q, h ≠ 0 → P ≤ cdist h * cdist (w * h)) :
+    (∑ k ∈ (Finset.univ : Finset (ZMod q)).filter (fun k => k ≠ 0),
+        (1 : ℚ) / (cdist k * cdist (w * k))) * (P : ℚ)
+      ≤ 20 * (Nat.log 2 q + 1) ^ 2 := by
+  classical
+  set L : ℕ := Nat.log 2 q + 1 with hL
+  set S0 := (Finset.univ : Finset (ZMod q)).filter (fun k => k ≠ 0) with hS0
+  set f : ZMod q → ℚ := fun k => (1 : ℚ) / (cdist k * cdist (w * k)) with hf
+  set idx : ZMod q → ℕ × ℕ :=
+    fun k => (Nat.log 2 (cdist k), Nat.log 2 (cdist (w * k))) with hidx
+  -- every nonzero k lands in range L ×ˢ range L
+  have hmaps : ∀ k ∈ S0, idx k ∈ Finset.range L ×ˢ Finset.range L := by
+    intro k _
+    have h1 : cdist k ≤ q := by
+      unfold cdist; omega
+    have h2 : cdist (w * k) ≤ q := by
+      unfold cdist; omega
+    have hlog1 : Nat.log 2 (cdist k) < L := by
+      rw [hL]; exact Nat.lt_succ_of_le (Nat.log_mono_right h1)
+    have hlog2 : Nat.log 2 (cdist (w * k)) < L := by
+      rw [hL]; exact Nat.lt_succ_of_le (Nat.log_mono_right h2)
+    simp only [hidx]
+    exact Finset.mem_product.mpr ⟨Finset.mem_range.mpr hlog1, Finset.mem_range.mpr hlog2⟩
+  -- fiberwise decomposition
+  have hsplit : (∑ k ∈ S0, f k)
+      = ∑ p ∈ Finset.range L ×ˢ Finset.range L, ∑ k ∈ S0.filter (fun k => idx k = p), f k :=
+    (Finset.sum_fiberwise_of_maps_to hmaps f).symm
+  -- per-fiber bound: fiber sum · P ≤ 20
+  have hfiber : ∀ p ∈ Finset.range L ×ˢ Finset.range L,
+      (∑ k ∈ S0.filter (fun k => idx k = p), f k) * (P : ℚ) ≤ 20 := by
+    intro p _
+    obtain ⟨i, j⟩ := p
+    set F := S0.filter (fun k => idx k = (i, j)) with hF
+    rcases Finset.eq_empty_or_nonempty F with hemp | hne
+    · rw [hemp]
+      simp
+    · -- the witness forces P < 2^{i+j+2}
+      obtain ⟨k₀, hk₀⟩ := hne
+      have hk₀0 : k₀ ≠ 0 := (Finset.mem_filter.mp ((Finset.mem_filter.mp hk₀).1)).2
+      have hk₀idx : idx k₀ = (i, j) := (Finset.mem_filter.mp hk₀).2
+      have hi₀ : Nat.log 2 (cdist k₀) = i := by
+        have := congrArg Prod.fst hk₀idx; simpa [hidx] using this
+      have hj₀ : Nat.log 2 (cdist (w * k₀)) = j := by
+        have := congrArg Prod.snd hk₀idx; simpa [hidx] using this
+      have hc₀1 : 1 ≤ cdist k₀ := one_le_cdist hk₀0
+      have hcw₀pos : P ≤ cdist k₀ * cdist (w * k₀) := hPmin k₀ hk₀0
+      have hup1 : cdist k₀ < 2 ^ (i + 1) := by
+        rw [← hi₀]
+        exact Nat.lt_pow_succ_log_self (by norm_num) _
+      have hup2 : cdist (w * k₀) < 2 ^ (j + 1) := by
+        rw [← hj₀]
+        exact Nat.lt_pow_succ_log_self (by norm_num) _
+      have hPsmall : P < 2 ^ (i + j + 2) := by
+        calc P ≤ cdist k₀ * cdist (w * k₀) := hcw₀pos
+          _ < 2 ^ (i + 1) * 2 ^ (j + 1) :=
+              Nat.mul_lt_mul_of_lt_of_le hup1 (le_of_lt hup2) (by positivity)
+          _ = 2 ^ (i + j + 2) := by ring
+      -- fiber cardinality via the box count at K = 2^{i+1}, M = 2^{j+1}
+      have hsub : F ⊆ (Finset.univ : Finset (ZMod q)).filter
+          (fun k => k ≠ 0 ∧ cdist k ≤ 2 ^ (i + 1) ∧ cdist (w * k) ≤ 2 ^ (j + 1)) := by
+        intro k hk
+        have hk0 : k ≠ 0 := (Finset.mem_filter.mp ((Finset.mem_filter.mp hk).1)).2
+        have hkidx : idx k = (i, j) := (Finset.mem_filter.mp hk).2
+        have hi' : Nat.log 2 (cdist k) = i := by
+          have := congrArg Prod.fst hkidx; simpa [hidx] using this
+        have hj' : Nat.log 2 (cdist (w * k)) = j := by
+          have := congrArg Prod.snd hkidx; simpa [hidx] using this
+        refine Finset.mem_filter.mpr ⟨Finset.mem_univ _, hk0, ?_, ?_⟩
+        · rw [← hi']
+          exact le_of_lt (Nat.lt_pow_succ_log_self (by norm_num) _)
+        · rw [← hj']
+          exact le_of_lt (Nat.lt_pow_succ_log_self (by norm_num) _)
+      have hboxZ := hyperbola_box_count w (2 ^ (i + 1)) (2 ^ (j + 1)) P hPmin
+      have hcardle : F.card ≤ ((Finset.univ : Finset (ZMod q)).filter
+          (fun k => k ≠ 0 ∧ cdist k ≤ 2 ^ (i + 1) ∧ cdist (w * k) ≤ 2 ^ (j + 1))).card :=
+        Finset.card_le_card hsub
+      -- per-term bound: f k ≤ 1/2^{i+j} on the fiber
+      have hterm : ∀ k ∈ F, f k ≤ (1 : ℚ) / 2 ^ (i + j) := by
+        intro k hk
+        have hk0 : k ≠ 0 := (Finset.mem_filter.mp ((Finset.mem_filter.mp hk).1)).2
+        have hkidx : idx k = (i, j) := (Finset.mem_filter.mp hk).2
+        have hi' : Nat.log 2 (cdist k) = i := by
+          have := congrArg Prod.fst hkidx; simpa [hidx] using this
+        have hj' : Nat.log 2 (cdist (w * k)) = j := by
+          have := congrArg Prod.snd hkidx; simpa [hidx] using this
+        rcases Nat.eq_zero_or_pos (cdist (w * k)) with hz | hwpos
+        · -- zero denominator: f k = 1/0 = 0 in ℚ
+          rw [hf]
+          push_cast
+          rw [hz]
+          norm_num
+        · have hlow1 : 2 ^ i ≤ cdist k := by
+            rw [← hi']
+            exact Nat.pow_log_le_self 2 (by have := one_le_cdist hk0; omega)
+          have hlow2 : 2 ^ j ≤ cdist (w * k) := by
+            rw [← hj']
+            exact Nat.pow_log_le_self 2 (by omega)
+          have hprodN : 2 ^ (i + j) ≤ cdist k * cdist (w * k) := by
+            rw [pow_add]
+            exact Nat.mul_le_mul hlow1 hlow2
+          rw [hf]
+          apply one_div_le_one_div_of_le (by positivity)
+          exact_mod_cast hprodN
+      calc (∑ k ∈ F, f k) * (P : ℚ)
+          ≤ (F.card • ((1 : ℚ) / 2 ^ (i + j))) * (P : ℚ) := by
+            apply mul_le_mul_of_nonneg_right _ (by positivity)
+            exact Finset.sum_le_card_nsmul F f _ hterm
+        _ = (F.card : ℚ) * (P : ℚ) / 2 ^ (i + j) := by
+            rw [nsmul_eq_mul]; ring
+        _ ≤ 20 := by
+            -- (card)·P ≤ (1 + 16·2^{i+j}/P-form)·... : use the box count + the witness
+            have hcardZ : ((F.card : ℤ) - 1) * (P : ℤ) ≤ 4 * 2 ^ (i + 1) * 2 ^ (j + 1) := by
+              calc ((F.card : ℤ) - 1) * (P : ℤ)
+                  ≤ ((((Finset.univ : Finset (ZMod q)).filter
+                      (fun k => k ≠ 0 ∧ cdist k ≤ 2 ^ (i + 1) ∧ cdist (w * k) ≤ 2 ^ (j + 1))).card : ℤ)
+                      - 1) * (P : ℤ) := by
+                    apply mul_le_mul_of_nonneg_right _ (Int.natCast_nonneg P)
+                    have := hcardle
+                    omega
+                _ ≤ 4 * 2 ^ (i + 1) * 2 ^ (j + 1) := by
+                    have := hboxZ
+                    push_cast at this ⊢
+                    linarith
+            -- convert: card·P ≤ P + 16·2^{i+j} < 2^{i+j+2} + 16·2^{i+j} = 20·2^{i+j}
+            have h4 : (4 : ℤ) * 2 ^ (i + 1) * 2 ^ (j + 1) = 16 * 2 ^ (i + j) := by
+              rw [pow_succ, pow_succ, pow_add]
+              ring
+            have hcardP : (F.card : ℤ) * (P : ℤ) ≤ (P : ℤ) + 16 * 2 ^ (i + j) := by
+              have := hcardZ
+              rw [h4] at this
+              nlinarith [Int.natCast_nonneg P]
+            have hPZ : (P : ℤ) < 2 ^ (i + j + 2) := by exact_mod_cast hPsmall
+            have hfinal : (F.card : ℤ) * (P : ℤ) ≤ 20 * 2 ^ (i + j) := by
+              have h2 : (2 : ℤ) ^ (i + j + 2) = 4 * 2 ^ (i + j) := by
+                rw [pow_add]; ring
+              omega
+            have hQ : (F.card : ℚ) * (P : ℚ) ≤ 20 * 2 ^ (i + j) := by
+              exact_mod_cast hfinal
+            rw [div_le_iff₀ (by positivity : (0:ℚ) < 2 ^ (i + j))]
+            linarith
+  -- assemble
+  rw [hsplit, Finset.sum_mul]
+  calc ∑ p ∈ Finset.range L ×ˢ Finset.range L,
+        (∑ k ∈ S0.filter (fun k => idx k = p), f k) * (P : ℚ)
+      ≤ ∑ _p ∈ Finset.range L ×ˢ Finset.range L, (20 : ℚ) :=
+        Finset.sum_le_sum hfiber
+    _ = ((Finset.range L ×ˢ Finset.range L).card : ℚ) * 20 := by
+        rw [Finset.sum_const, nsmul_eq_mul]
+    _ = 20 * (L : ℚ) ^ 2 := by
+        rw [Finset.card_product, Finset.card_range]
+        push_cast
+        ring
+    _ = 20 * (Nat.log 2 q + 1) ^ 2 := by
+        rw [hL]
+        push_cast
+        ring
+
 /-! ## Axiom audit -/
 #print axioms cdist_add_le
 #print axioms cdist_le_natAbs
 #print axioms card_mulsep_in_Icc
 #print axioms hyperbola_box_count
+#print axioms harmonic_ratio_sum_mul_le
 
 end HyperbolaBox
 end LonelyRunner
