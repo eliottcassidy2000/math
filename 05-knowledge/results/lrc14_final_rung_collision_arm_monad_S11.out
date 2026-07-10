@@ -1,0 +1,58 @@
+====================================================================================================
+PART A -- THE COMMON-RESIDUE DISPATCH (battery of in-core affine-dilated families)
+====================================================================================================
+  d= 23 a= 19 v=[19,65,...,916]  tau=3/23  clearance=0.4783  (>= 1/2 - 1/(2d) = 0.4783: EXACT)
+  d= 31 a=  8 v=[70,132,...,1217]  tau=2/31  clearance=0.4839  (>= 1/2 - 1/(2d) = 0.4839: EXACT)
+  d= 23 a=  8 v=[8,238,...,905]  tau=10/23  clearance=0.4783  (>= 1/2 - 1/(2d) = 0.4783: EXACT)
+  d= 29 a= 22 v=[80,312,...,1124]  tau=2/29  clearance=0.4828  (>= 1/2 - 1/(2d) = 0.4828: EXACT)
+  d= 31 a= 14 v=[76,169,...,1006]  tau=10/31  clearance=0.4839  (>= 1/2 - 1/(2d) = 0.4839: EXACT)
+  d= 31 a= 22 v=[84,115,...,1231]  tau=12/31  clearance=0.4839  (>= 1/2 - 1/(2d) = 0.4839: EXACT)
+  400 in-core common-residue families: ALL dispatched with clearance >= 8/17 = 0.4706
+  (each is covering+primitive+gapped+distinct+compressed-checkable: in the residual class,
+   NOT carved by near-harmonic (d divides differences, not values) -- a NEW Lean branch)
+
+====================================================================================================
+PART B -- k=13, t=1 STABILITY: B <= 24 ==> diam <= 14 (gcd-normalized), EXHAUSTIVE DFS
+====================================================================================================
+  DFS nodes: 16564;  B<=24 gcd-normalized sets found: 5
+  diameters realized: [12, 13]
+  max diameter: 13  (cap DMAX=45 not hit: EXHAUSTIVE below cap)
+    B=23: 1 sets, max diam 12, extremal e.g. [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    B=24: 4 sets, max diam 13, extremal e.g. [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  TAIL (proved): any gap > D/2 splits A into blocks A1|A2 with disjoint sum ranges:
+    B >= (2s-3) + (13-1) + (2(13-s)-3) = 32 > 24  [s,13-s >= 2; singleton cases >= 33]
+  ==> B <= 24 sets have no gap > D/2; the DFS below the cap is the complete bounded part.
+
+====================================================================================================
+PART C -- B = 25 ESCAPES: rank-2 GAP shapes at k = 13 (LEM-016(ii) analogs)
+====================================================================================================
+  GAP(0, c, 2c) block profiles (c = 60), smallest restricted sumsets:
+    blocks (2,5,6): B = 34
+    blocks (3,5,5): B = 34
+    blocks (4,5,4): B = 34
+    blocks (5,5,3): B = 34
+    blocks (6,5,2): B = 34
+    blocks (2,4,7): B = 35
+    blocks (2,6,5): B = 35
+    blocks (3,4,6): B = 35
+  minimum GAP-shape B at k=13: 34  (t = 11); rank-2 escapes begin at t = 11
+
+  core instances on near-minimal GAP shapes -- THM-680 certification + true liveness:
+    blocks (2,5,6) c=70 off=2 sc=1: B=34, true-live 23/23 tall rulers  [LIVE: generic-side behavior]
+    blocks (3,5,5) c=60 off=9 sc=1: B=34, true-live 24/24 tall rulers  [LIVE: generic-side behavior]
+    blocks (4,5,4) c=70 off=2 sc=1: B=34, true-live 19/19 tall rulers  [LIVE: generic-side behavior]
+    blocks (5,5,3) c=60 off=9 sc=1: B=34, true-live 18/18 tall rulers  [LIVE: generic-side behavior]
+
+====================================================================================================
+PART D -- THE W0-CARRIER: support-2 global exacts = DOUBLINGS ONLY; doubling census
+====================================================================================================
+  support-2 |c|<=2 homogeneous relations on distinct positives: [((1, -2), 'x = 2/1 y'), ((2, -1), 'y = 2/1 x')]
+  ==> exactly the DOUBLING ratios (2,-1),(1,-2),(2,-2)->reduces,( -,-): doublings only.
+  measured doubling line weight at q=200: 0.01420 (proven bound 0.0382)
+  measured Schur line weight    at q=200: 0.00274 (proven bound 0.0645)
+  W0 > 0.08 requires: >= 6 doublings (measured) / >= 3 (proven bound), OR >= 30 Schur triples (measured) / >= 2 (proven)
+  max doublings found in a CORE family (random search): 9  e.g. [22, 39, 42, 44, 45, 84, 88, 90, 168, 176, 180, 336, 352]
+    (evens: 11/13 -- doubling-rich families are even-rich: the 2-adic pressure)
+
+  ==> THE FINAL RUNG after THM-682: [B >= 25] AND [>= 3 doublings (proven) / >= 6 (measured)]
+      AND not GAP-escape-live -- the doubling-rich collision-light corner ONLY.
