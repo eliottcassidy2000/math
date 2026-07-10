@@ -27,6 +27,39 @@ FULL-FORMALIZATION ASSESSMENT (read LRC14-STATUS-2026-07-09 death-star synthesis
 My LRC Lean ~44 nodes, chain S114..S127. FILES: LRCMultRigidity.lean, LEM-023 canon, lrc14_e3_diagonal_split_kps_S127.py/.out.
 
 NEXT: the ONE analytic ingredient (signed OffLine<=f(E3) = klein's character chain / hyperbola lemma) is the sole gap to complete formalization -- klein/monad's lane. If the multiplicative axis is wanted wired: the mult rigidity (LEM-023) could anchor a multiplicative/2-adic supply-chain variant (klein's frame resonates on geometric chains), complementary to the additive E3 route.
+## mac-mini-2026-07-09-S65 (cont. 15) -- THE REMAINING LEGS AUDITED: opus-S190 had ALREADY discharged hbonf + hsize (LRCMomentFloorConcrete, terminal assembly = {hMoment, hB, hsmall, hpartA}); my cont.14 file was a DUPLICATE (MISTAKE-134, removed); hsmall/hB precisely mapped = FINITE-family interval-measure developments
+
+Prompt (owner): discharge the remaining three legs.
+
+**THE AUDIT FINDING (grep-first, this time):** `LRCMomentFloorConcrete.lean` (opus-S190) already
+contains: concrete `nuShapeConcrete`/`measGPConcrete`; `bonferroni_concrete` (= hbonf DISCHARGED
+via kps-S30 toReal_bonferroni + measurableSet_safeSet + the slowmu probability instance);
+`clusterSize_shapeOf_le` (= hsize); and the terminal assembly
+`lrc14_from_momentfloor_concrete : {hMoment, hB, hsmall, hpartA} -> LRC14Statement`.
+=> Of the "three remaining legs", hbonf was ALREADY DONE; my cont.14 file duplicated the hsize
+discharge and a weaker assembly -- REMOVED (root import dropped; nothing else imported it);
+**MISTAKE-134 filed** (grep-before-Lean skipped under context pressure; the stale
+'opaque'-docstring reinforced the false impression -- a stale doc is itself evidence someone
+worked the area).
+
+**THE GENUINELY REMAINING LEGS, mapped exactly (the honest deliverable):**
+- **hsmall** (k <= 7 => witnessMP <= witnessG2): two pieces -- (a) the k <= 7 pigeonhole
+  (<= 7 teeth => maxgap >= 1/7, pointwise; strict a.e. for k <= 6, boundary-null at k = 7) =>
+  goodSet is a.e.-univ => witnessG2 = measGP; (b) measGP >= m_P = 14249/252252: since the
+  P-part of shapeOf is a list of speeds <= 13, **P ranges over a FINITE family (subsets of
+  {1..13})** -- the floor is a finite set of exact interval-measure computations
+  (safeSet = intersection of per-p bands; slowmu = volume.restrict Ico 0 1) -- rational
+  interval arithmetic, native_decide-shaped once the measure-to-rational bridge exists.
+- **hB** (capRat(k) <= measGP, 8 <= k <= 13 i.e. |P| <= 5): the SAME finite-family
+  interval-measure development, smaller family.
+- **hMoment**: cite THM-661 (math PROVED incl. my k=11 band); Lean form = the Farey moment
+  identity (opus-S192's isolated socket) OR a direct mu-floor citation file.
+- **hpartA**: the analytic node (fleet-wide, in flight).
+=> The witnessG2-concretization plumbing is COMPLETE as architecture; what remains under
+hfloor is one finite interval-measure engine (serves both hsmall(b) and hB) + the THM-661
+citation. No opaque symbols block anything.
+
+Files: MISTAKE-134 (canon); LRCMomentFloorDischarge.lean removed + root import dropped.
 
 ## boxeph-2026-07-09-S11 -- THE FINAL-RUNG MATH (HYP-5853): doubling chains are RLL SHIFT SETS -- exact nested measures, the W0 >= 11 outright-lonely theorem, and the drop-in Bonferroni upgrade (+0.0714 per doubling pair in EVERY existing budget)
 

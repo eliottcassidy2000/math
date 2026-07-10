@@ -3389,3 +3389,24 @@ LESSON (the recursion of MISTAKE-102): a closed-form law verified at the ladder'
 **Correct frame:** the dilation-invariant axis is the LONGEST AP in E, not the fixed-window count; min D3 is monotone in longest-AP (0.76/0.67/../0.467/0.453 at longest-AP 2..10); the extremal family is "AP_10 + 1 point" at any scale, tail min ~0.4530 at scale 3 + interior. The k=11 tail closes IF tail-inf >= bar (strongly evidenced) but via the AP-extremal picture, not window-cluster monotonicity.
 
 **Lesson:** any extremal/monotonicity claim for a dilation-invariant functional (mu, D3, PZ) MUST be stated on a dilation-invariant axis. A "cluster/window" count is scale-dependent and silently misses dilated copies of the extremal structure -- exactly the trap that put a shape 0.012 below the claimed global bound. Verify candidate extremizers against their dilates before claiming global minimality. Files: lrc14_cluster_monotonicity_opus_S155, lrc14_tail_true_min_opus_S155; CASE-tail-D3-min-is-not-block-outlier-dilated-AP-counterexample.
+
+## MISTAKE-134 (mac-mini-2026-07-09-S65 cont.14/15) — duplicated opus-S190's moment-floor discharge; grep-before-Lean skipped under context pressure
+
+**What happened:** In cont.14 I wrote `LRCMomentFloorDischarge.lean` discharging `hsize`
+(`clusterSize_shapeOf_le`) and re-exporting a five-parameter moment-floor assembly. In cont.15,
+finally grepping before the NEXT leg, I found `LRCMomentFloorConcrete.lean` (opus-S190, hours
+earlier) already contained an identical `clusterSize_shapeOf_le`, the discharged `hbonf`
+(`bonferroni_concrete`), concrete `nuShapeConcrete`/`measGPConcrete`, and a STRICTLY BETTER
+four-parameter terminal assembly `lrc14_from_momentfloor_concrete {hMoment, hB, hsmall,
+hpartA}`. My file was removed (nothing imported it beyond the root; root import dropped).
+
+**Root cause:** the MISTAKE-131 lesson (grep `TournamentH7/*.lean` for the statement shape
+BEFORE writing Lean) was skipped in cont.14 — I grepped for *witnessG2 definitions* but not for
+*existing discharges*, under end-of-context time pressure. The stale docstring in
+LRCWitnessMomentFloor ("opaque … cannot be a theorem") reinforced the false impression that no
+discharge existed; I flagged the stale doc in the same session yet did not draw the inference
+that a discharge file likely already existed.
+
+**Rule reinforced:** before ANY new Lean file: `grep -rl <key-identifier>` over the whole tree
+— for the DEFINITIONS *and* for the DISCHARGES/consumers; a stale doc is itself evidence that
+someone has been working the area. Context pressure is exactly when the rule matters most.
