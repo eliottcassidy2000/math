@@ -1,0 +1,15 @@
+====================================================================================================
+RESIDUAL-CLASS AUDIT: covering sets vs ALL proved realization instruments
+====================================================================================================
+adversarial cap 150: min #instruments firing = 2  S=[9, 15, 43, 52, 63, 70, 77, 88, 96, 99, 130, 139, 149]  fired=['I6-certs', 'I3-composed']
+adversarial cap 500: min #instruments firing = 2  S=[13, 51, 67, 140, 159, 209, 210, 213, 233, 274, 290, 336, 495]  fired=['I6-certs', 'I3-composed']
+
+AUDITED 849 covering sets.  Instrument coverage:
+  I1-pure: fired on 376/849 = 44.3%
+  I2-coarse: fired on 0/849 = 0.0%
+  I5-detuned: fired on 5/849 = 0.6%
+  I6-certs: fired on 849/849 = 100.0%
+  I3-composed: fired on 849/849 = 100.0%
+RESIDUAL (all instruments fail): 0
+
+Done.
