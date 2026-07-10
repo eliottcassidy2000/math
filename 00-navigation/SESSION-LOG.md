@@ -1,3 +1,27 @@
+## kind-pasteur-2026-07-09-S126 -- MATERIALIZED the E3-side Freiman-stability ladder in Lean (LRCSchurPeel.lean, sorry-free, 8476 jobs green): the whole ladder = ONE peeling recursion. Plus the honest finding: the quantitative capstone dist<=deficit is FALSE for k<=4, holds k>=5 -- the SAME threshold as opus's burden axis.
+
+Prompt (owner): take the E3-side stability rung, spend a long session getting the whole ladder to materialize.
+
+THE KEY RECURSION (peel the maximum m): E3 S = E3(S.erase m) + repCount S m, because a Schur pair (a,b) with a+b in S can never involve m (a+b>max => outside S), so removing m loses EXACTLY the pairs summing to m. repCount S m := #{(a,b) in S^2 : a+b=m}. With repCount<=|S|-1 [(a,b)->a injects into S.erase m] this gives the deficit recursion deficit S + repCount = deficit(S.erase m) + (|S|-1), and every downstream fact is an omega away.
+
+BUILT (LRCSchurPeel.lean, all sorry-free, namespace LRCSchurRigidity):
+- Rung A schurCount_erase_max: E3 S = E3(S.erase m) + repCount S m (disjoint-union split of the Schur pairs by sum=m).
+- Rung B repCount_le: repCount S m <= |S|-1 (card_le_card_of_injOn, fst-projection).
+- deficit_erase_max: deficit S + repCount = deficit(erase) + (|S|-1); deficit_erase_le (monotone); peelCost_le_deficit ((|S|-1)-repCount <= deficit).
+- CAPSTONE deficit_eq_totalPeelCost: deficit S = totalPeelCost S -- the deficit is EXACTLY the sum of per-peel costs down the max-chain (strong induction on |S| + WF-recursive totalPeelCost def). The whole ladder as one equality.
+- deficit_eq_zero_iff_dilated (base = my S121 rigidity via the accumulation).
+- repCount_max_eq_iff (full-peel <=> reflection symmetry a->m-a): a peel costs 0 iff S below max is closed under a->m-a. Corollary: dilated <=> reflection-symmetric at EVERY peel.
+
+THE HONEST CAPSTONE (HYP-5852, PARTIALLY-TRUE): dist_to_dilated S <= deficit S (make S dilated by changing <= deficit elements) is Freiman-stability and is FALSE for k<=4: witness {1,4,5} (deficit 1, dist 2, E3=2). HOLDS k=5,6 exhaustive to N=5k (593775 sets, 0 fail); open general k>=5. THE k>=5 THRESHOLD COINCIDES EXACTLY with opus ap_of_min_burden (false k<=4, MISTAKE-133): the two Freiman axes (E3/anchored Schur, burden/translation-invariant restrictedSum) fail on the same small sets for the same accidental-additive-structure reason -- a single threshold wearing two costumes. The induction fails precisely because a full peel gives only a REFLECTION symmetry (repCount_max_eq_iff), which need not align with the best interval below -- that misalignment IS the irreducible Freiman content. Did NOT prove it (correctly -- it is false at small k).
+
+VERIFIED numerically (lrc14_e3_peel_ladder_kps_S126.py/.out): all 8 PROVEN theorems hold 100% over every k-set to k=7; capstone confirmed false k<=4, true k=5,6.
+
+STATE PULLED: opus-S195/196/197 = burden-axis AP step FULLY Lean (ap_of_min_burden + finset_min_burden_isAP + thm676iv_seven_isAP); klein-S226 signed program PINNED to one hyperbola-counting lemma (t2 mult-pair-correlation), program complete/handed off; mac-mini LEM-018/020/021 exhaustion + parity/depth-4 dispatch; monad THM-682 ladder TERMINATES at B<=31 (exhausted range), B>=32 core proved. My E3 peel ladder = complementary structural entry, no collision (uniquely mine).
+
+Endgame unchanged: LRC(14) = [monad grand assembly + residual hdiv/hcoarse] + [my lrc14_from_B5/from_liveness reductions] + [SOLE a-priori supply via Freiman ladder (burden = opus/mac-mini, E3 = mine, top rungs done both axes) OR klein signed cancellation (1 lemma)]. My LRC Lean ~40 nodes, chain S114..S126.
+
+NEXT: the quantitative Freiman-stability rung (same on both axes) is the sole remaining piece -- mac-mini exhaustion (operational) OR klein hyperbola lemma (analytic). E3-axis skeleton + exact top now Lean-complete; if anyone wants the k>=5 capstone proved it needs genuine Freiman-stability (not the peel induction). FILES: LRCSchurPeel.lean, lrc14_e3_peel_ladder_kps_S126.py/.out, reflection the-two-axes-share-a-threshold-e3-peel-ladder-kps-S126.
+
 ## opus-2026-07-09-S197 -- CITED finset_min_burden_isAP in the descent-burden theorem's Lean: thm676iv_seven_isAP (kernel-pure) formalizes THM-676(iv)'s hard direction (burden 11 => 7-class is an AP). Fixed stale THM-675->676 refs; canon notes.
 
 Prompt (owner): cite finset_min_burden_isAP in THM-675's Lean.

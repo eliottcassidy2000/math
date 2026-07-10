@@ -1,0 +1,59 @@
+=== E3-side peel ladder: Lean-theorem claims + empirical capstone ===
+(all sets of positive integers, 0 not in S)
+
+k=3 (   84 sets):
+  [PROVEN] Rung A  E3 peel            OK  84/84
+  [PROVEN] Rung B  repCount<=k-1       OK  84/84
+  [PROVEN] deficit peel recursion      OK  84/84
+  [PROVEN] deficit monotone (peel)     OK  84/84
+  [PROVEN] peelCost <= deficit         OK  84/84
+  [PROVEN] CAPSTONE deficit=totalPeel  OK  84/84
+  [PROVEN] full-peel <=> reflection    OK  84/84
+  [PROVEN] base deficit=0 <=> dilated  OK  84/84
+  [EMPIR ] capstone dist <= deficit    FAIL 74/84
+k=4 (  330 sets):
+  [PROVEN] Rung A  E3 peel            OK  330/330
+  [PROVEN] Rung B  repCount<=k-1       OK  330/330
+  [PROVEN] deficit peel recursion      OK  330/330
+  [PROVEN] deficit monotone (peel)     OK  330/330
+  [PROVEN] peelCost <= deficit         OK  330/330
+  [PROVEN] CAPSTONE deficit=totalPeel  OK  330/330
+  [PROVEN] full-peel <=> reflection    OK  330/330
+  [PROVEN] base deficit=0 <=> dilated  OK  330/330
+  [EMPIR ] capstone dist <= deficit    FAIL 322/330
+k=5 ( 1287 sets):
+  [PROVEN] Rung A  E3 peel            OK  1287/1287
+  [PROVEN] Rung B  repCount<=k-1       OK  1287/1287
+  [PROVEN] deficit peel recursion      OK  1287/1287
+  [PROVEN] deficit monotone (peel)     OK  1287/1287
+  [PROVEN] peelCost <= deficit         OK  1287/1287
+  [PROVEN] CAPSTONE deficit=totalPeel  OK  1287/1287
+  [PROVEN] full-peel <=> reflection    OK  1287/1287
+  [PROVEN] base deficit=0 <=> dilated  OK  1287/1287
+  [EMPIR ] capstone dist <= deficit    OK  1287/1287
+k=6 ( 5005 sets):
+  [PROVEN] Rung A  E3 peel            OK  5005/5005
+  [PROVEN] Rung B  repCount<=k-1       OK  5005/5005
+  [PROVEN] deficit peel recursion      OK  5005/5005
+  [PROVEN] deficit monotone (peel)     OK  5005/5005
+  [PROVEN] peelCost <= deficit         OK  5005/5005
+  [PROVEN] CAPSTONE deficit=totalPeel  OK  5005/5005
+  [PROVEN] full-peel <=> reflection    OK  5005/5005
+  [PROVEN] base deficit=0 <=> dilated  OK  5005/5005
+  [EMPIR ] capstone dist <= deficit    OK  5005/5005
+k=7 (19448 sets):
+  [PROVEN] Rung A  E3 peel            OK  19448/19448
+  [PROVEN] Rung B  repCount<=k-1       OK  19448/19448
+  [PROVEN] deficit peel recursion      OK  19448/19448
+  [PROVEN] deficit monotone (peel)     OK  19448/19448
+  [PROVEN] peelCost <= deficit         OK  19448/19448
+  [PROVEN] CAPSTONE deficit=totalPeel  OK  19448/19448
+  [PROVEN] full-peel <=> reflection    OK  19448/19448
+  [PROVEN] base deficit=0 <=> dilated  OK  19448/19448
+  [EMPIR ] capstone dist <= deficit    OK  19448/19448
+
+=== corollary: (all peels full) <=> dilated ===
+  k=3: OK  56/56
+  k=4: OK  330/330
+  k=5: OK  2002/2002
+  k=6: OK  12376/12376

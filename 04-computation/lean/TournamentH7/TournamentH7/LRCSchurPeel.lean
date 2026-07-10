@@ -13,10 +13,18 @@ the *only* Schur pairs lost when `m` leaves are those **summing to** `m`.  With 
 
 so `deficit` is monotone under peeling (`deficit_erase_le`), the **peel cost** `(|S|-1) − repCount S m`
 is `≥ 0` and bounded by the total deficit (`peelCost_le_deficit`), and `deficit S = 0 ⟺ dilated`
-(`deficit_eq_zero_iff_dilated`).  These are the rungs of the E3-side Freiman-stability ladder whose top
-(`deficit 0`) is the dilated-interval rigidity `schurCount_eq_choose_iff_dilated`, and whose empirical
-capstone `dist_to_dilated S ≤ deficit S` (verified exhaustively, see the S126 note) sits on this skeleton:
-the total deficit is the sum of the per-peel costs, so a small deficit means few deficient peels.
+(`deficit_eq_zero_iff_dilated`).  The whole ladder assembles as `deficit S = totalPeelCost S`
+(`deficit_eq_totalPeelCost`): the deficit is exactly the sum of the per-peel costs, so a small deficit
+means few deficient peels down the max-peeling chain.  Its top (`deficit 0`) is the dilated-interval
+rigidity `schurCount_eq_choose_iff_dilated`, and a full peel is a local reflection symmetry
+(`repCount_max_eq_iff`).
+
+The *quantitative* capstone `dist_to_dilated S ≤ deficit S` (S can be made a dilated interval by changing
+`≤ deficit` elements) is a Freiman-stability statement that is **NOT proved here** — and is in fact FALSE
+for `|S| ≤ 4` (e.g. `S = {1,4,5}`: deficit `1`, distance `2`), holding only for `|S| ≥ 5` (verified
+exhaustively to `N = 5k`, 0 failures).  That `|S| ≥ 5` threshold coincides exactly with the burden axis's
+`LRCFreimanAP.ap_of_min_burden` (false for `|S| ≤ 4`, MISTAKE-133): both stability statements fail on
+small sets for the same accidental-additive-structure reason.  For LRC(14) the relevant regime is `k=13`.
 
 The E3 axis (`repCount`/`E₃`, anchored at the origin: Schur incidences `a+b=c`) is the companion of the
 burden axis (opus's translation-invariant `restrictedSum`); both feed THM-681's `W₀ > 0.08` branch.
@@ -104,6 +112,56 @@ theorem repCount_le {S : Finset ℕ} (h0 : 0 ∉ S) {m : ℕ} (hmS : m ∈ S) :
     simp only [Prod.mk.injEq]
     exact ⟨hac, by omega⟩
 
+/-- **Full-peel characterization.**  The maximum `m` is *fully represented* (`repCount = |S|-1`, so the
+peel cost is `0`) **iff** `S` below `m` is closed under the reflection `a ↦ m - a`: every `a ∈ S` with
+`a ≠ m` has its complement `m - a ∈ S`.  This is the local reflection symmetry whose failure at some peel
+is exactly what a positive deficit records. -/
+theorem repCount_max_eq_iff {S : Finset ℕ} (h0 : 0 ∉ S) {m : ℕ} (hmS : m ∈ S)
+    (hmax : ∀ x ∈ S, x ≤ m) :
+    repCount S m = S.card - 1 ↔ ∀ a ∈ S, a ≠ m → m - a ∈ S := by
+  set F := (S ×ˢ S).filter (fun p => p.1 + p.2 = m) with hF
+  have himg : F.image (fun p => p.1) ⊆ S.erase m := by
+    intro x hx
+    rw [Finset.mem_image] at hx
+    obtain ⟨⟨a, b⟩, hp, rfl⟩ := hx
+    rw [hF, Finset.mem_filter, Finset.mem_product] at hp
+    obtain ⟨⟨ha, hb⟩, hab⟩ := hp
+    have hb0 : 0 < b := Nat.pos_of_ne_zero (fun h => h0 (h ▸ hb))
+    exact Finset.mem_erase.mpr ⟨by omega, ha⟩
+  have hinj : Set.InjOn (fun p => p.1) (F : Set (ℕ × ℕ)) := by
+    rintro ⟨a, b⟩ hp ⟨c, d⟩ hq hpq
+    simp only [hF, Finset.mem_coe, Finset.mem_filter, Finset.mem_product] at hp hq
+    obtain ⟨_, hab⟩ := hp; obtain ⟨_, hcd⟩ := hq
+    have hac : a = c := hpq
+    simp only [Prod.mk.injEq]; exact ⟨hac, by omega⟩
+  have hcardimg : (F.image (fun p => p.1)).card = repCount S m := by
+    rw [repCount, ← hF, Finset.card_image_of_injOn hinj]
+  rw [← Finset.card_erase_of_mem hmS]
+  constructor
+  · intro hcard a haS hane
+    have heq : F.image (fun p => p.1) = S.erase m :=
+      Finset.eq_of_subset_of_card_le himg (by rw [hcardimg]; omega)
+    have hain : a ∈ F.image (fun p => p.1) := by rw [heq]; exact Finset.mem_erase.mpr ⟨hane, haS⟩
+    rw [Finset.mem_image] at hain
+    obtain ⟨⟨x, y⟩, hp, hxa⟩ := hain
+    rw [hF, Finset.mem_filter, Finset.mem_product] at hp
+    obtain ⟨⟨_, hy⟩, hxy⟩ := hp
+    have hxa' : x = a := hxa
+    have hya : m - a = y := by omega
+    rw [hya]; exact hy
+  · intro hclosed
+    have hsup : S.erase m ⊆ F.image (fun p => p.1) := by
+      intro a ha
+      rw [Finset.mem_erase] at ha
+      obtain ⟨hane, haS⟩ := ha
+      have hma : m - a ∈ S := hclosed a haS hane
+      have haM : a ≤ m := hmax a haS
+      rw [Finset.mem_image]
+      refine ⟨(a, m - a), ?_, rfl⟩
+      rw [hF, Finset.mem_filter, Finset.mem_product]
+      exact ⟨⟨haS, hma⟩, by omega⟩
+    rw [← hcardimg, Finset.Subset.antisymm himg hsup]
+
 /-- Pascal step `C(n+1,2) = C(n,2) + n`, robust against numeral matching. -/
 private lemma choose_two_succ (n : ℕ) : (n + 1).choose 2 = n.choose 2 + n := by
   show (n + 1).choose (1 + 1) = n.choose (1 + 1) + n
@@ -151,6 +209,41 @@ theorem deficit_eq_zero_iff_dilated (S : Finset ℕ) (h0 : 0 ∉ S) (hne : S.Non
   unfold deficit
   have := E3_le_choose S h0
   omega
+
+/-- **The total peel cost** — the sum of the per-peel deficiencies `(|T|-1) − repCount T (max T)` down
+the maximum-peeling chain `S ⊃ S.erase (max) ⊃ …`. -/
+def totalPeelCost (S : Finset ℕ) : ℕ :=
+  if h : S.Nonempty then
+    (S.card - 1 - repCount S (S.max' h)) + totalPeelCost (S.erase (S.max' h))
+  else 0
+termination_by S.card
+decreasing_by exact Finset.card_erase_lt_of_mem (S.max'_mem h)
+
+/-- **The E3-stability ladder, assembled — `deficit S = totalPeelCost S`.**  The deficit is exactly the
+accumulated peel cost down the maximum-peeling chain.  Each rung's cost `(|T|-1) − repCount T (max)` is
+`≥ 0` (`repCount_le`) and `= 0` iff that peel is *full* (the max is fully represented); so `deficit = 0
+⟺` every peel is full `⟺` dilated, and — the quantitative content of the ladder — a small deficit means
+few deficient peels down the chain.  This is the E3-axis analogue of accumulating the burden along
+opus's `restrictedSum` chain. -/
+theorem deficit_eq_totalPeelCost : ∀ (S : Finset ℕ), 0 ∉ S → deficit S = totalPeelCost S := by
+  intro S
+  induction S using Finset.strongInductionOn with
+  | _ S ih =>
+    intro h0
+    rw [totalPeelCost]
+    split
+    · rename_i h
+      have hmem := S.max'_mem h
+      have hmax : ∀ x ∈ S, x ≤ S.max' h := fun x hx => S.le_max' x hx
+      have hrec := ih (S.erase (S.max' h)) (Finset.erase_ssubset hmem)
+        (fun hh => h0 (Finset.mem_of_mem_erase hh))
+      have hpeel := deficit_erase_max h0 hmem hmax
+      have hrep := repCount_le h0 hmem
+      rw [← hrec]; omega
+    · rename_i h
+      rw [Finset.not_nonempty_iff_eq_empty] at h
+      subst h
+      simp [deficit, E3]
 
 /-! ### Convenience wrappers anchored at the actual maximum `S.max' hne`. -/
 
