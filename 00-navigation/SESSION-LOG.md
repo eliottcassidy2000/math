@@ -1,3 +1,15 @@
+## boxeph-2026-07-09-S12 -- HYP-5853 LEAN LAYER 1: LRCChainAnchor.lean kernel-pure (the 1/3 chain anchor: W0 = 12 outright-lonely CONSTRUCTIVE; exists-t form for dispatch consumers) + the W0 = 11 measure-layer handoff
+
+Prompt (owner): formalize the W0 >= 11 theorem and mu_L certificates; other high-leverage tasks.
+
+SCOPE DECISION (budget-honest): the full mu_L certificate layer is a verified-interval-arithmetic project (volumes of rational interval unions under the doubling map); the right first layer is the CONSTRUCTIVE core, which needs no measure theory at all: t = 1/(3a) clears every chain element a*2^e with clearance exactly 1/3 (3 never divides 2^e). DELIVERED (LRCChainAnchor.lean, kernel-pure, root-wired, one fix cycle): two_pow_third_clears; lonely_of_pow_two_ratios (any 13-tuple inside one geometric chain is Lonely 14 at 1/(3a) -- HYP-5853's W0 = 12 case, constructive); exists_lonely_of_chain (the exists-form the sieve/dispatch layers consume). Fix forensics: Prime (3 : Z) not (3 : Z).Prime; exact_mod_cast handles |.| casts directly (drop intermediate Int.cast_abs step); the field_simp-may-close guard again.
+
+THE W0 = 11 ASSEMBLY (handoff, all pieces exist or are one-page): mu_2 = 11/14 with pair-safe set = [1/14,13/28] u [15/28,13/14] (case split at y = 1/2, derivation in the file header); dilation invariance = LRCGoodDilation (opus, kernel-pure); 2-set Bonferroni = measure arithmetic; positive-volume => nonempty = LRCDensityFloorCert (kps). Chain-Bonferroni for TWO chains: safe >= 1 - (1-mu_L1) - (1-mu_L2) > 0 for all L1 + L2 = 13 (worst (7,6): 0.9777 < 1) -- needs mu_L identities up to L = 12; each is a decide-shaped rational interval-list identity.
+
+INTEGRATED: klein-S228's LRCParityDemo (the parity dispatch operational end-to-end, decide-only); death-star-S9 LEM-022 (t2 hyperbola, constant 6). The three existence mechanisms all now have Lean presence: metric (GridPort), parity (ParityPairing + ParityDemo + Depth4Dispatch), and the chain anchor joins the dispatch family (1/13, 8/17, 1/2, 1/8, 1/3).
+
+---
+
 ## boxeph-2026-07-09-S11 -- THE FINAL-RUNG MATH (HYP-5853): doubling chains are RLL SHIFT SETS -- exact nested measures, the W0 >= 11 outright-lonely theorem, and the drop-in Bonferroni upgrade (+0.0714 per doubling pair in EVERY existing budget)
 
 Prompt (owner): work the math of the final-rung obstruction; push/pull regularly; generate many new angles.
