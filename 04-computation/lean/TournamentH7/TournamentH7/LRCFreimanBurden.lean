@@ -19,10 +19,12 @@ stability check on majority-parity 7-classes with small **descent burden** `|A +
 * `restrictedSum_eq_freimanChain` — the **Freiman-equality core**: at the MINIMAL burden
   `|A +̂ A| = 2|A| − 3`, the restricted sumset is EXACTLY the min/max chain `freimanChain`.
 
-The equality core is the structural entry point for the full `burden = 11 ⟹ A is an AP`
-characterization (the AP step is the row-bijection + reflection argument; blueprint in the opus-S189
-reflection). The near-AP stability half of the finite check (burden ∈ {11,12} ⟹ opus-S187's 5 explicit
-shapes; burden = 13 ⟹ 2-D GAPs, routed through the density floor) sits above this core.
+The equality core is the structural entry point for the full `burden = 2n−3 ⟹ A is an AP`
+characterization, **now PROVED in `LRCFreimanAP.ap_of_min_burden` (opus-S195)** — but note it holds only
+for **`n ≥ 5`** (MISTAKE-133: for `n ≤ 4`, e.g. `{0,1,3,4}`, the minimal restricted sumset is achieved
+by non-AP "bi-arithmetic" sets; the S189 blueprint overstated it as general). For 7-classes `n = 7 ≥ 5`
+so the step applies. The near-AP stability half of the finite check (burden ∈ {11,12} ⟹ opus-S187's 5
+explicit shapes; burden = 13 ⟹ 2-D GAPs, routed through the density floor) sits above this core.
 
 Kernel-pure: no `sorry`, no `native_decide`. Axioms: `[propext, Classical.choice, Quot.sound]`.
 -/
@@ -124,6 +126,8 @@ from the reflection `aᵢ ↦ −a_{k-1-i}` (blueprint: opus-S189 reflection). -
 theorem restrictedSum_eq_freimanChain (s : Finset ℤ) (hk : 2 ≤ s.card)
     (hcard : (restrictedSum s).card = 2 * s.card - 3) :
     restrictedSum s = freimanChain s (card_pos.mp (by omega)) := by
+  -- The chain ⟹ AP conclusion is proved (for `card ≥ 5`) in `LRCFreimanAP.ap_of_min_burden`,
+  -- via a cleaner interleaved-chain route than the S189 row-bijection+reflection blueprint.
   have hne : s.Nonempty := card_pos.mp (by omega)
   refine (eq_of_subset_of_card_le (freimanChain_subset s hne) ?_).symm
   rw [freimanChain_card s hne hk, hcard]

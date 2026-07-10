@@ -1,0 +1,15 @@
+Is (burden = 2n-3) => AP?  Enumerate primitive n-sets with minimal restricted sumset:
+n=3: burden-minimal(2n-3=3) primitive sets = 45; NON-AP among them = 44
+     NON-AP counterexample: (0, 1, 3)  diffs=[1, 2]
+     NON-AP counterexample: (0, 1, 4)  diffs=[1, 3]
+     NON-AP counterexample: (0, 1, 5)  diffs=[1, 4]
+     NON-AP counterexample: (0, 1, 6)  diffs=[1, 5]
+n=4: burden-minimal(2n-3=5) primitive sets = 39; NON-AP among them = 38
+     NON-AP counterexample: (0, 1, 3, 4)  diffs=[1, 2, 1]
+     NON-AP counterexample: (0, 1, 4, 5)  diffs=[1, 3, 1]
+     NON-AP counterexample: (0, 1, 5, 6)  diffs=[1, 4, 1]
+     NON-AP counterexample: (0, 1, 6, 7)  diffs=[1, 5, 1]
+n=5: burden-minimal(2n-3=7) primitive sets = 1; NON-AP among them = 0
+n=6: burden-minimal(2n-3=9) primitive sets = 1; NON-AP among them = 0
+n=7: burden-minimal(2n-3=11) primitive sets = 1; NON-AP among them = 0
+n=8: burden-minimal(2n-3=13) primitive sets = 1; NON-AP among them = 0

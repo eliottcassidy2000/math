@@ -1,3 +1,18 @@
+## opus-2026-07-09-S195 -- PROVED the FREIMAN AP STEP in Lean (LRCFreimanAP.ap_of_min_burden, kernel-pure): minimal restricted sumset 2n-3 => AP, FOR n>=5. Caught + recorded that the step is FALSE for n<=4 (MISTAKE-133); found a CLEANER proof (interleaved chain, no reflection)
+
+Prompt (owner): commit a full session to the AP step.
+
+VERIFIED FIRST (per "check small cases before generalizing"): the opus-S189 blueprint OVERSTATED generality. Census (lrc14_ap_step_verify_opus_S195.out): primitive n-sets with |A+^A|=2n-3, non-AP count = 44,38,0,0,0,0 for n=3..8. So burden=2n-3 => AP holds IFF n>=5; for n<=4 bi-arithmetic non-AP minima exist (e.g. {0,1,3,4}, diffs 1,2,1, |A+^A|=5=2*4-3). Recorded MISTAKE-133. (For LRC this costs nothing: THM-675 uses 7-classes, n=7>=5.)
+
+PROVED (LRCFreimanAP.lean, kernel-pure [propext,Classical.choice,Quot.sound], no native_decide, root-wired):
+- ap_of_min_burden : StrictMono a + |Rset a n|=2n-3 + n>=5 => forall i, a(i+1)-a i = a1-a0 (AP).
+- Route (cleaner than the S189 row-bijection+reflection blueprint -- the verification revealed it): the 2n-3 sums s_i=a_i+a_{i+1}, t_i=a_i+a_{i+2} interleave strictly => Rset = IC (Rset_eq_IC). Step 1 diff_two: a_i+a_{i+3} in (t_i,t_{i+1}) => = s_{i+1} => d_{i+2}=d_i. Step 2 sum04 (needs n>=5): a_0+a_4 in IC, order rules out all but t_1 => a0+a4=a1+a3 => d0=d1. Assembly: strong induction => all diffs equal.
+- Each step = membership + strict-mono + omega; compiled 1st/2nd try. The blueprint's reflection (painful N-reindexing) AVOIDED.
+
+Feeds kps THM-681 Freiman ladder (S124: "E3 rigidity top, mac-mini/opus rungs") + THM-675. Updated LRCFreimanBurden docstrings (AP step proved, n>=5, cleaner route). REMAINING (flagged, not attempted -- avoid risking the completed core): the Finset bridge (wrap the indexed form for a Finset via sorted orderEmbOfFin extended StrictMono-ly, Rset=restrictedSum) => directly citable by THM-675. Files: LRCFreimanAP.lean, lrc14_ap_step_verify_opus_S195.out, MISTAKE-133, reflection. -> THM-675, THM-681, opus-S189(corrected)/S187/S181, HYP-5682, LEM-015, klein-S211.
+
+---
+
 ## klein-2026-07-09-S224 -- THE MULTIPLICATIVE FRAME (the Redei mod-2^k directive lands): THE DIAGONAL-ONLY SUPPRESSION LAW -- at prime rulers, neither additive NOR multiplicative coherence alone suppresses LM (both sit ABOVE iid: 1.22/1.31); only their INTERSECTION (the dilation family) suppresses (0.22) -- the character-sum signed program is concrete, with its killer family quarantined by the existing ladder
 
 Prompt (owner): run the Redei parity mod 2^k signed method.

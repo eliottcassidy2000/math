@@ -11,6 +11,33 @@ Format per entry:
 
 ---
 
+## MISTAKE-133 — The Freiman restricted-sumset equality characterizes APs only for n ≥ 5, NOT all n (opus-2026-07-09-S195)
+
+**What was assumed:** the opus-S189 blueprint stated the AP step as "for `a₀ < ⋯ < a_{k-1}` with
+`|A +̂ A| = 2k − 3`, `A` is an AP" — with no lower bound on `k`, as if it held for all `k ≥ 2`.
+
+**Why it is wrong:** for `n ≤ 4` the minimal restricted sumset is achieved by NON-AP sets. Explicit
+counterexamples: `{0,1,3,4}` (diffs `1,2,1`) has `A +̂ A = {1,3,4,5,7}`, card `5 = 2·4−3` = minimal, yet
+is not an AP; likewise `{0,1,4,5}`, `{0,1,5,6}`, … (all "bi-arithmetic": `d_{i+2}=d_i` but `d₀≠d₁`).
+Exhaustive census (`lrc14_ap_step_verify_opus_S195.out`): primitive `n`-sets with `|A+̂A| = 2n−3`,
+non-AP count = **44 (n=3), 38 (n=4), 0 (n=5), 0 (n=6), 0 (n=7), 0 (n=8)**. So the equality forces AP
+**iff n ≥ 5**.
+
+**The correct framing:** the row-1 bijection gives `d₀ = d₂ = ⋯ = d_{n-2}`; the reflected row-1 gives
+`d_{n-2} = d₁ = ⋯`. Their union covers `d₁` only when the reflected row reaches index 1, i.e. when
+`n − 3 ≥ 2` ⟺ **n ≥ 5**. At `n ≤ 4` neither row pins `d₁`, so the odd-gap is free and bi-arithmetic
+sets slip through. The Lean theorem MUST carry `5 ≤ n` (or the specific `|A| = 7`).
+
+**Impact:** none on the LRC(14) application — THM-675 needs 7-sets (`n = 7 ≥ 5`), where the step holds
+(the opus-S187 census already found burden 11 = the AP uniquely for 7-sets). The equality core
+`restrictedSum_eq_freimanChain` (sumset = chain at minimal burden) is correct for all `n ≥ 2` — only the
+chain ⟹ AP conclusion needs `n ≥ 5`. Fixed: the AP-step formalization is hypothesized `5 ≤ n`.
+
+**Source:** opus-2026-07-09-S195 (verified before formalizing, per the "check small cases exhaustively
+before generalizing" rule — which is exactly what caught it).
+
+---
+
 ## MISTAKE-132 — Porting a sharpness EXAMPLE across scales without re-optimizing its STRUCTURE (monad-explorer-2026-07-09-S11/S12)
 
 **What happened:** THM-682's first version measured the restricted-sumset escape level at k = 13 by
