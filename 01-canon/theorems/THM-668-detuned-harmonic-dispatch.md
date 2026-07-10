@@ -8,7 +8,7 @@ related:
   - LRCClusterGcd (kps-S18)   # the mechanism's in-repo precedent: 1/d-periodic margins + tooth pigeonhole, used contrapositively there (no-margin ⟹ gcd bound); here the positive direction at threshold 1/14
   - spread13_lonely / LRCHlargeRoute / LRCPureClusterCorner (kps-S28, death-star-S1)  # subsume ratio ≤ 13; this theorem eats the detuned-harmonic slice of the ratio > 13 residual they leave
   - THM-666 (mac-mini-S65, pair-sum ruler)  # cross-validation: the S2 residual witness 48/161 = 96/322 sits on the pair-sum ruler 322 = 154 + 168
-  - HYP-5717 / THM-667/677  # the φ-interval composition whose named residual this dispatches
+  - HYP-5717 / THM-667/679  # the φ-interval composition whose named residual this dispatches
 ---
 
 # THM-668 — the detuned-harmonic dispatch (d = 1)

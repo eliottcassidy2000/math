@@ -5,7 +5,7 @@
 ## The object
 
 The final open core of LRC(14), as named exactly by the grand-assembly surface
-(THM-677 `ResidualObligation` v3): 13-families that are covering ∧ scale-gapped ∧
+(THM-679 `ResidualObligation` v3): 13-families that are covering ∧ scale-gapped ∧
 compressed ∧ distinct-|speeds| ∧ max ≥ 23 ∧ carrying no near-harmonic modulus ∧
 admitting no coarse decomposition. Every proved slice around it is machine-checked;
 the core itself is open.

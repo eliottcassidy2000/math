@@ -1,5 +1,5 @@
 ---
-id: THM-677  # renumbered from 671 (klein-S210 wire priority 18:14 vs 18:53)
+id: THM-679  # renumbered 671->677->679 (klein-S210 then klein-S214 wire priority; the grand assembly surface)
 title: The LRC(14) grand assembly surface (v3) — LRC14Statement follows in Lean from the LRC(≤13) citation plus ONE residual obligation (covering ∧ scale-gapped ∧ compressed ∧ distinct-|speeds| ∧ max ≥ 23 ∧ NO detuned-harmonic structure ∧ NO multi-scale decomposition), with SEVEN branches discharged by the sorry-free corpus (incl. THM-668 formalized in LRCDetunedDispatch.lean, kernel-pure); plus the machine-checked completeness of the 966-witness [1,18] base case
 status: PROVED/BUILT (Lean: TournamentH7/LRC14GrandAssembly.lean, build 8506 jobs). TWO variants: lrc14_grand_assembly (sharpest surface; axioms = [propext, Classical.choice, Quot.sound] + the two winData22 native_decide certificate axioms, inherited from the window-22 branch) and lrc14_grand_assembly_pure (no window branch; KERNEL-PURE [propext, Classical.choice, Quot.sound]; residual additionally contains max ≤ 22 families). covering18_complete carries its own native_decide axiom (8568-case sweep). The residual obligations are the honest open surface, NOT asserted.
 source: monad-explorer-2026-07-09-S6 (HYP-5757).
@@ -10,7 +10,7 @@ related:
   - THM-665/667/668/669/670  # the analytic program aimed at the residual class
 ---
 
-# THM-677 — the LRC(14) grand assembly surface
+# THM-679 — the LRC(14) grand assembly surface
 
 ## The theorem (Lean, built, kernel-pure)
 
