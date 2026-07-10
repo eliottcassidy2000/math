@@ -1,7 +1,7 @@
 ---
 id: THM-682
 title: The collision arm of the final rung closes — (a) THE COMMON-RESIDUE DISPATCH (new, unconditional): any covering primitive family whose 13 speeds share a residue class mod d ≥ 2 has M(v) ≥ 8/17 (all phases COINCIDE at τ = c/d, since covering+primitivity force every prime factor of d to be ≥ 17); (b) k=13 restricted-sumset stability B ≤ 24 ⟹ diam ≤ 13 (EXHAUSTIVE: exactly 5 normalized sets) extending to the ladder law diam ≤ B − 11 verified through B ≤ 28; (c) hence every core family has B ≥ 29 — collision multiplicity ≤ 49 — because B ≤ 28 forces AP-containment whose d ≥ 2 arm is common-residue-dispatched and whose d = 1 arm lands inside window-22; (d) the W₀-carrier lemma: support-2 global exact relations are DOUBLINGS ONLY, so the final rung narrows to the doubling-rich (≥ 3 proven / ≥ 6 measured) collision-light (B ≥ 29) even-rich corner — the 2-adic pressure direction — plus LEM-016-protocol slivers
-status: PROVED ((a) complete proof below, 5 lines, verified 400/400 on in-core affine-dilated families with EXACT clearance match; (b) t = 1 level exhaustive below cap with 3.5× margin (max diam 13 realized, cap 45) and the 2-block tail PROVED (B ≥ 31 > 24); ladder levels B ≤ 29 exhaustive below the DMAX = 90 cap; at every level the multi-block far-jump sliver (all gaps ≤ D/2, diam > cap) is FLAGGED per LEM-016 protocol — 3-block shapes are MEASURED at B ≥ 34; (c) follows from (a)+(b) for the proved range B ≤ 28 — the statement "B ≥ 29 for core families" is PROVED modulo the flagged sliver; the extension to B ≥ 33 (meeting window-22 exactly at diam 21) is CONJECTURED with the GAP sharpness ceiling MEASURED at B = 34; (d) the carrier classification is a one-line sign argument, machine-echoed; the doubling counts use proven line-weight bounds). Machine-verified throughout (companion .out).
+status: PROVED ((a) complete proof below, 5 lines, verified 400/400 on in-core affine-dilated families with EXACT clearance match; (b) t = 1 level exhaustive below cap with 3.5× margin (max diam 13 realized, cap 45) and the 2-block tail PROVED (B ≥ 31 > 24); ladder levels B ≤ 30 exhaustive below the DMAX = 90 cap; at every level the multi-block far-jump sliver (all gaps ≤ D/2, diam > cap) is FLAGGED per LEM-016 protocol — 3-block shapes are MEASURED at B ≥ 34; (c) follows from (a)+(b) for the proved range B ≤ 30 — the statement "B ≥ 31 for core families" is PROVED modulo the flagged sliver; the extension to B ≥ 33 (meeting window-22 exactly at diam 21) is CONJECTURED with the GAP sharpness ceiling MEASURED at B = 34; (d) the carrier classification is a one-line sign argument, machine-echoed; the doubling counts use proven line-weight bounds). Machine-verified throughout (companion .out).
 source: monad-explorer-2026-07-09-S11 (HYP-5817) — executing THM-681's final-rung handoff with kps/opus as the E3-ladder endpoints.
 depends_on:
   - THM-680   # the per-ruler floor whose off-line budget W₀ this narrows
@@ -48,10 +48,10 @@ dispatched, clearance exactly `1/2 − 1/(2d)` (companion Part A).
   diameter ≤ 13 (e.g. `{0, 2, 3, …, 13}`). DFS: 16 564 nodes; the budget forces every
   prefix within +1 of the classical `2s − 3` minimum, so the tree is tiny.
 - **The ladder law (exhaustive through B ≤ 28 below the cap):** `diam ≤ B − 11`,
-  tight at every level: (B, max diam) = (24, 13), (25, 14), (26, 15), (28, 17), (29, 18) — the B ≤ 29 level: 2 293 sets, 49.3M nodes (bitmask DFS).
+  tight at every level: (B, max diam) = (24, 13), (25, 14), (26, 15), (28, 17), (29, 18), (30, 19) — bitmask DFS; node growth SATURATES at the top (49.3M → 63.4M for B = 29 → 30: the budget prune tightens).
   Equivalently **`B ≥ diam + 11 = diam + (k − 2)`** on this range.
 - **Tail (PROVED):** any gap > D/2 splits `A` into blocks with disjoint sum ranges:
-  `B ≥ (2s − 3) + 12 + (2(13 − s) − 3) = 32` (singleton blocks ≥ 33) — so B ≤ 29 sets
+  `B ≥ (2s − 3) + 12 + (2(13 − s) − 3) = 32` (singleton blocks ≥ 33) — so B ≤ 30 sets
   have no gap > D/2, and 2-block configurations never enter the ladder range.
 - **Sliver (FLAGGED, LEM-016 protocol):** diam > 90 with all gaps ≤ D/2 and every
   prefix within the budget — not excluded by the DFS cap; the measured margin
@@ -63,19 +63,19 @@ dispatched, clearance exactly `1/2 − 1/(2d)` (companion Part A).
   GAP-shape core instance tested is fully ruler-live (23/23, 24/24, 19/19, 18/18 tall
   rulers) — the escapes are generic-side (THM-681) anyway.
 
-## (c) The collision-arm dispatch chain (PROVED for B ≤ 29)
+## (c) The collision-arm dispatch chain (PROVED for B ≤ 30)
 
 Let `v` be a core family (covering, primitive, gapped `v_max > 13·v_min`, distinct).
-If `B(v) ≤ 29`, then by (b) `v ⊂ {a, a + d, …, a + 18d}` for some `a ≥ 1, d ≥ 1`
-(AP-containment, 19 terms). Two arms:
+If `B(v) ≤ 30`, then by (b) `v ⊂ {a, a + d, …, a + 19d}` for some `a ≥ 1, d ≥ 1`
+(AP-containment, 20 terms). Two arms:
 
 - **d ≥ 2:** all speeds ≡ a (mod d) ⟹ the common-residue dispatch (a): `M(v) ≥ 8/17`.
-- **d = 1:** `v ⊂ [v_min, v_min + 18]`; gapped gives `13·v_min < v_max ≤ v_min + 18`,
-  so `12·v_min < 18`, forcing `v_min = 1` and `v ⊂ {1, …, 19}` — inside **window-22**
+- **d = 1:** `v ⊂ [v_min, v_min + 19]`; gapped gives `13·v_min < v_max ≤ v_min + 19`,
+  so `12·v_min < 19`, forcing `v_min = 1` and `v ⊂ {1, …, 20}` — inside **window-22**
   (`hwindow22`), dispatched.
 
-**Hence every core family satisfies `B(v) ≥ 30`** (modulo the flagged sliver): total
-collision multiplicity `≤ 78 − 30 = 48`. **Conjectured extension:** the ladder law
+**Hence every core family satisfies `B(v) ≥ 31`** (modulo the flagged sliver): total
+collision multiplicity `≤ 78 − 31 = 47`. **Conjectured extension:** the ladder law
 holds through `B ≤ 32` (diam ≤ 21 — meeting window-22 EXACTLY at `v ⊂ {1, …, 22}`),
 giving `B ≥ 33` and collisions ≤ 45; the boundary case `B = 33` (diam 22, `v ⊂ {1, …, 23}`,
 necessarily `1, 23 ∈ v`) is **VERIFIED in-session: all 8 361 covering boundary families
@@ -83,7 +83,7 @@ are lonely, worst witness modulus q = 27** — a trivially `native_decide`-able 
 B = 34 is the measured GAP ceiling. The middle-rung
 lemma handed to kps/opus: **`B ≥ D + 11` for gcd-normalized 13-sets of diameter
 D ≤ 21** — endpoints owned (kps E3-rigidity at the AP; opus freimanChain), verified
-exhaustively here through D ≤ 17.
+exhaustively here through D ≤ 19.
 
 ## (d) The W₀-carrier lemma (PROVED)
 
@@ -100,7 +100,7 @@ doublings** (e.g. `[22, 39, 42, 44, 45, 84, 88, 90, 168, 176, 180, 336, 352]`,
 ## Consequence: the final rung after THM-682
 
 THM-681's final rung `W₀ ∈ (0.08, ladder)` now requires SIMULTANEOUSLY:
-- **collision-light:** `B ≥ 30` proved (conj. ≥ 33) — the collision route to ruler
+- **collision-light:** `B ≥ 31` proved (conj. ≥ 33) — the collision route to ruler
   death is capped; and
 - **doubling-rich:** ≥ 3 (proven) / ≥ 6 (measured) doublings — even-rich, 2-adically
   coherent, pressed toward the g = 2 dispatches;
@@ -115,5 +115,5 @@ operate.
 400-family dispatch battery (clearance exact); Part B the t = 1 DFS (5 sets) + tail;
 Part C the GAP escape threshold (B = 34) + ruler-liveness of escape instances (all
 live); Part D the carrier + doubling census. Ladder extension runs (B ≤ 25, 26, 28 at
-DMAX = 90; bitmask B ≤ 29+) in the scratch ladder logged in the session letter and
+DMAX = 90; bitmask through B ≤ 30, B ≤ 31/32 in flight) in the scratch ladder logged in the session letter and
 `.out` addendum.

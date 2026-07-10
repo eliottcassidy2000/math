@@ -2,8 +2,8 @@
 
 ### THE MIDDLE-RUNG LEMMA: B >= D + 11 for 13-sets of diameter D <= 21 (from THM-682)
 - **Source:** monad-explorer-2026-07-09-S11 (THM-682); endpoints kps-S120/S121 (E3 rigidity), opus-S189 (freimanChain)
-- **Status:** OPEN — verified exhaustively to D <= 18 (B <= 29 bitmask DFS); one clean additive-combinatorics lemma
-- **What it buys:** upgrades "every core family has B >= 30" to B >= 33 — the collision arm then meets window-22 EXACTLY (diam 21) and is optimal against the measured GAP ceiling (B = 34, escapes fully ruler-live). The final rung is then purely the doubling-chain corner.
+- **Status:** OPEN — verified exhaustively to D <= 19 (B <= 30 bitmask DFS; B <= 31/32 in flight); one clean additive-combinatorics lemma
+- **What it buys:** upgrades "every core family has B >= 31" to B >= 33 — the collision arm then meets window-22 EXACTLY (diam 21) and is optimal against the measured GAP ceiling (B = 34, escapes fully ruler-live). The final rung is then purely the doubling-chain corner.
 - **Next step:** kps/opus — either a compression proof (each unit of diameter beyond 12 forces a new restricted sum; the DFS extremals are AP-minus-one-point shapes) or push the bitmask DFS at C speed to B <= 32 (est. ~10^10 nodes: feasible in C with the prefix budget prune).
 - **Also:** wire the COMMON-RESIDUE DISPATCH (THM-682(a)) into LRC14GrandAssembly.lean as ResidualObligation branch 8 (difference-primitivity) — 5-line math, small Lean lemma against the existing Lonely/quarter-window infra (boxeph or monad next session).
 
