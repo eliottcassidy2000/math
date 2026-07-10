@@ -48,10 +48,10 @@ dispatched, clearance exactly `1/2 − 1/(2d)` (companion Part A).
   diameter ≤ 13 (e.g. `{0, 2, 3, …, 13}`). DFS: 16 564 nodes; the budget forces every
   prefix within +1 of the classical `2s − 3` minimum, so the tree is tiny.
 - **The ladder law (exhaustive through B ≤ 28 below the cap):** `diam ≤ B − 11`,
-  tight at every level: (B, max diam) = (24, 13), (25, 14), (26, 15), (28, 17).
+  tight at every level: (B, max diam) = (24, 13), (25, 14), (26, 15), (28, 17), (29, 18) — the B ≤ 29 level: 2 293 sets, 49.3M nodes (bitmask DFS).
   Equivalently **`B ≥ diam + 11 = diam + (k − 2)`** on this range.
 - **Tail (PROVED):** any gap > D/2 splits `A` into blocks with disjoint sum ranges:
-  `B ≥ (2s − 3) + 12 + (2(13 − s) − 3) = 32` (singleton blocks ≥ 33) — so B ≤ 28 sets
+  `B ≥ (2s − 3) + 12 + (2(13 − s) − 3) = 32` (singleton blocks ≥ 33) — so B ≤ 29 sets
   have no gap > D/2, and 2-block configurations never enter the ladder range.
 - **Sliver (FLAGGED, LEM-016 protocol):** diam > 90 with all gaps ≤ D/2 and every
   prefix within the budget — not excluded by the DFS cap; the measured margin
@@ -63,19 +63,19 @@ dispatched, clearance exactly `1/2 − 1/(2d)` (companion Part A).
   GAP-shape core instance tested is fully ruler-live (23/23, 24/24, 19/19, 18/18 tall
   rulers) — the escapes are generic-side (THM-681) anyway.
 
-## (c) The collision-arm dispatch chain (PROVED for B ≤ 28)
+## (c) The collision-arm dispatch chain (PROVED for B ≤ 29)
 
 Let `v` be a core family (covering, primitive, gapped `v_max > 13·v_min`, distinct).
-If `B(v) ≤ 28`, then by (b) `v ⊂ {a, a + d, …, a + 17d}` for some `a ≥ 1, d ≥ 1`
-(AP-containment, 18 terms). Two arms:
+If `B(v) ≤ 29`, then by (b) `v ⊂ {a, a + d, …, a + 18d}` for some `a ≥ 1, d ≥ 1`
+(AP-containment, 19 terms). Two arms:
 
 - **d ≥ 2:** all speeds ≡ a (mod d) ⟹ the common-residue dispatch (a): `M(v) ≥ 8/17`.
-- **d = 1:** `v ⊂ [v_min, v_min + 17]`; gapped gives `13·v_min < v_max ≤ v_min + 17`,
-  so `12·v_min < 17`, forcing `v_min = 1` and `v ⊂ {1, …, 18}` — inside **window-22**
+- **d = 1:** `v ⊂ [v_min, v_min + 18]`; gapped gives `13·v_min < v_max ≤ v_min + 18`,
+  so `12·v_min < 18`, forcing `v_min = 1` and `v ⊂ {1, …, 19}` — inside **window-22**
   (`hwindow22`), dispatched.
 
-**Hence every core family satisfies `B(v) ≥ 29`** (modulo the flagged sliver): total
-collision multiplicity `≤ 78 − 29 = 49`. **Conjectured extension:** the ladder law
+**Hence every core family satisfies `B(v) ≥ 30`** (modulo the flagged sliver): total
+collision multiplicity `≤ 78 − 30 = 48`. **Conjectured extension:** the ladder law
 holds through `B ≤ 32` (diam ≤ 21 — meeting window-22 EXACTLY at `v ⊂ {1, …, 22}`),
 giving `B ≥ 33` and collisions ≤ 45; the boundary case `B = 33` (diam 22, `v ⊂ {1, …, 23}`,
 necessarily `1, 23 ∈ v`) is **VERIFIED in-session: all 8 361 covering boundary families
@@ -100,7 +100,7 @@ doublings** (e.g. `[22, 39, 42, 44, 45, 84, 88, 90, 168, 176, 180, 336, 352]`,
 ## Consequence: the final rung after THM-682
 
 THM-681's final rung `W₀ ∈ (0.08, ladder)` now requires SIMULTANEOUSLY:
-- **collision-light:** `B ≥ 29` proved (conj. ≥ 33) — the collision route to ruler
+- **collision-light:** `B ≥ 30` proved (conj. ≥ 33) — the collision route to ruler
   death is capped; and
 - **doubling-rich:** ≥ 3 (proven) / ≥ 6 (measured) doublings — even-rich, 2-adically
   coherent, pressed toward the g = 2 dispatches;

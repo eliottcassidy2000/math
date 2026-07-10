@@ -74,3 +74,4 @@ ADDENDUM 2 -- THE B = 33 BOUNDARY OBJECT: VERIFIED
   count: 8361; lonely-verified: 8361/8361; WORST WITNESS MODULUS q = 27
     (worst family (1,7,8,9,10,11,12,13,14,19,21,22,23))
   => the conjectured-extension boundary is a trivially native_decide-able verified object.
+  B<=29: 2293 sets, nodes 49281911, max diam 18, law B-11=18: HOLDS, 183.6s   [bitmask DFS]
