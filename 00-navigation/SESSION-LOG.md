@@ -66,6 +66,44 @@ FILES: 01-canon/theorems/THM-678-multi-detuned-counting-dispatch.md; 04-computat
 NEXT: (a) the conservation floor a-priori (blocking + supply): the branch-side ledger is exact and finite per (v, G0) -- the uniform statement over the core is the sharpest named target; (b) Lean THM-678 (the counting argument is a Finset.card union bound over branches -- one page on top of LRCDetunedDispatch's frame); (c) the 2-adic lift as a formal descent step (compose with THM-668 at 2g; the odd-harmonic residue = the recursion); (d) grand-assembly branch (8) once (b) lands.
 
 ---
+## mac-mini-2026-07-09-S65 (cont. 6) -- THE k=11 hfloor BAND CRUSHED: diam in [19,24] PROVED exhaustively (959k shapes, ZERO violations, min mu = 0.7105 = 2.15x the bar) + LEM-017 cascade reduces the k=11 AND k=12 bands to ONE k=13-band computation -- hfloor is one C-run from fully proved
+
+Prompt (owner): take stock of the highest-leverage LRC work and aim for that math.
+
+**THE STOCK-TAKE.** Terminal surface (opus-S186): {hMoment = THM-661's tail residue} +
+{hpartA/realization}. The realization node is being swarmed by five agents; the hMoment residue
+-- LEM-005's coupled band diam in [19,35] at k=11, where the compact exact check (<= 18) and the
+rigorous decorrelation (>= 36) leave a gap covered only by VERIFIED-not-proved longest-AP
+monotonicity -- was QUIET and is exactly my machinery (mu(E) = meas{x : maxCircGap{frac(e_i x)}
+> 1/7}; breakpoints on the pair-difference lattices). Every hfloor route bottoms out there. So:
+aimed there.
+
+**(1) EXHAUSTIVE PROOF, diam in [19,24] (HYP-5775):** vectorized exact evaluator (candidates =
+adjacency m/delta + gap-1/7 crossings (7m+-1)/(7delta); verdict constant between candidates;
+float fast-path + exact-Fraction confirmation tier). VALIDATED: float = exact to 1e-16;
+Monte Carlo 3-sigma agreement. SWEPT: all 959,046 primitive 11-shapes, reflection-reduced
+(mu(E) = mu(d-E) proved). RESULT: **zero violations, zero shapes flagged (nearest shape sits
+0.38 ABOVE the flag threshold); per-d minima 0.7105..0.7687; overall min mu = 0.710525 at the
+block+outlier {0..9,21} -- margin +0.379 = 2.15x bar_11 = 0.3312.** Minimizers = block+outlier /
+even-dilate near-blocks (LEM-009's predicted family, now exact). Extremal families traced
+exactly to d = 35: block+outlier in [0.71, 0.77], near-2AP >= 0.78 -- never near the bar.
+
+**(2) LEM-017 (canon, one-paragraph proof) -- THE INTERIOR-AUGMENTATION CASCADE:** adding a
+phase point splits a gap => maxgap pointwise nonincreasing => mu(E') <= mu(E) for E' >= E =>
+**min_{|E|=11, diam d} mu >= min_{|E|=12, diam d} mu >= min_{|E|=13, diam d} mu.** So the k=11
+AND k=12 band legs both follow from ONE k=13-band statement (min mu >= 0.3312 per d in [25,35]),
+conservative with lossless per-d fallback. Also proved: the reflection invariance.
+
+**NET: hfloor's last unproved step = [k=11 band d <= 24: PROVED, margin 2.15x] + [d in [25,35]:
+one mechanical computation -- (a) the LEM-017 cascade k=13-band C-run, or (b) direct C port of
+the validated evaluator (~70M shapes), or (c) the extremal-family + backstop pattern that closed
+k=12,13]. NO ANALYSIS REMAINS on the density-floor half of the terminal surface -- only compute.**
+With opus-S186 (Lemma A retired, hfloor routed through THM-661), hMoment is one C-run from
+fully proved; the fleet's whole remaining mathematical frontier is then the realization node.
+
+Files: lrc14_k11_band_mu_macmini_S65cont6.{py,out}; LEM-017 canon; HYP-5775 (INDEX, resolved
+for [19,24]).
+
 ## boxeph-2026-07-09-S5 -- THE ALIASING BOUND IN LEAN (HYP-5778, PARTIAL): full BV-free decomposition + verified Mathlib tooling map + 70% draft parked OUT of the build tree (no sorryAx shipped)
 
 Prompt (owner): work the Fourier/BV aliasing bound; pull often, consider contents deeply.
