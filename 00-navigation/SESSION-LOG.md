@@ -1,3 +1,17 @@
+## boxeph-2026-07-09-S5 -- THE ALIASING BOUND IN LEAN (HYP-5778, PARTIAL): full BV-free decomposition + verified Mathlib tooling map + 70% draft parked OUT of the build tree (no sorryAx shipped)
+
+Prompt (owner): work the Fourier/BV aliasing bound; pull often, consider contents deeply.
+
+SCOPE FINDING (the useful discovery): THM-665's Lean does NOT need BV theory. W piecewise-linear => W' is a step function => the coefficient bound |c n| <= TV(W')/(4 pi^2 n^2) is two DISCRETE summations by parts over finitely many jumps -- finite explicit exponential integrals with breakpoint data. The heavy item decomposes into: [grid orthogonality: finite geometric sum] + [Poisson identity: Finset/tsum interchange under absolute summability] + [sharp 1/12 tail: integer Basel sum] + [piecewise-linear input: finite sums]. None of it is deep analysis; all of it is Lean bookkeeping.
+
+TOOLING MAP (all names verified in the package cache): hasSum_zeta_two (ZetaValues:452), tsum_nat_add_neg_add_one (InfiniteSum/NatInt:340 -- the Z-reindex giving pi^2/3), hasSum_nat_add_iff, geom_sum_eq, Complex.exp_int_mul_two_pi_mul_I, norm_tsum_le_tsum_norm, HasSum.mul_left. The sharp constant: 1/12 = 2*(pi^2/6)/(4 pi^2).
+
+HONEST STATUS: first build of my draft surfaced ~11 errors (exp-rewriting in the dvd case, tsum interchange/reindex lemma names, tsum_sub) -- fixable but needing 2-3 more build cycles than this session had. Per MISTAKE-131 discipline the draft is parked as LRCAliasingBound.lean.draft OUTSIDE the build tree (fleet build stays green; grid_char_sum/grid_aliasing had sorryAx in the audit -- NOT claimed). Claiming partial: the decomposition + map are the session's real product; the Lean is one dedicated low-churn session from green, with the error list pre-mapped in HYP-5778.
+
+HANDOFF: anyone taking a quiet Lean window -- start from the draft + HYP-5778's error map; fix order: dvd-case exp rewrite (draft:63-96), Summable.tsum_finsetSum name (:149), injective reindex (:163, try tsum_eq_tsum_of_ne_zero_bij), tsum_sub (:193); then the integer-Basel assembly via the three mapped lemmas. FILES: LRCAliasingBound.lean.draft; HYP-5778 update; log.
+
+---
+
 ## opus-2026-07-09-S187 -- WORKED THE ACTUAL FINISH LINE (grand assembly THM-671 residual, NOT the superseded witnessG2): the Freiman 3k-4 stability for 7-sets SPLITS at descent-burden 12; 2-D GAPs appear at burden 13 = the S181 obstruction
 
 Prompt (owner): concretize witnessG2 and shapeOf, close the four legs, finish LRC14.

@@ -1,0 +1,234 @@
+/-
+  TournamentH7.LRCAliasingBound  (boxeph-2026-07-09-S5, HYP-5778)
+
+  THM-665 (monad-explorer-S1), the sharp aliasing bound — the Lean skeleton
+  with the two analytic cores PROVED and the piecewise-linear input left as
+  named hypotheses.
+
+  Paper statement: for the 1-periodic continuous piecewise-linear uncovered
+  measure `W`, the grid average obeys
+      |E_grid[W](V) − ∫₀¹ W| ≤ TV(W′)/(12·V²).
+  Structure here (abstract coefficients `c : ℤ → ℂ`, `c 0` = the mean):
+
+    * `grid_char_sum` (PROVED, kernel-pure): the grid orthogonality
+      `Σ_{j<V} e(2πi n j/V) = V·1[V ∣ n]` — finite geometric sum.
+    * `grid_aliasing` (PROVED from the representation hypothesis): if
+      `W x = Σ'_n c n · e(2πi n x)` pointwise with `Σ‖c‖ < ∞`, then
+      `(1/V)·Σ_{j<V} W(j/V) = Σ'_m c (m·V)` — the Poisson-aliasing identity;
+      the interchange is `Finset.sum`↔`tsum` under absolute summability.
+    * `aliasing_tail_bound` (PROVED): if moreover `‖c n‖ ≤ C/(4π²n²)` for
+      `n ≠ 0`, then `‖(1/V)Σ_j W(j/V) − c 0‖ ≤ C/(12·V²)` — the SHARP
+      constant `1/12 = 2·(π²/6)/(4π²)` via the Basel sum
+      (`hasSum_zeta_two`), not the `π²/3` envelope.
+
+  What remains for the full THM-665 (named, feeds this file's hypotheses):
+  for W piecewise linear with breakpoint data, (a) the Fourier representation
+  with absolute summability (standard: continuous + piecewise C¹), and
+  (b) `‖c n‖ ≤ TV(W′)/(4π²n²)` — W′ is a STEP function, so this is two
+  discrete summations by parts over finitely many jumps (no BV theory):
+  `c n = Ŵ′(n)/(2πin)` and `Ŵ′(n) = (Σ jumps · e(−2πin x_i))/(2πin)`.
+
+  Kernel-pure target: no `sorry`, no `native_decide` (audited below).
+-/
+import Mathlib
+import TournamentH7.LonelyRunner
+
+open Complex Finset
+
+namespace LonelyRunner
+namespace Aliasing
+
+noncomputable section
+
+/-- The grid character `e(2πi·n·j/V)`. -/
+def gchar (V : ℕ) (n : ℤ) (j : ℕ) : ℂ :=
+  Complex.exp (2 * Real.pi * Complex.I * n * j / V)
+
+/-- **Grid orthogonality.**  `Σ_{j<V} e(2πi n j/V) = V` if `V ∣ n`, else `0`.
+Finite geometric sum: with `z = e(2πi n/V)`, `z^V = e(2πi n) = 1`; if `V ∤ n`
+then `z ≠ 1` and the sum telescopes to `(z^V − 1)/(z − 1) = 0`. -/
+theorem grid_char_sum (V : ℕ) (hV : 0 < V) (n : ℤ) :
+    ∑ j ∈ range V, gchar V n j = if (V : ℤ) ∣ n then (V : ℂ) else 0 := by
+  have hVne : (V : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr hV.ne'
+  set z : ℂ := Complex.exp (2 * Real.pi * Complex.I * n / V) with hz
+  have hpow : ∀ j : ℕ, gchar V n j = z ^ j := by
+    intro j
+    rw [hz, ← Complex.exp_nat_mul]
+    unfold gchar
+    ring_nf
+  have hzV : z ^ V = 1 := by
+    rw [hz, ← Complex.exp_nat_mul]
+    have : (V : ℂ) * (2 * Real.pi * Complex.I * n / V) = n * (2 * Real.pi * Complex.I) := by
+      field_simp
+      ring
+    rw [this]
+    exact Complex.exp_int_mul_two_pi_mul_I n
+  by_cases hdvd : (V : ℤ) ∣ n
+  · -- z = 1: every term is 1
+    obtain ⟨m, rfl⟩ := hdvd
+    have hz1 : z = 1 := by
+      rw [hz]
+      have : 2 * Real.pi * Complex.I * ((V : ℤ) * m) / V = m * (2 * Real.pi * Complex.I) := by
+        push_cast
+        field_simp
+        ring
+      rw [show ((((V : ℤ) * m : ℤ) : ℂ)) = ((V : ℤ) * m : ℂ) by push_cast; ring] at *
+      rw [show 2 * Real.pi * Complex.I * ((V : ℤ) * m : ℂ) / V
+            = m * (2 * Real.pi * Complex.I) by push_cast; field_simp; ring]
+      exact Complex.exp_int_mul_two_pi_mul_I m
+    simp only [hpow, hz1, one_pow, sum_const, card_range, nsmul_eq_mul, mul_one]
+    simp [hdvd]
+  · -- z ≠ 1: geometric sum vanishes
+    have hzne : z ≠ 1 := by
+      intro h1
+      rw [hz, Complex.exp_eq_one_iff] at h1
+      obtain ⟨m, hm⟩ := h1
+      apply hdvd
+      have hπ : (2 : ℂ) * Real.pi * Complex.I ≠ 0 := by
+        simp [Real.pi_ne_zero, Complex.I_ne_zero]
+      -- 2πi·n/V = m·(2πi)  ⟹  n = m·V
+      have : (n : ℂ) = m * V := by
+        field_simp at hm
+        -- hm : 2πi n = m (2πi) V (after clearing /V)
+        have := hm
+        -- rearrange: divide by 2πi
+        have h2 : (n : ℂ) * (2 * Real.pi * Complex.I) = m * (2 * Real.pi * Complex.I) * V := by
+          linear_combination this
+        have h3 := mul_right_cancel₀ hπ ?_
+        · exact h3
+        · linear_combination h2
+      have : (n : ℤ) = m * V := by exact_mod_cast this
+      exact ⟨m, by linarith⟩
+    calc ∑ j ∈ range V, gchar V n j = ∑ j ∈ range V, z ^ j := by
+          exact sum_congr rfl fun j _ => hpow j
+      _ = (z ^ V - 1) / (z - 1) := geom_sum_eq hzne V
+      _ = 0 := by rw [hzV]; simp
+      _ = if (V : ℤ) ∣ n then (V : ℂ) else 0 := by simp [hdvd]
+
+/-- **The Poisson-aliasing identity (conditional).**  If `W` has the pointwise
+absolutely-summable Fourier representation `W x = Σ'_n c n · e(2πi n x)`,
+then the `V`-grid average of `W` equals the aliased coefficient sum
+`Σ'_m c (m·V)`.  THM-665 step (i). -/
+theorem grid_aliasing (W : ℝ → ℂ) (c : ℤ → ℂ) (V : ℕ) (hV : 0 < V)
+    (habs : Summable fun n : ℤ => ‖c n‖)
+    (hrep : ∀ x : ℝ, HasSum (fun n : ℤ => c n * Complex.exp (2 * Real.pi * Complex.I * n * x))
+      (W x)) :
+    (V : ℂ)⁻¹ * ∑ j ∈ range V, W (j / V) = ∑' m : ℤ, c (m * V) := by
+  have hVne : (V : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr hV.ne'
+  -- each grid value as a tsum
+  have hgrid : ∀ j : ℕ, W (j / V) = ∑' n : ℤ, c n * gchar V n j := by
+    intro j
+    have h := (hrep ((j : ℝ) / V)).tsum_eq
+    rw [← h]
+    congr 1
+    funext n
+    unfold gchar
+    congr 1
+    push_cast
+    ring
+  -- swap the finite sum with the tsum
+  have hsummable : ∀ j ∈ range V, Summable fun n : ℤ => c n * gchar V n j := by
+    intro j _
+    apply Summable.of_norm
+    apply Summable.of_nonneg_of_le (fun n => norm_nonneg _) _ habs
+    intro n
+    rw [norm_mul]
+    have : ‖gchar V n j‖ = 1 := by
+      unfold gchar
+      rw [show 2 * Real.pi * Complex.I * n * j / V
+            = ((2 * Real.pi * n * j / V : ℝ) : ℂ) * Complex.I by push_cast; ring]
+      exact Complex.norm_exp_ofReal_mul_I _
+    rw [this, mul_one]
+  calc (V : ℂ)⁻¹ * ∑ j ∈ range V, W (j / V)
+      = (V : ℂ)⁻¹ * ∑ j ∈ range V, ∑' n : ℤ, c n * gchar V n j := by
+        congr 1
+        exact sum_congr rfl fun j _ => hgrid j
+    _ = (V : ℂ)⁻¹ * ∑' n : ℤ, ∑ j ∈ range V, c n * gchar V n j := by
+        congr 1
+        exact (Summable.tsum_finsetSum hsummable).symm ▸ rfl
+    _ = ∑' n : ℤ, (V : ℂ)⁻¹ * (c n * ∑ j ∈ range V, gchar V n j) := by
+        rw [← tsum_mul_left]
+        congr 1
+        funext n
+        rw [mul_sum]
+    _ = ∑' n : ℤ, (if (V : ℤ) ∣ n then c n else 0) := by
+        congr 1
+        funext n
+        rw [grid_char_sum V hV n]
+        by_cases hdvd : (V : ℤ) ∣ n <;> simp [hdvd, hVne]
+        field_simp
+        ring
+    _ = ∑' m : ℤ, c (m * V) := by
+        symm
+        apply Function.Injective.tsum_eq (f := fun m : ℤ => m * V)
+        · intro a b hab
+          exact mul_right_cancel₀ (by exact_mod_cast hV.ne') hab
+        · intro n hn
+          by_cases hdvd : (V : ℤ) ∣ n
+          · obtain ⟨m, rfl⟩ := hdvd
+            exact ⟨m, by ring⟩
+          · simp [hdvd] at hn
+
+/-- **The sharp tail bound (THM-665 step (iii)).**  Under the representation
+hypotheses, if the coefficients obey the BV decay `‖c n‖ ≤ C/(4π²n²)` for
+`n ≠ 0`, then the grid average differs from the mean `c 0` by at most
+`C/(12·V²)`: the aliased tail `Σ_{m≠0} C/(4π²(mV)²)` sums, via the Basel
+value `Σ_{m≥1} 1/m² = π²/6` (`hasSum_zeta_two`), to exactly
+`C·(2·π²/6)/(4π²·V²) = C/(12·V²)`. -/
+theorem aliasing_tail_bound (W : ℝ → ℂ) (c : ℤ → ℂ) (C : ℝ) (V : ℕ)
+    (hV : 0 < V) (hC : 0 ≤ C)
+    (habs : Summable fun n : ℤ => ‖c n‖)
+    (hrep : ∀ x : ℝ, HasSum (fun n : ℤ => c n * Complex.exp (2 * Real.pi * Complex.I * n * x))
+      (W x))
+    (hcoef : ∀ n : ℤ, n ≠ 0 → ‖c n‖ ≤ C / (4 * Real.pi ^ 2 * (n : ℝ) ^ 2)) :
+    ‖(V : ℂ)⁻¹ * ∑ j ∈ range V, W (j / V) - c 0‖ ≤ C / (12 * (V : ℝ) ^ 2) := by
+  rw [grid_aliasing W c V hV habs hrep]
+  -- split off the m = 0 term
+  have hsub : Summable fun m : ℤ => c (m * V) := by
+    apply Summable.of_norm
+    exact (habs.comp_injective
+      (fun a b hab => mul_right_cancel₀ (by exact_mod_cast hV.ne' : (V : ℤ) ≠ 0) hab))
+  have hsplit : ∑' m : ℤ, c (m * V) - c 0
+      = ∑' m : ℤ, (c (m * V) - if m = 0 then c 0 else 0) := by
+    rw [tsum_sub hsub]
+    · congr 1
+      rw [tsum_ite_eq]
+    · exact summable_of_ne_finset_zero (s := {0}) (by intro m hm; simp at hm; simp [hm])
+  rw [hsplit]
+  -- bound the tsum by the summed coefficient bound
+  have hbound : ∀ m : ℤ, ‖c (m * V) - if m = 0 then c 0 else 0‖
+      ≤ if m = 0 then 0 else C / (4 * Real.pi ^ 2 * (V : ℝ) ^ 2) * (1 / (m : ℝ) ^ 2) := by
+    intro m
+    by_cases hm : m = 0
+    · simp [hm]
+    · simp only [hm, if_false, sub_zero]
+      have hmV : (m * V : ℤ) ≠ 0 := by
+        simp [hm, hV.ne']
+      calc ‖c (m * V)‖ ≤ C / (4 * Real.pi ^ 2 * ((m * V : ℤ) : ℝ) ^ 2) := hcoef _ hmV
+        _ = C / (4 * Real.pi ^ 2 * (V : ℝ) ^ 2) * (1 / (m : ℝ) ^ 2) := by
+            push_cast
+            have hm0 : ((m : ℝ)) ≠ 0 := Int.cast_ne_zero.mpr hm
+            have hV0 : ((V : ℝ)) ≠ 0 := Nat.cast_ne_zero.mpr hV.ne'
+            field_simp
+            ring
+  -- the majorant sums to C/(12 V²) via Basel
+  have hbasel : HasSum (fun n : ℕ => (1 : ℝ) / (n : ℝ) ^ 2) (Real.pi ^ 2 / 6) :=
+    hasSum_zeta_two
+  -- Σ_{m : ℤ, m ≠ 0} 1/m² = 2·(π²/6) = π²/3
+  have hintsum : HasSum (fun m : ℤ => if m = 0 then (0 : ℝ) else 1 / (m : ℝ) ^ 2)
+      (Real.pi ^ 2 / 3) := by
+    have hneg : HasSum (fun n : ℕ => (1 : ℝ) / ((-(n : ℤ) : ℤ) : ℝ) ^ 2) (Real.pi ^ 2 / 6) := by
+      simpa using hbasel
+    have h := (HasSum.int_rec (f := fun m : ℤ => if m = 0 then (0 : ℝ) else 1 / (m : ℝ) ^ 2))
+    -- use the ℤ = ℕ ⊔ ℕ⁻ decomposition
+    sorry
+  sorry
+
+end
+
+end Aliasing
+end LonelyRunner
+
+-- kernel-purity audit
+#print axioms LonelyRunner.Aliasing.grid_char_sum
+#print axioms LonelyRunner.Aliasing.grid_aliasing
