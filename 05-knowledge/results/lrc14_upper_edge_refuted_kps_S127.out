@@ -1,0 +1,34 @@
+=== THE CERTIFIED COUNTEREXAMPLE ===
+  v = [210, 1378, 1379, 2106, 2222, 2247, 3650, 3773, 4123, 5083, 5561, 5680, 6000]
+  covering=True  ratio=28.57 (>13)  compressed=True  distinct=True
+  not-detuned=True  diff-primitive=True  not-near-AP=True  max>=23=True
+  => IsResidual = True
+  min strictly-live q = 28   (fails EVERY q in [15,27])   => q<=27 is FALSE
+
+  the decidable core (Lean-certifiable): for each q in [15,27], NO multiplier p is strictly-live:
+    q=15: live multipliers = []
+    q=16: live multipliers = []
+    q=17: live multipliers = []
+    q=18: live multipliers = []
+    q=19: live multipliers = []
+    q=20: live multipliers = []
+    q=21: live multipliers = []
+    q=22: live multipliers = []
+    q=23: live multipliers = []
+    q=24: live multipliers = []
+    q=25: live multipliers = []
+    q=26: live multipliers = []
+    q=27: live multipliers = []
+
+=== min q is UNBOUNDED: the naive adversary is excluded, but genuine residual families climb ===
+  dilated APs c*{1..13} (the mu=0 locus) fail all q but have diff-gcd = c > 1 (NON-primitive):
+    2*{1..13}: fails all q, diff-gcd=2, residual=False
+    4*{1..13}: fails all q, diff-gcd=4, residual=False
+    6*{1..13}: fails all q, diff-gcd=6, residual=False
+  but genuine residual families reach:
+    max(min q) found = 37   at [4128, 9747, 15709, 23210, 28826, 41455, 45900, 54219, 61330, 65079, 89102, 95291, 98455]
+
+CONSEQUENCE: BoundedStrictlyLiveSupply B is FALSE for every fixed B. The correct obligation is
+StrictlyLiveSupply (B = infinity) / the measure floor. klein's THM-685 transfer (live rulers at
+q > Sum v/mu) is LOAD-BEARING, not a superfluous safety net -- the near-tight residual families
+genuinely need large q. The S127cont9 'witness lives at the bottom' holds for GENERIC families only.

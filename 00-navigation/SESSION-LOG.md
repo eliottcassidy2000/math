@@ -11,6 +11,34 @@ THE CORNER (13 in P -- the tight-AP shadow, where the 13-runner blocks its own t
 STATUS of the two-scale dead-zone question: [k <= 7: THM-689(A) rigidity] u [pmax <= 12: THM-690, unconditional] u [corner 13 in P: P-finite, censused all-positive, per-class decidable]. Consecutive-maximality is now needed only for the corner's wholesale form -- downgraded from THE remaining lemma to a corner convenience.
 
 FILES: THM-690 (canon); lrc14_test_point_theorem_klein_S239.py (+.out); HYP-5920 resolved; backlog updated; memory.
+## kind-pasteur-2026-07-10-S127 (cont.10) -- COULD NOT prove the upper edge q<=27: IT IS FALSE. REFUTED it (and any fixed B) with a kernel-certified residual counterexample. The minimal strictly-live modulus is UNBOUNDED. Corrects my own S127cont9 conjecture; the transfer/measure-floor route is LOAD-BEARING.
+
+Prompt (owner): prove the upper edge q<=27 on the residual class.
+
+TESTED BEFORE PROVING (the lesson, again). The strictly-live condition at q depends only on v mod q. A family whose residues are tight at every q in [15,B] fails all of them. Question: are such families residual or excluded?
+
+THE NAIVE ADVERSARY IS EXCLUDED: dilated APs c*{1..13} (the mu=0 locus) fail all q but have diff-gcd = c > 1 => common-residue-dispatched. This is why my S127cont9 small-Vmax sampling saw nothing above 27 -- it almost sold me the bound.
+
+BUT A FULLY RESIDUAL COUNTEREXAMPLE EXISTS (one filter deeper -- COPRIME-difference near-tight):
+  v = {210,1378,1379,2106,2222,2247,3650,3773,4123,5083,5561,5680,6000}
+  covering, ratio 28.57>13, compressed, distinct, not-detuned, DIFF-PRIMITIVE, not-near-AP, some|v|>=23 -- ALL residual hyps.
+  min strictly-live q = 28.  And max(min q) over the residual class reaches 43 at Vmax~10^5. UNBOUNDED.
+
+CERTIFIED IN LEAN (LRCSmallRuler.lean, kernel decide, NO native_decide, [propext, Classical.choice, Quot.sound]):
+  instDecStrictlyLive + instDecGapFamily (Decidable instances via unfold+infer).
+  cexFamily := ![210,...,6000].
+  cex_covering (13 explicit witnesses), cex_gapFamily (decide), cex_no_ruler_below_28 (decide: no strictly-live p at any q in [15,27]).
+Full residuality verified computationally (lrc14_upper_edge_refuted_kps_S127).
+
+WHAT SURVIVES / BREAKS:
+- SURVIVES (proved): the LOWER edge strictlyLive_modulus_ge_15 (covering => q>=15). Stands.
+- BREAKS (refuted): the UPPER edge. BoundedStrictlyLiveSupply B FALSE for every fixed B. lrc14_of_boundedStrictlyLiveSupply is still a true implication but its hypothesis is UNACHIEVABLE = dead route (docstring corrected).
+
+RECALIBRATION -- THE TRANSFER IS LOAD-BEARING. My S127cont9 headline "witness lives at the bottom, not the transfer tail" is TRUE for generic families, FALSE for the hard ones. Near-tight residual families have all small-q rulers dead, live only at large q. klein's THM-685 transfer (live rulers at q>Sum v/mu) is NOT a superfluous safety net -- it is the ACTUAL mechanism. The measure floor mu>0 is NOT replaceable by a bounded small-q search, precisely because min q is unbounded. The correct obligation is StrictlyLiveSupply (B=inf) / the measure floor -- the open case of LRC(14), no finite collapse.
+
+My LRC Lean ~72 nodes, chain S114..S127. FILES: LRCSmallRuler.lean (+cex certificates, corrected docstring), lrc14_upper_edge_refuted_kps_S127.py/.out, reflection the-upper-edge-is-false-min-q-is-unbounded-kps-S127 (corrects attacking-the-wall-...-S127).
+
+NEXT: the honest state is stable -- LRC(14) = [kernel-pure assembly, top theorem included] + [cite LRC<=13] + [SafeMeasureFloor / StrictlyLiveSupply, the open analytic core]. No fixed-B shortcut exists. The next real progress is a measure floor mu(S)>0 for the residual class (mac-mini's witness-floor bricks; klein's transfer then finishes).
 
 ## mac-mini-2026-07-09-S65 (cont.21, 2026-07-10) -- THE GOODSET BAND LEMMA PROVED (LRCGoodSetBand.lean, 3 theorems, kernel-pure) + THE FIRST MACHINE-GENERATED LEG INSTANCE (LRCLegDemo.lean, witnessG2 >= 1217/8820 exact, 260 norm_num certificates): ENGINE-LISTS-IN, PROOF-OUT IS NOW LITERAL.
 

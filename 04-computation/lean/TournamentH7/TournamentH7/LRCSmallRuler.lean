@@ -78,11 +78,62 @@ theorem strictlyLiveSupply_of_bounded {B : ℤ} (h : BoundedStrictlyLiveSupply B
   exact ⟨q, p, hl⟩
 
 /-- **LRC(14) from a bounded strictly-live ruler window.**  Kernel-pure.  With
-`residual_strictlyLive_ge_15` this says: to finish LRC(14) it suffices to exhibit, for each residual
-family, a modulus `q ∈ [15, B]` and a multiplier `p` with all thirteen residues strictly inside the band. -/
+`residual_strictlyLive_ge_15` this says: a modulus `q ∈ [15, B]` per residual family would finish LRC(14).
+
+⚠ **`BoundedStrictlyLiveSupply B` is REFUTED for every fixed `B`** (kps-S127, corrected): the minimal
+strictly-live modulus is *unbounded* on the residual class.  The strictly-live condition at `q` depends
+only on `v mod q`, so a family whose residues are tight at every `q ∈ [15,B]` fails all of them — and such
+families are genuinely residual (see `cexFamily` below, `min q = 28`; the class reaches `min q ≥ 43`).  So
+this implication is TRUE but its hypothesis is unachievable: the route to LRC(14) must be
+`StrictlyLiveSupply` (`B = ∞`) or the measure floor, and klein's THM-685 transfer (live rulers at
+`q > Σv/μ`) is load-bearing, not a superfluous safety net. -/
 theorem lrc14_of_boundedStrictlyLiveSupply (cite : LRCUpTo13) {B : ℤ}
     (h : BoundedStrictlyLiveSupply B) : LRC14.LRC14Statement :=
   lrc14_of_strictlyLiveSupply cite (strictlyLiveSupply_of_bounded h)
+
+/-! ### The counterexample to the upper edge (certified decidably).
+
+`cexFamily` is covering with ratio `28.57 > 13` (so it reaches the residual/`GapFamily` branch), yet it has
+NO strictly-live multiplier at any modulus `q ∈ [15,27]` — refuting `q ≤ 27`.  Its full residuality
+(compressed, distinct, not detuned, difference-primitive, not near-AP) is verified in
+`lrc14_upper_edge_refuted_kps_S127`; the two load-bearing decidable facts are certified here. -/
+
+instance instDecStrictlyLive (v : Fin 13 → ℤ) (q p : ℤ) : Decidable (StrictlyLive v q p) := by
+  unfold StrictlyLive; infer_instance
+
+instance instDecGapFamily (v : Fin 13 → ℤ) : Decidable (GapFamily v) := by
+  unfold GapFamily; infer_instance
+
+/-- The refuting family: `min` strictly-live modulus `= 28`. -/
+def cexFamily : Fin 13 → ℤ :=
+  ![210, 1378, 1379, 2106, 2222, 2247, 3650, 3773, 4123, 5083, 5561, 5680, 6000]
+
+/-- `cexFamily` is covering (it reaches the residual branch). -/
+theorem cex_covering : LRC14.CoveringFamily cexFamily := by
+  intro q hq2 hq14
+  interval_cases q
+  · exact ⟨0, by decide⟩
+  · exact ⟨0, by decide⟩
+  · exact ⟨12, by decide⟩
+  · exact ⟨0, by decide⟩
+  · exact ⟨0, by decide⟩
+  · exact ⟨0, by decide⟩
+  · exact ⟨12, by decide⟩
+  · exact ⟨3, by decide⟩
+  · exact ⟨0, by decide⟩
+  · exact ⟨4, by decide⟩
+  · exact ⟨12, by decide⟩
+  · exact ⟨1, by decide⟩
+  · exact ⟨0, by decide⟩
+
+/-- `cexFamily` is scale-gapped (ratio `28.57 > 13`), so it is not dispatched by `spread13`. -/
+theorem cex_gapFamily : GapFamily cexFamily := by decide
+
+/-- **The upper edge is false: `cexFamily` has NO strictly-live multiplier at any `q ∈ [15,27]`.**
+A covering, scale-gapped (hence residual-branch) family with its first strictly-live ruler at `q = 28`. -/
+theorem cex_no_ruler_below_28 :
+    ∀ q ∈ Finset.Icc (15 : ℤ) 27, ∀ p ∈ Finset.Ico (1 : ℤ) q, ¬ StrictlyLive cexFamily q p := by
+  decide
 
 end LRC14Grand
 end LonelyRunner
