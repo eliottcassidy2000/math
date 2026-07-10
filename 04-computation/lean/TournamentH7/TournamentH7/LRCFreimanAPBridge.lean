@@ -10,7 +10,7 @@ import TournamentH7.LRCFreimanBurden
 # The Finset bridge for the Freiman AP step (opus-S196)
 
 `LRCFreimanAP.ap_of_min_burden` (opus-S195) is stated for an indexed `a : ℕ → ℤ`. This file wraps it for
-a `Finset ℤ` so it is directly citable by THM-675 / THM-681: a set `s` of `n = |s| ≥ 5` integers with the
+a `Finset ℤ` so it is directly citable by THM-676 / THM-681: a set `s` of `n = |s| ≥ 5` integers with the
 MINIMAL restricted sumset `|A +̂ A| = 2n − 3` is *literally* an arithmetic progression `{c, c+d, …,
 c+(n−1)d}`.
 
@@ -77,7 +77,7 @@ theorem Rset_enum_eq (s : Finset ℤ) : Rset (enum s) s.card = LRCFreiman.restri
 
 /-- **The Finset Freiman AP step (`n ≥ 5`).** A set of `n = |s| ≥ 5` integers whose restricted sumset has
 the MINIMAL size `2n − 3` is an arithmetic progression: `s = {c + k·d : 0 ≤ k < n}` for some `c` and
-`d > 0`. (False for `n ≤ 4`; MISTAKE-133.) This is the near-AP characterization THM-675 / THM-681 apply to
+`d > 0`. (False for `n ≤ 4`; MISTAKE-133.) This is the near-AP characterization THM-676 / THM-681 apply to
 majority-parity 7-classes, now directly citable at the `Finset` level. -/
 theorem finset_min_burden_isAP (s : Finset ℤ) (hn : 5 ≤ s.card)
     (hcard : (LRCFreiman.restrictedSum s).card = 2 * s.card - 3) :
@@ -106,5 +106,18 @@ theorem finset_min_burden_isAP (s : Finset ℤ) (hn : 5 ≤ s.card)
     exact ⟨i, hi, by rw [← hval i hi]; exact hix⟩
   · rintro ⟨k, hk, rfl⟩
     rw [← hval k hk]; exact enum_mem hk
+
+/-- **THM-676(iv), the AP-rigidity of minimal descent burden, formalized (the hard `⟹` direction).**
+A majority-parity 7-class `A ⊆ S` whose restricted sumset attains the Freiman floor `|A +̂ A| = 11 =
+2·7 − 3` is an arithmetic progression `{c + k·d : 0 ≤ k < 7}` with `d > 0`. Proof: cite
+`finset_min_burden_isAP` at `|s| = 7 ≥ 5` (`2·7 − 3 = 11`). This is the burden-axis rung the descent-burden
+theorem (THM-676) uses to send a minimal-burden class to a dilated interval — which LEM-016 then extends to
+`B ≤ 12 ⟹ longest-AP ≥ k − 6`, feeding the non-covering / clustering branch. -/
+theorem thm676iv_seven_isAP (s : Finset ℤ) (h7 : s.card = 7)
+    (hburden : (LRCFreiman.restrictedSum s).card = 11) :
+    ∃ c d : ℤ, 0 < d ∧ s = (range 7).image (fun k : ℕ => c + (k : ℤ) * d) := by
+  have hc : (LRCFreiman.restrictedSum s).card = 2 * s.card - 3 := by rw [h7]; omega
+  have hAP := finset_min_burden_isAP s (by omega) hc
+  rwa [h7] at hAP
 
 end LRCFreimanAP

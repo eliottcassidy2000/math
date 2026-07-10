@@ -9,7 +9,7 @@ import Mathlib
 # The Freiman AP step: minimal restricted sumset ⟹ AP, for `n ≥ 5` (opus-S195)
 
 At the MINIMAL descent burden `|A +̂ A| = 2n − 3`, a set of `n ≥ 5` reals is an arithmetic progression.
-This is the near-AP characterization THM-675 needs for majority-parity 7-classes (`n = 7 ≥ 5`).
+This is the near-AP characterization THM-676 needs for majority-parity 7-classes (`n = 7 ≥ 5`).
 
 **The `n ≥ 5` hypothesis is ESSENTIAL** (MISTAKE-133): for `n ≤ 4` the equality is achieved by NON-AP
 "bi-arithmetic" sets (e.g. `{0,1,3,4}`: `A +̂ A = {1,3,4,5,7}`, card `5 = 2·4−3`, differences `1,2,1`).
@@ -186,7 +186,7 @@ theorem sum04 {a : ℕ → ℤ} (ha : StrictMono a) {n : ℕ} (hn : 5 ≤ n)
 
 /-- **The Freiman AP step (`n ≥ 5`).** A strictly increasing sequence whose first `n` terms have the
 MINIMAL restricted-sumset size `2n − 3` is an arithmetic progression: every consecutive difference
-equals `a₁ − a₀`. (False for `n ≤ 4`; MISTAKE-133.) This is the near-AP characterization THM-675 uses
+equals `a₁ − a₀`. (False for `n ≤ 4`; MISTAKE-133.) This is the near-AP characterization THM-676 uses
 for majority-parity 7-classes. -/
 theorem ap_of_min_burden {a : ℕ → ℤ} (ha : StrictMono a) {n : ℕ} (hn : 5 ≤ n)
     (hcard : (Rset a n).card = 2 * n - 3) :

@@ -10,7 +10,9 @@ own verification** — the derive-then-verify loop catching its author a third t
 
 **Setup.** `A` = 7 distinct integers; `B = |A +̂ A|` = number of distinct restricted sums
 `a_i + a_j` (i < j). Normalize: `a_1 = 0`, gcd of differences 1, diameter `D = a_7`.
-Always `B ≥ 11`, with `B = 11 ⟺ A` is an AP (THM-676(iv)).
+Always `B ≥ 11`, with `B = 11 ⟺ A` is an AP (THM-676(iv); the `⟹` direction is Lean-formalized,
+kernel-pure, as `LRCFreimanAP.thm676iv_seven_isAP`, citing `finset_min_burden_isAP` — opus-S197). LEM-016
+is the excess-1 stability *above* this base case (`B ≤ 12 ⟹ 8-length AP`).
 
 ## Statement
 

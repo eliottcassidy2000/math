@@ -43,6 +43,23 @@ differences; conversely an AP achieves 11. For the moduli: `h_{ij} = a_1 + (i+j�
 over an AP. (v) `q` composite ⟹ `q = p·b`, `p ≤ √q ⟹ b ≥ √q > 14` for `q > 196`; `b < q`
 proper. ∎
 
+## Lean formalization of clause (iv) (opus-S195/S196/S197, kernel-pure)
+
+The AP-rigidity clause **(iv)**'s hard `⟹` direction (minimal burden ⟹ AP) is machine-checked:
+`LRCFreimanAP.thm676iv_seven_isAP` (`LRCFreimanAPBridge.lean`) states `|A| = 7 ∧ |A +̂ A| = 11 ⟹
+∃ c d, 0 < d ∧ A = {c + k·d : 0 ≤ k < 7}` and proves it by citing `finset_min_burden_isAP`. That Finset
+theorem is the transport of the general indexed AP step `ap_of_min_burden` (`|A +̂ A| = 2n − 3 ∧ n ≥ 5 ⟹
+A is an AP`) through the sorted enumeration `enum` (`Rset (enum A) n = restrictedSum A`). The shared
+structural entry point is `restrictedSum_eq_freimanChain` (at minimal burden the restricted sumset equals
+the min/max chain, `LRCFreimanBurden.lean`), the exact Lean form of the proof note above ("every sum must
+lie in the chain").
+
+**The `n ≥ 5` hypothesis is ESSENTIAL and was caught by verification (MISTAKE-133):** the equality
+`|A +̂ A| = 2n − 3` forces an AP only for `n ≥ 5`; for `n ≤ 4` bi-arithmetic sets (`{0,1,3,4}`, diffs
+`1,2,1`) attain the floor without being APs (census: non-AP minima = 44, 38, 0, 0, 0, 0 for `n = 3..8`).
+Clause (iv) is about 7-sets (`n = 7 ≥ 5`), so it is unaffected — but the general statement needs the
+bound. Axioms: `[propext, Classical.choice, Quot.sound]`; no `sorry`, no `native_decide`.
+
 ## Part B — the HYP-5765 stress test (run BEFORE attempting its proof; honest method note)
 
 Before attempting to prove HYP-5765 I hunted for counterexamples to it AS STATED, because its

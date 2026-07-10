@@ -1,3 +1,18 @@
+## opus-2026-07-09-S197 -- CITED finset_min_burden_isAP in the descent-burden theorem's Lean: thm676iv_seven_isAP (kernel-pure) formalizes THM-676(iv)'s hard direction (burden 11 => 7-class is an AP). Fixed stale THM-675->676 refs; canon notes.
+
+Prompt (owner): cite finset_min_burden_isAP in THM-675's Lean.
+
+NOTE: the descent-burden theorem is THM-676 (renumbered; my Lean files carried a stale "THM-675 (ii)" label -- the owner echoed it). THM-675 is now klein's signed-box run. Fixed the stale refs (THM-675->676) across LRCFreimanAP/LRCFreimanBurden/LRCFreimanAPBridge.
+
+DELIVERED (LRCFreimanAPBridge.lean, kernel-pure [propext,Classical.choice,Quot.sound], builds):
+- thm676iv_seven_isAP : s.card=7 & |restrictedSum s|=11 => EXISTS c d, 0<d & s = (range 7).image (k => c+k*d). This IS THM-676(iv)'s hard "=>" direction (minimal descent burden => the majority-parity 7-class is an AP), proved by CITING finset_min_burden_isAP (S196) at |s|=7>=5 (2*7-3=11). Two lines: hc (11 = 2*7-3 via omega) + rwa [h7] at (finset_min_burden_isAP s _ hc).
+
+This is the exact burden-axis rung the descent-burden argument uses: minimal burden => dilated interval, which LEM-016 extends (B<=12 => 8-length AP => longest-AP >= k-6) into the non-covering/clustering branch. The chain is now Lean-grounded at its base: restrictedSum_eq_freimanChain (S189) -> ap_of_min_burden (S195) -> finset_min_burden_isAP (S196) -> thm676iv_seven_isAP (S197 = the THM-676(iv) citation).
+
+CANON: added Lean-formalization notes to THM-676 (new "Lean formalization of clause (iv)" section, incl. the n>=5 essential-hypothesis / MISTAKE-133 caveat) and LEM-016 (base-case B=11<=>AP now Lean-formalized). Files: LRCFreimanAPBridge.lean (thm676iv_seven_isAP), THM-676 + LEM-016 canon, 3 Lean docstring THM-675->676 fixes. -> THM-676(iv), LEM-016, finset_min_burden_isAP/ap_of_min_burden (S196/S195), restrictedSum_eq_freimanChain (S189), kps THM-681 ladder, MISTAKE-133.
+
+---
+
 ## klein-2026-07-09-S226 -- THE CHARACTER CHAIN RUN: exact t-level decomposition verified (index-table characters + FFT); the anatomy located (generic: t2 carries the deficit; near-dilation: enriched t2 +52..57 vs cancelling t>=3 -96..-110); THE LEMMA PINNED -- interval multiplicative pair-correlation at speed-ratio twists (hyperbola counting, classical) with the exception set = the quarantined mult-coherent family
 
 Prompt (owner): run the t>=3 character-tuple Holder chain.

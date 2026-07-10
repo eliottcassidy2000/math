@@ -6,16 +6,16 @@ Authors: opus (LRC multi-agent project, 2026-07-09-S188/S189)
 import Mathlib
 
 /-!
-# The Freiman descent-burden bound and equality core (THM-675 (ii), the burden ≤ 12 finite check)
+# The Freiman descent-burden bound and equality core (THM-676 (ii), the burden ≤ 12 finite check)
 
-The LRC(14) grand-assembly residual (THM-671) reduces via mac-mini's THM-675 to a Freiman 3k−4
+The LRC(14) grand-assembly residual (THM-671) reduces via mac-mini's THM-676 to a Freiman 3k−4
 stability check on majority-parity 7-classes with small **descent burden** `|A +̂ A| = #{aᵢ+aⱼ : i<j}`
 (opus-S187). This file formalizes:
 
 * `restrictedSum_card_ge` — the Freiman lower bound `|A +̂ A| ≥ 2|A| − 3` (the classical increasing-chain
   argument: with `m = min A`, `M = max A`, the `|A|−1` sums `{m + y : y ≠ m}` lie `≤ m+M`, the `|A|−2`
   sums `{x + M : m < x < M}` lie `> m+M`, so they are DISJOINT subsets of the restricted sumset);
-* `burden_ge_eleven` — its `|A| = 7` specialization (burden ≥ 11 = THM-675 (ii)'s floor);
+* `burden_ge_eleven` — its `|A| = 7` specialization (burden ≥ 11 = THM-676 (ii)'s floor);
 * `restrictedSum_eq_freimanChain` — the **Freiman-equality core**: at the MINIMAL burden
   `|A +̂ A| = 2|A| − 3`, the restricted sumset is EXACTLY the min/max chain `freimanChain`.
 
@@ -106,14 +106,14 @@ theorem freimanChain_card (s : Finset ℤ) (hne : s.Nonempty) (hk : 2 ≤ s.card
   omega
 
 /-- **Freiman restricted-sumset lower bound.** For a finite set of ≥ 2 integers,
-`|A +̂ A| ≥ 2|A| − 3` (THM-675 (ii)). -/
+`|A +̂ A| ≥ 2|A| − 3` (THM-676 (ii)). -/
 theorem restrictedSum_card_ge (s : Finset ℤ) (hk : 2 ≤ s.card) :
     2 * s.card - 3 ≤ (restrictedSum s).card := by
   have hne : s.Nonempty := card_pos.mp (by omega)
   calc 2 * s.card - 3 = (freimanChain s hne).card := (freimanChain_card s hne hk).symm
     _ ≤ (restrictedSum s).card := card_le_card (freimanChain_subset s hne)
 
-/-- **Descent burden of a 7-set is ≥ 11** (THM-675 (ii), the floor of the finite check). -/
+/-- **Descent burden of a 7-set is ≥ 11** (THM-676 (ii), the floor of the finite check). -/
 theorem burden_ge_eleven (s : Finset ℤ) (h7 : s.card = 7) :
     11 ≤ (restrictedSum s).card := by
   have := restrictedSum_card_ge s (by omega); omega
