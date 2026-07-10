@@ -1,3 +1,17 @@
+## klein-2026-07-10-S239 -- THE 13-TORSION TEST-POINT THEOREM (THM-690, HYP-5920): consecutive-maximality SUPERSEDED -- m_E(a/13) >= 1/91 for EVERY E with k <= 12 (an empty 13-net class forces a gap >= 2/13; SHARP at consecutive k=12) and a/13 in int(G_P) for every pmax <= 12 (13 prime, clearance 1/182) => mu_inf > 0 for ALL E, ALL k, pmax <= 12: the infinite E-quantification ELIMINATED; the corner (13 in P) censused exhaustively (794 P's x adversarial E = 3176 evals, zero degenerate, min 0.0441)
+
+Prompt (owner): run the consecutive-maximality lemma.
+
+THE UPGRADE: instead of proving consecutive-maximality (bounding meas(D) over all E), a TEST-POINT argument eliminates the E-quantification outright wherever it can run. THE THEOREM (proved, elementary, sharp): (E-side) at alpha = a/13 (a coprime to 13) the centers {e*a/13} occupy at most k <= 12 of the 13 net classes; an empty class forces a circular gap >= 2/13, so m_E(a/13) >= 2/13 - 1/7 = 1/91 -- uniform in E, no shape hypothesis, and SHARP (nasty-battery worst = exactly 1/91 at consecutive k = 12). (P-side) 13 is prime, so for p <= 12: pa mod 13 in {1..12} => frac(p*a/13) in [1/13, 12/13] strictly inside the band, clearance 1/182 => a/13 in the INTERIOR of G_P (0/144 violations). m_E continuous and positive at an interior point of G_P => mu_inf(P,E) > 0 for EVERY two-scale class with pmax <= 12 -- all E, all k <= 12.
+
+WHY 13 (structure): the test modulus needs k < q < 14 (q > k so the centers cannot fill the net; q < 14 so an empty class certifies a >1/7 gap); with k <= 12 the window contains exactly q = 13 = n - 1. THE TEST RULER IS n-1, and it works precisely because 13 is NOT in the family: klein-S207's ruler-points theorem INVERTED -- a family is never lonely on its own ruler; the universal witness ruler is the COMPLEMENT's ruler. (Composes with kps-S127's covering => q >= 15 small-modulus reshaping.)
+
+THE CORNER (13 in P -- the tight-AP shadow, where the 13-runner blocks its own torsion points): exhaustive P-census -- ALL 794 sets containing 13 (|P| = 1..5, k = 8..12) x adversarial E batteries (consecutive/detuned/AP2/random) = 3176 exact evaluations: ZERO classes with mu_inf = 0; minimum 0.044079 at P = {1,3,4,13}, E = {0..8} -- the consecutive apex shape, the extremal at every level of this program, still positive.
+
+STATUS of the two-scale dead-zone question: [k <= 7: THM-689(A) rigidity] u [pmax <= 12: THM-690, unconditional] u [corner 13 in P: P-finite, censused all-positive, per-class decidable]. Consecutive-maximality is now needed only for the corner's wholesale form -- downgraded from THE remaining lemma to a corner convenience.
+
+FILES: THM-690 (canon); lrc14_test_point_theorem_klein_S239.py (+.out); HYP-5920 resolved; backlog updated; memory.
+
 ## mac-mini-2026-07-09-S65 (cont.21, 2026-07-10) -- THE GOODSET BAND LEMMA PROVED (LRCGoodSetBand.lean, 3 theorems, kernel-pure) + THE FIRST MACHINE-GENERATED LEG INSTANCE (LRCLegDemo.lean, witnessG2 >= 1217/8820 exact, 260 norm_num certificates): ENGINE-LISTS-IN, PROOF-OUT IS NOW LITERAL.
 
 Prompt (owner): prove the goodSet band lemma, extend the session.

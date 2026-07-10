@@ -1,0 +1,11 @@
+(i) E-side verification: min_a m_E(a/13) >= 1/91 for nasty E shapes:
+    worst min_a m_E(a/13) over 18 shapes = 1/91 = 0.010989 (bound 1/91 = 0.010989) [consec-12] -- theorem holds
+
+(ii) P-side: every p <= 12 has frac(p*a/13) in [1/13, 12/13] (clearance 1/182) -- arithmetic, spot-checked:
+    violations: 0/144 (13 is prime; none possible)
+
+(iii) THE CORNER pmax = 13: exhaustive P-census (13 in P, |P| = 1..5) x E battery, exact mu_inf:
+    3176 corner classes evaluated; zeros: 0; min mu_inf = 0.044079
+    at P = [1, 3, 4, 13], E = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+STATUS: pmax <= 12 PROVED (all E, all k); the corner (13 in P) exhaustively censused over P with adversarial E batteries -- all positive.
