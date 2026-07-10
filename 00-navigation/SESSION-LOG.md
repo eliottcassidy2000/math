@@ -83,6 +83,26 @@ EXTENDED LRCHyperbolaBox.lean with LEM-022 Step 3 (my HYP-5870 stage-2): **harmo
 STATE OF LEM-022 IN LEAN after S10+S12: [Step 2 separation/box count: DONE] + [Step 3 dyadic assembly: DONE] + [Step 1 Fourier completion: THE ONLY REMAINING PIECE -- |C_w - b^2/q| <= (q/4)*S via additive characters over ZMod q + the sine bound |B-hat(h)| <= q/(2 cdist h); Mathlib's Analysis.Fourier.ZMod / AddChar orthogonality is the infrastructure]. Once the completion lands, the assembled Lean LEM-022 reads: |C_w - b^2/q| <= 5 q (log2 q + 1)^2 / P(w) -- one constant better than canon.
 
 COLLISION flag: klein-S231 claimed HYP-5870 (t2 canon write-up) -- MY S10 claim-first (LRCHyperbolaBox, delivered); klein renumbers; no work overlap (theirs = canon document, mine = the Lean). FILES: LRCHyperbolaBox.lean (extended, +one_le_cdist + harmonic_ratio_sum_mul_le), manifest comment. NEXT: (a) the Fourier completion (the last LEM-022 Lean piece -- C-comfortable agent or me next session); (b) with it, LEM-022's full inequality assembles in one theorem; (c) the q0-regime banks stand as the fleet's load-bearing item (S11).
+## kind-pasteur-2026-07-09-S127 (cont.3) -- FORMALIZED the multiplicative CHARACTER-BOUND ANCHOR (LRCMultCorrelation.lean, sorry-free, kernel-pure): the diagonal-suppression L2 assembly. Per-cell correlation bound M => total off-diagonal energy <= M*(|A|^2-|A|), diagonal r_1=|A| isolated.
+
+Prompt (owner): keep pushing -- formalize the multiplicative character bound anchor.
+
+SCOUTED: klein-S231 (t2 formal write-up, HYP-5870) + death-star-S11 (t>=3 gate anatomy: absolute CS DIVERGES x3, exact self-similarity A(psi)=(1-2beta)conj(chat) reducing t>=3 to signed t2) + death-star LRCHyperbolaBox.lean (cdist circle metric + multiplicative-separation pigeonhole + hyperbola_box_count = per-cell combinatorial bound, char-FREE). Mathlib HAS Finset.mulEnergy + mulEnergy_eq_sum_sq + CS bounds. So the character bound is HOT (klein/death-star lane). KEY: the ABSOLUTE Cauchy-Schwarz is REFUTED (death-star-S11); the signed structure is load-bearing.
+
+BUILT (LRCMultCorrelation.lean, sorry-free, kernel-pure [propext, Classical.choice, Quot.sound], 8475 green; namespace LonelyRunner.MultCorrelation, any finite Group G):
+- mcorr A w := #{(a,b) in A^2 : a*b^-1 = w} (multiplicative pair-correlation at ratio w).
+- sum_mcorr: sum_w mcorr A w = |A|^2 (every pair has a ratio; via card_eq_sum_card_fiberwise).
+- mcorr_one: mcorr A 1 = |A| (the DIAGONAL, pairs (a,a); card_bij).
+- mcorr_le_card: mcorr A w <= |A| (trivial per-cell bound).
+- THE ANCHOR offdiag_mcorr_sq_le: given mcorr A w <= M for all w != 1 (the equidistribution input, e.g. from LRCHyperbolaBox.hyperbola_box_count), sum_{w!=1} (mcorr A w)^2 <= M*(|A|^2-|A|). Proof: sum mcorr^2 <= M*sum mcorr (per-cell), sum_{w!=1} mcorr = |A|^2 - |A| (total minus diagonal).
+
+WHY THIS ANCHOR: klein's t2 = the off-diagonal multiplicative pair-correlation mass sum_{w!=1} mcorr^2. This is the SAFE STRUCTURAL HALF -- an IDENTITY/L2-aggregation (NOT the refuted absolute CS): it CONVERTS a uniform per-cell bound M (the analytic equidistribution content death-star's hyperbola box count provides) into the total off-diagonal energy bound (the t2 bound). The diagonal w=1 (mass |A|^2) is isolated -- exactly klein's diagonal-suppression structure, and where my multiplicative rigidity (LEM-023) concentrates. General (any finite group), so specializes to (ZMod q)* at any prime ruler.
+
+STATE: the multiplicative axis now has THREE Lean layers: rigidity (LEM-023/LRCMultRigidity) + deficit anchor (LRCMultBudget) + the correlation/character-bound anchor (LRCMultCorrelation). The character bound = [per-cell equidistribution M: death-star hyperbola, klein t2] (analytic, hot) + [this L2 aggregation: mine, done] + [t>=3 -> t2: death-star signed self-similarity]. The remaining gap = the per-cell M (equidistribution) + the signs -- klein/death-star's lane.
+
+My LRC Lean ~52 nodes, chain S114..S127. FILES: LRCMultCorrelation.lean.
+
+NEXT: the anchor consumes a per-cell bound mcorr A w <= M. death-star's hyperbola_box_count provides exactly this shape (box count of small-in-both-directions lattice points). Wiring LRCHyperbolaBox -> mcorr per-cell bound -> offdiag_mcorr_sq_le would give the t2 bound end-to-end in Lean (coordinate with death-star). The signed t>=3->t2 reduction remains death-star's.
 
 ## opus-2026-07-09-S200 -- INVESTIGATED eliminating the two window native_decide axioms via kernel decide: EMPIRICALLY INFEASIBLE (winData22_complete = C(22,13)=497420 census, >13h generation + OOM). Corrected my own S199 overclaim (MISTAKE-135). native_decide is the correct tool.
 
