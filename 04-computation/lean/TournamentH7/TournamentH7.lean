@@ -448,3 +448,7 @@ import TournamentH7.LRCSafeCertSize1  -- mac-mini-S65cont22: hB certificate tabl
 import TournamentH7.LRCSafeCertSize2  -- mac-mini-S65cont22: hB table |S|=2 (78 families, 917 comps, cap 66/91, argmin {1,13})
 import TournamentH7.LRCSafeCertSize3  -- mac-mini-S65cont22: hB table |S|=3 (286 families, 4397 comps, cap 55/91, argmin {1,12,13})
 import TournamentH7.LRCSafeCertSize4_g1to2  -- mac-mini-S65cont22: hB table |S|=4 first elem 1-2 (385 families, 6268 comps, cap 1979/4004, argmin {1,11,12,13}); g3to10 + Size5 files emitted, building
+import TournamentH7.LRCSafeCertSize4_g3to10  -- mac-mini-S65cont22: hB table |S|=4 first elem 3-10 (330 families) -- TABLE COMPLETE with g1to2
+import TournamentH7.LRCSafeCertSize5_c1  -- mac-mini-S65cont22: hB table |S|=5 first elem 1 (495 families incl. the SHARP argmin {1,5,7,8,9} = capRat(8) exactly)
+import TournamentH7.LRCSafeCertSize5_g2to3  -- mac-mini-S65cont22: hB table |S|=5 first elem 2-3 (540 families)
+import TournamentH7.LRCSafeCertSize5_g4to9  -- mac-mini-S65cont22: hB table |S|=5 first elem 4-9 (252 families) -- ALL 2380 hB certificates GREEN: every subset S of {1..13}, |S| <= 5, floored at its exact capRat ladder constant, kernel-pure
