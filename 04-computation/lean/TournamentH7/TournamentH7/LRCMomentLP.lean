@@ -69,4 +69,26 @@ theorem measure_pos_ge_of_moment_ge (μ : Measure Ω) [IsProbabilityMeasure μ]
     b ≤ (μ {x | 0 < W x}).toReal :=
   le_trans hb (integral_le_measure_pos μ W hW p hint hbound)
 
+/-- **The moment-LP bound from polynomial coefficients (THM-661, packaged).** For a degree-`d` polynomial
+`p(w) = Σ_{i≤d} cᵢ wⁱ` that is feasible (`p(w) ≤ 1_{w>0}` pointwise), the moment functional
+`Σ_{i≤d} cᵢ E[Wⁱ]` lower-bounds the good-set measure `μ{W>0}`. This is the general/abstract content of the
+D3/B_d density-floor route: it reduces the per-k bar `bar ≤ μ(GOOD)` to (a) the RATIONAL moment bound
+`bar ≤ Σ cᵢ mᵢ` (LRCD3FloorCert, native_decide) and (b) the moment identity `mᵢ = E[Wⁱ] = ∫ Wⁱ` (the
+Farey-cell integration) — nothing else. -/
+theorem momentLP_from_coeffs (μ : Measure Ω) [IsProbabilityMeasure μ]
+    (W : Ω → ℝ) (hW : Measurable W) (d : ℕ) (c : ℕ → ℝ)
+    (hint : ∀ i ∈ Finset.range (d + 1), Integrable (fun x => c i * W x ^ i) μ)
+    (hfeasible : ∀ w : ℝ, (∑ i ∈ Finset.range (d + 1), c i * w ^ i)
+        ≤ ({y : ℝ | 0 < y}).indicator (fun _ => (1 : ℝ)) w) :
+    (∑ i ∈ Finset.range (d + 1), c i * ∫ x, W x ^ i ∂μ) ≤ (μ {x | 0 < W x}).toReal := by
+  have hpint : Integrable (fun x => ∑ i ∈ Finset.range (d + 1), c i * W x ^ i) μ :=
+    integrable_finsetSum _ hint
+  have hlin : (∑ i ∈ Finset.range (d + 1), c i * ∫ x, W x ^ i ∂μ)
+      = ∫ x, (∑ i ∈ Finset.range (d + 1), c i * W x ^ i) ∂μ := by
+    rw [integral_finsetSum _ hint]
+    exact Finset.sum_congr rfl (fun i _ => (integral_const_mul (c i) _).symm)
+  rw [hlin]
+  exact integral_le_measure_pos μ W hW (fun w => ∑ i ∈ Finset.range (d + 1), c i * w ^ i)
+    hpint hfeasible
+
 end LRCMomentLP
