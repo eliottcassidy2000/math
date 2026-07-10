@@ -1,0 +1,21 @@
+(1) THE ONE-SIDEDNESS, exhibited on the spread staircase E = [0, 160, 166, 172, 178, 184, 190, 196] (surjective mod 7, e_max = 196, SPREAD branch):
+    right (delta > 0): coverage persists (adversary wins): m_E at 4 sliver points = [0.0, 0.0, 0.0, 0.0]
+    left  (delta < 0): coverage FAILS (theorem): m_E at 4 sliver points = [0.0010932944606413995, 0.0036443148688046646, 0.007288629737609329, 0.009839650145772596]
+
+(2) ONE-SIDED D-FREENESS (the repaired statement): for every surjective E and every a, AT LEAST ONE sliver of a/7 is D-free:
+    180 (E,a) pairs: both-free 178, left-only 1, right-only 1, BOTH-COVERED 0 (theorem requires 0)
+
+(3) non-surjective E: m_E(a/7) >= 1/7:
+    all >= 1/7: True
+
+(4) P containing 7: the q*-theorem applies to EVERY such P (k <= q* - 1 < q*):
+    violations: 0 (over all P containing 7, k >= 8)
+
+(5) mu_inf spot checks on the previously-censused hard corner (five top-blocks x spread staircase):
+    P=[9..13] (k=8): staircase mu_inf = 0.089241 > 0: True
+    P=[10..13] (k=9): staircase mu_inf = 0.095809 > 0: True
+    P=[11..13] (k=10): staircase mu_inf = 0.095175 > 0: True
+    P=[12..13] (k=11): staircase mu_inf = 0.093847 > 0: True
+    P=[13..13] (k=12): staircase mu_inf = 0.118443 > 0: True
+
+COMPLETE: [P w/o 7: 7-torsion dichotomy] + [P with 7: q*-theorem] = mu_inf > 0 for EVERY two-scale class. No census residue.
