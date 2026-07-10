@@ -1,3 +1,17 @@
+## boxeph-2026-07-09-S10 -- LRCP2Eval.lean FIRST-TRY GREEN: concrete P2 evaluation (B2(x) = x^2 - x + 1/6; P2(j/V) explicit rational) -- the enabler for every decide-shaped consumer of the aliasing surface
+
+Prompt (owner): drive the LRC(14) Lean proof toward its final state; pull often; integrate as agents push.
+
+INTEGRATED (this hour's landings): kps-S127 pins the final-rung obstruction to the 2-ADIC E3 DIAGONAL (doubling pairs; odd-cyclic Schur-triangle content FREE -- formalized split schurCount_eq_doubling_add_offDiag); opus-S198 LRCBurdenGap.lean (Cauchy-Davenport disjoint-block burden, kernel-pure); death-star-S7 delivered LEM-012 in Lean; klein-S227 owns HYP-5850 (parity pairing Lean). The GrandAssembly ResidualObligation remains the live surface.
+
+DELIVERED (LRCP2Eval.lean, FIRST-TRY green, 3 theorems kernel-pure, root-wired): bernoulliFun_two (B2(x) = x^2 - x + 1/6, general x, via the ZetaValues example's own tactic recipe); P2_eval (P2(x) = fract(x)^2 - fract(x) + 1/6); P2_grid (P2(j/V) = (j/V)^2 - j/V + 1/6 for j < V, fract = identity on [0,1)). WHY IT MATTERS: with P2 an explicit quadratic, Re(plW) at rational grid points is a finite explicit rational -- the domination hypothesis of exists_good_of_mean_pos becomes norm_num-checkable per grid point from cell-engine (alpha, a, w0) data. This closes the last generic gap between my aliasing surface (10+3 kernel-pure theorems) and CONCRETE per-(E,V) certificates.
+
+THE ALIASING SURFACE, FINAL FORM (S6-S10, 13 kernel-pure theorems, 4 files): LRCAliasingBound (orthogonality + Poisson + sharp 1/12 tail) -> LRCPLFourier (PL input via periodized-Bernoulli basis, thm665_full) -> LRCGridPort (reverse-triangle: mean -> count -> witness) -> LRCP2Eval (concrete evaluation). Consumers: clamp instantiation (mechanical), window certificates (norm_num-shaped), D_m product-clamps.
+
+HANDOFFS: (a) anyone: the clamp (alpha, a, w0) emitter (cell engine -> Lean literals) + one worked per-(E,V) certificate = the aliasing program's first fully concrete Mreach certificate; (b) klein: the half-threshold signed count (S9 lead) inside HYP-5850; (c) the 2-adic E3 diagonal (kps-S127) is the final rung -- my surface's role there is the off-diagonal FREE part (already served). FILES: LRCP2Eval.lean (+root); log.
+
+---
+
 ## opus-2026-07-09-S198 -- FORMALIZED the DISJOINT-BLOCK burden bound (LEM-016(i) dominant-gap case, kernel-pure) -- ANY k-set with a gap > D/2 has burden >= 3k-7 (k=7 => 14 = LEM-016(i) tail; k=13 => 32 = monad THM-682 core). Noticed both Freiman axes fail at k<=4.
 
 Prompt (owner): work the still open axis (the burden axis: LEM-016(i) + non-covering).

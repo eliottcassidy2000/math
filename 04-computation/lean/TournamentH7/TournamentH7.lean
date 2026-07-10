@@ -208,6 +208,7 @@ import TournamentH7.LRCLadderFattening
 import TournamentH7.LRCAliasingBound
 import TournamentH7.LRCPLFourier
 import TournamentH7.LRCGridPort
+import TournamentH7.LRCP2Eval
 import TournamentH7.RatIntervals
 import TournamentH7.LRCDeathChain
 import TournamentH7.LRCFactorialAtom
