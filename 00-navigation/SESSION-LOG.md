@@ -35,6 +35,24 @@ HONEST: I did NOT close the counting (TwoDetunedClearing) -- it is the genuine a
 To discharge MultiDetunedDispatch (opus-S209) fully: prove TwoDetunedClearing (this counting) + the d=3 analogue + the (2,2)/(3-residual) lifts. Files: LRCDetunedD2.lean (+root). -> opus-S209 (MultiDetunedDispatch peel), S208 (the d-detuned finding), monad THM-678, DetunedDispatch.lonely14_of_detuned (d=1 template), hB5.
 
 ---
+## kind-pasteur-2026-07-10-S127 (cont.14) -- WIRED my difference-primitive collapse into opus-S209's dissociated peel. The two routes MEET; the wiring proves my rigidity sits STRICTLY ABOVE opus's floor (THM-678 dispatch redundant on the rigidity route). Kernel-pure.
+
+Prompt (owner): wire the primitive collapse into opus's dissociated peel.
+
+THE WIRE (one observation): opus's residual clause 2 "tupleGcd v = 1" is LITERALLY my Primitive v. Proved primitive_of_tupleGcd_one (d>=2 dividing all v_i => d.natAbs | gcd = 1, impossible). So my S127 collapse dilated_primitive_eq_range applies VERBATIM on opus's surface.
+
+WHAT THE COLLAPSE DOES ON THE FLOOR: on the primitive residual the collapse pins the ENTIRE tight locus to the single set {1,...,13}. But every residual is GapFamily (ratio>13) and {1,...,13} has ratio exactly 13 (gapFamily_image_ne_range = the AP-case of not_dilated_of_gapFamily). So NO primitive residual family is tight =>
+  PrimitiveTightRigidity => SafeMeasureFloorPrimitive (opus's weakest floor)   [safeMeasureFloorPrimitive_of_primitiveTightRigidity]
+   => ResidualObligationPrimitive => ResidualObligationDissoc (a fortiori, dissociation clause UNUSED)
+   => LRC14Statement (opus's dissoc assembly).
+
+THE REVEAL (relative strength, machine-checked): my rigidity discharges the WHOLE primitive residual, so THM-678's dispatch hMD is REDUNDANT on this route -- lrc14_of_primitiveTightRigidity closes LRC(14) with NO hMD. The tight rigidity is SUFFICIENT OVERKILL: opus's SafeMeasureFloorPrimitive only asks mu>0; my PrimitiveTightRigidity asks the far stronger mu=0 => {1,...,13} and throws most of it away (uses only the {1..13}-vs-GapFamily contradiction). HONEST MORAL for the fleet + a correction to chasing my own rigidity: SafeMeasureFloorPrimitive is the MINIMAL analytic target -- prove the FLOOR (mu>0), NOT the rigidity. opus's peel aims at exactly the right minimal object; my rigidity is a ceiling above it, good for LOCATING difficulty (>=LRC-hard) not for spending proof effort.
+
+BOUNDARY: PrimitiveTightRigidity is the S127 open conjecture; this is a REDUCTION BETWEEN OPEN HYPOTHESES, kernel-pure [propext, Classical.choice, Quot.sound], not a proof of any floor. What is now a THEOREM is the ORDERING: PrimitiveTightRigidity >= SafeMeasureFloorPrimitive >= opus dissoc obligation >= LRC(14), collapse ({1..13}) load-bearing at top, opus's floor the weakest link (the one to attack).
+
+FILES: LRCDissociatedRigidity.lean (new, root-wired at TournamentH7.lean:445-446; also wired LRCTightRigidity into root). Full root builds 8806 jobs green. All 5 wiring thms kernel-pure. Reflection the-two-routes-meet-rigidity-is-above-the-floor-kps-S127.md. My LRC Lean ~85 nodes, S114..S127.
+
+NEXT: opus's SafeMeasureFloorPrimitive (mu>0 on the primitive residual) is the minimal open target -- weaker than my rigidity, closes the same theorem. Real progress = a genuine per-family / uniform mu>0 floor there (opus inf mu ~ 0.0085 empirical; mac-mini per-family exact-mu; klein THM-685 transfer at q>Sigma v/mu). Do NOT chase the full rigidity.
 
 ## kind-pasteur-2026-07-10-S127 (cont.13) -- difference-primitive TightRigidity is STILL the conjecture. PROVED the provable piece (the COLLAPSE c=1 => {1,...,13}) kernel-pure + named the untouched wall + search evidence.
 
