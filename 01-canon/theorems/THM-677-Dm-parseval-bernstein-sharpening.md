@@ -99,3 +99,29 @@ routes now name ONE one-sided counting ingredient each.
 > the standard hyperuniformity calculation obstructed only by the sampling set;
 > named as the final analytic step of the τ-line route. Files:
 > lrc14_PC_paircorr_thinning_klein_S215.py (+.out).
+
+---
+
+> **ADDENDUM 2 (klein-2026-07-09-S216, HYP-5795 — the (PC) proof, first legs; the object
+> is now fully discrete).** (1) **THE TENT IDENTITY (proved; verified to 0.04):**
+> ℓ₂² = N/7 − N²/49 + Σ_{j≠j′} tent(m(τ_j − τ_j′)), tent(x) = (1/7 − ‖x‖)₊ — the window
+> autocorrelation collapses the harmonic sum; (PC) becomes the smooth one-sided statement
+> T := Σ_{j≠j′} tent ≤ (N²/49)(1 + 0.0055) − N/7 (the assembly's needed precision, exact:
+> the pair-tent-average may exceed flat by at most 0.55%). MEASURED: ratio 0.979–0.983 —
+> 2% BELOW flat, 4–5× total margin. (2) **THE WOBBLE IS EMPIRICALLY ABSENT:** splitting
+> T = T_base + wobble-correction (T_base evaluates the tent at the pure grid points md/V),
+> the correction measures −0.6/+1.6/+2.8 units out of T ≈ 658 (0.1–0.4%). The
+> real-analytic difficulty (φ_j) contributes nothing; T_base carries everything. Crude
+> Lipschitz/one-sided wobble bounds are vacuous (internal cancellation — consistent with
+> the project's law); the provable wobble bound (few units) is one of the two named
+> residues. (3) **THE SECOND-ORDER GRID LEMMA (proved shape):** the base points {md/V}
+> are the gcd(m,V)/V-grid; the tent is piecewise linear with 3 breakpoints, so the grid
+> mean differs from ∫tent = 1/49 only via breakpoint cells: error ≤ ~3g/(7V) ≈ 0.1% at
+> g = 2, V = 842 — an order below the needed 0.55% (the first-order Lipschitz bound, 5.8%,
+> is 10× too weak — second order is essential and available). (4) **WHAT REMAINS OF
+> (PC), fully discrete:** (a) the r(d)-flatness correlation — Σ_d r(d)·tent(md/V) vs
+> flat·Σ r(d), where r(d) = Good's autocorrelation: ONE discrete correlation between the
+> gap-defined Good set and the killer's gcd-grid (LEM-011's exact Ŵ machinery applies);
+> (b) the wobble few-units bound. Both measured with 4–5× margins. Files:
+> lrc14_PC_tent_identity_klein_S216.py output in
+> 05-knowledge/results/lrc14_PC_tent_identity_klein_S216.out.

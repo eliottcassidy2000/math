@@ -1,3 +1,23 @@
+## klein-2026-07-09-S216 -- THE (PC) PROOF, FIRST LEGS (THM-677 Addendum 2): the TENT IDENTITY collapses (PC) to a smooth one-sided statement; THE WOBBLE IS EMPIRICALLY ABSENT (the object goes FULLY DISCRETE); the second-order grid lemma closes the flat part; two named residues at 4-5x margins
+
+Prompt (owner): run the (PC) hyperuniformity number-variance proof; pull regularly, reframe as needed.
+
+REFRAME (per the mandate): the 'hyperuniformity number-variance' framing resolved into something sharper -- the window-autocorrelation (TENT) identity, which both smooths the object and REMOVES the real-analytic layer entirely.
+
+**(1) THE TENT IDENTITY (proved; verified to 0.04 against H=400 harmonics).** l2^2 = N/7 - N^2/49 + T with T = sum_{j!=j'} (1/7 - ||m(tau_j - tau_j')||)_+ . (PC) becomes: T <= (N^2/49)(1 + 0.0055) - N/7 -- the pair-tent-average may exceed flat by at most 0.55% (exact from the assembly constants). MEASURED: 0.979-0.983 -- 2% BELOW flat. 4-5x margin.
+
+**(2) THE WOBBLE IS EMPIRICALLY ABSENT (the arc's last surprise).** Splitting T = T_base + wobble (T_base = tent at the pure grid points md/V): the wobble correction is -0.6/+1.6/+2.8 units out of ~658 (0.1-0.4%). The phase field phi_j -- the source of ALL the drift/realization agony since S207 -- contributes NOTHING to the pair statistics. The object is FULLY DISCRETE: T_base = sum_d r(d) tent(md/V), r(d) = Good's autocorrelation. (Crude wobble bounds remain vacuous -- internal cancellation, 6th confirmation of the law.)
+
+**(3) THE SECOND-ORDER GRID LEMMA (proved shape).** Base points {md/V} = the gcd(m,V)/V-grid. Tent is piecewise linear with 3 breakpoints => trapezoid-exactness off breakpoint cells: grid-mean error <= ~3g/(7V) ~ 0.1% at g=2, V=842 -- an order below the needed 0.55%. (The first-order Lipschitz bound gives 5.8% -- 10x too weak. Second order is essential and available.)
+
+**(4) WHAT REMAINS OF (PC) -- two named, measured residues:** (a) r(d)-FLATNESS: sum_d r(d) tent(md/V) <= flat x (1 + 0.45%-budget) -- ONE discrete correlation between the gap-defined Good set and the killer's gcd-grid; LEM-011's exact W-hat machinery applies to Good's spectrum; (b) the wobble few-units bound. Both at 4-5x measured margins.
+
+FLEET STATE ABSORBED: death-star delivered LRCDiscreteBonferroni.lean (THM-671's histogram certificate, kernel-pure -- the modular certificate is IN LEAN); mac-mini: hfloor 'one C-run from fully proved' (k=11 band [19,24] exhaustive, 959k shapes); monad THM-678 detuned dispatch proved. The infrastructure keeps consuming the arc's output.
+
+FILES: THM-677 Addendum 2; lrc14_PC_tent_identity_klein_S216.out; HYP-5795; log; memory.
+
+NEXT: (a) the r(d)-flatness correlation -- expand r(d) via Good's indicator spectrum (LEM-011) against the killer grid's tent-comb; the resonances are t with tm ~ 0 mod V: gcd-structured, finite; (b) the wobble few-units bound (needs the psi-increment distribution or a smarter one-sided argument); (c) V >~ 5000 verification; (d) Lean: tent identity is elementary (window autocorrelation) -- formalizable against the LRCDiscreteBonferroni pattern.
+
 ## klein-2026-07-09-S215 -- (PC) RUN: verified SUB-POISSONIAN (eps <= 0, all killers, both banks) + Bernstein verified 4-20x slack => THM-677's assembly verified END-TO-END; thinning escape refuted; the mechanism NAMED (hyperuniformity of bounded lattice perturbations); THE ARC SUMMARY -- what remains for LRC(14), final form
 
 Prompt (owner): run the (PC) pair-correlation count; work remaining mathematical reasoning for the formalization.

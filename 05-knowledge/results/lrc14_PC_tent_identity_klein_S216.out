@@ -1,0 +1,19 @@
+
+=== bank2-style 3M: V=842 N=182 ===
+  m=  420 (gcd=  2): T=   658.2 vs mean(N(N-1)/49)=   672.3 ratio=0.979
+       Tbase=   658.7 (ratio 0.980); wobble corr =     -0.6
+       identity: l2^2 tent-form=   8.17 vs harmonic(H=400)=   8.13 (agree to 0.04; tail h>400 explains gap)
+       needed: l2^2 <= (6/49)(1+eps)N = 22.3(1+eps); tent-form gives eps = -0.633
+  m=  286 (gcd=  2): T=   658.5 vs mean(N(N-1)/49)=   672.3 ratio=0.980
+       Tbase=   657.0 (ratio 0.977); wobble corr =     +1.6
+       identity: l2^2 tent-form=   8.54 vs harmonic(H=400)=   8.50 (agree to 0.04; tail h>400 explains gap)
+       needed: l2^2 <= (6/49)(1+eps)N = 22.3(1+eps); tent-form gives eps = -0.617
+  m=  176 (gcd=  2): T=   660.5 vs mean(N(N-1)/49)=   672.3 ratio=0.983
+       Tbase=   657.7 (ratio 0.978); wobble corr =     +2.8
+       identity: l2^2 tent-form=  10.53 vs harmonic(H=400)=  10.48 (agree to 0.05; tail h>400 explains gap)
+       needed: l2^2 <= (6/49)(1+eps)N = 22.3(1+eps); tent-form gives eps = -0.528
+
+READING: (a) identity check validates the tent form; (b) ratio(T) <= 1 = the
+sub-Poissonian (PC) in smooth form; (c) Tbase ratio ~ 1 + O(49g/2V) = the
+PROVABLE gcd-grid lemma; (d) the wobble correction's SIGN and size = the one
+remaining anti-concentration statement (negative or small = provable-shaped).
