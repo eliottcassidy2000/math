@@ -75,3 +75,16 @@ ADDENDUM 2 -- THE B = 33 BOUNDARY OBJECT: VERIFIED
     (worst family (1,7,8,9,10,11,12,13,14,19,21,22,23))
   => the conjectured-extension boundary is a trivially native_decide-able verified object.
   B<=29: 2293 sets, nodes 49281911, max diam 18, law B-11=18: HOLDS, 183.6s   [bitmask DFS]
+
+====================================================================================================
+ADDENDUM 3 -- THE DOUBLING-CHAIN CORNER PROBED (the final rung's occupants, measured)
+====================================================================================================
+  8 doubling-rich core families (7-9 doublings, evens 9-11/13, W0 = 0.12-1.39 -- all deep
+  past the 0.08 threshold, B = 60-75 collision-light: EXACTLY the final-rung corner):
+    EVERY family 100% ruler-live (22/22, 12/12, 20/20, 18/18, 15/15, 23/23, 22/22, 15/15)
+    EVERY family lonely with min clearance 0.118-0.19  (1.7-2.7x the 1/14 bar)
+  => the corner is MEASURED EMPTY of adversaries: high W0 does not translate to ruler death
+     (the doubling lines never align adversarially at all rulers simultaneously = THM-681's
+     signed-cancellation option (ii), now with direct data). The rung's remaining content is
+     to PROVE the cancellation (or the 2-adic dispatch) -- zero empirical counterpressure.
+  B<=30: 5767 sets, nodes 63399127, max diam 19, law B-11=19: HOLDS, 252.0s   [bitmask DFS, appended on completion]
