@@ -48,6 +48,25 @@ CHARACTER-ROUTE COMBINATORIAL CORE NOW CLOSED END-TO-END IN LEAN: hyperbola_box_
 My LRC Lean ~54 nodes, chain S114..S127. FILES: LRCMcorrHyperbola.lean, lrc14_census6_witness_cover_kps_S127.py/.out.
 
 NEXT: (a) formalize the 6-witness cover as the window-22 replacement (each of 14002 families lonely at one of 6 explicit tau -- still enumerative but 14002 not 497420, exact-rational not native_decide; or a STRUCTURAL partition by which tau works). (b) the wiring's remaining input = the hyperbola-min P (equidistribution) for the residual's ratios -- death-star/klein's analytic lane. (c) bridge zcorr = mcorr on units to feed offdiag_mcorr_sq_le literally.
+## klein-2026-07-09-S233 -- THE CONNECTED CASCADE RUN (HYP-5885): THM-684(I) CORRECTED (box object = the PARTIAL-LIVE counts A_t, A_13 = LM itself; MISTAKE-136) + THE RELATION-TRIPLE LAW (dev3/q -> exact Kronecker-line constants; Schur = -17/1372, stacked lines match 4-5 figures) + the exact layer closure (abs over-count collapses 10-40x -> 1.5x)
+
+Prompt (owner): run the connected cascade next session.
+
+THE CORRECTION FIRST (MISTAKE-136): the S233 convention check (Mobius peel vs the centered pair) failed by O(q); re-deriving the orthogonality showed THM-684(I)'s box object is wrong -- the character layer sum equals A_t(U) = #{c : c*u in B for all u in U}/(q-1), the COMMON-MULTIPLIER (partial-live) count, NOT the product count M_t (M2 = A2 fails 60/78 pairs at q=139; small-q near-agreement masked it at S232). Locked by direct character sums at q=61 (t=2,3, 1e-9; Mobius pure forms = direct pure sums). The correction is a gift: A_2 = THM-683's ratio object verbatim, and A_13(full support) = LM(q) -- THE BOX COUNTS ARE THE PARTIAL LIVE COUNTS; the character program and the certificate program are one interpolation (reflection: the-box-counts-are-partial-live-counts).
+
+THE CONNECTED CASCADE (all 78 pairs + 286 triples EXACT, bitmask popcounts, q = 139..5003, GEN adversary + DIL near-dilation): integer forms Pure2 = Q*A2 - b^2, Pure3 = Q^2*A3 - b*Q*SumA2 + 2b^3; LM/Q = (b/Q)^13 + Sum_t layer_t verified as an EXACT closure vs popcount LM.
+
+(1) THE RELATION-TRIPLE LAW (headline): top-|dev3| triples = EXACTLY the instance's relation triples -- GEN's 9 additive triples (Schur/AP) are ranks 1-9 of 286, all negative; dev3/q converges to EXACT torus constants: c3(Schur) = 121/196 - (6/7)^3 = -17/1372 = -0.012391 (measured -0.012679); DIL stacked lines (1,2,3)/(1,3,4): predicted -0.029640/-0.024538 vs measured -0.029654/-0.024452 -- 4-5 SIGNIFICANT FIGURES. The additive coordinate (Schur/E3) surfaces inside the multiplicative cumulant layer with closed-form rational constants: the two-coordinate quarantine is ONE object at the connected level; THM-681's W0 ledger = this cascade's non-vanishing part from the Fourier side.
+
+(2) EXACT LAYER CLOSURE: GEN LM/Q = 0.097-0.103 at every q; the -0.038 deficit MIGRATES layer-2 -> layer-3 with R>=4 back-compensating +0.029 (relation QUADRUPLES enter sign-flipped). DIL: LM/Q ~ 0.026, L3sig -> -0.44, R>=4 -> +0.25 -- NO truncation convergence at any cumulant order (the quarantine, as designed).
+
+(3) SCALES + q0: max|dev2| ~ q^0.55 (ACZ); non-relation dev3 = noise (median 2.87 at q=5003). Absolute-assembly over-count COLLAPSES from 10-40x (raw, S232) to 1.5x (connected) -- most historical over-counting was self-inflicted layer mixing. q0(t<=3 abs <= budget) = 1009 for GEN; budget/2 not reached by 5003 BECAUSE the relation part does not decay -- and should not: it is a FINITE EXACT LIST. Architecture: handle the relation lattice exactly, decay only the noise. Explains death-star-S11's concurrent findings (per-triple constant in q; cross-triple cancellation needed) -- their constants are my deterministic relation terms; their cancellation is the lattice resummation.
+
+COLLISIONS RESOLVED (wire priority): my S233 HYP-5880 -> HYP-5885 (death-star-S11 claimed 23:06 vs my 23:43); my S229 HYP-5860 -> HYP-5877 (death-star-S9 claim-first, per their flag).
+
+NEXT (backlog lead filed): the RELATION-LATTICE RESUMMATION -- (i) two-term asymptotic LM/Q = torus main term + noise via ET/Weyl on the 13-dim Kronecker line; (ii) exact c_T table for height-<=2 relation types; (iii) the deep-well extremal's lattice vs its measured LM.
+
+FILES: THM-684 (correction + addendum); MISTAKE-136; lrc14_connected_cascade_klein_S233.py + lrc14_cascade_closure_klein_S233.py (+ .out x3 incl. torus constants); reflection; backlog lead; HYP-5885 resolved; memory.
 
 ## boxeph-2026-07-09-S17 -- THE mu_L EVALUATOR, DATA LAYER COMPLETE (HYP-5853 layer 4): all twelve covers exact + every recursion piece SINGLY CONTAINED (the Lean-checker reduction verified) + THE SIX CENSUS-BRANCH WITNESSES (worst (7,6) = 219/224 < 1, exact)
 
@@ -435,7 +454,7 @@ LEAN-CRAFT (pattern library): tuple projections in destructured hypotheses do NO
 
 THE PARITY ARC COMPLETE: S222 (law discovered, exact on 94 rulers) -> S227 (formalized, 5 kernel-pure theorems) -> S228 (operational demo, twins + invariant + dispatch) -> S229 (bank-wired: 966 twins free, standing invariant). The Redei transplant is now load-bearing infrastructure.
 
-FILES: LRCParityBank.lean (+ root wire); HYP-5860; log; memory.
+FILES: LRCParityBank.lean (+ root wire); HYP-5877 (renumbered at S233 from HYP-5860 -- death-star-S9 wire priority); log; memory.
 
 NEXT: the big-ticket residuals unchanged and clearly owned -- the transfer socket's hypothesis (spectral or OffLine form) and the character program's t2 hyperbola lemma (S226 handoff). The formalization now tracks the mathematics with nothing formal-side left in my lane.
 

@@ -3441,3 +3441,37 @@ that a discharge file likely already existed.
 **Rule reinforced:** before ANY new Lean file: `grep -rl <key-identifier>` over the whole tree
 — for the DEFINITIONS *and* for the DISCHARGES/consumers; a stale doc is itself evidence that
 someone has been working the area. Context pressure is exactly when the rule matters most.
+
+---
+
+## MISTAKE-136 (klein-2026-07-09-S232, self-caught at S233): THM-684(I)'s orthogonality box object was MISIDENTIFIED -- the character layer sum equals the COMMON-MULTIPLIER (partial-live) count A_t(U) = #{c : c*u in B for all u in U}, NOT the product count M_t(U) = #{y in B^t : prod y = prod u}
+
+**What happened:** S232 canonized "layer sum = M_t(U)/(q-1)" with M_t the product box count,
+and ran the whole raw-vs-connected scale analysis on M_t. S233's convention check (Mobius peel
+against the centered pair object) failed by O(q); re-deriving the orthogonality showed the
+tuple sum over prod-chi = chi_0 forces ALL u_l*y_l^{-1} equal (not their product), giving
+A_t(U). Direct character sums at q=61 confirm A_t exactly (1e-9) at t=2,3; the product form
+M_2 = A_2 fails at 60/78 pairs at q=139.
+
+**Why it slipped through:** (1) both objects share the main term b^t/q-ish, and at SMALL q the
+integer deviations are small enough that the two counts frequently coincide (q=61 test
+supports agreed exactly); (2) S232's numerical verification exercised the CS cascade (a true
+statement about M_t) rather than the identity itself; (3) at t=2 the two objects are cousins
+(ratio vs hyperbola parametrization of pair correlation) and both had appeared legitimately in
+the program (THM-683 I vs S230's hyperbola), blurring the distinction.
+
+**The cost:** S232's "raw M_3 devs ~ q" attribution and S233's first script run (wrong Mobius
+normalization, garbage P_3 at scale 0.62*q). The qualitative conclusion of S232-III (raw
+counts contain lower layers; connected form needed) survived by luck -- it is true for both
+objects.
+
+**The gift in the correction:** A_2 = THM-683's ratio object verbatim, and A_13 = LM(q)
+itself -- the character program's box counts ARE the partial live counts. The corrected
+cascade then yielded the relation-triple law with exact torus constants (THM-684 S233
+addendum).
+
+**Rule:** when an identity is "proved by orthogonality", VERIFY THE IDENTITY ITSELF
+numerically (not just downstream bounds), at t >= 3 and at q large enough that deviations
+resolve the candidate objects apart. Two counts sharing a main term are indistinguishable
+exactly where verification is cheapest -- push one deviation-scale beyond agreement before
+canonizing.

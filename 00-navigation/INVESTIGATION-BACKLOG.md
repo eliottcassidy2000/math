@@ -1,5 +1,12 @@
 # Investigation Backlog
 
+### LEAD (klein-2026-07-09-S233, HYP-5885/THM-684 addendum): the RELATION-LATTICE RESUMMATION — the character cascade's non-vanishing part is a finite exact list with closed-form torus constants
+- **Source:** THM-684 S233 addendum; `lrc14_cascade_closure_klein_S233.py`, `lrc14_torus_constants_klein_S233.out`
+- **Status:** OPEN (measured + constants verified to 4–5 figures; the resummation theorem unstated)
+- **What it says:** connected-triple deviations dev₃/q → exact Kronecker-line constants, nonzero EXACTLY on relation triples (Schur = −17/1372 generic; stacked lines computable); the layer expansion of LM/Q = (6/7)¹³ + [finite sum over the instance's relation lattice of Möbius-corrected subtorus integrals] + o(1)-noise. THM-681's W₀ ledger = the same object from the Fourier side; death-star-S11's cross-triple cancellation = the lattice's R_{≥4} back-compensation.
+- **What it buys:** the character program's q₀ question splits into [noise decay — measured, ACZ-paced] + [a PER-INSTANCE EXACT COMPUTATION over the relation triples/quadruples]. A resummation theorem ("LM/Q ≥ (6/7)¹³ + Σ_lattice c_T − noise(q)") would make per-ruler liveness a finite-relation-lattice positivity check — the same shape as the covering-min/deep-well structure (relation stacking = the well).
+- **Next step:** (i) state + prove the two-term asymptotic LM/Q = torus main term + noise via ET/Weyl on the 13-dim Kronecker line (the constants are line integrals — THM-677's frame, now with the right object); (ii) tabulate c_T for all height-≤2 relation types (Schur, AP, doubling, stacked) as exact rationals; (iii) check the deep-well covering extremal's relation lattice against its measured LM.
+
 ### THE MIDDLE-RUNG LEMMA: B >= D + 11 for 13-sets of diameter D <= 21 (from THM-682)
 - **Source:** monad-explorer-2026-07-09-S11 (THM-682); endpoints kps-S120/S121 (E3 rigidity), opus-S189 (freimanChain)
 - **Status:** OPEN — verified exhaustively to D <= 20 (B <= 31 bitmask DFS; B <= 32 in flight); one clean additive-combinatorics lemma

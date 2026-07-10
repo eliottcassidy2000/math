@@ -1,0 +1,37 @@
+PART 1 -- convention lock at q=61 (b=52); direct character sums:
+  t=2 (12, 33): Full=+0.733333  A2/Q=+0.733333 [PASS]   M2/Q=+0.733333 [product form UNEXPECTEDLY equal]
+  t=3 (12, 33, 47): Full=+0.666667  A3/Q=+0.666667 [PASS]   pure direct=+0.004148 Mobius=+0.004148 [PASS]
+  t=2 (46, 7): Full=+0.733333  A2/Q=+0.733333 [PASS]   M2/Q=+0.733333 [product form UNEXPECTEDLY equal]
+  t=3 (46, 7, 26): Full=+0.600000  A3/Q=+0.600000 [PASS]   pure direct=-0.004741 Mobius=-0.004741 [PASS]
+  A_13(full GEN support) = 4 = LM(61) by definition (the box counts ARE the partial live counts)
+
+PART 2 -- exact sweep: all 78 pairs + 286 triples (dev2 = centered ratio pair; dev3 = connected triple, layer scale)
+GEN q=  139: |dev2| max=    5.65 med=   0.35 | |dev3| max=     4.00 med=    0.17 | L2abs=0.1633 L3abs=0.1913 (bud 0.1625) | L2sig=-0.0485 L3sig=-0.0127 | max|dev3|/sqrtE2=0.23
+GEN q=  239: |dev2| max=   11.14 med=   1.14 | |dev3| max=     4.53 med=    0.61 | L2abs=0.0969 L3abs=0.1882 (bud 0.1348) | L2sig=-0.0207 L3sig=-0.0178 | max|dev3|/sqrtE2=0.24
+GEN q=  353: |dev2| max=    8.90 med=   1.10 | |dev3| max=     6.32 med=    0.82 | L2abs=0.0736 L3abs=0.1638 (bud 0.1365) | L2sig=-0.0284 L3sig=-0.0158 | max|dev3|/sqrtE2=0.32
+GEN q=  383: |dev2| max=   10.37 med=   1.63 | |dev3| max=     6.48 med=    0.95 | L2abs=0.0631 L3abs=0.1671 (bud 0.1379) | L2sig=-0.0183 L3sig=-0.0237 | max|dev3|/sqrtE2=0.31
+GEN q=  547: |dev2| max=    6.86 med=   1.14 | |dev3| max=     8.04 med=    0.90 | L2abs=0.0497 L3abs=0.1313 (bud 0.1348) | L2sig=-0.0138 L3sig=-0.0217 | max|dev3|/sqrtE2=0.38
+GEN q= 1009: |dev2| max=    8.57 med=   1.43 | |dev3| max=    13.02 med=    1.02 | L2abs=0.0295 L3abs=0.1032 (bud 0.1348) | L2sig=-0.0136 L3sig=-0.0120 | max|dev3|/sqrtE2=0.51
+GEN q= 2003: |dev2| max=   15.14 med=   0.86 | |dev3| max=    26.24 med=    1.47 | L2abs=0.0161 L3abs=0.0887 (bud 0.1348) | L2sig=-0.0054 L3sig=-0.0557 | max|dev3|/sqrtE2=0.85
+GEN q= 3001: |dev2| max=   22.94 med=   1.06 | |dev3| max=    37.17 med=    2.03 | L2abs=0.0135 L3abs=0.0873 (bud 0.1352) | L2sig=-0.0057 L3sig=-0.0569 | max|dev3|/sqrtE2=0.89
+GEN q= 5003: |dev2| max=   40.08 med=   1.92 | |dev3| max=    63.42 med=    2.87 | L2abs=0.0102 L3abs=0.0871 (bud 0.1350) | L2sig=-0.0023 L3sig=-0.0647 | max|dev3|/sqrtE2=0.97
+
+DIL q=  139: |dev2| max=   15.65 med=   1.65 | |dev3| max=     4.00 med=    0.35 | L2abs=0.2148 L3abs=0.3783 (bud 0.1625) | L2sig=+0.0263 L3sig=-0.2189 | max|dev3|/sqrtE2=0.16
+DIL q=  239: |dev2| max=   11.14 med=   1.14 | |dev3| max=     6.24 med=    1.39 | L2abs=0.1381 L3abs=0.4108 (bud 0.1348) | L2sig=+0.0425 L3sig=-0.4019 | max|dev3|/sqrtE2=0.20
+DIL q=  353: |dev2| max=   16.90 med=   2.90 | |dev3| max=    10.06 med=    1.76 | L2abs=0.1384 L3abs=0.3945 (bud 0.1365) | L2sig=+0.0485 L3sig=-0.3411 | max|dev3|/sqrtE2=0.22
+DIL q=  383: |dev2| max=   18.37 med=   1.63 | |dev3| max=    11.39 med=    2.77 | L2abs=0.1269 L3abs=0.4366 (bud 0.1379) | L2sig=+0.0600 L3sig=-0.3996 | max|dev3|/sqrtE2=0.23
+DIL q=  547: |dev2| max=   26.86 med=   1.14 | |dev3| max=    16.33 med=    4.04 | L2abs=0.1197 L3abs=0.4270 (bud 0.1348) | L2sig=+0.0581 L3sig=-0.3831 | max|dev3|/sqrtE2=0.24
+DIL q= 1009: |dev2| max=   51.43 med=   2.57 | |dev3| max=    29.88 med=    7.31 | L2abs=0.1143 L3abs=0.4485 (bud 0.1348) | L2sig=+0.0734 L3sig=-0.4089 | max|dev3|/sqrtE2=0.23
+DIL q= 2003: |dev2| max=  101.14 med=   5.14 | |dev3| max=    58.53 med=   15.39 | L2abs=0.1102 L3abs=0.4430 (bud 0.1348) | L2sig=+0.0747 L3sig=-0.4268 | max|dev3|/sqrtE2=0.23
+DIL q= 3001: |dev2| max=  152.94 med=   7.06 | |dev3| max=    88.37 med=   22.60 | L2abs=0.1108 L3abs=0.4421 (bud 0.1352) | L2sig=+0.0749 L3sig=-0.4298 | max|dev3|/sqrtE2=0.23
+DIL q= 5003: |dev2| max=  254.08 med=  11.92 | |dev3| max=   148.33 med=   37.99 | L2abs=0.1096 L3abs=0.4416 (bud 0.1350) | L2sig=+0.0776 L3sig=-0.4358 | max|dev3|/sqrtE2=0.23
+
+PART 3 -- scaling + the measured q0 (t<=3 truncation):
+  GEN: max|dev2| ~ q^0.55, max|dev3| ~ q^0.77
+    q0(abs<=budget): q=1009   [L2abs+L3abs vs 1.0*(b/Q)^13]
+    q0(abs<=budget/2): NOT REACHED by q=5003   [L2abs+L3abs vs 0.5*(b/Q)^13]
+    at q=5003: abs total=0.0973 signed total=-0.0670 (abs/|signed| = 1.5x)
+  DIL: max|dev2| ~ q^0.78, max|dev3| ~ q^1.01
+    q0(abs<=budget): NOT REACHED by q=5003   [L2abs+L3abs vs 1.0*(b/Q)^13]
+    q0(abs<=budget/2): NOT REACHED by q=5003   [L2abs+L3abs vs 0.5*(b/Q)^13]
+    at q=5003: abs total=0.5512 signed total=-0.3582 (abs/|signed| = 1.5x)
