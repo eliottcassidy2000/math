@@ -30,6 +30,23 @@ THE CHAIN COMPLETE: S222 (the law discovered -- Redei involution transplant, exa
 FILES: LRCParityDemo.lean (+ root wire); HYP-5855; log; memory.
 
 NEXT: (a) wire the parity check into the native_decide banks (kps-S115 pattern) as a standing invariant; (b) the big-ticket residuals unchanged (transfer socket's hypothesis; the character program's t2 lemma).
+## death-star-2026-07-09-S9 -- LEM-022 PROVED: THE t2 HYPERBOLA LEMMA in the P(w)-parameterized form (klein-S226 handoff (a) EXECUTED) -- |C_w - b^2/q| <= 6 q (1+log2 q)^2 / P(w), P(w) = min |h||wh|; measured constant 0.0089 (672x slack); the exception set IS the small-P fibers (P <= ab for ratio a/b, verified 340/340) = the quarantined mult-coherent family
+
+Prompt (owner): work the open mathematical frontier of the LRC(14) formalization; push/pull frequently; be creative in insight generation and connection exploration.
+
+PULLED: the frontier had pinned to klein-S226's handoff (a) -- "write the t2 hyperbola lemma (classical; any analytic-NT-comfortable agent)" -- the FINAL analytic lemma of the signed route; kps-S127 localized the obstruction to the E3 diagonal (2-adic, triangles free); klein-S227 formalized the parity pairing law. Unclaimed; took it.
+
+**THE CREATIVE MOVE: the right lemma is not the uniform sqrt-q bound but the P(w)-PARAMETERIZED bound.** Define P(w) := min_{h != 0} |h| * |wh| (the minimal product of the ratio lattice, circle metric). Then for prime q, interval B of length b, unit w:
+    |C_w - b^2/q| <= 6 q (1 + log2 q)^2 / P(w),   C_w = #{x in B : wx in B}.
+This SUBSUMES the generic sqrt-q log^2 q target (P(w) ~ q/polylog generically => error O(polylog)) AND makes the exception set EXACTLY computable: w = a*b^{-1} => P(w) <= ab (verified 340/340) => the near-dilation t2 enrichment (+52..57, klein-S226) is the small-P budget in action (P <= 156 on a dilation's ratio set). The two-coordinate quarantine becomes [additive: E3] x [multiplicative: P(w)] -- each ONE computable integer per family.
+
+**THE PROOF (elementary, self-contained, in canon):** (1) completion: error <= (q/4) Sum_{k != 0} 1/(|k||wk|) via |B-hat(h)| <= q/(2|h|); (2) THE SEPARATION COUNT: solutions of |k| <= K, |wk| <= M are pairwise P/(2M)-separated on the circle (subadditivity: delta = k1-k2 has P <= |delta||w delta| <= |delta| 2M) => N(K,M) <= 1 + 4KM/P; (3) dyadic assembly: density terms 16/P per class x (1+log2 q)^2 classes + singleton terms (nonempty class => 2^{i+j} > P/4 => geometric tail 8(1+log2 q)/P) => S <= 24(1+log2 q)^2/P => constant 6.
+
+**VERIFIED EXACT** (lrc14_hyperbola_t2_lemma_deathstar_S9.py/.out): integer counts across primes 149..2003, all 156 ordered ratio-twists of the generic covering set {1,2,3,4,7,8,9,10,11,12,13,14,17} AND the near-dilation 20*{1..12}+241, plus FULL w-sweeps (every unit) at q = 149/251/401/557: sup measured ratio = 0.0089 -- the proved constant is 672x conservative; worst cases sit exactly at the small-P twists as predicted.
+
+WHAT THIS UNBLOCKS: klein's handoff (b) -- the t >= 3 Cauchy-Schwarz bootstrap ("mechanical given (a)") -- and then OffLine <= f(E3, P0): sum LEM-022 over twists with P(w) > P0, route P(w) <= P0 to the coherence ladder (LEM-012, in Lean since my S7, owns that branch on the tau-line). The signed route's remaining surface after this session: (b) the CS bootstrap + the q0-regime banks -- both named mechanical. LEAN-ABILITY: bounded (~300-500 lines; the separation count is the exists_free_piece/dvd_Ioc_card_le pigeonhole shape; new infra = finite characters over Z/q + the sine bound).
+
+FILES: LEM-022 canon (full proof), lrc14_hyperbola_t2_lemma_deathstar_S9.py (+ results .out), HYP-5860 (claim -> DELIVERED). NEXT: (a) @klein: (b)-bootstrap is unblocked -- your program, your call; (b) anyone: LEM-022 Lean (the separation count is the fun part); (c) the P(w)-detector joins E3 in the residual-family interface (kps lrc14_from_B5's supply hypothesis can now be stated with both coordinates).
 
 ## boxeph-2026-07-09-S10 -- LRCP2Eval.lean FIRST-TRY GREEN: concrete P2 evaluation (B2(x) = x^2 - x + 1/6; P2(j/V) explicit rational) -- the enabler for every decide-shaped consumer of the aliasing surface
 
