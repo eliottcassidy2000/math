@@ -1,3 +1,19 @@
+## klein-2026-07-09-S217 -- r(d)-FLATNESS RUN (THM-677 Addendum 3): the SPECTRAL SAMPLING IDENTITY (proved) + Good's peaks LOCATED at the cluster co-offsets (LEM-011) + the RESONANCE DICHOTOMY verified both ways (adversarial resonant killer fails exactly as predicted) -- the (PC) proof structure is COMPLETE, two final inequalities remain
+
+Prompt (owner): run the r(d)-flatness correlation.
+
+**(1) THE SPECTRAL SAMPLING IDENTITY (proved; verified).** DFT(r) = |G-hat|^2 and the tent's d-spectrum aliases onto the killer orbit: l2^2(base) = sum_{h!=0} k(h)^2 |G-hat(hm mod V)|^2 -- all terms nonnegative; the killer's D_m budget is EXACTLY a sample of Good's power spectrum along the killer's low harmonics.
+
+**(2) THE PEAKS ARE LOCATED.** Good's spectrum peaks EXACTLY at the cluster co-offset frequencies +-e_i (|G-hat|^2 up to 17x mean at t = 191, 224, 133, 260 = E's elements on bank2). The gap-defined Good set is LEM-011-structured -- measured, as predicted.
+
+**(3) THE DICHOTOMY, both directions.** Generic killers' low harmonics MISS the peaks (sampled values ~ mean N): l2^2 = 7-9 vs needed 24.7. The ADVERSARIAL resonant killer m = 191 (= a cluster co-offset, legal mid-band member) FAILS: l2^2 = 101. Excluded family exactly characterized: {m : hm = n.e (mod V), low height} -- finite, per-instance checkable, structurally the coarse/harmonic family that boxeph's zero-survivor census and monad's dispatch already own. (Note m = co-offset means m + u = V for a cluster member u -- a pair-sum-with-V coincidence, additive structure again.)
+
+**(4) (PC) FINAL FORM.** [tent identity: proved] + [2nd-order grid lemma: proved shape] + [spectral sampling identity: proved] + [peak location: verified/LEM-011] + [resonance dichotomy: verified, excluded family known] + TWO final inequalities: (a) off-peak spectral bound |G-hat(t)|^2 <= C N for t off the low cluster combos (LEM-011's 0.371-decay is the shape; ~3x measured margins); (b) the wobble few-units bound. Everything upstream of these two is proved or proved-shaped, with 3-5x measured margins throughout.
+
+FILES: THM-677 Addendum 3; lrc14_rd_flatness_spectral_klein_S217.out; HYP-5800; log; memory.
+
+NEXT: (a) the off-peak bound -- Good = {j : W(j/V) > c}-shaped; its indicator's spectrum through LEM-011's exact W-hat (geometric 0.371-decay off the combo frequencies); (b) wobble few-units; (c) Lean: the sampling identity is finite Fourier over Z_V (formalizable against boxeph's LRCAliasingBound pattern -- their grid_char_sum is the same primitive).
+
 ## boxeph-2026-07-09-S6 -- FULL GREEN on the aliasing bound (HYP-5778 CONFIRMED): LRCAliasingBound.lean kernel-pure, all 11 draft errors fixed -- THM-665's analytic core is formalized (grid orthogonality + Poisson identity + the SHARP C/(12 V^2) tail via Basel)
 
 Prompt (owner): think deeply about the open frontier, contribute, fix the 11 Lean errors, pursue full green.

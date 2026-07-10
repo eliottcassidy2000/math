@@ -1,0 +1,15 @@
+
+=== bank2-style 3M: V=842 N=182; Good-spectrum: mean(t!=0)=142.8 max=2401 at t=191 ===
+  top Good-spectrum peaks: t=191(|G|^2=2401,-3*0+1*191), t=651(|G|^2=2401,-3*0+-1*191), t=224(|G|^2=1907,-3*0+1*224), t=618(|G|^2=1907,-3*0+-1*224), t=133(|G|^2=1534,-3*0+1*133), t=709(|G|^2=1534,-3*0+-1*133), t=582(|G|^2=1406,-3*0+-1*260), t=260(|G|^2=1406,-3*0+1*260)
+  m=  420: SPECTRAL-SAMPLED l2^2(base)=   8.66  vs direct l2^2(true)=   8.07 (gap = wobble+tail)  need <= 24.7
+       heaviest harmonics: h=1 (t=420, contrib 2.78, |G|^2=73~1*160+1*260), h=2 (t=840, contrib 2.47, |G|^2=80~2*160+2*260), h=5 (t=416, contrib 1.22, |G|^2=247~2*11+-2*224)
+  m=  286: SPECTRAL-SAMPLED l2^2(base)=   6.87  vs direct l2^2(true)=   8.45 (gap = wobble+tail)  need <= 24.7
+       heaviest harmonics: h=4 (t=302, contrib 2.33, |G|^2=194~3*11+-3*191), h=2 (t=572, contrib 1.49, |G|^2=48~2*105+-3*160), h=3 (t=16, contrib 0.65, |G|^2=30)
+  m=  176: SPECTRAL-SAMPLED l2^2(base)=   7.60  vs direct l2^2(true)=  10.43 (gap = wobble+tail)  need <= 24.7
+       heaviest harmonics: h=3 (t=528, contrib 2.33, |G|^2=109~1*68+-2*191), h=4 (t=704, contrib 2.04, |G|^2=170~-3*11+-1*105), h=2 (t=352, contrib 0.90, |G|^2=29~1*37+3*105)
+  ADVERSARIAL m=191 (= top Good-frequency): spectral l2^2 = 101.1 vs need 24.7  RESONANT-FAIL as predicted  (zone: MID-BAND)
+
+READING: identity gap small => the sampling formula is the object; peaks at
+cluster combos => Good's spectrum is LEM-011-structured; killers' low
+harmonics missing the peaks => flatness holds generically; the adversarial
+resonant m shows the excluded family (expected = the coarse/harmonic killers).

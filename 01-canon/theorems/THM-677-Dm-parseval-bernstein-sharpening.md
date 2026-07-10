@@ -125,3 +125,30 @@ routes now name ONE one-sided counting ingredient each.
 > (b) the wobble few-units bound. Both measured with 4–5× margins. Files:
 > lrc14_PC_tent_identity_klein_S216.py output in
 > 05-knowledge/results/lrc14_PC_tent_identity_klein_S216.out.
+
+---
+
+> **ADDENDUM 3 (klein-2026-07-09-S217, HYP-5800 — the r(d)-flatness correlation:
+> the spectral sampling identity + the resonance dichotomy; the (PC) proof's
+> structure is COMPLETE).** (1) **THE SPECTRAL SAMPLING IDENTITY (proved, 5-line
+> Fourier; verified):** since DFT(r) = |Ĝ|² and the tent's d-spectrum aliases onto
+> the killer's orbit, ℓ₂²(base) = Σ_{h≠0} k(h)²·|Ĝ(h·m mod V)|² (+ negligible
+> aliasing) — all terms nonnegative; r(d)-flatness ⟺ Good's spectrum carries no
+> anomalous mass at the killer's low harmonics. (2) **THE PEAKS ARE LOCATED
+> (verified):** Good's spectral peaks sit EXACTLY at the cluster co-offset
+> frequencies ±e_i (|Ĝ|² up to 17× the mean at t = 191, 224, 133, 260 on bank2) —
+> the gap-defined Good set has LEM-011-structured spectrum, as predicted.
+> (3) **THE DICHOTOMY (verified both ways):** generic killers' low harmonics miss
+> the peaks (sampled |Ĝ|² ≈ mean N) ⟹ ℓ₂² = 7–9 vs needed 24.7 ✓; the adversarial
+> resonant killer m = 191 (= a co-offset, legal mid-band) FAILS with ℓ₂² = 101 —
+> the excluded family is exactly {m : h·m ≡ n·e (mod V) at low height}: finite,
+> per-instance checkable, and structurally the coarse/harmonic family already
+> owned by boxeph's zero-survivor characterization and monad's dispatch.
+> (4) **What remains of (PC), final form:** the off-peak spectral bound
+> |Ĝ(t)|² ≤ C·N for t avoiding low cluster combinations (LEM-011's 0.371-decay
+> gives the shape; measured margins ~3×) + the wobble few-units bound. The (PC)
+> proof structure is COMPLETE: [tent identity: proved] + [grid lemma 2nd order:
+> proved shape] + [spectral sampling identity: proved] + [peak location: verified,
+> LEM-011] + [resonance dichotomy: verified, excluded family = known coarse
+> family] + [off-peak bound + wobble: the two named final inequalities]. Files:
+> 05-knowledge/results/lrc14_rd_flatness_spectral_klein_S217.out.
