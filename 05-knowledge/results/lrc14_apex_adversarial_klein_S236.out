@@ -1,0 +1,56 @@
+
+k=1 deep-well family {1..12, V}: P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], E=[0] (k=1)
+  m_P = 6617/194040 = 0.034101   mu_inf = 6617/226380 = 0.029230
+  k<=6 floor (1-k/7)*m_P = 0.029230: mu_inf >= floor OK
+    V=   50: mu(S_V) = 0.033322  err = +0.004092  |err|*V =    0.20
+    V=  100: mu(S_V) = 0.032514  err = +0.003284  |err|*V =    0.33
+    V=  182: mu(S_V) = 0.023897  err = -0.005332  |err|*V =    0.97
+    V=  300: mu(S_V) = 0.030133  err = +0.000903  |err|*V =    0.27
+    V=  500: mu(S_V) = 0.029101  err = -0.000128  |err|*V =    0.06
+    V= 1000: mu(S_V) = 0.029444  err = +0.000215  |err|*V =    0.21
+    V= 2000: mu(S_V) = 0.029268  err = +0.000038  |err|*V =    0.08
+  measured C = max|err|*V = 0.97  (2(sum P + sum E) = 156)
+
+k=2 family {1..11, V-1, V}: P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], E=[0, 1] (k=2)
+  m_P = 10931/194040 = 0.056334   mu_inf = 125281/2988216 = 0.041925
+  k<=6 floor (1-k/7)*m_P = 0.040238: mu_inf >= floor OK
+    V=  100: mu(S_V) = 0.046038  err = +0.004113  |err|*V =    0.41
+    V=  300: mu(S_V) = 0.040717  err = -0.001208  |err|*V =    0.36
+    V= 1000: mu(S_V) = 0.041885  err = -0.000040  |err|*V =    0.04
+    V= 2000: mu(S_V) = 0.041898  err = -0.000027  |err|*V =    0.05
+  measured C = max|err|*V = 0.41  (2(sum P + sum E) = 134)
+
+k=6 family {1..7, V-5..V}: P=[1, 2, 3, 4, 5, 6, 7], E=[0, 1, 2, 3, 4, 5] (k=6)
+  m_P = 82/245 = 0.334694   mu_inf = 2717/27440 = 0.099016
+  k<=6 floor (1-k/7)*m_P = 0.047813: mu_inf >= floor OK
+    V=  100: mu(S_V) = 0.096872  err = -0.002144  |err|*V =    0.21
+    V=  300: mu(S_V) = 0.100957  err = +0.001941  |err|*V =    0.58
+    V= 1000: mu(S_V) = 0.099218  err = +0.000202  |err|*V =    0.20
+  measured C = max|err|*V = 0.58  (2(sum P + sum E) = 86)
+
+k=7 APEX {1..6, V-6..V}: P=[1, 2, 3, 4, 5, 6], E=[0, 1, 2, 3, 4, 5, 6] (k=7)
+  m_P = 16/35 = 0.457143   mu_inf = 2171/29400 = 0.073844
+  k<=6 floor (1-k/7)*m_P = 0.000000: mu_inf >= floor OK
+    V=  100: mu(S_V) = 0.071564  err = -0.002279  |err|*V =    0.23
+    V=  300: mu(S_V) = 0.075710  err = +0.001867  |err|*V =    0.56
+    V= 1000: mu(S_V) = 0.074403  err = +0.000559  |err|*V =    0.56
+  measured C = max|err|*V = 0.56  (2(sum P + sum E) = 84)
+
+k=7 spread co-offsets {1..6, V-27..V}: P=[1, 2, 3, 4, 5, 6], E=[0, 2, 5, 9, 14, 20, 27] (k=7)
+  m_P = 16/35 = 0.457143   mu_inf = 3059369/19619600 = 0.155934
+  k<=6 floor (1-k/7)*m_P = 0.000000: mu_inf >= floor OK
+    V=  300: mu(S_V) = 0.156127  err = +0.000193  |err|*V =    0.06
+    V= 1000: mu(S_V) = 0.156444  err = +0.000510  |err|*V =    0.51
+  measured C = max|err|*V = 0.51  (2(sum P + sum E) = 196)
+
+READING: (C) verified where mu_inf >= (1-k/7) m_P; the two-scale error is O(1/V) with measured C; k=7 classes show whether the apex dead-zone kills mu_inf or the fiber survives on G_P.
+  low: AP d=1           E=[0, 1, 2, 3, 4, 5, 6]  mu_inf = 0.073844
+
+minimum over 41 candidate shapes: mu_inf = 2171/29400 = 0.073844  (AP d=1, E=[0, 1, 2, 3, 4, 5, 6])
+m_P([1, 2, 3, 4, 5, 6]) = 0.457143; iid reference (6/7)^7*m_P = 0.155390
+k=8: P=[1, 2, 3, 4, 5] E=0..7: mu_inf = 0.048885 >0
+k=9: P=[1, 2, 3, 4] E=0..8: mu_inf = 0.044710 >0
+k=10: P=[1, 2, 3] E=0..9: mu_inf = 0.044817 >0
+k=11: P=[1, 2] E=0..10: mu_inf = 0.058560 >0
+k=12: P=[1] E=0..11: mu_inf = 0.074964 >0
+k=13: P=[1] E=0..12: mu_inf = 0.065392 >0
