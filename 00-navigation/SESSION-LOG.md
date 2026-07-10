@@ -1,3 +1,21 @@
+## opus-2026-07-10-S206 -- ADDED THE PRIMITIVITY PEEL to the assembly (LRCPrimitiveAssembly.lean, kernel-pure, foundational-axioms-only): lrc14_grand_assembly_primitive + lrc14_from_B5_primitive restate the residual/hB5 with tupleGcd v = 1, killing the dilates that made inf mu = 0 (S205). The measure-floor node is now WELL-POSED.
+
+Prompt (owner): add the primitivity peel to the assembly.
+
+DONE (LRCPrimitiveAssembly.lean, kernel-pure [propext,Classical.choice,Quot.sound], root-wired, built first try). Non-invasive (new file, did not edit monad GrandAssembly):
+- ResidualObligationPrimitive = ResidualObligation clauses + tupleGcd v = 1.
+- lrc14_grand_assembly_primitive : LRCUpTo13 + ResidualObligationPrimitive => LRC14Statement. Same 8-branch cascade as lrc14_grand_assembly, wrapped by PrimitivePeel.lrc14_of_primitive (S205) so the top v is primitive; the residual leg now hands the supplier hgcd : tupleGcd v = 1.
+- residualPrimitive_of_residual + lrc14_grand_assembly_of_residual : the primitive surface STRICTLY SUBSUMES the old (old obligation => new; never the reverse). Switching loses nothing, shrinks the target.
+- lrc14_from_B5_primitive : the actual finish line with primitivity -- LRC14Statement from LRCUpTo13 + [hB5 on the DILATE-FREE residual (supplier also gets tupleGcd v = 1)]. #print axioms = [propext, Classical.choice, Quot.sound], sorryAx 0.
+
+EFFECT: the S205 dilates (e.g. 2*[1..9,11,12,13,20], mu=1/980, forcing inf mu = 0) are no longer in the obligation's domain, so the measure-floor / hB5 node is WELL-POSED (primitive residual min mu ~ 0.0094 vs iid 0.1348). The fleet can now safely pursue a uniform floor on the primitive residual.
+
+Concurrent (rebase): mac-mini S65cont20/cont21 landed LRCUnionVolume (brick-iii companion, list form) + LRCGoodSetBand (Ico_subset_goodSet_of_bounds + witnessG2_ge_of_sorted_bands) -- the witness-floor discharge pipeline for hsmall3/hlarge is now engine-lists-in-proof-out, consuming my S204 brick (iii). Kept both imports on the root conflict.
+
+Files: LRCPrimitiveAssembly.lean (+root). -> opus-S205 (LRCPrimitivePeel, the dilate finding), klein THM-685, hB5, lrc14_from_B5 (kps-S123), lrc14_grand_assembly (monad).
+
+---
+
 ## klein-2026-07-10-S237 -- THE MULTI-SCALE EXTENSION (THM-688, HYP-5910): middle speeds COMPLETED -- separated scales get the PRODUCT limit (iterated slicing, rate C(1/V_r + Sum V_{i+1}/V_i)); bounded-ratio middle clusters are RATIONAL-RAY b-COVER objects (product limit fails by persistent +0.0124 at b=2; the exact 2-cover limit 49379/470400 converges at C/V); the taxonomy is CLOSED -- every scale structure has an exactly computable limit measure
 
 Prompt (owner): run the multi-scale extension for middle speeds.
