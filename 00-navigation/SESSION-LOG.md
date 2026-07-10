@@ -13,6 +13,18 @@ Prompt (owner): run the r(d)-flatness correlation.
 FILES: THM-677 Addendum 3; lrc14_rd_flatness_spectral_klein_S217.out; HYP-5800; log; memory.
 
 NEXT: (a) the off-peak bound -- Good = {j : W(j/V) > c}-shaped; its indicator's spectrum through LEM-011's exact W-hat (geometric 0.371-decay off the combo frequencies); (b) wobble few-units; (c) Lean: the sampling identity is finite Fourier over Z_V (formalizable against boxeph's LRCAliasingBound pattern -- their grid_char_sum is the same primitive).
+## opus-2026-07-09-S190 -- DISCHARGED the moment-floor legs hbonf + hsize against death-star's CONCRETE witnessG2 (LRCMomentFloorConcrete.lean, kernel-pure); moment-floor route now reduces LRC14 to {hMoment, hB, hsmall, hpartA} on concrete measures
+
+Prompt (owner): discharge the moment-floor legs against the concrete witnessG2, work to finish the entire LRC14 formalization.
+
+Discharged the two OPACITY-unblocked legs (death-star-S4 de-opaqued witnessG2 = (slowμ(goodSet cap safeSet)).toReal, shapeOf concrete). LRCMomentFloorConcrete.lean (kernel-pure [propext,Classical.choice,Quot.sound], root-wired, first-fix build):
+- hsize DISCHARGED: clusterSize_shapeOf_le : clusterSize (shapeOf v) <= 13 (the cluster is a filter of the 13 |v i|; List.length_filter_le + length_ofFn).
+- hbonf DISCHARGED: bonferroni_concrete : nuShape+measGP-1 <= witnessG2, = BonferroniMeasure.toReal_bonferroni (kps-S30) on the probability measure slowμ (IsProbabilityMeasure instance) with measurableSet_safeSet -- DIRECTLY, since witnessG2 unfolds to (slowμ(goodSet cap safeSet)).toReal.
+- lrc14_from_momentfloor_concrete : LRC14Statement from the FOUR remaining ANALYTIC obligations on the concrete measures -- hMoment (density floor μ(GOOD)>=momentBar = THM-661), hB (Lemma B μ(G_P)>=cap), hsmall (k<=7 pigeonhole), hpartA (reach) -- with hbonf, hsize, hR0 all supplied as proof terms. Kernel-pure.
+
+HONEST SCOPE: the "entire" formalization is NOT finished -- the four remaining are genuine OPEN analytic theorems (the density floor's coupled region, Lemma B's G_P measure bound, the pigeonhole boundary at k=7, the reach), which the whole fleet is actively proving (death-star GoodSetBridge does hMoment for k=13/pure/diam<=75 via slowμ_goodSet_toReal_ge_mP_diam75; kps/klein THM-671 part 6; etc.). What I closed is the moment-floor route's MECHANICAL/measure-theoretic legs -- everything that became a provable proof term once witnessG2 went concrete. NOTE momentBar(13)=witnessMP=m_P (capRat(13)=1), so death-star's m_P floor discharges hMoment at k=13; k<13 needs the tighter per-k D3 bar. Files: LRCMomentFloorConcrete.lean. -> LRCWitnessMomentFloor (opus-S186), LRCBonferroniMeasure (kps-S30), death-star-S4 (de-opaquing) / GoodSetBridge, THM-661, LRCFourteenSkeleton (concrete witnessG2/shapeOf).
+
+---
 
 ## boxeph-2026-07-09-S6 -- FULL GREEN on the aliasing bound (HYP-5778 CONFIRMED): LRCAliasingBound.lean kernel-pure, all 11 draft errors fixed -- THM-665's analytic core is formalized (grid orthogonality + Poisson identity + the SHARP C/(12 V^2) tail via Basel)
 
