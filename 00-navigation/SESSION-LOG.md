@@ -13,6 +13,19 @@ NOTE: this entry and the INDEX resolution were pushed one commit after the THM-6
 FILES: THM-684; lrc14_t3_cs_bootstrap_klein_S232.out; HYP-5875; log; memory.
 
 NEXT: (a) the connected cascade (cumulant counts through the same peel-CS); (b) q0 banks; (c) the quarantine interface.
+## boxeph-2026-07-09-S16 -- HYP-5853 LEAN LAYER 3: LRCChainMeasures.lean kernel-pure -- the mu_3 certificate (triple-danger <= 2/7 = 1 - 5/7; the +1/7-per-triple upgrade formal); the pattern scales
+
+Prompt (owner): formalize the remaining mu_L certificates using the pair-upgrade pattern.
+
+DELIVERED (LRCChainMeasures.lean, kernel-pure, two fix cycles, root-wired): triple_danger_subset -- the joint danger of (y, 2y, 4y) on [0,1] embeds in FIVE explicit intervals ([0,1/14) u (13/56,15/56) u (13/28,15/28) u (41/56,43/56) u (13/14,1]; the even-numerator level-2 intervals are absorbed by shallower levels); triple_danger_volume_le -- volume <= 2/7 = 1 - mu_3, the exact +1/7-per-triple Bonferroni upgrade (union bound 3/7). Matches HYP-5853's exact mu_3 = 5/7.
+
+THE SCALING LAW (documented in the file header): each level j adds ONLY its odd-numerator intervals (m/2^j +- 1/(14*2^j)); the S11 script emits the exact merged lists (L=4: +4 intervals, danger 5/14 = 1 - 9/14; general L per the exact table). Each mu_L is a mechanical copy: witness-forcing (m in {0..2^j} by integer bounds), interval_cases branches (2^j + 1 per level), gcongr volume calc. L <= 6 hand-feasible (~35 branches); L >= 7 wants a decide-style verified evaluator over rational interval lists -- the named next tool.
+
+FORENSICS: left-assoc union = n-1 Or.inl's for the first component (off-by-one caught by the kernel); the add_le_add_right peeling chain is fragile -- gcongr + measure_union_le per step is the robust idiom.
+
+FORMAL CHAIN LEDGER (HYP-5853 in Lean so far): anchor (1/3 dispatch, W0=12) + mu_2 (pair <= 3/14) + mu_3 (triple <= 2/7). Remaining for W0 = 11: mu_L to L = 12 (evaluator route) + 2-set Bonferroni assembly (LRCGoodDilation + LRCDensityFloorCert).
+
+---
 
 ## opus-2026-07-09-S201 -- INVESTIGATED THM-665 window-shrinking to remove the census native_decide: THM-665 is ORTHOGONAL (its own theorem: a-priori route NEVER fires on covering clusters = the census case). The foundational-only variant ALREADY EXISTS (lrc14_grand_assembly_pure) at the cost of a bigger obligation. Axiom-verified. Honest negative + recommendation.
 

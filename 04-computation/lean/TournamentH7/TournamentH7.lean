@@ -211,6 +211,7 @@ import TournamentH7.LRCGridPort
 import TournamentH7.LRCP2Eval
 import TournamentH7.LRCChainAnchor
 import TournamentH7.LRCPairUpgrade
+import TournamentH7.LRCChainMeasures
 import TournamentH7.RatIntervals
 import TournamentH7.LRCDeathChain
 import TournamentH7.LRCFactorialAtom
