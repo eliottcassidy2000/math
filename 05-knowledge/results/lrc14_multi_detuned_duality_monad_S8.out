@@ -1,0 +1,33 @@
+====================================================================================================
+PART A -- THE COUNTING DISPATCH, d = 2 and 3 batteries
+====================================================================================================
+  60 instances: predicted-fire 59, actual-fire 60 (prediction => actual sound: 59/60)
+  counting-blocked with q1=q2=2 pattern: 0
+
+====================================================================================================
+PART B -- THE q1 = q2 = 2 RESIDUAL: congruent half-harmonic pairs
+====================================================================================================
+  g=14: D=[49, 105] (both == 7 mod 14): counting predicts FIRE, actual branch search: FIRES mc=1/12
+    h = (δ1-δ2)/g = -4: ||h·u - 1/2|| = 0.1667 (JOINT-SAFE (both-bad impossible))
+    mod-2g lift: detuned become q = 4; odd harmonics becoming half-harmonics of 2g: 6/11 -- the 2-adic descent
+  g=10: D=[35, 75] (both == 5 mod 10): counting predicts FIRE, actual branch search: FIRES mc=1/12
+    h = (δ1-δ2)/g = -4: ||h·u - 1/2|| = 0.1667 (JOINT-SAFE (both-bad impossible))
+    mod-2g lift: detuned become q = 4; odd harmonics becoming half-harmonics of 2g: 6/11 -- the 2-adic descent
+
+====================================================================================================
+PART C -- THE BLOCKING/SUPPLY DUALITY on residual-core adversaries
+  blocked(g) = counting dispatch blocked at g; supply = #live pair-sum moduli
+====================================================================================================
+  families: 25 (near-14AP primitive covering adversaries)
+   blocked   live   of   family (first 6)
+         2     39   57   [14, 28, 39, 56, 70, 91]...
+         1     19   53   [7, 28, 42, 59, 70, 84]...
+         1     15   46   [14, 28, 42, 57, 70, 84]...
+         1     25   43   [17, 28, 42, 49, 70, 84]...
+         1     31   53   [17, 28, 52, 56, 70, 84]...
+         1      9   46   [14, 28, 42, 56, 70, 81]...
+         1     16   46   [14, 27, 42, 56, 69, 85]...
+         1     23   55   [14, 26, 42, 56, 70, 84]...
+         1     21   51   [14, 31, 42, 58, 70, 84]...
+         1     17   48   [14, 28, 42, 56, 70, 84]...
+  corr(blocked, live-supply) = +0.457   min(live) over families = 6  (conservation: supply never dies)
