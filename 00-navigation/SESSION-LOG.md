@@ -139,7 +139,7 @@ Prompt (owner): shrink ResidualObligation branch by branch in Lean; finish the f
 3. THE HONEST FINAL PROP: ResidualObligation(Pure) v3 is now the EXACT Lean name of the open core -- the class where the equidistribution/Kronecker realization, the corner-phase sqrt-cancellation (THM-665 #3), and the |P|=1 window intersection (S5) live. It is NOT closed, and this session does not pretend otherwise: "finish the final remaining prop mathematically" ends at the honest boundary -- every prose-closed slice around the core is now machine-checked, and the core itself is the genuinely open mathematics of LRC(14).
 4. Root manifest: LRCDetunedDispatch imported; assembly comment updated.
 
-FILES: 04-computation/lean/TournamentH7/TournamentH7/LRCDetunedDispatch.lean (new); LRC14GrandAssembly.lean (v3); TournamentH7.lean (root); 01-canon/theorems/THM-668 (FORMALIZED status), THM-671 (v3). No canon overridden.
+FILES: 04-computation/lean/TournamentH7/TournamentH7/LRCDetunedDispatch.lean (new); LRC14GrandAssembly.lean (v3); TournamentH7.lean (root); 01-canon/theorems/THM-668 (FORMALIZED status), THM-677 (v3, renumbered from 671). No canon overridden.
 
 NEXT: (a) the residual-class attack continues on the analytic side (the ONE open node); candidate next Lean-quantifiable slices: the pure-cluster corner (death-star, already Lean -- needs the class-form carve), the C0-C3 certificate families (kps's consumer is Lean -- needs the liveness class form); (b) the d >= 2 detuned generalization (branch group in (Z/g)^d -- the same triangle shortcut may give 1/(4d)-type clearances); (c) keep the surface as the fleet's shared scoreboard: every new proved slice = one more by_cases branch.
 
@@ -470,7 +470,7 @@ counting/exact boundary now a theorem.
 Files: THM-672 (canon, proofs + provenance note); lrc14_torsion_occupancy_macmini_S65cont2.{py,out}
 (incl. post-run correction note); HYP-5730 updated (obligation (2) localized); INDEX/backlog synced.
 
-## monad-explorer-2026-07-09-S6 -- THM-671: THE LRC(14) GRAND ASSEMBLY BUILT -- lrc14_grand_assembly (cite) (hresidual) : LRC14Statement (kernel + 2 winData22 native certs) AND lrc14_grand_assembly_pure (KERNEL-PURE, no window branch); ResidualObligation = covering AND scale-gapped AND compressed AND distinct-|speeds| AND max >= 23 -- the sharpest surface in the corpus (five branches discharged: sieve / spread13 [unconditional] + dominant peel / window-22 / repeated-|speed| [cite]); + covering18_complete: kps-S115's 966 list PROVED COMPLETE over [1,18] (native_decide, 8568 subsets) (HYP-5757)
+## monad-explorer-2026-07-09-S6 -- THM-677 (renumbered from 671, klein-S210 wire priority): THE LRC(14) GRAND ASSEMBLY BUILT -- lrc14_grand_assembly (cite) (hresidual) : LRC14Statement (kernel + 2 winData22 native certs) AND lrc14_grand_assembly_pure (KERNEL-PURE, no window branch); ResidualObligation = covering AND scale-gapped AND compressed AND distinct-|speeds| AND max >= 23 -- the sharpest surface in the corpus (five branches discharged: sieve / spread13 [unconditional] + dominant peel / window-22 / repeated-|speed| [cite]); + covering18_complete: kps-S115's 966 list PROVED COMPLETE over [1,18] (native_decide, 8568 subsets) (HYP-5757)
 
 Prompt (owner): work to assemble the entire LRC 14 formalization yourself.
 
@@ -480,7 +480,7 @@ Prompt (owner): work to assemble the entire LRC 14 formalization yourself.
 4. SHARPNESS: prior best surfaces were lrc14_of_compressed (residual = covering AND compressed, opus) and lrc14_endgame (opaque witnessG2 hypotheses). This surface adds the gap + distinct + max >= 23 carve-outs (each deletes an infinite class) and is fully concrete (the opaque route bypassed).
 5. THE RESIDUAL = the analytic program's exact target: THM-665/667/669/670 availability floors + klein-S205 drift embed + THM-668 dispatch + mac-mini C0-C3 certificates. Their prose-closed slices are not yet Lean-quantified -- THE remaining formalization work now has one name: formalize the uniform statements over ResidualObligation.
 
-FILES: 04-computation/lean/TournamentH7/TournamentH7/LRC14GrandAssembly.lean (+ root import); 01-canon/theorems/THM-671-lrc14-grand-assembly-surface.md. No canon overridden.
+FILES: 04-computation/lean/TournamentH7/TournamentH7/LRC14GrandAssembly.lean (+ root import); 01-canon/theorems/THM-677-lrc14-grand-assembly-surface.md. No canon overridden.
 
 NEXT: (a) Lean-quantify THM-668 over the residual class (the detuned-harmonic slice: needs a Lean-side gcd-subgroup extractor + the LRC13 citation -- one page); (b) quantify the C0-C3 certificate families; (c) the drift-embed class form (Vmax > 1.41 spread as a residual-class carve); (d) keep shrinking ResidualObligation branch by branch until it coincides with the genuinely-open analytic core.
 
