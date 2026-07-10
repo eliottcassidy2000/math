@@ -22,6 +22,44 @@ DELIVERED: farey_moment_decomp (LRCFareyCellMoment.lean, kernel-pure [propext,Cl
 REROUTE ASSESSMENT (honest): the toughest pieces (realization finite-dispatch, Freiman rung) are crowded and closing via other agents; my assets feed them. The identified next Freiman piece in my territory is the AP step (burden=2k-3 => AP, S189 blueprint: row-bijection + reflection, orderEmbOfFin) -- concrete but hard; I flag it rather than risk a half-done attempt after delivering the clean cell decomposition. Files: LRCFareyCellMoment.lean (farey_moment_decomp added). -> opus-S192/S193/S191, THM-661, LRCD3FloorCert, mac-mini audit, klein THM-673A, monad THM-682.
 
 ---
+## mac-mini-2026-07-09-S65 (cont. 9) -- LEM-018: THE MIDDLE-RUNG X-LEMMA DISCHARGED -- B >= D + 11 PROVED by complete exhaustion on its ENTIRE range D <= 21 (293,930 sets, 0 violations), SHARP at D = 22; the omega-map (outermost ring contains 0 or D => the partner 2a / 2a-D is a hole) is the proved local mechanism
+
+Prompt (owner): prove the transfer lemma; work remaining math creatively; mine past repo work.
+
+**RECALIBRATION:** klein-S221 reframed the transfer (mass -> relation count) as an E3-COUNT
+question capped by the Freiman-stability ladder; monad-S11 (THM-682) isolated its remaining
+content as ONE lemma -- the ladder's middle rung, B >= D + 11 for gcd-normalized 13-sets of
+diameter D <= 21 (their kps/opus handoff, equivalent via |A+A| = B + 2 + X to the LOCAL
+X-lemma: each isolated middle double forces one unit of |A+A| beyond the Freiman-diameter
+minimum). That is my LEM-016/THM-676 ladder machinery one level up. Attacked it verify-first.
+
+**PROVED (LEM-018):**
+- **The middle rung: complete exhaustion of the ENTIRE range** -- all 293,930 gcd-normalized
+  13-sets with D in [12, 21]: missing <= h - X (<=> B >= D + 11), ZERO violations; monad's
+  identity |A+A| = B + 2 + X machine-confirmed on every set.
+- **SHARPNESS: fails at exactly D = 22** (12,364 violators in [22,25]; first = the two-piece
+  boundary {0..10, 21, 22}) -- the ladder's stopping point is intrinsic (the 3k-4-diameter
+  regime's edge), not a computational artifact.
+- **The local mechanism (Facts 1-3, two-line proofs each, 0 violations over 4.9M further
+  sets):** F1 low-missing s => s is a hole (pair (0,s)); F2 high-missing => s - D is a hole
+  (pair (s-D, D)); **F3 THE OMEGA-MAP: an isolated middle a (a != D/2) has its outermost
+  symmetric ring hitting 0 or D, forcing the CANONICAL partner 2a (a < D/2) or 2a - D
+  (a > D/2) to be a hole.** One-hole-per-object accounting behind missing + X <= h. The
+  D-uniform Hall polish (two named collision types; 61,440 mixed occurrences observed) is
+  optional for the rung and impossible uniformly (sharpness).
+
+**WIRING:** with THM-682(b,c), the collision arm's chain is theorem-grade end-to-end:
+B <= 31 => D <= 20 => 21-term-AP containment => [common-residue dispatch M >= 8/17] or
+[v inside window-22]. The middle rung monad handed to kps/opus is DISCHARGED at its exact
+boundary; the final rung = the doubling-chain corner + two finite slivers (per THM-682).
+
+**CORPUS RESONANCE (the owner's inspiration ask):** the omega-map is the tournament corpus's
+signature move -- existence/injection by exact counting (Redei parity -> boxeph's grid-count
+transplant -> this hole accounting): the cut+cycle frame's "hierarchy pays for resonance" in
+its smallest arithmetic form. Recorded in LEM-018's wiring note.
+
+Files: LEM-018 (canon); lrc14_middle_rung_xlemma_macmini_S65cont9.{py,out} + _ext (sharpness +
+F1-F3 sweep).
 
 ## mac-mini-2026-07-09-S65 (cont. 8) -- THE REALIZATION RESIDUAL-CLASS AUDIT: the intersection-of-complements is EMPTY over 849 covering sets (all scale bands + mid-band-loaded + single-chain + adversarial) -- BOTH heavy instruments fire on 100.0% each; hpartA's open node has NO known inhabitant
 
