@@ -16,6 +16,30 @@ FORMALIZED (LRCWindow22Census.lean, kernel-pure [propext,Classical.choice,Quot.s
 => a FOUNDATIONAL-AXIOMS-ONLY replacement for the winData22 native_decide census now EXISTS. Removing the two winData22 native_decide axioms from the LRC(14) top theorem is now the 1-line assembly swap: in LRC14GrandAssembly.lean's bounded-window branch, hwindow22_closed cite -> hwindowW_closed 22 cite hdistinct22_kernel. @death-star @monad (assembly owners): that swap makes lrc14_grand_assembly foundational-axioms-only; I left hdistinct22_kernel ready as the drop-in. This is opus-S201 option (c) realized. Files: LRCWindow22Census.lean (+root), LEM-024 canon, census-domain .out x2. -> LEM-024, MISTAKE-135, opus-S200/S201, spread13_lonely, lonely_of_kernelWitness, hdistinct22_from_data (the native_decide one being replaced).
 
 ---
+## mac-mini-2026-07-09-S65 (cont. 19) -- TWO OF THREE BRICKS PROVED: goodSet_univ_of_length_le_two IN LEAN (green, kernel-pure) + THE ANCHOR TABLE EMITTED (all 91 hk12 families, exact rationals, min anchor 4/637); the hk12 chain is now anchors-in-proof-out; brick (iii) honestly deferred
+
+Prompt (owner): prove the three remaining bricks.
+
+**BRICK (i) PROVED (LRCGoodSetSmall.lean, kernel-pure):** goodSet E = univ for clusters of
+length <= 2. One tooth: the difference is 0, fract 0 = 0 not in (0,1/7]. Two teeth: if
+fract(d x) lands in (0,1/7] then fract(-d x) = 1 - fract(d x) >= 6/7 does not (Int.fract_neg)
+-- the two teeth cannot BOTH have occupied following-arcs, so one witnesses the union. Build:
+one repair round (a dead omega after simp-closed-the-goal -- forensics: simp at h can close
+the goal entirely when h becomes False).
+
+**BRICK (ii) EMITTED (lrc14_anchor_table_macmini_S65cont19.out):** for ALL 91 P-families of
+the hk12 leg (|P| in {11,12}): the largest merged safe component [a,b] exact + the per-p floor
+j-list. Every family has a positive anchor; min length = 4/637 = 0.006279 (at missing =
+{10,12}); the |P|=12 families anchor at [1/28 or 1/42, 1/14]-type intervals.
+
+**THE hk12 CHAIN IS NOW COMPLETE IN SHAPE:** lrc14_from_repaired_nodes's hk12 =
+goodSet_univ_of_length_le_two (brick i) + witnessG2_pos_of_anchor (cont.18 bridge) + the
+anchor table (brick ii) -- per-family instantiation is mechanical rational-inequality checking
+(decide-shaped), no analysis. **BRICK (iii) (the finite-union volume identity, for the FULL
+m_P floors of hsmall3/hlarge) is honestly DEFERRED** -- the one remaining measure-theory brick
+of the witness-floor route; kps's stack owns its natural form.
+
+Files: LRCGoodSetSmall.lean (+ root); lrc14_anchor_table_macmini_S65cont19.out.
 
 ## boxeph-2026-07-09-S18 -- CITATION-SURFACE AUDIT: LRCUpTo13 is consumed at FULL GENERIC STRENGTH (no small-k shrink exists) -- the citation is irreducibly load-bearing; the gate stands as the sole mathematical remainder
 
