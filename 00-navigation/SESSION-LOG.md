@@ -1,3 +1,27 @@
+## klein-2026-07-09-S215 -- (PC) RUN: verified SUB-POISSONIAN (eps <= 0, all killers, both banks) + Bernstein verified 4-20x slack => THM-677's assembly verified END-TO-END; thinning escape refuted; the mechanism NAMED (hyperuniformity of bounded lattice perturbations); THE ARC SUMMARY -- what remains for LRC(14), final form
+
+Prompt (owner): run the (PC) pair-correlation count; work remaining mathematical reasoning for the formalization.
+
+**(1) (PC) IS TRUE, SUB-POISSONIAN.** Exact counts at delta = 1/29: near-pair ratios 0.96-1.00 (eps in [-0.04, 0.00], c = 0) for ALL 8 killers on both boxeph banks. Better than the assembly needs. Per-d excess localizes at harmonic differences (d=1; ~V/m multiples; V/12 harmonics of slow killers), over-compensated by deficits elsewhere.
+
+**(2) BERNSTEIN VERIFIED.** D/l2 = 0.24-1.40 measured vs the sqrt(2H+1) = 5.4 factor: 4-20x slack. With S214's l2-clearance (3.2-3.7x), THE WHOLE THM-677 ASSEMBLY IS NOW VERIFIED END-TO-END AT THE CONSTANTS LEVEL. The single unproved link: (PC) a priori.
+
+**(3) THINNING ESCAPE REFUTED (honest).** Simultaneous bad-difference avoidance crushes |Good'|/|Good| to 0.04-0.10 -- the needed per-killer bound hits the integer-granularity floor. Thinning trades discrepancy for small-N. Dead end, documented.
+
+**(4) THE MECHANISM NAMED (the formalization-facing insight).** m tau_j = (m/V) j + bounded wobble: a BOUNDED PERTURBATION OF A LATTICE sampled on Good -- a rigid/hyperuniform point process. Number variance at fixed resolution is O(1), not Poisson ~N w -- exactly why the true D_m sits at ~2 ABSOLUTE (constant in N!), far below sqrt(N 2/7) ~ 7. The a-priori (PC) proof = the standard hyperuniformity number-variance calculation for perturbed lattices, obstructed ONLY by the sampling set (Good). This is the final analytic step of the tau-line route.
+
+**THE ARC SUMMARY (S208-S215, for whoever finishes).** LRC(14) = [non-covering: sieve, Lean DONE] + [covering]:
+ - COHERENT branch (longest-AP >= k-6, incl. near-dilations): LEM-012 elementary (tau-line) -- realization delicate at the knife-edge, handled by the tight-locus machinery (kps LRCAPTight etc.).
+ - GENERIC branch, TWO verified-end-to-end routes each resting on ONE named one-sided ingredient:
+   (tau-line) THM-677: D_m <= sqrt(2H+1) l2 closes at V >~ 5000 MODULO (PC) = a hyperuniformity number-variance bound (this session: true sub-Poissonian, mechanism named);
+   (modular) THM-671/673/676: aggregated B5 with the high-tail identity, MODULO the sub-binomial histogram bound (= the discrete apex-7 mass).
+ - BELOW the asymptotic thresholds: exact per-instance certificates, ALL Lean consumers built (kps mreach_ge_of_pairsum_band + mreach_ge_of_blocked_lt; death-star LRCComposedRealization; boxeph pipeline); enumeration is compute, not math.
+ - STANDING GUARD-RAILS (5+ confirmations): no order-blind scalar decides resonance objects; absolute bounds lose to cancellation (per-cell DK, plain ET, envelopes, first-order boxes all refuted with data); coherence is the branch variable.
+
+FILES: THM-677 addendum; lrc14_PC_paircorr_thinning_klein_S215.py(+out); HYP-5790; log; memory.
+
+NEXT (the two named ingredients, in order of tractability): (a) (PC) via hyperuniformity -- the number-variance calculation for {(m/V)j + wobble : j in Good}; the wobble is deterministic and the perturbed-lattice variance bound is textbook EXCEPT for the Good-sampling -- try the Good-set's own harmonic structure (it is gap-defined, LEM-011's W-hat applies); (b) the modular high-tail (sub-binomial at c=0 and c>=6). Either one, composed with the built infrastructure, finishes the covering case at large V; below V0 is enumeration.
+
 ## kind-pasteur-2026-07-09-S119 -- FORMALIZED the danger-set + gcd-count ingredients of HasLiveRuler (LRCDangerCount.lean, sorry-free): dangerCard_eq (|D|=2*floor((q-1)/14)+1) + blocked_card_coprime (g=1: coprime v blocks exactly |D| via the multiplication-permutation bijection).
 
 Prompt (owner): formalize the danger-set and gcd-count ingredients of HasLiveRuler.

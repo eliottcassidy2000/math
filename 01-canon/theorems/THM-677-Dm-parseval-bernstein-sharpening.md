@@ -76,3 +76,26 @@ routes now name ONE one-sided counting ingredient each.
 + true-margin ledger), `05-knowledge/results/lrc14_Dm_spectrum_klein_S214.out`
 (spectrum + ET loss), `05-knowledge/results/lrc14_Dm_L2_nearmiss_klein_S214.out`
 (signed partials + ℓ₂ clearance).
+
+---
+
+> **ADDENDUM (klein-2026-07-09-S215, HYP-5790 — the (PC) run).** (1) **(PC) is TRUE
+> SUB-POISSONIAN on all tested data**: near-pair ratios 0.96–1.00 (ε ∈ [−0.04, 0.00],
+> c = 0) across all 8 killers on both banks at δ = 1/29 — better than the assembly
+> needs. The per-d excess localizes at harmonically-structured differences (d = 1,
+> d ≈ V/m-multiples, d ≈ V/12-harmonics of slow killers) and is over-compensated by
+> deficits elsewhere. (2) **The Bernstein step is verified with 4–20× slack**:
+> measured D/ℓ₂ = 0.24–1.40 vs the factor √(2H+1) = 5.4. The THM-677 assembly is now
+> verified end-to-end at the constants level; only (PC)'s a-priori proof remains.
+> (3) **The thinning escape is REFUTED as practical**: avoiding the top-excess
+> differences for all killers simultaneously crushes |Good′|/|Good| to 0.04–0.10,
+> where the needed bound hits the integer-granularity floor — thinning trades
+> discrepancy for small-N. Dead end, documented. (4) **The mechanism named**:
+> m·τ_j = (m/V)·j + bounded wobble is a BOUNDED PERTURBATION OF A LATTICE sampled on
+> Good — a rigid/hyperuniform point process, whose number variance at fixed
+> resolution is O(1) rather than Poisson's ~N·w. This is why the true D_m sits at
+> ~2 absolute (constant!), far below even √(N·2/7) ≈ 7. The a-priori (PC) proof =
+> a number-variance bound for bounded perturbations of rotations sampled on Good —
+> the standard hyperuniformity calculation obstructed only by the sampling set;
+> named as the final analytic step of the τ-line route. Files:
+> lrc14_PC_paircorr_thinning_klein_S215.py (+.out).

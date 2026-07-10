@@ -1,0 +1,45 @@
+==============================================================================
+HYP-5790: (PC) exact + per-d profile + thinning escape (klein-S215)
+==============================================================================
+
+=== bank2-style 3M: V=842 N=182 ===
+  m=  420: near-pairs= 2186 Poisson= 2271.9 ratio= 0.96 (eps=-0.04)
+     top-excess d: d=26(+35.6), d=8(+20.2), d=6(+18.3), d=16(+18.2), d=4(+17.0), d=383(+14.7)
+  m=  286: near-pairs= 2236 Poisson= 2271.9 ratio= 0.98 (eps=-0.02)
+     top-excess d: d=159(+23.8), d=53(+23.0), d=56(+17.6), d=215(+16.8), d=3(+16.8), d=424(+16.2)
+  m=  176: near-pairs= 2188 Poisson= 2271.9 ratio= 0.96 (eps=-0.04)
+     top-excess d: d=158(+38.2), d=67(+30.3), d=110(+29.2), d=48(+28.6), d=225(+24.1), d=177(+23.5)
+  [3] thinning: |bad d set|=98 -> Good' density 18/182 = 0.10
+     m=  420: D_m(Good')=  0.6 vs needed 1.0  OK
+     m=  286: D_m(Good')=  0.6 vs needed 1.0  OK
+     m=  176: D_m(Good')=  1.6 vs needed 1.0  over
+  [4] Bernstein sup-vs-L2 (full Good):
+     m=  420: D=  2.0  sqrt(2H+1)*l2=  15.0  ratio D/(l2)=0.72 (Bernstein factor 5.4)
+     m=  286: D=  4.0  sqrt(2H+1)*l2=  15.3  ratio D/(l2)=1.40 (Bernstein factor 5.4)
+     m=  176: D=  3.0  sqrt(2H+1)*l2=  17.1  ratio D/(l2)=0.94 (Bernstein factor 5.4)
+
+=== bank4-style 2P+3M: V=1006 N=340 ===
+  m=   12: near-pairs= 7926 Poisson= 7949.0 ratio= 1.00 (eps=-0.00)
+     top-excess d: d=1(+149.0), d=170(+107.1), d=85(+105.2), d=84(+102.4), d=86(+101.5), d=165(+93.3)
+  m=   13: near-pairs= 7756 Poisson= 7949.0 ratio= 0.98 (eps=-0.02)
+     top-excess d: d=1(+149.0), d=75(+117.2), d=79(+107.1), d=78(+97.8), d=2(+89.4), d=385(+86.6)
+  m=  251: near-pairs= 7832 Poisson= 7949.0 ratio= 0.99 (eps=-0.01)
+     top-excess d: d=64(+99.6), d=493(+86.8), d=20(+73.5), d=513(+71.3), d=4(+66.7), d=44(+64.3)
+  m=  405: near-pairs= 7880 Poisson= 7949.0 ratio= 0.99 (eps=-0.01)
+     top-excess d: d=20(+60.5), d=164(+56.1), d=236(+52.0), d=472(+50.9), d=149(+45.8), d=10(+45.4)
+  m=  506: near-pairs= 7874 Poisson= 7949.0 ratio= 0.99 (eps=-0.01)
+     top-excess d: d=493(+73.8), d=513(+56.3), d=20(+53.5), d=10(+38.4), d=16(+37.5), d=177(+37.4)
+  [3] thinning: |bad d set|=188 -> Good' density 14/340 = 0.04
+     m=   12: D_m(Good')=  0.0 vs needed 0.8  OK
+     m=   13: D_m(Good')=  1.0 vs needed 0.8  over
+     m=  251: D_m(Good')=  0.0 vs needed 0.8  OK
+     m=  405: D_m(Good')=  1.0 vs needed 0.8  over
+     m=  506: D_m(Good')=  1.0 vs needed 0.8  over
+  [4] Bernstein sup-vs-L2 (full Good):
+     m=   12: D=  1.4  sqrt(2H+1)*l2=  16.0  ratio D/(l2)=0.48 (Bernstein factor 5.4)
+     m=   13: D=  2.6  sqrt(2H+1)*l2=  18.3  ratio D/(l2)=0.76 (Bernstein factor 5.4)
+     m=  251: D=  2.4  sqrt(2H+1)*l2=  27.1  ratio D/(l2)=0.48 (Bernstein factor 5.4)
+     m=  405: D=  1.4  sqrt(2H+1)*l2=  32.4  ratio D/(l2)=0.24 (Bernstein factor 5.4)
+     m=  506: D=  1.6  sqrt(2H+1)*l2=  25.0  ratio D/(l2)=0.34 (Bernstein factor 5.4)
+
+DONE.
