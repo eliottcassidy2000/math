@@ -1,3 +1,17 @@
+## boxeph-2026-07-09-S7 -- THM-665 COMPLETE IN LEAN: thm665_full kernel-pure -- ||E_grid[W](V) - int W|| <= TV(W')/(12 V^2) end to end, via the PERIODIZED BERNOULLI BASIS (zero integration by parts)
+
+Prompt (owner): finish the PL input file and complete full THM-665.
+
+DELIVERED (LRCPLFourier.lean, built + audited, root-wired; with S6's LRCAliasingBound.lean this completes HYP-5778): the piecewise-linear Fourier input WITHOUT any BV theory or integration by parts. THE ROUTE: every continuous 1-periodic PL function is EXACTLY w0 + Sum_i alpha_i P2(x - a_i) (P2 = periodized Bernoulli-2; alpha_i = -jump_i/2; TV(W') = 2 Sum|alpha_i|; Sum alpha_i = 0 makes the curvatures cancel) -- and Mathlib's OWN ZetaValues file (the Basel-value source) already proves P2's pointwise Fourier expansion (hasSum_one_div_pow_mul_fourier_mul_bernoulliFun at k=2, giving c_n(P2) = 1/(2 pi^2 n^2) exactly). So the coefficients of W are FINITE ALGEBRA: c_n = Sum_i alpha_i e(-2 pi i n a_i)/(2 pi^2 n^2), ||c_n|| <= TV(W')/(4 pi^2 n^2) by the triangle inequality -- precisely aliasing_tail_bound's hypotheses. thm665_full assembles everything: 4 theorems this file (hasSum_P2, plW_hasSum, plC_norm_le, thm665_full), all kernel-pure, no sorry/native_decide.
+
+THE CELL-ENGINE INTERFACE: consumers present W by (alpha, a, w0) data, which the S3 cell engine emits directly (it knows the W'-jumps). The grid-port (THM-666) + certified finite-window checks + the D_m mid-band comb machinery (HYP-5760; klein-S217's spectral-sampling identity landed on that thread this hour) all consume this surface.
+
+LEAN LESSONS (adding to the S6 idiom list): AddCircle 1 parses the 1 as N -- write AddCircle (1:R); single-cast up-arrow(x - a) vs cast-difference in exp arguments (spell ((x - a : R) : C) to match HasSum instances); isDefEq timeouts from .mul_left _ -- give the multiplier explicitly; -(a)^k parses as -((a)^k).
+
+STATUS OF THE ALIASING PROGRAM: THM-665 = DONE in Lean (7 kernel-pure theorems across 2 files). Named next consumers: (a) THM-666's clamp port (one page, cites grid_aliasing + tail bound); (b) per-(E,V) decidable window certificates (rational (alpha,a) data + thm665_full); (c) the D_m discrepancy formalization (same core, product clamps).
+
+---
+
 ## klein-2026-07-09-S218 -- THE OFF-PEAK BOUND (THM-677 Addendum 4): the FIBER IDENTITY + F-hat's decay MEASURED (geometric ~0.2-0.36/coordinate, density check exact) + the truncation direction is upper-bound-safe (2.7x cancellation bonus) + THE TWO-FRAME CONVERGENCE with monad's same-day THM-680 -- the two routes' residues are now ONE species (low near-relations of v), with the Freiman extremum already excluded by kps's same-day LRCE3Budget
 
 Prompt (owner): run the off-peak spectral bound; pull frequently and leverage deeply.

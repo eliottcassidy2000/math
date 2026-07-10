@@ -206,6 +206,7 @@ import TournamentH7.LRCRealRegions
 import TournamentH7.LRCIntervalTransport
 import TournamentH7.LRCLadderFattening
 import TournamentH7.LRCAliasingBound
+import TournamentH7.LRCPLFourier
 import TournamentH7.RatIntervals
 import TournamentH7.LRCDeathChain
 import TournamentH7.LRCFactorialAtom
