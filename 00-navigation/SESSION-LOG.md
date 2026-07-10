@@ -1,3 +1,21 @@
+## klein-2026-07-09-S213 -- THE HIGH-TAIL IDENTITY (THM-676): B_D = LM - C(c-1,D)-weighted high-coverage mass EXACTLY -- the whole Bonferroni error is one object (the discrete apex-7 mass); layer forensics: generic survives by CROSS-LAYER CANCELLATION, coherent has cancel-ratio 1.0; the a-priori generic bound remains THE open item, now in its sharpest form; three live paths to finish LRC(14) mapped
+
+Prompt (owner): run the interference-aware generic-branch bound; work to finish up LRC(14).
+
+**(1) THE IDENTITY (proved).** f_D(c) = sum_{d<=D}(-1)^d C(c,d) = (-1)^D C(c-1,D) for c >= 1. Hence for odd D: **B_D(S,q) = LM(q) - sum_{c>D} C(c-1,D) hist[c]** -- verified exactly on every (S,q). The entire Bonferroni error = the high-coverage mass (points killed by > D classes at once; c >= 6 for the quintic -- the discrete apex-7 object). Corollaries: the odd ladder's monotonicity/exactness in closed form; the TERMINAL certificate is hist[0] = exact LM, one O(kq) pass, consumed by @kind-pasteur's mreach_ge_of_blocked_lt (S117) -- the Lean pipeline needs nothing deeper than the histogram.
+
+**(2) LAYER FORENSICS (the binomial-histogram identity L_d = sum_p C(C(p),d) -- every moment layer from one pass).** Generic instances: per-layer deviations +-0.05..0.25 (comparable to the layer mains!) yet total B5 deficit only 0.02-0.08: CROSS-LAYER CANCELLATION is systematic (the layers are coupled cumulants of one overlap structure; alternating signs damp common movement). Near-dilation: cancel-ratio 0.97-1.00 at d >= 2, deviations +0.30/+2.26/+5.42/+8.49 -- pure constructive coherence, quantified. Practical branch statistic: support-3 relation count at H<=3 (generic 52-132; near-dilation 672).
+
+**(3) ETK-with-minima: partial negative.** 'Dissociated at support 5' is EMPTY as a class -- EVERY 5-tuple of a 13-set has ~2 height-<=3 exact relations by pure counting (support-5 height-3 vectors are dense). The ETK-empty-window mechanism works only at supports 2-3; supports 4-5 are resonance-dense and survive by cancellation alone. This kills the naive 'dissociativity height' branch definition; coherence (not existence of relations) is the branch variable, as THM-675 said.
+
+**(4) ONE-SIDED MARGINS.** avg-LM / avg-penalty over q in (V,2V]: 81.4x (adv-worst-120), 1.6x (adv-200), 4.4x (adv-280), 7.7x (@91) vs 0.006x (near-dilation). The generic inequality is comfortably true; proving it remains the item.
+
+**(5) HONEST FINAL SCOPE -- what 'finish LRC(14)' requires (THM-676 sec. 4).** The identity relocates but does not remove the two-sided moment control (L_2, L_4 lower bounds = forced independence = THM-604's hard direction). THE one open mathematical item of the modular route, sharpest form: 'the coverage histogram of a low-coherence covering set is sub-binomial at c=0 and c>=6 simultaneously for some q in (V,2V]'. Three live paths: (i) a new idea for that histogram bound; (ii) brute scale (kps-S115-pattern native_decide enumeration) + rigidity for the coherent branch + (i) only for the asymptotic tail; (iii) the tau-line composed route -- note @boxeph-S3's comb-discrepancy D_m measured <= 4% vs needed 5.7%: a 1.4x gap, THE CLOSEST ANALYTIC MARGIN ANYWHERE IN THE PROJECT -- recommend fleet weight there. The certificate infrastructure (dispatch + ledger consumer + histogram) is complete and Lean-ready regardless of which path closes.
+
+FILES: THM-676; lrc14_moment_layer_forensics_klein_S213.py(+out), lrc14_hightail_penalty_klein_S213.out; HYP-5770 PARTIALLY-TRUE; log; memory.
+
+NEXT (fleet): (a) boxeph's D_m gap (4% vs 5.7%) -- the nearest margin; a factor-1.4 sharpening of one comb-discrepancy bound finishes the mid-band on the tau-line side; (b) the histogram sub-binomial bound (new idea; connects to apex-7/OPEN-Q-108 -- the same mass, discrete); (c) Lean: LRCDiscreteBonferroni can now be just 'hist[0] > 0' + the identity as documentation; (d) the enumeration scale-out ((18,30) band first).
+
 ## kind-pasteur-2026-07-09-S117 -- LEAN-IFIED the C1 union-bound CONSUMER (LRCLedgerConsumer.lean, sorry-free): turns any pair-sum liveness certificate's blocked-count bound into Mreach>=1/14, native_decide-demonstrated end-to-end. The half that "makes the certificate census a theorem" (mac-mini's ask).
 
 Prompt (owner): Lean-ify mac-mini's C1 gcd-exact ledger certificate.
