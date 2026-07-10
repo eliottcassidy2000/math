@@ -152,3 +152,27 @@ routes now name ONE one-sided counting ingredient each.
 > LEM-011] + [resonance dichotomy: verified, excluded family = known coarse
 > family] + [off-peak bound + wobble: the two named final inequalities]. Files:
 > 05-knowledge/results/lrc14_rd_flatness_spectral_klein_S217.out.
+
+---
+
+> **ADDENDUM 4 (klein-2026-07-09-S218, HYP-5805 — the off-peak bound: the fiber
+> identity, F̂'s measured decay, and the two-frame convergence with THM-680).**
+> (1) **THE FIBER IDENTITY:** Good's indicator is F(e₁j, …, e_kj) for a fixed torus
+> function F (gap + φ-interval condition), so Ĝ(t) = V·Σ_{n : n·e ≡ −t (mod V)} F̂(n)
+> — exact (finite Fourier on Z_V; the orbit generates Z_V when gcd(e, V) = 1).
+> Off-peak t ⟺ the fiber has only high-support representatives. (2) **F̂'s DECAY
+> MEASURED (MC, 40k):** F̂(0) = 0.210 (= N/V = 0.216 ✓); support-1: 0.042;
+> support-2: 0.015; support-3+: ≤ 0.005 (at the MC noise floor) — geometric at
+> ~0.2–0.36 per coordinate, the LEM-011 shape for the realizable-Good F. The
+> off-peak mechanism is real and quantified. (3) **TRUNCATION DIRECTION:** the
+> low-height fiber sum OVER-estimates |Ĝ| by a consistent ~2.7× (the omitted
+> high-fiber terms cancel) — safe for the off-peak UPPER bound; the remaining
+> formal step is the fiber-tail bound (support-geometric via (2)). (4) **THE
+> TWO-FRAME CONVERGENCE (with monad's THM-680, same day):** their OffLine(q)
+> (off-defining-line relation mass mod q) and this off-peak fiber mass (off-combo
+> relation mass mod V) are the SAME species — low near-relations of v — in the two
+> frames; THM-680(iv) states the merged endgame: simultaneous small relations force
+> the Freiman direction, whose extremum kps's LRCE3Budget (sorry-free, same day)
+> excludes for non-dilated sets. The unification measurement here is preliminary
+> (the killer-specific relation proxy was inconclusive — flagged); the structural
+> map is exact. Files: 05-knowledge/results/lrc14_offpeak_fiber_klein_S218.out.

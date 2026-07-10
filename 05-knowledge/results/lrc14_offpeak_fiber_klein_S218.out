@@ -1,0 +1,26 @@
+=== [1] F-hat decay by support (MC, e0-phase pinned at 0) ===
+   F-hat(0) (density of the phi-interval Good condition): 0.2099
+   |F-hat| n=e2-coefficient 1 (support 1): 0.0416
+   |F-hat| support 2, height 1: 0.0150
+   |F-hat| support 3, height 1: 0.0027
+   |F-hat| support 1, height 2: 0.0206
+   |F-hat| support 4, height 1: 0.0032
+   |F-hat| support 5, height 1: 0.0047
+
+=== [2] fiber identity spot-checks (N=182) ===
+   t=191 (peak t=e=191): |G-hat|=   49.0  V*sum_lowfiber F-hat =   180.2 (low-height fiber reps: 10)
+   t=420 (killer h=1 t=420): |G-hat|=    8.5  V*sum_lowfiber F-hat =    21.5 (low-height fiber reps: 10)
+   t=33 (generic t=33): |G-hat|=   26.0  V*sum_lowfiber F-hat =    69.8 (low-height fiber reps: 10)
+
+=== [3] two-frame unification on the same instance ===
+   killer m=420: tau-line low-harmonic mass =    7.34;  near-relations of v mod V involving-m-ish (proxy: mod V count) =   16
+   killer m=286: tau-line low-harmonic mass =    5.27;  near-relations of v mod V involving-m-ish (proxy: mod V count) =   16
+   killer m=176: tau-line low-harmonic mass =    5.94;  near-relations of v mod V involving-m-ish (proxy: mod V count) =   16
+   ruler q=v0+v12=1018: near-relation count mod q (h<=2,s<=3) =   26  (THM-680 OffLine is driven by exactly these)
+   ruler q=v3+v10=1387: near-relation count mod q (h<=2,s<=3) =   16  (THM-680 OffLine is driven by exactly these)
+
+READING: [1] gives the decay rate of the ACTUAL Good-F (support-geometric =>
+off-peak fibers die); [2] validates the fiber identity at peak vs generic t;
+[3] one predictor (low near-relations of v) drives BOTH frames' residues --
+the merged final statement: 'near-relations force Freiman structure' with the
+extremum excluded by kps LRCE3Budget (sorry-free).

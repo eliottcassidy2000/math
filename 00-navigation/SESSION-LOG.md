@@ -1,3 +1,21 @@
+## klein-2026-07-09-S218 -- THE OFF-PEAK BOUND (THM-677 Addendum 4): the FIBER IDENTITY + F-hat's decay MEASURED (geometric ~0.2-0.36/coordinate, density check exact) + the truncation direction is upper-bound-safe (2.7x cancellation bonus) + THE TWO-FRAME CONVERGENCE with monad's same-day THM-680 -- the two routes' residues are now ONE species (low near-relations of v), with the Freiman extremum already excluded by kps's same-day LRCE3Budget
+
+Prompt (owner): run the off-peak spectral bound; pull frequently and leverage deeply.
+
+PULLED FIRST, LEVERAGED: monad-explorer-S9's THM-680 (per-ruler liveness floor, PROVED: exact relation-lattice identity + defining-line Parseval; floor 0.1124 - OffLine(q)) landed hours before this session -- it is the Z_q TWIN of my S217 chain (their (i) = my sampling identity; their (iii) = my grid lemma; their OffLine = my off-peak). kps-S120's LRCE3Budget (sorry-free: strict E3 deficit off dilated intervals) supplies the excluded extremum. This session's role became: prove/measure MY side's remaining structure and map the convergence.
+
+**(1) THE FIBER IDENTITY.** Good = F(e_1 j, ..., e_k j) for a fixed torus function F (gap + phi-interval) => G-hat(t) = V sum_{n : n.e = -t (mod V)} F-hat(n) -- exact finite Fourier (orbit generates Z_V at gcd(e,V) = 1). Off-peak t <=> the fiber {n : n.e = -t} has only high-support representatives.
+
+**(2) F-HAT'S DECAY MEASURED (the last unmeasured constant).** F-hat(0) = 0.210 vs N/V = 0.216 (density check EXACT); support-1: 0.042; support-2: 0.015; support-3+: <= 0.005 (MC noise floor at 40k samples) -- GEOMETRIC at ~0.2-0.36 per coordinate: the LEM-011 0.371-law shape holds for the realizable-Good F. The off-peak mechanism is real and quantified.
+
+**(3) THE TRUNCATION IS SAFE IN THE NEEDED DIRECTION.** Low-height fiber sums OVER-estimate |G-hat| by a consistent ~2.7x (the omitted high-fiber terms CANCEL): the off-peak UPPER bound survives truncation; the remaining formal step is the support-geometric fiber-tail bound (from (2)).
+
+**(4) THE TWO-FRAME CONVERGENCE.** monad's OffLine(q) and my off-peak fiber mass are the SAME species -- low near-relations of v -- read mod q vs mod V. THM-680(iv) states the merged endgame: a family with all rulers dead carries 78 simultaneous near-relations => low-covolume/coherent relation lattice => the Freiman direction => kps's LRCE3Budget excludes the extremum for non-dilated sets. The merged residue of the ENTIRE project, both routes: ONE quantitative transfer -- 'weighted spectral mass => relation count' (mine: fiber-tail; theirs: OffLine classification) -- then Freiman rigidity finishes. HONEST: my killer-specific unification proxy was too crude (constant across killers -- inconclusive); the structural map is exact, the quantitative merge is the named next step.
+
+FILES: THM-677 Addendum 4; lrc14_offpeak_fiber_klein_S218.out; HYP-5805; log; memory.
+
+NEXT (the merged final steps, for the fleet): (a) the fiber-tail bound (support-geometric, constants from (2)) -- closes my off-peak; (b) THM-680's OffLine finite classification -- closes their floor; (c) the weighted-mass->relation-count transfer feeding LRCE3Budget/Freiman -- ONE lemma serving both; (d) the wobble few-units bound (last tau-line item); (e) Lean: the fiber identity = finite Fourier on Z_V (boxeph's grid_char_sum pattern).
+
 ## klein-2026-07-09-S217 -- r(d)-FLATNESS RUN (THM-677 Addendum 3): the SPECTRAL SAMPLING IDENTITY (proved) + Good's peaks LOCATED at the cluster co-offsets (LEM-011) + the RESONANCE DICHOTOMY verified both ways (adversarial resonant killer fails exactly as predicted) -- the (PC) proof structure is COMPLETE, two final inequalities remain
 
 Prompt (owner): run the r(d)-flatness correlation.
