@@ -81,6 +81,26 @@ STATE PULLED: opus-S195/196/197 = burden-axis AP step FULLY Lean (ap_of_min_burd
 Endgame unchanged: LRC(14) = [monad grand assembly + residual hdiv/hcoarse] + [my lrc14_from_B5/from_liveness reductions] + [SOLE a-priori supply via Freiman ladder (burden = opus/mac-mini, E3 = mine, top rungs done both axes) OR klein signed cancellation (1 lemma)]. My LRC Lean ~40 nodes, chain S114..S126.
 
 NEXT: the quantitative Freiman-stability rung (same on both axes) is the sole remaining piece -- mac-mini exhaustion (operational) OR klein hyperbola lemma (analytic). E3-axis skeleton + exact top now Lean-complete; if anyone wants the k>=5 capstone proved it needs genuine Freiman-stability (not the peel induction). FILES: LRCSchurPeel.lean, lrc14_e3_peel_ladder_kps_S126.py/.out, reflection the-two-axes-share-a-threshold-e3-peel-ladder-kps-S126.
+## klein-2026-07-09-S227 -- THE PARITY PAIRING LAW IN LEAN (LRCParityPairing.lean, sorry-free kernel-pure, 8481 jobs green): the S222 Redei-involution transplant is formal end-to-end -- covering => LM EVEN at every modulus; certificate twins free; odd-LM = bug detector
+
+Prompt (owner): work on completing the LRC(14) proof formalization.
+
+DELIVERED (five theorems, kernel-pure [propext, Classical.choice, Quot.sound], no native_decide, root-wired):
+- inBand_mirror: band mirror symmetry under p -> q-p. Proof route worth recording: NO emod gymnastics -- the two residues x, y satisfy (x+y) % q = 0 with 0 <= x,y < q and the band forces x > 0, so y = q - x by divisor-extraction + omega. (The first draft's Int.neg_emod chain was unfixable; the sum-to-zero route built in one pass.)
+- live_mirror: p -> q-p preserves liveness on (0, q).
+- half_live_iff: for q = m + m, the half-point m is live IFF every speed is odd (odd speed => residue m, dead-center of the band; even => residue 0).
+- **liveCount_parity: THE LAW -- LM % 2 = (half-point liveness) % 2**, via the 2p<q / 2p=q / 2p>q partition, card_bij' for the lower<->upper pairing, and omega assembly.
+- **liveCount_even_of_even_speed: COVERING => LM EVEN at every modulus** -- live multipliers come in exact +- pairs.
+
+OPERATIONAL VALUE (for the pipelines): every exhibited live p yields q-p free (halves certificate search); an ODD live count at a covering set is a computation-bug detector -- a cheap validation invariant for the native_decide/enumeration banks.
+
+LEAN-CRAFT NOTES (for the fleet's pattern library): (1) filter_filter produces RIGHT-nested conjunctions -- rintro patterns must match; (2) subst on h : p = m with both fvars is direction-ambiguous (it ate m) -- use rw at hypotheses instead; (3) Odd/Even need destructuring before omega; (4) card_bij' (dependent, plain Finset membership) over card_nbij' (Set.MapsTo-flavored); (5) unfold def-Props (inBand) via simp only [inBand] before constructor/omega.
+
+STATE: the modular certificate stack in Lean now includes [defs/B5/consumers: death-star] + [high-tail identity + ladder: S219] + [dispersal + pigeonhole + transfer socket: S220] + [PARITY PAIRING: this file] + [dispatch/ledger/966/residual assembly: kps] + [aliasing: boxeph] + [E3 rigidity + Schur peel: kps/opus] + [common residue: monad]. Every proved piece of the modular route is formal; the residual is the named transfer (socket built) and the character program (S226 handoff).
+
+FILES: LRCParityPairing.lean (+ root wire); HYP-5850; log; memory.
+
+NEXT (Lean): (a) a decide demo: an explicit covering instance with LM even verified end-to-end + the twin-certificate extraction; (b) the parity law as a validation hook in the enumeration banks; (c) the remaining big-ticket items tracked by the fleet (hpartA reformulation; the character program's t2 hyperbola lemma when an analytic-NT agent takes it).
 
 ## opus-2026-07-09-S197 -- CITED finset_min_burden_isAP in the descent-burden theorem's Lean: thm676iv_seven_isAP (kernel-pure) formalizes THM-676(iv)'s hard direction (burden 11 => 7-class is an AP). Fixed stale THM-675->676 refs; canon notes.
 
