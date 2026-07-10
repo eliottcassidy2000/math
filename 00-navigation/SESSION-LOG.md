@@ -90,6 +90,23 @@ TOOLCHAIN (for the next builder): (a) rw [<- Int.cast_natCast] beats exact_mod_c
 REMAINING LEM-022 LEAN SURFACE (honest): the Fourier completion |C_w - b^2/q| <= (q/4) Sum 1/(|k||wk|) (finite AddChar orthogonality over ZMod q + the sine bound |B-hat(h)| <= q/(2|h|)) and the dyadic assembly consuming hyperbola_box_count per class. Both bounded; the completion is the C-heavy piece. The box count delivered here is the input BOTH consume and is independently the 'congruence-in-box / hyperbola count' klein-S226 called classical.
 
 FILES: LRCHyperbolaBox.lean (+ manifest), HYP-5870 (claim -> DELIVERED). NEXT: (a) the Fourier completion (AddChar; anyone C-comfortable); (b) the dyadic assembly wrapper; (c) klein's (b) CS-bootstrap remains the math-side named step; (d) P(w)-detector wiring into the residual interface (kps).
+## klein-2026-07-09-S229 -- THE PARITY LAW WIRED INTO THE 966 BANK (LRCParityBank.lean, green, ZERO new native_decide): all 966 twin certificates FREE + 966 second loneliness proofs + the standing LM-even invariant -- the parity arc complete (S222 law -> S227 formal -> S228 demo -> S229 bank)
+
+Prompt (owner): wire the parity check into the native_decide banks.
+
+DELIVERED (four theorems, 8483 jobs green, root-wired; NEW AXIOMS: none -- the additions are kernel-pure, inheriting only the bank's own native_decide through its stored certificates):
+- **bandOK_mirror**: the Z-band mirror (p -> q-p) in kps's exact bandOK shape -- kernel-pure, cast-free (the S227 sum-to-zero route transplanted to pure Z, SIMPLER than the N version).
+- **coveringWitnesses_twin_band**: ALL 966 stored witnesses yield their twins (l, q-p, q) BY THE LAW -- zero computation, zero new native_decide.
+- **coveringWitnesses_lonely_twin**: 966 second loneliness proofs through mreach_ge_of_pairsum_band. Every bank entry now carries two independent formal witnesses.
+- **coveringWitnesses_parity**: THE STANDING INVARIANT -- liveCount even at EVERY modulus for every bank family (even_speed_of_coveringPrim extracts the even speed from the q=2 covering clause; liveCount_even_of_even_speed does the rest). Any future bank evaluation finding an odd live count contradicts a kernel-pure theorem: the bug-detector is no longer a recommendation, it is wired.
+
+LEAN-CRAFT (pattern library): tuple projections in destructured hypotheses do NOT auto-reduce -- (l,p,q).2.2 and q were DISTINCT atoms to omega (the visible-counterexample output made this diagnosable in one look); fix = defeq re-typing via have/show with the reduced statements. Also: omega zeta-expands set-lets (clear_value did not suffice here -- the projection mismatch was the real cause).
+
+THE PARITY ARC COMPLETE: S222 (law discovered, exact on 94 rulers) -> S227 (formalized, 5 kernel-pure theorems) -> S228 (operational demo, twins + invariant + dispatch) -> S229 (bank-wired: 966 twins free, standing invariant). The Redei transplant is now load-bearing infrastructure.
+
+FILES: LRCParityBank.lean (+ root wire); HYP-5860; log; memory.
+
+NEXT: the big-ticket residuals unchanged and clearly owned -- the transfer socket's hypothesis (spectral or OffLine form) and the character program's t2 hyperbola lemma (S226 handoff). The formalization now tracks the mathematics with nothing formal-side left in my lane.
 
 ## boxeph-2026-07-09-S11 -- THE FINAL-RUNG MATH (HYP-5853): doubling chains are RLL SHIFT SETS -- exact nested measures, the W0 >= 11 outright-lonely theorem, and the drop-in Bonferroni upgrade (+0.0714 per doubling pair in EVERY existing budget)
 
