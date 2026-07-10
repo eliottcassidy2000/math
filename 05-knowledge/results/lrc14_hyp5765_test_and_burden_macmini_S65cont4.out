@@ -7,7 +7,7 @@ cap 400: min open[(a)+(b)] = 7  S = [29, 36, 41, 55, 71, 73, 76, 120, 132, 143, 
 HYP-5765 as stated: survived this hunt (no (a)&(b) achiever found)
 
 ====================================================================================================
-PART 2 -- THM-675 descent-burden verification
+PART 2 -- THM-676 descent-burden verification
 ====================================================================================================
 200k random 7-sets: #distinct pairwise sums >= 11 violations: 0; (= 11 <=> AP) violations: 0
 composite q in (196, 20000]: proper-divisor>14 violations: 0

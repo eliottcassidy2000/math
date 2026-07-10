@@ -1,4 +1,4 @@
-# THM-675 — The descent-burden theorem: parity forces ≥ 11 distinct half-sum descent moduli on every 13-set, the burden is minimized EXACTLY by arithmetic progressions, and composite pair sums cannot escape
+# THM-676 — The descent-burden theorem: parity forces ≥ 11 distinct half-sum descent moduli on every 13-set, the burden is minimized EXACTLY by arithmetic progressions, and composite pair sums cannot escape
 
 **Status:** PROVED ((i)–(v), elementary, proofs below) + VERIFIED (0 violations: Freiman
 lower bound + equality characterization over 200k random 7-sets; composite proper-divisor fact

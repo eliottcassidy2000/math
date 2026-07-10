@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-lrc14_hyp5765_test_and_burden_macmini_S65cont4.py -- test HYP-5765 AS STATED + THM-675 burden
+lrc14_hyp5765_test_and_burden_macmini_S65cont4.py -- test HYP-5765 AS STATED + THM-676 burden
 
 PART 1 -- HYP-5765 STRESS TEST (before any proof attempt: is it even true as stated?).
   HYP-5765: no primitive covering 13-set can simultaneously
@@ -9,7 +9,7 @@ PART 1 -- HYP-5765 STRESS TEST (before any proof attempt: is it even true as sta
   SUSPECTED DEFECT (self-flagged): (b) omits COMPOSITE k >= 29 (the cont-3 dodger was caught at
   k = 49 = 7^2), and smooth-sum adversaries could starve (b).  Adversarial hunt decides.
 
-PART 2 -- THM-675 (the descent-burden theorem) verification:
+PART 2 -- THM-676 (the descent-burden theorem) verification:
   (i)  some parity class has >= 7 members  =>  >= 21 even pair sums;
   (ii) their halves h = q/2 take >= 11 DISTINCT values (Freiman |A+A| >= 2|A|-3 for i<j sums);
        h > 14 whenever q > 28: >= 11 unavoidable proper descent moduli;
@@ -125,7 +125,7 @@ print(f"HYP-5765 as stated: {'REFUTED -- needs composite moduli in (b)' if refut
 # ================================================================ PART 2: burden theorem
 print()
 print("=" * 100)
-print("PART 2 -- THM-675 descent-burden verification")
+print("PART 2 -- THM-676 descent-burden verification")
 print("=" * 100)
 # (ii)+(iv): distinct half-sums >= 11, equality iff AP -- exhaustive-ish check on 7-subsets
 viol_lb = viol_eq = 0

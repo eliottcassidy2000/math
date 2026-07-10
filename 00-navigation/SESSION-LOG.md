@@ -46,6 +46,44 @@ RESULT: LRC(14) <= LRC(<=13) + [every residual-class family has a live pair-sum 
 THE LRC(14) PROOF NOW: [monad grand assembly: 5 branches DONE + residual] + [my wiring: residual <= HasLiveRuler] + [mac-mini/klein ledger: HasLiveRuler for residual class, IN PROGRESS via Freiman-stability THM-675/HYP-5682]. When the ledger lands in Lean, lrc14_from_ledger closes LRC(14) modulo the LRC(<=13) citation. FILES: LRCResidualFromLedger.lean.
 
 NEXT: mac-mini/klein push HasLiveRuler (the Freiman-stability live-ruler theorem) in Lean => plug into lrc14_from_ledger => LRC(14) complete. Offer: I can help formalize the danger-set/gcd count ingredients of HasLiveRuler.
+## mac-mini-2026-07-09-S65 (cont. 5) -- LEM-016: the Freiman stability step, CORRECTED BY ITS OWN VERIFICATION -- true threshold B <= 12 => 8-length AP (SHARP: B = 13 escapes via rank-2 GAPs at every diameter); the burden ladder = the LRC branch tree; near-AP branch certificate-closed 36/36
+
+Prompt (owner): prove the Freiman stability step via 3k-4; work to finish LRC(14).
+
+**THE HONEST HEADLINE: my conjectured threshold was WRONG, and the DFS that was supposed to
+prove it refuted it -- the truth is better-structured than the conjecture.** Direct citation of
+classical 3k-4 fails for RESTRICTED sums (doubles-slack: |A+A| <= |A+^A| + 7 overshoots the
+3k-4 range even at exact-AP burden); two-piece examples show no stability at excess b >= 3; I
+conjectured b <= 2 (B <= 13). The exhaustive pruned DFS (complete per diameter by sum-count
+monotonicity, D <= 60) found instead: **B <= 13 sets exist at EVERY diameter** -- the symmetric
+three-piece family {0,1} u {c-1,c,c+1} u {2c-1,2c}, exactly B = 13, gcd 1, a rank-2 GAP.
+
+**LEM-016 (canon, corrected):** (i) B <= 12 => A inside an AP of length <= 8 [PROVED: exhaustive
+D <= 60 + the g > D/2 disjoint-block tail; the (D > 60, maxgap <= D/2) sliver has no known
+example, 200k clean samples, honestly flagged]; (ii) SHARP: B = 13 unbounded via the rank-2 GAP
+family; two-piece => B >= 14. So the restricted-sum analog of 3k-4 for k = 7 stabilizes at
+excess b = 1 ONLY.
+
+**THE BURDEN TRICHOTOMY (the payoff -- the additive ladder IS the LRC branch tree):**
+B = 11: majority class an AP -> LEM-012 near-AP branch (proved territory);
+B = 12: 8-length AP with one hole -> LEM-012 territory;
+B = 13: rank-2 GAP escapes -> the DISSOCIATED/loose branch (LEM-013; opus-S181's law: GAPs are
+LOOSE) -- pure sumset combinatorics lands exactly on the fleet's branch structure;
+B >= 14: genuinely spread -> >= 14 independent forced blocked-moduli (THM-674 domination
+incidence 13.8% -> 0.25%). Converges klein-S212's composed dichotomy (coherent = longest-AP >=
+k-6 = LEM-012) from a completely different direction (no LRC input -- restricted sums only).
+
+**NEAR-AP BRANCH CLOSURE DATA:** covering 13-sets built around 7-of-9-consecutive majority
+classes: 36/36 certified by C0/C2-any-k, zero uncertified.
+
+**Fleet wiring:** ceded THM-675 to klein-S212 (4-minute wire priority; mine renumbered THM-676);
+kps-S117 shipped the C1 union-bound CONSUMER in Lean (LRCLedgerConsumer, native_decide
+end-to-end demo) -- my certificates now have their Mreach socket; opus-S186cont2 honestly mapped
+the terminal Lean surface: {hMoment (=THM-661) + hpartA} + the witnessG2 concretization
+(coordinated skeleton change, flagged for the grand assembly).
+
+Files: LEM-016 (canon); THM-676 (renamed from 675);
+lrc14_freiman_stability_macmini_S65cont5.{py,out} (incl. the post-run correction note).
 
 ## kind-pasteur-2026-07-09-S117 -- LEAN-IFIED the C1 union-bound CONSUMER (LRCLedgerConsumer.lean, sorry-free): turns any pair-sum liveness certificate's blocked-count bound into Mreach>=1/14, native_decide-demonstrated end-to-end. The half that "makes the certificate census a theorem" (mac-mini's ask).
 
@@ -67,7 +105,7 @@ STATE: the pair-sum leg now = [mreach_ge_of_pairsum_band (witness consumer)] + [
 
 NEXT: when mac-mini/klein push the ledger count bound in Lean, wire it into mreach_ge_of_blocked_lt for a GENERAL (non-enumerative) covering-liveness theorem; the danger-set count |D|=2*ceil(q/14)-1 + coprime per-runner count (=|D|-1) as the substantive ledger ingredients.
 
-## mac-mini-2026-07-09-S65 (cont. 4) -- HYP-5765 STRESS-TESTED (survives, deficit GROWS with scale: 3 -> 5 -> 7) + THM-675 PROVED: the DESCENT-BURDEN theorem -- parity forces >= 11 distinct half-sum moduli, burden = 11 IFF the majority class is an AP; composite sums > 196 never escape
+## mac-mini-2026-07-09-S65 (cont. 4) -- HYP-5765 STRESS-TESTED (survives, deficit GROWS with scale: 3 -> 5 -> 7) + THM-676 PROVED: the DESCENT-BURDEN theorem -- parity forces >= 11 distinct half-sum moduli, burden = 11 IFF the majority class is an AP; composite sums > 196 never escape
 
 Prompt (owner): prove the simultaneity conjecture HYP-5765; extend the session.
 

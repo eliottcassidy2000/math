@@ -1,0 +1,34 @@
+====================================================================================================
+PART 1 -- LEM-016: exhaustive pruned DFS, all normalized 7-sets with B <= 13, D <= 200
+====================================================================================================
+gcd-normalized 7-sets with B <= 13 exist at diameters up to (exhaustive D <= 60):
+  B = 11: max D = 6   (the AP: D = 6 expected)
+  B <= 12: max D = 7
+  B <= 13: max D = 60
+total normalized sets with B <= 13, D <= 60: 155
+examples at the extreme diameter:
+  D=60 B=13 A=[0, 1, 29, 30, 31, 59, 60]
+  D=60 B=13 A=[0, 7, 23, 30, 37, 53, 60]
+  D=60 B=13 A=[0, 11, 19, 30, 41, 49, 60]
+  D=60 B=13 A=[0, 13, 17, 30, 43, 47, 60]
+sharpness: [0, 1, 2, 3, 4, 50, 51]: B = 14 (14 expected) at diameter 51
+sharpness: [0, 1, 2, 3, 4, 500, 501]: B = 14 (14 expected) at diameter 501
+sharpness: [0, 1, 2, 3, 4, 5000, 5001]: B = 14 (14 expected) at diameter 5001
+tail sample (200k, D in (200,2000], maxgap <= D/2): B <= 13 violations: 0
+
+====================================================================================================
+PART 2 -- the STRUCTURED branch: majority class = 7 of 9 consecutive d-multiples;
+          covering 13-sets built around it: does the certificate battery always fire?
+====================================================================================================
+near-AP-majority covering sets tested: 36; certified (C0 or C2-any-k): 36 (100.0%)
+ZERO uncertified -- the structured branch is certificate-closed on this sample.
+
+Done.
+
+POST-RUN CORRECTION (same session, the verify-first loop catching its author AGAIN): the
+conjectured threshold "B <= 13 => bounded diameter" is FALSE -- the DFS itself found the
+symmetric three-piece family {0,1} u {c-1,c,c+1} u {2c-1,2c} (a rank-2 GAP) with B = 13 at every
+diameter (gcd 1). The TRUE stability threshold is B <= 12 => D <= 7 (exhaustive D <= 60: max
+D at B <= 12 is 7), SHARP: b = 1 is the last stable excess for restricted sums at k = 7.
+The B = 13 escapers are rank-2 GAPs = exactly opus-S181's loose/dissociated family: the burden
+levels {11 = AP, 12 = AP-with-hole, 13 = rank-2 GAP, >= 14 = spread} mirror the LRC branch tree.
