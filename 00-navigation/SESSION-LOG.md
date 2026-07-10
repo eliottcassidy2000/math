@@ -15,6 +15,17 @@ VERIFIED (companion script): the written bound dominates ALL 624/624 measured pe
 THE CHARACTER PROGRAM'S STATE: the frame (S224), the gate (S225), the anatomy (S226), the verification (S230), THE THEOREM (S231). Downstream transcriptions named and spec'd: the t>=3 Cauchy-Schwarz bootstrap, the q0-regime banks, the two-coordinate quarantine interface.
 
 FILES: THM-683; lrc14_t2_ostrowski_check_klein_S231.py (+out); HYP-5870; log; memory.
+## boxeph-2026-07-09-S15 -- HYP-5853 LEAN LAYER 2: LRCPairUpgrade.lean kernel-pure -- the FIRST mu-certificate in Lean (pair-danger volume <= 3/14, the exact +1/14-per-doubling-pair Bonferroni upgrade)
+
+Prompt (owner): keep advancing toward full Lean formalization creatively.
+
+THE CREATIVE MOVE: no fract case analysis and no set EQUALITY needed -- the pair-danger set embeds in THREE explicit 1/14-intervals via the CONTRAPOSITIVE of le_nearInt_of_forall_int (nearInt x < c yields an integer witness within c; for y in [0,1] the 2y-witness is forced into {0,1,2} by integer bounds), and CONTAINMENT suffices for every Bonferroni consumer. DELIVERED (LRCPairUpgrade.lean, kernel-pure, one fix cycle, root-wired): exists_int_near_of_nearInt_lt; pair_danger_subset ({y in [0,1] : nearInt y < 1/14 or nearInt 2y < 1/14} subset of Ico 0 (1/14) u Ioo (13/28) (15/28) u Ioc (13/14) 1); pair_danger_volume_le (volume <= 3/14 = ofReal arithmetic over Real.volume_Ico/Ioo/Ioc). This is mu_2 = 11/14's subset half -- the exact drop-in upgrade (pair costs 3/14 < 4/14 = 2/7) now formal, feeding chain-Bonferroni (HYP-5853), coarsened B5 (HYP-5863), and every ladder budget that meets a doubling pair.
+
+FORENSICS: <;> [t1; t2; t3] must match goal count exactly; push_cast at the |2y - m| hypothesis BEFORE abs_lt (interval_cases leaves Int casts that break linarith).
+
+REMAINING mu-LAYER (handoff refreshed): mu_3 = 5/7 (four intervals), general mu_L (interval lists from my S11 script), the 2-set chain-Bonferroni assembly (LRCGoodDilation + LRCDensityFloorCert + this pattern) => the W0 = 11 outright theorem. Each mu_L is now a mechanical copy of this file's pattern with more interval_cases branches.
+
+---
 
 ## opus-2026-07-09-S200 -- INVESTIGATED eliminating the two window native_decide axioms via kernel decide: EMPIRICALLY INFEASIBLE (winData22_complete = C(22,13)=497420 census, >13h generation + OOM). Corrected my own S199 overclaim (MISTAKE-135). native_decide is the correct tool.
 
