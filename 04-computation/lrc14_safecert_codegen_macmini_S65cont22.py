@@ -73,12 +73,19 @@ def emit_family(S, cap):
 
 def main():
     size = int(sys.argv[1])
-    chunk = int(sys.argv[2]) if len(sys.argv) > 2 else None
+    chunk = sys.argv[2] if len(sys.argv) > 2 else None
     cap = CAP[13 - size]
     fams = [list(S) for S in combinations(range(1, 14), size)]
     if chunk is not None:
-        fams = [S for S in fams if S[0] == chunk]
-    suffix = f"Size{size}" + (f"_c{chunk}" if chunk is not None else "")
+        if "-" in chunk:
+            lo, hi = (int(t) for t in chunk.split("-"))
+            fams = [S for S in fams if lo <= S[0] <= hi]
+            suffix = f"Size{size}_g{lo}to{hi}"
+        else:
+            fams = [S for S in fams if S[0] == int(chunk)]
+            suffix = f"Size{size}_c{chunk}"
+    else:
+        suffix = f"Size{size}" 
     thms = [emit_family(S, cap) for S in fams]
     ncomps = sum(len(components(S)) for S in fams)
     body = "\n".join(thms)

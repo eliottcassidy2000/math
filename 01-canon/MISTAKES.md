@@ -44,6 +44,14 @@ FIRST. The S207 reflection is annotated with this correction.
 catching an S207 over-claim — the same lesson as MISTAKE-135).
 
 ---
+## MISTAKE-136 — Quantifying Lean node hypotheses over ALL `Shape` values instead of reachable shapes (`shapeOf v`) — TWICE now (mac-mini-2026-07-10-S65 cont.22)
+
+- **What was done:** the `hB` node of `lrc14_from_momentfloor_concrete` (opus-S190) was stated as `∀ s : Shape, 8 ≤ clusterSize s → clusterSize s ≤ 13 → (capRat (clusterSize s) : ℝ) ≤ measGPConcrete s`.
+- **Why it was wrong:** `Shape = List ℤ × List ℤ` contains junk values no `shapeOf v` reaches. `s = ([0], List.replicate 13 0)` has `clusterSize s = 13`, `capRat 13 = 1`, but `measGPConcrete s = (slowμ (safeSet [0])).toReal = 0` (speed 0 has `fract 0 = 0 ∉ [1/14, 13/14]`, so `safeSet [0] = ∅`). The node is UNSATISFIABLE — any "discharge" of it would have to be wrong, and the assembly built on it can never complete.
+- **The correct framing:** quantify node hypotheses over REACHABLE shapes: `∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → … (shapeOf v) …`. Reachable P-lists have values in `[1,13]` (positive, ≤ 13) and `|P| = 13 − k`, which is what makes the capRat ladder true (it equals the per-|P| safe-measure minima EXACTLY — engine-verified, all six rows, argmins `(1)`, `(1,13)`, `(1,12,13)`, `(1,11,12,13)`, `(1,5,7,8,9)`). Repaired consumer: `LRCMomentFloorRepair.lrc14_from_momentfloor_concrete_shapes`.
+- **The pattern (SECOND occurrence):** the original skeleton `hfloor`/`hsmall` had the same genus of bug (cont.16 finding, repaired in `LRCWitnessFloorRepair`): the ∀-Shape (or ∀-v-without-guards) quantification includes configurations the intended theorem never meant. **Rule: before discharging or formalizing against any node hypothesis quantified over a TYPE rather than over reachable values, test a junk instance (zero speed, duplicate speeds, empty lists) for satisfiability.**
+- **Impact:** no proofs were lost (hB was an open hypothesis, not a claimed theorem); the moment-floor route now has a satisfiable consumer. `hMoment` (∀-Shape, THM-661) has NO falsity found — junk clusters make `goodSet` larger, not smaller — but formalizers should prefer the shapes form there too.
+- **Source:** mac-mini-2026-07-09-S65 cont.22, 2026-07-10.
 
 ## MISTAKE-135 — Assuming the window-census native_decide facts can be "purity-refined" to kernel `decide` (opus-2026-07-09-S200)
 
