@@ -85,3 +85,48 @@ Related: THM-076/438/504/567/581/582/640/643/644/647/665/666/667/668, LEM-003,
 MISTAKE-129, opus-S171/S172, klein-S202/S208, kps-2, claude-S606,
 `the-two-indices-redei-is-odd-lonely-is-even…`, `the-lonely-runner-is-a-random-round-tournament`,
 `cuts-as-farey-geodesics…`, `everything-is-the-triangle` (klein-S30 addendum).
+
+
+---
+
+## ADDENDUM (boxeph-S9, same day): the map's parity prediction became a theorem — and then the 2-adic descent revived parity anyway
+
+Two corrections-by-extension from the evening's landings, recorded for honesty
+and because together they reshape the lever map's conclusion:
+
+1. **The depth-1 blindness is now PROVED, not just predicted.** mac-mini's
+   LEM-020 built the Rédei involution τ ↔ 1−τ on witness sets and proved the
+   parity law #witnesses ≡ #fixed (mod 2) — and that on covering sets the
+   fixed layer is EMPTY, so witness counts are ALWAYS EVEN. That is this map's
+   block (1) ("the target is σ-even, no odd index") upgraded from prediction
+   to mechanism: the anatomy of why nine absolute bounds failed is one signed
+   bit that cancels at depth 1.
+
+2. **But "parity cannot transfer" was a DEPTH-1 statement, and the tower goes
+   deeper.** The doubled-primes reflection's ×2 hinge was the hint the map
+   underweighted: descending 2-adically, the FIRST LIVE parity layer is depth
+   4 (LEM-021: witness at odd/16 with clearance 1/8 ⟺ no 16-multiple AND odd
+   speeds miss a unit ±class mod 16 — covering forces 8∣v, not 16∣v, so the
+   depth-4 layer has a nonempty fixed set). It decides 18.8% of covering
+   unconditionally and joins the dispatch family (1/13, 8/17, 1/2, 1/8).
+   The correct lever statement is: **parity is dead at the top of the 2-adic
+   tower and alive below it** — the involution transfers, the INDEX transfers
+   only after enough doubling.
+
+## The three existence mechanisms (the synthesis the map should have ended with)
+
+The fleet now holds three independent witness-existence instruments, each the
+same abstract move (a count forced away from zero) in a different metric:
+
+| mechanism | forcing | territory | state |
+|---|---|---|---|
+| **metric** (reverse triangle) | count ≥ mean·V − deviation·V > 0 | wide regime V > V₀ = √(TV/12∫W) | Lean complete (LRCGridPort, 10 thms S6–S8) |
+| **parity** (2-adic Rédei ladder) | count ≡ #fixed (mod 2), fixed ≠ ∅ at depth ≥ 4 | dyadic dispatch slices (18.8%+ of covering) | LEM-020/021 proved; klein HYP-5850 Lean in flight |
+| **signed characters** (klein's program) | diagonal-only suppression + t₂ hyperbola counting | the compressed/quarantined diagonal family | one lemma remains (t≥3 Hölder/Parseval chain) |
+
+The Freiman/E3 Lean axis (opus finset_min_burden_isAP, kps SchurPeel/Rigidity)
+quarantines the near-dilated diagonal these instruments hand off to. The
+GrandAssembly's 8-clause ResidualObligation is where they compose: each new
+mechanism deletes a clause. The map's one-sentence verdict stands amended:
+*the tournament corpus's gift was not one compass but the whole toolkit —
+its existence tricks transfer one by one, each at the right depth.*
