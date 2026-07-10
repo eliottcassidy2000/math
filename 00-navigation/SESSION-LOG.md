@@ -19,6 +19,30 @@ HONEST SCOPE: this CLOSES a named deferred brick on the hB5 critical path; it do
 Files: LRCFiniteUnionVolume.lean (+root). -> mac-mini LRCIntervalBridge/brick(iii), klein THM-685, THM-661, opus momentLP (S192-194), hB5.
 
 ---
+## kind-pasteur-2026-07-10-S127 (cont.7) -- I did NOT prove the measure floor (it IS the open LRC(14) case). I PROVED the measure floor needs NO MEASURE THEORY: a single strict-margin point yields it, by the reverse triangle inequality alone. LRCStrictWitnessFloor.lean, kernel-pure.
+
+Prompt (owner): now prove the measure floor.
+
+HONEST REFUSAL + THE REAL RESULT. SafeMeasureFloor says every residual family's safe set has positive measure. Since Lonely 14 v t IS safe-set membership, that is the open case of LRC(14) in a STRENGTHENED (strict-margin) form. Proving it = proving the conjecture. I did not, and did not fake it.
+
+WHAT I FOUND INSTEAD (and it changes the target): Mreach v = sSup(minReach v '' [0,1]), and lonely_of_Mreach_ge already gives ResidualObligation from Mreach >= 1/14 (NON-strict). But the measure floor needs Mreach > 1/14 (STRICT). So SafeMeasureFloor is STRICTLY STRONGER than what LRC(14) requires -- my S127cont6 reduction, while kernel-pure, aimed slightly too high. The right move is not to prove the floor but to show it costs nothing beyond a point.
+
+PROVED (LRCStrictWitnessFloor.lean, sorry-free, kernel-pure [propext, Classical.choice, Quot.sound], 8513 green):
+- StrictWitness v := exists t0 in Ioo 0 1, exists eps>0, forall i m, 1/14 + eps <= |v_i*t0 - m|.
+- safeInterval_of_strictWitness: StrictWitness v => exists a<b, Icc a b subset safePeriod v.
+  PROOF = REVERSE TRIANGLE ONLY. With M = Sum|v_i| and delta = min(eps/(M+1), t0/2, (1-t0)/2):
+  |v_i t - m| >= |v_i t0 - m| - |v_i|*|t-t0| >= 1/14 + eps - M*eps/(M+1) = 1/14 + eps/(M+1) >= 1/14.
+  The whole interval [t0-delta, t0+delta] is safe, and has positive length.
+- measureFloor_of_strictWitness (compose with safePeriod_measure_pos_of_Icc_subset).
+- StrictWitnessSupply := forall v, IsResidual v -> StrictWitness v.   <- THE REMAINING OBLIGATION
+- safeMeasureFloor_of_strictWitnessSupply; lrc14_of_strictWitnessSupply : LRCUpTo13 -> StrictWitnessSupply -> LRC14Statement.
+CERTIFIED all [propext, Classical.choice, Quot.sound].
+
+CONSEQUENCE: the entire remaining mathematical content of LRC(14) is now a POINTWISE ELEMENTARY statement -- "every residual family has one time at which all 13 phases clear 1/14 by a uniform margin" -- with NO measure theory, NO continuum estimates, NO Fourier. Chain: StrictWitnessSupply -> SafeMeasureFloor -> ResidualObligation -> LRC14Statement, all kernel-pure. Equivalently Mreach v > 1/14 on the residual class (the covering census measures min M = 1/12, cushion 1/84 -- evidence, not proof).
+
+My LRC Lean ~62 nodes, chain S114..S127. FILES: LRCStrictWitnessFloor.lean.
+
+NEXT: the obligation is now purely arithmetic-shaped. A modular strictly-live ruler (exists q p with all 13 residues STRICTLY inside [q/14, 13q/14]) gives a StrictWitness at t0 = p/q -- the natural next brick (klein's THM-685 A1 rounding identity, strict form). Then LRC(14) reduces to: every residual family has one strictly-live ruler. That is an INTEGER statement.
 
 ## opus-2026-07-09-S203 -- ASSEMBLY SWAP VERIFIED: LRC(14) top theorem is now FOUNDATIONAL-AXIOMS-ONLY [propext, Classical.choice, Quot.sound], 0 sorryAx. native_decide REMOVED. (kps-S127 had already applied the same swap concurrently -- honest attribution.)
 
