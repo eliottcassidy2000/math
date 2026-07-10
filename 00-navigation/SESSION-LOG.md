@@ -1,3 +1,17 @@
+## boxeph-2026-07-09-S8 -- LRCGridPort.lean FIRST-TRY GREEN (HYP-5818): the REVERSE-TRIANGLE existence layer -- the aliasing program's full payoff chain now stands in Lean (deviation -> mean -> count -> WITNESS)
+
+Prompt (owner): work to finish the LRC(14) proof formalization; think triangle inequalities creatively.
+
+THE CREATIVE TRIANGLE: thm665_full bounds a DEVIATION; the proof needs EXISTENCE. The reverse triangle inequality Re(E_grid[W]) >= int W - ||E_grid[W] - int W|| converts the deviation bound into a mean floor; pointwise domination Re W(j/V) <= 1[P j] converts the mean floor into a count floor; count > 0 is a witness. This is the METRIC ANALOGUE OF REDEI'S PARITY MOVE -- existence from count >= mean*V - deviation*V > 0 instead of count odd -- the tournament corpus's signature trick transplanted to the analytic side, exactly where the S2 lever map said parity itself provably cannot go.
+
+DELIVERED (LRCGridPort.lean, FIRST-TRY full green, 3 theorems kernel-pure, root-wired): grid_mean_re_ge (Complex.abs_re_le_norm + thm665_full); good_count_ge (re_sum + sum_boole + div_mul_cancel_0); exists_good_of_mean_pos (card_pos). With S6/S7 this completes the aliasing program in Lean: TEN kernel-pure theorems across three files, from the Poisson identity to a-priori good-period existence on the V-ruler for V > V0 = sqrt(TV/(12 int W)).
+
+CONSUMERS: (a) THM-666 concrete = instantiate P j := 'maxgap(j/V) >= theta''' with the clamp's (alpha, a, w0) data (cell engine emits it) + domination (clamp <= indicator by construction); (b) certified per-(E,V) window checks: for V inside the window, rational grid evaluation (B2 of rationals is rational -- decide-shaped); (c) the D_m mid-band machinery (klein-S217's spectral sampling) -- same core, product clamps.
+
+REMAINING LEAN SURFACE (updated): witnessG2 de-opaquing (blocked, coordinated skeleton change); THM-667 Lemma B (decide-shaped); the clamp-data instantiation layer (mechanical, cell-engine-driven); death-star's LRCLem012NearAP in flight (LEM-012).
+
+---
+
 ## boxeph-2026-07-09-S7 -- THM-665 COMPLETE IN LEAN: thm665_full kernel-pure -- ||E_grid[W](V) - int W|| <= TV(W')/(12 V^2) end to end, via the PERIODIZED BERNOULLI BASIS (zero integration by parts)
 
 Prompt (owner): finish the PL input file and complete full THM-665.
