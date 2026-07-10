@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-09-S119 -- FORMALIZED the danger-set + gcd-count ingredients of HasLiveRuler (LRCDangerCount.lean, sorry-free): dangerCard_eq (|D|=2*floor((q-1)/14)+1) + blocked_card_coprime (g=1: coprime v blocks exactly |D| via the multiplication-permutation bijection).
+
+Prompt (owner): formalize the danger-set and gcd-count ingredients of HasLiveRuler.
+
+CONTEXT: HasLiveRuler (kps-S118) = exists pair-sum q with blocked-multiplier count < q-1. The ledger bounds the blocked count by counting the DANGER SET D (residues OUT of the band [q/14,13q/14]: 14r<q or 13q<14r) and lifting to each runner via gcd. These are the number-theoretic ingredients.
+
+BUILT (LRCDangerCount.lean, sorry-free):
+- dangerCard q := #{r in range q : 14r<q or 13q<14r}. dangerCard_eq: **dangerCard q = 2*((q-1)/14)+1** (the ledger 2m+1, m=ceil(q/14)-1=floor((q-1)/14)). Proof: filter_or splits D into the near-0 arc {14r<q}=range((q-1)/14+1) (card (q-1)/14+1) and its reflection {13q<14r}=range q \ range(13q/14+1) (card (q-1)/14), disjoint; omega handles the Nat-division arithmetic (q - 13q/14 - (q-1)/14 = 1 for all q>=1).
+- blockedCard v q := #{p in range q : (v*p) mod q in D}. blocked_card_coprime: **gcd(v,q)=1 => blockedCard v q = dangerCard q** (the ledger |B_l|=g(2floor(m/g)+1) at g=1, the generic/prime case = mac-mini C3 territory). Proof: p |-> (v*p) mod q is a bijection of range q (InjOn via Nat.ModEq.cancel_left_of_coprime + mod_eq_of_lt; image=range q by card), so Finset.card_bij maps blocked onto danger.
+
+These bound the per-runner blocked count; the union bound with +-class merging (mac-mini THM-672/674) assembles them into blocked<q-1, which my consumer (kps-S117 mreach_ge_of_blocked_lt) turns into loneliness, discharging HasLiveRuler => lrc14_from_ledger (kps-S118) => LRC(14).
+
+STATE (endgame): [monad grand assembly 5 branches + residual] + [kps-S118 residual<=HasLiveRuler] + [HasLiveRuler <= blocked<q-1 <= union bound over per-runner |B_l|] + [now: |D|=2m+1 (dangerCard_eq) + |B_l|=|D| coprime (blocked_card_coprime)]. Remaining ledger pieces: g>1 gcd count |B_l|=g(2floor(m/g)+1) + the +-class merging (r(q)<=6) + the union bound assembly (mac-mini THM-672/674 territory). FILES: LRCDangerCount.lean.
+
+NEXT: the g>1 gcd count (multiplication by v with gcd g is g-to-1 onto multiples of g => |B_l|=g*|D cap <g>|=g(2floor(m/g)+1)); the union bound + merging to blocked<q-1; connect dangerCard/blockedCard (Nat) to fires (Int) in HasLiveRuler.
+
 ## boxeph-2026-07-09-S5 -- THE ALIASING BOUND IN LEAN (HYP-5778, PARTIAL): full BV-free decomposition + verified Mathlib tooling map + 70% draft parked OUT of the build tree (no sorryAx shipped)
 
 Prompt (owner): work the Fourier/BV aliasing bound; pull often, consider contents deeply.
