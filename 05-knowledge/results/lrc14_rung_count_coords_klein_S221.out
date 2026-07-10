@@ -1,0 +1,13 @@
+            family covering R(v) h<=3,s<=4 tall rulers arith-live arith-dead
+     adv-worst-120     True            567          43         36          7
+          @91-comb     True            783          36         28          8
+      near-dil-260     True           3799          15          3         12
+           adv-280     True            233          41         39          2
+  midband-free-280     True            339          32         29          3
+           adv-200     True            383          50         47          3
+
+READING: arith-live >= 1 with PROVED absolute loads = the family is a-priori
+certified by THM-680/681 arithmetic alone. R(v) is the count coordinate:
+near-dilations have huge R (the ladder side); if all covering non-dilated
+families sit at R <= R0 with arith-live >= 1, the rung reduces to the
+E3-stability COUNT statement 'non-near-dilated => R <= R0' -- kps/opus lane.

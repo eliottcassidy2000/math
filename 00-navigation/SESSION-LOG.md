@@ -47,6 +47,21 @@ identity) may collide with my THM-676 (descent-burden, renamed from 675 after ce
 S212) -- flagged for reconciliation, no content dispute.
 
 Files: lrc14_realization_residual_audit_macmini_S65cont8.{py,out}.
+## klein-2026-07-09-S221 -- THE RUNG IN COUNT COORDINATES: THM-681's affine coincidences ARE height-<=3 exact relations (the rung = an E3-COUNT question, Freiman-laddered) + THE SURVIVAL MEASUREMENT: under the proved classified loads EVERY tested family keeps >= 3 arithmetic-live tall rulers -- INCLUDING THE NEAR-DILATION -- so the remaining formal object collapses to the unclassified OffLine tail at the survivors
+
+Prompt (owner): work the remaining mathematical content; pull frequently, consider deeply.
+
+PULLED: monad THM-681 (off-line taxonomy complete + per-class Parseval-tight loads + the exact-load dichotomy; final rung = W0 in (0.08, ladder-threshold), needing E3-stability or signed cancellation) + THM-682 + mac-mini's realization residual-class audit launch + monad's B<=31 exhaustive doubling-escape census.
+
+**(1) THE STRUCTURAL CONNECTION (deep-consider payoff).** THM-681's ruler-specific affine coincidences (2v_a +- v_b = tq) are EXACT support-<=4 height-<=3 integer relations of v: k.v = tq with q = v_i + v_j <=> (k - t e_ij).v = 0. So the rung's kill-capacity is a RELATION-COUNT question -- finitely checkable per family, and capped by exactly the E3-stability ladder kps/opus are building -- NOT a W0-mass question. (My first assembly attempt via mass count-caps died honestly on cancellation -- Schur measured 0.0027 vs bound 0.0645, the 7th confirmation of the standing law.)
+
+**(2) THE SURVIVAL MEASUREMENT (the decisive number).** Applying THM-681's PROVED per-class absolute loads (collisions 0.0225/line, affine 0.0382/line) against the 0.1124 budget across all tall rulers: adv-worst-120: 36/43 live; @91: 28/36; adv-280: 39/41; midband-free-280: 29/32; adv-200: 47/50; **near-dil-260: 3/15 live (R(v) = 3799 -- the LADDER side itself keeps 3 arithmetic-live tall rulers)**. The classified classes NEVER kill all tall rulers on any tested family. One live ruler suffices for LRC.
+
+**(3) THE COLLAPSE.** The remaining formal object is now: the UNCLASSIFIED OffLine tail (support >= 3 / height >= 3 off-line mass) at the >= 3 surviving rulers per family -- a convergent geometric-tail bound of exactly the shape measured everywhere (S218: F-hat decay 0.2-0.36 per coordinate; THM-680(ii)'s 1/(2|k|) envelopes; the support-restriction to <= 13 coordinates at a single ruler). Once that tail lemma is written, THM-680/681 + this arithmetic certify every tested family a-priori -- ladder side included -- and the rung as a separate object DISSOLVES. R(v) (#height-<=3 support-<=4 relations) is the clean count coordinate: 233-783 generic vs 3799 near-dilated.
+
+FILES: lrc14_rung_count_coords_klein_S221.out; HYP-5820; log; memory.
+
+NEXT (the last two named lemmas, either closes its route): (a) THE UNCLASSIFIED-TAIL BOUND at a surviving ruler (geometric in support/height; @monad-explorer this slots directly under your THM-680(iii) as class (D); my S218 decay constants are the empirical guide); (b) the wobble few-units bound (tau-line). Both are convergent-tail statements with 3-5x measured margins; neither is a cancellation statement -- the cancellation wall has been engineered AROUND on both routes.
 
 ## klein-2026-07-09-S220 -- THM-673(A) IN LEAN (LRCAggregatedDispersal.lean, sorry-free kernel-pure, GREEN FIRST TRY): the V-independent dispersal + the thin-modulus pigeonhole + the composition socket with the off-line/off-peak TRANSFER isolated as the ONE explicit hypothesis -- the Lean now mirrors the math DAG one-to-one
 
