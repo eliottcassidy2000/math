@@ -33,6 +33,21 @@ the full m_P floors: the finite-union volume identity. The legs are now CERTIFIC
 data in, positivity out, no analysis.
 
 Files: 04-computation/lean/TournamentH7/TournamentH7/LRCIntervalBridge.lean (+ root).
+## kind-pasteur-2026-07-10-S127 (cont.4) -- (1) WIRED LRCHyperbolaBox into the per-cell mcorr bound (LRCMcorrHyperbola.lean, sorry-free kernel-pure); (2) FOUND the 6 explicit witnesses that greedy-cover the census-branch domain (replaces opus-S200's native_decide census).
+
+Prompt (owner): wire LRCHyperbolaBox into the per-cell mcorr bound; think 6 explicit witnesses form the greedy cover of the census-branch domain.
+
+(1) THE WIRING (LRCMcorrHyperbola.lean, sorry-free, kernel-pure [propext, Classical.choice, Quot.sound], 8477 green; namespace LonelyRunner.McorrHyperbola):
+- zcorr A w := #{(a,b) in A^2 : a = w*b} on ZMod q (= mcorr on units, a*b^-1=w <=> a=w*b).
+- zcorr_le_box: for A avoiding 0 with cdist <= K, zcorr A w <= #{k!=0: cdist k<=K, cdist(w*k)<=K} (death-star's box); the map (a,b)->b injects the pairs (b in A, w*b=a in A, both nonzero K-close).
+- zcorr_percell: (zcorr A w - 1)*P <= 4K^2, given the hyperbola-min P (forall h!=0, P<=cdist h * cdist(w*h)) -- combines zcorr_le_box with death-star's hyperbola_box_count. = the per-cell input mcorr A w <= M (M=1+4K^2/P) that offdiag_mcorr_sq_le consumes.
+CHARACTER-ROUTE COMBINATORIAL CORE NOW CLOSED END-TO-END IN LEAN: hyperbola_box_count (per-cell count, death-star) -> zcorr_percell (this) -> offdiag_mcorr_sq_le (L2 aggregation, kps S127cont3). The remaining analytic pieces (the hyperbola-min P = equidistribution, and the signed t>=3->t2) stay death-star/klein.
+
+(2) THE 6 WITNESSES (lrc14_census6_witness_cover_kps_S127.py/.out): the owner was RIGHT -- exactly 6. KEY: the grand-assembly branch order dispatches min>=2 families via spread13 (in [1,22]: min>=2 => max<=22<=26=13*2 => ratio<=13 => spread13). So the TRUE census-branch domain (window-22 & GapFamily) = {S subset [1,22], |S|=13, 1 in S, max>13, covering} = 14002 families (not the full 31471; the 17469 min>=2 are spread13-dispatched, non-covering are sieve-dispatched). GREEDY COVER = EXACTLY 6 witnesses: tau in {12/25, 9/26, 7/27, 11/28, 4/23, 11/26} (+8361,+3649,+1408,+456,+96,+32 = 14002, COMPLETE, 0 violations). Denominators 23-28 = THM-682's "worst witness q=27"; first witness covers 8361 = THM-682's diam-<=-22 slice count. Each family lonely at its tau by EXACT rational arithmetic (Q<=14*min(r,Q-r) all v, r=v*p%Q) -- NO native_decide. This is the census-shrinking opus-S200 said native_decide removal NEEDS (winData22 C(22,13)=497420 >13h+OOM): the actual hard domain is 14002, covered by 6 explicit witnesses.
+
+My LRC Lean ~54 nodes, chain S114..S127. FILES: LRCMcorrHyperbola.lean, lrc14_census6_witness_cover_kps_S127.py/.out.
+
+NEXT: (a) formalize the 6-witness cover as the window-22 replacement (each of 14002 families lonely at one of 6 explicit tau -- still enumerative but 14002 not 497420, exact-rational not native_decide; or a STRUCTURAL partition by which tau works). (b) the wiring's remaining input = the hyperbola-min P (equidistribution) for the residual's ratios -- death-star/klein's analytic lane. (c) bridge zcorr = mcorr on units to feed offdiag_mcorr_sq_le literally.
 
 ## boxeph-2026-07-09-S17 -- THE mu_L EVALUATOR, DATA LAYER COMPLETE (HYP-5853 layer 4): all twelve covers exact + every recursion piece SINGLY CONTAINED (the Lean-checker reduction verified) + THE SIX CENSUS-BRANCH WITNESSES (worst (7,6) = 219/224 < 1, exact)
 

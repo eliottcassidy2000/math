@@ -1,0 +1,26 @@
+census-branch domain (window-22 & GapFamily, [1,22]): 14002 families
+the 6 witnesses: ['12/25', '9/26', '7/27', '11/28', '4/23', '11/26']
+  tau = 12/25: +8361 newly covered
+  tau = 9/26: +3649 newly covered
+  tau = 7/27: +1408 newly covered
+  tau = 11/28: +456 newly covered
+  tau = 4/23: +96 newly covered
+  tau = 11/26: +32 newly covered
+COVER COMPLETE (0 uncovered)
+
+sanity: each family's realized clearance at its covering witness >= Q/14 (i.e. >= 1/14):
+  [1, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20, 21]  @ 12/25: clearance 2/25 >= 1/14? True
+  [1, 3, 4, 6, 8, 10, 12, 13, 14, 18, 19, 20, 22]  @ 12/25: clearance 2/25 >= 1/14? True
+  [1, 5, 7, 9, 10, 12, 13, 14, 16, 17, 19, 20, 22]  @ 12/25: clearance 3/25 >= 1/14? True
+  [1, 3, 4, 8, 11, 12, 13, 14, 15, 16, 17, 18, 20]  @ 12/25: clearance 2/25 >= 1/14? True
+  [1, 2, 3, 5, 6, 9, 10, 12, 13, 14, 16, 20, 22]  @ 7/27: clearance 3/27 >= 1/14? True
+  [1, 2, 5, 9, 10, 11, 12, 13, 14, 16, 17, 19, 20]  @ 9/26: clearance 2/26 >= 1/14? True
+  [1, 3, 6, 8, 9, 12, 13, 14, 15, 16, 18, 20, 22]  @ 12/25: clearance 3/25 >= 1/14? True
+  [1, 3, 5, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20]  @ 12/25: clearance 3/25 >= 1/14? True
+  [1, 3, 4, 7, 9, 11, 12, 13, 14, 16, 18, 20, 22]  @ 12/25: clearance 2/25 >= 1/14? True
+  [1, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18]  @ 12/25: clearance 3/25 >= 1/14? True
+  [1, 7, 8, 9, 10, 12, 13, 14, 16, 17, 20, 21, 22]  @ 12/25: clearance 2/25 >= 1/14? True
+  [1, 2, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 21]  @ 9/26: clearance 3/26 >= 1/14? True
+violations: 0
+
+[1,22] covering: 31471 total; 17469 have min>=2 (spread13-dispatched, ratio<=13); 14002 reach the census (= 14002). Non-covering are sieve-dispatched.
