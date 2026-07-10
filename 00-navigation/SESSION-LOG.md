@@ -38,6 +38,32 @@ FORENSICS: left-assoc union = n-1 Or.inl's for the first component (off-by-one c
 FORMAL CHAIN LEDGER (HYP-5853 in Lean so far): anchor (1/3 dispatch, W0=12) + mu_2 (pair <= 3/14) + mu_3 (triple <= 2/7). Remaining for W0 = 11: mu_L to L = 12 (evaluator route) + 2-set Bonferroni assembly (LRCGoodDilation + LRCDensityFloorCert).
 
 ---
+## mac-mini-2026-07-09-S65 (cont. 17) -- THE REPAIR IMPLEMENTED IN LEAN: LRCWitnessFloorRepair.lean built green (8491 jobs), kernel-pure -- lrc14_from_repaired_nodes replaces the unsatisfiable hfloor with SATISFIABLE legs; the k=0 sieve leg PROVED internally (all speeds <= 13 => 14 divides none => t = 1/14)
+
+Prompt (owner): implement the repair in the Lean skeleton.
+
+**DELIVERED (LRCWitnessFloorRepair.lean, additive -- no existing statement edited; kernel-pure
+[propext, Classical.choice, Quot.sound]):**
+- `speeds_le_of_clusterSize_zero`: k = 0 unpacks to "the > 13 filter of the speed list is
+  empty" => every |v i| <= 13 (list plumbing: mem_ofFn + mem_filter + length_map).
+- **`lonely_of_clusterSize_zero` (the k = 0 leg, PROVED internally):** |v i| <= 13 and
+  v i != 0 => 14 divides no speed (Int.le_of_dvd on |v i|) => `sieve_one_div 14 14` fires at
+  t = 1/14. The very shape that FALSIFIED the original hfloor (the AP family) is dispatched by
+  the sieve it was always meant for -- the covering/admissibility calibration, now in Lean.
+- **`lrc14_from_repaired_nodes`**: LRC14Statement from FOUR satisfiable legs:
+  hk12 (k in {1,2}: 0 < witnessG2 -- engine floors 7/858, 313/9702), hsmall3 (3 <= k <= 7:
+  the m_P floor, THM-530's ADMISSIBLE range restored), hlarge (8 <= k <= 13: m_P floor,
+  moment-route-fed), hpartA (reach). Case split internal; k = 0 needs NO hypothesis.
+- Build: two name fixes (List.eq_nil_of_length_eq_zero for the renamed length_eq_zero;
+  Nat.lt_or_ge for the case splits -- le_or_lt did not resolve in-namespace) -- forensics noted.
+
+**NET:** the witness-floor route is now ARCHITECTURALLY SOUND end-to-end: every hypothesis in
+the repaired assembly is satisfiable (the engine's table is the certificate data for hk12/
+hsmall3/hlarge; hpartA is the analytic node). The original lrc14_from_witness_floor /
+_momentfloor_nodes remain untouched (true-but-vacuous statements; flagged in cont.16); new
+work should target the repaired assembly.
+
+Files: 04-computation/lean/TournamentH7/TournamentH7/LRCWitnessFloorRepair.lean (+ root).
 
 ## opus-2026-07-09-S201 -- INVESTIGATED THM-665 window-shrinking to remove the census native_decide: THM-665 is ORTHOGONAL (its own theorem: a-priori route NEVER fires on covering clusters = the census case). The foundational-only variant ALREADY EXISTS (lrc14_grand_assembly_pure) at the cost of a bigger obligation. Axiom-verified. Honest negative + recommendation.
 
