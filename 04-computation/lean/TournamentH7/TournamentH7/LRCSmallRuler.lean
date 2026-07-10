@@ -135,5 +135,26 @@ theorem cex_no_ruler_below_28 :
     ∀ q ∈ Finset.Icc (15 : ℤ) 27, ∀ p ∈ Finset.Ico (1 : ℤ) q, ¬ StrictlyLive cexFamily q p := by
   decide
 
+/-! ### The measure floor for the counterexample family (a concrete instance, kernel-pure).
+
+The general measure floor `SafeMeasureFloor` is the open case of LRC(14) — and `cex_no_ruler_below_28`
+shows it admits no bounded-modulus shortcut.  But for *this* family — the hardest kind, near-tight with no
+ruler below 28 — the floor holds and is provable: its ruler at `q = 28` (multiplier `p = 1`, i.e.
+`t = 1/28`) is strictly live, so the whole chain `StrictlyLive → StrictWitness → safe interval → μ > 0`
+fires.  This certifies `μ(cexFamily) > 0` with foundational axioms only, and demonstrates the machinery
+end-to-end on the exact family that refuted the bounded conjecture. -/
+
+/-- At `q = 28` the multiplier `p = 1` (`t = 1/28`) is strictly live for `cexFamily`. -/
+theorem cex_strictlyLive_28 : StrictlyLive cexFamily 28 1 := by decide
+
+/-- **The measure floor holds for `cexFamily`.**  `0 < volume (safePeriod cexFamily)` — a positive-measure
+safe set for the near-tight residual family whose first strictly-live ruler is at `q = 28`. -/
+theorem cex_measureFloor : 0 < MeasureTheory.volume (safePeriod cexFamily) :=
+  measureFloor_of_strictWitness (strictWitness_of_strictlyLive cex_strictlyLive_28)
+
+/-- **`cexFamily` is lonely** (a witness time exists) — the concrete instance of LRC(14). -/
+theorem cex_lonely : ∃ t : ℝ, Lonely 14 cexFamily t :=
+  lonely_of_safePeriod_measure_pos cex_measureFloor
+
 end LRC14Grand
 end LonelyRunner

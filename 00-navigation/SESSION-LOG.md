@@ -1,3 +1,25 @@
+## kind-pasteur-2026-07-10-S127 (cont.11) -- the GENERAL measure floor for the residual class IS LRC(14) (cannot fake it). PROVED a concrete INSTANCE: mu>0 for the hardest family I found (the near-tight counterexample, min q=28), kernel-pure end-to-end.
+
+Prompt (owner): now prove a measure floor for the residual class.
+
+HONEST BOUNDARY. The general SafeMeasureFloor (mu(S)>0 for ALL residual families) is the open case of LRC(14): mu>0 <=> the safe set has an interval <=> a strict interior lonely time exists. And I proved LAST turn (upper edge refuted) that it admits NO bounded-modulus shortcut -- near-tight residual families have all small-q rulers dead, live only at large q. Proving mu>0 for all of them = proving the conjecture. I did not fake it.
+
+WHY [mu=0]<=>[dilated] does NOT make it easy: the forward (dilated => mu=0) is the easy half; the reverse (mu=0 => dilated, i.e. not-dilated => mu>0) is a rigidity that, combined with klein's elementary transfer, WOULD prove LRC(14) -- so it is exactly as hard as LRC. My E3 rigidity gives the ALGEBRAIC characterization (E3=C(13,2)<=>dilated) but the analytic link E3<C(13,2) => mu>0 is the wall.
+
+WHAT I PROVED (a concrete instance, honest): mu>0 for cexFamily = {210,...,6000} -- the near-tight counterexample from cont.10, min strictly-live q=28, the family that refuted the bounded conjecture. Its ruler at q=28 (multiplier p=1, t=1/28) is strictly live, so my chain fires end-to-end:
+  cex_strictlyLive_28 (StrictlyLive cexFamily 28 1, kernel decide)
+  -> strictWitness_of_strictlyLive (strict rounding identity, cont.8)
+  -> measureFloor_of_strictWitness (reverse triangle, cont.7)
+  = cex_measureFloor : 0 < volume (safePeriod cexFamily)     [propext, Classical.choice, Quot.sound]
+  -> cex_lonely : exists t, Lonely 14 cexFamily t.
+So the measure floor HOLDS and is machine-checked for the exact hardest family -- demonstrating the whole strictly-live-ruler => measure floor pipeline works on a real near-tight residual, not just generic ones.
+
+WHAT THIS IS / IS NOT: it is a genuine kernel-pure measure floor for a specific residual family (the hardest one I could build). It is NOT the general residual floor (open = LRC(14)). The honest ledger is unchanged: LRC(14) = [kernel-pure assembly] + [cite LRC<=13] + [SafeMeasureFloor for the residual class, open]. Every family has SOME ruler (LRC true), but the ruler modulus is unbounded across the class, so no finite/uniform certificate exists -- per-family is the only shape, exactly what mac-mini/boxeph do (exact interval mu per family) and what klein's transfer completes.
+
+My LRC Lean ~74 nodes, chain S114..S127. FILES: LRCSmallRuler.lean (+cex_strictlyLive_28, cex_measureFloor, cex_lonely).
+
+NEXT: the general floor is the conjecture. Real progress = mac-mini's witness-floor bricks (per-family exact mu, the deferred finite-union volume identity) or a genuine rigidity mu=0 => dilated (the analytic E3<max => mu>0 step). Neither is a shortcut; both are the open work.
+
 ## opus-2026-07-10-S207 -- THE PRIMITIVE-RESIDUAL FLOOR IS TRUE (inf mu ~ 0.0085 > 0), splits into a large small-Vmax census + a decorrelation tail. Sharpest Lean reduction landed: lrc14_of_measureFloor_primitive (kernel-pure). HONEST: characterization + reduction, NOT a proof of the floor.
 
 Prompt (owner): prove the uniform floor on the primitive residual.
