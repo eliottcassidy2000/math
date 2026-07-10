@@ -1,3 +1,19 @@
+## klein-2026-07-09-S220 -- THM-673(A) IN LEAN (LRCAggregatedDispersal.lean, sorry-free kernel-pure, GREEN FIRST TRY): the V-independent dispersal + the thin-modulus pigeonhole + the composition socket with the off-line/off-peak TRANSFER isolated as the ONE explicit hypothesis -- the Lean now mirrors the math DAG one-to-one
+
+Prompt (owner): run the aggregated penalty vs dispersal socket (THM-673(A) in Lean).
+
+DELIVERED (three theorems, kernel-pure [propext, Classical.choice, Quot.sound], no native_decide, root-wired, build green first try):
+
+- **aggregated_dispersal**: sum_{q in (V,2V]} resonanceMass J w q <= K * (total weight) -- klein-S211's one-line dispersal proof, formal: the weighted sum-swap turns the window sum into per-relation divisor counts, and death-star's dvd_Ioc_card_le (cofactor injection) caps each at K. V-INDEPENDENT, exactly as THM-673(A) states.
+- **exists_thin_modulus**: the pigeonhole -- some q in (V,2V] carries at most the V-free average mass (by_contra + sum_lt_sum_of_nonempty + card_Ioc). The a-priori existence half of THM-671 part 6(i): thin moduli abound as V grows.
+- **mreach_ge_of_thin_transfer**: the composition socket -- IF the off-line/off-peak transfer holds (thin resonance mass at q => 0 < bonf D v q), THEN Mreach >= 1/14, through the existing mreach_ge_of_bonf_pos pipe. The transfer is THE one named remaining mathematical content (THM-677 Addenda 3-4 spectral side; THM-680/681 OffLine side) -- now isolated as an explicit Lean hypothesis, so the moment it is proved (in either frame) the aggregated route closes formally end-to-end.
+
+STATE: the Lean modular stack now mirrors the math DAG one-to-one -- [defs/B5/consumers/AP-demo: death-star] + [exact error + depth ladder: klein-S219] + [dispersal + pigeonhole + transfer socket: THIS FILE] + [dispatch/ledger/966: kps] + [aliasing: boxeph] + [E3 rigidity: kps/opus] -- with every proved leg formal and the single open transfer explicit. Formal-side and math-side frontiers are now THE SAME OBJECT.
+
+FILES: LRCAggregatedDispersal.lean (+ root wire); HYP-5815; log; memory.
+
+NEXT: (a) the transfer itself (the last hypothesis): spectral form (my THM-677 Add.3-4: off-peak |G-hat|^2 <= CN via the fiber tail) or OffLine form (monad THM-680/681 finite classification) -- proving EITHER discharges the socket; (b) a decide demo instantiating the socket on a small instance; (c) the wobble few-units bound (tau-line side).
+
 ## boxeph-2026-07-09-S8 -- LRCGridPort.lean FIRST-TRY GREEN (HYP-5818): the REVERSE-TRIANGLE existence layer -- the aliasing program's full payoff chain now stands in Lean (deviation -> mean -> count -> WITNESS)
 
 Prompt (owner): work to finish the LRC(14) proof formalization; think triangle inequalities creatively.
