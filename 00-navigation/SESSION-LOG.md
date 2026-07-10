@@ -1,3 +1,20 @@
+## mac-mini-2026-07-09-S65 (cont.23, 2026-07-10) -- THE hB SHAPEOF DISPATCHER: LEMMA B IS A THEOREM. lrc14_from_momentfloor_certs = LRC(14) from exactly hMoment (THM-661) + hsmall + hpartA, foundational-axioms-only. Windows platform caveat flagged (kps testing).
+
+Prompt (owner): write the shapeOf dispatcher for hB.
+
+THE BRIDGE (both files kernel-pure, [propext, Classical.choice, Quot.sound]):
+- LRCSafeCertLeafTrees.lean (MACHINE-GENERATED, lrc14_dispatcher_codegen_macmini_S65cont23.py): safe_floor_sorted_len1..5 -- every sorted tuple 1 <= p1 < ... < pl <= 13 dispatches to its cont.22 table certificate via explicit interval_cases trees (2379 leaves; lengths 3-5 split by head element to bound per-declaration heartbeats). Green first try.
+- LRCSafeCertDispatch.lean (hand-written spine): safeSet_congr (safeSet depends only on membership) + safe_nil_toReal (k=13 row: empty small part has measure 1) + length_filter_split (the small/large filter partition of the 13 speeds, induction) + shapeOf_fst_mem_bounds (reachable small speeds in [1,13]: mem_filter + mem_ofFn + abs_pos) + capRat_mono (finite 36-case check) + cap_le_of_canonical (match on canonical length 0..5, cite leaf tree, close constant gap by mono; length >= 6 impossible with k >= 8) + hB_certs (dedup + insertionSort canonicalize ANY reachable P-list -- perm_insertionSort/mem_dedup/pairwise_insertionSort + Nodup-and-Sorted => Pairwise (<)) + lrc14_from_momentfloor_certs.
+- Iterations (3): full simp for the Bool-filter split (decide-coercion normal form), k <= 13 derived before interval_cases in capRat_mono (no numeral upper bound otherwise), open MomentFloor (momentBar resolution).
+
+WHAT THIS CLOSES: hB -- the Lemma B node of the moment route -- is DISCHARGED end to end: engine (exact rationals) -> cont.22 table (2380 certificates) -> leaf trees (2379 dispatch leaves) -> spine (canonicalization) -> hB_certs. The Lean obligation surface of the moment route is now EXACTLY THREE analytic nodes: hMoment (THM-661 citation), hsmall (k <= 7 m_P floor), hpartA (the reach). Composes with klein THM-685..692 (the classical closure of the two-scale wall) and kps's strict chain.
+
+PLATFORM CAVEAT (honest, kps-S127 heads-up): the four biggest cont.22 cert files (Size4_g3to10, Size5_c1/g2to3/g4to9) SEGFAULT Lean on WINDOWS (0xC0000005, stack) -- root red on that platform, green on Mac/Linux. Evidence points per-theorem depth (g1to2/385 fams passed, g3to10/330 failed; avg comps 16.3 vs 19.9). kps testing maxRecDepth; if that fails, next continuation re-emits those files with shallower per-theorem tactics or index-sliced modules. Replied with diagnosis + asks.
+
+FILES: LRCSafeCertLeafTrees.lean, LRCSafeCertDispatch.lean, lrc14_dispatcher_codegen_macmini_S65cont23.py, root imports (x2), full root green locally (8818 jobs incl. kps LRCTightRigidity/LRCDissociatedRigidity).
+
+NEXT AGENT: (a) resolve the Windows segfault (kps report -> maxRecDepth or re-emission); (b) hMoment: formalize the THM-661 citation node (the last certificate-shaped gap of the moment route); (c) hsmall: the k <= 7 pigeonhole (nu = 1 on small clusters + the goodSet-side floors -- my cont.21 band machinery + klein THM-687's k<=6 unconditional floor are the ingredients); (d) hpartA per opus-S208 peel-then-decorrelate.
+
 ## mac-mini-2026-07-09-S65 (cont.22, 2026-07-10) -- THE hB CERTIFICATE SWEEP: MISTAKE-136 (hB node UNSATISFIABLE over all Shape) + repaired consumer + THE capRat LADDER IS EXACT (= per-|S| safe minima, all 6 rows, engine-verified) + 762/2380 families GREEN IN LEAN (Sizes 1,2,3,4a), remaining 1618 emitted + building sequentially.
 
 Prompt (owner): run the codegen over the remaining hsmall3/hlarge families.
