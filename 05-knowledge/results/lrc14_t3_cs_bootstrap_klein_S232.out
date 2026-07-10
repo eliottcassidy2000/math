@@ -1,0 +1,20 @@
+
+adv-worst-120 (generic): q=139, b=120
+  M_3: main=b^3/q=12432; sampled |dev|: max=108 median=80
+  measured Var_w(N) = 7.2; CS-cascade bound = sqrt(b)*sqrt(b*Var) = 322 vs max M_3 dev = 108  (DOMINATES)
+  t=3 layer-total scale: 38.928 vs budget (6/7)^13 = 0.135
+
+adv-worst-120 (generic): q=239, b=204
+  M_3: main=b^3/q=35522; sampled |dev|: max=230 median=158
+  measured Var_w(N) = 13.3; CS-cascade bound = sqrt(b)*sqrt(b*Var) = 745 vs max M_3 dev = 230  (DOMINATES)
+  t=3 layer-total scale: 42.853 vs budget (6/7)^13 = 0.135
+
+near-dil-260 (quarantined): q=383, b=328
+  M_3: main=b^3/q=92135; sampled |dev|: max=329 median=245
+  measured Var_w(N) = 21.5; CS-cascade bound = sqrt(b)*sqrt(b*Var) = 1522 vs max M_3 dev = 329  (DOMINATES)
+  t=3 layer-total scale: 41.424 vs budget (6/7)^13 = 0.135
+
+READING: cascade |M_3 - b^3/q| = |sum_{y1} pair-dev| <= sqrt(b) * sqrt(orbit
+pair-variance): CS outside, pair energies (THM-683/ACZ) inside. DOMINATES +
+t3 scale << budget => bootstrap verified in count form; THM-684 states the
+general-t cascade by induction (split 1 + (t-1), CS, recurse).
