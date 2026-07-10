@@ -1,0 +1,25 @@
+mu_L evaluator data layer: exact covers + single-containment witnesses
+L= 1: cover 2 intervals, danger = 1/7 = 0.142857
+L= 2: cover    3 intervals, danger = 3/14 (mu_L = 11/14 == S11 OK); recursion pieces singly contained: 3
+L= 3: cover    5 intervals, danger = 2/7 (mu_L = 5/7 == S11 OK); recursion pieces singly contained: 5
+L= 4: cover    9 intervals, danger = 5/14 (mu_L = 9/14 == S11 OK); recursion pieces singly contained: 9
+L= 5: cover   15 intervals, danger = 23/56 (mu_L = 33/56 == S11 OK); recursion pieces singly contained: 15
+L= 6: cover   27 intervals, danger = 13/28 (mu_L = 15/28 == S11 OK); recursion pieces singly contained: 27
+L= 7: cover   49 intervals, danger = 115/224 (mu_L = 109/224 == S11 OK); recursion pieces singly contained: 49
+L= 8: cover   87 intervals, danger = 249/448 (mu_L = 199/448 == S11 OK); recursion pieces singly contained: 87
+L= 9: cover  159 intervals, danger = 267/448 (mu_L = 181/448 == S11 OK); recursion pieces singly contained: 159
+L=10: cover  289 intervals, danger = 1133/1792 (mu_L = 659/1792 == S11 OK); recursion pieces singly contained: 289
+L=11: cover  523 intervals, danger = 2383/3584 (mu_L = 1201/3584 == S11 OK); recursion pieces singly contained: 523
+L=12: cover  955 intervals, danger = 2491/3584 (mu_L = 1093/3584 == S11 OK); recursion pieces singly contained: 955
+
+all mu_L match S11 exact table: True
+
+== THE SIX CENSUS-BRANCH WITNESSES (2-chain partitions of 13) ==
+  (12, 1): budget = 429/512 = 0.837891  < 1 PASS
+  (11, 2): budget = 3151/3584 = 0.879185  < 1 PASS
+  (10, 3): budget = 235/256 = 0.917969  < 1 PASS
+  ( 9, 4): budget = 61/64 = 0.953125  < 1 PASS
+  ( 8, 5): budget = 433/448 = 0.966518  < 1 PASS
+  ( 7, 6): budget = 219/224 = 0.977679  < 1 PASS
+
+covers emitted to 05-knowledge/results/lrc_mu_covers_boxeph_S17.json

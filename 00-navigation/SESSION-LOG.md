@@ -1,3 +1,15 @@
+## boxeph-2026-07-09-S17 -- THE mu_L EVALUATOR, DATA LAYER COMPLETE (HYP-5853 layer 4): all twelve covers exact + every recursion piece SINGLY CONTAINED (the Lean-checker reduction verified) + THE SIX CENSUS-BRANCH WITNESSES (worst (7,6) = 219/224 < 1, exact)
+
+Prompt (owner): build the verified interval evaluator, finish mu_L through L = 12; think 6 explicit witnesses from the greedy cover of the census-branch domain.
+
+THE DESIGN THAT MAKES IT TRACTABLE (single-containment reduction): Python does the greedy cover, Lean only checks exists-single-containment over Q. The recursion D_L subset D_1 u T^{-1}(D_{L-1}) (T = doubling; interval pullback = two half-length intervals) is PRE-SPLIT at target-cover boundaries, so every pullback piece sits inside ONE interval of Cov_L -- the Lean checker's soundness is pointwise-trivial, and the witness IS the emitted data.
+
+DELIVERED (lrc_mu_evaluator_emitter_boxeph_S17.py + .out + lrc_mu_covers_boxeph_S17.json): (1) merged danger covers Cov_L for L = 1..12 (2..955 intervals), danger lengths matching the S11 exact table at every L (independent re-derivation, all TRUE); (2) single-containment verification of every recursion piece at every level (3/5/9/15/27/49/87/159/289/523/955 -- zero failures); (3) THE SIX WITNESSES -- the 2-chain census-branch budgets, exact rationals: (12,1) 429/512, (11,2) 3151/3584, (10,3) 235/256, (9,4) 61/64, (8,5) 433/448, (7,6) 219/224 -- ALL < 1. These six numbers + the covers ARE the W0 = 11 theorem's complete certificate data.
+
+THE LEAN TRANSCRIPTION (now purely mechanical, handoff): (a) generic lemmas -- unionQ (l : List (Q x Q)) : Set R, lenQ, volume (unionQ l) <= ofReal (lenQ l) (list induction + measure_union_le + volume_Icc), and singly-contained soundness (pointwise); (b) the step lemma -- nearInt(2^j y) = nearInt(2^(j-1) z), z = 2y or 2y - 1 (integer-shift invariance of nearInt), folding D_L into base u pullback; (c) decide (or native_decide for L >= 9, fleet-accepted for finite data) over the JSON-transcribed rational lists; (d) the six-witness assembly + LRCGoodDilation + LRCDensityFloorCert => the W0 = 11 outright theorem. Every ingredient is named; the data is verified; no analysis remains -- only transcription.
+
+---
+
 ## klein-2026-07-09-S232 -- THE t>=3 BOOTSTRAP RUN (THM-684): orthogonality identity PROVED (layer sums = t-fold multiplicative box counts, exact); CS cascade VERIFIED (dominates 3-4.6x); THE CONNECTED-FORM CORRECTION (raw M_t devs = b x pair-devs -- lower layers inside; vanishing assembly needs cumulant counts) -- 11th confirmation of the law
 
 Prompt (owner): run the t>=3 CS bootstrap.
