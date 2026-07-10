@@ -1,0 +1,27 @@
+=== (a) unclassified tail at 3 surviving-type tall rulers per family ===
+
+adv-worst-120:
+  q=124: unclassified tail h<=2: 33.1667, h<=3: 86.1447 (growth +52.9780) vs margin ~0.03-0.09 | LM=20 LM%2=0 q/2-live=False #unit-invs=2
+  q=125: unclassified tail h<=2: 33.5507, h<=3: 86.3593 (growth +52.8085) vs margin ~0.03-0.09 | LM=16 LM%2=0 q/2-live=False #unit-invs=0
+  q=126: unclassified tail h<=2: 33.9432, h<=3: 86.8706 (growth +52.9274) vs margin ~0.03-0.09 | LM=12 LM%2=0 q/2-live=False #unit-invs=2
+
+@91-comb:
+  q=93: unclassified tail h<=2: 44.3238, h<=3: 113.0520 (growth +68.7282) vs margin ~0.03-0.09 | LM=14 LM%2=0 q/2-live=False #unit-invs=2
+  q=94: unclassified tail h<=2: 43.3733, h<=3: 112.5450 (growth +69.1717) vs margin ~0.03-0.09 | LM=12 LM%2=0 q/2-live=False #unit-invs=0
+  q=95: unclassified tail h<=2: 43.9612, h<=3: 112.9031 (growth +68.9419) vs margin ~0.03-0.09 | LM=14 LM%2=0 q/2-live=False #unit-invs=2
+
+near-dil-260:
+  q=261: unclassified tail h<=2: 60.0397, h<=3: 121.2680 (growth +61.2283) vs margin ~0.03-0.09 | LM=8 LM%2=0 q/2-live=False #unit-invs=2
+  q=280: unclassified tail h<=2: 187.6510, h<=3: 479.3485 (growth +291.6975) vs margin ~0.03-0.09 | LM=102 LM%2=0 q/2-live=False #unit-invs=14
+  q=281: unclassified tail h<=2: 57.0471, h<=3: 115.1011 (growth +58.0540) vs margin ~0.03-0.09 | LM=8 LM%2=0 q/2-live=False #unit-invs=0
+
+=== (b) THE PARITY PROBE across all tall rulers ===
+adv-worst-120: tall rulers 43; ODD-LM rulers: 0  (all even -- pairing exact)
+   parity law 'LM odd <=> q/2 live' holds on all tall rulers: True
+   even speeds: 5 (covering forces >=1) => q/2 generically dead => LM even
+@91-comb: tall rulers 36; ODD-LM rulers: 0  (all even -- pairing exact)
+   parity law 'LM odd <=> q/2 live' holds on all tall rulers: True
+   even speeds: 7 (covering forces >=1) => q/2 generically dead => LM even
+near-dil-260: tall rulers 15; ODD-LM rulers: 0  (all even -- pairing exact)
+   parity law 'LM odd <=> q/2 live' holds on all tall rulers: True
+   even speeds: 12 (covering forces >=1) => q/2 generically dead => LM even
