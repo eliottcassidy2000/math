@@ -1,0 +1,15 @@
+            family     q    LM     main   t2 exact   t>=3 rem  t2/err
+     adv-worst-120   137    16    21.48     -7.478      2.000    1.37
+     adv-worst-120   139    14    22.43    -13.383      4.954    1.59
+     adv-worst-120   239    24    32.08     -9.855      1.773    1.22
+      near-dil-260   397    10    54.56     51.699    -96.260   -1.16
+      near-dil-260   479    14    65.02     57.485   -108.506   -1.13
+      near-dil-260   487    12    68.49     53.299   -109.793   -0.94
+  midband-free-280   281    24    37.74    -13.840      0.095    1.01
+  midband-free-280   397    46    54.56      3.104    -11.665   -0.36
+  midband-free-280   557    60    77.92      1.702    -19.625   -0.09
+
+READING: t2 exact via the twisted multiplicative pair-correlation of the band;
+t>=3 = remainder. Generic: expect t2 to carry most of LM-main with t>=3 small.
+Near-dilation: the deficit's location (t2 vs t>=3) pins what the hyperbola
+lemma must handle.

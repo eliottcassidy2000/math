@@ -1,3 +1,19 @@
+## klein-2026-07-09-S226 -- THE CHARACTER CHAIN RUN: exact t-level decomposition verified (index-table characters + FFT); the anatomy located (generic: t2 carries the deficit; near-dilation: enriched t2 +52..57 vs cancelling t>=3 -96..-110); THE LEMMA PINNED -- interval multiplicative pair-correlation at speed-ratio twists (hyperbola counting, classical) with the exception set = the quarantined mult-coherent family
+
+Prompt (owner): run the t>=3 character-tuple Holder chain.
+
+**(1) THE MACHINERY (exact).** At prime q: LM(q) = (q-1) sum_{prod chi_l = chi0} prod_l c-hat(chi_l) chi_l(v_l) -- each band indicator has multiplicative Fourier a_l(chi) = chi(v_l) c-hat(chi): ONE interval transform, speed-twisted. No t=1 terms. t2 computed EXACTLY via the correlation FFT of |c-hat|^2 evaluated at the 156 speed-ratio indices. Verified: main + t2 + t>=3 = LM to numerical precision across 9 (family, prime) pairs.
+
+**(2) THE ANATOMY.** Generic families (q = 137-557): t2/err = 1.0-1.6 (the pair layer carries the deficit), t>=3 remainder 0.1-5. THE NEAR-DILATION: t2 = +52..+57 ENRICHED -- the small-rational speed ratios v_a/v_b = a/b of the dilation land on the interval pair-correlation's enriched classes -- against t>=3 = -96..-110 massively cancelling, netting LM = 10-14 << main = 55-68. The dilation suppression = both layers large and nearly cancelling; multiplicative coherence is EXACTLY small-rational ratio abundance.
+
+**(3) THE LEMMA, PINNED (the program's final form).** [t2 BOUND: the interval's multiplicative pair-correlation at ratio w != 1 is b^2/q + O(sqrt(q) log^2 q) -- a congruence-in-box / hyperbola count, CLASSICAL; summed over 156 twists; exception set = sets with many small-rational speed ratios = the quarantined mult-coherent family (detectable, ladder-owned)] + [t>=3: Cauchy-Schwarz bootstrap to t2-energies -- standard multiplicative-energy iteration]. The naive absolute t2 Parseval bound fails by 13x -- the 10th and fully expected confirmation; the twist structure is what saves it, and unlike every additive frame, the saving argument (hyperbola counting) is CLASSICAL and one-sided.
+
+**(4) HONEST ASYMPTOTICS.** At the computationally accessible primes (q ~ 150-550) the layers are individually O(main) even for generic sets; the power-savings bite asymptotically. The program's q0 ~ 10^3-10^4 -- matching the threshold every route has found; below q0 = enumeration, as everywhere. LRC(14)'s finite heart is scale-invariant across all frames.
+
+FILES: lrc14_character_chain_klein_S226.out; HYP-5845; log; memory.
+
+NEXT (the handoff, program-complete): (a) write the t2 hyperbola lemma (classical; any analytic-NT-comfortable agent); (b) the t>=3 CS-bootstrap (mechanical given (a)); (c) the small-rational-ratio detector as the mult-coherence interface (joins E3/R(v) on the additive side -- the TWO-COORDINATE quarantine); (d) q0-regime verification banks at q ~ 2000-5000.
+
 ## opus-2026-07-09-S196 -- FINSET BRIDGE for the AP step (LRCFreimanAPBridge.finset_min_burden_isAP, kernel-pure): |s|>=5 & |restrictedSum s|=2|s|-3 => s is LITERALLY an AP {c+k*d : 0<=k<|s|}, d>0. The indexed S195 result now citable at the Finset level.
 
 Prompt (owner): do the finset bridge next session.
