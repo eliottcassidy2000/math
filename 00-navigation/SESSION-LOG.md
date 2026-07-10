@@ -7,6 +7,32 @@ THE CREATIVE QUESTION: does the proof consume all of LRC(<=13), or only specific
 FINAL STATE STATEMENT (for the record, end of an 18-session day): LRC(14) in Lean = [LRCUpTo13 citation, irreducibly full-strength, owner-sanctioned] + [hB5, the one analytic gate, empirically 849/849, supply chain mapped (kps E3Budget / monad THM-680 / klein signed box / death-star LEM-022 t2), with the chain-coarsening degree reduction (HYP-5863) and the large-sieve framing as the freshest instruments] + [everything else kernel-sound and sorry-free]. My day's contributions in the tree: LEM-014 + Lean core, the aliasing program (13 thms), GridPort reverse-triangle existence, P2 evaluation, ladder fattening, chain anchor + mu_2 + mu_3 certificates, the mu_L evaluator data layer with the six census-branch witnesses, the lever map, and five honest refutations that closed false doors.
 
 ---
+## mac-mini-2026-07-09-S65 (cont. 18) -- THE INTERVAL BRIDGE IN LEAN: LRCIntervalBridge.lean built green FIRST TRY (8487 jobs), kernel-pure -- witnessG2_pos_of_anchor: an explicit rational interval inside goodSet with checkable band bounds => 0 < witnessG2; the hk12 leg's exact shape + the positivity core of hsmall3/hlarge
+
+Prompt (owner): discharge hk12/hsmall3/hlarge via the bridge lemmas.
+
+**DELIVERED (LRCIntervalBridge.lean, green first try, kernel-pure [propext, Classical.choice,
+Quot.sound]):** the three shape-independent core lemmas that turn the cont.16 engine's rational
+intervals into Lean positivity certificates:
+- slowmu_toReal_pos_of_Ico_subset: a positive-length subinterval of [0,1) inside S forces
+  0 < (slowmu S).toReal (Measure.mono needs NO measurability; finiteness from the probability
+  instance; Real.volume_Ico exact).
+- Ico_subset_safeSet_of_bounds: THE CHECKABLE CONDITION -- forall p in P exists j : Z with
+  j + 1/14 <= p*a and p*b <= j + 13/14 => Ico a b inside safeSet P (on the band floor(px) = j,
+  fract = px - j: pure floor arithmetic).
+- witnessG2_pos_of_anchor: the composition -- interval inside goodSet + band bounds =>
+  0 < witnessG2 s. EXACTLY the hk12 leg's shape; also the positivity core of hsmall3/hlarge
+  (their full m_P floors additionally need the finite-union volume identity).
+
+**DISCHARGE STATE (honest):** hk12/hsmall3/hlarge are NOT yet proof terms -- the bridge reduces
+them to (i) goodSet_univ_of_card_le_two (|E| <= 2 => goodSet = univ; proof sketch in the file
+docstring: fract(-y) = 1 - fract(y) makes double membership in (0,1/7] impossible -- ~30 Lean
+lines, named next brick), (ii) per-family rational ANCHORS (a,b,j-list) for the finitely many
+P-sets -- the cont.16 engine emits them (largest merged safe component per P), and (iii) for
+the full m_P floors: the finite-union volume identity. The legs are now CERTIFICATE-SHAPED:
+data in, positivity out, no analysis.
+
+Files: 04-computation/lean/TournamentH7/TournamentH7/LRCIntervalBridge.lean (+ root).
 
 ## boxeph-2026-07-09-S17 -- THE mu_L EVALUATOR, DATA LAYER COMPLETE (HYP-5853 layer 4): all twelve covers exact + every recursion piece SINGLY CONTAINED (the Lean-checker reduction verified) + THE SIX CENSUS-BRANCH WITNESSES (worst (7,6) = 219/224 < 1, exact)
 
