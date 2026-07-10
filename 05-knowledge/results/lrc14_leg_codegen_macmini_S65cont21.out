@@ -1,0 +1,43 @@
+safeSet P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]: 20 components, measure = 1217/8820
+  [1/14, 13/140]  len 3/140
+  [15/98, 13/84]  len 1/588
+  [5/28, 13/70]  len 1/140
+  [29/126, 13/56]  len 1/504
+  [15/56, 27/98]  len 3/392
+  [43/140, 13/42]  len 1/420
+  [5/14, 41/112]  len 1/112
+  [43/112, 27/70]  len 1/560
+  [29/70, 41/98]  len 1/245
+  [19/42, 13/28]  len 1/84
+  [15/28, 23/42]  len 1/84
+  [57/98, 41/70]  len 1/245
+  [43/70, 69/112]  len 1/560
+  [71/112, 9/14]  len 1/112
+  [29/42, 97/140]  len 1/420
+  [71/98, 41/56]  len 3/392
+  [43/56, 97/126]  len 1/504
+  [57/70, 23/28]  len 1/140
+  [71/84, 83/98]  len 1/588
+  [127/140, 13/14]  len 3/140
+  cert [1/14,13/140]: tooth 2, bands {0: ('down', 0), 1: ('down', 0), 2: ('eq', None)}, safe js [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  cert [15/98,13/84]: tooth 2, bands {0: ('down', 0), 1: ('down', 0), 2: ('eq', None)}, safe js [0, 0, 0, 0, 0, 0, 1, 1, 1, 1]
+  cert [5/28,13/70]: tooth 2, bands {0: ('down', 0), 1: ('down', 0), 2: ('eq', None)}, safe js [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
+  cert [29/126,13/56]: tooth 2, bands {0: ('down', 0), 1: ('down', 0), 2: ('eq', None)}, safe js [0, 0, 0, 0, 1, 1, 1, 1, 2, 2]
+  cert [15/56,27/98]: tooth 2, bands {0: ('down', 0), 1: ('down', 0), 2: ('eq', None)}, safe js [0, 0, 0, 1, 1, 1, 1, 2, 2, 2]
+  cert [43/140,13/42]: tooth 2, bands {0: ('down', 0), 1: ('down', 0), 2: ('eq', None)}, safe js [0, 0, 0, 1, 1, 1, 2, 2, 2, 3]
+  cert [5/14,41/112]: tooth 2, bands {0: ('down', 0), 1: ('down', 0), 2: ('eq', None)}, safe js [0, 0, 1, 1, 1, 2, 2, 2, 3, 3]
+  cert [43/112,27/70]: tooth 2, bands {0: ('down', 0), 1: ('down', 0), 2: ('eq', None)}, safe js [0, 0, 1, 1, 1, 2, 2, 3, 3, 3]
+  cert [29/70,41/98]: tooth 2, bands {0: ('down', 0), 1: ('down', 0), 2: ('eq', None)}, safe js [0, 0, 1, 1, 2, 2, 2, 3, 3, 4]
+  cert [19/42,13/28]: tooth 1, bands {0: ('down', 0), 1: ('eq', None), 2: ('up', 0)}, safe js [0, 0, 1, 1, 2, 2, 3, 3, 4, 4]
+  cert [15/28,23/42]: tooth 1, bands {0: ('down', 0), 1: ('eq', None), 2: ('up', 0)}, safe js [0, 1, 1, 2, 2, 3, 3, 4, 4, 5]
+  cert [57/98,41/70]: tooth 1, bands {0: ('down', 0), 1: ('eq', None), 2: ('up', 0)}, safe js [0, 1, 1, 2, 2, 3, 4, 4, 5, 5]
+  cert [43/70,69/112]: tooth 1, bands {0: ('down', 0), 1: ('eq', None), 2: ('up', 0)}, safe js [0, 1, 1, 2, 3, 3, 4, 4, 5, 6]
+  cert [71/112,9/14]: tooth 1, bands {0: ('down', 0), 1: ('eq', None), 2: ('up', 0)}, safe js [0, 1, 1, 2, 3, 3, 4, 5, 5, 6]
+  cert [29/42,97/140]: tooth 1, bands {0: ('down', 0), 1: ('eq', None), 2: ('up', 0)}, safe js [0, 1, 2, 2, 3, 4, 4, 5, 6, 6]
+  cert [71/98,41/56]: tooth 1, bands {0: ('down', 0), 1: ('eq', None), 2: ('up', 0)}, safe js [0, 1, 2, 2, 3, 4, 5, 5, 6, 7]
+  cert [43/56,97/126]: tooth 1, bands {0: ('down', 0), 1: ('eq', None), 2: ('up', 0)}, safe js [0, 1, 2, 3, 3, 4, 5, 6, 6, 7]
+  cert [57/70,23/28]: tooth 1, bands {0: ('down', 0), 1: ('eq', None), 2: ('up', 0)}, safe js [0, 1, 2, 3, 4, 4, 5, 6, 7, 8]
+  cert [71/84,83/98]: tooth 1, bands {0: ('down', 0), 1: ('eq', None), 2: ('up', 0)}, safe js [0, 1, 2, 3, 4, 5, 5, 6, 7, 8]
+  cert [127/140,13/14]: tooth 0, bands {0: ('eq', None), 1: ('up', 0), 2: ('up', 1)}, safe js [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+wrote /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/TournamentH7/LRCLegDemo.lean
+sum of lengths = 1217/8820

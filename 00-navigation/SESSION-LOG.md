@@ -1,3 +1,22 @@
+## mac-mini-2026-07-09-S65 (cont.21, 2026-07-10) -- THE GOODSET BAND LEMMA PROVED (LRCGoodSetBand.lean, 3 theorems, kernel-pure) + THE FIRST MACHINE-GENERATED LEG INSTANCE (LRCLegDemo.lean, witnessG2 >= 1217/8820 exact, 260 norm_num certificates): ENGINE-LISTS-IN, PROOF-OUT IS NOW LITERAL.
+
+Prompt (owner): prove the goodSet band lemma, extend the session.
+
+PART 1 -- THE LEMMA (LRCGoodSetBand.lean, green first try, [propext, Classical.choice, Quot.sound]):
+(1) `Ico_subset_goodSet_of_bounds`: a tooth a in E whose every difference passes the band check puts Ico alpha beta inside goodSet E. bandCert a b: [b = a, free] OR [a < b, up: exists j, j + 1/7 < (b-a)*alpha AND (b-a)*beta <= j+1 -- floor pins to j, fract > 1/7] OR [b < a, down via the fract-REFLECTION: exists j, j <= (a-b)*alpha AND (a-b)*beta <= j + 6/7 -- fract((a-b)x) < 6/7 makes fract((b-a)x) either 0 or > 1/7]. The down-branch handles fract = 0 exactly (integer hit) via Int.fract_intCast, no epsilon.
+(2) `Ico_subset_good_inter_safe`: + cont.18's safeSet band lemma, one-line subset_inter.
+(3) `witnessG2_ge_of_sorted_bands`: THE LEG SHAPE -- sorted-disjoint engine list, each interval carrying a tooth + both band certificate sets => witnessG2 s >= sum of lengths. Consumes brick (iii) (cont.20 UnionVolume) + ENNReal.toReal glue.
+
+PART 2 -- THE DEMO/TEMPLATE (lrc14_leg_codegen_macmini_S65cont21.py -> LRCLegDemo.lean): the codegen imports the cont.16 exact-rational engine, computes safeSet([1..10]) = 20 components (measure 1217/8820 exact), assigns each component its tooth from E = [0,1,2] (tooth 2 covers [0,3/7), tooth 1 covers (1/7,6/7), tooth 0 covers (4/7,1) -- goodSet of the consecutive cluster is the FULL circle, so the intersection floor equals the safeSet measure), emits per-difference and per-speed j-certificates, and WRITES THE LEAN FILE. Result: `witnessG2_ge_demo : 1217/8820 <= witnessG2 ([1..10], [0,1,2])` -- kernel-pure, 143s compile, ~260 rational band checks all discharged by norm_num. Family is realizable (speeds {1..10, V-2, V-1, V}), klein-S236's measured extremal class. Iterations: bullet indentation (cert blocks must sit INSIDE the have-block, 4-space base) + maxHeartbeats 3.2M (default 200k times out on the 20-pair list unification/sum).
+
+WHAT THIS CLOSES: the discharge pipeline for the ResidualObligation measure floors is now END-TO-END DEMONSTRATED -- engine (exact rationals) -> codegen (tooth + j selection) -> Lean (norm_num certificates) -> witnessG2 floor. Any hsmall3/hlarge family is now a codegen invocation. Composes with klein THM-685/686/687/688 (transfer + banks close the moduli side; the taxonomy's per-class positivity checks are exactly what the codegen certifies) and opus-S205/S206 primitivity peel (the well-posed floor node).
+
+TOOTH-COVERAGE CAVEAT (honest): tooth_for raises SystemExit if a safeSet component crosses all three tooth windows (impossible here since components live in [1/14, 13/14] and the windows overlap-cover it, verified by the asserts passing on all 20); for general E the codegen must SPLIT components at tooth boundaries -- mechanical, not yet needed.
+
+FILES: 04-computation/lean/TournamentH7/TournamentH7/LRCGoodSetBand.lean (new, green), LRCLegDemo.lean (new, green, machine-generated), lrc14_leg_codegen_macmini_S65cont21.py (+ .out in 05-knowledge/results/), TournamentH7.lean root imports (x2).
+
+NEXT AGENT: (a) run the codegen over the remaining hsmall3/hlarge families (per family: choose E, compute intersection lists when goodSet is NOT full-circle -- add the goodSet-region intersection to the engine, teeth per component, split at boundaries); (b) wire the per-family instances into the assembly's ResidualObligation via opus's primitive peel; (c) hMoment = THM-661 citation. The analytic residue is hpartA only.
+
 ## opus-2026-07-10-S206 -- ADDED THE PRIMITIVITY PEEL to the assembly (LRCPrimitiveAssembly.lean, kernel-pure, foundational-axioms-only): lrc14_grand_assembly_primitive + lrc14_from_B5_primitive restate the residual/hB5 with tupleGcd v = 1, killing the dilates that made inf mu = 0 (S205). The measure-floor node is now WELL-POSED.
 
 Prompt (owner): add the primitivity peel to the assembly.
