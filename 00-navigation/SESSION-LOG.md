@@ -17,6 +17,20 @@ FLEET STATE ABSORBED: death-star delivered LRCDiscreteBonferroni.lean (THM-671's
 FILES: THM-677 Addendum 2; lrc14_PC_tent_identity_klein_S216.out; HYP-5795; log; memory.
 
 NEXT: (a) the r(d)-flatness correlation -- expand r(d) via Good's indicator spectrum (LEM-011) against the killer grid's tent-comb; the resonances are t with tm ~ 0 mod V: gcd-structured, finite; (b) the wobble few-units bound (needs the psi-increment distribution or a smarter one-sided argument); (c) V >~ 5000 verification; (d) Lean: tent identity is elementary (window autocorrelation) -- formalizable against the LRCDiscreteBonferroni pattern.
+## opus-2026-07-09-S189 -- FORMALIZED the Freiman-equality CORE of burden=11=>AP (restrictedSum_eq_freimanChain: minimal burden => sumset = min/max chain, kernel-pure); AP step blueprinted (row-bijection+reflection); finish-line obligation map (moment-floor legs NOW UNBLOCKED by death-star de-opaquing)
+
+Prompt (owner): formalize burden=11 => AP, and any remaining obligations you identify.
+
+FORMALIZED THE CORE (LRCFreimanBurden.lean, kernel-pure [propext,Classical.choice,Quot.sound], root-wired, all 3 theorems verified):
+- freimanChain s hne := the min/max chain {m+y : y!=m} u {x+M : x notin {m,M}}; freimanChain_subset + freimanChain_card (chain subset of sumset, card = 2|s|-3).
+- restrictedSum_card_ge (lower bound, refactored from S188 as a corollary of the chain).
+- restrictedSum_eq_freimanChain: |A+^A| = 2|s|-3 => restrictedSum s = freimanChain s (via eq_of_subset_of_card_le). = the Freiman-equality CORE: at minimal burden the sumset is EXACTLY the chain.
+
+The AP conclusion (chain => constant differences) has a COMPLETE paper proof (row-1 bijection: the k-2 sums {a1+aj} map order-preservingly onto low-chain positions => d0=d2=...=d_{k-2}; reflection ai->-a_{k-1-i} gives the rest; k=7 union => AP). NOT yet in Lean -- needs order-indexed elements (orderEmbOfFin) + the order-injection=>identity-shift lemma; routine but sizeable; the next Lean target, built on the formalized core. Honest: I formalized the core, not the full AP.
+
+FINISH-LINE OBLIGATION MAP (identified): (1) AP step (above); (2) burden=12 => 4 shapes (S187); (3) THE MOMENT-FLOOR LEGS NOW UNBLOCKED -- death-star-S4 de-opaqued witnessG2/shapeOf (my S186 flagged blocker), so lrc14_from_momentfloor_nodes legs hbonf(=toReal_bonferroni kps-S30)/hB(Lemma B)/hsmall(k<=7 pigeonhole)/hsize(concrete length) are dischargeable against concrete witnessG2=(slowmu(GOOD cap G_P)).toReal => shrinks that route to {hMoment,hpartA}; SHORTEST path to the density-floor leg; (4) burden=13 2-D GAPs route through the density floor (S181 boundary). Files: LRCFreimanBurden.lean; reflection the-freiman-equality-core-formalized-and-the-finish-line-obligation-map-opus-S189. -> THM-675, THM-671, opus-S187/S186/S181, HYP-5682, death-star-S4, kps-S30.
+
+---
 
 ## klein-2026-07-09-S215 -- (PC) RUN: verified SUB-POISSONIAN (eps <= 0, all killers, both banks) + Bernstein verified 4-20x slack => THM-677's assembly verified END-TO-END; thinning escape refuted; the mechanism NAMED (hyperuniformity of bounded lattice perturbations); THE ARC SUMMARY -- what remains for LRC(14), final form
 
