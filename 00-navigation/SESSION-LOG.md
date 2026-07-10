@@ -1,3 +1,22 @@
+## opus-2026-07-09-S202 -- OPTION (C) REALIZED: the C(22,13)=497420 winData22 native_decide census COLLAPSES to a kernel-pure 6-WITNESS PIGEONHOLE (LEM-024). window22_lonely + window22_min1_lonely + hdistinct22_kernel all [propext,Classical.choice,Quot.sound]. One 1-line assembly swap from removing the native_decide.
+
+Prompt (owner): go work option (c), the <=22 covering census proof.
+
+BREAKTHROUGH (computed then proved then formalized):
+- The census-branch domain (min=1 covering <=22, i.e. ratio>13) is 14002 tuples; a GREEDY witness cover found just SIX witnesses {12/25,9/26,7/27,11/28,4/23,11/26} that make ALL of them lonely (exhaustively verified). Their danger sets over [1,22] are TINY: {2},{3},{4},{5},{6,17},{7,19}.
+- PIGEONHOLE proof (elementary, general): fail-all-6 => {2,3,4,5} + one of{6,17} + one of{7,19} in the set; covering => {12,13,14} + one each of {8,16},{9,18},{10,20},{11,22}; min=1 => 1. These are 14 pairwise-DISTINCT forced elements (the danger elements never coincide with covering pairs; 17,19 are primes>14) in a 13-element set. Contradiction. So far at one of 6; lonely_of_kernelWitness finishes. (min=1 essential: without it the count is exactly 13, and {2,3,4,5,6,7,12,13,14,16,18,20,22} is a covering min=2 counterexample -- caught by spread13, ratio 11.)
+
+FORMALIZED (LRCWindow22Census.lean, kernel-pure [propext,Classical.choice,Quot.sound], no native_decide, no sorry, root-wired, builds):
+- danger_12_25/../danger_11_26: the 6 far-set facts (interval_cases + decide over [1,22]).
+- cov_8/../cov_14: covering forces the multiples.
+- window22_min1_lonely: the min=1 pigeonhole (Finset card 14 > 13 via card_le_card image).
+- window22_lonely: FULL <=22 covering census (min=1 pigeonhole + min>=2 spread13, ratio<=11).
+- hdistinct22_kernel: signature-exact kernel-pure drop-in for WindowData.hdistinct22_from_data.
+
+=> a FOUNDATIONAL-AXIOMS-ONLY replacement for the winData22 native_decide census now EXISTS. Removing the two winData22 native_decide axioms from the LRC(14) top theorem is now the 1-line assembly swap: in LRC14GrandAssembly.lean's bounded-window branch, hwindow22_closed cite -> hwindowW_closed 22 cite hdistinct22_kernel. @death-star @monad (assembly owners): that swap makes lrc14_grand_assembly foundational-axioms-only; I left hdistinct22_kernel ready as the drop-in. This is opus-S201 option (c) realized. Files: LRCWindow22Census.lean (+root), LEM-024 canon, census-domain .out x2. -> LEM-024, MISTAKE-135, opus-S200/S201, spread13_lonely, lonely_of_kernelWitness, hdistinct22_from_data (the native_decide one being replaced).
+
+---
+
 ## boxeph-2026-07-09-S18 -- CITATION-SURFACE AUDIT: LRCUpTo13 is consumed at FULL GENERIC STRENGTH (no small-k shrink exists) -- the citation is irreducibly load-bearing; the gate stands as the sole mathematical remainder
 
 Prompt (owner): work on the citation and analytic gate creatively.

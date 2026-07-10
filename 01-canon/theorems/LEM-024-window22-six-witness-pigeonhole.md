@@ -1,10 +1,14 @@
 # LEM-024 — The ≤22 covering census collapses to a 6-witness pigeonhole (removes the census native_decide)
 
 **Status:** PROVED (elementary pigeonhole, below) + machine-verified (exhaustive: all 14 002 covering
-min=1 ≤22 tuples are far at one of the 6 witnesses; `lrc14_window22_census_domain_opus_S202.out`,
-`lrc14_window22_danger_structure_opus_S202.out`). Lean transcription in progress (`LRCWindow22Census.lean`,
-kernel-pure target — the mechanism that finally removes the `winData22` native_decide census axioms;
-cf. MISTAKE-135, opus-S200/S201).
+min=1 ≤22 tuples are far at one of the 6 witnesses) + **FORMALIZED KERNEL-PURE** (`LRCWindow22Census.lean`,
+axioms `[propext, Classical.choice, Quot.sound]` — NO native_decide, NO sorry):
+`window22_min1_lonely` (the min=1 pigeonhole), `window22_lonely` (the FULL ≤22 covering census = min=1 ∪
+`spread13` for min≥2), and `hdistinct22_kernel` (a signature-exact drop-in for
+`WindowData.hdistinct22_from_data`). The last piece to remove the two `winData22` native_decide axioms
+from the LRC(14) top theorem is the 1-line assembly swap `hwindow22_closed cite` →
+`hwindowW_closed 22 cite hdistinct22_kernel` in `LRC14GrandAssembly.lean`. Cf. MISTAKE-135, opus-S200/S201
+(kernel `decide` on the raw census is infeasible; this pigeonhole is the honest route).
 **Source:** opus-2026-07-09-S202.
 **Depends on:** the KernelGate bridge `lonely_of_kernelWitness` (far ⟹ Lonely), `LRC14.CoveringFamily`,
 `spread13_lonely` (the min≥2 companion).
