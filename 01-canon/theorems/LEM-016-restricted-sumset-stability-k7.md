@@ -35,6 +35,19 @@ gap `g > D/2`, split `A = L ⊔ R` at it; spans `ℓ + r = D − g < g`, so the 
 (`D > 60`, all gaps ≤ `D/2`) is not covered by this argument — no example with `B ≤ 12` is
 known (200k samples clean); (i) is claimed as PROVED only for `D ≤ 60` ∪ {g > D/2}. ∎
 
+**Lean formalization of the `g > D/2` case (opus-S198, kernel-pure).** The dominant-gap branch of (i) is
+machine-checked: `LRCFreiman.burden_ge_of_dominant_gap` (`LRCBurdenGap.lean`) states that ANY `k`-set
+`s = L ⊔ R` split at a gap dominating both spans (`span(L) + span(R) < gap`, i.e. `g > D/2`) has
+`|A +̂ A| ≥ 3k − 7`; the `k = 7` corollary `burden_ge_fourteen_of_dominant_gap` gives `≥ 14`. (The same
+lemma at `k = 13` gives `≥ 32` — monad's THM-682 "core `B ≥ 32`" bound, on the dominant-gap branch.) It is exactly the disjoint-block argument above: `three_block_card` proves the three
+sum-blocks `L +̂ L`, `L + R`, `R +̂ R` lie in disjoint integer ranges (from the two separation
+inequalities the gap condition supplies) so the restricted sumset of the union contains all three
+disjointly; the within-block sizes are `restrictedSum_card_ge'` (`≥ 2|L|−3`, `≥ 2|R|−3`) and the cross
+block is Mathlib's Cauchy–Davenport for ℤ (`cauchy_davenport_add_of_linearOrder_isCancelAdd`,
+`≥ |L|+|R|−1`); `3·7 − 7 = 14` by `omega`. So the **contrapositive `B ≤ 13 ⟹ no gap exceeds `D/2`** is
+now kernel-pure, reducing (i) to the flagged all-gaps-`≤ D/2` sliver at the Lean level too. Axioms:
+`[propext, Classical.choice, Quot.sound]`; no `sorry`, no `native_decide`.
+
 *Proof of (ii).* Direct computation of the sum blocks above (script-verified at
 c = 30, 250, 2500). ∎
 

@@ -1,3 +1,21 @@
+## opus-2026-07-09-S198 -- FORMALIZED the DISJOINT-BLOCK burden bound (LEM-016(i) dominant-gap case, kernel-pure) -- ANY k-set with a gap > D/2 has burden >= 3k-7 (k=7 => 14 = LEM-016(i) tail; k=13 => 32 = monad THM-682 core). Noticed both Freiman axes fail at k<=4.
+
+Prompt (owner): work the still open axis (the burden axis: LEM-016(i) + non-covering).
+
+DELIVERED (LRCBurdenGap.lean, kernel-pure [propext,Classical.choice,Quot.sound], no native_decide, root-wired, builds):
+- burden_ge_of_dominant_gap (GENERAL k): a Finset s = L u R split at a gap dominating both spans (span L + span R < gap, i.e. gap > D/2) has |restrictedSum s| >= 3*s.card - 7.
+- burden_ge_fourteen_of_dominant_gap (k=7 corollary): >= 14 -- LEM-016(i)'s g>D/2 case. Contrapositive: B<=13 => no gap > D/2, reducing LEM-016(i) to its flagged all-gaps-<=D/2 sliver (open on paper too).
+- Engine three_block_card: the three sum-blocks L+^L, L+R (Minkowski), R+^R occupy DISJOINT integer ranges (separation from the gap by omega) => restrictedSum(LuR) contains all three disjointly. Within-blocks = restrictedSum_card_ge' (my S188 bound, made unconditional); CROSS-block = Mathlib Cauchy-Davenport for Z (cauchy_davenport_add_of_linearOrder_isCancelAdd, |L+R|>=|L|+|R|-1) -- the one additive-combinatorial ingredient, a free import.
+- Helpers: restrictedSum_mono, restrictedSum_le/_ge (block range bounds), add_ge/_le (Minkowski range), add_subset_restrictedSum.
+
+CONNECTION: at k=13 the general bound gives B >= 3*13-7 = 32 = monad's THM-682 "core B >= 32" -- so the dominant-gap branch of monad's 13-set core bound is now kernel-pure (proving general k, not just 7, was the bonus).
+
+CONVERGENCE (pulled kps-S126): the E3 axis hits the SAME k>=5 threshold as my burden axis -- kps's dist<=deficit capstone is FALSE k<=4 ({1,4,5}), holds k>=5; my ap_of_min_burden needs n>=5 (MISTAKE-133, {0,1,3,4}). Both Freiman axes fail on the same small sets = a k>=5 "too small to be rigid" phenomenon in two costumes. Reflection written.
+
+Canon: LEM-016 now records the g>D/2 Lean formalization (general 3k-7 + k=7/k=13). Files: LRCBurdenGap.lean (+root), LEM-016 canon, reflection. REMAINING open on the axis (honest): the all-gaps-<=D/2 sliver (D>60; open on paper) and AP=>non-covering (klein-S211, analytic). -> LEM-016, THM-676(iv), monad THM-682 (B>=32), kps-S126/THM-681, MISTAKE-133, opus-S195/S196/S197.
+
+---
+
 ## boxeph-2026-07-09-S9 -- INTEGRATION: the lever map's parity prediction became LEM-020, the 2-adic descent revived parity at depth 4 (LEM-021), and the fleet now holds THREE witness-existence mechanisms -- synthesis addendum + the composition map
 
 Prompt (owner): integrate, synthesize, and extend incoming ideas.
