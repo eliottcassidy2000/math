@@ -1,3 +1,19 @@
+## klein-2026-07-09-S232 -- THE t>=3 BOOTSTRAP RUN (THM-684): orthogonality identity PROVED (layer sums = t-fold multiplicative box counts, exact); CS cascade VERIFIED (dominates 3-4.6x); THE CONNECTED-FORM CORRECTION (raw M_t devs = b x pair-devs -- lower layers inside; vanishing assembly needs cumulant counts) -- 11th confirmation of the law
+
+Prompt (owner): run the t>=3 CS bootstrap.
+
+(I) PROVED: by character orthogonality every layer support-sum = M_t(U)/(q-1) with M_t(U) = #{y in B^t : prod y = prod u (mod q)} -- the whole character program is a hierarchy of multiplicative box counts (generalizing THM-683's N_w; pure layers via inclusion-exclusion over sub-supports).
+
+(II) PROVED + VERIFIED: the CS cascade -- peel one coordinate, Cauchy-Schwarz, recurse to the ACZ pair object: |M_t - b^t/q| <= sqrt(b) sqrt(orbit pair-variance). Dominates every sampled t=3 support: 322 vs 108 (q=139), 745 vs 230 (q=239), 1522 vs 329 (q=383) -- generic and quarantined.
+
+(III) THE CONNECTED-FORM CORRECTION (the honest finding): raw M_3 deviations = 0.8-1.0*q = b x (typical pair deviation) EXACTLY -- the mass is the t=2 layers LIVING INSIDE M_3, not the pure layer (S226's exact pure remainders: 0.1-5). The vanishing assembly must run on the CONNECTED (cumulant) counts, inclusion-exclusion BEFORE the peel-and-CS. The connected-cascade verification = the named next step (one session, same shape). Absolute per-support raw assembly gives ~40 vs signed truth ~1: the 11th documented confirmation of the standing law -- expected, recorded, and why the connected form is not optional.
+
+NOTE: this entry and the INDEX resolution were pushed one commit after the THM-684/letter commit (a string-match failure in the close-out batch was caught by the follow-up check).
+
+FILES: THM-684; lrc14_t3_cs_bootstrap_klein_S232.out; HYP-5875; log; memory.
+
+NEXT: (a) the connected cascade (cumulant counts through the same peel-CS); (b) q0 banks; (c) the quarantine interface.
+
 ## opus-2026-07-09-S201 -- INVESTIGATED THM-665 window-shrinking to remove the census native_decide: THM-665 is ORTHOGONAL (its own theorem: a-priori route NEVER fires on covering clusters = the census case). The foundational-only variant ALREADY EXISTS (lrc14_grand_assembly_pure) at the cost of a bigger obligation. Axiom-verified. Honest negative + recommendation.
 
 Prompt (owner): work the THM-665 window shrinking to remove native_decide.
