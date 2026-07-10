@@ -11,6 +11,25 @@ HONEST STATUS: first build of my draft surfaced ~11 errors (exp-rewriting in the
 HANDOFF: anyone taking a quiet Lean window -- start from the draft + HYP-5778's error map; fix order: dvd-case exp rewrite (draft:63-96), Summable.tsum_finsetSum name (:149), injective reindex (:163, try tsum_eq_tsum_of_ne_zero_bij), tsum_sub (:193); then the integer-Basel assembly via the three mapped lemmas. FILES: LRCAliasingBound.lean.draft; HYP-5778 update; log.
 
 ---
+## klein-2026-07-09-S214 -- THE D_m SHARPENING (THM-677): exact harmonic identity + L2-shift-average clears the needed bound 3.2-3.7x (tight to truth) + the PARSEVAL-BERNSTEIN assembly closes a-priori at V >~ 5000 MODULO one one-sided pair-correlation count (PC) -- the most tractable form the tau-line node has ever taken; per-cell DK and plain ET honestly refuted
+
+Prompt (owner): sharpen boxeph's D_m gap.
+
+Reproduced boxeph-S3's exact pipeline (Good/tau_j, canonical drift-valid phi) on bank-style covering instances (V=842 |Good|=182; V=1006 |Good|=340) and ran four studies:
+
+**(1) CELL REFUTATION.** The hoped-for per-cell structure (phi_j linear in j within widest-gap-pair cells => per-cell Denjoy-Koksma) is DEAD: the cells are ~95% singletons (166/174, 290/315) -- Good is fragmented in j. No AP runs to exploit.
+
+**(2) TRUE MARGINS (sharper than reported).** True D_m = 0.4-2.2% of |Good| across all killers (P and M zones), vs needed 5.71%: 4-14x room. Massive cross-cell cancellation (|sum e_cell| / sum |e_cell| = 0.02-0.08).
+
+**(3) SPECTRUM + ET LOSS.** The comb exponential sums Z_m(h) = sum_{j in Good} e(h m tau_j) show genuine square-root cancellation (max|Z| <= 2.6 sqrtN, no resonant spikes on covering instances) -- BUT the plain Erdos-Turan assembly gives 40-71 vs needed 10.4-19.4: the harmonic log factor is 4x lossy; the truth cancels ACROSS harmonics too (the signed k(h) blocks). Fifth confirmation of the absolute-bounds-lose-to-cancellation law.
+
+**(4) THE SHARPENING (THM-677).** (a) EXACT identity: kill_m - N/7 = sum_{h>=1} 2 k(h) Re Z_m(h), k(h) = sin(pi h/7)/(pi h) -- symmetric window => real coefficients; signed partials converge to the true D_m by h <= 14-28. (b) L2-SHIFT-AVERAGE (Parseval): l2^2 = sum 2k(h)^2 |Z(h)|^2; measured l2 = 2.8-3.2 vs needed 10.4 -- 3.2-3.7x clearance and TIGHT to the truth (0.21 sqrtN). (c) THE ASSEMBLY: Bernstein sup-vs-L2 at effective degree ~14 gives D_m <= ~1.9 sqrtN < 0.0571 N for N > N0 ~ 1100, i.e. V >~ 5000 EXPLICIT -- resting on ONE one-sided ingredient: **(PC) the pair-correlation upper bound** #{(j,j') in Good^2 : ||m(tau_j - tau_j')|| <= 1/(2H+1)} <= (1+eps) N^2/(2H+1) + cN -- a near-coincidence COUNT (E2/divisor/gcd territory; LEM-011's exact W-hat machinery is the natural tool), NOT a signed-cancellation statement. The tau-line node has never been this tractable.
+
+**STATE OF THE FINISH (both routes now name ONE one-sided counting ingredient each):** tau-line: [V >~ 5000: (PC) + Parseval-Bernstein] + [V < 5000: boxeph's exact per-instance certificates] + [coherent: LEM-012]. Modular: THM-676's high-tail bound. @boxeph: your D_m frame was the right coordinates -- (PC) is yours to take if you want it; my three outs have the full ledgers.
+
+FILES: THM-677; lrc14_Dm_cell_sharpening_klein_S214.py(+out); lrc14_Dm_spectrum_klein_S214.out; lrc14_Dm_L2_nearmiss_klein_S214.out; HYP-5780; log; memory.
+
+NEXT: (a) (PC) -- the pair-correlation count: expand |Z(h)|^2 = sum_{j,j'} e(h m (tau_j - tau_j')) and bound the near-diagonal mass by the divisor structure of the difference set of Good (gcd arguments; LEM-011); (b) push V >~ 5000 banks to verify the assembly's constants live; (c) below V0: scale boxeph's certificate banks; (d) Lean: the harmonic identity + Parseval are textbook-shaped.
 
 ## opus-2026-07-09-S187 -- WORKED THE ACTUAL FINISH LINE (grand assembly THM-671 residual, NOT the superseded witnessG2): the Freiman 3k-4 stability for 7-sets SPLITS at descent-burden 12; 2-D GAPs appear at burden 13 = the S181 obstruction
 

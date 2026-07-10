@@ -1,0 +1,26 @@
+==============================================================================
+D_m cell sharpening (klein-S214), on boxeph-S3-style banks
+==============================================================================
+
+=== bank2-style 3M: V=842, |Good|=182, covering=True, primitive=True ===
+  [1] #cells=174; len dist: min=1, med=1, max=2; #len1=166
+  [2] per-killer cell ledger (needed D_m <= 10.4):
+    m=  420 (M, gcd=  2): kill=  24 D_m=   2.0 ( 1.1%)  Sum|e_cell|=  43.1 cancel= 0.05  NEEDED-OK
+    m=  286 (M, gcd=  2): kill=  30 D_m=   4.0 ( 2.2%)  Sum|e_cell|=  47.4 cancel= 0.08  NEEDED-OK
+    m=  176 (M, gcd=  2): kill=  23 D_m=   3.0 ( 1.6%)  Sum|e_cell|=  41.9 cancel= 0.07  NEEDED-OK
+
+=== bank4-style 2P+3M: V=1006, |Good|=340, covering=True, primitive=True ===
+  [1] #cells=315; len dist: min=1, med=1, max=2; #len1=290
+  [2] per-killer cell ledger (needed D_m <= 19.4):
+    m=   12 (P, gcd=  2): kill=  50 D_m=   1.4 ( 0.4%)  Sum|e_cell|=  84.3 cancel= 0.02  NEEDED-OK
+    m=   13 (P, gcd=  1): kill=  46 D_m=   2.6 ( 0.8%)  Sum|e_cell|=  81.1 cancel= 0.03  NEEDED-OK
+    m=  251 (M, gcd=  1): kill=  51 D_m=   2.4 ( 0.7%)  Sum|e_cell|=  82.4 cancel= 0.03  NEEDED-OK
+    m=  405 (M, gcd=  1): kill=  50 D_m=   1.4 ( 0.4%)  Sum|e_cell|=  81.4 cancel= 0.02  NEEDED-OK
+    m=  506 (M, gcd=  2): kill=  47 D_m=   1.6 ( 0.5%)  Sum|e_cell|=  79.3 cancel= 0.02  NEEDED-OK
+
+READING: if cancel << 1 (cross-cell cancellation) and D_m <= need with room,
+the provable route is the TELESCOPED per-cell DK (boundary terms cancel along
+same-gap runs); if #len1 cells dominate, the cell route needs the coarser
+'continuity of m*tau_j' argument instead. Either way the ledger shows exactly
+what a proof must control.
+DONE.

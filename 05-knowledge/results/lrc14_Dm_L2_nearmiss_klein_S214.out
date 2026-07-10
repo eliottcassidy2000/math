@@ -1,0 +1,9 @@
+
+=== bank2-style: |Good|=182, needed 10.4 ===
+  m=  420: TRUE D= -2.00  signed partials h<=7: -1.7 h<=14: -3.0 h<=28: -2.3 h<=56: -2.4 h<=100: -2.3 h<=200: -1.9  | L2-shift-avg D ~    2.8 (vs needed 10.4)
+  m=  286: TRUE D= +4.00  signed partials h<=7: +2.5 h<=14: +4.2 h<=28: +4.2 h<=56: +4.2 h<=100: +4.0 h<=200: +4.0  | L2-shift-avg D ~    2.9 (vs needed 10.4)
+  m=  176: TRUE D= -3.00  signed partials h<=7: -3.5 h<=14: -2.2 h<=28: -2.4 h<=56: -2.4 h<=100: -2.5 h<=200: -2.9  | L2-shift-avg D ~    3.2 (vs needed 10.4)
+
+READING: if signed partials converge to TRUE D by h ~ 28-56 and the
+L2-shift-average clears 'needed', the a-priori gap is exactly: the
+specific window (centered at 0) vs the shift-average -- one derandomization.

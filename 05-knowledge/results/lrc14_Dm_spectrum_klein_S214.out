@@ -1,0 +1,16 @@
+
+=== bank2-style 3M: V=842 |Good|=182 sqrt=13.5 needed D_m <= 10.4 ===
+  m=  420: max|T|=  29.0 mean|T|=  11.1 (sqrtN= 13.5)  ET-ish bound=   42.7  h with |T|>2sqrtN: [36, 37]
+  m=  286: max|T|=  27.0 mean|T|=  10.2 (sqrtN= 13.5)  ET-ish bound=   41.5  h with |T|>2sqrtN: [8]
+  m=  176: max|T|=  27.0 mean|T|=  10.7 (sqrtN= 13.5)  ET-ish bound=   40.2  h with |T|>2sqrtN: [13]
+
+=== bank4-style 2P+3M: V=1006 |Good|=340 sqrt=18.4 needed D_m <= 19.4 ===
+  m=   12: max|T|=  48.7 mean|T|=  12.6 (sqrtN= 18.4)  ET-ish bound=   52.2  h with |T|>2sqrtN: [8, 25]
+  m=   13: max|T|=  36.8 mean|T|=  10.9 (sqrtN= 18.4)  ET-ish bound=   44.3  h with |T|>2sqrtN: []
+  m=  251: max|T|=  29.4 mean|T|=  13.7 (sqrtN= 18.4)  ET-ish bound=   60.2  h with |T|>2sqrtN: []
+  m=  405: max|T|=  33.6 mean|T|=  15.4 (sqrtN= 18.4)  ET-ish bound=   70.9  h with |T|>2sqrtN: []
+  m=  506: max|T|=  33.9 mean|T|=  15.6 (sqrtN= 18.4)  ET-ish bound=   66.9  h with |T|>2sqrtN: []
+
+If max|T| ~ sqrtN uniformly (no resonant spikes), the comb-vs-Good
+correlation is square-root-cancelling: the ET route closes numerically
+and the a-priori version = bound T_m(h) via the (m,E) resonance structure.
