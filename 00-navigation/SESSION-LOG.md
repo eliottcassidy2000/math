@@ -9,6 +9,36 @@ ANGLE 2 (framing, unclaimed handoff): the aggregated gate avg_q B5 > 0 (THM-673)
 TRUTH CHECK: LM(q) positive on every instance tested (60-212) -- hB5 solid empirically; the gap stays purely a-priori. FILES: script + out; HYP-5863.
 
 ---
+## mac-mini-2026-07-09-S65 (cont. 16) -- THE FINITE INTERVAL-MEASURE ENGINE BUILT + ITS FIRST OUTPUT IS A SKELETON SOUNDNESS FLAG: hsmall/hfloor AS STATED ARE UNSATISFIABLE (v = {1..13}: witnessG2 = 0 < witnessMP); exact failure boundary = clusterSize <= 2; full per-|P| certificate table computed (m_P reproduced from scratch)
+
+Prompt (owner): build the finite interval-measure engine for hsmall/hB; think measure theory.
+
+**THE ENGINE (lrc14_interval_measure_engine_macmini_S65cont16.py, pure Fractions):**
+safeSet P per LRCDenseCovers verbatim; per-runner identity safe(p) cap [0,1) =
+Union_j [(14j+1)/(14p), (14j+13)/(14p)]; intersections stay rational-interval unions; measure =
+sum of lengths. VALIDATED: reproduces THM-530's m_P = 14249/252252 at the exact argmin
+{1,2,3,5,7,8,9,11,12,13} from scratch. FULL TABLE (all |P| = 1..13 minima, exact):
+6/7, 66/91, 55/91, 1979/4004, 2243/5880, 3029/10780, 45107/229320, 2479/17640, 10601/114660,
+14249/252252, 313/9702, 7/858, 0 -- monotone, the complete native_decide ledger for hB
+(|P| <= 5, minima >= 0.381) and hsmall (|P| in [6,10], minima >= m_P).
+
+**THE SOUNDNESS FLAG (measure theory doing its job -- FLAGGED, not overridden):** the skeleton's
+hsmall (and hence the top-level hfloor: witnessMP <= witnessG2 for ALL v != 0) is UNSATISFIABLE
+as stated: v = (1,...,13) gives shapeOf with P = all 13 small speeds, clusterSize = 0 <= 7, and
+witnessG2 = meas(safeSet{1..13}) = 0 < witnessMP -- the AP's lonely set is the single point
+1/14. EXACT BOUNDARY: the m_P floor fails precisely for clusterSize <= 2 (|P| = 11: 313/9702;
+12: 7/858; 13: 0), matching THM-530's admissibility k >= 3 WHICH THE SKELETON STATEMENT DROPPED
+-- HYP-5690's covering-scope issue surfacing inside the Lean architecture, now with a
+measure-zero proof. Anyone attempting to discharge hsmall/hfloor as stated would hit this wall.
+
+**THE REPAIR (proposed to the skeleton owners):** the assembly needs only POSITIVITY per shape
+to feed hpartA: k >= 3 -> m_P (canon, the engine's table); k = 2 -> 313/9702 > 0;
+k = 1 -> 7/858 > 0; k = 0 -> the single family v = +-{1..13} = the AP = NON-COVERING -> the
+q = 14 sieve (LonelyRunner.sieve_one_div, already in Lean). All constants exact; the corrected
+hfloor = [positivity by cluster-size cases] + [the k=0 sieve leg]; witnessMP's role survives as
+the k >= 3 uniform floor only.
+
+Files: lrc14_interval_measure_engine_macmini_S65cont16.{py,out}.
 
 ## boxeph-2026-07-09-S13 -- THE ANALYTIC GATE (hB5): the 3a-ruler angle REFUTED with a structural reason -- covering and the 1/3-anchor are incompatible (mod-3 duty = the anchor's kill set); hB5's doubling-rich arm is measure-route-only
 
