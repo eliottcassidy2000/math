@@ -239,4 +239,57 @@ theorem schurCount_eq_choose_iff_dilated (S : Finset ℕ) (h0 : 0 ∉ S) (hne : 
   rw [schurCount_eq_choose_iff_closedUnderDiff S h0]
   exact ⟨dilated_of_closedUnderDiff hne h0, closedUnderDiff_of_dilated⟩
 
+/-- **The Schur deficit formula (the E3-axis structural core of the Freiman ladder).**  The Schur count
+falls exactly `C(k,2) − E₃` short of maximal, and that shortfall counts the **unrealised 2-subsets** —
+the `{x,y}` (`x<y`) of `S` that are NOT of the form `{a, a+b}` for a Schur pair, i.e. whose difference
+`y−x ∉ S`:
+
+  `E₃ S + #(2-subsets not of the form {a, a+b}) = C(|S|, 2)`.
+
+This is the E3-axis analogue of opus's burden-side `restrictedSum_eq_freimanChain` (the minimal-burden
+structural entry point): it turns "E₃ near its maximum `C(k,2)`" into "few missing differences", the
+concrete stability target of the E3-ladder rung (the `W₀ > 0.08` branch of THM-681).  At the maximum the
+deficit is `0` — recovering `schurCount_eq_choose_iff_closedUnderDiff` (every 2-subset realised ⟺ closed
+under differences ⟺ dilated interval).  The injection `(a,b) ↦ {a, a+b}` is a bijection onto the
+*realised* 2-subsets, so `E₃ = |realised|` and the deficit `= |powersetCard 2 \ realised|`. -/
+theorem schurCount_add_sdiff_eq_choose (S : Finset ℕ) (h0 : 0 ∉ S) :
+    E3 S + ((S.powersetCard 2) \
+      ((S ×ˢ S).filter (fun p => p.1 + p.2 ∈ S)).image (fun p => ({p.1, p.1 + p.2} : Finset ℕ))).card
+      = S.card.choose 2 := by
+  set P : Finset (ℕ × ℕ) := (S ×ˢ S).filter (fun p => p.1 + p.2 ∈ S) with hPdef
+  set φ : ℕ × ℕ → Finset ℕ := fun p => ({p.1, p.1 + p.2} : Finset ℕ) with hφ
+  have hpos : ∀ p ∈ P, 0 < p.2 := by
+    intro p hp
+    simp only [hPdef, Finset.mem_filter, Finset.mem_product] at hp
+    exact Nat.pos_of_ne_zero (fun h => h0 (h ▸ hp.1.2))
+  have hmem : ∀ p ∈ P, p.1 ∈ S ∧ p.2 ∈ S ∧ p.1 + p.2 ∈ S := by
+    intro p hp
+    simp only [hPdef, Finset.mem_filter, Finset.mem_product] at hp
+    exact ⟨hp.1.1, hp.1.2, hp.2⟩
+  have hsub : P.image φ ⊆ S.powersetCard 2 := by
+    intro T hT
+    rw [Finset.mem_image] at hT
+    obtain ⟨p, hp, rfl⟩ := hT
+    obtain ⟨h1, _, h3⟩ := hmem p hp
+    rw [Finset.mem_powersetCard]
+    refine ⟨?_, Finset.card_pair (by have := hpos p hp; omega)⟩
+    intro z hz
+    simp only [hφ, Finset.mem_insert, Finset.mem_singleton] at hz
+    rcases hz with rfl | rfl
+    · exact h1
+    · exact h3
+  have hinj : Set.InjOn φ P := by
+    intro p hp q hq h
+    simp only [hφ] at h
+    have hp2 := hpos p hp; have hq2 := hpos q hq
+    have m1 : p.1 ∈ ({q.1, q.1 + q.2} : Finset ℕ) := by rw [← h]; simp
+    have m2 : p.1 + p.2 ∈ ({q.1, q.1 + q.2} : Finset ℕ) := by rw [← h]; simp
+    have m3 : q.1 ∈ ({p.1, p.1 + p.2} : Finset ℕ) := by rw [h]; simp
+    simp only [Finset.mem_insert, Finset.mem_singleton] at m1 m2 m3
+    have hp1q1 : p.1 = q.1 := by rcases m1 with h1 | h1 <;> rcases m3 with h3 | h3 <;> omega
+    exact Prod.ext hp1q1 (by rcases m2 with h2 | h2 <;> omega)
+  have hcardI : (P.image φ).card = E3 S := by
+    rw [E3, ← hPdef]; exact Finset.card_image_of_injOn hinj
+  rw [← hcardI, add_comm, Finset.card_sdiff_add_card_eq_card hsub, Finset.card_powersetCard]
+
 end LRCSchurRigidity

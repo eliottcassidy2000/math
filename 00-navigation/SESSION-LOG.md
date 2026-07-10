@@ -46,6 +46,21 @@ bounded-depth layer always decide on covering?) is the named refinement, finite 
 the coordinates this arc's instruments already speak (THM-672/674 bands + LEM-019 descent).
 
 Files: LEM-020 (canon); lrc14_redei_involution_macmini_S65cont11.{py,out}.
+## kind-pasteur-2026-07-09-S125 -- FORMALIZED the Schur DEFICIT FORMULA (LRCSchurRigidity.schurCount_add_sdiff_eq_choose, sorry-free): the E3-axis structural core of the Freiman ladder = the analogue of opus's burden-axis restrictedSum_eq_freimanChain.
+
+Prompt (owner): keep pushing the endgame, work the Freiman-ladder middle rungs.
+
+STATE PULLED: opus-S195 PROVED the bottom burden rung (LRCFreimanAP.ap_of_min_burden: StrictMono + |restrictedSum|=2n-3 + n>=5 => AP; false n<=4, MISTAKE-133). Remaining burden rungs (burden in {11,12} => opus-S187's 5 shapes; burden 13 => 2-D GAPs) + mac-mini LEM-018/019 = active work on the BURDEN axis. KEY DISTINCTION: E3 (Schur incidences) and burden (restricted sumset) are DIFFERENT measures -- burden is translation-invariant, E3 is NOT (e.g. AP {1,3,5}: burden minimal but E3=0). THM-681 uses W0 = exact-load = Schur+doubling = E3-axis. So the ladder has TWO axes: burden (opus/mac-mini) + E3 (mine). My rigidity is the E3-axis TOP.
+
+BUILT (LRCSchurRigidity.lean +1, sorry-free): the E3-axis structural core.
+- schurCount_add_sdiff_eq_choose: E3 S + #(2-subsets NOT of the form {a,a+b}, i.e. {x,y} with y-x not in S) = C(|S|,2). The Schur count falls exactly C(k,2)-E3 short, and the shortfall COUNTS the "missing differences". Proof: the injection (a,b)->{a,a+b} is a bijection onto the REALISED 2-subsets (my hinj + hsub from the rigidity bijection), so E3 = |realised| and deficit = |powersetCard 2 \ realised| via card_sdiff_add_card_eq_card + card_powersetCard.
+This is the E3-axis analogue of opus's burden-axis restrictedSum_eq_freimanChain (the minimal-burden structural entry): it turns "E3 near max C(k,2)" into "FEW MISSING DIFFERENCES" -- the concrete stability target of the E3-ladder rung (THM-681's W0>0.08 branch). At deficit=0 it recovers my schurCount_eq_choose_iff_closedUnderDiff (all realised <=> closed-under-diff <=> dilated).
+
+MIDDLE-RUNG STATUS: the two axes of the Freiman ladder now both have their structural entry Lean-formalized -- burden (opus restrictedSum_eq_freimanChain + ap_of_min_burden) + E3 (my schurCount_add_sdiff_eq_choose). The remaining STABILITY (deficit<=m => near-dilated / burden<=2n-2 => near-AP) is the hard quantitative step (opus {11,12} shapes, mac-mini LEM-018 exhaustion). My E3-axis: "few missing differences => near-dilated" is the analogous open rung.
+
+My chain S114..S125. FILES: LRCSchurRigidity.lean. Endgame unchanged: LRC(14) = [assembly] + [my residual<=liveness routes lrc14_from_B5/from_liveness] + [SOLE: a-priori supply via Freiman ladder (these rungs) OR signed cancellation].
+
+NEXT: the E3-stability step (deficit<=m => near-dilated) -- the analogue of opus's burden {11,12} shapes on the E3 axis; coordinate with opus (burden axis) + mac-mini (exhaustion).
 
 ## opus-2026-07-09-S195 -- PROVED the FREIMAN AP STEP in Lean (LRCFreimanAP.ap_of_min_burden, kernel-pure): minimal restricted sumset 2n-3 => AP, FOR n>=5. Caught + recorded that the step is FALSE for n<=4 (MISTAKE-133); found a CLEANER proof (interleaved chain, no reflection)
 
