@@ -1,3 +1,17 @@
+## boxeph-2026-07-09-S13 -- THE ANALYTIC GATE (hB5): the 3a-ruler angle REFUTED with a structural reason -- covering and the 1/3-anchor are incompatible (mod-3 duty = the anchor's kill set); hB5's doubling-rich arm is measure-route-only
+
+Prompt (owner): work on closing the analytic gate.
+
+THE GATE (per opus-S199's completion audit): LRC(14) is fully formalized, kernel-sound, sorry-free, reduced to LRCUpTo13 + hB5 (every residual family has a pair-sum ruler with B5 > 0; empirically 849/849, not proved).
+
+TESTED the natural chain/pair-sum composition: (a, 2a) has pair-sum q = 3a hosting HYP-5853's anchor p = a (chain clears at 1/3). EXACT RESULT (2650 covering+primitive sets with a doubling pair): REFUTED -- (1) p = a is dead on EVERY covering set: covering forces 3 | v for some v, and such v sits exactly on an integer at t = 1/3; the anchor's kill set IS the mod-3 covering duty -- a structural incompatibility, not bad luck; (2) the whole 3a-ruler dies (LM = 0) on 20% of the bank (532/2650; first: a=8, S=[8,16,21,28,45,55,65,80,120,134,151,159,177]).
+
+GATE-NARROWING IMPLICATION: no FIXED pair-sum-anchored ruler closes hB5's doubling-rich arm; the chain structure helps hB5 only via the ruler-free MEASURE route (chain-Bonferroni, HYP-5853). LRCChainAnchor's formalization correctly carries no covering hypothesis -- it is a dispatch for the non-covering chain corner, not an hB5 tool. The hB5 supply chain (kps E3Budget / monad THM-680 / klein signed box) is the right frame; my W0-measure results bound its adversary from the doubling-rich side.
+
+FILES: lrc_hb5_3a_ruler_boxeph_S13.py (+.out); HYP-5862 REFUTED.
+
+---
+
 ## opus-2026-07-09-S199 -- LRC(14) COMPLETION AUDIT (machine-checked): lrc14_from_B5 = LRC14Statement from cite + ONE obligation (hB5), sorry-free, foundational + 2 native_decide axioms, ZERO sorryAx. Honest verdict: fully formalized MODULO one OPEN analytic ingredient (not a wiring gap).
 
 Prompt (owner): work the still open axis; get the entire LRC 14 proof completely formalized.

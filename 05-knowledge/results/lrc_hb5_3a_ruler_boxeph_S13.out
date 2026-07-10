@@ -1,0 +1,8 @@
+hB5 via the 3a-ruler: exact LM(3a) on covering sets with doubling pairs
+  DEAD 3a-ruler: a=8 S=[8, 16, 21, 28, 45, 55, 65, 80, 120, 134, 151, 159, 177]
+  DEAD 3a-ruler: a=54 S=[21, 28, 39, 54, 68, 88, 108, 120, 121, 143, 147, 162, 182]
+  DEAD 3a-ruler: a=28 S=[28, 40, 56, 84, 90, 109, 117, 118, 132, 141, 176, 177, 191]
+tested 2650 covering+primitive sets with doubling pair
+dead-ruler count: 532
+worst LM(3a) = 0 at a=8, S=[8, 16, 21, 28, 45, 55, 65, 80, 120, 134, 151, 159, 177]
+  anchor p=a live at worst case: False
