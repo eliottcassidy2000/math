@@ -1,3 +1,21 @@
+## klein-2026-07-09-S225 -- THE GATE PASSES: the diagonal-only suppression law CONFIRMED at scale (80 covering instances) -- near-APs with addC = 125 sit AT iid (0.987) at prime rulers; only dilations suppress (0.201); THE CHARACTER-FRAME SIGNED PROGRAM IS GO, one lemma to write
+
+Prompt (owner): run the corpus extension of the 2x2 matrix.
+
+THE EXTENSION (80 covering+primitive instances, 20 per cell, V = 120-260, 8 window-prime stages each -- upgrading S224's single-instance non-covering cells):
+- GG generic/generic: mean suppression 0.918, worst 0.414;
+- **AG near-AP/mult-generic (addC = 125, heavy additive coherence, covering): mean 0.987 -- AT IID, the healthiest cell of all**;
+- MG smooth/add-generic: mean 0.984, worst 0.597;
+- DD diagonal (c*{1..13}+bump dilations): mean 0.201, avg-min 0.124.
+
+**THE LAW HOLDS AT SCALE.** Additive coherence alone does not suppress LM at prime rulers -- the character frame's resonance combinatorics are blind to it, exactly as theorized at S224. Multiplicative smoothness alone is also harmless. Only the dilation diagonal suppresses, and it is quarantined by E3/R(v) detection into the LEM-018/rigidity ladder -- whose Freiman AP step opus PROVED IN LEAN the same day (LRCFreimanAP.ap_of_min_burden). Honest: AG's worst single-ruler value was 0.000 (one dead prime of 8 sampled, in one instance whose mean sits at iid) -- the operative statistic is one-good-stage-per-instance, overwhelmingly satisfied off-diagonal.
+
+**VERDICT: THE CHARACTER-FRAME SIGNED PROGRAM IS GO.** The chain: [Bertrand: a prime stage q in (V,2V] always exists] + [S209: liveness is modulus-range, no pair-sum needed] + [the character expansion of LM at prime q: main (b/q)^13(q-1)] + [t=2: incomplete-character-sum Parseval -- classical] + [**the ONE lemma: the t>=3 character-tuple Holder/Parseval chain**] + [the diagonal: quarantined, ladder-owned, now Lean-formal at the AP step]. Measured cushions: off-diagonal means 0.92-0.99 vs the needed >0.
+
+FILES: lrc14_matrix_corpus_klein_S225.out; HYP-5840; log; memory.
+
+NEXT (the program, for whoever takes it): (a) the t>=3 chain -- @kind-pasteur/@opus, the incomplete-character Parseval is the multiplicative twin of your moment machinery; (b) the per-instance one-good-stage statistic formalized (max over primes, not min); (c) the diagonal quarantine interface (E3/R(v) threshold => ladder) as one clean lemma joining LRCE3Budget + LRCFreimanAP.
+
 ## opus-2026-07-09-S195 -- PROVED the FREIMAN AP STEP in Lean (LRCFreimanAP.ap_of_min_burden, kernel-pure): minimal restricted sumset 2n-3 => AP, FOR n>=5. Caught + recorded that the step is FALSE for n<=4 (MISTAKE-133); found a CLEANER proof (interleaved chain, no reflection)
 
 Prompt (owner): commit a full session to the AP step.

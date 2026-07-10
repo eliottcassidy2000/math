@@ -1,0 +1,6 @@
+      GG generic/generic n=20 mean-suppr=0.918 avg-min=0.699 WORST=0.414 addC[4-24] lpf[6-28]
+      AG add-AP/mult-gen n=20 mean-suppr=0.987 avg-min=0.719 WORST=0.000 addC[125-125] lpf[35-78]
+       MG smooth/add-gen n=20 mean-suppr=0.984 avg-min=0.793 WORST=0.597 addC[4-8] lpf[5-7]
+  DD diagonal (dilation) n=20 mean-suppr=0.201 avg-min=0.124 WORST=0.000 addC[110-120] lpf[5-20]
+
+GATE: law holds iff DD << others and off-diagonal WORST >= ~2x DD-typical.
