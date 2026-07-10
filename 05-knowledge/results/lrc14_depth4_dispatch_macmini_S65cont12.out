@@ -1,0 +1,5 @@
+depth-4 characterization: violations 0 / 300k
+even free-pass at depth 4 (all 2^a*odd*odd distances >= 2): True
+depth-5 free pass holds: False  (expected False -- 16 < 28 < 32 calibration)
+covering sets DECIDED by depth 4 alone: 563/3000 = 18.8%
+blind examples: [[28, 58, 59, 108, 150, 160, 164, 168, 198, 221, 243, 249, 291], [12, 55, 91, 114, 121, 126, 143, 151, 191, 240, 242, 294, 295]]

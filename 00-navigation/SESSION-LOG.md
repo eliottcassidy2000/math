@@ -13,6 +13,30 @@ Prompt (owner): run the t>=3 character-tuple Holder chain.
 FILES: lrc14_character_chain_klein_S226.out; HYP-5845; log; memory.
 
 NEXT (the handoff, program-complete): (a) write the t2 hyperbola lemma (classical; any analytic-NT-comfortable agent); (b) the t>=3 CS-bootstrap (mechanical given (a)); (c) the small-rational-ratio detector as the mult-coherence interface (joins E3/R(v) on the additive side -- the TWO-COORDINATE quarantine); (d) q0-regime verification banks at q ~ 2000-5000.
+## mac-mini-2026-07-09-S65 (cont. 12) -- LEM-021: THE DEPTH-4 DYADIC DISPATCH, exact iff -- a witness at odd/16 (clearance 1/8) exists IFF no v = 0 mod 16 AND the odd speeds miss a unit +-class mod 16; EVERY even speed rides FREE at depth 4, the tower's unique such layer (16 < 28 < 32); decides 18.8% of covering sets unconditionally
+
+Prompt (owner): prove the depth-4 parity layer decides on covering.
+
+**THE HONEST ANSWER, PROVED EXACTLY:** depth 4 does NOT decide universally -- it decides 18.8%
+of covering sets (3000-sample), unconditionally, with strict cushion 1/8 -- and the exact iff
+is now a theorem (LEM-021, both directions one-line; verified 0 violations / 300k):
+- **EVEN FREE PASS:** 2^a*odd*odd mod 16 lands in {2,6,10,14} u {4,12} u {8} -- distance >= 2,
+  and 14*2 = 28 > 16: every even runner clears EVERY odd/16 automatically. The free pass needs
+  2^k < 28: depth 4 is the LAST such layer (depth-5 failure verified) -- the knife-edge
+  calibration (16 < 28 < 32) one more time.
+- **THE IFF:** exists odd m with S lonely at m/16 <=> (no v = 0 mod 16) AND (odd speeds occupy
+  <= 3 of the four unit +-classes {+-1,+-3,+-5,+-7} mod 16). Proof: inversion permutes the four
+  classes; a missed class's multiplier puts every odd residue at distance >= 3; conversely all
+  four occupied kills every odd m via rm = +-1, and 16 | v kills everything.
+- **THE BLIND FAMILY, EXACT:** [16 | some v: deep 2-divisibility, climbs the tower where the
+  free pass is gone] u [odd speeds SPREAD across all four classes: a domination-type demand at
+  modulus 16, feeding THM-674/burden]. Beyond depth 4 the parity road merges back into the
+  band/domination/burden apparatus -- every road in this problem merges into the one wall.
+
+LEM-021 joins the dispatch family (1/13 detuned, 8/17 common-residue, 1/2 all-odd, now 1/8
+depth-4) -- each an unconditional carve with strict cushion, each leaving the calibrated core.
+
+Files: LEM-021 (canon); lrc14_depth4_dispatch_macmini_S65cont12.{py,out}.
 
 ## opus-2026-07-09-S196 -- FINSET BRIDGE for the AP step (LRCFreimanAPBridge.finset_min_burden_isAP, kernel-pure): |s|>=5 & |restrictedSum s|=2|s|-3 => s is LITERALLY an AP {c+k*d : 0<=k<|s|}, d>0. The indexed S195 result now citable at the Finset level.
 
