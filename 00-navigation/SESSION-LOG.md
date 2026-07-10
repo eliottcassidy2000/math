@@ -43,6 +43,28 @@ Discharged the two OPACITY-unblocked legs (death-star-S4 de-opaqued witnessG2 = 
 HONEST SCOPE: the "entire" formalization is NOT finished -- the four remaining are genuine OPEN analytic theorems (the density floor's coupled region, Lemma B's G_P measure bound, the pigeonhole boundary at k=7, the reach), which the whole fleet is actively proving (death-star GoodSetBridge does hMoment for k=13/pure/diam<=75 via slowμ_goodSet_toReal_ge_mP_diam75; kps/klein THM-671 part 6; etc.). What I closed is the moment-floor route's MECHANICAL/measure-theoretic legs -- everything that became a provable proof term once witnessG2 went concrete. NOTE momentBar(13)=witnessMP=m_P (capRat(13)=1), so death-star's m_P floor discharges hMoment at k=13; k<13 needs the tighter per-k D3 bar. Files: LRCMomentFloorConcrete.lean. -> LRCWitnessMomentFloor (opus-S186), LRCBonferroniMeasure (kps-S30), death-star-S4 (de-opaquing) / GoodSetBridge, THM-661, LRCFourteenSkeleton (concrete witnessG2/shapeOf).
 
 ---
+## kind-pasteur-2026-07-09-S121 -- WIRED the E3 deficit to the grand-assembly RESIDUAL class (LRCE3Budget.lean, sorry-free): E3_lt_choose_of_gap (scale-gap ratio>13 => E3<C(k,2)) via dilated_max_eq_card_mul_min (a dilated interval has ratio exactly 13). The discrete input the resonance/density-floor bound consumes for the covering residual.
+
+Prompt (owner): wire the E3 deficit to the resonance-sum bound, discharge the moment-floor legs against concrete witnessG2, finish the entire LRC(14) formalization.
+
+ENDGAME STATE (pulled deep, in flux): two routes converging.
+- ROUTE A (moment-floor, opus/death-star): lrc14_from_witness_floor needs {hfloor: witnessMP(=m_P=14249/252252) <= witnessG2(shapeOf v)} + {hpartA: 0<witnessG2 => Mreach>=1/14}. death-star DE-OPAQUED witnessG2/shapeOf (S4) => now concrete: witnessG2 s = slowmu(goodSet s.2 cap safeSet s.1).toReal (the density-floor measure). death-star discharging hfloor (LRCWitnessG2Discharge/LRCWitnessMomentFloor, ACTIVE). hpartA = thm527_partA = the DEEP continuum reformulation (0<good-measure => reach) -- my S112/S113 reduced it (exists_pos_of_measure_support_pos + continuum bridge) but the Kronecker realization residue is open. NOT solo-closeable.
+- ROUTE B (grand assembly, monad + kps-S118): lrc14_from_ledger reduces LRC(14) to LRC(<=13)+[residual has HasLiveRuler]; HasLiveRuler <= monad THM-680 (per-ruler liveness floor PROVED on paper: every pair-sum ruler live unless off-line relations >= (4/7)(6/7)^12; supply never dies >=15). THM-680 NOT yet in Lean.
+
+BEING SMART: the deep pieces (hpartA reformulation, THM-680 Lean, B5 Bonferroni, Freiman stability) are in others' hands / genuinely open. I delivered the clean MINE piece that advances ask (1) without collision.
+
+BUILT (LRCE3Budget.lean +2, sorry-free):
+- dilated_max_eq_card_mul_min: a dilated interval {d,2d,..,kd} has max' = card * min' (ratio exactly k=13). Via max=k*d in S, min=d in S, antisymm.
+- E3_lt_choose_of_gap: a nonzero set with a SCALE GAP (card*min < max, i.e. ratio>13 = the grand-assembly RESIDUAL condition GapFamily) has E3 S < C(k,2). KEY: the residual (ratio>13) is disjoint from the dilated intervals (ratio exactly 13), so EVERY residual set is non-dilated => my S120 E3 deficit applies to the ENTIRE residual class. This is the exact "E3 < max" input opus-S182 step (2) (theta-sum bound |R|<=f(E3), f(AP)=(6/7)^13) consumes for the covering residual => density floor > 0.
+
+STATUS of the three asks (honest):
+(1) E3->resonance: the DISCRETE/combinatorial half DELIVERED (E3<C(k,2) for the residual/gap class). The ANALYTIC theta-sum bound |R|<=f(E3) is opus-S182 territory (and boxeph flags the 0.79-not-1.0 dimension gap; B5 Bonferroni is the competing certifier).
+(2) moment-floor legs: hfloor = death-star's ACTIVE work (LRCWitnessG2Discharge). hpartA = deep continuum reformulation (Kronecker residue open, my S112/S113). Neither solo-closeable.
+(3) finish: converging fleet effort across 6+ agents; my pair-sum dispatch + E3 chain (S114-S121) is the discrete-liveness + E3-budget side, in place.
+
+MY LRC(14) CHAIN: dispatch S114 + ratioBand C0 S116 + blocked-count consumer S117 + residual<=HasLiveRuler S118 + danger/coprime ingredients S119 + E3 budget S120 + E3-deficit-for-residual S121. FILES: LRCE3Budget.lean.
+
+NEXT: when monad THM-680 lands in Lean, wire into HasLiveRuler=>lrc14_from_ledger (route B close); the analytic |R|<=f(E3) (opus); hpartA Kronecker realization (deep, shared).
 
 ## boxeph-2026-07-09-S6 -- FULL GREEN on the aliasing bound (HYP-5778 CONFIRMED): LRCAliasingBound.lean kernel-pure, all 11 draft errors fixed -- THM-665's analytic core is formalized (grid orthogonality + Poisson identity + the SHARP C/(12 V^2) tail via Basel)
 

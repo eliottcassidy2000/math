@@ -40,5 +40,46 @@ theorem dilated_of_schurCount_eq_choose (S : Finset ℕ) (h0 : 0 ∉ S) (hne : S
     (hmax : E3 S = S.card.choose 2) : DilatedInterval S :=
   (schurCount_eq_choose_iff_dilated S h0 hne).mp hmax
 
+/-- **A dilated interval has `max = card · min`.**  `{d,2d,…,kd}` has minimum `d`, maximum `kd`, so
+`max' = k·min'` — its speed ratio is exactly `k` (`= 13` at `k = 13`). -/
+theorem dilated_max_eq_card_mul_min (S : Finset ℕ) (hne : S.Nonempty) (h : DilatedInterval S) :
+    S.max' hne = S.card * S.min' hne := by
+  obtain ⟨d, hd, hSeq⟩ := h
+  have hkpos : 0 < S.card := hne.card_pos
+  have hdmem : d ∈ S := by
+    have : d ∈ (Finset.Icc 1 S.card).image (fun x => x * d) := by
+      rw [Finset.mem_image]; exact ⟨1, by rw [Finset.mem_Icc]; omega, by ring⟩
+    rwa [← hSeq] at this
+  have hkdmem : S.card * d ∈ S := by
+    have : S.card * d ∈ (Finset.Icc 1 S.card).image (fun x => x * d) := by
+      rw [Finset.mem_image]; exact ⟨S.card, by rw [Finset.mem_Icc]; omega, by ring⟩
+    rwa [← hSeq] at this
+  have hmin : S.min' hne = d := by
+    refine le_antisymm (Finset.min'_le _ _ hdmem) (Finset.le_min' _ _ _ ?_)
+    intro x hx
+    rw [hSeq, Finset.mem_image] at hx
+    obtain ⟨j, hj, rfl⟩ := hx
+    rw [Finset.mem_Icc] at hj
+    exact Nat.le_mul_of_pos_left d (by omega)
+  have hmax : S.max' hne = S.card * d := by
+    refine le_antisymm (Finset.max'_le _ _ _ ?_) (Finset.le_max' _ _ hkdmem)
+    intro x hx
+    rw [hSeq, Finset.mem_image] at hx
+    obtain ⟨j, hj, rfl⟩ := hx
+    rw [Finset.mem_Icc] at hj
+    exact Nat.mul_le_mul_right d hj.2
+  rw [hmax, hmin]
+
+/-- **The E3 deficit for the scale-gap / residual class (wiring to the resonance bound).**  A
+nonzero-speed set with a scale gap `card · min < max` (speed ratio `> 13` at `card = 13`, the grand
+assembly's residual condition) is NOT a dilated interval, so it has `E3 S < C(k,2)` — the strict Schur
+deficit off the AP extremum.  This is the exact `E3 < max` input the theta-sum / density-floor bound
+(opus-S182 step (2)) consumes for the covering residual. -/
+theorem E3_lt_choose_of_gap (S : Finset ℕ) (h0 : 0 ∉ S) (hne : S.Nonempty)
+    (hgap : S.card * S.min' hne < S.max' hne) : E3 S < S.card.choose 2 := by
+  refine schurCount_lt_choose_of_not_dilated S h0 hne (fun hdil => ?_)
+  rw [dilated_max_eq_card_mul_min S hne hdil] at hgap
+  exact absurd hgap (lt_irrefl _)
+
 end LRC14Ledger
 end LonelyRunner
