@@ -1,0 +1,13 @@
+q=  149: IDENTITY |A(psi) - (1-2b)conj(chat)| worst = 1.53e-15  (1-2beta = -0.7297)
+        true |T3| = 0.02539   vs CS bounds: parseval 0.042, ACZ-l4 0.079, A-iter 0.160   [main/(C(13,3)) = 0.000471]
+        reduced 1-var: |signed| = 0.02228  vs  l1 = 0.1169  (cancellation x5.2)
+q=  251: IDENTITY |A(psi) - (1-2b)conj(chat)| worst = 2.12e-15  (1-2beta = -0.7280)
+        true |T3| = 0.02545   vs CS bounds: parseval 0.042, ACZ-l4 0.076, A-iter 0.186   [main/(C(13,3)) = 0.000471]
+        reduced 1-var: |signed| = 0.02150  vs  l1 = 0.1175  (cancellation x5.5)
+q=  401: IDENTITY |A(psi) - (1-2b)conj(chat)| worst = 5.02e-15  (1-2beta = -0.7200)
+        true |T3| = 0.02809   vs CS bounds: parseval 0.042, ACZ-l4 0.080, A-iter 0.213   [main/(C(13,3)) = 0.000471]
+        reduced 1-var: |signed| = 0.02540  vs  l1 = 0.1204  (cancellation x4.7)
+
+VERDICT: identity EXACT; every absolute-CS per-triple bound is constant-or-growing
+in q and exceeds main/C(13,3) by orders -- the t>=3 closure REQUIRES the sign
+structure; the identity reduces it to ONE signed variable (the honest residue).
