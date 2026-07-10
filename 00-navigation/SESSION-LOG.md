@@ -9,6 +9,18 @@ TOOLING MAP (all names verified in the package cache): hasSum_zeta_two (ZetaValu
 HONEST STATUS: first build of my draft surfaced ~11 errors (exp-rewriting in the dvd case, tsum interchange/reindex lemma names, tsum_sub) -- fixable but needing 2-3 more build cycles than this session had. Per MISTAKE-131 discipline the draft is parked as LRCAliasingBound.lean.draft OUTSIDE the build tree (fleet build stays green; grid_char_sum/grid_aliasing had sorryAx in the audit -- NOT claimed). Claiming partial: the decomposition + map are the session's real product; the Lean is one dedicated low-churn session from green, with the error list pre-mapped in HYP-5778.
 
 HANDOFF: anyone taking a quiet Lean window -- start from the draft + HYP-5778's error map; fix order: dvd-case exp rewrite (draft:63-96), Summable.tsum_finsetSum name (:149), injective reindex (:163, try tsum_eq_tsum_of_ne_zero_bij), tsum_sub (:193); then the integer-Basel assembly via the three mapped lemmas. FILES: LRCAliasingBound.lean.draft; HYP-5778 update; log.
+## opus-2026-07-09-S188 -- FORMALIZED the Freiman descent-burden LOWER BOUND (THM-675 (ii), floor of the burden<=12 finite check): |A+^A| >= 2|A|-3, burden>=11 for 7-sets (LRCFreimanBurden.lean, kernel-pure, root-wired)
+
+Prompt (owner): formalize the burden <=12 finite check.
+
+FORMALIZED the FLOOR of the finite check (LRCFreimanBurden.lean, built first-fix, kernel-pure [propext,Classical.choice,Quot.sound], root-wired):
+- restrictedSum s := {x+y : x<y in s} (the descent-burden support).
+- restrictedSum_card_ge : 2 <= |s| => 2*|s|-3 <= |restrictedSum s| -- the Freiman restricted-sumset lower bound, general k, via the classical increasing-chain argument: with m=min, M=max, the (|s|-1) sums {m+y : y!=m} lie <= m+M and the (|s|-2) sums {x+M : m<x<M} lie > m+M => two DISJOINT chains in the sumset => 2|s|-3 distinct sums.
+- burden_ge_eleven : |s|=7 => 11 <= burden. = THM-675 (ii)'s floor.
+
+This is the LOWER half of the burden check (burden>=11, rigorous+reusable). The near-AP STABILITY half (burden<=12 => opus-S187's 5-shape finite family; burden=13 => 2-D GAPs route through the density floor) is the harder equality/near-equality characterization -- verified computationally (S187), not yet formalized.
+
+CONVERGENCE (pulled): death-star-S4 DE-OPAQUED witnessG2/shapeOf in the skeleton (all downstream green) + LRCWitnessG2Discharge -- exactly the coordinated concretization I flagged in S186 (cont.2) as needed to discharge the moment-floor legs. So now my S186 lrc14_from_momentfloor_nodes legs hbonf/hB/hsmall/hsize CAN be discharged (were opacity-blocked). Two of my threads (S186 moment floor, S188 Freiman burden) now both feed the live endgame. NEXT: formalize the burden-11 equality (=> AP) and burden-12 near-equality (=> the 4 shapes); discharge the moment-floor legs against death-star's concrete witnessG2. Files: LRCFreimanBurden.lean. -> THM-675 (ii), THM-671, opus-S187/S186, HYP-5682, death-star-S4 (de-opaquing).
 
 ---
 ## klein-2026-07-09-S214 -- THE D_m SHARPENING (THM-677): exact harmonic identity + L2-shift-average clears the needed bound 3.2-3.7x (tight to truth) + the PARSEVAL-BERNSTEIN assembly closes a-priori at V >~ 5000 MODULO one one-sided pair-correlation count (PC) -- the most tractable form the tau-line node has ever taken; per-cell DK and plain ET honestly refuted
