@@ -64,6 +64,20 @@ _momentfloor_nodes remain untouched (true-but-vacuous statements; flagged in con
 work should target the repaired assembly.
 
 Files: 04-computation/lean/TournamentH7/TournamentH7/LRCWitnessFloorRepair.lean (+ root).
+## death-star-2026-07-09-S13 -- THE C WALL IS BREACHED: LEM-022's Fourier completion STAGE A in Lean (LRCFourierCompletion.lean, kernel-pure) -- Jordan packaged + the factoring ||exp(i theta) - 1|| = 2|sin(theta/2)| + THE INTERVAL EXPONENTIAL-SUM BOUND ||Sum exp|| <= q/(2d)
+
+Prompt (owner): work to finish the LRC 14 proof formalization.
+
+BUILT (LRCFourierCompletion.lean, 3 theorems, all kernel-pure [propext, Classical.choice, Quot.sound], 8475 jobs; the first C-analysis file in the death-star chain):
+- **two_mul_le_sin_pi_mul**: 2t <= sin(pi t) on [0, 1/2] -- Jordan's Real.mul_le_sin packaged at the unit scale (the exact form the cdist witness supplies).
+- **norm_exp_I_sub_one**: ||exp(i theta) - 1|| = 2|sin(theta/2)| -- the factoring exp(i theta) - 1 = E(E - E') with E = exp(i theta/2), E E' = 1, and 2 I sin(theta/2) = E - E' from Complex.sin's definition.
+- **norm_expSum_le** (STAGE A's theorem): ||Sum_{r < len} exp(2 pi i h(lo + r)/q)|| <= q/(2d) under the sine witness 2(d/q) <= |sin(pi h/q)| -- unit-constant factoring, geom_sum_eq, ||z^len - 1|| <= 2, and the denominator floor ||z - 1|| >= 4d/q.
+
+TOOLCHAIN LOG (this Mathlib): Complex.abs is GONE -- use norms (Complex.norm_exp, Complex.norm_I, Complex.norm_real -> Real.norm_eq_abs chain); div_le_div is now div_le_div₀; geom_sum_eq is root-namespace (Algebra.Field.GeomSum); field_simp can close goals ring expects to see (remove trailing rings); the E/E' set-pattern with exp_add beats nth_rewrite games for exponential factoring.
+
+STATE OF LEM-022 IN LEAN (the t2 hyperbola lemma, klein-S226 handoff (a)): [separation/box count S10 DONE] + [dyadic assembly S12 DONE, constant 20 < paper 24] + [Fourier Stage A S13 DONE] + [STAGE B remaining: self-derived orthogonality Sum_{x<q} exp(2 pi i hx/q) = q 1{q|h} (same geometric machinery, no dft dependency), the completion identity C_w = b^2/q + (1/q)Sum_{h != 0} B-hat(h) conj(B-hat(w^{-1}h)) with the ZMod/cdist bridge (norm_expSum_le's d := cdist via two_mul_le_sin_pi_mul + 1-periodicity of |sin(pi .)|), and the P(w^{-1}) = P(w) substitution] => the fully formal per-twist t2 bound. Stage B is pure assembly of pieces that now ALL exist.
+
+FILES: LRCFourierCompletion.lean (+ manifest), HYP-5890 (Stage A delivered, Stage B designed in the claim). NEXT: Stage B assembly (one session; every ingredient built); then the formal t2 bound feeds klein's signed program and the q0-regime banks.
 
 ## opus-2026-07-09-S201 -- INVESTIGATED THM-665 window-shrinking to remove the census native_decide: THM-665 is ORTHOGONAL (its own theorem: a-priori route NEVER fires on covering clusters = the census case). The foundational-only variant ALREADY EXISTS (lrc14_grand_assembly_pure) at the cost of a bigger obligation. Axiom-verified. Honest negative + recommendation.
 
