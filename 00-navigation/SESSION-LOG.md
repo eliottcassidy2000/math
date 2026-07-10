@@ -1,3 +1,22 @@
+## opus-2026-07-10-S209 -- WIRED the d=2,3 DETUNED PEEL (LRCDissociatedAssembly.lean, kernel-pure, foundational-only): lrc14_grand_assembly_dissoc / lrc14_from_B5_dissoc reduce LRC(14) to MultiDetunedDispatch (THM-678 citation) + the DISSOCIATED residual. HONEST: THM-678 is NOT Lean-formalized -- it enters as a named citation (paper-proved), like LRC(<=13).
+
+Prompt (owner): wire THM-678 d=2,3 into the assembly.
+
+BLOCKER (honest): THM-678 (multi-detuned dispatch, d=2,3) is NOT formalized in Lean -- lonely14_of_detuned is d=1 only. So it cannot be wired as a lemma call (nothing to call). Transcribing THM-678 kernel-pure is a substantial analytic formalization (the counting argument + 2/3-coord branch construction), monad's theorem.
+
+DELIVERED the honest structural equivalent (LRCDissociatedAssembly.lean, kernel-pure [propext,Classical.choice,Quot.sound], root-wired, built): THM-678 enters as a NAMED CITATION hypothesis (it is PROVED elementarily on paper, status PROVED), exactly like the LRC(<=13) citation:
+- nonMultCard v g = #coords not divisible by g (detuning level).
+- MultiDetunedDispatch : some g>=2 at level 2 or 3 => lonely (the THM-678 content).
+- ResidualObligationDissoc : ResidualObligationPrimitive clauses + no g>=2 at level 2 or 3 (dissociated: with primitivity + divisor-closed, every g>=2 then has >=4 non-multiples).
+- residualObligationPrimitive_of_dissoc : the peel (by_cases on detuned level 2/3 => hMD, else => hdissoc).
+- lrc14_grand_assembly_dissoc / lrc14_from_B5_dissoc : LRCUpTo13 + MultiDetunedDispatch + [dissoc residual / B5-on-dissoc] => LRC14Statement. Foundational axioms only.
+
+EFFECT: the S208 near-dilate minimizers (d=2,3 detuned, mu~0.0085) are handed to THM-678; the floor obligation shrinks to the DISSOCIATED residual, where mu is bounded away from 0 and decorrelates -> (6/7)^13 -- the well-behaved moment/Bonferroni regime. This makes the S208 recommendation concrete and is the sharpest hB5 (route floor work through lrc14_from_B5_dissoc).
+
+REMAINING: transcribe THM-678 (d=2,3) to Lean to discharge MultiDetunedDispatch (monad's theorem; the d=1 template lonely14_of_detuned + the counting dispatch). Files: LRCDissociatedAssembly.lean (+root), session log. -> opus-S208 (the d-detuned finding), monad THM-678, opus-S206 (primitive assembly), hB5, THM-661.
+
+---
+
 ## klein-2026-07-10-S241 -- THE 7-TORSION DICHOTOMY (THM-692, HYP-5930): THE SPREAD SLIVER DISSOLVED -- the COMPLETE two-scale dead-zone theorem: mu_inf(P,E) > 0 for EVERY class, no census residue; the wall on all two-/multi-scale slices is PROVED end to end. Plus an instructive in-session correction: the first draft's left-sliver claim was FALSE (class-0 wrap rescue), caught by my own assertion before canon; the repaired one-sided-existential form verified (180 pairs, zero violations)
 
 Prompt (owner): run the spread-sliver supremum.
