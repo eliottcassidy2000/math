@@ -102,6 +102,24 @@ FILES: THM-675; lrc14_signed_box_klein_S212.py(+out), lrc14_branch_exact_check_k
 
 NEXT: (a) the generic-branch a-priori deficit bound -- interference-aware; try exact S_d evaluation via CRT/lattice geometry per (S,q) (bypass expansions); (b) wire the composed dichotomy: state the longest-AP threshold splitting modular-vs-LEM-012 jurisdictions precisely and check the middle band; (c) Lean LRCDiscreteBonferroni unchanged (add B7 -- same histogram); (d) fleet: the coherence law now has FOUR independent confirmations -- someone should canonize 'no order-blind functional decides LRC(14) objects' as a standing guard-rail.
 
+## boxeph-2026-07-09-S4 -- THM-667 LEMMA A FORMALIZED (LRCLadderFattening.lean, kernel-pure, first-try build): the LRC(<=13) citation => an explicit 1/(91B)-interval of Lonely-14 times for EVERY <=12-speed band -- the adaptive ladder's G_T floor is now Lean; + HYP-5760 collision flag (opus-S186)
+
+Prompt (owner): keep working to complete the LRC(14) formalization.
+
+DELIVERED: 04-computation/lean/TournamentH7/TournamentH7/LRCLadderFattening.lean -- two theorems, BUILT + AXIOM-AUDITED (both [propext, Classical.choice, Quot.sound]; no sorry, no native_decide; 8477 jobs, first-try):
+- lonely_band_transport: Lipschitz transport of a Lonely-n band -- every residue |w t - m| moves at rate <= |w| <= B, so clearance degrades to 1/n - B|t - t0| (pure triangle inequality).
+- safe_interval_of_citation: the LRCUpTo13 citation witness, fattened by 1/(182B) each side (1/13 - 1/182 = 1/14 EXACTLY), gives an explicit closed interval of length 1/(91B) on which every member of ANY band of k <= 12 nonzero speeds bounded by B clears the 1/14 band => THM-667 Lemma A's meas(G_T) >= 1/(91 maxT) by measure monotonicity. This is klein-S208's NEXT (c) ('Lemma A is 3 lines given the citation') executed.
+
+GREP-BEFORE-WRITE (MISTAKE-131 discipline): LRCIntervalTransport.lonely_interval_of_margin has the same transport MECHANISM typed at repeat 13-tuples (the coarse-induction corner); this file states the BAND-LEVEL version the ladder consumes (arbitrary stratum T, every rung) -- cross-referenced in the header, additive not duplicative.
+
+HONEST BUILD NOTE: the leaf target built + audited twice; wired to root (import line in TournamentH7.lean); the full root relink was in progress at my 10-min timeout -- import-only change of a verified module, no downstream risk; next builder confirms.
+
+COLLISION FLAG: HYP-5760 is double-claimed -- mine (S3 checkpoint, wire-priority) vs opus-S186's entry. Same protocol as LEM-014/THM-666/667/5758: opus please renumber (5766+ free); zero attachment to digits.
+
+REMAINING LEAN SURFACE (for the fleet, updated): (W) witnessG2 de-opaquing (low-concurrency window); THM-665's Fourier/BV aliasing bound (the heavy item); THM-666 clamp port + phi-interval LRCDriftEmbed generalization (monad NEXT c); THM-667 Lemma B (rational arithmetic, decide-shaped); the D_m comb-discrepancy statement (HYP-5760 mine) is one Finset.count statement away from decidable per-instance certificates. FILES: LRCLadderFattening.lean (+root wiring); log.
+
+---
+
 ## mac-mini-2026-07-09-S65 (cont. 3) -- THM-674 PROVED: the DOMINATION THEOREM for descent blocking (blocked mod prime k <=> T.D = G); the k=29 CYCLE-DOMINATION statement proved as Corollary 2; tight per-cycle bounds; the dodger ladder climbs one band per cap (caught at 49 = 7^2)
 
 Prompt (owner): prove the k>=29 cycle-domination statement; extend the session.
