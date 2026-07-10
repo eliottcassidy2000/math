@@ -76,6 +76,20 @@ hfloor is one finite interval-measure engine (serves both hsmall(b) and hB) + th
 citation. No opaque symbols block anything.
 
 Files: MISTAKE-134 (canon); LRCMomentFloorDischarge.lean removed + root import dropped.
+## death-star-2026-07-09-S10 -- LEM-022's COMBINATORIAL HEART IN LEAN (LRCHyperbolaBox.lean, kernel-pure): the circle-metric API on ZMod q + the multiplicative-separation pigeonhole + THE SEPARATION COUNT (N-1)*P <= 4KM, division-free, no w-nondegeneracy needed
+
+Prompt (owner): work the remaining steps for a long session, pushing and pulling often during computations/builds.
+
+EXECUTED the Lean half of my own S9 offer. BUILT (LRCHyperbolaBox.lean, 10 lemmas + the theorem, all kernel-pure; cdist_add_le even axiom-minimal [propext, Quot.sound]; builds 8475 jobs; 4 fix rounds, each pushed/pulled around):
+- **The circle-metric API on ZMod q**: cdist z = min(val, q - val); cdist_neg (via the NeZero-ON-THE-ELEMENT instance that ZMod.val_neg_of_ne_zero wants -- toolchain gotcha); **cdist_add_le** (subadditivity: ZMod.val_add + two-case mod split + omega); the signed representative sgnRep : ZMod q -> Z with natAbs_sgnRep (|sgnRep| = cdist), sgnRep_cast (a genuine rep), sgnRep_injective; **cdist_le_natAbs** (the circle metric is bounded by ANY integer representative -- the bridge that lets separation transfer from Z-reps back to ZMod).
+- **card_mulsep_in_Icc** (the multiplicative-separation pigeonhole): T in [a,b] with pairwise S <= |x-y|*D => (|T|-1)*S <= (b-a)*D. Division appears ONLY inside the fiber map t -> ((t-a)*D)/S; same-fiber points force |x-y|*D < S via the two ediv/emod decompositions + omega; the bound assembles multiplicatively via Int.ediv_mul_le. Third instance of the clamped-fiber pigeonhole pattern (exists_free_piece S7, dvd_Ioc_card_le S6) -- the pattern is now a house style.
+- **hyperbola_box_count** (LEM-022 Step 2, THE theorem): (forall h != 0, P <= cdist h * cdist(w h)) => (#{k != 0 : cdist k <= K, cdist(w k) <= M} - 1) * P <= 4*K*M. Signed reps inject into Icc(-K)K; pairwise separation P <= |Delta|*2M falls out of subadditivity applied to the difference (cdist(w delta) <= cdist(w k1) + cdist(-(w k2)) <= 2M) + cdist_le_natAbs on the rep difference. EDGE HONESTY: P=0 and M=0 branches handled outright -- M=0 makes the box EMPTY via the P-floor itself (k in box => cdist(wk)=0 => P <= cdist k * 0 = 0, contradiction), so NO w != 0 or unit hypothesis appears ANYWHERE: the count holds for arbitrary w including degenerate.
+
+TOOLCHAIN (for the next builder): (a) rw [<- Int.cast_natCast] beats exact_mod_cast when the |n|-vs-natAbs normal forms fight; (b) positivity cannot prove 0 < 2M bare -- branch on M, do not add hypotheses the math does not need; (c) omega now handles Int.natAbs natively (hneg : -n = natAbs n by omega).
+
+REMAINING LEM-022 LEAN SURFACE (honest): the Fourier completion |C_w - b^2/q| <= (q/4) Sum 1/(|k||wk|) (finite AddChar orthogonality over ZMod q + the sine bound |B-hat(h)| <= q/(2|h|)) and the dyadic assembly consuming hyperbola_box_count per class. Both bounded; the completion is the C-heavy piece. The box count delivered here is the input BOTH consume and is independently the 'congruence-in-box / hyperbola count' klein-S226 called classical.
+
+FILES: LRCHyperbolaBox.lean (+ manifest), HYP-5870 (claim -> DELIVERED). NEXT: (a) the Fourier completion (AddChar; anyone C-comfortable); (b) the dyadic assembly wrapper; (c) klein's (b) CS-bootstrap remains the math-side named step; (d) P(w)-detector wiring into the residual interface (kps).
 
 ## boxeph-2026-07-09-S11 -- THE FINAL-RUNG MATH (HYP-5853): doubling chains are RLL SHIFT SETS -- exact nested measures, the W0 >= 11 outright-lonely theorem, and the drop-in Bonferroni upgrade (+0.0714 per doubling pair in EVERY existing budget)
 
