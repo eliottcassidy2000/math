@@ -55,4 +55,26 @@ theorem cell_moment_const (A : ℝ) (i : ℕ) (a b : ℝ) :
     (∫ _x in a..b, (A) ^ i) = (b - a) * A ^ i := by
   rw [intervalIntegral.integral_const, smul_eq_mul]
 
+open MeasureTheory in
+/-- **The Farey cell decomposition = the Farey moment identity.** Given a partition
+`0 = t₀ < t₁ < ⋯ < t_N = 1` of `[0,1]` on each cell of which the uncovered measure `W` is affine
+(`W(x) = Aⱼ + Bⱼ·x` on `[tⱼ, tⱼ₊₁]`, `Bⱼ ≠ 0`), the degree-`i` moment `∫₀¹ Wⁱ` is the sum of the exact
+per-cell contributions (`cell_moment`). Combined with `momentLP_from_coeffs` (opus-S192), this closes the
+NUMERIC content of the moment route; the ONLY input still tied to the concrete `W` is the per-cell
+affineness `haffine` (which the Farey-breakpoint / three-distance structure supplies). -/
+theorem farey_moment_decomp (W : ℝ → ℝ) (i N : ℕ) (t : ℕ → ℝ) (A B : ℕ → ℝ)
+    (ht0 : t 0 = 0) (htN : t N = 1) (hB : ∀ j, j < N → B j ≠ 0)
+    (haffine : ∀ j, j < N → ∀ x ∈ Set.uIcc (t j) (t (j + 1)), W x = A j + B j * x)
+    (hint : ∀ j, j < N → IntervalIntegrable (fun x => W x ^ i) volume (t j) (t (j + 1))) :
+    (∫ x in (0 : ℝ)..1, W x ^ i)
+      = ∑ j ∈ Finset.range N,
+          ((A j + B j * t (j + 1)) ^ (i + 1) - (A j + B j * t j) ^ (i + 1)) / (B j * ((i : ℝ) + 1)) := by
+  have hbound : (∫ x in (0 : ℝ)..1, W x ^ i) = ∫ x in (t 0)..(t N), W x ^ i := by rw [ht0, htN]
+  rw [hbound, ← intervalIntegral.sum_integral_adjacent_intervals hint]
+  refine Finset.sum_congr rfl (fun j hj => ?_)
+  rw [Finset.mem_range] at hj
+  rw [intervalIntegral.integral_congr (g := fun x => (A j + B j * x) ^ i)
+      (fun x hx => by rw [haffine j hj x hx])]
+  exact cell_moment (A j) (B j) (hB j hj) i (t j) (t (j + 1))
+
 end LRCFareyCell

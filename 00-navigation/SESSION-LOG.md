@@ -9,6 +9,19 @@ Prompt (owner): run the unclassified tail; work creatively; explore past repo to
 FILES: lrc14_tail_and_parity_klein_S222.out; HYP-5825; log; memory.
 
 NEXT: (a) the wobble few-units bound = the last possibly-non-signed residual anywhere; (b) the parity law to Lean (cheap, useful validation + the pair-structure for certificate search halving); (c) the modular asymptotic: signed methods or acceptance that certificates + enumeration are the road (the fleet should decide the split consciously); (d) for the fleet's Redei/tournament mainline: the transplant direction REVERSES too -- the modular pairing structure may inform the OCF parity work (the founding topic).
+## opus-2026-07-09-S194 -- FORMALIZED the FAREY CELL DECOMPOSITION (farey_moment_decomp): partition + per-cell affineness => integral_0^1 W^i = Sum_cells (exact cell_moment); completes the GENERAL/numeric moment route; deep-considered the fleet + reroute assessment
+
+Prompt (owner): prove the cell decomposition next; pull frequently; reroute as needed to the toughest pieces.
+
+PULLED + DEEP-CONSIDERED: the toughest pieces are being closed by the fleet with momentum -- mac-mini's realization RESIDUAL-CLASS AUDIT found the intersection-of-complements EMPTY over 849 covering sets (I3 composed-grid + I6 certificate battery EACH 100%; hpartA's open node "has no known inhabitant" => closing via FINITE DISPATCH); klein THM-673(A) in Lean reduced the realization to ONE transfer hypothesis ("formal frontier = math frontier"); monad THM-682 is the Freiman 3k-4 middle rung (my HYP-5682 territory, B>=32 proved modulo sliver, B>=33 conjectured). My formalized assets (LEM-015, LRCFreimanBurden, moment-LP) already feed these. So the cell decomposition (secondary moment route) is not the toughest -- but it is the primary ask, achievable, and I own it.
+
+DELIVERED: farey_moment_decomp (LRCFareyCellMoment.lean, kernel-pure [propext,Classical.choice,Quot.sound], root-wired, builds): given a partition 0=t0<...<tN=1 with W affine on each cell (W(x)=A_j+B_j x, B_j!=0) and per-cell interval-integrability, integral_0^1 W^i = Sum_{j<N} ((A_j+B_j t(j+1))^(i+1) - (A_j+B_j t j)^(i+1))/(B_j(i+1)). Proof: Mathlib's intervalIntegral.sum_integral_adjacent_intervals (partition => sum of adjacent integrals) + integral_congr (W=affine per cell) + cell_moment (S193). Subtlety fixed: rw [<-htN] over-rewrote every '1' incl. (i+1); used a separate hbound step to touch only the integral bounds.
+
+=> the GENERAL/NUMERIC moment route is now FULLY formalized: momentLP_from_coeffs (S192, feasible poly => Sum c_i integral W^i <= mu(GOOD)) + cell_moment (S193, per-cell exact) + farey_moment_decomp (S194, the decomposition). The ONLY input still tied to concrete W is the per-cell affineness haffine (the Farey-breakpoint/three-distance structure), carried as a hypothesis.
+
+REROUTE ASSESSMENT (honest): the toughest pieces (realization finite-dispatch, Freiman rung) are crowded and closing via other agents; my assets feed them. The identified next Freiman piece in my territory is the AP step (burden=2k-3 => AP, S189 blueprint: row-bijection + reflection, orderEmbOfFin) -- concrete but hard; I flag it rather than risk a half-done attempt after delivering the clean cell decomposition. Files: LRCFareyCellMoment.lean (farey_moment_decomp added). -> opus-S192/S193/S191, THM-661, LRCD3FloorCert, mac-mini audit, klein THM-673A, monad THM-682.
+
+---
 
 ## mac-mini-2026-07-09-S65 (cont. 8) -- THE REALIZATION RESIDUAL-CLASS AUDIT: the intersection-of-complements is EMPTY over 849 covering sets (all scale bands + mid-band-loaded + single-chain + adversarial) -- BOTH heavy instruments fire on 100.0% each; hpartA's open node has NO known inhabitant
 
