@@ -1,0 +1,8 @@
+covering 13-subsets of [1,22], gcd1: 31471
+  min=1 (ratio>13, CENSUS-BRANCH domain): 14002
+  min>=2 (ratio<=13, spread13 handles):   17469
+  min=1 sets with a witness (q<=60): 14002 / 14002; NO witness: 0
+  witness denominator distribution (q: count): {15: 1379, 16: 1515, 17: 3820, 18: 560, 19: 2316, 20: 882, 21: 1508, 22: 719, 23: 1212, 24: 10, 25: 79, 26: 2}
+  total distinct (p,q) with q<=28 that work for SOME min1 set: 110
+  GREEDY witness cover of all 14002 min1 sets: 6 witnesses
+  first 15 chosen (p,q,newly-covered): [((12, 25), 8361), ((9, 26), 3649), ((7, 27), 1408), ((11, 28), 456), ((4, 23), 96), ((11, 26), 32)]

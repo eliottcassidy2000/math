@@ -1,0 +1,33 @@
+=== the 6 witnesses: far-set F(w) and danger-set D(w) over [1,22] ===
+ 12/25: |F|=21  D(danger)=[2]
+ 9/26: |F|=21  D(danger)=[3]
+ 7/27: |F|=21  D(danger)=[4]
+ 11/28: |F|=21  D(danger)=[5]
+ 4/23: |F|=20  D(danger)=[6, 17]
+ 11/26: |F|=20  D(danger)=[7, 19]
+
+=== covering requirements: mults of q in [1,22] ===
+  q=2: multiples [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]
+  q=3: multiples [3, 6, 9, 12, 15, 18, 21]
+  q=4: multiples [4, 8, 12, 16, 20]
+  q=5: multiples [5, 10, 15, 20]
+  q=6: multiples [6, 12, 18]
+  q=7: multiples [7, 14, 21]
+  q=8: multiples [8, 16]
+  q=9: multiples [9, 18]
+  q=10: multiples [10, 20]
+  q=11: multiples [11, 22]
+  q=12: multiples [12]   <- FORCED (single)
+  q=13: multiples [13]   <- FORCED (single)
+  q=14: multiples [14]   <- FORCED (single)
+  FORCED elements (unique multiple): [12, 13, 14]
+
+=== covering min=1 sets far at NONE of the 6 witnesses: 0 (want 0) ===
+
+=== are the FORCED covering elements {13,14} + pairs inside each F(w)? ===
+ 12/25: 13in F=True, 14in F=True, forced-in-F=[12, 13, 14]
+ 9/26: 13in F=True, 14in F=True, forced-in-F=[12, 13, 14]
+ 7/27: 13in F=True, 14in F=True, forced-in-F=[12, 13, 14]
+ 11/28: 13in F=True, 14in F=True, forced-in-F=[12, 13, 14]
+ 4/23: 13in F=True, 14in F=True, forced-in-F=[12, 13, 14]
+ 11/26: 13in F=True, 14in F=True, forced-in-F=[12, 13, 14]
