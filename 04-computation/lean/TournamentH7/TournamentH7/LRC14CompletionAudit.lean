@@ -22,49 +22,45 @@ current tightest top theorem is `LonelyRunner.LRC14Grand.lrc14_from_B5`.
   compressed, distinct-|·|, some `|vᵢ| ≥ 23`, divisor-closed, not coarse-≤12-reducible) has a pair-sum
   ruler `q` with positive depth-5 discrete Bonferroni bound `0 < B5 v q`.
 
-The `#print axioms` below is the machine's verdict. It reads:
+The `#print axioms` below is the machine's verdict. As of **opus-S202 it reads**:
 
-    'lrc14_from_B5' depends on axioms:
-      [propext, Classical.choice, Quot.sound,                       -- Lean foundations (always allowed)
-       WindowData.winData22_complete._native.native_decide.ax_1_1,  -- the window-≤22 census (native_decide)
-       WindowData.winData22_ok._native.native_decide.ax_1_1]
+    'lrc14_from_B5' depends on axioms: [propext, Classical.choice, Quot.sound]
 
-with **NO `sorryAx`** and the two named obligations taken as HYPOTHESES, not axioms. So:
+— **Lean's foundational axioms ONLY**, with **NO `sorryAx`** and **NO `native_decide`**, and the two named
+obligations taken as HYPOTHESES, not axioms. So:
 
-> **LRC(14) is fully formalized and kernel-sound, sorry-free, modulo (i) the owner-sanctioned LRC(≤13)
-> citation and (ii) the single analytic obligation `hB5`.** Everything else — the q-witness sieve, the
-> five grand-assembly branches (non-covering ∣ ratio-≤13 ∣ dominant-peel ∣ window-≤22 ∣ repeated-|speeds|),
-> `M(AP) = 1/14` exact, the consumer chain `B5 > 0 ⟹ Mreach ≥ 1/14 ⟹ ∃ lonely` — is discharged.
+> **LRC(14) is fully formalized, kernel-sound, sorry-free, and FOUNDATIONAL-AXIOMS-ONLY, modulo (i) the
+> owner-sanctioned LRC(≤13) citation and (ii) the single analytic obligation `hB5`.** Everything else — the
+> q-witness sieve, the grand-assembly branches (non-covering ∣ ratio-≤13 ∣ dominant-peel ∣ window-≤22 ∣
+> repeated-|speeds| ∣ detuned ∣ coarse ∣ common-residue), `M(AP) = 1/14` exact, and the consumer chain
+> `B5 > 0 ⟹ Mreach ≥ 1/14 ⟹ ∃ lonely` — is discharged.
 
 `hB5` is the fleet's open ANALYTIC frontier (the residual-family liveness / signed diagonal-suppression
 gate — confirmed empirically over 849 covering sets but not yet proved a-priori; klein/monad/kps active).
 It is a genuine number-theoretic ingredient, NOT a formalization gap: no amount of Lean wiring closes it.
 
-The only trusted extra-foundational axioms are the two `native_decide` window-census facts
-(`winData22_ok`, `winData22_complete`).
+## How the last two axioms were removed (opus-S200 → S202)
 
-**Can they be replaced by kernel `decide` (removing `Lean.ofReduceBool`)? Empirically NO** (opus-S200,
-MISTAKE-134 — this corrects an over-optimistic "possible" claim in the S199 version of this note). The
-completeness fact ranges over `windowUniverse22 = sublistsLen 13 [1..22]`, i.e. **C(22,13) = 497 420**
-candidates; kernel `decide` must materialise all of them (~6.4M `Int` kernel terms — OOM territory) and
-run a covering check + a 31 471-row search per candidate. Measured: generating `sublistsLen 13 [1..15]`
-(C(15,13) = 105) alone takes ~10 s in the kernel, so the real 497 420-candidate census extrapolates to
-**>13 h for generation alone**, before any check — infeasible, and this is precisely why `native_decide`
-exists. (`winData22_ok`, 31 471 rows at ~18 ms/row ≈ 10 min of `decide` + a costlier kernel re-check, is
-borderline-feasible but pointless in isolation: removing it leaves `winData22_complete`'s axiom, so the
-foundational-only goal is unreachable regardless.) Removing these axioms needs a MATHEMATICAL proof of the
-census (every covering ≤ 22 tuple lonely, sans enumeration) — the fleet's analytic window-shrinking work
-(THM-665), not a `decide` swap. `native_decide` / `Lean.ofReduceBool` is the correct, standard, sound tool
-here (as throughout Mathlib for finite censuses).
+The window-≤22 branch used to rest on two `native_decide` census facts (`winData22_ok`,
+`winData22_complete`). Kernel `decide` on them is **infeasible** (MISTAKE-135: `winData22_complete` ranges
+over `C(22,13) = 497 420` candidates; measured >13 h just to generate the sublists, plus OOM). And THM-665
+does **not** shrink that census — its own Consequence 2 proves the a-priori/density-floor route never fires
+on covering clusters, which *is* the census case (opus-S201).
 
-**Foundational-axioms-only alternative (already exists):** `lrc14_grand_assembly_pure` proves
-`LRC14Statement` with axioms `[propext, Classical.choice, Quot.sound]` ONLY — no `native_decide` — by
-folding the `≤ 22` covering families into a LARGER residual obligation (`ResidualObligationPure`). So the
-tradeoff is explicit and resolved both ways: the census native_decide buys a SMALLER open surface
-(residual = `Vmax ≥ 23`), the pure variant buys foundational purity at a BIGGER open surface (residual =
-all covering families). Getting both requires a mathematical proof of the `≤ 22` covering census — see the
-opus-S201 reflection. THM-665 does NOT bridge this: it is the large-`V` density-floor regime, which its own
-theorem proves never fires on the covering case the census handles.
+The honest route was a **mathematical proof of the census** — delivered as **LEM-024** and formalized in
+`LRCWindow22Census.lean` (kernel-pure): after `spread13` peels `ratio ≤ 13`, the census's necessary domain
+is the `min = 1` covering ≤22 tuples, and *every* such tuple is far at one of **six** fixed witnesses
+`{12/25, 9/26, 7/27, 11/28, 4/23, 11/26}` — whose danger sets over `[1,22]` are the tiny
+`{2},{3},{4},{5},{6,17},{7,19}`. Failing all six forces `{1,2,3,4,5}` + one of `{6,17}` + one of `{7,19}`;
+covering forces `{12,13,14}` + one each of `{8,16},{9,18},{10,20},{11,22}` — **14 pairwise-distinct
+elements in a 13-set**, a contradiction. So one witness always works and
+`KernelGate.lonely_of_kernelWitness` finishes. No enumeration of tuples ever occurs; the only `decide`s are
+the 22 × 6 tiny per-speed `speedOK` facts.
+
+The 1-line assembly swap `hwindow22_closed cite` → `hwindowW_closed 22 cite hdistinct22_kernel`
+(`LRC14GrandAssembly.lean`, window branch) retired both axioms. `lrc14_grand_assembly_pure` (which bought
+foundational purity by *enlarging* the residual obligation) is now redundant as a purity route: the main
+`lrc14_grand_assembly` is foundational-only **and** keeps the smaller residual (`Vmax ≥ 23`).
 -/
 
 open LonelyRunner LonelyRunner.LRC14Grand LonelyRunner.LRC14

@@ -5,10 +5,25 @@ min=1 ≤22 tuples are far at one of the 6 witnesses) + **FORMALIZED KERNEL-PURE
 axioms `[propext, Classical.choice, Quot.sound]` — NO native_decide, NO sorry):
 `window22_min1_lonely` (the min=1 pigeonhole), `window22_lonely` (the FULL ≤22 covering census = min=1 ∪
 `spread13` for min≥2), and `hdistinct22_kernel` (a signature-exact drop-in for
-`WindowData.hdistinct22_from_data`). The last piece to remove the two `winData22` native_decide axioms
-from the LRC(14) top theorem is the 1-line assembly swap `hwindow22_closed cite` →
-`hwindowW_closed 22 cite hdistinct22_kernel` in `LRC14GrandAssembly.lean`. Cf. MISTAKE-135, opus-S200/S201
-(kernel `decide` on the raw census is infeasible; this pigeonhole is the honest route).
+`WindowData.hdistinct22_from_data`).
+
+**Attribution.** The SIX witnesses `{12/25, 9/26, 7/27, 11/28, 4/23, 11/26}` and the 14 002-tuple
+census-branch domain were found FIRST by **kps-S127** (greedy cover, 0 violations). opus-S202 independently
+re-derived them, then supplied what was missing: the **pigeonhole PROOF** (why six suffice — the
+14-forced-distinct-elements argument below) and the **kernel-pure Lean formalization**
+(`LRCWindow22Census.lean`). **kps-S127 also applied the assembly swap** (commit `3453ef3e6`), concurrently.
+
+**✅ LANDED.** The 1-line assembly swap `hwindow22_closed cite` →
+`hwindowW_closed 22 cite hdistinct22_kernel` (`LRC14GrandAssembly.lean`, window branch) is DONE, the full
+root build is green (8795 jobs), and `#print axioms` now certifies
+
+    'lrc14_from_B5'         depends on axioms: [propext, Classical.choice, Quot.sound]
+    'lrc14_grand_assembly'  depends on axioms: [propext, Classical.choice, Quot.sound]
+
+— i.e. **the two `winData22` native_decide axioms are GONE from the LRC(14) top theorem**, which is now
+FOUNDATIONAL-AXIOMS-ONLY (no `sorryAx`, no `Lean.ofReduceBool`), with only the LRC(≤13) citation and the
+single analytic obligation `hB5` as hypotheses. Cf. MISTAKE-135, opus-S200/S201 (kernel `decide` on the raw
+census is infeasible; THM-665 is orthogonal — this pigeonhole was the honest route, "option (c)").
 **Source:** opus-2026-07-09-S202.
 **Depends on:** the KernelGate bridge `lonely_of_kernelWitness` (far ⟹ Lonely), `LRC14.CoveringFamily`,
 `spread13_lonely` (the min≥2 companion).

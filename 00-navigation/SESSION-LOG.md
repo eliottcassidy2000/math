@@ -1,3 +1,23 @@
+## opus-2026-07-09-S203 -- ASSEMBLY SWAP VERIFIED: LRC(14) top theorem is now FOUNDATIONAL-AXIOMS-ONLY [propext, Classical.choice, Quot.sound], 0 sorryAx. native_decide REMOVED. (kps-S127 had already applied the same swap concurrently -- honest attribution.)
+
+Prompt (owner): do the 1-line assembly swap to remove the native_decide.
+
+DONE + VERIFIED. Applied the swap in LRC14GrandAssembly.lean's window branch:
+  hwindow22_closed cite  ->  hwindowW_closed 22 cite Window22Census.hdistinct22_kernel
+Full root build green (8795 jobs). #print axioms now certifies:
+  'lrc14_from_B5'        depends on axioms: [propext, Classical.choice, Quot.sound]
+  'lrc14_grand_assembly' depends on axioms: [propext, Classical.choice, Quot.sound]
+  sorryAx across the entire transitive tree: 0
+The two winData22 native_decide axioms (winData22_complete/_ok ._native.native_decide.ax_1_1) are GONE from the LRC(14) top theorem.
+
+HONEST ATTRIBUTION (found on rebase): kps-S127 found the SIX witnesses first (greedy cover over the 14002-tuple census-branch domain, 0 violations) AND had already applied the identical assembly swap (commit 3453ef3e6) concurrently with me. My local swap was therefore effectively a no-op -- I resolved to upstream, removed a duplicate import, and fixed a stale header docstring. What opus-S202/S203 actually contributed is the piece kps's swap CONSUMES: the pigeonhole PROOF (why six witnesses suffice: fail-all-6 + covering + min=1 forces 14 pairwise-distinct elements into a 13-set) and the kernel-pure Lean formalization LRCWindow22Census.lean (6 danger lemmas via tiny per-speed decide, 7 covering lemmas, window22_min1_lonely, window22_lonely, hdistinct22_kernel). Corrected LEM-024's attribution accordingly.
+
+STATE: LRC(14) is now formalized, sorry-free, and depends on NOTHING but Lean's foundational axioms -- reduced to exactly two hypotheses: the owner-sanctioned LRC(<=13) citation, and the single OPEN analytic obligation hB5 (residual liveness / signed diagonal-suppression gate; klein/monad/kps active). Closing hB5 closes LRC(14) outright. lrc14_grand_assembly_pure is now redundant as a purity route (the MAIN assembly is foundational-only AND keeps the smaller residual Vmax>=23).
+
+Files: LRC14GrandAssembly.lean (swap resolved + header fixed), LRC14CompletionAudit.lean (verdict updated to foundational-only), LEM-024 (attribution + LANDED), LRC14-STATUS addendum. -> LEM-024, kps-S127, MISTAKE-135, opus-S200/S201/S202, hB5.
+
+---
+
 ## kind-pasteur-2026-07-10-S127 (cont.5) -- APPLIED THE ASSEMBLY SWAP: lrc14_grand_assembly is now FOUNDATIONAL-AXIOMS-ONLY. The two winData22 native_decide axioms are GONE from the LRC(14) top theorem.
 
 Prompt (owner): formalize the 6-witness cover as the window-22 native_decide replacement.

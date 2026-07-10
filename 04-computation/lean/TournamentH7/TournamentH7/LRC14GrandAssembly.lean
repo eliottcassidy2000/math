@@ -11,7 +11,9 @@
     (3) DOMINANT (one runner exceeds 13× all others):
         `LRC14.hdom_discharged` — the sharp dominant peel.         [cite : LRCUpTo13]
     (4) BOUNDED WINDOW (all |speeds| ≤ 22):
-        `WindowData.hwindow22_closed` — machine-checked window.    [cite : LRCUpTo13]
+        `hwindowW_closed 22 cite Window22Census.hdistinct22_kernel` — the LEM-024
+        six-witness pigeonhole, KERNEL-PURE (replaced `hwindow22_closed`, which
+        carried the two `winData22` native_decide axioms).         [cite : LRCUpTo13]
     (5) REPEATED |SPEED| (two runners share an absolute speed):
         `lonely_of_abs` (here) + `lonely14_of_repeat`.             [cite : LRCUpTo13]
 
@@ -36,12 +38,12 @@ import TournamentH7.LRCSpread13
 import TournamentH7.LRC14CertRoute
 import TournamentH7.LRCEndgameAssembly
 import TournamentH7.LRCWindowData22
+import TournamentH7.LRCWindow22Census
 import TournamentH7.LRC13Citation
 import TournamentH7.LRCCovering966
 import TournamentH7.LRCDetunedDispatch
 import TournamentH7.LRCCoarseReduction
 import TournamentH7.LRCCommonResidue
-import TournamentH7.LRCWindow22Census
 
 namespace LonelyRunner
 namespace LRC14Grand
