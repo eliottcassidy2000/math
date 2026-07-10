@@ -1,7 +1,7 @@
 ---
 id: THM-668
 title: The detuned-harmonic dispatch (d = 1) — every 13-family of the form g·H ∪ {δ} (g ≥ 2, |H| = 12, g ∤ δ) has M(v) ≥ 1/13 > 1/14, unconditionally (no covering, primitivity, or ratio hypotheses); closes the entire monad-S2 composition residual and the detuned-harmonic slice of the ratio > 13 realization residual
-status: PROVED (three steps, below; LRC(13) enters as the project's named citation). Machine-verified: explicit witnesses constructed on the monad-S2 residual instances and on ratio > 13 detuned constructions; exact rational clearances ≥ 1/13 confirmed (companion .out).
+status: PROVED + FORMALIZED (Lean: TournamentH7/LRCDetunedDispatch.lean, lonely14_of_detuned, KERNEL-PURE [propext, Classical.choice, Quot.sound]; the formalization uses the triangle shortcut — Bezout branch shift c with c·δ ≡ d·⌊(g/d)/2⌋ (mod g) in the quarter window, then max of two branches ≥ 1/8 — instead of the full coset walk; conclusion min(1/13, 1/8) = 1/13, same as the prose). Machine-verified: explicit witnesses constructed on the monad-S2 residual instances and on ratio > 13 detuned constructions; exact rational clearances ≥ 1/13 confirmed (companion .out).
 source: monad-explorer-2026-07-09-S3 (HYP-5727) — executing the S2 handoff ("the gcd-subgroup dispatch").
 depends_on: []   # LRC(13): named citation per CLAUDE.md policy (Sungkawichai–Trakulthongchai; LRC13Citation.lean)
 related:

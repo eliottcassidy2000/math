@@ -1,6 +1,6 @@
 ---
 id: THM-671
-title: The LRC(14) grand assembly surface — LRC14Statement follows in Lean from the LRC(≤13) citation plus ONE residual obligation (covering ∧ scale-gapped ∧ compressed ∧ distinct-|speeds| ∧ max ≥ 23), with five branches discharged by the sorry-free corpus; plus the machine-checked completeness of the 966-witness [1,18] base case
+title: The LRC(14) grand assembly surface (v3) — LRC14Statement follows in Lean from the LRC(≤13) citation plus ONE residual obligation (covering ∧ scale-gapped ∧ compressed ∧ distinct-|speeds| ∧ max ≥ 23 ∧ NO detuned-harmonic structure ∧ NO multi-scale decomposition), with SEVEN branches discharged by the sorry-free corpus (incl. THM-668 formalized in LRCDetunedDispatch.lean, kernel-pure); plus the machine-checked completeness of the 966-witness [1,18] base case
 status: PROVED/BUILT (Lean: TournamentH7/LRC14GrandAssembly.lean, build 8506 jobs). TWO variants: lrc14_grand_assembly (sharpest surface; axioms = [propext, Classical.choice, Quot.sound] + the two winData22 native_decide certificate axioms, inherited from the window-22 branch) and lrc14_grand_assembly_pure (no window branch; KERNEL-PURE [propext, Classical.choice, Quot.sound]; residual additionally contains max ≤ 22 families). covering18_complete carries its own native_decide axiom (8568-case sweep). The residual obligations are the honest open surface, NOT asserted.
 source: monad-explorer-2026-07-09-S6 (HYP-5757).
 depends_on:
@@ -25,11 +25,14 @@ where `ResidualObligation` is the single remaining obligation:
 > (some pair of |speeds| beyond factor 13), **compressed** (no runner exceeds 13× all others),
 > with **pairwise-distinct |speeds|**, and **max |speed| ≥ 23**, is lonely.
 
-Discharged internally (case order as in the proof): (1) non-covering → `sieve_one_div`
-at the missing modulus (unconditional); (4) all |speeds| ≤ 22 → `hwindow22_closed`
-(cite); (2) no scale gap → `spread13_lonely` at t = 1/(min+max) (unconditional);
-(3) dominant runner → `hdom_discharged` (cite); (5) repeated |speed| →
-`lonely_of_abs` (new here) + `lonely14_of_repeat` (cite).
+Discharged internally: (1) non-covering → `sieve_one_div` (unconditional); (2) no scale
+gap → `spread13_lonely` (unconditional); (3) dominant → `hdom_discharged` (cite);
+(4) window ≤ 22 → `hwindow22_closed` (cite; sharp variant only); (5) repeated |speed| →
+`lonely_of_abs` + `lonely14_of_repeat` (cite); (6) DETUNED HARMONIC (one g ≥ 2 divides
+all but one speed) → `DetunedDispatch.lonely14_of_detuned` — THM-668 FORMALIZED here
+(kernel-pure: the quarter-window + Bezout branch shift + triangle pigeonhole); (7)
+MULTI-SCALE (a coarse decomposition v = a + L·k with ≤ 12 distinct coarse values and
+budget A/L ≤ 1/182) → `CoarseReduction.lonely14_of_coarse_le12` (cite).
 
 ## Why this is the sharpest surface in the corpus
 

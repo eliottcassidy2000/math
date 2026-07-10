@@ -36,6 +36,8 @@ import TournamentH7.LRCEndgameAssembly
 import TournamentH7.LRCWindowData22
 import TournamentH7.LRC13Citation
 import TournamentH7.LRCCovering966
+import TournamentH7.LRCDetunedDispatch
+import TournamentH7.LRCCoarseReduction
 
 namespace LonelyRunner
 namespace LRC14Grand
@@ -57,6 +59,10 @@ def ResidualObligation : Prop :=
     (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) →
     (∀ i j, i ≠ j → |v i| ≠ |v j|) →
     (∃ i, 23 ≤ |v i|) →
+    (∀ g : ℤ, 2 ≤ g → ∀ i₀ : Fin 13, (∀ j, j ≠ i₀ → g ∣ v j) → g ∣ v i₀) →
+    (¬ ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ), (∀ i, v i = a i + L * k i) ∧ 0 < (L : ℝ) ∧
+      (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1/13 - 1/14 ∧ (∀ i, k i ≠ 0) ∧
+      (Finset.univ.image k).card ≤ 12) →
     ∃ t : ℝ, Lonely 14 v t
 
 /-- Loneliness transfers from the absolute-value family back to the signed family
@@ -112,15 +118,27 @@ theorem lrc14_grand_assembly (cite : LRCUpTo13) (hresidual : ResidualObligation)
     obtain ⟨t, ht⟩ := lonely14_of_repeat cite (fun i => |v i|)
       (fun i => by simpa using hv i) hij heq
     exact ⟨t, lonely_of_abs v t ht⟩
+  -- (6) detuned harmonic: THM-668 (LRCDetunedDispatch)
+  by_cases hdet : ∃ g : ℤ, 2 ≤ g ∧ ∃ i₀ : Fin 13, (∀ j, j ≠ i₀ → g ∣ v j) ∧ ¬ g ∣ v i₀
+  · obtain ⟨g, hg2, i₀, hH, hnd⟩ := hdet
+    exact DetunedDispatch.lonely14_of_detuned cite v hv g hg2 i₀ hH hnd
+  -- (7) multi-scale: the coarse reduction to LRC(≤13)
+  by_cases hms : ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ), (∀ i, v i = a i + L * k i) ∧
+      0 < (L : ℝ) ∧ (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1/13 - 1/14 ∧
+      (∀ i, k i ≠ 0) ∧ (Finset.univ.image k).card ≤ 12
+  · obtain ⟨L, k, a, A, hdecomp, hL, ha, hbudget, hkne, hcard⟩ := hms
+    exact CoarseReduction.lonely14_of_coarse_le12 cite v k a L A hdecomp hL ha hbudget hkne hcard
   -- the residual class
-  · push_neg at hdom hrep hwin
+  · push_neg at hdom hrep hwin hdet
     obtain ⟨iw, hiw⟩ := hwin
-    refine hresidual v hv hcov hgap ?_ ?_ ⟨iw, by omega⟩
+    refine hresidual v hv hcov hgap ?_ ?_ ⟨iw, by omega⟩ ?_ hms
     · intro i
       obtain ⟨j, hji, hj⟩ := hdom i
       exact ⟨j, hji, hj⟩
     · intro i j hij
       exact hrep i j hij
+    · intro g hg2 i₀ hH
+      exact hdet g hg2 i₀ hH
 
 /-- **The kernel-pure variant** — identical surface WITHOUT the window-22 branch (which
 carries two `native_decide` certificate axioms).  The residual class here additionally
@@ -132,6 +150,10 @@ def ResidualObligationPure : Prop :=
     GapFamily v →
     (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) →
     (∀ i j, i ≠ j → |v i| ≠ |v j|) →
+    (∀ g : ℤ, 2 ≤ g → ∀ i₀ : Fin 13, (∀ j, j ≠ i₀ → g ∣ v j) → g ∣ v i₀) →
+    (¬ ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ), (∀ i, v i = a i + L * k i) ∧ 0 < (L : ℝ) ∧
+      (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1/13 - 1/14 ∧ (∀ i, k i ≠ 0) ∧
+      (Finset.univ.image k).card ≤ 12) →
     ∃ t : ℝ, Lonely 14 v t
 
 theorem lrc14_grand_assembly_pure (cite : LRCUpTo13)
@@ -162,13 +184,25 @@ theorem lrc14_grand_assembly_pure (cite : LRCUpTo13)
     obtain ⟨t, ht⟩ := lonely14_of_repeat cite (fun i => |v i|)
       (fun i => by simpa using hv i) hij heq
     exact ⟨t, lonely_of_abs v t ht⟩
-  · push_neg at hdom hrep
-    refine hresidual v hv hcov hgap ?_ ?_
+  -- (6) detuned harmonic: THM-668 (LRCDetunedDispatch)
+  by_cases hdet : ∃ g : ℤ, 2 ≤ g ∧ ∃ i₀ : Fin 13, (∀ j, j ≠ i₀ → g ∣ v j) ∧ ¬ g ∣ v i₀
+  · obtain ⟨g, hg2, i₀, hH, hnd⟩ := hdet
+    exact DetunedDispatch.lonely14_of_detuned cite v hv g hg2 i₀ hH hnd
+  -- (7) multi-scale: the coarse reduction to LRC(≤13)
+  by_cases hms : ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ), (∀ i, v i = a i + L * k i) ∧
+      0 < (L : ℝ) ∧ (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1/13 - 1/14 ∧
+      (∀ i, k i ≠ 0) ∧ (Finset.univ.image k).card ≤ 12
+  · obtain ⟨L, k, a, A, hdecomp, hL, ha, hbudget, hkne, hcard⟩ := hms
+    exact CoarseReduction.lonely14_of_coarse_le12 cite v k a L A hdecomp hL ha hbudget hkne hcard
+  · push_neg at hdom hrep hdet
+    refine hresidual v hv hcov hgap ?_ ?_ ?_ hms
     · intro i
       obtain ⟨j, hji, hj⟩ := hdom i
       exact ⟨j, hji, hj⟩
     · intro i j hij
       exact hrep i j hij
+    · intro g hg2 i₀ hH
+      exact hdet g hg2 i₀ hH
 
 /-- `Lonely` is invariant under permuting the family. -/
 theorem lonely_comp_perm {n : ℕ} (v : Fin 13 → ℤ) (t : ℝ) (σ : Equiv.Perm (Fin 13))

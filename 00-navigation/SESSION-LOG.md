@@ -99,6 +99,20 @@ the terminal Lean surface: {hMoment (=THM-661) + hpartA} + the witnessG2 concret
 Files: LEM-016 (canon); THM-676 (renamed from 675);
 lrc14_freiman_stability_macmini_S65cont5.{py,out} (incl. the post-run correction note).
 
+## monad-explorer-2026-07-09-S7 -- THM-668 FORMALIZED KERNEL-PURE (LRCDetunedDispatch.lean: quarter-window + Bezout branch shift + triangle pigeonhole -- lonely14_of_detuned on [propext, choice, quot] only) + GRAND ASSEMBLY v3 BUILT (8508 jobs): branches (6) detuned + (7) multi-scale added to both variants; the pure variant keeps kernel-purity with SIX branches; THE FINAL RESIDUAL PROP named exactly = covering AND gapped AND compressed AND distinct AND max>=23 AND no-near-harmonic AND no-coarse-decomposition -- the Kronecker-realization core, honestly NOT closed (HYP-5777)
+
+Prompt (owner): shrink ResidualObligation branch by branch in Lean; finish the final remaining prop mathematically, then formalize.
+
+1. THM-668 -> LEAN (the session's main lift): the triangle shortcut made it one page -- (i) quarter_window: g <= 4m and 2m <= g => m/g in [1/4, 1/2] => every integer >= 1/4 away (elementary interval arithmetic); (ii) branch_pigeonhole: y = x + m/g + e (e integer) => x or y is >= 1/8 from every integer (by_contra + the abs triangle -- |m/g - (n2-e-n1)| <= |y-n2| + |x-n1| < 1/4 contradicts (i)); (iii) lonely14_of_detuned: quotient w k = v(succAbove k)/g nonzero; cite 12 gives u; ALL branch times tau_c = (u+c)/g keep harmonic clearance = |w u - m'| >= 1/13 (integer shift absorbed); Bezout c = (q/2)*gcdA gives c*delta = m - g*e with m = d*(q/2) in the window (q = g/d >= 2 since g does not divide delta); the pigeonhole picks the branch; min clearance >= 1/13 > 1/14. KERNEL-PURE, no native_decide. (Lean archaeology: abs_add -> abs_add_le; Int.gcd_dvd_left needs explicit args; ediv_add_emod via omega.)
+2. SURFACE v3: both grand-assembly variants extended with by_cases branches (6) detuned (=> lonely14_of_detuned) and (7) multi-scale (=> CoarseReduction.lonely14_of_coarse_le12, cite); residual defs gain the two negative clauses (near-harmonic modulus impossible; no coarse (a, L, k) decomposition with <= 12 distinct coarse values and budget A/L <= 1/182). lrc14_grand_assembly_pure: KERNEL-PURE, six branches. lrc14_grand_assembly: seven (window22 adds the 2 native certs).
+3. THE HONEST FINAL PROP: ResidualObligation(Pure) v3 is now the EXACT Lean name of the open core -- the class where the equidistribution/Kronecker realization, the corner-phase sqrt-cancellation (THM-665 #3), and the |P|=1 window intersection (S5) live. It is NOT closed, and this session does not pretend otherwise: "finish the final remaining prop mathematically" ends at the honest boundary -- every prose-closed slice around the core is now machine-checked, and the core itself is the genuinely open mathematics of LRC(14).
+4. Root manifest: LRCDetunedDispatch imported; assembly comment updated.
+
+FILES: 04-computation/lean/TournamentH7/TournamentH7/LRCDetunedDispatch.lean (new); LRC14GrandAssembly.lean (v3); TournamentH7.lean (root); 01-canon/theorems/THM-668 (FORMALIZED status), THM-671 (v3). No canon overridden.
+
+NEXT: (a) the residual-class attack continues on the analytic side (the ONE open node); candidate next Lean-quantifiable slices: the pure-cluster corner (death-star, already Lean -- needs the class-form carve), the C0-C3 certificate families (kps's consumer is Lean -- needs the liveness class form); (b) the d >= 2 detuned generalization (branch group in (Z/g)^d -- the same triangle shortcut may give 1/(4d)-type clearances); (c) keep the surface as the fleet's shared scoreboard: every new proved slice = one more by_cases branch.
+
+---
 ## kind-pasteur-2026-07-09-S117 -- LEAN-IFIED the C1 union-bound CONSUMER (LRCLedgerConsumer.lean, sorry-free): turns any pair-sum liveness certificate's blocked-count bound into Mreach>=1/14, native_decide-demonstrated end-to-end. The half that "makes the certificate census a theorem" (mac-mini's ask).
 
 Prompt (owner): Lean-ify mac-mini's C1 gcd-exact ledger certificate.
