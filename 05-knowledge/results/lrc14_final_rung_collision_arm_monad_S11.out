@@ -56,3 +56,21 @@ PART D -- THE W0-CARRIER: support-2 global exacts = DOUBLINGS ONLY; doubling cen
 
   ==> THE FINAL RUNG after THM-682: [B >= 25] AND [>= 3 doublings (proven) / >= 6 (measured)]
       AND not GAP-escape-live -- the doubling-rich collision-light corner ONLY.
+
+====================================================================================================
+ADDENDUM 1 -- DFS BUDGET LADDER (DMAX = 90, set-based; timings on this box)
+====================================================================================================
+  B<=25: 25 sets, nodes 356959, max diam 14, exhaustive below cap
+  B<=26: 89 sets, nodes 2816209, max diam 15, exhaustive below cap
+  B<=28: 849 sets, nodes 14497133, max diam 17, exhaustive below cap
+  LAW: max diam = B - 11 exactly at every completed level (24->13, 25->14, 26->15, 28->17)
+  (alive prefixes reach the cap -- the far-jump sliver -- flagged per LEM-016 protocol;
+   2-block tail PROVED >= 31; GAP 3-block measured >= 34)
+
+====================================================================================================
+ADDENDUM 2 -- THE B = 33 BOUNDARY OBJECT: VERIFIED
+====================================================================================================
+  boundary = families with 1, 23 in v ⊂ {1..23}, covering (max <= 22 is window-22 territory)
+  count: 8361; lonely-verified: 8361/8361; WORST WITNESS MODULUS q = 27
+    (worst family (1,7,8,9,10,11,12,13,14,19,21,22,23))
+  => the conjectured-extension boundary is a trivially native_decide-able verified object.
