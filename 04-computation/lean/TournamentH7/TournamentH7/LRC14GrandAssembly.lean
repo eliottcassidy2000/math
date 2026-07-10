@@ -41,6 +41,7 @@ import TournamentH7.LRCCovering966
 import TournamentH7.LRCDetunedDispatch
 import TournamentH7.LRCCoarseReduction
 import TournamentH7.LRCCommonResidue
+import TournamentH7.LRCWindow22Census
 
 namespace LonelyRunner
 namespace LRC14Grand
@@ -97,9 +98,10 @@ theorem lrc14_grand_assembly (cite : LRCUpTo13) (hresidual : ResidualObligation)
     push_neg at hcov
     obtain ⟨q, h2, h14, hdiv⟩ := hcov
     exact ⟨(1 : ℝ) / q, sieve_one_div 14 q v h14 (by omega) hdiv⟩
-  -- (4) bounded window: all |v i| ≤ 22
+  -- (4) bounded window: all |v i| ≤ 22 — kernel-pure 6-witness pigeonhole (LEM-024, opus-S202),
+  --     replacing the `winData22` native_decide (kps-S127: the 6 witnesses; opus-S202: the pigeonhole)
   by_cases hwin : ∀ i, |v i| ≤ 22
-  · exact WindowData.hwindow22_closed cite v hv hwin
+  · exact WindowData.hwindowW_closed 22 cite Window22Census.hdistinct22_kernel v hv hwin
   -- (2) all-comparable: ratio ≤ 13 throughout
   by_cases hgap : GapFamily v
   swap
