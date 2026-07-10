@@ -9,6 +9,17 @@ THE CELL-ENGINE INTERFACE: consumers present W by (alpha, a, w0) data, which the
 LEAN LESSONS (adding to the S6 idiom list): AddCircle 1 parses the 1 as N -- write AddCircle (1:R); single-cast up-arrow(x - a) vs cast-difference in exp arguments (spell ((x - a : R) : C) to match HasSum instances); isDefEq timeouts from .mul_left _ -- give the multiplier explicitly; -(a)^k parses as -((a)^k).
 
 STATUS OF THE ALIASING PROGRAM: THM-665 = DONE in Lean (7 kernel-pure theorems across 2 files). Named next consumers: (a) THM-666's clamp port (one page, cites grid_aliasing + tail bound); (b) per-(E,V) decidable window certificates (rational (alpha,a) data + thm665_full); (c) the D_m discrepancy formalization (same core, product clamps).
+## opus-2026-07-09-S191 -- FORMALIZED the one-sided MOMENT-LP CORE (THM-661 analytic link): integral p(W) <= mu(GOOD) -- the missing measure-from-moment inequality between the rational D3 certs and the density floor; REDUCES the per-k bars to (a) native_decide + (b) Farey moment identity + (c) the coupled-region min
+
+Prompt (owner): prove the per-k D3 bars for k=8..12.
+
+Could NOT fully prove them (they are the density-floor coupled-region crux the whole fleet works), but formalized the KEY MISSING LINK and reduced them to it + two identified pieces.
+
+STATE: GoodSetBridge (death-star, AP certs) proves mu(GOOD) >= m_P for diam<=75 (kernel-pure); LRCD3FloorCert (kps-S89) native_decides the RATIONAL bar <= D3(E) for k=11 anchors. The MISSING piece was the analytic inequality mu(GOOD) >= D3(E) connecting rational D3 to the measure.
+
+FORMALIZED (LRCMomentLP.lean, kernel-pure [propext,Classical.choice,Quot.sound], root-wired, built 2-fix): integral_le_measure_pos -- prob measure, measurable W, p(w)<=1_{w>0} pointwise => integral p(W) dmu <= (mu{W>0}).toReal (proof: pointwise p(W x)<=indicator{W>0}1 x, integral_mono + integral_indicator_one); measure_pos_ge_of_moment_ge -- b<=integral p(W) => b<=mu(GOOD). Instantiated with a feasible degree-d polynomial and integral p(W)=Sum c_i E[W^i], this IS D_d(E)<=mu(GOOD) -- THM-661's proof core, the rigorous measure<-moment reduction.
+
+REDUCES the per-k bars rhoGlobFloorRat(k)<=mu(GOOD) to: (a) rational moment bound bar<=Sum c_i m_i (LRCD3FloorCert native_decide, done k=11, routine for k=8..12); (b) moment identity E[W^i]=integral W^i (Farey-cell integration); (c) min over ALL k-clusters (compact native_decide + decorrelation tail = the coupled band diam[18,35], the shared open crux, LEM-005/THM-665/666). HONEST: NOT closed; the core supplies the missing inequality, leaving (b)+(c). Files: LRCMomentLP.lean; reflection the-moment-lp-core-the-missing-link-for-the-per-k-D3-bars-opus-S191. -> THM-661, LRCD3FloorCert, GoodSetBridge, LEM-005, THM-665/666.
 
 ---
 
