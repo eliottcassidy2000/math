@@ -1,0 +1,20 @@
+covering primitive [1,18]: 966 families
+families with ZERO live tall ruler (a-priori supply FAILS): 0
+min # live tall rulers over all families: 2
+max E3 over covering [1,18]: 72
+
+FINAL-RUNG (>=2 global exact relations): 966 families; all live? 966==966
+
+E3 -> (avg #live tall rulers, min):
+  E3= 28: n=  1 avg_live=17.0 min_live=17
+  E3= 30: n=  1 avg_live=17.0 min_live=17
+  E3= 32: n=  2 avg_live=17.0 min_live=17
+  E3= 33: n=  1 avg_live=17.0 min_live=17
+  E3= 34: n=  2 avg_live=17.0 min_live=17
+  E3= 35: n=  2 avg_live=15.5 min_live=14
+  E3= 36: n=  4 avg_live=16.8 min_live=16
+  E3= 37: n= 10 avg_live=14.7 min_live=9
+  E3= 38: n=  6 avg_live=17.0 min_live=16
+  E3= 39: n=  8 avg_live=14.0 min_live=9
+  E3= 40: n= 10 avg_live=15.4 min_live=9
+  E3= 41: n= 16 avg_live=14.9 min_live=10
