@@ -14,6 +14,24 @@ FRONTIER CONTRIBUTION (the deep-consideration ask): aliasing_tail_bound is state
 HANDOFFS: (1) anyone: the PL-input file (LRCPiecewiseLinearFourier.lean) -- representation + coefficient bound from breakpoint lists; consumes nothing analytic beyond intervalIntegral of exp; (2) monad-explorer: your THM-666 clamp port can now cite grid_aliasing/aliasing_tail_bound directly; (3) the D_m route: product-clamp TV ledger (cell engine) + this file = the mid-band discrepancy certificate machinery. FILES: LRCAliasingBound.lean (+root); HYP-5778 CONFIRMED; log.
 
 ---
+## kind-pasteur-2026-07-09-S120 -- SMART PIVOT: the union-ledger route (g>1 gcd count) is SUPERSEDED (klein-S214/boxeph: B5 Bonferroni > union, depth<=3 provably fails at 13 constraints); delivered the LIVE E3-budget ingredient instead (LRCE3Budget.lean, sorry-free) = THM-671 part 6 (ii) where boxeph names my LRCSchurRigidity "the top of the dichotomy".
+
+Prompt (owner): take the g>1 gcd count next, and any collaborative key pieces; pull often, be smart.
+
+STRATEGIC INTELLIGENCE (pulled): klein-S214 + boxeph: the UNION-BOUND LEDGER (C1, which the g>1 gcd count feeds) is SUPERSEDED. Depth ladder at 13 classes density 1/7: B1=-0.857 (union hopeless, C1 fires only on gcd-structured moduli, misses 87% of live rulers), B3=-0.099 (cubic fails), B5=+0.1221 (FIRST truncation that clears), B7~(6/7)^13. boxeph: "never build another union/Hunter ledger; C1/C2/C3 = fast pre-filters, B5 = the certifier." boxeph ARCHITECTURE: the ONE open item = THM-671 part 6 (a-priori resolved-modulus supply for V>V0): (i) m!=0 relations <= ||n||_1 moduli (divisor counting), (ii) m=0 = E3 budget "@opus LEM-015 + @kind-pasteur LRCSchurRigidity are exactly the top of this dichotomy", (iii) (18,30) enumeration (kps-S115 pattern).
+
+BEING SMART: the g>1 gcd count (blockedCard = g*(2floor(m/g)+1)) feeds the SUPERSEDED union route (pre-filter only), and its Lean is fiddly (variable-g arithmetic, no omega; g-to-1 fiber count). Attempted the danger-side dangerCard_gcd (= dangerCard(q/g) via g-bijection) but variable-g omega failed; REVERTED it rather than sink 50+ fiddly lines into a superseded pre-filter. PIVOTED to the LIVE piece where I have leverage.
+
+BUILT (LRCE3Budget.lean, sorry-free): the E3-budget ingredient of THM-671 part 6 (ii).
+- schurCount_lt_choose_of_not_dilated: a nonzero-speed set that is NOT a dilated interval has E3 S < C(|S|,2) -- the STRICT deficit off the AP extremum. One line: opus schurTriple_card_le (E3<=C(k,2)) + my schurCount_eq_choose_iff_dilated (E3=C(k,2) iff dilated) => E3!=C(k,2) => E3<C(k,2).
+- dilated_of_schurCount_eq_choose: contrapositive (only the AP saturates the budget).
+Every covering set is non-dilated (a dilated interval {d,2d,..} is not covering for k=13 -- no multiple of 14 among 13 consecutive-ish), so this bounds E3 strictly below max for the entire covering case = the m=0 budget deficit boxeph needs.
+
+COLLABORATIVE PIECES IDENTIFIED (surfaced to fleet): THM-671 part 6 is THE open item. (i) divisor counting (elementary, unclaimed). (ii) E3 budget -- I just supplied the strict deficit; remaining = wire E3-deficit to the resonance-sum bound. (iii) (18,30) enumeration -- INFEASIBLE by brute native_decide (C(30,13) billions; caps at ~1600 entries) -- needs the ratio>13 residual (min<=2) sub-enumeration or a certificate. B5 Bonferroni (LRCDiscreteBonferroni.lean, death-star claimed, NOT yet pushed) wires into my mreach_ge_of_pairsum_band. My g=1 blocked_card_coprime (S119) + this E3 deficit stand as the clean ingredients.
+
+STATE: LRC(14) = [monad grand assembly 5 branches + residual] + [kps-S118 residual<=HasLiveRuler] + [ONE open: THM-671 part 6 a-priori supply -- B5 route, NOT the superseded union route]. My chain: dispatch (S114) + ratioBand C0 (S116) + blocked-count consumer (S117) + residual wiring (S118) + danger/coprime ingredients (S119) + E3 budget (S120). FILES: LRCE3Budget.lean.
+
+NEXT: wire the E3 deficit to the resonance/density-floor bound (part 6 (ii) completion); the divisor-counting (i); OR when B5 lands, wire it into mreach_ge_of_pairsum_band. Do NOT resume the g>1 union-ledger gcd count (superseded).
 
 ## klein-2026-07-09-S216 -- THE (PC) PROOF, FIRST LEGS (THM-677 Addendum 2): the TENT IDENTITY collapses (PC) to a smooth one-sided statement; THE WOBBLE IS EMPIRICALLY ABSENT (the object goes FULLY DISCRETE); the second-order grid lemma closes the flat part; two named residues at 4-5x margins
 
