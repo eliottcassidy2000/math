@@ -47,6 +47,31 @@ This SUBSUMES the generic sqrt-q log^2 q target (P(w) ~ q/polylog generically =>
 WHAT THIS UNBLOCKS: klein's handoff (b) -- the t >= 3 Cauchy-Schwarz bootstrap ("mechanical given (a)") -- and then OffLine <= f(E3, P0): sum LEM-022 over twists with P(w) > P0, route P(w) <= P0 to the coherence ladder (LEM-012, in Lean since my S7, owns that branch on the tau-line). The signed route's remaining surface after this session: (b) the CS bootstrap + the q0-regime banks -- both named mechanical. LEAN-ABILITY: bounded (~300-500 lines; the separation count is the exists_free_piece/dvd_Ioc_card_le pigeonhole shape; new infra = finite characters over Z/q + the sine bound).
 
 FILES: LEM-022 canon (full proof), lrc14_hyperbola_t2_lemma_deathstar_S9.py (+ results .out), HYP-5860 (claim -> DELIVERED). NEXT: (a) @klein: (b)-bootstrap is unblocked -- your program, your call; (b) anyone: LEM-022 Lean (the separation count is the fun part); (c) the P(w)-detector joins E3 in the residual-family interface (kps lrc14_from_B5's supply hypothesis can now be stated with both coordinates).
+## mac-mini-2026-07-09-S65 (cont. 14) -- witnessG2-CONCRETIZATION PLUMBING, LEG 1 DISCHARGED: LRCMomentFloorDischarge.lean built green first-try (8489 jobs) -- hsize proved against the concrete shapeOf; the moment-floor assembly re-exported with FIVE parameters {hbonf, hMoment, hB, hsmall, hpartA}
+
+Prompt (owner): work the witnessG2 concretization plumbing.
+
+**STATE CLARIFIED FIRST (the fleet's reports conflicted):** death-star-S4's de-opaquing HAS
+LANDED in the skeleton -- witnessG2 (line 223) and shapeOf (line 148) are concrete defs; but
+LRCWitnessMomentFloor.lean's docstring still claims they are opaque and its four legs
+{hbonf, hB, hsmall, hsize} remain carried as hypotheses. The plumbing = discharging them.
+
+**DELIVERED (LRCMomentFloorDischarge.lean, build green FIRST TRY, 138s incremental):**
+- **clusterSize_shapeOf_le** (hsize DISCHARGED): the cluster of shapeOf v is the filter-map of
+  a 13-entry List.ofFn, length <= 13 -- pure list arithmetic; axioms [propext, Quot.sound]
+  (not even Classical.choice).
+- **lrc14_from_momentfloor_nodes'**: the assembly with hsize supplied internally -- LRC(14)
+  from FIVE parameters; axioms [propext, Classical.choice, Quot.sound].
+
+**THE REMAINING THREE LEGS, mapped to their target proof terms (per opus-S186cont2, now
+unblocked and one measure-identity each):** hbonf <- LRCBonferroniMeasure.toReal_bonferroni
+(needs nuShape/measGP identified against slowmu(GOOD cap safe)); hsmall <- the k <= 7
+pigeonhole (GOOD = univ => witnessG2 = measGP >= m_P; LRCWitnessG2Discharge instances are the
+base); hB <- Lemma B on the concrete safeSet. STALE-DOC FLAG for opus: LRCWitnessMomentFloor's
+docstring (lines ~100-110) still says 'opaque ... cannot be a theorem' -- now false; please
+refresh when next touching the file (comment-only, flagged rather than edited cross-file).
+
+Files: 04-computation/lean/TournamentH7/TournamentH7/LRCMomentFloorDischarge.lean (+ root).
 
 ## boxeph-2026-07-09-S10 -- LRCP2Eval.lean FIRST-TRY GREEN: concrete P2 evaluation (B2(x) = x^2 - x + 1/6; P2(j/V) explicit rational) -- the enabler for every decide-shaped consumer of the aliasing surface
 
