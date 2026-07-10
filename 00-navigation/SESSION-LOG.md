@@ -60,6 +60,27 @@ its smallest arithmetic form. Recorded in LEM-018's wiring note.
 
 Files: LEM-018 (canon); lrc14_middle_rung_xlemma_macmini_S65cont9.{py,out} + _ext (sharpness +
 F1-F3 sweep).
+## kind-pasteur-2026-07-09-S123 -- INTEGRATED death-star's B5 certifier into the assembly (lrc14_from_B5) + band-count ingredient for monad's THM-680 (bandCard_eq), both sorry-free. Two liveness routes to LRC(14) now wired; sole obligation = the a-priori supply.
+
+Prompt (owner): keep pushing the endgame, help monad get THM-680 into Lean, finish remaining math and integrate.
+
+PULLED: death-star's LRCDiscreteBonferroni.lean is DONE and uses MY dispatch -- B5/liveCount/bonf decidable defs; B5_le_liveCount; exists_live_of_B5_pos; mreach_ge_of_B5_pos (B5>0 => Mreach>=1/14 via kps-S114 mreach_ge_of_pairsum_band); bonf13_eq_liveCount (depth-13 truncation = LM EXACTLY, zero loss = complete decidable live-ruler test). death-star: "fold mreach_ge_of_B5_pos into a GrandAssembly residual branch." THM-680 (monad, paper) = the Fourier/Parseval a-priori LOWER bound on the same LM (LM/q >= 0.1124 - OffLine(q)).
+
+BUILT (1) -- LRCResidualFromLedger.lean +2 (sorry-free, 8513 jobs): the B5 finish fold.
+- residualObligation_of_B5: a residual family with B5 v q > 0 at some pair-sum q => Mreach>=1/14 (death-star mreach_ge_of_B5_pos) => exists t Lonely (lonely_of_Mreach_ge) => residual discharged.
+- lrc14_from_B5 (cite : LRCUpTo13) + [every residual family has B5>0 at some pair-sum q] => LRC14.LRC14Statement. The discrete-Bonferroni route to the finish, folding death-star's WINNING certifier (boxeph: B5 > union) into my grand-assembly reduction.
+Now TWO liveness routes wired: lrc14_from_liveness (via THM-680 live multiplier / HasLiveRuler, kps-S122) + lrc14_from_B5 (via B5). Both reduce LRC(14) to the a-priori supply on the residual.
+
+BUILT (2) -- LRCDangerCount.lean +4 (help THM-680 into Lean): the band-count ingredient of THM-680 (ii) (ĥ(0)=b/q needs b=|B|).
+- bandCard q = #{r in range q : q<=14r<=13q} (the band B). bandCard_add_dangerCard (|B|+|D|=q, via filter_congr + filter_card_add). bandCard_eq (|B| = q - (2floor((q-1)/14)+1) = q - dangerCard, from my S119 dangerCard_eq). six_q_le_seven_bandCard (6q <= 7*bandCard+6 = THM-680's b >= (6/7)q-1, integer form). Reuses my dangerCard_eq.
+
+ENDGAME STATE: LRC(14) = [monad grand assembly: 5 branches + residual] + [kps-S118/S122: residual <= HasLiveRuler/B5] + [SOLE OBLIGATION: the a-priori supply -- B5 v q > 0 (or a live multiplier) for every residual family at some pair-sum q = THM-671 part 6]. Supply routes: monad THM-680 (Fourier floor LM/q>=0.1124-OffLine) + THM-681 (off-line taxonomy, 7-30 rulers a-priori live) + klein signed-box/tau-line + coherent-branch LEM-012 (death-star: "highest-value unclaimed Lean item").
+
+FINISH-PATH SUGGESTION (offered to fleet): my E3 deficit (S121 E3_lt_choose_of_gap: residual gap>13 => E3<C(k,2)) bounds the near-relations; klein-S218 MERGED it with THM-680 ("kps LRCE3Budget excludes the Freiman extremum"; OffLine = off-peak = low near-relations of v). So the finish chain: [E3<C(k,2) for residual, kps-S121] => [OffLine <= f(E3) small] => [THM-680 LM/q >= 0.1124 - OffLine > 0] => [B5>0 / live] => lrc14_from_B5 => LRC(14). The middle (OffLine<=f(E3)) is the one analytic ingredient (klein/monad).
+
+My chain S114 dispatch..S123 B5-integration + band-count. FILES: LRCResidualFromLedger.lean, LRCDangerCount.lean.
+
+NEXT: the a-priori supply (OffLine<=f(E3) => THM-680 LM>0, or LEM-012 coherent branch); monad THM-680 Fourier proof (band-count now Lean-ready); wire death-star's bonf13 native_decide for finite windows.
 
 ## mac-mini-2026-07-09-S65 (cont. 8) -- THE REALIZATION RESIDUAL-CLASS AUDIT: the intersection-of-complements is EMPTY over 849 covering sets (all scale bands + mid-band-loaded + single-chain + adversarial) -- BOTH heavy instruments fire on 100.0% each; hpartA's open node has NO known inhabitant
 

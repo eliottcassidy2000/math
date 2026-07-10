@@ -53,6 +53,34 @@ theorem dangerCard_eq (q : ℕ) (hq : 0 < q) : dangerCard q = 2 * ((q - 1) / 14)
     simp only [Finset.mem_filter] at hrA hrB
     omega
 
+/-- The number of **band residues** mod `q`: those INSIDE the safe band `[q/14, 13q/14]`
+(`q ≤ 14r ≤ 13q`) — the `b = |B|` of monad's THM-680. -/
+def bandCard (q : ℕ) : ℕ :=
+  ((Finset.range q).filter (fun r => q ≤ 14 * r ∧ 14 * r ≤ 13 * q)).card
+
+/-- **Band and danger partition the residues:** `|B| + |D| = q`. -/
+theorem bandCard_add_dangerCard (q : ℕ) : bandCard q + dangerCard q = q := by
+  unfold bandCard dangerCard
+  have hpart := Finset.filter_card_add_filter_neg_card_eq_card (s := Finset.range q)
+    (p := fun r => q ≤ 14 * r ∧ 14 * r ≤ 13 * q)
+  rw [Finset.card_range] at hpart
+  rw [show (Finset.range q).filter (fun r => 14 * r < q ∨ 13 * q < 14 * r)
+      = (Finset.range q).filter (fun r => ¬ (q ≤ 14 * r ∧ 14 * r ≤ 13 * q)) from
+      Finset.filter_congr (fun r _ => by omega)]
+  exact hpart
+
+/-- **The band size `b = |B| = q − (2⌊(q−1)/14⌋ + 1)`** (`dangerCard_eq`), and it satisfies THM-680's
+`b ≥ (6/7)q − 1` in the integer form `6q ≤ 7·b + 6`. -/
+theorem bandCard_eq (q : ℕ) (hq : 0 < q) : bandCard q = q - (2 * ((q - 1) / 14) + 1) := by
+  have h := bandCard_add_dangerCard q
+  rw [dangerCard_eq q hq] at h
+  omega
+
+theorem six_q_le_seven_bandCard (q : ℕ) (hq : 0 < q) : 6 * q ≤ 7 * bandCard q + 6 := by
+  have h := bandCard_add_dangerCard q
+  rw [dangerCard_eq q hq] at h
+  omega
+
 /-- The **blocked multipliers** of speed `v` at modulus `q`: those `p ∈ {0,…,q−1}` whose residue
 `(v·p) mod q` is a danger residue (leaves the band). -/
 def blockedCard (v q : ℕ) : ℕ :=

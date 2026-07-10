@@ -23,6 +23,7 @@
 import Mathlib
 import TournamentH7.LRC14GrandAssembly
 import TournamentH7.LRCLedgerConsumer
+import TournamentH7.LRCDiscreteBonferroni
 
 namespace LonelyRunner
 namespace LRC14Grand
@@ -121,6 +122,41 @@ theorem lrc14_from_liveness (cite : LRCUpTo13)
     LRC14.LRC14Statement :=
   lrc14_from_ledger cite (fun v hv hcov hgap hcomp hdist hlarge hdiv hcoarse =>
     hasLiveRuler_of_exists_live v (hlive v hv hcov hgap hcomp hdist hlarge hdiv hcoarse))
+
+/-- **The B5 discrete-Bonferroni certifier discharges the residual** (folding in death-star's
+`LRCDiscreteBonferroni`).  For a residual family, a single pair-sum ruler `q` with positive depth-5
+Bonferroni bound `B5 v q > 0` forces a live multiplier (`B5 ≤ liveCount`), hence `Mreach ≥ 1/14`
+(`mreach_ge_of_B5_pos`, which routes through my `mreach_ge_of_pairsum_band`), hence `∃ t, Lonely`.  This
+is the fold death-star requested; `B5 > 0` is the exact-integer, `native_decide`-checkable certificate
+whose a-priori supply for the residual is THM-671 part 6 (monad's THM-680 Fourier floor / klein's box). -/
+theorem residualObligation_of_B5
+    (hB5 : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → LRC14.CoveringFamily v → GapFamily v →
+      (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → (∀ i j, i ≠ j → |v i| ≠ |v j|) →
+      (∃ i, 23 ≤ |v i|) →
+      (∀ g : ℤ, 2 ≤ g → ∀ i₀ : Fin 13, (∀ j, j ≠ i₀ → g ∣ v j) → g ∣ v i₀) →
+      (¬ ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ), (∀ i, v i = a i + L * k i) ∧ 0 < (L : ℝ) ∧
+        (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1/13 - 1/14 ∧ (∀ i, k i ≠ 0) ∧
+        (Finset.univ.image k).card ≤ 12) →
+      ∃ q : ℕ, 0 < q ∧ 0 < LRC14Concrete.B5 v q) :
+    ResidualObligation := by
+  intro v hv hcov hgap hcomp hdist hlarge hdiv hcoarse
+  obtain ⟨q, hq, hB5pos⟩ := hB5 v hv hcov hgap hcomp hdist hlarge hdiv hcoarse
+  exact LRC14Concrete.lonely_of_Mreach_ge v hv (LRC14Concrete.mreach_ge_of_B5_pos v q hq hB5pos)
+
+/-- **LRC(14) from LRC(≤13) and the B5 certifier's a-priori supply on the residual class.**  The
+discrete-Bonferroni finish: LRC(14) follows once every residual family carries a positive B5 bound at
+some pair-sum ruler — the sole remaining a-priori obligation (THM-671 part 6). -/
+theorem lrc14_from_B5 (cite : LRCUpTo13)
+    (hB5 : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → LRC14.CoveringFamily v → GapFamily v →
+      (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → (∀ i j, i ≠ j → |v i| ≠ |v j|) →
+      (∃ i, 23 ≤ |v i|) →
+      (∀ g : ℤ, 2 ≤ g → ∀ i₀ : Fin 13, (∀ j, j ≠ i₀ → g ∣ v j) → g ∣ v i₀) →
+      (¬ ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ), (∀ i, v i = a i + L * k i) ∧ 0 < (L : ℝ) ∧
+        (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1/13 - 1/14 ∧ (∀ i, k i ≠ 0) ∧
+        (Finset.univ.image k).card ≤ 12) →
+      ∃ q : ℕ, 0 < q ∧ 0 < LRC14Concrete.B5 v q) :
+    LRC14.LRC14Statement :=
+  lrc14_grand_assembly cite (residualObligation_of_B5 hB5)
 
 end LRC14Grand
 end LonelyRunner
