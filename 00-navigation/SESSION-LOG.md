@@ -94,6 +94,27 @@ RECOMMENDATION: add the primitivity peel to lrc14_grand_assembly and restate Res
 Files: LRCPrimitivePeel.lean (+root), reflection, 8 results .out. -> klein THM-685, hB5, LEM-012, LEM-024, lonely_scale, opus-S204 brick (iii).
 
 ---
+## kind-pasteur-2026-07-10-S127 (cont.9) -- ATTACKED the stability statement (the LRC(14) wall). Did NOT break it, but: PROVED covering => strictly-live q >= 15 (Lean, kernel-pure), MEASURED that the minimal strictly-live q is 15..27 SCALE-INVARIANT (the witness lives at the BOTTOM of the window, not klein's transfer tail Sum v/mu ~ 3000-5000), and reshaped the obligation into a BOUNDED small-modulus statement.
+
+Prompt (owner): now attack the stability statement.
+
+THE ATTACK (data-first). StrictlyLiveSupply = every residual family has (q,p) with all 13 residues strictly inside (q/14, 13q/14). klein's transfer gives this at q > Sum v/mu ~ 3000-5000. But I computed the MINIMAL strictly-live q directly: it is 15..27, SCALE-INVARIANT (Vmax 45 -> 1200, 0 failures, mean ~17). The witness appears at the bottom of the window; the transfer tail is two orders larger and never reached.
+
+PROVED (LRCSmallRuler.lean, sorry-free, kernel-pure [propext, Classical.choice, Quot.sound], 8515 green):
+- not_strictlyLive_of_dvd: q | v_i => (v_i p)%q = 0 => not in band => not StrictlyLive (any p).
+- strictlyLive_modulus_ge_15: CoveringFamily v -> StrictlyLive v q p -> 15 <= q. (Covering gives a DEAD residue at every q in [2,14]; 0 never in band. So covering CALIBRATES the window, closing exactly [2,14].)
+- BoundedStrictlyLiveSupply B := every residual family has strictly-live q <= B; strictlyLiveSupply_of_bounded; lrc14_of_boundedStrictlyLiveSupply : LRCUpTo13 -> BoundedStrictlyLiveSupply B -> LRC14Statement.
+=> With ge_15, the witness is confined to [15, B]. Measured B=27 suffices on all ~500 residual families sampled.
+
+THE ADVERSARY, PINNED. min q CAN be raised: a speed = lcm(15..B) kills q=15..B by zero residue. But such a family is DETUNED (g | all-but-one), which the residual's hdiv EXCLUDES. On the genuine residual class (covering, ratio>13, compressed, NOT detuned, diff-primitive): max(min q) = 27 over 200 families (Vmax<=1200). The adversary that beats the small-ruler law is already dispatched.
+
+THE WALL, RESHARPENED: the remaining obligation is now RESIDUE-LEVEL and BOUNDED -- for each residual v, one of the ~13 surviving moduli q in [15,27] admits p<q with all residues in the band. A covering/pigeonhole statement over a BOUNDED set of small moduli (exactly where klein's character frame + my mcorr/hyperbola stack live), NOT an asymptotic density estimate.
+
+HONEST LIMITS: (a) B=27 is MEASURED not proved (slow log creep at Vmax=10^6 not ruled out; klein's transfer guarantees SOME finite B); (b) q>=15 is the only proved half, q<=B is not; (c) bounded != finite check (still an infinite family of v). So this is progress on the SHAPE of the wall (small, integer, adversary-pinned), not the theorem.
+
+My LRC Lean ~70 nodes, chain S114..S127. FILES: LRCSmallRuler.lean, lrc14_small_ruler_law_kps_S127.py/.out, reflection attacking-the-wall-the-witness-lives-at-the-bottom-kps-S127.
+
+NEXT: prove the upper edge q <= B on the residual class -- a bounded-modulus pigeonhole. The bottom of the window [15,27] is where klein's t2 character bound and my mcorr/zcorr_percell hyperbola stack operate per-cell; the target is now "some q in [15,27] has a live multiplier" rather than "some q in the tail".
 
 ## kind-pasteur-2026-07-10-S127 (cont.8) -- (1) FORMALIZED the strict rounding identity (LRCStrictRuler.lean, kernel-pure): a strictly-live ruler IS a strict witness, so LRC(14) <= citation + an INTEGER statement. (2) DESCRIBED THE WALL, and CORRECTED a claim I was about to publish: covering does NOT exclude the tight locus -- the SCALE GAP does.
 

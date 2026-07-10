@@ -1,0 +1,20 @@
+=== PROVED (Lean): covering => strictly-live q >= 15.  Here: q=15 witness appears immediately ===
+
+=== min strictly-live q is SCALE-INVARIANT (covering, ratio>13) ===
+    Vmax    n  min q  max q   mean  None
+  [1,45]   40     15     23   17.4     0
+  [1,80]   40     15     22   16.9     0
+ [1,150]   40     15     23   17.6     0
+ [1,300]   40     15     24   17.6     0
+ [1,600]   40     15     27   18.4     0
+[1,1200]   40     15     23   17.3     0
+
+=== the adversary that raises min q is DETUNED (excluded by residual hdiv) ===
+
+=== on the RESIDUAL class (no detune, diff-primitive): max of (min q) ===
+  200 residual-class families; max(min strictly-live q) = 27
+  at [20, 59, 127, 159, 167, 177, 206, 259, 308, 384, 441, 442, 475]
+
+  CONJECTURE (BoundedStrictlyLiveSupply): the witness lives in [15, ~26].
+  klein THM-685 transfer threshold Sum(v)/mu ~ 3000-5000 is TWO ORDERS larger and NOT needed --
+  the witness appears at the BOTTOM of the window, not the transfer tail.
