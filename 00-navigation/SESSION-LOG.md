@@ -13,6 +13,33 @@ HONEST: off-diagonal matrix cells are single-instance and non-covering (1-10 pri
 FILES: lrc14_multiplicative_frame_klein_S224.out; HYP-5835; log; memory.
 
 NEXT: (a) corpus-extend the matrix (covering off-diagonal cells; 20+ instances per cell); (b) if the law holds: write the t>=3 Holder chain (the ONE lemma) -- @kind-pasteur/@opus the incomplete-character-sum Parseval is your machinery's multiplicative twin; (c) the diagonal quarantine statement (E3/R(v) threshold => dilation ladder) as a clean interface lemma.
+## mac-mini-2026-07-09-S65 (cont. 10) -- LEM-019: THE DYADIC DESCENT LEMMA (evens descend EXACTLY at tau = (sigma+1)/2, odds keep half) + the corner boundary TRIVIALIZED (all-odd sets are 1/2-lonely at 1/2; even-leftover closes for o_max <= 5w, knife-edge exact) + the 2-adic pairing wall (N1 >= 7: the 13 = 2*6+1 calibration inside the tower)
+
+Prompt (owner): prove the doubling-chain corner.
+
+**PROVED (LEM-019):**
+- **I9, the DYADIC DESCENT LEMMA:** at tau = (sigma+1)/2: ||2v' tau|| = ||v' sigma|| EXACTLY,
+  ||o tau|| >= ||o sigma||/2 for odd o (0 violations / 200k exact checks). LRC(14) for
+  S = 2S' u O follows from the MIXED problem [S' at 1/14, O at 1/7] one 2-adic level down.
+- **Merge corollary + THE 2-ADIC PAIRING WALL:** each odd-rooted doubling merges two runners;
+  at most 6 fit in 13 => N1 >= 7 ALWAYS -- the 13 = 2*6+1 calibration appearing INSIDE the
+  2-adic tower (same wall as C3's pairing, the burden parity split; klein-S223's same-day
+  verdict "ONE BIT of signed structure, identical in every coordinate system" -- here it is
+  again, in 2-adic coordinates).
+- **THE CORNER BOUNDARY TRIVIALIZES:** any all-odd set is 1/2-LONELY AT tau = 1/2 (||o/2|| =
+  1/2; verified min M = exactly 1/2 over 100,919 all-odd primitive 6-sets). So the maximal-
+  collapse boundary (6 odd-rooted doublings, odd leftover) closes OUTRIGHT with margin 5/14 --
+  no citation, no composition. Even leftover w: closes for **o_max <= 5w** (odds' Lipschitz
+  window 5/(14 o_max) vs the leftover's nearest good point at exactly 1/(14w) -- knife-edge
+  exact). Remaining sliver (w < o_max/5) = a SEVEN-runner mixed instance, certificate-
+  dispatchable (my C0-C2 with per-runner bands).
+- **HONEST NEGATIVES:** crude measure composition FAILS (min meas(G_1/7) over all-odd 6-sets =
+  0.0637 at {3,7,9,15,23,37} < 1/7); full-throttle descent overflows (threshold 2^d/14 vs
+  citation 1/(N+1): one step short at the wall); scope = ODD-ROOTED doubling count (even-heavy
+  chains route through descent + the composed instruments).
+
+Files: LEM-019 (canon); lrc14_dyadic_descent / _allodd_halfwitness / _allodd_measG
+_macmini_S65cont10.py (+ consolidated .out).
 
 ## klein-2026-07-09-S223 -- THE WOBBLE BOUND IS IRREDUCIBLY SIGNED (9th and FINAL confirmation): kink-layer |mass| 56-246 cancelling to single digits (ratios 0.002-0.106); THE ARC'S UNIFORM VERDICT -- every a-priori route to LRC(14) passes through exactly ONE signed-cancellation statement; the remaining mathematical content is ONE BIT of signed structure, identical in every coordinate system
 
