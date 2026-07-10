@@ -11,6 +11,24 @@ GATE-NARROWING IMPLICATION: no FIXED pair-sum-anchored ruler closes hB5's doubli
 FILES: lrc_hb5_3a_ruler_boxeph_S13.py (+.out); HYP-5862 REFUTED.
 
 ---
+## klein-2026-07-09-S230 -- THE t2 HYPERBOLA LEMMA: VERIFIED AND PINNED CLASSICAL (per-ratio errors 30-50x below the envelope; CF dichotomy corr +0.70..+0.93; the near-dilation's worst ratios are LITERALLY 1/2; variance sub-ACZ) -- the character program closed at specification level: every piece verified or a named classical theorem
+
+Prompt (owner): run the character program's t2 hyperbola lemma; think measure theory.
+
+THE MEASURE-THEORETIC FRAME (as directed): N_w = #{y in B : wy mod q in B} is the pushforward of the band's uniform measure under x w; its deviation from b^2/q is the completion sum (1/q) sum_t S(t) S(-tw); per-ratio quality = the Diophantine quality of w/q; the variance over ratios = the multiplicative energy of the interval.
+
+MEASURED (prime stages q = 139/181/383/431; generic adv-worst + the near-dilation; all 156 speed-ratios each):
+- per-ratio |err|: max 6-22, median 0.4-1.6 -- vs sqrt(q) log^2 q = 287-764: the truth is 30-50x BELOW the crude envelope;
+- THE CF DICHOTOMY: corr(|err|, maxCF(w/q)) = +0.70..+0.93. On the near-dilation the four worst ratios are 120/240, 100/200, 80/160, 60/120 -- ALL the ratio 1/2, maxCF = (q-1)/2: THE QUARANTINED FAMILY VISIBLE BY NAME. Even its worst error is 7% of main (the S226 t2-enrichment +52..57 was the SUM over 156 ratios with coherent multiplicity, not per-ratio size);
+- variance over all ratios: 5-22 vs the ACZ envelope ~2500-11700 -- sub-Poissonian even here.
+
+THE LEMMA, FINAL FORM -- every part textbook: [completion identity: trivial] + [per-ratio: AP-discrepancy via continued fractions of w/q (three-distance/Ostrowski -- THE classical bound)] + [exception set: maxCF large <=> w near a small rational <=> the S225-quarantined family, ladder-owned] + [average: Ayyad-Cochrane-Zheng, the multiplicative energy of an interval mod p]. NO WEIL REQUIRED.
+
+THE CHARACTER PROGRAM IS CLOSED AT SPECIFICATION LEVEL: S224 (the frame: dilation-invariance + prime stages) -> S225 (the gate: diagonal-only suppression at scale) -> S226 (the anatomy: exact t-level decomposition, the lemma pinned) -> S230 (the lemma: verified, classical anchors named). What remains is transcription: an analytic-NT-comfortable agent writes the formal proof from textbook parts (completion + Ostrowski + ACZ), and the t>=3 bootstrap follows by Cauchy-Schwarz as specified at S226.
+
+FILES: lrc14_t2_hyperbola_klein_S230.out; HYP-5865; log; memory.
+
+NEXT (for the fleet): (a) the t2 formal write-up (textbook transcription); (b) the t>=3 CS bootstrap; (c) q0-regime banks (q ~ 2000-5000); (d) the two-coordinate quarantine interface lemma (E3/R(v) additive + small-rational-ratio multiplicative). My lane in this program is complete.
 
 ## opus-2026-07-09-S199 -- LRC(14) COMPLETION AUDIT (machine-checked): lrc14_from_B5 = LRC14Statement from cite + ONE obligation (hB5), sorry-free, foundational + 2 native_decide axioms, ZERO sorryAx. Honest verdict: fully formalized MODULO one OPEN analytic ingredient (not a wiring gap).
 

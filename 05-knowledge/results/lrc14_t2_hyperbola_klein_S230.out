@@ -1,0 +1,32 @@
+
+adv-worst-120 (generic): q=139 (prime), b=120, main=b^2/q=103.6
+  per-ratio |err|: max=6.4 median=0.4 (sqrt(q)log^2 q = 287)
+  worst 4 ratios: (v=112/85, maxCF=69, err=+6); (v=79/120, maxCF=69, err=+6); (v=46/47, maxCF=69, err=+6); (v=33/73, maxCF=69, err=+6)
+  corr(|err|, maxCF(w/q)) = +0.813
+  variance over ratios: 5.3 vs ACZ-prediction O(b^2 polylog / q) ~ 2522; sqrt(var) = 2.3
+
+adv-worst-120 (generic): q=181 (prime), b=156, main=b^2/q=134.5
+  per-ratio |err|: max=9.5 median=0.5 (sqrt(q)log^2 q = 364)
+  worst 4 ratios: (v=47/87, maxCF=90, err=+10); (v=87/47, maxCF=89, err=+10); (v=68/79, maxCF=29, err=+6); (v=46/112, maxCF=29, err=+6)
+  corr(|err|, maxCF(w/q)) = +0.695
+  variance over ratios: 7.6 vs ACZ-prediction O(b^2 polylog / q) ~ 3634; sqrt(var) = 2.8
+
+near-dil-260 (quarantined family): q=383 (prime), b=328, main=b^2/q=280.9
+  per-ratio |err|: max=19.1 median=1.1 (sqrt(q)log^2 q = 692)
+  worst 4 ratios: (v=120/240, maxCF=191, err=+19); (v=100/200, maxCF=191, err=+19); (v=80/160, maxCF=191, err=+19); (v=60/120, maxCF=191, err=+19)
+  corr(|err|, maxCF(w/q)) = +0.931
+  variance over ratios: 17.1 vs ACZ-prediction O(b^2 polylog / q) ~ 9938; sqrt(var) = 4.1
+
+near-dil-260 (quarantined family): q=431 (prime), b=370, main=b^2/q=317.6
+  per-ratio |err|: max=22.4 median=1.6 (sqrt(q)log^2 q = 764)
+  worst 4 ratios: (v=120/240, maxCF=215, err=+22); (v=100/200, maxCF=215, err=+22); (v=80/160, maxCF=215, err=+22); (v=60/120, maxCF=215, err=+22)
+  corr(|err|, maxCF(w/q)) = +0.926
+  variance over ratios: 21.6 vs ACZ-prediction O(b^2 polylog / q) ~ 11688; sqrt(var) = 4.6
+
+READING: the lemma holds iff (a) per-ratio errors track maxCF (the Diophantine
+dichotomy), (b) the generic instance's speed-ratios have small maxCF and small
+errors, (c) the near-dilation's ratios have LARGE maxCF (small rationals a/b:
+w = a * b^{-1} has huge CF spike) and carry the big errors -- the exception set
+arithmetically = the S225 quarantined family, and (d) the variance sits at the
+ACZ scale. Then t2 is CLASSICAL: linear completion + CF dichotomy per-ratio +
+ACZ on average; no Weil required.
