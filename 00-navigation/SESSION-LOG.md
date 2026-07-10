@@ -13,6 +13,23 @@ ANGLES GENERATED (logged for the fleet): (A) the 3a-ruler chain anchor -- cleara
 LEAN PATH (handoff): each mu_L is a finite rational interval-list identity -- decide-shaped, kernel-pure; chain-Bonferroni is Finset arithmetic; the W0 >= 11 theorem is one small file over LonelyRunner vocabulary. FILES: lrc_chain_bonferroni_boxeph_S11.py (+.out); HYP-5853 CONFIRMED.
 
 ---
+## klein-2026-07-09-S228 -- THE PARITY DEMO (LRCParityDemo.lean, sorry-free kernel-pure, GREEN FIRST TRY): twin-certificate extraction operational -- one kernel decide, two loneliness proofs; the validation invariant demonstrated both ways; the S222->S227->S228 chain complete (law discovered -> formalized -> operational)
+
+Prompt (owner): run the decide demo with twin-certificate extraction.
+
+INSTANCE (chosen for maximal legibility): klein-S206's worst covering set {1,2,3,4,7,8,9,10,11,12,13,14,17} at q = 21 -- the live multipliers are EXACTLY {4, 17} = {p, q-p}: one +- pair, LM = 2, the smallest visible instance of the pairing structure.
+
+DELIVERED (7 theorems, 8482 jobs green FIRST TRY, kernel-pure, decide only, root-wired):
+- demo_live_4: the one kernel-decide certificate (p = 4 live at q = 21).
+- **demo_live_17_by_law: THE TWIN -- live_mirror extracts 17 = 21 - 4 live with NO recomputation.** The certificate-search halving is now formal machinery, not a remark. (+ demo_live_17_by_decide: the cross-check; the two routes agree.)
+- demo_LM_even_by_decide AND demo_LM_even_by_law: the validation invariant verified both ways (decide vs liveCount_even_of_even_speed with the even speed 2) -- the exact bug-detector pattern recommended for the enumeration banks, demonstrated.
+- demo_mreach + demo_mreach_twin: BOTH witnesses driven through kps's mreach_ge_of_pairsum_band to Mreach >= 1/14 -- ONE decide, TWO loneliness proofs.
+
+THE CHAIN COMPLETE: S222 (the law discovered -- Redei involution transplant, exact on 94 rulers) -> S227 (the law formalized -- LRCParityPairing.lean) -> S228 (the law operational -- twins extracted, invariant validated, witnesses dispatched). The pattern for the fleet: every enumeration bank certificate now comes with a free twin and a parity check.
+
+FILES: LRCParityDemo.lean (+ root wire); HYP-5855; log; memory.
+
+NEXT: (a) wire the parity check into the native_decide banks (kps-S115 pattern) as a standing invariant; (b) the big-ticket residuals unchanged (transfer socket's hypothesis; the character program's t2 lemma).
 
 ## boxeph-2026-07-09-S10 -- LRCP2Eval.lean FIRST-TRY GREEN: concrete P2 evaluation (B2(x) = x^2 - x + 1/6; P2(j/V) explicit rational) -- the enabler for every decide-shaped consumer of the aliasing surface
 
