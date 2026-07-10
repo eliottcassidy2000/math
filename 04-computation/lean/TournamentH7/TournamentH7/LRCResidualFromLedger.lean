@@ -49,10 +49,15 @@ pair-sum ruler, the grand assembly's `ResidualObligation` holds. -/
 theorem residualObligation_of_ledger
     (hledger : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → LRC14.CoveringFamily v → GapFamily v →
       (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → (∀ i j, i ≠ j → |v i| ≠ |v j|) →
-      (∃ i, 23 ≤ |v i|) → HasLiveRuler v) :
+      (∃ i, 23 ≤ |v i|) →
+      (∀ g : ℤ, 2 ≤ g → ∀ i₀ : Fin 13, (∀ j, j ≠ i₀ → g ∣ v j) → g ∣ v i₀) →
+      (¬ ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ), (∀ i, v i = a i + L * k i) ∧ 0 < (L : ℝ) ∧
+        (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1/13 - 1/14 ∧ (∀ i, k i ≠ 0) ∧
+        (Finset.univ.image k).card ≤ 12) →
+      HasLiveRuler v) :
     ResidualObligation := by
-  intro v hv hcov hgap hcomp hdist hlarge
-  exact lonely_of_hasLiveRuler v hv (hledger v hv hcov hgap hcomp hdist hlarge)
+  intro v hv hcov hgap hcomp hdist hlarge hdiv hcoarse
+  exact lonely_of_hasLiveRuler v hv (hledger v hv hcov hgap hcomp hdist hlarge hdiv hcoarse)
 
 /-- **LRC(14) from LRC(≤13) and the pair-sum ledger.**  Composing with `lrc14_grand_assembly`: the full
 14-runner Lonely-Runner statement follows from the ≤13 citation and the single **discrete** obligation
@@ -61,9 +66,61 @@ surface into the number-theoretic ledger that mac-mini/klein are proving. -/
 theorem lrc14_from_ledger (cite : LRCUpTo13)
     (hledger : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → LRC14.CoveringFamily v → GapFamily v →
       (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → (∀ i j, i ≠ j → |v i| ≠ |v j|) →
-      (∃ i, 23 ≤ |v i|) → HasLiveRuler v) :
+      (∃ i, 23 ≤ |v i|) →
+      (∀ g : ℤ, 2 ≤ g → ∀ i₀ : Fin 13, (∀ j, j ≠ i₀ → g ∣ v j) → g ∣ v i₀) →
+      (¬ ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ), (∀ i, v i = a i + L * k i) ∧ 0 < (L : ℝ) ∧
+        (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1/13 - 1/14 ∧ (∀ i, k i ≠ 0) ∧
+        (Finset.univ.image k).card ≤ 12) →
+      HasLiveRuler v) :
     LRC14.LRC14Statement :=
   lrc14_grand_assembly cite (residualObligation_of_ledger hledger)
+
+/-- **monad's THM-680 conclusion → `HasLiveRuler`.**  THM-680 defines a multiplier `p` on a pair-sum
+ruler `q` as *live* when `v_l·p mod q ∈ B` for every `l` — this is exactly `fires v q p` — and its
+per-ruler liveness floor `LM > 0` supplies such a live `p`.  A single live `p ∈ {1,…,q−1}` is unblocked,
+so the blocked-multiplier count is `< q−1`: `HasLiveRuler v`.  This is the bridge that turns THM-680's
+Fourier/Parseval liveness floor into the discrete obligation the assembly consumes. -/
+theorem hasLiveRuler_of_fires (v : Fin 13 → ℤ) (q : ℤ) (hq : 0 < q) (m : ℤ)
+    (hm1 : 1 ≤ m) (hmq : m ≤ q - 1) (hfire : fires v q m) : HasLiveRuler v := by
+  obtain ⟨N, hN⟩ : ∃ N : ℕ, (N : ℤ) = q - 1 := ⟨(q - 1).toNat, Int.toNat_of_nonneg (by omega)⟩
+  obtain ⟨p0, hp0⟩ : ∃ p0 : ℕ, (p0 : ℤ) = m - 1 := ⟨(m - 1).toNat, Int.toNat_of_nonneg (by omega)⟩
+  refine ⟨q, hq, N, hN, ?_⟩
+  have hp0lt : p0 < N := by
+    have h : (p0 : ℤ) < (N : ℤ) := by rw [hp0, hN]; omega
+    exact_mod_cast h
+  have hp0mem : p0 ∈ Finset.range N := Finset.mem_range.mpr hp0lt
+  have hp0fires : fires v q ((p0 : ℤ) + 1) := by
+    rw [hp0, show m - 1 + 1 = m from by ring]; exact hfire
+  have hne : (Finset.range N).filter (fun p : ℕ => ¬ fires v q ((p : ℤ) + 1)) ≠ Finset.range N := by
+    intro heq
+    have hmem : p0 ∈ (Finset.range N).filter (fun p : ℕ => ¬ fires v q ((p : ℤ) + 1)) := heq.symm ▸ hp0mem
+    exact (Finset.mem_filter.mp hmem).2 hp0fires
+  have hlt := Finset.card_lt_card
+    (Finset.ssubset_iff_subset_ne.mpr ⟨Finset.filter_subset _ _, hne⟩)
+  rwa [Finset.card_range] at hlt
+
+/-- **`HasLiveRuler` from THM-680's existence conclusion** (some pair-sum ruler carries a live
+multiplier). -/
+theorem hasLiveRuler_of_exists_live (v : Fin 13 → ℤ)
+    (h : ∃ q : ℤ, 0 < q ∧ ∃ m : ℤ, 1 ≤ m ∧ m ≤ q - 1 ∧ fires v q m) : HasLiveRuler v := by
+  obtain ⟨q, hq, m, hm1, hmq, hfire⟩ := h
+  exact hasLiveRuler_of_fires v q hq m hm1 hmq hfire
+
+/-- **LRC(14) from LRC(≤13) and monad's THM-680 (per-ruler liveness) on the residual class.**  When
+THM-680 supplies a live multiplier for every residual family, this closes LRC(14) through the grand
+assembly — the Fourier/Parseval liveness route to the finish line. -/
+theorem lrc14_from_liveness (cite : LRCUpTo13)
+    (hlive : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → LRC14.CoveringFamily v → GapFamily v →
+      (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → (∀ i j, i ≠ j → |v i| ≠ |v j|) →
+      (∃ i, 23 ≤ |v i|) →
+      (∀ g : ℤ, 2 ≤ g → ∀ i₀ : Fin 13, (∀ j, j ≠ i₀ → g ∣ v j) → g ∣ v i₀) →
+      (¬ ∃ (L : ℤ) (k a : Fin 13 → ℤ) (A : ℝ), (∀ i, v i = a i + L * k i) ∧ 0 < (L : ℝ) ∧
+        (∀ i, |(a i : ℝ)| ≤ A) ∧ A / (L : ℝ) ≤ 1/13 - 1/14 ∧ (∀ i, k i ≠ 0) ∧
+        (Finset.univ.image k).card ≤ 12) →
+      ∃ q : ℤ, 0 < q ∧ ∃ m : ℤ, 1 ≤ m ∧ m ≤ q - 1 ∧ fires v q m) :
+    LRC14.LRC14Statement :=
+  lrc14_from_ledger cite (fun v hv hcov hgap hcomp hdist hlarge hdiv hcoarse =>
+    hasLiveRuler_of_exists_live v (hlive v hv hcov hgap hcomp hdist hlarge hdiv hcoarse))
 
 end LRC14Grand
 end LonelyRunner

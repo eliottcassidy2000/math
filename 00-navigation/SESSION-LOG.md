@@ -171,6 +171,24 @@ Two build iterations (two no-goals bullets fixed); FULL GREEN with axiom audit p
 FILES: LRCHighTailIdentity.lean (+ root wire); HYP-5810; log; memory.
 
 NEXT (Lean): (a) the penalty's aggregated form against dvd_Ioc_card_le (death-star's dispersal socket) -- THM-673(A) in Lean is within reach; (b) a mid-band-instance bonf-7 demo by decide (small V) exercising the ladder; (c) the tent/sampling identities need real-analysis Fourier -- boxeph's LRCAliasingBound abstract-coefficient pattern is the template.
+## kind-pasteur-2026-07-09-S122 -- FORMALIZED monad's THM-680 into HasLiveRuler + FIXED my S118 reduction against the fleet's updated ResidualObligation (LRCResidualFromLedger.lean, sorry-free, builds 8511 jobs). lrc14_from_liveness: LRC(14) <= LRC(<=13) + [THM-680 gives a live multiplier for the residual].
+
+Prompt (owner): keep pushing the endgame, formalize monad's THM-680 into HasLiveRuler.
+
+TWO things this session (the second was a necessary discovery):
+
+(A) THM-680 -> HasLiveRuler (3 new theorems, sorry-free). THM-680 canon: a multiplier p is LIVE iff v_l*p mod q in B for all l -- "exactly the hypothesis of mreach_ge_of_pairsum_band" = MY `fires v q p`; per-ruler liveness floor (LM/q = exact Z_q relation-lattice identity + defining-line Parseval => every pair-sum ruler live unless off-line relations >= (5/7)(6/7)^12).
+- hasLiveRuler_of_fires: a single live m in {1..q-1} (fires v q m) => HasLiveRuler v (one firing m unblocked => blocked count < q-1).
+- hasLiveRuler_of_exists_live: THM-680's conclusion form (exists live multiplier) => HasLiveRuler v.
+- lrc14_from_liveness (cite : LRCUpTo13) + (THM-680 supplies a live multiplier for every residual family) => LRC14.LRC14Statement. The Fourier/Parseval liveness route to the finish, through the grand assembly.
+
+(B) FIXED S118 breakage. The fleet (monad/opus renumbering + case-split refinement) had CHANGED the grand assembly's ResidualObligation: it now carries TWO extra hypotheses -- (hdiv) forall g>=2, (g | all but i0) => g | v_i0; and (hcoarse) NOT a coarse near-AP decomposition (exists L,k,a,A with v=a+Lk, |a|<=A, A/L<=1/13-1/14, k!=0, <=12 distinct k). My S118 residualObligation_of_ledger/lrc14_from_ledger produced `exists t Lonely` but the new obligation expects [hdiv]->[hcoarse]->exists t Lonely => my file was BROKEN in current main. FIXED: added the two hypotheses to hledger's signature + intro'd + passed them through (HasLiveRuler doesn't need them, so they are accepted and available to the ledger). Also the coarse-reduction now removes the near-AP families upstream, so the residual ledger only sees genuinely-spread covering sets -- exactly where THM-680's off-line floor holds.
+
+VERIFICATION: full LRCResidualFromLedger builds sorry-free (8511 jobs). [WindowData22 native_decide dependency segfaulted/timed-out twice mid-session on this machine (env/memory), then built; the bridges were also verified independently in a minimal test importing only LRCLedgerConsumer.]
+
+ENDGAME STATE: LRC(14) = [monad grand assembly: 5 branches + residual(now with hdiv/hcoarse)] + [kps-S118 residual<=HasLiveRuler, UPDATED S122] + [kps-S122 HasLiveRuler<=THM-680 live multiplier] + [THM-680 in Lean = monad's Fourier/Parseval floor + THM-681 off-line taxonomy (7-30 rulers a-priori live)]. klein-S218 merged my LRCE3Budget (E3 deficit excludes the Freiman extremum) with THM-680. My chain S114 dispatch..S122 THM-680 bridge. FILES: LRCResidualFromLedger.lean.
+
+NEXT: monad formalizes THM-680 (exists live multiplier for the residual, using hcoarse to exclude near-AP + the off-line floor) => lrc14_from_liveness closes LRC(14); OR moment-floor route (opus hpartA + death-star hfloor).
 
 ## klein-2026-07-09-S218 -- THE OFF-PEAK BOUND (THM-677 Addendum 4): the FIBER IDENTITY + F-hat's decay MEASURED (geometric ~0.2-0.36/coordinate, density check exact) + the truncation direction is upper-bound-safe (2.7x cancellation bonus) + THE TWO-FRAME CONVERGENCE with monad's same-day THM-680 -- the two routes' residues are now ONE species (low near-relations of v), with the Freiman extremum already excluded by kps's same-day LRCE3Budget
 
