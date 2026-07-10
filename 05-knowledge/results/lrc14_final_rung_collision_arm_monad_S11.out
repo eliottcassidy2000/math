@@ -109,3 +109,21 @@ ADDENDUM 4 -- THE MIDDLE-RUNG PROOF ROUTE MAPPED ON THE CENSUS (B <= 26, 89 sets
   rung; remaining LOCAL lemma: each escaping middle double (a_i with no symmetric pair
   a_i±δ in A) buys one |A+A| unit beyond the 3k-4 minimum.
   B<=31: 13755 sets, nodes 124562918, max diam 20, law B-11=20: HOLDS, 491.3s   [bitmask DFS, appended on completion]
+
+====================================================================================================
+ADDENDUM 5 (S12) -- ESCAPE-SHAPE CORRECTION (MISTAKE-132) + THE ESCAPE SHAPES AS SPEED SETS
+====================================================================================================
+  CORRECTION: the true minimal escape at k=13 is the 2-BLOCK twin same-difference AP
+  {0..k1-1} u {G..G+k2-1}: B = 3k-7 = 32 at ANY diameter (verified all splits, d=1 and
+  gcd-1 d=2; AP+far-singleton = 33; 3-block GAP / defect-twin = 34). The S11 "ceiling 34"
+  tested only 3-block shapes. Escape-shape crossover: 2-block t = k-4 (3 at k=7, 9 at k=13)
+  vs 3-block t3 (2 at k=7, 11 at k=13). LADDER TERMINATES AT B <= 31 = the exhausted range.
+  ESCAPE SHAPES AS CORE SPEED SETS (probes, 5 instances each):
+   (i)  two-interval (d=1 twin): clearance 0.178-0.296 (2.5-4x bar), rulers live 100%
+        (31/31, 25/25, 23/23, 21/21, 23/23) -- two-super-runner pair-sum mechanism
+   (ii) affine-detuned (12-AP mod d + detuned singleton): LONELY AT tau = c/d ITSELF,
+        clearance 0.30-0.37 (~ floor(d/2)/d minus singleton offset) -- common-residue time
+        survives the singleton via the THM-668 branch trick; rulers live 100%
+   (iii) interval+outlier (d=1, B=33): clearance ~0.176, rulers live 12/12
+  => every escape-level shape is dispatched-with-mechanism; the collision arm's portrait
+     is complete: B <= 31 impossible for core (proved), B in {32,33} shapes all owned.
