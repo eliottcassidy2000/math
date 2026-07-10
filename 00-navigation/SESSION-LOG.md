@@ -1,3 +1,20 @@
+## opus-2026-07-09-S201 -- INVESTIGATED THM-665 window-shrinking to remove the census native_decide: THM-665 is ORTHOGONAL (its own theorem: a-priori route NEVER fires on covering clusters = the census case). The foundational-only variant ALREADY EXISTS (lrc14_grand_assembly_pure) at the cost of a bigger obligation. Axiom-verified. Honest negative + recommendation.
+
+Prompt (owner): work the THM-665 window shrinking to remove native_decide.
+
+FINDING (decisive, axiom-verified): the premise rests on a category error. THM-665 (sharp aliasing bound, density floor fires for V > ~2.8*spread) handles the LARGE-V DISSOCIATED regime; its Consequence 2 states 'the a-priori existence route NEVER fires on covering clusters' (V/spread ~ 1) and 'the entire covering case lives INSIDE the bounded window'. The census IS the covering case -- exactly what THM-665 is PROVEN not to reach. So THM-665 cannot shrink the census window.
+
+THE TRADEOFF IS ALREADY RESOLVED BOTH WAYS (confirmed via #print axioms):
+- lrc14_grand_assembly: [propext, Classical.choice, Quot.sound, winData22_complete, winData22_ok]; residual obligation = only Vmax>=23 (SMALLER open surface).
+- lrc14_grand_assembly_pure: [propext, Classical.choice, Quot.sound] ONLY (no native_decide); residual = ALL covering families incl <=22 (BIGGER open surface).
+So the foundational-axioms-only proof ALREADY EXISTS (the pure variant). The census native_decide BUYS the smaller open surface by discharging the <=22 covering families with explicit witnesses. You cannot get foundational-only AND the small surface for free.
+
+Why analysis can't discharge the <=22 families instead: covering => V/spread~1 => THM-665 density floor never fires; the census branch's families are ratio>13 (spread13 peels ratio<=13), forcing min=1 (Vmax<=22<26); they all contain speed 1, have no known uniform witness -- that is what a census is. Removing the census while keeping the small surface needs a MATHEMATICAL census proof (research-hard), NOT THM-665, NOT kernel decide (MISTAKE-135, C(22,13)=497420 measured >13h+OOM).
+
+RECOMMENDATION to owner: (a) completeness-first: keep native_decide census (standard/sound); or (b) purity-first: use lrc14_grand_assembly_pure (foundations only, bigger obligation); or (c) both = fund a proof of the <=22 covering census (no short route). Small structural fact for a future census-elimination: the necessary domain is min=1/ratio>13/covering/Vmax<=22 -- much thinner than C(22,13). Files: reflection (the-window-census-native-decide-is-irreducible-thm665-is-orthogonal-opus-S201), LRC14CompletionAudit docstring (pure-variant note). -> THM-665, LRC14GrandAssembly (both variants), MISTAKE-135, hB5.
+
+---
+
 ## klein-2026-07-09-S231 -- THE t2 FORMAL WRITE-UP (THM-683): complete proofs, constants verified 624/624 (median slack 12-22x), exceptions arithmetically exact (the small-rational ratios by name) -- the character program's last lemma is now a written theorem
 
 Prompt (owner): run the t2 formal write-up.

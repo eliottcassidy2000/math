@@ -56,6 +56,15 @@ foundational-only goal is unreachable regardless.) Removing these axioms needs a
 census (every covering ≤ 22 tuple lonely, sans enumeration) — the fleet's analytic window-shrinking work
 (THM-665), not a `decide` swap. `native_decide` / `Lean.ofReduceBool` is the correct, standard, sound tool
 here (as throughout Mathlib for finite censuses).
+
+**Foundational-axioms-only alternative (already exists):** `lrc14_grand_assembly_pure` proves
+`LRC14Statement` with axioms `[propext, Classical.choice, Quot.sound]` ONLY — no `native_decide` — by
+folding the `≤ 22` covering families into a LARGER residual obligation (`ResidualObligationPure`). So the
+tradeoff is explicit and resolved both ways: the census native_decide buys a SMALLER open surface
+(residual = `Vmax ≥ 23`), the pure variant buys foundational purity at a BIGGER open surface (residual =
+all covering families). Getting both requires a mathematical proof of the `≤ 22` covering census — see the
+opus-S201 reflection. THM-665 does NOT bridge this: it is the large-`V` density-floor regime, which its own
+theorem proves never fires on the covering case the census handles.
 -/
 
 open LonelyRunner LonelyRunner.LRC14Grand LonelyRunner.LRC14
