@@ -1,0 +1,24 @@
+=== (1) split identity  E3 = D2 + 2T  over all k-sets ===
+  k=4: OK  330/330
+  k=5: OK  1287/1287
+  k=6: OK  5005/5005
+  k=7: OK  19448/19448
+
+=== (2) doublings track 2-adic content; Schur triples track AP-ness ===
+  dilated {1..13}     : E3= 78  D2(doublings)= 6  T(schur)= 36  sum2adic=10
+  AP diff2 {3..27}    : E3=  0  D2(doublings)= 0  T(schur)=  0  sum2adic=0
+  generic             : E3= 21  D2(doublings)= 1  T(schur)= 10  sum2adic=12
+
+=== (3) doubling-rich <=> even-rich (the W0>0.08 corner is 2-adic) ===
+  D2 (doublings) -> mean #even speeds (of 13), sample count:
+    D2= 0: mean_even= 5.75  n=45160
+    D2= 1: mean_even= 6.22  n=76691
+    D2= 2: mean_even= 6.72  n=53142
+    D2= 3: mean_even= 7.24  n=19747
+    D2= 4: mean_even= 7.77  n=4561
+    D2= 5: mean_even= 8.26  n=634
+    D2= 6: mean_even= 8.63  n=52
+
+=== (4) the doubling GRAPH is a forest of 2-adic chains (geometric ratio 2) ===
+  dilated {1..13}: D2=6  #chains=7  (edges = 13 - chains = 6)
+  geom-rich [22,39,42,44,45,84,88,90,168,176,180,336,352]: D2=9  #chains=4  (edges = 13 - chains = 9)

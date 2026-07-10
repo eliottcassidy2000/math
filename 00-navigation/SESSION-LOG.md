@@ -27,6 +27,27 @@ SYNTHESIS (addendum appended to the S2 lever-map reflection): the fleet holds TH
 EXTENSION HANDOFFS: (a) the depth-4 parity layer and my reverse-triangle count may COMPOSE: the parity law's even-count obstruction at depth 1 disappears inside the depth-4 slice -- a signed version of good_count_ge on the odd/16 sublattice would give existence at HALF the mean threshold (count even + count > 0 => count >= 2); one for mac-mini/klein's HYP-5850 Lean; (b) the clamp instantiation of exists_good_of_mean_pos remains mechanical (cell-engine (alpha,a,w0) data); (c) klein's t>=3 chain is the character program's last lemma. FILES: reflection addendum; log. No new claims (integration session).
 
 ---
+## kind-pasteur-2026-07-09-S127 -- WORKED THE ENDGAME + SYNTHESIS: the LRC(14) final-rung obstruction lives on the DIAGONAL of E3 (2-adic/dyadic), and the odd-cyclic (Schur-triangle) content is FREE. Formalized the E3 diagonal split (LRCSchurPeel.schurCount_eq_doubling_add_offDiag, sorry-free) + wrote the connection reflection.
+
+Prompt (owner): work the endgame, think quantitative stability and how it connects to any possible past concepts in the repo.
+
+STATE OF THE ENDGAME (read THM-681/682, ResidualObligation, LEM-018-021): the quantitative Freiman-stability rung has COLLAPSED. THM-682: every core family has B>=32 (restricted-sumset ladder diam<=B-11 exhaustive thru B<=31; B=32 twin-AP escape dispatch-owned). THM-682(d): the ONLY support-2 global exact relations are DOUBLINGS v_b=2v_a (Schur triples nearly weightless 0.0027; W0>0.08 needs >=3 doublings => even-rich, 2-adically coherent). So the remaining rung = the DOUBLING-RICH corner, owned by the 2-adic dispatches (LEM-019 descent, LEM-021 depth-4, g=2 detune) + 2 finite objects (B=33 native_decide, LEM-016 sliver).
+
+THE SYNTHESIS (reflection the-final-rung-lives-on-the-diagonal-dyadic-carrier-free-triangles-kps-S127). Six threads, one sentence:
+- opus-S182 REDIRECT: loneliness is dilation-inv NOT translation-inv; the honest invariant is E3 (Schur, anchored = MY axis), not E2/burden (translation-inv, wrong symmetry; sum-free {1,3..25} has max E2 but E3=0, loose). Burden ladder = correct-but-wrong-symmetry proxy that works by exhaustion.
+- THM-446 BRIDGE: additive-relation ladder = cycle-length ladder. Schur triple a+b=c = TRIANGLE = smallest odd cycle = the OCF ATOM (Phi_6(n)=n^2-n+1=2T_{n-1}+1). Doubling d->2d = the DYADIC hard core (Erdos-64). So E3 = a triangle count on the speeds; the LRC endgame walked back into the OCF (the project origin).
+- MY SPLIT (this session): E3 S = doublingCount S + off-diagonal Schur, doublingCount = #{a: 2a in S} = the DIAGONAL (a,a) of E3. Diagonal = doublings = dyadic = the W0-carrier (THM-682d). Off-diagonal = Schur triples = triangles = free. Verified E3 = D2 + 2T exhaustively; doubling-rich <=> even-rich (mean evens 5.75->8.63 as D2 0->6); doubling graph = forest of geometric-ratio-2 chains (D2 = 13 - #chains) = rank-1 GAP in the MULTIPLICATIVE group (klein HYP-5835 sees exactly this).
+- klein-S222: the one irreducible obstruction = a SIGNED BIT = 2-adic parity (not a triangle; the absolute Schur tail diverges BECAUSE it cancels = free).
+- mac-mini LEM-019/020/021: doubling corner dispatched 2-adically; first live parity layer = 2-adic depth 4.
+=> THE LRC(14) FINAL-RUNG OBSTRUCTION IS 2-ADIC (the diagonal of E3); the odd-cyclic (triangle/Schur) content is FREE. The triangle -- the object the project is built from -- is the FREE part of the last rung; the load is its dyadic shadow.
+
+BUILT (LRCSchurPeel.lean +1, sorry-free, 8476 green): schurCount_eq_doubling_add_offDiag (E3 = doublingCount + off-diag; def doublingCount = diagonal of E3). PLUS proof-method echoes: my Rung B repCount<=k-1 = the tournament rank-bounds-count move (scores/cut-space = staircase vertical leg); THM-455 skew-Sylvester doubling tower = the tournament twin of the speed doubling forest (Cayley-Dickson Mode B).
+
+WHAT IT BUYS: the E3 contribution hands the CARRIER to the right lane -- the additive content that matters = doublingCount (diagonal) = mac-mini/monad's 2-adic corner. The remaining work is NOT a Freiman/BSG/3k-4 import (none in canon; opus-S182 says wrong symmetry anyway) -- it is the finite 2-adic corner. CAUTION MISTAKE-115: do NOT reframe as bounded-defect Freiman; the governing param is order/2-adic depth, not defect count (the split counts doublings = 2-adic events, respecting this).
+
+FILES: LRCSchurPeel.lean (schurCount_eq_doubling_add_offDiag), lrc14_e3_diagonal_split_kps_S127.py/.out, reflection. My LRC Lean ~41 nodes, chain S114..S127.
+
+NEXT: the 2-adic corner is mac-mini/monad's lane (LEM-019/021 + the finite B=33/sliver objects) -- my split hands them the carrier cleanly. If the E3 side is wanted further: formalize doublingCount's covering bound, or the multiplicative rank-1 (geometric chain) rigidity as klein's frame sees it.
 
 ## kind-pasteur-2026-07-09-S126 -- MATERIALIZED the E3-side Freiman-stability ladder in Lean (LRCSchurPeel.lean, sorry-free, 8476 jobs green): the whole ladder = ONE peeling recursion. Plus the honest finding: the quantitative capstone dist<=deficit is FALSE for k<=4, holds k>=5 -- the SAME threshold as opus's burden axis.
 

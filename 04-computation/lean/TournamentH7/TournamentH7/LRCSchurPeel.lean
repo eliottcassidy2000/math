@@ -259,4 +259,40 @@ theorem deficit_erase_le' {S : Finset ℕ} (h0 : 0 ∉ S) (hne : S.Nonempty) :
     deficit (S.erase (S.max' hne)) ≤ deficit S :=
   deficit_erase_le h0 (S.max'_mem hne) (fun x hx => S.le_max' x hx)
 
+/-! ### The E₃ diagonal split — separating the endgame's `W₀`-carrier (doublings) from the free part.
+
+By THM-682(d) (monad), the sole carriers of the exact-load `W₀` in the LRC(14) final rung are the
+**doublings** `v_b = 2 v_a`; the genuine Schur triples are nearly weightless (line weight `0.0027`).  In
+the additive-relation ↔ cycle-length ladder (THM-446) a Schur triple `a+b=c` is a **triangle** (the
+smallest odd cycle, the OCF atom) and a doubling `d ↦ 2d` is the **dyadic** rung.  The doubling content
+is exactly the *diagonal* `(a,a)` of `E₃`, so the endgame's operative additive content lives on this
+diagonal — the 2-adic axis where the dyadic dispatches (LEM-019/021) and the 2-adic tower operate. -/
+
+/-- **The doubling count** — the diagonal of `E₃`: the number of `a ∈ S` with `2a ∈ S`.  A doubling is a
+step up a geometric-ratio-2 chain; `doublingCount` counts the edges of the doubling forest. -/
+def doublingCount (S : Finset ℕ) : ℕ := (S.filter (fun a => 2 * a ∈ S)).card
+
+/-- **The E₃ diagonal split.**  `E₃ S = doublingCount S + (off-diagonal Schur count)`: the Schur count
+splits into the diagonal doublings `(a,a)` (`2a ∈ S`, the dyadic/`W₀`-carrier content) and the
+off-diagonal genuine Schur triples `(a,b)`, `a ≠ b`, `a + b ∈ S` (the triangle/3-cycle content, nearly
+weightless in the final rung). -/
+theorem schurCount_eq_doubling_add_offDiag (S : Finset ℕ) :
+    E3 S = doublingCount S
+      + ((S ×ˢ S).filter (fun p => p.1 + p.2 ∈ S ∧ p.1 ≠ p.2)).card := by
+  have hdiag : (((S ×ˢ S).filter (fun p => p.1 + p.2 ∈ S)).filter (fun p => p.1 = p.2))
+             = (S.filter (fun a => 2 * a ∈ S)).image (fun a => (a, a)) := by
+    ext ⟨x, y⟩
+    simp only [Finset.mem_filter, Finset.mem_product, Finset.mem_image, Prod.mk.injEq]
+    constructor
+    · rintro ⟨⟨⟨hx, _⟩, hxy⟩, heq⟩
+      subst heq
+      exact ⟨x, ⟨hx, by rwa [show x + x = 2 * x from by ring] at hxy⟩, rfl, rfl⟩
+    · rintro ⟨a, ⟨haS, h2a⟩, rfl, rfl⟩
+      exact ⟨⟨⟨haS, haS⟩, by rwa [show a + a = 2 * a from by ring]⟩, rfl⟩
+  have hsplit := Finset.filter_card_add_filter_neg_card_eq_card
+    (s := (S ×ˢ S).filter (fun p => p.1 + p.2 ∈ S)) (p := fun p => p.1 = p.2)
+  rw [hdiag, Finset.card_image_of_injOn (fun a _ b _ h => congrArg Prod.fst h),
+    Finset.filter_filter] at hsplit
+  exact hsplit.symm
+
 end LRCSchurRigidity
