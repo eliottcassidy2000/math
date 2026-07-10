@@ -1,0 +1,46 @@
+(1) k=7 RIGIDITY: meas(D) for k=7 shapes (must all be 0):
+    consec   E=[0, 1, 2, 3, 4, 5, 6]: meas(D) = 0
+    AP2      E=[0, 2, 4, 6, 8, 10, 12]: meas(D) = 0
+    AP3      E=[0, 3, 6, 9, 12, 15, 18]: meas(D) = 0
+    rand     E=[2, 4, 11, 13, 20, 21, 23]: meas(D) = 0
+
+(2) meas(D) census at k = 8..13 (consecutive/AP/detuned/random):
+    k=8 consec: meas(D) = 0.059864
+    k=8 AP2   : meas(D) = 0.059864
+    k=8 MAX over 10 shapes: 0.059864
+    k=9 consec: meas(D) = 0.159864
+    k=9 AP2   : meas(D) = 0.159864
+    k=9 MAX over 10 shapes: 0.159864
+    k=10 consec: meas(D) = 0.224490
+    k=10 AP2   : meas(D) = 0.224490
+    k=10 MAX over 10 shapes: 0.224490
+    k=11 consec: meas(D) = 0.373696
+    k=11 AP2   : meas(D) = 0.373696
+    k=11 MAX over 10 shapes: 0.373696
+    k=12 consec: meas(D) = 0.430097
+    k=12 AP2   : meas(D) = 0.430097
+    k=12 MAX over 10 shapes: 0.430097
+    k=13 consec: meas(D) = 0.557514
+    k=13 AP2   : meas(D) = 0.557514
+    k=13 MAX over 10 shapes: 0.557514
+
+    min m_P per |P| (exact, exhaustive over P subset [1,13]):
+    |P|=5: min m_P = 0.381463 at (1, 5, 7, 8, 9); max meas(D) = 0.059864 -> criterion CLOSES k=8
+    |P|=4: min m_P = 0.494256 at (1, 11, 12, 13); max meas(D) = 0.159864 -> criterion CLOSES k=9
+    |P|=3: min m_P = 0.604396 at (1, 12, 13); max meas(D) = 0.224490 -> criterion CLOSES k=10
+    |P|=2: min m_P = 0.725275 at (1, 13); max meas(D) = 0.373696 -> criterion CLOSES k=11
+    |P|=1: min m_P = 0.857143 at (1,); max meas(D) = 0.430097 -> criterion CLOSES k=12
+
+(3)+(4) THE HUNT: mu_inf over hard (P,E) grid (min-m_P P's x adversarial E's incl. window-designed):
+    |P|=5 P=[1, 5, 7, 8, 9]: W_P len = 0.03175; designed-E dead mass in W_P = 0.000000
+    |P|=5 P=[1, 2, 3, 4, 5]: W_P len = 0.11429; designed-E dead mass in W_P = 0.000000
+    |P|=4 P=[1, 2, 3, 4]: W_P len = 0.16071; designed-E dead mass in W_P = 0.000000
+    |P|=3 P=[1, 2, 3]: W_P len = 0.23810; designed-E dead mass in W_P = 0.082313
+    |P|=2 P=[1, 2]: W_P len = 0.39286; designed-E dead mass in W_P = 0.186848
+    |P|=1 P=[1]: W_P len = 0.85714; designed-E dead mass in W_P = 0.430097
+    |P|=1 P=[1]: W_P len = 0.85714; designed-E dead mass in W_P = 0.430097
+
+    HUNT RESULT: 0 zero classes found; min mu_inf = 0.044710 at P=[1, 2, 3, 4], E=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+k=8: consecutive meas(D) = 0.059864; hill-climb best = 0.059864 at E=[0, 1, 2, 3, 4, 5, 6, 7] (consecutive stands)
+k=11: consecutive meas(D) = 0.373696; hill-climb best = 0.373696 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] (consecutive stands)
+k=12: consecutive meas(D) = 0.430097; hill-climb best = 0.430097 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] (consecutive stands)

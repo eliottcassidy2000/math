@@ -15,6 +15,23 @@ Concurrent (rebase): mac-mini S65cont20/cont21 landed LRCUnionVolume (brick-iii 
 Files: LRCPrimitiveAssembly.lean (+root). -> opus-S205 (LRCPrimitivePeel, the dilate finding), klein THM-685, hB5, lrc14_from_B5 (kps-S123), lrc14_grand_assembly (monad).
 
 ---
+## klein-2026-07-10-S238 -- THE DEAD-ZONE LEMMA (THM-689, HYP-5915): k = 7 RIGIDITY PROVED (zero-slack covers are perfect nets => meas(D) = 0 => k <= 7 CLOSED unconditionally); the k = 8..12 question REDUCED to CONSECUTIVE-MAXIMALITY (exhaustive min-m_P census beats the consecutive dead zone 1.9-6.4x at every k); FIRST-WINDOW THEOREM (W_P subset G_P, degenerating exactly at the ratio-13 tight locus); THE HUNT: zero mu_inf = 0 classes; + the HYPOHAMILTONIAN CRITICALITY reflection (owner directive)
+
+Prompt (owner): run the dead-zone lemma, work the hardest remaining math, think of hypohamiltonian graphs and how they relate.
+
+(A) k = 7 RIGIDITY (proved): m_E(alpha) = 0 with seven arcs of length 1/7 forces meas(union) = 1 = total mass => pairwise intersections null => open arcs DISJOINT => complement is 7 points => centers form a PERFECT 1/7-net => (e-e')alpha in (1/7)Z for every pair => alpha confined to a finite set. meas(D) = 0 (confirmed exactly: consec/AP2/AP3/random all give 0). Hence mu_inf(P,E) > 0 whenever m_P > 0, for every |E| <= 7: k <= 7 CLOSED UNCONDITIONALLY.
+
+(B) MEASURE CRITERION + CENSUS: mu_inf = 0 requires G_P (ess.) subset D(E), hence meas(D) >= m_P. P-side EXHAUSTIVE (all P subset [1,13] per size): min m_P = 0.3815 (|P|=5, {1,5,7,8,9}), 0.4943 (|P|=4, {1,11,12,13}), 0.6044 (|P|=3, {1,12,13}), 0.7253 (|P|=2, {1,13}), 6/7 (|P|=1). E-side: consecutive dead zone = 0.0599/0.1599/0.2245/0.3737/0.4301 at k = 8..12; DILATION INVARIANCE proved (meas(D(cE)) = meas(D(E)) -- APs tie consecutive EXACTLY); battery + hill-climbs at k = 8/11/12 all return consecutive as the maximizer. => min m_P > max-tested meas(D) at EVERY k with 1.9-6.4x margins: THE WHOLE TWO-SCALE DEAD-ZONE LEMMA REDUCES TO CONSECUTIVE-MAXIMALITY OF meas(D) -- one clean extremal statement about circle coverings by dilate-centered arcs (conjectured, strong evidence).
+
+(C) FIRST-WINDOW THEOREM (proved, two lines): W_P = [1/(14 pmin), 13/(14 pmax)] subset G_P ALWAYS (p*alpha in [1/14, 13/14] with no wrap), nonempty iff pmax <= 13 pmin -- the window DEGENERATES TO THE POINT 1/14 EXACTLY AT RATIO 13: the tight locus is the vanishing of the first safe window, kps's knife edge seen geometrically. Designed adversarial E's put ZERO dead mass in W_P for |P| >= 4.
+
+(D) THE HUNT: hard grid (min-m_P + ratio-13 P's x consecutive/AP/detuned/random/window-designed E's): ZERO classes with mu_inf = 0; minimum 0.044710 at P = {1,2,3,4}, E = {0..8} -- the consecutive apex shape, again the extremal, again positive.
+
+(E) HYPOHAMILTONIAN CRITICALITY (reflection, owner directive): minimal LRC(14) counterexamples are HYPO-OBJECTS by construction -- LRC(<=13) margins force all 13 deletions lonely-with-margin, giving 13 simultaneous critical-covering constraints (each runner's 1/7 danger mass must cover the other twelve's fattened safe set); the k=7 rigidity is the zero-slack-critical-cover paradigm; THE TIGHT AP IS OUR PETERSEN GRAPH (unique minimal critical object, at the degenerate window); Redei's odd Hamiltonian-path count (existence unconditional, parity refines) <-> the parity pairing's even live count (witnesses vanish only in pairs) -- the two parity laws are one species. Three transplant leads logged: bulk criticality counting vs the m_P census, ray-cover gluings as the critical-vertex gluings, girth constraints <-> relation-lattice saturation.
+
+STATUS OF THE WALL: k <= 7 two-scale classes closed unconditionally; k = 8..12 closed modulo consecutive-maximality; everything per-class decidable exactly regardless (the wall pipeline unaffected).
+
+FILES: THM-689 (canon); lrc14_dead_zone_lemma_klein_S238.py (+.out), hillclimb .out; reflection hypohamiltonian-criticality-and-the-lonely-runner; HYP-5915 resolved; backlog; memory.
 
 ## klein-2026-07-10-S237 -- THE MULTI-SCALE EXTENSION (THM-688, HYP-5910): middle speeds COMPLETED -- separated scales get the PRODUCT limit (iterated slicing, rate C(1/V_r + Sum V_{i+1}/V_i)); bounded-ratio middle clusters are RATIONAL-RAY b-COVER objects (product limit fails by persistent +0.0124 at b=2; the exact 2-cover limit 49379/470400 converges at C/V); the taxonomy is CLOSED -- every scale structure has an exactly computable limit measure
 
