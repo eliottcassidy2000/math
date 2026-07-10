@@ -1,3 +1,17 @@
+## klein-2026-07-10-S237 -- THE MULTI-SCALE EXTENSION (THM-688, HYP-5910): middle speeds COMPLETED -- separated scales get the PRODUCT limit (iterated slicing, rate C(1/V_r + Sum V_{i+1}/V_i)); bounded-ratio middle clusters are RATIONAL-RAY b-COVER objects (product limit fails by persistent +0.0124 at b=2; the exact 2-cover limit 49379/470400 converges at C/V); the taxonomy is CLOSED -- every scale structure has an exactly computable limit measure
+
+Prompt (owner): run the multi-scale extension for middle speeds.
+
+(I) SEPARATED SCALES PROVED: S = P u C_1 u ... u C_r, ratios diverging: mu(S) -> Int_{G_P} PROD m_{E_i} (independent fibers), rate C(1/V_r + Sum V_{i+1}/V_i) -- each level is THM-687(B)'s freeze-and-count verbatim with the faster structure replaced by its own limit. Exact product evaluator (per-cell linear factors, exact polynomial integration). Demo mu_inf = 191/2058; convergence to V_1 = 10^4; three-scale case included.
+
+(II) THE RATIONAL-RAY VERDICT (the real middle-speed content): a middle cluster at V_mid ~ (a/b)V_top does NOT decouple -- frac(V_mid alpha) is determined by beta = frac(V_top alpha) AND floor(V_top alpha) mod b: the fiber is the b-FOLD COVER. At V_1 = 2V_2 exactly: the product limit is WRONG by a persistent +0.0124 at every V, while the exact 2-cover joint limit (top arcs twice at width 1/7, mid arcs once at width 2/7, on the circumference-2 circle) = 49379/470400 ~ 0.104972 converges at the C/V rate (|err|*V_2 = 0.28/0.04/0.29). Integer-ratio sequences with growing multiplier fall back to the product limit (the a-cover arcs spread). TAXONOMY COMPLETE: bounded ratio -> b-cover; diverging ratio -> product; every middle-speed structure exactly computable. Sign note: the b=2 coupling correction is POSITIVE here (ray overlap wastes less fiber circle) -- not claimed general.
+
+(III) FLOORS: separated clusters multiply (1 - k_i/7) factors (all k_i <= 6 => unconditional via m_P >= 1/(91 maxP)); RAY-COUPLED PAIRS MERGE (k_mid + k_top <= 6 => unconditional); at most one merged cluster can exceed 6 => every multi-scale class is [unconditional] or [ONE exact positivity check].
+
+(IV) THE WALL: composition with THM-685 (14-coprime q) + kps's strict chain extends verbatim -- the wall on the ENTIRE unbounded residual now reduces to per-class exact positivity checks (limit measures, all computable) + bounded-V bank/census territory (THM-686). Remaining named: general-(a,b) ray evaluator (mechanical), the dead-zone lemma (universal positivity -- per-class decidable today), Lean transcription.
+
+FILES: THM-688 (canon); lrc14_multiscale_middle_speeds_klein_S237.py (+.out); HYP-5910 resolved; backlog; memory.
+
 ## klein-2026-07-10-S236 -- THE TWO-SCALE CLUSTER LIMIT (THM-687, HYP-5905): kps's WALL falls on the bounded-co-offset slices -- |mu(S_V) - mu_inf(P,E)| <= C/V PROVED (measured C <= 0.97); k <= 6 floor UNCONDITIONAL ((1-k/7)/(91 maxP), no E-hypothesis); THE APEX POSITIVITY (consecutive E = measured minimizer, mu_inf > 0 at EVERY k = 7..13); composition with THM-685 + kps strict chain = strict witnesses beyond explicit V_0
 
 Prompt (owner): run the measure floors for the residual families (second directive -- the unbounded half).

@@ -1,0 +1,20 @@
+(I) SEPARATED SCALES: P={1..5}, E2={0,1}@V2, E1={0..5}@V1
+    mu_inf (product) = 191/2058 = 0.092809; m_P = 0.504762; floor (5/7)(1/7)m_P = 0.051506 [OK]
+    ratio study at fixed V2=60 (isolates the V2/V1 term):
+      V2=  60 V1=   240: mu = 0.096006 err = +0.003198  err/(1/V2+V2/V1) = +0.012
+      V2=  60 V1=   600: mu = 0.092483 err = -0.000325  err/(1/V2+V2/V1) = -0.003
+      V2=  60 V1=  1200: mu = 0.094224 err = +0.001416  err/(1/V2+V2/V1) = +0.021
+      V2=  60 V1=  2400: mu = 0.094866 err = +0.002058  err/(1/V2+V2/V1) = +0.049
+      V2=  40 V1=  1600: mu = 0.085355 err = -0.007454  err/(1/V2+V2/V1) = -0.149
+      V2= 100 V1= 10000: mu = 0.094146 err = +0.001337  err/(1/V2+V2/V1) = +0.067
+
+(II) RATIONAL RAY b=2 (V1 = 2*V2 EXACTLY -- the middle-speed coupling):
+    product limit (WRONG here) = 0.092809; 2-cover joint limit = 49379/470400 = 0.104972
+      V2=  300: mu = 0.104031  err_vs_product = +0.011222  err_vs_2cover = -0.000941  |err2cover|*V2 = 0.28
+      V2=  600: mu = 0.104899  err_vs_product = +0.012091  err_vs_2cover = -0.000073  |err2cover|*V2 = 0.04
+      V2= 1200: mu = 0.105214  err_vs_product = +0.012405  err_vs_2cover = +0.000242  |err2cover|*V2 = 0.29
+
+(III) three-scale sanity: P={1..3}, {0,1}@V3, {0,1}@V2, {0..5}@V1:
+    mu_inf = 0.095373; floor (5/7)^2(1/7)m_P = 0.050326
+      (40,400,4000): mu = 0.089362 err = -0.006011
+      (60,900,13500): mu = 0.099758 err = +0.004386
