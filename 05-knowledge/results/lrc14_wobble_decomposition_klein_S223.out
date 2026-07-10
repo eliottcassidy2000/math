@@ -1,0 +1,12 @@
+bank2: V=842 N=182 killers=[420, 286, 176]
+
+    m total wobble linear-zone 1st-order kink-zone total kink |mass| kink cancel
+  420        -0.58                 4.13           -4.70       245.8       0.019
+  286         1.58                 1.88           -0.30       132.6       0.002
+  176         2.82                 8.78           -5.95        56.0       0.106
+
+READING: 'linear-zone' = exact slope*w sums (would vanish under slope balance +
+psi symmetry); 'kink-zone' = pairs whose wobble crosses a breakpoint -- its
+|mass| vs signed total gives the cancellation ratio AT the kink layer. If the
+kink |mass| >> few units with cancel << 1: the wobble bound is signed inside
+the kinks (9th confirmation); if kink |mass| itself is few units: provable.

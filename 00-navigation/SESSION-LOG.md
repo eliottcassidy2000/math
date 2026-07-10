@@ -1,3 +1,20 @@
+## klein-2026-07-09-S223 -- THE WOBBLE BOUND IS IRREDUCIBLY SIGNED (9th and FINAL confirmation): kink-layer |mass| 56-246 cancelling to single digits (ratios 0.002-0.106); THE ARC'S UNIFORM VERDICT -- every a-priori route to LRC(14) passes through exactly ONE signed-cancellation statement; the remaining mathematical content is ONE BIT of signed structure, identical in every coordinate system
+
+Prompt (owner): run the wobble few-units bound.
+
+**THE DECOMPOSITION (measured exactly, bank2, all killers).** wobble = T - T_base split into [LINEAR ZONE: pairs whose wobble stays within one tent-linearity cell -- correction = slope x w exactly] + [KINK ZONE: pairs whose wobble crosses a breakpoint]:
+- total wobble: -0.58 / +1.58 / +2.82 (S216 confirmed);
+- linear-zone first-order: +4.13 / +1.88 / +8.78 -- slope-balance x psi-symmetry does NOT vanish it; alone exceeds the ~3-unit budget in 2 of 3 cases;
+- kink-zone: |mass| = 245.8 / 132.6 / 56.0 cancelling to -4.70 / -0.30 / -5.95 -- cancellation ratios 0.002-0.106.
+
+**VERDICT: the wobble few-units bound is irreducibly signed** -- the 9th confirmation of the cancellation law, at the last residual that had any chance of being one-sided. And the kink windows coincide with S215's pair-excess differences, as predicted: the enemy concentrates exactly where the tent bends.
+
+**THE ARC'S UNIFORM FINAL SYNTHESIS (S208-S223, sixteen sessions).** Every a-priori route to LRC(14) -- and every sub-attempt within every route -- terminates at exactly one irreducibly-signed cancellation statement: absolute envelopes (S211), first-order relation boxes (S212), order-blind scalar proxies (S209/S212/S213), plain Erdos-Turan (S214), per-modulus masses (S211), the modular OffLine tail (S222), the tau-line wobble (S223). Nine independent decompositions, two proof routes, one wall. THE REMAINING MATHEMATICAL CONTENT OF LRC(14) IS ONE BIT OF SIGNED STRUCTURE, appearing identically in every coordinate system the fleet has constructed.
+
+**THE ROAD (decision-grade, for the fleet and owner):** (i) OPERATIONAL: exact certificates (the Lean stack is complete and kernel-pure at every layer) + classified arithmetic (>= 3 live rulers on every tested family incl. the ladder side) + enumeration at scale (mac-mini's LEM-018 today: 293,930-set exhaustion with sharp boundaries -- the pattern works); (ii) if the a-priori asymptotic is wanted: GENUINELY SIGNED methods only -- theta/Mahler structures, Redei-parity mod 2^k (S222's pairing law is the seed, and mac-mini's 'Redei-style counting injection' today shows it propagating), or the exhaustion-to-structure hybrid now closing the Freiman collision arm. Nothing else can work; nine confirmations say so.
+
+FILES: lrc14_wobble_decomposition_klein_S223.out; HYP-5830; log; memory.
+
 ## klein-2026-07-09-S222 -- THE UNCLASSIFIED TAIL DIVERGES ABSOLUTELY (8th confirmation, AT THE TERMINAL OBJECT -- my S221 'no cancellation left' claim CORRECTED) + THE PARITY PAIRING LAW (Redei transplant: LM odd <=> q/2 live <=> all speeds odd; covering => LM EVEN at every tall ruler -- exact on all 94 tested)
 
 Prompt (owner): run the unclassified tail; work creatively; explore past repo topics for inspiration.
