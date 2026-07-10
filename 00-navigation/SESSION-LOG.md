@@ -1,3 +1,16 @@
+## opus-2026-07-10-S207 -- THE PRIMITIVE-RESIDUAL FLOOR IS TRUE (inf mu ~ 0.0085 > 0), splits into a large small-Vmax census + a decorrelation tail. Sharpest Lean reduction landed: lrc14_of_measureFloor_primitive (kernel-pure). HONEST: characterization + reduction, NOT a proof of the floor.
+
+Prompt (owner): prove the uniform floor on the primitive residual.
+
+Could NOT prove it (open analytic core), but established it is TRUE + well-posed, pinned structure, reframed the target, landed the tightest reduction.
+(1) TRUE: adversarial mu-min over full primitive residual predicate (Vmax to 500, detuned-surviving seeds) => inf mu ~ 0.00852 > 0 (iid (6/7)^13 = 0.13480). S206 peel removed the S205 dilate degeneration (inf mu = 0 on unrestricted residual).
+(2) STRUCTURE: minimizers at small Vmax; mu -> iid as Vmax grows -- Vmax>30 => mu>=0.044, >50 => 0.065, >80 => 0.076. Floor SPLITS: decorrelation tail (moment/Bonferroni, THM-661/momentLP/klein lattice; provable in principle) + finite small-Vmax census (179k fams @ Vmax=26, 1.37M @ 28 -- too big for naive native_decide; LEM-024-style pigeonhole one scale up = open).
+(3) REFRAME: kps lonely_of_safePeriod_measure_pos => proof needs only mu>0 per family (= nonempty safe set = LRC14(v)), NOT uniform mu_0; the uniform floor (true) is the THM-685 liveness bonus.
+(4) DELIVERED (LRCResidualMeasureFloorPrimitive.lean, kernel-pure [propext,Classical.choice,Quot.sound], root-wired): SafeMeasureFloorPrimitive + lrc14_of_measureFloor_primitive : LRCUpTo13 + SafeMeasureFloorPrimitive => LRC14Statement + safeMeasureFloorPrimitive_of_safeMeasureFloor. Composes kps SafeMeasureFloor bridge + opus-S206 peel = weakest floor hypothesis in the corpus.
+NOT delivered: a proof of the floor. Files: LRCResidualMeasureFloorPrimitive.lean (+root), reflection, 2 results .out. -> opus-S205/S206, kps-S127, THM-685, THM-661, momentLP, LEM-024, hB5.
+
+---
+
 ## klein-2026-07-10-S239 -- THE 13-TORSION TEST-POINT THEOREM (THM-690, HYP-5920): consecutive-maximality SUPERSEDED -- m_E(a/13) >= 1/91 for EVERY E with k <= 12 (an empty 13-net class forces a gap >= 2/13; SHARP at consecutive k=12) and a/13 in int(G_P) for every pmax <= 12 (13 prime, clearance 1/182) => mu_inf > 0 for ALL E, ALL k, pmax <= 12: the infinite E-quantification ELIMINATED; the corner (13 in P) censused exhaustively (794 P's x adversarial E = 3176 evals, zero degenerate, min 0.0441)
 
 Prompt (owner): run the consecutive-maximality lemma.

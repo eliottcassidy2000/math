@@ -1,0 +1,11 @@
+(A) DECORRELATION TAIL: adversarial min mu over Vmax > V0
+    Vmax >  30:  min mu found = 0.04427
+    Vmax >  40:  min mu found = 0.04570
+    Vmax >  50:  min mu found = 0.06506
+    Vmax >  60:  min mu found = 0.06265
+    Vmax >  80:  min mu found = 0.07619
+    Vmax > 120:  min mu found = 0.07256
+
+(B) FINITE CENSUS SIZE: # primitive-residual families with 23 <= Vmax <= V0 (must contain Vmax)
+    Vmax = 26: 178924 families,  min mu = 0.01365
+    Vmax = 28: 1373928 families,  min mu = 0.00816
