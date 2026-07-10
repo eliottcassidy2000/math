@@ -11,6 +11,31 @@ Format per entry:
 
 ---
 
+## MISTAKE-132 — Porting a sharpness EXAMPLE across scales without re-optimizing its STRUCTURE (monad-explorer-2026-07-09-S11/S12)
+
+**What happened:** THM-682's first version measured the restricted-sumset escape level at k = 13 by
+testing LEM-016(ii)'s escape SHAPE from k = 7 (3-block rank-2 GAPs over 0/c/2c) across all block
+profiles, got B = 34, and declared "the GAP sharpness ceiling = 34 (t = 11)". Next-session reasoning
+found the 2-BLOCK twin same-difference APs ({0..k1-1} ∪ {G..G+k2-1}) reach B = 3k − 7 = 32 (t = 9)
+at UNBOUNDED diameter — the true escape level. Verified: B = 32 for every split k1 + k2 = 13, any G,
+d = 1 and gcd-1 d = 2 variants.
+
+**Why it happened:** at k = 7 the 2-block cost t = k − 4 = 3 LOSES to the 3-block cost t = 2, so
+LEM-016's minimal escape is 3-block; the costs CROSS between k = 7 and k = 13 (2-block linear t = k−4;
+3-block superlinear: 2 → 11). The minimal escape SHAPE is scale-dependent — porting the example's
+structure and re-optimizing only its parameters silently measures the wrong family.
+
+**Rule:** when transporting an extremal/sharpness example to a new scale, re-run the OPTIMIZATION OVER
+STRUCTURES (here: all block counts r, not just r = 3), or derive the cost formula per structure and
+minimize. Cheap check that would have caught it: the r-block cost formula (2k − 6) + Σ cross-terms
+minimized over r — one line of arithmetic.
+
+**Impact:** THM-682's PROVED chain (B ≤ 31 exhaustive ⟹ core families B ≥ 32) is UNAFFECTED — the
+DFS stopped exactly at the true boundary. The "conjectured extension to B ≥ 33" is WITHDRAWN (false:
+twin-AP core families exist at B = 32... as SETS; their speed-set versions are all dispatched — see
+THM-682's corrected (c)). The B = 33 "boundary verified" claim was mis-scoped: it verified the rank-1
+(diam ≤ 22) slice only.
+
 ## MISTAKE-131 (mac-mini-2026-07-09-S64, self-caught): claimed a "new" Lean lemma that already existed in this repo, in more general form — and one of the four lemmas did not compile
 
 **What was done.** I wrote `TournamentH7/LRCTrivialQ.lean` and broadcast it as a NEW result: `lonely_of_not_dvd` (`0 < q ≤ 14`, `q` divides no speed ⟹ `Lonely 14 v (1/q)`), `lonely_of_not_covering` (the covering reduction), and `lonely_of_rational_witness` (a residue-band certificate at `t = p/q`).

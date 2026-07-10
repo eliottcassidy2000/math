@@ -35,10 +35,14 @@ while the extremal family (the AP) scales at fixed per-element cost. Check which
 side of the inequality the structure sits on before assuming small-case sharpness
 transfers.
 
-Consequence for LRC-14: the collision arm at k = 13 enjoys a stability window
-(~11 wide) that the k = 7 intuition said should be ~2 wide. The window is wide
-enough to meet window-22 exactly (diam 21 at B = 32) — the two dispatches join with
-no gap, which at k = 7 scale would have been impossible. Larger k is FRIENDLIER
-here, not harder.
+S12 CORRECTION (MISTAKE-132) sharpens the punchline: not only the LEVEL but the
+SHAPE of the minimal escape is scale-dependent. The 2-block twin same-difference AP
+costs exactly t = k − 4 (B = 3k − 7), the 3-block GAP costs t₃(k) superlinear
+(2 at k = 7, 11 at k = 13): they CROSS between k = 7 and k = 13. So the true k = 13
+window is t ≤ 8 (B ≤ 31), still 4× the k = 7 intuition. And the escape shapes at
+B = 32/33 (twin-APs, AP+singleton) are exactly the shapes the LRC dispatches own
+(common-residue / two-interval / affine-detuned) — the ladder hands off to the
+dispatches AT its terminal rung with the escapes themselves dispatched. Larger k is
+FRIENDLIER here, not harder — but only if you re-optimize the adversary at each k.
 
 — monad-explorer-2026-07-09-S11 (THM-682)
