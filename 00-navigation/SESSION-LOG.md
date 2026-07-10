@@ -1,3 +1,25 @@
+## opus-2026-07-10-S204 -- BRICK (iii) CLOSED: the finite-union volume identity (LRCFiniteUnionVolume.lean, kernel-pure) -- mac-mini's one deferred measure-theory brick of the witness-floor route. Anchors -> m_P floors. On the hB5 critical path via klein THM-685. HONEST: this is the TOOL, not hB5 itself.
+
+Prompt (owner): now go work hB5.
+
+REFRAMED FIRST (klein-S234 THM-685, Kronecker transfer): |LM(q) - q*mu(S)| <= K(S) <= Sum(v_l), proved ELEMENTARY (rounding identity + component/crossing bound; q arbitrary, primality nowhere, no ET/Weyl). Consequence: a MEASURE FLOOR mu(S) >= mu_0 yields live certificates at every q > Sum(v)/mu_0 -- the entire character-sum / signed-cancellation program is bypassed. klein's own words: "remaining analytic content of covering case = measure floors." (Also note: mu(S)>0 => P(S) nonempty => the family is lonely DIRECTLY; so the measure floor IS the covering case of LRC14, and hB5's discrete packaging is equivalent.)
+
+So the right target was mac-mini's NAMED, DEFERRED brick: "BRICK (iii) (the finite-union volume identity, for the FULL m_P floors of hsmall3/hlarge) is honestly DEFERRED -- the one remaining measure-theory brick of the witness-floor route."
+
+DELIVERED (LRCFiniteUnionVolume.lean, kernel-pure [propext,Classical.choice,Quot.sound], root-wired, builds first try):
+- slowmu_Ico_eq : slowmu (Ico a b) = ENNReal.ofReal (b-a) for [a,b) inside [0,1).
+- slowmu_toReal_ge_sum_of_disjoint_Ico (BRICK iii): pairwise-disjoint anchors Ico a_i b_i in [0,1), all inside S => Sum (b_i - a_i) <= (slowmu S).toReal. Via measure_iUnion + tsum_fintype + ofReal_sum_of_nonneg + ofReal_le_iff_le_toReal (finiteness from the probability instance).
+- witnessG2_ge_sum_of_disjoint_anchors : specialised to goodSet ∩ safeSet with mac-mini's checkable per-anchor band bounds (Ico_subset_safeSet_of_bounds) => Sum lengths <= witnessG2 s. THE m_P FLOOR SHAPE for hsmall3/hlarge.
+- witnessG2_ge_of_anchor_floor : chaining form (m_P <= Sum lengths => m_P <= witnessG2 s).
+
+This is the quantitative upgrade of mac-mini's slowmu_toReal_pos_of_Ico_subset (one anchor => positivity only). It turns exact rational anchor tables (mac-mini brick (ii): all 91 hk12 families, min anchor 4/637) into m_P floors.
+
+HONEST SCOPE: this CLOSES a named deferred brick on the hB5 critical path; it does NOT close hB5. The remaining content is the A-PRIORI measure floor for the WHOLE residual class (an infinite family) -- i.e. for every residual family, exhibit disjoint safe anchors of total length >= mu_0 (or get the floor from the moment/Bonferroni route: THM-661 + my momentLP_from_coeffs/cell_moment/farey_moment_decomp). mac-mini's anchor table covers 91 hk12 families, not the residual class.
+
+Files: LRCFiniteUnionVolume.lean (+root). -> mac-mini LRCIntervalBridge/brick(iii), klein THM-685, THM-661, opus momentLP (S192-194), hB5.
+
+---
+
 ## opus-2026-07-09-S203 -- ASSEMBLY SWAP VERIFIED: LRC(14) top theorem is now FOUNDATIONAL-AXIOMS-ONLY [propext, Classical.choice, Quot.sound], 0 sorryAx. native_decide REMOVED. (kps-S127 had already applied the same swap concurrently -- honest attribution.)
 
 Prompt (owner): do the 1-line assembly swap to remove the native_decide.
