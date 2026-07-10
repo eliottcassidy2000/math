@@ -52,6 +52,22 @@ the object klein's multiplicative character frame (HYP-5835) resonates on at pri
 LEM-015 it completes the **structural/extremal characterization of the residual class on both Freiman
 axes** (additive dilated interval + multiplicative geometric chain).
 
-*Verification: `04-computation/lean/TournamentH7/TournamentH7/LRCMultRigidity.lean` (build green, 8476
-jobs; axioms = the standard three). Numerics: `lrc14_e3_diagonal_split_kps_S127` confirms the doubling
-diagonal; the extremizers `{2,4,8,16}`, `{3,9,27,81}` at k=4.*
+## The supply-chain wiring (LRCMultBudget)
+
+LEM-023 is wired into a **multiplicative supply-chain variant** in `LRCMultBudget.lean` (sorry-free,
+kernel-pure), the exact dual of `LRCE3Budget`:
+
+- `multCount_le_choose`: `M₃ ≤ C(k,2)` (the injection `(a,b) ↦ {a, a·b}`).
+- `multCount_lt_choose_of_not_geometric`: not a geometric chain ⟹ **`M₃ < C(k,2)`** (the strict deficit
+  off the extremum — dual of `schurCount_lt_choose_of_not_dilated`).
+- `not_geometric_of_covering_compressed`: a **covering** (`11 ∣`, `13 ∣` some speeds ⟹ `11 ∣ a`, `13 ∣ a`
+  ⟹ `a ≥ 143`), **compressed** (`aᵏ ≤ 13·aʲ` ⟹ `a ≤ 13`) family is *not* a geometric chain — the
+  residual-class exclusion (dual of `dilated_max_eq_card_mul_min`'s `max = k·min`).
+- `multCount_lt_choose_of_covering_compressed`: hence **every covering, compressed residual family carries
+  the strict multiplicative deficit `M₃ < C(k,2)`** — the extremal-off input klein's multiplicative
+  character-frame off-line bound (HYP-5835/S225–226) consumes, parallel to `E3_lt_choose_of_gap` feeding
+  the additive resonance bound.
+
+*Verification: `LRCMultRigidity.lean` + `LRCMultBudget.lean` (build green; axioms = the standard three).
+Numerics: `lrc14_e3_diagonal_split_kps_S127` confirms the doubling diagonal; extremizers `{2,4,8,16}`,
+`{3,9,27,81}` at k=4.*

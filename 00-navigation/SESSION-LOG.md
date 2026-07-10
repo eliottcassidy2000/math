@@ -118,6 +118,23 @@ HONEST VERDICT (did NOT claim completion): hB5 is the fleet's OPEN ANALYTIC fron
 Files: LRC14CompletionAudit.lean (+root), LRC14-STATUS-2026-07-09 completion-audit addendum. -> lrc14_from_B5 (kps-S123), lrc14_grand_assembly (monad THM-671), the hB5 supply chain (kps E3Budget / monad THM-680 / klein signed box), death-star-S8 finish equation.
 
 ---
+## kind-pasteur-2026-07-09-S127 (cont.2) -- WIRED LEM-023 into a MULTIPLICATIVE SUPPLY-CHAIN VARIANT (LRCMultBudget.lean, sorry-free, kernel-pure): every covering+compressed residual family carries the strict multiplicative deficit M3 < C(k,2). The exact dual of LRCE3Budget, anchoring klein's character-frame route.
+
+Prompt (owner): wire LEM-023 into a multiplicative supply-chain variant.
+
+BUILT (LRCMultBudget.lean, sorry-free, kernel-pure [propext, Classical.choice, Quot.sound], 8477 green; namespace LonelyRunner.LRC14Ledger):
+- multCount_le_choose: M3 <= C(k,2) (injection (a,b)->{a,a*b} into powersetCard 2).
+- multCount_lt_choose_of_not_geometric: NOT a geometric chain => M3 < C(k,2) (strict deficit off the extremum; dual of schurCount_lt_choose_of_not_dilated). Handles S=empty (empty is vacuously geometric, so not-geometric => nonempty).
+- not_geometric_of_covering_compressed: covering (11|some, 13|some => 11|a, 13|a => a>=143) + compressed (a^k <= 13*a^j => a <= 13) => NOT a geometric chain. The residual-class exclusion, dual of dilated_max_eq_card_mul_min (max=k*min). Uses Nat.Prime.dvd_of_dvd_pow, Coprime.mul_dvd_of_dvd_of_dvd, Nat.le_of_mul_le_mul_right, Nat.le_self_pow.
+- multCount_lt_choose_of_covering_compressed: covering+compressed => M3 < C(k,2). THE WIRING.
+
+THE VARIANT: klein's SIGNED program runs on the MULTIPLICATIVE character frame (HYP-5835/S225-226: the character sum resonates maximally on geometric progressions; LEM-023 = that extremum). So the multiplicative deficit M3 < C(k,2) is the extremal-off input the character bound consumes -- EXACTLY parallel to the additive E3 < C(k,2) (LRCE3Budget) feeding the additive resonance bound. The two supply chains: [additive E3<C(k,2), LEM-015/LRCE3Budget] and [multiplicative M3<C(k,2), LEM-023/LRCMultBudget] are duals; klein's route uses the multiplicative one. My hypotheses (11|some, 13|some, compressed) are EXACTLY what the residual provides (covering clause at q=11,13; compressed clause 4 on distinct |v| image).
+
+Recorded in LEM-023 canon (supply-chain wiring section). This completes the multiplicative axis: rigidity (LEM-023) + deficit anchor (LRCMultBudget) = the full dual of my additive axis (LEM-015 + LRCE3Budget). The remaining gap is unchanged: the SIGNED analytic character bound (klein/monad/death-star lane; death-star-S10 LRCHyperbolaBox in flight).
+
+My LRC Lean ~48 nodes, chain S114..S127. FILES: LRCMultBudget.lean, LEM-023 canon update.
+
+NEXT: the multiplicative character bound (klein's route) now has its Lean extremal anchor. The sole analytic ingredient (signed OffLine<=f(deficit)) remains klein/death-star's; my dual supply-chain rungs (additive+multiplicative) are both Lean-complete as the structural entries.
 
 ## boxeph-2026-07-09-S12 -- HYP-5853 LEAN LAYER 1: LRCChainAnchor.lean kernel-pure (the 1/3 chain anchor: W0 = 12 outright-lonely CONSTRUCTIVE; exists-t form for dispatch consumers) + the W0 = 11 measure-layer handoff
 
