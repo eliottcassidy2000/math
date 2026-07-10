@@ -1,3 +1,21 @@
+## klein-2026-07-09-S231 -- THE t2 FORMAL WRITE-UP (THM-683): complete proofs, constants verified 624/624 (median slack 12-22x), exceptions arithmetically exact (the small-rational ratios by name) -- the character program's last lemma is now a written theorem
+
+Prompt (owner): run the t2 formal write-up.
+
+DELIVERED: THM-683 (the t2 interval pair-correlation bound), the transcription task of S230 executed with complete proofs:
+- (I) THE AP REFORMULATION: exact bijection -- the dilated band {wy : y in B} is an arithmetic progression of difference w sampled b consecutive times against the band interval: a rational-rotation count, no boundary terms.
+- (II) THE OSTROWSKI BOUND: |N_w - b^2/q| <= sum_i (a_i + 1) <= (maxCF + 1)(log_phi q + 1) -- the classical n-alpha discrepancy bound (Kuipers-Niederreiter Ch. 2) applied to the rational rotation w/q with its finite continued fraction.
+- (III) THE EXCEPTION CHARACTERIZATION: a giant partial quotient <=> w/q lies in a 1/(T s^2)-neighborhood of a rational r/s (CF best-approximation) <=> small-rational speed ratios -- the S225-quarantined multiplicative-coherent family, now arithmetically exact.
+- (IV) the completion identity (the character-side form; linear exponential sums only, NO Weil anywhere).
+- (V) the average = the multiplicative energy of an interval = Ayyad-Cochrane-Zheng 1996 (cited).
+- (VI) the program application with the measured budgets (156 twists, the (6/7)^13 target, the quarantine budget).
+
+VERIFIED (companion script): the written bound dominates ALL 624/624 measured per-ratio errors across generic + near-dilation at 4 primes; median slack 12-22x. The exceptional rows (maxCF > 40) are EXACTLY the small-rational ratios: on the near-dilation, 20/60 = 1/3, 20/80 = 1/4, 20/100 = 1/5 (82 rows -- the dilation's rational lattice); on the generic instance 22 incidental near-rationals, every one still bounded.
+
+THE CHARACTER PROGRAM'S STATE: the frame (S224), the gate (S225), the anatomy (S226), the verification (S230), THE THEOREM (S231). Downstream transcriptions named and spec'd: the t>=3 Cauchy-Schwarz bootstrap, the q0-regime banks, the two-coordinate quarantine interface.
+
+FILES: THM-683; lrc14_t2_ostrowski_check_klein_S231.py (+out); HYP-5870; log; memory.
+
 ## opus-2026-07-09-S200 -- INVESTIGATED eliminating the two window native_decide axioms via kernel decide: EMPIRICALLY INFEASIBLE (winData22_complete = C(22,13)=497420 census, >13h generation + OOM). Corrected my own S199 overclaim (MISTAKE-135). native_decide is the correct tool.
 
 Prompt (owner): eliminate the two native_decide window facts with kernel decide.

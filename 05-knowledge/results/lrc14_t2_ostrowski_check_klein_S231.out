@@ -1,0 +1,11 @@
+adv-worst-120 (generic): bound holds 312/312; median slack 12.0x; #exceptional(maxCF>40)=22
+   exceptional ratio v=33/85: maxCF=68, err=6.4, bound=72
+   exceptional ratio v=46/91: maxCF=136, err=16.4, bound=139
+   exceptional ratio v=81/112: maxCF=68, err=6.4, bound=72
+near-dil-260 (quarantined): bound holds 312/312; median slack 22.2x; #exceptional(maxCF>40)=82
+   exceptional ratio v=20/60: maxCF=124, err=9.5, bound=130
+   exceptional ratio v=20/80: maxCF=93, err=5.5, bound=100
+   exceptional ratio v=20/100: maxCF=74, err=3.5, bound=83
+
+THM-683 part II verified iff bound holds on ALL rows; part III verified iff
+the exceptional rows are exactly the small-rational speed ratios.
