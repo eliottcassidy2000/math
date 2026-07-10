@@ -19,6 +19,18 @@ WHAT THIS IS / IS NOT: it is a genuine kernel-pure measure floor for a specific 
 My LRC Lean ~74 nodes, chain S114..S127. FILES: LRCSmallRuler.lean (+cex_strictlyLive_28, cex_measureFloor, cex_lonely).
 
 NEXT: the general floor is the conjecture. Real progress = mac-mini's witness-floor bricks (per-family exact mu, the deferred finite-union volume identity) or a genuine rigidity mu=0 => dilated (the analytic E3<max => mu>0 step). Neither is a shortcut; both are the open work.
+## opus-2026-07-10-S208 -- THE DECORRELATION TAIL 'Vmax > 30 => mu >= 0.044' IS FALSE (exact counterexample, MISTAKE-137). mu is NOT controlled by Vmax; the minimizers are NEAR-DILATES (d-detuned). Corrected split: peel d=2,3 detuned (monad THM-678) THEN decorrelate the dissociated remainder.
+
+Prompt (owner): prove the decorrelation tail: Vmax > 30 => mu >= 0.044.
+
+Could NOT -- it is FALSE, and trying to prove it surfaced the correct structure.
+COUNTEREXAMPLE (exact): v = [2,12,14,16,18,20,22,26,31,34,37,38,46], Vmax=46>30, primitive (gcd=1), satisfies EVERY current residual clause, exact mu = 5815893623/682366725040 ~ 0.008523 < 0.044. My S207 decorrelation-by-Vmax claim used generic-only seeds and missed coherent large-Vmax families; coherent seeds (dilate c*core + perturbations, APs, rank-2 GAPs) break it on the first pass.
+REAL STRUCTURE: the counterexample is d=2 detuned (non-multiples of 2 = {31,37}, exactly two) = v = 2*H u D, |D|=2 -- a near-dilate. Since a->2a is measure-preserving, mu tracks the near-dilate core at ANY scale. The assembly's detuned branch peels only d=1; d=2,3 detuned survive and ARE the small-mu minimizers.
+MACHINE: peeling d=2 detuned lifts min mu from ~0.014 to ~0.033 (removes the sub-0.02 minimizers; the surviving family is genuinely dissociated). So the floor splits by DISSOCIATION, not Vmax: [peel d<=3 detuned via monad THM-678] THEN [decorrelation mu>=c on the dissociated remainder, the moment/Bonferroni regime].
+RECOMMENDATION @monad: wire THM-678 (d=2,3 detuned dispatch) into lrc14_grand_assembly -- it is the enabling step. @klein @kind-pasteur: the decorrelation floor is then a DISSOCIATION hypothesis, never a Vmax one.
+No Lean changed (computational correction + structural redirect; the fix is THM-678 wiring, monad's lane). Recorded MISTAKE-137, wrote the S208 reflection, annotated the S207 reflection. Files: 2 results .out, MISTAKE-137, 2 reflections. -> opus-S207 (corrected), monad THM-678/682, THM-661, momentLP, hB5.
+
+---
 
 ## opus-2026-07-10-S207 -- THE PRIMITIVE-RESIDUAL FLOOR IS TRUE (inf mu ~ 0.0085 > 0), splits into a large small-Vmax census + a decorrelation tail. Sharpest Lean reduction landed: lrc14_of_measureFloor_primitive (kernel-pure). HONEST: characterization + reduction, NOT a proof of the floor.
 

@@ -1,0 +1,8 @@
+Effect of peeling d-detuned (all-but-d divisible by some g) on the residual floor:
+ dmax | min mu (any Vmax) | min mu (Vmax>30) | #evals
+    0  | 0.01311  (36) | 0.01311 | 1920
+    1  | 0.01412  (48) | 0.01412 | 1502
+    2  | 0.03305  (40) | 0.03305 | 1084
+        (dmax=2 min-mu family: [3, 5, 8, 22, 23, 26, 28, 29, 31, 32, 34, 36, 40])
+    3  | 0.02194  (38) | 0.02194 | 788
+    4  | 0.02184  (37) | 0.02184 | 503

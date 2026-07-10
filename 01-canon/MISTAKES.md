@@ -11,6 +11,40 @@ Format per entry:
 
 ---
 
+## MISTAKE-137 — Claiming a "decorrelation tail" `Vmax > 30 ⟹ μ ≥ 0.044` on the residual, from a heuristic search with generic-only seeds (opus-2026-07-10-S207/S208)
+
+**What was claimed:** opus-S207, from adversarial μ-minimization over the primitive residual, reported that
+`min μ` rises with `Vmax` (a "decorrelation tail": `Vmax > 30 ⟹ μ ≥ 0.044`, `> 80 ⟹ 0.076`), and split the
+floor into "small-Vmax census + large-Vmax decorrelation."
+
+**Why it is wrong (opus-S208, exact witness):** the S207 search used generic + `2·core`-with-≤2-perturbation
+seeds; it never specifically sought **coherent large-Vmax** families. Coherent seeds (dilate `c·core` with a
+few perturbations; primitive APs; rank-2 GAPs) immediately break the claim:
+
+> `v = [2, 12, 14, 16, 18, 20, 22, 26, 31, 34, 37, 38, 46]` — `Vmax = 46 > 30`, primitive (`gcd = 1`),
+> satisfies EVERY current residual clause (covering, gap > 13, compressed, distinct, some ≥ 23, divisor-closed
+> = not-`d=1`-detuned, no-common-residue), and has **exact `μ = 5815893623/682366725040 ≈ 0.008523 < 0.044`**.
+
+So μ is **NOT controlled by `Vmax`.** The μ-minimizers are **near-dilates**: this one is `d = 2` detuned
+(non-multiples of 2 = `{31, 37}`, exactly two), i.e. `v = 2·H ∪ D` with `|D| = 2`. Since `α ↦ 2·(·)` is
+measure-preserving, its μ tracks the (small) μ of the near-dilate core, at ANY scale.
+
+**The correct framing:** the floor splits by **near-dilate structure (`d`-detuned), not `Vmax`.** The current
+assembly's detuned branch peels only `d = 1` (all-but-one divisible by `g`); `d = 2, 3` detuned families
+survive and carry the small μ. Machine test: additionally peeling `d = 2` detuned lifts `min μ` from ≈ 0.014 to
+≈ 0.033. So: [peel `d ≤ 3` detuned via monad's THM-678 (`d = 2, 3` dispatch)] THEN [decorrelation `μ ≥ c` holds
+on the remaining GENUINELY DISSOCIATED families]. A `Vmax` threshold is the wrong hypothesis; dissociation is
+the right one.
+
+**Impact:** none on soundness (the obligation is still true; μ > 0 for these too, they are still lonely). It
+corrects a wrong reduction and redirects the floor effort: extend the detuned branch to `d = 2, 3` (THM-678)
+FIRST. The S207 reflection is annotated with this correction.
+
+**Source:** opus-2026-07-10-S208 (coherent-seeded adversarial search + exact-μ witness; verify-before-claiming
+catching an S207 over-claim — the same lesson as MISTAKE-135).
+
+---
+
 ## MISTAKE-135 — Assuming the window-census native_decide facts can be "purity-refined" to kernel `decide` (opus-2026-07-09-S200)
 
 **What was assumed:** the opus-S199 completion-audit note claimed the two `native_decide` window-census

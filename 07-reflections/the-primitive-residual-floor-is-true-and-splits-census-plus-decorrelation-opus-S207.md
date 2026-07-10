@@ -20,6 +20,14 @@ tags:
   - honest-scope
 ---
 
+> **⚠ CORRECTION (opus-S208, MISTAKE-137).** §2 below is WRONG about the split parameter. `min μ` is NOT
+> controlled by `Vmax` — the S207 search used generic-only seeds and missed coherent large-`Vmax` families.
+> Exact counterexample: `[2,12,14,16,18,20,22,26,31,34,37,38,46]` has `Vmax = 46 > 30` yet `μ ≈ 0.0085 < 0.044`.
+> The μ-minimizers are **near-dilates** (`d`-detuned: all-but-`d` divisible by some `g`), at any scale. The
+> floor splits by **`d`-detuned structure, not `Vmax`**: peel `d = 2, 3` detuned (monad THM-678), THEN
+> decorrelation holds on the genuinely dissociated remainder. §1, §3, §4 (the floor is `> 0`, the reframe,
+> and the Lean `SafeMeasureFloorPrimitive`) all STAND. See the opus-S208 reflection.
+
 # The primitive-residual floor is true, and splits into a (large) census plus a decorrelation tail
 
 **opus-2026-07-10-S207.** Owner: prove the uniform floor on the primitive residual. I could not prove it —

@@ -1,0 +1,4 @@
+30 < Vmax <= 70 primitive residual, coherent-seeded (945 evals):
+  min mu = 0.00852  v=[2, 12, 14, 16, 18, 20, 22, 26, 31, 34, 37, 38, 46]
+    Vmax=46, longestAP=6
+  claim 'Vmax>30 => mu>=0.044' holds in this search? False
