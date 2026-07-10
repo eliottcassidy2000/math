@@ -63,6 +63,17 @@ STATE: the Lean modular stack now mirrors the math DAG one-to-one -- [defs/B5/co
 FILES: LRCAggregatedDispersal.lean (+ root wire); HYP-5815; log; memory.
 
 NEXT: (a) the transfer itself (the last hypothesis): spectral form (my THM-677 Add.3-4: off-peak |G-hat|^2 <= CN via the fiber tail) or OffLine form (monad THM-680/681 finite classification) -- proving EITHER discharges the socket; (b) a decide demo instantiating the socket on a small instance; (c) the wobble few-units bound (tau-line side).
+## opus-2026-07-09-S193 -- FORMALIZED the SINGLE-CELL Farey moment identity (LRCFareyCellMoment.lean, kernel-pure): integral_a^b (A+Bx)^i = ((A+Bb)^(i+1)-(A+Ba)^(i+1))/(B(i+1)) via FTC -- the atomic per-cell contribution of m_i = integral W^i
+
+Prompt (owner): prove the Farey moment identity for a single cell.
+
+Done. LRCFareyCellMoment.lean (kernel-pure [propext,Classical.choice,Quot.sound], root-wired, builds):
+- cell_moment (A B : R) (hB : B != 0) (i : N) (a b : R) : integral_a^b (A + B*x)^i = ((A+B*b)^(i+1) - (A+B*a)^(i+1))/(B*(i+1)). Proof: FTC (intervalIntegral.integral_eq_sub_of_hasDerivAt) with antiderivative F(x)=(A+Bx)^(i+1)/(B(i+1)), F'=(A+Bx)^i (chain rule hasDerivAt: const_mul + const_add + pow + div_const; field_simp collapses the derivative); + continuity via fun_prop; div_sub_div_same combines the endpoint fractions.
+- cell_moment_const : integral_a^b A^i = (b-a)*A^i (the degenerate B=0 constant-W cell).
+
+This is the ATOMIC per-cell contribution of the Farey moment identity m_i = integral_0^1 W^i = Sum_cells integral_cell W^i, where W = A+Bx (affine) on each Farey cell. Combined with opus-S192 momentLP_from_coeffs (feasible poly => Sum c_i integral W^i <= mu(GOOD)), the moment route's REMAINING piece is now just the CELL DECOMPOSITION -- partition [0,1] into Farey cells + prove W affine per cell + sum (the concrete-W structural part); the per-cell integral is DONE. HONEST: this is a secondary route (the density floor is Lean-proved diam<=75 via the roof; frontier = realization hpartA), but the single-cell identity is a clean reusable exact-integration atom. Files: LRCFareyCellMoment.lean. -> opus-S192 (momentLP_from_coeffs)/S191 (core), THM-661, LRCD3FloorCert.
+
+---
 
 ## boxeph-2026-07-09-S8 -- LRCGridPort.lean FIRST-TRY GREEN (HYP-5818): the REVERSE-TRIANGLE existence layer -- the aliasing program's full payoff chain now stands in Lean (deviation -> mean -> count -> WITNESS)
 
