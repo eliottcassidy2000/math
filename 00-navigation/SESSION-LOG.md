@@ -1,3 +1,20 @@
+## opus-2026-07-10-S210 -- THM-678 d=2 GENERIC, REDUCED TO THE COUNTING (LRCDetunedD2.lean, kernel-pure, foundational-only): lonely14_of_two_detuned : LRCUpTo13 + TwoDetunedClearing + (d=2 detuned, (q1,q2)!=(2,2)) => lonely. Formalized the LRC(11) reduction + construction core; the counting (Sum N_j/q_j < 1) is the sole remaining analytic piece.
+
+Prompt (owner): take the generic d=2 case and formalize THM-678.
+
+DELIVERED (LRCDetunedD2.lean, kernel-pure [propext,Classical.choice,Quot.sound], root-wired, builds):
+- lonely14_of_two_detuned_good : the CONSTRUCTION CORE -- given harmonic clearances (>=1/14) and a branch c clearing both detuned phases, the family is lonely at (u+c)/g. Handles the harmonic integer-shift invariance (g*w*(u+c)/g = w*u + w*c).
+- lonely14_of_two_detuned : the FULL reduction -- LRCUpTo13 + TwoDetunedClearing + [v = g*H u {i1,i2}, g>=2 divides all but i1,i2, (q1,q2)!=(2,2)] => lonely. Formalizes the LRC(11) harmonic reduction (orderEmbOfFin of univ\{i1,i2}, card 11, cite 11 => clearance 1/12 >= 1/14 at every branch) + invokes the core.
+- TwoDetunedClearing : Prop = the SOLE remaining analytic obligation -- for distinct nonzero delta_1,delta_2 not divisible by g, (q1,q2)!=(2,2), forall u exists c clearing both detuned phases. This is exactly THM-678's counting dispatch (Sum N_j/q_j < 1 => good branch; N_j = orbit points in the 1/7 danger arc <= floor(q_j/7)+1).
+
+So generic d=2 is REDUCED, kernel-pure, to the clean counting statement TwoDetunedClearing. The LRC(11) reduction (the fiddly indexing) and the construction (integer-shift invariance + case split) are DONE.
+
+HONEST: I did NOT close the counting (TwoDetunedClearing) -- it is the genuine analytic heart (real-arc orbit counting: q_j equally-spaced points, spacing 1/q_j, in a width-1/7 arc, count <= floor(q_j/7)+1; then Sum < 1 for !=(2,2); then a Finset good-branch existence). That is the next piece (a real ~150-line counting formalization). The (2,2) congruent-half-harmonic residual (e.g. the S208 minimizer 2*H u {31,37}, q=q=2) is NOT generic d=2 -- it needs THM-678's mod-2g lift, separate.
+
+To discharge MultiDetunedDispatch (opus-S209) fully: prove TwoDetunedClearing (this counting) + the d=3 analogue + the (2,2)/(3-residual) lifts. Files: LRCDetunedD2.lean (+root). -> opus-S209 (MultiDetunedDispatch peel), S208 (the d-detuned finding), monad THM-678, DetunedDispatch.lonely14_of_detuned (d=1 template), hB5.
+
+---
+
 ## kind-pasteur-2026-07-10-S127 (cont.13) -- difference-primitive TightRigidity is STILL the conjecture. PROVED the provable piece (the COLLAPSE c=1 => {1,...,13}) kernel-pure + named the untouched wall + search evidence.
 
 Prompt (owner): prove TightRigidity for the difference-primitive case.
