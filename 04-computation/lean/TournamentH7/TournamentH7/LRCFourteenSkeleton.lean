@@ -58,6 +58,7 @@ import TournamentH7.LRCGenuineWideCorrection
 import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCP0Concrete
+import TournamentH7.LRCGoodSet
 
 namespace LonelyRunner
 namespace LRC14
@@ -135,8 +136,19 @@ this from the Lebesgue-measure definition; here it is only recorded as an
 obligation proposition. -/
 def rhoStar_nonneg_obligation : Prop := ∀ s : Shape, 0 ≤ rhoStar s
 
-/-- The shape attached to a covering speed family (its `(P,E)` decomposition). -/
-opaque shapeOf : (Fin 13 → ℤ) → Shape
+/-- The shape attached to a covering speed family (its `(P,E)` decomposition) —
+**CONCRETE as of death-star-2026-07-09-S4 (the de-opaquing, opus-S180's named
+obligation)**: absolute speeds `≤ 13` form the small part `P` (matching the header
+semantics `P = S ∩ {1,…,13}`); the remaining speeds form the cluster, recorded as
+co-offsets `Vmax − |v i|` against the overall maximum speed — so `0 ∈ E` whenever
+the cluster is nonempty (the observer-anchor convention of klein-S204/S205).
+Downstream proofs treated `shapeOf` opaquely, so no existing theorem changes;
+what changes is that `hfloor`/`hpartA` instances are now PROVABLE statements
+about a concrete decomposition instead of assertions about an opaque token. -/
+def shapeOf (v : Fin 13 → ℤ) : Shape :=
+  let speeds : List ℤ := List.ofFn fun i => |v i|
+  let Vmax : ℤ := speeds.foldr max 0
+  (speeds.filter (fun a => a ≤ 13), (speeds.filter (fun a => 13 < a)).map (fun a => Vmax - a))
 
 /-- **THM-527 PART A (PROVED in canon; OPEN as a Lean obligation).**  Positive
 good-period density implies the reach bound `M(S) ≥ 1/14`.  This is the
@@ -199,16 +211,24 @@ pigeonhole bound `maxgap >= 1/k >= 1/7`; only k=8..13 remains, with large slack.
 -/
 
 /-- The 1/7-scale witness density
-`G2(P,E)=meas{x in G_P : maxgap(frac(e_i*x)) > 1/7}`.  Abstract here; a full
-formalization will define it as a Lebesgue measure. -/
-opaque witnessG2 : Shape → ℝ
+`G2(P,E)=meas{x in G_P : maxgap(frac(e_i*x)) > 1/7}` — **CONCRETE as of
+death-star-2026-07-09-S4 (the de-opaquing)**: the `slowμ`-measure of the
+concrete GOOD event (`TournamentH7.GoodSet.goodSet`, mac-mini-S26: some phase
+leaves the following length-`1/7` arc empty) intersected with the `G_P` safe
+event (`DenseCovers.safeSet`, all small-part phases in `[1/14, 13/14]`), exactly
+the identification `LRCEventMeasureBridge` carries as hypotheses and
+`LRCGoodSetBridge` floors.  With `P = []` the safe event is `univ`, so pure
+clusters reduce to `slowμ(goodSet E)` — see `LRCWitnessG2Discharge` for the
+first discharged `hfloor` instances. -/
+noncomputable def witnessG2 (s : Shape) : ℝ :=
+  (DenseCovers.slowμ (TournamentH7.GoodSet.goodSet s.2 ∩ DenseCovers.safeSet s.1)).toReal
 
 /-- Current cluster size parameter: the number of co-offsets in the shape. -/
 def clusterSize (s : Shape) : ℕ := s.2.length
 
 /-- Alias for KPS's corrected `rho*_glob` notation: the global-witness density is
 the same 1/7 object called `witnessG2` in this skeleton. -/
-abbrev rhoGlob : Shape → ℝ := witnessG2
+noncomputable abbrev rhoGlob : Shape → ℝ := witnessG2
 
 /-- The exact admissible small-part floor from THM-530/KPS witness route:
 `m_P = 14249/252252`. -/
