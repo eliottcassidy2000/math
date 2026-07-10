@@ -15,6 +15,23 @@ Prompt (owner): run the interference-aware generic-branch bound; work to finish 
 FILES: THM-676; lrc14_moment_layer_forensics_klein_S213.py(+out), lrc14_hightail_penalty_klein_S213.out; HYP-5770 PARTIALLY-TRUE; log; memory.
 
 NEXT (fleet): (a) boxeph's D_m gap (4% vs 5.7%) -- the nearest margin; a factor-1.4 sharpening of one comb-discrepancy bound finishes the mid-band on the tau-line side; (b) the histogram sub-binomial bound (new idea; connects to apex-7/OPEN-Q-108 -- the same mass, discrete); (c) Lean: LRCDiscreteBonferroni can now be just 'hist[0] > 0' + the identity as documentation; (d) the enumeration scale-out ((18,30) band first).
+## kind-pasteur-2026-07-09-S118 -- WIRED the pair-sum ledger into the grand assembly: lrc14_from_ledger (LRCResidualFromLedger.lean, sorry-free) reduces LRC(14) to LRC(<=13) + a single DISCRETE obligation (every residual family has a live pair-sum ruler). The assembly last ANALYTIC surface is now the number-theoretic ledger mac-mini/klein are proving.
+
+Prompt (owner): wire the ledger count bound into mreach_ge_of_blocked_lt, work to finish up LRC(14).
+
+STATE FOUND: monad-S6 lrc14_grand_assembly (THM-671) derives LRC14Statement from LRC(<=13) cite + ONE ResidualObligation (covering + scale-gap>13 + compressed + distinct + some |v_i|>=23 => exists t Lonely). 5 branches already discharged (non-covering sieve, window<=22, ratio<=13 spread13, dominant peel, repeated-speed cite). The residual = the covering ratio>13 case my pair-sum machinery targets. (opus-S186 separate moment-floor route is blocked by opaque witnessG2/shapeOf; the GRAND assembly clean Prop residual is NOT -- I targeted that.)
+
+BUILT (LRCResidualFromLedger.lean, sorry-free, builds 8508 jobs):
+- HasLiveRuler v := exists pair-sum modulus q>0 with blocked-multiplier count < q-1 (the ledger EXACT conclusion; over Finset.range(q-1), native_decide-computable).
+- lonely_of_hasLiveRuler: live ruler => exists t Lonely 14 v t, via my consumer chain mreach_ge_of_blocked_lt (kps-S117) then lonely_of_Mreach_ge.
+- residualObligation_of_ledger: [every residual family has a live ruler] => ResidualObligation.
+- lrc14_from_ledger (cite : LRCUpTo13) (hledger) : LRC14.LRC14Statement := lrc14_grand_assembly cite (residualObligation_of_ledger hledger). Axioms [propext, Classical.choice, Quot.sound, Lean.ofReduceBool] -- no sorryAx.
+
+RESULT: LRC(14) <= LRC(<=13) + [every residual-class family has a live pair-sum ruler]. The final obligation is now DISCRETE/number-theoretic (HasLiveRuler = blocked count < q-1) -- the exact form mac-mini C1 gcd-ledger / THM-675 descent-burden / klein signed box (HYP-5766) prove. Converts the assembly last analytic "exists t Lonely" into the pair-sum liveness census. Key fact: fires v q p = fires |v| q p (band [q/14,13q/14] symmetric under r->q-r), so the ledger abs-speed statement supplies HasLiveRuler verbatim; my consumer works on signed v directly (no lonely_of_abs needed).
+
+THE LRC(14) PROOF NOW: [monad grand assembly: 5 branches DONE + residual] + [my wiring: residual <= HasLiveRuler] + [mac-mini/klein ledger: HasLiveRuler for residual class, IN PROGRESS via Freiman-stability THM-675/HYP-5682]. When the ledger lands in Lean, lrc14_from_ledger closes LRC(14) modulo the LRC(<=13) citation. FILES: LRCResidualFromLedger.lean.
+
+NEXT: mac-mini/klein push HasLiveRuler (the Freiman-stability live-ruler theorem) in Lean => plug into lrc14_from_ledger => LRC(14) complete. Offer: I can help formalize the danger-set/gcd count ingredients of HasLiveRuler.
 
 ## kind-pasteur-2026-07-09-S117 -- LEAN-IFIED the C1 union-bound CONSUMER (LRCLedgerConsumer.lean, sorry-free): turns any pair-sum liveness certificate's blocked-count bound into Mreach>=1/14, native_decide-demonstrated end-to-end. The half that "makes the certificate census a theorem" (mac-mini's ask).
 
