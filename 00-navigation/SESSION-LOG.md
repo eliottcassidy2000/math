@@ -70,6 +70,43 @@ FILES: 01-canon/theorems/THM-681-offline-taxonomy-exact-load-dichotomy.md; 04-co
 NEXT: (a) the final-rung E3-stability rungs (coordinate with kps/opus -- their LRCE3Budget/freimanChain are the endpoints; the middle = quantitative 'few doublings/Schur => structure' steps); (b) Lean THM-680(i)-(iii) + THM-681(A) (finite character sums + case enumeration -- boxeph's LRCAliasingBound pattern); (c) the W0 <= 0.08 branch as a grand-assembly discharged branch (needs the certified-live counting made uniform -- the collision-budget arithmetic is already closed-form); (d) keep the three-route synthesis current (klein (PC) / mac-mini burden / my rulers-floor).
 
 ---
+## mac-mini-2026-07-09-S65 (cont. 7) -- THE k=11 hfloor BAND IS FULLY PROVED: 90,802,046 shapes (diam 25-35, validated C port, 8-way) certified mu >= bar + 0.02 with ZERO flags -- combined with [19,24] + compact + LEM-005, THE ENTIRE hfloor TAIL IS NOW PROVED; the terminal surface of LRC(14) = {hpartA/realization} + Lean plumbing
+
+Prompt (owner): run the C-port for the remaining band; pull from agents and recalibrate as needed.
+
+**RECALIBRATION (from the pull, before computing):** (a) death-star de-opaqued witnessG2/shapeOf
+=> the moment-floor route is now exactly {hMoment, hpartA} (opus-S189 recommends it as the
+shortest path -- this computation IS hMoment's last input); (b) re-reading LEM-005's title:
+k=12,13 tails are discharged UNCONDITIONALLY -- only k=11 has the band gap => the DIRECT k=11
+sweep (~91M reflection-reduced shapes) is 4.5x cheaper than the LEM-017 cascade route (k=13,
+~415M). Ran the direct sweep.
+
+**THE C PORT (lrc14_k11_band_mu.c), validated four ways before trusting:** evalone matches the
+Python evaluator to 1e-15 on 4 shapes including the band extremal {0..9,21} (0.710525127729904
+vs ...905); certify-mode shape counts match the Python exhaustive EXACTLY on all six d = 19..24
+(24310/46251/83980/147065/248710/408730) with 0 flags; the Python evaluator itself was already
+validated float = exact-Fraction = Monte Carlo. Certify mode: exact breakpoint walk on
+[0, 1/2] (mu-region symmetry proved), early exit at accumulated mu >= (bar+0.02)/2, degenerate
+midpoints (|maxgap - 1/7| < 1e-11) flagged for exact re-evaluation.
+
+**THE RUN:** 231 work units (d, e2), 8-way xargs. INCIDENT + AUDIT: the first pass silently
+dropped the 3 heaviest units (34/1, 35/1, 35/2) -- caught by the 231-unit completeness
+checklist (per-d totals vs C(d-1,9)/2 flagged d=34,35 short), re-run clean. FINAL:
+**90,802,046 reflection-reduced primitive 11-shapes, diam 25..35: ALL certified
+mu >= 0.3512 = bar_11 + 0.02; ZERO flags; ZERO degenerate midpoints; per-d totals match
+C(d-1,9)/2 exactly** (d=35: 26,225,628 vs 26,225,628.0).
+
+**WHAT THIS CLOSES:** [compact diam <= 18: exact, kps-S88/fleet] + [diam 19..24: Python
+exhaustive, min mu = 0.7105] + [diam 25..35: THIS RUN] + [diam >= 36: LEM-005 rigorous
+decorrelation] = **the k=11 leg of THM-661 holds at EVERY diameter.** With LEM-005 discharging
+k=12,13 unconditionally and the k=8,9,10 legs closed by B4 (THM-661), **the entire hfloor tail
+is now PROVED -- no verified-not-proved steps remain under hMoment; it rests fully on
+machine-checked computation.** Per opus-S186/S189 + death-star-S4, the remaining mathematical
+surface of LRC(14) is exactly {hpartA/realization} + Lean assembly plumbing.
+
+Files: lrc14_k11_band_mu.c + run_k11_band.sh (04-computation);
+lrc14_k11_band_25_35_C_macmini_S65cont7.out (231 CERT lines + rerun); HYP-5775 RESOLVED (INDEX).
+
 ## klein-2026-07-09-S217 -- r(d)-FLATNESS RUN (THM-677 Addendum 3): the SPECTRAL SAMPLING IDENTITY (proved) + Good's peaks LOCATED at the cluster co-offsets (LEM-011) + the RESONANCE DICHOTOMY verified both ways (adversarial resonant killer fails exactly as predicted) -- the (PC) proof structure is COMPLETE, two final inequalities remain
 
 Prompt (owner): run the r(d)-flatness correlation.
