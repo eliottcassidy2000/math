@@ -1,3 +1,30 @@
+## kind-pasteur-2026-07-10-S127 (cont.5) -- APPLIED THE ASSEMBLY SWAP: lrc14_grand_assembly is now FOUNDATIONAL-AXIOMS-ONLY. The two winData22 native_decide axioms are GONE from the LRC(14) top theorem.
+
+Prompt (owner): formalize the 6-witness cover as the window-22 native_decide replacement.
+
+FOUND IT ALREADY DONE (opus-S202) -- did NOT duplicate. opus formalized LEM-024 in LRCWindow22Census.lean using MY 6 witnesses from S127cont4 ({12/25, 9/26, 7/27, 11/28, 4/23, 11/26}, danger sets {2},{3},{4},{5},{6,17},{7,19}). And opus's proof is BETTER than the cheaper-native_decide I planned: a pure 14-FORCED-ELEMENTS PIGEONHOLE -- failing all six witnesses forces {1,2,3,4,5} u {6|17} u {7|19} u {12,13,14} u {8|16, 9|18, 10|20, 11|22} = 14 distinct elements in a 13-set, contradiction. Fully structural, NO enumeration at all. Verified: window22_lonely builds green, axioms [propext, Classical.choice, Quot.sound].
+
+BUT THE SWAP WAS NOT APPLIED. opus described the "1-line assembly swap" but deferred it (low-concurrency window). LRC14GrandAssembly:103 still called WindowData.hwindow22_closed cite -- the native_decide version. So the top theorem STILL carried the native_decide axioms.
+
+APPLIED IT (the concrete completion, not a duplication):
+- LRC14GrandAssembly: + import TournamentH7.LRCWindow22Census
+- window-22 branch: WindowData.hwindow22_closed cite v hv hwin
+              ->   WindowData.hwindowW_closed 22 cite Window22Census.hdistinct22_kernel v hv hwin
+  (signatures match exactly: hwindow22_closed cite = hwindowW_closed 22 cite hdistinct22_from_data; hdistinct22_kernel is opus's kernel-pure drop-in with the identical signature.)
+
+VERIFIED (build green, 8511 jobs):
+- lrc14_grand_assembly      : [propext, Classical.choice, Quot.sound]   <- NATIVE_DECIDE GONE
+- lrc14_grand_assembly_pure : [propext, Classical.choice, Quot.sound]
+- CONTROL: the OLD call WindowData.hwindow22_closed depends on [propext, Classical.choice, Quot.sound, winData22_complete._native.native_decide.ax_1_1, winData22_ok._native.native_decide.ax_1_1] -- the two axioms the swap removes.
+
+MILESTONE: the LRC(14) top theorem on the with-census route is now FOUNDATIONAL-AXIOMS-ONLY (kernel-pure), modulo the ResidualObligation (the analytic residual). opus-S200's MISTAKE-135 ("native_decide cannot be kernel-decide-eliminated; removal needs the census-shrinking proof") is DISCHARGED: the census-shrinking was the 6-witness pigeonhole, and it is now wired.
+
+CREDIT: opus-S202 = the pigeonhole + hdistinct22_kernel (LEM-024). kps-S127cont4 = the 6 witnesses + the census-branch domain identification (spread13 peels min>=2, leaving 14002). kps this session = verification + the assembly swap + axiom certification.
+
+My LRC Lean ~54 nodes, chain S114..S127. FILES: LRC14GrandAssembly.lean (import + 1-line swap).
+
+NEXT: the remaining non-foundational content of LRC(14) is the ResidualObligation alone (the analytic residual: klein's signed character bound / measure floors -- klein-S234 THM-685 Kronecker transfer just landed "remaining analytic content of covering case = measure floors"). Everything else in the assembly is now kernel-pure.
+
 ## klein-2026-07-10-S234 -- THE KRONECKER TRANSFER (THM-685, HYP-5895): |LM(q) - q*mu(S)| <= K(S) <= Sum(v) PROVED elementary (q arbitrary, primality nowhere) -- measure floors become live certificates at ALL q > Sum(v)/mu; per-family certification A PRIORI COMPLETE; exact lattice constants (c2(doubling) = 5/98 = boxeph's mu_2 link); the deep well's mu = 4637/194040 exact
 
 Prompt (owner): run the relation-lattice resummation next session.
