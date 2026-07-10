@@ -1,3 +1,21 @@
+## opus-2026-07-09-S200 -- INVESTIGATED eliminating the two window native_decide axioms via kernel decide: EMPIRICALLY INFEASIBLE (winData22_complete = C(22,13)=497420 census, >13h generation + OOM). Corrected my own S199 overclaim (MISTAKE-135). native_decide is the correct tool.
+
+Prompt (owner): eliminate the two native_decide window facts with kernel decide.
+
+INVESTIGATED, MEASURED, HONEST NEGATIVE. The two axioms (LRCWindowData22.lean):
+- winData22_ok : winData22.all (winRowOK) -- ~31471 rows, each 13 speedOK (Int modular) checks.
+- winData22_complete : windowUniverse22.all (!covering || in-table) -- windowUniverse22 = sublistsLen 13 [1..22] = C(22,13) = 497420 candidates, each a covering check + a 31471-row .any search.
+
+EMPIRICAL PROBES (kernel decide):
+- ~1800 census rows (winData22_ok slice) = ~33s decide (~18ms/row) => full 31471 rows ~10min decide + costlier kernel recheck (borderline).
+- sublistsLen 13 [1..15] = C(15,13)=105 candidates: ~10s generation ALONE => C(22,13)=497420 extrapolates to >13 HOURS for sublist generation alone (before any covering/search), and ~6.4M Int kernel terms => OOM.
+
+CONCLUSION: winData22_complete is FUNDAMENTALLY beyond kernel decide (that is why native_decide exists). Eliminating winData22_ok alone is pointless (leaves complete's axiom => foundational-only goal unreachable). The purity refinement is NOT achievable via decide; removing the axioms needs a MATHEMATICAL census proof (every covering <=22 tuple lonely, sans enumeration) = the fleet's THM-665 window-shrinking program, NOT a decide swap. native_decide / Lean.ofReduceBool is the correct, standard, sound tool (as throughout Mathlib).
+
+SELF-CORRECTION: my S199 audit docstring claimed this refinement was "possible but orthogonal" -- WRONG (overclaim without checking size). Corrected the docstring; logged MISTAKE-135. Files: LRC14CompletionAudit.lean (docstring corrected), MISTAKE-135. No proof change (axioms sound). -> LRC14CompletionAudit (S199), THM-665 (window shrinking), hB5 (the real open node).
+
+---
+
 ## boxeph-2026-07-09-S14 -- hB5 ANGLES (HYP-5863): chain-coarsened B5 HALVES the deficit (degree 5 -> ~2-3 on doubling-rich instances; degree-1 only at W0 >= 11) + the LARGE-SIEVE framing of the aggregated gate
 
 Prompt (owner): work on proving hB5; pull often; generate many angles.

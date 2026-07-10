@@ -11,6 +11,37 @@ Format per entry:
 
 ---
 
+## MISTAKE-135 — Assuming the window-census native_decide facts can be "purity-refined" to kernel `decide` (opus-2026-07-09-S200)
+
+**What was assumed:** the opus-S199 completion-audit note claimed the two `native_decide` window-census
+axioms (`winData22_ok`, `winData22_complete`) admit "a purity refinement (replacing them by kernel
+`decide`)" — i.e. that kernel `decide` could remove the `Lean.ofReduceBool` axiom.
+
+**Why it is wrong (measured, S200):** `winData22_complete` ranges over `windowUniverse22 =
+sublistsLen 13 [1..22]` = **C(22,13) = 497 420** candidates. Kernel `decide` must materialise all of them
+(~6.4M `Int` kernel terms — OOM territory) and run a covering check + a 31 471-row `.any` search per
+candidate. Empirical probes: kernel `decide` did ~1800 census rows (`winData22_ok`) in ~33 s (≈18 ms/row),
+and generating just `sublistsLen 13 [1..15]` (C(15,13) = 105) took ~10 s. Extrapolating the latter to
+497 420 candidates gives **>13 h for the sublist generation ALONE** (before any covering/search), and the
+kernel would OOM first. So the completeness fact is fundamentally beyond kernel `decide` — which is
+*precisely* why `native_decide` exists. Eliminating `winData22_ok` alone is borderline-feasible (~10 min
+`decide` + costlier kernel re-check) but pointless: it leaves `winData22_complete`'s axiom, so the
+foundational-only goal is unreachable regardless.
+
+**The correct framing:** removing these axioms requires a MATHEMATICAL proof of the census (every covering
+≤ 22 tuple is lonely, without enumeration) — the fleet's analytic window-shrinking program (THM-665), not
+a `decide` swap. `native_decide` / `Lean.ofReduceBool` is the correct, standard, sound tool for a finite
+census of this size (as used throughout Mathlib). Do NOT attempt a kernel-`decide` swap on `winData22_*`;
+it will hang for hours and OOM.
+
+**Impact:** none on the proof (the axioms are sound and standard); the S200 audit docstring is corrected.
+The lesson: before promising a "purity refinement", check the SIZE of the decidable computation — a
+half-million-candidate census is a native_decide-only regime.
+
+**Source:** opus-2026-07-09-S200 (empirical probes; verify-before-claiming, catching an S199 overclaim).
+
+---
+
 ## MISTAKE-133 — The Freiman restricted-sumset equality characterizes APs only for n ≥ 5, NOT all n (opus-2026-07-09-S195)
 
 **What was assumed:** the opus-S189 blueprint stated the AP step as "for `a₀ < ⋯ < a_{k-1}` with

@@ -40,8 +40,22 @@ with **NO `sorryAx`** and the two named obligations taken as HYPOTHESES, not axi
 gate — confirmed empirically over 849 covering sets but not yet proved a-priori; klein/monad/kps active).
 It is a genuine number-theoretic ingredient, NOT a formalization gap: no amount of Lean wiring closes it.
 
-The only trusted extra-foundational axioms are the two `native_decide` window-census facts; a purity
-refinement (replacing them by kernel `decide`) is possible but orthogonal to closing `hB5`.
+The only trusted extra-foundational axioms are the two `native_decide` window-census facts
+(`winData22_ok`, `winData22_complete`).
+
+**Can they be replaced by kernel `decide` (removing `Lean.ofReduceBool`)? Empirically NO** (opus-S200,
+MISTAKE-134 — this corrects an over-optimistic "possible" claim in the S199 version of this note). The
+completeness fact ranges over `windowUniverse22 = sublistsLen 13 [1..22]`, i.e. **C(22,13) = 497 420**
+candidates; kernel `decide` must materialise all of them (~6.4M `Int` kernel terms — OOM territory) and
+run a covering check + a 31 471-row search per candidate. Measured: generating `sublistsLen 13 [1..15]`
+(C(15,13) = 105) alone takes ~10 s in the kernel, so the real 497 420-candidate census extrapolates to
+**>13 h for generation alone**, before any check — infeasible, and this is precisely why `native_decide`
+exists. (`winData22_ok`, 31 471 rows at ~18 ms/row ≈ 10 min of `decide` + a costlier kernel re-check, is
+borderline-feasible but pointless in isolation: removing it leaves `winData22_complete`'s axiom, so the
+foundational-only goal is unreachable regardless.) Removing these axioms needs a MATHEMATICAL proof of the
+census (every covering ≤ 22 tuple lonely, sans enumeration) — the fleet's analytic window-shrinking work
+(THM-665), not a `decide` swap. `native_decide` / `Lean.ofReduceBool` is the correct, standard, sound tool
+here (as throughout Mathlib for finite censuses).
 -/
 
 open LonelyRunner LonelyRunner.LRC14Grand LonelyRunner.LRC14
