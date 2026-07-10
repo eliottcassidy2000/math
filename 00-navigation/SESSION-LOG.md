@@ -1,3 +1,17 @@
+## opus-2026-07-09-S187 -- WORKED THE ACTUAL FINISH LINE (grand assembly THM-671 residual, NOT the superseded witnessG2): the Freiman 3k-4 stability for 7-sets SPLITS at descent-burden 12; 2-D GAPs appear at burden 13 = the S181 obstruction
+
+Prompt (owner): concretize witnessG2 and shapeOf, close the four legs, finish LRC14.
+
+HONEST PIVOT: monad's grand assembly THM-671 (LRC14GrandAssembly.lean) derives LRC14Statement from cite + ONE ResidualObligation (covering + scale-gapped + compressed + distinct-abs + reaches>=23), BYPASSING witnessG2/shapeOf entirely. So concretizing witnessG2 completes a PARALLEL/SUPERSEDED branch, not the finish line. mac-mini's THM-675 reduced the residual's covering branch to the missing STABILITY piece (= my HYP-5682): majority-parity 7-class with <=12-13 distinct pair sums is near-AP => finite check. I worked THAT.
+
+EXACT Freiman 3k-4 stability for 7-sets (all affine-normalized primitive shapes): burden |A+^A|=11 = the AP {0..6} ONLY (Freiman equality); =12 = 4 shapes (length-8 AP {0..7} minus one interior point, spread 7); ALL near-AP => a 5-SHAPE FINITE near-AP family = the THM-675 finite check for burden<=12.
+
+THRESHOLD SHARP AT 12: burden 13 admits 25 shapes INCLUDING 2-D GAPs of UNBOUNDED spread -- (0,1,7,8,9,15,16) spread 16 = 3 runs spaced by 6 = dimension-2 GAP mod 7; (0,1,8,9,10,17,18) spread 18; verified dimension-2 via mod-D columns. This is EXACTLY the opus-S181 obstruction (small sumset yet NOT near-AP) at the 7-set/descent-burden level.
+
+CONSEQUENCE for THM-675 (@macmini): the "<=12-13" target must SPLIT at 12 -- burden<=12 closes by the finite near-AP check (=> non-covering, klein-S211); burden=13 needs the 2-D-GAP/LOOSENESS route (S181: 2-D GAPs loose L~0.1, covered by the density floor THM-661 / opus-S186 moment-floor node), NOT the near-AP route. The two finish-line routes compose along the S181 dimension boundary. NEXT: formalize the burden<=12 finite check (5 shapes, decide-able) + wire the burden=13 2-D-GAP family into the density-floor route. Files: lrc14_freiman_3k4_7set_stability_opus_S187 (+out) + 2 more; reflection the-freiman-3k4-finish-line-splits-at-burden-12-...-opus-S187; HYP-5778. -> THM-675, THM-671, HYP-5682, opus-S181/S186, LEM-015, klein-S211.
+
+---
+
 ## klein-2026-07-09-S213 -- THE HIGH-TAIL IDENTITY (THM-676): B_D = LM - C(c-1,D)-weighted high-coverage mass EXACTLY -- the whole Bonferroni error is one object (the discrete apex-7 mass); layer forensics: generic survives by CROSS-LAYER CANCELLATION, coherent has cancel-ratio 1.0; the a-priori generic bound remains THE open item, now in its sharpest form; three live paths to finish LRC(14) mapped
 
 Prompt (owner): run the interference-aware generic-branch bound; work to finish up LRC(14).
