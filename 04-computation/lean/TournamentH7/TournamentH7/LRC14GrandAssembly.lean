@@ -206,8 +206,12 @@ theorem lrc14_grand_assembly_pure (cite : LRCUpTo13)
       (∀ i, k i ≠ 0) ∧ (Finset.univ.image k).card ≤ 12
   · obtain ⟨L, k, a, A, hdecomp, hL, ha, hbudget, hkne, hcard⟩ := hms
     exact CoarseReduction.lonely14_of_coarse_le12 cite v k a L A hdecomp hL ha hbudget hkne hcard
+  -- (8) nontrivial common residue: THM-682(a) (LRCCommonResidue)
+  by_cases hcr : ∃ d : ℤ, 2 ≤ d ∧ ∃ a : ℤ, ¬ d ∣ a ∧ ∀ i, d ∣ (v i - a)
+  · obtain ⟨d, hd2, a, hna, hres⟩ := hcr
+    exact CommonResidue.lonely_of_common_residue v d a hd2 hna hres
   · push_neg at hdom hrep hdet
-    refine hresidual v hv hcov hgap ?_ ?_ ?_ hms
+    refine hresidual v hv hcov hgap ?_ ?_ ?_ hms ?_
     · intro i
       obtain ⟨j, hji, hj⟩ := hdom i
       exact ⟨j, hji, hj⟩
@@ -215,6 +219,9 @@ theorem lrc14_grand_assembly_pure (cite : LRCUpTo13)
       exact hrep i j hij
     · intro g hg2 i₀ hH
       exact hdet g hg2 i₀ hH
+    · intro d hd2 a hall
+      by_contra hnda
+      exact hcr ⟨d, hd2, a, hnda, hall⟩
 
 /-- `Lonely` is invariant under permuting the family. -/
 theorem lonely_comp_perm {n : ℕ} (v : Fin 13 → ℤ) (t : ℝ) (σ : Equiv.Perm (Fin 13))

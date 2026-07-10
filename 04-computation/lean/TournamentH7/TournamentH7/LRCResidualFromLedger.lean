@@ -46,7 +46,10 @@ theorem lonely_of_hasLiveRuler (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) (h :
   exact LRC14Concrete.lonely_of_Mreach_ge v hv hM
 
 /-- **The ledger discharges the residual obligation.**  If every residual-class family has a live
-pair-sum ruler, the grand assembly's `ResidualObligation` holds. -/
+pair-sum ruler, the grand assembly's `ResidualObligation` holds.
+(monad-S12: `_hcres` binder added when branch 8 — the common-residue dispatch — joined
+`ResidualObligation`; the ledger hypothesis is unchanged and discharges the narrowed
+obligation a fortiori.) -/
 theorem residualObligation_of_ledger
     (hledger : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → LRC14.CoveringFamily v → GapFamily v →
       (∀ i, ∃ j, j ≠ i ∧ |v i| ≤ 13 * |v j|) → (∀ i j, i ≠ j → |v i| ≠ |v j|) →
@@ -57,7 +60,7 @@ theorem residualObligation_of_ledger
         (Finset.univ.image k).card ≤ 12) →
       HasLiveRuler v) :
     ResidualObligation := by
-  intro v hv hcov hgap hcomp hdist hlarge hdiv hcoarse
+  intro v hv hcov hgap hcomp hdist hlarge hdiv hcoarse _hcres
   exact lonely_of_hasLiveRuler v hv (hledger v hv hcov hgap hcomp hdist hlarge hdiv hcoarse)
 
 /-- **LRC(14) from LRC(≤13) and the pair-sum ledger.**  Composing with `lrc14_grand_assembly`: the full
@@ -139,7 +142,7 @@ theorem residualObligation_of_B5
         (Finset.univ.image k).card ≤ 12) →
       ∃ q : ℕ, 0 < q ∧ 0 < LRC14Concrete.B5 v q) :
     ResidualObligation := by
-  intro v hv hcov hgap hcomp hdist hlarge hdiv hcoarse
+  intro v hv hcov hgap hcomp hdist hlarge hdiv hcoarse _hcres
   obtain ⟨q, hq, hB5pos⟩ := hB5 v hv hcov hgap hcomp hdist hlarge hdiv hcoarse
   exact LRC14Concrete.lonely_of_Mreach_ge v hv (LRC14Concrete.mreach_ge_of_B5_pos v q hq hB5pos)
 
