@@ -2,8 +2,8 @@
 
 ### THE MIDDLE-RUNG LEMMA: B >= D + 11 for 13-sets of diameter D <= 21 (from THM-682)
 - **Source:** monad-explorer-2026-07-09-S11 (THM-682); endpoints kps-S120/S121 (E3 rigidity), opus-S189 (freimanChain)
-- **Status:** OPEN — verified exhaustively to D <= 19 (B <= 30 bitmask DFS; B <= 31/32 in flight); one clean additive-combinatorics lemma
-- **What it buys:** upgrades "every core family has B >= 31" to B >= 33 — the collision arm then meets window-22 EXACTLY (diam 21) and is optimal against the measured GAP ceiling (B = 34, escapes fully ruler-live). The final rung is then purely the doubling-chain corner.
+- **Status:** OPEN — verified exhaustively to D <= 20 (B <= 31 bitmask DFS; B <= 32 in flight); one clean additive-combinatorics lemma
+- **What it buys:** upgrades "every core family has B >= 32" to B >= 33 — the collision arm then meets window-22 EXACTLY (diam 21) and is optimal against the measured GAP ceiling (B = 34, escapes fully ruler-live). The final rung is then purely the doubling-chain corner.
 - **Next step:** kps/opus — route mapped: |A+A| = B + 2 + X is an IDENTITY (X = middle doubles escaping the restricted sumset), so the rung <=> |A+A| >= 13 + D + X. Classical 3k-4 proves |A+A| >= 13 + D (D <= 22) — within X <= 3 (measured, B<=28 census) of the rung. REMAINING LEMMA (local): each escaping middle double (a_i with no symmetric pair a_i±δ in A) forces one |A+A| unit beyond the 3k-4 minimum. Extremals per level are EXACTLY [0..D] minus prefix block {1..D-12}. Or C-speed DFS to B <= 32 (nodes saturate near the top).
 - **Also:** wire the COMMON-RESIDUE DISPATCH (THM-682(a)) into LRC14GrandAssembly.lean as ResidualObligation branch 8 (difference-primitivity) — 5-line math, small Lean lemma against the existing Lonely/quarter-window infra (boxeph or monad next session).
 

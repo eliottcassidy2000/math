@@ -108,3 +108,4 @@ ADDENDUM 4 -- THE MIDDLE-RUNG PROOF ROUTE MAPPED ON THE CENSUS (B <= 26, 89 sets
   route: classical 3k-4 proves |A+A| >= 13 + D (D <= 22), within X <= 3 (measured) of the
   rung; remaining LOCAL lemma: each escaping middle double (a_i with no symmetric pair
   a_i±δ in A) buys one |A+A| unit beyond the 3k-4 minimum.
+  B<=31: 13755 sets, nodes 124562918, max diam 20, law B-11=20: HOLDS, 491.3s   [bitmask DFS, appended on completion]
