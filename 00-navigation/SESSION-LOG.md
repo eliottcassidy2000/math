@@ -1,3 +1,19 @@
+## boxeph-2026-07-09-S11 -- THE FINAL-RUNG MATH (HYP-5853): doubling chains are RLL SHIFT SETS -- exact nested measures, the W0 >= 11 outright-lonely theorem, and the drop-in Bonferroni upgrade (+0.0714 per doubling pair in EVERY existing budget)
+
+Prompt (owner): work the math of the final-rung obstruction; push/pull regularly; generate many new angles.
+
+THE NEW LANGUAGE: a maximal doubling chain {a, 2a, ..., 2^(L-1) a} is jointly safe at t iff y = at has its DOUBLING-MAP ORBIT in the band [1/14, 13/14] for L steps -- a run-length-limited (RLL) shift-space condition; the dangers NEST 2-adically. Exact measures (Fractions, interval propagation): mu_1..mu_13 with chain cost ~HALF the union bound at every L (table in INDEX/out). The 1/3-anchor (||2^j/3|| = 1/3) lies in every safe set: A CHAIN ALONE NEVER BLOCKS -- the obstruction is only ever the chain-vs-rest composition.
+
+THEOREM (elementary, unconditional): every 13-set of distinct positive integers with doublingCount W0 >= 11 is LONELY OUTRIGHT (chain-Bonferroni: worst (7,6) budget 0.9777 < 1). No covering, no primitivity, no realization machinery -- positive measure of the non-strict safe set is a witness directly. W0 = 10: 2-chain shapes pass, 3-chain worst fails 1.125.
+
+THE BROAD VALUE (drop-in upgrade): in EVERY existing Bonferroni budget (adaptive-ladder killers, mass criteria, T-zone riders), a doubling PAIR costs 0.2143 (= 1 - 11/14) instead of 2/7 = 0.2857 -- +0.0714 margin per pair (ladder margins were +0.047: ONE pair among the killers flips marginal strata); triples +0.1429. The E3 diagonal (kps-S127's final rung) thus REDUCES its own difficulty: the more doubling, the cheaper the budget.
+
+ANGLES GENERATED (logged for the fleet): (A) the 3a-ruler chain anchor -- clearance 1/3 on the chain, snap-counting only for the 13-L rest; (B) the extremal diagonal is FREE (pure geometric chain: covering forces odd divisors into a; t = 1/(3a) lonely at 1/3); (C) depth-4 complementarity -- chains >= 5 force 16-multiples, blocking LEM-021's dyadic pass exactly where the chain anchor is strongest (the two instruments partition the dyadic axis); (D) the RLL/coding-theory frame: chain safe sets = (0,3)-ish run-length-limited codes, capacity = the transfer-matrix growth rate -- the final rung's diagonal is a COMMUNICATION-CHANNEL capacity question; (E) chain-Bonferroni (computed, above).
+
+LEAN PATH (handoff): each mu_L is a finite rational interval-list identity -- decide-shaped, kernel-pure; chain-Bonferroni is Finset arithmetic; the W0 >= 11 theorem is one small file over LonelyRunner vocabulary. FILES: lrc_chain_bonferroni_boxeph_S11.py (+.out); HYP-5853 CONFIRMED.
+
+---
+
 ## boxeph-2026-07-09-S10 -- LRCP2Eval.lean FIRST-TRY GREEN: concrete P2 evaluation (B2(x) = x^2 - x + 1/6; P2(j/V) explicit rational) -- the enabler for every decide-shaped consumer of the aliasing surface
 
 Prompt (owner): drive the LRC(14) Lean proof toward its final state; pull often; integrate as agents push.

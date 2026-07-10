@@ -1,0 +1,39 @@
+HYP-5853: chain-Bonferroni -- exact RLL measures of doubling chains
+
+== per-chain safe measures mu_L (band [1/14, 13/14]) ==
+  L= 1: mu_L = 6/7 = 0.857143   [union bound +0.8571]  cost 1-mu = 0.1429 vs L/7 = 0.1429  (1 intervals)
+  L= 2: mu_L = 11/14 = 0.785714   [union bound +0.7143]  cost 1-mu = 0.2143 vs L/7 = 0.2857  (2 intervals)
+  L= 3: mu_L = 5/7 = 0.714286   [union bound +0.5714]  cost 1-mu = 0.2857 vs L/7 = 0.4286  (4 intervals)
+  L= 4: mu_L = 9/14 = 0.642857   [union bound +0.4286]  cost 1-mu = 0.3571 vs L/7 = 0.5714  (8 intervals)
+  L= 5: mu_L = 33/56 = 0.589286   [union bound +0.2857]  cost 1-mu = 0.4107 vs L/7 = 0.7143  (14 intervals)
+  L= 6: mu_L = 15/28 = 0.535714   [union bound +0.1429]  cost 1-mu = 0.4643 vs L/7 = 0.8571  (26 intervals)
+  L= 7: mu_L = 109/224 = 0.486607   [union bound +0.0000]  cost 1-mu = 0.5134 vs L/7 = 1.0000  (48 intervals)
+  L= 8: mu_L = 199/448 = 0.444196   [union bound -0.1429]  cost 1-mu = 0.5558 vs L/7 = 1.1429  (86 intervals)
+  L= 9: mu_L = 181/448 = 0.404018   [union bound -0.2857]  cost 1-mu = 0.5960 vs L/7 = 1.2857  (158 intervals)
+  L=10: mu_L = 659/1792 = 0.367746   [union bound -0.4286]  cost 1-mu = 0.6323 vs L/7 = 1.4286  (288 intervals)
+  L=11: mu_L = 1201/3584 = 0.335100   [union bound -0.5714]  cost 1-mu = 0.6649 vs L/7 = 1.5714  (522 intervals)
+  L=12: mu_L = 1093/3584 = 0.304967   [union bound -0.7143]  cost 1-mu = 0.6950 vs L/7 = 1.7143  (954 intervals)
+  L=13: mu_L = 3981/14336 = 0.277693   [union bound -0.8571]  cost 1-mu = 0.7223 vs L/7 = 1.8571  (1736 intervals)
+
+== chain-Bonferroni partition table (partitions of 13) ==
+   budget = Sum_i (1 - mu_{L_i});  PASS iff budget < 1 (=> lonely outright)
+  W0= 0 (m=13 chains): worst budget 1.8571 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; best 1.8571 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]  -> none
+  W0= 1 (m=12 chains): worst budget 1.7857 [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; best 1.7857 [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]  -> none
+  W0= 2 (m=11 chains): worst budget 1.7143 [3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; best 1.7143 [3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]  -> none
+  W0= 3 (m=10 chains): worst budget 1.6429 [4, 1, 1, 1, 1, 1, 1, 1, 1, 1]; best 1.6429 [4, 1, 1, 1, 1, 1, 1, 1, 1, 1]  -> none
+  W0= 4 (m= 9 chains): worst budget 1.5714 [4, 2, 1, 1, 1, 1, 1, 1, 1]; best 1.5536 [5, 1, 1, 1, 1, 1, 1, 1, 1]  -> none
+  W0= 5 (m= 8 chains): worst budget 1.5000 [4, 3, 1, 1, 1, 1, 1, 1]; best 1.4643 [6, 1, 1, 1, 1, 1, 1, 1]  -> none
+  W0= 6 (m= 7 chains): worst budget 1.4286 [4, 4, 1, 1, 1, 1, 1]; best 1.3705 [7, 1, 1, 1, 1, 1, 1]  -> none
+  W0= 7 (m= 6 chains): worst budget 1.3571 [4, 4, 2, 1, 1, 1]; best 1.2701 [8, 1, 1, 1, 1, 1]  -> none
+  W0= 8 (m= 5 chains): worst budget 1.2857 [4, 4, 3, 1, 1]; best 1.1674 [9, 1, 1, 1, 1]  -> none
+  W0= 9 (m= 4 chains): worst budget 1.2143 [4, 4, 4, 1]; best 1.0608 [10, 1, 1, 1]  -> none
+  W0=10 (m= 3 chains): worst budget 1.1250 [5, 4, 4]; best 0.9506 [11, 1, 1]  -> some pass
+  W0=11 (m= 2 chains): worst budget 0.9777 [7, 6]; best 0.8379 [12, 1]  -> ALL PASS
+  W0=12 (m= 1 chains): worst budget 0.7223 [13]; best 0.7223 [13]  -> ALL PASS
+
+  CLOSING FRONTIER: every 13-set with doublingCount W0 >= 11 is LONELY OUTRIGHT by chain-Bonferroni
+
+== sanity: 1/3-anchor ==
+  L=4: 1/3 in safe set: True
+  L=8: 1/3 in safe set: True
+  L=13: 1/3 in safe set: True
