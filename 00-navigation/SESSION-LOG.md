@@ -36,6 +36,24 @@ FORMALIZED (LRCMomentLP.lean, kernel-pure [propext,Classical.choice,Quot.sound],
 REDUCES the per-k bars rhoGlobFloorRat(k)<=mu(GOOD) to: (a) rational moment bound bar<=Sum c_i m_i (LRCD3FloorCert native_decide, done k=11, routine for k=8..12); (b) moment identity E[W^i]=integral W^i (Farey-cell integration); (c) min over ALL k-clusters (compact native_decide + decorrelation tail = the coupled band diam[18,35], the shared open crux, LEM-005/THM-665/666). HONEST: NOT closed; the core supplies the missing inequality, leaving (b)+(c). Files: LRCMomentLP.lean; reflection the-moment-lp-core-the-missing-link-for-the-per-k-D3-bars-opus-S191. -> THM-661, LRCD3FloorCert, GoodSetBridge, LEM-005, THM-665/666.
 
 ---
+## klein-2026-07-09-S219 -- THM-676 FORMALIZED (LRCHighTailIdentity.lean, sorry-free kernel-pure, 8481 jobs green): the HIGH-TAIL IDENTITY bonf D = liveCount - penalty D EXACT in Lean + THE DEPTH LADDER B5 <= B7 <= B9 <= B11 (<= B13 = LM) formal end-to-end -- the modular certificate stack's exact-error layer delivered
+
+Prompt (owner): work to fully formalize the LRC(14) proof.
+
+Read death-star's LRCDiscreteBonferroni first (grep-before-write): defs, B5/bonf bounds, D=13 exactness, consumers all present -- the MISSING layer was THM-676's exact error form + the ladder. Delivered as LRCHighTailIdentity.lean (six theorems, kernel-pure [propext, Classical.choice, Quot.sound], no native_decide, root-wired):
+
+- partial_alternating_choose: sum_{d<=D}(-1)^d C(c,d) = (-1)^D C(c-1,D) for c >= 1 (Pascal telescopes; induction + push_cast + ring).
+- odd_truncation_closed_form: the UNIFORM per-multiplier form = 1_{c=0} - C(c-1,D) -- the c=0 case rides N-truncated subtraction (0-1 = 0, C(0,D) = 0 for odd D >= 1): one formula, no case split for consumers.
+- **bonf_eq_liveCount_sub_penalty (THE HIGH-TAIL IDENTITY, THM-676): bonf D = liveCount - penalty D EXACTLY**, penalty D := sum_p (bandCount - 1).choose D -- Nat.choose auto-kills coverage <= D, so the penalty is by construction the high-coverage mass (the discrete apex-7 object), now formal.
+- choose_ladder_dom: C(x, D+2) <= C(x, D) for x <= 12, 5 <= D <= 13 -- kernel decide (the 13-runner domain fact; note B3 <= B5 is FALSE pointwise, the ladder genuinely starts at 5).
+- **bonf_le_bonf_next (THE DEPTH LADDER): odd 5 <= D <= 11 => bonf D <= bonf (D+2)** -- composed with death-star's bonf13_eq_liveCount, THM-675's escalation B5 <= B7 <= B9 <= B11 <= B13 = LM is now formal end-to-end.
+- penalty_lt_liveCount_of_bonf_pos: the certificate reading (bonf positivity = live count strictly above the penalty).
+
+Two build iterations (two no-goals bullets fixed); FULL GREEN with axiom audit printed. THE LEAN MODULAR-CERTIFICATE STACK NOW: [defs + B5 + consumers + AP demo: death-star] + [exact error form + depth ladder: THIS FILE] + [pair-sum dispatch + ledger consumer + 966 base: kps] + [aliasing core: boxeph] + [E3 budget/rigidity: kps/opus] -- every layer of the modular route's certificate machinery is formal; what remains formal-side tracks exactly what remains math-side (the a-priori supply / off-line-off-peak transfers + hpartA reformulation per opus-S190).
+
+FILES: LRCHighTailIdentity.lean (+ root wire); HYP-5810; log; memory.
+
+NEXT (Lean): (a) the penalty's aggregated form against dvd_Ioc_card_le (death-star's dispersal socket) -- THM-673(A) in Lean is within reach; (b) a mid-band-instance bonf-7 demo by decide (small V) exercising the ladder; (c) the tent/sampling identities need real-analysis Fourier -- boxeph's LRCAliasingBound abstract-coefficient pattern is the template.
 
 ## klein-2026-07-09-S218 -- THE OFF-PEAK BOUND (THM-677 Addendum 4): the FIBER IDENTITY + F-hat's decay MEASURED (geometric ~0.2-0.36/coordinate, density check exact) + the truncation direction is upper-bound-safe (2.7x cancellation bonus) + THE TWO-FRAME CONVERGENCE with monad's same-day THM-680 -- the two routes' residues are now ONE species (low near-relations of v), with the Freiman extremum already excluded by kps's same-day LRCE3Budget
 
