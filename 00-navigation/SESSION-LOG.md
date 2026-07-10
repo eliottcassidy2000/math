@@ -1,3 +1,23 @@
+## kind-pasteur-2026-07-10-S127 (cont.13) -- difference-primitive TightRigidity is STILL the conjecture. PROVED the provable piece (the COLLAPSE c=1 => {1,...,13}) kernel-pure + named the untouched wall + search evidence.
+
+Prompt (owner): prove TightRigidity for the difference-primitive case.
+
+HONEST BOUNDARY (the headline). Restricting TightRigidity (mu=0 => dilated) to the difference-primitive class does NOT make it provable. The dilation freedom lives entirely in the CONCLUSION ("dilated" = "= c*{1..13} for SOME c"); primitivity fixes c=1, collapsing the conclusion to the single set {1,...,13}. But the HARD implication -- mu=0 => the absolute speeds form an arithmetic progression AT ALL -- is scale-free and UNTOUCHED. So PrimitiveTightRigidity (mu=0 => {1,...,13} for primitive v) is STILL the conjecture, still >= LRC(14). I did not fake it.
+
+WHAT I PROVED (LRCTightRigidity.lean, sorry-free, kernel-pure [propext, Classical.choice, Quot.sound], 8513 green):
+- Primitive v := forall d>=2, NOT (forall i, d | v i).
+- dilated_primitive_eq_range: Primitive v + DilatedFamily v => image(|v.|) = Icc 1 13. THE COLLAPSE. Every |v_i|=c*k sits in the dilated image so c | |v_i| = |v_i|, hence c | v_i for all i (Int.abs_eq_natAbs + Int.dvd_natAbs); primitivity forbids c>=2 => c=1 => image = (Icc 1 13).image(1*) = Icc 1 13. Genuinely SHARPENS the rigidity's conclusion: the only PRIMITIVE tight family the rigidity permits is the AP itself, no dilate.
+- PrimitiveTightRigidity := forall nonzero primitive v, mu=0 => image(|v.|)=Icc 1 13.  <- named, STILL THE CONJECTURE.
+- primitiveTightRigidity_of_tightRigidity: TightRigidity => PrimitiveTightRigidity (via the collapse). Confirms the restriction throws away NO essential content -- it is a restatement of the wall, not a way over it. Still implies LRC(14): residual is scale-gapped (ratio>13) so != {1,...,13} (ratio exactly 13) => mu>0.
+
+SEARCH EVIDENCE (lrc14_primitive_tight_search_kps_S127): over all 13-subsets of [1,N] with Vmax=N and gcd=1 (PRIMITIVE), N<=20: the ONLY mu=0 family is {1,...,13} itself. ZERO primitive non-AP tight families in range => evidence FOR PrimitiveTightRigidity (not a proof). The dilates c*{1..13}, c>=2 are all NON-primitive, so they never counterexample the primitive statement -- which is exactly why the collapse is clean.
+
+LESSON: a restriction that removes a PARAMETER from the CONCLUSION (dilation scale) looks like progress on the THEOREM but only trims the conclusion. An implication's difficulty lives in the hypothesis->structure map; a scale-free structural claim (AP) is invariant under the very normalization primitivity provides. Honest first question for a restricted case: does the restriction touch the hard implication, or only the shape of its output? Here: only the output. Proved the shape-collapse, named the wall.
+
+My LRC Lean ~80 nodes, chain S114..S127. FILES: LRCTightRigidity.lean (+Primitive, dilated_primitive_eq_range, PrimitiveTightRigidity, primitiveTightRigidity_of_tightRigidity), lrc14_primitive_tight_search_kps_S127.py/.out, reflection the-difference-primitive-case-collapses-the-conclusion-not-the-wall-kps-S127.md.
+
+NEXT: PrimitiveTightRigidity (= mu=0 => {1,...,13}) is the conjecture. Real progress = the analytic step mu=0 => E3=C(13,2) (my E3 rigidity then gives AP), i.e. a genuine measure/moment floor -- not a restriction of the quantifier. Related live thread: opus-S209 LRCDissociatedAssembly (ResidualObligationDissoc = primitive residual + no level-2/3 detuned g => LRC14 via THM-678 citation) -- shrinks the primitive-residual floor obligation to the DISSOCIATED case; worth wiring to my primitive collapse.
+
 ## opus-2026-07-10-S209 -- WIRED the d=2,3 DETUNED PEEL (LRCDissociatedAssembly.lean, kernel-pure, foundational-only): lrc14_grand_assembly_dissoc / lrc14_from_B5_dissoc reduce LRC(14) to MultiDetunedDispatch (THM-678 citation) + the DISSOCIATED residual. HONEST: THM-678 is NOT Lean-formalized -- it enters as a named citation (paper-proved), like LRC(<=13).
 
 Prompt (owner): wire THM-678 d=2,3 into the assembly.

@@ -69,5 +69,50 @@ It is NOT proved — `TightRigidity` is the open hypothesis. -/
 theorem lrc14_of_tightRigidity (cite : LRCUpTo13) (h : TightRigidity) : LRC14.LRC14Statement :=
   lrc14_of_measureFloor cite (safeMeasureFloor_of_tightRigidity h)
 
+/-! ### The difference-primitive case: the conclusion collapses, the hypothesis does not.
+
+Asked to prove `TightRigidity` for the difference-primitive class.  Difference-primitivity removes the
+*dilation freedom* — for a primitive family "dilated" means literally `{1,…,13}` (`dilated_primitive_eq_range`,
+proved below) — but the *hard* implication `μ = 0 ⟹ dilated` is untouched.  The restricted statement is
+still the AP extremal uniqueness (`μ = 0 ⟹ the family is the AP {1,…,13}`), which is `≥ LRC(14)`.  So the
+restriction sharpens the conclusion, not the difficulty; it is not proved. -/
+
+/-- `v` is **primitive**: no integer `≥ 2` divides every speed. -/
+def Primitive (v : Fin 13 → ℤ) : Prop := ∀ d : ℤ, 2 ≤ d → ¬ (∀ i, d ∣ v i)
+
+/-- **The difference-primitive collapse.**  For a primitive family, being a dilated interval forces the
+scale `c = 1`: the absolute speeds are exactly `{1,…,13}`.  (Every `|vᵢ| = c·k`, so `c` divides every `vᵢ`;
+primitivity rules out `c ≥ 2`.)  This sharpens `TightRigidity`'s conclusion on the primitive class — the
+only *primitive* tight family that the rigidity permits is the arithmetic progression itself. -/
+theorem dilated_primitive_eq_range {v : Fin 13 → ℤ} (hprim : Primitive v) (hdil : DilatedFamily v) :
+    (Finset.univ.image fun i => |v i|) = Finset.Icc 1 13 := by
+  obtain ⟨c, hc, himg⟩ := hdil
+  have hc1 : c = 1 := by
+    by_contra hcne
+    apply hprim c (by omega)
+    intro i
+    have hmem : |v i| ∈ (Finset.Icc 1 13).image (fun k => c * k) := by
+      rw [← himg]; exact Finset.mem_image_of_mem _ (Finset.mem_univ i)
+    rw [Finset.mem_image] at hmem
+    obtain ⟨k, _, hk⟩ := hmem
+    have h1 : c ∣ |v i| := ⟨k, hk.symm⟩
+    rwa [Int.abs_eq_natAbs, Int.dvd_natAbs] at h1
+  subst hc1
+  rw [himg]
+  simp
+
+/-- **The difference-primitive rigidity is still the conjecture.**  The AP extremal uniqueness — every
+nonzero primitive family with a measure-zero safe set *is* the arithmetic progression `{1,…,13}` — is a
+restatement (via `dilated_primitive_eq_range`) of `TightRigidity` on the primitive class, hence still
+`≥ LRC(14)`.  Named, not proved. -/
+def PrimitiveTightRigidity : Prop :=
+  ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) → Primitive v → volume (safePeriod v) = 0 →
+    (Finset.univ.image fun i => |v i|) = Finset.Icc 1 13
+
+/-- The full rigidity gives the primitive rigidity (via the collapse) — confirming the restriction does not
+weaken the essential content. -/
+theorem primitiveTightRigidity_of_tightRigidity (h : TightRigidity) : PrimitiveTightRigidity :=
+  fun v hv hprim hμ => dilated_primitive_eq_range hprim (h v hv hμ)
+
 end LRC14Grand
 end LonelyRunner

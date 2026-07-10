@@ -1,0 +1,8 @@
+Difference-primitive tight-family search (kps-S127).
+Testing PrimitiveTightRigidity: is any primitive mu=0 family != {1,...,13}?
+
+sanity: {1,...,13} is tight (mu=0): OK
+
+primitive mu=0 families beyond {1,...,13} in Vmax<=20: 0
+=> ZERO. Only the AP {1,...,13} is a primitive tight family in range.
+=> evidence FOR PrimitiveTightRigidity (NOT a proof; it is >= LRC-hard).
