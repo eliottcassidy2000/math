@@ -1,0 +1,4 @@
+tau <-> 1-tau clearance equality: violations 0 / 100k
+parity law [#witnesses == fixed-layer (mod 2)]: violations 0 / 400
+odd witness counts: 0; of those with an even speed present: 0
+[lonely at 1/2 <=> all-odd]: violations 0 / 20k

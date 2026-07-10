@@ -15,6 +15,37 @@ THE EXTENSION (80 covering+primitive instances, 20 per cell, V = 120-260, 8 wind
 FILES: lrc14_matrix_corpus_klein_S225.out; HYP-5840; log; memory.
 
 NEXT (the program, for whoever takes it): (a) the t>=3 chain -- @kind-pasteur/@opus, the incomplete-character Parseval is the multiplicative twin of your moment machinery; (b) the per-instance one-good-stage statistic formalized (max over primes, not min); (c) the diagonal quarantine interface (E3/R(v) threshold => ladder) as one clean lemma joining LRCE3Budget + LRCFreimanAP.
+## mac-mini-2026-07-09-S65 (cont. 11) -- LEM-020: THE REDEI INVOLUTION FOR LRC(14) -- tau <-> 1-tau pairs ALL witnesses; the fixed layer = the all-odd half-witness; DEPTH-1 PARITY IS PROVABLY BLIND ON THE COVERING BRANCH (witness counts always EVEN); the first live parity layer is 2-adic depth 4 (covering forces 8|v but NOT 16)
+
+Prompt (owner): prove the one signed bit (klein-S223).
+
+**PROVED (LEM-020, three one-line proofs; verified 0 violations: involution 0/100k, parity law
+0/400 symmetric grids, blindness 0/20k):**
+(1) ||v(1-tau)|| = ||v tau|| -- tau <-> 1-tau is a clearance-preserving involution; witnesses
+    pair up. (First attempt used the WRONG (j,phi) partner -- off by one -- caught by its own
+    verification: 247k violations -> corrected to the raw-time form -> 0. Verify-first, again.)
+(2) REDEI PARITY LAW: on any reflection-symmetric grid, #lonely points == #lonely fixed points
+    (mod 2); the only fixed point is tau = 1/2.
+(3) DEPTH-1 BLINDNESS: tau = 1/2 lonely <=> ALL speeds odd (LEM-019's half-witness) <=>
+    non-covering. Covering => empty fixed layer => **witness counts on the covering branch are
+    ALWAYS EVEN: depth-1 parity certifies nothing.**
+
+**THE ANATOMY OF THE ONE BIT:** the natural sign-pairing cancels COMPLETELY on the covering
+branch -- which is simultaneously WHY nine absolute bounds failed (after the involution there
+is no first-order mass left, only the signed residue of a FINER pairing) and WHY the content is
+exactly one bit (each involution layer either dies -- empty fixed layer -- or decides). The
+Redei move transplants exactly, and its depth-1 fixed point is precisely the non-covering
+dispatch: the calibration, one more time.
+
+**THE ROAD, STATED PRECISELY:** the 2-adic parity tower: at depth k the fixed times are
+odd/2^k, where loneliness is a finite band condition mod 2^k. Covering kills depths 1-3 (8 | v
+forced) **but NOT depth 4** (covering does not force 16 | v; a speed v = 8 mod 16 sits at
+clearance 1/2 at odd/16). So the first potentially-live parity layer on the covering branch is
+k = 4 -- klein-S222's seed in concrete band coordinates; the quantitative question (does some
+bounded-depth layer always decide on covering?) is the named refinement, finite per depth, in
+the coordinates this arc's instruments already speak (THM-672/674 bands + LEM-019 descent).
+
+Files: LEM-020 (canon); lrc14_redei_involution_macmini_S65cont11.{py,out}.
 
 ## opus-2026-07-09-S195 -- PROVED the FREIMAN AP STEP in Lean (LRCFreimanAP.ap_of_min_burden, kernel-pure): minimal restricted sumset 2n-3 => AP, FOR n>=5. Caught + recorded that the step is FALSE for n<=4 (MISTAKE-133); found a CLEANER proof (interleaved chain, no reflection)
 
