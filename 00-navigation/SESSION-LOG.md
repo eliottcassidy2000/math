@@ -14,6 +14,22 @@ PLATFORM CAVEAT (honest, kps-S127 heads-up): the four biggest cont.22 cert files
 FILES: LRCSafeCertLeafTrees.lean, LRCSafeCertDispatch.lean, lrc14_dispatcher_codegen_macmini_S65cont23.py, root imports (x2), full root green locally (8818 jobs incl. kps LRCTightRigidity/LRCDissociatedRigidity).
 
 NEXT AGENT: (a) resolve the Windows segfault (kps report -> maxRecDepth or re-emission); (b) hMoment: formalize the THM-661 citation node (the last certificate-shaped gap of the moment route); (c) hsmall: the k <= 7 pigeonhole (nu = 1 on small clusters + the goodSet-side floors -- my cont.21 band machinery + klein THM-687's k<=6 unconditional floor are the ingredients); (d) hpartA per opus-S208 peel-then-decorrelate.
+## opus-2026-07-10-S211 -- THM-678 d=2 COUNTING PROVED (TwoDetunedClearing, kernel-pure, foundational-only): generic d=2 detuned dispatch is now UNCONDITIONAL from LRC(<=13). Three new counting lemmas + assembly; the DE-CIRCLING psi-injection sidesteps the S210 circular-geometry obstacle.
+
+Prompt (owner): prove TwoDetunedClearing, the counting.
+
+DELIVERED (kernel-pure [propext,Classical.choice,Quot.sound], sorryAx 0, root-wired, builds green):
+- LRCIntervalCount.card_le_of_mem_Ioo : a real open interval of width W holds <= floor(W)+1 integers (foundational).
+- LRCIntervalCount.bad_count_le : #{c in [0,g) : delta_j(u+c)/g not >=1/14 from Z} <= gcd(delta_j,g)*(floor(q_j/7)+1). KEY -- the DE-CIRCLING injection c -> psi(c)=p*c - q*round(delta(u+c)/g) (p=delta/gcd,q=g/gcd) lands each bad branch in a width-q/7 real interval and is <=gcd-to-1 (gcd(p,q)=1 => q|c-c'), reducing the count to card_le_of_mem_Ioo. This SIDESTEPS the tight circular equally-spaced-points bound I flagged in S210 as the hard obstacle.
+- LRCIntervalCount.sum_lt : gcd_1*(floor(q_1/7)+1)+gcd_2*(floor(q_2/7)+1) < g iff (q1,q2)!=(2,2). Elementary (2(q/7+1)<=q for q>=2; 3(q/7+1)<=q for q>=3). Binding case (2,3)=5/6.
+- LRCTwoDetunedClearing.twoDetunedClearing : TwoDetunedClearing -- union bound: the two bad sets total card < g = |[0,g)| so cannot cover it; an uncovered c clears both phases >=1/14. Discharges the S210 obligation.
+- lonely14_of_two_detuned' : LRCUpTo13 + [v=g*H u {i1,i2}, g>=2, (q1,q2)!=(2,2)] => lonely, NO clearing hyp. Generic d=2 unconditional.
+
+HONEST -- remaining for full MultiDetunedDispatch: (1) the (2,2) residual (congruent-half-harmonic pair, e.g. S208 min-mu 2*H u {31,37}) is EXCLUDED, needs THM-678's mod-2g lift (separate). (2) the d=3 case. (3) wiring lonely14_of_two_detuned' into MultiDetunedDispatch (extract i1,i2 from nonMultCard=2; leaves only (2,2)). NOT done: (1),(2),(3). The GENERIC d=2 counting -- the analytic heart the owner asked for -- IS proved.
+
+Files: LRCIntervalCount.lean, LRCTwoDetunedClearing.lean (+root); tasks #29-32. -> opus-S210 (reduction), S209 (MultiDetunedDispatch), S208 (d-detuned finding), monad THM-678, hB5.
+
+---
 
 ## mac-mini-2026-07-09-S65 (cont.22, 2026-07-10) -- THE hB CERTIFICATE SWEEP: MISTAKE-136 (hB node UNSATISFIABLE over all Shape) + repaired consumer + THE capRat LADDER IS EXACT (= per-|S| safe minima, all 6 rows, engine-verified) + 762/2380 families GREEN IN LEAN (Sizes 1,2,3,4a), remaining 1618 emitted + building sequentially.
 

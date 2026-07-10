@@ -192,4 +192,46 @@ theorem bad_count_le (δ g : ℤ) (hg : 1 ≤ g) (u : ℝ) :
     _ = (Int.gcd δ g) * ((g / (Int.gcd δ g : ℤ)).toNat / 7 + 1) := by
         rw [hdtoNat, hq, hd]
 
+/-- **The counting inequality.** With `Nⱼ = ⌊qⱼ/7⌋ + 1` and `g = dⱼ·qⱼ`, the two bad-branch bounds sum to
+`< g` exactly when `(q₁, q₂) ≠ (2, 2)`. The binding case is `(2, 3)` (sum `5/6`). Elementary: `2(q/7+1) ≤ q`
+for `q ≥ 2` and `3(q/7+1) ≤ q` for `q ≥ 3`, then clear denominators. -/
+theorem sum_lt (d₁ q₁ d₂ q₂ g : ℕ) (hd₁ : 0 < d₁) (hd₂ : 0 < d₂)
+    (hq₁ : 2 ≤ q₁) (hq₂ : 2 ≤ q₂) (hne : ¬(q₁ = 2 ∧ q₂ = 2))
+    (hg₁ : g = d₁ * q₁) (hg₂ : g = d₂ * q₂) :
+    d₁ * (q₁ / 7 + 1) + d₂ * (q₂ / 7 + 1) < g := by
+  set P₁ := d₁ * (q₁ / 7 + 1) with hP₁
+  set P₂ := d₂ * (q₂ / 7 + 1) with hP₂
+  have hg0 : 0 < g := by rw [hg₁]; exact Nat.mul_pos hd₁ (by omega)
+  by_cases h3₁ : 3 ≤ q₁
+  · by_cases h3₂ : 3 ≤ q₂
+    · -- both `q ≥ 3`:  `3·Pⱼ ≤ g`, so `3(P₁+P₂) ≤ 2g < 3g`
+      have c1 : 3 * P₁ ≤ g := by
+        rw [hP₁, hg₁]
+        calc 3 * (d₁ * (q₁ / 7 + 1)) = d₁ * (3 * (q₁ / 7 + 1)) := by ring
+          _ ≤ d₁ * q₁ := Nat.mul_le_mul_left _ (by omega)
+      have c2 : 3 * P₂ ≤ g := by
+        rw [hP₂, hg₂]
+        calc 3 * (d₂ * (q₂ / 7 + 1)) = d₂ * (3 * (q₂ / 7 + 1)) := by ring
+          _ ≤ d₂ * q₂ := Nat.mul_le_mul_left _ (by omega)
+      omega
+    · -- `q₂ = 2`, `q₁ ≥ 3`
+      have hq2 : q₂ = 2 := by omega
+      have hb2 : 2 * d₂ = g := by rw [hg₂, hq2]; ring
+      have hP2v : P₂ = d₂ := by rw [hP₂, hq2]; norm_num
+      have c1 : 3 * P₁ ≤ g := by
+        rw [hP₁, hg₁]
+        calc 3 * (d₁ * (q₁ / 7 + 1)) = d₁ * (3 * (q₁ / 7 + 1)) := by ring
+          _ ≤ d₁ * q₁ := Nat.mul_le_mul_left _ (by omega)
+      omega
+  · -- `q₁ = 2`, so `q₂ ≥ 3`
+    have hq1 : q₁ = 2 := by omega
+    have hb1 : 2 * d₁ = g := by rw [hg₁, hq1]; ring
+    have hP1v : P₁ = d₁ := by rw [hP₁, hq1]; norm_num
+    have h3₂ : 3 ≤ q₂ := by omega
+    have c2 : 3 * P₂ ≤ g := by
+      rw [hP₂, hg₂]
+      calc 3 * (d₂ * (q₂ / 7 + 1)) = d₂ * (3 * (q₂ / 7 + 1)) := by ring
+        _ ≤ d₂ * q₂ := Nat.mul_le_mul_left _ (by omega)
+    omega
+
 end LRCIntervalCount
