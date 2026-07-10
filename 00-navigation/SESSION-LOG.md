@@ -1,3 +1,33 @@
+## kind-pasteur-2026-07-10-S127 (cont.8) -- (1) FORMALIZED the strict rounding identity (LRCStrictRuler.lean, kernel-pure): a strictly-live ruler IS a strict witness, so LRC(14) <= citation + an INTEGER statement. (2) DESCRIBED THE WALL, and CORRECTED a claim I was about to publish: covering does NOT exclude the tight locus -- the SCALE GAP does.
+
+Prompt (owner): formalize the strict rounding identity: strictly-live ruler => StrictWitness. work on describing the wall better.
+
+(1) THE STRICT ROUNDING IDENTITY (LRCStrictRuler.lean, sorry-free, kernel-pure [propext, Classical.choice, Quot.sound], 8514 green):
+- StrictlyLive v q p := 0<p<q and forall i, q < 14*((v i * p) % q) < 13*q.
+- int_band_bound: q + 1 <= 14*|r - j*q| for every j:Z, given 0<=r<q, q<14r, 14r<13q. (j<=0: |r-jq|>=r, 14r>=q+1. j>=1: |r-jq|>=q-r, 14(q-r)=14q-14r>=14q-(13q-1)=q+1.)
+  KEY: INTEGRALITY SUPPLIES THE MARGIN FOR FREE -- q<14r forces q+1<=14r, so eps = 1/(14q) works UNIFORMLY, no min over i.
+- strictWitness_of_strictlyLive: StrictlyLive v q p => StrictWitness v at t0=p/q with eps=1/(14q).
+- StrictlyLiveSupply; lrc14_of_strictlyLiveSupply : LRCUpTo13 -> StrictlyLiveSupply -> LRC14Statement.
+=> The remaining content of LRC(14) is a PURELY INTEGER, DIOPHANTINE statement. No measure theory, no continuum, no Fourier.
+
+(2) DESCRIBING THE WALL -- and a CORRECTION I nearly published. I was about to write "covering => mu(S) > 0". IT IS FALSE. Exact rational sweep (lrc14_tight_locus_anatomy_kps_S127):
+  2*{1..13} = {2,4,...,26}:  COVERING = YES,  mu = 0,  primitive = NO,  ratio = exactly 13.
+The dilate of the tight AP IS covering with a measure-zero safe set. (klein-S206 is safe -- it says PRIMITIVE covering -- but the loose version is wrong.)
+
+WHAT ACTUALLY SEPARATES THEM: THE SCALE GAP. Every tight family (every dilate c*{1..13}) has max/min = 13c/c = 13 EXACTLY. The residual's GapFamily is precisely ratio > 13. So the tight locus is excluded not by covering, not by primitivity, but by the SCALE GAP -- on a knife-edge: tight sits at ratio = 13, and spread13 dispatches ratio <= 13. The boundary of the spread13 branch IS the tight locus.
+
+THE THREE FACES OF THE TIGHT LOCUS ARE ONE OBJECT: [mu(S)=0] = [max = 13*min] = [S is a dilated interval c*{1..13} = the E3-extremal]. The third is mine: schurCount_eq_choose_iff_dilated (E3 = C(13,2) iff dilated) + dilated_max_eq_card_mul_min (dilated => max = card*min = 13 min). So GapFamily is exactly "strictly off the E3 extremum", and E3_lt_choose_of_gap already proves the QUALITATIVE half in Lean (gap => E3 < C(13,2)).
+
+SO THE WALL IS A QUANTITATIVE STABILITY STATEMENT: "crossing the scale gap strictly forces mu > 0" -- off the dilated-interval extremum, the safe set has INTERIOR, not just points. Exactly the S126 Freiman-ladder gap (deficit>0 easy; how much deficit buys how much structure is hard). Here deficit = C(13,2)-E3 and the structure bought is mu.
+
+WHY IT RESISTS: (a) no absolute bound exists (the off-line sum is irreducibly signed, klein-S222 x9 + my S124); (b) the exact Mobius expansion mu = (6/7)^13 + layers is ALTERNATING with order-one terms and NOT truncatable (deep well: layer3 = -0.50 against total +0.024); (c) klein's transfer |LM(q)-q*mu|<=K<=Sum v closes the MODULUS side but CONSUMES mu>0 -- it cannot produce it.
+
+WHAT THE WALL DOES NOT REQUIRE: (i) NO uniform floor -- mu gets small (min 0.0367 measured on covering [1,22]; deep well 0.0239) and a uniform mu_0 may not exist; klein Cor 1 makes certification PER-FAMILY a priori complete. (ii) NO measure theory -- LRCStrictWitnessFloor + LRCStrictRuler make the whole chain from an integer certificate to LRC(14) elementary.
+
+THE WALL IN ONE SENTENCE: does a speed set whose ratio exceeds 13 -- strictly off the dilated-interval extremum -- necessarily admit a modulus at which all thirteen residues sit strictly inside (q/14, 13q/14)?
+
+My LRC Lean ~66 nodes, chain S114..S127. FILES: LRCStrictRuler.lean, lrc14_tight_locus_anatomy_kps_S127.py/.out, reflection describing-the-wall-the-scale-gap-is-the-separator-kps-S127.
+
 ## opus-2026-07-10-S204 -- BRICK (iii) CLOSED: the finite-union volume identity (LRCFiniteUnionVolume.lean, kernel-pure) -- mac-mini's one deferred measure-theory brick of the witness-floor route. Anchors -> m_P floors. On the hB5 critical path via klein THM-685. HONEST: this is the TOOL, not hB5 itself.
 
 Prompt (owner): now go work hB5.
