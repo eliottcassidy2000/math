@@ -1,3 +1,24 @@
+## mac-mini-2026-07-09-S65 (cont.22, 2026-07-10) -- THE hB CERTIFICATE SWEEP: MISTAKE-136 (hB node UNSATISFIABLE over all Shape) + repaired consumer + THE capRat LADDER IS EXACT (= per-|S| safe minima, all 6 rows, engine-verified) + 762/2380 families GREEN IN LEAN (Sizes 1,2,3,4a), remaining 1618 emitted + building sequentially.
+
+Prompt (owner): run the codegen over the remaining hsmall3/hlarge families.
+
+SOUNDNESS FIRST (the cont.16 lesson applied): before sweeping, tested the target node. **MISTAKE-136**: `hB` of opus-S190's `lrc14_from_momentfloor_concrete` quantifies over ALL `Shape`; junk instance s = ([0], [0x13]) has capRat 13 = 1 > measGP = mu(safeSet [0]) = 0 -- UNSATISFIABLE. Second occurrence of the genus (hfloor was cont.16). Rule now in canon: test junk instances before discharging any type-quantified node.
+
+THE LADDER: capRat(k) = min over |S| = 13-k of mu(safeSet S) EXACTLY, all six rows (engine, exact rationals): |S|=5: 2243/5880 @ {1,5,7,8,9}; |S|=4: 1979/4004 @ {1,11,12,13}; |S|=3: 55/91 @ {1,12,13}; |S|=2: 66/91 @ {1,13}; |S|=1: 6/7 UNIFORM (all 13 singletons equal); |S|=0: 1. The canon caps are sharp -- every certificate row is attained.
+
+LEAN (all kernel-pure, [propext, Classical.choice, Quot.sound]):
+- LRCMomentFloorRepair.lean: `lrc14_from_momentfloor_concrete_shapes` (hB narrowed to shapeOf v; hbonf/hsize still internal; mirrors the nodes-route arithmetic) + `safeSet_anti`/`measGP_anti` (dedup/superset bridge) + `measGP_ge_of_sorted_bands` (the safe-only certificate consumer: engine list -> Sigma lengths <= measGP, via brick iii + cont.18 bands). GREEN first try.
+- LRCSafeCertSize1/2/3.lean + LRCSafeCertSize4_g1to2.lean: 13 + 78 + 286 + 385 = 762 families GREEN (18,477 components; every family floored at its ladder constant by norm_num band certificates). Emitted by lrc14_safecert_codegen_macmini_S65cont22.py (range-chunked).
+- LRCSafeCertSize4_g3to10 + Size5_c1/g2to3/g4to9 (330 + 495 + 540 + 252 = 1617 families, 23,900 comps): EMITTED (deterministic content), building sequentially in background at close; import lines land when green (next continuation).
+
+BUILD ENGINEERING (recorded for the fleet, 8 GB machines): per-FILE fixed cost ~145s (Mathlib env replay) dominates small files -- consolidate; but TWO parallel workers on certificate-scale files MUTUALLY EVICT on 8 GB (observed: 1h10m at 4% CPU, 350 MB RSS each, zero progress) -- run certificate builds SEQUENTIALLY on small-RAM machines. Measured marginal cost ~5.2-5.4s/family-theorem (~15 comps, 3-4 speeds). Third bite of the persisted-cwd gotcha (lake from repo root: "no configuration file") -- cd INSIDE the command string, always.
+
+WHAT REMAINS FOR hB ITSELF (honest): the certificates floor mu(safeSet S) for canonical sorted SETS; the node discharge additionally needs the shapeOf-v dispatcher (P-list -> dedup set -> matching certificate; safeSet_anti bridges duplicates/order) -- a 2380-way dispatch, decide-shaped or census-style. Also |S|=0: measGP = mu(univ) = 1 trivial (one-liner, add with the dispatcher). hMoment (THM-661 citation) and hpartA unchanged.
+
+FILES: LRCMomentFloorRepair.lean, LRCSafeCertSize*.lean (x9 emitted, 5 green incl. repair), lrc14_safecert_codegen_macmini_S65cont22.py, 05-knowledge/results/lrc14_safecert_sweep_macmini_S65cont22.out, MISTAKE-136, root imports (x5).
+
+NEXT AGENT: (a) confirm the 4 sequential builds green + add their root imports; (b) write the shapeOf dispatcher for hB (the census pattern -- opus's Window22 pigeonhole style may beat brute decide); (c) hMoment via THM-661; then the moment route's only analytic node is hpartA (now reframed by opus-S208: peel d<=3 detuned first, decorrelation floor on the dissociated remainder).
+
 ## opus-2026-07-10-S210 -- THM-678 d=2 GENERIC, REDUCED TO THE COUNTING (LRCDetunedD2.lean, kernel-pure, foundational-only): lonely14_of_two_detuned : LRCUpTo13 + TwoDetunedClearing + (d=2 detuned, (q1,q2)!=(2,2)) => lonely. Formalized the LRC(11) reduction + construction core; the counting (Sum N_j/q_j < 1) is the sole remaining analytic piece.
 
 Prompt (owner): take the generic d=2 case and formalize THM-678.

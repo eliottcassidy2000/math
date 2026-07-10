@@ -1,0 +1,28 @@
+# lrc14_safecert_sweep_macmini_S65cont22 -- the hB certificate table (capRat ladder)
+# For each subset S of {1..13}, |S| = 13 - k: exact mu(safeSet S) vs capRat(k).
+# THE LADDER IS EXACT: capRat(k) = min over |S| = 13-k of mu(safeSet S), all six rows.
+# Lean: LRCSafeCertSize{1,2,3}.lean, LRCSafeCertSize4_g*.lean, LRCSafeCertSize5_*.lean
+# via MomentFloorRepair.measGP_ge_of_sorted_bands (brick iii + cont.18 bands).
+# hB itself (the node) needs these + safeSet_anti (dedup/superset) + the shapeOf dispatcher.
+
+|S|=0 (k=13): 1 families, 0 components total
+  min mu = 1 at () (0 comps); capRat(13) = 1; margin = 0 (EXACT MIN = capRat)
+  max mu = 1 at ()
+|S|=1 (k=12): 13 families, 91 components total
+  min mu = 6/7 at (1,) (1 comps); capRat(12) = 6/7; margin = 0 (EXACT MIN = capRat)
+  max mu = 6/7 at (13,)
+|S|=2 (k=11): 78 families, 917 components total
+  min mu = 66/91 at (1, 13) (11 comps); capRat(11) = 66/91; margin = 0 (EXACT MIN = capRat)
+  max mu = 11/14 at (6, 12)
+|S|=3 (k=10): 286 families, 4397 components total
+  min mu = 55/91 at (1, 12, 13) (20 comps); capRat(10) = 55/91; margin = 0 (EXACT MIN = capRat)
+  max mu = 5/7 at (4, 6, 12)
+|S|=4 (k=9): 715 families, 12823 components total
+  min mu = 1979/4004 at (1, 11, 12, 13) (26 comps); capRat(9) = 1979/4004; margin = 0 (EXACT MIN = capRat)
+  max mu = 55/84 at (3, 4, 6, 12)
+|S|=5 (k=8): 1287 families, 25095 components total
+  min mu = 2243/5880 at (1, 5, 7, 8, 9) (18 comps); capRat(8) = 2243/5880; margin = 0 (EXACT MIN = capRat)
+  max mu = 25/42 at (2, 3, 4, 6, 12)
+
+# Worst-case certificate: the argmin family of each row (equality; every component needed).
+# All families emitted regardless of margin -- the table is exhaustive per size.
