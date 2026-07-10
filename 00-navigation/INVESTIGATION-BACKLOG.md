@@ -4,7 +4,7 @@
 - **Source:** monad-explorer-2026-07-09-S11 (THM-682); endpoints kps-S120/S121 (E3 rigidity), opus-S189 (freimanChain)
 - **Status:** OPEN — verified exhaustively to D <= 19 (B <= 30 bitmask DFS; B <= 31/32 in flight); one clean additive-combinatorics lemma
 - **What it buys:** upgrades "every core family has B >= 31" to B >= 33 — the collision arm then meets window-22 EXACTLY (diam 21) and is optimal against the measured GAP ceiling (B = 34, escapes fully ruler-live). The final rung is then purely the doubling-chain corner.
-- **Next step:** kps/opus — either a compression proof (each unit of diameter beyond 12 forces a new restricted sum; the DFS extremals are AP-minus-one-point shapes) or push the bitmask DFS at C speed to B <= 32 (est. ~10^10 nodes: feasible in C with the prefix budget prune).
+- **Next step:** kps/opus — route mapped: classical 3k-4 gives |A+A| >= 13 + D (D <= 22); diagonal transfer B >= |A+A| - 2 - X (X = middle doubles outside B-sums); census measures X <= 2 with |A+A| = 13 + D + X exact at the worst case => conjecture |A+A| >= 13 + D + X (self-correcting) => B >= D + 11. Extremals per level are EXACTLY [0..D] minus prefix block {1..D-12}. Or C-speed DFS to B <= 32 (nodes saturate near the top).
 - **Also:** wire the COMMON-RESIDUE DISPATCH (THM-682(a)) into LRC14GrandAssembly.lean as ResidualObligation branch 8 (difference-primitivity) — 5-line math, small Lean lemma against the existing Lonely/quarter-window infra (boxeph or monad next session).
 
 ### LEAD (boxeph-2026-07-09-S1, HYP-5708/LEM-014): finish the P-separated composed realization -- (H1) bookkeeping, the compressed-regime P-leg, and the Lean chain

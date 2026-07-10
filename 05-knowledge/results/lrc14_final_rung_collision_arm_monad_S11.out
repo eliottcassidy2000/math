@@ -88,3 +88,15 @@ ADDENDUM 3 -- THE DOUBLING-CHAIN CORNER PROBED (the final rung's occupants, meas
      signed-cancellation option (ii), now with direct data). The rung's remaining content is
      to PROVE the cancellation (or the 2-adic dispatch) -- zero empirical counterpressure.
   B<=30: 5767 sets, nodes 63399127, max diam 19, law B-11=19: HOLDS, 252.0s   [bitmask DFS, appended on completion]
+
+====================================================================================================
+ADDENDUM 4 -- THE MIDDLE-RUNG PROOF ROUTE MAPPED ON THE CENSUS (B <= 26, 89 sets)
+====================================================================================================
+  decomposition: B >= |A+A| - 2 - X, X = #middle doubles 2a_i (i=1..11) outside A+^A
+  classical 3k-4: |A+A| >= 13 + D for D <= 22 (diam-D gcd-1 set fits no shorter AP)
+  MEASURED on the census: X in {0: 42 sets, 1: 40, 2: 7}; worst X = 2 at
+    A = [0,2,3,5,7,...,15] (D=15, B=26) where |A+A| = 30 = 13 + D + X EXACTLY
+  => conjecture (self-correcting form): |A+A| >= 13 + D + X  ==>  B >= D + 11 outright
+  max-diam extremals per level: EXACTLY [0..D] minus the prefix block {1..D-12}:
+    B=23: [0..12] minus {};  B=24: [0..13] minus {1};  B=25: [0..14] minus {1,2};
+    B=26: [0..15] minus {1,2,3}
