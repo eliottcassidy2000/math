@@ -1,0 +1,10 @@
+FULL residual predicate (covering, gap>13, compressed, distinct, max>=23, divisor-closed, no-common-residue)
+
+[A] AS STATED (gcd allowed >1):  min mu = 0.00939349
+     v = [1, 4, 6, 10, 13, 14, 16, 17, 19, 20, 22, 23, 36]   gcd=1, Vmax=36
+
+[B] WITH PRIMITIVITY PEEL (gcd=1): min mu = 0.00939349
+     v = [1, 4, 6, 10, 13, 14, 16, 17, 19, 20, 22, 23, 36]   gcd=1, Vmax=36, Sum v=201
+     mu*Vmax = 0.3382   mu*Sum v = 1.8881
+
+iid (6/7)^13 = 0.134801

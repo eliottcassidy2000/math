@@ -1,0 +1,15 @@
+==============================================================================
+DILATE 2w: v=[2, 4, 6, 8, 10, 12, 14, 16, 18, 22, 24, 26, 40]
+   gcd=2  Vmax=40  distinct=True
+   covering=True  gap>13=True  compressed=True  divisor-closed=True  no-common-residue=True  max>=23=True
+   ==> IN ResidualObligation domain (as stated): True
+   mu = 1/980 = 0.00102041
+
+CORE w = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 20]  Vmax=20 (<=22 => handled by the window-22 census)
+   mu(core) = 1/980 = 0.00102041
+   mu(2w) == mu(w)?  True   (alpha -> 2*alpha is measure-preserving on the circle)
+==============================================================================
+c=2 w(Vmax=20) -> v Vmax=40 covering=True mu=0.00102041
+c=2 w(Vmax=14) -> v Vmax=28 covering=False mu=0.02389713
+c=3 w(Vmax=20) -> v Vmax=60 covering=False mu=0.00102041
+c=3 w(Vmax=14) -> v Vmax=42 covering=False mu=0.02389713

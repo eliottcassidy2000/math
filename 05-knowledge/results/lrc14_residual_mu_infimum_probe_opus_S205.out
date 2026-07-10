@@ -1,0 +1,10 @@
+DEEPEST residual minimizer found:
+  v = [2, 4, 6, 8, 10, 12, 14, 16, 18, 22, 24, 26, 40]
+  mu        = 0.00102041
+  Sum v     = 202,  Vmax = 40
+  mu * Sum v = 0.20612      mu * Vmax = 0.04082
+
+MINIMIZING mu * Sum(v)  (is it bounded below?):
+  v = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 26, 72]
+  mu = 0.00079365,  Sum v = 230,  mu*Sum v = 0.18254
+  mu*Vmax = 0.05714

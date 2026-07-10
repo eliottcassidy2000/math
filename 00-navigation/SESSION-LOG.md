@@ -1,3 +1,23 @@
+## opus-2026-07-10-S205 -- THE RESIDUAL ADMITS DILATES => inf mu = 0 => NO UNIFORM MEASURE FLOOR EXISTS. Fix LANDED: lrc14_of_primitive (LRCPrimitivePeel.lean, kernel-pure). Plus two honest negatives.
+
+Prompt (owner): do the a-priori measure floor for the residual class, work on the difficulty.
+
+Context: klein THM-685 (Kronecker transfer) makes the measure floor THE remaining analytic content (mu(S) >= mu_0 => liveness at all q > Sum v / mu_0).
+
+(1) NEW ELEMENTARY BOUND, then REFUTED. Center-collapse: runners SHARE ball centers (reduced center p/q is hit by every runner with q dividing v_l; the union of concentric balls is the largest, radius 1/(14 m(q)), m(q) = min v_l over q dividing v_l). Gives mu(S) >= 1 - Sum over q in D of phi(q)/(7 m(q)), D = divisors of any v_l. EXACT on the pair 1,2: 1 - 3/14 = 11/14 = boxeph mu_2. Correctly refuses the tight AP (< 0; true mu = 0). HONEST NEGATIVE: never positive on residual families (0/4000, median -0.685) -- for dissociated speeds there is no divisor sharing (m(q) = q at prime q = v_l) so it degenerates to the union bound 13/7. The residual savings are INTER-CENTER OVERLAPS = decorrelation, discarded by construction. Door closed.
+
+(2) COHERENCE IS NOT THE CONTROLLING PARAMETER. Peeling near-APs (LEM-012, longest-AP >= k-6 = 7) does NOT lift the floor: near-AP mu_min = 0.00816 vs dissociated mu_min = 0.01145, same order. Second honest negative.
+
+(3) DECISIVE (machine-checked). alpha -> c*alpha is measure-preserving on the circle, so mu(c*w) = mu(w) EXACTLY. Witness v = 2 * [1,2,3,4,5,6,7,8,9,11,12,13,20] = [2,4,6,8,10,12,14,16,18,22,24,26,40] satisfies EVERY ResidualObligation clause (covering, gap>13, compressed, distinct, max>=23, divisor-closed, no-common-residue) with gcd = 2 and mu = 1/980, while its core has Vmax = 20 <= 22 (already window-censused). Pure dilates SATISFY divisor-closed vacuously-true; the ALMOST-dilates (one odd coordinate) are what the detuned branch peels. Cores range over the window census, which contains near-APs with mu -> 0 (tight AP has mu = 0). Hence inf mu = 0 over the residual as stated: NO UNIFORM MEASURE FLOOR EXISTS. The obligation is still TRUE; the target was ill-posed. This explains the resistance: we were bounding below a quantity whose infimum is zero.
+
+(4) FIX LANDED (LRCPrimitivePeel.lean, kernel-pure, root-wired, built first try): lonely_of_dilate + lrc14_of_primitive : (forall primitive w with tupleGcd w = 1, lonely) => LRC14Statement. LRC(14) reduces to primitive families; ResidualObligation may be restated with tupleGcd v = 1 and the dilates vanish. After the peel, adversarial descent over the FULL residual predicate gives min mu ~ 0.00939 (vs iid (6/7)^13 = 0.13480), so a uniform floor becomes well-posed (NOT proved).
+
+RECOMMENDATION: add the primitivity peel to lrc14_grand_assembly and restate ResidualObligation with tupleGcd = 1 BEFORE further investment in a uniform measure floor.
+
+Files: LRCPrimitivePeel.lean (+root), reflection, 8 results .out. -> klein THM-685, hB5, LEM-012, LEM-024, lonely_scale, opus-S204 brick (iii).
+
+---
+
 ## kind-pasteur-2026-07-10-S127 (cont.8) -- (1) FORMALIZED the strict rounding identity (LRCStrictRuler.lean, kernel-pure): a strictly-live ruler IS a strict witness, so LRC(14) <= citation + an INTEGER statement. (2) DESCRIBED THE WALL, and CORRECTED a claim I was about to publish: covering does NOT exclude the tight locus -- the SCALE GAP does.
 
 Prompt (owner): formalize the strict rounding identity: strictly-live ruler => StrictWitness. work on describing the wall better.

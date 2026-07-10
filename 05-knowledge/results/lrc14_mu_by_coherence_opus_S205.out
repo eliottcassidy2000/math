@@ -1,0 +1,8 @@
+sampled residual: near-AP (longestAP>=7): 74   dissociated (<7): 2926
+
+NEAR-AP class  (LEM-012 peels these): min mu = 0.008159  longestAP=7  v=[1, 2, 4, 6, 8, 10, 14, 16, 18, 20, 22, 24, 26]
+DISSOCIATED    (the true residual):   min mu = 0.011448  longestAP=5  v=[1, 4, 6, 10, 11, 12, 13, 14, 16, 17, 18, 22, 23]
+
+iid (6/7)^13 = 0.134801
+dissociated mu: min 0.0298  1% 0.0489  median 0.1079
+near-AP     mu: min 0.0358  median 0.0771

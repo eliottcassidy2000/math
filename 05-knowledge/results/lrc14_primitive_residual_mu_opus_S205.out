@@ -1,0 +1,7 @@
+dilate check: mu([2, 4, 6, 8]...) = 0.00102041   mu(w) = 0.00102041   equal=True
+  w has Vmax=20 (<=22, window-censused);  2w has Vmax=40 (>=23, RESIDUAL)
+
+PRIMITIVE residual: deepest mu found = 0.00470582
+  v = [2, 4, 6, 8, 10, 14, 16, 18, 20, 22, 24, 26, 57]   (gcd=1, Vmax=57, Sum v=227)
+  mu*Sum v = 1.0682    mu*Vmax = 0.2682
+  iid (6/7)^13 = 0.134801
