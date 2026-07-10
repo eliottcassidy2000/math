@@ -1,3 +1,19 @@
+## klein-2026-07-09-S224 -- THE MULTIPLICATIVE FRAME (the Redei mod-2^k directive lands): THE DIAGONAL-ONLY SUPPRESSION LAW -- at prime rulers, neither additive NOR multiplicative coherence alone suppresses LM (both sit ABOVE iid: 1.22/1.31); only their INTERSECTION (the dilation family) suppresses (0.22) -- the character-sum signed program is concrete, with its killer family quarantined by the existing ladder
+
+Prompt (owner): run the Redei parity mod 2^k signed method.
+
+**(1) WHERE MOD-2^k ENDS.** The universal 2-group action on live multipliers stops at +- (higher unit involutions u^2 = 1 do not preserve liveness -- u.p live <=> p live for the DILATED system u.v, not v). The parity ladder's terminal universal statement is S222's pairing law. BUT the dilation-invariance LM(u.v, q) = LM(v, q) opens the MULTIPLICATIVE GROUP route: at PRIME rulers q (Bertrand guarantees one in every window; S209's law says any modulus works, pair-sum not required), LM has a multiplicative-character expansion where Polya-Vinogradov and Parseval provide PROVED signed cancellation.
+
+**(2) THE 2x2 COHERENCE MATRIX (the decisive measurement).** LM/iid at prime tall rulers: generic/generic (adv-worst): 0.83; near-dilation (additively AND multiplicatively coherent -- smooth AP): 0.222; **additive-AP-alone (an AP of primes): 1.217 -- NOT suppressed, ENRICHED above iid; mult-smooth-alone (3-smooth entries, additively dissociated): 1.311 -- NOT suppressed.** THE LAW: suppression requires BOTH coherences simultaneously = exactly the c*{small-smooth-AP} dilation family. Each structure alone is harmless.
+
+**(3) THE PROGRAM (signed, classical-shaped).** [character expansion of LM at a prime ruler: main (b/q)^13 (q-1)] + [t=2 terms: Parseval on incomplete character sums, classical] + [ONE new lemma: the t>=3 character-tuple Holder/moment chain -- the multiplicative resonance condition (product of characters trivial) is combinatorially blind to additive structure, and the measured cushions are >= 3x off-diagonal] + [the diagonal family: quarantined by E3/R(v) detection into the LEM-018/rigidity ladder, already theorem-grade on the collision arm]. The Redei directive thus completes its arc: involution parity (S222) -> the multiplicative group -> character sums -> a concrete signed program whose one new lemma is classical-shaped and whose killer family is already owned.
+
+HONEST: off-diagonal matrix cells are single-instance and non-covering (1-10 prime-tall rulers each); the corpus extension (covering variants, more primes, more instances per cell) is the immediate follow-up before the program is invested in.
+
+FILES: lrc14_multiplicative_frame_klein_S224.out; HYP-5835; log; memory.
+
+NEXT: (a) corpus-extend the matrix (covering off-diagonal cells; 20+ instances per cell); (b) if the law holds: write the t>=3 Holder chain (the ONE lemma) -- @kind-pasteur/@opus the incomplete-character-sum Parseval is your machinery's multiplicative twin; (c) the diagonal quarantine statement (E3/R(v) threshold => dilation ladder) as a clean interface lemma.
+
 ## klein-2026-07-09-S223 -- THE WOBBLE BOUND IS IRREDUCIBLY SIGNED (9th and FINAL confirmation): kink-layer |mass| 56-246 cancelling to single digits (ratios 0.002-0.106); THE ARC'S UNIFORM VERDICT -- every a-priori route to LRC(14) passes through exactly ONE signed-cancellation statement; the remaining mathematical content is ONE BIT of signed structure, identical in every coordinate system
 
 Prompt (owner): run the wobble few-units bound.

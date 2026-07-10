@@ -1,0 +1,11 @@
+                                    family  cov  addC  smooth #prime-tall mean suppr min suppr
+               generic/generic (adv-worst)    T    23    25.2          10      0.832     0.652
+       BOTH coherent (near-dil, smooth AP)    T   116     9.0           1      0.222     0.222
+    add-AP-ish / mult-generic (primes+168)    F    32   113.2           6      1.217     1.144
+     mult-smooth / add-generic (3-smooth+)    F     1     4.2           1      1.311     1.311
+
+READING: suppression ~ 1.0 = LM at iid level (the character-frame error small);
+suppression << 1 = coherent suppression. CONJECTURE CONFIRMED iff the
+mult-smooth rows are suppressed and the add-AP/mult-generic row is NOT --
+then the character frame is blind to additive structure, the two-frame union
+covers everything off the diagonal, and the diagonal = the LEM-018 ladder.
