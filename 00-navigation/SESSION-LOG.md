@@ -1,3 +1,53 @@
+## mac-mini-2026-07-09-S65 (cont. 8) -- THE REALIZATION RESIDUAL-CLASS AUDIT: the intersection-of-complements is EMPTY over 849 covering sets (all scale bands + mid-band-loaded + single-chain + adversarial) -- BOTH heavy instruments fire on 100.0% each; hpartA's open node has NO known inhabitant
+
+Prompt (owner): attack the realization node hpartA.
+
+**THE MOVE.** The status file (sec. 3) names the one open node: single-chain multi-scale
+covering shapes. Five agents each know their own instrument's domain; NOBODY had mapped the
+INTERSECTION of the complements. Built the audit: per covering set, test EVERY proved
+realization instrument with exact arithmetic --
+- I1 pure-cluster (Vmax <= 13 Vmin);
+- I2 coarse<=12 (exists L: <=12 groups, offsets <= L/182 -- LRCCoarseReduction's exact budget);
+- I5 detuned-d1 (S = gH u {delta}, monad THM-668);
+- I6 my certificate battery (C0 window / C1 gcd ledger / C2 divisor descent);
+- I3 the composed-grid realization, implemented SOUND-BY-CONSTRUCTION: for each grid j whose
+  Ltil-teeth (adaptive 9/14 split, THM-667) leave a >1/7 gap, CONSTRUCT tau* = (j + phi*)/V with
+  the fast phase at the gap midpoint (+ one drift-corrected variant) and verify loneliness of
+  ALL 13 speeds EXACTLY at tau* (rational arithmetic; boxeph-S3's snap pattern, no budget
+  approximations to get wrong).
+RESIDUAL = fails everything (then exact pair-sum liveness as ground truth).
+
+**THE VERDICT (849 covering sets: random caps 60/150/400/1000, mid-band-loaded V in [200,800]
+with 3-7 mid-band members, single-chain geometric ratio 1.25-2.15 with total ratio > 13,
+adversarial hill-climbs minimizing #instruments):**
+- **RESIDUAL: EMPTY. Zero sets escape.**
+- **I3 composed-grid: 849/849 = 100.0%** -- on EVERY tested covering set, including every
+  mid-band-loaded and single-chain instance, an explicit rational lonely tau* exists at a
+  gap-midpoint of some ruler cell and verifies exactly. The named open node has no known
+  inhabitant.
+- **I6 certificates: 849/849 = 100.0%** -- fully independent second coverage.
+- Adversarial minimum: 2 instruments firing (I3 + I6 never both drop).
+- Instrument-domain honesty: I1 44.3%; **I2 coarse-reduction 0.0%** (the A/L <= 1/182 budget
+  never fires on real covering sets -- it is a special-family tool, not a regime; status-file
+  language crediting it with a CLOSED branch should be read accordingly); I5 detuned 0.6%.
+
+**WHAT THIS MEANS FOR hpartA:** the remaining work is not new analysis but making ONE of the two
+100%-coverage instruments a-priori: (a) the composed-grid construction -- exactly what the
+klein/monad/boxeph spectral-transfer chain (S217-S220, THM-673(A)'s isolated transfer
+hypothesis) is proving; or (b) the certificate battery -- my Schur-budget/simultaneity line.
+The audit says their shared success is not luck: every covering set tested has BOTH a
+constructed tau* (consumable by kps Mreach_ge_of_lonely_instant -- exact rational!) and a (q,p)
+band witness (consumable by mreach_ge_of_pairsum_band). Any bounded-window finite dispatch now
+has two independent, already-scripted certificate emitters.
+
+**HONEST SCOPE:** a sample (849), not exhaustive; adversarial pressure moderate (120 steps x 2
+caps); I3's per-set j-scan is complete but tries only 2 phi-candidates per gap -- its 100% is a
+LOWER bound on the instrument's true power. NUMBERING FLAG: klein-S219's "THM-676" (high-tail
+identity) may collide with my THM-676 (descent-burden, renamed from 675 after ceding to klein
+S212) -- flagged for reconciliation, no content dispute.
+
+Files: lrc14_realization_residual_audit_macmini_S65cont8.{py,out}.
+
 ## klein-2026-07-09-S220 -- THM-673(A) IN LEAN (LRCAggregatedDispersal.lean, sorry-free kernel-pure, GREEN FIRST TRY): the V-independent dispersal + the thin-modulus pigeonhole + the composition socket with the off-line/off-peak TRANSFER isolated as the ONE explicit hypothesis -- the Lean now mirrors the math DAG one-to-one
 
 Prompt (owner): run the aggregated penalty vs dispersal socket (THM-673(A) in Lean).
