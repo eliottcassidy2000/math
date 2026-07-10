@@ -1,0 +1,14 @@
+# kind-pasteur-2026-07-10-S127: does mu=0 => dilated? (extremal-uniqueness search)
+# Exact-rational safe-set measure over ALL 13-subsets of [1,N]; flag any mu=0 that is NOT a dilated AP.
+# The only dilated interval fitting [1,N<=18] is {1..13} (c=1; c>=2 needs N>=26).
+
+  N=13: mu=0 families=1, NON-dilated mu=0=0    (only {1,...,13})
+  N=14: mu=0 families=1, NON-dilated mu=0=0
+  N=15: mu=0 families=1, NON-dilated mu=0=0
+  N=16: mu=0 families=1, NON-dilated mu=0=0
+  N=17: mu=0 families=1, NON-dilated mu=0=0
+  N=18: mu=0 families=1, NON-dilated mu=0=0
+
+CONCLUSION: no non-dilated tight family in range. mu=0 => dilated holds for N<=18.
+This is EVIDENCE for TightRigidity, not a proof: it is the LRC(14) extremal-uniqueness conjecture,
+and lrc14_of_tightRigidity proves it IMPLIES LRC(14) -- so it is >= LRC-hard and cannot be proved here.

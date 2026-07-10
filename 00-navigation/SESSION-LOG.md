@@ -30,6 +30,32 @@ THE CORRECTION (honesty; the verification-first discipline paying): the first dr
 WHY 7: m <= 6 torsion cannot cover (mass <= 6/7); m >= 8 covers with slack (no rigidity); m = 7 = 14/2 is the ZERO-SLACK modulus. The dichotomy lives at the problem's own resonance -- THM-689(A)'s perfect-net mechanism one derivative deeper.
 
 FILES: THM-692 (canon, with the forensic recorded); lrc14_seven_torsion_dichotomy_klein_S241.py (+.out); HYP-5930 resolved; backlog; memory.
+## kind-pasteur-2026-07-10-S127 (cont.12) -- mu=0 => dilated is the LRC(14) EXTREMAL-UNIQUENESS conjecture (>= LRC-hard, cannot prove). PROVED the REDUCTION: the rigidity implies the measure floor implies LRC(14), kernel-pure. + searched (no non-dilated tight family, N<=18).
+
+Prompt (owner): prove the rigidity mu=0 => dilated.
+
+HONEST: mu=0 => dilated is the extremal-uniqueness statement (tight configs = dilated APs c*{1..13} only). It is STRONGER than LRC(14): I proved it IMPLIES LRC(14) (lrc14_of_tightRigidity), so it is >= LRC-hard and cannot be proved here. I did not fake it.
+
+TESTED IT (exact-rational sweep over all 13-subsets of [1,N]): the ONLY mu=0 family for N<=18 is {1,...,13} (the c=1 dilate; c>=2 needs N>=26). NO non-dilated tight family in range => evidence FOR the rigidity (not a proof).
+
+PROVED THE REDUCTION (LRCTightRigidity.lean, sorry-free, kernel-pure [propext, Classical.choice, Quot.sound], 8513 green):
+- DilatedFamily v := exists c>0, image(|v .|) = {c,2c,...,13c}.
+- not_dilated_of_gapFamily: GapFamily v (ratio>13) => NOT DilatedFamily v. (Dilated has every |v_i|=c*k, k in [1,13], so |v_i|<=13c<=13|v_j| => not GapFamily. nlinarith.) THE MECHANISM: a dilated interval has ratio EXACTLY 13; a residual is scale-gapped (>13); so residual is never dilated.
+- TightRigidity := forall nonzero v, volume(safePeriod v)=0 => DilatedFamily v.  <- the open hypothesis
+- safeMeasureFloor_of_tightRigidity: TightRigidity => SafeMeasureFloor. (residual => GapFamily => not-dilated; if mu=0 rigidity gives dilated => contradiction => mu>0.)
+- lrc14_of_tightRigidity: LRCUpTo13 -> TightRigidity -> LRC14Statement.
+
+So the honest location of "mu=0 => dilated": a SUFFICIENT route to LRC(14), formalized as one open hypothesis TightRigidity, with the reduction to LRC(14) machine-checked. Why it is >= LRC hard: [mu=0=>dilated] + [dilated lonely at 1/14] = LRC(14). My E3 rigidity gives the ALGEBRAIC half (E3=C(13,2)<=>dilated); the analytic "mu=0 => E3=C(13,2)" (equiv the whole rigidity) is the wall.
+
+THE FULL HONEST LADDER now in Lean, each a kernel-pure reduction of the open core, successively more elementary:
+  SafeMeasureFloor (measure)  <- TightRigidity (extremal uniqueness, structural)
+  SafeIntervalFloor (interval) / StrictWitnessSupply (a point) / StrictlyLiveSupply (an integer ruler)
+  all -> ResidualObligation -> lrc14_grand_assembly (kernel-pure) -> LRC14Statement.
+And the NEGATIVE results pinning the shape: q>=15 proved (covering); q<=B REFUTED for all B (min q unbounded); a concrete mu>0 for the hardest family (cex_measureFloor).
+
+My LRC Lean ~78 nodes, chain S114..S127. FILES: LRCTightRigidity.lean, lrc14_tight_locus_search_kps_S127.out.
+
+NEXT: TightRigidity is the conjecture. The only genuine progress is an actual measure floor (mac-mini per-family witness floors; a rigidity proof mu=0=>dilated). No shortcut exists (proved: no bounded ruler, no finite cover of the residual class).
 
 ## kind-pasteur-2026-07-10-S127 (cont.11) -- the GENERAL measure floor for the residual class IS LRC(14) (cannot fake it). PROVED a concrete INSTANCE: mu>0 for the hardest family I found (the near-tight counterexample, min q=28), kernel-pure end-to-end.
 
