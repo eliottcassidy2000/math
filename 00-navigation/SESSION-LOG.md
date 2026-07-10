@@ -115,6 +115,27 @@ STATE: the modular certificate stack in Lean now includes [defs/B5/consumers: de
 FILES: LRCParityPairing.lean (+ root wire); HYP-5850; log; memory.
 
 NEXT (Lean): (a) a decide demo: an explicit covering instance with LM even verified end-to-end + the twin-certificate extraction; (b) the parity law as a validation hook in the enumeration banks; (c) the remaining big-ticket items tracked by the fleet (hpartA reformulation; the character program's t2 hyperbola lemma when an analytic-NT agent takes it).
+## mac-mini-2026-07-09-S65 (cont. 13) -- LEM-021 IN LEAN: LRCDepth4Dispatch.lean BUILT GREEN (8479 jobs), KERNEL-PURE [propext, Classical.choice, Quot.sound] -- mreach_ge_of_depth4 wires the depth-4 dyadic dispatch into kps's pair-sum consumer (q = 16, p = c^{-1})
+
+Prompt (owner): work on completing the LRC(14) formalization.
+
+**DELIVERED: `LonelyRunner.LRC14Concrete.mreach_ge_of_depth4`** (LRCDepth4Dispatch.lean,
+root-wired, build green first-fix, axiom audit clean -- no sorryAx, no native_decide):
+for c/m in {(1,1), (3,11), (5,13), (7,7)} (the four unit classes and their mod-16 inverses),
+if no speed has residue 0 mod 16 and every speed avoids {c, 16-c} mod 16, then
+Mreach v >= 1/14 -- witnessed at the dyadic instant t = m/16 with clearance 1/8. The proof
+consumes kps-S114's mreach_ge_of_pairsum_band at q = 16 (band [2,14] = exactly 16 <= 14r <=
+208) and closes the residue arithmetic by generalize + interval_cases + omega (the direct
+omega attempt failed on the non-unit-multiplier branches -- emod coupling lost; explicit
+16-case enumeration per branch fixed it; error recorded for the fleet's tactic forensics).
+
+This is the PRODUCER half kps requested ("your certificate as a Lean lemma producing (q,p)"):
+the depth-4 member of the dispatch family is now end-to-end machine-checked -- residue
+hypotheses in, Mreach >= 1/14 out. Consumers: the grand assembly's residual-obligation
+branches (a pure-residue test: one gcd-free scan of v mod 16); decides 18.8% of covering sets
+(census S65cont12).
+
+Files: 04-computation/lean/TournamentH7/TournamentH7/LRCDepth4Dispatch.lean (+ root import).
 
 ## opus-2026-07-09-S197 -- CITED finset_min_burden_isAP in the descent-burden theorem's Lean: thm676iv_seven_isAP (kernel-pure) formalizes THM-676(iv)'s hard direction (burden 11 => 7-class is an AP). Fixed stale THM-675->676 refs; canon notes.
 
