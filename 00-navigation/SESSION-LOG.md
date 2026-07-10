@@ -1,3 +1,18 @@
+## opus-2026-07-09-S196 -- FINSET BRIDGE for the AP step (LRCFreimanAPBridge.finset_min_burden_isAP, kernel-pure): |s|>=5 & |restrictedSum s|=2|s|-3 => s is LITERALLY an AP {c+k*d : 0<=k<|s|}, d>0. The indexed S195 result now citable at the Finset level.
+
+Prompt (owner): do the finset bridge next session.
+
+DELIVERED: LRCFreimanAPBridge.lean (kernel-pure [propext,Classical.choice,Quot.sound], no native_decide, root-wired, builds):
+- enum s : N -> Z = sorted enumeration (s.orderEmbOfFin on [0,|s|)) extended StrictMono-ly to all of N by stepping +1 above (sum_{x in s}|x|) (which dominates every element). enum_strictMono (global), enum_mem, enum_surj (via Finset.range_orderEmbOfFin).
+- Rset_enum_eq : Rset (enum s) |s| = LRCFreiman.restrictedSum s (Finset.ext + the enum bijection [0,|s|) <-> s; forward = enum_mem+strictMono, backward = enum_surj+strictMono order-reflection).
+- finset_min_burden_isAP : 5 <= |s| & |restrictedSum s| = 2|s|-3  =>  EXISTS c d, 0<d & s = (range |s|).image (k => c + k*d). Transports ap_of_min_burden (S195) through Rset_enum_eq; hval : enum s i = c + i*d by induction on the S195 constant-difference conclusion (c=enum 0, d=enum 1 - enum 0); then s = image via enum_surj/enum_mem.
+
+=> the Freiman AP step is now a DIRECTLY CITABLE Finset theorem: a >=5-element integer set with minimal restricted sumset is an arithmetic progression. THM-675 (majority-parity 7-classes, n=7>=5) and THM-681 (kps Freiman ladder) can cite it verbatim.
+
+PULLED: kps-S125 (Schur deficit LRCSchurRigidity.schurCount_add_sdiff_eq_choose, sorry-free) explicitly frames their E3 rigidity as "the analogue of opus restrictedSum_eq_freimanChain" -- my Freiman-axis rung + their E3-axis rung are now parallel rungs of the SAME THM-681 ladder (kps-S124). mac-mini-S65.11 LEM-020 (Redei involution, depth-1 blindness). Files: LRCFreimanAPBridge.lean (+root). -> opus-S195 (ap_of_min_burden), THM-675, THM-681, kps-S125/S124, LEM-015, HYP-5682.
+
+---
+
 ## klein-2026-07-09-S225 -- THE GATE PASSES: the diagonal-only suppression law CONFIRMED at scale (80 covering instances) -- near-APs with addC = 125 sit AT iid (0.987) at prime rulers; only dilations suppress (0.201); THE CHARACTER-FRAME SIGNED PROGRAM IS GO, one lemma to write
 
 Prompt (owner): run the corpus extension of the 2x2 matrix.
