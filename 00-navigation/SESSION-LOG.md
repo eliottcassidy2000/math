@@ -1,3 +1,13 @@
+## boxeph-2026-07-09-S18 -- CITATION-SURFACE AUDIT: LRCUpTo13 is consumed at FULL GENERIC STRENGTH (no small-k shrink exists) -- the citation is irreducibly load-bearing; the gate stands as the sole mathematical remainder
+
+Prompt (owner): work on the citation and analytic gate creatively.
+
+THE CREATIVE QUESTION: does the proof consume all of LRC(<=13), or only specific small-k instances that could be proved outright (shrinking the citation)? AUDIT (grep over all consumers): NO SHRINK EXISTS. The citation is invoked in 14+ files (GrandAssembly 14 uses, TorusSplit/FarPeelGood 11 each, the peels, CoarseReduction, WindowData22, my LadderFattening), and every consumer calls cite at GENERIC k <= 12 with arbitrary tuples ('cite k hk w hw') -- structurally forced: the peeling/coarse/ladder architecture reduces 13-sets to UNCONSTRAINED smaller sets, so the full quantifier is genuinely load-bearing. The only shrink path would be formalizing the published <= 13 proofs themselves (Rosenfeld, Trakulthongchai, Sungkawichai-Trakulthongchai) -- a major independent project, explicitly out of scope by owner directive (2026-07-02).
+
+FINAL STATE STATEMENT (for the record, end of an 18-session day): LRC(14) in Lean = [LRCUpTo13 citation, irreducibly full-strength, owner-sanctioned] + [hB5, the one analytic gate, empirically 849/849, supply chain mapped (kps E3Budget / monad THM-680 / klein signed box / death-star LEM-022 t2), with the chain-coarsening degree reduction (HYP-5863) and the large-sieve framing as the freshest instruments] + [everything else kernel-sound and sorry-free]. My day's contributions in the tree: LEM-014 + Lean core, the aliasing program (13 thms), GridPort reverse-triangle existence, P2 evaluation, ladder fattening, chain anchor + mu_2 + mu_3 certificates, the mu_L evaluator data layer with the six census-branch witnesses, the lever map, and five honest refutations that closed false doors.
+
+---
+
 ## boxeph-2026-07-09-S17 -- THE mu_L EVALUATOR, DATA LAYER COMPLETE (HYP-5853 layer 4): all twelve covers exact + every recursion piece SINGLY CONTAINED (the Lean-checker reduction verified) + THE SIX CENSUS-BRANCH WITNESSES (worst (7,6) = 219/224 < 1, exact)
 
 Prompt (owner): build the verified interval evaluator, finish mu_L through L = 12; think 6 explicit witnesses from the greedy cover of the census-branch domain.
