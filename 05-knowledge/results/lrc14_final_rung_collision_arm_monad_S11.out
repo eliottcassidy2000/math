@@ -100,3 +100,11 @@ ADDENDUM 4 -- THE MIDDLE-RUNG PROOF ROUTE MAPPED ON THE CENSUS (B <= 26, 89 sets
   max-diam extremals per level: EXACTLY [0..D] minus the prefix block {1..D-12}:
     B=23: [0..12] minus {};  B=24: [0..13] minus {1};  B=25: [0..14] minus {1,2};
     B=26: [0..15] minus {1,2,3}
+  [extended census check] B <= 28 (849 sets): X in {0: 312, 1: 406, 2: 123, 3: 8};
+  self-correcting conjecture |A+A| >= 13 + D + X HOLDS on all 849 sets.
+  [HONESTY CORRECTION, caught in-session]: |A+A| = B + 2 + X is an IDENTITY (exactly 2 + X
+  doubles escape A+^A), so "|A+A| >= 13 + D + X" is EQUIVALENT to the rung B >= D + 11 --
+  the census check above is the ladder law restated, not independent evidence. The real
+  route: classical 3k-4 proves |A+A| >= 13 + D (D <= 22), within X <= 3 (measured) of the
+  rung; remaining LOCAL lemma: each escaping middle double (a_i with no symmetric pair
+  a_i±δ in A) buys one |A+A| unit beyond the 3k-4 minimum.
