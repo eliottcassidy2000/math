@@ -5,6 +5,7 @@ Authors: opus (LRC multi-agent project, 2026-07-11-S214)
 -/
 import Mathlib
 import TournamentH7.LRCFourierCompletionB
+import TournamentH7.LRCFourierAggregation
 
 set_option maxHeartbeats 1200000
 
@@ -56,9 +57,34 @@ theorem eInt_orthog (q : ℕ) (hq : 0 < q) (h : ℤ) :
   refine Finset.sum_congr rfl (fun x _ => ?_)
   rw [eInt]; congr 1; push_cast; ring
 
+/-- `e_q` is `q`-periodic: `q ∣ a − b ⟹ e_q(a) = e_q(b)`. -/
+theorem eInt_periodic (q : ℕ) (hq : 0 < q) (a b : ℤ) (h : (q : ℤ) ∣ (a - b)) :
+    eInt q a = eInt q b := by
+  obtain ⟨t, ht⟩ := h
+  have hqcC : (q : ℂ) ≠ 0 := by exact_mod_cast hq.ne'
+  rw [eInt, eInt,
+    show (2 * π * (a : ℝ) / q : ℝ) * Complex.I
+      = (2 * π * (b : ℝ) / q : ℝ) * Complex.I
+        + (2 * π * ((a - b : ℤ) : ℝ) / q : ℝ) * Complex.I from by push_cast; ring,
+    Complex.exp_add,
+    show (2 * π * ((a - b : ℤ) : ℝ) / q : ℝ) * Complex.I = (t : ℤ) * (2 * π * Complex.I) from by
+      rw [ht]; push_cast; rw [mul_div_assoc, mul_div_cancel_left₀ _ hqcC]; ring,
+    Complex.exp_int_mul_two_pi_mul_I, mul_one]
+
 /-- The band DFT coefficient `B̂(j) = Σ_{r∈B} e_q(−j·r)`. -/
 noncomputable def bandDFT (q : ℕ) (B : Finset ℕ) (j : ℤ) : ℂ :=
   ∑ r ∈ B, eInt q (-(j * (r : ℤ)))
+
+/-- `B̂` is `q`-periodic in its argument. -/
+theorem bandDFT_periodic (q : ℕ) (hq : 0 < q) (B : Finset ℕ) (a b : ℤ) (h : (q : ℤ) ∣ (a - b)) :
+    bandDFT q B a = bandDFT q B b := by
+  rw [bandDFT, bandDFT]
+  refine Finset.sum_congr rfl (fun r _ => ?_)
+  refine eInt_periodic q hq _ _ ?_
+  have hd : (q : ℤ) ∣ (b - a) := by
+    rw [show b - a = -(a - b) from by ring]; exact dvd_neg.mpr h
+  rw [show -(a * (r : ℤ)) - -(b * (r : ℤ)) = (b - a) * (r : ℤ) from by ring]
+  exact Dvd.dvd.mul_right hd (r : ℤ)
 
 /-- The multiplicative pair-correlation `C_w = #{s ∈ B : (w·s) mod q ∈ B}`. -/
 def corrCount (q : ℕ) (B : Finset ℕ) (w : ℕ) : ℕ :=
@@ -167,5 +193,88 @@ theorem completion_diff_bound (q : ℕ) (hq : 0 < q) (B : Finset ℕ) (hB : B �
   apply Finset.sum_le_sum
   intro k _
   rw [hF, norm_mul, RCLike.norm_conj]
+
+open LonelyRunner.HyperbolaBox in
+/-- **B.3 — the final LEM-022 bound.**  Combining the completion identity with kps's off-diagonal
+aggregation (`offDiag_bandSum_le_closed`): for a band `B ⊆ [0,q)`, a unit twist `w`, and the ratio-lattice
+floor `P`, if the band coefficients obey opus's B.2 bound then
+`‖C_w − b²/q‖ ≤ 5q(log₂q+1)²/P` — the t2 hyperbola bound, kernel-pure end to end.
+
+The seam: my identity is over `range q` integers, kps's aggregation over `ZMod q`; the bridge reindexes
+`k ↔ h.val` and matches the twist `B̂(w·k) = B̂((w·h).val)` by `bandDFT_periodic`. -/
+theorem completion_final {q : ℕ} [NeZero q] (B : Finset ℕ) (hB : B ⊆ Finset.range q)
+    (w : ℕ) (hw : IsUnit ((w : ZMod q)))
+    (P : ℕ) (hP : 0 < P)
+    (hPmin : ∀ h : ZMod q, h ≠ 0 → P ≤ cdist h * cdist ((w : ZMod q) * h))
+    (hbc : ∀ h : ZMod q, h ≠ 0 → ‖bandDFT q B ((h.val : ℤ))‖ ≤ (q : ℝ) / (2 * (cdist h : ℝ))) :
+    ‖(corrCount q B w : ℂ) - (B.card : ℂ) ^ 2 / q‖
+      ≤ 5 * (q : ℝ) * ((Nat.log 2 q : ℝ) + 1) ^ 2 / P := by
+  have hq : 0 < q := Nat.pos_of_ne_zero (NeZero.ne q)
+  have hqc : (q : ℂ) ≠ 0 := by exact_mod_cast hq.ne'
+  have hqR : (0 : ℝ) < q := by exact_mod_cast hq
+  have hPR : (0 : ℝ) < P := by exact_mod_cast hP
+  set bc : ZMod q → ℂ := fun h => bandDFT q B ((h.val : ℤ)) with hbcdef
+  set F : ℕ → ℂ := fun k => bandDFT q B (k : ℤ) * (starRingEnd ℂ) (bandDFT q B ((w : ℤ) * (k : ℤ)))
+    with hFdef
+  have h0mem : (0 : ℕ) ∈ Finset.range q := Finset.mem_range.mpr hq
+  -- k = 0 split
+  have hF0 : F 0 = (B.card : ℂ) ^ 2 := by
+    rw [hFdef]; simp only [Nat.cast_zero, mul_zero, bandDFT_zero, map_natCast]; ring
+  have hsplit : (∑ k ∈ Finset.range q, F k)
+      = (B.card : ℂ) ^ 2 + ∑ k ∈ (Finset.range q).filter (fun k => k ≠ 0), F k := by
+    rw [← Finset.add_sum_erase (Finset.range q) F h0mem, hF0]
+    congr 1
+    apply Finset.sum_congr _ (fun _ _ => rfl)
+    ext k; simp [Finset.mem_erase, Finset.mem_filter, and_comm]
+  -- reindex `k ≠ 0` (range q) to `h ≠ 0` (ZMod q), matching the twist by periodicity
+  have hoffeq : (∑ k ∈ (Finset.range q).filter (fun k => k ≠ 0), F k)
+      = ∑ h ∈ (Finset.univ : Finset (ZMod q)).filter (fun h => h ≠ 0),
+          bc h * (starRingEnd ℂ) (bc ((w : ZMod q) * h)) := by
+    refine Finset.sum_nbij' (fun k => (k : ZMod q)) (fun h => h.val) ?_ ?_ ?_ ?_ ?_
+    · intro k hk
+      rw [Finset.mem_filter, Finset.mem_range] at hk
+      simp only [Finset.mem_filter, Finset.mem_univ, true_and]
+      intro hz
+      exact hk.2 (Nat.eq_zero_of_dvd_of_lt ((CharP.cast_eq_zero_iff (ZMod q) q k).mp hz) hk.1)
+    · intro h hh
+      simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hh
+      simp only [Finset.mem_filter, Finset.mem_range]
+      refine ⟨ZMod.val_lt h, ?_⟩
+      intro hv
+      apply hh
+      have hnc := ZMod.natCast_zmod_val h
+      rw [hv, Nat.cast_zero] at hnc
+      exact hnc.symm
+    · intro k hk
+      rw [Finset.mem_filter, Finset.mem_range] at hk
+      exact ZMod.val_natCast_of_lt hk.1
+    · intro h _; exact ZMod.natCast_zmod_val h
+    · intro k hk
+      rw [Finset.mem_filter, Finset.mem_range] at hk
+      simp only [hFdef, hbcdef, ZMod.val_natCast_of_lt hk.1]
+      congr 2
+      refine bandDFT_periodic q hq B _ _ ?_
+      have hval : (((w : ZMod q) * (k : ZMod q)).val : ℤ) = (w : ℤ) * (k : ℤ) % q := by
+        rw [show (w : ZMod q) * (k : ZMod q) = ((w * k : ℕ) : ZMod q) from by push_cast; ring,
+          ZMod.val_natCast, Int.natCast_mod, Nat.cast_mul]
+      rw [hval]
+      exact ⟨(w : ℤ) * (k : ℤ) / q, by rw [Int.emod_def]; ring⟩
+  -- assemble the bridge equality
+  have hbridge : (corrCount q B w : ℂ) - (B.card : ℂ) ^ 2 / q
+      = (1 / q) * ∑ h ∈ (Finset.univ : Finset (ZMod q)).filter (fun h => h ≠ 0),
+          bc h * (starRingEnd ℂ) (bc ((w : ZMod q) * h)) := by
+    rw [completion_identity q hq B hB w, ← hFdef, hsplit, ← hoffeq]
+    field_simp
+    ring
+  rw [hbridge, norm_mul]
+  have h1q : ‖(1 / (q : ℂ))‖ = 1 / q := by rw [norm_div, norm_one, Complex.norm_natCast]
+  rw [h1q]
+  have hkps := offDiag_bandSum_le_closed (w : ZMod q) hw bc P hP hPmin hbc
+  calc (1 / (q : ℝ)) * ‖∑ h ∈ (Finset.univ : Finset (ZMod q)).filter (fun h => h ≠ 0),
+          bc h * (starRingEnd ℂ) (bc ((w : ZMod q) * h))‖
+      ≤ (1 / (q : ℝ)) * (5 * (q : ℝ) ^ 2 * ((Nat.log 2 q : ℝ) + 1) ^ 2 / P) :=
+        mul_le_mul_of_nonneg_left hkps (by positivity)
+    _ = 5 * (q : ℝ) * ((Nat.log 2 q : ℝ) + 1) ^ 2 / P := by field_simp
+
 
 
