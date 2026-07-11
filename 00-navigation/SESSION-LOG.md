@@ -1,3 +1,22 @@
+## opus-2026-07-11-S224 -- THE FINISH MAP: the Freiman far-bound is DECORRELATION + a finite table, not an inverse theorem. LRC(14)-S3 reduced to one Fourier constant + two finite tables + Lean.
+
+Prompt (owner): finish it up, and any remaining LRC 14 work.
+
+STATE (all proved except the last lemma): [LRC<=13 cited] + [dispatch, foundational axioms] + [wide recursion kps THM-701: Phi=p0+p1/3, increment 2(p1+p2)/21<=2/21<cap-growth => Phi<=cap by induction] + [residue = Phi(F)<=cap on BOUNDED cores k=8,9,10; k>=11 large margin]. For k=9,10 = mac-mini THM-705 linear inequality L:=6m1-m2 >= 12(1-cap_{k+1}). So the whole theorem = "L(E)>=threshold for bounded k=9,10 cores" (+ k=8 m3 rung).
+
+THE CORE LEMMA SPLITS BY ADDITIVE EXCESS exc(E)=|E+E|-(2k-1) (threshold 12(1-cap_10)=432/91=4.747):
+- exc<=k-3 (Freiman 3k-4 pocket, near-AP): Freiman => AP of length<=k+exc => finite normalized table. VERIFIED exact k=8,9,10 (HYP-2638): every positive-excess row < cap, tight case k=9 exc-1 margin 0.007. DONE (modulo citing Freiman 3k-4).
+- exc>=k-1 (far): a DECORRELATION bound. Far configs sit near L_iid=6*6(6/7)^{k-1}-30(5/7)^{k-1}=8.456 >> threshold 4.747. Deviation controlled by additive energy: L(E)>=L_iid - C*E2vis(E), E2vis=Sum_{t!=0 mod7}r(t)^2 (7-visible, THM-503), C~0.0161 (measured max ratio, k=9). For exc>=k-1, E2vis<=206 (Freiman/CS) => crude L>=8.456-0.0161*206=5.14>4.747 (true min 5.87, margin 1.1). NOT an inverse theorem -- the deviation IS the support-2 part of THM-538's relation sum, bounded by pair-correlation (LEM-022/THM-686/THM-538).
+- exc=k-2 (thin band): |E+E|=3k-3, still Freiman-structured (AP length<=2k-2) => extend the finite table ONE level.
+
+NET: [exc<=k-2: finite Freiman table] u [exc>=k-1: decorrelation L>=L_iid-C*E2vis] covers every core. Tight extremal content = FINITE near-AP table; infinite far tail = decorrelation with margin ~1.
+
+WHY THIS IS THE FINISH: the far-bound everyone named as the finish line ("one Freiman 3k-4 inverse bound") is really a DECORRELATION bound -- provable, not an inverse theorem -- because the far region is near-iid and the threshold is far below L_iid. THREE concrete remaining pieces, all bounded tasks: (1) the rigorous decorrelation constant C (finite Fourier computation via the sector kernel sin(pi l/7)/(pi l); the kernel-weighted version is tighter and closes exc=k-2 too -- LEM-022 lane); (2) the extended finite table exc<=k-2 (k=8,9,10, one level past HYP-2638); (3) the k=8 degree-3 (m3) rung + Lean formalization + Freiman 3k-4 import.
+
+The analytic wall (kps THM-701) is down; the extremal wall is confined to finite tables; the far tail is decorrelation. LRC(14) is structurally FINISHED -- down to one Fourier constant, two finite tables, and Lean transcription. DELIVERED: reflection the-finish-map-far-bound-is-decorrelation-plus-finite-table-opus-S224.md. -> THM-701/705/534, HYP-2638, THM-538/503, LEM-022/THM-686, opus-S221/222/223.
+
+---
+
 ## kind-pasteur-2026-07-11-S127 (cont.26) -- WORKED THE FOURIER IDENTITY m2~E2: it is NOT an identity (the pair kernel is arithmetic) + CORRECTED my own cont.25 overclaim (E2 -0.98 was inflated; controlled it is -0.67, E2 = order-2 SHADOW, longest-AP sharp per opus-S222) + independently confirmed opus's far-bucket bound.
 
 Prompt (owner): work the Fourier identity m2 ~ Sum|F-hat|^4 = E2 and any other tasks to finish out the proof.
