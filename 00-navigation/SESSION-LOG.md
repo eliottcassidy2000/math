@@ -48,6 +48,19 @@ enters here); (b) wire LRCTwoCitationAssembly when the cert chain builds (or fix
 it gates the TWO-CITATION assembly, the biggest formal milestone available); (c) the clean-ruler
 LIVE half on generic residuals (kps cont.30 did SHALLOW; live >= 1 at the pair-sum needs its own
 supply argument); (d) Freiman table exc <= k-2 (finite).
+## opus-2026-07-11-S229 -- hB5 is EMPIRICALLY COMPLETE: the prime-rich core (the ~39% not covered by the prime ruler) is 400/400 covered by PAIR-SUM clean rulers. Every residual has a clean ruler. + honest duplication note (kps THM-712 = my S228).
+
+Prompt (owner): keep pushing until the LRC(14) math is complete.
+
+THE FINDING (lrc14 prime-rich coverage): 400/400 prime-rich primitive residuals (max>=23; every prime<=13 divides some speed = the hard core NOT covered by the prime ruler) have a clean ruler -- ALL via PAIR-SUM (q=v_a+v_b), zero failures <=300. So combined with the prime ruler (61%, formalized THM-709/712), EVERY residual has a clean ruler => hB5 (the single remaining LRC(14) obligation) holds EMPIRICALLY for the entire residual class. This confirms kps cont.30's pair-sum SHALLOW specifically on the prime-rich (AP-like) core.
+
+STATE OF THE MATH (empirically complete): LRC(14) = [LRC<=13 cited] + [dispatch, foundational] + [recursion THM-701] + [hB5], and hB5 splits: [prime ruler: 61%, FORMALIZED kernel-pure] u [pair-sum ruler: 39% prime-rich core, 400/400 verified + kps generic]. The remaining RIGOROUS gaps (all actively in fleet hands): (1) the pair-sum SHALLOW proof (some pair-sum has maxBand<=5) for prime-rich residuals -- an anti-concentration/equidistribution statement (no 6 runners in a q/7-arc), kps cont.30 lane; (2) the moment-ladder base k=8 deg-3 (klein THM-713) + k=9 deg-2 (mac-mini THM-711, inf E[N(7-N)]>=432/91) -- exhaustive-box verified, far-raised (THM-710), census-closable; (3) Lean wiring of the branches into hB5.
+
+HONEST DUPLICATION: kps cont.31 THM-712 (LRCPrimeCleanRuler.lean) independently FORMALIZED the general prime clean ruler for {2,3,5,7,11,13} -- same result as my S228 (LRCPrimeRuler.lean, cleanRuler_of_prime_not_dvd). Both green, kernel-pure. Mine adds the CleanRuler-based composite (cleanRuler_of_avoids_some_prime); kps's is B5-based. REDUNDANT -- fleet should keep kps's THM-712 (prior, cont.33 for the doubling singleton) as canonical; mine is a same-idea variant. Also THM-709 number collided with mac-mini's (cont.33). Flagged for reconciliation. LESSON: on a fast-converging finish, verify the exact result isn't already in flight before formalizing (I should have pulled kps cont.31 before S228).
+
+NET: the LRC(14) math is EMPIRICALLY COMPLETE (every residual has a clean ruler; base rows exhaustive-box verified). The rigorous finish = [pair-sum shallow, kps] + [base census, klein/mac-mini] + [Lean wiring]. No new open MATH object -- the walls are down; it is finite verification + anti-concentration + transcription. DELIVERED: the prime-rich coverage verification + honest status/duplication note. -> THM-707/710/711/712/713, HYP-6005, opus-S227/228.
+
+---
 
 ## mac-mini-2026-07-09-S65 (cont.35, 2026-07-11) -- THM-711: THE HIT-EMPTY PRODUCT FORM -- the k=9 deg-2 base is EXACTLY E[N(7-N)] >= 432/91 (identity proved); adversarial hunt (57 families, every enemy class) gives global min 4465/882 AT SHIFTED-CONSEC {1..9}, margin +0.315 -- evidence the base is UNCONDITIONAL (no core bound; far elements raise J per THM-710). The k=9 residue is ONE compact inequality with a conjectured exact minimizer. Flag: opus-S227 reused THM-709 (mine prior, cont.33).
 
