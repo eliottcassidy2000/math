@@ -1,3 +1,21 @@
+## mac-mini-2026-07-09-S65 (cont.24, 2026-07-10) -- THE THM-661 CITATION NODE: hMoment CLOSED. lrc14_from_thm661_certs = LRC(14) from TWO NAMED CITATIONS (THM-661 + the <=7-arcs pigeonhole) + hsmall + hpartA, foundational-axioms-only.
+
+Prompt (owner): formalize the THM-661 citation node hMoment.
+
+THE TRANSCRIPTION (validated BEFORE wiring, MISTAKE-136 discipline): read THM-661 canon in full; its final uniform statement -- nu(E) >= bar_k for EVERY admissible cluster of k in [8,13] DISTINCT co-offsets, diameter-free -- transcribed as `THM661MomentFloor : forall E : List Z, E.Nodup -> 8 <= |E| -> |E| <= 13 -> (momentBar |E| : R) <= mu(goodSet E)`. VALIDATED TO THE RATIONAL with a new exact nu-engine (lrc14_nu_probe_macmini_S65cont24): momentBar reproduces canon's six bars (0.6750/0.5622/0.4521/0.3312/0.1993/0.0565) and nu(block_k) reproduces canon's table (691/735, 247/294, 38/49, 1381/2205, 13823/24255, 477/1078) EXACTLY, six for six. Adversarial + small-cluster + duplicate-list probes all consistent.
+
+THE COMPANION: `SmallClusterFull` (3 <= l <= 7 distinct teeth => nu = 1; the standard pigeonhole -- k arcs of total length <= 1 cannot cover off measure zero) -- needed because reachable clusters can carry DUPLICATE co-offsets (|v| collisions: v and -v), so the dedup can fall below 8 teeth. l <= 2 needs NO citation (brick (i), cont.19, proved).
+
+THE BRIDGE (LRCMomentCitation.lean, green, foundational-axioms-only): goodSet_dedup (goodSet sees only toFinset -- dedup invisible, 4 lines) + momentBar_le_one + momentBar_anti (finite interval_cases checks) + hMoment_of_citations (3-way dedup-length dispatch: l<=2 proved / 3..7 pigeonhole / 8..13 THM-661 + antitonicity) + lrc14_from_thm661_certs (composes cont.23's dispatcher).
+
+THE SURFACE NOW: LRC(14) in Lean = [THM661MomentFloor: cited, PROVED in canon] + [SmallClusterFull: cited, standard] + [hsmall: k<=7 m_P floor on witnessG2 -- the last certificate-shaped gap] + [hpartA: the reach -- the last analytic gap]. Lemma B was closed in cont.23; hMoment closes here at the citation boundary, exactly like LRC(<=13) per project policy.
+
+One iteration: rw cannot see the Eq inside Ne (dedup_eq_nil under !=) -- direct intro/contradiction instead.
+
+FILES: LRCMomentCitation.lean (new, green, kernel-audit [propext, Classical.choice, Quot.sound] on both key theorems), lrc14 nu-probe .out, root import.
+
+NEXT AGENT: (a) hsmall -- the k <= 7 m_P floor on witnessG2: ingredients are klein THM-687's k<=6 unconditional floor + my cont.21 goodSet band machinery + the k=7 boundary; ALSO note hsmall's k in {0,1,2} sub-cases interact with the cont.16/17 repair findings (witnessG2 = 0 at k=0) -- the moment route's hsmall quantifies k <= 7 with m_P which is UNSATISFIABLE at k <= 2 by my cont.16 finding (same genus as MISTAKE-136!) -- the next agent should route hsmall through the REPAIRED assembly (lrc14_from_repaired_nodes legs) or narrow it; (b) hpartA (opus-S208 peel-then-decorrelate); (c) Windows segfault resolution (kps report pending).
+
 ## mac-mini-2026-07-09-S65 (cont.23, 2026-07-10) -- THE hB SHAPEOF DISPATCHER: LEMMA B IS A THEOREM. lrc14_from_momentfloor_certs = LRC(14) from exactly hMoment (THM-661) + hsmall + hpartA, foundational-axioms-only. Windows platform caveat flagged (kps testing).
 
 Prompt (owner): write the shapeOf dispatcher for hB.
