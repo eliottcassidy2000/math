@@ -127,6 +127,20 @@ the transfer (A). The deep well confirms: its μ is EXACTLY computable
   analytic content of the covering case is exactly the measure floors; the
   modulus side is now closed by elementary counting.
 
+## Formalization (S242)
+
+`04-computation/lean/TournamentH7/TournamentH7/LRCMeasureTransfer.lean`
+(sorry-free, kernel-pure [propext, Classical.choice, Quot.sound], root-wired,
+project green): `SafeIvStrict` (the per-speed strict-band certificate on a
+rational interval, one integer floor-witness), `strict_band_of_cert` (the
+scaled strict rounding identity), `exists_grid_point` (an interval longer
+than 1/q contains a grid point, constructive), `strictlyLive_of_cert` (THE
+TRANSFER: thirteen certificates ⟹ a strictly-live ruler at EVERY modulus
+q > D/(y−x)), `strictWitness_of_cert` (composed into kps's
+strictWitness_of_strictlyLive). Demo: `deepWell_strictWitness` — the deep
+well certified once on [93/1274, 96/1274], strictly live at every q ≥ 425.
+The continuum measure program hands over to the integer world exactly here.
+
 ## Verification & files
 
 `04-computation/lrc14_relation_lattice_resummation_klein_S234.py` (+ `.out`):

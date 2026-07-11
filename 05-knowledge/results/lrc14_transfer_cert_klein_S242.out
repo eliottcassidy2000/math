@@ -1,0 +1,18 @@
+longest safe component: [183/2548, 15/196], length 3/637 = 0.004710
+certificate interval: [93/1274, 96/1274], length 3/1274 = 0.002355
+q threshold: q > D/(Y-X) = 1274/3 = 424.7
+per-speed j-witnesses (SafeIvStrict: D < 14(vX - jD) and 14(vY - jD) < 13D):
+  v=   1: j=  0  True True
+  v=   2: j=  0  True True
+  v=   3: j=  0  True True
+  v=   4: j=  0  True True
+  v=   5: j=  0  True True
+  v=   6: j=  0  True True
+  v=   7: j=  0  True True
+  v=   8: j=  0  True True
+  v=   9: j=  0  True True
+  v=  10: j=  0  True True
+  v=  11: j=  0  True True
+  v=  12: j=  0  True True
+  v= 182: j= 13  True True
+ALL STRICT: True

@@ -30,6 +30,19 @@ HONEST -- remaining for full MultiDetunedDispatch: (1) the (2,2) residual (congr
 Files: LRCIntervalCount.lean, LRCTwoDetunedClearing.lean (+root); tasks #29-32. -> opus-S210 (reduction), S209 (MultiDetunedDispatch), S208 (d-detuned finding), monad THM-678, hB5.
 
 ---
+## klein-2026-07-10-S242 -- THE MEASURE-PROGRAM SPINE IN LEAN (HYP-5935): LRCMeasureTransfer.lean GREEN, kernel-pure -- THM-685's transfer pipeline end-to-end, fully integer: SafeIvStrict certificates => strictly-live rulers at EVERY q > D/(y-x) => kps StrictWitness; DEMO: the deep well certified ONCE on [93/1274, 96/1274], strictly live at every q >= 425
+
+Prompt (owner): run the Lean transcription of the measure-program spine.
+
+THE DESIGN CHOICE: not the continuum (mu_inf, integrals) but THE HANDOVER POINT -- the measure program (THM-685..692) terminates in explicit rational safe intervals (first-window slivers, 7-torsion slivers, engine-emitted component lists); the Lean file makes ANY such certificate operational, with no measure theory anywhere: SafeIvStrict v D x y := exists j, D < 14(vx - jD) and 14(vy - jD) < 13D (one integer floor-witness pins a speed strictly in-band on the whole interval, by linearity).
+
+FIVE THEOREMS, ALL KERNEL-PURE [propext, Classical.choice, Quot.sound], project green (8800+ jobs): (1) strict_band_of_cert -- the scaled strict rounding identity: certificate + any grid point c/q in [x/D, y/D] => q < 14((vc) % q) < 13q (scale everything by D; cancel D by by_contra + nlinarith; identify the residue by Int.add_mul_emod_self_left + Int.emod_eq_of_lt); (2) exists_grid_point -- an interval longer than the grid spacing contains a grid point (constructive c = xq/D + 1, via Int.ediv_add_emod + emod bounds only); (3) strictlyLive_of_cert -- THE TRANSFER: thirteen certificates => exists p, StrictlyLive v q p at EVERY modulus q > D/(y-x), prime or not; (4) strictWitness_of_cert -- composed directly into kps's strictWitness_of_strictlyLive (LRCStrictRuler): certificate => strict witness => (their chain) lonely; (5) deepWell_strictWitness -- THE DEMO: the deep well {1..12,182}, certified once on [93/1274, 96/1274] (j = 0 for speeds 1..12, j = 13 for 182; all 13 pairs of inequalities kernel-decide), strictly-live rulers at EVERY q >= 425. One certificate, infinitely many rulers -- the standing transfer, formal.
+
+THE INTERFACE STATEMENT: boxeph's mu_L evaluator and mac-mini's anchor/band engines emit exactly SafeIvStrict-shaped rational interval lists; THM-687-692 guarantee such certificates EXIST for every two-scale class. The continuum program hands over to the integer world at this file, and kps's integer chain carries it to LRC14Statement.
+
+LEAN-CRAFT (for the fleet): (a) mul_lt_mul_left / mul_lt_mul_of_pos_right on Z hit a MulRightStrictMono instance failure (the elaborator picks the group-op version) -- dodge with by_contra + push_neg + nlinarith (products of hypothesis pairs close it); (b) Matrix ![...] indexing after fin_cases resists simp only [defn] -- but plain kernel decide evaluates it fine (SafeIvStrict's exists needs the j provided first: exact <j, by decide>); (c) Int.ediv_add_emod is deprecated for Int.mul_ediv_add_emod (warning only); (d) building a new file against a moving fleet root: lake build the dependency module first, then lake env lean the new file for fast iteration.
+
+FILES: LRCMeasureTransfer.lean (+ root wire); lrc14_transfer_cert_klein_S242.out; THM-685 formalization addendum; HYP-5935 resolved; memory.
 
 ## mac-mini-2026-07-09-S65 (cont.22, 2026-07-10) -- THE hB CERTIFICATE SWEEP: MISTAKE-136 (hB node UNSATISFIABLE over all Shape) + repaired consumer + THE capRat LADDER IS EXACT (= per-|S| safe minima, all 6 rows, engine-verified) + 762/2380 families GREEN IN LEAN (Sizes 1,2,3,4a), remaining 1618 emitted + building sequentially.
 
