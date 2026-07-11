@@ -1,0 +1,15 @@
+(1) transfer operator p_j(E) -> ((7-j)/7)p_j + ((j+1)/7)p_(j+1):  max err (w=1601) = 0.00036
+(2)/(3) exact transition + p1-tax Delta_w <= p1(E')/3 over far w (w >= 3*max core):
+    core max=7: max Delta_w/p1 = 0.1867
+    core max=20: max Delta_w/p1 = 0.2514
+    core max=40: max Delta_w/p1 = 0.1862
+    => worst far-w tax = 0.2514  (bound 1/3 = 0.3333: HOLDS)
+(4) Phi_{1/3}(F) = p0 + (1/3)p1 <= cap_{|F|+1}, 1500 random wide F:
+    |F|=7: min margin cap_8 - Phi_(1/3) = 0.2937  (OK)
+    |F|=8: min margin cap_9 - Phi_(1/3) = 0.3400  (OK)
+    |F|=9: min margin cap_10 - Phi_(1/3) = 0.3321  (OK)
+(acc) Phi_{1/3}(consec_8 + growing far tail) -> bounded limit (increments decay):
+    append w=   40: Phi_(1/3) = 0.44074
+    append w=  200: Phi_(1/3) = 0.47859  d=+0.0379
+    append w= 1000: Phi_(1/3) = 0.52041  d=+0.0418
+    append w= 5000: Phi_(1/3) = 0.56172  d=+0.0413
