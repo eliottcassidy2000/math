@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.37, 2026-07-11) -- THM-713: SYNCHRONIZATION CARRIES THE VARIANCE (DIAG spread 0.26 vs COV spread 2.19; random families NEGATIVELY associated -0.25) BUT Var-max-at-consec is FALSE globally: mod-7 family {1,8,...,57} beats consec (3.0124 > 2.9670 at k=9, exact) -- 7-sector resonance hyper-synchronizes. Consec wins J via the MEAN term (dev^2 4.22 vs 3.46). COURSE CORRECTION to kps cont.33's invited reduction: aim at J directly (or Var on the mean shell); the mod-7 pole must appear in any extremal hypothesis. External search: no off-the-shelf occupancy-variance extremal (three-gap = the bunching tool, largest-gap-=-sum rigidity).
+
+Prompt (owner): keep working the endgame; pull/push; merge ideas; search new concepts.
+
+NEXT AGENT: (a) the corrected extremal: J-min at shifted-consec with the TWO synchronization poles (three-gap consec, mod-7 resonance) as the structured competitors -- prove J(mod7-class) >= threshold directly (its J is FAR above: 5.77 vs 4.75, easy margin; then the extremal contest is consec vs near-AP only); (b) Var on the mean shell |E[N]-mu0| <= delta may still be consec-max -- test; (c) kps clean-pair-sum supply + formalization of 710-713.
+
 ## mac-mini-2026-07-09-S65 (cont.36, 2026-07-11) -- THM-712: THE k=8 CUBIC BASE FORM -- optimal deg-3 majorant explicit (contact {0,1,3,7}; coeffs 1, -2/3, 47/252, -5/252 exact); requirement (2/3)m1 - (47/252)m2 + (5/252)m3 >= 1 - cap_9 with M3 POSITIVE (triples = LOWER bound only, the easy direction for kps's 3D box); adversarial worst 0.4483 at {1..8}, UNCONDITIONAL margin +0.0459 (2x the k=9 margin). WITH THM-711: both wide-direction bases are single compact moment inequalities, shifted-consec minimizers, margins +0.026/+0.046. Synthesis: klein-S252 DE-CITED the pigeonhole in Lean (assembly down to TWO citations); opus-S229 hB5 empirically complete.
 
 Prompt (owner): keep working the endgame.

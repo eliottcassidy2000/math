@@ -1,0 +1,23 @@
+family                       DIAG      COV   Var(N)
+consec {1..9}              1.1409   1.8261   2.9670
+consec {0..8}              1.0579   1.5042   2.5621
+best-mean coverer-ish      1.0696   1.3036   2.3732
+near-AP                    1.1270   1.2201   2.3472
+mod7                       1.2542   1.7582   3.0124
+spread                     1.2846  -0.1748   1.1098
+rnd                        1.2330  -0.2588   0.9742
+rnd                        1.2920  -0.0248   1.2673
+rnd                        1.2842  -0.1498   1.1344
+rnd                        1.2957  -0.2550   1.0407
+rnd                        1.2861  -0.2541   1.0320
+rnd                        1.3020  -0.2818   1.0202
+rnd                        1.1870  -0.2350   0.9520
+rnd                        1.2988  -0.2612   1.0376
+rnd                        1.3207  -0.1818   1.1390
+rnd                        1.2941  -0.2422   1.0518
+rnd                        1.2733  -0.3591   0.9142
+rnd                        1.2594  -0.0901   1.1693
+
+Var-max: mod7 (V=3.0124, DIAG=1.2542, COV=1.7582)
+DIAG spread across families: 0.2629;  COV spread: 2.1851
+SYNCHRONIZATION VERDICT: consec's lead is COV-carried
