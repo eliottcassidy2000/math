@@ -16,6 +16,24 @@ CONNECTIONS FOUND (leverageable): HYP-2646 (Re D7 ruler, now closed-form) + HYP-
 My LRC Lean ~106 nodes (unchanged; this turn is pure math). FILES: THM-699 canon, lrc14_support6_permanent_kernel_kps_S127.py/.out, reflection the-support6-kernel-is-a-permanent-and-it-vanishes-on-average-kps-S127.md.
 
 NEXT: (1) the S_c reciprocal-sum bound (the wall -- Erdos-Turan/summation-by-parts on Lambda(E), armed now by THM-699's centered-sum identity); (2) formalize THM-699's permanent identity + sharp bound (finite, Lean-tractable -- Finset permanent + triangle bound + 46656-coset decide) IF owner wants; (3) the support-s>6 surjection-sum generalization.
+## opus-2026-07-11-S217 -- THE MINKOWSKI COUNT IS THE TAIL, NOT THE CRUX. Attempted the support-6 successive-minima count; an exact experiment + 3 scouts show the ABSOLUTE count is provably insufficient AND covolume-blind to the short relations that carry corr. Reframed precisely + named the real open object.
+
+Prompt (owner): attempt the support-6 Minkowski successive-minima count; look for all connections in past work and use those angles creatively against each other to make statements narrowing the picture and sharpening understanding.
+
+ATTEMPTED THE COUNT (3 Explore scouts: exact-identity/kernel, lattice/Minkowski, reciprocal-sum/conditional-convergence). Object: meas(S7(E)) = M7(k) + corr(E), corr = Sum_{n in Lambda-o(E)} K(n), K(n)=D7(n mod 7)/prod n_j, |Re D7|<=0.1431. Crux meas(S7)<=cap_k, consec maximizer; binding k=8: corr(consec)=0.303 vs margin 0.357.
+
+VERDICT (3 walls => the count as posed is INSUFFICIENT):
+- Wall 1 (F3, PROVED-lossy, mac-mini Angle F): Sum|K(n)|(AP,k=8)=1.773 >> margin 0.357; corr's smallness is SIGNED Re-D7 cancellation, invisible to covolume/successive-minima. Absolute loses >=5x.
+- Wall 2 (MISTAKE-078): the box-truncated absolute lattice sum DIVERGES harmonically (7.42 at radius 1e5); only conditionally convergent.
+- Wall 3 (MY EXACT EXPERIMENT, lrc14_covolume_signed_vs_absolute_opus_S217.py): covol MISSES the short relations. stranger {0..6,400}: covol 400 but corr stays 0.17 (corr*covol=69, UNBOUNDED) -- the short reln 1+2-3=0 in the {1,2,3} core dominates corr regardless of the far element; covol (global prod-lambda) is blind to the low-height relations that carry corr. Also: dilated AP has IDENTICAL covol AND corr => scale-invariance (THM-531) IS a covolume identity.
+
+THE SHARPENING (deliverable): corr splits by relation HEIGHT into (1) LOW-HEIGHT CORE (short relations=sub-AP content; CARRIES corr; consec extremal; FINITE census + the PROVED far-element peel THM-546 |Delta_w|<=(6/49)V/w = the multi-D sum collapsing to a 1-D Abel sum vs the mod-7 character, the ONE captured signed instance, rank-1) and (2) HIGH-HEIGHT TAIL (dissociated, corr->0; where covolume/successive-minima applies and LEM-022 lifts -- but still conditionally convergent, so SIGNED). => THE MINKOWSKI COUNT IS THE TAIL, NOT THE CRUX. The crux is finite-census + THM-546. Retire the absolute count as a closer; keep it only as a density input to a SIGNED sum.
+
+THE REAL OPEN OBJECT: the ungapped-wide-non-AP residual (higher-Freiman-dim GAPs; no peelable far element; not a dilated AP), held computationally by the Plat<->Delta ENTANGLEMENT (wide base shrinks Phi, compensating larger Delta_w; margin>=0.22) -- NOT yet a theorem. It is the multi-D generalization of THM-546's SIGNED 1-D peel (THM-504: Abel across support filtration + Polya-Vinogradov on the mod-7 char D7), NOT the absolute covolume count.
+
+DELIVERED: reflection the-minkowski-count-is-the-tail-not-the-crux-opus-S217.md; 2 exact scripts (successive_minima_corr, covolume_signed_vs_absolute) +outs. Handoff: promote the ungapped Plat<->Delta entanglement to the named open lemma; generalize THM-546's signed peel, not the absolute Minkowski count. (kps cont.20 pondering the same hinge -- pair-correlation.) -> THM-538/546/531/504, HYP-2606/2607/2646/2645/2608a, LEM-022, opus-S216.
+
+---
 
 ## kind-pasteur-2026-07-11-S127 (cont.20) -- PONDERED both open branches (new angles: the pair correlation is the hinge) + WIRED the ZMod q off-diagonal energy (hyperbola_box_count -> zcorr_percell -> t2 energy). Kernel-pure, root-wired. Honest object-mismatch finding.
 

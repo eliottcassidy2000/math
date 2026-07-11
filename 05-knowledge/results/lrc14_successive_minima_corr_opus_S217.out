@@ -1,0 +1,20 @@
+M7(8) = 0.024480   M7(6) = 0.000000   (the iid/dissociated limit; corr -> 0 there)
+
+                family   k      p0(E)     M7(k)       corr  lambda1          shortest reln
+   consec {0..7}         8   0.672789  0.024480  +0.648310        3 (-2, 1, 0, 0, 0, 0, 0)
+   AP dilated 3*         8   0.672789  0.024480  +0.648310        3 (-2, 1, 0, 0, 0, 0, 0)
+   near-AP (1 detune)    8   0.809524  0.024480  +0.785044        3 (-2, 1, 0, 0, 0, 0, 0)
+   mild spread           8   0.950487  0.024480  +0.926007        3 (-2, 1, 0, 0, 0, 0, 0)
+   Sidon-ish             8   0.987879  0.024480  +0.963399        4 (-3, 1, 0, 0, 0, 0, 0)
+   Sidon (B2) small      6   1.000000  0.000000  +1.000000        4       (-3, 1, 0, 0, 0)
+   wide dissociated      8   0.970255  0.024480  +0.945775        4 (-1, -2, 1, 0, 0, 0, 0)
+   wide prime-ish        8   0.973926  0.024480  +0.949447        4 (-2, -1, 1, 0, 0, 0, 0)
+
+=== far-element peel (THM-546): Delta_w = p0(E'+w) - [p0(E') + (1/7)p1(E')] vs (6/49)V/w ===
+core consec_7: p0=0.852381 p1=0.342857  Phi=p0+p1/7=0.901361
+  w=  10: Delta_w=-0.091837   |Delta_w|*w=  0.9184   (6/49)V bound ~ const?
+  w=  20: Delta_w=-0.091837   |Delta_w|*w=  1.8367   (6/49)V bound ~ const?
+  w=  50: Delta_w=-0.098980   |Delta_w|*w=  4.9490   (6/49)V bound ~ const?
+  w= 100: Delta_w=-0.098503   |Delta_w|*w=  9.8503   (6/49)V bound ~ const?
+  w= 200: Delta_w=-0.095408   |Delta_w|*w= 19.0816   (6/49)V bound ~ const?
+  w= 400: Delta_w=-0.098265   |Delta_w|*w= 39.3061   (6/49)V bound ~ const?
