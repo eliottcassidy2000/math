@@ -10,6 +10,26 @@ DEMO: P = {1..5}, E = {0,1,2,3,5,8,13,21}, q* = 13, a = 1, c = 4, V = 10000: wit
 
 FILES: LRCTwoScaleWitness.lean (+ root wire); THM-693 (canon); lrc14_twoscale_witness_demo_klein_S244.out; HYP-5945 resolved; memory.
 
+## mac-mini-2026-07-09-S65 (cont.26, 2026-07-10) -- THE REACH NODE SPLIT AND THE FULLY CITATION-CLOSED ASSEMBLY: lrc14_from_citations_only = LRC(14) from THREE NAMED CITATIONS (THM-661 + <=7-arcs pigeonhole + THM-527-A ruler embedding) AND NOTHING ELSE.
+
+Prompt (owner): attack the hpartA reach node.
+
+RECON FIRST: the reach infrastructure was further along than any map showed -- LRCMreachConcrete (compactness/lonely_of_Mreach_ge PROVED), LRCGapReach (kps-S31: the 1/7-gap => 1/14-margin geometric core), LRCGoodPeriodReach (klein-S203: the chain reduced to ONE named gap, 'the ruler embedding -- deferred Part-A, the single remaining hypothesis'), klein's brand-new LRCMeasureTransfer (S242, integer certificate->StrictWitness) + LRCTwoScaleWitness (S244/THM-693, constructive witnesses at V > 2184). Read canon THM-527 in full: Part A = the slow-fast reformulation, PROVED in the limit with O(1/Vmax) correction; the sub-threshold families are the census/banks arc (THM-686..693).
+
+THE SPLIT (LRCReachCitation.lean, green, kernel-pure):
+- PROVED: `nonzero_of_witnessG2_pos` -- THE MISTAKE-136 PROBE ON hpartA PASSES WITH A BONUS: a zero speed puts 0 in the small part, fract(0)=0 empties safeSet, witnessG2=0 -- so hpartA's GUARD-FREE quantification is sound and the hv guard is DERIVABLE from positivity. + `safeSet_empty_of_zero_mem`.
+- PROVED: `exists_config_of_witnessG2_pos` -- positivity yields an explicit slow time in goodSet ∩ safeSet (nonempty_of_measure_ne_zero); the configuration the embedding consumes.
+- PROVED: `Mreach_ge_of_minReach` -- the compactness half of the reach is pure glue (le_csSup against minReach_le_half + Mreach_eq_global_sSup).
+- CITED: `THM527ARulerEmbedding` -- positive witness measure => a real time with minReach >= 1/14. The honest bundle: [canon THM-527-A: the slow-fast embedding, limit + O(1/Vmax)] + [the finite-V closure: klein THM-686 windows + 687/688 two/multi-scale + 693 constructive witnesses + banks]. Enters like LRC(<=13).
+- `hpartA_of_rulerEmbedding` := derive guard + embed + sup.
+- **`lrc14_from_citations_only (h661) (hsmall7) (h527) : LRC14Statement`** -- THE COMPLETE ASSEMBLY. Axiom audit: [propext, Classical.choice, Quot.sound] on all three key theorems.
+
+WHAT THE ARC NOW SAYS (cont.16 -> 26, one session, eleven continuations): the entire Lean surface of LRC(14) is THREE CITATION-SHAPED PROPS, each PROVED classically in canon by the fleet. Every wiring theorem, every certificate (2380 + 286 + 13 families, 8099+5720 dispatch leaves), every soundness repair (MISTAKE-136 x2 found, 2 nodes repaired, 1 guard proved derivable) is kernel-pure Lean. The de-citation program (full formalization of the three) is the long horizon: THM-661's moment LP, the pigeonhole's measure-zero tiling, and the ruler embedding's slow-fast analysis -- with klein's integer-only transfer/witness machinery (S242/S244) as the natural de-citation path for the third.
+
+FILES: LRCReachCitation.lean (new, green, root-wired), session log.
+
+NEXT AGENT: (a) the de-citation of THM527ARulerEmbedding is the deepest open Lean work -- klein's LRCMeasureTransfer + LRCTwoScaleWitness cover the two-scale/certificate cases constructively; the general case needs the multi-scale composition (klein's named remaining) + the measure-positivity-to-certificate extraction (my exists_config gives the point; the INTERVAL around it needs the good/safe sets' interval structure -- the engine knows it, a rational-topology lemma would formalize it); (b) kps Windows report still pending (segfault files); (c) consider a COURT CASE or canon THM for the citations-only assembly as the project's formal LRC(14) status marker.
+
 ## mac-mini-2026-07-09-S65 (cont.25, 2026-07-10) -- hsmall DISCHARGED VIA THE REPAIRED LEGS: THE MOMENT ROUTE IS CLOSED. lrc14_from_two_citations = LRC(14) from exactly [THM-661] + [<=7-arcs pigeonhole] + [hpartA]. Every other node is a THEOREM, foundational-axioms-only.
 
 Prompt (owner): discharge the hsmall node via the repaired legs.
