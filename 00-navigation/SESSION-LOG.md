@@ -1,3 +1,15 @@
+## klein-2026-07-10-S244 -- THE FINITE-V TWO-SCALE WITNESS (THM-693, HYP-5945): PROVED AND FORMALIZED IN ONE SESSION, GREEN ON FIRST COMPILE -- the explicit multiplier w = aV + (c - aV) % q* is strictly live at modulus q*V for every large-V two-scale family: the test-point program made CONSTRUCTIVE (no limits, no transfer, no measure theory); demo (130000, 10001)
+
+Prompt (owner): run the finite-V two-scale witness composition.
+
+THE THEOREM (THM-693, derived, verified in Python, then formalized -- LRCTwoScaleWitness.lean, all 5 theorems kernel-pure [propext, Classical.choice, Quot.sound], GREEN ON FIRST COMPILE): for S_V = P u {V - e : e in E} with test data (q* in [8,13], a in [1, q*-1], missed class c satisfying (p*a) % q* != 0 for every small speed and (c - e*a) % q* != 0 for every co-offset; V > 2184 and V > 168e per co-offset): with Delta = (c - aV) mod q*, the EXPLICIT multiplier w = aV + Delta at modulus q = q*V is STRICTLY LIVE. The two residue computations, all-integer: (p*w) % (q*V) = r_p*V + p*Delta (r_p = (pa) % q* in [1, q*-1]) and ((V-e)*w) % (q*V) = s_e*V - e*Delta (s_e = (c - ea) % q* in [1, q*-1]); the bands: 14 r_p >= q*+1 dominates p*Delta <= 156 once V > 2184; 14 s_e V >= (q*+1)V dominates 14 e Delta <= 168e once V > 168e. Lean mechanics: Int.ediv_add_emod decompositions, residues identified via Int.add_mul_emod_self_left + Int.emod_eq_of_lt (the S242 pattern), key algebra by linear_combination V * hdm.symm, bands by nlinarith; the w = c (mod q*) congruence by the S227 sum-mod juggle (Int.add_emod + emod_emod_of_dvd + ring_nf).
+
+THE MEANING: THM-690/691/692 proved mu_inf > 0 -- witnesses exist in the LIMIT; THM-693 WRITES THE WITNESS DOWN at finite V. The missed class c is exactly what S243's pigeonhole_missed_class produces; the P-side nonvanishing is S243's qstar_p_nonzero/residue_in_range. THE CONSTRUCTIVE CHAIN IS COMPLETE AND KERNEL-PURE END TO END: pigeonhole => missed class => w = aV + Delta => StrictlyLive => (kps strictWitness_of_strictlyLive) => StrictWitness => lonely. No limits, no transfer, no measure theory, no census -- for every two-scale family beyond the absolute thresholds (V > 2184, V > 168 e_max); below them, THM-686 windows + banks.
+
+DEMO: P = {1..5}, E = {0,1,2,3,5,8,13,21}, q* = 13, a = 1, c = 4, V = 10000: witness (q, w) = (130000, 10001) obtained THROUGH the theorem with decide-checked hypotheses; Python cross-check confirms all 13 residues strictly in-band with the tight cases exactly at s_e in {1, 12} as the proof predicts.
+
+FILES: LRCTwoScaleWitness.lean (+ root wire); THM-693 (canon); lrc14_twoscale_witness_demo_klein_S244.out; HYP-5945 resolved; memory.
+
 ## mac-mini-2026-07-09-S65 (cont.24, 2026-07-10) -- THE THM-661 CITATION NODE: hMoment CLOSED. lrc14_from_thm661_certs = LRC(14) from TWO NAMED CITATIONS (THM-661 + the <=7-arcs pigeonhole) + hsmall + hpartA, foundational-axioms-only.
 
 Prompt (owner): formalize the THM-661 citation node hMoment.

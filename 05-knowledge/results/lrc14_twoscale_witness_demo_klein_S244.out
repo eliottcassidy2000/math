@@ -1,0 +1,17 @@
+Delta = 1, w = 10001, q = 130000
+missed-class residues (c - e*a) % qs: [4, 3, 2, 1, 12, 9, 4, 9] all nonzero: True
+P-side residues (p*a) % qs: [1, 2, 3, 4, 5] all nonzero: True
+  v=    1: 14r =   140014 in (130000, 1690000)? True
+  v=    2: 14r =   280028 in (130000, 1690000)? True
+  v=    3: 14r =   420042 in (130000, 1690000)? True
+  v=    4: 14r =   560056 in (130000, 1690000)? True
+  v=    5: 14r =   700070 in (130000, 1690000)? True
+  v= 9979: 14r =  1259706 in (130000, 1690000)? True
+  v= 9987: 14r =   559818 in (130000, 1690000)? True
+  v= 9992: 14r =  1259888 in (130000, 1690000)? True
+  v= 9995: 14r =  1679930 in (130000, 1690000)? True
+  v= 9997: 14r =   139958 in (130000, 1690000)? True
+  v= 9998: 14r =   279972 in (130000, 1690000)? True
+  v= 9999: 14r =   419986 in (130000, 1690000)? True
+  v=10000: 14r =   560000 in (130000, 1690000)? True
+ALL STRICTLY LIVE: True | thresholds: V > 2184: True ; V > 168*emax = 3528 : True
