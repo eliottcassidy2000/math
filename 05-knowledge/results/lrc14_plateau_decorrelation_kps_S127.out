@@ -1,0 +1,10 @@
+(1) exact cover decomposition 1_cover(E)=1_cover(E')+sum_s f_s*1(wx in s):  mismatches = 0  [CONFIRMED]
+(2) core consec_8: p0(E')=0.32722, p1(E')=0.24422, Plat=0.36210  (HYP-2644 claim 0.36210); V-bound=392
+         w     p0(E)   |p0-Plat|    err*w    V/(6w)  bound holds
+        50   0.35339     0.00871    0.435   1.30667         True
+       101   0.36393     0.00183    0.184   0.64686         True
+       199   0.36291     0.00081    0.161   0.32831         True
+       401   0.36213     0.00003    0.011   0.16293         True
+       809   0.36194     0.00016    0.132   0.08076         True
+      1601   0.36214     0.00004    0.066   0.04081         True
+    => p0(E) - Plat(E') = O(1/w), the V/(6w) Fourier bound holds (loose; sharp const ~0.2).
