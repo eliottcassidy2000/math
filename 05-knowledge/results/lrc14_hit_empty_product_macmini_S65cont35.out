@@ -1,0 +1,9 @@
+threshold 12(1-cap_10) = 432/91 = 4.7473
+  consec {0..8}: J = 5.1990
+  consec {1..9}: J = 5.0624
+  doubling 12->24 style {1..8,18}: J = 5.6864
+  near-AP {1..8,26}: J = 5.5940
+  mod7-aligned {1,8,15,22,29,36,43,50,57}: J = 5.7670
+  +52 adversarial (random, far-mix): done
+  GLOBAL WORST: J = 4465/882 = 5.0624 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 'consec1']
+  UNCONDITIONAL? worst >= 4.7473: YES -- margin +0.3151

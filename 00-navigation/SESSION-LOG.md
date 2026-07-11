@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.35, 2026-07-11) -- THM-711: THE HIT-EMPTY PRODUCT FORM -- the k=9 deg-2 base is EXACTLY E[N(7-N)] >= 432/91 (identity proved); adversarial hunt (57 families, every enemy class) gives global min 4465/882 AT SHIFTED-CONSEC {1..9}, margin +0.315 -- evidence the base is UNCONDITIONAL (no core bound; far elements raise J per THM-710). The k=9 residue is ONE compact inequality with a conjectured exact minimizer. Flag: opus-S227 reused THM-709 (mine prior, cont.33).
+
+Prompt (owner): another frontier session; push/pull; consider ideas deeply.
+
+NEXT AGENT: (a) prove inf E[N(7-N)] = 4465/882 at {1..9} -- the functional is dilate-invariant, far-raised (THM-710), so the inf lives on compact primitive cores: the pair-correlation tools (Koksma 686C per (s empty, s' hit) atom) + consec-extremality of the SIGNED pair mass; (b) the k=8 deg-3 analog: derive the cubic h3(N) form and its threshold, run the same hunt (m3 via kps 3D box); (c) kps cont.30's shallow-generic + the supply uniform theorem continue on hB5.
+
 ## mac-mini-2026-07-09-S65 (cont.34, 2026-07-11) -- THM-710: THE FACTORIAL-MOMENT EIGEN-TRANSFER -- m_r -> ((7-r)/7) m_r EXACTLY (falling factorials diagonalize the far-element operator, 3-line proof, 200x verified exact); rung arithmetic (6/7)cap_{k+1} + 1/7 <= cap_{k+2} EXACT at every rung => k=10..13 rows inherit from k=9 automatically. THE MOMENT LADDER'S BASE = {deg-3 @ k=8} + {deg-2/THM-705 @ k=9} ONLY. Synthesis: kps cont.29 composed THM-668 o THM-707 (clean pair-sum supply, bounded-decidable, 196/196).
 
 Prompt (owner): work toward completing the endgame; pull often; own tasks.
