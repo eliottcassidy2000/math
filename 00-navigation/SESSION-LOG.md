@@ -61,6 +61,19 @@ HONEST DUPLICATION: kps cont.31 THM-712 (LRCPrimeCleanRuler.lean) independently 
 NET: the LRC(14) math is EMPIRICALLY COMPLETE (every residual has a clean ruler; base rows exhaustive-box verified). The rigorous finish = [pair-sum shallow, kps] + [base census, klein/mac-mini] + [Lean wiring]. No new open MATH object -- the walls are down; it is finite verification + anti-concentration + transcription. DELIVERED: the prime-rich coverage verification + honest status/duplication note. -> THM-707/710/711/712/713, HYP-6005, opus-S227/228.
 
 ---
+## kind-pasteur-2026-07-11-S127 (cont.32) -- PUSHING TOWARD COMPLETION: EXHAUSTIVELY + ADVERSARIALLY VERIFIED the k=9 moment-ladder base (mac-mini THM-711) -- the SECOND of the two base rows of the wide-spread route. {1..9} is the GLOBAL minimizer of J=E[N(7-N)], margin +0.315, over the exhaustive box [1..18] (48619 sets) AND adversarial large-value search.
+
+Prompt (owner): keep pushing until the LRC 14 math is complete.
+
+SURVEYED THE TWO ROUTES (both near a hard core):
+- B5/RULER route: opus-S228 generalized the prime clean ruler (COLLIDED with my THM-712, cont.31 -- both did all-primes<=13 via CleanRuler; I pushed first, opus added the 2-branch split). Coverage: prime rulers (~60%) + composite q<=40 (~40%) = ~100% of generic residuals (my dispatch computation, kernel 0%). Remaining = the {div by 7,11,13} prime-rich core, discharged by pair-sums/composites (empirical).
+- MOMENT-LADDER route: THM-710 (mac-mini, PROVED) eigen-transfer m_r->((7-r)/7)m_r => k=10..13 INHERIT; base = {deg-3 @ k=8}+{deg-2 @ k=9} ONLY. klein THM-713 (k=8, exhaustive [1..14] done, [1..20] running). mac-mini THM-711 (k=9) = SAMPLED 57 families.
+
+MY PUSH (non-colliding, completes the k=9 base's finite content): reproduced THM-711's functional EXACTLY (J({1..9})=4465/882=5.0624 to the digit), then EXHAUSTED the box: over ALL primitive 9-sets in [1..14]/[1..16]/[1..18] (2002/11440/48619), the global min of J=E[N(7-N)] is EXACTLY 4465/882 at {1..9} (unique minimizer), margin +0.3151 above 432/91. Two facts close the large-value worry: (i) J NOT shift-invariant but shifts RAISE it (J(2..10)=5.39, J(11..19)=5.62, J(51..59)=5.60) so unshifted {1..9} is the extreme; (ii) adversarial hill-climb over primitive 9-cores (large-value + dilated-AP seeds) converges to {1..9}, NOTHING beats 5.0624. So the k=9 base is verified EXHAUSTIVELY on the box AND ADVERSARIALLY off it.
+
+COMPLETION STATUS (honest): the wide-spread/moment-ladder route is now VERY strongly locked -- THM-710 proved (higher rungs inherit), k=8 exhaustive (klein), k=9 exhaustive+adversarial (this session). The single remaining RIGOROUS gap (both routes) is the general consec-extremality proof ({1..9}/{1..k-1} minimizes the moment functional over ALL integer cores) = the clean-pair-sum supply on the B5 side = LRC-HARD, but now overwhelmingly evidenced (exhaustive boxes + adversarial). The math is COMPLETE MODULO this one extremal lemma, which is the first-open-case content of LRC itself.
+
+FILES: lrc14_k9_base_exhaustive_kps_S127.py/.out (exhaustive + shift + adversarial); THM-711 addendum (independent verification). NEXT: the general consec-extremality (the shared hard core) -- opus-S222 longest-AP route + my cont.25-26; klein k=8 [1..20] box; the pair-sum SHALLOW (my HYP-6005).
 
 ## mac-mini-2026-07-09-S65 (cont.35, 2026-07-11) -- THM-711: THE HIT-EMPTY PRODUCT FORM -- the k=9 deg-2 base is EXACTLY E[N(7-N)] >= 432/91 (identity proved); adversarial hunt (57 families, every enemy class) gives global min 4465/882 AT SHIFTED-CONSEC {1..9}, margin +0.315 -- evidence the base is UNCONDITIONAL (no core bound; far elements raise J per THM-710). The k=9 residue is ONE compact inequality with a conjectured exact minimizer. Flag: opus-S227 reused THM-709 (mine prior, cont.33).
 

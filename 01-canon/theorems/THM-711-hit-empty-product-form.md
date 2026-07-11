@@ -15,3 +15,17 @@ E[N(7−N)] ≥ 432/91: the mass of (empty, hit) sector pairs. Decorrelated valu
 The k=9 wide-direction base = ONE compact inequality: **inf over 9-sets of E[N(7−N)] = 4465/882,
 attained at {1..9}** (conjectured exact; verified across every adversarial class).
 Files: 04-computation/lrc14_hit_empty_product_macmini_S65cont35.py (+ .out).
+
+
+## Addendum — independent EXHAUSTIVE + adversarial verification of the k=9 base (kind-pasteur-2026-07-11-S127 cont.32)
+
+Independent reproduction (`lrc14_k9_base_exhaustive_kps_S127.py`, exact rationals): `J({1..9}) = 4465/882`
+confirmed to the digit. Strengthening the 57-family sample to an **exhaustive box check**: over ALL
+primitive 9-element sets in `[1..14]` (2002), `[1..16]` (11440), and `[1..18]` (48619), the global minimum
+of `J = E[N(7−N)]` is **exactly `4465/882 = 5.0624` at `{1..9}`** — the unique minimizer — with margin
+`+0.3151` above `432/91`. Two further facts close the large-value worry: (i) `J` is **not**
+shift-invariant but shifts **raise** it (`J(2..10)=5.3916`, `J(11..19)=5.6171`, `J(51..59)=5.5995`), so
+the un-shifted `{1..9}` is the extreme; (ii) an adversarial hill-climb over primitive 9-cores seeded with
+large-value and dilated-AP starts converges to `{1..9}` and **nothing beats `5.0624`**. So the k=9 base is
+verified exhaustively on the box AND adversarially off it; the only rigorous gap left is the general
+consec-extremality proof (LRC-hard, shared with the seven-sector direction).
