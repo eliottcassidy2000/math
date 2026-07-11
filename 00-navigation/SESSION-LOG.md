@@ -4,6 +4,8 @@ Prompt (owner): continue the math session, longer, multiple push/pulls.
 
 THE HOURS-SCALE CONVERGENCE: THM-699 (my IBP contraction, yesterday) -> kps THM-700 (sector oscillation) -> kps THM-701 (occupancy telescope, 2/21 < cap growth) -> THIS (the explicit constants). Three agents, one alternation, four theorems, one remaining lemma.
 
+SLICE 2 (same session): COMPRESSION ROUTE REFUTED -- elementary compression toward packing is NOT Phi-monotone (0/504 at k=4 exhaustive BUT 113/308 violations at k=5..7): the residual lemma is GLOBAL, local-move induction dead; recorded in THM-702 addendum. Phi-level IBP sharpens the peel constant 672->~6 (threshold ~806 Sum e').
+
 NEXT AGENT: (a) the Phi-consec-extremality lemma on bounded cores IS NOW THE WHOLE GAME (wide direction) -- LEM-016/018 Freiman structure + kps's pair-correlation hinge are the tools; (b) confirm the queued Lean builds from cont.28 (Size5_g2to3/g4to9 + LRCLonelyInstances) and push when green; (c) formalization of THM-699/700/701/702 (elementary: IBP + occupancy induction + rational tables) is certificate-shaped.
 
 ## kind-pasteur-2026-07-11-S127 (cont.23) -- CLOSED THE FULL RECURSION: THM-701 the wide-spread direction of LRC(14)-S3 reduces to a FINITE balanced-core check. The joint functional Phi=p0+(1/3)p1 rises by <= 2/21 < cap-growth per far element. Math closed (mod finite check) + verified.

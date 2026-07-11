@@ -30,3 +30,13 @@ closure is Φ-consec-extremality on bounded cores — the program's single remai
 now proved with explicit constants end to end: THM-699 (mine) + THM-700/701 (kps) + this certificate.
 
 **Files:** 04-computation/lrc14_finite_certificate_macmini_S65cont29.py (+ .out).
+
+## Addendum (cont.29 slice 2): the compression route to the residual lemma is DEAD
+
+Elementary Freiman compression (move one offset a step toward packing) does NOT monotonically
+increase Φ = p0 + p1/3: exhaustive k=4 over [1,10] gives 0/504 violations, but k=5..7 over
+[1,40) gives **113/308 violations** — mod-7 resonance breaks locality. The Φ-consec-extremality
+lemma is genuinely GLOBAL; local-move induction cannot prove it. (Files:
+lrc14_phi_compression_macmini_S65cont29.py + .out.) The live tools remain the pair-correlation
+hinge (kps) and the b-cover evaluator (klein); a sharpened per-peel constant (Φ-level IBP gives
+C ≈ 6·Σe' vs the atom-IE 672·Σe', threshold ~806·Σe') shrinks but does not tame the core range.
