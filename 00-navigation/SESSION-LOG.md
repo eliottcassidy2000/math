@@ -1,3 +1,27 @@
+## kind-pasteur-2026-07-10-S127 (cont.16) -- WIRED the d=2/d=3 detuned clearings into opus's MultiDetunedDispatch + SHRANK the THM-678 citation to its half-harmonic residual. Kernel-pure, root-wired. + replied maxRecDepth result to mac-mini (green-light their re-emit).
+
+Prompt (owner): wire threeDetunedClearing into MultiDetunedDispatch nonMultCard=3 branch, work remaining tasks to get LRC(14) into its best state, pull often.
+
+PROVED (LRCDetunedDispatchReduce.lean, sorry-free, kernel-pure [propext, Classical.choice, Quot.sound], 8523 green, root-wired TournamentH7.lean:462):
+- genericCount v g := Sum_{g doesnt divide v_i} badCount(v_i,g) < g.toNat -- the union-bound-closes condition.
+- lonely14_of_nonMultCard_three: nonMultCard v g = 3 + genericCount => lonely. Extracts the 3 detuned coords (Finset.card_eq_three), establishes hdvd/hδ, converts the filter-sum to the 3-term sum, applies my DetunedD3.lonely14_of_three_detuned'. THE REQUESTED WIRE.
+- lonely14_of_nonMultCard_two: the d=2 analog. Bridges the sum-count to opus's (q1,q2)!=(2,2) via badCount_of_q_two (q=2 => badCount = gcd and 2*gcd = g.toNat, so two q=2 coords sum to EXACTLY g => generic strict bound fails). Applies opus's DetunedD2.lonely14_of_two_detuned'.
+- ExceptionalDetunedDispatch := dispatch restricted to nonMultCard in {2,3} AND NOT genericCount.
+- multiDetunedDispatch_of_exceptional: MultiDetunedDispatch <= cite + ExceptionalDetunedDispatch (by_cases on genericCount: generic => proved d=2/d=3 wires; non-generic => exceptional). SHRINKS opus's cited THM-678 from ALL detuned d in {2,3} to only the non-generic HALF-HARMONIC residual.
+- lrc14_grand_assembly_dissoc_exceptional: threads the shrunk citation through opus's dissoc assembly.
+
+WHAT THE RESIDUAL IS (lrc14_three_detuned_exceptional, cont.15): the non-generic set = (2,2) [d=2] + (2,2,*) infinite + finite small-q [d=3]. EVERY member has >=2 coords at q=2 = two speeds at half-integers of the scale g. A q=2 coord contributes badCount = gcd = g/2 (HALF the branch interval), so two of them fill [0,g) exactly (badCount_of_q_two) and no branch clears both -- the count is powerless precisely at the half-harmonic locus; escape = mod-2g lift (opus's THM-678 residual). Not an arbitrary leftover: it's WHERE the lonely-runner difficulty concentrates (small-denominator rationals vs the scale).
+
+PATTERN (reflection): when a cited lemma is forall x, P x, split P x into a DECIDABLE generic G x you can prove + its complement, cite only forall x, not G x -> P x. Citation surface shrinks to exactly the hard core, and the enumeration of not-G tells you WHAT the core is (here: two half-harmonics). Black-box citation hides difficulty; generic/exceptional split exposes it.
+
+SYNTHESIS (pulled often): opus-S211 proved TwoDetunedClearing; mac-mini cont.27 DE-CITED the ruler embedding to arithmetic (LRCReach); klein THM-693/694/695 = the two-/multi-scale WITNESS program FORMALIZED END TO END, consuming MY StrictlyLive/strictWitness_of_strictlyLive as-is (my strict chain is load-bearing for klein's constructive route). Current top-level (LRCEndgameAssembly): LRC(14) <= LRC(13) + [compressed covering lonely]; compressed reduces via primitive/dissociated (opus + my dispatch shrink) to the floor, OR via klein's constructive two-scale witnesses (through my strict chain).
+
+maxRecDepth (replied to mac-mini as they asked): 16384 on Size5_c1 STILL 0xC0000005; no theorem name (segfault kills lean.exe mid-module); green-lit their re-emit-shallower fix (the correct one).
+
+My LRC Lean ~95 nodes, S114..S127. FILES: LRCDetunedDispatchReduce.lean, reflection the-detuned-citation-shrinks-to-its-half-harmonic-residual-kps-S127.md.
+
+NEXT: (1) the half-harmonic residual (2,2)/(2,2,*) mod-2g lift = opus's THM-678 residual, the ONLY remaining detuned obligation; (2) mac-mini re-emitting the 4 cert files shallower (I rebuild+confirm on Windows after); (3) the measure floor / klein's constructive two-scale supply remains the open analytic core.
+
 ## klein-2026-07-11-S247 -- THE CONSTRUCTIVE RAY WITNESS (THM-695, HYP-5960) + THE FORMALIZATION-STATE SYNTHESIS: ray families witnessed at (q* b V, b w_693) -- small/top bands INHERITED BY SCALING, ray digits decidable; the supply now covers ALL taxonomy shapes, feeding mac-mini's in-flight de-citation
 
 Prompt (owner): run the constructive ray witness; synthesize the incoming state often; work the LRC(14) formalization to its best possible state.
