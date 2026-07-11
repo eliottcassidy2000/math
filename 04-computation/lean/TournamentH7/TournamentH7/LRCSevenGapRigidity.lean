@@ -26,17 +26,19 @@
       LRC(14) = [THM-661 moment floor] + [certificate supply].
   TWO citations left (was three).
 
-  Kernel-pure: no native_decide, no sorry.
+  Kernel-pure: no native_decide, no sorry.  (This file = the CORE on light
+  imports; the naming as `SmallClusterFull` + the two-citation assembly live
+  in LRCTwoCitationAssembly.lean, on the heavy discharge chain.)
 -/
 import Mathlib
 import TournamentH7.LRCMaxGapPigeonhole
-import TournamentH7.LRCReachDecitation
+import TournamentH7.LRCGoodSet
 
 namespace LonelyRunner
 namespace LRC14
 namespace SevenGapRigidity
 
-open MeasureTheory DenseCovers MomentCitation TournamentH7.GoodSet
+open MeasureTheory DenseCovers TournamentH7.GoodSet
 open TournamentH7.MaxGapPigeonhole
 
 /-! ## The abstract gap layer: sorted phases in `[0,1)` -/
@@ -298,8 +300,8 @@ every nodup cluster with `3 ≤ |E| ≤ 7` has full good-set measure.  Off a
 countable set of times the distinct phases have a cyclic gap `> 1/7`
 (pigeonhole for `k ≤ 6`; for `k = 7` the boundary case is the perfect net,
 which pins `x` to countably many fibers). -/
-theorem smallClusterFull_proved : SmallClusterFull := by
-  intro E hnd h3 _h7
+theorem goodSet_ae_full (E : List ℤ) (hnd : E.Nodup) (h3 : 3 ≤ E.length)
+    (_h7 : E.length ≤ 7) : (slowμ (goodSet E)).toReal = 1 := by
   have hcardE : E.toFinset.card ≤ 7 := by
     rw [List.toFinset_card_of_nodup hnd]
     omega
@@ -335,18 +337,6 @@ theorem smallClusterFull_proved : SmallClusterFull := by
   rw [le_antisymm hle1 hge1]
   exact ENNReal.one_toReal
 
-/-! ## The headline corollary: LRC(14) from TWO citations -/
-
-/-- **LRC(14) = [THM-661 moment floor] + [certificate supply].**  The
-≤7-arcs pigeonhole is now a THEOREM; the grand assembly needs only the
-moment floor and the certificate supply. -/
-theorem lrc14_from_moment_and_supply
-    (h661 : THM661MomentFloor)
-    (hcerts : ReachDecitation.THM527ACertificateSupply) :
-    LRC14Statement :=
-  ReachDecitation.lrc14_from_certificate_citations h661
-    smallClusterFull_proved hcerts
-
 end SevenGapRigidity
 end LRC14
 end LonelyRunner
@@ -357,5 +347,4 @@ end LonelyRunner
 #print axioms LonelyRunner.LRC14.SevenGapRigidity.gap_dichotomy
 #print axioms LonelyRunner.LRC14.SevenGapRigidity.good_or_pair
 #print axioms LonelyRunner.LRC14.SevenGapRigidity.pair_fiber_countable
-#print axioms LonelyRunner.LRC14.SevenGapRigidity.smallClusterFull_proved
-#print axioms LonelyRunner.LRC14.SevenGapRigidity.lrc14_from_moment_and_supply
+#print axioms LonelyRunner.LRC14.SevenGapRigidity.goodSet_ae_full

@@ -164,6 +164,55 @@ WHERE THE FINITENESS COMES FROM (the routes meet): large-diam short-AP configs h
 STATUS: NOT fully proved (the far inverse-theorem bound = parked BSG->Freiman-3k-4, HYP-2638). Near-AP half essentially proved (dilation-invariance + finite). DELIVERED: reflection freiman-stability-via-longest-AP-monotonicity-opus-S222.md; 04-computation/lrc14_freiman_link_opus_S222.py (+out). -> THM-705(mac-mini)/701(kps)/531, klein-S251, opus-S221, LEM-015/opus-S181, HYP-2638.
 
 ---
+## klein-2026-07-11-S251 -- THE <=7-ARCS PIGEONHOLE DE-CITED (SmallClusterFull -> theorem, LRC(14) down to TWO citations) + THE Phi-CONSEC-EXTREMALITY REFUTATION AT k>=11 (exhaustive census) + THM-661 interior assessment
+
+Prompt (owner): work the wide-spread wall (kps/opus active), THM-661's interior, and the <=7-arcs pigeonhole.
+
+**(1) THE DE-CITATION (HYP-5985, the session's main event).** LRCSevenGapRigidity.lean proves the
+grand assembly's citation `SmallClusterFull` outright: for every nodup E with 3 <= |E| <= 7,
+slowmu(goodSet E) = 1. Route: sort the DISTINCT phases (Finset.image dedups; collisions only help)
+via orderIsoOfFin; the k cyclic gaps telescope to 1 (cgap_sum; wrap capped at 1 + f 0); THE BRIDGE
+(cgap_witness): ANY gap > 1/7 makes its left endpoint a goodSet witness -- the key simplification:
+an interior gap at s_i forces s_i < 6/7 so every wrap term 1 + s_j - s_i clears 1/7 FOR FREE (no
+max-gap selection); k <= 6 => some gap > 1/7 (mac-mini's exists_gap_gt_one_seventh, consumed);
+k = 7 with no big gap => ALL gaps exactly 1/7 (sum-erase) => the PERFECT NET => fract((b-a)x) = 1/7
+exactly => x in a countable fiber (pair_fiber_countable: x = (n+1/7)/d) => bad set null => nu = 1.
+LRCTwoCitationAssembly.lean names it (`smallClusterFull_proved : SmallClusterFull`) and lands the
+headline: **lrc14_from_moment_and_supply : THM661MomentFloor -> THM527ACertificateSupply ->
+LRC14Statement. THREE citations -> TWO.** This is THM-689(A)'s rigidity made pointwise (canon addendum).
+
+**(2) THE CENSUS REFUTATION (wide-spread wall).** lrc14_phi_global_argmax_census_klein_S251.py:
+all-integer exact breakpoint sweep (evaluator digit-exact vs mac-mini cont.29), EXHAUSTIVE boxes.
+Result: consec IS the global Phi-argmax for k = 4..10 (binding k=8 in [1..20], margin 108013/1261260
+~ +0.0856); but at k = 11 the argmax is **X = 2*consec_8 u {3,5,7}** (stable [1..14]/[1..16]),
+beating consec by exactly 1/378, and at k = 12 the perforated-dilate family continues with GROWING
+deficit (107/5390) -- **kps cont.24's named remainder ("joint Phi-consec-extremality") is FALSE for
+k >= 11**. Exact flip threshold lambda*_11 = 267/941 ~ 0.2837 < 1/3 (cont.24's ladder 1.51/1.23/0.98
+crosses 1/3 between k=10 and 11). p0-argmax stays consec through k=11 (THM-534 intact; 'does not
+factor' made exact) but flips at k=12 ((0,1..10,12) -- scope datum for THM-534). THE RECURSION IS
+UNAFFECTED AND STRENGTHENED: Phi(F) <= cap_{|F|+1} holds in EVERY box, margins +0.12/+0.086/+0.11/
++0.16/+0.22 (k=7..11), the k=11 margin LARGEST. Retarget: prove Phi <= cap directly (mac-mini
+cont.30/31's majorant ladder is already the right shape) or consec-restricted k<=10 + the
+perforated-dilate family k>=11. Also flagged: cap_m for m <= 7 unspecified (induction bottom);
+k<=6 has p0 = 0 identically, max Phi = max p1/3 censused (0/0/11:126 at k=4/5/6).
+
+**(3) THM-661 INTERIOR (assessment).** Per-shape moment LP: 3-line proof (pointwise p(W) <= 1_{W>0}).
+Exact block moments: Farey-cell integration, finite decidable. The ONE unproved piece: the uniform-min
+decorrelation tail ("B_d rises with diameter") -- same genus as the wide-spread wall; kps THM-700's
+far-element transfer machinery should PORT. Named as the next hard-math item on the moment-floor leg.
+
+**Namespace hygiene:** ceded THM-701 to kps (wide-spread recursion; fleet had 3 cross-refs, mine 0);
+my quantitative supply renamed THM-701 -> (705 taken mid-rename by mac-mini cont.31) -> **THM-706**.
+
+Files: LRCSevenGapRigidity.lean, LRCTwoCitationAssembly.lean (+ root wires), THM-689 addendum,
+THM-701(kps) census addendum, THM-706 rename, census script + .out, HYP-5985.
+
+NEXT AGENT: (a) the base lemma retargeted: Phi(F) <= cap_{|F|+1} directly -- mac-mini's majorant
+ladder (THM-703/705) + my exhaustive-box margins are the two halves; the k=8 deg-3 row (m3 via kps's
+3D box count) is the binding item; (b) my k>=11 perforated-dilate family: prove its Phi ceiling
+(dilation structure: p_j(2E u odds) decomposes over the double cover -- likely clean); (c) port
+THM-700 transfer to the B_d tail (THM-661 interior); (d) wire LRCTwoCitationAssembly once the
+discharge chain builds green (compile queued this session).
 
 ## mac-mini-2026-07-09-S65 (cont.31, 2026-07-11) -- THM-705: THE LINEAR MOMENT REQUIREMENT -- optimal deg-2 majorant EXPLICIT (q* = 1 - N/2 + N(N-1)/12, LP-vertex proof); k=9,10 rows = ONE linear pair-correlation inequality each (m1/2 - m2/12 >= 1 - cap); uniform adversarial margins +0.0263/+0.0943 (extremal {1..k}); opus-S220 cross-validated exactly. SYNTHESIS: opus renamed 702->704 (collision cleared); kps cont.24 cross-validated my THM-702; klein de-citing SmallClusterFull (HYP-5985). The ladder: k=8 deg-3 (kps 3D box) / k=9,10 THIS linear form.
 
