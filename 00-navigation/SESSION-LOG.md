@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.31, 2026-07-11) -- THM-705: THE LINEAR MOMENT REQUIREMENT -- optimal deg-2 majorant EXPLICIT (q* = 1 - N/2 + N(N-1)/12, LP-vertex proof); k=9,10 rows = ONE linear pair-correlation inequality each (m1/2 - m2/12 >= 1 - cap); uniform adversarial margins +0.0263/+0.0943 (extremal {1..k}); opus-S220 cross-validated exactly. SYNTHESIS: opus renamed 702->704 (collision cleared); kps cont.24 cross-validated my THM-702; klein de-citing SmallClusterFull (HYP-5985). The ladder: k=8 deg-3 (kps 3D box) / k=9,10 THIS linear form.
+
+Prompt (owner): keep working the endgame, synthesize incoming frequently.
+
+NEXT AGENT: (a) prove the linear inequality m1/2 - m2/12 >= 1 - cap over bounded cores (2.6% slack at k=9; it is a PAIR-correlation statement -- Koksma THM-686C + additive-energy bricks + kps LEM-022 constants are the exact toolkit); (b) k=8 deg-3: the m3 bound via kps's 3D hyperbola box count + opus's exact-ladder coefficients; (c) confirm cont.28's queued Lean builds; (d) opus-704 P1-support sharpening composes into THM-702's budget -- unify when formalizing.
+
 ## mac-mini-2026-07-09-S65 (cont.30, 2026-07-11) -- THM-703: THE EMPTY-MOMENT MAJORANT REDUCTION -- Phi <= 1 - (2/3)m1 + (1/6)m2 (proved); CLOSES k=9,10 core rows at true moments (consec 0.594<=0.604, 0.659<=0.725; 25/25 random); k=8 gaps +0.033 and needs m3 = kps's 3D triple box count. The last global lemma SPLITS: k>=9 -> pair-level moment inequalities (Koksma + energy bricks); k=8 -> the named triple instrument. Collision flag: opus-S219 reused THM-702 (mine landed first, both stand, renumber theirs).
 
 Prompt (owner): keep working the sharpest remaining LRC 14 math.

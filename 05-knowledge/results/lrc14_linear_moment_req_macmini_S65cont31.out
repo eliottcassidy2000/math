@@ -1,0 +1,9 @@
+feasible majorant vertices: 8
+
+row requirements (optimal deg-2 bound at exact moments) vs caps:
+  k=9 consec: Phi=0.4902 optimal-deg2=0.5668 cap=0.6044 margin=+0.0376 active-vertex g-touch at N=(0, 3, 4) coeffs=(1,-1/2,1/12)
+  k=10 consec: Phi=0.5670 optimal-deg2=0.6307 cap=0.7253 margin=+0.0945 active-vertex g-touch at N=(0, 3, 4) coeffs=(1,-1/2,1/12)
+
+uniform margin sweep (worst optimal-deg2 bound over adversarial cores):
+  k=9: WORST deg-2 bound = 0.5781 at [1, 2, 3, 4, 5, 6, 7, 8, 9] vs cap 0.6044 -> uniform margin +0.0263
+  k=10: WORST deg-2 bound = 0.6309 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] vs cap 0.7253 -> uniform margin +0.0943
