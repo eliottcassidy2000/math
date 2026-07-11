@@ -1,0 +1,21 @@
+(1) THE FLOOR delta vs exact mu_inf on SPREAD adversaries (e_max >> pmin):
+  P=[2, 6, 11] q*=13 SumE= 1453: mu_inf=0.132868  delta=2.08e-08  floor holds: True  (slack 6394833x)
+  P=[7, 8, 9, 13] q*=12 SumE= 1749: mu_inf=0.129034  delta=1.73e-08  floor holds: True  (slack 7475450x)
+  P=[1, 2, 4, 5, 6] q*=13 SumE= 2024: mu_inf=0.142026  delta=1.49e-08  floor holds: True  (slack 9521814x)
+  P=[1, 6, 8] q*=13 SumE= 1282: mu_inf=0.132891  delta=2.35e-08  floor holds: True  (slack 5643216x)
+  P=[1, 12] q*=13 SumE= 1830: mu_inf=0.127258  delta=1.65e-08  floor holds: True  (slack 7713965x)
+  P=[3, 5] q*=13 SumE= 2360: mu_inf=0.136757  delta=1.28e-08  floor holds: True  (slack 10690639x)
+  P=[4, 9, 10, 12, 13] q*=11 SumE= 1101: mu_inf=0.135014  delta=2.74e-08  floor holds: True  (slack 4923910x)
+  P=[5, 6, 7, 12, 13] q*=11 SumE= 1351: mu_inf=0.136816  delta=2.23e-08  floor holds: True  (slack 6122598x)
+  P=[1, 2, 3, 4, 13] q*=12 SumE= 1552: mu_inf=0.143599  delta=1.95e-08  floor holds: True  (slack 7382200x)
+ALL FLOORS HOLD: True
+
+(2) Lipschitz check: |m_E(a0+h) - m_E(a0)| <= 2*SumE*h at test points:
+  worst |dm|/(2*SumE*h) = 0.2765 (must be <= 1): True
+
+(3) THE EXPLICIT CHAIN (constants, one spread example):
+  P=[1, 2, 3, 4, 13], E head=[0, 132, 133, 204]..., SumE=1552, q*=12
+  delta = 1.945e-08; C <= 24174; V0 = 2C/delta = 2,485,495,643,905
+  ruler bound: q > 2*Sum(v)/delta ~ 822,535,168 * V  (14-coprime choice => STRICT)
+  => for V > V0: a strictly-live ruler EXISTS at explicit bounded denominator;
+     below V0: banks. The spread-cluster supply is EXPLICIT on every q*-route class.
