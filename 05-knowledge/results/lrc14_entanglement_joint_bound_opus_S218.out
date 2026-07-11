@@ -1,0 +1,22 @@
+cap_9 = 0.49426   Q(8)=Phi(consec_8) = 0.36210   margin_9 = cap_9-Q8 = 0.13216
+Delta_cap = cap_9 - cap_8 = 0.11279
+
+                family    p0(E)  Plat(E)   Delta_w   p1(E)  V(E)   V/(6w)  J1:Plat+V/6w <=cap9?
+ consec_9 (bounded)     0.41616  0.36210  +0.05406  0.2442    56   1.1667       1.52877    FAIL
+ wide 3-cluster         0.22333  0.16029  +0.06305  0.2518   440   1.1828       1.34308    FAIL
+ wide 3-cluster x10     0.22202  0.16175  +0.06027  0.2527  1488   1.2277       1.38947    FAIL
+ multiscale 2-2-2-2-1   0.15152  0.16029  -0.00877  0.2518   440   0.4889       0.64917    FAIL
+ odd-struct+far         0.15331  0.12507  +0.02824  0.4271   120   0.2222       0.34729      OK
+ gapped {0..7,500}      0.36276  0.36210  +0.00066  0.2442    56   0.0187       0.38077      OK
+ 2-scale {0..3,300..}   0.16779  0.15739  +0.01040  0.2829  3226   0.8961       1.05350    FAIL
+
+=== the ENTANGLEMENT: is Plat(E') + V(E')/(6w) <= cap always? and how does Plat trade vs V/w? ===
+(if J1 holds with margin, the ONE-SHOT crude-V joint bound closes the wide half -- no accumulation needed)
+
+=== full recursive peel of the worst multiscale set (accumulation) ===
+start p0([0, 1, 2, 30, 31, 32, 60, 61, 62]) = 0.22333, cap_9=0.49426
+  peel w=  62: p0(E)=0.22333 -> p0(E')=0.12432 + tax[(1/7)p1+Delta]=+0.09901  (V/6w=1.1828)
+  peel w=  61: p0(E)=0.12432 -> p0(E')=0.03688 + tax[(1/7)p1+Delta]=+0.08744  (V/6w=0.7104)
+  peel w=  60: p0(E)=0.03688 -> p0(E')=0.00000 + tax[(1/7)p1+Delta]=+0.03688  (V/6w=0.3778)
+  peel w=  32: p0(E)=0.00000 -> p0(E')=0.00000 + tax[(1/7)p1+Delta]=+0.00000  (V/6w=0.0000)
+  bounded core [0, 1, 2, 30, 31]: p0=0.00000; accumulated tax=+0.22333; core+tax=0.22333 <= cap_9=0.49426?

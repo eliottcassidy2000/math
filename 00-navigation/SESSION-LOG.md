@@ -16,6 +16,27 @@ SCOPE (honest): CLOSED = the inductive step (HYP-2644's single open analytic lem
 My LRC Lean ~106 nodes (pure math this turn, per 'close math first'). FILES: THM-700 canon, lrc14_plateau_decorrelation_kps_S127.py/.out, reflection the-wall-was-a-decorrelation-both-sides-have-zero-mean-kps-S127.md.
 
 NEXT: (1) the p1 decorrelation + accumulation to close the full recursion (downstream of THM-700, mechanical + bookkeeping); (2) the sharp constant; (3) formalize THM-700 (elementary Fourier + BV -- Lean-tractable). @klein owns the seven-sector program.
+## opus-2026-07-11-S218 -- ATTEMPTED the ungapped Plat<->Delta entanglement. NOT PROVED (it is the open crux of LRC14-S3). Genuine progress: reduced it to a VERIFIED sharp Fourier identity isolating the exact 8x nut (the missed-sector phase), + the clean equivalent "consec maximizes L_y".
+
+Prompt (owner): prove the ungapped Plat<->Delta entanglement lemma.
+
+HONEST OUTCOME: did NOT prove it -- it is genuinely the open crux (attacked by dozens of prior efforts; kps proved the GAPPED single-peel THM-700 + the zero-mean kernel THM-699 this same week). Delivered real progress + the exact remaining nut, verified.
+
+WHY THE PEEL ALONE FAILS (2 exact experiments): peel w=max, p0(E)=Phi(E')+Delta_w, THM-700/546 PROVED |Delta_w|<=V(E')/(6w). (1) One-shot crude-V bound FAILS: V~4*span, so ungapped (w~span) gives V/(6w)~1.18=O(1)>>margin (wide 3-cluster: Phi+V/6w=1.34>>cap_9=0.494). (2) Additive accumulation is TAUTOLOGICAL: Sum tax_i = p0(E)-p0(core) identically, no per-step decay when ungapped. True Delta_w is small (0.06 vs bound 1.18) -- the entanglement is real (wide E' => small Phi compensates large V) but NOT decoupled.
+
+THE SHARP IDENTITY (VERIFIED, the deliverable): from THM-700's Delta_w=Sum_s int f_s(x)g_s(wx)dx, ghat_s(l)=omega^{-ls}ghat_0(l), f_s=f*1{sigma=s}:
+  Delta_w = Sum_{l!=0} ghat_0(l) * hhat_l(-l w),  h_l(x):=f(x)*omega^{-l sigma(x)}  (f=p1-indicator, sigma=missed sector, omega=e^{2pi i/7}).
+Verified: E={0..7,30} w=30, Delta_exact=0.001846 vs Delta_fourier=0.001842. This is the OSCILLATION-side twin of THM-699's zero-mean weight (Sum_c D7=0). The ~18x looseness splits: sin-factor |ghat_0(l)|=|sin(pi l/7)|/(pi|l|) gives a rigorous ~1.8x; the remaining ~8x (MEASURED exactly: sum|ghat_0||hhat|=8.2x*|Delta|) is the MISSED-SECTOR-PHASE cancellation (sigma(x) decorrelated from l*w) -- a genuine 2-D (x,sigma) object, invisible to 1-D BV. THIS 8x IS THE ENTIRE REMAINING NUT.
+
+THE CLEAN EQUIVALENT: THM-534 (PROVED per-E) p0(E)<=L_y(E)=E[g(N)], g(t)=-(t-2)(t-3)(t-6)/36. Verified L_y(E)<cap_9 for ALL regimes, binding L_y(consec_9)=0.49288<cap_9 (margin 0.0014). So the ENTIRE crux (no accumulation) reduces to the finite-functional extremality "consec maximizes L_y" (HYP-2607) -- same nut, cleaner face.
+
+TWO OPEN INPUTS that each close the accumulation (scout-confirmed, both OPEN): (a) V(E')<=C*span (measured C~4) -- closes the gapped/multiscale accumulation; (b) shell-gated Delta_w^+<=2p1/5 (verified B=24; 1/3, 3/8, global 2/5 all REFUTED). Corrections adopted: use THM-546's signed 6/49 + PROVED V<=7Sigma-e (not THM-700's 14Sigma-e); use the LARGE margin cap-L_y>=0.044 not the tight 0.0014 (HYP-2840); the doublet (2-far) rung is PROVED via Mordell-Tornheim 12zeta(3) (HYP-2808).
+
+MOST PROMISING NEXT STEP: prove the missed-sector-phase 8x -- bound |Sum_l ghat_0(l) hhat_l(-lw)| via sigma(x)<->lw decorrelation. It closes the ungapped core directly and meets THM-699's zero-mean weight on the same object. Handed to kps (whose THM-700/699 this complements).
+
+DELIVERED: reflection the-entanglement-nut-is-the-missed-sector-phase-opus-S218.md; 3 exact scripts (entanglement_joint_bound, moment_multiplicative_decorr, + the Fourier-identity verify inline) +outs. -> THM-700/699/546/534, HYP-2655/2664/2808/2840, opus-S217.
+
+---
 
 ## kind-pasteur-2026-07-11-S127 (cont.21) -- CLOSED MATH on the support-6 relation-lattice frontier: THM-699 the support-6 seven-sector kernel IS a 6x6 ROOT-OF-UNITY PERMANENT, with a sharp closed-form bound AND a zero-mean property. Proved + verified; not yet formalized (math-first, per owner).
 
