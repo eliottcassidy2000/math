@@ -10,6 +10,28 @@ DEMO: P = {1..5}, E = {0,1,2,3,5,8,13,21}, q* = 13, a = 1, c = 4, V = 10000: wit
 
 FILES: LRCTwoScaleWitness.lean (+ root wire); THM-693 (canon); lrc14_twoscale_witness_demo_klein_S244.out; HYP-5945 resolved; memory.
 
+## mac-mini-2026-07-09-S65 (cont.25, 2026-07-10) -- hsmall DISCHARGED VIA THE REPAIRED LEGS: THE MOMENT ROUTE IS CLOSED. lrc14_from_two_citations = LRC(14) from exactly [THM-661] + [<=7-arcs pigeonhole] + [hpartA]. Every other node is a THEOREM, foundational-axioms-only.
+
+Prompt (owner): discharge the hsmall node via the repaired legs.
+
+THE ARCHITECTURE (four new files, all green, all kernel-pure):
+- LRCMPCertSize10.lean (MACHINE-GENERATED, 1917s): 286 certificates m_P = 14249/252252 <= mu(safeSet S) for every size-10 subset -- m_P is the EXACT min over |S| <= 10 (assert passed; attained at the THM-530 argmin {1,2,3,5,7,8,9,11,12,13}).
+- LRCAnchor12Certs.lean (79s): 13 positivity anchors for the twelve-element families (cross-validate the cont.19 anchor table row-for-row).
+- LRCMPLeafTrees.lean (108s -- the decide-completion leaves are CHEAP): m_P dispatch trees sizes 6..10, 5720 leaves; sizes 6-9 complete each sorted tuple to a canonical size-10 superset via `le_trans mp_s10_<T+> (measGP_anti (by decide))` -- no Lean list surgery, the CODEGEN picks the completion. + anchor_pos_of_missing (13-way missing-element dispatch to the anchors).
+- LRCSmallDischarge.lean (76s, 2 iterations: Finset.Icc card via decide; defeq-coercion instead of omega across clusterSize/length atoms):
+  * hk12_discharged (k in {1,2}, POSITIVITY): E has <= 2 teeth => goodSet = univ (brick i, no dedup needed) => witnessG2 = mu(safeSet P); P misses some m in [1,13] (pigeonhole: |toFinset| <= 12 < 13) => contains a 12-family => anchor positive.
+  * hsmall3_discharged (3 <= k <= 7, m_P): nu = 1 (dedup: brick i / pigeonhole citation) + Bonferroni + mp_le_of_bounded (dedup+insertionSort canonicalization, cont.23 pattern; sizes <= 5 via cap_le_of_canonical at k=8 since m_P <= capRat 8; sizes 6-10 via the trees).
+  * hlarge_discharged (8 <= k <= 13, m_P): Bonferroni + hMoment_of_citations (cont.24) + hB_certs (cont.23) + the exact identity momentBar k + capRat k - 1 = witnessMP.
+  * lrc14_from_two_citations := Repair.lrc14_from_repaired_nodes hk12 hsmall3 hlarge hpartA (k=0 sieve internal).
+
+WHAT THIS CLOSES: the moment route's UNSATISFIABLE hsmall node (k <= 2, cont.16 finding) is ROUTED AROUND through the cont.17 repaired assembly, and every satisfiable leg is now a theorem. THE LEAN SURFACE OF LRC(14) IS: [THM661MomentFloor -- PROVED in canon, cited] + [SmallClusterFull -- standard pigeonhole, cited] + [hpartA -- the reach, the ONLY remaining mathematical gap]. Axiom audit on all four key theorems: [propext, Classical.choice, Quot.sound].
+
+THE ARC (cont.16 -> 25, one continuous session): engine -> soundness finding -> repair -> bricks (i,ii,iii) -> band lemmas -> leg demo -> capRat table (2380) -> hB dispatcher -> THM-661 citation -> m_P table (286+trees) -> THE CLOSED ROUTE. Certificates total: 2380 + 286 + 13 families, 8099 dispatch leaves, every rational exact.
+
+FILES: lrc14_mpcert_codegen_macmini_S65cont25.py + 4 Lean files + root imports (x4).
+
+NEXT AGENT: (a) hpartA is now THE node -- the reach (THM-527-A finite-Vmax glue; opus-S208's peel-then-decorrelate reframe; kps strict chain as the alternative route); (b) the two citations' eventual full formalization (THM-661's moment LP + the pigeonhole's measure-zero tiling argument) are the long-horizon de-citation targets; (c) Windows segfault (kps maxRecDepth report pending) -- note the 4 new cert files are SMALLER per-theorem than the Size4/5 files (10 js vs the same comps), likely fine, but verify on Windows when kps reports.
+
 ## mac-mini-2026-07-09-S65 (cont.24, 2026-07-10) -- THE THM-661 CITATION NODE: hMoment CLOSED. lrc14_from_thm661_certs = LRC(14) from TWO NAMED CITATIONS (THM-661 + the <=7-arcs pigeonhole) + hsmall + hpartA, foundational-axioms-only.
 
 Prompt (owner): formalize the THM-661 citation node hMoment.
