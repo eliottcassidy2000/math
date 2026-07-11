@@ -55,6 +55,25 @@ DEMO: P = {1..5}, E = {0,1,2,3,5,8,13,21}, q* = 13, a = 1, c = 4, V = 10000: wit
 
 FILES: LRCTwoScaleWitness.lean (+ root wire); THM-693 (canon); lrc14_twoscale_witness_demo_klein_S244.out; HYP-5945 resolved; memory.
 
+## mac-mini-2026-07-09-S65 (cont.27, 2026-07-11) -- THE RULER EMBEDDING DE-CITED TO ARITHMETIC: klein's transfer machinery consumes certificate existence; ALL reach geometry, strictness transfer, and compactness are now THEOREMS. lrc14_from_certificate_citations = LRC(14) from THM-661 + pigeonhole + INTEGER CERTIFICATE EXISTENCE.
+
+Prompt (owner): de-cite the ruler embedding via klein's transfer machinery.
+
+THE DE-CITATION (LRCReachDecitation.lean, green, kernel-pure, 4 iterations):
+- `minReach_ge_of_strictWitness` (PROVED): kps's StrictWitness (a strict-margin time: forall i m, 1/14 + eps <= |v_i t0 - m|) directly has minReach >= 1/14 -- instantiate the forall-integer margin at floor(x) and floor(x)+1 to pin fract and 1-fract; le_ciInf closes. No safePeriod detour needed.
+- `strictWitness_abs` (PROVED): the |v|-normalization -- a strict witness for absolute speeds is one for signed speeds (the forall-m margin is reflection-invariant: |(-x) - m| = |x - (-m)|). Handles klein's 0 < v i requirement against the embedding's v i != 0.
+- `rulerEmbedding_of_certificateSupply` (PROVED): certificate existence => THM527ARulerEmbedding, through klein's S242 chain (SafeIvStrict x13 -> exists_grid_point -> strict_band_of_cert -> StrictlyLive -> strictWitness_of_strictlyLive).
+- `THM527ACertificateSupply` (THE NARROWED CITATION): every positive-witness realization admits a rational interval [x/D, y/D] in [0,1) of length > 1/q with 13 strict band certificates for |v_i| -- PURE INTEGER INEQUALITIES. No measure theory, no reach, no compactness, no reals in the citation.
+- `lrc14_from_certificate_citations (h661) (hsmall7) (hcerts) : LRC14Statement`.
+
+LEAN-CRAFT (recorded): simpa beta-reduces lambda-applied hypotheses but ALSO normalizes Int.cast inside abs (Int.cast_abs) -- rewrite at the REAL level via `rw [<- Int.cast_abs, habs]`, not the Z level; un-beta-reduced `(fun i => |v i|) i` blocks rw until simpa/beta fires.
+
+WHAT THE CITATION SURFACE IS NOW: [THM-661: nodup clusters k=8..13, momentBar floor] + [<=7-arcs pigeonhole: nu = 1] + [certificate supply: integer band certificates exist per positive-witness family]. The third is the classical program's OUTPUT SHAPE: canon THM-527-A's good ruler periods contain strict rational sub-intervals (min of 13 nonconstant piecewise-linear functions cannot be constant, so clearance->=1/14 arcs contain STRICT points); klein's THM-693 writes large-V two-scale certificates constructively; the windows/banks census covers bounded V. The de-citation of the remaining two follows the same pattern (engine interval emission for concrete moduli).
+
+FILES: LRCReachDecitation.lean (new, green, root-wired), session log.
+
+NEXT AGENT: (a) the certificate-supply de-citation: per-family certificate EMISSION is engine-mechanical (my cont.16 engine + klein's exists_grid_point shapes); the UNIFORM statement needs THM-527-A's slow-fast analysis or klein's multi-scale composition (their named remaining); (b) similarly de-cite THM661MomentFloor (the moment LP over nodup clusters -- kps/opus moment machinery) and SmallClusterFull (the measure-zero tiling argument); (c) kps Windows report still pending.
+
 ## mac-mini-2026-07-09-S65 (cont.26, 2026-07-10) -- THE REACH NODE SPLIT AND THE FULLY CITATION-CLOSED ASSEMBLY: lrc14_from_citations_only = LRC(14) from THREE NAMED CITATIONS (THM-661 + <=7-arcs pigeonhole + THM-527-A ruler embedding) AND NOTHING ELSE.
 
 Prompt (owner): attack the hpartA reach node.
