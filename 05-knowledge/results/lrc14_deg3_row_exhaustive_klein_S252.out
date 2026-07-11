@@ -1,0 +1,26 @@
+(1) DEG-3 MAJORANT LP-VERTEX ENUMERATION (phi >= g on {0..6}, g = [1,1/3,0,0,0,0,0]):
+    touch (1, 2, 3): c = (-2/3, 1/6, 0)  phi = ['1', '1/3', '0', '0', '1/3', '1', '2']
+    touch (1, 3, 6): c = (-2/3, 17/90, -1/45)  phi = ['1', '1/3', '2/45', '0', '1/15', '1/9', '0']
+    touch (3, 4, 6): c = (-7/12, 5/36, -1/72)  phi = ['1', '5/12', '1/9', '0', '0', '1/36', '0']
+    touch (4, 5, 6): c = (-1/2, 1/10, -1/120)  phi = ['1', '1/2', '1/5', '1/20', '0', '0', '0']
+
+(2) THE k=8 DEG-3 ROW, EXHAUSTIVE: Phi <= 1 - (2/3)m1 + (17/90)m2 - (1/45)m3 <= cap_9
+k=8 deg-3 row: 77400 cores, box [1..20]
+  min margin (cap - bound) = 1267843/18918900 ~ +0.067015  at (0, 1, 2, 3, 4, 5, 6, 7)
+    (bound there = 14131/33075 ~ 0.427241; cap = 1979/4004 ~ 0.494256)
+  consec: bound = 14131/33075 ~ 0.427241, margin = 1267843/18918900 ~ +0.067015
+  VERDICT: ROW HOLDS on the whole box
+
+(3) THE k=9 DEG-2 ROW, EXHAUSTIVE (THM-705's linear requirement): Phi <= 1 - (2/3)m1 + (1/6)m2 <= cap_10
+k=9 deg-2 row: 24309 cores, box [1..17]
+  min margin (cap - bound) = 2399/229320 ~ +0.010461  at (0, 1, 2, 3, 4, 5, 6, 7, 8)
+    (bound there = 10477/17640 ~ 0.593934; cap = 55/91 ~ 0.604396)
+  consec: bound = 10477/17640 ~ 0.593934, margin = 2399/229320 ~ +0.010461
+  VERDICT: ROW HOLDS on the whole box
+
+(4) CROSS-CHECK: the k=8 DEG-2 row fails (the known gap):
+k=8 deg-2 row (expected to fail): 3431 cores, box [1..14]
+  min margin (cap - bound) = -41851/1261260 ~ -0.033182  at (0, 1, 2, 3, 4, 5, 6, 7)
+    (bound there = 1163/2205 ~ 0.527438; cap = 1979/4004 ~ 0.494256)
+  consec: bound = 1163/2205 ~ 0.527438, margin = -41851/1261260 ~ -0.033182
+  VERDICT: *** ROW FAILS ***

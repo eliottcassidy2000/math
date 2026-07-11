@@ -1,3 +1,54 @@
+## klein-2026-07-11-S252 -- THE <=7-ARCS PIGEONHOLE LEAN LANDING (kernel-pure x6) + THM-713 (the k=8 deg-3 row, exhaustive) + GW edge-case confirmation (B5 ledger)
+
+Prompt (owner): work the sharpest part of the remaining LRC 14 math; pull many times and synthesize the cutting edge.
+
+**(1) THE DE-CITATION LANDED.** LRCSevenGapRigidity.lean GREEN KERNEL-PURE x6: cgap_sum (cyclic
+gaps telescope to 1, wrap capped at 1 + f0), cgap_witness (THE BRIDGE: any gap > 1/7 witnesses --
+interior gap at s_i forces s_i < 6/7 so wrap terms 1 + s_j - s_i clear 1/7 FREE, no max-gap
+selection), gap_dichotomy (k <= 6 pigeonhole via mac-mini's exists_gap_gt_one_seventh; k = 7
+no-big-gap => ALL gaps exactly 1/7 = PERFECT NET => first sorted pair at fract = 1/7 exact),
+good_or_pair (phase level via orderIsoOfFin; Finset.image dedups collisions -- they only help),
+pair_fiber_countable (x = (n + 1/7)/d), **goodSet_ae_full: slowmu(goodSet E) = 1 for every nodup
+3 <= |E| <= 7** -- root-wired. LRCTwoCitationAssembly.lean (SmallClusterFull naming +
+lrc14_from_moment_and_supply: **LRC(14) = [THM-661] + [certificate supply] -- TWO citations**)
+compiles once the cert chain builds (pre-existing segfault kps flagged; assembly file committed).
+Fix log: Int.fract_add_one not fract_add_int; ENNReal spelled out (scoped notation); toReal_one;
+set-bound dite unfolds via simp only [hF, cgap] + dif_pos i.isLt + Fin.eta; Fin-mk ascriptions in
+erase-sums; defeq pair extraction (exact hg0 after dif_pos rw -- 0+1 = 1 is rfl).
+
+**(2) THM-713 -- THE k=8 DEGREE-3 ROW, EXHAUSTIVE (the ladder's last analytic gap, box half).**
+LP-vertex enumeration: FOUR feasible cubic majorants; the unique tight-at-1 vertex touches {1,3,6}:
+phi3 = 1 - (2/3)t + (17/90)t(t-1) - (1/45)t(t-1)(t-2), values [1, 1/3, 2/45, 0, 1/15, 1/9, 0];
+**the deg-3 gain over deg-2 is EXACTLY (1/45)(m3 - m2)** -- the cubic term monetizes the deep-empty
+mass (the AP's bimodal resonance). EXHAUSTIVE: full [1..20] box (77400 cores) min margin EXACTLY
+1267843/18918900 ~ +0.067015, argmin = consec (interior, box-stable) -- where deg-2 fails by exactly
+-41851/1261260 ~ -0.0332. k=9 deg-2 row exhaustive on [1..17] (24309 cores): min margin 2399/229320
+~ +0.010461, consec argmin (upgrades THM-703's consec+25-random evidence). The THM-710 ladder base
+{deg-3@k=8}+{deg-2@k=9} is now exhaustive-box verified; wholesale remainder = the tail transfer.
+
+**(3) THE EDGE CASE: independent confirmation of THM-708 + the exact B5 ledger.** My scan
+identified opus-S226's {1..11,13,24} as GW concurrent with mac-mini cont.32 (their wire priority;
+deferred + confirmed). NEW: B5(GW,q) > 0 iff 14 | q (ledger 5,5,5,5,5,5,3 at q = 14..98; zero/neg
+at every 14-coprime q <= 2000); ALL live residues boundary-exact (min||vt|| = 1/14; grid max
+identical to tight AP to 12 digits) => the strict chain can NEVER fire on tight families, only
+closed-band certificates exist; q = 14 = 1+13 IS a pair-sum -- the exact identity works (live 6 >
+penalty 1) where cleanliness cannot. Tightness obstructs the clean CONDITION, not the pair-sum
+mechanism. THM-707 slim addendum.
+
+**Hygiene:** THM-706 rename completed (701 -> 705 collided mid-rename with mac-mini cont.31 ->
+706); HYP-6005 taken mid-claim by kps cont.30 -> mine is HYP-6010. LESSON: check the wire
+IMMEDIATELY before every rename/claim push -- two collisions in one day at fleet speed.
+
+Files: LRCSevenGapRigidity.lean (green), LRCTwoCitationAssembly.lean, root wire, THM-713 canon,
+THM-707/689 addenda, lrc14_edge_case_b5_scan + lrc14_deg3_row_exhaustive scripts/.outs, HYP-6010.
+
+NEXT AGENT: (a) the k=8 row's TAIL half: compose THM-713's box with THM-710's eigen-transfer +
+THM-701/702 peel to make the deg-3 row wholesale (the m3 instrument = kps's 3D hyperbola box count
+enters here); (b) wire LRCTwoCitationAssembly when the cert chain builds (or fix the segfault --
+it gates the TWO-CITATION assembly, the biggest formal milestone available); (c) the clean-ruler
+LIVE half on generic residuals (kps cont.30 did SHALLOW; live >= 1 at the pair-sum needs its own
+supply argument); (d) Freiman table exc <= k-2 (finite).
+
 ## mac-mini-2026-07-09-S65 (cont.35, 2026-07-11) -- THM-711: THE HIT-EMPTY PRODUCT FORM -- the k=9 deg-2 base is EXACTLY E[N(7-N)] >= 432/91 (identity proved); adversarial hunt (57 families, every enemy class) gives global min 4465/882 AT SHIFTED-CONSEC {1..9}, margin +0.315 -- evidence the base is UNCONDITIONAL (no core bound; far elements raise J per THM-710). The k=9 residue is ONE compact inequality with a conjectured exact minimizer. Flag: opus-S227 reused THM-709 (mine prior, cont.33).
 
 Prompt (owner): another frontier session; push/pull; consider ideas deeply.

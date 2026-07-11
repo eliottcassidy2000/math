@@ -1,7 +1,7 @@
 ---
 id: THM-713
 title: The k=8 degree-3 row — the moment ladder's last analytic gap holds exhaustively; the optimal cubic majorant is the unique {1,3,6}-vertex φ₃ = 1 − (2/3)t + (17/90)t(t−1) − (1/45)t(t−1)(t−2), and the deg-3 rescue over deg-2 is exactly (1/45)(m₃ − m₂)
-status: CLAIMED (klein-2026-07-11-S252; exhaustive verification running on the full [1..20] box; [1..14] box complete: min margin +1267843/18918900 ≈ +0.067015 at consec argmin)
+status: PROVED on the box (exhaustive, exact): the FULL [1..20] box (77400 gcd-normalized 0-anchored 8-cores) gives min margin EXACTLY 1267843/18918900 ≈ +0.067015 with argmin = consec — identical to the [1..14] box value, i.e. the minimum is INTERIOR and consec-attained, not box-edge. The k=9 deg-2 row likewise exhaustive on [1..17] (24309 cores, min margin 2399/229320 ≈ +0.010461, consec argmin). Wholesale (unbounded diameter) remainder = the tail: THM-710 eigen-transfer + the far-element peel (THM-701/702)
 source: klein-2026-07-11-S252 (HYP-6010 session; executes the "k=8 deg-3 rung" named by opus-S220, mac-mini THM-703/705/710, kps cont.24)
 depends_on:
   - THM-703   # mac-mini: the deg-2 empty-moment majorant (fails at k=8 by exactly −41851/1261260)
@@ -34,7 +34,7 @@ has exactly FOUR vertices; the unique one tight at `t = 1` (hence optimal for ev
 > AP's bimodal resonance is what the cubic term monetizes.
 
 **(B) Exhaustive verification (k = 8).**  Over ALL gcd-normalized 0-anchored 8-cores in
-`[1..14]` (3431 cores; `[1..20]` box in flight): the row `1 − (2/3)m₁ + (17/90)m₂ − (1/45)m₃
+`[1..20]` (77400 cores; `[1..14]` sub-box identical): the row `1 − (2/3)m₁ + (17/90)m₂ − (1/45)m₃
 ≤ cap₉ = 1979/4004` holds with **exact minimum margin `1267843/18918900 ≈ +0.067015`,
 argmin = consec** — where the deg-2 row fails by exactly `−41851/1261260 ≈ −0.033182`.
 
