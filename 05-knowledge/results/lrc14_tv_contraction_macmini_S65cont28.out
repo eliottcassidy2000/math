@@ -1,0 +1,23 @@
+======================================================================
+(1) ATOM-LEVEL CONTRACTION: exact error vs PROVEN TV bound (no fitting)
+  40 random (E',T,b): ALL |exact| <= proven bound; worst |exact|/bound = 0.0310
+
+(2) FULL measS7 far-element contraction: |measS7(E'+b) - plateau| <= C_proven/b
+    C_proven = sum_T V_T * H_T (IE over sectors, all constants from the proof)
+  E'=[1, 2, 3]: C_proven=4032.0  [b=100: err=+0.00000 bnd=40.32000] [b=300: err=+0.00000 bnd=13.44000] [b=1000: err=+0.00000 bnd=4.03200] [b=3000: err=+0.00000 bnd=1.34400]  OK 
+  E'=[1, 2, 3, 4, 5, 6, 7]: C_proven=18816.0  [b=100: err=-0.00192 bnd=188.16000] [b=300: err=+0.00093 bnd=62.72000] [b=1000: err=-0.00006 bnd=18.81600] [b=3000: err=+0.00023 bnd=6.27200]  OK 
+  E'=[2, 3, 7, 11]: C_proven=15456.0  [b=100: err=+0.00000 bnd=154.56000] [b=300: err=+0.00000 bnd=51.52000] [b=1000: err=+0.00000 bnd=15.45600] [b=3000: err=+0.00000 bnd=5.15200]  OK 
+  E'=[1, 4, 9, 16, 25]: C_proven=36960.0  [b=100: err=+0.00000 bnd=369.60000] [b=300: err=+0.00000 bnd=123.20000] [b=1000: err=+0.00000 bnd=36.96000] [b=3000: err=+0.00000 bnd=12.32000]  OK 
+
+(3) vs klein THM-687 (measured C <= 0.97 on two-scale slices):
+    our constant is PROVEN (no census); it is larger but explicit and universal:
+    E'=[1, 2, 3]: C_proven = 4032.0 (vs measured O(1) -- the price of proof)
+    E'=[1, 2, 3, 4, 5]: C_proven = 10080.0 (vs measured O(1) -- the price of proof)
+
+(4) ITERATED (3-scale): peel top block, then mid: total err <= C1/b1 + C2/b2
+  E=[1, 2, 60, 61, 4000]: level-1 err = +0.000000, proven C1/b1 = 20.832000, OK
+
+CONCLUSION: the TV/IBP contraction holds with the PROVEN constants at every test;
+the far-element plateau is now a THEOREM with explicit rate C(E')/b, C(E') = 
+sum_T 2|T| * (sum E') * |T|(7-|T|)/14 over the 127 sector atoms (IE), i.e.
+C(E') = (sum E') * sum_{t=1}^{7} C(7,t) * t^2 (7-t)/7  -- pure arithmetic.
