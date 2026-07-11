@@ -1,0 +1,24 @@
+K7 (THM-699 IE constant) = 672 (= 672 exact: True)
+
+(2) CAP-GROWTH TABLE (exact): growth_k = cap_(k+1) - cap_k vs 2/21 = 2/21 ~ 0.0952
+  k=8: growth = 94841/840840 ~ 0.1128, slack = 14761/840840 ~ 0.0176  OK
+  k=9: growth = 63/572 ~ 0.1101, slack = 179/12012 ~ 0.0149  OK
+  k=10: growth = 11/91 ~ 0.1209, slack = 1/39 ~ 0.0256  OK
+  k=11: growth = 12/91 ~ 0.1319, slack = 10/273 ~ 0.0366  OK
+  k=12: growth = 1/7 ~ 0.1429, slack = 1/21 ~ 0.0476  OK
+  WORST SLACK s* = 179/12012 ~ 0.01490 (at k=8) -- ALL POSITIVE: (2) PROVED
+
+(3) THE EXPLICIT THRESHOLD: half-slack budget s*/2 = 179/24024
+    W(E') = C(E')/(s*/2) = 672*(sum E') / 0.00745 = 90191 * (sum E')
+    => far-element threshold: w >= 90191 * (sum of remaining offsets)
+    Per-step induction: Phi(E) <= Phi(E') + 2/21 + C(E')/w <= Phi(E') + 2/21 + s*/2
+                        <= cap_k + growth_k  whenever Phi(E') <= cap_k. NO summability needed.
+
+(1) BALANCED-CORE margins at the consec argmax (exact Phi = p0 + p1/3):
+  core |F|=8 consec: p0=0.3272 p1=0.2442 Phi=0.4086 cap_(k+1)=0.4943 margin=+0.0856 OK
+  core |F|=9 consec: p0=0.4162 p1=0.2221 Phi=0.4902 cap_(k+1)=0.6044 margin=+0.1142 OK
+  core |F|=10 consec: p0=0.5045 p1=0.1874 Phi=0.5670 cap_(k+1)=0.7253 margin=+0.1583 OK
+
+HONEST SCOPE: (2),(3) PROVED exact. (1) at the known argmax has positive margin;
+the exhaustive core sweep at B ~ W*(sum e') is infeasible -- core closure = the
+Phi-consec-extremality lemma, THE single remaining extremal statement (as THM-534).

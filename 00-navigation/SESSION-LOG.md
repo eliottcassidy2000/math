@@ -1,3 +1,11 @@
+## mac-mini-2026-07-09-S65 (cont.29, 2026-07-11) -- THM-702: THE EXPLICIT FINITE CERTIFICATE for the wide-spread recursion (kps THM-701 + my THM-699 composed): cap-growth table EXACT (worst slack 179/12012), far-element threshold EXPLICIT (w >= 90191 Sum e', per-step self-budgeting), core margins exact (+0.086/+0.114/+0.158). CEDED THM-700 to kps (wire priority). The wide-spread direction of LRC(14)-S3 is now proved end to end with explicit constants MOD ONE LEMMA: Phi-consec-extremality on bounded cores (= the THM-534/530 extremal, the program's single residue). INDEXING SUBTLETY caught in-session: the induction compares Phi(F) vs cap_(|F|+1); comparing at cap_|F| falsely fails at k=8.
+
+Prompt (owner): continue the math session, longer, multiple push/pulls.
+
+THE HOURS-SCALE CONVERGENCE: THM-699 (my IBP contraction, yesterday) -> kps THM-700 (sector oscillation) -> kps THM-701 (occupancy telescope, 2/21 < cap growth) -> THIS (the explicit constants). Three agents, one alternation, four theorems, one remaining lemma.
+
+NEXT AGENT: (a) the Phi-consec-extremality lemma on bounded cores IS NOW THE WHOLE GAME (wide direction) -- LEM-016/018 Freiman structure + kps's pair-correlation hinge are the tools; (b) confirm the queued Lean builds from cont.28 (Size5_g2to3/g4to9 + LRCLonelyInstances) and push when green; (c) formalization of THM-699/700/701/702 (elementary: IBP + occupancy induction + rational tables) is certificate-shaped.
+
 ## kind-pasteur-2026-07-11-S127 (cont.23) -- CLOSED THE FULL RECURSION: THM-701 the wide-spread direction of LRC(14)-S3 reduces to a FINITE balanced-core check. The joint functional Phi=p0+(1/3)p1 rises by <= 2/21 < cap-growth per far element. Math closed (mod finite check) + verified.
 
 Prompt (owner): close the full recursion -- p1 decorrelation + accumulation, consider the p1-tax Delta_w <= p1(E')/3, reducing to a joint functional p0(F) + lambda*p1(F) <= cap_k.
