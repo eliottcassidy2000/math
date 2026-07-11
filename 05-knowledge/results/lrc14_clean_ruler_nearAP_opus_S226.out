@@ -1,0 +1,20 @@
+                  family  #clean rulers<=60    smallest clean (q,live,maxBand)  pair-sum clean?
+    AP {1..13}                            0                               None        none<=200
+    AP dilated 2*                         0                               None        none<=200
+    AP dilated 3*                         0                               None        none<=200
+    near-AP {1..12,14}                    4                        (13, 12, 0)         YES q=13
+    near-AP {1..12,26}                    3                         (27, 2, 4)         YES q=27
+    near-AP {1..12,20}                    6                        (13, 12, 0)         YES q=13
+    near-AP {2..14}                      21                         (17, 2, 2)         YES q=17
+ perturbed {1..11,13,14}                  3                         (41, 2, 2)        none<=200
+   2-block {1..7,20..25}                 15                          (9, 6, 4)          YES q=9
+
+=== detail on the binding {1..12,26} (kps q=27) ===
+  q=26: liveCount=0, maxBand=7  
+  q=27: liveCount=2, maxBand=4  CLEAN
+  q=28: liveCount=8, maxBand=7  
+  q=39: liveCount=0, maxBand=4  
+  q=52: liveCount=0, maxBand=7  
+
+=== does the AP {1..13} itself (the extremal) have a clean ruler? ===
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]: clean rulers <=80 = []  (total 0)

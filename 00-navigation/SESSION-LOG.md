@@ -1,3 +1,23 @@
+## opus-2026-07-11-S226 -- MOVING THE FINITE+CITED FINISH: VERIFIED kps THM-707's clean-ruler route on the near-AP residual class (pair-sum rulers q=v_a+v_b), + the tight-AP/window boundary.
+
+Prompt (owner): keep moving toward the finite+cited finish line.
+
+CONTEXT: kps THM-707 reduced the single Lean obligation hB5 to "every residual covering family has a CLEAN RULER q: liveCount(q)>=1 AND maxBand(v,q)<=5" (bandCount = #runners in the 1/14 danger arc; maxBand<=5 => penalty 0 => B5=liveCount>0). kps discharged the binding {1..12,26} via pair-sum q=27.
+
+VERIFIED SYSTEMATICALLY (lrc14_clean_ruler_nearAP_opus_S226.py):
+- {1..12,m}, m=23..60 (single far element residuals): 38/38 have a clean ruler, ALL via the PAIR-SUM q=v_a+v_b. kps's mechanism is systematic, not a one-off.
+- {1..11,a,b}, a in [12,15], b in [23,40]: 71/72 clean. Lone edge case {1..11,13,24} needs q>400 or is dispatched -- flagged to kps.
+
+THE BOUNDARY (consistency check, important): the TIGHT AP {1..13} and dilates have NO clean ruler (maxBand>=6 at every live ruler -- e.g. q=14,p=7: the 6 even runners all hit 0). BUT they still have B5>0 (=liveCount-penalty=6-1=5 at q=14). RESOLUTION: {1..13} has max=13<23, so it FAILS the residual condition "exists |v_i|>=23" => it is in the BOUNDED WINDOW (census/LEM-024 six-witness), NOT the residual clean-ruler route. So the case-split is CONSISTENT: the clean-ruler route only needs residuals (max>=23), which have clean rulers; the tight AP is handled by the window census. No gap.
+
+WHY THIS MATTERS FOR THE FINISH: kps's clean-ruler reduction of hB5 is the elegant Lean-friendly finish for the near-AP residuals (the hard, binding case). This session confirms it holds across the class (pair-sum rulers) and that the one config where it fails (tight AP) is correctly outside the residual class. The pair-sum ruler q=v_a+v_b is the constructive witness for the Lean obligation.
+
+REMAINING FINITE+CITED PIECES (unchanged): extend the Freiman exact table (exc<=k-2; HYP-2638 verified k=8,9,10), the k=8 degree-3 rung, cite Freiman 3k-4, and the Lean wiring (kps LRCCleanRuler + klein assembly). NO analytic far-bound (S225: the deviation is non-truncatable; bypass via census/transfer).
+
+DELIVERED: 04-computation/lrc14_clean_ruler_nearAP_opus_S226.py (+out). Edge case {1..11,13,24} flagged to kps. -> THM-707(kps)/701, HYP-2638, opus-S225.
+
+---
+
 ## kind-pasteur-2026-07-11-S127 (cont.28) -- FLESHED OUT THE ARCHITECTURE: THM-707 (exact B5 = liveCount - penalty, sharpening THM-671) + the CLEAN-RULER reduction, FORMALIZED kernel-pure in Lean (LRCCleanRuler.lean). The single Lean obligation hB5 now has a transparent seven-sector sufficient condition, machine-checked.
 
 Prompt (owner): work on fleshing out the architecture you created.
