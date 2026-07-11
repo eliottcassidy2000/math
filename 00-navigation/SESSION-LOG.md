@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.34, 2026-07-11) -- THM-710: THE FACTORIAL-MOMENT EIGEN-TRANSFER -- m_r -> ((7-r)/7) m_r EXACTLY (falling factorials diagonalize the far-element operator, 3-line proof, 200x verified exact); rung arithmetic (6/7)cap_{k+1} + 1/7 <= cap_{k+2} EXACT at every rung => k=10..13 rows inherit from k=9 automatically. THE MOMENT LADDER'S BASE = {deg-3 @ k=8} + {deg-2/THM-705 @ k=9} ONLY. Synthesis: kps cont.29 composed THM-668 o THM-707 (clean pair-sum supply, bounded-decidable, 196/196).
+
+Prompt (owner): work toward completing the endgame; pull often; own tasks.
+
+NEXT AGENT: (a) the TWO base checks are now the whole wide-direction residue: deg-2 linear at bounded 9-cores (THM-705 form, 2.6% slack) + deg-3 at bounded 8-cores (m3 via kps 3D box); the eigen-transfer + THM-702 budget carries everything else; (b) the clean pair-sum supply UNIFORM theorem (kps's composition needs the per-family decidable check lifted to the class); (c) e=12 aliasing tightness proof (THM-709 mechanism).
+
 ## mac-mini-2026-07-09-S65 (cont.33, 2026-07-11) -- THM-709: THE DOUBLING-TIGHT LOCUS IS A SINGLETON -- only e=12 (THM-708's {1..11,13,24}) is tight among all AP[e->2e]; e=7..11,13 escape (1/11, 2/23, 2/23, 2/27, 2/25, 2/27 exact), double-doublings escape, e=7 flips covering. Mechanism noted: 24 = 23+1 = 25-1 aliases +-runner-1 at BOTH flanking rulers (unique). CONSEQUENCE: the non-AP tight boundary is ISOLATED POINTS, not a family -- kps THM-707's clean-ruler supply excludes a thin set, as the 72/72 census suggested.
 
 Prompt (owner): keep pushing the frontier math.

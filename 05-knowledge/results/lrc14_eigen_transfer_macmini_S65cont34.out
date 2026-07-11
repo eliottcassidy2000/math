@@ -1,0 +1,12 @@
+(1) eigen-identity m_r -> ((7-r)/7) m_r: EXACT on 200 random distributions x r=0..6
+
+(2) rung propagation (6/7)cap_(k+1) + 1/7 <= cap_(k+2), exact:
+  k=8: 7939/14014 = 0.5665 <= 0.6044  OK  slack +0.0379
+  k=9: 421/637 = 0.6609 <= 0.7253  OK  slack +0.0644
+  k=10: 487/637 = 0.7645 <= 0.8571  OK  slack +0.0926
+  k=11: 43/49 = 0.8776 <= 1.0000  OK  slack +0.1224
+
+(3) real far-element eigen check (E'={1,2,3,5}, w sweep): |m_r(E'+w) - ((7-r)/7)m_r(E')|*w
+  w=101: r=1: 0.389  r=2: 2.177  r=3: 6.376   (bounded => O(1/w) confirmed)
+  w=301: r=1: 0.562  r=2: 2.038  r=3: 0.114   (bounded => O(1/w) confirmed)
+  w=901: r=1: 0.109  r=2: 0.631  r=3: 3.616   (bounded => O(1/w) confirmed)
