@@ -1,3 +1,21 @@
+## kind-pasteur-2026-07-11-S127 (cont.26) -- WORKED THE FOURIER IDENTITY m2~E2: it is NOT an identity (the pair kernel is arithmetic) + CORRECTED my own cont.25 overclaim (E2 -0.98 was inflated; controlled it is -0.67, E2 = order-2 SHADOW, longest-AP sharp per opus-S222) + independently confirmed opus's far-bucket bound.
+
+Prompt (owner): work the Fourier identity m2 ~ Sum|F-hat|^4 = E2 and any other tasks to finish out the proof.
+
+I WORKED IT HONESTLY AND IT IS A PROXY, NOT AN IDENTITY:
+- The empty-count moments m1,m2 are AVOIDANCE probabilities P(all m freqs miss an arc) -- large-deviation objects, NOT a clean 4th-moment Sum|F-hat|^4. The inclusion-exclusion pair term is a Fejer-weighted pair-collision kernel collide(a,b)=meas{sector(ax)=sector(bx) in {1..6}}.
+- KERNEL STRUCTURE (lrc14_moment_fourier_kernel_kps_S127): collide(a,b) depends on BOTH difference and sum. Fixed diff=3: 0.107 (a=1) -> 0.114 (a=2) -> 0.1225 (a>=4, SATURATED). So it is difference-only ASYMPTOTICALLY (large freq) with SMALL-FREQUENCY sum/anchor corrections. Genuinely arithmetic (geodesic/gcd), no clean closed form. => m2 = E2 is FALSE as an identity; E2 is the difference-only leading shadow.
+
+CORRECTED MY cont.25 (intellectual honesty; HYP-5990 downgraded to PARTIALLY-TRUE): the corr(F2,E2)=-0.978 I reported was INFLATED by an UNCONTROLLED battery (Sidon spread 44, geom spread 64 -- outliers with jointly low E2 AND low Phi => spurious strong correlation). On CONTROLLED cores (k=9, 0-anchored, diam<=13 -- the regime the extremal problem lives in AFTER the THM-701 far-peel): corr(F2,E2)=-0.665, corr(L,E2)=-0.598 (matches opus-S222's -0.58 exactly), and longest-AP is MARGINALLY SHARPER (-0.672/-0.680); ALL have R^2~0.45. So E2 does NOT "govern decisively" -- it is the ORDER-2 SHADOW, exactly opus HYP-5682's fine-scale verdict, now shown to TRANSFER: longest-AP/Freiman-dimension is the sharp invariant at BOTH scales, E2 the shadow at both. WHAT STILL STANDS from cont.25: (i) anchor-selects-invariant (among scalar shadows the 0-anchor makes E2 not E3 the relevant one); (ii) Freiman AP-max-E2 as the LEADING term.
+
+THE ACTUAL FINISH LINE (opus-S222, which I now endorse + confirm): NOT a scalar extremality (no scalar is sharp, R^2~0.45) but the STRUCTURAL SPLIT on L=6m1-m2 (mac-mini THM-705's optimal-majorant normalization q*=1-N/2+N(N-1)/12, L>=12(1-cap)): (a) NEAR-AP (longAP>=k-1): dilation-invariance (THM-531) + finite check; (b) FAR (longAP<=k-2): min-L MONOTONE-decreasing in longest-AP, one Freiman 3k-4 threshold bound L>=12(1-cap). INDEPENDENTLY CONFIRMED the far bound: k=9 diam<=14, min-L over longAP<=7 = 5.587 > threshold 4.747, margin +0.84 (opus got 5.45 at diam<=13; monotone table reproduced). The finite non-two-scale residue is census-closable (mac-mini/klein). opus-S222 ALSO found consec-extremality is FALSE for k>=11 (klein: k=11 argmax = perforated dilate, beats consec by 1/378) -- the recursion retargets to Phi<=cap directly there.
+
+NET: the Fourier task is DONE (answer: not an identity, arithmetic kernel); my cont.25 corrected; opus-S222's longest-AP route confirmed as the sharp structure and its far bound de-risked. The proof's remaining analytic content = the ONE Freiman 3k-4 bound (longAP<=k-2 => L>=12(1-cap), ~0.8 to spare) + the finite census. My THM-701 recursion + opus-S222 split + mac-mini THM-705 linear inequality are the assembled skeleton.
+
+FILES: lrc14_moment_fourier_kernel_kps_S127.py/.out; HYP-5990 corrected. LESSON: a -0.98 correlation on an uncontrolled battery is a TRAP -- control the confound (here: spread) before claiming an invariant governs; the honest number was -0.67, and the sharp invariant was opus's longest-AP all along.
+
+NEXT: the Freiman 3k-4 bound (longAP<=k-2 => min-L>=threshold) is the last analytic piece -- opus/mac-mini/klein converging; the finite census discharges the rest.
+
 ## opus-2026-07-11-S223 -- THE FOURIER IDENTITY RESOLVED: coverage functional L=6m1-m2 governed by the 7-VISIBLE additive energy E2*=Sum_{t not 0 mod 7} r(t)^2 (THM-503 kernel vanishing); consec maximizes it (LEM-015) => minimizes L. Structural finish of the Freiman far-bound; three-thread unification.
 
 Prompt (owner): work the Fourier identity m2 ~ Sum|F-hat|^4 = E2 and any tasks to finish the proof.

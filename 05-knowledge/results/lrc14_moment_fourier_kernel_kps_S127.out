@@ -1,0 +1,25 @@
+(3) PAIR-COLLISION KERNEL collide(a,b) -- difference vs sum dependence:
+     fix diff d=b-a=3, vary a: collide should be CONSTANT if difference-only
+       collide(1,4) = 0.1071
+       collide(2,5) = 0.1143
+       collide(4,7) = 0.1226
+       collide(7,10) = 0.1225
+       collide(11,14) = 0.1227
+       collide(18,21) = 0.1225
+     fix a+b=20, vary diff: 
+       collide(9,11) d= 2 = 0.1212
+       collide(8,12) d= 4 = 0.0952
+       collide(6,14) d= 8 = 0.1225
+       collide(3,17) d=14 = 0.1512
+
+(1)/(2) CONTROLLED k=9 cores (0 + 8 from {1..13}), sample:
+   n=161 cores.  Predictors of the residue (consec = argmin F2/L):
+     corr(F2, E2)        = -0.665
+     corr(F2, longestAP) = -0.672
+     corr(F2, collideSum)= +0.623   <- the EXACT pair term
+     corr(L , E2)        = -0.598   (opus-S222 got -0.58)
+     corr(L , longestAP) = -0.680
+     corr(L , collideSum)= +0.642
+
+   R^2(F2 ~ E2) = 0.442 ; R^2(F2 ~ collideSum) = 0.388 ; R^2(F2 ~ longestAP) = 0.452
+   VERDICT: the sharp pair invariant is the one with highest R^2 (collideSum = exact Fejer pair term).
