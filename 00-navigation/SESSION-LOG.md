@@ -1,3 +1,20 @@
+## opus-2026-07-11-S214 -- LEM-022 Fourier completion STAGE B.3 THE COMPLETION IDENTITY, PROVED (LRCFourierCompletionC.lean, kernel-pure, foundational-only, root-wired). The analytic CRUX of the OffLine gate's t2 bound. + the k=0-split difference bound. Final numeric assembly (B.2 per-term + harmonic sum + band bridge) scoped.
+
+Prompt (owner): continue B.3 as left off, pull frequently, aim to complete the formalization, take the hardest available tasks.
+
+DELIVERED (LRCFourierCompletionC.lean, kernel-pure [propext,Classical.choice,Quot.sound], sorryAx 0, root-wired, builds green):
+- eInt character infrastructure: eInt q n = exp(2pi n/q i); eInt_add (character), eInt_conj (conj(e_q(n))=e_q(-n)), eInt_orthog (Sum_{k<q} e_q(kh)=q*1{q|h}, from S213 B.1). Worked over range q INTEGERS (not ZMod q characters) -- the key design choice that eliminates all reindexing friction and reuses B.1 directly.
+- completion_identity (THE CRUX): (C_w:C) = (1/q) Sum_{k<q} B_hat(k) conj(B_hat(wk)), where C_w = #{s in B : ws mod q in B}, B_hat(j)=Sum_{r in B} e_q(-jr). Proof: expand both coeffs, swap the k-sum inside (sum_comm), collapse Sum_k e_q(k(ws-r)) = q*1{q|ws-r} (B.1 orthogonality), count surviving pairs (r,s) with ws=r mod q (the dvd_sub_iff_eq_emod residue-pinning helper). ~50 lines of finite Fourier over Z/q.
+- completion_diff_bound: ||C_w - b^2/q|| <= (1/q) Sum_{k!=0} ||B_hat(k)|| ||B_hat(wk)|| (b=|B|). The k=0 main-term split (B_hat(0)=b, so k=0 term = b^2) + triangle inequality.
+
+So the COMPLETION HALF of LEM-022 Stage B.3 is DONE. Combined with S213's B.1 (orthogonality) + B.2 (band coeff bound ||B_hat(h)||<=q/(2 cdist h)), the t2 hyperbola bound is scaffolded to its last numeric step.
+
+REMAINING (task #40, scoped handoff): the final assembly |C_w - b^2/q| <= 5q(log2 q+1)^2/P(w). From completion_diff_bound: apply B.2 per-term (needs the BAND BRIDGE: bandDFT(band) = norm_bandCoeff_le's interval sum, via band = distinct interval image) => (q/4) Sum_{k!=0} 1/(cdist k cdist wk); then death-star's harmonic_ratio_sum_mul_le (Q->R bridge + range-q<->ZMod-q index bridge) => the bound. ~150 lines, mechanical-ish but with the band bridge + Q/R plumbing. Does NOT touch the open signed t>=3 (THM-684).
+
+Files: LRCFourierCompletionC.lean (+root); tasks #39 (done: identity+diff), #40 (assembly). -> opus-S213 (B.1/B.2), death-star LEM-022/harmonic_ratio_sum_mul_le, kps LRCMcorrHyperbola (consumer), monad THM-680 (OffLine floor).
+
+---
+
 ## klein-2026-07-11-S249 -- THE FIRST-WINDOW WITNESS (THM-697, HYP-5970): PROVED AND FORMALIZED, GREEN ON FIRST COMPILE -- w = 7j+6 puts the cluster phase at EXACTLY 6/7; the packed TOP-BLOCK supply gap CLOSED by a route simpler than the test points; the two witness families are COMPLEMENTARY and jointly cover every packed small part
 
 Prompt (owner): continue as you left off; pull frequently during builds; reroute as needed.

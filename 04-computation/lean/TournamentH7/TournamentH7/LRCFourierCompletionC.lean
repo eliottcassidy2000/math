@@ -124,6 +124,48 @@ theorem completion_identity (q : ℕ) (hq : 0 < q) (B : Finset ℕ) (hB : B ⊆ 
     = (1 / (q : ℂ)) * ((B.filter (fun s => (w * s) % q ∈ B)).card * (q : ℂ))
   field_simp
 
-end FourierCompletion
-end LonelyRunner
+/-- `B̂(0) = |B|` — the DC coefficient counts the band. -/
+theorem bandDFT_zero (q : ℕ) (B : Finset ℕ) : bandDFT q B 0 = (B.card : ℂ) := by
+  rw [bandDFT]
+  have he0 : eInt q 0 = 1 := by rw [eInt]; norm_num
+  simp only [zero_mul, neg_zero, he0, Finset.sum_const, nsmul_eq_mul, mul_one]
+
+/-- **B.3 — the completion difference bound.**  Splitting off the `k = 0` main term `b²/q`
+(`b = |B|`) and applying the triangle inequality:
+`‖C_w − b²/q‖ ≤ (1/q)·Σ_{k≠0} ‖B̂(k)‖·‖B̂(wk)‖`.  The `k = 0` term of the identity is `B̂(0)² = b²`. -/
+theorem completion_diff_bound (q : ℕ) (hq : 0 < q) (B : Finset ℕ) (hB : B ⊆ Finset.range q) (w : ℕ) :
+    ‖(corrCount q B w : ℂ) - (B.card : ℂ) ^ 2 / q‖
+      ≤ (1 / q) * ∑ k ∈ (Finset.range q).filter (fun k => k ≠ 0),
+          ‖bandDFT q B (k : ℤ)‖ * ‖bandDFT q B ((w : ℤ) * (k : ℤ))‖ := by
+  have hqc : (q : ℂ) ≠ 0 := by exact_mod_cast hq.ne'
+  have hqR : (0 : ℝ) < q := by exact_mod_cast hq
+  have h0mem : (0 : ℕ) ∈ Finset.range q := Finset.mem_range.mpr hq
+  set F : ℕ → ℂ := fun k => bandDFT q B (k : ℤ) * (starRingEnd ℂ) (bandDFT q B ((w : ℤ) * (k : ℤ)))
+    with hF
+  -- the `k = 0` summand is `b²`
+  have hF0 : F 0 = (B.card : ℂ) ^ 2 := by
+    rw [hF]; simp only [Nat.cast_zero, mul_zero, bandDFT_zero, map_natCast]; ring
+  -- split off `k = 0`
+  have hsplit : (∑ k ∈ Finset.range q, F k)
+      = (B.card : ℂ) ^ 2 + ∑ k ∈ (Finset.range q).filter (fun k => k ≠ 0), F k := by
+    rw [← Finset.add_sum_erase (Finset.range q) F h0mem, hF0]
+    congr 1
+    apply Finset.sum_congr _ (fun _ _ => rfl)
+    ext k; simp [Finset.mem_erase, Finset.mem_filter, and_comm]
+  -- the difference is the off-diagonal sum, scaled
+  have hdiff : (corrCount q B w : ℂ) - (B.card : ℂ) ^ 2 / q
+      = (1 / q) * ∑ k ∈ (Finset.range q).filter (fun k => k ≠ 0), F k := by
+    rw [completion_identity q hq B hB w, ← hF, hsplit]
+    field_simp
+    ring
+  rw [hdiff, norm_mul]
+  have h1q : ‖(1 / (q : ℂ))‖ = 1 / q := by
+    rw [norm_div, norm_one, Complex.norm_natCast]
+  rw [h1q]
+  apply mul_le_mul_of_nonneg_left _ (by positivity)
+  refine le_trans (norm_sum_le _ _) ?_
+  apply Finset.sum_le_sum
+  intro k _
+  rw [hF, norm_mul, RCLike.norm_conj]
+
 
