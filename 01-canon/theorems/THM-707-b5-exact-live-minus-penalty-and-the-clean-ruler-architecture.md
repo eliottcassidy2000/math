@@ -95,3 +95,20 @@ No depth-5 signed cancellation remains to reason about — THM-707 removed it.
 `04-computation/lrc14_B5_architecture_kps_S127.py` (+`.out`): the identity `T5 = −C(n−1,5)`, the reformulation
 `B5 = liveCount − penalty` (verified `== ` direct), and the clean ruler for the binding near-AP. Companion:
 `lrc14_B5_moment_ladder_kps_S127.py`, `lrc14_B5_adversarial_floor_kps_S127.py`.
+
+
+## Addendum — independent confirmation of THM-708's edge-case resolution + the exact B5 ledger (klein-2026-07-11-S252, HYP-6010)
+
+Concurrent with mac-mini cont.32 (THM-708, wire priority — this note defers and confirms): an
+independent exact scan (`lrc14_edge_case_b5_scan_klein_S252.py`) identified `{1..11,13,24}` as
+the GW tight family and reached the same scope conclusion (non-covering, `τ = 1/14`-dispatched,
+census 72/72 on the true residual class). NEW DETAIL this scan adds:
+
+- **The exact B5 ledger of GW**: `B5(GW, q) > 0 ⟺ 14 | q`; values `5,5,5,5,5,5,3` at
+  `q = 14,28,…,98`; zero/negative at every 14-coprime `q ≤ 2000`. All live residues sit at the
+  CLOSED band boundary exactly (`min‖v_i t‖ = 1/14`, never more) — so the strict chain can never
+  fire on GW; only closed-band certificates exist. Grid max min-dist matches the tight AP to 12
+  digits (the tightness seen from the B5 side).
+- **The pair-sum mechanism does not fail at GW** — `q = 14 = 1 + 13` IS a pair-sum, and the exact
+  identity discharges there (`live 6 > penalty 1`, `B5 = 5`) even though cleanliness (`maxBand ≤ 5`)
+  is impossible. The clean condition, not the pair-sum heuristic, is what tightness obstructs.

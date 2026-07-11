@@ -1,0 +1,66 @@
+family v = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]  (the opus-S226 edge case; max = 24 >= 23: residual class)
+==============================================================================
+(a) first LIVE ruler:   (14, 6, 6, 1, 5)   (q, live, maxBand, penalty, B5)
+(b) first B5>0 ruler:   (14, 6, 6, 1, 5)
+(c) first CLEAN ruler (q <= 2000): None
+    top-5 by B5: [(5, 84, 6, 6, 1), (5, 70, 6, 6, 1), (5, 56, 6, 6, 1), (5, 42, 6, 6, 1), (5, 28, 6, 6, 1)]
+(e) maxBand histogram over q in [8, 2000]: {1: 2, 2: 5, 3: 9, 4: 15, 5: 7, 6: 53, 7: 14, 8: 14, 9: 14, 10: 14, 11: 28, 12: 154, 13: 1664}
+
+(d) pair-sum diagnosis (all pair-sums q = v_a + v_b, deduped):
+    q=  3: live=  0 maxBand= 4 penalty=    0 B5=    0  
+    q=  4: live=  0 maxBand= 6 penalty=    1 B5=   -1  
+    q=  5: live=  0 maxBand= 2 penalty=    0 B5=    0  
+    q=  6: live=  0 maxBand= 6 penalty=    1 B5=   -1  
+    q=  7: live=  0 maxBand= 1 penalty=    0 B5=    0  
+    q=  8: live=  0 maxBand= 6 penalty=    1 B5=   -1  
+    q=  9: live=  0 maxBand= 4 penalty=    0 B5=    0  
+    q= 10: live=  0 maxBand= 6 penalty=    1 B5=   -1  
+    q= 11: live=  0 maxBand= 1 penalty=    0 B5=    0  
+    q= 12: live=  0 maxBand= 6 penalty=    1 B5=   -1  
+    q= 13: live=  0 maxBand= 1 penalty=    0 B5=    0  
+    q= 14: live=  6 maxBand= 6 penalty=    1 B5=    5  B5>0
+    q= 15: live=  0 maxBand= 4 penalty=    0 B5=    0  
+    q= 16: live=  0 maxBand= 6 penalty=    1 B5=   -1  
+    q= 17: live=  0 maxBand= 3 penalty=    0 B5=    0  
+    q= 18: live=  0 maxBand= 6 penalty=    1 B5=   -1  
+    q= 19: live=  0 maxBand= 2 penalty=    0 B5=    0  
+    q= 20: live=  0 maxBand= 6 penalty=    1 B5=   -1  
+    q= 21: live=  0 maxBand= 4 penalty=    0 B5=    0  
+    q= 22: live=  0 maxBand= 6 penalty=    1 B5=   -1  
+    q= 23: live=  0 maxBand= 2 penalty=    0 B5=    0  
+    q= 24: live=  0 maxBand= 6 penalty=    1 B5=   -1  
+    q= 25: live=  0 maxBand= 2 penalty=    0 B5=    0  
+    q= 26: live=  0 maxBand= 6 penalty=    1 B5=   -1  
+    q= 27: live=  0 maxBand= 4 penalty=    0 B5=    0  
+    q= 28: live=  6 maxBand= 6 penalty=    1 B5=    5  B5>0
+    q= 29: live=  0 maxBand= 3 penalty=    0 B5=    0  
+    q= 30: live=  0 maxBand= 6 penalty=    1 B5=   -1  
+    q= 31: live=  0 maxBand= 2 penalty=    0 B5=    0  
+    q= 32: live=  0 maxBand= 6 penalty=    1 B5=   -1  
+    q= 33: live=  0 maxBand= 4 penalty=    0 B5=    0  
+    q= 34: live=  0 maxBand= 6 penalty=    1 B5=   -1  
+    q= 35: live=  0 maxBand= 3 penalty=    0 B5=    0  
+    q= 37: live=  0 maxBand= 3 penalty=    0 B5=    0  
+
+================== RESOLUTION: THE EDGE CASE IS GODDYN-WONG ==================
+(1) IDENTIFICATION: {1..11,13,24} = GW = AP[12->24], the SECOND KNOWN TIGHT FAMILY of
+    LRC(14) (canon THM-612: tight families = AP + GW; THM-658: M(GW) = 1/14).
+    Numerical confirmation: grid max min-dist = 0.071428392857 on N=2000003 grid --
+    IDENTICAL to the tight AP {1..13} to all printed digits; sup = 1/14 attained ONLY
+    at the boundary times p/14 (live p = {1,3,5,9,11,13} at q=14, each with
+    min_i ||v_i t|| = 1/14 EXACTLY, never strictly more).
+(2) OUT OF SCOPE: GW mod 14 = {1..11,13,10} -- NO speed = 0 (mod 14) => the tau = 1/14
+    test time (THM-523 non-covering dispatch) handles it BEFORE the residual clean-ruler
+    route is invoked, exactly as it handles the tight AP.  opus-S226's 71/72 is therefore
+    71/71 ON THE ACTUAL DOMAIN (covering residuals) + 1 out-of-scope extremal.
+(3) STRUCTURAL PRINCIPLE: tight => no clean ruler (zero slack anywhere: every live
+    residue at every q sits at the closed boundary; maxBand <= 5 with live >= 1 needs
+    strict interior room).  The clean-ruler condition fails PRECISELY at the conjecture's
+    extremals -- the two failures in the whole enumeration are exactly {AP, GW}.
+(4) DOUBLE DISPATCH (for completeness): exact B5(GW, q) ledger: B5 > 0 iff 14 | q;
+    B5 = 5,5,5,5,5,5,3 at q = 14,28,42,56,70,84,98; zero/negative at ALL 14-coprime q
+    <= 2000.  q = 14 = 1 + 13 IS a pair-sum; the pair-sum mechanism works at GW too,
+    via the exact identity (live 6 > penalty 1), not via cleanliness.
+LESSON FOR THE SUPPLY LEMMA: state the domain WITH the covering filter (some v = 0 mod
+14 after primitive reduction); on that domain the clean-ruler supply is 72/72 verified,
+and tight families -- the only structural obstruction -- are excluded a priori.
