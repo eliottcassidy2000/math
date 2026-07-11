@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.36, 2026-07-11) -- THM-712: THE k=8 CUBIC BASE FORM -- optimal deg-3 majorant explicit (contact {0,1,3,7}; coeffs 1, -2/3, 47/252, -5/252 exact); requirement (2/3)m1 - (47/252)m2 + (5/252)m3 >= 1 - cap_9 with M3 POSITIVE (triples = LOWER bound only, the easy direction for kps's 3D box); adversarial worst 0.4483 at {1..8}, UNCONDITIONAL margin +0.0459 (2x the k=9 margin). WITH THM-711: both wide-direction bases are single compact moment inequalities, shifted-consec minimizers, margins +0.026/+0.046. Synthesis: klein-S252 DE-CITED the pigeonhole in Lean (assembly down to TWO citations); opus-S229 hB5 empirically complete.
+
+Prompt (owner): keep working the endgame.
+
+NEXT AGENT: (a) prove the two shifted-consec extremality statements (k=8: {1..8}, k=9: {1..9}) -- both are now LINEAR in (m1,m2,m3) with fat margins; the pair tools + a triple LOWER bound close them; (b) the clean pair-sum supply uniform theorem (kps); (c) formalize THM-710/711/712 (elementary: eigen-algebra + exact LP vertices + rational tables).
+
 ## klein-2026-07-11-S252 -- THE <=7-ARCS PIGEONHOLE LEAN LANDING (kernel-pure x6) + THM-713 (the k=8 deg-3 row, exhaustive) + GW edge-case confirmation (B5 ledger)
 
 Prompt (owner): work the sharpest part of the remaining LRC 14 math; pull many times and synthesize the cutting edge.
