@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-11-S127 (cont.27) -- FINISHING: the single Lean obligation hB5 IS the seven-sector moment ladder at scale 1/14, and it COMPOSES with THM-701 into ONE proof (peel handles unbounded, B5 discharges bounded residual). Binding case = near-AP, floor B5=2, pair-sum ruler. (HYP-5995.)
+
+Prompt (owner): work on finishing it up, and any remaining LRC 14 work.
+
+WENT TO THE LEAN FINISH LINE to see what finishing requires. LRC14CompletionAudit: LRC(14) is fully formalized, kernel-sound, sorry-free, FOUNDATIONAL-AXIOMS-ONLY, modulo LRCUpTo13 (cited) + ONE obligation hB5: every residual covering family has some q with B5(v,q)>0, B5=S0-S1+S2-S3+S4-S5 (alternating factorial moments of the bandCount histogram; THM-671 B5<=liveCount; B5>0 => live multiplier => lonely).
+
+THE UNIFICATION (net-new): bandCount(v,q,p)=#{runners missing safe band [q/14,13q/14] at mult p} = the DISCRETE empty-count N at scale 1/14 over ruler q; B5 = the alternating-Bonferroni majorant of the live-multiplier count = EXACTLY THM-703/opus-S220's factorial-moment ladder (Phi=p0+p1/3 majorant), one resolution FINER (1/14 vs seven-sector 1/7). The Lean obligation and the seven-sector residue are the SAME MATHEMATICS at two scales.
+
+BINDING CASE + RULER (lrc14_B5_moment_ladder + _adversarial_floor): min over residual covering families of max_q B5 = 2, at the near-AP {1..12,26} @q=27=1+26 (a PAIR-SUM ruler -- confirms the audit's 'pair-sum ruler q'). Over 390 BOUNDED residuals floor=12 (general), 2 (very-near-AP binding); ALL clear B5>0. DEPTH: for the binding near-AP B_3=0 (depth-3 FAILS), B_4=B_5=liveCount (depth-4 exact) -- depth-5 works because surviving bandCounts concentrate on {0..4}.
+
+THE FINISHING INSIGHT -- THE TWO ROUTES COMPOSE: the seven-sector recursion (my THM-701) and the B5 certificate (the Lean obligation) are NOT alternatives -- they are COMPLEMENTARY HALVES of ONE proof. THM-701 PEELS far elements (unbounded direction); B5>0 discharges the BOUNDED residual (base case); both are the same moment ladder. HONEST: naive ruler q=M+1 discharges {1..k-1,M} only for bounded M -- for far M (120,200) B5 goes NEGATIVE (-108,-1620), which LOOKS like a counterexample but those families have a FAR element and are PEELED by THM-701, NOT in the bounded residual (verified: bounded residual max<=3*second has B5>0 floor 12). So NO counterexample; a-priori hB5 = [THM-701 peel to bounded] + [B5>0 on bounded near-AP binding via pair-sum ruler].
+
+NET: identified that the whole proof = ONE alternating-factorial-moment ladder climbed from both ends (far elements peeled off the top by THM-701, bounded near-AP certified at the bottom by B5). Directly advances the actual Lean finish line and unifies THM-701 + hB5 + THM-703/S220/S222/S223 + THM-671. FILES: lrc14_B5_moment_ladder_kps_S127.py/.out, lrc14_B5_adversarial_floor_kps_S127.py/.out; reflection two-routes-one-ladder-kps-S127; HYP-5995.
+
+NEXT: the a-priori B5>0 bound on the bounded near-AP binding case (via the pair-sum ruler) -- this + THM-701 peel closes hB5. For the hB5 owners (klein/monad per the audit) + opus (moment ladder).
+
 ## opus-2026-07-11-S224 -- THE FINISH MAP: the Freiman far-bound is DECORRELATION + a finite table, not an inverse theorem. LRC(14)-S3 reduced to one Fourier constant + two finite tables + Lean.
 
 Prompt (owner): finish it up, and any remaining LRC 14 work.

@@ -1,0 +1,22 @@
+ family                     bestB5  @q     liveCount@q   bandCount-hist@bestq (N -> #p)
+  AP {1..13}                      5    14          6       0:6 1:6 6:1
+  GW (Goddyn-Wong)               12    39         12       0:12 1:16 2:8 5:2
+  near-AP {1..12,26}              2    27          2       0:2 1:20 2:2 4:2
+  covering {1..11,13,26}          9    84         10       0:10 1:42 2:26 3:2 5:2 6:1
+  covering {1..11,13,36}          7    70          8       0:8 1:30 2:24 3:4 4:2 6:1
+  resid A                        16    84         16       0:16 1:30 2:30 3:4 5:3
+  resid B                        14   112         16       0:16 1:26 2:55 3:12 6:2
+  resid C                        26   238         28       0:28 1:77 2:80 3:46 4:4 6:2
+
+  TIGHTEST family (min best-B5): near-AP {1..12,26} with B5=2 @q=27
+  => all clear B5>0 ? YES
+
+  DEPTH LADDER for tightest (near-AP {1..12,26} @q=27):  partial Bonferroni B_d = sum_{i<=d}(-1)^i S_i
+     B_0 = 26
+     B_1 = -6
+     B_2 = 8
+     B_3 = 0
+     B_4 = 2  = liveCount (exact)
+     B_5 = 2  <- B5 (the Lean depth)
+     B_6 = 2  = liveCount (exact)
+     liveCount@q = 2 (the exact target; even-depth over-counts, odd-depth under-counts)
