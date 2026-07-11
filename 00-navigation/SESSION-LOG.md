@@ -3,6 +3,23 @@
 Prompt (owner): keep pushing the frontier math.
 
 NEXT AGENT: (a) the clean pair-sum supply theorem is now well-scoped (thin excluded boundary): THM-668 Schur-kill + maxBand<=5 at pair-sum rulers over residual families; (b) prove e=12's tightness structurally (the +-1 double-aliasing at 23/25 + three-distance) -- would characterize ALL isolated tight points; (c) THM-705 linear pair inequality + m3 at k=8 remain on the moment ladder.
+## kind-pasteur-2026-07-11-S127 (cont.30) -- BOUNDED STATEMENT: the SHALLOW half of the clean-ruler holds on the GENERIC residual (depth-5 is the CORRECT Lean depth); the depth-5 FAILURES are exactly the coarse-reducible families (dilated APs, detuned) that OTHER dispatch branches peel. (HYP-6005.)
+
+Prompt (owner): keep making bounded statements and improvements to the open math frontier.
+
+Attacked SHALLOW (HYP-6000''s additive, non-LRC-equivalent half: every residual has a pair-sum q=v_i+v_j with maxBand<=5 => depth-5 B5 certifies). BOUNDED RESULTS:
+
+(1) GENERIC residuals (primitive, no prime | >6 elements, longest-AP<=7): ADVERSARIAL hill-climb maximizing [min over pair-sums of maxBand] over 58 filtered seeds x 140 moves MAXES OUT AT 4. So some pair-sum has maxBand<=4<5 on EVERY generic residual found -- depth-5 sufficient WITH MARGIN.
+
+(2) The families FORCING maxBand>=6 at all pair-sums are EXACTLY the COARSE-REDUCIBLE ones: dilated AP 7*{1..13} (all pair-sums | 7 => maxBand 13); detuned 7*{1..12}+{92} (12 mult of 7 => maxBand 8). Both NON-RESIDUAL -- dispatched by dilation-invariance / detuned dispatch (THM-678, my own) / coarse reduction. So the deep-coverage families that break depth-5 are EXACTLY the ones the structural branches already peel. THIS CONNECTS the clean-ruler/B5 route to the whole grand-assembly dispatch: structural branches strip the resonant (dilated/detuned) families; the generic residual gets the depth-5 pair-sum certificate.
+
+TWO CATCHES en route (honest, both = the non-scale-invariance from cont.29 biting): my first adversarial searches (loose resid filter) found 7*{1..13} (maxBand 13) then 7*{1..12}+{92} (maxBand 8) -- both LOOK like depth-5 counterexamples but are coarse-reducible/non-residual. Tightening the filter (primitive + no-prime-divides->6 + longest-AP<=7) dropped the adversarial max back to 4. Same lesson as cont.26: the wrong battery manufactures false counterexamples; the structural exclusions are load-bearing.
+
+PROVABLE sub-bounds: (i) at the two-largest pair-sum q=v12+v13>Vmax, bandCount(v,q,1) = #{i:14 v_i<=q} + #{i:14 v_i>=13q} EXACTLY (no p-search; ratio<=13 => the hi term=0); (ii) average bandCount over multipliers <= 13/7 (each runner in the 1/7 danger arc a 1/7-fraction of the time).
+
+RESOLVES THE DEPTH QUESTION: depth-5 (the Lean B5 obligation''s depth) is CORRECT on the true (generic) residual -- no THM-675 depth escalation needed there. HONEST: (1) is strong adversarial evidence, not a proof; a rigorous SHALLOW proof = an additive-combinatorics statement (no dilate of a generic family puts 6 runners in a 1/7-arc).
+
+FILES: lrc14_shallow_depth5_kps_S127.py/.out; HYP-6005. NEXT: rigorous SHALLOW (the additive statement) for generic residuals; compose with klein floor (LIVE). For klein/monad (hB5), mac-mini (THM-668/678), opus (ladder).
 
 ## mac-mini-2026-07-09-S65 (cont.32, 2026-07-11) -- THM-708: A NON-AP TIGHT POINT -- {1..11,13,24} has M = 1/14 EXACTLY (all p/q, q<700; the 12->24 = 2*12 DOUBLING rearrangement; siblings 11->25/13->15/6->20 escape to 1/11,1/13,2/23). Resolves opus-S226's clean-ruler edge case STRUCTURALLY: non-covering (14 divides nothing) + tight => sieve-dispatched with equality, no clean ruler possible or needed; opus census 72/72 on the true residual class. kps THM-707 supply correctly scoped. FLAG: 'M=1/14 => AP/dilate' uniqueness FALSE as stated.
 

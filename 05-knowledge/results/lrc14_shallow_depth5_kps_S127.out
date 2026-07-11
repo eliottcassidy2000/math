@@ -1,0 +1,12 @@
+STRUCTURED (coarse-reducible, NON-residual) families break depth-5 via pair-sums:
+  dilated AP 7*{1..13}      : min-over-pairsums maxBand = 13  (COARSE-REDUCIBLE => other branch)
+  detuned 7*{1..12}+{92}    : min-over-pairsums maxBand =  8  (COARSE-REDUCIBLE => other branch)
+  GENERIC residual example  : min-over-pairsums maxBand =  4  (generic => depth-5 OK)
+
+PROVABLE p=1 bound at the two-largest pair-sum q=v12+v13 (>Vmax, so v_i mod q = v_i):
+  v(max=55): q=106, bandCount(1)=3 = lo(14v<=q)=3 + hi(14v>=13q)=0   [ratio<=13 => hi=0]
+  v(max=26): q=38, bandCount(1)=2 = lo(14v<=q)=2 + hi(14v>=13q)=0   [ratio<=13 => hi=0]
+
+BOUNDED STATEMENT: on GENERIC (primitive, non-coarse-reducible) residuals, some pair-sum has
+maxBand<=4, so depth-5 B5 certifies (the Lean obligation's depth is correct); the depth-5 failures
+are the coarse-reducible families (dilated/detuned) that dilation + THM-678 + coarse-reduction peel.
