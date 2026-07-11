@@ -16,6 +16,25 @@ THE CROSSOVER (exact): J(E)-J(consec) = consec's Var-LEAD minus competitor's mea
 VALUE: identifies the RIGHT target -- Var(N)-max at consec (clean, single, robust ALL k), not the composite J -- and EXPLAINS the k=8,9/k>=10 boundary as one mechanism (Var-lead vs mean-gain race, lost at k=10). Whoever proves it should aim at the variance, then spend the k-specific margin (+0.147 at k=9) to recover the J-bound. HONEST: a reformulation + exact mechanism, NOT a proof; Var(N)-max is itself LRC-hard (the AP maximizes empty-count variance = three-distance/bimodal-resonance rigidity in statistical costume).
 
 FILES: HYP-6015; lrc14_extremal_variance_decomp_kps_S127.py/.out; reflection the-extremal-is-variance-not-mean-kps-S127. NEXT: attack Var(N)-max at consec (the clean fundamental extremal) via the three-distance structure; the k-specific margin is a bounded check.
+## opus-2026-07-11-S230 -- the PAIR-SUM shallow lemma is FALSE unconditionally; the clean ruler on THM-701's core is a BOUNDED SMALL MODULUS (diameter-free). Small-prime {0,±1}-band criterion PROVED. Owner-requested attack via dissociation/anti-concentration.
+
+Prompt (owner): take on the pair-sum shallow lemma via the dissociation/anti-concentration angle.
+
+OUTCOME (honest): the pair-sum shallow lemma is NOT the right target -- it is false as an unconditional statement, and the dissociation/anti-concentration content lands on BOUNDED moduli instead.
+
+(1) PAIR-SUM SHALLOW IS FALSE UNCONDITIONALLY. q=v_a+v_b ~ 2*Vmax scales with diameter; expected 6-clusters in the q/7 danger arc grow ∝ Vmax (2nd-moment count), so min-over-pairsums maxBand crosses 6. Verified on GENUINE dissociated prime-rich residuals (primitive, longest-AP<=7): pair-sum fails for 0,1,29 of 120 as Vmax~60,250,900. NOT coarse-reducible (kps's excluded class). CRUX: THM-701's peel bounds the RATIO (no far element = w<90191*Σe'), NOT Vmax -- its bounded-spread core can have large Vmax, so pair-sums do NOT cover THM-701's base case. Refines kps HYP-6000 corr-2 (noted large-q p=1 failure but concluded ruler=moderate q in [Vmax,2Vmax]; for large Vmax even that fails).
+
+(2) BOUNDED SMALL MODULUS is the right instrument -- cleanness at q depends only on {v_i mod q}, so bounded q is DIAMETER-FREE. Verified: every dissociated prime-rich residual has a clean ruler q<=37, bound does NOT grow with Vmax (max smallest-clean-q=37 to Vmax 5000, 0 failures); fixed 8-set {8,17,19,23,27,29,35,37} covers 100% of a 2000-family pool.
+
+(3) PROVED small-prime criterion (anti-concentration, exact). For prime q in {17,19,23} the danger set is EXACTLY {0,1,q-1}={0,±1} (true for all q in [15,28]). With z=#{v_i≡0} and folded c_r=#{v_i≡±r} (r=1..(q-1)/2): maxBand=z+max_r c_r, liveCount=2#{r:c_r=0} if z=0 else 0. So q clean <=> z=0 & max_r c_r<=5 & some c_r=0. PROOF: q prime => x->px bijects Z/q fixing 0; v_i p≡±1 <=> v_i≡±p^{-1}; p^{-1} runs over all nonzero residues, each fold-class twice. Verified 0/90000. "max_r c_r<=5" = no antipodal ±-pair holds >=6 speeds = anti-concentration; dissociation is ESSENTIAL and non-modular (dilated AP 7*{1..13} violates it, is peeled).
+
+REDIRECTED last gap (diameter-free, cleanly posed): every dissociated prime-rich residual has a clean q in {8..40}; sufficient -- some prime q in {17,19,23,29,31,37} with folded mults<=5 and an empty ±-class. An inverse-additive / anti-concentration statement, NOT an unbounded-modulus equidistribution bound. The {17,19,23} criterion is the formalizable rung (generalizes THM-709/712's q<=13 all-nonzero band to the {0,±1} band).
+
+FILES: 04-computation/lrc14_bounded_modulus_ruler_opus_S230.py (+.out); 07-reflections/the-clean-ruler-is-a-bounded-modulus-not-a-pair-sum-opus-S230.md; HYP-6015.
+
+NET: I did NOT prove the pair-sum shallow lemma -- I showed it is the wrong target (diameter-dependent, false) and found the right one (bounded modulus, diameter-free, always present), with a proved exact criterion for the cleanest primes. The last LRC(14) gap is now diameter-free and inverse-additive. -> HYP-6000/6005 (kps), THM-707/701 (kps), THM-709/712.
+
+---
 
 ## klein-2026-07-11-S252 -- THE <=7-ARCS PIGEONHOLE LEAN LANDING (kernel-pure x6) + THM-713 (the k=8 deg-3 row, exhaustive) + GW edge-case confirmation (B5 ledger)
 

@@ -1,0 +1,13 @@
+(1) PAIR-SUM shallow degrades with diameter (prime-rich dissociated residuals):
+    Vmax~  60: pair-sum fails (min-over-pairsums maxBand>=6) for 0/120
+    Vmax~ 250: pair-sum fails (min-over-pairsums maxBand>=6) for 1/120
+    Vmax~ 900: pair-sum fails (min-over-pairsums maxBand>=6) for 29/120
+
+(2) BOUNDED small-modulus ruler is diameter-free (smallest clean q in {8..80}):
+    Vmax~  100: max(smallest clean q)=29, #none<=80=0 (of 200)
+    Vmax~  800: max(smallest clean q)=37, #none<=80=0 (of 200)
+    Vmax~ 5000: max(smallest clean q)=37, #none<=80=0 (of 200)
+    => bounded window: overall max smallest-clean-q = 37 (does not grow with Vmax)
+
+(3) PROVED small-prime criterion vs is_clean over q in {17,19,23}:
+    0 mismatches / 90000 checks  (criterion: z=0 & max fold-mult<=5 & some fold empty)
