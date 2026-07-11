@@ -3,6 +3,29 @@
 Prompt (owner): keep working the endgame, synthesize incoming frequently.
 
 NEXT AGENT: (a) prove the linear inequality m1/2 - m2/12 >= 1 - cap over bounded cores (2.6% slack at k=9; it is a PAIR-correlation statement -- Koksma THM-686C + additive-energy bricks + kps LEM-022 constants are the exact toolkit); (b) k=8 deg-3: the m3 bound via kps's 3D hyperbola box count + opus's exact-ladder coefficients; (c) confirm cont.28's queued Lean builds; (d) opus-704 P1-support sharpening composes into THM-702's budget -- unify when formalizing.
+## opus-2026-07-11-S221 -- attacked the JOINT Phi-consec-extremality (the single LRC(14)-S3 residue): a clean REFORMULATION (consec MAXIMIZES the coverage-variance (E[N]-5/2)^2+Var(N)) + exhaustive confirmation + the structure a proof must use + THE BIGGER PICTURE (what LRC(14) is).
+
+Prompt (owner): prove consec minimizes 4m1-m2 on bounded k=9,10 cores, attack the joint Phi-consec-extremality lemma, see the bigger picture of what we're approaching.
+
+NOT PROVED (it is the open residue the whole fleet converges on -- THM-534/530/657/703, HYP-2604/2607). Delivered a clean reformulation + structure + the synthesis.
+
+THE REFORMULATION (clean, new): 4m1-m2 = 5E[N]-E[N^2] = 25/4 - [(E[N]-5/2)^2 + Var(N)], so consec MINIMIZES 4m1-m2 <=> consec MAXIMIZES B := (E[N]-5/2)^2 + Var(N), the COVERAGE-VARIANCE functional. B rewards mean miss-count far from 5/2 AND high variance -- the AP maximizes both via BIMODAL RESONANCE (its circle-orbit AP covers PERFECTLY at x~p/7, clusters off-resonance: low mean + high variance). The AP's coherence (rank-1 relation lattice) IS the resonant bimodality.
+
+EXHAUSTIVE CONFIRMATION (lrc14_consec_extremality_opus_S221.py, k=9,10 diam<=12): consec is the exact argmin(4m1-m2) AND argmax(Phi); stability gap ~0.07; runners-up = consec with top element bumped by 1.
+
+STRUCTURE A PROOF MUST USE:
+- IRREDUCIBLY JOINT (kps, reconfirmed): runner-up {0..7,9} has BOTH smaller m1 (1.354 vs 1.381) AND smaller m2 (2.908 vs 3.089) -- neither moment alone extremal at consec; only 4m1-m2. No single-moment/greedy argument works.
+- GLOBAL not local (mac-mini): compression not Phi-monotone (113/308 violations k=5..7).
+- PAIR-CORRELATION not difference-multiset: m2 = sum_pairs P_same(a,b); P_same(a,b) (both runners in one sector) is NOT a function of b-a -- it depends on the full torus line slope b/a, a Koksma/three-distance object (|P_same-limit|<=C/max(a,b), the LEM-022/THM-686 pair-correlation). k=8 degree-3 = 3-point analog.
+- DILATION-INVARIANT: {0..8} and 2*{0..8} identical m1,m2 (THM-531); natural object = continuous torus AP (klein THM-599/686 section-integral frame).
+
+THE BIGGER PICTURE (what LRC(14) IS): strip the machinery and LRC asks -- can any config cover the circle more efficiently than the AP? The AP itself leaves a gap (is lonely), so LRC = "the AP is the WORST case," and since even the AP is lonely, everything is. The residue "consec is extremal for the seven-sector coverage functional" IS the finite embodiment of "the AP is the worst case." And it is the sharpest instance of the project's central principle -- COHERENCE IS EXTREMALITY: the AP minimizes mu (THM-530), maximizes E3/additive-energy (LEM-015), maximizes p0 (HYP-2604) and now Phi. One principle, many functionals. LRC(14) is its hardest, most finite instance. The four analytic threads (t>=3 cancellation -> superseded; Minkowski -> tail; missed-sector phase -> THM-704; entanglement -> recursion) ALL spiral into this single point, and the pair-correlation (my formalized LEM-022 t2 bound, born as the OffLine floor) turns out to BE the residue's m2.
+
+ROUTE: prove the AP maximizes coverage variance B; likely FREIMAN-shaped (near-extremal => near-AP stability + finite check; the parked BSG -> Freiman-3k-4 lead, opus-S181/HYP-2638). Degree-2 (k=9,10) = pure pair-correlation (LEM-022 lane); k=8 = 3-point.
+
+DELIVERED: reflection what-lrc14-is-the-ap-maximizes-coverage-variance-opus-S221.md; 04-computation/lrc14_consec_extremality_opus_S221.py (+out). -> THM-701/703/704/534/530, LEM-015/022, opus-S181, kps pair-correlation-hinge.
+
+---
 
 ## mac-mini-2026-07-09-S65 (cont.30, 2026-07-11) -- THM-703: THE EMPTY-MOMENT MAJORANT REDUCTION -- Phi <= 1 - (2/3)m1 + (1/6)m2 (proved); CLOSES k=9,10 core rows at true moments (consec 0.594<=0.604, 0.659<=0.725; 25/25 random); k=8 gaps +0.033 and needs m3 = kps's 3D triple box count. The last global lemma SPLITS: k>=9 -> pair-level moment inequalities (Koksma + energy bricks); k=8 -> the named triple instrument. Collision flag: opus-S219 reused THM-702 (mine landed first, both stand, renumber theirs).
 
