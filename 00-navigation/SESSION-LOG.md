@@ -1,3 +1,19 @@
+## klein-2026-07-11-S249 -- THE FIRST-WINDOW WITNESS (THM-697, HYP-5970): PROVED AND FORMALIZED, GREEN ON FIRST COMPILE -- w = 7j+6 puts the cluster phase at EXACTLY 6/7; the packed TOP-BLOCK supply gap CLOSED by a route simpler than the test points; the two witness families are COMPLEMENTARY and jointly cover every packed small part
+
+Prompt (owner): continue as you left off; pull frequently during builds; reroute as needed.
+
+THE REROUTE (as directed): S248 named the top-block supply as "one more session of the same machinery" -- re-deriving it showed the test-point machinery does NOT extend (top-blocks deny every q* in [8,13], and the digit game at modulus 14b hits the apex-coverage wall). The reroute found a SIMPLER route: THE FIRST WINDOW ITSELF. At t = (7j+6)/(7V): the top phase is frac(w/7) = 6/7 EXACTLY, so every cluster residue is 6V - e*w (one ring identity), strictly in-band iff 2ew < 11V -- ONE inequality per cluster speed; and the small speeds need only the no-wrap band, which holds throughout the OPEN first window W_P = (1/(14 pmin), 13/(14 pmax)) -- nondegenerate for EVERY P with pmax + 1 <= 13 pmin, i.e. ALL top-blocks. No test point, no missed class, no digit game.
+
+LRCFirstWindowWitness.lean (5 theorems kernel-pure, GREEN ON FIRST COMPILE): cluster_band (the 6/7-phase residue); firstWindow_strictlyLive (per-speed: no-wrap band OR the packed inequality); firstWindow_j_exists (the leftmost w = 6 mod 7 past the window edge -- ediv + mod-7 rounding, bracketed by 112 pmin, keeping e <= ~10 pmin); demoTopBlock_strictlyLive (the k = 8 TOP BLOCK {9..13} with the CONSECUTIVE APEX cluster at V = 10000 -- the program's extremal shape -- strictly live at (70000, 559)); demoTopBlock_supply (its certificate-supply data via S248's fattening bridge).
+
+THE COMPLEMENTARITY (the session's structural gift): the first window degenerates exactly at ratio-13 P's (pmin = 1, pmax = 13) -- and THOSE are never top-blocks, so they always admit a q* and the TEST-POINT route (THM-693/696) covers them. Conversely top-blocks deny q* but have enormous windows. THE TWO WITNESS FAMILIES JOINTLY COVER EVERY SMALL PART with packed clusters, and both feed the fattening bridge into mac-mini's THM527ACertificateSupply.
+
+SUPPLY REMAINDER after this session: [spread clusters at top-blocks, e > ~10 pmin -- the S239/S240-censused sliver, per-class decidable] u [non-taxonomy realization shapes -- THE SHAPE-COVERAGE AUDIT, still the critical open mapping] u [bounded V -- THM-686 windows/banks]. Other citations: the <=7-arcs pigeonhole; THM-661's interior.
+
+PULLS: start (opus Fourier Stage B, kps (2,2) lift -- no collisions), pre-wire (clean), close-out.
+
+FILES: LRCFirstWindowWitness.lean (+ root wire); THM-697 (canon); lrc14_first_window_witness_demo_klein_S249.out; HYP-5970 resolved; memory.
+
 ## opus-2026-07-11-S213 -- OFFLINE GATE: LEM-022 FOURIER COMPLETION STAGE B, foundational bricks LANDED (LRCFourierCompletionB.lean, kernel-pure, foundational-only, root-wired). Took over death-star's dormant Stage B (HYP-5890). B.1 orthogonality + B.2 band coefficient bound done; B.3 completion identity scoped as handoff.
 
 Prompt (owner): go work the OffLine <= f(E3) B5 gate, work the remaining pieces and angle toward the best possible formalization state.

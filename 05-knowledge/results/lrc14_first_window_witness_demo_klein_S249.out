@@ -1,0 +1,30 @@
+q = 70000, w = 559 (j = 79), alpha = w/q = 0.007986 vs window (0.007937, 0.071429)
+small speeds: q < 14pw < 13q:
+  p=  9: 70000 < 70434 < 910000: True
+  p= 10: 70000 < 78260 < 910000: True
+  p= 11: 70000 < 86086 < 910000: True
+  p= 12: 70000 < 93912 < 910000: True
+  p= 13: 70000 < 101738 < 910000: True
+cluster speeds: 2ew < 11V:
+  e=0: 2ew = 0 < 110000: True
+  e=1: 2ew = 1118 < 110000: True
+  e=2: 2ew = 2236 < 110000: True
+  e=3: 2ew = 3354 < 110000: True
+  e=4: 2ew = 4472 < 110000: True
+  e=5: 2ew = 5590 < 110000: True
+  e=6: 2ew = 6708 < 110000: True
+  e=7: 2ew = 7826 < 110000: True
+  v=     9: strictly in-band? True  (14r/q = 1.0062)
+  v=    10: strictly in-band? True  (14r/q = 1.1180)
+  v=    11: strictly in-band? True  (14r/q = 1.2298)
+  v=    12: strictly in-band? True  (14r/q = 1.3416)
+  v=    13: strictly in-band? True  (14r/q = 1.4534)
+  v=  9993: strictly in-band? True  (14r/q = 11.2174)
+  v=  9994: strictly in-band? True  (14r/q = 11.3292)
+  v=  9995: strictly in-band? True  (14r/q = 11.4410)
+  v=  9996: strictly in-band? True  (14r/q = 11.5528)
+  v=  9997: strictly in-band? True  (14r/q = 11.6646)
+  v=  9998: strictly in-band? True  (14r/q = 11.7764)
+  v=  9999: strictly in-band? True  (14r/q = 11.8882)
+  v= 10000: strictly in-band? True  (14r/q = 12.0000)
+ALL STRICTLY LIVE (TOP-BLOCK + consecutive apex!): True
