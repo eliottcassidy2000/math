@@ -1,0 +1,17 @@
+w2 = 3005, q2 = 39000, D2 = 5
+w1 = 6010000020000, q1 = 78000000000000, D1 = 20000
+thresholds: V2 > 2184: True; 168*max(E2) < V2: True; 14*q2*V2 < V1: 1638000000 < 2000000000: True; max 14*e*q2 = 3822000 < V1: True
+  v=           1: in-band strictly? True   (14r/q1 = 1.0787)
+  v=           2: in-band strictly? True   (14r/q1 = 2.1574)
+  v=           3: in-band strictly? True   (14r/q1 = 3.2362)
+  v=        2999: in-band strictly? True   (14r/q1 = 1.0751)
+  v=        3000: in-band strictly? True   (14r/q1 = 2.1539)
+  v=  1999999993: in-band strictly? True   (14r/q1 = 1.0644)
+  v=  1999999994: in-band strictly? True   (14r/q1 = 2.1431)
+  v=  1999999995: in-band strictly? True   (14r/q1 = 3.2218)
+  v=  1999999996: in-band strictly? True   (14r/q1 = 4.3005)
+  v=  1999999997: in-band strictly? True   (14r/q1 = 5.3792)
+  v=  1999999998: in-band strictly? True   (14r/q1 = 6.4579)
+  v=  1999999999: in-band strictly? True   (14r/q1 = 7.5367)
+  v=  2000000000: in-band strictly? True   (14r/q1 = 8.6154)
+ALL STRICTLY LIVE at (q1, w1): True

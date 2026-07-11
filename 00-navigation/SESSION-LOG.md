@@ -1,3 +1,15 @@
+## klein-2026-07-10-S245 -- THE MULTI-SCALE WITNESS (THM-694, HYP-5950): PROVED AND FORMALIZED, GREEN ON FIRST COMPILE -- band_lift (Delta-blind: higher levels cannot disturb lower ones) + cluster_join + miss_at_next => threeScale_strictlyLive with the explicit MIXED-RADIX multiplier; demo (78*10^12, 6010000020000) through the theorem; general r = the same two lemmas per scale
+
+Prompt (owner): run the multi-scale witness composition.
+
+THE COMPOSITIONAL HEART: **band_lift** -- a speed strictly in-band at (q, a) with 0 < p <= B stays strictly in-band at (qV, aV + Delta) for ANY Delta in [0, q), once 14Bq < V. Integrality supplies the margins for free (q < 14r => q+1 <= 14r; 14r < 13q => 14r <= 13q-1), and THE LIFT NEVER INSPECTS Delta -- each new scale's tuning digit is invisible to every speed already placed. That one property makes the recursion trivial: place P at the base test point (S243/S244), lift everything one level while joining each new cluster via its coarse missed class (miss_at_next: c_i mod q* always exists since clusters have <= 12 co-offsets; it lifts to a band-interior missed residue at the composite modulus), repeat.
+
+LRCMultiScaleWitness.lean (5 theorems, all kernel-pure [propext, Classical.choice, Quot.sound], root-wired, project green, GREEN ON FIRST COMPILE): band_lift; cluster_join (band-interior missed residue => V - e in-band at (qV, aV + (C - aV) % q), 14eq < V); miss_at_next ((c1 V2 - e w2) % (q* V2) = sigma_e V2 - e Delta2, in-band once 168e < V2); threeScale_strictlyLive (P u C2 u C1 strictly live at q* V2 V1 with w1 = w2 V1 + (c1 V2 - w2 V1) % (q* V2), w2 = a V2 + (c2 - a V2) % q*; thresholds V2 > 2184, 168f < V2, 168e < V2, 14e q* V2 < V1, 14 q* V2^2 < V1 -- QUADRATIC scale separation, the constructive price for the continuum's V1/V2 -> inf); threeScale_strictWitness (kps composition); demoThreeScale_strictWitness (P = {1,2,3}, E2 = {0,1} @ V2 = 3000, E1 = {0..7} @ V1 = 2*10^9, (q*, a, c2, c1) = (13, 1, 2, 8): witness (q1, w1) = (78000000000000, 6010000020000) THROUGH the theorem, decide-checked hypotheses; Python cross-check all 13 strictly in-band).
+
+GENERAL r: the same two lemmas applied once per scale, innermost out -- the witness multiplier is the MIXED-RADIX number whose digits are the per-scale tunings. With THM-693 (two-scale base), THM-686 + banks (bounded V), and kps's strict chain: THE TWO-/MULTI-SCALE WITNESS PROGRAM IS FORMALIZED END TO END -- every arrow kernel-pure, no limits, no transfer, no measure theory, no census.
+
+FILES: LRCMultiScaleWitness.lean (+ root wire); THM-694 (canon); lrc14_multiscale_witness_demo_klein_S245.out; HYP-5950 resolved; memory.
+
 ## klein-2026-07-10-S244 -- THE FINITE-V TWO-SCALE WITNESS (THM-693, HYP-5945): PROVED AND FORMALIZED IN ONE SESSION, GREEN ON FIRST COMPILE -- the explicit multiplier w = aV + (c - aV) % q* is strictly live at modulus q*V for every large-V two-scale family: the test-point program made CONSTRUCTIVE (no limits, no transfer, no measure theory); demo (130000, 10001)
 
 Prompt (owner): run the finite-V two-scale witness composition.
