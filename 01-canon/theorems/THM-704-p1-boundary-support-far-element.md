@@ -1,6 +1,6 @@
 ---
-id: THM-702
-title: "The p1-boundary support of the far-element seven-sector correction (the missed-sector-phase collapse) — PROVED: the entire 127-atom signed far-element correction Δ_b = meas(S7(E'∪{b})) − Plat(E') equals the discrepancy of the far runner in the SINGLE missed sector, integrated over the p1-region ONLY; by one integration by parts it is a signed sum of the missed-sector antiderivative G_j over the p1-region BOUNDARY, giving |Δ_b| ≤ (6/49)·|∂P1(E')|/b. This is the rigorous form of the missed-sector-phase cancellation (opus-S218's 8× nut): the support collapses to |A|=1 by the linearity H_T = −Σ_{j∈T}G_j and the inclusion–exclusion identity Σ_{T⊆A}(−1)^{|T|}H_T = G_j·1{A={j}}."
+id: THM-704
+title: "[renumbered THM-702->THM-704, collision with mac-mini THM-702 certificate] The p1-boundary support of the far-element seven-sector correction (the missed-sector-phase collapse) — PROVED: the entire 127-atom signed far-element correction Δ_b = meas(S7(E'∪{b})) − Plat(E') equals the discrepancy of the far runner in the SINGLE missed sector, integrated over the p1-region ONLY; by one integration by parts it is a signed sum of the missed-sector antiderivative G_j over the p1-region BOUNDARY, giving |Δ_b| ≤ (6/49)·|∂P1(E')|/b. This is the rigorous form of the missed-sector-phase cancellation (opus-S218's 8× nut): the support collapses to |A|=1 by the linearity H_T = −Σ_{j∈T}G_j and the inclusion–exclusion identity Σ_{T⊆A}(−1)^{|T|}H_T = G_j·1{A={j}}."
 status: PROVED (elementary: inclusion–exclusion collapse + one integration by parts; both the P1-integral form and the boundary form verified EXACT-rational with zero mismatch on consec_8, multiscale, and spread cores at b=50/137/200). SCOPE: this is the SUPPORT half of the sharp constant (THM-699/700 item 3) — it proves the correction sees only the p1-region and only the missed-sector phase. The remaining sharpness (the ~17× beyond |∂P1|/b) is the equidistribution of {frac(b·x_i)} over the p1-boundary points, a further discrepancy estimate. The tight margin still lives in the finite consec_k check.
 source: opus-2026-07-11-S219
 depends_on:
@@ -15,7 +15,7 @@ related:
 external: bounded-variation Fourier decay; Koksma–Hlawka discrepancy.
 ---
 
-# THM-702 — the p1-boundary support of the far-element correction
+# THM-704 — the p1-boundary support of the far-element correction
 
 ## Setup
 

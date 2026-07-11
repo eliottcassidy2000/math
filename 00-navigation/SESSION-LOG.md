@@ -22,6 +22,25 @@ REMAINING (both agree): the JOINT Phi-consec-extremality on bounded cores -- the
 FILES: results/lrc14_finite_certificate_kps_S127.md (both tables + structure), 04-computation/lrc14_finite_certificate_kps_S127.py/.out, reflection the-certificate-that-doesnt-factor-kps-S127.md, THM-701 scope updated (points to THM-702, records non-factoring).
 
 NEXT: attack the JOINT Phi-consec-extremality (the single remaining lemma) -- p0-extremality is THM-534; the new content is that the (1/3)p1 perturbation is stable (lambda<lambda*). @mac-mini @klein own the seven-sector residual.
+## opus-2026-07-11-S220 -- the RESIDUE IS A DEGREE-GRADED MOMENT LADDER (sharpening mac-mini THM-703) + honest equidistribution status + THM-702->THM-704 collision fix.
+
+Prompt (owner): prove the p1-boundary equidistribution next session, keep working the sharpest remaining LRC 14 math.
+
+(1) THE EQUIDISTRIBUTION IS SUPERSEDED (honest): kps THM-701 (cont.23) closed the wide-spread recursion via Phi=p0+(1/3)p1 + an ABSOLUTE increment bound Phi(E)-Phi(E')=2(p1+p2)/21 <= 2/21=0.0952 < cap-growth 0.11 (uses only p1+p2<=1). This BYPASSES the sharp p1-equidistribution -- needs only THM-700's O(1/w), not the sharp constant. My THM-704 (renamed from THM-702, collision with mac-mini's THM-702 certificate) sharpens O(1/w)'s support to |dP1|, lowering the far-element THRESHOLD (shrinks the finite check) but off the critical path. And the equidistribution is provably NOT a decaying bound on the bounded-ratio residue (no scale separation) -- it cannot close the residue; right target one step ago, not now.
+
+(2) THE SHARP FINDING (worked the sharpest remaining math): after kps THM-701, the whole wide direction = ONE lemma, Phi(F)<=cap_{|F|+1} on bounded cores, consec the extremizer. mac-mini THM-703 majorizes Phi=E[g(N)]<=E[q(N)], DEGREE-2 q>=g => Phi<=1-(2/3)m1+(1/6)m2 (two-moment / pair-correlation; m1=empty-mean, m2=empty-pair). EXACT computation (lrc14_two_moment_residue_opus_S220.py): the min moment-majorant of Phi at consec, by degree --
+  consec_8 (k=8): deg-2 = 0.4964 > cap_9=0.4943 (FAIL); deg-3 = 0.4272 (OK).
+  consec_9 (k=9): deg-2 = 0.5668 <= cap_10=0.6044 (OK).
+  consec_10:      deg-2 = 0.6307 <= cap_11=1 (OK).
+=> the DEGREE-2 (pair-correlation) majorant is INSUFFICIENT at the binding k=8 (fails by 0.002 -- the known tight row); k=8 needs DEGREE-3 (3-point correlation). consec is the extremizer (4m1-m2=E[N(5-N)] minimal at consec: consec_9 2.436 < near-AP 2.506 < gap 2.893).
+
+THE RESIDUE = a DEGREE-GRADED MOMENT LADDER: k=8 degree-3 (m1,m2,m3), k=9,10 degree-2 (m1,m2=pair-correlation). Mirrors THM-534's dual ladder (deg 4/3/2 for p0) shifted down by one for Phi (deg 3/2/2). Moments m_j = j!*sum_{|A|=j} meas{avoid A} = j-fold sector-avoidance correlations = THM-684's A_t(U) family; m2 = LEM-022 t2 object through the 1/7-arc.
+
+CORRECTS/SHARPENS mac-mini THM-703 (the two-moment reduction does NOT close the binding k=8). Pins the residue to a FINITE low-degree (<=3) moment inequality at consec on bounded cores -- the cleanest statement of the whole wide-direction residue. OPEN (the whole game): prove consec maximizes the signed degree-<=3 moment functional over bounded cores (mac-mini: GLOBAL, local-move refuted). The degree-2 (k=9,10) piece = pure pair-correlation extremality = my LEM-022 lane; degree-3 (k=8) = 3-point analog.
+
+DELIVERED: reflection the-residue-is-a-degree-graded-moment-ladder-opus-S220.md; 04-computation/lrc14_two_moment_residue_opus_S220.py (+out); THM-704 renumber (was THM-702). NEXT: the degree-2 pair-correlation extremality (consec minimizes 4m1-m2 on bounded k=9,10 cores) via pair-avoidance; then degree-3 for k=8. -> THM-701(kps)/703(mac-mini)/704(opus)/534, LEM-022, kps pair-correlation-hinge.
+
+---
 
 ## mac-mini-2026-07-09-S65 (cont.29, 2026-07-11) -- THM-702: THE EXPLICIT FINITE CERTIFICATE for the wide-spread recursion (kps THM-701 + my THM-699 composed): cap-growth table EXACT (worst slack 179/12012), far-element threshold EXPLICIT (w >= 90191 Sum e', per-step self-budgeting), core margins exact (+0.086/+0.114/+0.158). CEDED THM-700 to kps (wire priority). The wide-spread direction of LRC(14)-S3 is now proved end to end with explicit constants MOD ONE LEMMA: Phi-consec-extremality on bounded cores (= the THM-534/530 extremal, the program's single residue). INDEXING SUBTLETY caught in-session: the induction compares Phi(F) vs cap_(|F|+1); comparing at cap_|F| falsely fails at k=8.
 
