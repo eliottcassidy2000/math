@@ -13,6 +13,22 @@ THE FINISHING INSIGHT -- THE TWO ROUTES COMPOSE: the seven-sector recursion (my 
 NET: identified that the whole proof = ONE alternating-factorial-moment ladder climbed from both ends (far elements peeled off the top by THM-701, bounded near-AP certified at the bottom by B5). Directly advances the actual Lean finish line and unifies THM-701 + hB5 + THM-703/S220/S222/S223 + THM-671. FILES: lrc14_B5_moment_ladder_kps_S127.py/.out, lrc14_B5_adversarial_floor_kps_S127.py/.out; reflection two-routes-one-ladder-kps-S127; HYP-5995.
 
 NEXT: the a-priori B5>0 bound on the bounded near-AP binding case (via the pair-sum ruler) -- this + THM-701 peel closes hB5. For the hB5 owners (klein/monad per the audit) + opus (moment ladder).
+## opus-2026-07-11-S225 -- THE DECORRELATION CONSTANT IS A MIRAGE (correction to S224). The coverage deviation L_iid-L is the NON-TRUNCATABLE alternating relation-lattice series (THM-685B/S216), NOT a pair-correlation bound. The rigorous finish BYPASSES the series (census + transfer), not bounds it.
+
+Prompt (owner): work the rigorous decorrelation constant.
+
+WORKED IT -> REFUTED THE PREMISE. Computed the support-truncated coverage functional exactly (inclusion-exclusion over runner subsets, each |S|-body correlation exact-rational). For consec (L_exact=5.199, L_iid=8.456):
+  truncate support<=: 2      3      4      6      8(exact)
+  L:                  7.911  5.828  6.180  5.315  5.199
+ALTERNATING, NON-MONOTONE. Pair-order (support-2) captures only 0.545 of the true deviation 3.257 (~1/6); support-3 overshoots, support-4 corrects up, etc. This IS THM-685(B)'s order-one/alternating/NON-TRUNCATABLE series (opus-S216): the coverage deviation L_iid-L = the relation-lattice layer sum (support-2 = the E2 "order-2 shadow"; support>=3 = the higher layers).
+
+CONSEQUENCE: L>=L_iid-C*E2vis holds EMPIRICALLY (C~0.016) but C is NOT derivable from pair-correlation -- the deviation is not pair-order, it is the full non-truncatable series whose absolute envelope diverges (the whole S211-S220 hard object). So the far-bound is NOT the pair-correlation decorrelation I claimed in S224. I RETRACT that.
+
+HONEST FINISH (bypass the series, don't sum it -- the lesson of the whole arc): (1) near-AP low-excess = Freiman 3k-4 EXACT finite table (HYP-2638, verified k=8,9,10) -- no series; (2) far large-diameter = peel (THM-701) / two-scale EXACT measure (THM-687/692) -- no series; (3) bounded remainder = exact census (mac-mini/klein) -- no series; (4) k=8 degree-3 exact + Lean + Freiman 3k-4 citation. THERE IS NO ANALYTIC FAR-BOUND TO PROVE -- every piece is exact finite computation or the transfer (THM-685A). The energy/Fourier picture (S221-224) is the correct HEURISTIC skeleton + the right way to ORGANIZE the census, but the rigor lives in exact enumeration + transfer. Same lesson as S217 (Minkowski = tail, not crux): non-truncatable => only the exact measure/finite enumeration is rigorous.
+
+NET: the finish is FINITE + CITED, not one more Fourier estimate. Remaining: extend exact tables (exc<=k-2; k=8 deg-3), cite Freiman 3k-4, Lean formalization. DELIVERED: reflection the-decorrelation-constant-is-a-mirage-the-deviation-is-non-truncatable-opus-S225.md (corrects S224). -> THM-685/701/687/692, HYP-2638, opus-S216/S217/S224.
+
+---
 
 ## opus-2026-07-11-S224 -- THE FINISH MAP: the Freiman far-bound is DECORRELATION + a finite table, not an inverse theorem. LRC(14)-S3 reduced to one Fourier constant + two finite tables + Lean.
 
