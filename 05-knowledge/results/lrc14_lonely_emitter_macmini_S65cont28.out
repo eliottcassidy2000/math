@@ -1,0 +1,6 @@
+  deepWell: interval [187/2548, 191/2548] (len 1/637), q = 638, js = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13]
+  legDemoFam: interval [50071659/699860000, 50088318/699860000] (len 16659/699860000), q = 42011, js = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 715, 715, 715]
+  multiScale: interval [6274592/87570000, 6277921/87570000] (len 3329/87570000), q = 26306, js = [0, 0, 0, 0, 0, 3, 3, 3, 358, 358, 358, 358, 358]
+  coveringShift: interval [9/196, 11/196] (len 1/98), q = 99, js = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  allOdd: interval [173/350, 177/350] (len 2/175), q = 88, js = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+wrote /Users/e/Documents/GitHub/math/04-computation/lean/TournamentH7/TournamentH7/LRCLonelyInstances.lean: 5 unconditional instances

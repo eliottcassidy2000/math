@@ -44,23 +44,27 @@ def emit_family(S, cap):
     L = ", ".join(f"({rl(a)}, {rl(b)})" for a, b in comps)
     name = "safe_s" + str(len(S)) + "_" + "_".join(str(p) for p in S)
     Plist = "[" + ",".join(str(p) for p in S) + "]"
-    # hcert bullets: per component, per p
-    qblocks = []
-    for a, b in comps:
+    # SHALLOW EMISSION (cont.28, Windows native-stack fix): one tiny helper lemma
+    # per component; the main theorem's hcert is a flat fin_cases citing helpers.
+    helpers = []
+    for k, (a, b) in enumerate(comps):
         pbullets = "\n".join(
-            f"        · exact ⟨{safe_j(p, a, b)}, by norm_num, by norm_num⟩" for p in S)
-        qblocks.append(f"""      · intro p hp
-        fin_cases hp
-{pbullets}""")
-    qcases = "\n".join(qblocks)
-    return f"""theorem {name} :
+            f"  · exact ⟨{safe_j(p, a, b)}, by norm_num, by norm_num⟩" for p in S)
+        helpers.append(f"""private lemma {name}_c{k} : ∀ p ∈ ({Plist} : List ℤ), ∃ j : ℤ,
+    (j : ℝ) + 1/14 ≤ (p : ℝ) * {rl(a)} ∧ (p : ℝ) * {rl(b)} ≤ (j : ℝ) + 13/14 := by
+  intro p hp
+  fin_cases hp
+{pbullets}
+""")
+    qbullets = "\n".join(f"      · exact {name}_c{k}" for k in range(len(comps)))
+    main = f"""theorem {name} :
     ((({cap.numerator} : ℝ)/{cap.denominator})) ≤ (slowμ (safeSet ({Plist} : List ℤ))).toReal := by
   have h := measGP_ge_of_sorted_bands ({Plist} : List ℤ) [{L}]
     (by decide)
     (by
       intro q hq
       fin_cases hq
-{qcases})
+{qbullets})
     (by intro q hq; fin_cases hq <;> norm_num)
     (by norm_num [List.pairwise_cons])
   have hsum : (([{L}] : List (ℝ × ℝ)).map (fun q => q.2 - q.1)).sum
@@ -70,6 +74,7 @@ def emit_family(S, cap):
   rw [hsum] at h
   linarith
 """
+    return "\n".join(helpers) + "\n" + main
 
 def main():
     size = int(sys.argv[1])
