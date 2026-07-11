@@ -1,0 +1,23 @@
+(i) REGRESSION vs S237's b = 2 evaluator (ray 1/2, c = 0):
+    general evaluator (a,b,c) = (1,2,0): mu_inf = 49379/470400 = 0.104972
+    S237 2-cover value: 49379/470400 = 0.104972 -> match: True
+
+(ii) NEW RAYS vs exact finite-V sweeps:
+    ray (a,b,c) = (2,3,0): mu_inf = 0.094640
+      V_top=  600 (V_mid=400): mu = 0.093320  err = -0.001320  |err|*V = 0.79
+      V_top= 1200 (V_mid=800): mu = 0.094962  err = +0.000322  |err|*V = 0.39
+      V_top= 2400 (V_mid=1600): mu = 0.094822  err = +0.000182  |err|*V = 0.44
+    ray (a,b,c) = (1,3,0): mu_inf = 0.100093
+      V_top=  600 (V_mid=200): mu = 0.099542  err = -0.000551  |err|*V = 0.33
+      V_top= 1200 (V_mid=400): mu = 0.100187  err = +0.000094  |err|*V = 0.11
+      V_top= 2400 (V_mid=800): mu = 0.100486  err = +0.000393  |err|*V = 0.94
+    ray (a,b,c) = (3,4,1): mu_inf = 0.093057
+      V_top=  603 (V_mid=452): mu = 0.094283  err = +0.001226  |err|*V = 0.74
+      V_top= 1203 (V_mid=902): mu = 0.092384  err = -0.000673  |err|*V = 0.81
+      V_top= 2403 (V_mid=1802): mu = 0.093287  err = +0.000230  |err|*V = 0.55
+
+(iii) merged floor m_joint >= 1 - (k_top + k_mid)/7 spot checks:
+    min m_joint over 60 random alpha = 0.077976 >= floor -0.142857: True
+
+(iv) ray-class positivity census (mu_inf > 0):
+    36 ray classes evaluated: zeros = 0; all positive: True

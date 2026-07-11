@@ -97,3 +97,18 @@ verified positive (THM-687(D)).
 `04-computation/lrc14_multiscale_middle_speeds_klein_S237.py` (+ `.out`):
 the product evaluator, the ratio study, the b = 2 cover evaluator and its
 convergence, the three-scale case, floor checks.
+
+## The general-(a,b) evaluator (S246)
+
+`lrc14_general_ray_evaluator_klein_S246.py`: the exact limit measure for ANY
+ray a/b (gcd = 1, shift c) — the joint fiber (β, s′) ∈ [0,1) × Z_b with the
+mid-phase φ = (s′ + aβ)/b − (c/b)α; per (α, s′) the mid-cluster bad set is
+aβ ∈ (c + bf)α − s′ ± b/14 (mod b), clipped to [0, a); m_joint = (1/b)Σ_s′
+meas(safe β); μ∞ = ∫_{G_P} m_joint by piecewise-linear trapezoid (endpoint
+rates e and (c+bf)/a). VERIFIED: exact regression on the b = 2 special case
+(49379/470400, equality); new rays (2,3,0), (1,3,0), (3,4,1) against exact
+finite-V sweeps, |err|·V ≤ 0.94 (the C/V rate); the merged floor; a 36-class
+ray positivity census (all μ∞ > 0, including top-block P's). The taxonomy's
+"stated, implementation mechanical" item is now implemented. Named follow-up:
+the CONSTRUCTIVE ray witness (the mixed-radix machinery of THM-694 with one
+more digit at modulus q*·b·V — same two lemmas).

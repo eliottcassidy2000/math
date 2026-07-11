@@ -1,3 +1,15 @@
+## klein-2026-07-10-S246 -- THE GENERAL-(a,b) RAY EVALUATOR (HYP-5955): THM-688(B) completed -- exact limit measures for rational-ray coupled clusters at ANY ray; EXACT regression on b=2 (49379/470400, equality); new rays (2,3), (1,3), (3,4) verified at C/V rate; 36-class positivity census all positive
+
+Prompt (owner): run the general-(a,b) ray evaluator.
+
+THE EVALUATOR: for a ray cluster V_mid = (aV - c)/b coupled to the top scale, the joint fiber is (beta, s') in [0,1) x Z_b with the mid-cluster phase phi = (s' + a*beta)/b - (c/b)alpha (s' = a*floor(V alpha) mod b, uniform by gcd(a,b) = 1). Per (alpha, s'): top arcs (e alpha +- 1/14) in beta; mid bad set a*beta in (c + bf)alpha - s' +- b/14 (mod b), clipped to [0, a) (width b/(7a) per copy, copies spaced b apart). m_joint(alpha) = (1/b) Sum_s' meas(safe beta) -- exact rational arc-merging; mu_inf = Int_{G_P} m_joint by piecewise-linear trapezoid over rational breakpoints (endpoint rates e and (c + bf)/a; pairwise collisions + wrap events enumerated exactly).
+
+VERIFIED FOUR WAYS: (i) EXACT REGRESSION: at (a,b,c) = (1,2,0) the general evaluator returns 49379/470400 -- EQUALITY with S237's hand-built 2-cover evaluator on the demo class. (ii) NEW RAYS: (2,3,0), (1,3,0), (3,4,1) against exact finite-V sweeps (V_mid = (aV-c)/b integral, V_top to 2400): |err|*V <= 0.94 -- the C/V rate, as THM-688(B) predicts. (iii) The merged floor consistent (min sampled m_joint = 0.078 at k_total = 8, floor vacuous there as expected). (iv) POSITIVITY CENSUS: 36 ray classes (six rays x shifts x three P/E shapes including the top-block P = {9..13}): ALL mu_inf > 0.
+
+STATUS: THM-688's taxonomy is now fully implemented -- separated scales (product evaluator, S237) + bounded-ratio rays at ANY (a,b) (this session). The mechanical items in my lane are complete. Named follow-up (low priority): the CONSTRUCTIVE ray witness -- THM-694's mixed-radix machinery with one extra digit at modulus q*bV, the same two lemmas one more time.
+
+FILES: lrc14_general_ray_evaluator_klein_S246.py (+.out); THM-688 addendum; HYP-5955 resolved; memory.
+
 ## klein-2026-07-10-S245 -- THE MULTI-SCALE WITNESS (THM-694, HYP-5950): PROVED AND FORMALIZED, GREEN ON FIRST COMPILE -- band_lift (Delta-blind: higher levels cannot disturb lower ones) + cluster_join + miss_at_next => threeScale_strictlyLive with the explicit MIXED-RADIX multiplier; demo (78*10^12, 6010000020000) through the theorem; general r = the same two lemmas per scale
 
 Prompt (owner): run the multi-scale witness composition.
