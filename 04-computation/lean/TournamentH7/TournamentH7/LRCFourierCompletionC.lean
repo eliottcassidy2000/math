@@ -276,5 +276,53 @@ theorem completion_final {q : ℕ} [NeZero q] (B : Finset ℕ) (hB : B ⊆ Finse
         mul_le_mul_of_nonneg_left hkps (by positivity)
     _ = 5 * (q : ℝ) * ((Nat.log 2 q : ℝ) + 1) ^ 2 / P := by field_simp
 
+open LonelyRunner.HyperbolaBox in
+/-- **The band bridge.**  For the interval band `Icc lo hi`, `B̂(j)` is exactly B.2's interval exponential
+sum (via `sum_Ico_eq_sum_range` reindex and `e_q` periodicity), so `‖B̂(j)‖ ≤ q/(2·cdist j)` for `j ≢ 0`
+(`cdist_neg` reconciles the `e_q(−jr)` sign). -/
+theorem norm_bandDFT_Icc_le (q : ℕ) (hq : 0 < q) (lo hi : ℕ) (j : ℤ) (hj : ((j : ℤ) : ZMod q) ≠ 0) :
+    ‖bandDFT q (Finset.Icc lo hi) j‖ ≤ (q : ℝ) / (2 * (cdist ((j : ℤ) : ZMod q) : ℝ)) := by
+  haveI : NeZero q := ⟨hq.ne'⟩
+  have hnj : (((-j : ℤ)) : ZMod q) ≠ 0 := by rw [Int.cast_neg]; exact neg_ne_zero.mpr hj
+  have hsum : bandDFT q (Finset.Icc lo hi) j
+      = ∑ r ∈ Finset.range (hi + 1 - lo),
+          Complex.exp ((2 * π * (((-j : ℤ) : ℝ) * ((lo : ℝ) + r) / q) : ℝ) * Complex.I) := by
+    rw [bandDFT,
+      show Finset.Icc lo hi = Finset.Ico lo (hi + 1) from by
+        ext x; simp only [Finset.mem_Icc, Finset.mem_Ico]; omega,
+      Finset.sum_Ico_eq_sum_range]
+    refine Finset.sum_congr rfl (fun i _ => ?_)
+    rw [eInt]; congr 1; push_cast; ring
+  rw [hsum]
+  calc ‖∑ r ∈ Finset.range (hi + 1 - lo),
+          Complex.exp ((2 * π * (((-j : ℤ) : ℝ) * ((lo : ℝ) + r) / q) : ℝ) * Complex.I)‖
+      ≤ (q : ℝ) / (2 * (cdist (((-j : ℤ)) : ZMod q) : ℝ)) := norm_bandCoeff_le q hq (-j) lo _ hnj
+    _ = (q : ℝ) / (2 * (cdist ((j : ℤ) : ZMod q) : ℝ)) := by rw [Int.cast_neg, cdist_neg]
+
+open LonelyRunner.HyperbolaBox in
+/-- **LEM-022, the t2 hyperbola bound — for the actual band, unconditional.**  For the interval band
+`B = Icc lo hi ⊆ [0,q)`, a unit twist `w`, and the ratio-lattice floor `P`, the multiplicative
+pair-correlation obeys `‖C_w − b²/q‖ ≤ 5q(log₂q+1)²/P` — the whole Fourier-completion node of the OffLine
+gate (THM-680), kernel-pure: the completion identity + kps's aggregation + opus's B.2, composed. -/
+theorem completion_band {q : ℕ} [NeZero q] (lo hi : ℕ) (hhi : hi < q)
+    (w : ℕ) (hw : IsUnit ((w : ZMod q)))
+    (P : ℕ) (hP : 0 < P)
+    (hPmin : ∀ h : ZMod q, h ≠ 0 → P ≤ cdist h * cdist ((w : ZMod q) * h)) :
+    ‖(corrCount q (Finset.Icc lo hi) w : ℂ) - ((Finset.Icc lo hi).card : ℂ) ^ 2 / q‖
+      ≤ 5 * (q : ℝ) * ((Nat.log 2 q : ℝ) + 1) ^ 2 / P := by
+  have hq : 0 < q := Nat.pos_of_ne_zero (NeZero.ne q)
+  have hsub : Finset.Icc lo hi ⊆ Finset.range q := by
+    intro r hr; rw [Finset.mem_Icc] at hr; rw [Finset.mem_range]; omega
+  refine completion_final (Finset.Icc lo hi) hsub w hw P hP hPmin ?_
+  intro h hh
+  have hval : (((h.val : ℤ) : ZMod q)) = h := by
+    rw [Int.cast_natCast, ZMod.natCast_zmod_val]
+  have hb := norm_bandDFT_Icc_le q hq lo hi (h.val : ℤ) (by rw [hval]; exact hh)
+  rwa [hval] at hb
+
+end FourierCompletion
+end LonelyRunner
+
+
 
 

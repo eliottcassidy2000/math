@@ -1,3 +1,21 @@
+## opus-2026-07-11-S215 -- LEM-022 t2 FOURIER-COMPLETION NODE **COMPLETE** IN LEAN (LRCFourierCompletionC.lean, kernel-pure, foundational-only, root-wired). completion_band : ||C_w - b^2/q|| <= 5q(log2 q+1)^2/P(w) for the actual interval band, UNCONDITIONAL. The whole OffLine-gate t2 bound, from scratch. Closes kps's 'single biggest open measure-side sub-lemma'.
+
+Prompt (owner): continue B.3 final assembly, pull often, spend a long session working remaining tasks to completion, take the hardest tasks.
+
+CONVERGENCE (the pull mattered): kps-S127 cont.18 had just done the ABSTRACT off-diagonal aggregation (offDiag_bandSum_le_closed: ||Sum_{h!=0} bc(h)conj(bc(wh))|| <= 5q^2(log)^2/P over ZMod q, abstract in bc) and handed the completion IDENTITY back to me (which I proved S214). So the node converged: my identity (range-q) + kps's aggregation (ZMod q) + my B.2 -- needing the interface bridge.
+
+DELIVERED (LRCFourierCompletionC.lean, kernel-pure [propext,Classical.choice,Quot.sound], sorryAx 0, root-wired):
+- eInt_periodic + bandDFT_periodic: e_q / B_hat are q-periodic (the twist bridge tool).
+- completion_final: ||C_w - b^2/q|| <= 5q(log2 q+1)^2/P, ABSTRACT in the band coeff bound hbc. THE INTEGRATION: bridges my range-q completion identity to kps's ZMod-q offDiag_bandSum_le_closed via a sum_nbij' reindex (k <-> h.val) + twist periodicity (B_hat(w*k) = B_hat((w_z*h).val)), k=0 split (b^2 main term), then /q.
+- norm_bandDFT_Icc_le: the BAND BRIDGE -- for the interval band Icc lo hi, B_hat(j) = B.2's interval exp-sum (sum_Ico_eq_sum_range reindex + e_q periodicity), so ||B_hat(j)|| <= q/(2 cdist j) via my norm_bandCoeff_le (S213 B.2) + cdist_neg.
+- completion_band: the FULL LEM-022 t2 bound for the actual band, UNCONDITIONAL -- discharges hbc via the band bridge. This is the OffLine-gate's t2 hyperbola bound, kernel-pure end to end.
+
+THE NODE IS CLOSED. LEM-022 (|C_w - b^2/q| <= 5q(log q)^2/P) -- 'the single biggest open measure-side sub-lemma' (kps) / 'the one remaining analytic ingredient' feeding THM-680's OffLine floor on the t2 layer -- is now fully in Lean, composed from: death-star Stage A (interval exp-sum, S13) + opus B.1/B.2 (orthogonality + band coeff, S213) + opus completion identity (S214) + kps offDiag aggregation (S127cont18) + opus completion_final/band bridge (S215). A five-way fleet composition. Does NOT touch the genuinely-open signed t>=3 (THM-684).
+
+Files: LRCFourierCompletionC.lean (+root); tasks #37-40 all done. -> kps LRCFourierAggregation (offDiag), death-star LEM-022/harmonic_ratio_sum_mul_le, opus-S213 (B.1/B.2), opus-S214 (identity), monad THM-680 (OffLine floor consumer).
+
+---
+
 ## kind-pasteur-2026-07-11-S127 (cont.19) -- the LEM-022 FOURIER-COMPLETION NODE IS CLOSED (unconditional, interval bands). The single biggest open measure-side sub-lemma, PROVEN. Kernel-pure, root-wired.
 
 Prompt (owner): prove the Parseval completion identity, build the ZMod q Fourier infra.
