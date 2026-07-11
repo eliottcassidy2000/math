@@ -21,6 +21,21 @@ maxRecDepth (replied to mac-mini as they asked): 16384 on Size5_c1 STILL 0xC0000
 My LRC Lean ~95 nodes, S114..S127. FILES: LRCDetunedDispatchReduce.lean, reflection the-detuned-citation-shrinks-to-its-half-harmonic-residual-kps-S127.md.
 
 NEXT: (1) the half-harmonic residual (2,2)/(2,2,*) mod-2g lift = opus's THM-678 residual, the ONLY remaining detuned obligation; (2) mac-mini re-emitting the 4 cert files shallower (I rebuild+confirm on Windows after); (3) the measure floor / klein's constructive two-scale supply remains the open analytic core.
+## opus-2026-07-10-S212 -- d=3 COLLISION with kps-S127 (both did THM-678 d=3 concurrently) + REDUNDANCY synthesis. NET DELIVERABLE: the clean all-q>=8 coarse corollary (LRCThreeDetunedCoarse.lean, kernel-pure) that kps left generic. HONEST: the detuned-dispatch line is a backstop klein's measure program (THM-685-692, mechanically complete) is superseding.
+
+Prompt (owner): take the d=3 generalization next, but pull from other agents and synthesize and redirect as needed.
+
+SYNTHESIS (did the pull/redirect the owner asked for): (1) launched an Explore scout on the frontier -- found detuned dispatch is the BACKSTOP lane, not critical path; klein's THM-692 (mu_inf>0 for EVERY two-scale class) may floor my S208 near-dilates directly, making the whole detuned line redundant. (2) messaged klein (MSG-568) the reconciliation question. (3) klein's concurrent S246 reply: 'THE MEASURE PROGRAM'S MECHANICAL ITEMS ARE COMPLETE' (THM-685 transfer + 686 windows + 687/688 limits+taxonomy exact everywhere + 689-692 dead-zone closed no census + 693-695 constructive witnesses) -- strong confirmation the route detuned feeds is closing independently.
+
+COLLISION: while I built d=3 (LRCDetunedD3.lean + LRCThreeDetunedClearing.lean), kps-S127 cont.15 committed the SAME d=3 to origin (LRCDetunedD3.lean: threeDetunedClearing, lonely14_of_three_detuned_good/', all reusing MY S211 bad_count_le) + an exceptional-set enumeration. My files were duplicates -- DISCARDED (backed up to scratchpad). kps's is canonical. NOT wasted: my S211 LRCIntervalCount.bad_count_le was the per-coordinate engine kps reused for the 3rd delta.
+
+NET-NEW DELIVERABLE (kernel-pure [propext,Classical.choice,Quot.sound], sorryAx 0, root-wired): LRCThreeDetunedCoarse.lean -- lonely14_of_three_detuned_coarse: all three q_i = g/gcd(delta_i,g) >= 8 => Sum N_i/q_i <= 3*15/56 = 45/56 < 1 => lonely, with NO per-instance sum check. The clean 'all-fine' case kps left as the generic hcount hypothesis. Helpers gcd_toNat_mul + coarse_badCount_bound (56*badCount <= 15*g when q>=8). Builds on kps threeDetunedClearing + reuses opus bad_count_le.
+
+HONEST REDIRECT RECOMMENDATION: STOP piling onto the detuned backstop. d=2 (my S211) + d=3 (kps-S127) generic are DONE; the (2,2)/(2,2,*) mod-2g residual remains but is (a) hard (2-adic descent) and (b) likely redundant given klein's dead-zone closure. The fleet critical path is klein/monad's OffLine<=f(E3) B5 gate + THM-527-A finite-Vmax glue. Owner: point me there, or at the constructive-witness/ray-witness Lean transcription (klein THM-693-695), for real leverage.
+
+Files: LRCThreeDetunedCoarse.lean (+root); scratchpad my_LRCDetunedD3/my_LRCThreeDetunedClearing (discarded dups). -> kps-S127 (canonical d=3), opus-S211 (bad_count_le, reused), THM-678, THM-692, klein-S246 (measure program complete).
+
+---
 
 ## klein-2026-07-11-S247 -- THE CONSTRUCTIVE RAY WITNESS (THM-695, HYP-5960) + THE FORMALIZATION-STATE SYNTHESIS: ray families witnessed at (q* b V, b w_693) -- small/top bands INHERITED BY SCALING, ray digits decidable; the supply now covers ALL taxonomy shapes, feeding mac-mini's in-flight de-citation
 
