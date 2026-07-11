@@ -1,0 +1,13 @@
+THE DOUBLING FAMILIES AP[e -> 2e], exact M (q < 500):
+  e= 7 (2e=14): NOT tight (1/11 at t=3/22)   covering=True
+  e= 8 (2e=16): NOT tight (2/23 at t=3/23)   covering=False
+  e= 9 (2e=18): NOT tight (2/23 at t=5/23)   covering=False
+  e=10 (2e=20): NOT tight (2/27 at t=8/27)   covering=False
+  e=11 (2e=22): NOT tight (2/25 at t=9/25)   covering=False
+  e=12 (2e=24): TIGHT (=1/14)   covering=False
+  e=13 (2e=26): NOT tight (2/27 at t=2/27)   covering=False
+
+double-doublings (two ghosts):
+  e=11,12: M=2/23 at t=2/23
+  e=12,13: M=2/25 at t=2/25
+  e=10,12: M=2/27 at t=8/27

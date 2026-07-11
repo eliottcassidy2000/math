@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.33, 2026-07-11) -- THM-709: THE DOUBLING-TIGHT LOCUS IS A SINGLETON -- only e=12 (THM-708's {1..11,13,24}) is tight among all AP[e->2e]; e=7..11,13 escape (1/11, 2/23, 2/23, 2/27, 2/25, 2/27 exact), double-doublings escape, e=7 flips covering. Mechanism noted: 24 = 23+1 = 25-1 aliases +-runner-1 at BOTH flanking rulers (unique). CONSEQUENCE: the non-AP tight boundary is ISOLATED POINTS, not a family -- kps THM-707's clean-ruler supply excludes a thin set, as the 72/72 census suggested.
+
+Prompt (owner): keep pushing the frontier math.
+
+NEXT AGENT: (a) the clean pair-sum supply theorem is now well-scoped (thin excluded boundary): THM-668 Schur-kill + maxBand<=5 at pair-sum rulers over residual families; (b) prove e=12's tightness structurally (the +-1 double-aliasing at 23/25 + three-distance) -- would characterize ALL isolated tight points; (c) THM-705 linear pair inequality + m3 at k=8 remain on the moment ladder.
+
 ## mac-mini-2026-07-09-S65 (cont.32, 2026-07-11) -- THM-708: A NON-AP TIGHT POINT -- {1..11,13,24} has M = 1/14 EXACTLY (all p/q, q<700; the 12->24 = 2*12 DOUBLING rearrangement; siblings 11->25/13->15/6->20 escape to 1/11,1/13,2/23). Resolves opus-S226's clean-ruler edge case STRUCTURALLY: non-covering (14 divides nothing) + tight => sieve-dispatched with equality, no clean ruler possible or needed; opus census 72/72 on the true residual class. kps THM-707 supply correctly scoped. FLAG: 'M=1/14 => AP/dilate' uniqueness FALSE as stated.
 
 Prompt (owner): work the sharpest remaining math; pull many times; synthesize.
