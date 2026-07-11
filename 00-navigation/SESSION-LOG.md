@@ -15,6 +15,26 @@ One iteration: rw cannot see the Eq inside Ne (dedup_eq_nil under !=) -- direct 
 FILES: LRCMomentCitation.lean (new, green, kernel-audit [propext, Classical.choice, Quot.sound] on both key theorems), lrc14 nu-probe .out, root import.
 
 NEXT AGENT: (a) hsmall -- the k <= 7 m_P floor on witnessG2: ingredients are klein THM-687's k<=6 unconditional floor + my cont.21 goodSet band machinery + the k=7 boundary; ALSO note hsmall's k in {0,1,2} sub-cases interact with the cont.16/17 repair findings (witnessG2 = 0 at k=0) -- the moment route's hsmall quantifies k <= 7 with m_P which is UNSATISFIABLE at k <= 2 by my cont.16 finding (same genus as MISTAKE-136!) -- the next agent should route hsmall through the REPAIRED assembly (lrc14_from_repaired_nodes legs) or narrow it; (b) hpartA (opus-S208 peel-then-decorrelate); (c) Windows segfault resolution (kps report pending).
+## klein-2026-07-10-S243 -- THE TEST-POINT CORES IN LEAN (HYP-5940): LRCTestPointCore.lean GREEN kernel-pure -- the P-side band bound + coprimality nonvanishing (primality-free), the E-side pigeonhole, THM-692's middle-chain rigidity, and THE FATTENING LEMMA: a q*-test-point is a SafeIvStrict CERTIFICATE FACTORY feeding S242's transfer pipeline
+
+Prompt (owner): run the Lean transcription of the test-point theorems.
+
+SIX THEOREMS + TWO DECIDE-DEMOS, all kernel-pure [propext, Classical.choice, Quot.sound], root-wired, project green (8516 jobs, 0 errors):
+
+(1) net_value_strictly_in_band: q <= 13, 1 <= r < q => q < 14r AND 14r < 13q -- every nonzero q-net value is strictly in-band (pure omega; the P-side of THM-690/691A).
+(2) qstar_p_nonzero: IsCoprime a q, p in [1,13], p != q => q does not divide p*a (IsCoprime.dvd_of_dvd_mul_right + p < 2q; PRIMALITY-FREE, matching THM-691A exactly).
+(3) residue_in_range: the residue lands in [1, q-1].
+(4) THE FATTENING LEMMA qstar_cert (the session's centerpiece): the test point a/q fattens into the EXPLICIT SafeIvStrict certificate interval [(4732a - q)/(4732q), (4732a + q)/(4732q)] for every p in [1,13] with nonzero residue -- the uniform slack 4732 > 14*13*13 = 2366 absorbs all q <= 13, p <= 13 simultaneously (two nlinarith calls off Int.ediv_add_emod). A TEST POINT IS A CERTIFICATE FACTORY: composes directly into MeasureTransfer.strictlyLive_of_cert (S242) -- test point => certificates => strictly-live rulers at every large modulus => kps strict chain.
+(5) pigeonhole_missed_class: |E| < q => some residue class mod q is unoccupied (the E-side; Finset.card_image_le + exists_mem_notMem_of_card_lt_card).
+(6) middle_chain_rigidity: THM-692's core -- BOTH-sided sign chains force L = R pointwise across the middle classes, killed by the distinct-residue hypothesis (4 lines: le_antisymm + residue mismatch). The one-sided D-freeness heart, formal.
+
+Demos: P = {1,13}, q* = 12, a = 1: both speeds certified by decide (13 = 1 mod 12).
+
+THE ARC: with S242's LRCMeasureTransfer, the measure program's spine is now kernel-pure at its arithmetic cores AND its handover interface: [test points (this file)] => [SafeIvStrict certificates] => [strictly-live rulers at every q > D/(y-x) (S242)] => [kps StrictWitness => lonely]. Remaining Lean surface (named): the finite-V two-scale witness composition (test point + cluster residue tuning => explicit rational witness time for S_V = P u {V-e} -- all-rational bookkeeping, one session's shape).
+
+LEAN-CRAFT: Finset.exists_mem_notMem_of_card_lt_card must receive its card hypothesis DIRECTLY (refine-with-?_ deferral leaves the set arguments as unresolvable metavariables).
+
+FILES: LRCTestPointCore.lean (+ root wire); THM-690/691/692 formalization addenda; HYP-5940 resolved; memory.
 
 ## mac-mini-2026-07-09-S65 (cont.23, 2026-07-10) -- THE hB SHAPEOF DISPATCHER: LEMMA B IS A THEOREM. lrc14_from_momentfloor_certs = LRC(14) from exactly hMoment (THM-661) + hsmall + hpartA, foundational-axioms-only. Windows platform caveat flagged (kps testing).
 

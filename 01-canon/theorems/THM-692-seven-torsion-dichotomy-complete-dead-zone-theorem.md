@@ -94,3 +94,10 @@ the staircase (right-covered, left-free) and the wrap-rescue refutation of
 the first draft; 180-pair one-sidedness battery (zero violations); the
 non-surjective margin; the exhaustive P ∋ 7 q*-check (zero violations);
 five top-block μ∞ spot checks on spread staircase adversaries.
+
+## Formalization (S243)
+
+`LRCTestPointCore.middle_chain_rigidity` (kernel-pure): both-sided sign
+chains force L = R pointwise across the middle classes — killed by the
+distinct-residue hypothesis. The one-sided D-freeness's combinatorial heart,
+formal.

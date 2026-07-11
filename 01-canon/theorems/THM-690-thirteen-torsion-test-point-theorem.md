@@ -78,3 +78,12 @@ finite.
 `04-computation/lrc14_test_point_theorem_klein_S239.py` (+ `.out`): the
 E-side sharpness battery (worst = exactly 1/91), the P-side arithmetic, the
 3176-evaluation corner census.
+
+## Formalization (S243)
+
+`LRCTestPointCore.lean` (kernel-pure, root-wired): `net_value_strictly_in_band`
+(the P-side band bound), `qstar_p_nonzero` + `residue_in_range` (the
+coprimality nonvanishing), `pigeonhole_missed_class` (the E-side), and THE
+FATTENING LEMMA `qstar_cert` — the test point generates SafeIvStrict
+certificates on [(4732a−q)/4732q, (4732a+q)/4732q], feeding
+LRCMeasureTransfer's transfer pipeline directly.

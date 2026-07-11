@@ -78,3 +78,10 @@ inherits the same structure per merged cluster.
 `04-computation/lrc14_corner_wholesale_klein_S240.py` (+ `.out`): the
 q*-battery (six P's, margins), the five packed slivers + consecutive
 μ∞ > 0, the spread census vs the exact m_P table.
+
+## Formalization (S243)
+
+The (A) q*-theorem's arithmetic cores are in `LRCTestPointCore.lean`
+(kernel-pure): the band bound, the coprimality nonvanishing (primality-free,
+via p < 2q*), the pigeonhole, and the fattening into SafeIvStrict
+certificates (the uniform slack 4732 > 14·13·13 covers all q* ≤ 13, p ≤ 13).
