@@ -23,6 +23,23 @@ REMAINING FINITE+CITED PIECES (unchanged): extend the Freiman exact table (exc<=
 DELIVERED: 04-computation/lrc14_clean_ruler_nearAP_opus_S226.py (+out). Edge case {1..11,13,24} flagged to kps. -> THM-707(kps)/701, HYP-2638, opus-S225.
 
 ---
+## kind-pasteur-2026-07-11-S127 (cont.29) -- CREATIVE ROUTES to the clean-ruler supply: DUG UP that the clean ruler LIVES ON THE PAIR-SUM RULER (mac-mini THM-668). Via THM-668 o THM-707, hB5 <= every residual has a CLEAN PAIR-SUM modulus (bounded <=78 search, 196/196). + two corrections (moderate-q not large; B5 not scale-invariant). HYP-6000.
+
+Prompt (owner): look for creative ways to prove the clean-ruler supply, dig around in past related work for connections.
+
+DUG THE CORPUS, FOUND THE CLEAN RULER ALREADY HAS A HOME:
+- THE KEY CONNECTION (THM-668, mac-mini, PROVEN): the loneliness witness M(S)=max_t min_i ||v_i t|| is ALWAYS attained at a PAIR-SUM modulus q=v_i+v_j <= 2*Vmax. So the clean ruler I needed IS a pair-sum. COMPOSING with THM-707: clean-ruler supply <=> every residual family has a CLEAN PAIR-SUM modulus (a v_i+v_j with a live multiplier + no >=6-covered multiplier) -- a BOUNDED (<=78 candidates), decidable-per-family condition. Verified 196/196.
+
+TWO CORRECTIONS (killing wrong routes is half of creative search):
+- MODERATE q not large: my first instinct (large q => shallow by equidistribution; klein THM-685 gives strictly-live at every q>=425) FAILS -- at large q the p=1 multiplier puts EVERY runner in the danger arc (v_i < q/14), maxBand=13, B5 plunges (-5718 @q=800). Clean rulers are MODERATE q in [Vmax,2Vmax] = EXACTLY THM-668's pair-sum range. klein's large-q rulers are LIVE but not SHALLOW.
+- B5 NOT scale-invariant: hoped to reduce to primitive families by a scaling law -- FALSE. Dilating v->c*v introduces a deep resonance at p=q*k/c (all runners hit 0), B5(v,27)=2 but B5(2v,54)=-788. Dilation BREAKS the certificate.
+- The M-maximizing pair-sum is USUALLY shallow (44/57) but not always; SOME pair-sum is always clean (196/196), just not necessarily the M-argmax.
+
+THE DECOMPOSITION (the payoff): clean = SHALLOW (maxBand<=5, an ADDITIVE-structure condition, plausibly UNCONDITIONAL -- no dilate puts 6 runners in a 1/7 arc) + LIVE (liveCount>=1, the LONELINESS content = LRC itself, supplied for residuals by klein's measure floor THM-687/692). depth-5 (the Lean B5) suffices EXACTLY on shallow pair-sums; deeper coverage forces THM-675 depth escalation.
+
+HONEST SCOPE: proving 'some pair-sum is clean' for ALL residuals unconditionally is LRC-EQUIVALENT (the LIVE half IS the conjecture). I did not make the hard part easy. The value: a transparent assembly of THREE proven pieces (THM-668 pair-sum ruler + THM-707 clean-ruler certificate + klein measure floor) and the clean isolation of the possibly-unconditional SHALLOW sub-lemma from the loneliness that carries the weight. Tells the Lean side: depth-5 is right EXACTLY on shallow pair-sums.
+
+FILES: lrc14_cleanruler_pairsum_kps_S127.py/.out; reflection the-clean-ruler-lives-on-the-pair-sum-ruler-kps-S127; HYP-6000. NEXT: prove SHALLOW (some pair-sum has maxBand<=5) unconditionally for bounded residuals -- the genuinely-additive, non-LRC-equivalent piece; then LIVE = klein's floor. For mac-mini (THM-668), klein (floor), opus (ladder).
 
 ## kind-pasteur-2026-07-11-S127 (cont.28) -- FLESHED OUT THE ARCHITECTURE: THM-707 (exact B5 = liveCount - penalty, sharpening THM-671) + the CLEAN-RULER reduction, FORMALIZED kernel-pure in Lean (LRCCleanRuler.lean). The single Lean obligation hB5 now has a transparent seven-sector sufficient condition, machine-checked.
 

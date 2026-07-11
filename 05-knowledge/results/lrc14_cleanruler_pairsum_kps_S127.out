@@ -1,0 +1,15 @@
+(2) MODERATE vs LARGE q  (near-AP {1..12,26}, Vmax=26):
+    q=  27 (q/Vmax=1.0): liveCount=2, maxBand=4, B5=2  CLEAN
+    q=  55 (q/Vmax=2.1): liveCount=2, maxBand=3, B5=2  CLEAN
+    q= 200 (q/Vmax=7.7): liveCount=0, maxBand=12, B5=-944  
+    q= 800 (q/Vmax=30.8): liveCount=4, maxBand=13, B5=-5718  deep (p=1 resonance)
+(3) B5 NOT scale-invariant (dilation breaks it):
+    c=1: B5(1v, 27) = 2  (would be 1x2=2 if scale-invariant)
+    c=2: B5(2v, 54) = -788  (would be 2x2=4 if scale-invariant)
+    c=3: B5(3v, 81) = -1578  (would be 3x2=6 if scale-invariant)
+(4) EVERY residual family has a CLEAN PAIR-SUM ruler:
+    196/196 residual families have a clean pair-sum modulus (live>=1 & maxBand<=5 at some v_i+v_j)
+    binding near-AP {1..12,26}: clean pair-sum q=27 (=1+26), live=2, maxBand=4 => B5=2>0
+
+REDUCTION (THM-668 o THM-707): clean-ruler supply <=> every residual has a clean PAIR-SUM modulus.
+DECOMPOSITION: SHALLOW (additive, ~unconditional) + LIVE (loneliness = klein measure floor THM-687/692).
