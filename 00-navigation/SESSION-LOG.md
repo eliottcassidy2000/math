@@ -3,6 +3,21 @@
 Prompt (owner): another frontier session; push/pull; consider ideas deeply.
 
 NEXT AGENT: (a) prove inf E[N(7-N)] = 4465/882 at {1..9} -- the functional is dilate-invariant, far-raised (THM-710), so the inf lives on compact primitive cores: the pair-correlation tools (Koksma 686C per (s empty, s' hit) atom) + consec-extremality of the SIGNED pair mass; (b) the k=8 deg-3 analog: derive the cubic h3(N) form and its threshold, run the same hunt (m3 via kps 3D box); (c) kps cont.30's shallow-generic + the supply uniform theorem continue on hB5.
+## kind-pasteur-2026-07-11-S127 (cont.31) -- WORKED THE MOST-UPDATED ROUTE: FORMALIZED THM-712, the GENERAL prime clean ruler -- for EVERY prime P<=13 with no speed divisible by P, q=P is a perfectly clean ruler (B5=P-1>0). Generalizes opus-S227 THM-709 (q=13) to {2,3,5,7,11,13} via kps b5_pos_of_clean. Kernel-pure Lean, root-wired, green. Discharges ~61% of generic residuals.
+
+Prompt (owner): work on the most updated math proof route.
+
+SYNCED THE FRESHEST STATE (fleet built hard on my clean-ruler THM-707): opus-S227 FORMALIZED THM-709 = the prime clean ruler q=13 discharges hB5 for residuals with no speed divisible by 13 (via a margin/pinning argument). mac-mini THM-710 = factorial-moment eigen-transfer m_r->((7-r)/7)m_r EXACT => the moment-ladder base reduces to {k=8 deg-3}+{k=9 deg-2} ONLY (higher k inherit). mac-mini THM-708/709 = the non-AP tight points are ISOLATED (singleton {1..11,13,24}), so the clean-ruler supply excludes only a thin set.
+
+MY CONTRIBUTION (extends the freshest formalized node, opus q=13): the q=13 ruler is the TOP member of a six-element family. GENERALIZED to EVERY prime P<=13: at modulus P<=13 the safe band [P/14,13P/14] contains ALL nonzero residues {1..P-1}, so a runner is unsafe only if P|v_i p'; with P prime, P-nmid-v_i, 0<p'<P, Euclid gives P-nmid-v_i p' => bandCount==0 everywhere => maxBand=0, liveCount=P-1 => b5_pos_of_clean (my THM-707) gives B5(v,P)=P-1>0. TWO LINES from the clean-ruler lemma -- showing THM-707 is the right lever, and the prime rulers are its cleanest instances (penalty 0, B5=liveCount exactly).
+
+FORMALIZED kernel-pure (LRCPrimeCleanRuler.lean, root-wired, builds green, [propext, Classical.choice, Quot.sound]): bandCount_eq_zero_of_prime_ndvd + b5_pos_of_prime_ndvd + exists_B5_pos_of_prime_ndvd (supplies the per-family hB5 witness). Fixed the Nat.Prime->Prime(Z) cast (Nat.prime_iff_prime_int.mp) and the band bounds (omega from r in [1,P-1], P<=13).
+
+COVERAGE (lrc14_prime_ruler_coverage): the prime dispatch discharges ~61% of generic residuals (a family is discharged iff some prime<=13 divides NO speed). Large primes carry it (first-hit 11:26%, 13:23%, 7:8%, 5:4%; 2,3 never fire -- every family has an even + a mult-of-3). Remaining ~39% = the PRIME-RICH core (every prime<=13 divides some speed = AP-like; {1..13} hits all six) -- handed to the composite/pair-sum clean rulers (HYP-6000) and the moment-ladder base (mac-mini THM-710).
+
+NET: split hB5 -- the MAJORITY falls to a decidable divisibility test (formalized, kernel-pure); the difficulty concentrates in the thin prime-rich (AP-like) core. THM-712 canon + LRCPrimeCleanRuler.lean + coverage script/out.
+
+NEXT: composite clean rulers (q=14,15,... for the prime-rich core) + the k=8/k=9 moment base (mac-mini). For opus (THM-709), mac-mini (moment ladder/tight points), klein (measure floor).
 
 ## mac-mini-2026-07-09-S65 (cont.34, 2026-07-11) -- THM-710: THE FACTORIAL-MOMENT EIGEN-TRANSFER -- m_r -> ((7-r)/7) m_r EXACTLY (falling factorials diagonalize the far-element operator, 3-line proof, 200x verified exact); rung arithmetic (6/7)cap_{k+1} + 1/7 <= cap_{k+2} EXACT at every rung => k=10..13 rows inherit from k=9 automatically. THE MOMENT LADDER'S BASE = {deg-3 @ k=8} + {deg-2/THM-705 @ k=9} ONLY. Synthesis: kps cont.29 composed THM-668 o THM-707 (clean pair-sum supply, bounded-decidable, 196/196).
 

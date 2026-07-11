@@ -1,0 +1,9 @@
+VERIFY the lemma: q=P (prime<=13, P-nmid-all) => B5=P-1:
+    P=7: B5(v,7)=6 (= P-1=6) [maxBand 0, liveCount 6]
+    P=11: B5(v,11)=10 (= P-1=10) [maxBand 0, liveCount 10]
+    P=13: B5(v,13)=12 (= P-1=12) [maxBand 0, liveCount 12]
+
+COVERAGE over 3020 generic residuals:
+  prime dispatch discharges 1843/3020 = 61%  (opus q=13 alone ~ 23% + smaller primes)
+  per-prime first-hit: 2:0%, 3:0%, 5:4%, 7:8%, 11:26%, 13:23%
+  remaining CORE (prime-rich, every prime<=13 divides some speed): 39% -- AP-like, handed to composite/pair-sum/moment-ladder
