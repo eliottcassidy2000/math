@@ -1,3 +1,25 @@
+## kind-pasteur-2026-07-11-S127 (cont.25) -- ATTACKED THE JOINT Phi-CONSEC-EXTREMALITY: resolved WHICH additive invariant governs the seven-sector residue. E2 (additive energy), NOT E3 (Schur) -- because the cores are 0-ANCHORED. Reduces the leading term to Freiman's PROVEN AP-max-E2. (HYP-5990.) Bigger picture: LRC at two scales, the anchor selects the invariant.
+
+Prompt (owner, same to several machines -- opus-S221 got it too): attack the joint Phi-consec-extremality lemma, see the bigger picture of what we're approaching.
+
+STATE OF THE FRONTIER (all today): the whole LRC(14) wide direction = consec MAXIMIZES Phi=p0+(1/3)p1 on bounded cores. mac-mini THM-703 + opus S220 reduced it to a DEGREE-GRADED MOMENT LADDER (k=9,10 deg-2/pair-correlation; k=8 deg-3/triple). opus-S221 (same hour, same prompt) reformulated: consec MINIMIZES F2=4m1-m2=E[N(5-N)] <=> MAXIMIZES coverage-variance B=(E[N]-5/2)^2+Var(N), via bimodal resonance. klein-S251 did an exhaustive Phi-extremality census. I took the COMPLEMENTARY half: which invariant IS F2.
+
+THE TENSION I RESOLVED: mac-mini reaches for ADDITIVE-ENERGY (E2=#{a+b=c+d}) bricks. But opus's OWN HYP-5683 PROVED that for the LRC DENSITY FLOOR the governing invariant is SCHUR TRIPLES (E3=#{a+b=c}) NOT E2 -- because loneliness is scale- but NOT translation-invariant, and only E3 shares that symmetry (E2 is translation-invariant => blind to tight-AP vs its loose translate). Phi has the SAME symmetry (THM-536, scale-only) => a naive import says E3 should govern and mac-mini is mis-aimed.
+
+THE MEASUREMENT (lrc14_moment_invariant_symmetry_kps_S127): E2 GOVERNS, decisively reversing the density-floor verdict. corr(F2,E2)=-0.978 vs corr(F2,E3)=-0.632; at FIXED spread still -0.941. F2 ~ 6.46 - 0.0106*E2.
+
+WHY THE FLIP (the crux): the seven-sector cores are 0-ANCHORED (0 in E always; it auto-covers sector 0). The family contains NO translates of each other -- every core pinned at 0; the only identification is scaling, under which E2 AND Phi agree (consec and its dilate {0,2,..,14} both E2=344, Phi=0.4086). So E2's translation-blindness (fatal downstairs) is NEVER TESTED here => E2 is free to govern. THE ANCHOR SELECTS THE INVARIANT: free set -> E3, 0-anchored set -> E2. Same symmetry-match machine (opus's), OPPOSITE answer, because pinning 0 moved the group.
+
+SYNTHESIS with opus-S221: B ~ affine(E2) (F2=25/4-B and F2~affine(-E2)) => opus's coverage-variance IS the additive energy; his "bimodal resonance / AP rank-1 relation lattice" = Freiman minimal-sumset = max E2. Mechanism (opus) and invariant (me) are one object.
+
+REDUCTION: consec-max-Phi <= (leading order) AP-max-E2 = Freiman |S+S|>=2n-1 equality-iff-AP (opus HYP-5681, PROVEN). So the LEADING term of the extremality is already a theorem. OPEN RESIDUAL = the F2<->E2 fidelity (fit -0.98 not -1; equal-E2/equal-E3 cores split F2 slightly) = the sub-leading degree-3 triple-correlation m3 = exactly the k=8 ladder rung. So: F2 >= affine(E2) - small-triple-defect, then invoke Freiman.
+
+BIGGER PICTURE (the ask): LRC lives at TWO SCALES. FINE (1/14, the real conjecture): governed by E3/Schur, translation-free, OPEN. COARSE (1/7, the seven-sector reduction): governed by E2/additive-energy, 0-anchored, reduces to CLASSICAL Freiman. The reduction's quiet genius: pinning 0 (the top offset) converts the hard translation-sensitive Schur invariant into the easy classical additive-energy one. We prove LRC by dropping to a coarse scale where its additive-combinatorial heart -- "AP is the extremal set" -- is a SOLVED problem, then pay a controlled triple-correlation tax to climb back. The "irreducibly aggregate" wall everyone hit = E2 is a global 4-fold correlation, unseeable per-term => local moves can't work; it was always going to yield to Freiman, not compression.
+
+VALIDATES mac-mini's additive-energy lane (correctly aimed) and reconciles opus HYP-5683 (E3 downstairs) via the anchor. My THM-701 STANDS (klein voluntarily ceded the 701 collision, renumbered theirs to THM-705).
+
+FILES: HYP-5990; lrc14_moment_invariant_symmetry_kps_S127.py/.out; reflection the-anchor-selects-the-invariant-coarse-freiman-kps-S127.md. NEXT: make F2<->E2 an EXACT inequality (F2 >= affine(E2) - m3-defect) via Fourier (m2 pair-avoidance ~ Sum|F-hat|^4 = E2); then the degree-3 (k=8) triple defect. -> mac-mini/opus own the moment lanes.
+
 ## mac-mini-2026-07-09-S65 (cont.31, 2026-07-11) -- THM-705: THE LINEAR MOMENT REQUIREMENT -- optimal deg-2 majorant EXPLICIT (q* = 1 - N/2 + N(N-1)/12, LP-vertex proof); k=9,10 rows = ONE linear pair-correlation inequality each (m1/2 - m2/12 >= 1 - cap); uniform adversarial margins +0.0263/+0.0943 (extremal {1..k}); opus-S220 cross-validated exactly. SYNTHESIS: opus renamed 702->704 (collision cleared); kps cont.24 cross-validated my THM-702; klein de-citing SmallClusterFull (HYP-5985). The ladder: k=8 deg-3 (kps 3D box) / k=9,10 THIS linear form.
 
 Prompt (owner): keep working the endgame, synthesize incoming frequently.
@@ -27500,7 +27522,7 @@ fine; the census is not logically required for the bound, but no free margin exi
 Net: LRC(14) still NOT proved. Residual sharpened to *primitive covering rows with
 `<=6` multiples of 7 over a bounded coprime core* (Node-3 / finite-`V*` wall).
 Logged HYP-3084. Reflection
-`07-reflections/the-covering-bound-proof-tree-level7-sieve-and-the-dilation-correction.md`.
+`07-reflections/the-covering-bouð€®d-proof-tree-level7-sieve-and-the-dilation-correction.md`.
 Updated honest status doc with the S31af addendum.
 ## codex-2026-06-27-S254 -- sexy prime pair sieve transfer
 
