@@ -54,10 +54,8 @@ theorem cgap_sum {k : ℕ} (hk : 0 < k) (f : Fin k → ℝ) :
   set F : ℕ → ℝ := fun n => if h : n < k then f ⟨n, h⟩ else 1 + f ⟨0, hk⟩ with hF
   have hstep : ∀ i : Fin k, cgap hk f i = F ((i : ℕ) + 1) - F (i : ℕ) := by
     intro i
-    have hFi : F (i : ℕ) = f i := by
-      rw [hF]
-      simp only [i.isLt, dif_pos]
-    rw [hF, cgap, hFi]
+    simp only [hF, cgap]
+    rw [dif_pos i.isLt, Fin.eta]
   rw [Finset.sum_congr rfl (fun i _ => hstep i),
     Fin.sum_univ_eq_sum_range (fun n => F (n + 1) - F n) k,
     Finset.sum_range_sub F]
@@ -91,8 +89,8 @@ theorem cgap_witness {k : ℕ} (hk : 0 < k) (f : Fin k → ℝ)
         linarith
       have hd2 : f j - f i + 1 < 1 := by linarith
       have hfr : Int.fract (f j - f i) = f j - f i + 1 := by
-        rw [show f j - f i = (f j - f i + 1) + ((-1 : ℤ) : ℝ) by push_cast; ring,
-          Int.fract_add_int, Int.fract_eq_self.mpr ⟨hd1, hd2⟩]
+        rw [← Int.fract_add_one]
+        exact Int.fract_eq_self.mpr ⟨hd1, hd2⟩
       rw [hfr]
       rintro ⟨-, h2⟩
       have := (hrange j).1
@@ -133,8 +131,8 @@ theorem cgap_witness {k : ℕ} (hk : 0 < k) (f : Fin k → ℝ)
         linarith
       have hd2 : f j - f i + 1 < 1 := by linarith
       have hfr : Int.fract (f j - f i) = f j - f i + 1 := by
-        rw [show f j - f i = (f j - f i + 1) + ((-1 : ℤ) : ℝ) by push_cast; ring,
-          Int.fract_add_int, Int.fract_eq_self.mpr ⟨hd1, hd2⟩]
+        rw [← Int.fract_add_one]
+        exact Int.fract_eq_self.mpr ⟨hd1, hd2⟩
       rw [hfr]
       rintro ⟨-, h2⟩
       linarith
@@ -157,7 +155,7 @@ theorem gap_dichotomy {k : ℕ} (hk : 0 < k) (hk7 : k ≤ 7) (f : Fin k → ℝ)
   by_cases hbig : ∃ i, 1 / 7 < cgap hk f i
   · obtain ⟨i, hi⟩ := hbig
     exact Or.inl ⟨i, cgap_witness hk f hmono hrange i hi⟩
-  push_neg at hbig
+  push Not at hbig
   -- no big gap: k <= 6 contradicts the pigeonhole, so k = 7
   have hk7' : k = 7 := by
     by_contra hne
@@ -167,37 +165,38 @@ theorem gap_dichotomy {k : ℕ} (hk : 0 < k) (hk7 : k ≤ 7) (f : Fin k → ℝ)
   -- all seven gaps <= 1/7 summing to 1: the FIRST gap is exactly 1/7
   have h2k : 1 < k := by omega
   have h0k : 0 < k := hk
-  have hg0 : cgap hk f ⟨0, h0k⟩ = 1 / 7 := by
-    have hsplit : cgap hk f ⟨0, h0k⟩ +
-        ∑ j ∈ Finset.univ.erase ⟨0, h0k⟩, cgap hk f j = 1 := by
+  have hg0 : cgap hk f (⟨0, h0k⟩ : Fin k) = 1 / 7 := by
+    have hsplit : cgap hk f (⟨0, h0k⟩ : Fin k) +
+        ∑ j ∈ Finset.univ.erase (⟨0, h0k⟩ : Fin k), cgap hk f j = 1 := by
       rw [Finset.add_sum_erase _ _ (Finset.mem_univ _)]
       exact cgap_sum hk f
-    have herase : ∑ j ∈ Finset.univ.erase ⟨0, h0k⟩, cgap hk f j ≤
+    have herase : ∑ j ∈ Finset.univ.erase (⟨0, h0k⟩ : Fin k), cgap hk f j ≤
         ((k : ℝ) - 1) * (1 / 7) := by
-      calc ∑ j ∈ Finset.univ.erase ⟨0, h0k⟩, cgap hk f j
-          ≤ ∑ _j ∈ Finset.univ.erase ⟨0, h0k⟩, (1 / 7 : ℝ) :=
-            Finset.sum_le_sum (fun j _ => hbig j)
-        _ = ((Finset.univ.erase (⟨0, h0k⟩ : Fin k)).card : ℝ) * (1 / 7) := by
-            rw [Finset.sum_const, nsmul_eq_mul]
-        _ = ((k : ℝ) - 1) * (1 / 7) := by
-            rw [Finset.card_erase_of_mem (Finset.mem_univ _), Finset.card_univ,
-              Fintype.card_fin]
-            have : ((k - 1 : ℕ) : ℝ) = (k : ℝ) - 1 := by
-              have : 1 ≤ k := hk
-              push_cast [Nat.cast_sub this]
-              ring
-            rw [this]
+      have hb : ∑ j ∈ Finset.univ.erase (⟨0, h0k⟩ : Fin k), cgap hk f j ≤
+          ∑ _j ∈ Finset.univ.erase (⟨0, h0k⟩ : Fin k), (1 / 7 : ℝ) :=
+        Finset.sum_le_sum (fun j _ => hbig j)
+      have hc : ∑ _j ∈ Finset.univ.erase (⟨0, h0k⟩ : Fin k), (1 / 7 : ℝ)
+          = ((Finset.univ.erase (⟨0, h0k⟩ : Fin k)).card : ℝ) * (1 / 7) := by
+        rw [Finset.sum_const, nsmul_eq_mul]
+      have hcard : ((Finset.univ.erase (⟨0, h0k⟩ : Fin k)).card : ℝ)
+          = (k : ℝ) - 1 := by
+        rw [Finset.card_erase_of_mem (Finset.mem_univ _), Finset.card_univ,
+          Fintype.card_fin]
+        have h1k : 1 ≤ k := hk
+        push_cast [Nat.cast_sub h1k]
+        ring
+      rw [hc, hcard] at hb
+      exact hb
     have hcap : ((k : ℝ) - 1) * (1 / 7) ≤ 6 / 7 := by
       have : (k : ℝ) ≤ 7 := by exact_mod_cast hk7
       linarith
-    have := hbig ⟨0, h0k⟩
+    have := hbig (⟨0, h0k⟩ : Fin k)
     linarith
   -- extract the exact pair: gap 0 is interior (k = 7 > 1)
   have hlt01 : (0 : ℕ) + 1 < k := by omega
-  have h01 : f ⟨1, by omega⟩ - f ⟨0, h0k⟩ = 1 / 7 := by
-    rw [cgap, dif_pos hlt01] at hg0
-    convert hg0 using 3
   refine Or.inr ⟨⟨0, h0k⟩, ⟨1, by omega⟩, ?_⟩
+  rw [cgap, dif_pos hlt01] at hg0
+  have h01 : f (⟨1, by omega⟩ : Fin k) - f (⟨0, h0k⟩ : Fin k) = 1 / 7 := hg0
   rw [h01]
   exact Int.fract_eq_self.mpr ⟨by norm_num, by norm_num⟩
 
@@ -330,12 +329,12 @@ theorem goodSet_ae_full (E : List ℤ) (hnd : E.Nodup) (h3 : 3 ≤ E.length)
     calc slowμ (goodSet E) ≤ slowμ Set.univ := measure_mono (Set.subset_univ _)
       _ = 1 := huniv
   have hge1 : 1 ≤ slowμ (goodSet E) := by
-    calc (1 : ℝ≥0∞) = slowμ Set.univ := huniv.symm
+    calc (1 : ENNReal) = slowμ Set.univ := huniv.symm
       _ ≤ slowμ (goodSet E ∪ N) := measure_mono hcover
       _ ≤ slowμ (goodSet E) + slowμ N := measure_union_le _ _
       _ = slowμ (goodSet E) := by rw [hNnull', add_zero]
   rw [le_antisymm hle1 hge1]
-  exact ENNReal.one_toReal
+  exact ENNReal.toReal_one
 
 end SevenGapRigidity
 end LRC14
