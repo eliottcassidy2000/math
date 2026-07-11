@@ -88,3 +88,11 @@ Phi(F) <= cap_{|F|+1} holds in every box with margins +0.1196/+0.0856/+0.1142/+0
 Phi(F) <= cap_{|F|+1} directly (or consec-extremality restricted to k <= 10 + the
 perforated-dilate family at k >= 11).  At the BINDING size k=8 (tightest margin),
 consec IS the exact global argmax in the exhaustive box.
+
+================== ADDENDUM 2: k=12 (box [1..16], 4368 sets, exhaustive) ==================
+GLOBAL max Phi = 12101/17640 ~ 0.685998 at (0,2,3,4,5,6,7,8,9,10,12,14)
+  = {0} u consec-block {2..10} u dilated tail {12,14}: the PERFORATED-DILATE FAMILY CONTINUES.
+consec_12 Phi = 129259/194040 ~ 0.666146; beaten by 107/5390 ~ 0.019852 -- the consec deficit
+GROWS with k (1/378 at k=11 -> 107/5390 at k=12). Margin vs cap_13 = 1: +0.314002 (huge).
+NOTE: at k=12 even the p0-ARGMAX is non-consec: (0,1,...,10,12), p0 = 11381/17640 ~ 0.645181
+  -- data point for THM-534's scope (consec p0-maximality verified k<=11 only in these boxes).
