@@ -155,5 +155,46 @@ theorem completion_closed_of_coeffBound (q : ℕ) (hq : 0 < q) (B : Finset ℕ)
         mul_le_mul_of_nonneg_left hSle (by positivity)
     _ = 5 * (q : ℝ) * ((Nat.log 2 q : ℝ) + 1) ^ 2 / (P : ℝ) := by field_simp; ring
 
+/-- **The coefficient bound for an interval band** (discharges `hcoeff`).  For the contiguous band
+`B = {lo, lo+1, …, lo+len−1}`, `bandDFT q B j` is opus's B.2 interval coefficient at frequency `−j`, so
+`‖bandDFT q B j‖ ≤ q/(2·cdist j)` — via `norm_bandCoeff_le` and `cdist(−j) = cdist j`. -/
+theorem norm_bandDFT_interval (q : ℕ) (hq : 0 < q) (lo len : ℕ) (j : ℤ)
+    (hj : (j : ZMod q) ≠ 0) :
+    ‖bandDFT q ((Finset.range len).image (fun s => lo + s)) j‖
+      ≤ (q : ℝ) / (2 * (cdist (j : ZMod q) : ℝ)) := by
+  haveI : NeZero q := ⟨hq.ne'⟩
+  have hinj : ∀ x ∈ Finset.range len, ∀ y ∈ Finset.range len, lo + x = lo + y → x = y :=
+    fun x _ y _ h => by omega
+  have hnj : (((-j : ℤ)) : ZMod q) ≠ 0 := by rw [Int.cast_neg]; exact neg_ne_zero.mpr hj
+  have hB2 := norm_bandCoeff_le q hq (-j) (lo : ℤ) len hnj
+  have hcd : cdist (((-j : ℤ)) : ZMod q) = cdist ((j : ℤ) : ZMod q) := by
+    rw [Int.cast_neg, cdist_neg]
+  rw [hcd] at hB2
+  rw [bandDFT, Finset.sum_image hinj]
+  refine le_of_eq_of_le ?_ hB2
+  congr 1
+  refine Finset.sum_congr rfl (fun s _ => ?_)
+  rw [eInt]
+  congr 1
+  push_cast
+  ring
+
+/-- **LEM-022 completion bound, unconditional on an interval band.**  Combining the capstone with the
+interval coefficient bound: for the contiguous safe band `B = {lo, …, lo+len−1} ⊆ [0,q)`,
+
+  `‖C_w − b²/q‖ ≤ 5·q·(log₂q+1)² / P`.
+
+This closes the LEM-022 Fourier-completion node outright for interval bands — the shape the LRC safe arc
+takes — from opus's identity (C), opus's coefficient bound (B.2), and death-star's harmonic aggregation. -/
+theorem completion_closed_interval (q : ℕ) (hq : 0 < q) (lo len : ℕ)
+    (hB : (Finset.range len).image (fun s => lo + s) ⊆ Finset.range q)
+    (w : ℕ) (P : ℕ) (hP : 0 < P)
+    (hPmin : ∀ z : ZMod q, z ≠ 0 → P ≤ cdist z * cdist ((w : ZMod q) * z)) :
+    ‖(corrCount q ((Finset.range len).image (fun s => lo + s)) w : ℂ)
+        - (((Finset.range len).image (fun s => lo + s)).card : ℂ) ^ 2 / q‖
+      ≤ 5 * (q : ℝ) * ((Nat.log 2 q : ℝ) + 1) ^ 2 / (P : ℝ) :=
+  completion_closed_of_coeffBound q hq _ hB w P hP hPmin
+    (fun j hj => norm_bandDFT_interval q hq lo len j hj)
+
 end FourierCompletion
 end LonelyRunner

@@ -1,3 +1,22 @@
+## kind-pasteur-2026-07-11-S127 (cont.19) -- the LEM-022 FOURIER-COMPLETION NODE IS CLOSED (unconditional, interval bands). The single biggest open measure-side sub-lemma, PROVEN. Kernel-pure, root-wired.
+
+Prompt (owner): prove the Parseval completion identity, build the ZMod q Fourier infra.
+
+CONCURRENT LANDING (pulled first): opus-S214 had JUST proved the identity (completion_identity) + the k=0 split (completion_diff_bound: ||C_w - b^2/q|| <= (1/q) Sum_{k!=0} ||B_hat(k)|| ||B_hat(wk)||), concurrent with my cont.18 hand-off of the derivation. Owner dispatches same prompt to many machines. DISCIPLINE: don't re-prove what landed; ask what X was FOR and prove the NEXT thing. The identity was done; the node's OTHER half (the final assembly opus stopped short of) was still open. I closed that.
+
+PROVED (LRCFourierClosed.lean, kernel-pure [propext, Classical.choice, Quot.sound], 8479 green, root-wired):
+- completion_closed_of_coeffBound: from opus's completion_diff_bound + per-coeff bound hcoeff (opus B.2) + death-star's harmonic_ratio_sum_mul_le, ||C_w - b^2/q|| <= 5 q (log2 q+1)^2 / P. TWO BRIDGES: (a) P>0 + ratio floor => w*z!=0 for z!=0 (if w*z=0 then P<=cdist z * cdist 0 = 0) -- the floor SUPPLIES the unit, no unit hypothesis; (b) range-q sum -> ZMod q sum via Finset.sum_bij' (k |-> (k:ZMod q), z |-> z.val). Constants close: (q^2/4)*(20/P)=5q^2/P, then /q from identity => 5q/P.
+- norm_bandDFT_interval: discharges hcoeff for INTERVAL bands B={lo,...,lo+len-1} -- bandDFT q B j = opus's B.2 coefficient at freq -j, so ||B_hat(j)|| <= q/(2 cdist j) via norm_bandCoeff_le + cdist(-j)=cdist j.
+- completion_closed_interval: UNCONDITIONAL on interval bands -- ||C_w - b^2/q|| <= 5 q (log2 q+1)^2/P, no hyp beyond P>0 + ratio floor. THE NODE IS CLOSED.
+
+WHAT CLOSING MEANS: the mapping pass (cont.18 Explore) named this THE sole unproven link on the Fourier/OffLine<=f(E3) route -- "proving it lights up the whole chain." The per-cell M it produces feeds MultCorrelation.offdiag_mcorr_sq_le, which with E3Budget.E3_lt_choose gives OffLine<=f(E3) energy bound + density floor. A full analytic route to the residual measure floor now has NO gap at this node.
+
+FOUR HANDS, ONE DIVISION OF LABOR: death-star hyperbola_box_count + harmonic_ratio_sum_mul_le (S9-13); opus orthogonality + coeff bound + Parseval identity (S213-214); me off-diag aggregation + closing assembly (cont.18-19). Nobody built the whole thing; each brick designed to compose, and they did.
+
+My LRC Lean ~102 nodes, S114..S127. FILES: LRCFourierClosed.lean, reflection the-fourier-completion-node-is-closed-kps-S127.md. Messaged opus/death-star.
+
+NEXT: the Fourier node is closed; the OffLine<=f(E3) gate now needs only the wiring [closed node -> per-cell M -> offdiag_mcorr_sq_le -> OffLine -> density floor] assembled (opus's LEM-023/mcorr side). The OTHER open measure branch = two-scale supply COMPLETENESS (residual => two-/multi-scale/ray shape), still open. And the signed t>=3 (THM-684) is separate/open.
+
 ## opus-2026-07-11-S214 -- LEM-022 Fourier completion STAGE B.3 THE COMPLETION IDENTITY, PROVED (LRCFourierCompletionC.lean, kernel-pure, foundational-only, root-wired). The analytic CRUX of the OffLine gate's t2 bound. + the k=0-split difference bound. Final numeric assembly (B.2 per-term + harmonic sum + band bridge) scoped.
 
 Prompt (owner): continue B.3 as left off, pull frequently, aim to complete the formalization, take the hardest available tasks.
