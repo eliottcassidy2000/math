@@ -7,6 +7,8 @@ import Mathlib
 import TournamentH7.LRCFourierCompletion
 import TournamentH7.LRCHyperbolaBox
 
+set_option maxHeartbeats 800000
+
 /-!
 # LEM-022 Fourier completion, Stage B (opus-S213) — the t2 per-cell equidistribution bound
 
@@ -89,5 +91,77 @@ theorem sum_exp_orthogonality (q : ℕ) (hq : 0 < q) (h : ℤ) :
     rw [geom_sum_eq hzne, hzq]
     simp
 
+/-- **The sine witness.**  `|sin(π h/q)| ≥ 2·cdist(h)/q` — the input Stage A's `norm_expSum_le`
+consumes with `d = cdist h`.  Proof: `|sin(π·/q)|` has period `q` in `h` (via `sin(x + nπ) = ±sin x`),
+reducing to the residue `r = (h : ZMod q).val`; then Jordan's inequality on `min(r, q−r)/q ≤ 1/2`. -/
+theorem sine_cdist_witness (q : ℕ) (hq : 0 < q) (h : ℤ) :
+    2 * ((LonelyRunner.HyperbolaBox.cdist (h : ZMod q) : ℝ) / q) ≤ |Real.sin (π * (h : ℝ) / q)| := by
+  have hqR : (0 : ℝ) < (q : ℝ) := by exact_mod_cast hq
+  haveI : NeZero q := ⟨hq.ne'⟩
+  set r : ℕ := (h : ZMod q).val with hr
+  have hrq : r < q := ZMod.val_lt _
+  have hrmod : (r : ℤ) = h % q := by rw [hr, ZMod.val_intCast]
+  have hcast : (h : ℝ) = (q : ℝ) * ((h / q : ℤ) : ℝ) + (r : ℝ) := by
+    have hdm : (h : ℤ) = q * (h / q) + (r : ℤ) := by
+      have := Int.ediv_add_emod h q; omega
+    exact_mod_cast hdm
+  -- reduce `|sin(π h/q)|` to `|sin(π r/q)|`
+  have hred : |Real.sin (π * (h : ℝ) / q)| = |Real.sin (π * (r : ℝ) / q)| := by
+    have hn : π * (h : ℝ) / q = π * (r : ℝ) / q + ((h / q : ℤ) : ℝ) * π := by
+      rw [hcast]; field_simp; ring
+    have hcos1 : |Real.cos (((h / q : ℤ) : ℝ) * π)| = 1 := by
+      rw [Real.cos_int_mul_pi]; simp
+    rw [hn, Real.sin_add, Real.sin_int_mul_pi, mul_zero, add_zero, abs_mul, hcos1, mul_one]
+  rw [hred]
+  have hr_nonneg : (0 : ℝ) ≤ π * (r : ℝ) / q := by positivity
+  have hr_le_pi : π * (r : ℝ) / q ≤ π := by
+    rw [div_le_iff₀ hqR]
+    have : (r : ℝ) ≤ q := by exact_mod_cast le_of_lt hrq
+    nlinarith [Real.pi_pos]
+  have hsin_nonneg : 0 ≤ Real.sin (π * (r : ℝ) / q) :=
+    Real.sin_nonneg_of_nonneg_of_le_pi hr_nonneg hr_le_pi
+  rw [abs_of_nonneg hsin_nonneg]
+  have hcd : LonelyRunner.HyperbolaBox.cdist (h : ZMod q) = min r (q - r) := rfl
+  rw [hcd]
+  rcases le_total r (q - r) with hle | hle
+  · rw [min_eq_left hle]
+    have hle2 : (r : ℝ) / q ≤ 1 / 2 := by
+      rw [div_le_iff₀ hqR]
+      have h2r : 2 * r ≤ q := by omega
+      have : (2 * r : ℝ) ≤ q := by exact_mod_cast h2r
+      linarith
+    have hj := two_mul_le_sin_pi_mul (by positivity) hle2
+    calc 2 * ((r : ℝ) / q) ≤ Real.sin (π * ((r : ℝ) / q)) := hj
+      _ = Real.sin (π * (r : ℝ) / q) := by rw [mul_div_assoc]
+  · rw [min_eq_right hle]
+    have hqr : Real.sin (π * (r : ℝ) / q) = Real.sin (π * ((q - r : ℕ) : ℝ) / q) := by
+      have hpsub : π * ((q - r : ℕ) : ℝ) / q = π - π * (r : ℝ) / q := by
+        rw [Nat.cast_sub (le_of_lt hrq)]; field_simp
+      rw [hpsub, Real.sin_pi_sub]
+    have hle2 : ((q - r : ℕ) : ℝ) / q ≤ 1 / 2 := by
+      rw [div_le_iff₀ hqR]
+      have h2r : 2 * (q - r) ≤ q := by omega
+      have : (2 * ((q - r : ℕ) : ℝ)) ≤ q := by exact_mod_cast h2r
+      linarith
+    have hj := two_mul_le_sin_pi_mul (by positivity) hle2
+    rw [hqr]
+    calc 2 * (((q - r : ℕ) : ℝ) / q) ≤ Real.sin (π * (((q - r : ℕ) : ℝ) / q)) := hj
+      _ = Real.sin (π * ((q - r : ℕ) : ℝ) / q) := by rw [mul_div_assoc]
+
+/-- **B.2 — the band Fourier coefficient bound.**  The Fourier coefficient of the interval band
+`B = [lo, lo+len)`, `B̂(h) = Σ_{r<len} e_q(h(lo+r))`, obeys `‖B̂(h)‖ ≤ q/(2·cdist h)` for `h ≢ 0`.
+Stage A (`norm_expSum_le`) composed with the sine witness. -/
+theorem norm_bandCoeff_le (q : ℕ) (hq : 0 < q) (h lo : ℤ) (len : ℕ)
+    (hh : (h : ZMod q) ≠ 0) :
+    ‖∑ r ∈ Finset.range len,
+        Complex.exp ((2 * π * ((h : ℝ) * ((lo : ℝ) + r) / q) : ℝ) * Complex.I)‖
+      ≤ (q : ℝ) / (2 * (LonelyRunner.HyperbolaBox.cdist (h : ZMod q) : ℝ)) := by
+  haveI : NeZero q := ⟨hq.ne'⟩
+  have hcd_pos : 0 < LonelyRunner.HyperbolaBox.cdist (h : ZMod q) :=
+    LonelyRunner.HyperbolaBox.one_le_cdist hh
+  have hd : (0 : ℝ) < (LonelyRunner.HyperbolaBox.cdist (h : ZMod q) : ℝ) := by exact_mod_cast hcd_pos
+  exact norm_expSum_le q hq h lo len _ hd (sine_cdist_witness q hq h)
+
 end FourierCompletion
 end LonelyRunner
+

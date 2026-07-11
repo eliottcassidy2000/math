@@ -1,3 +1,20 @@
+## opus-2026-07-11-S213 -- OFFLINE GATE: LEM-022 FOURIER COMPLETION STAGE B, foundational bricks LANDED (LRCFourierCompletionB.lean, kernel-pure, foundational-only, root-wired). Took over death-star's dormant Stage B (HYP-5890). B.1 orthogonality + B.2 band coefficient bound done; B.3 completion identity scoped as handoff.
+
+Prompt (owner): go work the OffLine <= f(E3) B5 gate, work the remaining pieces and angle toward the best possible formalization state.
+
+SYNTHESIS FIRST (scout + reading): the OffLine gate = the Fourier route to per-ruler liveness (THM-680: LM/q >= 0.1124 - OffLine; OffLine < 0.1124 => live => lonely). Its consumer half is 100% in Lean (LRCDiscreteBonferroni B5 machine + lrc14_from_ledger); its structural rungs are in Lean (LRCE3Budget E3<C(k,2)); the ANALYTIC bridge (the t2 per-cell equidistribution feeding OffLine) was NOT. death-star's LEM-022 Stage A (LRCFourierCompletion: norm_expSum_le, ||interval exp-sum|| <= q/2d) was done; Stage B unbuilt + dormant since 07-09 (fleet pivoted to the measure/witness route). LOW collision risk -- messaged death-star to take it over.
+
+DELIVERED (LRCFourierCompletionB.lean, kernel-pure [propext,Classical.choice,Quot.sound], sorryAx 0, root-wired):
+- B.1 sum_exp_orthogonality: Sum_{x<q} e_q(hx) = q*1{q|h} (finite additive-character orthogonality; geom_sum_eq + exp_int_mul_two_pi_mul_I + exp_eq_one_iff).
+- sine_cdist_witness: |sin(pi h/q)| >= 2*cdist(h)/q (|sin(pi .)| q-periodic via sin(x+npi)=+-sin x, reduce to residue r=(h:ZMod q).val, then Jordan two_mul_le_sin_pi_mul on min(r,q-r)/q <= 1/2). The witness Stage A's norm_expSum_le consumes.
+- B.2 norm_bandCoeff_le: the interval-band Fourier coefficient ||B_hat(h)|| = ||Sum_{x in [lo,lo+len)} e_q(hx)|| <= q/(2 cdist h) for h != 0 mod q. Stage A composed with the sine witness -- the first fully-Lean per-cell band-coefficient bound; discharges the mcorr A w <= M input that kps's offdiag_mcorr_sq_le assumes.
+
+REMAINING (B.3, scoped handoff): the completion identity C_w = b^2/q + (1/q) Sum_{h!=0} B_hat(h) conj(B_hat(w^-1 h)) (Fourier-invert 1_B via B.1 orthogonality, expand the correlation, sum-swap) + the assembly |C_w - b^2/q| <= 5q(log2 q +1)^2 / P(w) via B.2 + death-star's harmonic_ratio_sum_mul_le (P(w^-1)=P(w)). A genuine multi-session analytic piece; the two hardest sub-bricks (orthogonality + coefficient bound) are now DONE. Does NOT touch the open signed t>=3 (THM-684).
+
+Files: LRCFourierCompletionB.lean (+root); tasks #36-39. -> death-star LEM-022/S9-S13 (Stage A, taken over), klein THM-683, kps LRCMcorrHyperbola/LRCMultCorrelation (the consumer), monad THM-680 (the OffLine floor), THM-681.
+
+---
+
 ## kind-pasteur-2026-07-10-S127 (cont.17) -- the (2,2) mod-2g lift: PROVED the terminating BASE CASE (k=0), reported HONESTLY that the general case is the open-core 2-adic descent (NOT closable). Kernel-pure, root-wired.
 
 Prompt (owner): prove the (2,2) mod-2g lift, the last detuned residual, aim to close remaining obligations.
