@@ -21,6 +21,23 @@ HONEST BOUNDARY: the further step (energy -> OffLine <= f(E3) -> LM>0 -> live) n
 My LRC Lean ~106 nodes S114..S127. FILES: LRCZcorrEnergy.lean, reflection the-pair-correlation-is-the-hinge-two-new-angles-kps-S127.md.
 
 NEXT: (1) offDiag_tripleSum_le (branch B t=3, needs the 3D box count -- death-star/me); (2) OffLine formalization (define OffLine in Lean + THM-680 liveness -> connect energy to LM>0); (3) branch A quantitative floor => bounded-denominator realization for spread clusters.
+## opus-2026-07-11-S216 -- THE t≥3 SIGNED CANCELLATION IS SUPERSEDED; the real crux is a rank-≤5 lattice reciprocal-product sum (= LEM-022 one rank up). SYNTHESIS + honest redirect, backed by 4 concept-cluster scouts + the transfer THM-685.
+
+Prompt (owner): continue with the next hardest task, pull often, consider topics related to cross-triple signed cancellation, search heavily through the repo for each of them and any past work we could leverage; PRIORITIZE CLOSING MATHEMATICS before formalizing.
+
+DID THE SEARCH (4 parallel Explore scouts: self-similar/eigenfunction, relation-lattice/W₀, Kronecker-lines/torus, cumulants/power-savings). They converged UNANIMOUSLY:
+
+THE VERDICT: the t≥3 character-layer signed cancellation (THM-684, death-star's −5/7 self-similarity) is **provably non-closeable by that route** — the layer series `LM/Q = (6/7)^13 + Σ_t layer_t` is order-one, alternating, NON-truncatable (THM-685(B), PROVED-exact). Every agent who tried to bound the recursion (death-star S11 eigenfunction; klein S233 cascade) hit the identical wall. It is **SUPERSEDED** by THM-685(A) the Kronecker transfer (`|LM(q) − q·μ(S)| ≤ Σv`, PROVED + Lean-formalized sorry-free in LRCMeasureTransfer.lean), which bypasses the character expansion entirely and moves ALL remaining content to the measure floor μ(S) > 0.
+
+THE SINGLE REMAINING OBLIGATION (Lean): `LRC14Statement ⟸ LRCUpTo13 (cited) + SafeMeasureFloor`, kernel-pure, every other branch discharged foundational-axioms-only (LRCResidualMeasureFloor.lean). SafeMeasureFloor = "every residual family has 0 < volume(safePeriod v)" = **AP/consecutive minimizes μ** (THM-530/657/527, HYP-2602/2607/2608 — six independent routes, verified exhaustively 0 exceedances, NOT proved).
+
+VALIDATED EXACTLY (lrc14_ap_minimizes_mu_koksma_route_opus_S216.py): raw safe measure μ(S) = 0.000000 for AP {1..13} AND its dilate (isolated tight extremal, matches discrete LM/Q=0); rises monotonically with spread to (6/7)^13 = 0.1348 (wide dissociated, max 401 → 0.1354). Koksma per-pair bound |A(a,b)−(6/7)²| ≤ (24/7)/max(a,b) (THM-686(C), the continuum twin of my LEM-022 t2 bound) holds, 0 violations. Absolute pairwise sum overshoots the signed deviation up to 26× at moderate spread (barely-covers) — so the signed/P(w) refinement is needed exactly in the dissociated-but-not-wide middle.
+
+THE SHARP CONNECTION (the payoff for the owner): the sum that actually closes LRC(14) — `Σ_{n∈Λ°(E)} D7(n mod 7)/∏_j n_j` (HYP-2606/2646, conditionally convergent, ruled by support-6 relation density R6 per corrected THM-538) — is a **character-twisted reciprocal-product sum over a lattice**, the higher-rank analog of the t2 hyperbola sum I ALREADY FORMALIZED in LEM-022: `Σ_{h≠0} 1/(cdist h · cdist wh)` bounded via death-star's harmonic_ratio_sum_mul_le (rank-1, ratio lattice P(w)). **My t2 result is the rank-1 case of the exact object that closes the theorem; the last gap is the same sum at rank ≤ 5 with the D7 twist, closed by a Minkowski successive-minima count on Λ°(E)** (HYP-2608a, "the single highest-value next step"). Not a character-sum bound — a lattice-point count.
+
+DELIVERED: reflection 07-reflections/the-signed-cancellation-is-support-6-not-t3-opus-S216.md (the full synthesis + honest THM-538 correction); 2 exact validation scripts (+outs). Task #41 resolved (the t≥3 target is superseded, recorded). Handoff: stop bounding t≥3 character layers; the live target is the rank-≤5 lattice reciprocal-product / Minkowski count. -> THM-684/685, THM-538, HYP-2606/2608/2645/2646, THM-530/657, LEM-022, THM-686(C), LRCResidualMeasureFloor.lean.
+
+---
 
 ## opus-2026-07-11-S215 -- LEM-022 t2 FOURIER-COMPLETION NODE **COMPLETE** IN LEAN (LRCFourierCompletionC.lean, kernel-pure, foundational-only, root-wired). completion_band : ||C_w - b^2/q|| <= 5q(log2 q+1)^2/P(w) for the actual interval band, UNCONDITIONAL. The whole OffLine-gate t2 bound, from scratch. Closes kps's 'single biggest open measure-side sub-lemma'.
 
