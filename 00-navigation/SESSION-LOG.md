@@ -14,6 +14,25 @@ REMAINING (task #40, scoped handoff): the final assembly |C_w - b^2/q| <= 5q(log
 Files: LRCFourierCompletionC.lean (+root); tasks #39 (done: identity+diff), #40 (assembly). -> opus-S213 (B.1/B.2), death-star LEM-022/harmonic_ratio_sum_mul_le, kps LRCMcorrHyperbola (consumer), monad THM-680 (OffLine floor).
 
 ---
+## kind-pasteur-2026-07-11-S127 (cont.18) -- MEASURE-SIDE CLOSURE: closed the ANALYTIC half of the single biggest open sub-lemma (opus's Fourier-completion B.3), reducing the whole node to JUST its Parseval identity. Kernel-pure, root-wired.
+
+Prompt (owner): work the measure-side closure, complete the formalization, take the most difficult available tasks, pull frequently.
+
+MAPPED FIRST (Explore agent): project is genuinely sorry-free; entire open gap = named citation Props. On the Fourier / OffLine<=f(E3) route, exactly ONE unproven link: opus-S213 Stage B.3, the interval pair-correlation bound |C_w - b^2/q| <= (q/4) Sum_{h!=0} 1/(cdist h cdist(w h)) <= 5 q (log2 q+1)^2/P. Everything around it in Lean (opus B.1 orthogonality + B.2 coeff bound; death-star hyperbola_box_count + harmonic_ratio_sum_mul_le; my offdiag_mcorr_sq_le; opus E3_lt_choose). "Proving B.3 lights up the whole chain." = THE hardest attackable measure-side task.
+
+B.3 = two pieces: (1) Parseval completion IDENTITY C_w = b^2/q + (1/q)Sum_{h!=0} B_hat(h) conj(B_hat(w h)) [algebra, finite Fourier]; (2) analytic AGGREGATION bounding the off-diag sum [my target].
+
+DELIVERED (2) (LRCFourierAggregation.lean, kernel-pure [propext, Classical.choice, Quot.sound], 8478 green, root-wired TournamentH7.lean:479):
+- offDiag_bandSum_le (w, hw:IsUnit w, bc:ZMod q->C, hbc: forall h!=0 ||bc h||<=q/(2 cdist h)): ||Sum_{h!=0} bc(h) conj(bc(w h))|| <= (q^2/4) Sum_{h!=0} 1/(cdist h cdist(w h)). Triangle ||Sum||<=Sum||.|| + ||bc h * conj(bc(wh))||=||bc h||||bc(wh)|| + termwise B.2; w unit => w h !=0 so B.2 hits both factors.
+- offDiag_bandSum_le_closed (+ P>0 + hPmin: P<=cdist h cdist(w h)): ||off-diag|| <= 5 q^2 (log2 q+1)^2 / P. Composes death-star harmonic_ratio_sum_mul_le (S P <= 20(log2 q+1)^2); constants CLOSE exactly ((q^2/4)*20/P = 5q^2/P). Cast bridge Q->R via explicit calc (exact_mod_cast can't cross Finset.sum type).
+
+ABSTRACT in bc DELIBERATELY: whoever proves identity (1) instantiates bc = B_hat (opus's norm_bandCoeff_le discharges hbc verbatim) and gets |C_w-b^2/q| <= 5 q (log2 q+1)^2/P with NO further analysis. Two halves compose at a clean seam.
+
+REMAINING = JUST identity (1). Derived it fully (handed to opus): C_w = Sum_{x in B} 1_B(w x); Fourier-invert 1_B via B.1; sub y=w x; swap; orthogonality collapse => (1/q) Sum_h B_hat(h) conj(B_hat(w h)); h=0 term = b^2. HONEST: needs ZMod q character + orthogonality bridged from opus's range-q integer-h form + unit reindex -- genuine finite-Fourier infra, multi-session, Mathlib doesn't hand it over ready (grepped: no convenient AddChar sum orthogonality; why opus proved B.1 by hand). Did NOT fake it; banked analytic half + scoped identity to the theorem.
+
+My LRC Lean ~99 nodes, S114..S127. FILES: LRCFourierAggregation.lean, reflection the-fourier-completion-reduces-to-one-parseval-identity-kps-S127.md. Messaged opus (Stage B owner) + death-star the seam.
+
+NEXT: the Parseval completion identity (1) -- opus's B.3, now the ONLY thing between the proven analytic/combinatorial machinery and |C_w-b^2/q| => per-cell M => offdiag_mcorr_sq_le => OffLine<=f(E3) => density floor. It is finite-Fourier infra (character e:ZMod q->C + orthogonality + inversion + unit reindex), attackable but multi-session. The measure floor / two-scale supply completeness (residual => two-/multi-scale/ray shape) remains the other open branch.
 
 ## klein-2026-07-11-S249 -- THE FIRST-WINDOW WITNESS (THM-697, HYP-5970): PROVED AND FORMALIZED, GREEN ON FIRST COMPILE -- w = 7j+6 puts the cluster phase at EXACTLY 6/7; the packed TOP-BLOCK supply gap CLOSED by a route simpler than the test points; the two witness families are COMPLEMENTARY and jointly cover every packed small part
 
