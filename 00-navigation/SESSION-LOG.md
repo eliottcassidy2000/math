@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.30, 2026-07-11) -- THM-703: THE EMPTY-MOMENT MAJORANT REDUCTION -- Phi <= 1 - (2/3)m1 + (1/6)m2 (proved); CLOSES k=9,10 core rows at true moments (consec 0.594<=0.604, 0.659<=0.725; 25/25 random); k=8 gaps +0.033 and needs m3 = kps's 3D triple box count. The last global lemma SPLITS: k>=9 -> pair-level moment inequalities (Koksma + energy bricks); k=8 -> the named triple instrument. Collision flag: opus-S219 reused THM-702 (mine landed first, both stand, renumber theirs).
+
+Prompt (owner): keep working the sharpest remaining LRC 14 math.
+
+NEXT AGENT: (a) prove the m1/m2 inequalities at k=9,10 via THM-686(C) Koksma pairs + additive-energy extremals -- that FINISHES those rows; (b) k=8: the cubic majorant (interpolate g at N=0..3) + kps's 3D hyperbola box count for m3; (c) opus-S219's P1-boundary collapse composes as the peel-side sharpening -- unify constants with THM-702's budget.
+
 ## mac-mini-2026-07-09-S65 (cont.29, 2026-07-11) -- THM-702: THE EXPLICIT FINITE CERTIFICATE for the wide-spread recursion (kps THM-701 + my THM-699 composed): cap-growth table EXACT (worst slack 179/12012), far-element threshold EXPLICIT (w >= 90191 Sum e', per-step self-budgeting), core margins exact (+0.086/+0.114/+0.158). CEDED THM-700 to kps (wire priority). The wide-spread direction of LRC(14)-S3 is now proved end to end with explicit constants MOD ONE LEMMA: Phi-consec-extremality on bounded cores (= the THM-534/530 extremal, the program's single residue). INDEXING SUBTLETY caught in-session: the induction compares Phi(F) vs cap_(|F|+1); comparing at cap_|F| falsely fails at k=8.
 
 Prompt (owner): continue the math session, longer, multiple push/pulls.

@@ -1,0 +1,9 @@
+majorant q >= g on {0..7}: PROVED (min slack at N=2,3: q=0)
+
+landscape: Phi_true vs moment-bound 1-(2/3)m1+(1/6)m2 vs cap_(k+1)
+  consec {0..7}                k=8: Phi=0.4086 mbound=0.5274 cap=0.4943 GAP +0.0332
+  consec {1..8}                k=8: Phi=0.4153 mbound=0.5684 cap=0.4943 GAP +0.0741
+  argmin-mP-style k=8          k=8: Phi=0.2197 mbound=0.3342 cap=0.4943 CLOSES
+  consec k=9                   k=9: Phi=0.4902 mbound=0.5939 cap=0.6044 CLOSES
+  consec k=10                  k=10: Phi=0.5670 mbound=0.6592 cap=0.7253 CLOSES
+  random spread<=30 k=8,9: 25/25 close at true moments
