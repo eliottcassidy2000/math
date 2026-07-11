@@ -75,16 +75,23 @@ per-step gain `2/21` is provably below the cap growth.
 
 ## Scope — the remaining finite content
 
-No analytic gap remains. What must still be written/checked (all finite):
-1. **The balanced-core base check** — `Φ(F) ≤ cap_{|F|+1}` for bounded-spread `F` (the finite family the
-   recursion bottoms out on); numerically holds with margin `≥ 0.29` over 1500 random wide sets and
-   `≥ 0.086` at the `consec` argmax.
-2. **The cap-growth verification** `cap_{k+1} − cap_k ≥ 2/21 + error` for `k = 8..13` (finite; `0.113, 0.110`
-   at `k = 8, 9`; the increment `2(p_1+p_2)/21` shrinks with `k` in step with the cap growth).
-3. **The explicit far-element threshold** and the summable `O(1/w)` error budget (sharpening THM-700's crude
-   `V(E')/(6w)` constant).
+No analytic gap remains. The finite certificate is now **written** — mac-mini's **THM-702** (exact
+arithmetic) plus an independent grid-numerical cross-check (kps, `05-knowledge/results/lrc14_finite_certificate_kps_S127.md`,
+every digit agreeing). Status of the three items:
+1. **The balanced-core base check** `Φ(F) ≤ cap_{|F|+1}` — margins tabulated and cross-validated (tightest
+   `+0.086` at `|F|=8`, exact indexing `cap_{|F|+1}`). **Reduced, not closed:** the check shows `Φ`-extremality
+   does **not** factor — `p_0` (cover) is maximized at `consec` (THM-534), but `p_1` is **not** (random cores
+   have higher miss-one). So the sole open residual is the *joint* `Φ`-consec-extremality on bounded cores — a
+   `(1/3)p_1`-perturbation of THM-534's `p_0`-extremality, stable because `λ = 1/3 < λ*(m) ≈ 1` (a **third**
+   role for `λ`, beyond the tax and the increment). Same extremal lemma THM-534/530/657 keep isolating.
+2. **The cap-growth verification** — **DISCHARGED exactly** (THM-702): `cap_{k+1}−cap_k =
+   94841/840840, 63/572, 11/91, 12/91, 1/7` for `k=8..12`, worst slack `179/12012 > 0` at `k=8`. The `91 = 7·13`
+   denominators come from the extremal 2-runner packing `{1,13}` (`13 ≡ −1 mod 14`).
+3. **The explicit far-element threshold** — **DISCHARGED exactly** (THM-702): `w ≥ 90191·Σ_{e∈E'} e` via
+   THM-699's proven constant `K₇ = 672`, per-peel self-budgeting (no error summation needed).
 
-The tight margin is elsewhere entirely — it lives in the finite `consec_k` / `L_y` moment check (THM-534).
+The tight margin is elsewhere entirely — it lives in the finite `consec_k` / `L_y` moment check (THM-534),
+which item 1's residual now provably carries.
 
 ## Files
 

@@ -1,0 +1,47 @@
+=== TABLE I: cap-growth (cap_k = min_{|P|=13-k} meas(G_P)) ===
+  cap_13 = 1.00000  (|P|=0)
+  cap_12 = 0.85714  (|P|=1; 6/7 = 0.85714)
+  cap_11 = 0.72527  (|P|=2, argmin (1, 13))
+  cap_10 = 0.60440  cap_9 = 0.49426  cap_8 = 0.38153  (LRC extremals, THM-532/534)
+  2/21 = 0.09524
+  cap_9 - cap_8 = 0.11273  >= 2/21 ? YES
+  cap_10 - cap_9 = 0.11014  >= 2/21 ? YES
+  cap_11 - cap_10 = 0.12087  >= 2/21 ? YES
+  cap_12 - cap_11 = 0.13187  >= 2/21 ? YES
+  cap_13 - cap_12 = 0.14286  >= 2/21 ? YES
+  => cap-growth >= 2/21 for all k=8..12 : CERTIFIED
+
+=== TABLE II: balanced-core check  Phi(F)=p0+(1/3)p1 <= cap_{|F|+1} ===
+  (a) consec_m (the HYP-2644 argmax):
+     Phi(consec_7) = 0.26190   cap_8 = 0.38153   margin = 0.11963  (OK)
+     Phi(consec_8) = 0.40857   cap_9 = 0.49426   margin = 0.08569  (OK)
+     Phi(consec_9) = 0.49015   cap_10 = 0.60440   margin = 0.11425  (OK)
+     Phi(consec_10) = 0.56690   cap_11 = 0.72527   margin = 0.15837  (OK)
+     Phi(consec_11) = 0.62994   cap_12 = 0.85714   margin = 0.22720  (OK)
+     Phi(consec_12) = 0.66613   cap_13 = 1.00000   margin = 0.33387  (OK)
+  (b) robust search over balanced cores (shifted-AP / geometric-near / random), min margin:
+     |F|=7: min margin cap_8 - Phi over balanced search = 0.11963  (OK)
+     |F|=8: min margin cap_9 - Phi over balanced search = 0.08569  (OK)
+     |F|=9: min margin cap_10 - Phi over balanced search = 0.11425  (OK)
+     |F|=10: min margin cap_11 - Phi over balanced search = 0.15837  (OK)
+     |F|=11: min margin cap_12 - Phi over balanced search = 0.22720  (OK)
+     |F|=12: min margin cap_13 - Phi over balanced search = 0.33387  (OK)
+
+--- HARDENING: cap_11 over wide coprime range (a<60, b<80) ---
+min 2-runner lonely measure = 0.72528 at (1, 13)   [= densest packing: 13 = -1 mod 14, so ||13x|| locks to ||x||]
+required window for cap-growth >= 2/21 at both neighbors: [0.6996, 0.7619]
+0.72528 in [0.6996, 0.7619] => CONFIRMED (cap_11 robust; min unchanged from the {1..13} search)
+
+--- STRUCTURE OF THE CORE LEMMA: does Phi-extremality factor? (independent, grid N=120011) ---
+ m | p0(cons) vs max_p0(rand)  |  p1(cons) vs max_p1(rand) |  Phi(cons) vs max_Phi(rand)
+  7|  0.1476  0.1476  CONS     |  0.3428  0.3429  rand>     |  0.2619  0.2619  ~tie
+  8|  0.3272  0.1095  CONS     |  0.2442  0.3899  rand>     |  0.4086  0.2065  CONS
+  9|  0.4162  0.1973  CONS     |  0.2221  0.4668  rand>     |  0.4902  0.3154  CONS
+ 10|  0.5045  0.2507  CONS     |  0.1874  0.5700  rand>     |  0.5669  0.3882  CONS
+=> p0 IS maxed at consec (THM-534); p1 is NOT (random cores have higher miss-one). Phi-extremality is
+   IRREDUCIBLY JOINT: it does NOT reduce to p0-extremal + p1-extremal. consec wins Phi only because its
+   p0-lead outweighs its p1-deficit at weight 1/3.
+--- flip point lambda* = min_F [p0(cons)-p0(F)]/[p1(F)-p1(cons)] (F overtakes consec at lambda*) ---
+  m=8: 1.514   m=9: 1.231   m=10: 0.984   (decreasing in m; all >> 1/3)
+=> THIRD role of lambda=1/3: must be < lambda*(m) so consec stays the Phi-argmax. lambda=1/3 in [0.25, ~0.98]:
+   tax role needs >=0.25, increment role needs 2(p1+p2)/21<=2/21, extremality role needs < lambda*. All three hold.

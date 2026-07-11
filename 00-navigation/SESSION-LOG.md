@@ -3,6 +3,25 @@
 Prompt (owner): keep working the sharpest remaining LRC 14 math.
 
 NEXT AGENT: (a) prove the m1/m2 inequalities at k=9,10 via THM-686(C) Koksma pairs + additive-energy extremals -- that FINISHES those rows; (b) k=8: the cubic majorant (interpolate g at N=0..3) + kps's 3D hyperbola box count for m3; (c) opus-S219's P1-boundary collapse composes as the peel-side sharpening -- unify constants with THM-702's budget.
+## kind-pasteur-2026-07-11-S127 (cont.24) -- WROTE THE FINITE CERTIFICATE (balanced-core + cap-growth tables) for THM-701. COLLISION: mac-mini's THM-702 = same certificate, exact arithmetic, 2h ahead => my grid-numerical version is an INDEPENDENT CROSS-CHECK (every digit agrees). NET-NEW: the {1,13} extremal packing + the core lemma does NOT factor + a THIRD role for lambda=1/3.
+
+Prompt (owner): write the finite certificate: balanced-core + cap-growth tables.
+
+COLLISION HANDLED (defer to first-pusher): mac-mini pushed THM-702 (EXACT-arithmetic certificate) ~2h before me. I did NOT duplicate/overwrite. My grid-numerical computation (N=120011) CROSS-VALIDATES it -- margins match to every printed digit (+0.086/+0.114/+0.158 at |F|=8,9,10; cap_11=0.72527). Two independent methods agreeing on proof-carrying numbers = de-risked. Recorded in results/ + reflection, credited THM-702 canonical.
+
+TABLE I (cap-growth, cap_k=min_{|P|=13-k}meas(G_P), gap 1/14): cap_8..13 = 0.382,0.494,0.604,0.725,0.857,1.000. Growths 0.113,0.110,0.121,0.132,0.143 -- ALL >= 2/21=0.0952. Tightest k=9->10 (0.110, slack +0.015). Monotone increasing => recursion tightest at its base.
+  cap_11 HARDENED: LRC speeds need not be <=13, so recomputed min 2-runner lonely measure over ALL coprime pairs (a<60,b<80) = 0.72527 at {1,13}, inside window [0.6996,0.7619]. {1,13} = densest 2-runner packing (13 = -1 mod 14 locks ||13x|| to ||x||) => EXPLAINS THM-702's exact 91=7*13 denominators.
+
+TABLE II (balanced-core, Phi=p0+(1/3)p1 <= cap_{|F|+1}): consec_m is argmax (search never beats it). Margins +0.120,+0.086,+0.114,+0.158,+0.227,+0.334 for m=7..12. Tightest +0.086 at m=8 (matches THM-702 exact; correct cap_{|F|+1} indexing).
+
+NET-NEW STRUCTURE (only the check reveals): the core lemma does NOT FACTOR. p0(cover) IS maxed at consec (THM-534); p1(miss-one) is NOT (random cores have higher p1; p1(consec) FALLS with m 0.34->0.19 while max p1 RISES 0.34->0.57). Phi maxed at consec ONLY because p0-lead outweighs p1-deficit at weight 1/3. So "Phi-ext <= p0-ext + p1-ext" is FALSE -- the residual is irreducibly JOINT (a (1/3)p1-perturbation of THM-534, using (p0,p1) anti-correlation).
+  THIRD ROLE of lambda=1/3: argmax flips at lambda*(m)=min_F[p0(cons)-p0(F)]/[p1(F)-p1(cons)] = 1.51,1.23,0.98 (m=8,9,10), decreasing but >> 1/3. So lambda must be < lambda* to keep consec the Phi-argmax. lambda=1/3 in [0.25(tax), ~0.98(extremality)] satisfies THREE constraints: tax>=0.25, increment<=cap-growth, extremality<lambda*. 1/7 fails role1; large lambda fails role3.
+
+REMAINING (both agree): the JOINT Phi-consec-extremality on bounded cores -- the SAME consec-maximizes lemma THM-534/530/657 keep isolating, now shown to carry the wide-spread program too. No analytic gap. Items (2) cap-growth + (3) far-threshold DISCHARGED exactly by THM-702 (w>=90191*Sum e', K7=672).
+
+FILES: results/lrc14_finite_certificate_kps_S127.md (both tables + structure), 04-computation/lrc14_finite_certificate_kps_S127.py/.out, reflection the-certificate-that-doesnt-factor-kps-S127.md, THM-701 scope updated (points to THM-702, records non-factoring).
+
+NEXT: attack the JOINT Phi-consec-extremality (the single remaining lemma) -- p0-extremality is THM-534; the new content is that the (1/3)p1 perturbation is stable (lambda<lambda*). @mac-mini @klein own the seven-sector residual.
 
 ## mac-mini-2026-07-09-S65 (cont.29, 2026-07-11) -- THM-702: THE EXPLICIT FINITE CERTIFICATE for the wide-spread recursion (kps THM-701 + my THM-699 composed): cap-growth table EXACT (worst slack 179/12012), far-element threshold EXPLICIT (w >= 90191 Sum e', per-step self-budgeting), core margins exact (+0.086/+0.114/+0.158). CEDED THM-700 to kps (wire priority). The wide-spread direction of LRC(14)-S3 is now proved end to end with explicit constants MOD ONE LEMMA: Phi-consec-extremality on bounded cores (= the THM-534/530 extremal, the program's single residue). INDEXING SUBTLETY caught in-session: the induction compares Phi(F) vs cap_(|F|+1); comparing at cap_|F| falsely fails at k=8.
 
