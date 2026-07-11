@@ -90,3 +90,31 @@ kps strict chain) is unconditional per class today and wholesale modulo (B).
 checks, the census, the exhaustive min-m_P table, the hunt.
 `05-knowledge/results/lrc14_dead_zone_hillclimb_klein_S238.out`: the E-shape
 hill-climbs (consecutive stands at k = 8, 11, 12).
+
+## Addendum — (A) FORMALIZED = the ≤7-arcs pigeonhole DE-CITED (klein-2026-07-11-S251, HYP-5985)
+
+`LRCSevenGapRigidity.lean` (kernel-pure) proves the grand assembly's citation
+`SmallClusterFull` outright — for every nodup cluster `E` with `3 ≤ |E| ≤ 7`,
+`slowμ (goodSet E) = 1` — which is exactly (A)'s rigidity made pointwise:
+
+- **`cgap_sum`**: the k cyclic gaps of a sorted phase enumeration telescope to 1
+  (the wrap capped at `1 + f 0`; `Finset.sum_range_sub` does the telescope).
+- **`cgap_witness` (the bridge)**: ANY gap `> 1/7` makes its left endpoint a
+  goodSet witness. The key simplification found here: an interior gap at `s_i`
+  forces `s_i < 6/7`, so every wrap term `1 + s_j − s_i` clears `1/7` for free —
+  NO maximum-gap selection is needed, any big gap works; the wrap gap is
+  witnessed at the top phase.
+- **`gap_dichotomy`**: `k ≤ 6` ⟹ some gap `> 1/7` (mac-mini's pigeonhole,
+  `LRCMaxGapPigeonhole`); `k = 7` with no big gap ⟹ ALL gaps exactly `1/7`
+  (sum-erase bound) ⟹ the first sorted pair sits at `fract = 1/7` EXACTLY —
+  the PERFECT NET.
+- **`pair_fiber_countable`**: `fract(d·x) = 1/7`, `d ≠ 0` pins `x = (n + 1/7)/d`
+  — a countable fiber; the ≤ 49 tooth pairs give a countable, hence null, bad set.
+- **`smallClusterFull_proved : SmallClusterFull`** assembles: off the null set
+  every time is good; `slowμ(goodSet) = 1`.
+- **`lrc14_from_moment_and_supply`**: LRC(14) = [THM-661 moment floor] +
+  [certificate supply]. **The grand assembly is down from THREE citations to TWO.**
+
+Phases with collisions dedup through `Finset.image` (coincident phases only help:
+fewer distinct points, bigger max gap), which is where nodup-of-values vs
+distinct-teeth is handled — the theorem needs no arithmetic on the teeth at all.
