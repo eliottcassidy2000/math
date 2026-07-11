@@ -1,0 +1,26 @@
+(1) IDENTITY T5(n) = -C(n-1,5):  n:  T5(n)  -C(n-1,5)
+        n=0:     1      1   OK
+        n=1:     0      0   OK
+        n=2:     0      0   OK
+        n=3:     0      0   OK
+        n=4:     0      0   OK
+        n=5:     0      0   OK
+        n=6:    -1     -1   OK
+        n=7:    -6     -6   OK
+        n=8:   -21    -21   OK
+        n=9:   -56    -56   OK
+   => T5 = +1 at n=0, ZERO for 1<=n<=5, negative (=-C(n-1,5)) for n>=6.
+
+(2) B5 = liveCount - PENALTY  (verify reformulation == direct), and the CLEAN RULER:
+     family                          bestB5 @q  (live,pen)   clean-ruler q (live, maxBand)
+     AP {1..13}                         5 @  14  (6, 1)      NONE FOUND (penalty unavoidable)
+     near-AP {1..12,26} (BINDING)       2 @  27  (2, 0)      q=27 (live=2, maxBand=4<=5)
+     covering {1..11,13,26}             9 @  84  (10, 1)     q=41 (live=2, maxBand=2<=5)
+     covering {1..11,13,36}             7 @  70  (8, 1)      q=41 (live=2, maxBand=3<=5)
+     resid A [.. ,23,25]               16 @  84  (16, 0)     q=14 (live=6, maxBand=5<=5)
+     far {1..12,120}                   12 @  39  (12, 0)     q=27 (live=2, maxBand=5<=5)
+
+(3) THE BASE LEMMA (clean ruler): if max_p bandCount(v,q,p) <= 5 and liveCount(q) >= 1,
+    then PENALTY=0 so B5(v,q) = liveCount(q) > 0.  Reduces the depth-5 obligation to:
+    'a live multiplier with no multiplier covering >= 6 runners' -- transparent + Lean-friendly.
+    BINDING near-AP {1..12,26}: clean ruler 27, maxBand 4<=5, B5=liveCount=2>0. DISCHARGED.

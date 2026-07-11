@@ -1,3 +1,26 @@
+## kind-pasteur-2026-07-11-S127 (cont.28) -- FLESHED OUT THE ARCHITECTURE: THM-707 (exact B5 = liveCount - penalty, sharpening THM-671) + the CLEAN-RULER reduction, FORMALIZED kernel-pure in Lean (LRCCleanRuler.lean). The single Lean obligation hB5 now has a transparent seven-sector sufficient condition, machine-checked.
+
+Prompt (owner): work on fleshing out the architecture you created.
+
+THE EXACT IDENTITY (THM-707, sharpens klein THM-671 B5<=liveCount to an EQUALITY): the depth-5 alternating truncation T5(n)=sum_{d<6}(-1)^d C(n,d) = -C(n-1,5) (partial alternating binomial sum), so T5(0)=1, T5(n)=0 for 1<=n<=5, T5(n)<0 for n>=6. Summing over multipliers:
+   B5(v,q) = liveCount(q) - PENALTY(v,q),  PENALTY = sum_{p: bandCount(p)>=6} C(bandCount(p)-1, 5).
+The deficit from THM-671's <= is EXACTLY the C(.-1,5)-weighted mass of DEEPLY-COVERED multipliers (>=6 of 13 runners simultaneously in the 1/7 danger arc). Multipliers with 1<=bandCount<=5 contribute ZERO (depth-5 Bonferroni exact through 5-fold overlaps).
+
+THE CLEAN-RULER REDUCTION (the fleshed-out architecture): if a ruler q has liveCount>=1 AND max_p bandCount<=5, then PENALTY=0 so B5 = liveCount > 0. So:
+   hB5  <=  every residual covering family has a CLEAN RULER (a live multiplier + no multiplier covering >=6 runners).
+Both clauses are SEVEN-SECTOR danger-arc occupancy statements (bandCount = # runners in the 1/7 danger arc): liveCount>=1 = some multiplier leaves the arc EMPTY (lonely); maxBand<=5 = the arc never holds >=6 runners (shallow coverage). This makes HYP-5995's two-routes-one-ladder an EQUALITY: the fine-scale B5 IS the coarse seven-sector occupancy. Binding near-AP {1..12,26} discharged by the clean pair-sum ruler q=27 (maxBand 4, B5=liveCount=2>0). The full AP {1..13} has NO clean ruler (penalty 1) but is NOT residual (exact M=1/14 branch) -- the reduction is asked only where it holds.
+
+FORMALIZED KERNEL-PURE (LRCCleanRuler.lean, root-wired, builds green, [propext, Classical.choice, Quot.sound]):
+- trunc5_of_le_five: n<=5 => T5(n) = live indicator (interval_cases + decide).
+- b5_pos_of_clean: shallow coverage + a live multiplier => 0 < B5 v q (the clean-ruler lemma; reuses B5_le_liveCount's sum-swap).
+- CleanRuler (def) + exists_B5_pos_of_cleanRuler: a clean ruler supplies the EXACT per-family hB5 witness (exists q, 0<q and 0<B5 v q). So a clean-ruler supply over all residual families DISCHARGES hB5 = the last analytic obligation of the grand assembly.
+
+NET: turned the informal HYP-5995 architecture into (i) a precise canon theorem with the exact identity + sub-lemma structure, and (ii) a machine-checked Lean reduction giving a NEW, transparent, penalty-free route to the single Lean obligation. The remaining open content is now a clean seven-sector statement (every bounded residual has a live+shallow ruler), NOT a depth-5 signed cancellation -- THM-707 removed the Bonferroni opacity.
+
+HONEST: my LRCCleanRuler builds green in isolation + kernel-pure; the ROOT-aggregate build (lake build TournamentH7) hits the PRE-EXISTING native segfault (0xC0000005) on unrelated cert/census files (the one I flagged to mac-mini: not a maxRecDepth issue, needs file-splitting) -- NOT caused by my file. FILES: THM-707 canon; LRCCleanRuler.lean (+root import); lrc14_B5_architecture_kps_S127.py/.out; (companions lrc14_B5_moment_ladder, lrc14_B5_adversarial_floor).
+
+NEXT: prove the clean-ruler SUPPLY (every bounded residual has a live+shallow ruler) -- the reduced hB5, now a transparent seven-sector existence claim; + THM-701 peel for the unbounded direction. For the hB5 owners (klein/monad) + opus.
+
 ## kind-pasteur-2026-07-11-S127 (cont.27) -- FINISHING: the single Lean obligation hB5 IS the seven-sector moment ladder at scale 1/14, and it COMPOSES with THM-701 into ONE proof (peel handles unbounded, B5 discharges bounded residual). Binding case = near-AP, floor B5=2, pair-sum ruler. (HYP-5995.)
 
 Prompt (owner): work on finishing it up, and any remaining LRC 14 work.
