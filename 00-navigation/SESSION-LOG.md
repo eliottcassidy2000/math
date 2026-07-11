@@ -26,6 +26,21 @@ PROVABLE sub-bounds: (i) at the two-largest pair-sum q=v12+v13>Vmax, bandCount(v
 RESOLVES THE DEPTH QUESTION: depth-5 (the Lean B5 obligation''s depth) is CORRECT on the true (generic) residual -- no THM-675 depth escalation needed there. HONEST: (1) is strong adversarial evidence, not a proof; a rigorous SHALLOW proof = an additive-combinatorics statement (no dilate of a generic family puts 6 runners in a 1/7-arc).
 
 FILES: lrc14_shallow_depth5_kps_S127.py/.out; HYP-6005. NEXT: rigorous SHALLOW (the additive statement) for generic residuals; compose with klein floor (LIVE). For klein/monad (hB5), mac-mini (THM-668/678), opus (ladder).
+## opus-2026-07-11-S227 -- FORMALIZED THM-709: the PRIME CLEAN RULER q=13 discharges hB5 for the whole sub-class of residuals with no speed divisible by 13. Kernel-pure Lean, root-wired, builds green.
+
+Prompt (owner): work the remaining rungs + LRC(14) formalization tasks, pull frequently.
+
+THE RESULT (LRCPrimeRuler.lean, cleanRuler_of_not_dvd_13, axioms [propext, Classical.choice, Quot.sound], BUILD OK): if a 13-speed family v has 13 does-not-divide v_i for all i, then q=13 is a CLEAN RULER -- bandCount v 13 p = 0 for every p in (0,13). By kps THM-707's exists_B5_pos_of_cleanRuler this gives the per-family hB5 witness, so hB5 (the SINGLE remaining LRC(14) Lean obligation) is DISCHARGED for the entire residual sub-class avoiding 13|v_i.
+
+WHY: at q=13 the safe band [ceil(13/14),floor(169/14)]=[1,12] is EXACTLY the nonzero residues mod 13. Runner out-of-band at p iff (v_i p) mod 13 = 0 iff 13|v_i p. 13 prime + 13 does-not-divide p (p in (0,13)) + 13 does-not-divide v_i => 13 does-not-divide v_i p => residue nonzero => in band. So bandCount=0 everywhere, liveCount=12, maxBand=0. Elementary residue arithmetic (Prime.dvd_mul + Int.dvd_of_emod_eq_zero + omega), NO decide/native_decide.
+
+THE COMPLEMENT (the hard case, pinned): the families NOT covered are exactly those WITH a speed =0 mod 13 (a multiple of 13) -- the AP {1..13} (speed 13), {1..12,26} (26=2*13). These are the tight residuals, handled by the pair-sum ruler (kps THM-707, {1..12,26} at q=27). This IS the "13 is prime" phenomenon (mac-mini HYP-4382). Same argument gives clean rulers at any prime q in {7,11,13} (band [1,q-1]=all nonzero), so a family is clean-ruled unless it has a speed divisible by EACH of 7,11,13 -- shrinking the hard class further (7/11 analogues are one-line copies).
+
+VERIFIED (S226 script): q=13 clean on 2000/2000 random families avoiding 13|.
+
+DELIVERED: THM-709 canon + LRCPrimeRuler.lean (root-wired, green) + session log. This is a concrete FORMALIZED rung of the finite+cited finish -- it removes the large "no multiple of 13" sub-class from hB5, leaving the multiple-of-13 tight residuals (pair-sum ruler, kps). -> THM-707(kps)/671, HYP-4382, opus-S226, LRCPairSumDispatch.
+
+---
 
 ## mac-mini-2026-07-09-S65 (cont.32, 2026-07-11) -- THM-708: A NON-AP TIGHT POINT -- {1..11,13,24} has M = 1/14 EXACTLY (all p/q, q<700; the 12->24 = 2*12 DOUBLING rearrangement; siblings 11->25/13->15/6->20 escape to 1/11,1/13,2/23). Resolves opus-S226's clean-ruler edge case STRUCTURALLY: non-covering (14 divides nothing) + tight => sieve-dispatched with equality, no clean ruler possible or needed; opus census 72/72 on the true residual class. kps THM-707 supply correctly scoped. FLAG: 'M=1/14 => AP/dilate' uniqueness FALSE as stated.
 
