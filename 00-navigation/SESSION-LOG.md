@@ -1,3 +1,27 @@
+## kind-pasteur-2026-07-11-S127 (cont.20) -- PONDERED both open branches (new angles: the pair correlation is the hinge) + WIRED the ZMod q off-diagonal energy (hyperbola_box_count -> zcorr_percell -> t2 energy). Kernel-pure, root-wired. Honest object-mismatch finding.
+
+Prompt (owner): ponder new ways on (two-scale supply completeness; signed t>=3/THM-684), explore them, then wire the closed node into offdiag_mcorr_sq_le + density floor. Pull/push often, consider deeply.
+
+READ DEEPLY (both branches' canon): THM-698 (klein S250, shape-coverage audit) + THM-684 (klein S232-233, t>=3 connected cascade).
+
+THE UNIFYING INSIGHT (reflection the-pair-correlation-is-the-hinge): THM-684 proves A_t(U)=#{c: c*u in B all u}, with A_2({u1,u2})=N_{u2/u1} (pair correlation), A_13=LM(q). And my Fourier node bounds C_w=corrCount=#{s in B: ws in B}, and mcorr A w=#{a in A: w^-1 a in A}. These are ONE OBJECT (pair correlation), seen 4 ways. The closed Fourier node bounds it with EXPLICIT constants.
+
+NEW ANGLE branch A (klein THM-698 dissolved the taxonomy gap: shapeOf=(P,E) is two-scale by DEFINITION; dead-zone THM-690/691/692 makes witnessG2>0 a theorem; only the REALIZATION step [witnessG2>0 => 13 certs] for SPREAD clusters at moderate V remains). ANGLE: realization = the constructive SHADOW of a QUANTITATIVE floor. The closed Fourier node has explicit constants => mu_inf >= delta(q) => safe interval length >= delta => rational p/Q with Q <= ceil(1/delta) lands in it => explicit cert at BOUNDED DENOMINATOR. Turns "per-family decidable, banks' territory" into "one uniform bound + bounded-denominator search."
+
+NEW ANGLE branch B (THM-684 relation-triple law: large layer-3 terms = EXACTLY relation triples Schur/AP, a FINITE exact list, closed-form constants Schur=-17/1372; non-relation dev3 = noise). ANGLE: my offDiag_bandSum_le method IS the noise-decay half and EXTENDS to t=3. A_3 Fourier-expands to a DOUBLE character sum; same triangle+coeff-bound+harmonic-sum => |A_3 - b^3/q^2| <= const * Sum_{h,k} 1/(cdist cdist cdist), a 3D box count (death-star's 2D hyperbola_box_count generalizes). So branch B = [Fourier/3D-box bound on NOISE triples] + [exact E3/W0 relation list]. E3<C(k,2) (in Lean) is the relation-triple contribution, NOT a separate track. Concrete Lean next: offDiag_tripleSum_le.
+
+THE WIRING (concrete, done): a mapping pass (Explore agent) found the closed Fourier node is CLOSED BUT DANGLING -- and CRUCIALLY corrCount (BAND self-correlation) != mcorr (SPEED-set correlation): DIFFERENT objects. The LIVE route to offdiag is hyperbola_box_count -> zcorr_percell -> offdiag, with one unproven seam (zcorr connect to the aggregation). Also OffLine/THM-680 (density-floor liveness) is CANON-ONLY, NOT in Lean. So I wired the achievable seam:
+PROVED (LRCZcorrEnergy.lean, kernel-pure [propext, Classical.choice, Quot.sound], 8478 green, root-wired):
+- zcorr_one (zcorr A 1 = |A|, diagonal via image), sum_zcorr (units => Sum_w zcorr A w = |A|^2, fiber a=wb unique for b unit),
+- offdiag_zcorr_sq_le (per-cell zcorr A w <= M => Sum_{w!=1} zcorr^2 <= M(|A|^2-|A|)) -- the ZMod q realization of my offdiag_mcorr_sq_le (avoids the units-group embedding),
+- zcorr_energy_of_hyperbola (compose death-star's zcorr_percell/hyperbola_box_count => Sum_{w!=1} zcorr^2 <= (1+4K^2/P)(|A|^2-|A|)). Completes hyperbola_box_count -> zcorr_percell -> t2 off-diagonal ENERGY.
+
+HONEST BOUNDARY: the further step (energy -> OffLine <= f(E3) -> LM>0 -> live) needs OffLine, which is NOT formalized (canon THM-680 only). The Fourier NODE (band corrCount) is a different object from the speed correlation -- so "wire the Fourier node into offdiag" had an object-mismatch premise; the real wiring is the zcorr->energy seam (done). The synthesis (pair correlation = hinge) shows BOTH branches + the wiring are one object.
+
+My LRC Lean ~106 nodes S114..S127. FILES: LRCZcorrEnergy.lean, reflection the-pair-correlation-is-the-hinge-two-new-angles-kps-S127.md.
+
+NEXT: (1) offDiag_tripleSum_le (branch B t=3, needs the 3D box count -- death-star/me); (2) OffLine formalization (define OffLine in Lean + THM-680 liveness -> connect energy to LM>0); (3) branch A quantitative floor => bounded-denominator realization for spread clusters.
+
 ## opus-2026-07-11-S215 -- LEM-022 t2 FOURIER-COMPLETION NODE **COMPLETE** IN LEAN (LRCFourierCompletionC.lean, kernel-pure, foundational-only, root-wired). completion_band : ||C_w - b^2/q|| <= 5q(log2 q+1)^2/P(w) for the actual interval band, UNCONDITIONAL. The whole OffLine-gate t2 bound, from scratch. Closes kps's 'single biggest open measure-side sub-lemma'.
 
 Prompt (owner): continue B.3 final assembly, pull often, spend a long session working remaining tasks to completion, take the hardest tasks.
