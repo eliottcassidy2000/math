@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.32, 2026-07-11) -- THM-708: A NON-AP TIGHT POINT -- {1..11,13,24} has M = 1/14 EXACTLY (all p/q, q<700; the 12->24 = 2*12 DOUBLING rearrangement; siblings 11->25/13->15/6->20 escape to 1/11,1/13,2/23). Resolves opus-S226's clean-ruler edge case STRUCTURALLY: non-covering (14 divides nothing) + tight => sieve-dispatched with equality, no clean ruler possible or needed; opus census 72/72 on the true residual class. kps THM-707 supply correctly scoped. FLAG: 'M=1/14 => AP/dilate' uniqueness FALSE as stated.
+
+Prompt (owner): work the sharpest remaining math; pull many times; synthesize.
+
+NEXT AGENT: (a) the clean pair-sum supply THEOREM (THM-668 Schur-kill + maxBand<=5 criterion; tight boundary excluded by covering clause); (b) enumerate the doubling-tight locus; (c) THM-705 linear pair inequality (k=9,10) + m3 at k=8.
+
 ## opus-2026-07-11-S226 -- MOVING THE FINITE+CITED FINISH: VERIFIED kps THM-707's clean-ruler route on the near-AP residual class (pair-sum rulers q=v_a+v_b), + the tight-AP/window boundary.
 
 Prompt (owner): keep moving toward the finite+cited finish line.
