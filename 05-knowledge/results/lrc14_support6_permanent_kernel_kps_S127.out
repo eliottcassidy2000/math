@@ -1,0 +1,12 @@
+(1) permanent identity  D7 = prod A(c_j) * perm(zeta^-c_j i):  max err = 1.68e-16  [CONFIRMED]
+(2) closed-form bound 720*(sin(3pi/7)/pi)^6 = 0.64308
+    exhaustive max |D7|    = 0.64308 at c=(3, 3, 3, 3, 3, 3)  (<= bound: True)
+    exhaustive max |Re D7| = 0.14310 at c=(4, 4, 4, 4, 4, 4)  (HYP-2646 claim 0.1431)
+    equality cosets (|D7| = bound): [(3, 3, 3, 3, 3, 3), (4, 4, 4, 4, 4, 4)]  -> the constant cosets c==3, c==4 (mod 7)
+(3) constant-coset closed form D7((c,...,c)) = 720 * A(c)^6:
+    c=1: |D7| = 0.00500   match 720*A(c)^6: True
+    c=2: |D7| = 0.17105   match 720*A(c)^6: True
+    c=3: |D7| = 0.64308   match 720*A(c)^6: True
+    c=4: |D7| = 0.64308   match 720*A(c)^6: True
+    c=5: |D7| = 0.17105   match 720*A(c)^6: True
+    c=6: |D7| = 0.00500   match 720*A(c)^6: True
