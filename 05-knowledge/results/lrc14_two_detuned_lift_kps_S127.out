@@ -1,0 +1,9 @@
+(2,2) half-harmonic family, mod-2g lift, vary #odd multipliers k:
+  k=0: detuned q@g=[2, 2]; @2g detuned-count=2, sum N/q=1/2=0.500, LIFT FIRES=True
+  k=1: detuned q@g=[2, 2]; @2g detuned-count=3, sum N/q=1=1.000, LIFT FIRES=False
+  k=2: detuned q@g=[2, 2]; @2g detuned-count=4, sum N/q=3/2=1.500, LIFT FIRES=False
+  k=3: detuned q@g=[2, 2]; @2g detuned-count=5, sum N/q=2=2.000, LIFT FIRES=False
+=> k=0 (no odd multiplier): lift fires at 2g (2 detuned at q=4). k>=1: fails (odd mults -> q=2 at 2g).
+=> mod-2g lift CLOSES iff no odd harmonic multiplier; else DESCENDS (monad THM-678, open core).
+
+k=0 base-case family [1, 3, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44]: lonely=True  (closed in Lean by lonely14_of_two_detuned_lift2g)

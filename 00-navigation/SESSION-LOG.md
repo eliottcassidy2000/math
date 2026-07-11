@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-10-S127 (cont.17) -- the (2,2) mod-2g lift: PROVED the terminating BASE CASE (k=0), reported HONESTLY that the general case is the open-core 2-adic descent (NOT closable). Kernel-pure, root-wired.
+
+Prompt (owner): prove the (2,2) mod-2g lift, the last detuned residual, aim to close remaining obligations.
+
+INVESTIGATED FIRST (read monad's canon THM-678 + computed): the (2,2) residual = congruent half-harmonic pair (d1 = d2 = g/2 mod g). Branch count at g SATURATES (two q=2 coords each cover g/2 => fill [0,g); badCount1+badCount2 = g exactly), so no branch clears both. monad's mod-2g lift is a 2-adic DESCENT, NOT a closure: at 2g the 2 detuned become q=4 (good, 1/4+1/4<1) BUT every ODD harmonic multiplier m becomes a NEW half-harmonic of 2g (g*m = g mod 2g => q=2). Verified exactly (lrc14_two_detuned_lift): with k odd multipliers, count at 2g = 1/2 + k*(1/2) < 1 ONLY for k=0; k>=1 fails, must lift to 4g, recurses. The obstruction descends the 2-adic tower to the OPEN CORE (mac-mini THM-676 descent-burden; klein pair-sum/dead-zone). NOT independently dischargeable from LRC(<=13). Did NOT fake it.
+
+PROVED THE BASE CASE (LRCTwoDetunedLift.lean, sorry-free, kernel-pure [propext, Classical.choice, Quot.sound], 8480 green, root-wired TournamentH7.lean:463):
+- lonely14_of_two_detuned_lift2g: a d=2 detuned family whose ENTIRE harmonic part is divisible by 2g (k=0, no odd multipliers) is lonely -- apply opus's lonely14_of_two_detuned' at the DOUBLED modulus 2g (both detuned at q=4 there). THE MOD-2G LIFT, formalized.
+- MECHANISM (how little it needs): opus's dispatch at 2g wants ~2g|d_i and (q1,q2)!=(2,2) at 2g, and BOTH follow from ~g|d_i ALONE (2g|d => g|d; 2g/gcd(d,2g)=2 => gcd=g => g|d). No gcd-valuation arithmetic. The only real hypothesis = the k=0 divisibility. Uses Int.ediv_mul_cancel + omega.
+
+BOUNDARY (the honest split of the (2,2) residual by k = #odd multipliers): k=0 (base) CLOSED here; k>=1 (descent) = the open-core 2-adic tower, cited not closed, attacked from the measure side by THM-676/klein. The difficulty was DRIVEN to exactly where the measure floor lives -- the detuned peel and the measure floor are two faces of one wall.
+
+My LRC Lean ~97 nodes, S114..S127. FILES: LRCTwoDetunedLift.lean, lrc14_two_detuned_lift_kps_S127.py/.out, reflection the-mod-2g-lift-terminates-only-without-odd-multipliers-kps-S127.md.
+
+NEXT: the (2,2) k>=1 descent = open core = the measure floor / klein's dead-zone (the same wall my TightRigidity/SafeMeasureFloorPrimitive names). No shortcut; the fleet critical path is klein/mac-mini's measure-side closure. The detuned peel is now MAXIMAL (generic d=2,3 + (2,2) base case all proved; only the open-core descent remains).
+
 ## kind-pasteur-2026-07-10-S127 (cont.16) -- WIRED the d=2/d=3 detuned clearings into opus's MultiDetunedDispatch + SHRANK the THM-678 citation to its half-harmonic residual. Kernel-pure, root-wired. + replied maxRecDepth result to mac-mini (green-light their re-emit).
 
 Prompt (owner): wire threeDetunedClearing into MultiDetunedDispatch nonMultCard=3 branch, work remaining tasks to get LRC(14) into its best state, pull often.
