@@ -18,6 +18,22 @@ COVERAGE (lrc14_prime_ruler_coverage): the prime dispatch discharges ~61% of gen
 NET: split hB5 -- the MAJORITY falls to a decidable divisibility test (formalized, kernel-pure); the difficulty concentrates in the thin prime-rich (AP-like) core. THM-712 canon + LRCPrimeCleanRuler.lean + coverage script/out.
 
 NEXT: composite clean rulers (q=14,15,... for the prime-rich core) + the k=8/k=9 moment base (mac-mini). For opus (THM-709), mac-mini (moment ladder/tight points), klein (measure floor).
+## opus-2026-07-11-S228 -- GENERALIZED THM-709: the prime clean ruler now covers q in {7,11,13} + the composite. Kernel-pure Lean, root-wired, green. Two-branch split of hB5 (prime ruler vs pair-sum).
+
+Prompt (owner): advance it more, push/pull often.
+
+FORMALIZED (LRCPrimeRuler.lean, all axioms [propext, Classical.choice, Quot.sound], BUILD OK, no sorry/native_decide):
+- cleanRuler_of_prime_not_dvd (v q) (hq: q.Prime) (hq14: q<=14) (h: forall i, not (q|v_i)) : CleanRuler v -- the GENERAL prime ruler. For any prime q<=14 the safe band [ceil(q/14),floor(13q/14)]=[1,q-1] is exactly the nonzero residues; q prime + q-not-div-p (0<p<q) + q-not-div-v_i => q-not-div v_i*p => in band => bandCount=0 everywhere. Inequalities close by omega from q<=14; Euclid via Nat.prime_iff_prime_int.
+- cleanRuler_of_not_dvd_7 / _11 / _13 : the three instances (by norm_num).
+- cleanRuler_of_avoids_some_prime : avoids 0 mod SOME q in {7,11,13} => CleanRuler v.
+
+CONSEQUENCE: the only residuals NOT discharged by a prime clean ruler are those with a speed divisible by EACH of 7,11,13 -- measured ~40% of random 13-speed families (far smaller than 'all near-AP'), the structured hard core handled by kps's pair-sum ruler (THM-707/cont.30, maxBand<=4 on generic residuals). So hB5 splits cleanly: [avoids 0 mod some prime in {7,11,13} -> prime ruler, maxBand 0] u [multiple of each of 7,11,13 -> pair-sum ruler].
+
+FLEET CONTEXT (pulled): kps cont.30 (HYP-6005) proved the pair-sum ruler is SHALLOW (maxBand<=4) on generic residuals (depth-5 failures = coarse-reducible NON-residuals); mac-mini THM-710 (eigen-transfer m_r->((7-r)/7)m_r) reduced the moment ladder to {deg-3 @ k=8}+{deg-2 @ k=9} only; klein cont.34 PROVED the <=7-arcs pigeonhole in Lean (LRCSevenGapRigidity.lean green). So the finish is assembling fast in Lean on all fronts.
+
+DELIVERED: THM-709 canon addendum + LRCPrimeRuler.lean generalized (root-wired, green) + session log. Fixes en route: Int.coe_nat_prime renamed -> Nat.prime_iff_prime_int.mp; hq.prime_int dot-notation resolves to Irreducible (use the iff). -> THM-707(kps)/710(mac-mini)/671, HYP-4382/6005, LRCPairSumDispatch, klein LRCSevenGapRigidity.
+
+---
 
 ## mac-mini-2026-07-09-S65 (cont.34, 2026-07-11) -- THM-710: THE FACTORIAL-MOMENT EIGEN-TRANSFER -- m_r -> ((7-r)/7) m_r EXACTLY (falling factorials diagonalize the far-element operator, 3-line proof, 200x verified exact); rung arithmetic (6/7)cap_{k+1} + 1/7 <= cap_{k+2} EXACT at every rung => k=10..13 rows inherit from k=9 automatically. THE MOMENT LADDER'S BASE = {deg-3 @ k=8} + {deg-2/THM-705 @ k=9} ONLY. Synthesis: kps cont.29 composed THM-668 o THM-707 (clean pair-sum supply, bounded-decidable, 196/196).
 

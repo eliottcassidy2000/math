@@ -41,7 +41,24 @@ extremal tight locus is pinned at the multiples of 13.
 The same residue argument gives a clean ruler at **any prime `q ∈ {7, 11, 13}`** (each has safe band
 `[1, q−1]` = all nonzero residues, and for prime `q ≤ 13` and `p ∈ (0,q)`, `bandCount = #{i : q ∣ v_i}`).  So
 a family is clean-ruled unless it has a speed divisible by **each** of 7, 11, 13 — shrinking the genuinely
-hard class further.  (Only `q = 13` is formalized here; the 7/11 analogues are one-line copies.)
+hard class further.
+
+## Generalized + composite (opus-2026-07-11-S228, FORMALIZED)
+
+`LRCPrimeRuler.lean` now proves the general lemma and the composite, all kernel-pure
+(`[propext, Classical.choice, Quot.sound]`), root-wired, build green:
+
+- **`cleanRuler_of_prime_not_dvd (q) (hq : q.Prime) (hq14 : q ≤ 14) (h : ∀ i, ¬ (q:ℤ) ∣ v i) : CleanRuler v`**
+  — the general prime ruler (band `[1,q−1]` for any prime `q ≤ 14`; the inequalities close by `omega` from
+  `q ≤ 14`, `Euclid` from `Nat.prime_iff_prime_int`).
+- **`cleanRuler_of_not_dvd_7 / _11 / _13`** — the three instances (`by norm_num` on primality and `q ≤ 14`).
+- **`cleanRuler_of_avoids_some_prime`** — if the family avoids `0 mod q` for *some* `q ∈ {7,11,13}`, it has a
+  clean ruler.  ⟹ **the only residuals NOT discharged by a prime clean ruler are those with a speed divisible
+  by each of 7, 11, 13** — a structured hard core (measured ≈ 40% of random 13-speed families, far smaller
+  than "all near-AP") handled by the pair-sum ruler (kps THM-707 / cont.30).
+
+This is a clean two-branch split of `hB5`: `[avoids 0 mod some prime in {7,11,13} → prime ruler, maxBand 0]`
+∪ `[multiple of each of 7,11,13 → pair-sum ruler]`.
 
 ## Files
 `04-computation/lean/TournamentH7/TournamentH7/LRCPrimeRuler.lean` (root-wired);
