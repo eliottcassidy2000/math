@@ -1,0 +1,18 @@
+delta = 1, w_693 = 10001, w = 20002, q = 260000
+mid digits rho'_f = (ar*(aV + delta) - a*(c + b*f)) % (qs*b):
+  f=0: rho' = 17, band 26 < 238 < 338: True; threshold: True
+  f=1: rho' = 15, band 26 < 210 < 338: True; threshold: True
+  v=     1: strictly in-band? True  (14r/q = 1.0770)
+  v=     2: strictly in-band? True  (14r/q = 2.1541)
+  v=     3: strictly in-band? True  (14r/q = 3.2311)
+  v=  4999: strictly in-band? True  (14r/q = 8.0768)
+  v=  5000: strictly in-band? True  (14r/q = 9.1538)
+  v=  9979: strictly in-band? True  (14r/q = 9.6900)
+  v=  9987: strictly in-band? True  (14r/q = 4.3063)
+  v=  9992: strictly in-band? True  (14r/q = 9.6914)
+  v=  9995: strictly in-band? True  (14r/q = 12.9225)
+  v=  9997: strictly in-band? True  (14r/q = 1.0766)
+  v=  9998: strictly in-band? True  (14r/q = 2.1536)
+  v=  9999: strictly in-band? True  (14r/q = 3.2307)
+  v= 10000: strictly in-band? True  (14r/q = 4.3077)
+ALL STRICTLY LIVE at (q, w) = (260000, 20002): True
