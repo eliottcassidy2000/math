@@ -3,6 +3,19 @@
 Prompt (owner): keep working the endgame.
 
 NEXT AGENT: (a) prove the two shifted-consec extremality statements (k=8: {1..8}, k=9: {1..9}) -- both are now LINEAR in (m1,m2,m3) with fat margins; the pair tools + a triple LOWER bound close them; (b) the clean pair-sum supply uniform theorem (kps); (c) formalize THM-710/711/712 (elementary: eigen-algebra + exact LP vertices + rational tables).
+## kind-pasteur-2026-07-11-S127 (cont.33) -- CHIPPED THE EXTREMAL: the consec-extremality both routes bottom out on is VARIANCE-maximization, and the k=8,9-vs-k>=10 boundary is ONE crossover. consec MAXIMIZES Var(N) (all k, adversarially global) but does NOT minimize E[N]; J-min = Var-max dominating a mean-deviation term (holds k<=9, flips k>=10). (HYP-6015.)
+
+Prompt (owner): keep chipping at the extremal.
+
+Chipping the lemma both routes end at (consec minimizes J=E[N(7-N)] over integer cores = k=9 moment-ladder base = clean-pair-sum core). DECOMPOSITION J = 49/4 - Var(N) - (E[N]-7/2)^2. FINDINGS:
+(1) consec does NOT minimize E[N] -- exhaustive [1..14] argmin E[N] = {2,4,5,6,7,8,10,12,14} (1.3395 < consec 1.4456). consec is NOT the best average coverer. So opus-S221's 'both terms max at consec' is WRONG -- the mean term works AGAINST consec.
+(2) consec MAXIMIZES Var(N) EXACTLY -- adversarial max over primitive 9-cores (large-value + dilated-AP seeds) = Var(consec)=2.9670; exhaustive argmax Var = consec for ALL k=8,9,10,11. So Var(N)-max is a STRICTLY MORE ROBUST + CLEANER extremal than J-min.
+(3) J-min at consec HOLDS k=8,9 but FAILS k>=10 (k=10 argmin J = {2,4,5,6,7,8,9,10,12,14}).
+THE CROSSOVER (exact): J(E)-J(consec) = consec's Var-LEAD minus competitor's mean-GAIN. k=9: Var-lead 0.594 > mean-gain 0.447 (consec wins). k=10: mean-gain 0.462 > Var-lead 0.436 (flips). So J-min is Var-max CONTAMINATED by the mean term, and the crossover lands EXACTLY between k=9 (base, needed) and k=10 (inherits via mac-mini THM-710, NOT needed) -- explaining WHY the moment-ladder base is {k=8}+{k=9} ONLY (not convention -- it is the last k where variance dominates).
+
+VALUE: identifies the RIGHT target -- Var(N)-max at consec (clean, single, robust ALL k), not the composite J -- and EXPLAINS the k=8,9/k>=10 boundary as one mechanism (Var-lead vs mean-gain race, lost at k=10). Whoever proves it should aim at the variance, then spend the k-specific margin (+0.147 at k=9) to recover the J-bound. HONEST: a reformulation + exact mechanism, NOT a proof; Var(N)-max is itself LRC-hard (the AP maximizes empty-count variance = three-distance/bimodal-resonance rigidity in statistical costume).
+
+FILES: HYP-6015; lrc14_extremal_variance_decomp_kps_S127.py/.out; reflection the-extremal-is-variance-not-mean-kps-S127. NEXT: attack Var(N)-max at consec (the clean fundamental extremal) via the three-distance structure; the k-specific margin is a bounded check.
 
 ## klein-2026-07-11-S252 -- THE <=7-ARCS PIGEONHOLE LEAN LANDING (kernel-pure x6) + THM-713 (the k=8 deg-3 row, exhaustive) + GW edge-case confirmation (B5 ledger)
 

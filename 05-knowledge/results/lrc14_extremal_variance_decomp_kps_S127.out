@@ -1,0 +1,10 @@
+k : argmin E[N]=consec? | argmax Var=consec? | argmin J=consec? (exhaustive small box)
+ 8: E[N]min 0 | Var max 1 | J min 1  (Jmin at (1, 2, 3, 4, 5, 6, 7, 8))
+ 9: E[N]min 0 | Var max 1 | J min 1  (Jmin at (1, 2, 3, 4, 5, 6, 7, 8, 9))
+ 10: E[N]min 0 | Var max 1 | J min 0  (Jmin at (2, 4, 5, 6, 7, 8, 9, 10, 12, 14))
+ 11: E[N]min 0 | Var max 1 | J min 0  (Jmin at (2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14))
+
+THE CROSSOVER (Var-lead vs mean-gain), consec vs its J-runner-up:
+  k=9: Var-lead(consec) = +0.594 ; mean-gain(runner-up) = +0.447  => consec J < runner-up (HOLDS)
+  k=10: Var-lead(consec) = +0.436 ; mean-gain(runner-up) = +0.462  => consec J > runner-up (FLIPS)
+  => Var(N)-max is the fundamental extremal (all k); J-min = Var-max beating the mean term (k<=9 only).
