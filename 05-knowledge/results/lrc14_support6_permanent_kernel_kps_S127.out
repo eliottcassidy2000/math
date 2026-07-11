@@ -10,3 +10,6 @@
     c=4: |D7| = 0.64308   match 720*A(c)^6: True
     c=5: |D7| = 0.17105   match 720*A(c)^6: True
     c=6: |D7| = 0.00500   match 720*A(c)^6: True
+(4) zero-mean corollary  Sum_c D7(c) = 1.18e-13  (720*prod_m B(m) = 4.88e-77)
+    B(1..6) magnitudes = [0.0, 0.0, 0.0, 0.0, 0.0, 1.11408]  (B(1)=...=B(5)=0, B(6)=7/(2pi)=1.11408)
+    => support-6 kernel annihilates coset-constants; correction sees only coset-VARIATION of S_c.

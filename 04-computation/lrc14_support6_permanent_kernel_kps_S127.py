@@ -86,5 +86,16 @@ def main():
         d = D7_perm([c0] * 6); cf = 720 * A(c0) ** 6
         print(f"    c={c0}: |D7| = {abs(d):.5f}   match 720*A(c)^6: {abs(d - cf) < 1e-12}")
 
+    # (4) COROLLARY: the kernel has zero mean, Sum_c D7(c) = 720 * prod_m B(m) = 0 (B(1)=0)
+    tot = sum(D7_perm(list(c)) for c in itertools.product(range(1, 7), repeat=6))
+    def B(m):
+        return sum(A(r) * z ** (-r * m) for r in range(1, 7))
+    prodB = 1 + 0j
+    for m in range(1, 7):
+        prodB *= B(m)
+    print(f"(4) zero-mean corollary  Sum_c D7(c) = {abs(tot):.2e}  (720*prod_m B(m) = {abs(720*prodB):.2e})")
+    print(f"    B(1..6) magnitudes = {[round(abs(B(m)),5) for m in range(1,7)]}  (B(1)=...=B(5)=0, B(6)=7/(2pi)=1.11408)")
+    print("    => support-6 kernel annihilates coset-constants; correction sees only coset-VARIATION of S_c.")
+
 if __name__ == "__main__":
     main()

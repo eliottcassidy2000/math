@@ -59,6 +59,22 @@ in phase) forces the matrix rank-1, i.e. all six columns equal, i.e. `c` constan
 all `6^6 = 46656` cosets gives `max|Re D7| = 0.14310` at `c≡4` (and `c≡3`, its conjugate), equal to
 `|Re(720·A(4)^6)|` — a finite, exact certificate of HYP-2646's ruler bound.
 
+### Corollary — the kernel annihilates coset-constants: `Σ_c D7(c) = 0`
+The permanent is multilinear in its columns and column `j` of `ζ^{−c_j i}` depends only on `c_j`, so summing
+the identity over `c∈(F_7^*)^6` decouples:
+`Σ_c D7(c) = Σ_{σ∈S_6} ∏_{j=1}^6 (Σ_{r∈F_7^*} A(r)ζ^{−r σ(j)}) = 6!·∏_{m=1}^6 B(m)`, `B(m):=Σ_{r=1}^6 A(r)ζ^{−rm}`.
+Now `B(m) = (1/2πi)[Σ_{r=1}^6 ζ^{−rm} − Σ_{r=1}^6 ζ^{−r(m+1)}]`, and `Σ_{r=1}^6 ζ^{−rm} = 7·[7∣m] − 1 = −1`
+for `m∈{1,…,6}`. So for `m∈{1,…,5}` (both `m, m+1 ∈ {1,…,6}`) the bracket is `(−1)−(−1)=0`, i.e. **`B(m)=0`**;
+only `B(6) = (1/2πi)[−1 − 6] = −7/(2πi)` survives. Since `B(1)=0`, the product vanishes:
+
+> **`Σ_{c∈(F_7^*)^6} D7(c) = 0`** — the support-6 kernel has **zero mean** over the coset space.
+
+**Consequence for the open tail.** Because `Σ_c D7(c) = 0`, the correction is *centered*:
+`corr(E) = Σ_c D7(c)·S_c(E) = Σ_c D7(c)·(S_c(E) − S̄)` for any constant `S̄`. The wide-spread correction
+therefore sees **only the coset-variation** of the reciprocal sums `S_c(E)`, not their average — precisely
+the cancellation the summation-by-parts / cotangent–Dedekind route (HYP-2614, THM-504-D) is built to exploit.
+This is the structural reason the *signed* series converges where the absolute envelope diverges (MISTAKE-078).
+
 ## Why it matters
 
 - It makes HYP-2613's "the exact support-6 layer is a six-sector root-of-unity permanent" **precise and
