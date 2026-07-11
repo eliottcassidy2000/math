@@ -1,0 +1,22 @@
+=== k=9, diam<=D=12: L=6m1-m2 vs additive structure (consec should be argmin) ===
+  consec_9: L=5.19898  threshold 12(1-cap)=4.74725  margin=0.45173
+  energy(consec)=489  |E-E|(consec)=17  longAP=9
+  --- smallest L (consec should be #1): L | energy | |E-E| | longAP | set ---
+     L=5.19898  en= 489  |E-E|= 17  lAP= 9  [0, 1, 2, 3, 4, 5, 6, 7, 8] <--consec
+     L=5.21338  en= 461  |E-E|= 19  lAP= 8  [0, 1, 2, 3, 4, 5, 6, 7, 9]
+     L=5.34286  en= 437  |E-E|= 21  lAP= 8  [0, 1, 2, 3, 4, 5, 6, 7, 10]
+     L=5.45442  en= 393  |E-E|= 21  lAP= 7  [0, 2, 4, 5, 6, 7, 8, 10, 12]
+     L=5.46871  en= 401  |E-E|= 25  lAP= 8  [0, 1, 2, 3, 4, 5, 6, 7, 12]
+  --- LARGEST L (should be low-energy / far-from-AP): ---
+     L=7.68528  en= 329  |E-E|= 25  lAP= 4  [0, 1, 3, 4, 5, 8, 10, 11, 12]
+     L=7.73478  en= 345  |E-E|= 25  lAP= 4  [0, 2, 3, 4, 5, 9, 10, 11, 12]
+     L=7.79304  en= 333  |E-E|= 25  lAP= 4  [0, 1, 3, 5, 7, 8, 10, 11, 12]
+  corr(L, additive energy) = -0.584  (strongly negative => Freiman link: high energy => low L)
+  is consec argmin(L)? True   gap to 2nd = 0.01440
+
+=== k=10, diam<=D=12: L=6m1-m2 vs additive structure (consec should be argmin) ===
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\lrc14_freiman_link_opus_S222.py", line 52, in <module>
+    base=list(range(k)); Lb=L(base); thr=12*(1-cap[k+1])
+                                               ~~~^^^^^
+KeyError: 11
