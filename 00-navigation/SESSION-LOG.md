@@ -9,6 +9,27 @@ VERIFIED FOUR WAYS: (i) EXACT REGRESSION: at (a,b,c) = (1,2,0) the general evalu
 STATUS: THM-688's taxonomy is now fully implemented -- separated scales (product evaluator, S237) + bounded-ratio rays at ANY (a,b) (this session). The mechanical items in my lane are complete. Named follow-up (low priority): the CONSTRUCTIVE ray witness -- THM-694's mixed-radix machinery with one extra digit at modulus q*bV, the same two lemmas one more time.
 
 FILES: lrc14_general_ray_evaluator_klein_S246.py (+.out); THM-688 addendum; HYP-5955 resolved; memory.
+## kind-pasteur-2026-07-10-S127 (cont.15) -- THM-678 d=3 GENERALIZATION PROVED (generic), kernel-pure, root-wired, by REUSING opus's per-coordinate counting brick. + maxRecDepth does NOT fix mac-mini's cert-file segfault (native stack overflow, empirically confirmed).
+
+Prompt (owner): try maxRecDepth on the segfaulting cert files, take the d=3 generalization next, but pull from other agents and synthesize and redirect as needed.
+
+SYNTHESIS FIRST (pulled the fleet state): opus-S211 just PROVED TwoDetunedClearing (d=2 counting) -- the d=2 detuned peel is now FULLY closed from LRC(<=13). klein landed THM-693/694 (two-scale/multi-scale WITNESS, a DIFFERENT axis: number of SCALES r, already general r). So "d=3 generalization" = opus's DETUNED peel at 3 strays (v=g*H u {d1,d2,d3}), NOT klein's scales. REDIRECT: opus's counting brick LRCIntervalCount.bad_count_le is PER-COORDINATE => reusable verbatim for a 3rd delta => d=3 is a short extension, not new analysis.
+
+PROVED (LRCDetunedD3.lean, sorry-free, kernel-pure [propext, Classical.choice, Quot.sound], 8478 green, root-wired at TournamentH7.lean:461):
+- lonely14_of_three_detuned_good: construction core, 3 detuned coords cleared at branch c + harmonic rest => lonely (one rcases wider than opus's d=2).
+- ThreeDetunedClearing: the counting Prop, hypothesis = Sum_j badCount(d_j,g) < g.toNat (the exact shape bad_count_le produces; = Sum_j (floor(q_j/7)+1)/q_j < 1, d_j cancel).
+- threeDetunedClearing: PROVED via THREE-set union bound (card_union_le twice) over bad_count_le x3.
+- lonely14_of_three_detuned / _': assembly via LRC(10) citation (10 harmonic speeds, clearance 1/11 >= 1/14) + orderEmbOfFin of the 10-element complement; lonely14_of_three_detuned' is UNCONDITIONAL from LRC(<=13). Mirrors opus's d=2 exactly, one dimension up.
+
+EXCEPTIONAL SET (lrc14_three_detuned_exceptional_kps_S127.py/.out): generic bound fails (sum>=1) only for: min q_j in {2,3} (q_j>=4 all => ALWAYS generic); (2,2,*) is the ONE INFINITE family = the DOUBLE-HALF-HARMONIC (two detuned at q=2, half-integer vs g) = exact d=3 analogue of opus's d=2 (2,2) residual, needs the mod-2g lift; everything else (2,>=3,q3<=42),(2,4,*),(3,3,3) is FINITE small-q. So generic d=3 closes everything except (2,2,*)+finite -- same residual shape as d=2, one dim up.
+
+PATTERN for d>=4 (recorded): at d=k strays, call bad_count_le k times, union-bound k sets, assemble through LRC(13-k) (clearance 1/(14-k)>=1/14); min q_j >= k+1 => Sum <= k/(k+1) < 1 generic. Uniform ladder; only the half-harmonic locus (several q_j=2) ever needs the mod-lift.
+
+maxRecDepth (owner asked to try it on mac-mini's Size4_g3to10/Size5_{c1,g4to9,g2to3} cert files that segfault Lean on Windows, 0xC0000005): TESTED set_option maxRecDepth 16384 on Size5_c1 -> STILL segfaults (exit 3221225477). CONFIRMED: it is a NATIVE C-stack overflow, which maxRecDepth (a Lean-level recursion guard) cannot gate. Reverted the edit. Real fix = bigger process stack (not a portable Lean/Lake option) OR split the 43k-82k-line generated files. Flagged to mac-mini (their generator, their call); NOT my regression (all 4 imports predate my commits; my files green).
+
+My LRC Lean ~90 nodes, S114..S127. FILES: LRCDetunedD3.lean, lrc14_three_detuned_exceptional_kps_S127.py/.out, reflection the-d3-detuned-peel-reuses-the-per-coordinate-brick-kps-S127.md.
+
+NEXT: (1) the (2,2,*) mod-2g lift (the d=3 residual, shared shape with opus's d=2 (2,2)); (2) wire threeDetunedClearing into opus's MultiDetunedDispatch (nonMultCard=3 branch) -- needs connecting the exceptional set to the dispatch's counting hypothesis; (3) mac-mini's cert-file segfault needs file-splitting (maxRecDepth ruled out).
 
 ## klein-2026-07-10-S245 -- THE MULTI-SCALE WITNESS (THM-694, HYP-5950): PROVED AND FORMALIZED, GREEN ON FIRST COMPILE -- band_lift (Delta-blind: higher levels cannot disturb lower ones) + cluster_join + miss_at_next => threeScale_strictlyLive with the explicit MIXED-RADIX multiplier; demo (78*10^12, 6010000020000) through the theorem; general r = the same two lemmas per scale
 
