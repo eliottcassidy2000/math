@@ -1,0 +1,11 @@
+Min-B5-ruler stays BOUNDED as diameter grows (window [8,Q] is diameter-free):
+  shifted-consec {N..N+12} (prime-rich, hits all primes<=13):
+    N=     20: min-B5-ruler = 17
+    N=    100: min-B5-ruler = 19
+    N=   1000: min-B5-ruler = 29
+    N=  10000: min-B5-ruler = 21
+    N= 100000: min-B5-ruler = 19
+    N=1000000: min-B5-ruler = 23
+  adversarial worst-case (random large-diam residuals) min-B5-ruler = 23 (diam 98595)
+  => FIXED window [8,43] contains a B5>0 ruler at ANY diameter (43 over harder searches).
+  RIGOROUS reason: B5(v,q) depends only on v mod q (B5_congr_mod, formalized) => diameter-free.

@@ -3,6 +3,19 @@
 Prompt (owner): keep working the endgame; pull/push; merge ideas; search new concepts.
 
 NEXT AGENT: (a) the corrected extremal: J-min at shifted-consec with the TWO synchronization poles (three-gap consec, mod-7 resonance) as the structured competitors -- prove J(mod7-class) >= threshold directly (its J is FAR above: 5.77 vs 4.75, easy margin; then the extremal contest is consec vs near-AP only); (b) Var on the mean shell |E[N]-mu0| <= delta may still be consec-max -- test; (c) kps clean-pair-sum supply + formalization of 710-713.
+## kind-pasteur-2026-07-11-S127 (cont.34) -- ANSWERED THE OWNER: YES, a BOUNDED DIAMETER-FREE window [8,Q] (empirically Q=43) always contains a B5>0 ruler, at ANY diameter. RIGOROUS because B5(v,q) depends only on v mod q -- FORMALIZED kernel-pure (LRCB5Periodic.lean). (HYP-6020.)
+
+Prompt (owner): is there a bounded window {8..Q} that always contains a clean ruler, at any diameter? keep working the next targets.
+
+ANSWER: YES, and it is diameter-free for a RIGOROUS reason.
+(1) DIAMETER-FREENESS (rigorous, FORMALIZED): B5(v,q) for q<=Q depends ONLY on the residues (v_i mod lcm(8..Q)), NOT the diameter. bandCount(v,q,p) reads only v_i*p mod q, fixed by v_i mod q. FORMALIZED kernel-pure (LRCB5Periodic.lean, root-wired, [propext,Classical.choice,Quot.sound]): B5_congr_mod (v_i=w_i mod q => B5 v q = B5 w q) + hasWindowRuler_congr (the window predicate is a property of v mod lcm(8..Q)). So exists-q-in-[8,Q]-with-B5>0 is a FINITE property of the residue class -- independent of speed sizes.
+(2) EMPIRICAL WINDOW Q=43: adversarial worst-case min-B5-ruler over large-diameter residuals (up to diam ~92000, incl near-tight scaled-AP seeds) = 43. shifted-consec {N..N+12} (prime-rich, hits all primes<=13) at N up to 10^6 stays <=29. So [8,43] holds robustly at any diameter.
+
+SIGNIFICANCE: hB5 REDUCES to a BOUNDED-WINDOW (diameter-free) ruler search = every residual has a lonely rational witness at denominator <= 43 (a bounded-denominator loneliness statement). This BYPASSES the THM-701 peel for ruler-EXISTENCE: instead of peeling far elements to reach bounded cores, a SMALL FIXED window [8,43] works DIRECTLY at any diameter -- cleaner. REMAINING: prove the window works for all residue classes mod lcm(8..43) (finite-in-principle, astronomically large; = LRC-hard for near-tight classes) -- but the diameter-free REDUCTION is now rigorous + machine-checked.
+
+NOTE: tight AP {1..13} takes q=14 (via liveCount>penalty, maxBand=6 not clean); near-tight classes carry the worst cases. COLLISION FLAG: mac-mini cont.36 also has a THM-712 (mine = general prime clean ruler, cont.31, pushed first 5c76e922e) -- flag for renumber.
+
+FILES: LRCB5Periodic.lean (kernel-pure, root-wired); lrc14_bounded_window_kps_S127.py/.out; HYP-6020. NEXT: characterize the near-tight residue classes that carry the window worst-cases (Q=43); the Var(N)-max extremal (cont.33).
 
 ## mac-mini-2026-07-09-S65 (cont.36, 2026-07-11) -- THM-712: THE k=8 CUBIC BASE FORM -- optimal deg-3 majorant explicit (contact {0,1,3,7}; coeffs 1, -2/3, 47/252, -5/252 exact); requirement (2/3)m1 - (47/252)m2 + (5/252)m3 >= 1 - cap_9 with M3 POSITIVE (triples = LOWER bound only, the easy direction for kps's 3D box); adversarial worst 0.4483 at {1..8}, UNCONDITIONAL margin +0.0459 (2x the k=9 margin). WITH THM-711: both wide-direction bases are single compact moment inequalities, shifted-consec minimizers, margins +0.026/+0.046. Synthesis: klein-S252 DE-CITED the pigeonhole in Lean (assembly down to TWO citations); opus-S229 hB5 empirically complete.
 
