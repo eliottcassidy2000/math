@@ -1,0 +1,90 @@
+THE GLOBAL Phi-ARGMAX CENSUS (exact, exhaustive per box)
+Phi(F) = p0 + p1/3;  target: Phi(F) <= cap_{|F|+1} with argmax = consec
+==============================================================================
+
+|F| = k = 7, box [1..24] (133644 normalized sets, 952 gcd-skipped of C(24,6) = 134596):
+  GLOBAL max Phi = 11/42 ~ 0.261905
+    argmax = (0, 1, 2, 3, 4, 5, 6)  == CONSEC
+    consec Phi = 11/42 ~ 0.261905   (max - consec = 0 ~ 0.000000)
+    runner-up Phi ~ 0.217857 (gap 0.044048)
+  cap_8 = 2243/5880 ~ 0.381463; GLOBAL margin = 703/5880 ~ +0.119558  OK
+  p0-argmax: (0, 1, 2, 3, 4, 5, 6)  p0 = 31/210 ~ 0.147619
+
+|F| = k = 8, box [1..20] (77400 normalized sets, 120 gcd-skipped of C(20,7) = 77520):
+  GLOBAL max Phi = 901/2205 ~ 0.408617
+    argmax = (0, 1, 2, 3, 4, 5, 6, 7)  == CONSEC
+    consec Phi = 901/2205 ~ 0.408617   (max - consec = 0 ~ 0.000000)
+    runner-up Phi ~ 0.362132 (gap 0.046485)
+  cap_9 = 1979/4004 ~ 0.494256; GLOBAL margin = 108013/1261260 ~ +0.085639  OK
+  p0-argmax: (0, 1, 2, 3, 4, 5, 6, 7)  p0 = 481/1470 ~ 0.327211
+
+|F| = k = 9, box [1..17] (24309 normalized sets, 1 gcd-skipped of C(17,8) = 24310):
+  GLOBAL max Phi = 8647/17640 ~ 0.490193
+    argmax = (0, 1, 2, 3, 4, 5, 6, 7, 8)  == CONSEC
+    consec Phi = 8647/17640 ~ 0.490193   (max - consec = 0 ~ 0.000000)
+    runner-up Phi ~ 0.486886 (gap 0.003307)
+  cap_10 = 55/91 ~ 0.604396; GLOBAL margin = 26189/229320 ~ +0.114203  OK
+  p0-argmax: (0, 1, 2, 3, 4, 5, 6, 7, 8)  p0 = 2447/5880 ~ 0.416156
+
+|F| = k = 5, box [1..42] (104895 normalized sets, 7035 gcd-skipped of C(42,4) = 111930):
+  GLOBAL max Phi = 0 ~ 0.000000
+    argmax = (0, 1, 2, 3, 4)  == CONSEC
+    consec Phi = 0 ~ 0.000000   (max - consec = 0 ~ 0.000000)
+    runner-up Phi ~ 0.000000 (gap 0.000000)
+  cap_6 NOT IN LEDGER (k+1 = 6 < 8): max Phi reported as data for the small-size base spec
+  p0-argmax: (0, 1, 2, 3, 4)  p0 = 0 ~ 0.000000
+
+|F| = k = 6, box [1..30] (139246 normalized sets, 3260 gcd-skipped of C(30,5) = 142506):
+  GLOBAL max Phi = 11/126 ~ 0.087302
+    argmax = (0, 1, 2, 3, 4, 5)  == CONSEC
+    consec Phi = 11/126 ~ 0.087302   (max - consec = 0 ~ 0.000000)
+    runner-up Phi ~ 0.083333 (gap 0.003968)
+  cap_7 NOT IN LEDGER (k+1 = 7 < 8): max Phi reported as data for the small-size base spec
+  p0-argmax: (0, 1, 2, 3, 4, 5)  p0 = 0 ~ 0.000000
+
+|F| = k = 10, box [1..15] (5005 normalized sets, 0 gcd-skipped of C(15,9) = 5005):
+  GLOBAL max Phi = 10001/17640 ~ 0.566950
+    argmax = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  == CONSEC
+    consec Phi = 10001/17640 ~ 0.566950   (max - consec = 0 ~ 0.000000)
+    runner-up Phi ~ 0.563095 (gap 0.003855)
+  cap_11 = 66/91 ~ 0.725275; GLOBAL margin = 36307/229320 ~ +0.158325  OK
+  p0-argmax: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  p0 = 8899/17640 ~ 0.504478
+
+|F| = k = 11, box [1..14] (1001 normalized sets, 0 gcd-skipped of C(14,10) = 1001):
+  GLOBAL max Phi = 11159/17640 ~ 0.632596
+    argmax = (0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14)  != consec  *** NON-CONSEC ARGMAX ***
+    consec Phi = 33337/52920 ~ 0.629951   (max - consec = 1/378 ~ 0.002646)
+    runner-up Phi ~ 0.629951 (gap 0.002646)
+  cap_12 = 6/7 ~ 0.857143; GLOBAL margin = 3961/17640 ~ +0.224546  OK
+  p0-argmax: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)  p0 = 3419/5880 ~ 0.581463
+
+|F| = k = 4, box [1..60] (28876 normalized sets, 5344 gcd-skipped of C(60,3) = 34220):
+  GLOBAL max Phi = 0 ~ 0.000000
+    argmax = (0, 1, 2, 3)  == CONSEC
+    consec Phi = 0 ~ 0.000000   (max - consec = 0 ~ 0.000000)
+    runner-up Phi ~ 0.000000 (gap 0.000000)
+  cap_5 NOT IN LEDGER (k+1 = 5 < 8): max Phi reported as data for the small-size base spec
+  p0-argmax: (0, 1, 2, 3)  p0 = 0 ~ 0.000000
+
+================== ADDENDUM: k=11 CONFIRMATION + FLIP THRESHOLD ==================
+Wider box [1..16] (8008 normalized sets, exhaustive): SAME argmax
+  (0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14) -- interior extremal, not box-edge.
+Structure: X = 2*consec_8  u  {3,5,7}   (the 2-dilated consecutive 8-set + odd infill).
+
+Exact values:
+  X:      p0 = 111/196  (~0.566327)   p1 = 167/840   (~0.198810)   Phi = 11159/17640 (~0.632596)
+  consec: p0 = 3419/5880 (~0.581463)  p1 = 1283/8820 (~0.145465)   Phi = 33337/52920 (~0.629951)
+  Phi(X) - Phi(consec) = 1/378 (~+0.002646)
+  p0(consec) - p0(X)   = 89/5880 (consec REMAINS the p0-argmax: THM-534 intact)
+
+FLIP THRESHOLD (exact): lambda*_11 = (p0(consec)-p0(X))/(p1(X)-p1(consec)) = 267/941 ~ 0.283741
+  => kps cont.24's lambda* ladder 1.51 / 1.23 / 0.98 (k=8/9/10) continues DOWN through 1/3
+     between k=10 and k=11: at lambda = 1/3 the joint argmax is NON-consec from k=11 on.
+
+CONCLUSION: the "joint Phi-consec-extremality" lemma (kps cont.24's named remainder) is
+FALSE as stated for k >= 11.  The recursion is UNAFFECTED: the needed inequality
+Phi(F) <= cap_{|F|+1} holds in every box with margins +0.1196/+0.0856/+0.1142/+0.1583/
++0.2245 (k=7..11), the k=11 margin being the LARGEST.  The base lemma must target
+Phi(F) <= cap_{|F|+1} directly (or consec-extremality restricted to k <= 10 + the
+perforated-dilate family at k >= 11).  At the BINDING size k=8 (tightest margin),
+consec IS the exact global argmax in the exhaustive box.

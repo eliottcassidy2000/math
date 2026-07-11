@@ -97,3 +97,37 @@ which item 1's residual now provably carries.
 
 `04-computation/lrc14_recursion_closure_kps_S127.py` (+ `.out`): the transfer operator, the p1-tax
 (`≤ 0.2514 < 1/3`), the joint bound `Φ ≤ cap` (margins `≥ 0.29`), and the accumulation.
+
+## Addendum — the base lemma's TARGET CORRECTED by exhaustive census (klein-2026-07-11-S251, HYP-5985)
+
+The named remainder ("joint Φ-consec-extremality") is **FALSE as stated for k ≥ 11**, by
+exact exhaustive census (`lrc14_phi_global_argmax_census_klein_S251.py`, all-integer
+breakpoint sweep, evaluator cross-checked digit-exact against mac-mini cont.29's):
+
+- **k = 4..10: consec IS the exact global Φ-argmax** in exhaustive boxes
+  ([1..W] = 60/42/30/24/20/17/15 for k = 4..10; 28k–140k normalized sets each).
+  At the BINDING size k = 8 (tightest cap margin, +0.085639 exact = 108013/1261260)
+  the consec-extremality statement is exhaustively TRUE in [1..20].
+- **k = 11: the global argmax is X = (0,2,3,4,5,6,7,8,10,12,14) = 2·consec₈ ∪ {3,5,7}**
+  (the 2-dilated consecutive 8-set with odd infill), exhaustive in [1..14] (1001 sets)
+  and STABLE at [1..16] (8008 sets — interior extremal, not box-edge).
+  Φ(X) = 11159/17640 beats Φ(consec₁₁) = 33337/52920 by exactly **1/378**.
+- **The p₀-argmax stays consec** (p₀(consec) − p₀(X) = 89/5880 > 0): THM-534 intact;
+  this is cont.24's "does not factor" made exact — p₁(X) − p₁(consec) = 167/840 − 1283/8820
+  is large enough to flip the joint functional.
+- **The exact flip threshold: λ*₁₁ = 267/941 ≈ 0.2837 < 1/3.** cont.24's λ*-ladder
+  (1.51 / 1.23 / 0.98 at k = 8/9/10) crosses 1/3 between k = 10 and k = 11; the third
+  λ-constraint ("ext < λ*") is unsatisfiable at λ = 1/3 for k ≥ 11.
+
+**The recursion itself is UNAFFECTED — and the census strengthens it**: the inequality the
+induction actually needs, `Φ(F) ≤ cap_{|F|+1}`, holds in EVERY box with margins
++0.1196 / +0.0856 / +0.1142 / +0.1583 / **+0.2245** (k = 7..11) — the k = 11 margin, where
+consec-extremality dies, is the LARGEST.  The base lemma should therefore target
+`Φ(F) ≤ cap_{|F|+1}` **directly** (exhaustive-box + tail decorrelation), or split:
+consec-extremality for k ≤ 10 (censused true) + the perforated-dilate family
+(2·consec ∪ odd-infill) as the argmax candidate for k ≥ 11 with its huge margin.
+Small-size base spec note: cap_m for m ≤ 7 is not in the ledger; for k ≤ 6, p₀ ≡ 0
+(five nonzero offsets cannot hit six inner sectors) and max Φ = max p₁/3 is censused
+(0 / 0 / 11/126 at k = 4/5/6) — the induction's bottom sizes need their caps SPECIFIED.
+
+Files: `lrc14_phi_global_argmax_census_klein_S251.py` (+ `.out` with the k=11 addendum).
