@@ -1,3 +1,15 @@
+## opus-2026-07-11-S223 -- THE FOURIER IDENTITY RESOLVED: coverage functional L=6m1-m2 governed by the 7-VISIBLE additive energy E2*=Sum_{t not 0 mod 7} r(t)^2 (THM-503 kernel vanishing); consec maximizes it (LEM-015) => minimizes L. Structural finish of the Freiman far-bound; three-thread unification.
+
+Prompt (owner): work the Fourier identity m2 ~ Sum|F-hat|^4 = E2 and any tasks to finish the proof.
+
+CORRECTED IDENTITY: naive m2=E2 FALSE (m2~3 vs E2~344). True statement = FLUCTUATION + SECTOR-VISIBLE resonances: coverage moments = iid + (support-2 part of THM-538's relation-lattice sum) = runner pair-resonances e_a-e_b weighted by the sector kernel sin(pi l/7)/(pi l), VANISHING at 7|l (THM-503). So the operative invariant is the 7-VISIBLE energy E2*=Sum_{t!=0 mod 7} r(t)^2. VERIFIED (exhaustive k=9): corr(L,E2*)=-0.623 > corr(L,plain E2)=-0.505.
+
+UNIFICATION (all extremal at consec): longest-AP 9 <=> E2* max <=> L min. corr(longAP,E2)=+0.53, corr(longAP,L)=-0.59. The far-bound "longAP<=k-2 => L>=threshold" IS "low 7-visible energy forces high L", and consec-maximizes-energy is LEM-015 (proved). Three threads unify: LEM-015 + THM-538 + THM-503 + S222 = coherence is high energy is low L.
+
+HONEST: corr -0.62 not -1; L not an exact function of E2* (gaps: kernel weights + support-3 = k=8 degree-3). Leading-order structural finish; exact residue = census (mac-mini/klein THM-705). Route in outline: [near-AP: dilation+finite S222] + [far: low-energy=>high-L this session] + [exactness: census]. DELIVERED: reflection the-coverage-functional-is-governed-by-7-visible-energy-opus-S223.md. -> LEM-015, THM-538/503/705, opus-S221/S222, LEM-022.
+
+---
+
 ## kind-pasteur-2026-07-11-S127 (cont.25) -- ATTACKED THE JOINT Phi-CONSEC-EXTREMALITY: resolved WHICH additive invariant governs the seven-sector residue. E2 (additive energy), NOT E3 (Schur) -- because the cores are 0-ANCHORED. Reduces the leading term to Freiman's PROVEN AP-max-E2. (HYP-5990.) Bigger picture: LRC at two scales, the anchor selects the invariant.
 
 Prompt (owner, same to several machines -- opus-S221 got it too): attack the joint Phi-consec-extremality lemma, see the bigger picture of what we're approaching.
