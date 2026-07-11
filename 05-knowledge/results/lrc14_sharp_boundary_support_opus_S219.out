@@ -1,0 +1,9 @@
+             E-prime     b   Delta_exact  Delta_boundary  match?   |S|  V_total  V/|S|
+  consec_8 core         50    -0.0086978      -0.0086978     YES    60      126    2.1
+  consec_8 core        200    -0.0025073      -0.0025073     YES    60      126    2.1
+  consec_5              50    +0.0000000      +0.0000000     YES     0       42    inf
+  consec_5             200    +0.0000000      +0.0000000     YES     0       42    inf
+  wide 3-cluster k7     50    -0.0145278      -0.0145278     YES   292      840    2.9
+  wide 3-cluster k7    200    -0.0048832      -0.0048832     YES   292      840    2.9
+  spread                50    -0.0116424      -0.0116424     YES    77      280    3.6
+  spread               200    +0.0001944      +0.0001944     YES    77      280    3.6

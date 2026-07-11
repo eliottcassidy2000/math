@@ -28,6 +28,26 @@ SCOPE (honest): NO analytic gap remains. Finite/verified-but-not-written-as-cert
 My LRC Lean ~106 nodes (pure math this turn). FILES: THM-701 canon, lrc14_recursion_closure_kps_S127.py/.out, reflection the-recursion-closes-2-over-21-beats-the-cap-growth-kps-S127.md.
 
 NEXT: (1) write the finite certificate (balanced-core Phi<=cap table + cap-growth table + far-threshold) -- @klein's seven-sector program; (2) formalize THM-700/701 (elementary Fourier + occupancy induction, Lean-tractable); (3) the sharp THM-700 constant.
+## opus-2026-07-11-S219 -- PROVED THM-702: the missed-sector-phase collapse. The far-element seven-sector correction is EXACTLY the far runner's discrepancy in the SINGLE missed sector over the p1-region ONLY -- the 127-atom signed sum collapses to one G_j on the |A|=1 boundary. Elementary + verified EXACT-rational.
+
+Prompt (owner): prove the missed-sector-phase 8x cancellation.
+
+RESULT (PROVED, both forms verified exact-rational, zero mismatch): Delta_b := meas(S7(E'+{b})) - Plat(E') =
+  (a) int_{P1(E')} [1{frac(bx) in sector j(x)} - 1/7] dx  -- the far runner's discrepancy in the single missed sector j(x), over the p1-region P1={|A|=1} ONLY;
+  (b) -(1/b) sum_{x in dP1} +-G_{j(x)}(frac(bx))  -- one IBP, supported ONLY on the p1-region boundary; G_j = mean-zero missed-sector antiderivative, ||G_j||_inf = 6/49.
+=> |Delta_b| <= (6/49)|dP1(E')|/b.
+
+THE MECHANISM (this IS the 8x nut): the crude V(E')/(6b) loses the inclusion-exclusion SIGNS among the 127 sector atoms. THM-702 sums them via TWO elementary facts: (1) H_T = -sum_{j in T}G_j is LINEAR in T (each forbidden sector contributes its own mean-zero antiderivative); (2) the collapse Sum_{T subset A}(-1)^{|T|}H_T = G_j*1{A={j}} (a (1-1)^{|A|-1} telescoping). So P(A,y)=G_j(y) if A={j}, else 0 -- the boundary weight vanishes off |A|=1. The correction literally sees only the missed-sector phase on the p1-region.
+
+BUG FOUND + FIXED en route: initially excluded the stationary runner e=0 (always in sector 0) from occupancy; single-atom IBP check caught it (matched single-sector atoms, failed multi-sector atoms touching sector 0). With e=0 included (sector 0 always occupied, A subset {1..6}) => EXACT match on all cores/b.
+
+CONNECTS: THM-699 (kps, PROVED) = the WEIGHT side (Sum_c D7=0, zero-mean); THM-702 = the OSCILLATION/SUPPORT side (mean-zero G_j on the p1-boundary). Weight-zero-mean x oscillation-on-p1 = the decorrelation. Also sharpens THM-699(mac-mini)/THM-700's crude V(E') to the RIGHT support |dP1| (the p1-region boundary, |dP1|/V ~ 1/3, the thin near-full-coverage set = THM-538's concentration made exact).
+
+SCOPE (honest): this is the SUPPORT half of the sharp constant. |dP1| ~ span, so ungapped (b~span) the bound (6/49)|dP1|/b is still O(1). The remaining ~17x is the EQUIDISTRIBUTION of {frac(b*x_i)} over the p1-boundary points (signed mean-zero G_j sum cancels) -- a Koksma/three-distance discrepancy on the p1-boundary sample under xb mod 1. That is the remaining analytic step for the bounded-ratio (ungapped) core = mac-mini's single remaining extremal core.
+
+DELIVERED: THM-702 canon (proof + both forms); 04-computation/lrc14_sharp_boundary_support_opus_S219.py (+out, exact verification). Handed to kps (owns the seven-sector program; THM-699/700). NEXT: the p1-boundary equidistribution (the second, sharpening half). -> THM-699/700/534/538, HYP-2655/2664, opus-S218.
+
+---
 
 ## klein-2026-07-11-S250 -- THE SYNTHESIS + TWO CLOSURES: THM-698 SHAPE-COVERAGE AUDIT (the supply's domain IS two-scale by definition; witnessG2 = meas(G_P - D(E)); its positivity = my dead-zone theorem) + THM-701 THE QUANTITATIVE SUPPLY (kps branch-A executed: explicit floors delta = (1/91)min(1/(364 SumE), 1/(182 pmax)) + rate + 14-coprime transfer => bounded-denominator realization for spread clusters) + the packed-supply dichotomy in Lean (2/3 green, 1 pending)
 
