@@ -64,6 +64,17 @@ clears (`bandCount = 0`) at a modulus `q` with `14 ∤ q`, then `M ≥ ⌈q/14�
   the danger arc" — three-gap on `ℤ/q` (opus S236). For spread families it is bounded-modulus
   anti-concentration.
 
+## Route B — SHARPENED (klein-S259): THM-718 + the inverse-theorem framing
+
+klein THM-718 (PROVED) makes "clears at prime `q`" EXACT: `clearing_count(v,q) = (q−1) −
+|{±j·vᵢ mod q : 1≤j≤m}|` (`m = ⌈q/14⌉−1`), so **clears at `q` ⟺ the dilated-±-speed set misses a
+residue mod `q`** — a covering number, the exact form of "bad coverer clears." And the "clears"
+side is now sharply structural (verified): the ONLY window-covers are the TIGHT families
+(`{1..13}`, GW, dilates), which are all NON-divisor-complete (no multiple of 14) — so **DC ⟹ has a
+multiple of 14 ⟹ not tight ⟹ clears** (0/16328 DC window-covers). Route B's remaining gap = the
+inverse theorem `window-cover ⟹ tight` (window-completeness); the tight list is characterized
+(THM-612/708/709), DC/tight disjointness is proved, and THM-718 quantifies "clears."
+
 ## The unification and the honest assessment
 
 **[A] and [B] are the same phenomenon** — `{kα}`-progressions (three-gap configs) are the extremals:
