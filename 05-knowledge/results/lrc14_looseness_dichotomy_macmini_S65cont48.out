@@ -1,0 +1,27 @@
+1/14 = 0.07143; looseness dichotomy: large diameter => M bounded away from 1/14?
+family                           diam   defic  M(pairsum)  M/(1/14)
+  kps blocker                    1656   0.699     0.24326  3.41x
+  AP {1..13}                       12   0.336     0.07143  1.00x
+  DC scale10 s0                    20   0.480     0.14634  2.05x
+  DC scale10 s1                    20   0.480     0.10526  1.47x
+  DC scale10 s2                    19   0.520     0.11111  1.56x
+  DC scale10 s3                    20   0.538     0.13043  1.83x
+  DC scale25 s0                    35   0.569     0.19149  2.68x
+  DC scale25 s1                    30   0.580     0.14286  2.00x
+  DC scale25 s2                    34   0.502     0.14286  2.00x
+  DC scale25 s3                    30   0.560     0.14706  2.06x
+  DC scale50 s0                    59   0.632     0.22034  3.08x
+  DC scale50 s1                    47   0.638     0.21739  3.04x
+  DC scale50 s2                    59   0.667     0.14286  2.00x
+  DC scale50 s3                    51   0.571     0.18557  2.60x
+  DC scale100 s0                  108   0.661     0.15714  2.20x
+  DC scale100 s1                  108   0.659     0.25000  3.50x
+  DC scale100 s2                  105   0.626     0.20339  2.85x
+  DC scale100 s3                   91   0.689     0.18232  2.55x
+  DC scale200 s0                  205   0.665     0.18705  2.62x
+  DC scale200 s1                  206   0.661     0.20000  2.80x
+  DC scale200 s2                  199   0.653     0.20430  2.86x
+  DC scale200 s3                  171   0.667     0.20253  2.84x
+
+min M over DC families by scale: [(10, 0.1053), (25, 0.1429), (50, 0.1429), (100, 0.1571), (200, 0.1871)]
+=> if min M > 1/14 = 0.0714 and grows with diameter, large-diameter DC is LOOSE (dichotomy closes)
