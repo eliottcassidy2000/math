@@ -139,6 +139,25 @@ the size of the core is settled (always <=12, LRC(13)-protected); the finite che
 Prompt (owner): search for combinatorial connections and simplifications.
 
 NEXT AGENT: (a) the compressed near-dilate stratum (13 distinct lifts, M=1/13 constant) is the corrected large-diameter core -- direct M=1/13 witness (death-star/boxeph), NOT decorrelation descent; (b) my p6=1/(7(k-1)) closed form + BUNCH(consec_12)=1/14 may extend to a full consec-distribution closed form simplifying THM-718/719; (c) density base DONE (THM-718/719); the residual is the near-dilate stratum + bounded-diameter finite check + AP wall.
+## klein-2026-07-12-S265 -- COMBINATORIAL SIMPLIFICATIONS: case split 2 not 5, target is a CONSTANT not growing (corrects my own S264), ≤6-coprime shrink is bounded-diameter ONLY (verified counterexample), BSG→Freiman is the SHALLOW lead
+
+Prompt (owner): spend another similar session searching for combinatorial connections and simplifications.
+
+Ran 4 Explore agents (≤6-coprime crux / finish-map simplifications / tournament-tiling bridges / additive-combinatorics tools). Theme: the endgame carries more cases + heavier machinery than the math needs. Four simplifications, honesty-graded:
+
+**(1) CASE SPLIT 5→2 (rigorous).** AP-wall is SUBSUMED into non-covering: tight locus M=1/14 = {AP,GW,dilates} (THM-612+klein-S206), ENTIRELY non-covering (#(tight∩covering)=0, proved) => every DC family is strict-cushion M>1/14. Intrinsic split = non-covering [t=1/q, holds all tight] + divisor-complete [strict>1/14]; bounded/large-diam is a technique seam.
+
+**(2) TARGET IS CONSTANT 1/13, NOT GROWING (corrects my S264 + RECONCILES the fleet).** THM-720/mac-mini-cont.50's "margin grows with diameter" is a GENERATOR ARTIFACT (MISTAKE-101/127/137) -- generators can't emit near-dilates. death-star THM-721's near-dilate {L,…,12L,13L+1} has exact M=1/13 at EVERY diameter = the flat adversarial minimum. mac-mini ("grows") and death-star ("constant") are both right about their evidence; the near-dilate is the true min. My S264 "Parseval floor reaches the true M, growing" measured the right quantity on NON-EXTREMAL families -- retracted the growing-M flag (THM-680 sharpening stays valid).
+
+**(3) ≤6-COPRIME-TO-30030 IS BOUNDED-DIAMETER ONLY (verified).** A single lcm(2..14)=360360 is DC alone => primitive DC {1,17,19,23,29,31,37,41,43,47,53,59,360360} has 12 coprime-to-30030, still LOOSE (M=23/112, exact via pair-sum ruler). DC forces only ONE non-coprime speed. So opus-S243's ≤6 and kps HYP-6135's escape_loose13_le6 are bounded-diameter; large-diam uses multi-scale (consistent with MISTAKE-139). auto-safe (opus-S241) is DISCRETE-clearing, NOT a reach reduction.
+
+**(4) BOTH ROUTES = ONE Bonferroni moment-ladder over pair-sum rulers** (rigorous reduction, THM-671/668/707); the "coverage-clearing duality" as a quantitative identity is HEURISTIC (corr +0.398).
+
+CONNECTIONS load-bearing: Schur triples E₃ = norm-3 kissing vectors of the tridiagonal relation lattice Λ(S) (=tiling cycle-space refined to ℤ; THM-373/LEM-014/mac-mini-S25); scale grading (E₃ fine/E₂ coarse) = observer grading. FORWARD-LEAD: BSG→Freiman-3k−4 (opus-S181, parked) fits SHALLOW at the COARSE 1/7 scale (E₂/Freiman valid, HYP-5990); AP corner already closed by three-gap (opus-S236).
+
+Deliverables: finish-map SIMPLIFICATIONS section + inline S264 corrections; reflection the-combinatorial-simplifications-two-cases-a-constant-and-the-freiman-lead-klein-S265; HYP-6140; lrc14_coprime30030_scope_klein_S265.py(+out); memory updated. No canon overridden (my own S264 flag retracted).
+
+NEXT AGENT: (a) the one unexecuted combinatorial move = BSG→Freiman-3k−4 on SHALLOW at the coarse 1/7 scale (cover the dissociated bulk; AP corner done); (b) the remaining theorem is SMALLER -- 2 cases (non-covering + DC), constant target 1/13, elementary atom (kps LRCDecorrelation13) for j≤6 + j≥7 residual + bounded-diameter finite base; (c) prune the finish-map case list to 2 intrinsic cases.
 
 ## opus-2026-07-11-S244 -- the ~6-runner crux IS the oracle's EVEN-FOLD (S558o), iterated to the coprime core; for the residual the core SPREADS and misses the structured good set (density 0.23<<1 => lonely); the BLANKET obstruction is the AP/V* wall = bucket A. Unifies five threads.
 

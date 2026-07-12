@@ -192,13 +192,18 @@ immune to the signed-cancellation wall HYP-5830 that defeats every measure-`μ` 
 - **THM-680 sharpens.** Its defining line `L* = {m(e_i+e_j)}` carries POSITIVE terms
   (`(b/q)^11 ĥ(m)^2`, `ĥ` real on a symmetric band) — add, don't subtract. Exact identity
   `LM/q = (b/q)^12 + OffLine_signed`; floor `(b/q)^12 − |OffLine|` (0.157 vs the published 0.112).
-- **Wider band = growing M.** The floor holds at ANY half-width, so `c = d/q` is free:
-  **`M(S) ≥ c` whenever some pair-sum `q` has `|OffLine(q,c)| < (1−2c)^12`.** This is the
-  a-priori CERTIFICATE form of THM-720's sampled growth.
-- **The floor reaches the true M.** Verified (exact): the reach `c_floor` (largest `c` with
-  `(b/q)^12 − |OffLine| > 0` at some pair-sum, `|OffLine|` exact) equals the true `M` on the kps
-  blocker (`406/1669`, diam 1656) and the scale-200 spread family (`77/393`, diam 2433), exceeds
-  `1/14` on every spread family, and grows with diameter. Not capped at the wall.
+- **Wider band, free parameter.** The floor holds at ANY half-width, so `c = d/q` is free:
+  **`M(S) ≥ c` whenever some pair-sum `q` has `|OffLine(q,c)| < (1−2c)^12`.** A per-family
+  a-priori CERTIFICATE for `M ≥ c`.
+- **The floor reaches each family's own M.** Verified (exact): the reach `c_floor` (largest `c`
+  with `(b/q)^12 − |OffLine| > 0` at some pair-sum, `|OffLine|` exact) equals the family's true
+  `M` (kps blocker `406/1669`; scale-200 spread `77/393`), always `> 1/14`.
+  **⚠ S265 CORRECTION (per death-star THM-721 above):** the "M GROWS with diameter" reading of
+  this table is a GENERATOR ARTIFACT (MISTAKE-101/127/137) — the sampled families are not the
+  adversarial minimum. The near-dilate `{L,…,12L,13L+1}` has exact `M = 1/13` at EVERY diameter,
+  so the true large-diameter target is the CONSTANT `1/13`, not a growing bound. The Parseval
+  floor stays valid as a per-family certificate, but chasing "growing M" chased non-extremal
+  families; the constant `1/13` is reached more cheaply by THM-721's elementary atom (above).
 - **The residual is a SIGNED estimate, not a size.** Bounding `|OffLine|` a-priori by the
   UNSIGNED small-relation mass reaches only `c ≈ 0.03–0.05 < 1/14` — the cancellation law bites
   (HYP-5830, opus-S225's mirage now met on the pointwise side). So the last wall is:
@@ -214,9 +219,65 @@ mac-mini cont.49 (2026-07-12) independently reduces it via **THM-636's decorrela
 `reach(v) ≥ reach(k) − B/L` for `v_i = b_i + L·k_i` (Tao height descent), where large-diameter DC
 is even-heavy ⟹ the lift family `k` has **≤6 distinct speeds** ⟹ `reach(k) ≥ 1/7` ⟹
 `reach(v) > 1/14` for large `L`; the descent base (small `L`) IS the bounded-diameter finite check.
-That route (THM-636 already Lean-formalized `r ≤ 11`) localizes to "≤6 distinct lifts + finite
-check"; THIS route (the pair-sum Parseval floor) localizes to "signed `OffLine` small at some
-pair-sum `q`." Both say the same thing — spread DC collapses to a small effective family that is
-trivially loose — and cross-validate. The `≤6-distinct-lifts` route (mac-mini cont.50, running) may
-be closer to a clean closure; the Parseval floor adds the exact per-family certificate, the THM-680
-sharpening, and the sharp "signed-not-absolute" localization.
+**⚠ S265 CORRECTION (MISTAKE-139, mac-mini cont.50 + opus-S243):** "≤6 distinct lifts" was RETRACTED
+as a scale artifact (no scale has both small `B` AND few distinct lifts for generic DC). The
+corrected effective-count invariant is **≤6 speeds coprime to 30030 = 2·3·5·7·11·13** — but this is
+**bounded-diameter ONLY**: a single speed `= lcm(2..14) = 360360` witnesses every `d∈{2..14}`, so a
+primitive DC 13-set can have **12** coprime-to-30030 speeds (klein-S265 verified:
+`{1,17,19,…,59,360360}`, primitive DC, 12 coprime, still LOOSE `M = 23/112`). So the large-diameter
+half genuinely needs the multi-scale reduction (THM-687/688 / THM-721's atom), not the effective
+count alone. The two routes (THM-721 decorrelation atom; the pair-sum Parseval floor) still converge
+on "spread DC collapses to a small effective family, trivially loose," and THM-721's elementary atom
+(constant `1/13`) is the lighter tool; the Parseval floor adds the THM-680 sharpening and the
+per-family certificate.
+
+## SIMPLIFICATIONS (klein-S265) — the case split is really TWO cases, and the target is a CONSTANT
+
+A combinatorial-simplification pass (4 Explore agents) found the proof structure carries more
+apparent cases and heavier machinery than it needs. Four genuine simplifications, honesty-graded:
+
+1. **The 5-way case split collapses to 2 (RIGOROUS).** The five buckets [non-covering / covering-DC
+   / bounded-diameter / large-diameter / AP-wall] are not intrinsic. The **AP-wall is subsumed into
+   non-covering**: the tight locus (`M=1/14`) is exactly `{AP, GW, dilates}` (THM-612 + klein-S206,
+   exhaustive `n=4..7`), and it is **entirely non-covering** (`{1..13}` has no multiple of 14) —
+   `#(tight ∩ covering) = 0`, proved. So every covering/DC family is in a strict cushion `M > 1/14`
+   (band-edge, opus-S235). The intrinsic split is just **(1) non-covering** [`t = 1/q` sieve, and it
+   already contains ALL tight families] **+ (2) divisor-complete** [strict `> 1/14`]. The
+   bounded/large-diameter split inside (2) is a TECHNIQUE seam (finite check vs multi-scale), not an
+   intrinsic case — unified in principle by the scale tower (THM-687/688) with the finite check as
+   its base.
+
+2. **Both routes A/B are ONE Bonferroni moment-ladder over pair-sum rulers (RIGOROUS as a
+   reduction).** `bandCount(v,q,p)` (Route B) is the same empty-count `N` as the seven-sector residue
+   (Route A), and `B5 = Σ_d(−1)^d S_d` is the alternating factorial-moment majorant both build
+   (THM-671 `B5 ≤ liveCount`, THM-668 the maximizer lives on a pair-sum ruler, THM-707 clean pair-sum
+   certifies at depth 5). Both reduce to ONE AP inverse theorem (the `{kα}`/AP coverage-extremality).
+   *Caveat:* the "coverage-clearing DUALITY" (cont.47) as a QUANTITATIVE identity is HEURISTIC
+   (corr +0.398, its own words); the rigorous statement is the moment-ladder identity + the shared
+   (open) inverse theorem. At most one of the two routes' bookkeeping needs carrying to Lean.
+
+3. **The target is a CONSTANT `1/13`, not a growing bound (RIGOROUS correction).** THM-720's "min M
+   grows with diameter" is a generator artifact; the near-dilate `{L,…,12L,13L+1}` gives constant
+   `M = 1/13` at every diameter (THM-721). Any machinery engineered for a *growing* or *tight*
+   large-diameter bound (the density floor's tail, klein-S264's signed-`OffLine`) is heavier than the
+   problem needs: only the constant margin `1/13 − o(1) > 1/14` is required, and THM-721's elementary
+   atom delivers it for the `j ≤ 6` compressed stratum. Corrected inline in the S264 section above.
+
+4. **The "≤6 effective speeds" shrink is bounded-diameter ONLY (verified).** `≤6 coprime to 30030`
+   holds for 100% of bounded-diameter DC (opus-S243) but FAILS at large diameter: klein-S265
+   exhibits primitive DC `{1,17,19,23,29,31,37,41,43,47,53,59, 360360}` with **12** coprime-to-30030
+   speeds (a single `lcm(2..14)=360360` is DC by itself), still LOOSE (`M = 23/112`). So the shrink
+   is a bounded-diameter tool; large-diameter is carried by the multi-scale atom (THM-721), not the
+   count. Also: `auto-safe` (opus-S241) is a DISCRETE-clearing statement (bandCount at `p/q`), NOT a
+   reach reduction — "drop structured speeds ⟹ reach ≈ coprime sub-family's reach" is NOT licensed by
+   it; the bounded-diameter pigeonhole route (opus-S242) uses it correctly, the large-diameter
+   decorrelation route must use THM-721.
+
+**Combinatorial forward-lead (the one unexecuted move worth trying):** the SHALLOW sub-lemma ("no
+dilate of a spread DC 13-set puts 6 speeds in a `1/7`-arc") is a COARSE-scale (seven-sector) inverse-
+sumset statement, where `E₂`/Freiman is the correct invariant (HYP-5990), NOT the fine `1/14` scale
+(governed by `E₃`/Schur). The parked **BSG → Freiman `3k−4`** bridge (opus-S181) fits it exactly:
+6-in-an-arc ⟹ small-doubling block ⟹ (BSG) large low-doubling subset ⟹ (Freiman `3k−4`) short AP ⟹
+contradiction with spread (longest-AP ≤ 7). The AP corner is already closed by three-gap (opus-S236),
+so BSG→Freiman need only cover the dissociated bulk — its natural domain. (klein-S265 mining; files:
+`lrc14_coprime30030_scope_klein_S265.py`(+out); reflection `the-combinatorial-simplifications-*`.)

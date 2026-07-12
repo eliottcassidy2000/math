@@ -1,0 +1,48 @@
+==========================================================================
+(1) THE 12-COPRIME COUNTEREXAMPLE  {k*360360} u {12 units coprime to 30030}
+==========================================================================
+  family = [1, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 360360]
+  primitive=True  divisor_complete=True  #coprime-to-30030=12  (claim says <=6)
+  exact M = 23/112 = 0.2054   (1/14=0.0714)  => LOOSE (M>1/14)  at ruler q=112
+
+  spread version: 12 units near 30030 + heavy 7*360360 (structural only; M-ruler is ~5M, skipped):
+    primitive=True  DC=True  #coprime=12
+    => 12 coprime again at a fully-spread scale; the 12 units sit at a SEPARATE (fine) scale
+       from the heavy witness => multi-scale (THM-687/688) is the operative reduction.
+
+==========================================================================
+(2) DIAMETER SWEEP: max #coprime-to-30030 over primitive DC 13-sets vs diam cap
+==========================================================================
+   diam cap min-cover 13-mincover coprime supply TRUE max #coprime
+         14         7           6              1                 1
+         20         7           6              3                 3
+         30         6           7              5                 5
+         45         5           8              9                 8  <-- BREAKS <=6
+         60         5           8             12                 8  <-- BREAKS <=6
+         90         4           9             19                 9  <-- BREAKS <=6
+        120         4           9             25                 9  <-- BREAKS <=6
+        360         3          10             69                10  <-- BREAKS <=6
+       2520         2          11            482                11  <-- BREAKS <=6
+     360360         1          12          69120                12  <-- BREAKS <=6
+  (TRUE max #coprime = min(13 - min-cover, coprime-supply): DC needs >= min-cover NON-coprime
+   witnesses AND there must be enough coprime-to-30030 integers <= cap to fill the rest.
+   <=6 holds for cap up to ~45-59; BREAKS once BOTH one speed covers enough AND >=7 coprime
+   units are available (~cap 60). So <=6 is a SMALL-diameter regularity, not a bounded-diam thm.
+
+==========================================================================
+(3) COMBINATORIAL FLOOR: min # non-coprime-to-30030 speeds to be DC (set cover)
+==========================================================================
+  lcm(2..14) = 360360 is divisible by every d in 2..14 => ONE speed suffices
+  => min #non-coprime = 1 => max #coprime = 12 (combinatorially, no diam bound)
+  So 'DC => <=6 coprime' is FALSE without a diameter bound; DC alone forces only >=1 non-coprime.
+
+==========================================================================
+(4) SCALE SEPARATION on the counterexample (why multi-scale, not the shrink)
+==========================================================================
+  counterexample: 12 units in [1,59], heavy witness 360360
+  scale ratio heavy/max-unit = 6108  => the heavy witness is a SEPARATE scale
+  multi-scale (THM-687/688) reads v = base + L*lift; the heavy witness sits at the
+  coarse scale, the 12 units at the fine scale => reduces to a small effective family.
+  => the <=6-coprime shrink is bounded-diameter; large-diameter uses multi-scale. Both loose.
+
+done.
