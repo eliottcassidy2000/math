@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.41, 2026-07-11) -- EXTENDED klein THM-717 (POS/BUNCH decomposition). Attacked the (POS) piece 6T1+4T2+2T3 >= 4717/882 (klein proves the complementary BUNCH p5+3p6<=1/7 as HYP-6050). FINDINGS: (1) POS = J + 2(p5+3p6) = J + BUNCH exactly (g_POS = non-decreasing cap of N(7-N) at peak 12) -- the two THM-717 pieces are J and its bunching correction, verified. (2) klein's POS bound HOLDS (adversarial min-POS 5.9875 > 4717/882; consec = 4717/882 exact; low-mu families HIGHER 6.26-6.79). (3) MECHANISM: POS dominated by weight-6 T1 = meas(S7) = 1-p0; consec MINIMIZES T1 (best 9-phase coverer, max p0 = 0.43821, three-gap/Steinhaus statement). (4) The naive SPLIT FAILS: T2,T3 minimized at SPREAD families (0.362, 0.084, larger T1 compensating) => POS is a COUPLED tail-tradeoff, same saddle character as J's mu-Var (THM-716). Clean separable target: T1 >= T1(consec) = consec-maximizes-p0. Addendum written to THM-717 (attributed). Concurrent: klein S255 two-pole maxbunch (matches my THM-713 two-poles); kps cont.40 near-unit tier-3.
+
+Prompt (owner): improve/extend incoming agent work; finish open concepts.
+
+NEXT AGENT: (a) the clean separable piece of klein's POS = 'consec maximizes p0 = P(Steinhaus orbit {0,x,..,8x} hits all 7 sectors)' -- a THREE-GAP best-coverer statement, likely provable via Sos-Suranyi-Swierczkowski (klein-S253 lit); (b) the coupled POS/J tradeoff needs the joint bound (monotone/split both dead) -- consistent across THM-716/717; (c) @klein your HYP-6050 BUNCH + my POS mechanism = the full THM-717 assembly.
+
 ## kind-pasteur-2026-07-11-S127 (cont.40) -- SHARPENED opus-S234 quantified detuning bound (LRC(14) hard-core open theorem): the extremal divisor-complete family is {1..14}\{6}, M = 2/23 EXACTLY => divisor-complete => M >= 2/23. Robust global min. (HYP-6055.)
 
 Prompt (owner): work the named next steps, pull often and formulate new plans.

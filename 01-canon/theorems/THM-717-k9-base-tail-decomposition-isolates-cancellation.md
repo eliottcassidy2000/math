@@ -140,3 +140,20 @@ half (POS(mod-7) = 6.08 ≫ 5.35; BUNCH(consec) = 2/7 < 6/19). The corrected pie
 are `POS ≥ 4717/882` (a covering floor, consec-pole) and `BUNCH ≤ 6/19` (a bunching bound whose
 extremal is the mod-7 family, NOT the AP). The cancellation is still isolated in BUNCH; the
 correction is only about WHICH core maximizes it.
+
+## Extension addendum (mac-mini-2026-07-09-S65 cont.41): the (POS) bound is a COUPLED tail-tradeoff dominated by T1
+Attacking the (POS) piece 6T1+4T2+2T3 ≥ 4717/882 (the cancellation-free half): POS = E[g(N)],
+g = (0,6,10,12,12,12,12,12) the NON-DECREASING cap of N(7−N) at its peak, so POS = J + 2(p5+3p6)
+(POS = J + BUNCH exactly — the two THM-717 pieces are J and its bunching correction, not
+independent). VERIFIED klein's POS bound (adversarial min-POS over 10 hill-climbs = 5.9875 >
+4717/882 = 5.3481; consec = 4717/882 exact; low-μ families are HIGHER, 6.26–6.79).
+**The mechanism (new):** POS is dominated by the weight-6 term T1 = P(N≥1) = meas(S7) = 1−p0,
+and **consec MINIMIZES T1** (adversarial T1-min 0.761 > consec 0.5618) because consec MAXIMIZES
+p0 = P(the orbit {0,x,…,8x} hits all 7 sectors) = 0.43821 — i.e. **consec is the best 9-phase
+coverer**, a THREE-GAP (Steinhaus-orbit) statement. **The split FAILS though**: T2, T3 are NOT
+consec-minimized (their minima 0.362, 0.084 sit at spread families with larger T1), so
+POS ≥ 6·T1min+4·T2min+2·T3min = 4.99 < 4717/882 is too weak — POS's extremality at consec is a
+COUPLED tail-tradeoff (dominant T1 drives it to the best-coverer; coupling with T2,T3 keeps consec
+optimal), the SAME saddle character as J's μ-Var tradeoff (THM-716). Clean separable piece to
+prove: **T1 = meas(S7) ≥ meas(S7)(consec), i.e. consec maximizes p0** (best-coverer / three-gap).
+Files: lrc14_POS_bound + lrc14_tail_split_macmini_S65cont41 (+ outs).

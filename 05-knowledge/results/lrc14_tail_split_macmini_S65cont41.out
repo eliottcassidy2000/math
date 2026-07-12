@@ -1,0 +1,13 @@
+consec {1..9} tails: T1=0.56179 T2=0.37245 T3=0.24376
+  POS(consec) = 6T1+4T2+2T3 = 5.34807 = 4717/882=5.34807
+
+Q: is EACH T_j individually minimized at consec? (adversarial MIN per tail)
+  T1: consec=0.56179, adversarial min=0.76085 at [1, 4, 5, 11, 14, 17, 20, 23, 29]
+       => consec IS the T1-minimizer  (splits!)
+  T2: consec=0.37245, adversarial min=0.36236 at [2, 4, 8, 12, 13, 14, 16, 20, 22]
+       => consec is NOT the T2-minimizer  (*** T2 min elsewhere: [2, 4, 8, 12, 13, 14, 16, 20, 22])
+  T3: consec=0.24376, adversarial min=0.08443 at [0, 5, 10, 13, 15, 16, 17, 19, 34]
+       => consec is NOT the T3-minimizer  (*** T3 min elsewhere: [0, 5, 10, 13, 15, 16, 17, 19, 34])
+
+T1 = meas(S7) = 1 - p0: consec maximizes p0 (best coverer)?
+  p0(consec) = 0.43821
