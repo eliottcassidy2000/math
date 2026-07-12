@@ -1,3 +1,42 @@
+## klein-2026-07-11-S260 -- WORKING THE INVERSE THEOREM: the external-input reconnaissance (opus S240's recommended path) -- literature covers bounded-max, NOT the n=13 spread gap
+
+Prompt (owner): work the inverse theorem.
+
+The one remaining LRC(14) statement = the AP coverage-extremality inverse theorem (both routes, klein
+S259 + opus S239). opus S240 (concurrent): the local-compression proof route is BLOCKED (J not
+unimodal; stuck at algebraically-special local minima) => the crux needs a GLOBAL argument, and opus
+explicitly recommended EXTERNAL inverse-theorem input or the collective atlas. kps cont.45 (concurrent):
+the coprime-reduction lemma shrinks Route B's anti-concentration from 13 runners to ~3 (non-coprime
+runners auto-safe at composite q). I executed the external-input path.
+
+**THE EXTERNAL ASSESSMENT (HYP-6100).** Searched the LRC literature (Perarnau-Serra survey 2409.20160
+§4/§8). The inverse-theorem results, for n=13:
+- **Tao Thm22: v_n < 1.2n => kappa >= 1/(n+1); so v_n <= 15 => LRC(14), UNCONDITIONAL, clean.**
+- Pandey Cor17: v_n <= 2n-3 = 23 => LRC EXCEPT (v_1=1 & V not in a diff>=2 AP).
+- Bohman-Peng Thm23: n<v_n<=2n-exp(c(loglog n)^2) => loose -- ASYMPTOTIC, not usable at n=13; this is
+  the COPRIME-MAPPINGS paper = the source of kps cont.45's coprime-reduction.
+- Malikiosis-Santos-Schymura Thm21: sum v_i > C(n+1,2)^{n-1} => loose (Minkowski); n=13 threshold 91^12,
+  astronomical.
+
+VERDICT: **every primitive DC family is SPREAD (v_n >= 24, verified 100%/20992; min-max DC = 20 but
+v_1=1-spread => Pandey's exception), so NONE is covered by Tao/Pandey.** The n=13 spread gap
+[v_n>=24, sum<=91^12] is uncovered by the literature => **Route B (spread DC clearing) is genuinely
+OPEN in the literature too** -- no external finish. The fleet's bounded-modulus clearing (kps
+coprime-reduction + klein THM-718 exact count) is the RIGHT + only known tool, and it IS the
+literature's best tool (Bohman-Peng coprime-mappings) applied at FIXED n=13 where the asymptotic
+result doesn't reach. Citable anchor for the bounded regime: Tao Thm22 (v_n<=15 => LRC(14) clean).
+
+NET on 'working the inverse theorem': the external-input path opus recommended is CLOSED as a finish
+(literature doesn't reach the n=13 spread gap), but yields (a) a clean citable bounded-regime anchor
+(Tao), (b) the identification that kps's coprime-reduction = the literature's coprime-mappings (so
+the fleet is using the field's sharpest tool), (c) confirmation that the crux is genuinely the
+fleet's to prove -- the productive path is the COLLECTIVE EXTREMAL ATLAS (opus S240) via kps
+coprime-reduction (3-runner) + THM-718 (exact count), NOT a literature citation.
+
+Files: finish-map external-input addendum; HYP-6100. NEXT: the collective atlas -- combine kps's
+3-runner coprime-reduced anti-concentration with THM-718's exact covering count; the shrunk
+(~3-runner) problem may be provable where the 13-runner one wasn't.
+
 ## opus-2026-07-11-S241 -- the AUTO-SAFE lemma (owner-directed): clearing at a composite modulus = a BOUNDED fold-class covering on the small coprime sub-family. PROVED reduction (0/372830) + honest scope (no bounded window shortcut, reconfirms S238).
 
 Prompt (owner): attack the residual 8.5% (divisor-complete families) as a bounded fold-class covering on the small coprime sub-family.
