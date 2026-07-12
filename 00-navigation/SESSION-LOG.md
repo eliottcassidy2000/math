@@ -1,3 +1,40 @@
+## klein-2026-07-11-S262 -- SHRINKING THE CRUX CREATIVELY: the ~4-runner statement handles 99.9%; unified formula extends to m=2 odd composites; pair-sum decomposition REFUTED (guard)
+
+Prompt (owner): keep working on the crux creatively.
+
+Pushed the shrink (S261: 13-runner -> ~4-runner coprime sub-family) creatively, with a genuine
+extension, an honest negative (MISTAKE-138 guard), and a strong quantification.
+
+**(1) UNIFIED FORMULA EXTENDS to m=2 ODD composites (genuine).** opus's auto-safe + my unified count
+clearing_count_units = phi(q) - |{+-j v_i : coprime, unit}| extends from m=1 to the m=2 ODD composites
+{33,35,39} (+ primes 37,41): for ODD q the danger dilations +-j (j<=m) are UNITS, so a non-coprime
+runner (odd shared factor) can't hit them (verified 0 fails). CAVEATS (corrected): the |{+-j v_i}|
+form is size-correct only for m<=2 (m>=3: blocked set = |{+-j^{-1} v_i}|, different -- q=49,55 fail);
+q=30 (even m=2) fails. Clean valid window: m<=2 = [15,27] + odd-comp {33,35,39} + primes {29,31,37,41}.
+
+**(2) THE ~4-RUNNER CRUX handles 99.9% (strong shrink).** Over spread DC families (v_i to 400):
+**99.9% clear at a COMPOSITE modulus** => the coprime shrink (~4-runner problem) handles essentially
+ALL spread DC families; the un-shrinkable prime-only core (13-runner THM-718) is ~0.1%. So the crux =
+[ELEMENTARY count 2m*#coprime<phi: 72.6%, GUARANTEED clear, PROVEN elementary] + [collision among the
+~4 coprime runners: 27.3%] + [prime-only 13-runner: 0.1%]. The middle piece is the shrunk
+anti-concentration on ~4 runners (collision v_a===+-v_b mod q <=> q | v_a-+v_b), vastly smaller than 13.
+
+**(3) PAIR-SUM DECOMPOSITION REFUTED (honest negative, guard caught it).** The creative
+'[count] + [pair-sum q=v_a+v_b IN window]' hit 100% on families in [1..90] but FAILS 36/3407 on wider
+families (v_i to 400) -- pair-sums exceed the window. The true collision is q | (j v_a -+ j' v_b) via
+DIVISIBILITY (e.g. 17 | (52+390)=442), = the general cover_num<phi, not a clean decomposition. The
+MISTAKE-138 discipline (test wide/extremal, not a narrow box) caught my own overclaim.
+
+NET: the crux is now genuinely a ~4-runner statement (composite clearing handles 99.9% of spread DC),
+with a PROVEN elementary count (72.6%) + a ~4-runner collision residual + a 0.1% prime core. The
+collision residual = pairwise divisibility among ~4 coprime runners (q | v_a -+ v_b at some window q)
+-- small enough for the atlas/pair-analysis.
+
+Files: THM-718 (unified addendum S261); lrc14_unified_clearing + autosafe-extend + pairsum-refuted
+scripts. HYP-6120. NEXT: prove the ~4-runner collision residual -- among the ~4 coprime runners of a
+spread DC family, two collide mod some composite window q. The elementary-count 72.6% is already
+proven; only the ~4-runner collision + the 0.1% prime core remain.
+
 ## mac-mini-2026-07-09-S65 (cont.47, 2026-07-11) -- NEW ANGLE: THE COVERAGE-CLEARING DUALITY unifies both endgame sides. The DENSITY side (meas S7 = fail to cover 7 sectors, THM-718/719) and the LIVENESS side (klein-S261 clearing = phi(q)-|units hit| = fail to cover units mod q) are the SAME anti-covering phenomenon -- continuous (mod ~7) vs discrete (mod q). MEASURED: AP (good coverer) = 7-sector deficiency 0.336, clearing count 6 (the WALL, t=1/14 dispatched); spread-DC (bad coverers) = deficiency ~0.62, clearing 58-110 (EASY). corr(deficiency, clearing) = +0.398 (stark dichotomy, loose fine-link -- mod-q arithmetic scatter). MASTER KEY: my cont.44 three-gap 'AP is unique best coverer, spread=bad coverer' closes BOTH sides -- the AP is the universal good-coverer hence universal extremal/wall on density AND liveness, and it is EXACTLY the family the t=1/14 sieve dispatches. The three-gap theorem is the ORGANIZING PRINCIPLE of the whole residual, not a one-lemma tool. Reflection written. Concurrent: klein S261 unified clearing formula (~4-runner crux); kps cont.47.
 
 Prompt (owner): work a new angle advancing the endgame.
