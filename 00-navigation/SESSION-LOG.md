@@ -1,3 +1,46 @@
+## kind-pasteur-2026-07-11-S127 cont.49 -- divisor-completeness is one integer, so the coprime-core size is a diameter artifact (confirms mac-mini cont.50)
+
+Prompt (owner): spend another similar session searching for more combinatorial connections and simplifications.
+
+Searched for combinatorial connections; found the fleet (mac-mini cont.50, opus-S244) had just reached the
+same place, and sharpen it from the combinatorial-cover side.
+
+THE ONE-INTEGER COVER. lcm(2,...,14) = 360360 is divisible by every d in {2,...,14}, so a SINGLE integer
+satisfies the whole divisor-complete requirement (sharper than mac-mini's "a multiple of 840 covers all even
+conditions" -- 840 misses 9,11,13; 360360 misses nothing; a tidy 2-cover is {2520,143}). Hence a DC family
+needs only ONE non-coprime-to-30030 runner; the other twelve are free to be coprime. Explicit witness:
+A = {360360} u {17,19,23,29,31,37,41,43,47,53,59,61} is primitive, spread (longest-run 1), divisor-complete,
+with 12 coprime-to-30030 runners, M ~ 0.347. So "DC => <=6 coprime-to-30030" is FALSE in general.
+
+WHY <=6 AT BOUNDED DIAMETER = AVAILABILITY (not cover-cost). Coprime-to-30030 integers have density
+prod_{p<=13}(1-1/p) = 0.192, so few exist below a small Vmax -- exactly {1,17,19,23} below 25 (max = 4), then
+5,6,7 at Vmax <= 40,80,200, growing with diameter to the ceiling 12. Same shape as cont.47's band-clearing
+window being bounded only under bounded diameter: two "small at bounded diameter, unbounded in general"
+invariants, one cause.
+
+THE DIAMETER-FREE INVARIANT. The coprime-to-30030 core is ALWAYS <= 12 (at least one runner is non-coprime,
+carrying the DC requirement), so it is a <= 12-speed family and LRC(<=13) gives it reach >= 1/13 > 1/14
+regardless of size. This reframes opus-S244's crux (LRC(14) <=> the coprime core does not blanket the good set
+G'): the core SIZE is not the lever -- it is bounded by availability and always LRC(13)-protected as a
+standalone family; the obstruction is ALIGNMENT (the core's good set meets G'), and "<=6" is a red herring for
+it.
+
+HONEST SCOPE. Confirmation + sharpening, not new. mac-mini cont.50 owns the correction (MISTAKE-139: <=6-lifts
+scale artifact; already noted <=6-coprime is bounded-diameter + adversarial 12); opus-S244 owns the
+fold-to-core synthesis. Net-new here: the one-integer cover (cleaner than 840), the explicit 12-coprime
+witnesses, the availability (not cover-cost) explanation of the <=6, and the <=12 / LRC(13)-protected reframe
+that removes the size bound from the crux. This also SUPERSEDES the DC-application MOTIVATION of my cont.48
+escape_loose13_le6 (the Lean lemma stays valid as conditional on reach(K)>=1/7; only its "DC even-heaviness
+=> <=6 lifts" reading is the corrected artifact).
+
+Artifacts: reflection divisor-completeness-is-one-integer-so-the-coprime-core-size-is-a-diameter-artifact-kps-S127;
+HYP-6140; lrc14_dc_is_cheap_coprime_core_kps_S127.py/out.
+
+Next: the crux is the ALIGNMENT (core-good set meets G') on the bounded-diameter near-tight neighborhood --
+the size of the core is settled (always <=12, LRC(13)-protected); the finite check is the remaining target.
+
+---
+
 ## mac-mini-2026-07-09-S65 (cont.51, 2026-07-12) -- COMBINATORIAL SIMPLIFICATION + THM-720 correction. (1) CLEAN CLOSED FORM: p6(consec_k) = P(only 1 sector hit) = 1/(7(k-1)) EXACTLY (k=7..13: 1/42..1/84); proof = the orbit {jx} fits the [0,1/7) arc iff (k-1)x < 1/7, unique interval measure 1/(7(k-1)). Consequences: BUNCH(consec_12) = 1/14 exactly, T5(consec_8) = 1/14 exactly -- clean values feeding klein's corrected two-pole BUNCH. Recorded as THM-717 addendum. (2) CORRECTED THM-720 (death-star-S14 + boxeph-S19): the 'M grows with diameter' (0.105->0.187) was a GENERATOR ARTIFACT of the fixed-base [2,3,4,6,12] generator (MISTAKE-101/127/137 recurrence). death-star's exact adversary V_L={L,2L,..,12L,13L+1} has CONSTANT M=1/13 at every diameter (dilation transport, boxeph). Looseness SURVIVES (1/13 > 1/14, margin 1/182) but the margin is CONSTANT not growing; the descent (few-lifts/<=6-coprime) does NOT cover the compressed 13-distinct-lift stratum -- the correct route is the near-dilate M=1/13 direct witness. death-star also flagged opus's Case B category-mismatch (THM-700/701 measure-side, not reach). Concurrent: death-star THM-721 (u-escape floor); kps cont.48 (13-runner decorrelation atom FORMALIZED in Lean).
 
 Prompt (owner): search for combinatorial connections and simplifications.
