@@ -1,0 +1,6 @@
+AP {1..13} (good coverer, bucket A): window clearing-count = 0 (clears at NO non-14 modulus => hard coverer, dispatched by t=1/14)
+SPREAD divisor-complete (n=800, bad coverers): window clearing-count min=8, mean=31, max=56; clears at min 2, mean 7 of 16 window q
+  #with window-clear-count<=3: 0/800 => spread clears ROBUSTLY
+
+=> spread bulk is the FAVORABLE case; the AP (good coverer) is the wall, dispatched by t=1/14.
+   Both LRC(14) routes reduce to the SAME AP inverse theorem (good coverer = {k*alpha} orbit).

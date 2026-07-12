@@ -33,6 +33,25 @@ density floor, realization, Lean) is proved.
 Files: LRC14-FINISH-MAP-2026-07-11.md; lrc14_route_B_dc_clearing_verify_klein_S258.py; OPEN-Q banner.
 HYP-6080. NEXT: prove [B] spread-bulk anti-concentration (character-sum/Weyl over bounded q) OR
 complete+cite the CRT-factored finite residue check (kps) OR prove [A] three-gap coverage-optimality.
+## opus-2026-07-11-S239 -- the three-gap disjunction reframes the spread bulk as FAVORABLE (corrects S237/S238) and UNIFIES both LRC(14) routes onto the AP inverse theorem.
+
+Prompt (owner): work the three-gap disjunction.
+
+Reading mac-mini cont.44 (three-gap regularity = why the AP is the best coverer; advantage 24x k=7..5x k=10) reframes the spread-bulk residual and unifies the two proof routes.
+
+THE REFRAMING: clearing at a modulus q (lonely multiplier p, bandCount=0) = the family FAILS to cover the danger arc at p. The AP ({k*alpha} Steinhaus orbit) is the UNIQUE best coverer (anti-clumping, covers 7-24x more than iid); every non-AP (spread) family covers like iid = BADLY => a bad coverer has MANY clearing multipliers. divisor-complete FORCES spread (S237). So: divisor-complete => spread => bad coverer => MANY clearing multipliers => clears easily.
+
+VERIFIED (window = non-14 moduli in [15,31]): AP {1..13} window clearing-count = 0 (clears at NO non-14 modulus -- only mult of 14, t=1/14 -- the HARD coverer, dispatched by bucket A). SPREAD divisor-complete: window clearing-count min=8, mean=31, max=56; clears at mean ~7 of 16 window q; 0/800 with <=3 => clears ROBUSTLY.
+
+CORRECTS S237/S238 ('spread is the wall'): the spread bulk is the FAVORABLE case. The genuinely hard object is the AP (good coverer, 0 window-clearing), which is NOT divisor-complete (bucket A) and is dispatched by the elementary t=1/14 witness. kps's 'window-hard = spread' means spread families clear at VARYING q (wide window, no shortcut S238) -- NOT that they are hard to clear.
+
+THE UNIFICATION: both LRC(14) routes reduce to the SAME crux. DENSITY route (mac-mini/klein moment base) needs 'consec/AP is the extremal = the AP maximizes coverage (good coverer)'. CLEAN-RULER route (kps/opus residual) needs 'divisor-complete (spread) = bad coverer => clears'. These are the SAME inverse theorem ('the good coverer is the {k*alpha} orbit') from opposite sides. So the two parallel routes share ONE wall: the AP coverage-extremality / inverse theorem. Progress on mac-mini's three-gap coverage-extremality closes BOTH routes.
+
+HONEST: this is a reframing + unification, not a proof. The residual (spread => clears) is the FAVORABLE, quantitatively-robust (min 8 clearing multipliers) direction of the inverse theorem. Concrete next target = mac-mini's lane: prove the AP is the unique maximal coverer ({k*alpha} inverse theorem); the clean-ruler spread residual then follows a fortiori.
+
+FILES: lrc14_threegap_reframing_opus_S239.py (+.out); reflection the-spread-bulk-is-favorable-both-routes-reduce-to-the-AP-inverse-theorem-opus-S239; HYP-6090. -> mac-mini cont.44, THM-661, opus-S237/S238/S233/S235, LEM-010, kps cont.36.
+
+---
 
 ## opus-2026-07-11-S238 -- spread-bulk residual: the fold-class PIGEONHOLE REDUCTION for prime moduli + an HONEST NEGATIVE result -- the {17,19,23} shortcut FAILS; the spread anti-concentration is irreducible to a few primes.
 
