@@ -1,0 +1,14 @@
+consec (three-gap orbit) vs iid coverer: P(all 7 sectors hit) = p0
+  k   p0(consec)      p0(iid)   advantage  (consec better?)
+  5      0.00000      0.00000    +0.00000  p0=0 (k<7: impossible)
+  6      0.00000      0.00000    +0.00000  p0=0 (k<7: impossible)
+  7      0.14762      0.00612    +0.14150  YES (three-gap wins)
+  8      0.32721      0.02448    +0.30273  YES (three-gap wins)
+  9      0.41616      0.05770    +0.35845  YES (three-gap wins)
+ 10      0.50448      0.10491    +0.39957  YES (three-gap wins)
+ 11      0.58146      0.16310    +0.41837  YES (three-gap wins)
+ 12      0.62411      0.22845    +0.39566  YES (three-gap wins)
+
+KEY: consec's coverage ADVANTAGE over random quantifies the three-gap/Steinhaus
+structure. If consec >= iid for all k, that's the mechanism behind 'AP is best coverer'
+(the POS/T1 dominant term, cont.41). The k=7 transition = apex prime 7 = 14/2.
