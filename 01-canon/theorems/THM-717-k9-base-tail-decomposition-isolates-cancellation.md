@@ -79,3 +79,27 @@ reduces to a 1-parameter minimization; this isolates the cancellation.
 
 `04-computation/lrc14_J_landscape_twopole_klein_S254.py`,
 `lrc14_J_decorrelation_full_klein_S254.py` (+ `.out`s).
+
+## Addendum — the SAME decomposition unifies the k=8 deg-3 base (klein-S254)
+
+The k=8 base (THM-714's cubic requirement `E[ψ₈(N)] ≥ 1−cap₉ = 2025/4004`, where
+`ψ₈(N) = (2/3)N − (47/252)N(N−1) + (5/252)N(N−1)(N−2)` = `1 − φ₃(N)`) Abel-decomposes into the
+SAME shape:
+
+> `E[ψ₈] = (2/3)T₁ + (37/126)T₂ + (5/126)T₃ − (2/21)T₄ − (1/9)T₅ − (1/126)T₆`
+> `      = POS₈ − NEG₈`,  `POS₈ = (2/3)T₁+(37/126)T₂+(5/126)T₃`,
+> `NEG₈ = (2/21)T₄+(1/9)T₅+(1/126)T₆`.
+
+(The `T₇` coefficient `3/14` drops since `N ≤ 6 ⟹ T₇ = 0`.) Verified exact over 12 869 primitive
+8-cores in [1..16]: `min POS₈ = 1457/2520 ≈ 0.5782` and `max NEG₈ = 655/24696 ≈ 0.0265`, **both
+at consec {1..8}**, giving `E[ψ₈] ≥ 0.5782 − 0.0265 = 11353/20580 ≈ 0.5517 ≥ 2025/4004`
+(margin **+0.0459**, matching THM-714 exactly). The negative/bunching part is even SMALLER here
+(0.0265 vs k=9's 2/7 ≈ 0.286) — the deg-3 majorant's higher-tail coefficients are tiny, so the
+k=8 cancellation is almost entirely isolated.
+
+**Unification:** BOTH moment-ladder base rows (k=8 deg-3, k=9 deg-2) — and hence, via THM-710's
+eigen-transfer, the ENTIRE wide-spread base — reduce to `[POS: a cancellation-free monotone-covering
+floor] + [NEG: a small higher-tail bunching bound]`, both extremal at consec. The signed content
+of LRC(14)-S3 is confined to the two NEG terms (`p₅+3p₆ ≤ 1/7` and `(2/21)T₄+(1/9)T₅+(1/126)T₆ ≤
+0.0265`), each a "measure of near-origin/near-rational bunching" quantity that vanishes with the
+diameter.
