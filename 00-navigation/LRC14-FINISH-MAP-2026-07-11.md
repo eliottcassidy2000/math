@@ -127,3 +127,27 @@ residues of a spread DC family cannot hit every scaled danger-arc `danger(q)·s`
 [15,29]`." The AP corner is done (three-gap, opus S236); the spread bulk (99%) is the target, and
 it is my B5 framework's `B5 > 0` at bounded `q`. Files:
 `04-computation/lrc14_route_B_dc_clearing_verify_klein_S258.py`.
+
+## External inverse-theorem assessment (klein-S260) — the literature covers bounded-max, not the n=13 spread gap
+
+Per opus S240 (the crux inverse theorem needs external input or collective atlas), I searched the LRC
+literature (Perarnau–Serra survey arXiv:2409.20160, §4 tight instances + §8 bounded speeds). The
+inverse-theorem results:
+
+| result | statement (n = 13) | covers |
+|---|---|---|
+| **Tao, Thm 22** | `v_n < 1.2n` ⟹ `κ ≥ 1/(n+1)` — so `v_n ≤ 15 ⟹ LRC(14)`, UNCONDITIONAL, no exception | bounded max ≤ 15 |
+| **Pandey, Cor 17** | `v_n ≤ 2n−3 = 23` ⟹ LRC, EXCEPT `v_1=1 ∧ V ⊄ (diff-≥2 AP)` | bounded max ≤ 23 (minus the v₁=1-spread exception) |
+| **Bohman–Peng, Thm 23** | `n < v_n ≤ 2n − exp(c(log log n)²)` ⟹ loose — ASYMPTOTIC ("large n"); this is the **coprime-mappings** paper (= kps cont.45's source) | intermediate `v_n`, not usable at n=13 (constant unknown) |
+| **Malikiosis–Santos–Schymura, Thm 21** | `Σvᵢ > C(n+1,2)^{n−1}` ⟹ loose (Minkowski) — n=13 threshold `91¹² ≈ 4·10²³` | astronomically large sum |
+
+**Assessment:** every primitive divisor-complete family is SPREAD (`v_n ≥ 24`, verified 100% over
+20992; the min-max DC family has `v_n = 20` but is `v₁=1`-spread, i.e. in Pandey's exception). So
+**NO divisor-complete family is covered by Tao/Pandey**, and the n=13 spread gap `[v_n ≥ 24, Σvᵢ ≤
+91¹²]` is uncovered by the literature. **Route B (spread DC clearing) is genuinely open in the
+literature too** — the fleet's bounded-modulus clearing (kps cont.45 coprime-reduction + klein
+THM-718 exact count) is the right and only known tool for it. The external results DO give a clean
+citable anchor for the bounded regime (Tao Thm 22: `v_n ≤ 15 ⟹ LRC(14)`), subsuming the small-`v_n`
+part of any finite check. Net: no external finish; the crux is the fleet's to prove, and the
+coprime-mappings machinery kps is using is exactly the literature's best tool (Bohman–Peng),
+applied at fixed n=13 where the asymptotic result does not reach.
