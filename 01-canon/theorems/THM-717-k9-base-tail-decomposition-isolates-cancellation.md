@@ -157,3 +157,39 @@ COUPLED tail-tradeoff (dominant T1 drives it to the best-coverer; coupling with 
 optimal), the SAME saddle character as J's μ-Var tradeoff (THM-716). Clean separable piece to
 prove: **T1 = meas(S7) ≥ meas(S7)(consec), i.e. consec maximizes p0** (best-coverer / three-gap).
 Files: lrc14_POS_bound + lrc14_tail_split_macmini_S65cont41 (+ outs).
+
+## Addendum (klein-S256) — the exact BUNCH-max formula and the mod-7 mechanism
+
+The corrected BUNCH-max (mod-7 pole) has an EXACT closed form for the base rows. For the mod-7 pole
+`E★_k = {1, 8, 15, …, 7k−6}` (all `≡ 1 mod 7`, max speed `M = 7k−6`):
+
+> **`T₆(E★) = 2/(7k−6)`,  `T₅(E★) = 5/(7k−6)`  (odd k),  so  `BUNCH(E★) = 2T₅+4T₆ = 18/(7k−6)`.**
+
+Verified k=9,11,13: `6/19, 18/71, 18/85`. (Even k differs: k=8 gives `394/1075`, k=10 `65/228` —
+a boundary-alignment correction.) And **`T₆ ≤ 2/(7k−6)` holds UNIVERSALLY** (max over 6120 families
+= `2/57` at `E★`, for k=9) — the mod-7 pole maximizes the one-sector bunching. (The T₅ bound does
+NOT separate: `max T₅ = 131/1479 > 5/57` at the *offset-2* mod-7 family; only the combination
+`2T₅+4T₆` is maximized at offset-1. So BUNCH-max is a coupled mod-7 extremality, like POS.)
+
+**The mechanism (why 7).** `E★`'s pairwise differences are ALL multiples of 7, so its phases
+`{frac((1+7j)x)}` re-synchronize at the seven rationals `j/7` (`j=0..6`): at `x=j/7` every phase
+equals `frac(j/7)`, and near `x=j/7` the phases spread at rate `≤ M`, giving a bunching interval of
+half-width `1/(7M)` on each side. Seven sector-aligned centers × `2/(7M)` `= 2/M = 2/(7k−6)`. The
+choice `q=7` is OPTIMAL because `7` is the sector count: a mod-`q` pole has `q` centers at max speed
+`M ≈ 1+(k−1)q`, so `T₆ ≈ 2q/(7M) = 2/(7(k−1+1/q))`, and among `q` for which the centers align with
+the `1/7`-sector grid, `q=7` maximizes. This is the "coherence spectrum" picture: bunching is a sum
+over mod-`q` resonances, peaked at `q = 7`.
+
+**The two-pole dispatch (proof direction).** The mod-7 pole (BUNCH-max) sits in the HIGH-J branch:
+fully 7-coherent families (max residue multiplicity mod 7 = 9) have `J ≥ 5.585` (margin +0.84,
+verified), so BUNCH is irrelevant there. The low-J families (consec and neighbors) have LOW mod-7
+coherence, hence small BUNCH (`≤ 2/7 < 6/19`). So the assembly splits: **[7-coherent ⟹ J large
+directly] + [not 7-coherent ⟹ BUNCH small, so J ≈ POS ≥ 4717/882]** — the two THM-717 poles never
+coincide, and each branch drops one hard piece. (POS ≥ 4717/882 on the non-coherent branch remains
+mac-mini's coupled covering floor.)
+
+**Proof direction for `T₆ ≤ 2/(7k−6)`:** each maximal `O=1` interval has length `≤ 1/(7M_family)`
+(the fastest phase traverses a `1/7`-sector in time `1/(7M)`), and the interval count is the number
+of mod-`q` resonance centers; bounding `Σ (count × 1/(7M))` by the `q=7` optimum is the remaining
+content. Files: `04-computation/lrc14_bunch_max_formula_klein_S256.py` (+ the earlier maxbunch/
+hillclimb scripts).
