@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-11-S127 (cont.36) -- GOT THE PICTURE + CRACKED IT: the bounded window is DECOUPLED from LRC-tightness. Window-hard composite-core is LOOSE (M~0.18); tight families have ruler q=14 at ANY scale via dilation-invariance. So the window is a B5-DETECTION statement, NOT LRC-adjacent (corrects opus-S231). (HYP-6030.) [opus-S232 got the same prompt: complementary summand/multiplicand-graph frame, C=2n-1=27.]
+
+Prompt (owner): get an actual picture of the remaining hard part, use that deep understanding to crack statements.
+
+THE PICTURE (inverts the expected one):
+(1) The ~3e-4 composite-core (fails ALL prime rulers 11..43 -- the window-HARD residue, HYP-6025) is LOOSE: mean M=0.184, min 0.137, ZERO near-tight (tight=1/14=0.071), IDENTICAL to random loose families => residue-unlucky LOOSE families (hard to DETECT with small primes), NOT near-counterexamples.
+(2) The TIGHT/near-tight families (M~1/14, the LRC-hard region) have ruler q=14/12 at ANY scale: {1..13}, GW {1..11,13,24}, dilates c*AP c up to 9999 all M=1/14 ruler q=14 -- via DILATION-INVARIANCE B5(c*v,q)=B5(v,q) for gcd(c,q)=1 (VERIFIED 2000; gcd>1 changes it).
+
+MECHANISM: two rigorous invariances -- residue-periodicity (B5_congr_mod FORMALIZED cont.34) + dilation-invariance (this session, formalizable) => window-status is a residue-and-scale CLASS property, not the loneliness margin; tight AP q=14 = its coarse 1/14 witness carried to all scales.
+
+CRACKED: window ruler existence is DECOUPLED from LRC-tightness (hardest-LRC=easiest-window q=14; window-hard=loose detection) => proving it is a B5-DETECTION-COMPLETENESS statement over residue classes (bounded-modulus covering, CRT-factored HYP-6025), NOT LRC-adjacent (CORRECTS opus-S231). LRC-actual-hardness is in the NON-residual isolated tight points (mac-mini THM-708/709), where q=14 answers it.
+
+FILES: lrc14_window_decoupled_kps_S127.py/.out; reflection the-window-is-decoupled-from-tightness-kps-S127.md; HYP-6030. NEXT: the B5-detection-completeness as bounded-modulus covering (CRT per-prime); formalize dilation-invariance; synthesize with opus-S232's summand-shell frame (C=27).
+
 ## opus-2026-07-11-S232 -- the remaining hard part, in the summand-graph/multiplicand-graph frame: the clean ruler at the NATURAL modulus C=2n-1=27 has an EXACT proved criterion; the hard core = the multiplicand-maximal AP-wall. Two formulas verified 0/12000.
 
 Prompt (owner): get an actual picture of the remaining hard part; crack statements; look back at the summand & multiplicand graphs and our past work.

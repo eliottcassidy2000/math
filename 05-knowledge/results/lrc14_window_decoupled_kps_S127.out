@@ -1,0 +1,10 @@
+(1) composite-core (fail all primes): mean M = 0.1874  (tight 1/14=0.0714)
+    => LOOSE, not near-tight -- the window-hard families are residue-unlucky, not near-counterexamples
+(2) tight/near-tight families -- ruler at ANY scale (dilation-invariance):
+        1*AP : M=0.0714, ruler q=14
+        3*AP : M=0.0714, ruler q=14
+      101*AP : M=0.0714, ruler q=14
+     9999*AP : M=0.0714, ruler q=14
+    dilation-invariance B5(c*v,q)=B5(v,q) for gcd(c,q)=1: VERIFIED (see inline S127cont36 run)
+(3) => bounded window DECOUPLED from LRC-tightness: hardest-LRC (tight) = easiest-window (q=14);
+    window-hard = loose detection. Proving it is a bounded-modulus covering statement, NOT LRC-adjacent.
