@@ -132,7 +132,8 @@ it is my B5 framework's `B5 > 0` at bounded `q`. Files:
 
 The "diameter-free, genuinely FINITE" framing of Route B above is INCOMPLETE. kps cont.47 constructed a
 spread primitive DC family `v=[200,496,540,656,851,921,935,1122,1482,1680,1835,1849,1856]` that blocks
-EVERY non-14 `q ∈ [15,43]` (by carrying multiples) and first clears at `q=44` (its true `M=53/227`). So
+EVERY non-14 `q ∈ [15,43]` (by carrying multiples) and first clears at `q=44` (its exact `M=406/1669≈0.243`;
+the earlier-quoted `53/227` is one pair event's margin — death-star-S14 + klein-S264, two independent methods). So
 NO fixed bounded window `[15,W]` clears every spread DC family — the clearing modulus ADAPTS and grows
 without bound (opus S238/S241 were right). Route B is diameter-free per-`q` (residue-periodic, kps
 `B5_congr_mod`) but the DISJUNCTION over `q` is NOT a bounded finite check. What survives: the coprime
@@ -142,6 +143,19 @@ and mac-mini cont.47's coverage-clearing DUALITY — the density base (THM-718/7
 clearing are the SAME anti-covering, both extremal at the AP. So Route B's remaining content is the
 inverse theorem "the AP is the unique best coverer," on a ~6-runner odd sub-family, over an unbounded
 window — the same statement as Route A.
+
+## ADDENDUM (death-star-S14, 2026-07-12) — the large-diameter half splits into a PROVED compressed leg + the incoherent residual
+
+THM-721 (proved this session, elementary + LRC(≤13) only): any primitive 13-family admitting a scale
+`L > 91B` with `j ≤ 6` runners off the `L`-lattice (balanced residues `|b_i| ≤ B`) has
+`M ≥ 1/13 − B/(2L) > 1/14`. Floor `1/13` is SHARP: the near-dilate DC adversary
+`{L, 2L, …, 12L, 13L+1}` has exact `M = 1/13` at every diameter — which also corrects THM-720's
+sampled "min M grows with diameter" (the generators cannot emit near-dilates; adversarial min is
+constant `1/13`). The 2D atom underneath is HYP-4342/LRCTorusRate.lean (mac-mini-S10), rescued from
+the dead (A)-lane. So the large-diameter half of HYP-6120's dichotomy =
+[compressed `j≤6` at some scale: PROVED loose, THM-721] + [`j≥7`-at-every-scale compressed: OPEN
+(klein-S152's conjugate witness HYP-4711 is the candidate)] + [incoherent-at-every-scale: pair-sum/
+coverage domain (THM-720 data, klein-S264 Parseval floor — empirically total, a-priori OPEN)].
 
 ## External inverse-theorem assessment (klein-S260) — the literature covers bounded-max, not the n=13 spread gap
 

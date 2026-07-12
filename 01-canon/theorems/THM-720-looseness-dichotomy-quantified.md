@@ -25,3 +25,20 @@ pair-sum, loose] + [bounded-diameter DC: finite check] + [the AP wall: sieve]. T
 duality (cont.47) is the engine: three-gap regularity makes the AP the unique good coverer (M=1/14
 wall) and everything spread a bad coverer (M large, loose). Files:
 lrc14_looseness_dichotomy_macmini_S65cont48 (+ out).
+
+## ADDENDUM (death-star-2026-07-12-S14, THM-721) — the growth is a sampling artifact; the adversarial floor is CONSTANT 1/13; looseness itself survives
+
+The near-dilate DC adversary `V_L = {L, 2L, …, 12L, 13L+1}` (primitive, divisor-complete for
+`2³·3²·5·7·13 | L`) has **exact `M = 1/13` at EVERY diameter** (verified exactly at diameters
+18721 → 393121; witness `t = (L+1)/(13L)`). The cont.48 generator (fixed base `[2,3,4,6,12]` + 8
+random draws) cannot emit near-dilates, so the sampled per-scale minima (0.105→0.187) measured the
+random bulk, not the adversarial min — the standing MISTAKE-101/127/137 lesson (extremizers are
+arithmetic/commensurate, invisible to sampling). CORRECTED STATEMENT: large-diameter DC min M is
+**constant `1/13 − o(1)` (attained by compressed near-dilates)**, not growing; every sampled
+spread/incoherent family remains loose at 0.10–0.25. The dichotomy's structure sharpens:
+[compressed `j ≤ 6` stratum: PROVED loose at floor 1/13 via the 2D atom + LRC(≤13), THM-721] +
+[incoherent stratum: pair-sum/coverage domain, this theorem's data + klein-S264's Parseval floor] +
+[bounded-diameter: finite check] + [AP wall: sieve]. Also folded in: the kps blocker's exact
+`M = 406/1669 ≈ 0.2433` (klein-S264 + death-star-S14, two independent methods; the `53/227` in
+HYP-6120 is one pair event's margin, a lower bound). Files:
+`lrc14_neardilate_adversary_deathstar_S14.py` (+ `.out`).

@@ -1,0 +1,82 @@
+==============================================================================
+UNIT TESTS (THM-668 exact-M enumeration)
+==============================================================================
+
+=== AP {1..13} (the wall) ===
+  v = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  primitive=True  DC=False  diam=12  Vmax=13  #coprime-30030=1
+  EXACT M = 1/14 = 0.0714286   witness t = 1/14   [0.0s]
+  vs 1/14: AT/BELOW   M/(1/13) = 0.92857
+  UNIT TEST expect 1/14: PASS
+
+=== AP {1..12} (12-runner tight) ===
+  v = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  primitive=True  DC=False  diam=11  Vmax=12  #coprime-30030=1
+  EXACT M = 1/13 = 0.0769231   witness t = 1/13   [0.0s]
+  vs 1/14: ABOVE   M/(1/13) = 1.00000
+  UNIT TEST expect 1/13: PASS
+
+=== kps blocker (HYP-6120) ===
+  v = [200, 496, 540, 656, 851, 921, 935, 1122, 1482, 1680, 1835, 1849, 1856]
+  primitive=True  DC=True  diam=1656  Vmax=1856  #coprime-30030=2
+  EXACT M = 406/1669 = 0.2432594   witness t = 1147/3338   [0.0s]
+  vs 1/14: ABOVE   M/(1/13) = 3.16237
+  UNIT TEST expect 406/1669: PASS
+
+==============================================================================
+(1)+(3) NEAR-DILATE ADVERSARY SERIES: V_L = {L,2L,...,12L,13L+1}
+==============================================================================
+
+=== near-dilate L=1560 [DC] ===
+  v = [1560, 3120, 4680, 6240, 7800, 9360, 10920, 12480, 14040, 15600, 17160, 18720, 20281]
+  primitive=True  DC=True  diam=18721  Vmax=20281  #coprime-30030=1
+  EXACT M = 1/13 = 0.0769231   witness t = 1561/20280   [0.4s]
+  vs 1/14: ABOVE   M/(1/13) = 1.00000
+  THM-721 floor 1/13 - 3/(2L) = 0.0759615: OK   | 2D pin M <= 1/13 + 3/(2L): OK   (M - 1/13 = +0.00e+00)
+
+=== near-dilate L=3900 [DC] ===
+  v = [3900, 7800, 11700, 15600, 19500, 23400, 27300, 31200, 35100, 39000, 42900, 46800, 50701]
+  primitive=True  DC=True  diam=46801  Vmax=50701  #coprime-30030=0
+  EXACT M = 1/13 = 0.0769231   witness t = 3901/50700   [1.0s]
+  vs 1/14: ABOVE   M/(1/13) = 1.00000
+  THM-721 floor 1/13 - 3/(2L) = 0.0765385: OK   | 2D pin M <= 1/13 + 3/(2L): OK   (M - 1/13 = +0.00e+00)
+
+=== near-dilate L=8190 [DC] ===
+  v = [8190, 16380, 24570, 32760, 40950, 49140, 57330, 65520, 73710, 81900, 90090, 98280, 106471]
+  primitive=True  DC=True  diam=98281  Vmax=106471  #coprime-30030=1
+  EXACT M = 1/13 = 0.0769231   witness t = 8191/106470   [2.2s]
+  vs 1/14: ABOVE   M/(1/13) = 1.00000
+  THM-721 floor 1/13 - 3/(2L) = 0.0767399: OK   | 2D pin M <= 1/13 + 3/(2L): OK   (M - 1/13 = +0.00e+00)
+
+=== near-dilate L=32760 [DC] ===
+  v = [32760, 65520, 98280, 131040, 163800, 196560, 229320, 262080, 294840, 327600, 360360, 393120, 425881]
+  primitive=True  DC=True  diam=393121  Vmax=425881  #coprime-30030=1
+  EXACT M = 1/13 = 0.0769231   witness t = 32761/425880   [9.8s]
+  vs 1/14: ABOVE   M/(1/13) = 1.00000
+  THM-721 floor 1/13 - 3/(2L) = 0.0768773: OK   | 2D pin M <= 1/13 + 3/(2L): OK   (M - 1/13 = +0.00e+00)
+
+==============================================================================
+(2) ESCAPE CENSUS on the DC adversary (L=32760): any scale with a 1D leg?
+==============================================================================
+  scales where legA (1D r<=12 descent) applies: 0  — NONE (escapes mac-mini cont.49 r<=12 leg)
+  scales where legB (2D j<=6 atom, THM-721) applies: 41  e.g. [{'L': 280, 'B': 1, 'j': 1, 'pure': 12}, {'L': 312, 'B': 1, 'j': 1, 'pure': 12}, {'L': 315, 'B': 1, 'j': 1, 'pure': 12}, {'L': 360, 'B': 1, 'j': 1, 'pure': 12}]
+  opus-S243 Case A trigger (#coprime-30030 <= 6): count=1 — FIRES; but legA census above shows NO small-lift scale
+  opus-S243 Case B trigger (Vmax >= lcm(2..14)=360360): Vmax=425881 — FIRES; far-ratio Vmax/second = 1.0833 (NOT far)
+
+==============================================================================
+(4) j-SERIES at L=1560: perturb top-j runners by +1..+j — u-escape floor tracking
+==============================================================================
+  j=1: M =      1/13 = 0.076923 | floor min(1/13, 1/2) - 3B/(2L) = 0.075962  OK  (prim=True, witness 1561/20280)
+  j=2: M =      1/12 = 0.083333 | floor min(1/12, 1/4) - 3B/(2L) = 0.081410  OK  (prim=True, witness 1561/18720)
+  j=3: M =      1/11 = 0.090909 | floor min(1/11, 1/6) - 3B/(2L) = 0.088024  OK  (prim=True, witness 1561/17160)
+  j=4: M =      1/10 = 0.100000 | floor min(1/10, 1/8) - 3B/(2L) = 0.096154  OK  (prim=True, witness 1561/15600)
+  j=5: M =       1/9 = 0.111111 | floor min(1/9, 1/10) - 3B/(2L) = 0.095192  OK  (prim=True, witness 1561/14040)
+  j=6: M =       1/8 = 0.125000 | floor min(1/8, 1/12) - 3B/(2L) = 0.077564  OK  (prim=True, witness 1563/12480)
+  j=7: M =       1/7 = 0.142857 | floor min(1/7, 1/14) - 3B/(2L) = 0.064698  OK  (prim=True, witness 1560/10920)
+
+==============================================================================
+(5) kps BLOCKER compressibility census — expect: NO leg at any scale
+==============================================================================
+  scales with legA or legB: 0  (incoherent at every scale: pair-sum/coverage domain)
+
+DONE.
