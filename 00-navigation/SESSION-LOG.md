@@ -1,3 +1,42 @@
+## klein-2026-07-11-S259 -- THM-718: THE EXACT CLEARING-COUNT FORMULA + the sharp inverse-theorem framing (Route B of the one remaining LRC(14) statement)
+
+Prompt (owner): work on the one remaining statement.
+
+Attacked Route B of the finish map (every DC family clears at a non-14 q in [15,31] => M>1/14).
+opus S239 (concurrent) unified both routes to ONE inverse theorem (the {k-alpha} orbit is the unique
+best coverer; spread => bad coverer => clears). I gave the clearing condition an EXACT formula.
+
+**THM-718 (PROVED, new):** for a PRIME q with q-nmid v_i, danger arc {0,+-1,..,+-m} (m=ceil(q/14)-1),
+the number of clearing multipliers is **clearing_count(v,q) = (q-1) - |{+-j*v_i mod q : 1<=j<=m}|**.
+3-line proof (p clears <=> p not in union{+-j v_i^{-1}}; inverse bijection preserves |{+-.}|).
+Verified 0 fails across primes 17,19,23,29,31 (17k+ tests) + the bijection step 0/50000. CONSEQUENCE:
+**clears at prime q <=> the dilated-+-speed set {+-j v_i} MISSES a residue mod q** (< q-1) -- a
+covering number, the EXACT quantitative form of opus's 'bad coverer clears.' Makes Route B's dominant
+prime part exact + decidable (per-prime CRT-factored inequality). For q in [15,27] (m=1): simply
+clears <=> {+-v_i} misses a residue mod q.
+
+**THE SHARP INVERSE-THEOREM FRAMING (verified):** the window-covers (13-sets failing to clear at
+EVERY non-14 q in [15,31]) are EXACTLY the TIGHT families (M=1/14): {1..13}, GW {1..11,13,24}, and
+dilates (search of 40000 random primitive 13-sets found NO other; the known tight families all
+verified as window-covers). Every tight family is NON-divisor-complete (no multiple of 14 -- that's
+WHY t=1/14 witnesses tightness). **=> DC ⟹ has a multiple of 14 ⟹ not tight ⟹ clears** (0/16328
+primitive DC families is a window-cover). So Route B = the inverse theorem 'window-cover ⟹ tight
+family' (tight list characterized THM-612/708/709; DC/tight disjointness proved; THM-718 quantifies
+'clears'). The one remaining gap = that inverse theorem (= window-completeness).
+
+STATE OF THE ONE REMAINING STATEMENT: both routes = the AP inverse theorem. Route B form now has
+[exact clearing count THM-718] + [sharp structure: window-covers = tight = non-DC, DC/tight disjoint]
++ [the gap: window-cover => tight]. Route A form (mac-mini): AP is the compact J-min = best coverer.
+SAME theorem.
+
+Files: THM-718 canon (+ S259 addendum); lrc14_clearing_count_formula + lrc14_inverse_theorem_window_covers
+scripts; finish map Route B sharpened. HYP-6095.
+
+NEXT: prove the inverse theorem 'window-cover => tight family' (equivalently: the AP {k-alpha} orbit is
+the unique 13-set whose {+-j v_i} covers (Z/q)* for all window q). THM-718 makes it an exact
+covering-number statement; mac-mini's coverage-extremality (Route A) is the same theorem. The tight
+list is finite (up to dilation) and characterized -- the gap is 'nothing ELSE is a window-cover.'
+
 ## mac-mini-2026-07-09-S65 (cont.45, 2026-07-11) -- THM-718: THE k=9 DENSITY BASE VERIFIED END TO END. Closed the MEDIUM-SPREAD GAP d=21..26 (exhaustive, 1.43M primitive 9-cores, min J in [5.5558, 5.7983], all block+far {0..7,d} minimizers converging to klein's tail plateau 5.677). THREE REGIMES TILE all primitive 9-cores: [compact d<=20 exhaustive, min at {0..8} = 1019/196 = 5.199] + [medium 21-26 exhaustive, this session] + [tail >26 = two-scale limit >= 5.677, klein HYP-6070/THM-688, far elements RAISE J]. All >= compact-min 5.199 > floor 432/91 = 4.7473, margin >= +0.4517 EVERYWHERE, NO gap between the compact check and the decorrelation tail. So min J over ALL primitive 9-cores = 1019/196 at {0..8}, k=9 base J >= 432/91 verified end to end (compact+medium exhaustive-rigorous; tail = klein's cited two-scale limit). Honest: not a from-scratch proof of the uniform two-scale bound (klein HYP-6070, verified-robust). Concurrent: klein S257 assembled the tail from my cont.43 plateau; opus S239 -- my cont.44 coverage advantage INVERTS the residual (bad coverers = spread = clear easily; AP = good coverer = the wall, dispatched by t=1/14).
 
 Prompt (owner): work to finish any remaining LRC 14 math.
