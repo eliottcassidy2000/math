@@ -1,0 +1,4 @@
+THEOREM check: pigeonhole-forced => clears: 0 violations / 1749 forced (rigorous chain)
+PROVABLE sub-class: 1749/4000 = 43.7% of divisor-complete (no anti-concentration)
+  forcing modulus: {25: 482, 27: 951, 21: 281, 15: 35}
+TOTAL elementary-provable: ~91.5% (t=1/d ladder) + ~3.7% (pigeonhole) = ~95.2% of all families; remainder = anti-concentration core

@@ -1,3 +1,22 @@
+## opus-2026-07-11-S242 -- the LAST PROVABLE PART: the pigeonhole clearing theorem (auto-safe + pigeonhole + band-edge, PROVED) clears ~44% of divisor-complete with NO anti-concentration; total elementary-provable coverage of LRC(14) ~95%. The remaining ~5% is the sharply-isolated anti-concentration core.
+
+Prompt (owner): work on the last provable part.
+
+THEOREM (PROVED; verified end-to-end 0 violations / 1749): for a 13-speed family v and composite q in {15,21,25,27} (prime factors <=13, danger band {0,+-1}) with NO multiple of q and FEWER THAN phi(q)/2 speeds coprime to q, v clears at q, hence M(v) >= 2/q > 1/14.
+PROOF via three proved lemmas: [auto-safe, S241: speeds with gcd(v_i,q)>1 are inert at unit multipliers] + [pigeonhole: < phi(q)/2 coprime speeds occupy < phi/2 unit fold-classes => some class empty => at p=r^{-1}, bandCount=0] + [band-edge, S235: clear at 14-nmid q => M >= ceil(q/14)/q > 1/14].
+
+COVERAGE: 43.7% of divisor-complete spread families are pigeonhole-forced (NO anti-concentration). Forcing modulus: q=27 (54%, needs >=5 speeds div by 3, since phi(27)/2=9), q=25 (28%, >=4 div by 5), q=21 (16%), q=15 (2%).
+
+TOTAL ELEMENTARY-PROVABLE COVERAGE of ALL 13-speed families: ~91.5% (not-divisor-complete => t=1/d ladder, THM-366) + ~3.7% (divisor-complete pigeonhole-forced, this theorem) = ~95.2%. All by elementary means, no anti-concentration.
+
+REMAINDER ~4.8% = the ANTI-CONCENTRATION CORE: divisor-complete families with ENOUGH coprime speeds (>= phi(q)/2 at every bounded composite), so clearing requires the residues to CLUSTER (leave a fold-class empty DESPITE having enough speeds) -- a genuine anti-concentration statement, not a counting one. This is the sole remaining open part, where hypothetical covering counterexamples would live; the pigeonhole cannot reach it (by definition it has enough speeds), and S238 showed no bounded-window shortcut.
+
+NET: banks the last provable part -- a clean, self-contained theorem assembling three proved lemmas into unconditional clearing for ~44% of the residual, raising elementary-provable coverage of LRC(14) to ~95%, and sharply isolating the ~5% anti-concentration core (divisor-complete + enough coprime speeds + residue clustering = the wall, everything provable around it stripped away).
+
+FILES: lrc14_pigeonhole_provable_part_opus_S242.py (+.out); reflection the-last-provable-part-pigeonhole-clearing-opus-S242; HYP-6115. -> opus-S241/S235/S238/S239, THM-366.
+
+---
+
 ## klein-2026-07-11-S260 -- WORKING THE INVERSE THEOREM: the external-input reconnaissance (opus S240's recommended path) -- literature covers bounded-max, NOT the n=13 spread gap
 
 Prompt (owner): work the inverse theorem.
