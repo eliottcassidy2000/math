@@ -1,3 +1,50 @@
+## kind-pasteur-2026-07-11-S127 cont.51 -- the k=13 Farey window is non-empty (opus-S247) but holds no divisor-complete family; the crux decomposes to the DC floor 1/12
+
+Prompt (owner): spend another similar session of progress.
+
+Same hour as opus-S247's correction, from the other side. opus-S246 had proposed the LRC(14) crux as a
+Farey-window rigidity [window (1/14,2/27) empty => M<2/27 forces dilated {1..13}]. opus-S247 REFUTED it at
+k=13: {1..11,13,36} (= {1..13}\{12} + 36) has M = 3/41 = 0.0732 in (1/14,2/27), so the window is NON-empty
+(the mod-14 composite closes the second-rung gap that exists for mod-13 prime at k=12).
+
+MY FINDING (the complement, restricted to divisor-complete families):
+- NO divisor-complete family lies in (1/14, 2/27). Over the structural cores + adversarial hill-climb
+  (Vmax <= 32, near-tight seeds), the DC M-floor is 1/12 = 0.0833 (at {1,2,3,4,10..18}, matching my cont.41
+  exhaustive census), a 1/84 margin over 2/27. Zero DC families in the window.
+- opus-S247's window-filler {1..11,13,36} is NOT divisor-complete -- it has no multiple of 14. So it lives
+  in the NON-DC bucket, dispatched by THM-366 (t=1/14 => M >= 1/14, elementary). Not a hard case.
+
+THE RESOLUTION. Window-non-empty (opus-S247) + window-DC-empty (this session) combine cleanly: the families
+filling (1/14, 2/27) are all NON-DC near-AP (THM-366-handled), and no DC family is near tight (floor 1/12).
+So LRC(14) closes as [non-DC: THM-366, M >= 1/14, INCLUDING every window-filler] + [DC: M >= 1/12], and the
+non-empty window does NOT obstruct the two-bucket route. opus-S247's correction breaks the SINGLE-STATEMENT
+Farey rigidity but not the two-bucket dispatch -- because the very families that refute the rigidity are
+non-DC and already dispatched.
+
+SHARPENS opus-S247. Its conclusion "the crux is AP-minimizes-M, not window-empty" is right; this pins WHERE
+that crux bites. It DECOMPOSES: [non-DC: THM-366, PROVED] + [DC: floor 1/12]. No new k=13 inverse theorem is
+needed; the remaining work is the DC floor (boxeph-S20's finite check through Vmax <= 30 + my cont.50 dilation
+transport carrying the near-dilate orbit). The 14 = 2*7 composite difficulty that killed the window-empty form
+lives in the elementary non-DC bucket, where the two-bucket dispatch already resolves it.
+
+SCOPE (honest): DC-empty-window verified (hill-climb Vmax<=32 + cont.41 exhaustive Vmax<=22 + cores), not
+proved uniformly; the DC floor 1/12 is a bounded-structure fact carried by dilation (MISTAKE-140), with the
+large-structure DC families looser still (cont.49, M ~ 0.35). The full DC => M >= 1/12 is boxeph-S20's finite
+check plus the large-diameter looseness.
+
+HOUSEKEEPING: resolved two HYP-number collisions -- kps-cont49 keeps 6140; opus-S247 keeps 6165; klein-S265 ->
+6170. Also confirmed the full-root-build segfault is in LRCSafeCertSize5_g2to3.lean (124k lines, 540
+native_decide, from mac-mini cont.22/28) -- pre-existing, not a regression, a Windows native_decide memory
+limit, not a session-tractable fix.
+
+Artifacts: reflection the-farey-window-is-non-empty-but-holds-no-dc-family-thm366-dispatches-the-fillers-kps-S127;
+HYP-6175; lrc14_dc_empty_window_kps_S127.py/out.
+
+Next: the DC M >= 1/12 floor (boxeph-S20 finite check + large-diameter looseness) is the genuine remaining
+target; opus-S247's non-empty window is a non-DC phenomenon and does not add to it.
+
+---
+
 ## opus-2026-07-11-S247 -- CORRECTION to S246: the k=13 Farey-window (1/14,2/27) is NON-EMPTY (3/41 realized); the crux is "AP minimizes M", NOT the window-empty. S246's E3/divisor-complete-loose/all-levers core STANDS.
 
 Prompt (owner): spend another similar session of progress.

@@ -1,0 +1,15 @@
+empty-window test: (1/14, 2/27) = (0.07143, 0.07407); width 0.00265
+
+(1) structural DC cores -- exact M vs the window:
+    cont.41 extremal {1,2,3,4,10..18}      M=1/12=0.08333  in (1/14,2/27)? False
+    boxeph H*+15 (near-dilate core)        M=1/11=0.09091  in (1/14,2/27)? False
+    shift-AP {2..14}                       M=1/8=0.12500  in (1/14,2/27)? False
+
+(2) adversarial hill-climb: min M over primitive DC (Vmax<=32), hunting the window:
+    MIN M found (float 0.08333) EXACT = 1/12 = 0.08333 at [1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+    DC families found IN (1/14, 2/27): 0
+
+=> DC M-floor (this search) = 0.08333;  2/27 = 0.07407
+   EMPTY WINDOW HOLDS FOR DC: no DC family with M in (1/14,2/27); DC floor >= 2/27 (margin >=1/378).
+   => the near-AP hard families (M in the window) are all NON-DC => handled by THM-366 (t=1/d);
+      the DC route needs ONLY the >=2/27 floor (boxeph finite check + my dilation transport).
