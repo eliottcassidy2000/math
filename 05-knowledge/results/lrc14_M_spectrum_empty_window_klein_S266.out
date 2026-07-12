@@ -1,0 +1,52 @@
+========================================================================
+(1) NAMED EXTREMAL M-VALUES (exact, via pair-sum ruler)
+========================================================================
+  interval {1..13}                           M=    1/14=0.07143  (ruler q=14)  DC=False
+  compressed near-dilate 2*{1..12} u {13}    M=    1/13=0.07692  (ruler q=26)  DC=True
+  boxeph step-3 AP core                      M=    3/37=0.08108  (ruler q=37)  DC=True
+  translated interval {2..14}                M=     1/8=0.12500  (ruler q=16)  DC=True
+  reference: 1/14=0.07143  2/27=0.07407  1/13=0.07692
+
+========================================================================
+(2) LOW END of the M-spectrum over primitive 13-subsets of [1..V], V=14..20
+========================================================================
+  V=14:      13 primitive families scanned
+  V=15:      91 primitive families scanned
+  V=16:     455 primitive families scanned
+  V=17:    1820 primitive families scanned
+  V=18:    6188 primitive families scanned
+  V=19:   18564 primitive families scanned
+  V=20:   50388 primitive families scanned
+
+  total primitive families scanned: 77519
+
+  DISTINCT M-values <= 0.11, sorted (M, count, example, DC?):
+          2/27 = 0.07407  x1       e.g.[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 20]
+          1/13 = 0.07692  x8       e.g.[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14]
+          2/25 = 0.08000  x12      e.g.[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 17]
+          1/12 = 0.08333  x57      e.g.[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14] [DC-achievable]
+          3/35 = 0.08571  x17      e.g.[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 17, 18, 19]
+          2/23 = 0.08696  x372     e.g.[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14] [DC-achievable]
+          1/11 = 0.09091  x1165    e.g.[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14] [DC-achievable]
+          3/32 = 0.09375  x127     e.g.[1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 19] [DC-achievable]
+          2/21 = 0.09524  x1679    e.g.[1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14] [DC-achievable]
+          3/31 = 0.09677  x463     e.g.[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 13, 17, 18] [DC-achievable]
+          1/10 = 0.10000  x2403    e.g.[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14] [DC-achievable]
+          3/29 = 0.10345  x955     e.g.[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 13, 14, 18] [DC-achievable]
+          2/19 = 0.10526  x2946    e.g.[1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14] [DC-achievable]
+          3/28 = 0.10714  x1089    e.g.[1, 2, 3, 4, 6, 7, 8, 9, 13, 14, 15, 16, 17] [DC-achievable]
+          4/37 = 0.10811  x279     e.g.[1, 2, 3, 4, 6, 7, 8, 10, 11, 12, 13, 18, 19]
+
+========================================================================
+(3) EMPTY-WINDOW CHECK (1/14, 2/27)
+========================================================================
+  EMPTY: no primitive 13-set in [1..20] has M strictly in (1/14, 2/27).
+  => the spectrum jumps from 1/14 directly to the next rung >= 2/27 (verified in-range).
+
+========================================================================
+(4) FAREY RUNGS r/(13r+1) vs observed, and the DC floor in-range
+========================================================================
+  Farey rungs r/(13r+1): ['1/14=0.07143', '2/27=0.07407', '3/40=0.07500', '4/53=0.07547']
+  min DC M in-range = 1/12 = 0.08333  (boxeph floor: 1/13=0.07692)
+
+done.
