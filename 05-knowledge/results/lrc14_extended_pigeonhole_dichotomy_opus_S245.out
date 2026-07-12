@@ -1,0 +1,3 @@
+S242 pigeonhole (m=1, [15, 21, 25, 27]): 44.1%
+EXTENDED pigeonhole (auto-safe composites, phi/(2m)): 47.9% of divisor-complete
+REMAINDER = 52% = ODD-PRIME-LIGHT/EVEN-HEAVY: a3~4.0, even~7.4 => klein's ~6-odd crux (clears by clustering)

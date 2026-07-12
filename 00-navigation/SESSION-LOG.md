@@ -1,3 +1,21 @@
+## opus-2026-07-11-S245 -- combinatorial search: EXTENDED pigeonhole (44%->48%, rigorous) + the odd-prime-weight DICHOTOMY + mined the covering-number connection (Hough-dead, over-cover/unbounded/pinned) + the 26-conditions INCOMPATIBILITY lever.
+
+Prompt (owner): another session searching for combinatorial connections and simplifications.
+
+(1) EXTENDED PIGEONHOLE (new, rigorous, 0 violations end-to-end): S242's pigeonhole [coprime-to-q < phi(q)/2 at m=1 composites {15,21,25,27}] generalizes to the WIDER band -- at composite q (pf<=13, danger band {0,+-1..+-m}, m=ceil(q/14)-1, danger residues coprime to q), clears if coprime-to-q < phi(q)/(2m). Adding q in {33,35,39,49,55,65,77,91} raises the provably-forced coverage 43.9% -> 47.9% of divisor-complete.
+
+(2) DICHOTOMY (new): the remainder (~52% of DC) is exactly ODD-PRIME-LIGHT/EVEN-HEAVY (a3~4<5, a5~2.5<4, #even~7.4) = klein's ~6-odd crux, clearing by residue CLUSTERING (fold-class empty despite enough coprime), not pigeonhole. Residual splits: odd-prime-heavy => pigeonhole-forced (48%, proved); even-heavy/~6-odd => clustering = anti-concentration (52%). The pigeonhole handle scales with odd-prime weight.
+
+(3) COVERING-NUMBER CONNECTION (mined via Explore): the core IS an exact covering-number problem -- THM-718 (q clears <=> {+-j*v_i} misses a residue mod q); auto-safe S241 = the fold-class refinement. BUT it is an OVER-COVER with UNBOUNDED ADAPTIVE modulus on the PINNED side, so Hough (min-modulus) / Mirsky-Newman (exact cover) / BBMST do NOT apply (macmini-S24; covering-system DEPTH lives on the false SHIFTED side, HYP-3954 Guo-Sun; shifted-LRC false from n=5). The Q50 finite census is also dead (MISTAKE-110, unbounded modulus). So the covering-system literature is a documented dead end as a bound, useful only as language.
+
+(4) NEW LEVER: the 26-necessary-conditions INCOMPATIBILITY (s554o) -- close the core WITHOUT the inverse theorem by finding two provably-incompatible conditions. The extended pigeonhole adds a FRESH necessary condition (counterexample => odd-prime-light) as an incompatibility partner with A3 (the 6 anchors 8,9,5,7,11,13). Three live levers (priority): three-gap/Steinhaus AP-inverse (shared crux, S239); push the pigeonhole into the clustering regime (this session = step 1); additive-energy/Sidon on the <=6 core (S178/S179, respecting S181's necessary-not-sufficient caveat).
+
+NET: banked a rigorous extension (44->48%) + a clean dichotomy; settled the covering-system connection as a bound-dead-end (over-cover/unbounded/pinned); surfaced the incompatibility lever as the promising non-analytic path with a fresh partner condition. The residual crux stays the ~6-odd-runner clustering (= the three-gap AP-inverse theorem), now sharply flanked by everything provable.
+
+FILES: lrc14_extended_pigeonhole_dichotomy_opus_S245.py (+.out); reflection combinatorial-connections-extended-pigeonhole-covering-number-and-the-incompatibility-lever-opus-S245; HYP-6145. -> opus-S242/S241/S243/S244/S239, THM-718, macmini-S24, HYP-3954, s554o, MISTAKE-110.
+
+---
+
 ## kind-pasteur-2026-07-11-S127 cont.49 -- divisor-completeness is one integer, so the coprime-core size is a diameter artifact (confirms mac-mini cont.50)
 
 Prompt (owner): spend another similar session searching for more combinatorial connections and simplifications.
