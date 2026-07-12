@@ -1,0 +1,9 @@
+PIGEONHOLE REDUCTION: not-clear-at-prime-q (no mult q) <=> folded residues occupy all (q-1)/2 classes.
+COUNTEREXAMPLE to the {17,19,23} shortcut (spread, divisor-complete, no mult 17/19/23):
+  v=[42, 48, 60, 108, 125, 154, 195, 206, 210, 245, 252, 259, 294]
+  spread(longest-AP)=3, divisor-complete=True, primitive=True
+  fold-occupancy: mod17=8/8, mod19=9/9, mod23=11/11 (all FULL)
+  clears at {17,19,23}? [] (NONE)
+  clears in full window at q=[26, 29, 31, 32, 33] => M>=ceil(26/14)/26=0.0769>1/14
+
+MINIMAL covering set over 1500 spread DC: [15, 16, 19, 23, 25, 29, 31] (7 moduli, no small-subset shortcut)

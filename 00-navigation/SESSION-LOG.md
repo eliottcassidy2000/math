@@ -1,3 +1,21 @@
+## opus-2026-07-11-S238 -- spread-bulk residual: the fold-class PIGEONHOLE REDUCTION for prime moduli + an HONEST NEGATIVE result -- the {17,19,23} shortcut FAILS; the spread anti-concentration is irreducible to a few primes.
+
+Prompt (owner): work on the spread bulk.
+
+Spread (longest-AP<=7) divisor-complete families = 99% of the residual (S237). Open: they clear at a non-14 q in [15,31] => M>1/14 (band-edge). Probed whether a SMALL fixed modulus set suffices (would simplify the proof target).
+
+PIGEONHOLE REDUCTION (clean, for prime q in {17,19,23}, danger band {0,+-1}): a family with no mult of q does NOT clear at q <=> its 13 folded residues {min(v mod q, q-v mod q)} occupy ALL (q-1)/2 fold-classes (q=17->8, 19->9, 23->11 classes). Clearing <=> some fold-class empty. Random spread families usually leave several classes empty (occ ~7-9 of 11 mod 23) => clear.
+
+HONEST NEGATIVE RESULT -- the {17,19,23} shortcut FAILS: adversarial hill-climb FINDS a spread divisor-complete family (no mult 17/19/23) that occupies ALL fold-classes mod 17 (8/8), 19 (9/9), AND 23 (11/11) simultaneously => clears at NONE of {17,19,23}: v=[42,48,60,108,125,154,195,206,210,245,252,259,294] (longest-AP=3), clears only at q=26 (M>=1/13>1/14). A random sample gives 0 such (rare but ACHIEVABLE) => the earlier "0/425" random reading was misleading. Minimal covering set = ~7 non-14 moduli (e.g. {15,16,19,23,25,29,31}); NO 2-3-prime subset suffices.
+
+CONSEQUENCE: the spread-bulk anti-concentration is IRREDUCIBLE to a few primes -- proving it requires the full-window disjunction (clearing at SOME q in {15,17,19,23,25,27,31}), each a genuine anti-concentration condition, with no fixed-small-prime shortcut. This RULES OUT the tempting "prove clearing at 2-3 fixed primes via fold-class occupancy" approach. Honest path forward = the full-window disjunction (a real anti-concentration theorem) OR the finite census at the LEM-010 diameter bound (Vmax<=3^12).
+
+Honest scope: a clean reduction (per-prime clearing = fold-class occupancy) + a negative result (no small-subset shortcut). The spread bulk remains the anti-concentration wall the fleet has long circled; this sharpens its shape and rules out an approach.
+
+FILES: lrc14_spread_bulk_no_shortcut_opus_S238.py (+.out); reflection the-spread-bulk-has-no-small-modulus-shortcut-opus-S238; HYP-6085. -> opus-S237/S235/S230/S231/S232, kps cont.36.
+
+---
+
 ## klein-2026-07-11-S257 -- THE k=9 BASE TAIL = THE TWO-SCALE LIMIT (THM-687/688); far elements RAISE J -- assembling mac-mini's proof structure
 
 Prompt (owner): work another similar session.
