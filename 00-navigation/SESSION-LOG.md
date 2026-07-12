@@ -50,6 +50,44 @@ THE UNIFICATION: both LRC(14) routes reduce to the SAME crux. DENSITY route (mac
 HONEST: this is a reframing + unification, not a proof. The residual (spread => clears) is the FAVORABLE, quantitatively-robust (min 8 clearing multipliers) direction of the inverse theorem. Concrete next target = mac-mini's lane: prove the AP is the unique maximal coverer ({k*alpha} inverse theorem); the clean-ruler spread residual then follows a fortiori.
 
 FILES: lrc14_threegap_reframing_opus_S239.py (+.out); reflection the-spread-bulk-is-favorable-both-routes-reduce-to-the-AP-inverse-theorem-opus-S239; HYP-6090. -> mac-mini cont.44, THM-661, opus-S237/S238/S233/S235, LEM-010, kps cont.36.
+## kind-pasteur-2026-07-11-S127 cont.44 -- the three-gap disjunction collapses to the consecutive block for the pure-AP corner (formalized kernel-pure)
+
+Prompt (owner): work the 3 gap disjunction.
+
+CONTEXT: the divisor-complete residual splits into [near-AP corner longest-AP>=8: LEM-012 klein-S196 gap-split,
+done] + [spread bulk longest-AP<=7 (99%): opus-S238, needs the full irreducible window disjunction, open].
+opus-S236 isolated the AP's special structure: an AP's residues {(a+i*d)*p mod q} are THEMSELVES an AP mod q
+(step dp), so clearing at q = an AP-mod-q avoiding the danger arc {0,+-1} = a three-gap / Steinhaus statement.
+
+FINDING: for the pure-AP corner the general three-gap machinery is overkill -- the EXTREME case (a single
+consecutive block, reached by two explicit multipliers p=+-d^{-1}) closes it, and the clearing condition is a
+one-line modular interval.
+- CONSECUTIVE REDUCTION: divisor-complete+primitive forces gcd(d,q)=1 for every q with prime factors <=13
+  (proof: if prime p<=13 divides d, all AP terms === a mod p; divisor-completeness needs a mult of p => a===0
+  => all terms ===0 => not primitive). So p===d^{-1} mod q sends the AP to 13 CONSECUTIVE residues {r..r+12},
+  r=a*d^{-1} mod q, and q=25,26,27 are always usable.
+- CONSECUTIVE-BLOCK LEMMA (exact, formalized): for 16<=q<=28 the safe band is exactly [2,q-2], and a 13-block
+  avoids {0,+-1} <=> r in [2,q-14] (alpha=+) or r in [14,q-2] (alpha=-). Verified exactly for all q,r.
+- THE DISJUNCTION: p=+-d^{-1} over q in [16,27] clears EVERY primitive divisor-complete 13-term AP (0/2161).
+- PROOF-SHAPED SPINE: q=27 (always usable) clears EXACTLY unless a===0,+-d mod 27 (0 mismatches, 89%); the 239
+  exceptions (11%) each clear at a secondary q in [16,26].
+
+FORMALIZED kernel-pure [propext, Classical.choice, Quot.sound], builds green (17s incremental):
+LRCThreeGapConsecutive.lean -- inBand_of_residue_mem_band (residue in [2,q-2] => safe, q<=28) =>
+bandCount_zero_of_consecutive_block (consecutive block in band => bandCount=0, clears) =>
+liveCount_pos_of_consecutive_block (=> live multiplier, the hypothesis opus-S235's band-edge lemma consumes
+for M>1/14). The one abstract hypothesis (residues ARE the block r+i) = "the consecutive reduction happened",
+dischargeable for an AP at p===d^{-1} by (a+i*d)*d^{-1} === a*d^{-1}+i.
+
+This is the sharp, explicit, Lean-ready form of opus-S236's verified AP result (tighter window [16,27] vs
+[15,31], exact mechanism); complements LEM-012 at the L=13 endpoint. Concurrent: mac-mini-S65cont44 did
+three-gap regularity (WHY the AP is the extremal pole) -- the complementary descriptive side.
+
+Artifacts: reflection the-three-gap-disjunction-collapses-to-consecutive-for-the-ap-corner-kps-S127; HYP-6090;
+lrc14_threegap_disjunction_kps_S127.py/out, lrc14_threegap_structural_kps_S127.out; LRCThreeGapConsecutive.lean.
+
+Next: (a) discharge the AP-reduction hypothesis in Lean (a+i*d at p=d^{-1} => consecutive block); (b) the
+spread bulk (99%) remains opus-S238's open full-window anti-concentration -- the genuine wall.
 
 ---
 

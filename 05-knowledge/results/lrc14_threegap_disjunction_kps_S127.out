@@ -1,0 +1,8 @@
+(1) block-fit lemma check (q in [16,28], danger={0,+-1}):  block {r..r+12} safe  <=>  r in [2,q-14]
+    formula r in [2,q-14] matches exact block-fit for ALL q in [16,28], all r: True
+
+(2) primitive divisor-complete 13-term APs (d<=59,a<=199): 2161
+    alpha=+-1 (consecutive) disjunction clears via window [16,27];  FAILURES = 0
+    max( first-consec-q  -  first-full-clear-q ) over corner = 7  (0 => consecutive is as early as full)
+
+(4) showcase {2..14}: consecutive cert at q=16 => ('+', 2) (residues {2..14} = safe band [2,14] mod 16, exact fit)

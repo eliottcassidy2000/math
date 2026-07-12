@@ -1,0 +1,7 @@
+primitive divisor-complete APs: 2161
+(a) APs with gcd(d, prime<=13) > 1: 0  => d coprime to {2,3,5,7,11,13} for ALL: True
+    => q in {25=5^2,26=2*13,27=3^3} always have gcd(d,q)=1 (usable). q with prime factor>13 in [16,27]: 17,19,23.
+(b) q=27 clears  <=>  a NOT in {0,+-d} mod 27 : mismatches = 0 (0 => exact characterization)
+    q=27 exceptions (a===0,+-d mod 27): 239 of 2161  (11.1%)
+(c) every q=27-exception clears at some q in [16,26]: True; secondary-q distribution: {16: 34, 17: 43, 19: 69, 20: 49, 21: 32, 22: 8, 23: 3, 24: 1}
+    => the consecutive disjunction over the window [16,27] is complete for the pure-AP corner.
