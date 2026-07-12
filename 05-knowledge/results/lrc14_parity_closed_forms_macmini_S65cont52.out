@@ -1,0 +1,28 @@
+VERIFY closed forms:
+  p6 = 1/(7(k-1));  p5(even) = 5/(14(k-1));  p5(odd) = (5k-9)/(14(k-1)(k-2))
+  k=7: p6 OK | p5 OK
+  k=8: p6 OK | p5 OK
+  k=9: p6 OK | p5 OK
+  k=10: p6 OK | p5 OK
+  k=11: p6 OK | p5 OK
+  k=12: p6 OK | p5 OK
+  k=13: p6 OK | p5 OK
+  k=14: p6 OK | p5 OK
+  k=15: p6 OK | p5 OK
+  k=16: p6 OK | p5 OK
+  k=17: p6 OK | p5 OK
+
+  p6 closed form: CONFIRMED; p5 parity closed form: CONFIRMED
+
+p4 hunt: p4 * 14(k-1)(k-2)(k-3) (seek pattern):
+  k=7 (odd ): p4*14(k-1)(k-2)(k-3) = 156 = 156.000
+  k=8 (even): p4*14(k-1)(k-2)(k-3) = 238 = 238.000
+  k=9 (odd ): p4*14(k-1)(k-2)(k-3) = 312 = 312.000
+  k=10 (even): p4*14(k-1)(k-2)(k-3) = 440 = 440.000
+  k=11 (odd ): p4*14(k-1)(k-2)(k-3) = 540 = 540.000
+  k=12 (even): p4*14(k-1)(k-2)(k-3) = 684 = 684.000
+  k=13 (odd ): p4*14(k-1)(k-2)(k-3) = 828 = 828.000
+  k=14 (even): p4*14(k-1)(k-2)(k-3) = 1006 = 1006.000
+  k=15 (odd ): p4*14(k-1)(k-2)(k-3) = 1152 = 1152.000
+  k=16 (even): p4*14(k-1)(k-2)(k-3) = 1388 = 1388.000
+  k=17 (odd ): p4*14(k-1)(k-2)(k-3) = 1560 = 1560.000

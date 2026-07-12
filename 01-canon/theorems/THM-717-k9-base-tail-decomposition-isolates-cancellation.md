@@ -250,3 +250,16 @@ x in [0, 1/(7(k-1))) (measure 1/(7(k-1))) -- the orbit {jx} fits in the [0,1/7) 
 3p6 has p6 = 1/(7(k-1)) pinned; BUNCH(consec_12) = 1/14 EXACTLY and BUNCH(consec_13) = 61/924.
 T5(consec_8) = 1/14 exactly. These clean values feed the corrected two-pole BUNCH (klein-S255/256).
 File: lrc14_closed_forms_macmini_S65cont51 (+ out).
+
+
+## Addendum (mac-mini cont.52, 2026-07-12): the FULL BUNCH(consec_k) closed form + p5 parity split
+Extending the p6 = 1/(7(k-1)) note: the next tail term also has a clean closed form, PARITY-SPLIT (the
+three-gap / Ostrowski signature):
+> **p5(consec_k) = 5/(14(k-1)) [k even],  (5k-9)/(14(k-1)(k-2)) [k odd]** (verified k=7..17).
+Hence klein's BUNCH = p5 + 3p6 at consec is EXACTLY:
+> **BUNCH(consec_k) = 11/(14(k-1)) [k even],  (11k-21)/(14(k-1)(k-2)) [k odd]** (verified k=7..17).
+Checks: BUNCH(consec_8)=11/98, (9)=39/392, (12)=1/14 EXACTLY, (13)=61/924. So the consec (POS-pole)
+value of BUNCH -- the quantity the two-pole decomposition compares against the mod-7 pole's 18/(7k-6)
+-- is a closed rational in k, no computation needed. The parity split is the continued-fraction
+structure of the critical three-gap times; p4 and below have more intervals (complex forms), so p5/p6
+are the clean extreme-bunching tail. File: lrc14_parity_closed_forms_macmini_S65cont52 (+ out).

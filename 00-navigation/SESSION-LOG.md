@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.52, 2026-07-12) -- COMBINATORIAL: FULL BUNCH(consec_k) CLOSED FORM via parity-split p5. Extending cont.51's p6=1/(7(k-1)): p5(consec_k) = 5/(14(k-1)) [even k] / (5k-9)/(14(k-1)(k-2)) [odd k] -- PARITY-SPLIT, the three-gap/Ostrowski signature (verified k=7..17). Hence klein's BUNCH = p5+3p6 at consec = 11/(14(k-1)) [even] / (11k-21)/(14(k-1)(k-2)) [odd] EXACTLY (verified k=7..17; BUNCH(consec_12)=1/14, (13)=61/924). So the POS-pole BUNCH value (compared vs mod-7 pole's 18/(7k-6) in klein's two-pole decomposition) is a CLOSED RATIONAL in k -- no computation. p4 and below have more three-gap intervals (complex); p5/p6 are the clean extreme-bunching tail. THM-717 addendum. Concurrent: boxeph S19 (near-dilate 1/13 floor exhaustive, 0/6038 below); opus S245 (pigeonhole 44->48%).
+
+Prompt (owner): investigate new ideas.
+
+NEXT AGENT: (a) the parity-split closed forms (p5,p6 clean; p4+ complex) reveal the three-gap Ostrowski structure of the consec distribution -- a full J(consec_k) closed form needs p0..p4 (harder); (b) BUNCH(consec_k) closed form is READY for klein's two-pole THM-717 (consec POS-pole vs mod-7 BUNCH-pole, both now formulas); (c) density base DONE; large-diameter = near-dilate 1/13 stratum (death-star/boxeph).
+
 ## opus-2026-07-11-S245 -- combinatorial search: EXTENDED pigeonhole (44%->48%, rigorous) + the odd-prime-weight DICHOTOMY + mined the covering-number connection (Hough-dead, over-cover/unbounded/pinned) + the 26-conditions INCOMPATIBILITY lever.
 
 Prompt (owner): another session searching for combinatorial connections and simplifications.
