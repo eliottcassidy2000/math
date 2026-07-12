@@ -1,3 +1,25 @@
+## opus-2026-07-11-S247 -- CORRECTION to S246: the k=13 Farey-window (1/14,2/27) is NON-EMPTY (3/41 realized); the crux is "AP minimizes M", NOT the window-empty. S246's E3/divisor-complete-loose/all-levers core STANDS.
+
+Prompt (owner): spend another similar session of progress.
+
+Worked S246's proposed closing target (extend HYP-4151's Farey-window rigidity to k=13) -- and REFUTED the target.
+
+THE REFUTATION: S246 claimed [M<2/27 => dilated interval {1..13}] proves LRC(14). FALSE at k=13: the family {1,2,3,4,5,6,7,8,9,10,11,13,36} (= {1..13} minus 12, plus 36) has M = 3/41 = 0.07317 in (1/14, 2/27), attained at (r,Q)=(3,41). It is LONELY (M>1/14), not a counterexample, but it FILLS the window. So the window is non-empty and the rigidity is false at k=13.
+
+WHY S246 WAS WRONG: HYP-4306's empty-window was verified only for k=3..7 and k=12 (mod-13 PRIME); I over-extrapolated to k=13 (mod-14 COMPOSITE). The composite 14 (zero-divisor at 7) makes the k=13 spectrum near 1/14 DENSER -- the extra rung 3/41 (= HYP-2934's K33 incidence wall / near-miss 12->36) fills the gap. So HYP-4151's k=12 equioscillation/three-distance rigidity does NOT transfer to k=13.
+
+THE CORRECT CRUX: LRC(14) = [no M<1/14] = [AP {1..13} minimizes M / is the unique global min 1/14] = the extremality/inverse theorem (verified: min over near-AP perturbations = exactly 1/14 at the AP), NOT the window-empty.
+
+WHAT SURVIVES from S246 (still correct): (1) E3 is the right additive invariant (LEM-015; R2 fails, translation-invariant); (2) divisor-complete families are LOOSE (M>=2/27) -- the clean-ruler residual is a certificate issue not loneliness; (3) all levers (three-gap, pigeonhole, E3, energy) unify onto the AP M-extremality. Only the SPECIFIC "window-empty" FORM was mis-stated -- it should be "AP minimizes M", not "window (1/14,2/27) empty".
+
+LESSON: composite 14 genuinely separates k=13 from the proved k=12; any clean-ladder/window shortcut that holds at k=12 must be re-checked at k=13 before use. (Logged as a caution.)
+
+NET: honest correction of my own S246 over-claim; the crux is the AP M-extremality (still open, still where all levers meet), not the false window-empty. The k=13 composite structure is the genuine obstruction, as the fleet has long flagged (apex zero-divisor).
+
+FILES: reflection CORRECTION-the-k13-farey-window-is-not-empty-the-crux-is-AP-min-not-window-empty-opus-S247; HYP-6165. -> opus-S246 (corrected), HYP-4306/4151 (k=12 only), HYP-2934 (3/41), LEM-015, opus-S239.
+
+---
+
 ## mac-mini-2026-07-09-S65 (cont.53, 2026-07-12) -- combinatorial continuation (negative) + SHARPENING of klein-S265's 5->2 case split. (1) NEGATIVE: p0(consec_k) = P(all 7 sectors hit) does NOT have a clean closed form (complex denominators 210,1470,5880,...,84084, no pattern) -- the COVERED end of the distribution is a union of many three-gap intervals (vs the clean bunched end p6=1/(7(k-1)), p5 parity-split). So POS/J(consec_k) do NOT reduce to a formula; THM-718's exhaustive+tail structure is the right proof, NOT 'J by formula'. Kills that hope cleanly. (2) SHARPENING klein-S265 (5->2 case split, tight n covering = 0): VERIFIED for PRIMITIVE families -- all my THM-708/709 tight families {1..11,13,24}, AP, GW are non-covering. BUT the primitive qualifier is ESSENTIAL: dilate 2*{1..13}={2,4,..,26} is TIGHT (M=1/14) AND covering-as-raw-set (2|26,3|6,..) because covering is NOT dilation-invariant; it reduces to the non-covering AP (gcd=2). So klein's split needs [PRIMITIVE non-covering: sieve] + [PRIMITIVE DC: strict cushion], with non-primitive reduced via kps-cont50's dilation-invariance (just formalized). near-dilate {L..12L,13L+1} IS primitive (gcd 1), M=1/13, strict-cushion DC -- consistent. Concurrent: klein S265 (5->2 + confirms my cont.50 artifact), boxeph S20 (bounded-diameter finite check Vmax<=30), kps cont50 (dilation-looseness FORMALIZED).
 
 Prompt (owner): another session of progress.
