@@ -1,0 +1,18 @@
+MOD-7-ALIGNED families E={c+7m_i} vs threshold: mu high => J high (dispatched)
+family                                mu       J  vs Jmin=5.06, thr=4.75
+  c=1 {1+7m: m in 0..8}=[1, 8, 15]...: mu= 1.6370 J= 5.7670  DISPATCHED (J>thr)
+  c=2 {2+7m: m in 0..8}=[2, 9, 16]...: mu= 1.5980 J= 5.6297  DISPATCHED (J>thr)
+  c=3 {3+7m: m in 0..8}=[3, 10, 17]...: mu= 1.6142 J= 5.7619  DISPATCHED (J>thr)
+
+mod-7 mechanism: at x near j/7, all e_i=c+7m_i have frac(e_i x)~ frac(c j/7) SAME sector
+  => k phases collapse to ~1 sector => 6 empty => N=6 spike => high mu. Check p[6],p[7]:
+  c=1: p[5]=0.0526 p[6]=0.0351 p[7]=0.0000  (consec {1..9} p[6]=0.0317)
+  c=2: p[5]=0.0541 p[6]=0.0345 p[7]=0.0000  (consec {1..9} p[6]=0.0317)
+
+gcd-g dilation invariance (N-dist of g*E' = N-dist of E'), exact check:
+  E'=[1, 2, 3, 4]... g=2: N-dist identical: True
+  E'=[1, 2, 3, 4]... g=3: N-dist identical: True
+  E'=[1, 2, 3, 4]... g=5: N-dist identical: True
+  E'=[1, 2, 4, 7]... g=2: N-dist identical: True
+  E'=[1, 2, 4, 7]... g=3: N-dist identical: True
+  E'=[1, 2, 4, 7]... g=5: N-dist identical: True

@@ -1,0 +1,17 @@
+consec-shift J-curve (exact), Jmin target = 4465/882 = 5.0624:
+  cshift0 0..8: J=5.1990
+  cshift1 1..9: J=5.0624  <-- MIN
+  cshift2 2..10: J=5.3916
+  cshift3 3..11: J=5.6065
+  cshift4 4..12: J=5.5730
+  cshift5 5..13: J=5.6127
+  cshift6 6..14: J=5.5107
+  cshift7 7..15: J=5.5046
+  cshift8 8..16: J=5.5472
+  cshift9 9..17: J=5.5806
+  cshift10 10..18: J=5.6134
+  cshift11 11..19: J=5.6171
+  => consec min at shift 1, J=5.0624, equals 4465/882: True
+
+do near-AP / interior-detune deformations of {1..9} dip below Jmin?
+  16 deformations tested, 0 below Jmin  =>  cshift1 is the LOCAL+DEFORMATION min (1-param frontier confirmed near optimum)
