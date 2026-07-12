@@ -1,0 +1,21 @@
+k=8: deg-3 bound must stay <= cap_9 = 0.4943; hardest consec {0..7}=0.4380
+exhaustive MAX bound per diameter d=7..26 (float, exact-confirm record):
+  d= 7:       1 fams, MAX bound = 0.4380 at [0, 1, 2, 3, 4, 5, 6, 7]  OK <= cap_9
+  d= 8:       7 fams, MAX bound = 0.3907 at [0, 2, 3, 4, 5, 6, 7, 8]  OK <= cap_9
+  d= 9:      28 fams, MAX bound = 0.3664 at [0, 1, 3, 4, 5, 6, 7, 9]  OK <= cap_9
+  d=10:      84 fams, MAX bound = 0.3541 at [0, 2, 4, 5, 6, 7, 8, 10]  OK <= cap_9
+  d=11:     210 fams, MAX bound = 0.3318 at [0, 1, 3, 5, 6, 7, 9, 11]  OK <= cap_9
+  d=12:     462 fams, MAX bound = 0.3824 at [0, 2, 4, 6, 7, 8, 10, 12]  OK <= cap_9
+  d=13:     924 fams, MAX bound = 0.3498 at [0, 1, 3, 5, 7, 9, 11, 13]  OK <= cap_9
+  d=14:    1715 fams, MAX bound = 0.3557 at [0, 1, 2, 3, 4, 5, 6, 14]  OK <= cap_9
+  d=15:    3003 fams, MAX bound = 0.3420 at [0, 2, 4, 6, 8, 10, 12, 15]  OK <= cap_9
+  d=16:    4998 fams, MAX bound = 0.3313 at [0, 1, 2, 3, 4, 5, 6, 16]  OK <= cap_9
+  d=17:    8008 fams, MAX bound = 0.3402 at [0, 1, 2, 3, 4, 5, 6, 17]  OK <= cap_9
+  d=18:   12348 fams, MAX bound = 0.3542 at [0, 3, 6, 9, 12, 14, 15, 18]  OK <= cap_9
+  d=19:   18564 fams, MAX bound = 0.3394 at [0, 3, 6, 9, 12, 15, 18, 19]  OK <= cap_9
+  d=20:   27048 fams, MAX bound = 0.3356 at [0, 2, 5, 8, 11, 14, 17, 20]  OK <= cap_9
+  d=21:   38759 fams, MAX bound = 0.3540 at [0, 1, 2, 3, 4, 5, 6, 21]  OK <= cap_9
+  d=22:   54054 fams, MAX bound = 0.3422 at [0, 1, 2, 3, 4, 5, 6, 22]  OK <= cap_9
+  d=23:   74613 fams, MAX bound = 0.3362 at [0, 3, 6, 9, 12, 15, 18, 23]  OK <= cap_9
+  d=24:  100478 fams, MAX bound = 0.3424 at [0, 1, 4, 8, 12, 16, 20, 24]  OK <= cap_9
+  d=25:  134596 fams, MAX bound = 0.3399 at [0, 2, 4, 6, 8, 10, 12, 25]  OK <= cap_9

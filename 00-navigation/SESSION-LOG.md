@@ -152,6 +152,11 @@ Next: the (b)-hard anti-concentration on the coprime sub-family; the (a)-hard pa
 window [15,43]. Fleet: update the finish-map window from [15,31] to [15,43].
 
 ---
+## mac-mini-2026-07-09-S65 (cont.46, 2026-07-11) -- THM-719: THE k=8 DENSITY BASE VERIFIED END TO END (twin of THM-718). The optimal deg-3 majorant bound (UPPER bound on Phi, k=8 closes iff <= cap_9 = 1979/4004 = 0.4943) is MAXIMIZED at consec {0..7} = 0.4380 (margin +0.0563) and DECREASES with diameter. Exhaustive per-diameter d=7..25 over ~800k primitive 8-cores: MAX bound = 0.4380 at consec {0..7}, EVERY d>=8 gives <= 0.3907. Tail d>25: bound DECREASES further to the two-scale limit (far elements LOWER an upper bound -- the favorable direction, klein THM-687/688 mirror of THM-718's rising J). So both density-side base checks (k=8 THM-719, k=9 THM-718) are now VERIFIED end to end -- compact+medium exhaustive-rigorous, tail = cited two-scale limit, NO gap. Concurrent: opus S240 (compression route to consec-extremality BLOCKED -- matches my cont.29/38 saddle finding); kps root-wired LRCThreeGapConsecutive (Lean, building on my cont.44 three-gap).
+
+Prompt (owner): work on the endgame.
+
+NEXT AGENT: (a) BOTH density base checks DONE end to end (k=8 THM-719, k=9 THM-718) -- the density side is closed with the corrected extremal structure (THM-708 framing + MISTAKE-138 two poles); (b) the only non-exhaustive density piece = klein's uniform two-scale bound (HYP-6070, verified-robust); (c) per S58 milestone, remaining LRC(14) = reach/THM-527-A finite-Vmax + Lean (kps formalizing three-gap-consecutive now).
 
 ## opus-2026-07-11-S240 -- attacked the concrete next target (consec-extremality of the base J) via the natural COMPRESSION route; found it BLOCKED (J not unimodal; 35/35 stuck at algebraically-special local minima). Honest negative result on the proof strategy + arc meta-assessment.
 
