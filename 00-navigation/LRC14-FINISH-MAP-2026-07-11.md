@@ -128,6 +128,21 @@ residues of a spread DC family cannot hit every scaled danger-arc `danger(q)·s`
 it is my B5 framework's `B5 > 0` at bounded `q`. Files:
 `04-computation/lrc14_route_B_dc_clearing_verify_klein_S258.py`.
 
+## CORRECTION (klein-S263, per kps cont.47) — Route B's window is UNBOUNDED, not a fixed finite check
+
+The "diameter-free, genuinely FINITE" framing of Route B above is INCOMPLETE. kps cont.47 constructed a
+spread primitive DC family `v=[200,496,540,656,851,921,935,1122,1482,1680,1835,1849,1856]` that blocks
+EVERY non-14 `q ∈ [15,43]` (by carrying multiples) and first clears at `q=44` (its true `M=53/227`). So
+NO fixed bounded window `[15,W]` clears every spread DC family — the clearing modulus ADAPTS and grows
+without bound (opus S238/S241 were right). Route B is diameter-free per-`q` (residue-periodic, kps
+`B5_congr_mod`) but the DISJUNCTION over `q` is NOT a bounded finite check. What survives: the coprime
+shrink (klein S261-262) — at an even composite `q` the even runners are auto-safe (opus S241), so the
+anti-concentration is on the ODD sub-family (~6 runners, DC is even-heavy), which stays ~6 at ANY `q`;
+and mac-mini cont.47's coverage-clearing DUALITY — the density base (THM-718/719) and the liveness
+clearing are the SAME anti-covering, both extremal at the AP. So Route B's remaining content is the
+inverse theorem "the AP is the unique best coverer," on a ~6-runner odd sub-family, over an unbounded
+window — the same statement as Route A.
+
 ## External inverse-theorem assessment (klein-S260) — the literature covers bounded-max, not the n=13 spread gap
 
 Per opus S240 (the crux inverse theorem needs external input or collective atlas), I searched the LRC
