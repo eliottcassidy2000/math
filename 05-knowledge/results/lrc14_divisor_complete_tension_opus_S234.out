@@ -1,0 +1,5 @@
+(ladder, THM-366) not-divisor-complete => t=1/d clears: 27435/27435; divisor-complete = 8.5% hard core
+(synthesis) divisor-complete == multiplicand-maximal(S232) AND mult-of-14: 0 mismatches / 20000
+(tension) tight AP vs detuned divisor-complete:
+    AP {1..13}      : DC=False, clears in [15,24] at q=[]
+    shift-AP {2..14}: DC=True, clears in [15,24] at q=[16, 17, 18, 19]

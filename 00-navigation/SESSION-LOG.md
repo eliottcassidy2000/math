@@ -1,3 +1,21 @@
+## opus-2026-07-11-S234 -- the LRC(14) hard core = DIVISOR-COMPLETE families (= THM-366, honest re-derivation); and divisor-complete = S232 multiplicand-maximal AND mult-of-14 = the DETUNED AP. 13-slot tension. Residual open theorem named.
+
+Prompt (owner): keep working the open math.
+
+Pushed the S233 two-bucket dispatch to its sharp end.
+
+THE LADDER (= THM-366, codex-S388, PROVED -- I RE-DERIVED it, should have cited in S233): no mult of d (d in 2..14) => t=1/d lonely (M >= 1/d >= 1/14). Verified 27435/27435 non-divisor-complete families cleared. So covering => divisor-complete (a mult of every d<=14) => LRC(14) reduces to divisor-complete families = 8.5% of primitive 13-families.
+
+THE SYNTHESIS (new): divisor-complete <=> multiplicand-maximal (mult of every d<=13 = the S232 summand-shell wall) AND mult-of-14. Verified 0 mismatches/20000. So THM-366's divisibility hard core = S232's wall + a multiple of 14. Two independent threads (divisibility sieve + summand/multiplicand-graph frame) name the SAME object.
+
+THE 13-SLOT TENSION (the mechanism): tight(M=1/14) => mult-maximal AND no-mult-14 (= AP{1..13}, bucket A, t=1/14); divisor-complete => mult-maximal AND mult-14. Both need mult-maximal (AP-coherence), but 13 slots can't be the tight AP {1..13} (no mult 14) AND include a mult of 14 -- the mult-14 costs a slot, breaking coherence. So divisor-complete = AP-coherent-but-DETUNED => M>1/14 empirically. AP M=1/14 (not DC); shift-AP {2..14} DC M=1/8=0.125; sampled min-M over DC Vmax<=24 = 0.087 (margin +0.0155). DC families clear at q in [15,24] (the {0,+-1}-shell regime), the tight AP at q=14.
+
+HONEST STATUS: 'divisor-complete => lonely' IS LRC(14) on the 8.5% hard core (covering => DC). The tension is the MECHANISM, not a proof; the margin is search-limited (not a bound). ARC S230->S234 progressively sharpened the hard core (prime-rich -> mult-14 -> divisor-complete=detuned-AP) and unified the clean-ruler/summand-shell/divisibility-sieve threads into ONE picture -- but each pass characterizes the wall rather than proving the residual (which is the theorem). Closing needs a genuinely new input: a QUANTIFIED detuning bound (DC => M >= 1/14+eps, from the 13-slot over-constraint), or the finite census at LEM-010 Vmax<=3^12 (infeasible), or the Balog-Szemeredi-Gowers -> Freiman 3k-4 external bridge (opus-S181). The characterization is now as sharp as it gets without one of these.
+
+FILES: lrc14_divisor_complete_tension_opus_S234.py (+.out); reflection the-hard-core-is-the-detuned-AP-divisor-complete-equals-multiplicand-maximal-and-mult-14-opus-S234; HYP-6045. -> THM-366, opus-S232/S233/S181, THM-708, LEM-010.
+
+---
+
 ## klein-2026-07-11-S254 -- THM-717: THE MOMENT-LADDER BASE TAIL-DECOMPOSITION ISOLATES THE SIGNED CANCELLATION (both base rows unified)
 
 Prompt (owner): long session, math not formalization, computations for exploration, pull frequently to work concurrently.
