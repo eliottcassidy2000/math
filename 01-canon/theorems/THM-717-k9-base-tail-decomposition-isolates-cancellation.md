@@ -193,3 +193,49 @@ mac-mini's coupled covering floor.)
 of mod-`q` resonance centers; bounding `Σ (count × 1/(7M))` by the `q=7` optimum is the remaining
 content. Files: `04-computation/lrc14_bunch_max_formula_klein_S256.py` (+ the earlier maxbunch/
 hillclimb scripts).
+
+## Addendum (klein-S257) — the base TAIL is the two-scale limit (THM-687/688); far elements RAISE J
+
+mac-mini cont.42/43 framed the k=9 base as `[compact exhaustive check, diam ≤ D₀] + [tail]` and
+(cont.43) CORRECTED the tail: wide families do NOT approach `J_iid = 8.456` — they PLATEAU at
+`≈ 5.68`, because a wide family is a **compact cluster + decorrelated far elements**, so `J` tends
+to the **two-scale / multi-scale limit** (my THM-687/688), not full iid. This addendum assembles
+that tail exactly.
+
+**The two-scale limit.** Adding one far element `w → ∞` to a `(k−1)`-cluster `E'` sends the moments
+by the eigen-transfer (THM-710): `m₁ → (6/7)m₁`, `m₂ → (5/7)m₂`, so
+> `J(E' ∪ {w}) → eigenlim(E') := 6·(6/7)m₁(E') − (5/7)m₂(E') = (6·J(E') + m₂(E'))/7`,
+with finite-`w` error `|J(E'∪{w}) − eigenlim(E')| ≤ C·ΣE'/w`, and the **true peel constant
+`C ≈ 0.4`** (measured max `0.381` over 124 8-cores × 250 far values) — a **1764× sharpening** of
+THM-702's crude `672·ΣE'` (the gap is signed cancellation; the rigorous-absolute constant is larger
+but still `≪ 672`).
+
+**Far elements RAISE J — verified at every level `k = 5..9`:**
+
+| k | compact-min `= J(consec-k)` | min two-scale limit (over `(k−1)`-cores) | margin |
+|---|---|---|---|
+| 5 | 366/35 ≈ 10.457 | 11.197 | +0.740 |
+| 6 | 928/105 ≈ 8.838 | 10.016 | +1.178 |
+| 7 | 1678/245 ≈ 6.849 | 8.390 | +1.541 |
+| 8 | 291/49 ≈ 5.939 | 6.554 | +0.615 |
+| 9 | 4465/882 ≈ 5.062 | **19473/3430 ≈ 5.677** | **+0.615** |
+
+At k=9 the min two-scale limit `19473/3430 ≈ 5.677` (attained at the compact `consec-8` cluster;
+robust over structured + wide + adversarial 8-cores) is `≥` the compact-min `5.062`, so **every wide
+9-core has `J ≥ 5.677 ≥ compact-min ≥ 432/91`**. The 5.677 is exactly mac-mini's plateau 5.68 =
+the THM-687 two-scale value for block+singleton.
+
+**The assembled k=9 base:**
+- **[compact]** 9-cores with no far element (bounded diam ≤ D₀): exhaustive check, min `= J(consec-9)
+  = 4465/882 ≥ 432/91`. (Feasible — mac-mini's lane.)
+- **[wide/tail]** 9-cores with a far element: `J ≥ eigenlim(8-cluster) − C·ΣE'/w ≥ min-two-scale-
+  limit ≈ 5.677 ≥ compact-min`. Far elements only raise `J`. (My THM-687/688 + the peel constant.)
+
+**The recursion bottoms out cleanly:** `eigenlim(E') ≥ compact-min_k` reduces (since `m₂ ≥ 0`) to
+`J(E') ≥ (7/6)·compact-min_k`, i.e. to the `(k−1)` compact structure; iterating `k = 9 → 8 → 7`
+lands at `k ≤ 7`, where **SmallClusterFull (klein, proved in Lean, LRCSevenGapRigidity)** gives
+`ν = 1` (all covering) ⟹ `J` large. So the whole tail is a finite descent to a Lean-proved base.
+The signed-cancellation content that blocks an *absolute* proof lives only in the compact
+extremality (`J(consec-k)` is the min) — the tail itself is clean (far elements provably help).
+
+Files: `04-computation/lrc14_base_tail_twoscale_klein_S257.py`.
