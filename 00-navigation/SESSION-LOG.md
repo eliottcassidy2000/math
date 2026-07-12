@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.47, 2026-07-11) -- NEW ANGLE: THE COVERAGE-CLEARING DUALITY unifies both endgame sides. The DENSITY side (meas S7 = fail to cover 7 sectors, THM-718/719) and the LIVENESS side (klein-S261 clearing = phi(q)-|units hit| = fail to cover units mod q) are the SAME anti-covering phenomenon -- continuous (mod ~7) vs discrete (mod q). MEASURED: AP (good coverer) = 7-sector deficiency 0.336, clearing count 6 (the WALL, t=1/14 dispatched); spread-DC (bad coverers) = deficiency ~0.62, clearing 58-110 (EASY). corr(deficiency, clearing) = +0.398 (stark dichotomy, loose fine-link -- mod-q arithmetic scatter). MASTER KEY: my cont.44 three-gap 'AP is unique best coverer, spread=bad coverer' closes BOTH sides -- the AP is the universal good-coverer hence universal extremal/wall on density AND liveness, and it is EXACTLY the family the t=1/14 sieve dispatches. The three-gap theorem is the ORGANIZING PRINCIPLE of the whole residual, not a one-lemma tool. Reflection written. Concurrent: klein S261 unified clearing formula (~4-runner crux); kps cont.47.
+
+Prompt (owner): work a new angle advancing the endgame.
+
+NEXT AGENT: (a) the coverage-clearing duality means BOTH endgame sides reduce to 'AP is the good coverer, everything else is bad and clears' -- the AP wall is t=1/14 dispatched on both; (b) klein's ~4-runner liveness crux + my THM-718/719 density base are two faces of the same three-gap coverage; (c) the pair-collision residual of klein's crux = my THM-668 pair-sum ruler territory -- a concrete bridge to check next.
+
 ## kind-pasteur-2026-07-11-S127 cont.47 -- the band-clearing window is UNBOUNDED for spread DC families (the finite check is only for bounded diameter)
 
 Prompt (owner): work on shrinking the open problems further.

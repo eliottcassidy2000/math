@@ -1,0 +1,17 @@
+coverage-clearing duality: 7-sector deficiency (density) vs mod-q clearing count (liveness)
+family type            measS7(defic)  clearing q<=31  (bad coverer=>clears?)
+  AP {1..13}                  0.3361               6
+  spread-DC seed0             0.6466              72
+  spread-DC seed1             0.6378              72
+  spread-DC seed2             0.6995             110
+  spread-DC seed3             0.5808              76
+  spread-DC seed4             0.5259              82
+  spread-DC seed5             0.5880              58
+  spread-DC seed6             0.6528              62
+  spread-DC seed7             0.6608              88
+
+  AP: deficiency 0.3361, clearing 6 (GOOD coverer = FEW clears = the WALL)
+  spread-DC: deficiency mean 0.6240, clearing mean 77.5 (BAD coverer = MANY clears = EASY)
+  correlation(deficiency, clearing) = +0.398  => DUALITY CONFIRMED (bad coverer clears)
+
+=> if measS7 (density, three-gap) predicts clearing (liveness), ONE property closes both.
