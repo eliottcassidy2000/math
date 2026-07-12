@@ -1,0 +1,12 @@
+floor 1/14 = 0.07143
+(a) adversarial MIN-M over large-diameter DC (perturb, keep covering+primitive, minimize M):
+  Vmax=  200 s0: min-M = 0.14847  > 1/14 OK
+  Vmax=  200 s1: min-M = 0.15710  > 1/14 OK
+  Vmax=  200 s2: min-M = 0.17553  > 1/14 OK
+  Vmax=  200 s3: min-M = 0.17553  > 1/14 OK
+  Vmax=  600 s0: min-M = 0.18339  > 1/14 OK
+  Vmax=  600 s1: min-M = 0.19654  > 1/14 OK
+  Vmax=  600 s2: min-M = 0.19203  > 1/14 OK
+  Vmax=  600 s3: min-M = 0.20081  > 1/14 OK
+  Vmax= 1500 s0: min-M = 0.20461  > 1/14 OK
+  Vmax= 1500 s1: min-M = 0.21854  > 1/14 OK

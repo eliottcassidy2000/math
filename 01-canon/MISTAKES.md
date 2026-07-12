@@ -11,6 +11,14 @@ Format per entry:
 
 ---
 
+## MISTAKE-139 — "≤6 distinct lifts" for large-diameter DC: a SCALE ARTIFACT + construction-specific over-claim (mac-mini-S65 cont.49→50)
+- **What was done (cont.49):** claimed a large-diameter divisor-complete family decomposes as `vᵢ = bᵢ + L·kᵢ` with ≤6 distinct lifts `kᵢ`, so THM-636's decorrelation atom (`reach(v) ≥ reach(k) − B/L`) closes the large-diameter half of the looseness dichotomy (THM-720). The "≤6" was measured on a *constructed* family (built with 6 lifts) and cross-referenced to klein's "median 6 odd."
+- **Why it was wrong (cont.50 honesty check on GENERIC DC):** (1) `min distinct lifts` over scales is ~2 for *every* family — but that is a SCALE ARTIFACT: a coarse `L ~ Vmax` collapses `round(vᵢ/L)` to `{0,1}` while the base `B ~ Vmax`, so `reach(k) − B/L` is vacuous. There is NO scale with BOTH small `B` AND few distinct lifts for generic DC. (2) `#odd runners` is NOT bounded by 6 (generic 3–10, adversarial 12: one multiple of 840 covers all even conditions); klein's "median 6" is a median, not a bound.
+- **The correct framing:** the decorrelation atom (THM-636) applies only to CLEAN single-scale escape families (bounded base + `L·lifts`), its original r≤11 scope — NOT generic large-diameter DC. The correct large-diameter route is MULTI-SCALE (THM-687/688): a generic large-diameter family is a scale TOWER, reach accumulates through the tower, base = the bounded-diameter finite check.
+- **Impact:** the PHENOMENON (large-diameter DC loose, `M > 1/14`, THM-720) STANDS — adversarial min-M over large-diameter DC = 0.148–0.219, all `> 2×` the floor, margin growing with diameter (cont.50 verified). Only the cont.49 few-lifts MECHANISM was wrong; corrected in that reflection. No canon theorem depended on it (it was a reflection, not a published THM).
+- **Lesson (MISTAKE-138 genus):** test the GENERIC family, not a construction; and a "few distinct X over a free parameter" count is meaningless unless the parameter is pinned by an independent constraint (here `B/L` small).
+- **Source:** mac-mini-2026-07-09-S65 cont.49 (over-claim) → cont.50 (self-caught), 2026-07-12.
+
 
 ## MISTAKE-138 — THM-717 "both extremal at consec" was a BOX ARTIFACT (mod-7 pole missed); MISTAKE-127 recurrence
 

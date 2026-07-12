@@ -1,0 +1,32 @@
+HONESTY CHECK: is '<=6 distinct lifts / <=6 odd' true for GENERIC large-diameter DC?
+ seed   Vmax   diam  min-lifts   #odd
+      0    100     90          2      7 *** EXCEEDS 6
+      1    100     96          2      6
+      2    100     70          2      5
+      3    100     84          2      8 *** EXCEEDS 6
+      4    100     82          2      7 *** EXCEEDS 6
+      5    100     87          2      4
+      0    300    219          2      5
+      1    300    253          2      7 *** EXCEEDS 6
+      2    300    289          2      3
+      3    300    182          1      5
+      4    300    272          2      6
+      5    300    271          2      4
+      0    800    661          2      6
+      1    800    578          2      6
+      2    800    678          2      7 *** EXCEEDS 6
+      3    800    689          2      7 *** EXCEEDS 6
+      4    800    748          2      8 *** EXCEEDS 6
+      5    800    682          2      4
+      0   2000   1397          2     10 *** EXCEEDS 6
+      1   2000   1602          2      7 *** EXCEEDS 6
+      2   2000   1768          2      5
+      3   2000   1465          2      7 *** EXCEEDS 6
+      4   2000   1682          2      5
+      5   2000   1793          2      6
+
+ADVERSARIAL: DC = 1 mult-of-840 (all even conds) + 1 odd-mult-of-45045 + 11 free odd:
+  family [7, 11, 13, 17, 19, 23]...: covering=True, #odd=12, min-lifts=2
+
+GENERIC DC: max min-lifts = 2, max #odd = 10 over 24 families
+VERDICT: '<=6' FAILS -- not a theorem, route is multi-scale THM-688

@@ -49,3 +49,23 @@ speeds collapse ⟹ loose.
 → THM-636 (decorrelation atom, formalized), THM-720 (pair-sum looseness), LEM-013 (dissociated
 margin), klein S263 (~6-odd shrink), cont.47 (coverage-clearing duality), THM-687/688 (multi-scale),
 LRC(≤13) (the lift floor). Files: lrc14_decorr_atom_13runner_macmini_S65cont49 (+ out).
+
+
+## CORRECTION (cont.50, 2026-07-12): "<=6 distinct lifts" is NOT a theorem -- it was scale-dependent + construction-specific
+Honesty check on generic (random) large-diameter DC families exposed two errors in the closure above:
+- **#odd runners is NOT bounded by 6**: generic DC has 3-10 odd, and an adversarial DC (one multiple
+  of 840 covering all even conditions + odd multiples) has 12 odd. klein's "median 6 odd" is a MEDIAN,
+  not a bound.
+- **min-distinct-lifts = 2 is a SCALE ARTIFACT**: a coarse scale L ~ Vmax collapses round(v_i/L) to
+  {0,1} (2 lifts) but with a HUGE base B ~ Vmax, so reach(k) - B/L is vacuous. There is NO scale L
+  with BOTH small base B AND few distinct lifts for generic DC. So the decorrelation atom (THM-636,
+  which needs B/L small) does NOT apply to generic large-diameter DC -- only to CLEAN single-scale
+  families (block + L*lifts with genuinely bounded base), a special case.
+**The corrected large-diameter route is MULTI-SCALE (THM-688), not few-lifts.** A generic large-
+diameter DC family is a scale TOWER (peel the largest scale, recurse); the reach lower bound
+accumulates through the tower (klein THM-687/688), NOT from a single atom. THM-636 remains the
+correct tool for the clean single-scale escape families (its original scope, r <= 11 formalized);
+generic DC needs the multi-scale iteration. The four-way convergence (THM-720/636/LEM-013/klein-S263)
+is still real as a PHENOMENON (large diameter => loose), but the MECHANISM for generic DC is the
+multi-scale tower, not the single-atom few-lifts reduction. Lesson (MISTAKE-138 genus): test the
+GENERIC family, not a construction. Files: lrc14_lifts_verify_macmini_S65cont50 (+ out).

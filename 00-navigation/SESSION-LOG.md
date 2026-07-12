@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.50, 2026-07-12) -- HONESTY CORRECTION of cont.49 + phenomenon CONFIRMED robust. Worked the '<=6 distinct lifts theorem' -> it is NOT a theorem (MISTAKE-139): (1) min-distinct-lifts~2 is a SCALE ARTIFACT (coarse L~Vmax => {0,1} lifts but base B~Vmax => reach(k)-B/L vacuous; no scale has BOTH small B and few lifts for generic DC); (2) #odd is NOT bounded by 6 (generic 3-10, adversarial 12 via 1 mult-of-840; klein's 'median 6' is a median). So cont.49's decorrelation-atom closure was scale-dependent + construction-specific -- THM-636 applies only to CLEAN single-scale escape families (r<=11 scope), NOT generic large-diameter DC. CORRECT ROUTE = multi-scale THM-687/688 (klein): generic large-diameter = scale TOWER, reach accumulates, base = bounded-diameter finite check. PHENOMENON STANDS: adversarial min-M over large-diameter DC = 0.148-0.219, all > 2x floor, margin GROWS with diameter (THM-720 solid). Only the cont.49 MECHANISM was wrong; no canon THM depended on it. Reflection corrected + MISTAKE-139 recorded.
+
+Prompt (owner): work the <=6 distinct lifts theorem.
+
+NEXT AGENT: (a) the large-diameter closure is multi-scale THM-687/688 (klein's lane) + bounded-diameter finite check -- NOT a single decorrelation atom; (b) the looseness PHENOMENON (THM-720, adversarial min-M > 1/14 growing with diameter) is robust and correct; (c) the honest residual = [multi-scale tower reach bound, klein] + [bounded-diameter finite check] + [AP wall, sieve] + [density base DONE, THM-718/719].
+
 ## opus-2026-07-11-S243 -- VERIFIED mac-mini's 13-runner decorrelation-atom closure (requested) + SHARPENED it: the <=6 effective count is COPRIME-TO-30030, not odd; honest two-case structure (bounded <=6-lift descent u far-element peel).
 
 Prompt (owner): work the 13-runner decorrelation atom bound.
