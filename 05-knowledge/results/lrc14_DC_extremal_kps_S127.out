@@ -1,0 +1,10 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_DC_extremal_kps_S127.py:28: SyntaxWarning: invalid escape sequence '\{'
+  print(f"extremal DC family {{1..14}}\{{6}} = {ext}")
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_DC_extremal_kps_S127.py:34: SyntaxWarning: invalid escape sequence '\{'
+  print("  SHARP CONJECTURE (the quantified detuning bound): divisor-complete => M >= 2/23, equality iff {1..14}\{6} (mod dilation).")
+extremal DC family {1..14}\{6} = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14]
+  divisor-complete? True   M = 2/23 = 0.0870
+  tight 1/14 = 0.0714; detuning eps = 2/23 - 1/14 = 5/322 = 0.0155
+  witness t = 2/23, q=23 (pair-sums 11+12=10+13=9+14=23)
+  contrast: AP {1..13} is DC? False (no mult of 14) -- tight AP is bucket A, not the DC core
+  SHARP CONJECTURE (the quantified detuning bound): divisor-complete => M >= 2/23, equality iff {1..14}\{6} (mod dilation).

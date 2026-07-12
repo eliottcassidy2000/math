@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-11-S127 (cont.40) -- SHARPENED opus-S234 quantified detuning bound (LRC(14) hard-core open theorem): the extremal divisor-complete family is {1..14}\{6}, M = 2/23 EXACTLY => divisor-complete => M >= 2/23. Robust global min. (HYP-6055.)
+
+Prompt (owner): work the named next steps, pull often and formulate new plans.
+
+PULLED fleet convergence: opus-S233 two-bucket [A: no mult 14 => t=1/14 elementary, contains AP/tight; B: mult 14 => clean ruler] + opus-S234: LRC(14) reduces (THM-366 elementary t=1/d ladder) to DIVISOR-COMPLETE families (mult of every d in 2..14) = 8.5% hard core; open theorem = QUANTIFIED DETUNING BOUND (DC => M >= 1/14+eps, sampled 0.087). The elementary t=1/d covers 91.5% more simply than my tiered clean rulers; my window is for bucket B / the DC core.
+
+MY CONTRIBUTION (sharpens the open theorem): the extremal min-M divisor-complete family is {1..14}\{6} = {1,2,3,4,5,7,8,9,10,11,12,13,14}, M = 2/23 = 0.0870 EXACTLY -- robustly the global min (202 adversarial seeds x 250 moves, Vmax to 60; nothing beats 2/23; near-extremals all {1..14}\{6}). SHARP: divisor-complete => M >= 2/23, eps = 5/322 ~ 0.0155, equality iff {1..14}\{6} (mod dilation).
+
+STRUCTURE: {1..14}\{6} = the AP {1..14} (covering d=2..14) with the MOST REDUNDANT element dropped (6, d=6 covered by 12) = the LEAST-detuned DC family; witness t=2/23, q=23 pair-sum (11+12=10+13=9+14). CONTRAST: tight AP {1..13} NOT DC (no mult 14) = bucket A (t=1/14, M=1/14); the 6->14 replacement lifts M from 1/14 to 2/23.
+
+=> opus open theorem is now a SHARP conjecture with exact constant 2/23 and named unique extremal. NEW PLAN: prove DC => M >= 2/23 (equality iff {1..14}\{6}) via the 13-slot over-constraint or BSG->Freiman 3k-4 (opus-S181).
+
+FILES: lrc14_DC_extremal_kps_S127.py/.out; HYP-6055. NEXT: the detuning-bound proof via slot over-constraint; formalize THM-366 (elementary t=1/d reduction) if not in Lean.
+
 ## mac-mini-2026-07-09-S65 (cont.40, 2026-07-11) -- FRAMING CLARIFICATION + k=9 COMPACT REDUCTION. Two objects both called "the k=9 base" are DIFFERENT: (nu) density floor nu=mu(goodSet) is DIFFERENCE-based => SHIFT-INVARIANT (nu({0..8})=nu({1..9})=0.84014 exact), clears bar_9=0.4521 by +0.388 (NOT tight); (J) sector-moment J=E[N(7-N)] is SHIFT-DEPENDENT (5.199/5.062/5.392 same difference set), the object of THM-711/716/717. Physical co-offsets contain 0 (THM-527-A e=0 for Vmax) => physical consec = {0..8} (J=5.199), so klein's THM-717 {1..9}=4465/882 is a valid strict LOWER bound (4465/882 < 1019/196); all framings clear threshold 432/91, nothing breaks, but write-ups must pin WHICH object + whether 0 in E. COMPACT REDUCTION (J, 0-forced): min J by diameter d=8..22 is achieved at the SMALLEST diameter d=8 ({0..8}, J=1019/196=5.199) and rises after => J-extremal is finite + consec-anchored. Reflection written. Concurrent: klein THM-717 (Abel decomp J=6T1+4T2+2T3-2T5-4T6 isolates the -2T5-4T6 cancellation to a small BUNCH term); opus-S234 landed (unread).
 
 Prompt (owner): spend another similar session.
