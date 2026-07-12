@@ -1,3 +1,17 @@
+## kind-pasteur-2026-07-11-S127 (cont.38) -- FORMALIZED tier 1: the GENERAL CLEAN q<=14 divisibility ruler (b5_pos_of_div_clean), kernel-pure, root-wired, green. Machine-checks the ~82% rigorous coverage of the bounded-window covering (HYP-6035); generalizes THM-712 from primes to composites q=8,9,10,12,14.
+
+Prompt (owner): keep working the open math.
+
+Continued the finite bounded-modulus combinatorics: FORMALIZED the tier-1 clean q<=14 divisibility ruler in Lean (LRCCompositeCleanRuler.lean, kernel-pure [propext, Classical.choice, Quot.sound], root-wired, builds green -- compiled first try).
+
+THE LEMMA (b5_pos_of_div_clean): for 2<=q<=14, if (q-nmid v_i for all i -- LIVE) and (every divisor d>=2 of q divides <=5 of the speeds -- CLEAN), then 0 < B5 v q. Proof: for q<=14 the safe band [q/14,13q/14] = ALL nonzero residues, so bandCount(v,q,p)=#{i: q|v_i p} (not_inBand_iff_dvd, via omega on the residue bounds); then #{i: q|v_i p} <= #{i: d|v_i} for d=q/gcd(q,p)>=2 (bandCount_le_of_div, via Euclid: q|v_i p => d|v_i by Coprime.dvd_of_dvd_mul_right after cancelling gcd), <=5 by CLEAN; and p=1 is LIVE (bandCount=#{q|v_i}=0). Then b5_pos_of_clean (THM-707) closes it.
+
+This GENERALIZES my THM-712 (LRCPrimeCleanRuler, prime q<=13) to the composite moduli q=8,9,10,12,14 -- machine-checking tier 1 (~82%) of the 3-tier bounded-window covering (HYP-6035, cont.37). Combined with THM-712 (primes) and LRCCleanRuler/LRCB5Periodic, the rigorous-divisibility tier is now fully formalized.
+
+STATE of the bounded-window proof: [tier 1 rigorous-divisibility ~82% -- NOW FORMALIZED (THM-712 + b5_pos_of_div_clean)] + [tier 2 detuned ~12% -- THM-678, needs wiring] + [tier 3 near-unit ~6% -- q=15..43, OPEN, opus not_loose_near_unit territory]. The open analytic content of the whole diameter-free bounded-window route is localized to the 6% near-unit tier.
+
+FILES: LRCCompositeCleanRuler.lean (kernel-pure, root-wired); tier-1 now machine-checked. NEXT: the near-unit tier-3 rulers q=17..43 (opus); wire THM-678 for tier 2.
+
 ## opus-2026-07-11-S233 -- the tight-floor census IS the elementary bucket: the clean TWO-BUCKET DISPATCH. [no mult 14: t=1/14, elementary] u [mult 14: clean ruler, bounded diameter-free] covers everything (0 gap/20000). The S232 wall dissolves.
 
 Prompt (owner): work on the tight-floor census for the 1-dimensional-coherent families.
