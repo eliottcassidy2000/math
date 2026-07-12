@@ -1,0 +1,65 @@
+VERIFY the evaluator reproduces the known extremals (k=9):
+J (base functional; min should be consec):
+  J on the 13 algebraic candidates (k=9):
+    consec (AP step1)  =         4465/882 ~ 5.06236
+    AP step2 off1      =  9727646/1786785 ~ 5.44422
+    AP step3 off1      =  5648693/1024100 ~ 5.51576
+    mod7 res2          = 155884957/27689838 ~ 5.62968
+    doubling top       =         5571/980 ~ 5.68469
+    mod7 res4          =  5742551/1005675 ~ 5.71015
+    AP step14 off1     = 53655092934/9354376735 ~ 5.73583
+    mod14 res1         = 53655092934/9354376735 ~ 5.73583
+    mod7 res6          = 46965577/8178885 ~ 5.74230
+    mod7 res3          =    755719/131157 ~ 5.76194
+    AP step7 off1      =   1295696/224675 ~ 5.76698
+    mod7 res1          =   1295696/224675 ~ 5.76698
+    mod7 res5          = 220717085/38240046 ~ 5.77188
+    ARGMIN: consec (AP step1)   ARGMAX: mod7 res5
+POS (min should be consec):
+  POS on the 13 algebraic candidates (k=9):
+    consec (AP step1)  =         4717/882 ~ 5.34807
+    AP step2 off1      =   3383356/595595 ~ 5.68063
+    AP step3 off1      =  5883837/1024100 ~ 5.74537
+    doubling top       =         2873/490 ~ 5.86327
+    mod7 res2          = 54869803/9229946 ~ 5.94476
+    AP step14 off1     = 503862283376/84189390615 ~ 5.98487
+    mod14 res1         = 503862283376/84189390615 ~ 5.98487
+    mod7 res4          =   2016227/335225 ~ 6.01455
+    mod7 res6          = 49373671/8178885 ~ 6.03672
+    mod7 res5          = 232001033/38240046 ~ 6.06697
+    mod7 res3          =       13487/2223 ~ 6.06703
+    AP step7 off1      =   1366646/224675 ~ 6.08277
+    mod7 res1          =   1366646/224675 ~ 6.08277
+    ARGMIN: consec (AP step1)   ARGMAX: mod7 res1
+BUNCH (max should be mod-7 res1 = the pole box search missed):
+  BUNCH on the 13 algebraic candidates (k=9):
+    doubling top       =             5/28 ~ 0.17857
+    AP step3 off1      =         442/1925 ~ 0.22961
+    AP step2 off1      =         422/1785 ~ 0.23641
+    AP step14 off1     =       2786/11187 ~ 0.24904
+    mod14 res1         =       2786/11187 ~ 0.24904
+    consec (AP step1)  =              2/7 ~ 0.28571
+    mod7 res6          =         502/1705 ~ 0.29443
+    mod7 res5          =            18/61 ~ 0.29508
+    mod7 res4          =          242/795 ~ 0.30440
+    mod7 res3          =            18/59 ~ 0.30508
+    mod7 res2          =         466/1479 ~ 0.31508
+    AP step7 off1      =             6/19 ~ 0.31579
+    mod7 res1          =             6/19 ~ 0.31579
+    ARGMIN: doubling top   ARGMAX: mod7 res1
+nu = covering good-set measure (min should be consec):
+  nu on the 13 algebraic candidates (k=9):
+    consec (AP step1)  =         991/1764 ~ 0.56179
+    AP step2 off1      =    152179/255255 ~ 0.59618
+    AP step3 off1      =   625777/1024100 ~ 0.61105
+    mod7 res2          = 17305435/27689838 ~ 0.62497
+    doubling top       =        1849/2940 ~ 0.62891
+    mod7 res3          = 7028452/11148345 ~ 0.63045
+    AP step7 off1      =      29728/47025 ~ 0.63217
+    mod7 res1          =      29728/47025 ~ 0.63217
+    mod7 res6          = 124221241/196293240 ~ 0.63284
+    AP step14 off1     = 4857766657/7653580965 ~ 0.63471
+    mod14 res1         = 4857766657/7653580965 ~ 0.63471
+    mod7 res4          =    189443/296010 ~ 0.63999
+    mod7 res5          = 83123893/127466820 ~ 0.65212
+    ARGMIN: consec (AP step1)   ARGMAX: mod7 res5
