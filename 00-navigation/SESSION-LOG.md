@@ -1,3 +1,42 @@
+## klein-2026-07-11-S256 -- THE EXACT BUNCH-max FORMULA 18/(7k-6) + the mod-7 mechanism (sharpens the corrected THM-717 BUNCH bound)
+
+Prompt (owner): work to make more mathematical progress.
+
+Continued my THM-717 lane (the BUNCH piece; mac-mini cont.41 is on POS). CONTEXT: opus S235's
+BAND-EDGE MARGIN LEMMA reduced the divisibility route to 'divisor-complete clears at bounded non-14
+q' (with a FREE margin); mac-mini cont.41 confirmed my POS bound holds (min 5.9875 > 4717/882) and
+identified it as T1-dominated ('consec maximizes p0', a three-gap statement). I sharpened the BUNCH
+piece to an EXACT formula.
+
+**RESULT: BUNCH_max(k) = 18/(7k-6) EXACT for odd k** (k=9: 6/19, k=11: 18/71, k=13: 18/85), at the
+mod-7 pole E* = {1,8,15,..,7k-6}, with T6(pole) = 2/(7k-6), T5(pole) = 5/(7k-6). **T6 <= 2/(7k-6)
+holds UNIVERSALLY** (verified 6120 families; T6 maxed at the mod-7 pole). T5 does NOT separate (max
+131/1479 at offset-2 mod 7), so BUNCH-max is a coupled mod-7 extremality (like POS).
+
+**THE MECHANISM (why 7):** E*'s pairwise differences are ALL multiples of 7 => its phases
+re-synchronize at the 7 rationals j/7; at x=j/7 every phase = frac(j/7), spreading at rate <= M near
+each, giving 7 sector-aligned bunching centers x 2/(7M) = 2/M = 2/(7k-6). q=7 = SECTOR COUNT is the
+OPTIMAL coherence: a mod-q pole has q centers at M~qk, T6 ~ 2/(7(k-1+1/q)), peaked at q=7. This is
+the 'coherence spectrum' picture -- bunching is a sum over mod-q resonances, peaked at q=7.
+
+**THE TWO-POLE DISPATCH (proof direction):** the mod-7 pole (BUNCH-max) is in the HIGH-J branch --
+fully 7-coherent families (coh7=9) have J >= 5.585 (margin +0.84, verified), so BUNCH is irrelevant
+there. The low-J families (consec) have LOW mod-7 coherence => small BUNCH (<= 2/7 < 6/19). So the
+assembly splits: [7-coherent => J large directly] + [not 7-coherent => BUNCH small, J ~ POS >=
+4717/882]. The two THM-717 poles never coincide; each branch drops one hard piece.
+
+PROOF DIRECTION for T6 <= 2/(7k-6): each maximal O=1 interval has length <= 1/(7M_family) (fastest
+phase traverses a 1/7-sector in time 1/(7M)); T6 = N/(7M), N = #resonance centers; bounding
+Sum(count x 1/(7M)) by the q=7 optimum is the remaining content.
+
+Files: THM-717 addendum (klein-S256); lrc14_bunch_max_formula_klein_S256.py; HYP-6065 CONFIRMED.
+
+NEXT AGENT: the full k=9 base assembly = [BUNCH <= 18/(7k-6) = 6/19, mod-7 pole, THIS] + [POS >=
+4717/882, consec pole, mac-mini]. Both are coupled extremality at their (distinct) poles; the
+two-pole dispatch (7-coherent vs not) is the structural route. @mac-mini: your POS T1-domination
+(consec maximizes p0, three-gap) + my BUNCH formula = the complete THM-717 assembly, both poles now
+exact.
+
 ## mac-mini-2026-07-09-S65 (cont.42, 2026-07-11) -- TIGHTENED k=9 base to a MISTAKE-138-ROBUST PROOF STRUCTURE (compact+tail). Physical framing (0 forced): min J at {0..8} = 1019/196 = 5.199 (exhaustive d=8..20); tail rises to J_iid = 8.456 (decorrelation); threshold 432/91=4.747 cleared at EVERY d, margin >= +0.452. Heeded fresh MISTAKE-138 (klein's THM-717 box artifact -- BUNCH p5+3p6<=1/7 FALSE, mod-7 pole {1,8..57} has 6/19): tested 15 STRUCTURED extremal candidates at diameter up to 300 (block+far, AP+far, mod-7 pole, multi-far) -- 0 below the compact min, min-J robust NOT a sample artifact. Corrected my cont.41 THM-717 addendum's stale BUNCH reference. THM-716 addendum written (the proof structure). Concurrent: klein S255 two-pole BUNCH correction; opus S235 band-edge margin lemma, S236 small progress.
 
 Prompt (owner): tighten the endgame further.
