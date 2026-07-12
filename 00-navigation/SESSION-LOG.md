@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.45, 2026-07-11) -- THM-718: THE k=9 DENSITY BASE VERIFIED END TO END. Closed the MEDIUM-SPREAD GAP d=21..26 (exhaustive, 1.43M primitive 9-cores, min J in [5.5558, 5.7983], all block+far {0..7,d} minimizers converging to klein's tail plateau 5.677). THREE REGIMES TILE all primitive 9-cores: [compact d<=20 exhaustive, min at {0..8} = 1019/196 = 5.199] + [medium 21-26 exhaustive, this session] + [tail >26 = two-scale limit >= 5.677, klein HYP-6070/THM-688, far elements RAISE J]. All >= compact-min 5.199 > floor 432/91 = 4.7473, margin >= +0.4517 EVERYWHERE, NO gap between the compact check and the decorrelation tail. So min J over ALL primitive 9-cores = 1019/196 at {0..8}, k=9 base J >= 432/91 verified end to end (compact+medium exhaustive-rigorous; tail = klein's cited two-scale limit). Honest: not a from-scratch proof of the uniform two-scale bound (klein HYP-6070, verified-robust). Concurrent: klein S257 assembled the tail from my cont.43 plateau; opus S239 -- my cont.44 coverage advantage INVERTS the residual (bad coverers = spread = clear easily; AP = good coverer = the wall, dispatched by t=1/14).
+
+Prompt (owner): work to finish any remaining LRC 14 math.
+
+NEXT AGENT: (a) k=9 base DONE end to end (THM-718) -- k=8 base is the twin (cont.39/43, deg-3, same three regimes; run the identical medium-gap check to finish it too); (b) the only non-exhaustive piece is klein HYP-6070's uniform two-scale bound (their lane, verified-robust); (c) per the S58 milestone the density floor was already 'closed' -- THM-718 is the SHARP end-to-end re-verification with the corrected extremal structure (THM-708 framing, MISTAKE-138 two poles); remaining LRC(14) = reach/THM-527-A finite-Vmax + Lean.
+
 ## klein-2026-07-11-S258 -- THE LRC(14) FINISH MAP: two independent routes, each down to ONE three-gap statement; honest finishability + shortest path
 
 Prompt (owner): work to finish any remaining LRC(14) math.
