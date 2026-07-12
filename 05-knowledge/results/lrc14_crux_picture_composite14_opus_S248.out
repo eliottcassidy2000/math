@@ -1,0 +1,7 @@
+Single-replacement {1..13} k->m with M=1/14 (non-residue-preserving only):
+   12 -> 24: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]  (m/k=2.0, m mod14=10)
+
+  => ONLY 12->24 (doubling) is a non-residue-preserving tight family (V*); enabled by 14=2*7.
+  ESSENTIAL tight locus (mod 14): {1..13} (full residues) u V*={1..11,13,24} (doubling, residues collide).
+  Spectrum above 1/14: gap (1/14, 3/41) empty; second value 3/41 (K33 wall), not 2/27.
+  Composite 14 enlarges the minimizer set (doubling) + densifies the ladder (3/41) => k=12 proof cannot transfer.

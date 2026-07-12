@@ -1,3 +1,21 @@
+## opus-2026-07-11-S248 -- the CORRECTED empty window is (1/14, 3/41) and the tight locus is {AP, V*} (restoring S246's structure with composite-corrected parameters)
+
+Prompt (owner): keep coming to a better picture of the LRC 14 crux, sharpen via hypothesis investigation.
+
+Constructive follow-up to S247's correction. Sharpest picture of the crux to date.
+
+(1) THE CORRECTED EMPTY WINDOW is (1/14, 3/41), NOT (1/14, 2/27). The true second value of the k=13 M-spectrum is 3/41 (= HYP-2934's K33 wall / near-miss 12->36), not the mediant 2/27. VERIFIED EMPTY over 56039 primitive families (broad random + near-AP + near-V* perturbations): 404 have M<3/41, ALL 404 at exactly M=1/14, ZERO in the gap. Low ladder: 1/14 -> [gap] -> 3/41 -> 2/27 -> 3/40 -> 1/13. S246 named one rung too high.
+
+(2) THE TIGHT LOCUS (M=1/14) = {AP, V*}, TWO families (composite-14 signature). Single-replacement {1..13} k->m stays tight iff m ≡ k mod 14 (residue-preserving shift, trivial) OR 12->24=2*12 (the DOUBLING V*={1..11,13,24}; THM-708). 12->24 is the ONLY non-residue-preserving tight family. Essential tight locus (mod 14): AP (full residues {1..13}) + V* (residues collide, missing 12 doubling 10). Enabled by 14=2*7 (doubling through the zero-divisor at 7); at prime k=12 the tight family is UNIQUE.
+
+(3) CORRECTED CLOSING TARGET (S246's skeleton restored): [M < 3/41 => M=1/14 => family in {AP, V*}] proves LRC(14). Exact k=13 analog of HYP-4151's proved k=12 rigidity [M<2/25 => unique AP], with the composite-14 twist: the window shrinks (3/41) AND the tight locus doubles ({AP,V*}) -- both from the zero-divisor at 7.
+
+SIGNIFICANCE: S246's method was NOT dead (as S247 might suggest) -- it needed composite-corrected parameters. The crux is now 'the gap (1/14,3/41) above the 2-element minimizer locus {AP,V*} is empty'. A k=13 rigidity proof must reproduce BOTH the doubling family V* and the 3/41 rung -- neither visible to the field-based k=12 argument. This pins EXACTLY what k=13 adds over the proved k=12.
+
+FILES: reflection the-corrected-empty-window-...-opus-S248; lrc14_crux_picture_composite14_opus_S248.py(+.out); HYP-6170. -> opus-S247/S246, HYP-4151/4306/2934, THM-708, LEM-015.
+
+---
+
 ## kind-pasteur-2026-07-11-S127 cont.52 -- the crux is "t=1/14 is blocked": divisor-complete families have M >= 1/12, exactly
 
 Prompt (owner): keep coming to a better picture of the LRC(14) crux, sharpen via hypothesis investigation.
