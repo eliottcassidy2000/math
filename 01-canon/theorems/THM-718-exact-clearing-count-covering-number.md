@@ -87,3 +87,31 @@ covering number `|{±j·vᵢ mod q}| < q−1`. The one remaining gap is that inv
 window-completeness — that the window `[15,31]` captures the lonely time of every non-tight covering
 family); everything else (the tight-list characterization, DC ⟹ non-tight, the exact count) is
 proved or verified. Files: `lrc14_inverse_theorem_window_covers_klein_S259.py`.
+
+## Addendum (klein-S261) — the UNIFIED formula on the coprime sub-family (composite completion; the shrink)
+
+Combining THM-718 (prime count) with opus S241's auto-safe lemma (at composite `q ∈ [15,27]`, band
+`{0,±1}`, a runner with `1 < gcd(v_i,q) < q` is ALWAYS safe at a unit `p`) and kps cont.46's two
+conditions gives ONE exact clearing formula valid on the whole `m=1` window `[15,27]` (prime AND
+composite) plus the `m=2` primes `{29,31}`:
+
+> **`clearing_count_units(v,q) = φ(q) − |{ ±j·v_i mod q : gcd(v_i,q)=1, 1≤j≤m, the value a unit }|`,**
+
+provided `q ∤ v_i` (condition (a)). Verified `0` failures over `70000` tests on the valid window.
+(EXCLUDED: `q = 30`, the only composite with `m ≥ 2` in `[15,31]` — there auto-safe FAILS, since a
+`gcd(v_i,30)=2` runner can land on the `±2` danger residue, itself a non-unit. The `m=2` **primes**
+`29,31` are fine: all runners are coprime, so THM-718 with `j=1,2` applies directly.)
+
+So **clears at `q` ⟺ (a) `q ∤ every v_i` AND (b) the COPRIME-to-`q` sub-family (dilated by `±j`)
+misses a unit** — kps's two conditions, now with the exact count `φ(q) − |·|`.
+
+**The shrink.** The structured (non-coprime) runners are provably INERT (auto-safe), so the
+anti-concentration is only on the coprime-to-`q` sub-family. For divisor-complete families this is
+SMALL — DC forces multiples of every prime `≤ 13`, so at a composite `q` most runners share a factor
+and drop out. Measured over 3000 primitive DC families: the min-over-window `#coprime` has **median
+4, mean 4.1** (max 13, the rare families blocking every composite, which fall back to the primes and
+THM-718's 13-runner count). So **the 13-runner Route-B anti-concentration shrinks to a ~4-runner
+one**: "the ~4 coprime runners of a spread DC family miss a unit-fold-class at some window `q`."
+Condition (b) is count-automatic (`#coprime ≤ φ(q)/2 − 1`) for 74.5% at some `q`; the rest clear by
+fold-class collisions among the coprime runners (kps cont.46). Files:
+`04-computation/lrc14_unified_clearing_klein_S261.py`.
