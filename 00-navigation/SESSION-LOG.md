@@ -1,3 +1,42 @@
+## klein-2026-07-11-S263 -- WORKING THE CRUX: the shrink SURVIVES to the ~6 ODD runners (scale-stable), but Route B's window is UNBOUNDED (finish-map correction) -- the crux is the inverse theorem
+
+Prompt (owner): work the remaining crux.
+
+Worked the ~4-runner collision crux under two fresh fleet inputs: kps cont.47 (the clearing window is
+UNBOUNDED for spread DC -- a family blocks all of [15,43], first clears at q=44) and mac-mini cont.47
+(the coverage-clearing DUALITY -- density base THM-718/719 and liveness clearing are the SAME
+anti-covering, both extremal at the AP).
+
+**(1) FINISH-MAP CORRECTION (integrity).** My S258 called Route B "diameter-free, genuinely FINITE"
+over a fixed window [15,31]. kps cont.47's construction settles it in opus's favor: NO fixed bounded
+window clears every spread DC family (the clearing modulus adapts, grows without bound). Route B is
+diameter-free PER-q (residue-periodic) but the DISJUNCTION over q is NOT a bounded finite check.
+Corrected in the finish map.
+
+**(2) THE SHRINK SURVIVES to the ~6 ODD runners (scale-stable -- the genuine positive).** At an even
+composite q, the even runners are auto-safe (opus S241), so the anti-concentration is on the ODD
+sub-family. DC is EVEN-HEAVY (mult of 8,14,... force even runners), so #odd is small: median 6, mean
+5.7 over spread DC (v_i<=700). Crucially, the odd sub-family is SCALE-STABLE -- it stays ~6 at ANY
+window modulus, unlike the coprime-to-specific-q count. So the 13-runner crux shrinks to a ~6-runner
+one that SURVIVES the unbounded window.
+
+**(3) NO master modulus.** q=16 (clean pure-2-power, m=1, only odd runners matter, 4 fold-classes mod
+16) is BLOCKED 69% (DC needs a mult of 8, often 16); pure-2-powers >16 have m>=2 (auto-safe fails, a
+gcd-2 runner hits +-2). So no single clean modulus handles the bulk.
+
+NET: the crux is the inverse theorem 'the AP is the unique best coverer' -- on a ~6-runner ODD
+sub-family, over an UNBOUNDED window, the SAME statement on both routes (mac-mini duality). The genuine
+shrink (13 -> ~6 odd runners, scale-stable) stands; the finite-check framing was corrected. Honest
+limit: the crux is the project's central open problem (the AP coverage-extremality inverse theorem),
+and solo/local attacks are at diminishing returns (opus S240) -- the productive path is the collective
+atlas on the shrunk ~6-runner odd sub-family.
+
+Files: finish-map correction (S263); lrc14_crux_shrink_4runner + crux_oddrunner scripts. HYP-6125.
+
+NEXT: the inverse theorem on the ~6 odd runners -- 'the odd sub-family of a DC family is a bad coverer
+(misses a fold-class at some even composite q).' The scale-stable ~6-runner form + mac-mini's coverage
+duality + opus's three-gap organizing principle are the tools; the AP wall is t=1/14-dispatched.
+
 ## mac-mini-2026-07-09-S65 (cont.48, 2026-07-11) -- THM-720: THE LOOSENESS DICHOTOMY QUANTIFIED (kps's reshaped crux, HYP-6120). Large-diameter divisor-complete families are LOOSE -- M via THM-668 pair-sum rulers GROWS with diameter: min M = 0.105 (scale 10, diam ~20) -> 0.143 (50) -> 0.187 (200), all > 1/14 = 0.0714 (margin 1.5x-3.5x); kps's blocker (diam 1656) M = 0.243 = 3.4x. The AP {1..13} is the UNIQUE M=1/14 wall (THM-708/709), t=1/14 dispatched. MECHANISM = the coverage-clearing duality (cont.47): spread => bad coverer => high deficiency => large M (blocker deficiency 0.699 vs AP 0.336). So kps's dichotomy CLOSES structurally: residual = [large-diameter DC: loose by pair-sum, done] + [bounded-diameter DC: finite check] + [AP wall: sieve]. Honest: sampled + mechanism, not the adversarial-min proof. Concurrent: kps cont.47 HYP-6120 (window unbounded, dichotomy); klein S262 (~4-runner handles 99.9%).
 
 Prompt (owner): work the remaining crux.
