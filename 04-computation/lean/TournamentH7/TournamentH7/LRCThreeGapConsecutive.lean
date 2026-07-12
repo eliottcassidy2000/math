@@ -81,8 +81,37 @@ theorem liveCount_pos_of_consecutive_block (v : Fin 13 → ℤ) (q p : ℕ) (r :
   rw [Finset.mem_filter, Finset.mem_Ioo]
   exact ⟨⟨hp0, hpq⟩, bandCount_zero_of_consecutive_block v q p r hq28 hr2 hr12 hres⟩
 
+/-- **The coprime-reduction safety lemma.**  At a multiplier `p` and modulus `q ≤ 28`, a runner that
+shares a *proper* common factor `g` with `q` (`2 ≤ g`, `g ∣ vᵢ`, `g ∣ q`) and is not knocked to `0`
+(`q ∤ vᵢ·p`) is automatically **safe** (`inBand`): its residue `r = vᵢ·p mod q` is a nonzero multiple of
+`g`, so `g ≤ r ≤ q - g`, hence `2 ≤ r ≤ q - 2`.  Consequence for Route B: at a *unit* multiplier `p`
+(`gcd(p,q)=1`) the hypothesis `q ∤ vᵢ·p` holds for every non-multiple runner, so **only the runners
+coprime to `q` can be unsafe** — the anti-concentration shrinks to the coprime-to-`q` sub-family, which is
+small for divisor-complete families (they are forced to have runners divisible by every prime `≤ 13`). -/
+theorem inBand_of_proper_common_factor (v : Fin 13 → ℤ) (q p : ℕ) (i : Fin 13) (g : ℤ)
+    (hqpos : 0 < q) (hq28 : q ≤ 28) (hg : 2 ≤ g) (hgv : g ∣ v i) (hgq : g ∣ (q : ℤ))
+    (hnz : ¬ (q : ℤ) ∣ (v i * (p : ℤ))) :
+    inBand v q p i := by
+  have hq0 : (0 : ℤ) < (q : ℤ) := by exact_mod_cast hqpos
+  set r : ℤ := (v i * (p : ℤ)) % (q : ℤ) with hrdef
+  have hr0 : 0 ≤ r := Int.emod_nonneg _ (by positivity)
+  have hrq : r < (q : ℤ) := Int.emod_lt_of_pos _ hq0
+  have hrne : r ≠ 0 := fun h => hnz (Int.dvd_of_emod_eq_zero h)
+  -- `g ∣ r` because `g ∣ q` gives `r % g = (vᵢ·p) % g = 0` (as `g ∣ vᵢ·p`)
+  have hgr : g ∣ r := by
+    have hb : (v i * (p : ℤ)) % g = 0 := Int.emod_eq_zero_of_dvd (hgv.mul_right _)
+    have hrg : r % g = 0 := by rw [hrdef, Int.emod_emod_of_dvd _ hgq]; exact hb
+    exact Int.dvd_of_emod_eq_zero hrg
+  have hrpos : 0 < r := lt_of_le_of_ne hr0 (Ne.symm hrne)
+  have hge : g ≤ r := Int.le_of_dvd hrpos hgr
+  have hle : r ≤ (q : ℤ) - g := by
+    have : g ≤ (q : ℤ) - r := Int.le_of_dvd (by omega) (dvd_sub hgq hgr)
+    omega
+  exact inBand_of_residue_mem_band v q p i hq28 (by omega) (by omega)
+
 end LRC14Concrete
 end LonelyRunner
 
 #print axioms LonelyRunner.LRC14Concrete.bandCount_zero_of_consecutive_block
 #print axioms LonelyRunner.LRC14Concrete.liveCount_pos_of_consecutive_block
+#print axioms LonelyRunner.LRC14Concrete.inBand_of_proper_common_factor

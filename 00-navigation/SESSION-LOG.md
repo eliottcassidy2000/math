@@ -13,6 +13,54 @@ CONSEQUENCE: consec-extremality needs a GLOBAL algebraic argument (classify + be
 HONEST META (the S230-S240 arc): 11 sessions sharpened this ONE crux -- the AP coverage-extremality inverse theorem -- from many angles (clean-ruler reduction, band-edge margin, divisor-complete hard core, spread/coverage reframing, two-route unification, now compression-route ruling-out). Each is a real reduction or negative result, but the crux (a global inverse theorem over a rugged algebraically-special landscape) has NOT yielded, and this session shows WHY a whole class of attacks (local compression) cannot work. It is the project's central open problem; solo per-session attacks are at diminishing returns. Productive paths: the collective extremal-atlas classification (klein/mac-mini) or an external inverse-theorem input.
 
 FILES: lrc14_compression_route_blocked_opus_S240.py (+.out); reflection the-compression-route-to-consec-extremality-is-blocked-opus-S240; HYP-6095. -> opus-S239, klein THM-711/717/S255, mac-mini THM-716/cont.44, LEM-010.
+## kind-pasteur-2026-07-11-S127 cont.45 -- the coprime reduction: Route B's anti-concentration is on a handful of runners, not thirteen (formalized kernel-pure)
+
+Prompt (owner): work the sharpest remaining math, pulling often.
+
+SHARPEST (klein-S258 finish map): LRC(14) reduces to ONE statement, best form = Route B -- every spread
+divisor-complete (DC) family clears at some non-14 q in [15,29] (=> M>1/14, opus-S235 band-edge). opus-S238
+found NO small-PRIME shortcut (at a prime the full 13-runner family is coprime, an adversary covers every
+fold-class). THIS exploits COMPOSITE moduli, which opus's prime analysis could not.
+
+THE COPRIME-REDUCTION LEMMA (proved + formalized). At modulus q (band {0,+-1}, q in [15,28]) and a UNIT
+multiplier p (gcd(p,q)=1), a runner v with g=gcd(v,q):
+  - g=1 (coprime): danger iff p === +-v^{-1};
+  - 1<g<q (proper factor): ALWAYS SAFE -- r = v*p mod q is a NONZERO multiple of g, so g <= r <= q-g,
+    hence 2 <= r <= q-2;
+  - g=q (q|v): stuck at 0 for every p.
+So at a unit p ONLY coprime-to-q runners can be unsafe (plus any q|v runner, which must be absent). Hence
+clearing via a unit p <=> [q nmid every v_i] AND [coprime-to-q runners miss a unit-fold-class]. SUFFICIENT:
+q nmid v_i AND #coprime-to-q <= phi(q)/2 - 1 => clears.
+
+THE PAYOFF. DC forces runners divisible by every prime <= 13, so at composite q (18,20,24,26,...) most
+runners share a factor with q => the coprime-to-q sub-family is SMALL: over 3500 random spread DC families,
+min-over-window #coprime-to-q has MEDIAN 3. The 13-runner anti-concentration shrinks to a ~3-runner one.
+VERIFIED: the elementary guarantee clears 91.5% (3201/3500); the residual 8.5% all clear too (genuine
+fold-class miss, now on <= 8 runners, not 13).
+
+ERROR CAUGHT (honest). My first lemma statement -- "every non-coprime runner is safe at a unit p" -- was
+FALSE; the (A) machine-check flagged 40154 violations, all the g=q case (a multiple of q is stuck at 0 for
+every p). Corrected by adding the q nmid v_i clause (which is why the guarantee carries it). Exhaust/check,
+don't assume.
+
+FORMALIZED kernel-pure [propext, Classical.choice, Quot.sound], green: inBand_of_proper_common_factor
+(LRCThreeGapConsecutive.lean) -- a proper common factor g (2<=g, g|v_i, g|q) with q nmid v_i*p => inBand
+(safe), via g <= r <= q-g. Also root-wired LRCThreeGapConsecutive into TournamentH7.lean (cont.44 follow-up).
+
+COMPLEMENT to klein-S259/THM-718 (same day): klein gave the exact PRIME clearing-count on the full family
+((q-1) - |{+-j v_i}|); this is the COMPOSITE companion (shrunken coprime sub-family, unit multipliers).
+klein even flagged "~7% clear at composites" -- the composite mechanism is exactly this. Explains opus-S239
+"spread = bad coverer": few coprime runners => few coverers => many uncovered multipliers.
+
+SCOPE (honest): does NOT close Route B -- opus-S238's no-shortcut stands, the 91.5% is a union over the
+window. It REDUCES the effective problem from 13 runners to the coprime-to-q sub-family (<= ~8). The residual
+8.5% is the genuine remaining core, now a bounded fold-class covering on a small family.
+
+Artifacts: reflection the-coprime-reduction-shrinks-route-b-to-a-handful-of-runners-kps-S127; HYP-6100;
+lrc14_coprime_reduction_kps_S127.py/out; LRCThreeGapConsecutive.lean (inBand_of_proper_common_factor).
+
+Next: attack the residual 8.5% as a bounded fold-class covering on the coprime sub-family (<=8 runners) --
+either a per-q finite argument or the LEM-010 diameter-bounded census, now on a small family.
 
 ---
 
