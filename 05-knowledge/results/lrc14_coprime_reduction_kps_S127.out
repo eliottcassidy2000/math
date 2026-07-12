@@ -1,0 +1,10 @@
+random spread primitive DC families (varied Vmax<=200, longest-run<=7): 3500
+(A) CORRECTED LEMMA CHECK: runner with 1<gcd(v,q)<q in danger at a UNIT multiplier: 0 (expect 0)
+(B) per-q guarantee: q nmid every v_i  AND  #coprime <= phi(q)/2 - 1 = {15: 3, 16: 3, 17: 7, 18: 2, 19: 8, 20: 3, 21: 5, 22: 4, 23: 10, 24: 3, 25: 9, 26: 5, 27: 8, 29: 13}
+    provably cleared by the CORRECTED coprime-guarantee: 3201/3500 (91.5%)
+    first-witness-q distribution: {15: 16, 16: 52, 18: 200, 20: 196, 21: 294, 22: 421, 24: 346, 25: 209, 26: 474, 27: 325, 29: 668}
+(C) min-over-window #coprime-to-q distribution: {0: 24, 1: 251, 2: 656, 3: 961, 4: 967, 5: 465, 6: 151, 7: 22, 8: 3}
+    => effective anti-concentration family shrinks from 13 to a median of 3 coprime runners
+(D) residual (guarantee misses): 299; of these, clear anyway in window: 299/299
+    example residual family: [1, 10, 27, 35, 48, 51, 55, 61, 76, 88, 98, 116, 117]
+       clears at q=[18, 21, 23, 25, 26]; #coprime-to-q per window q: [(18, 4), (21, 7), (23, 13), (25, 10), (26, 6)]
