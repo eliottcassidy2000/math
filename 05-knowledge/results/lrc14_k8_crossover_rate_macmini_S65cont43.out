@@ -1,0 +1,30 @@
+=== (1) k=8 base: deg-3 bound must stay <= cap_9 = 0.4943 (hardest at consec {0..7}) ===
+compact exhaustive (8-sets {0}uS, S subset {1..d}, |S|=7, diam d), MAX bound per d:
+  d= 7: max bound = 0.4380  margin +0.0563  
+  d= 8: max bound = 0.3907  margin +0.1036  
+  d= 9: max bound = 0.3664  margin +0.1279  
+  d=10: max bound = 0.3541  margin +0.1401  
+  d=11: max bound = 0.3318  margin +0.1624  
+  d=12: max bound = 0.3824  margin +0.1118  
+  d=13: max bound = 0.3498  margin +0.1445  
+  d=14: max bound = 0.4380  margin +0.0563  
+  d=15: max bound = 0.3420  margin +0.1523  
+  d=16: max bound = 0.3907  margin +0.1036  
+  d=17: max bound = 0.3402  margin +0.1541  
+  structured large-d candidates (max bound; exceed => break k=8):
+    block+far d=50       bound=0.3389  ok
+    block+far d=200      bound=0.3348  ok
+    2AP+far d=80         bound=0.3284  ok
+    mod7 {1,8..50}       bound=0.3597  ok
+    block+2far           bound=0.2512  ok
+  => k=8 GLOBAL max bound (compact+structured) = 0.4380 <= cap_9=0.4943: True, margin +0.0563
+
+=== (2) decorrelation rate |J9 - J9_iid|*diam for block+far {0..7,d} ===
+  J9_iid = 8.456
+  d=  20: J9=5.8068  |J9-Jiid|*d = 52.98
+  d=  40: J9=5.7895  |J9-Jiid|*d = 106.66
+  d=  80: J9=5.6791  |J9-Jiid|*d = 222.15
+  d= 160: J9=5.6712  |J9-Jiid|*d = 445.57
+  d= 320: J9=5.6968  |J9-Jiid|*d = 882.95
+  d= 640: J9=5.6888  |J9-Jiid|*d = 1771.02
+  (|J-Jiid|*d bounded => rate C/d; D0 = C/(Jiid-thr) = C/3.71 for the tail bound)

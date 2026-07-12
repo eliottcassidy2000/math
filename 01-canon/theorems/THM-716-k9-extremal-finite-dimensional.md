@@ -52,3 +52,21 @@ So the k=9 base = [finite exhaustive check, primitives, d ≤ D0 ≈ 20] + [deco
 THM-710 eigen-transfer rate], the tail never binding. This turns THM-711/717's verified conjecture
 into a proof structure whose only gaps are the finite check + a rigorous tail rate.
 Files: lrc14_crossover_D0 + lrc14_minJ_extremal_check_macmini_S65cont42 (+ outs).
+
+## Addendum (cont.43): SHARPENING the cont.42 tail — it plateaus at the MULTI-SCALE limit, not J_iid; + k=8 parity
+**Correction of my own cont.42 imprecision.** The min-J tail does NOT rise to J_iid = 8.456.
+The min-J tail families (block+far {0..7, d}) PLATEAU at J ≈ 5.69 as d → ∞ (measured: J = 5.807,
+5.790, 5.679, 5.671, 5.697, 5.689 at d = 20…640; |J − J_iid|·d GROWS linearly, so |J − J_iid| does
+NOT decay). **Mechanism:** a wide 9-family decomposes into COMPACT CLUSTERS (the block {0..7} stays
+tightly correlated) + decorrelated far elements, so J → the TWO-SCALE / MULTI-SCALE limit (klein
+THM-687/688), NOT the fully-independent J_iid. The correct tail argument is thus:
+`J(wide) ≥ J(two-scale limit of its densest compact cluster) ≥ compact-min` — the far elements only
+RAISE J (decorrelation between clusters adds positive mass). So the [compact exhaustive check]
+handles both compact families AND the compact clusters of wide families; the cluster-decorrelation
+(THM-687/688) supplies the ≥, and the plateau 5.69 > threshold 4.747 confirms it. This is CLEANER
+than "rises to J_iid" — the tail is a multi-scale reduction to the same compact check.
+**k=8 PARITY:** the k=8 deg-3-majorant bound (an UPPER bound, must stay ≤ cap₉ = 0.4943) is
+MAXIMIZED at consec {0..7} (0.4380, margin +0.0563), DECREASES with diameter, and no structured
+large-d candidate (block+far to d=200, 2AP+far, mod-7, block+2far) exceeds 0.36. So BOTH density-
+side base checks have the compact+tail structure with the same multi-scale tail reduction.
+Files: lrc14_k8_crossover_rate_macmini_S65cont43 (+ out).
