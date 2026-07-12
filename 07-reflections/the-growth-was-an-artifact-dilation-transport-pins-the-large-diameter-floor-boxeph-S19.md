@@ -87,3 +87,15 @@ near-dilate slice away.
 to the rational. Consumers: mac-mini cont.50+ (do not build the ≤6-lifts/growth theorem), opus S244+
 (Case-A needs a third case), klein S265+ (A3-type families are a test battery for the Parseval floor),
 kps (dichotomy statement: bounded-away yes, growth no).
+
+## Addendum (same session): the census pins the spread floor to [1/13, 2/25]
+
+Exhaustive census over spread 12-cores at Vmax ≤ 20 (capped exact evaluator, 119,239 spread cores):
+strictly-transportable floor = **1/12** ({1,2,5,6,7,8,9,11,13,17,19,20}); unrestricted spread floor =
+**2/25** ({1,2,3,5,7,8,9,10,11,12,17,19}) — and the 2/25 core transports too, because the detuned slot
+can carry ALL odd divisor duties at once (δ = 45045·odd covers d = 3,5,7,9,11,13; the core only needs
+multiples of 4,5,6,7 for the even d's). Verified: v = 2c·H ∪ {45045} is DC + primitive + spread with
+exact M = 2/25 at c = 1. So min M(spread primitive DC, diam ≥ D) ≤ 2/25 = 0.08 for every D — the
+spread/compressed distinction nearly evaporates at the floor (2/25 vs death-star's 1/13 = 0.0769).
+The spread 12-core floor as Vmax → ∞ (does it approach 1/13?) is the "spread inverse theorem one level
+down" — the same recursion the descent atoms land on.

@@ -41,6 +41,11 @@ spread primitive DC at diameter >= D is <= 1/11 = 0.0909 < 0.105 for EVERY D. Th
 HYP-6120) SURVIVES -- bounded-away holds -- but its target must re-anchor to the flat [1/13, 1/11]
 near-dilate floor, not a growing margin.
 
+**(1b) CENSUS SHARPENING: spread floor <= 2/25.** Exhaustive spread-12-core census (Vmax<=20, capped exact
+evaluator): transportable floor 1/12; unrestricted 2/25 -- and 2/25 TRANSPORTS (delta = 45045*odd carries all odd
+divisor duties; core needs only multiples of 4,5,6,7). v = 2c*H u {45045} verified DC+prim+spread, exact M = 2/25
+at c=1. Spread-stratum floor in [1/13, 2/25]; compressed floor 1/13 exact (death-star V_L, which needs only 26 | L).
+
 **(2) opus-S243 Case-A premise dead below lcm.** A mid-scale smooth cover (27720 covers every d in
 2..14 except 13; {10800, 6006} covers all) frees 11 coprime-to-30030 slots at Vmax 5544-27720 << 360360
 (A1/A2/A3, all verified primitive+DC+spread). The two-case structure needs a third case.
