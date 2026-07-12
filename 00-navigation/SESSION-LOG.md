@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.49, 2026-07-12) -- MINING WIN: the LARGE-DIAMETER LOWER BOUND (THM-720 remaining rigor) IS THM-636's DECORRELATION ATOM (my S38, already Lean-formalized r<=11) -- not a new object. THM-636: reach(v) >= reach(k) - B/L for v_i = b_i + L k_i (Tao height descent). 13-RUNNER CLOSURE: large-diameter DC is EVEN-HEAVY => lift family k has <=6 distinct speeds (verified, reach(k) ~0.18-0.25 >> 1/7) => reach(v) >= 1/7 - 13/L > 1/14 for L > ~1274 (reach(v)~0.25 across L=500..40000, all LOOSE). The descent base (small L) = kps's bounded-diameter finite check -- the two dichotomy halves are ONE descent. FOUR-WAY CONVERGENCE (the hallmark of the true object): THM-720 (pair-sum M grows) = THM-636 (decorr atom) = LEM-013 (dissociated margin grows) = klein S263 (~6 odd runners, TODAY). klein's ~6-odd shrink and my ~6-distinct-lift decorrelation are the SAME reduction: DC collapses to ~6 effective speeds, clear trivially (reach >= 1/7). Coverage-clearing duality (cont.47) is WHY: spread => bad coverer => effective speeds collapse => loose. Reflection written.
+
+Prompt (owner): long session mining past threads for the large-diameter lower bound.
+
+NEXT AGENT: (a) the large-diameter half is closed in STRUCTURE = [<=6 effective speeds => reach >= 1/7 - B/L, THM-636 formalized] + [descent base = bounded-diameter finite check]; remaining rigor = the '<=6 distinct lifts' theorem (DC even-heaviness, klein S263 scale-stability -- provable from the DC definition) + the finite check; (b) THM-636 is ALREADY Lean-formalized (r<=11) -- the 13-runner extension is the formalization target; (c) coverage duality unifies the whole residual.
+
 ## klein-2026-07-11-S263 -- WORKING THE CRUX: the shrink SURVIVES to the ~6 ODD runners (scale-stable), but Route B's window is UNBOUNDED (finish-map correction) -- the crux is the inverse theorem
 
 Prompt (owner): work the remaining crux.

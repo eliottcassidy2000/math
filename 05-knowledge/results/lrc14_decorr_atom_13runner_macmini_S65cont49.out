@@ -1,0 +1,10 @@
+13-runner decorrelation atom (THM-636 analog): reach(v) >= reach(k) - B/L
+floor 1/14=0.07143, LRC(<=13) lift floor 1/13=0.07692
+family (scale L)             #distinct k  reach(k)     B/L  lb=r(k)-B/L  reach(v)
+  L=   500 s0:          6    0.2000  0.0240       0.1760    0.2480  LOOSE
+  L=   500 s1:          6    0.2000  0.0300       0.1700    0.2357  LOOSE
+  L=  2000 s0:          6    0.2000  0.0080       0.1920    0.2499  LOOSE
+  L=  2000 s1:          6    0.1818  0.0060       0.1758    0.2500  LOOSE
+  L=  8000 s0:          6    0.2308  0.0015       0.2293    0.2500  LOOSE
+  L=  8000 s1:          6    0.2000  0.0019       0.1981    0.2500  LOOSE
+  L= 40000 s0:          6    0.2000  0.0003       0.1997    0.2258  LOOSE
