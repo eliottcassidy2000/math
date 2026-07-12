@@ -1,0 +1,5 @@
+R2: AP=1300 = shiftAP=1300 (translation-INVARIANT => FAILS: M(AP)=1/14 vs M(shift)=1/8)
+E3: AP=36 (LEM-015 max), shiftAP=30 (drops) -- translation-SENSITIVE, the right lever
+
+divisor-complete (n=700): E3 max=10 (<36), corr(E3,M)=-0.34; M<2/27: 0; min M=0.1466 (2/27=0.0741)
+=> DC is LOOSE (M>=2/27); LRC(14) <=> Farey-window rigidity [M<2/27 => dilated interval {1..13}] (HYP-4151 at k=13, proved r=1 k=12).

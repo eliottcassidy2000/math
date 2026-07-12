@@ -1,3 +1,23 @@
+## opus-2026-07-11-S246 -- the additive lever is E3 (not R2); divisor-complete is LOOSE (M>=2/27, a CERTIFICATE issue not loneliness); ALL levers unify into the FAREY-WINDOW RIGIDITY [M<2/27 => dilated interval {1..13}] = HYP-4151 at k=13.
+
+Prompt (owner): keep working the remaining open math.
+
+Pursued S245's Lever 3 (additive energy); it resolves the right invariant and reframes the whole arc.
+
+(1) R2 FAILS (translation-invariant): R2({1..13})=R2({2..14})=1300 but M(AP)=1/14 vs M(shift)=1/8 (S181 caveat). E3 (Schur triples #{i<j: v_i+v_j in S}) is the RIGHT invariant (translation-SENSITIVE; LEM-015 PROVED: interval uniquely maximizes E3, E3({1..13})=36; E3({2..14})=30). Divisor-complete: E3<=30<<36, corr(E3,M)=-0.34..-0.45 (vs R2 +0.15).
+
+(2) THE REFRAME (verified): ALL divisor-complete families have M>=2/27=0.074 (min M=28/191=0.147, FAR above 1/14=0.0714) => the clean-ruler "residual" (divisor-complete) is LOOSE. Their difficulty (the whole S230-S245 arc) was the bounded-modulus CLEAN-RULER CERTIFICATE hB5 (a Lean obligation), NOT loneliness. The loneliness-hard families are NEAR-AP (M near 1/14), NOT divisor-complete.
+
+(3) THE UNIFICATION: the M-spectrum has an EMPTY window (1/14,2/27) (HYP-4306; 2/27=mediant(1/14,1/13)). The single statement [M<2/27 => dilated interval {1..13} (M=1/14)] PROVES LRC(14) (a counterexample M<1/14<2/27 would be forced to be the interval, contradiction). = HYP-4151's k=12 rigidity (PROVED r=1 via equioscillation/three-distance, residues form the AP) at k=13. ALL levers reduce to THIS one rigidity: three-gap AP-coverage (S239), pigeonhole-clustering (S242/S245), E3/additive (this), Farey-ladder (HYP-4306) -- one rigidity, four faces. Hard case = near-AP; 14=2*7 composite (vs 13 prime for the proved k=12) = the extra difficulty (apex zero-divisor).
+
+CLOSING TARGET: extend HYP-4151's "residues form the AP" equioscillation/three-distance argument from k=12 (mod-13, a field) to k=13 (mod-14, composite). This is the single sharpest form of the crux, where all fleet levers meet, and it is proved for k=12/r=1.
+
+NET: the additive lever is E3; the clean-ruler residual is loose (certificate not loneliness -- honest context for my whole arc); the MATH of LRC(14) reduces to the 13-runner Farey-window rigidity (HYP-4151 at k=13), a sharp Diophantine equioscillation statement.
+
+FILES: lrc14_E3_farey_window_synthesis_opus_S246.py (+.out); reflection the-additive-lever-is-E3-and-all-levers-are-the-farey-window-rigidity-opus-S246; HYP-6155. -> LEM-015, opus-S181/S182/S239/S242/S245, HYP-4306/4151.
+
+---
+
 ## mac-mini-2026-07-09-S65 (cont.52, 2026-07-12) -- COMBINATORIAL: FULL BUNCH(consec_k) CLOSED FORM via parity-split p5. Extending cont.51's p6=1/(7(k-1)): p5(consec_k) = 5/(14(k-1)) [even k] / (5k-9)/(14(k-1)(k-2)) [odd k] -- PARITY-SPLIT, the three-gap/Ostrowski signature (verified k=7..17). Hence klein's BUNCH = p5+3p6 at consec = 11/(14(k-1)) [even] / (11k-21)/(14(k-1)(k-2)) [odd] EXACTLY (verified k=7..17; BUNCH(consec_12)=1/14, (13)=61/924). So the POS-pole BUNCH value (compared vs mod-7 pole's 18/(7k-6) in klein's two-pole decomposition) is a CLOSED RATIONAL in k -- no computation. p4 and below have more three-gap intervals (complex); p5/p6 are the clean extreme-bunching tail. THM-717 addendum. Concurrent: boxeph S19 (near-dilate 1/13 floor exhaustive, 0/6038 below); opus S245 (pigeonhole 44->48%).
 
 Prompt (owner): investigate new ideas.
