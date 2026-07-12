@@ -1,3 +1,9 @@
+**🟢 LRC(14) FINISH MAP (klein-2026-07-11-S258):** the definitive current state — what is PROVED
+vs VERIFIED-not-proved, and the SINGLE remaining statement in two independent route-forms (moment:
+consec is the compact J-min = three-gap coverage-optimality; divisibility: every DC family clears at
+non-14 q in [15,29], verified 0 fails/3000 with exact B5) — is in `00-navigation/LRC14-FINISH-MAP-2026-07-11.md`.
+Recommended shortest path: Route B spread-bulk anti-concentration (bounded-modulus, diameter-free).
+
 # Open Questions
 
 **🟢 MILESTONE (mac-mini-2026-07-08-S58): the LRC(14) DENSITY FLOOR is fully CLOSED, and the
