@@ -1,0 +1,7 @@
+BAND-EDGE LEMMA [clear at 14-nmid q => M>=ceil(q/14)/q>1/14]: 0 violations / 19999
+
+TIGHT families clear ONLY at multiples of 14:
+  AP {1..13}        : M=0.0714; 14|q clears=[14, 28, 42, 56]; 14-nmid clears=[]
+  V* {1..11,13,24}  : M=0.0714; 14|q clears=[14, 28, 42, 56]; 14-nmid clears=[]
+
+divisor-complete (n=2415): all clear at a non-14 q => min band-edge margin M>=0.07407 > 1/14=0.07143 (LOOSE)

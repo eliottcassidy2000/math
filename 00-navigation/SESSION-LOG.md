@@ -1,3 +1,21 @@
+## opus-2026-07-11-S235 -- paths 1+3 integrated: the BAND-EDGE MARGIN LEMMA makes path-1's margin a FREE COROLLARY of bounded-clearing; path-3 ('covering=>near-AP') REFUTED as backwards (fleet decoupling + energy floor runs the other way). New proved piece + tight-locus characterization.
+
+Prompt (owner): work #1 (quantify detuning) and #3 (BSG->Freiman inverse bridge) simultaneously, pull from other agents, integrate.
+
+Pulled the fleet's additive-energy/Freiman state (Explore) + kps/klein recent. Result: one clean new lemma, path 1 collapses into a corollary, path 3 refuted.
+
+BAND-EDGE MARGIN LEMMA (elementary, PROVED; verified 0 violations/19999): if S clears (bandCount=0) at a modulus q with 14-nmid q, then M(S) >= ceil(q/14)/q > 1/14 (strict; 14|q gives exactly 1/14). COROLLARY (tight-locus characterization): M=1/14 (tight) => S clears ONLY at multiples of 14 -- verified AP{1..13} and V*{1..11,13,24} clear at q in {14,28,42,56}, at NO 14-nmid q (the multiplier face of THM-610).
+
+PATH 1 COLLAPSES: divisor-complete families (mult of 14, so no clear at q=14) all clear at a non-14 q in [15,41] (adversarial worst 31) => M >= 2/27 > 1/14 => LOOSE. So path-1's strict margin is a FREE COROLLARY of 'divisor-complete clears at a bounded non-14 modulus' (= the S230/S231 anti-concentration, verified <=60 diameter-free). Proving bounded-clearing yields BOTH the loneliness certificate AND the strict margin at once. No separate detuning bound exists to prove.
+
+PATH 3 REFUTED (fleet course-correction): 'covering => near-AP' is BACKWARDS. The AP is the MAX-energy config and the MINIMIZER of every floor (THM-656/660: high R2 => WEAK floor; the floors prove 'even the AP clears'). kps cont.36 DECOUPLES: window-hard covering cores are LOOSE, not near-tight -- confirmed here (all divisor-complete loose). So energy-floor + 'covering=>near-AP' pushes against the fleet's own finding. The repo's inverse invariant is E3/Schur (dilation-invariant like loneliness; opus-S182 + LEM-015 proved, Lean kernel-pure), NOT E2/doubling/BSG (translation-invariant -- 'cannot distinguish the tight AP from its loose translate {2..14}', which IS a divisor-complete loose family). If the inverse bridge is pursued, target E3 not BSG/Freiman-3k-4.
+
+NET: both paths reduce to the SAME open statement (divisor-complete clears at bounded non-14 q) now with a FREE margin (band-edge lemma) + a clean tight-locus characterization (tight <=> clears only at mults of 14). near-AP direction refuted; hard core loose. The genuinely new proved piece = the band-edge lemma. Residual = the S230/S231 anti-concentration (verified <=60, not proved).
+
+FILES: lrc14_band_edge_margin_opus_S235.py (+.out); reflection the-band-edge-margin-lemma-both-paths-reduce-to-bounded-clearing-opus-S235; HYP-6060. -> THM-366/610/656/660, opus-S234/S230/S231/S182, LEM-015, kps cont.36.
+
+---
+
 ## mac-mini-2026-07-09-S65 (cont.41, 2026-07-11) -- EXTENDED klein THM-717 (POS/BUNCH decomposition). Attacked the (POS) piece 6T1+4T2+2T3 >= 4717/882 (klein proves the complementary BUNCH p5+3p6<=1/7 as HYP-6050). FINDINGS: (1) POS = J + 2(p5+3p6) = J + BUNCH exactly (g_POS = non-decreasing cap of N(7-N) at peak 12) -- the two THM-717 pieces are J and its bunching correction, verified. (2) klein's POS bound HOLDS (adversarial min-POS 5.9875 > 4717/882; consec = 4717/882 exact; low-mu families HIGHER 6.26-6.79). (3) MECHANISM: POS dominated by weight-6 T1 = meas(S7) = 1-p0; consec MINIMIZES T1 (best 9-phase coverer, max p0 = 0.43821, three-gap/Steinhaus statement). (4) The naive SPLIT FAILS: T2,T3 minimized at SPREAD families (0.362, 0.084, larger T1 compensating) => POS is a COUPLED tail-tradeoff, same saddle character as J's mu-Var (THM-716). Clean separable target: T1 >= T1(consec) = consec-maximizes-p0. Addendum written to THM-717 (attributed). Concurrent: klein S255 two-pole maxbunch (matches my THM-713 two-poles); kps cont.40 near-unit tier-3.
 
 Prompt (owner): improve/extend incoming agent work; finish open concepts.
