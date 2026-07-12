@@ -1,0 +1,11 @@
+spread primitive DC families: 4500
+(1) families that clear but NOT via any unit-multiplier fold-class miss: 0/4500
+    => unit-clearing (coprime fold-class miss) CAPTURES ALL true clearing on the window
+(2) residual (elementary guarantee fails everywhere): 372 (8.3%)
+(3) residual: max-over-window (#missed fold-classes by coprime sub-family) distribution: {-99: 1, 2: 77, 3: 148, 4: 122, 5: 22, 6: 2}
+    (>=1 means SOME window q has a fold-class miss => unit-clears. -99 excluded via q|v_i)
+(4) residual first-unit-clearing-q distribution: {15: 72, 16: 67, 17: 103, 18: 16, 19: 69, 20: 8, 21: 21, 22: 4, 23: 10, 24: 1}
+(5) at the clearing q: collisions (#coprime - #distinct-foldclasses) distribution: {1: 9, 2: 46, 3: 47, 4: 64, 5: 47, 6: 106, 7: 46, 8: 6}
+    => residual clears BECAUSE coprime runners collide (>=1 collision frees a fold-class); median collisions = 5
+(6) families clearing NOWHERE in [15,29]: 1 (must be 0 -- else LRC(14) counterexample)
+    !!! [23, 26, 29, 30, 31, 40, 42, 44, 48, 50, 51, 54, 57]

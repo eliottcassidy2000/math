@@ -1,0 +1,5 @@
+(1) random spread DC (1868 valid): max min-clearing-q = 29 at [4, 17, 18, 22, 25, 26, 27, 37, 38, 40, 42, 46, 48]
+(2) adversarial hill-climb: max min-clearing-q = 37 at [36, 66, 133, 150, 156, 158, 160, 170, 174, 184, 206, 210, 216]
+    => the TRUE bounded window must reach at least q = 37 (fleet's [15,31] is TOO NARROW -- sample artifact)
+       (my cont.34 window [8,43] is the safe bound; [15,31] undercounts the (a) q|v_i blocking)
+(3) spread DC families needing q>31 to clear: 0/884 (0.00%) -- NONZERO => [15,31] genuinely insufficient

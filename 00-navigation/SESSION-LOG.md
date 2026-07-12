@@ -1,3 +1,45 @@
+## kind-pasteur-2026-07-11-S127 cont.46 -- Route B clearing is two conditions (exact), and the [15,31] window is too narrow (correction)
+
+Prompt (owner): attack the residual 8.5% as a bounded fold-class covering on the small coprime sub-family.
+
+(1) EXACT CLEARING CONDITION. A spread divisor-complete family clears at modulus q (band {0,+-1}, q in
+[15,28]) via ANY multiplier if and only if BOTH: (a) q nmid every v_i (a runner === 0 mod q sits at the danger
+residue 0 for all p), AND (b) the coprime-to-q sub-family misses a unit-fold-class. VERIFIED EXACT: over 4500
+spread DC families, 0 clear by any mechanism other than (a)AND(b) at some window q -- non-unit multipliers
+never add clearing. So Route B is exactly this two-condition covering statement (the composite completion of
+klein THM-718's prime count).
+
+(2) THE RESIDUAL CLEARS BY COLLISIONS. The 8.5% where the elementary count guarantee fails (#coprime >=
+phi(q)/2) still clear -- by a genuine fold-class MISS: at the clearing q the coprime runners collide (median
+5 sharing fold-classes), so they occupy fewer than phi(q)/2 classes and leave one empty. Robust: max-over-
+window missed classes is >= 2 for essentially all of the residual.
+
+(3) WINDOW CORRECTION (flag to fleet). opus-S238's covering set {15,16,19,23,25,29,31} and klein-S258's
+finish-map window [15,29]/[15,31] are a SAMPLE ARTIFACT -- too narrow. Condition (a) is a divisibility-
+blocking: a spread DC family whose elements have many divisors in the window blocks most of it. Adversarially,
+v=[23,26,29,30,31,40,42,44,48,50,51,54,57] (runners = 23,26,29,30,31 block those moduli) first clears at
+q=33; hill-climbing the min-clearing modulus reaches q=37 ([36,66,133,...,216] blocks all of [15,36] except
+31,37) then q=39. So the true bounded window reaches at least 39; the safe bound is [15,43] (my cont.34
+[8,43]), NOT [15,31]. This does NOT threaten the conclusion (band-edge margin ceil(q/14)/q > 1/14 at every
+non-14 q, so 3/37, 3/39, 4/43 all exceed 1/14) -- but the diameter-free FINITE-CHECK RANGE must be [15,43],
+else it falsely reports un-clearable families that in fact clear at q in [33,39].
+
+(4) HARD-CORE SPLIT by which condition binds: (a)-hard families block small moduli by divisibility (need the
+upper window; a covering-by-divisors question); (b)-hard families are divisibility-unblocked but the coprime
+sub-family covers all fold-classes (the genuine anti-concentration, on the small median-3 sub-family).
+
+SCOPE (honest): no boundedness proof -- that min-clearing-q is bounded over ALL spread DC families is Route B
+itself, open. This session fixes the EXACTNESS of the clearing condition, the collision mechanism of the
+residual, and the WINDOW WIDTH.
+
+Artifacts: reflection route-b-is-two-conditions-and-the-window-is-wider-than-31-kps-S127; HYP-6105;
+lrc14_residual_foldcover_kps_S127.py/out, lrc14_true_window_kps_S127.py/out.
+
+Next: the (b)-hard anti-concentration on the coprime sub-family; the (a)-hard part just needs the correct
+window [15,43]. Fleet: update the finish-map window from [15,31] to [15,43].
+
+---
+
 ## opus-2026-07-11-S240 -- attacked the concrete next target (consec-extremality of the base J) via the natural COMPRESSION route; found it BLOCKED (J not unimodal; 35/35 stuck at algebraically-special local minima). Honest negative result on the proof strategy + arc meta-assessment.
 
 Prompt (owner): work the concrete next target (S239: prove the AP is the unique maximal coverer = consec-extremality, the shared crux of both routes).
