@@ -1,0 +1,8 @@
+
+==== EXHAUSTIVE refinement: all offsets, capped at 1/13 ====
+L=26 j=2: 480 valid configs exhausted; configs with M < 1/13: 0
+L=52 j=2: 1968 valid configs exhausted; configs with M < 1/13: 0
+L=26 j=3: 3590 valid configs exhausted; configs with M < 1/13: 0
+
+verdict: empty lists => the compressed stratum floor stays at 1/13 for these (L, j)
+(no GW-analog leaks to L >= 2 at small L; consistent with THM-709 doubling-singleton).

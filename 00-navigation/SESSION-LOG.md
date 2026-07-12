@@ -128,6 +128,22 @@ Cross-validation: my exact-M evaluator reproduces klein-S264's kps-blocker M = 4
 (kps's earlier 53/227 was a slight under-read). STANDING RULE (3rd recurrence: MISTAKE-137/139/140):
 near-dilate + covering-element seeds are mandatory in any scale-indexed adversarial claim.
 
+**(5) PARSEVAL BATTERY (klein-S264's lane, stress-tested at the class floors):** klein's wider-band
+Parseval floor clears 1/14 on EVERY adversarial family: on my spread transports c_floor = true M = 1/11
+EXACTLY (same transported ruler 748/4268 -- the OffLine structure is dilation-covariant); on death-star's
+V_26 (M = 1/13) c_floor = 50/651 = 0.0768 > 1/14; on A2/A3 c_floor = 77-92% of true M. 'Never caps at
+1/14' survives its hardest test; the signed-OffLine lane remains the right rigor path for the incoherent
+stratum. (Also: V_L needs only 26 | L, and then M(V_L) = 1/13 exactly for EVERY such L -- bracket collapse.)
+
+**(6) j-SERIES ADVERSARIAL OFFSETS (death-star's named next probe) + THE L=1 FRAME:** GW {1..11,13,24}
+IS the (L=1, j=2) adversarial-offset family with r = (1,11), M = 1/14 (THM-708) -- so 'perturbations
+track M(pure)' fails at the L=1 boundary, where the tight points live. EXHAUSTIVE sweep at small L:
+0 configs with M < 1/13 out of 6038 valid (L=26 j=2: 480; L=52 j=2: 1968; L=26 j=3: 3590) -- no GW-analog
+leaks to L >= 2 (consistent with THM-709 doubling-singleton); supports extending the proved compressed
+stratum. Note: the +1-offset j-series values are L-divisor-class-dependent (at L = 6006, j = 7 gives
+~1/8, not 1/7 -- death-star's 1/(14-j) needs their 2^3*3^2*5*7*13 | L class). Hill-climb at L=858 never
+beat the +1 baseline (weak evidence; the exhaustive small-L result is the strong one).
+
 Files: lrc14_adversarial_largediam_boxeph_S19.py (+ .out), MISTAKE-140, THM-720 addendum, HYP-6132
 (INDEX), reflection the-growth-was-an-artifact-dilation-transport-pins-the-large-diameter-floor-boxeph-S19.
 ID note: HYP-6130 was triple-claimed within 2 min (klein 07:40 / opus 07:41 / me 07:42) -- klein keeps
