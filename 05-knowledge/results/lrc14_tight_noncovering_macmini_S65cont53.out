@@ -1,0 +1,12 @@
+VERIFY klein-S265: every M=1/14-tight family is NON-COVERING (5->2 case split linchpin)
+family                        M<=1/14?  covering?  tight+covering?
+  AP {1..13}                  M=0.0714      False  OK (not both)
+  THM-708 {1..11,13,24}       M=0.0714      False  OK (not both)
+  THM-709 doubling {1..11,13,24}  M=0.0714      False  OK (not both)
+  dilate 2*{1..13}            M=0.0714       True  *** TIGHT+COVERING!
+  dilate 3*{1..13}            M=0.0714      False  OK (not both)
+  GW deep-well {1..12,156}    M=0.0740      False  OK (not both)
+  near-dilate {L..12L,13L+1} L=30030  M=0.0731       True  OK (not both)
+
+  tight families that ARE covering: 1  => klein 5->2 split FAILS
+  (near-dilate has M=1/13 > 1/14 = strict-cushion DC, NOT tight -- consistent with the split)

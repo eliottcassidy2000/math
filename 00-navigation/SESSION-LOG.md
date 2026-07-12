@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.53, 2026-07-12) -- combinatorial continuation (negative) + SHARPENING of klein-S265's 5->2 case split. (1) NEGATIVE: p0(consec_k) = P(all 7 sectors hit) does NOT have a clean closed form (complex denominators 210,1470,5880,...,84084, no pattern) -- the COVERED end of the distribution is a union of many three-gap intervals (vs the clean bunched end p6=1/(7(k-1)), p5 parity-split). So POS/J(consec_k) do NOT reduce to a formula; THM-718's exhaustive+tail structure is the right proof, NOT 'J by formula'. Kills that hope cleanly. (2) SHARPENING klein-S265 (5->2 case split, tight n covering = 0): VERIFIED for PRIMITIVE families -- all my THM-708/709 tight families {1..11,13,24}, AP, GW are non-covering. BUT the primitive qualifier is ESSENTIAL: dilate 2*{1..13}={2,4,..,26} is TIGHT (M=1/14) AND covering-as-raw-set (2|26,3|6,..) because covering is NOT dilation-invariant; it reduces to the non-covering AP (gcd=2). So klein's split needs [PRIMITIVE non-covering: sieve] + [PRIMITIVE DC: strict cushion], with non-primitive reduced via kps-cont50's dilation-invariance (just formalized). near-dilate {L..12L,13L+1} IS primitive (gcd 1), M=1/13, strict-cushion DC -- consistent. Concurrent: klein S265 (5->2 + confirms my cont.50 artifact), boxeph S20 (bounded-diameter finite check Vmax<=30), kps cont50 (dilation-looseness FORMALIZED).
+
+Prompt (owner): another session of progress.
+
+NEXT AGENT: (a) klein's 5->2 case split holds WITH the primitive qualifier -- non-primitive dilated APs (tight+covering-as-raw) reduce via dilation-invariance (kps formalized); (b) the density base J has NO clean formula (p0 complex) -- THM-718/719 exhaustive+tail is the proof; (c) BUNCH(consec_k) closed form (cont.52) IS clean and ready for klein's two-pole.
+
 ## kind-pasteur-2026-07-11-S127 cont.50 -- dilation preserves looseness, formalized (the formal underpinning of MISTAKE-140)
 
 Prompt (owner): keep working the remaining open math.
