@@ -1,3 +1,21 @@
+## opus-2026-07-11-S244 -- the ~6-runner crux IS the oracle's EVEN-FOLD (S558o), iterated to the coprime core; for the residual the core SPREADS and misses the structured good set (density 0.23<<1 => lonely); the BLANKET obstruction is the AP/V* wall = bucket A. Unifies five threads.
+
+Prompt (owner): work the ~6-runner problem creatively, look back at past work.
+
+PAST WORK found (oracle S554-S558o, the even-fold): M14(S) <= M(fold(S)), fold = even speeds halved; LRC(13) proven => even runners protected => the even-good set G = {t: ||v t||>=1/14 for every even v} has POSITIVE MEASURE for free. LRC(14) <=> the odd runners leave a point of G clear. S558o refuted the union bound and anti-correlation; the obstruction is POSITIONAL, and the wall is exactly AP/V* (odds blanket G, density->1.00).
+
+THE SYNTHESIS: iterate the even-fold over ALL small primes -- fold out div-by-2, then 3,5,7,11,13 (each protected by LRC<=13). What survives is the COPRIME-TO-30030 core (<=6, opus-S243). So the even-fold's "odd runners" sharpen to the <=6 coprime core, and LRC(14) <=> the <=6 core does not BLANKET the structured good set G' = {t: all non-core runners safe}.
+
+VERIFIED (fine grid): DIVISOR-COMPLETE (residual) families have core-danger density in G' = 0.23 (mean), ALL < 1 => the core SPREADS and MISSES G' => LONELY (core size <=4 in sample). By contrast AP {1..13} and V* have density = 1.000 (the BLANKET) -- but these are BUCKET A (no mult of 14), dispatched by t=1/14, NOT divisor-complete.
+
+SO the ~6-runner crux is FAVORABLE for the residual: the coprime core is SPREAD (S239 bad coverer) => low danger-density in G' (0.23, huge margin from the blanket at 1) => misses G' => lonely. S558o's blanket obstruction (density->1) is the AP/V* wall = bucket A, dispatched separately. This unifies FIVE threads onto ONE object: even-fold (S558o) + coprime core (S243) + spread=bad-coverer (S239) + klein ~6-odd shrink (S263) + mac-mini <=6 decorrelation lifts (cont.49).
+
+HONEST: synthesis + favorable reframing, not a proof. Remainder = "spread core => danger-density in G' < 1" = the anti-concentration in its FAVORABLE direction; S238 showed no bounded-window shortcut, but it is robust (0.23 << 1), not marginal. The difficulty (blanket, density->1) lives only at the AP/V* wall, already dispatched -- so the residual's ~6-runner problem is the spread case, where the core robustly misses G'.
+
+FILES: lrc14_sixrunner_evenfold_synthesis_opus_S244.py (+.out); reflection the-six-runner-crux-is-the-even-fold-and-it-is-favorable-opus-S244; HYP-6137. -> oracle S554-S558o, opus-S243/S239/S241/S242/S233, klein S263, mac-mini cont.49.
+
+---
+
 ## mac-mini-2026-07-09-S65 (cont.50, 2026-07-12) -- HONESTY CORRECTION of cont.49 + phenomenon CONFIRMED robust. Worked the '<=6 distinct lifts theorem' -> it is NOT a theorem (MISTAKE-139): (1) min-distinct-lifts~2 is a SCALE ARTIFACT (coarse L~Vmax => {0,1} lifts but base B~Vmax => reach(k)-B/L vacuous; no scale has BOTH small B and few lifts for generic DC); (2) #odd is NOT bounded by 6 (generic 3-10, adversarial 12 via 1 mult-of-840; klein's 'median 6' is a median). So cont.49's decorrelation-atom closure was scale-dependent + construction-specific -- THM-636 applies only to CLEAN single-scale escape families (r<=11 scope), NOT generic large-diameter DC. CORRECT ROUTE = multi-scale THM-687/688 (klein): generic large-diameter = scale TOWER, reach accumulates, base = bounded-diameter finite check. PHENOMENON STANDS: adversarial min-M over large-diameter DC = 0.148-0.219, all > 2x floor, margin GROWS with diameter (THM-720 solid). Only the cont.49 MECHANISM was wrong; no canon THM depended on it. Reflection corrected + MISTAKE-139 recorded.
 
 Prompt (owner): work the <=6 distinct lifts theorem.

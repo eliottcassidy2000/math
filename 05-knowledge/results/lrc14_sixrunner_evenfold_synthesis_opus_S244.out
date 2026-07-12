@@ -1,0 +1,18 @@
+C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\lrc14_sixrunner_evenfold_synthesis_opus_S244.py:8: SyntaxWarning: invalid escape sequence '\ '
+  POSITIVE MEASURE for free. LRC(14) <=> the ODD runners leave a point of G clear <=> |G \ union_odd D_v| > 0.
+core-danger density in structured good set G' (lonely <=> < 1):
+  DC coreN=1 |G'|=0.138 density=0.106 LONELY
+  DC coreN=2 |G'|=0.192 density=0.287 LONELY
+  DC coreN=2 |G'|=0.195 density=0.246 LONELY
+  DC coreN=3 |G'|=0.229 density=0.373 LONELY
+  DC coreN=0 |G'|=0.127 density=0.000 LONELY
+  DC coreN=4 |G'|=0.233 density=0.472 LONELY
+  DC coreN=1 |G'|=0.150 density=0.144 LONELY
+  DC coreN=0 |G'|=0.116 density=0.000 LONELY
+  DC coreN=2 |G'|=0.171 density=0.308 LONELY
+  DC coreN=4 |G'|=0.255 density=0.508 LONELY
+  DC coreN=1 |G'|=0.144 density=0.134 LONELY
+  DC coreN=1 |G'|=0.150 density=0.193 LONELY
+  DC mean density = 0.231 (<< 1 => core spreads, misses G')
+  AP {1..13}: coreN=1 density=1.000 BLANKET (=bucket A wall, dispatched by t=1/14)
+  V*: coreN=1 density=1.000 BLANKET (=bucket A wall, dispatched by t=1/14)
