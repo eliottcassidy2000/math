@@ -1,3 +1,47 @@
+## kind-pasteur-2026-07-11-S127 cont.50 -- dilation preserves looseness, formalized (the formal underpinning of MISTAKE-140)
+
+Prompt (owner): keep working the remaining open math.
+
+boxeph's MISTAKE-140 (third recurrence of the size-indexed-extremal genus) refuted "min M grows with
+diameter": M is dilation-invariant (THM-531), so the near-dilate v_c = 2c*H* (H* = {1,2,3,4,8,9,10,11,12,13,
+14,16}, M=1/11) is primitive, divisor-complete, spread, diameter 30c -> infinity, with M = 1/11 at EVERY
+scale. The DC class stratifies by STRUCTURE, not diameter -- the same lesson as my cont.47 (band-window) and
+cont.49 (coprime-core). That correction rested on a transport fact that was only cited/measured. This session
+machine-checks it.
+
+FORMALIZED (LRCReachTransport.lean, kernel-pure [propext, Classical.choice, Quot.sound], green, root-wired):
+- reach_dilate_ge -- for c >= 1, reach(v) <= reach(c*v), by the SCALED WITNESS: if t0 attains reach v, then
+  t0/c in [0,1] attains the SAME margin for c*v, because (c*v_i)*(t0/c) = v_i*t0. The EASY direction (no
+  periodicity, unlike the = half of dilation-invariance).
+- loose_dilate -- reach v > 1/14 => reach(c*v) > 1/14: looseness of a bounded structural core transports to
+  its entire unbounded dilation orbit, with no recomputation.
+
+WHY the >= half is the right one: it PROPAGATES looseness upward, so the unbounded near-dilate slice collapses
+to the single bounded core (the finite base) -- exactly MISTAKE-140's "re-anchor to the flat floor; the class
+stratifies by structure". The transport that keeps tripping the fleet as an informal aside (MISTAKE-137/139/140)
+is now a theorem.
+
+SCOPE (honest): formalizes the transport, not the endgame. The core's own looseness (detuned-dispatch /
+bounded-diameter finite check) and the = half (not needed for looseness) stay outside.
+
+CONTEXT (opus-S246, same day): reframes the endgame -- DC is LOOSE (M >= 2/27), the loneliness-hard families
+are NEAR-AP (not DC), and all levers reduce to the FAREY-WINDOW RIGIDITY [M < 2/27 => dilated interval {1..13}]
+= HYP-4151 at k=13; closing target = extend the "residues form the AP" equioscillation from k=12 (mod-13 field)
+to k=13 (mod-14 composite). (Note: opus's observed DC min-M 0.147 is itself a sampling artifact -- my cont.41
+{1,2,3,4,10..18} is DC with M = 1/12 = 0.083, still > 2/27 = 0.074, consistent with the empty window.) My
+transport supports the "structure not diameter" frame underlying all of this.
+
+Also this session: probed the DC M-floor (killed the exact-M search as too slow / confirmatory -- fleet has
+the floor at ~1/12 to 2/27); pivoted to the formalization as the concrete deliverable.
+
+Artifacts: LRCReachTransport.lean (reach_dilate_ge, loose_dilate); reflection
+dilation-preserves-looseness-formalized-the-near-dilate-slice-reduces-to-cores-kps-S127; HYP-6160.
+
+Next: the core's own looseness (the Farey-window rigidity, opus-S246's k=13 equioscillation) is the genuine
+remaining target; the transport that reduces the near-dilate orbit to the cores is now kernel-checked.
+
+---
+
 ## opus-2026-07-11-S246 -- the additive lever is E3 (not R2); divisor-complete is LOOSE (M>=2/27, a CERTIFICATE issue not loneliness); ALL levers unify into the FAREY-WINDOW RIGIDITY [M<2/27 => dilated interval {1..13}] = HYP-4151 at k=13.
 
 Prompt (owner): keep working the remaining open math.
