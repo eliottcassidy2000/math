@@ -1,0 +1,15 @@
+PER-PRIME failure rate P(B5(v,q)<=0) and the CRT product:
+  q=11: P(fail)=0.718
+  q=13: P(fail)=0.641
+  q=17: P(fail)=0.610
+  q=19: P(fail)=0.522
+  q=23: P(fail)=0.451
+  q=29: P(fail)=0.457
+  q=31: P(fail)=0.388
+  q=37: P(fail)=0.302
+  q=41: P(fail)=0.267
+  q=43: P(fail)=0.311
+  CRT product (fail ALL primes) = 2.93e-04 => prime rulers cover ~99.9707% of residue classes
+  7 families failed ALL primes (empirical 2.33e-04 ~ product 2.93e-04: CRT independence OK)
+  of these, covered by a COMPOSITE ruler [14,42]: 7/7
+  => DECOMPOSITION: [primes 11..43, CRT-factored, ~99.97%] + [3e-4 composite-core, LRC-hard residue].

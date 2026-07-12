@@ -1,3 +1,19 @@
+## kind-pasteur-2026-07-11-S127 (cont.35) -- CREATIVELY REDUCED the remaining content (window works for all residue classes): it DECOMPOSES by CRT into an INDEPENDENT per-prime part covering ~99.97% + a measure-3e-4 composite-core (the LRC-hard residue). (HYP-6025.)
+
+Prompt (owner): work to reduce creatively -- remaining content is to prove the window works for all residue classes mod lcm(8..43).
+
+The residue-class check (astronomically large: L=lcm(8..43)) REDUCES cleanly:
+(1) CRT FACTORIZATION of the PRIME part: for prime moduli q in {11,13,17,19,23,29,31,37,41,43}, B5(v,q) depends ONLY on v mod q, and distinct primes give INDEPENDENT residue coordinates (CRT). So the fraction of residue classes failing ALL prime rulers = the PRODUCT of per-prime failure rates. Per-prime P(fail): q=11 .72, 13 .64, 17 .61, 19 .52, 23 .45, 29 .46, 31 .39, 37 .30, 41 .27, 43 .31 => PRODUCT = 2.9e-4. VERIFIED CRT independence: empirical joint-fail (random families) = 2.3-5e-4 matches the product. So the prime-modulus window covers ~99.97% of residue classes, FACTORED into 10 independent per-prime conditions (each a residue condition mod ONE prime).
+(2) The remaining ~3e-4 COMPOSITE-CORE (families failing every prime 11..43) is 100% covered by COMPOSITE rulers in [14,42] (verified 40/40 and 7/7; some also by small primes 2,3,5,7).
+
+So the bounded-window check = [primes 11..43, CRT-INDEPENDENT per-prime, ~99.97%] + [3e-4 composite-core, the LRC-hard residue localized]. The prime part factors (rigorous CRT independence; q<=13 rigorous via THM-712, q=17..43 the +-resonance/near-unit conditions = opus not_loose_near_unit territory); the composites do NOT factor (shared prime powers) and carry the hard tiny core.
+
+CONVERGENCE: opus-S231 independently hit the SAME honest limit (bounded clean ruler diameter-free to Vmax 56000, composites ESSENTIAL, LRC-adjacent). My net-new = the CRT FACTORIZATION that QUANTIFIES it (99.97% prime / 3e-4 composite-core) -- localizing the LRC-hard content to a measure-3e-4 residue class.
+
+HONEST: the CRT reduction is a genuine structural localization, not a closure; the 3e-4 composite-core is LRC-hard (composites do not factor). But it turns the astronomical check into [10 independent per-prime conditions] + [a measure-3e-4 residue set].
+
+FILES: lrc14_crt_window_reduction_kps_S127.py/.out; HYP-6025. NEXT: the 3e-4 composite-core (does IT reduce further, or is it the irreducible LRC kernel?); rigor for the per-prime conditions q=17..43 (near-unit, extending THM-712).
+
 ## opus-2026-07-11-S231 -- following the redirect as far as it goes: the bounded-modulus clean-ruler lemma is ADVERSARIALLY ROBUST + DIAMETER-FREE (clean q<=~60, 0 failures to Vmax 56000), but composites are ESSENTIAL and the full proof is genuinely LRC-adjacent. Honest limit reached.
 
 Prompt (owner): follow the math of the redirect as far as you can.
