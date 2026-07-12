@@ -1,0 +1,27 @@
+=== (A)+(B) k=8, box [1..24], floor 432/91 = 4.74725 ===
+    J_iid(8) = 7733946/823543 ~ 9.39107  (decorrelation budget +4.6438)
+  734975 normalized cores. GLOBAL min J = 291/49 ~ 5.93878 at (1, 2, 3, 4, 5, 6, 7, 8)  == CONSEC
+  five lowest-J cores:
+    J=5.93878 margin+1.19152 spread=7  (1, 2, 3, 4, 5, 6, 7, 8)
+    J=5.98141 margin+1.23415 spread=8  (1, 2, 3, 4, 5, 6, 7, 9)
+    J=6.11020 margin+1.36295 spread=12  (2, 4, 6, 7, 8, 10, 12, 14)
+    J=6.27347 margin+1.52622 spread=9  (1, 2, 3, 4, 5, 6, 7, 10)
+    J=6.27664 margin+1.52939 spread=7  (2, 3, 4, 5, 6, 7, 8, 9)
+  DECORRELATION -- min J among cores with spread >= s:
+    s>=  7: min J = 5.93878 (margin +1.19152)  <-- floor cleared for all spread>=s
+    s>=  8: min J = 5.98141 (margin +1.23415)  <-- floor cleared for all spread>=s
+    s>=  9: min J = 6.11020 (margin +1.36295)  <-- floor cleared for all spread>=s
+    s>= 10: min J = 6.11020 (margin +1.36295)  <-- floor cleared for all spread>=s
+    s>= 11: min J = 6.11020 (margin +1.36295)  <-- floor cleared for all spread>=s
+    s>= 12: min J = 6.11020 (margin +1.36295)  <-- floor cleared for all spread>=s
+    s>= 13: min J = 6.36706 (margin +1.61981)  <-- floor cleared for all spread>=s
+    s>= 14: min J = 6.36706 (margin +1.61981)  <-- floor cleared for all spread>=s
+    s>= 15: min J = 6.39252 (margin +1.64526)  <-- floor cleared for all spread>=s
+    s>= 16: min J = 6.39252 (margin +1.64526)  <-- floor cleared for all spread>=s
+    s>= 17: min J = 6.39252 (margin +1.64526)  <-- floor cleared for all spread>=s
+    s>= 18: min J = 6.39252 (margin +1.64526)  <-- floor cleared for all spread>=s
+    s>= 19: min J = 6.43587 (margin +1.68862)  <-- floor cleared for all spread>=s
+    s>= 20: min J = 6.43587 (margin +1.68862)  <-- floor cleared for all spread>=s
+    s>= 21: min J = 6.43587 (margin +1.68862)  <-- floor cleared for all spread>=s
+    s>= 22: min J = 6.58018 (margin +1.83293)  <-- floor cleared for all spread>=s
+    s>= 23: min J = 6.67007 (margin +1.92282)  <-- floor cleared for all spread>=s
