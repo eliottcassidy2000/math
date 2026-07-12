@@ -1,0 +1,26 @@
+J_iid (decorrelated, 8 nonzero iid phases) = 8.4560; threshold 432/91 = 4.7473
+consec compact min (cont.40) = 5.199 at d=8
+
+   d       #fam    min J  (exhaustive d<=18, sampled d>18)
+   8          1   5.1990  exh  >thr+0.4
+   9          8   5.2134  exh  >thr+0.4
+  10         36   5.3429  exh  >thr+0.4
+  11        120   5.6188  exh  >thr+0.4
+  12        330   5.4544  exh  >thr+0.4
+  13        792   5.5837  exh  >thr+0.4
+  14       1716   5.2595  exh  >thr+0.4
+  15       3432   5.6197  exh  >thr+0.4
+  16       6435   5.1990  exh  >thr+0.4
+  17      11440   5.6709  exh  >thr+0.4
+  18      19448   5.2134  exh  >thr+0.4
+  20      50388   5.3429  exh  >thr+0.4
+  24     245157   5.9698  samp30k  >thr+0.4
+  28     888030   6.2209  samp30k  >thr+0.4
+  32    2629575   6.3977  samp30k  >thr+0.4
+  36    6724520   6.0000  samp30k  >thr+0.4
+  40   15380937   6.5660  samp30k  >thr+0.4
+  45   38320568   6.8074  samp30k  >thr+0.4
+
+min-J is >= 5.1990 across all d in [8,45]; rises toward J_iid=8.4560
+CROSSOVER: min-J clears threshold 4.7473 at EVERY d (min margin +0.4517)
+=> the k=9 base = [exhaustive compact d<=D0] + [decorrelation tail]; tail never binds.

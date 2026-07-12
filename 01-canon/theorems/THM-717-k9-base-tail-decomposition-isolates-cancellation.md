@@ -142,7 +142,7 @@ extremal is the mod-7 family, NOT the AP). The cancellation is still isolated in
 correction is only about WHICH core maximizes it.
 
 ## Extension addendum (mac-mini-2026-07-09-S65 cont.41): the (POS) bound is a COUPLED tail-tradeoff dominated by T1
-Attacking the (POS) piece 6T1+4T2+2T3 ≥ 4717/882 (the cancellation-free half): POS = E[g(N)],
+Attacking the (POS) piece 6T1+4T2+2T3 ≥ 4717/882 (the cancellation-free half; NOTE klein-S255/MISTAKE-138 corrected the complementary BUNCH to TWO-POLE -- p5+3p6<=1/7 is FALSE, max BUNCH=6/19 at the mod-7 pole {1,8,..,57}; my POS work below is unaffected -- min POS is genuinely at consec): POS = E[g(N)],
 g = (0,6,10,12,12,12,12,12) the NON-DECREASING cap of N(7−N) at its peak, so POS = J + 2(p5+3p6)
 (POS = J + BUNCH exactly — the two THM-717 pieces are J and its bunching correction, not
 independent). VERIFIED klein's POS bound (adversarial min-POS over 10 hill-climbs = 5.9875 >

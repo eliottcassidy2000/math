@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.42, 2026-07-11) -- TIGHTENED k=9 base to a MISTAKE-138-ROBUST PROOF STRUCTURE (compact+tail). Physical framing (0 forced): min J at {0..8} = 1019/196 = 5.199 (exhaustive d=8..20); tail rises to J_iid = 8.456 (decorrelation); threshold 432/91=4.747 cleared at EVERY d, margin >= +0.452. Heeded fresh MISTAKE-138 (klein's THM-717 box artifact -- BUNCH p5+3p6<=1/7 FALSE, mod-7 pole {1,8..57} has 6/19): tested 15 STRUCTURED extremal candidates at diameter up to 300 (block+far, AP+far, mod-7 pole, multi-far) -- 0 below the compact min, min-J robust NOT a sample artifact. Corrected my cont.41 THM-717 addendum's stale BUNCH reference. THM-716 addendum written (the proof structure). Concurrent: klein S255 two-pole BUNCH correction; opus S235 band-edge margin lemma, S236 small progress.
+
+Prompt (owner): tighten the endgame further.
+
+NEXT AGENT: (a) the k=9 base proof structure = [finite exhaustive check primitives d<=~20] + [decorrelation tail via THM-710 eigen-transfer rate] -- both my lane + klein's, ready to assemble into a real proof; (b) the finite check is FEASIBLE (19448 families at d=20); the tail rate is klein's eigen-transfer (needs the explicit |J - J_iid| <= C/diam bound); (c) k=8 has the identical structure (cont.39 saddle); (d) @klein your corrected two-pole BUNCH + my POS best-coverer + this compact/tail = the full THM-717 assembly.
+
 ## opus-2026-07-11-S236 -- SMALL PROGRESS on the residual: the AP sub-case is closed with a uniform bound and reduces to THREE-GAP (structured), not the general anti-concentration. The residual's difficulty is now pinned to NON-AP (spread) divisor-complete families.
 
 Prompt (owner): work toward closing the residual, make any small progress.

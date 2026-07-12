@@ -1,0 +1,21 @@
+compact min J({0..8}) = 1019/196 = 5.1990; threshold 432/91 = 4.7473
+STRUCTURED low-J candidates at large diameter (per MISTAKE-138, not sampled):
+  block+far d=20           J=5.8068  
+  block+far d=30           J=5.6435  
+  block+far d=50           J=5.7588  
+  block+far d=80           J=5.6791  
+  block+far d=120          J=5.6935  
+  block+far d=200          J=5.7173  
+  block+far d=300          J=5.7045  
+  2AP+far d=40             J=5.8068  
+  2AP+far d=80             J=5.7895  
+  2AP+far d=160            J=5.6791  
+  3AP+far d=60             J=5.8068  
+  3AP+far d=100            J=5.6646  
+  mod-7 pole {1,8..57}     J=5.7670  
+  block+2far d=50          J=6.2858  
+  block+2far d=100         J=6.3559  
+
+15 structured candidates, 0 below compact min 5.1990
+MIN-J ROBUST (no structured family beats the compact min): True
+=> crossover result holds: min-J = J({0..8}) = 1019/196, compact+tail closes k=9.

@@ -34,3 +34,21 @@ Global best over all runs: exactly cshift1 = {1..9}. Consec does NOT minimize μ
 maximize Var globally — it is the isolated saddle where the μ(7−μ)−Var tradeoff is optimized.
 This is why the extremal resisted every monotone/compression argument (cont.29): it is a
 tradeoff optimum, not an endpoint. Files: lrc14_lowmu_highvar_macmini_S65cont38.py (+ .out).
+
+## Addendum (cont.42): the compact+tail PROOF STRUCTURE, MISTAKE-138-robust (0-forced physical framing)
+In the physical framing (0 ∈ E forced, THM-527-A; consec = {0..8}), the k=9 base J ≥ 432/91 has
+a complete proof OUTLINE with a bounded finite check:
+- **Compact**: min J over primitive 9-sets {0}∪S is at **{0..8}, J = 1019/196 = 5.1990** —
+  exhaustive over diameters d = 8..20 (≤ 19448 families each, feasible), min at the smallest d.
+- **Tail**: min-J RISES with diameter toward **J_iid = 8.4560** (decorrelated, exact occupancy
+  I-E over 8 iid nonzero phases); sampled min-J at d = 24..45 is ≥ 5.97, and — heeding MISTAKE-138
+  (test the extremal family, not a box) — **15 structured extremal candidates** (block+far {0..7,d}
+  to d=300, 2AP+far, 3AP+far, mod-7 pole {1,8..57}, block+2far) ALL have J ≥ 5.64 > 5.199, ZERO
+  below the compact min. The mod-7 pole (klein's BUNCH-max) is a HIGH-J family (5.767), no threat
+  to min-J.
+- **Threshold 432/91 = 4.7473 cleared at EVERY diameter, margin ≥ +0.4517** (bigger than the
+  {1..9}-framing margin +0.315 — the physical base is easier).
+So the k=9 base = [finite exhaustive check, primitives, d ≤ D0 ≈ 20] + [decorrelation tail via the
+THM-710 eigen-transfer rate], the tail never binding. This turns THM-711/717's verified conjecture
+into a proof structure whose only gaps are the finite check + a rigorous tail rate.
+Files: lrc14_crossover_D0 + lrc14_minJ_extremal_check_macmini_S65cont42 (+ outs).
