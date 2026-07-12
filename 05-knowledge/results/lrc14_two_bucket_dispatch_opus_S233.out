@@ -1,0 +1,11 @@
+(1) [clean ruler q<=80] OR [no mult 14]  covers 19999/19999  (gap 0)
+
+(2) tight / AP-coherent families are BUCKET A (elementary t=1/14):
+    AP {1..13}  : no-mult-14=True (t=1/14 works), clean_ruler=None
+    GW 12->24   : no-mult-14=True (t=1/14 works), clean_ruler=None
+    V* sporadic : no-mult-14=True (t=1/14 works), clean_ruler=None
+
+(3) bucket B (mult of 14) adversarial clean-ruler (bounded, diameter-free):
+    Vmax ceil    200: adversarial max smallest-clean-q = 39  (#no-clean<=200: 0)
+    Vmax ceil   2000: adversarial max smallest-clean-q = 43  (#no-clean<=200: 0)
+    Vmax ceil  20000: adversarial max smallest-clean-q = 43  (#no-clean<=200: 0)
