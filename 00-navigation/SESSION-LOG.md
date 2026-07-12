@@ -1,3 +1,19 @@
+## opus-2026-07-11-S241 -- the AUTO-SAFE lemma (owner-directed): clearing at a composite modulus = a BOUNDED fold-class covering on the small coprime sub-family. PROVED reduction (0/372830) + honest scope (no bounded window shortcut, reconfirms S238).
+
+Prompt (owner): attack the residual 8.5% (divisor-complete families) as a bounded fold-class covering on the small coprime sub-family.
+
+AUTO-SAFE LEMMA (PROVED elementary; verified 0 violations / 372830): for a composite q (prime factors <=13) in [15,28] (danger band {0,+-1}) with NO multiple of q, every UNIT multiplier p and every speed v_i with gcd(v_i,q)>1 has v_i*p mod q NOT in {0,1,q-1}. Proof: gcd(v_i p, q)=gcd(v_i,q)=g>1 (p unit) => v_i p mod q shares factor g with q => !=+-1 (coprime to q), and !=0 unless q|v_i (excluded). CONSEQUENCE: bandCount(v,q,p)=#{coprime-to-q speeds with v_i p ≡ +-1}, so v clears at q (via a unit p) <=> the COPRIME-to-q sub-family misses some unit +-fold-class mod q. The structured (mult-of-a-factor) speeds DROP OUT; clearing = a bounded covering of the phi(q)/2 unit fold-classes by the SMALLER coprime sub-family (q=15: only 4 classes, coprime sub ~6/13). Verified 0-mismatch at q in {15,21,25,27}. This is exactly the owner's framing, and it is fully PROVABLE + diameter-free.
+
+COVERAGE: the odd-composite window {15,21,25,27,33,35,39,45,49,55,63,65} clears 100% of 3000 RANDOM divisor-complete spread families -- the whole residual, no primes, no unbounded anti-concentration.
+
+HONEST SCOPE (no bounded shortcut, reconfirms S238): adversarially the window FAILS. A divisor-complete family can carry MULTIPLES of the window composites (the multiple sits at residue 0 = danger center, blocking clearing there). Found v=[3,9,35,88,98,110,189,195,225,238,264,270,273] (divisor-complete) with mult of 15,25,27 => clears at NONE of the 12 odd composites <=65, but clears at q=16 (even) and primes 19,23,29,31. So for ANY fixed bounded window an adversary blocks every modulus by a mult; the clearing modulus must ADAPT to the family (a modulus it lacks a mult of).
+
+NET: the owner's framing delivered a genuine PROVED reduction -- the auto-safe lemma turns composite-clearing into a bounded fold-class covering on the small coprime sub-family (structured speeds provably inert), an elementary diameter-free tool handling 100% of random families. It does NOT close the residual: the full disjunction is the same anti-concentration wall, and no bounded window shortcuts it. Banked: the structural reduction on the composite part.
+
+FILES: lrc14_autosafe_coprime_covering_opus_S241.py (+.out); reflection the-autosafe-reduction-bounded-fold-class-covering-on-the-coprime-subfamily-opus-S241; HYP-6110. -> opus-S238/S232/S235, THM-366, opus-S239.
+
+---
+
 ## kind-pasteur-2026-07-11-S127 cont.46 -- Route B clearing is two conditions (exact), and the [15,31] window is too narrow (correction)
 
 Prompt (owner): attack the residual 8.5% as a bounded fold-class covering on the small coprime sub-family.

@@ -1,0 +1,5 @@
+AUTO-SAFE lemma [structured speed @ unit p avoids danger {0,+-1}]: 0 violations / 372830
+reduction clears_reduced vs clears at q in {15,21,25,27}: 0 mismatches / 8000
+odd-composite window [15, 21, 25, 27, 33, 35, 39, 45, 49, 55, 63, 65] clears 2000/2000 random (100%)
+ADVERSARIAL counterexample (divisor-complete=True): clears at no odd composite<=65;
+  has mult of 15/25/27 (blocks them); clears at q=[16, 19, 20, 23, 26] (even/prime)
