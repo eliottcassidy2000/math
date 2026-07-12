@@ -1,3 +1,51 @@
+## klein-2026-07-11-S254 -- THM-717: THE MOMENT-LADDER BASE TAIL-DECOMPOSITION ISOLATES THE SIGNED CANCELLATION (both base rows unified)
+
+Prompt (owner): long session, math not formalization, computations for exploration, pull frequently to work concurrently.
+
+CONTEXT (pulled): kps cont.36 CRACKED the clean-ruler route -- the bounded window is DECOUPLED
+from LRC-tightness (tight families get the easy ruler q=14; window-hard cores are LOOSE), so that
+route's remainder is a finite residue-class covering (CRT-factored), NOT LRC-adjacent. That leaves
+the MOMENT-LADDER BASE (k=8 deg-3 + k=9 deg-2; THM-710 eigen-transfer inherits k>=10) as the
+genuinely-hard remaining math. I attacked the k=9 base J = E[N(7-N)] = 6m1-m2 >= 432/91.
+
+**THM-717 (claimed + pushed): the base tail-decomposition isolates the cancellation.**
+(1) STRENGTHENED THM-711/716: consec = the EXACT global J-argmin over 167,950 primitive 9-cores
+in [1..20], J = 4465/882, decorrelation budget J_iid - floor = +3.71 (J_iid = 6963918/823543).
+(2) EXACT ABEL IDENTITY: J = 6T1 + 4T2 + 2T3 - 2T5 - 4T6 (Tj = P(N>=j); the T4 coeff vanishes;
+N<=6 always). Proven (Abel summation + N<=6).
+(3) THE SEPARATION: J = POS - BUNCH, POS = 6T1+4T2+2T3 (cancellation-free MONOTONE covering
+combination), BUNCH = 2T5+4T6 = 2(p5+3p6) (diameter-controlled near-origin bunching). Verified
+UNIVERSAL over 92,377 primitive 9-cores: minPOS = 4717/882, maxBUNCH = 2/7, BOTH at consec =>
+J >= 4717/882 - 2/7 = 4465/882 = J(consec) >= 432/91 (margin +0.315). The separation is TIGHT
+(loses nothing) yet CONFINES the signed cancellation to BUNCH.
+(4) UNIFICATION (addendum): the k=8 deg-3 base (THM-714) Abel-decomposes into the SAME shape
+E[psi8] = (2/3)T1+(37/126)T2+(5/126)T3 - (2/21)T4-(1/9)T5-(1/126)T6, minPOS-maxNEG both at consec,
+margin +0.0459 = THM-714 exactly; NEG even smaller (0.0265). So BOTH base rows -- the ENTIRE
+wide-spread base -- reduce to [POS: cancellation-free covering floor] + [NEG: small bunching].
+
+**Why it matters (reflection: isolating-the-cancellation-partial-escape-from-the-signed-wall):**
+the standing law (9 confirmations: no absolute bound survives) is not overturned but QUARANTINED
+-- the signed cancellation that killed every absolute bound on J concentrates in the high-emptiness
+tail (all runners in <=2 sectors); peel it off and the bulk POS is Bonferroni-safe. Two clean
+sub-problems replace one contaminated one: (POS) a coupled covering floor (individual tail-mins NOT
+aligned => genuinely coupled, but no cancellation) + (BUNCH) p5+3p6 <= 1/7 (near-origin bunching,
+three-gap at consec, LRC-adjacent but small + diameter-controlled).
+
+HONEST STATUS: identity PROVED; separation VERIFIED universal; the two piece-bounds are SHARP
+CONJECTURES (equality at consec). Complementary to mac-mini THM-716 ((mu,Var) frontier -> 1-param
+min) and cont.39 (k=8 saddle). Not a proof of the base -- a cleaner reduction of it.
+
+Files: THM-717 canon (+ k=8 addendum); lrc14_J_landscape_twopole + lrc14_J_decorrelation_full
+scripts (+ .out); reflection; HYP-6030 CONFIRMED. Namespace: THM-713 collision RESOLVED (mac-mini
+renamed their variance-sync to THM-715); HYP-6030 mine.
+
+NEXT AGENT: (a) prove (BUNCH) p5+3p6 <= 1/7 -- the crux, self-contained, a covering-measure bound
+on "all k runners in an arc of length 2/7" (three-gap governs the consec extremal; may be a coarse
+shadow of the LRC covering problem itself); (b) prove (POS) 6T1+4T2+2T3 >= 4717/882 -- coupled
+covering floor, now SAFE from cancellation, attack with moment-LP/Bonferroni; (c) the two together
+close the k=9 base outright, and the k=8 analog with them. The clean-ruler route (kps) needs the
+finite CRT residue-covering completeness.
+
 ## mac-mini-2026-07-09-S65 (cont.39, 2026-07-11) -- BOTH DENSITY-SIDE BASE CHECKS ARE ISOLATED SADDLES: k=8 (THM-714 addendum) mirrors k=9 (THM-716) -- consec {1..k} is the extremizer at both, deg-3 bound max 0.4483 at {1..8} (margin +0.0459 under cap_9), adversarial climbs never exceed cap_9 (global max 2*cshift2, a dilation). NEGATIVE: the one-moment closed form J >= 6(1-p0) is DEAD (too lossy: consec p0=0.438 >> 0.209 needed; N(7-N) too concave for a one-moment lower bound) -- confirms the joint (mu,Var) two-moment bound is NECESSARY (matches the saddle finding). Concurrent: klein-S254 working the SAME k=9 J-decorrelation (convergence); kps-cont38 formalized tier-1 composite clean rulers (b5_pos_of_div_clean, ~82% of the bounded-window/liveness residual).
 
 Prompt (owner): keep working the remaining math.
