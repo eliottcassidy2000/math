@@ -1,5 +1,44 @@
 # Investigation Backlog
 
+## Lead klein-2026-07-11-S253: THE LITERATURE MERGE — spectrum/tight/Bohr-3 (owner-directed concept search)
+
+**Source:** Kravitz arXiv:1912.06034; Fan–Sun arXiv:2306.10417v2 (Jan 2026); Giri–Kravitz,
+Math. Proc. Camb. Phil. Soc. 180 (2026) 343–361; Perarnau–Serra survey arXiv:2409.20160.
+**Status:** INGESTED (S253). Five mergeables, priority-ordered:
+
+1. **Tao's dimension-3 Bohr-set estimates = the m₃ instrument** (survey §5, Tao [76] = "Some
+   remarks on the lonely runner conjecture"). Tao's κ(n) ≥ 1/(2n) + c·log n/(n² log log n) runs
+   through estimates on Pr(A_{v1}∩A_{v2}∩A_{v3}) — dimension-3 Bohr sets — the SAME
+   triple-correlation object as the moment ladder's m₃ (k=8 deg-3 row tail, THM-712-cubic/713).
+   NEXT STEP: read Tao [76]'s triple-intersection section; port the estimate shape to the
+   0-anchored core frame; it is the closest literature kin of "kps's 3D hyperbola box count".
+2. **Goddyn–Wong Theorem 12 (acceleration criterion) covers THM-709-doubling-singleton**:
+   r → mr tight iff r shares a factor with every element of [(n+1−r), m(n+1−r)−1]. At n = 13
+   ONLY r = 12, m = 2 passes ([2,3]) — mac-mini's cont.33 singleton is the m = 2 slice, citable
+   to [39] (canon addendum suggested, flagged in S253 letter). Multi-acceleration version =
+   GW Thm 12; converse FALSE in general (survey: full characterization of tight instances open;
+   Jacobsthal-linked families exist with v_n = 2n − Θ(log n), Erdős).
+3. **Pomerance non-tightness window**: n < v_max < 2n − c·log²n ⟹ NOT tight (survey §4/§8.2).
+   Citable scope bound for the covering-filter/tight-locus architecture (THM-708 addendum
+   candidate).
+4. **The pair-sum reduction is Kravitz's** (t = m/(v_i+v_j) standard since Kravitz Prop 2.1;
+   Fan–Sun use it as the default frame): THM-668's mechanism has direct precedent — attribution
+   for final write-ups; validates the pair-sum clean-ruler search architecture.
+5. **Spectrum near 1/14 is CONJECTURAL ONLY** (Kravitz proved n ≤ 3; Fan–Sun DISPROVED the
+   naive s/(ns+1) form at n = 4,6,7 — ML(8,4r+3,4r+11,4r+19) = (2r+7)/(8r+30), k=2 family —
+   and amended to s/(ns+k), k ≤ n; Giri–Kravitz prove the accumulation/hierarchy structure:
+   acc(S(n)) ⊆ S₂(n), den(S_mult(n)) = S₂(n), S*_{k+1}(n) = S*_k(n−1)). NO citable margin
+   above 1/14 exists ⟹ the fleet's margin-free tight handling (τ = 1/14 exact + covering
+   filter) is NECESSARY, not a stylistic choice — design validated. NOTE the hierarchy theorem
+   is the rigorous general form of the fleet's far-element decorrelation limits (THM-687/688/
+   700/710: two-scale limits = 2-dim subgroup values); their "geometry of cubes" lemmas are a
+   candidate proof source for limit lemmas in write-ups.
+
+**Bonus context:** Hunter's Bonferroni [46] + the κ(V) ≥ 1/(2n) + (c/n²)Σ1/v_i refinement [62]
+= precedent for the m_P floor lane. Tao's exp(O(n²)) speed-bound reduction = the conceptual
+ancestor of [banks + a-priori tail]. LRC classical proofs only n ≤ 6 published + n = 7,8
+computer-assisted + 9–13 announced (the repo's citation basis, confirmed current).
+
 ### LEAD (klein-2026-07-09-S233 → RESOLVED S234 as THM-685): the RELATION-LATTICE RESUMMATION → the Kronecker transfer
 - **Source:** THM-684 S233 addendum → **THM-685 (S234)**; `lrc14_relation_lattice_resummation_klein_S234.py`
 - **Status:** CLOSED at S234, better than asked: (i) became the elementary TRANSFER THEOREM |LM(q) − q·μ(S)| ≤ K(S) ≤ Σv (no ET/Weyl needed — the line is closed since v is integer; q arbitrary, primality nowhere); (ii) done exact (all 78+286 connected constants as Fractions; c₂(doubling) = 5/98 = boxeph's μ₂ − (6/7)²); (iii) done (deep well μ = 4637/194040, K = 24, lattice series churns ±0.5/order → the series is DIAGNOSTIC, μ-exact + transfer is the certificate object).
