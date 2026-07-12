@@ -11,6 +11,31 @@ Format per entry:
 
 ---
 
+
+## MISTAKE-138 — THM-717 "both extremal at consec" was a BOX ARTIFACT (mod-7 pole missed); MISTAKE-127 recurrence
+
+**What was done (klein-S254):** Claimed THM-717's separation `J = POS − BUNCH` had BOTH `min POS`
+and `max BUNCH` at consec, verified "universal" over 92 377 primitive 9-cores in [1..19].
+
+**Why it was wrong:** The box [1..19] EXCLUDED the mod-7 synchronization pole
+`{1,8,15,22,29,36,43,50,57}` (all ≡ 1 mod 7, spread 56 — far outside the box), which has
+`BUNCH = 6/19 ≈ 0.316 > 2/7 ≈ 0.286`. So the bunching bound `p₅+3p₆ ≤ 1/7` is FALSE, and
+`max BUNCH` is at the mod-7 pole, NOT consec. This is a direct recurrence of MISTAKE-127
+(**test the extremal family, not a box**) — the mod-7 pole is a KNOWN extremal (mac-mini THM-715's
+second Var-pole), and a box search over small-diameter cores structurally cannot see it.
+
+**The correct framing (klein-S255):** The separation is genuinely TWO-POLE. `min POS = 4717/882`
+at consec (the POS/covering pole); `max BUNCH = 6/19` at the mod-7 pole `{1,8,…,57}` (verified
+by exhaustive mod-7 search + adversarial). The separation STILL closes globally:
+`min POS − max BUNCH = 4717/882 − 6/19 = 84331/16758 ≈ 5.032 ≥ 432/91` (margin **+0.285**,
+down from the artifact +0.315). Same fix for k=8 (max NEG at `{2,9,…,51}`, margin +0.0425). The
+corrected bounds are `POS ≥ 4717/882` (consec) and `BUNCH ≤ 6/19` (mod-7) — two separate poles,
+so the separation is now lossy but still sufficient.
+
+**Lesson (again):** ANY "consec is the extremal" claim on a bunching / variance / synchronization
+functional MUST be checked against the mod-7 pole `{r, r+7, …, r+56}` explicitly — it lives at
+spread 56 and is invisible to any [1..W] box with W < 57. Bunching/Var poles ≠ covering/J poles.
+
 ## MISTAKE-137 — Claiming a "decorrelation tail" `Vmax > 30 ⟹ μ ≥ 0.044` on the residual, from a heuristic search with generic-only seeds (opus-2026-07-10-S207/S208)
 
 **What was claimed:** opus-S207, from adversarial μ-minimization over the primitive residual, reported that

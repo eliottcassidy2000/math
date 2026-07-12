@@ -1,7 +1,7 @@
 ---
 id: THM-717
 title: The k=9 base tail-decomposition isolates the signed cancellation — via the exact Abel identity J = 6T₁+4T₂+2T₃−2T₅−4T₆ (Tⱼ = P(N≥j)), the base row J ≥ 432/91 SEPARATES into a cancellation-free covering bound (POS) 6T₁+4T₂+2T₃ ≥ 4717/882 and a diameter-controlled bunching bound (BUNCH) p₅+3p₆ ≤ 1/7, with 4717/882 − 2/7 = 4465/882 = J(consec) ≥ 432/91; every prior absolute/Bonferroni bound on J failed on the −2T₅−4T₆ cancellation, which this decomposition confines to the single small (BUNCH) term (equality at consec) — leaving the bulk (POS) as a monotone-covering functional the density-floor machinery can attack without the wall
-status: IDENTITY PROVED (Abel summation + N ≤ 6 pointwise); SEPARATION VERIFIED EXACT (both piece-bounds universal over 92 377 primitive 9-cores in [1..19], zero violations, both extremal at consec); the two piece-bounds are SHARP CONJECTURES (equality at consec). STRENGTHENS THM-711/716: consec = the EXACT global J-argmin over 167 950 primitive 9-cores in [1..20] (J = 4465/882, decorrelation budget J_iid − floor = +3.71, J_iid = 6963918/823543). Does NOT prove the base outright — it REDUCES it to [(POS) coupled covering extremality, cancellation-free] + [(BUNCH) p₅+3p₆ ≤ 1/7 bunching], each cleaner than raw J.
+status: IDENTITY PROVED (Abel summation + N ≤ 6 pointwise). CORRECTED (klein-S255, MISTAKE-138): the S254 "both extremal at consec / BUNCH ≤ 1/7" was a BOX ARTIFACT — the box [1..19] missed the mod-7 pole {1,8,…,57} (spread 56) with BUNCH = 6/19 > 2/7. The separation is genuinely TWO-POLE: min POS = 4717/882 at consec, max BUNCH = 6/19 at the mod-7 pole (both verified: POS by box+adversarial, BUNCH by exhaustive mod-7 search). It STILL closes GLOBALLY: min POS − max BUNCH = 4717/882 − 6/19 = 84331/16758 ≈ 5.032 ≥ 432/91 (margin +0.285). The two piece-bounds are SHARP CONJECTURES at their (distinct) poles. STRENGTHENS THM-711/716: consec = the EXACT global J-argmin over 167 950 primitive 9-cores in [1..20] (J = 4465/882, decorrelation budget J_iid − floor = +3.71). Does NOT prove the base outright — it REDUCES it to [(POS) coupled covering extremality ≥ 4717/882, cancellation-free, consec-pole] + [(BUNCH) 2(p₅+3p₆) ≤ 6/19 bunching, mod-7 pole], each cleaner than raw J.
 source: klein-2026-07-11-S254 (HYP-6030)
 depends_on:
   - THM-711   # mac-mini: the k=9 base J = E[N(7-N)] >= 432/91 (this decomposes its proof)
@@ -14,6 +14,11 @@ external: Abel summation; Bonferroni inequalities; the "AP is the extremal cover
 ---
 
 # THM-717 — the k=9 base tail-decomposition isolates the cancellation
+
+> **⚠ READ THE CORRECTION (klein-S255) AT THE BOTTOM FIRST.** The S254 body below claims min POS
+> and max BUNCH are both at consec and `BUNCH ≤ 1/7`; that was a box artifact (MISTAKE-138). The
+> mod-7 pole `{1,8,…,57}` has `BUNCH = 6/19 > 2/7`. The separation is two-pole and still closes
+> globally (`min POS − max BUNCH = 84331/16758 ≥ 432/91`, margin +0.285).
 
 ## Setup
 
@@ -103,3 +108,35 @@ floor] + [NEG: a small higher-tail bunching bound]`, both extremal at consec. Th
 of LRC(14)-S3 is confined to the two NEG terms (`p₅+3p₆ ≤ 1/7` and `(2/21)T₄+(1/9)T₅+(1/126)T₆ ≤
 0.0265`), each a "measure of near-origin/near-rational bunching" quantity that vanishes with the
 diameter.
+
+## CORRECTION (klein-S255) — the separation is TWO-POLE; the mod-7 pole is the BUNCH-max
+
+The S254 body above claims min POS and max BUNCH are BOTH at consec, "verified universal over
+92 377 primitive 9-cores in [1..19]." **That was a box artifact (MISTAKE-138).** The box excluded
+the mod-7 synchronization pole `E★ = {1,8,15,22,29,36,43,50,57}` (all ≡ 1 mod 7, spread 56),
+which has `BUNCH(E★) = 6/19 ≈ 0.3158 > 2/7`. So `p₅+3p₆ ≤ 1/7` is FALSE, and the two extrema sit
+at DIFFERENT poles:
+
+| functional | extremal core | value |
+|---|---|---|
+| min POS = 6T₁+4T₂+2T₃ | consec {1..9} | 4717/882 ≈ 5.3481 |
+| max BUNCH = 2T₅+4T₆ | mod-7 pole {1,8,…,57} | 6/19 ≈ 0.3158 |
+
+(BUNCH-max verified: exhaustive over mod-7 families `{r+7jᵢ}`, offsets r=1..6, internal
+9-subsets of [0..12], plus 8000 adversarial — max 6/19 at E★, internal-consec offset-1.
+POS-min verified: box [1..19] + adversarial large-spread, min 4717/882 at consec.)
+
+**The separation still closes GLOBALLY** (not just on a box):
+`J = POS − BUNCH ≥ min POS − max BUNCH = 4717/882 − 6/19 = 84331/16758 ≈ 5.0323 ≥ 432/91`,
+**margin +0.2850** (vs the artifact +0.315; the true J-min is J(consec) = 4465/882 = 5.0624, so the
+now-two-pole separation is lossy by 0.030 but still clears the floor by 0.285). The k=8 analog
+(addendum below) likewise closes with max NEG at `{2,9,…,51}` (offset-2 mod 7), margin **+0.0425**.
+
+**Why two poles is the RIGHT picture:** these are exactly mac-mini THM-715's two synchronization
+poles — consec (three-gap bunching, the covering/POS extremal) and mod-7 (7-sector resonance, the
+variance/BUNCH extremal). The tail-separation cleanly assigns each pole to one half: consec bounds
+POS from below, mod-7 bounds BUNCH from above, and neither pole is near-extremal for the other
+half (POS(mod-7) = 6.08 ≫ 5.35; BUNCH(consec) = 2/7 < 6/19). The corrected piece-bounds to prove
+are `POS ≥ 4717/882` (a covering floor, consec-pole) and `BUNCH ≤ 6/19` (a bunching bound whose
+extremal is the mod-7 family, NOT the AP). The cancellation is still isolated in BUNCH; the
+correction is only about WHICH core maximizes it.
