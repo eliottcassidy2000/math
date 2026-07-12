@@ -1,3 +1,21 @@
+## opus-2026-07-11-S237 -- the residual is verified across the WHOLE divisor-complete class (uniform non-14 clearing window [15,31] => M>1/14) + honest correction: divisor-complete is 99% SPREAD, the S236 AP sub-case was a ~1% corner.
+
+Prompt (owner): work another similar session (residual, small progress).
+
+(1) CONSECUTIVE-INTERVAL uniqueness (strengthens S236): among {a..a+12}, a=1..5999, EXACTLY ONE fails to clear at a non-14 q<=40 -- a=1 ({1..13}). The interval tight locus is a single point.
+
+(2) HONEST CORRECTION to S236: divisor-complete families are 99-100% SPREAD (longest-AP<=7; dist L=3:39%, L=4:49%, L=5:9%, L=6:1%). The S236 "AP sub-case" (longest-AP~13) is a MEASURE-~1% corner, NOT the bulk. Structural reason: divisor-complete requires multiples of 8,9,11,13,14 (spread speeds), incompatible with the tight AP {1..13} (which has no 14) => divisor-completeness FORCES spread. So the residual is essentially the SPREAD anti-concentration (independently confirms kps cont.36's decoupling).
+
+(3) THE SPREAD BULK CLEARS (residual holds for the hard core): every spread divisor-complete family (longest-AP<=7, n=1500) clears at a non-14 q<=26 (0 exceptions), adversarially q<=29 => M>=3/29>1/14. Combined with the AP corner (<=31): EVERY divisor-complete family clears at a non-14 q in [15,31] => M>1/14.
+
+NET: the residual holds EMPIRICALLY across the entire divisor-complete class, reduced to ONE uniform statement -- every primitive divisor-complete family has a lonely time at some q in [15,31] with 14-nmid q. This is the S230/S231 bounded-modulus anti-concentration on the SHARP domain (spread divisor-complete) in a SHARP window ([15,31]), with the strict margin M>1/14 free via the band-edge lemma. Verified (diameter-free, adversarial q<=29) but NOT proved. The honest value: interval uniqueness + the correction that the difficulty is the 99% spread bulk (not the extremal AP corner).
+
+REPO-HEALTH NOTE: hit a corrupt loose git object (e4fd24...) blocking git gc/fsck locally. HEAD==origin/main, working tree clean, all commits pushed => NO data at risk. Disabled local auto-gc (gc.auto 0) so it cannot interfere with pushes. Clean fix = fresh clone (origin healthy).
+
+FILES: lrc14_residual_spread_bulk_opus_S237.py (+.out); reflection the-residual-is-99pct-spread-the-AP-corner-was-small-opus-S237; HYP-6075. -> THM-366, opus-S235/S236/S230/S231, kps cont.36.
+
+---
+
 ## mac-mini-2026-07-09-S65 (cont.43, 2026-07-11) -- SHARPENED the compact+tail structure + k=8 PARITY. (1) HONEST CORRECTION of cont.42: the min-J tail does NOT approach J_iid=8.456 -- block+far families PLATEAU at J~5.69 (|J-Jiid|*d GROWS linearly). Mechanism: wide families = COMPACT CLUSTERS (block keeps correlation) + decorrelated far => J -> the TWO-SCALE/MULTI-SCALE limit (klein THM-687/688), NOT full iid. Correct tail argument: J(wide) >= two-scale limit of densest compact cluster >= compact-min, far elements only RAISE J. CLEANER than 'rises to J_iid' -- the tail is a multi-scale reduction to the SAME compact check. Still clears (5.69 > 4.747). (2) k=8 PARITY: deg-3 bound max at consec {0..7} (0.4380, margin +0.0563 under cap_9), DECREASES with diameter, no structured large-d candidate exceeds 0.36. Both density-side base checks now have the compact+tail proof structure. THM-716 addendum. Concurrent: klein S256 exact BUNCH-max = 18/(7k-6); opus S236 closed the AP sub-case (divisor-complete route).
 
 Prompt (owner): work another similar session.

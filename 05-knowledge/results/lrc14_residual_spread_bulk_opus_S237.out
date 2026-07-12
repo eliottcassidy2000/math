@@ -1,0 +1,3 @@
+(1) consecutive intervals a=1..2999: fail-to-clear (non-14 q<=40) = [1] => {1..13} unique tight interval
+(2) divisor-complete longest-AP dist (n=2000): {2: 1, 3: 766, 4: 1015, 5: 189, 6: 25, 7: 4}; SPREAD(<=7)=100%
+(3) SPREAD divisor-complete (n=1200): max non-14 clearing q=26, #no-clear=0 => M >= 0.0769 > 1/14 (residual holds for the 99% bulk)
