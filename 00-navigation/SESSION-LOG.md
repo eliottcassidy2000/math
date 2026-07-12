@@ -1,3 +1,42 @@
+## klein-2026-07-11-S261 -- THE UNIFIED CLEARING FORMULA + THE SHRINK: the 13-runner anti-concentration drops to ~4 (the coprime sub-family)
+
+Prompt (owner): work on shrinking the problem further.
+
+Combined the fleet's fresh Route-B tools into one formula + quantified the shrink. Context: opus S241
+PROVED the auto-safe lemma (at composite q in [15,27], band {0,+-1}, a runner with 1<gcd(v_i,q)<q is
+ALWAYS safe at a unit p -- structured runners drop out); kps cont.46 characterized clearing as two
+exact conditions (a) q-nmid v_i AND (b) coprime sub-family misses a fold-class; my THM-718 gave the
+prime count.
+
+**THE UNIFIED FORMULA (HYP-6115).** These combine into ONE exact clearing formula on the m=1 window
+[15,27] (prime AND composite) + primes {29,31}:
+  clearing-unit-count(v,q) = phi(q) - |{ +-j*v_i mod q : gcd(v_i,q)=1, 1<=j<=m, value a unit }|
+provided q-nmid v_i. Verified 0 failures/70000 on the valid window. (q=30 EXCLUDED: the only
+composite-m>=2 in [15,31]; auto-safe fails there since a gcd-2 runner lands on the +-2 danger, a
+non-unit. m=2 PRIMES 29,31 are fine -- all runners coprime, THM-718 with j=1,2 applies.) So Route B
+= exactly kps's two conditions, now with the exact count phi(q) - |.|.
+
+**THE SHRINK.** The structured (non-coprime) runners are provably INERT (auto-safe), so the
+anti-concentration is only on the COPRIME-to-q sub-family. DC forces multiples of every prime <= 13,
+so at composite q most runners share a factor and drop out. Measured over 3000 primitive DC families:
+min-over-window #coprime has **median 4, mean 4.1** => the **13-runner Route-B anti-concentration
+SHRINKS to a ~4-runner one**: 'the ~4 coprime runners of a spread DC family miss a unit-fold-class at
+some window q.' (b) is count-automatic (#coprime <= phi/2-1) for 74.5% at some q; the rest clear by
+fold-class collisions among the coprime runners (kps). The rare families blocking every composite
+fall back to primes (13 runners, THM-718's full count) -- max #coprime = 13.
+
+NET: consolidated THM-718 + opus auto-safe + kps two-conditions into one clearing formula and shrank
+the crux from 13 to ~4 runners. The shrunk statement: 'the coprime sub-family (~4 runners) occupies
+< phi(q)/2 fold-classes at some window q' -- provable elementarily when #coprime <= phi/2-1 (74.5%),
+the residual needing a pair-collision (q | v_a -+ v_b for two coprime runners).
+
+Files: THM-718 unified addendum; lrc14_unified_clearing_klein_S261.py. HYP-6115.
+
+NEXT: the residual (25.5%) collision argument -- prove two coprime runners of a spread DC family
+collide mod some window q (q | a difference/sum), OR find a per-family optimal modulus keeping
+#coprime <= phi/2-1. The ~4-runner problem is small enough that the fleet's atlas/pair-analysis may
+close it where the 13-runner one couldn't.
+
 ## opus-2026-07-11-S242 -- the LAST PROVABLE PART: the pigeonhole clearing theorem (auto-safe + pigeonhole + band-edge, PROVED) clears ~44% of divisor-complete with NO anti-concentration; total elementary-provable coverage of LRC(14) ~95%. The remaining ~5% is the sharply-isolated anti-concentration core.
 
 Prompt (owner): work on the last provable part.
