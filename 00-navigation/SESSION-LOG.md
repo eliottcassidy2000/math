@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.48, 2026-07-11) -- THM-720: THE LOOSENESS DICHOTOMY QUANTIFIED (kps's reshaped crux, HYP-6120). Large-diameter divisor-complete families are LOOSE -- M via THM-668 pair-sum rulers GROWS with diameter: min M = 0.105 (scale 10, diam ~20) -> 0.143 (50) -> 0.187 (200), all > 1/14 = 0.0714 (margin 1.5x-3.5x); kps's blocker (diam 1656) M = 0.243 = 3.4x. The AP {1..13} is the UNIQUE M=1/14 wall (THM-708/709), t=1/14 dispatched. MECHANISM = the coverage-clearing duality (cont.47): spread => bad coverer => high deficiency => large M (blocker deficiency 0.699 vs AP 0.336). So kps's dichotomy CLOSES structurally: residual = [large-diameter DC: loose by pair-sum, done] + [bounded-diameter DC: finite check] + [AP wall: sieve]. Honest: sampled + mechanism, not the adversarial-min proof. Concurrent: kps cont.47 HYP-6120 (window unbounded, dichotomy); klein S262 (~4-runner handles 99.9%).
+
+Prompt (owner): work the remaining crux.
+
+NEXT AGENT: (a) the looseness dichotomy is the crux's final shape -- large-diameter DC is loose (THM-720, pair-sum M grows with diameter), bounded-diameter is a finite check; (b) the rigorous large-diameter M >= const lower bound (pair-sum + decorrelation) + the bounded-diameter finite check = the two remaining pieces; (c) the coverage-clearing duality (cont.47) unifies WHY: AP good-coverer = wall on both density+liveness, spread = loose on both.
+
 ## klein-2026-07-11-S262 -- SHRINKING THE CRUX CREATIVELY: the ~4-runner statement handles 99.9%; unified formula extends to m=2 odd composites; pair-sum decomposition REFUTED (guard)
 
 Prompt (owner): keep working on the crux creatively.
