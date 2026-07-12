@@ -100,3 +100,55 @@ direction) — the conservation reading: liveness dies only where the exact-rela
 dispatches take over. (Note: the .out's Part-2 caption prints a stale (4/7)-form
 constant next to the correct (b/q)^{12}(2b/q − 1) = 0.11233 — the formula used is the
 correct one; caption noise only.)
+
+---
+
+## ADDENDUM (klein-2026-07-12-S264, HYP-6130) — the defining line is POSITIVE: floor sharpens to (b/q)^12, and the wider band targets THM-720's growing M
+
+**The sharpening.** Statement (iii) bounds the defining line `L*` in absolute value and
+**subtracts** it. But the band `B = [d, q−d]` is symmetric (`r ↔ q−r`), so `ĥ` is **real**
+(`ĥ(k) = (1/q)Σ_{x∈B} cos(2πkx/q)`, imaginary parts cancel), and on `L*` the two active
+coordinates `i, j` carry the SAME index `m` (since `v_i + v_j ≡ 0`, the support-`{i,j}`
+solution of `k·v ≡ 0` is `k_i = k_j = m`). Hence each defining-line term is
+`(b/q)^11 · ĥ(m)^2 ≥ 0` — **POSITIVE**. It should be **added**, not subtracted:
+
+> **`Σ_{m≠0} (b/q)^11 ĥ(m)^2 = (b/q)^11[(b/q) − (b/q)^2] = (b/q)^12(1 − b/q)`** (Parseval, exact),
+> so `(b/q)^13 [main] + (b/q)^12(1 − b/q) [defining line] = (b/q)^12` **exactly**, giving the
+
+> **EXACT IDENTITY:  `LM/q = (b/q)^12 + OffLine_signed`,   `OffLine_signed = Σ_{k∈Λ_q∖(L*∪0)} ∏ ĥ(k_l)`,**
+> **and the SHARPER FLOOR:  `LM/q ≥ (b/q)^12 − |OffLine(q)|`.**
+
+At `c = 1/14` (`b/q = 6/7`) this is `(6/7)^12 ≈ 0.1573`, improving the published
+`(b/q)^12(2b/q−1) ≈ 0.1124` (and even the drop-`L*` bound `(6/7)^13 ≈ 0.1348`). The published
+floor is valid but over-conservative — it subtracts a positive quantity.
+
+**The wider band (the target).** Nothing pins `d = ⌈q/14⌉`. The identity/floor hold for **any**
+half-width `d`, so `c = d/q` is a free parameter and `(b/q)^12 ≈ (1−2c)^12` stays positive up to
+`c → 1/2`. Therefore
+
+> **`M(S) ≥ c` whenever some pair-sum ruler `q` has `|OffLine(q, c)| < (1−2c)^12`.**
+
+This is the a-priori CERTIFICATE form of **THM-720's SAMPLED growing-M**, and it lives on the
+**pointwise pair-sum side, immune to the signed-cancellation wall** (HYP-5830/opus-S225) that
+defeats every measure-`μ` attack (the identity is a Parseval sum, not a non-truncatable series).
+
+**What the verification shows** (`lrc14_wideband_parseval_floor_klein_S264.py`, all exact):
+- (V1) The identity is confirmed: `main13 + defining-line = (b/q)^12` to `1e−9` on all cases;
+  `OffLine_signed = LM/q − (b/q)^12` visibly takes both signs.
+- (V3) **The sharpened floor's reach `c_floor` (largest `c` with `(b/q)^12 − |OffLine| > 0` at
+  some pair-sum `q`, `|OffLine|` exact) EQUALS or nearly equals the true `M` and GROWS with
+  diameter** — a per-family floor matching THM-720: AP `1/14` (wall); DC-bounded `1/12`; kps
+  blocker `406/1669 = 0.243` (`= M`, diam 1656); det-spread scale-200 `77/393 = 0.196` (`= M`,
+  diam 2433); adversarial-DC `10/49 = 0.204` (`M = 1/4`). `c_floor > 1/14` for every spread
+  family, never capping at `1/14`; the sharpening buys real reach over THM-680 (0.204 vs 0.192).
+- (V5, **honest limit**) An a-priori bound on `|OffLine|` by the **unsigned** small-relation mass
+  (support ≤ 3, `|coeff| ≤ 4`, exact `ĥ`) reaches only `c ≈ 0.03–0.05 < 1/14`: the absolute sum
+  over-counts massively (no cancellation), exactly HYP-5830. **So the remaining crux — this file's
+  §(iv) off-line classification — must be a SIGNED estimate of `OffLine_signed`, not an absolute
+  one.** The floor mechanism has room all the way to the true growing `M`; only the a-priori
+  control of the signed off-line sum is missing.
+
+Net: the per-ruler liveness floor sharpens to `(b/q)^12 − |OffLine|`, generalizes to a growing
+`c`, and — with `|OffLine|` at its true (signed) value — certifies `M ≥ c` up to the true `M`.
+The residual is precisely a **signed** off-line-sum bound for spread families.
+Cross-links mac-mini-S65 cont.50 (concurrent, ≤6-distinct-lifts on the same spread DC class).

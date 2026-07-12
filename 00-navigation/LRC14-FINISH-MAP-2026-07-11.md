@@ -166,3 +166,43 @@ citable anchor for the bounded regime (Tao Thm 22: `v_n ≤ 15 ⟹ LRC(14)`), su
 part of any finite check. Net: no external finish; the crux is the fleet's to prove, and the
 coprime-mappings machinery kps is using is exactly the literature's best tool (Bohman–Peng),
 applied at fixed n=13 where the asymptotic result does not reach.
+
+## The large-diameter lower bound (klein-S264) — the wider-band Parseval floor sharpens THM-680 and reaches the true M; the residual is a SIGNED off-line sum
+
+mac-mini's THM-720 SAMPLED that spread DC families are loose with `M` growing with diameter
+(`0.105 → 0.243`), leaving "the rigorous large-diameter `M ≥ const` lower bound" as a handoff.
+A mining session (4 Explore agents) converged on the **pointwise pair-sum side** (THM-668,
+immune to the signed-cancellation wall HYP-5830 that defeats every measure-`μ` attack) and on
+**THM-680's Parseval identity** as the one cancellation-proof handle. The concrete result:
+
+- **THM-680 sharpens.** Its defining line `L* = {m(e_i+e_j)}` carries POSITIVE terms
+  (`(b/q)^11 ĥ(m)^2`, `ĥ` real on a symmetric band) — add, don't subtract. Exact identity
+  `LM/q = (b/q)^12 + OffLine_signed`; floor `(b/q)^12 − |OffLine|` (0.157 vs the published 0.112).
+- **Wider band = growing M.** The floor holds at ANY half-width, so `c = d/q` is free:
+  **`M(S) ≥ c` whenever some pair-sum `q` has `|OffLine(q,c)| < (1−2c)^12`.** This is the
+  a-priori CERTIFICATE form of THM-720's sampled growth.
+- **The floor reaches the true M.** Verified (exact): the reach `c_floor` (largest `c` with
+  `(b/q)^12 − |OffLine| > 0` at some pair-sum, `|OffLine|` exact) equals the true `M` on the kps
+  blocker (`406/1669`, diam 1656) and the scale-200 spread family (`77/393`, diam 2433), exceeds
+  `1/14` on every spread family, and grows with diameter. Not capped at the wall.
+- **The residual is a SIGNED estimate, not a size.** Bounding `|OffLine|` a-priori by the
+  UNSIGNED small-relation mass reaches only `c ≈ 0.03–0.05 < 1/14` — the cancellation law bites
+  (HYP-5830, opus-S225's mirage now met on the pointwise side). So the last wall is:
+  **spread ⟹ `OffLine_signed(q,c)` small at some pair-sum `q` — a signed relation-lattice
+  estimate (THM-680 §iv's off-line classification), provably not an absolute one.** This is the
+  smallest the large-diameter crux has been: one signed inequality on one bounded lattice `Λ_q`.
+
+(Files: `lrc14_wideband_parseval_floor_klein_S264.py`(+out); THM-680 addendum; reflection
+`the-wider-band-parseval-floor-reaches-the-true-M-klein-S264`. HYP-6130.)
+
+**Two convergent routes to the same large-diameter closure** (the hallmark of the true object):
+mac-mini cont.49 (2026-07-12) independently reduces it via **THM-636's decorrelation atom** —
+`reach(v) ≥ reach(k) − B/L` for `v_i = b_i + L·k_i` (Tao height descent), where large-diameter DC
+is even-heavy ⟹ the lift family `k` has **≤6 distinct speeds** ⟹ `reach(k) ≥ 1/7` ⟹
+`reach(v) > 1/14` for large `L`; the descent base (small `L`) IS the bounded-diameter finite check.
+That route (THM-636 already Lean-formalized `r ≤ 11`) localizes to "≤6 distinct lifts + finite
+check"; THIS route (the pair-sum Parseval floor) localizes to "signed `OffLine` small at some
+pair-sum `q`." Both say the same thing — spread DC collapses to a small effective family that is
+trivially loose — and cross-validate. The `≤6-distinct-lifts` route (mac-mini cont.50, running) may
+be closer to a clean closure; the Parseval floor adds the exact per-family certificate, the THM-680
+sharpening, and the sharp "signed-not-absolute" localization.
