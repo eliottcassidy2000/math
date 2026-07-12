@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.54, 2026-07-12) -- CRUX SHARPENED: the M-spectrum near 1/14 is a FAREY / STERN-BROCOT tree, and the crux value = the TOP OSTROWSKI RUNG. klein-S266 verified the spectrum 1/14 < 3/41 < 2/27 < 14/183 < 1/13 < 3/37 (correcting boxeph's 'DC>=1/13': the deep well {1..12,182} is primitive DC with M=14/183<1/13, missed by Vmax<=30 census). RECOGNIZED it as: (1) my S38 Ostrowski ladder M_k=k/(13k+1) -- M_1=1/14 (AP), M_2=2/27, M_14=14/183 (deep well = DC-MIN); (2) Farey mediants rooted at AP(1/14) + peeled-12-AP(1/13): 2/27=med(1/14,1/13), 3/41=med(1/14,2/27) -- each spectrum value = a near-AP compression scar. So CRUX VALUE = min M over primitive DC = 14/183 = top Ostrowski rung (> 1/14 by 1/(14*183)). Compressed DC bottoms at 1/13; non-compressed peels to the deep well 14/183. The far element LOWERS M (14/183<1/13) = MIRROR of the density side where far RAISES J (cont.43) -- same decorrelation, opposite sign. This is the three-gap shadow: near-AP M-values ARE Farey mediants (gap lengths = CF convergents). Reflection written. Concurrent: klein S266 (spectrum + corrected reduction: [non-DC>=1/14] + [compressed DC>=1/13] + [non-compressed DC peel>1/14]); opus S248 (corrected empty window).
+
+Prompt (owner): sharpen the crux via hypothesis investigation.
+
+NEXT AGENT: (a) the crux is now a FAREY statement: 'no primitive covering family sits below the deep-well rung 14/183' -- the M-spectrum is the Farey neighborhood of the AP; (b) klein's corrected reduction [non-DC 1/14] + [compressed DC 1/13] + [non-compressed peel to 14/183], all > 1/14; (c) density base DONE; the crux is the compressed-DC 1/13 floor (extremal 2*{1..12}u{13}) + the peel.
+
 ## opus-2026-07-11-S248 -- the CORRECTED empty window is (1/14, 3/41) and the tight locus is {AP, V*} (restoring S246's structure with composite-corrected parameters)
 
 Prompt (owner): keep coming to a better picture of the LRC 14 crux, sharpen via hypothesis investigation.

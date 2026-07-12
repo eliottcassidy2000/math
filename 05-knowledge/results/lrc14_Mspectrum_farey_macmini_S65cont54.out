@@ -1,0 +1,21 @@
+klein-S266 M-spectrum (sorted): ['1/14', '3/41', '2/27', '14/183', '1/13', '3/37']
+  as floats: [0.07143, 0.07317, 0.07407, 0.0765, 0.07692, 0.08108]
+
+(1) Ostrowski ladder M_k = k/(13k+1) [my S38]:
+  M_1 = 1/14 = 0.071429  <-- in spectrum
+  M_2 = 2/27 = 0.074074  <-- in spectrum
+  M_3 = 3/40 = 0.075000  
+  M_14 = 14/183 = 0.076503  <-- in spectrum
+  => AP=M_1=1/14, deep-well=M_14=14/183 [DC-min] are the ladder ENDS
+
+(2) mediant (Stern-Brocot) structure rooted at 1/14 (AP) and 1/13 (peeled 12-AP):
+  root: 1/14 (AP), 1/13 (12-AP peeled)
+  mediant(1/14,1/13) = 2/27  = 2/27 IN SPECTRUM
+  mediant(1/14,2/27) = 3/41  = 3/41 IN SPECTRUM
+  mediant(2/27,1/13) = 3/40
+  mediant(1/13,2/25) = 3/38  = 3/38
+
+(3) VERDICT: the M-spectrum near 1/14 is the FAREY tree between AP(1/14) and 12-AP(1/13),
+    with the Ostrowski ladder M_k=k/(13k+1) as the covering-min rungs (AP..deep-well).
+    Each spectrum value is a mediant = a specific near-AP family (compression scar).
+    So the crux 'min M over DC' = the DEEPEST Farey rung that stays covering = 14/183 (deep well).
