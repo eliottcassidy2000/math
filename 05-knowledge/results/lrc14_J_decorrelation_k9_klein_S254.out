@@ -1,0 +1,22 @@
+=== (A)+(B) k=9, box [1..20], floor 432/91 = 4.74725 ===
+    J_iid(9) = 6963918/823543 ~ 8.45605  (decorrelation budget +3.7088)
+  167950 normalized cores. GLOBAL min J = 4465/882 ~ 5.06236 at (1, 2, 3, 4, 5, 6, 7, 8, 9)  == CONSEC
+  five lowest-J cores:
+    J=5.06236 margin+0.31511 spread=8  (1, 2, 3, 4, 5, 6, 7, 8, 9)
+    J=5.20884 margin+0.46159 spread=12  (2, 4, 5, 6, 7, 8, 10, 12, 14)
+    J=5.23878 margin+0.49152 spread=9  (1, 2, 3, 4, 5, 6, 7, 8, 10)
+    J=5.26576 margin+0.51851 spread=12  (2, 4, 6, 7, 8, 9, 10, 12, 14)
+    J=5.31882 margin+0.57157 spread=9  (1, 2, 3, 4, 5, 6, 7, 9, 10)
+  DECORRELATION -- min J among cores with spread >= s:
+    s>=  8: min J = 5.06236 (margin +0.31511)  <-- floor cleared for all spread>=s
+    s>=  9: min J = 5.20884 (margin +0.46159)  <-- floor cleared for all spread>=s
+    s>= 10: min J = 5.20884 (margin +0.46159)  <-- floor cleared for all spread>=s
+    s>= 11: min J = 5.20884 (margin +0.46159)  <-- floor cleared for all spread>=s
+    s>= 12: min J = 5.20884 (margin +0.46159)  <-- floor cleared for all spread>=s
+    s>= 13: min J = 5.35170 (margin +0.60445)  <-- floor cleared for all spread>=s
+    s>= 14: min J = 5.35170 (margin +0.60445)  <-- floor cleared for all spread>=s
+    s>= 15: min J = 5.35170 (margin +0.60445)  <-- floor cleared for all spread>=s
+    s>= 16: min J = 5.35170 (margin +0.60445)  <-- floor cleared for all spread>=s
+    s>= 17: min J = 5.48435 (margin +0.73710)  <-- floor cleared for all spread>=s
+    s>= 18: min J = 5.48435 (margin +0.73710)  <-- floor cleared for all spread>=s
+    s>= 19: min J = 5.71565 (margin +0.96839)  <-- floor cleared for all spread>=s
