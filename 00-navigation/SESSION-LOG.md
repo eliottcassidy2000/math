@@ -1,3 +1,21 @@
+## opus-2026-07-11-S240 -- attacked the concrete next target (consec-extremality of the base J) via the natural COMPRESSION route; found it BLOCKED (J not unimodal; 35/35 stuck at algebraically-special local minima). Honest negative result on the proof strategy + arc meta-assessment.
+
+Prompt (owner): work the concrete next target (S239: prove the AP is the unique maximal coverer = consec-extremality, the shared crux of both routes).
+
+Base form (klein THM-711/717, mac-mini THM-716): consec {1..9} minimizes J=E[N(7-N)]=6m1-m2 (~5.05), verified-adversarially not proved. Standard route to prove an extremal = a MONOTONE COMPRESSION toward the AP.
+
+RESULT: BLOCKED. Greedy single-coordinate J-descent from 35 random primitive 9-sets reaches consec 0/35 -- STUCK at 35 DISTINCT non-consec local minima, all algebraically-special (even/dilated near 2*{1..k}): [2,4,6,7,8,9,10,12,14] J~5.33, [2,4,6,8,9,10,12,14,16] J~5.47, ... all J in [5.3,5.8]>5.05. So J is NOT unimodal toward consec; the landscape is RUGGED, basins funnel into even/dilated minima, consec is a SEPARATE global optimum unreachable by local descent.
+
+WHY IT MATTERS: (1) RULES OUT the single-step compression/smoothing proof (no local convexity). (2) CONFIRMS klein-S255 quantitatively -- 'every extremal is an AP or mod-p resonance, invisible to local search': the local minima ARE the algebraically-special families. (3) explains the verified-only status: proving consec is the GLOBAL min over a rugged algebraically-special landscape is a global/algebraic inverse theorem.
+
+CONSEQUENCE: consec-extremality needs a GLOBAL algebraic argument (classify + beat the algebraically-special local minima = klein/mac-mini atlas lane) OR the finite-census (LEM-010 Vmax<=3^12). Local per-family attacks are exhausted.
+
+HONEST META (the S230-S240 arc): 11 sessions sharpened this ONE crux -- the AP coverage-extremality inverse theorem -- from many angles (clean-ruler reduction, band-edge margin, divisor-complete hard core, spread/coverage reframing, two-route unification, now compression-route ruling-out). Each is a real reduction or negative result, but the crux (a global inverse theorem over a rugged algebraically-special landscape) has NOT yielded, and this session shows WHY a whole class of attacks (local compression) cannot work. It is the project's central open problem; solo per-session attacks are at diminishing returns. Productive paths: the collective extremal-atlas classification (klein/mac-mini) or an external inverse-theorem input.
+
+FILES: lrc14_compression_route_blocked_opus_S240.py (+.out); reflection the-compression-route-to-consec-extremality-is-blocked-opus-S240; HYP-6095. -> opus-S239, klein THM-711/717/S255, mac-mini THM-716/cont.44, LEM-010.
+
+---
+
 ## klein-2026-07-11-S259 -- THM-718: THE EXACT CLEARING-COUNT FORMULA + the sharp inverse-theorem framing (Route B of the one remaining LRC(14) statement)
 
 Prompt (owner): work on the one remaining statement.

@@ -1,0 +1,9 @@
+J(consec {1..9}) ~ 5.048 (global min). Greedy J-descent reached consec 0/35.
+STUCK at non-consec local minima: 35 (35 distinct, all algebraically-special):
+   J~5.33  [2, 4, 6, 7, 8, 9, 10, 12, 14]
+   J~5.47  [2, 4, 6, 8, 9, 10, 12, 14, 16]
+   J~5.543  [2, 4, 6, 7, 8, 10, 12, 13, 14]
+   J~5.549  [2, 3, 4, 6, 7, 8, 10, 12, 14]
+   J~5.721  [2, 4, 6, 8, 10, 12, 13, 14, 16]
+   J~5.813  [2, 4, 6, 8, 10, 12, 14, 15, 16]
+VERDICT: J-landscape NOT unimodal => single-step compression proof of consec-extremality is BLOCKED.
