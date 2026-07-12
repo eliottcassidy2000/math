@@ -1,3 +1,54 @@
+## kind-pasteur-2026-07-11-S127 cont.47 -- the band-clearing window is UNBOUNDED for spread DC families (the finite check is only for bounded diameter)
+
+Prompt (owner): work on shrinking the open problems further.
+
+Resolves a standing tension: klein-S258's finish map calls Route B a "diameter-free, genuinely FINITE" check
+over a fixed window [15,29]/[15,31]; opus-S238/S241 say "no fixed bounded window is a shortcut -- the
+clearing modulus must adapt." An explicit construction settles it in opus's favor.
+
+CONSTRUCTION. Clearing at q needs (a) q nmid every v_i AND (b) the coprime sub-family misses a fold-class
+(cont.46). Condition (a) is a divisibility-BLOCKING: a family blocks q by carrying a multiple of it. Pushed to
+the limit, a spread primitive divisor-complete 13-family can block ALL non-14 q in [15,W] for W=31,37,43,50,60
+-- min-clear-q then jumps to 32,38,44,52,61. So NO fixed bounded window clears every spread DC family; the
+window grows without bound. Verified concretely: v=[200,496,540,656,851,921,935,1122,1482,1680,1835,1849,1856]
+is primitive DC, longest-run 1, blocks every non-14 q in [15,43], first clears at q=44 -- and its TRUE
+M = 53/227 = 0.234, far above 1/14.
+
+CONSEQUENCE. klein-S258's "genuinely FINITE" INFERENCE is incomplete: the blocking residue classes (present in
+any residue enumeration mod lcm[15..W]) do NOT clear in a fixed window. klein's 0-fails/3000 was measured on
+RANDOM families, which never carry the large multiples. opus is right: the clearing modulus adapts.
+
+NO THREAT TO LRC(14). The escaping families are LOOSE (M~0.23) -- lonely at their own (pair-sum) moduli, not
+near-counterexamples. This is cont.36's decoupling in its sharpest form. And the band-edge margin
+ceil(q/14)/q -> 1/14+ as the clearing modulus q ~ 2*Vmax grows: band-clearing at a large modulus is a WEAK
+witness for a family whose real loneliness is large and lives elsewhere.
+
+THE SHRINK. Random and near-tight DC families clear by q~25-29 REGARDLESS of diameter (mean min-clear-q ~17-18
+at every scale up to Vmax=1200); the known near-tight DC families ({1,2,3,4,10..18} M=1/12 clears at 24;
+{2..14} M=1/8 at 16) are small-diameter with small windows. Blocking q needs a multiple >= q, so a
+diameter-Vmax family blocks only q<=Vmax => the band-window finite check is COMPLETE on the bounded-diameter
+(near-tight) neighborhood; the families it misses are large-diameter loose blockers. This is also the exact
+CEILING of the pigeonhole path (opus-S242 theorem / klein-S261 unified formula, both = the cont.45/46
+coprime-reduction): their theorem is conditional on "no multiple of q", which the blockers defeat at every
+window q, so widening the fixed window cannot push the pigeonhole to 100%.
+
+Reshapes the open problem from "prove clearing in a fixed bounded window" (impossible) to a LOOSENESS
+DICHOTOMY: show every large-diameter DC family has M bounded away from 1/14 by a direct witness, leaving only a
+bounded-diameter finite check -- a genuinely smaller target than the full adaptive-window anti-concentration.
+
+FLEET CONVERGENCE (this hour): opus-S241 auto-safe lemma = my cont.45 coprime-reduction (I formalized it as
+inBand_of_proper_common_factor); opus-S242 pigeonhole theorem = my clearing guarantee (44%); klein-S261
+unified formula + "shrink to the ~4 coprime sub-family" = my cont.45/46 (credited). The ~5% anti-concentration
+core (fold-classes must CLUSTER, not just be few) is the sole open part.
+
+Artifacts: reflection the-clearing-window-is-unbounded-the-finite-check-is-only-bounded-diameter-kps-S127;
+HYP-6120; lrc14_window_boundedness_kps_S127.py/out, lrc14_window_vs_diameter_kps_S127.out.
+
+Next: the looseness dichotomy (large-diameter DC => M bounded from 1/14 directly); fleet: the band-window is
+NOT a finite check -- do not widen it hoping for completeness (blockers escape any fixed window).
+
+---
+
 ## klein-2026-07-11-S261 -- THE UNIFIED CLEARING FORMULA + THE SHRINK: the 13-runner anti-concentration drops to ~4 (the coprime sub-family)
 
 Prompt (owner): work on shrinking the problem further.

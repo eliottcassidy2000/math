@@ -1,0 +1,16 @@
+Q1: can a spread DC primitive family block ALL non-14 q in [15,W]? (=> min-clear-q > W)
+  W=31: min #unblocked-in-[15,31] found = 0 of 16; that family min-clear-q = 32
+    *** FULLY BLOCKED [15,31] by a spread DC family => min-clear-q > 31 => window UNBOUNDED for DC ***
+  W=37: min #unblocked-in-[15,37] found = 0 of 22; that family min-clear-q = 38
+    *** FULLY BLOCKED [15,37] by a spread DC family => min-clear-q > 37 => window UNBOUNDED for DC ***
+  W=43: min #unblocked-in-[15,43] found = 0 of 27; that family min-clear-q = 44
+    *** FULLY BLOCKED [15,43] by a spread DC family => min-clear-q > 43 => window UNBOUNDED for DC ***
+  W=50: min #unblocked-in-[15,50] found = 0 of 34; that family min-clear-q = 52
+    *** FULLY BLOCKED [15,50] by a spread DC family => min-clear-q > 50 => window UNBOUNDED for DC ***
+  W=60: min #unblocked-in-[15,60] found = 0 of 43; that family min-clear-q = 61
+    *** FULLY BLOCKED [15,60] by a spread DC family => min-clear-q > 60 => window UNBOUNDED for DC ***
+
+Q2: max min-clear-q found across all restarts (the empirical window ceiling for DC):
+  random high-Vmax: max min-clear-q = 26
+  => if the ceiling keeps rising with Vmax, the window is UNBOUNDED (Route B is not a fixed finite check);
+     if it saturates, there is a bounded window. (Structural: blocking q needs a multiple => diameter >= q.)

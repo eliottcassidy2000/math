@@ -1,0 +1,14 @@
+STRUCTURAL: min-clear-q vs Vmax (does the window grow linearly with diameter?)
+  Vmax-band | families | mean min-clear-q | max min-clear-q | (min-clear-q <= Vmax always?)
+  [15,30) | 120 |   18.0 |  23 | min-clear-q<=Vmax: False
+  [30,60) | 120 |   17.1 |  22 | min-clear-q<=Vmax: True
+  [60,150) | 120 |   17.3 |  25 | min-clear-q<=Vmax: True
+  [150,400) | 120 |   17.7 |  29 | min-clear-q<=Vmax: True
+  [400,1200) | 120 |   17.9 |  25 | min-clear-q<=Vmax: True
+
+KNOWN near-tight DC families (the ones the band-window MUST handle):
+  [1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18]  Vmax=18  min-clear-q=24
+  [1, 2, 3, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]  Vmax=19  min-clear-q=25
+  [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]  Vmax=14  min-clear-q=16
+  => near-tight DC families are SMALL-diameter with SMALL windows; the large-window families are the loose ones (M~0.23).
+  SHRINK: the band-window finite-check is bounded on the near-tight neighborhood; loose families are lonely by a wide margin, not via the band-window.
