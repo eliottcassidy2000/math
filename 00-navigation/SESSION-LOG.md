@@ -1,3 +1,53 @@
+## kind-pasteur-2026-07-11-S127 cont.52 -- the crux is "t=1/14 is blocked": divisor-complete families have M >= 1/12, exactly
+
+Prompt (owner): keep coming to a better picture of the LRC(14) crux, sharpen via hypothesis investigation.
+
+After opus-S247 (window non-empty) and klein-S266 (covering restriction; tight locus = {AP, GW}), I resolved
+the exact value and the mechanism, and they are one clean statement about the witness t = 1/14.
+
+THE PICTURE IN ONE LINE: LRC(14) tightness lives entirely at the single time t = 1/14, and divisor-
+completeness is exactly what blocks it.
+- A family MISSING a multiple of some d in {2..14} is lonely at t = 1/d: ||v_i/d|| >= 1/d >= 1/14 (THM-366,
+  proved). Both tight families live here (they miss a mult of 14): the AP {1..13} and Goddyn-Wong
+  {1..11,13,24}, each M = 1/14 via t = 1/14 (klein-S266 -- so "AP minimizes M" is non-unique).
+- A DIVISOR-COMPLETE family has a multiple of 14 (= 14m). At t = 1/14 that runner sits at ||14m/14|| = 0 --
+  t = 1/14 is BLOCKED (verified: min reach at t=1/14 = 0 for the extremals). It cannot reach the tight value
+  at the tight time; it must use a COARSER witness.
+
+THE EXACT FLOOR IS 1/12, NOT 1/13. Hunting hard for a DC family below 1/12 (perturb AP + GW toward
+divisor-completeness, sweep every 2-block family, adversarial swaps; 2170 primitive DC candidates) finds NONE
+below 1/12. The floor is achieved at (at least) TWO 2-block families -- {1,2,3,4} u {10..18} and
+{1,3,4} u {10..18,21} -- both M = 1/12 EXACTLY, at t = 5/24. So the DC M-floor is 1/12, a margin of 1/84 over
+the tight bound; klein-S266's / boxeph's DC => M >= 1/13 is a CONSERVATIVE provable bound, the true extremal
+is 1/12.
+
+WHY 1/12 (mechanism). Band-edge (opus-S235): a family clearing at a non-14 modulus q is lonely with
+M >= ceil(q/14)/q, decreasing in q. A DC family, having lost t = 1/14, clears at some q >= 15; the worst one
+bottoms out at q = 24, where ceil(24/14)/24 = 2/24 = 1/12, and for the extremals this band-edge is TIGHT (true
+M = 2/24 at t = 5/24). So 1/12 is the SECOND-BEST-WITNESS floor: the 1/14-witness (blocked for DC) -> next
+stop 2/24 = 1/12.
+
+WHAT THIS SHARPENS. The crux collapses to [non-DC: t=1/14 works, M >= 1/14, THM-366 PROVED, includes ALL the
+tight and near-tight families -- AP, GW, the 3/41 window-filler] + [DC: M >= 1/12]. No k=13 inverse theorem,
+no window rigidity, no GW characterization is needed for the closing -- those are all about the NON-covering
+families THM-366 dispatches; the 14 = 2*7 composite difficulty (opus-S247) never touches the DC bucket. The
+remaining work is exactly DC => M >= 1/12 (boxeph-S20's finite check Vmax <= 30 + my cont.50 dilation transport
+for the near-dilate orbit + the large-structure clearing).
+
+SCOPE (honest): the DC floor 1/12 is verified over bounded structure (2170 candidates + cont.41 exhaustive
+Vmax <= 22), carried to all scales by dilation (MISTAKE-140), not proved uniformly.
+
+HOUSEKEEPING: renumbered a fresh HYP collision -- klein-S266 6165 -> 6185 (opus-S247 pushed 6165 first, keeps
+it).
+
+Artifacts: reflection the-crux-is-t-one-fourteenth-blocked-the-dc-floor-is-exactly-1-12-kps-S127; HYP-6180;
+lrc14_dc_floor_resolve_kps_S127.py/out, lrc14_dc_floor_mechanism_kps_S127.out.
+
+Next: DC => M >= 1/12 is the single remaining statement; it is the coarser-witness / clearing problem, not an
+inverse theorem.
+
+---
+
 ## kind-pasteur-2026-07-11-S127 cont.51 -- the k=13 Farey window is non-empty (opus-S247) but holds no divisor-complete family; the crux decomposes to the DC floor 1/12
 
 Prompt (owner): spend another similar session of progress.

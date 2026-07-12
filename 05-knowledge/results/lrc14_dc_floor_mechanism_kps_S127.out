@@ -1,0 +1,11 @@
+MECHANISM check on the 1/12 DC extremals:
+  [1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+    M=1/12=0.0833 at t=5/24; mult-of-14 in family: [14]; min reach at t=1/14 = 0 (=0 => t=1/14 BLOCKED)
+    band-edge at q=24: ceil(q/14)/q = 1/12 = M? True
+  [1, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21]
+    M=1/12=0.0833 at t=5/24; mult-of-14 in family: [14]; min reach at t=1/14 = 0 (=0 => t=1/14 BLOCKED)
+    band-edge at q=24: ceil(q/14)/q = 1/12 = M? True
+
+=> DC has a mult of 14 => at t=1/14 that runner sits at 0 (reach 0) => t=1/14 is BLOCKED (cannot give the tight 1/14).
+   The family must use a COARSER witness; the worst DC family bottoms out at q=24 => M=2/24=1/12 (band-edge tight).
+   So 1/12 = the second-best-witness floor for the t=1/14-blocked (= divisor-complete) families.

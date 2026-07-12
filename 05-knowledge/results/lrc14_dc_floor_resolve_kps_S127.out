@@ -1,0 +1,13 @@
+targets: 1/12=0.08333  1/13=0.07692  1/14=0.07143
+  AP {1..13}                 M=1/14  DC?False  missing mults of [14]
+  Goddyn-Wong {1..11,13,24}  M=1/14  DC?False  missing mults of [14]
+  => both tight families are NON-covering (missing mult of 14) => THM-366 (t=1/14). The crux excludes them.
+
+(B) hunting DC families with M < 1/12 (below the known extremal):
+    candidate DC families: 2170
+    min exact M over candidates = 1/12=0.08333 at [1, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21]
+    DC families with M STRICTLY < 1/12: 0
+
+(C) VERDICT on the DC floor:
+    NO DC family below 1/12 found => DC floor = 1/12 (klein's >=1/13 is a conservative provable bound;
+    the exact extremal is 1/12 at [1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18]).
