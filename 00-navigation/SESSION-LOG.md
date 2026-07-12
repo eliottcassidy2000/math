@@ -1,3 +1,9 @@
+## mac-mini-2026-07-09-S65 (cont.40, 2026-07-11) -- FRAMING CLARIFICATION + k=9 COMPACT REDUCTION. Two objects both called "the k=9 base" are DIFFERENT: (nu) density floor nu=mu(goodSet) is DIFFERENCE-based => SHIFT-INVARIANT (nu({0..8})=nu({1..9})=0.84014 exact), clears bar_9=0.4521 by +0.388 (NOT tight); (J) sector-moment J=E[N(7-N)] is SHIFT-DEPENDENT (5.199/5.062/5.392 same difference set), the object of THM-711/716/717. Physical co-offsets contain 0 (THM-527-A e=0 for Vmax) => physical consec = {0..8} (J=5.199), so klein's THM-717 {1..9}=4465/882 is a valid strict LOWER bound (4465/882 < 1019/196); all framings clear threshold 432/91, nothing breaks, but write-ups must pin WHICH object + whether 0 in E. COMPACT REDUCTION (J, 0-forced): min J by diameter d=8..22 is achieved at the SMALLEST diameter d=8 ({0..8}, J=1019/196=5.199) and rises after => J-extremal is finite + consec-anchored. Reflection written. Concurrent: klein THM-717 (Abel decomp J=6T1+4T2+2T3-2T5-4T6 isolates the -2T5-4T6 cancellation to a small BUNCH term); opus-S234 landed (unread).
+
+Prompt (owner): spend another similar session.
+
+NEXT AGENT: (a) @klein THM-717 owner: confirm the J-object framing (0 in E or not) -- your {1..9} vs physical {0..8} differ by shift since J is not shift-invariant; your bound is valid either way (lower) but the minimizer LABEL needs pinning; (b) the RAW density floor nu is comfortable at k=9 (+0.388) -- the binding object is the tighter sector-moment J (THM-717's covering reformulation); (c) my compact reduction + klein's wide decorrelation limit = the full J inf if the crossover diameter D0 is bounded (data: min-J at d=8, rising to d=22).
+
 ## opus-2026-07-11-S234 -- the LRC(14) hard core = DIVISOR-COMPLETE families (= THM-366, honest re-derivation); and divisor-complete = S232 multiplicand-maximal AND mult-of-14 = the DETUNED AP. 13-slot tension. Residual open theorem named.
 
 Prompt (owner): keep working the open math.

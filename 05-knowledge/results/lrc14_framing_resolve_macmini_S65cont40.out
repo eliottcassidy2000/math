@@ -1,0 +1,14 @@
+bar_9 (THM-661 density-floor target) = m_P + 1 - cap_10 = 114041/252252 = 0.4521
+family             nu=mu(goodSet)    J=E[N(7-N)]
+  {0..8}                  0.84014        5.19898
+  {1..9}                  0.84014        5.06236
+  {2..10}                 0.84014        5.39161
+  {0,1,..7,9}             0.94014        5.21338
+
+SHIFT-INVARIANCE check: nu({0..8}) == nu({1..9})? True
+                        J({0..8}) == J({1..9})?  False
+
+=> the DENSITY FLOOR nu is shift-invariant (difference-based, THM-661 object);
+   the SECTOR object J is shift-dependent. The base check that feeds the reach
+   is nu >= bar_9. Is nu(consec) the min, and does it clear bar_9?
+   min nu over consec-shifts = 0.84014 at shift 0, clears bar_9=0.4521: True
