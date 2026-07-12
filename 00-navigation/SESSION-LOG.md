@@ -1,3 +1,22 @@
+## kind-pasteur-2026-07-11-S127 (cont.42) -- PINNED the BOUNDED-CLEARING WINDOW for the divisor-complete hard core: [15, ~27] (bounded, diameter-free, tighter than the general [8,43]); and clarified the M-floor extremal (M=1/12, clears q=24) is DISTINCT from the worst-clearing family (min-clear q=25, actual M=3/29). cont.41 M-floor 1/12 STANDS. (HYP-6070.)
+
+Prompt (owner): work another similar session.
+
+Post opus-S235 the DC hard core reduces to BOUNDED-CLEARING (every DC family clears at a bounded non-14 modulus q) + the band-edge margin lemma (M >= ceil(q/14)/q > 1/14, opus PROVED). This session pins the bounded window.
+
+EXHAUSTIVE DC census (Vmax<=20, 6084 families):
+- min-clearing-modulus distribution: q=15:406, 16:433, 17:801, 18:96, 19:1159, 20:429, 21:1575, 22:895, 23:276, 24:1, 25:13.
+- WORST-CASE min-clearing modulus = 25 (Vmax<=20), 27 (Vmax<=24) -- bounded, diameter-free (residue-periodicity), TIGHTER than the general window [8,43] (cont.34). So DC bounded-clearing holds with an explicit small window [15, ~27] (saturating <= 43).
+
+TWO DISTINCT EXTREMALS (a clarification, verified no further cont.41 correction needed):
+- M-FLOOR extremal: {1,2,3,4,10,11,12,13,14,15,16,17,18}, M = 1/12, clears at q=24 (cont.41).
+- WORST-CLEARING family: {1,2,3,10,11,12,13,14,15,16,17,18,19}, min-clear q=25 (band-edge lower bound 2/25=0.08), but ACTUAL M = 3/29 = 0.103 (a better witness exists).
+So the worst min-clearing modulus (25) is NOT the M-extremal; the M-floor 1/12 STANDS.
+
+=> the hard-core structure is now fully pinned: [DC => clears at non-14 q <= ~27 (bounded-clearing, my window/anti-concentration, the OPEN piece)] + [band-edge margin lemma (opus-S235 PROVED)] => M >= 1/12 > 1/14 => LONELY. The remaining open theorem = bounded-clearing for DC in the explicit window [15, ~27] (diameter-free); band-edge supplies the margin for free.
+
+FILES: lrc14_DC_clearing_window_kps_S127.py/.out; HYP-6070 (6060/6065 taken concurrently by klein-S256). NEXT: prove bounded-clearing for DC in [15,~27] (my window/tiered-covering restricted to DC; DC = mult of every d<=14 is extra structure to exploit).
+
 ## klein-2026-07-11-S256 -- THE EXACT BUNCH-max FORMULA 18/(7k-6) + the mod-7 mechanism (sharpens the corrected THM-717 BUNCH bound)
 
 Prompt (owner): work to make more mathematical progress.
