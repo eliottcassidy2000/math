@@ -94,6 +94,20 @@ is FALSE — the deep well `{1..12,182}` (`182 = 14·13`, primitive DC) has `M =
 synthesis stands; the unrestricted rigidity, empty-`(1/14,2/27)`, AND boxeph's unqualified `DC⟹M≥1/13`
 are all struck (→ compressed). (klein-S266, HYP-6165.)
 
+**⚠ S267 sharpening (klein) — the covering floor is 14/183, and `1/13` is a sub-stratum above it.**
+The covering-MIN (min M over primitive covering 13-sets) is **`14/183 = n/Φ₆(n)`**, the deep well
+`{1..12,182}`, with a one-line mechanism: the Ostrowski ladder `{1..12, 13k}` realizes rung
+`k/(13k+1)` exactly, is covering iff `14|k`, so the smallest covering rung is `k=14 → 14/183`. The AP
+is rung `k=1` (`1/14`, tight, non-covering); covering forces the family up to the first covering rung.
+So `14/183 < 1/13`: the compressed floor `1/13` (THM-721 `j≤6`) is a PROVED sub-stratum ABOVE the true
+covering-min — **not the bottleneck.** The genuine crux is the *uniform* floor
+`inf_{covering} M ≥ 14/183` = **HYP-2566** (= THM-523 part D), OPEN. PROVEN: covering-min `= 14/183`
+for speeds `≤ 182` (HYP-3779 ILP; reconfirmed + CRT-escape-extended this session, nothing below
+`14/183` among 249 speed-`>182` families); single-killer shape `M ≥ 2/27` (THM-526). OPEN residuals:
+unbounded clearing window (HYP-6120), CRT-escape tail speeds `> 182` (HYP-3745), large-diameter
+incoherent `j≥7` stratum (boxeph-S19). **Sharpest statement: LRC(14) ⟺ every primitive covering
+13-set has `M ≥ 14/183`, the first covering Ostrowski rung.** (klein-S267, HYP-6180.)
+
 ## The unification and the honest assessment
 
 **[A] and [B] are the same phenomenon** — `{kα}`-progressions (three-gap configs) are the extremals:
