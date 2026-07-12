@@ -3,6 +3,51 @@
 Prompt (owner): work the <=6 distinct lifts theorem.
 
 NEXT AGENT: (a) the large-diameter closure is multi-scale THM-687/688 (klein's lane) + bounded-diameter finite check -- NOT a single decorrelation atom; (b) the looseness PHENOMENON (THM-720, adversarial min-M > 1/14 growing with diameter) is robust and correct; (c) the honest residual = [multi-scale tower reach bound, klein] + [bounded-diameter finite check] + [AP wall, sieve] + [density base DONE, THM-718/719].
+## kind-pasteur-2026-07-11-S127 cont.48 -- the 13-runner decorrelation atom, formalized in Lean at the 1/14 threshold
+
+Prompt (owner): work the 13-runner decorrelation atom bound and related concepts, or anything to make LRC(14)
+mathematical progress.
+
+CONTEXT. THM-636 (mac-mini-S38) formalized the decorrelation atom for 12 runners at the old 2/25 gap:
+reach(V) >= reach(K) - B/L for v_i = b_i + L*k_i. mac-mini cont.49 found the LARGE-DIAMETER lower bound IS
+this atom (13-runner structure + Python); opus-S243 verified it numerically. The current endgame needs the
+DIRECT 13-runner form at 1/14. This session machine-checks it.
+
+FORMALIZED (LRCDecorrelation13.lean, kernel-pure [propext, Classical.choice, Quot.sound], builds green,
+root-wired):
+- reach_decorr13 -- the atom: for a 13-speed family V = b + L*K (|b_i| <= B, 0 < L),
+  reach(K) - B/L <= reach(V). Reverse triangle inequality at the witness t = t_K/L (distZ 1-Lipschitz). The
+  margin/exists_max_margin/le_margin_iff infrastructure is generic over Fin k, so the 12-runner proof
+  transferred verbatim to Fin 13.
+- escape_loose13_le12 -- <= 12 distinct lifts => LRC(<=13) gives reach(K) >= 1/13; then any L > 2366 forces
+  reach(V) > 1/14 (1/13 - 13/2366 = 1/14 exactly). LOOSE.
+- escape_loose13_le6 -- the sharp DC threshold (mac-mini cont.49): DC even-heaviness collapses the lifts to
+  <= 6 distinct speeds, so LRC(7) gives reach(K) >= 1/7, and only L > 182 is needed (1/7 - 13/182 = 1/14).
+  This is the version that fires on large-diameter DC families.
+
+The lift floor enters as a cited LRC(<=13) hypothesis, exactly as THM-636 cited LRC(<=12).
+
+SCOPE (honest). This formalizes the ATOM: given the scale-separation decomposition v = b + L*k (|b| <= 13)
+AND the lift floor, reach(V) > 1/14 is now kernel-proved. Two pieces remain OUTSIDE the kernel and are the
+genuine open mathematics of the large-diameter half: (a) the decomposition exists with <= 6 distinct lifts
+(the "lift-collapse", provable from DC even-heaviness per mac-mini/klein-S263, not yet a theorem); (b)
+reach(K) >= 1/7 is the LRC(7) citation on the collapsed lift family; (c) the descent base is my cont.47
+bounded-diameter finite check. So the analytic core (descent inequality + 1/14 arithmetic) is banked
+kernel-checked, leaving the combinatorial decomposition + the finite base.
+
+CONVERGENCE. Four objects are the same large-diameter looseness (mac-mini cont.49): THM-720 (pair-sum),
+THM-636 (this atom), LEM-013 (dissociated margin), klein-S263 (~6 odd runners). klein-S264 (Parseval/pair-sum
+side, cancellation-immune) hits it independently and uses my cont.47 blocker family (406/1669 = 0.243) as a
+verification point. opus-S243 verified numerically; mac-mini has the structure; this adds the Lean. The
+endgame's large-diameter half is a decorrelation descent, and its atom no longer depends on hand arithmetic.
+
+Artifacts: LRCDecorrelation13.lean (kernel-pure; reach_decorr13, escape_loose13_le12, escape_loose13_le6);
+reflection the-13-runner-decorrelation-atom-formalized-the-large-diameter-half-in-lean-kps-S127; HYP-6135.
+
+Next: piece (a) the lift-collapse theorem (DC even-heaviness => <= 6 distinct lifts at scale L) -- the one
+combinatorial gap between the formalized atom and the closed large-diameter half.
+
+---
 
 ## opus-2026-07-11-S243 -- VERIFIED mac-mini's 13-runner decorrelation-atom closure (requested) + SHARPENED it: the <=6 effective count is COPRIME-TO-30030, not odd; honest two-case structure (bounded <=6-lift descent u far-element peel).
 
