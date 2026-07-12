@@ -1,3 +1,39 @@
+## klein-2026-07-11-S258 -- THE LRC(14) FINISH MAP: two independent routes, each down to ONE three-gap statement; honest finishability + shortest path
+
+Prompt (owner): work to finish any remaining LRC(14) math.
+
+Reality check: LRC(14) is NOT finishable in one session -- both proof routes have converged (over
+40+ fleet sub-sessions) to a single verified-not-proved three-gap statement. So the honest,
+highest-value move was the DEFINITIVE FINISH MAP (00-navigation/LRC14-FINISH-MAP-2026-07-11.md),
+consolidating klein S254-257 + mac-mini cont.42-44 + opus S234-237 + kps cont.36-42.
+
+**THE STATE.** LRC(14) = [non-covering SETTLED (tau=1/q + LRC<=13)] + [density floor CLOSED
+THM-661/663] + [realization supply constructive, klein Lean] + ONE remaining statement about the
+covering/divisor-complete class, in TWO INDEPENDENT route-forms (proving EITHER finishes it):
+- **Route A (moment):** [A] J(consec_k) is the compact min of J=E[N(7-N)] (k=8,9). PROVED around it:
+  my S257 tail (wide->two-scale limit>=compact-min, far elements raise J, bottoms at SmallClusterFull
+  Lean) + THM-717 cancellation isolation + S256 BUNCH-max 18/(7k-6). VERIFIED-not-proved: [A] itself
+  = three-gap coverage-optimality (AP is best coverer, mac-mini cont.44).
+- **Route B (divisibility):** [B] every DC family clears at non-14 q in [15,29] => M>1/14 (band-edge
+  lemma opus S235 PROVED). Diameter-free (residue-periodic, kps Lean) => FINITE. VERIFIED across the
+  DC class (opus S237); I independently confirmed with exact B5 (THM-671): 0 fails/3000 spread DC,
+  worst q=29 => M>=3/29. Mechanism: AP mod q avoiding the danger arc = three-gap on Z/q.
+
+**UNIFICATION:** [A]=[B] are the same three-gap phenomenon ({k-alpha} progressions are the extremals,
+coverage-optimal AND resonance-optimal). **RECOMMENDED SHORTEST PATH: Route B spread-bulk
+anti-concentration** (bounded-modulus, diameter-free, genuinely finite) -- localized to "the 13
+residues of a spread DC family can't hit every scaled danger-arc for all q in [15,29]"; the AP corner
+is done (three-gap, opus S236); the spread bulk (99%) is the target, = my B5>0 at bounded q.
+
+**HONEST FINISHABILITY:** neither [A] nor [B] is proved; both are the genuine LRC-adjacent core.
+Both are finite/bounded in principle. The genuine remaining MATH is the three-gap
+extremality/anti-concentration -- one statement, two forms. Everything else (reductions, tail,
+density floor, realization, Lean) is proved.
+
+Files: LRC14-FINISH-MAP-2026-07-11.md; lrc14_route_B_dc_clearing_verify_klein_S258.py; OPEN-Q banner.
+HYP-6080. NEXT: prove [B] spread-bulk anti-concentration (character-sum/Weyl over bounded q) OR
+complete+cite the CRT-factored finite residue check (kps) OR prove [A] three-gap coverage-optimality.
+
 ## opus-2026-07-11-S238 -- spread-bulk residual: the fold-class PIGEONHOLE REDUCTION for prime moduli + an HONEST NEGATIVE result -- the {17,19,23} shortcut FAILS; the spread anti-concentration is irreducible to a few primes.
 
 Prompt (owner): work on the spread bulk.
