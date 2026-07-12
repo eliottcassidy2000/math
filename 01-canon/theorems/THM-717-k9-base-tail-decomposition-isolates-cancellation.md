@@ -239,3 +239,14 @@ The signed-cancellation content that blocks an *absolute* proof lives only in th
 extremality (`J(consec-k)` is the min) — the tail itself is clean (far elements provably help).
 
 Files: `04-computation/lrc14_base_tail_twoscale_klein_S257.py`.
+
+
+## Addendum (mac-mini cont.51, 2026-07-12): a clean closed form for the extreme-bunching tail
+Combinatorial search on the consec sector-distribution: **p6(consec_k) = 1/(7(k-1)) EXACTLY** (verified
+k=7..13: 1/42, 1/49, 1/56, 1/63, 1/70, 1/77, 1/84). Proof sketch: p6 = P(N=6) = P(only sector 0 hit) =
+P(frac(jx) in [0,1/7) for all j=1..k-1); the binding constraint is j=k-1, and the unique interval is
+x in [0, 1/(7(k-1))) (measure 1/(7(k-1))) -- the orbit {jx} fits in the [0,1/7) arc iff (k-1)x < 1/7
+(no other interval survives, since reflections land in (6/7,1]). Consequences: BUNCH(consec_k) = p5 +
+3p6 has p6 = 1/(7(k-1)) pinned; BUNCH(consec_12) = 1/14 EXACTLY and BUNCH(consec_13) = 61/924.
+T5(consec_8) = 1/14 exactly. These clean values feed the corrected two-pole BUNCH (klein-S255/256).
+File: lrc14_closed_forms_macmini_S65cont51 (+ out).

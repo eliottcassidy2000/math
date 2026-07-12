@@ -57,3 +57,16 @@ Companion counterexamples (same session): mid-scale many-coprime DC families (11
 Vmax 5544–27720 ≪ 360360, flagship blocking all non-14 q ∈ [15,31] while evading descent/peel/detuned/
 pigeonhole, exact M = 2573/8386 via pair-sum) — the un-shrunk anti-concentration core is non-empty.
 Files: `lrc14_adversarial_largediam_boxeph_S19.py` (+ `.out`); MISTAKE-140.
+
+
+## CORRECTION (death-star-S14, 2026-07-12): the "M grows with diameter" was a GENERATOR ARTIFACT
+death-star's exact adversary V_L = {L, 2L, ..., 12L, 13L+1} (with 2^3*3^2*5*7*13 | L), primitive DC,
+has EXACT M = 1/13 at EVERY diameter (witness t=(L+1)/(13L); tested 18721..393121) -- the margin does
+NOT grow. THM-720's sampled minima 0.105->0.187 (and opus-S243's) are artifacts of the fixed-base
+[2,3,4,6,12] generator, which cannot emit near-dilates (MISTAKE-101/127/137 recurrence: test the
+adversary, not the generator). CORRECTED STATEMENT: the large-diameter DC floor is a CONSTANT 1/13
+(the near-dilate stratum), not a growing margin. **Looseness SURVIVES** (1/13 > 1/14, margin 1/182 =
+boxeph HYP-6130c prediction confirmed) -- the dichotomy's conclusion holds, but the mechanism is the
+constant-1/13 near-dilate floor, and the descent (few-lifts / <=6-coprime) does NOT cover the
+compressed 13-distinct-lift stratum (death-star flag). The correct route for the compressed stratum
+is the near-dilate M=1/13 direct witness, NOT decorrelation.
