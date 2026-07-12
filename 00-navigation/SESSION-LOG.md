@@ -1,3 +1,23 @@
+## opus-2026-07-11-S231 -- following the redirect as far as it goes: the bounded-modulus clean-ruler lemma is ADVERSARIALLY ROBUST + DIAMETER-FREE (clean q<=~60, 0 failures to Vmax 56000), but composites are ESSENTIAL and the full proof is genuinely LRC-adjacent. Honest limit reached.
+
+Prompt (owner): follow the math of the redirect as far as you can.
+
+I pushed the bounded-modulus clean-ruler lemma (S230 redirect) hard -- decomposition, adversarial stress, diameter, and the proof limit.
+
+(1) DECOMPOSITION (prime window {17,19,23,29,31,37}, 1200 random dissociated prime-rich residuals, Vmax 40-5000): SHALLOW at some prime 1200/1200; LIVE 1198/1200; CLEAN-at-a-prime 1196/1200; CLEAN in full {8..40} (composites) 1200/1200. Shallow (anti-concentration) is the robust core; the last few need composites for the LIVE half.
+
+(2) PRIME WINDOW IS NOT ADVERSARIALLY SUFFICIENT. Hill-climb to maximize heavy-count finds families HEAVY at ALL 6 window primes with longest-AP=2 (fully dissociated). So longest-AP dissociation does NOT bound the prime-window shallow disjunction -- COMPOSITES ARE ESSENTIAL, and my S230 {17,19,23} criterion is a PARTIAL tool, not a standalone closer. (Honest walk-back of any impression that the prime criterion closes the hard core.)
+
+(3) THE FULL BOUNDED-MODULUS LEMMA IS ADVERSARIALLY ROBUST + DIAMETER-FREE. Hill-climb within the prime-rich core to maximize the smallest clean modulus: adversarial max smallest-clean-q STABLE at 47-59 across Vmax ceilings 300..64000 -- does NOT grow with Vmax (earlier 37->59 creep was search variance). 0 families (adversarial, Vmax to 56000) lack a clean ruler <=600. So every prime-rich primitive family has a clean ruler at a BOUNDED modulus (<=~60), independent of diameter.
+
+(4) DIAMETER ALREADY BOUNDED (LEM-010, PROVED): covering family with Vmax>3^12 has an explicit good period (lonely time) by Dirichlet pigeonhole => genuine residual has Vmax<=3^12 => the bounded-modulus lemma is a FINITE CHECK in principle (3^12 too big for exhaustion).
+
+HONEST LIMIT: the lemma is robustly true, diameter-free, finitely-checkable, exact-criterion-backed. Full unconditional proof = [SHALLOW: some bounded modulus has no scaled q/7-arc holding >=6 speeds = anti-concentration] + [LIVE: same modulus has a live multiplier = bounded-denominator loneliness = LRC content]. Both LRC-adjacent (kps: live half is LRC-equivalent); the prime-window shallow half is adversarially defeatable, so neither half is elementary. The redirect's VALUE is the correct POSING -- a bounded, diameter-independent modulus (with composites) replacing the unbounded pair-sum, turning "unbounded equidistribution" into "bounded-modulus occupancy" which LEM-010 makes finite. I did not prove the lemma; I located exactly where its (real) hardness lives, now disentangled from the diameter.
+
+FILES: lrc14_bounded_modulus_adversarial_opus_S231.py (+.out); reflection addendum on the-clean-ruler-is-a-bounded-modulus-not-a-pair-sum-opus-S230; HYP-6015 S231 addendum. -> LEM-010, THM-707/701, HYP-6000/6005, THM-709/712.
+
+---
+
 ## mac-mini-2026-07-09-S65 (cont.37, 2026-07-11) -- THM-713: SYNCHRONIZATION CARRIES THE VARIANCE (DIAG spread 0.26 vs COV spread 2.19; random families NEGATIVELY associated -0.25) BUT Var-max-at-consec is FALSE globally: mod-7 family {1,8,...,57} beats consec (3.0124 > 2.9670 at k=9, exact) -- 7-sector resonance hyper-synchronizes. Consec wins J via the MEAN term (dev^2 4.22 vs 3.46). COURSE CORRECTION to kps cont.33's invited reduction: aim at J directly (or Var on the mean shell); the mod-7 pole must appear in any extremal hypothesis. External search: no off-the-shelf occupancy-variance extremal (three-gap = the bunching tool, largest-gap-=-sum rigidity).
 
 Prompt (owner): keep working the endgame; pull/push; merge ideas; search new concepts.

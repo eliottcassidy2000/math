@@ -107,3 +107,45 @@ full is the remaining work; the `{17,19,23}` criterion is the formalizable rung.
 prime ruler `q ≤ 13`, band = all nonzero — this extends it to the `{0,±1}` band at `q ∈ {17,19,23}`),
 opus-S225 (the earlier "bypass the non-truncatable series" lesson — same spirit: the rigor is finite/exact,
 here a bounded-modulus occupancy condition).
+
+---
+
+## Addendum (opus-S231) — following the redirect: adversarial robustness and the honest proof limit
+
+Pushing the math further (owner: "follow the redirect as far as you can"), four refinements:
+
+**1. The decomposition — shallow is the robust core, live/composites the rare hard part.** Over the prime
+window `{17,19,23,29,31,37}` on 1200 random dissociated prime-rich residuals (Vmax 40–5000): SHALLOW (some
+prime `maxBand ≤ 5`) **1200/1200**; LIVE (some prime has a live multiplier) **1198/1200**; CLEAN (both, same
+prime) **1196/1200**; CLEAN in the full window `{8..40}` (composites) **1200/1200**. So on *random* families
+the shallow half is essentially free at a prime; the last few need composites for the *live* half.
+
+**2. The prime window is NOT adversarially sufficient — composites are essential.** Hill-climbing to maximize
+heavy-count finds families **heavy at all 6 window primes** with **longest-AP = 2** (fully dissociated). So
+longest-AP dissociation does *not* bound the prime-window shallow disjunction. The `{17,19,23}` criterion of
+S230 is therefore a *partial* tool (handles most random families), **not** a standalone closer — composite
+moduli (8, 16, 25, 27, 35, …) are genuinely required.
+
+**3. The full bounded-modulus lemma IS adversarially robust and diameter-free.** Hill-climbing *within the
+prime-rich core* to maximise the smallest clean modulus: the adversarial max smallest-clean-`q` is **stable at
+47–59** across Vmax ceilings 300 → 64000 — it does **not** grow with Vmax (the earlier 37→49→59 creep was
+search variance, not diameter scaling). **0** families (adversarial, Vmax to 56000) lack a clean ruler ≤ 600.
+So: *every prime-rich primitive family has a clean ruler at a bounded modulus (≤ ~60 in extensive adversarial
+search), independent of diameter.* The bound is a bit larger than the random-family `{8..40}`, but absolute.
+
+**4. The diameter is already bounded (LEM-010, PROVED).** A covering family with `Vmax > 3^12` has an explicit
+good period (lonely time) by Dirichlet pigeonhole, so the genuine residual has `Vmax ≤ 3^12`. Hence the
+bounded-modulus lemma is a **finite check** in principle (though `3^12` is far beyond exhaustion).
+
+**The honest limit.** The lemma is robustly true, **diameter-free**, finitely-checkable, and exact-criterion
+backed. Its full unconditional proof is exactly `[SHALLOW: some bounded modulus has no scaled q/7-arc holding
+≥ 6 speeds — anti-concentration]` + `[LIVE: the same modulus has a live multiplier — bounded-denominator
+loneliness = LRC content]`. Both are genuinely LRC-adjacent (kps: the live half is "LRC-equivalent"), and
+the prime-window shallow half can be *adversarially defeated* (finding 2), so neither half is elementary. **The
+value of the redirect is not a proof but the correct posing**: a bounded, diameter-independent modulus (with
+composites) in place of an unbounded pair-sum — turning "does an unbounded equidistribution hold" into "does
+a bounded-modulus occupancy hold," which LEM-010 makes finite. The clean-ruler route's hardness is real and
+concentrated in these two bounded-modulus statements, no longer entangled with the diameter.
+
+Files: `lrc14_bounded_modulus_adversarial_opus_S231.py` (+`.out`). → LEM-010 (the Dirichlet diameter bound),
+HYP-6015 (updated).

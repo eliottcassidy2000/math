@@ -1,0 +1,7 @@
+(B) heavy-count can hit 6/6 in the prime window with longest-AP=2 (composites essential):
+    v (longest-AP 2): heavy at 6/6 primes; but clean at composite q=8
+
+(C) adversarial smallest-clean-q is bounded, NOT growing with Vmax (prime-rich hill-climb):
+    Vmax ceil    300: adversarial max smallest-clean-q = 47   (#nofound<=600: 0)
+    Vmax ceil   4000: adversarial max smallest-clean-q = 49   (#nofound<=600: 0)
+    Vmax ceil  64000: adversarial max smallest-clean-q = 53   (#nofound<=600: 0)
