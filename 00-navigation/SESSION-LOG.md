@@ -41,6 +41,40 @@ structure for the k=8 deg-3 base (its two-scale limit via the cubic eigen-transf
 Prompt (owner): look back through past threads for inspiration; be free.
 
 NEXT AGENT: (a) the clean provable target crystallized: p0(consec_k) >= p0(iid_k) i.e. 'the Steinhaus orbit maximizes 7-sector coverage' -- a three-gap/occupancy statement (Sos-Suranyi-Swierczkowski + coupon-collector), which gives the POS/T1 dominant bound; (b) the apex-prime-7 transition frames WHY k=8,9 bind; (c) the two-pole atlas means the whole density side = [AP coverage bound] + [mod-7 bunching bound (klein)] -- both three-gap.
+## kind-pasteur-2026-07-11-S127 cont.43 -- the single open theorem IS LEM-010's j*=O(k); reconciled with opus-S237 into a two-piece punch-list
+
+Prompt (owner): work the single remaining open theorem; search back across random past threads for inspiration.
+
+SEARCH RESULT (the inspiration): the bounded-clearing-for-divisor-complete statement I framed cont.40-42 is
+the SAME theorem as LEM-010 (deterministic good-period, THM-527-A), which already calls j*=O(k) "the single
+remaining analytic lemma of the whole covering case." LEM-010 has: wraparound (spread<6Vmax/7 => j=1),
+Dirichlet (Vmax>3^{k-1} => bounded j), the AP case PROVED (j*<=ceil(7(k-1)/6), mac-mini-S59), and it names the
+hard case exactly: "structured 2-BLOCK/AP clusters where the soft discrepancy bound is vacuous."
+
+RECONCILED with opus-S237 (concurrent, same day): opus split the DC residual into [99% SPREAD bulk -> one
+uniform anti-concentration statement, loose M>=3/29] + [~1% near-AP corner]. My M-floor extremal
+{1,2,3,4,10..18} (two-block, 9-run {10..18}) sits in that ~1% corner -- EXACTLY where LEM-010's soft bound is
+vacuous and the explicit good-period construction is the built-for-it tool. So the two fleet lines (kps
+B5/window + opus anti-concentration) and the LEM-010 covering line are ONE object. The residual is now a
+punch-list of TWO named bounded pieces: [uniform anti-concentration for the spread bulk = opus-S237] +
+[j*=O(k) for the near-AP corner, AP proved, 2-block open].
+
+STRATEGY for the corner: extend LEM-010's 1D-Dirichlet AP proof to 2-block via 2D SIMULTANEOUS Dirichlet
+(||j/Vmax|| and ||jb/Vmax|| both small => blocks overlap into a <6/7 span => >1/7 gap); gives bounded j=O(k^2),
+which is all bounded-clearing needs.
+
+VALIDATED (census Vmax<=22): the two-block corner = 223 families (0.7%, independently matches opus's ~1%); ALL
+clear at non-14 q in [15,26] (ZERO failures); worst multiplier p=12 <= ceil(7(k-1)/6)=14 -- so the corner
+satisfies LEM-010's *AP* j* bound with the SAME O(k) constant (not even needing the weaker O(k^2)).
+
+Artifacts: reflection the-open-theorem-is-lem010-jstar-two-block-kps-S127; HYP-6080;
+lrc14_twoblock_corner_jstar_kps_S127.py/.out. No new Lean (synthesis + validation session).
+
+Next: (a) prove the corner's 2D-Dirichlet j=O(k) rigorously (turn LEM-010's one-block proof into two-block);
+(b) opus-S237's uniform anti-concentration for the spread bulk is the other half; (c) both reduce to
+bounded-clearing => band-edge lemma (opus-S235) => M>1/14 => discharges hB5 for the divisor-complete hard core.
+
+---
 
 ## opus-2026-07-11-S237 -- the residual is verified across the WHOLE divisor-complete class (uniform non-14 clearing window [15,31] => M>1/14) + honest correction: divisor-complete is 99% SPREAD, the S236 AP sub-case was a ~1% corner.
 

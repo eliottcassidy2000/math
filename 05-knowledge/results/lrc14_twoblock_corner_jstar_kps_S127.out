@@ -1,0 +1,8 @@
+primitive divisor-complete families (Vmax<=22): 31471
+  TWO-BLOCK corner (exactly 2 consecutive runs): 223 families (0.7%)
+  two-block corner: clearing FAILURES (non-14 q<40) = 0
+  worst clearing modulus q = 26 (at [1, 2, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22])  [bounded window [15,26]]
+  worst clearing multiplier p (the O(k) 'period') = 12 (at [1, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22])
+  LEM-010 j*=O(k) analog: max p = 12 vs k = 13, ceil(7(k-1)/6) = 14  => p = O(k) holds empirically
+  => the near-AP CORNER is bounded-clearing with a SMALL witness (matches LEM-010 j*=O(k), AP proved).
+     [the 99% spread BULK is opus-S237's separate uniform anti-concentration; together = full residual]
