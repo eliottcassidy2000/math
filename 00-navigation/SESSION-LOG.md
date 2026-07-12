@@ -15,6 +15,19 @@ HONEST STATUS: 'divisor-complete => lonely' IS LRC(14) on the 8.5% hard core (co
 FILES: lrc14_divisor_complete_tension_opus_S234.py (+.out); reflection the-hard-core-is-the-detuned-AP-divisor-complete-equals-multiplicand-maximal-and-mult-14-opus-S234; HYP-6045. -> THM-366, opus-S232/S233/S181, THM-708, LEM-010.
 
 ---
+## kind-pasteur-2026-07-11-S127 (cont.39) -- CHARACTERIZED the localized near-unit tier-3: LOOSE, prime-rich, non-detuned families with a divisor hitting EXACTLY 6 of 13 (the tier-1/tier-2 boundary); REDUCIBLE via exact B5 from ~6% to ~1.7%; near-unit-detected. (HYP-6045; opus-S233 concurrently took HYP-6040.)
+
+Prompt (owner): work on characterizing the families of the localized 6% near-unit tier.
+
+CHARACTERIZATION of tier-3 (the open near-unit tier of the 3-tier bounded-window covering, HYP-6035):
+(1) REDUCTION: extending tier-1 from the CLEAN divisibility ruler (b5_pos_of_div_clean cont.38, maxBand<=5, penalty 0) to the EXACT B5=liveCount-penalty (THM-707) at q<=14 ABSORBS the #even=6 families (bandCount=6 at one multiplier, liveCount 4-6 > penalty C(5,5)=1), shrinking the near-unit tier ~6% -> ~1.7% (tier1-exact 84.6%, detuned 13.7%, near-unit 1.7%, 0 uncovered over 8000).
+(2) LOOSE: the tier-3 residue has mean M=0.189, min 0.145 (tight=1/14=0.071) -- genuinely lonely with ~double the margin, just hard to DETECT with q<=14. Consistent with the cont.36 decoupling (window-hard = loose, not near-tight).
+(3) STRUCTURE: some divisor hits EXACTLY 6 of the 13 speeds -- the BOUNDARY between tier-1 (<=5, clean/exact) and tier-2 (>=7, detuned/THM-678). avg-#even 5.8-5.9, max-divisor-count in {5,6}, not near-AP (longest-AP ~3.7).
+(4) COVERABILITY: ~3 near-unit moduli in [15,43] cover all tier-3 (greedy {38,32,17}; the k=1 near-unit q in [15,28], unsafe {0,+-1}, do most).
+
+=> the open piece of the whole diameter-free bounded-window route (=> hB5 => LRC(14) modulo LRC<=13) is a THIN (~1.7%) residue of LOOSE, divisor-6-boundary families, detected by a handful of near-unit rulers. Sharpened from 6% to 1.7% with an exact structural description.
+
+FILES: lrc14_tier3_characterization_kps_S127.py/.out; HYP-6045. NEXT: the exact-B5 tier-1 lemma at q<=14 (extend b5_pos_of_div_clean to liveCount>penalty, formalize the #even=6 absorption); the near-unit rulers q=15..43 for the 1.7% (opus-S233).
 
 ## klein-2026-07-11-S254 -- THM-717: THE MOMENT-LADDER BASE TAIL-DECOMPOSITION ISOLATES THE SIGNED CANCELLATION (both base rows unified)
 

@@ -1,0 +1,5 @@
+COVERING with EXACT B5 tier-1 (8000 families):
+  tier1 EXACT B5 at q<=14:  84.6%   tier2 detuned: 13.7%   tier3 near-unit: 1.70%
+TIER-3 characterization (40 families):
+  loose: mean M=0.189 min 0.145 (tight 0.071); max-divisor-count values [5, 6] (boundary 6)
+  => tier-3 = LOOSE, prime-rich, non-detuned, some-divisor-hits-exactly-6 families; near-unit-detected.
