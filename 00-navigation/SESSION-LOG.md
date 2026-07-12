@@ -33,6 +33,51 @@ HONEST LIMIT: the lemma is robustly true, diameter-free, finitely-checkable, exa
 FILES: lrc14_bounded_modulus_adversarial_opus_S231.py (+.out); reflection addendum on the-clean-ruler-is-a-bounded-modulus-not-a-pair-sum-opus-S230; HYP-6015 S231 addendum. -> LEM-010, THM-707/701, HYP-6000/6005, THM-709/712.
 
 ---
+## klein-2026-07-11-S253 -- THE LITERATURE MERGE (owner-directed concept search) + EXHAUSTIVE SERVICE on the free-core cubic and Var-max + assembly rebuild
+
+Prompt (owner): keep working the endgame, pull/push often and merge new ideas, also search out new relevant concepts on your own.
+
+**(1) THE LITERATURE MERGE** (Kravitz 1912.06034; Fan-Sun 2306.10417v2; Giri-Kravitz MPCPS 180
+(2026) 343; Perarnau-Serra survey 2409.20160). Five mergeables, backlog lead written:
+(i) **Tao's dimension-3 Bohr-set estimates = the m3 instrument** -- his log-improvement runs
+through Pr(A_v1 n A_v2 n A_v3), the SAME triple-correlation object as the k=8 deg-3 tail; the
+closest literature kin of kps's 3D box (NEXT READ for whoever takes the tail). (ii) **GW Theorem
+12 acceleration criterion covers THM-709's doubling-singleton** (r->mr tight iff r shares a
+factor with all of [(n+1-r), m(n+1-r)-1]; at n=13 only r=12, m=2 passes) -- citable; addendum
+written on THM-709. (iii) **Pomerance non-tightness window** n < vmax < 2n - c log^2 n => not
+tight (tight-locus scope anchor). (iv) **pair-sum reduction = Kravitz Prop 2.1** (THM-668
+attribution + architecture validation). (v) **NO citable margin above 1/14 exists**: the
+spectrum conjecture is proven only n<=3, DISPROVED as stated at n=4,6,7 (Fan-Sun k=2 families),
+amended version open; Giri-Kravitz prove the accumulation hierarchy acc(S(n)) c S_2(n),
+den(S_mult(n)) = S_2(n) = the rigorous general form of the fleet's decorrelation limits
+(THM-687/688/700/710) => the margin-free tight handling (tau = 1/14 + covering filter) is
+NECESSARY -- the design is validated by the state of the art, not just by our failures.
+Reflection: 07-reflections/the-fleet-reinvented-the-literature.md.
+
+**(2) EXHAUSTIVE SERVICE (my census machinery on the fleet's two newest objects).**
+(A) mac-mini cont.36's k=8 FREE-CORE deg-3 requirement (THM-712-cubic; was adversarial-only):
+EXHAUSTIVE [0..18], 75537 dilation-normalized free cores, min margin EXACTLY 33776/735735 ~
++0.045908 at {1..8} (their adversarial worst = the true box minimum; interior/stable across
+[0..14] and [0..18]). (B) kps cont.33's Var(N)-max extremal: argmax Var = consec EXHAUSTIVELY
+at k=9 in [1..16] (11440 cores, max 28495/9604) and k=8 in [1..17] (24309 cores) -- the cleaner
+extremal confirmed on wider boxes.
+
+**(3) INFRA:** LRCTwoCitationAssembly build restarted (the cert chain is very slow; still
+building at close -- the TWO-CITATION milestone lands when it finishes; core LRCSevenGapRigidity
+is green+wired since S252). HYP renumber: kps cont.34 took 6020 first (their diameter-free
+window [8,43] + LRCB5Periodic -- B5 depends only on v mod q, the supply is a residue-class
+property!) -- mine is HYP-6025.
+
+Files: backlog lead, THM-709 addendum, reflection, lrc14_free_core_exhaustive_service_klein_S253.py
+(+.out), HYP-6025.
+
+NEXT AGENT: (a) READ Tao's 'Some remarks on the lonely runner conjecture' triple-intersection
+section and port the Bohr-dim-3 estimate to the 0-anchored core frame -- the m3/deg-3 tail is
+the ladder's last analytic item and now has a named literature technique; (b) the assembly build
+(check/wire LRCTwoCitationAssembly); (c) kps cont.34's [8,43] window + cont.30 shallow + the
+covering filter compose toward the uniform hB5 supply THEOREM -- the LIVE half remains; (d) the
+two shifted-consec extremality statements (mac-mini cont.36 next-agent) now have exhaustive-box
+anchors (my (A)/(B) outputs) -- the tail transfer is what remains.
 
 ## mac-mini-2026-07-09-S65 (cont.37, 2026-07-11) -- THM-713: SYNCHRONIZATION CARRIES THE VARIANCE (DIAG spread 0.26 vs COV spread 2.19; random families NEGATIVELY associated -0.25) BUT Var-max-at-consec is FALSE globally: mod-7 family {1,8,...,57} beats consec (3.0124 > 2.9670 at k=9, exact) -- 7-sector resonance hyper-synchronizes. Consec wins J via the MEAN term (dev^2 4.22 vs 3.46). COURSE CORRECTION to kps cont.33's invited reduction: aim at J directly (or Var on the mean shell); the mod-7 pole must appear in any extremal hypothesis. External search: no off-the-shelf occupancy-variance extremal (three-gap = the bunching tool, largest-gap-=-sum rigidity).
 
