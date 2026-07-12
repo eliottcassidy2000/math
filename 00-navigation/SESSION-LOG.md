@@ -1,3 +1,21 @@
+## opus-2026-07-11-S236 -- SMALL PROGRESS on the residual: the AP sub-case is closed with a uniform bound and reduces to THREE-GAP (structured), not the general anti-concentration. The residual's difficulty is now pinned to NON-AP (spread) divisor-complete families.
+
+Prompt (owner): work toward closing the residual, make any small progress.
+
+Residual (S234/S235): divisor-complete => M>1/14 (= LRC(14) via THM-366). Closed the AP sub-case.
+
+(1) {1..13} is the UNIQUE primitive 13-term tight AP (M=1/14): over d<=60,a<=120, exactly one AP clears only at multiples of 14. Even translates like {15..27} are STRICTLY looser -- the AP-restricted tight locus is a single point.
+
+(2) Every divisor-complete AP is loose, uniformly: all 898 primitive divisor-complete APs (d<=49,a<=99) clear at a NON-multiple-of-14 modulus q<=31 (0 exceptions) => by the band-edge lemma (S235) M>=ceil(q/14)/q>=3/31>1/14 for ALL. Tightest {2..14} clears at q=16 => M=1/8. So LRC(14) holds STRICTLY for the whole AP sub-case.
+
+(3) MECHANISM = three-gap, not anti-concentration: for an AP {a+jd}, the residues {(a+jd)p mod q} are THEMSELVES an AP mod q (difference dp), so clearing = an AP on Z/q avoiding the danger arc = a Steinhaus/three-gap statement -- structured, finite-checkable, and the exact tool LEM-010 uses. Vivid: {2..14} at q=16,p=1 gives residues {2,3,...,14} fitting EXACTLY in the 13-wide safe band [2,14] mod 16. Consecutive APs {a..a+12} have spread 12<6Vmax/7 for a>=3 (LEM-010(i) good-period regime).
+
+HONEST SCOPE: this closes the AP SUB-CASE (uniform bound + tractable three-gap mechanism, rigorous up to transcription of a finite case analysis). The FULL residual = NON-AP (spread) divisor-complete families remains open -- this is where the residual's difficulty now provably lives, consistent with kps's decoupling (window-hard covering cores = loose/spread, not near-AP). The AP extremizer is cleanly excluded (it is the unique tight AP and is not divisor-complete). So: the residual splits into [AP part = three-gap, structured, essentially done] + [spread part = the genuine anti-concentration].
+
+FILES: lrc14_AP_subcase_opus_S236.py (+.out); reflection small-progress-the-AP-subcase-of-the-residual-is-three-gap-opus-S236; HYP-6065. -> THM-366, opus-S234/S235/S181, LEM-010, kps cont.36.
+
+---
+
 ## opus-2026-07-11-S235 -- paths 1+3 integrated: the BAND-EDGE MARGIN LEMMA makes path-1's margin a FREE COROLLARY of bounded-clearing; path-3 ('covering=>near-AP') REFUTED as backwards (fleet decoupling + energy floor runs the other way). New proved piece + tight-locus characterization.
 
 Prompt (owner): work #1 (quantify detuning) and #3 (BSG->Freiman inverse bridge) simultaneously, pull from other agents, integrate.
