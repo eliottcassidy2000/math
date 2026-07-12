@@ -1,3 +1,26 @@
+## opus-2026-07-11-S232 -- the remaining hard part, in the summand-graph/multiplicand-graph frame: the clean ruler at the NATURAL modulus C=2n-1=27 has an EXACT proved criterion; the hard core = the multiplicand-maximal AP-wall. Two formulas verified 0/12000.
+
+Prompt (owner): get an actual picture of the remaining hard part; crack statements; look back at the summand & multiplicand graphs and our past work.
+
+Read the summand/multiplicand-graph thread (THM-401, THM-361, HYP-2083/2934/2935, s571) + the anti-concentration thread (THM-446 Sidon, THM-656/660 energy floors, HYP-3085 covering crux, opus-S181). The picture RESOLVES the S230/S231 bounded-modulus gap.
+
+THE FRAME. THM-401 (PROVED): the pinch/Farey-companion modulus of the floor 1/14 is C=2n-1=27; nonzero residues mod 27 = 13 antipodal SUMMAND SHELLS P_a={a,27-a}; danger arc = {0,1,26}={0}uP_1. The multiplicand graph = (Z/27)* acting on shells by inverse clocks; 3-adic strata: 9 UNIT shells {1,2,4,5,7,8,10,11,13}, 3 gcd-3 shells {3,24},{6,21},{12,15}, 1 gcd-9 shell {9,18}.
+
+TWO PROVED FORMULAS (verified 0/12000 each):
+ (1) maxBand(v,27) = max(z + maxUnitShellLoad, #{3|v}).   [z=#{27|v}]
+ (2) q=27 CLEAN <=> maxBand<=5 AND live; live <=> [z=0 & some unit-shell empty] OR [#{9|v}=0] OR [#{3|v}=0].
+So SHALLOW = summand graph (shells not overloaded); LIVE = multiplicand graph (a unit clock or a 3-adic clock finds an empty danger-shell). HYP-2935's slogan "addition creates shells, multiplication tests visibility" is now a FORMULA. Generalizes S230's prime {0,+-1} criterion to the natural composite modulus with its 3-adic blind spot.
+
+THE WALL. clean-at-27 fails 2 ways: (a) SHALLOW-FAIL #{3|v}>=6 = mod-3 concentration (dilated/coarse-reducible, dispatched by other branches); (b) LIVE-FAIL (shallow but not live) = MULTIPLICAND-MAXIMAL (fills all 9 unit-shells + has a mult of 3 + a mult of 9). AP{1..13}, GW 12->24, V*={1..11,13,24} are ALL live-fail (9/9 unit-shells, z3=4, z9=1, maxBand=4) = the tight M=1/14 families. The AP saturates all 3 visibility routes -> the wall.
+
+SYNTHESIS (all roads to the AP). The multiplicand-maximal (live-fail) hard core = the SAME family class as: the covering-moment crux (HYP-3085/OPEN-Q-108: consec maximizes pairwise co-emptiness S2), the energy route (THM-656/660: AP maximizes R2), and opus-S181 (tight <=> Lambda 1-dim AND coherent = dilate of {1..13}). The summand/multiplicand frame explains WHY they coincide: multiplicand-maximal = hits every small modulus = the AP's defining extremal property = 1-dim coherent additive structure (the log bridge: multiplicand graph = summand graph in log-coords).
+
+NET. The clean-ruler route at C=27 certifies EVERYTHING except the AP-coherent wall, via the explicit proved criterion, and fails there ONLY on the live/visibility half. The AP provably has NO clean bounded modulus -- it's the tight-floor content M=1/14 itself, for the LRC<=13 / exact census, NOT an anti-concentration lemma to be bounded away. So the S230/S231 "bounded-modulus anti-concentration lemma" is resolved: shallow half = summand condition, live half = multiplicand condition, and the residual hard core is the single named multiplicand-maximal family class.
+
+FILES: lrc14_summand_shell_visibility_opus_S232.py (+.out); reflection the-hard-part-is-the-multiplicand-maximal-wall-summand-shells-vs-unit-clocks-opus-S232; HYP-6030. -> THM-401, HYP-2083/2935/3085, THM-361/656/660, opus-S181/S230/S231, THM-707.
+
+---
+
 ## kind-pasteur-2026-07-11-S127 (cont.35) -- CREATIVELY REDUCED the remaining content (window works for all residue classes): it DECOMPOSES by CRT into an INDEPENDENT per-prime part covering ~99.97% + a measure-3e-4 composite-core (the LRC-hard residue). (HYP-6025.)
 
 Prompt (owner): work to reduce creatively -- remaining content is to prove the window works for all residue classes mod lcm(8..43).

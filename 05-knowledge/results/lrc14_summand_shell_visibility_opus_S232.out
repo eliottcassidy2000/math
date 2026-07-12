@@ -1,0 +1,7 @@
+(1) maxBand(v,27) = max(z + maxUnitShellLoad, #{3|v}):  0 mismatches / 12000
+(2) clean-at-27 explicit criterion:                      0 mismatches / 12000
+
+The wall (named tight families are LIVE-FAIL at 27 = multiplicand-maximal):
+  AP {1..13}  : maxBand=4 (shallow=True), live=False, unit-shells hit=9/9, #div3=4, #div9=1
+  GW 12->24   : maxBand=4 (shallow=True), live=False, unit-shells hit=9/9, #div3=4, #div9=1
+  V* sporadic : maxBand=4 (shallow=True), live=False, unit-shells hit=9/9, #div3=4, #div9=1
