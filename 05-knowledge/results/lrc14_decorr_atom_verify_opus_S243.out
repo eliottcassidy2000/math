@@ -1,0 +1,4 @@
+(2) DC families (Vmax<400, n=300): <=6 ODD 65% (NOT universal); <=6 coprime-to-30030 100% (the right effective count, mean 2)
+(3) CAVEAT {360360=lcm(2..14)}+12 coprime: DC=True, coprime-to-30030=12 (>6)
+    but loose via FAR-PEEL: the 12 coprime speeds have M=0.2179 >= 1/13 (LRC<=13)
+    => two-case decorrelation: [Vmax<lcm: <=6 coprime => LRC(7)] u [speed>=lcm: far-peel => LRC(13)]

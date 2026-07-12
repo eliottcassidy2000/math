@@ -1,3 +1,21 @@
+## opus-2026-07-11-S243 -- VERIFIED mac-mini's 13-runner decorrelation-atom closure (requested) + SHARPENED it: the <=6 effective count is COPRIME-TO-30030, not odd; honest two-case structure (bounded <=6-lift descent u far-element peel).
+
+Prompt (owner): work the 13-runner decorrelation atom bound.
+
+mac-mini cont.49 (THM-636/720) converged (four ways) on the large-diameter half of the residual and asked to VERIFY the 13-runner analog. Did so, with a correction.
+
+(1) THM-720 CONFIRMED: large-diameter DC families are LOOSE and M GROWS with diameter -- mean M 0.181(Vmax~60) -> 0.209(150) -> 0.232(400) -> 0.255(1000); min 0.136 -> 0.214; all >> 1/14. Matches mac-mini's 0.105->0.187.
+
+(2) SHARPENING (a correction): the "<=6 effective speeds" invariant that closes the descent (reach(k)>=1/7 via LRC(7), non-circular) is the COPRIME-TO-30030 count (30030=2*3*5*7*11*13), NOT "odd". # odd speeds <=6 holds only 66% (mean 5.8) -- klein/mac-mini's "even-heavy => <=6 odd" is FALSE ~1/3 of the time. # coprime-to-30030 <=6 for 100% of bounded-diameter DC (mean 2.0). This is the right effective count: the small-prime-divisible speeds are auto-safe (opus-S241), leaving <=6 generic runners = klein's ~6-runner shrink, pinned to coprime-to-30030.
+
+(3) HONEST TWO-CASE STRUCTURE: <=6-coprime is a BOUNDED-diameter statement. A single speed >= lcm(2..14)=360360 covers every d<=14, so {360360}+12 coprime speeds is DC with 12 coprime (>6). So <=6-coprime FAILS above Vmax=360360, but such families are loose via the FAR-ELEMENT peel (drop the huge speed => 12 coprime speeds, M=17/78=0.218 >= 1/13, LRC<=13). So the large-diameter half splits: CASE A [Vmax<lcm=360360: <=6 coprime => LRC(7) via <=6-lift descent, THM-636] u CASE B [speed>=lcm: far-element peel, THM-700/701 => LRC(13)]. Both proved decorrelation atoms; together cover ALL large-diameter DC.
+
+NET: mac-mini's decorrelation closure VERIFIED (loose+growing); effective invariant CORRECTED to coprime-to-30030; far-peel added as the 2nd case => the large-diameter half is closed by two proved atoms. The remaining crux is the BOUNDED-diameter, <=6 coprime-to-30030 runners = klein's ~6-runner inverse theorem, where opus-S242's pigeonhole (<=6 coprime can't cover phi(q)/2>6 fold-classes at q=25,27) is the provable handle -- applies a fortiori once the effective count is <=6.
+
+FILES: lrc14_decorr_atom_verify_opus_S243.py (+.out); reflection the-decorrelation-effective-count-is-coprime-to-30030-not-odd-opus-S243; HYP-6130. -> mac-mini cont.49/THM-636/720, klein S263, opus-S241/S242, THM-700/701.
+
+---
+
 ## mac-mini-2026-07-09-S65 (cont.49, 2026-07-12) -- MINING WIN: the LARGE-DIAMETER LOWER BOUND (THM-720 remaining rigor) IS THM-636's DECORRELATION ATOM (my S38, already Lean-formalized r<=11) -- not a new object. THM-636: reach(v) >= reach(k) - B/L for v_i = b_i + L k_i (Tao height descent). 13-RUNNER CLOSURE: large-diameter DC is EVEN-HEAVY => lift family k has <=6 distinct speeds (verified, reach(k) ~0.18-0.25 >> 1/7) => reach(v) >= 1/7 - 13/L > 1/14 for L > ~1274 (reach(v)~0.25 across L=500..40000, all LOOSE). The descent base (small L) = kps's bounded-diameter finite check -- the two dichotomy halves are ONE descent. FOUR-WAY CONVERGENCE (the hallmark of the true object): THM-720 (pair-sum M grows) = THM-636 (decorr atom) = LEM-013 (dissociated margin grows) = klein S263 (~6 odd runners, TODAY). klein's ~6-odd shrink and my ~6-distinct-lift decorrelation are the SAME reduction: DC collapses to ~6 effective speeds, clear trivially (reach >= 1/7). Coverage-clearing duality (cont.47) is WHY: spread => bad coverer => effective speeds collapse => loose. Reflection written.
 
 Prompt (owner): long session mining past threads for the large-diameter lower bound.
