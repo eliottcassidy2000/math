@@ -1,3 +1,21 @@
+## kind-pasteur-2026-07-11-S127 (cont.37) -- EXTENDED the finite bounded-modulus combinatorics: a 3-TIER COVERING of the bounded-window check (rigorous-divisibility + detuned + near-unit), 100% over 6000 families. The GENERAL CLEAN q<=14 ruler (verified 0/21000) boosts rigorous coverage 60%->82%. (HYP-6035.)
+
+Prompt (owner): work on extending the finite bounded-modulus combinatorics angle.
+
+Building on HYP-6030 (the window is a B5-DETECTION statement, not LRC-hard), turned the abstract detection-completeness into a CONCRETE 3-tier covering:
+
+TIER 1 (RIGOROUS divisibility, ~82%): THM-712 prime clean rulers {2,3,5,7,11,13} + the NEW GENERAL CLEAN q<=14 RULER. For q<=14 the safe band = ALL nonzero residues, so bandCount(v,q,p) = #{i: q|v_i p} = #{i: (q/gcd(q,p))|v_i}. Hence: #{q|v_i}=0 (=> coprime p give bandCount 0 => LIVE) AND (every proper divisor d of q has #{d|v_i}<=5 => CLEAN) => B5(v,q)>0 (by THM-707 b5_pos_of_clean). VERIFIED 0/21000 (sufficiency). Generalizes THM-712 from primes to composites q=8,9,10,12,14; boosts rigorous coverage 60%->82%. Math proof given; Lean-formalizable (the gcd step q|v_i p => (q/gcd)|v_i via Coprime.dvd_of_dvd_mul_right).
+
+TIER 2 (detuned, ~12%): heavy-divisibility (>=7 of 13 share a prime g) => THM-678 detuned dispatch (scale out g).
+
+TIER 3 (near-unit, ~6%): q in [15,43], the +-1 resonance rulers (opus not_loose_near_unit territory) -- the remaining OPEN piece.
+
+UNCOVERED: 0.00%. So the window check = [rigorous divisibility (THM-712 + clean-q<=14)] + [detuned (THM-678)] + [near-unit (6%)]. Two tiers are (near-)rigorous; the open content is LOCALIZED to the 6% near-unit tier.
+
+This is the finite bounded-modulus combinatorics made concrete: a 3-tier covering, each tier characterized, 100% closing. The bounded-window claim (=> hB5 => LRC(14) modulo LRC<=13, via the diameter-free residue reduction) now needs only: [formalize clean-q<=14] + [wire THM-678 for tier 2] + [the near-unit tier-3 lemma, 6%].
+
+FILES: lrc14_tiered_covering_kps_S127.py/.out; HYP-6035. NEXT: formalize the clean q<=14 ruler (extend LRCPrimeCleanRuler); the near-unit tier-3 rulers q=17..43 (opus not_loose_near_unit, extend to 43).
+
 ## kind-pasteur-2026-07-11-S127 (cont.36) -- GOT THE PICTURE + CRACKED IT: the bounded window is DECOUPLED from LRC-tightness. Window-hard composite-core is LOOSE (M~0.18); tight families have ruler q=14 at ANY scale via dilation-invariance. So the window is a B5-DETECTION statement, NOT LRC-adjacent (corrects opus-S231). (HYP-6030.) [opus-S232 got the same prompt: complementary summand/multiplicand-graph frame, C=2n-1=27.]
 
 Prompt (owner): get an actual picture of the remaining hard part, use that deep understanding to crack statements.

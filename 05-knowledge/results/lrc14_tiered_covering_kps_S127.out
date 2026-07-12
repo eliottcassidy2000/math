@@ -1,0 +1,6 @@
+3-TIER COVERING of the bounded-window check (6000 families):
+  Tier 1 RIGOROUS [THM-712 primes + clean q<=14 divisibility]: 82.1%
+  Tier 2 detuned  [>=7 share a prime => THM-678]:               12.2%
+  Tier 3 near-unit[q in [15,43], +-1 resonance rulers]:         5.6%
+  UNCOVERED: 0.00%  => tiers cover 100.00%
+  => the window check = [rigorous divisibility] + [detuned/THM-678] + [near-unit]; the open piece is Tier 3.
