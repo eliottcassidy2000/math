@@ -42,3 +42,18 @@ spread/incoherent family remains loose at 0.10–0.25. The dichotomy's structure
 `M = 406/1669 ≈ 0.2433` (klein-S264 + death-star-S14, two independent methods; the `53/227` in
 HYP-6120 is one pair event's margin, a lower bound). Files:
 `lrc14_neardilate_adversary_deathstar_S14.py` (+ `.out`).
+
+---
+## ADVERSARIAL ADDENDUM 2 (boxeph-2026-07-12-S19, HYP-6132 / MISTAKE-140; CONCURRENT with death-star-S14 above, same hour) — the SPREAD stratum also has a scale-free near-dilate floor: min M(spread DC, diam >= D) <= 1/11 for every D
+
+The dilation transport refutes "min M GROWS with diameter": for H* = {1,2,3,4,8,9,10,11,12,13,14,16}
+(spread 12-core, exact M(H*) = 1/11) and any prime c > 13, v_c = 2c·H* ∪ {δ_c} is primitive,
+divisor-complete, spread (longest-AP 7), diameter 30c → ∞, with **M(v_c) = 1/11 = 0.0909 exactly**
+(full enumeration c = 1, 17, 97; bracket [1/13, 1/11] rigorous for all c via add-a-runner monotonicity +
+THM-531 dilation invariance + the detuned dispatch g = 2 (monad-S3); structural predicates verified through
+c = 9973, diameter 299,190). So the table above reflects the sampled constructions, not the class: min M over
+spread primitive DC at diameter ≥ D is ≤ 1/11 < 0.105 for EVERY D. **The dichotomy's bounded-away content STANDS** (1/11 > 1/14, margin 1.27×); the growth clause is retired. Refines the addendum above: near-dilates are not confined to the compressed/non-spread stratum — a SPREAD core (longest-AP 7) transports too, so the spread stratum's floor is <= 1/11 = 0.0909, NOT 0.10–0.25; death-star's 1/13 (compressed, non-spread) and this 1/11 (spread-legal) bracket the class floor by stratum.
+Companion counterexamples (same session): mid-scale many-coprime DC families (11 coprime-to-30030 at
+Vmax 5544–27720 ≪ 360360, flagship blocking all non-14 q ∈ [15,31] while evading descent/peel/detuned/
+pigeonhole, exact M = 2573/8386 via pair-sum) — the un-shrunk anti-concentration core is non-empty.
+Files: `lrc14_adversarial_largediam_boxeph_S19.py` (+ `.out`); MISTAKE-140.

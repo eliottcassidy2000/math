@@ -15,6 +15,57 @@ HONEST: synthesis + favorable reframing, not a proof. Remainder = "spread core =
 FILES: lrc14_sixrunner_evenfold_synthesis_opus_S244.py (+.out); reflection the-six-runner-crux-is-the-even-fold-and-it-is-favorable-opus-S244; HYP-6137. -> oracle S554-S558o, opus-S243/S239/S241/S242/S233, klein S263, mac-mini cont.49.
 
 ---
+## boxeph-2026-07-12-S19 -- ADVERSARIAL STRESS of the large-diameter thread: "min M grows with diameter" REFUTED by dilation transport (M = 1/11 at diameter 299k); Case-A coprime premise dead below lcm; the all-instrument-evading core is NON-EMPTY (MISTAKE-140, HYP-6132, THM-720 addendum)
+
+Prompt (owner): mine past threads for inspiring connections to the large-diameter lower bound; work the
+open LRC 14 tasks to completion; push/pull frequently; redirect on incoming ideas.
+
+MINING RESULT: the connection that matters is MISTAKE-137 + THM-531 (dilation invariance) -- the
+large-diameter thread's scale-indexed claims (THM-720 growth; opus-S243 "confirmed growing"; cont.50
+"adversarial min 0.148-0.219 growing") repeat the exact shape MISTAKE-137 already refuted for mu vs
+Vmax. Applied the near-dilate seed discipline the thread was missing (concurrent with mac-mini cont.50's
+MISTAKE-139 self-catch, which corrected the lift-count premise but kept the growth claim).
+
+**(1) GROWTH REFUTED (MISTAKE-140).** H* = {1,2,3,4,8,9,10,11,12,13,14,16} is a spread 12-core with
+exact M(H*) = 1/11. For every prime c > 13, v_c = 2c*H* u {delta_c} is primitive + divisor-complete +
+spread, diameter 30c -> infinity, and M(v_c) = 1/11 EXACTLY (enumerated c = 1, 17, 97; same pair-sum
+witness 44c transported; bracket [1/13, 1/11] rigorous for ALL c: monotonicity + THM-531 + detuned
+dispatch g=2 (monad); structural predicates verified through c = 9973, diameter 299,190). So min M over
+spread primitive DC at diameter >= D is <= 1/11 = 0.0909 < 0.105 for EVERY D. The dichotomy (kps
+HYP-6120) SURVIVES -- bounded-away holds -- but its target must re-anchor to the flat [1/13, 1/11]
+near-dilate floor, not a growing margin.
+
+**(2) opus-S243 Case-A premise dead below lcm.** A mid-scale smooth cover (27720 covers every d in
+2..14 except 13; {10800, 6006} covers all) frees 11 coprime-to-30030 slots at Vmax 5544-27720 << 360360
+(A1/A2/A3, all verified primitive+DC+spread). The two-case structure needs a third case.
+
+**(3) A3 FLAGSHIP -- the un-shrunk core is non-empty.** {10800, 6006, eight semiprimes 17*199..43*83,
+4001, 4507, 5003}: blocks EVERY non-14 q in [15,31], no descent scale (full L-scan), no ratio gap, no
+detuned shape, no pigeonhole (11 coprime >= phi(q)/2 at q = 15,21,25,27) -- evades every fixed bounded
+certificate in play; exact M = 2573/8386 = 0.307 via pair-sum ruler 8386 = 3383+5003. The certifying
+lane for this core = adaptive window / klein-S264's pair-sum-Parseval floor. klein's ~6-odd shrink is
+also construction-dependent here (11 odd).
+
+**(4) Instruments map (mining synthesis, reflection):** the large-diameter class stratifies by
+STRUCTURE not size -- [near-dilate: detuned-dispatch floor [1/13,1/11], scale-free, ALREADY RIGOROUS] u
+[mid-scale many-coprime covering core: pair-sum/Parseval only] u [lattice/two-scale: descent atoms
+THM-636/LRCDecorrelation13 + far-peel] u [generic bulk]. "Diameter" conflates dilation-coherence,
+covering-element structure, and two-scale separation.
+
+Cross-validation: my exact-M evaluator reproduces klein-S264's kps-blocker M = 406/1669 to the rational
+(kps's earlier 53/227 was a slight under-read). STANDING RULE (3rd recurrence: MISTAKE-137/139/140):
+near-dilate + covering-element seeds are mandatory in any scale-indexed adversarial claim.
+
+Files: lrc14_adversarial_largediam_boxeph_S19.py (+ .out), MISTAKE-140, THM-720 addendum, HYP-6132
+(INDEX), reflection the-growth-was-an-artifact-dilation-transport-pins-the-large-diameter-floor-boxeph-S19.
+ID note: HYP-6130 was triple-claimed within 2 min (klein 07:40 / opus 07:41 / me 07:42) -- klein keeps
+6130, opus proposed -> 6131, mine renumbered 6132.
+
+NEXT: (a) do NOT build growth-calibrated arguments; anchor large-diameter rigor to the [1/13, 1/11]
+near-dilate floor (detuned dispatch, proved) + the A3-core via the signed-OffLine/Parseval lane
+(klein-S264); (b) A3-type families = ready test battery for the Parseval floor's "reaches true M" claim;
+(c) probe whether 1/11 is the true SPREAD-DC floor (unrestricted hill-climb, small Vmax, transports
+automatically); (d) bounded-diameter finite check remains the other dichotomy half.
 
 ## mac-mini-2026-07-09-S65 (cont.50, 2026-07-12) -- HONESTY CORRECTION of cont.49 + phenomenon CONFIRMED robust. Worked the '<=6 distinct lifts theorem' -> it is NOT a theorem (MISTAKE-139): (1) min-distinct-lifts~2 is a SCALE ARTIFACT (coarse L~Vmax => {0,1} lifts but base B~Vmax => reach(k)-B/L vacuous; no scale has BOTH small B and few lifts for generic DC); (2) #odd is NOT bounded by 6 (generic 3-10, adversarial 12 via 1 mult-of-840; klein's 'median 6' is a median). So cont.49's decorrelation-atom closure was scale-dependent + construction-specific -- THM-636 applies only to CLEAN single-scale escape families (r<=11 scope), NOT generic large-diameter DC. CORRECT ROUTE = multi-scale THM-687/688 (klein): generic large-diameter = scale TOWER, reach accumulates, base = bounded-diameter finite check. PHENOMENON STANDS: adversarial min-M over large-diameter DC = 0.148-0.219, all > 2x floor, margin GROWS with diameter (THM-720 solid). Only the cont.49 MECHANISM was wrong; no canon THM depended on it. Reflection corrected + MISTAKE-139 recorded.
 
