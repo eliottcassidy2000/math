@@ -1,0 +1,3 @@
+  d=24: 244826 fams, min J = 5.7983 at [0, 1, 2, 3, 4, 5, 6, 7, 24]  OK >= compact-min
+  d=25: 346104 fams, min J = 5.6906 at [0, 1, 2, 3, 4, 5, 6, 7, 25]  OK >= compact-min
+  d=26: 479908 fams, min J = 5.5888 at [0, 1, 2, 3, 4, 5, 6, 7, 26]  OK >= compact-min

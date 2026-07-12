@@ -1,0 +1,5 @@
+compact-min J({0..8}) = 5.1990; floor 432/91 = 4.7473; klein tail (wide) >= 5.677
+medium-gap exhaustive min-J per diameter d=21..26 (float, exact-confirm record):
+  d=21: 77520 primitive fams, min J = 5.5558 at [0, 3, 6, 9, 12, 15, 16, 18, 21]  OK >= compact-min
+  d=22: 116160 primitive fams, min J = 5.5860 at [0, 1, 2, 3, 4, 5, 6, 7, 22]  OK >= compact-min
+  d=23: 170544 primitive fams, min J = 5.6838 at [0, 3, 6, 9, 12, 15, 18, 21, 23]  OK >= compact-min
