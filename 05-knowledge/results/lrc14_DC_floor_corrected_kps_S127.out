@@ -1,0 +1,5 @@
+CORRECTED DC extremal: [1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+  divisor-complete? True ; M = 1/12 = 0.0833  (cont.40's 2/23 was a LOCAL min)
+  first non-14 clearing modulus q = 24 ; band-edge ceil(q/14)/q = 1/12 = M EXACTLY (opus-S235 lemma TIGHT here)
+  => sharp bound: divisor-complete => M >= 1/12 (exhaustive Vmax<=22), eps = 1/84 ~ 0.0119
+  UNIFIED: [DC => bounded-clearing (open, my window)] + [band-edge lemma (opus-S235 PROVED)] => M >= 1/12 > 1/14 => lonely.

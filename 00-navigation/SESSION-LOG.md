@@ -15,6 +15,19 @@ HONEST SCOPE: this closes the AP SUB-CASE (uniform bound + tractable three-gap m
 FILES: lrc14_AP_subcase_opus_S236.py (+.out); reflection small-progress-the-AP-subcase-of-the-residual-is-three-gap-opus-S236; HYP-6065. -> THM-366, opus-S234/S235/S181, LEM-010, kps cont.36.
 
 ---
+## kind-pasteur-2026-07-11-S127 (cont.41) -- CORRECTED cont.40 (intellectual honesty): the divisor-complete floor is M = 1/12 (NOT 2/23); adversarial hill-climb found a LOCAL min, the EXHAUSTIVE census finds the true extremal {1,2,3,4,10..18}. RECONCILED with opus-S235 band-edge lemma (TIGHT at this extremal, q=24). (HYP-6055 corrected.)
+
+Prompt (owner): work on making more similar progress on the hard core.
+
+CORRECTION (same failure mode as cont.26): cont.40 claimed the min-M divisor-complete family is {1..14}\{6} with M=2/23, from an ADVERSARIAL hill-climb -- a LOCAL min. The EXHAUSTIVE primitive DC census (Vmax<=18/20/22, stable) finds a LOWER floor: M = 1/12 = 0.0833 at the UNIQUE extremal {1,2,3,4,10,11,12,13,14,15,16,17,18} (two-block {1,2,3,4}u{10..18}, NOT near-AP). Sharp bound: divisor-complete => M >= 1/12, eps = 1/84 ~ 0.0119.
+
+RECONCILIATION with opus-S235 (pulled): opus PROVED the BAND-EDGE MARGIN LEMMA -- if S clears (bandCount=0) at a non-14 modulus q, then M(S) >= ceil(q/14)/q > 1/14. The corrected extremal {1,2,3,4,10..18} first clears (non-14) at q=24, and ceil(24/14)/24 = 2/24 = 1/12 = M EXACTLY -- so opus's lemma is TIGHT at my extremal (the worst DC family for the margin). UNIFIES the hard core:
+  [DC => bounded-clearing at a bounded non-14 modulus (= my window/anti-concentration S230/S231, the OPEN piece)] + [band-edge margin lemma (opus-S235 PROVED)] => M >= 1/12 > 1/14 => LONELY.
+So the detuning bound is NOT a separate theorem -- it is a FREE COROLLARY of bounded-clearing. The one remaining open piece is BOUNDED-CLEARING for divisor-complete families (= my diameter-free bounded window / tiered covering HYP-6035, cont.34-39).
+
+LESSON (repeat of cont.26): adversarial hill-climb finds LOCAL minima; for extremal/floor claims use the EXHAUSTIVE census. Two times now (cont.25 E2, cont.40 2/23) -- EXHAUST, do not hill-climb.
+
+FILES: lrc14_DC_floor_corrected_kps_S127.py/.out; HYP-6055 corrected. NEXT: bounded-clearing for DC (my window at diameter-free q, with opus band-edge supplying the margin) is now THE open theorem for the hard core.
 
 ## opus-2026-07-11-S235 -- paths 1+3 integrated: the BAND-EDGE MARGIN LEMMA makes path-1's margin a FREE COROLLARY of bounded-clearing; path-3 ('covering=>near-AP') REFUTED as backwards (fleet decoupling + energy floor runs the other way). New proved piece + tight-locus characterization.
 
