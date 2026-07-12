@@ -1,0 +1,45 @@
+==============================================================================
+V1 -- EXACT IDENTITY  LM/q = (b/q)^12 + OffLine_signed  (+ defining line)
+==============================================================================
+
+AP {1..13} (wall):  v=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  q= 14 d=1 b= 13: LM=   6  LM/q=0.42857  (b/q)^12=0.41095  offline=+0.01763  | defline->main12: 0.410945 vs 0.410945  OK
+  q= 15 d=1 b= 14: LM=   8  LM/q=0.53333  (b/q)^12=0.43696  offline=+0.09637  | defline->main12: 0.436960 vs 0.436960  OK
+  q= 20 d=1 b= 19: LM=   8  LM/q=0.40000  (b/q)^12=0.54036  offline=-0.14036  | defline->main12: 0.540360 vs 0.540360  OK
+  q= 26 d=2 b= 23: LM=   0  LM/q=0.00000  (b/q)^12=0.22964  offline=-0.22964  | defline->main12: 0.229643 vs 0.229643  OK
+
+DC bounded extremal (HYP-6055):  v=[1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+  q= 14 d=1 b= 13: LM=   0  LM/q=0.00000  (b/q)^12=0.41095  offline=-0.41095  | defline->main12: 0.410945 vs 0.410945  OK
+  q= 15 d=1 b= 14: LM=   0  LM/q=0.00000  (b/q)^12=0.43696  offline=-0.43696  | defline->main12: 0.436960 vs 0.436960  OK
+  q= 20 d=1 b= 19: LM=   8  LM/q=0.40000  (b/q)^12=0.54036  offline=-0.14036  | defline->main12: 0.540360 vs 0.540360  OK
+  q= 26 d=2 b= 23: LM=   4  LM/q=0.15385  (b/q)^12=0.22964  offline=-0.07580  | defline->main12: 0.229643 vs 0.229643  OK
+
+==============================================================================
+V2/V3/V4 -- FLOOR REACH per family (mechanism ceiling; |OffLine| measured exact)
+==============================================================================
+family                                   diam          M      M~    c_floor  c_flr~  1/14?    680~
+AP {1..13} (wall)                          12       1/14  0.0714       1/14  0.0714      <  0.0714
+DC bounded extremal (HYP-6055)             17       1/12  0.0833       1/12  0.0833      >  0.0833
+adversarial spread DC (opus-S238)         252        1/4  0.2500      10/49  0.2041      >  0.1923
+kps blocker (HYP-6120)                   1656   406/1669  0.2433   406/1669  0.2433      >  0.2322
+det spread scale 10                       120       2/11  0.1818       2/11  0.1818      >  0.1736
+det spread scale 50                       540      15/83  0.1807      15/83  0.1807      >  0.1807
+det spread scale 200                     2433     77/393  0.1959     77/393  0.1959      >  0.1925
+
+  (c_floor = largest c=d/q where (b/q)^12 - |OffLine| > 0 at some pair-sum q:
+   the reach of the SHARPENED Parseval floor if |OffLine| a-priori-bounded by its true value.
+   680~ = same for THM-680's published floor (b/q)^12(2b/q-1) - |OffLine|.)
+
+==============================================================================
+V5 -- A-PRIORI reach at the M-achieving ruler (small off-line relations, float hhat)
+==============================================================================
+AP {1..13} (wall)                       ruler q*=   14  M=0.0714  a-priori c=0.0000 (<1/14)  [11844 small rels]
+DC bounded extremal (HYP-6055)          ruler q*=   24  M=0.0833  a-priori c=0.0000 (<1/14)  [7296 small rels]
+adversarial spread DC (opus-S238)       ruler q*=  168  M=0.2500  a-priori c=0.0298 (<1/14)  [1984 small rels]
+kps blocker (HYP-6120)                  ruler q*= 3338  M=0.2433  (V5 skipped: q*>700, slow)
+det spread scale 10                     ruler q*=   44  M=0.1818  a-priori c=0.0227 (<1/14)  [4360 small rels]
+det spread scale 50                     ruler q*=  415  M=0.1807  a-priori c=0.0506 (<1/14)  [622 small rels]
+det spread scale 200                    ruler q*= 1965  M=0.1959  (V5 skipped: q*>700, slow)
+
+1/14 = 0.07142857142857142
+done.
