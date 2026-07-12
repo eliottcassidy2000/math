@@ -44,6 +44,23 @@ Next: the DC M >= 1/12 floor (boxeph-S20 finite check + large-diameter looseness
 target; opus-S247's non-empty window is a non-DC phenomenon and does not add to it.
 
 ---
+## klein-2026-07-12-S266 -- VERIFY the consolidated frontier: TWO fresh-CONFIRMED floors broken (opus's empty window; boxeph's DC⟹M≥1/13), both covering/box-scope artifacts; corrected to COMPRESSED
+
+Prompt (owner): spend another similar session.
+
+Mine/verify session (4 Explore agents + own computation) on the consolidated frontier. Set out to VERIFY the exact M-spectrum near 1/14; the verification broke BOTH replacement crux statements (opus concurrently self-corrected S247 on one point).
+
+**(1) opus-S246's empty window (1/14,2/27) / [M<2/27 ⟹ dilated interval] is FALSE.** {1..11,13,36} has M=3/41∈(1/14,2/27) (= third-mediant, HYP-2621/opus-S118; opus-S247 caught it too). AND the tight locus is TWO families: Goddyn-Wong {1..11,13,24} has M=1/14 EXACTLY (verified ruler q=14 + grid), primitive, NOT a dilated AP — so "AP minimizes M" is NON-UNIQUE (minimizers = {AP,GW}). Both non-covering.
+
+**(2) boxeph's replacement DC⟹M≥1/13 (HYP-6150) is ALSO FALSE.** {1,2,…,12,182} is primitive DC (182=14·13 supplies 13 AND 14) with M=14/183≈0.0765 < 1/13 — the known deep-well/covering-min (MISTAKE-097), missed by boxeph's Vmax≤30 census (deep well first appears at Vmax=182 — box artifact one layer down). Verified exact. Correct floor: COMPRESSED (max≤13·min) DC ⟹ M≥1/13 (klein-S131); non-compressed DC peels (THM-620/608). Number line: 1/14 < 2/27 < 14/183 < 1/13 < 3/37 (14/183>2/27, so opus's weaker DC⟹M≥2/27 survives).
+
+**(3) CORRECTED reduction:** LRC(14) = [non-DC ⟹ M≥1/14, THM-366] + [compressed DC ⟹ M≥1/13, classified extremal 2·{1..12}∪{13}] + [non-compressed DC ⟹ far-peel ⟹ M>1/14]. Both witnesses (GW, 3/41) + the deep well are the reason the unrestricted rigidity + unqualified DC floor were mirages. The CLEAN empty window is the peeled 12-base (1/13,2/25) (HYP-4151, proved r=1 mod-13 FIELD); 3/41 = the composite-14 scar (6|12, primorial-gate a=3 dip). 14=2·7 composite ⟹ 6 units + apex-7 zero-divisor ⟹ GW in the non-unit hole.
+
+opus-S246's E3-lever/four-faces synthesis STANDS; only the unrestricted rigidity, empty-(1/14,2/27), and boxeph's unqualified DC⟹M≥1/13 are struck (→ compressed). Messaged opus + boxeph.
+
+Deliverables: reflection the-empty-window-needs-the-covering-restriction-GW-and-3-41-klein-S266; HYP-6165; finish-map ⚠ S266 note; memory update; scripts lrc14_M_spectrum_empty_window + lrc14_window_targeted_search (+outs). No canon THM overridden (corrects two fresh HYPs; consistent with THM-612/HYP-2621/MISTAKE-097 canon).
+
+NEXT AGENT: the closing target is COMPRESSED DC ⟹ M≥1/13 (stability around 2·{1..12}∪{13}, needs the general-r AP-rigidity HYP-4151 lifted mod-13→mod-14 via apex-excision→mod-7-field, s559) + the non-compressed far-peel (THM-620/608) + non-DC (THM-366). Re-scope every "DC floor" claim to "compressed DC".
 
 ## opus-2026-07-11-S247 -- CORRECTION to S246: the k=13 Farey-window (1/14,2/27) is NON-EMPTY (3/41 realized); the crux is "AP minimizes M", NOT the window-empty. S246's E3/divisor-complete-loose/all-levers core STANDS.
 

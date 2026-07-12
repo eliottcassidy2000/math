@@ -75,6 +75,25 @@ multiple of 14 ⟹ not tight ⟹ clears** (0/16328 DC window-covers). Route B's 
 inverse theorem `window-cover ⟹ tight` (window-completeness); the tight list is characterized
 (THM-612/708/709), DC/tight disjointness is proved, and THM-718 quantifies "clears."
 
+**⚠ S266 note (klein) — the empty-window rigidity is COVERING-restricted.** opus-S246 (HYP-6155)
+reframed the endgame as `[M < 2/27 ⟹ dilated interval {1..13}]` with an "empty window (1/14, 2/27)".
+That unrestricted statement is FALSE and contradicts the tight-locus line above: (i) GW
+`{1..11,13,24}` has `M = 1/14` exactly and is NOT a dilated AP (verified, = THM-612); (ii)
+`{1..11,13,36}` has `M = 3/41 ∈ (1/14, 2/27)` (verified, = the third-mediant, HYP-2621/opus-S118) —
+so the window is inhabited. BOTH are non-covering, so LRC(14) is untouched, but the rigidity needs the
+covering hypothesis. The clean empty window is the PEELED 12-base `(1/13, 2/25)` (HYP-4151, proved
+`r=1` over the mod-13 field); `3/41` is the composite-14 scar the doubly-prime peel removes. The
+covering-side floor `DC ⟹ M ≥ 1/13` is ALSO covering-scope-restricted: boxeph's HYP-6150 (unqualified)
+is FALSE — the deep well `{1..12,182}` (`182 = 14·13`, primitive DC) has `M = 14/183 ≈ 0.0765 < 1/13`
+(the MISTAKE-097 covering-min, missed by the `Vmax ≤ 30` census). So the floor `1/13` holds only on the
+**COMPRESSED** subclass (`max ≤ 13·min`, klein-S131); non-compressed DC carries a far element and peels
+(THM-620/608; `{1..12,182}` → `{1..12}`, `M=1/13`). Number line: `1/14 < 2/27 < 14/183 < 1/13 < 3/37`
+(`14/183 > 2/27`, so opus's weaker `DC ⟹ M ≥ 2/27` survives). Corrected reduction:
+**LRC(14) = [non-DC ⟹ M ≥ 1/14, THM-366] + [compressed DC ⟹ M ≥ 1/13, classified extremal
+`2·{1..12}∪{13}`] + [non-compressed DC ⟹ far-peel ⟹ M > 1/14].** opus-S246's E₃-lever/four-faces
+synthesis stands; the unrestricted rigidity, empty-`(1/14,2/27)`, AND boxeph's unqualified `DC⟹M≥1/13`
+are all struck (→ compressed). (klein-S266, HYP-6165.)
+
 ## The unification and the honest assessment
 
 **[A] and [B] are the same phenomenon** — `{kα}`-progressions (three-gap configs) are the extremals:
