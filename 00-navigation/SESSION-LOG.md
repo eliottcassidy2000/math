@@ -17,6 +17,55 @@ NET: the additive lever is E3; the clean-ruler residual is loose (certificate no
 FILES: lrc14_E3_farey_window_synthesis_opus_S246.py (+.out); reflection the-additive-lever-is-E3-and-all-levers-are-the-farey-window-rigidity-opus-S246; HYP-6155. -> LEM-015, opus-S181/S182/S239/S242/S245, HYP-4306/4151.
 
 ---
+## boxeph-2026-07-12-S20 -- THE BOUNDED-DIAMETER FINITE CHECK EXECUTED to Vmax <= 30 (closes: all 10.97M primitive DC clear at q <= 39); the DC M-FLOOR FALLS 1/12 -> 1/13 (MISTAKE-141, box artifact) and MATCHES the compressed stratum; the "DC => M >= 1/13" conjecture named (HYP-6150)
+
+Prompt (owner): spend another similar session on the open LRC 14 math.
+
+Picked the un-owned finite complement (kps HYP-6120 / mac-mini cont.48(b) / death-star-S14 architecture:
+the bounded-diameter finite check, executed only to Vmax <= 24 before today). One-pass exhaustive census
+of ALL primitive divisor-complete 13-subsets of [1..30] (C(30,13) = 119.8M raw, 3 workers, ~25 min),
+bucketed by Vmax; validation stratum reproduced kps cont.42 EXACTLY (6084 families, worst 25, 13 hard).
+
+**(1) THE CHECK CLOSES THROUGH 30.** Every one of the 10,971,807 primitive DC families clears at a
+non-14 modulus q <= 39 (zero failures to q <= 60) => M > 1/14 for all by band-edge (opus-S235). Worst
+min-clear per stratum: 25 (Vmax 20) -> 27 (24) -> 32 (25) -> 34 (26) -> 37 (27) -> 39 (28,30). The
+window law calibrates to worst ~ Vmax + 9..11 (slope-1 linear growth; blockers = near-interval
+two-block shapes {1,2,3}+{21..30} etc. = the LEM-010 corner) -- consistent with the unbounded-window
+theorem, now with the executable horizon quantified.
+
+**(2) THE DC M-FLOOR FALLS (MISTAKE-141).** The hard tail (min-clear >= 25; 110,077 families) was
+swept with the capped exact evaluator (clearing at q <= 24 forces M >= 1/12, so the floor census is
+complete): exactly TWO families dip below 1/12 -- {2,3,5,8,9,11,12,13,14,15,17,20,23} (Vmax 23,
+8-term step-3 AP core, M = 3/37 = 0.0811) and **2*{1..12} u {13}** (Vmax 26, the MINIMAL compressed
+near-dilate, **M = 1/13 exactly**, detuned bracket collapse). Both independently re-verified. kps
+cont.41's floor 1/12 was a Vmax <= 22 box artifact (the extremals enter at 23 and 26 = structural
+thresholds); third box-artifact instance of the MISTAKE-138/140 genus -- extend past STRUCTURAL entry
+points (2*12+2 = 26) before declaring floors. Bounded floor now = 1/13 = death-star's unbounded
+compressed floor: ONE number at every scale.
+
+**(3) THE CONJECTURE (new named target).** Divisor-complete ==> M >= 1/13, equality exactly on the
+compressed near-dilate class. Evidence: this 11M census + death-star's j-series exhaustive + my S19
+adversarial batteries -- nothing DC has ever been seen below 1/13. If proved, LRC(14) closes with a
+STRICTLY STRONGER constant on the hard class ([non-DC => >= 1/14, THM-366] + [DC => >= 1/13]) and
+classified extremals -- a more tractable shape than the bare > 1/14 (stability around a known extremal).
+
+**(4) MINING NOTE (j=7 boundary, for death-star):** the u-escape union bound saturates at j = 7
+(1/(2*7) = 1/14) only when the 7 forbidden u-intervals tile [0,1) EXACTLY -- which is the k=7
+perfect-net / zero-slack rigidity that THM-689 (dead-zone lemma) already classified on the measure
+side. The j = 7 stratum may close by transporting the existing dead-zone machinery to the u-torus.
+
+Honest scope: the census-vs-structure handshake V0 still does not exist (THM-721's threshold is
+(L,B)-based; the incoherent stratum has none) -- the check extends the verified base and calibrates
+the law; the glue awaits the incoherent-stratum theorem (klein's signed-OffLine lane).
+
+Files: lrc14_bounded_diameter_census_boxeph_S20.py (+ .out), MISTAKE-141, HYP-6150 (INDEX). Spread-core
+Vmax<=24 extension running at session close (S19 window [1/13, 2/25] stands meanwhile).
+
+NEXT: (a) prove DC => M >= 1/13 on the compressed + near-AP corners first (the two known sub-1/12
+shapes; detuned dispatch already gives the compressed case -- the equality classification is the new
+content); (b) push the census to Vmax <= 32-34 (3-worker pure Python ~2-4h; or port the hot loop);
+(c) j=7 via dead-zone transport; (d) the 3/37 family's step-3-AP structure deserves the three-gap lens
+(it is a NEW near-floor shape, neither two-block nor near-dilate).
 
 ## mac-mini-2026-07-09-S65 (cont.52, 2026-07-12) -- COMBINATORIAL: FULL BUNCH(consec_k) CLOSED FORM via parity-split p5. Extending cont.51's p6=1/(7(k-1)): p5(consec_k) = 5/(14(k-1)) [even k] / (5k-9)/(14(k-1)(k-2)) [odd k] -- PARITY-SPLIT, the three-gap/Ostrowski signature (verified k=7..17). Hence klein's BUNCH = p5+3p6 at consec = 11/(14(k-1)) [even] / (11k-21)/(14(k-1)(k-2)) [odd] EXACTLY (verified k=7..17; BUNCH(consec_12)=1/14, (13)=61/924). So the POS-pole BUNCH value (compared vs mod-7 pole's 18/(7k-6) in klein's two-pole decomposition) is a CLOSED RATIONAL in k -- no computation. p4 and below have more three-gap intervals (complex); p5/p6 are the clean extreme-bunching tail. THM-717 addendum. Concurrent: boxeph S19 (near-dilate 1/13 floor exhaustive, 0/6038 below); opus S245 (pigeonhole 44->48%).
 

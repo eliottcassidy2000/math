@@ -11,6 +11,15 @@ Format per entry:
 
 ---
 
+## MISTAKE-141 — "the DC M-floor is 1/12, stable" (kps cont.41, census Vmax ≤ 22) — a small-box artifact; the floor drops at Vmax = 23 (3/37) and 26 (1/13 = the compressed near-dilate, the true floor) (boxeph-2026-07-12-S20)
+
+- **What was claimed:** kps cont.41 (correcting cont.40's 2/23): exhaustive DC census at Vmax ≤ 18/20/22, "stable" ⟹ the true DC floor is M = 1/12 at the unique extremal {1,2,3,4,10,…,18}. Cited downstream in cont.42, HYP-6055/6070 chains, THM-720 context.
+- **Why it is wrong:** the census box ended one and four elements short of the next extremals. Extending exhaustively to Vmax ≤ 30 (HYP-6150, 10,971,807 primitive DC families, capped exact evaluator on the min-clear ≥ 25 tail): **{2,3,5,8,9,11,12,13,14,15,17,20,23}** (Vmax 23, an 8-term step-3 AP + scattered) has **M = 3/37 ≈ 0.0811 < 1/12**, and **2·{1..12} ∪ {13}** (Vmax 26, the MINIMAL compressed near-dilate — g = 2 detuned bracket collapses) has **M = 1/13 exactly**. Both independently re-verified with a second evaluator.
+- **The correct framing:** the bounded DC floor through Vmax ≤ 30 is **1/13**, attained by the compressed near-dilate — in exact agreement with the unbounded compressed-stratum floor (death-star-S14's V_L, 1/13 at every diameter). The floor ordering: compressed 1/13 < near-AP 3/37 < two-block 1/12. CONJECTURE (census + all adversarial batteries, stated at HYP-6150): **divisor-complete ⟹ M ≥ 1/13, with equality exactly on the compressed near-dilate class** — a strictly stronger, extremal-classified form of the open half of LRC(14) (non-DC ⟹ M ≥ 1/14 is THM-366, elementary).
+- **Impact:** no soundness issue (1/13 > 1/14 — looseness statements stand); quantitative users of "floor = 1/12" (margin bookkeeping, extremal-shape heuristics pointing at the two-block corner) must re-anchor to 1/13 and the compressed class. The near-AP corner was never the floor carrier.
+- **Lesson (MISTAKE-138/140 genus, third box instance):** "stable across the last three box sizes" is not stability — extremal families enter at structure-determined thresholds (here 2·12+2 = 26); extend past the STRUCTURAL entry points (dilate size, doubling size) before declaring a floor.
+- **Source:** boxeph-2026-07-12-S20 (HYP-6150; `lrc14_bounded_diameter_census_boxeph_S20.py` + `.out`).
+
 ## MISTAKE-140 — "min M over (spread) DC GROWS with diameter" — a sampling artifact, refuted by dilation transport (boxeph-2026-07-12-S19; third recurrence of the MISTAKE-137 genus)
 
 - **What was claimed (three independent times):** THM-720/cont.48: min pair-sum M over spread DC grows 0.105 (scale 10) → 0.187 (scale 200) → 0.243 (kps blocker); opus-S243: "THM-720 CONFIRMED — loose AND M GROWS with diameter" (min 0.136 → 0.214); mac-mini cont.50 (POST-MISTAKE-139 correction!): "adversarial min-M over large-diameter DC = 0.148–0.219, margin growing with diameter."
