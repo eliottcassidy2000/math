@@ -22,3 +22,15 @@ cloud (max Var per μ). Exact frontier (k=9, 434 families):
 Consec-shift J-curve: 5.199, **5.062**, 5.392, 5.607, 5.573, … (unique min at shift 1).
 Dilation g·E′ ≡ E′ in N-distribution (g = 2,3,5 exact). No deformation of {1..9} beats 4465/882
 (0/16). Files: lrc14_{pareto_cloud, frontier_1param, gcd7_reduction}_macmini_S65cont38.py (+ .out).
+
+## Addendum (cont.38 slice 3): consec is an ISOLATED SADDLE, both attack vectors fail
+Adversarial hill-climbs (600 moves × 14 runs, wide box):
+- **LOW-μ vector**: families with μ down to 1.4325 (BELOW consec's 1.446) all have J ≥ 6.15 —
+  lowering μ requires spread coverage that drops Var by MORE than μ(7−μ) drops. The
+  "low-μ AND high-Var" corner is EMPTY.
+- **DIRECT-J vector**: best hill-climb found J = 5.3916 (= cshift2, and its dilate 2·cshift2
+  = {4,6,…,20} found independently — re-confirming dilation-invariance). Nothing beat 5.0624.
+Global best over all runs: exactly cshift1 = {1..9}. Consec does NOT minimize μ and does NOT
+maximize Var globally — it is the isolated saddle where the μ(7−μ)−Var tradeoff is optimized.
+This is why the extremal resisted every monotone/compression argument (cont.29): it is a
+tradeoff optimum, not an endpoint. Files: lrc14_lowmu_highvar_macmini_S65cont38.py (+ .out).
