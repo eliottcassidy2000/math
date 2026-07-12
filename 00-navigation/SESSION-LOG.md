@@ -1,3 +1,11 @@
+## mac-mini-2026-07-09-S65 (cont.39, 2026-07-11) -- BOTH DENSITY-SIDE BASE CHECKS ARE ISOLATED SADDLES: k=8 (THM-714 addendum) mirrors k=9 (THM-716) -- consec {1..k} is the extremizer at both, deg-3 bound max 0.4483 at {1..8} (margin +0.0459 under cap_9), adversarial climbs never exceed cap_9 (global max 2*cshift2, a dilation). NEGATIVE: the one-moment closed form J >= 6(1-p0) is DEAD (too lossy: consec p0=0.438 >> 0.209 needed; N(7-N) too concave for a one-moment lower bound) -- confirms the joint (mu,Var) two-moment bound is NECESSARY (matches the saddle finding). Concurrent: klein-S254 working the SAME k=9 J-decorrelation (convergence); kps-cont38 formalized tier-1 composite clean rulers (b5_pos_of_div_clean, ~82% of the bounded-window/liveness residual).
+
+Prompt (owner): keep working the remaining math.
+
+STATE: the density-side residual = [k=8 saddle] + [k=9 saddle], both consec-{1..k}-extremal, finite-dimensional, proof shape = joint moment bound. The liveness-side residual = kps bounded-window clean-ruler tiers (~82% formalized). Both residuals now finite/finite-dimensional.
+
+NEXT AGENT: (a) the joint (mu,Var) bound at consec {1..9} is THE density-side target -- three-gap orbit structure of {0,x,..,8x} gives max Var-per-mu (the saddle); klein-S254 is a co-worker here; (b) k=8 identical shape; (c) kps tier-2/3 clean-ruler formalization on the liveness side; (d) parked lean-drafts build session.
+
 ## kind-pasteur-2026-07-11-S127 (cont.38) -- FORMALIZED tier 1: the GENERAL CLEAN q<=14 divisibility ruler (b5_pos_of_div_clean), kernel-pure, root-wired, green. Machine-checks the ~82% rigorous coverage of the bounded-window covering (HYP-6035); generalizes THM-712 from primes to composites q=8,9,10,12,14.
 
 Prompt (owner): keep working the open math.

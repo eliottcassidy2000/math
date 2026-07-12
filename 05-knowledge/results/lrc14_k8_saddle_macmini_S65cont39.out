@@ -1,0 +1,26 @@
+k=8: optimal deg-3 majorant bound vs cap_9=0.4943 (closes iff bound<=cap9)
+consec-shift curve (want unique MAX at shift 1 = {1..8}, the hardest):
+  cshift0 {0..7}: bound=0.4380  margin +0.0563
+  cshift1 {1..8}: bound=0.4483  margin +0.0459
+  cshift2 {2..9}: bound=0.4198  margin +0.0745
+  cshift3 {3..10}: bound=0.3973  margin +0.0970
+  cshift4 {4..11}: bound=0.3878  margin +0.1065
+  cshift5 {5..12}: bound=0.3822  margin +0.1120
+  cshift6 {6..13}: bound=0.3896  margin +0.1047
+  cshift7 {7..14}: bound=0.3905  margin +0.1038
+  cshift8 {8..15}: bound=0.3939  margin +0.1003
+  cshift9 {9..16}: bound=0.3892  margin +0.1051
+  => hardest (max bound) at shift 1, bound=0.4483
+
+adversarial MAX-bound hill-climbs (break k=8 if bound > cap_9):
+  run 0: bound=0.2904  ok at [1, 2, 4, 6, 7, 10, 12, 22]
+  run 1: bound=0.4198  ok at [4, 6, 8, 10, 12, 14, 16, 18]
+  run 2: bound=0.3065  ok at [6, 12, 14, 15, 16, 18, 22, 24]
+  run 3: bound=0.2363  ok at [6, 9, 10, 11, 14, 15, 19, 29]
+  run 4: bound=0.2518  ok at [0, 2, 3, 6, 9, 15, 18, 21]
+  run 5: bound=0.2202  ok at [1, 5, 6, 7, 9, 23, 24, 25]
+  run 6: bound=0.2347  ok at [1, 2, 3, 7, 11, 12, 22, 27]
+  run 7: bound=0.2420  ok at [0, 4, 7, 11, 14, 18, 21, 25]
+
+GLOBAL max bound: 0.4198 at [4, 6, 8, 10, 12, 14, 16, 18]  (cap_9=0.4943)
+k=8 SADDLE CONFIRMED (consec-max, nothing exceeds cap_9): True, margin +0.0745

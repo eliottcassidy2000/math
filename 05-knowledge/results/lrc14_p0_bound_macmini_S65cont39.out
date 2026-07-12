@@ -1,0 +1,18 @@
+threshold J>=432/91=4.7473; simple bound needs p0<=19/91=0.2088
+family                               p0   6(1-p0)        J  bound-closes?
+  consec {1..9}                  0.4382    3.3707   5.0624  *** NO (p0=0.4382>0.2088)
+  consec {0..8}                  0.4162    3.5031   5.1990  *** NO (p0=0.4162>0.2088)
+  mod7                           0.3678    3.7930   5.7670  *** NO (p0=0.3678>0.2088)
+
+MAX-p0 hill-climbs (the families that BREAK the simple bound if p0>19/91):
+  run 0: p0=0.2186 J=6.8599  BOUND BREAKS (p0>0.2088) but real J OK
+  run 1: p0=0.2256 J=6.9005  BOUND BREAKS (p0>0.2088) but real J OK
+  run 2: p0=0.2208 J=6.6170  BOUND BREAKS (p0>0.2088) but real J OK
+  run 3: p0=0.1661 J=7.2147  bound holds
+  run 4: p0=0.3778 J=5.6042  BOUND BREAKS (p0>0.2088) but real J OK
+  run 5: p0=0.2052 J=7.0255  bound holds
+  run 6: p0=0.2217 J=6.9515  BOUND BREAKS (p0>0.2088) but real J OK
+  run 7: p0=0.1604 J=7.4442  bound holds
+
+MAX p0 found: 13614968/36038079=0.3778 at [16, 17, 18, 19, 20, 21, 22, 23, 24]
+simple bound p0<=19/91 holds uniformly: False  (5/8 runs exceed)

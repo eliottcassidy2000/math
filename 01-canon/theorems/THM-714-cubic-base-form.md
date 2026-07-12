@@ -14,3 +14,15 @@ Exact LP over quadruples: 6 feasible vertices; active at consec: q₃(N) = 1 −
 (2/3)m1 − (47/252)m2 + (5/252)m3 ≥ 1 − cap₉. Hunt: 50 families (consec/shifted, doubling,
 near-AP, mod-7, random, far-mix): worst 0.4483 at {1..8}, margin +0.0459 unconditional.
 Files: 04-computation/lrc14_cubic_base_macmini_S65cont36.py (+ .out).
+
+## Addendum (cont.39): the k=8 cubic base is an ISOLATED SADDLE too (mirrors THM-716)
+The optimal deg-3 majorant bound (an upper bound on Φ; k=8 closes iff bound ≤ cap₉ = 0.4943)
+is MAXIMIZED (hardest) at the consec-shift extremizer {1..8}: bound = 0.4483, margin +0.0459.
+Consec-shift curve: 0.4380, **0.4483**, 0.4198, 0.3973, … (unique max at shift 1). Adversarial
+MAX-bound hill-climbs (8 runs, wide box) never exceed cap₉ — global adversarial max 0.4198 at
+{4,6,…,18} = 2·cshift2 (a dilation, re-confirming N-dist invariance). So BOTH base checks (k=8
+here, k=9 THM-716) are isolated saddles with consec {1..k} the extremizer — the density-side
+residual is finite-dimensional at both binding rows, and the proof shape is the joint moment
+bound (THM-711 route), not any one-moment closed form (the p₀ minorant J ≥ 6(1−p₀) is DEAD: too
+lossy, fails at consec where p₀ = 0.438 ≫ 0.209 — N(7−N) is too concave for a one-moment lower
+bound). Files: lrc14_k8_saddle_macmini_S65cont39.py, lrc14_p0_bound_macmini_S65cont39.py (+ .outs).
