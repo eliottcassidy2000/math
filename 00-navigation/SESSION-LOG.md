@@ -1,3 +1,21 @@
+## opus-2026-07-11-S249 -- the LRC(14) tight locus (M=1/14) is EXACTLY TWO mod-14 residue patterns, confined to near-AP
+
+Prompt (owner): work another similar session.
+
+Sharpened the CLASSIFICATION half of S248's closing target [M<3/41 => family in {AP, V*}].
+
+(1) EXACTLY TWO canonical mod-14 residue patterns over ~1100 tight (M=1/14) families (three seeds, near-AP perturbations of AP and V*, 1- and 2-element): P1=[1..13] (full residue system, AP-type, no collision); P2=[1,2,2,3,4,5,6,7,9,10,11,12,13] (ONE collision: residue 8 vacated, 2 doubled -- V*-type; V* maps here under u=3). P2 = AP with residue 8 doubled (2*8=16=2 mod 14): vacates 8, collides at 2, PRESERVES the binding pair {1,13} (pins min=1/14 at t=1/14). ONLY nontrivial tight detuning. EXISTS ONLY because 14=2*7 composite (doubling map has kernel r~r+7); at prime k=12 the doubling is a bijection => ONE pattern. P2 is the composite-14 signature in sharpest form.
+
+(2) NEAR-AP CONFINEMENT: wide random search (22000 families, speeds to 110) finds ZERO tight families. Tightness requires near-AP small-diameter structure. The minimizer set is tiny+structured -- the loneliness-side counterpart to divisor-complete families being LOOSE (S246).
+
+(3) The 3/41 SHELL (next rung, bottom of the empty gap) is the ADJACENT sibling: one-collision doubling-to-2 but with a DIFFERENT vacated residue (vacate 10 => M=3/41 loose, vs vacate 8 => tight 1/14). WHICH residue the doubling vacates controls M at the spectrum bottom.
+
+NET: the classification half is now a finite explicit mod-14 statement [M=1/14 => residues P1 or P2, family near-AP]. With S248's empty gap (1/14,3/41): the bottom of the k=13 M-spectrum = two minimizer patterns + empty gap + vacate-10 sibling at 3/41. Minimizers pinned as tightly as proved prime k=12 + exactly one extra pattern (known reason = the composite doubling). Open: gap-emptiness + promotion to proof.
+
+FILES: reflection the-tight-locus-is-exactly-two-mod14-patterns-confined-to-near-AP-opus-S249; lrc14_tight_locus_two_patterns_opus_S249.py(+.out); HYP-6195. -> opus-S248/S247, HYP-4151, THM-708, LEM-015.
+
+---
+
 ## mac-mini-2026-07-09-S65 (cont.55, 2026-07-12) -- CONFIRMED the crux value 14/183 via the FAR-ELEMENT FLOOR, independently converging with klein-S267. Over primitive COVERING {1..12,f}: covering forces 182|f (need 13|f AND 14|f), and M({1..12,182m}) = 14m/(182m+1) = the Ostrowski ladder in m, INCREASING, MIN at m=1 => 14/183 (deep well). Dense scan f=13..400: min = 14/183 at f=182, nothing lower. klein-S267 same via {1..12,13k}, covering<=>14|k, min k=14 => 14/183 = n/Phi6(n) (183=13*14+1); resolved kps 1/12 + boxeph 1/13 + deep well 14/183 as NESTED box artifacts (MISTAKE-141 thrice), reconfirmed 14/183 global covering-min. So the AP (rung k=1, non-covering) and deep well (first covering rung k=14) are the Ostrowski-ladder ends; covering FORCES the family off the tight rung to the first covering rung. The crux: no primitive covering family beats the first covering Ostrowski rung 14/183. Added to cont.54 Farey reflection.
 
 Prompt (owner): another session.

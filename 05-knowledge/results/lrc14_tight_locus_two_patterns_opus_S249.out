@@ -1,0 +1,4 @@
+tight (M=1/14) families: 257; DISTINCT canonical mod-14 patterns: 2
+  [1, 2, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13] x129 (missing [8], doubled [2])
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] x128 (missing [], doubled [])
+=> EXACTLY 2 patterns: full {1..13} (AP) and vacate-8/double-2 (V*). Composite-14 signature.
