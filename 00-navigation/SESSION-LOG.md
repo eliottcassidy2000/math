@@ -49,6 +49,19 @@ Artifacts: reflection the-worst-runner1-body-1-11-13-84-is-the-A-B-crack-flag-fo
 lrc14_runner1_crack_kps_S127.py/out.
 
 Next: opus refines Argument A (multi-runner carve) for the crack body; the structural + Lean skeleton is complete.
+## klein-2026-07-13-S285 -- attack the density Weyl bound: it IS a RELATION-LATTICE COSET sum — literally the same lattice as covering ε_v and THM-538/MISTAKE-078 (one lattice, three cosets); three-gap arc structure washes out for spread
+
+Prompt (owner): attack the density Weyl bound (the finish-map's shortest path).
+
+FRESH ANGLE 1 (three-gap) — FAILED: each offset e' puts "in sector s" = e' equal arcs (an AP), so R_s-arc boundaries are a union of 2k APs; hoped the arc WIDTHS take O(k) distinct values (⟹ width-classes with AP midpoints ⟹ clean cancellation). Measured: MODERATE clusters ARE structured (diam 90: 9 distinct widths/21 arcs, top ×9) but SPREAD are GENERIC (diam 199: 51/58 distinct) — structure washes out EXACTLY in the tail regime the bound is for. Three-gap does not close it.
+
+THE REAL IDENTITY (the finding): f=1_{R_s} factors through the sector-occupancy of (frac(e'x))_{e'∈E'} ⟹ f̂(ℓw)=Σ_{a:a·E'=ℓw}Ĝ(a) — a sum of Ĝ over the ℓw-COSET of the relation lattice L={a:a·E'=0} (rank k−1). w∉E', e'≤D'<d ⟹ every a in the coset has |a|₁≥ℓw/D' (high-order): the two-scale decorrelation in Fourier/relation-lattice form.
+
+UNIFICATION SHARPENED (stronger than S284/S279 — now LITERAL): covering's ε_v=Σ_{h≠0}b_h ĝ(−hv) is Σ Ĝ over the ZERO-coset L; the fleet's THM-538/MISTAKE-078 support-6 kernel corr(E)=Σ_c D_7(c)S_c(E) is the SAME relation-lattice sum. So BOTH LRC(14) routes + the old support-6 kernel = sums of Ĝ over ONE lattice L: covering zero-coset, density ℓw-coset. This is WHY every elementary attack fails identically on both sides (klein-S281–283, opus-S266) — it's the same conditionally-convergent lattice sum (MISTAKE-078: no Minkowski point-count closes it; the convergent form is the finite x-cell integral HYP-2645 = the Q_s/ε_v we keep landing on). DENSITY's slack (any ε suffices) is a COSET advantage: the ℓw-coset is bounded away from 0 ⟹ uniformly high-order terms, which the covering zero-coset lacks.
+
+NET: the density Weyl bound is pinned as the known hard relation-lattice coset sum, unifying it with the covering residual and the support-6 kernel under one lattice (three cosets). This does not prove it — it identifies it as the fleet's central conditionally-convergent object. Remaining = genuine harmonic analysis on the coset sum (Weyl/van der Corput or Gowers-inverse), the same estimate covering needs on the zero-coset. (kps cont.69 is on that zero-coset L2 discrepancy — same object.)
+
+FILES: reflection the-density-weyl-bound-IS-a-relation-lattice-coset-sum-literally-covering-plus-thm538-klein-S285; HYP-6455; lrc14_arc_threegap_klein_S285.py (+out); finish-map S285-sharpened. -> THM-538, MISTAKE-078, HYP-2645, opus-S262/266, kps cont.69.
 
 ---
 

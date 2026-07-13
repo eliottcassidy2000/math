@@ -1,0 +1,17 @@
+three-gap check: # DISTINCT R_s-arc widths (rounded) vs # arcs; are widths few?
+========================================================================
+  E'                            s #arcs    #distinct-w top-3 widths x1e4
+  [0, 1, 2, 3, 4, 5, 6]         1     3              3 142.9x1 71.4x1 238.1x1
+  [0, 1, 2, 3, 4, 5, 6]         3     4              4 95.2x1 71.4x1 47.6x1
+  [0, 3, 7, 15, 30, 55, 90]     1    21              9 15.9x9 10.1x3 1.4x2
+  [0, 3, 7, 15, 30, 55, 90]     3    23              9 10.1x5 15.9x5 26.0x4
+  [0, 10, 27, 55, 99, 150, 199]  1    58             51 7.2x4 0.6x3 3.5x2
+  [0, 10, 27, 55, 99, 150, 199]  3    56             45 7.2x3 2.9x3 0.9x2
+------------------------------------------------------------------------
+  If #distinct-w is SMALL (three-gap-like): the width-weighted Weyl sum groups into few classes,
+  each an AP of midpoints => structured cancellation (NEW, beyond large-sieve). If MANY: generic.
+
+  midpoint GAPS for [0, 3, 7, 15, 30, 55, 90] s=1: #distinct-gap=19, top-3: [(12698, 2), (2072, 1), (2309, 1)]
+  (three-gap theorem: an AP of points has <=3 distinct gaps. Few gaps => midpoints structured.)
+
+done.

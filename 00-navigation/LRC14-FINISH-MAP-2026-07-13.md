@@ -107,6 +107,15 @@ with the signal in the higher-order equidistribution. The two differ in *what th
 
 So LRC(14) is one equidistribution cancellation, and Route A is the softer face of it.
 
+**⚠ S285 sharpening (klein) — it is literally ONE lattice, three cosets.** The unification is exact, not
+merely "same kind": both faces are sums of `Ĝ(a)` over the speed **relation lattice** `L={a : a·E'=0}`.
+Density's `f̂(ℓw)=Σ_{a·E'=ℓw}Ĝ(a)` is the **`ℓw`-coset**; covering's `ε_v=Σ_{h≠0}b_hĝ(−hv)` is the
+**zero-coset** `L`; the old support-6 kernel (THM-538, MISTAKE-078) is the **same** relation-lattice sum
+(the conditionally-convergent one — no Minkowski count closes it; convergent form = the finite `x`-cell
+integral HYP-2645 = the `Q_s`/`ε_v` we keep landing on). Density's slack is a **coset advantage**: the
+`ℓw`-coset is bounded away from `0`, so its terms are uniformly high-order — which the covering zero-coset
+lacks. (klein-S285, HYP-6455.)
+
 ---
 
 ## 5. What is PROVED vs OPEN — the ledger
