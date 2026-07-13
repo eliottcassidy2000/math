@@ -1,3 +1,45 @@
+## death-star-2026-07-12-S16 -- the mixed-slope j>=8 stratum REDUCES to perturbed tight dilates and CLOSES at B<=2 by the clean-q game (census 70k+ adversarial patterns, all >= 1/12; THM-723, HYP-6295); j inverts (j=8 is the hard end); end-to-end DC witness verified
+
+Prompt (owner): work the mixed-slope-at-every-admissible-scale stratum; pull frequently; update targets as needed.
+
+(1) REDUCTION (THM-723 Part 1, proved mod cited canon): stratum-(3) family at an admissible scale
+(L>91B; step 3 needs L>574B) has lift multiset K with: zero-lift -> tiny-runner peel (flagged);
+<=12 distinct -> LRC(<=13)+atom LOOSE; M(K)>=3/41 -> atom LOOSE; else the EMPTY WINDOW (1/14,3/41)
+[opus-S248, verified-status] forces K TIGHT in {AP, V*={1..11,13,24}} + mod-14 shifts (covering K
+excluded by klein's ILP covering-min 14/183 > 3/41 for heights <=182; k_max>182 recurses, height
+shrinks 91x/step). So the stratum = L*K_tight + b, j>=8 small nonzero offsets -- inhabited by
+primitive DC families.
+
+(2) THE CLEAN-q GAME (new): at s=a/q pure margin >= floor(q/6)/q via grid-LRC(6) mod q (<=5 pure
+lifts); B=1 impure vacancy: j centers on q slots, q>j => 2-slot gap => gammaF >= 1/q; so any CLEAN
+q in (j,13] certifies reach2 >= 1/13 => M(V) >= 1/13 - 1/(2L) > 1/14 for L>91. Blocking all of
+(j,13] forces pure ⊇ {j+1..13}: finitely many blocker corners (unique maximal at j=8:
+pure={9..13}). j=13 no-pure end COLLAPSES (s=1/2: +-1 centers in {0,1/2}, gamma>=1/4; B<=3 >=1/8)
+-- the union-bound ordering INVERTS: j=8 (max blocker budget) is the hard end.
+
+(3) CENSUS (exact Fractions, certified lower bounds): AP 34941 + V* 35161 patterns (ALL 2379+2379
+pure supports x adversarial slot-filling + random signs, cap 1/12): ZERO below 1/12; per-j minima
+1/10,1/11,1/12,1/12,1/12. Blocker corner {9..13} exhaustive 2^7 signs: min 3/11 (s=32/33). Mod-14
+shifted tight variants (14 lifts): zero below 1/13. B=2 blocker sweep: min 1/12 (pure={3,4,5} pins
+q=6). END-TO-END: worst profile at L=360360 -> primitive DC, witness t=(185639+32/33)/360360 EXACT
+margin 3243239/11891880 ~ 0.2727 > 1/14 (pipeline = margin_uescape_j6 shape, Lean-ready).
+
+(4) NET: compressed lane now reads j<=7 closed (THM-721 P6) + equal-slope j<=12 closed + mixed-slope
+j in [8,13] closed at B<=2 (census; proof path = 2 finite decidable lemmas + corner witnesses).
+Large-diameter half rests on [no-admissible-scale families = pair-sum/Parseval domain] + [finite
+checks]. Pulled/rebased 4x during session (mac-mini S68, klein S272, boxeph S21 integrated;
+canon UPDATE consumed: empty window is (1/14,3/41) not (1/14,2/27) -- improved my thresholds).
+
+HOUSEKEEPING: HYP-6270 double-claimed -- I hold it by first-push (4d0155dc3 predates klein-S272
+e4bf1c1ca and opus-S254); @klein @opus please renumber (6300+ free). I claimed HYP-6295 + THM-723.
+
+FILES: THM-723; HYP-6295; lrc14_mixed_slope_j8plus_census_deathstar_S16.py + 2 .out; reflection
+the-hard-end-of-a-stratum-is-where-its-blockers-live; backlog lead updated (S15 lead -> MAJOR
+PROGRESS). NEXT: (i) B=2..5 full support census; (ii) the two finite lemmas as Lean decide's +
+B=1 theorem assembly in LRCUEscape style; (iii) the no-admissible-scale bulk is the remaining
+large-diameter content (Parseval/pair-sum home turf).
+
+---
 ## mac-mini-2026-07-12-S68 -- opus-S253's LARGE-S TRADE is a MIRAGE: single-killer covering-min floor 14/183 is robust (deep well UNIQUE min); dilated cores clear at a shallow base
 
 Prompt (owner): keep working the critical math for another session.

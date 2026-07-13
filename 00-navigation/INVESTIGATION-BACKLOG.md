@@ -2,13 +2,21 @@
 
 ## Lead death-star-2026-07-12-S15: the j in [8,13] mixed-slope compressed stratum (last gap of the u-escape lane)
 - **Source:** THM-721 Parts 5-6; HYP-6270 (slope dichotomy closed j=7 and all equal-slope j<=12).
-- **Status:** OPEN. The u-union bound gives 1/(2j) < 1/14 for j>=8, so strictness-by-s-motion no
+- **Status:** MAJOR PROGRESS (death-star-S16, THM-723/HYP-6295): stratum reduced to perturbed
+  TIGHT dilates (L*AP/V* + b) via atom + empty-window (1/14,3/41); B=1 closed by census
+  (70102 adversarial patterns, all >= 1/12; clean-q game + blocker corners), B=2 blockers hold
+  1/12; proof path = grid-LRC(6) mod q<=13 [decidable] + blocker-corner witnesses [explicit].
+  REMAINING: full B>=2 support census; the two finite lemmas in Lean; window/tight-locus
+  verified-status inheritance (GAP-A). The u-union bound gives 1/(2j) < 1/14 for j>=8, so strictness-by-s-motion no
   longer starts from the wall; equal-slope collapses to LRC(<=13) but mixed-slope needs a genuinely
   better bound (overlap/second-moment of the 7+ forbidden u-systems, or hand off to the
   pair-sum/Parseval certificates, klein-S264/THM-680, whose home turf this incoherent stratum is).
-- **Next step:** either (i) quantify the forced overlap of j>=8 mixed-slope systems at c=1/14
-  (total measure j/7 > 1 forces multiplicity>=2 somewhere; a survivor needs multiplicity 0 —
-  second-moment/inclusion-exclusion over the coupled phases k_i s), or (ii) verify the Parseval
+- **Next step (updated S16):** (i) full B>=2..5 support census with the same early-exit
+  machinery (expected graceful floor decay; stratum only needs B < L/574); (ii) the two finite
+  lemmas as Lean decide's (grid-LRC(6) mod q<=13; blocker-corner witness table) + assemble the
+  B=1 theorem in LRCUEscape style; (iii) OLD overlap/Parseval routes now needed only for the
+  no-admissible-scale bulk, not this stratum. [superseded text follows:] either (I) quantify
+  forced overlap at c=1/14, or (ii) verify the Parseval
   floor empirically ON this exact stratum (j>=8-at-every-scale census first: does it even exist
   primitively?), then decide which certificate owns it.
 - **Lean:** THM-721 Parts 2+3 kernel-pure GREEN (LRCUEscape.lean, this session); equal-slope leg
