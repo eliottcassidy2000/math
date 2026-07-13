@@ -1,0 +1,12 @@
+{1..11,13,84}: actual meas(G' cap mid)=0.00536, INDEPENDENT est=0.13479 (ratio 0.040)
+   S_k (co-danger overlaps in middle, |T|=k): 0:0.857 1:1.394 2:0.736 3:0.270 4:0.097 5:0.023
+   partial IE sum_(0..J): +0.857 -0.537 +0.199 -0.071 +0.026 +0.004 +0.005 +0.005
+deep well {1..12,182}: actual meas(G' cap mid)=0.02389, INDEPENDENT est=0.13479 (ratio 0.177)
+   S_k (co-danger overlaps in middle, |T|=k): 0:0.857 1:1.393 2:0.877 3:0.512 4:0.284 5:0.112
+   partial IE sum_(0..J): +0.857 -0.536 +0.341 -0.171 +0.112 +0.000 +0.026 +0.024
+
+READ: if actual << independent (ratio<<1), the smooth runners STRONGLY correlate (near-blanket)
+in the middle -- the reduction is the covering object. If the partial IE sums settle only at
+HIGH order (not order 2), the reduction is MULTI-LINEAR (Gowers), NOT the 1-D THM-729 discrepancy
+=> THM-729's density device does NOT transfer; the covering middle-order needs Gowers (the
+asymmetry THM-729 names). Honest test of whether the autocorrelation bound can be built here.
