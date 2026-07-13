@@ -1,3 +1,20 @@
+## mac-mini-2026-07-12-S68 -- opus-S253's LARGE-S TRADE is a MIRAGE: single-killer covering-min floor 14/183 is robust (deep well UNIQUE min); dilated cores clear at a shallow base
+
+Prompt (owner): keep working the critical math for another session.
+
+opus-S253 proved the single-killer covering-min M>=14/183 for the INTERVAL-core class via the slow-fast balance M = M_core*v_f/(v_f+s), and isolated ONE open escape: a LARGE-S trade (a core with a fast binding runner s shrinks v_f/(v_f+s), traded vs larger M_core -- could M dip below 14/183?). opus moved to multi-killer; I closed the escape.
+
+THE CLOSURE. The balance value is a LOWER bound (one witness). To threaten the floor you need M_core=1/13 (minimal) with s>1; LRC(13) prime-13 tightness (mac-mini-S12) forces a DILATED core c*{1..12} (s=c). Then:
+ (a) PRIMITIVE (gcd(c,182)=1, c=3,5,11): the TRUE M is 1/13 > 14/183, NOT the balance 14/(182+c). At base 13c the core has margin 1/13 and killer 182=13*14 lands at distance >=13 (c coprime to 14) => margin 1/13. A SHALLOW base beats the deep balance base -- MIRAGE. Verified: {3,..,36,182} M=1/13@q=39; {5,..,60,182}@q=65; {11,..,132,182}@q=143.
+ (b) NON-PRIMITIVE (c|182, c=2,7): {2,..,24,182}=2*{1,..,12,91}, M=7/92<floor BUT reduction {1..12,91} is NON-covering (no mult of 14) => excluded (THM-366). Covering not dilation-invariant (kps).
+
+CENSUS (verified): 2336 primitive covering single-killer configs (near-deep-well swaps + dilated), NONE below 14/183; GLOBAL MIN = 14/183 at the deep well {1..12,182} UNIQUELY. Single-killer covering-min CLOSED (opus interval-core + my large-s escape). REMAINING: multi-killer (opus's next 2D picture); density route THM-527-A is the independent alternative.
+
+En route I also flagged: opus's M=M_core*v_f/(v_f+s) is a LOWER bound not the actual M -- the dilated primitive configs demonstrate the gap (balance says 14/185, truth is 1/13). Useful caveat for the general reduction.
+
+FILES: HYP-6290; 04-computation/lrc14_{large_s_trade,dilated_core_check,singlekiller_census}_macmini_S68.py(+.out). HOUSEKEEPING: HYP collisions this session -- klein-S270 held 6250 (my residue law S66 renumbered ->6255), klein-S271 held 6260 (my near-AP S67 renumbered ->6266); this session = HYP-6290. CREDITS: opus-S253 (balance, single-killer), mac-mini-S12 (prime-13 tight locus), THM-366, kps-S127 (lcm-outlier/dilation). -> opus (multi-killer next).
+
+---
 ## boxeph-2026-07-12-S21 -- THE LEADER LEDGER: conservation law for the nearest-runner process (THM-722 PROVED) + climb lemma LEM-025 tight at ALL FOUR extremals; the deep well's ledger IS the Ostrowski staircase (stopping time floor(183/13)=14); chain-equioscillation at the covering-min REFUTED
 
 Prompt (owner): make progress on LRC(14); be creative in exploring past threads, especially unrelated ones.
