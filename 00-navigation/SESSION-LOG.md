@@ -1,3 +1,45 @@
+## kind-pasteur-2026-07-11-S127 cont.59 -- core-length monotonicity: the elementary global bound closes only single-killer; the tight form is anchored by 1/13 > 14/183
+
+Prompt (owner): prove the core-length monotonicity as a global inequality.
+
+(1) RIGOROUS GLOBAL LOWER BOUND (proved). Perturb t = 1/(k+1) - delta toward runner 1: core-min = 1/(k+1)-delta
+(runner 1 binds; all other core runners stay above for delta<=1/(k+1)); resonant killers (mult of k+1) rise at
+rate kappa; non-resonant killers kappa' fall at rate kappa'. Balancing the smallest resonant killer a against
+the fastest-falling term gives M(F) >= [1/(k+1)] * a/(a + max(1,R)), a=smallest resonant killer, R=fastest
+non-resonant killer. Verified M(F) >= B(F).
+
+(2) IT CLOSES SINGLE-KILLER TIGHTLY, AND NOTHING MORE. Single-killer has R=1 (no non-resonant killer), so
+B = [1/13]*182/183 = 14/183 exactly (deep well). But a genuine multi-killer MUST cover a divisor d != k+1 via a
+killer that is not a multiple of k+1 => non-resonant => falls fast (R large) => B < 14/183. {1..11,13,84}:
+a=84 (resonant, mult of 12), R=13 (non-res), B=7/97=0.0722 < 14/183.
+
+(3) THE ELEMENTARY WITNESS PROVABLY UNDERSHOOTS. Near t_core=1/12 the best value for {1..11,13,84} is only
+7/95=0.0737 < 14/183 (lifting the resonant killer 84 off 0 drags the non-resonant 13 down at rate 13). The TRUE
+optimum 7/89 lives at t*=37/89 -- a different, larger, family-specific modulus (89) where 13 and 84 are placed
+simultaneously. Locating that modulus IS the band-packing/covering-min problem. So NO uniform elementary witness
+closes multi-killer.
+
+(4) THE REAL ENGINE + HONEST REDUCTION: 1/13 = 0.076923 > 14/183 = 0.076503 (the LRC(13) floor sits ABOVE the
+LRC(14) covering-min). Every multi-killer family contains a 12-speed sub-family (drop the largest killer) with
+M >= 1/13 (settled LRC(13)) > 14/183; the family drops below only via the dropped killer L -- L large =>
+decorrelation M >= 1/13 - B/L >= 14/183 (cont.48 atom); L bounded => finite check (klein ILP, where the
+minimizers live, outliers <= 84). So tight multi-killer >= 14/183 = LRC(13)-escape + finite check -- the SAME
+structure as the covering-min, NOT easier, NOT elementary. Only the razor-thin single-killer drop 1/13 -> 14/183
+(gap 1/2379) pierces the 1/13 anchor to reach the floor.
+
+HONEST ANSWER to the prompt: the elementary global inequality (the balance bound) IS proved and closes
+single-killer tightly at 14/183; the TIGHT multi-killer monotonicity is NOT an elementary global inequality
+(the core-resonance witness provably undershoots, the optimum is family-specific), and reduces cleanly to
+settled LRC(13)-escape + finite check anchored by 1/13 > 14/183.
+
+Artifacts: reflection the-core-length-monotonicity-is-anchored-by-1-over-13-not-an-elementary-witness-kps-S127;
+HYP-6228; lrc14_corelength_monotonicity_kps_S127.py, lrc14_corelength_balance_bound_kps_S127.out.
+
+Next: the bounded finite check (ILP) is unchanged; the multi-killer part is now explicitly reduced to it via
+settled LRC(13). A Lean lemma for the balance bound (single-killer, tight) is a clean formalization target.
+
+---
+
 ## opus-2026-07-11-S255 -- CORRECTION to S254: the unconditional rigidity M_core>=(182+s)/2379 is FALSE; the escape closes by a beta case-split; the tight point (deep well) is PROVED via S252
 
 Prompt (owner): work on M_core >= (182+s)/2379.

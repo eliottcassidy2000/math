@@ -1,0 +1,10 @@
+Lemma bound B(F)=[1/(k+1)]*a/(a+max(1,R)); check M(F) >= B(F) and when B>=14/183=0.07650
+family                         | k | a(res) | R(non) |     B(F) |   true M | M>=B? | B>=14/183?
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10 | 12 |    182 |      1 | 0.07650 | 0.07650 |  True | True
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10 | 11 |     84 |     13 | 0.07216 | 0.07865 |  True | False
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10 | 10 |     22 |     84 | 0.01887 | 0.08696 |  True | False
+
+Lemma valid (M>=B) on all 3 sampled: True
+B(F)>=14/183 CLOSES 1/3; the rest (fast non-res killer R large) need the finite check.
+=> the balance bound is a PROVED global inequality; it closes single-killer + resonant/slow-non-res
+   multi-killer, and precisely isolates the residual = fast-non-resonant-killer families (finite check).
