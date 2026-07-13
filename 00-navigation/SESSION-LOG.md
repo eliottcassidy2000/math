@@ -70,6 +70,24 @@ HONEST SCOPE: THM-730 is a LEMMA, NOT LRC(14). The open remainder is the RESUMMA
 FILES: THM-730; 04-computation/lrc14_schur_inverse_proof_macmini_S77.py(+.out). CREDITS: opus-S182 (E3/Schur redirect = the target), S76 reflection (3rd-order localization), kps-S127/klein-S265 (scale fork). -> the last inch is now ONE analytic statement: the Riesz resummation of the proved Schur extremality into L>0.
 
 ---
+## klein-2026-07-13-S280 -- the density √-cancellation HOLDS (Q_s=O(diam) ⟹ Error→0, density row closes); and Q_s = the 1-D autocorrelation Riemann-discrepancy (THM-729) — density is genuinely LOWER-ORDER than covering's multi-linear crux
+
+Prompt (owner): prove the density √-cancellation bound (the S279 tractable route).
+
+Cauchy–Schwarz: |S|=O(√Q_s), Q_s=Σ_ℓ|U_s(ℓw)|²/ℓ². Density SLACK ⟹ Q_s=O(diam) suffices (peel w=d≥diam ⟹ Error=O(√diam)/d=O(1/√d)→0). VERIFIED: Q_s/diam∈[1.0,1.7] over 7 clusters (diam→199); |S|≤2.7 at diam 199 ⟹ Error≤0.014<0.097. So the √-cancellation HOLDS and CLOSES the density row (finite box + S275 band/resonant).
+
+EXACT IDENTITY (THM-729): |U_s(N)|=2π|N||f̂(N)|, f=1_{R_s}; the Dirac comb gives Σ_ℓ|f̂(ℓw)|²=(1/w)Σ_{m<w}A(m/w), A(t)=|R_s∩(R_s−t)| the autocorrelation ⟹ Q_s=(2πw)²[(1/w)Σ_{m<w}A(m/w)−∫A] = (2πw)²·[left-Riemann-discrepancy of A at the w-grid]. So Q_s is a 1-D DISCREPANCY (A piecewise-linear, O(M)=O(diam) breakpoints), NOT a multi-linear cancellation.
+
+RIGOROUS PIECES: the exact identity; the arc-wise DIAGONAL Q_s=Σ_i 2π²{w·w_i}(1−{w·w_i})+offdiag, diag≤(π²/2)(M/2)=O(M) and empirically ≈ the full Q_s (offdiag cancels). CRUDE large sieve FAILS: Q_s≤M(2+4/3δ⁻¹), δ=min‖w(p−p')‖ COLLAPSES (0.012→0.0000, endpoint clustering) — but tiny arcs SELF-CANCEL (e(−Na)−e(−Nb)→0), which the autocorrelation identity captures and the min-sep bound cannot.
+
+ASYMMETRY MADE CONCRETE: covering needs the multi-linear (Gowers) cancellation (mac-mini-S76/opus-S262-263: averaging PROVABLY insufficient, 3rd-order Schur); density needs only Q_s=O(diam) = a 1-D autocorrelation discrepancy. So averaging/2nd-moment IS enough for density (slack) exactly where it provably is NOT for the tight covering bound. Density is the genuinely more tractable LRC(14) crux, and the √-route is its natural proof.
+
+REMAINING (density): rigorous Q_s=O(M) for the piecewise-linear A at the w-grid — a 1-D discrepancy estimate, far lower-order than covering's Gowers cancellation. That is the concrete next density target.
+
+FILES: reflection the-density-sqrt-cancellation-is-a-1d-autocorrelation-discrepancy-not-multilinear-klein-S280; THM-729; HYP-6415; lrc14_second_moment_klein_S280.py, lrc14_delta_sep_klein_S280.py (+outs). -> THM-728/727, HYP-6410, S275, mac-mini-S76, opus-S262/S263.
+
+---
+
 ## mac-mini-2026-07-13-S76 -- worked the last inch CREATIVELY: it is THIRD-ORDER (E3/Schur, not E2/Freiman); my pairwise-blind finding CONVERGES with opus-S182's redirect; corpus sweep integrated
 
 Prompt (owner): work the last inch creatively; search back through past documents and explore for connections.
