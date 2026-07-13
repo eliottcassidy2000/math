@@ -16,6 +16,42 @@ STATUS: the covering-min is mapped from the outside in -- rigidity PROVED (THM-7
 FILES: HYP-6470; reflection every-structural-facet-...-macmini-S82; 04-computation/lrc14_sternbrocot_tower_macmini_S82.py(+.out). -> next idea must be metric (a resummation tracking the middle-order cancellation, or a joint-rigidity-across-facets). Thanks -- the map is complete; I leave it rather than a false summit.
 
 ---
+## kind-pasteur-2026-07-11-S127 cont.70 -- the worst |core|=1 body {1..11,13,84} is the CRACK between opus's runner-1 lemma Args A and B (flag + refinement for opus)
+
+Prompt (owner): calibrate the tight large-sieve against {1..11,13,84}.
+
+Reading opus-S268 (newest): it localized the irreducible core to |core|=1 (the runner-1 lemma S265), reporting
+the |core|=1 energy <=0.328. But cont.69's true worst is 0.60, at {1..11,13,84} -- a body opus's sample MISSED.
+Calibrating there shows it is the exact crack between the runner-1 lemma's two arguments.
+
+opus-S265 runner-1 lemma: |core|=1 LRC <=> S_rest NOT subset of D_1 (runner-1 arc ||t||<1/14). Arg A (measure):
+smallest even s => |S_rest cap D_1|<=(s-1)/(7s); s=2 => need |S_rest|>1/14. Arg B (equidist): <=> eps_1<6/7 via
+consecutive-difference pairs 1=w_i-w_j; SPREAD rest (few pairs) => eps_1 small.
+
+CALIBRATION (grid 2e6) of rest = {2..11,13,84}:
+  |S_rest|=|G'|=0.0666 < 1/14=0.0714  => Argument A FAILS
+  9 consecutive pairs (the run 2..11) => Argument B STRESSED (not spread)
+  coreCover=0.920, eps_1=coreCover-1/7=0.777 < 6/7=0.857 => LRC HOLDS (surplus 0.0054>0, margin 0.08)
+So {1..11,13,84} is NEITHER near-AP-enough for A NOR spread-enough for B -- the exact crack, and the worst
+|core|=1 body. opus-S268's sample maxed at 0.328, MISSING this 0.60 body, so A-union-B was never checked here.
+
+WHY LRC STILL HOLDS + THE REFINEMENT: the actual |S_rest cap D_1| = coreCover*|S_rest| = 0.0613 < |S_rest|=0.0666,
+so the TIGHT measure statement DOES hold; Argument A is merely too loose (bounds |S_rest cap D_1| by 1/14 when it
+is 0.0613). Fix = MULTI-RUNNER Argument A: |S_rest cap D_1| <= |S_2 cap S_4 cap D_1| < 1/14 (each extra small
+runner carves the arc further). The long run 2..11 that DEFEATS B is exactly the surplus of small runners that
+RESCUES a refined A -- the two arguments SWAP roles on the crack body. Natural closure: Argument A with the k
+smallest rest-runners, threshold |S_2 cap..cap S_k cap D_1| shrinking with k.
+
+ASK for opus: verify A-union-B covers {1..11,13,84} (your S268 |core|=1 sample missed it at 0.328 vs actual 0.60);
+the refinement is the multi-runner Argument A. Calibrate the runner-1 lemma against this body, not the deep well.
+
+Artifacts: reflection the-worst-runner1-body-1-11-13-84-is-the-A-B-crack-flag-for-opus-kps-S127; HYP-6248;
+lrc14_runner1_crack_kps_S127.py/out.
+
+Next: opus refines Argument A (multi-runner carve) for the crack body; the structural + Lean skeleton is complete.
+
+---
+
 ## kind-pasteur-2026-07-11-S127 cont.69 -- SUPPORT opus's L2 large-sieve route: pin the true worst |core|=1 discrepancy energy
 
 Prompt (owner): support the |core|=1 smooth-body discrepancy route.

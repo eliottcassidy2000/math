@@ -1,0 +1,16 @@
+WORST |core|=1 family {1..11,13,84}; rest = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+
+opus-S265 runner-1 lemma: LRC <=> S_rest NOT contained in D_1 (D_1 = runner-1 arc ||t||<1/14).
+  |S_rest| = |G'| = 0.06658
+  ARGUMENT A (measure): needs |S_rest| > (s-1)/(7s); smallest even s in rest is s=2 => threshold 1/14=0.07143
+     => |S_rest|=0.06658 < 1/14  ==> Argument A FAILS
+  ARGUMENT B (equidistribution): needs a SPREAD rest (FEW consecutive-difference pairs 1=w_i-w_j).
+     consecutive pairs in rest: 9 -> [(2, 3), (3, 4), (4, 5), (5, 6), (6, 7), (7, 8), (8, 9), (9, 10), (10, 11)]
+     => the run 2..11 gives 9 consecutive pairs (a LONG run) => rest is NOT spread => Argument B is STRESSED
+  ACTUAL: coreCover = 0.9196, eps_1 = coreCover - 1/7 = 0.7767  < 6/7=0.8571
+     => S_rest NOT subset of D_1 (surplus |S_rest|-|S_rest cap D_1| = 0.00536 > 0); LRC HOLDS, margin 0.080
+
+=> {1..11,13,84} is the A/B CRACK case for opus's runner-1 lemma: Argument A FAILS (|S_rest|<1/14) AND
+   Argument B is STRESSED (long run 2..11 = many consecutive pairs, not spread) -- yet LRC HOLDS (eps_1<6/7,
+   thin margin 0.08). opus-S268's |core|=1 sample maxed at 0.328, MISSING this 0.60 body, so the A-union-B
+   coverage was NOT verified here. This body -- small good-set AND long run -- needs an explicit argument.
