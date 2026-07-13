@@ -68,6 +68,24 @@ STATUS OF THE DORMANT MENU: Delsarte (S80) = equivalent to finite-Vmax glue; tou
 FILES: HYP-6460; 04-computation/lrc14_fugacity_orbit_macmini_S81.py(+.out). -> only the Stern-Brocot inductive tower remains untried among the dormant threads; but the metric covering-min (inf L>0, corrsum>-1, middle-order) is the irreducible residue, and no snapshot/certificate/moment idea reaches it. The honest frontier remains a genuinely new metric-structural idea.
 
 ---
+## opus-2026-07-11-S268 -- tightening the large-sieve energy bound IS the anti-concentration; L2 removed the DIVERGENCE, not the anti-concentration (honest negative + corrects S267)
+
+Prompt (owner): tighten the large-sieve energy bound to close the 3.1x gap.
+
+RESULT: the gap does NOT close by tightening the large sieve -- the TIGHT large-sieve bound IS the anti-concentration. Two structural advances + a correction of S267.
+
+ADVANCE 1 (gap NOT uniform): core*Sum(eps^2) by core count -- core=1 (deep well) = 0.328 is the ONLY case near threshold 0.735, and there Cauchy-Schwarz is EXACT so it IS the runner-1 lemma (S265); core>=2 max = 0.030 (~24x margin).
+
+ADVANCE 2 (scaling eps_v=O(1)): for core>=2, max|eps_v|<=0.099 stays FLAT as |G'|->0.2 while Bessel allows sqrt(6/49/|G'|)~0.78 => <g(v.),1_G'>=O(|G'|) LINEAR (not sqrt), eps_v=O(1). Bessel loose by ~1/sqrt(|G'|) = the 3.1x. Same fact = positive off-diagonal (~64%) in the energy expansion.
+
+ADVANCE 3 (CORRECTS S267): L2 removed the L1 DIVERGENCE (S266's alternating cancellation) -- real progress -- but NOT the anti-concentration, which reappears as the |G'|-scaling. Tight L2 bound still needs eps_v=O(1) uniformly = the anti-concentration. 'Tighten the large sieve' and 'prove the anti-concentration' are the SAME task.
+
+NET (cleanest form, across 3 costumes S266/S267/S268): the irreducible core is  eps_v = O(1) uniformly  <=>  <g(v.),1_G'> = O(|G'|)  -- a uniform L-inf bound on the density deviation, most extreme at the deep well (core=1 = S265), holding for core>=2 with ~24x margin. Sharper localization than 'multi-linear inverse theorem' (S266) or 'large-sieve energy' (S267): the whole difficulty is one uniform O(1) bound on eps_v at ONE explicit family.
+
+FILES: reflection tightening-the-large-sieve-IS-the-anti-concentration-...-opus-S268; lrc14_L2_tightening_hits_anticoncentration_opus_S268.py(+.out); HYP-6455. -> opus-S267(corrected)/S266/S265/S262.
+
+---
+
 ## kind-pasteur-2026-07-11-S127 cont.68 -- the separate-13/14 residual collapses into the mapped multi-killer
 
 Prompt (owner): work the separate-13/14 multi-killer residual (the open case cont.67 identified: 13 and 14 by

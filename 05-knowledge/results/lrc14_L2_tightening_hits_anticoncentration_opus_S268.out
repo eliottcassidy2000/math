@@ -1,0 +1,20 @@
+(1) core*Sum(eps^2) by core count (target < 36/49 = 0.735):
+    core=1: 159 families, max core*Sum(eps^2) = 0.3279
+    core=2: 194 families, max core*Sum(eps^2) = 0.0197
+    core=3: 118 families, max core*Sum(eps^2) = 0.0241
+    core=4: 53 families, max core*Sum(eps^2) = 0.0265
+    core=5: 14 families, max core*Sum(eps^2) = 0.0301
+    core=6: 5 families, max core*Sum(eps^2) = 0.0101
+    core=7: 1 families, max core*Sum(eps^2) = 0.0143
+    => core=1 (deep well) = 0.328 is the ONLY case near threshold (= runner-1 lemma S265);
+       core>=2 max = 0.0301 (~24x margin).
+
+(2) scaling of max|eps_v| vs |G'| for core>=2 (Bessel would allow sqrt(6/49/|G'|)):
+    |G'|~0.2: 378 fam, mean max|eps|=0.0323, worst=0.0993, Bessel-allows=0.782
+    |G'|~0.4: 7 fam, mean max|eps|=0.0241, worst=0.0320, Bessel-allows=0.553
+    => max|eps_v| stays FLAT ~0.099 (=O(1)) while Bessel-sqrt grows: eps_v=O(1), <g(v.),1_G'>=O(|G'|).
+
+(3) VERDICT: tightening the large sieve does NOT close the gap -- the tight bound eps_v=O(1) IS the
+    anti-concentration. L2 (S267) removed the L1 DIVERGENCE (S266's alternating cancellation), NOT the
+    anti-concentration, which reappears as the |G'|-scaling. Irreducible core (cleanest form):
+    eps_v = O(1) uniformly  <=>  <g(v.),1_G'> = O(|G'|),  most extreme at the deep well (core=1 = S265).
