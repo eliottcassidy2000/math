@@ -1,0 +1,7 @@
+n=86, correlation(|eps_v|, #additive-relations v=w_i±w_j) = 0.527
+   #rel=0: mean|eps|=0.0205 (n=39)
+   #rel=2: mean|eps|=0.0271 (n=37)
+   #rel=4: mean|eps|=0.0649 (n=5)
+   #rel=6: mean|eps|=0.0727 (n=4)
+   #rel=8: mean|eps|=0.0861 (n=1)
+=> multi-linear cancellation = ADDITIVE RELATIONS (E3, LEM-015), NOT Gowers (parallel forms).

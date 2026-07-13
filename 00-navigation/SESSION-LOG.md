@@ -1,3 +1,19 @@
+## opus-2026-07-11-S263 -- bounding the multi-linear cancellation via Gowers norms FAILS (parallel forms); it is governed by ADDITIVE RELATIONS = E3 (LEM-015). A redirect onto the project's own additive invariant
+
+Prompt (owner): bound the multi-linear cancellation via Gowers norms.
+
+THE OBJECT: eps_v (multi-linear, S262) = int prod_i g(v_i t) dt = Sum_{Sum v_i k_i=0} prod ghat(k_i).
+
+WHY GOWERS FAILS: the generalized von Neumann theorem bounds int prod g(psi_i(t)) via Gowers norms ONLY when the forms psi_i are in GENERAL POSITION; here psi_i(t)=v_i*t are all PROPORTIONAL to t (maximally degenerate) => general position violated => Gowers gives nothing.
+
+THE RIGHT TOOL: dominated by +-1 relations +-v+-w1+-w2=0 = ADDITIVE/sumset/Schur = E3 (LEM-015). VERIFIED: corr(|eps_v|, #additive-relations v=w_i+-w_j)=0.527, monotone (#rel 0->0.021, 2->0.027, 4->0.065, 6->0.073, 8->0.086). RUNNER 1 = most relations (consecutive differences) => eps~0.57 = near-AP max (E3 max at AP, LEM-015) = S255; dissociated core => eps~0.02.
+
+NET: Gowers WRONG tool (parallel forms); multi-linear cancellation IS the E3/additive-relation structure. Covering-min residual = E3/DISSOCIATION bound: coprime core dissociated from non-core => eps small => coreCover<1 => LRC(14), AP/runner-1 (max E3)=S255. The S253-S263 arc closes a LOOP back to the E3 invariant (LEM-015, S246). Next: effective E3/dissociation bound. Additive combinatorics, not higher-order analysis.
+
+FILES: reflection gowers-does-not-apply-...-is-E3-additive-opus-S263; lrc14_multilinear_is_additive_relations_not_gowers_opus_S263.py(+.out); HYP-6410. -> opus-S262, LEM-015, opus-S246, opus-S255/S259.
+
+---
+
 ## opus-2026-07-11-S262 -- applying the LRCFourierCompletion cancellation bound to eps_v: it is BILINEAR (pairwise, clean 1/(3vw)) but eps_v is ~100% MULTI-runner; residual = MULTI-LINEAR cancellation
 
 Prompt (owner): apply the LRCFourierCompletion cancellation bound to Sum_h b_h ghat(-hv).
