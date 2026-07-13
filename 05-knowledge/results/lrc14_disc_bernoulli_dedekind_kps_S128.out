@@ -1,0 +1,87 @@
+====================================================================================================
+THM-732(i) IDENTITY VERIFICATION (exact Fraction arithmetic, both sides)
+====================================================================================================
+  toy unions (8 random unions x v in {5,7,12}): EXACT equality on all -> True
+  deep well {1..12,182}              peel v=182  r=12   def==pair: True   disc_v = 2629220219/6363107150400 ~ 4.131975e-04
+  near-AP residue {1..11,13,84}      peel v=84   r=4    def==pair: True   disc_v = 6888577/22094122050 ~ 3.117832e-04
+  small-far {2..14}                  peel v=14   r=2    def==pair: True   disc_v = 0 ~ 0.000000e+00
+  variant {1,3..13,182}              peel v=182  r=2    def==pair: True   disc_v = 1/132496 ~ 7.547398e-06
+  => THM-732(i) VERIFIED exactly (definition == Bernoulli edge-pair sum, as rationals).
+
+====================================================================================================
+EXACT RATIONAL CERTIFICATES (THM-731 chain, all quantities in Q; floats display-only)
+  need: margin := 6|G'_{~v}|^2 - disc_v > 0   (<=> L_cert=(6/7)|G'|-sqrt((6/49)disc) > 0)
+====================================================================================================
+
+deep well {1..12,182}   (peel v=182)
+   |G'_{~v}| = 6617/194040 ~ 0.034101    r = 12 intervals   L_full = 4637/194040 ~ 0.023897
+   disc_v    = 2629220219/6363107150400 ~ 4.131975e-04
+   eps_v     = 7243/1358280 ~ 5.332479e-03
+   peeling identity L=(6/7)|G'|-eps EXACT: True ;  (*) |eps|^2<=(6/49)disc EXACT: True
+   CERT margin 6|G'|^2 - disc = 5966922061/909015307200 ~ 6.564e-03  ->  POSITIVE: L>0 PROVED (exact arithmetic)   (L_cert ~ 0.022117, true L ~ 0.023897)
+
+near-AP residue {1..11,13,84}   (peel v=84)
+   |G'_{~v}| = 426/35035 ~ 0.012159    r = 4 intervals   L_full = 563/105105 ~ 0.005357
+   disc_v    = 6888577/22094122050 ~ 3.117832e-04
+   eps_v     = 3727/735735 ~ 5.065683e-03
+   peeling identity L=(6/7)|G'|-eps EXACT: True ;  (*) |eps|^2<=(6/49)disc EXACT: True
+   CERT margin 6|G'|^2 - disc = 1815833/3156303150 ~ 5.753e-04  ->  POSITIVE: L>0 PROVED (exact arithmetic)   (L_cert ~ 0.004243, true L ~ 0.005357)
+
+small-far {2..14}   (peel v=14)
+   |G'_{~v}| = 1/14 ~ 0.071429    r = 2 intervals   L_full = 3/49 ~ 0.061224
+   disc_v    = 0 ~ 0.000000e+00
+   eps_v     = 0 ~ 0.000000e+00
+   peeling identity L=(6/7)|G'|-eps EXACT: True ;  (*) |eps|^2<=(6/49)disc EXACT: True
+   CERT margin 6|G'|^2 - disc = 3/98 ~ 3.061e-02  ->  POSITIVE: L>0 PROVED (exact arithmetic)   (L_cert ~ 0.061224, true L ~ 0.061224)
+
+variant {1,3..13,182}   (peel v=182)
+   |G'_{~v}| = 11/364 ~ 0.030220    r = 2 intervals   L_full = 67/2548 ~ 0.026295
+   disc_v    = 1/132496 ~ 7.547398e-06
+   eps_v     = -1/2548 ~ -3.924647e-04
+   peeling identity L=(6/7)|G'|-eps EXACT: True ;  (*) |eps|^2<=(6/49)disc EXACT: True
+   CERT margin 6|G'|^2 - disc = 725/132496 ~ 5.472e-03  ->  POSITIVE: L>0 PROVED (exact arithmetic)   (L_cert ~ 0.024941, true L ~ 0.026295)
+
+====================================================================================================
+RAY CLOSURES: {base, v} for ALL v.  tail: v > v0 = r*sqrt(2)/(6|G'|)  (disc<=r^2/(3v^2)<6|G'|^2)
+  below v0: covering v = exact checks; non-covering v = THM-366 (t=1/q witness).
+====================================================================================================
+
+{1..12, v}      (deep-well ray)   r=12, |G'|=0.034101  =>  v0 ~ 82.9
+   exact checks (covering v<=v0): none needed
+   tail sanity at first v>v0 (v=182): disc=4.132e-04 <= crude r^2/(3v^2)=1.449e-03 < 6|G'|^2=6.977e-03 : True
+   RAY {1..12,: CLOSED (all v)  [tail v>v0 by THM-732(iii); covering v<=v0 exact; non-covering v THM-366]
+
+{1..11,13, v}   (residue ray)   r=4, |G'|=0.012159  =>  v0 ~ 77.5
+   exact checks (covering v<=v0): none needed
+   tail sanity at first v>v0 (v=84): disc=3.118e-04 <= crude r^2/(3v^2)=7.559e-04 < 6|G'|^2=8.871e-04 : True
+   RAY {1..11,13,: CLOSED (all v)  [tail v>v0 by THM-732(iii); covering v<=v0 exact; non-covering v THM-366]
+
+{2..13, v}   r=2, |G'|=0.071429  =>  v0 ~ 6.6
+   exact checks (covering v<=v0): none needed
+   tail sanity at first v>v0 (v=14): disc=0.000e+00 <= crude r^2/(3v^2)=6.803e-03 < 6|G'|^2=3.061e-02 : True
+   RAY {2..13,: CLOSED (all v)  [tail v>v0 by THM-732(iii); covering v<=v0 exact; non-covering v THM-366]
+
+{1,3..13, v}   r=2, |G'|=0.030220  =>  v0 ~ 15.6
+   exact checks (covering v<=v0): v=14:OK(margin 4.23e-03)
+   tail sanity at first v>v0 (v=28): disc=1.660e-04 <= crude r^2/(3v^2)=1.701e-03 < 6|G'|^2=5.479e-03 : True
+   RAY {1,3..13,: CLOSED (all v)  [tail v>v0 by THM-732(iii); covering v<=v0 exact; non-covering v THM-366]
+
+====================================================================================================
+HYP-6495 NUMERICS: (w,w') blocks of the pair sum S = 2 v^2 disc_v ; exposure; collapse
+====================================================================================================
+
+deep well {1..12,182}  (peel v=182): 2r=24 edges
+   exposed edges per speed (of 2w endpoints): w=1:2/2, w=2:2/4, w=3:2/6, w=4:2/8, w=5:2/10, w=6:2/12, w=7:2/14, w=8:2/16, w=9:2/18, w=10:2/20, w=11:2/22, w=12:2/24
+   S = 2 v^2 disc = 27.3735 ; diagonal-blocks (w=w') sum = 3.8930 ; off = 23.4805
+   top blocks by |mass|: (4,4):0.500, (5,5):0.480, (6,6):0.444, (3,3):0.444, (7,7):0.408, (6,5):0.400, (4,5):0.400, (5,6):0.400
+   crude bound on S = (2r)^2/6 = 96.0 ; actual S = 27.3735 ; collapse factor 3.5x
+   disc*3v^2/r^2 = 0.2851 (1.0 = crude saturated) ; disc*v^2*6/(2r) = 3.4217 (~1 = pure-diagonal scale)
+
+near-AP residue {1..11,13,84}  (peel v=84): 2r=8 edges
+   exposed edges per speed (of 2w endpoints): w=1:0/2, w=2:0/4, w=3:0/6, w=4:0/8, w=5:2/10, w=6:0/12, w=7:2/14, w=8:0/16, w=9:0/18, w=10:0/20, w=11:2/22, w=13:2/26
+   S = 2 v^2 disc = 4.3999 ; diagonal-blocks (w=w') sum = 1.4460 ; off = 2.9538
+   top blocks by |mass|: (5,5):0.480, (7,7):0.408, (5,7):0.343, (7,5):0.343, (11,11):0.298, (13,13):0.260, (11,7):0.260, (7,11):0.260
+   crude bound on S = (2r)^2/6 = 10.7 ; actual S = 4.3999 ; collapse factor 2.4x
+   disc*3v^2/r^2 = 0.4125 (1.0 = crude saturated) ; disc*v^2*6/(2r) = 1.6500 (~1 = pure-diagonal scale)
+
+done.

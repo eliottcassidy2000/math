@@ -1,7 +1,7 @@
 ---
 id: THM-732
 title: The certificate discrepancy disc_v (THM-731) is an EXACT Bernoulli edge-pair sum — a generalized Dedekind sum over the good-set edges — hence (i) exactly computable in ℚ (per-family certificates become finite rational-arithmetic PROOFS of L>0 through the proved THM-731 chain), and (ii) uniformly small in the peel v (|B₂|≤1/6 ⟹ disc_v ≤ r²/(3v²)), closing entire FAR-ELEMENT RAYS (all large dilates of the 13th speed) with one inequality + finitely many exact checks
-status: CLAIMED (kind-pasteur-2026-07-13-S128) — identity (i) has a 3-line Fourier proof (below); per MISTAKE-136 the identity itself will be verified numerically (toy unions + the covering families vs klein-S287's grid values) THIS SESSION before upgrade to VERIFIED; exact-ℚ certificates for deep well {1..12,182} and near-AP residue {1..11,13,84} + the ray corollaries are the session deliverables
+status: PROVED (identity (i): 3-line Fourier proof below; tail (iii): |B₂|≤1/6, trivial) + VERIFIED EXACTLY (MISTAKE-136 rule: definition == pair form as exact rationals on 8 random toy unions × v∈{5,7,12} AND all four covering families' leave-one-out good sets; script lrc14_disc_bernoulli_dedekind_kps_S128.py). CONSEQUENCES DELIVERED: exact-ℚ certificates prove L>0 for deep well {1..12,182} (L=4637/194040, margin 6|G'|²−disc = 5966922061/909015307200 > 0), near-AP residue {1..11,13,84} (L=563/105105, margin 1815833/3156303150 > 0), {2..14} (disc≡0 EXACTLY — perfect collapse, certificate exact), variant {1,3..13,182}; peeling identity and (*) hold EXACTLY on all four (independent validation of THM-731's chain); exact values match klein-S287's grid values to grid precision. RAY COROLLARIES (all v): {1..12,v} (v₀≈82.9<182 ⟹ zero exact checks), {1..11,13,v} (v₀≈77.5<84 ⟹ zero exact checks — the WORST-BODY ray closes on the crude tail alone), {2..13,v}, {1,3..13,v} (one exact check v=14, margin>0)
 source: kind-pasteur-2026-07-13-S128
 depends_on:
   - THM-731   # the rigorous chain |ε_v|² ≤ (6/49)disc_v + peeling; this makes its disc_v exact/rational and bounds it in v
@@ -68,9 +68,26 @@ the Fourier expansion `Σ_{m≠0} e(mθ)/m² = 2π² B₂({θ})` (absolutely con
   toolbox's domain: full arc-families collapse via `Σ_{k mod q} B₂({x+k/q}) = B₂({qx})/q`
   (→ HYP-6495).
 
-## Evidence log (this session)
+## Evidence log (this session — all done)
 
-- [ ] identity (i) verified on random interval unions vs brute-force Σ|ĝ(mv)|² (MISTAKE-136 rule)
-- [ ] identity (i) verified vs klein-S287 grid disc_v on the 4 covering families
-- [ ] exact-ℚ certificates: deep well (peel 182), residue (peel 84), {2..14} (peel 14), variant
-- [ ] ray thresholds v₀ computed; rays closed
+- [x] identity (i) verified EXACTLY (def == pair as rationals): 8 random toy unions × v∈{5,7,12}, plus
+      all 4 covering families. Zero discrepancies.
+- [x] exact values match klein-S287's grid numbers (L_cert 0.022117/0.004243/0.061224/0.024941 vs klein's
+      0.0221/0.0042/exact/0.0249; L_full 0.023897/0.005357 vs 0.0239/0.0054).
+- [x] exact-ℚ certificates all POSITIVE: L>0 PROVED for all four families (through the proved THM-731
+      chain — first rigorous L>0 for the two extremal bodies, replacing VERIFIED-numerically).
+- [x] rays closed: v₀({1..12})≈82.9, v₀({1..11,13})≈77.5, v₀({2..13})≈6.6, v₀({1,3..13})≈15.6.
+      Both extremal rays need ZERO exact checks (all covering v exceed v₀).
+- Peeling identity `L_full=(6/7)|G'_{~v}|−ε_v` and (*) `|ε_v|²≤(6/49)disc_v` verified as EXACT rational
+  identities/inequalities on all four families.
+
+## Notable structure found (feeds HYP-6495)
+
+- `{2..13}` at v=14: **disc ≡ 0 exactly** — ĝ vanishes on 14ℤ\{0} entirely (two good intervals of
+  length exactly 1/28 at distance 1/2: parity kills odd m, sinc zeros kill even m). The certificate is
+  EXACT there (L_cert = L = 3/49). Perfect Bernoulli collapse exists in nature.
+- Exposure is extreme: deep-well base {1..12} has only r=12 good intervals, exactly 2 exposed edges per
+  speed (of 2w endpoints). Residue base {1..11,13}: r=4, edges generated only by w∈{5,7,11,13}.
+- Off-diagonal blocks carry ~6× the diagonal at the deep well (near-pair structure of narrow intervals),
+  NOT equidistributed-B₂ noise: |ĝ(mv)|² ≈ width-weighted Weyl sum of midpoints — the DENSITY route's
+  object appears verbatim, making the [A]/[B] unification concrete at formula level.
