@@ -213,3 +213,41 @@ the same resonance/L² axis as the density floor (LEM-005 opus-S154, LEM-009 kle
 THM-518-A Weyl machinery is the tool. Files: `lrc14_largespread_{arccount,gridhit}_klein_S192`,
 `lrc14_nearAP_gridhit_klein_S193` (pigeonhole vacuous, `#good` large), `lrc14_resonance_reduction_klein_S193`
 (`#good/Vmax→ρ*`, discrepancy sublinear, `d`-independent resonances).
+
+
+## I. The max-gap RESIDUE LAW: the grid-count is a pure residue count mod `2Vmax` (the physical dual of part H's Erdős–Turán sum) — mac-mini-2026-07-12-S66
+
+An exact elementary identity underlies the whole arc picture. For co-offsets `E` and any
+`x = a/b` in lowest terms,
+
+> **`maxgap{frac(e_i x) : i} = G_E(a,b) / b`**, where `G_E(a,b)` = the largest circular gap
+> between consecutive occupied residues of `R = {a·e_i mod b} ⊆ Z/b`.
+
+*Proof.* At `x=a/b` the phases are exactly `R/b`, living on the `b`-grid `{0,1/b,…,(b−1)/b}`;
+the largest gap between consecutive phases is (largest gap between consecutive occupied
+residues)`/b`. ∎ (Verified 3000/3000 random `(E,a,b)`; `lrc14_maxgap_residue_law_macmini_S66`.)
+
+**Consequence — the grid-count is a residue count.** The pigeonhole grid points
+`x_j = (j+½)/Vmax` are the rationals `(2j+1)/(2Vmax)`, denominator `b = 2Vmax`. So by the law,
+`x_j` is good `⟺ G_E(2j+1, 2Vmax) > 2·(2Vmax)/7` **and** `∀p∈P: ‖(2j+1)p mod 2Vmax‖ ≥ (2Vmax)/14`.
+Hence
+
+> `#good = #{ 0 ≤ j < Vmax : the residue set {(2j+1)e_i mod 2Vmax} leaves a gap > 4Vmax/7,
+>            and {(2j+1)p mod 2Vmax} avoids the (Vmax/7)-band }`
+
+— a **pure residue-band-dodging count mod `2Vmax`** (the S77 safe-band frame at scale `2Vmax`).
+This is the **physical (spatial) side** of part H's discrepancy; klein-S193's Erdős–Turán
+resonance sum `Σ_{Vmax\mid a·v} 1/r(a)` is its **Fourier dual**. The two are one object:
+the residue-count is small-defect `⟺` no low-height resonances. The residue law is thus the
+concrete arithmetic form of "count good ruler periods."
+
+**What it buys / does not buy (honest).** (i) *Bounded-spread half (already closed, S58):* the
+law makes the arc structure explicit — the good arc around `a/b` has half-width
+`≥ (G_E(a,b)/b − 2/7)/(2·spread)` (modulo a finite no-intruder check), giving an **explicit**
+`V₀ = 1/(2·halfwidth)`; for representative `k≥8` covering configs the fattest joint arc sits at
+**small `b` (≤ 14)**, `V₀ ≤ 210` (`lrc14_joint_residue_existence_macmini_S66`). (ii) *Large-spread
+half (open):* the half-width route is **vacuous on the near-dilated-AP extremal** (`spread ~
+Vmax ⟹ V₀ ~ Vmax`), exactly the arc-count vacuity klein-S193 identified — the Erdős–Turán
+resonance sum (the law's Fourier dual) remains the correct route. The residue law does not by
+itself close item 3; it packages the physical side and pins the exact per-scale count.
+See **HYP-6250**.
