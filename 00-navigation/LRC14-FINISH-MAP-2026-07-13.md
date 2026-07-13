@@ -83,6 +83,22 @@ the shared endpoint cancellation `|U(mv)|≪2r` = the density `Q_s` (THM-729). S
 **(i)** combinatorial `r < 3√2 v|G'_{~v}|` (large-far sets, incl. extremals — DONE for the extremals) +
 **(ii)** the shared density-`Q_s` cancellation (small-far sets). (klein-S288, THM-732, HYP-6495.)
 
+**⚠ S128 (kind-pasteur) — disc_v is EXACT ARITHMETIC, and the far-element regime of [B] is CLOSED.**
+THM-732: `disc_v = (1/(2v²))·Σ_{e,e'} σ_e σ_{e'} B₂({v(e−e')})` over the signed good-set edges
+(3-line Fourier proof; verified as an exact-ℚ identity vs the definition). Consequences: (a) per-family
+certificates are now **exact rational arithmetic** — `L>0` is PROVED (not verified) for the deep well
+(`L=4637/194040`), the worst |core|=1 body `{1..11,13,84}` (`L=563/105105`), `{2..14}` (disc≡0 exactly —
+perfect collapse), and the variant; (b) `|B₂|≤1/6` gives `disc_v ≤ r²/(3v²)` ⟹ every far element
+`v > r√2/(6|G'|)` certifies — **both extremal rays close with zero exact checks** (v₀≈82.9<182,
+v₀≈77.5<84); (c) with two elementary peel lemmas (`r_a ≤ am+(15/7)r`, `m_a ≥ (6/7)m−8r/(49a)`),
+**THM-733: every `{1..11,a,b}` (11<a<b) satisfies LRC(14)** (A₀=267 uniform leg + 1810-pair exact box;
+the only tight pairs are the AP and the Goddyn–Wong doubling `{1..11,13,24}`, both non-covering).
+**What remains of [B] after S128:** other separate-13/14 bodies (mechanical, same per-body script),
+the multi-scale induction (P1/P2 compose), and the **bounded-Vmax compact core** (no far element) —
+where THM-724/726's rigidity lives and where a uniform exposure (r-) bound is the surviving analytic
+content. The "genuine harmonic analysis" of the far-element regime turned out to be `sup|B₂| = 1/6`.
+(kind-pasteur-S128, THM-732/733, HYP-6495.)
+
 ---
 
 ## 3. Route A (density / moment) — FULLY REDUCED, one analytic inequality left

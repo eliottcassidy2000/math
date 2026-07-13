@@ -13,6 +13,22 @@
   with exact-certificate ratio < 1 (finite exact sweeps -- no analysis needed per body); (iii) the
   far-element tail per fixed rest is closed by crude-732 alone once v > r/(3*sqrt2*|G'|) (constant per rest).
 
+## Lead kind-pasteur-2026-07-13-S128: BODY-BY-BODY THM-733 sweeps + the exposure bound on the compact core
+- **Source:** THM-732 (disc_v = exact Bernoulli/Dedekind edge-pair sum; far-element tail), THM-733
+  ({1..11,a,b} closed for all 11<a<b: A0=267 + 1810-pair exact box, 1.8s), HYP-6495.
+- **Status:** NEW. The method is body-uniform: any 11-element body E with exact good-set data (r,m)
+  gets A0(E) (one exact inequality, monotone) + a finite exact box. Body {1..11} done (this session).
+- **Next steps:** (i) enumerate the remaining separate-13/14 bodies (kps cont.58/59 skeleton) and run
+  the same script per body — each is seconds; (ii) three-scale bodies: compose peel lemmas P1/P2
+  (proved) — write the induction cleanly; (iii) the QUESTION the ray data raises: v0(base) < lcm-step
+  held in all four tested rays (82.9<182, 77.5<84, 6.6<14, 15.6<... one check) — is "covering forces
+  the far element past its own certificate threshold" systematic? If yes at body level, the per-body
+  boxes shrink to nothing and the class argument simplifies drastically; (iv) uniform EXPOSURE bound:
+  why do covering-min-adjacent bases have tiny r (12, 4, 2, 2)? r-control on the bounded-Vmax core is
+  the remaining analytic content of route [B]; (v) Lean: THM-732(i) is a 3-line Fourier argument over
+  finite rational data — a natural kernel-pure target; the box checks are decide-style.
+- **Relates:** THM-731 (klein-S287), THM-709/GW Thm 12 (the box rediscovered the doubling-singleton
+  tight family exactly), THM-724/726 (rigidity on the compact core), klein-S253 literature merge.
 
 ## Lead death-star-2026-07-12-S15: the j in [8,13] mixed-slope compressed stratum (last gap of the u-escape lane)
 - **Source:** THM-721 Parts 5-6; HYP-6270 (slope dichotomy closed j=7 and all equal-slope j<=12).

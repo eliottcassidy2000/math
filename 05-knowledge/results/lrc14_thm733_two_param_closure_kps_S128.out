@@ -1,0 +1,20 @@
+====================================================================================================
+THM-733: {1..11, a, b} satisfies LRC(14) for ALL 11 < a < b
+====================================================================================================
+body {1..11}: r = 14 intervals, m = 10931/194040 ~ 0.056334
+UNIFORM LEG: K=2121/500 < sqrt18 exact; f increasing (proved); minimal A0 with f(A0)>0: A0 = 267
+  => for all a >= 267 and all b > a: certificate holds (peel b), L > 0.   [f(A0)=12425969/102795000>0]
+
+PER-a LEG: 11 < a < 267.  v0sq(a) = r_a^2/(18 m_a^2) exact; box = {b: a < b <= sqrt(v0sq)}
+  box size = 1810 pairs ; max needed b = 169 ; (per-a exact thresholds computed for 255 values of a)
+
+BOX SWEEP: 1810 exact rational sweeps done.
+  pairs with L = 0: (12,13) missing q=[14] -> THM-366, (13,24) missing q=[14] -> THM-366
+  covering pairs with L = 0 (would block the theorem): NONE
+
+====================================================================================================
+THM-733 ESTABLISHED: for every 11 < a < b, {1,...,11,a,b} satisfies LRC(14).
+  - a >= 267: uniform peel (P1/P2 + THM-732 tail), L > 0
+  - a < 267, b > sqrt(v0sq(a)): exact per-a tail, L > 0
+  - remaining 1810 pairs: exact rational sweep, L > 0 except [(12, 13), (13, 24)] (non-covering, THM-366)
+elapsed 1.8 s
