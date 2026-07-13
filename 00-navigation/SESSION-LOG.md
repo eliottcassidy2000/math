@@ -1,3 +1,21 @@
+## mac-mini-2026-07-13-S82 -- pursued the Stern-Brocot inductive tower (last dormant thread); deep well CF tower [0;n-1,n] is clean but organizes VALUES not the metric bound. THREE-THREAD SYNTHESIS + reflection: every structural facet of the extremal is SEVERED from the metric residue
+
+Prompt (owner): pursue the Stern-Brocot inductive tower idea.
+
+STERN-BROCOT FINDING (verified): the three-distance regimes of t form the Stern-Brocot tree (opus Mode-A). The deep well {1..n-2,n(n-1)} has M=n/Phi6(n) with CF=[0;n-1,n] EXACTLY (n=5..14; partial quotients increment by 1: [0;4,5],[0;5,6],...,[0;13,14]) -- a perfect CF tower on the EXTREMAL. But it ORGANIZES the M-spectrum's arithmetic (Farey mediants), NOT a lower-bound recursion over covering families; vertex-insertion=peeling=balance, undershoots. Third dormant thread, same verdict: facet not bypass. HYP-6470.
+
+THE THREE-THREAD SYNTHESIS (reflection: every-structural-facet-...-severed-from-the-metric-residue). All three non-averaging dormant ideas pursued, each a PROVABLE facet of the AP/deep-well extremal, each SEVERED from the metric residue (inf L>0 = corrsum>-1 = covering LRC14):
+ - SCHUR/E3 (THM-730 proved): severed by the RESUMMATION (L dominated by middle orders |T|=6,7 ~+-20; order-3 is a minor term, S79).
+ - TOURNAMENT chi=2 (HYP-6460): fugacity poly Q(w)=E[w^X], AP max at w=2 (provable) min at w=0 (L); severed by ORDER-FORGETS-METRIC (disconnected fugacities).
+ - STERN-BROCOT (HYP-6470): CF tower organizes values; severed by the VALUE/INFIMUM gap.
+ - DELSARTE (HYP-6450): LP certificate; severed by EQUIVALENCE (cert degree~1/L => uniform = inf L>0).
+THE PATTERN: "structure forgets measure." The AP's four-fold coincidence (Schur-max + chi=2-regular + CF-clean + Delsarte-tight) casts four provable/computable shadows on four screens (additive comb / tournament algebra / continued fractions / LP duality), but the object casting them -- L>0 for covering -- is NONE of them. Every snapshot/moment-truncation/value-arithmetic argument is refuted a priori BY DIMENSION (constant or extremal-at-a-point on the set it must separate). The surviving idea must be GENUINELY METRIC (control L/corrsum directly) or a JOINT RIGIDITY across facets ("covering cannot leave all four coincidences intact; L>0 measures the break").
+
+STATUS: the covering-min is mapped from the outside in -- rigidity PROVED (THM-724/726), every facet proved/computed, the residue shown irreducibly metric. This is the honest boundary of what structure can do. All dormant threads exhausted.
+
+FILES: HYP-6470; reflection every-structural-facet-...-macmini-S82; 04-computation/lrc14_sternbrocot_tower_macmini_S82.py(+.out). -> next idea must be metric (a resummation tracking the middle-order cancellation, or a joint-rigidity-across-facets). Thanks -- the map is complete; I leave it rather than a false summit.
+
+---
 ## kind-pasteur-2026-07-11-S127 cont.69 -- SUPPORT opus's L2 large-sieve route: pin the true worst |core|=1 discrepancy energy
 
 Prompt (owner): support the |core|=1 smooth-body discrepancy route.
