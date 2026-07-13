@@ -1,0 +1,25 @@
+1/13=0.076923. Far-element monotonicity for multi-killer extremals:
+
+k=11 core {1..11}: scale the '84' outlier (covers 12,14 => multiples of 84):
+   {1..11,13,84}: M=0.078652=7/89  >=1/13
+   {1..11,13,168}: M=0.080925=14/173  >=1/13
+   {1..11,13,252}: M=0.081712=21/257  >=1/13
+   {1..11,13,420}: M=0.082262=32/389  >=1/13
+   {1..11,13,840}: M=0.082262=32/389  >=1/13
+scale the '13' outlier (covers 13 => multiples of 13, keep 84):
+   {1..11,13,84}: M=0.078652=7/89  >=1/13
+   {1..11,26,84}: M=0.082353=7/85  >=1/13
+   {1..11,39,84}: M=0.082353=7/85  >=1/13
+   {1..11,65,84}: M=0.082353=7/85  >=1/13
+
+k=10 core {1..10}: outliers cover {11,12,13,14}; scale largest:
+   {1..10}+[11, 13, 84]: M=0.078652=7/89  >=1/13
+   {1..10}+[11, 13, 168]: M=0.080925=14/173  >=1/13
+   {1..10}+[11, 13, 336]: M=0.082111=28/341  >=1/13
+   {1..10}+[22, 13, 84]: M=0.086957=2/23  >=1/13
+   {1..10}+[22, 13, 168]: M=0.086957=2/23  >=1/13
+
+CONCLUSION: scaling outliers UP keeps M>=1/13 (monotone rise, far-element decorrelation
+cont.55/THM-717). So the multi-killer covering-min sits at SMALLEST covering outliers
+(finite, enumerated) => finite-check (64317 configs >=1/13) + monotone tail = PROOF that
+every multi-killer primitive covering 13-set has M >= 1/13 > 14/183.

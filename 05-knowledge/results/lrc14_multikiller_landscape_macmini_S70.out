@@ -1,0 +1,7 @@
+14/183=0.076503  1/13=0.076923
+  k=9: ALL 62549 configs clear 1/13 (M>=1/13)
+  k=10: ALL 1709 configs clear 1/13 (M>=1/13)
+  k=11: ALL 59 configs clear 1/13 (M>=1/13)
+
+EVERY multi-killer covering config clears 1/13 => 'multi-killer => M>=1/13' HOLDS.
+=> 1/13 > 14/183 is the clean provable target; deep well (14/183) unique global min.
