@@ -140,7 +140,7 @@ VERIFIED (lrc14_k8_deg3_tail_closure_klein_S272.py): (1) Φ(consec8 {0..7})=0.43
 
 CLOSURE: [majorant PROVED THM-714] + [compact d≤25 EXHAUSTIVE THM-719 max 0.43797] + [tail d>25 → Φ_∞(compact 7-cluster) <cap9 via explicit THM-710 transfer, converged ~1e-3 by d=25] = NO gap (exhaustive box + tail meet). m3 enters Φ NEGATIVELY ⟹ robust to the m3 lower-bound instrument. HONEST: not fully formal — remaining = explicit O(1/w) const (THM-687/699/700; numerics ⟹ crossover D0 inside d≤25 box) + Lean cert. But the STRUCTURAL gap (tail "cited") is CLOSED. Twin of klein-S271's k=9 J→(5/7)J+(6/7)μ (favorable opposite direction).
 
-FILES: reflection the-k8-deg3-row-tail-is-an-explicit-Phi-transfer-not-a-cited-limit-klein-S272; lrc14_k8_deg3_tail_closure_klein_S272.py(+.out); THM-719 addendum; HYP-6270. -> THM-714/719/710/687/688/699/700, klein-S271, mac-mini-S65/S67, LRC(<=13).
+FILES: reflection the-k8-deg3-row-tail-is-an-explicit-Phi-transfer-not-a-cited-limit-klein-S272; lrc14_k8_deg3_tail_closure_klein_S272.py(+.out); THM-719 addendum; HYP-6272 (renumbered from 6270, collision death-star-S15/opus-S254). -> THM-714/719/710/687/688/699/700, klein-S271, mac-mini-S65/S67, LRC(<=13).
 
 ---
 

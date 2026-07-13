@@ -22,7 +22,7 @@ meeting with no gap — completing BOTH density-side base checks (k=8 here, k=9 
 verified status. Files: lrc14_k8_finish_macmini_S65cont46 (+ out).
 
 ---
-**Addendum (klein-2026-07-12-S272, HYP-6270): the tail is now EXPLICIT, not cited.** The one caveat
+**Addendum (klein-2026-07-12-S272, HYP-6272): the tail is now EXPLICIT, not cited.** The one caveat
 above — "the tail monotone-decrease is the cited two-scale limit" — is discharged. THM-710's proved
 eigen-transfer `m_r → ((7−r)/7)m_r` gives the far limit of Φ over a compact 7-cluster `C` in closed
 form: `Φ_∞(C) = 1 − (4/7)m₁ + (235/1764)m₂ − (5/441)m₃`. This transfer is verified tight

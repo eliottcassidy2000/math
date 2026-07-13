@@ -77,7 +77,7 @@ explicit and verified. The k=8 row is the easier of the two density base rows (u
 compact margin, `m_3` entering favorably), and it is the one where the tail-monotonicity argument goes
 through cleanly — exactly as flagged in S271.
 
-*Files: `04-computation/lrc14_k8_deg3_tail_closure_klein_S272.py` (+out). HYP-⟨FILL⟩. Makes THM-719's
+*Files: `04-computation/lrc14_k8_deg3_tail_closure_klein_S272.py` (+out). HYP-6272. Makes THM-719's
 cited tail explicit via the THM-710 Φ-transfer. Consumes THM-714 (majorant), THM-719 (exhaustive
 compact check), THM-710 (eigen-transfer), THM-687/688 (two-scale limit). Companion to
 [[the-far-element-J-recursion-splits-the-threshold-from-the-exact-min-klein-S271]] (the k=9 twin: same
