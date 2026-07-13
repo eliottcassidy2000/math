@@ -1,0 +1,18 @@
+1/14=0.07143. |core|=1 extremals: coreCover = runner-1 density = 1 - (M>1/14 slack).
+
+family                         | |core| | core | coreCover | meas(G') | note
+------------------------------------------------------------------------------------
+  deep well {1..12,182}        |     1 | [1]        | 0.71926 | 0.08512 | <== |core|=1: NOT closed by equidist = LRC(14)
+  {1..12,364}                  |     1 | [1]        | 0.68755 | 0.08905 | <== |core|=1: NOT closed by equidist = LRC(14)
+  {1..12,546}                  |     1 | [1]        | 0.67961 | 0.09009 | <== |core|=1: NOT closed by equidist = LRC(14)
+  {1..11,13,84}                |     1 | [1]        | 0.91960 | 0.06658 | <== |core|=1: NOT closed by equidist = LRC(14)
+  {1..11,13,168}               |     1 | [1]        | 0.87487 | 0.06999 | <== |core|=1: NOT closed by equidist = LRC(14)
+  {1..10,22,13,84}             |     1 | [1]        | 0.70912 | 0.07282 | <== |core|=1: NOT closed by equidist = LRC(14)
+  2*deepwell {2..24,182}(imprim): core empty
+
+MAX coreCover (extremals): 0.91960 at {1..11,13,84}
+VERDICT: the |core|=1 extremals have coreCover ~0.85-0.95 (< 1, but ONLY because M>1/14).
+opus-S259 equidistribution closes |core|>=2 (each core runner ~1/7, sum<1); the |core|=1
+case has NO equidistribution (single arc) => coreCover<1 there IS the conjecture, unclosed.
+So opus-S259 REDUCES LRC(14) to the |core|=1 (runner-1-dominated) extremals -- real
+progress (large-core done) but the hard extremals remain = HYP-2566.
