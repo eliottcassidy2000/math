@@ -1,3 +1,44 @@
+## kind-pasteur-2026-07-11-S127 cont.62 -- the covering-min residual is "core runner 1"; my structural slice is its formalized extremal
+
+Prompt (owner): work the covering-min lower bound over all covering families.
+
+Read the fleet's freshly-pinned residual (mac-mini-S74, today): a covering family splits into CORE = speeds
+coprime to 30030=2*3*5*7*11*13 and NON-CORE = the rest; equidistribution CLOSES |core|>=2 (coreCover ~
+1-(6/7)^|core| < 1, opus-S259); the residual is |core|=1 (single coprime runner, one arc, density up to 0.92 on
+the good set G'). This session SHARPENS the residual and CONNECTS it to my structural + Lean work.
+
+(a) VERIFIED the covering-min extremals + single-killer ladder are all |core|=1, core={1}: deep well
+{1..12,182}=14/183, ladder S_2 {1..12,364}=28/365, S_3=42/547, multi-killer {1..11,13,84}=7/89.
+
+(b) THE HARD SUB-CASE IS CORE RUNNER 1 (the SMALLEST). Swapping the core runner 1->c in {c}u{2..12,182}: c=1 gives
+M=14/183 (the floor); c=17,19,23 give 13/92=0.141; c=29 gives 4/31=0.129 -- all 2x LOOSER. A larger core runner
+has more arcs, equidistributes, density -> 1/7, easy. Only the smallest coprime runner (1) concentrates enough to
+approach coreCover=1. So the crux is |core|=1 AND core runner 1 specifically, not |core|=1 broadly.
+
+(c) single-killer |core|=1 min over k<=199 = 14/183 (the deep well).
+
+THE CONNECTION: the residual's hard sub-case (core runner 1) is EXACTLY my interval-core domain. Single-killer
+{1..12,182c} reach>=14c/(182c+1)>=14/183 is PROVED + machine-checked kernel-pure (cont.60/61,
+LRCSingleKillerLadder.lean) -- the core-runner-1 extremal ladder, closed in Lean. Multi-killer {1..k,outliers}
+(k<=11) all >=14/183 by enumeration (cont.58), reducing to LRC(13)-escape + finite check anchored by 1/13>14/183
+(cont.59). So the residual TILES: |core|>=2 + large core runners -> equidistribution (opus/mac-mini, Beurling-
+Selberg mollification opus-S261); |core|=1 core-runner-1 -> the concentrated single arc, extremal + ladder
+structurally pinned and FORMALIZED (kps).
+
+HONEST OPEN: the general core-runner-1 |core|=1 family = runner 1 + 12 ARBITRARY 13-smooth non-core runners (not
+just {2..12}+killer). My interval-core covers the {2..12}-body slice (which contains the extremal); bounded ones
+are klein's ILP<=182; the general smooth body still needs the analytic density(D_1 cap G')<1 (opus's mollified
+Erdos-Turan, open). So structure pins + formalizes the extremal and its ladder; analysis must close the
+concentrated single arc over all smooth bodies. The through-number is 1/13>14/183.
+
+Artifacts: reflection the-covering-min-residual-is-core-runner-1-my-structural-slice-is-its-formalized-extremal-
+kps-S127; HYP-6230; lrc14_core1_residual_kps_S127.py/out.
+
+Next: the general core-runner-1 |core|=1 lower bound (analytic single-arc density, opus's mollification) is the
+open crux; the structural extremal slice is formalized.
+
+---
+
 ## opus-2026-07-11-S261 -- RAN the Beurling-Selberg mollification of G' against the coprime core: RIGHT tool (finite degree K~50, L2 ~17x better), but the residual is SIGNED CANCELLATION in Sum_h b_h ghat(-hv)
 
 Prompt (owner): run the Beurling-Selberg mollification of G' against the core.

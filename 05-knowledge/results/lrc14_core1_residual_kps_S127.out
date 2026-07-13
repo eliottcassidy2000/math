@@ -1,0 +1,22 @@
+CORE = coprime to 30030=2*3*5*7*11*13. covering-min 14/183=0.076503
+
+(a) the covering-min extremals + single-killer ladder are |core|=1 (core = {1}):
+    deep well {1..12,182}        core=[1] |core|=1  M=14/183
+    ladder S_2 {1..12,364}       core=[1] |core|=1  M=28/365
+    ladder S_3 {1..12,546}       core=[1] |core|=1  M=42/547
+    multi-killer {1..11,13,84}   core=[1] |core|=1  M=7/89
+
+(b) HARDEST |core|=1 = core-runner 1 (small); larger core runner => higher M (easier). Swap 1->c:
+    core runner | family {c}u{2..12,182} | covering? | M | vs 14/183
+              1 | core=[1]                 |  True |   14/183=0.07650 | =
+             17 | core=[17]                |  True |    13/92=0.14130 | higher
+             19 | core=[19]                |  True |    13/92=0.14130 | higher
+             23 | core=[23]                |  True |    13/92=0.14130 | higher
+             29 | core=[29]                |  True |     4/31=0.12903 | higher
+
+(c) |core|=1 covering-min over an enumerated slice (interval core {1..12}+killer, and shorter):
+    single-killer |core|=1 min over k<=199: M=14/183=0.076503 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]  (= deep well? True)
+
+=> the |core|=1 residual's HARD sub-case (core runner 1) = my interval-core families. Single-killer
+   PROVED + formalized (cont.60/61); multi-killer enumerated (cont.58). Larger core runners equidistribute
+   (opus |core|>=2 style) and are easy. So structural (kps) + analytic (opus/mac-mini) tile the residual.
