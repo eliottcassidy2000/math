@@ -1,3 +1,17 @@
+## opus-2026-07-11-S261 -- RAN the Beurling-Selberg mollification of G' against the coprime core: RIGHT tool (finite degree K~50, L2 ~17x better), but the residual is SIGNED CANCELLATION in Sum_h b_h ghat(-hv)
+
+Prompt (owner): run the Beurling-Selberg mollification of G' against the core.
+
+Via FFT on G'. FINDINGS: (1) FINITE DEGREE SUFFICES -- truncated discrepancy Sum_{|h|<=K} b_h ghat(-hv) -> eps_v fast (exact at K=50, tail negligible); degree ~50 majorant captures the full discrepancy. (2) TWO REGIMES: large core (v>=17) eps small (0.01-0.09, hit high-freq ghat => equidistribute); RUNNER 1 (v=1) eps large (0.57 at deep well, hits low-freq ghat) -- exception, when only core => coreCover=density<1 = S255. (3) L2 BOUND |eps_v|<=sqrt(tail_v)/(sqrt6|G'|) ~17x better than naive (0.4-0.9 per arc vs ~14) but ~40x too weak vs actual eps~0.02 -- it uses |ghat| MAGNITUDES, discarding the SIGNED CANCELLATION.
+
+RESIDUAL (sharpened): eps_v small by SIGNED CANCELLATION -- for v coprime to non-core, the frequencies -hv are generic vs the resonance lattice of ghat, so the signed sum cancels. Needs a BILINEAR/cancellation estimate on Sum_h b_h ghat(-hv) exploiting gcd(v,non-core)=1 -- same kind as LRCFourierCompletion |C_w-b^2/q| + the resolved t>=3 signed-cancellation thread (#41).
+
+NET: mollification is the right tool (finite degree, L2<1 per arc for large core, reduces to tail_v), isolates runner 1 (=>S255), but does NOT close it -- residual = signed cancellation. Target = independent model coreCover~1-(6/7)^core<1.
+
+FILES: reflection the-mollification-is-the-right-tool-but-the-residual-is-signed-cancellation-opus-S261; lrc14_beurling_selberg_mollification_opus_S261.py(+.out); HYP-6395. -> opus-S260/S259/S255, LRCFourierCompletion, #41, s558o.
+
+---
+
 ## mac-mini-2026-07-13-S75 -- attacked the runner-1 positional bound (opus-S259's |core|=1 residual): tightest case = {1..11,13,84} (the AP with 12->84, minimal covering perturbation); coreCover-MAXIMIZER != M-minimizer, sharpening opus's "runner-1=S255"; uniform bound = LRC(14)
 
 Prompt (owner): attack the runner-1 positional bound on the |core|=1 extremals.

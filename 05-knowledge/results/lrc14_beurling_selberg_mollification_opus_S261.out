@@ -1,0 +1,16 @@
+core=[1] |G'|=0.086:
+   v=   1: eps=+0.5726, trunc K=50=+0.5821, L2-bound=1.333 [runner-1]
+core=[41, 73] |G'|=0.157:
+   v=  41: eps=+0.0192, trunc K=50=+0.0191, L2-bound=0.849 
+   v=  73: eps=-0.0084, trunc K=50=-0.0107, L2-bound=0.791 
+core=[29, 31] |G'|=0.186:
+   v=  29: eps=-0.0405, trunc K=50=-0.0397, L2-bound=0.813 
+   v=  31: eps=-0.0413, trunc K=50=-0.0425, L2-bound=0.810 
+core=[1, 17, 47, 53, 71, 89] |G'|=0.338:
+   v=   1: eps=+0.0230, trunc K=50=+0.0219, L2-bound=0.571 [runner-1]
+   v=  17: eps=+0.0388, trunc K=50=+0.0385, L2-bound=0.555 
+   v=  47: eps=+0.0196, trunc K=50=+0.0194, L2-bound=0.500 
+   v=  53: eps=+0.0004, trunc K=50=+0.0010, L2-bound=0.494 
+   v=  71: eps=-0.0320, trunc K=50=-0.0317, L2-bound=0.452 
+   v=  89: eps=+0.0081, trunc K=50=+0.0091, L2-bound=0.426 
+=> finite degree captures eps; L2 bound ~17x better than naive but ignores signed cancellation (the residual).
