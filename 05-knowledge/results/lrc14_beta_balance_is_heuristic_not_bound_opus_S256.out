@@ -1,0 +1,6 @@
+beta-balance value vs actual M(family) (is the balance a rigorous lower bound?):
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 84]: balance=5/61=0.08197, M(fam)=15/184=0.08152, q_core=85, q_fam=184, balance<=M(fam): False
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]: balance=14/183=0.07650, M(fam)=14/183=0.07650, q_core=13, q_fam=183, balance<=M(fam): True
+  [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 36]: balance=46/465=0.09892, M(fam)=18/187=0.09626, q_core=40, q_fam=187, balance<=M(fam): False
+=> balance EXCEEDS M(fam) for {1..11,84} (15/183 > 15/184): NOT a rigorous lower bound; true witness at q_fam != q_core.
+   Exact only at the deep well (q_core=q_fam=13). The general covering-min needs a DUAL certificate (mac-mini S40).
