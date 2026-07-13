@@ -1,3 +1,21 @@
+## mac-mini-2026-07-13-S75 -- attacked the runner-1 positional bound (opus-S259's |core|=1 residual): tightest case = {1..11,13,84} (the AP with 12->84, minimal covering perturbation); coreCover-MAXIMIZER != M-minimizer, sharpening opus's "runner-1=S255"; uniform bound = LRC(14)
+
+Prompt (owner): attack the runner-1 positional bound on the |core|=1 extremals.
+
+Attacked it. Localized the extremal + sharpened opus-S259, but the uniform bound is LRC(14) (no closed form).
+
+FINDINGS:
+ - For |core|=1 covering families, coreCover = meas(G' n D_1)/meas(G') (D_1 = runner-1 arc near 0); coreCover<1 <=> G' has a point in the middle [1/14,13/14] <=> M(S)>1/14.
+ - TIGHTEST |core|=1 covering family = {1..11,13,84}, coreCover=0.9195 = the AP {1,...,13} with 12 pushed out to 84=lcm(12,14). The MINIMAL covering perturbation of the AP: {1..13} is the blanket (coreCover->1) but non-covering (no mult of 14); 12->84 supplies it and drops coreCover 1->0.92. Margin (1-0.92) = the covering-min gap (M=7/89).
+ - Runner 1 NOT equidistributed (single arc); at t=a/q with q coprime to 30030 the smooth non-core have gcd(w,q)=1 => the condition IS M(S)>=1/14 at base q verbatim, no shortcut.
+
+SHARPENING opus-S259: opus reduced the residual to "near-AP = S255", but S255 proves the DEEP WELL (M-minimizer, M=14/183, coreCover 0.72). The coreCover-MAXIMIZER (hardest for the union bound) is a DIFFERENT family {1..11,13,84} (M=7/89, coreCover 0.92), NOT covered by S255. So opus's route has an unclosed gap = the runner-1 bound on the coreCover-maximizer (the near-AP covering families {1..13}\{j} u {far mult-of-14}). Bounded-far => finite check + my measure-lemma decorrelation (HYP-6340) = certified structure, not closed form.
+
+NET: extremal localized (minimal-covering-perturbation-of-AP); opus's equidistribution solid for core speeds>=17; the runner-1/near-AP residual on the coreCover-MAXIMIZER is the whole open problem = LRC(14), and it is NOT S255. HONEST: 10th session on this crux; the covering-min rigidity is PROVED+certified (THM-724/726), single-killer closed-form (S71), and the sole open item is definitively LRC(14) (first open Lonely Runner case). It will not fall to these methods.
+
+FILES: HYP-6390; 04-computation/lrc14_runner1_positional_macmini_S75.py(+.out). CREDITS: opus-S259 (route), opus-S255 (deep-well=M-min, sharpened), S74/S73 (residual localization), HYP-6340 (decorrelation). -> opus: the runner-1 bound needs the coreCover-maximizer {1..11,13,84}, not the M-minimizer; S255 covers the wrong extremal.
+
+---
 ## opus-2026-07-11-S260 -- proving the Erdos-Turan bound for the coprime core: clean structure + CONFIRMED independent model, BUT naive Erdos-Turan ~700x too weak => needs mollification (corrects S259 rigor claim)
 
 Prompt (owner): prove the Erdos-Turan discrepancy bound for the coprime core.
