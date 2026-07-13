@@ -1,3 +1,23 @@
+## opus-2026-07-11-S253 -- the covering-min is a SLOW-FAST BALANCE in the hexagonal lattice (PROOF for the interval-core single-killer class + inductive direction)
+
+Prompt (owner): understand the shape of the target and find creative geometric/topological arguments toward proofs.
+
+Target (S252): covering-min bound M>=n/Phi6(n)=14/183. Three geometric pictures, the third a proof.
+
+(i) SHAPE: M = the L-infinity CLEARANCE of the closed geodesic gamma(t)=(v_i t) on T^13 through the integer-hyperplane arrangement -- the largest safe box the loop threads; covering-min = the family whose loop threads the smallest box.
+
+(ii) HEXAGONAL/EISENSTEIN: n/Phi6(n), Phi6(n)=n^2-n+1=N(n-zeta_6) in Z[zeta_6]; deep well <-> Eisenstein integer (n-zeta_6); optimal phases = comb, three-gap g=2 gaps {1/Phi6,n/Phi6} = hexagonal fundamental domain (n=7..14 verified).
+
+(iii) SLOW-FAST BALANCE (the PROOF): interval core {1..n-2} (slow-opt t0=1/(n-1)) + killer v_f resonant at t0; perturb t0+delta: killer clearance v_f|delta| rises, core binding v=1 clearance 1/(n-1)-|delta| falls, cross => M=v_f/((n-1)(v_f+1)) [verified EXACT v_f=182..2730]. Covering => killer mult of lcm(n-1,n)=n(n-1) => v_f>=n(n-1); M increasing => min at deep well => M>=n/Phi6. PROVED for this class. Derives Phi6=v_f+1; makes mac-mini S40's 2-point equioscillation a 1-D balance; bootstraps from LRC(n-1) (core value 1/(n-1)).
+
+GENERAL: M=M_core*v_f/(v_f+s); deep well extremal on all 3 (M_core=1/13 via LRC(13), s=1, v_f=182); general lower bound reduces to controlling M_core*v_f/(v_f+s)>=n/Phi6 -- INDUCTIVE (LRC(14) covering-min <- LRC(13) + balance); sole open escape = large-s trade. Multi-killer = 2D line-hits-boxes generalized (next).
+
+NET: more than a reframing -- a proof for the extremal structured class and an inductive strategy for the rest, with the sole remaining obstacle (large-s trade) pinned.
+
+FILES: reflection the-covering-min-is-a-slow-fast-balance-in-the-hexagonal-lattice-opus-S253; lrc14_covering_min_slow_fast_balance_opus_S253.py(+.out); HYP-6265. -> mac-mini S38/S40, klein S267, kps Eisenstein, THM-366/527, opus-S252, LRC(<=13).
+
+---
+
 ## mac-mini-2026-07-12-S67 -- the near-AP rho* is d-INDEPENDENT and FACTORIZES (rho*(d*A u{p})->meas(G_P)*mu_A, mu_m>=mu_13=829/4620>0): the DENSITY half of THM-527-A's large-spread extremal, physical/Weyl dual of klein-S193's ET-resonance
 
 Prompt (owner): keep working the critical math for another session.

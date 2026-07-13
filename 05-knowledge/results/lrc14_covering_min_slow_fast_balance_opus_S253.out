@@ -1,0 +1,22 @@
+(1) hexagonal shape: covering-min = n/Phi6(n), Phi6=N(n-zeta_6):
+   n=7: 7/43, Phi6=43=a^2-ab+b^2 rep (1, 7)
+   n=8: 8/57, Phi6=57=a^2-ab+b^2 rep (1, 8)
+   n=9: 9/73, Phi6=73=a^2-ab+b^2 rep (1, 9)
+   n=10: 10/91, Phi6=91=a^2-ab+b^2 rep (1, 10)
+   n=11: 11/111, Phi6=111=a^2-ab+b^2 rep (1, 11)
+   n=12: 12/133, Phi6=133=a^2-ab+b^2 rep (1, 12)
+   n=13: 13/157, Phi6=157=a^2-ab+b^2 rep (1, 13)
+   n=14: 14/183, Phi6=183=a^2-ab+b^2 rep (1, 14)
+
+(2) slow-fast balance, n=14: M({1..12,v_f}) = v_f/(13(v_f+1)) [resonant killers]:
+   v_f=182: balance=14/183, actual=14/183, match=True
+   v_f=364: balance=28/365, actual=28/365, match=True
+   v_f=546: balance=42/547, actual=42/547, match=True
+   v_f=1820: balance=140/1821, actual=140/1821, match=True
+   v_f=2730: balance=210/2731, actual=210/2731, match=True
+   LOWER BOUND: covering=>killer mult of lcm(13,14)=182 => v_f>=182; M increasing => min M(182)=14/183=n/Phi6=14/183
+   non-resonant v_f=183: M=1/13 (>=1/13, no drop)
+   non-resonant v_f=185: M=1/13 (>=1/13, no drop)
+   non-resonant v_f=200: M=1/13 (>=1/13, no drop)
+
+(3) general: M = M_core * v_f/(v_f+s); deep well minimal on all 3 (M_core=1/13 via LRC(13), s=1, v_f=182).
