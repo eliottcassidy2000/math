@@ -1,0 +1,9 @@
+AP            : L(true)=0.00000 | Bonferroni3=1-E1+E2-E3=-3.233 | Bonferroni5=-9.724 | E_k=[1.86, 2.2, 4.58, 9.67, 16.16, 20.7]
+{1..11,13,84} : L(true)=0.00536 | Bonferroni3=1-E1+E2-E3=-2.625 | Bonferroni5=-6.460 | E_k=[1.86, 2.06, 3.83, 7.41, 11.24, 12.92]
+deep well     : L(true)=0.02389 | Bonferroni3=1-E1+E2-E3=-2.796 | Bonferroni5=-6.870 | E_k=[1.86, 2.21, 4.15, 7.87, 11.95, 13.88]
+
+=> truncated inclusion-exclusion is NEGATIVE (useless) at every finite order -- the
+moments grow (conditional convergence, THM-504 wall). 3rd-order is NECESSARY (E3 first
+separates AP) but truncation NEVER suffices: the covering energy-deficit needs RESUMMATION
+(opus THM-515 Riesz product). The last inch = a resummed >=3rd-order three-distance/Freiman
+inverse -- non-local, and provably beyond all pairwise AND truncated-moment methods.

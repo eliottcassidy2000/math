@@ -1,0 +1,12 @@
+set                    | E2(add.energy) | Schur(a+b=c) | L(lonely)
+------------------------------------------------------------------
+AP {1..13}             |           1469 |           78 | 0.00000
+translate {6..18}      |           1469 |           28 | 0.13770
+translate {11..23}     |           1469 |            3 | 0.13520
+dilate 2*{1..13}={2..26 even} |           1469 |           78 | 0.00000
+{1..11,13,84} (cov)    |           1165 |           65 | 0.00535
+
+=> E2 IDENTICAL for AP and its translates (translation-invariant) but L DIFFERS
+   (dilation-inv only). So E2/additive-energy/Freiman is TRANSLATION-BLIND at the 1/14
+   scale. Schur(a+b=c) and L both drop off the AP => the correct invariant is E3/SCHUR.
+   (Dilate 2*{1..13}: same E2 as AP up to scaling, L=0 too -- dilation-invariance holds.)
