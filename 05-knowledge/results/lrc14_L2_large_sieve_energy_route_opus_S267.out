@@ -1,0 +1,15 @@
+STEP (1)+(2): Cauchy-Schwarz route.  target core*Sum(eps^2) < 36/49 = 0.7347
+  covering families tested: 120
+  MAX core*Sum(eps^2) = 0.3279  (CLOSES => Sum|eps| < 6/7)
+  Sum|eps| <= sqrt(core*Sum eps^2) < 6/7 for ALL families: True
+  worst (deep well): core=1, |G'|=0.086, Sum eps^2=0.3279, core*Sum eps^2=0.3279, Sum|eps|=0.573
+
+STEP (3): rigorous Bessel/large-sieve bound on the L2 energy.
+  Gram_{v,v'} = Cov(D_v,D_v'): diag = Var(band) = 6/49 = 0.1224, off-diag <= 1/(3vv') [PROVEN S262].
+  worst-case Bessel: core=5, |G'|=0.271, lambda_max(Gram)=0.1225, core*bound=2.260 vs target 0.735
+  => rigorous but 3.1x loose (worst-case test function). A TIGHT large-sieve estimate closes it.
+
+NET: LRC(14)/covering reduces to a LARGE-SIEVE L2 ENERGY bound Sum_v <g(v.),1_G'>^2 <~ (6/49)|G'|,
+     which CONVERGES (unlike the L1 magnitude sum), is verified with margin, and is rigorous up to ~3x
+     via the PROVEN pairwise Cov <= 1/(3vv'). The multi-linear INVERSE THEOREM is the WRONG target
+     (an artifact of L1); the RIGHT one is a standard large-sieve energy estimate. Corrects S266.

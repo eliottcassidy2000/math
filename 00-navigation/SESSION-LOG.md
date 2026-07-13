@@ -64,6 +64,20 @@ EXHAUSTION (S281–S283): crude Fourier O(r²) [rigorous, insufficient]; large s
 HONEST BOTTOM: the density route is FULLY REDUCED and mostly rigorous (transfer THM-710, endpoint Fourier reduction THM-727, 1-D DFT of the derivative THM-728, autocorrelation-discrepancy identity THM-729, crude Q_s≤4π²r²/3, any-ε-suffices downgrade, closed-form diag=O(r)); sharp Q_s=O(r) confirmed empirically (S280). The single remaining piece is ONE genuine equidistribution cancellation — the honest analytic bottom, softer than and cleanly separated from covering's sharp multi-linear inequality (mac-mini-S78; opus-S266 independently reached 'elementary tools exhausted' on covering — BOTH routes now at their genuine bottoms). NEXT: sustained analytic effort/external equidistribution input on the one estimate, OR consolidate the LRC(14) finish-map. Continuing to peel elementary reformulations has reached its end.
 
 FILES: reflection offdiag-nonpositive-is-refuted-density-Qs-is-a-convex-minus-lattice-balance-the-analytic-bottom-klein-S283; HYP-6445; lrc14_offdiag_sign_klein_S283.py (+out). -> THM-729/728/727, HYP-6440/6425, mac-mini-S78, opus-S266.
+## opus-2026-07-11-S267 -- the multi-linear INVERSE THEOREM is the WRONG target; the L2 large-sieve ENERGY is the right one (corrects S266)
+
+Prompt (owner): prove the multi-linear inverse theorem for the band cancellation.
+
+REFRAME: S266's multi-linear alternating cancellation only obstructed the L1 magnitude sum Sum|b_k| (which DIVERGES). The L2 ENERGY Sum_v eps_v^2 CONVERGES and is small, and Cauchy-Schwarz closes it:
+  (1) Sum|eps_v| <= sqrt(core*Sum_v eps_v^2)                 [CS, rigorous]
+  (2) core*Sum eps^2 < 36/49 = (6/7)^2                       [VERIFIED, max 0.328 at deep well, huge margin]
+  => Sum|eps_v| < 6/7 => coreCover<1 => M>=1/14 => LRC(14)/covering, INCL runner-1/deep-well (no split).
+
+L2 = LARGE SIEVE: Sum_v <g(v.),1_G'>^2 <= lambda_max(Gram)*|G'|, Gram=Cov(D_v,D_v') with diag=6/49, off-diag <=1/(3vv') PROVEN (S262) => lambda_max=0.1225~6/49, Bessel bound RIGOROUS. Crude Bessel 3.1x loose (worst-case test fn); a TIGHT large-sieve estimate closes the constant.
+
+NET: LRC(14)/covering reduces to a STANDARD large-sieve L2 energy bound -- convergent, verified with margin, rigorous up to ~3x via the proven pairwise near-orthogonality -- NOT an inverse theorem. The inverse-theorem framing (S266) was a red herring from L1. The tightening is the home of LRCFourierCompletion. Corrects S266.
+
+FILES: reflection the-inverse-theorem-is-the-wrong-target-the-L2-large-sieve-energy-is-the-right-one-opus-S267; lrc14_L2_large_sieve_energy_route_opus_S267.py(+.out); HYP-6450. -> opus-S266(corrected)/S262/S264/S265, LRCFourierCompletion.
 
 ---
 
