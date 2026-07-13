@@ -1,3 +1,45 @@
+## kind-pasteur-2026-07-11-S127 cont.64 -- the covering reframe is LRC-hard (not a shortcut); the endpoint is clean
+
+Prompt (owner): work the covering reframe -- 12 smooth collars cannot tile [1/14,13/14].
+
+Tested the reframe (cont.63: {1}uB lonely <=> the 12 non-core collars leave a gap in [1/14,13/14]) for a genuine
+OBSTRUCTION -- measure budget, structure, a universal gap point. It has none:
+
+(1) MEASURE PERMITS COVERING. 12 collars total 12/7=1.714 >> interval 12/14=0.857 (2x surplus); actual covered
+~0.83, gap ~0.005-0.03. The gap is a thin residue, not a mass deficit -- no budget obstruction (same wall as the
+cont.63 measure route).
+
+(2) THE GAP LOCATION VARIES. single-killer {1..12,182} gap at 14/183=0.0765 (just past 1/14); multi-killer
+{1..11,13,84} gap at 37/89=0.416 (mid-interval). No fixed t* is uncovered for every covering family -- the gap is
+genuinely family-specific, exactly as loneliness is.
+
+(3) the interval cannot shrink uniformly (gaps range over [14/183, ~1/2]).
+
+So the covering reframe is EQUIVALENT to the |core|=1 residual and as hard as LRC -- NOT an easier formulation.
+The crux stays the fine loneliness/discrepancy (opus Fourier S259-263, klein Weyl S278).
+
+THE ONE CLEAN STRUCTURE -- THE ENDPOINT. Just above 1/14, a runner b has an arc centred near 1/14 iff b==0 mod 14;
+so ONLY the mult-of-14 runner covers near 1/14 (verified: deep-well body only 182, S_2 body only 364, each
+reaching 1/14+(1/14)/b, tiny). This explains why the SINGLE-KILLER gap sits just past 1/14 (the lone mult-of-14
+covers a shrinking sliver [1/14, 1/14+1/(196m)] and the gap opens immediately after). But it is LOCAL only -- for
+multi-killer families the gap has moved to mid-interval where this structure says nothing.
+
+SETTLED IN COVERING LANGUAGE: for the single-killer ladder {2..12,182c}, the collars leave the gap 14c/(182c+1) =
+the machine-checked reach>=14c/(182c+1) (Lean cont.60/61). So the reframe's structured extremal slice is theorem,
+not conjecture.
+
+NET: the covering reframe is RULED OUT as an easier route (saving the fleet a plausible detour); the endpoint fact
+is the clean local handle (explaining near-1/14 single-killer gaps); the single-killer slice is proved; the
+general smooth body (mid-interval gap) stays with opus's mollified-Fourier discrepancy.
+
+Artifacts: reflection the-covering-reframe-is-lrc-hard-not-a-shortcut-but-the-endpoint-is-clean-kps-S127;
+HYP-6234; lrc14_covering_reframe_kps_S127.py/out.
+
+Next: the live route is opus's Fourier/discrepancy over the smooth body; the structural + Lean extremal slice is
+complete.
+
+---
+
 ## opus-2026-07-11-S263 -- bounding the multi-linear cancellation via Gowers norms FAILS (parallel forms); it is governed by ADDITIVE RELATIONS = E3 (LEM-015). A redirect onto the project's own additive invariant
 
 Prompt (owner): bound the multi-linear cancellation via Gowers norms.

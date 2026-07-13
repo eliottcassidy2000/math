@@ -1,0 +1,25 @@
+THE COVERING REFRAME: {1}uB lonely <=> 12 collars leave a GAP in [1/14,13/14].
+interval width = 12/14 = 0.85714; each collar measure = 2/14 = 1/7; total 12 collars = 12/7 = 1.7143
+
+(1) MEASURE budget -- does the interval fit the collars? (covered vs gap measure inside [1/14,13/14]):
+    deep well {2..12,182}    covered=0.83325  GAP=0.02389  (gap>0 => LRC holds; gap is the poke-out)
+    ladder {2..12,364}       covered=0.82933  GAP=0.02782  (gap>0 => LRC holds; gap is the poke-out)
+    multi {2..11,13,84,?}    covered=0.85178  GAP=0.00536  (gap>0 => LRC holds; gap is the poke-out)
+    {3..14}                  covered=0.82692  GAP=0.03022  (gap>0 => LRC holds; gap is the poke-out)
+    => total collar measure 12/7=1.71 >> interval 0.857: MEASURE PERMITS covering. No measure obstruction.
+
+(2) ENDPOINT structure -- just above 1/14, ONLY mult-of-14 runners cover (arc centred at 1/14):
+    deep well body  : runners bad at 1/14 (cover a nbhd) = [(182, 0.07182)]
+                     (only mult-of-14 = [182]; each covers up to 1/14 + (1/14)/b = tiny reach)
+    ladder S_2 body : runners bad at 1/14 (cover a nbhd) = [(364, 0.07162)]
+                     (only mult-of-14 = [364]; each covers up to 1/14 + (1/14)/b = tiny reach)
+
+(3) the GAP LOCATION varies (no universal localization): single-killer near 1/14, multi-killer mid-interval:
+    single-killer {1..12,182}  gap (lonely t*) = 14/183 = 0.0765  (||t*||=0.0765)
+    multi-killer {1..11,13,84} gap (lonely t*) = 37/89 = 0.4157  (||t*||=0.4157)
+
+=> THE REFRAME IS LRC-HARD: measure permits covering (no budget obstruction); the gap location varies
+   (near-1/14 single-killer, mid-interval multi-killer, no universal gap point); the endpoint structure
+   is only a tiny-nbhd fact. So the covering reframe is EQUIVALENT to the |core|=1 residual, NOT a
+   shortcut -- the crux stays the fine loneliness/discrepancy (opus Fourier). The single-killer slice
+   IS proved (in covering language: {2..12,182c} collars leave the gap 14c/(182c+1), Lean cont.60/61).
