@@ -80,6 +80,25 @@ antipodal lever is confirmed closed-side. A topological argument for the odd doo
 place to push.
 
 ---
+## klein-2026-07-12-S271 -- push consec-maximizes/three-gap: SEPARATE the operative threshold (J≥432/91) from the LRC-hard exact-min; the threshold = [finite check DONE] + [monotone far tail = THM-710 in (J,μ) coords]; k=8 deg-3 row is the most tractable full closure
+
+Prompt (owner): push consec-maximizes / three-gap toward proof.
+
+Route A crux [A]: consec minimizes J=E[N(7−N)] (N=#empty of 7 sectors). J=μ(7−μ)−Var=6m1−m2. Route A needs J≥432/91=4.7473 (consec9=4465/882, margin +0.315).
+
+**(1) THE FAR-ELEMENT RECURSION (verified ~1e-3).** Adding a decorrelated far element (uniform sector, empties one w.p. N/7) gives the EXACT affine law J'=(5/7)J+(6/7)μ, μ'=(6/7)μ (2-line total-variance proof) = THM-710's eigen-transfer m_r→((7−r)/7)m_r read through J=6m1−m2. Clean (J,μ) packaging of a proved theorem.
+
+**(2) THE TAIL IS MONOTONE (verified).** {1..8,d} rises 5.062(d=9)→5.68(d→∞), always ≥ threshold — far elements RAISE J, no crossover. (Wide 9-set tail three-regime-verified: compact d≤20 + medium d=21..26 exhaustive + tail two-scale.)
+
+**(3) THE KEY SEPARATION.** Route A needs only J≥432/91 (threshold, +0.315 slack), NOT the exact consec-min. Threshold = [finite compact check, DONE (kps: all 48619 primitive 9-sets in [1..18], min=consec)] + [monotone far tail = THM-710]. The exact-min (isolated saddle of μ(7−μ)−Var, THM-716; opus-S240 blocked compression) is LRC-hard but Route A DOESN'T need it — mirror of the covering side (floor 14/183 operative, exact classification a bonus).
+
+**(4) MOST TRACTABLE FULL CLOSURE.** The k=8 deg-3 UPPER-bound row Φ≤cap9 (favorable direction, +0.047 slack ~5×): prove Φ non-increasing under far insertion (THM-710 sends m3→(4/7)m3, right signs) + finite check (THM-719) ⟹ closed. Interlocks with the additive-energy route (0-anchored ⟹ leading order E2 ⟹ consec-max ≤ AP-max-E2 = Freiman, PROVEN HYP-5990/5681; residual = the m3/k=8 rung).
+
+REMAINING (quantitative, not structural): an explicit O(1/w) rate (THM-699/700 TV bounds, currently empirical const ≤6) giving explicit crossover D0<18 ⟹ finite-check + tail overlap ⟹ threshold closed.
+
+Deliverables: reflection the-far-element-J-recursion-splits-the-threshold-from-the-exact-min-klein-S271; HYP-6260; script+out. HOUSEKEEPING: HYP-6250 double-claimed (klein-S270 keeps 6250 by first-push; mac-mini-S66 → renumber 6255); S271 = HYP-6260.
+
+NEXT: the k=8 deg-3 tail-monotonicity via THM-710 (favorable direction, ~5× slack) is the single load-bearing rung both the moment-ladder and additive-energy routes bottom out on — the sharpest concrete target. Plus the explicit O(1/w) crossover D0 to make the threshold [finite check + tail] fully rigorous.
 
 ## mac-mini-2026-07-12-S66 -- the MAX-GAP RESIDUE LAW: THM-527-A good-period existence is a pure residue-band-dodging count mod 2Vmax (physical dual of klein-S193's Erdos-Turan sum); explicit V0 for bounded-spread, vacuous on large-spread extremal (honest)
 

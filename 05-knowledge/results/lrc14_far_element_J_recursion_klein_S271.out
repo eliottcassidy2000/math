@@ -1,0 +1,37 @@
+========================================================================
+(1) baseline J, mu (fine grid)
+========================================================================
+  consec8 {1..8}   J=5.9388  mu=1.6745   (canon: consec9=4465/882=5.0624, consec8=291/49=5.9388)
+  consec9 {1..9}   J=5.0622  mu=1.4455   (canon: consec9=4465/882=5.0624, consec8=291/49=5.9388)
+  threshold 432/91 = 4.7473
+
+========================================================================
+(2) FAR-ELEMENT RECURSION: J(E u {W}) vs (5/7)J(E)+(6/7)mu(E) as W grows
+========================================================================
+  E=consec8 {1..8}: J(E)=5.9388 mu(E)=1.6745 => predicted J(E u far)=(5/7)J+(6/7)mu=5.6772
+     W=    97: J(EuW)=5.6890 (pred 5.6772, err +0.0118)  mu(EuW)=1.4373 (pred 1.4353)
+     W=   997: J(EuW)=5.6760 (pred 5.6772, err -0.0012)  mu(EuW)=1.4348 (pred 1.4353)
+     W=  9973: J(EuW)=5.6767 (pred 5.6772, err -0.0005)  mu(EuW)=1.4351 (pred 1.4353)
+     W= 99991: J(EuW)=5.8125 (pred 5.6772, err +0.1353)  mu(EuW)=1.4362 (pred 1.4353)
+  E=2AP {2,4,..,16}: J(E)=5.9389 mu(E)=1.6745 => predicted J(E u far)=(5/7)J+(6/7)mu=5.6773
+     W=    97: J(EuW)=5.7016 (pred 5.6773, err +0.0242)  mu(EuW)=1.4398 (pred 1.4353)
+     W=   997: J(EuW)=5.6760 (pred 5.6773, err -0.0013)  mu(EuW)=1.4351 (pred 1.4353)
+     W=  9973: J(EuW)=5.6770 (pred 5.6773, err -0.0004)  mu(EuW)=1.4351 (pred 1.4353)
+     W= 99991: J(EuW)=5.7983 (pred 5.6773, err +0.1209)  mu(EuW)=1.4151 (pred 1.4353)
+
+========================================================================
+(3) TAIL CONSEQUENCE: does k=8 base + mu give J_9 >= 432/91 for wide 9-sets?
+========================================================================
+  A wide 9-set = compact k'-cluster C + far element(s). In the far limit, adding 1 far w to
+  a compact 8-set C gives J_9 -> (5/7)J_8(C) + (6/7)mu_8(C).
+  If the k=8 base holds (J_8(C) >= 291/49 = 5.9388) and mu_8(C) >= mu_min, then:
+     need (6/7)mu8 >= 432/91 - (5/7)(291/49) = 0.5053  => mu8 >= 0.5895
+     (if J_8(C) >= 291/49; and mu8 is typically ~1.4-1.6, so mu8 >= 0.5895 is EASILY met)
+     check: consec8 J_8=5.9388 mu_8=1.6745; wide {1..8,99991} J_9=5.8125 >= 432/91=4.7473? True
+     recursion floor: (5/7)(291/49)+(6/7)(1.4) = 5.4420 vs threshold 4.7473
+
+If the recursion is exact (2), the k=9 TAIL reduces to [k=8 base J_8>=291/49] + [mu_8 bounded
+below, easy] => J_9(wide) >= 432/91 with margin. The far-element decorrelation RAISES J via the
+affine map J -> (5/7)J + (6/7)mu (a contraction toward the decorrelated fixed point).
+
+done.
