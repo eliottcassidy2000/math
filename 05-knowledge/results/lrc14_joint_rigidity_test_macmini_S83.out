@@ -1,0 +1,26 @@
+AP: Schur=78=C(13,2), Q(2)=103.6
+
+L (small=hard) | Schur-def | Q2-def | family
+      0.00536 |        13 |   40.1 | [1, 2, 3, 4, 5]...84
+      0.00638 |        22 |   50.7 | [1, 2, 3, 4, 5]...84
+      0.00875 |        13 |   40.1 | [1, 2, 3, 4, 5]...168
+      0.00875 |        13 |   40.1 | [1, 2, 3, 4, 5]...168
+      0.02119 |        23 |   51.0 | [1, 2, 3, 4, 5]...84
+      0.02389 |        12 |   34.9 | [1, 2, 3, 4, 5]...182
+      0.02782 |        12 |   36.3 | [1, 2, 3, 4, 5]...364
+      0.06123 |        12 |    7.2 | [2, 3, 4, 5, 6]...14
+      0.10536 |        66 |   87.3 | [1, 10, 13, 29, 44]...118
+      0.10541 |        68 |   87.4 | [1, 10, 13, 52, 53]...112
+      0.11029 |        68 |   86.4 | [1, 36, 40, 42, 43]...106
+      0.11097 |        66 |   87.1 | [1, 13, 46, 47, 50]...113
+      0.11169 |        72 |   86.6 | [1, 26, 38, 40, 44]...118
+      0.11320 |        73 |   84.7 | [1, 24, 26, 48, 51]...110
+
+corr(L, Schur-deficit) = +0.957
+corr(L, Q2-deficit)    = +0.864
+
+VERDICT: if corr(L, facet-deficit) is NEGATIVE or near 0, the facet-breaks do NOT predict
+L (bigger structural break can mean SMALLER L). Then NO joint of the facets lower-bounds L
+=> the joint rigidity FAILS: the facets measure structural distance-from-AP, L measures
+safe-set openness, and they DISAGREE. The residue is irreducibly metric, not even jointly
+reducible to the structural facets. Honest end of the 'joint rigidity' idea.
