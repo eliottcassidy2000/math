@@ -1,3 +1,20 @@
+## mac-mini-2026-07-13-S76 -- worked the last inch CREATIVELY: it is THIRD-ORDER (E3/Schur, not E2/Freiman); my pairwise-blind finding CONVERGES with opus-S182's redirect; corpus sweep integrated
+
+Prompt (owner): work the last inch creatively; search back through past documents and explore for connections.
+
+Searched the corpus (own reading + an Explore-agent sweep). The last inch (runner-1 positional bound / three-gap inverse, HYP-2566) is the repo's NAMED central crux, reached from ~5 directions. Found a clean, PROVABLE structural fact + a key correction.
+
+THE PROVABLE CORE (mine, verified): factorial moments E_k of the danger count X. The AP-vs-covering extremality is INVISIBLE at E_1 (=13/7 set-indep) and E_2 (Sidon-max, NOT AP), and FIRST appears at E_3 (AP-max 4.578). => any lower bound on L=P(safe) from (E_1,E_2) gives only L(cov)>=0 (trivial). PROVABLY: union bound, 2nd moment, Chebyshev, Paley-Zygmund, deg-2 Delsarte ALL blind -- exactly the roster that failed (my Leb|_G' S73, opus 2nd-moment S258, deg-2 dual S257). And even 3rd-order TRUNCATION fails (Bonferroni-3=-3.23, -5=-9.72; moments grow, conditional convergence, THM-504 wall) => needs the FULL resummation (opus Riesz THM-515).
+
+THE CORRECTION (opus-S182, verified): E_2/additive-energy/Freiman is the WRONG tool -- it is TRANSLATION-INVARIANT, while L is dilation-inv but NOT translation-inv. Verified E_2=1469 IDENTICAL for AP {1..13}, translates {6..18},{11..23}, dilate 2*{1..13}, while L=0,0.138,0.135,0. The correct invariant is the SCHUR count T(A)=#{a+b=c} (height-3, dilation-inv, translation-SENSITIVE): T=78,28,3,78 tracks L, and T({1..k})=C(k,2)=78 is its max. So the inverse theorem is T(S)<=C(k,2), equality iff dilated AP -- the additive-TRIPLE analogue of Freiman. My independent 3rd-order finding = opus-S182's E3/Schur redirect, exactly.
+
+THE SCALE FORK (kps-S127/klein-S265): coarse 1/7 (0-anchored, seven-sector) => E_2/Freiman |S+S|>=2n-1 PROVEN (translation broken by anchor); fine 1/14 (the conjecture) => E_3/Schur OPEN. Two scales, two inverse theorems; proven=coarse, open=fine.
+
+SWEEP LEADS integrated into the reflection: covering-min residual=core-runner-1 (kps cont62, my {1..11,13,84} its extremal); PROVEN AP-uniqueness template (difference-closed<=>AP, opus) with GW+composite-14 3/41 caveats; tournament chi=2 orbit-rigidity (kps-S13/S581o); Delsarte/Beurling-Selberg + Stern-Brocot dormant menu; external Bedert/PSTT/Liang (AP-extremal confirmed, three-gap bounds gap COUNT not cover MEASURE => no ready-made theorem).
+
+FILES: reflection the-last-inch-is-third-order-...-macmini-S76; 04-computation/lrc14_{triple_energy_deficit,pairwise_blind,bonferroni_wall,E2_translation_blind}_macmini_S76.py(+.out). NET: the averaging era is over PROVABLY; the honest target is the quantitative Schur-triple inverse (T(S)<=C(k,2)) + its resummation -- non-local, 3rd-order, translation-sensitive. -> whoever picks up: use E3/Schur at 1/14 NOT bare additive energy (translation-blind); the max-Schur-triples literature + the resummation are the two doors.
+
+---
 ## kind-pasteur-2026-07-11-S127 cont.64 -- the covering reframe is LRC-hard (not a shortcut); the endpoint is clean
 
 Prompt (owner): work the covering reframe -- 12 smooth collars cannot tile [1/14,13/14].
