@@ -32,6 +32,25 @@ FORCED SPLIT: TIGHT (M near 14/183, incl deep well) = knife-edge, handled by the
 NET: single uniform positive-polynomial cert RIGOROUSLY IMPOSSIBLE (knife-edge); route splits (forced) into [tight: S255 rigidity, proved for extremizer] + [loose: AC test measure = anti-concentration, favorable]. Reconciles dual & anti-concentration framings; constructive path is the split, tight half already proved.
 
 FILES: reflection the-dual-certificate-is-obstructed-by-the-knife-edge-the-route-splits-opus-S257; lrc14_dual_certificate_knife_edge_split_opus_S257.py(+.out); HYP-6320. -> mac-mini S40, opus-S255/S242-S245, LRCFourierCompletion, klein S267.
+## klein-2026-07-13-S275 -- the "Σe'-free decay" is MIS-TARGETED: it's FALSE (dilation), the correct bound is Error≤C·Σe'/w which decays when w≫Σe'; primitive resonance harmless; row TRUE on band (margin +0.147)
+
+Prompt (owner): work on the Σe'-free decay bound (the S274/HYP-6305 open piece).
+
+Working it directly showed the TARGET is wrong. Error(E',w)=Φ(E'∪w)−Φ_∞(E'). PRIME grid Ng≫w.
+
+(A) STRICT Σe'-free decay |Error|≤C/w is FALSE: Error(c·{0..6}, w=60c)=−0.00542 CONSTANT in c (dilation-inv: c·{0..6}∪{60c}=c·({0..6}∪{60})), so Error·w grows LINEARLY, no 1/w decay. But imprimitive (gcd=c, EXCLUDED) AND Error tiny (0.005≪0.097 margin).
+
+(B) MECHANISM (van der Corput): per offset e',boundary σ the endpoint phases are (w/e')(j+σ/7); w/e' non-integer (clean w)⟹equidistribute⟹O(1) per offset⟹Error·w=O(k)=O(1); e'|w (resonant)⟹pile⟹O(e')⟹Error·w=O(Σe'). So Error≤C·Σe'/w (THM-700's form, sharp at resonance); DECAYS when w≫Σe', const only when w∝Σe' (=dilation).
+
+(C) PRIMITIVE resonance HARMLESS: Error@lcm≤0.005 (lcm≫Σe'); worst Error·lcm=3.03 (2blk Σe'=105) ⟹ Error=0.00025.
+
+(D) ROW on band 26≤w≤6–8·diam: max Φ=0.34741 at ({0..6},26), margin +0.147, max|Error|=0.032, across 834 primitive 8-cores (structured+random, diam≤45) — ROBUSTLY TRUE. Closes: [band non-resonant (lcm≫8diam)⟹Error·w=O(1) small; direct max Φ=0.347] + [w>8diam separated: THM-700 Error≤0.058 tight const].
+
+SHARPENED TARGET (replaces the false Σe'-free decay): Error·w≤C for NON-RESONANT w (all ‖w/e'‖ bounded below) = van der Corput O(k) bound off the resonant set; resonance via lcm≫Σe'. RIGOROUS RESIDUAL: the tight const 0.066Σe'/w (R_ct≈0.81Σe' measured; only crude 2.33Σe'/w proved) + the band's non-resonant bound.
+
+NET: corrects the owner's framing productively — not Σe'-free, it's Σe'/w, decaying off resonance. Row confirmed TRUE on the tail (margin +0.147). No new THM (THM-727 reserved, released). Corrected S274 reflection + memory.
+
+FILES: reflection the-sigma-free-decay-is-mistargeted-the-real-bound-is-sigma-over-w-which-decays-when-w-dominates-klein-S275; HYP-6315; lrc14_decay_bound_klein_S275.py, lrc14_band_robust_klein_S275.py (+outs). -> THM-699/700/725, HYP-6305/6285.
 
 ---
 

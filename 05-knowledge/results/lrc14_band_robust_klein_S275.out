@@ -1,0 +1,6 @@
+scanned 834 primitive 8-cores on the band 26<=w<=6*diam
+MAX Phi on band = 0.34741 at ([0, 1, 2, 3, 4, 5, 6], 26)
+cap9 = 0.49426, margin +0.14684
+=> k=8 row ROBUSTLY TRUE on the band (margin>0.1)
+
+done.

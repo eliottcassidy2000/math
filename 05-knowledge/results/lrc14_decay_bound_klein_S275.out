@@ -1,0 +1,33 @@
+==========================================================================
+(A) DILATION (IMPRIMITIVE) counterexample: Error(c*{0..6}, w=60c) vs c
+    strict |Error|<=C/w would force Error->0; dilation-inv forces Error=const.
+==========================================================================
+  c= 1: E'=c*{0..6} (sum= 21), w=60c=  60, gcd(core)=1: Error=-0.00542  Error*w=-0.325
+  c= 2: E'=c*{0..6} (sum= 42), w=60c= 120, gcd(core)=2: Error=-0.00542  Error*w=-0.650
+  c= 4: E'=c*{0..6} (sum= 84), w=60c= 240, gcd(core)=4: Error=-0.00542  Error*w=-1.300
+  c= 8: E'=c*{0..6} (sum=168), w=60c= 480, gcd(core)=8: Error=-0.00542  Error*w=-2.599
+  c=16: E'=c*{0..6} (sum=336), w=60c= 960, gcd(core)=16: Error=-0.00542  Error*w=-5.199
+  => Error ~ const (dilation-inv), Error*w GROWS ~linearly => strict Sigma-free decay FALSE on dilations.
+     (all imprimitive gcd=c; EXCLUDED by the primitive reduction.)
+
+==========================================================================
+(B) PRIMITIVE resonant growth: primitive 7-clusters, Error at w=lcm(E'). O(1)/sqrt/linear?
+==========================================================================
+  cluster                    sum     lcm  Error@lcm  |Err|*lcm /sqrt(sum)
+  {0,1,2,3,4,5,6}             21      60   -0.00542      0.325      0.071
+  {0,1,2,3,4,5,7}             22     420   -0.00007      0.029      0.006
+  {0,1,2,4,7,10,13}           37    1820   -0.00031      0.573      0.094
+  {0,1,2,28,29,30,15}        105   12180   -0.00025      3.030      0.296
+  {0,1,3,5,7,9,11}            36    3465    0.00005      0.156      0.026
+  {0,1,2,3,5,7,11}            29    2310   -0.00017      0.395      0.073
+  {0,1,4,9,16,25,36}          91    3600   -0.00021      0.749      0.079
+
+==========================================================================
+(C) ROW TARGET: max |Error| and max Phi over primitive 7-clusters, moderate-w band 26<=w<=8*diam
+    need |Error|<=cap9-Phi_inf; cap9=0.4943. If max Phi<=cap9 with margin, row closes on the band.
+==========================================================================
+  max Phi over band = 0.34740 at ([0, 1, 2, 3, 4, 5, 6], 26)   (cap9=0.49426, margin +0.14685)
+  max |Error| over band = 0.03158 at (C,w,Phi_inf)=([0, 1, 2, 4, 6, 8, 10], 26, 0.2333251783112597)
+  need |Error| <= cap9-Phi_inf; here Phi_inf(worst)~0.233 => budget 0.261, used 0.032
+
+done.
