@@ -1,0 +1,15 @@
+DELSARTE bound = min_{deg<=D positive nu} INT W dnu. <1 => degree-D existence certificate.
+
+(a) at level 1/14 (LRC threshold): all covering M>=14/183>1/14 => loose, should certify:
+   deep well {1..12,182}  cov=True: D=20:1.174  D=40:1.003  D=80:0.730  D=160:0.390  (certifies<1 by D~80)
+   {1..11,13,84}          cov=True: D=20:1.206  D=40:1.075  D=80:0.845  D=160:0.674  (certifies<1 by D~80)
+   {2..14}                cov=True: D=20:0.560  D=40:0.136  D=80:0.005  D=160:0.000  (certifies<1 by D~20)
+
+(b) at level 14/183 (covering-MIN): deep well M=14/183 EXACTLY => knife-edge, bound->1;
+    other covering (M>14/183) should still certify:
+   deep well (M=14/183)  : D=40:1.1662  D=80:1.1106  D=160:1.0223  D=320:1.0000
+   {1..11,13,84}(M=7/89) : D=40:1.1582  D=80:0.9761  D=160:0.8800  D=320:0.7310
+
+READ: if deep-well bound at 14/183 stays >=~1 at all D (knife-edge) but <1 at level 1/14
+at finite D, and cert degree ~1/(M-level), the Delsarte LP is EQUIVALENT to the finite-Vmax
+glue (degree=Vmax); certifies loose constructively, deep well needs rigidity. Honest test.
