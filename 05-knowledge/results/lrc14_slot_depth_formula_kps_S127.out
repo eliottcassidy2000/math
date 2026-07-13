@@ -1,0 +1,22 @@
+SLOT-DEPTH FORMULA: M = Delta/(1/s_a+1/s_b), Delta = gap between the two binders' arcs. Verify M==formula:
+family                     | M | binders (a,b) | arcs | Delta | formula D | D==M?
+deep well {1..12,182}      |  14/183 | (1, 182) | 0,1/13 |  1/13 |  14/183 | True
+ladder S_2 {1..12,364}     |  28/365 | (1, 364) | 0,1/13 |  1/13 |  28/365 | True
+multi {1..11,13,84}        |    7/89 | (5, 84) | 2/5,5/12 |  1/60 |    7/89 | True
+multi {1..10,13,22,84}     |    2/23 | (1, 22) | 0,1/11 |  1/11 |    2/23 | True
+
+UNIFORM-IN-m bound, RUNNER-1-contested (single-killer) slot: a=1, backbone 14m at arc 1/13, Delta=1/13:
+       m | backbone 14m | M = 14m/(13(14m+1)) | >= 14/183?
+      13 |         182 |             14/183=0.076503 | True (min at m=13: True)
+      26 |         364 |             28/365=0.076712 | True (min at m=13: False)
+      39 |         546 |             42/547=0.076782 | True (min at m=13: False)
+     130 |        1820 |           140/1821=0.076881 | True (min at m=13: False)
+    1300 |       18200 |         1400/18201=0.076919 | True (min at m=13: False)
+    => 14m/(13(14m+1)) >= 14/183 <=> 183m >= 13(14m+1)=182m+13 <=> m >= 13. PROVED uniformly in m>=13
+       (single-killer needs m mult of 13 => m>=13; min at m=13 = deep well = 14/183). = the Lean ladder.
+
+FILLER-contested (multi-killer): a=filler>=2, so M = Delta*a*b/(a+b) with a>=2. Examples above:
+   {5,84} Delta=1/60 -> 7/89=0.0787;  {1,22} Delta -> 2/23=0.087 -- both LOOSER (deeper) than 14/183.
+   Faster binder (a>=2 vs runner-1's a=1) => shallower-denominator balance => deeper slot. But the
+   uniform bound needs the equioscillation constraint (all others >= M forces Delta*a*b/(a+b)>=14/183)
+   -- the open analytic/finite-check content (opus Fourier). The formula LOCALIZES the crux to a 2-runner balance.

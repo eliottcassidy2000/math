@@ -1,3 +1,41 @@
+## kind-pasteur-2026-07-11-S127 cont.66 -- the SLOT-DEPTH FORMULA + the uniform-in-m single-killer bound
+
+Prompt (owner): bound the filler-contested backbone slot depth uniformly in m.
+
+The backbone lens (cont.65) says exactly 2 runners bind at the covering-min (equioscillation, opus-S252). That
+makes the depth an explicit 2-runner balance. DERIVED the closed form:
+
+  binders a,b at arcs p_a/a, p_b/b, one rising (slope a) one falling (slope b) =>
+      M(1/a+1/b) = p_b/b - p_a/a =: Delta  =>  M = Delta/(1/a+1/b) = Delta*ab/(a+b).
+
+VERIFIED EXACTLY (M == formula): deep well {1,182} Delta=1/13 arcs 0,1/13 -> 14/183; ladder {1,364} -> 28/365;
+multi {5,84} Delta=1/60 arcs 2/5,5/12 -> 7/89; {1,22} Delta=1/11 -> 2/23.
+
+UNIFORM-IN-m, RUNNER-1-CONTESTED (single-killer) slot -- PROVED: a=1 => M=p_b/(b+1); backbone b=14m with m a
+multiple of 13 (so the backbone has an arc exactly at 1/13, p_b=14m/13), Delta=1/13 =>
+      M = 14m/(13(14m+1)),   and   M >= 14/183  <=>  183m >= 13(14m+1)=182m+13  <=>  m >= 13.
+A single-killer backbone has m>=13 (=lcm(13,14)*c), so M >= 14/183 UNIFORMLY in m, equality only at m=13 (deep
+well). Clean closed-form, uniform-in-m proof = the Lean ladder 14c/(182c+1) (cont.60/61). The posed question is
+DONE for this case.
+
+FILLER-CONTESTED (multi-killer) slot -- LOCALIZED: a=f>=2 => M=Delta*fb/(f+b); the filler is FASTER than runner 1
+(f>=2>1), so the balance crosses higher and the slot is DEEPER (looser) -- verified 7/89, 2/23 > 14/183. Turning
+"looser" into a UNIFORM bound needs the equioscillation side-condition (all other runners >= M at t* forces
+Delta*fb/(f+b) >= 14/183; without it Delta could be arbitrarily small). That side-condition is exactly the
+arithmetic/analytic content the finite check (klein ILP <=182) + Fourier route (opus-S259-263) supply.
+
+NET: the covering-min = min over binding pairs of Delta*ab/(a+b) (Delta=arc gap), minimizer {1,182} Delta=1/13 =>
+14/183 (the deep well as an explicit 2-runner extremal problem). The slot-depth formula LOCALIZES the whole crux
+to one clean inequality on the binding pair, and separates it: runner-1 slots CLOSED uniformly in m (proved here,
+= Lean ladder); filler slots reduce to Delta*fb/(f+b)>=14/183 under equioscillation (the open residual).
+
+Artifacts: reflection the-slot-depth-formula-and-the-uniform-in-m-single-killer-bound-kps-S127; HYP-6238;
+lrc14_slot_depth_formula_kps_S127.py/out.
+
+Next: the filler-contested residual Delta*fb/(f+b)>=14/183 under equioscillation (opus Fourier / finite check).
+
+---
+
 ## mac-mini-2026-07-13-S78 -- the Riesz resummation reformulated (L=(6/7)^13(1+corrsum), finite bounded, L>0<=>corrsum>-1); HONEST: "Schur deficit => L>0" IS the covering case of LRC(14), NOT proved
 
 Prompt (owner): prove the Riesz resummation: Schur deficit => L(S)>0.
