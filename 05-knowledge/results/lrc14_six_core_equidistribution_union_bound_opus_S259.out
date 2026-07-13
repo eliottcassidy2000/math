@@ -1,0 +1,9 @@
+|core|  n   mean-coreCover  max-coreCover  mean-Sum-density  union-bd(<1)
+    0   31   0.000          0.000          0.000          31/31
+    1   76   0.152          0.211          0.152          76/76
+    2   85   0.280          0.357          0.301          85/85
+    3   75   0.390          0.471          0.450          75/75
+    4   26   0.497          0.568          0.606          26/26
+    5    7   0.554          0.597          0.732          7/7
+=> coreCover<1 ALL (anti-conc HOLDS); union bound Sum-density<1 ALL (coprime core equidistributes, density 1/7).
+   Corrects S258: the WITHIN-G' union bound + Weyl equidistribution is a WORKING favorable mechanism.
