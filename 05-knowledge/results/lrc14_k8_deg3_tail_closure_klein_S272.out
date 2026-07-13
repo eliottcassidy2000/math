@@ -1,0 +1,40 @@
+========================================================================
+cap9 = 1979/4004 = 0.49426
+(1) Phi(consec8) and tail-monotonicity: spread {0..6, d}
+========================================================================
+  Phi(consec8 {0..7}) = 0.43797   (canon 40561/92610 = 0.43798)
+  spread {0..6, d} (move the 8th element out):
+     d=    7: Phi = 0.43797   <= cap9  (= consec8)
+     d=    8: Phi = 0.36363   <= cap9  
+     d=   10: Phi = 0.34215   <= cap9  
+     d=   14: Phi = 0.35570   <= cap9  
+     d=   20: Phi = 0.32792   <= cap9  
+     d=   40: Phi = 0.32833   <= cap9  
+     d=  100: Phi = 0.33643   <= cap9  
+     d= 1000: Phi = 0.33710   <= cap9  
+
+========================================================================
+(2) THM-710 transfer: Phi_inf(C_7) = far limit of Phi_8(C u far)?  (verify the identity)
+========================================================================
+  C=consec7 {0..6}: Phi_inf(C)=0.33732; actual Phi_8(C u 9973)=0.33726, (C u 99991)=0.33721
+  C=2AP {0,2,..,12}: Phi_inf(C)=0.33731; actual Phi_8(C u 9973)=0.33732, (C u 99991)=0.33786
+
+========================================================================
+(3) max Phi_inf over COMPACT 7-clusters (the tail bound) -- is it < cap9?
+========================================================================
+  max Phi_inf over 8 structured + 210 exhaustive(diam<=10) compact 7-clusters = 0.39727 at [1, 2, 3, 4, 5, 6, 7]
+  cap9 = 0.49426   => tail bound CLEARS cap9 with margin 0.09699
+
+========================================================================
+(4) CLOSURE ASSEMBLY
+========================================================================
+  max Phi over ALL 8-sets = max( [compact d<=D0: THM-719 exhaustive, max=0.43797 at consec8],
+                                  [wide: -> Phi_inf(compact 7-cluster) via THM-710] )
+  both <= cap9=0.49426: compact max 0.43797 (margin +0.05629); tail max 0.39727 (margin +0.09699).
+  The tail limit is REACHED via THM-710's PROVED eigen-transfer m_r->((7-r)/7)m_r; the finite-w
+  error is O(1/w) (THM-687/699/700 TV bounds). Since the tail margin is large, a crude O(1/w)
+  constant + an explicit crossover D0 (inside the THM-719 exhaustive box) CLOSES the row.
+  m3 enters Phi NEGATIVELY (favorable): dropping the +m3 transfer term only RAISES Phi_inf, so
+  the bound is robust to the m3 lower-bound instrument.
+
+done.

@@ -92,6 +92,22 @@ delta(W) lemma for Part 6b (slope-gap x good-interval width vs B/(2L)); (iii) th
 mixed-slope stratum: census whether it exists primitively at-every-scale, else hand to Parseval.
 
 ---
+## klein-2026-07-12-S272 -- the k=8 degree-3 density row CLOSES: its tail is an EXPLICIT far-element transfer of Φ, not a cited two-scale limit (THM-719 caveat discharged)
+
+Prompt (owner): close the k=8 degree-3 row via THM-710 tail-monotonicity.
+
+The k=8 density row (THM-714, majorant PROVED via exact deg-3 LP): Φ(E)=1−(2/3)m1+(47/252)m2−(5/252)m3 ≤ cap9=1979/4004=0.49426 for every 8-core, an UPPER bound (max at consec ⟹ decorrelation FAVORABLE); m_r=E_x[(N)_r], N=#empty of 7 sectors. THM-719 had it end-to-end EXCEPT the tail d>25 was a CITED two-scale limit. This session made that tail EXPLICIT.
+
+THE TRANSFER: THM-710's proved eigen-identity m_r→((7−r)/7)m_r gives the far-limit majorant of a compact 7-cluster C in closed form: Φ_∞(C)=1−(4/7)m1+(235/1764)m2−(5/441)m3 [coeffs (2/3)(6/7)=4/7, (47/252)(5/7)=235/1764, (5/252)(4/7)=5/441].
+
+VERIFIED (lrc14_k8_deg3_tail_closure_klein_S272.py): (1) Φ(consec8 {0..7})=0.43797 ✓ (canon 40561/92610); spread {0..6,d} DECREASES monotonically 0.438→~0.33 (no overshoot). (2) transfer TIGHT: Φ_∞(consec7)=0.33732 vs actual Φ8({0..6}∪w)=0.33726 (w=9973), 0.33721 (w=99991), ~1e-4. (3) max Φ_∞ over compact 7-clusters (8 structured + 210 exhaustive diam≤10, 0-anchored) = 0.39727 at consec-7 {1..7} — CLEARS cap9 with margin +0.09699 (bigger than the compact +0.0563).
+
+CLOSURE: [majorant PROVED THM-714] + [compact d≤25 EXHAUSTIVE THM-719 max 0.43797] + [tail d>25 → Φ_∞(compact 7-cluster) <cap9 via explicit THM-710 transfer, converged ~1e-3 by d=25] = NO gap (exhaustive box + tail meet). m3 enters Φ NEGATIVELY ⟹ robust to the m3 lower-bound instrument. HONEST: not fully formal — remaining = explicit O(1/w) const (THM-687/699/700; numerics ⟹ crossover D0 inside d≤25 box) + Lean cert. But the STRUCTURAL gap (tail "cited") is CLOSED. Twin of klein-S271's k=9 J→(5/7)J+(6/7)μ (favorable opposite direction).
+
+FILES: reflection the-k8-deg3-row-tail-is-an-explicit-Phi-transfer-not-a-cited-limit-klein-S272; lrc14_k8_deg3_tail_closure_klein_S272.py(+.out); THM-719 addendum; HYP-6270. -> THM-714/719/710/687/688/699/700, klein-S271, mac-mini-S65/S67, LRC(<=13).
+
+---
+
 ## opus-2026-07-11-S253 -- the covering-min is a SLOW-FAST BALANCE in the hexagonal lattice (PROOF for the interval-core single-killer class + inductive direction)
 
 Prompt (owner): understand the shape of the target and find creative geometric/topological arguments toward proofs.

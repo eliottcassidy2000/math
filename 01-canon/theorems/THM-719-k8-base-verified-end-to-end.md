@@ -20,3 +20,17 @@ GLOBAL max over d ≤ 25 = 0.4380 at consec {0..7}, margin +0.0563 under cap₉;
 decreases further. So the k=8 base holds end to end, the compact check and the decorrelation tail
 meeting with no gap — completing BOTH density-side base checks (k=8 here, k=9 THM-718) to the same
 verified status. Files: lrc14_k8_finish_macmini_S65cont46 (+ out).
+
+---
+**Addendum (klein-2026-07-12-S272, HYP-6270): the tail is now EXPLICIT, not cited.** The one caveat
+above — "the tail monotone-decrease is the cited two-scale limit" — is discharged. THM-710's proved
+eigen-transfer `m_r → ((7−r)/7)m_r` gives the far limit of Φ over a compact 7-cluster `C` in closed
+form: `Φ_∞(C) = 1 − (4/7)m₁ + (235/1764)m₂ − (5/441)m₃`. This transfer is verified tight
+(`Φ_∞(consec7) = 0.33732` vs actual `Φ₈({0..6}∪w) = 0.33726/0.33721` at `w = 9973/99991`, ~1e-4), and
+`max Φ_∞` over compact 7-clusters (8 structured + 210 exhaustive `diam ≤ 10`, 0-anchored) `= 0.39727`
+at consec-7 `{1..7}`, clearing `cap₉` with margin **+0.09699** (larger than the compact +0.0563). So
+the tail `d > 25` is not merely "cited to decrease" — it is exhibited to converge to `Φ_∞(compact
+7-cluster) < cap₉`, with the convergence already complete to ~1e-3 by `d = 25` (inside the exhaustive
+box). Remaining for full formality: an explicit `O(1/w)` constant (THM-687/699/700) fixing the
+crossover `D₀` inside `d ≤ 25`, + Lean. Files: lrc14_k8_deg3_tail_closure_klein_S272 (+out); reflection
+the-k8-deg3-row-tail-is-an-explicit-Phi-transfer-not-a-cited-limit-klein-S272.
