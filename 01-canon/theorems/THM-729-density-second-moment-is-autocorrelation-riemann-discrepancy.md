@@ -56,5 +56,19 @@ linear, `O(M)` breakpoints). The covering route needs the **multi-linear (Gowers
 √-route is genuinely lower-order and more tractable, exactly the S279 asymmetry — now pinned to a concrete
 1-D discrepancy object.
 
+## Addendum (klein-S281): crude `O(r²)` rigorous, and *any* power-saving closes the row
+
+- **Rigorous crude bound.** `Q_s=(2πw)²Σ_{ℓ≠0}|\hat f(ℓw)|²`; `|\hat f(n)|≤V(f)/(2π|n|)=r/(π|n|)`
+  (`r=#R_s`-arcs`=O(diam)`) gives `Q_s ≤ 4π²r²/3 = O(r²)`. The `(2πw)²` cancels the `1/w²` — `w`-free.
+  Insufficient alone: `|S|=O(r)`, `Error=O(diam)/d=O(1)`.
+- **Target downgrade (rigorous implication).** For **any** `ε>0`, `Q_s=O(r^{2−ε}) ⟹ |S|=O(r^{1−ε/2}) ⟹
+  Error=O(r^{1−ε/2})/d ≤ O(d^{−ε/2})→0` on the peel. So the row closes on *any* nontrivial cancellation
+  `Q_s=o(r²)` — not the sharp `O(r)`. (Sharp `O(r)` still holds empirically, S280.)
+- **The large sieve is strictly worse.** `Q_s ≤ O(r)+O(rδ^{-1})`, `δ=\min\|w(p-p')\|∼1/r²` (clustering)
+  `⟹ O(r³)`, worse than crude `O(r²)`. Diagnosis: clustered endpoints bound **thin arcs** (weight `∝`
+  width `→0`), so a **width-weighted (Montgomery–Vaughan) 2nd moment** is the right tool — the badly-
+  separated points carry negligible mass. That soft estimate (any `ε>0`) is the concrete remaining piece.
+  See HYP-6425 / reflection `density-needs-any-power-saving-not-the-sharp-bound-and-the-large-sieve-is-worse-klein-S281`.
+
 ## Files
 `04-computation/lrc14_second_moment_klein_S280.py`, `lrc14_delta_sep_klein_S280.py` (+ outs).

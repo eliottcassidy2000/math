@@ -51,6 +51,21 @@ Artifacts: reflection the-slot-depth-formula-and-the-uniform-in-m-single-killer-
 lrc14_slot_depth_formula_kps_S127.py/out.
 
 Next: the filler-contested residual Delta*fb/(f+b)>=14/183 under equioscillation (opus Fourier / finite check).
+## klein-2026-07-13-S281 -- Q_s=O(M): the crude Q_s≤4π²r²/3 is RIGOROUS (insufficient alone), but ANY power-saving Q_s=O(r^{2−ε}) closes the density row (Error→0) — density needs only a SOFT cancellation, and the large sieve is STRICTLY WORSE than crude (clustering ⟹ thin arcs)
+
+Prompt (owner): prove the 1-D autocorrelation discrepancy bound Q_s=O(M) (from S280/THM-729).
+
+(1) RIGOROUS CRUDE: Q_s=(2πw)²Σ_{ℓ≠0}|f̂(ℓw)|², f=1_{R_s} (r arcs, V(f)=2r, r=O(diam)); |f̂(n)|≤V/(2π|n|)=r/(π|n|) ⟹ Σ_{ℓ≠0}|f̂(ℓw)|²≤r²/(3w²) ⟹ Q_s≤4π²r²/3=O(r²). The (2πw)² cancels the 1/w² (w-free). INSUFFICIENT alone: |S|=O(√Q_s)=O(r)=O(diam), Error=O(diam)/d=O(1), not →0.
+
+(2) KEY DOWNGRADE (rigorous implication): for ANY ε>0, Q_s=O(r^{2−ε}) ⟹ |S|=O(r^{1−ε/2}) ⟹ Error=|S|/w=O(r^{1−ε/2})/d≤O(d^{−ε/2})→0 (peel w=d≥diam≥~3r). So the density row closes on ANY nontrivial cancellation Q_s=o(r²) — NOT the sharp O(r). This is a MAJOR target reduction; density needs only a soft saving, vs covering which needs a SHARP bounded inequality (mac-mini-S78: covering = "one bounded inequality", no slack).
+
+(3) LARGE SIEVE STRICTLY WORSE (informative): Q_s≤(L+δ⁻¹)2r dyadic ⟹ O(r)+O(rδ⁻¹); δ=min‖w(p−p')‖~1/r² (endpoint clustering) ⟹ O(r³), WORSE than crude O(r²). Clean thin/thick splits also fail (reintroduce μ_thin/w, break the w-cancellation). DIAGNOSIS: clustered endpoints bound THIN arcs (weight ∝ width →0), so the δ-clustering is WEIGHT-SUPPRESSED ⟹ a WIDTH-WEIGHTED (Montgomery–Vaughan) 2nd moment is the right tool (badly-separated points carry negligible mass). Any ε>0 suffices.
+
+(4) √ CONFIRMED (S280): sharp Q_s=O(r) holds empirically — a full √-saving, far more than the ε>0 needed.
+
+NET: density route essentially complete — rigorous crude O(r²) + the row closes on ANY power-saving + the saving is a soft width-weighted 2nd moment. The two LRC(14) routes' difficulty gap is now MAXIMAL: covering = one SHARP bounded inequality; density = ANY nontrivial cancellation.
+
+FILES: reflection density-needs-any-power-saving-not-the-sharp-bound-and-the-large-sieve-is-worse-klein-S281; THM-729 addendum; HYP-6425. -> THM-729/728/727, HYP-6415, mac-mini-S78.
 
 ---
 
