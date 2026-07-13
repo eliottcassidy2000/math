@@ -1,0 +1,47 @@
+==========================================================================
+cap9=0.49426  thresh_J=4.74725
+(A) worst-case two-scale error*w: clean (prime) w vs ADVERSARIAL w (lcm-multiples)
+==========================================================================
+  C=[0, 1, 2, 3, 4, 5, 6]  lcm=60  Phi_inf=0.33732
+    clean-w (primes):  w=97:err*w=0.230  w=997:err*w=0.176  w=9973:err*w=0.255  w=99991:err*w=13.655
+    adversarial-w (mult of lcm):  w=60:err*w=0.327  w=120:err*w=0.094  w=180:err*w=0.178  w=300:err*w=0.491  w=600:err*w=0.345  w=3000:err*w=4.650
+  C=[0, 1, 2, 3, 4, 5, 7]  lcm=420  Phi_inf=0.27165
+    clean-w (primes):  w=97:err*w=0.268  w=997:err*w=0.179  w=9973:err*w=0.477  w=99991:err*w=0.297
+    adversarial-w (mult of lcm):  w=420:err*w=0.039  w=840:err*w=0.634  w=1260:err*w=0.019  w=2100:err*w=0.146  w=4200:err*w=0.937  w=21000:err*w=33.115
+  C=[0, 2, 4, 6, 8, 10, 12]  lcm=120  Phi_inf=0.33730
+    clean-w (primes):  w=97:err*w=0.189  w=997:err*w=0.003  w=9973:err*w=1.720  w=99991:err*w=15.059
+    adversarial-w (mult of lcm):  w=120:err*w=0.656  w=240:err*w=0.162  w=360:err*w=0.405  w=600:err*w=1.014  w=1200:err*w=1.324  w=6000:err*w=14.057
+
+==========================================================================
+(B) INTERMEDIATE BAND d=26..600: max Phi over structured worst-case 8-cores
+    (near-consec, edge-heavy, 2-block, dilated-AP, plus perturbations)
+==========================================================================
+  d=  26: max Phi over  8 structured cands = 0.34737   <=cap9  arg=[0, 1, 2, 3, 4, 5, 6, 26]
+  d=  28: max Phi over  8 structured cands = 0.43797   <=cap9  arg=[0, 4, 8, 12, 16, 20, 24, 28]
+  d=  30: max Phi over  8 structured cands = 0.34448   <=cap9  arg=[0, 1, 5, 10, 15, 20, 25, 30]
+  d=  35: max Phi over  8 structured cands = 0.43793   <=cap9  arg=[0, 5, 10, 15, 20, 25, 30, 35]
+  d=  40: max Phi over  8 structured cands = 0.32832   <=cap9  arg=[0, 1, 2, 3, 4, 5, 6, 40]
+  d=  50: max Phi over  8 structured cands = 0.33884   <=cap9  arg=[0, 1, 2, 3, 4, 5, 6, 50]
+  d=  60: max Phi over  8 structured cands = 0.33501   <=cap9  arg=[0, 1, 10, 20, 30, 40, 50, 60]
+  d=  80: max Phi over  8 structured cands = 0.33808   <=cap9  arg=[0, 1, 2, 3, 4, 5, 6, 80]
+  d= 100: max Phi over  8 structured cands = 0.33643   <=cap9  arg=[0, 1, 2, 3, 4, 5, 6, 100]
+  d= 150: max Phi over  8 structured cands = 0.33797   <=cap9  arg=[0, 1, 25, 50, 75, 100, 125, 150]
+  d= 200: max Phi over  8 structured cands = 0.33469   <=cap9  arg=[0, 1, 2, 3, 4, 5, 6, 200]
+  d= 300: max Phi over  8 structured cands = 0.33594   <=cap9  arg=[0, 1, 50, 100, 150, 200, 250, 300]
+  d= 400: max Phi over  8 structured cands = 0.33731   <=cap9  arg=[0, 1, 2, 3, 4, 5, 6, 400]
+  d= 600: max Phi over  8 structured cands = 0.33675   <=cap9  arg=[0, 1, 2, 3, 4, 5, 6, 600]
+  --> BAND MAX (d=26..600) = 0.43797 at [0, 4, 8, 12, 16, 20, 24, 28];  cap9=0.49426, margin +0.05629
+
+==========================================================================
+(C) CROSSOVER: crude THM-700 constant vs empirical; where does the bound bite?
+==========================================================================
+  C=[0, 1, 2, 3, 4, 5, 6]: sum(e')=21, THM-700 V(E')<=14*sum=294, crude err<=V/(6w)=49.0/w
+    empirical worst-case err*w (Phi, incl adversarial) ~ 4.650
+    ==> crude/empirical overshoot ~ 11x  (THM-700 says ~10^2)
+  k=8 tail margin cap9 - max_Phi_inf = 0.49426-0.397 = 0.09726
+    D0_crude = (crude const)/margin = 504   (single-peel bites only past here)
+    D0_emp   = (empirical const)/margin = 47.8
+  BOX (THM-719 exhaustive) covers d<=25. INTERMEDIATE BAND = 26..D0_crude is where the
+    single-peel bound is vacuous; part (B) shows max Phi there stays 0.438 < cap9.
+
+done.

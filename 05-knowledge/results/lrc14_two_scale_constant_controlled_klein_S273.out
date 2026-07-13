@@ -1,0 +1,65 @@
+==========================================================================
+(1) DILATION-INVARIANCE  Phi(c*E) = Phi(E)  (so reduce to PRIMITIVE cores)
+==========================================================================
+  Phi(consec-8 {0..7}) = 0.437965
+  Phi(2*{0..7}) (diam=14, gcd=2) = 0.437946   diff=1.92e-05
+  Phi(3*{0..7}) (diam=21, gcd=3) = 0.437906   diff=5.87e-05
+  Phi(4*{0..7}) (diam=28, gcd=4) = 0.437966   diff=1.23e-06
+  Phi(5*{0..7}) (diam=35, gcd=5) = 0.437928   diff=3.74e-05
+  Phi(7*{0..7}) (diam=49, gcd=7) = 0.437965   diff=0.00e+00
+  => the large-diameter 0.438 configs are DILATIONS of consec-8 (imprimitive), not new.
+
+==========================================================================
+(2) CONTROLLED constant err*w (Ng=400*w, so frac(wx) always resolved; no aliasing)
+==========================================================================
+  C=[0, 1, 2, 3, 4, 5, 6]  lcm=60  Phi_inf=0.33732
+    prime     w=   37 (Ng=90000): err=0.00431  err*w=0.159
+    prime     w=  101 (Ng=90000): err=0.00023  err*w=0.023
+    prime     w=  211 (Ng=90000): err=0.00077  err*w=0.161
+    prime     w=  503 (Ng=201200): err=0.00034  err*w=0.170
+    lcm-mult  w=   60 (Ng=90000): err=0.00545  err*w=0.327
+    lcm-mult  w=  120 (Ng=90000): err=0.00078  err*w=0.094
+    lcm-mult  w=  180 (Ng=90000): err=0.00099  err*w=0.178
+    lcm-mult  w=  300 (Ng=120000): err=0.00147  err*w=0.442
+    -> worst err*w for this C = 0.442
+  C=[0, 1, 2, 3, 4, 5, 7]  lcm=420  Phi_inf=0.27165
+    prime     w=   37 (Ng=90000): err=0.00581  err*w=0.215
+    prime     w=  101 (Ng=90000): err=0.00067  err*w=0.068
+    prime     w=  211 (Ng=90000): err=0.00080  err*w=0.169
+    prime     w=  503 (Ng=201200): err=0.00083  err*w=0.419
+    lcm-mult  w=  420 (Ng=168000): err=0.00020  err*w=0.083
+    lcm-mult  w=  840 (Ng=336000): err=0.00086  err*w=0.722
+    lcm-mult  w= 1260 (Ng=504000): err=0.00004  err*w=0.051
+    lcm-mult  w= 2100 (Ng=840000): err=0.00006  err*w=0.118
+    -> worst err*w for this C = 0.722
+  C=[0, 2, 4, 6, 8, 10, 12]  lcm=120  Phi_inf=0.33730
+    prime     w=   37 (Ng=90000): err=0.00185  err*w=0.069
+    prime     w=  101 (Ng=90000): err=0.00031  err*w=0.031
+    prime     w=  211 (Ng=90000): err=0.00005  err*w=0.010
+    prime     w=  503 (Ng=201200): err=0.00010  err*w=0.050
+    lcm-mult  w=  120 (Ng=90000): err=0.00546  err*w=0.656
+    lcm-mult  w=  240 (Ng=96000): err=0.00073  err*w=0.176
+    lcm-mult  w=  360 (Ng=144000): err=0.00098  err*w=0.352
+    lcm-mult  w=  600 (Ng=240000): err=0.00148  err*w=0.886
+    -> worst err*w for this C = 0.886
+
+==========================================================================
+(3) PRIMITIVE-band max Phi, d=26..300 (gcd=1 structured cands ONLY; dilations excluded)
+==========================================================================
+  d=  26: max Phi over 7 PRIMITIVE cands = 0.34737   arg=[0, 1, 2, 3, 4, 5, 6, 26]
+  d=  27: max Phi over 7 PRIMITIVE cands = 0.33403   arg=[0, 1, 2, 3, 4, 5, 6, 27]
+  d=  29: max Phi over 7 PRIMITIVE cands = 0.33482   arg=[0, 1, 2, 3, 4, 5, 6, 29]
+  d=  31: max Phi over 7 PRIMITIVE cands = 0.34164   arg=[0, 1, 2, 3, 4, 5, 6, 31]
+  d=  37: max Phi over 7 PRIMITIVE cands = 0.33301   arg=[0, 1, 2, 3, 4, 5, 6, 37]
+  d=  41: max Phi over 7 PRIMITIVE cands = 0.34794   arg=[0, 1, 2, 3, 4, 5, 6, 41]
+  d=  50: max Phi over 7 PRIMITIVE cands = 0.33884   arg=[0, 1, 2, 3, 4, 5, 6, 50]
+  d=  61: max Phi over 7 PRIMITIVE cands = 0.33674   arg=[0, 1, 2, 3, 4, 5, 6, 61]
+  d=  80: max Phi over 7 PRIMITIVE cands = 0.33808   arg=[0, 1, 2, 3, 4, 5, 6, 80]
+  d= 101: max Phi over 7 PRIMITIVE cands = 0.33709   arg=[0, 1, 2, 3, 4, 5, 6, 101]
+  d= 151: max Phi over 7 PRIMITIVE cands = 0.33673   arg=[0, 1, 2, 3, 4, 5, 6, 151]
+  d= 201: max Phi over 7 PRIMITIVE cands = 0.33768   arg=[0, 1, 2, 3, 4, 5, 6, 201]
+  d= 300: max Phi over 7 PRIMITIVE cands = 0.33594   arg=[0, 1, 50, 100, 150, 200, 250, 300]
+  => PRIMITIVE-spread band max = 0.34794 at [0, 1, 2, 3, 4, 5, 6, 41];  cap9=0.49426, margin +0.14631
+     (contrast: run-1 band max 0.438 was 4*{0..7}/5*{0..7} = IMPRIMITIVE = consec-8 rescaled)
+
+done.

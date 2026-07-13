@@ -115,6 +115,21 @@ HYP-6225; lrc14_multikiller_enum_kps_S127.py/out, lrc14_multikiller_genuine_kps_
 
 Next: promote core-length monotonicity from enumeration to a global-optimum inequality; and the non-interval
 tail (ILP <=182 + escape).
+## klein-2026-07-12-S273 -- the explicit two-scale constant: SMALL and adversarial-robust (C_Φ≈0.9, C_J≈7), dilation reframes the tail as primitive-spread, the rigorous gap is entirely cross-sector cancellation
+
+Prompt (owner): work on the explicit two-scale constant (the single quantitative item left on both density-row tails, k=8 Φ≤cap9 + k=9 J≥432/91).
+
+The single-peel bound is PROVED (THM-700 kps: |p0(E'∪w)−Plat(E')|≤V(E')/(6w), V≤14Σe', crude). Pinned the real situation for the ACTUAL functionals Φ, J.
+
+(1) DILATION-INVARIANCE Φ(cE)=Φ(E), J(cE)=J(E) EXACTLY (subst y=frac(cx), verified Φ(7·{0..7})=Φ({0..7}) to 0) ⟹ rows reduce to PRIMITIVE cores. Killed a red herring: a first sweep's "band max Φ=0.438" at large d were 4·{0..7}/5·{0..7} = IMPRIMITIVE = consec-8 rescaled (THM-719 already restricts to primitive). Re-swept PRIMITIVE-only d=26..300: max Φ=0.348 at {0..6,41}, margin +0.146 — the LOOSEST regime.
+
+(2) TRUE CONSTANT (grid scaled to w, N_g=400w, killing the aliasing that faked err·w≈13–15 at w≈N_g): worst err·w over clean primes AND adversarial w=lcm-multiples is C_Φ≈0.9, C_J≈7 (±20%). Adversarial w give only ~2–3× clean (still O(1), not O(Σe')) ⟹ sharp constant is UNIFORM, cross-sector cancellation real+robust. D₀=C/margin: Φ≈6, J≈8 — BOTH inside boxes (k8≤25, k9≤18) ⟹ if empirical const were rigorous, NO band, rows close.
+
+(3) PRECISE GAP: need C_Φ≤3.65, C_J≤17; empirical clears (4×/2.4×); crude (49/440) misses 14×/26×. Clean improvements short: sin(πℓ/7) factor 1.82× (→ best rigorous ≈27/w, D₀≈185); Cauchy–Schwarz+Parseval = absolute ≈1.2, NO 1/w decay. Rest = cross-sector cancellation (THM-700-flagged open). REMAINING LEMMA (handed to kps): |Σ_s ∫ f_s(x)g_s(wx)dx|≤C₀/w, C₀ absolute — a 2-D joint-equidistribution stmt, tool = van der Corput/Weyl 2nd-moment on (v_i x, wx). FALLBACK: sin-const D₀≈185 + primitive-band finite check, or max_d Φ monotonicity.
+
+NET: not a rigorous closure, but the constant is measured (small, adversarial-robust), the tail is reframed (primitive-spread, margin 0.146) and confirmed TRUE to d=300, and the gap is a single crisp lemma not a structural unknown.
+
+FILES: reflection the-two-scale-constant-is-small-and-adversarial-robust-the-gap-is-cross-sector-cancellation-klein-S273; lrc14_two_scale_constant_klein_S273.py(+out) + _controlled_ (+out) + _J_; HYP-6285. HOUSEKEEPING: renumbered S272 HYP-6270→6272 (collision death-star-S15/opus-S254). -> THM-699/700/687/688/710, klein-S271/S272, kps-S127.
 
 ---
 

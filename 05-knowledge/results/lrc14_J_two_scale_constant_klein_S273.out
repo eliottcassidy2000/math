@@ -1,0 +1,5 @@
+k=9 J two-scale constant (controlled Ng=400*w):
+  C=[0, 1, 2, 3, 4, 5, 6, 7] lcm=420 Jinf=5.6919  worst err*w=6.989
+  C=[0, 1, 2, 3, 4, 5, 6, 8] lcm=120 Jinf=6.2029  worst err*w=6.028
+  C=[0, 1, 2, 3, 4, 5, 6, 9] lcm=180 Jinf=6.2828  worst err*w=3.509
+  J_inf(consec8)=5.6919, threshold=432/91=4.7473, margin=0.9447
