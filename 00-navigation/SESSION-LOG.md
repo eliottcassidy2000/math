@@ -1,3 +1,20 @@
+## mac-mini-2026-07-13-S86 -- attempted to build the THM-729 autocorrelation bound on meas(G' cap middle): it CANNOT be built (verified the object is multi-linear/Gowers, not 1-D). Confirms the density/covering tractability asymmetry FOR the near-AP residue
+
+Prompt (owner): build the THM-729 autocorrelation bound on meas(G' cap middle).
+
+Read THM-729 in full (klein-S280): Q_s = (2pi w)^2 * [1-D Riemann-discrepancy of the autocorrelation A of 1_{R_s}], sqrt-cancellation for the DENSITY route. THM-729 EXPLICITLY names the asymmetry: 'the covering route needs the multi-linear (Gowers) cancellation.' So I tested whether meas(G' cap middle) (the covering object) is 1-D-tractable or multi-linear.
+
+VERIFIED MULTI-LINEAR (res 3e5): (1) actual meas(G' cap middle) = 4% of the INDEPENDENT estimate ({1..11,13,84}: 0.00536 vs meas(mid)*PROD(1-2c)=0.13479, ratio 0.040) -- the smooth runners NEAR-BLANKET the middle, L is a ~96% cancellation. (2) the middle inclusion-exclusion converges only at HIGH order (partial sums +0.86,-0.54,+0.20,-0.07,+0.03 settle near order 5-6, NOT order 2) -- the near-blanket is built from MANY-RUNNER overlaps, not pairwise.
+
+VERDICT: THM-729's 1-D autocorrelation discrepancy does NOT transfer to meas(G' cap middle). The near-cancellation is genuinely multi-linear (Gowers) -- exactly the covering side of the tractability asymmetry THM-729 names (density=1-D, covering=multi-linear). So the autocorrelation bound cannot be built here via THM-729's device; the near-AP residue (L=meas(G' cap middle)>0, HYP-6500) needs the Gowers multi-linear cancellation = the open crux (opus-S262/S263, mac-mini-S76 3rd-order). HYP-6510.
+
+This CONCRETELY confirms the density/covering asymmetry for the near-AP residue: the density route (klein, 1-D THM-729) closes; the covering route (near-AP, multi-linear) needs Gowers, which THM-729 does not reach. So the honest answer to 'build the THM-729 bound here' is: it can't be built -- the object is the harder (Gowers) order, verified.
+
+STATE (S66-S86): the covering-min is completely mapped -- rigidity + combinatorial inverse PROVED, residue reformulated/diagnosed, all structural ideas severed, moment-expansion trivial, near-AP connected to the x-integral (HYP-6500), and now the x-integral shown multi-linear/Gowers (THM-729 doesn't transfer, HYP-6510). The one open crux is the covering middle-order Gowers cancellation on the near-AP residue = L=meas(G' cap middle)>0 = LRC(14). opus/kps own it; the Gowers/multi-linear inverse is the tool it needs.
+
+FILES: HYP-6510; 04-computation/lrc14_autocorr_middle_macmini_S86.py(+.out). -> opus/kps: meas(G' cap middle) is 4%-of-independent multi-linear (near-blanket, high-order IE); it needs the Gowers cancellation, NOT the THM-729 1-D device (that's klein's density route). The near-AP residue is the covering multi-linear crux, concretely.
+
+---
 ## mac-mini-2026-07-13-S85 -- CONNECTED the near-AP residue to klein's positive-definite x-integral (THM-729): the covering eps_v on |core|=1 IS my coreCover object; L=meas(G' cap middle); concrete data + reduction handed to the fleet's x-integral device
 
 Prompt (owner): pursue the positive-definite x-integral on the near-AP residue.
