@@ -27,6 +27,43 @@ THE ARC'S HONEST TERMINUS: [covering-min rigidity PROVED+certified, THM-724/726]
 FILES: HYP-6440; 04-computation/lrc14_corrsum_order_macmini_S79.py(+.out). -> the residue is fully diagnosed and cleanly stated; the next mover needs a non-order-truncated, non-averaging idea (the fleet's dormant menu: Delsarte dual-existence, Stern-Brocot tower, tournament chi=2 orbit-rigidity).
 
 ---
+## kind-pasteur-2026-07-11-S127 cont.67 -- the 2-runner extremal problem UNIFIES slot-depth, clearing, and lcm-outlier
+
+Prompt (owner): work the 2-runner extremal problem.
+
+The covering-min in 2-runner form (cont.66): min over primitive covering families of M = Delta*ab/(a+b), {a,b}
+the binding pair, Delta the arc gap, subject to equioscillation. Working it shows it is the SAME object as
+klein's clearing certificate and my lcm-outlier -- three fleet frames are one extremal problem.
+
+(1) SLOT-DEPTH = CLEARING MODULUS. Runner-1-binding (a=1, arc at 0) => M = p_b/(b+1), which IS a band-clearing
+certificate at modulus q = b+1, band-edge mu = p_b, M = mu/q. Verified: deep well (1,182) q=183 mu=14; ladder
+(1,364) q=365 mu=28; multi (1,22) q=23 mu=2 -- all M == mu/q. So the co-binder b = klein's clearing modulus MINUS
+ONE (b = q-1). My slot-depth formula and klein's q<=183 certificate are the SAME datum.
+
+(2) CO-BINDER = lcm-OUTLIER. At the extremal t*=14/183 (q=183), covering d=13 forces a mult of 13 lonely (>=M):
+13u with ||13u*14/183|| >= 14/183 <=> u in [14,169] (since 182u == -u mod 183); smallest u=14 => 13*14 = 182 =
+lcm(13,14) = the co-binder (and the mult of 14). So my cont.55 lcm mechanism = the 2-runner co-binder constraint.
+
+(3) MINIMIZER: {1,182}, Delta=1/13 => 14/183 (deep well, unique over single-killer k<=199).
+
+SPLIT (identical in all 3 frames): co-binder = mult of lcm(13,14)=182 (single-killer) => M=14m/(13(14m+1))>=14/183
+uniformly, PROVED + Lean (cont.60/61/66); co-binder mult-of-14 + SEPARATE mult-of-13 (multi-killer) => t*
+mid-interval, a filler binds = klein clearing ILP<=182 + Fourier (opus-S259-263), the open residual.
+
+NET: the 2-runner extremal is the covering-min, and working it shows the fleet's three separate handles
+(slot-depth balance, clearing modulus, lcm-outlier) are ONE, tied through b = q-1 = lcm(13,14) at the minimizer.
+This unifies the bookkeeping (a clearing certificate IS a binding-pair balance) and pins the open case
+identically in every frame: the co-binder splitting 13 and 14 into separate runners. The proved half (co-binder =
+lcm-multiple) is closed in closed form and in Lean; the open half is klein's finite clearing check (to 182).
+
+Artifacts: reflection the-2-runner-extremal-unifies-slot-depth-clearing-and-lcm-outlier-kps-S127; HYP-6242;
+lrc14_two_runner_extremal_kps_S127.py/out.
+
+Next: the open residual (co-binder mult-of-14 + separate mult-of-13) = klein's clearing ILP + opus's Fourier;
+the proved single-killer half is unified across all three frames.
+
+---
+
 ## opus-2026-07-11-S265 -- the runner-1 positional lemma splits MEASURE U EQUIDISTRIBUTION (500/500, zero residual), completing a full LRC(14) case skeleton on covering families
 
 Prompt (owner): prove the runner-1 positional lemma for speed-1 covering families.

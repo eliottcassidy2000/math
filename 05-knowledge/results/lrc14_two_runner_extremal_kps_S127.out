@@ -1,0 +1,18 @@
+(1) THE UNIFICATION: runner-1-binding => clearing at q = b+1 (co-binder b), band-edge mu=p_b, M=mu/q:
+    family                   | binders (1,b) | M | q=b+1 | mu=p_b | M==mu/q?
+    deep well {1..12,182}    | (1,182) |  14/183 |   183 |     14 | True (=14/183)
+    ladder S_2 {1..12,364}   | (1,364) |  28/365 |   365 |     28 | True (=28/365)
+    multi {1..10,13,22,84}   | (1,22) |    2/23 |    23 |      2 | True (=2/23)
+
+(2) THE lcm-OUTLIER in the 2-runner frame: at the extremal t*=14/183 (q=183), covering d=13 forces a
+    mult of 13 that is LONELY (>=M): 13u with ||13u*14/183||>=14/183 <=> u in [14,169]; minimal u=14 =>
+    13*14 = 182 = lcm(13,14) = the deep-well co-binder. (182u mod 183 = -u => in-band iff u in [14,169].)
+    smallest u with 13u lonely at 14/183: u=14 => 13u=182 (=lcm(13,14)? True)
+
+(3) THE 2-RUNNER EXTREMAL MINIMIZER: min over covering families of Delta*ab/(a+b) = M; enumerate:
+    min over single-killer {1..12,k}, k<=199: M=14/183 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182], binding pair [1, 182]
+    => the 2-runner extremal minimizer is {1,182} with Delta=1/13 => M=14/183 (the deep well).
+
+=> THE 2-RUNNER EXTREMAL UNIFIES: slot-depth M=Delta*ab/(a+b) (kps cont.66) = clearing at q=b+1 (klein)
+   = lcm-outlier co-binder 182 (kps cont.55). Single-killer (co-binder = mult of lcm 182) PROVED >=14/183
+   uniformly (cont.60/61,66); general (co-binder mult-of-14 + separate mult-of-13) = klein clearing ILP<=182.
