@@ -1,0 +1,13 @@
+core=[41, 73], r=11, |G'|=0.157:
+   v=  41: eps_full=+0.01921, |S|=1(pairwise)=-0.00012, |S|>=2(multi)=+0.01932
+   v=  73: eps_full=-0.00842, |S|=1(pairwise)=+0.00013, |S|>=2(multi)=-0.00855
+   => eps_v ~100% |S|>=2 (multi-linear); completion identity (bilinear) bounds the tiny pairwise only.
+core=[29, 31], r=11, |G'|=0.186:
+   v=  29: eps_full=-0.04053, |S|=1(pairwise)=+0.00010, |S|>=2(multi)=-0.04063
+   v=  31: eps_full=-0.04131, |S|=1(pairwise)=+0.00017, |S|>=2(multi)=-0.04148
+   => eps_v ~100% |S|>=2 (multi-linear); completion identity (bilinear) bounds the tiny pairwise only.
+core=[1, 17, 47, 53, 71, 89], r=7, |G'|=0.338:
+   v=   1: eps_full=+0.02303, |S|=1(pairwise)=+0.01124, |S|>=2(multi)=+0.01178
+   v=  17: eps_full=+0.03881, |S|=1(pairwise)=+0.00194, |S|>=2(multi)=+0.03687
+   v=  47: eps_full=+0.01962, |S|=1(pairwise)=+0.00032, |S|>=2(multi)=+0.01930
+   => eps_v ~100% |S|>=2 (multi-linear); completion identity (bilinear) bounds the tiny pairwise only.

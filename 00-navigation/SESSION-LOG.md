@@ -1,3 +1,19 @@
+## opus-2026-07-11-S262 -- applying the LRCFourierCompletion cancellation bound to eps_v: it is BILINEAR (pairwise, clean 1/(3vw)) but eps_v is ~100% MULTI-runner; residual = MULTI-LINEAR cancellation
+
+Prompt (owner): apply the LRCFourierCompletion cancellation bound to Sum_h b_h ghat(-hv).
+
+THE COMPLETION IDENTITY (LEM-022, B.1-B.3): C_w=b^2/q+(1/q)Sum_{h!=0}Bhat(h)conj(Bhat(w^-1 h)), |C_w-b^2/q|<=5q(log q)^2/P(w) -- BILINEAR band-vs-w-dilate = pairwise overlap Cov(D_v,D_w).
+
+MAPPING: 1_{G'}=prod_w(1-1_{D_w}); eps_v|G'|=Cov(1_{D_v},1_{G'})=Sum_S(-1)^|S|Cov(1_{D_v},prod_S 1_{D_w}); the |S|=1 terms = Cov(D_v,D_w)=Sum_{k!=0}b_{vk}b_{wk}, for v coprime to w CLEAN |Cov|<=1/(3vw).
+
+DECISIVE FINDING (FFT, D=13860): eps_v is ~100% from |S|>=2 (MULTI-runner), NOT pairwise |S|=1: {41,73} v=41 eps=+0.0192 |S|=1=-0.0001 |S|>=2=+0.0193; {29,31} v=29 |S|>=2=100%; {1,17,..} v=17 |S|>=2=95%. Pairwise ~0.0001 negligible; core-core Cov clean+tiny. WHY: |S|=2 has ~60 pairs, ratio 7/6 => ~70x |S|=1.
+
+NET: completion identity BILINEARLY bounds Cov(D_v,D_w)<=1/(3vw) cleanly (pairwise independence, negligible) BUT eps_v (core arc vs PRODUCT good-set) is 100% MULTI-LINEAR => necessary but one order too low; residual = MULTI-LINEAR (>=3-way, Gowers-type) cancellation = the multi-way good-set/core entanglement = the Minkowski-tail/entanglement threads (#42-#43). Extremizer proved (S255); pairwise clean; open crux = multi-linear cancellation, runner 1 => S255.
+
+FILES: reflection the-completion-identity-is-bilinear-the-residual-is-multilinear-opus-S262; lrc14_completion_identity_is_bilinear_residual_is_multilinear_opus_S262.py(+.out); HYP-6405. -> opus-S261, LRCFourierCompletion B.1-B.3, #42-#43, opus-S259/S255, s558o.
+
+---
+
 ## kind-pasteur-2026-07-11-S127 cont.63 -- the MEASURE route fails for core-runner-1; the crux is the anti-correlated poke-out
 
 Prompt (owner): attack the general core-runner-1 case with arbitrary smooth body.
