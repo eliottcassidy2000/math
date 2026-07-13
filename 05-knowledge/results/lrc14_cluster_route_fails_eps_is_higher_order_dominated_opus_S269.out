@@ -1,0 +1,12 @@
+core>=2 families, core speeds v>=17: 658 tested, max|eps_v|=0.0906
+
+TEST A  |eps_v| <= (7/6) Sum_w |Cov(D_v,D_w)|  (leading cluster term dominates)?
+  failures 555/658 ; worst ratio |eps|/lead = 46.9x  => FAILS -- eps_v is higher-order (multi-linear) dominated
+
+TEST B  |eps_v| <= (7/6) Sum_w 1/(3vw)  (fully rigorous via proven |Cov|<=1/(3vw))?
+  worst ratio = 113.6x  => FAILS -- cluster route cannot reach eps_v=O(1)
+
+NET: eps_v=O(1) for core>=2 is the anti-concentration. The cluster/Mayer expansion (best rigorous
+     route, on the PROVEN pairwise bound) provably cannot reach it: eps_v is multi-linear, not
+     pairwise. Dominant term = noncore-pair resonances (w1 +- w2 = +-kv); magnitude diverges, value
+     needs the signed cancellation = the S266/S268 wall. NOT PROVED.

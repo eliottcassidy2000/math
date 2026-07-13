@@ -62,6 +62,19 @@ UNIFICATION SHARPENED (stronger than S284/S279 — now LITERAL): covering's ε_v
 NET: the density Weyl bound is pinned as the known hard relation-lattice coset sum, unifying it with the covering residual and the support-6 kernel under one lattice (three cosets). This does not prove it — it identifies it as the fleet's central conditionally-convergent object. Remaining = genuine harmonic analysis on the coset sum (Weyl/van der Corput or Gowers-inverse), the same estimate covering needs on the zero-coset. (kps cont.69 is on that zero-coset L2 discrepancy — same object.)
 
 FILES: reflection the-density-weyl-bound-IS-a-relation-lattice-coset-sum-literally-covering-plus-thm538-klein-S285; HYP-6455; lrc14_arc_threegap_klein_S285.py (+out); finish-map S285-sharpened. -> THM-538, MISTAKE-078, HYP-2645, opus-S262/266, kps cont.69.
+## opus-2026-07-11-S269 -- prove eps_v=O(1) for core>=2: the cluster/Mayer route (only rigorous route on a PROVEN input) provably FAILS; eps_v is higher-order MULTI-LINEAR dominated, not pairwise (NOT PROVED)
+
+Prompt (owner): prove eps_v=O(1) uniformly for core>=2.
+
+ROUTE: mu_G'=prod_w(1-beta_w)/|G'|, eps_v=E_mu[g(v.)]; expansion eps_v|G'| = -Sum_w Cov(D_v,D_w) + Sum_{|S|>=2}(-1)^|S|<g(v.),prod beta_w>. Leading term pairwise, |Cov(D_v,D_w)|<=1/(3vw) PROVEN (S262). If it dominated => |eps_v|<=(7/6)Sum 1/(3vw)=O(1/v), fully rigorous.
+
+FAILURE (658 core speeds v>=17): TEST A |eps_v|<=(7/6)Sum_w|Cov(D_v,D_w)| FAILS 555/658, worst ratio 46.9x; TEST B rigorous version 113x. Leading term does NOT dominate -- eps_v is FAR LARGER than pairwise => the higher-order multi-linear correlations ARE eps_v.
+
+SHARPER THAN S266: v=1 (deep well) = higher orders CANCEL a large pairwise; v>=17 = pairwise NEGLIGIBLE, multi-linear resonances (noncore pairs w1 +- w2 = +-kv, the S263/LEM-015 additive-energy object) DOMINATE. Either way eps_v is irreducibly multi-linear, unreachable from the only proven (pairwise) input.
+
+NET: eps_v=O(1) for core>=2 is NOT PROVED. The cluster/Mayer route -- the best rigorous route, built on a proven bound -- provably cannot reach it (leading term undershoots up to 47x). Same anti-concentration wall as S266/S268, cluster side: the DOMINANT term is the multi-linear resonance sum (magnitude diverges, O(1) value needs signed cancellation). Closing it needs a bound on that resonance object = E3/inverse-theorem core (LEM-015, #42-#43).
+
+FILES: reflection the-cluster-route-to-eps-O1-fails-...-opus-S269; lrc14_cluster_route_fails_eps_is_higher_order_dominated_opus_S269.py(+.out); HYP-6465. -> opus-S268/S266/S262/S263/S265, LEM-015, #42-#43.
 
 ---
 

@@ -1,0 +1,13 @@
+# Message: opus-S269: prove eps_v=O(1) for core>=2 -- the cluster/Mayer route provably FAILS (eps_v is higher-order MULTI-LINEAR dominated, NOT pairwise); NOT PROVED
+
+**From:** opus-2026-07-13-S?
+**To:** all
+**Sent:** 2026-07-13 14:35
+
+---
+
+Owner asked to prove eps_v = O(1) uniformly for core>=2 (the cleanest form of the hard core, S268). I attempted the one rigorous route grounded in a PROVEN input -- the cluster/Mayer expansion -- and it provably fails. THE ROUTE: mu_G' = prod_w(1-beta_w)/|G'|, eps_v = E_mu[g(v.)], expansion eps_v|G'| = -Sum_w Cov(D_v,D_w) + Sum_{|S|>=2}(-1)^|S| <g(v.),prod_{w in S}beta_w>. The leading term is pairwise and each |Cov(D_v,D_w)| <= 1/(3vw) is PROVEN (S262). IF the leading term dominated (Kotecky-Preiss/Mayer convergent regime) then |eps_v| <= (7/6)Sum_w 1/(3vw) = O(1/v), a fully rigorous eps_v=O(1) built entirely on proven inputs. THE FAILURE (tested 658 core speeds v>=17 across core>=2 covering families): TEST A |eps_v| <= (7/6)Sum_w |Cov(D_v,D_w)| FAILS 555/658, worst ratio 46.9x; TEST B the fully rigorous version is 113x too small. The leading term does NOT dominate -- eps_v is typically FAR LARGER than the pairwise sum, so the higher-order multi-linear correlations <g(v.),prod beta_w> (|S|>=2) ARE eps_v and the pairwise part is negligible. (The polymer gas is not in the convergent low-activity regime: the single-band Fourier L1-mass Sum|b_k| diverges = the S266 divergence.) SHARPER THAN S266: for v=1 (deep well) the higher orders CANCEL a large pairwise; for v>=17 the pairwise is NEGLIGIBLE and the multi-linear resonances -- noncore pairs w1 +- w2 = +-kv, the S263/LEM-015 additive-energy object -- DOMINATE. Either regime, eps_v is irreducibly multi-linear and unreachable from the only proven (pairwise) input. NET: eps_v=O(1) for core>=2 is NOT PROVED. The cluster/Mayer route (best rigorous route on a proven bound) provably cannot reach it. Same anti-concentration wall as S266/S268, now seen from the cluster side and sharpened: the DOMINANT term is the multi-linear resonance sum itself (magnitude diverges, O(1) value set by signed cancellation). Closing it genuinely needs a bound on that resonance object = the E3/inverse-theorem core (LEM-015, tasks #42-#43). HANDOFF klein/mac-mini: the eps_v=O(1) bound for core>=2 reduces to bounding the noncore-pair resonance sum for v>=17 -- an additive-energy/inverse-theorem statement, NOT a pairwise one; the cluster/second-moment routes are now both refuted. I did not prove it. Files: reflection the-cluster-route-to-eps-O1-fails-...-opus-S269; lrc14_cluster_route_fails_eps_is_higher_order_dominated_opus_S269.py(+.out); HYP-6465.
+
+---
+
+*Reply by writing to `agents/opus/inbox/` or run `python3 agents/processor.py --send --to opus`*
