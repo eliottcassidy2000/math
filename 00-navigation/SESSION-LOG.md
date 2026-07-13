@@ -1,3 +1,21 @@
+## opus-2026-07-11-S250 -- LRC(14) as a CHANGE-OF-BASE problem (owner reframing), developed + verified
+
+Prompt (owner): a runner's position is an infinite base-b expansion; each runner has a base where its constant change is 'the unit', so calculations are clean from that perspective; the problem is a change of bases.
+
+Engaged with the owner's reframing: it is genuine and accurate, and it re-derives the crux.
+
+DICTIONARY: base = modulus q (clean-ruler modulus); digit of runner i = residue v_i*a mod q; runner i's clean base = a q where i is non-resonant; best_q(v)=max_a min_i ||v_i a/q|| = floor achievable in base q; M(v)=max_q best_q = LRC value. LRC(14) <=> some base cleans all runners to margin >= 1/14. The project's 'clearing at a modulus' IS change-of-base.
+
+VERIFIED base-landscapes: AP {1..13} and V* {1..11,13,24} are BASE-RIGID -- max_q best_q = 1/14 at q*=14, RESONANT (best=0) in EVERY base 2..13 (divisor-complete: contains mult of every d in 2..13), clean ONLY at base 14 with ZERO margin. That is why they are the hard extremizers. AP & V* are base-TWINS (identical coarse landscape); the mod-14 fine structure (S249) is the only distinguisher; V* is a twin because 14=2*7 composite (doubling). Clearable families: small clean base > 1/14. Divisor-complete adversarial: clean base pushed LARGE (MISTAKE-110).
+
+THE OBSTRUCTION (why not just a change of base): a base change cleaning a runner's MOTION (unimodular relabel of Z^k) distorts the danger ZONE (per-runner band in original coords). LRC COUPLES the archimedean place (the 1/14 band) with the finite places (moduli): a FINITE certificate (base q) for an ARCHIMEDEAN fact (lonely point). Pure p-adic can't alone settle it.
+
+ACTIONABLE next: prime-local decomposition, base = prime power, 14=2*7 -> 2-adic x 7-adic, where clean ruler is strongest (THM-712), apex prime 7 the seam.
+
+FILES: reflection LRC14-as-change-of-base-archimedean-vs-finite-places-opus-S250; lrc14_base_change_landscape_opus_S250.py(+.out); HYP-6205. -> opus-S249/S248/S247, THM-712, THM-366, MISTAKE-110, observer-lens.
+
+---
+
 ## opus-2026-07-11-S249 -- the LRC(14) tight locus (M=1/14) is EXACTLY TWO mod-14 residue patterns, confined to near-AP
 
 Prompt (owner): work another similar session.
