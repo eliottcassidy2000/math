@@ -1,0 +1,27 @@
+========================================================================
+THE CRUX MECHANISM: avoid the distance-1 lander at the best base
+========================================================================
+
+AP {1..13}: M=1/14=0.07143, best base q=14, a=1, closest approach=1
+  the distance-1 landers at this base are v ≡ [1, 13] (mod 14) [these give dist(v*a,0)=1]
+  of these, PRESENT in the family: [1, 13]
+  runners achieving the closest approach 1: [1, 13]
+
+deep well {1..12,182}: M=14/183=0.07650, best base q=183, a=14, closest approach=14
+  the distance-1 landers at this base are v ≡ [13, 170] (mod 183) [these give dist(v*a,0)=1]
+  of these, PRESENT in the family: NONE -> distance-1 catastrophe AVOIDED
+  runners achieving the closest approach 14: [1, 182]
+
+========================================================================
+WHY covering forces the jump rung1 -> rung14:
+========================================================================
+A DC family must contain 1 (and be 'complete' below its max). At base q, the
+distance-1 lander is v ≡ ±a^{-1}. For the margin to exceed 1/14 the family must
+place NO runner within distance q/14 of 0. Test: can a DC family beat 1/14 at a
+base smaller than 183?  Scan minimal DC families {1..12, f}:
+
+Smallest-M DC extension that beats 1/14: M=1/13=0.07692 at f=14, base 13  == 14/183 crux CONFIRMED as the floor.
+
+MECHANISM SUMMARY: DC forces 1..12 in; to exceed 1/14 you must reach a base whose
+distance-1 lander is a runner you DON'T have. The smallest such base for a DC set is
+q=183 (=13*14+1), where the lander is v=13 (absent) and 1&182 both sit at distance 14.

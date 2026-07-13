@@ -1,0 +1,21 @@
+crux families: clean base q*, residues, rotational tournament structure:
+
+  AP {1..13}: M=1/14=0.07143 at base q*=14, a=1
+    residues mod 14: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    danger band radius q/14 = 1.00; min |residue from 0| = 1
+    residues mod 7 (apex prime): [0, 1, 2, 3, 4, 5, 6]  (ALL 7 classes)
+
+  V* {1..11,13,24}: M=1/14=0.07143 at base q*=14, a=1
+    residues mod 14: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 13]
+    danger band radius q/14 = 1.00; min |residue from 0| = 1
+    residues mod 7 (apex prime): [0, 1, 2, 3, 4, 5, 6]  (ALL 7 classes)
+
+  deep well {1..12,182}: M=14/183=0.07650 at base q*=183, a=14
+    residues mod 183: [14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 169]
+    danger band radius q/14 = 13.07; min |residue from 0| = 14
+
+Ostrowski archimedean-finite bridge: M_k = k/(13k+1) = finite base q=13k+1 giving archimedean margin k/q:
+  k=1: base q=14, margin k/q = 1/14 = 0.07143  (AP/heptagon)
+  k=2: base q=27, margin k/q = 2/27 = 0.07407  ()
+  k=3: base q=40, margin k/q = 3/40 = 0.07500  ()
+  k=14: base q=183, margin k/q = 14/183 = 0.07650  (deep well)

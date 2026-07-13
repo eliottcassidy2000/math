@@ -1,0 +1,31 @@
+==========================================================================
+THE ROTATION-ORBIT UNIFICATION across the Ostrowski ladder M_k = k/(13k+1)
+==========================================================================
+At rung k: clean base q=13k+1, multiplier a=k, residues = {k*v mod q}.
+Extremal family at rung k: k=1 -> AP{1..13}; k=14 -> deep well {1..12,182}.
+
+rung k=1: base q=14, rotation angle a/q = 1/14 = 0.07143 = M_k
+  residues (rotation orbit): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  THREE-GAP: distinct gap lengths = [1, 2]  (<=3 CONFIRMED),  multiplicities {1: 12, 2: 1}
+  rotational tournament: 13 vertices, q even: ambiguous (reduce to odd part)
+  mod apex prime 7: residues [0, 1, 2, 3, 4, 5, 6] -> FULL rotational R_7 (all residues present), cyclic triangles=14  == HEPTAGON D7 (SC, 14 triangles)!
+
+rung k=14: base q=183, rotation angle a/q = 14/183 = 0.07650 = M_k
+  residues (rotation orbit): [14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 169]
+  THREE-GAP: distinct gap lengths = [1, 14, 28]  (<=3 CONFIRMED),  multiplicities {14: 11, 1: 1, 28: 1}
+  rotational tournament: 13 vertices, 13/183 residues, cyclic triangles=90
+
+==========================================================================
+ARCHIMEDEAN <-> FINITE bridge (opus-S250's obstruction, resolved by the ladder):
+  each FINITE base q=13k+1 delivers an ARCHIMEDEAN margin k/q; sup_k k/(13k+1)=1/13.
+  the continued fraction of 1/13-limit IS the reconciliation of the two places.
+    k=      1: finite base q=       14, archimedean margin=0.071429  -> 1/13=0.076923
+    k=      2: finite base q=       27, archimedean margin=0.074074  -> 1/13=0.076923
+    k=      3: finite base q=       40, archimedean margin=0.075000  -> 1/13=0.076923
+    k=      7: finite base q=       92, archimedean margin=0.076087  -> 1/13=0.076923
+    k=     14: finite base q=      183, archimedean margin=0.076503  -> 1/13=0.076923
+    k=    100: finite base q=     1301, archimedean margin=0.076864  -> 1/13=0.076923
+    k=1000000: finite base q= 13000001, archimedean margin=0.076923  -> 1/13=0.076923
+
+The crux (covering) sits at k=14 (14 | k is the covering condition): M=14/183.
+The tight rung k=1 (AP, M=1/14) is NON-covering; covering forces the jump 1->14.
