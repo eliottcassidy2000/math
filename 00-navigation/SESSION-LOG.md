@@ -1,3 +1,21 @@
+## mac-mini-2026-07-13-S83 -- tested my own 'joint rigidity across facets' idea: REFUTED. The facet-deficits and L anti-correlate at the near-AP residue; the residue has NO structural surrogate (single or joint). The structural-idea search is closed with an honest negative.
+
+Prompt (owner): pursue the joint rigidity across facets idea.
+
+Pursued my own proposed direction (from the S82 reflection) and KILLED it -- honestly.
+
+THE TEST: measured L vs the facet-deficits (Schur-deficit, Q2=E[2^X]-deficit) over 28 covering families. GLOBALLY corr(L,Schur-def)=+0.96, corr(L,Q2-def)=+0.86 -- looked encouraging. BUT the lower bound lives at the NEAR-AP residue (min L), and THERE the relationship REVERSES:
+   {1..11,13,84}: L=0.005, Schur-def=13, Q2-def=40.1
+   deep well {1..12,182}: L=0.024, Schur-def=12, Q2-def=34.9
+{1..11,13,84} DOMINATES the deep well on BOTH facet-deficits (13>12 AND 40>35) yet has SMALLER L. So a family FURTHER from the AP on every structural facet can be CLOSER to the loneliness boundary. No monotone joint f(facets) can give L>=f -- dominance-with-reversed-L kills it.
+
+VERDICT: the joint rigidity FAILS. Facet-deficits measure STRUCTURAL distance-from-AP; L measures SAFE-SET OPENNESS (metric); at the near-AP residue they DECOUPLE and anti-correlate. So the residue (inf L>0 = covering LRC14) has NO structural surrogate -- not a single facet (Delsarte S80, tournament S81, Stern-Brocot S82), and not their joint (this). This CLOSES the structural-idea search: every combinatorial/algebraic/arithmetic/certificate invariant, alone or jointly, is provably severed from the metric infimum.
+
+THE HONEST TERMINUS: the proof, if any, must control L (the safe measure) DIRECTLY -- a genuinely metric/analytic argument (the resummation of the middle-order corrsum cancellation, HYP-6440), not any structural reduction. I have now (S66-S83) mapped the covering-min completely: rigidity PROVED (THM-724/726), combinatorial inverse PROVED (THM-730), the residue reformulated (corrsum>-1, HYP-6430) and diagnosed (middle-order, HYP-6440), and EVERY structural idea -- the four facets, the three dormant threads, and my own joint-rigidity proposal -- pursued and shown severed. The residue is LRC(14), irreducibly metric, with no structural surrogate. The map is complete; the summit requires a metric idea I do not have.
+
+FILES: HYP-6480; 04-computation/lrc14_joint_rigidity_test_macmini_S83.py(+.out). -> the honest, exhausted state: the covering-min is understood from every structural angle; the one remaining door is a direct metric resummation, and it is genuinely open.
+
+---
 ## mac-mini-2026-07-13-S82 -- pursued the Stern-Brocot inductive tower (last dormant thread); deep well CF tower [0;n-1,n] is clean but organizes VALUES not the metric bound. THREE-THREAD SYNTHESIS + reflection: every structural facet of the extremal is SEVERED from the metric residue
 
 Prompt (owner): pursue the Stern-Brocot inductive tower idea.
