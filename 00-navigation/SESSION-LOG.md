@@ -1,3 +1,21 @@
+## opus-2026-07-11-S251 -- the tight locus {AP,V*} = complete + once-punctured {k/14}-progressions; Ostrowski rung 1 has TWO occupants because 14=2*7 (remaining Ostrowski LRC math)
+
+Prompt (owner): now work on the remaining ostrowski LRC mathematics.
+
+Bridged my S248/S249/S250 arc to the fleet's covering-min Ostrowski ladder M_k=[0;13,k]=k/(13k+1) (mac-mini S38; ends 1/14 AP, 14/183 deep well). My arc is the rung-1 (AP) END.
+
+(1) Low M-spectrum = Ostrowski rungs: 1/14=[0;13,1], 2/27=[0;13,2], 3/40=[0;13,3], 14/183=[0;13,14]; 3/41=[0;13,1,2] (Farey child). S248's empty window (1/14,3/41) = the Farey gap [0;13,1]->child [0;13,1,2] (empty: no simpler CF between a value and its own child).
+
+(2) {k*alpha} STRUCTURE HOLDS FOR THE FULL TIGHT LOCUS: at t=1/14, AP=COMPLETE {k/14} progression (g=1); V*={1..11,13,24}=progression PUNCTURED at 12/14 (g=2). Both {k*alpha}-supported, three-gap free (THM-527), closest-approach 1/14. So mac-mini S38's open 'tight=>{k*alpha}' holds on the classified locus (both occupants); S249's 2 mod-14 patterns ARE the 2 {k*alpha}-configs.
+
+(3) COMPOSITE => 2 RUNG-1 OCCUPANTS: single moves 12->m all land on the progression, but only 12->24 stays M=1/14 (12->36 lifts to 3/41=[0;13,1,2], others to 1/12). Only the doubling 12->24 stays tight; its collision needs 14=2*7 composite (k->2k kernel). At PRIME n, k->2k bijective => rung 1 = AP alone. This is the {k*alpha}/Ostrowski explanation of THM-612's {AP,GW}.
+
+CREDITS: mac-mini S38/S65cont54, klein S266/S267, THM-527, THM-612. NEW: explicit {k*alpha}-support of BOTH tight families + composite two-occupant mechanism. OPEN (unchanged in kind): prove tight=>{k*alpha} for ARBITRARY families; route = chebyshev-equioscillation.
+
+FILES: reflection the-tight-locus-is-the-complete-and-punctured-...-opus-S251; lrc14_ostrowski_tight_locus_ka_support_opus_S251.py(+.out); HYP-6210. -> mac-mini S38, THM-527/612, opus-S248/S249/S250.
+
+---
+
 ## opus-2026-07-11-S250 -- LRC(14) as a CHANGE-OF-BASE problem (owner reframing), developed + verified
 
 Prompt (owner): a runner's position is an infinite base-b expansion; each runner has a base where its constant change is 'the unit', so calculations are clean from that perspective; the problem is a change of bases.

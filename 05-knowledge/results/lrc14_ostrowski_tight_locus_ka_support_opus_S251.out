@@ -1,0 +1,23 @@
+(1) Low M-spectrum as Ostrowski rungs [0;13,...]:
+   1/14: cf=[0, 14]
+   3/41: cf=[0, 13, 1, 2]
+   2/27: cf=[0, 13, 2]
+   3/40: cf=[0, 13, 3]
+   1/13: cf=[0, 13]
+   14/183: cf=[0, 13, 14]
+   empty gap (1/14,3/41) = Farey gap [0;13,1] -> child [0;13,1,2].
+
+(2) {k/14}-support of the tight locus (t=1/14):
+   AP: phases(x14)=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] missing=[] gaps(x14)=[1] g=1
+   V*: phases(x14)=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13] missing=[12] gaps(x14)=[1, 2] g=2
+   AP=full progression; V*=punctured at 12. BOTH {k*alpha}-supported, three-gap.
+
+(3) Composite realization -- ACTUAL M for single moves 12->m (only 24 stays at rung 1):
+   12->24 (mod14=10): M=1/14=[0;[14]]  <-- TIGHT rung 1
+   12->26 (mod14=12): M=1/12=[0;[12]]  (lifts)
+   12->36 (mod14=8): M=3/41=[0;[13, 1, 2]]  (lifts)
+   12->38 (mod14=10): M=1/12=[0;[12]]  (lifts)
+   12->50 (mod14=8): M=1/12=[0;[12]]  (lifts)
+   12->64 (mod14=8): M=1/12=[0;[12]]  (lifts)
+   => only 12->24 (doubling, needs 14 composite) stays at 1/14; others lift to higher Ostrowski rungs.
+   PRIME n: k->2k bijection, no collision, punctured progression not integer-realizable => AP alone.
