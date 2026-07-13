@@ -1,0 +1,14 @@
+c=14/183=0.07650, 2c=0.15301. Dual cert nu=Leb|_G' closes if meas(G')>|core|*2c.
+
+family                             | |core| | meas(G') | |core|*2c | closes? | safe-in-G' | M
+--------------------------------------------------------------------------------------------------------
+deep well {1..12,182}              |     1 | 0.06515 | 0.15301 | False | 0.000000 | 0.07650
+{1..11,13,84}                      |     1 | 0.05829 | 0.15301 | False | 0.001041 | 0.07865
+{1..10,22,13,84}                   |     1 | 0.05729 | 0.15301 | False | 0.010314 | 0.08696
+{2,4,6,8,10,12,14,16,18,20,22,24,182} |     0 | 0.00000 | 0.00000 | False | 0.000000 | 0.07609
+{1..12,364}                        |     1 | 0.06515 | 0.15301 | False | 0.000420 | 0.07661
+{1,2,3,4,5,6,7,8,9,10,11,12,910}   |     1 | 0.06581 | 0.15301 | False | 0.001079 | 0.07661
+
+READING: if the criterion CLOSES loose families (meas(G')>|core|*2c => safe pt) and FAILS
+only for the deep well (tight, meas(G')<=|core|*2c, safe measure 0 = knife-edge), then the
+dual cert nu=Leb|_G' PROVES the loose stratum, deep well by S255 rigidity. Check the split.
