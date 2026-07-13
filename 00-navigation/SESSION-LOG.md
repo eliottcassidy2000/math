@@ -47,6 +47,21 @@ covering rung, denominator Phi6(N), outlier lcm(N-1,N)); the open uniform DC=>M>
 below, all speeds) is unchanged, resting on klein's finite ILP.
 
 ---
+## klein-2026-07-12-S270 -- the odd-|Aut| tie-resolution lever (S269) is an EQUALITY tool, NOT a lower-bound engine (verified); the lower bound lives in the lander-exclusion count + the global antipodal degree (both open)
+
+Prompt (owner): explore the odd-|Aut| tie-resolution lever as a proof route.
+
+Explored it honestly + verified the reach (lrc14_oddaut_lever_reach). VERDICT: equality-only.
+
+**(1) THE LEVER IS NOT A UNIVERSAL LOWER BOUND (verified).** "Can't beat 1/14 at base 14" holds ONLY for the full-grid AP. Best margin at base 14: AP (full grid) = exactly 1/14 (landers ±1 present, pinned); a family avoiding ±1 mod 14 = 1/7 > 1/14 (BEATS it — non-covering, dispatched anyway); a covering family = 0 (blocked). So the lever pins EXACTLY 1/14 only for the full grid = an EQUALITY statement (why the AP achieves the tight value), NOT a lower bound. Corrects my own S269 over-suggestion.
+
+**(2) IT CAN'T TOUCH THE CRUX.** covering ⟹ M≥14/183 is realized ONLY at base 183 (odd; deep well best over q<183 = 13/170 < 14/183). At an odd base there are NO antipodal ties, so the odd-|Aut| tie-resolution has nothing to resolve — the lever is a feature of the EVEN base 14 (the "2" in 14=2·7); the crux is the 7-adic far-base part.
+
+**(3) WHERE THE LOWER BOUND ACTUALLY LIVES (two open objects):** (a) the LANDER-EXCLUSION count (mac-mini cont.56): the crux = "every covering family, at every base q<183, has a runner within q/14 of 0" (rotation-orbit form of the non-compressed peel, open); (b) the GLOBAL ANTIPODAL DEGREE (klein-S55): ι (a↦−a, T↦T^op) makes danger zones ι-symmetric ⟹ odd-modulus loneliness comes in ι-pairs (even witness count, verified deep well@183 {14,169} ι-closed) = the same mod-2 fact as odd-|Aut|/H-odd; but a CONSTRAINT not a detector ("shape of every hole, not that there are none"). The genuine object = a global ι-equivariant degree (antipodal Čech / odd index / Borsuk-Ulam) whose vanishing = LRC(14) — a real OPEN candidate, of which odd-|Aut| is the mod-2 shadow.
+
+Deliverables: reflection the-odd-aut-lever-is-an-equality-tool-not-a-lower-bound-engine-klein-S270; HYP-6250; script+out. Self-corrected S269. (2 agents mining the degree/pressure-DAG program for the constructive half.)
+
+NEXT: the honest lower-bound targets are (a) the lander-exclusion count [covering ⟹ runner within q/14 of 0 at every base q<183] and (b) the ι-equivariant antipodal degree (Borsuk-Ulam odd index) — NOT the odd-|Aut| lever, which is equality-only. The pressure-DAG is the counterexample-shaped object one would kill via (b).
 
 ## mac-mini-2026-07-09-S65 (cont.56) -- the runners at a clean base ARE a rotation orbit: Ostrowski rung = three-gap orbit = rotational tournament; crux mechanism = OMIT THE DISTANCE-1 LANDER (base-change/tournament/Ostrowski synthesis)
 

@@ -1,0 +1,43 @@
+==========================================================================
+(T1) distance-1-lander mechanism (mac-mini cont.56)
+==========================================================================
+  AP {1..13} @ base 14, a=1: residues min-dist=1 => M contribution 1/14=0.0714
+     distance-1 landers (v≡±a^-1 mod 14) = [1, 13]; present in family? [1, 13]
+  deep well {1..12,182} @ base 183, a=14: residues min-dist=14 => M contribution 14/183=0.0765
+     distance-1 landers (v≡±a^-1 mod 183) = [13, 170]; present in family? []
+
+==========================================================================
+(T2) does 'base 14 caps at 1/14' hold for ALL families? (the lever's reach)
+==========================================================================
+  AP (full grid)               cov=False best@base14 =   1/14=0.0714 (a=1)  <-- exactly 1/14 (pinned: full grid, landers ±1 present)
+  avoids ±1 mod 14 (non-cov)   cov=False best@base14 =    1/7=0.1429 (a=1)  <-- BEATS 1/14 at base 14! (lever's cap is NOT universal)
+  covering-ish                 cov=False best@base14 =      0=0.0000 (a=1)  <-- 0 (a runner ≡0 mod 14: base 14 BLOCKED)
+  => the lever pins EXACTLY 1/14 only for the FULL-GRID (AP) family. Others beat it (non-cov,
+     dispatched anyway) or are blocked (covering). So it is an EQUALITY statement, not a
+     universal lower bound. 'Base 14 caps at 1/14' is FALSE off the full grid.
+
+==========================================================================
+(T3) antipodal parity: good-multiplier set is ι-closed (a↦q−a) => size EVEN
+==========================================================================
+  deep well @ base 183: max margin 14/183; #good multipliers=2 (even? True); ι-closed? True
+  AP @ base 13: max margin 0; #good multipliers=12 (even? True); ι-closed? True
+  => witnesses come in ι-pairs {a,q−a} (klein-S55: 'loneliness is antipodally paired').
+     This is a CONSTRAINT (parity), not a detector: it says the shape of holes, not that
+     none exist (drop-11 @ D=41 was lonely at radius 2, a perfect ι-pair — klein-S55).
+
+==========================================================================
+(T4) the LOWER bound is NOT the base-14 lever: M≥1/14 needs a GOOD base, and
+     for covering families that base is LARGE (the lander-dodge crux, open)
+==========================================================================
+  AP: M=1/14=0.0714 achieved at base 14 (a=1), cov=False
+  deep well: M=14/183=0.0765 achieved at base 183 (a=14), cov=True
+  deep well: best over ALL bases q<183 = 13/170=0.0765 (at q=170) < 14/183=0.0765
+  => the covering floor 14/183 is realized ONLY at base 183; NO base<183 reaches it.
+     THAT lander-exclusion-up-to-183 is the crux, and the base-14 odd-|Aut| lever gives NONE of it.
+
+VERDICT: the odd-|Aut| tie-resolution lever is an EQUALITY/UNIQUENESS tool (why the full-grid
+AP is pinned at exactly 1/14), NOT a lower-bound engine. The inequality M≥1/14 lives in the
+lander-DODGE / lander-EXCLUSION count over coarser bases (open) or the global antipodal-degree
+(Borsuk-Ulam odd index, open); the parity is a shadow of that degree, not a detector.
+
+done.
