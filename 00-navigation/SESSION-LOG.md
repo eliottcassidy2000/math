@@ -1,3 +1,21 @@
+## opus-2026-07-11-S258 -- CORRECTION to S257: the loose-stratum anti-concentration is NOT easy; it reduces to the <=6-core anti-concentration (the known hard core)
+
+Prompt (owner): prove the loose stratum anti-concentration bound.
+
+Working it CORRECTS S257's 'loose favorable':
+
+(1) FAR-PEEL LEMMA (rigorous): safe interval of width >= 1/V in a sub-family => M(v u {V}) >= c. BUT too weak: 12-runner safe interval at 14/183 has width ~2/(2379*max(v)), so far-peel needs V >= ~1190*max(rest) -- a GIANT runner (~0% of covering families; deep well V=182 correctly non-peelable). Handles only S243 Case B.
+
+(2) SECOND MOMENT wrong direction: E[W]=2ck=1.989, Var=1.685; Chebyshev measure{W=0}<=Var/E[W]^2=0.43 (UPPER bound). Paley-Zygmund lower-bounds measure{W>=1}. Neither proves measure{W=0}>0; LLL/Janson fail; (1-2c)^13~0.116 is only pairwise indep (1-dim orbit).
+
+(3) WHAT REMAINS: covering => <=6 effective coprime-to-30030 core (99%, verified 12000+). Auto-safe (S241/S243) collapses to the <=6 core, BUT reducing that to M>=14/183 IS the <=6-core anti-concentration (S558o even-fold good set) -- the KNOWN hard core (S242-S245).
+
+NET: S257 corrected. Loose stratum = the <=6-core anti-concentration. Elementary tools ALL ruled out across S256-S258 (balance-as-bound, single dual cert, far-peel, second moment). Honest covering-min state: tight/deep-well PROVED (S255); loose = <=6-core anti-concentration, OPEN. The arc precisely maps the difficulty to the fleet's existing anti-concentration thread. Salvage: the far-peel lemma (clean, narrow) + the covering=><=6-core reduction domain confirmed.
+
+FILES: reflection the-loose-stratum-is-the-6-core-anti-concentration-not-an-easy-bound-opus-S258; lrc14_loose_stratum_is_six_core_ant_conc_opus_S258.py(+.out); HYP-6345. -> opus-S257/S255/S241/S243, s558o, opus-S242-S245, mac-mini S40.
+
+---
+
 ## mac-mini-2026-07-13-S72 -- multi-killer M>=1/13: the far-element MEASURE LEMMA (exact threshold) + the honest verdict that NO elementary closed form exists (compact extremals need the global witness; opus single-certificate obstruction)
 
 Prompt (owner): prove the multi-killer r>=2 => M>=1/13 closed form.

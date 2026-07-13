@@ -1,0 +1,4 @@
+(2) second moment: E[W]=1.9891, Var=1.6847, Chebyshev measure{W=0}<=Var/E[W]^2=0.4258 (UPPER bound, wrong direction)
+    far-peel needs V >= ~1190*max(rest) (giant); deep well V=182 non-peelable (tight).
+(3) covering => <=6 effective core: 11997/12000 (99%); core-size dist {0: 1188, 1: 3400, 2: 3738, 3: 2443, 4: 947, 5: 236, 6: 45, 7: 3}
+    => loose stratum reduces to the <=6-core anti-concentration (S558o) = the known hard core. S257 corrected.
