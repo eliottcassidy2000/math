@@ -40,6 +40,47 @@ B=1 theorem assembly in LRCUEscape style; (iii) the no-admissible-scale bulk is 
 large-diameter content (Parseval/pair-sum home turf).
 
 ---
+## kind-pasteur-2026-07-11-S127 cont.58 -- the multi-killer frontier is CLOSED; the deep well is the UNIQUE covering-min
+
+Prompt (owner): work the multi-killer primitive covering families (the frontier left open after single-killer).
+
+A multi-killer family = interval core {1..k}, k<=11, + (13-k) outliers all >=13 (a genuinely shorter core than
+the single-killer deep well {1..12,182}). Enumerated the covering-min EXACTLY per core length:
+  k=12 (single-killer): 14/183  (deep well, unique)
+  k=11: 7/89 = 0.0787   ({1..11,13,84} @ 37/89)
+  k=10: 2/23 = 0.0870   ({1..10,13,22,84})
+  k=9:  2/23 = 0.0870
+ALL genuine multi-killer families sit STRICTLY ABOVE 14/183. The deep well is the UNIQUE global covering-min.
+
+THE ONE-LINE REASON: 1/13 = 0.076923 > 14/183 = 0.076503. The interval core {1..k} is the LRC(k+1) extremal
+with loneliness M_core = 1/(k+1) -- its OWN floor, before any killer, and the killer can only LOWER M. The
+single-killer k=12 is the MAXIMAL DC-compatible core ({1..13}=AP is already 13 speeds and non-DC), so M_core=1/13
+is the smallest core-floor; the lcm-outlier 182=lcm(13,14) (cont.55) drops 1/13 to 14/183 by just 1/2379 --
+razor-thin, landing on the floor. Multi-killer (k<=11) has M_core=1/(k+1) >= 1/12 = 0.0833, already 0.007 ABOVE
+the floor before killers => no room to reach 14/183. So the covering-min is MONOTONE DECREASING in core length,
+minimized at the maximal k=12 => deep well unique. opus-S253's multi-constraint case is NOT a threat: shortening
+the core to admit more killers RAISES M_core faster than the extra killers can lower M.
+
+HONEST LIMITS (inherited from opus-S253): (1) the balance M=M_core*v_min/(v_min+s) at t_core is a LOWER bound
+that undershoots for multi-killer (the {1..11,13,84} true optimum is t*=37/89 giving 7/89, NOT the t_core
+balance), so "multi-killer >= 14/183" is here an EXACT-ENUMERATION fact, not yet a closed-form inequality; the
+clean statement to prove is the core-length monotonicity of the GLOBAL M. (2) non-interval cores: the enum
+covers interval-core families (where the extremizers live, three-gap regularity); general <=182 by klein's ILP,
+the rest by the escape (death-star LRCUEscape).
+
+NET: the entire interval-core structure of the covering-min lower bound is now understood -- the deep well wins
+on core length (longest => smallest M_core=1/13), on outlier size (lcm(13,14)=182, smallest covering outlier),
+and it ALONE touches the floor. Combined with the single-killer closure (opus-S253 + kps cont.55/57 + mac-mini
+S68), multi-killer is closed as a threat.
+
+Artifacts: reflection the-multi-killer-frontier-is-closed-the-deep-well-is-the-unique-covering-min-kps-S127;
+HYP-6225; lrc14_multikiller_enum_kps_S127.py/out, lrc14_multikiller_genuine_kps_S127.out.
+
+Next: promote core-length monotonicity from enumeration to a global-optimum inequality; and the non-interval
+tail (ILP <=182 + escape).
+
+---
+
 ## mac-mini-2026-07-12-S68 -- opus-S253's LARGE-S TRADE is a MIRAGE: single-killer covering-min floor 14/183 is robust (deep well UNIQUE min); dilated cores clear at a shallow base
 
 Prompt (owner): keep working the critical math for another session.

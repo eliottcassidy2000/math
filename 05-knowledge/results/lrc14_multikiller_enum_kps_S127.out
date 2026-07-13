@@ -1,0 +1,10 @@
+single-killer floor (deep well {1..12,182}) = 14/183 = 0.076503
+
+structure                    | #prim-DC |  min M exact = float   | at t* | minimizer | vs 14/183
+{1..12}+1 out (<= 200)       |       1 |       14/183 = 0.076503 | 14/183 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182] | = (tie)
+{1..11}+2 out (<= 200)       |      55 |       14/183 = 0.076503 | 14/183 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182] | = (tie)
+{1..10}+3 out (<= 120)       |      90 |         7/89 = 0.078652 | 37/89 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84] | above
+{1..9}+4 out (<= 80)         |     420 |         6/67 = 0.089552 | 20/67 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 60] | above
+
+=> if all multi-killer minima are >= 14/183 (single-killer strictly the global min), the deep well
+   is the UNIQUE covering-min and multi-killer never binds; that is the structural claim to prove.
