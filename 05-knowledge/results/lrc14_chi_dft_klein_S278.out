@@ -1,0 +1,64 @@
+net endpoint imbalance NET(e',s)=Sum_j chi_s(j) [=e'*chihat(0)], and off-DC max, per offset
+(prediction: NET=0 for the LARGEST offset; |NET| small overall)
+============================================================================
+
+  E'=[0, 1, 2, 3, 4, 5, 6] (max=6, sum=21)
+    e'=  1 (sig_others= 20): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'=  2 (sig_others= 19): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, 0, -1, 0, 0, -1, 0]
+    e'=  3 (sig_others= 18): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, 0, 0, 0, 0, -1, 0]
+    e'=  4 (sig_others= 17): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, 0, 0, 0, 0, -1, 0]
+    e'=  5 (sig_others= 16): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, -1, 0, 0, 0, -1, 0]
+    e'=  6 (sig_others= 15): max_s|NET|=2  max_s off-DC=2.00  NET_s=[0, 0, 1, 1, 1, 0, 2] <-LARGEST
+
+  E'=[0, 1, 2, 3, 4, 5, 7] (max=7, sum=22)
+    e'=  1 (sig_others= 21): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'=  2 (sig_others= 20): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'=  3 (sig_others= 19): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, -1, 0, 0, 0, 0, 0]
+    e'=  4 (sig_others= 18): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, -1, 0, 0, 0, 0, 0]
+    e'=  5 (sig_others= 17): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, 0, 1, 0, 0, 0, 0]
+    e'=  7 (sig_others= 15): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, -1, 0, 1, 1, 0, -1] <-LARGEST
+
+  E'=[0, 1, 2, 4, 7, 10, 13] (max=13, sum=37)
+    e'=  1 (sig_others= 36): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'=  2 (sig_others= 35): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'=  4 (sig_others= 33): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'=  7 (sig_others= 30): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, 0, 0, 1, 0, 0, 0]
+    e'= 10 (sig_others= 27): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, 0, 1, 0, 0, 0, 0]
+    e'= 13 (sig_others= 24): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, 0, -1, -1, -1, 0, 0] <-LARGEST
+
+  E'=[0, 1, 2, 28, 29, 30, 15] (max=30, sum=105)
+    e'=  1 (sig_others=104): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'=  2 (sig_others=103): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'= 15 (sig_others= 90): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'= 28 (sig_others= 77): max_s|NET|=2  max_s off-DC=2.00  NET_s=[0, -2, -2, -2, -2, -2, -2]
+    e'= 29 (sig_others= 76): max_s|NET|=2  max_s off-DC=1.99  NET_s=[0, -2, 0, 0, -2, 0, -2]
+    e'= 30 (sig_others= 75): max_s|NET|=4  max_s off-DC=4.00  NET_s=[0, 3, 2, 3, 2, 4, 4] <-LARGEST
+
+  E'=[0, 1, 2, 3, 5, 7, 11] (max=11, sum=29)
+    e'=  1 (sig_others= 28): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'=  2 (sig_others= 27): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'=  3 (sig_others= 26): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'=  5 (sig_others= 24): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'=  7 (sig_others= 22): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'= 11 (sig_others= 18): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, 0, -1, 0, 0, 0, 0] <-LARGEST
+
+  E'=[0, 1, 5, 6, 10, 11, 15] (max=15, sum=48)
+    e'=  1 (sig_others= 47): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'=  5 (sig_others= 43): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'=  6 (sig_others= 42): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'= 10 (sig_others= 38): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, -1, -1, 0, 0, 0, 0]
+    e'= 11 (sig_others= 37): max_s|NET|=2  max_s off-DC=1.92  NET_s=[0, 0, 1, 0, 1, 2, 2]
+    e'= 15 (sig_others= 33): max_s|NET|=2  max_s off-DC=1.96  NET_s=[0, -1, -1, -1, 0, 2, -1] <-LARGEST
+
+  E'=[0, 1, 2, 3, 4, 10, 20] (max=20, sum=40)
+    e'=  1 (sig_others= 39): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'=  2 (sig_others= 38): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, 1, 0, 0, 0, 0, 0]
+    e'=  3 (sig_others= 37): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, 0, 0, 0, 1, 0, 0]
+    e'=  4 (sig_others= 36): max_s|NET|=1  max_s off-DC=1.00  NET_s=[0, 0, 0, 1, 0, 0, 0]
+    e'= 10 (sig_others= 30): max_s|NET|=0  max_s off-DC=0.00  NET_s=[0, 0, 0, 0, 0, 0, 0]
+    e'= 20 (sig_others= 20): max_s|NET|=3  max_s off-DC=2.59  NET_s=[0, 0, 0, 0, 3, -2, 0] <-LARGEST
+----------------------------------------------------------------------------
+  GLOBAL max|NET| = 4   GLOBAL max off-DC = 4.00
+  => if max|NET| small (O(1) or O(k)) and off-DC bounded, U_s^e'(N)=e'*chihat is controlled.
+
+done.

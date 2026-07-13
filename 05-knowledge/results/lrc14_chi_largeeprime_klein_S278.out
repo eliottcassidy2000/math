@@ -1,0 +1,20 @@
+large-e' test: max_{s,kappa} e'|chihat| (=max|U_s^{e'}| contribution) as e' grows
+========================================================================
+  cluster (eprime=large offset)            ep  maxDFT  maxT maxNET
+  {0..5,D} D=50                            50    4.00     4      2
+  {0..5,D} D=100                          100    4.00     4      2
+  {0..5,D} D=200                          200    3.96     4      1
+  {0..5,D} D=400                          400    4.00     4      1
+  {0..6,D} D=50                            50    9.03    11      2
+  {0..6,D} D=100                          100   10.88    13      3
+  {0..6,D} D=200                          200   11.38    13      1
+  {0..6,D} D=400                          400   11.95    13      3
+  spread6+D D=50                           50    2.23     3      1
+  spread6+D D=100                         100    1.00     1      1
+  spread6+D D=200                         200    2.00     2      1
+  spread6+D D=400                         400    3.00     3      1
+------------------------------------------------------------------------
+  => if maxDFT stays bounded (~O(1)) as e'->400, the estimate CLOSES: |U_s^e'|=O(1), |S|=O(k).
+     (T may grow, but the DFT/Fourier-linf norm is what bounds U; watch maxDFT vs maxT.)
+
+done.

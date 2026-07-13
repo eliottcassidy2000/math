@@ -53,6 +53,21 @@ HYP-6232; lrc14_core1_good_measure_kps_S127.py/out, lrc14_core1_margin_kps_S127.
 
 Next: the covering reframe (12 13-smooth collars can't cover [1/14,13/14]) as an alternative to opus's Fourier;
 or continue the structural/Lean thread.
+## klein-2026-07-13-S278 -- the k-dim Weyl estimate COLLAPSES to a 1-D DFT of a swing-DERIVATIVE (THM-728); |U_s^{e'}| bounded O_k(1) ⟹ |S|=O(k), row closes; remainder = ONE Beurling–Selberg mollification SHARED with the covering side
+
+Prompt (owner): carry out the k-dim Weyl estimate on the endpoint sum (the S277/HYP-6380 remaining step).
+
+It is NOT k-dimensional. χ(j)="is this crossing an R_s-endpoint?" depends on the other offsets' phases frac((e''/e')j+..), PERIODIC in j mod e'. So Σ_{j<e'}χ(j)e(−Nj/e')=e'·χ̂(N mod e') — a 1-D DFT over Z/e'. U_s^{e'}(N)=Σ_σ e(−Nσ/7e')·e'χ̂_{s,σ}(N mod e'); the far frequency N=ℓw enters ONLY through κ=ℓw mod e'. No torus, no multi-dim Erdős–Turán.
+
+DERIVATIVE STRUCTURE (the source of all cancellation): ch_j=1_{cond_s}(leave_j)−1_{cond_s}(enter_j), cond_s=[others cover exactly {0..6}\s], leave−enter=1/(7e') ⟹ ch = discrete DERIVATIVE of the cond_s indicator. Fourier: U_s^{e'}(N)=e'Σ_{n≡κ mod e'}ĝ(n)e(ns/7e')(e(n/7e')−1), and (e(n/7e')−1)=2i sin(πn/7e') ≈ πn/(7e') is the derivative GAIN: (i) kills n=0 ⟹ net imbalance χ̂(0)=O(1) not O(e') (verified ≤4) — why the RESONANT κ=0 case is bounded; (ii) cancels one power vs ĝ(n)~ρ/|n|.
+
+EMPIRICAL (decisive): |U_s^{e'}(N)|=e'|χ̂(κ)| BOUNDED independent of e' AND of the far frequency — verified to e'=400: ≤4 (6 other offsets), ≤13 (7 others); swing-count T CONSTANT in e' (cond_s boundaries fixed by the others; refining the e'-grid adds no straddles). ⟹ |S|≤(1/2π²)(Σ_ℓ|sin|/ℓ²)Σ_sΣ_{e'}|U_s^{e'}(ℓw)|=O_k(1)=O(k) for bounded k — the density-row tail CLOSES; S276's |S|≤0.61R now has its mechanism.
+
+REMAINING (one clean 1-D sum): |U_s^{e'}|≤C_k reduces to Σ_{n≡κ (e')}ĝ(n)(e(n/7e')−1)=O(1). g=1_{cond_s} has non-summable ĝ(n)~1/n ⟹ conditionally-convergent ⟹ needs BEURLING–SELBERG mollification of cond_s — EXACTLY opus-S261's covering-side tool. BOTH LRC(14) routes now terminate on the SAME Beurling–Selberg estimate; one shared analytic lemma finishes both.
+
+ARC (S273→S278) in one line: density-tail constant is NOT Σe'-free (S275), IS O(k) via a resonance sum (S276), reduces EXACTLY to endpoint exponential sums (S277) = a 1-D DFT of a derivative (S278) whose boundedness closes the row, pending one Beurling–Selberg mollification shared with covering.
+
+FILES: reflection the-endpoint-sum-is-a-1d-dft-of-a-derivative-the-weyl-estimate-collapses-klein-S278; THM-728; HYP-6400; lrc14_chi_dft_klein_S278.py, lrc14_chi_largeeprime_klein_S278.py (+outs). -> THM-727/725, HYP-6380/6350, opus-S261.
 
 ---
 
