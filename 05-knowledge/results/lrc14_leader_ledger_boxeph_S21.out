@@ -1,0 +1,268 @@
+THE LEADER LEDGER — exact verification battery (boxeph-S21)
+
+== toy {1,2}  [1, 2]
+   primitive=True covering(DC)=False
+   M = 1/3 = 0.333333   [expected 1/3 OK]
+   events=3  segments=2  H+=2  (parity EVEN)
+   int v_lam = 4/3 = 1.333333   identity(int = 2*sum depths): True
+   max chain mass = 2/3 = 0.666667   >= 28/183? True   (mass/2M = 1.0000)
+   ledger efficiency eta = int/(2 H+ M) = 1.0000   witness-chain equioscillation (x_in+x_out)/2M = 1.0000
+   climb bound (LEM-023) v*floor(q/(B+v))/q = 1/3 = 0.333333   TIGHT (== M)? True
+   fixed chains: through 0: 1, through 1/2: 1
+   sum-handoffs (t, old->new, depth):
+     t=1/3  1->2  depth=1/3 = 0.333333
+     t=2/3  2->1  depth=1/3 = 0.333333
+
+== AP {1..13}  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+   primitive=True covering(DC)=False
+   M = 1/14 = 0.071429   [expected 1/14 OK]
+   events=200  segments=58  H+=58  (parity EVEN)
+   int v_lam = 3350216417/514829700 = 6.507426   identity(int = 2*sum depths): True
+   max chain mass = 1/7 = 0.142857   >= 28/183? False   (mass/2M = 1.0000)
+   ledger efficiency eta = int/(2 H+ M) = 0.7854   witness-chain equioscillation (x_in+x_out)/2M = 0.7800
+   climb bound (LEM-023) v*floor(q/(B+v))/q = 1/14 = 0.071429   TIGHT (== M)? True
+   fixed chains: through 0: 1, through 1/2: 1
+   sum-handoffs (t, old->new, depth):
+     t=1/14  1->13  depth=1/14 = 0.071429
+     t=2/25  13->12  depth=1/25 = 0.040000
+     t=2/23  12->11  depth=1/23 = 0.043478
+     t=2/21  11->10  depth=1/21 = 0.047619
+     t=2/19  10->9  depth=1/19 = 0.052632
+     t=2/17  9->8  depth=1/17 = 0.058824
+     t=2/15  8->7  depth=1/15 = 0.066667
+     t=3/20  7->13  depth=1/20 = 0.050000
+     t=3/19  13->6  depth=1/19 = 0.052632
+     t=3/17  6->11  depth=1/17 = 0.058824
+     t=3/16  11->5  depth=1/16 = 0.062500
+     t=3/14  5->9  depth=1/14 = 0.071429
+     t=5/22  9->13  depth=1/22 = 0.045455
+     t=4/17  13->4  depth=1/17 = 0.058824
+     t=4/15  4->11  depth=1/15 = 0.066667
+     t=5/18  11->7  depth=1/18 = 0.055556
+     t=5/17  7->10  depth=1/17 = 0.058824
+     t=7/23  10->13  depth=1/23 = 0.043478
+     t=5/16  13->3  depth=1/16 = 0.062500
+     t=5/14  3->11  depth=1/14 = 0.071429
+     t=7/19  11->8  depth=1/19 = 0.052632
+     t=8/21  8->13  depth=1/21 = 0.047619
+     t=7/18  13->5  depth=1/18 = 0.055556
+     t=7/17  5->12  depth=1/17 = 0.058824
+     t=8/19  12->7  depth=1/19 = 0.052632
+     t=7/16  7->9  depth=1/16 = 0.062500
+     t=9/20  9->11  depth=1/20 = 0.050000
+     t=11/24  11->13  depth=1/24 = 0.041667
+     t=7/15  13->2  depth=1/15 = 0.066667
+     t=8/15  2->13  depth=1/15 = 0.066667
+     t=13/24  13->11  depth=1/24 = 0.041667
+     t=11/20  11->9  depth=1/20 = 0.050000
+     t=9/16  9->7  depth=1/16 = 0.062500
+     t=11/19  7->12  depth=1/19 = 0.052632
+     t=10/17  12->5  depth=1/17 = 0.058824
+     t=11/18  5->13  depth=1/18 = 0.055556
+     t=13/21  13->8  depth=1/21 = 0.047619
+     t=12/19  8->11  depth=1/19 = 0.052632
+     t=9/14  11->3  depth=1/14 = 0.071429
+     t=11/16  3->13  depth=1/16 = 0.062500
+     t=16/23  13->10  depth=1/23 = 0.043478
+     t=12/17  10->7  depth=1/17 = 0.058824
+     t=13/18  7->11  depth=1/18 = 0.055556
+     t=11/15  11->4  depth=1/15 = 0.066667
+     t=13/17  4->13  depth=1/17 = 0.058824
+     t=17/22  13->9  depth=1/22 = 0.045455
+     t=11/14  9->5  depth=1/14 = 0.071429
+     t=13/16  5->11  depth=1/16 = 0.062500
+     t=14/17  11->6  depth=1/17 = 0.058824
+     t=16/19  6->13  depth=1/19 = 0.052632
+     t=17/20  13->7  depth=1/20 = 0.050000
+     t=13/15  7->8  depth=1/15 = 0.066667
+     t=15/17  8->9  depth=1/17 = 0.058824
+     t=17/19  9->10  depth=1/19 = 0.052632
+     t=19/21  10->11  depth=1/21 = 0.047619
+     t=21/23  11->12  depth=1/23 = 0.043478
+     t=23/25  12->13  depth=1/25 = 0.040000
+     t=13/14  13->1  depth=1/14 = 0.071429
+
+== GW {1..11,13,24}  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+   primitive=True covering(DC)=False
+   M = 1/14 = 0.071429   [expected 1/14 OK]
+   events=420  segments=70  H+=66  (parity EVEN)
+   int v_lam = 123111718244341/17124780311100 = 7.189098   identity(int = 2*sum depths): True
+   max chain mass = 15/112 = 0.133929   >= 28/183? False   (mass/2M = 0.9375)
+   ledger efficiency eta = int/(2 H+ M) = 0.7625   witness-chain equioscillation (x_in+x_out)/2M = 0.7800
+   climb bound (LEM-023) v*floor(q/(B+v))/q = 1/25 = 0.040000   TIGHT (== M)? False
+   fixed chains: through 0: 1, through 1/2: 1
+
+== deep well {1..12,182}  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+   primitive=True covering(DC)=True
+   M = 14/183 = 0.076503   [expected 14/183 OK]
+   events=4216  segments=374  H+=220  (parity EVEN)
+   int v_lam = 130664671124905851404239/7264376760162630837960 = 17.987045   identity(int = 2*sum depths): True
+   max chain mass = 2639/17751 = 0.148668   >= 28/183? False   (mass/2M = 0.9716)
+   ledger efficiency eta = int/(2 H+ M) = 0.5344   witness-chain equioscillation (x_in+x_out)/2M = 0.9643
+   climb bound (LEM-023) v*floor(q/(B+v))/q = 14/183 = 0.076503   TIGHT (== M)? True
+   fixed chains: through 0: 1, through 1/2: 1
+   staircase check (depths at k/183?):
+     t=1/183  pair(1,182)  depth=1/183   t*183=1  depth*183=1
+     t=2/183  pair(1,182)  depth=2/183   t*183=2  depth*183=2
+     t=1/61  pair(1,182)  depth=1/61   t*183=3  depth*183=3
+     t=4/183  pair(1,182)  depth=4/183   t*183=4  depth*183=4
+     t=5/183  pair(1,182)  depth=5/183   t*183=5  depth*183=5
+     t=2/61  pair(1,182)  depth=2/61   t*183=6  depth*183=6
+     t=7/183  pair(1,182)  depth=7/183   t*183=7  depth*183=7
+     t=8/183  pair(1,182)  depth=8/183   t*183=8  depth*183=8
+     t=3/61  pair(1,182)  depth=3/61   t*183=9  depth*183=9
+     t=10/183  pair(1,182)  depth=10/183   t*183=10  depth*183=10
+     t=11/183  pair(1,182)  depth=11/183   t*183=11  depth*183=11
+     t=4/61  pair(1,182)  depth=4/61   t*183=12  depth*183=12
+     t=13/183  pair(1,182)  depth=13/183   t*183=13  depth*183=13
+     t=14/183  pair(1,182)  depth=14/183   t*183=14  depth*183=14
+     t=15/194  pair(182,12)  depth=7/97   t*183=2745/194  depth*183=1281/97
+     t=8/97  pair(182,12)  depth=1/97   t*183=1464/97  depth*183=183/97
+     t=2/23  pair(12,11)  depth=1/23   t*183=366/23  depth*183=183/23
+     t=17/193  pair(182,11)  depth=6/193   t*183=3111/193  depth*183=1098/193
+     t=18/193  pair(11,182)  depth=5/193   t*183=3294/193  depth*183=915/193
+     t=2/21  pair(11,10)  depth=1/21   t*183=122/7  depth*183=61/7
+     t=19/192  pair(182,10)  depth=1/96   t*183=1159/64  depth*183=61/32
+     t=5/48  pair(10,182)  depth=1/24   t*183=305/16  depth*183=61/8
+     t=2/19  pair(10,9)  depth=1/19   t*183=366/19  depth*183=183/19
+     t=21/191  pair(182,9)  depth=2/191   t*183=3843/191  depth*183=366/191
+     t=22/191  pair(9,182)  depth=7/191   t*183=4026/191  depth*183=1281/191
+     t=2/17  pair(9,8)  depth=1/17   t*183=366/17  depth*183=183/17
+     t=23/190  pair(182,8)  depth=3/95   t*183=4209/190  depth*183=549/95
+     t=12/95  pair(8,182)  depth=1/95   t*183=2196/95  depth*183=183/95
+     t=5/38  pair(8,182)  depth=1/19   t*183=915/38  depth*183=183/19
+     t=2/15  pair(8,7)  depth=1/15   t*183=122/5  depth*183=61/5
+     t=26/189  pair(182,7)  depth=1/27   t*183=1586/63  depth*183=61/9
+     t=4/27  pair(7,182)  depth=1/27   t*183=244/9  depth*183=61/9
+     t=29/189  pair(7,182)  depth=2/27   t*183=1769/63  depth*183=122/9
+     t=29/188  pair(182,6)  depth=7/94   t*183=5307/188  depth*183=1281/94
+     t=15/94  pair(182,6)  depth=2/47   t*183=2745/94  depth*183=366/47
+     t=31/188  pair(182,6)  depth=1/94   t*183=5673/188  depth*183=183/94
+     t=8/47  pair(6,182)  depth=1/47   t*183=1464/47  depth*183=183/47
+     t=33/188  pair(6,182)  depth=5/94   t*183=6039/188  depth*183=915/94
+     t=3/17  pair(6,11)  depth=1/17   t*183=549/17  depth*183=183/17
+     t=35/193  pair(182,11)  depth=1/193   t*183=6405/193  depth*183=183/193
+     t=36/193  pair(11,182)  depth=10/193   t*183=6588/193  depth*183=1830/193
+     t=3/16  pair(11,5)  depth=1/16   t*183=549/16  depth*183=183/16
+     t=36/187  pair(182,5)  depth=7/187   t*183=6588/187  depth*183=1281/187
+     t=37/187  pair(182,5)  depth=2/187   t*183=6771/187  depth*183=366/187
+     t=38/187  pair(5,182)  depth=3/187   t*183=6954/187  depth*183=549/187
+     t=39/187  pair(5,182)  depth=8/187   t*183=7137/187  depth*183=1464/187
+     t=40/187  pair(5,182)  depth=13/187   t*183=7320/187  depth*183=2379/187
+     t=41/191  pair(182,9)  depth=13/191   t*183=7503/191  depth*183=2379/191
+     t=42/191  pair(182,9)  depth=4/191   t*183=7686/191  depth*183=732/191
+     t=43/191  pair(9,182)  depth=5/191   t*183=7869/191  depth*183=915/191
+     t=44/191  pair(9,182)  depth=14/191   t*183=8052/191  depth*183=2562/191
+     t=43/186  pair(182,4)  depth=7/93   t*183=2623/62  depth*183=427/31
+     t=22/93  pair(182,4)  depth=5/93   t*183=1342/31  depth*183=305/31
+     t=15/62  pair(182,4)  depth=1/31   t*183=2745/62  depth*183=183/31
+     t=23/93  pair(182,4)  depth=1/93   t*183=1403/31  depth*183=61/31
+     t=47/186  pair(4,182)  depth=1/93   t*183=2867/62  depth*183=61/31
+     t=8/31  pair(4,182)  depth=1/31   t*183=1464/31  depth*183=183/31
+     t=49/186  pair(4,182)  depth=5/93   t*183=2989/62  depth*183=305/31
+     t=4/15  pair(4,11)  depth=1/15   t*183=244/5  depth*183=61/5
+     t=52/193  pair(182,11)  depth=7/193   t*183=9516/193  depth*183=1281/193
+     t=53/193  pair(11,182)  depth=4/193   t*183=9699/193  depth*183=732/193
+     t=5/18  pair(11,7)  depth=1/18   t*183=305/6  depth*183=61/6
+     t=53/189  pair(182,7)  depth=1/27   t*183=3233/63  depth*183=61/9
+     t=55/189  pair(7,182)  depth=1/27   t*183=3355/63  depth*183=61/9
+     t=5/17  pair(7,10)  depth=1/17   t*183=915/17  depth*183=183/17
+     t=19/64  pair(182,10)  depth=1/32   t*183=3477/64  depth*183=183/32
+     t=29/96  pair(10,182)  depth=1/48   t*183=1769/32  depth*183=61/16
+     t=59/192  pair(10,182)  depth=7/96   t*183=3599/64  depth*183=427/32
+     t=57/185  pair(182,3)  depth=14/185   t*183=10431/185  depth*183=2562/185
+     t=58/185  pair(182,3)  depth=11/185   t*183=10614/185  depth*183=2013/185
+     t=59/185  pair(182,3)  depth=8/185   t*183=10797/185  depth*183=1464/185
+     t=12/37  pair(182,3)  depth=1/37   t*183=2196/37  depth*183=183/37
+     t=61/185  pair(182,3)  depth=2/185   t*183=11163/185  depth*183=366/185
+     t=62/185  pair(3,182)  depth=1/185   t*183=11346/185  depth*183=183/185
+     t=63/185  pair(3,182)  depth=4/185   t*183=11529/185  depth*183=732/185
+     t=64/185  pair(3,182)  depth=7/185   t*183=11712/185  depth*183=1281/185
+     t=13/37  pair(3,182)  depth=2/37   t*183=2379/37  depth*183=366/37
+     t=66/185  pair(3,182)  depth=13/185   t*183=12078/185  depth*183=2379/185
+     t=69/193  pair(182,11)  depth=13/193   t*183=12627/193  depth*183=2379/193
+     t=70/193  pair(182,11)  depth=2/193   t*183=12810/193  depth*183=366/193
+     t=71/193  pair(11,182)  depth=9/193   t*183=12993/193  depth*183=1647/193
+     t=7/19  pair(182,8)  depth=1/19   t*183=1281/19  depth*183=183/19
+     t=71/190  pair(182,8)  depth=1/95   t*183=12993/190  depth*183=183/95
+     t=36/95  pair(8,182)  depth=3/95   t*183=6588/95  depth*183=549/95
+     t=73/190  pair(8,182)  depth=7/95   t*183=13359/190  depth*183=1281/95
+     t=72/187  pair(182,5)  depth=14/187   t*183=13176/187  depth*183=2562/187
+     t=73/187  pair(182,5)  depth=9/187   t*183=13359/187  depth*183=1647/187
+     t=74/187  pair(182,5)  depth=4/187   t*183=13542/187  depth*183=732/187
+     t=75/187  pair(5,182)  depth=1/187   t*183=13725/187  depth*183=183/187
+     t=76/187  pair(5,182)  depth=6/187   t*183=13908/187  depth*183=1098/187
+     t=7/17  pair(5,182)  depth=1/17   t*183=1281/17  depth*183=183/17
+     t=40/97  pair(182,12)  depth=5/97   t*183=7320/97  depth*183=915/97
+     t=81/194  pair(12,182)  depth=1/97   t*183=14823/194  depth*183=183/97
+     t=8/19  pair(12,7)  depth=1/19   t*183=1464/19  depth*183=183/19
+     t=80/189  pair(182,7)  depth=1/27   t*183=4880/63  depth*183=61/9
+     t=82/189  pair(7,182)  depth=1/27   t*183=5002/63  depth*183=61/9
+     t=7/16  pair(7,9)  depth=1/16   t*183=1281/16  depth*183=183/16
+     t=84/191  pair(182,9)  depth=8/191   t*183=15372/191  depth*183=1464/191
+     t=85/191  pair(9,182)  depth=1/191   t*183=15555/191  depth*183=183/191
+     t=9/20  pair(9,11)  depth=1/20   t*183=1647/20  depth*183=183/20
+     t=87/193  pair(182,11)  depth=8/193   t*183=15921/193  depth*183=1464/193
+     t=88/193  pair(11,182)  depth=3/193   t*183=16104/193  depth*183=549/193
+     t=89/193  pair(11,182)  depth=14/193   t*183=16287/193  depth*183=2562/193
+     t=85/184  pair(182,2)  depth=7/92   t*183=15555/184  depth*183=1281/92
+     t=43/92  pair(182,2)  depth=3/46   t*183=7869/92  depth*183=549/46
+     t=87/184  pair(182,2)  depth=5/92   t*183=15921/184  depth*183=915/92
+     t=11/23  pair(182,2)  depth=1/23   t*183=2013/23  depth*183=183/23
+     t=89/184  pair(182,2)  depth=3/92   t*183=16287/184  depth*183=549/92
+     t=45/92  pair(182,2)  depth=1/46   t*183=8235/92  depth*183=183/46
+     t=91/184  pair(182,2)  depth=1/92   t*183=16653/184  depth*183=183/92
+
+== ladder k=1 {1..12,13}  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+   primitive=True covering(DC)=False
+   M = 1/14 = 0.071429   [expected 1/14 OK]
+   events=200  segments=58  H+=58  (parity EVEN)
+   int v_lam = 3350216417/514829700 = 6.507426   identity(int = 2*sum depths): True
+   max chain mass = 1/7 = 0.142857   >= 28/183? False   (mass/2M = 1.0000)
+   ledger efficiency eta = int/(2 H+ M) = 0.7854   witness-chain equioscillation (x_in+x_out)/2M = 0.7800
+   climb bound (LEM-023) v*floor(q/(B+v))/q = 1/14 = 0.071429   TIGHT (== M)? True
+   fixed chains: through 0: 1, through 1/2: 1
+
+== ladder k=2 {1..12,26}  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26]
+   primitive=True covering(DC)=False
+   M = 2/27 = 0.074074   [expected 2/27 OK]
+   events=438  segments=76  H+=70  (parity EVEN)
+   int v_lam = 26408824257709/3424956062220 = 7.710705   identity(int = 2*sum depths): True
+   max chain mass = 1/7 = 0.142857   >= 28/183? False   (mass/2M = 0.9643)
+   ledger efficiency eta = int/(2 H+ M) = 0.7435   witness-chain equioscillation (x_in+x_out)/2M = 0.7500
+   climb bound (LEM-023) v*floor(q/(B+v))/q = 2/27 = 0.074074   TIGHT (== M)? True
+   fixed chains: through 0: 1, through 1/2: 1
+
+== ladder k=3 {1..12,39}  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 39]
+   primitive=True covering(DC)=False
+   M = 3/40 = 0.075000   [expected 3/40 OK]
+   events=770  segments=100  H+=82  (parity EVEN)
+   int v_lam = 2561607330238777/298615126401900 = 8.578291   identity(int = 2*sum depths): True
+   max chain mass = 1/7 = 0.142857   >= 28/183? False   (mass/2M = 0.9524)
+   ledger efficiency eta = int/(2 H+ M) = 0.6974   witness-chain equioscillation (x_in+x_out)/2M = 0.8333
+   climb bound (LEM-023) v*floor(q/(B+v))/q = 3/40 = 0.075000   TIGHT (== M)? True
+   fixed chains: through 0: 1, through 1/2: 1
+
+== ladder k=7 {1..12,91}  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 91]
+   primitive=True covering(DC)=False
+   M = 7/92 = 0.076087   [expected 7/92 OK]
+   events=2030  segments=196  H+=130  (parity EVEN)
+   int v_lam = 17708361656145476773/1513852188963067800 = 11.697550   identity(int = 2*sum depths): True
+   max chain mass = 1365/9476 = 0.144048   >= 28/183? False   (mass/2M = 0.9466)
+   ledger efficiency eta = int/(2 H+ M) = 0.5913   witness-chain equioscillation (x_in+x_out)/2M = 0.9286
+   climb bound (LEM-023) v*floor(q/(B+v))/q = 7/92 = 0.076087   TIGHT (== M)? True
+   fixed chains: through 0: 1, through 1/2: 1
+
+== ladder k=14 {1..12,182}  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+   primitive=True covering(DC)=True
+   M = 14/183 = 0.076503   [expected 14/183 OK]
+   events=4216  segments=374  H+=220  (parity EVEN)
+   int v_lam = 130664671124905851404239/7264376760162630837960 = 17.987045   identity(int = 2*sum depths): True
+   max chain mass = 2639/17751 = 0.148668   >= 28/183? False   (mass/2M = 0.9716)
+   ledger efficiency eta = int/(2 H+ M) = 0.5344   witness-chain equioscillation (x_in+x_out)/2M = 0.9643
+   climb bound (LEM-023) v*floor(q/(B+v))/q = 14/183 = 0.076503   TIGHT (== M)? True
+   fixed chains: through 0: 1, through 1/2: 1
+
+== near-dilate 2*{1..12} u {27}  [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 27]
+   primitive=True covering(DC)=False
+   M = 1/13 = 0.076923   [expected 1/13 OK]
