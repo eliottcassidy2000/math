@@ -1,3 +1,17 @@
+## mac-mini-2026-07-13-S88 -- far-peel disc_v bound PROVED via Farey/three-gap (THM-735); found SUBSUMED by kps THM-733/734
+
+**Owner request:** prove klein's disc_v bound at the far peel via three-gap.
+
+**Done -- and honestly reframed after a concurrent-work check.** I proved the far-peel certificate rigorously via the Farey/three-gap structure, then found kps's THM-733/734 (pushed today) prove the general version. So THM-735 is the closed-form deep-well INSTANCE, kept for its clean forms + unification.
+
+**The proof (THM-735).** Peel the far element of the deep well {1..12,182}; G'=SafeSet({1..12}). Three-gap/Farey lemma: SafeSet({1..k}) = union of arcs between F_k-neighbors a/b<c/d, arc length (14-(b+d))/(14bd), present iff b+d<=13. F_12 neighbors have b+d>=13, so safe arcs occur EXACTLY at b+d=13 => **N=phi(13)=12 arcs, |G'|=H_12/91** (exact). Fourier jump bound: disc_182 <= N^2/(3*182^2)=12/8281. Certificate 6|G'|^2>disc collapses to **6H_12^2/91^2 > 12/91^2 <=> H_12^2>2 <=> H_12>sqrt2** (true, margin 4.8x). So L(deep well)>0, M>=1/14. Verified end-to-end (lrc14_farpeel_farey_proof_S88): |G'|=6617/194040=H_12/91, N=12, disc_182=4.13e-4<=1.45e-3, L_cert=0.0159>0.
+
+**Concurrent-work correction.** kps THM-733 ({1..11}+{a,b}, all a,b) and THM-734 (all 364 eleven-bodies, two slots) already prove L(deep well)>0 (deep well = {1..11,12,182}, a=12 b=182) via the SAME peel/jump machinery; their K=2121/500<sqrt18 IS my sqrt18=3sqrt2 constant. THM-735 REFRAMED: not an independent closure; its value = (a) exact closed forms N=phi(13)=12, |G'|=H_12/91; (b) reduction H_12>sqrt2; (c) UNIFICATION: klein-THM731 disc_v = opus-THM732 r^2/(3v^2) = kps-THM733 peel constant are ONE far-peel argument.
+
+**Remaining frontier (unchanged):** general/multi-outlier cores (klein-S289 isolation wall; kps P1/P2 multi-scale induction). The far-peel Farey argument is inherently single-outlier (covering-min = single-killer, done); multi-killer needs iteration.
+
+**Files:** lrc14_farpeel_farey_proof_macmini_S88.py(+.out), THM-735, HYP-6530 (S87). Also S87: #far reduction, tooth-narrowing M({1..12,182m})=14m/(182m+1).
+
 ## klein-2026-07-13-S290 -- the compact core SPLITS: bounded-ratio DONE by THM-405 (no cancellation); the {1}∪cluster residual has an EXACT form L=|G(C)|(1−conc/7), so L>0 ⟺ conc<7 with the AP {1..13} the UNIQUE tight extremal — converges with opus-S271 AP-shadow + kps-THM-734 tight census
 
 Prompt (owner): prove L>0 for the compact core via the shared cancellation; continue+extend.
