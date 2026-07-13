@@ -1,0 +1,6 @@
+target 14/183=0.076503. RESIDUAL = near-tight non-dilated large-s cores.
+
+tested 64 near-tight non-dilated large-s residual configs.
+NONE below 14/183: the residual is empirically closed (no counterexample).
+
+All residual configs have M >= 1/13 (comfortably above 14/183).

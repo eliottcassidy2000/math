@@ -1,0 +1,19 @@
+(A) interval-core balance: M({1..12,v}) vs balance v/(13(v+1)), for 182|v:
+    v=182: M_exact=14/183=0.076503  balance v/(13(v+1))=14/183=0.076503  match=True
+    v=364: M_exact=28/365=0.076712  balance v/(13(v+1))=28/365=0.076712  match=True
+    v=546: M_exact=38/495=0.076768  balance v/(13(v+1))=42/547=0.076782  match=False
+    v=728: M_exact=38/495=0.076768  balance v/(13(v+1))=56/729=0.076818  match=False
+    v=910: M_exact=38/495=0.076768  balance v/(13(v+1))=70/911=0.076839  match=False
+
+(B) shallow-witness: exists a (gcd(a,13)=1) with (a*v mod 13c) at distance >= c from 0?
+    (=> M(c*{1..12} u {v}) >= 1/13). Test all c=2..15, v coprime to c, v in [13,400]:
+    tested 3234 (c,v) primitive pairs; good-dilation MISSING in 0 cases.
+    => shallow-witness ALWAYS exists (M >= 1/13 for every primitive dilated-core config).
+
+    confirm M_exact >= 1/13 for dilated cores + killer 182:
+    c=2: prim=False M=7/92=0.07609 < 1/13 !!
+    c=3: prim=True M=1/13=0.07692 >=1/13
+    c=5: prim=True M=1/13=0.07692 >=1/13
+    c=7: prim=False M=2/27=0.07407 < 1/13 !!
+    c=11: prim=True M=1/13=0.07692 >=1/13
+    c=13: prim=False M=1/13=0.07692 >=1/13
