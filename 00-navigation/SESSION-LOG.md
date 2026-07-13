@@ -1,3 +1,22 @@
+## mac-mini-2026-07-13-S78 -- the Riesz resummation reformulated (L=(6/7)^13(1+corrsum), finite bounded, L>0<=>corrsum>-1); HONEST: "Schur deficit => L>0" IS the covering case of LRC(14), NOT proved
+
+Prompt (owner): prove the Riesz resummation: Schur deficit => L(S)>0.
+
+HONEST UPFRONT: this is the covering case of LRC(14) itself (L(S)>0 <=> M(S)>1/14 for covering S). I did NOT prove it. I clarified its structure and confirmed the split.
+
+THE REFORMULATION (genuine contribution). Safe indicator f_i=1-1_{D_i} (mean 6/7); g_i=f_i/(6/7)-1 (mean 0, in {-1,+1/6}, |g_i|<=1). EXACTLY:
+   L(S) = (6/7)^13 * (1 + corrsum),  corrsum = Sum_{|T|>=2} INT prod_{i in T} g_i.
+This is a FINITE (2^13-term) BOUNDED sum -- it KILLS the "conditional convergence" framing (that was an artifact of the E_k=meas(cap D_i) truncation whose partial sums oscillate; the g-expansion is bounded). So L(S)>0 <=> corrsum(S) > -1 -- a bounded quantity vs its extreme.
+
+THE SPLIT (verified): corrsum = AP -1.0000 (L=0), {1..11,13,84} -0.960 (L=0.005), deep well -0.823, {2..14} -0.546, spread +0.032, dissociated +1.06. 
+ - LOOSE (dissociated, large Schur deficit): corrsum >> -1, correlation-bounded (corr_T = resonance sum Sum n_i v_i=0; few resonances => |corrsum|<1). = the fleet's density floor / E_grid / kissing (THM-663, kps-S96/S97). Tractable.
+ - NEAR-AP (small deficit, corrsum->-1): THE KNIFE-EDGE. {1..11,13,84} corrsum=-0.960 barely >-1. corrsum(AP)=-1 exactly; covering must lift it strictly above. THM-730 gives the Schur deficit but does NOT force corrsum>-1 -- the deficit->corrsum link is the open resummation = covering LRC(14).
+
+HONEST VERDICT: not proved. But the open problem is now the SHARPEST it has been: [averaging era over, S76 pairwise-blind] + [Schur extremal PROVED, THM-730] + [resummation reduced to ONE bounded inequality: corrsum(S)>-1 for near-AP covering S, strictly above its AP-extreme -1]. That is a single clean statement about near-AP perturbations of one arithmetic progression -- no series, no convergence, one bounded quantity above one value.
+
+FILES: HYP-6430; 04-computation/lrc14_riesz_resummation_macmini_S78.py(+.out). CREDITS: THM-730 (combinatorial half), opus THM-515 (Riesz program), THM-663/kps-S96 (loose half), S76 reflection. -> the last inch = corrsum(near-AP covering)>-1, = HYP-2566 = LRC(14); it will not fall to me, but it is now stated as cleanly as it can be.
+
+---
 ## opus-2026-07-11-S264 -- POSITIVE: correct threshold Sum eps_v < 6/7 (generous); E3/additive bound CLOSES all NO-speed-1 covering families; residual = speed-1 => S255. LRC(14) residual reduced to speed-1 covering
 
 Prompt (owner): prove the E3/dissociation bound for covering families.
