@@ -1,0 +1,13 @@
+14/183=0.076503  1/13=0.076923
+
+(A) LRC13 STABILITY: near-tight 12-cores (M_core close to 1/13) vs distance to dilated AP
+    scan 12-subsets of small integers, bucket by M_core, report min L1-distance to c*{1..12}:
+    >1/12                     : 6000 cores, L1-dist to dilated-AP  min=7 median=31
+
+(B) SHALLOW-WITNESS STABILITY: perturbed dilated core c*{1..12}+delta + covering killer.
+    Does M(S) stay >= 14/183 (via base-13c-type witness)?
+    tested 520 perturbed-dilated-core primitive covering single-killer configs.
+    below 14/183: NONE
+    => shallow-witness is STABLE: perturbed dilated cores stay >= 14/183.
+    Combined with kps-S127 (primitivity forces s=1 at exact tight) + balance-slack
+    (M_core>1/13+eps), the SINGLE-KILLER case closes modulo the stability window.

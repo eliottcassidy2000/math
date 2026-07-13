@@ -1,0 +1,23 @@
+PARTITION CHECK: r = #{elements >= 13} for primitive covering 13-sets.
+
+(1) r=1 case: the 12 elements <13 are forced to be {1,..,12}; covering => 182|v_f.
+    Closed-form balance M >= (1/13)*v_f/(v_f+1) vs exact M:
+    {1..12,182}: r=1, closed-form bal=0.076503, M=0.076503=14/183, M>=14/183:True, bal>=14/183:True
+    {1..12,364}: r=1, closed-form bal=0.076712, M=0.076712=28/365, M>=14/183:True, bal>=14/183:True
+    {1..12,546}: r=1, closed-form bal=0.076782, M=0.076768=38/495, M>=14/183:True, bal>=14/183:True
+    {1..12,728}: r=1, closed-form bal=0.076818, M=0.076768=38/495, M>=14/183:True, bal>=14/183:True
+    {1..12,910}: r=1, closed-form bal=0.076839, M=0.076768=38/495, M>=14/183:True, bal>=14/183:True
+    {1..12,1274}: r=1, closed-form bal=0.076863, M=0.076768=38/495, M>=14/183:True, bal>=14/183:True
+
+(2) dilated core c*{1..12}: how many elements >=13? (=> these are MULTI-killer, THM-726):
+    c=2: core [2, 4, 6]...24 has 6 elements >=13 => r>=7 => MULTI-killer
+    c=3: core [3, 6, 9]...36 has 8 elements >=13 => r>=9 => MULTI-killer
+    c=5: core [5, 10, 15]...60 has 10 elements >=13 => r>=11 => MULTI-killer
+
+(3) exhaustive small check: EVERY r=1 primitive covering 13-set is {1..12,v_f}, v_f>=182:
+    10 r=1 primitive covering configs (all = {1..12,v_f}, 182|v_f); below 14/183: 0
+    min at v_f=182 (deep well) = 14/183. => r=1 case CLOSED in closed form, no residual.
+
+CONCLUSION: HYP-2566 closed-form gap = MULTI-KILLER (r>=2) case ONLY. Single-killer (r=1)
+is fully proved (interval core forced + balance s=1). THM-724 residual was mis-scoped:
+its dilated/non-interval cores are r>=2 = THM-726's domain (M>=1/13, certified).

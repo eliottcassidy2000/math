@@ -1,0 +1,31 @@
+1/13=0.076923. Quantitative LRC(13) stability: M_core near 1/13 <=> near dilated AP
+
+core (perturbation of c*AP)              | L1-dist to AP | M_core | near-tight?
+------------------------------------------------------------------------------------------
+  c=1 perturb idx0 by +0: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] |           0 | 0.07692 | TIGHT(=1/13)
+  c=1 perturb idx11 by +1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13] |           1 | 0.08333 | near
+  c=1 perturb idx11 by +2: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14] |           2 | 0.08333 | near
+  c=1 perturb idx11 by +3: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15] |           3 | 0.08333 | near
+  c=1 perturb idx11 by +5: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 17] |           5 | 0.08333 | near
+  c=2 perturb idx0 by +0: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24] |           0 | 0.07692 | TIGHT(=1/13)
+  c=2 perturb idx11 by +1: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 25] |           1 | 0.08333 | near
+  c=2 perturb idx11 by +2: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 26] |           2 | 0.08333 | near
+  c=2 perturb idx11 by +3: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 27] |           3 | 0.08333 | near
+  c=2 perturb idx0 by +1: [3, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24] |           1 | 0.14286 | >1/12 (loose)
+  c=2 perturb idx11 by +5: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 29] |           5 | 0.08333 | near
+  c=2 perturb idx0 by +3: [4, 5, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24] |           3 | 0.14286 | >1/12 (loose)
+  c=3 perturb idx0 by +0: [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36] |           0 | 0.07692 | TIGHT(=1/13)
+  c=3 perturb idx11 by +1: [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 37] |           1 | 0.08333 | near
+  c=3 perturb idx11 by +2: [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 38] |           2 | 0.08333 | near
+  c=3 perturb idx11 by +3: [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 39] |           3 | 0.08333 | near
+  c=3 perturb idx0 by +1: [4, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36] |           1 | 0.14286 | >1/12 (loose)
+  c=3 perturb idx5 by +2: [3, 6, 9, 12, 15, 20, 21, 24, 27, 30, 33, 36] |           2 | 0.10526 | >1/12 (loose)
+  c=3 perturb idx11 by +5: [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 41] |           5 | 0.08333 | near
+  c=3 perturb idx6 by +4: [3, 6, 9, 12, 15, 18, 24, 25, 27, 30, 33, 36] |           4 | 0.14286 | >1/12 (loose)
+
+READING: M_core stays near 1/13 ONLY for small L1-distance to a dilated AP; larger
+perturbation pushes M_core UP to >1/12 (loose, balance-safe). So near-tight => near-AP
+(quantitative LRC13 stability), the ONE crux under the single-killer closed form.
+Combined: generic core (M_core>1/12, s bounded) => balance>=14/183; near-tight => near-AP
+=> shallow witness (stable, verified S71); exact tight => kps primitivity s=1. SINGLE-KILLER
+closed-form reduces to proving quantitative LRC13 stability (a clean isolated statement).
