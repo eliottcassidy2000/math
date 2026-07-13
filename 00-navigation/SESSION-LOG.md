@@ -1,3 +1,43 @@
+## kind-pasteur-2026-07-11-S127 cont.60 -- the single-killer balance bound in the reach/margin API, machine-checked (LRCDeepWellReach.lean)
+
+Prompt (owner): formalize the single-killer balance bound in Lean.
+
+Found that klein-S119 already formalized the deep-well WITNESS (per-runner distance bounds, general n, sorry-free
+in LRCDeepWellWitness.lean) and assembled it into Lonely 14 deepWell14 (14/183) -- i.e. every runner >= 1/14 at
+t*=14/183 (the LRC(14) >= 1/n conclusion). The GAP: that assembly keeps only 1/14, not the tight covering-min
+VALUE 14/183, and it is NOT in the project's reach = sSup(margin) API that the covering-min crux is stated in.
+
+FORMALIZED (LRCDeepWellReach.lean, kernel-pure [propext, Classical.choice, Quot.sound], builds clean):
+  - reach_ge_of_covering13: the Fin 13 twin of LRCCoveringReach.reach_ge_of_covering (a clearing cert
+    mu<=(v_i*c)%q<=q-mu for all i  =>  reach v = sSup(margin v '' [0,1]) >= mu/q). The atom's rational_point_margin
+    core is polymorphic in the index type, so it copies verbatim from Fin 12 to Fin 13.
+  - deepWell_reach: reach({1..12,182}) >= 14/183 -- the covering-min VALUE in the sSup API, keeping the FULL
+    14/183 margin (where klein's Lonely keeps only 1/14). Witness t*=14/183 (q=183, rotation c=14, mu=14): the
+    residues (v_i*14) mod 183 = {14,28,...,168,169} all lie in the band [14,169]=[mu,q-mu], runners 1 and 182 at
+    the two edges (the tight band-fit). This is the single-killer balance [1/13]*182/183=14/183 at its tight
+    extremal (182=13*14=lcm(13,14), kps cont.55), and the LOWER half of reach(deepWell)=14/183.
+  - deepWell_reach_gt_tight: reach(deepWell) > 1/14 (surplus 13/2562) -- the covering minimizer is loose.
+
+So this is the reach/margin-API COMPANION to klein's Lonely-14 statement -- the covering-min value 14/183 in the
+sSup framework, via the covering-reach atom. Wired into the root (TournamentH7.lean) next to klein's deep-well
+files. (Full root build still segfaults on the pre-existing LRCSafeCertSize5 native_decide cert -- not mine; my
+module builds standalone in 207s and is kernel-pure.)
+
+HONEST scope: this is the WITNESS (>=) direction for the extremal single-killer family, in the reach API. The
+GENERAL single-killer balance (arbitrary killer v_f = c*182, reach >= 14c/(182c+1) via q=182c+1, rotation 14c) is
+a clean parametrized extension I worked out but did not formalize this session -- a good next target. The
+covering-min LOWER bound over ALL covering families remains the open crux (multi-killer reduces to LRC(13)-escape
++ finite check, cont.59).
+
+Artifacts: 04-computation/lean/TournamentH7/TournamentH7/LRCDeepWellReach.lean (3 theorems, kernel-pure); wired
+into TournamentH7.lean. Complements klein-S119 (LRCDeepWellWitness/Lonely), builds on LRCCoveringReach
+(covering-reach atom), LRCDecorrelation13 (Fin 13 margin API).
+
+Next: the general single-killer ladder reach >= 14c/(182c+1) (parametrized by c); the multi-killer / covering-min
+lower bound (open, = finite check + escape).
+
+---
+
 ## mac-mini-2026-07-13-S71 -- toward HYP-2566: the CLEAN PARTITION closes the single-killer covering-min in closed form (no residual) and isolates the sole remaining closed-form gap to MULTI-KILLER r>=2, M>=1/13
 
 Prompt (owner): prove the closed-form global-optimum inequality (HYP-2566).

@@ -306,6 +306,7 @@ import TournamentH7.LRCHunterLedger  -- klein-S116: path-Hunter (Bonferroni) ine
 import TournamentH7.LRCLedgerAssembly  -- klein-S117: ledger-positivity assembly (singles + pair-floor -> hledger, c<=7)
 import TournamentH7.LRCDeepWellWitness  -- klein-S119: covering-min extremizer's witness, general n (deep well lonely at t*=n/Phi6(n) via zeta6 rotation)
 import TournamentH7.LRCDeepWellLonely  -- klein-S119b: wires the witness to Lonely 14 (deepWell14 {1..12,182} Lonely at 14/183)
+import TournamentH7.LRCDeepWellReach  -- kps-2026-07-11-S127 (cont.60): the single-killer balance bound in the reach/margin sSup API -- reach_ge_of_covering13 (Fin 13 covering-reach atom) + deepWell_reach (reach({1..12,182}) >= 14/183, the covering-min VALUE, keeping the full margin where klein's Lonely keeps only 1/14) + deepWell_reach_gt_tight (>1/14, minimizer is loose). kernel-pure [propext,Classical.choice,Quot.sound].
 import TournamentH7.LRCMarginMeasure  -- klein-S120: THM-613 margin->measure bridge formalized (meas lonely >= 2(M-1/14)/vmax; deep well >= 13/233142)
 import TournamentH7.LRCEvenDescent  -- klein-S121: THM-612 tower step formalized (even part of a lonely family descends to U lonely at m*t)
 import TournamentH7.LRCFolding  -- klein-S123: THM-615 folding-identity engine (reach half-shift for odd, even (+1/2)-periodicity, lattice fold, Psi/extremity)
