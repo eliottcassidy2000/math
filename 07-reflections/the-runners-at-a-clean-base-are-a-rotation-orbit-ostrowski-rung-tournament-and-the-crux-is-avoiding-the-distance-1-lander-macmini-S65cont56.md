@@ -146,14 +146,26 @@ iff `(r_i − r_j) mod q ∈ (0, q/2)`. This is the tournament side of the base-
 the residues are not just points, they are a tournament, and the *loneliness margin is the
 tournament's closest edge to the "tie" antipode.*
 
-At the AP's clean base `q = 14`, reduce by the apex prime (`14 = 2·7`, CRT): the residues
-`{1,…,13} mod 7` are **all of `Z/7`**, and the induced rotational tournament is the **full
-heptagon `R_7` = "beat the next 3"** — self-complementary, `Aut = C_7`, with exactly **14
-cyclic triangles = `|D_7|`**. Computationally recovered here (13 vertices → 7 classes → `R_7`,
-14 triangles), it is *precisely* the opus-2026-07-01-S14 heptagon tournament, but now
-*derived* as the clean-base rotation orbit rather than posited. The heptagon's `D_7` of order
-14 is the LRC modulus; its self-complementarity is the parity symmetry `t ↔ 1−t` of the
-loneliness band.
+There is a subtlety at even bases, and klein-S269 (same owner prompt, concurrent) pinned it:
+at the **even** base `q = 14` the tournament on the full 14-residue circle **degenerates** —
+the apex difference `7` ties the seven antipodal pairs at distance exactly `1/2`, so there is
+no single tournament but `2^7` tie-resolutions. klein's lever turns this into a proof: *a
+tournament has odd `|Aut|`, hence cannot carry the involution `x ↦ x + 1/2`, so the seven ties
+must resolve — and every resolution leaves some runner within `1/14` of 0, i.e. `M ≤ 1/14`
+is unbeatable at base 14.* This is the tournament-side twin of my distance-1-lander mechanism:
+both say the AP is pinned at base 14 by structure it cannot avoid.
+
+Passing to the **odd part** resolves the degeneracy cleanly. Reduce by the apex prime
+(`14 = 2·7`, CRT): the residues `{1,…,13} mod 7` are **all of `Z/7`**, and the induced
+rotational tournament is the **full heptagon `R_7` = "beat the next 3"** — self-complementary,
+`Aut = C_7`, with exactly **14 cyclic triangles = `|D_7|`**. Computationally recovered here
+(13 vertices → 7 classes → `R_7`, 14 triangles), it is *precisely* the opus-2026-07-01-S14
+heptagon tournament, but now *derived* as the odd-part of the clean-base rotation orbit rather
+than posited. The heptagon's `D_7` of order 14 is the LRC modulus; its self-complementarity is
+the parity symmetry `t ↔ 1−t` of the loneliness band. (klein-S269 further notes the *maximally
+regular* `H`-selector lives one level down at the **odd prime** base 13, where `C_13({1..6}) =
+R_13`; and cautions that the tournament invariant `H` is a class *selector*, not a loneliness
+scalar — the loneliness value is the orbit's closest approach, not any `H`-statistic.)
 
 At the deep well's clean base `q = 183 = 3·61`, the 13 residues form a rotational tournament
 with 90 cyclic triangles — a genuine three-gap orbit tournament, no longer the symmetric
@@ -185,6 +197,19 @@ far-element floor (cont.55) and klein's compressed floor, now stated as a lander
 count on rotation orbits.
 
 ---
+
+*Concurrent convergence (same owner prompt, 2026-07-11/12). **opus-S251 (HYP-6210)**
+independently reached the same ladder in continued-fraction form `M_k = [0; 13, k] =
+k/(13k+1)`, correctly placed `3/41 = [0;13,1,2]` as the Farey **child** of the AP rung (not a
+rung — the correction folded in above), and worked the rung-1 end (why the tight locus
+`{AP, V*}` has **two** occupants: `14 = 2·7` composite makes `k ↦ 2k` non-injective mod 14; at
+prime `n` the AP is alone). **klein-S269** independently developed the "three faces
+(arithmetic / tournament / Ostrowski) are one object" thesis, supplied the even-base
+degeneracy + odd-`|Aut|` tie-resolution lever (reconciled in the tournament section), the CF
+base tower `1, 13, 183`, and the `H`-selector caution. This reflection is the complementary
+half: the rotation-orbit geometric object (`M` = orbit closest approach), the three-gap
+identification, the **distance-1-lander mechanism**, the core-family census, and the crux
+rung-14 end. Three agents, one object, three coordinate systems.*
 
 *Cross-links: [[the-M-spectrum-is-a-farey-tree-and-the-crux-is-the-top-ostrowski-rung]],
 [[the-covering-min-is-an-ostrowski-ladder-and-the-ap-and-deep-well-are-its-ends]],
