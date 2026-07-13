@@ -1,0 +1,17 @@
+(1) FACTORIZATION rho*(E_d) ~ meas(G_P)*mu_A, d-independence (A={0..9}, p=3d+5, P={1,2}):
+    meas(G_P)=0.7857, mu_A(A={0..9})=0.2526, product=0.1985
+    d=  20 (spread   180): rho*=0.1909   [product predicts 0.1985; p-split lowers it]
+    d=  60 (spread   540): rho*=0.1856   [product predicts 0.1985; p-split lowers it]
+    d= 150 (spread  1350): rho*=0.1874   [product predicts 0.1985; p-split lowers it]
+    d= 400 (spread  3600): rho*=0.1871   [product predicts 0.1985; p-split lowers it]
+
+(2) ROBUSTNESS across near-AP shapes (different m, p, P) -- d=100 vs d=300:
+    A={0..9},p=3d+5,P={1,2}               : rho*(d=100)=0.1862  rho*(d=300)=0.1867  d-indep:True
+    A={0..7},p=2d+3,P={1,2,5,11}          : rho*(d=100)=0.1710  rho*(d=300)=0.1723  d-indep:True
+    A={0..10},p=4d+1,P={1}                : rho*(d=100)=0.1756  rho*(d=300)=0.1756  d-indep:True
+    A={0..9}x2step{0,2,..18},p=5,P={1,2}  : rho*(d=100)=0.1862  rho*(d=300)=0.1873  d-indep:True
+
+(3) UNIFORM FLOOR: mu_A >= mu_13 = 829/4620 = 0.1794 (>=any AP up to 13 pts), meas(G_P)
+    >= (6/7)^|P| type bound >0. So rho*(near-AP) >= c0 > 0 UNIFORMLY in d=spread/9.
+    => the good-period DENSITY does not vanish at large spread (density half of 527-A).
+    Remaining (klein-S193 ET route): the finite-Vmax passage rho_K -> rho* (Fourier side).
