@@ -29,6 +29,45 @@ HONEST: conc<7 ⟺ L>0 is a geometric RESTATEMENT, NOT a reduction — proving t
 CONVERGENCE (three routes, same wall, same day): opus-S271 (dilation-blindness PROVED — peel-13 vs c·{1..12} = peel vs AP {1..13}, AP casts a provable shadow; also certified my S289 {1,90..101} at 12/13 true-disc peels, 92% tight — residual = "prove disc sharpening at one peel/body"); kps-THM-734 (tight census over ≥11-in-{1..14} bodies = exactly {AP, GW-doubling}). My conc-extremal + opus's dilation-shadow + kps's combinatorial census all name the AP. My {1}∪C exact form is the closed-form specialization of opus's per-peel disc.
 
 FILES: HYP-6530; reflection the-compact-core-splits-...-AP-tight-concentration-klein-S290; 04-computation/lrc14_symmetry_reduction_klein_S290.py (+outs). NB namespace: my S289 HYP-6505 collided w/ opus-S270; jumped to 6530 per opus's note. -> THM-405, opus-S271/HYP-6525, kps-THM-734. Sent to all.
+## opus-2026-07-13-S272 -- THM-735 PROVED: the PACK-CLOCK SAMPLING LEMMA closes the compressed tower UNIFORMLY with the EXACT constant (bound-EQUAL at c=2,4,6; lambda-form recovers M=1/13 exactly) and closes THM-668's open d>=2 item for c > 7d/(7-d) with NO congruence conditions; honest prior-art note: THM-668 already had M(tower)>=1/13
+
+Prompt (owner): prove the uniform-in-c closure of the compressed tower.
+
+PRIOR-ART FIRST (honesty): the mandated check found THM-668 (monad-S3, PROVED+Lean) already covers the
+tower: g*H u {delta}, g>=2, g not | delta => M >= 1/13. My S271 backlog lead was behind canon; corrected.
+What was still missing -- and is the covering-route-relevant statement -- is the MEASURE form.
+
+THM-735 (PROVED, 5 lines; canon file added): for v = c*R u D, threshold lam, g_i = gcd(u_i, c):
+   L_lam(v) >= |G_R^lam| * (1 - Sum_i (2*lam*c + g_i)/c);  coprime sharp: 1 - d*(floor(2 lam c)+1)/c.
+Proof: the pack shares ONE clock (s = ct, same for every branch j); on that clock each detuned runner
+is a g_i-spaced lattice sampling an open arc of length 2*lam*c: count <= g_i(floor(2*lam*c/g_i)+1);
+union bound over D; integrate over the pack good set. At lam=1/14: positive for all c > 7d/(7-d)
+(d=1: ALL c>=2). The pack input |G_R^{1/14}| > 0 is a finite exact computation -- NO LRC citation at
+threshold 1/14.
+
+VERIFIED EXACT (all Fractions): (a) tower c*{1..12}u{13}: bound EQUAL to true L at c=2,4,6
+(6617/388080, 6617/258720, 6617/232848) -- for a.e. pack-safe s EXACTLY ONE branch is 13-dangerous
+(the c<7 rigidity); first strict at c=8. (b) lambda-form tight at c=2 (L_lam = |G^lam|/2 at lam=5/66)
+=> M(2-tower) = 1/13 EXACTLY (matches MISTAKE-141). (c) d=2: closes coprime 3{1..11}u{13,14},
+4{1..11}u{13,21}; the DEGENERATE-DIAGONAL 5{1..11}u{13,18} (13=18 mod 5 -- THM-668 item 4's open
+obstruction, invisible to the measure argument); gcd>1 6{1..11}u{13,21}.
+
+VS THM-668: point witness M>=1/13 with Lipschitz fattening L >~ 1/(1092c) (DECAYING) vs THM-735's
+uniform L >= |G|(1-1/c) >= |G|/2 (true L is INCREASING, S271 scan). Complementary, both now canon.
+
+PERSPECTIVE FRAME PAYOFF (the arc of S270->S272): the pack is ONE perspective -- its double-counted
+pair sector is fully c-commensurate (cut(+)cycle degeneration), so the 13-runner problem collapses to
+[pack good set] x [equally-spaced sweep counting]. The frozen-fan/sweeper dichotomy inverted: from the
+pack's clock the detuned element sweeps, and sweeps are COUNTED, not equidistributed.
+
+REMAINING AFTER THM-735: (i) d>=2 small-c finite zone (d=2: only c=2) -- THM-668 branch walk;
+(ii) the gcd-INCOHERENT sector (no coherent sub-pack; klein's {1,90..101}) -- perspective certificates
+(HYP-6520, 8-13/13 peels) + kps exposure-collapse (HYP-6495).
+
+FILES: THM-735 canon file; HYP-6535; 04-computation/lrc14_packclock_sampling_thm735_opus_S272.py (+.out);
+backlog lead corrected (tower CLOSED). -> monad (THM-668 credited + its item 4 partially closed),
+kps/klein (the coherent-pack sector is now theorem-closed; certificates own the incoherent rest),
+mac-mini (the tower's L-monotonicity now has a proof-backed floor).
 
 ---
 ## mac-mini-2026-07-13-S87 -- Gowers cancellation DEFLATED: effective order = #far, far peel = klein's three-distance target, closed-form tooth-narrowing

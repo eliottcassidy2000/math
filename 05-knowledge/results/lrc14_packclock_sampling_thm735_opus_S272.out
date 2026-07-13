@@ -1,0 +1,28 @@
+====================================================================================================
+THM-735 (pack-clock sampling) -- exact verification.  All quantities Fractions.
+====================================================================================================
+
+pack good sets:  |G_{1..12}| = 6617/194040 = 0.034101 ;  |G_{1..11}| = 10931/194040 = 0.056334
+
+A. THE COMPRESSED TOWER  c*{1..12} u {13}  (d=1, coprime):
+     c              bound (exact)        bound             true L (exact)       true L       OK
+     2                6617/388080     0.017051                6617/388080     0.017051   EQUAL!
+     4                6617/258720     0.025576                6617/258720     0.025576   EQUAL!
+     6                6617/232848     0.028418                6617/232848     0.028418   EQUAL!
+     8                6617/258720     0.025576                6617/221760     0.029839       OK
+
+B. LAMBDA-FORM (tower c=2, lambda = 5/66 < 1/13 = 0.0769):
+   |G^lam_{1..12}| = 6617/914760 = 0.007234 ; bound = 6617/1829520 = 0.003617 ; true L_lam = 6617/1829520 = 0.003617 ; OK=True
+   (positivity for every lam < 1/13 gives M(tower) >= 1/13 = THM-668's constant, measure-style)
+
+C. d=2 COPRIME (open in THM-668 for small g):
+   3*{1..11} u [13, 14]  covering=True  bound=10931/582120=0.018778  true L=0.027764  OK=True
+   4*{1..11} u [13, 21]  covering=True  bound=10931/388080=0.028167  true L=0.038464  OK=True
+
+D. d=2 DEGENERATE-DIAGONAL (13=18=3 mod 5 -- THM-668's open obstruction):
+   5*{1..11} u {13,18}:  bound=10931/323400=0.033800  true L=0.043213  OK=True  (diagonal case CLOSED)
+
+E. gcd>1 detuned (6*{1..11} u {13,21}, gcd(21,6)=3):
+   bound=10931/582120=0.018778  true L=0.042523  OK=True
+
+done.

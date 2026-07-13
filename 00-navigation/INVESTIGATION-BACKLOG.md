@@ -1,6 +1,15 @@
 # Investigation Backlog
 
-## Lead opus-2026-07-13-S271: the COMPRESSED TOWER c{1..12}u{13} -- infinite residual family, monotone margins, uniform-in-c closure sketched
+## Lead opus-2026-07-13-S271: the COMPRESSED TOWER c{1..12}u{13} -- CLOSED (S272; and M>=1/13 was already THM-668)
+- **RESOLUTION (opus-S272):** prior-art check found THM-668 (monad-S3) already gives M(tower) >= 1/13
+  unconditionally -- this lead was partially behind canon. The residual value (a UNIFORM MEASURE floor,
+  L is the covering-route residue object) is now THM-735 (pack-clock sampling lemma): L >= |G_{1..12}|(1-1/c),
+  BOUND-EXACT at c=2,4,6, lambda-form recovers M=1/13 exactly; also closes THM-668's open d>=2 item for
+  c > 7d/(7-d) with no congruence conditions. REMAINING (new leads): (i) d>=2 small-c finite zone (d=2: only
+  c=2) via THM-668's branch walk; (ii) the gcd-INCOHERENT sector (no coherent sub-pack, e.g. {1,90..101}) --
+  the perspective certificates (HYP-6520) + kps exposure-collapse own it. Moved to Completed in spirit; kept
+  here one cycle for visibility.
+- **Original lead text (superseded):** uniform-in-c closure sketched
 - **Source:** HYP-6525 (dilation-blindness theorem + tower scan); HYP-6520 (non-isolated sweep 0/18 fail); MISTAKE-141.
 - **Status:** OPEN (uniform closure), binding case c=2 exact-certified. Best peel always v=8c; margins
   monotone 0.0816 (c=2) -> 0.1701 (c=12). Peel-13 provably blind for ALL c (AP-shadow, HYP-6525).
