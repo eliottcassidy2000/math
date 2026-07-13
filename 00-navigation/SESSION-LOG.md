@@ -1,3 +1,16 @@
+## mac-mini-2026-07-13-S84 -- pursued the direct metric resummation: the moment-expansion 'middle-order wall' (S79) is TRIVIAL BINOMIAL (an artifact); the direct object is L=p_0. This CLEARS the moment-expansion red herring and SUPPORTS klein-S286's x-integral (the live metric direction)
+
+Prompt (owner): pursue the direct metric resummation of the middle-order cancellation.
+
+FINDING: L=Sum_k(-1)^k E_k, E_k=Sum_x C(x,k) p_x, so L=Sum_x p_x (1-1)^x = p_0. Every danger level x>=1 contributes EXACTLY 0 (binomial); VERIFIED per-x contribution 0.0000 for x>=1. The '+-20 middle orders' (E_6=20.7 etc.) are C(13,6)*p_13=18.9 -- the all-dangerous TAIL cancelling binomially. So the S79 'middle-order resummation wall' is an ARTIFACT of the MOMENT expansion, NOT genuine analytic structure. The direct metric object is just L=p_0 (safe measure). HYP-6490.
+
+COORDINATION with klein-S286 (pushed same time): klein stratifies the ONE shared RELATION LATTICE by resonance order t=|a|_1 (short 2,3 = Schur/THM-730-minor; MIDDLE 6,7 = covering blocker; LONG = density), and identifies THM-729's POSITIVE-DEFINITE x-INTEGRAL as the shared METRIC form, recommending: build the x-integral of the middle-order sum, do NOT Fourier-expand 1_{G'} (S266 divergence). My S84 SUPPORTS this exactly: it shows the MOMENT/Fourier expansion (E_k, |T|) is a red herring (trivial binomial), so the right tool is the x-integral (metric), not the expansion. NB: klein's 'middle order' is the RESONANCE order |a|_1 (Fourier-side), DIFFERENT from my deflated MOMENT order |T| -- I clear the moment underbrush, klein's x-integral is the live path.
+
+HONEST STATE: the direct metric object is L=p_0 = the resonance sum corrsum (HYP-6430); the live metric direction is klein/opus/kps's x-integral of the resonance-middle-order sum (THM-729/527/663) = the density route, which closes the loose case and reduces the residue to the near-AP finite-Vmax glue. My structural-idea sweep (S80-S83) showed no structural surrogate; my S84 shows no moment-expansion shortcut -- both point to the x-integral (metric) as the only live tool, exactly where the fleet is. So NOT a terminus: the metric x-integral direction is live (klein-S286); I have cleared two families of red herrings around it.
+
+FILES: HYP-6490; 04-computation/lrc14_metric_resummation_macmini_S84.py(+.out). -> hand to klein/opus/kps: the moment expansion is trivial (use the x-integral); the structural facets are all severed (metric-only); the live path is the positive-definite x-integral of the resonance-middle-order sum on the near-AP residue.
+
+---
 ## mac-mini-2026-07-13-S83 -- tested my own 'joint rigidity across facets' idea: REFUTED. The facet-deficits and L anti-correlate at the near-AP residue; the residue has NO structural surrogate (single or joint). The structural-idea search is closed with an honest negative.
 
 Prompt (owner): pursue the joint rigidity across facets idea.
