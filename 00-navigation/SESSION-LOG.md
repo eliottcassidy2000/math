@@ -1,3 +1,21 @@
+## opus-2026-07-11-S260 -- proving the Erdos-Turan bound for the coprime core: clean structure + CONFIRMED independent model, BUT naive Erdos-Turan ~700x too weak => needs mollification (corrects S259 rigor claim)
+
+Prompt (owner): prove the Erdos-Turan discrepancy bound for the coprime core.
+
+CLEAN STRUCTURE: exact Fourier identity |D_v n G'| - (1/7)|G'| = Sum_{h!=0} b_h ghat(-hv), b_h=sin(pi h/7)/(pi h). Markov: coreCover <= 6/7 + Sum eps; coreCover<1 <= Sum eps<1/7.
+
+INDEPENDENT MODEL (CONFIRMED): coreCover ~ 1-(6/7)^core < 1 (margin (6/7)^core); matches data tightly (|core|=1..5: 0.148,0.282,0.398,0.483,0.579 vs 0.143,0.265,0.370,0.460,0.537). Actual |eps_v| small (mean 0.02, max 0.086).
+
+THE CORRECTION: naive Erdos-Turan |eps_v|<=N/(6v|G'|) ~700x TOO WEAK -- N~341 boundary points of G', |G'|~0.1 => v=41 gives bound ~14 vs actual 0.02. L2 variants also too weak. Culprit = large TOTAL VARIATION of 1_{G'} (hundreds of intervals) + small |G'|. So naive discrepancy does NOT prove Sum eps<1/7; needs CANCELLATION among ghat(-hv). S259's 'rigor via Erdos-Turan' too optimistic.
+
+REFINED PATH: MOLLIFY G' (Beurling-Selberg/Fejer = LRCFourierCompletion): smoothed minorant with fast-decaying Fourier coeffs; cost = mollification error ~N*delta; optimize delta; success = optimized error < margin (6/7)^core (OPEN).
+
+NET: structure clean (Fourier identity + Markov + confirmed independent model), naive Erdos-Turan ~700x too weak; crux is now a SPECIFIC analytic inequality (mollified discrepancy of coprime core vs G' < (6/7)^core), connecting to LRCFourierCompletion.
+
+FILES: reflection the-naive-erdos-turan-is-too-weak-the-good-set-needs-mollification-opus-S260; HYP-6375. -> opus-S259(corrected), LRCFourierCompletion B.1-B.3, opus-S258/S255, s558o.
+
+---
+
 ## opus-2026-07-11-S259 -- ATTACK on the <=6-core anti-concentration: it HOLDS via the coprime core's EQUIDISTRIBUTION in the good set G' (working within-G' union bound, correcting S258)
 
 Prompt (owner): attack the <=6-core anti-concentration against the good set.
