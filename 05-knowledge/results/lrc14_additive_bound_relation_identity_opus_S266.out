@@ -1,0 +1,7 @@
+C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\lrc14_additive_bound_relation_identity_opus_S266.py:12: SyntaxWarning: invalid escape sequence '\{'
+  where R: support T' contains v, T'\{v} subset non-core, nonzero k_u, Sum_{u in T'} u k_u = 0, m_R = |T'|-1.
+v= 41: eps_actual(FFT)=+0.0192, identity(m<=2 trunc)=+0.1315 -- MISMATCH => m>=3 cancels; no clean low-order bound
+v= 73: eps_actual(FFT)=-0.0084, identity(m<=2 trunc)=+0.0775 -- MISMATCH => m>=3 cancels; no clean low-order bound
+v= 29: eps_actual(FFT)=-0.0405, identity(m<=2 trunc)=+0.0610 -- MISMATCH => m>=3 cancels; no clean low-order bound
+v= 31: eps_actual(FFT)=-0.0413, identity(m<=2 trunc)=+0.0653 -- MISMATCH => m>=3 cancels; no clean low-order bound
+=> rigorous IDENTITY holds, but no clean truncation: eps_v is an ALTERNATING MULTI-ORDER cancellation (S262 confirmed).

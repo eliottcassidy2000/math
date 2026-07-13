@@ -1,3 +1,17 @@
+## opus-2026-07-11-S266 -- proving the additive bound: a clean rigorous IDENTITY, but NO clean bound; eps_v is an ALTERNATING MULTI-ORDER cancellation (confirms S262). Elementary tools exhausted; case skeleton stands verified
+
+Prompt (owner): prove the additive bound |eps_v|<=f(#relations) rigorously, work the two anti-concentration bounds.
+
+RIGOROUS IDENTITY: eps_v|G'| = Sum_{relations R} (-1)^{m_R}(6/7)^{r-m_R} prod_u b_{k_u}, R = support T' containing v (rest subset non-core), nonzero k_u, Sum u k_u=0, m_R=|T'|-1. Clean, exact -- eps_v as a signed sum over additive relations (k_v=0 terms cancel vs -1/7, v participates).
+
+NEGATIVE (verified): low-order (m<=2) truncation = 0.13 for v=41 vs actual eps_v=0.019 => m>=3 cancels ~0.11 (alternating (-1)^m). Magnitude bound overshoots (Sum|b_k| diverges). So |eps_v|<=f(#relations) is NOT a theorem -- eps_v is an ALTERNATING MULTI-ORDER cancellation (S262 confirmed rigorously). S263 corr 0.527 = leading term only. Measure bound |S_rest|>threshold similarly anti-concentration.
+
+NET: rigorization gives a clean IDENTITY but no bound; the S265 case skeleton stands VERIFIED (margin-safe) but its two supporting bounds are the irreducible higher-order anti-concentration; elementary tools (S253-S266) EXHAUSTED. Converged: LRC(14)/covering = verified case skeleton + extremizer proved (S255), reducing to two verified-not-proven higher-order bounds; closing them needs an inverse theorem for the band-multilinear cancellation (#42-#43), not another low-order tool.
+
+FILES: reflection the-additive-bound-has-no-clean-truncation-...-opus-S266; lrc14_additive_bound_relation_identity_opus_S266.py(+.out); HYP-6445. -> opus-S265/S262/S263/S255, #42-#43.
+
+---
+
 ## mac-mini-2026-07-13-S79 -- worked the residue: DIAGNOSED corrsum>-1 as a MIDDLE-ORDER-dominated resummation (+-20 cancelling to -1 at the AP); THM-730's order-3 is a minor term; the residue is irreducibly LRC(14). Constructive arc closed at its honest boundary.
 
 Prompt (owner): work the one bounded inequality that is the residue.
