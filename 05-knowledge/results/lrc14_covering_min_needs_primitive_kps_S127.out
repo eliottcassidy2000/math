@@ -1,0 +1,12 @@
+PRIMITIVE covering-min = 14/183 = 0.076503; global LRC floor 1/14 = 0.071429
+
+family                         | gcd | DC? | prim-reduction | prim DC? |       M | base q | bucket
+2*{1..13} = {2,4,..,26}        |   2 | True | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] |   False | 0.07143 |    28(even) | IMPRIM DC -> reduces to prim non-DC
+2*GW {2,..,22,26,48}           |   2 | True | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24] |   False | 0.07143 |    28(even) | IMPRIM DC -> reduces to prim non-DC
+2*{1..12,91}={2..24,182}       |   2 | True | [1, 2, 3, 4]..+[91] |   False | 0.07609 |   184(even) | IMPRIM DC -> reduces to prim non-DC
+deep well {1..12,182}          |   1 | True | [1, 2, 3, 4]..+[182] |    True | 0.07650 |   183(odd) | PRIM-DC (crux, odd base)
+AP {1..13} (primitive)         |   1 | False | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] |   False | 0.07143 |    14(even) | PRIM non-DC (THM-366)
+
+READING: imprimitive DC (gcd>1) dilates to a NON-DC primitive => even base => down to 1/14. Only
+PRIMITIVE DC lives at the odd doorway (base Phi6=183) with M>=14/183. The crux is primitive-only, and
+primitivity is exactly what bars the low-M large-binding-speed cores (opus-S253's isolated large-s trade).

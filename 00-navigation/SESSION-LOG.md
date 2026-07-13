@@ -13,6 +13,44 @@ WHAT CLOSES IT: M>=14/183 in the balance = M_core >= (182+s)/2379 (=1/13+(s-1)/2
 NET: escape CLOSED for single-killer-182 (empirical + rigorous s=1, deep well unique min); reduces to the sharp joint rigidity M_core>=(182+s)/2379 (verified, unproved, tight at deep well). Remaining: killers !=182 (EASIER, 182 worst case) + multi-killer families. S253's interval-core proof now extends rigorously to the whole tight s=1 stratum; covering-min lower bound reduced to [prove M_core>=(182+s)/2379] + [multi-killer].
 
 FILES: reflection the-large-s-escape-is-closed-by-a-joint-M-core-s-rigidity-opus-S254; lrc14_large_s_escape_closure_opus_S254.py(+.out); HYP-6275. -> opus-S253/S252, klein S267, LRC(<=13).
+## kind-pasteur-2026-07-11-S127 cont.57 -- the covering-min is PRIMITIVE-only, and primitivity bars opus's large-s trade
+
+Prompt (owner): keep pushing the odd-doorway packing argument toward a proof.
+
+Pressure-testing opus-S253's slow-fast balance M=M_core*v_f/(v_f+s) against dilation invariance surfaced a
+concrete DC family below 14/183 -- which is not a refutation but the exact witness for two things.
+
+WITNESSES (M(cv)=M(v) THM-531, but DC is NOT dilation-invariant): 2*{1..13}={2,4,..,26} is genuinely DC with
+M=1/14; 2*GW={2,..,22,26,48} DC M=1/14; 2*{1..12,91}={2,..,24,182} DC M=7/92. All < 14/183; all reach an even
+base (28,28,184). So the crux is "PRIMITIVE DC => M>=14/183" -- drop 'primitive' and imprimitive DC slides all
+the way to the global floor 1/14. Not a refutation: an imprimitive DC family dilates to a NON-DC primitive (the
+dilation manufactured the divisors) => THM-366 bucket, M>=1/14, LRC holds. Logical order matters: for the
+covering-min you may NOT say "DC, WLOG primitive" (dilating breaks DC); you must say "PRIMITIVE DC". The fleet's
+standing "primitive q-covering" qualifier is load-bearing, and these are the witnesses that prove it.
+
+PARITY LINK (sharpens cont.56): every witness clears at an EVEN base (=its non-DC primitive's even doorway);
+only PRIMITIVE DC sits at the ODD doorway Phi6=183. So the odd doorway IS exactly the primitive-DC bucket;
+imprimitivity is an even-base escape hatch down to 1/14.
+
+THE PUSH -- primitivity dissolves opus-S253's isolated 'large-s trade'. The balance with M_core=1/13, v_f=182
+needs 182/(13(182+s)) >= 14/183, i.e. s <= 1; an s=2 extremal core gives 7/92 < 14/183 (the witness). Can a
+PRIMITIVE covering family have an M_core=1/13 core with binding speed s>=2? NO: such a core is ~c*{1..12} (the
+LRC13 extremal), s=c, t_core=1/(13c); a resonant killer needs 13c|v_f AND must cover the missing d=13 => v_f a
+multiple of lcm(13,26)=26 => EVEN => shares the factor 2 with the core => the family is IMPRIMITIVE => barred.
+So primitivity FORCES s=1 for the extremal-core single-killer family; opus's proved s=1 case is the ONLY one
+primitivity permits at the binding M_core=1/13, and the large-s trade never materializes. Mechanism: the core's
+gcd is coupled to the killer's parity through the lcm resonance.
+
+NET: the odd-doorway packing argument gains (scope) the correct theorem statement "primitive DC => M>=14/183"
+with 1/14 witnesses proving primitivity necessary, and (content) closure of opus's one isolated obstacle for the
+binding single-killer case (s=1 forced). REMAINING = exactly opus-S253's frontier: multi-killer primitive
+families and non-extremal cores (M_core>1/13, slack).
+
+Artifacts: reflection the-covering-min-is-primitive-only-and-primitivity-bars-the-large-s-trade-kps-S127;
+HYP-6222; lrc14_covering_min_needs_primitive_kps_S127.py/out.
+
+Next: multi-killer primitive covering families (simultaneous resonant clearing) are the honest open frontier for
+the packing lower bound.
 
 ---
 
