@@ -1,0 +1,28 @@
+SHIFTED TIGHT VARIANTS (mod-14 residue-preserving shifts of the AP) + B=2 sweep
+============================================================================
+
+[A] shifted-lift census (sampled supports x adv+random signs, cap 1/13)
+  AP[1->15]: min R >= 1/12 (~0.08333), sub-1/13 count 0
+  AP[2->16]: min R >= 1/12 (~0.08333), sub-1/13 count 0
+  AP[3->17]: min R >= 1/11 (~0.09091), sub-1/13 count 0
+  AP[4->18]: min R >= 1/13 (~0.07692), sub-1/13 count 0
+  AP[5->19]: min R >= 1/12 (~0.08333), sub-1/13 count 0
+  AP[6->20]: min R >= 1/12 (~0.08333), sub-1/13 count 0
+  AP[7->21]: min R >= 1/12 (~0.08333), sub-1/13 count 0
+  AP[8->22]: min R >= 1/12 (~0.08333), sub-1/13 count 0
+  AP[9->23]: min R >= 1/10 (~0.10000), sub-1/13 count 0
+  AP[10->24]: min R >= 1/10 (~0.10000), sub-1/13 count 0
+  AP[11->25]: min R >= 1/12 (~0.08333), sub-1/13 count 0
+  AP[12->26]: min R >= 1/12 (~0.08333), sub-1/13 count 0
+  AP[13->27]: min R >= 1/12 (~0.08333), sub-1/13 count 0
+  AP[13->41]: min R >= 1/12 (~0.08333), sub-1/13 count 0
+  shifted-variant record: 1/13 (~0.07692) at AP[4->18]
+
+[B] B=2 on AP blocker supports (pure={3,4,5},{9..13},{12,13},{13},{7,10,11,12,13})
+  pure=(3, 4, 5): min R >= 1/12 (~0.08333)  b=(1, 1, 0, 0, 0, -1, 1, 2, 1, 1, 2, 1, -1)
+  pure=(9, 10, 11, 12, 13): min R >= 2/21 (~0.09524)  b=(1, -1, -1, -1, -1, 2, 2, -1, 0, 0, 0, 0, 0)
+  pure=(12, 13): min R >= 1/10 (~0.10000)  b=(-1, -2, 1, 2, -2, 2, 2, 1, -1, 1, -1, 0, 0)
+  pure=(13,): min R >= 1/6 (~0.16667)  b=(-2, -2, 1, 2, -1, 1, 1, 2, -2, -1, -1, 1, 0)
+  pure=(7, 10, 11, 12, 13): min R >= 1/12 (~0.08333)  b=(-1, -2, -1, -2, -1, 2, 0, -2, 1, 0, 0, 0, 0)
+  B=2 record: 1/12 (~0.08333) pure=(3, 4, 5)
+  wall = 0.07143; B=2 needs > 1/14 + 2/(2L): L > threshold accordingly

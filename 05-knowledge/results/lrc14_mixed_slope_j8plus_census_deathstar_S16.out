@@ -1,0 +1,51 @@
+[BLOCK A start]
+============================================================================
+EXP A — j=13 (no pure): the small-q collapse makes B<=3 trivially loose
+============================================================================
+  AP lift, B=1: min over 40 random patterns R >= 1/4 (~0.25000)  [cap 1/12]
+  AP lift, B=2: min over 40 random patterns R >= 1/6 (~0.16667)  [cap 1/12]
+  AP lift, B=3: min over 40 random patterns R >= 1/8 (~0.12500)  [cap 1/12]
+  GW lift, B=1: min over 40 random patterns R >= 1/4 (~0.25000)  [cap 1/12]
+  GW lift, B=2: min over 40 random patterns R >= 1/6 (~0.16667)  [cap 1/12]
+  GW lift, B=3: min over 40 random patterns R >= 1/8 (~0.12500)  [cap 1/12]
+[BLOCK A end — sync point]
+============================================================================
+EXP B — AP lift, B=1: SUPPORT census (all pure sets size 1..5),
+        random + adversarial slot-filling signs, cap 1/12
+============================================================================
+  |pure|=1 (j=12): min R >= 1/10 (~0.10000)  b=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1)
+  |pure|=2 (j=11): min R >= 1/11 (~0.09091)  b=(1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1)
+  |pure|=3 (j=10): min R >= 1/12 (~0.08333)  b=(1, 1, 0, 0, 0, 1, -1, -1, 1, 1, 1, 1, 1)
+  |pure|=4 (j=9): min R >= 1/12 (~0.08333)  b=(0, 1, 0, 0, 0, 1, 1, -1, 1, 1, 1, 1, 1)
+  |pure|=5 (j=8): min R >= 1/12 (~0.08333)  b=(0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1)
+  tested 34941 patterns; sub-cap (<1/12): 0
+[BLOCK B end — sync point]
+============================================================================
+EXP C — AP: deep-dive the sub-cap corners (full refine, no cap)
+============================================================================
+  (no sub-cap patterns from EXP B; deep-diving the theory corner)
+  pure=(9, 10, 11, 12, 13) (j=8): EXHAUSTIVE(128) min R >= 3/11 (~0.27273) at s=32/33  b=(-1, -1, -1, -1, -1, -1, -1, 1, 0, 0, 0, 0, 0)
+    margin over wall: 31/154 (~0.20130)
+[BLOCK C end — sync point]
+============================================================================
+EXP B — GW lift, B=1: SUPPORT census (all pure sets size 1..5),
+        random + adversarial slot-filling signs, cap 1/12
+============================================================================
+  |pure|=1 (j=12): min R >= 1/10 (~0.10000)  b=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+  |pure|=2 (j=11): min R >= 1/11 (~0.09091)  b=(1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0)
+  |pure|=3 (j=10): min R >= 1/12 (~0.08333)  b=(1, 1, 0, 0, 0, 1, -1, -1, 1, 1, 1, 1, 1)
+  |pure|=4 (j=9): min R >= 1/12 (~0.08333)  b=(0, 1, 0, 0, 0, 1, 1, -1, 1, 1, 1, 1, 1)
+  |pure|=5 (j=8): min R >= 1/12 (~0.08333)  b=(0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1)
+  tested 35161 patterns; sub-cap (<1/12): 0
+============================================================================
+EXP C — GW: deep-dive the sub-cap corners (full refine, no cap)
+============================================================================
+  (no sub-cap patterns from EXP B; deep-diving the theory corner)
+[BLOCK D end — sync point]
+============================================================================
+EXP E — end-to-end transported witness at L = 360360
+============================================================================
+  worst profile b=(-1, -1, -1, -1, -1, -1, -1, 1, 0, 0, 0, 0, 0)  (R>= 3/11 ~0.27273)
+  V = 360360*k + b: gcd=1 DC=True
+  witness t=(185639+32/33)/360360: EXACT margin = 3243239/11891880 (~0.272727)  beats 1/14? True
+[ALL BLOCKS done]
