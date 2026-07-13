@@ -1,3 +1,18 @@
+## kind-pasteur-2026-07-13-S128 (cont.2) -- THM-734 PROVED: the body-by-body sweeps are DONE -- all 364 bodies E in {1..14}; EVERY 13-speed family with >=11 speeds in {1..14} satisfies LRC(14) (245,994 exact-Q box pairs, 58.5s); tight census on the whole region = exactly {AP, GW-doubling} (Goddyn-Wong computationally complete here); zero covering L=0
+
+Prompt (owner): run the body-by-body sweeps for the remaining separate-13/14 bodies.
+
+EXECUTED my S128 backlog lead item (i), generalized past the enumerated list: instead of just kps cont.58's extremal bodies, swept ALL C(14,11)=364 eleven-element bodies E in {1..14}. THM-734: for every such E and every pair a<b of positive integers not in E, {E,a,b} satisfies LRC(14) -- i.e. the ENTIRE near-AP two-slot region (where every known extremal/tight family lives) cannot produce a counterexample.
+
+METHOD (THM-733 body-parametric, all exact): per body, (r_E, m_E) exact (m_E>0 verified computationally, min 313/9702~0.0323 at {1,2,3,4,5,7,8,9,11,12,13}); A0(E) via the proved-monotone f (max A0=455 at {1,2,3,4,8,9,10,11,12,13,14}); per-a exact thresholds v0(a); box swept by incremental exact subtraction (worst box 6055 pairs). Total 245,994 exact rational sweeps, 58.5s.
+
+RESULTS: (1) ZERO covering L=0 pairs -- THM-734 established. (2) TIGHT CENSUS: exactly TWO L=0 families in the whole region -- {1..13} (AP) and {1..11,13,24} (Goddyn-Wong doubling), both missing q=14 (THM-366 t=1/14). The GW tight list is computationally COMPLETE on this domain -- no third tight family exists with >=11 speeds in {1..14}. (3) cont.58's k=10 covering-min extremal {1..10,13,22,84} certified: L=2227/105105 exactly (in body {1..10,13}, A0=153). (4) exposure stays tiny across ALL bodies: r in [4,24].
+
+HONEST SCOPE + THE FAILED LEG (documented): the crude P1/P2 COMPOSITION for three-scale bodies ({1..10,c,a,b}, c,a,b all large) FAILS in the clustered regime c~a (worked the asymptotics: r_{c,a} ~ 3.14 a m0 vs 3sqrt2 m_{c,a} (a+1) ~ 2.42 a m0) -- consistent with klein-S289's isolation classifier (crude cert fires iff far element isolated; their counterexample {1,90..101} has <=1 speed in {1..14}, OUTSIDE my region -- no conflict). So the multi-scale stratum needs the sharp disc rate (disc~r/v^2, klein-S280 verified) or opus-S270's per-peel exact-disc certificates. [B] residue after this session: k<=8 multi-killer (>=3 outliers >14, loose per cont.58, M>=2/23) + multi-scale/non-isolated stratum + Lean.
+
+FILES: THM-734 (PROVED); 04-computation/lrc14_thm734_body_sweep_kps_S128c2.py(+.out); backlog lead item (i) marked done + multi-scale notes; finish-map S128-cont.2 block. -> klein (your S289 isolation wall and my region partition are complementary and now exactly delimited: bounded+2-slot = closed, non-isolated = yours), opus (S270's exact-disc per-peel device is the named tool for the multi-scale leg), kps-Lean (THM-733/734 boxes are decide-style; 245,994 rational sweeps).
+
+---
 ## mac-mini-2026-07-13-S86 -- attempted to build the THM-729 autocorrelation bound on meas(G' cap middle): it CANNOT be built (verified the object is multi-linear/Gowers, not 1-D). Confirms the density/covering tractability asymmetry FOR the near-AP residue
 
 Prompt (owner): build the THM-729 autocorrelation bound on meas(G' cap middle).

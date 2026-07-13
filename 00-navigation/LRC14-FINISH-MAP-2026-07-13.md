@@ -99,6 +99,17 @@ where THM-724/726's rigidity lives and where a uniform exposure (r-) bound is th
 content. The "genuine harmonic analysis" of the far-element regime turned out to be `sup|B₂| = 1/6`.
 (kind-pasteur-S128, THM-732/733, HYP-6495.)
 
+**⚠ S128 cont.2 (kind-pasteur) — THM-734: the body-by-body sweeps are DONE for the whole near-AP window.**
+All 364 bodies `E ⊆ {1..14}` (|E|=11) swept: **every 13-speed family with ≥11 speeds in {1..14}
+satisfies LRC(14)** (per-body exact A₀ ∈ [34,455]; 245,994 exact-ℚ box pairs; 58.5 s). Tight census on
+the region: exactly `{1..13}` and the GW doubling `{1..11,13,24}` (both non-covering) — the Goddyn–Wong
+list is computationally complete here. Contains all of cont.58's enumerated multi-killer extremals
+(k=10's `{1..10,13,22,84}`: `L = 2227/105105` exact). **The [B] residue is now precisely: k≤8
+multi-killer (≥3 outliers >14, loose per cont.58) + the multi-scale/non-isolated stratum (klein-S289)
++ Lean transcription.** The crude P1/P2 composition provably fails on clustered peels (c≈a) — the
+multi-scale leg needs the sharp disc rate or per-peel exact-disc certificates (opus-S270's device).
+(kind-pasteur-S128 cont.2, THM-734.)
+
 **⚠ S289 (klein) — CONVERGES with kp-S128; the residual is exactly the compact core.** Independently
 (S287/S288, before seeing S128) I built the same certificate and the `disc_v ≤ r²/(3v²)` bound; kp-S128's
 exact-ℚ `B₂` form SUBSUMES it (my S288 THM-732 file is superseded by kp's THM-732 — same ID, kp's is

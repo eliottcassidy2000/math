@@ -18,15 +18,19 @@
   ({1..11,a,b} closed for all 11<a<b: A0=267 + 1810-pair exact box, 1.8s), HYP-6495.
 - **Status:** NEW. The method is body-uniform: any 11-element body E with exact good-set data (r,m)
   gets A0(E) (one exact inequality, monotone) + a finite exact box. Body {1..11} done (this session).
-- **Next steps:** (i) enumerate the remaining separate-13/14 bodies (kps cont.58/59 skeleton) and run
-  the same script per body — each is seconds; (ii) three-scale bodies: compose peel lemmas P1/P2
-  (proved) — write the induction cleanly; (iii) the QUESTION the ray data raises: v0(base) < lcm-step
-  held in all four tested rays (82.9<182, 77.5<84, 6.6<14, 15.6<... one check) — is "covering forces
-  the far element past its own certificate threshold" systematic? If yes at body level, the per-body
-  boxes shrink to nothing and the class argument simplifies drastically; (iv) uniform EXPOSURE bound:
-  why do covering-min-adjacent bases have tiny r (12, 4, 2, 2)? r-control on the bounded-Vmax core is
-  the remaining analytic content of route [B]; (v) Lean: THM-732(i) is a 3-line Fourier argument over
-  finite rational data — a natural kernel-pure target; the box checks are decide-style.
+- **Next steps:** (i) ~~enumerate the remaining separate-13/14 bodies and run the same script per
+  body~~ **DONE (S128 cont.2, owner-directed): THM-734 — ALL 364 bodies E ⊆ {1..14} swept (245,994
+  exact box pairs, 58.5 s); every 13-speed family with ≥11 speeds in {1..14} satisfies LRC(14); tight
+  census = exactly {AP, GW-doubling}, zero covering L=0.** What it does NOT cover: bodies with ≥3
+  outliers >14 (k≤8 multi-killer — loose per cont.58, M ≥ 2/23) and unbounded-outlier bodies
+  (multi-scale). (ii) three-scale bodies: compose peel lemmas P1/P2 (proved) — write the induction
+  cleanly; NOTE the crude composition FAILS in the clustered c≈a regime (consistent with klein-S289's
+  isolation classifier: crude cert fires ⟺ far element isolated) — the multi-scale leg needs either
+  the sharp disc rate (disc ~ r/v², klein-S280's verified rate) or opus-S270's exact-disc certificates
+  per peel; (iii) the v0(base) < lcm-step question — now MASSIVELY corroborated: all 364 bodies have
+  A₀ ≤ 455 and every box closed clean; (iv) uniform EXPOSURE bound: r ∈ [4,24] over all 364 bodies —
+  tiny; r-control on the multi-scale stratum is the remaining analytic content of route [B]; (v) Lean:
+  THM-732(i) 3-line Fourier + THM-733/734 box checks are decide-style (245,994 rational sweeps).
 - **Relates:** THM-731 (klein-S287), THM-709/GW Thm 12 (the box rediscovered the doubling-singleton
   tight family exactly), THM-724/726 (rigidity on the compact core), klein-S253 literature merge.
 
