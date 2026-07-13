@@ -13592,7 +13592,7 @@ lrc_mu17_apmin_all_k _deathstar_S1 (+outs).
 **Depends/relates:** opus-S251/HYP-6210 (the [0;13,k] ladder, rung-1 two-occupants), opus-S250 (base=modulus), mac-mini S38 (covering-min ladder), cont.44 (three-gap regularity), cont.54-55 (Farey/far-element floor), opus-S14 (heptagon D7 tournament), THM-366 (non-DC=>1/14), klein (compressed floor 1/13).
 
 
-## HYP-6250 (mac-mini-2026-07-12-S66) — the MAX-GAP RESIDUE LAW: maxgap{frac(e_i x)}=G_E(a,b)/b turns THM-527-A good-period existence into arithmetic residue-band dodging with an explicit per-config V0
+## HYP-6255 (mac-mini-2026-07-12-S66) [renumbered from 6250: klein-S270 held 6250 by first-push] — the MAX-GAP RESIDUE LAW: maxgap{frac(e_i x)}=G_E(a,b)/b turns THM-527-A good-period existence into arithmetic residue-band dodging with an explicit per-config V0
 **Status:** LEMMA CONFIRMED (exact, 3000/3000) + REFRAMING of the open finite-Vmax glue. Builds on the S77 safe-band frame (definitions.md), credits kps-S96/S97 (E_grid/kissing existence) + opus-S169 (arc-count) + klein-S206 (covering supplies the arc), does NOT close the uniform floor.
 **The law (elementary, exact).** For co-offsets E and x=a/b in lowest terms,
   maxgap{frac(e_i x) : i} = G_E(a,b)/b,

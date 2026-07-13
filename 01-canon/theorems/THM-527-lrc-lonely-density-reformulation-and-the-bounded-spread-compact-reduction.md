@@ -250,4 +250,4 @@ half (open):* the half-width route is **vacuous on the near-dilated-AP extremal*
 Vmax ⟹ V₀ ~ Vmax`), exactly the arc-count vacuity klein-S193 identified — the Erdős–Turán
 resonance sum (the law's Fourier dual) remains the correct route. The residue law does not by
 itself close item 3; it packages the physical side and pins the exact per-scale count.
-See **HYP-6250**.
+See **HYP-6255**.
