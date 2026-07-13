@@ -51,6 +51,22 @@ So the dormant Delsarte thread is now PURSUED and its verdict recorded: a genuin
 FILES: HYP-6450; 04-computation/lrc14_delsarte_LP_macmini_S80.py(+.out). -> the two other dormant threads (Stern-Brocot inductive tower, tournament chi=2 orbit-rigidity) remain unpursued; both are non-averaging. But every constructive/certificate/moment approach lands on inf L>0 = the covering-min. The honest frontier is a genuinely new structural idea, not a certificate.
 
 ---
+## klein-2026-07-13-S283 -- offdiag≤0 (⟹ Q_s≤diag=O(r)) is REFUTED; the density Q_s=O(r) is a genuine convex-minus-lattice cancellation, the analytic BOTTOM; all elementary/structural routes S281–S283 exhausted (mirrors opus-S266 on covering)
+
+Prompt (owner): prove the Weyl cancellation for arc midpoints (from S282/HYP-6440).
+
+REFRAMING: Q_s=diag+offdiag, diag=Σ_i 4π²{w·w_i}(1−{w·w_i})≤4π²wμ=O(r) is a CLOSED-FORM rigorous O(r); so offdiag≤0 ⟹ Q_s≤diag=O(r) closes the density row. MECHANISM (real): each pairwise offdiag_ij is the mixed 2nd difference of P(θ)=2π²B₂({θ}); B₂ is CONVEX (B₂''=2>0) ⟹ the smooth part ≈−P''·w_iw_j·w²<0 (arcs ANTI-CORRELATE by convexity); the positive part = integer-straddles (Dirac comb in P''=4π²−4π²Ш = lattice-line overlaps).
+
+REFUTED: offdiag≤0 holds 7/8 tested cases but FAILS for {0,10,27,55,99,150,199} s=3: Q_s=433>diag=351, offdiag=+82 — the lattice-straddles OVERWHELM the convex part. So Q_s≤diag is NOT a theorem. (Silver lining thin: even there Q_s=7.7r is O(r), |offdiag|≤diag; but that restates Q_s=O(r), circular.)
+
+EXHAUSTION (S281–S283): crude Fourier O(r²) [rigorous, insufficient]; large sieve O(r³) [worse, clustering]; Montgomery–Vaughan/width-weighted O(w²)=O(r²) [no decay]; offdiag≤0 [REFUTED]; B₂-convexity [overwhelmed by lattice]. ALL soft/mean-value/structural tools cap at O(r²) or are refuted. The O(r^{2−ε}) saving (all the row needs) requires a genuine oscillatory (convex-minus-lattice / Weyl) equidistribution cancellation — a REAL analytic estimate, not another one-session reduction.
+
+HONEST BOTTOM: the density route is FULLY REDUCED and mostly rigorous (transfer THM-710, endpoint Fourier reduction THM-727, 1-D DFT of the derivative THM-728, autocorrelation-discrepancy identity THM-729, crude Q_s≤4π²r²/3, any-ε-suffices downgrade, closed-form diag=O(r)); sharp Q_s=O(r) confirmed empirically (S280). The single remaining piece is ONE genuine equidistribution cancellation — the honest analytic bottom, softer than and cleanly separated from covering's sharp multi-linear inequality (mac-mini-S78; opus-S266 independently reached 'elementary tools exhausted' on covering — BOTH routes now at their genuine bottoms). NEXT: sustained analytic effort/external equidistribution input on the one estimate, OR consolidate the LRC(14) finish-map. Continuing to peel elementary reformulations has reached its end.
+
+FILES: reflection offdiag-nonpositive-is-refuted-density-Qs-is-a-convex-minus-lattice-balance-the-analytic-bottom-klein-S283; HYP-6445; lrc14_offdiag_sign_klein_S283.py (+out). -> THM-729/728/727, HYP-6440/6425, mac-mini-S78, opus-S266.
+
+---
+
 ## opus-2026-07-11-S266 -- proving the additive bound: a clean rigorous IDENTITY, but NO clean bound; eps_v is an ALTERNATING MULTI-ORDER cancellation (confirms S262). Elementary tools exhausted; case skeleton stands verified
 
 Prompt (owner): prove the additive bound |eps_v|<=f(#relations) rigorously, work the two anti-concentration bounds.
