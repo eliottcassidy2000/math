@@ -1,0 +1,20 @@
+1/14=0.07143. TIGHTEST |core|=1 covering families (max coreCover):
+
+coreCover | meas(G') | dist-to-AP | family
+   0.9195 | 0.06659 |          1 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+   0.8875 | 0.05673 |          2 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 20, 84]
+   0.8750 | 0.06997 |          1 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 168]
+   0.8750 | 0.06997 |          1 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 168]
+   0.7800 | 0.06658 |          2 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 26, 84]
+   0.7193 | 0.08511 |          1 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+   0.7090 | 0.07283 |          2 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 22, 84]
+   0.6876 | 0.08905 |          1 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 364]
+   0.6876 | 0.08905 |          1 | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 364]
+
+MAX coreCover among |core|=1 covering = 0.9195 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+  (dist-to-AP 1, meas(G') 0.0666)
+
+ATTACK SUMMARY: coreCover<1 for all (safe pt in middle exists). The max is bounded away
+from 1 by the covering constraint (>=1 mult of 14 forces a far element => G' not fully in
+D_1). But NO uniform-margin proof: coreCover->1 as the family ->AP (blanket), and covering
+only bars the EXACT AP (mult-of-14), not near-AP => the margin is the covering-min gap itself.
