@@ -1,0 +1,22 @@
+M({1..12}) alone would be 1/13=0.07692; add far element f:
+    f  M({1..12,f})  prim?  cov?  vs 14/183=0.07650
+     13          1/14=0.07143   True False
+     14          1/13=0.07692   True False
+     26          2/27=0.07407   True False
+     27          1/13=0.07692   True False
+     40          1/13=0.07692   True False
+     84          1/13=0.07692   True False
+     90          1/13=0.07692   True False
+    120          1/13=0.07692   True False
+    156        12/157=0.07643   True False
+    168          1/13=0.07692   True False
+    169        13/170=0.07647   True False
+    182        14/183=0.07650   True  True  <-- 14/183 (DEEP WELL)
+    183          1/13=0.07692   True False
+    196          1/13=0.07692   True False
+    364        28/365=0.07671   True  True
+    546        42/547=0.07678   True  True
+
+dense scan f=13..400 for the MINIMUM M({1..12,f}) (primitive+covering only):
+  MIN M = 14/183=0.076503 at f=182  (14/183=0.076503)
+  => far-element floor = 14/183 at f=182 (deep well) CONFIRMED

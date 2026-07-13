@@ -43,3 +43,21 @@ family sits below the deep-well rung," a statement about the Farey/Ostrowski tre
 -> S38 Ostrowski-ladder reflection, klein-S266 (M-spectrum), THM-527 (three-gap rigidity), cont.44
 (three-gap coverage), cont.43 (far element raises J -- the mirror sign), THM-612/HYP-2621 (tight
 locus {AP,GW}). File: lrc14_Mspectrum_farey_macmini_S65cont54 (+ out).
+
+
+## Confirmation (cont.55 + klein-S267, independent convergence): the far-element floor IS the Ostrowski forcing
+The crux value 14/183 is forced by the covering constraint, verified two independent ways this session:
+- **mac-mini cont.55 (far-element floor):** over primitive COVERING {1..12, f}, the only covering f are
+  f = 182m (covering needs 13|f AND 14|f since {1..12} lacks both, so 182=13*14 | f), and
+  M({1..12, 182m}) = 14m/(182m+1) -- the Ostrowski ladder in m, INCREASING, minimized at m=1: 14/183.
+  Dense scan f=13..400: MIN over primitive+covering = 14/183 at f=182 (deep well), nothing lower.
+- **klein-S267 (same, parametrized by 13k):** {1..12, 13k} realizes rung k/(13k+1); covering <=> 14|k;
+  smallest k=14 => covering-min 14/183 = n/Phi6(n), Phi6(14) = 183 = 13*14+1. Resolved three conflicting
+  floor claims (kps 1/12 Vmax<=22, boxeph 1/13 Vmax<=30, deep well 14/183 needs Vmax=182) as NESTED box
+  artifacts (MISTAKE-141 thrice); reconfirmed 14/183 the global covering-min (15k families + CRT-escape,
+  nothing below).
+So the AP (rung k=1, 1/14, tight, non-covering) and the deep well (first covering rung k=14, 14/183) are
+the two ends of the Ostrowski ladder, and the covering constraint (need a 14-multiple) FORCES the family
+off the tight rung up to the first covering rung -- 14/183 = n/Phi6(n) is forced, not coincidental. The
+crux is: no primitive covering family beats the first covering Ostrowski rung. File:
+lrc14_farelement_floor_macmini_S65cont55 (+ out).
