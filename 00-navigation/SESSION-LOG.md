@@ -1,3 +1,33 @@
+## kind-pasteur-2026-07-11-S127 cont.55 -- the lcm-outlier mechanism: why the deep-well outlier is (N-1)N
+
+Prompt (owner): keep working the remaining Ostrowski LRC mathematics.
+
+cont.54 left one thing unexplained: the covering-min family {1..N-2,(N-1)N} (klein's {1..12,182} at N=14) has
+ONE large outlier -- why (N-1)N exactly? This session gives the structural reason.
+
+THE lcm-OUTLIER MECHANISM. The base {1..N-2} covers d=2,..,N-2; the two divisors it MISSES are d=N-1 and d=N.
+A single speed carrying BOTH must be a multiple of lcm(N-1,N)=(N-1)N (they are coprime), and the smallest is
+(N-1)N itself. Verified exhaustively: the smallest w making {1..N-2,w} covering is EXACTLY (N-1)N for every
+N=3..14. So klein's 182=13*14=lcm(13,14) is the minimal single speed that repairs both divisors the AP misses.
+Since the ladder M_k=k/((N-1)k+1) is increasing in k, the smallest covering outlier gives the smallest ladder
+M -- the first covering rung N/Phi6(N). Two halves of the same rung: Phi6(N)=(N-1)N+1 is the DENOMINATOR,
+(N-1)N=lcm(N-1,N) is the OUTLIER.
+
+Honest caveat (unchanged from cont.54): this is the minimal-outlier family for the FULL base {1..N-2}. A
+compressed base (dropping AP elements to free the outlier) beats it at small N ({2,3} at N=3, {1,3,4} at N=4);
+only at N=14 does klein's ILP (<=182) certify no compressed structure dips below 14/183. So the lcm mechanism
+explains the SHAPE of the single-outlier covering-min at every N; that it is the GLOBAL covering-min is the
+N=14 fact klein certified.
+
+Artifacts: lcm-outlier section added to reflection the-ostrowski-ladder-formula-generalizes-but-the-covering-
+min-does-not-kps-S127; HYP-6215 cont.55 addendum; lrc14_ostrowski_lcm_outlier_kps_S127.py/out.
+
+Next: the Ostrowski covering-min structure is now fully explained at the single-outlier level (rung=first
+covering rung, denominator Phi6(N), outlier lcm(N-1,N)); the open uniform DC=>M>=14/183 (no compressed family
+below, all speeds) is unchanged, resting on klein's finite ILP.
+
+---
+
 ## mac-mini-2026-07-09-S65 (cont.56) -- the runners at a clean base ARE a rotation orbit: Ostrowski rung = three-gap orbit = rotational tournament; crux mechanism = OMIT THE DISTANCE-1 LANDER (base-change/tournament/Ostrowski synthesis)
 
 Prompt (owner): [re base-change reframing] yes [write it up], and see if there are any tournament connections, and its relation to ostrowski, keep working the critical math for a session.

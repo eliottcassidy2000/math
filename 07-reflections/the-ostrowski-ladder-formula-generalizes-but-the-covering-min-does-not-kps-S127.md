@@ -59,6 +59,25 @@ well before N=14, so at N=14 the deep well `{1..12, 182}` really is the covering
 consistent with klein's `speeds ≤ 182` ILP infeasibility certificate. So this cross-check *supports* the crux
 value while correcting the impression that it comes from a closed-form law.
 
+## Why the outlier is (N−1)N: the lcm mechanism (cont.55)
+
+The first covering rung `k=N` has outlier `(N−1)N`, and there is a clean structural reason it is *that* number.
+The base `{1,…,N−2}` already covers `d = 2,…,N−2`; the two divisors it **misses** are `d = N−1` and `d = N`. A
+single speed carrying **both** must be a multiple of `lcm(N−1, N) = (N−1)N` (they are coprime), and the
+smallest such is `(N−1)N` itself. Verified exhaustively: the smallest `w` making `{1,…,N−2, w}` covering is
+**exactly `(N−1)N`** for every `N = 3..14`.
+
+> So klein's `182 = 13·14 = lcm(13,14)` is not a coincidence of the search — it is the **minimal single speed
+> that repairs both divisors the base AP is missing**. `{1..12, 182}` is the minimal-outlier single-outlier
+> covering family, and because the ladder's `M_k = k/((N−1)k+1)` is increasing in `k`, the *smallest* covering
+> outlier gives the *smallest* M on the ladder — the first covering rung, `N/Φ₆(N)`.
+
+This is the structural companion to the arithmetic: `Φ₆(N) = (N−1)N + 1` is the first-covering-rung denominator,
+and `(N−1)N` is the first-covering-rung *outlier* = `lcm(N−1,N)`. The honest caveat is unchanged — this is the
+minimal-outlier family *for the full base `{1..N−2}`*; a compressed base (dropping AP elements to free up the
+outlier) can beat it at small N (`{2,3}`, `{1,3,4}`), and only at `N=14` does klein's ILP certify that no such
+compressed structure dips below it.
+
 ## What this sharpens
 
 The Ostrowski/change-of-base picture is exactly right about the **shape** of the extremals — they are ladder
