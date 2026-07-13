@@ -1,0 +1,13 @@
+family                          | E2    E3    E4   | L=P(safe) | note
+----------------------------------------------------------------------------------
+  AP {1..13} (non-cov)           | 1.86  2.20  4.58 | 0.00000 | non-cov E3def=+0.00
+  {1..11,13,84} (cov,12->84)     | 1.86  2.06  3.83 | 0.00535 | COV E3def=+0.14
+  {1..11,13,168}                 | 1.86  2.06  3.85 | 0.00875 | COV E3def=+0.14
+  deep well {1..12,182}          | 1.86  2.21  4.15 | 0.02389 | COV E3def=-0.01
+  {2..14} (cov)                  | 1.86  2.19  4.31 | 0.06123 | COV E3def=+0.02
+  {1..10,12,13,154}(11->154)     | 1.86  2.22  4.03 | 0.05172 | COV E3def=-0.02
+  lacunary {1,2,4,8,..}          | 1.86  2.42  2.45 | 0.27774 | non-cov E3def=-0.22
+
+KEY CHECKS: (1) E2 ~flat across AP vs covering (Sidon-blind, pair=cyclotomic floor)?
+(2) E3 deficit (AP-cov) POSITIVE for covering AND tracks L>0? => last inch = SL(3) energy
+deficit, Freiman lever (non-AP => E3 deficit => L>0), pairwise methods provably blind.

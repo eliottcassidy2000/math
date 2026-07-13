@@ -1,0 +1,17 @@
+set                    | E1     E2(pair)  E3(triple) | L=P(safe) | cov
+--------------------------------------------------------------------------
+AP {1..13}             | 1.857  2.202    4.578    | 0.00000  | n
+{1..11,13,84}          | 1.857  2.058    3.826    | 0.00536  | Y
+deep well {1..12,182}  | 1.857  2.213    4.152    | 0.02389  | Y
+{2..14}                | 1.857  2.186    4.313    | 0.06123  | Y
+Sidon/lacunary         | 1.857  2.421    2.446    | 0.27735  | n
+random spread          | 1.857  1.661    1.090    | 0.13920  | n
+
+E1 set-independent: YES (=13/7=1.857)
+E2 (pair) argmax: Sidon/lacunary -- NOT the AP => pair level cannot detect AP
+E3 (triple) argmax: AP {1..13} -- the AP => AP-extremality is 3rd-order
+
+PROVABLE CONSEQUENCE: E1(AP)=E1(cov) and E2(AP)<E2(Sidon), so a lower bound on L from
+(E1,E2) alone cannot exceed L(AP)=0 => gives only L(cov)>=0 (trivial). The covering-min
+proof MUST use E3 (triple/SL(3)) -- the three-distance/Freiman inverse, non-local, 3rd-order.
+This EXPLAINS the failure of union bound, 2nd moment, Chebyshev, Paley-Zygmund, deg-2 dual.
