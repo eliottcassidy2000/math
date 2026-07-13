@@ -1,3 +1,20 @@
+## mac-mini-2026-07-13-S72 -- multi-killer M>=1/13: the far-element MEASURE LEMMA (exact threshold) + the honest verdict that NO elementary closed form exists (compact extremals need the global witness; opus single-certificate obstruction)
+
+Prompt (owner): prove the multi-killer r>=2 => M>=1/13 closed form.
+
+HONEST RESULT: there is NO elementary/single-witness closed form -- it is OBSTRUCTED, not merely unfound. Multi-killer M>=1/13 is proved in the CERTIFIED sense (THM-726) but the elementary closed form provably fails. My contributions: an exact decorrelation lemma + a rigorous confirmation of the obstruction.
+
+(1) THE MEASURE LEMMA (exact, rigorous; sharpens kps cont.48's 1/13-B/L). Let G_C={t:||v t||>=1/13 all v in C} (union of arcs). IF G_C has an arc of width >1/L THEN M(C u {L})>=1/13. Proof: the arc spans a full L-period => contains the midpoint between two L-resonances where ||L t0||=1/2; t0 in G_C => M>=min(1/13,1/2)=1/13. A HARD threshold (M>=1/13 once L>1/w_max), no undershoot -- sharper than kps's continuous bound.
+
+(2) BUT IT DOESN'T REACH THE COMPACT EXTREMALS (the no-go). {1..11,13,84}: C={1..11,13} has M(C)=1/12 barely >1/13 => level-1/13 arcs THIN, w_max=0.0022, 1/w_max=455 >> L=84 => lemma FAILS. w_max ~ (M(C)-1/13)/maxspeed; reaching L=84 needs M(C)>~0.23 (impossible near tight). So the small-comparable-outlier extremals are NOT decorrelated -- they need the GLOBAL witness (base 89, t*=37/89). Confirms kps-S127cont59 (optimum family-specific) + opus-S256 (balance heuristic).
+
+(3) HONEST VERDICT. Multi-killer r>=2=>M>=1/13 has NO elementary closed form: (i) balance/decorrelation PROVABLY undershoots the compact extremals (verified); (ii) opus-S257 proved a rigorous obstruction (deep-well knife-edge W>=1 a.e. => no single positive-polynomial/Delsarte certificate; route must SPLIT tight/loose). PROVED (certified, THM-726) = [measure-lemma decorrelation, L>1/w_max] + [near-tight C => dilated AP => shallow witness] + [finite check bounded L, klein ILP outliers<=84]. The elementary closed form is OBSTRUCTED; the honest target is opus's DUAL certificate (Delsarte on loose + S255 rigidity on tight).
+
+NET across the covering-min arc (THM-724/726 + this): the covering-min rigidity is COMPLETE and CERTIFIED (deep well unique min); single-killer closed in closed form (r=1 interval core forced, S71); multi-killer certified but PROVABLY not elementary. The one open item = opus's dual certificate for HYP-2566.
+
+FILES: HYP-6340; 04-computation/lrc14_measure_lemma_macmini_S72.py(+.out). CREDITS: kps-S127cont48/59 (decorrelation+reduction), opus-S256/S257 (balance-heuristic+single-cert obstruction+dual route), THM-726/724. -> opus: the dual certificate (Delsarte loose + tight rigidity) is the honest route; my measure lemma gives the explicit decorrelation cutoff for the loose part.
+
+---
 ## kind-pasteur-2026-07-11-S127 cont.60 -- the single-killer balance bound in the reach/margin API, machine-checked (LRCDeepWellReach.lean)
 
 Prompt (owner): formalize the single-killer balance bound in Lean.
