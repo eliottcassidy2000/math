@@ -17,6 +17,50 @@ HOUSEKEEPING: klein-S270 held HYP-6250 by first-push (collision) -> my residue l
 FILES: HYP-6260; THM-527 part J; 04-computation/lrc14_{nearAP_rhostar_floor,mu_m_exact,nearAP_factorization}_macmini_S67.py(+.out). CREDITS: klein-S192/S193 (ET, large-spread), THM-527/663, HYP-6255 (my residue law), part C (mu_k). OPEN (klein's lane): the finite-Vmax passage D*<rho* on the extremal.
 
 ---
+## kind-pasteur-2026-07-11-S127 cont.56 -- the target box has two doorways of OPPOSITE PARITY
+
+Prompt (owner): get understanding of the shape related to the target and come up with creative geometric/
+topological arguments toward proofs.
+
+THE SHAPE. LRC(14) = the closed geodesic in direction v=(v_1..v_13) on the 13-torus hits the lonely box
+L=[1/14,13/14]^13 (a 13-cube of side 6/7, centered). M(v) = the Linf-inradius of the geodesic relative to the
+coordinate hyperplanes x_i=0. The two-bucket dispatch is really: which rational DOORWAY (base q) does the
+geodesic enter L by? non-DC/tight -> small base q=d (hardest = AP, q=14); DC/covering -> large base (hardest =
+deep well {1..12,182}, q=Phi6(14)=183).
+
+THE DUALITY (new). The two doorways have OPPOSITE PARITY, and that flips the obstruction:
+- Phi6(N)=N^2-N+1 is ALWAYS ODD (N(N-1) even), verified N=3..20. So the covering doorway NEVER admits the
+  order-2 antipodal symmetry x->x+1/2 (0 antipodal pairs at the deep-well residues, N=8,10,12,14).
+- The even doorway N=14 carries exactly N/2=7 antipodal pairs (0,7),..,(6,13) = klein-S269's tied diameter
+  arcs; the odd tight case (N=13) has 0 (rotational R_N instead).
+SHAPES: even doorway (tight, base 14) = the AP wants x->x+1/2 symmetry but the winding tournament has odd |Aut|
+(no order-2 automorphism) => the 7 ties must resolve => every one of 2^7 gives M>=1/14 (klein's Borsuk-Ulam-
+flavored lever; barrier = an unrealizable symmetry). odd doorway (covering, base 183) = one-sided band-packing:
+14*{1..12,-1} fills [14,169], only the AP-endpoints (14,169) related by reflection-across-0 (NOT antipodal);
+floor 14/183 driven by 13mu<=q (13*14=182<=183, tight) -- a PACKING fact, not a symmetry.
+
+TOWARD PROOFS -- THE PAYOFF (redirect). The antipodal/Borsuk-Ulam lever is intrinsically an EVEN-base tool, and
+the AP it obstructs is NON-DC = the bucket THM-366 already closes elementarily. The genuinely OPEN part (DC) has
+its binding case -- the covering-minimum -- at the ODD base Phi6(N), where x->x+1/2 structurally does not exist.
+So the beautiful antipodal lever sits on the ALREADY-CLOSED side of the two-bucket divide and cannot by itself
+reach the open problem. This redirects effort: close the DC bucket with the ODD-base tools that actually live at
+its doorway -- three-gap band-packing, rotational-R_q regularity, the 13mu<=q inequality -- not symmetry. Same
+lesson as opus-S250's archimedean/finite coupling, read through parity.
+
+HONESTY: does NOT prove DC=>M>=14/183 (still klein's finite ILP q<=183); it sharpens the MAP -- explains why two
+different obstructions (antipodal vs packing) are needed, pins each to a parity, and rules the symmetry tool out
+of the open bucket on structural grounds. (Also: an initial script conflated true antipode (dist 1/2, r'-r=q/2,
+needs q even) with reflection-across-0 (r+r'=q); corrected before recording.)
+
+Artifacts: reflection the-target-has-two-doorways-of-opposite-parity-antipodal-vs-packing-kps-S127; HYP-6220;
+lrc14_two_doorways_geometry_kps_S127.py/out.
+
+Next: the DC bucket's odd-base packing obstruction (13mu<=q + three-gap) is the honest open target; the
+antipodal lever is confirmed closed-side. A topological argument for the odd doorway (packing/regularity) is the
+place to push.
+
+---
+
 ## mac-mini-2026-07-12-S66 -- the MAX-GAP RESIDUE LAW: THM-527-A good-period existence is a pure residue-band-dodging count mod 2Vmax (physical dual of klein-S193's Erdos-Turan sum); explicit V0 for bounded-spread, vacuous on large-spread extremal (honest)
 
 Prompt (owner): keep working the critical math for another session.

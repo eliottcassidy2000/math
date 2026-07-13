@@ -1,0 +1,45 @@
+(1) THE COVERING DOORWAY Phi6(N)=N^2-N+1 IS ALWAYS ODD (so no exact antipode / order-2 symmetry):
+     N | N (tight base) parity | Phi6(N) (covering base) | parity
+     3 |                odd  |                       7 | odd
+     4 |                even |                      13 | odd
+     5 |                odd  |                      21 | odd
+     6 |                even |                      31 | odd
+     7 |                odd  |                      43 | odd
+     8 |                even |                      57 | odd
+     9 |                odd  |                      73 | odd
+    10 |                even |                      91 | odd
+    11 |                odd  |                     111 | odd
+    12 |                even |                     133 | odd
+    13 |                odd  |                     157 | odd
+    14 |                even |                     183 | odd
+    15 |                odd  |                     211 | odd
+    16 |                even |                     241 | odd
+    17 |                odd  |                     273 | odd
+    18 |                even |                     307 | odd
+    19 |                odd  |                     343 | odd
+    20 |                even |                     381 | odd
+
+(2) THE COVERING EXTREMAL is a BAND-PACKING, NOT antipodal. Deep well {1..N-2,(N-1)N} (with observer 0):
+     N | base q=Phi6 | band [mu,q-mu] | #TRUE-antipodal (dist=1/2) | #reflection-across-0
+     8 |         57 | [8,49] |                          0 | 1  [(8, 49)]
+    10 |         91 | [10,81] |                          0 | 1  [(10, 81)]
+    12 |        133 | [12,121] |                          0 | 1  [(12, 121)]
+    14 |        183 | [14,169] |                          0 | 1  [(14, 169)]
+    => q ODD => ZERO true antipodal pairs. The only symmetry is reflection-across-0 at the band edge
+       (mu,q-mu)=the two AP-endpoints; the interior residues have NO partner => one-sided band-packing.
+
+(3) THE TIGHT EXTREMAL AP {1..N-1} at t=1/N (positions {0..N-1}/N, with observer 0):
+     N | parity | #TRUE-antipodal (dist=1/2) pairs (j, j+N/2) | pairs
+     7 |    odd |   0 | []
+     8 |   even |   4 | [(0, 4), (1, 5), (2, 6), (3, 7)]
+    13 |    odd |   0 | []
+    14 |   even |   7 | [(0, 7), (1, 8), (2, 9), (3, 10), (4, 11), (5, 12), (6, 13)]
+
+(4) THE PARITY DUALITY, one line per bucket at N=14:
+    TIGHT   bucket: base 14 EVEN -> 7 diameter pairs tied at 1/2 -> order-2 antipodal obstruction
+                    (klein-S269: tournament has odd |Aut|, cannot carry x->x+1/2; M>=1/14).
+    COVERING bucket: base 183 ODD  -> no diameter pair -> obstruction is three-gap BAND-PACKING
+                    (residues 14*{1..12,-1} fill [14,169]; AP endpoints 14,169 at the edges).
+
+=> THE TARGET BOX L HAS TWO DOORWAYS OF OPPOSITE PARITY. Even doorway (tight) = antipodal/Borsuk-Ulam
+   flavor; odd doorway (covering) = packing/three-gap flavor. A proof needs BOTH tools, one per bucket.
