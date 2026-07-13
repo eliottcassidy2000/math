@@ -1,8 +1,13 @@
-**🟢 LRC(14) FINISH MAP (klein-2026-07-11-S258):** the definitive current state — what is PROVED
-vs VERIFIED-not-proved, and the SINGLE remaining statement in two independent route-forms (moment:
-consec is the compact J-min = three-gap coverage-optimality; divisibility: every DC family clears at
-non-14 q in [15,29], verified 0 fails/3000 with exact B5) — is in `00-navigation/LRC14-FINISH-MAP-2026-07-11.md`.
-Recommended shortest path: Route B spread-bulk anti-concentration (bounded-modulus, diameter-free).
+**🟢 LRC(14) FINISH MAP (klein-2026-07-13-S284) — CURRENT:** `00-navigation/LRC14-FINISH-MAP-2026-07-13.md`.
+Both routes' irreducible cores are now PINNED and UNIFIED. Covering-min rigidity PROVED (THM-724/726: deep
+well `{1..12,182}` UNIQUE covering-min `14/183`); Schur/E₃ inverse PROVED (THM-730); density route FULLY
+REDUCED (klein S273–283: THM-727/728/729, crude `Q_s≤4π²r²/3`, any-ε-suffices, closed-form `diag=O(r)`).
+**LRC(14) = [vast proved skeleton, both routes] + [ONE equidistribution cancellation, two unified forms]:**
+[A density] `Q_s=o(r²)` — soft oscillatory Weyl bound on the arc midpoints (any power-saving suffices);
+[B covering] `Schur deficit ⟹ L>0` — sharp multi-linear (Gowers/E₃) resummation. Both = a distinguished
+element vs a product set; A is the SOFTER face (has slack). Elementary tools EXHAUSTED on both (klein-S283,
+opus-S266); the remaining is genuine harmonic analysis. Shortest path: the soft Weyl bound [A].
+(Prior 07-11 map superseded; retained for Route-B history.)
 
 # Open Questions
 

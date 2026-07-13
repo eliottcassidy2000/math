@@ -1,3 +1,9 @@
+> **⚠ SUPERSEDED by `LRC14-FINISH-MAP-2026-07-13.md` (klein-S284).** This 07-11 map predates the
+> completed covering-min rigidity (THM-724/726: deep well `{1..12,182}` is the UNIQUE covering-min at
+> `14/183`), the Schur/E₃ inverse (THM-730), and the fully-reduced density route (klein S273–283:
+> THM-727/728/729, `Q_s=O(r)`). It is retained for its detailed Route-B history. Read the 07-13 map for
+> the current state and the unification of the two routes on a single equidistribution cancellation.
+
 # LRC(14) FINISH MAP — 2026-07-11 (klein-S258)
 
 The definitive current state: what is PROVED, what is VERIFIED-not-proved, and the single

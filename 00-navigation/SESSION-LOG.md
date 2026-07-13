@@ -1,3 +1,22 @@
+## klein-2026-07-13-S284 -- CONSOLIDATED the LRC(14) finish-map (canonical, supersedes 07-11): both routes' cores PINNED and UNIFIED — LRC(14) = one equidistribution cancellation in two forms, density is the softer face, elementary tools exhausted on both
+
+Prompt (owner): consolidate the LRC(14) finish-map.
+
+Wrote 00-navigation/LRC14-FINISH-MAP-2026-07-13.md (supersedes the 07-11 map, which predated both the completed covering-min rigidity and the fully-reduced density route). Also updated OPEN-QUESTIONS + banner on the old map.
+
+THE CONSOLIDATED STATE:
+- TOP REDUCTION (PROVED, THM-366/523): non-covering ⟹ M≥1/14; reduces to covering/DC. Realization/certificate supply + SmallClusterFull in Lean.
+- ROUTE B (covering) — STRUCTURE PROVED: covering-min rigidity is a THEOREM — deep well {1..12,182} is the UNIQUE covering-min at 14/183 (THM-724 single-killer + THM-726 multi-killer, kernel-pure Lean); Schur/E₃ inverse PROVED (THM-730, AP maximizes additive triples). Remaining [B] = |core|=1 smooth-body discrepancy = resummation "Schur deficit ⟹ L>0" (multi-linear Gowers/E₃, opus; mac-mini's L=(6/7)^13(1+corrsum)). SHARP (14/183 tight).
+- ROUTE A (density) — FULLY REDUCED: eigen-transfer THM-710; endpoint Fourier reduction THM-727; 1-D DFT of swing-derivative THM-728; autocorrelation-discrepancy identity THM-729; crude Q_s≤4π²r²/3; closed-form diag=O(r); any-power-saving-suffices. Remaining [A] = Q_s=o(r²), the arc-midpoint Weyl cancellation. SOFT (has slack, any ε suffices).
+- THE UNIFICATION (the key): [A] and [B] are the SAME object — a distinguished element (core arc / swing offset) vs a PRODUCT set (good-set / cover-set), bilinear-clean, signal in the ≥2-way/oscillatory part. Both faces refused the same elementary attacks the same week (klein-S281-283 density, opus-S262/266 covering). LRC(14) = ONE equidistribution cancellation; Route A is its SOFTER face ⟹ shortest path = attack the density Weyl bound.
+- LEDGER: PROVED (skeleton both routes, much Lean); VERIFIED-not-proved (sharp Q_s=O(r), covering positivity, deep-well min); OPEN (the one inequality, two unified forms). Proving EITHER finishes LRC(14). Elementary methods exhausted; remaining = genuine harmonic analysis (possibly imported), on one face.
+
+No new mathematics — a clean canonical map of the converged frontier so the next effort starts from the true state.
+
+FILES: 00-navigation/LRC14-FINISH-MAP-2026-07-13.md; reflection lrc14-is-one-equidistribution-cancellation-in-two-unified-forms-the-finish-map-consolidated-klein-S284; OPEN-QUESTIONS + old-map banner updated. -> THM-724/726/727/728/729/730/710, HYP-2566/6415/6445, mac-mini-S78, opus-S266, kps cont.68.
+
+---
+
 ## kind-pasteur-2026-07-11-S127 cont.68 -- the separate-13/14 residual collapses into the mapped multi-killer
 
 Prompt (owner): work the separate-13/14 multi-killer residual (the open case cont.67 identified: 13 and 14 by
