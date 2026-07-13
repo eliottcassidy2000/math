@@ -1,0 +1,7 @@
+FINDING 1: unconditional rigidity FALSE (covering counterexample, easy-case):
+  20*{1..11}u{143}: covering=True, M_core=1/12, s=20, req=0.0849 > M_core; RIGIDITY FAILS
+     but beta=29/120 (EASY), family M=1/12 >= 14/183: True  -- safe via the non-resonant witness
+
+FINDING 3: beta=0 rigidity PROVED at the tight point (deep well) via S252:
+  q=13 (182=14*13 => beta=0): M_core=1/13 => interval {1..12} (S252 prime-13 unique) => s=1 => req=1/13=M_core.
+  deep well [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]: M=14/183=0.07650 = 14/183 (unique minimizer, equality). PROVED.
