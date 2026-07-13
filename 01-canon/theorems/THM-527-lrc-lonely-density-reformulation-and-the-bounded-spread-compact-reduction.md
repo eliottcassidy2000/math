@@ -251,3 +251,28 @@ Vmax ⟹ V₀ ~ Vmax`), exactly the arc-count vacuity klein-S193 identified — 
 resonance sum (the law's Fourier dual) remains the correct route. The residue law does not by
 itself close item 3; it packages the physical side and pins the exact per-scale count.
 See **HYP-6255**.
+
+
+## J. The near-AP `rho*` is d-INDEPENDENT and factorizes: the density half of the large-spread extremal (mac-mini-2026-07-12-S67)
+
+Part H's large-spread crux is the near-dilated-AP family `E_d = d*{0..m-1} u {p}` (`Vmax=9d+14`
+at `m=10`). Its `rho*` half -- that the good-period *density* does not vanish as `spread=9d -> inf`
+-- is now settled on the **physical/Weyl side**, complementing klein-S193's ET-resonance (Fourier)
+argument for the finite-`Vmax` discrepancy.
+
+**The mechanism.** The AP-part phases are `frac(d*i*x) = frac(i*(d x))` = the `m`-point Steinhaus
+orbit at step `s = frac(d x)`. As `x` sweeps `[0,1)`, `s` sweeps `[0,1)` uniformly (`d` times), so
+
+> `meas{x : AP-part maxgap > 2/7} = mu_m := meas{s : maxgap{frac(i s):i<m} > 2/7}`, **exactly,
+> independent of `d`** -- the dilation only reparametrizes the sweep.
+
+`mu_m` is EXACT (union-of-linear-gaps per Farey interval; `mu_3=1, mu_4=19/21, mu_5=9/14,
+mu_10=557/2205, mu_13=829/4620`), **decreasing but `>= mu_13 = 829/4620 = 0.1794 > 0`** for all
+`m <= 13`. By Weyl (fast `dx` vs slow `x, px`), `rho*(E_d) -> meas(G_P)*mu_m` minus a single-`p`
+gap-split (`~6%`), giving `rho*(near-AP) >= c0 > 0` **uniformly in `d`**. Verified: `rho* = 0.187`
+flat across `d=20..400` (spread `180..3600`) and across four `(A,p,P)` shapes (`HYP-6260`,
+`lrc14_nearAP_factorization_macmini_S67`).
+
+So the large-spread half splits cleanly: **density** (`rho* >= c0`, d-independent, here, via
+`mu_m`) `+` **finite-`Vmax` passage** (`rho_K -> rho*`, klein-S193 ET resonances). The physical
+count mod `2Vmax` (part I / the residue law) is the object pairing the two sides.
