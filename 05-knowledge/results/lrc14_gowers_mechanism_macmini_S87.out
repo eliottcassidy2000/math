@@ -1,0 +1,35 @@
+MECHANISM: covering-min extremal = AP{1..13} with one element sent far.
+
+deep well (13->182): core=1..12, far=182
+   meas(SafeSet(core) cap middle) = 0.03410   (the core's safe interval)
+   meas(that cap D_far)           = 0.01020   (what the ONE far comb removes)
+   L = base - cut                 = 0.02390   (>0: comb can't close interval)
+   far comb removes 29.9% of the core interval; period 1/far=0.00549 vs interval~0.0341
+
+multi-killer(12->84): core=1..13, far=84
+   meas(SafeSet(core) cap middle) = 0.01216   (the core's safe interval)
+   meas(that cap D_far)           = 0.00680   (what the ONE far comb removes)
+   L = base - cut                 = 0.00536   (>0: comb can't close interval)
+   far comb removes 55.9% of the core interval; period 1/far=0.01190 vs interval~0.0122
+
+Is the deep-well far element (182=13*14) the BEST-ALIGNING? scan far covering values for the
+{1..12} core (must be divisible by 13 AND 14 to carry both missing moduli => multiples of 182):
+   far=182*1=  182: L=0.02390, cut=0.01020 (29.9% of interval)  <-- min so far
+   far=182*2=  364: L=0.02782, cut=0.00628 (18.4% of interval)
+   far=182*3=  546: L=0.02887, cut=0.00523 (15.3% of interval)
+   far=182*4=  728: L=0.02919, cut=0.00491 (14.4% of interval)
+   far=182*5=  910: L=0.02939, cut=0.00471 (13.8% of interval)
+   far=182*6= 1092: L=0.02939, cut=0.00471 (13.8% of interval)
+   far=182*7= 1274: L=0.02939, cut=0.00471 (13.8% of interval)
+   far=182*8= 1456: L=0.02939, cut=0.00471 (13.8% of interval)
+
+=> smallest far (182) aligns best (removes most of the core interval) => DEEPEST well = min L.
+   Larger far => sparser... no: 182 is the SMALLEST covering carrier; it maximally overlaps
+   the core safe interval near t=1/13 (182/13=14 integer => D_182 hits t=1/13 exactly).
+
+GOWERS-LOCAL RESIDUE: L(deep well)>0 <=> the single comb D_182 (period 1/182) cannot cover the
+core's safe INTERVAL SafeSet({1..12}) cap middle (a union of intervals of total measure ~base).
+This is a 1-runner-vs-interval covering question = the tractable core of the Gowers inverse;
+the multi-linearity is fully absorbed into 'SafeSet(core)' (a fixed interval union). The open
+crux is whether ONE arithmetic comb can close a three-distance interval union -- a Diophantine
+(not statistical) question, and the answer is NO iff the balance margin 14/183-1/14>0.

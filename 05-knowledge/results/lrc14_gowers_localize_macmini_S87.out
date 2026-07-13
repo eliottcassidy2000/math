@@ -1,0 +1,39 @@
+near-AP [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]: smooth non-core = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+
+(1) PEEL the smooth runners one at a time: meas(smooth-safe cap middle) as we ADD runners:
+   add   2 -> runners [2]: meas(safe cap middle)=0.78571
+   add   3 -> runners [2, 3]: meas(safe cap middle)=0.69047
+   add   4 -> runners [2, 3, 4]: meas(safe cap middle)=0.61905
+   add   5 -> runners [2, 3, 4, 5]: meas(safe cap middle)=0.50475
+   add   6 -> runners [2, 3, 4, 5, 6]: meas(safe cap middle)=0.45714
+   add   7 -> runners [2, 3, 4, 5, 6, 7]: meas(safe cap middle)=0.33469
+   add   8 -> runners [2, 3, 4, 5, 6, 7, 8]: meas(safe cap middle)=0.26580
+   add   9 -> runners [2, 3, 4, 5, 6, 7, 8, 9]: meas(safe cap middle)=0.18105
+   add  10 -> runners [2, 3, 4, 5, 6, 7, 8, 9, 10]: meas(safe cap middle)=0.13797
+   add  11 -> runners [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]: meas(safe cap middle)=0.05633
+   add  13 -> runners [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]: meas(safe cap middle)=0.01216
+   add  84 -> runners [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]: meas(safe cap middle)=0.00536
+
+(2) which single runner, REMOVED, most opens the middle (the binding blanketer)?
+   remove   2: meas jumps 0.00536 -> 0.03218  (x6.0)
+   remove   3: meas jumps 0.00536 -> 0.04055  (x7.6)
+   remove   4: meas jumps 0.00536 -> 0.02277  (x4.2)
+   remove   5: meas jumps 0.00536 -> 0.04171  (x7.8)
+   remove   6: meas jumps 0.00536 -> 0.03393  (x6.3)
+   remove   7: meas jumps 0.00536 -> 0.08755  (x16.3)
+   remove   8: meas jumps 0.00536 -> 0.04545  (x8.5)
+   remove   9: meas jumps 0.00536 -> 0.05694  (x10.6)
+   remove  10: meas jumps 0.00536 -> 0.02605  (x4.9)
+   remove  11: meas jumps 0.00536 -> 0.06851  (x12.8)
+   remove  13: meas jumps 0.00536 -> 0.04272  (x8.0)
+   remove  84: meas jumps 0.00536 -> 0.01216  (x2.3)
+
+(3) does the FAR element (84) decorrelate? compare {2..11,13} vs {2..11,13,84}:
+   {2..11,13} meas(safe cap middle)=0.01216; + 84 -> 0.00536 (far element reduces by x0.44)
+   => if 84 reduces little, the blanket is the NEAR-CONSECUTIVE {2..11,13} block (11 runners),
+      an LRC(<=13)-adjacent object at level 1/14; the far element is a mild decorrelating peel.
+
+VERDICT: the near-blanket is driven by the near-consecutive smooth block; the Gowers object
+= 'the near-AP smooth block doesn't blanket the middle unless the full AP' = the AP-inverse at
+the middle resonance order (|a|_1~6,7). This is the Green-Tao-Ziegler Gowers-inverse frontier;
+I localize it (near-consecutive block + far peel), the harmonic analysis is the open crux.

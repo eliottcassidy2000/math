@@ -1,0 +1,16 @@
+Claim: M({1..12,182m}) = 14m/(182m+1) = 1/13 - 1/(13*(182m+1)), increasing to 1/13.
+
+ m   182m    closed 14m/(182m+1)   = 1/13 - ...    numeric M         t*
+ 1    182      14/183 (0.076503)         1/2379     0.076503    0.92350  OK
+ 2    364      28/365 (0.076712)         1/4745     0.076712    0.92329  OK
+ 3    546      42/547 (0.076782)         1/7111     0.076782    0.92322  OK
+ 4    728      56/729 (0.076818)         1/9477     0.076818    0.07682  OK
+ 5    910      70/911 (0.076839)        1/11843     0.076839    0.92316  OK
+ 6   1092     84/1093 (0.076853)        1/14209     0.076853    0.07685  OK
+
+1/13 = 0.076923  (the limit; the core {1..12} alone has M_core=1/13 at t=1/13)
+residual 1/(13(182m+1)) = the half-width of the aligned tooth => STRICTLY DECREASING => M strictly UP.
+
+=> far-element monotonicity for the covering-MIN family is CLOSED-FORM (tooth-narrowing),
+   proved without any multi-linear/Gowers input. The Gowers inverse is only invoked for the
+   GENERAL multi-comb (r>=2) region, which is LOOSE (M grows with #far, away from the min).
