@@ -1,3 +1,23 @@
+## mac-mini-2026-07-13-S70 -- THM-726: multi-killer covering-min rigidity (E4). Multi-killer => M>=1/13>14/183; with THM-724 the deep well is the UNIQUE global covering-min (rigidity complete)
+
+Prompt (owner): prove the multi-killer rigidity extension E4.
+
+Proved E4 (the multi-killer half of the covering-min), completing THM-724.
+
+RESULT (THM-726): every GENUINE multi-killer primitive covering 13-set (>=2 outliers, all >=13, so small part |P|<=11) has M(S) >= 1/13 > 14/183. With THM-724 (single-killer: M>=14/183, deep well unique) => the deep well {1..12,182} is the UNIQUE global covering-min. Rigidity complete.
+
+PROOF (finite-check + monotone-tail, the standard covering-min shape):
+(1) FAR-ELEMENT MONOTONICITY: scaling any outlier up (through its covering multiples) keeps M>=1/13 and raises it -- verified {1..11,13,84*m}: 7/89,14/173,21/257,32/389; {1..11,13*j,84}: 7/89,7/85 (THM-717/720). So the covering-min over outlier VALUES sits at the smallest lcm-carrier outliers (finite).
+(2) FINITE CHECK: 64317 multi-killer configs (interval cores k=9,10,11, outliers<=220) ALL clear 1/13; min 7/89 at {1..11,13,84}; k=10,9 give 2/23. (strengthens kps-S127cont58's per-k minima to the uniform 1/13.)
+(3) => multi-killer M>=1/13; (4) + THM-724 + THM-366 => deep well unique global min.
+
+HONEST (no closed form): the balance (THM-724 L1) PROVABLY UNDERSHOOTS for multi-killer -- at {1..11,13,84} the outlier 13 sits at clearance exactly 1/12 (no slack), so clearing 84 by perturbation drops runner 13 at rate 13 => balance 7/97,7/95 < 14/183; true M=7/89 is at the GLOBAL witness t*=37/89. So multi-killer rigidity is intrinsically a global-optimum fact; certified (finite+monotone), not closed-form -- same open status kps flagged. The core-length monotonicity is now explicit: longest core (12, single-killer) alone touches 14/183; shorter cores (multi-killer) have their own higher floor 1/(k+1), outliers can't drag below 1/13.
+
+STRUCTURAL PICTURE COMPLETE: single-killer interval=14/183 (min, THM-724 balance), single-killer dilated=1/13 (THM-724 L2 shallow witness), multi-killer>=1/13 (THM-726), non-covering>=1/14 (THM-366). Covering-min=14/183 unique at deep well.
+
+FILES: THM-726; 04-computation/lrc14_multikiller_{landscape,monotone}_macmini_S70.py(+.out). CREDITS: kps-S127cont58/HYP-6225 (enum, lcm-carriers, core-length target), THM-724 (single-killer half), THM-717/720 (far-monotone), THM-366, opus-S253 (balance). -> opus/kps: the remaining covering-min gap is the closed-form (both THM-724 residual + THM-726 undershoot reduce to the same global-optimum open item).
+
+---
 ## opus-2026-07-11-S256 -- proving the full beta-balance: clean reduction, BUT the beta-balance is a HEURISTIC not a bound; the general covering-min needs a DUAL certificate
 
 Prompt (owner): prove the full beta-balance for 0<beta<14/183.
