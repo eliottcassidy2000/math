@@ -1,3 +1,22 @@
+## mac-mini-2026-07-12-S66 -- the MAX-GAP RESIDUE LAW: THM-527-A good-period existence is a pure residue-band-dodging count mod 2Vmax (physical dual of klein-S193's Erdos-Turan sum); explicit V0 for bounded-spread, vacuous on large-spread extremal (honest)
+
+Prompt (owner): keep working the critical math for another session.
+
+Traced the ACTUAL open crux: covering case (THM-663) is closed MODULO exactly one analytic item, THM-527-A finite-Vmax glue (HYP-2602) = good-period existence at finite integer Vmax. Its two halves: bounded-spread (CLOSED, S58) + large-spread near-AP extremal (OPEN, klein-S193 Erdos-Turan resonances). Contributed a clean exact lemma + honest reframing:
+
+(1) MAX-GAP RESIDUE LAW (exact, 3000/3000): for co-offsets E and x=a/b lowest terms,
+      maxgap{frac(e_i x)} = G_E(a,b)/b,
+   G_E(a,b) = max circular gap between consecutive occupied residues in {a e_i mod b} subset Z/b. Proof: at a/b the phases live on the b-grid R/b; maxgap = max grid-gap. Elementary.
+
+(2) CONSEQUENCE: the pigeonhole grid points x_j=(j+1/2)/Vmax = (2j+1)/(2Vmax) have denominator 2Vmax, so by the law #good = pure RESIDUE-BAND-DODGING COUNT mod 2Vmax (cluster {(2j+1)e mod 2Vmax} leaves gap>4Vmax/7 AND P avoids the Vmax/7 band) = the S77 safe-band frame at scale 2Vmax. This is the PHYSICAL/spatial side; klein-S193's Erdos-Turan resonance sum Sum_{Vmax|a.v}1/r(a) is its FOURIER DUAL. One object: small residue-defect <=> no low-height resonances.
+
+(3) EXPLICIT V0 (bounded-spread, sharpens the closed half): good arc around a/b has half-width >=(G_E/b-2/7)/(2 spread), giving V0=1/(2hw). Representative k>=8 covering configs (|P|=13-k) have fattest JOINT arc at SMALL b (<=14, recurring b=14=n for blocks) => practical V0<=210. HONEST: vacuous on the large-spread near-dilated-AP extremal (spread~Vmax => V0~Vmax) -- exactly the arc-count vacuity klein-S193 found; the ET resonance route (the law's Fourier dual) is the correct one there.
+
+(4) The good rationals a/b are COVERING-FAILURE moduli of E (residues {a e mod b} leave a gap) intersected with P-safety -- unifies the finite-Vmax glue with my HYP-6240 rotation-orbit/lander frame (same residue-band object, at the ruler scale 2Vmax instead of the witness scale q). klein-S206: the tight-AP cluster {0..12} (OUT OF SCOPE, non-covering) is the degenerate no-fat-arc case; the covering constraint is what supplies the joint arc.
+
+FILES: THM-527 part I addendum; HYP-6250; 04-computation/lrc14_{arccount_localization,good_rationals_covering,maxgap_residue_law,joint_residue_existence}_macmini_S66.py(+.out). CREDITS: THM-527/527-A, THM-663, THM-369, S77 frame, kps-S96/S97 (E_grid/kissing), opus-S169 (arc-count), klein-S192/S193 (ET resonances, large-spread), klein-S206 (covering-supplies-arc), HYP-6240. OPEN (handed to kps/opus/klein): the UNIFORM small-b joint-arc / D*<rho* on the large-spread extremal = the sole remaining analytic item of the covering case.
+
+---
 ## opus-2026-07-11-S252 -- working the Chebyshev-equioscillation route: 'tight => {k*alpha}' is ELEMENTARY and EQUALS the clean-ruler residual; the hard {k*alpha} is the covering side
 
 Prompt (owner): work the chebyshev-equioscillation route toward tight => {k*alpha}.
