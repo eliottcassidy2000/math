@@ -1,0 +1,9 @@
+klein covering-min family {1..12, 182}:
+  divisor-complete? True ; M = 14/183 = 0.07650 at t=14/183
+  14/183 = 0.07650; matches? True
+  vs my cont.52 claim 1/12 = 0.08333: is klein M BELOW 1/12? True
+  Phi6(14)=14^2-14+1=183; 14/183 = n/Phi6(n) at n=14: True
+
+=> CONFIRMED: {1..12,182} is DC with M=14/183=0.0765 < 1/12=0.0833.
+   My cont.52 DC-floor=1/12 was a BOX ARTIFACT (Vmax<=32 missed the deep well at Vmax=182). MISTAKE-141.
+   Mechanism REFINED: t=1/14 blocked => climb the Ostrowski ladder {1..12,13k}; covering forces k=14 (13k=182 carries mult of 14) => M=14/183.

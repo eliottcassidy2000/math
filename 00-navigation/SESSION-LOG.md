@@ -3,6 +3,47 @@
 Prompt (owner): another session.
 
 NEXT AGENT: (a) the crux value 14/183 = n/Phi6(n) is FORCED (Ostrowski ladder + covering => 14-multiple, two independent derivations mac-mini/klein); (b) LRC(14) = 'no primitive covering family beats the first covering Ostrowski rung' -- a clean Farey/Ostrowski statement; (c) the remaining PROOF is klein's [compressed DC >= 1/13] + [non-compressed peel to 14/183] + density base (DONE); the empirical certificate (nothing < 14/183) is solid (15k+ families, ILP <=182).
+## kind-pasteur-2026-07-11-S127 cont.53 -- CORRECTION: the DC floor is 14/183, not 1/12 (box artifact); the Ostrowski ladder makes the crux exact
+
+Prompt (owner): keep coming to a better picture of the crux, sharpen via hypothesis investigation.
+
+Honest correction of my own cont.52. klein-S267 (same-day) caught it: my "DC M-floor = 1/12" was a BOX
+ARTIFACT -- my search box (Vmax <= 32) missed the deep well at Vmax = 182. VERIFIED: {1,...,12, 182} is
+divisor-complete with M = 14/183 = 0.0765 < 1/12 = 0.0833 (attained at t = 14/183; 183 = Phi6(14) =
+14^2-14+1). The three fleet "DC floors" -- my 1/12 (two-block, Vmax<=32), boxeph's 1/13 (compressed,
+Vmax<=30), klein's 14/183 (deep well, Vmax=182) -- are nested box floors, the third recurrence of MISTAKE-141.
+
+MY MECHANISM STANDS AND IS SHARPENED. cont.52's "t=1/14 is blocked (DC has a mult of 14) => must use a
+coarser witness" is correct; klein makes the coarser witness EXACT via the Ostrowski ladder. The M-spectrum
+near 1/14 is the ladder {1,...,12, 13k}, M = k/(13k+1): rungs 1/14, 2/27, 3/40, ..., 14/183, ... -> 1/13. The
+AP {1..13} is rung k=1 (tight 1/14, non-covering). Divisor-completeness requires the far element 13k to carry
+a multiple of 14, i.e. 14 | k; the smallest is k = 14, giving the FIRST COVERING RUNG M = 14/(13*14+1) =
+14/183 = n/Phi6(n). So "second-best witness" was right; it is the first covering rung of the tight ladder,
+14/183, not the two-block 1/12.
+
+CORRECTED CRUX PICTURE:
+- LRC(14) = [non-DC: t=1/d works, M >= 1/d >= 1/14, THM-366; includes the tight AP/GW and the 3/41 window] +
+  [DC: M >= 14/183].
+- The DC margin is 14/183 - 1/14 = ~1/197 (TINY), NOT my erroneous 1/84 -- divisor-complete families are loose
+  but only BARELY. The covering-min 14/183 sits just above 1/14 on the Ostrowski ladder.
+- Remaining: DC => M >= 14/183 is HYP-2566 (the uniform covering floor, OPEN); verified for speeds <= 182 by
+  the fleet ILP certificate (HYP-3779).
+
+Corrected my cont.52 reflection (top banner) and HYP-6180 (downgraded to PARTIALLY-TRUE, mechanism-correct
+value-wrong). Resolved a fresh HYP collision: klein-S267 HYP-6180 -> 6190 (kps cont.52 pushed 6180 first).
+
+LESSON (again, loudly): for any extremal/floor claim over a dilation/scale-closed class, the SEARCH BOX
+determines the answer. Name the box; seed with deep-well / large-Vmax / Ostrowski-ladder structures. This is
+MISTAKE-141, and I just walked into it.
+
+Artifacts: lrc14_verify_covering_min_kps_S127.out (verifies {1..12,182} = 14/183 DC); corrections to
+the-crux-is-t-one-fourteenth-blocked... reflection + HYP-6180. Credit: klein-S267 (HYP-6190, the Ostrowski
+ladder + 14/183 = n/Phi6(n)).
+
+Next: DC => M >= 14/183 (HYP-2566) is the single remaining crux value; the mechanism is now exact (first
+covering rung of the tight ladder), the uniform proof is the open piece (verified <= 182).
+
+---
 
 ## mac-mini-2026-07-09-S65 (cont.54, 2026-07-12) -- CRUX SHARPENED: the M-spectrum near 1/14 is a FAREY / STERN-BROCOT tree, and the crux value = the TOP OSTROWSKI RUNG. klein-S266 verified the spectrum 1/14 < 3/41 < 2/27 < 14/183 < 1/13 < 3/37 (correcting boxeph's 'DC>=1/13': the deep well {1..12,182} is primitive DC with M=14/183<1/13, missed by Vmax<=30 census). RECOGNIZED it as: (1) my S38 Ostrowski ladder M_k=k/(13k+1) -- M_1=1/14 (AP), M_2=2/27, M_14=14/183 (deep well = DC-MIN); (2) Farey mediants rooted at AP(1/14) + peeled-12-AP(1/13): 2/27=med(1/14,1/13), 3/41=med(1/14,2/27) -- each spectrum value = a near-AP compression scar. So CRUX VALUE = min M over primitive DC = 14/183 = top Ostrowski rung (> 1/14 by 1/(14*183)). Compressed DC bottoms at 1/13; non-compressed peels to the deep well 14/183. The far element LOWERS M (14/183<1/13) = MIRROR of the density side where far RAISES J (cont.43) -- same decorrelation, opposite sign. This is the three-gap shadow: near-AP M-values ARE Farey mediants (gap lengths = CF convergents). Reflection written. Concurrent: klein S266 (spectrum + corrected reduction: [non-DC>=1/14] + [compressed DC>=1/13] + [non-compressed DC peel>1/14]); opus S248 (corrected empty window).
 

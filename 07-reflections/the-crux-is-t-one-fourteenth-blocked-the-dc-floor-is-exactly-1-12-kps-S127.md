@@ -1,5 +1,19 @@
 # The crux is "t = 1/14 is blocked": divisor-complete families have M ≥ 1/12, exactly
 
+> **⚠ CORRECTED (kps cont.53, same-day, by klein-S267).** The value "**1/12**" in this reflection is a
+> **box artifact** — the two-block near-interval stratum floor, found only because the search box was
+> `Vmax ≤ 32`. The **true covering (divisor-complete) minimum is `14/183 ≈ 0.0765 < 1/12`**, achieved at
+> `{1,…,12, 182}` (needs `Vmax = 182`), verified DC with `M = 14/183` at `t = 14/183`. This is the third
+> recurrence of the box-artifact genus (**MISTAKE-141**: my 1/12, boxeph's 1/13, and the deep-well 14/183
+> are nested box floors). **The mechanism below is correct and, in fact, sharpened by the fix**: the coarser
+> witness climbs klein's **Ostrowski ladder** `{1,…,12, 13k}` (`M = k/(13k+1)`); the AP `{1..13}` is rung
+> `k=1` (tight, non-covering), and the covering constraint "must carry a multiple of 14" forbids the low
+> rungs and forces the family to the **first covering rung `k=14`** — `M = 14/(13·14+1) = 14/183 = n/Φ₆(n)`
+> (`Φ₆(14) = 183`). So "second-best witness" is right; the coarser witness is the first covering rung of the
+> tight ladder, `14/183`, not `1/12`. Read the value below as the two-block stratum floor, not the crux
+> margin. See [[the-covering-min-is-the-first-covering-ostrowski-rung-14-over-183-klein-S267]].
+
+
 *kind-pasteur-2026-07-11-S127 cont.52. Owner: "keep coming to a better picture of the LRC(14) crux, sharpen
 via hypothesis investigation." After opus-S247/klein-S266 reframed the crux (the Farey window is non-empty;
 the operative restriction is covering), I resolved the exact value and the mechanism — and they turn out to be
