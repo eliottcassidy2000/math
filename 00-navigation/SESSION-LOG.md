@@ -15,6 +15,19 @@ CREDITS: mac-mini S38/S65cont54, klein S266/S267, THM-527, THM-612. NEW: explici
 FILES: reflection the-tight-locus-is-the-complete-and-punctured-...-opus-S251; lrc14_ostrowski_tight_locus_ka_support_opus_S251.py(+.out); HYP-6210. -> mac-mini S38, THM-527/612, opus-S248/S249/S250.
 
 ---
+## klein-2026-07-12-S269 -- the change-of-base reframing has THREE FACES (arithmetic, TOURNAMENT, OSTROWSKI) and they are ONE object; the apex prime 7 is the shared seam
+
+Prompt (owner): yes [push the forced-base spectrum], and see if there are any tournament connections, and its relation to Ostrowski.
+
+Extended opus-S250's arithmetic face (base=modulus) with the two faces the owner named. Exact computation (lrc14_base_tournament_ostrowski) + 2 Explore agents.
+
+**(1) TOURNAMENT face.** At the optimum t*=a/q the runners are residues mod q and the project's winding tournament (THM-373, u→v iff frac((s_u−s_v)t)∈(0,1/2)) is a CIRCULANT. At EVEN base 14 it DEGENERATES: the apex difference 7 ties the 7 antipodal pairs (distance exactly 1/2 = the order-2 symmetry x↦x+1/2) — not a single tournament, 2^7 resolutions. LEVER: a tournament has odd |Aut| (can't carry x↦x+1/2), so the 7 ties resolve, EVERY one gives M≥1/14 = "can't beat 1/14". (The H=7-forbidden link is real, 14=2·7, but H=7-avoidance is VACUOUS, HYP-3099; the real content is the odd-|Aut| tie-resolution.) The clean maximally-regular H-maximizer is one level down at the ODD prime base 13: C_13({1..6})=R_13 (H=3711175, essentially unique, NOT literally Paley — half-turn/Dirichlet beats Paley for n≥13). Deep well@183 = non-regular circulant. H is a class SELECTOR, not a loneliness scalar (over all t forgets M; THM-374 H=1⟺empty semicircle = coarse n=2 threshold).
+
+**(2) OSTROWSKI face.** The clean base is the CF convergent denominator of the optimal rotation. Ladder M_k=[0;n−1,k]=k/(k(n−1)+1): AP=rung k=1 (1/14=[0;14]), deep well=rung k=n (14/183=[0;13,14]=[0;n−1,n] — the CF spells n−1,n). Base tower = convergent denominators of 14/183: 1, 13, 183 = the clean bases (13=compressed floor 1/13, 183=Φ6(14)). Digits@183 = {kα} orbit {14k mod 183} + killer 169, whose unit gap = the +1 in Φ6=(n−1)n+1 (HYP-3738). LRC = 2-term Ostrowski (Zeckendorf/Fibonacci at a different CF; ratio 14 not φ).
+
+**(3) ONE OBJECT.** base q = the resolution where the winding tournament is a circulant = the CF convergent denominator. The open crux is ONE statement in three languages: covering ⟹ M≥14/183 ⟺ extremal tournament is a circulant (mac-mini-S57 census) ⟺ residues are a {kα} orbit / g(n)≤3 (three-gap, HYP-2913). Shared seam = the apex prime 7 (zero-divisor blocks base 14 / 7 apex ties / even-n CF routes through 2·7) — why n=13 prime was tractable, n=14 first open.
+
+Deliverables: reflection the-change-of-base-has-three-faces-arithmetic-tournament-ostrowski-klein-S269; HYP-6210; script+out; a 3-face diagram for the owner. Corrected my own draft after the tournament agent (even-base degeneracy, vacuous-H=7, H-is-a-selector). HOUSEKEEPING: HYP-6200 double-claimed (klein-S268 keeps 6200 by first-push; opus-S250 → renumber 6205); S269 = HYP-6210.
 
 ## opus-2026-07-11-S250 -- LRC(14) as a CHANGE-OF-BASE problem (owner reframing), developed + verified
 

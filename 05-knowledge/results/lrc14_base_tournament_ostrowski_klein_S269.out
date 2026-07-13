@@ -1,0 +1,38 @@
+============================================================================
+(A) FORCED-BASE SPECTRUM: clean bases q, value ceil(q/14)/q, first vs best
+============================================================================
+  AP {1..13}                     cov=False M=    1/14 argq=  14 (t=1/14)
+     base-14 blocked (a runner at digit 0)? False;  first clean base=None;  best base(argq)=14
+  deep well {1..12,182}          cov=True  M=  14/183 argq= 183 (t=14/183)
+     base-14 blocked (a runner at digit 0)? True;  first clean base=27;  best base(argq)=183
+  kps 2-block {1,2,3,4,10..18}   cov=True  M=    1/12 argq=  24 (t=5/24)
+     base-14 blocked (a runner at digit 0)? True;  first clean base=24;  best base(argq)=24
+  compressed 2*{1..12}u{13}      cov=True  M=    1/13 argq=  26 (t=1/26)
+     base-14 blocked (a runner at digit 0)? True;  first clean base=26;  best base(argq)=26
+
+============================================================================
+(B) TOURNAMENT + THREE-GAP at the clean base (optimum). Observer=vertex 0.
+============================================================================
+  AP {1..13} at base q=14, t=1/14:
+     digit positions (residues): [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+     distinct GAP lengths: [1]  => 1-gap  (ONE-GAP = regular!)
+     winding tournament: cyclic-triangles c3=154, apex ties=7, outdeg profile=[6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+     observer isolation (nearest runner) = 1/14 = 0.07143 = M  (regular circulant)
+  deep well {1..12,182} at base q=183, t=14/183:
+     digit positions (residues): [0, 14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 169]
+     distinct GAP lengths: [1, 14]  => 2-gap  (Steinhaus <=3-gap)
+     winding tournament: cyclic-triangles c3=112, apex ties=0, outdeg profile=[6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7]
+     observer isolation (nearest runner) = 14/183 = 0.07650 = M  (circulant)
+
+============================================================================
+(C) OSTROWSKI: continued fractions of the optimal times (encode n=14?)
+============================================================================
+  t*=1/14 (AP, tight)       =    1/14 = 0.07143  CF = [0, 14]
+  t*=3/41 (3rd-mediant)     =    3/41 = 0.07317  CF = [0, 13, 1, 2]
+  t*=2/27 (mediant)         =    2/27 = 0.07407  CF = [0, 13, 2]
+  t*=14/183 (deep well)     =  14/183 = 0.07650  CF = [0, 13, 14]
+  t*=1/13 (compressed)      =    1/13 = 0.07692  CF = [0, 13]
+  note: 14/183 = [0;13,14] = [0; n-1, n]  -- the extremal time's CF encodes n.
+  Ostrowski ladder M_k = k/(13k+1): k=1->1/14 (AP), k=14->14/183 (deep well). base = 13k+1.
+
+done.
