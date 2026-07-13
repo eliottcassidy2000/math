@@ -1,0 +1,27 @@
+========================================================================
+PRIME grid Ng=999983.  err*w for clean (prime) AND adversarial (lcm-mult) w, all << Ng.
+cap9=0.49426; tail needs C0<=25*(cap9-0.397)=2.431
+========================================================================
+  compact {0..5,30}                  lcm=      60  sup err*w=0.155 (w=2003)   ws=[1009, 2003]
+  2blk {0,1,2,28,29,30,15}           lcm=   12180  sup err*w=3.030 (w=12180)   ws=[1009, 2003, 12180]
+  dilAP {0,5,..,30}                  lcm=     300  sup err*w=0.066 (w=2003)   ws=[1009, 2003]
+  spread {0,3,7,12,20,33,54}         lcm=   41580  sup err*w=0.082 (w=2003)   ws=[2003]
+  {0..5,120}                         lcm=     120  sup err*w=0.239 (w=2003)   ws=[2003]
+  2blk-wide {0,1,2,118,119,120,60}   lcm=  842520  sup err*w=0.147 (w=2003)   ws=[2003]
+  SUP C0 (prime grid) = 3.030 at ('2blk {0,1,2,28,29,30,15}', 12180)
+
+========================================================================
+min-argument validation: |Error_cover| <= min-bound <= 12/7 = 1.7143
+========================================================================
+  compact {0..5,30}              w=   1009: |Err_cover|=0.00021 min-bound=0.0036 12/7=1.714 OK
+  compact {0..5,30}              w=     60: |Err_cover|=0.00510 min-bound=0.0612 12/7=1.714 OK
+  2blk {0,1,2,28,29,30,15}       w=   1009: |Err_cover|=0.00034 min-bound=0.0095 12/7=1.714 OK
+  2blk {0,1,2,28,29,30,15}       w=  12180: |Err_cover|=0.00024 min-bound=0.0008 12/7=1.714 OK
+  dilAP {0,5,..,30}              w=   1009: |Err_cover|=0.00001 min-bound=0.0103 12/7=1.714 OK
+  dilAP {0,5,..,30}              w=    300: |Err_cover|=0.00612 min-bound=0.0347 12/7=1.714 OK
+  spread {0,3,7,12,20,33,54}     w=   1009: |Err_cover|=0.00057 min-bound=0.0084 12/7=1.714 OK
+
+  => C0 bounded (no blow-up at lcm-w on the prime grid); min-argument holds.
+     tail closure: err<=C0/w, w=d>25 => err<=3.03/26=0.117; Phi<=0.397+0.117=0.514 vs cap9=0.494
+
+done.

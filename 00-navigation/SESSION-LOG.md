@@ -75,6 +75,25 @@ HYP-6228; lrc14_corelength_monotonicity_kps_S127.py, lrc14_corelength_balance_bo
 
 Next: the bounded finite check (ILP) is unchanged; the multi-killer part is now explicitly reduced to it via
 settled LRC(13). A Lean lemma for the balance bound (single-killer, tight) is a clean formalization target.
+## klein-2026-07-13-S274 -- the cross-sector constant: boundedness is ELEMENTARY (THM-725) but the DECAY is not; and S273's Ng∝w grid was ALIASING (true resonant constant ~3, not ~0.9)
+
+Prompt (owner): work on the cross-sector cancellation lemma (the crux from S273/HYP-6285).
+
+The object: Error = Σ_s ∫ f_s(x)g_s(wx)dx, f_s=1{miss exactly sector s}, g_s=1{·∈sector s}−1/7. Target: a Σe'-free bound |Error|≤C₀/w.
+
+REDUCTION (proved, THM-725): f_s disjoint; on each maximal interval I of R={miss exactly one sector} the missed sector s_I is CONSTANT (shifting it needs miss-0 or miss-2, exiting R) ⟹ Error=Σ_I ∫_I g_{s_I}(wx)dx. Min of antiderivative bound (6/49)/w and trivial |I|(6/7): |Error|≤min(R_ct·6/(49w), 6/7), R_ct≈0.81Σe'.
+
+CORRECTION A (my mid-session hope, wrong): this proves BOUNDEDNESS (≤6/7, ~vacuous since Error∈[−1,1]) + recovers THM-700's Σe'/w as the large-w branch, but does NOT give the Σe'-free 1/w DECAY (min caps O(1) for w<Σe', doesn't shrink). Decay still open.
+
+CORRECTION B (S273's measurement): Ng∝w ALIASES — frac(wx)=frac(k/c), and at w=lcm the cluster phases become dependent ⟹ spurious err·w blow-up (saw 30). S273's "controlled Ng=400w" had this; its "C_Φ≈0.9 adversarial-robust" was aliased. PRIME grid Ng≫w: clean w gives err·w≈0.2 UNIFORM across Σe'=21→420 (bounded in Σe'!); resonant w=lcm gives err·w≈3 (2-block). True worst constant ~3, not ~0.9.
+
+RESONANCE HARMLESS: w=lcm≥diam ⟹ w≫Σe' there ⟹ THM-700's Σe'/w already small; actual Φ of resonant cores fine. Rows still TRUE (Φ≤0.35 measured S273).
+
+OPEN (sharpened): the Σe'-free decay = Σ_I [G(wb_I)−G(wa_I)]=O(1) over R_ct∝Σe' endpoints {(j+s/7)/e'} (√R_ct→O(1) collapse; van der Corput/2nd-moment, w=lcm extremal), OR the finite no-separation-band sweep. METHODOLOGICAL (fleet-wide): PRIME grid Ng≫w MANDATORY for two-scale numerics.
+
+NET: one clean provable lemma (THM-725 per-interval boundedness) + two honest corrections (boundedness≠decay; the grid was aliasing) + a sharper open statement. Corrected S273 reflection/memory.
+
+FILES: reflection the-cross-sector-constant-boundedness-is-elementary-but-decay-is-not-and-the-grid-was-aliasing-klein-S274; THM-725; HYP-6305; lrc14_Rct_cross_sector_/_sqrt_law_/_C0_bounded_sweep_/_prime_grid_/_Phi_min_constant_klein_S274.py (+outs). -> THM-699/700, HYP-6285, kps-S127.
 
 ---
 
