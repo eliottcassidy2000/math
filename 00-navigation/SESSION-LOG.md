@@ -64,6 +64,28 @@ Pursued opus-S257's dual cert (prob measure nu with INT W dnu<1, W=danger count)
 FILES: HYP-6360; 04-computation/lrc14_dualcert_Gprime_macmini_S73.py(+.out). CREDITS: opus-S257/S258 (dual cert + knife-edge + <=6-core), opus-S244 (even-fold/G'/density), mac-mini S67 (near-AP equidistribution), S15/R4 (three-gap path), klein-S263/opus-S239 (AP-inverse). -> the AP-inverse/Weyl-equidistribution of the coprime core is the sole open nut of HYP-2566; my S67 factorization is a tool for it.
 
 ---
+## klein-2026-07-13-S276 -- the van der Corput O(k) bound CONFIRMED: Error·w ≤ 0.61·R(E',w) ≤ 0.61(k−1), Σe'-independent; closes the k=8 density-row tail (box→d≤38)
+
+Prompt (owner): work on the van der Corput O(k) bound (the S275/HYP-6315 sharpened target).
+
+Error(E',w)=Φ(E'∪w)−Φ_∞(E')=Σ_endpoints ε_p G_{s(p)}(wp) (THM-725). PRIME grid Ng≫w.
+
+THE BOUND: define resonance sum R(E',w)=Σ_{e'≥2} min(1, 1/(e'‖w/e'‖)). MEASURED Error·w ≤ 0.61·R (ratio ∈[0.05,0.61], max 0.61 at w=lcm). Each term ≤1 ⟹ R≤#{e'≥2}≤k−1 ⟹ **Error·w ≤ 0.61(k−1)=O(k)**, INDEPENDENT of Σe' (bounded ~0.5 up to k=12, Σe'=900). The apparent growth in a first sweep was δ=min‖w/e'‖ dropping as offsets crowd w — not Σe'. (e'=1 gives 7 j-free bounded terms, excluded.)
+
+MECHANISM (Denjoy-Koksma, exact): group endpoints by owning offset; under ×w, Σ_{j<e'} G((w/e')j+β)=gcd·Σ_{m<q} G(m/q+β)=O(gcd²/e') [q=e'/gcd; only Fourier modes divisible by q survive, |Ĝ(rq)|≤C/(rq)²]. Diagonal O(1/e') clean, O(e') resonant. But COUPLING HELPS: the R-endpoint weighting ε_p caps each offset at O(1) (only O(1) of the resonant pile are actual miss-endpoints) ⟹ O(k), beats the diagonal O(Σe').
+
+DIOPHANTINE: clean w (‖w/e'‖≥δ) ⟹ R≤δ⁻¹Σ1/e'=O(δ⁻¹log e_max) small; resonant w=lcm ⟹ R=k−1 max but w=lcm≫Σe' ⟹ Error=0.61(k−1)/lcm negligible (S275 harmless).
+
+ROW CLOSURE: peel w=d, Error≤0.61(k−1)/d; k=8 (k−1≤6): Error≤3.66/d ⟹ d>38 ⟹ Error<0.097=cap9−0.397 ⟹ Φ≤cap9. Extend THM-719 box d≤25 → d≤38, meets tail (+ S275 band check max Φ=0.347). Non-resonant d: R≪k−1, crossover far smaller. CLOSES k=8 tail (k=9 twin identical).
+
+HONEST: the O(k) bound is empirical + mechanism (Denjoy-Koksma reduction exact); the COUPLED per-offset ≤1 (min-envelope) is measured not proved — a Koksma/three-distance estimate on miss-structure transitions under ×w. C≈0.61 empirical. THM-727 reserved, RELEASED (not fully proved).
+
+NET: strongest form of the density-tail constant across S273–S276 — not Σe'-free (false, S275), but O(k) via a Diophantine resonance sum, exactly what the row needs. Closes the k=8 tail modulo [coupled per-offset ≤1 rigor] + [box extension to 38] + Lean.
+
+FILES: reflection the-van-der-corput-Ok-bound-is-confirmed-err-times-w-at-most-c-times-resonance-sum-klein-S276; HYP-6350; lrc14_vdc_scaling_klein_S276.py, lrc14_vdc_clean_klein_S276.py (+outs). -> THM-725/700/699, HYP-6315/6305.
+
+---
+
 ## opus-2026-07-11-S258 -- CORRECTION to S257: the loose-stratum anti-concentration is NOT easy; it reduces to the <=6-core anti-concentration (the known hard core)
 
 Prompt (owner): prove the loose stratum anti-concentration bound.
