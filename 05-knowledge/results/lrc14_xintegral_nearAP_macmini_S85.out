@@ -1,0 +1,16 @@
+{1..11,13,84}: core=[1], meas(G')=0.06658, L=safe=0.00535, coreCover=0.9196
+   x-integral eps_1 = INT g*1_G' = -0.06034  (mean(g)=0; eps_1<0 <=> runner-1 danger over-represented in G')
+   autocorrelation A(0)=INT 1_G'^2 = 0.06658 (=meas(G') since indicator); A(0)/meas(G')^2 = 15.02
+   runner-1 danger mass in G' = INT 1_G' 1_D1 = 0.06123 = coreCover*meas(G'); L=meas(G')-this=0.00535
+deep well {1..12,182}: core=[1], meas(G')=0.08511, L=safe=0.02389, coreCover=0.7193
+   x-integral eps_1 = INT g*1_G' = -0.05724  (mean(g)=0; eps_1<0 <=> runner-1 danger over-represented in G')
+   autocorrelation A(0)=INT 1_G'^2 = 0.08511 (=meas(G') since indicator); A(0)/meas(G')^2 = 11.75
+   runner-1 danger mass in G' = INT 1_G' 1_D1 = 0.06122 = coreCover*meas(G'); L=meas(G')-this=0.02389
+
+CONNECTION: the covering x-integral eps_1 on the |core|=1 near-AP residue IS my coreCover
+object (INT g*1_G'). L(safe) = meas(G') - [runner-1 danger mass in G']. The pos-def THM-729
+device would lower-bound meas(safe) via the AUTOCORRELATION of 1_G' WITHOUT Fourier-expanding
+(S73 showed the union bound fails: danger mass ~ meas(G')). HONEST: the pos-def x-integral is
+the right METRIC form (>=0, no divergence), but bounding [danger mass < meas(G')] on the near-AP
+residue is the covering middle-order sum = the live open crux (opus/kps own it). I provide the
+concrete near-AP x-integral data + the coreCover<->eps_v connection for the fleet's device.
