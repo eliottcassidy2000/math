@@ -1,0 +1,29 @@
+=== (A) Farey-arc structure of SafeSet({1..12}) ===
+N (arcs with b+d=13) = 12   [claim phi(13)=12]
+|G'| exact          = 6617/194040 = 0.0341012
+H_12/91             = 86021/27720/91 = 0.0341012   [claim equal]
+each arc length 1/(14bd); sum matches: True
+numeric: |SafeSet({1..12})|=0.0341017 (vs 0.0341012), #intervals=12 (vs 12)
+
+=== (B) disc_182 and the rigorous jump bound ===
+disc_182 (Fourier sum |m|<=400) = 4.131e-04
+rigorous bound N^2/(3*182^2)    = 1.449e-03   [disc <= bound: True]
+opus/klein exact disc (HYP-6510)= 4.132e-04
+
+=== (C) certificate disc < 6|G'|^2 ===
+6|G'|^2 = 6.977e-03;  bound 1.449e-03 < 6|G'|^2 ? True
+L_cert with rigorous bound = (6/7)|G'|-sqrt(6/49*bound) = 0.01591  [>0: True]
+L_cert with true disc      = 0.02212
+actual L(deep well)        ~ 0.02390 (numeric)
+
+=== closed-form condition (far=14(k+1), N=k, |G'|=H_k/(7(k+1))) ===
+  k= 6: H_k=2.4500, k/(6sqrt2)=0.7071  H_k>k/(6sqrt2)? True  margin x3.46
+  k= 7: H_k=2.5929, k/(6sqrt2)=0.8250  H_k>k/(6sqrt2)? True  margin x3.14
+  k= 8: H_k=2.7179, k/(6sqrt2)=0.9428  H_k>k/(6sqrt2)? True  margin x2.88
+  k= 9: H_k=2.8290, k/(6sqrt2)=1.0607  H_k>k/(6sqrt2)? True  margin x2.67
+  k=10: H_k=2.9290, k/(6sqrt2)=1.1785  H_k>k/(6sqrt2)? True  margin x2.49
+  k=11: H_k=3.0199, k/(6sqrt2)=1.2964  H_k>k/(6sqrt2)? True  margin x2.33
+  k=12: H_k=3.1032, k/(6sqrt2)=1.4142  H_k>k/(6sqrt2)? True  margin x2.19
+  k=13: H_k=3.1801, k/(6sqrt2)=1.5321  H_k>k/(6sqrt2)? True  margin x2.08
+
+=> for k=12 (deep well) the far-peel certificate is RIGOROUS: L>0, hence M>=1/14. QED-shape.
