@@ -1,0 +1,19 @@
+(1) the middle-order +-20 = binomial cancellation of the all-dangerous tail:
+
+AP {1..13}: E_6=20.7 E_7=20.2 (the '+-20') | L(moment sum)=-0.00000 = p_0=0.00000
+   per-danger-level x contribution to L (= p_x*(1-1)^x): [np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0)]
+   => only x=0 contributes (p_0); every x>=1 cancels BINOMIALLY. The +-20 at k=6,7 are
+      C(13,6)*p_13=18.9, C(13,7)*p_13=18.9 -- the tail, cancelling.
+
+{1..11,13,84}: E_6=12.9 E_7=11.2 (the '+-20') | L(moment sum)=0.00536 = p_0=0.00536
+   per-danger-level x contribution to L (= p_x*(1-1)^x): [np.float64(0.0054), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0)]
+   => only x=0 contributes (p_0); every x>=1 cancels BINOMIALLY. The +-20 at k=6,7 are
+      C(13,6)*p_13=2.9, C(13,7)*p_13=2.9 -- the tail, cancelling.
+
+(2) VERDICT: the middle-order cancellation is TRIVIAL (binomial), an artifact of the moment
+expansion. There is NO hidden analytic 'resummation' -- the direct metric object is L=p_0,
+the safe measure. Its Fourier is the resonance sum corrsum (HYP-6430): loose (few resonances,
+provable density floor) + near-AP (many resonances, the residue). So the 'direct metric
+resummation' returns the RAW conjecture L=p_0>0 for covering = LRC(14) -- no new structure.
+Clarification: the S79 'middle-order wall' was partly illusory; the real (and only) content
+is that the safe set is nonempty for covering. This door, too, is the conjecture itself.
