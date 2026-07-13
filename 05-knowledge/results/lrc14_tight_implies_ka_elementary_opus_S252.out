@@ -1,0 +1,5 @@
+(A) lemma core: no-mult-14 with min||v/14||>=1/14: 1358/1358
+(B) tight: no-mult-14=275, with-mult-14=0  => tight=>no-mult-14: True
+(C) mult-of-14 primitives: loose=11995, =1/14: 0, <1/14: 0
+    {1..12,14}: M=1/13 at q*=13
+    deep well: M=14/183 at q*=183
