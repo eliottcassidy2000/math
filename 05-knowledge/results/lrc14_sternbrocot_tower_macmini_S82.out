@@ -1,0 +1,23 @@
+(1) the deep well {1..n-2, n(n-1)} witness = CF [0;n-1,n], value n/Phi6(n):
+  n=5: deep well=[1, 2, 3, 20] n/Phi6=5/21=0.23810, M=5/21, CF(n/Phi6)=[0, 4, 5]
+  n=6: deep well=[1, 2, 3, 4, 30] n/Phi6=6/31=0.19355, M=6/31, CF(n/Phi6)=[0, 5, 6]
+  n=7: deep well=[1, 2, 3, 4, 5, 42] n/Phi6=7/43=0.16279, M=7/43, CF(n/Phi6)=[0, 6, 7]
+  n=8: deep well=[1, 2, 3, 4, 5, 6, 56] n/Phi6=8/57=0.14035, M=8/57, CF(n/Phi6)=[0, 7, 8]
+  n=9: deep well=[1, 2, 3, 4]... n/Phi6=9/73=0.12329, M=9/73, CF(n/Phi6)=[0, 8, 9]
+  n=10: deep well=[1, 2, 3, 4]... n/Phi6=10/91=0.10989, M=10/91, CF(n/Phi6)=[0, 9, 10]
+  n=14: deep well=[1, 2, 3, 4]... n/Phi6=14/183=0.07650, M=14/183, CF(n/Phi6)=[0, 13, 14]
+
+(2) INDUCTIVE TOWER test: does inserting runner n into a covering (n-1)-family give a
+    clean lower-bound recursion M_n >= g(M_{n-1})? (vertex insertion: M can only DECREASE)
+  n=6: cov-min(n-1)=0.23810 [0;4,5] -> cov-min(n)=0.19355 [0;5,6]; ratio=0.8129
+  n=7: cov-min(n-1)=0.19355 [0;5,6] -> cov-min(n)=0.16279 [0;6,7]; ratio=0.8411
+  n=8: cov-min(n-1)=0.16279 [0;6,7] -> cov-min(n)=0.14035 [0;7,8]; ratio=0.8622
+  n=9: cov-min(n-1)=0.14035 [0;7,8] -> cov-min(n)=0.12329 [0;8,9]; ratio=0.8784
+  n=10: cov-min(n-1)=0.12329 [0;8,9] -> cov-min(n)=0.10989 [0;9,10]; ratio=0.8913
+
+(3) is 'covering => M >= n/Phi6' a TREE fact or a METRIC fact? The Farey tree ORGANIZES
+    the M-spectrum (1/14 < 3/41 < 2/27 < 14/183 < 1/13, mediants), but WHICH families are
+    covering (land >= 14/183) is metric -- the tree gives the VALUES' arithmetic, not the
+    lower bound. Vertex-insertion M_n <= M_{n-1} (peeling) = the balance, undershoots multi-killer.
+VERDICT probe: the CF tower [0;n-1,n] is the DEEP WELL's clean structure (a value tower),
+not a lower-bound proof over all covering families -- same split as Delsarte/tournament.
