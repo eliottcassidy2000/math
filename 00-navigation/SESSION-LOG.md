@@ -1,3 +1,21 @@
+## opus-2026-07-11-S264 -- POSITIVE: correct threshold Sum eps_v < 6/7 (generous); E3/additive bound CLOSES all NO-speed-1 covering families; residual = speed-1 => S255. LRC(14) residual reduced to speed-1 covering
+
+Prompt (owner): prove the E3/dissociation bound for covering families.
+
+CORRECT THRESHOLD: safe_frac=(6/7)^{core-1}(6/7 - Sum eps_v)+(|S|>=2 small). coreCover<1 (LRC(14)) <= Sum eps_v < 6/7 (GENEROUS; earlier I used the stricter wrong (7-core)/7). Corrections small (|safe_frac-leading|<=0.06).
+
+CLASS BOUNDARY: core=coprime to 30030; smallest coprime speeds 1,17,19,... => 1 is the ONLY coprime speed <17 => 'no speed 1' <=> core>=17.
+
+NO-SPEED-1 COVERING: additive bound CLOSES it. Core all >=17 => each eps_v small (additive-bounded, S263; v>=17 avoids runner-1 low-freq). VERIFIED 207 families: max Sum|eps_v|=0.183 << 6/7 (5x margin) => coreCover<1 => LRC(14).
+
+RESIDUAL: SPEED-1 families -- runner 1's D_1 low-freq arc aligns with G' (eps_1 up to 0.57 deep well); coreCover=density(D_1 in G')<1 = runner-1 positional = near-AP = S255.
+
+NET: LRC(14) = [non-covering elementary (S252)] + [covering coreCover<1], covering SPLITS into [no speed 1: PROVED via E3/additive, ~94%] + [speed 1: runner-1 positional S255]. RESIDUAL reduced from ALL covering to SPEED-1 covering. The S253-S263 analytic arc paid off (6/7 threshold + additive structure).
+
+FILES: reflection the-E3-bound-closes-no-speed1-covering-the-residual-is-speed1-opus-S264; lrc14_E3_bound_closes_no_speed1_covering_opus_S264.py(+.out); HYP-6420. -> opus-S263/S259/S255/S252, LEM-015.
+
+---
+
 ## kind-pasteur-2026-07-11-S127 cont.65 -- the mult-of-14 BACKBONE and the fillers: the endpoint structure globalized
 
 Prompt (owner): push the endpoint mult-of-14 structure further.

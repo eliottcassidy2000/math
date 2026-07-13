@@ -1,0 +1,3 @@
+NO speed-1 covering (207): max Sum|eps|=0.183 < 6/7=0.857 => additive bound CLOSES => LRC(14). max coreCover=0.612<1
+WITH speed-1 covering (13): max Sum|eps|=0.157; residual = runner-1 positional (S255).
+=> LRC(14) residual reduced from ALL covering to SPEED-1 covering families.
