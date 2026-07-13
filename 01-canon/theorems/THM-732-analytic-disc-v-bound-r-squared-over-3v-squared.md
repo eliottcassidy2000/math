@@ -1,83 +1,31 @@
 ---
-id: THM-732
-title: The analytic disc_v bound — disc_v ≤ r²/(3v²) (r = #arcs of the leave-one-out good set G'_{~v}), PROVED rigorously from the trivial endpoint bound |U(ℓ)|≤2r. Fed into THM-731 it gives the fully explicit RIGOROUS certificate L ≥ (1/7)(6|G'_{~v}| − √2·r/v), so L>0 whenever r < 3√2·v|G'_{~v}| — a COMBINATORIAL (arc-count) condition, no longer harmonic analysis. This certificate CERTIFIES L>0 for the covering-min extremals (deep well ratio 0.46, min-L residue ratio 0.92), the binding families every other method failed on. The crude constant is too lossy only for non-extremal families with a small far element (e.g. {1,3..14}, large true L=0.030) — which need the sharper shared endpoint cancellation (the density Q_s object) or a compactness argument
-status: PROVED (the bound) + PARTIAL (universal closure). disc_v ≤ r²/(3v²) is RIGOROUS (|U(ℓ)|≤2r endpoints, Σ_{m≠0}1/m²=π²/3). Hence L ≥ (1/7)(6|G'_{~v}|−√2 r/v) is a RIGOROUS explicit lower bound for every core v. VERIFIED to certify L>0 on the covering-min extremals (deep well, near-AP residue) and a census of large-far-element covering families. NOT universal: for covering families with a small far element and moderate |G'_{~v}| (e.g. {1,3,4,…,14}, far element 14, true L=0.030) the crude constant exceeds the threshold at every peel, though the TRUE disc_v (THM-731) still certifies (+0.018) — so those families need the sharper endpoint-sum cancellation (shared with the density Q_s, THM-729) or a separate large-L/compactness argument. The analytic bound requested is PROVED; it discharges the extremals and reduces the remainder to a combinatorial arc-count inequality plus the shared cancellation for small-far-element sets.
-source: klein-2026-07-13-S288
-depends_on:
-  - THM-731   # the certificate this feeds: L=(6/7)|G'_{~v}|−ε_v, |ε_v|²≤(6/49)disc_v
-  - THM-729   # the endpoint-sum cancellation the small-far-element families still need (shared)
+id: THM-732-SUPERSEDED
+title: "[SUPERSEDED — ID COLLISION] The analytic disc_v bound disc_v ≤ r²/(3v²). Independently derived (klein-S288) at the same time as the canonical THM-732 (kind-pasteur-S128), which SUBSUMES it: kp's exact-ℚ Bernoulli edge-pair form disc_v=(1/2v²)Σσ_eσ_{e'}B₂({v(e−e')}) gives disc_v≤r²/(3v²) via |B₂|≤1/6. Canonical THM-732 = THM-732-disc-v-bernoulli-edge-pair-dedekind-form-... . This file's unique content (the S289 NEGATIVE: the arc-count bound r<3√2 v|G'| is FALSE for non-isolated-far sets) lives in HYP-6505."
+status: SUPERSEDED by kind-pasteur-S128's THM-732 (same ID, first in shared history, strictly stronger — exact rational form). Retained only as a redirect. Do NOT cite this file as THM-732; cite THM-732-disc-v-bernoulli-edge-pair-dedekind-form-exact-certificates-far-element-tail.md.
+source: klein-2026-07-13-S288 (superseded 2026-07-13)
 related:
-  - HYP-6495  # klein-S288 (this bound)
-  - HYP-6485  # klein-S287 (THM-731, the certificate)
-  - THM-724   # deep well = M-extremal (certified here)
-  - THM-726   # deep well unique global covering-min
+  - HYP-6505  # klein-S289 — the genuine surviving content: arc-count bound is FALSE (isolation is the classifier)
+  - HYP-6495  # klein-S288 — the disc_v≤r²/(3v²) derivation + explicit certificate
 ---
 
-# THM-732 — the analytic disc_v bound: disc_v ≤ r²/(3v²)
+# THM-732 (klein-S288) — SUPERSEDED, see canonical THM-732 (kind-pasteur-S128)
 
-The step that upgrades THM-731's certificate from VERIFIED to a **rigorous explicit inequality**, and
-converts the remaining difficulty from harmonic analysis to arc-counting.
+**ID collision, resolved.** klein-S288 and kind-pasteur-S128 independently and concurrently produced the
+covering `disc_v` bound and both filed it as **THM-732**. kind-pasteur's is canonical (first in the shared
+history, and strictly stronger): the exact rational Bernoulli edge-pair form
+`disc_v = (1/2v²)Σ_{e,e'} σ_e σ_{e'} B₂({v(e−e')})`, from which `|B₂|≤1/6` yields exactly the
+`disc_v ≤ r²/(3v²)` that this file proved by the cruder `|U(ℓ)|≤2r` route. All references to "THM-732" —
+in THM-731, the finish-map, HYP-6485/6495, and the S287/S288 reflections — should be read as the canonical
+THM-732 (`THM-732-disc-v-bernoulli-edge-pair-dedekind-form-exact-certificates-far-element-tail.md`), which
+includes the `r²/(3v²)` bound as a corollary.
 
-## The bound (RIGOROUS)
+**What was genuinely new in klein's line and is NOT in kp-S128: the S289 negative (HYP-6505).** The
+combinatorial arc-count condition `r < 3√2 v|G'_{~v}|` is **not a universal theorem**: a census gives 938
+failures at `max≤18`, and `{1,90,…,101}` (covering, diameter 100, `r=132`) fails at every peel. The
+classifier is far-element isolation, and the non-isolated (compact-core) families reduce to the shared
+density-`Q_s` cancellation (THM-729). This converges with kp-S128's own "bounded-Vmax compact core remains."
+See **HYP-6505** and the reflection
+`the-arc-count-bound-is-false-isolation-not-diameter-is-the-classifier-klein-S289.md`.
 
-Write the leave-one-out good set `G'_{~v}=∪_{i=1}^r[a_i,b_i]` as `r` arcs, with `2r` endpoints carrying
-signs `ε_p=±1`. Its Fourier coefficients are `ĉ_ℓ = U(ℓ)/(2πiℓ)` for `ℓ≠0`, where
-`U(ℓ)=Σ_p ε_p e(−ℓp)` is the endpoint sum. The trivial triangle bound `|U(ℓ)| ≤ Σ_p|ε_p| = 2r` gives
-$$disc_v=\sum_{m\ne0}|\hat c_{mv}|^2=\sum_{m\ne0}\frac{|U(mv)|^2}{(2\pi mv)^2}
-\le \sum_{m\ne0}\frac{(2r)^2}{(2\pi mv)^2}=\frac{4r^2}{4\pi^2v^2}\cdot\frac{\pi^2}{3}
-=\boxed{\dfrac{r^2}{3v^2}}.$$
-
-Nothing beyond `|U|≤2r` and `Σ_{m≠0}m^{-2}=π²/3` is used — fully rigorous, universal.
-
-## The explicit certificate (RIGOROUS)
-
-Feeding `disc_v ≤ r²/(3v²)` into THM-731 (`L=(6/7)|G'_{~v}|−ε_v`, `|ε_v|≤√((6/49)disc_v)`):
-$$L \ge \tfrac67|G'_{~v}| - \sqrt{\tfrac{6}{49}\cdot\tfrac{r^2}{3v^2}}
-= \tfrac67|G'_{~v}| - \tfrac{\sqrt2}{7}\,\tfrac{r}{v}
-= \frac1{7}\Big(6\,|G'_{~v}| - \sqrt2\,\tfrac{r}{v}\Big).$$
-So **`L>0` whenever `r < 3\sqrt2\, v\,|G'_{~v}|`** — a condition on the arc count `r`, the peel element
-`v`, and the measure `|G'_{~v}|`. The harmonic analysis is discharged; what remains is combinatorial.
-
-## What it certifies — and where the crude constant is too lossy
-
-Peeling the far element (`disc` shrinks like `1/v²`), the explicit bound gives (NG=2²¹, verified):
-
-| family | `v` | `|G'_{~v}|` | `r` | `L ≥ (1/7)(6|G'|−√2 r/v)` | ratio `√2 r/(6v|G'|)` |
-|---|---|---|---|---|---|
-| deep well `{1..12,182}` (M-min) | 182 | 0.03410 | 12 | **+0.0159** | 0.46 |
-| near-AP residue `{1..11,13,84}` (L-min) | 84 | 0.01216 | 4 | **+0.0008** | 0.92 |
-| `{1..10,12,13,154}` | 154 | 0.06192 | 10 | +0.0400 | 0.25 |
-| `{2..14}` | 14 | 0.07143 | 2 | +0.0324 | 0.47 |
-
-**The covering-min extremals certify** — the deep well (the proven global `M`-min, THM-724/726) and the
-near-AP residue (the min-`L` `|core|=1` body, kps cont.70), the families every structural and elementary
-method failed on. The arc count `r` is **small** (≤12, not the `~78` worst case) because the good sets are
-heavily-overlapped small-measure unions — that smallness is what makes the crude bound suffice here.
-
-**Where it is not enough.** For covering families with a *small* far element and moderate `|G'_{~v}|`
-— e.g. `{1,3,4,…,14}` (far element 14, true `L=0.030`) — the crude `r²/(3v²)` exceeds the threshold at
-*every* peel, so this rigorous certificate does not fire, even though the family is *easy* (large `L`) and
-the **true** `disc_v` (THM-731) certifies it comfortably (`+0.018` at `v=8`). The gap is the endpoint-sum
-cancellation `|U(mv)|≪2r` that the crude bound discards — the **same** cancellation the density route needs
-for `Q_s` (THM-729). So these families reduce to the shared endpoint-cancellation estimate, or to a
-separate large-`L`/compactness argument for small-far-element sets.
-
-## Status of the covering case after THM-732
-
-- The analytic `disc_v` bound is **PROVED** (`disc_v ≤ r²/(3v²)`).
-- The covering-min **extremals are certified** `L>0` rigorously and explicitly.
-
-**⚠ S289 correction — the arc-count bound `r < 3√2 v|G'_{~v}|` is NOT a theorem (HYP-6505).** A census of
-covering 13-sets refutes it: 938 failures at `max≤18` (ratios to 8.4), and the covering set `{1,90,…,101}`
-(large diameter `D=100`) fails at *every* peel (ratio 3.57). The true classifier is **far-element
-isolation**: the crude certificate fires **iff** `v ≫ max(W)` (then `r≤2max(W)≪v`), which holds for the
-covering-min extremals (deep well `182/12`, residue `84/13` — forced isolated by divisibility) but fails
-for **non-isolated** families (compact, or large-diameter-with-clustered-top). Those are an infinite class
-(not bounded-diameter, not a finite check) where `|U(mv)|≪2r` genuinely matters — the **same** cancellation
-as the density `Q_s` (THM-729). So the crude bound does **not** give a combinatorial escape from the
-analysis for general covering sets; it closes exactly the **isolated-far-element** class (incl. the
-extremals), and the rest reduce to the shared cancellation. (VERIFIED regularity: `r ≤ 2max(W)`.)
-
-*Files: `04-computation/lrc14_disc_v_bound_klein_S288.py`, `lrc14_disc_v_census_klein_S288.py`,
-`lrc14_disc_v_failfamily_klein_S288.out` (+.out). HYP-6495. Upgrades THM-731; the residual (ii) is
-THM-729 shared with density.*
+The covering `x`-integral / autocorrelation-discrepancy construction (THM-731, klein-S287) is unaffected and
+remains canonical.
