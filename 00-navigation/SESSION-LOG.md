@@ -1,3 +1,18 @@
+## mac-mini-2026-07-13-S73 -- pursued opus's dual certificate: explicit nu=Leb|_G' FAILS (union bound too weak), localizing the crux to "the coprime core EQUIDISTRIBUTES in G' unless AP" (Weyl/AP-inverse), connecting the anti-concentration to my S67 equidistribution
+
+Prompt (owner): pursue opus's dual certificate route for HYP-2566.
+
+Pursued opus-S257's dual cert (prob measure nu with INT W dnu<1, W=danger count). Honest outcome: confirms opus-S258 (elementary tools fail) from a fresh angle, and LOCALIZES the crux precisely.
+
+(1) THE EXPLICIT TEST MEASURE nu=Leb|_G' (G'={t: all non-core runners safe}): INT W dnu = core-danger density in G'; union bound closes if meas(G')>|core|*2c. VERIFIED FAILS: for DC families the coprime-to-30030 core is TINY (|core|=1-2, covering forces most runners divisible by prime<=13) BUT G' is ALSO small (0.058 for {1..11,13,84}, 11-12 non-core runners constrain it). meas(G')<<|core|*2c=0.153, union bound never holds. core-safe (0.85 over [0,1)) & G' (0.06) both positive but NOT forced to overlap (0.85+0.06<1). Safe point exists (loose: 0.001-0.01>0) only via the ACTUAL overlap, invisible to union bound.
+
+(2) THE LOCALIZED CRUX (positive takeaway): the overlap is nonempty because core-danger density in G' ~0.23<1 (opus-S244). That's because the COPRIME CORE EQUIDISTRIBUTES in G' (core coprime to 30030, G' structured by 30030-divisible non-core => arithmetic independence => Weyl => density=|core|*2c<1). BLANKET (density=1, knife-edge) only under AP RESONANCE (=AP/V* wall=bucket A, non-covering). So anti-concentration = "coprime core equidistributes in G' unless AP" = Weyl exp-sum bound on Sum_h Ghat'(-h c_i) = the AP-inverse (Sos three-gap converse). SAME object as my S67 near-AP rho* equidistribution + S15/R4 three-gap-quantization proof path.
+
+(3) NET (honest): no elementary/union-bound dual cert (core & G' both thin, no forced overlap); the family-specific cert is just the witness (=safe set>0=anti-concentration). Irreducible content = the Weyl equidistribution of the coprime core in G'. The route forward = prove that exp-sum bound (my equidistribution tools + klein/opus three-gap thread), NOT a static polynomial. Confirms opus's obstruction; sharpens the target.
+
+FILES: HYP-6360; 04-computation/lrc14_dualcert_Gprime_macmini_S73.py(+.out). CREDITS: opus-S257/S258 (dual cert + knife-edge + <=6-core), opus-S244 (even-fold/G'/density), mac-mini S67 (near-AP equidistribution), S15/R4 (three-gap path), klein-S263/opus-S239 (AP-inverse). -> the AP-inverse/Weyl-equidistribution of the coprime core is the sole open nut of HYP-2566; my S67 factorization is a tool for it.
+
+---
 ## opus-2026-07-11-S258 -- CORRECTION to S257: the loose-stratum anti-concentration is NOT easy; it reduces to the <=6-core anti-concentration (the known hard core)
 
 Prompt (owner): prove the loose stratum anti-concentration bound.
