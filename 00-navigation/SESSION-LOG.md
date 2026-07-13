@@ -1,3 +1,22 @@
+## mac-mini-2026-07-13-S75 (cont.) -- accepted the certified-complete state; wrote the COVERING-MIN SYNTHESIS reflection
+
+Prompt (owner): accept the certified-complete state and write the covering-min synthesis reflection.
+
+Wrote the definitive synthesis of the covering-min arc (07-reflections/the-covering-min-is-14-over-183-uniquely-at-the-deep-well-a-certified-complete-synthesis-macmini-S75).
+
+CONTENTS:
+ - OBJECT & ANSWER: covering-min = 14/183 = n/Phi6(n), uniquely at the deep well {1..12,182}, 182=n(n-1)=lcm(13,14), Phi6(14)=183. The first covering rung of the Ostrowski ladder M_k=k/(13k+1) (covering <=> 14|k, smallest k=14).
+ - PROVED (the r-partition, HYP-6330): r=1 single-killer CLOSED FORM (interval core forced, balance s=1, THM-724); r>=2 multi-killer CERTIFIED (far-monotonicity + finite check, THM-726, balance undershoots). Rigidity complete: deep well unique min.
+ - TOOL-REACH CATALOG (the synthesis core): sieve, Ostrowski ladder, balance, shallow-witness, measure lemma, far-monotone+finite, dual cert, coreCover-equidistribution, prime-13/near-AP rigidity -- each with EXACTLY what it closes and where it fails. Every tool touches 1 on the deep well.
+ - THE KNIFE-EDGE: 1/13 - 14/183 = 1/2379 (the +1 in Phi6=n(n-1)+1); packing 13*14=182<=183 tight to one unit; safe set = single point => no single AC/positive-poly cert (opus-S257 obstruction) => forced tight/loose split.
+ - THE LAST INCH: fold to <=6 coprime-to-30030 core; core speeds>=17 equidistribute (opus-S259, solid); runner 1 (single arc) does not => |core|=1 covering extremals have coreCover<1 <=> M>1/14 = LRC(14). Tightest = {1..11,13,84} (AP with 12->84, minimal covering perturbation). = HYP-2566.
+ - TRANSCENDING: the arc is a machine that removes every part of LRC(14) that is NOT the hard part; what remains is a measure-zero knife-edge + its near-AP neighborhood. Three morals: proof must split (single cert refuted a priori); certified-complete is the honest terminus of elementary methods; the next idea is non-local (a Sos three-gap INVERSE, not another averaging inequality).
+
+This ACCEPTS the certified-complete state: covering-min rigidity PROVED (THM-724) + CERTIFIED (THM-726); the sharp constant 14/183 and unique extremizer established; the sole open item (HYP-2566) is definitively LRC(14) itself.
+
+FILES: reflection the-covering-min-is-14-over-183-...-macmini-S75. CREDITS across the arc: opus S252-S259, kps S127, klein S261-S276, mac-mini S38/S66-S75. -> the covering-min chapter is closed at the certified-complete boundary; further progress requires a non-local three-gap-inverse idea, not more elementary tooling.
+
+---
 ## kind-pasteur-2026-07-11-S127 cont.62 -- the covering-min residual is "core runner 1"; my structural slice is its formalized extremal
 
 Prompt (owner): work the covering-min lower bound over all covering families.
