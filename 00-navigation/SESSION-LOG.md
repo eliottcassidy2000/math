@@ -1,3 +1,38 @@
+## kind-pasteur-2026-07-11-S127 cont.68 -- the separate-13/14 residual collapses into the mapped multi-killer
+
+Prompt (owner): work the separate-13/14 multi-killer residual (the open case cont.67 identified: 13 and 14 by
+different runners rather than the single lcm-outlier 182).
+
+STRUCTURAL RESULT: a separate-13/14 covering family has 2 distinct killer slots (13u and 14w) + runner 1 = 3
+slots, leaving <=10 of {2..12}, so the full run {1..12} (needs 12) is IMPOSSIBLE => interval-core length <=11.
+Verified over 64 primitive separate-13/14 covering families (outliers<=60): max core = 9 (structurally <=11). So
+separate-13/14 SUBSET multi-killer (core<=11) = ALREADY reduced: cont.58 (enumerated M>=7/89=0.0787>14/183) +
+cont.59 (core-length monotonicity = LRC(13)-escape + finite check, anchored by 1/13>14/183). Spot-checks:
+{1..11,13,84}=7/89, {1..14}\{7}=1/11, {1..10,13,14,84}=1/11 -- all >=14/183. So cont.67's "open residual" is NOT
+a new object; it is the mapped multi-killer seen through the 2-runner (co-binder-splitting) lens.
+
+THE NAIVE 1/15 REFUTATION IS DISPELLED. M=N/(a+b) (N=arc-gap numerator) raised a worry: {1,14} at Farey-neighbor
+arcs (N=1) balances at M=1/15<14/183 for {1..14}\{7}. If that were the family M it would refute the covering-min.
+It is not: {1..14}\{7} has M=1/11 at t*=3/22, bound by {8,14} NOT {1,14}. 1/15 is a LOCAL not global optimum. The
+lesson: M=min N/(a+b) is over the GLOBAL-optimum binding pair, which the equioscillation (all others >= M) selects;
+naive small pairs fail it (another runner cuts a deeper gap elsewhere). This is exactly why the covering-min stays
+at 14/183: only {1,182} binds at its own Farey-tight balance without another runner cutting deeper; splitting
+13/14 forces a shorter core whose runners cut deeper elsewhere, raising M.
+
+NET -- the covering-min lower bound is fully mapped (cont.55-68): (1) single-killer (co-binder=lcm-mult 182)
+PROVED + Lean (cont.60/61/66); (2) multi-killer = separate-13/14 (core<=11) enumerated + reduced (cont.58/59);
+(3) |core|>=2 & large core runners = opus equidistribution; (4) bounded = klein ILP<=182. The 2-runner extremal
+(cont.67) unifies the FRAMES but introduces no new CASES. The genuinely open analytic work is the |core|=1
+smooth-body discrepancy (cont.62/63) that opus's Fourier route targets; the structural skeleton is complete.
+
+Artifacts: reflection the-separate-13-14-residual-collapses-into-the-mapped-multi-killer-kps-S127; HYP-6244;
+lrc14_separate1314_kps_S127.py/out.
+
+Next: the structural skeleton of the covering-min is complete; the open piece is the |core|=1 smooth-body
+discrepancy (opus Fourier / mollification). Support that or the Lean assembly.
+
+---
+
 ## mac-mini-2026-07-13-S80 -- pursued the DELSARTE dual-existence idea concretely: a genuine LP-computable constructive certificate, knife-edge now COMPUTABLE, but EQUIVALENT to the finite-Vmax glue (= LRC14), not a way around it
 
 Prompt (owner): pursue the Delsarte dual-existence idea for the residue.

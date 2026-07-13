@@ -1,0 +1,17 @@
+<stdin>:43: SyntaxWarning: invalid escape sequence '\{'
+<stdin>:53: SyntaxWarning: invalid escape sequence '\{'
+(A) STRUCTURAL: over 64 primitive separate-13/14 covering families (outliers<=60):
+    MAX interval-core length = 9  => ALWAYS <= 11 (never 12, the single-killer core).
+    reason: 13u + 14w (2 distinct killer slots) + runner 1 + core = 13 runners => core has <=10 of {2..12}
+    so the full run {1..12} (needs 12) is impossible; separate-13/14 IS the multi-killer case (core<=11).
+    core-11 examples: []
+
+(B) M spot-check (>= 14/183 = 0.0765?):
+    {1..11,13,84} (tight multi-killer)         M=   7/89=0.07865  >=14/183
+    {1..14}\{7} (small 13,14; the 1/15 worry)  M=   1/11=0.09091  >=14/183
+    {1..10,13,14,84}?                          M=   1/11=0.09091  >=14/183
+
+=> the separate-13/14 'residual' (cont.67) is NOT a new open piece: it is FORCED to core<=11 = the
+   multi-killer case ALREADY mapped -- cont.58 (enumerated M>=7/89>14/183) + cont.59 (core-length
+   monotonicity = LRC(13)-escape + finite check). The naive {1,14}@1/15 refutation is dispelled
+   (those families are lonelier elsewhere: {1..14}\{7} has M=1/11 at 3/22, bound by {8,14} not {1,14}).
