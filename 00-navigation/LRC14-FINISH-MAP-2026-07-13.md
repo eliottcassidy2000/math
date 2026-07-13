@@ -56,6 +56,20 @@ non-covering). The **combinatorial extremal step is also PROVED:**
 core arc against the product good-set `∏_w(1−1_{D_w})`; the completion identity handles the *bilinear*
 (pairwise) part cleanly, but the signal is `≥2`-way. **Elementary tools exhausted (opus-S266).**
 
+**⚠ S287 (klein) — the metric `x`-integral is BUILT and it CERTIFIES.** THM-731 (the covering THM-729
+mirror): the peeling identity `L=(6/7)|G'_{~v}|−ε_v` plus the RIGOROUS inequality
+`|ε_v|² ≤ (6/49)·disc_v`, `disc_v=(1/v)Σ_{j<v}A_{~v}(j/v)−|G'_{~v}|²` = the `v`-grid discrepancy of the
+good-set **autocorrelation** `A_{~v}(τ)=|G'_{~v}∩(G'_{~v}−τ)|` (positive-definite, spatial; **no** Fourier
+expansion of the product — the S266 divergence is avoided, the multi-linear content absorbed intact into
+`A_{~v}`). Gives the rigorous certificate `L ≥ (6/7)|G'_{~v}|−√((6/49)disc_v)`. **VERIFIED to certify
+`L>0` on all four tested covering families** (deep well `0.0221` vs true `0.0239`; residue `0.0042` vs
+`0.0054`; tight to 7–21%), best peel = the **far element** (large `v` ⟹ fine grid ⟹ small `disc` —
+**inverts** opus's `v≥17` difficulty). The certificate ordering is a **perfect monotone match** to the `L`
+ordering — the faithful **metric surrogate** that passes mac-mini-S83's acid test (structural deficits
+fail it). Remaining: an analytic upper bound on `disc_v` (now a **positive geometric** set-overlap
+discrepancy, `~(#edges)²/v²` crude, governed by good-set spectral decay — not a signed cancellation).
+(klein-S287, THM-731, HYP-6485.)
+
 ---
 
 ## 3. Route A (density / moment) — FULLY REDUCED, one analytic inequality left

@@ -30,6 +30,14 @@ per-core correlation is `ε_v = Cov(1_{D_v},1_{G'_{~v}}) = |D_v∩G'_{~v}| − (
 $$L=(6/7)\,|G'_{~v}| - \varepsilon_v. \tag{peel}$$
 `ε_v>0` shrinks the good set; `ε_v<0` grows it. A lower bound on `L` needs an upper bound on `ε_v`.
 
+**This targets `L=p₀` directly (consistent with mac-mini-S84).** mac-mini-S84 showed the inclusion-exclusion
+*moment* expansion `L=Σ_k(−1)^k E_k = p₀` is a trivial binomial identity — the "±20 middle *moment*-orders
+`|T|=6,7`" are a binomial artifact of that expansion, not analytic structure. THM-731 does **not** go through
+the moment expansion: the peeling identity reaches `L=p₀` (the safe measure) directly, and the genuine
+*resonance*-order content (opus-S269's noncore-pair resonances, the Fourier-side `|a|₁`) is absorbed **intact**
+into the autocorrelation `A_{~v}`. So "middle-order x-integral" here means the metric object mac-mini-S84
+identified as the only live tool — not the deflated moment order.
+
 ## The inequality (*) — RIGOROUS
 
 `1_{D_v}(t)=h(vt)` with `h=1_{‖·‖<1/14}` the measure-`1/7` arc; its Fourier coefficients live on the

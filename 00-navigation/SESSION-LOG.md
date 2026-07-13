@@ -1,3 +1,22 @@
+## klein-2026-07-13-S287 -- BUILT the covering middle-order x-integral (THM-731): a POSITIVE-DEFINITE good-set autocorrelation-discrepancy bound that CERTIFIES L>0 on the covering-min extremals (tight to 7-21%) and PASSES mac-mini-S83's acid test (certificate ordering = L ordering, monotone). The metric door is open.
+
+Prompt (owner): build the middle-order x-integral for the covering side.
+
+BUILT the faithful THM-729 mirror on opus's per-core correlation ε_v=Cov(1_{D_v},1_{G'_{~v}}) (leave-one-out good set). Since 1_{D_v}(t)=h(vt), its spectrum lives on the v-grid vℤ ⟹ ε_v=Σ_{m≠0}ĥ(m)ĉ_{mv}; Cauchy-Schwarz + Wiener-Khinchin + Poisson v-grid sampling give the RIGOROUS bound (*) |ε_v|²≤(6/49)·disc_v, where disc_v=(1/v)Σ_{j<v}A_{~v}(j/v)−|G'_{~v}|²=Σ_{m≠0}|ĉ_{mv}|²≥0 is the v-grid DISCREPANCY of the good-set AUTOCORRELATION A_{~v}(τ)=|G'_{~v}∩(G'_{~v}−τ)| -- a POSITIVE-DEFINITE SPATIAL object, NO Fourier expansion of ∏(1−1_{D_w}) (the S266 divergence is entirely avoided; the multi-linear content absorbed intact into A_{~v}). Peeling identity L=(6/7)|G'_{~v}|−ε_v ⟹ RIGOROUS certificate L≥L_cert(v)=(6/7)|G'_{~v}|−√((6/49)disc_v).
+
+VERIFIED (NG=2²¹, 4 covering families) -- and it CERTIFIES:
+ - deep well {1..12,182}: L_cert=0.0221 (true .0239, gap 7%, best peel=182)
+ - near-AP residue {1..11,13,84}: 0.0042 (true .0054, 21%, peel 84)
+ - {2..14}: 0.0612 (~exact, peel 14) ; variant {1,3..13,182}: 0.0249 (true .0263, 5%)
+ALL FOUR certify L>0. Best peel = the FAR element (large v→fine grid→small disc) -- INVERTS opus's difficulty: the v≥17 core hardest for the cluster/Fourier route is EASIEST for the metric route (same far-element peel as the density row THM-710). ACID TEST PASSES: certificate ordering 0.0042<0.0221<0.0249<0.0612 = PERFECT monotone match to L ordering ⟹ correctly flags the residue as most-stuck, the ordering EVERY structural deficit gets WRONG (mac-mini-S83). It IS a measure of the good set, so of course it tracks L -- the faithful METRIC surrogate mac-mini proved no structural invariant can be.
+
+CONVERGENCE with mac-mini-S84 (pushed same time): S84 showed the MOMENT-expansion middle-order wall (S79) is a trivial binomial (L=p_0), red herring; the live tool is the x-integral. THM-731 targets L=p_0 DIRECTLY via peeling (never the moment expansion), absorbing the genuine RESONANCE-order content into A_{~v}. So S84 (clear the moment underbrush) + S287 (build+verify the x-integral) = the metric direction is not just live but CERTIFIES.
+
+REMAINING (VERIFIED→PROVED): an analytic UPPER bound on disc_v -- a POSITIVE geometric estimate (set-overlap discrepancy on a fine grid, disc_v=O((#edges)²/v²) crude, governed by good-set spectral/edge decay), NOT a signed cancellation. This is the honest metric target mac-mini-S83/S84 called for.
+
+FILES: THM-731; HYP-6485; reflection the-covering-middle-order-x-integral-is-a-good-set-autocorrelation-discrepancy-and-it-certifies-klein-S287; 04-computation/lrc14_covering_autocorr_leaveoneout_klein_S287.py(+out), lrc14_covering_autocorr_xintegral_klein_S287.py(+out); finish-map S287 block. -> opus (routes around HYP-6465), mac-mini (metric surrogate of HYP-6480, converges with S84), kps. Sent to opus+kps+mac-mini.
+
+---
 ## mac-mini-2026-07-13-S84 -- pursued the direct metric resummation: the moment-expansion 'middle-order wall' (S79) is TRIVIAL BINOMIAL (an artifact); the direct object is L=p_0. This CLEARS the moment-expansion red herring and SUPPORTS klein-S286's x-integral (the live metric direction)
 
 Prompt (owner): pursue the direct metric resummation of the middle-order cancellation.
