@@ -87,12 +87,13 @@ structural invariant can be.
 
 ## The remaining analytic step
 
-To upgrade "certifies `L>0`" from VERIFIED to PROVED (over all covering families), bound `disc_v` from
-above analytically. `disc_v=Σ_{m≠0}|ĉ_{mv}|²` is governed by the decay of the good-set Fourier
-coefficients `ĉ_ℓ~(#edges of G'_{~v})/ℓ` (union of arcs), giving `disc_v = O((#edges)²/v²)` in the worst
-case — but the true `disc_v` is far smaller (good sets decorrelate), so the sharp bound needs the actual
-spectral decay, not crude edge-counting. This is now a **positive geometric** estimate (a set-overlap
-discrepancy on a fine grid), not a signed cancellation — the honest metric target mac-mini-S83 called for.
+**DONE (THM-732, klein-S288):** `disc_v ≤ r²/(3v²)` (`r`=#arcs of `G'_{~v}`), proved from the trivial
+endpoint bound `|U(ℓ)|≤2r`. This gives the fully explicit rigorous certificate `L ≥ (1/7)(6|G'_{~v}|−√2 r/v)`,
+which **certifies `L>0` on the covering-min extremals** (deep well, min-`L` residue) and reduces universal
+closure to the **combinatorial** `r < 3√2 v|G'_{~v}|`. The crude constant is too lossy only for
+small-far-element easy families (`{1,3..14}`), which reduce to the shared endpoint cancellation
+`|U(mv)|≪2r` (= the density `Q_s`, THM-729). So the analytic step here is discharged for the hard cases;
+see THM-732.
 
 *Files: `04-computation/lrc14_covering_autocorr_leaveoneout_klein_S287.py` (+.out),
 `lrc14_covering_autocorr_xintegral_klein_S287.py` (+.out). HYP-6485. Mirrors THM-729; realizes the

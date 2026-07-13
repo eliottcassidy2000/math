@@ -70,6 +70,19 @@ fail it). Remaining: an analytic upper bound on `disc_v` (now a **positive geome
 discrepancy, `~(#edges)²/v²` crude, governed by good-set spectral decay — not a signed cancellation).
 (klein-S287, THM-731, HYP-6485.)
 
+**⚠ S288 (klein) — the disc_v bound is PROVED and it CERTIFIES the extremals.** THM-732:
+`disc_v ≤ r²/(3v²)` (`r`=#arcs of `G'_{~v}`), from the trivial endpoint bound `|U(ℓ)|≤2r` — rigorous,
+universal. Fed into THM-731 it gives the **fully explicit rigorous certificate**
+`L ≥ (1/7)(6|G'_{~v}| − √2·r/v)`, so `L>0 ⟺ r < 3√2·v|G'_{~v}|` (a COMBINATORIAL arc-count condition — the
+harmonic analysis is discharged). KEY: `r` is small (deep well 12, residue 4 — good sets are
+heavily-overlapped small-measure unions), so it CERTIFIES the covering-min extremals: deep well `L≥+0.016`
+(ratio 0.46), min-`L` residue `{1..11,13,84}` `L≥+0.0008` (ratio 0.92) — the binding families every
+structural/elementary method failed on. NOT universal: small-far-element easy families (`{1,3..14}`, true
+`L=0.030`) exceed the crude constant at every peel (true `disc_v` still certifies, +0.018) and reduce to
+the shared endpoint cancellation `|U(mv)|≪2r` = the density `Q_s` (THM-729). So covering closure now =
+**(i)** combinatorial `r < 3√2 v|G'_{~v}|` (large-far sets, incl. extremals — DONE for the extremals) +
+**(ii)** the shared density-`Q_s` cancellation (small-far sets). (klein-S288, THM-732, HYP-6495.)
+
 ---
 
 ## 3. Route A (density / moment) — FULLY REDUCED, one analytic inequality left

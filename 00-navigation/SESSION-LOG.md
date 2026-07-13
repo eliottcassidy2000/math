@@ -15,6 +15,25 @@ HONEST: the positive-definite x-integral is the right metric form (THM-729 autoc
 STATE: over S66-S85 I mapped the covering-min completely (rigidity PROVED THM-724/726, combinatorial inverse PROVED THM-730, residue reformulated + diagnosed, every structural idea severed, moment-expansion trivial), and now CONNECTED the near-AP residue to the fleet's live x-integral device. My structural mapping and the fleet's harmonic-analysis converge on ONE object: the positive-definite x-integral of the covering middle-order zero-coset sum on the near-AP residue = L=meas(G' cap middle)>0 = LRC(14). The device is klein's THM-729; the bound is opus/kps's live crux; I've supplied the near-AP connection + data.
 
 FILES: HYP-6500; 04-computation/lrc14_xintegral_nearAP_macmini_S85.py(+.out). -> opus/kps: the |core|=1 near-AP x-integral is L=meas(G' cap middle), danger-mass ~0.0612 near-constant; build the THM-729 autocorrelation lower bound on meas(G' cap middle) there.
+## klein-2026-07-13-S288 -- PROVED the analytic disc_v bound (THM-732): disc_v ≤ r²/(3v²) from the TRIVIAL endpoint bound |U|≤2r. Explicit rigorous certificate L≥(1/7)(6|G'_{~v}|−√2 r/v) CERTIFIES the covering-min extremals; the harmonic analysis becomes ARC-COUNTING. Good sets have few arcs (r≤12).
+
+Prompt (owner): prove the analytic disc_v bound.
+
+PROVED disc_v ≤ r²/(3v²): disc_v=Σ_{m≠0}|U(mv)|²/(2πmv)², U(ℓ)=Σ_p ε_p e(−ℓp) the good-set endpoint sum; the TRIVIAL triangle bound |U(ℓ)|≤2r (r=#arcs, 2r endpoints) + Σ_{m≠0}1/m²=π²/3 give disc_v≤(2r)²/(4π²v²)·(π²/3)=r²/(3v²). RIGOROUS, universal — nothing but the triangle inequality.
+
+Fed into THM-731 (L=(6/7)|G'_{~v}|−ε_v, |ε_v|≤√((6/49)disc_v)): the FULLY EXPLICIT rigorous bound
+   L ≥ (6/7)|G'_{~v}| − (√2/7)(r/v) = (1/7)(6|G'_{~v}| − √2 r/v),
+so L>0 ⟺ r < 3√2·v|G'_{~v}| — a COMBINATORIAL arc-count condition. The harmonic analysis mac-mini-S83 said we needed is DISCHARGED by a triangle inequality, provided the arithmetic (arc count vs peel size) is favourable.
+
+KEY FACT: r is SMALL. I'd assumed r~Σw≈78 (worst-case component count); actually deep-well base {1..12} has r=12, residue base {1..11,13} r=4, {2..13} r=2 — the good set is a small-measure set cut by heavily-overlapping constraints, so few arcs survive. Small r is exactly what the certificate needs.
+
+VERIFIED (NG=2²¹) — CERTIFIES the covering-min extremals: deep well {1..12,182} (proven global M-min, THM-724/726) L≥+0.016 (ratio 0.46); near-AP residue {1..11,13,84} (min-L |core|=1 body, kps cont.70) L≥+0.0008 (ratio 0.92, tight); {1..10,12,13,154} +0.040; {2..14} +0.032. These are the families EVERY structural surrogate (mac-mini-S80-83), the cluster/Mayer route (opus-S269), and every elementary bound FAILED on. A triangle inequality + small r + large far element closes them.
+
+LIMITATION (honest): for covering families with a SMALL far element + moderate |G'| (e.g. {1,3,4..14}, far elt 14, true L=0.030 — EASY) the crude r²/3v² exceeds the threshold at EVERY peel, though the TRUE disc_v (THM-731) certifies (+0.018 at v=8). The gap is the endpoint cancellation |U(mv)|≪2r that the crude bound discards = the SAME cancellation the density route needs for Q_s (THM-729). So the covering case splits: (i) large-far-element sets (incl. all extremals) closed by r²/3v² + combinatorial r<3√2 v|G'|; (ii) small-far-element easy sets need the shared density-Q_s cancellation or a compactness argument.
+
+NET: the analytic disc_v bound requested is PROVED; it discharges the covering-min extremals (real closure of the hardest cases by elementary means) and reduces the residual to (i) arc-counting + (ii) the shared THM-729 cancellation. Eighty sessions of 'the residue is irreducibly metric' meet a one-line triangle inequality that handles the residue — because the metric object disc_v, once built (THM-731), is governed by a small integer (the arc count).
+
+FILES: THM-732; HYP-6495; reflection the-disc-v-bound-is-arc-counting-not-analysis-and-the-good-sets-have-few-arcs-klein-S288; 04-computation/lrc14_disc_v_bound_klein_S288.py, lrc14_disc_v_census_klein_S288.py, lrc14_disc_v_failfamily_klein_S288.out (+outs); finish-map S288 block; THM-731 updated. -> opus/mac-mini/kps: covering extremals CERTIFIED; residual (ii) = your density Q_s (THM-729). Sent to all.
 
 ---
 ## klein-2026-07-13-S287 -- BUILT the covering middle-order x-integral (THM-731): a POSITIVE-DEFINITE good-set autocorrelation-discrepancy bound that CERTIFIES L>0 on the covering-min extremals (tight to 7-21%) and PASSES mac-mini-S83's acid test (certificate ordering = L ordering, monotone). The metric door is open.
