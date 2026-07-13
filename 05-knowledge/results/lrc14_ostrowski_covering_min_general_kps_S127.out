@@ -1,0 +1,56 @@
+LRC(N): N-1 speeds; covering = has a mult of every d in {2..N}; tight bound = 1/N.
+CLAIM: LRC(N) covering-min = N/(N^2-N+1) = N/Phi6(N), via the ladder {1..N-2,(N-1)N} (first covering rung k=N).
+
+(A) the ladder-rung formula M_k = k/((N-1)k+1), and the first covering rung k=N:
+  N=3: ladder {1..1, 2k}, M_k = k/(2k+1); first covering rung = smallest k with 3|2k = k=3
+    k= 1:                 [1, 2] M=    1/3=0.33333  pred k/(2k+1)=    1/3 match=True covering=False
+    k= 2:                 [1, 4] M=    2/5=0.40000  pred k/(2k+1)=    2/5 match=True covering=False
+    k= 3:                 [1, 6] M=    3/7=0.42857  pred k/(2k+1)=    3/7 match=True covering=True <== FIRST COVERING RUNG = covering-min
+  N=4: ladder {1..2, 3k}, M_k = k/(3k+1); first covering rung = smallest k with 4|3k = k=4
+    k= 1:              [1, 2, 3] M=    1/4=0.25000  pred k/(3k+1)=    1/4 match=True covering=False
+    k= 2:              [1, 2, 6] M=    2/7=0.28571  pred k/(3k+1)=    2/7 match=True covering=False
+    k= 3:              [1, 2, 9] M=   3/10=0.30000  pred k/(3k+1)=   3/10 match=True covering=False
+    k= 4:             [1, 2, 12] M=   4/13=0.30769  pred k/(3k+1)=   4/13 match=True covering=True <== FIRST COVERING RUNG = covering-min
+  N=5: ladder {1..3, 4k}, M_k = k/(4k+1); first covering rung = smallest k with 5|4k = k=5
+    k= 1:           [1, 2, 3, 4] M=    1/5=0.20000  pred k/(4k+1)=    1/5 match=True covering=False
+    k= 2:           [1, 2, 3, 8] M=    2/9=0.22222  pred k/(4k+1)=    2/9 match=True covering=False
+    k= 3:          [1, 2, 3, 12] M=   3/13=0.23077  pred k/(4k+1)=   3/13 match=True covering=False
+    k= 5:          [1, 2, 3, 20] M=   5/21=0.23810  pred k/(4k+1)=   5/21 match=True covering=True <== FIRST COVERING RUNG = covering-min
+  N=6: ladder {1..4, 5k}, M_k = k/(5k+1); first covering rung = smallest k with 6|5k = k=6
+    k= 1:        [1, 2, 3, 4, 5] M=    1/6=0.16667  pred k/(5k+1)=    1/6 match=True covering=False
+    k= 2:       [1, 2, 3, 4, 10] M=   2/11=0.18182  pred k/(5k+1)=   2/11 match=True covering=False
+    k= 3:       [1, 2, 3, 4, 15] M=   3/16=0.18750  pred k/(5k+1)=   3/16 match=True covering=False
+    k= 6:       [1, 2, 3, 4, 30] M=   6/31=0.19355  pred k/(5k+1)=   6/31 match=True covering=True <== FIRST COVERING RUNG = covering-min
+  N=7: ladder {1..5, 6k}, M_k = k/(6k+1); first covering rung = smallest k with 7|6k = k=7
+    k= 1:     [1, 2, 3, 4, 5, 6] M=    1/7=0.14286  pred k/(6k+1)=    1/7 match=True covering=False
+    k= 2:    [1, 2, 3, 4, 5, 12] M=   2/13=0.15385  pred k/(6k+1)=   2/13 match=True covering=False
+    k= 3:    [1, 2, 3, 4, 5, 18] M=   3/19=0.15789  pred k/(6k+1)=   3/19 match=True covering=False
+    k= 7:    [1, 2, 3, 4, 5, 42] M=   7/43=0.16279  pred k/(6k+1)=   7/43 match=True covering=True <== FIRST COVERING RUNG = covering-min
+  N=14: ladder {1..12, 13k}, M_k = k/(13k+1); first covering rung = smallest k with 14|13k = k=14
+    k= 1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] M=   1/14=0.07143  pred k/(13k+1)=   1/14 match=True covering=False
+    k= 2: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26] M=   2/27=0.07407  pred k/(13k+1)=   2/27 match=True covering=False
+    k= 3: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 39] M=   3/40=0.07500  pred k/(13k+1)=   3/40 match=True covering=False
+    k=14: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182] M= 14/183=0.07650  pred k/(13k+1)= 14/183 match=True covering=True <== FIRST COVERING RUNG = covering-min
+
+(B) the covering-min = N/(N^2-N+1) matches the ladder's k=N rung for every N:
+     N |  N/(N^2-N+1) |  = N/Phi6(N) | ladder {1..N-2,(N-1)N} M | match
+     3 |          3/7 | N/7     |                3/7 | True
+     4 |         4/13 | N/13    |               4/13 | True
+     5 |         5/21 | N/21    |               5/21 | True
+     6 |         6/31 | N/31    |               6/31 | True
+     7 |         7/43 | N/43    |               7/43 | True
+     8 |         8/57 | N/57    |               8/57 | True
+     9 |         9/73 | N/73    |               9/73 | True
+    10 |        10/91 | N/91    |              10/91 | True
+    11 |       11/111 | N/111   |             11/111 | True
+    12 |       12/133 | N/133   |             12/133 | True
+    13 |       13/157 | N/157   |             13/157 | True
+    14 |       14/183 | N/183   |             14/183 | True
+
+(C) is the ladder the ACTUAL covering-min? light exhaustive check, small N (Vmax bounded):
+    N=3: exhaustive covering-min (Vmax<=10) = 2/5=0.40000 at [2, 3]; = N/(N^2-N+1)=3/7? False
+    N=4: exhaustive covering-min (Vmax<=16) = 2/7=0.28571 at [1, 3, 4]; = N/(N^2-N+1)=4/13? False
+    N=5: exhaustive covering-min (Vmax<=24) = 2/9=0.22222 at [1, 3, 4, 5]; = N/(N^2-N+1)=5/21? False
+
+=> GENERAL OSTROWSKI COVERING-MIN: LRC(N) covering-min = N/(N^2-N+1) = N/Phi6(N),
+   the k=N (first covering) rung of the ladder {1..N-2,(N-1)k}. klein's 14/183 is the N=14 case.

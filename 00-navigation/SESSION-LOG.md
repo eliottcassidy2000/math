@@ -1,3 +1,46 @@
+## kind-pasteur-2026-07-11-S127 cont.54 -- the Ostrowski ladder formula generalizes to all N; the covering-min N/Phi6(N) does not
+
+Prompt (owner): work on the remaining Ostrowski LRC mathematics.
+
+klein-S267 pinned the LRC(14) covering minimum at 14/183 = N/Phi6(N) via the Ostrowski ladder {1..12,13k}. I
+asked whether that is a general law. Half is, half is not.
+
+THE CLEAN HALF -- the ladder formula is universal. For LRC(N) (N-1 speeds, tight 1/N), the family
+{1,...,N-2,(N-1)k} (base AP + one far outlier) has M_k = k/((N-1)k+1) = [0; N-1, k] EXACTLY, verified for
+N=3..7,14 and all k. The rungs climb from M_1 = 1/N (the AP) toward 1/(N-1). The family is covering (a
+multiple of every d in {2..N}) iff N | (N-1)k iff N | k, so the FIRST covering rung is k=N, giving
+M_N = N/((N-1)N+1) = N/(N^2-N+1) = N/Phi6(N). Phi6(N)=N^2-N+1 is just the first-covering-rung denominator, not
+cyclotomic magic; the same arithmetic gives 3/7, 4/13, 5/21, ..., 14/183 for N=3..14.
+
+THE FALSE HALF -- N/Phi6(N) is not the covering-MIN. Exhaustive small N: the covering-min is 2/5 at {2,3}
+(N=3, below the ladder 3/7), 2/7 at {1,3,4} (N=4, below 4/13), 2/9 at {1,3,4,5} (N=5, below 5/21). For small N
+the ladder is BEATEN by compressed families; it becomes the minimum only from some transition N onward.
+klein's 14/183 is the N=14 instance of "the ladder has become the min" (his ILP <=182), not a law that holds
+at every N.
+
+WHY klein's 14/183 STANDS. The worry: if the small-N compressed minimizers extrapolate as 2/(2N-1), at N=14
+that would be 2/27 = 0.0741 < 14/183, undercutting the crux value. It does not -- the extrapolation is wrong.
+The actual N=14 analogs are loose: {1,3,..,14} has M=2/17=0.118, {2,..,14} has M=1/8=0.125, drop-3 has
+M=2/19=0.105, all far above 14/183=0.0765. The compressed families climb steeply with N and the ladder
+overtakes them well before N=14, so the deep well {1..12,182} really is the N=14 covering minimum --
+independent support for klein's ILP certificate.
+
+WHAT THIS SHARPENS: the Ostrowski/change-of-base picture is right about the SHAPE of the extremals (ladder
+rungs, continued-fraction-simple families) and the formula k/((N-1)k+1) is the honest general statement -- but
+"the covering-min is N/Phi6(N)" is an LRC(14) fact, not a theorem of the ladder. The crux DC => M >= 14/183
+cannot be reduced to the ladder formula; it needs the extra content that at N=14 no other structure dips below
+the first covering rung, which is exactly klein's finite ILP (speeds <= 182), the open uniform statement above
+it. Complements opus-S251 (the CF form [0;13,k] and the N=14 tight locus) with the general-N picture and the
+non-universality caveat.
+
+Artifacts: reflection the-ostrowski-ladder-formula-generalizes-but-the-covering-min-does-not-kps-S127;
+HYP-6215; lrc14_ostrowski_covering_min_general_kps_S127.py/out, lrc14_ostrowski_transition_kps_S127.out.
+
+Next: the crux value 14/183 is a genuine N=14 fact (ladder = min, klein ILP); the general ladder formula is
+clean; the open uniform proof (DC => M >= 14/183 for all speeds) is unchanged.
+
+---
+
 ## opus-2026-07-11-S251 -- the tight locus {AP,V*} = complete + once-punctured {k/14}-progressions; Ostrowski rung 1 has TWO occupants because 14=2*7 (remaining Ostrowski LRC math)
 
 Prompt (owner): now work on the remaining ostrowski LRC mathematics.

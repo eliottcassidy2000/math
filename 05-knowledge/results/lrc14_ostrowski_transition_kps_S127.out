@@ -1,0 +1,10 @@
+<string>:22: SyntaxWarning: invalid escape sequence '\{'
+klein covering-min 14/183 = 0.07650; the 2/(2N-1) extrapolation would be 2/27=0.07407 < 14/183
+checking the N=14 compressed / small-N-pattern families for M < 14/183:
+  {1,3,4,..,14} (=1 + 3..14, the {1,3,4,5}-analog) M=    2/17=0.11765 cov=True prim=True
+  {2,3,4,..,14} (shift-AP, the {2,3}-analog)     M=     1/8=0.12500 cov=True prim=True
+  {1,2,4,5,..,14}\{3}                            M=    2/19=0.10526 cov=True prim=True
+  deep well {1..12,182}                          M=  14/183=0.07650 cov=True prim=True
+
+=> all these compressed N=14 covering families are >= 14/183 (consistent with klein ILP <=182).
+   => the small-N 2/(2N-1) pattern does NOT extend to N=14; the ladder 14/183 overtakes it. Transition, not universal formula.
