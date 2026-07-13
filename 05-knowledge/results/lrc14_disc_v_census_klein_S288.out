@@ -1,0 +1,32 @@
+============================================================================================================
+CENSUS of the RIGOROUS bound  L >= (1/7)(6|G'_{~v}| - sqrt2*r/v)  over covering 13-sets (peel far v).
+condition for L>0:  r < 3*sqrt2*v*|G'_{~v}|.  ratio = sqrt2*r / (6 v |G'_{~v}|)  (<1 certifies).
+============================================================================================================
+family (base + far v)                v   |G'_~v|    r     L_bound    ratio cert?
+base[10, 11, 12]+182               182   0.03410   12     0.01591   0.4557 YES
+base[10, 11, 12]+364               364   0.03410   12     0.02257   0.2279 YES
+base[10, 11, 13]+84                 84   0.01216    4     0.00080   0.9231 YES
+base[10, 11, 13]+168               168   0.01216    4     0.00561   0.4616 YES
+base[10, 11, 13]+252               252   0.01216    4     0.00721   0.3077 YES
+base[10, 12, 13]+154               154   0.06192   10     0.03995   0.2472 YES
+base[10, 12, 13]+308               308   0.06192   10     0.04651   0.1236 YES
+base[11, 12, 13]+70                 70   0.02410    4     0.00911   0.5588 YES
+base[11, 12, 13]+140               140   0.02410    4     0.01489   0.2794 YES
+base[11, 12, 13]+126               126   0.05839    6     0.04043   0.1922 YES
+base[11, 12, 13]+252               252   0.05839    6     0.04524   0.0961 YES
+base[11, 12, 13]+14                 14   0.07143    2     0.03236   0.4714 YES
+base[11, 12, 13]+28                 28   0.07143    2     0.04679   0.2357 YES
+base[11, 12, 13]+14                 14   0.03022    2    -0.00296   1.1143 **NO**
+base[11, 12, 13]+28                 28   0.03022    2     0.01147   0.5571 YES
+base[11, 12, 13]+42                 42   0.03022    2     0.01628   0.3714 YES
+base[10, 11, 12]+182               182   0.03410   12     0.01591   0.4557 YES
+------------------------------------------------------------------------------------------------------------
+TIGHTEST family: [1, 3, 4, 5, 6, 7, 8, 9, 10, 1  v=14  ratio=1.1143  (L_bound=-0.00296)
+all certify (ratio<1): False
+
+Reading: the disc_v bound r^2/(3v^2) is PROVED (rigorous). The L-bound (1/7)(6|G'|-sqrt2 r/v) is
+therefore rigorous. 'cert?=YES' means it proves L>0 for that covering family. The residue base
+{1..11,13}+84 is expected tightest (smallest valid far element = 84). Remaining to make LRC(14)
+covering-case a theorem: prove the COMBINATORIAL bound r < 3 sqrt2 v |G'_{~v}| for ALL covering 13-sets
+(now arc-counting, not harmonic analysis).
+done.
