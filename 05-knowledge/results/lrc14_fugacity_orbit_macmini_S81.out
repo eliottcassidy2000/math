@@ -1,0 +1,23 @@
+danger-count distribution p_x and Q_S(w)=E[w^X] structure:
+
+AP {1..13}: p0=L=0.00000, E[2^X]=Q(2)=103.56
+   p_x = 1:0.530 2:0.343 3:0.050 4:0.035 5:0.007 6:0.015 7:0.003 8:0.002 9:0.002 10:0.001 11:0.001 13:0.011
+   Q(w) real roots: [np.float64(0.0)]
+   root near w=0? [np.float64(0.0)]
+{1..11,13,84}: p0=L=0.00536, E[2^X]=Q(2)=63.45
+   p_x = 0:0.005 1:0.507 2:0.338 3:0.089 4:0.018 5:0.016 6:0.005 7:0.004 8:0.002 9:0.002 10:0.001 11:0.002 12:0.009 13:0.002
+   Q(w) real roots: [np.float64(-5.264), np.float64(-1.385), np.float64(-0.011)]
+   root near w=0? [np.float64(-0.0106)]
+deep well {1..12,182}: p0=L=0.02390, E[2^X]=Q(2)=68.64
+   p_x = 0:0.024 1:0.523 2:0.293 3:0.075 4:0.038 5:0.012 6:0.011 7:0.006 8:0.002 9:0.002 10:0.001 11:0.001 12:0.010 13:0.002
+   Q(w) real roots: [np.float64(-3.968), np.float64(-1.358), np.float64(-0.047)]
+   root near w=0? [np.float64(-0.0469)]
+{2..14}: p0=L=0.06122, E[2^X]=Q(2)=96.34
+   p_x = 0:0.061 1:0.380 2:0.443 3:0.045 4:0.032 5:0.006 6:0.004 7:0.012 8:0.002 9:0.001 10:0.001 13:0.010
+   Q(w) real roots: [np.float64(-1.272), np.float64(-0.685), np.float64(-0.213)]
+   root near w=0? NONE (p0>0, no root at 0)
+
+TOURNAMENT/ORBIT READ: AP p0=0 => Q has w=0 root (chi=2 equioscillation). Covering p0>0
+=> NO w=0 root. If the AP's root pattern were group-forced (R_13 orbit) and covering broke
+it NON-locally, that'd bypass the resummation. HONEST CHECK: is the covering p0>0 a
+group-rigidity consequence, or just = M>1/14 (the metric, order-forgets-metric)?
