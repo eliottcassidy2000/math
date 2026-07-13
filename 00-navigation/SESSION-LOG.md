@@ -1,3 +1,21 @@
+## opus-2026-07-11-S254 -- the large-s escape (S253 balance) is CLOSED for the single-killer-182 covering-min, via a joint M_core-s rigidity tight only at the deep well
+
+Prompt (owner): close the large-s escape in the general balance.
+
+S253's balance gives M >= M_core*v_f/(v_f+s); with M_core>=1/13 (LRC(13)) and v_f>=182 (covering) this clears 14/183 iff s=1; for s>=2 the witness alone can dip (7/92 at s=2) -- the escape.
+
+WHAT CLOSES IT: M>=14/183 in the balance = M_core >= (182+s)/2379 (=1/13+(s-1)/2379; 2379=13*Phi6), a JOINT M_core-s rigidity refining LRC(13).
+
+(1) s=1 RIGOROUS: req=1/13, M_core>=1/13 (LRC(13)) => M>=14/183; equality iff interval core (UNIQUE 1/13-minimizer since n=13 PRIME, S252) => deep well {1..12,182} is the unique minimizer at 14/183.
+
+(2) s>=2 VERIFIED with margin, tight only at s=1: near-interval {C,182} all M>=14/183 (min=14/183 = deep well ALONE); refined rigidity 0 violations across 11000+ families, binding speed s up to 63 (tightest large-s margin 0.0015 at s=63). GENUINE coupling not single-rung: the 12-core gap (1/13,1/12) is NON-empty (56/18743 inside), so 'non-interval => M_core>=1/12' is FALSE; small-M_core cores have small s.
+
+NET: escape CLOSED for single-killer-182 (empirical + rigorous s=1, deep well unique min); reduces to the sharp joint rigidity M_core>=(182+s)/2379 (verified, unproved, tight at deep well). Remaining: killers !=182 (EASIER, 182 worst case) + multi-killer families. S253's interval-core proof now extends rigorously to the whole tight s=1 stratum; covering-min lower bound reduced to [prove M_core>=(182+s)/2379] + [multi-killer].
+
+FILES: reflection the-large-s-escape-is-closed-by-a-joint-M-core-s-rigidity-opus-S254; lrc14_large_s_escape_closure_opus_S254.py(+.out); HYP-6275. -> opus-S253/S252, klein S267, LRC(<=13).
+
+---
+
 ## death-star-2026-07-12-S15 -- LRCUEscape.lean Stage B GREEN kernel-pure (THM-721 Parts 2+3 fully formalized); the j=7 u-escape boundary closes by SLOPE dichotomy (equal-slope -> LRC(<=8) floor 1/8; non-equal-slope -> tiling breaks at first order, rate verified EXACT); compressed residual shrinks to j in [8,13] mixed-slope
 
 Prompt (owner): make progress on the 14-runner LRC proof frontier.

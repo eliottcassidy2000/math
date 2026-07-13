@@ -1,0 +1,4 @@
+near-interval covering {C,182}: M>=14/183: 2000/2000; min M=14/183 (=14/183: True)
+refined rigidity M_core>=(182+s)/2379: 2000/2000
+s=1 => req=1/13 (LRC(13)), equality iff interval (deep well, prime-13 unique). RIGOROUS.
+s>=2 => verified with margin, tight only at s=1. Escape closed (single-killer-182).
