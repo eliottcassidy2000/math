@@ -173,3 +173,33 @@ opus-S253). Multi-killer rigidity is the remaining part of the full covering-min
 `lrc14_shallow_witness_verify_macmini_S69.py` (+`.out`). Credits: opus-S253 (balance,
 interval-core), mac-mini-S12/HYP-4382 (prime-13 tightness), kps-S127 (lcm-outlier, covering not
 dilation-invariant), THM-366 (non-covering sieve), THM-523 (target).
+
+
+## Addendum (mac-mini-2026-07-13-S71): the residual is EMPTY — a clean partition closes the single-killer case with NO gap
+
+The "near-tight non-dilated large-`s`" residual flagged above is **not** a genuine gap in the
+single-killer case; it was a scoping error. Partition primitive covering 13-sets by
+`r := #{v ∈ S : v ≥ 13}`:
+
+- **`r = 1` (the TRUE single-killer).** The other 12 elements are `≤ 12` and distinct, hence
+  **forced** to be exactly `{1,…,12}`. So `S = {1,…,12, v_f}` — the interval core is not a
+  choice but a consequence. Covering forces `13∣v_f` and `14∣v_f` (the core misses both), so
+  `182∣v_f`, `v_f ≥ 182`. Lemma 1 with `μ=1/13, s=1` gives the **closed-form**
+  `M(S) ≥ (1/13)·v_f/(v_f+1) ≥ 14/183`, equality iff `v_f=182`. **No dilated or non-interval
+  core is possible at `r=1`**, so Cases 2–3 and the residual do not arise here — the single
+  genuine single-killer sub-case is Case 1, and it is unconditional.
+
+- **`r ≥ 2`.** Two or more elements `≥ 13` ⟹ multi-killer (THM-726), `M ≥ 1/13 > 14/183`. Every
+  "dilated core" `c·{1,…,12}` (`c≥2`) has `6–10` elements `≥13` (verified: `c=2→6`, `c=3→8`,
+  `c=5→10`), so `r ≥ 7`: **the dilated/non-interval single-killer configs of Cases 2–3 are
+  exactly the `r≥2` multi-killer configs**, already covered (and Lemma 2's `1/13` agrees with
+  THM-726). The near-tight residual likewise lives at `r≥2` (a non-interval 12-core has an
+  element `≥13`, plus the killer `⟹ r≥2`).
+
+**Consequence.** The single-killer covering-min is **fully closed in closed form** (Case 1, no
+residual); Lemma 2 (shallow witness) and the stability discussion are subsumed by THM-726. The
+**sole remaining closed-form gap of the covering-min (HYP-2566) is the multi-killer case**
+`r≥2`, i.e. `M ≥ 1/13` for `≥2` outliers — where the balance provably undershoots (THM-726).
+Verified: all `r=1` primitive covering configs (`= {1..12, 182m}`) have `M ≥ 14/183`, min at the
+deep well; every dilated core is `r≥2` (`lrc14_clean_partition_macmini_S71`, `_stability_`,
+`_lrc13_stability_`). See HYP-6330.
