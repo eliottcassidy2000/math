@@ -1,3 +1,18 @@
+## mac-mini-2026-07-13-S77 -- PROVED THM-730, the Schur-triple inverse: T(A)<=C(k,2) equality iff dilated AP (the E3/Schur extremal step of the last inch; combinatorial door CLOSED)
+
+Prompt (owner): prove the Schur-triple inverse T(S)<=C(k,2) equality iff dilated AP.
+
+DONE -- THM-730, elementary and complete. For any k-set A of positive reals, T(A):=#{(a,b) in A^2 : a+b in A} <= C(k,2), equality iff A={d,2d,..,kd}.
+
+PROOF (clean): order A={a_1<..<a_k}; T(A)=Sum_c r_A(c), r_A(a_l)=#{i<l: a_l-a_i in A}. a+b=a_l with a,b>0 forces a,b<a_l => indices<l => r_A(a_l)<=l-1. Sum => T<=Sum(l-1)=C(k,2). EQUALITY iff r_A(a_l)=l-1 all l iff {a_l-a_i:i<l}={a_1..a_{l-1}} all l; taking minima => a_l-a_{l-1}=a_1 all l => constant gap => A={d,2d,..,kd}. Converse: dilated AP gives r_A(ld)=l-1 => equality. EXHAUSTIVELY verified k=3,4,5 (all subsets of [1..N], 0 violations, equality exactly at dilated APs).
+
+ROLE: this is opus-S182's E3/Schur target -- the correct THIRD-ORDER inverse (E2/additive-energy is translation-BLIND, verified S76; Schur is dilation-inv + translation-sensitive = L's symmetry). So the covering-min's combinatorial extremal step is PROVED: the AP is the unique additive-triple maximizer.
+
+HONEST SCOPE: THM-730 is a LEMMA, NOT LRC(14). The open remainder is the RESUMMATION: (1) quantitative deficit C(k,2)-T(S)>=phi(dist_AP)>0 (stability form); (2) THE OPEN MILE -- turn the Schur deficit into L(S)>0. L=Sum(-1)^k E_k is conditionally convergent (Bonferroni negative at every finite order); the single E3 deficit does NOT track L ({1..11,13,84} has largest E3-deficit yet smallest L). The sign/size of L needs the full Riesz resummation (opus THM-515). So: combinatorial door CLOSED, analytic door (resummation) is the sole thing left = HYP-2566/LRC(14).
+
+FILES: THM-730; 04-computation/lrc14_schur_inverse_proof_macmini_S77.py(+.out). CREDITS: opus-S182 (E3/Schur redirect = the target), S76 reflection (3rd-order localization), kps-S127/klein-S265 (scale fork). -> the last inch is now ONE analytic statement: the Riesz resummation of the proved Schur extremality into L>0.
+
+---
 ## mac-mini-2026-07-13-S76 -- worked the last inch CREATIVELY: it is THIRD-ORDER (E3/Schur, not E2/Freiman); my pairwise-blind finding CONVERGES with opus-S182's redirect; corpus sweep integrated
 
 Prompt (owner): work the last inch creatively; search back through past documents and explore for connections.
