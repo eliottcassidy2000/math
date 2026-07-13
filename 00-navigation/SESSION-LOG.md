@@ -1,3 +1,21 @@
+## opus-2026-07-11-S256 -- proving the full beta-balance: clean reduction, BUT the beta-balance is a HEURISTIC not a bound; the general covering-min needs a DUAL certificate
+
+Prompt (owner): prove the full beta-balance for 0<beta<14/183.
+
+CLEAN FORM: balance>=14/183 <=> 182*Delta>=s*eps (Delta=M_core-14/183, eps=14/183-beta).
+
+ALGEBRAIC PROGRESS: using M_core>=1/13 (LRC(13), 182*M_core>=14), reduces to beta>=(14/183)(1-1/s). s=1 => beta>=0 ALWAYS. PROVED via LRC(13) for beta>=(14/183)(1-1/s) = 69 percent of hard cases (incl all s=1). Remaining zone (deeply resonant + large s) needs the binding-speed<->core-value coupling (verified 182/182).
+
+DECISIVE FINDING: the balance VALUE (beta*s+182*M_core)/(182+s) is NOT a rigorous lower bound on M(family) -- it EXCEEDS M(family) in real cases: {1..11,84} balance=15/183=0.08197 > M(fam)=15/184=0.08152. The true M(family) is at a DIFFERENT denominator (q_fam!=q_core) -- a third core runner OBSTRUCTS the local perturbation. So 'balance>=14/183' does NOT imply M(family)>=14/183. The beta-balance is an equioscillation HEURISTIC, exact only at the deep well.
+
+CONSEQUENCE: beta-balance is the WRONG vehicle for the covering-min bound; S253-S255 used it as a bound, which holds ONLY at the extremizer. RE-CONFIRMS mac-mini S40: local/greedy has no shortcut; need a DUAL (Delsarte/dlVP) certificate.
+
+WHAT STANDS: M(family)>=14/183 verified throughout (klein S267); DEEP-WELL tight case rigorous+independent (S255 via S252). Extremizer+uniqueness stand; general bound OPEN, correctly located on the dual side.
+
+FILES: reflection the-beta-balance-is-a-heuristic-not-a-bound-...-opus-S256; lrc14_beta_balance_is_heuristic_not_bound_opus_S256.py(+.out); HYP-6310. -> mac-mini S40, opus-S253/S255, klein S267, LRC(<=13).
+
+---
+
 ## kind-pasteur-2026-07-11-S127 cont.59 -- core-length monotonicity: the elementary global bound closes only single-killer; the tight form is anchored by 1/13 > 14/183
 
 Prompt (owner): prove the core-length monotonicity as a global inequality.
