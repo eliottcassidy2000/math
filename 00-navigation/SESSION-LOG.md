@@ -15,6 +15,37 @@ RESIDUAL: (1) Weyl DISCREPANCY (density=1/7+eps; Erdos-Turan bounds it; observed
 NET: <=6-core anti-concentration HOLDS via equidistribution; rigor = Erdos-Turan discrepancy + runner-1 positional bound. Turns S258's 'loose hard' into a concrete FAVORABLE route to LRC(14) for covering families.
 
 FILES: reflection the-six-core-equidistributes-in-the-good-set-a-working-union-bound-correcting-S258-opus-S259; lrc14_six_core_equidistribution_union_bound_opus_S259.py(+.out); HYP-6365. -> opus-S258(corrected), s558o, opus-S255, opus-S241/S243, LRC(<=13).
+## kind-pasteur-2026-07-11-S127 cont.61 -- the GENERAL single-killer ladder, machine-checked (LRCSingleKillerLadder.lean)
+
+Prompt (owner): formalize the general single-killer ladder reach >= 14c/(182c+1).
+
+cont.60 (LRCDeepWellReach) certified reach({1..12,182}) >= 14/183 -- the deep well, c=1 only. This session
+formalizes the WHOLE ladder S_c = {1,...,12, 182*c} (c >= 1, killer = c*lcm(13,14)):
+
+  singleKiller_cover: the parametrized clearing certificate. For c >= 1, rotation 14c takes every runner of S_c
+    into the band [14c, (182c+1)-14c] mod q=182c+1 -- AP runner j -> 14jc in [14c,168c], killer 182c -> 168c+1
+    (upper edge = q-14c), via 182c == -1 (mod 182c+1). The parametrized twin of klein-S119's n^2==n-1 (mod Phi6)
+    at n=14; the defect congruence is Int.modEq_iff_dvd.mpr <1-14c, by ring> ((182c+1) | (168c+1)-182c*14c).
+  singleKiller_reach: reach(S_c) = sSup(margin S_c '' [0,1]) >= 14c/(182c+1) = [1/13]*(182c)/(182c+1), via the
+    cont.60 Fin 13 covering-reach atom reach_ge_of_covering13 at q=182c+1, rotation 14c, mu=14c.
+  singleKiller_reach_ge_floor: reach(S_c) >= 14/183 for EVERY c >= 1 (14c/(182c+1) >= 14/183 <=> 14 <= 14c <=>
+    c >= 1), tight only at the deep well c=1. So NO single-killer covering family -- extremal or not -- dips below
+    14/183: the ENTIRE single-killer class is closed in the reach API.
+
+All three theorems kernel-pure [propext, Classical.choice, Quot.sound], zero sorryAx; builds clean (8510 jobs).
+Wired into root (TournamentH7.lean) after LRCDeepWellReach. (One fix mid-build: div_le_div_iff is gone in current
+Mathlib -> used div_le_iff0/le_div_iff0, the names klein's files use.)
+
+This upgrades cont.60's single point (deep well) to the full single-killer ladder as a machine-checked family:
+reach(S_c) >= 14c/(182c+1) increasing in c, tight at c=1 (14/183), -> 1/13. Combined with cont.58 (multi-killer
+frontier closed by enumeration) and cont.59 (the honest reduction to LRC(13)-escape + finite check), the
+single-killer half of the covering-min WITNESS side is now fully formalized and kernel-pure.
+
+Artifacts: 04-computation/lean/TournamentH7/TournamentH7/LRCSingleKillerLadder.lean (3 kernel-pure theorems),
+wired to root. Builds on cont.60 (LRCDeepWellReach atom), klein-S119 (the n^2==n-1 congruence pattern).
+
+Next: the covering-min LOWER bound over ALL covering families remains open (multi-killer = LRC(13)-escape +
+finite check, cont.59); a Lean wiring of the multi-killer LRC(13)-escape base is a possible target.
 
 ---
 
