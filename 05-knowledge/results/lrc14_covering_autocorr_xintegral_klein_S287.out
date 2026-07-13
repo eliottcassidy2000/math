@@ -1,0 +1,28 @@
+==============================================================================================
+COVERING MIDDLE-ORDER x-INTEGRAL (THM-729 analogue): |eps_v|^2 <= (6/49)*[v-grid disc of A_G']
+A(tau)=meas(G' ^ (G'-tau)) good-set autocorrelation (positive-definite). NG=2097152, thr=1/14
+==============================================================================================
+
+deep well {1..12,182}   L~.024   |G'|=0.02390   mean-autocorr L^2=0.000571
+      v        eps_v      eps_v^2   (6/49)disc     disc_v  (*)
+      1    -0.003414    1.166e-05    2.856e-03  2.333e-02   OK
+    182    -0.003414    1.166e-05    3.381e-05  2.761e-04   OK
+   -> bound (*) holds for ALL cores: True ;  max disc_v=2.333e-02 ; sum eps_v^2=1.515e-04
+
+near-AP residue {1..11,13,84} L~.005   |G'|=0.00536   mean-autocorr L^2=0.000029
+      v        eps_v      eps_v^2   (6/49)disc     disc_v  (*)
+      1    -0.000765    5.856e-07    6.524e-04  5.328e-03   OK
+     13    -0.000765    5.856e-07    4.694e-05  3.834e-04   OK
+     84    -0.000765    5.856e-07    1.310e-05  1.070e-04   OK
+   -> bound (*) holds for ALL cores: True ;  max disc_v=5.328e-03 ; sum eps_v^2=7.613e-06
+
+==============================================================================================
+ACID TEST (mac-mini-S83): a METRIC object must rank the near-AP residue as MORE stuck (smaller L).
+   family                              |G'|      max_v disc_v   sum_v eps_v^2
+   deep well {1..12,182}   L~.024       0.02390   2.3327e-02   1.5152e-04
+   near-AP residue {1..11,13,84} L~.005 0.00536   5.3281e-03   7.6130e-06
+
+   Structural deficits get this WRONG (residue dominates deep well on Schur/Q2 yet has smaller L).
+   If disc_v / sum eps_v^2 is LARGER for the residue, the autocorrelation discrepancy is a
+   faithful METRIC surrogate (tracks L, not structure). If not, it inherits the same decoupling.
+done.
