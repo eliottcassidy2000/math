@@ -61,6 +61,19 @@ lrc14_two_runner_extremal_kps_S127.py/out.
 
 Next: the open residual (co-binder mult-of-14 + separate mult-of-13) = klein's clearing ILP + opus's Fourier;
 the proved single-killer half is unified across all three frames.
+## klein-2026-07-13-S282 -- the width-weighting TAMES the clustering (corrects S281) but the large-sieve family caps at Q_s=O(r²); the density saving needs genuine oscillatory WEYL cancellation (softer than covering, same category)
+
+Prompt (owner): prove the width-weighted 2nd moment bound (from S281/HYP-6425).
+
+CORRECTS S281 TWICE: (1) THIN arcs DOMINATE, not negligible — for diam 199, w=997, #thick=1/58 and thin·w²=2.21≈full 2.19. So Q_s is a WIDTH-WEIGHTED Weyl sum f̂(ℓw)=Σ_i w_i sinc(ℓw w_i)e(−ℓw c_i), each arc ∝ w_i (arc width). (2) The width-weighting DOES tame clustering: Montgomery–Vaughan off-diag Σ_i w_i²/δ_i (δ_i=nearest-nbr of {w c_i}) is BOUNDED ~5e-3, CONSTANT in r (r=3→81), while unweighted Σ1/δ_i blows up ∝r² (38→1e5). So the clustered arcs genuinely carry small weight — the width-weighted large sieve is NOT defeated by clustering.
+
+BUT STILL O(r²): MV (even with the sinc-dyadic refinement) gives Σ_{ℓ≠0}|f̂(ℓw)|²≤O(Σw_i²/δ_i·polylog)=O(1) — bounded in r but w-INDEPENDENT ⟹ Q_s=(2πw)²·O(1)=O(w²)=O(r²) on the peel w~r. NO saving. STRUCTURAL reason: the large-sieve family bounds Σ_ℓ|f̂(ℓw)|² by an ℓ-flat mean value, which cannot see the 1/w² decay the sharp Q_s=O(r) needs; the (2πw)² re-inflates any O(1) mean value back to O(w²).
+
+VERDICT: every soft tool now tried — crude Fourier O(r²), large sieve O(r³) (worse), MV, width-weighted MV — caps at O(r²). The O(r^{2−ε}) saving (all the density row needs, S281) requires the genuine OSCILLATORY (Weyl) cancellation of Σ_i w_i e(−ℓw c_i) = equidistribution of the arc midpoints under ×w, NOT merely their spacing. This is SOFTER than covering (any ε>0 vs sharp; 1-linear vs multi-linear Gowers) but the SAME category — a real equidistribution estimate the large-sieve toolbox provably does not reach.
+
+HONEST STATE: density route reduced as far as mean-value/large-sieve methods go; the last inch is genuine Weyl cancellation — a real analytic task, not another one-session reduction. Rigorous chain intact (THM-710/727/728/729, crude O(r²), any-ε-suffices); sharp Q_s=O(r) confirmed empirically (S280); width-weighting tames clustering (this session). Fleet note: do NOT keep trying large-sieve variants (exhausted).
+
+FILES: reflection the-large-sieve-family-is-exhausted-for-density-the-saving-needs-genuine-weyl-cancellation-klein-S282; HYP-6440; lrc14_thin_thick_klein_S282.py, lrc14_mv_weighted_klein_S282.py (+outs). -> THM-729/728/727, HYP-6425/6415, mac-mini-S78.
 
 ---
 

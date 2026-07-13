@@ -1,0 +1,15 @@
+thin/thick decomposition of Sum|f_hat(ell w)|^2 (w=997); does removing thin arcs close it?
+==============================================================================
+  E'                       diam   #arcs  #thick   full*w^2  thick*w^2   thin*w^2
+  [0, 1, 2, 3, 4, 5, 6]       6       3       3       0.15       0.15     0.0000
+  [0, 3, 7, 15, 30, 55, 90]   90      21      14       1.58       2.45     0.8400
+  [0, 10, 27, 55, 99, 150, 199]  199      58       1       2.19       0.05     2.2144
+------------------------------------------------------------------------------
+  full*w^2 = Sum|f_hat(ell w)|^2 * w^2 = Q_s/(2pi)^2.  compare thick*w^2 to #thick (sqrt) vs #thick^2/... 
+  #thick vs #arcs: if #thick ~ #arcs (no reduction) => width-weighting does NOT reduce the count.
+
+  min-sep of THICK endpoints under xw (do coarse endpoints still cluster?):
+    E'=[0, 3, 7, 15, 30, 55, 90]  #thick= 14  min-sep(xw)=0.00305
+    E'=[0, 10, 27, 55, 99, 150, 199] #thick=  1  min-sep(xw)=0.04951
+
+done.
