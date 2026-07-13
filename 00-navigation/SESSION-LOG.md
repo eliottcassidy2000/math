@@ -1,3 +1,37 @@
+## kind-pasteur-2026-07-11-S127 cont.69 -- SUPPORT opus's L2 large-sieve route: pin the true worst |core|=1 discrepancy energy
+
+Prompt (owner): support the |core|=1 smooth-body discrepancy route.
+
+opus-S267 reduced LRC(14)-covering to a tight L2 large-sieve energy bound: Sum|eps| <= sqrt(core*Sum eps^2), so
+it suffices core*Sum eps^2 < (6/7)^2 = 0.735; opus reported the energy <= 0.328 (comfortable). Computing the
+TRUE worst case supports and CORRECTS this.
+
+WORST-CASE CORRECTION: over |core|=1 covering bodies, the max energy is 0.60, NOT 0.328 -- at B={2..11,13,84},
+i.e. the family {1..11,13,84} = the MULTI-KILLER covering-min minimizer (M=7/89). There coreCover=0.9197 (exactly
+mac-mini-S74's runner-1 0.92, confirming that figure IS coreCover=|D_1 cap G'|/|G'|), eps_1=0.777, |G'|=0.0666.
+So opus's 0.328 is a NON-worst sample; the true margin to 0.735 is THIN: 0.13 (square), 0.08 in Sum|eps| (0.777
+vs 6/7=0.857).
+
+CRUDE BESSEL FAILS: (6/49)/|G'| = 1.84 >> 0.735, 3.05x loose (matches opus's 3.1x). So the tight large-sieve is
+NECESSARY and must gain ~2.5x, while the actual energy sits only 0.13 below the ceiling -- no slack to spare.
+
+KEY STRUCTURAL INPUT: the worst-DISCREPANCY body (multi-killer {1..11,13,84}, coreCover 0.92) is NOT the
+worst-LONELINESS body (deep well {1..12,182}, coreCover 0.72, M=14/183). DIFFERENT extremizers. So opus's tight
+large-sieve should be CALIBRATED against {1..11,13,84} (good set |G'|=0.067, single concentrated arc), not the
+deep well; the shorter core (2..11 + split 13,84) leaves a smaller, more arc-concentrated good set pushing
+coreCover -> 1.
+
+NET: opus's L2 route is SOUND (actual 0.60 < 0.735, LRC holds with Sum|eps|=0.777<6/7) but has no slack to
+spare; the concrete target for the last open analytic step is now pinned -- worst body {1..11,13,84}, thin
+margin 0.13, 2.5x gain over crude Bessel needed.
+
+Artifacts: reflection support-opus-L2-route-the-worst-core1-body-is-the-multikiller-minimizer-margin-thin-kps-S127;
+HYP-6246; lrc14_L2energy_worstcase_kps_S127.py/out.
+
+Next: opus's tight large-sieve estimate on Sum_v <g(v.),1_G'>^2, calibrated against {1..11,13,84}.
+
+---
+
 ## klein-2026-07-13-S284 -- CONSOLIDATED the LRC(14) finish-map (canonical, supersedes 07-11): both routes' cores PINNED and UNIFIED — LRC(14) = one equidistribution cancellation in two forms, density is the softer face, elementary tools exhausted on both
 
 Prompt (owner): consolidate the LRC(14) finish-map.

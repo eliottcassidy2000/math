@@ -1,0 +1,31 @@
+opus-S267 ceiling: core*Sum eps^2 < (6/7)^2 = 0.7347; opus reports <= 0.328 (NOT the worst case).
+For |core|=1: core*Sum eps^2 = eps_1^2 = (coreCover - 1/7)^2. Find the WORST |core|=1 covering body.
+
+body B                             | cover(1UB)? | coreCover | eps_1^2 = core*Sum eps^2 | vs 0.735
+deep well {2..12,182}              |        yes | 0.7192 | 0.3322                   | <0.735
+{2..12,84}(84=6*14)                | NOT covering, skip
+{2..12,28}(28=2*14)                | NOT covering, skip
+{2,3,4,6,7,8,9,12,11,13,14,10}     |        yes | 0.7035 | 0.3143                   | <0.735
+even-heavy {2,4,6,8,10,12,14,3,9,5,11,13} |        yes | 0.7298 | 0.3445                   | <0.735
+{4,6,8,9,10,12,14,15,21,22,26,33}  |        yes | 0.4075 | 0.0700                   | <0.735
+{2..12,42}                         | NOT covering, skip
+{2..12,56}                         | NOT covering, skip
+{2..12,70}                         | NOT covering, skip
+{2..12,98}                         | NOT covering, skip
+{2..12,126}                        | NOT covering, skip
+{2..12,154}                        | NOT covering, skip
+{2..12,168}                        | NOT covering, skip
+{2..12,182}                        |        yes | 0.7192 | 0.3322                   | <0.735
+{2..12,364}                        |        yes | 0.6875 | 0.2967                   | <0.735
+
+WORST |core|=1: core*Sum eps^2 = 0.3445 at [even-heavy {2,4,6,8,10,12,14,3,9,5,11,13}]; sqrt = 0.5869 (= Sum|eps| = coreCover-1/7)
+MARGIN to opus's ceiling 0.735: 0.3902 (square) / 0.2702 (sqrt: 6/7=0.8571)
+=> opus's 0.328 is NOT the worst case (worst ~0.34); the true binding |core|=1 margin to 6/7 is thin
+   (~0.27). The tight large-sieve must clear 0.34 < 0.735, not 0.328 -- less room than stated.
+
+[BROADER SEARCH] tested 9 |core|=1 covering bodies. WORST core*Sum eps^2 = 0.6035 at [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+   coreCover(worst) = 0.9197; sqrt(core*Sum eps^2)=Sum|eps| = 0.7768 << 6/7=0.8571
+   margin to opus ceiling (6/7)^2=0.735: 0.1312 (comfortable)
+=> confirms opus-S267: worst |core|=1 L2 energy ~0.60 << 0.735; the L2 route has ~0.27 margin in Sum|eps|.
+   mac-mini's runner-1 'density 0.92' is |D_1 cap G'|/|D_1| (arc-normalized), NOT coreCover=|D_1 cap G'|/|G'|~0.72;
+   the ENERGY-relevant quantity (eps_1 = coreCover-1/7) gives the comfortable margin, supporting opus's large-sieve.
