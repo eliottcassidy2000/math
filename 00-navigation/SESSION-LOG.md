@@ -1,3 +1,18 @@
+## mac-mini-2026-07-13-S79 -- worked the residue: DIAGNOSED corrsum>-1 as a MIDDLE-ORDER-dominated resummation (+-20 cancelling to -1 at the AP); THM-730's order-3 is a minor term; the residue is irreducibly LRC(14). Constructive arc closed at its honest boundary.
+
+Prompt (owner): work the one bounded inequality that is the residue.
+
+The residue is corrsum(S)>-1 for near-AP covering S = the covering case of LRC(14). I could not prove it; I DIAGNOSED why it resists, which is genuine understanding.
+
+THE DIAGNOSTIC (verified): corrsum = Sum_{j>=2} INT e_j(g) (e_j = elem symm poly of the 13 recentred safe-indicators). Order-decomposition for the AP {1..13}: e2=+0.83, e3=-4.42, e4=+8.72, e5=-15.5, e6=+20.1, e7=-19.7, e8=+14.5, ..., e13=-0.01. The magnitudes PEAK IN THE MIDDLE (|T|=6,7 ~ +-20) and cancel to EXACTLY -1. Partial sums oscillate (+0.83,-3.59,+5.13,-10.39,...) settling only at J~12. So corrsum(AP)=-1 is a 13-ORDER CONSPIRACY dominated by MIDDLE orders.
+
+CONSEQUENCE: THM-730 (order-3 Schur, e3=-4.42) is a MINOR term in a +-20 middle-order cancellation. Covering reduces the MIDDLE orders (deep well e6=12.1 vs AP 20.1) => corrsum -1->-0.82. So the covering deficit is dominantly MIDDLE-order, not order 3. The S76 "3rd-order" fact = where SEPARATION first appears; the resummation MAGNITUDE = middle-order. Proving corrsum>-1 needs |T|~6-7 control of a +-20 cancellation => NO bounded-order (Schur-only) argument works. Irreducibly LRC(14).
+
+THE ARC'S HONEST TERMINUS: [covering-min rigidity PROVED+certified, THM-724/726] + [averaging era over, S76] + [combinatorial inverse PROVED, THM-730] + [resummation = bounded corrsum>-1, HYP-6430] + [diagnosed middle-order-dominated, this]. The residue is a +-20 middle-order cancellation staying strictly >-1 for near-AP covering perturbations = the Lonely Runner Conjecture's first open case. It will NOT fall to order-truncation or averaging; a genuinely new idea is required. This closes the constructive arc at its honest boundary -- I am not going to manufacture a proof of LRC(14).
+
+FILES: HYP-6440; 04-computation/lrc14_corrsum_order_macmini_S79.py(+.out). -> the residue is fully diagnosed and cleanly stated; the next mover needs a non-order-truncated, non-averaging idea (the fleet's dormant menu: Delsarte dual-existence, Stern-Brocot tower, tournament chi=2 orbit-rigidity).
+
+---
 ## opus-2026-07-11-S265 -- the runner-1 positional lemma splits MEASURE U EQUIDISTRIBUTION (500/500, zero residual), completing a full LRC(14) case skeleton on covering families
 
 Prompt (owner): prove the runner-1 positional lemma for speed-1 covering families.
