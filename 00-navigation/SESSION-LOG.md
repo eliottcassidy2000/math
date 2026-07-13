@@ -17,6 +17,23 @@ FILES: 00-navigation/LRC14-FINISH-MAP-2026-07-13.md; reflection lrc14-is-one-equ
 
 ---
 
+## mac-mini-2026-07-13-S81 -- pursued the tournament chi=2 orbit-rigidity via the FUGACITY POLYNOMIAL Q_S(w)=E[w^X]; obstructed by order-forgets-metric (tournament w=2 and LRC w=0 are disconnected fugacities), precisely located
+
+Prompt (owner): pursue the tournament chi=2 orbit-rigidity idea.
+
+Pursued via the fugacity polynomial (the concrete lever from ROUTE 5's reversed-fugacity duality). X(t)=danger count, p_x=meas{X=x}, Q_S(w)=E[w^X]=Sum p_x w^x. Then L(S)=Q_S(0)=p_0 (LRC) and tournament H~Q_S(2)=E[2^X] (all factorial moments).
+
+FINDINGS (verified): (1) AP MAXIMIZES Q(2)=E[2^X] (103.6 vs covering 63-96) -- the tournament/regularity-extremal fact ("AP is Paley for the runner tournament", kps-S13), PROVABLE. (2) AP MINIMIZES Q(0)=p_0=L=0 (w=0 is a ROOT of Q_AP = the chi=2 equioscillation signature, X never 0). (3) Covering pushes the w=0 root LEFT to w<0 (root ~ -2*p_0, trivial linear approx).
+
+THE OBSTRUCTION (order-forgets-metric, MADE PRECISE): Q(2) (tournament, snapshot at t*) and Q(0) (LRC, metric loneliness) are the SAME polynomial at DIFFERENT fugacities; the AP is extremal for both but there is NO group-rigidity bridge linking them. The tournament chi=2 is the AP's SNAPSHOT; p_0=Q(0) is METRIC (=M>1/14), not determined by the snapshot (mac-mini-S57, klein-S270). So AP-maximizes-Q(2) (provable via regularity) does NOT transfer to covering-p_0>0.
+
+VERDICT: the tournament chi=2 orbit-rigidity is OBSTRUCTED by order-forgets-metric -- the fugacity polynomial shows the tournament and loneliness sides are disconnected. Value: Q_S(w)=E[w^X] is the clean object unifying both frames and it LOCATES the wall exactly (the fugacity gap 0->2). Like Delsarte (S80, equivalent to finite-Vmax), another dormant thread pursued with an honest no-bypass verdict.
+
+STATUS OF THE DORMANT MENU: Delsarte (S80) = equivalent to finite-Vmax glue; tournament chi=2 (this) = obstructed by order-forgets-metric; Stern-Brocot inductive tower = unpursued. Two of three lead back to the covering-min / are obstructed. The pattern is firm: certificate/moment/tournament frames all reduce to inf L>0 (metric) = LRC(14), and the tournament frame is provably disconnected from the metric by order-forgets-metric.
+
+FILES: HYP-6460; 04-computation/lrc14_fugacity_orbit_macmini_S81.py(+.out). -> only the Stern-Brocot inductive tower remains untried among the dormant threads; but the metric covering-min (inf L>0, corrsum>-1, middle-order) is the irreducible residue, and no snapshot/certificate/moment idea reaches it. The honest frontier remains a genuinely new metric-structural idea.
+
+---
 ## kind-pasteur-2026-07-11-S127 cont.68 -- the separate-13/14 residual collapses into the mapped multi-killer
 
 Prompt (owner): work the separate-13/14 multi-killer residual (the open case cont.67 identified: 13 and 14 by
