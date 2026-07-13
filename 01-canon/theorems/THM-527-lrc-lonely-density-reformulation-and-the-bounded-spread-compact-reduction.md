@@ -270,7 +270,7 @@ orbit at step `s = frac(d x)`. As `x` sweeps `[0,1)`, `s` sweeps `[0,1)` uniform
 mu_10=557/2205, mu_13=829/4620`), **decreasing but `>= mu_13 = 829/4620 = 0.1794 > 0`** for all
 `m <= 13`. By Weyl (fast `dx` vs slow `x, px`), `rho*(E_d) -> meas(G_P)*mu_m` minus a single-`p`
 gap-split (`~6%`), giving `rho*(near-AP) >= c0 > 0` **uniformly in `d`**. Verified: `rho* = 0.187`
-flat across `d=20..400` (spread `180..3600`) and across four `(A,p,P)` shapes (`HYP-6260`,
+flat across `d=20..400` (spread `180..3600`) and across four `(A,p,P)` shapes (`HYP-6266`,
 `lrc14_nearAP_factorization_macmini_S67`).
 
 So the large-spread half splits cleanly: **density** (`rho* >= c0`, d-independent, here, via
