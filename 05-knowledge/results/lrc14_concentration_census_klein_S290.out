@@ -1,0 +1,27 @@
+=== multi-small-element reduction check (peel T={1..s}) ===
+  S=[1, 90, 91, 92, 93, 94, 95, 96 s=1 |G(C)|=0.14165 |G(T)|=0.85714  L_red=0.074877  L_full=0.074877  match=True
+  S=[1, 2, 90, 91, 92, 93, 94, 95, s=2 |G(C)|=0.15855 |G(T)|=0.78571  L_red=0.058059  L_full=0.058059  match=True
+  S=[1, 2, 3, 90, 91, 92, 93, 94,  s=3 |G(C)|=0.18286 |G(T)|=0.69048  L_red=0.044051  L_full=0.044051  match=True
+
+=== concentration-ratio census: {1}UC, conc = |Gc cap[0,1/14)|/(|Gc|/14); L>0 iff conc<7 ===
+  C={2..13} |Gc|=0.07143 conc.ratio=7.000 L({1}UC)=0.000000 -
+  C={3..14} |Gc|=0.11525 conc.ratio=5.165 L({1}UC)=0.030219 cov
+  C={4..15} |Gc|=0.13961 conc.ratio=4.417 L({1}UC)=0.051517 cov
+  C={5..16} |Gc|=0.15894 conc.ratio=3.854 L({1}UC)=0.071436 cov
+  C={7..18} |Gc|=0.16569 conc.ratio=3.497 L({1}UC)=0.082925 cov
+  C={9..20} |Gc|=0.14845 conc.ratio=3.630 L({1}UC)=0.071462 cov
+  C={12..23} |Gc|=0.13625 conc.ratio=3.537 L({1}UC)=0.067412 cov
+  C={15..26} |Gc|=0.13283 conc.ratio=3.262 L({1}UC)=0.070921 -
+  C={20..31} |Gc|=0.14387 conc.ratio=3.408 L({1}UC)=0.073824 cov
+  C={30..41} |Gc|=0.14220 conc.ratio=3.345 L({1}UC)=0.074259 -
+  C={45..56} |Gc|=0.14358 conc.ratio=3.295 L({1}UC)=0.076001 cov
+  C={70..81} |Gc|=0.14202 conc.ratio=3.235 L({1}UC)=0.076391 cov
+  C={90..101} |Gc|=0.14165 conc.ratio=3.300 L({1}UC)=0.074877 cov
+  C={120..131} |Gc|=0.14124 conc.ratio=3.295 L({1}UC)=0.074748 cov
+  -> MAX conc.ratio=7.000 (C base=2, L=0.000000, noncov); #(conc>=7)=1/14
+
+=== candidate bound: |Gc cap[0,1/14)| vs 13/(14 cmax) + |Gc|/14  (first-window + uniform) ===
+  C={30..41} near0=0.033972  cand=0.032805 (13/14cmax=0.022648 + |Gc|/14=0.010157)  near0<=cand? False
+  C={45..56} near0=0.033787  cand=0.026837 (13/14cmax=0.016582 + |Gc|/14=0.010255)  near0<=cand? False
+  C={70..81} near0=0.032817  cand=0.021608 (13/14cmax=0.011464 + |Gc|/14=0.010145)  near0<=cand? False
+  C={90..101} near0=0.033389  cand=0.019312 (13/14cmax=0.009194 + |Gc|/14=0.010118)  near0<=cand? False

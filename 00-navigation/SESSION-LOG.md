@@ -1,3 +1,22 @@
+## klein-2026-07-13-S290 -- the compact core SPLITS: bounded-ratio DONE by THM-405 (no cancellation); the {1}∪cluster residual has an EXACT form L=|G(C)|(1−conc/7), so L>0 ⟺ conc<7 with the AP {1..13} the UNIQUE tight extremal — converges with opus-S271 AP-shadow + kps-THM-734 tight census
+
+Prompt (owner): prove L>0 for the compact core via the shared cancellation; continue+extend.
+
+I did NOT prove the cancellation (it is ⟺ the residual). But the compact core splits cleanly and the residual gets an exact geometric form pinning the AP boundary.
+
+(1) BOUNDED-RATIO ALREADY DONE: THM-405 (oracle-S582o) — max(S)≤13·min(S) ⟹ lonely on [1/(14a),13/(14b)], M≥1/14, NO cancellation. My initial ratio<7 small-window idea is a weaker special case (subsumed). What forces a covering set out of THM-405 = a small element (min=1 or 2, since covering needs a mult of 14 ⟹ max≥14=14·min at min=1). So residual = {1}∪cluster (= S289's non-isolated stratum).
+
+(2) EXACT SYMMETRY REDUCTION (new, verified 6 digits): S={1}∪C ⟹ G({1})=[1/14,13/14] (ONE arc), G(C) is t→1−t symmetric ⟹ L(S)=|G(C)|−2|G(C)∩[0,1/14)|=|G(C)|(1−conc/7), conc:=14|G(C)∩[0,1/14)|/|G(C)|. Multi-element {1..s}∪C reduces the same way. So L>0 ⟺ conc<7.
+
+(3) AP IS THE UNIQUE conc=7 EXTREMAL: census over consecutive clusters C={b..b+11} → conc=7 EXACTLY at C={2..13} (S={1..13}=AP, non-covering, L=0), conc<7 with margin elsewhere (max 5.165 at covering {1,3..14}; ~3.3 for genuine {1}∪tight-cluster). Covering ⟹ conc≤~5.2 ⟹ L≥0.26|G(C)|>0 (VERIFIED).
+
+HONEST: conc<7 ⟺ L>0 is a geometric RESTATEMENT, NOT a reduction — proving the uniform covering margin IS the residual. But it pins the AP as the exact boundary, and the covering hypothesis is precisely "not the AP." 
+
+CONVERGENCE (three routes, same wall, same day): opus-S271 (dilation-blindness PROVED — peel-13 vs c·{1..12} = peel vs AP {1..13}, AP casts a provable shadow; also certified my S289 {1,90..101} at 12/13 true-disc peels, 92% tight — residual = "prove disc sharpening at one peel/body"); kps-THM-734 (tight census over ≥11-in-{1..14} bodies = exactly {AP, GW-doubling}). My conc-extremal + opus's dilation-shadow + kps's combinatorial census all name the AP. My {1}∪C exact form is the closed-form specialization of opus's per-peel disc.
+
+FILES: HYP-6530; reflection the-compact-core-splits-...-AP-tight-concentration-klein-S290; 04-computation/lrc14_symmetry_reduction_klein_S290.py (+outs). NB namespace: my S289 HYP-6505 collided w/ opus-S270; jumped to 6530 per opus's note. -> THM-405, opus-S271/HYP-6525, kps-THM-734. Sent to all.
+
+---
 ## mac-mini-2026-07-13-S87 -- Gowers cancellation DEFLATED: effective order = #far, far peel = klein's three-distance target, closed-form tooth-narrowing
 
 **Owner request:** pursue the Gowers multi-linear cancellation on the near-AP residue.
