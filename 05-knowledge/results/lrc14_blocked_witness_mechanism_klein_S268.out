@@ -1,0 +1,44 @@
+================================================================================
+(1) t=1/14 BLOCKED for DC (a 14-multiple at residue 0); reachable for tight non-DC
+================================================================================
+  AP {1..13} (tight, non-DC)         DC=False has-14-mult=False  min_i||v_i/14|| = 1/14 = 0.0714  <- t=1/14 gives 1/14
+  GW {1..11,13,24} (tight, non-DC)   DC=False has-14-mult=False  min_i||v_i/14|| = 1/14 = 0.0714  <- t=1/14 gives 1/14
+  kps 2-block {1,2,3,4,10..18}       DC=True  has-14-mult=True   min_i||v_i/14|| = 0 = 0.0000  <- t=1/14 BLOCKED
+  compressed 2*{1..12}u{13}          DC=True  has-14-mult=True   min_i||v_i/14|| = 0 = 0.0000  <- t=1/14 BLOCKED
+  deep well {1..12,182}              DC=True  has-14-mult=True   min_i||v_i/14|| = 0 = 0.0000  <- t=1/14 BLOCKED
+
+================================================================================
+(2)+(3) each family's M is achieved at argq; band-edge ceil(q/14)/q DECREASES in q
+================================================================================
+  family                                     M  argq ceil(argq/14)/argq qmin_clear
+  AP {1..13} (tight, non-DC)              1/14    14       1/14=0.0714       None
+  GW {1..11,13,24} (tight, non-DC)        1/14    14       1/14=0.0714       None
+  kps 2-block {1,2,3,4,10..18}            1/12    24       1/12=0.0833         24
+  compressed 2*{1..12}u{13}               1/13    26       1/13=0.0769         26
+  deep well {1..12,182}                 14/183   183     14/183=0.0765         27
+  => the DEEP WELL achieves M at a LARGE argq (183); kps's 2-block at SMALL argq (24).
+     Since ceil(q/14)/q decreases in q, the LARGE-argq family (deep well) has the SMALLEST M.
+
+================================================================================
+(4) THE 'STUCK' PROPERTY: the deep well does NOT clear at small q (where 2-block does)
+================================================================================
+  q= 15 (band radius 1, band-edge 2/15=0.1333):  deep-well clears=NO;  2-block clears=NO
+  q= 16 (band radius 1, band-edge 2/16=0.1250):  deep-well clears=NO;  2-block clears=NO
+  q= 20 (band radius 1, band-edge 2/20=0.1000):  deep-well clears=NO;  2-block clears=NO
+  q= 24 (band radius 1, band-edge 2/24=0.0833):  deep-well clears=NO;  2-block clears=p=5
+  q= 26 (band radius 1, band-edge 2/26=0.0769):  deep-well clears=NO;  2-block clears=p=5
+  q= 27 (band radius 1, band-edge 2/27=0.0741):  deep-well clears=p=2;  2-block clears=p=4
+  deep well's smallest clearing q = 27  (STUCK at large q => small M=14/183)
+  2-block's smallest clearing q   = 24  (clears early => larger M=1/12)
+
+================================================================================
+UNIFIED PICTURE / CORRECTION of kps cont.52
+================================================================================
+  kps mechanism (CORRECT): DC => t=1/14 blocked => coarser witness => M > 1/14.
+  kps extremization (BACKWARDS): 'worst DC bottoms at q=24 => 1/12'. FALSE.
+  band-edge ceil(q/14)/q DECREASES in q => M is MINIMIZED by the family stuck at the
+  LARGEST q. The deep well {1..12,182} clears ONLY at q=183 (182=13*14 blocks every small q),
+  so covering-min = 14/183 << 1/12. kps's 2170-family hunt found only small-q_min families.
+  Number line (all DC): 14/183=0.07650 < 1/13=0.07692 < 3/37=0.08108 < 1/12=0.08333
+
+done.

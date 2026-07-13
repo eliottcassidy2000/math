@@ -106,7 +106,20 @@ for speeds `≤ 182` (HYP-3779 ILP; reconfirmed + CRT-escape-extended this sessi
 `14/183` among 249 speed-`>182` families); single-killer shape `M ≥ 2/27` (THM-526). OPEN residuals:
 unbounded clearing window (HYP-6120), CRT-escape tail speeds `> 182` (HYP-3745), large-diameter
 incoherent `j≥7` stratum (boxeph-S19). **Sharpest statement: LRC(14) ⟺ every primitive covering
-13-set has `M ≥ 14/183`, the first covering Ostrowski rung.** (klein-S267, HYP-6180.)
+13-set has `M ≥ 14/183`, the first covering Ostrowski rung.** (klein-S267, HYP-6195.)
+
+**⚠ S268 unification (klein) — the blocked witness.** kps cont.52's mechanism is right and worth
+keeping: `M = 1/14` is realized only at `t = 1/14`; both tight families (AP, GW) are non-covering and
+reach it there, while every DC family has a multiple of 14 that sits at residue 0 at `t=1/14` — so
+**`t=1/14` is BLOCKED for DC**, forcing a coarser witness, hence `M > 1/14`. But kps's value `1/12` is
+backwards: `M = ⌈argq/14⌉/argq` at the best witness `argq` (band-edge, tight at extremals — 2-block
+`argq=24→1/12`, deep well `argq=183→14/183`), and `⌈q/14⌉/q` **decreases** within each tooth, so the
+covering-min is the DC family whose best witness is pushed to the **largest** `argq` — the deep well,
+blocked at every small `q` and forced to `argq = 183 = Φ₆(14)`, giving `14/183`, not the small-`q`
+2-block (`1/12`). So kps's blocked witness and the S267 Ostrowski rung are one phenomenon: the
+covering constraint blocks the fine witness `q=14` and pushes the family to the first covering rung
+`q=183`. Cleaner crux form: **every primitive covering family's best coarser witness satisfies
+`⌈argq/14⌉/argq ≥ 14/183`** (deep well = boundary, `argq=183`). (klein-S268, HYP-6200.)
 
 ## The unification and the honest assessment
 
