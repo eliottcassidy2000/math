@@ -1,0 +1,14 @@
+level 1/14=0.07143. coreCover=|G' cap D1|/|G'| (want <1); outside=1-coreCover=the LRC margin.
+body                             | |G_body| | coreCover | outside(margin) | LRC ok?
+deep well {2..12,182}            |  0.08512 |   0.7193 |        0.02389 | yes
+{2..12,364}                      |  0.08904 |   0.6876 |        0.02782 | yes
+{2..12,26}(=2*13)                |  0.06593 |   0.9167 |        0.00549 | yes
+{2..12,28}(=2*14)                |  0.08512 |   0.7193 |        0.02389 | yes
+{3,4,5,6,7,8,9,10,11,12,13,14}   |  0.11525 |   0.7378 |        0.03022 | yes
+{2,4,6,8,10,12,14,3,9,5,11,13}   |  0.08389 |   0.7298 |        0.02267 | yes
+
+MIN outside-margin over these = 0.00549 at [{2..12,26}(=2*13)]
+READING: coreCover ~0.90-0.97 (<1 always, LRC holds) but CLOSE to 1; the good set is mostly inside
+runner-1's arc, poking out by only ~2-8%. The measure |G'|<<|D_1| gives NO slack -- the positive margin
+is a fine LOCATION fact (the small good set crosses ||t||=1/14). This is exactly opus's discrepancy/
+mollification target: prove coreCover<1 = the ~2-8% poke-out is genuinely positive for ALL smooth bodies.

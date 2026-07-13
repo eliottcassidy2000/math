@@ -1,0 +1,17 @@
+level = 1/14 = 0.07143; runner-1 arc |D_1| = 1/7 = 0.14286
+CLAIM to test: |G'| > 1/7 for every smooth body B (=> M({1}UB) >= 1/14, LRC(14) for |core|=1).
+
+body B (12 non-core)               | 1UB cover? | |core(1UB)| |  |G_body| | > 1/7?
+deep well body {2..12,182}         |       True |           1 |   0.08512 | NO <<<
+ladder S_2 body {2..12,364}        |       True |           1 |   0.08904 | NO <<<
+{2..12, 84} (lcm12,14)             |      False |           1 |   0.08852 | NO <<<
+{2..12, 156}(lcm12,13)             |      False |           1 |   0.08355 | NO <<<
+{2,3,4,6,8,9,10,12,14,7,11,13}     |       True |           1 |   0.08704 | NO <<<
+even-heavy {2,4,6,8,10,12,14,3,9,5,11,13} |       True |           1 |   0.08389 | NO <<<
+{4,6,8,9,10,12,14,15,21,22,26,33}  |       True |           1 |   0.10772 | NO <<<
+
+min |G_body| over these = 0.08355 at [{2..12, 156}(lcm12,13)]; threshold 1/7 = 0.14286
+independent model (6/7)^12 = 0.15727 (> 1/7 by 0.01441)
+
+=> if min |G'| > 1/7 holds universally, the |core|=1 residual is CLOSED for LRC(14) by a clean
+   MEASURE bound (no discrepancy/mollification needed). The margin is thin -- test the extremal hard.

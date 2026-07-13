@@ -1,3 +1,45 @@
+## kind-pasteur-2026-07-11-S127 cont.63 -- the MEASURE route fails for core-runner-1; the crux is the anti-correlated poke-out
+
+Prompt (owner): attack the general core-runner-1 case with arbitrary smooth body.
+
+SETUP: a core-runner-1 covering family = {1}uB, B = 12 non-core runners (each ÷ a prime <=13). Runner 1 is bad on
+a SINGLE arc D_1=(-1/14,1/14), |D_1|=1/7. Body good set G'={t: ||b t||>=1/14 for all b in B}.
+
+THE CLEAN IDEA (would sidestep opus's discrepancy machinery entirely): if |G'| > 1/7 = |D_1|, then G' cannot fit
+inside D_1, so there is t in G'\D_1 where EVERY runner (incl. runner 1) is lonely => M({1}uB) >= 1/14 => LRC(14).
+A pure MEASURE bound would close the whole |core|=1 residual.
+
+IT FAILS. Computed |G'| ~ 0.08-0.11 << 1/7 = 0.143 for EVERY smooth body (deep-well body {2..12,182}=0.085,
+{2..12,364}=0.089, even-heavy=0.084). The independent model gives (6/7)^12=0.157 > 1/7, but the real bodies sit at
+~0.54x that: the 12 13-smooth runners are STRONGLY ANTI-CORRELATED -- their bad sets (centred at k/b_i for small
+primes) interleave and cover efficiently, shrinking the good set below independence. So the measure sign is
+BACKWARDS (|G'| < |D_1|); G' fits inside the arc with room to spare. The measure route is dead.
+
+WHAT IT REVEALS: the good set is small and mostly INSIDE runner-1's arc; loneliness comes from the thin part of
+G' that pokes past ||t||=1/14. coreCover=|G' cap D_1|/|G'| ~ 0.72-0.74 on tested covering bodies (up to 0.92,
+mac-mini's tightest), always <1 but the absolute poke-out is ~10^-2. There is NO measure cushion; the positive
+margin is entirely about WHERE the small anti-correlated good set sits relative to 1/14 -- a fine LOCATION fact,
+exactly opus's discrepancy/mollification target (S259/260/261), not a mass statement.
+
+THE REFRAME: coreCover=1 <=> the 12 smooth 1/14-collars COVER runner-1's good region [1/14,13/14]; LRC <=> they
+leave a gap. Total collar measure 12/7 = 2x the interval (measure permits covering), so the obstruction is
+arithmetic: the collars pile up near 0 and cover the far interval inefficiently. A covering-system-flavored
+statement (cf. the project's q-covering language), a possible alternative to the Fourier route -- the 13-smooth
+centres cannot tile [1/14,13/14].
+
+NET: the measure shortcut is REFUTED (saves the fleet a natural but doomed approach); the residual is
+irreducibly the fine location fact. The structural half (deep well, single-killer ladder) stays pinned and
+Lean-formalized (cont.60/61); this half is analytic (opus) and now has its measure shortcut ruled out + a
+covering reframe.
+
+Artifacts: reflection the-measure-route-fails-for-core-runner-1-the-crux-is-the-anticorrelated-poke-out-kps-S127;
+HYP-6232; lrc14_core1_good_measure_kps_S127.py/out, lrc14_core1_margin_kps_S127.out.
+
+Next: the covering reframe (12 13-smooth collars can't cover [1/14,13/14]) as an alternative to opus's Fourier;
+or continue the structural/Lean thread.
+
+---
+
 ## mac-mini-2026-07-13-S75 (cont.) -- accepted the certified-complete state; wrote the COVERING-MIN SYNTHESIS reflection
 
 Prompt (owner): accept the certified-complete state and write the covering-min synthesis reflection.
