@@ -1,0 +1,83 @@
+============================================================================================================
+NON-ISOLATED SWEEP: true-disc THM-731 all-peel certificates.  L >= M731/7 ; certifies iff M731>0
+(crude M732 shown for contrast; klein-S289: crude fails on non-isolated).  NG=2^21
+============================================================================================================
+
+compressed 2{1..12}u{13}      iso=1.09  true L=0.017050   cert-731 at 8/13 peels (crude at 0/13)
+   best peel v=16 (r=18, |G'|=0.06155, disc=1.380e-02): M731=0.08156 -> L >= 0.011651  [true 0.017050]
+
+M141 extremal M=3/37          iso=1.15  true L=0.021799   cert-731 at 10/13 peels (crude at 0/13)
+   best peel v=17 (r=14, |G'|=0.05405, disc=6.484e-03): M731=0.12707 -> L >= 0.018153  [true 0.021799]
+
+klein cex far-cluster         iso=1.01  true L=0.074877   cert-731 at 12/13 peels (crude at 0/13)
+   best peel v=92 (r=148, |G'|=0.09231, disc=8.795e-04): M731=0.48122 -> L >= 0.068745  [true 0.074877]
+
+klein cex {1,2,3,50..59}      iso=1.02  true L=0.040653   cert-731 at 11/13 peels (crude at 0/13)
+   best peel v=58 (r=96, |G'|=0.06304, disc=2.103e-03): M731=0.26593 -> L >= 0.037990  [true 0.040653]
+
+klein limitation {1,3..14}    iso=1.08  true L=0.030219   cert-731 at 10/13 peels (crude at 0/13)
+   best peel v=8 (r=6, |G'|=0.07541, disc=1.777e-02): M731=0.12597 -> L >= 0.017996  [true 0.030219]
+
+consecutive {2..14}           iso=1.08  true L=0.061224   cert-731 at 13/13 peels (crude at 1/13)
+   best peel v=14 (r=2, |G'|=0.07143, disc=1.946e-08): M731=0.42823 -> L >= 0.061175  [true 0.061224]
+
+random DC Vmax<=26 #1         iso=1.04  true L=0.056630   cert-731 at 12/13 peels (crude at 0/13)
+   best peel v=25 (r=18, |G'|=0.08335, disc=3.149e-03): M731=0.36266 -> L >= 0.051809  [true 0.056630]
+
+random DC Vmax<=26 #2         iso=1.04  true L=0.126900   cert-731 at 13/13 peels (crude at 0/13)
+   best peel v=25 (r=22, |G'|=0.14889, disc=1.445e-03): M731=0.80021 -> L >= 0.114316  [true 0.126900]
+
+random DC Vmax<=26 #3         iso=1.08  true L=0.058930   cert-731 at 11/13 peels (crude at 0/13)
+   best peel v=22 (r=26, |G'|=0.11646, disc=2.049e-02): M731=0.34813 -> L >= 0.049733  [true 0.058930]
+
+random DC Vmax<=26 #4         iso=1.09  true L=0.088775   cert-731 at 13/13 peels (crude at 0/13)
+   best peel v=14 (r=22, |G'|=0.15024, disc=2.200e-02): M731=0.53811 -> L >= 0.076873  [true 0.088775]
+
+random DC Vmax<=26 #5         iso=1.09  true L=0.049814   cert-731 at 13/13 peels (crude at 0/13)
+   best peel v=24 (r=20, |G'|=0.07011, disc=2.419e-03): M731=0.30017 -> L >= 0.042881  [true 0.049814]
+
+random DC Vmax<=26 #6         iso=1.04  true L=0.072778   cert-731 at 12/13 peels (crude at 0/13)
+   best peel v=23 (r=28, |G'|=0.09460, disc=2.294e-03): M731=0.45028 -> L >= 0.064326  [true 0.072778]
+
+random DC Vmax<=26 #7         iso=1.13  true L=0.052022   cert-731 at 11/13 peels (crude at 0/13)
+   best peel v=14 (r=24, |G'|=0.11040, disc=2.230e-02): M731=0.29659 -> L >= 0.042370  [true 0.052022]
+
+random DC Vmax<=26 #8         iso=1.09  true L=0.059473   cert-731 at 13/13 peels (crude at 0/13)
+   best peel v=14 (r=24, |G'|=0.11898, disc=1.959e-02): M731=0.37101 -> L >= 0.053002  [true 0.059473]
+
+random DC Vmax<=26 #9         iso=1.08  true L=0.078272   cert-731 at 12/13 peels (crude at 0/13)
+   best peel v=21 (r=14, |G'|=0.10399, disc=2.312e-03): M731=0.50617 -> L >= 0.072309  [true 0.078272]
+
+random DC Vmax<=26 #10        iso=1.04  true L=0.094728   cert-731 at 13/13 peels (crude at 0/13)
+   best peel v=22 (r=28, |G'|=0.14669, disc=1.409e-02): M731=0.58932 -> L >= 0.084189  [true 0.094728]
+
+random DC Vmax<=26 #11        iso=1.08  true L=0.096192   cert-731 at 13/13 peels (crude at 1/13)
+   best peel v=17 (r=8, |G'|=0.12496, disc=3.791e-03): M731=0.59894 -> L >= 0.085562  [true 0.096192]
+
+random DC Vmax<=26 #12        iso=1.18  true L=0.075114   cert-731 at 12/13 peels (crude at 0/13)
+   best peel v=19 (r=20, |G'|=0.10098, disc=2.962e-03): M731=0.47256 -> L >= 0.067509  [true 0.075114]
+
+============================================================================================================
+SUMMARY   (iso = max/secondmax; klein classifier: crude fires iff isolated)
+body                            iso     true L    731 peels    732 peels  best M731
+compressed 2{1..12}u{13}       1.09   0.017050         8/13         0/13    0.08156
+M141 extremal M=3/37           1.15   0.021799        10/13         0/13    0.12707
+klein cex far-cluster          1.01   0.074877        12/13         0/13    0.48122
+klein cex {1,2,3,50..59}       1.02   0.040653        11/13         0/13    0.26593
+klein limitation {1,3..14}     1.08   0.030219        10/13         0/13    0.12597
+consecutive {2..14}            1.08   0.061224        13/13         1/13    0.42823
+random DC Vmax<=26 #1          1.04   0.056630        12/13         0/13    0.36266
+random DC Vmax<=26 #2          1.04   0.126900        13/13         0/13    0.80021
+random DC Vmax<=26 #3          1.08   0.058930        11/13         0/13    0.34813
+random DC Vmax<=26 #4          1.09   0.088775        13/13         0/13    0.53811
+random DC Vmax<=26 #5          1.09   0.049814        13/13         0/13    0.30017
+random DC Vmax<=26 #6          1.04   0.072778        12/13         0/13    0.45028
+random DC Vmax<=26 #7          1.13   0.052022        11/13         0/13    0.29659
+random DC Vmax<=26 #8          1.09   0.059473        13/13         0/13    0.37101
+random DC Vmax<=26 #9          1.08   0.078272        12/13         0/13    0.50617
+random DC Vmax<=26 #10         1.04   0.094728        13/13         0/13    0.58932
+random DC Vmax<=26 #11         1.08   0.096192        13/13         1/13    0.59894
+random DC Vmax<=26 #12         1.18   0.075114        12/13         0/13    0.47256
+
+bodies failing ALL peels under TRUE disc: 0 / 18
+done.

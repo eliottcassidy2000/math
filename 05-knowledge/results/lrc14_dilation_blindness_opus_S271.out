@@ -1,0 +1,25 @@
+C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\lrc14_dilation_blindness_opus_S271.py:23: SyntaxWarning: invalid escape sequence '\{'
+  dilation-BREAKING peel (peel an even element: rest = 2({1..12}\{k}) u {13} is not a dilate).
+====================================================================================================
+DILATION-BLINDNESS THEOREM -- exact verification (all Fractions)
+====================================================================================================
+
+(i) measure invariance: |G'_{1..12}| = 6617/194040 ; |G'_{2{1..12}}| = 6617/194040 ; |G'_{3{1..12}}| = 6617/194040
+    equal: True / True
+    interval counts: r(R)=12, r(2R)=24, r(3R)=36  (r scales with c; measure does not)
+
+(iii) disc transport  disc_v(cR) = disc_{v/gcd(c,v)}(R):
+   disc_13(2R) = disc_13(R)   [c=2,v=13,g=1: BLIND]      EQUAL   (lhs=104999803919/6363107150400=1.650134e-02)
+   disc_16(2R) = disc_8(R)    [c=2,v=16,g=2: descent]    EQUAL   (lhs=58355323/18825760800=3.099759e-03)
+   disc_24(2R) = disc_12(R)   [c=2,v=24,g=2: descent]    EQUAL   (lhs=63212201/37651521600=1.678875e-03)
+   disc_13(3R) = disc_13(R)   [c=3,v=13,g=1: BLIND]      EQUAL   (lhs=104999803919/6363107150400=1.650134e-02)
+
+COROLLARY (AP-shadow, forced by soundness since L({1..13}) = 0):
+   disc_13({1..12}) = 104999803919/6363107150400 = 1.650134e-02
+   6 |G'_{1..12}|^2 = 43784689/6275253600 = 6.977358e-03
+   forced inequality disc_13 >= 6|G'|^2 : HOLDS  (ratio 2.365)
+
+   => the peel-13 certificate is <= 0 for EVERY body c*{1..12} u {13}, gcd(c,13)=1 --
+      an infinite family of provably blind perspectives; mid-band certificates must use
+      dilation-BREAKING peels.  (Matches S270 survey: peel 13 fails, peels 8..24 certify.)
+done.

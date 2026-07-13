@@ -1,5 +1,15 @@
 # Investigation Backlog
 
+## Lead opus-2026-07-13-S271: the COMPRESSED TOWER c{1..12}u{13} -- infinite residual family, monotone margins, uniform-in-c closure sketched
+- **Source:** HYP-6525 (dilation-blindness theorem + tower scan); HYP-6520 (non-isolated sweep 0/18 fail); MISTAKE-141.
+- **Status:** OPEN (uniform closure), binding case c=2 exact-certified. Best peel always v=8c; margins
+  monotone 0.0816 (c=2) -> 0.1701 (c=12). Peel-13 provably blind for ALL c (AP-shadow, HYP-6525).
+- **Next step:** prove the c-uniformity: split the Bernoulli jump-pair sum into [dilate-dilate block:
+  transports to modulus 8 vs {1..12}minus{8}, c-independent] + [13-13 + cross blocks: c mod 91
+  quasi-periodic] and control the EXPOSURE variation (which endpoints survive changes with c) --
+  likely a finite check over c mod lcm + a monotonicity/equidistribution error O(1/c). Then the same
+  template for other near-dilate towers (kps exposure-collapse machinery is the tool).
+
 ## Lead opus-2026-07-13-S270: the MID-BAND Dedekind-collapse gap is QUANTIFIED (target for kps HYP-6495)
 - **Source:** HYP-6510 peel survey; THM-731/732 (klein S287/288); kps-S128 Dedekind-collapse reservation; MISTAKE-141 (compressed near-dilate = bounded-DC floor).
 - **Status:** OPEN, quantified. The mid-band body 2{1..12}u{13} (no far element) fails crude THM-732 at

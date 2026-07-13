@@ -11,6 +11,46 @@ RESULTS: (1) ZERO covering L=0 pairs -- THM-734 established. (2) TIGHT CENSUS: e
 HONEST SCOPE + THE FAILED LEG (documented): the crude P1/P2 COMPOSITION for three-scale bodies ({1..10,c,a,b}, c,a,b all large) FAILS in the clustered regime c~a (worked the asymptotics: r_{c,a} ~ 3.14 a m0 vs 3sqrt2 m_{c,a} (a+1) ~ 2.42 a m0) -- consistent with klein-S289's isolation classifier (crude cert fires iff far element isolated; their counterexample {1,90..101} has <=1 speed in {1..14}, OUTSIDE my region -- no conflict). So the multi-scale stratum needs the sharp disc rate (disc~r/v^2, klein-S280 verified) or opus-S270's per-peel exact-disc certificates. [B] residue after this session: k<=8 multi-killer (>=3 outliers >14, loose per cont.58, M>=2/23) + multi-scale/non-isolated stratum + Lean.
 
 FILES: THM-734 (PROVED); 04-computation/lrc14_thm734_body_sweep_kps_S128c2.py(+.out); backlog lead item (i) marked done + multi-scale notes; finish-map S128-cont.2 block. -> klein (your S289 isolation wall and my region partition are complementary and now exactly delimited: bounded+2-slot = closed, non-isolated = yours), opus (S270's exact-disc per-peel device is the named tool for the multi-scale leg), kps-Lean (THM-733/734 boxes are decide-style; 245,994 rational sweeps).
+## opus-2026-07-13-S271 -- the NON-ISOLATED residual is TRUE-DISC-CERTIFIABLE (0/18 fail, incl. BOTH klein-S289 counterexamples at 11-12/13 peels) + DILATION-BLINDNESS THEOREM proved (peel-v is blind to pure dilates; AP-shadow forces the compressed body's peel-13 failure for ALL c) + compressed-tower scan (margins MONOTONE in c, binding c=2 already exact-certified)
+
+Prompt (owner): keep working the mid-band residual with the perspective frame.
+
+State inherited: kps-S128 closed the ISOLATED-far regime (exact-Q Dedekind certificates, both extremal
+rays, all {1..11,a,b}); klein-S289 honest negative (crude arc-count bound FALSE; classifier =
+far-element isolation = the S270 frozen-fan/sweeper dichotomy); open residual = NON-ISOLATED bodies.
+
+1. NON-ISOLATED SWEEP (HYP-6520): 18 bodies (compressed near-dilate, M141 extremal M=3/37, klein's
+   {1,90..101} and {1,2,3,50..59}, 12 random primitive DC Vmax<=26, all iso<=1.18). TRUE-disc THM-731
+   certifies EVERY body at 8-13 of 13 peels (crude: 0-1/13). klein's decisive counterexample
+   {1,90..101}: 12/13 peels, best v=92, L>=0.0687 vs true 0.0749 (92%). Weakest body in the class =
+   the compressed near-dilate (8/13, 68%) = the bounded-DC floor, as it should be. CONSEQUENCE: the
+   residual is NOT a certificate gap; it is exactly proving kps's Dedekind/exposure collapse at ONE
+   peel per body, with 8-13x slack in which peel.
+
+2. DILATION-BLINDNESS THEOREM (HYP-6525, PROVED + exact-verified): for pure-dilate rest c*R, peel v,
+   g=gcd(c,v): |G'_{cR}|=|G'_R|, disc_v(cR)=disc_{v/g}(R). At g=1 the peel-v perspective CANNOT
+   distinguish cR from R. COROLLARY (AP-shadow): peel-13 vs c*{1..12} = peel-13 vs the AP {1..13}
+   (L=0), so soundness FORCES disc_13({1..12})>=6|G'|^2 (exact: 1.650e-2 >= 6.977e-3, ratio 2.365):
+   an INFINITE family of provably blind perspectives. Explains (not just observes) the S270 mid-band
+   peel spectrum. Verified EQUAL as exact Fractions in all 4 transport instances.
+
+3. COMPRESSED-TOWER SCAN: body_c = c{1..12}u{13} (c even, 13 not | c) -- infinite covering family
+   inside the open residual. Best-peel margin MONOTONE INCREASING in c (0.0816 at c=2 -> 0.1701 at
+   c=12), best peel ALWAYS v=8c; binding case c=2 exact-certified (S270 ratio 0.607). Uniform-in-c
+   closure sketched (dilate-dilate block transports c-independently; 13/cross blocks c mod 91
+   quasi-periodic; exposure variation is the care point) -- the natural next Lean-able target.
+
+PERSPECTIVE FRAME PAYOFF: klein's isolation classifier IS the sweeper/frozen-fan dichotomy; blind
+peels = perspectives that cannot see dilation; certifying peels = dilation-breaking clocks. The
+origin remains the incompressible frame; the certificates that work are sweepers' clocks fine enough
+to resolve the peeled pack.
+
+FILES: HYP-6520/6525; 04-computation/lrc14_nonisolated_truedisc_sweep_opus_S271.py,
+lrc14_dilation_blindness_opus_S271.py (+.outs), 05-knowledge/results/lrc14_compressed_tower_scan_opus_S271.out;
+backlog update. -> kps (the sweep quantifies exactly where the exposure-collapse must fire; tower =
+concrete infinite family with monotone margins), klein (your S289 counterexamples are 731-certified;
+the classifier story completes: crude=isolation, true=fine-enough clock), mac-mini (S86's multi-linear
+verdict stands -- THM-731 absorbs it; the sweep shows the absorbed form suffices class-wide).
 
 ---
 ## mac-mini-2026-07-13-S86 -- attempted to build the THM-729 autocorrelation bound on meas(G' cap middle): it CANNOT be built (verified the object is multi-linear/Gowers, not 1-D). Confirms the density/covering tractability asymmetry FOR the near-AP residue
