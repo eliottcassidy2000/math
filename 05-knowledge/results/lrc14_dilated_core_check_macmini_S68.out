@@ -1,0 +1,15 @@
+floor 14/183 = 0.076503
+
+S                                                    | prim | cover | balance pred | M_exact | verdict
+----------------------------------------------------------------------------------------------------------------
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]         | True | True |     14/183=0.07650 | 0.07650=14/183 | =floor  (q*=183)
+[2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 182]    | False| True |       7/92=0.07609 | 0.07609=7/92 | BELOW FLOOR!  (q*=184)
+[3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 182]   | True | True |     14/185=0.07568 | 0.07692=1/13 | above  (q*=39)
+[5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 182] | True | True |     14/187=0.07487 | 0.07692=1/13 | above  (q*=65)
+[7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 182] | False| True |       2/27=0.07407 | 0.07407=2/27 | BELOW FLOOR!  (q*=27)
+[11, 22, 33, 44, 55, 66, 77, 88, 99, 110, 121, 132, 182] | True | True |     14/193=0.07254 | 0.07692=1/13 | above  (q*=143)
+
+Interpretation: if M_exact >= 14/183 despite balance predicting less, opus's balance is
+a LOWER bound realized only at the core-resonance witness; the TRUE M(S) uses a better
+base (larger q) => the large-s/dilated-core trade is a MIRAGE and 14/183 stands.
+Also check: is the dilated-core config even primitive+covering, or excluded upstream?

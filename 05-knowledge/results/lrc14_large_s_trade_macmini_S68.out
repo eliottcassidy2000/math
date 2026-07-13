@@ -1,0 +1,16 @@
+target 14/183=0.076503. Testing single-killer covering configs w/ fast binding runners.
+A config CLEARS if some base q<=Qmax gives all residues >= 14q/183 from 0 (=> M>=14/183).
+
+tested 1725 single-killer covering configs.
+NONE below 14/183: every fast-binding-runner single-killer covering config CLEARS.
+=> the large-s trade does NOT beat the deep well (opus-S253's open escape: evidence closed).
+
+Closest approaches to the floor (smallest cleared M) -- how close does large-s get?:
+    M~0.076923=1/13  S=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 19, 546]
+    M~0.080000=2/25  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24, 182]
+    M~0.080000=2/25  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24, 364]
+    M~0.080000=2/25  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24, 546]
+    M~0.080000=2/25  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 36, 182]
+    M~0.080000=2/25  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 36, 364]
+    M~0.080000=2/25  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 36, 546]
+    M~0.080000=2/25  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 48, 182]
