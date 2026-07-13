@@ -1,0 +1,17 @@
+(1) VERIFY maxgap{frac(e x)} == G_E(a,b)/b at x=a/b (exact):
+    3000 random trials: mismatches = 0  (RESIDUE LAW CONFIRMED)
+
+(2) fattest good arc per cluster (small b => fat => ruler-hittable at moderate Vmax):
+cluster                                  | spread | fattest (a/b, G) | half-width | Vmax needed (1/2hw)
+--------------------------------------------------------------------------------------------------------
+consec k=9 {0..8}                        |      8 | 1/80 G=72 (72/80=0.900) | 0.03839 | ~14
+consec k=13 {0..12} (AP,OUT OF SCOPE)    |     12 | 1/80 G=68 (68/80=0.850) | 0.02351 | ~22
+perforated k=7 {0..8}\{1,7}              |      8 | 1/80 G=72 (72/80=0.900) | 0.03839 | ~14
+spread-21 k=11                           |     21 | 1/80 G=59 (59/80=0.738) | 0.01076 | ~47
+deep-well cluster {0..12}@core           |     12 | 1/80 G=68 (68/80=0.850) | 0.02351 | ~22
+k=8 block {0..7}                         |      7 | 1/80 G=73 (73/80=0.912) | 0.04477 | ~12
+
+INTERPRETATION: the fattest good arc uses SMALL b (b<=~2*spread). Its half-width
+hw=(G/b-2/7)/(2*spread) is bounded below when b is small and G/b comfortably >2/7, so a
+ruler period j lands in it once Vmax > 1/(2 hw) -- an EXPLICIT V0 from the residue law.
+The good-period existence (THM-527-A) = 'some modulus b has residue-gap G>2b/7 with hw>0'.

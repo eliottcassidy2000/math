@@ -1,0 +1,17 @@
+JOINT good-arc existence via the residue law (cluster gap>2b/7 AND P avoids b/14-band):
+config                                   | fattest joint a/b (G) | half-width | explicit V0
+----------------------------------------------------------------------------------------------
+k=8  P={1,2,3,4,5} E=block{0..7}         | 1/14  G=7 (0.500) | 0.01531 | ~33
+k=9  P={1,2,3,12} E=consec{0..8}         | 1/14  G=6 (0.429) | 0.00893 | ~57
+k=10 P={1,2,3}   E=block{0..9}           | 1/14  G=5 (0.357) | 0.00397 | ~127
+k=11 P={1,2}     E=spread21              | 1/4  G=2 (0.500) | 0.00510 | ~99
+k=11 P={1,2}     E=block{0..10}          | 1/3  G=1 (0.333) | 0.00238 | ~210
+k=13 P={} E=block{0..12}(AP,OOS)         | 1/120  G=108 (0.900) | 0.02560 | ~20
+
+HONEST READING:
+ - The MAX-GAP RESIDUE LAW (maxgap=G_E(a,b)/b) is exact (3000/3000) and elementary.
+ - Good-period existence = joint residue-band dodging over moduli b = the S77 frame.
+ - Where a small-b joint-good arc exists, its residue-law half-width gives an EXPLICIT
+   V0; for Vmax>V0 a ruler period lands in it => good period => M>=1/14 (that config).
+ - The AP cluster {0..12} (OUT OF SCOPE, non-covering) is exactly the hard/none case,
+   consistent with klein-S206: the covering constraint is what supplies the fat arc.

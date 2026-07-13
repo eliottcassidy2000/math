@@ -1,0 +1,38 @@
+VERIFY characterization: a/b is good-center IFF {a e mod b} leaves run L, L/b>2/7
+----------------------------------------------------------------------------------------
+consec k=9: D=8, good rationals at b in [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], ALL confirmed maxgap>2/7: True
+    1/13: empty-run L=4 (L/b=4/13=0.308), exact maxgap=0.3846
+    12/13: empty-run L=4 (L/b=4/13=0.308), exact maxgap=0.3846
+    1/14: empty-run L=5 (L/b=5/14=0.357), exact maxgap=0.4286
+    13/14: empty-run L=5 (L/b=5/14=0.357), exact maxgap=0.4286
+    1/15: empty-run L=6 (L/b=6/15=0.400), exact maxgap=0.4667
+    14/15: empty-run L=6 (L/b=6/15=0.400), exact maxgap=0.4667
+    1/16: empty-run L=7 (L/b=7/16=0.438), exact maxgap=0.5000
+    15/16: empty-run L=7 (L/b=7/16=0.438), exact maxgap=0.5000
+perforated k=7 {0..8}\{1,7}: D=8, good rationals at b in [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], ALL confirmed maxgap>2/7: True
+    1/13: empty-run L=4 (L/b=4/13=0.308), exact maxgap=0.3846
+    12/13: empty-run L=4 (L/b=4/13=0.308), exact maxgap=0.3846
+    1/14: empty-run L=5 (L/b=5/14=0.357), exact maxgap=0.4286
+    13/14: empty-run L=5 (L/b=5/14=0.357), exact maxgap=0.4286
+    1/15: empty-run L=6 (L/b=6/15=0.400), exact maxgap=0.4667
+    14/15: empty-run L=6 (L/b=6/15=0.400), exact maxgap=0.4667
+    1/16: empty-run L=7 (L/b=7/16=0.438), exact maxgap=0.5000
+    15/16: empty-run L=7 (L/b=7/16=0.438), exact maxgap=0.5000
+spread-21 k=11: D=21, good rationals at b in [15, 17, 19, 21, 23], ALL confirmed maxgap>2/7: True
+    7/15: empty-run L=5 (L/b=5/15=0.333), exact maxgap=0.4000
+    8/15: empty-run L=5 (L/b=5/15=0.333), exact maxgap=0.4000
+    8/17: empty-run L=7 (L/b=7/17=0.412), exact maxgap=0.4706
+    9/17: empty-run L=7 (L/b=7/17=0.412), exact maxgap=0.4706
+    9/19: empty-run L=9 (L/b=9/19=0.474), exact maxgap=0.5263
+    10/19: empty-run L=9 (L/b=9/19=0.474), exact maxgap=0.5263
+    10/21: empty-run L=11 (L/b=11/21=0.524), exact maxgap=0.5714
+    11/21: empty-run L=11 (L/b=11/21=0.524), exact maxgap=0.5714
+
+COVERING CONNECTION: good rationals a/b <=> cluster residues {e mod b} leave a >2/7 run
+<=> E FAILS to cover Z/b (at dilation a). So a good period exists <=> E under-covers some
+small modulus b. For a COVERING-saturated S the reconstructed cluster is forced to
+under-cover SOME small b (it cannot cover all of them with only k<=13 teeth) -- that
+forced under-coverage is the good arc. Test: min over small b of the best empty-run:
+  consec k=9 (k=9): under-covers (>2/7 run) at b=[13, 14]  => HAS good period
+  perforated k=7 {0..8}\{1,7} (k=7): under-covers (>2/7 run) at b=[13, 14]  => HAS good period
+  spread-21 k=11 (k=11): under-covers (>2/7 run) at b=[]  => NONE(!)

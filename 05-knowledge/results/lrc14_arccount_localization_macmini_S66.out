@@ -1,0 +1,17 @@
+cluster                                   | #arcs | arc centers -> nearest a/b (b<=6)
+----------------------------------------------------------------------------------------------------
+consec k=9 {0..8}                         |     4 | b-values [2, 3]  (4 arcs)
+                                          |       | ['0.500~1/2', '0.332~1/3', '0.500~1/2', '0.668~2/3']
+consec k=11 {0..10}                       |     4 | b-values [2, 3]  (4 arcs)
+                                          |       | ['0.500~1/2', '0.333~1/3', '0.500~1/2', '0.667~2/3']
+consec k=13 {0..12} (AP cluster, OUT OF SCOPE) |     4 | b-values [2, 3]  (4 arcs)
+                                          |       | ['0.500~1/2', '0.334~1/3', '0.500~1/2', '0.666~2/3']
+perforated k=7 {0..8}\{1,7}               |     6 | b-values [2, 3, 6]  (6 arcs)
+                                          |       | ['0.500~1/2', '0.170~1/6', '0.339~1/3', '0.500~1/2', '0.661~2/3', '0.830~5/6']
+spread-21 k=11 (part D extremal-ish)      |     8 | b-values [2, 3, 4, 6]  (8 arcs)
+                                          |       | ['0.500~1/2', '0.166~1/6', '0.250~1/4', '0.333~1/3', '0.500~1/2', '0.667~2/3', '0.750~3/4', '0.834~5/6']
+deep-well E {0,14?}                       |     4 | b-values [2, 3]  (4 arcs)
+                                          |       | ['0.500~1/2', '0.334~1/3', '0.500~1/2', '0.666~2/3']
+
+KEY QUESTION: do all good-arc centers sit at rationals a/b with b<=3? (part C for consec)
+If YES for covering clusters => #arcs <= (# a/b with b<=3) * (arcs per rational) = O(1) small.
