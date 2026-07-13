@@ -145,30 +145,27 @@ def leader_ledger(speeds, verbose=False):
     assert M == M_check, f"M mismatch: handoff-max {M} vs event-max {M_check}"
 
     # 6. chains: split the segment cycle at positive-depth sum-handoffs
+    #    (handoff times ARE segment boundaries) — single linear walk.
     #    chain mass = sum of v*len; verify mass = x_in + x_out per chain
     chains = []
     if Hplus > 0:
-        # order sum-handoff times cyclically; walk segments between them
-        sh_times = sorted(h[0] for h in sum_handoffs)
-        depth_at = {h[0]: h[4] for h in sum_handoffs}
-        for a in range(Hplus):
-            t_in = sh_times[a]
-            t_out = sh_times[(a + 1) % Hplus]
-            span = (t_out - t_in) % 1
-            if span == 0:
-                span = F(1)
-            # integrate v_lam over [t_in, t_in + span] using segments (cyclic)
-            mass = F(0)
-            for (s0, s1, lv) in segments:
-                for shift in (-1, 0, 1):
-                    a0, a1 = s0 + shift, s1 + shift
-                    lo = max(a0, t_in)
-                    hi = min(a1, t_in + span)
-                    if hi > lo:
-                        mass += lv * (hi - lo)
-            chains.append({'t_in': t_in, 't_out': t_out % 1,
-                           'x_in': depth_at[t_in], 'x_out': depth_at[t_out],
-                           'mass': mass})
+        sh_set = {h[0]: h[4] for h in sum_handoffs}      # time -> depth
+        # rotate the segment list to start at a sum-handoff boundary
+        start = next(k for k, s in enumerate(segments)
+                     if (s[0] if s[0] < 1 else s[0] - 1) in sh_set)
+        order = segments[start:] + segments[:start]
+        t_in = order[0][0] if order[0][0] < 1 else order[0][0] - 1
+        mass = F(0)
+        for k, (s0, s1, lv) in enumerate(order):
+            mass += lv * (s1 - s0)
+            nxt = order[(k + 1) % len(order)][0]
+            nxt = nxt if nxt < 1 else nxt - 1
+            if nxt in sh_set:                            # chain closes here
+                chains.append({'t_in': t_in, 't_out': nxt,
+                               'x_in': sh_set[t_in], 'x_out': sh_set[nxt],
+                               'mass': mass})
+                t_in, mass = nxt, F(0)
+        assert len(chains) == Hplus
         for c in chains:
             assert c['mass'] == c['x_in'] + c['x_out'], \
                 f"chain mass {c['mass']} != x_in+x_out {c['x_in']+c['x_out']}"
@@ -254,6 +251,11 @@ def report(name, speeds, expect_M=None, show_handoffs=False, staircase=False):
     cb = climb_bound(speeds)
     print(f"   climb bound (LEM-025) v*floor(q/(B+v))/q = {cb} = "
           f"{float(cb):.6f}   TIGHT (== M)? {cb == M}")
+    # witness pair: which sum-ruler carries the deepest handoff
+    deep = max(L['sum_handoffs'], key=lambda h: h[4])
+    wp = tuple(sorted((deep[1], deep[2])))
+    print(f"   witness pair = {wp} (q = {wp[0]+wp[1]}) at t = {deep[0]}, "
+          f"depth {deep[4]}")
     print(f"   fixed chains: through 0: {len(L['fixed0'])}, through 1/2: "
           f"{len(L['fixedh'])}")
     if show_handoffs:
@@ -302,6 +304,12 @@ def main():
     #  artifact; this family is exactly why the compressed floor fell to 1/13.)
     report("compressed 2*{1..12} u {13}", [2 * i for i in range(1, 13)] + [13],
            expect_M=F(1, 13))
+
+    # 4b. opus-S254 stratum probes: s-scaled core + killer 182, s coprime
+    #     (their reduction constant (182+s)/2379 lives on the (s,182)-ruler)
+    for s in (3, 5):
+        fam = [s * i for i in range(1, 13)] + [182]
+        report(f"opus-S254 probe s={s}: {s}*{{1..12}} u {{182}}", fam)
 
     # 5. random primitive covering (DC) families — the covering-law battery
     print("== RANDOM PRIMITIVE DC BATTERY (Vmax <= 60) ==")

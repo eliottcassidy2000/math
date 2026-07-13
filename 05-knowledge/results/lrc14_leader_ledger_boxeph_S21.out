@@ -7,7 +7,8 @@ THE LEADER LEDGER — exact verification battery (boxeph-S21)
    int v_lam = 4/3 = 1.333333   identity(int = 2*sum depths): True
    max chain mass = 2/3 = 0.666667   >= 28/183? True   (mass/2M = 1.0000)
    ledger efficiency eta = int/(2 H+ M) = 1.0000   witness-chain equioscillation (x_in+x_out)/2M = 1.0000
-   climb bound (LEM-023) v*floor(q/(B+v))/q = 1/3 = 0.333333   TIGHT (== M)? True
+   climb bound (LEM-025) v*floor(q/(B+v))/q = 1/3 = 0.333333   TIGHT (== M)? True
+   witness pair = (1, 2) (q = 3) at t = 1/3, depth 1/3
    fixed chains: through 0: 1, through 1/2: 1
    sum-handoffs (t, old->new, depth):
      t=1/3  1->2  depth=1/3 = 0.333333
@@ -20,7 +21,8 @@ THE LEADER LEDGER — exact verification battery (boxeph-S21)
    int v_lam = 3350216417/514829700 = 6.507426   identity(int = 2*sum depths): True
    max chain mass = 1/7 = 0.142857   >= 28/183? False   (mass/2M = 1.0000)
    ledger efficiency eta = int/(2 H+ M) = 0.7854   witness-chain equioscillation (x_in+x_out)/2M = 0.7800
-   climb bound (LEM-023) v*floor(q/(B+v))/q = 1/14 = 0.071429   TIGHT (== M)? True
+   climb bound (LEM-025) v*floor(q/(B+v))/q = 1/14 = 0.071429   TIGHT (== M)? True
+   witness pair = (1, 13) (q = 14) at t = 1/14, depth 1/14
    fixed chains: through 0: 1, through 1/2: 1
    sum-handoffs (t, old->new, depth):
      t=1/14  1->13  depth=1/14 = 0.071429
@@ -89,7 +91,8 @@ THE LEADER LEDGER — exact verification battery (boxeph-S21)
    int v_lam = 123111718244341/17124780311100 = 7.189098   identity(int = 2*sum depths): True
    max chain mass = 15/112 = 0.133929   >= 28/183? False   (mass/2M = 0.9375)
    ledger efficiency eta = int/(2 H+ M) = 0.7625   witness-chain equioscillation (x_in+x_out)/2M = 0.7800
-   climb bound (LEM-023) v*floor(q/(B+v))/q = 1/25 = 0.040000   TIGHT (== M)? False
+   climb bound (LEM-025) v*floor(q/(B+v))/q = 1/25 = 0.040000   TIGHT (== M)? False
+   witness pair = (1, 13) (q = 14) at t = 1/14, depth 1/14
    fixed chains: through 0: 1, through 1/2: 1
 
 == deep well {1..12,182}  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
@@ -99,7 +102,8 @@ THE LEADER LEDGER — exact verification battery (boxeph-S21)
    int v_lam = 130664671124905851404239/7264376760162630837960 = 17.987045   identity(int = 2*sum depths): True
    max chain mass = 2639/17751 = 0.148668   >= 28/183? False   (mass/2M = 0.9716)
    ledger efficiency eta = int/(2 H+ M) = 0.5344   witness-chain equioscillation (x_in+x_out)/2M = 0.9643
-   climb bound (LEM-023) v*floor(q/(B+v))/q = 14/183 = 0.076503   TIGHT (== M)? True
+   climb bound (LEM-025) v*floor(q/(B+v))/q = 14/183 = 0.076503   TIGHT (== M)? True
+   witness pair = (1, 182) (q = 183) at t = 14/183, depth 14/183
    fixed chains: through 0: 1, through 1/2: 1
    staircase check (depths at k/183?):
      t=1/183  pair(1,182)  depth=1/183   t*183=1  depth*183=1
@@ -220,7 +224,8 @@ THE LEADER LEDGER — exact verification battery (boxeph-S21)
    int v_lam = 3350216417/514829700 = 6.507426   identity(int = 2*sum depths): True
    max chain mass = 1/7 = 0.142857   >= 28/183? False   (mass/2M = 1.0000)
    ledger efficiency eta = int/(2 H+ M) = 0.7854   witness-chain equioscillation (x_in+x_out)/2M = 0.7800
-   climb bound (LEM-023) v*floor(q/(B+v))/q = 1/14 = 0.071429   TIGHT (== M)? True
+   climb bound (LEM-025) v*floor(q/(B+v))/q = 1/14 = 0.071429   TIGHT (== M)? True
+   witness pair = (1, 13) (q = 14) at t = 1/14, depth 1/14
    fixed chains: through 0: 1, through 1/2: 1
 
 == ladder k=2 {1..12,26}  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26]
@@ -230,7 +235,8 @@ THE LEADER LEDGER — exact verification battery (boxeph-S21)
    int v_lam = 26408824257709/3424956062220 = 7.710705   identity(int = 2*sum depths): True
    max chain mass = 1/7 = 0.142857   >= 28/183? False   (mass/2M = 0.9643)
    ledger efficiency eta = int/(2 H+ M) = 0.7435   witness-chain equioscillation (x_in+x_out)/2M = 0.7500
-   climb bound (LEM-023) v*floor(q/(B+v))/q = 2/27 = 0.074074   TIGHT (== M)? True
+   climb bound (LEM-025) v*floor(q/(B+v))/q = 2/27 = 0.074074   TIGHT (== M)? True
+   witness pair = (1, 26) (q = 27) at t = 2/27, depth 2/27
    fixed chains: through 0: 1, through 1/2: 1
 
 == ladder k=3 {1..12,39}  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 39]
@@ -240,7 +246,8 @@ THE LEADER LEDGER — exact verification battery (boxeph-S21)
    int v_lam = 2561607330238777/298615126401900 = 8.578291   identity(int = 2*sum depths): True
    max chain mass = 1/7 = 0.142857   >= 28/183? False   (mass/2M = 0.9524)
    ledger efficiency eta = int/(2 H+ M) = 0.6974   witness-chain equioscillation (x_in+x_out)/2M = 0.8333
-   climb bound (LEM-023) v*floor(q/(B+v))/q = 3/40 = 0.075000   TIGHT (== M)? True
+   climb bound (LEM-025) v*floor(q/(B+v))/q = 3/40 = 0.075000   TIGHT (== M)? True
+   witness pair = (1, 39) (q = 40) at t = 3/40, depth 3/40
    fixed chains: through 0: 1, through 1/2: 1
 
 == ladder k=7 {1..12,91}  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 91]
@@ -250,7 +257,8 @@ THE LEADER LEDGER — exact verification battery (boxeph-S21)
    int v_lam = 17708361656145476773/1513852188963067800 = 11.697550   identity(int = 2*sum depths): True
    max chain mass = 1365/9476 = 0.144048   >= 28/183? False   (mass/2M = 0.9466)
    ledger efficiency eta = int/(2 H+ M) = 0.5913   witness-chain equioscillation (x_in+x_out)/2M = 0.9286
-   climb bound (LEM-023) v*floor(q/(B+v))/q = 7/92 = 0.076087   TIGHT (== M)? True
+   climb bound (LEM-025) v*floor(q/(B+v))/q = 7/92 = 0.076087   TIGHT (== M)? True
+   witness pair = (1, 91) (q = 92) at t = 7/92, depth 7/92
    fixed chains: through 0: 1, through 1/2: 1
 
 == ladder k=14 {1..12,182}  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
@@ -260,9 +268,71 @@ THE LEADER LEDGER — exact verification battery (boxeph-S21)
    int v_lam = 130664671124905851404239/7264376760162630837960 = 17.987045   identity(int = 2*sum depths): True
    max chain mass = 2639/17751 = 0.148668   >= 28/183? False   (mass/2M = 0.9716)
    ledger efficiency eta = int/(2 H+ M) = 0.5344   witness-chain equioscillation (x_in+x_out)/2M = 0.9643
-   climb bound (LEM-023) v*floor(q/(B+v))/q = 14/183 = 0.076503   TIGHT (== M)? True
+   climb bound (LEM-025) v*floor(q/(B+v))/q = 14/183 = 0.076503   TIGHT (== M)? True
+   witness pair = (1, 182) (q = 183) at t = 14/183, depth 14/183
    fixed chains: through 0: 1, through 1/2: 1
 
 == near-dilate 2*{1..12} u {27}  [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 27]
    primitive=True covering(DC)=False
    M = 1/13 = 0.076923   [expected 1/13 OK]
+   events=752  segments=116  H+=110  (parity EVEN)
+   int v_lam = 29463209032531117069/2347760988065149020 = 12.549493   identity(int = 2*sum depths): True
+   max chain mass = 27/182 = 0.148352   >= 28/183? False   (mass/2M = 0.9643)
+   ledger efficiency eta = int/(2 H+ M) = 0.7416   witness-chain equioscillation (x_in+x_out)/2M = 0.6585
+   climb bound (LEM-025) v*floor(q/(B+v))/q = 2/29 = 0.068966   TIGHT (== M)? False
+   witness pair = (12, 27) (q = 39) at t = 1/13, depth 1/13
+   fixed chains: through 0: 1, through 1/2: 1
+
+== compressed 2*{1..12} u {13}  [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 13]
+   primitive=True covering(DC)=True
+   M = 1/13 = 0.076923   [expected 1/13 OK]
+   events=520  segments=104  H+=104  (parity EVEN)
+   int v_lam = 1965197831804671/166966608033225 = 11.770005   identity(int = 2*sum depths): True
+   max chain mass = 2/13 = 0.153846   >= 28/183? True   (mass/2M = 1.0000)
+   ledger efficiency eta = int/(2 H+ M) = 0.7356   witness-chain equioscillation (x_in+x_out)/2M = 0.7826
+   climb bound (LEM-025) v*floor(q/(B+v))/q = 1/13 = 0.076923   TIGHT (== M)? True
+   witness pair = (2, 24) (q = 26) at t = 1/26, depth 1/13
+   fixed chains: through 0: 1, through 1/2: 1
+
+== opus-S254 probe s=3: 3*{1..12} u {182}  [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 182]
+   primitive=True covering(DC)=True
+   M = 1/13 = 0.076923
+   events=4664  segments=458  H+=312  (parity EVEN)
+   int v_lam = 15890552522808525971495932541/552979517209894268824430100 = 28.736241   identity(int = 2*sum depths): True
+   max chain mass = 354/2405 = 0.147193   >= 28/183? False   (mass/2M = 0.9568)
+   ledger efficiency eta = int/(2 H+ M) = 0.5987   witness-chain equioscillation (x_in+x_out)/2M = 0.9216
+   climb bound (LEM-025) v*floor(q/(B+v))/q = 12/185 = 0.064865   TIGHT (== M)? False
+   witness pair = (3, 36) (q = 39) at t = 1/39, depth 1/13
+   fixed chains: through 0: 1, through 1/2: 1
+
+== opus-S254 probe s=5: 5*{1..12} u {182}  [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 182]
+   primitive=True covering(DC)=True
+   M = 1/13 = 0.076923
+   events=4980  segments=546  H+=404  (parity EVEN)
+   int v_lam = 366285953396590839461129251/9262057224847212372967380 = 39.546933   identity(int = 2*sum depths): True
+   max chain mass = 27/182 = 0.148352   >= 28/183? False   (mass/2M = 0.9643)
+   ledger efficiency eta = int/(2 H+ M) = 0.6363   witness-chain equioscillation (x_in+x_out)/2M = 0.8476
+   climb bound (LEM-025) v*floor(q/(B+v))/q = 10/187 = 0.053476   TIGHT (== M)? False
+   witness pair = (5, 60) (q = 65) at t = 1/65, depth 1/13
+   fixed chains: through 0: 1, through 1/2: 1
+
+== RANDOM PRIMITIVE DC BATTERY (Vmax <= 60) ==
+   40 primitive DC families tested (of 430 draws); identity + even-H+ + [climb bound <= M] hold on ALL
+   climb bound TIGHT (== M) on 4/40 random DC
+   max-chain-mass >= 28/183 violations: 0
+   min max-chain-mass: 322/1515 = 0.2125  (M=7/36) fam=[3, 5, 14, 19, 20, 26, 36, 46, 48, 55, 56, 58, 59]
+   min witness-equioscillation ratio: 0.5257  (M=2/11) fam=[12, 13, 14, 17, 26, 33, 36, 38, 40, 42, 47, 53, 54]
+   M range over battery: [0.1250, 0.2899]
+
+== kps blocker (cont.47)  [200, 496, 540, 656, 851, 921, 935, 1122, 1482, 1680, 1835, 1849, 1856]
+   primitive=True covering(DC)=True
+   M = 406/1669 = 0.243259   [expected 406/1669 OK]
+   events=203004  segments=17698  H+=14062  (parity EVEN)
+   int v_lam = 338798668612637971541210825991965929659196447467791263420414685444048763113113961245028934306504599931581738955488145340854138518939621053886959/302661615303914193000442200646660166202013670725215977460847303024338766087071558890759614538939317081326475281144631861862768920692430691400 = 1119.397543   identity(int = 2*sum depths): True
+   max chain mass = 2176160/6160279 = 0.353257   >= 28/183? True   (mass/2M = 0.7261)
+   ledger efficiency eta = int/(2 H+ M) = 0.1636   witness-chain equioscillation (x_in+x_out)/2M = 0.5039
+   climb bound (LEM-025) v*floor(q/(B+v))/q = 25/257 = 0.097276   TIGHT (== M)? False
+   witness pair = (1482, 1856) (q = 3338) at t = 1147/3338, depth 406/1669
+   fixed chains: through 0: 1, through 1/2: 1
+
+BATTERY COMPLETE.

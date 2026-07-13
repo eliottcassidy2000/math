@@ -1,3 +1,22 @@
+## boxeph-2026-07-12-S21 -- THE LEADER LEDGER: conservation law for the nearest-runner process (THM-722 PROVED) + climb lemma LEM-025 tight at ALL FOUR extremals; the deep well's ledger IS the Ostrowski staircase (stopping time floor(183/13)=14); chain-equioscillation at the covering-min REFUTED
+
+Prompt (owner): make progress on LRC(14); be creative in exploring past threads, especially unrelated ones.
+
+Mined mac-mini-S57's winding-tournament verdict ("the tournament frame loses the metric") for its missing half: the metric lives ON the walls. Result: a new exact instrument.
+
+(1) THM-722 PROVED (elementary): leader lam(t) = argmin ||v_i t||, signed leader phase phi rises at speed v_lam and falls ONLY by jumps +x -> -x at SUM-handoffs ((v_i+v_j)t in Z, depth x = f(t)). CONSERVATION: int_0^1 v_lam dt = 2*sum(handoff depths). CHAINS: H+ handoffs cut the circle into chains of mass x_in+x_out <= 2M, one leader-landing each, speed unimodal per chain. PARITY: H+ EVEN for any family with an even speed (iota fixes exactly the chains through 0 and 1/2 -- klein-S270's iota-pairs get a geometric home). M = deepest handoff (Kravitz/THM-668-mac-mini rederived dynamically). Verified EXACTLY on 50+ families, zero failures (incl. kps blocker 406/1669).
+
+(2) THE STAIRCASE (exact): deep well {1..12,182}: first 14 handoffs = t = k/183 on the (1,182)-ruler, depth k/183, k=1..14 -- cut at the STOPPING TIME k* = floor(183/13) = 14 by runner 12's lander. mac-mini cont.56's "omit the distance-1 lander" is a stopping time; Phi6's +1 = the ruler offset.
+
+(3) LEM-025 (one line): v=min, f=max, B=2nd-max, q=v+f: M >= v*floor(q/(B+v))/q. TIGHT at AP (1/14), every ladder rung k/(13k+1), deep well (14/183), compressed 2*{1..12}u{13} (1/13) -- the entire known bottom of the covering M-spectrum sits ON the (min,max)-ruler climb. Corollary: covering {1..12,f} stratum closed in two lines, citation-free (182|f forced => q === 1 mod 13 => M >= (f/13)/(f+1) >= 14/183). NOT tight at GW (witness on the (1,13)-ruler) and at scaled cores s*{1..12}u{182} (witness on the scaled (s,12s)-ruler at a/(13s), M = 1/13) -- tightness is a structural signature of single-far shapes.
+
+(4) HONEST REFUTATION: "covering => max-chain-mass >= 28/183" is FALSE at the deep well itself (2639/17751 < 28/183; witness flanks 27/183 and 14/183+14/194). The covering-min is a ONE-SIDED staircase top, not a two-sided Chebyshev alternation; chain-equioscillation (mass = 2M) belongs to AP/compressed. ALSO RECORDED: the average-depth bound M >= int/(2H+) is 1.87x short at the deep well -- the conservation law alone cannot reach the crux.
+
+(5) Ladder gradient: eta = int/(2 H+ M) = .785/.744/.697/.591/.534, H+ = 58/70/82/130/220 along k=1,2,3,7,14; AP's six depth-1/14 handoffs = the phi(14) = 6 units a/14 (matches codex-S175's boundary count); climb-tightness is an EXTREMAL SIGNATURE (4/40 on generic random DC).
+
+HANDOFFS: opus-S254 -- your s>=2 constant (182+s)/2379 is the (s,182)-ruler pair-sum; my s=3,5 probes show those cores escape via the SCALED witness a/(13s) (M = 1/13), so the joint rigidity only binds when the scaled 13-grid is blocked. klein -- the climb-cut inverse [covering cannot cut every sum-ruler's climb below 14/183] is your lander-exclusion count (S270 target (a)) with an explicit process attached; HYP-6280 open (a). death-star -- THM-722(B) is a finite-breakpoint telescope, kernel-friendly.
+
+FILES: THM-722 canon (+LEM-025 proof inside); HYP-6280 (6260 renumbered, klein-S271 first-push); 04-computation/lrc14_leader_ledger_boxeph_S21.py (+.out); 07-reflections/the-leader-ledger-the-metric-lives-on-the-walls-boxeph-S21.md; backlog lead. CREDITS: mac-mini-S57/cont.55-56, klein-S267/269/270, opus-S249-254, kps cont.51-57, THM-668-mac-mini, THM-373, Kravitz (pair-sum precedent).
 ## opus-2026-07-11-S254 -- the large-s escape (S253 balance) is CLOSED for the single-killer-182 covering-min, via a joint M_core-s rigidity tight only at the deep well
 
 Prompt (owner): close the large-s escape in the general balance.

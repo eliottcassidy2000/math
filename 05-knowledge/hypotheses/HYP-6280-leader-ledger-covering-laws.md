@@ -67,3 +67,21 @@ H⁺ parity) and LEM-025 (the climb bound M ≥ v⌊q/(B+v)⌋/q at the (min,max
 9. Does the covering-min = min over covering-realizable (v_min, B, f) of the climb bound
    (i.e., is the crux's extremal ALWAYS climb-tight)? Deep well: yes. A counterexample
    would be a covering family with M < its climb bound's shape-minimum — none seen.
+
+## ADDENDA (full battery, 55 families, zero failures)
+
+10. **kps blocker reproduced:** M = 406/1669 exact (4th independent evaluator agreeing
+    with death-star-S14 + klein-S264 + kps); witness pair (1482, 1856), pair-sum
+    q = 3338 = 2·1669, t = 1147/3338. Identity + even-H⁺ + chain-mass law all hold at
+    Σv = 15,823 scale.
+11. **opus-S254 stratum probes (s-scaled core + killer 182):** s = 3: M = 1/13, witness
+    pair (3, 36), t = 1/39; s = 5: M = 1/13, witness pair (5, 60), t = 1/65. The scaled
+    cores escape via the SCALED 13-grid witness a/(13s) — the killer 182 lands far from 0
+    there (182 ≡ 26 mod 39 → distance 13/39 = 1/3). So opus's joint rigidity for s ≥ 2
+    only binds where the scaled 13-grid is blocked; their constant (182+s)/2379 is the
+    (s, 182)-ruler pair-sum in ledger terms. Similarly the near-dilate 2·{1..12}∪{27}:
+    witness pair (12, 27), q = 39, t = 1/13; compressed 2·{1..12}∪{13}: witness pair
+    (2, 24), q = 26, t = 1/26.
+12. **Climb-tightness is an extremal signature, not generic:** tight on 4/40 random
+    primitive DC families (bulk M ∈ [0.125, 0.29] far above the bound); tight on ALL of
+    AP/ladder/deep-well/compressed.
