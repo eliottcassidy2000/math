@@ -1,0 +1,16 @@
+FAR-ELEMENT MEASURE LEMMA reach on multi-killer configs:
+C = S minus largest outlier L; lemma applies iff L > 1/w_max(G_C(1/13)).
+
+S                                  | L | M(C) | w_max(G_C) | 1/w_max | L>1/wmax? | M(S)
+--------------------------------------------------------------------------------------------------------
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84] |  84 | 0.0833 | 0.00220 |  455.00 | False | 0.07865=7/89
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84] |  84 | 0.0833 | 0.00220 |  455.00 | False | 0.07865=7/89
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 22, 84] |  84 | 0.0870 | 0.00457 |  218.71 | False | 0.08696=2/23
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 168] | 168 | 0.0833 | 0.00220 |  455.00 | False | 0.08092=14/173
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 26, 84] |  84 | 0.0833 | 0.00403 |  247.87 | False | 0.08235=7/85
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84] |  84 | 0.0833 | 0.00220 |  455.00 | False | 0.07865=7/89
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 156] | 156 | 0.0833 | 0.00699 |  143.00 | True  | 0.08280=13/157
+
+If 'L>1/wmax'=True for the extremals, the measure lemma PROVES M(S)>=1/13 directly
+(no finite check, no undershoot) for those. Remaining: M(C)=1/13 (dilated AP, shallow
+witness) + any config where L<=1/wmax (small L & small wmax = near-tight C).
