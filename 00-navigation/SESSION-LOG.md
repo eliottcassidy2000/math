@@ -1,3 +1,22 @@
+## mac-mini-2026-07-12-S67 -- the near-AP rho* is d-INDEPENDENT and FACTORIZES (rho*(d*A u{p})->meas(G_P)*mu_A, mu_m>=mu_13=829/4620>0): the DENSITY half of THM-527-A's large-spread extremal, physical/Weyl dual of klein-S193's ET-resonance
+
+Prompt (owner): keep working the critical math for another session.
+
+Continued on THM-527-A (the sole open analytic item of the covering case, THM-663). Its large-spread half is klein-S193's near-dilated-AP extremal E_d = d*{0..9} u {p} (Vmax=9d+14). Settled the DENSITY half on the physical/Weyl side:
+
+(1) EXACT mu_m: mu_m(thr)=meas{s: maxgap of m-point Steinhaus orbit {frac(i s):i<m} > thr}, computed exactly (union-of-linear-gaps per Farey interval; fixed an initial kink bug via part-C validation: mu_3=1, mu_4=19/21, mu_5=9/14, mu_13=829/4620 all MATCH). mu_m(2/7) DECREASING but >= mu_13=829/4620=0.1794>0 for all m<=13.
+
+(2) MECHANISM (d-independence): AP-part phases frac(d i x)=frac(i*(dx)) = the m-point orbit at step s=frac(dx); as x sweeps [0,1), s sweeps uniformly d times, so meas{x: AP good}=mu_m EXACTLY, d-independent. Dilation only reparametrizes the Weyl sweep. By Weyl (fast dx vs slow x,px): rho*(E_d)->meas(G_P)*mu_m minus a single-p gap-split (~6%).
+
+(3) VERIFIED: rho*(E_d)=0.191,0.186,0.187,0.187 across d=20..400 (spread 180..3600) -- FLAT; robust across 4 (A,p,P) shapes to <0.001. meas(G_P)*mu_10=0.7857*0.2526=0.1985 -> ~0.187. So rho*(near-AP)>=c0>0 UNIFORMLY in d = the good-period DENSITY does not vanish at large spread.
+
+This is the PHYSICAL side (why rho* itself is d-independent, explicit constant mu_m), dual to klein-S193's ET-resonance (why the finite-Vmax DISCREPANCY rho_K-rho* stays d-independent). Together: physical rho*>=c0 + Fourier rho_K->rho* close 527-A's large-spread half. My HYP-6255 residue law (count mod 2Vmax) is the object pairing the two sides.
+
+HOUSEKEEPING: klein-S270 held HYP-6250 by first-push (collision) -> my residue law renumbered 6250->6255. A heredoc non-ASCII SyntaxError made commit a74f49d2 land only the scripts (mislabeled); fixed in 32d51d0c (HYP-6260 + THM-527 part J added). NOTE: git add -A in a74f49d2 also swept in an untracked opus file lrc14_one_tightener_useless_all_m_opus_S67.py -- opus, recommit/relabel if you want it under your session.
+
+FILES: HYP-6260; THM-527 part J; 04-computation/lrc14_{nearAP_rhostar_floor,mu_m_exact,nearAP_factorization}_macmini_S67.py(+.out). CREDITS: klein-S192/S193 (ET, large-spread), THM-527/663, HYP-6255 (my residue law), part C (mu_k). OPEN (klein's lane): the finite-Vmax passage D*<rho* on the extremal.
+
+---
 ## mac-mini-2026-07-12-S66 -- the MAX-GAP RESIDUE LAW: THM-527-A good-period existence is a pure residue-band-dodging count mod 2Vmax (physical dual of klein-S193's Erdos-Turan sum); explicit V0 for bounded-spread, vacuous on large-spread extremal (honest)
 
 Prompt (owner): keep working the critical math for another session.
