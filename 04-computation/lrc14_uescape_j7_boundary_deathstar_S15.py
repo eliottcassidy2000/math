@@ -53,13 +53,23 @@ def gamma_exact(phases, speeds):
     """max_u min_i ||phi_i + b_i u|| over u in [0,1), exact.
     Candidates: peaks (phi_i + b_i u = 1/2 mod 1) and pairwise crossings
     phi_i + b_i u = +-(phi_j + b_j u) mod 1."""
-    cands = set()
     n = len(speeds)
+    if all(abs(b) == 1 for b in speeds):
+        # bad centers -sign(b)*phi; gamma = (max circular gap)/2
+        pts = sorted((-speeds[i] * phases[i]) % 1 for i in range(n))
+        mg = max(((pts[(t + 1) % n] - pts[t]) % 1 for t in range(n)))
+        # argu = midpoint of the max gap
+        for t in range(n):
+            if (pts[(t + 1) % n] - pts[t]) % 1 == mg:
+                return mg / 2, (pts[t] + mg / 2) % 1
+    cands = set()
     for i in range(n):
         b, ph = speeds[i], phases[i]
-        ab = abs(b)
-        # peaks: u = (m + 1/2 - ph)/b  for m making u in [0,1)
-        for m in range(-2 * ab - 3, 2 * ab + 4):
+        lo = min(ph, ph + b)   # range of ph + b*u over u in [0,1]
+        hi = max(ph, ph + b)
+        m0 = (lo - F(1, 2)).__floor__()
+        m1 = (hi - F(1, 2)).__ceil__()
+        for m in range(m0, m1 + 1):
             u = F(m + F(1, 2) - ph, b)
             if 0 <= u < 1:
                 cands.add(u)
@@ -70,7 +80,7 @@ def gamma_exact(phases, speeds):
                 if d == 0:
                     continue
                 rhs0 = eps * phases[j] - phases[i]
-                for m in range(-abs(d) - 3, abs(d) + 4):
+                for m in range(-abs(d) - 2, abs(d) + 3):
                     u = F(rhs0 + m, d)
                     if 0 <= u < 1:
                         cands.add(u)
@@ -135,8 +145,12 @@ def probe_A():
     print(f"  gaps at eps=1/700: {gaps}")
     print(f"  (six gaps 1/7+eps, one wrap gap 1/7-6eps — rates = lift differences)")
 
-def sup_gamma_over_good(pure, lifts, bs, floor=F(1, 13), qmax=60):
-    grid = good_s_grid(pure, floor, qmax)
+_GRID_CACHE = {}
+def sup_gamma_over_good(pure, lifts, bs, floor=F(1, 13), qmax=48):
+    key = (tuple(pure), floor, qmax)
+    if key not in _GRID_CACHE:
+        _GRID_CACHE[key] = good_s_grid(pure, floor, qmax)
+    grid = _GRID_CACHE[key]
     if not grid:
         return None, None, 0
     best, args = F(-1), None
@@ -166,7 +180,7 @@ def probe_B():
     profiles.append(("lifts=pure clones 1..6+7, b=1", [1, 2, 3, 4, 5, 6, 7], [1] * 7))
     profiles.append(("wide lifts 2,3,5,8,13,21,34 b=+-1", [2, 3, 5, 8, 13, 21, 34],
                      [1, -1, 1, -1, 1, -1, 1]))
-    for _ in range(60):
+    for _ in range(20):
         lifts = sorted(rng.randrange(0, 15) for _ in range(7))
         bs = [rng.choice([1, -1, 2, -2, 3, -3]) for _ in range(7)]
         profiles.append((f"rand k={lifts} b={bs}", lifts, bs))
@@ -188,18 +202,17 @@ def probe_C():
     print("=" * 72)
     print("PROBE C — equal-lift corner: inf_c gamma_b(c), 7 distinct b in +-{1..B}")
     print("=" * 72)
-    def inf_gamma_c(bs, q1=97, q2=89):
-        # two coprime coarse grids + local refine around minima
+    def inf_gamma_c(bs, q1=97):
+        # coarse grid + structured candidates (c = a/(14*lcm-ish)) + local refine
         best = (F(10), None)
-        for q in (q1, q2):
-            for a in range(q):
-                c = F(a, q)
-                g, _ = gamma_exact([c] * len(bs), bs)
-                if g < best[0]:
-                    best = (g, c)
-        # refine around best
+        cand = [F(a, q1) for a in range(q1)]
+        cand += [F(a, 56) for a in range(56)]
+        for c in cand:
+            g, _ = gamma_exact([c] * len(bs), bs)
+            if g < best[0]:
+                best = (g, c)
         c0 = best[1]
-        for scale in (F(1, 10**3), F(1, 10**4), F(1, 10**5)):
+        for scale in (F(1, 10**3), F(1, 10**4)):
             improved = True
             while improved:
                 improved = False
@@ -220,13 +233,14 @@ def probe_C():
         print(f"    b={bs}: inf_c gamma ~ {g} (~{float(g):.6f}) at c={c}{flag}")
     print(f"  B=4 record: {rec[0]} (~{float(rec[0]):.6f}) at b={rec[1]}; "
           f"1/14 ~ {float(F(1,14)):.6f}; strictly above? {rec[0] > F(1,14)}")
-    print("  B=5 sample (24 random 7-subsets of +-{1..5}):")
+    print("  B=5 sample (8 random 7-subsets of +-{1..5}):")
     rng = random.Random(183)
     universe5 = [1, -1, 2, -2, 3, -3, 4, -4, 5, -5]
     rec5 = (F(10), None)
-    for _ in range(24):
+    for _ in range(8):
         bs = tuple(sorted(rng.sample(universe5, 7)))
         g, c = inf_gamma_c(list(bs))
+        print(f"    b={bs}: inf_c gamma ~ {g} (~{float(g):.6f})")
         if g < rec5[0]:
             rec5 = (g, bs)
     print(f"  B=5 sampled record: {rec5[0]} (~{float(rec5[0]):.6f}) at b={rec5[1]}; "

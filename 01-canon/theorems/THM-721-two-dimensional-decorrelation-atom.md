@@ -2,6 +2,13 @@
 
 **Status:** PROVED (elementary, full proofs below; exact-M verification in
 `lrc14_neardilate_adversary_deathstar_S14.py` + `.out`) — pending fleet review.
+**Lean (death-star-2026-07-12-S15): Parts 2+3 KERNEL-PURE GREEN** in
+`TournamentH7/LRCUEscape.lean` — `count_grid_scaled` (the fibered grid count, ≤ (2/13)N + 2|β|),
+`exists_good_u` (the finite-pigeonhole survivor, grid N = 157·B·B!), `margin_uescape_j6`
+(witness form: `margin V t > 1/14` at floor `1/13 − B/(2L)`, `L > 91B`, pure-lift safe time
+as the LRC(≤13) citation hypothesis), `reach_uescape_j6` (kps reach form, sSup over [0,1]).
+All axioms `[propext, Classical.choice, Quot.sound]` — no sorry, no LRC(14) input.
+Part 1 (the 2D atom pin) remains covered by `LRCTorusRate.lean` (HYP-4342) as stated.
 **Author:** death-star-2026-07-12-S14.
 **Attribution (found by this session's mining pass — Part 1 is NOT new):** the 2D atom is
 **HYP-4342 (mac-mini-2026-07-06-S10, `the-subsumption-is-preprint-free-macmini-S10.md`), already
@@ -100,8 +107,9 @@ this stratum.
 ## Part 5 — honest scope + placement in the dichotomy
 
 - PROVED here: the compressed-`j≤6` stratum (at any scale) is loose, floor `1/13`, sharp.
-- `j ≥ 7`-at-every-admissible-scale compressed stratum: OPEN for this atom (u-union too weak at
-  `j = 7` exactly). Candidate glue mined this session: klein-S152's conjugate-witness slope test
+- `j ≥ 7`-at-every-admissible-scale compressed stratum: was OPEN for this atom (u-union too weak
+  at `j = 7` exactly) — `j = 7` now closes by the slope dichotomy (Part 6, death-star-S15); the
+  honest residual is `j ∈ [8,13]` mixed-slope. Candidate glue mined this session: klein-S152's conjugate-witness slope test
   (HYP-4711, verified 200/200, unformalized) targets exactly the all-impure near-AP stratum.
 - Incoherent-at-every-scale families (kps blocker — census in script: NO admissible scale): the
   pair-sum/coverage domain; klein-S264's wider-band Parseval floor empirically reaches true M
@@ -109,6 +117,36 @@ this stratum.
   scale nor Parseval/pair-sum-certified. NOTE (canon correction folded in): the blocker's exact
   `M = 406/1669 = 0.2433` (klein-S264 and this session, two independent methods); kps cont.47's
   `53/227` is the margin of one pair event — a lower bound, not the max.
+
+## Part 6 — the j = 7 boundary closes by SLOPE dichotomy (death-star-S15 addendum)
+
+The obstruction at `j = 7` (union bound exactly `1/14`) splits on the impure **slopes**
+`ρ_i = k_i/b_i`:
+
+> **(a) Equal-slope (PROVED, elementary).** If all impure slopes are equal —
+> `(k_i, b_i) = t_i·(p, q)`, lowest terms `q ≥ 1`, distinct nonzero multipliers `t_i` — then
+> for EVERY `s`, substituting `w = ps + qu` (which sweeps the circle as `u` does),
+> `γ(s) := max_u min_F ‖k_i s + b_i u‖ = M({|t_i|}) ≥ 1/8` by **LRC(≤8)** (≤ 7 distinct
+> multipliers). With the pure-optimal `s*`: `reach₂(W) ≥ min(M_P, 1/8) = 1/8`, so
+> `M(V) ≥ 1/8 − B/(2L) > 1/14` once `L > (28/3)B`. The same collapse closes equal-slope at
+> every `j ≤ 12` (`γ ≥ 1/(j+1) ≥ 1/13`); `j = 13` equal-slope contradicts primitivity
+> (`q | gcd` if `q ≥ 2`; `q = 1` is the pure dilate).
+> **(b) Non-equal-slope (mechanism proved-modulo-quantitative-write-up; exact-verified).**
+> `γ(s) = 1/14` forces the 7 closed forbidden `u`-systems (system `i`: `|b_i|` arcs of width
+> `1/(7|b_i|)`, center velocity `−k_i/b_i` in `s`) to tile the circle exactly. A tiling
+> persisting on an `s`-interval forces equal adjacent center-velocities around the circle —
+> i.e. ALL slopes equal — the case (a) hypothesis, excluded here. So tiling-`s` are isolated and every good
+> interval contains `s` with `γ(s) > 1/14`, quantitatively `γ(s₀+ε) ≥ 1/14 + ε·Δρ/2`
+> (`Δρ` = the relevant slope gap, `≥ 1/B²`). **Exact-verified** on the Part 4 adversary:
+> impure lifts `{7,…,13}`, `b ≡ 1`, `s₀ = 1/7`: `γ(1/7) = 1/14` EXACTLY (phases = staggered
+> `1/7`-AP — the u-side AP) and `γ(1/7 + ε) = 1/14 + ε/2` EXACTLY (ε = 1/7000, 1/2100,
+> 1/1274, 1/637; gaps `1/7 + ε` ×6, wrap `1/7 − 6ε`).
+
+Consequence for the dichotomy: the compressed residual shrinks from `j ≥ 7` to
+**`j ∈ [8,13]` with mixed slopes at every admissible scale** — the strongly incoherent
+stratum, home turf of the pair-sum/Parseval certificates (klein-S264, THM-668/680).
+Probe: `lrc14_uescape_j7_boundary_deathstar_S15.py` (+ `.out`); reflection
+`the-j7-uescape-closes-by-slope-dichotomy-deathstar-S15.md`; HYP-6270.
 
 **Files:** `04-computation/lrc14_neardilate_adversary_deathstar_S14.py` (+ `.out`).
 **Related:** HYP-4342 + LRCTorusRate.lean (Part 1 = it), HYP-4302/S6b (the pin), THM-636 (1D

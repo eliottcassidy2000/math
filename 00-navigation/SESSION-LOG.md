@@ -1,3 +1,41 @@
+## death-star-2026-07-12-S15 -- LRCUEscape.lean Stage B GREEN kernel-pure (THM-721 Parts 2+3 fully formalized); the j=7 u-escape boundary closes by SLOPE dichotomy (equal-slope -> LRC(<=8) floor 1/8; non-equal-slope -> tiling breaks at first order, rate verified EXACT); compressed residual shrinks to j in [8,13] mixed-slope
+
+Prompt (owner): make progress on the 14-runner LRC proof frontier.
+
+(1) LEAN (the deliverable): finished Stage B of `TournamentH7/LRCUEscape.lean` -- `count_grid_scaled`
+(fibered grid count <= (2/13)N + 2|beta|, fibering g -> g mod N' onto the Stage-A unit count),
+`exists_good_u` (finite-pigeonhole survivor on the grid N = 157*B*B!, union bound 6*(2/13*N+2B) < N),
+`margin_uescape_j6` (THM-721 Part 3 witness form: margin V t > 1/14 at floor 1/13 - B/(2L) for L > 91B,
+pure-lift safe time = the LRC(<=13) citation), `reach_uescape_j6` (kps reach form). ALL KERNEL-PURE:
+axioms [propext, Classical.choice, Quot.sound], no sorry, no LRC(14) input. Debug notes for the fleet:
+this Mathlib's push_cast mangles Nat-division casts through Z ((-(g/N' : N) : Z) : R) via Int.natCast_div
+-- do targeted rw [Int.cast_neg, Int.cast_natCast] BEFORE field_simp instead; omega treats variable-modulus
+products N'*(g/N') as opaque atoms (no congruence) -- use the Nat.div_add_mod calc chain; norm_cast
+normalizes (natAbs : Z) to |.| asymmetrically between hypothesis and goal -- bridge natAbs casts by
+Int.natAbs_of_nonneg + Int.cast_natCast rewrites, and Int.cast_le.2 for inequalities.
+
+(2) MATH (the frontier move): THM-721 Part 5 left j>=7 OPEN (u-union = exactly 1/14 at j=7). Closed j=7
+by the SLOPE dichotomy (THM-721 Part 6, HYP-6270, reflection): (a) all impure slopes k_i/b_i equal
+=> (k_i,b_i)=t_i(p,q), w=ps+qu substitution collapses gamma(s) = M({|t_i|}) >= 1/8 by LRC(<=8), EVERY s
+-- the 'degenerate' direction is the LOOSEST; closes equal-slope at every j<=12. (b) slopes not all equal
+=> gamma(s)=1/14 forces an exact closed tiling by arc-systems with per-system velocity -k_i/b_i; tiling on
+an s-interval forces all velocities equal (contradiction) => tiling-s isolated => good s with gamma > 1/14
+exists, rate gamma(s0+eps) >= 1/14 + eps*Delta_rho/2. EXACT-VERIFIED (Fractions): adversary {7..13}, b==1:
+gamma(1/7) = 1/14 exactly (the u-side AP tiling is REAL), gamma(1/7+eps) = 1/14 + eps/2 exactly x4 eps;
+adversarial search 28 profiles: min sup_good-s gamma = 7/26 (nothing near the wall); equal-lift corner
+B=4 exhaustive: inf_c gamma = 1/8 exactly at +-{1,2,3},4; stratum inhabited (19 primitive DC j=7-at-scale
+realizations, e.g. L=14 ending at 183). Compressed-lane residual now j in [8,13] mixed-slope only (the
+incoherent stratum = pair-sum/Parseval home turf). Convergence: at rational s, b==1, gamma = residue-maxgap
+/(2b') = mac-mini-S66's max-gap residue law one rung down; s-motion strictness is its derivative form.
+
+FILES: LRCUEscape.lean (green); THM-721 Part 6 + Lean-status addendum; HYP-6270;
+07-reflections/the-j7-uescape-closes-by-slope-dichotomy-deathstar-S15.md;
+04-computation/lrc14_uescape_j7_boundary_deathstar_S15.py (+.out); backlog lead (j in [8,13] mixed-slope).
+NEXT: (i) Lean the equal-slope leg (Part 6a -- same skeleton, qm/L grid step); (ii) quantitative
+delta(W) lemma for Part 6b (slope-gap x good-interval width vs B/(2L)); (iii) the j in [8,13]
+mixed-slope stratum: census whether it exists primitively at-every-scale, else hand to Parseval.
+
+---
 ## opus-2026-07-11-S253 -- the covering-min is a SLOW-FAST BALANCE in the hexagonal lattice (PROOF for the interval-core single-killer class + inductive direction)
 
 Prompt (owner): understand the shape of the target and find creative geometric/topological arguments toward proofs.
