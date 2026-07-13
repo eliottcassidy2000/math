@@ -1,0 +1,29 @@
+==========================================================================
+core family {1,...,12, f}: census M vs lander-dodge construction, over all f
+==========================================================================
+
+MINIMUM over f in [13,259]:  f=13, M=1/14=0.07143, best base q=14, a=1, closest approach=1
+  lander-dodge construction reaches: 1/14=0.07143 at (k,q,m)=(1, 14, 1)  == census M (CONSTRUCTIVE FLOOR)
+
+the ten smallest-M core families {1..12,f}:
+  f= 13: M=0.07143=1/14  base q=14,a=1,approach=1  [dodge=M]
+  f= 26: M=0.07407=2/27  base q=27,a=2,approach=2  [dodge=M]
+  f= 39: M=0.07500=3/40  base q=40,a=3,approach=3  [dodge=M]
+  f= 52: M=0.07547=4/53  base q=53,a=4,approach=4  [dodge=M]
+  f= 65: M=0.07576=5/66  base q=66,a=5,approach=5  [dodge=M]
+  f= 78: M=0.07595=6/79  base q=79,a=6,approach=6  [dodge=M]
+  f= 91: M=0.07609=7/92  base q=92,a=7,approach=7  [dodge=M]
+  f=104: M=0.07619=8/105  base q=105,a=8,approach=8  [dodge=M]
+  f=117: M=0.07627=9/118  base q=118,a=9,approach=9  [dodge=M]
+  f=130: M=0.07634=10/131  base q=131,a=10,approach=10  [dodge=M]
+
+floor over this range = 0.07143 = 1/14  (OTHER); all core families have M >= this > 1/14=0.07143
+
+lander-dodge optimality: 19/247 core families have dodge == census M.
+  families where a NON-13k+1 base beats the dodge construction (dodge < M):
+    f=14: census M=0.07692 at q=13 > dodge 0.07486  (dodge is a valid lower bound, not always tight)
+    f=15: census M=0.07692 at q=13 > dodge 0.07678  (dodge is a valid lower bound, not always tight)
+    f=16: census M=0.07692 at q=13 > dodge 0.07678  (dodge is a valid lower bound, not always tight)
+    f=17: census M=0.07692 at q=13 > dodge 0.07678  (dodge is a valid lower bound, not always tight)
+    f=18: census M=0.07692 at q=13 > dodge 0.07678  (dodge is a valid lower bound, not always tight)
+    f=19: census M=0.07692 at q=13 > dodge 0.07678  (dodge is a valid lower bound, not always tight)

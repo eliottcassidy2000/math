@@ -66,10 +66,24 @@ rung 14 the gaps `{1, 14, 28}` show the mechanism visibly: eleven gaps of 14 (th
 multiples `14·1 … 14·12`), one gap of 1 (`168 → 169`, where the far element 182 lands), and
 one double gap `28 = 14+14` (the wrap `169 → 14`, where runner 13 is **missing**).
 
-The covering condition is `14 | k` (S38). Rungs `k = 2` (`2/27`) and `k = 3` (`3/41`) sit
-*below* `14/183` in value but are **non-covering** (killed by a `t = 1/q` sieve), so they do
-not bound the covering class. The smallest **covering** rung is `k = 14`, value `14/183` —
-this is why "covering forces the jump from rung 1 to rung 14," and why the crux is `14/183`.
+The whole ladder is realized by the **core-plus-multiple-of-13** families: the census of
+`{1,…,12, f}` (`lrc14_landerdodge_floor_macmini_S65cont56.py`) gives
+`M({1,…,12, 13k}) = k/(13k+1)` **exactly** — rung `k` is `f = 13k`. So `1/14` (`f=13`, AP),
+`2/27` (`f=26`), `3/40` (`f=39`), `4/53`, … ascending to `1/13`. Two facts fall out:
+
+- **The AP is the unique minimizer among core families.** `M` over `{1,…,12,f}` is minimized
+  at `f = 13` (the AP), value `1/14`; every other core family is strictly above. This is the
+  local, computational face of "the AP is the LRC(14) extremal."
+- **Off-ladder is easy.** If `f ≢ 0 mod 13`, then base 13 alone gives `M ≥ 1/13` (the core
+  `{1,…,12} mod 13` has closest approach 1, and `f` doesn't land on 0). Only the exact
+  multiples of 13 stay on the delicate ladder.
+
+The covering condition is `14 | k` (S38). Ladder rungs `k = 2` (`2/27`) and `k = 3` (`3/40`)
+sit *below* `14/183` in value but are **non-covering** (killed by a `t = 1/q` sieve), so they
+do not bound the covering class. (Distinct from the cont.54 Farey *mediants* `3/41 = 1/14 ⊕
+2/27` etc., which interleave the ladder rungs on the Stern–Brocot tree but are yet other
+families.) The smallest **covering** rung is `k = 14`, value `14/183` — this is why "covering
+forces the jump from rung 1 to rung 14," and why the crux is `14/183`.
 
 ---
 
