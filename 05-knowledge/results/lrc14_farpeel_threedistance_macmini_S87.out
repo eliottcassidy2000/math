@@ -1,0 +1,26 @@
+Deep well {1..12,182}: #good-set intervals of G'_{~v} per peel v (fewer = more structured):
+
+   peel v=182: |G'_~v|=0.03410, #intervals=  12 <-- FAR peel: CONSECUTIVE core {1..12}, three-distance
+   peel v=  1: |G'_~v|=0.02390, #intervals=  24
+   peel v=  6: |G'_~v|=0.03964, #intervals=  28
+   peel v=  2: |G'_~v|=0.05490, #intervals=  30
+   peel v=  4: |G'_~v|=0.05323, #intervals=  30
+   peel v= 12: |G'_~v|=0.04299, #intervals=  30
+   peel v= 10: |G'_~v|=0.05318, #intervals=  32
+   peel v=  3: |G'_~v|=0.06445, #intervals=  34
+   peel v=  5: |G'_~v|=0.06321, #intervals=  36
+   peel v=  8: |G'_~v|=0.07086, #intervals=  36
+   peel v=  9: |G'_~v|=0.08185, #intervals=  40
+   peel v= 11: |G'_~v|=0.08717, #intervals=  42
+   peel v=  7: |G'_~v|=0.10308, #intervals=  46
+
+   FAR peel #intervals = 12; small-runner peels avg #intervals = 34
+   => the far peel's good set is FAR more structured (fewer intervals) -- three-distance of {1..12}.
+   klein's disc_far = (1/182)Sum_j A(j/182) - |G'|^2 with A = autocorrelation of a FEW-interval
+   piecewise-linear set => bounded by three-gap theorem (Steinhaus), NOT the crude r^2/3v^2.
+
+Near-AP residue {1..11,13,84}: peel BOTH far (13,84) -> core {1..11} collapses; effective order=2.
+   peel v=13: |G'_~v|=0.04273, #intervals=18
+   peel v=84: |G'_~v|=0.01216, #intervals=4
+   core {1..11} alone: |SafeSet|=0.05634, #intervals=14 (three-distance);
+   then 2 combs D_13,D_84 cut it -> L. Effective multi-linear order = #far = 2, not 13.

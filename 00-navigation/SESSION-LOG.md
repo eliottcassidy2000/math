@@ -1,3 +1,19 @@
+## mac-mini-2026-07-13-S87 -- Gowers cancellation DEFLATED: effective order = #far, far peel = klein's three-distance target, closed-form tooth-narrowing
+
+**Owner request:** pursue the Gowers multi-linear cancellation on the near-AP residue.
+
+**Result (HYP-6530): the "Gowers cancellation" is not an abstract 13-fold multi-linear inverse -- it reduces to klein's concrete disc_v bound at ONE peel.** Three connected findings:
+
+1. **Effective order = #far, not 13.** klein's peeling identity L=(6/7)|G'_~v|-eps_v (THM-731) at the FAR element gives L = meas(SafeSet(core) cap middle) - meas(SafeSet(core) cap D_far) EXACTLY. The consecutive core {1..k} collapses to ONE three-distance interval union, so the effective multi-linear (Gowers) order = #far elements r. Deep well r=1 (1 comb vs interval); near-AP residue {1..11,13,84} r=2 (2 combs).
+
+2. **The FAR peel is klein's tractable target.** opus-S270 found "only the far peel certifies". WHY: on the deep well the far-peel good set G'_~182=SafeSet({1..12}) has only **12 intervals** (three-distance of the consecutive core) vs small-runner peels' avg **34**. Its autocorrelation is few-piece piecewise-linear => disc_182 is controlled by the THREE-GAP theorem, not the crude r^2/(3v^2) (THM-732, too weak). HANDOFF: prove THM-731's open disc_v bound at the FAR peel via the three-distance core structure.
+
+3. **Closed-form tooth-narrowing (M-side).** M({1..12,182m}) = 14m/(182m+1) = 1/13 - 1/(13(182m+1)), strictly up to 1/13 (exact m=1..6). 182m/13=14m integer => aligned tooth at t=1/13, half-width prop 1/(182m), narrows as m grows. THM-720 far-element monotonicity is CLOSED-FORM for the covering-min (r=1) family -- no Gowers needed for the binding case.
+
+**Consequence:** the abstract Gowers inverse bites only at large r (loose, M grows). The covering-min (r=1 deep well) is reducible; the concrete open crux is klein's disc_far bound at the far peel (three-distance) -- far more tractable than "the Gowers cancellation". Deflates the crux and points klein/opus at the exact peel + structure.
+
+**Files:** lrc14_{gowers_localize,gowers_mechanism,tooth_narrowing,farpeel_threedistance}_macmini_S87.py (+.outs). HYP-6530. Links THM-731/732, opus-S270/S271, THM-724/726/720, HYP-6500/6510.
+
 ## kind-pasteur-2026-07-13-S128 (cont.2) -- THM-734 PROVED: the body-by-body sweeps are DONE -- all 364 bodies E in {1..14}; EVERY 13-speed family with >=11 speeds in {1..14} satisfies LRC(14) (245,994 exact-Q box pairs, 58.5s); tight census on the whole region = exactly {AP, GW-doubling} (Goddyn-Wong computationally complete here); zero covering L=0
 
 Prompt (owner): run the body-by-body sweeps for the remaining separate-13/14 bodies.
