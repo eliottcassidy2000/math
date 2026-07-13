@@ -1,3 +1,22 @@
+## mac-mini-2026-07-12-S69 -- THM-724: single-killer covering-min RIGIDITY, rigorously proved (deep well UNIQUE min at 14/183); opus-S253's large-s trade closed as a THEOREM via the balance + shallow-witness lemmas
+
+Prompt (owner): prove the single joint rigidity and any extensions you synthesize.
+
+Turned S68's computational closure of opus-S253's large-s trade into a rigorous THEOREM (THM-724). Every primitive covering SINGLE-KILLER 13-set has M>=14/183, deep well {1..12,182} the UNIQUE minimizer. Two new unconditional lemmas:
+
+LEMMA 1 (BALANCE, perturbation -- opus's formula made rigorous): A finite, mu=M(A) at t0, v resonant (v*t0 in Z) => M(A u {v}) >= mu*v/(v+s), s=min-over-directions max binding descent rate (<=max A; =1 for interval core). Proof: perturb t0+-eps, killer rises at rate v from 0, core min falls at rate s, cross at eps=mu/(v+s).
+
+LEMMA 2 (SHALLOW WITNESS, counting -- the large-s closure): C=c*{1..12}, c>=2, gcd(c,v)=1 => M(C u {v})>=1/13. Proof: base 13c, core residues c*{perm of 1..12} all at distance>=c (margin 1/13); good killer-dilation a exists by counting (#bad <= 2c+11 < 12c valid a for c>=2, using g=gcd(v,13c) in {1,13}). Verified 0 failures/3234 pairs.
+
+THEOREM (cases): mu=M(C)>=1/13 (LRC13). Case0 killer-safe: M>=min(mu,||v_f t0||)>=1/13. Case1 interval core {1..12}: mu=1/13,s=1,covering=>182|v_f=>v_f>=182, balance M>=(1/13)v_f/(v_f+1)>=14/183, EQUALITY iff v_f=182 (deep well). Case2 dilated c*{1..12}: primitivity=>gcd(c,v_f)=1, Lemma2 M>=1/13. Case3 tight non-dilated: EMPTY by prime-13 pinning (HYP-4382: |C|=12,M=1/13 <=> C dilated AP). RESIDUAL near-tight non-dilated large-s: empirically closed (S68 2336 + S69 64+3234 configs, no counterexample, min=14/183 unique deep well); general proof = open covering-min.
+
+EXTENSIONS: E1 exact interval-core M>=v/(13(v+1)) (tight small v: 14/183@182, 28/365@364); E2 shallow-witness principle for any core with a shallow LRC witness; E3 large-s => near-dilated (prime-13) => has shallow witness (the mirage mechanism); E4 multi-killer balance M>=mu*(min v_i)/(min v_i + s) (opus's next, 2D picture).
+
+Honest: unconditional = Lemmas 1,2 + Cases 0,1,2 + Case3-emptiness(given HYP-4382); cited LRC13 + HYP-4382; residual empirical. Single-killer only; multi-killer (E4) is the remaining covering-min half; density route THM-527/663 independent.
+
+FILES: THM-724; 04-computation/lrc14_{shallow_witness_verify,residual_stress}_macmini_S69.py(+.out) + the S68 census scripts. CREDITS: opus-S253 (balance/interval-core), mac-mini-S12/HYP-4382 (prime-13 tightness), kps-S127 (lcm/dilation), THM-366/523. -> opus (multi-killer E4).
+
+---
 ## death-star-2026-07-12-S16 -- the mixed-slope j>=8 stratum REDUCES to perturbed tight dilates and CLOSES at B<=2 by the clean-q game (census 70k+ adversarial patterns, all >= 1/12; THM-723, HYP-6295); j inverts (j=8 is the hard end); end-to-end DC witness verified
 
 Prompt (owner): work the mixed-slope-at-every-admissible-scale stratum; pull frequently; update targets as needed.
