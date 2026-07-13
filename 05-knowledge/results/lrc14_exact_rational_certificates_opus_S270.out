@@ -1,0 +1,40 @@
+====================================================================================================
+EXACT RATIONAL THM-731 CERTIFICATES:  certifies L > 0  iff  disc_v < 6 |G'_{~v}|^2  (in Q)
+====================================================================================================
+
+deep well {1..12,182}, peel v=182 (UNIQUE global covering-min, THM-724/726)
+   r (intervals of G'_{~v})   = 12
+   |G'_{~v}|                  = 6617/194040  = 0.034101
+   disc_v (Bernoulli, exact)  = 2629220219/6363107150400  = 4.131975e-04
+   6|G'|^2                    = 43784689/6275253600  = 6.977358e-03
+   disc_v < 6|G'|^2 ?         : YES -- CERTIFIED L > 0 (exact, kernel-pure)   (ratio disc/(6|G'|^2) = 2629220219/44397674646 ~ 0.0592)
+   => L >= (6/7)|G'|(1 - sqrt(ratio)) ~ 0.022117
+
+near-AP residue {1..11,13,84}, peel v=84 (min-L body, the binding case)
+   r (intervals of G'_{~v})   = 4
+   |G'_{~v}|                  = 426/35035  = 0.012159
+   disc_v (Bernoulli, exact)  = 6888577/22094122050  = 3.117832e-04
+   6|G'|^2                    = 1088856/1227451225  = 8.870870e-04
+   disc_v < 6|G'|^2 ?         : YES -- CERTIFIED L > 0 (exact, kernel-pure)   (ratio disc/(6|G'|^2) = 6888577/19599408 ~ 0.3515)
+   => L >= (6/7)|G'|(1 - sqrt(ratio)) ~ 0.004243
+
+compressed 2{1..12}u{13}, peel v=16 (MID-BAND, no far element; best peel)
+   r (intervals of G'_{~v})   = 18
+   |G'_{~v}|                  = 77639/1261260  = 0.061557
+   disc_v (Bernoulli, exact)  = 5489176811/397694196900  = 1.380251e-02
+   6|G'|^2                    = 6027814321/265129464600  = 2.273536e-02
+   disc_v < 6|G'|^2 ?         : YES -- CERTIFIED L > 0 (exact, kernel-pure)   (ratio disc/(6|G'|^2) = 10978353622/18083442963 ~ 0.6071)
+   => L >= (6/7)|G'|(1 - sqrt(ratio)) ~ 0.011652
+
+compressed 2{1..12}u{13}, peel v=24 (max speed peel)
+   r (intervals of G'_{~v})   = 16
+   |G'_{~v}|                  = 2503/77616  = 0.032249
+   disc_v (Bernoulli, exact)  = 70542721/30121217280  = 2.341961e-03
+   6|G'|^2                    = 6265009/1004040576  = 6.239797e-03
+   disc_v < 6|G'|^2 ?         : YES -- CERTIFIED L > 0 (exact, kernel-pure)   (ratio disc/(6|G'|^2) = 70542721/187950270 ~ 0.3753)
+   => L >= (6/7)|G'|(1 - sqrt(ratio)) ~ 0.010707
+
+NOTE: every quantity above is a Fraction; the comparison is exact integer arithmetic.
+A Lean transcription needs: the interval engine (finite rational interval intersections),
+the Bernoulli identity (THM-732/kps), and the Fraction comparison. No analysis at runtime.
+done.

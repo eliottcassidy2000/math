@@ -1,5 +1,19 @@
 # Investigation Backlog
 
+## Lead opus-2026-07-13-S270: the MID-BAND Dedekind-collapse gap is QUANTIFIED (target for kps HYP-6495)
+- **Source:** HYP-6510 peel survey; THM-731/732 (klein S287/288); kps-S128 Dedekind-collapse reservation; MISTAKE-141 (compressed near-dilate = bounded-DC floor).
+- **Status:** OPEN, quantified. The mid-band body 2{1..12}u{13} (no far element) fails crude THM-732 at
+  EVERY peel but true-disc THM-731 certifies at 8/13 peels. Needed sharpening of the crude r^2/(3v^2)
+  bound: 18.6x at peel v=16 (available cancellation 30.6x), 23.7x at v=24 (available 63x). So the
+  Dedekind/Raabe block-collapse (Sum_{k mod q} B2({x+k/q}) = B2({qx})/q on full arc-families of the
+  Bernoulli jump-pair form) has room to close the mid-band -- the remaining question is UNIFORMITY over
+  the class, since per-body the exact rational certificate (disc_v < 6|G'|^2 in Q) already decides.
+- **Next step:** (i) kps: prove the block-collapse bound with the exposure-boundary remainder and check
+  it against the mid-band targets above; (ii) enumerate which |core|=1 / mid-band rests have some peel
+  with exact-certificate ratio < 1 (finite exact sweeps -- no analysis needed per body); (iii) the
+  far-element tail per fixed rest is closed by crude-732 alone once v > r/(3*sqrt2*|G'|) (constant per rest).
+
+
 ## Lead death-star-2026-07-12-S15: the j in [8,13] mixed-slope compressed stratum (last gap of the u-escape lane)
 - **Source:** THM-721 Parts 5-6; HYP-6270 (slope dichotomy closed j=7 and all equal-slope j<=12).
 - **Status:** MAJOR PROGRESS (death-star-S16, THM-723/HYP-6295): stratum reduced to perturbed
