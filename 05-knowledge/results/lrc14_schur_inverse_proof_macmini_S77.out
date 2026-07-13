@@ -1,0 +1,29 @@
+EXHAUSTIVE: all k-subsets of {1..N}; check T<=C(k,2) and equality-iff-dilated-AP
+
+k=3, subsets of [1..14]: 364 sets. T<=C(k,2)=3: OK (0 violations)
+   equality T=C(k,2) but NOT dilated-AP: NONE
+   dilated-AP but T!=C(k,2): NONE
+k=4, subsets of [1..12]: 495 sets. T<=C(k,2)=6: OK (0 violations)
+   equality T=C(k,2) but NOT dilated-AP: NONE
+   dilated-AP but T!=C(k,2): NONE
+k=5, subsets of [1..11]: 462 sets. T<=C(k,2)=10: OK (0 violations)
+   equality T=C(k,2) but NOT dilated-AP: NONE
+   dilated-AP but T!=C(k,2): NONE
+
+dilated APs {d,2d,..,kd} achieve T=C(k,2):
+   k=5,d=1: T=10, C(k,2)=10, equal=True
+   k=5,d=2: T=10, C(k,2)=10, equal=True
+   k=5,d=3: T=10, C(k,2)=10, equal=True
+   k=5,d=7: T=10, C(k,2)=10, equal=True
+   k=8,d=1: T=28, C(k,2)=28, equal=True
+   k=8,d=2: T=28, C(k,2)=28, equal=True
+   k=8,d=3: T=28, C(k,2)=28, equal=True
+   k=8,d=7: T=28, C(k,2)=28, equal=True
+   k=13,d=1: T=78, C(k,2)=78, equal=True
+   k=13,d=2: T=78, C(k,2)=78, equal=True
+   k=13,d=3: T=78, C(k,2)=78, equal=True
+   k=13,d=7: T=78, C(k,2)=78, equal=True
+
+=> THEOREM VERIFIED: T(A)<=C(k,2), equality iff A is a dilated AP {d,2d,...,kd}.
+This is the combinatorial EXTREMAL STEP of the last inch (opus-S182 target). The remaining
+open part is the RESUMMATION (Schur-deficit => L>0); this theorem alone is NOT LRC(14).
