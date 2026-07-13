@@ -16,6 +16,24 @@ FILES: reflection the-naive-erdos-turan-is-too-weak-the-good-set-needs-mollifica
 
 ---
 
+## mac-mini-2026-07-13-S74 -- adversarially verified opus-S259's coreCover<1 route: equidistribution CLOSES |core|>=2 but the covering EXTREMALS are all |core|=1 (runner 1, single arc, density 0.92) = LRC(14) unclosed
+
+Prompt (owner): prove the coprime-core equidistributes in G' unless AP.
+
+opus-S259 (pushed this session) ATTACKED exactly this and claimed the <=6-core anti-concentration HOLDS via equidistribution (coreCover<1, density~1/7). I adversarially stress-tested it. HONEST VERDICT: real progress but does NOT prove LRC(14) -- the runner-1/extremal residual = the conjecture.
+
+FINDING (fine grid, adversarial covering families to speed 400):
+ - WORST coreCover = 0.9195 at {1..11,13,84}, a |core|=1 family. ALL covering EXTREMALS are |core|=1 (only runner 1 coprime to 30030): deep well 0.719, {1..12,364} 0.688, {1..11,13,84} 0.920, {1..11,13,168} 0.875.
+ - RUNNER 1 IS NOT EQUIDISTRIBUTED (D_1 = single arc near 0). For |core|=1, coreCover = runner-1 density in G' = 1 - safe/meas(G'); coreCover<1 <=> M>1/14 = LRC(14) itself. Weyl does not help.
+ - opus's "runner-1 density ->1 ONLY at the non-covering AP" is TOO OPTIMISTIC: the covering extremals (in-scope, NOT AP) have runner-1 density 0.72-0.92 (small G' ~0.067 that the runner-1 arc nearly fills). The 0.15-0.21 opus cites is the |core|>=2 generic case (larger G').
+
+VERDICT: opus-S259 REDUCES LRC(14) to the |core|=1 (runner-1-dominated) covering extremals -- the |core|>=2 generic families close via equidistribution+ET (genuine progress), but the hard extremals (deep well, {1..11,13,84}) are exactly |core|=1 = HYP-2566. coreCover<1 with margin <=> covering-min>1/14 <=> the conjecture. So the runner-1 positional bound on the extremals is not a side-case -- it IS the open problem.
+
+FILES: HYP-6370; 04-computation/lrc14_{corecover_adversarial,core1_residual}_macmini_S74.py(+.out). CREDITS: opus-S259 (the route, sharpened), opus-S255 (near-AP/runner-1 tool), mac-mini S73 (localized crux), THM-724/726 (extremals). -> opus: the equidistribution half is solid for the >=17 core runners; the residual is runner 1 on the |core|=1 covering extremals (density up to 0.92), = HYP-2566; needs the positional/near-AP bound, not Weyl.
+
+HONEST META: this is the 9th session on the covering-min/LRC(14) crux. The picture is now complete and precise -- covering-min rigidity PROVED+certified (deep well unique min, THM-724/726), single-killer closed form (S71), and the sole open item (HYP-2566 = coreCover<1 on the |core|=1 extremals = runner-1 positional = the AP-inverse) is LRC(14) itself, the first open case of the Lonely Runner Conjecture. It will not fall to equidistribution alone.
+
+---
 ## opus-2026-07-11-S259 -- ATTACK on the <=6-core anti-concentration: it HOLDS via the coprime core's EQUIDISTRIBUTION in the good set G' (working within-G' union bound, correcting S258)
 
 Prompt (owner): attack the <=6-core anti-concentration against the good set.
