@@ -1,0 +1,28 @@
+(1)+(2) the lonely point t* sits in a mult-of-14 BACKBONE gap; which runners BIND there:
+family                     | M | t* | backbone (mult14) | binding runners at t* (dist=M)
+single-killer {1..12,182}  |  14/183 |  14/183 | [182] | [1, 182]   (backbone lonely@t*: True)
+ladder S_2 {1..12,364}     |  28/365 |  28/365 | [364] | [1, 364]   (backbone lonely@t*: True)
+multi-killer {1..11,13,84} |    7/89 |   37/89 | [84] | [5, 84]   (backbone lonely@t*: True)
+multi {1..10,13,22,84}     |    2/23 |    2/23 | [84] | [1, 22]   (backbone lonely@t*: True)
+
+=> single-killer: ONLY runner 1 + the backbone bind (=> the 2-runner balance, PROVED cont.60/61).
+   multi-killer: MORE runners bind (the fillers engage) => the backbone gap is contested, mid-interval.
+
+(3) the GRID-POINT modular covering law: near j/14, a runner b covers iff 14|bj iff b==0 mod 14/gcd(j,14):
+     j | gcd(j,14) | need b == 0 mod | covered by
+     1 |         1 |             14 | mult 14
+     2 |         2 |              7 | mult 7
+     3 |         1 |             14 | mult 14
+     4 |         2 |              7 | mult 7
+     5 |         1 |             14 | mult 14
+     6 |         2 |              7 | mult 7
+     7 |         7 |              2 | even (mult 2)
+     8 |         2 |              7 | mult 7
+     9 |         1 |             14 | mult 14
+    10 |         2 |              7 | mult 7
+    11 |         1 |             14 | mult 14
+    12 |         2 |              7 | mult 7
+    13 |         1 |             14 | mult 14
+    => all 13 grid points are COVERED by any covering family (has mult 14 -> covers the 6 coprime-14
+       points and (14=2*7) the 6 even + the j=7 point). So gaps are strictly BETWEEN grid points,
+       inside the backbone's inter-arc slots -- the covering-min lives in one backbone gap.

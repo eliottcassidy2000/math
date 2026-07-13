@@ -1,3 +1,42 @@
+## kind-pasteur-2026-07-11-S127 cont.65 -- the mult-of-14 BACKBONE and the fillers: the endpoint structure globalized
+
+Prompt (owner): push the endpoint mult-of-14 structure further.
+
+The cont.64 endpoint fact (near 1/14 only the mult-of-14 runner covers) was local. Globalizing it turns the
+mult-of-14 runner into a BACKBONE and gives a clean backbone+fillers decomposition.
+
+(1) BACKBONE. A covering family has a mult of 14 = 14m. It is bad at EVERY grid point j/14 (14m*(j/14)=jm in Z)
+and has intermediate arcs at k/(14m), so it tiles [1/14,13/14] on a grid of spacing 1/(14m), leaving inter-arc
+gaps of width 13/(196m). The other 11 runners are FILLERS. The covering-min lonely point t* always lies in a
+backbone gap (verified ||14m t*|| >= M for single-killer, ladder, multi-killer).
+
+(2) GRID-POINT MODULAR LAW. Near j/14, runner b covers iff 14|bj iff b == 0 mod 14/gcd(j,14): j coprime-14
+(1,3,5,9,11,13) -> mult 14; j even (2,4,6,8,10,12) -> mult 7; j=7 -> even. A mult of 14 (=2*7) covers ALL 13 grid
+points alone. So no gap sits at a grid point; every gap is strictly BETWEEN grid points, inside a backbone slot.
+
+(3) EXACTLY 2 RUNNERS BIND (Chebyshev equioscillation, opus-S252), and WHO they are is the whole story:
+  single-killer {1..12,182} -> {1, 182} = runner 1 + backbone
+  ladder {1..12,364}        -> {1, 364}
+  multi-killer {1..11,13,84}-> {5, 84}  = a FILLER + backbone
+  multi {1..10,13,22,84}    -> {1, 22}  = runner 1 + a filler
+SINGLE-KILLER: the fillers are IDLE (only runner 1 + backbone bind); the covering-min is literally a 2-runner
+problem (runner 1 vs the backbone 14m) = the slow-fast balance PROVED + machine-checked (cont.60/61). The
+backbone lens IS its geometric content: in the backbone first gap (1/14,1/13) only runner 1 (rising) + the
+backbone arc-edges are active. MULTI-KILLER: a small FILLER enters the backbone slot and contests it, t* moves
+mid-interval => a filler-vs-backbone balance = the open analytic residual (opus Fourier).
+
+NET: this proves nothing new but reorganizes the crux cleanly and pins the boundary EXACTLY -- single-killer =
+idle fillers = done (Lean); multi-killer = contested slot = open. It re-derives why exactly 2 bind
+(equioscillation) and why 14m is the natural observer grid. NEXT QUESTION the lens poses: bound the depth of a
+filler-contested backbone slot uniformly in m (the multi-killer analogue of the single-killer 1/(196m) slot).
+
+Artifacts: reflection the-mult-of-14-backbone-and-the-fillers-the-endpoint-globalized-kps-S127; HYP-6236;
+lrc14_backbone_structure_kps_S127.py/out.
+
+Next: bound the filler-contested backbone slot depth uniformly in m; or continue supporting opus's Fourier route.
+
+---
+
 ## mac-mini-2026-07-13-S77 -- PROVED THM-730, the Schur-triple inverse: T(A)<=C(k,2) equality iff dilated AP (the E3/Schur extremal step of the last inch; combinatorial door CLOSED)
 
 Prompt (owner): prove the Schur-triple inverse T(S)<=C(k,2) equality iff dilated AP.
