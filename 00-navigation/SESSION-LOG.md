@@ -1,3 +1,22 @@
+## mac-mini-2026-07-13-S71 -- toward HYP-2566: the CLEAN PARTITION closes the single-killer covering-min in closed form (no residual) and isolates the sole remaining closed-form gap to MULTI-KILLER r>=2, M>=1/13
+
+Prompt (owner): prove the closed-form global-optimum inequality (HYP-2566).
+
+HYP-2566 (inf over primitive covering 13-sets of M >= 14/183) is the project's CENTRAL OPEN conjecture; I did not fully prove it, but made a clean structural advance that closes the single-killer half in closed form and isolates the remaining gap to ONE statement.
+
+THE CLEAN PARTITION (HYP-6330). Partition by r = #{v in S : v>=13} (r>=1 always):
+ - r=1 (TRUE single-killer): the 12 elements <13 are distinct & <=12 => FORCED = {1,..,12} (interval core -- a CONSEQUENCE, not a choice). Covering => 182|v_f => v_f>=182. THM-724 Lemma 1 (mu=1/13, s=1): CLOSED-FORM M >= (1/13)*v_f/(v_f+1) >= 14/183, equality iff v_f=182 (deep well). FULLY PROVED, NO RESIDUAL.
+ - r>=2: multi-killer, THM-726, M>=1/13. Every dilated core c*{1..12} (c>=2) has 6-10 elements >=13 => r>=7 => multi-killer. So THM-724's dilated/non-interval Cases 2-3 AND its 'near-tight large-s residual' are ALL r>=2 = THM-726's domain. The residual was a SCOPING ERROR, now EMPTY.
+
+CONSEQUENCE: single-killer covering-min closed in CLOSED FORM (r=1 = interval core forced + balance s=1). HYP-2566's remaining closed-form gap = EXACTLY multi-killer r>=2 (M>=1/13), currently CERTIFIED (THM-726 finite-check + far-monotone tail); the balance provably undershoots (optimum global, {1..11,13,84}=7/89 at t*=37/89). So the whole covering-min closed form now rests on ONE clean statement: r>=2 => M>=1/13.
+
+VERIFIED: all r=1 primitive covering configs (={1..12,182m}) have M>=14/183, min at deep well; every dilated core is r>=2; shallow-witness stable (520 perturbed configs); near-tight 12-cores are near dilated APs (generic cores M_core>1/12, 6000 sampled).
+
+HONEST: HYP-2566 NOT fully proved (central open conjecture). Advance = single-killer fully closed (residual removed) + gap isolated to multi-killer M>=1/13. This complements kps-S127cont57 (primitivity forces s=1) which reaches the same single-killer closure via parity.
+
+FILES: HYP-6330; THM-724 addendum; 04-computation/lrc14_{clean_partition,stability_singlekiller,lrc13_stability}_macmini_S71.py(+.out). -> multi-killer closed form (r>=2 M>=1/13) is the sole remaining gap; the balance undershoots so it needs a global-optimum argument (klein odd-doorway packing / density route / new idea).
+
+---
 ## opus-2026-07-11-S257 -- dual-certificate route for the covering-min: clean test-measure formulation, a RIGOROUS knife-edge obstruction to any SINGLE certificate, the forced tight/loose split
 
 Prompt (owner): pursue the dual certificate route for the covering-min.
