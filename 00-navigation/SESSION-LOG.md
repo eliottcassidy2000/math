@@ -1,3 +1,21 @@
+## mac-mini-2026-07-13-S80 -- pursued the DELSARTE dual-existence idea concretely: a genuine LP-computable constructive certificate, knife-edge now COMPUTABLE, but EQUIVALENT to the finite-Vmax glue (= LRC14), not a way around it
+
+Prompt (owner): pursue the Delsarte dual-existence idea for the residue.
+
+Pursued it with an actual LP (scipy). Certificate = deg-D positive density nu with INT W dnu<1 (W=danger count) => safe point exists => M>=level. min over nu at bandlimit D is an LP.
+
+FINDINGS (verified, N=1200):
+ (1) GENUINE CONSTRUCTIVE CERTIFICATE. At level 1/14, ALL covering families certify (bound<1) at FINITE degree: deep well D=20:1.174,40:1.003,80:0.730,160:0.390 (by D~80); {1..11,13,84} by D~80; {2..14} by D~20. A degree-D positive-polynomial certificate EXISTS and is LP-computable per family.
+ (2) THE KNIFE-EDGE IS COMPUTABLE (opus-S257 confirmed). At level 14/183 (deep well's OWN M), the deep-well bound -> 1 EXACTLY, never below: 1.166,1.111,1.022,1.0000. No Delsarte cert certifies the extremal at its own level -- the LP-dual sees the measure-zero safe set. Other covering (M>14/183) still certify.
+ (3) CERT DEGREE ~ 1/L(S). Worst case = smallest safe measure L = NEAR-AP {1..11,13,84} (L=0.005) NOT the deep well (L=0.024). So the min-L extremal (Delsarte-worst) is near-AP; the min-M extremal (covering-min) is the deep well -- DIFFERENT families.
+
+HONEST VERDICT: the Delsarte dual-existence is a clean, LP-computable, constructive certificate framework -- but EQUIVALENT to the finite-Vmax glue (degree=Vmax). Uniform certification needs the cert degree bounded = inf_covering L > 0 = the covering-min = LRC(14). It re-expresses the residue as "the degree-D0 Delsarte bound at 1/14 is <1 for all covering" (D0~1/inf L) = [finite check on near-AP] + [decorrelation tail] = the same certified structure. Equivalent, not easier. The knife-edge (bound->1 at the extremal's own level) is the exact LP-dual signature of the measure-zero safe set.
+
+So the dormant Delsarte thread is now PURSUED and its verdict recorded: a genuine constructive-certificate reformulation (valuable: LP-computable certificates, knife-edge made precise), but it does not circumvent the covering-min. The residue stays LRC(14).
+
+FILES: HYP-6450; 04-computation/lrc14_delsarte_LP_macmini_S80.py(+.out). -> the two other dormant threads (Stern-Brocot inductive tower, tournament chi=2 orbit-rigidity) remain unpursued; both are non-averaging. But every constructive/certificate/moment approach lands on inf L>0 = the covering-min. The honest frontier is a genuinely new structural idea, not a certificate.
+
+---
 ## opus-2026-07-11-S266 -- proving the additive bound: a clean rigorous IDENTITY, but NO clean bound; eps_v is an ALTERNATING MULTI-ORDER cancellation (confirms S262). Elementary tools exhausted; case skeleton stands verified
 
 Prompt (owner): prove the additive bound |eps_v|<=f(#relations) rigorously, work the two anti-concentration bounds.
