@@ -1,0 +1,16 @@
+independent value (6/7)^13 = 0.13480. L>0 <=> corrsum := L/(6/7)^13 - 1 > -1.
+
+set                        | Schur | deficit | L        | corrsum(>-1?) | regime
+----------------------------------------------------------------------------------------
+AP {1..13}                 |    78 |       0 | 0.000000 | -1.0000      | AP/knife-edge
+{1..11,13,84}              |    65 |      13 | 0.005360 | -0.9602      | AP/knife-edge
+deep well {1..12,182}      |    66 |      12 | 0.023905 | -0.8227      | near-AP
+{2..14}                    |    66 |      12 | 0.061225 | -0.5458      | near-AP
+spread(coprime-ish)        |     3 |      75 | 0.139115 | +0.0320      | LOOSE (decorr)
+dissociated {2^i}          |    12 |      66 | 0.277365 | +1.0576      | LOOSE (decorr)
+
+STRUCTURE: L=(6/7)^13*(1+corrsum), a FINITE bounded sum (no divergence). L>0 <=> corrsum>-1.
+LOOSE (dissociated, large Schur deficit): corrsum near 0 => L~(6/7)^13>0 -- correlation-bounded,
+the tractable half (= kps E_grid/kissing, opus dissociated). NEAR-AP (small deficit): corrsum
+-> -1 => L->0 -- the knife-edge residual = the open covering LRC(14). The resummation SPLITS
+exactly as the covering-min does; the near-AP corrsum>-1 is the irreducible open statement.
