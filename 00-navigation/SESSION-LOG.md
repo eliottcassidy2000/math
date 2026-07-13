@@ -1,3 +1,22 @@
+## mac-mini-2026-07-09-S65 (cont.56) -- the runners at a clean base ARE a rotation orbit: Ostrowski rung = three-gap orbit = rotational tournament; crux mechanism = OMIT THE DISTANCE-1 LANDER (base-change/tournament/Ostrowski synthesis)
+
+Prompt (owner): [re base-change reframing] yes [write it up], and see if there are any tournament connections, and its relation to ostrowski, keep working the critical math for a session.
+
+Delivered the synthesis the owner asked for; MAJOR concurrent convergence -- opus-S250 (base=modulus dictionary), opus-S251 (CF ladder [0;13,k]), klein-S269 (three faces), kps-S127cont54 (ladder-all-N) all hit the same object in the last day. My complementary half:
+
+(1) ROTATION-ORBIT OBJECT. At the optimizing base q the residues {v_i a mod q} are the ORBIT of a single rotation by a/q, and M(v) = that orbit's CLOSEST APPROACH to 0. LRC = a closest-approach problem for rotation orbits. Verified: rung k has clean base q=13k+1, angle k/q, orbit {k*v mod q}; three-gap theorem holds on the nose (rung 1 gaps {1,2}; rung 14 gaps {1,14,28}, 28=14+14 the double-gap where runner 13 is missing) -- this is WHY the extremals are three-gap-regular (cont.44), now DERIVED.
+
+(2) CRUX MECHANISM (verified, lrc14_crux_mechanism). At base q the distance-1 lander is v == +-a^{-1} mod q. Beating 1/14 REQUIRES omitting your own distance-1 lander. AP at q=14: landers {1,13} BOTH present => pinned 1/14. Deep well {1..12,182} at q=183: landers {13,170} NEITHER present (13 omitted, 182 replaces it at distance 14) => 14/183. Twin of klein-S269's odd-|Aut| tie-resolution lever (both say the AP is pinned by structure it can't avoid).
+
+(3) CORE-FAMILY CENSUS. M({1..12,13k}) = k/(13k+1) EXACTLY (core+mult-of-13 realizes the whole ladder); AP (f=13) is the UNIQUE minimizer; if 13 does not divide f then base 13 gives M>=1/13 (off-ladder easy). Corrected my draft: ladder rung 3 = 3/40 (the 3/41 of cont.54 is the Farey CHILD [0;13,1,2], per opus-S251).
+
+(4) TOURNAMENT recovery. Rotation orbit carries a rotational (circulant) tournament. At the AP base q=14 the EVEN base degenerates (klein-S269: difference 7 ties 7 antipodal pairs, 2^7 resolutions); passing to the odd part (mod apex prime 7) gives the FULL heptagon R_7 = "beat next 3", self-complementary, Aut=C_7, exactly 14 cyclic triangles = |D_7| -- precisely opus-S14's heptagon, now DERIVED as the odd-part clean-base orbit. Deep well at q=183: rotational tournament, 90 cyclic triangles (same construction, one rung deeper).
+
+(5) ARCHIMEDEAN<->FINITE bridge (opus-S250's obstruction, resolved). Each finite base q=13k+1 delivers archimedean margin k/q; sup_k k/(13k+1)=1/13. The CF ascending to 1/13 IS the reconciliation of the finite places (moduli) with the archimedean place (the 1/14 band).
+
+FILES: reflection the-runners-at-a-clean-base-are-a-rotation-orbit-...-macmini-S65cont56; HYP-6240; 04-computation/lrc14_{rotation_orbit_tournament,crux_mechanism,landerdodge_floor,tournament_at_base}_macmini_S65cont56.py (+.out). CREDITS: opus-S250/S251, klein-S269, kps-S127cont54, opus-S14, mac-mini S38, cont.44/54/55. OPEN (unchanged in kind): turn "omit the distance-1 lander" into a lower bound over ALL covering families (= the rotation-orbit form of the non-compressed peel / klein's compressed floor).
+
+---
 ## kind-pasteur-2026-07-11-S127 cont.54 -- the Ostrowski ladder formula generalizes to all N; the covering-min N/Phi6(N) does not
 
 Prompt (owner): work on the remaining Ostrowski LRC mathematics.
