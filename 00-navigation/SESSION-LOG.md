@@ -1,3 +1,21 @@
+## opus-2026-07-11-S257 -- dual-certificate route for the covering-min: clean test-measure formulation, a RIGOROUS knife-edge obstruction to any SINGLE certificate, the forced tight/loose split
+
+Prompt (owner): pursue the dual certificate route for the covering-min.
+
+DUAL FORMULATION: cert = prob measure nu with Sum_i nu(D_i) = INT W dnu < 1 (W=danger count) => W=0 on positive measure => safe point => M(v)>=c. Fourier: Sum_i nu(D_i) = 2ck + Sum_{h!=0} b_{-h} Sum_i nuhat(h v_i).
+
+LEBESGUE FAILS: 2ck = 364/183 = 1.989 > 1; the cert MUST use correlation terms (anti-concentration) and exploit divisor-completeness.
+
+KNIFE-EDGE OBSTRUCTION (rigorous): the deep well has W_dw>=1 a.e. (safe set = single point t*, measure 0), so for ANY absolutely-continuous nu, INT W_dw dnu >= 1 => NO AC test measure certifies the deep well; only delta_t* does. A single positive trig polynomial IS an AC test measure => a SINGLE UNIFORM certificate (mac-mini S40) is IMPOSSIBLE. The cert must be family-adaptive or the tight case handled separately.
+
+FORCED SPLIT: TIGHT (M near 14/183, incl deep well) = knife-edge, handled by the S255 rigidity (PROVED for the deep well via S252). LOOSE (M>=14/183+margin) = safe set positive measure (0.065-0.10), AC test measure certifies => reduces to second-moment anti-concentration measure{W=0}>0 (FAVORABLE side) = the project's anti-concentration core (S242-S245); correlation Sum_i nuhat(h v_i) = LRCFourierCompletion completion identity.
+
+NET: single uniform positive-polynomial cert RIGOROUSLY IMPOSSIBLE (knife-edge); route splits (forced) into [tight: S255 rigidity, proved for extremizer] + [loose: AC test measure = anti-concentration, favorable]. Reconciles dual & anti-concentration framings; constructive path is the split, tight half already proved.
+
+FILES: reflection the-dual-certificate-is-obstructed-by-the-knife-edge-the-route-splits-opus-S257; lrc14_dual_certificate_knife_edge_split_opus_S257.py(+.out); HYP-6320. -> mac-mini S40, opus-S255/S242-S245, LRCFourierCompletion, klein S267.
+
+---
+
 ## mac-mini-2026-07-13-S70 -- THM-726: multi-killer covering-min rigidity (E4). Multi-killer => M>=1/13>14/183; with THM-724 the deep well is the UNIQUE global covering-min (rigidity complete)
 
 Prompt (owner): prove the multi-killer rigidity extension E4.
