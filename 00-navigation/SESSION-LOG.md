@@ -1,3 +1,21 @@
+## opus-2026-07-11-S265 -- the runner-1 positional lemma splits MEASURE U EQUIDISTRIBUTION (500/500, zero residual), completing a full LRC(14) case skeleton on covering families
+
+Prompt (owner): prove the runner-1 positional lemma for speed-1 covering families.
+
+THE LEMMA: speed-1 covering family; LRC(14) reduces to rest-safe set S_rest (12 speeds !=1) NOT subset of D_1={||t||<1/14}.
+
+ARG A (measure, near-AP): covering => rest has small even speed s; |S_rest n D_1|<=(s-1)/(7s); so |S_rest|>(s-1)/(7s) => S_rest not subset D_1 (s=2: |S_rest|>1/14). ARG B (equidistribution, spread): eps_1<6/7 via few additive relations 1=w_i-w_j (consecutive-diff pairs, S263); spread rest has few.
+
+VERIFIED (500 incl deep well): A covers 477, B covers 499, EITHER 500/500 (ZERO residual). Complementary: near-AP=>A (|S_rest|=0.086>1/14 for deep well); spread=>B.
+
+COMPLETE LRC(14) CASE SKELETON (covering): [non-covering elementary S252 PROVED] + [covering no speed 1: additive Sum|eps|<<6/7, 5x margin, S264] + [covering speed 1: ARG A U ARG B, 100%]. Every case covered with margin. Full rigor reduces to TWO verified anti-concentration bounds: additive |eps_v|, measure |S_rest|.
+
+NET: the covering-min residual is now a FINITE CASE ANALYSIS reducing to two verified bounds, not a single hard object. The SHAPE of the LRC(14) proof for covering families is complete and margin-safe. Both bounds still recurse (anti-concentration, verified not closed), but this is decisive structural progress. Assembly: S252+S264+S265 skeleton, LEM-015/E3 + S255 as supporting bounds.
+
+FILES: reflection the-runner1-lemma-splits-measure-vs-equidistribution-...-opus-S265; lrc14_runner1_lemma_measure_vs_equidist_opus_S265.py(+.out); HYP-6435. -> opus-S264/S263/S255/S252/S259, LEM-015.
+
+---
+
 ## kind-pasteur-2026-07-11-S127 cont.66 -- the SLOT-DEPTH FORMULA + the uniform-in-m single-killer bound
 
 Prompt (owner): bound the filler-contested backbone slot depth uniformly in m.

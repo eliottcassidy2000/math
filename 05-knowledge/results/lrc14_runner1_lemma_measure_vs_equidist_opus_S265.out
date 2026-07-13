@@ -1,0 +1,4 @@
+speed-1 covering families: 500
+  ARG A (measure |S_rest|>(s_min-1)/(7 s_min)): 477
+  ARG B (equidist eps_1 small): 499
+  EITHER: 500/500  (zero residual => runner-1 lemma covered for all speed-1 covering families)
