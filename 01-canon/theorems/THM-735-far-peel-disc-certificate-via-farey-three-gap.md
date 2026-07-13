@@ -1,27 +1,36 @@
 ---
 id: THM-735
-title: The far-peel disc_v certificate, proved via Farey / three-gap — for the interval-core single-killer covering family S = {1,…,12, 182m} (m ≥ 1), in particular the DEEP WELL (m=1, the covering-min), the loneliness L(S) > 0, hence M(S) ≥ 1/14 (LRC(14) holds for S). This is the FIRST time klein's disc_v certificate (THM-731) is turned into a THEOREM (not "verified"): the missing analytic upper bound on disc_v is supplied at the FAR peel by the exact Farey-arc (three-gap) structure of SafeSet({1..12}) — N = φ(13) = 12 arcs, |G'| = H₁₂/91 — and the whole certificate collapses to H₁₂ > √2.
-status: PROVED (rigorous; elementary modulo klein's THM-731 inequality, which is itself rigorous). Scope: the interval-core single-killer family (deep well + far-dilates) — the covering-min extremal, opus-S270's "certificate-poorest / binding" peel. NOT all covering families: general (non-consecutive) cores need the general Farey/three-gap count and are the remaining work. Verified end-to-end numerically (mac-mini-S88): |G'|=H₁₂/91 exact, N=12 exact, disc₁₈₂=4.13e-4 ≤ bound 1.45e-3, L_cert=0.0159>0.
+title: The deep-well far-peel certificate in CLOSED FORM — the covering-min extremal S={1,…,12,182m} has good set SafeSet({1..12}) = exactly N=φ(13)=12 Farey arcs with |G'|=H₁₂/91, so klein's disc_v certificate (THM-731) at the far peel collapses to H₁₂ > √2, giving L(S)>0 (M≥1/14). This is the CLOSED-FORM deep-well INSTANCE of kps's THM-733/734 general two-slot closure — it UNIFIES the three concurrent far-peel routes (klein THM-731 disc_v = opus THM-732 jump bound = kps THM-733 peel lemmas) on the covering-min via an exact Farey/three-gap computation.
+status: PROVED, but SUBSUMED IN GENERALITY by THM-733/734 (kps-S128, concurrent) — do NOT cite as an independent closure. Its standing value is (a) the EXACT closed forms N=φ(13)=12, |G'|=H₁₂/91 for the deep-well far peel (kps's peel lemmas give r,|G'| "explicitly in a" but not this arithmetic closed form), (b) the one-line reduction H₁₂>√2, (c) the explicit identification that klein's disc_v (THM-731), opus's r²/(3v²) (THM-732), and kps's peel constant K<√18 (THM-733) are the SAME far-peel argument. Verified end-to-end (mac-mini-S88). RIGOROUS modulo klein's THM-731 inequality.
 source: mac-mini-2026-07-13-S88 (owner: "prove klein's disc_v bound at the far peel via three-gap")
 depends_on:
-  - THM-731   # klein's peeling certificate L=(6/7)|G'_~v|-ε_v, |ε_v|²≤(6/49)disc_v (RIGOROUS); this THM supplies its open disc_v bound at the far peel
-  - THM-732   # opus's disc_v ≤ r²/(3v²) jump-bound form (r = #intervals); this THM supplies the rigorous r=φ(13)=12 via Farey
-  - THM-724   # single-killer covering-min rigidity (independent balance proof that the deep well is 1/14-lonely; this is the disc-route proof)
+  - THM-731   # klein's peeling certificate L=(6/7)|G'_~v|-ε_v, |ε_v|²≤(6/49)disc_v (RIGOROUS); this THM supplies its open disc_v bound at the far peel in closed form
+  - THM-732   # opus's disc_v ≤ r²/(3v²) jump-bound form (r = #intervals); here r=φ(13)=12 exactly via Farey
+  - THM-733   # kps's TWO-PARAMETER CLOSURE {1..11}+{a,b} — GENERAL result that CONTAINS the deep well (a=12,b=182); this THM is its closed-form instance
+  - THM-734   # kps's near-AP two-slot closure (all 364 bodies) — the general closure
 related:
   - HYP-6530  # the #far reduction + far-peel three-distance pinpoint that set this up
-  - HYP-2566  # the covering-min = LRC(14); this proves its extremal family, not the whole
+  - HYP-2566  # the covering-min = LRC(14)
 external: LRC(≤13) SETTLED. Steinhaus three-gap / Farey dissection (classical).
 ---
 
-# THM-735 — The far-peel disc_v certificate, proved via Farey / three-gap
+# THM-735 — The deep-well far-peel certificate in closed form (Farey / three-gap)
+
+**⚠ Read first — relation to THM-733/734.** kind-pasteur's **THM-733** (body `{1..11}` + any two
+slots `{a,b}`) and **THM-734** (all 364 eleven-element bodies + two slots), pushed concurrently
+with this session, **already prove `L>0` for the deep well** `{1..11,12,182}` (`a=12, b=182`) and
+far more, via the same peel-lemma + far-element-tail machinery; their uniform constant
+`K = 2121/500 < √18` is exactly the `√18 = 3√2` of the reduction below. **This file is NOT an
+independent closure** — it is the *closed-form deep-well instance*, kept because it makes the
+covering-min's certificate fully explicit (`N=φ(13)=12`, `|G'|=H₁₂/91`, reduces to `H₁₂>√2`) and
+shows klein's THM-731, opus's THM-732, and kps's THM-733 are one argument.
 
 **One line.** klein's certificate (THM-731) says `L ≥ (6/7)|G'_{~v}| − √((6/49)·disc_v)` for every
-peel `v`, rigorously, **except** for an analytic upper bound on `disc_v` (the one piece THM-731
-lists as "verified-not-proved"). At the **far peel** of the interval-core single-killer family
-`S = {1,…,12, 182m}`, that bound is supplied **exactly** by the Farey/three-gap structure of the
-leftover good set `SafeSet({1..12})`, and the certificate reduces to the trivial inequality
-`H₁₂ > √2`. Hence `L(S) > 0`, i.e. **`M(S) ≥ 1/14`** — in particular for the **deep well**
-`{1,…,12,182}`, the covering-min extremal.
+peel `v`, rigorously, **except** for an analytic upper bound on `disc_v` (THM-731's one
+"verified-not-proved" piece). At the **far peel** of the covering-min family
+`S = {1,…,12, 182m}`, that bound is supplied **in closed form** by the Farey/three-gap structure of
+`SafeSet({1..12})`, and the certificate reduces to `H₁₂ > √2`. Hence `L(S) > 0`, i.e.
+**`M(S) ≥ 1/14`** for the deep well — now as an explicit special case of THM-733/734.
 
 ## Setup (klein's peel, THM-731)
 
@@ -101,17 +110,21 @@ consistent with the deep well being the covering-min.
 
 ## Honest scope
 
-- **Proved:** `L > 0` (hence LRC(14)) for the interval-core single-killer family — the covering-min
-  extremal and its far-dilates — via klein's certificate with a **rigorous** analytic `disc_v`
-  bound at the far peel. This is the first theorem-grade instance of THM-731's open piece.
-- **What is new vs THM-724:** THM-724 already proves the deep well is 1/14-lonely (via balance).
-  The novelty here is the **route**: it validates klein's disc_v certificate program by proving its
-  one "verified-not-proved" ingredient in the cleanest case, with exact Farey closed forms
-  (`N = φ(13) = 12`, `|G'| = H_{12}/91`) and a one-line reduction (`H_{12} > √2`).
-- **Not proved:** the general covering family (non-consecutive core). There the good set is still a
-  Farey/three-gap arc union, but the count `N` and measure `|G'|` are governed by the general Farey
-  dissection at level `1/14`; bounding `disc_v ≤ N²/(3v²) < 6|G'|²` there is the remaining step
-  toward the full covering `L > 0` = LRC(14). The template is exactly Steps 1–3.
+- **Subsumed, not new closure:** THM-733/734 (kps, concurrent) prove `L>0` for the deep well and the
+  entire near-AP two-slot region. This file adds only the **closed-form deep-well instance** and the
+  **unification** of the three far-peel routes. Do not double-count it as separate coverage.
+- **What it does contribute:** (1) exact Farey closed forms `N = φ(13) = 12`, `|G'| = H₁₂/91` — a
+  clean arithmetic identity for the covering-min good set; (2) the one-line certificate reduction
+  `H₁₂ > √2`; (3) the explicit dictionary klein-THM-731 `disc_v` ↔ opus-THM-732 `r²/(3v²)` ↔
+  kps-THM-733 peel constant `K<√18`, all the same far-peel argument, made concrete on the extremal.
+- **Relation to THM-724:** THM-724 proves the deep well is 1/14-lonely via *balance*; this is the
+  *disc/measure* route to the same fact — complementary, and it exhibits klein's certificate working
+  in closed form.
+- **The remaining LRC(14) step (unchanged):** the general covering family (non-consecutive core,
+  unbounded outliers) is what THM-733/734 do **not** yet cover — klein-S289's isolation wall. There
+  the good set is still a Farey/three-gap arc union, and `disc_v ≤ N²/(3v²) < 6|G'|²` is the target,
+  but `N, |G'|` need the general Farey dissection at level `1/14`. The Steps 1–3 template is exactly
+  what THM-733's P1/P2 peel lemmas compose for the multi-scale induction.
 
 *Artifacts:* `04-computation/lrc14_farpeel_farey_proof_macmini_S88.py` (+`.out`) — exact Farey arcs,
 closed-form `|G'| = H_{12}/91`, `N = 12`, `disc` bound, certificate `L_cert = 0.0159 > 0`, and the
