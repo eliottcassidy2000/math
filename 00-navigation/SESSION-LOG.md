@@ -14,6 +14,23 @@ VERDICT: the joint rigidity FAILS. Facet-deficits measure STRUCTURAL distance-fr
 THE HONEST TERMINUS: the proof, if any, must control L (the safe measure) DIRECTLY -- a genuinely metric/analytic argument (the resummation of the middle-order corrsum cancellation, HYP-6440), not any structural reduction. I have now (S66-S83) mapped the covering-min completely: rigidity PROVED (THM-724/726), combinatorial inverse PROVED (THM-730), the residue reformulated (corrsum>-1, HYP-6430) and diagnosed (middle-order, HYP-6440), and EVERY structural idea -- the four facets, the three dormant threads, and my own joint-rigidity proposal -- pursued and shown severed. The residue is LRC(14), irreducibly metric, with no structural surrogate. The map is complete; the summit requires a metric idea I do not have.
 
 FILES: HYP-6480; 04-computation/lrc14_joint_rigidity_test_macmini_S83.py(+.out). -> the honest, exhausted state: the covering-min is understood from every structural angle; the one remaining door is a direct metric resummation, and it is genuinely open.
+## klein-2026-07-13-S286 -- COORDINATION with kps + opus on the zero-coset estimate: stratify the ONE shared relation lattice L by relation order t=|a|₁; covering's mass is MIDDLE-order (|T|=6,7), density's is LONG-order, short is minor on both; THM-729's positive-definite x-integral is the shared "metric" form
+
+Prompt (owner): coordinate with kps and opus on the zero-coset estimate.
+
+No new estimate this session -- a SYNTHESIS that stops the two efforts shadowing the same wall and gives each a complementary stratum + a shared metric device. Read the converged covering state precisely: opus-S269 (ε_v is multi-linear-dominated, cluster/Mayer route provably FAILS, reduces to the noncore-pair resonance sum w₁±w₂=±kv -- NOT PROVED); mac-mini-S79 (corrsum DOMINATED by MIDDLE orders |T|=6,7 ~±20 canceling to O(1), order-3 a MINOR term); mac-mini-S82 (all four structural facets SEVERED from the residue, "the surviving idea must be genuinely METRIC").
+
+THE FRAME (against S285's coset identity, HYP-6455): the one lattice L={a:a·E'=0} is STRATIFIED BY RELATION ORDER t=|a|₁, and the two routes carry mass on DIFFERENT strata:
+ - SHORT t=2,3: MINOR on both. Pairwise clean/negligible (opus-S262/S269); order-3 minor (mac-mini-S79); THM-730 bounds it but it is NOT the closer.
+ - MIDDLE t≈6,7: the COVERING blocker. Signed ±20 cancellation to O(1); unreachable from order-2/3 proved inputs (WHY cluster/Mayer fails).
+ - LONG t→∞: the DENSITY object. My ℓw-coset forces |a|₁≥ℓw/D'→∞ in the closure regime (peel w=d→∞).
+So covering=middle, density=long, short=minor both -- complementary parts of ONE sum, not the same estimate.
+
+THE SHARED METRIC FORM (answers mac-mini's "must be metric"): THM-729 turns the divergent signed Fourier sum into a POSITIVE-DEFINITE x-cell integral (autocorrelation Riemann-discrepancy, ≥0). Covering ε_v=∫g(vx)1_{G'}(x)dx is ALREADY an x-integral -- the divergence is ONLY in Fourier-expanding 1_{G'}=∏(1−1_{D_w}) (the S266 divergence). RECOMMENDATION to opus/kps: do NOT Fourier-expand 1_{G'}; build the THM-729-analogue positive-definite x-integral of the middle-order sum. The metric DEVICE transfers even though the STRATUM (middle vs long) differs.
+
+DIVISION OF LABOR: covering (opus/kps) owns the middle-order resummation via the metric x-integral; density (klein) owns the long-order tail (soft, any ε suffices) and develops the THM-729 device; short strata (opus-S262/THM-730) minor & done.
+
+FILES: HYP-6475; reflection short-vs-long-relations...-the-coordination-klein-S286; finish-map S286 stratification block; the-density...-coset-...-S285 (companion). -> opus-S262/266/269, mac-mini-S79/S82, kps cont.70, THM-729/730, HYP-6455/6465/6470/2645, MISTAKE-078. Coordination message sent to opus + kps.
 
 ---
 ## mac-mini-2026-07-13-S82 -- pursued the Stern-Brocot inductive tower (last dormant thread); deep well CF tower [0;n-1,n] is clean but organizes VALUES not the metric bound. THREE-THREAD SYNTHESIS + reflection: every structural facet of the extremal is SEVERED from the metric residue

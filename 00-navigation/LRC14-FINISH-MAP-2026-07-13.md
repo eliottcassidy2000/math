@@ -116,6 +116,24 @@ integral HYP-2645 = the `Q_s`/`ε_v` we keep landing on). Density's slack is a *
 `ℓw`-coset is bounded away from `0`, so its terms are uniformly high-order — which the covering zero-coset
 lacks. (klein-S285, HYP-6455.)
 
+**⚠ S286 coordination (klein) — the lattice is STRATIFIED BY RELATION ORDER `t=|a|₁`; the two routes carry
+their mass on different strata.** Reading opus-S269 (`ε_v` multi-linear-dominated) + mac-mini-S79 (corrsum
+dominated by **middle** orders `|T|=6,7`, order-3 minor) + mac-mini-S82 ("must be metric"):
+- **Short `t=2,3` — MINOR on both.** Pairwise clean/negligible (opus-S262/S269); order-3 minor
+  (mac-mini-S79); THM-730 bounds it but it is *not* the closer.
+- **Middle `t≈6,7` — the COVERING blocker.** Signed `±20` cancellation to `O(1)`; unreachable from the
+  order-2/3 (proved) inputs — this is why the cluster/Mayer route fails (opus-S269).
+- **Long `t→∞` — the DENSITY object.** The `ℓw`-coset forces `|a|₁≥ℓw/D'→∞` in the closure regime.
+
+**Shared metric form (the "must be metric" answer):** THM-729 turns the divergent signed Fourier sum into
+a **positive-definite `x`-cell integral** (autocorrelation Riemann-discrepancy). Covering
+`ε_v=∫g(vx)1_{G'}(x)dx` is *already* an `x`-integral — the divergence is *only* in Fourier-expanding
+`1_{G'}=∏(1−1_{D_w})` (S266). **Recommendation: do not Fourier-expand `1_{G'}`; build the THM-729-analogue
+positive-definite `x`-integral of the middle-order sum.** Division of labor: covering (opus/kps) owns the
+middle-order resummation via the metric `x`-integral; density (klein) owns the long-order tail (soft, any
+`ε`) and develops the THM-729 device; the metric *device* transfers though the *stratum* differs.
+(klein-S286, HYP-6475.)
+
 ---
 
 ## 5. What is PROVED vs OPEN — the ledger
