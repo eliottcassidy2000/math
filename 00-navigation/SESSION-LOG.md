@@ -71,6 +71,28 @@ NET: extremal localized (minimal-covering-perturbation-of-AP); opus's equidistri
 FILES: HYP-6390; 04-computation/lrc14_runner1_positional_macmini_S75.py(+.out). CREDITS: opus-S259 (route), opus-S255 (deep-well=M-min, sharpened), S74/S73 (residual localization), HYP-6340 (decorrelation). -> opus: the runner-1 bound needs the coreCover-maximizer {1..11,13,84}, not the M-minimizer; S255 covers the wrong extremal.
 
 ---
+## klein-2026-07-13-S277 -- per-offset ≤1 is FALSE (reaches ~1.6); but the two-scale error reduces EXACTLY to endpoint exponential sums (THM-727), remainder = one k-dim Weyl estimate; robust bound = total |S|≤0.61R
+
+Prompt (owner): prove the coupled per-offset ≤1 bound (the S276/HYP-6350 last rigor step).
+
+Two outcomes — a correction and a rigorous reduction.
+
+CORRECTION: direct decomposition S=Σ_{e'}S_{e'} (30-case sweep, prime grid) ⟹ max|S_{e'}|=1.588 (2blk, resonant, e'=28). Per-offset is NOT ≤1 — bounded by an absolute const ≈1.6 — and does NOT track its own R-term (S_30=1.20 vs R-term 0.14). S276's "≤1" conflated |S_{e'}| with the R-term min(1,·)≤1. The ROBUST bound is the TOTAL |S|≤0.61·R (max ratio 0.535 over the sweep), via inter-offset sign cancellation (|ΣS_{e'}|<Σ|S_{e'}|).
+
+RIGOROUS reduction (THM-727): Fourier-expand 1_{R_s} and g_s(wx); orthogonality + w cancels ⟹ S=Σ_s Σ_{ℓ≠0}(−1/2πiℓ)U_s(ℓw)ĝ_s(ℓ), U_s(N)=Σ_{R_s-endpoints}ε_p e(−Np); |S|≤(1/2π²)Σ_sΣ_ℓ|U_s(ℓw)||sin(πℓ/7)|/ℓ². Everything reduces to the endpoint exponential sums.
+
+DIAGONAL RIGOROUS: for INTEGER N=ℓw, the full-period geometric sum Σ_{j<e'}e(−Nj/e')=e'[e'|N] exactly ⟹ uncoupled U_s^{e'}(ℓw)=7e'[e'|ℓw] (supported on ℓ∈qℤ, q=e'/gcd) ⟹ Σ_ℓ|·|/ℓ²=O(gcd²/e') [O(1/e') clean, O(e') resonant].
+
+REMAINING (one step): coupled U_s^{e'}(N)=Σ_σ e(−Nσ/7e')Σ_j χ(αj)e(−Nj/e'), χ=R-endpoint indicator = fixed-complexity torus indicator (k−1 freqs); a k-DIM WEYL SUM = O_k(min(e',1/‖N/e'‖)) by Erdős–Turán (k≤8 fixed). The proof TARGET should be Σ_sΣ_ℓ|U_s(ℓw)|/ℓ²=O(k) directly — the cancellation is BETWEEN offsets; the per-offset split is lossy (loses the signs). This is a standard multi-dim Weyl/discrepancy estimate — the single named inequality that finishes the density tail.
+
+CONNECTION: both LRC(14) routes now bottom out on a discrepancy/Weyl estimate — covering (opus-S260) = mollified Beurling-Selberg discrepancy of the coprime core; density (this) = the endpoint Weyl sum. Same analytic core.
+
+NET: honest — the target as literally stated (≤1) is false; the genuine object (total |S|≤0.61R) reduces rigorously to endpoint exponential sums (THM-727), diagonal proved, remainder isolated to one k-dim Weyl estimate.
+
+FILES: reflection the-per-offset-bound-is-not-1-but-the-fourier-reduction-to-endpoint-sums-is-exact-klein-S277; THM-727; HYP-6380; lrc14_per_offset_decomp_klein_S277.py, lrc14_per_offset_C_klein_S277.py (+outs). -> THM-725/700, HYP-6350/6315, opus-S260.
+
+---
+
 ## opus-2026-07-11-S260 -- proving the Erdos-Turan bound for the coprime core: clean structure + CONFIRMED independent model, BUT naive Erdos-Turan ~700x too weak => needs mollification (corrects S259 rigor claim)
 
 Prompt (owner): prove the Erdos-Turan discrepancy bound for the coprime core.
