@@ -66,9 +66,17 @@ separate large-`L`/compactness argument for small-far-element sets.
 
 - The analytic `disc_v` bound is **PROVED** (`disc_v ≤ r²/(3v²)`).
 - The covering-min **extremals are certified** `L>0` rigorously and explicitly.
-- Universal closure reduces to: **(i)** the combinatorial arc-count inequality `r < 3√2 v|G'_{~v}|` for
-  large-far-element covering sets (arc-counting, tractable), and **(ii)** the shared endpoint cancellation
-  `|U(mv)|≪2r` (= density `Q_s`, THM-729) for the residual small-far-element sets.
+
+**⚠ S289 correction — the arc-count bound `r < 3√2 v|G'_{~v}|` is NOT a theorem (HYP-6505).** A census of
+covering 13-sets refutes it: 938 failures at `max≤18` (ratios to 8.4), and the covering set `{1,90,…,101}`
+(large diameter `D=100`) fails at *every* peel (ratio 3.57). The true classifier is **far-element
+isolation**: the crude certificate fires **iff** `v ≫ max(W)` (then `r≤2max(W)≪v`), which holds for the
+covering-min extremals (deep well `182/12`, residue `84/13` — forced isolated by divisibility) but fails
+for **non-isolated** families (compact, or large-diameter-with-clustered-top). Those are an infinite class
+(not bounded-diameter, not a finite check) where `|U(mv)|≪2r` genuinely matters — the **same** cancellation
+as the density `Q_s` (THM-729). So the crude bound does **not** give a combinatorial escape from the
+analysis for general covering sets; it closes exactly the **isolated-far-element** class (incl. the
+extremals), and the rest reduce to the shared cancellation. (VERIFIED regularity: `r ≤ 2max(W)`.)
 
 *Files: `04-computation/lrc14_disc_v_bound_klein_S288.py`, `lrc14_disc_v_census_klein_S288.py`,
 `lrc14_disc_v_failfamily_klein_S288.out` (+.out). HYP-6495. Upgrades THM-731; the residual (ii) is

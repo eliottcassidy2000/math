@@ -99,6 +99,20 @@ where THM-724/726's rigidity lives and where a uniform exposure (r-) bound is th
 content. The "genuine harmonic analysis" of the far-element regime turned out to be `sup|B₂| = 1/6`.
 (kind-pasteur-S128, THM-732/733, HYP-6495.)
 
+**⚠ S289 (klein) — CONVERGES with kp-S128; the residual is exactly the compact core.** Independently
+(S287/S288, before seeing S128) I built the same certificate and the `disc_v ≤ r²/(3v²)` bound; kp-S128's
+exact-ℚ `B₂` form SUBSUMES it (my S288 THM-732 file is superseded by kp's THM-732 — same ID, kp's is
+canonical; my genuine new content is this negative). The new content: the combinatorial `r < 3√2 v|G'_{~v}|`
+is **NOT a universal theorem** (HYP-6505) — census gives 938 failures at `max≤18` (ratios to 8.4), and
+`{1,90,…,101}` (covering, diameter 100, `r=132`) fails at *every* peel (ratio 3.57). The classifier is
+**far-element isolation** (`v≫max(W)`), *not* diameter/max: kp's `v > r√2/(6|G'|)` fires exactly when the
+far element is isolated, which the extremals and the `{1..11,a,b}` family (THM-733) satisfy — but the
+**compact core (no isolated far element)** does not, and it is an infinite class where `|U(mv)|≪2r` matters
+= the density `Q_s` cancellation (THM-729). So kp's "bounded-Vmax compact core remains" is precisely my
+"non-isolated-far families need the shared cancellation": **[isolated-far / separate-13-14: CLOSED by
+kp-THM-732/733] + [compact core: the SAME shared cancellation as density Q_s]**. One hard cancellation,
+no combinatorial shortcut. (klein-S289, HYP-6505; converges with kind-pasteur-S128.)
+
 ---
 
 ## 3. Route A (density / moment) — FULLY REDUCED, one analytic inequality left
