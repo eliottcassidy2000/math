@@ -59,5 +59,16 @@ boundary cost). This is **exactly** the tool the covering side reduced to (opus-
 discrepancy of the coprime core). Both LRC(14) routes now terminate on the same Beurling–Selberg
 mollification estimate.
 
+## Correction (klein-S279): the remaining estimate is MULTI-LINEAR, not one Beurling–Selberg
+
+The "REMAINING RIGOR" above ("one Beurling–Selberg mollification") is **one order too low**. `g=1_{cond_s}`
+= "the `k−1` others cover exactly `{0..6}\setminus s`" `= Σ_{A∋s}(-1)^{|A|-1}∏_{e''}(1-1\{e''∈∪A\})` is a
+degree-`(k−1)` PRODUCT — for the `k=8` row a **6-way rainbow**. And `#cond_s`-arcs grows `∝` diameter
+(verified, S279), so boundedness needs *cancellation of the multi-linear product*, not a single-indicator
+mollification. The estimate is a **multi-linear (Gowers-type) cancellation**, the SAME object the covering
+side reduced to (opus-S262), not merely mollification. Density's slack admits a possible `√`-cancellation
+(2nd-moment) route. See HYP-6410 / reflection
+`both-lrc14-routes-bottom-on-the-same-multilinear-cancellation-not-one-mollification-klein-S279`.
+
 ## Files
 `04-computation/lrc14_chi_dft_klein_S278.py`, `lrc14_chi_largeeprime_klein_S278.py` (+ outs).

@@ -54,6 +54,21 @@ HYP-6234; lrc14_covering_reframe_kps_S127.py/out.
 
 Next: the live route is opus's Fourier/discrepancy over the smooth body; the structural + Lean extremal slice is
 complete.
+## klein-2026-07-13-S279 -- the shared estimate is MULTI-LINEAR (Gowers-type), NOT one Beurling–Selberg; both LRC(14) routes bottom on the SAME multi-linear cancellation; density has SLACK ⟹ a √-cancellation route may close it independently
+
+Prompt (owner): prove the shared Beurling–Selberg mollification estimate (the S278 "single lemma finishing both routes").
+
+Attacking it CORRECTS the claim — parallel to opus-S262 correcting the covering completion identity.
+
+CORRECTION: S278 reduced density to Σ_{n≡κ}ĝ(n)(e(n/7e')−1)=O(1), g=1_{cond_s}, called it "one Beurling–Selberg." But cond_s="k−1 others cover exactly {0..6}\s" = Σ_{A∋s}(−1)^{|A|−1}∏_{e''}(1−1{e''∈∪A}) is a degree-(k−1) PRODUCT; for the k=8 row (6 others) it's a 6-way RAINBOW (6 distinct sectors), irreducibly ≥6-linear. NOT easy-via-rarity: #cond_s-arcs GROWS ∝ diam (verified 8→122 for diam 5→199) ⟹ boundedness needs cancellation of the multi-linear product, not a single-indicator mollification. So S278 was one order too low.
+
+UNIFICATION (the deliverable): both LRC(14) routes bottom on the SAME multi-linear (Gowers-type) cancellation — a distinguished element (core arc D_v / swing offset e') correlated against a PRODUCT set (good-set ∏(1−D_w) / cover-set ∏(1−1{∈∪A})); the bilinear/pairwise part is CLEAN both sides (completion identity Cov≤1/(3vw) / the derivative gain sin(πn/7e') killing n=0), and the signal lives in the ≥2-way (multi-runner) resonances. This is the true irreducible analytic core of LRC(14) — ONE object, reached by both routes. (opus-S263 concurrently: Gowers-norm bound FAILS, governed by additive relations E3/LEM-015 — same crux, actively worked.)
+
+ASYMMETRY: covering is TIGHT (naive Erdős–Turán 700× too weak, needs the SHARP constant); density has SLACK (box extension) ⟹ a 2nd-moment/large-sieve √-cancellation bound |U_s^{e'}|=O(√#cond_s-arcs)=O(√diam) SUFFICES (err~k√diam/w→0, closes via a finite box), far more tractable than sharp Gowers ⟹ DENSITY MAY BE PROVABLE INDEPENDENTLY via √-cancellation even while the sharp shared estimate stays open. The √ (2nd-moment) bound is the most tractable next density target.
+
+NET: honest — the "prove" attempt shows the shared estimate is a multi-linear (Gowers) cancellation, unproved on either side; the deliverable is the UNIFICATION (both routes = one object) + the CORRECTION (S278 one order low) + the density SLACK/√-route asymmetry.
+
+FILES: reflection both-lrc14-routes-bottom-on-the-same-multilinear-cancellation-not-one-mollification-klein-S279; HYP-6410; THM-728 addendum; lrc14_rainbow_arcs_klein_S279.py, lrc14_U_vs_spread_klein_S279.py (+outs). -> THM-728/727, HYP-6400, opus-S262/S263.
 
 ---
 

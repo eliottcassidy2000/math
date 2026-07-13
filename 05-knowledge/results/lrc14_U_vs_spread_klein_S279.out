@@ -1,0 +1,14 @@
+max_{s,kappa} e'|chihat| (=max|U_s^{e'}|) for e'=D=997 (prime, large), 6 SPREAD others of growing diam
+============================================================================
+  6 others (spread)                    diam   maxDFT   maxT  DFT/sqrtT
+  {0,1,2,3,4,5}                           5     3.00      3       1.73
+  {0,1,2,3,4,20}                         20     9.13     11       2.75
+  {0,1,4,9,16,25}                        25     8.89     13       2.47
+  {0,7,17,31,50,73}                      73     6.47      7       2.45
+  {0,10,23,41,66,99}                     99     6.75      7       2.55
+  {0,20,50,90,140,199}                  199    13.95     15       3.60
+----------------------------------------------------------------------------
+  maxT ~#cond_s-arcs grows ~diam. If maxDFT stays ~O(1): bounded (provable). If ~sqrt(maxT):
+  2nd-moment bound suffices for density (slack). If ~maxT: hard multilinear (like covering).
+
+done.

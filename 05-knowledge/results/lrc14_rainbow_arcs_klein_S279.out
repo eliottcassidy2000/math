@@ -1,0 +1,16 @@
+6 others, growing spread: #rainbow-arcs (|occ|=6) and max_s #cond_s-arcs vs diameter
+(BOUNDED => density crux EASY/provable; GROWS => multi-linear hard, like covering)
+==========================================================================
+  6 others                          diam   #rainbow max_s cond_s
+  {0,1,2,3,4,5}                        5          8            4
+  {0,1,2,3,4,10}                      10         10            4
+  {0,1,2,3,4,20}                      20         20            6
+  {0,2,4,8,16,32}                     32         20           10
+  {0,1,4,9,16,25}                     25         19            8
+  {0,7,17,31,50,73}                   73         47           13
+  {0,10,23,41,66,99}                  99         49           19
+  {0,20,50,90,140,199}               199        122           31
+--------------------------------------------------------------------------
+  Watch: does #rainbow / max_s cond_s stay bounded (~O(1)) or grow ~diam as offsets spread?
+
+done.
