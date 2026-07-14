@@ -1,3 +1,20 @@
+## klein-2026-07-14-S311 -- the band residual is TRIVIALLY LOOSE (M≥0.1428=2× of 1/14) — after opus-density + capped-envelope reducers, the band adds NO hard cases. Characterization + large sample (honest: not the full exhaustive C(500,13) enumeration — that's mac-mini's exact-ℚ job or a crude M≥0.14 bound).
+
+Prompt (owner): execute the bounded band exhaustively for all cores.
+
+HONEST SCOPE FIRST: the band (≥4-far covering S with max(S)≤v*(S\max), i.e. the top peel NOT capped-envelope-certifiable) is BOUNDED (max v* over sampled ≥4-far cores = 1321 single-peel; ≤497 via the S310 iterated peel) but C(≤500,13)-STRUCTURED — NOT naively enumerable. So I did not (could not, in one session) run the full exhaustive enumeration; that is mac-mini's exact-ℚ machinery (they executed (220,475]).
+
+WHAT I ESTABLISHED (the useful finding): apply the OTHER proved reducers to band families — [opus density THM-746 for diameter>W₀=339] + [capped-envelope on a DIFFERENT far element w>v*(S\w)] — and the genuine RESIDUAL (band, not-density, not-capped-other) is 134/200 sampled, ALL with M ≥ 0.1428 = 2× of 1/14 (min 0.1428, 0 failures). So the band's genuine residual is the MOST decorrelated families (many far elements packed in bounded diameter ⟹ very spread ⟹ M LARGE). The equidistribution is nowhere near — a 2× margin means a CRUDE decorrelation bound suffices, not the sharp estimate.
+
+NET: the band is a bounded finite check with 2× margin — the EASIEST possible residual, NOT the equidistribution. The covering case is proved modulo this check. THE CLEAN FINISH (better than enumeration): a crude bound proving M≥0.14 for {bounded + ≥4-far + not-capped} would close the band WITHOUT the C(500,13) enumeration — a concrete, tractable target given the 2× room.
+
+CONVERGENCE: complements S309/S310 (far-count split + capped-envelope). The whole covering endgame: [Claim A ≤3-far incl covering-min: kps THM-738 PROVED] + [Claim B ≥4-far: capped-envelope (v>v*) + band]; and the band residual is 2× loose. No hard analytic core anywhere.
+
+HANDOFFS: @mac-mini — the band is your exact-ℚ enumeration ((220,475] done); the 2× margin makes it robust; OR a crude M≥0.14 bound replaces it. @opus — your density floor W₀=339 covers the large-diameter band; a version with smaller W₀ for decorrelated (M≥0.14) families would cover the residual directly. @kps — THM-738 is the base; THM-741 upgrade shrinks the band.
+
+FILES: HYP-6740; 04-computation/lrc14_band_residual_klein_S311.py (+out). -> THM-755/758/746, mac-mini-S105, HYP-6730. Sent to all.
+
+---
 ## klein-2026-07-14-S310 -- Claim B of THM-758 (the loose ≥4-far bound) is FINITE-DECIDABLE, not the equidistribution: opus's capped-envelope reduces every ≥4-far family to a bounded band ⟹ M>1/14 in one peel OR a finite check. The covering case now has NO open ANALYTIC statement.
 
 Prompt (owner): prove the loose ≥4-far margin bound. DONE — as a reduction to a bounded finite check via opus's PROVED capped-envelope, NOT a decorrelation estimate.

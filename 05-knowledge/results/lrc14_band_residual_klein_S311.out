@@ -1,0 +1,5 @@
+band-bound: max v* over sampled >=4-far band cores = 1321
+BAND families (>=4-far, top-peel NOT capped-certifiable): 200 ; reducer coverage: {'RESIDUAL': 134, 'opus-density': 66}
+  genuine RESIDUAL (band, not opus-density, not capped-other): 134
+  residual M values (all must be >1/14=0.0714): [np.float64(0.2092), np.float64(0.2483), np.float64(0.2105), np.float64(0.1724), np.float64(0.1694), np.float64(0.1867), np.float64(0.1927), np.float64(0.2173)]
+  min residual M = 0.1428
