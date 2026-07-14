@@ -1,0 +1,9 @@
+LOOSE escapees + spread covering sets: G(1/14), M, corrsum, pairwise-excess
+S                                               G(1/14)       M   corrsum pair-excess
+[1, 10, 21, 24, 56, 65, 77, 135, 219, 265, 335   0.1176   0.253    -0.128     0.0396  cov=True cmin=1
+[1, 3, 7, 13, 26, 55, 98, 120, 180, 260, 330,    0.1360   0.253     0.009     0.1918  cov=True cmin=1
+[11, 13, 17, 19, 23, 29, 31, 37, 84, 98, 154,    0.1270   0.316    -0.058     0.0141  cov=False cmin=11
+[15, 16, 17, 26, 28, 33, 39, 55, 70, 91, 120,    0.1280   0.222    -0.051     0.1109  cov=False cmin=15
+
+KEY: if corrsum > -1 (G>0) AND the pairwise-excess is the dominant correction (small for spread),
+then a crude pairwise decorrelation bound certifies G>0. Watch cmin (small speeds inflate excess).

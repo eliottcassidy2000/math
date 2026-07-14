@@ -1,0 +1,22 @@
+ITERATED THM-731 peel on loose/spread covering sets (peel largest first):
+  S(cmax=390): peeled 12/12 steps, all-cert-positive=True
+     peel v=390  |G_~v|=0.1374 disc=1.19e-04 cert=+0.1140
+     peel v=367  |G_~v|=0.1629 disc=8.80e-05 cert=+0.1364
+     peel v=335  |G_~v|=0.1932 disc=3.27e-04 cert=+0.1593
+     peel v=265  |G_~v|=0.2276 disc=1.15e-04 cert=+0.1914
+     peel v=219  |G_~v|=0.2725 disc=7.10e-04 cert=+0.2243
+     peel v=135  |G_~v|=0.3211 disc=2.51e-04 cert=+0.2697
+  S(cmax=420): peeled 12/12 steps, all-cert-positive=True
+     peel v=420  |G_~v|=0.1709 disc=1.52e-03 cert=+0.1328
+     peel v=390  |G_~v|=0.1941 disc=9.71e-04 cert=+0.1554
+     peel v=330  |G_~v|=0.2322 disc=1.75e-03 cert=+0.1844
+     peel v=260  |G_~v|=0.2693 disc=3.54e-04 cert=+0.2243
+     peel v=180  |G_~v|=0.3045 disc=3.05e-03 cert=+0.2416
+     peel v=120  |G_~v|=0.3508 disc=4.88e-04 cert=+0.2930
+  S(cmax=182): peeled 12/12 steps, all-cert-positive=True
+     peel v=182  |G_~v|=0.0341 disc=4.13e-04 cert=+0.0221
+     peel v=12   |G_~v|=0.0563 disc=4.53e-03 cert=+0.0247
+     peel v=11   |G_~v|=0.1380 disc=4.38e-02 cert=+0.0450
+     peel v=10   |G_~v|=0.1811 disc=1.04e-02 cert=+0.1195
+     peel v=9    |G_~v|=0.2658 disc=3.10e-02 cert=+0.1662
+     peel v=8    |G_~v|=0.3347 disc=9.41e-03 cert=+0.2529

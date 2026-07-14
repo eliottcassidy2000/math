@@ -1,0 +1,21 @@
+RIGOROUS crude-THM-732 iterated peel (arc-count bound r < 3sqrt2 v|G_~v|) — how far does it go?
+  S(cmax=390): rigorous peel certifies 0 steps; STALLS at v=1, base size 13 (=compact core, finite)
+     v=390  |G_~v|=0.1374 r=278 3sqrt2*v*|G|=227  r<bound? False
+  S(cmax=420): rigorous peel certifies 12 steps; ALL peeled to size 1
+     v=420  |G_~v|=0.1709 r=268 3sqrt2*v*|G|=304  r<bound? True
+     v=390  |G_~v|=0.1941 r=232 3sqrt2*v*|G|=321  r<bound? True
+     v=330  |G_~v|=0.2322 r=192 3sqrt2*v*|G|=325  r<bound? True
+     v=260  |G_~v|=0.2693 r=148 3sqrt2*v*|G|=297  r<bound? True
+     v=180  |G_~v|=0.3045 r=106 3sqrt2*v*|G|=232  r<bound? True
+     v=120  |G_~v|=0.3508 r=78  3sqrt2*v*|G|=179  r<bound? True
+     v=98   |G_~v|=0.4085 r=48  3sqrt2*v*|G|=170  r<bound? True
+     v=55   |G_~v|=0.4859 r=22  3sqrt2*v*|G|=113  r<bound? True
+  S(cmax=390): rigorous peel certifies 12 steps; ALL peeled to size 1
+     v=390  |G_~v|=0.1492 r=112 3sqrt2*v*|G|=247  r<bound? True
+     v=182  |G_~v|=0.1752 r=96  3sqrt2*v*|G|=135  r<bound? True
+     v=154  |G_~v|=0.2037 r=80  3sqrt2*v*|G|=133  r<bound? True
+     v=98   |G_~v|=0.2356 r=66  3sqrt2*v*|G|=98  r<bound? True
+     v=84   |G_~v|=0.2793 r=49  3sqrt2*v*|G|=100  r<bound? True
+     v=37   |G_~v|=0.3233 r=47  3sqrt2*v*|G|=51  r<bound? True
+     v=31   |G_~v|=0.3750 r=45  3sqrt2*v*|G|=49  r<bound? True
+     v=29   |G_~v|=0.4427 r=41  3sqrt2*v*|G|=54  r<bound? True

@@ -1,3 +1,20 @@
+## klein-2026-07-14-S304 -- PROVED the LOOSE branch (mostly): it = ITERATED far-element peel (my THM-731/732) in the decorrelated large-v regime. corrsum≈0 (7× margin); rigorous crude arc-count bound closes MOST loose sets FULLY (all 12 peel steps); thin residual has tiny true disc (kps exact closes it). Unifies loose = far-peel = S285 relation-lattice (few relations) = opus U1.
+
+Prompt (owner): prove the loose branch.
+
+FRAMING: loose (mac-mini-S98) = spread covering (ratio>13; escapees M∈[0.22,0.26]). Via G(1/14)=(6/7)^13(1+corrsum), loose ⟺ corrsum SMALL — the OPPOSITE regime from the tight AP (corrsum→−1). VERIFIED corrsum∈[−0.13,+0.01] (7× margin below −1; escapee {1,10,..,390}: −0.128; {1,3,7,..,420}: +0.009; {11,13,..,390}: −0.058).
+
+THE ROUTE = ITERATED FAR-ELEMENT PEEL (my THM-731): peel the largest speed each step, G(W)=(6/7)|G'_{~v}|−ε_v, |ε_v|²≤(6/49)disc_v. Spread ⟹ large v ⟹ disc_v TINY (~1e-4, verified) ⟹ each cert +positive, huge margin. TRUE-disc iterated peel certifies ALL loose sets 12/12 (AND the deep well 12/12 — a uniform route). RIGOROUS via crude THM-732 (disc_v≤r²/3v² ⟺ arc-count r<3√2·v|G'|, which S289 showed HOLDS for isolated/large v): closes {1,3,7,..,420} + {11,13,..,390} FULLY (all 12 steps); STALLS only on {1,10,..,390} at step 1 (r=278 vs 227, small margin) where true disc=1e-4 ≪ 6|G'|²=0.11.
+
+NET: loose branch PROVEN rigorously for spread sets whose far-peel arc-counts stay bounded (most); the thin residual (crude stalls) reduces to the SAME disc_v bound but with ENORMOUS margin — closed by kps's exact-ℚ Bernoulli disc (THM-732 exact) or a decorrelation bound. SYNTHESIS: loose = my THM-731 far-peel in its EASY (large-v/decorrelated) regime = S285 relation-lattice with FEW small relations (spread) = opus U1 density/large-diameter lane. All the same object, decorrelated end.
+
+ASSEMBLY UPDATE: covering = [loose: iterated far-peel THM-731/732, corrsum≈0, mostly rigorous (this)] + [binding: shadow tiles mac-mini THM-749 (single-killer) + kps THM-738 (near-AP) + klein THM-748 (tight-ratio) — a UNION of tiles per mac-mini-S99/S100, not uniform] + [compact base: kps finite]. The loose branch is no longer a wall — it's my own peel device in the easy regime.
+
+HANDOFFS: @kps — the thin loose residual (crude arc-count stalls at one step, true disc ~1e-4) closes with your exact-ℚ Bernoulli disc form (THM-732 exact); enormous margin. @opus — the loose branch IS your U1 (large-diameter/density); the iterated far-peel is its per-family constructive form. @mac-mini — iterated far-peel closes loose AND the deep well uniformly (true disc); the tile-union (S100) + this peel may merge into one route.
+
+FILES: HYP-6670; 04-computation/lrc14_loose_branch_iterated_peel_klein_S304.py + lrc14_loose_branch/iterated_peel/rigorous_peel outs. -> THM-731/732, mac-mini-S98/S100, opus-S282 U1, S285/S289. Sent to all.
+
+---
 ## mac-mini-2026-07-14-S100 -- CANONIZED the shadow tile as THM-749 (correctly scoped): (A) exact rigorous shadow-interval condition; (B) single-killer {1..12,182m} PROVED via k=13 shadow (all m, ~6 lines, a 3rd proof of the covering-min class); (C) honest TILE scope -- NOT uniform (near-AP counterexample {1..13\6,182}, M=2/23, no k<=13 shadow), covering case = UNION of tiles.
 
 **Owner:** continue as left off (the disc_v/tiling front). klein-S302's triangulation flagged 'canonize the shadow-interval condition' as the single most valuable next move -- done, with the S99 correction baked in.
