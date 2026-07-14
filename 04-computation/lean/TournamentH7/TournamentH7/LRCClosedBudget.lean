@@ -532,6 +532,206 @@ theorem spectral_thm755 {n : ℕ} (a b : Fin n → ℝ) (hab : ∀ j, a j ≤ b 
       _ = (n : ℝ) / (Real.pi * v) := by
           field_simp
 
+/-! ### The POISSON BRIDGE (opus-S293): Raabe's multiplication formula and the grid deficit -/
+
+/-- `B₂({x})` — the periodized second Bernoulli polynomial. -/
+noncomputable def B2R (x : ℝ) : ℝ := (Int.fract x) ^ 2 - Int.fract x + 1 / 6
+
+/-- Integer periodicity. -/
+theorem B2R_add_int (x : ℝ) (n : ℤ) : B2R (x + n) = B2R x := by
+  unfold B2R
+  rw [Int.fract_add_intCast]
+
+/-- Evenness through the fract. -/
+theorem B2R_neg (x : ℝ) : B2R (-x) = B2R x := by
+  unfold B2R
+  by_cases hx : Int.fract x = 0
+  · rw [Int.fract_neg_eq_zero.mpr hx, hx]
+  · rw [Int.fract_neg hx]
+    ring
+
+/-- Gauss sum, real cast. -/
+theorem sum_range_cast (n : ℕ) :
+    ∑ i ∈ Finset.range n, (i : ℝ) = n * (n - 1) / 2 := by
+  induction n with
+  | zero => simp
+  | succ k ih => rw [Finset.sum_range_succ, ih]; push_cast; ring
+
+/-- Sum of squares, real cast. -/
+theorem sum_range_sq_cast (n : ℕ) :
+    ∑ i ∈ Finset.range n, (i : ℝ) ^ 2 = n * (n - 1) * (2 * n - 1) / 6 := by
+  induction n with
+  | zero => simp
+  | succ k ih => rw [Finset.sum_range_succ, ih]; push_cast; ring
+
+/-- One-step shift invariance of the Raabe sum. -/
+theorem raabe_shift_one (v : ℕ) (hv : 1 ≤ v) (y : ℝ) :
+    ∑ i ∈ Finset.range v, B2R (y + 1 / v + i / v)
+      = ∑ i ∈ Finset.range v, B2R (y + i / v) := by
+  have hv0 : ((v : ℝ)) ≠ 0 := by
+    have : (0 : ℝ) < v := by exact_mod_cast hv
+    exact ne_of_gt this
+  have hstep : ∀ i ∈ Finset.range v, B2R (y + 1 / v + i / v) = B2R (y + ((i + 1 : ℕ)) / v) := by
+    intro i _
+    congr 1
+    push_cast
+    ring
+  rw [Finset.sum_congr rfl hstep]
+  have hsuccA := Finset.sum_range_succ' (fun i => B2R (y + i / v)) v
+  have hsuccB := Finset.sum_range_succ (fun i => B2R (y + i / v)) v
+  have hv1 : B2R (y + (v : ℕ) / v) = B2R y := by
+    have hh : y + (v : ℕ) / v = y + ((1 : ℤ) : ℝ) := by
+      push_cast
+      field_simp
+    rw [hh, B2R_add_int]
+  have h0 : B2R (y + ((0 : ℕ)) / v) = B2R y := by norm_num
+  have hkey : (∑ i ∈ Finset.range v, B2R (y + ((i + 1 : ℕ)) / v)) + B2R y
+      = (∑ i ∈ Finset.range v, B2R (y + i / v)) + B2R y := by
+    calc (∑ i ∈ Finset.range v, B2R (y + ((i + 1 : ℕ)) / v)) + B2R y
+        = (∑ i ∈ Finset.range v, B2R (y + ((i + 1 : ℕ)) / v)) + B2R (y + ((0:ℕ))/v) := by
+          rw [h0]
+      _ = ∑ i ∈ Finset.range (v + 1), B2R (y + i / v) := by
+          rw [hsuccA]
+      _ = (∑ i ∈ Finset.range v, B2R (y + i / v)) + B2R (y + (v : ℕ) / v) := hsuccB
+      _ = (∑ i ∈ Finset.range v, B2R (y + i / v)) + B2R y := by rw [hv1]
+  linarith
+
+/-- Integer-shift invariance. -/
+theorem raabe_shift_int (v : ℕ) (hv : 1 ≤ v) (y : ℝ) (k : ℤ) :
+    ∑ i ∈ Finset.range v, B2R (y + k / v + i / v)
+      = ∑ i ∈ Finset.range v, B2R (y + i / v) := by
+  induction k using Int.induction_on with
+  | zero => simp
+  | succ n ih =>
+      push_cast at ih ⊢
+      have h1 : ∀ i ∈ Finset.range v,
+          B2R (y + ((n : ℝ) + 1) / v + i / v)
+            = B2R ((y + (n : ℝ) / v) + 1 / v + i / v) := by
+        intro i _
+        congr 1
+        ring
+      rw [Finset.sum_congr rfl h1, raabe_shift_one v hv (y + (n : ℝ) / v)]
+      exact ih
+  | pred n ih =>
+      push_cast at ih ⊢
+      have h1 : ∀ i ∈ Finset.range v,
+          B2R (y + (-(n : ℝ)) / v + i / v)
+            = B2R ((y + (-(n : ℝ) - 1) / v) + 1 / v + i / v) := by
+        intro i _
+        congr 1
+        ring
+      have h2 := raabe_shift_one v hv (y + (-(n : ℝ) - 1) / v)
+      rw [Finset.sum_congr rfl h1, h2] at ih
+      exact ih
+
+/-- Raabe on the fundamental cell: pure Gauss-sum algebra. -/
+theorem raabe_base (v : ℕ) (hv : 1 ≤ v) (z : ℝ) (hz0 : 0 ≤ z) (hz1 : z < 1 / v) :
+    ∑ i ∈ Finset.range v, B2R (z + i / v) = (1 / v) * B2R (v * z) := by
+  have hv0 : (0 : ℝ) < (v : ℝ) := by exact_mod_cast hv
+  have hzv : z * v < 1 := (lt_div_iff₀ hv0).mp hz1
+  have hfr : ∀ i ∈ Finset.range v,
+      B2R (z + i / v)
+        = (z ^ 2 - z + 1 / 6) + ((2 * z - 1) / v) * i + (1 / v ^ 2) * (i : ℝ) ^ 2 := by
+    intro i hi
+    simp only [Finset.mem_range] at hi
+    have hiv : (i : ℝ) + 1 ≤ (v : ℝ) := by exact_mod_cast hi
+    have h0 : 0 ≤ z + i / v := by positivity
+    have h1 : z + i / v < 1 := by
+      have hmul : (z + i / v) * v < 1 * v := by
+        have hexp : (z + i / v) * v = z * v + i := by field_simp
+        rw [hexp, one_mul]
+        linarith
+      exact lt_of_mul_lt_mul_right hmul (le_of_lt hv0)
+    unfold B2R
+    rw [Int.fract_eq_self.mpr ⟨h0, h1⟩]
+    field_simp
+    ring
+  rw [Finset.sum_congr rfl hfr]
+  rw [Finset.sum_add_distrib, Finset.sum_add_distrib, Finset.sum_const, Finset.card_range,
+      nsmul_eq_mul, ← Finset.mul_sum, ← Finset.mul_sum, sum_range_cast, sum_range_sq_cast]
+  have hvz : B2R (v * z) = (v * z) ^ 2 - v * z + 1 / 6 := by
+    unfold B2R
+    have h0 : 0 ≤ (v : ℝ) * z := by positivity
+    have h1 : (v : ℝ) * z < 1 := by
+      rw [mul_comm]
+      exact hzv
+    rw [Int.fract_eq_self.mpr ⟨h0, h1⟩]
+  rw [hvz]
+  field_simp
+  ring
+
+/-- **RAABE'S MULTIPLICATION FORMULA** (the finite Poisson atom):
+`Σ_{i<v} B₂({y + i/v}) = (1/v) B₂({v y})`. -/
+theorem raabe_B2 (v : ℕ) (hv : 1 ≤ v) (y : ℝ) :
+    ∑ i ∈ Finset.range v, B2R (y + i / v) = (1 / v) * B2R (v * y) := by
+  have hv0 : (0 : ℝ) < (v : ℝ) := by exact_mod_cast hv
+  set k : ℤ := ⌊(v : ℝ) * y⌋ with hk
+  set z : ℝ := y - (k : ℝ) / v with hzdef
+  have hvz : (v : ℝ) * z = Int.fract ((v : ℝ) * y) := by
+    rw [hzdef, Int.fract]
+    field_simp
+    ring
+  have hz0 : 0 ≤ z := by
+    have hf := Int.fract_nonneg ((v : ℝ) * y)
+    rw [← hvz] at hf
+    by_contra hneg
+    push_neg at hneg
+    nlinarith
+  have hz1 : z < 1 / v := by
+    have hf := Int.fract_lt_one ((v : ℝ) * y)
+    rw [← hvz] at hf
+    rw [lt_div_iff₀ hv0]
+    nlinarith
+  calc ∑ i ∈ Finset.range v, B2R (y + i / v)
+      = ∑ i ∈ Finset.range v, B2R (z + (k : ℝ) / v + i / v) := by
+        refine Finset.sum_congr rfl fun i _ => ?_
+        congr 1
+        rw [hzdef]
+        ring
+    _ = ∑ i ∈ Finset.range v, B2R (z + i / v) := raabe_shift_int v hv z k
+    _ = (1 / v) * B2R (v * z) := raabe_base v hv z hz0 hz1
+    _ = (1 / v) * B2R (v * y) := by
+        congr 1
+        have hshift : (v : ℝ) * z = (v : ℝ) * y + ((-k : ℤ) : ℝ) := by
+          rw [hzdef]
+          push_cast
+          field_simp
+          ring
+        rw [hshift, B2R_add_int]
+
+/-- **The GRID DEFICIT (integral-free E-linearity).**  For
+`h(τ) = C + Σ_r w_r B₂({τ − y_r})`:
+`(1/v) Σ_{i<v} h(i/v) − C = (1/v²) Σ_r w_r B₂({v y_r})`.  With the structural lemma (the
+autocorrelation of an interval family is such a combination, `C = |G|²`, weights `σ_p σ_q`,
+knots `x_p − x_q`; referee-verified exactly across the fleet), this is the Poisson bridge:
+geometric disc = Bernoulli jump-pair form = spectral disc. -/
+theorem grid_deficit {R : ℕ} (v : ℕ) (hv : 1 ≤ v) (C : ℝ) (w yk : Fin R → ℝ) :
+    (1 / v) * (∑ i ∈ Finset.range v, (C + ∑ r, w r * B2R ((i : ℝ) / v - yk r))) - C
+      = (1 / v ^ 2) * ∑ r, w r * B2R (v * yk r) := by
+  have hv0 : (0 : ℝ) < (v : ℝ) := by exact_mod_cast hv
+  have hswap : ∑ i ∈ Finset.range v, (∑ r, w r * B2R ((i : ℝ) / v - yk r))
+      = ∑ r, w r * ((1 / v) * B2R (v * yk r)) := by
+    rw [Finset.sum_comm]
+    refine Finset.sum_congr rfl fun r _ => ?_
+    rw [← Finset.mul_sum]
+    congr 1
+    have hr : ∀ i ∈ Finset.range v, B2R ((i : ℝ) / v - yk r) = B2R (-(yk r) + i / v) := by
+      intro i _
+      congr 1
+      ring
+    rw [Finset.sum_congr rfl hr, raabe_B2 v hv (-(yk r))]
+    congr 1
+    rw [show (v : ℝ) * -(yk r) = -((v : ℝ) * yk r) by ring, B2R_neg]
+  rw [Finset.sum_add_distrib, Finset.sum_const, Finset.card_range, nsmul_eq_mul, hswap]
+  have hpull : ∑ r, w r * (1 / (v : ℝ) * B2R (v * yk r))
+      = (1 / v) * ∑ r, w r * B2R (v * yk r) := by
+    rw [Finset.mul_sum]
+    refine Finset.sum_congr rfl fun r _ => ?_
+    ring
+  rw [hpull]
+  field_simp
+  ring
+
 end ClosedBudget
 end LRC14
 end LonelyRunner

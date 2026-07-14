@@ -78,9 +78,15 @@ LRCClosedBudget.lean now contains the FULL spectral THM-755, all audited
   via `integral_exp_mul_complex`: each interval <= 2/(2 pi m); total n/(pi m));
 - `spectral_thm755` -- the composition: Sum_{l=1}^{N} ||c(l v)||^2 <= m G^2 + (n/(pi v))^2/m.
 
-The one remaining bridge to the geometric statement (spectral disc = the v-grid mean of the
-autocorrelation minus |G'|^2) is Poisson summation for BV indicators -- klein's THM-731
-derivation, documented as the named prose step.
+THE POISSON BRIDGE IS NOW FORMALIZED TOO (opus-S293, sorry-free kernel-pure): B2R (the
+periodized second Bernoulli), B2R_add_int / B2R_neg, both Gauss sums, raabe_shift_one /
+raabe_shift_int (cyclic reindexing), raabe_base (fundamental-cell algebra), **raabe_B2** (the
+multiplication formula Sum_{i<v} B2({y+i/v}) = (1/v) B2({vy}) -- the finite Poisson atom), and
+**grid_deficit** (integral-free E-linearity: h = C + Sum w_r B2({. - y_r}) has grid deficit
+(1/v^2) Sum w_r B2({v y_r})).  The single remaining named step is the finite STRUCTURAL lemma
+-- the autocorrelation of an interval family is such a B2-combination with C = |G'|^2, weights
+sigma_p sigma_q, knots x_p - x_q (referee-verified exactly in every THM-732 computation) --
+pure piecewise-linear case analysis, no analysis.
 
 ## Files
 
