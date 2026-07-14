@@ -8,7 +8,7 @@
 
 **Honest picture:** covering = UNION of complementary tiles (klein's TABLE right; 'uniform shadow closure' HEADLINE overstates). Shadow = single-killer {1..12,182m} + tight/packed; near-AP-with-far = kps THM-734 (>=11 in {1..14}); spread = opus density. No single uniform route. Low-M escapees all >=11-in-{1..14} => kps covers them, NO genuine gap. klein-S300 equivalence (120/120) holds on packed, FALSE in general (my escapee).
 
-Handoffs: klein (triangulation headline -> 'union of tiles', klein-S300 caveat), kps (THM-734 essential, not subsumed). Files: lrc14_lowM_escapee_search_macmini_S99.py (+out).
+Handoffs: klein (triangulation headline -> 'union of tiles', klein-S300 caveat), kps (THM-734 essential, not subsumed). Files: lrc14_lowM_escapee_search_macmini_S99.py (+out). [S99b addendum: mapped the genuine residual = NOT-near-AP + NOT-shadow: RARE (15/2500), ALL M in [0.123,0.208] (>>1/14), diameter>=24, ZERO low-M. => tiling COMPLETE: covering => shadow(single-killer/tight) OR near-AP(kps THM-734/738) OR loose(M>=0.12,opus). Low-M region fully tiled by shadow+kps; residual all loose (opus). Vindicates klein's TABLE, corrects the 'uniform shadow' headline. HYP-6660 addendum.]
 
 ## mac-mini-2026-07-14-S98 -- CORRECT S97 (integrity) + the SHADOW-OR-LOOSE DICHOTOMY: k<=13 shadow does NOT close ALL covering (rare high-ratio SPREAD escapees, lonely at k~20-30), but every escapee is LOOSE (M>=0.22 >> 1/14). Shadow closes the BINDING low-M families; escapees trivially lonely.
 
