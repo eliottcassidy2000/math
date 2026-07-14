@@ -1,0 +1,25 @@
+======================================================================
+(B) PALEY / QR TOURNAMENT ON Z_7  (the apex '7' of 14=2*7)
+======================================================================
+Z_7: QR = [1, 2, 4] (Paley connection set); nonQR = [3, 5, 6]
+scores = [3, 3, 3, 3, 3, 3, 3] (regular tournament, all (p-1)/2=3)
+DIRECTED 3-CYCLES c3 = 14  <-- == 14 = 2*7 !!   (= the OCF odd-cycle count)
+self-complementary (Paley SC iff p=3 mod4): True  (p=7=3 mod4 => SC)
+Aut(Paley_7) = Frobenius Z_7 rtimes Z_3, order 21 = 21 -- breaks S_7 (order 5040).
+  => arcs are NOT all S_7-equivalent; Aut has orbits = the QR-difference classes. TRANSITIVITY BROKEN.
+  The '2' of 14: the Legendre Z_2 = (Z_7)*/QR (QR vs nonQR = complement). The '7': additive Z_7.
+  So Z_14 = Z_2(Legendre) x Z_7(additive) lives INSIDE the apex-7 Paley structure (CRT).
+
+======================================================================
+(A) TILING MODEL: is complement FIXED-POINT-FREE (unlike iso-classes)?
+======================================================================
+  n=4: m=3 tiles; complement=flip-all-tiles => fixed tilings = 0 (FIXED-POINT-FREE)
+  n=5: m=6 tiles; complement=flip-all-tiles => fixed tilings = 0 (FIXED-POINT-FREE)
+  n=6: m=10 tiles; complement=flip-all-tiles => fixed tilings = 0 (FIXED-POINT-FREE)
+  n=7: m=15 tiles; complement=flip-all-tiles => fixed tilings = 0 (FIXED-POINT-FREE)
+  => On the TILING model complement is fixed-point-FREE (matches the AL regular/fixed-point-free
+     action on cusps), UNLIKE iso-classes where it fixes SC (the S91 NEG-3 tension). The base path
+     splits arcs into CUT (base path, n-1) + CYCLE (tiles, m) => arc-transitivity BROKEN.
+
+LEAD: the apex-7 Paley tournament realizes 14=2*7 as its odd-cycle (OCF) count, with the 2 and 7
+both inside Z_7's arithmetic (Legendre Z_2 x additive Z_7 = Z_14). This is arithmetic, not S_n-symmetric.
