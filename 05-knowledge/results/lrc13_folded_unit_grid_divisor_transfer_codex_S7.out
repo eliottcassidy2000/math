@@ -1,0 +1,56 @@
+THM-772 folded unit-grid divisor-transfer certificate
+strict core-safe / closed exception-danger convention
+
+s=2 local shells
+m= 2 units=(1,) eligible= 0 packets= 0 residues=()
+m= 3 units=(1, 2) eligible= 1 packets= 0 residues=(3,)
+m= 4 units=(1, 3) eligible= 0 packets= 0 residues=()
+m= 5 units=(1, 2, 3, 4) eligible= 1 packets= 0 residues=(5,)
+m= 6 units=(1, 5) eligible= 0 packets= 0 residues=()
+m= 7 units=(1, 2, 3, 4, 5, 6) eligible= 1 packets= 0 residues=(7,)
+m= 8 units=(1, 3, 5, 7) eligible= 0 packets= 0 residues=()
+m= 9 units=(1, 2, 4, 5, 7, 8) eligible= 1 packets= 0 residues=(9,)
+m=10 units=(1, 3, 7, 9) eligible= 0 packets= 0 residues=()
+m=11 units=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) eligible= 1 packets= 0 residues=(11,)
+m=12 units=(1, 5, 7, 11) eligible= 0 packets= 0 residues=()
+
+s=3 local shells
+m= 2 units=(1,) eligible= 2 packets= 0 residues=(2, 4)
+m= 3 units=(1, 2) eligible= 0 packets= 0 residues=()
+m= 4 units=(1, 3) eligible= 2 packets= 0 residues=(4, 8)
+m= 5 units=(1, 2, 3, 4) eligible= 2 packets= 0 residues=(5, 10)
+m= 6 units=(1, 5) eligible= 6 packets= 8 residues=(1, 5, 7, 11, 13, 17)
+m= 7 units=(1, 2, 3, 4, 5, 6) eligible= 2 packets= 0 residues=(7, 14)
+m= 8 units=(1, 3, 5, 7) eligible= 2 packets= 0 residues=(8, 16)
+m= 9 units=(1, 2, 4, 5, 7, 8) eligible= 0 packets= 0 residues=()
+m=10 units=(1, 3, 7, 9) eligible= 2 packets= 0 residues=(10, 20)
+m=11 units=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) eligible= 2 packets= 0 residues=(11, 22)
+m=12 units=(1, 5, 7, 11) eligible= 6 packets= 8 residues=(2, 10, 14, 22, 26, 34)
+
+s=2 conclusion: U must contain a multiple of every m=2,...,12
+s=3 locally feasible missing divisors: (6, 12)
+s=3 joint m=6,12 shell: period=36 eligible=0 packets=0
+therefore U must contain a multiple of 6 (no-6 also means no-12)
+s=3 conclusion: U must contain a multiple of every m=2,...,11
+if U has no 12-multiple, exception shell modulo 36 is
+  one independent sign choice from each of +/-2, +/-10, +/-14
+  exact labelled packets: ((2, 10, 14), (2, 10, 22), (2, 14, 26), (2, 22, 26), (10, 14, 34), (10, 22, 34), (14, 26, 34), (22, 26, 34))
+
+s=2 safe-interval ratio: L*b>=4/143, tooth*w=4/13, hence every exception w<=11*max(U)
+s=3 safe-interval ratio: L*b>=3/65, tooth*w=6/13, hence every exception w<=10*max(U)
+
+Tournament Analysis (vertices = modulus obligations)
+pairwise observable = local obstruction strength
+gauge A = raw (packet_count, eligible_count)
+gauge B = (packet_count, eligible_density)
+raw order: ('s2m2', 's2m4', 's2m6', 's2m8', 's2m10', 's2m12', 's3m3', 's3m9', 's2m3', 's2m5', 's2m7', 's2m9', 's2m11', 's3m2', 's3m4', 's3m5', 's3m7', 's3m8', 's3m10', 's3m11', 's3m6', 's3m12')
+normalized order: ('s2m2', 's2m4', 's2m6', 's2m8', 's2m10', 's2m12', 's3m3', 's3m9', 's2m11', 's2m9', 's3m11', 's3m10', 's2m7', 's3m8', 's3m7', 's2m5', 's3m5', 's2m3', 's3m4', 's3m2', 's3m12', 's3m6')
+score histogram: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
+directed 3-cycles: 0
+SCC sizes: (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+Hamiltonian-path counts: 1 1
+edge flips between gauges: 43
+carrier warning: this tournament loses unit-fraction columns and the m=6/12 joint splice
+predicate-preserving carrier: (modulus, unit fraction, sheet colour) obligation hypergraph
+
+FINAL: PASS
