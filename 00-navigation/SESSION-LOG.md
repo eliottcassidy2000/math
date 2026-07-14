@@ -1,3 +1,42 @@
+## opus-2026-07-14-S286 -- the binding low-M equidistribution attacked via SLOT OCCUPANCY (speeds x clocks = the perspective grid): TWO ZEROES (60k adversarial hunt + 40x25 constructive blocking: NO covering body with all k<=13 shadows dead outside the loose stratum) + the OCCUPANCY-RIGIDITY LEMMA (blocking-complete forces a complete residue system mod 13 -- pigeonhole-exact -- and CRT near-completeness: AP-rigidity) => (A)'s shadow residual = a FINITE classification mod 360360 with surjectivity cuts
+
+Prompt (owner): attack the binding low-M equidistribution with the perspective frame.
+
+THE FRAME: slot (k, a) = unit class a mod k, k = 2..13; a speed OCCUPIES one slot per clock
+(13 x 12 -- the perspective grid); mac-mini's free-slot shadow criterion = the frozen fan on the
+k-clock (carriers frozen at multiples, the free class is the unswept window). The binding
+residual must BLOCK every slot with large killers.
+
+RESULT 1 (the hunt): 60,000 adversarial low-M covering bodies, diameter >= 60, outside all
+shape tiles: ZERO with all slots blocked. Calibration: even the classic extremals keep free
+slots (AP {1..13}: 5 free; deep well: 26; {1..11,13,84}: 12; GW: 8).
+
+RESULT 2 (constructive blocking): 40 trials x 25 iterations of targeted attack -- find a working
+shadow, occupy its class with a large killer, keep covering -- ZERO successes: killing one shadow
+OPENS another. An occupancy conservation: 13 speeds cannot cover 57 slot-demands once covering
+pins the carriers (each k needs a carrier, which blocks no unit slot of that k).
+
+THE RIGIDITY LEMMA (pigeonhole, 5 lines, provable): blocking-complete at k = 13 forces the 12
+non-carriers to form a COMPLETE residue system mod 13 (12 unit slots, 12 speeds, exact
+surjectivity, all large); simultaneously >= 10/10 surjectivity mod 11, >= 6/6 mod 7, ...; CRT
+pins the residues mod lcm(2..13) = 360360 into near-complete-system (AP-like) patterns.
+CONSEQUENCE: (A)'s shadow-route residual = a FINITE classification: [residue patterns mod
+360360 passing the surjectivity cuts] x [each: tiled / free-slotted / loose]. The
+equidistribution becomes finite-index combinatorics.
+
+HONEST: klein-S300's equivalence stands -- proving the witness claim = proving L > 0; no
+shortcut claimed. WHAT IS NEW: (i) the witness NEVER fails under targeted attack (both zeroes);
+(ii) the conservation mechanism named; (iii) the surjectivity cuts that make the classification
+finite and tractable. CONJECTURE (with evidence): binding covering => some k <= 13 shadow
+works -- if classified true, the assembly completes modulo the compact core.
+
+FILES: HYP-6680; lrc14_slot_occupancy_hunt_opus_S286.py.out. -> mac-mini (your dichotomy's
+proved branch may be TOTAL on binding -- the classification is the way to know; the rigidity
+lemma is yours to compose with THM-749/751), klein (S300's equivalence respected; the finite
+formulation is the new face), kps (the mod-360360 classification with surjectivity cuts is
+decide-shaped -- your territory when ready).
+
+---
 ## opus-2026-07-14-S285 -- FRONTIER SYNTHESIS + THM-752: the fine-comb witness lemma (TOOTH threshold 1/(7w)) closes klein-S304's loose-branch stall with an exact verified witness (t = 233/2912, clearance 29/364) + 60/60 census + the ratio-13 cascade (complementary to spread13_lonely); the frontier doc: everything closed except (A) the binding low-M equidistribution -- THE one analytic piece left
 
 Prompt (owner): synthesize recent work on the remaining mathematical frontier and push that.

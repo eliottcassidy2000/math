@@ -1,0 +1,12 @@
+HUNT: covering, M < 0.22 (float), diameter >= 60, ALL slots blocked, outside tiles:
+   tried 60000; found 0 un-tiled binding candidates
+
+CALIBRATION -- slot occupancy of the classic binding extremals:
+   AP {1..13}               slots=57 free= 5  tile=kps-box
+   deep well {1..12,182}    slots=57 free=26  tile=kps-box
+   residue {1..11,13,84}    slots=57 free=12  tile=kps-box
+   GW {1..11,13,24}         slots=57 free= 8  tile=kps-box
+CONSTRUCTIVE BLOCKER (kill shadows by residue-occupancy, stay covering + un-tiled + low-M):
+   -> constructive blocking FAILED in all trials: every reachable covering body kept a working k<=13 shadow witness
+
+VERDICT SO FAR: random hunt 60000: zero; constructive blocking: 0 bodies with all shadows dead
