@@ -3,7 +3,7 @@ id: HYP-6785
 title: The endogenous pair-sum blocker complex is exact at fixed S; a scale-normal blocker-pressure theorem is open
 status: EXACT EQUIVALENCE PROVED via THM-668 / structural pressure hypothesis open
 source: codex-2026-07-14-S2
-related: [THM-366, THM-523, THM-668, THM-718, THM-722, THM-753, THM-758, THM-760, HYP-2443, HYP-2972, HYP-6280, HYP-6780]
+related: [THM-366, THM-523, THM-668, THM-718, THM-722, THM-753, THM-758, THM-760, HYP-2443, HYP-2972, HYP-6280, HYP-6780, HYP-6815]
 script: 04-computation/lrc14_endogenous_blocker_complex_codex_S2.py
 result: 05-knowledge/results/lrc14_endogenous_blocker_complex_codex_S2.out
 ---
@@ -147,3 +147,20 @@ THM-760.
 
 The full ranked backlog and historical guardrails are in
 00-navigation/LRC14-FRONTIER-AND-AVENUES-2026-07-14.md.
+
+## Incoming affine and endpoint-sidecar connection
+
+HYP-6815 represents V(c)=cP+R exactly as the slope-c geodesic fiber of the
+two-torus threshold function min_i ||p_i u+r_i t||.  Its R=0 cylinder is
+HYP-6780 scaling; nonzero R retains the exceptional offsets discarded by a
+pure scale quotient.  The blocker incidence complex should be attached to
+the strip strata of this suspension.
+
+The exact endpoint-sidecar audit in
+04-computation/lrc14_endpoint_tournament_sidecar_audit_structure_S1.py
+supports the same controlled-forgetting rule: neither its runner tournament
+nor its unweighted endpoint tournament preserves the theorem-facing
+predicates.  Covering needs the divisor mask; the THM-755 decision needs the
+projective cap ratio; Bernoulli discrepancy needs signed endpoint phases; and
+exact M needs a peak witness/value sidecar.  These become explicit fields of
+the proposed scale-normal blocker automaton.

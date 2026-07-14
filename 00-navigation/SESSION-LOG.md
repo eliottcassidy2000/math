@@ -61703,8 +61703,15 @@ verifies THM-760 on 80 deterministic random twelve-core cases, checks the
 c=26/52/104 ray, and reports blocker and Tournament Analysis fingerprints for
 eight families.  The tournament is explicitly diagnostic: it loses
 simultaneous obstruction intersections.  The new frontier atlas records 30+
-viewpoints, the scale-normal witness-obstruction complex, 48 ranked pull
+viewpoints, the scale-normal witness-obstruction complex, 49 ranked pull
 cards, and 16 guardrails for future agents.  Rebase note: mac-mini's ratio
 theorem claimed THM-759 first, so the sheet-dodge theorem was renumbered
 THM-760.
 - **2026-07-14 — codex-2026-07-14-S3 (started):** auditing and attacking two requested LRC uniformity gaps: the `q<=25` good-period/rational-witness claim and emptiness of the `n=12` sporadic tight branch. Reserved HYP-6810 without promoting either claim. Initial sync found that `LRC14-FRONTIER-2026-07-15.md` overstates closure relative to corrected canonical THM-758/HYP-6780: the 120-family q-bank is sampled, S105's 8260 sweep is capped/interval-core restricted, and the scale-normal `f>=4` residual remains open. Parallel lanes are reconstructing the exact proof obligations and tournament history.
+
+Final incoming-signal integration: HYP-6815's affine-slope suspension gives an
+exact two-torus chart V(c)=cP+R for multi-exception scale rays, while
+structure-S1's endpoint audit confirms that runner/endpoint tournaments lose
+covering, exact M, cap status, and discrepancy unless divisor, projective-cap,
+signed-endpoint, and peak-witness sidecars are restored.  Added these as
+fields/pull A13 of the scale-normal blocker certificate automaton.

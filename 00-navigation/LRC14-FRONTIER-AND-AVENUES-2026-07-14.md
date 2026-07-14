@@ -228,6 +228,7 @@ certificates.
 | Two-scale/decorrelation | compact core plus far speeds | asymptotic independence | uniformity under core dilation | loose tail estimates |
 | Capped envelope | measure cap plus jump envelope | per-core tail with explicit v* | global raw compactness | far-element peel |
 | Scale sheets | fibers t=(t0+k)/c | whole core margin exactly | endpoint labels across several exceptions | THM-760 and next extension |
+| Affine-slope suspension | V(c)=cP+R as slope-c fibers of a two-torus function | scale, offsets, and exact fiber nonemptiness | finite classification without a descent | HYP-6815 chart for multi-exception rays |
 | Tropical/normal fan | active minima and wall cells | combinatorial type of optimum | metric clearance | finite chamber stratification |
 | Matroid/circuit | minimal dependent proof obligations | irreducible obstruction support | phase and margin | candidate blocker-pressure abstraction |
 | Tournament analysis | pairwise quotient of chosen objects | dominance fingerprints | higher-order intersections | diagnostics and route comparison |
@@ -285,6 +286,21 @@ and named tight corner.  A Nerode-style quotient may merge two states only if
 every hidden completion has the same terminal certificate.  This is the
 controlled-forgetting rule missing from raw speed, runner-tournament, and
 raw-height classifications.
+
+HYP-6815 supplies a natural chart for the same state space.  An affine family
+V(c)=cP+R is the slope-c geodesic fiber of
+Phi(u,t)=min_i ||p_i u+r_i t|| on a two-torus.  The R=0 cylinder is exactly the
+dilation law of HYP-6780; nonzero R is transverse residue holonomy and is the
+right place to encode several exceptional offsets.  This representation is
+exact, but it needs the blocker/certificate labels above before it becomes a
+finite theorem.
+
+The incoming exact endpoint-sidecar audit independently confirms the payload
+rule.  Runner and unweighted endpoint tournaments do not preserve covering,
+exact M, capped-envelope status, or Bernoulli discrepancy.  The tested
+formula-facing sidecars are respectively the divisor mask, projective cap
+ratio v|G'|/r, signed endpoint phases, and exact peak witness.  These sidecars
+should be fields of the automaton, not reconstructed from tournament scores.
 
 A candidate counterexample is therefore not just a speed set.  It is a
 projective arithmetic shape carrying a sheeted, weighted obstruction
@@ -417,6 +433,13 @@ assembly-paper write-up; this card owns the missing uniform justification.
 should express the circle-cover sheet permutation and the 1/(2c) grid
 approximation.  THM-755's circular-overlap and family-assembly chain is now
 complete; reuse it as a terminal route rather than reopening it.
+
+**A13. Affine-slope fiber classification.**  Execute HYP-6815 on the
+multi-exception residual V(c)=cP+R.  Stratify the two-torus strip arrangement,
+attach HYP-6785 blocker edges and the audited divisor/cap/endpoint/peak
+sidecars, and prove that each slope fiber either has a threshold point or
+descends to a smaller normalized state.  Guardrail: the exact suspension is a
+reparameterization until a finite or well-founded classification is proved.
 
 ### Priority B — structural inverse theorems
 
@@ -626,7 +649,7 @@ The most efficient parallel program is:
 
 ~~~text
 scale team:
-  A1-A6, with THM-760 as base case
+  A1-A6 and A13, with THM-760 as base case
 
 obstruction team:
   A7-A10 and B1-B4, with HYP-6785 as exact object
