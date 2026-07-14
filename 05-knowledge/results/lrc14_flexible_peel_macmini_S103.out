@@ -1,0 +1,7 @@
+spread covering families tested: 501
+with SOME clean (aligned/safe) peel: 501 (100.0%)
+with NO clean peel (all peels unsafe -- genuine density-floor residual): 0
+
+=> EVERY spread covering family has a clean peel => THM-751 + recursion + sieve closes the
+   loose stratum too (peel a clean element, reduce to M(core), recurse to non-covering core).
+   The covering case would be ELEMENTARY: THM-751 (any clean peel) + THM-366 sieve, no density floor.

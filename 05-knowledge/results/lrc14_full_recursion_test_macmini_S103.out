@@ -1,0 +1,17 @@
+spread covering families: 333
+  recursion terminated at SMALL set (<=5 elts, LRC-trivial): 2
+  terminated at NON-COVERING core (sieve THM-366 => M>=1/14): 203
+  STUCK at a COVERING binding core (the genuine gap): 128
+  stuck cores (size, M, set):
+     size=11 M=0.2031: [1, 22, 27, 30, 32, 45, 56, 60, 91, 181, 198]
+     size=8 M=0.2538: [1, 28, 30, 80, 143, 144, 239, 255]
+     size=10 M=0.1834: [1, 15, 16, 28, 60, 66, 72, 154, 160, 169]
+     size=11 M=0.216: [1, 24, 33, 70, 77, 126, 234, 263, 264, 281, 328]
+     size=12 M=0.181: [1, 4, 14, 30, 120, 180, 192, 195, 197, 220, 224, 230]
+     size=7 M=0.263: [2, 28, 36, 40, 176, 208, 286]
+     size=10 M=0.2278: [1, 10, 24, 72, 98, 138, 143, 266, 280, 341]
+     size=10 M=0.2094: [1, 16, 25, 27, 48, 84, 104, 154, 160, 278]
+  stuck-core sizes: min=7 median=10 max=13
+
+=> STUCK covering binding cores exist = the irreducible density-floor residual. THM-751 reduces
+   the loose stratum to these small all-binding covering cores (opus's floor / finite check).

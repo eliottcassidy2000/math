@@ -1,0 +1,15 @@
+covering families tested (all diameters): 485
+  reduce to size<=12 => CLOSED by safe-peel recursion + LRC(<=13): 476 (98.1%)
+  IRREDUCIBLE (size 13, NO safe peel = residual): 9 (1.9%)
+  irreducible families -- are they near-AP (>=11 in {1..14}, kps THM-734) or single-killer?
+    >=11 in {1..14} (kps near-AP tile): 0/9
+    irreducible M: min=0.1509 median=0.1715 (1/14=0.0714)
+      M=0.1888 in114=2: [1, 14, 32, 45, 96, 104, 110, 151, 170, 183, 210, 218, 325]
+      M=0.1695 in114=2: [1, 13, 16, 30, 45, 46, 48, 51, 70, 83, 88, 195, 273]
+      M=0.1715 in114=2: [1, 14, 16, 27, 55, 60, 61, 63, 132, 195, 207, 283, 343]
+      M=0.1766 in114=2: [1, 11, 36, 43, 58, 70, 144, 168, 221, 243, 247, 283, 314]
+      M=0.1776 in114=2: [1, 9, 32, 37, 39, 42, 60, 63, 107, 187, 262, 288, 345]
+      M=0.1683 in114=3: [1, 10, 14, 27, 48, 53, 55, 104, 133, 181, 186, 308, 309]
+
+=> if the IRREDUCIBLE residual is small AND = the known tiles (near-AP kps / single-killer /
+   covering-min), then THM-751 safe-peel + LRC(<=13) + those tiles CLOSE the covering case.
