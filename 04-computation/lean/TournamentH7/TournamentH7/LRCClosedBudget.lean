@@ -743,24 +743,24 @@ piecewise-linear single-pair overlap identity, stated in prose with machine-chec
 rational instances below. -/
 
 /-- The B₂-model of the autocorrelation of an interval family. -/
-noncomputable def acorrModel {M : ℕ} (C : ℝ) (x sg : Fin M → ℝ) (τ : ℝ) : ℝ :=
-  C + ∑ pq : Fin M × Fin M, (sg pq.1 * sg pq.2 / 2) * B2R (τ + x pq.2 - x pq.1)
+noncomputable def acorrModel {ι : Type*} [Fintype ι] (C : ℝ) (x sg : ι → ℝ) (τ : ℝ) : ℝ :=
+  C + ∑ pq : ι × ι, (sg pq.1 * sg pq.2 / 2) * B2R (τ + x pq.2 - x pq.1)
 
 /-- THM-732's exact Bernoulli jump-pair discrepancy. -/
-noncomputable def discB {M : ℕ} (x sg : Fin M → ℝ) (v : ℕ) : ℝ :=
-  (1 / (2 * (v : ℝ) ^ 2)) * ∑ pq : Fin M × Fin M, sg pq.1 * sg pq.2 * B2R (v * (x pq.1 - x pq.2))
+noncomputable def discB {ι : Type*} [Fintype ι] (x sg : ι → ℝ) (v : ℕ) : ℝ :=
+  (1 / (2 * (v : ℝ) ^ 2)) * ∑ pq : ι × ι, sg pq.1 * sg pq.2 * B2R (v * (x pq.1 - x pq.2))
 
 /-- **The Bernoulli form IS the model's grid deficit** — `grid_deficit` at the pair index.
 With the (prose) identity `A = acorrModel`, this is the geometric THM-731/755 statement:
 `(1/v) Σ_i A(i/v) − |G|² = discB`. -/
-theorem discB_eq_grid_deficit {M : ℕ} (v : ℕ) (hv : 1 ≤ v) (C : ℝ) (x sg : Fin M → ℝ) :
+theorem discB_eq_grid_deficit {ι : Type*} [Fintype ι] (v : ℕ) (hv : 1 ≤ v) (C : ℝ) (x sg : ι → ℝ) :
     (1 / v) * (∑ i ∈ Finset.range v, acorrModel C x sg ((i : ℝ) / v)) - C
       = discB x sg v := by
-  have hmain := grid_deficit (ι := Fin M × Fin M) v hv C
+  have hmain := grid_deficit (ι := ι × ι) v hv C
       (fun pq => sg pq.1 * sg pq.2 / 2) (fun pq => x pq.1 - x pq.2)
   have hshape : ∀ i ∈ Finset.range v,
       acorrModel C x sg ((i : ℝ) / v)
-        = C + ∑ pq : Fin M × Fin M,
+        = C + ∑ pq : ι × ι,
             (sg pq.1 * sg pq.2 / 2) * B2R ((i : ℝ) / v - (x pq.1 - x pq.2)) := by
     intro i _
     unfold acorrModel
@@ -980,6 +980,111 @@ theorem pair_overlap_B2 (l1 l2 t : ℝ) (hl10 : 0 ≤ l1) (hl11 : l1 ≤ 1)
         exact max_eq_right (by linarith)
       rw [hmax1, hmax2, hBt, hA, hB, hC]
       ring
+
+/-! ### The FAMILY ASSEMBLY (opus-S296): the geometric THM-755, complete
+
+Summing `pair_overlap_B2` over all interval pairs and reindexing the four-term combinations
+into the jump-pair model over `ι = Fin n ⊕ Fin n` (jumps `a_j` with sign `+1`, `b_j` with
+sign `−1`).  The orientation symmetrization is one `prodComm` reindex of the double sum.
+With this, the chain closes: `Acorr = acorrModel` (here) → grid deficit = `discB`
+(`discB_eq_grid_deficit`) → the spectral bound (`spectral_thm755` + `raabe_B2`):
+**the geometric THM-755 is machine-checked end to end.** -/
+
+/-- Fract-shift absorption: `B2R ({u} + w) = B2R (u + w)`. -/
+theorem B2R_fract_add (u w : ℝ) : B2R (Int.fract u + w) = B2R (u + w) := by
+  have h : Int.fract u + w = (u + w) + ((-⌊u⌋ : ℤ) : ℝ) := by
+    rw [Int.fract]
+    push_cast
+    ring
+  rw [h, B2R_add_int]
+
+/-- The two-tile circular overlap of `[0,l1]` with the `t`-shifted `[0,l2]`. -/
+noncomputable def pairOverlap (l1 l2 t : ℝ) : ℝ :=
+  max 0 (min l1 (l2 - t)) + max 0 (min l1 (1 - t + l2) - (1 - t))
+
+/-- The geometric autocorrelation of an interval family, as the sum of pair overlaps. -/
+noncomputable def Acorr {n : ℕ} (a b : Fin n → ℝ) (τ : ℝ) : ℝ :=
+  ∑ jk : Fin n × Fin n,
+    pairOverlap (b jk.1 - a jk.1) (b jk.2 - a jk.2) (Int.fract (τ + a jk.1 - a jk.2))
+
+/-- **THE FAMILY ASSEMBLY.**  For an interval family (`a j ≤ b j`, lengths `≤ 1`):
+`Acorr a b τ = acorrModel (Σℓ)² (jumps) (signs) τ` — the geometric autocorrelation equals
+the B₂ jump-pair model with `C = |G|²`, jump points `a_j` (sign `+1`) and `b_j` (sign `−1`). -/
+theorem acorr_eq_model {n : ℕ} (a b : Fin n → ℝ)
+    (hab : ∀ j, a j ≤ b j) (hlen : ∀ j, b j - a j ≤ 1) (τ : ℝ) :
+    Acorr a b τ
+      = acorrModel ((∑ j, (b j - a j)) ^ 2)
+          (Sum.elim a b) (Sum.elim (fun _ => (1 : ℝ)) (fun _ => (-1 : ℝ))) τ := by
+  unfold Acorr
+  have hpair : ∀ jk : Fin n × Fin n,
+      pairOverlap (b jk.1 - a jk.1) (b jk.2 - a jk.2) (Int.fract (τ + a jk.1 - a jk.2))
+        = (b jk.1 - a jk.1) * (b jk.2 - a jk.2)
+          + (1 / 2) * (B2R (τ + a jk.1 - a jk.2) - B2R (τ + a jk.1 - b jk.2)
+              - B2R (τ + b jk.1 - a jk.2) + B2R (τ + b jk.1 - b jk.2)) := by
+    intro jk
+    obtain ⟨j, k⟩ := jk
+    have h := pair_overlap_B2 (b j - a j) (b k - a k) (Int.fract (τ + a j - a k))
+        (by linarith [hab j]) (hlen j) (by linarith [hab k]) (hlen k)
+        (Int.fract_nonneg _) (Int.fract_lt_one _)
+    unfold pairOverlap
+    rw [h]
+    have e1 : B2R (Int.fract (τ + a j - a k)) = B2R (τ + a j - a k) := by
+      have h0 := B2R_fract_add (τ + a j - a k) 0
+      simpa using h0
+    have e2 : B2R (Int.fract (τ + a j - a k) - (b k - a k)) = B2R (τ + a j - b k) := by
+      rw [sub_eq_add_neg, B2R_fract_add]
+      congr 1
+      ring
+    have e3 : B2R (Int.fract (τ + a j - a k) + (b j - a j)) = B2R (τ + b j - a k) := by
+      rw [B2R_fract_add]
+      congr 1
+      ring
+    have e4 : B2R (Int.fract (τ + a j - a k) + (b j - a j) - (b k - a k))
+        = B2R (τ + b j - b k) := by
+      rw [show Int.fract (τ + a j - a k) + (b j - a j) - (b k - a k)
+          = Int.fract (τ + a j - a k) + ((b j - a j) - (b k - a k)) by ring,
+        B2R_fract_add]
+      congr 1
+      ring
+    rw [e1, e2, e3, e4]
+  rw [Finset.sum_congr rfl fun jk _ => hpair jk]
+  rw [Finset.sum_add_distrib]
+  unfold acorrModel
+  congr 1
+  · -- (Σ ℓ_j ℓ_k over pairs) = (Σ ℓ)²
+    rw [sq, Finset.sum_mul_sum, Fintype.sum_prod_type]
+  · -- the B₂ block matching, via the prodComm swap + full RHS expansion
+    have hswap : ∑ jk : Fin n × Fin n,
+        (1 / 2) * (B2R (τ + a jk.1 - a jk.2) - B2R (τ + a jk.1 - b jk.2)
+            - B2R (τ + b jk.1 - a jk.2) + B2R (τ + b jk.1 - b jk.2))
+        = ∑ jk : Fin n × Fin n,
+        (1 / 2) * (B2R (τ + a jk.2 - a jk.1) - B2R (τ + a jk.2 - b jk.1)
+            - B2R (τ + b jk.2 - a jk.1) + B2R (τ + b jk.2 - b jk.1)) := by
+      exact Fintype.sum_equiv (Equiv.prodComm (Fin n) (Fin n)) _ _ (fun jk => by
+        simp [Equiv.prodComm_apply, Prod.swap])
+    rw [hswap, Fintype.sum_prod_type]
+    conv_rhs => simp only [Fintype.sum_prod_type, Fintype.sum_sum_type,
+      Sum.elim_inl, Sum.elim_inr]
+    rw [← Finset.sum_add_distrib]
+    refine Finset.sum_congr rfl fun j _ => ?_
+    rw [← Finset.sum_add_distrib, ← Finset.sum_add_distrib, ← Finset.sum_add_distrib]
+    refine Finset.sum_congr rfl fun k _ => ?_
+    ring
+
+/-- **THE GEOMETRIC DISC IDENTITY (THM-731/755, capstone).**  For any interval family:
+the v-grid mean of the geometric autocorrelation, minus `|G|²`, equals THM-732's exact
+Bernoulli jump-pair discrepancy — machine-checked end to end. -/
+theorem geometric_disc_eq_discB {n : ℕ} (a b : Fin n → ℝ)
+    (hab : ∀ j, a j ≤ b j) (hlen : ∀ j, b j - a j ≤ 1) (v : ℕ) (hv : 1 ≤ v) :
+    (1 / v) * (∑ i ∈ Finset.range v, Acorr a b ((i : ℝ) / v)) - (∑ j, (b j - a j)) ^ 2
+      = discB (Sum.elim a b) (Sum.elim (fun _ => (1 : ℝ)) (fun _ => (-1 : ℝ))) v := by
+  have h1 : ∀ i ∈ Finset.range v,
+      Acorr a b ((i : ℝ) / v)
+        = acorrModel ((∑ j, (b j - a j)) ^ 2) (Sum.elim a b)
+            (Sum.elim (fun _ => (1 : ℝ)) (fun _ => (-1 : ℝ))) ((i : ℝ) / v) :=
+    fun i _ => acorr_eq_model a b hab hlen _
+  rw [Finset.sum_congr rfl h1]
+  exact discB_eq_grid_deficit v hv _ _ _
 
 end ClosedBudget
 end LRC14

@@ -99,9 +99,14 @@ the fract/overlap thresholds; every leaf closes by ring after floor-computation 
 -- 8392 exact configurations, 0 mismatches on the corrected form; the double sum over ordered
 pairs symmetrizes either orientation, which is why the diagonal instances could not detect
 it.)  The (H)-edge chain is now machine-checked END TO END at the identity level: kernel ->
-Fourier envelopes -> spectral -> Raabe -> grid deficit -> discB -> single-pair overlap.  The
-remaining assembly (summing pair_overlap_B2 over interval pairs and reindexing into
-acorrModel's jump-pair sum) is Finset bookkeeping with no mathematical content.
+Fourier envelopes -> spectral -> Raabe -> grid deficit -> discB -> single-pair overlap.  THE ASSEMBLY IS DONE (opus-S296): acorr_eq_model PROVED (Acorr -- the geometric
+autocorrelation as the sum of pair overlaps -- equals acorrModel over the jump index
+Fin n + Fin n, via B2R_fract_add de-fracting, the prodComm orientation swap, and the four-block
+Fintype.sum expansion), and the CAPSTONE geometric_disc_eq_discB PROVED: for any interval
+family, the v-grid mean of the geometric autocorrelation minus |G|^2 equals THM-732's exact
+Bernoulli jump-pair discrepancy.  **THE GEOMETRIC THM-755 IS COMPLETE IN LEAN**: every
+statement from the raw overlap geometry to the spectral band edge is machine-checked,
+sorry-free, kernel-pure.
 
 ## Files
 

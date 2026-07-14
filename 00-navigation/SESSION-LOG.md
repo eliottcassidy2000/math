@@ -1,3 +1,34 @@
+## opus-2026-07-14-S296 -- THE GEOMETRIC THM-755 IS COMPLETE IN LEAN: acorr_eq_model PROVED (the family assembly: pair overlaps -> jump-pair model over Fin n + Fin n; B2R_fract_add + prodComm swap + four-block expansion) + geometric_disc_eq_discB PROVED (the capstone: geometric grid-mean deficit = THM-732's exact Bernoulli discrepancy); 47 declarations, 0 sorries, all kernel-pure
+
+Prompt (owner): do the family assembly and complete the geometric THM-755 in Lean.
+
+THE ASSEMBLY (acorr_eq_model): Acorr a b tau := Sum over interval pairs of
+pairOverlap(l_j, l_k, fract(tau + a_j - a_k)) EQUALS acorrModel with C = (Sum l)^2 over the
+jump index Fin n + Fin n (jumps (a_j, +1), (b_j, -1)). Mechanics: per-pair rewrite by
+pair_overlap_B2; B2R_fract_add absorbs the fract into the four jump-args (tau + a_j - a_k etc.);
+Finset.sum_mul_sum gives the (Sum l)^2 block; the ORIENTATION SYMMETRIZATION -- the same
+double-sum swap that made S295's error invisible to diagonals -- is ONE Fintype.sum_equiv
+(Equiv.prodComm); then conv_rhs simp only [Fintype.sum_prod_type, Fintype.sum_sum_type,
+Sum.elim_inl/inr] expands the model into its four blocks; three sum_add_distrib merges and a
+per-point ring close it. acorrModel/discB generalized to Fintype indices en route.
+
+THE CAPSTONE (geometric_disc_eq_discB, 5 lines): chaining acorr_eq_model with
+discB_eq_grid_deficit: for ANY interval family, the v-grid mean of the GEOMETRIC
+autocorrelation minus |G|^2 equals THM-732's exact Bernoulli jump-pair discrepancy.
+
+THE LEDGER: LRCClosedBudget.lean now holds 47 declarations, 0 sorries, every audit
+[propext, Classical.choice, Quot.sound]. The chain is machine-checked FROM RAW OVERLAP
+GEOMETRY TO THE SPECTRAL BAND EDGE: pairOverlap -> acorr_eq_model -> geometric_disc_eq_discB
+-> grid_deficit/raabe_B2 <- discB, and on the spectral face capped_envelope_kernel -> Fourier
+envelopes -> spectral_thm755. THM-731, THM-732, and THM-755 all now have their complete Lean
+faces. The geometric THM-755 is DONE.
+
+FILES: LRCClosedBudget.lean (acorr_eq_model, geometric_disc_eq_discB, B2R_fract_add,
+pairOverlap, Acorr + generalizations); THM-755 canon COMPLETE marker; HYP-6755. -> klein/kps
+(every object under the exact-Q certificate stack -- disc, model, overlap, Raabe -- is now
+machine-checked; the certificates' soundness rests on audited Lean), mac-mini (47/47).
+
+---
 ## mac-mini-2026-07-14-S108 -- LRC(13) RIGIDITY: the RATIO BOUND is PROVED (THM-759); the rigidity's one hard branch is LOCALIZED as the Goddyn-Wong locus (HYP-6800).
 
 TASK (owner): prove the ratio bound to complete the LRC(13) tightness rigidity R(12) (unique tight primitive 12-set = {1..12}); work the critical path; prioritize insight exploration.
