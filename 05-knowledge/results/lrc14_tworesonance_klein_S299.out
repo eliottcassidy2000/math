@@ -1,0 +1,23 @@
+ratio       n refined     k2only   k in{2..6}       L>0
+6-8        50     74%        40%          96%     100%
+     NOT covered by k in{2..6} (need >2 reson / equidist): [[178, 180, 280, 335, 464, 728, 770, 814, 864, 941, 976, 1090], [20, 24, 52, 54, 56, 70, 79, 88, 92, 112, 117, 126]]
+8-10       50     44%        40%          94%     100%
+     NOT covered by k in{2..6} (need >2 reson / equidist): [[23, 24, 30, 65, 75, 97, 102, 165, 171, 172, 182, 184], [32, 33, 36, 40, 78, 88, 104, 197, 254, 280, 283, 288]]
+10-13      50     34%        28%          88%     100%
+     NOT covered by k in{2..6} (need >2 reson / equidist): [[170, 252, 290, 314, 440, 661, 729, 1291, 1301, 1433, 1495, 1785], [33, 35, 48, 71, 119, 126, 142, 168, 170, 286, 345, 347]]
+C ratio=6.3:
+   middle good pts (t, nearest a/k): [(np.float64(0.0727), '~1/14(d=0.0013)'), (np.float64(0.0783), '~1/13(d=0.0014)'), (np.float64(0.09463), '~1/11(d=0.0037)'), (np.float64(0.10374), '~2/19(d=0.0015)'), (np.float64(0.10947), '~1/9(d=0.0016)')]
+C ratio=6.1:
+   middle good pts (t, nearest a/k): [(np.float64(0.07262), '~1/14(d=0.0012)'), (np.float64(0.07346), '~1/14(d=0.0020)'), (np.float64(0.07384), '~1/14(d=0.0024)'), (np.float64(0.07565), '~1/13(d=0.0013)'), (np.float64(0.07589), '~1/13(d=0.0010)')]
+C ratio=8.0:
+   middle good pts (t, nearest a/k): [(np.float64(0.07316), '~1/14(d=0.0017)'), (np.float64(0.09006), '~1/11(d=0.0008)'), (np.float64(0.09429), '~1/11(d=0.0034)'), (np.float64(0.10383), '~2/19(d=0.0014)'), (np.float64(0.10568), '~2/19(d=0.0004)')]
+
+If the good pts sit at MODERATE denominators k (7..20) not in {2..6}: a wider resonance scan
+(k up to ~13) or a genuine two-modulus (CRT) point captures them. If HIGH/generic k: equidistribution.
+coverage by resonance scan over k-sets (covering clusters, ratio bands):
+ratio       n k in{2..6} k in{2..13}
+6-8        60       100%        100%
+8-10       60       100%        100%
+10-13      60       100%        100%
+
+*** k in {2..13} resonance scan covers 100%% of sampled covering ratio-[6,13] clusters ***

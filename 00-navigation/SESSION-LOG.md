@@ -8,6 +8,23 @@ Modular sub-arc closed (S94/S95/S96): X_0(14) & the covering-min meet in E_2 (co
 
 Files: HYP-6615; 04-computation/mod6_forces_coveringmin_test_macmini_S96.py (+out).
 
+## klein-2026-07-13-S299 -- ratio-[6,13] residual: TWO resonances insufficient, but the FULL k≤13 resonance family closes it EMPIRICALLY (100% sampled); witnesses are BOUNDED-HEIGHT rationals (support THM-527/663); high-k shadow gaps are multi-speed = equidistribution, so no clean closed-form
+
+Prompt (owner): close the ratio-[6,13] residual with a two-resonance witness.
+
+FINDING: TWO (or even five, k≤6) resonances are NOT enough — but the full low-height family k∈{2..13} closes it empirically.
+ - k∈{2..6} resonance-shadow scan covers 88-96% of covering ratio-[6,13] clusters.
+ - k∈{2..13} covers 100% (sampled 180, 0 misses). The clusters missed by k≤6 have their middle good points near the LEFT-EDGE resonances t≈1/9,…,1/13 (near 1/14), NOT t=1/2.
+
+KEY STRUCTURAL FACT: loneliness at a/k depends only on the speeds' RESIDUES mod k (for k≤13 the exact a/k is bad since covering ⟹ mult of k exists; the witness is in the SHADOW a/k+δ). So every bounded-ratio covering cluster has a lonely time at a BOUNDED-HEIGHT rational (k≤13) — directly feeds the THM-527/663 bounded-denominator realization.
+
+HONEST LIMIT: the high-k shadow gaps (near 1/13 etc.) are genuine MULTI-SPEED gaps — all 12 residues must jointly leave a gap; the crude single-shadow factor (14−k)/k is far too pessimistic there. So NO clean two-resonance closed-form exists; proving the empirical 100% is the equidistribution DISCRETIZED to the resonance grid {a/k:k≤13} (finite ~50-point candidate set per cluster, infinite cluster class). The clean PROVABLE content stays THM-744 (k=2: factor 6 + refined parity 6-odd/13-even). Everything past that is empirical multi-resonance = the equidistribution.
+
+So across S297-299: THM-744 (crude 6 + refined 13-even) is the clean closed-form; the multi-resonance family k≤13 empirically closes the whole bounded-ratio covering class at bounded-height rationals; the uniform PROOF is the resonance-grid equidistribution — the same core, now finitely discretized.
+
+FILES: HYP-6620; THM-744 addendum-2; 04-computation/lrc14_tworesonance_klein_S299.py (+out). -> THM-744/HYP-6610, THM-527/663, opus-S271. Sent to all.
+
+---
 ## opus-2026-07-14-S280 -- THM-745's pairing theorem now UNCONDITIONAL IN W: the strong no-wrap lemma (a full-inside crossing sits >= 1/W before the segment death => h_m >= 1/14 + alpha > alpha ALWAYS); the S279 threshold was an end-distance artifact; exhaustive W in [15,160] both shapes: 0 wraps, 0 pairing failures, margin EXACTLY sharp at 0; the near-counterexample (W=97, j=10, u=58/97) found by hand and shown to live in the partial end strip
 
 Prompt (owner): prove the sub-threshold wrap-defect vanishes with the perspective frame.

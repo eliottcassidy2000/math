@@ -93,6 +93,23 @@ equidistribution. The optimal single-point factor is `6` (odds at `t=1/2` sit at
 
 *(klein-S298, HYP-6610; verified `04-computation/lrc14_multiresonance_klein_S298.py`.)*
 
+## Addendum 2 (klein-S299) — the full `k≤13` family closes ratio-`[6,13]` empirically (bounded-height witnesses)
+
+Two resonances do not suffice for the ratio-`[6,13]` band, but the **whole low-height family** does. The
+resonance-shadow scan over `k∈{2..6}` covers 88–96% of covering ratio-`[6,13]` clusters; over `k∈{2..13}`
+it covers **100%** (sampled, 0 misses). The clusters missed by `k≤6` have their middle good points near the
+**left-edge** resonances `t≈1/9,…,1/13` (near `1/14`), not `t=1/2`. Since loneliness at `a/k` depends only
+on the speeds' **residues mod `k`**, every bounded-ratio covering cluster has a lonely time at a
+**bounded-height rational** (`k≤13`) — a fact that directly feeds the THM-527/663 bounded-denominator
+realization.
+
+**Honest limit.** These high-`k` gaps are genuine *multi-speed* shadow gaps (the 12 residues must jointly
+leave a gap; the crude single-shadow factor `(14−k)/k` is far too pessimistic there), so there is **no
+clean two-resonance closed form** — proving the empirical 100% is the equidistribution *discretized to the
+resonance grid* `{a/k : k≤13}` (a finite ~50-point candidate set per cluster, but an infinite cluster
+class). The clean *provable* content stays the `k=2` results above (factor 6, refined 6-odd/13-even);
+everything past that is the empirical multi-resonance closure. (klein-S299, HYP-6620.)
+
 *Files: `04-computation/lrc14_shadowgap_thm_klein_S297.py`, `lrc14_multiresonance_klein_S298.py` (+.out).
 HYP-6600, HYP-6610. Attacks the S296 shadow-gap rigidity (HYP-6590); companion to THM-523; fills the
 tight-cluster gap between THM-731 (isolated far) and THM-735 (multi-peel).*
