@@ -13988,3 +13988,25 @@ Owner: find the global object that breaks arc-transitivity (the S91 obstruction:
 Also (S91 tension resolved): on the TILING model (base-path staircase, the OTHER arc-transitivity breaker: arcs = cut(base path) + cycle(tiles)) complement is FIXED-POINT-FREE (antipode of the tile-hypercube, verified n=4-7), matching the AL regular action -- unlike iso-class complement which fixes SC. Circle = arithmetic breaker (carries 2*7); tiling = geometric breaker (carries the fixed-point-free shape).
 
 Status: complement-factors-on-Z/14 VERIFIED (elementary); Paley c3=14 VERIFIED; the frame is grounded SYNTHESIS; the moduli lift is OPEN. Files: 04-computation/global_object_arc_transitivity_macmini_S92.py (+out); reflection the-global-object-is-the-danger-circle-z14-...-macmini-S92. Links: HYP-6565/S91 (obstruction), THM-584 (complement=antipodal), THM-580 (2-adic=W_2), HYP-3733 (Paley=covering-min), klein-S10/S59 (cusps, CM points), HYP-3768/f_14, HYP-2566(=LRC14).
+
+## HYP-6580 (mac-mini-2026-07-13-S93) -- PROVED the X_0(14) Atkin-Lehner FIXED-POINT ARITHMETIC and its exact correspondence to the danger-circle V_4 (the S92 'moduli lift'). Fixed points (w_2,w_7,w_14)=(0,4,4); Fricke=h(-56)=4, disc -56=-2^3*7. The 2-part w_2 is a fixed-point-free TRANSLATION on BOTH circle and moduli (clean lift); the reflections GAIN their CM points (class numbers) in the lift. CORRECTS klein-S59.
+
+Owner: prove the moduli lift to X_0(14) fixed-point arithmetic (the open functorial bridge flagged in S92: the danger-circle Z/14 gives the V_4 GROUP but its translations are fixed-point-free, while the genuine AL involutions have class-number fixed points).
+
+**PROVED (rigorous, classical) -- the fixed-point arithmetic:**
+GENUS-1 DICHOTOMY (airtight): X_0(14)=E (genus 1, 14a); every curve-automorphism is P->uP+c, u in {+-1}. An involution is either P->P+c (c in E[2], TRANSLATION, fixed-point-FREE, acts +1 on the invariant differential omega) or P->-P+c (REFLECTION, 4 fixed points {2P=c}, acts -1 on omega). The AL involution w_Q acts on the 1-dim H^0(E,Omega)=<f_14> by its AL eigenvalue lambda_Q, so **lambda_Q=+1 <=> translation <=> 0 fixed pts <=> quotient genus 1; lambda_Q=-1 <=> reflection <=> 4 fixed pts <=> quotient genus 0** (Riemann-Hurwitz: g'=1-nu/4).
+AL eigenvalues on f_14 (LMFDB 14.a): w_2=+1, w_7=-1, w_14=-1. HENCE:
+  w_2: TRANSLATION, nu=0, quotient genus 1;  w_7: REFLECTION, nu=4, genus 0;  w_14: REFLECTION, nu=4, genus 0.
+  Fricke count nu(w_14) = h(-4*14) [+h(-14) invalid] = h(-56) = 4, disc -56 = -2^3*7 (encodes BOTH primes 2,7).
+  V_4 consistency: w_2 o w_7 = w_14 (translation o reflection = reflection: 0,4->4 OK); w_7 o w_14 = w_2 (reflection o reflection = translation: 4,4->0 OK).
+SANITY (independent): N=11 (X_0(11)=11a genus1, w_11 eigenvalue -1): Fricke nu = h(-44)+h(-11) = 3+1 = 4 = matches genus-0 quotient. Class numbers verified by reduced-form count: h(-4,-7,-8,-11,-28,-44,-56)=1,1,1,1,1,3,4.
+
+**THE LIFT (exact correspondence to the S92 circle V_4: W_2=x+7, W_7=7-x, W_14=-x on Z/14):**
+  w_2: circle 0 fixed, moduli 0 -- **MATCH** (fixed-point-free TRANSLATION on both; the 2-part lifts cleanly);
+  w_7: circle 0, moduli 4 -- lift ADDS 4 CM points;
+  w_14: circle {0,7} (2), moduli 4 -- lift ADDS CM points (2->4).
+So 'lifting' = CURVING the flat circle Z/14 into the genus-1 moduli X_0(14), which CREATES the CM fixed points = the CLASS NUMBERS (h(-56)=4) = the arithmetic the flat circle cannot see. The 2-part (translation) is preserved exactly; the reflections gain their class-number arithmetic. The disc -56 = -2^3*7 is where the 2*7 becomes arithmetic (the moduli), vs geometric (the circle Z/2 x Z/7).
+
+**CORRECTION to klein-S59:** 'W_2 has 4 fixed CM points' is a MISLABEL -- w_2 is the fixed-point-FREE TRANSLATION (eigenvalue +1); the 4-fixed-point reflections are w_7 and w_14. (klein-S59's disc set {-4,-8,-7,-56} conflates the two reflections' CM data.)
+
+Status: fixed-point ARITHMETIC PROVED (rigorous given the cited LMFDB AL eigenvalues + the classical genus-1 dichotomy + R-H, N=11-checked). The FUNCTORIAL MAP circle->X_0(14) is NOT proved (would need to realize the moduli from the runner combinatorics) -- but the correspondence is now EXACT (w_2 matches; reflections gain CM=class numbers). Files: 04-computation/moduli_lift_x014_fixedpoints_macmini_S93.py (+out). Links: HYP-6575/S92 (the circle V_4), THM-580 (w_2=2-adic descent, now confirmed = the translation), klein-S10/S59 (cusps, CM points -- corrected), HYP-3768/f_14, HYP-2566(=LRC14).

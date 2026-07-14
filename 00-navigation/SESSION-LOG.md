@@ -25,6 +25,20 @@ mac-mini (loop-telescoping = the boundary of R as a closed curve -- your metagra
 the arrangement is a planar graph and the cancellation is its cycle space at work).
 
 ---
+## mac-mini-2026-07-13-S93 -- PROVED the X_0(14) Atkin-Lehner FIXED-POINT ARITHMETIC (the S92 moduli lift): (0,4,4), Fricke=h(-56)=4; 'lifting'=curving the flat circle into the genus-1 moduli, which CREATES the class numbers
+
+**Owner request:** prove the moduli lift to X_0(14) fixed-point arithmetic (the open functorial bridge from S92).
+
+**PROVED (rigorous, classical):** GENUS-1 DICHOTOMY -- on X_0(14)=E (14a), an involution is a TRANSLATION (P->P+c, c in E[2]; fixed-point-FREE; +1 on the differential omega) or a REFLECTION (P->-P+c; 4 fixed pts; -1 on omega). The AL involution w_Q acts on the 1-dim <f_14> by its eigenvalue, so lambda=+1<=>translation<=>0 fixed<=>quotient genus1; lambda=-1<=>reflection<=>4 fixed<=>genus0 (Riemann-Hurwitz). Eigenvalues (LMFDB 14.a) w_2=+1,w_7=-1,w_14=-1 => **(w_2,w_7,w_14) fixed points = (0,4,4)**, quotient genera (1,0,0). Fricke nu(w_14)=h(-56)=4, disc -56=-2^3*7 (both primes). V_4-consistent (w_2 o w_7=w_14 etc). Sanity N=11: Fricke=h(-44)+h(-11)=3+1=4 OK. Class numbers verified.
+
+**THE LIFT (exact vs the S92 circle):** w_2 circle 0/moduli 0 -- MATCH (fixed-point-free translation on both, = the 2-adic descent THM-580); w_7 circle 0/moduli 4; w_14 circle {0,7}(2)/moduli 4. So 'lifting' = CURVING the flat circle Z/14 into the genus-1 moduli X_0(14), which CREATES the CM fixed points = the CLASS NUMBERS (h(-56)=4) = the arithmetic the flat circle can't see. The 2-part lifts exactly; the reflections gain their class-number arithmetic. disc -56 = where the 2*7 turns from geometric (circle CRT) to arithmetic (moduli).
+
+**CORRECTED klein-S59:** 'W_2 has 4 fixed CM points' is a mislabel -- w_2 is the fixed-point-FREE translation; the 4-fixed reflections are w_7, w_14.
+
+**Honest scope:** fixed-point ARITHMETIC proved (target settled + exact match to the circle); the functorial map runner/circle -> X_0(14) (realizing 14a from the tournament) is NOT proved -- the same f_14/Dedekind bridge the covering-min points at. Completes the S89->S93 arc from combinatorics to the modular curve, one honest gap left (the functor).
+
+Files: reflection the-moduli-lift-is-proved-curving-the-circle-creates-the-class-numbers-macmini-S93; HYP-6580; 04-computation/moduli_lift_x014_fixedpoints_macmini_S93.py (+out).
+
 ## mac-mini-2026-07-13-S92 -- FOUND the global object that breaks arc-transitivity: the danger circle Z/14=Z/2xZ/7, where complement FACTORS into the Atkin-Lehner V_4
 
 **Owner request:** find the global object that breaks arc-transitivity (the S91 obstruction).
