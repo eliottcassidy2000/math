@@ -1,3 +1,22 @@
+## klein-2026-07-13-S293 -- PROVED THM-739: the pairwise coprime bad-overlap in EXACT B₂ closed form |bad_c∩bad_{c'}|=1/49+(1/cc')[B₂({(c'−c)/14})−B₂({(c'+c)/14})] ≤ 1/49+1/(4cc') — bad sets independent up to O(1/cc'); same B₂-at-Farey-points kernel as THM-732/736
+
+Prompt (owner): prove the pairwise coprime-overlap bound ≤1/49. DONE — as an exact closed form.
+
+THM-739 (PROVED, rigorous 5-line Fourier + verified NG=2²² to 8e-7): for coprime c,c',
+   |bad_c ∩ bad_{c'}| = 1/49 + (1/cc')·[B₂({(c'−c)/14}) − B₂({(c'+c)/14})],  B₂(x)=x²−x+1/6.
+DERIVATION: |bad_c∩bad_{c'}|=∫1_B(ct)1_B(c't)dt=Σ_{nc+mc'=0}1̂_B(n)1̂_B(m); coprimality ⟹ n=c'k,m=−ck; k=0 term=(1/7)²=1/49; k≠0 = product-to-sum + classical Σ_{k≠0}cos(2παk)/k²=2π²B₂({α}) at α=(c'∓c)/14. Since B₂∈[−1/12,1/6], bracket∈[−1/4,1/4] ⟹
+   1/49 − 1/(4cc') ≤ |bad_c∩bad_{c'}| ≤ 1/49 + 1/(4cc')  → 1/49 as cc'→∞.
+So the two 1/14-bad sets are INDEPENDENT up to an explicit O(1/cc') Farey-scale term. (Small speeds carry a real correction: (2,3)→0.0476 vs 1/49=0.0204; (90,101)→0.02041≈1/49.)
+
+USE: sharpens the S292 one-interval leg — 2-speed inclusion-exclusion |G({c,c'})|=1−2/7+|bad_c∩bad_{c'}| pushes the threshold 6/49→0.105; the k-speed version (all C(k,2) pairwise ≈1/49, higher orders ≈(1/7)^j) = the route to full multi-speed equidistribution = the milder cancellation.
+
+OPEN EXTENSIONS (same Fourier method, mechanical): (a) WINDOWED |bad_c∩bad_{c'}∩[0,1/14)| — what the LOCAL one-interval bound literally needs (convolve the Fourier coeffs, still Bernoulli-shaped); (b) gcd>1 (n=(c'/g)k, g-fold-denser correction).
+
+FLEET CONNECTION: SAME B₂({·/14}) kernel as kps-THM-732 (exact edge-pair disc form) and mac-mini-THM-736 (Farey/three-gap deep-well). B₂ evaluated at Farey points k/14 is THE recurring object across the covering endgame — disc, deep-well far peel, pairwise bad-overlap all governed by it.
+
+FILES: THM-739; HYP-6560; 04-computation/lrc14_pairwise_overlap_klein_S293.py (+out). -> THM-731/732/736, HYP-6550. Sent to all.
+
+---
 ## klein-2026-07-13-S292 -- the large-speed one-interval bound: RIGOROUS single-speed conc≤(6/7+12/max)/|G(C)| (weak, thin margin); full margin = a MILDER cancellation (multi-speed); and kps-THM-735 DISSOLVES my S289 isolation wall (composition-order, not the families)
 
 Prompt (owner): prove the large-speed one-interval equidistribution bound.
