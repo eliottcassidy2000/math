@@ -1,0 +1,29 @@
+==========================================================================================================
+THM-748: the closed budget -- exact decomposition W(L-Area) = PHI + QPOT + KAP, referee-gated
+==========================================================================================================
+
+shape 2 {1,2,3}u{W..W+9}: 154 segments; events: {'swap': 72, 'death': 45, 'birth': 45, 'cutL': 4, 'cutR': 4}; unmatched ends: 0
+   REFEREE (exact Fraction equality vs engine):
+     W=  600: R_true = +0.19956594 ; pred = +0.19956594 (PHI +0.121026 QPOT -0.001871 KAP +0.080411) ; EXACT: True (diff 0.00e+00)
+     W=  601: R_true = +0.07787989 ; pred = +0.07787989 (PHI +0.130690 QPOT -0.001908 KAP -0.050902) ; EXACT: True (diff 0.00e+00)
+     W=  700: R_true = +0.18696205 ; pred = +0.18696205 (PHI +0.118747 QPOT -0.001584 KAP +0.069799) ; EXACT: True (diff 0.00e+00)
+     W=  977: R_true = +0.10666539 ; pred = +0.10666539 (PHI +0.138269 QPOT -0.001289 KAP -0.030314) ; EXACT: True (diff 0.00e+00)
+
+shape 1 {1}u{W..W+11}: 172 segments; events: {'swap': 96, 'death': 49, 'birth': 49, 'cutR': 1, 'cutL': 1}; unmatched ends: 0
+   REFEREE (exact Fraction equality vs engine):
+     W=  930: R_true = -0.02462410 ; pred = -0.02462410 (PHI +0.019504 QPOT -0.000439 KAP -0.043689) ; EXACT: True (diff 0.00e+00)
+     W= 1001: R_true = -0.02491625 ; pred = -0.02491625 (PHI +0.048973 QPOT -0.000755 KAP -0.073134) ; EXACT: True (diff 0.00e+00)
+
+(referee results determine whether the scan proceeds -- see .out continuation)
+shape 2 {1,2,3}u{W..W+9}: Q = 8820 ; scan [588, 9408): max E = +0.348627 at W=729 ; min E = -0.347155 at W=606  (37s)
+   exact at W=729: E = 0.34862689
+   exact at W=606: E = -0.34715462
+   CLOSED BUDGET: |L - Area| <= 0.348627 / W for W in the window; envelope ~76x below Area*W_z
+shape 1 {1}u{W..W+11}: Q = 97020 ; scan [924, 97944): max E = +0.070180 at W=1485 ; min E = -0.071977 at W=1052  (446s)
+   exact at W=1485: E = 0.07018001
+   exact at W=1052: E = -0.07197745
+   CLOSED BUDGET: |L - Area| <= 0.071977 / W for W in the window; envelope ~962x below Area*W_z
+shape 2: termwise-absolute N_max = 3.0164 at W=1054  (26s) -> ALL-W bound |L-Area| <= 3.0164/W for W >= 588
+   vs Area = 0.044817: margin at Wz: 9x ; first-window signed envelope 0.3486
+shape 1: termwise-absolute N_max = 3.0093 at W=1094  (311s) -> ALL-W bound |L-Area| <= 3.0093/W for W >= 924
+   vs Area = 0.074964: margin at Wz: 23x ; first-window signed envelope 0.0720
