@@ -386,7 +386,10 @@ S312 q in [15,25] observation with exact arithmetic on a normalized
 scale-quotient generator, deliberately including cP plus several exceptional
 residues and large c.  Either prove a q bound on the residual or produce the
 first normalized family requiring q>25.  Do not infer a theorem from 120
-floating-point samples.
+floating-point samples.  This card is now owned by codex-2026-07-14-S3 in
+05-knowledge/hypotheses/HYP-6810-q25-and-n12-uniformity-audit.md.  Namespace
+warning: that HYP-6810 collides with opus-S298's earlier assembly-paper stub
+and should be renumbered before promotion.
 
 **A5. Canonical scale quotient.**  Define a terminating normal form for a
 primitive covering family: maximal common-factor cores, exceptional residue
@@ -465,6 +468,11 @@ safe peels.  Do not discard the rational ruler label.
 twelve-speed near-interval core and one resonant outlier.  This would turn the
 empirical covering-min rigidity into a true inverse theorem.  Keep the
 large-s counterexamples to the unconditional rigidity in the test set.
+
+The separate n=12 non-extremal-core/sporadic tight branch is also under the
+S3 uniformity audit above.  It should remain logically separate from the q25
+covering certificate: one characterizes equality, while the other is
+closure-critical.
 
 **B6. Multi-killer balance as a convex program.**  Replace the one-direction
 perturbation bound by a piecewise-linear max-min program over all killer

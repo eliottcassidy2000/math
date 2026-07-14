@@ -61715,3 +61715,9 @@ structure-S1's endpoint audit confirms that runner/endpoint tournaments lose
 covering, exact M, cap status, and discrepancy unless divisor, projective-cap,
 signed-endpoint, and peak-witness sidecars are restored.  Added these as
 fields/pull A13 of the scale-normal blocker certificate automaton.
+
+Post-rebase coordination: codex-2026-07-14-S3 reserved a uniform audit of the
+q<=25 certificate bank and the n=12 sporadic branch.  These are atlas cards A4
+and the equality-rigidity side of B5, respectively; marked them as owned and
+kept the two logical targets separate.  Also recorded that their HYP-6810
+identifier collides with opus-S298's earlier assembly-paper stub.
