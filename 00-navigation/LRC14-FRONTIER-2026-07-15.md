@@ -87,8 +87,10 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | hereditary primitivity of tight 12-sets | PROVED; every leave-one-out core is primitive | THM-765 |
 | unique-largest-13-multiple tight branch | IMPOSSIBLE by explicit prime-grid perturbation | THM-768 |
 | arbitrary binding scale `p/(13s)` | PROVED packet split; shallow iff full nonzero residues; deep exceptions obey exact sheet capacity, with `s=2` parity and `s=3` colour criteria | THM-769 |
+| two-/three-sheet equality quotients | PROVED primitive divisor transfer and speed bounds; two-sheet core contains multiples of every `2,...,12`, three-sheet core of every `2,...,11` | THM-772 |
+| two-sheet metric residual | PROVED exact folded diamond `||(x+y)tau/2||+||(x-y)tau/2||>=11/13`; sharp measure cap `8/117`; all quotient cores in `[1,19]` closed against unbounded odd exceptions | THM-774 + exact certificate |
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
-| n=12 sporadic branch | OPEN globally; bounded shallow slice empty, higher shallow lifts and deep multiple-owner packets remain | THM-759/765/766/768--770; HYP-6820 |
+| n=12 sporadic branch | OPEN globally; bounded shallow slice empty, higher shallow lifts and divisor-complete folded/higher-sheet packets remain | THM-759/765/766/768--772/774; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -114,9 +116,13 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    `r_P≤B(c*)` is false; `P_N={1,...,11,N}` has `c*=1` and `r_P≥N/77-O(1)`.
    The surviving endgame coordinate is peel-relative boundary intensity
    `r_P/(max(P)|G'_P|)`, with endpoint owners and divisor/gcd sidecars retained.*
-2. **Attack the prime-grid bottleneck as a persistent translate-cover problem.** At level one,
-   `I(13,p,1)` is exactly a 13-translate cover of
-   `F_p^x/{±1}` by the strict-danger set. Classify which covers persist under lifts and evade the
+2. **Attack persistent translate covers with their metric stalks retained.** At level one,
+   `I(13,p,1)` is exactly a 13-translate cover of `F_p^x/{±1}` by the
+   strict-danger set.  In the tight `s=2` quotient, THM-772 now forces a
+   primitive divisor-complete ten-core and THM-774 turns the two odd colours
+   into a sharp folded diamond.  Prove that no such diamond contains the whole
+   loose-component word, or force a dyadic/effective-order descent.  For higher
+   sheets, classify which colour covers persist under lifts and evade the
    omit-one gcd reduction.
 3. **Reproduce and formalize finite tiles.** Independently rerun THM-738's complete bank; finish
    rather than promote THM-741; attach machine-verifiable certificates and exact scope metadata.
@@ -151,6 +157,24 @@ exact owner-CSP settles all shallow labelled packets through lift height twelve
 (`13^12` conceptual rows), leaving only the permitted dilates and the unique
 primitive AP.  Neither result proves an unbounded shallow descent or eliminates
 the deep colour-cover branch.
+
+The two-sheet edge is now considerably narrower.  THM-772 proves that its
+ten-speed quotient is primitive, has a multiple of every modulus `2,...,12`,
+has no 13-multiple, and bounds both odd exceptions by `11 max(U)`.  THM-774
+then folds eligibility and opposite parity into the single exact inequality
+
+```text
+||(x+y)tau/2||+||(x-y)tau/2||>=11/13.
+```
+
+The permitted diamond has sharp normalized measure `8/117`, attained at
+reduced ratio `x:y=9:1`.  This is a necessary filter, not a closure: some
+explicit loose cores have smaller measure, so the next theorem must compare
+the labelled component locations and widths with the diamond teeth.  That
+comparison is now finite-exact for every ten-core `U subset [1,19]`: the widest
+component intrinsically caps each odd exception, and all `767,700` permitted
+core/odd incidences fail individual coverage.  This closes the whole low-core
+slice with odd speeds unbounded, but supplies no global bound on `max(U)`.
 
 The exact max-peel tooth atlas rules out a tempting shortcut.  In the
 exhaustive slice `A subset [1,20]`, `M(A\{w})>1/12`, `M(A)<=1/10`, all

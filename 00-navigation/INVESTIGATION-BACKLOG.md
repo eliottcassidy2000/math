@@ -37,9 +37,9 @@
   Tooling: deck_event_witness() in the library (16/16).
   Reflection: 07-reflections/the-deck-is-a-smith-diagram-opus-S300.md.
 
-## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep sheet-colour failure
+## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770; HYP-6820; exact endpoint-splice
+- **Source:** THM-763/765/766/768/769/770/772/774; HYP-6820; exact endpoint-splice
   and tooth-winding atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
   THM-768 eliminates a unique `13`-divisible maximum.  THM-769 proves that
@@ -50,17 +50,30 @@
   classifies all `13^12` shallow packets through lift height twelve: only
   `c*{1,...,12}`, `c=1,...,12,14`, have zero defect, so the only primitive row
   is the AP and the shallow sporadic slice is empty for `max A<=168`.
+- **Deep progress:** THM-772 proves that the two-sheet quotient `U` is
+  primitive, contains a multiple of every `m=2,...,12`, has no 13-multiple,
+  and bounds the odd exceptions by `11 max(U)`.  THM-774 identifies their
+  exact persistent predicate as
+  `||(x+y)tau/2||+||(x-y)tau/2||>=11/13`, proves the sharp diamond-measure cap
+  `8/117`, and finite-exactly closes all `92,378` ten-cores in `[1,19]` against
+  unbounded odd exceptions (`767,700` intrinsic runner tests, zero universal
+  incidence).
 - **Open shallow theorem:** prove the primitive descent trigger
   `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
   through height twelve; dilation then makes the statement recursively
   self-closing.  Extend by endpoint-owner orbit/height descent, not by another
   raw box unless the box is tied to a decreasing invariant.
-- **Open deep theorem:** rule out the persistent folded colour covers in
-  THM-769.  Start with `s=2`: for `A=2U union {x,y}`, the two odd runners must
-  both cover all of `G_U` under the doubled danger map and have opposite
-  nearest-integer parity everywhere.  Then treat the `s=3` three-colour edge.
-  The exact object is loose-set component x sheet-owner incidence with closed
-  endpoints, not a residue condition at one binding point.
+- **Open deep theorem:** rule out the remaining persistent folded covers in
+  THM-769.  In the `s=2` max-peel branch, an odd maximum makes the sporadic
+  deletion inequality automatic.  For an even maximum `2R`, put
+  `U^-=U\{R}` and `Q=||(x+y)tau/2||+||(x-y)tau/2||`; the exact target is the
+  nine-core collar
+  `E_(1/13)(U^-) subset D_R union {Q>=11/13}` together with
+  `E_(1/12)(U^-) intersect D_R intersect {Q<5/6} nonempty`.  Prove this
+  impossible or force THM-775's dyadic seam/descent.  Then treat the `s=3`
+  three-colour edge.  The exact object is loose-set component x sheet-owner
+  incidence with closed endpoints, not a residue condition at one binding
+  point.
 - **Metric bridge:** for each core-safe component `J`, retain
   `sigma_J(w)=1/13-||wc_J||-w h_J` and emitted endpoint current `e_w(J)`.
   Winding one, pure endpoint ownership, and a transitive phase tournament all

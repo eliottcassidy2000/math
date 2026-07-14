@@ -1,7 +1,7 @@
 ---
 id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period claim and the n=12 sporadic branch
-status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite, binding-scale/sheet-stratified, and shallow-exact through height twelve, but branch emptiness remains OPEN
+status: PARTIALLY RESOLVED — uniform q<=25 is DISPROVED; n=12 is uniformly finite, binding-scale/sheet-stratified, shallow-exact through height twelve, and sharply constrained in the two-sheet branch, but branch emptiness remains OPEN
 source: codex-2026-07-14-S3
 renumber_note: reserved as HYP-6810 by codex-S3, which collided with opus-S298's earlier-pushed
   HYP-6810 claim (the assembly write-up); renumbered to HYP-6820 by opus-2026-07-14-S299 per the
@@ -17,6 +17,8 @@ depends_on:
   - THM-768
   - THM-769
   - THM-770
+  - THM-772
+  - THM-774
   - HYP-6750
   - HYP-6775
 related:
@@ -190,6 +192,81 @@ multiples of three and three nonmultiples persistently owning all three sheet
 colours.  For `r=|F|<=6`, some exception satisfies
 `D_w<=13r/(13-2r)`.  These are uniform reductions, not empirical patterns.
 
+THM-772 makes the equality packets recursive rather than merely sparse.  In
+the two-sheet branch
+
+```text
+A=2U union {x,y},       |U|=10,       x,y odd,
+```
+
+the quotient `U` is primitive, contains a multiple of every modulus
+`2,...,12`, contains no multiple of `13`, and both exceptions are at most
+`11 max(U)` (with a sharper one-exception and determinant tax).  The
+three-sheet equality edge has the analogous primitive divisor transfer through
+modulus `11`, an exact modulus-36 residual when `12` is missing, and the bound
+`x,y,z<=10 max(U)`.  These conclusions use the simultaneous unit-fraction by
+sheet-colour obligation hypergraph; no tournament on the moduli alone sees the
+denominator-6/12 splice.
+
+THM-774 identifies the exact metric object in the two-sheet branch.  With
+
+```text
+a=(x+y)/2,       b=(x-y)/2,
+```
+
+eligibility and opposite colour are together exactly
+
+```text
+||a tau||+||b tau||>=11/13.                               (C1)
+```
+
+Equivalently, if `B_(x,y)(tau)` is the larger of the two lift-clearance
+minima, then
+
+```text
+B_(x,y)(tau)=(1-||a tau||-||b tau||)/2.                   (C2)
+```
+
+The folded diamond in (C1) has an exact half-grid formula and sharp universal
+measure at most `8/117`, attained at reduced ratio `x:y=9:1`.  Hence tightness
+forces
+
+```text
+G_U subset {tau:||a tau||+||b tau||>=11/13},
+measure(G_U)<=8/117,
+||a tau||,||b tau||>=9/26 on G_U.                         (C3)
+```
+
+The scalar cap does not close the branch: several explicit ten-speed loose
+cores already have measure below `8/117`.  The theorem-facing datum is the
+pointwise containment with component locations and widths.
+
+The first complete folded slice is nevertheless now exact.  For every one of
+the `binomial(19,10)=92,378` cores `U subset {1,...,19}`, the widest component
+of `G_U` bounds any individually eligible odd runner by
+
+```text
+w<=floor(4/(13 ell_max(U))).
+```
+
+Testing all `767,700` intrinsically permitted `(U,w)` incidences finds no
+single odd runner covering all of `G_U`, hence no two-runner colour cover.
+This closes the `s=2`, `max(U)<=19` slice with odd exceptions unbounded.  It
+does not bound `max(U)` globally.
+
+THM-774 also makes the maximum deletion recursive.  If the largest speed is
+odd, the sporadic inequality follows automatically from
+`M(2U union {z})>=1/11`.  If it is `2R` with `R=max(U)`, put
+`U^-=U\{R}` and `Q=||(x+y)tau/2||+||(x-y)tau/2||`.  The exact remaining
+nine-core collar is
+
+```text
+E_(1/13)(U^-) subset D_R union {Q>=11/13},
+E_(1/12)(U^-) intersect D_R intersect {Q<5/6} nonempty.
+```
+
+This isolates where the sporadic hypothesis genuinely adds information.
+
 THM-770 settles a very large but still bounded part of the shallow branch.
 For the labelled packets
 
@@ -213,8 +290,10 @@ The uniform theorem now has two explicit residuals:
 1. **Shallow descent.**  Prove that a primitive full-nonzero-residue packet
    with `chi_13=0` descends into THM-770's height-twelve box, or extend its
    owner-CSP by a scale-free coherence argument.
-2. **Deep colour cover.**  Rule out THM-769's persistent folded parity cover
-   at `s=2` and its higher-sheet analogues (or prove they descend to a smaller
+2. **Deep colour cover.**  Rule out THM-769's persistent folded cover at
+   `s=2` after THM-772's primitive divisor transfer and THM-774's sharp diamond
+   containment and exact `max(U)<=19` closure, and rule out the higher-sheet
+   analogues (or prove a dyadic or effective-order descent to a smaller
    primitive tight packet).
 
 Equivalently in the original top-peel language, prove that every primitive
@@ -263,7 +342,11 @@ deciding objects are therefore:
   and core-maximizer residues for tight completions;
 - the off-sheet-runner by sheet incidence cover, with effective orders
   `s/gcd(w,s)` and persistent colour ownership over the quotient loose set.
+- in the two-sheet equality packet, the folded half-frequency diamond together
+  with the exact locations of the quotient loose components.
 
 These objects preserve the LRC predicate.  Their tournament quotients destroy
 joint blocker ownership, multiplier identity, scale, ramification, and
-simultaneous alignment.
+simultaneous alignment.  THM-774's two scalar gauges on the finite exceptional
+proof obligations flip 114 edges while remaining transitive; neither ranking
+can decide the containment in (C3).

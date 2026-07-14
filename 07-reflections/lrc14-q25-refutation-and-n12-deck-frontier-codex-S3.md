@@ -577,3 +577,134 @@ all three scalars `Q,Omega,sigma`.  Its cycles and SCCs describe the private
 word, not the free-sheet predicate.  The faithful vertex set is bipartite:
 owner rows and sheet obligations, with multiplicity and endpoint state.  The
 new identity is exactly the reconstruction sidecar a tournament would need.
+
+## 14. Folded diamonds, recursive collars, and the object we were missing
+
+The two-sheet binding edge makes the observer dependence completely explicit.
+For
+
+```text
+A=2U union {x,y},       x,y odd,
+h=(x+y)/2,              d=(x-y)/2,
+```
+
+let `B_(x,y)(tau)` be the best minimum odd clearance among the two lifts of
+`tau` under doubling.  THM-774 proves the global identity
+
+```text
+B_(x,y)(tau)=(1-||h tau||-||d tau||)/2.                  (14.1)
+```
+
+Thus the parity-labelled two-sheet ownership is not an extra discrete rule.
+It is one `l1` metric threshold in the sum/difference coordinates.  Tightness
+is exactly the containment
+
+```text
+G_U subset H_(h,d),
+H_(h,d)={tau:||h tau||+||d tau||>=11/13}.                (14.2)
+```
+
+The diamond has exact half-grid measure and the sharp universal cap `8/117`,
+attained at reduced ratio `x:y=9:1`.  THM-772 supplies the orthogonal arithmetic
+constraint: `U` is primitive and contains a multiple of every modulus
+`2,...,12`.  Neither constraint subsumes the other.  Divisor pins say where
+unit-grid obligations occur; the diamond says whether the entire metric loose
+word fits between them.
+
+The first fully closed slice combines width and location rather than total
+measure.  For every ten-core `U subset [1,19]`, a universal odd runner must
+satisfy
+
+```text
+w<=floor(4/(13 ell_max(U))),
+```
+
+where `ell_max(U)` is the widest component of `G_U`.  The exact certificate
+tests all `92,378` cores and `767,700` intrinsically permitted odd runners and
+finds no universal incidence.  Hence there is no tight two-sheet packet in
+that low-core slice even when `x,y` are unbounded.  This is the right form of
+a finite result: the speed cutoff is derived separately for each exact loose
+word, not imposed externally.
+
+### A recursive max-peel collar
+
+Equation (14.1) also explains why the old sporadic peel sometimes had no
+leverage.  If the maximum of `A` is odd, deleting it leaves `2U union {x}`.
+At a maximizer of `U`, the better of the two lifts gives the remaining odd
+runner clearance at least `1/4`; hence
+
+```text
+M(2U union {x})>=min(M(U),1/4)>=1/11>1/12.
+```
+
+The sporadic inequality is automatic in that branch.
+
+If the maximum is `2R` with `R=max(U)`, put `U^-=U\{R}` and
+
+```text
+E_L(U^-)={tau:phi_(U^-)(tau)>L},
+D_R={tau:||R tau||<=1/13},
+Q(tau)=||h tau||+||d tau||.
+```
+
+Tightness and a sporadic maximum deletion become the exact collar pair
+
+```text
+E_(1/13)(U^-) subset D_R union {Q>=11/13},               (14.3)
+E_(1/12)(U^-) intersect D_R intersect {Q<5/6} nonempty.  (14.4)
+```
+
+The global twelve-speed question has therefore recursed to a nine-core
+cover/noncover across two nearby thresholds.  A proof need not classify all
+twelve speeds at once: it may show that the `1/12` inner collar in (14.4)
+cannot cross the `1/13` cover in (14.3), or that such a crossing forces the
+dyadic seam reserved in THM-775 and then descends.
+
+### Viewpoint ledger
+
+The long history can now be organized by what each observer preserves:
+
+| observer | exact object retained | what its common quotient forgets |
+|---|---|---|
+| time-circle tents | all clearances and strict/closed endpoints | arithmetic cause of coincident walls |
+| pair-sum ruler | every rational maximizer and multiplier | component persistence between rulers |
+| modulus deck | zero owners and signed residue pairs | scale, height, and metric width |
+| safe-component teeth | centres, widths, endpoint owners, slack | global sheet colour under quotienting |
+| binding sheets | effective orders and persistent lift ownership | within-sheet metric placement |
+| endpoint current | splice defect and event transport | arithmetic ramification unless labelled |
+| capped envelope/Fourier | safe measure and boundary intensity | individual endpoint ownership |
+| tournament | pairwise cyclic orientation and Hamiltonian order | simultaneous hyperedge compatibility |
+| affine suspension | scale/offset evolution over two circles | finite proof obligation unless stratified |
+| folded diamond | exact two-sheet metric ownership | quotient-core component locations if reduced to measure |
+
+This ledger challenges the recurring assumption that runners, arcs, or
+tournament classes should be the universal vertices.  Sometimes the vertices
+must be moduli, sheet obligations, endpoints, components, or proof debts.  The
+predicate-preserving choice is observer-dependent.
+
+The common object is best described as an **observer-indexed decked threshold
+sheaf** over the time circle (or its affine two-torus suspension):
+
+```text
+base:       time / scale-offset chamber;
+stalk:      metric safe components with endpoint owners and widths;
+decks:      modulus, gcd, binding-sheet, and pair-sum addresses;
+current:    overlap, ramification, and protected-splice defects;
+morphisms:  deletion, dilation, quotient, binding, and event transition.
+```
+
+A tournament is theorem-bearing only when its orientation is induced by one
+of these actual cyclic actions.  Otherwise it is telemetry and must carry a
+sidecar reconstructing the forgotten metric/incidence data.  THM-774's two
+size gauges flip 114 edges yet remain transitive; THM-770's tournament is all
+ties; the winding atlas has transitive liars.  These are not unrelated
+failures.  Pairwise orientation repeatedly forgets the simultaneous stalk.
+
+The most promising synthesis is a weighted Euler-current/monodromy dichotomy.
+THM-770's `chi_13=kappa-P_splice` and THM-771's
+`F=Q+Omega-sigma` look like adjacent-dimensional defects of one labelled
+incidence complex.  Attach metric slack to its edges.  Then seek a theorem:
+zero free current either tears at an endpoint event, or is paid by an explicit
+ramification packet that descends in effective scale.  Such a statement would
+connect the `n=12` folded collar, the seven-sheet wall, and the scale-normal
+LRC(14) residue without pretending that their naked tournaments are the same.

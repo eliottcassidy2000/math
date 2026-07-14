@@ -1,13 +1,17 @@
 ---
 id: THM-774
 title: Folded-diamond obstruction for the two-sheet equality packet
-status: PROVED (elementary; exact independent atom and measure audit)
+status: PROVED (elementary sharp cap; exact independent audits; finite-exact low-core closure)
 source: codex-2026-07-14-S3
 depends_on:
   - THM-769
 related:
   - THM-772
+  - THM-775
   - HYP-6820
+verification:
+  - 04-computation/lrc13_folded_diamond_two_sheet_obstruction_codex_S3.py
+  - 04-computation/lrc13_s2_unbounded_odd_core19_closure_codex_S3.py
 ---
 
 # THM-774 — Folded-diamond obstruction
@@ -280,3 +284,124 @@ opposite-parity pairs through `a=80`, matches (4) to an independent
 piecewise-linear integration for `5,217` reduced pairs through `alpha=160`,
 verifies the complete exceptional table, and records Tournament Analysis with
 the loss of pointwise containment stated explicitly.
+
+## 5. Finite-exact closure for every quotient core in `[1,19]`
+
+There is no tight two-sheet packet
+
+```text
+A=2U union {x,y}
+```
+
+with `U subset {1,...,19}` and `|U|=10`, even when the distinct positive odd
+speeds `x,y` are otherwise unbounded.
+
+### Exact reduction and certificate
+
+Let `ell_max(U)` be the length of the widest connected component of `G_U`.
+If one odd speed `w` is eligible throughout `G_U`, every component must lie
+in one connected closed `w`-tooth, whose length is `4/(13w)`.  Therefore
+
+```text
+w <= floor(4/(13 ell_max(U))).                             (9)
+```
+
+This is an intrinsic finite cap, not a sampled speed cutoff.  The companion
+certificate
+
+```text
+04-computation/lrc13_s2_unbounded_odd_core19_closure_codex_S3.py
+05-knowledge/results/lrc13_s2_unbounded_odd_core19_closure_codex_S3.out
+```
+
+constructs every strict component with rational endpoints for all
+
+```text
+binomial(19,10)=92,378
+```
+
+cores, then checks every positive odd `w` permitted by (9), accepting equality
+in the closed eligibility tooth.  Across `767,700` exact `(U,w)` incidences it
+finds zero runner eligible throughout `G_U`.  Hence it is already impossible
+for two runners to satisfy the stronger opposite-colour condition.  The
+largest intrinsic cap is `60`, for
+
+```text
+U={1,2,3,5,7,8,11,13,18,19},
+ell_max(U)=6/1183,
+```
+
+whose loose set has eighteen components.  The canonical endpoint/decision-row
+digest is
+
+```text
+ec206bf06eda11b5f8ee5318b2bdbc97d61ae63c78e508c83610ce3a8a2dcf83.
+```
+
+No primitivity or divisor-completeness filter is used; only `3,400` of the
+cores happen to satisfy THM-772's divisor pins.  Thus this is a complete
+low-core slice, but it is not a uniform bound on `max(U)`.
+
+## 6. Exact max-peel recursion
+
+The sporadic maximum-deletion condition has two sharply different forms in a
+two-sheet packet.
+
+If `max(A)` is one of the odd exceptions, deleting it leaves
+
+```text
+P=2U union {z}
+```
+
+for the other odd exception `z`.  At a maximizer of `U`, the two lifts give
+`z`-clearances `c` and `1/2-c`, so the better is at least `1/4`.  Therefore
+
+```text
+M(P)>=min(M(U),1/4)>=1/11>1/12.                           (10)
+```
+
+The last inequality uses the settled lower-dimensional LRC bound for the
+ten-speed core.  Thus the sporadic condition is automatic in the odd-maximum
+branch and supplies no extra rigidity.
+
+Suppose instead that `max(A)=2R`, where `R=max(U)`, and put
+
+```text
+U^-=U\{R},
+E_L(U^-)={tau:phi_(U^-)(tau)>L},
+D_R={tau:||R tau||<=1/13},
+Q(tau)=||a tau||+||b tau||.
+```
+
+Then tightness of `A` and sporadicity of its maximum deletion imply exactly
+
+```text
+E_(1/13)(U^-) subset D_R union {Q>=11/13},                (11)
+E_(1/12)(U^-) intersect D_R intersect {Q<5/6} nonempty.   (12)
+```
+
+### Proof
+
+For every `tau`, the two lifts under doubling have the same even-core
+clearance.  Applying (1a) gives the exact max formulas
+
+```text
+M(A)=max_tau min(phi_(U^-)(tau),||R tau||,B_(x,y)(tau)),
+M(A\{2R})=max_tau min(phi_(U^-)(tau),B_(x,y)(tau)).        (13)
+```
+
+Since `B=(1-Q)/2`, the global upper bound `M(A)<=1/13` is precisely (11).
+The strict inequality `M(A\{2R})>1/12` is equivalent to the existence of a
+point in
+
+```text
+E_(1/12)(U^-) intersect {Q<5/6}.
+```
+
+Because `5/6<11/13`, this point is outside the diamond term in (11), so it
+must belong to `D_R`.  This proves (12).
+
+Equations (11)--(12) are a quantifier-exact nine-core collar target, not a
+claim that the collar is empty.  Proving its impossibility, or showing that it
+forces THM-775's dyadic seam and a well-founded descent, would close the
+sporadic `s=2` max-peel residue.
