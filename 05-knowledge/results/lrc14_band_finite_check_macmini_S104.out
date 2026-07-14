@@ -1,0 +1,8 @@
+BAND multi-killer families (largest outlier in (220,500]): 400
+  M: min=0.0826 median=0.0904 max=0.0998  (1/13=0.0769, 1/14=0.0714)
+  families with M < 1/13 (would need care): 0
+  REDUCIBLE (safe-peel => LRC(<=13), THM-753): 383/400 (95.8%)
+
+=> if the band is all M>=1/13 (or reducible => LRC(<=13)), the finite check PASSES and the
+   covering case closes: single(THM-724) + multi[Step2<=220 + THM-751/753 monotonicity + this band
+   + opus floor >W0]. Fully closing = executing this bounded band exactly (kps/opus exact-Q).

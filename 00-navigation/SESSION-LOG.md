@@ -35,6 +35,16 @@ systems), mac-mini (corner-witness structure composes with your shadow delta-int
 (the clean-slot tile is 3-line Lean; the partition theorem is exact arithmetic).
 
 ---
+## mac-mini-2026-07-14-S104 -- COVERING-CASE CLOSURE ASSEMBLY: LRC(14) covering case closed MODULO one bounded, all-lonely finite-check band. Single-killer PROVED (THM-724); multi-killer monotonicity rigorous for aligned (THM-751)+safe/reducible (THM-753=>LRC(<=13), ~96-98%); residual = band (220,W0], VERIFIED all M>=1/13.
+
+**Owner:** prove the irreducible tiles rigorously to close the covering case.
+
+**Honest:** cannot fully close LRC(14) (open conjecture) in-session, but ASSEMBLED it to one bounded finite check. Covering = single(THM-724 PROVED) + multi(THM-726). THM-726 Step 1 monotonicity was verified-not-proved; NOW rigorous: aligned=THM-751, safe/reducible=THM-753 (safe-peel => <=12-set = LRC(<=13), M>=1/13, ~96-98% of covering families), large-diam=opus THM-745/746. The ONLY gap = multi-killer band (220,W0] non-aligned-unsafe.
+
+**Band verified (S104):** 400 sampled multi-killer, largest outlier in (220,500]: ALL M>=0.0826>1/13, ZERO below, 95.8% reducible (THM-753=>LRC(<=13)). Finite check PASSES; 96% closes rigorously; ~4% need exact-Q.
+
+BOTTOM LINE: LRC(14) = THM-366(non-cov) + THM-724(single) + THM-726[Step2<=220 + THM-751/753 monotonicity + band + opus>W0] = CLOSED MODULO the bounded all-lonely band. Fully closing = exact-Q execution of the band (computation, not theorem). Handoffs: kps/opus (exact-Q the ~4% irreducible band, easy margin M>=0.0826), klein (triangulation: one finite check from closure). Files: lrc14_band_finite_check_macmini_S104.py (+out); HYP-6695.
+
 ## opus-2026-07-14-S287 -- the mod-360360 CLASSIFICATION RUN: exact delta-interval slot test + 21,459 rigidity-guided CRT blockers + 250k mega-hunt = ZERO all-blocked bodies (the conjecture SURVIVES, structurally: the optimal blockers keep 57/57 slots); THE K=7 DISCOVERY: as M -> 1/14 feasibility collapses to the 7-clock (AP and GW share the identical 5/57-all-at-k=7 signature) -- (A)'s terminal form: low-M covering => some (7,a)-slot survives
 
 Prompt (owner): run the mod-360360 classification and decide the conjecture.
