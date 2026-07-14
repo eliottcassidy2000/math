@@ -22,7 +22,7 @@
 
 **Corollary A3 (drops are non-units).** In the duplication+drop classification of non-difference-closed tight sets (klein-S48, HYP-3750: residues = `{1..q−1}` with one residue dropped, one duplicated), the **dropped residue is always a non-unit**.
 
-**Corollary A4 (prime modulus ⟹ only permutation type).** If `q` is prime, all nonzero residues are units, so no residue can be dropped: every tight set's residues are a permutation of `{1,…,q−1}`. This **explains the census zeros** of klein-S48 at `n = 4, 6` (`q = 5, 7` prime) with no enumeration. (At `q = 9` the census zero is a second-order fact — drops of `{3,6}` are lemma-legal but no completion covers; verified by sweep.)
+**Corollary A4 (prime modulus ⟹ only permutation type, under the standing no-multiple hypothesis).** If `q` is prime, all nonzero residues are units, so no residue can be dropped: every tight set satisfying the standing no-multiple hypothesis has residues that are a permutation of `{1,…,q−1}`. This **explains the census zeros** of klein-S48 at `n = 4, 6` (`q = 5, 7` prime) with no enumeration. (At `q = 9` the census zero is a second-order fact — drops of `{3,6}` are lemma-legal but no completion covers; verified by sweep.)
 
 ## Part B — the exact slope of a tight set
 
@@ -55,7 +55,7 @@ confirming and sharpening HYP-3824's `inf_S |L_S(r)| ≈ 0.26·(1−14r)`: the c
 
 Tightness is a **critical covering**: danger arcs at radius exactly `1/q` cover the circle, and every unit fraction is pinned by a `±1` residue pair. Modifying an element opens a hole elsewhere (verified: plain drop-2-dup-5 at q=8 has a hole at `t = 9/20`, `M = 3/20`), and further lifts must patch exactly the hole they open — the domino constraint that makes the tight locus finite and sporadic, and the quantitative content of "the atom is a fixed point with no measure of its own" (S92 reflection): at `r = 1/q` the extremal lonely set is `φ(q)` isolated points; the measure lives entirely in the slope, and the slope is an explicit unit-harmonic sum.
 
-## Addendum (S94) — the STABILITY unit-residue lemma and the no-multiple conjecture
+## Addendum (S94, corrected by THM-769) — the STABILITY unit-residue lemma and the primitive no-multiple conjecture
 
 **Stability lemma (quantitative gap).** Let `S` have no element `≡ 0 (mod q)` and suppose some unit residue is missing from `R_a = {av mod q}` for a unit `a`. Then
 ```
@@ -64,7 +64,20 @@ M(S) ≥ 1/q + v₋/(q(v_max + v₋)),
 where `v₋` is the slowest runner with residue `≡ −1` at that `a` (present by covering considerations or the bound is even stronger) and `v_max = max S`. *Proof:* in the Part-A argument take `t_ε = a/q − ε` with `ε = 1/(q(v_max + v₋))`: residues `≥ 2` keep `||v t_ε|| ≥ 2/q − v_max ε = 1/q + v₋ε`, and the `−1`-residue runners give `1/q + vε ≥ 1/q + v₋ε`; so `min_v ||v t_ε|| ≥ 1/q + v₋ε`. ∎
 Contrapositive (the **fattening direction**, OPEN-Q-108): every `S` with `M(S) < 1/q + v₋/(q(v_max+v₋))` and no multiple of `q` represents ALL unit residues — near-tight sets are residue-rigid with an explicit stability radius. Caveat (unchanged from S93): on the covering branch (multiples of `q` present) the lemma is silent; the covering-branch analog is the open piece.
 
-**No-multiple conjecture.** `M(S) = 1/q` (tight) ⟹ `S` contains no multiple of `q` (the deep-witness branch of the tight locus is empty). Status: VERIFIED exhaustively at `q = 5` (all 4-sets with a multiple of 5, elements ≤ 40: zero tight — `lrc_mirsky_newman_floor_curvature_macmini_S94.out`); klein-S87 censuses empty for `n ≤ 8`. A proof would make the collapse-rate law (klein HYP-3835/collapse) and Part B unconditional. Known obstruction to a soft proof: a multiple `w = mq` protects only `1/(qw)`-neighborhoods of the `k/q` points, and the local forcing can be evaded by large runners carrying residues `∓2k^{-1}` — so a proof must use the global covering budget, not the local witness argument.
+**Primitive no-multiple conjecture.** After normalizing `gcd(S)=1`,
+`M(S) = 1/q` (tight) ⟹ `S` contains no multiple of `q` (the deep-witness
+branch of the primitive tight locus is empty).  Primitivity is indispensable:
+`q*{1,...,q-1}` is a tight dilation with every speed divisible by `q`.
+Status: VERIFIED exhaustively at `q = 5` in the stated primitive bank (all
+primitive 4-sets with a multiple of 5, elements ≤ 40: zero tight —
+`lrc_mirsky_newman_floor_curvature_macmini_S94.out`); klein-S87 censuses are
+empty for `n ≤ 8`.  THM-769 proves a binding-scale packet and sheet-capacity
+reduction for the deep branch at `q=13`, but not its emptiness.  A proof would
+make the collapse-rate law (klein HYP-3835/collapse) and Part B unconditional
+for primitive sets. Known obstruction to a soft proof: a multiple `w = mq`
+protects only `1/(qw)`-neighborhoods of the `k/q` points, and the local forcing
+can be evaded by large runners carrying residues `∓2k^{-1}` — so a proof must
+use the global covering budget, not the local witness argument.
 
 ## Addendum (S94) — second-order tie-break: the AP is the strict envelope carrier below 1/15
 

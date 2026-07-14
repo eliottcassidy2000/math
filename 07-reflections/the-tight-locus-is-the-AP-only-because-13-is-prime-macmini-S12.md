@@ -1,5 +1,15 @@
 # The tight locus is the AP *only because 13 is prime* — and the induction must not descend through composite levels
 
+> **Correction (2026-07-14, THM-769).**  The argument below silently treats
+> `a/13` as a witness when excluding a speed divisible by `13`.  Tightness does
+> not supply that witness: a `13`-multiple blocks every such point, and the
+> formal theorem `residue_pinning_13` explicitly assumes that no speed is
+> divisible by `13`.  Primality proves full residue pinning only in this
+> **shallow/no-multiple branch**.  The primitive deep branch remains open;
+> THM-769 reduces it to a binding-scale sheet-cover problem.  Accordingly the
+> title and the later “clean at the prime” language are historical overclaims,
+> not established conclusions.
+
 *mac-mini-2026-07-06-S12 (HYP-4382). Owner: make LRC(14) a FULL theorem, not a
 conditional submission; integrate the fleet during downtime. This note is the
 session's structural finding — it does not close the theorem, but it corrects the

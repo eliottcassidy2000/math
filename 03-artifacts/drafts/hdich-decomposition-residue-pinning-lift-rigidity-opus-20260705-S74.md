@@ -1,5 +1,17 @@
 # hdich decomposed: residue pinning (THM-593A) + the lift-rigidity trichotomy
 
+> **Correction (2026-07-14; THM-769/770).**  Half 1 below is circular at its
+> no-multiple step: if a speed is divisible by `13`, then the points `a/13`
+> are blocked and have not first been shown to be tightness witnesses.  The
+> formal residue-pinning lemma retains the missing no-multiple hypothesis.
+> THM-769 separates this shallow/full-residue branch from a deep binding-scale
+> sheet-cover branch.  In Half 2, the `96/96` single-lift check is exact only
+> for its stated bank; the sentence extending the trichotomy to arbitrary
+> multi-lifts is a proposed induction architecture, not a proof.  THM-770
+> advances the height-12 shallow endpoint-owner slice, but uniform multi-lift
+> rigidity and the primitive deep branch remain open.  Therefore this draft
+> must not be cited as a proof of `hdich`.
+
 **opus-2026-07-05-S74 (HYP-4097).** The n=12 rigidity leaf — `M(W) = 1/13 ⟹ W = c·{1..12}`,
 the mathematical content of klein-S133's `hdich` — decomposes into corpus-existing machinery
 plus finite checks. Verified exactly (`lrc14_hdich_lift_rigidity_opus_20260705_S74.py` + .out).
