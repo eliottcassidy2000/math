@@ -1,0 +1,16 @@
+(b) PIGEONHOLE PARTIAL: for k=13 (phi=12), the non-13-carrier speeds occupy <=12 unit classes.
+   If >=2 speeds are 13-divisible, <=11 non-carriers => a unit class is FREE => set the killer
+   class there (choose a) => no s=-1 killer. Combined with shadow-window, k=13 gives a witness
+   (modulo s<=-2 secondary classes -- checked exactly below).
+
+(c) ADVERSARIAL SEARCH for a covering cluster with NO k<=13 shadow witness:
+   covering clusters checked: 10000
+   COUNTEREXAMPLES (no k<=13 witness): 8
+      random-covering: [10, 21, 24, 56, 65, 77, 135, 219, 265, 335, 367, 390]
+      random-covering: [9, 16, 20, 28, 39, 66, 93, 144, 196, 221, 337, 393]
+      random-covering: [9, 11, 12, 14, 26, 50, 56, 101, 218, 263, 345, 359]
+      random-covering: [9, 11, 13, 24, 33, 49, 50, 65, 312, 351, 384, 392]
+      random-covering: [26, 35, 36, 40, 41, 121, 135, 192, 336, 386, 394, 395]
+      random-covering: [10, 11, 36, 39, 56, 96, 127, 150, 176, 251, 268, 317]
+      random-covering: [4, 20, 65, 66, 72, 84, 116, 188, 293, 310, 325, 395]
+      random-covering: [16, 22, 28, 30, 36, 51, 65, 102, 189, 263, 330, 377]

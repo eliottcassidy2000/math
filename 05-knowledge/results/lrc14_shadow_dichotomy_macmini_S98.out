@@ -1,0 +1,8 @@
+covering clusters: 3000; k<=13-shadow ESCAPEES: 3 (0%)
+escapee M: min=0.2192, median=0.2366, max=0.2568
+  (1/14 = 0.0714; covering-min 14/183 = 0.0765)
+escapees with M < 0.12 (would threaten the dichotomy): 0
+
+DICHOTOMY: if min escapee-M >> 1/14, then covering => (k<=13 shadow witness, the LOW-M/binding
+families incl single-killer S97, packed ratio-[6,13] klein-S299) OR (M large, loose) -- a clean
+shadow-or-loose split. A LOW-M escapee would be a genuine gap (shadow misses a binding case).
