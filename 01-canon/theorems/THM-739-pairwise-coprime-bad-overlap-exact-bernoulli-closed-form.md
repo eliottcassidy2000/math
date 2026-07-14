@@ -64,4 +64,31 @@ three-gap closed form: the same `B_2({·/14})` kernel governs the disc, the deep
 pairwise bad-overlap. The recurring object across the covering endgame is `B_2` evaluated at Farey points
 `k/14`.
 
-*Files: `04-computation/lrc14_pairwise_overlap_klein_S293.py` (+.out). HYP-6560.*
+## Addendum (klein-S294) — the microscopic resonance form, and why the WINDOWED overlap is not clean
+
+The full-circle identity above has an exact *microscopic* companion. `bad_c ∩ bad_{c'}` is a union of arcs,
+one per resonant pair `(j,k)` (`0≤j<c`, `k` = nearest, `|jc'−kc| < (c+c')/14`); by elementary
+interval-overlap geometry each contributes length exactly
+$$\ell_{j,k} = \frac1{cc'}\max\!\Big(0,\ \tfrac{c+c'}{14} - |jc'-kc|\Big).$$
+Summing over all `c` residues `m_j = jc'-kc` (each hit once, coprimality) gives
+`|bad_c∩bad_{c'}| = (1/cc')Σ_{|m|<(c+c')/14}(\tfrac{c+c'}{14}-|m|)`, whose leading term is
+`(c+c')²/(196cc')` (`=1/49` at `c=c'`) with the `B_2` corrections above — a consistency check.
+
+**The windowed overlap `W = |bad_c∩bad_{c'}∩[0,1/14)|` is the SAME sum restricted to the resonances whose
+arc lies in `[0,1/14)` — a Farey/partial sum with NO one-line closed form**, unlike the full circle (the
+window breaks the Fourier orthogonality; `\hat f` convolves against `\hat{1_{[0,1/14)}}`, so every
+frequency contributes). Its size is governed by *how the resonances `jc'≈kc` land in `[0,1/14)`*:
+- **Close speeds (`c'≈c`, i.e. CLUSTERS):** the small-`j` residues `m_j ≈ j(c'-c)` are all small, so many
+  terms carry the near-maximal weight `(c+c')/14 − |m_j|` — the resonances **pile up near `0`** and `W` is
+  LARGE (verified: `(99,101)` gives `W≈0.0051 ≈ 3.5×` the bulk `1/686`; `(50,99)`, `(23,45)` similar).
+- **Far speeds:** the `m_j` spread and `W → bulk = (1/14)|bad_c∩bad_{c'}| ≈ 1/686`.
+
+**Consequence (the honest negative).** The two-speed inclusion–exclusion refinement of the one-interval
+bound (S292/HYP-6550) needs `W` *small*; it is not, for clusters. So **pairwise decorrelation FAILS near
+`0` for close speeds** — the near-`0` equidistribution that `conc<7` needs is *intrinsically multi-speed*,
+not a sum of pairwise terms. This is precisely why the milder one-interval cancellation is still not
+elementary: clusters are exactly the close-speed regime where every low-order (pairwise) overlap is
+correlated. See HYP-6570.
+
+*Files: `04-computation/lrc14_pairwise_overlap_klein_S293.py`, `lrc14_windowed_overlap_klein_S294.py`
+(+.out). HYP-6560, HYP-6570.*

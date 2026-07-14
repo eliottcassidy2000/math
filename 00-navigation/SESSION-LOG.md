@@ -20,6 +20,21 @@ Integrated corpus negatives (Explore sweep): opus modular-pushes (complement!=[-
 
 Files: reflection the-atkin-lehner-v4-does-not-descend-...-macmini-S91; HYP-6565(+correction); 04-computation/metagraph_v4_atkinlehner_macmini_S91.py (+out).
 
+## klein-2026-07-13-S294 -- the WINDOWED overlap on [0,1/14): exact microscopic resonance form (rigorous), but a Farey PARTIAL sum (no clean closed form) that is LARGE for close speeds ⟹ pairwise decorrelation FAILS for clusters; near-0 equidistribution is intrinsically MULTI-speed (honest negative that explains the difficulty)
+
+Prompt (owner): prove the windowed overlap on [0,1/14).
+
+EXACT MICROSCOPIC FORM (rigorous interval geometry): bad_c∩bad_{c'} = union over resonant pairs (j,k) [|jc'−kc|<(c+c')/14] of arcs of length ℓ_{j,k}=(1/cc')·max(0,(c+c')/14−|jc'−kc|). Full-circle Σ recovers THM-739 (leading (c+c')²/196cc'=1/49 at c=c', +B₂ corrections) — consistency check. So W=|bad_c∩bad_{c'}∩[0,1/14)| = the SAME sum restricted to resonances whose arc lies in [0,1/14).
+
+WHY NO CLEAN CLOSED FORM: the window breaks the Fourier orthogonality that collapsed THM-739 to one B₂ term (f̂ now convolves 1̂_{[0,1/14)}, every frequency contributes) ⟹ W is a Farey/PARTIAL resonance sum, not a one-line formula.
+
+KEY FINDING (verified NG=2²⁴): W's size = how the resonances jc'≈kc land in [0,1/14). CLOSE speeds (c'≈c = CLUSTERS): m_j≈j(c'−c) small for many small j ⟹ resonances PILE UP near 0 ⟹ W LARGE ((99,101): W≈0.0051 ≈ 3.5× the bulk 1/686; (50,99),(23,45) similar). FAR speeds: m_j spread ⟹ W→bulk≈1/686.
+
+CONSEQUENCE (honest negative): the 2-speed one-interval refinement (my S292/S293 route) needs W SMALL; it is NOT for clusters ⟹ pairwise decorrelation FAILS near 0 for close speeds ⟹ the near-0 equidistribution that conc<7 needs is INTRINSICALLY MULTI-SPEED, not a sum of pairwise terms. THIS EXPLAINS why the milder one-interval cancellation is still not elementary: clusters ARE exactly the close-speed regime where every low-order (pairwise) overlap is correlated. So THM-739's clean full-circle pairwise result does NOT localize to a usable cluster bound — the localization is where the multi-speed structure becomes essential.
+
+FILES: HYP-6570; THM-739 addendum (microscopic resonance form + windowed finding); 04-computation/lrc14_windowed_overlap_klein_S294.py (+out). -> THM-739/HYP-6560, HYP-6550, THM-731. Sent to all.
+
+---
 ## klein-2026-07-13-S293 -- PROVED THM-739: the pairwise coprime bad-overlap in EXACT B₂ closed form |bad_c∩bad_{c'}|=1/49+(1/cc')[B₂({(c'−c)/14})−B₂({(c'+c)/14})] ≤ 1/49+1/(4cc') — bad sets independent up to O(1/cc'); same B₂-at-Farey-points kernel as THM-732/736
 
 Prompt (owner): prove the pairwise coprime-overlap bound ≤1/49. DONE — as an exact closed form.
