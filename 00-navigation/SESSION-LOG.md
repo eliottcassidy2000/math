@@ -1,3 +1,40 @@
+## opus-2026-07-14-S285 -- FRONTIER SYNTHESIS + THM-752: the fine-comb witness lemma (TOOTH threshold 1/(7w)) closes klein-S304's loose-branch stall with an exact verified witness (t = 233/2912, clearance 29/364) + 60/60 census + the ratio-13 cascade (complementary to spread13_lonely); the frontier doc: everything closed except (A) the binding low-M equidistribution -- THE one analytic piece left
+
+Prompt (owner): synthesize recent work on the remaining mathematical frontier and push that.
+
+SYNTHESIS FIRST (read S98-S104): the dichotomy (mac-mini-S98) + tiles (S100/THM-749/751) + klein
+S304's loose = iterated far-peel (rigorous on most, ONE crude stall) + my S283 U1 closure =>
+the frontier document 00-navigation/LRC14-FRONTIER-2026-07-14.md: the CLOSED LEDGER (loose
+double-covered, binding tiled, tail lanes exact + Lean) vs the OPEN CORE: (A) binding low-M
+multi-speed equidistribution = the ONE genuinely analytic piece; (B) optional loose uniform
+lemma; (C) kps compact core (finite); (D) assembly + Lean composition.
+
+THE PUSH (THM-752, honest arc): the naive fine-comb threshold (core interval >= 1/w) MISSES the
+loose stratum by ~1.15x uniformly -- corrected to the TOOTH threshold: an interval longer than
+ONE open danger tooth (1/(7w)) cannot sit inside it, so it contains a closed w-safe point:
+M(V) >= 1/14 with an explicit witness. The 7x sharpening = the origin band's 6/7 duty cycle.
+FIRES with ~6x margin: klein's stall {1,10,21,24,56,65,77,135,219,265,335,367,390} closes at
+peel 390, witness t = 233/2912, min clearance 29/364 = 0.0797 over ALL 13 speeds (exact
+Fractions); two more exemplars likewise; CENSUS 60/60 spread covering bodies. RATIO-13 CASCADE
+(corollary, LRC(<=13) cited): all-consecutive-ratios > 13 closes unconditionally --
+complementary to spread13_lonely (total ratio <= 13): the two pincer the ratio spectrum.
+
+NET: the LOOSE branch (klein-S303's named prize) is DOUBLE-COVERED -- S304's iterated peel
+(rigorous on most) + THM-752 (the stalls + 60/60) -- decide-shaped per body; its optional
+uniform form is ONE lemma. The frontier's one-line statement: LRC(14) = [closed ledger] +
+(A) the binding low-M equidistribution + finite work.
+
+NAMESPACE: 2 more collisions (mac-mini took my HYP-6665 hours after my push -- flagged, theirs
+to renumber; klein-S304 took 6670 first -- mine renumbered 6675). THM-752 clean.
+
+FILES: THM-752 canon; 00-navigation/LRC14-FRONTIER-2026-07-14.md; HYP-6675;
+lrc14_finecomb_cascade_thm752_opus_S285.out (witnesses + census). -> klein (your stall closes:
+exact witness enclosed; the loose branch is yours+mine jointly done), mac-mini (the dichotomy is
+now the book's chapter structure; THM-751/752 are the two sides' terminal lemmas), kps (the
+witnesses and the cascade are pure Fraction + one citation: Lean-trivial; the loose pair is
+ready for your decide bottoms).
+
+---
 ## mac-mini-2026-07-14-S102 -- PROVED THM-751 (aligned far-element monotonicity / tooth-narrowing lemma) + the peeling recursion: covering => clean-peel(THM-751+sieve, binding, M>=1/14) OR unsafe-peel(loose, opus). Closes THM-726 Step 1 rigorously for aligned+safe.
 
 **Owner:** prove the far-element monotonicity to close the loose tile.
