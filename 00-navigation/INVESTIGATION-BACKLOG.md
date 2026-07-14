@@ -7,7 +7,11 @@
   + additive clusters any |J|<=12 (THM-739) are ALL closed. Remaining infinite shapes: (a) >=7 far
   elements neither multiplicatively nor additively coherent (genuinely spread two-scale -- the density
   route's home turf, LEM-006 factorial-moment ladder); (b) MULTI-CLUSTER bodies (two+ separated clusters).
-- **Next step:** (b) is a THM-739 extension: HIERARCHICAL CLOCKS -- ride the fastest cluster's clock;
+- **UPDATE (opus-S274): (b) DELIVERED as THM-740** (product-area Area2 = Int_{G_B} A_J1 A_J2, proved,
+  exact, verified; separated cone + per-W1 ladder). Remaining: (a) spread two-scale (density turf);
+  (NEW) the comparable-scales strip W2 ~ W1; (NEW) constant sharpening (second-order drift treatment,
+  applies to THM-739 AND 740, would collapse W0/cone thresholds by ~10^2-10^3 -- do before Lean).
+- **Next step (original, superseded):** (b) is a THM-739 extension: HIERARCHICAL CLOCKS -- ride the fastest cluster's clock;
   the slower cluster joins the frozen base contributing its own A-factor: L >= Int_{G_B} A_{J1}(u) A_{J2}(...)
   -type product areas; derive the two-cluster constants. (a) belongs to klein's density Q_s program.
   Also: the THM-739 constant C is ~3000x conservative (dominated by |J|max(J) drift term) -- a

@@ -29,6 +29,43 @@ SURVIVING (numerology): (Z/14)*=Z/6=torsion(14a); X_0(14) cusps = Klein-four = A
 
 VERDICT: transfer NOT built; local (difference-tournament) route provably dead; the tournament<->LRC severance is STRUCTURAL (tournaments difference-invariant, LRC tightness position-dependent), sharper than the variance miscalibration (HYP-3554). Files: lrc14_oddgraph_cuspform_transfer + _v2 _macmini_S90.py (+outs). HYP-6555.
 
+## opus-2026-07-13-S274 -- THM-740 PROVED: TWO-CLUSTER HIERARCHICAL CLOCKS -- the PRODUCT-AREA Area2 = Int_{G_B} A_J1 A_J2 du (separated clusters decouple multiplicatively; prediction confirmed exact: L hugs 30077/308700 = 0.097431 to ~1e-3); outer ride = THM-739 instantiated, inner ride new; the S273 extension delivered
+
+Prompt (owner): prove the two-cluster hierarchical clocks extension.
+
+THM-740 (canon): V = B u (W1+J1) u (W2+J2):
+  (i) OUTER = THM-739 verbatim at base B' = B u (W1+J1): L >= Int_{G1} A_J2 - C_out(W1)/W2;
+  (ii) INNER (new): Int_{G1} A_J2 >= Area2 - C_in/W1, Area2 = Int_{G_B} A_J1(u) A_J2(u) du;
+  (iii) combined + separated-cone corollary + per-W1 ladder (every fixed W1 = a THM-739 instance).
+Inner-ride proof: base frozen fan + cluster-1 fattened AP + the WEIGHT A_J2 rides along
+(Sum_n osc_n <= V(A_J2)) + (a-x)(b-y) >= ab-x-y + Riemann. C_in = V(A1A2) + V(A2) + 2#comp(G_B)
++ 2Sum_B b + |J1|max(J1); C_out(W1) <= alpha + 4|J1|(W1+max J1).
+
+EXACT (piecewise-QUADRATIC Simpson, two-half self-check; V with interior vertices): shape A
+{1}u(W1+{0..5})u(W2+{0..5}): Area2 = 30077/308700 = 0.097431; shape B {1,2}u(W1+{0..4})u(W2+{0..5}):
+Area2 = 166417/1852200 = 0.089848. CONFIRMED: exact L(120,12800) = 0.096424 (shape A) -- hugs Area2
+to 1e-3; per-W1 areas positive and oscillating around Area2 (0.1003/0.0979/0.0964 at W1=30/60/120);
+all bound instances valid.
+
+STRUCTURE: cross-cluster pairs FACTORIZE; within-cluster pairs = A_J coherence; base-cluster =
+frozen fan -- every pair-sector role of the (n-1)^2 perspective decomposition now has a theorem.
+SEPARATION HELPS LONELINESS: Area2 (two 6-clusters) = 0.0974 > Area (one 12-cluster) = 0.0750:
+coherence is what covering needs (THM-730 AP-extremality echo). k-cluster induction sketched.
+
+HONEST: rigorous cone thresholds astronomical (crude constants squared); true convergence orders
+faster; second-order drift sharpening = named next step. REMAINING: comparable-scales strip
+(W2 ~ W1) -- interpolates to genuinely-spread two-scale = density turf.
+
+NAMESPACE: clean claim-first workflow this time (stub + checkpoint before work -- no collision).
+NB mac-mini-S89's HYP-6545 collides with my earlier-pushed HYP-6545 (first-pusher: opus) -- flagged.
+
+FILES: THM-740 canon; HYP-6550; lrc14_two_cluster_hierarchical_thm740_opus_S274.py (+.out);
+backlog updated. -> klein/kps (the far-slot axis now: isolated + j<=6 Bonferroni + multiplicative
++ additive-cluster + hierarchical two-cluster ALL closed; residual = spread two-scale + the strip),
+mac-mini (HYP-6545 collision flag; also your 'Gowers order = #far' -- for hierarchical clusters
+the effective order = #clusters, each ride collapsing one).
+
+---
 ## mac-mini-2026-07-13-S89 -- SYNTHESIS: how tournaments relate to the last bit of LRC(14) (4 proved meeting points, proved severance, the quantization structure) + conc forbidden band
 
 **Owner request:** synthesize recent work; pull frequently; see how tournaments relate to the last bit of LRC(14).

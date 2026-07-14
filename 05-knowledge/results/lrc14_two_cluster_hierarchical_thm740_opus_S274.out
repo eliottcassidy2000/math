@@ -1,0 +1,31 @@
+========================================================================================================
+THM-740 (two-cluster hierarchical clocks) -- exact verification.
+========================================================================================================
+
+shape A: B=[1], J1={0..5}, J2={0..5}   (1 + 6 + 6 = 13 runners)
+   |G_B| = 6/7 ;  PRODUCT-AREA Area2 = 30077/308700 = 0.097431
+   V(A_J2) = 128/21 = 6.0952 ;  V(A_J1*A_J2) = 2033/441 = 4.6100 ;  C_in = 19715/441 = 44.71
+   INNER BOUND (**) check:  Int_{G1} A_J2  >=  Area2 - C_in/W1 :
+     W1=  30 : Int = 0.100291   Area2 - C_in/W1 = -1.392743   valid=True   (C_out(W1) = 13106/21)
+     W1=  60 : Int = 0.097927   Area2 - C_in/W1 = -0.647656   valid=True   (C_out(W1) = 23942/21)
+     W1= 120 : Int = 0.096449   Area2 - C_in/W1 = -0.275112   valid=True   (C_out(W1) = 45866/21)
+   COMBINED BOUND check:  L(V) >= Area2 - C_in/W1 - C_out(W1)/W2 :
+     W1=  30 W2=  3200 : L = 0.099862   bound = -1.587772   valid=True
+     W1=  30 W2= 12800 : L = 0.100225   bound = -1.441500   valid=True
+     W1= 120 W2=  3200 : L = 0.096352   bound = -0.957642   valid=True
+     W1= 120 W2= 12800 : L = 0.096424   bound = -0.445745   valid=True
+
+shape B: B=[1, 2], J1={0..4}, J2={0..5}   (2 + 5 + 6 = 13 runners)
+   |G_B| = 11/14 ;  PRODUCT-AREA Area2 = 166417/1852200 = 0.089848
+   V(A_J2) = 128/21 = 6.0952 ;  V(A_J1*A_J2) = 622/147 = 4.2313 ;  C_in = 1976/49 = 40.33
+   INNER BOUND (**) check:  Int_{G1} A_J2  >=  Area2 - C_in/W1 :
+     W1=  30 : Int = 0.094066   Area2 - C_in/W1 = -1.254369   valid=True   (C_out(W1) = 11216/21)
+     W1=  60 : Int = 0.090981   Area2 - C_in/W1 = -0.582261   valid=True   (C_out(W1) = 20876/21)
+     W1= 120 : Int = 0.088857   Area2 - C_in/W1 = -0.246206   valid=True   (C_out(W1) = 40028/21)
+   COMBINED BOUND check:  L(V) >= Area2 - C_in/W1 - C_out(W1)/W2 :
+     W1=  30 W2=  3200 : L = 0.093706   bound = -1.421274   valid=True
+     W1=  30 W2= 12800 : L = 0.094038   bound = -1.296096   valid=True
+     W1= 120 W2=  3200 : L = 0.088573   bound = -0.841861   valid=True
+     W1= 120 W2= 12800 : L = 0.088831   bound = -0.395120   valid=True
+
+done.
