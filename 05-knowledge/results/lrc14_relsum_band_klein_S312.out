@@ -1,0 +1,12 @@
+Relation-lattice expansion of G(1/14) on band-residual families:
+  MAIN = (6/7)^13 = 0.1348  (the k=0 / independence term)
+  main+pairwise vs Gtrue (closeness => pairwise dominates the correction):
+   Gtrue=0.1069  main+pair=0.1474  |pairwise_abs|=0.0390  (main-abs lower bd=0.0958)
+   Gtrue=0.1249  main+pair=0.1329  |pairwise_abs|=0.0122  (main-abs lower bd=0.1226)
+   Gtrue=0.1353  main+pair=0.1586  |pairwise_abs|=0.0576  (main-abs lower bd=0.0772)
+   Gtrue=0.1128  main+pair=0.1611  |pairwise_abs|=0.0543  (main-abs lower bd=0.0805)
+   Gtrue=0.1409  main+pair=0.1725  |pairwise_abs|=0.0690  (main-abs lower bd=0.0658)
+   Gtrue=0.1287  main+pair=0.1431  |pairwise_abs|=0.0185  (main-abs lower bd=0.1163)
+
+  worst |pairwise_abs| = 0.0690  vs MAIN=0.1348  => pairwise leaves 48.8% of the main term
+  If main - (all-order abs) > 0, the relation-lattice bound PROVES G>0 (unlike Bonferroni).

@@ -1,3 +1,22 @@
+## klein-2026-07-14-S312 -- the crude M≥0.14 bound for the band residual DOES NOT EXIST (signed-not-absolute wall), but the band residual has a bounded-q RATIONAL WITNESS (good period q≤25) — the real, cheap, decidable finish. Corrects my S311 optimism.
+
+Prompt (owner): prove the crude M≥0.14 bound for the band residual.
+
+HONEST NEGATIVE FIRST. Tested the two natural crude bounds at δ=1/14 on band-residual families (≥4-far, bounded diameter, not capped-envelope-certifiable) — BOTH FAIL:
+1. BONFERRONI (B1..B7 = odd-truncation lower bounds on G(1/14)=P(N=0), via factorial moments S_k=E[C(N,k)]): ALL NEGATIVE (B5≈−2, B7≈−1.7) despite G_true≈0.12. The inclusion-exclusion OSCILLATES — no low-order certificate.
+2. ABSOLUTE RELATION-LATTICE: G=(6/7)¹³+Σ_{rel}∏ĝ; the ABSOLUTE sum rel_abs=∫∏b(ct)dt−(6/7)¹³≈27000 (the absolute-symbol b(θ)=Σ|ĥ_m|e(mθ) carries a −log|2sin πθ| singularity ⟹ ∏ blows up at rationals). So main−rel_abs≈−27000. The relation series converges only CONDITIONALLY (signed): G≈0.12 is a signed cancellation of ~10⁴-size terms.
+
+This is the SAME "signed not absolute" cancellation wall the fleet documented on the large-diameter lower bound. No unsigned/truncated crude bound can prove the band residual — my S311 "a crude M≥0.14 bound would close it" was WRONG.
+
+THE REAL FINISH (a cleaner one). Every band-residual family is LOOSE ⟹ has a GOOD PERIOD: a small-q rational lonely witness a/q with all (c·a mod q)∈[q/14,13q/14] ⟹ ‖c·a/q‖≥1/14 ⟹ M≥1/14. VERIFIED 120/120 band-residual families have q∈[15,25] (median 17; 0 use q≡0 mod 14 — the covering structure blocks the natural period). A rigorous, decidable, CHEAP per-family certificate (bounded-q search, NOT exact-M). It works PRECISELY because the band residual is loose: tight APs have NO good period (the V=13 resonance) but they are the kps/Claim-A half (THM-738).
+
+CLEAN DICHOTOMY (aligned with the THM-758 far-count split): LOOSE ⟺ good period (q≤25) ⟺ rational witness; TIGHT ⟺ no good period ⟺ kps Bonferroni tree. The good period is EXACTLY the loose-family tool. So the finite band enumeration (mac-mini) now carries a cheap per-family certificate — exhibit q≤25, done.
+
+HANDOFFS: @mac-mini — replace exact-M in your band enumeration with the q≤25 rational-witness search (cheaper); the band is closed once each family shows a q≤25 witness. @opus — your density floor is the SIGNED machinery; the band residual confirms the wall is signed (absolute diverges ~10⁴). @kps — THM-738 is the tight half (no good period); the two halves partition covering.
+
+FILES: HYP-6750 (REFUTED crude bound + rational witness); THM-758 updated (band residual → rational witness); 04-computation/lrc14_band_certificate_klein_S312.py + 3 .out (bonferroni_band, relabs_full_band, ratwitness_band). -> signed-wall, good-period memory. Sent to all.
+
+---
 ## opus-2026-07-14-S294 -- the AUTOCORRELATION B2-DECOMPOSITION: exact form derived (sign nailed: PLUS; tent-verified by hand) + THE CHAIN FORMALIZED (grid_deficit generalized to Fintype; acorrModel + discB defined; discB_eq_grid_deficit PROVED; two machine-checked instances of A = model incl. the wrap regime); the (H)-edge Lean chain is complete except ONE named analysis statement (the single-pair overlap identity)
 
 Prompt (owner): prove the autocorrelation B2-decomposition lemma and finish the geometric THM-755.

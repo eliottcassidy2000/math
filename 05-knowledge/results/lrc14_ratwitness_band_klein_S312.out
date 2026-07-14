@@ -1,0 +1,8 @@
+rational lonely-witness a/q for 120 band-residual families:
+  found witness (q<=200): 120/120 ; NO-witness: 0
+  q distribution: min=15  median=17  max=25  (mostly q=14k? 0 have q multiple of 14)
+  most common q: [(17, 30), (16, 25), (15, 23), (19, 17), (18, 9), (21, 5)]
+
+  => every band-residual family has a small-q RATIONAL lonely point (decidable certificate, bounded q).
+     This is the finite-check finish: NOT a crude analytic bound (those fail: signed wall), but a
+     per-family decidable witness with q bounded => mac-mini exact-Q enumeration is well-posed & cheap.

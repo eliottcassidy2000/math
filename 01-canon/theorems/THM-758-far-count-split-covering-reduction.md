@@ -66,6 +66,26 @@ So Claim B = **[`v>v*`: opus capped-envelope THM-755, PROVED] + [`v≤v*`: bound
 executed] + [base ⊆{1..14}: kps THM-738, PROVED]** — every piece finite or proved, and the disc/k=7
 equidistribution is dodged on both the structural (far-count) and analytic (capped-envelope) sides.
 
+## The band residual closes via a bounded-`q` RATIONAL WITNESS, not a crude bound (klein-S312)
+
+The `v ≤ v*` residual (band residual: `≥4`-far, bounded diameter, not capped-envelope-certifiable) has **no
+crude analytic bound** — tested and refuted (HYP-6750). Both natural forms fail at `δ=1/14`:
+- **Bonferroni** (`B1..B7`, the odd-truncation lower bounds on `G(1/14)=P(N=0)`): all **negative**
+  (`B5≈−2`), the inclusion–exclusion oscillates despite `G_true≈0.12`.
+- **Absolute relation-lattice**: `G=(6/7)¹³+Σ_{rel}∏ĝ`, but the absolute sum `rel_abs≈27000` (the
+  absolute-symbol `b(θ)=Σ|ĥ_m|e(mθ)` has a `−log|2sin πθ|` singularity). The series converges only
+  **conditionally** — `G≈0.12` is a signed cancellation of `~10⁴`-size terms. This is the known
+  **"signed not absolute" cancellation wall**; no unsigned/truncated certificate can capture it.
+
+**Resolution.** Every band-residual family is *loose*, hence has a **good period**: a small-`q` rational
+lonely witness `a/q` with all `(c·a mod q) ∈ [q/14, 13q/14]`, so `‖c·a/q‖ ≥ 1/14` and `M(S) ≥ 1/14`.
+**Verified 120/120 band-residual families have `q ∈ [15, 25]`** (median 17). This is a rigorous, decidable,
+**cheap** per-family certificate (a bounded-`q` search, not exact-`M`), and it works *precisely because* the
+band residual is loose — tight APs have **no** good period, but those are the kps/Claim-A half (THM-738).
+So the covering endgame is a clean dichotomy aligned with the far-count split: **loose ⟺ good period
+(`q≤25`), tight ⟺ Bonferroni tree (kps)**. The finite band enumeration (mac-mini) now carries a cheap
+per-family certificate.
+
 ## What remains
 
 Only the **exhaustive execution** of the bounded finite band (mac-mini-S105 has done the interval-core

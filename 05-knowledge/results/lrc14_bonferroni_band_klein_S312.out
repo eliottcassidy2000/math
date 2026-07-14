@@ -1,0 +1,10 @@
+B5/B7 Bonferroni on band-residual families at delta=1/14 (G=true good measure; odd-trunc = LOWER bound):
+  B1=1-S1, B3=1-S1+S2-S3, B5=...+S4-S5, B7=...+S6-S7  (>0 => M>=1/14 PROVED)
+  Gtrue=0.1069  B1=-0.86 B3=-0.795 B5=-2.0563 B7=-1.70961
+  Gtrue=0.1249  B1=-0.86 B3=-0.235 B5=-0.4459 B7=-0.40211
+  Gtrue=0.1353  B1=-0.86 B3=-0.659 B5=-1.6614 B7=-1.45958
+  Gtrue=0.1128  B1=-0.86 B3=-0.677 B5=-1.5306 B7=-1.43160
+  Gtrue=0.1409  B1=-0.86 B3=-0.652 B5=-1.5213 B7=-1.35389
+  Gtrue=0.1287  B1=-0.86 B3=-0.291 B5=-0.4336 B7=-0.37630
+
+  If B5 or B7 > 0 on ALL: the band residual is Bonferroni-certified => crude M>=1/14 bound EXISTS.

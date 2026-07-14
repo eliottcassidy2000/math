@@ -1,0 +1,15 @@
+  b(theta): min=-0.875  mean=0.8571 (should ~6/7=0.8571)  max=6.355
+
+FULL absolute relation-lattice bound on band-residual families:
+  MAIN=(6/7)^13=0.1348 ; rigorous lower bound  G >= MAIN - rel_abs :
+   Gtrue=0.1069  rel_abs=27137.4898  ==> LOWER BOUND MAIN-rel_abs=-27137.3550  <=0 FAILS
+   Gtrue=0.1249  rel_abs=26507.7180  ==> LOWER BOUND MAIN-rel_abs=-26507.5832  <=0 FAILS
+   Gtrue=0.1353  rel_abs=27107.7496  ==> LOWER BOUND MAIN-rel_abs=-27107.6148  <=0 FAILS
+   Gtrue=0.1128  rel_abs=27160.1055  ==> LOWER BOUND MAIN-rel_abs=-27159.9707  <=0 FAILS
+   Gtrue=0.1409  rel_abs=27069.2976  ==> LOWER BOUND MAIN-rel_abs=-27069.1628  <=0 FAILS
+   Gtrue=0.1287  rel_abs=26527.0682  ==> LOWER BOUND MAIN-rel_abs=-26526.9334  <=0 FAILS
+   Gtrue=0.1379  rel_abs=26498.7168  ==> LOWER BOUND MAIN-rel_abs=-26498.5820  <=0 FAILS
+   Gtrue=0.1311  rel_abs=26490.2935  ==> LOWER BOUND MAIN-rel_abs=-26490.1587  <=0 FAILS
+
+  ALL band-residual have MAIN - rel_abs > 0 ?  False
+  => the absolute relation-lattice bound does NOT prove M>=1/14 for the band residual (vs Bonferroni which FAILS).
