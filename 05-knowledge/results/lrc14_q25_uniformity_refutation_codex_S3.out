@@ -1,0 +1,94 @@
+LRC14 q<=25 UNIFORMITY REFUTATION -- exact certificate
+valid_pair_deck_criterion: for covering S and 15<=q<=25, a witness exists iff q has no zero owner and B_q(S) misses a unit sign-pair
+nonunit_reason: reducing a/q gives q0<=12, and covering supplies a q0-divisible speed
+unit_reason: q/14 is strictly between 1 and 2, so only residues 0,+1,-1 are unsafe
+elementary_dilated_block_reason: if gcd(c,q)>1 choose i=q/gcd(c,q)<=12; otherwise choose the signed least representative of (a*c)^(-1), also <=12
+========================================================================================
+V26 coherent near-dilate
+S=(26, 52, 78, 104, 130, 156, 182, 208, 234, 260, 286, 312, 339)
+primitive_gcd=1 covering=True f_above_14=13 diameter=313
+covering_owners=((2, 26), (3, 78), (4, 52), (5, 130), (6, 78), (7, 182), (8, 104), (9, 234), (10, 130), (11, 286), (12, 156), (13, 26), (14, 182))
+S312_exact_residual=True
+leave_component_vector=(304, 290, 340, 334, 428, 328, 398, 342, 390, 334, 482, 328, 312)
+max_w_times_G=w:286 value:51768233/1993320
+uniform_no_cap_chain: pi*w*G < (22/7)*51768233/1993320 = 569450563/6976620 < min_r=290 <= r_w
+q15_25_blocker_decks:
+  q=15 units=(1, 2, 4, 7) blocked=(1, 2, 4, 7) zeros=() good_multipliers=()
+  q=16 units=(1, 3, 5, 7) blocked=(3,) zeros=(208,) good_multipliers=()
+  q=17 units=(1, 2, 3, 4, 5, 6, 7, 8) blocked=(1, 2, 3, 4, 5, 6, 7, 8) zeros=() good_multipliers=()
+  q=18 units=(1, 5, 7) blocked=() zeros=(234,) good_multipliers=()
+  q=19 units=(1, 2, 3, 4, 5, 6, 7, 8, 9) blocked=(1, 2, 3, 4, 5, 6, 7, 8, 9) zeros=() good_multipliers=()
+  q=20 units=(1, 3, 7, 9) blocked=(1,) zeros=(260,) good_multipliers=()
+  q=21 units=(1, 2, 4, 5, 8, 10) blocked=(1, 2, 4, 5, 8, 10) zeros=() good_multipliers=()
+  q=22 units=(1, 3, 5, 7, 9) blocked=(9,) zeros=(286,) good_multipliers=()
+  q=23 units=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11) blocked=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11) zeros=() good_multipliers=()
+  q=24 units=(1, 5, 7, 11) blocked=() zeros=(312,) good_multipliers=()
+  q=25 units=(1, 2, 3, 4, 6, 7, 8, 9, 11, 12) blocked=(1, 2, 3, 4, 6, 7, 8, 9, 11, 12) zeros=() good_multipliers=()
+no_q15_25_witness=True
+first_rational_witness=(27, 2, Fraction(2, 27))
+M_exact=1/13
+prime_packet_counts_ge2=((2, 12), (3, 5), (5, 2), (13, 12))
+max_common_prime_packet=12
+leave_one_out_gcds=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 26)
+THM737_d_le_6_pack_excluded=False
+TOURNAMENT V26 coherent near-dilate
+  vertices=moduli q=15..25 (runner vertices challenged and rejected)
+  alternatives_considered=runners,gaps,fixed_sections,section_boundaries,wall_events,residues,cover_arcs,Fourier_modes,matroid_circuits,proof_obligations
+  pairwise_observable=lex advantage in (signed-pairs retained, pair-only blocker) vs (negative shortest blocker cost, zero-owner multiplicity)
+  switch/gauges=pair-first -> compression-first
+  tie_Hamiltonian_path=15->16->17->18->19->20->21->22->23->24->25
+  preserved=exact q-blocked predicate plus zero/pair-deck sidecar
+  destroyed=metric clearance M, endpoint order, scale, and cross-q compatibility
+  pair-first score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1} directed_3cycles=0 SCCs=((15,), (16,), (17,), (18,), (19,), (20,), (21,), (22,), (23,), (24,), (25,)) Hamiltonian_paths=1 Hamiltonian_path=(23, 25, 19, 17, 21, 15, 16, 20, 22, 18, 24)
+  compression-first score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1} directed_3cycles=0 SCCs=((15,), (16,), (17,), (18,), (19,), (20,), (21,), (22,), (23,), (24,), (25,)) Hamiltonian_paths=1 Hamiltonian_path=(16, 18, 20, 22, 24, 15, 21, 17, 19, 25, 23)
+  edge_flips=47/55
+  verdict=tournament telemetry is transitive here; the blocker deck, not the orientation, carries the proof
+V26_explicit_THM757_point=t=27/338 clearance=1/13
+========================================================================================
+SSTAR gcd-incoherent residual
+S=(81, 91, 131, 151, 157, 196, 258, 274, 313, 328, 330, 339, 348)
+primitive_gcd=1 covering=True f_above_14=13 diameter=267
+covering_owners=((2, 196), (3, 81), (4, 196), (5, 330), (6, 258), (7, 91), (8, 328), (9, 81), (10, 330), (11, 330), (12, 348), (13, 91), (14, 196))
+S312_exact_residual=True
+leave_component_vector=(528, 518, 516, 516, 496, 492, 482, 498, 488, 486, 472, 468, 480)
+max_w_times_G=w:339 value:106329879949471805834083/2072849518344678893820
+uniform_no_cap_chain: pi*w*G < (22/7)*106329879949471805834083/2072849518344678893820 = 106329879949471805834083/659543028564216011670 < min_r=468 <= r_w
+q15_25_blocker_decks:
+  q=15 units=(1, 2, 4, 7) blocked=(1, 2, 4, 7) zeros=(330,) good_multipliers=()
+  q=16 units=(1, 3, 5, 7) blocked=(1, 3, 5, 7) zeros=() good_multipliers=()
+  q=17 units=(1, 2, 3, 4, 5, 6, 7, 8) blocked=(1, 2, 3, 4, 5, 6, 7, 8) zeros=() good_multipliers=()
+  q=18 units=(1, 5, 7) blocked=(1, 5, 7) zeros=() good_multipliers=()
+  q=19 units=(1, 2, 3, 4, 5, 6, 7, 8, 9) blocked=(1, 2, 3, 4, 5, 6, 7, 8, 9) zeros=() good_multipliers=()
+  q=20 units=(1, 3, 7, 9) blocked=(1, 3, 7, 9) zeros=() good_multipliers=()
+  q=21 units=(1, 2, 4, 5, 8, 10) blocked=(1, 2, 4, 5, 8, 10) zeros=() good_multipliers=()
+  q=22 units=(1, 3, 5, 7, 9) blocked=(1, 3, 5, 7, 9) zeros=(330,) good_multipliers=()
+  q=23 units=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11) blocked=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11) zeros=() good_multipliers=()
+  q=24 units=(1, 5, 7, 11) blocked=(1, 5, 7, 11) zeros=() good_multipliers=()
+  q=25 units=(1, 2, 3, 4, 6, 7, 8, 9, 11, 12) blocked=(1, 2, 3, 4, 6, 7, 8, 9, 11, 12) zeros=() good_multipliers=()
+no_q15_25_witness=True
+first_rational_witness=(26, 3, Fraction(1, 13))
+M_exact=101/470
+prime_packet_counts_ge2=((2, 6), (3, 5), (7, 2))
+max_common_prime_packet=6
+leave_one_out_gcds=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+THM737_d_le_6_pack_excluded=True
+TOURNAMENT SSTAR gcd-incoherent residual
+  vertices=moduli q=15..25 (runner vertices challenged and rejected)
+  alternatives_considered=runners,gaps,fixed_sections,section_boundaries,wall_events,residues,cover_arcs,Fourier_modes,matroid_circuits,proof_obligations
+  pairwise_observable=lex advantage in (signed-pairs retained, pair-only blocker) vs (negative shortest blocker cost, zero-owner multiplicity)
+  switch/gauges=pair-first -> compression-first
+  tie_Hamiltonian_path=15->16->17->18->19->20->21->22->23->24->25
+  preserved=exact q-blocked predicate plus zero/pair-deck sidecar
+  destroyed=metric clearance M, endpoint order, scale, and cross-q compatibility
+  pair-first score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1} directed_3cycles=0 SCCs=((15,), (16,), (17,), (18,), (19,), (20,), (21,), (22,), (23,), (24,), (25,)) Hamiltonian_paths=1 Hamiltonian_path=(23, 25, 19, 17, 21, 22, 16, 20, 24, 15, 18)
+  compression-first score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1} directed_3cycles=0 SCCs=((15,), (16,), (17,), (18,), (19,), (20,), (21,), (22,), (23,), (24,), (25,)) Hamiltonian_paths=1 Hamiltonian_path=(15, 22, 18, 16, 20, 24, 21, 17, 19, 25, 23)
+  edge_flips=47/55
+  verdict=tournament telemetry is transitive here; the blocker deck, not the orientation, carries the proof
+SSTAR_exact_maximizer=t=167/470 clearance=101/470
+========================================================================================
+FINAL VERDICT
+uniform_q_le_25_bound=FALSE
+loose_iff_q_le_25=FALSE
+gcd_incoherent_rescue=FALSE
+narrow_valid_statement=the pair-deck equivalence and per-family certificates only
+research_redirect=classify simultaneous zero/pair blocker decks and allow adaptive denominators or another exact certificate route
