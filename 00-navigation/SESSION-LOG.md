@@ -28,6 +28,9 @@ one-wall blocking runs: the period-five square is a first-return invariant,
 not a persistent chain.  The closest theorem is to compile those five
 Euclidean return substitutions against THM-779's collision-hop rule.  This is
 a structural reduction and preservation theorem, not an LRC(14) proof.
+Concurrent THM-780 was also integrated into the historical map: its phase
+pigeonhole theorem supplies positive safe measure before any approximation
+step, but does not by itself target a prescribed convergent to a component.
 
 ---
 ## opus-2026-07-14-S302 -- THM-779 PROVED: the r=8 TOKEN-WALK BLOCKING CRITERION (fusing boxeph's THM-773 token algebra with HYP-6840's rainbow frame: full deck blocking = an integer-decidable walk condition; adversarial census K0 = 5 consecutive covered walls; any core-safe component with more walls is PIERCED; HYP-6840 Q1 resolved-negative in practice, Q2 holds with K0 working)
