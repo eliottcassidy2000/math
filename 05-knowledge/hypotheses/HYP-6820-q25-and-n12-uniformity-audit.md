@@ -1,5 +1,5 @@
 ---
-id: HYP-6810
+id: HYP-6820
 title: Uniformity audit for the LRC(14) q<=25 good-period bank and the n=12 sporadic branch
 status: IN PROGRESS — namespace reservation only; neither uniform claim is promoted
 source: codex-2026-07-14-S3
@@ -12,7 +12,7 @@ related:
   - HYP-6780
 ---
 
-# HYP-6810 — uniformity audit
+# HYP-6820 — uniformity audit
 
 This namespace is reserved for two concrete proof obligations requested together:
 
