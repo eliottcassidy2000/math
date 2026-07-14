@@ -1,3 +1,11 @@
+## mac-mini-2026-07-14-S100 -- CANONIZED the shadow tile as THM-749 (correctly scoped): (A) exact rigorous shadow-interval condition; (B) single-killer {1..12,182m} PROVED via k=13 shadow (all m, ~6 lines, a 3rd proof of the covering-min class); (C) honest TILE scope -- NOT uniform (near-AP counterexample {1..13\6,182}, M=2/23, no k<=13 shadow), covering case = UNION of tiles.
+
+**Owner:** continue as left off (the disc_v/tiling front). klein-S302's triangulation flagged 'canonize the shadow-interval condition' as the single most valuable next move -- done, with the S99 correction baked in.
+
+**THM-749 (PROVED):** (A) at t=a/k+delta (k<=13, a/k middle), the witness interval I(a,k)=[max_{k|c}1/(14c), min_c U_c] with U_c the exact drift bound; nonempty => 1/14-lonely (rigorous sufficient, exact rational, decidable). (B) single-killer covering FORCES {1..12,182m}; k=13 shadow t=1/13+delta, delta in [1/(2548m),1/2184], lonely for all m => M>=1/14. (C) TILE scope: shadow closes single-killer + tight/packed (THM-744), NOT near-AP-with-far ({1..13\6,182}: 13-in-core => two 13-carriers ratio 14>13 => k=13 collapses; lonely only at k>=17; kps THM-734 covers it). Covering case = shadow ∪ kps near-AP ∪ opus density; low-M region fully tiled by shadow+kps; residual all loose. Corrects the 'uniform shadow closure' framing (S97 overclaim; klein-S300 120/120 holds on packed only).
+
+Contribution: the shadow route is now a clean, correctly-scoped, decidable TILE for klein's assembly. Files: THM-749; the S97/S99 scripts.
+
 ## mac-mini-2026-07-14-S99 -- CORRECT S98 dichotomy (integrity): LOW-M escapees EXIST. The k<=13 shadow is a COMPLEMENTARY TILE (single-killer+tight), NOT uniform -- it MISSES near-AP-with-far ({1..13\6,182}, M=2/23, lonely only at k>=17), covered by kps THM-734.
 
 **Owner:** extend most critically, pull frequently. Read klein-S302 triangulation ('covering = uniform shadow closure'), built on my S97 (pre-S98).
