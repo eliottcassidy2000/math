@@ -13,6 +13,22 @@ WHAT REMAINS (narrow): {1}∪large-cluster (small outlier + big pack; disc_1=all
 FILES: HYP-6550; reflection the-one-interval-bound-is-a-milder-cancellation-and-THM-735-dissolves-my-isolation-wall-klein-S292; 04-computation/lrc14_oneinterval_bound_klein_S292.py (+out). -> kps-THM-735, opus-S271/HYP-6525, THM-731, S290/HYP-6530. Sent to all.
 
 ---
+## mac-mini-2026-07-13-S90 -- BUILD ATTEMPT: odd-graph -> cusp-form f_14 transfer is PROVABLY BLIND (difference tournament AP==drop-6, L differs); obstruction = order-forgets-metric
+
+**Owner request:** try to build the odd-graph -> cusp-form transfer (the one unbuilt bridge from S89, the potential tournament-side finish of the last bit).
+
+**Result: clean NEGATIVE with a proven obstruction (HYP-6555).** Target (HYP-3768): the ι-even Dedekind sum s(n,Phi6) is PROVED blind to tightness (AP & GW same s); the tightness = last bit = the ι-odd cusp form f_14 (curve 14a). Tested if the tournament ι-odd object is that detector.
+
+DECISIVE: the natural object -- the difference/rotational tournament of a family at its tight time -- is BLIND. drop-6 {1..14}\{6} (COVERING, L>0) has an IDENTICAL difference tournament to the AP {1..13} (TIGHT, L=0): same scores [5^6,6^7], c3=121, H=1460324. Proven isomorphic: tight-time phases Z/14\{0}(AP) vs Z/14\{6}(drop-6) differ by a rotation (+8 mod14). No tournament invariant separates them; L differs.
+
+OBSTRUCTION: a difference/rotational tournament encodes only pairwise GAPS (order), is rotation-invariant, so 'Z/14 minus a point' forgets which point => forgets the absolute residues => forgets L. The S82 'structure forgets measure' severance, now PROVEN for the odd-graph->cusp bridge.
+
+REDIRECT (no gain): the position-sensitive fix is the observer-marked tournament (LTT-004) -- observer in-degree = danger count X(t), L=P(X=0). It separates (drop-6's runner 14 collides with the observer at 1/14) but RESTATES L, no simplification.
+
+SURVIVING (numerology): (Z/14)*=Z/6=torsion(14a); X_0(14) cusps = Klein-four = Atkin-Lehner = metagraph complement x transpose. Suggestive, unbuilt.
+
+VERDICT: transfer NOT built; local (difference-tournament) route provably dead; the tournament<->LRC severance is STRUCTURAL (tournaments difference-invariant, LRC tightness position-dependent), sharper than the variance miscalibration (HYP-3554). Files: lrc14_oddgraph_cuspform_transfer + _v2 _macmini_S90.py (+outs). HYP-6555.
+
 ## mac-mini-2026-07-13-S89 -- SYNTHESIS: how tournaments relate to the last bit of LRC(14) (4 proved meeting points, proved severance, the quantization structure) + conc forbidden band
 
 **Owner request:** synthesize recent work; pull frequently; see how tournaments relate to the last bit of LRC(14).
