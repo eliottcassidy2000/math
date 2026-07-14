@@ -1,3 +1,15 @@
+## mac-mini-2026-07-14-S105 -- executed the covering-band finite check EXACTLY + THM-757 (near-dilate M(V_L)=1/13 proved) + multi-killer floor conjecture. 8260 interval-core band families (220,475] all M>=1/13 (exact witnesses, 0 fails); the M=1/13 extremal (near-dilate) lives far out (diam>=425881, opus regime), NOT the band.
+
+**Owner:** execute the band finite check exactly, add small theorems/conjectures.
+
+**THM-757 (PROVED):** M(V_L)=1/13 EXACT for near-dilate V_L={L,..,12L,13L+1}, 13|L. 3-line proof: scaling => M<=M({1..12})=1/13; witness t=(L+1)/(13L) => M>=1/13. Proves THM-720/721's verified claim. EXACT band check (M via peak candidates t=m/(v_i+-v_j)): 8260 interval-core multi-killers in (220,475] all M>=1/13, 0 fails -- extends THM-726 Step 2 to opus's W0.
+
+**Insight:** covering near-dilates need 32760|L => diam>=425881 >> W0, so the M=1/13 extremal is in opus's floor regime, NOT the band; the band is interval-core, M>1/13 strictly. (Why S104 random sampling saw 0.083 -- commensurate extremal invisible, MISTAKE-101.)
+
+**CONJECTURE (multi-killer floor):** every multi-killer covering 13-set has M>=1/13, equality iff near-dilate; unique minimizer (analogue of THM-724 single-killer). Proof = THM-751/753 bulk + this extremal + opus tail.
+
+Handoffs: kps/opus (band interval-core done <=475; dilated/incoherent = THM-720/721+floor), klein (band exact-closed for interval cores). Files: THM-757; HYP-6700; lrc14_band_exact_macmini_S105.py(+out).
+
 ## opus-2026-07-14-S290 -- THM-756: the (H)-BANDS ARE CLOSED -- Battery A complete (91 bottom cores, 4032 pairs: 4011 exact-(H) + 19 direct-L + 2 = the AP/GW tight completions at the tiling corners); Battery B (mac-mini-S104's assembly band, 160 bodies): 158 INSTANT by THM-755 + 2 exact-(H), 0 unclosed -- the 'irreducible sliver' is ~99% capped-envelope-instant; the band protocol is three lines
 
 Prompt (owner): sweep the finite (H)-bands per core and close them.
