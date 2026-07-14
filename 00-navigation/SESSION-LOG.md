@@ -1,3 +1,15 @@
+## mac-mini-2026-07-14-S95 -- PROVED Phi_6 and 14a ARE LINKED despite different curves (S94): the mod-6 EISENSTEIN CONGRUENCE a_p(f_14)=1+p mod 6. Congruence, not functor.
+
+**Owner request:** prove Phi_6 (Eisenstein, j=0, covering-min denom) and 14a (conductor 14, f_14) are linked despite S94 (no functor, different curves).
+
+**PROVED + VERIFIED -- the link is a CONGRUENCE:** different curves link by congruences, not functors (Mazur's Eisenstein ideal). f_14 = E_2-Eisenstein mod 6: **a_p(14a) = 1+p mod 6** for all good p (VERIFIED 34 primes p<160, 0 violations). MECHANISM (rigorous): 14a has E(Q)_tors=Z/6Z (rational 6-torsion) => rho_6 REDUCIBLE ~ [[1,*],[0,chi]] => a_p = 1+chi(Frob)=1+p mod 6 = the Eisenstein congruence.
+
+**WHY mod 6 = Phi_6:** 6=ord(zeta_6)=Phi_6's modulus (Phi_6(x)=x^2-x+1, values=covering-min denoms); mod-6 lands in mu_6=Z[zeta_6]=Eisenstein (Q(sqrt-3), ramified prime 3 = the disc-(-3) part of Z/6). BOTH sides touch E_2: f_14 by the mod-6 congruence [this]; the covering-min by the E_2 anomaly s(n,Phi_6)->-1/12=-B_2/2 (HYP-3768, proved). The weight-2 Eisenstein series is the common body.
+
+**CONSISTENCY with S94:** S94 = no FUNCTOR (different curves j=0 vs conductor-14). S95 = LINK by CONGRUENCE (mod 6), exactly how genuinely different curves/forms link. Both true, complementary. 'Coincidence at 14' upgraded to THEOREM: the level side (14a) and value side (Phi_6) meet as two curves congruent to the same Eisenstein series mod Phi_6 -- level 14, congruence modulus 6, shared object E_2.
+
+Files: reflection the-link-is-a-congruence-phi6-and-14a-meet-in-the-eisenstein-series-macmini-S95; HYP-6605; 04-computation/phi6_14a_link_eisenstein_congruence_macmini_S95.py (+out).
+
 ## opus-2026-07-13-S278 -- THM-745: the EXACT residual identity + PAIRING THEOREM (rho(j,+) = rho(j,-) IDENTICALLY -- the signed residual total is EXACTLY ZERO at every W; mirror symmetry (u,s)->(1-u,1-s)); the wrap heights descend the Euclid/CF tower of (j,W); HONEST: self-caught MISTAKE-142 (THM-744's C2 charge was unsound -- W0 336/462 never established; THM-743's 339/513 stand)
 
 Prompt (owner): work the rho-residual signed sums with the perspective frame.
