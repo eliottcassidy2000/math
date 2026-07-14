@@ -1,0 +1,13 @@
+bound: conc <= (6/7 + 14/max(C))/|G(C)|  => conc<7 if |G(C)| > 6/49+2/max(C) (=0.12245 asympt)
+C                            |G(C)|     conc      max      BOUND     <7? conc<=bound
+[90, 91, 92, 93, 94, 95, 9  0.14165    3.300      101      7.030       n True
+[30, 31, 32, 33, 34, 35, 3  0.14221    3.344       41      8.429       n True
+[45, 46, 47, 48, 49, 50, 5  0.14357    3.295       56      7.711       n True
+[4, 6, 8, 10, 12, 14, 16,   0.07143    3.500       26     19.538       n True
+[30, 45, 60, 75, 90, 105,   0.07143    1.400      195     13.005       n True
+[3, 4, 5, 6, 7, 8, 9, 10,   0.11525    5.165       14     16.114       n True
+[23, 36, 53, 80, 114, 141,  0.16163    1.123      180      5.784       Y True
+
+=== what fraction of LARGE-SPEED covering {1}UC have |G(C)|>6/49 (=bound fires)? ===
+  large-speed covering: 344 total, bound fires (|G(C)|>6/49) for 213 (62%); residual |G(C)|<=6/49: 131
+  residual examples (|G(C)|,max): [(np.float64(0.1292), 43), (np.float64(0.1334), 40), (np.float64(0.1382), 42), (np.float64(0.1502), 44), (np.float64(0.1357), 44), (np.float64(0.1333), 79)]

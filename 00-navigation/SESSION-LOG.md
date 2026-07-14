@@ -1,3 +1,18 @@
+## klein-2026-07-13-S292 -- the large-speed one-interval bound: RIGOROUS single-speed conc≤(6/7+12/max)/|G(C)| (weak, thin margin); full margin = a MILDER cancellation (multi-speed); and kps-THM-735 DISSOLVES my S289 isolation wall (composition-order, not the families)
+
+Prompt (owner): prove the large-speed one-interval equidistribution bound.
+
+RIGOROUS SINGLE-SPEED LEMMA (verified, 0 violations): G(C)⊆G({c}) ⟹ on [0,1/14) only ONE speed's bad fraction 1/7 is removed ⟹ |G(C)∩[0,1/14)|≤3/49+6/(7c). With c=max(C): conc(C)=14|G(C)∩[0,1/14)|/|G(C)|≤(6/7+12/max(C))/|G(C)|, so L({1}∪C)>0 whenever |G(C)|>6/49+12/(7max(C)) (→6/49≈0.1224). SCOPE (honest): leading 6/7≈1 ⟹ thin margin; fires only for well-spread large clusters (|G(C)|>6/49, ~62% sampled) with large max; FAILS for |G(C)|≤6/49 (AP-dilate-like k·{2..13}, where conc is actually SMALL ~1.4 by dilation-spreading → opus dilation-blindness, my bound can't see it).
+
+WHY NOT ELEMENTARY: true conc~3.3 (2× under 7) uses full 12-speed equidistribution near 0. 2-speed inclusion-exclusion → threshold 0.105 but needs a pairwise bad-overlap bound |bad_c∩bad_{c'}∩[0,1/14)|≤~1/49 (coprime-equidistribution). Full margin = the cancellation restricted to [0,1/14) = a MILDER cancellation, not elementary. I did NOT close it.
+
+THE REFRAME THAT MATTERS: kps-THM-735 (simultaneous Bonferroni multi-peel, PROVED) DISSOLVES my S289 isolation wall. My S289 said the crude certificate fails for NON-ISOLATED covering sets. THM-735: "SEQUENTIAL peeling needs isolation because each peel faces a base carved by previous ones; SIMULTANEOUS peeling never carves ⟹ no isolation needed. The wall is a property of the composition ORDER, not the families." Peeling all j≤6 far at once vs a fixed body closes the clustered bodies my counterexamples were built from (flagship {1..10,c,a,b} PROVED). So my "non-isolated wall" was real for the sequential peel I used, an artifact for the natural simultaneous one — a limitation of ONE method, not a feature of the covering class. Stated plainly & honestly.
+
+WHAT REMAINS (narrow): {1}∪large-cluster (small outlier + big pack; disc_1=all-energy useless, j>6 far) — neither THM-735 nor my one-speed bound reaches it; opus-S271 true-disc certifies these per-family (12/13 peels); uniform = the milder one-interval cancellation. So large-speed leg = [bounded body+≤6 far: CLOSED, THM-735] + [{1}∪large-cluster: opus per-family; uniform=milder cancellation]. Elementary part done; last sliver = same equidistribution, localized.
+
+FILES: HYP-6550; reflection the-one-interval-bound-is-a-milder-cancellation-and-THM-735-dissolves-my-isolation-wall-klein-S292; 04-computation/lrc14_oneinterval_bound_klein_S292.py (+out). -> kps-THM-735, opus-S271/HYP-6525, THM-731, S290/HYP-6530. Sent to all.
+
+---
 ## mac-mini-2026-07-13-S89 -- SYNTHESIS: how tournaments relate to the last bit of LRC(14) (4 proved meeting points, proved severance, the quantization structure) + conc forbidden band
 
 **Owner request:** synthesize recent work; pull frequently; see how tournaments relate to the last bit of LRC(14).
