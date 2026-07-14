@@ -35,6 +35,25 @@ FILES: THM-746 canon; HYP-6620; lrc14_phase_sum_harvest_thm746_opus_S281.py (+.o
 residue class could bound it exactly if ever needed), kps (the min(743,746) form is the Lean
 target; all constants exact), mac-mini (vertices-as-runners = the metagraph recursion instinct
 landing in the analytic constants).
+## klein-2026-07-13-S301 -- FORMALIZED THM-744 in Lean, sorry-free: LRCShadowGap.lean builds green, axioms = [propext, Classical.choice, Quot.sound] only. The shadow-gap middle-witness is now VERIFIED formal content.
+
+Prompt (owner): work on formalizing.
+
+Formalized the shadow-gap middle-witness (THM-744) in the mathlib project: 04-computation/lean/TournamentH7/TournamentH7/LRCShadowGap.lean — 6 theorems, sorry-free, builds green (3123 jobs).
+
+STRUCTURE:
+ (1) dist_ge_of_mem: a real y∈[1/14,13/14] is ≥1/14 from every integer (nearest ints 0,1 at distances y, 1−y ≥ 1/14). The core, 5-line.
+ (2) lonely_of_reduce: c·t = N + y (N∈ℤ, y∈[1/14,13/14]) ⟹ LonelySpeed 14 c t (reduce |c·t−m| to |y−(m−N)| via dist_ge_of_mem).
+ (3) shadowGap_even: even c∈[e,m], 1<14eδ, 7mδ<3 ⟹ ‖ct‖=cδ∈[1/14,3/7], lonely (extract N=c/2, y=cδ).
+ (4) shadowGap_odd: odd c∈[1,m], δ≥0, 7mδ<3 ⟹ ‖ct‖=1/2−cδ>1/14, lonely (N=(c−1)/2, y=1/2+cδ).
+ (5) shadowGap_lonely: family theorem — every speed even-in-[e,m] or odd-in-[1,m] (incl. observer 1), 1<14eδ, 7mδ<3 ⟹ Lonely 14 v (1/2+δ).
+ (6) shadowGap_exists: m<6e ⟹ δ-window (1/(14e),3/(7m)) nonempty (exists_between + explicit subtraction b−a>0) ⟹ ∃ lonely t.
+
+Built on the repo's LonelyRunner.LRC14.LonelySpeed/Lonely (∀m, 1/n≤|s·t−m|). #print axioms shadowGap_lonely/shadowGap_exists = the 3 standard axioms, NO sorryAx. Handled mathlib v4.30.0 lemma renames (le_or_lt→by_cases; div_lt_div_iff→subtraction b−a>0 via field_simp). .lake build artifacts gitignored (only source committed).
+
+This banks the FIRST of the S285-300 real gains in verified form. THM-744 (crude factor 6 + parity refinement) now has a green, sorry-free Lean witness. NEXT formalization targets: the covering TILING assembly (THM-523+744+disc+735 combine); THM-739 (needs Fourier/B₂ — harder); THM-731 (measure/autocorrelation — harder).
+
+FILES: HYP-6640; THM-744 status (Lean note); LRCShadowGap.lean. -> THM-744, LRC14CertRoute. Sent to all.
 
 ---
 ## klein-2026-07-13-S300 -- CAPSTONE: the residue-pattern argument on the grid is EQUIVALENT to L>0 (verified 120/120), NOT a reduction. Every reformulation of the covering residual (S285-300) is provably equivalent to the multi-speed equidistribution; the map is complete. Real gains: THM-731/739/744 + grid-localization to bounded-height rationals.
