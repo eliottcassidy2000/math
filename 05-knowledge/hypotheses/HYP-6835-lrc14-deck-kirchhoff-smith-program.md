@@ -29,15 +29,20 @@ the regime-2 band domain into a bounded normalized (peel-relative) atlas and, wi
 THM-761 + THM-767, makes the ≥4-far endgame: [c* ≥ 43: sheets] ∪ [c* ≤ 42: bounded
 ρ-band protocol] ∪ [deck residues below].
 
-## 2. KCL-feasible packet classification (the Smith-diagram census)
+## 2. The chamber census (the Smith-diagram census — CORRECTED per MISTAKE-146)
 
-Maintained exact tilings need the absorption law — violated by 1399/1400 random
-7-sets. Classify the feasible packets exactly: directed capacity graphs on 7 nodes,
-capacities gcd(w_a,w_b)·[14·gcd | w_a+w_b], demand w_a at each node. Conjecture
-(BSST-shaped): feasibility forces a near-mirror-symmetric packet (w's in ± pairs mod
-14·gcd-structure with one small anchor), realizable only at bounded normalized shape;
-then covering constraints on V kill or classify the survivors — the deck's AP/GW
-corners. The matrix-tree flavor: which abstract capacity graphs are REALIZED by
+[Original "KCL-feasible packet classification" withdrawn with THM-767(4)'s
+absorption inequality: exact tilings are CHAMBER-LOCKED (strict-set event-crossing
+barrier), so no capacity condition governs persistence.] The corrected census
+object: the EVENT ARRANGEMENT on t0 (owner-a mesh g_a/w_a) partitions the circle
+into chambers; a family survives the deck attack only if the closed core-safe set
+lies INSIDE the union of fully-covered chambers, avoiding every chamber wall. So
+classify: (i) which chambers are fully covered (a finite lattice-point condition
+per chamber); (ii) when the core-safe set can avoid all walls — it cannot once any
+w_a/g_a exceeds the Lipschitz bound (THM-767 corollary, sharpened by the audit);
+(iii) the coincidence law (14·gcd | w_a+w_b, exactly gcd double-boundary events per
+window — stands as proved) as the classification of chamber-wall TYPES. The
+matrix-tree flavor survives re-aimed: which wall-type patterns are REALIZED by
 integer speed sets (cf. HYP-6785's realizability sidecar B3).
 
 ## 3. The s-threshold decks (7 ∤ c)

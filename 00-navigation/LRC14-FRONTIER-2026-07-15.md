@@ -67,7 +67,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | 12-speed common-factor core + one coprime exception | PROVED, all scales | THM-760 |
 | (13−r)-speed common-factor core + r ≤ 6 exceptions, any gcds | PROVED above exact thresholds (c ≥ 43 uniform; exact per-(r,c) sets; Σg_a budget) | THM-761 (opus-S299) + battery |
 | r = 7 deck stratum (7\|c-compatible strata) | PROVED above shape bound w_max > 7·Σ(P) — the event pierce; the S299 wall closed at its switching times | THM-767 (opus-S300) + battery |
-| maintained deck exact tilings | KCL absorption law (mirror capacities, 14·gcd \| w_a+w_b); violated by 1399/1400 random 7-sets | THM-767(4) |
+| maintained deck exact tilings | CHAMBER-LOCKED (strict-set event-crossing barrier; absorption inequality withdrawn, MISTAKE-146); coincidence law stands (14·gcd \| w_a+w_b, gcd hits/window) | THM-767(4) corrected + mac-mini audit |
 | raw fragmentation bound r_P ≤ B(c*) | REFUTED twice (exact falsifier + census); surviving peel-relative invariant ρ = v*/maxP measured ≤ 9.335, extremal at {1..12} | HYP-6830 correction; MISTAKE-145 |
 | primitive tight 12-speed locus | UNIFORMLY FINITE (`sum A<=78^11`), not classified | THM-763 |
 | hereditary primitivity of tight 12-sets | PROVED; every leave-one-out core is primitive | THM-765 |

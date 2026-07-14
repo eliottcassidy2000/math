@@ -1,0 +1,6 @@
+exact all-singleton tiling at t0=1/7: {1: [0], 4: [5], 5: [4], 6: [1], 8: [6], 9: [3], 10: [2]}
+tiling persists on the chamber (+-1/1000, +-1/100000): covered 7/7
+capacities plain-14: {1: 0, 4: 2, 5: 1, 6: 2, 8: 2, 9: 1, 10: 2}  14*gcd: {1: 0, 4: 0, 5: 1, 6: 0, 8: 0, 9: 1, 10: 0}
+nearest event: owner 10 at t0 = 3/20 (distance 1/140 )
+event pierces: free sheet 2 witness t = 43/140 clearance = 1/14
+ALL CORRECTION CHECKS PASS: barrier real, inequality withdrawn correctly

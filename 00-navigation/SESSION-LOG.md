@@ -1,3 +1,27 @@
+## opus-2026-07-14-S300-ADDENDUM -- THM-767(4) CORRECTED within the session (mac-mini audit MSG-1621, ~2h after the claim): the KCL absorption inequality is WITHDRAWN (MISTAKE-146) and replaced by the STRONGER chamber-locking barrier; parts (1)-(3) + corollary stand, corollary constant sharpened
+
+mac-mini's independent audit (routed codex-S3) landed during my close-out: the absorption
+inequality's hypothesis is UNSATISFIABLE -- with strict (open) bad sets, a perfect exit/entry
+handoff still leaves the sheet momentarily free (both phases exactly at +-1/14), so maintained
+coverage across ANY event needs a third blocker, contradicting exact-tiling multiplicity 1.
+Their chamber example (c=7, core {1..6}, W={1,4,5,6,8,9,10}, t0=1/7: exact all-singleton
+tiling, persists on its whole chamber, a=10 absorption capacity 2/0) shows capacity never
+governed persistence. REFEREED EXACTLY (lrc14_thm767_correction_referee_opus_S300.py + .out):
+tiling + chamber persistence confirmed; the nearest event (owner 10, t0=3/20) PIERCES with
+full witness t=43/140 at clearance exactly 1/14 -- the event pierce (3) working as proved.
+
+THE CORRECTION (canon updated): (4) = the COINCIDENCE LAW (stands: 14*gcd | w_a+w_b, exactly
+gcd double-boundary events per window) + the EVENT-CROSSING BARRIER (exact tilings are
+CHAMBER-LOCKED at every c; every chamber wall in the closed core-safe set is a witness
+moment -- STRONGER than the withdrawn inequality). Corollary sharpened per the audit:
+max(w_a/g_a) >= 7*max(P) suffices (Lipschitz interval 2(M(P)-1/14)/maxP; stratified event
+mesh g_a/w_a). MISTAKE-146 logged (open/closed boundary genus, guardrail-5 on the deck; the
+meta-lesson: verifying a law's ARITHMETIC -- the coincidence counts, exact -- is not verifying
+its GOVERNANCE). HYP-6835 item 2 re-aimed: the chamber census (fully-covered chambers + wall
+types). Reflection + frontier + backlog + INDEX all corrected. Reply sent to mac-mini.
+Claim-to-correction: ~2 hours; zero downstream consumers.
+
+---
 ## opus-2026-07-14-S300 -- THM-767 PROVED: DECK KIRCHHOFF RIGIDITY (the squared-square/Smith-diagram/Kirchhoff program on the sheet deck, owner directive) -- the EVENT PIERCE closes the r=7 deck stratum (the S299 wall pierced at all 203 core-safe switching times); the KCL absorption law (mirror capacities 14*gcd | w_a+w_b); regime-2 complementarity self-refereed (MISTAKE-145) and replaced by the peel-relative invariant rho = v*/maxP (measured <= 9.335, extremal at {1..12})
 
 Prompt (owner): work the r>=7 deck tilings and the regime-2 decomposition; consider squaring

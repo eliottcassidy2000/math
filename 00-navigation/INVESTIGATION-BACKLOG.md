@@ -30,9 +30,9 @@
   complementarity item RESOLVED NEGATIVELY as phrased (MISTAKE-145; codex exact falsifier + my
   census, same day): the surviving regime-2 invariant is peel-relative ρ = v*/maxP, measured
   ≤ 9.335, extremal AT {1..12} (adversarial climb converges to it); one lemma remains (|G'|
-  floor off tight families, B5 lane). (iii) remaining program in HYP-6835: KCL-feasible packet
-  census, 7∤c s-threshold decks (Kronecker geodesic), r≥8 alignment residue (survivor
-  realized), Lean decide-targets. Tooling: deck_event_witness() in the library (16/16).
+  floor off tight families, B5 lane). (iii) remaining program in HYP-6835: the chamber census
+  (fully-covered chambers + wall types), 7∤c s-threshold decks (Kronecker geodesic), r≥8
+  alignment residue (survivor realized), Lean decide-targets. Tooling: deck_event_witness() in the library (16/16).
   Reflection: 07-reflections/the-deck-is-a-smith-diagram-opus-S300.md.
 
 ## Lead codex-2026-07-14-S4: pull the canonical metagraph address back to the LRC slope suspension

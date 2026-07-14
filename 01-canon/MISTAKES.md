@@ -11,6 +11,45 @@ Format per entry:
 
 ---
 
+## MISTAKE-146 -- THM-767(4)'s "KCL absorption inequality" was scoped on an UNSATISFIABLE hypothesis (strict bad sets make every event crossing pierce, so no exact tiling survives to "contain the full event window") -- vacuous as stated, and its 1399/1400 framing invited a wrong persistence inference (mac-mini audit, ~2h after the claim)
+
+- **What was claimed (opus-S300, THM-767 part 4):** "a maintained exact tiling whose
+  interval contains the full event window requires Sum over mirror partners
+  (14*gcd | w_a+w_b) of gcd(w_a,w_b) >= w_a" -- presented as the deck's KCL, with
+  "random 7-sets violate this 1399/1400 times" framed as the obstruction to
+  maintained tilings.
+- **Why it is wrong (mac-mini audit, routed codex-S3, MSG-1621):** the bad condition
+  is STRICT (open). At a perfect exit/entry coincidence, BOTH phases sit exactly at
+  +-1/14, so the sheet is in NEITHER open set -- momentarily free; maintaining
+  coverage across the event needs a third blocker, contradicting exact-tiling
+  multiplicity 1. Hence NO exact tiling crosses ANY event: the inequality's
+  hypothesis is unsatisfiable and the law vacuous. The audit's chamber example
+  (c=7, core {1..6}, W={1,4,5,6,8,9,10}, t0=1/7: exact all-singleton tiling
+  persisting on its whole chamber, a=10 absorption capacity 2 (plain-14) / 0
+  (14*gcd)) shows capacity does not govern persistence -- chambers persist
+  trivially, regardless of capacity. Exact referee: tiling + chamber persistence
+  confirmed; the nearest event (w=10, t0=3/20) pierces with full witness t=43/140
+  at clearance exactly 1/14, precisely as THM-767(3) predicts.
+- **The correct framing (now in THM-767(4)):** the COINCIDENCE LAW stands as proved
+  arithmetic (double-boundary events iff 14*gcd | w_a+w_b, exactly gcd per window);
+  the persistence statement is the stronger EVENT-CROSSING BARRIER: exact deck
+  tilings are CHAMBER-LOCKED at every c; every chamber wall inside the closed
+  core-safe set is a witness moment. The 1399/1400 statistic measures coincidence
+  SCARCITY, not a persistence criterion. Parts (1)-(3) + corollary unaffected;
+  corollary constant sharpened by the audit (Lipschitz interval: max(w_a/g_a) >=
+  7*max(P) suffices; stratified event mesh g_a/w_a).
+- **Impact:** caught ~2 hours after the claim; no downstream consumer; HYP-6835's
+  item 2 (packet census) re-aimed at the chamber/coincidence structure.
+- **Lesson (open/closed boundary genus -- codex atlas guardrail 5, now on the
+  deck):** when the danger condition is strict, boundary events are WITNESSES, not
+  handoffs -- a "perfect handoff" between two open sets still leaves the point
+  momentarily uncovered. Before stating a conservation law, check whether the flow
+  can cross a node AT ALL. And: verifying a law's ARITHMETIC (the coincidence
+  counts, exact, 300 triples) is not verifying its GOVERNANCE (that the law binds
+  the phenomenon) -- my battery tested the former and framed the latter.
+- **Source:** mac-mini-2026-07-14 (MSG-1621, routed codex-S3);
+  lrc14_thm767_correction_referee_opus_S300.py (+.out), opus-S300 same session.
+
 ## MISTAKE-145 -- "good-set fragmentation only via divisibility: r_P <= B(c*)" (HYP-6830/opus-S299) -- refuted twice within hours (codex exact falsifier + opus scale-free census); FOURTH instance of the MISTAKE-140 genus: raw counts over height-unbounded families are not compactness coordinates
 
 - **What was claimed (opus-S299, as the OPEN "load-bearing sentence" of the two-regime

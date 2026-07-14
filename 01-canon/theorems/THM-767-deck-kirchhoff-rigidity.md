@@ -1,13 +1,14 @@
 ---
 id: THM-767
-title: Deck Kirchhoff rigidity — the balance identity, the zero-variance (unit-resistance) case 7g|c, the EVENT PIERCE closing the r=7 deck stratum (the witness lives at the switching times), and the KCL absorption law for maintained exact tilings
-status: PROVED (elementary; exact referee battery 04-computation/lrc14_deck_kirchhoff_rigidity_opus_S300.py, all parts)
-source: opus-2026-07-14-S300 (owner directive: r>=7 deck tilings via squaring-the-square / Smith diagrams / Kirchhoff)
+title: Deck Kirchhoff rigidity — the balance identity, the zero-variance (unit-resistance) case 7g|c, the EVENT PIERCE closing the r=7 deck stratum (the witness lives at the switching times), and the chamber-locking of exact deck tilings (the strict-set event-crossing barrier)
+status: PROVED parts (1)-(3) + corollary + coincidence law; part (4)'s ABSORPTION INEQUALITY WITHDRAWN (mac-mini audit, 2026-07-14 16:00, MISTAKE-146) and REPLACED by the stronger event-crossing barrier
+source: opus-2026-07-14-S300 (owner directive: r>=7 deck tilings via squaring-the-square / Smith diagrams / Kirchhoff); correction audit mac-mini-2026-07-14 (routed codex-S3)
 depends_on:
   - THM-761   # the sheet frame: fiber-exact core, bad-sheet grids
 related: [THM-745, THM-754, THM-760, HYP-6830, HYP-6835]
 verification: 04-computation/lrc14_deck_kirchhoff_rigidity_opus_S300.py
-  (+ 05-knowledge/results/lrc14_deck_kirchhoff_rigidity_opus_S300.out)
+  (+ 05-knowledge/results/lrc14_deck_kirchhoff_rigidity_opus_S300.out);
+  correction referee lrc14_thm767_correction_referee_opus_S300.py (mac-mini example exact)
 ---
 
 # THM-767 — Deck Kirchhoff rigidity
@@ -70,6 +71,10 @@ hence contains a closed interval of length ≥ 1/(7Σ_P). Therefore:
 
 > **Corollary (large exceptions self-destruct).** 7 | c, r = 7, strata 7g_a | c:
 > if max_a w_a > 7·Σ_P, then M(V) ≥ 1/14 — no search, no enumeration.
+> *Sharpened constant (mac-mini audit): the closed core-safe set contains the
+> Lipschitz interval of half-width (M(P) − 1/14)/max(P) around the core optimum —
+> for |P| = 6 that is length ≥ 2(1/7 − 1/14)/max(P) = 1/(7·max P) — and the
+> stratified event mesh is g_a/w_a, so* **max_a (w_a/g_a) ≥ 7·max(P)** *suffices.*
 
 **The S299 wall falls.** The realized wall instance (c = 7, P = {1..6},
 W = {12, 38, 72, 96, 151, 169, 188}: ALL sheets bad at the core optimum t0 = 1/7) is
@@ -78,29 +83,44 @@ full exact 1/14-witness. THM-761's residual note stands corrected: standing at t
 core OPTIMUM was the artifact; **the witness lives at the switching times** — the
 optimum is where the deck is most covered; the boundary events are where it tears.
 
-## (4) The KCL absorption law (maintained exact tilings)
+## (4) The coincidence law and the event-crossing barrier
+## [CORRECTED 2026-07-14 ~16:15 — the original "KCL absorption inequality" is WITHDRAWN; see MISTAKE-146]
 
 Exits of a live on the u-grid w_a·u ≡ c/14 (mod c) — current w_a per window of length
 c; entries of b on w_b·u ≡ −c/14 (mod c). Eliminating u:
 
-> **Coincidence law.** An exit of a and an entry of b share a u-value iff
-> **14·d_ab | w_a + w_b** (d_ab = gcd(w_a, w_b)), and then exactly **d_ab**
-> coincidences occur per window. (Verified exactly, 300 random triples, zero
-> mismatches.)
+> **Coincidence law (stands as proved).** An exit of a and an entry of b share a
+> u-value iff **14·d_ab | w_a + w_b** (d_ab = gcd(w_a, w_b)), and then exactly
+> **d_ab** coincidences occur per window. (Verified exactly, 300 random triples,
+> zero mismatches.) This classifies the deck's double-boundary events.
 
-In a maintained exact tiling (multiplicity ≡ 1 on a t0-interval), every interior exit
-must coincide with a partner entry (else multiplicity drops to 0; a prior entry would
-have made it 2). Hence:
+> **Event-crossing barrier (replaces the withdrawn inequality; STRONGER).** Because
+> the bad condition is STRICT (open), a perfect exit/entry handoff still leaves the
+> sheet momentarily free: at the coincidence instant both phases sit exactly at
+> ±1/14, so the sheet is in neither open set, and maintaining coverage across the
+> event would need a third blocker — contradicting multiplicity 1. At a
+> non-coincidence exit the multiplicity simply drops to 0. Hence **an exact deck
+> tiling cannot cross ANY event, at any c: exact tilings are CHAMBER-LOCKED** —
+> they persist only on the open chambers between consecutive events (owner-a event
+> mesh g_a/w_a in t0), and every chamber wall inside the closed core-safe set is a
+> witness moment.
 
-> **KCL.** A maintained exact tiling whose interval contains the full event window
-> requires, for every exception a: Σ_{b ≠ a, 14·d_ab | w_a + w_b} d_ab ≥ w_a — the
-> exit current must not exceed the mirror-partner absorption capacity.
-
-Random 7-sets violate this 1399/1400 times: maintained exact tilings require rigid
-14-mirror arithmetic packets (w_a + w_b ≡ 0 mod 14·gcd — the deck's discrete
-time-reversal, THM-745's mirror one level down). For 7 | c the KCL is subsumed by (3)
-— events pierce coverage outright, so no tiling survives its first event; the KCL's
-proper domain is the 7 ∤ c decks, where it constrains the s-slack maintained covers.
+**What was withdrawn and why (mac-mini audit, routed codex-S3).** The original text
+stated: "a maintained exact tiling whose interval contains the full event window
+requires Σ_{14·d | w_a+w_b} d_ab ≥ w_a." The barrier above makes that hypothesis
+UNSATISFIABLE (no exact tiling survives its first event), so the inequality was
+vacuous as scoped — and misleading: the audit's chamber example (c = 7, core {1..6},
+W = {1, 4, 5, 6, 8, 9, 10}, t0 = 1/7) is an exact tiling with all-singleton bad
+sheets persisting on its whole chamber while the a = 10 absorption capacity is 2
+under the plain-14 form and 0 under the 14·gcd form — capacity does not govern
+chamber persistence (nothing does; chambers are trivially static). Exact referee of
+the example: tiling confirmed; the nearest event (owner w = 10, t0 = 3/20, distance
+1/140) pierces the cover exactly as (3) predicts, with full witness t = 43/140 at
+clearance exactly 1/14. The mirror arithmetic (14-divisibility of w_a + w_b — the
+deck's time-reversal, THM-745 one level down) remains meaningful as the
+classification of WHERE double-boundary events occur, feeding the chamber census;
+the "1399/1400 generic violation" statistic describes coincidence SCARCITY, not a
+persistence criterion.
 
 ## (5) Scope, residual, and what this closes
 
@@ -112,14 +132,16 @@ proper domain is the 7 ∤ c decks, where it constrains the s-slack maintained c
 - **Residual (honest):** (i) r ≥ 8 — the single-event pierce fails structurally
   (Σ ≥ c persists; a surviving cover at an event moment is realized in the battery:
   P = {5,7,8,13,14}, W = {108,169,143,213,206,197,30,162}, t0 = 19/216); needs
-  (r−7)·(c/7)/g + 1-fold simultaneous events or the KCL route. (ii) 7 ∤ c decks —
-  the s-threshold alignment problem; the KCL constrains but does not yet close.
-  (iii) the bounded-shape residue: all w_a ≤ 7Σ_P with 7 | c — a normalized finite
-  family per shape, exactly the right feed for the band/blocker machinery.
-  (iv) strata with 7g_a ∤ c — descend c → 7·lcm-adjusted scales or handle by
-  THM-761's budget.
+  (r−7)·(c/7)/g + 1-fold simultaneous events. (ii) 7 ∤ c decks — the s-threshold
+  alignment problem; there the enemy has slack, covers (not exact tilings) can cross
+  events via multiplicity buffers, and the chamber census + s-threshold analysis of
+  HYP-6835 governs. (iii) the bounded-shape residue: all w_a/g_a ≤ 7·max(P) with
+  7 | c — a normalized finite family per shape, exactly the right feed for the
+  band/blocker machinery. (iv) strata with 7g_a ∤ c — descend c → 7·lcm-adjusted
+  scales or handle by THM-761's budget.
 - **The tournament/engineering thread:** the deck's incidence is r circulant rows;
-  the event calculus is its boundary operator; KCL is literally a flow-conservation
-  statement on the Smith network (nodes = exceptions, capacities = gcd·[14-mirror]).
-  The free sheet is the source; the pierce says the source appears the moment any
-  current switches.
+  the event calculus is its boundary operator; the event arrangement partitions t0
+  into chambers (the deck's Smith diagram: nodes = events, chambers = wires), exact
+  tilings are chamber-locked, and every chamber wall in the closed core-safe set is
+  a witness. The free sheet is the source; the pierce says the source appears the
+  moment any current switches.
