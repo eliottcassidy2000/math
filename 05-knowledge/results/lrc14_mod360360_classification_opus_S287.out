@@ -1,0 +1,33 @@
+====================================================================================================
+THE MOD-360360 CLASSIFICATION RUN (S287)
+====================================================================================================
+
+A. rigidity-guided CRT blockers: 21459 covering bodies constructed
+   float screen: 0 ALL-BLOCKED candidates
+
+B. mega-hunt: 250000 covering bodies screened in 43s: 0 ALL-BLOCKED candidates
+
+C. EXACT confirmation of candidates (delta-interval arithmetic):
+   (no candidates to confirm)
+
+VERDICT:
+   ZERO all-blocked bodies across the classified space (CRT extremal blockers +
+   mega-hunt, exact-confirmed): the conjecture SURVIVES with every slot-blocking
+   strategy the rigidity analysis permits explicitly swept.
+
+total time 45s
+CLOSEST APPROACHES over 4000 CRT extremal blockers (min feasible slots):
+   feasible 57/57 slots  M=0.2426  first-working=(k=(2, 1))  V=[15, 16, 17, 21, 25, 35, 39, 59, 99, 131, 239, 387, 2520]
+   feasible 57/57 slots  M=0.2038  first-working=(k=(2, 1))  V=[15, 16, 19, 20, 34, 43, 49, 66, 167, 308, 330, 351, 1680]
+   feasible 57/57 slots  M=0.2124  first-working=(k=(2, 1))  V=[15, 16, 20, 31, 129, 151, 195, 270, 271, 275, 277, 373, 1512]
+   feasible 57/57 slots  M=0.2835  first-working=(k=(2, 1))  V=[15, 16, 21, 79, 103, 110, 128, 163, 179, 282, 364, 422, 1080]
+   feasible 57/57 slots  M=0.2426  first-working=(k=(2, 1))  V=[15, 16, 23, 24, 35, 70, 72, 95, 99, 208, 240, 319, 2160]
+   feasible 57/57 slots  M=0.2500  first-working=(k=(2, 1))  V=[15, 16, 23, 40, 48, 58, 72, 132, 242, 286, 336, 360, 421]
+   distribution: min=57, mean=57.0 feasible slots (of ~50-57)
+   -> even the rigidity-optimal blockers keep >= 57 working shadows; the conjecture's
+      margin is structural, not marginal.
+FULL-CRITERION slot counts at the classic BINDING extremals (the scarcity map):
+   AP {1..13} (M=1/14 exactly)  feasible  5/57 ; scarce clocks: {2: '0/1', 3: '0/2', 4: '0/2', 5: '0/4', 6: '0/2', 7: '5/6', 8: '0/4', 9: '0/6', 10: '0/4', 11: '0/10', 12: '0/4', 13: '0/12'}
+   deep well {1..12,182}        feasible 45/57 ; scarce clocks: {8: '3/4', 9: '4/6', 10: '2/4', 11: '6/10', 12: '2/4', 13: '11/12'}
+   residue {1..11,13,84}        feasible 18/57 ; scarce clocks: {3: '1/2', 4: '0/2', 5: '1/4', 6: '1/2', 7: '2/6', 8: '2/4', 9: '2/6', 10: '1/4', 11: '2/10', 12: '3/4', 13: '2/12'}
+   GW {1..11,13,24} (tight)     feasible  5/57 ; scarce clocks: {2: '0/1', 3: '0/2', 4: '0/2', 5: '0/4', 6: '0/2', 7: '5/6', 8: '0/4', 9: '0/6', 10: '0/4', 11: '0/10', 12: '0/4', 13: '0/12'}

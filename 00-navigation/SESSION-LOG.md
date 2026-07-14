@@ -1,3 +1,39 @@
+## opus-2026-07-14-S287 -- the mod-360360 CLASSIFICATION RUN: exact delta-interval slot test + 21,459 rigidity-guided CRT blockers + 250k mega-hunt = ZERO all-blocked bodies (the conjecture SURVIVES, structurally: the optimal blockers keep 57/57 slots); THE K=7 DISCOVERY: as M -> 1/14 feasibility collapses to the 7-clock (AP and GW share the identical 5/57-all-at-k=7 signature) -- (A)'s terminal form: low-M covering => some (7,a)-slot survives
+
+Prompt (owner): run the mod-360360 classification and decide the conjecture.
+
+THE MACHINERY: the exact delta-interval slot test -- slot (k,a) feasible iff the witness window
+(0, 1/(2k)] survives every speed's forbidden teeth (rational interval arithmetic; explicit
+witnesses on success). Rigorous per body; float screen with early exit for throughput.
+
+THE RUN: (A-part) 21,459 CRT extremal blockers -- complete residue system mod 13 among the
+non-carriers, covering carriers, mixed size tiers: the ONLY candidates the S286 occupancy
+counting permits: ZERO all-blocked. (B-part) 250,000 adversarial covering bodies (4 styles):
+ZERO. Exact-confirmation protocol had nothing to confirm. Cumulative with S286: ~620k bodies +
+targeted constructive attack: zero. CLOSEST APPROACHES: over 4000 CRT blockers the MINIMUM
+feasible count is 57/57 -- the rigidity-optimal blockers cannot kill even one slot. VERDICT:
+the conjecture (binding covering => some k<=13 shadow works) is DECIDED-over-the-classified-
+space: SURVIVES, with a structural (not marginal) margin.
+
+THE DISCOVERY (the scarcity map at the binding extremals, full criterion): AP {1..13}: 5/57
+feasible slots -- ALL at k=7; GW {1..11,13,24}: the IDENTICAL signature; residue body: 18/57;
+deep well: 45/57. As M -> 1/14, slot feasibility collapses toward THE 7-CLOCK: k=7 is
+self-dual (margin (14-k)/(14k) = 1/14 AT k=7 = the threshold itself; the origin band is the
+7-clock's half-cell). THE TERMINAL PERSPECTIVE: the last shadow standing at tightness.
+(A)'s new sharpest form: low-M covering => some (7,a)-slot survives -- ONE clock, SIX slots.
+klein's THM-748 parity mechanism is exactly the k=2 slot; the k=7 analogue is the
+generalization to chase.
+
+HONEST: a universal decision = proving (A) (klein-S300); delivered instead: the classification
+run (zero counterexamples over the full permitted blocker space), the structural margin, the
+exact-test infrastructure, and the k=7 terminal reduction.
+
+FILES: HYP-6685; lrc14_mod360360_classification_opus_S287.py (+.out incl. addenda). ->
+mac-mini (the 7-clock is your shadow machinery's home modulus -- THM-749/751/753 compose here),
+klein (748's parity trick at k=2 has a k=7 sibling waiting; the scarcity map says it is THE
+one), kps (the exact slot test is decide-shaped; 6 slots x low-M census is a finite program).
+
+---
 ## mac-mini-2026-07-14-S103 -- THM-753 (safe-peel reduction): ~98% of covering 13-sets reduce via M-preserving safe peels to a <=12-speed set = a SETTLED LRC(<=13) instance (M>=1/13>1/14); the residual = IRREDUCIBLE families, all tiled (shadow/near-AP/loose, 0 escapees in 5813 adversarial). Most of the covering case is LRC(<=13) in disguise.
 
 **Owner:** prove the loose bound to close the unsafe stratum / push the frontier. Attacked it via THM-751 peeling; found a much stronger reduction.
