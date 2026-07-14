@@ -1,0 +1,19 @@
+AP cluster C={2..13} (S={1..13}): conc=7.0000 (claim 7), |G(C)|=0.07143, L=|G|(1-conc/7)=0.00000
+
+Bounded covering {1}uC census -- conc and the band edge:
+  77 covering families in {2..16}; top conc (closest to the AP wall 7):
+    conc=6.1770  L>=0.00816  S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+    conc=5.1646  L>=0.03022  S=(1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+    conc=5.1084  L>=0.02267  S=(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14)
+    conc=5.0421  L>=0.02959  S=(1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+    conc=5.0155  L>=0.02423  S=(1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+    conc=4.9629  L>=0.01833  S=(1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 16)
+    conc=4.9241  L>=0.02581  S=(1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+    conc=4.8529  L>=0.02318  S=(1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15)
+
+  SUP covering conc = 6.1770;  FORBIDDEN BAND = (6.177, 7);  uniform margin 1-sup/7 = 0.1176
+  => covering => L >= 0.1176 * |G(C)| > 0 on this stratum (the 'shared cancellation', quantified)
+
+Tournament reading (HYP-4306 quantization): AP=regular circulant C_13({1..6}), the free (Z/13)* orbit,
+  = ground rung conc=7. Covering breaks (Z/13)-regularity => forced off by a full band to conc<=sup.
+  The gap (sup,7) is the tournament forbidden band = W(n) odd-cycle cancellation, LRC-side.

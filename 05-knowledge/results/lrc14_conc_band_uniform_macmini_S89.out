@@ -1,0 +1,20 @@
+sup covering conc vs Vmax (edge family = closest covering set to the AP wall 7):
+  Vmax=15: sup conc=5.0419  margin(1-sup/7)=0.2797  edge=(1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+  Vmax=16: sup conc=4.9632  margin(1-sup/7)=0.2910  edge=(1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 16)
+  Vmax=17: sup conc=5.5740  margin(1-sup/7)=0.2037  edge=(1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 17)
+  Vmax=18: sup conc=5.3901  margin(1-sup/7)=0.2300  edge=(1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 14, 18)
+
+near-AP bounded covering {1..14}\{x} -- conc by dropped speed x (the apex structure):
+  drop-2: conc=5.1646  L>=0.03022   ()
+  drop-3: conc=4.6936  L>=0.03008   ()
+  drop-4: conc=5.0149  L>=0.02423   ()
+  drop-5: conc=4.9242  L>=0.02581   ()
+  drop-6: conc=6.1768  L>=0.00816   (closest to AP wall)
+  drop-7: conc=5.1082  L>=0.02268   ()
+
+far families (handled by disc_v/THM-733-5) -- conc far below the band edge:
+  deep well {1..12,182}: conc=5.0342  |G(C)|=0.08513  L>=0.02391
+  near-AP resid {1..11,13,84}: conc=6.4364  |G(C)|=0.06657  L>=0.00536
+
+=> if sup conc stays bounded < ~6.2 as Vmax grows, the band is a UNIFORM gap (quantization);
+   the AP (conc=7, regular circulant) is isolated above every covering family = the last bit.
