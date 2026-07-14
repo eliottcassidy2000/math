@@ -83,6 +83,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | prime lens `c=7`, any unramified owner count | Exact token polynomial: coverage iff `X^7-X` divides `product(X-k_a)`; seven-owner exact states map to all 25 masks at heptagon node `n7-a267`; any covered `r=8` wall is a simple event with a seven-owner heptagon stalk | THM-773 + exact 5,040-state/3,003-profile audits |
 | prime-lens endpoint transport | Pairwise midpoint clocks are centered mechanical words with an Euclidean parity cocycle; centered Beatty ranks reconstruct every simultaneous wall and drive the exact `F_7` skew product.  The named r=8 row has 10 simple covered walls with palindromic owner word `162,108,108,206,197,197,206,108,108,162` | THM-778 + 6,400-pair/five-movie exact audit |
 | prime-lens r=8 blocking chain | Full blocking is exactly piece surjectivity + wall rainbow + no simultaneous walls; consecutive wall owners must follow the collision-pair hop chain.  Adversarial census finds runs through 5, but a universal exit bound remains open.  THM-778's named ten wall hits are all isolated runs. | THM-779 proved criterion; `K0=5` verified, not universal |
+| eight-owner `c=7` buffer rigidity | The chamber/rainbow condition is now subsumed by THM-779's integer token-walk criterion.  The universal `1/7+O(gcd/w)` partner-buffer law remains VERIFIED; adversarial runs reach 5, but a uniform finite exit bound is OPEN | HYP-6840 + THM-779 |
 | seven-owner deck defect / ramified residue | Exact identity `F=Q+Omega-sigma`; exact tilings are chamber-locked, KCL necessity is WITHDRAWN, and mirror coincidence is diagnostic. Primitive `c=21` row realizes `(0,12,12,0)` | THM-771 + corrected THM-767 + exact audits |
 | raw fragmentation bound r_P ≤ B(c*) | REFUTED twice (exact falsifier + census); surviving peel-relative invariant ρ = v*/maxP measured ≤ 9.335, extremal at {1..12} | HYP-6830 correction; MISTAKE-145 |
 | safe-measure floor / normalized band bridge | `rho<=12/(pi|G'_P|)` and `|G'_P|>=1/(91 maxP)` PROVED; exact `maxP<=18` floor is `7/858`, unique at `{1,...,13}\{6}`; the same global floor is CONJECTURAL | THM-777 |
@@ -95,7 +96,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
 | two-sheet deletion recursion | PROVED every imprimitive deletion is a factor-2 seam; exact first `Z/4` tiling and finite dyadic descent to a hereditarily primitive divisor-complete core | THM-775 |
 | ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
-| n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, and the full two-sheet speed box through 100 are empty; unbounded shallow descent, uniform folded noncoverage, and higher-sheet packets remain | THM-759/763/765/766/768--772/774--776; HYP-6820 |
+| n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, and the full two-sheet speed box through 100 are empty; unbounded shallow descent, uniform folded noncoverage, and higher-sheet packets remain | THM-759/763/765/766/768/769/770/772/774/775/776; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -193,9 +194,10 @@ sheets and then a canonical binary assigned-ownership tower ending at a
 hereditarily primitive quotient.  THM-776 reverses the remaining finite
 quantifiers: every odd pair through height 100 induces a bad-atom hypergraph
 of transversal number 12, too large for the ten-speed quotient core.  The
-uniform residual is now a scale-free transversal/noncontainment theorem (or a
-descent of the dyadic terminal core into that finite base), not an unstructured
-search over ten-even/two-odd tuples.
+uniform residual is now a scale-free transversal/noncontainment theorem (or
+quantitative seam-guard bounds that put the reconstructed ten-core/full packet
+inside a certified base), not an unstructured search over ten-even/two-odd
+tuples.
 
 The exact max-peel tooth atlas rules out a tempting shortcut.  In the
 exhaustive slice `A subset [1,20]`, `M(A\{w})>1/12`, `M(A)<=1/10`, all

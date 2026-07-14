@@ -163,15 +163,17 @@ THM-774 additionally closes every quotient core `U subset [1,19]` with odd
 exceptions unbounded, complementary to THM-776's larger bounded-height square.
 The later safe-measure theorem that collided with the first-pushed folded-
 diamond THM-774 was preserved and renumbered THM-777.  THM-773's seven-sheet
-token polynomial and the claimed THM-778 centered-Christoffel continuation
-were connected to the two-primary work through a common labelled sheet-
-incidence skew product.
+token polynomial, HYP-6840's verified one-seventh buffering law/eight-owner
+rainbow obstruction, and the claimed THM-778 centered-Christoffel continuation
+were connected to the two-primary work through a common labelled
+sheet-incidence skew product.
 
 The exact remaining `s=2` target is now a scale-free transversal/noncontainment
-theorem for a primitive divisor-complete ten-comb, or a quantitative theorem
-forcing THM-775's terminal quotient into THM-774/776's complementary finite
-bases.  Higher shallow lifts and higher-sheet colour packets remain separate
-open branches.  Runner tournaments are telemetry here: the faithful vertices
+theorem for a primitive divisor-complete ten-comb, or quantitative bounds on
+all THM-775 seam guards strong enough to put the reconstructed ten-core/full
+packet inside THM-774/776's complementary finite bases.  Higher shallow lifts
+and higher-sheet colour packets remain separate open branches.  Runner
+tournaments are telemetry here: the faithful vertices
 are bad atoms/proof obligations, with core speeds as incident killers and the
 binary safe-child map as recursion sidecar.
 

@@ -82,9 +82,10 @@
   nine-core collar
   `E_(1/13)(U^-) subset D_R union {Q>=11/13}` together with
   `E_(1/12)(U^-) intersect D_R intersect {Q<5/6} nonempty`.  Prove this
-  impossible, prove a scale-free transversal lower bound beyond ten, or force
-  THM-775's terminal quotient into THM-774/776's complementary finite bases.
-  Then treat the `s=3` three-colour edge.  The exact object is loose-set
+  impossible, prove a scale-free transversal lower bound beyond ten, or bound
+  all dyadic seam guards strongly enough that the reconstructed `U` or `A`
+  lies in THM-774/776's complementary finite bases.  Then treat the `s=3`
+  three-colour edge.  The exact object is loose-set
   component x sheet-owner incidence with closed endpoints, not a residue
   condition at one binding point.
 - **Metric bridge:** for each core-safe component `J`, retain

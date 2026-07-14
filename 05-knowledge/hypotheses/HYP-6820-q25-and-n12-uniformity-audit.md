@@ -17,7 +17,6 @@ depends_on:
   - THM-768
   - THM-769
   - THM-770
-  - THM-771
   - THM-772
   - THM-774
   - THM-775
@@ -29,6 +28,7 @@ related:
   - HYP-6785
   - HYP-6800
   - HYP-6815
+  - THM-771
   - MISTAKE-143
 ---
 
@@ -371,8 +371,9 @@ The uniform theorem now has two explicit residuals:
    owner-CSP by a scale-free coherence argument.
 2. **Deep colour cover.**  At `s=2`, prove a scale-free transversal lower
    bound above ten for the folded bad-atom hypergraph beyond THM-774's
-   `max(U)<=19` unbounded-odd slice and THM-776's full height-100 slice, or show
-   that THM-775's dyadic tower descends into one of those finite bases.  At
+   `max(U)<=19` unbounded-odd slice and THM-776's full height-100 slice, or add
+   quantitative bounds on every dyadic seam guard strong enough to place the
+   reconstructed ten-core/full packet inside one of those finite bases.  At
    higher sheets, classify and rule out THM-769's persistent colour covers,
    beginning with the explicit `s=3` equality shells of THM-772.
 

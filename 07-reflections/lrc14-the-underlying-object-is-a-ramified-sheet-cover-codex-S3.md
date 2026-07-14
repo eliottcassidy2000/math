@@ -322,11 +322,11 @@ historical clutter:
 
 There are two plausible proof shapes.  One is a scale-free lower bound of at
 least eleven (the finite atlas suggests twelve) on the relevant transversal
-number.  The other is a descent theorem: use the dyadic tower until the terminal
-hereditarily primitive quotient is forced into a normalized finite base.  A
-proof using only the measure cap `mu(H)<=8/117` would need a matching uniform
-lower bound for `mu(G_U)`; absent that, it loses the incidence pattern that the
-exact atlas shows is decisive.
+number.  The other is a quantitative descent theorem: bound every seam guard
+and then reconstruct the original ten-core/full packet inside a certified
+finite region.  A proof using only the measure cap `mu(H)<=8/117` would need a
+matching uniform lower bound for `mu(G_U)`; absent that, it loses the incidence
+pattern that the exact atlas shows is decisive.
 
 ## The two-primary and seven-primary tournament threads meet
 
@@ -342,6 +342,23 @@ different only if the tournament is treated as the primary object.
 - In both cases, equal tournament nodes can have different futures because
   endpoint order, owner identity, metric base position, and carry/monodromy
   were quotiented away.
+
+The new eight-owner deck hunt HYP-6840 sharpens the same lesson.  At `c=7`,
+zero variance turns persistent coverage into a finite chamber condition: the
+eight owner tokens must hit all seven sheets on every chamber piece, and at an
+owner wall the other seven tokens must form a perfect rainbow.  The verified
+buffering law says that any partner covers asymptotically one seventh of an
+owner's exits, independent of its gcd stratum up to the exact gcd error.
+Therefore full blocking would require eight simultaneous near-disjoint
+seven-fold arithmetic-progression partitions.  Greedy, random, and annealed
+searches found no such object, but this is a quantified no-go hunt rather than
+a nonexistence theorem.
+
+This suggests a useful seven-primary obstruction rank: chamber collision debt
+plus wall rainbow defect.  It retains exactly what the two standard tournament
+gauges erase, and it is the prime-seven analogue of transversal deficiency in
+THM-776.  Classifying zero-rank states is now an exact-covering-system problem,
+not a question about whether one tournament node is sufficiently cyclic.
 
 The common object is therefore a finite-state skew product over the circle:
 
