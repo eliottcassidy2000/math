@@ -1,7 +1,7 @@
 ---
 id: THM-774
 title: Folded-diamond obstruction for the two-sheet equality packet
-status: CLAIMED (number reserved; exact proof and sharpness audit in progress)
+status: PROVED (elementary; exact independent atom and measure audit)
 source: codex-2026-07-14-S3
 depends_on:
   - THM-769
@@ -12,33 +12,271 @@ related:
 
 # THM-774 — Folded-diamond obstruction
 
-This stub reserves the theorem number for a metric refinement of THM-769's
-two-exception equality packet.  Write
+This theorem is a metric refinement of THM-769's two-exception equality
+packet.  Write
 
 ```text
 A = 2U union {x,y},       |U|=10,       x>y positive odd,
 a = (x+y)/2,              b = (x-y)/2.
 ```
 
-The intended exact statement is that the two eligibility and opposite-colour
-conditions of THM-769 are together equivalent to
+Put
+
+```text
+G_U = {tau in R/Z : phi_U(tau)>1/13}.
+```
+
+## 1. The exact folded diamond
+
+For every `tau in R/Z`, the two eligibility and opposite-colour conditions of
+THM-769,
+
+```text
+||x tau|| <= 2/13,       ||y tau|| <= 2/13,
+epsilon_x(tau) != epsilon_y(tau),
+```
+
+are together equivalent to the single closed inequality
 
 ```text
 ||a tau|| + ||b tau|| >= 11/13.
 ```
 
-Thus a tight packet forces the entire strict loose set `G_U` into a closed
-folded diamond.  The diamond has Lebesgue measure at most `8/117`, uniformly
-over distinct odd `x,y`, with equality for reduced ratio `x:y=9:1` (and its
-common odd dilates).  Consequently every tight two-sheet packet must satisfy
+There is also a clearance-level form of the same fold.  If
+
+```text
+B_(x,y)(tau)
+  = max_(j in {0,1}) min(||x(tau+j)/2||,||y(tau+j)/2||),
+Q_(a,b)(tau) = ||a tau||+||b tau||,
+```
+
+then, without any eligibility hypothesis,
+
+```text
+B_(x,y)(tau) = (1-Q_(a,b)(tau))/2.                         (1a)
+```
+
+Thus `Q>=11/13` says exactly that neither of the two lifts can have both odd
+runners clearer than `1/13`.
+
+Consequently `A` is tight if and only if
+
+```text
+G_U subset H_(a,b),
+H_(a,b) = {tau : ||a tau||+||b tau|| >= 11/13}.             (1)
+```
+
+In particular every point of `G_U` also satisfies the two individual
+anti-tooth inequalities
+
+```text
+||a tau|| >= 9/26,       ||b tau|| >= 9/26.                (2)
+```
+
+### Proof
+
+Put `epsilon=2/13`.  Suppose first that the two odd runners are eligible and
+their unique nearest integers `N_x,N_y` have opposite parity.  Then
+
+```text
+M = (N_x+N_y)/2,       N = (N_x-N_y)/2
+```
+
+are half-integers.  With
+
+```text
+e_a = a tau-M,       e_b = b tau-N,
+```
+
+the signed errors of the two odd runners are `e_a+e_b` and `e_a-e_b`.
+The elementary identity
+
+```text
+max(|e_a+e_b|,|e_a-e_b|) = |e_a|+|e_b|                   (3)
+```
+
+therefore says that both odd errors have magnitude at most `epsilon` exactly
+when `|e_a|+|e_b|<=epsilon`.  Since `epsilon<1/2`, `M,N` are the unique nearest
+half-integers to `a tau,b tau`.  If
+
+```text
+h_m(tau)=dist(m tau,Z+1/2)=1/2-||m tau||,
+```
+
+this is `h_a+h_b<=2/13`, equivalently (1).
+
+Conversely, choose the unique nearest half-integers to `a tau,b tau` under
+the inequality in (1).  Their sum and difference are integers of opposite
+parity, (3) makes them the nearest integers to `x tau,y tau`, and both errors
+are at most `2/13`.  This recovers exactly THM-769's closed eligibility and
+opposite-colour predicate, including its endpoints.  The tightness criterion
+now follows from THM-769.  Finally each norm in (1) is at most `1/2`, so the
+other is at least `11/13-1/2=9/26`, proving (2).
+
+For completeness, (1a) is a global version of the same calculation.  Choose
+signed representatives `r,s` of `x tau/2,y tau/2`, and put
+`u=min(|r|,|s|)`, `v=max(|r|,|s|)`.  The two lift-clearance minima are `u`
+and `1/2-v`, while
+
+```text
+||r+s||+||r-s|| = min(2v,1-2u).
+```
+
+Therefore
+
+```text
+1-2B = min(1-2u,2v) = Q,
+```
+
+as claimed.  This signed-representative identity is essential: replacing it
+by an unsigned phase sum before taking circle norms is not valid.
+
+## 2. Exact measure formula
+
+Let `mu` be normalized Lebesgue measure on `R/Z`.  Put
+
+```text
+g = gcd(a,b) = gcd(x,y),       alpha=a/g,       beta=b/g,
+r = alpha-beta = y/g,          s=alpha+beta = x/g,
+n = floor(2 alpha/13 + 1/2).
+```
+
+Then `alpha>beta` are coprime and of opposite parity, and
+
+```text
+mu(H_(a,b))
+  = 2/(r s) sum_(j=1)^n min(4r/13, 4 alpha/13-(2j-1)).     (4)
+```
+
+### Proof
+
+Multiplication by `g` preserves normalized measure, so it is enough to use
+the reduced pair `alpha,beta`.  The set
+
+```text
+h_alpha(tau)+h_beta(tau) <= 2/13
+```
+
+lies in the disjoint `2/13`-neighbourhoods of the `alpha` half-grid points
+
+```text
+tau_k=(2k+1)/(2 alpha).
+```
+
+At these centres the positive values of `2 alpha h_beta(tau_k)` below
+`4 alpha/13` are precisely
+
+```text
+q=1,3,...,2n-1,
+```
+
+each occurring twice.  This is the permutation of the odd half-grid residues
+induced by coprimality and opposite parity.
+
+Fix such a value `q`.  On the side moving toward the adjacent `beta`
+half-grid point, `h_beta` first falls with slope `beta` and then rises; on the
+other side it rises immediately.  Adding the two affine pieces shows that
+the component at either of the two corresponding centres has length
+
+```text
+1/(r s) min(4r/13, 4 alpha/13-q).                          (5)
+```
+
+The first term in (5) is the branch that crosses the `beta` half-grid point;
+the second is the branch that stops before it.  Summing (5) over the two
+centres for every qualifying odd `q` gives (4).
+
+## 3. The sharp universal cap
+
+Uniformly over all distinct positive odd `x,y`,
+
+```text
+mu(H_(a,b)) <= 8/117.                                     (6)
+```
+
+The bound is sharp: equality is attained by the reduced pair
+
+```text
+(alpha,beta)=(5,4),       equivalently x:y=9:1,
+```
+
+and hence by its common odd dilates.  Therefore every tight two-sheet packet
+obeys the new necessary condition
 
 ```text
 measure(G_U) <= 8/117.
 ```
 
-The proof carrier is the pair of signed errors from the nearest half-integers
-to `a tau` and `b tau`: the two odd-runner errors are their sum and difference,
-so the maximum error is the `l1` norm.  The sharp measure bound is an exact
-half-grid tooth count after reducing by `gcd(a,b)`.  Until the endpoint
-conventions, exact measure formula, finite exceptional cases, and independent
-replay have been checked, cite this file only as a claimed reduction.
+### Proof
+
+The summands in (4) give the two bounds
+
+```text
+mu(H_(a,b)) <= min(
+    8n/(13s),
+    2n(4 alpha/13-n)/(r s)
+).                                                         (7)
+```
+
+If `s>=9n`, the first term in (7) is at most `8/117`.  Suppose `s<9n`.
+Because `s>alpha` and `u(2 alpha-u)` decreases for `u>alpha`,
+
+```text
+4rs > 36n(2 alpha-9n).                                    (8)
+```
+
+When `4 alpha>=23n`, the right side of (8) is at least
+
+```text
+117n(4 alpha/13-n),
+```
+
+so the second term in (7) is at most `8/117`.
+
+It remains only to treat `4 alpha<23n`.  Since
+
+```text
+n <= 2 alpha/13+1/2,
+```
+
+this inequality is impossible for `alpha>=25`.  Direct substitution for
+`alpha<25` leaves exactly the five rows below; maximizing (4) over the
+admissible coprime opposite-parity `beta` gives
+
+| `alpha` | `n` | maximum measure | maximizing `beta` |
+|---:|---:|---:|---:|
+| 4 | 1 | `6/91` | 3 |
+| 5 | 1 | `8/117` | 4 |
+| 10 | 2 | `8/169` | 3 |
+| 11 | 2 | `16/273` | 10 |
+| 17 | 3 | `2/39` | 16 |
+
+This proves (6) and sharpness.
+
+## 4. Scope and audit
+
+The cap is a scalar necessary condition, not a closure theorem.  For example,
+the ten-speed cores obtained from `{1,...,11}` by deleting `2`, `4`, or `10`
+have respectively
+
+```text
+measure(G_U) = 569/10010, 499/10010, 746/15015,
+```
+
+all below `8/117`.  The proof-facing predicate remains the pointwise
+containment (1), with the positions and widths of all components retained.
+An ordinary tournament ranking candidate diamonds by size destroys precisely
+that containment data.
+
+The companion exact audit is
+
+```text
+04-computation/lrc13_folded_diamond_two_sheet_obstruction_codex_S3.py
+05-knowledge/results/lrc13_folded_diamond_two_sheet_obstruction_codex_S3.out
+```
+
+It checks the predicate identity on every affine atom and endpoint for `1,600`
+opposite-parity pairs through `a=80`, matches (4) to an independent
+piecewise-linear integration for `5,217` reduced pairs through `alpha=160`,
+verifies the complete exceptional table, and records Tournament Analysis with
+the loss of pointwise containment stated explicitly.

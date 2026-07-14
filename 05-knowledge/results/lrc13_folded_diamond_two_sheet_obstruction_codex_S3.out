@@ -1,0 +1,53 @@
+THM-774 folded-diamond two-sheet obstruction certificate
+closed exception danger / strict core-loose convention
+
+predicate identity audit
+  opposite-parity (a,b) cases through a=80: 1600
+  exact atom/end-point probes: 1854728
+  failures: 0
+  clearance-fold B=(1-Q)/2 failures: 0
+
+measure-formula audit
+  reduced coprime cases through a=160: 5217
+  piecewise-linear/formula mismatches: 0
+  cap violations: 0
+
+sharp-cap proof audit
+  automatic for a>=25 from n<=2a/13+1/2
+  finite exceptional (a,n): ((4, 1), (5, 1), (10, 2), (11, 2), (17, 3))
+  a= 4, n=1: max=6/91 at b=3
+  a= 5, n=1: max=8/117 at b=4
+  a=10, n=2: max=8/169 at b=3
+  a=11, n=2: max=16/273 at b=10
+  a=17, n=3: max=2/39 at b=16
+  sharp reduced equality pair: (a,b)=(5,4), hence x:y=9:1
+
+guardrail: measure is a filter, not a closure
+  U={1,...,11}\{ 1}: |G_U|=477/5005 (above cap)
+  U={1,...,11}\{ 2}: |G_U|=569/10010 (below cap)
+  U={1,...,11}\{ 3}: |G_U|=976/15015 (below cap)
+  U={1,...,11}\{ 4}: |G_U|=499/10010 (below cap)
+  U={1,...,11}\{ 5}: |G_U|=236/3465 (below cap)
+  U={1,...,11}\{ 6}: |G_U|=302/5005 (below cap)
+  U={1,...,11}\{ 7}: |G_U|=509/4290 (above cap)
+  U={1,...,11}\{ 8}: |G_U|=3188/45045 (above cap)
+  U={1,...,11}\{ 9}: |G_U|=31/385 (above cap)
+  U={1,...,11}\{10}: |G_U|=746/15015 (below cap)
+  U={1,...,11}\{11}: |G_U|=101/1170 (above cap)
+  conclusion: several loose cores survive the scalar cap
+
+Tournament Analysis (vertices = finite exceptional proof obligations)
+  pairwise observable: relative obstruction size
+  gauge A: exact folded-diamond measure
+  gauge B: coarse first-bound value 8n/(13s)
+  tie Hamiltonian path: lexicographic (a,b)
+  score histogram: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
+  directed cycles: 0 0
+  SCC sizes: (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+  Hamiltonian-path counts: 1 1
+  edge flips between gauges: 114
+  challenged vertex sets: runners, half-frequencies, safe components
+  preserved predicate: pairwise size ranking only
+  destroyed data: tooth locations and the containment G_U subset H_{a,b}
+
+FINAL: PASS
