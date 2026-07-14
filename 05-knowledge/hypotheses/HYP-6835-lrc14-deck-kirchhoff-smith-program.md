@@ -29,13 +29,13 @@ has count `c/7` off its endpoint coset and `c/7-g_a` on it. The event mesh is
 stratum. The former KCL necessity is withdrawn: strict endpoint equality is safe and
 cannot hand off ownership of a bad sheet. What remains, in decreasing leverage:
 
-## 1. The ρ-floor obligation (finishes regime 2) — ANSWERED IN PART by THM-774 (S301)
+## 1. The ρ-floor obligation (finishes regime 2) — ANSWERED IN PART by THM-777 (S301; renumbered from a 774 collision)
 
 `rho(P) = v*(P)/maxP ≤ 12/(π|G'_P|)` since `r_P ≤ Sum(P) ≤ 12·maxP`. Measured:
 `rho ≤ 9.335`, extremal at the `{1..12}` shape, scale-invariant on dilates, `< 1` on
 the codex tooth-insertion falsifier.
 
-**THM-774 (opus-S301) delivered the decidable part:** the exact bounded census —
+**THM-777 (opus-S301) delivered the decidable part:** the exact bounded census —
 **min |G'| = 7/858, uniquely at {1..13}∖{6}** (kps's detuning extremal one level
 down: the double-extremal signal), stable across maxP ≤ 16/17/18; NO decay under
 the full adversarial battery (scale rays flat ≈ 0.048 through c = 40, tooth
