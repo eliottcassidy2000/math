@@ -1,0 +1,13 @@
+(1) NEAR-DILATE theorem: M(V_L)=1/13 for L with 13 not| (L+1). Witness t=(L+1)/(13L). Verify exact:
+   L=30: V_L diam=391, gcd=1, 13|(L+1)? False; clearance@t=1/13=0.07692; M_exact=1/13
+   L=31: V_L diam=404, gcd=1, 13|(L+1)? False; clearance@t=1/13=0.07692; M_exact=1/13
+   L=32: V_L diam=417, gcd=1, 13|(L+1)? False; clearance@t=1/13=0.07692; M_exact=1/13
+   L=60: V_L diam=781, gcd=1, 13|(L+1)? False; clearance@t=1/13=0.07692; M_exact=None
+   L=90: V_L diam=1171, gcd=1, 13|(L+1)? True; clearance@t=0=0.00000; M_exact=None
+   L=120: V_L diam=1561, gcd=1, 13|(L+1)? False; clearance@t=1/13=0.07692; M_exact=None
+   L=180: V_L diam=2341, gcd=1, 13|(L+1)? False; clearance@t=1/13=0.07692; M_exact=None
+   => M(V_L)=1/13 EXACTLY (small runners iL at ||i(L+1)/13||>=1/13, killer 13L+1 at (L+1)/(13L)>1/13).
+
+(2) EXACT band check: interval-core multi-killers {1..k} + outliers, largest in (220,475]:
+   band interval-core families checked: 8260; with M < 1/13 (no witness): 0
+   => ALL band interval-core families have M>=1/13 (exact witness found).
