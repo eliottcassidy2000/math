@@ -14,6 +14,29 @@ Written against the owner's prompt: collect the viewpoints, see what we are miss
 our view of the underlying object, think recursively. External inspiration:
 Frank–Ivanisvili, "The sharp log Sobolev inequality on finite cycles," arXiv:2605.29035.*
 
+## 0. Later exact correction: scale and fragmentation are independent
+
+The sheet theorem below remains proved, but the proposed bridge from its
+high-support lane to all scale-free cores is false. THM-771 formalizes
+HYP-6830's requested falsifier inside the literal `f=4` chart:
+
+```text
+V_N={1,...,9,15,110,N,1092N},       N>110 prime.
+```
+
+No divisor is shared by seven speeds, while the good-set component count of
+the top-peeled core tends to infinity. The fixed safe interval
+`[1/14,111/1540]` alone is cut by at least `N/1540-8/7` full `N`-teeth; exact counts
+are `66,104,174,310` at `N=211,503,1009,2003`. The rows are primitive,
+covering, exactly `f=4`, and the audited top peels fire THM-755.
+
+Consequently `(c,r)` is the correct native coordinate only for the coherent
+sheet chart, not a global uniformization coordinate. The corrected splice
+must also retain a peel-relative load such as
+`r_P/(v|G'_P|)=pi*v*(P)/v` and the owners/frequencies that created the
+component walls. Read every later occurrence of “fragmentation iff
+divisibility” as the historical proposal refuted by this correction.
+
 ## 1. Where the frontier actually is (July 14, evening)
 
 Two honest maps coexisted this morning. The S297 synthesis said: *no open analytic
@@ -31,9 +54,9 @@ But the same family that kills the bounded-q route is closed in one line by the 
 route (THM-760: it is a `c = 26, r = 1` scale ray, `M ≥ 1/13`). That asymmetry is the
 sharpest available statement of what the covering endgame needs:
 
-> **On scale rays, the witness does not live at a bounded denominator; it lives on the
-> scale's own clock.** The correct uniformization coordinate is not raw height, not
-> witness period — it is the pair (scale `c`, exception count `r`).
+> **On coherent scale rays, the witness does not live at a bounded denominator; it
+> lives on the scale's own clock.** The native sheet coordinate is the pair
+> (scale `c`, exception count `r`). It is not a complete coordinate off that lane.
 
 THM-761 (this session) now covers that coordinate's bulk: for `V = cP ⊔ W` with
 `|W| = r ≤ 6` exceptions, the union of bad sheets cannot cover the sheet cycle once
@@ -45,16 +68,16 @@ stated as sharply as I can state it tonight:
 1. **r ≥ 7** exceptions over a ≤6-element core (the union bound's structural wall —
    realized: a c=7 family with all sheets bad exists, and is still lonely by another
    route; the method's wall, not the conjecture's);
-2. **c ≤ 42** small-scale criterion failures — where band inflation is bounded by the
-   same constant, so THM-755/756's protocol is genuinely finite there (HYP-6830's
-   two-regime claim, to be composed);
+2. **c ≤ 42** small-scale criterion failures — the inflation of a named dilated
+   substructure is bounded by that constant, but the global normalized domain is not
+   bounded by `c*` alone (HYP-6830's corrected splice problem);
 3. **deep gcd entanglement** (`Σ g_a` over budget) — a recursive descent `c → c/g`,
    bookkeeping unwritten;
-4. **no-scale-structure families** (no c ≥ 2 divides ≥ 7 elements) — precisely the
-   cores whose good set is NOT fragmented by dilation, where the capped envelope was
-   already strong. The complementarity claim (fragmentation ⟺ divisibility structure)
-   is the one genuinely load-bearing unproved sentence left in the covering endgame,
-   and it is now written down as HYP-6830 rather than implied by a status table.
+4. **no-scale-structure families** (no c ≥ 2 divides ≥ 7 elements) — these can still
+   have unbounded fragmentation by high-frequency tooth insertion. The capped
+   envelope closes the displayed falsifier by its peel-relative ratio, but a uniform
+   splice using that richer coordinate remains open. The former
+   fragmentation/divisibility complementarity is REFUTED, not pending.
 
 ## 2. The recursion, made literal
 
@@ -101,9 +124,10 @@ The owner's (n−1)² identity was the load-bearing decomposition WITHIN one lev
 (origin band / spokes / pair sector — the S270–S296 arc). The scale descent is the
 decomposition BETWEEN levels. The two are perpendicular, and the covering endgame
 needed both: the capped envelope (within-level, origin cap × spoke envelope) handles
-unstructured cores; the sheet descent (between-level) handles structured ones. Neither
-alone was uniform; the missing theorem was always their SPLICE (HYP-6830), and the
-splice constant is explicit: c = 43.
+unstructured cores; the sheet descent (between-level) handles structured ones. The
+constant `c=43` separates the proved high-support sheet bulk from its finite sheet
+failures. It does not compactify the scale-free lane. Their splice (HYP-6830) now
+requires a peel-relative fragmentation coordinate rather than `c*` alone.
 
 ## 3. The Frank–Ivanisvili bridge (arXiv:2605.29035), read structurally
 
@@ -202,30 +226,33 @@ that matters for what to do next, era by era, as refinements of ONE object:
    object (HYP-6785).
 6. **The spectral cap** (Fourier/capped-envelope era): the origin cap × jump envelope
    splice, `v* = r_P/(π|G'|)`, machine-checked to the kernel.
-7. **The scale fiber** (sheet era, this week): the object is self-similar; descent is
-   lossless on the core and finite on the residue. The missing uniformity was never
-   an estimate — it was a CHART CHANGE (raw height → (c, r) coordinates).
+7. **The scale fiber** (sheet era, this week): on high-support packets the object is
+   self-similar; descent is lossless on the core and finite on the residue. This is a
+   chart change from raw height to `(c,r)`, not a global compactification.
+8. **The transverse tooth fiber** (HYP-6830 correction): a scale-free high frequency
+   can subdivide a fixed safe component without changing `c*`. The next chart change
+   must normalize component topology against the named peel and safe measure.
 
 Each era's "wall" was the next era's object. The equidistribution wall became the
 7-clock geometry; the measure wall became the strand identity; the raw-height wall
 became the sheet cycle. That is the meta-pattern of S297's arc, now with one more
-confirming instance, and it suggests reading the CURRENT walls (r ≥ 7 tilings; the
-fragmentation⟺divisibility complementarity) as the next objects, not the next
-estimates.
+confirming instance, and it suggests reading the CURRENT walls (`r≥7` tilings;
+peel-relative transverse fragmentation) as the next objects, not the next estimates.
+The raw fragmentation/divisibility wall was a false coordinate and is now itself
+evidence for this rule.
 
 ## 6. Actionable summary for the fleet
 
 - THM-761 is in canon with a 50,964-instance exact battery; the criterion is
   speed-only, O(r) to evaluate, and belongs in `lrc14_certificates.py` as a terminal
   certificate (added this session as `sheet_certificate`).
-- The assembly paper (04-paper/lrc14-assembly.tex, HYP-6810) must re-scope C1: the
-  enumeration domain is bounded ONLY via the two-regime splice; the q≤25 witness
-  computation C2 is DEAD as stated (codex-S3 refutation) and should become the
-  sheet certificate + bounded-c band protocol.
-- The three named open items of the covering endgame: (1) r ≥ 7 tilings (spectral/
-  signed refinement or capped envelope on exceptions), (2) the gcd-descent
-  bookkeeping, (3) the fragmentation⟺divisibility complementarity (HYP-6830's core
-  claim). None of these is enumeration; the frontier map's "none analytic" line is
-  corrected in the addendum.
+- The assembly paper (04-paper/lrc14-assembly.tex, HYP-6810) must re-scope C1: no
+  global enumeration bound follows from `c*` after the falsifier above. A corrected
+  peel-relative splice is still needed. The q≤25 witness computation C2 is also dead
+  as stated (codex-S3 refutation) and should become an adaptive certificate lane.
+- The three named open items of the covering endgame are now: (1) `r≥7` tilings
+  (spectral/signed refinement or capped envelope on exceptions), (2) gcd-descent
+  bookkeeping, and (3) a peel-relative replacement for the REFUTED
+  fragmentation/divisibility bridge. None is merely enumeration.
 - The FI-shaped probe: test a cubic certificate against the band bank's 19
   direct-closure bodies.

@@ -8,6 +8,7 @@ depends_on:
   - THM-760   # r=1 coprime sheet dodge
   - THM-761   # multi-exception sheet covering bound (this session)
   - THM-771   # exact seven-owner defect and corrected reduced-winding event pierce
+  - THM-772   # exact scale-free f=4 transverse-fragmentation falsifier
   - HYP-6780  # v*(cP) = c v*(P): the scale covariance that killed raw-height bands
 related: [THM-756, THM-757, THM-758, HYP-6785, HYP-6815, HYP-6820, HYP-6835, MISTAKE-146]
 ---
@@ -31,11 +32,13 @@ For every covering 13-speed family V and every scale c ≥ 2, write V = cP ⊔ W
    canonical scale the exception gcds are `(50,50,1,1)` and the THM-761 budget
    is `130>99`.  This does not say that `V` violates LRC or lacks another
    routing scale; it shows why the exact gcd sidecar cannot be omitted.
-2. **Small scale (OPEN — coordinate incomplete):** if c*(V) ≤ 42, then every dilated
-   sub-structure inflates the capped-envelope band edge by at most the SAME bounded
-   factor (`v*(cP) = c·v*(P) ≤ 42·v*(P)`, HYP-6780 used positively). This local
-   covariance remains exact, but `c*(V)≤42` does not by itself bound the core's
-   fragmentation or produce a globally bounded normalized domain. TO PROVE, with a
+2. **Complementary regime (OPEN — coordinate incomplete):** if `c*(V)<=42`, then
+   every high-support dilated packet whose scale is counted by `c*` inflates its
+   capped-envelope band edge by at most that bounded factor
+   (`v*(cP)=c*v*(P)<=42*v*(P)`, HYP-6780 used positively). Low-support packets can
+   still carry arbitrarily large common factors. The local covariance remains exact,
+   but `c*(V)<=42` does not by itself bound fragmentation, nor has it produced a
+   globally bounded normalized domain. TO PROVE, with a
    richer state: every ≥4-far covering family with
    c*(V) ≤ 42 either safe-peels (THM-753), fires the capped envelope, or lies in an
    explicitly bounded normalized band family. This is the corrected, quantifier-honest
@@ -47,41 +50,45 @@ For every covering 13-speed family V and every scale c ≥ 2, write V = cP ⊔ W
    but a single high-frequency runner cuts a fixed safe interval into arbitrarily
    many pieces without creating a seven-runner divisor packet.
 
-## Exact infinite-family falsifier
+## Exact infinite-family falsifier (THM-772)
 
-For every prime `N>11`, put
+For every prime `N>110`, put
 
 ```text
-P_N = {1,2,...,11,N},
+P_N = {1,2,...,9,15,110,N},
 V_N = P_N union {1092 N},       1092 = lcm(12,13,14).
 ```
 
 This family has all the scope properties needed to refute the proposed bridge.
 
-1. **No high-support scale.** Among `{1,...,11}`, at most five entries share any
-   nontrivial divisor (the five even entries attain the maximum). The prime `N`
-   shares no divisor with them, and adjoining `1092N` can add at most one member to
-   any old divisor packet. Hence the largest divisor packet has size five in `P_N`
+1. **No high-support scale.** Among `{1,...,9,15,110}`, at most five entries
+   share any nontrivial divisor (the four small even entries together with `110`
+   attain the maximum). The prime `N` shares no divisor with them, and adjoining
+   `1092N` can add at most one member to any old divisor packet. Hence the largest
+   divisor packet has size five in `P_N`
    and six in `V_N`; in particular `c*(P_N)=c*(V_N)=1`.
-2. **Unbounded exact fragmentation.** The base good set for `{1,...,11}` contains
+2. **Unbounded exact fragmentation.** The base good set for
+   `{1,...,9,15,110}` contains
 
    ```text
-   J = (1/14, 13/154),             |J| = 1/77.
+   J = [1/14, 111/1540],           |J| = 1/1540.
    ```
 
-   Inside `J`, every fully contained strict `N`-safe gap
-   `((m+1/14)/N,(m+13/14)/N)` is one distinct component, because its endpoints
-   lie on the excluded threshold and adjacent gaps are separated by danger
-   teeth.  The admissible `m` occupy an interval of length `N/77-6/7`, so
-   `r_{P_N}>=N/77-13/7`.  Thus `r_{P_N}` is unbounded although `c*(P_N)=1`.
-   Exact interval arithmetic gives component counts
-   `18,22,38,72` for `N=101,211,503,1009`.
+   Inside `J`, the `N`-runner removes the disjoint open danger teeth centered at
+   `k/N` with radius `1/(14N)`. The admissible center interval has length
+   `N/1540-1/7`, so it contains at least `N/1540-8/7` integers. Every resulting
+   full tooth separates two components of `G'_{P_N}`. Thus `r_{P_N}` is
+   unbounded although `c*(P_N)=1`. Exact interval arithmetic gives component counts
+   `66,104,174,310` for `N=211,503,1009,2003`.
 3. **It occurs inside the covering endgame.** Every `V_N` is primitive because it
-   contains `1`. Speeds `2,...,11` carry moduli `2,...,11`, while `1092N` carries
-   `12,13,14`; hence `V_N` is covering. This is not an LRC counterexample: the
-   top peel fires THM-755's capped-envelope test in every audited instance. It is a
-   counterexample specifically to using `c*` as a sufficient fragmentation
-   coordinate.
+   contains `1`. Speeds `2,...,9` carry their own moduli, `110` carries `10` and
+   `11`, and `1092N` carries `12,13,14`; hence `V_N` is covering. Moreover it is
+   literally in the first open far-count chart: its nine small speeds are
+   `{1,...,9}` and its four far coordinates are `15,110,N,1092N`. This is not an
+   LRC counterexample: the top peel fires THM-755's capped-envelope test in every
+   audited instance. It is a counterexample specifically to using `c*` as a
+   sufficient fragmentation coordinate, now internal to the four-dimensional
+   object rather than imported from another stratum.
 
 The intended `f>=4` lane does not rescue the raw claim.  Put
 `B={1,...,8,21,22,23}`, `Q_N=B union {N}` for odd `N>23`, and adjoin a larger
@@ -115,13 +122,31 @@ invariant at the first peel, `rho(P) = v*(P)/max(P) = kappa(P; maxP)/pi`:
 - an adversarial hill-climb over `c* <= 42` cores **converged back to {1..12}**:
   measured max `rho = 9.335` at the interval shape itself — the same extremal that
   carries the covering-min and the H-band corners;
-- the codex falsifier `P_N = {1..11, N}` has `rho < 1` for large `N` (band EMPTY —
-  its top peel indeed fires the envelope), so it kills the raw-`r_P` bridge while
-  CONFIRMING the ratio coordinate;
-- since `r_P <= Sum(P)` always, `rho <= 12/(pi |G'_P|)`: the remaining proof
+- both exact high-frequency falsifier families have empty audited top bands. This is
+  compatible with, but does not prove, the ratio-coordinate conjecture;
+- since `r_P <= Sum(P)` always, `rho <= 12/(pi |G'_P|)`: the remaining proposed
   obligation is a **|G'| floor off the classified tight families** (the mac-mini B5
-  stability lane) — that alone converts `rho = O(1)` from measured to proved and
-  makes the regime-2 band domain bounded in NORMALIZED (peel-relative) coordinates.
+  stability lane). This would convert the observed `rho = O(1)` into a theorem and
+  make the regime-2 band domain bounded in normalized peel-relative coordinates.
+
+## Assumption challenge and tournament scope
+
+The falsifier was found by rejecting the default runner/divisor-packet
+vertices. Alternate vertices considered were runners, maximal divisor packets,
+base safe components, individual tooth intervals, endpoint events, residues,
+Fourier modes, and peel obligations. The operative incidence is bipartite:
+an `N`-tooth cuts a named base component. A binary orientation of runner pairs
+does not preserve how many cuts land in the same component, their widths, or
+the cap load, so there is no clean proof tournament on runner vertices here.
+
+The companion HYP-6815 audit instead uses candidate representations as
+tournament vertices. Its pairwise observable is the fraction of
+proof-critical row pairs separated, its two gauges prioritize predicate
+retention or compression, and the declared tie Hamiltonian path is printed in
+the stored output. That tournament is diagnostic: it confirms that scale-only
+and residue-only representations lose metric topology. The exact carrier for
+this claim is the component/tooth incidence with owner and peel sidecars, not
+the orientation itself.
 
 ## The residual inside regime 1 (named by THM-761; unramified r=7 high reduced winding closed by THM-771)
 

@@ -8,9 +8,11 @@ For V(c)=cA+R, the identity
 turns a scale family into integer-slope slices of one two-torus field.  This
 script verifies the identity at every exact peak in a small adversarial bank,
 checks the pure-dilation cylinder, distinguishes fixed-core far-coordinate
-dilation from global dilation, checks the HYP-6780 near-dilate ray, and audits
-which quotients preserve covering, M, safe measure, components, cap status,
-and low-support relation data.
+dilation from global dilation, refutes raw fragmentation/divisor-scale
+complementarity inside exactly f=4, proves that the falsifying prime family is
+nevertheless closed by the capped envelope, checks the HYP-6780 near-dilate
+ray, and audits which quotients preserve covering, M, safe measure, components,
+cap status, and low-support relation data.
 
 Tournament Analysis uses representations, not runners, as vertices.  Its
 pairwise observable is the fraction of proof-critical row pairs separated by
@@ -70,6 +72,10 @@ def primitive(body):
     for v in body:
         g = gcd(g, v)
     return g == 1
+
+
+def is_prime(n):
+    return n >= 2 and all(n % d for d in range(2, isqrt(n) + 1))
 
 
 def max_divisor_packet(body):
@@ -207,22 +213,61 @@ def main():
         print(f"  c={c}: |G|={G}, components={len(ivs)}={c}*{base_r}")
 
     print("\nScale-free fragmentation falsifier for HYP-6830:")
-    expected_components = {101: 18, 211: 22, 503: 38, 1009: 72}
+    fixed_core = tuple(range(1, 10)) + (15, 110)
+    assert (F(1, 14), F(111, 1540)) in good_intervals(fixed_core)
+    expected_components = {211: 66, 503: 104, 1009: 174, 2003: 310}
     for N, expected in expected_components.items():
-        core = tuple(range(1, 12)) + (N,)
+        assert is_prime(N)
+        core = fixed_core + (N,)
         body = core + (1092 * N,)
         components = len(good_intervals(core))
         core_packet = max_divisor_packet(core)
         body_packet = max_divisor_packet(body)
-        cap, _ = cap_data(body)
+        cap, peel_ratio = cap_data(body)
         assert components == expected
         assert core_packet == 5 and body_packet == 6
         assert primitive(body) and is_covering(body) and cap
+        assert sum(v > 14 for v in body) == 4
         print(
             f"  N={N:4d}: core_components={components:2d}, "
             f"max_divisor_packet(core/body)={core_packet}/{body_packet}, "
-            "primitive_covering_extension=True, capped_peel=True"
+            f"far_count=4, peel_ratio={peel_ratio}, "
+            "primitive_covering=True, capped_peel=True"
         )
+
+    # The four displayed rows are only component-count canaries.  Exact-check
+    # the finite prime base, then use J to prove the whole remaining tail.
+    finite_caps = []
+    for N in range(111, 1265):
+        if not is_prime(N):
+            continue
+        body = fixed_core + (N, 1092 * N)
+        cap, peel_ratio = cap_data(body)
+        assert primitive(body) and is_covering(body) and cap
+        finite_caps.append((peel_ratio, N))
+    min_ratio, min_ratio_N = min(finite_caps)
+    assert len(finite_caps) == 176
+
+    # In J, at most N|J|+2 N-teeth can meet J.  Each has length 1/(7N),
+    # so |G'_{P_N}| >= 6/(7*1540)-2/(7N).  Also r(P_N)<=sum(P_N)=N+170.
+    # The resulting THM-755 inequality is affine in N and has this exact root.
+    tail_root = F(11734415, 9278)
+    slope = PI_LO * 1092 * F(6, 7 * 1540) - 1
+    intercept = PI_LO * 1092 * F(2, 7) + 170
+    assert slope > 0
+    assert tail_root == intercept / slope < 1265
+    tail_mu_at_1265 = F(6, 7 * 1540) - F(2, 7 * 1265)
+    assert PI_LO * (1092 * 1265) * tail_mu_at_1265 > 1265 + 170
+    print(
+        "  finite capped base: primes 113..1259, "
+        f"capped={len(finite_caps)}/{len(finite_caps)}, "
+        f"min(v|G'|/r)={min_ratio} at N={min_ratio_N}"
+    )
+    print(
+        "  elementary tail: |G'|>=3/5390-2/(7N), r<=N+170; "
+        f"PI_LO*v|G'|>r for N>{tail_root} (hence N>=1265)"
+    )
+    print("  conclusion: every prime N>110 in the four-far family is capped")
 
     print("\nFixed-core far-coordinate dilation monoid:")
     C9 = tuple(range(1, 10))

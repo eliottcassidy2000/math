@@ -1,7 +1,7 @@
 ---
 id: HYP-6815
 title: LRC14 four-far cone and affine-slope threshold suspension
-status: EXACT REPRESENTATION LEMMAS + EXACT AUDITS; THM-761 high-support sheet descent proved, four-far splice/compactification open
+status: EXACT REPRESENTATION LEMMAS + EXACT AUDITS; THM-761 high-support sheet descent proved; raw fragmentation splice refuted inside f=4; peel-relative compactification open
 source: codex-2026-07-14-S2
 script: 04-computation/lrc14_affine_slope_suspension_codex_S2.py
 result: 05-knowledge/results/lrc14_affine_slope_suspension_codex_S2.out
@@ -26,6 +26,7 @@ related:
   - THM-761
   - THM-765
   - THM-764
+  - THM-771
 ---
 
 # HYP-6815: LRC14 Four-Far Cone And Affine-Slope Threshold Suspension
@@ -52,8 +53,9 @@ sheet, while the exceptions become an inhomogeneous residue-cover problem.
 This closes high-support structured scale packets with at most six exceptions.
 It does not close the literal four-far chart: on `C union kF`, the four far
 speeds are the scaled core and the nine fixed small speeds are exceptions, so
-the sheet packet has `r=9`.  HYP-6830's splice to that scale-free/small-scale
-regime remains open.
+the sheet packet has `r=9`. HYP-6830's proposed raw-fragmentation bridge to
+the scale-free/small-scale regime is now refuted inside this same four-far
+chart; a peel-relative replacement remains open.
 
 The global moduli space of 13 speeds modulo dilation is not four-dimensional.
 Calling all of LRC14 a four-manifold would discard the higher far-count strata.
@@ -204,14 +206,36 @@ most six coprime exceptions, every `c>=43`.  The former `c=26` / `q<=25`
 canary is closed immediately on its native 26-sheet clock even though its
 first ordinary rational witness has denominator 27.  The surviving sheet
 debts are exact: seven exceptions can tile the sheet cycle, excessive gcd
-multiplicity calls for `c -> c/g` descent, and the small-scale/scale-free
-splice is HYP-6830's open content.
+multiplicity calls for `c -> c/g` descent, and a peel-relative small-scale/
+scale-free splice is HYP-6830's corrected open content.
 
 For the fixed-core far action in Section 1, `C union kF` can be written with
 scaled core `D=F` and exception set `W=C`.  Thus the exact sheet
 reparameterization still applies, but `|W|=9`: the free-sheet union bound is
 beyond its sharp `r<=6` range.  This locates the literal four-far chart inside
 the open tiling/overlap residue rather than claiming THM-761 has solved it.
+
+THM-771 makes a second, transverse route to infinity inside the literal chart exact.
+For prime `N>110`, set
+
+```text
+V_N={1,...,9,15,110,N,1092N}.
+```
+
+These rows are primitive, covering, and exactly `f=4`. No divisor is shared
+by seven speeds, but the good-set component count of the top-peeled core
+`{1,...,9,15,110,N}` is unbounded: the fixed safe interval
+`[1/14,111/1540]` is cut by at least `N/1540-8/7` full `N`-teeth. Exact counts are
+`66,104,174,310` at `N=211,503,1009,2003`. Thus high-support coherent dilation and
+high-frequency tooth insertion are independent directions of noncompactness.
+The scalar `c*` sees the first only when at least seven speeds share the scale and
+is blind to the second; it can also miss radial dilation of the four far coordinates.
+
+This does not threaten LRC14: the audited `V_N` rows fire the capped-envelope
+peel. It identifies a missing coordinate. A transport state for the splice
+must retain at least the normalized cap load
+`r_P/(v|G'_P|)=pi*v*(P)/v`, rather than `r_P` alone, together with the
+divisor-support profile and endpoint/tooth ownership.
 
 There is also an exact compressed local coordinate.  At a fixed time put
 `x_i={s_i t}`, `kappa_i=floor(14x_i)`, and `rho_i={14x_i}`.  If
@@ -324,8 +348,9 @@ AP                         M=1/14
 {1,...,12,26}              M=2/27
 ```
 
-They have the same endpoint tournament, divisor mask, and cap sign.  Thus
-order, covering, and the THM-755 bit do not preserve the metric predicate.
+They have the same endpoint tournament, divisor mask, and cap sign. Thus
+order, covering, and the THM-755 bit do not preserve exact clearance or
+metric data.
 
 ### Covering and capped-envelope status
 
@@ -348,6 +373,11 @@ super-`L` component of a core, each component's length and midpoint phase must
 fit one tooth, and all gcd-deck translations must be retained.  For `L<1/4`,
 a genuine margin drop forces the core gcd to divide the added runner.  Neither
 component length alone nor a residue label alone preserves that conclusion.
+The global hereditary-primitivity corollary is automatic on the literal
+four-far chart: deleting a far speed leaves the gcd-one nine-core, while
+deleting a small speed leaves eight distinct integers in `[1,14]`, whose gcd
+is already one. THM-765 is therefore a carrier model here, not an `f=4`
+pruning theorem.
 
 The resulting hierarchy is:
 
@@ -435,6 +465,11 @@ explicit legal transition or residual debt, not the Boolean field "some
   resolvent-to-LRC map is claimed.
 - CRT and p-adic trees: residue skeleton and valuation/height flex are separate
   coordinates.  Fixed residue does not freeze endpoint geometry.
+- Canonical metagraph addresses (HYP-6825): a finite rooted tiling address can
+  organize the combinatorial base, but threshold walls, metric gaps, owners,
+  and certificate obligations must remain in a stalk. The `V_N` ray makes one
+  such stalk visibly noncompact: its divisor-scale type stays bounded while
+  new owner-labelled teeth subdivide the safe fiber.
 - Safe-component tooth decks (THM-765): component width, midpoint phase, and
   gcd translation sheets form one exact containment condition.  This is a
   proved instance of a metric carrier plus arithmetic action being smaller
@@ -458,10 +493,11 @@ explicit legal transition or residual debt, not the Boolean field "some
 
 ## 8. Open theorem targets
 
-1. **Two-regime splice.** Prove HYP-6830's fragmentation/divisibility
-   complementarity `r_D <= B(c*)` or exhibit a scale-free core with unbounded
-   good-set component count.  Compose THM-761's `c>=43`, at-most-six-exception
-   sheet regime with the bounded `c*<=42` capped-envelope band.
+1. **Peel-relative splice.** The former complementarity
+   `r_D<=B(c*)` is refuted by the exactly-`f=4` family above. Replace it with a
+   scale-normal state containing `r_D/(v|G'_D|)`, the divisor-support profile,
+   and endpoint owners; then compose THM-761's high-support sheet regime with
+   the capped-envelope band or a strictly smaller descendant.
 2. **Seven-exception sheet residue.** Classify the `1/7` cyclic tilings on
    `Z/cZ`, and formalize the terminating `c -> c/g` bookkeeping for excessive
    gcd multiplicity.  These are method walls, not known LRC counterexamples.

@@ -62,33 +62,38 @@ Format per entry:
   `lrc14_r7_sheet_endpoint_defect_codex_S5.py` with stored exact outputs.
 
 ## MISTAKE-145 -- "good-set fragmentation only via divisibility: r_P <= B(c*)" (HYP-6830/opus-S299) -- refuted twice within hours (codex exact falsifier + opus scale-free census); FOURTH instance of the MISTAKE-140 genus: raw counts over height-unbounded families are not compactness coordinates
+## MISTAKE-145 -- "good-set fragmentation only via divisibility: r_P <= B(c*)" (HYP-6830/opus-S299) -- refuted by exact tooth families and an independent scale-free census
 
 - **What was claimed (opus-S299, as the OPEN "load-bearing sentence" of the two-regime
   splice, never promoted past OPEN):** a 12-core's good-set component count r_P is
   large only via dilation structure -- r_P <= B(c*) with c* the largest scale dividing
   >= 7 elements.
 - **Why it is wrong:** a SINGLE high-frequency runner fragments a fixed safe interval
-  into ~N/77 pieces without creating any divisor packet. codex's exact falsifier:
-  P_N = {1,...,11, N} (prime N): c* = 1, r_P unbounded (18/22/38/72 at
-  N = 101/211/503/1009). Independently (opus-S300 census): scale-free random 12-cores
-  have median r_P growing linearly with height (60 -> 1700 over H = 50 -> 1600).
-- **The correct framing:** the surviving invariant is PEEL-RELATIVE, not absolute:
+  without creating any seven-member divisor packet. The first exact falsifier
+  `P_N={1,...,11,N}` has `c*=1` and unbounded `r_P` (component counts
+  `18,22,38,72` at `N=101,211,503,1009`). THM-771 strengthens this inside the literal
+  four-far covering chart: `P_N={1,...,9,15,110,N}` has the exact safe interval
+  `[1/14,111/1540]`, at least `N/1540-8/7` separating `N`-teeth, and counts
+  `66,104,174,310` at `N=211,503,1009,2003`; adjoining `1092N` makes the row
+  primitive, covering, and exactly four-far. Independently, the opus-S300 census
+  finds median `r_P` growing from 60 to 1700 as height grows from 50 to 1600.
+- **The correct framing:** the candidate invariant is PEEL-RELATIVE, not absolute:
   rho(P) = v*(P)/maxP = r_P/(pi |G'_P| maxP). It is scale-invariant on dilates
-  (9.334... at every c for c*{1..12}), O(1) on every tested family, maximal at the
-  {1..12} shape (adversarial climb converges to it), and < 1 on the falsifier family
-  itself (its band is EMPTY -- the envelope closes it). Remaining obligation: a |G'|
-  floor off classified tight families converts rho = O(1) to proved via r_P <= Sum(P).
+  (9.334... at every c for c*{1..12}) and is O(1) on every tested family, with the
+  measured maximum at the `{1,...,12}` shape. The audited falsifier instances have
+  empty top bands. None of this yet proves a global rho bound: the remaining proposed
+  obligation is a `|G'|` floor off classified tight families, using `r_P<=Sum(P)`.
 - **Impact:** none downstream -- the claim lived a few hours as OPEN, was consumed by
   nobody, and both refutations landed before any theorem cited it. HYP-6830 carries
   the correction and the ratio study.
-- **Lesson (MISTAKE-137/139/140/141 genus, FOURTH recurrence):** any raw count
+- **Lesson (MISTAKE-137/139/140/141 genus):** any raw count
   (components, lifts, min-M, floors) indexed over a height/scale-unbounded family is
   structurally suspect; the compactness coordinates are RATIOS to the peel scale /
   normalized shapes. New standing rule: when proposing a boundedness claim, state it
   in peel-relative coordinates first, and battery it with BOTH near-dilate seeds
   (MISTAKE-140 rule) AND single-high-frequency-runner seeds (this entry's mechanism).
-- **Source:** codex (HYP-6830 falsifier section) + opus-2026-07-14-S300
-  (lrc14_regime2_complementarity_stress_opus_S300.py + .out), same day as the claim.
+- **Source:** THM-771; HYP-6830 correction; HYP-6815 exact audit; codex exact scripts;
+  opus-2026-07-14-S300 `lrc14_regime2_complementarity_stress_opus_S300.py` + output.
 
 ## MISTAKE-144 — the S107/S108 local `M_exact` routines omitted single-runner half-turn cusps, so their “exact” denominator set was incomplete even though corrected replay leaves the conclusions unchanged (codex-2026-07-14-S3)
 

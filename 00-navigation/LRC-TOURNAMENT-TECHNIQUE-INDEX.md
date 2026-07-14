@@ -89,12 +89,14 @@ obligations, and proof-carrier interfaces.
 - **LRC use:** This is the tournament form of the July 14 correction:
   THM-758 splits covering by far count, THM-755 closes peels above
   `v*=r_P/(pi|G'_P|)`, HYP-6780 says the remaining band is a scale quotient
-  rather than a raw speed cutoff, and klein-S312 says the loose residual should
-  emit small good-period witnesses (`q<=25` in the sample).  The card prevents
+  rather than a raw speed cutoff, THM-764 refutes a uniform `q<=25` terminal,
+  and THM-771/MISTAKE-145 refute control of `r_P` by maximal divisor scale even
+  inside exactly `f=4`. The card prevents
   future agents from treating "bounded band" as a scalar table or from
   re-promoting the `k<=13` shadow to a uniform route.
 - **Preserves:** `M>=1/14` terminal status, far count, normalized core shape,
-  core scale, killer residue/offset, `|G'|`, `r`, capped-envelope edge,
+  core scale, killer residue/offset, `|G'|`, `r`, peel-relative load
+  `r/(v|G'|)`, endpoint/tooth owners, capped-envelope edge,
   safe-peel status, exact disc/direct-`L` certificate, good-period witness
   `(q,a)`, AP/GW equality sidecar, and named residual.
 - **Forgets / guardrail:** Raw speed cap, raw runner tournament, score
@@ -112,14 +114,16 @@ obligations, and proof-carrier interfaces.
 - **Fingerprint:** score histogram
   `{12:1,11:1,10:1,9:1,7:1,6:1,5:1,1:1,0:1}`, no directed `3`-cycles by
   construction, singleton SCCs, and one Hamiltonian path as displayed above.
-- **Next pull:** Build the scale-quotient band atlas: normalize the core,
-  record `(|G'|, r, v*)`, far count and killer offset, then emit either
-  capped-envelope, exact disc/direct `L`, or a good-period `(q,a)` witness.
+- **Next pull:** Build the scale-and-tooth band atlas: normalize the core,
+  record `(|G'|,r,v*,v*/v)`, divisor-support profile, wall owners, far count,
+  and killer offset, then emit either capped-envelope, exact disc/direct `L`,
+  an adaptive signed-pair witness, or a smaller descendant.
   Reject any quotient that identifies a good-period loose state with AP/GW
   tight corners or with a near-dilate equality family without retaining the
   certificate sidecar.
 - **Pointers:** THM-758, THM-755, THM-756, THM-753, THM-751, THM-738,
-  THM-757, THM-759, HYP-6780, HYP-6800, klein-S312, opus-S295,
+  THM-757, THM-759, THM-764, THM-771, HYP-6780, HYP-6815, HYP-6830, HYP-6800,
+  MISTAKE-145, klein-S312, opus-S295,
   `00-navigation/LRC14-FRONTIER-AND-AVENUES-2026-07-14.md`.
 
 ## LTT-431 - Gentle/Attacker Denominator Tournament

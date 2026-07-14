@@ -53,11 +53,12 @@ q ≤ 25 good-period finish** (family 26·{1..12} ∪ {339}: first witness q = 2
 denominators scale with c; bounded-q banks are scale-blind, sheets are scale-native; the same
 family closes by THM-760/761 in one line). The scale residual after THM-761: (i) r ≥ 7 decks
 (union wall structural; tight case = cyclic tilings of Z_c; wall realized at c = 7 by a family
-that is still lonely via a non-sheet route), (ii) c ≤ 42 small-scale criterion failures (band
-inflation bounded there — the finite regime), (iii) gcd-descent bookkeeping, (iv) families with
-no scale structure at all — the capped envelope's natural domain, pending the
-peel-relative safe-measure/endpoint replacement for HYP-6830's now-refuted
-raw fragmentation⟺divisibility complementarity.
+that is still lonely via a non-sheet route), (ii) c ≤ 42 small-scale criterion failures (a named
+dilation has bounded inflation, but `c*` does not bound the global normalized domain), (iii)
+gcd-descent bookkeeping, and (iv) scale-free transverse fragmentation. HYP-6830's proposed
+`r_P≤B(c*)` bridge is refuted generally and inside exactly `f=4` by
+`{1,...,9,15,110,N,1092N}`; the open splice must be peel-relative
+(MISTAKE-145 and the exact four-far falsifier below).
 
 Status cautions: THM-724's addendum closes its genuine single-killer case, but THM-726 still relies
 on an unproved global far-element monotonicity statement; THM-741 is explicitly `CLAIMED` with an
@@ -78,11 +79,11 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | shadow tiles | PROVED | THM-748 (klein), THM-749, THM-754 clean-slot |
 | named coherent/cluster families | PROVED at their stated scopes | THM-668/737/739/740 |
 | 12-speed common-factor core + one coprime exception | PROVED, all scales | THM-760 |
-| (13−r)-speed common-factor core + r ≤ 6 exceptions, any gcds | PROVED above exact thresholds (c ≥ 43 uniform; exact per-(r,c) sets; Σg_a budget) | THM-761 (opus-S299) + battery |
+| (13−r)-speed common-factor core + r ≤ 6 exceptions | PROVED when the exact Σg_a budget fires; c ≥ 43 is uniform only for coprime exceptions | THM-761 (opus-S299) + battery |
 | r = 7 unramified deck stratum (`7\mid c/g_a` for every owner) | PROVED above reduced-shape bound `max_a(w_a/g_a)>=7 max(P)`; the S299 wall is closed at a switching time | THM-771; corrected core of THM-767; MISTAKE-146 |
 | prime lens `c=7`, any unramified owner count | Exact token polynomial: coverage iff `X^7-X` divides `product(X-k_a)`; seven-owner exact states map to all 25 masks at heptagon node `n7-a267`; any covered `r=8` wall is a simple event with a seven-owner heptagon stalk | THM-773 + exact 5,040-state/3,003-profile audits |
 | seven-owner deck defect / ramified residue | Exact identity `F=Q+Omega-sigma`; exact tilings are chamber-locked, KCL necessity is WITHDRAWN, and mirror coincidence is diagnostic. Primitive `c=21` row realizes `(0,12,12,0)` | THM-771 + corrected THM-767 + exact audits |
-| raw fragmentation bound r_P ≤ B(c*) | REFUTED twice (exact falsifier + census); surviving peel-relative invariant ρ = v*/maxP measured ≤ 9.335, extremal at {1..12} | HYP-6830 correction; MISTAKE-145 |
+| raw fragmentation bound r_P ≤ B(c*) | REFUTED by an exact scale-free f=4 family and an independent census; peel-relative ρ is a candidate measured ≤9.335 only on the stated bank | THM-776; HYP-6830 correction; MISTAKE-145 |
 | safe-measure floor / normalized band bridge | `rho<=12/(pi|G'_P|)` and `|G'_P|>=1/(91 maxP)` PROVED; exact `maxP<=18` floor is `7/858`, unique at `{1,...,13}\{6}`; the same global floor is CONJECTURAL | THM-777 |
 | primitive tight 12-speed locus | UNIFORMLY FINITE (`sum A<=78^11`), not classified | THM-763 |
 | hereditary primitivity of tight 12-sets | PROVED; every leave-one-out core is primitive | THM-765 |
@@ -112,20 +113,19 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 1. **Prove a scale-normal structure theorem.** Split normalized families into coherent dilation
    packs, additive/hierarchical clusters, and an incoherent residual, while retaining scale residue
    and killer offset. Raw far count and diameter are not invariants of this quotient.
-   *Progress (S299/S300/S3 audit): THM-761 proves its exact sheet-budget regime and THM-767
-   closes compatible r=7 decks above `w_max>7 sum(P)` by an event witness. The raw bound
-   `r_P≤B(c*)` is false; `P_N={1,...,11,N}` has `c*=1` and `r_P≥N/77-O(1)`.
-   The surviving endgame coordinate is peel-relative boundary intensity
-   `r_P/(max(P)|G'_P|)`, with endpoint owners and divisor/gcd sidecars retained.
-   THM-777 proves `rho<=12/(pi|G'_P|)`, the height-decaying Lipschitz floor,
-   and the exact shape floor `7/858` through `maxP<=18`; its global asymptotic
-   floor is still a named conjecture, not a compactness theorem.*
+   *Progress (S299/S300/S3/S2 audit): THM-761 proves the exact-budget `r<=6`
+   sheet regime, and THM-771 closes the unramified `r=7` lane above its
+   reduced-winding bound. The raw bound `r_P<=B(c*)` is false both generally and
+   in exactly `f=4` (THM-776). The open composition must retain peel-relative
+   load `r_P/(v|G'_P|)`, divisor support, endpoint owners, and the remaining
+   deck-tiling residue. THM-777 proves the rho bridge and the candidate
+   `7/858` floor only through `maxP<=18`; its global floor is conjectural.*
 2. **Attack persistent translate covers with their metric stalks retained.** At level one,
    `I(13,p,1)` is exactly a 13-translate cover of `F_p^x/{±1}` by the
-   strict-danger set.  In the tight `s=2` quotient, THM-772 now forces a
+   strict-danger set. In the tight `s=2` quotient, THM-772 now forces a
    primitive divisor-complete ten-core and THM-774 turns the two odd colours
-   into a sharp folded diamond.  Prove that no such diamond contains the whole
-   loose-component word, or force a dyadic/effective-order descent.  For higher
+   into a sharp folded diamond. Prove that no such diamond contains the whole
+   loose-component word, or force a dyadic/effective-order descent. For higher
    sheets, classify which colour covers persist under lifts and evade the
    omit-one gcd reduction.
 3. **Reproduce and formalize finite tiles.** Independently rerun THM-738's complete bank; finish

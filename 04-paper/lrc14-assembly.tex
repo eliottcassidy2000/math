@@ -37,9 +37,10 @@ exact-rational sweep that contains the covering minimum and every tight family; 
 sets with at least four elements exceeding $14$, a capped Fourier-envelope theorem bounds
 each \emph{core's} unresolved peels, and sheet-covering theorems close every scale ray with
 up to six exceptional runners above explicit thresholds. The band edge scales with dilation
-($v^\ast(cP)=c\,v^\ast(P)$), so the remaining domain is bounded only through the two-regime
-splice stated here, whose composition--- together with the $r\ge7$ deck residue and one
-complementarity claim---is the honest open remainder. We state precisely what is proved,
+($v^\ast(cP)=c\,v^\ast(P)$), while an exactly four-far scale-free family shows that raw
+good-set fragmentation is not controlled by the maximal common-divisor scale. Thus the
+remaining domain has not yet been reduced to a globally bounded one: a peel-relative splice, together with the
+$r\ge7$ deck residue, is the honest open remainder. We state precisely what is proved,
 what is machine-checked, what is exactly computed, what is refuted (including a uniform
 bounded-period witness finish), and what remains.
 \end{abstract}
@@ -56,18 +57,19 @@ The Lonely Runner Conjecture (Wills \cite{Wills}, Cusick \cite{Cusick}; the name
 
 \begin{theorem}[Main, assembly program]\label{thm:main}
 $M(V)\ge\tfrac1{14}$ for every set of\, $13$ distinct positive integer speeds, modulo:
-the finite rational computation $\mathsf{C1}$ of Section~\ref{sec:computations}; the
-regime-2 composition and complementarity claim of \textsc{hyp}-6825
-(Section~\ref{sec:loose}); and the $r\ge7$ sheet-deck residue of
+the peel-relative scale-normal composition of \textsc{hyp}-6830 and its resulting
+certificate computation $\mathsf{C1}$ (Sections~\ref{sec:loose} and
+\ref{sec:computations}); and the $r\ge7$ sheet-deck residue of
 Theorem~\ref{thm:sheets}.
 \end{theorem}
 
 The qualifier is meant exactly, and it is more than a finite computation:
 Sections~\ref{sec:reduction}--\ref{sec:loose} prove every analytic statement \emph{within
-their stated scopes}; the scale-uniformity of the $F\ge4$ domain is proved above explicit
-thresholds (Theorem~\ref{thm:sheets}) and open below them only through the named splice;
-Section~\ref{sec:computations} states the remaining computation as a decidable predicate
-whose domain-boundedness is conditional on that splice; Section~\ref{sec:lean} lists the
+their stated scopes}; scale-uniformity is proved for the high-support sheet lane above
+explicit thresholds (Theorem~\ref{thm:sheets}), but maximal common scale is not a global
+compactification coordinate. Section~\ref{sec:computations} states the remaining
+decidable predicate and the analytic condition still needed to bound or descend its domain;
+Section~\ref{sec:lean} lists the
 components verified in Lean~4.
 
 Throughout we use, as permitted background, the Lonely Runner Conjecture for at most $13$
@@ -200,9 +202,14 @@ ratio-13 cascade (\textsc{thm}-752).
 \label{thm:claimB}
 Every covering set with $F\ge4$ either closes in one peel by
 Theorem~\ref{thm:capped}/\textsc{thm}-753, closes by a sheet witness
-(Theorem~\ref{thm:sheets}), or lies over a band on which the certificate protocol of
-Theorem~\ref{thm:band} decides; the band domain is bounded when the maximal
-common-factor scale is (regime 2 of \textsc{hyp}-6825). On the executed exact checks the
+(Theorem~\ref{thm:sheets}), or lies over a per-core finite band on which the certificate
+protocol of Theorem~\ref{thm:band} decides. The proposed argument for a global band
+bound from raw component count and maximal common-factor scale fails: for prime $N>110$,
+$\{1,\ldots,9,15,110,N,1092N\}$ is covering, primitive, exactly four-far, and has no
+seven-member divisor packet, while the component count of its top-peeled good set tends
+to infinity (\textsc{thm}-771; \textsc{hyp}-6830). This does not refute a bounded
+peel-relative domain; it shows that any proof must retain normalized cap load and
+endpoint ownership. On the executed exact checks the
 bands are uniformly loose: $8260$ interval-core band families, all $M\ge 1/13$, zero
 exceptions. A uniform bounded-period witness finish is \emph{refuted}: the family
 $26\cdot\{1,\dots,12\}\cup\{339\}$ has no rational witness of period $q\le25$ (first
@@ -213,15 +220,18 @@ in one line.
 \section{The remaining computations}\label{sec:computations}
 
 \begin{computation}[$\mathsf{C1}$: the $F\ge4$ enumeration]\label{comp:c1}
-Domain: covering $13$-sets with $\ge4$ elements $>14$ and maximal common-factor scale
-$c^\ast\le 42$ (larger scales close analytically by Theorem~\ref{thm:sheets}), reduced by
-Theorem~\ref{thm:claimB} to cores with bands $(\max P, v^\ast]$. Predicate per body: the
+Proposed domain: covering $13$-sets with $\ge4$ elements $>14$, after every applicable
+sheet or peel descent, reduced by Theorem~\ref{thm:claimB} to cores with per-core bands
+$(\max P, v^\ast]$. The state must retain the peel-relative load
+$r_P/(v|G'_P|)$, divisor-support profile, and endpoint ownership; $c^\ast\le42$ alone is
+insufficient. Predicate per body: the
 sheet certificate (Theorem~\ref{thm:sheets}, speed-only, $O(r)$); else the three-line
 protocol of Theorem~\ref{thm:band} (capped envelope; else one exact Bernoulli discrepancy;
 else direct exact $L$). Status: all executed portions exception-free (the $8260$-family
 exact band check; the $4032$-pair bottom-core closure; $\sim\!620{,}000$ screened bodies).
-Remaining: the systematic enumeration of the reduced domain, whose boundedness is exactly
-the regime-2 composition of \textsc{hyp}-6825 --- currently conditional, not executed.
+Remaining: prove that the peel-relative state has a bounded atlas or a well-founded descent,
+then execute the resulting terminal leaves. This is the corrected splice of
+\textsc{hyp}-6830; it is analytic and currently open, not an unexecuted finite loop.
 \end{computation}
 
 \begin{remark}

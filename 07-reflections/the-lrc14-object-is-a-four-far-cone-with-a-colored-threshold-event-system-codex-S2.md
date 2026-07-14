@@ -2,7 +2,7 @@
 
 *codex-2026-07-14-S2. A creative information-preservation session following
 HYP-6780, the completed Lean THM-755 chain, HYP-6785, and the exact endpoint
-sidecar audit.*
+sidecar audit. Updated after the exact HYP-6830 fragmentation falsifier.*
 
 ## 1. First challenge the word "four-dimensional"
 
@@ -50,6 +50,37 @@ speed dilation and can change exact clearance and other metric data. The exact
 covering canary with `C={1,...,9}` has `M=6/61` at far tuple `(22,26,28,60)` and `M=12/121`
 after that far tuple is doubled. The action must be retained rather than
 silently quotiented.
+
+### The chart has two inequivalent directions to infinity
+
+The far-dilation action is only the radial direction. THM-771 supplies a
+transverse frequency refinement. For prime `N>110`, the ray
+
+```text
+C={1,...,9},       g_N=(15,110,N,1092N)
+```
+
+lies in `X_C`, is primitive and covering, and has no divisor packet of size
+seven. Yet after peeling `1092N`, the core good set has unbounded component
+count. The fixed base `{1,...,9,15,110}` has a safe interval
+`[1/14,111/1540]`; the `N`-runner cuts it by at least
+`N/1540-8/7` disjoint teeth.
+Exact component counts are `66,104,174,310` for
+`N=211,503,1009,2003`.
+
+So the first four-dimensional object is not merely an ordered cone with a
+radial boundary. Its fiber cellulation refines without bound along a
+scale-free path. Coherent dilation increases the number of copies of an old
+cell pattern; tooth insertion creates new walls inside an old cell. These are
+different degenerations and require different compactification coordinates.
+The failed complementarity `r_P<=B(c*)` collapsed them into one scalar.
+
+The replacement suggested by the cap theorem is relational: for a named peel
+`v`, retain `r_P/(v|G'_P|)=pi*v*(P)/v`, the divisor-support profile, and the
+endpoint owners that created the cuts. This is not yet a finiteness theorem.
+It is the smallest current description that distinguishes radial replication
+from transverse refinement while remembering why the audited ray is already
+closed by the capped peel.
 
 That observation does not make LRC periodic. Inside one residue class,
 changing height changes:
@@ -295,6 +326,9 @@ be truth-safe for the current row and illegal for the next observer.
 THM-765 makes the needed metric sidecar exact in a one-runner peel: safe
 component length plus midpoint phase determines tooth containment, while the
 gcd translation deck detects whether all lifted components can be covered.
+Its hereditary-primitivity corollary gives no new pruning on exactly `f=4`:
+deleting a far speed leaves the gcd-one nine-core, and deleting a small speed
+leaves eight distinct integers in `[1,14]`, already of gcd one.
 
 ### To preserve a proof
 
@@ -395,6 +429,16 @@ Residue skeleton and valuation height are independent channels. The affine
 audit gives an archimedean version of the same lesson: equal residue and owner
 can retain `M` while safe length and component count move.
 
+### Canonical metagraph addresses
+
+HYP-6825's rooted line address can serve as a finite combinatorial base, but
+it cannot by itself be the LRC quotient. The `V_N` family demonstrates the
+missing stalk: bounded divisor-scale type coexists with an owner-labelled wall
+word whose length grows without bound. This does not prove that the rows share
+one metagraph node. It proves what any pullback from that unrelated tiling
+atlas must preserve: metric gaps, threshold walls, owners, and peel-relative
+load remain fiber data after canonical labeling.
+
 ### Cut/cycle topology and anti-local testing
 
 The tested local invariant views can agree while global realizability or
@@ -458,8 +502,11 @@ four-cone suggests a replacement.
 For packets `cD union W`, this is no longer entirely schematic. THM-761 is an
 exact descent to the finite pointed cycle `Z/cZ`: the core is fiber-exact and
 the exceptions become the next level's residue runners. The immediate open
-boundary is explicit: seven-exception tilings, excessive-gcd descent, and
-HYP-6830's proof that scale-free cores have controlled good-set fragmentation.
+boundary is explicit: the seven-exception tilings outside THM-767's
+commensurate large-shape event-pierce lane, excessive-gcd descent, and
+HYP-6830's peel-relative replacement for the refuted claim that scale-free
+cores have controlled raw good-set fragmentation. THM-767(4)'s proposed KCL
+absorption inequality is under exact correction and is not part of this route.
 The projective compactification below is needed for arbitrary unbounded
 sequences outside that proved sheet chart.
 
@@ -491,10 +538,12 @@ samples from an infinite box.
 
 ## 10. Concrete next lemmas
 
-1. Prove HYP-6830's two-regime splice: control good-set fragmentation by the
-   maximal common scale, or exhibit a scale-free unbounded-component falsifier.
-2. Classify the seven-exception `1/7` tilings on the sheet cycle and formalize
-   the terminating excessive-gcd descent `c -> c/g`.
+1. Replace HYP-6830's refuted `r_P<=B(c*)` bridge with a peel-relative splice
+   using `r_P/(v|G'_P|)`, divisor-support profile, and endpoint owners; prove
+   that the remaining normalized states are bounded or recursively descend.
+2. Classify the seven-exception `1/7` tilings left after THM-767's event-pierce
+   lane, replace the refuted KCL absorption step, and formalize the terminating
+   excessive-gcd descent `c -> c/g`.
 3. Formalize the semilinear four-cone and colored endpoint-loop criterion.
 4. Compute the event cocycle of `g -> k*g`: classify the owner blocks that
    split, merge, or reorder and find the smallest sidecar transporting truth,

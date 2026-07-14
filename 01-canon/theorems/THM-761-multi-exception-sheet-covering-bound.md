@@ -71,8 +71,9 @@ the companion script, PART 2):
 
 The windows are non-monotone because the per-exception `+1` overhead interacts with
 the `floor(c/7)` jumps at multiples of 7 (note r=6 already closes at c = 13, 19, 20,
-25, 26, 27, 31–34, 37–41). `c >= 43` is uniform for every `r <= 6`; `c = 42` is the
-last uniform failure.
+25, 26, 27, 31–34, 37–41). In the coprime-exception table, `c >= 43` is uniform for
+every `r <= 6`; `c = 42` is the last uniform failure. Arbitrary gcd strata still
+require the exact budget in (iii).
 
 **Sharp `r` threshold.** At `delta = 1/14` each exception burns an open phase arc of
 length `2*delta = 1/7`; seven exceptions can burn total measure `7 * (1/7) = 1` — the
@@ -133,11 +134,12 @@ computation on `r*(floor(c/7)+1) <= c-1`; for `c = 7m + s >= 43`, `r <= 6`:
   THM-760/761 close it analytically with no witness search. The good-period
   denominator grows with `c`; the sheet count IS `c`. On scale rays, sheets are the
   correct clock.
-- **It converts HYP-6780's obstruction into a dichotomy**: `v*(cP) = c v*(P)` says
-  the capped-envelope band inflates linearly in `c`; THM-761 says large `c` dies by
-  sheets. The two regimes meet at an explicit constant (`c = 43` for the uniform
-  coprime form): **above it sheets win; below it the band inflation is bounded by
-  the same constant** — the scale-uniformization route of HYP-6830.
+- **It gives a conditional scale dichotomy for the sheet packets it closes**:
+  `v*(cP) = c v*(P)` says the capped-envelope band inflates linearly in `c`, while
+  THM-761 kills every packet satisfying the exact gcd budget. For coprime exceptions
+  the two regimes meet at `c = 43`; arbitrary gcd strata do not inherit that scalar
+  cutoff and require the exact budget or descent. This is the qualified
+  scale-uniformization route of HYP-6830.
 
 ## Residual (named honestly)
 
@@ -160,8 +162,10 @@ computation on `r*(floor(c/7)+1) <= c-1`; for `c = 7m + s >= 43`, `r <= 6`:
 3. **Large `sum g_a`** (deep gcd entanglement): descend `c -> c/g` recursively
    (cards A2/C10); the recursion terminates but its bookkeeping is not written here.
 4. Families with **no scale structure at all** (no `c >= 2` divides `>= 7` elements):
-   outside this theorem's hypotheses. HYP-6830's proposed raw fragmentation bound was
-   refuted (MISTAKE-145); only the peel-relative envelope coordinate remains viable.
+   outside this theorem's hypotheses. They need not have low `r_P`: THM-772 and
+   MISTAKE-145 give an exactly-`f=4` scale-free family with unbounded good-set
+   components. The entire prime family is closed by the capped peel, whose relevant
+   coordinate is the peel-relative ratio `r_P/(v|G'_P|)`, not raw fragmentation.
 
 ## Assumption challenge and tournament analysis
 

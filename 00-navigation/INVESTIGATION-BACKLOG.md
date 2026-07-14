@@ -17,10 +17,20 @@
   `r_P≥N/77-O(1)`; (iii) control the normalized boundary intensity
   `r_P/(max(P)|G'_P|)` via safe-measure/endpoint slack (the elementary survivor is
   `r_P≤sum P≤|P|max P`); (iv) gcd-descent bookkeeping. All corrections are in HYP-6830/THM-767.
+- **Critical correction:** HYP-6830's proposed complementarity `r_P≤B(c*)` is REFUTED by the
+  exactly-`f=4` primitive covering family `{1,...,9,15,110,N,1092N}`. No divisor packet has seven
+  members, but the top-peeled core has unbounded good-set components (`66,104,174,310` exactly at
+  `N=211,503,1009,2003`). The audited rows fire the capped peel. Thus coherent scale and
+  transverse tooth frequency are independent coordinates (THM-771; MISTAKE-145).
+- **Open remainder:** (i) `r ≥ 7` decks — union wall structural; tight case = cyclic tilings of
+  `Z_c`; (ii) a peel-relative splice retaining `r_P/(v|G'_P|)`, divisor support, and endpoint
+  owners; (iii) gcd-descent bookkeeping. No global regime-2 bound has been proved from
+  `c*` alone; THM-771 refutes the proposed raw-component route to one.
 - **Probes filed:** FI cubic certificate on the band bank's 19 direct-L bodies; Rédei deck-parity
   (equality structure only, guardrail C18).
 - **Files:** THM-761 canon; HYP-6830; 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py
-  (+ .out); 07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md;
+  (+ .out); THM-771; `lrc14_affine_slope_suspension_codex_S2.py` (+ .out); MISTAKE-145;
+  07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md;
   frontier map §0 updated; 04-paper/lrc14-assembly.tex re-scoped (Claim B corrected, C2 withdrawn).
 - **S300/S5 CORRECTED UPDATE (r>=7 decks):**
   (i) the unramified r=7 stratum is closed above
@@ -28,6 +38,13 @@
   events and drop by `g_a` on them; the event mesh is `g_a/w_a`, and the S299 wall
   is pierced at a switching time. The promoted raw-`w` bound and KCL absorption law
   are withdrawn (MISTAKE-146); the exact replacement is `F=Q+Omega-sigma`. (ii) the
+- **S300 UPDATE (owner directive: r>=7 decks + regime 2 via squaring-the-square/Smith/Kirchhoff):**
+  (i) the r=7 STRATUM IS CLOSED above w_max > 7·Σ(P) — THM-767's EVENT PIERCE (7g|c strata:
+  counts constant = c/7 off events; any event moment in the closed core-safe set frees a sheet;
+  the S299 wall instance pierced at all 203 core-safe event moments — the witness lives at the
+  SWITCHING TIMES, not the core optimum). The proposed KCL absorption inequality for
+  maintained exact tilings is false/ambiguous under strict bad sheets (MSG-1621) and must
+  not be used; only the event-pierce lane is currently available. (ii) the
   complementarity item RESOLVED NEGATIVELY as phrased (MISTAKE-145; codex exact falsifier + my
   census, same day): the surviving regime-2 invariant is peel-relative ρ = v*/maxP, measured
   ≤ 9.335, extremal AT {1..12} (adversarial climb converges to it); one lemma remains (|G'|
