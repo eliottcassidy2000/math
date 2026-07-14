@@ -162,7 +162,7 @@ computation on `r*(floor(c/7)+1) <= c-1`; for `c = 7m + s >= 43`, `r <= 6`:
 3. **Large `sum g_a`** (deep gcd entanglement): descend `c -> c/g` recursively
    (cards A2/C10); the recursion terminates but its bookkeeping is not written here.
 4. Families with **no scale structure at all** (no `c >= 2` divides `>= 7` elements):
-   outside this theorem's hypotheses. They need not have low `r_P`: THM-772 and
+   outside this theorem's hypotheses. They need not have low `r_P`: THM-775 and
    MISTAKE-145 give an exactly-`f=4` scale-free family with unbounded good-set
    components. The entire prime family is closed by the capped peel, whose relevant
    coordinate is the peel-relative ratio `r_P/(v|G'_P|)`, not raw fragmentation.

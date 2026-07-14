@@ -20,30 +20,31 @@
 - **Critical correction:** HYP-6830's proposed complementarity `r_P≤B(c*)` is REFUTED by the
   exactly-`f=4` primitive covering family `{1,...,9,15,110,N,1092N}`. No divisor packet has seven
   members, but the top-peeled core has unbounded good-set components (`66,104,174,310` exactly at
-  `N=211,503,1009,2003`). THM-772 proves the entire prime family fires the capped peel.
+  `N=211,503,1009,2003`). THM-775 proves the entire prime family fires the capped peel.
   Thus coherent scale and transverse tooth frequency are independent coordinates
-  (THM-772; MISTAKE-145).
-- **Terminal transverse face:** THM-773 generalizes the successful cap calculation. A base good-set
+  (THM-775; MISTAKE-145).
+- **Terminal transverse face:** THM-776 generalizes the successful cap calculation. A base good-set
   state `(mu,r_B)` becomes `mu_N>=6mu/7-2r_B/(7N)`, `r_N<=N+r_B` after adjoining
   frequency `N`; a single safe interval gives the simpler `L,sum(B)` certificate. A proportional
   peel `aN` therefore closes beyond an explicit rational threshold when its rate beats the retained
   mass. The unresolved degeneration must collapse safe mass relative to component or peel rate;
   raw wall proliferation alone is terminal.
-- **Recursive certificate pull:** Iterate THM-773's enclosure operator
+- **Recursive certificate pull:** Iterate THM-776's enclosure operator
   `T_N(mu_lower,r_upper)=(6mu_lower/7-2r_upper/(7N),r_upper+N)`. Set insertion
   commutes but the bound does not; the exchange law proves increasing insertion
   order is optimal. The 24 formal peel/order gauges of a four-far chart collapse
   to four canonical certificates. Classify rows on which every certificate loses
   positive mass; those are precisely where endpoint-owner correlations must
   re-enter the state.
-- **Open remainder:** (i) `r ≥ 7` decks — union wall structural; tight case = cyclic tilings of
-  `Z_c`; (ii) a peel-relative splice retaining `r_P/(v|G'_P|)`, divisor support, and endpoint
+- **Open remainder:** (i) `r >= 7` decks — the union wall is structural, but maintained covers
+  can have overlap; only the zero-defect subcase is a cyclic tiling of `Z_c`; (ii) a
+  peel-relative splice retaining `r_P/(v|G'_P|)`, divisor support, and endpoint
   owners; (iii) gcd-descent bookkeeping. No global regime-2 bound has been proved from
-  `c*` alone; THM-772 refutes the proposed raw-component route to one.
+  `c*` alone; THM-775 refutes the proposed raw-component route to one.
 - **Probes filed:** FI cubic certificate on the band bank's 19 direct-L bodies; Rédei deck-parity
   (equality structure only, guardrail C18).
 - **Files:** THM-761 canon; HYP-6830; 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py
-  (+ .out); THM-772/773; `lrc14_affine_slope_suspension_codex_S2.py` (+ .out); MISTAKE-145;
+  (+ .out); THM-775/776; `lrc14_affine_slope_suspension_codex_S2.py` (+ .out); MISTAKE-145;
   07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md;
   frontier map §0 updated; 04-paper/lrc14-assembly.tex re-scoped (Claim B corrected, C2 withdrawn).
 - **S300/S5 CORRECTED UPDATE (r>=7 decks):**
@@ -125,6 +126,19 @@
   three-colour edge.  The exact object is loose-set component x sheet-owner
   incidence with closed endpoints, not a residue condition at one binding
   point.
+- **Open deep theorem:** rule out the persistent folded colour covers in
+  THM-769.  Start with `s=2`: for `A=2U union {x,y}`, the two odd runners must
+  both cover all of `G_U` under the doubled danger map and have opposite
+  nearest-integer parity everywhere.  Then treat the `s=3` three-colour edge.
+  The exact object is loose-set component x sheet-owner incidence with closed
+  endpoints, not a residue condition at one binding point.
+- **S7 claimed refinements:** THM-772 proposes a simultaneous unit-grid divisor
+  transfer for the `s=2,3` equality packets; its exact shell table is stored but
+  the theorem remains `CLAIMED` pending endpoint and joint-splice audit. THM-774
+  proposes the two-sheet folded-diamond inequality and sharp `8/117` measure
+  obstruction; its exact measure proof and independent replay remain open. These
+  are complementary carriers: the first preserves cross-modulus obligation
+  compatibility, while the second attempts a metric `l1` compression.
 - **Metric bridge:** for each core-safe component `J`, retain
   `sigma_J(w)=1/13-||wc_J||-w h_J` and emitted endpoint current `e_w(J)`.
   Winding one, pure endpoint ownership, and a transitive phase tournament all
@@ -185,6 +199,12 @@
   seven exceptions its union-bound wall is an equal-arc cyclic tiling.  Classify
   that labelled cyclic cover with gcd strata and movable core-safe time, and
   compare it functorially—not analogically—with staircase tiling fibres.
+- **S6 exact audit / claimed bridge:** THM-773's six prime-field moments decide
+  whether seven owner tokens form an exact `F_7` sheet cover, but all 5,040 owner
+  assignments have the same moment data and collapse to one node in either
+  unlabelled tournament gauge. Exact chamber movies with equal coarse states have
+  different next owners and free sheets. Thus moments suffice for current truth;
+  labelled assignment, event step, and endpoint schedule are required for transport.
 - **Pull list:** 26 bounded cards in
   `00-navigation/METAGRAPH-PRESERVATION-AVENUES-2026-07-14.md`; recommended
   first pulls are n=7 WL twins, the seven-exception sheet tiling, and one exact

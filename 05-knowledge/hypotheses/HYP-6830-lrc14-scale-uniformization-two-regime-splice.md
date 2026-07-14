@@ -8,8 +8,8 @@ depends_on:
   - THM-760   # r=1 coprime sheet dodge
   - THM-761   # multi-exception sheet covering bound (this session)
   - THM-771   # exact seven-owner defect and corrected reduced-winding event pierce
-  - THM-772   # exact scale-free f=4 transverse-fragmentation falsifier
-  - THM-773   # invariant-level good-set-state transverse-tooth cap
+  - THM-775   # exact scale-free f=4 transverse-fragmentation falsifier
+  - THM-776   # invariant-level good-set-state transverse-tooth cap
   - HYP-6780  # v*(cP) = c v*(P): the scale covariance that killed raw-height bands
 related: [THM-756, THM-757, THM-758, HYP-6785, HYP-6815, HYP-6820, HYP-6835, MISTAKE-146]
 ---
@@ -51,7 +51,7 @@ For every covering 13-speed family V and every scale c ≥ 2, write V = cP ⊔ W
    but a single high-frequency runner cuts a fixed safe interval into arbitrarily
    many pieces without creating a seven-runner divisor packet.
 
-## Exact infinite-family falsifier (THM-772)
+## Exact infinite-family falsifier (THM-775)
 
 For every prime `N>110`, put
 
@@ -86,7 +86,7 @@ This family has all the scope properties needed to refute the proposed bridge.
    `11`, and `1092N` carries `12,13,14`; hence `V_N` is covering. Moreover it is
    literally in the first open far-count chart: its nine small speeds are
    `{1,...,9}` and its four far coordinates are `15,110,N,1092N`. This is not an
-   LRC counterexample: THM-772 proves the top peel fires THM-755's capped-envelope
+   LRC counterexample: THM-775 proves the top peel fires THM-755's capped-envelope
    test for every prime `N>110`. It is a counterexample specifically to using `c*` as a
    sufficient fragmentation coordinate, now internal to the four-dimensional
    object rather than imported from another stratum.
@@ -111,7 +111,7 @@ data to distinguish dilation copies from high-frequency tooth insertion. It rema
 open whether those data admit a finite or recursively compact quotient; no
 replacement theorem is claimed here.
 
-## A terminal transverse face (THM-773)
+## A terminal transverse face (THM-776)
 
 The falsifier mechanism itself admits a general theorem. For a fixed base `B`,
 put `mu=|G'_B|` and let `r_B` be the number of components of `G'_B`. After
@@ -134,7 +134,7 @@ r(B union {N}) <= N+sum(B).
 A proportional peel `aN` closes beyond an explicit rational threshold
 whenever `(333/106)*a*6L/7>1`. This proves that transverse wall proliferation
 alone is a terminal face: it can make raw components unbounded while keeping
-the theorem-facing load `r/(aN|G'|)` bounded. For THM-772, `L=1/1540`,
+the theorem-facing load `r/(aN|G'|)` bounded. For THM-775, `L=1/1540`,
 `a=1092`, and the exact crossing is `11734415/9278<1265`.
 
 This does not prove the global splice. It sharpens its negation space. A truly
@@ -155,7 +155,7 @@ invariant at the first peel, `rho(P) = v*(P)/max(P) = kappa(P; maxP)/pi`:
 - an adversarial hill-climb over `c* <= 42` cores **converged back to {1..12}**:
   measured max `rho = 9.335` at the interval shape itself — the same extremal that
   carries the covering-min and the H-band corners;
-- THM-772 proves that the entire chart-native prime family has an empty top band;
+- THM-775 proves that the entire chart-native prime family has an empty top band;
   the other high-frequency falsifier is compatible with the same candidate on its
   audited range. Neither fact proves the ratio-coordinate conjecture globally;
 - since `r_P <= Sum(P)` always, `rho <= 12/(pi |G'_P|)`: the remaining proposed

@@ -70,7 +70,7 @@ Format per entry:
 - **Why it is wrong:** a SINGLE high-frequency runner fragments a fixed safe interval
   without creating any seven-member divisor packet. The first exact falsifier
   `P_N={1,...,11,N}` has `c*=1` and unbounded `r_P` (component counts
-  `18,22,38,72` at `N=101,211,503,1009`). THM-772 strengthens this inside the literal
+  `18,22,38,72` at `N=101,211,503,1009`). THM-775 strengthens this inside the literal
   four-far covering chart: `P_N={1,...,9,15,110,N}` has the exact safe interval
   `[1/14,111/1540]`, at least `N/1540-8/7` separating `N`-teeth, and counts
   `66,104,174,310` at `N=211,503,1009,2003`; adjoining `1092N` makes the row
@@ -79,7 +79,7 @@ Format per entry:
 - **The correct framing:** the candidate invariant is PEEL-RELATIVE, not absolute:
   rho(P) = v*(P)/maxP = r_P/(pi |G'_P| maxP). It is scale-invariant on dilates
   (9.334... at every c for c*{1..12}) and is O(1) on every tested family, with the
-  measured maximum at the `{1,...,12}` shape. THM-772 proves the entire chart-native
+  measured maximum at the `{1,...,12}` shape. THM-775 proves the entire chart-native
   prime falsifier family has empty top bands. None of this proves a global rho bound:
   the remaining proposed
   obligation is a `|G'|` floor off classified tight families, using `r_P<=Sum(P)`.
@@ -92,7 +92,7 @@ Format per entry:
   normalized shapes. New standing rule: when proposing a boundedness claim, state it
   in peel-relative coordinates first, and battery it with BOTH near-dilate seeds
   (MISTAKE-140 rule) AND single-high-frequency-runner seeds (this entry's mechanism).
-- **Source:** THM-772/773; HYP-6830 correction; HYP-6815 exact audit; codex exact scripts;
+- **Source:** THM-775/776; HYP-6830 correction; HYP-6815 exact audit; codex exact scripts;
   opus-2026-07-14-S300 `lrc14_regime2_complementarity_stress_opus_S300.py` + output.
 
 ## MISTAKE-144 — the S107/S108 local `M_exact` routines omitted single-runner half-turn cusps, so their “exact” denominator set was incomplete even though corrected replay leaves the conclusions unchanged (codex-2026-07-14-S3)

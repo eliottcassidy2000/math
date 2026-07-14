@@ -17,7 +17,7 @@ Frank–Ivanisvili, "The sharp log Sobolev inequality on finite cycles," arXiv:2
 ## 0. Later exact correction: scale and fragmentation are independent
 
 The sheet theorem below remains proved, but the proposed bridge from its
-high-support lane to all scale-free cores is false. THM-772 formalizes
+high-support lane to all scale-free cores is false. THM-775 formalizes
 HYP-6830's requested falsifier inside the literal `f=4` chart:
 
 ```text
@@ -28,7 +28,7 @@ No divisor is shared by seven speeds, while the good-set component count of
 the top-peeled core tends to infinity. The fixed safe interval
 `[1/14,111/1540]` alone is cut by at least `N/1540-8/7` full `N`-teeth; exact counts
 are `66,104,174,310` at `N=211,503,1009,2003`. The rows are primitive,
-covering, exactly `f=4`, and THM-772 proves every prime member fires the
+covering, exactly `f=4`, and THM-775 proves every prime member fires the
 top-peel THM-755 certificate.
 
 Consequently `(c,r)` is the correct native coordinate only for the coherent

@@ -1,17 +1,17 @@
 ---
-id: THM-772
+id: THM-775
 title: Scale-free four-far transverse fragmentation and capped closure
 status: PROVED (elementary interval geometry and capped tail) + VERIFIED-EXACT (176-prime capped base and component canaries attached)
 source: codex-2026-07-14-S2
 depends_on:
   - THM-755   # the peel-relative capped-envelope coordinate
-  - THM-773   # invariant-level good-set-state transverse-tooth cap
+  - THM-776   # invariant-level good-set-state transverse-tooth cap
 related: [HYP-6780, HYP-6815, HYP-6830, MISTAKE-145]
 verification: 04-computation/lrc14_affine_slope_suspension_codex_S2.py
   (+ 05-knowledge/results/lrc14_affine_slope_suspension_codex_S2.out)
 ---
 
-# THM-772 — Scale-free four-far transverse fragmentation and capped closure
+# THM-775 — Scale-free four-far transverse fragmentation and capped closure
 
 ## Statement
 

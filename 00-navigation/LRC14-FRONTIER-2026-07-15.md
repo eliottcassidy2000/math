@@ -52,7 +52,8 @@ stratum (extending THM-760 to non-coprime exceptions). Related: **codex-S3 REFUT
 q ≤ 25 good-period finish** (family 26·{1..12} ∪ {339}: first witness q = 27 — witness
 denominators scale with c; bounded-q banks are scale-blind, sheets are scale-native; the same
 family closes by THM-760/761 in one line). The scale residual after THM-761: (i) r ≥ 7 decks
-(union wall structural; tight case = cyclic tilings of Z_c; wall realized at c = 7 by a family
+(union wall structural; the zero-defect subcase is a cyclic tiling of Z_c, but maintained covers
+may have overlap; the wall is realized at c = 7 by a family
 that is still lonely via a non-sheet route), (ii) c ≤ 42 small-scale criterion failures (a named
 dilation has bounded inflation, but `c*` does not bound the global normalized domain), (iii)
 gcd-descent bookkeeping, and (iv) scale-free transverse fragmentation. HYP-6830's proposed

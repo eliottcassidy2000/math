@@ -27,8 +27,11 @@ related:
   - THM-765
   - THM-764
   - THM-771
-  - THM-772
-  - THM-773
+  - THM-772   # CLAIMED unit-grid obligation carrier
+  - THM-773   # CLAIMED prime-seven truth/transport carrier split
+  - THM-774   # CLAIMED folded-diamond metric compression
+  - THM-775   # proved four-far transverse falsifier and capped family
+  - THM-776   # proved recursive good-set-state transport
 ---
 
 # HYP-6815: LRC14 Four-Far Cone And Affine-Slope Threshold Suspension
@@ -69,6 +72,16 @@ It is a semilinear rank-four cone chart carrying, fiber by fiber, an
 owner-colored threshold loop, rational gap metric, embedded marked relation
 lattice, and the action of the next permitted proof operation.  Uniform wall
 stratification and transport of those fibers over the chart remain open.
+
+The concurrent THM-772/773/774 programs sharpen the word "retain." A quotient
+need not preserve the same data for every task. THM-773's stored prime-seven
+audit shows that six finite-field moments recognize exact-cover truth while
+forgetting which of the `7!` owner assignments occurs and what the next event
+does. THM-772's unit-grid audit instead needs simultaneous obligation columns
+across moduli; its pairwise tournament does not preserve their joint splice.
+THM-774 proposes an `l1` folded metric for the two-sheet equality packet. Those
+three theorems remain `CLAIMED`; their computations are evidence for the carrier
+split, not unconditional inputs to the LRC14 assembly.
 
 ## 1. The outer four-far cone
 
@@ -217,7 +230,7 @@ reparameterization still applies, but `|W|=9`: the free-sheet union bound is
 beyond its sharp `r<=6` range.  This locates the literal four-far chart inside
 the open tiling/overlap residue rather than claiming THM-761 has solved it.
 
-THM-772 makes a second, transverse route to infinity inside the literal chart exact.
+THM-775 makes a second, transverse route to infinity inside the literal chart exact.
 For prime `N>110`, set
 
 ```text
@@ -233,14 +246,14 @@ high-frequency tooth insertion are independent directions of noncompactness.
 The scalar `c*` sees the first only when at least seven speeds share the scale and
 is blind to the second; it can also miss radial dilation of the four far coordinates.
 
-This does not threaten LRC14: THM-772 proves that every prime member of the
+This does not threaten LRC14: THM-775 proves that every prime member of the
 `V_N` family fires the capped-envelope peel. It identifies a missing coordinate.
 A transport state for the splice
 must retain at least the normalized cap load
 `r_P/(v|G'_P|)=pi*v*(P)/v`, rather than `r_P` alone, together with the
 divisor-support profile and endpoint/tooth ownership.
 
-THM-773 turns this diagnosis into a reusable terminal face. If the base good set
+THM-776 turns this diagnosis into a reusable terminal face. If the base good set
 has state `(mu,r_B)`, adjoining frequency `N` sends it to a state satisfying
 `mu_N>=6mu/7-2r_B/(7N)` and `r_N<=N+r_B`; no endpoint list is needed for those
 bounds. A sufficiently fast proportional peel `aN` then closes by THM-755 at an

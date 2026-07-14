@@ -235,7 +235,7 @@ certificates.
 | Capped envelope | measure cap plus jump envelope | per-core tail with explicit v* | global raw compactness | far-element peel |
 | Scale sheets | fibers t=(t0+k)/c | whole core margin exactly | endpoint labels across several exceptions | THM-760 and next extension |
 | Affine-slope suspension | V(c)=cP+R as slope-c fibers of a two-torus function | scale, offsets, and exact fiber nonemptiness | finite classification without a descent | HYP-6815 chart for multi-exception rays |
-| Transverse tooth refinement | a high frequency cuts a fixed safe component | scale-free component growth and wall ownership | boundedness from maximal divisor scale | THM-772; peel-relative splice |
+| Transverse tooth refinement | a high frequency cuts a fixed safe component | scale-free component growth and wall ownership | boundedness from maximal divisor scale | THM-775; peel-relative splice |
 | Tropical/normal fan | active minima and wall cells | combinatorial type of optimum | metric clearance | finite chamber stratification |
 | Matroid/circuit | minimal dependent proof obligations | irreducible obstruction support | phase and margin | candidate blocker-pressure abstraction |
 | Tournament analysis | pairwise quotient of chosen objects | dominance fingerprints | higher-order intersections | diagnostics and route comparison |
@@ -310,15 +310,15 @@ The exactly-`f=4` family
 It has no divisor packet of size seven, but the top-peeled core's component
 count is unbounded because the `N`-runner inserts new teeth into a fixed safe
 interval. Thus common scale and transverse frequency are independent
-noncompact directions in the same four-far chart. THM-772 closes the entire
+noncompact directions in the same four-far chart. THM-775 closes the entire
 prime family by the capped peel, whose ratio normalizes component count against the named
 peel; `c*` alone cannot support the automaton quotient.
 
-THM-773 extracts the general mechanism at the state level. If the old good set
+THM-776 extracts the general mechanism at the state level. If the old good set
 has mass `mu` and `r_B` components, a new frequency `N` leaves mass at least
 `6mu/7-2r_B/(7N)` and creates at most `N+r_B` components. A proportional peel
 `aN` is therefore eventually terminal under an explicit rational inequality.
-One marked interval gives the simpler `L,sum(B)` corollary used by THM-772. The
+One marked interval gives the simpler `L,sum(B)` corollary used by THM-775. The
 genuinely open transverse face must include collapsing safe mass relative to
 component and peel rates.
 

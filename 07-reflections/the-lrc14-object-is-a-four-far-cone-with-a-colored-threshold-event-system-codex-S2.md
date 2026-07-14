@@ -53,7 +53,7 @@ silently quotiented.
 
 ### The chart has two inequivalent directions to infinity
 
-The far-dilation action is only the radial direction. THM-772 supplies a
+The far-dilation action is only the radial direction. THM-775 supplies a
 transverse frequency refinement. For prime `N>110`, the ray
 
 ```text
@@ -79,10 +79,10 @@ The replacement suggested by the cap theorem is relational: for a named peel
 `v`, retain `r_P/(v|G'_P|)=pi*v*(P)/v`, the divisor-support profile, and the
 endpoint owners that created the cuts. This is not yet a finiteness theorem.
 It is the smallest current proposed payload that distinguishes radial replication
-from transverse refinement while remembering why THM-772 closes the whole
+from transverse refinement while remembering why THM-775 closes the whole
 prime ray by the capped peel.
 
-THM-773 identifies the exact rate law behind that closure. If the old fiber has
+THM-776 identifies the exact rate law behind that closure. If the old fiber has
 safe mass `mu` and `r` components, a new frequency `N` leaves at least
 `6mu/7-2r/(7N)` safe mass and creates at most `N+r` components. A named interval
 is only one way to certify the initial state. A peel of speed `aN` therefore sees
@@ -257,6 +257,36 @@ thirteen solutions from more than `2.3e13` candidates. This is an exact warning
 against demanding that a useful proof carrier be binary or pairwise. The
 recursive state is a coloured hypergraph varying over a metric base, with the
 sheet action and closed boundary convention retained.
+
+### Truth compression is not transport compression
+
+The concurrent THM-772/773/774 programs make the preservation hierarchy more
+exact, while remaining `CLAIMED` at theorem level.
+
+At prime sheet size seven, THM-773's stored audit shows that the six nontrivial
+finite-field moments recognize exactly the 5,040 permutation states among all
+`7^7` owner-token configurations. Those moments therefore preserve the Boolean
+predicate "the sheets are exactly covered." But they give the same full-grid
+values on every permutation. Linear and circular tournament gauges likewise
+collapse all assignments to one unlabelled node, while exact chamber movies
+exhibit equal coarse states with different next owners and free-sheet futures.
+Truth needs the moments; transport needs the labelled assignment, event step,
+and endpoint schedule.
+
+At binding scales two and three, THM-772's unit-grid audit points in the opposite
+direction. Eligibility at one modulus is not the predicate. The proof obligation
+is simultaneous compatibility of all unit-fraction columns, including the
+modulus-6/12 splice. That carrier is a hypergraph of proof obligations; its
+pairwise tournament loses the joint column. THM-774 proposes a second compression
+for the two-sheet packet: after folding `(x,y)` to `(a,b)=((x+y)/2,(x-y)/2)`,
+eligibility and opposite colour should become one `l1` distance inequality.
+If its endpoint and measure audit succeeds, that folded metric will preserve the
+local obstruction but still not the cross-modulus transport data.
+
+The resulting rule is task-indexed. Preserve only moments for exact-cover truth,
+the full owner stalk for future events, the obligation hypergraph for persistent
+unit-grid compatibility, and the folded metric for the proposed local two-sheet
+obstruction. "Keep everything" and "find one invariant" are both too coarse.
 
 ### A smaller local address than the edge table
 
@@ -603,7 +633,7 @@ samples from an infinite box.
 
 ## 10. Concrete next lemmas
 
-1. Extend THM-773 beyond its positive-good-state/proportional-peel face: stratify
+1. Extend THM-776 beyond its positive-good-state/proportional-peel face: stratify
    sequences by safe-mass decay relative to component, wall-creation, and peel rates; attach
    endpoint owners, and prove every residual state is bounded or recursively descends.
 2. Classify the seven-exception `1/7` chambers left after THM-767's
