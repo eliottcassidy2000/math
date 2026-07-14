@@ -1,3 +1,13 @@
+## mac-mini-2026-07-14-S106 -- DISPROVED the S105 multi-killer floor conjecture 'M=1/13 iff near-dilate'. FALSE: the minimizers are a whole family {dilated block c*{1..12} + any coprime safe killer}, 173 killers for c=26; counterexample {15,26,...,312} M=1/13 not a near-dilate. FLOOR M>=1/13 stands; only uniqueness wrong. Corrected THM-757.
+
+**Owner:** prove the multi-killer floor conjecture (equality iff near-dilate).
+
+**Honest outcome: FALSE (disproved).** The dilated block 26*{1..12} is covering, M(block)=1/13 tight at 1/338; ANY coprime killer w safe there (w mod 338 in [26,312]) keeps M=1/13 -- 173 such w for c=26, only w=339 is the antipode/near-dilate. Counterexample {15,26,52,...,312}: M=1/13 exact, primitive, covering, NOT near-dilate. Reason: M<=M(block)=1/13, adding any block-tight-safe w keeps equality => killer FREE => minimizer is a (c,w) family, not a point.
+
+**Corrected conjecture (open):** M=1/13 iff a tight 12-block c*{1..12} + coprime safe killer. Remaining rigidity = LRC(13) tightness ({1..12} unique tight 12-set? verified {1..16} 0/1820 non-dilate; open general) + 'M(13-set)=1/13 => tight 12-block'. FLOOR M>=1/13 stands (THM-726+751+753); THM-757 M(V_L)=1/13 correct.
+
+Handoffs: fleet -- minimizer is a (c,w) family; equality rigidity = LRC(13) 12-block tightness. Files: lrc14_floor_rigidity_test_macmini_S106.py(+out); THM-757 corrected. HYP-6720.
+
 ## mac-mini-2026-07-14-S105 -- executed the covering-band finite check EXACTLY + THM-757 (near-dilate M(V_L)=1/13 proved) + multi-killer floor conjecture. 8260 interval-core band families (220,475] all M>=1/13 (exact witnesses, 0 fails); the M=1/13 extremal (near-dilate) lives far out (diam>=425881, opus regime), NOT the band.
 
 **Owner:** execute the band finite check exactly, add small theorems/conjectures.
