@@ -12,6 +12,25 @@
 
 **Files:** lrc14_farpeel_farey_proof_macmini_S88.py(+.out), THM-735, HYP-6530 (S87). Also S87: #far reduction, tooth-narrowing M({1..12,182m})=14m/(182m+1).
 
+## klein-2026-07-13-S291 -- "covering buys uniform distance from the AP" = sup_{prim covering} conc < 7 = the residual, BUT it FACTORS: [bounded near-AP finite check (kps)] + [large-speed equidistribution (opus)]; PRIMITIVITY is the separator; tight set = {AP, GW}
+
+Prompt (owner): prove covering buys uniform distance from the AP.
+
+I did NOT prove the uniform gap monolithically (it = the residual), but the structure is now clean and it FACTORS.
+
+PRECISE MEANING: via the S290 identity L({1}∪C)=|G(C)|(1−conc/7), "covering buys uniform distance from AP" = sup_{primitive covering} conc < 7 ⟺ inf_{primitive covering} L > 0 = the open residual (THM-527-A cancellation). So it's the honest RESTATEMENT, not a shortcut.
+
+(A) TIGHT-CONFIG (clean): conc≤7 ALWAYS (⟺ L≥0, a measure); conc=7 ⟺ L=0 ⟺ tight LRC extremal. VERIFIED both AP {1..13} and GW {1..11,13,24} have conc=7.000, both primitive NON-covering (= kps-THM-734 tight census {AP,GW}). So covering ⟹ conc<7 pointwise (=LRC for that set).
+
+(B) PRIMITIVITY IS THE SEPARATOR: the other conc=7 configs are the IMPRIMITIVE dilates c·{AP}, c·{GW} (e.g. 14·{1..13} is covering-as-written but reduces to the non-covering AP). Primitive-covering excludes both {AP,GW} (non-covering) AND dilates (imprimitive). = opus-S271 dilation-blindness (dilates = tight shadows a peel can't see; primitivity removes them).
+
+(C) THE GAP FACTORS (the useful part): sample of 504 primitive-covering min=1 sets (max speed ≤90) → MAX conc=6.177 (gap 0.823), at the BOUNDED near-AP {1..14}\{6}; large-speed covering sets have conc~3.3 (FAR from AP). So sup conc lives at BOUNDED near-AP sets ⟹ uniform gap = [bounded near-AP: FINITE CHECK, kps-THM-734 closes ≥11-in-{1..14}, conc≤6.18] + [large-speed: conc≈1, a ONE-INTERVAL discrepancy = opus true-disc slack, 12/13 peels]. For min=1 the "1" pins the dilation param c=1 ⟹ large min=1 covering sets can't be near-dilates ⟹ cleanly far from AP.
+
+HONEST BOTTOM LINE: the uniform gap = the residual (not proven in one stroke), but "covering buys AP-distance" is now a TRUE, FACTORED statement — tight set = {AP,GW}+dilates, primitivity the separator, distance bounded below by [near-AP finite (kps)] + [large-speed equidistribution (opus)], both actively closing. Not one monolithic cancellation but a two-piece tiling.
+
+FILES: HYP-6540; reflection covering-buys-AP-distance-it-factors-...-klein-S291; 04-computation/lrc14_ap_distance_klein_S291.py (+out). NB HYP-6505/6510/6495 known collisions; used 6540. -> S290/HYP-6530, opus-S271/HYP-6525, kps-THM-734, THM-405/527-A. Sent to all.
+
+---
 ## klein-2026-07-13-S290 -- the compact core SPLITS: bounded-ratio DONE by THM-405 (no cancellation); the {1}∪cluster residual has an EXACT form L=|G(C)|(1−conc/7), so L>0 ⟺ conc<7 with the AP {1..13} the UNIQUE tight extremal — converges with opus-S271 AP-shadow + kps-THM-734 tight census
 
 Prompt (owner): prove L>0 for the compact core via the shared cancellation; continue+extend.

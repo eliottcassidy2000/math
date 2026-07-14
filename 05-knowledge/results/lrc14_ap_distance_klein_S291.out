@@ -1,0 +1,12 @@
+=== tight configs (expect conc=7, L=0) vs covering (expect conc<7) ===
+  AP {1..13}                       conc= 7.000  L=0.000002  cov=False prim=True
+  GW {1..11,13,24}                 conc= 7.000  L=0.000002  cov=False prim=True
+  near-AP cov {1,3..14}            conc= 5.165  L=0.030220  cov=True prim=True
+  near-GW cov?{1,3..11,13,14,24}   conc= 4.953  L=0.030220  cov=True prim=True
+  deep well                        conc= 5.035  L=0.023897  cov=True prim=True
+  {1,90..101}                      conc= 3.300  L=0.074873  cov=True prim=True
+
+=== max conc over PRIMITIVE COVERING min=1 13-sets (sample): is there a uniform gap 7-conc? ===
+  sampled 504 primitive-covering min=1 sets; MAX conc = 6.1768 (gap 7-conc = 0.8232)
+  at S=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14]
+  (if max conc stays well below 7, covering empirically buys a uniform AP-distance; proving inf gap>0 = the residual)
