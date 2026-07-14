@@ -61833,7 +61833,8 @@ constraints, a primitive full-residue set with `chi_13=0` must be
 `{1,...,12}`.
 
 Pulled and integrated concurrent THM-761 (multi-exception sheet covering),
-THM-763 (strict finite height), HYP-6815, HYP-6825, and the endpoint-loss audit.
+THM-763 (strict finite height), HYP-6815, HYP-6825 (metagraph atlas),
+HYP-6830 (scale-uniformization splice), and the endpoint-loss audit.
 The resulting LRC(14) frontier is: non-covering families are closed; covering
 families with at most three far speeds are closed; THM-761 closes its stated
 multi-exception scale rays; the scale-normal `f>=4` residual, cyclic packets
@@ -61841,3 +61842,12 @@ with at least seven exceptions, small-sheet failure regimes, and the n=12
 component-tooth/splice coherence lemma remain open.  HYP-6820 and the two
 frontier atlases now separate proved reductions, exact bounded evidence, and
 open uniform claims.
+
+Final post-rebase signal: S4's exact n=7 atlas shows rooted weighted
+blue/black line-WL separates all 272 converse-merged tournament nodes, but its
+own constructible-atlas interpretation requires metric/owner stalks.  The new
+endpoint defect is one such stalk: it separates AP from failed lifts that have
+the same tournament fingerprint.  This also gives a disciplined transfer to
+THM-761's seven-exception wall: treat its cyclic sheet tiling as a different
+base and classify labelled zero-defect owner splices, rather than identifying
+it with staircase tournament tilings by analogy.

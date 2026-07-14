@@ -212,6 +212,43 @@ depending on the stage:
 
 ## 7. The precise next lemmas
 
+### Post-pull bridge: metagraph address versus endpoint stalk
+
+The concurrent HYP-6825 atlas now gives an exact finite fact that clarifies,
+rather than replaces, this endpoint picture.  Rooted weighted blue/black
+line-WL separates all 272 converse-merged tournament nodes at `n=7`, while
+raw line incidence gives only 159 cells.  This is a complete address for the
+known finite **base**.  It is not a clearance invariant: the arithmetic
+progression and positive-defect lifts above can share the same tournament
+fingerprint.  In the constructible-atlas language, `chi_q`, protected-splice
+owners, rational endpoint positions, and the closed-threshold flag form a
+concrete metric/owner **stalk** over the metagraph address.
+
+This also makes two live pull cards precise.  MPA-19 should use endogenous
+pair-sum or splice obligations as vertices and retain their owners; MPA-20
+should test whether `(metagraph address, divisor mask, cap ratio,
+endpoint-splice defect, peak witness)` is predicate-pure on named LRC banks.
+At THM-761's seven-exception wall, the analogous base is a cyclic tiling of
+the sheet fibre `Z_c`, not the staircase tiling.  A promising transfer is to
+define sheet components and protected owner-splices there and classify its
+zero-defect labelled tilings.  Any map between the two tiling systems must
+preserve free-sheet nonemptiness and owner transport; shared vocabulary is
+not yet a functor.
+
+The incoming four-far cone audit supplies the outer chart.  Exactly four far
+speeds give a rank-four semilinear cone over each nine-speed small core, while
+larger far counts have higher-dimensional cones.  The endpoint stalk varies
+over those charts even at fixed residue address.  Thus the proposed object is
+now layered without a dimension sleight of hand:
+
+```text
+far-cone / affine-slope chart
+    -> metagraph or cyclic-tiling base address
+    -> endpoint-owner metric stalk
+    -> wall, sheet, peel, and scale transport
+    -> witness or named residual.
+```
+
 ### Equality-rigidity lemma (n=12)
 
 For every primitive full-residue packet
