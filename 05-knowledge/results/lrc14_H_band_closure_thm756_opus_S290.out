@@ -1,0 +1,13 @@
+====================================================================================================
+BATTERY A: all 91 bottom cores -- complete exact (H)-band sweep
+====================================================================================================
+   (P,v) pairs swept: 4032 ; (H) exact-PASS: 4011 ; (H)-fail: 21
+   failures closed directly by exact L>0: 19/21
+   *** UNCLOSED (P,v): [([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 13, 2.3649843095658603, False, True), ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13], 24, 1.6468068576357, False, True)]
+   failure diagnosis: 21 failures, 38% carry 7/11/12/13/14-alignment
+
+====================================================================================================
+BATTERY B: mac-mini-S104's assembly band (multi-killer, outlier in (220,475]) -- closer stack
+====================================================================================================
+   160 band bodies: THM-755 instant: 158 ; exact-(H): 2 ; fine-comb-752: 0 ; direct-L: 0 ; UNCLOSED: 0
+   THE ASSEMBLY BAND SAMPLE IS FULLY CLOSED (every body rigorously certified by the stack).

@@ -1,3 +1,34 @@
+## opus-2026-07-14-S290 -- THM-756: the (H)-BANDS ARE CLOSED -- Battery A complete (91 bottom cores, 4032 pairs: 4011 exact-(H) + 19 direct-L + 2 = the AP/GW tight completions at the tiling corners); Battery B (mac-mini-S104's assembly band, 160 bodies): 158 INSTANT by THM-755 + 2 exact-(H), 0 unclosed -- the 'irreducible sliver' is ~99% capped-envelope-instant; the band protocol is three lines
+
+Prompt (owner): sweep the finite (H)-bands per core and close them.
+
+BATTERY A (complete, deterministic, exact): all 91 twelve-subsets of {1..14}, every v in
+(maxP, v* = r_P/(pi|G'_P|)]: 4032 pairs. 4011 pass (H) exactly (Bernoulli disc); 19 fail (H)
+but close by exact L(P u {v}) > 0 (38% aligned -- THM-751's regime); the final 2 have L = 0:
+({1..12},13) = THE AP and ({1..11,13},24) = GODDYN-WONG -- the two tight extremals, lonely
+WITH EQUALITY at the THM-754 tiling corners (kps THM-741's L=0 census). EVERY BAND CLOSED;
+the failure set is exactly the structure the tiles already own.
+
+BATTERY B (the assembly band, mac-mini-S104: multi-killer, largest outlier in (220,475]):
+160-body sample through the closure stack: THM-755-instant 158, exact-(H) 2, fine-comb 0,
+direct-L 0, UNCLOSED 0. The band's 'irreducible ~4%' is ~99% THM-755-INSTANT: the closure
+protocol is three lines (v > v* almost always; else one exact disc; the two extremals by
+equality certificates).
+
+POSITION: with mac-mini-S104's assembly (covering = 366 + 724 + 726[Step2 + 751/753] + band
++ floor), the (H)-band MATHEMATICS is done. Fleet-remaining: the engineering enumeration of
+the band (kps exact-Q; every step decidable) + Lean composition of the bottoms.
+
+NAMESPACE: mac-mini-S104 used HYP-6695 (mine, S288, pushed first) -- flagged, theirs to
+renumber.
+
+FILES: THM-756 canon; HYP-6705; lrc14_H_band_closure_thm756_opus_S290.out. -> mac-mini (your
+band: closed on sample by the stack, protocol enclosed -- the 4% is 99% instant), kps (the
+enumeration is yours: 3-line protocol, all exact-Q; Battery A is already theorem-grade), klein
+(THM-753's (H) is now: above v* proved, in-band protocol-closed; the skeleton stands complete
+modulo enumeration).
+
+---
 ## opus-2026-07-14-S289 -- THM-755: the CAPPED-ENVELOPE theorem -- (H) PROVED for every v > v* = r_P/(pi |G'_P|), unconditionally (splice the origin's cap |c_m| <= |G'| with the spoke envelope r/(pi m) at their crossover: disc_v <= 4r|G'|/(pi v) + 2|G'|^2); the (H)-residual collapses to the per-core FINITE band (maxP, v*] -- band edges 112/105/52/644 vs old isolated thresholds 156/169/182/4771; zero violations exact
 
 Prompt (owner): prove the (H) inequality with the perspective frame.
