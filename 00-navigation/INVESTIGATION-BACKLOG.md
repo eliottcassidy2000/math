@@ -20,16 +20,16 @@
 - **Critical correction:** HYP-6830's proposed complementarity `r_P≤B(c*)` is REFUTED by the
   exactly-`f=4` primitive covering family `{1,...,9,15,110,N,1092N}`. No divisor packet has seven
   members, but the top-peeled core has unbounded good-set components (`66,104,174,310` exactly at
-  `N=211,503,1009,2003`). THM-775 proves the entire prime family fires the capped peel.
+  `N=211,503,1009,2003`). THM-776 proves the entire prime family fires the capped peel.
   Thus coherent scale and transverse tooth frequency are independent coordinates
-  (THM-775; MISTAKE-145).
-- **Terminal transverse face:** THM-776 generalizes the successful cap calculation. A base good-set
+  (THM-776; MISTAKE-145).
+- **Terminal transverse face:** THM-777 generalizes the successful cap calculation. A base good-set
   state `(mu,r_B)` becomes `mu_N>=6mu/7-2r_B/(7N)`, `r_N<=N+r_B` after adjoining
   frequency `N`; a single safe interval gives the simpler `L,sum(B)` certificate. A proportional
   peel `aN` therefore closes beyond an explicit rational threshold when its rate beats the retained
   mass. The unresolved degeneration must collapse safe mass relative to component or peel rate;
   raw wall proliferation alone is terminal.
-- **Recursive certificate pull:** Iterate THM-776's enclosure operator
+- **Recursive certificate pull:** Iterate THM-777's enclosure operator
   `T_N(mu_lower,r_upper)=(6mu_lower/7-2r_upper/(7N),r_upper+N)`. Set insertion
   commutes but the bound does not; the exchange law proves increasing insertion
   order is optimal. The 24 formal peel/order gauges of a four-far chart collapse
@@ -40,11 +40,11 @@
   can have overlap; only the zero-defect subcase is a cyclic tiling of `Z_c`; (ii) a
   peel-relative splice retaining `r_P/(v|G'_P|)`, divisor support, and endpoint
   owners; (iii) gcd-descent bookkeeping. No global regime-2 bound has been proved from
-  `c*` alone; THM-775 refutes the proposed raw-component route to one.
+  `c*` alone; THM-776 refutes the proposed raw-component route to one.
 - **Probes filed:** FI cubic certificate on the band bank's 19 direct-L bodies; Rédei deck-parity
   (equality structure only, guardrail C18).
 - **Files:** THM-761 canon; HYP-6830; 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py
-  (+ .out); THM-775/776; `lrc14_affine_slope_suspension_codex_S2.py` (+ .out); MISTAKE-145;
+  (+ .out); THM-776/777; `lrc14_affine_slope_suspension_codex_S2.py` (+ .out); MISTAKE-145;
   07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md;
   frontier map §0 updated; 04-paper/lrc14-assembly.tex re-scoped (Claim B corrected, C2 withdrawn).
 - **S300/S5 CORRECTED UPDATE (r>=7 decks):**
@@ -132,13 +132,16 @@
   nearest-integer parity everywhere.  Then treat the `s=3` three-colour edge.
   The exact object is loose-set component x sheet-owner incidence with closed
   endpoints, not a residue condition at one binding point.
-- **S7 claimed refinements:** THM-772 proposes a simultaneous unit-grid divisor
-  transfer for the `s=2,3` equality packets; its exact shell table is stored but
-  the theorem remains `CLAIMED` pending endpoint and joint-splice audit. THM-774
-  proposes the two-sheet folded-diamond inequality and sharp `8/117` measure
-  obstruction; its exact measure proof and independent replay remain open. These
+- **S7/S3 proved refinements:** THM-772 proves the simultaneous unit-grid divisor
+  transfer for the `s=2,3` equality packets, including quotient primitivity,
+  divisor completeness, exact local shells, and speed bounds. THM-774 proves the
+  two-sheet folded-diamond identity and sharp `8/117` measure obstruction. These
   are complementary carriers: the first preserves cross-modulus obligation
-  compatibility, while the second attempts a metric `l1` compression.
+  compatibility, while the second gives an exact local metric `l1` compression.
+- **S9 claimed recursion:** THM-775 proposes that failure of hereditary primitivity
+  in the two-sheet quotient forces a unique dyadic deletion seam, lifts to an exact
+  `2+1+1` cover on `Z/4`, and transfers divisor completeness to a smaller quotient.
+  Capacity, strictness, and iteration still require independent audit.
 - **Metric bridge:** for each core-safe component `J`, retain
   `sigma_J(w)=1/13-||wc_J||-w h_J` and emitted endpoint current `e_w(J)`.
   Winding one, pure endpoint ownership, and a transitive phase tournament all

@@ -120,8 +120,8 @@ obligations, and proof-carrier interfaces.
   THM-758 splits covering by far count, THM-755 closes peels above
   `v*=r_P/(pi|G'_P|)`, HYP-6780 says the remaining band is a scale quotient
   rather than a raw speed cutoff, THM-764 refutes a uniform `q<=25` terminal,
-  and THM-775/MISTAKE-145 refute control of `r_P` by maximal divisor scale even
-  inside exactly `f=4`. THM-776 closes the positive-good-state/proportional-peel
+  and THM-776/MISTAKE-145 refute control of `r_P` by maximal divisor scale even
+  inside exactly `f=4`. THM-777 closes the positive-good-state/proportional-peel
   transverse face by retaining mass, component count, wall rate, and peel rate together. The card prevents
   future agents from treating "bounded band" as a scalar table or from
   re-promoting the `k<=13` shadow to a uniform route.
@@ -153,7 +153,7 @@ obligations, and proof-carrier interfaces.
   tight corners or with a near-dilate equality family without retaining the
   certificate sidecar.
 - **Pointers:** THM-758, THM-755, THM-756, THM-753, THM-751, THM-738,
-  THM-757, THM-759, THM-764, THM-771, THM-772, THM-773, THM-774, THM-775, THM-776,
+  THM-757, THM-759, THM-764, THM-771, THM-772, THM-773, THM-774, THM-775, THM-776, THM-777,
   HYP-6780, HYP-6815, HYP-6830, HYP-6800,
   MISTAKE-145, klein-S312, opus-S295,
   `00-navigation/LRC14-FRONTIER-AND-AVENUES-2026-07-14.md`.

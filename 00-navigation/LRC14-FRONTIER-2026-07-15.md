@@ -94,6 +94,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | two-/three-sheet equality quotients | PROVED primitive divisor transfer and speed bounds; two-sheet core contains multiples of every `2,...,12`, three-sheet core of every `2,...,11` | THM-772 |
 | two-sheet metric residual | PROVED exact folded diamond `||(x+y)tau/2||+||(x-y)tau/2||>=11/13`; sharp measure cap `8/117`; all quotient cores in `[1,19]` closed against unbounded odd exceptions | THM-774 + exact certificate |
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
+| dyadic deletion descent from the two-sheet packet | CLAIMED: an imprimitive deletion should force a unique `Z/4` seam and recursive divisor-complete quotient | THM-775 |
 | n=12 sporadic branch | OPEN globally; bounded shallow slice empty, higher shallow lifts and divisor-complete folded/higher-sheet packets remain | THM-759/765/766/768--772/774; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 

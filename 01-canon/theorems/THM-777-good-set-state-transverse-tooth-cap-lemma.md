@@ -1,14 +1,14 @@
 ---
-id: THM-776
+id: THM-777
 title: Good-set-state transverse-tooth cap lemma
 status: PROVED (elementary circle geometry plus THM-755)
 source: codex-2026-07-14-S2
 depends_on:
   - THM-755   # capped-envelope criterion
-related: [THM-752, THM-761, THM-766, THM-775, HYP-6815, HYP-6830]
+related: [THM-752, THM-761, THM-766, THM-776, HYP-6815, HYP-6830]
 ---
 
-# THM-776 - Good-set-state transverse-tooth cap lemma
+# THM-777 - Good-set-state transverse-tooth cap lemma
 
 ## Statement
 
@@ -181,7 +181,7 @@ is a finite proof calculus, not a finite classification of the chart: all four
 lower bounds may be nonpositive, and the compression deliberately forgets
 endpoint owners and correlations.
 
-## THM-775 specialization
+## THM-776 specialization
 
 For
 
@@ -195,7 +195,7 @@ the marked-window threshold (9) has exact crossing
 11734415/9278 < 1265.
 ```
 
-Thus THM-776 supplies the elementary infinite tail in THM-775. THM-775's
+Thus THM-777 supplies the elementary infinite tail in THM-776. THM-776's
 divisor-packet statement, fragmentation lower bound, and 176-prime finite base
 remain separate exact inputs.
 
@@ -242,7 +242,7 @@ metric incidence inequality.
 
 ## Scope
 
-THM-776 proves eventual closure only when positive safe mass persists and the
+THM-777 proves eventual closure only when positive safe mass persists and the
 peel rate is large enough relative to it. It does not give a uniform lower
 bound for `|G'_B|` over arbitrary cores, classify sublinear peels, or prove the
 global HYP-6830 splice. It makes the remaining obstruction more precise:
