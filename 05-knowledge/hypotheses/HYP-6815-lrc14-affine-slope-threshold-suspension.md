@@ -28,7 +28,7 @@ related:
   - THM-764
   - THM-771
   - THM-772   # proved unit-grid obligation carrier
-  - THM-773   # CLAIMED prime-seven truth/transport carrier split
+  - THM-773   # proved prime-seven truth/transport carrier split
   - THM-774   # proved folded-diamond metric compression
   - THM-775   # CLAIMED dyadic deletion descent
   - THM-776   # proved four-far transverse falsifier and capped family
@@ -80,10 +80,10 @@ audit shows that six finite-field moments recognize exact-cover truth while
 forgetting which of the `7!` owner assignments occurs and what the next event
 does. THM-772's unit-grid audit instead needs simultaneous obligation columns
 across moduli; its pairwise tournament does not preserve their joint splice.
-THM-774 proves an `l1` folded metric for the two-sheet equality packet. THM-772
-and THM-774 are proved; THM-773 remains claimed despite its stored finite audit,
-and THM-775's proposed dyadic deletion recursion remains under audit. The status
-split matters: carrier evidence is not automatically an assembly theorem.
+THM-774 proves an `l1` folded metric for the two-sheet equality packet. THM-772,
+THM-773, and THM-774 are proved; THM-775's proposed dyadic deletion recursion
+remains under audit. The status split matters: a carrier theorem is not
+automatically an LRC14 assembly theorem.
 
 ## 1. The outer four-far cone
 

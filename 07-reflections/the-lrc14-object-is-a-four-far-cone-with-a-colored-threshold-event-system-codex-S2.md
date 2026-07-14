@@ -261,8 +261,8 @@ sheet action and closed boundary convention retained.
 ### Truth compression is not transport compression
 
 The concurrent THM-772/773/774/775 programs make the preservation hierarchy
-more exact. THM-772 and THM-774 are proved; THM-773 has a stored exact audit but
-remains claimed at theorem level, and THM-775's dyadic descent remains claimed.
+more exact. THM-772, THM-773, and THM-774 are proved; THM-775's dyadic descent
+remains claimed.
 
 At prime sheet size seven, THM-773's stored audit shows that the six nontrivial
 finite-field moments recognize exactly the 5,040 permutation states among all

@@ -202,7 +202,7 @@
   seven exceptions its union-bound wall is an equal-arc cyclic tiling.  Classify
   that labelled cyclic cover with gcd strata and movable core-safe time, and
   compare it functorially—not analogically—with staircase tiling fibres.
-- **S6 exact audit / claimed bridge:** THM-773's six prime-field moments decide
+- **S6 proved bridge:** THM-773's six prime-field moments decide
   whether seven owner tokens form an exact `F_7` sheet cover, but all 5,040 owner
   assignments have the same moment data and collapse to one node in either
   unlabelled tournament gauge. Exact chamber movies with equal coarse states have
