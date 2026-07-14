@@ -331,11 +331,27 @@ certificate clauses, and proof obligations.
   for each field.  This is the most direct answer to “precisely what
   information needs to be preserved?”
 
+### MPA-27 — Fold the dynamics before quotienting it
+
+- **Pull:** imitate THM-774's exact half-sum/half-difference conjugacy on the
+  prime-seven stalk.  Test discrete Fourier modes of labelled occupancy,
+  signed token chords, and elementary symmetric coefficients of the
+  redundancy polynomial as coordinates for endpoint deletion and translation.
+- **Old thread:** THM-774 folded diamond; THM-773 token polynomial and
+  monodromy; Fourier/relation-line fields in HYP-6815.
+- **Must preserve:** exact cover divisibility, the owner-specific update
+  `k_a -> k_a-w_a^(-1)`, endpoint deletion, and the global carry.  A scalar
+  norm, energy, or measure is not an acceptable substitute for the pointwise
+  transformed predicate.
+- **Deliverable:** either an invertible coordinate transform in which each
+  wall event changes boundedly many fields, or an explicit pair proving that
+  every proposed low-order mode truncation merges different continuations.
+
 ## Recommended next three pulls
 
 1. Continue `MPA-17/18`: transport THM-773's absent eighth owner over the
    25-mask heptagon stalk and classify rigid periodic survivor words.
 2. Continue `MPA-12/26`: minimize the bounded prime-sheet movie and prove
    whether inverse steps plus cyclic endpoint word are continuation-complete.
-3. `MPA-01`: test the `n=8` WL frontier or prove the `n<=7` completeness
-   mechanism independently of canonical codes.
+3. `MPA-27`: seek a predicate-preserving folded coordinate system for the
+   absent-owner/heptagon transport before applying another tournament quotient.

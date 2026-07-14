@@ -6,7 +6,7 @@ source: codex-2026-07-14-S6
 depends_on:
   - THM-771   # exact seven-owner sheet defect and strict endpoint convention
   - HYP-6825  # canonical merged-metagraph addresses and inverse tiling fibres
-related: [THM-754, HYP-3802, HYP-6835, HYP-6840]
+related: [THM-754, THM-772, THM-774, HYP-3802, HYP-6835, HYP-6840]
 verification: 04-computation/lrc14_prime7_sheet_monodromy_metagraph_codex_S6.py
   (+ 05-knowledge/results/lrc14_prime7_sheet_monodromy_metagraph_codex_S6.out and .json)
 ---
@@ -311,3 +311,10 @@ the complete finite enumerations recorded by the verification artifact. ∎
 This challenges the convention that the merged-metagraph node is the whole
 object.  In the LRC application it is the base of an owner-labelled transport
 stalk.
+
+THM-774 clarifies a complementary operation: its folded-diamond coordinates
+are an exact conjugacy of a signed two-owner predicate, while the subsequent
+measure cap is only a lossy summary.  The token polynomial here plays the same
+predicate-preserving role.  The metagraph node and moment vector enter only
+after that exact change of language, so they must be audited as quotients, not
+mistaken for equivalent coordinates.

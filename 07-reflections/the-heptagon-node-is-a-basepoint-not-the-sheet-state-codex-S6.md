@@ -160,6 +160,26 @@ metric tooth word     = geometry between samples,
 prime token polynomial= exact finite-fibre coverage.
 ```
 
+## Fold before quotient
+
+THM-774 arrived after the first prime-sheet computation and sharpens the
+methodological distinction.  Its passage from two odd owners `(x,y)` to the
+half-sum and half-difference modes `(a,b)` is not compression: the signed
+eligibility/colour predicate is exactly conjugated to one folded-diamond
+inequality.  Compression happens only later, when the whole pointwise diamond
+is replaced by its measure.  The former preserves truth; the latter retains
+only a necessary scalar shadow.
+
+The seven-token analogue should therefore be sought before another quotient.
+Possible coordinates include the discrete Fourier modes of the labelled
+occupancy function, signed chord differences between tokens, or the elementary
+symmetric coefficients of the redundancy polynomial.  A useful transform
+must carry both the endpoint deletion and the translations
+`k_a -> k_a-w_a^(-1)` exactly.  Only after finding such a conjugacy should we
+ask which coordinates can be discarded under continuation equivalence.  This
+reframes “choose better tournament vertices” as the second question; the first
+is “which nonlinear change of coordinates makes transport local?”
+
 ## The next frontier
 
 The most focused next problem is the eight-owner transport problem:
