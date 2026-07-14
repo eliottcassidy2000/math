@@ -1,0 +1,14 @@
+core {1..12}: M(core)=0.07692, t0~0.07692 ~ 1/13; lcm-carrier w=182; q=13; ALIGNED (q|w)? True
+      M(core u {182*m}) m=1..6: ['0.07650', '0.07671', '0.07678', '0.07682', '0.07684', '0.07685']; monotone-nondecr? True; -> M(core)=0.07692
+core {1..11,13}: M(core)=0.08333, t0~0.08333 ~ 1/12; lcm-carrier w=84; q=12; ALIGNED (q|w)? True
+      M(core u {84*m}) m=1..6: ['0.07865', '0.08092', '0.08171', '0.08211', '0.08235', '0.08251']; monotone-nondecr? True; -> M(core)=0.08333
+core {1..10,13,14}: M(core)=0.09091, t0~0.90909 ~ 10/11; lcm-carrier w=45; q=11; ALIGNED (q|w)? False
+      M(core u {45*m}) m=1..6: ['0.09091', '0.09091', '0.09091', '0.09091', '0.09091', '0.09091']; monotone-nondecr? True; -> M(core)=0.09091
+core {1..10,13,22}: M(core)=0.08696, t0~0.08696 ~ 2/23; lcm-carrier w=84; q=23; ALIGNED (q|w)? False
+      M(core u {84*m}) m=1..6: ['0.08696', '0.08696', '0.08696', '0.08696', '0.08696', '0.08696']; monotone-nondecr? True; -> M(core)=0.08696
+
+TOOTH-NARROWING LEMMA (to prove): if core P is safe at level mu on an interval around t0=a/q,
+and outlier w is ALIGNED (q | w, so w*m has a tooth at t0), then M(P u {w*m}) is nondecreasing
+in m and -> M(P). Mechanism: ||w*m*t|| ~ w*m*|t-t0| near t0 (tooth half-width mu/(w*m) -> 0);
+P-safe interval around t0 has width ~ (M(P)-mu)/slope; family safe at mu iff mu/(w*m) < that width,
+so achievable mu increases to M(P) as m grows. This proves Step 1 for aligned lcm-carriers.

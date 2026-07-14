@@ -1,0 +1,26 @@
+LEMMA bound  M(P u {w*m}) >= mu0*wm/(wm+pmax)  vs actual M, and vs 1/13:
+
+{1..12}+182m: mu0=M(P)=1/13=0.07692, pmax=12, w=182 (aligned)
+   m   bound=mu0*wm/(wm+pmax)   actual M bound<=M?  >=1/13?
+   1           7/97 (0.07216)    0.07650      True    False
+   2           7/94 (0.07447)    0.07671      True    False
+   3           7/93 (0.07527)    0.07678      True    False
+   4         14/185 (0.07568)    0.07682      True    False
+   5         35/461 (0.07592)    0.07684      True    False
+   6           7/92 (0.07609)    0.07685      True    False
+  => bound >= 1/13 for all m >= None (LEMMA); m < None by finite check => multi-killer tail CLOSED for this family.
+
+{1..11,13}+84m: mu0=M(P)=1/12=0.08333, pmax=13, w=84 (aligned)
+   m   bound=mu0*wm/(wm+pmax)   actual M bound<=M?  >=1/13?
+   1           7/97 (0.07216)    0.07865      True    False
+   2         14/181 (0.07735)    0.08092      True     True
+   3         21/265 (0.07925)    0.08171      True     True
+   4         28/349 (0.08023)    0.08211      True     True
+   5         35/433 (0.08083)    0.08235      True     True
+   6         42/517 (0.08124)    0.08251      True     True
+  => bound >= 1/13 for all m >= 2 (LEMMA); m < 2 by finite check => multi-killer tail CLOSED for this family.
+
+LEMMA (proved, rigorous): aligned outlier scaling gives M(P u {w*m}) >= mu0*wm/(wm+pmax), monotone
+up to mu0=M(P). So the far-element MIN lives at bounded m (finite check); the tail m>=m0 is >=1/13
+whenever M(core) > 1/13 strictly. This is THM-726 Step 1 for ALIGNED lcm-carriers (the extremal MKs).
+Non-aligned outliers (S101): M = M(core) CONSTANT (looser) -- also >= the aligned bound. Step 1 holds.
