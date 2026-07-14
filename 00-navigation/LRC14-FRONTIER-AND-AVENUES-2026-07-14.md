@@ -1,3 +1,5 @@
+# LRC(14) Frontier and Research-Avenue Atlas — 2026-07-14
+
 **Status:** current frontier audit, historical synthesis, and pull-card backlog.
 **Owner:** codex-2026-07-14-S2.
 **New mathematics in this session:** THM-760 and HYP-6785.
@@ -408,7 +410,8 @@ the empirical “irreducibles are tiled” statement into a structural theorem.
 scale-normal recursion.  State separately the proved capped-envelope tail,
 completed bottom bands, sampled general bands, and q<=25 observation.  The
 success condition is a well-founded cover of all primitive shapes, not a
-maximum-speed estimate.
+maximum-speed estimate.  Coordinate prose with HYP-6810, which now owns the
+assembly-paper write-up; this card owns the missing uniform justification.
 
 **A12. Formalize THM-760 and compose the completed THM-755 bridge.**  Lean
 should express the circle-cover sheet permutation and the 1/(2c) grid
@@ -635,7 +638,7 @@ rigidity team:
   B5-B9 and C19
 
 adversarial/formal team:
-  A6, C11, C22-C25
+  A6, C11, C22-C26
 ~~~
 
 The teams should exchange proof-carrying normalized packets, not raw lists of
