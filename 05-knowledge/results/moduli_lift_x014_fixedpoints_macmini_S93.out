@@ -1,0 +1,31 @@
+  h(-4) = 1
+  h(-7) = 1
+  h(-8) = 1
+  h(-11) = 1
+  h(-28) = 1
+  h(-44) = 3
+  h(-56) = 4
+
+SANITY CHECK N=11 (X_0(11)=11a, genus1, Fricke w_11 eigenvalue -1 => reflection => 4 fixed):
+  Fricke ν(w_11) = h(-44)+h(-11) = 3+1 = 4  (expect 4)
+
+==================================================================
+X_0(14) = 14a (genus 1). AL eigenvalues on f_14 (LMFDB 14.a): w_2=+1, w_7=-1, w_14=-1
+==================================================================
+  w_2: eigenvalue +1 => TRANSLATION (fixed-point-free); nu=0; quotient genus 1
+  w_7: eigenvalue -1 => REFLECTION (4 fixed pts); nu=4; quotient genus 0
+  w_14: eigenvalue -1 => REFLECTION (4 fixed pts); nu=4; quotient genus 0
+  Fricke w_14 fixed pts = h(-56) = 4 (disc -56 = -2^3*7, encodes BOTH primes 2,7)
+  CHECK V_4 consistency: w_2 o w_7 = w_14; translation o reflection = reflection (0-fix,4-fix -> 4-fix) OK
+  and w_7 o w_14 = w_2: reflection o reflection = translation (4,4 -> 0) OK
+
+CORRESPONDENCE to the danger circle Z/14 (S92: W_2=x+7, W_7=7-x, W_14=-x):
+  w_2: circle fixes [] (0) ; moduli 0 ; MATCH (both translation, free)
+  w_7: circle fixes [] (0) ; moduli 4 ; circle 0 -> moduli 4: lift ADDS the CM points
+  w_14: circle fixes [0, 7] (2) ; moduli 4 ; circle 2 -> moduli 4: lift ADDS the CM points
+
+VERDICT: the 2-part w_2 is a fixed-point-FREE TRANSLATION on BOTH circle and moduli (the clean lift).
+The reflections w_7,w_14 GAIN their fixed points in the lift (0->4, 2->4) = the CLASS NUMBERS
+(h(-56)=4) = the arithmetic the FLAT circle cannot see. 'Lifting' = curving the flat circle into the
+genus-1 moduli, which CREATES the CM fixed points. NOTE: corrects klein-S59 ('W_2 4 CM pts') -- w_2 is
+the TRANSLATION (0 fixed pts); the 4-fixed-point reflections are w_7 and w_14.
