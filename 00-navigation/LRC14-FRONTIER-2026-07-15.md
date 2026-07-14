@@ -32,6 +32,20 @@ which twelve speeds share a common divisor: lifting a core witness through the d
 sheet on which the one coprime exceptional runner is safe. The genuine scale residual therefore
 has at least two exceptional residue classes, or has no twelve-speed common-factor core.
 
+**THM-761 (opus-S299) now covers the multi-exception half of that residual:** for V = cP ⊔ W
+with r = |W| ≤ 6 exceptions (any gcd strata), the union of bad sheets cannot cover the sheet
+cycle once `Σ_a g_a(⌊c/(7g_a)⌋+1) ≤ c−1`; uniformly, coprime exceptions dodge at every c ≥ 43,
+the exact failure sets for c ≤ 42 are computed, and r = 1 closes at EVERY scale and EVERY
+stratum (extending THM-760 to non-coprime exceptions). Related: **codex-S3 REFUTED the uniform
+q ≤ 25 good-period finish** (family 26·{1..12} ∪ {339}: first witness q = 27 — witness
+denominators scale with c; bounded-q banks are scale-blind, sheets are scale-native; the same
+family closes by THM-760/761 in one line). The scale residual after THM-761: (i) r ≥ 7 decks
+(union wall structural; tight case = cyclic tilings of Z_c; wall realized at c = 7 by a family
+that is still lonely via a non-sheet route), (ii) c ≤ 42 small-scale criterion failures (band
+inflation bounded there — the finite regime), (iii) gcd-descent bookkeeping, (iv) families with
+no scale structure at all — the capped envelope's natural domain, pending the
+fragmentation⟺divisibility complementarity (HYP-6825's two-regime splice).
+
 Status cautions: THM-724's addendum closes its genuine single-killer case, but THM-726 still relies
 on an unproved global far-element monotonicity statement; THM-741 is explicitly `CLAIMED` with an
 unfinished evidence checklist. Neither may be used as an unconditional assembly lemma.
@@ -50,6 +64,8 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | shadow tiles | PROVED | THM-748 (klein), THM-749, THM-754 clean-slot |
 | named coherent/cluster families | PROVED at their stated scopes | THM-668/737/739/740 |
 | 12-speed common-factor core + one coprime exception | PROVED, all scales | THM-760 |
+| (13−r)-speed common-factor core + r ≤ 6 exceptions, any gcds | PROVED above exact thresholds (c ≥ 43 uniform; exact per-(r,c) sets; Σg_a budget) | THM-761 (opus-S299) + battery |
+| uniform q ≤ 25 good-period finish | REFUTED (witness q scales with c) | codex-S3 refutation (26·{1..12} ∪ {339}) |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -70,6 +86,9 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 1. **Prove a scale-normal structure theorem.** Split normalized families into coherent dilation
    packs, additive/hierarchical clusters, and an incoherent residual, while retaining scale residue
    and killer offset. Raw far count and diameter are not invariants of this quotient.
+   *Progress (S299): the dilation-pack side is now the two-regime splice HYP-6825 — regime 1
+   (large scale, r ≤ 6) PROVED by THM-761; the open composition is regime 2 (c ≤ 42, bounded band
+   inflation) plus the complementarity claim r_P ≤ B(c*), plus the r ≥ 7 deck-tiling residue.*
 2. **Attack the prime-grid bottleneck as a persistent translate-cover problem.** At level one,
    `I(13,p,1)` is exactly a 13-translate cover of
    `F_p^x/{±1}` by the strict-danger set. Classify which covers persist under lifts and evade the

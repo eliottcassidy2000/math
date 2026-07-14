@@ -1,3 +1,64 @@
+## opus-2026-07-14-S299 -- THM-761 PROVED: the MULTI-EXCEPTION SHEET COVERING BOUND (r<=6 exceptions of ANY gcd strata dodge whenever Sum g_a(floor(c/(7g_a))+1) <= c-1; uniform c>=43 coprime; exact failure sets c<=42; r=1 closes at EVERY scale and stratum, extending THM-760) + HYP-6825 (the two-regime splice: sheets above 43, bounded band inflation below -- the corrected uniformization of the >=4-far endgame) + the recursion reflection (the sheet residual IS a discrete inhomogeneous LRC on Z_c; tight case = cyclic tilings = the 7-clock one level down; FI arXiv:2605.29035 bridge)
+
+Prompt (owner): assess the LRC(14) frontier holistically; collect the perspectives and see what
+we are missing in the underlying object; think recursively; weave tournament threads; inspiration
+arXiv:2605.29035 (Frank-Ivanisvili, sharp log-Sobolev on finite cycles).
+
+THE THEOREM (THM-761, canon + 50,964-instance exact battery, 0 violations): V = cP ⊔ W,
+r = |W| <= 6 exceptions, g_a = gcd(w_a, c). Sheets t_k = (t0+k)/c preserve the core margin
+EXACTLY (THM-760's fiber identity); exception w_a is unsafe on <= g_a(floor(c/(7g_a))+1)
+sheets (translated-grid count, exact and attained); union under budget => free sheet =>
+M(V) >= min(M(P), 1/14) = 1/14 via settled LRC(14-r). Uniform: coprime r<=6 dodge at every
+c >= 43; exact non-monotone failure sets computed for c <= 42 (r=6 already closes at c=13,
+19, 20, 25...); r=1 closes at EVERY c >= 2 and EVERY proper gcd stratum (THM-760 needed
+coprimality). Closes codex pull-cards A1 + A2(r=1). The r=7 wall is REAL and REALIZED
+(c=7, W={12,38,72,96,151,169,188}: all sheets bad at the core optimum -- yet M = 1/7, lonely
+by a non-sheet route; the method's wall, not the conjecture's). sheet_certificate() added to
+lrc14_certificates.py (self-test 15/15).
+
+THE CONTEXT SHIFT (concurrent fleet, integrated): codex-S2's audit + codex-S3's REFUTATION of
+the uniform q<=25 good-period finish (26*{1..12} ∪ {339}: first witness q=27; witness periods
+scale with c) invalidated the S297 'none analytic' frontier line -- the corrected frontier map
+stood when I arrived; I added THM-761's rows + the shrunk residual. The same refutation family
+closes by sheets in ONE LINE: on scale rays, bounded-q banks are scale-blind, sheets are
+scale-native. 04-paper/lrc14-assembly.tex re-scoped honestly (S298's draft rescued + Claim B
+'M>=0.097' corrected to REFUTED-as-stated, C2 withdrawn, sheet theorems added, main theorem
+now 'assembly program' modulo C1 + HYP-6825 + r>=7 decks).
+
+THE REFLECTION (07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md):
+the sheet residual at scale c IS an inhomogeneous discrete lonely-runner instance on Z_c
+(runners = exceptional residues, offsets = residue holonomy, radius 1/14, lonely time = free
+sheet). The underlying object is a POINTED CIRCLE WITH BURNED ARCS, self-similar under scale
+descent; the free sheet is the next level's basepoint (observer-lens survives descent); tight
+instances are TILINGS at every level (r=7 arcs of length 1/7 tiling Z_c = THM-754's 7-clock
+one level down; 14 = 2*7 acts at both levels). FI bridge (structural, per the owner's
+analogy-bridge pattern): (a) the discrete cycle is the right compactification of a
+sharp-constant problem; (b) zeroth moment closes the bulk, the tight case is spectral
+(deck tilings <-> vanishing arc Fourier coefficients, Newman conditions -- where the repo's
+circulant/spectral engineering thread meets the pure frontier); (c) strengthen-then-deduce:
+FI proved a stronger CUBIC inequality to get the sharp log-Sobolev; filed the cubic-certificate
+probe (test a third-moment functional on the band bank's 19 direct-L bodies where the
+quadratic disc certificate fails). Tournament accounting: sheets are the right vertices; free
+sheet = source; union criterion = in-degree budget; Redei deck-parity probe filed
+(equality structure only).
+
+HYGIENE: HYP-6810 collision resolved (codex-S3's q25-audit renumbered to HYP-6820 -- they did
+it concurrently; I deduped the INDEX); S298's untracked tex rescued and committed.
+
+REMAINING (the honest open covering endgame, all in HYP-6825): (1) r>=7 deck tilings;
+(2) regime-2 composition (c* <= 42 bounded normalized enumeration); (3) the complementarity
+claim r_P <= B(c*) (fragmentation only via divisibility -- THE load-bearing open sentence);
+(4) gcd-descent bookkeeping. Plus fleet items: THM-738 independent rerun, THM-741 finish,
+Lean for THM-760/761 (the sheet permutation + grid count are decide-friendly).
+
+FILES: 01-canon/theorems/THM-761-multi-exception-sheet-covering-bound.md;
+05-knowledge/hypotheses/HYP-6825-lrc14-scale-uniformization-two-regime-splice.md;
+04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py (+ results .out);
+lrc14_certificates.py (sheet_decomposition, sheet_certificate, 3 new self-tests);
+07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md;
+frontier map + backlog + tex updates. HYP-6810 (write-up) advanced; HYP-6825 claimed.
+
+---
 ## opus-2026-07-14-S297 -- THE COMPLETED-ARC SYNTHESIS: LRC14-FRONTIER-2026-07-15.md (the assembly equation: covering = [<=3-far = kps THM-738 PROVED, all tight families inside] + [>=4-far = loose, finite-decidable via the capped envelope]; NO open analytic statement; remaining = enumeration + write-up + Lean composition) + the perspective-arc reflection (S270-S296: one counting identity -> 12 theorems -> one kernel-pure Lean file)
 
 Prompt (owner): synthesize the completed arc and update the frontier map.

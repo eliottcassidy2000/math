@@ -1,5 +1,27 @@
 # Investigation Backlog
 
+## Lead opus-2026-07-14-S299: the two-regime splice after THM-761 (cards A1/A2 largely closed)
+- **Source:** codex atlas pull-cards A1–A3; THM-760; HYP-6780; Frank–Ivanisvili arXiv:2605.29035
+  (structural analogy: sharp constants on finite cycles; bulk by low moments, extremal case spectral).
+- **Status:** MAJOR PROGRESS. **THM-761 PROVED**: multi-exception sheet covering bound — for
+  `V = cP ⊔ W`, `r = |W| ≤ 6` exceptions of any gcd strata, criterion
+  `Σ g_a(⌊c/(7g_a)⌋+1) ≤ c−1` forces a free witness sheet, so `M(V) ≥ 1/14`. Uniform at `c ≥ 43`
+  (coprime); exact failure sets for `c ≤ 42` computed; `r = 1` closes at EVERY scale and EVERY gcd
+  stratum (card A2's single-exception case done). Battery: 50,964 exact instances, 0 violations;
+  codex-S3's q25-refutation family closes by sheets in one line. Library:
+  `sheet_certificate()` in lrc14_certificates.py (self-test 15/15).
+- **Open remainder:** (i) `r ≥ 7` decks — union wall structural; tight case = cyclic tilings of
+  `Z_c` (Newman-type conditions; the 7-clock one level down); wall REALIZED at c=7 by a family
+  still lonely via a non-sheet route; (ii) regime-2 composition (`c* ≤ 42` ⟹ bounded normalized
+  band enumeration); (iii) the complementarity claim `r_P ≤ B(c*)` — fragmentation only via
+  divisibility (falsifier: scale-free core with unbounded good-set components); (iv) gcd-descent
+  bookkeeping (card A2 general case). All named in HYP-6825.
+- **Probes filed:** FI cubic certificate on the band bank's 19 direct-L bodies; Rédei deck-parity
+  (equality structure only, guardrail C18).
+- **Files:** THM-761 canon; HYP-6825; 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py
+  (+ .out); 07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md;
+  frontier map §0 updated; 04-paper/lrc14-assembly.tex re-scoped (Claim B corrected, C2 withdrawn).
+
 ## Lead codex-2026-07-14-S2: prove descent on the owner-colored four-far cone
 - **Source:** HYP-6815; HYP-6780/6785; THM-668/738/741/742/755; exact endpoint-sidecar audit.
 - **Status:** OPEN, with the carrier and several exact lemmas now identified.  For each nine-speed core

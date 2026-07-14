@@ -34,7 +34,8 @@ LAM = F(1, 14)          # the LRC(14) threshold
 PI_LO = F(333, 106)     # classical strict lower bound for pi
 __all__ = ["LAM", "good_intervals", "L_exact", "M_exact", "disc_exact",
            "thm731_certificate", "capped_envelope_vstar", "h_band_protocol",
-           "fine_comb_witness", "clean_slot_witness", "slot_feasible", "is_covering"]
+           "fine_comb_witness", "clean_slot_witness", "slot_feasible", "is_covering",
+           "sheet_decomposition", "sheet_certificate"]
 
 # ---------------- the interval engine ----------------
 
@@ -121,6 +122,31 @@ def capped_envelope_vstar(core, lam=LAM):
     ivs = good_intervals(core, lam)
     G = sum(b - a for a, b in ivs); r = len(ivs)
     return (r / (math.pi * float(G)) if G > 0 else float("inf")), r, G
+
+# ---------------- THM-760/761: the sheet certificates ----------------
+
+def sheet_decomposition(speeds, c):
+    """canonical scale-c decomposition: (P, W) with P = {v/c : c | v}, W the rest."""
+    P = sorted(v // c for v in speeds if v % c == 0)
+    W = sorted(v for v in speeds if v % c != 0)
+    return P, W
+
+def sheet_certificate(speeds, c, lam=LAM):
+    """THM-761's speed-only terminal certificate at scale c.
+
+    Returns (fires: bool, detail).  If it fires, M(speeds) >= min(M(P), lam) — and
+    when |P| = len(speeds) - r >= 7 with lam = 1/14, settled LRC(<=13) gives
+    M(P) > 1/14, so M(speeds) >= 1/14 outright.  Criterion (exact, no witness
+    search):  sum_a g_a * (floor(2*lam*c/g_a) + 1) <= c - 1  over the exceptions
+    w_a in W, g_a = gcd(w_a, c).  Sound for every gcd stratum; needs c >= 2 and a
+    nonempty scaled core."""
+    from math import gcd, floor
+    P, W = sheet_decomposition(speeds, c)
+    if c < 2 or not P:
+        return False, ("no-scale-structure", P, W)
+    budget = sum(g * (floor(2 * lam * c / g) + 1)
+                 for g in (gcd(w, c) for w in W))
+    return budget <= c - 1, ("sheet-budget", budget, c - 1, len(W))
 
 # ---------------- THM-752: the fine-comb witness ----------------
 
@@ -228,6 +254,14 @@ def _selftest():
     check("AP is the tight boundary (L = 0)", L_exact(ap) == 0)
     check("AP is lonely with equality at t = 1/14",
           min(min((v * LAM) % 1, 1 - (v * LAM) % 1) for v in ap) == LAM)
+    v26 = [26 * p for p in range(1, 13)] + [339]
+    fires, _ = sheet_certificate(v26, 26)
+    check("THM-761 sheet certificate closes the codex-S3 q25-refutation family", fires)
+    fires2, _ = sheet_certificate([26 * p for p in range(1, 12)] + [339, 365], 26)
+    check("THM-761 fires on a 2-exception c=26 ray", fires2)
+    fires7, _ = sheet_certificate([7 * p for p in range(1, 7)]
+                                  + [12, 38, 72, 96, 151, 169, 188], 7)
+    check("THM-761 honestly refuses the r=7 wall instance", not fires7)
     return ok
 
 if __name__ == "__main__":

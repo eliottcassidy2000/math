@@ -31,15 +31,17 @@ For $n$ runners on the unit circle with distinct constant integer speeds, one of
 stationary, the Lonely Runner Conjecture asserts a time at which every moving runner is at
 circular distance at least $1/n$ from the stationary one. We assemble a proof for $n=14$
 (thirteen nonzero speeds) from components developed in this project, in the following form:
-every analytic statement required is \emph{proved} --- a substantial part of it verified in
-Lean~4 down to the kernel axioms --- and the theorem is reduced to two explicitly specified
-finite rational computations, large exactly-executed portions of which have produced no
-exception. The backbone is a far-count dichotomy: speed sets with at most three elements
+the backbone is a far-count dichotomy: speed sets with at most three elements
 exceeding $14$ force at least ten elements inside $\{1,\dots,14\}$ and fall to an exhaustive
-exact-rational sweep that contains the covering minimum and every tight family; speed sets
-with at least four elements exceeding $14$ are loose, and a capped Fourier-envelope theorem
-reduces them to bounded, decidable bands. We state precisely what is proved, what is
-machine-checked, what is exactly computed, and what remains to execute.
+exact-rational sweep that contains the covering minimum and every tight family; for speed
+sets with at least four elements exceeding $14$, a capped Fourier-envelope theorem bounds
+each \emph{core's} unresolved peels, and sheet-covering theorems close every scale ray with
+up to six exceptional runners above explicit thresholds. The band edge scales with dilation
+($v^\ast(cP)=c\,v^\ast(P)$), so the remaining domain is bounded only through the two-regime
+splice stated here, whose composition--- together with the $r\ge7$ deck residue and one
+complementarity claim---is the honest open remainder. We state precisely what is proved,
+what is machine-checked, what is exactly computed, what is refuted (including a uniform
+bounded-period witness finish), and what remains.
 \end{abstract}
 
 \section{Introduction and statement}
@@ -52,17 +54,21 @@ M(V)\;=\;\sup_{t\in[0,1)}\ \min_{v\in V}\ \norm{vt}.
 The Lonely Runner Conjecture (Wills \cite{Wills}, Cusick \cite{Cusick}; the name from
 \cite{BGGST}) for $n=14$ runners asserts $M(V)\ge 1/14$ for every such $V$.
 
-\begin{theorem}[Main, assembled]\label{thm:main}
-$M(V)\ge\tfrac1{14}$ for every set of\, $13$ distinct positive integer speeds, modulo the
-finite rational computations $\mathsf{C1}$ and $\mathsf{C2}$ specified in
-Section~\ref{sec:computations}.
+\begin{theorem}[Main, assembly program]\label{thm:main}
+$M(V)\ge\tfrac1{14}$ for every set of\, $13$ distinct positive integer speeds, modulo:
+the finite rational computation $\mathsf{C1}$ of Section~\ref{sec:computations}; the
+regime-2 composition and complementarity claim of \textsc{hyp}-6825
+(Section~\ref{sec:loose}); and the $r\ge7$ sheet-deck residue of
+Theorem~\ref{thm:sheets}.
 \end{theorem}
 
-The qualifier is meant exactly: Sections~\ref{sec:reduction}--\ref{sec:loose} prove every
-analytic statement; Section~\ref{sec:computations} states the two remaining computations as
-decidable predicates over explicitly bounded rational domains, together with the protocols
-that decide them and the exactly-executed portions (currently exception-free);
-Section~\ref{sec:lean} lists the components verified in Lean~4.
+The qualifier is meant exactly, and it is more than a finite computation:
+Sections~\ref{sec:reduction}--\ref{sec:loose} prove every analytic statement \emph{within
+their stated scopes}; the scale-uniformity of the $F\ge4$ domain is proved above explicit
+thresholds (Theorem~\ref{thm:sheets}) and open below them only through the named splice;
+Section~\ref{sec:computations} states the remaining computation as a decidable predicate
+whose domain-boundedness is conditional on that splice; Section~\ref{sec:lean} lists the
+components verified in Lean~4.
 
 Throughout we use, as permitted background, the Lonely Runner Conjecture for at most $13$
 runners: $n\le 7$ classically \cite{BHK,BarajasSerra}, $n=8$ \cite{Rosenfeld}, $n=9,10$
@@ -89,19 +95,18 @@ theorem reduces to covering sets.
 
 \section{The far-count split}\label{sec:split}
 
-\begin{theorem}[\textsc{thm}-758, klein-S309]\label{thm:split}
-Let $V$ be covering and let $F=\#\{v\in V: v>14\}$.
-\begin{enumerate}
-\item If $F\le 3$, then $V$ has at least ten elements in $\{1,\dots,14\}$.
-\item If $F\ge 4$, then $M(V)\ge 0.097$ (Claim~B), via the reduction of
-Section~\ref{sec:loose}.
-\end{enumerate}
+\begin{theorem}[\textsc{thm}-758 Claim A, klein-S309]\label{thm:split}
+Let $V$ be covering and let $F=\#\{v\in V: v>14\}$. If $F\le 3$, then $V$ has at least ten
+elements in $\{1,\dots,14\}$.
 \end{theorem}
 
-Part (1) is counting. Part (2) is where the loose machinery of Section~\ref{sec:loose}
-enters; its finite component is $\mathsf{C1}$. The decisive structural fact is that
-\emph{every tight or near-tight family lives in case (1)}: the covering minimum, the two
-$L=0$ families, and all known near-extremal structure have at least ten small elements.
+Part $F\le3$ is counting, and it is where every tight or near-tight family lives: the
+covering minimum, the two $L=0$ families, and all known near-extremal structure have at
+least ten small elements. The original Claim~B ($F\ge 4\Rightarrow M\ge 0.097$) is
+\emph{false as stated}: the primitive covering ray $V_c=\{c,2c,\dots,12c,13c+1\}$ has
+$F=13$ and exact $M(V_c)=1/13<0.097$ (\textsc{hyp}-6780/\textsc{thm}-757). The correct
+statement for $F\ge4$ is the threshold $M\ge 1/14$ itself, via
+Section~\ref{sec:loose}'s reduction; its finite component is $\mathsf{C1}$.
 
 \section{The near-AP half ($F\le 3$): exhaustive and rigid}\label{sec:nearAP}
 
@@ -162,45 +167,71 @@ Theorem~\ref{thm:boxes}. On mac-mini-S104's assembly band the protocol closed $1
 sampled bodies, $158$ instantly by Theorem~\ref{thm:capped}.
 \end{theorem}
 
-The remaining structured-family toolkit, each proved in canon and used by the reduction:
+The band edge is \emph{not} scale-uniform: dilation fixes the good-set measure, multiplies
+its component count by $c$, and hence $v^\ast(cP)=c\,v^\ast(P)$ (\textsc{hyp}-6780). Scale
+rays therefore escape every raw-height band, and they are closed instead on their own
+clock:
+
+\begin{theorem}[sheet covering bounds; \textsc{thm}-760 (codex), \textsc{thm}-761
+(opus-S299)]\label{thm:sheets}
+Let $V=cP\sqcup W$ with $c\ge2$, $|W|=r$, $g_a=\gcd(w_a,c)<c$. Lift a core maximin point
+$t_0$ to the sheets $t_k=(t_0+k)/c$; every sheet preserves the entire core margin exactly,
+and exception $w_a$ is unsafe (clearance $<1/14$) on at most
+$g_a(\lfloor c/(7g_a)\rfloor+1)$ sheets. Hence if
+$\sum_a g_a(\lfloor c/(7g_a)\rfloor+1)\le c-1$, some sheet is a full witness and
+$M(V)\ge\min(M(P),\tfrac1{14})=\tfrac1{14}$ (settled LRC($14-r$) on the core). In
+particular $r\le6$ coprime exceptions dodge at every $c\ge43$ (exact failure sets computed
+for $c\le42$), and a single exception of \emph{any} gcd stratum dodges at every $c\ge2$.
+For $r=1$, gcd coprime, the stronger clearance $\tfrac12-\tfrac1{2c}$ holds
+(\textsc{thm}-760).
+\end{theorem}
+
+Seven exceptions can cover the sheet cycle ($7\cdot\tfrac17=1$); the tight configurations
+are cyclic tilings of $\Zb_c$ --- the $7$-clock of Theorem~\ref{thm:sevenclock} one level
+down --- and the wall is realized by an explicit $c=7$ family that is nonetheless lonely by
+a non-sheet route. The remaining structured-family toolkit, each proved in canon:
 safe peels reducing $\sim\!98\%$ of covering sets to settled $\le13$-runner instances
-(\textsc{thm}-753); aligned far-element monotonicity (\textsc{thm}-751); the detuned
-dispatch and pack/cluster/hierarchical clocks for coherent families
+(\textsc{thm}-753, parts A/B); aligned far-element monotonicity (\textsc{thm}-751); the
+detuned dispatch and pack/cluster/hierarchical clocks for coherent families
 (\textsc{thm}-668/735/737/739/740); the fine-comb witness with the tooth threshold and the
 ratio-13 cascade (\textsc{thm}-752).
 
-\begin{theorem}[reduction of Claim B; klein-S310/S312, mac-mini-S105]\label{thm:claimB}
+\begin{theorem}[state of the $F\ge4$ reduction; klein-S310, mac-mini-S105, opus-S299]
+\label{thm:claimB}
 Every covering set with $F\ge4$ either closes in one peel by
-Theorem~\ref{thm:capped}/\textsc{thm}-753, or lies over a bounded band on which the
-certificate protocol of Theorem~\ref{thm:band} decides. On the executed exact checks the
-band is uniformly loose: $8260$ interval-core band families, all $M\ge 1/13$, zero
-exceptions; every sampled band body admits a rational witness of period $q\le 25$.
+Theorem~\ref{thm:capped}/\textsc{thm}-753, closes by a sheet witness
+(Theorem~\ref{thm:sheets}), or lies over a band on which the certificate protocol of
+Theorem~\ref{thm:band} decides; the band domain is bounded when the maximal
+common-factor scale is (regime 2 of \textsc{hyp}-6825). On the executed exact checks the
+bands are uniformly loose: $8260$ interval-core band families, all $M\ge 1/13$, zero
+exceptions. A uniform bounded-period witness finish is \emph{refuted}: the family
+$26\cdot\{1,\dots,12\}\cup\{339\}$ has no rational witness of period $q\le25$ (first
+witness $q=27$; witness periods scale with $c$), while Theorem~\ref{thm:sheets} closes it
+in one line.
 \end{theorem}
 
 \section{The remaining computations}\label{sec:computations}
 
 \begin{computation}[$\mathsf{C1}$: the $F\ge4$ enumeration]\label{comp:c1}
-Domain: covering $13$-sets with $\ge4$ elements $>14$, reduced by
-Theorem~\ref{thm:claimB} to cores with bands $(\max P, v^\ast]$ and bounded parameters
-(all thresholds explicit rationals). Predicate per body: the three-line protocol of
-Theorem~\ref{thm:band} (capped envelope; else one exact Bernoulli discrepancy; else direct
-exact $L$). Status: all executed portions exception-free (the $8260$-family exact band
-check; the $4032$-pair bottom-core closure; $\sim\!620{,}000$ screened bodies across the
-classification campaigns). Remaining: the systematic enumeration of the reduced domain,
-an exact-rational computation with no free parameters.
-\end{computation}
-
-\begin{computation}[$\mathsf{C2}$: band witnesses]\label{comp:c2}
-For band bodies, exhibit the bounded-period rational witness ($q\le25$; klein-S312). This
-is subsumed by $\mathsf{C1}$'s protocol and listed separately only because it yields
-independently checkable certificates (a witness $t=a/q$ with all thirteen clearances
-$\ge1/14$ in $\Qb$).
+Domain: covering $13$-sets with $\ge4$ elements $>14$ and maximal common-factor scale
+$c^\ast\le 42$ (larger scales close analytically by Theorem~\ref{thm:sheets}), reduced by
+Theorem~\ref{thm:claimB} to cores with bands $(\max P, v^\ast]$. Predicate per body: the
+sheet certificate (Theorem~\ref{thm:sheets}, speed-only, $O(r)$); else the three-line
+protocol of Theorem~\ref{thm:band} (capped envelope; else one exact Bernoulli discrepancy;
+else direct exact $L$). Status: all executed portions exception-free (the $8260$-family
+exact band check; the $4032$-pair bottom-core closure; $\sim\!620{,}000$ screened bodies).
+Remaining: the systematic enumeration of the reduced domain, whose boundedness is exactly
+the regime-2 composition of \textsc{hyp}-6825 --- currently conditional, not executed.
 \end{computation}
 
 \begin{remark}
-Both computations are decidable rational predicates over explicitly bounded domains; the
-consolidated library \repo{04-computation/lrc14\_certificates.py} (self-test 9/9)
-implements every step with exact arithmetic and witness output.
+A previously listed computation $\mathsf{C2}$ (bounded-period band witnesses, $q\le25$) is
+withdrawn: the uniform bound is refuted (Theorem~\ref{thm:claimB}); its role is replaced by
+the sheet certificate, which yields independently checkable witnesses $t_k=(t_0+k)/c$ with
+all thirteen clearances $\ge1/14$ in $\Qb$. The consolidated library
+\repo{04-computation/lrc14\_certificates.py} (self-test 15/15, including
+\texttt{sheet\_certificate}) implements every step with exact arithmetic and witness
+output.
 \end{remark}
 
 \section{Machine verification}\label{sec:lean}

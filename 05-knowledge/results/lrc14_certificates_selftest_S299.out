@@ -1,0 +1,16 @@
+lrc14_certificates self-test:
+  PASS  deep well L = 6617/388080-family value
+  PASS  deep well covering
+  PASS  THM-731 fires at the deep-well far peel
+  PASS  THM-755 band edge for {1..12} in (111, 113)
+  PASS  THM-752 closes the klein-S304 stall (witness exists)
+  PASS  slot (7,1) feasible for the deep well
+  PASS  band protocol closes a band body at layer <= 2
+  PASS  M_exact AP {1..13} = 1/14
+  PASS  M_exact {1,2,4} = 1/3
+  PASS  M_exact singleton = 1/2
+  PASS  AP is the tight boundary (L = 0)
+  PASS  AP is lonely with equality at t = 1/14
+  PASS  THM-761 sheet certificate closes the codex-S3 q25-refutation family
+  PASS  THM-761 fires on a 2-exception c=26 ray
+  PASS  THM-761 honestly refuses the r=7 wall instance
