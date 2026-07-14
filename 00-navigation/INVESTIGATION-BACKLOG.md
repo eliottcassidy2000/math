@@ -117,8 +117,12 @@
 - **Five block types:** Consecutive covered walls enclose
   `(57,301,3,24,329,24,3,301,57)` wall blocks; full owner-count vectors mirror
   exactly, so only the first five interval types require analysis.
+- **THM-779 join:** All nine gaps are nonempty (minimum three intervening
+  walls), so the ten hits are isolated one-wall blocking runs.  The period-five
+  root word is a first-return signal, not a long-run survivor.  THM-779's open
+  exit lemma becomes an exact schedule-versus-hop-word question under THM-778.
 - **Next theorem:** Retain the owner-labelled mask lift and redundancy root;
-  compile the five-wall half into centered Farey/Christoffel substitutions.
+  compile the five-return half into centered Farey/Christoffel substitutions.
   Prove a prefix loses coverage, a simultaneous event tears the stalk, or the
   fibre state descends.  Test the proposed state by continuation minimization.
 - **Guardrail:** Standard continued fractions retain a reduced ratio but lose

@@ -201,6 +201,13 @@ image and the largest image fibre has size 7.  Therefore even fibre-local mask
 index is not a reflection-equivariant state unless the owner-labelled lift is
 retained.
 
+THM-779 supplies the predicate on this path stalk: continued blocking requires
+the chronological next-wall owner to agree with the current collision-pair hop
+target.  In the ten-wall movie every covered-wall gap contains at least three
+other walls, so these are isolated first returns rather than a consecutive
+blocking chain.  A continuation-complete address must therefore distinguish
+the current `SURJ`/hop state from the later return mask.
+
 ## Preservation statement
 
 This solves the combinatorial address problem, not the LRC quotient problem.

@@ -9,6 +9,7 @@ depends_on:
   - THM-771   # exact F=Q+Omega-sigma defect and reduced-winding event pierce
   - THM-773   # prime-seven token polynomial, heptagon fibre, and event holonomy
   - THM-778   # centered-Christoffel endpoint word and exact global wall ranks
+  - THM-779   # r=8 piece-surjectivity/wall-rainbow token-walk criterion
   - HYP-6830  # the splice; complementarity refuted, ratio invariant measured
 related: [THM-745, THM-754, HYP-6785, HYP-6820, HYP-6840, MISTAKE-146]
 ---
@@ -135,6 +136,14 @@ and labelled: the nine intervening wall-block counts are the palindrome
 Euclidean substitutions between these root/mask walls.  A useful descent must
 act on that fibre data; the continued fraction of a speed ratio alone is only
 the base address.
+
+THM-779 sharpens the interpretation: every gap above contains at least three
+other walls, so all ten covered hits are isolated one-wall blocking runs.  The
+five-block palindrome is a first-return problem across uncovered excursions,
+whereas a persistent run must also satisfy THM-779's collision-pair hop chain
+at every consecutive schedule wall.  THM-778 provides that exact schedule;
+the remaining unconditional exit lemma is therefore a comparison of a
+centered mechanical owner word with a finite algebraic hop word.
 
 ## 5. Lean targets (decide-friendly)
 

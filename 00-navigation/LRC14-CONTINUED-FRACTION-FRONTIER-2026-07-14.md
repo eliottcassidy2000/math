@@ -23,6 +23,7 @@ different operations.  Keeping those operations separate is the main lesson.
 | THM-722/HYP-6280, leader ledger | Interprets the deep-well Ostrowski rung as a stopping time of a metric handoff staircase. | The average conservation law is nearly a factor two too weak; the cutting/lander pattern, not its total mass, is the missing information. |
 | THM-773, prime token polynomial | Gives the exact finite sheet fibre and proves endpoint order/inverse steps/carry are missing from the metagraph node. | It deliberately left the endpoint schedule as an undecomposed field. |
 | THM-778, centered endpoint skew product | Supplies that missing field: pairwise midpoint clocks are centered mechanical words; centered Beatty ranks reconstruct all simultaneous walls; the Euclidean parity cocycle recursively addresses the word; the word drives the `F_7` token fibre. | This is an exact language and reduction, not a proof that every persistent cover tears. |
+| THM-779, r=8 token-walk chain | Characterizes full blocking by piece surjectivity, wall rainbows, and absence of simultaneous walls; consecutive wall owners must follow a deterministic collision-hop rule.  Joined to THM-778, this is a schedule-versus-algebra word problem. | The reported `K0=5` is an adversarial-census ceiling, not an unconditional bound.  The unconditional exit lemma and mod-seven degeneracy classification remain open. |
 
 ## The conceptual correction
 
@@ -109,12 +110,15 @@ The masks are now attached:
 They are not palindromic even though the owner word is.  The all-5,040 audit
 explains this precisely: reflection does not descend to the 25-mask quotient
 without the owner-labelled lift.  Next compute the Euclidean block between
-consecutive lifted masks.  The adjacent redundancy root already has the exact
+successive lifted return masks.  Every pair has at least three intervening wall
+blocks, so THM-779 identifies all ten as isolated one-wall blocking runs, not a
+single persistent run.  The adjacent redundancy root already has the exact
 period-five word `((1->0),(4->6),(2->4),(0->2),(6->5))^2`; ask whether the
 between-wall block lengths
 `57,301,3,24,329,24,3,301,57` reduce the base to five types and their mirror.
-Ask whether that five-block half has a forced descent, or whether it seeds an
-infinite survivor language under scale/Farey mutation.
+Ask whether that five-block first-return half classifies the mod-seven
+degeneracy packets that could sustain a genuinely consecutive survivor under
+scale/Farey mutation.
 
 ### CF-03 — Mod-seven S-adic automaton
 
@@ -123,7 +127,8 @@ Let those substitutions act on the finite token fibre, with owner `a` acting
 by `-w_a^{-1}`.  Minimize the resulting automaton by continuation equivalence.
 The state must expose exactly which continued-fraction digits matter modulo
 seven and which require a prefix-cover sidecar despite having the same net
-translation.
+translation.  THM-779 supplies the acceptance condition: `SURJ` on pieces and
+the collision-pair hop constraint at walls.
 
 ### CF-04 — Centered Farey concatenation law
 
@@ -177,8 +182,10 @@ The most focused next step is CF-02/03:
 
 > Use the period-five redundancy-root word and the five exact interval-block
 > types `(57,301,3,24,329)`, compile their Euclidean substitutions, and test
-> whether `(Euclidean remainder state, phase bit, absent owner, mask,
-> redundancy root, carry)` is continuation-complete on the exact movie.
+> whether `(Euclidean remainder state, phase bit, absent owner, hop target,
+> mask, redundancy root, carry)` is continuation-complete on the exact
+> first-return movie.
 
 This would turn the current historical synthesis into a finite automaton whose
-fields each have a mathematical reason to survive.
+fields each have a mathematical reason to survive, and aim THM-779's open exit
+lemma at the exact mechanical schedule rather than at an empirical wall count.

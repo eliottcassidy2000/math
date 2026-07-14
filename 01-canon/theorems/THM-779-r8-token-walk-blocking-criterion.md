@@ -7,7 +7,7 @@ depends_on:
   - THM-773   # the token k_a = -w_a^{-1} round(w_a x), the X^7 - X factorization criterion
   - THM-767   # zero-variance at the prime lens; chamber locking
   - THM-771   # the exact seven-owner defect frame
-related: [HYP-6835, HYP-6840, THM-777]
+related: [HYP-6835, HYP-6840, THM-777, THM-778]
 verification: 04-computation/lrc14_r8_token_walk_criterion_opus_S302.py
   (+ 05-knowledge/results/lrc14_r8_token_walk_criterion_opus_S302.out)
 ---
@@ -93,6 +93,10 @@ walls are exponentially expensive.
   w's satisfy explicit mod-7 degeneracies; classify the degeneracies (the rigid
   packet class) or bound their runs. This is the r=8 analogue of the
   chamber-locking proof, and DMNR-style tools apply to the hop-target orbit.
+  THM-778 makes the schedule side exact: centered Beatty ranks merge the eight
+  midpoint clocks, and their Euclidean parity cocycles recursively generate
+  every owner/tie block.  Thus the lemma can be posed as non-synchronization of
+  a centered mechanical schedule with this finite collision-hop transducer.
 - Small components (≤ K0 walls) are outside the census argument; they fall to
   the direct piece check (criterion (1)) — finite per family.
 - Lens generalization (7g | c strata, r = p+1 at other primes p ≤ 13 after

@@ -5,7 +5,7 @@ status: PROVED (elementary midpoint-rank, Euclidean-cocycle, reconstruction, and
 source: codex-2026-07-14-S7
 depends_on:
   - THM-773
-related: [THM-536, THM-565, THM-637, THM-745, HYP-4078, HYP-6280]
+related: [THM-536, THM-565, THM-637, THM-745, THM-779, HYP-4078, HYP-6280]
 verification: 04-computation/lrc14_centered_christoffel_endpoint_skew_product_codex_S7.py
   (+ 05-knowledge/results/lrc14_centered_christoffel_endpoint_skew_product_codex_S7.out and .json)
 ---
@@ -262,7 +262,15 @@ also palindromic.  Therefore the 1,205-wall movie reduces exactly to five
 marked transport blocks and their reflection for the purpose of following its
 covered-wall skeleton.
 
-Thus continued fractions do not by themselves prove that the skeleton tears,
+Every entry in (16) is positive (indeed at least `3`), so no two of the ten
+covered walls are consecutive.  In THM-779's token-walk terminology each is a
+one-wall blocking run.  Thus (15) is a **first-return word** across excursions
+outside the fully blocked locus, not evidence for a sustained blocking chain.
+THM-779 controls the survival rule at consecutive walls; (1)--(7) supply the
+exact mechanical schedule against which that algebraic hop rule must agree.
+
+Thus continued fractions do not by themselves prove that every possible
+blocking chain tears,
 but they give its full recursive base word and reduce the next question to ten
 owner-labelled mask walls in this example.  Any proposed substitution automaton
 must retain the owner assignment above the mask and should act on the
