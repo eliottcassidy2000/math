@@ -53,7 +53,7 @@ silently quotiented.
 
 ### The chart has two inequivalent directions to infinity
 
-The far-dilation action is only the radial direction. THM-771 supplies a
+The far-dilation action is only the radial direction. THM-772 supplies a
 transverse frequency refinement. For prime `N>110`, the ray
 
 ```text
@@ -78,18 +78,41 @@ The failed complementarity `r_P<=B(c*)` collapsed them into one scalar.
 The replacement suggested by the cap theorem is relational: for a named peel
 `v`, retain `r_P/(v|G'_P|)=pi*v*(P)/v`, the divisor-support profile, and the
 endpoint owners that created the cuts. This is not yet a finiteness theorem.
-It is the smallest current description that distinguishes radial replication
-from transverse refinement while remembering why THM-771 closes the whole
+It is the smallest current proposed payload that distinguishes radial replication
+from transverse refinement while remembering why THM-772 closes the whole
 prime ray by the capped peel.
 
-THM-772 identifies the exact rate law behind that closure. If the old fiber
-contains one interval of length `L`, a new frequency `N` leaves at least
-`6L/7-2/(7N)` safe mass and creates at most `N+sum(B)` components. A peel of
-speed `aN` therefore sees a bounded normalized wall load and becomes terminal
-once `a` crosses an explicit `L`-dependent threshold. In this chart, increasing
-geometric complexity can decrease proof difficulty. The nonterminal boundary
-must force the retained interval scale toward zero, slow the peel relative to
-wall creation, or coordinate the owners so that another observer is needed.
+THM-773 identifies the exact rate law behind that closure. If the old fiber has
+safe mass `mu` and `r` components, a new frequency `N` leaves at least
+`6mu/7-2r/(7N)` safe mass and creates at most `N+r` components. A named interval
+is only one way to certify the initial state. A peel of speed `aN` therefore sees
+a bounded normalized wall load and becomes terminal once `a` crosses an explicit
+state-dependent threshold. In this chart, increasing geometric complexity can
+decrease proof difficulty.
+
+The transition also iterates. Certified lower/upper states evolve by
+
+```text
+T_N(mu_lower,r_upper)
+  = (6mu_lower/7-2r_upper/(7N), r_upper+N).
+```
+
+The underlying insertions commute, but the enclosure operators `T_N` do not:
+their error remembers which frequency was inserted first. This apparent defect
+has an exact resolution. If `x<y`, inserting `x` before `y` improves the mass
+lower bound by
+
+```text
+(2/7)*(y-x)/(xy)*(x+y+r_upper/7)>0.
+```
+
+Thus adjacent exchanges make increasing frequency the unique optimal order.
+In a four-far one-peel search, the 24 formal peel/order gauges collapse to four
+canonical certificates, one per peel. Insertion order is therefore not new
+moduli data; it is an observer choice with a canonical representative in the
+certificate calculus. The nonterminal boundary must make all four certified
+mass bounds or cap tests fail, slow the peel relative to wall creation, or
+retain owner correlations that the two-number state intentionally erased.
 
 That observation does not make LRC periodic. Inside one residue class,
 changing height changes:
@@ -580,8 +603,8 @@ samples from an infinite box.
 
 ## 10. Concrete next lemmas
 
-1. Extend THM-772 beyond its fixed-window/proportional-peel face: stratify
-   sequences by base-window decay, wall-creation rate, and peel rate, attach
+1. Extend THM-773 beyond its positive-good-state/proportional-peel face: stratify
+   sequences by safe-mass decay relative to component, wall-creation, and peel rates; attach
    endpoint owners, and prove every residual state is bounded or recursively descends.
 2. Classify the seven-exception `1/7` chambers left after THM-767's
    event-pierce/chamber-locking lane and formalize the terminating excessive-gcd

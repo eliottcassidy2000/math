@@ -9,6 +9,7 @@ depends_on:
   - THM-761   # multi-exception sheet covering bound (this session)
   - THM-771   # exact seven-owner defect and corrected reduced-winding event pierce
   - THM-772   # exact scale-free f=4 transverse-fragmentation falsifier
+  - THM-773   # invariant-level good-set-state transverse-tooth cap
   - HYP-6780  # v*(cP) = c v*(P): the scale covariance that killed raw-height bands
 related: [THM-756, THM-757, THM-758, HYP-6785, HYP-6815, HYP-6820, HYP-6835, MISTAKE-146]
 ---
@@ -85,7 +86,7 @@ This family has all the scope properties needed to refute the proposed bridge.
    `11`, and `1092N` carries `12,13,14`; hence `V_N` is covering. Moreover it is
    literally in the first open far-count chart: its nine small speeds are
    `{1,...,9}` and its four far coordinates are `15,110,N,1092N`. This is not an
-   LRC counterexample: THM-771 proves the top peel fires THM-755's capped-envelope
+   LRC counterexample: THM-772 proves the top peel fires THM-755's capped-envelope
    test for every prime `N>110`. It is a counterexample specifically to using `c*` as a
    sufficient fragmentation coordinate, now internal to the four-dimensional
    object rather than imported from another stratum.
@@ -110,26 +111,37 @@ data to distinguish dilation copies from high-frequency tooth insertion. It rema
 open whether those data admit a finite or recursively compact quotient; no
 replacement theorem is claimed here.
 
-## A terminal transverse face (THM-772)
+## A terminal transverse face (THM-773)
 
-The falsifier mechanism itself admits a general theorem. If a fixed base `B`
-has a safe interval of length `L`, then after adjoining frequency `N`,
+The falsifier mechanism itself admits a general theorem. For a fixed base `B`,
+put `mu=|G'_B|` and let `r_B` be the number of components of `G'_B`. After
+adjoining frequency `N`,
+
+```text
+|G'_{B union {N}}| >= 6mu/7-2r_B/(7N),
+r(B union {N}) <= N+r_B.
+```
+
+Thus the old good-set state `(mu,r_B)`, rather than every endpoint, is sufficient
+for this transition. A single marked safe interval of length `L` gives the more
+portable corollary
 
 ```text
 |G'_{B union {N}}| >= 6L/7-2/(7N),
 r(B union {N}) <= N+sum(B).
 ```
 
-Thus a proportional peel `aN` closes beyond an explicit rational threshold
+A proportional peel `aN` closes beyond an explicit rational threshold
 whenever `(333/106)*a*6L/7>1`. This proves that transverse wall proliferation
 alone is a terminal face: it can make raw components unbounded while keeping
-the theorem-facing load `r/(aN|G'|)` bounded. For THM-771, `L=1/1540`,
+the theorem-facing load `r/(aN|G'|)` bounded. For THM-772, `L=1/1540`,
 `a=1092`, and the exact crossing is `11734415/9278<1265`.
 
 This does not prove the global splice. It sharpens its negation space. A truly
-unresolved sequence must couple increasing wall frequency to collapse of every
-retained base window, to a subcritical peel rate, or to an owner alignment that
-evades the proposed descent. Those three channels must remain distinguishable.
+unresolved sequence must couple increasing wall frequency to safe-mass collapse
+relative to its component state, to a subcritical peel rate, or to an owner
+alignment that evades the proposed descent. Those three channels must remain
+distinguishable.
 
 **Ratio study (opus-S300, independent confirmation + the measured constants).** The
 stress battery `lrc14_regime2_complementarity_stress_opus_S300.py` (+ .out)

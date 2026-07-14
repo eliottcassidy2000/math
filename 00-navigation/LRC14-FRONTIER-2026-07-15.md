@@ -85,7 +85,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | seven-owner deck defect / ramified residue | Exact identity `F=Q+Omega-sigma`; exact tilings are chamber-locked, KCL necessity is WITHDRAWN, and mirror coincidence is diagnostic. Primitive `c=21` row realizes `(0,12,12,0)` | THM-771 + corrected THM-767 + exact audits |
 | raw fragmentation bound r_P ≤ B(c*) | REFUTED by an exact scale-free f=4 family and an independent census; peel-relative ρ is a candidate measured ≤9.335 only on the stated bank | THM-776; HYP-6830 correction; MISTAKE-145 |
 | safe-measure floor / normalized band bridge | `rho<=12/(pi|G'_P|)` and `|G'_P|>=1/(91 maxP)` PROVED; exact `maxP<=18` floor is `7/858`, unique at `{1,...,13}\{6}`; the same global floor is CONJECTURAL | THM-777 |
-| fixed safe window + frequency N + proportional peel aN | PROVED eventually capped at an explicit rational threshold; normalized wall load stays bounded | THM-778 (THM-776 is a full-family instance) |
+| positive good-set state `(mu,r)` + frequency N + proportional peel aN | PROVED transition `mu_N>=6mu/7-2r/(7N)`, `r_N<=N+r`, hence eventually capped under an explicit rational threshold; one marked interval is a corollary | THM-778 (THM-776 is a full-family instance) |
 | primitive tight 12-speed locus | UNIFORMLY FINITE (`sum A<=78^11`), not classified | THM-763 |
 | hereditary primitivity of tight 12-sets | PROVED; every leave-one-out core is primitive | THM-765 |
 | unique-largest-13-multiple tight branch | IMPOSSIBLE by explicit prime-grid perturbation | THM-768 |

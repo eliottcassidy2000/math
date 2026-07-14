@@ -20,22 +20,30 @@
 - **Critical correction:** HYP-6830's proposed complementarity `r_P≤B(c*)` is REFUTED by the
   exactly-`f=4` primitive covering family `{1,...,9,15,110,N,1092N}`. No divisor packet has seven
   members, but the top-peeled core has unbounded good-set components (`66,104,174,310` exactly at
-  `N=211,503,1009,2003`). THM-771 proves the entire prime family fires the capped peel.
+  `N=211,503,1009,2003`). THM-772 proves the entire prime family fires the capped peel.
   Thus coherent scale and transverse tooth frequency are independent coordinates
-  (THM-771; MISTAKE-145).
-- **Terminal transverse face:** THM-772 generalizes the successful cap calculation. If a fixed
-  base core has one safe interval of length `L`, adjoining frequency `N` leaves measure at least
-  `6L/7-2/(7N)` and creates at most `N+sum(B)` components. A proportional peel `aN` therefore
-  closes beyond an explicit rational threshold whenever `(333/106)*a*6L/7>1`. The unresolved
-  degeneration must lose base-window mass, peel rate, or both; raw wall proliferation alone is terminal.
+  (THM-772; MISTAKE-145).
+- **Terminal transverse face:** THM-773 generalizes the successful cap calculation. A base good-set
+  state `(mu,r_B)` becomes `mu_N>=6mu/7-2r_B/(7N)`, `r_N<=N+r_B` after adjoining
+  frequency `N`; a single safe interval gives the simpler `L,sum(B)` certificate. A proportional
+  peel `aN` therefore closes beyond an explicit rational threshold when its rate beats the retained
+  mass. The unresolved degeneration must collapse safe mass relative to component or peel rate;
+  raw wall proliferation alone is terminal.
+- **Recursive certificate pull:** Iterate THM-773's enclosure operator
+  `T_N(mu_lower,r_upper)=(6mu_lower/7-2r_upper/(7N),r_upper+N)`. Set insertion
+  commutes but the bound does not; the exchange law proves increasing insertion
+  order is optimal. The 24 formal peel/order gauges of a four-far chart collapse
+  to four canonical certificates. Classify rows on which every certificate loses
+  positive mass; those are precisely where endpoint-owner correlations must
+  re-enter the state.
 - **Open remainder:** (i) `r ≥ 7` decks — union wall structural; tight case = cyclic tilings of
   `Z_c`; (ii) a peel-relative splice retaining `r_P/(v|G'_P|)`, divisor support, and endpoint
   owners; (iii) gcd-descent bookkeeping. No global regime-2 bound has been proved from
-  `c*` alone; THM-771 refutes the proposed raw-component route to one.
+  `c*` alone; THM-772 refutes the proposed raw-component route to one.
 - **Probes filed:** FI cubic certificate on the band bank's 19 direct-L bodies; Rédei deck-parity
   (equality structure only, guardrail C18).
 - **Files:** THM-761 canon; HYP-6830; 04-computation/lrc14_multi_exception_sheet_bound_opus_S299.py
-  (+ .out); THM-771; `lrc14_affine_slope_suspension_codex_S2.py` (+ .out); MISTAKE-145;
+  (+ .out); THM-772/773; `lrc14_affine_slope_suspension_codex_S2.py` (+ .out); MISTAKE-145;
   07-reflections/the-problem-contains-itself-at-its-scale-frontier-opus-S299.md;
   frontier map §0 updated; 04-paper/lrc14-assembly.tex re-scoped (Claim B corrected, C2 withdrawn).
 - **S300/S5 CORRECTED UPDATE (r>=7 decks):**
@@ -66,6 +74,19 @@
   adversarial battery finds no decay, but the global shape floor remains a
   conjecture.  Do not promote the proposed `rho<469` normalized atlas bound
   outside strata where that floor is proved.
+- **S300/S5 corrected update (r>=7 decks and regime 2):** (i) The unramified
+  `r=7` stratum is closed when `max_a(w_a/gcd(w_a,c))>=7*max(P)` by THM-771's
+  reduced-winding event pierce. Owner counts are `c/7` off the endpoint coset and
+  drop by `g_a` on it; the event mesh is `g_a/w_a`. The promoted raw-`w` bound and
+  KCL absorption law are withdrawn (MISTAKE-146); exact tilings are chamber-locked,
+  and the replacement identity is `F=Q+Omega-sigma`. (ii) The raw regime-2
+  complementarity is refuted (MISTAKE-145); the surviving measured candidate is
+  peel-relative `rho=v*/max(P)`, at most `9.335` on the stated bank and extremal
+  there at `{1,...,12}`. The missing theorem is a good-set-mass floor off classified
+  tight families. (iii) HYP-6835 retains ramification-surplus equality packets,
+  effective threshold decks, `r>=8` alignment residue, and Lean decide targets.
+  Tooling: `deck_event_witness()` in `lrc14_certificates.py` (16/16). Reflection:
+  `07-reflections/the-deck-is-a-smith-diagram-opus-S300.md`.
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
