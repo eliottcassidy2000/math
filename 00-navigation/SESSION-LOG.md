@@ -1,3 +1,15 @@
+## mac-mini-2026-07-14-S103 -- THM-753 (safe-peel reduction): ~98% of covering 13-sets reduce via M-preserving safe peels to a <=12-speed set = a SETTLED LRC(<=13) instance (M>=1/13>1/14); the residual = IRREDUCIBLE families, all tiled (shadow/near-AP/loose, 0 escapees in 5813 adversarial). Most of the covering case is LRC(<=13) in disguise.
+
+**Owner:** prove the loose bound to close the unsafe stratum / push the frontier. Attacked it via THM-751 peeling; found a much stronger reduction.
+
+**THM-753 (PROVED, elementary):** (A) SAFE-PEEL LEMMA: if v is safe at the tight point t0 of C=S\{v} (||v t0||>=M(C)), then M(S)=M(C) [at t0, min=min(M(C),||v t0||)=M(C)]. (B) REDUCTION DICHOTOMY: peel safe elements (M preserved); every covering 13-set either reduces to a <=12-speed set (a settled LRC(<=13) instance, M>=1/13>1/14) OR is IRREDUCIBLE (no safe peel). Rigorous.
+
+**(C) irreducible residual (EMPIRICAL, skeptically tested):** 476/485 (98%) covering families reduce to <=12 (LRC(<=13)); only ~2% irreducible. Adversarial search (5813 near-extremal+spread): EVERY irreducible family is shadow-closable (THM-749), near-AP (kps THM-733/734/738/741, >=9 in {1..14}), or loose (M>=0.15, opus THM-745/746). ZERO escapees (irreducible+low-M+not-shadow+<9-in-{1..14}). Corrected a false gap ({1,3,4,7..13,51,59,182} M=0.105, but 10-in-{1..14} => kps THM-738).
+
+SIGNIFICANCE: LRC(<=13) discharges the BULK (~98%) of the covering case via safe-peel reduction; the irreducible residual (~2%) is the four existing tiles. This reframes the covering case as [LRC(<=13) reduction] + [tiles for irreducibles], not new mathematics for the bulk. Honest: (A,B) proved; (C) verified-not-proved (needs the tiles proven over the irreducible stratum). Skepticism (given S97/S98 history) caught the false gap + the full-recursion 38% stuck-at-<=12=LRC(<=13) insight.
+
+Handoffs: klein (THM-753 makes LRC(<=13) the dominant reducer in the HYP-6660 tiling), kps (near-AP tile covers the irreducible-near-AP), opus (irreducible-loose is your floor). Files: THM-753; 04-computation/lrc14_{flexible_peel,full_recursion_test,irreducible_residual,lowM_irreducible_search}_macmini_S103.py (+outs).
+
 ## opus-2026-07-14-S286 -- the binding low-M equidistribution attacked via SLOT OCCUPANCY (speeds x clocks = the perspective grid): TWO ZEROES (60k adversarial hunt + 40x25 constructive blocking: NO covering body with all k<=13 shadows dead outside the loose stratum) + the OCCUPANCY-RIGIDITY LEMMA (blocking-complete forces a complete residue system mod 13 -- pigeonhole-exact -- and CRT near-completeness: AP-rigidity) => (A)'s shadow residual = a FINITE classification mod 360360 with surjectivity cuts
 
 Prompt (owner): attack the binding low-M equidistribution with the perspective frame.
