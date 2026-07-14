@@ -1,0 +1,30 @@
+(1) The runner side's INTRINSIC curve-arithmetic = Phi_6(n) = n^2-n+1 = the EISENSTEIN norm:
+   n=6: Phi_6 = 31 = N(n - zeta_6) = 31   (Eisenstein integers Z[zeta_6], disc -3, j=0)
+   n=7: Phi_6 = 43 = N(n - zeta_6) = 43   (Eisenstein integers Z[zeta_6], disc -3, j=0)
+   n=14: Phi_6 = 183 = N(n - zeta_6) = 183   (Eisenstein integers Z[zeta_6], disc -3, j=0)
+   => the covering-min value n/Phi_6(n) lives on Q(sqrt(-3)) = the EISENSTEIN / j=0 CM structure.
+   Phi_6(14)=183 = 3*61: 3 RAMIFIES in Z[zeta6] (disc -3), 61=1 mod 6 SPLITS. A Q(sqrt-3) object.
+
+(2) X_0(14)'s curve = 14a: is it the j=0 (Eisenstein) curve? and its CM points' fields:
+   14a1 has j-invariant != 0 (14a is NOT a CM curve; conductor 14=2*7).
+   X_0(14) fixed-point CM discriminants (S93): w_14 -> -56, w_7 -> -7/-28. Their fields:
+     disc  -56 (w_14 Fricke ) -> field Q(sqrt(-14))
+     disc  -28 (w_7         ) -> field Q(sqrt(-7))
+     disc   -7 (w_7         ) -> field Q(sqrt(-7))
+     disc   -3 (runner Phi_6) -> field Q(sqrt(-3))
+
+(3) THE OBSTRUCTION (rigorous):
+   A functor runner -> X_0(14) must produce a PAIR (E,C). The runner/circle gives the LEVEL
+   structure C = Z/14 (S92, proved) -- but provides NO elliptic curve E. X_0(14) parametrizes
+   CURVES-with-level; without E there is no point of X_0(14), only a point of the (trivial)
+   moduli of level structures alone. The runner's ONLY intrinsic curve-arithmetic is Phi_6 =
+   the EISENSTEIN norm => Q(sqrt-3), j=0 -- a DIFFERENT curve from 14a, and a DIFFERENT field
+   from X_0(14)'s CM points (Q(sqrt-7), Q(sqrt-14)). So the runner's natural moduli point is on
+   the WRONG curve. The functor requires REALIZING 14a from the runner data; the runner data
+   instead realizes the j=0 Eisenstein curve. NO FUNCTOR.
+
+   PARTIAL correspondence that DOES hold: (a) the LEVEL 14=2*7 lifts (S92 circle V_4);
+   (b) the APEX-7 (Q(sqrt-7)) aligns with X_0(14)'s w_7 CM (disc -7). But (c) the covering-min
+   VALUE (Phi_6, Q(sqrt-3)) does NOT map -- it is Eisenstein, not conductor-14. The 'coincidence
+   at 14' = conflating the LEVEL 2*7 (->X_0(14)=14a) with the DENOMINATOR Phi_6(14)=183 (->j=0).
+   They meet at the NUMBER 14, not as a map.
