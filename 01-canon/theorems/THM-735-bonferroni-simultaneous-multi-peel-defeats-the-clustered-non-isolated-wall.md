@@ -1,7 +1,7 @@
 ---
 id: THM-735
 title: The SIMULTANEOUS (Bonferroni) MULTI-PEEL — peel ALL j≤6 far elements against the FIXED body at once, each with its own per-peel disc bound (opus-S270/271's exact-disc device), and the clustered/non-isolated wall (klein-S289) vanishes for bounded bodies. (i) LEMMA: L(E∪F) ≥ (1−|F|/7)·m_E − Σ_{v∈F}|ε_v(E)|, |ε_v(E)|² ≤ (6/49)·disc_v(G_E); (ii) crude corollary: closes E∪F whenever Σ_{v∈F} 1/v < (7−j)·m_E/(√2·r_E) — NO isolation among F needed, clustering irrelevant; (iii) FLAGSHIP: every 13-speed family {1..10,c,a,b} (10<c<a<b) satisfies LRC(14) — the first THREE-free-slot closure, i.e. the bounded-body multi-scale stratum at j=3
-status: CLAIMED (kind-pasteur-2026-07-13-S128 cont.3) — lemma (i) is a 4-line union bound + THM-731's covariance bound applied to the BODY's good set (proof below, rigorous); (ii) is (i) + THM-732's crude disc bound; both verified exactly in ℚ THIS SESSION per MISTAKE-136 before upgrade; flagship (iii) = 3-level recursion tree (j=3 uniform / per-c j=2 / per-(c,a) j=1 / exact-ℚ bottom + THM-366), running this session
+status: PROVED (kind-pasteur-2026-07-13-S128 cont.3; Lean transcription open). Lemma (i): 4-line union bound + THM-731's covariance bound on the body's good set. (ii): (i) + THM-732 crude disc. Chain verified EXACTLY in ℚ on a 9-family battery (j=1 deep well; j=2 residue body; j=3 clustered triples c=150..500; j=6 clustered sextuple {1..7}∪{300..305}) — every link exact, zero violations. PER-PEEL EXACT-DISC EXTENSION (opus's device, Cauchy–Schwarz form (1−j/7)²m_E² > j·(6/49)·Σ_v disc_v(G_E), all-rational): fires where crude fails, incl. the j=6 clustered sextuple. FLAGSHIP (iii) ESTABLISHED in 1.3 s: every {1..10,c,a,b} (10<c<a<b) satisfies LRC(14) — leg J3 = ONE inequality (all c ≥ V₁=154); leg J2 = 143 exact bodies {1..10,c} (max V₂=219 at c=143); leg J1 = 7537 exact bodies {1..10,c,a} (max bottom-b=167); bottom = 19,202 triples of which only 27 covering (exact-swept, ALL L>0, zero tights) and 19,175 non-covering (THM-366). The first three-free-slot closure; the bounded-body multi-scale stratum at j=3 is done, clustering included
 source: kind-pasteur-2026-07-13-S128 (cont.3)
 depends_on:
   - THM-731   # per-peel covariance bound |ε_v|² ≤ (6/49)disc_v — applied to G_E (proof is generic in the set)
@@ -57,9 +57,29 @@ V₃({1..10}) — closed by (ii), j=3, one exact inequality; (L2) c below: body 
 threshold; (L3) a below: body {1..10,c,a} exact, j=1 = THM-732(iii); bottom: covering triples swept
 in exact ℚ, non-covering dispatched by THM-366. All thresholds exact rationals (MISTAKE-141).
 
-## Evidence log (this session)
+## Evidence log (all done — scripts lrc14_thm735_*_kps_S128c3.py, outputs in 05-knowledge/results/)
 
-- [ ] chain verified exactly in ℚ on: {1..10,13,22,84}, {1..11,13,84} (j=2), {1..12,182} (j=1),
-      clustered {1..10,c,c+1,c+2} samples, a j=6 case
-- [ ] sequential-vs-simultaneous demo: explicit c where crude sequential composition fails but (ii) fires
-- [ ] flagship tree run: V₁, level counts, bottom sweeps, tight census, verdict
+- [x] chain verified exactly in ℚ on the 9-family battery; every link (lemma / per-peel covariance /
+      crude disc) holds with zero violations. Tightness: the lemma bound reaches 84–92% of true L on
+      clustered triples; at the deep well (j=1) it equals L exactly.
+- [x] per-peel EXACT-disc certificate (opus-S270/271's device, CS form, all-rational) fires below the
+      crude threshold: {1..10,150,151,152} (crude −0.0014 → exact-disc +0.006) and the j=6 sextuple
+      {1..7,300,…,305} (crude −0.024 → exact-disc +0.002): SIX consecutive far elements certified at
+      once against the fixed body. Clustering is irrelevant, as the lemma predicts.
+- [x] honest calibration (HYP-6535): on {1..10,c,c+1,c+2} the observed sequential crude also fires
+      (observed edge growth ~0.87·m₀ per unit c vs P1's 2.14 coefficient — P1 is ~2.5× loose); the
+      cont.2 sequential failure is of the P1-BOUND composition. Bonferroni removes the composition
+      rather than sharpening it — and is the only route at j ≥ 2 slots simultaneously free.
+- [x] flagship tree: V₁=154; 143 + 7,537 exact bodies; 19,202 bottom triples (27 covering exact-swept,
+      all L>0; 19,175 non-covering → THM-366); ZERO tights, ZERO covering L=0. Total 1.3 s.
+
+## What remains of the multi-scale/non-isolated stratum after (iii)
+
+- Other bounded bodies: the same tree per body (mechanical; the 364-body analogue of THM-734 at j=3
+  is a larger but finite computation; j=4,5,6 trees over 9,8,7-element bodies likewise).
+- Families whose 7th-smallest speed exceeds every bound (j ≥ 7 far slots — the Bonferroni base
+  1−j/7 dies, MISTAKE-122): these have ≤ 6 bounded speeds, i.e. genuinely spread/two-scale objects —
+  the density route's home turf (klein's floors/THM-692; LEM-006's factorial-moment ladder is the
+  higher-order Bonferroni for exactly this). The covering/density seam is now sharply drawn at j=7.
+- Lean: (i) is a union bound + the already-Lean-targeted THM-731/732 chain; the tree bottoms are
+  decide-style (27 sweeps).

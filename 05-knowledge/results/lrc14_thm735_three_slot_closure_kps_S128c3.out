@@ -1,0 +1,15 @@
+====================================================================================================
+THM-735(iii): {1..10,c,a,b} for ALL 10<c<a<b   (legs J3 / J2 / J1 / bottom, all exact)
+====================================================================================================
+body {1..10}: r0=20 m0=1217/8820~0.13798   =>  LEG J3: all c>=V1=154 closed (j=3 Bonferroni, one inequality)
+LEG J2: 143 bodies {1..10,c} (11<=c<154), max V2=219 at c=143
+LEG J1: 7537 bodies {1..10,c,a}, max bottom-b=167 at (c,a)=(143, 212)
+BOTTOM: 19202 (c,a,b) triples below tail thresholds; 27 covering (exact-swept); 19175 non-covering (THM-366)
+
+TIGHTS among swept covering triples (L=0): NONE
+COVERING L=0 (would block): NONE
+
+elapsed 1.3 s
+
+THM-735(iii) ESTABLISHED: every {1..10,c,a,b} (10<c<a<b) satisfies LRC(14).
+  J3: one inequality (c>=154). J2: 143 exact bodies. J1: 7537 exact bodies. Bottom: 27 exact sweeps.

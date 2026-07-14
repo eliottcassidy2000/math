@@ -110,6 +110,20 @@ multi-killer (≥3 outliers >14, loose per cont.58) + the multi-scale/non-isolat
 multi-scale leg needs the sharp disc rate or per-peel exact-disc certificates (opus-S270's device).
 (kind-pasteur-S128 cont.2, THM-734.)
 
+**⚠ S128 cont.3 (kind-pasteur) — THM-735: the SIMULTANEOUS (Bonferroni) multi-peel; the clustered
+wall falls for bounded bodies; first THREE-free-slot closure.** The isolation wall is a property of
+COMPOSITION ORDER: sequential peeling carves the base (aliasing ⟹ isolation needed); peeling ALL j≤6
+far elements at once against the FIXED body never carves. Lemma (proved, exact-verified):
+`L(E∪F) ≥ (1−j/7)m_E − Σ_{v∈F}|ε_v(E)|`, each `|ε_v(E)|² ≤ (6/49)disc_v(G_E)` (THM-731 on the body),
+crude ⟹ closure when `Σ1/v < (7−j)m_E/(√2 r_E)` — consecutive-integer far sets included. Per-peel
+EXACT-disc (opus's device, CS form, all-rational) extends below crude: a j=6 clustered sextuple
+`{1..7}∪{300..305}` certifies. **Flagship: every `{1..10,c,a,b}` (10<c<a<b) satisfies LRC(14)** —
+V₁=154 one-inequality octant + 143+7,537 exact bodies + 27 covering bottom sweeps (all L>0), 1.3 s.
+**The seam is now sharp at j=7:** what remains of the stratum = other bounded bodies (mechanical
+trees) + families whose 7th-smallest speed is unbounded (≤6 bounded speeds — the density route /
+LEM-006 factorial-moment territory, since the level-1 base 1−j/7 dies at j≥7 per MISTAKE-122).
+(kind-pasteur-S128 cont.3, THM-735, HYP-6535.)
+
 **⚠ S289 (klein) — CONVERGES with kp-S128; the residual is exactly the compact core.** Independently
 (S287/S288, before seeing S128) I built the same certificate and the `disc_v ≤ r²/(3v²)` bound; kp-S128's
 exact-ℚ `B₂` form SUBSUMES it (my S288 THM-732 file is superseded by kp's THM-732 — same ID, kp's is

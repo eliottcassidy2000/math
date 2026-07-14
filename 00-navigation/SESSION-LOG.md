@@ -68,6 +68,24 @@ FILES: THM-735 canon file; HYP-6535; 04-computation/lrc14_packclock_sampling_thm
 backlog lead corrected (tower CLOSED). -> monad (THM-668 credited + its item 4 partially closed),
 kps/klein (the coherent-pack sector is now theorem-closed; certificates own the incoherent rest),
 mac-mini (the tower's L-monotonicity now has a proof-backed floor).
+## kind-pasteur-2026-07-13-S128 (cont.3) -- THM-735 PROVED: the SIMULTANEOUS (Bonferroni) multi-peel -- peel ALL j<=6 far elements against the FIXED body at once (opus's per-peel exact-disc device, class configuration); the clustered/non-isolated wall is a property of COMPOSITION ORDER, not of the families; FLAGSHIP: every {1..10,c,a,b} (10<c<a<b) satisfies LRC(14) -- the first THREE-free-slot closure (1.3s)
+
+Prompt (owner): work the multi-scale/non-isolated stratum with opus's per-peel exact-disc device.
+
+THE IDEA: klein-S289's isolation wall afflicts SEQUENTIAL peeling because each peel faces a base carved by the previous far arcs (sampling a carved set near its carving frequency aliases => disc large => isolation required). Peel all far elements SIMULTANEOUSLY against the fixed body and the carving never enters:
+
+  LEMMA (THM-735(i), proved, 4 lines): L(E u F) >= (1-j/7) m_E - Sum_{v in F} |eps_v(E)|, j=|F|<=6,
+  with |eps_v(E)|^2 <= (6/49) disc_v(G_E) (THM-731 applied to the BODY's good set -- proof generic).
+  CRUDE (ii): disc <= r_E^2/(3v^2) => closure whenever Sum 1/v < (7-j) m_E/(sqrt2 r_E) -- consecutive
+  integers allowed; j=1 recovers THM-732(iii) exactly. j<=6 is MISTAKE-122's boundary (base 1-j/7).
+
+VERIFIED (MISTAKE-136, all links exact in Q, 9-family battery): lemma + per-peel covariance + crude disc hold with zero violations; bound reaches 84-92% of true L on clustered triples. PER-PEEL EXACT-DISC EXTENSION (opus-S270/271's device, CS form (1-j/7)^2 m_E^2 > j(6/49) Sum disc_v, all-rational): FIRES below the crude threshold -- {1..10,150,151,152} and the j=6 clustered SEXTUPLE {1..7}u{300..305} (six consecutive far elements certified at once). HONEST CALIBRATION (HYP-6535): observed sequential edge growth ~0.87 m0 per unit c vs P1's 2.14 coefficient (P1 ~2.5x loose), so observed-r sequential also fires on triples over {1..10}; cont.2's failure is of the P1-BOUND composition; Bonferroni removes the composition rather than sharpening it.
+
+FLAGSHIP (THM-735(iii), ESTABLISHED, 1.3s): every {1..10,c,a,b} (10<c<a<b) satisfies LRC(14). Partition: J3 = ONE inequality (all c>=V1=154, entire octant incl. all clustering); J2 = 143 exact bodies {1..10,c} (max V2=219); J1 = 7537 exact bodies {1..10,c,a} (max bottom-b=167); BOTTOM = 19,202 triples, only 27 covering (exact-swept, ALL L>0, zero tights), 19,175 non-covering (THM-366). The bounded-body multi-scale stratum at j=3 is DONE.
+
+THE SEAM IS NOW SHARP AT j=7: what remains of the multi-scale/non-isolated stratum = (a) other bounded bodies (mechanical per-body trees; the 364-body j=3 analogue is finite), (b) families whose 7th-smallest speed exceeds every bound (<=6 bounded speeds, genuinely spread/two-scale -- the DENSITY route's home turf; LEM-006's factorial-moment ladder IS the higher-order Bonferroni for j>=7), (c) Lean (lemma = union bound + the THM-731/732 chain; bottoms decide-style).
+
+FILES: THM-735 (PROVED), HYP-6535; 04-computation/lrc14_thm735_bonferroni_multipeel_kps_S128c3.py(+.out), lrc14_thm735_three_slot_closure_kps_S128c3.py(+.out); finish-map cont.3 block. -> opus (your device in class configuration: the CS all-rational form is the Lean-able shape; your dilation-blindness does not touch the crude/Bonferroni legs -- blind peels only weaken exact-disc tightening at specific v), klein (the isolation wall is composition-order; your j>=7 spread families are the density seam -- your floors + my j<=6 tile route B's multi-scale stratum), mac-mini (S87 'Gowers order = #far' converges: #far = j is exactly the Bonferroni order).
 
 ---
 ## mac-mini-2026-07-13-S87 -- Gowers cancellation DEFLATED: effective order = #far, far peel = klein's three-distance target, closed-form tooth-narrowing

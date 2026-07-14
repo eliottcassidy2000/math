@@ -1,0 +1,72 @@
+======================================================================================================
+THM-735 (i)+(ii) EXACT VERIFICATION -- simultaneous multi-peel, all links in Q
+======================================================================================================
+
+k=10 extremal body+peels            E-size=10 j=3   m_E=0.13798 r_E=20   L_true=0.021188
+   lemma L>=base-Sum|eps|: True   per-peel eps^2<=(6/49)disc: True   disc<=r^2/3v^2: True
+   base=(1-j/7)m_E=0.078847   Sum|eps|=0.075482   bound value=0.003365 (vs L_true 0.021188)
+   CERT crude: -0.463764 -> no     CERT exact-disc (CS): -6.880e-03 -> no
+
+residue, j=2                        E-size=11 j=2   m_E=0.05633 r_E=14   L_true=0.005357
+   lemma L>=base-Sum|eps|: True   per-peel eps^2<=(6/49)disc: True   disc<=r^2/3v^2: True
+   base=(1-j/7)m_E=0.040238   Sum|eps|=0.041685   bound value=-0.001446 (vs L_true 0.005357)
+   CERT crude: -0.211017 -> no     CERT exact-disc (CS): -3.353e-03 -> no
+
+deep well, j=1                      E-size=12 j=1   m_E=0.03410 r_E=12   L_true=0.023897
+   lemma L>=base-Sum|eps|: True   per-peel eps^2<=(6/49)disc: True   disc<=r^2/3v^2: True
+   base=(1-j/7)m_E=0.029230   Sum|eps|=0.005332   bound value=0.023897 (vs L_true 0.023897)
+   CERT crude: 0.015908 -> FIRES (L>0 proved)     CERT exact-disc (CS): 8.038e-04 -> FIRES (L>0 proved)
+
+clustered j=3, c=150                E-size=10 j=3   m_E=0.13798 r_E=20   L_true=0.083358
+   lemma L>=base-Sum|eps|: True   per-peel eps^2<=(6/49)disc: True   disc<=r^2/3v^2: True
+   base=(1-j/7)m_E=0.078847   Sum|eps|=0.008650   bound value=0.070196 (vs L_true 0.083358)
+   CERT crude: -0.001437 -> no     CERT exact-disc (CS): 6.018e-03 -> FIRES (L>0 proved)
+
+clustered j=3, c=200                E-size=10 j=3   m_E=0.13798 r_E=20   L_true=0.084582
+   lemma L>=base-Sum|eps|: True   per-peel eps^2<=(6/49)disc: True   disc<=r^2/3v^2: True
+   base=(1-j/7)m_E=0.078847   Sum|eps|=0.007648   bound value=0.071199 (vs L_true 0.084582)
+   CERT crude: 0.018535 -> FIRES (L>0 proved)     CERT exact-disc (CS): 6.087e-03 -> FIRES (L>0 proved)
+
+clustered j=3, c=215                E-size=10 j=3   m_E=0.13798 r_E=20   L_true=0.085610
+   lemma L>=base-Sum|eps|: True   per-peel eps^2<=(6/49)disc: True   disc<=r^2/3v^2: True
+   base=(1-j/7)m_E=0.078847   Sum|eps|=0.005756   bound value=0.073091 (vs L_true 0.085610)
+   CERT crude: 0.022724 -> FIRES (L>0 proved)     CERT exact-disc (CS): 6.120e-03 -> FIRES (L>0 proved)
+
+clustered j=3, c=300                E-size=10 j=3   m_E=0.13798 r_E=20   L_true=0.086737
+   lemma L>=base-Sum|eps|: True   per-peel eps^2<=(6/49)disc: True   disc<=r^2/3v^2: True
+   base=(1-j/7)m_E=0.078847   Sum|eps|=0.006631   bound value=0.072216 (vs L_true 0.086737)
+   CERT crude: 0.038573 -> FIRES (L>0 proved)     CERT exact-disc (CS): 6.120e-03 -> FIRES (L>0 proved)
+
+clustered j=3, c=500                E-size=10 j=3   m_E=0.13798 r_E=20   L_true=0.084149
+   lemma L>=base-Sum|eps|: True   per-peel eps^2<=(6/49)disc: True   disc<=r^2/3v^2: True
+   base=(1-j/7)m_E=0.078847   Sum|eps|=0.001518   bound value=0.077328 (vs L_true 0.084149)
+   CERT crude: 0.054650 -> FIRES (L>0 proved)     CERT exact-disc (CS): 6.206e-03 -> FIRES (L>0 proved)
+
+j=6 clustered, body {1..7}          E-size=7 j=6   m_E=0.33469 r_E=18   L_true=0.098381
+   lemma L>=base-Sum|eps|: True   per-peel eps^2<=(6/49)disc: True   disc<=r^2/3v^2: True
+   base=(1-j/7)m_E=0.047813   Sum|eps|=0.008637   bound value=0.039177 (vs L_true 0.098381)
+   CERT crude: -0.024322 -> no     CERT exact-disc (CS): 2.091e-03 -> FIRES (L>0 proved)
+
+=> ALL chain links hold EXACTLY on the whole battery.
+
+======================================================================================================
+SEQUENTIAL vs SIMULTANEOUS on clustered triples {1..10, c, c+1, c+2}
+  sequential crude: peel b=c+2 from exact 12-speed base {1..10,c,c+1}: fires iff b > (99/70)r/(6m)
+  simultaneous (ii): fires iff (4/7)m0 - (99/70)(r0/7)(1/c+1/(c+1)+1/(c+2)) > 0
+======================================================================================================
+body {1..10}: r=20 m=1217/8820~0.13798
+  c=  120: simultaneous no(-0.02134)       sequential(peel c+2 vs base r= 48 m=0.09845) fires      L_true=0.082097
+  c=  150: simultaneous no(-0.00144)       sequential(peel c+2 vs base r= 46 m=0.09962) fires      L_true=0.083358
+  c=  180: simultaneous FIRES(0.01187)     sequential(peel c+2 vs base r= 50 m=0.10400) fires      L_true=0.084557
+  c=  200: simultaneous FIRES(0.01854)     sequential(peel c+2 vs base r= 70 m=0.09702) fires      L_true=0.084582
+  c=  210: simultaneous FIRES(0.02139)     sequential(peel c+2 vs base r= 58 m=0.10285) fires      L_true=0.086543
+  c=  215: simultaneous FIRES(0.02272)     sequential(peel c+2 vs base r= 64 m=0.10135) fires      L_true=0.085610
+  c=  220: simultaneous FIRES(0.02399)     sequential(peel c+2 vs base r= 66 m=0.09659) fires      L_true=0.081296
+  c=  250: simultaneous FIRES(0.03055)     sequential(peel c+2 vs base r= 68 m=0.10064) fires      L_true=0.084674
+  c=  300: simultaneous FIRES(0.03857)     sequential(peel c+2 vs base r= 82 m=0.10495) fires      L_true=0.086737
+  c=  400: simultaneous FIRES(0.04862)     sequential(peel c+2 vs base r=108 m=0.10102) fires      L_true=0.083938
+  c=  600: simultaneous FIRES(0.05868)     sequential(peel c+2 vs base r=148 m=0.10114) fires      L_true=0.086202
+  c= 1000: simultaneous FIRES(0.06674)     sequential(peel c+2 vs base r=244 m=0.10192) fires      L_true=0.085507
+
+  first simultaneous fire among samples: c=180 ; exact threshold V1 = 154 (all three >= V1 closed)
+done.
