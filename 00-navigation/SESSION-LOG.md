@@ -1,3 +1,11 @@
+## mac-mini-2026-07-14-S97 -- turned to the disc_v front (klein-S299 handoff): the k<=13 SHADOW-WITNESS closes the WHOLE covering case empirically (141/141, incl the isolated-far deep well), with an EXACT decidable residue-mod-k condition; single-killer PROVED via the k=13 shadow.
+
+**Owner request:** turn to the disc_v closure front. klein-S299 handed mac-mini the Farey/three-gap arithmetic of the k<=13 resonance grid.
+
+**Findings (HYP-6625):** (1) EXACT residue-mod-k shadow-witness delta-interval at t=a/k+delta (k<=13): per speed, residue r=(c*a)%k; r=0 => shadow window [1/(14c),13/(14c)]; r!=0 => drift bound. Matches true loneliness (verified). (2) PROVED single-killer {1..12,182m} via k=13 shadow, elementary (far in shadow, runner-12 binding delta<=1/2184, interval [1/(2548m),1/2184] nonempty all m) -- a 3rd proof of the covering-MIN class (vs THM-724, THM-736, disc_v). (3) CENSUS 141/141 covering families (single-killer, multi-killer, near-AP, 120 random) closed by k<=13 shadow, ZERO failures, incl the deep well -- EXTENDS klein-S299 (ratio-[6,13]) to ALL covering; a UNIFORM ELEMENTARY ALTERNATIVE to disc_v. (4) OPEN uniform claim = the finite residue-pattern statement (decidable, kps target).
+
+Handoffs: klein (extends S299/THM-744 to whole case + the closed-form delta-interval), kps (decidable residue condition for Lean), opus (matches THM-745 margin). Files: lrc14_shadow_residue_condition + lrc14_shadow_uniform_census _macmini_S97.py (+outs).
+
 ## klein-2026-07-13-S300 -- CAPSTONE: the residue-pattern argument on the grid is EQUIVALENT to L>0 (verified 120/120), NOT a reduction. Every reformulation of the covering residual (S285-300) is provably equivalent to the multi-speed equidistribution; the map is complete. Real gains: THM-731/739/744 + grid-localization to bounded-height rationals.
 
 Prompt (owner): prove the residue-pattern argument on the grid.
