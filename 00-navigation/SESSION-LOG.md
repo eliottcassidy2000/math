@@ -1,3 +1,20 @@
+## klein-2026-07-13-S297 -- ASSAULT LANDED: PROVED THM-744, the shadow-gap middle-witness. max(C)<6·(smallest even) ⟹ t=1/2+δ lonely for {1}∪C on an explicit MIDDLE interval — the first UNCONDITIONAL middle-reach for TIGHT covering clusters (dispatches the S289 counterexample {1,90..101} by a two-line inequality)
+
+Prompt (owner): assault the shadow-gap rigidity for covering sets. LANDED A REAL HIT.
+
+Made the S296 shadow-gap mechanism QUANTITATIVE at k=2, p=1/2. THM-744 (PROVED, elementary 6-line):
+  C with an even element, e=min-even, m=max C; if m<6e then ∀δ∈(1/(14e),3/(7m)) (nonempty), t=1/2+δ has ||ct||≥1/14 ∀c∈{1}∪C, so L({1}∪C)≥3/(7m)−1/(14e)>0.
+PROOF: at 1/2 the parities separate — odd c sits at distance EXACTLY 1/2 (huge margin 3/7: ||c(1/2+δ)||=1/2−cδ>1/14), even c bad only in the smallest-even's arc (||c(1/2+δ)||=cδ∈(1/14,3/7)), speed 1: t∈(1/2,13/14)⟹||t||>1/14. Nonempty iff m<6e.
+
+WHY IT'S THE RIGHT TARGET: m<6e ≈ "cluster ratio<6" = TIGHT covering clusters = EXACTLY the residual that isolated-far disc_v (THM-731, needs c_max≫rest) and simultaneous multi-peel (THM-735, needs ≤6 far) MISS. Dispatches my S289 "decisive counterexample" {1,90..101} (e=90,m=101, ratio 1.12) by 101<6·90: lonely on (0.5008,0.5042). The family I built to break the peel route is TRIVIAL for the resonance route. VERIFIED NG-dense, 100% fire on tight covering clusters.
+
+COVERING-SIDE COMPANION of THM-523: THM-523=non-covering middle witness t=1/q; THM-744=covering tight-cluster middle witness t=1/2+δ. Covering case now TILED: non-covering (THM-523) + tight cluster (THM-744) + isolated far (disc_v/THM-731) + bounded-body-≤6-far (THM-735). RESIDUAL SHRUNK to: covering {1}∪C with C ratio∈[6,13], no isolated far (thinner than the whole non-isolated stratum).
+
+HONEST SCOPE: factor 6=(14−2)/2 is optimal for this method (resonance p=a/k gives (14−k)/k≤6; large-k has vanishing margin). Ratio∈[6,13] residual needs a multi-resonance sharpening (open) or opus true-disc per-family. But after 8 sessions (S285–297) circling the rigidity, THIS is the first to REMOVE a chunk unconditionally — with a two-line inequality where the deep analysis stalled. The S296 shadow-gap picture wasn't just a hardness diagnosis; at the right resonance it's a constructive witness.
+
+FILES: THM-744; HYP-6600; reflection the-shadow-gap-cracks-open-tight-clusters-a-two-line-witness-at-one-half-klein-S297; 04-computation/lrc14_shadowgap_thm_klein_S297.py (+out). -> THM-523/731/735, HYP-6590. Sent to all.
+
+---
 ## mac-mini-2026-07-13-S94 -- the functor runner/circle -> X_0(14) does NOT exist (rigorous honest negative): the runner is a LEVEL without a CURVE, and its curve is Phi_6=EISENSTEIN (j=0), not 14a. CAPSTONE of S89->S94.
 
 **Owner request:** prove the functor runner/circle -> X_0(14) (the last plank of the arc).
