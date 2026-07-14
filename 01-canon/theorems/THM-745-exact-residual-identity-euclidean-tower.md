@@ -1,7 +1,7 @@
 ---
 id: THM-745
 title: The exact residual identity and the pairing theorem -- per segment, alpha Sum psi(h_m) = -[F(h_last+1)-F(h_first)] - (K+1)alpha^2/2 + Sum_wraps (alpha - h_m) EXACTLY; the orient-weighted residual total vanishes IDENTICALLY (rho(j,+) = rho(j,-) for every j, every W -- mirror-symmetry pairing), so the first-order wedge content EQUALS the exact dF_ext telescoping sum; the wrap heights descend the Euclidean/CF tower of (j, W)
-status: PROVED IN FULL for W >= 14 max(J) (opus-S279: the segment-bijection lemma is proved -- see section 2b -- and with the no-wrap lemma the pairing theorem is unconditional in that regime; per-line version for W >= 14j; below the threshold the defect Sum_wraps(2h - alpha) was zero in every tested case). Identity: proved + 112/112 exact. Pairing: PROVED (regime) + verified exact at all tested W including sub-threshold. HONEST: no W-uniform W0 gain; exposed and corrected MISTAKE-142.
+status: PROVED IN FULL, UNCONDITIONAL IN W (opus-S280, section 2c: the strong no-wrap lemma -- a full-inside crossing sits >= 1/W before the segment death, so h_m >= h(u2) + alpha >= 1/14 + alpha > alpha at EVERY W; the 14 max(J) threshold of S279 was an end-distance artifact). Identity: proved + 112/112 exact. Segment bijection: proved (S279, 2b). No-wrap: proved unconditionally (S280, 2c; exhaustive W in [15,160]: 0 wraps, 0 pairing failures, margin exactly sharp at 0). HONEST: no W-uniform W0 gain; exposed and corrected MISTAKE-142.
 source: opus-2026-07-13-S278 (owner prompt: work the rho-residual signed sums with the perspective frame)
 depends_on:
   - THM-742/743 (the wedge decomposition; THM-743's constants remain the standing sound bounds)
@@ -50,7 +50,23 @@ floor(u2 W) - ceil(u1 W) = floor((1-u1)W) - ceil((1-u2)W), by floor(W-x) = W - c
 cases). QED.  **Lemma A (no-wrap).** 0 in J: heights in (0,1/14) are strictly interior to the
 static j=0 arc, hence buried; so every EXPOSED crossing has h >= 1/14 > j/W = alpha whenever
 W >= 14j: no wrap terms, and rho_seg = -(K+1) alpha^2/2 EXACTLY. QED.
-**Pairing theorem (proved, W >= 14 max(J); per-line for W >= 14j):** rho(j,+) =
+**Lemma A-prime (STRONG no-wrap, opus-S280 -- unconditional).**  Along an exposed segment the
+height h(u) stays in [1/14, 13/14] (arc-0 buries both bands around 0; the monotone march cannot
+cross the buried band).  A FULL-INSIDE crossing at strip m satisfies (m+1)/W <= u2, i.e. it sits
+at u-distance >= 1/W before the segment death, hence
+
+>   h_m  =  h(u2) + j (u2 - m/W)  >=  1/14 + j/W  =  1/14 + alpha  >  alpha,
+
+so NO full-inside crossing wraps -- at EVERY W.  (Exactly sharp: exhaustive W in [15,160], both
+shapes, min margin h_m - (1/14 + alpha) = 0 attained, never negative; 0 wraps, 0 pairing
+failures.)  THE NEAR-COUNTEREXAMPLE THAT REVEALED IT: at W = 97, line (j=10,+), u = 58/97 is
+unburied by every d-condition with h = 0.09205 < alpha = 0.10309 -- a genuine exposed low-height
+crossing -- but its strip straddles the segment death at u2 = 3/5 exactly (where h reaches
+1/14): it lives in the PARTIAL end strip, excluded from rho by construction.  The wrap
+machinery, and with it the Euclid-tower fluctuation, never enters the exposed-segment
+residuals: rho_seg = -(K+1) alpha^2/2 for ALL W.
+
+**Pairing theorem (proved, UNCONDITIONAL in W):** rho(j,+) =
 Sum -(K+1)alpha^2/2 = (B+C termwise) = rho(j,-). Below the threshold the defect is
 Sum_wraps(2h - alpha) -- ZERO in every tested case (the exposed heights sit above j/W in
 practice).  VERIFIED (lrc14_segment_bijection_lemma_opus_S279.py): Lemma B as exact Fraction

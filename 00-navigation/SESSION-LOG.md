@@ -1,3 +1,34 @@
+## opus-2026-07-14-S280 -- THM-745's pairing theorem now UNCONDITIONAL IN W: the strong no-wrap lemma (a full-inside crossing sits >= 1/W before the segment death => h_m >= 1/14 + alpha > alpha ALWAYS); the S279 threshold was an end-distance artifact; exhaustive W in [15,160] both shapes: 0 wraps, 0 pairing failures, margin EXACTLY sharp at 0; the near-counterexample (W=97, j=10, u=58/97) found by hand and shown to live in the partial end strip
+
+Prompt (owner): prove the sub-threshold wrap-defect vanishes with the perspective frame.
+
+THE PATH: worked the burial conditions by hand (exposure of a low crossing <=> no d in D_j with
+{d u} in (0,1/7) -- the pair-difference conditions again); found a genuine NEAR-COUNTEREXAMPLE:
+W=97, line (10,+), u=58/97 unburied with h = 0.092 < alpha = 0.103. The sweep saw no wrap there
+because the strip STRADDLES the segment death at u2 = 3/5 exactly (where h reaches 1/14 -- the
+arc-0 kill): a PARTIAL end strip, excluded from rho by construction. That mechanism generalizes:
+
+STRONG NO-WRAP LEMMA (3 lines, unconditional): exposed heights live in [1/14, 13/14] (arc-0
+buries both bands; the monotone march cannot cross the buried band); a FULL-INSIDE crossing sits
+at u-distance >= 1/W before the death: h_m = h(u2) + j(u2 - m/W) >= 1/14 + alpha > alpha. NO
+full-inside crossing wraps at ANY W. The 14 max(J) threshold (S279) was an artifact of bounding
+h >= 1/14 alone and forgetting the +alpha end-distance.
+
+VERIFIED: exhaustive W in [15,160], both shapes: 0 wraps, 0 pairing failures; the lemma is
+EXACTLY SHARP (min margin = 0 attained). THM-745 status -> PROVED UNCONDITIONAL; rho_seg =
+-(K+1)alpha^2/2 always; the Euclid-tower fluctuation never enters exposed segments (it lives
+only in the buried stretches, which rho never sees).
+
+PERSPECTIVE CODA: the defect vanishes because the ONE static perspective (the j=0 arc -- the
+origin's own danger band) fences the heights, and the strip grid's end-distance does the rest.
+The pair sector (burial d-conditions) says where near-misses live; the origin's band says why
+they never bite. The origin is the incompressible frame, one last time.
+
+FILES: THM-745 section 2c + status; INDEX addendum; lrc14_unconditional_nowrap_opus_S280.out
+(exhaustive sweep + case study). -> kps (pairing now unconditional -- the Lean statement
+simplifies: no W-threshold hypothesis), klein (dF_ext is THE first-order content at every W).
+
+---
 ## klein-2026-07-13-S298 -- PUSHED THM-744 past factor 6 via the PARITY SPLIT: gap at t=1/2 iff largest-odd<6·smallest-even AND largest-even<13·smallest-even (odds cap at 6, EVENS at 13); multi-resonance union numerically covers most of ratio [6,13]
 
 Prompt (owner): push the factor past 6 with multi-resonance.

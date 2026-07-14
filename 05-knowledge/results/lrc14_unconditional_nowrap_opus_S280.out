@@ -1,0 +1,8 @@
+shape 1 {1}u{W..W+11}: W in [15,160] exhaustive: wraps at full-inside crossings = 0 ; pairing failures = 0
+   min over all (W, crossings) of [h - (1/14 + alpha)] = 0 = 0.000000  (lemma predicts >= 0)
+shape 2 {1,2,3}u{W..W+9}: W in [15,160] exhaustive: wraps at full-inside crossings = 0 ; pairing failures = 0
+   min over all (W, crossings) of [h - (1/14 + alpha)] = 0 = 0.000000  (lemma predicts >= 0)
+case study: segment (j=10,+) = (0.59184, 0.60000); u=58/97=0.59794 inside; height h(m=58) = 0.09205 < alpha = 0.10309
+   BUT m=58 > last full-inside strip m2 = 57 (u2 = 3/5 = 3/5 exactly: the segment DIES at h = 1/14):
+   the would-be wrap lives in the PARTIAL end strip -- excluded from rho by construction. QED mechanism.
+done.
