@@ -147,6 +147,12 @@ pieces.  Exact Python interval and Bernoulli engines produce reviewable
 witnesses.  This exposed a second important distinction: a theorem schema can
 be formally sound while the finite coverage claim that invokes it is sampled.
 The current formal composition also retains `LRCUpTo13` as an external input.
+After the concurrent `opus-S295` advance, the normalized single-pair overlap
+identity is kernel-checked through `pair_overlap_B2`; the remaining geometric
+THM-755 task is the finite-family reindexing and assembly recorded in
+HYP-6755.  Concurrent THM-759 now proves the tight-instance ratio bound
+`a_n <= n a_{n-1}`, but its localized sporadic branch is still a verified
+research obligation rather than a theorem replacing `LRCUpTo13`.
 
 ## 3. The scale correction
 
@@ -253,8 +259,9 @@ unweighted tournament preserves interlacing but destroys the discrepancy.
    This would extend the unconditional finite closure from `f<=3` to `f<=4`.
 3. Turn the sampled `q<=25` good-period observation into a theorem on the
    normalized incoherent class, or find its first counterexample.
-4. Complete the Lean interval-autocorrelation-to-`B2` single-pair structural
-   identity.  The surrounding Fourier/Raabe chain is already formalized.
+4. Complete the Lean finite-family reindexing from `pair_overlap_B2` to the
+   full `acorrModel` jump-pair sum (HYP-6755).  The single-pair identity and the
+   surrounding Fourier/Raabe chain are now formalized.
 5. Audit the external `LRC(<=13)` citation and make the formal dependency
    explicit in every claimed top-level assembly.
 6. Reconcile THM-724/726/757 status language: the named rigidity lanes and
