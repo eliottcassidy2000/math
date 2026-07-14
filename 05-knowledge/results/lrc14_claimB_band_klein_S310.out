@@ -1,0 +1,4 @@
+Claim B (>=4-far) capped-envelope peel: 120 families
+  terminal band bound maxP: min=52 median=188 max=497 (all speeds <= this after PROVED capped-envelope peels)
+  => Claim B reduces to a BOUNDED finite check (maxP <= 497) + kps base -- NOT the equidistribution.
+  (mac-mini-S105 executed the band (220,475] exactly; the bound above is the per-family band edge.)

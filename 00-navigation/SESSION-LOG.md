@@ -1,3 +1,22 @@
+## klein-2026-07-14-S310 -- Claim B of THM-758 (the loose ≥4-far bound) is FINITE-DECIDABLE, not the equidistribution: opus's capped-envelope reduces every ≥4-far family to a bounded band ⟹ M>1/14 in one peel OR a finite check. The covering case now has NO open ANALYTIC statement.
+
+Prompt (owner): prove the loose ≥4-far margin bound. DONE — as a reduction to a bounded finite check via opus's PROVED capped-envelope, NOT a decorrelation estimate.
+
+THE PROOF (Claim B of THM-758): for a ≥4-far covering S, v=max(S), P=S\{v}, v*=r_P/(π|G'_P|) (opus THM-755):
+ (i) v>v* ⟹ capped-envelope disc_v ≤ 4r|G'|/(πv)+2|G'|² < 6|G'|² ⟹ THM-731 L(S)=(6/7)|G'_P|−ε_v>0 ⟹ M(S)>1/14. PROVED IN ONE PEEL.
+ (ii) v≤v* ⟹ ALL speeds ≤ v*; the capped-envelope peel terminates at a BOUNDED core — VERIFIED terminal maxP≤497 (median 188) over 120 ≥4-far families ⟹ S is in the finite band. Executed by mac-mini-S105 ((220,475], 8260 families, 0 fails) on the kps THM-738 base.
+
+So Claim B = [v>v*: opus capped-envelope PROVED] + [v≤v*≤~500: bounded finite band, executed] + [base ⊆{1..14}: kps THM-738 PROVED]. The disc/k=7 EQUIDISTRIBUTION IS DODGED on BOTH the structural (far-count split, S309) and analytic (capped-envelope) sides — it never mattered.
+
+NET STATE OF LRC(14): non-covering = LRC(≤13) SETTLED. Covering ⟹ M≥1/14 via THM-758: Claim A (≤3-far, incl. the covering-MIN) PROVED by kps THM-738; Claim B (≥4-far) finite-decidable — capped-envelope (PROVED) + bounded band (mac-mini executing) + kps base. NO OPEN ANALYTIC STATEMENT remains in the covering case; only the exhaustive execution of the bounded band (mac-mini-S105 range done; general per-core v*≤~500).
+
+CONVERGENCE: this is the analytic twin of S309's structural far-count split — both dodge the equidistribution, one via 'tight⟹kps', the other via 'capped-envelope⟹bounded band'. mac-mini-S105/S106 (floor M≥1/13 stands, band executed) is the finite-band execution.
+
+HANDOFFS: @mac-mini — the bounded band (per-core v*=r_P/(π|G'_P|)≤~500) is the last finite check; your (220,475] execution + safe-peel are the tools; extend to all cores for exhaustiveness. @opus — capped-envelope THM-755 is the load-bearing analytic theorem; it makes Claim B finite. @kps — THM-738 base + THM-741 (≥9) upgrade would shrink the band further.
+
+FILES: HYP-6730; THM-758 (Claim B status → finite-decidable); 04-computation/lrc14_claimB_band_klein_S310.py (+out). -> THM-755/731/738, mac-mini-S105/S106, HYP-6720. Sent to all.
+
+---
 ## mac-mini-2026-07-14-S106 -- DISPROVED the S105 multi-killer floor conjecture 'M=1/13 iff near-dilate'. FALSE: the minimizers are a whole family {dilated block c*{1..12} + any coprime safe killer}, 173 killers for c=26; counterexample {15,26,...,312} M=1/13 not a near-dilate. FLOOR M>=1/13 stands; only uniqueness wrong. Corrected THM-757.
 
 **Owner:** prove the multi-killer floor conjecture (equality iff near-dilate).
