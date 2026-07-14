@@ -1,0 +1,16 @@
+family                             sortedscores            c3cyc     H(odd)  scorevar
+AP {1..13}          TIGHT(L=0)     [5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6]    121    1460324     0.462
+GW {1..11,13,24}    TIGHT(L=0)     [4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7]    123     911564     1.000
+deep well           COVER(L>0)     [5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7]     90    3551083     0.154
+near-AP {1..11,13,84}COVER(L>0)    [5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7]     89    3370919     0.308
+{1..14}\{6} drop-6  COVER(L>0)     [5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6]    121    1460324     0.462
+
+SEPARATION verdict:
+  tight c3: [121, 123]  vs  covering c3: [90, 89, 121]
+  tight H : [1460324, 911564]  vs  covering H : [3551083, 3370919, 1460324]
+  c3 separates tight<covering cleanly? False  (max tight 123 vs min cover 89)
+
+f_14 / 14a numerology cross-check:
+  (Z/14)* order = 6 = 6 = torsion(14a)=Z/6  [elementary phi(14)=6]
+  X_0(14) cusps = Klein-four V_4 = Atkin-Lehner <w_2,w_7> (14=2*7); tournament merged fold = Z_2 (complement) -- V_4 needs a 2nd fold (transpose)
+  H(AP diff-tour) = 1460324; is it ~ a modular number? 14a: a_3=-2,a_13=-4; |disc(14a)|=14^? ; L(14a,1)!=0 (rank0)
