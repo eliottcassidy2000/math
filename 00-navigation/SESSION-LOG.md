@@ -128,6 +128,57 @@ FILES: 01-canon/theorems/THM-774-safe-measure-floor-and-rho-bridge.md;
 buffering_law_referee}_opus_S301.py (+ .outs); HYP-6835 item 1 updated; INDEX entries.
 
 ---
+## codex-2026-07-14-S9/S8 -- n=12 two-sheet frontier: dyadic descent proved and height-100 packet empty
+
+The requested uniform `q<=25` lemma cannot be proved: THM-762/764 give exact
+primitive counterexamples with first witnesses at `q=27` and `q=26`.  The
+uniform n=12 sporadic-branch emptiness theorem also remains open.  This session
+kept those quantifiers explicit and advanced the deep two-sheet branch instead.
+
+THM-775 is now PROVED and independently refereed.  For a tight packet
+`A=2U union {x,y}`, every imprimitive deletion of the primitive divisor-complete
+core `U` has gcd exactly two.  It produces `U=2V union {u odd}`, an exact
+disjoint `2+1+1` ownership partition on `Z/4`, a primitive divisor-complete
+quotient `V`, the cocycle `N_x y-N_y x=2 mod 4`, and exact centre/width taxes.
+The deletion mechanism iterates to a hereditarily primitive base.  Beyond the
+first seam the disjoint object is a canonical assigned ownership tree, not the
+raw danger incidence relation.  Unwinding the chain gives the testable 2-adic
+normal form `U=2^r Q_r union {2^i h_i:0<=i<r}`, with one speed in every
+valuation layer below `r` and `r<=7`.
+
+THM-776 is FINITE-EXACT and independently audited.  Every twelve-set with ten
+even and two odd speeds and `max(A)<=100` has `M(A)>1/13`; no primitivity or
+divisor filter is assumed.  Exact atomization uses 6,876 rational endpoints
+and 6,875 open atoms.  For all 1,225 odd pairs, the compressed bad-atom/core-
+tooth hypergraph has transversal number exactly 12: CaDiCaL proves every
+at-most-11 instance UNSAT, a separately encoded Glucose pass proves every
+at-most-10 instance UNSAT, and `{1,...,12}` is the matching upper cover.  The
+full replay passed, the direct exact-`M` height-24 audit found zero tight rows,
+and an independent referee regenerated the full grid and folded-diamond atlas,
+reproducing both hashes and all clause histograms.  Alternate totalizers checked
+representative at-most-11 instances; no DRAT/LRAT traces are claimed.
+
+Concurrent mainline work was pulled repeatedly and materially integrated.
+THM-774 additionally closes every quotient core `U subset [1,19]` with odd
+exceptions unbounded, complementary to THM-776's larger bounded-height square.
+The later safe-measure theorem that collided with the first-pushed folded-
+diamond THM-774 was preserved and renumbered THM-777.  THM-773's seven-sheet
+token polynomial and the claimed THM-778 centered-Christoffel continuation
+were connected to the two-primary work through a common labelled sheet-
+incidence skew product.
+
+The exact remaining `s=2` target is now a scale-free transversal/noncontainment
+theorem for a primitive divisor-complete ten-comb, or a quantitative theorem
+forcing THM-775's terminal quotient into THM-774/776's complementary finite
+bases.  Higher shallow lifts and higher-sheet colour packets remain separate
+open branches.  Runner tournaments are telemetry here: the faithful vertices
+are bad atoms/proof obligations, with core speeds as incident killers and the
+binary safe-child map as recursion sidecar.
+
+Artifacts: THM-775/776; the THM-776 script/output; updated HYP-6820, current
+frontier, results/hypothesis indexes, investigation backlog, and the ramified-
+sheet-cover reflection addendum.
+
 ## codex-2026-07-14-S6 -- THM-773 PROVED: prime-seven token polynomial, monodromy, and exact metagraph fibre
 
 The `c=7` deck is now an exact finite-field local system.  Off endpoint walls,

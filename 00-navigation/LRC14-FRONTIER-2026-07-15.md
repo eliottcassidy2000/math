@@ -93,7 +93,9 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | two-/three-sheet equality quotients | PROVED primitive divisor transfer and speed bounds; two-sheet core contains multiples of every `2,...,12`, three-sheet core of every `2,...,11` | THM-772 |
 | two-sheet metric residual | PROVED exact folded diamond `||(x+y)tau/2||+||(x-y)tau/2||>=11/13`; sharp measure cap `8/117`; all quotient cores in `[1,19]` closed against unbounded odd exceptions | THM-774 + exact certificate |
 | shallow full-residue locus through lift height 12 | FINITE-EXACT over `13^12` conceptual packets; 13 dilates, unique primitive row `{1..12}` | THM-770 + exact owner-CSP |
-| n=12 sporadic branch | OPEN globally; bounded shallow slice empty, higher shallow lifts and divisor-complete folded/higher-sheet packets remain | THM-759/765/766/768--772/774; HYP-6820 |
+| two-sheet deletion recursion | PROVED every imprimitive deletion is a factor-2 seam; exact first `Z/4` tiling and finite dyadic descent to a hereditarily primitive divisor-complete core | THM-775 |
+| ten-even/two-odd locus through speed height 100 | FINITE-EXACT EMPTY; all 1,225 odd-pair bad-atom hypergraphs have transversal number 12, independently regenerated atlas | THM-776 |
+| n=12 sporadic branch | OPEN globally; bounded shallow slice, every two-sheet core in `[1,19]` with unbounded odd exceptions, and the full two-sheet speed box through 100 are empty; unbounded shallow descent, uniform folded noncoverage, and higher-sheet packets remain | THM-759/763/765/766/768--772/774--776; HYP-6820 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -185,6 +187,15 @@ comparison is now finite-exact for every ten-core `U subset [1,19]`: the widest
 component intrinsically caps each odd exception, and all `767,700` permitted
 core/odd incidences fail individual coverage.  This closes the whole low-core
 slice with odd speeds unbounded, but supplies no global bound on `max(U)`.
+THM-775 shows that every failure of hereditary primitivity is not arbitrary:
+it is a dyadic seam, giving a literal `2+1+1` partition on the first four
+sheets and then a canonical binary assigned-ownership tower ending at a
+hereditarily primitive quotient.  THM-776 reverses the remaining finite
+quantifiers: every odd pair through height 100 induces a bad-atom hypergraph
+of transversal number 12, too large for the ten-speed quotient core.  The
+uniform residual is now a scale-free transversal/noncontainment theorem (or a
+descent of the dyadic terminal core into that finite base), not an unstructured
+search over ten-even/two-odd tuples.
 
 The exact max-peel tooth atlas rules out a tempting shortcut.  In the
 exhaustive slice `A subset [1,20]`, `M(A\{w})>1/12`, `M(A)<=1/10`, all

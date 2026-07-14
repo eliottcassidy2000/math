@@ -46,7 +46,7 @@
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
-- **Source:** THM-763/765/766/768/769/770/772/774; HYP-6820; exact endpoint-splice
+- **Source:** THM-763/765/766/768/769/770/772/774/775/776; HYP-6820; exact endpoint-splice
   and tooth-winding atlases.
 - **Status:** MAJOR FINITE/STRUCTURAL PROGRESS, UNIFORM EMPTINESS OPEN.
   THM-768 eliminates a unique `13`-divisible maximum.  THM-769 proves that
@@ -64,7 +64,12 @@
   `||(x+y)tau/2||+||(x-y)tau/2||>=11/13`, proves the sharp diamond-measure cap
   `8/117`, and finite-exactly closes all `92,378` ten-cores in `[1,19]` against
   unbounded odd exceptions (`767,700` intrinsic runner tests, zero universal
-  incidence).
+  incidence).  THM-775 proves that every imprimitive deletion is a factor-two
+  seam, with an exact first `Z/4` ownership tiling and a finite dyadic descent
+  to a hereditarily primitive divisor-complete core.  THM-776 independently
+  closes the full ten-even/two-odd speed box through 100: all 1,225 odd-pair
+  bad-atom hypergraphs have transversal number exactly 12, while a packet core
+  has only ten speeds.
 - **Open shallow theorem:** prove the primitive descent trigger
   `full residues + chi_13=0 => W={1,...,12} or gcd(W)>1`.  THM-770 proves this
   through height twelve; dilation then makes the statement recursively
@@ -77,10 +82,11 @@
   nine-core collar
   `E_(1/13)(U^-) subset D_R union {Q>=11/13}` together with
   `E_(1/12)(U^-) intersect D_R intersect {Q<5/6} nonempty`.  Prove this
-  impossible or force THM-775's dyadic seam/descent.  Then treat the `s=3`
-  three-colour edge.  The exact object is loose-set component x sheet-owner
-  incidence with closed endpoints, not a residue condition at one binding
-  point.
+  impossible, prove a scale-free transversal lower bound beyond ten, or force
+  THM-775's terminal quotient into THM-774/776's complementary finite bases.
+  Then treat the `s=3` three-colour edge.  The exact object is loose-set
+  component x sheet-owner incidence with closed endpoints, not a residue
+  condition at one binding point.
 - **Metric bridge:** for each core-safe component `J`, retain
   `sigma_J(w)=1/13-||wc_J||-w h_J` and emitted endpoint current `e_w(J)`.
   Winding one, pure endpoint ownership, and a transitive phase tournament all

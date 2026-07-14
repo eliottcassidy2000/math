@@ -260,3 +260,126 @@ n=12 theorem is not yet proved.  The unknown object is no longer “a strange
 set of twelve integers.”  It is a primitive, recursively ramified cover of a
 loose-set base by finite sheet fibres, with endpoint ownership as its local
 state and simultaneous coverage as its global predicate.
+
+## Addendum: the two-sheet cover is a dyadic tower, not just a parity word
+
+THM-772, THM-774, THM-775, and THM-776 sharpen this picture in four different
+directions that fit together exactly.
+
+| viewpoint | theorem-facing statement | information deliberately discarded |
+|---|---|---|
+| unit grids | the quotient contains a multiple of every `2,...,12` | atom positions away from rational units |
+| folded diamond | opposite parity is `||a tau||+||b tau||>=11/13` | which odd runner owns which sheet |
+| dyadic deletion | every imprimitive deletion is a factor-2 seam | absolute scale of the quotient |
+| incidence dual | every height-100 odd pair needs 12 core teeth | widths and locations after minimal-clause compression |
+
+The unit-grid theorem says that the quotient core is arithmetically saturated,
+not generic.  The folded conjugacy says the two odd owners are really one
+diamond obstruction in half-sum/half-difference coordinates.  The deletion
+theorem says that gcd pathology is not an uncontrolled nuisance: it can only
+recur as
+
+```text
+Q_i=2Q_(i+1) union {one odd seam owner}.
+```
+
+Unwound, this is `U=2^r Q_r union {2^i h_i:0<=i<r}`.  The tower therefore has
+one speed in every 2-adic valuation layer below `r`, not merely a large even
+subfamily.  That valuation flag is a compact, lossless search sidecar for the
+existence of the intermediate seams.
+
+The first recurrence produces a literal disjoint `2+1+1` tiling of four
+sheets.  Later recurrences produce a binary safe-child map.  The word
+“assigned” matters: old guards may also hit a newly blocked half, so the raw
+incidence relation need not remain disjoint even though the recursive ownership
+assignment does.
+
+The finite height-100 theorem then reverses the quantifiers.  Instead of
+choosing ten quotient speeds and testing the continuum, fix the two odd speeds,
+atomize their folded failure set, and ask how many core tooth families are
+needed to hit all bad atoms.  The answer is exactly twelve for every one of the
+1,225 odd pairs in the box.  A hypothetical packet owns only ten.  This
+incidence duality explains why direct enumeration of the more than one trillion
+divisor-filtered core/pair packets was the wrong representation.
+
+There is a second, transverse finite base.  THM-774 uses the widest component
+of `G_U` to cap any individually eligible odd runner, so every quotient core
+`U subset [1,19]` is excluded even when the odd exceptions are unbounded.
+THM-776 instead reaches quotient height 50 while bounding the whole packet by
+100.  Their union is more informative than either square box: it separates
+the low-core geometry from the bounded-frequency incidence rank and shows
+exactly which direction still lacks compactness.  Even after imposing all
+divisor pins, 52 of the 3,400 low cores lie below the scalar `8/117` diamond
+cap (minimum `41/858`), yet none is covered.  This is a direct certificate that
+the missing uniform statement is pointwise/incidence-theoretic, not a measure
+inequality waiting for the arithmetic filter.
+
+The remaining uniform two-sheet statement can now be phrased without the
+historical clutter:
+
+> A primitive divisor-complete ten-comb, with its two odd folded frequencies
+> in the THM-772 width band, cannot hit every atom outside the folded diamond.
+
+There are two plausible proof shapes.  One is a scale-free lower bound of at
+least eleven (the finite atlas suggests twelve) on the relevant transversal
+number.  The other is a descent theorem: use the dyadic tower until the terminal
+hereditarily primitive quotient is forced into a normalized finite base.  A
+proof using only the measure cap `mu(H)<=8/117` would need a matching uniform
+lower bound for `mu(G_U)`; absent that, it loses the incidence pattern that the
+exact atlas shows is decisive.
+
+## The two-primary and seven-primary tournament threads meet
+
+The prime-seven monodromy theorem THM-773 and the dyadic theorem THM-775 look
+different only if the tournament is treated as the primary object.
+
+- At seven sheets, the exact local state is an owner-token permutation in
+  `F_7`; polynomial moments recognize coverage, while tournament gauges
+  collapse all 5,040 labelled states to a much smaller heptagon picture.
+- At two sheets, the runner tournament has only one edge and is almost empty
+  of information; the exact state is the bad-atom/core-tooth hypergraph plus
+  the binary safe-child map.
+- In both cases, equal tournament nodes can have different futures because
+  endpoint order, owner identity, metric base position, and carry/monodromy
+  were quotiented away.
+
+The common object is therefore a finite-state skew product over the circle:
+
+```text
+base atom or chamber
+    x finite sheet group (Z/2^k or F_7)
+    x labelled owner incidences
+    x endpoint transition/carry.
+```
+
+Tournament fingerprints remain valuable as loss detectors.  A gauge flip
+that changes many edges without changing coverage certifies that the
+orientation is telemetry.  A directed cycle induced by the actual sheet-group
+action can certify wrap, as in the gcd deck.  But the proof contract should be
+written first in the incidence skew product, and only then pushed through a
+tournament quotient with an explicit list of what survives.
+
+This suggests a recursive research rule for future tournament experiments:
+
+1. choose vertices among proof obligations, sheets, or endpoint events before
+   defaulting to runners;
+2. state the coverage predicate on the unquotiented incidence object;
+3. compute the coarsest owner/gauge quotient that reconstructs that predicate;
+4. exhibit continuation twins whenever a proposed tournament state is too
+   coarse;
+5. search for folded, Fourier, or polynomial coordinates that make owner
+   deletion and sheet translation local.
+
+The missing invariant is unlikely to be one more score histogram.  It should
+be a monotone obstruction rank on the labelled sheet-incidence skew product:
+transversal rank in the finite two-sheet atlas, protected-splice defect in the
+shallow prime-13 atlas, and token-polynomial divisibility in the seven-sheet
+atlas are three local shadows of such a rank.
+
+A concurrent claimed direction, THM-778, is aimed at the missing base dynamics
+on the seven-sheet side: encode pairwise midpoint-grid merges by centered
+Christoffel words and generate their quotient/remainder structure by the
+Euclidean algorithm, retaining the odd/odd tie block and cyclic carry.  If its
+global reconstruction is proved, it would complement the fibre polynomial of
+THM-773 exactly as the bad-atom order complements the folded diamond here.
+Its present status is a namespace reservation, not a theorem input.

@@ -256,6 +256,22 @@ At each displayed seam:
 If `Q_0` is already hereditarily primitive the chain has length zero.  If it
 is not, Sections 1--3 construct its first seam and `Q_1=V`.
 
+Unwinding the chain gives the explicit 2-adic normal form
+
+```text
+U=2^r Q_r union {2^i h_i:0<=i<r}.                        (16a)
+```
+
+Hence a depth-`r` tower (`0<=r<=7`) has exactly one quotient speed of each
+2-adic valuation `0,1,...,r-1`; all other `10-r` speeds are divisible by
+`2^r`.  This is an equality of disjoint sets because every `h_i` is odd.
+It follows immediately by substituting (16) recursively, and makes the
+dyadic obstruction directly testable without reconstructing the intermediate
+quotients.  The terminal core has at least three members: a primitive
+divisor-complete singleton is impossible, while a hereditarily primitive
+two-set would require both singleton deletions to equal `{1}`, contradicting
+distinctness.  Since `|Q_r|=10-r`, this proves the stated depth bound.
+
 ### Inductive proof of the gcd descent
 
 Suppose
