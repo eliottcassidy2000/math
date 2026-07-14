@@ -1,0 +1,5 @@
+shape1 {1}u{W..W+11}: swept W in [3, 1948]; min float L = 0.030220 at W = 3; zero-L count = 0
+   exact re-verification at W=3: L = 11/364 = 0.030220  (>0: True)
+shape2 {1,2,3}u{W..W+9}: swept W in [5, 2676]; min float L = 0.019405 at W = 10; zero-L count = 0
+   exact re-verification at W=10: L = 191663/9876048 = 0.019407  (>0: True)
+done.

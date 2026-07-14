@@ -12,6 +12,56 @@
 
 **Files:** reflection where-tournaments-meet-the-last-bit-...-macmini-S89; HYP-6545; lrc14_conc_forbidden_band_macmini_S89.py, lrc14_conc_band_uniform_macmini_S89.py (+outs). THM-736 (renamed).
 
+## opus-2026-07-13-S273 -- THM-739 PROVED: the CLUSTER-CLOCK LEMMA (additive twin of THM-737) -- L(B u (W+J)) >= Area(B,J) - C(B,J)/W with EXACT rational Area; the additively-coherent slice of the j>=7 seam closes uniformly (klein-S289's counterexample shapes: {1}u{W..W+11} Area=1039/13860, W0=1948; {1,2,3}u{W..W+9} Area=2767/61740, W0=2676); klein's actual {1,90..101} sits at 99.9% of its Area limit
+
+Prompt (owner): work the gcd-incoherent sector with the perspective frame.
+
+POSITION: kps THM-735 (Bonferroni multi-peel) closes j<=6 far slots and declares the seam sharp at
+j=7 (union-bound base 1-j/7 void). The gcd-incoherent exemplars ({1,90..101}: j=12 far elements)
+are ADDITIVELY coherent clusters -- the perspective move that won THM-737 (multiplicative pack clock
+s=ct) transfers: RIDE THE CLUSTER'S CLOCK s={Wt}.
+
+THM-739 (PROVED; canon file): V_W = B u {W+j : j in J}:
+  - base b in B FREEZES per branch (frozen fan; b/W fattening);
+  - cluster member W+j: (W+j)t == s + jt EXACTLY, jt = j*u_m + O(j/W): the |J| conditions = a
+    1/14-fattened AP with step u_m -- coherence makes the arcs OVERLAP where the union bound is void;
+  - A_J(u) = 1 - |U_j (-ju-1/14, -ju+1/14)|, Area(B,J) = Int_{G_B} A_J du,
+    C = V(A_J) + 2#comp(G_B) + 2 Sum_B b + |J|max(J):
+  L(V_W) >= Area - C/W. Area>0 => all W > W0 = ceil(C/Area) closed; below = finite exact checks.
+
+EXACT COMPUTATION (adaptive piecewise-linear Fraction integration, midpoint-linearity self-check;
+breakpoints k/delta, (k+-1/7)/delta over cluster pair-differences delta -- the additive tile
+structure of the T(n-2) pair sector): shape 1 Area = 1039/13860 = 0.074964, V=10, C=146, W0=1948;
+shape 2 Area = 2767/61740 = 0.044817, C=4196/35, W0=2676.
+
+VERIFIED: bound valid at all tested W; klein's {1,90..101} (W=90): L=0.074877 = 99.9% of Area
+(observed |L-Area|*W ~ 0.05: the rigorous C is ~3000x conservative, dominated by the |J|max(J)
+drift term). Exact small-W spot checks all positive (W=3..26, L in [0.030, 0.083]); W=2 boundary =
+the AP {1..13} (L=0, the extremal -- the family touches the tight locus exactly where it must).
+BELOW-THRESHOLD SWEEP: shape 1: W in [3,1948] ALL L>0 (min 0.030220 at W=3 = klein's {1,3..14}; exact 11/364 re-verified); shape 2: W in [5,2676] ALL L>0 (min 0.019405 at W=10; exact 191663/9876048 re-verified); zero-L count 0 in both. Combined with the THM-739 tail (W>W0): BOTH shape families are closed for EVERY W -- the first end-to-end closures of infinite families inside the j>=7 seam. (Two-cluster taste test: {1}u{W1..W1+5}u{W2..W2+5} stabilizes at L~0.10 independent of both scales -- the hierarchical-clocks extension is confirmed viable.)
+
+POSITIVITY MECHANISM: Area is carried by resonant windows u ~ p/q (q<=6, p/q in G_B) where the
+cluster AP collapses onto q points (coverage <= q/7 < 1) -- the S270 frame-collapse doing POSITIVE
+work. |J|=1 degenerates to the far-element peel main term Area = (6/7)|G_B| (THM-731's regime).
+
+THE UNIFIED MOVE (S270->S273): ride the fastest coherent clock; freeze the slow base (frozen fan);
+count (THM-737, multiplicative) or integrate (THM-739, additive) the detuned remainder. Landscape at
+unbounded diameter now: isolated-far (kps THM-732/rays) + j<=6 slots (kps THM-735) + multiplicative
+packs (THM-668/737) + additive clusters |J|<=12 (THM-739) ALL closed; residual = genuinely spread
+two-scale (density turf) + multi-cluster (extension: hierarchical clocks -- backlog lead).
+
+NAMESPACE: 3 more collisions this session (kps reserved 738 first-pusher -> mine renumbered 739;
+klein took HYP-6540 -> mine 6545; kps's courtesy renumber of my 735->737 accepted). Suggest lane
+sharding if the pace holds.
+
+FILES: THM-739 canon; HYP-6545; lrc14_cluster_clock_lemma_thm738_opus_S273.py (+.out; filename
+retains pre-renumber id), lrc14_cluster_clock_sweep_opus_S273.out; backlog lead. -> klein (your
+S289 counterexample shapes are now closed uniformly in W), kps (the j>=7 seam splits: additive
+clusters mine, spread two-scale = density; your Bonferroni + this tile the far-slot axis),
+mac-mini (S87 'Gowers order = #far': for coherent clusters the effective order collapses to 1 --
+the clock ride is the collapse).
+
+---
 ## mac-mini-2026-07-13-S88 -- far-peel disc_v bound PROVED via Farey/three-gap (THM-735); found SUBSUMED by kps THM-733/734
 
 **Owner request:** prove klein's disc_v bound at the far peel via three-gap.

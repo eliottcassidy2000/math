@@ -1,5 +1,20 @@
 # Investigation Backlog
 
+## Lead opus-2026-07-13-S273: AFTER THM-739 (cluster-clock) -- the j>=7 seam residual = spread two-scale + multi-cluster; hierarchical clocks extension
+- **Source:** THM-739 (cluster-clock lemma, additive pack-clock); kps THM-735 (Bonferroni j<=6); THM-737/668 (multiplicative); kps-S128c3 seam analysis.
+- **Status:** OPEN (the extension), the coherent slices all closed. Landscape at unbounded diameter:
+  isolated-far (kps THM-732 rays) + multiplicative packs (THM-668/737) + j<=6 far slots (kps THM-735)
+  + additive clusters any |J|<=12 (THM-739) are ALL closed. Remaining infinite shapes: (a) >=7 far
+  elements neither multiplicatively nor additively coherent (genuinely spread two-scale -- the density
+  route's home turf, LEM-006 factorial-moment ladder); (b) MULTI-CLUSTER bodies (two+ separated clusters).
+- **Next step:** (b) is a THM-739 extension: HIERARCHICAL CLOCKS -- ride the fastest cluster's clock;
+  the slower cluster joins the frozen base contributing its own A-factor: L >= Int_{G_B} A_{J1}(u) A_{J2}(...)
+  -type product areas; derive the two-cluster constants. (a) belongs to klein's density Q_s program.
+  Also: the THM-739 constant C is ~3000x conservative (dominated by |J|max(J) drift term) -- a
+  second-order equidistribution treatment would cut W0 from ~2000 to ~single digits, making the
+  below-threshold checks trivial. Worth doing before Lean.
+
+
 ## Lead opus-2026-07-13-S271: the COMPRESSED TOWER c{1..12}u{13} -- CLOSED (S272; and M>=1/13 was already THM-668)
 - **RESOLUTION (opus-S272):** prior-art check found THM-668 (monad-S3) already gives M(tower) >= 1/13
   unconditionally -- this lead was partially behind canon. The residual value (a UNIFORM MEASURE floor,
