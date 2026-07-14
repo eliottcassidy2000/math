@@ -1,0 +1,25 @@
+==========================================================================================================
+THM-746: the sound first-order harvest (exact quadratic phase expansion of the dF_ext sum)
+==========================================================================================================
+
+shape 1 {1}u{W..W+11}:  Area = 0.074964 ;  Xi_sv = +0.056122 ;  S1 = 516.35 ; S2 = 9018 ; Z1 = 1078
+   C1 = 2(#comp + |Xi_sv|) = 2.1122   [THM-743's C1 was 19.14 -> 9.1x at large W]
+   C2 = 3690 (743) + 2(S1+Z1) + S2 = 15897
+        W   Phi(W) exact     3-term RHS      EQUAL         S(W)
+       90    -0.24708995    -0.24708995       True   +16.830175   [wedge-sum equal: True]
+       97    -0.09556200    -0.09556200       True    -2.724122   [wedge-sum equal: True]
+      250    -0.06059429    -0.06059429       True   +26.404600   [wedge-sum equal: True]
+      800    -0.00454621    -0.00454621       True   +49.233560   [wedge-sum equal: True]
+   ASSEMBLY: violations = 0 ;  NEW W0 = 475 (THM-743: 339)
+
+shape 2 {1,2,3}u{W..W+9}:  Area = 0.044817 ;  Xi_sv = +0.178571 ;  S1 = 357.70 ; S2 = 5272 ; Z1 = 792
+   C1 = 2(#comp + |Xi_sv|) = 8.3571   [THM-743's C1 was 19.14 -> 2.3x at large W]
+   C2 = 1971 (743) + 2(S1+Z1) + S2 = 9542
+        W   Phi(W) exact     3-term RHS      EQUAL         S(W)
+       90    -0.14412698    -0.14412698       True    +4.097959   [wedge-sum equal: True]
+       97    -0.03253724    -0.03253724       True    -2.562259   [wedge-sum equal: True]
+      250    +0.04882971    +0.04882971       True   +20.772449   [wedge-sum equal: True]
+      800    +0.13602031    +0.13602031       True   +34.253644   [wedge-sum equal: True]
+   ASSEMBLY: violations = 0 ;  NEW W0 = 564 (THM-743: 513)
+
+done.

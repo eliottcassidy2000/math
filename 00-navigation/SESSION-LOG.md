@@ -6,6 +6,37 @@
 
 Handoffs: klein (extends S299/THM-744 to whole case + the closed-form delta-interval), kps (decidable residue condition for Lean), opus (matches THM-745 margin). Files: lrc14_shadow_residue_condition + lrc14_shadow_uniform_census _macmini_S97.py (+outs).
 
+## opus-2026-07-14-S281 -- THM-746 PROVED: the SOUND first-order harvest -- F quadratic makes the dF_ext expansion EXACT (3-term Fraction identity); C1 collapses to 2(#comp+|Xi_sv|) = 2.11 (the 50x prize harvested SOUNDLY, 6.9x at large W) at the explicit price of the phase ballast (best bound = min(743,746); W0 stays 339/513); S(W) = the arrangement's VERTICES AS RUNNERS at time W -- the perspective tower inverts, |S(W)| = 2.6-49 vs bound 516: the next level's 10-100x measured
+
+Prompt (owner): bound the signed dF_ext sum with the perspective frame.
+
+THE KEY: F is QUADRATIC, so F(x+d) = F(x) + psi(x)d - d^2/2 with NO tail: Phi(W) =
+(Xi_sv - Z(W)) - S(W)/W - T(W)/(2W^2) EXACTLY (verified as Fractions at W = 90/97/250/800, both
+shapes; wedge equality re-confirms the pairing theorem). Each order is an exact identity -- the
+SOUND version of what MISTAKE-142's crude charge attempted.
+
+BOUNDS: |Phi| <= |Xi_sv| + (S1+Z1)/W + S2/2W^2, all exact (S1 = 516.35/357.70, Z1 = 1078/792,
+S2 = 9018/5272). ASSEMBLY: C1 = 2(#comp + |Xi_sv|) = 2.1122 / 8.3571 -- 6.9x / 2.3x below
+THM-743's C1: the first-order prize HARVESTED. HONEST TRADE: C2 inflates to 15897/9542, so
+W0(746) = 475/564 > W0(743) = 339/513: the best sound bound is min(743, 746) per W (743 wins
+below W ~ 600, 746 asymptotically). Zero violations.
+
+THE INVERSION (perspective punchline): S(W) = Sum_e c_e {u_e W}: the segment endpoints -- the
+arrangement's vertices, rationals on the difference-runner grids -- are RUNNERS with speeds u_e
+observed at integer TIME W, couplings c_e = orient j psi(x_e); S(W) periodic in W mod
+lcm(denominators). Bounding the LRC error spawns a lonely-runner system one level down whose
+runners are the pair events of the level above. Measured |S(W)| = 2.6-49 vs S1 = 516: another
+10-100x of signed cancellation one level down. THE TOWER IS EXPLICIT: each harvest = [mirror-
+symmetry-exact constant] + [phase ballast one order down]; origin band / pair grids / mirror =
+time-reversal repeat at every level. Diminishing W0 returns; the structure is the deliverable.
+
+FILES: THM-746 canon; HYP-6620; lrc14_phase_sum_harvest_thm746_opus_S281.py (+.out). -> klein
+(S(W) is a FINITE explicit exponential-sum-free object -- periodic in W: a finite check per
+residue class could bound it exactly if ever needed), kps (the min(743,746) form is the Lean
+target; all constants exact), mac-mini (vertices-as-runners = the metagraph recursion instinct
+landing in the analytic constants).
+
+---
 ## klein-2026-07-13-S300 -- CAPSTONE: the residue-pattern argument on the grid is EQUIVALENT to L>0 (verified 120/120), NOT a reduction. Every reformulation of the covering residual (S285-300) is provably equivalent to the multi-speed equidistribution; the map is complete. Real gains: THM-731/739/744 + grid-localization to bounded-height rationals.
 
 Prompt (owner): prove the residue-pattern argument on the grid.
