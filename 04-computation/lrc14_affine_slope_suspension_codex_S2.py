@@ -21,7 +21,7 @@ compression; the declared tie path is printed with the fingerprints.
 from collections import Counter, defaultdict
 from fractions import Fraction as F
 from itertools import permutations
-from math import gcd
+from math import gcd, isqrt
 
 from lrc14_certificates import (
     LAM,
@@ -70,6 +70,18 @@ def primitive(body):
     for v in body:
         g = gcd(g, v)
     return g == 1
+
+
+def max_divisor_packet(body):
+    """Largest number of rows sharing a nontrivial integer divisor."""
+    candidates = set()
+    for v in body:
+        candidates.add(v)
+        for d in range(2, isqrt(v) + 1):
+            if v % d == 0:
+                candidates.add(d)
+                candidates.add(v // d)
+    return max(sum(v % d == 0 for v in body) for d in candidates if d >= 2)
 
 
 def cap_data(body):
@@ -193,6 +205,24 @@ def main():
         G = sum((b - a for a, b in ivs), F(0))
         assert G == base_G and len(ivs) == c * base_r
         print(f"  c={c}: |G|={G}, components={len(ivs)}={c}*{base_r}")
+
+    print("\nScale-free fragmentation falsifier for HYP-6830:")
+    expected_components = {101: 18, 211: 22, 503: 38, 1009: 72}
+    for N, expected in expected_components.items():
+        core = tuple(range(1, 12)) + (N,)
+        body = core + (1092 * N,)
+        components = len(good_intervals(core))
+        core_packet = max_divisor_packet(core)
+        body_packet = max_divisor_packet(body)
+        cap, _ = cap_data(body)
+        assert components == expected
+        assert core_packet == 5 and body_packet == 6
+        assert primitive(body) and is_covering(body) and cap
+        print(
+            f"  N={N:4d}: core_components={components:2d}, "
+            f"max_divisor_packet(core/body)={core_packet}/{body_packet}, "
+            "primitive_covering_extension=True, capped_peel=True"
+        )
 
     print("\nFixed-core far-coordinate dilation monoid:")
     C9 = tuple(range(1, 10))
