@@ -26,6 +26,8 @@
   No measure theory anywhere; ℝ for the analytic atoms, ℚ for the computable spec.
 -/
 import Mathlib.Tactic
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 
 namespace LonelyRunner
 namespace LRC14
@@ -418,6 +420,117 @@ theorem capped_envelope_kernel (c : ℕ → ℝ) (A B : ℝ) (_hA : 0 ≤ A)
             exact mul_le_mul_of_nonneg_left htel hB2
         _ = B ^ 2 / m := by ring
     linarith
+
+/-! ### THM-755 instantiated: the Fourier envelopes (opus-S292)
+
+The coefficient of an `n`-interval family under frequency `m`:
+`c(m) = Σ_j ∫_{a_j}^{b_j} exp(−2π m x · I) dx`.  The ORIGIN CAP `‖c(m)‖ ≤ Σ (b_j − a_j)`
+(norm of integral) and the SPOKE ENVELOPE `‖c(m)‖ ≤ n/(π m)` (closed-form antiderivative:
+each interval contributes ≤ 2/(2πm)).  Composed with `capped_envelope_kernel`, this yields
+the SPECTRAL THM-755 sorry-free; the geometric identification of the spectral discrepancy
+with the grid autocorrelation mean (Poisson summation) remains the named prose bridge. -/
+
+/-- The Fourier coefficient of an interval family. -/
+noncomputable def fourierCoeff {n : ℕ} (a b : Fin n → ℝ) (m : ℕ) : ℂ :=
+  ∑ j, ∫ x in (a j)..(b j), Complex.exp ((-(2 * Real.pi * m) * x) * Complex.I)
+
+/-- **Origin cap**: `‖c(m)‖ ≤ Σ (b_j − a_j)` — a set cannot correlate more than its measure. -/
+theorem fourierCoeff_norm_le_measure {n : ℕ} (a b : Fin n → ℝ) (hab : ∀ j, a j ≤ b j)
+    (m : ℕ) : ‖fourierCoeff a b m‖ ≤ ∑ j, (b j - a j) := by
+  unfold fourierCoeff
+  refine le_trans (norm_sum_le _ _) (Finset.sum_le_sum fun j _ => ?_)
+  have hbound : ∀ x ∈ Set.uIoc (a j) (b j),
+      ‖Complex.exp ((-(2 * Real.pi * m) * x) * Complex.I)‖ ≤ 1 := by
+    intro x _
+    rw [Complex.norm_exp]
+    simp [Complex.mul_re, Complex.mul_im, Complex.I_re, Complex.I_im,
+          Complex.ofReal_re, Complex.ofReal_im]
+  have h := intervalIntegral.norm_integral_le_of_norm_le_const hbound
+  calc ‖∫ x in (a j)..(b j), Complex.exp ((-(2 * Real.pi * m) * x) * Complex.I)‖
+      ≤ 1 * |b j - a j| := h
+    _ = b j - a j := by rw [one_mul, abs_of_nonneg (by linarith [hab j])]
+
+/-- **Spoke envelope**: `‖c(m)‖ ≤ n/(π m)` for `m ≥ 1` — each interval's closed-form
+antiderivative contributes at most `2/(2πm)`. -/
+theorem fourierCoeff_norm_le_env {n : ℕ} (a b : Fin n → ℝ) (m : ℕ) (hm : 1 ≤ m) :
+    ‖fourierCoeff a b m‖ ≤ n / (Real.pi * m) := by
+  have hm0 : (0 : ℝ) < (m : ℝ) := by exact_mod_cast hm
+  have hpi := Real.pi_pos
+  set c : ℂ := (-(2 * Real.pi * m) : ℝ) * Complex.I with hc
+  have hc0 : c ≠ 0 := by
+    simp only [hc, ne_eq, mul_eq_zero, Complex.I_ne_zero, or_false, Complex.ofReal_eq_zero]
+    intro h
+    nlinarith [hpi, hm0]
+  have hnc : ‖c‖ = 2 * Real.pi * m := by
+    simp only [hc]
+    rw [norm_mul, Complex.norm_I, mul_one, Complex.norm_real]
+    rw [Real.norm_eq_abs, abs_neg, abs_of_pos (by positivity)]
+  unfold fourierCoeff
+  refine le_trans (norm_sum_le _ _) ?_
+  have hterm : ∀ j : Fin n,
+      ‖∫ x in (a j)..(b j), Complex.exp ((-(2 * Real.pi * m) * x) * Complex.I)‖
+        ≤ 1 / (Real.pi * m) := by
+    intro j
+    have hrw : ∀ x : ℝ, ((-(2 * Real.pi * m) : ℝ) * x : ℂ) * Complex.I = c * x := by
+      intro x
+      simp only [hc]
+      push_cast
+      ring
+    have heval : (∫ x in (a j)..(b j), Complex.exp ((-(2 * Real.pi * m) * x) * Complex.I))
+        = (Complex.exp (c * b j) - Complex.exp (c * a j)) / c := by
+      rw [show (fun x : ℝ => Complex.exp ((-(2 * Real.pi * m) * x) * Complex.I))
+          = fun x : ℝ => Complex.exp (c * x) by funext x; rw [← hrw x]; norm_cast]
+      exact integral_exp_mul_complex hc0
+    rw [heval, norm_div, hnc]
+    have hnum : ‖Complex.exp (c * (b j)) - Complex.exp (c * (a j))‖ ≤ 2 := by
+      refine le_trans (norm_sub_le _ _) ?_
+      have h1 : ∀ t : ℝ, ‖Complex.exp (c * t)‖ = 1 := by
+        intro t
+        rw [Complex.norm_exp]
+        simp [hc, Complex.mul_re, Complex.mul_im, Complex.I_re, Complex.I_im,
+              Complex.ofReal_re, Complex.ofReal_im]
+      rw [h1, h1]; norm_num
+    calc ‖Complex.exp (c * (b j)) - Complex.exp (c * (a j))‖ / (2 * Real.pi * m)
+        ≤ 2 / (2 * Real.pi * m) := by
+          have hden : (0 : ℝ) < 2 * Real.pi * m := by positivity
+          rw [div_le_div_iff₀ hden hden]
+          nlinarith [hnum, mul_le_mul_of_nonneg_right hnum (le_of_lt hden)]
+      _ = 1 / (Real.pi * m) := by ring
+  calc (∑ j, ‖∫ x in (a j)..(b j), Complex.exp ((-(2 * Real.pi * m) * x) * Complex.I)‖)
+      ≤ ∑ _j : Fin n, 1 / (Real.pi * m) := Finset.sum_le_sum fun j _ => hterm j
+    _ = n / (Real.pi * m) := by
+        rw [Finset.sum_const, Finset.card_univ, Fintype.card_fin, nsmul_eq_mul]
+        ring
+
+/-- **The SPECTRAL THM-755** — the capped-envelope bound for the Fourier coefficients of an
+interval family: for every splice `m ≥ 1` and truncation `N`,
+`Σ_{l=1}^{N} ‖c(l v)‖² ≤ m G² + (n/(π v))²/m`. -/
+theorem spectral_thm755 {n : ℕ} (a b : Fin n → ℝ) (hab : ∀ j, a j ≤ b j)
+    (v : ℕ) (hv : 1 ≤ v) (m N : ℕ) (hm : 1 ≤ m) :
+    ∑ l ∈ Finset.Icc 1 N, ‖fourierCoeff a b (l * v)‖ ^ 2
+      ≤ (m : ℝ) * (∑ j, (b j - a j)) ^ 2 + ((n : ℝ) / (Real.pi * v)) ^ 2 / m := by
+  have hG0 : 0 ≤ ∑ j, (b j - a j) :=
+    Finset.sum_nonneg fun j _ => by linarith [hab j]
+  refine capped_envelope_kernel (fun l => ‖fourierCoeff a b (l * v)‖) _ _ hG0 m N hm ?_ ?_
+  · intro l _
+    rw [abs_of_nonneg (norm_nonneg _)]
+    exact fourierCoeff_norm_le_measure a b hab (l * v)
+  · intro l hl
+    simp only [Finset.mem_Icc] at hl
+    rw [abs_of_nonneg (norm_nonneg _)]
+    have hlv : 1 ≤ l * v := Nat.mul_pos hl.1 hv
+    have henv := fourierCoeff_norm_le_env a b (l * v) hlv
+    have hl0 : (0 : ℝ) < l := by exact_mod_cast hl.1
+    have hv0 : (0 : ℝ) < v := by exact_mod_cast hv
+    have hpi := Real.pi_pos
+    calc (l : ℝ) * ‖fourierCoeff a b (l * v)‖
+        ≤ (l : ℝ) * ((n : ℝ) / (Real.pi * (l * v))) := by
+          apply mul_le_mul_of_nonneg_left _ (le_of_lt hl0)
+          convert henv using 2
+          push_cast
+          ring
+      _ = (n : ℝ) / (Real.pi * v) := by
+          field_simp
 
 end ClosedBudget
 end LRC14

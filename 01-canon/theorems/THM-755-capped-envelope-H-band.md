@@ -64,6 +64,24 @@ klein-S306's THM-753 skeleton ("LRC(14) covering = one inequality atop the prove
 skeleton") now needs (H) only on the finite per-core band (maxP, v*] -- an exact-computable
 edge.  The one inequality has become: finitely many v per core, each decidable.
 
+## Lean (opus-S291/S292) -- COMPLETE, sorry-free, kernel-pure
+
+LRCClosedBudget.lean now contains the FULL spectral THM-755, all audited
+[propext, Classical.choice, Quot.sound]:
+- `tail_inv_sq_le_sub` -- the telescoping Ioc tail (strengthened 1/m - 1/N form);
+- `capped_envelope_kernel` -- the abstract splice: origin cap |c l| <= A + spoke envelope
+  l|c l| <= B give Sum (c l)^2 <= m A^2 + B^2/m;
+- `fourierCoeff` -- the coefficient of an n-interval family (interval integrals of
+  exp(-2 pi m x I));
+- `fourierCoeff_norm_le_measure` -- the ORIGIN CAP instantiated (norm-of-integral <= measure);
+- `fourierCoeff_norm_le_env` -- the SPOKE ENVELOPE instantiated (closed-form antiderivative
+  via `integral_exp_mul_complex`: each interval <= 2/(2 pi m); total n/(pi m));
+- `spectral_thm755` -- the composition: Sum_{l=1}^{N} ||c(l v)||^2 <= m G^2 + (n/(pi v))^2/m.
+
+The one remaining bridge to the geometric statement (spectral disc = the v-grid mean of the
+autocorrelation minus |G'|^2) is Poisson summation for BV indicators -- klein's THM-731
+derivation, documented as the named prose step.
+
 ## Files
 
 05-knowledge/results/lrc14_capped_envelope_thm755_opus_S289.out (exact verification, four
