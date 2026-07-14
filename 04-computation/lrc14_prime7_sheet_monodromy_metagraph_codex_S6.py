@@ -75,6 +75,44 @@ def root_polynomial(position: tuple[int, ...]) -> tuple[int, ...]:
 FULL_GRID_POLYNOMIAL = (0, P - 1, 0, 0, 0, 0, 0, 1)
 
 
+def remainder_mod_full_grid(coefficients: tuple[int, ...]) -> tuple[int, ...]:
+    """Remainder modulo X^7-X, in ascending order."""
+    work = list(coefficients)
+    for degree in range(len(work) - 1, P - 1, -1):
+        lead = work[degree] % P
+        work[degree] = 0
+        work[degree - (P - 1)] = (work[degree - (P - 1)] + lead) % P
+    return tuple((work[i] if i < len(work) else 0) % P for i in range(P))
+
+
+def weak_compositions(total: int, parts: int):
+    if parts == 1:
+        yield (total,)
+        return
+    for first in range(total + 1):
+        for tail in weak_compositions(total - first, parts - 1):
+            yield (first,) + tail
+
+
+def eight_owner_divisibility_audit() -> dict:
+    profiles = covered = divisible = mismatches = 0
+    for counts in weak_compositions(8, P):
+        tokens = tuple(k for k, count in enumerate(counts) for _ in range(count))
+        is_covered = all(count > 0 for count in counts)
+        is_divisible = not any(remainder_mod_full_grid(root_polynomial(tokens)))
+        profiles += 1
+        covered += is_covered
+        divisible += is_divisible
+        mismatches += is_covered != is_divisible
+    assert profiles == 3003 and covered == divisible == 7 and mismatches == 0
+    return {
+        "occupancy_profiles": profiles,
+        "covered_profiles": covered,
+        "divisible_profiles": divisible,
+        "mismatches": mismatches,
+    }
+
+
 def linear_tournament(position: tuple[int, ...]) -> list[list[int]]:
     return [
         [int(a != b and position[a] < position[b]) for b in range(P)]
@@ -309,6 +347,59 @@ def exhaustive_moment_audit() -> dict:
     }
 
 
+def continuation_collision() -> dict:
+    """Same instantaneous stalk, different next owner/free-sheet output."""
+    target = (0, 3, 2, 5, 1, 4, 6)
+    rows = []
+    for speeds in (
+        (1, 2, 3, 4, 5, 8, 10),
+        (1, 2, 3, 4, 5, 8, 11),
+    ):
+        movie = chamber_movie(speeds)
+        row = next(record for record in movie["exact_chambers"] if record["position"] == target)
+        rows.append({"speeds": speeds, **row})
+    adjacency = circular_tournament(target)
+    path = least_hamiltonian_path(adjacency)
+    mask = encode_fixed_path(adjacency, path)
+    assert mask == 27833
+    assert rows[0]["next_event_owners"] != rows[1]["next_event_owners"]
+    assert rows[0]["next_free_sheets"] != rows[1]["next_free_sheets"]
+    return {
+        "shared_owner_to_sheet": target,
+        "shared_least_hamiltonian_path": path,
+        "shared_atlas_mask": mask,
+        "rows": rows,
+    }
+
+
+def eight_owner_event_seed() -> dict:
+    """HYP-6835's r=8 event survivor factors through the a267 fibre."""
+    speeds = (108, 169, 143, 213, 206, 197, 30, 162)
+    x = Fraction(19, 216)
+    rows = tuple(bad_sheets(w, x) for w in speeds)
+    event_owners = tuple(i for i, row in enumerate(rows) if not row)
+    assert event_owners == (0,)
+    remaining = tuple(row[0] for i, row in enumerate(rows) if i not in event_owners)
+    assert set(remaining) == set(range(P))
+    polynomial = root_polynomial(remaining)
+    assert polynomial == FULL_GRID_POLYNOMIAL
+    adjacency = circular_tournament(remaining)
+    path = least_hamiltonian_path(adjacency)
+    mask = encode_fixed_path(adjacency, path)
+    assert mask == 32153
+    return {
+        "speeds": speeds,
+        "x": x,
+        "event_owner_indices": event_owners,
+        "event_owner_speeds": tuple(speeds[i] for i in event_owners),
+        "remaining_tokens": remaining,
+        "moments": moments(remaining),
+        "polynomial": polynomial,
+        "least_hamiltonian_path": path,
+        "atlas_mask": mask,
+    }
+
+
 def atlas_bridge(atlas_path: Path) -> dict:
     atlas = json.loads(atlas_path.read_text())
     code_to_node = {
@@ -404,11 +495,15 @@ def main() -> None:
     args = parser.parse_args()
 
     moment_audit = exhaustive_moment_audit()
+    eight_audit = eight_owner_divisibility_audit()
     bridge = atlas_bridge(args.atlas)
     movies = [
         chamber_movie((1, 4, 5, 6, 8, 9, 10)),
         chamber_movie((12, 38, 72, 96, 151, 169, 188)),
     ]
+    collision = continuation_collision()
+    eight_seed = eight_owner_event_seed()
+    assert eight_seed["atlas_mask"] in bridge["mask_counts"]
 
     print("THM-773 PRIME-SEVEN SHEET MONODROMY / METAGRAPH FIBRE")
     print("=" * 76)
@@ -416,6 +511,7 @@ def main() -> None:
     print(f"  full-grid moments m=1..6: {FULL_GRID_MOMENTS}")
     print(f"  full-grid polynomial: {FULL_GRID_POLYNOMIAL}  [ascending]")
     print(f"  exhaustive token configurations: {moment_audit}")
+    print(f"  r=8 occupancy/divisibility audit: {eight_audit}")
     print()
     print("EXACT TOURNAMENT-ATLAS BRIDGE")
     print(f"  owner-labelled assignments: {bridge['assignments']}")
@@ -450,6 +546,34 @@ def main() -> None:
         print(f"    consecutive exact-return holonomy: {movie['return_holonomy']}")
         print(f"    transition failures: {movie['transition_failures']}")
     print()
+    print("CONTINUATION-EQUIVALENCE SEPARATOR")
+    print(
+        f"  shared assignment={collision['shared_owner_to_sheet']} "
+        f"least_path={collision['shared_least_hamiltonian_path']} "
+        f"atlas_mask={collision['shared_atlas_mask']}"
+    )
+    for row in collision["rows"]:
+        print(
+            f"    W={row['speeds']} chamber=({row['left']},{row['right']}) "
+            f"next_owner={row['next_event_owners']} boundary_free={row['next_free_sheets']}"
+        )
+    print("  verdict: node + mask + instantaneous owner assignment is not continuation-complete")
+    print()
+    print("EIGHT-OWNER EVENT FACTORIZATION")
+    print(
+        f"  W={eight_seed['speeds']} x={eight_seed['x']} "
+        f"event_owner={eight_seed['event_owner_speeds']}"
+    )
+    print(
+        f"  remaining seven tokens={eight_seed['remaining_tokens']} "
+        f"moments={eight_seed['moments']} polynomial={eight_seed['polynomial']}"
+    )
+    print(
+        f"  least_path={eight_seed['least_hamiltonian_path']} "
+        f"a267 fibre mask={eight_seed['atlas_mask']}"
+    )
+    print("  verdict: the published covered r=8 event is a seven-owner heptagon stalk plus one absent owner")
+    print()
     print("PRESERVATION AUDIT")
     print("  preserves at iso node: unlabelled transitive/heptagon shape only")
     print("  destroyed by iso node: owner->sheet assignment, inverse step, event phase, next free sheet")
@@ -462,10 +586,13 @@ def main() -> None:
             "schema_version": 1,
             "theorem": "THM-773",
             "moment_audit": moment_audit,
+            "eight_owner_divisibility_audit": eight_audit,
             "full_grid_moments": FULL_GRID_MOMENTS,
             "full_grid_polynomial": FULL_GRID_POLYNOMIAL,
             "atlas_bridge": bridge,
             "chamber_movies": movies,
+            "continuation_collision": collision,
+            "eight_owner_event_seed": eight_seed,
         }
         args.json.write_text(json.dumps(payload, separators=(",", ":"), default=str) + "\n")
 

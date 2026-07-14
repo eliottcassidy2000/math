@@ -7,8 +7,9 @@ depends_on:
   - THM-761   # the sheet frame
   - THM-767   # corrected historical balance/event carrier; raw-w/KCL claims withdrawn
   - THM-771   # exact F=Q+Omega-sigma defect and reduced-winding event pierce
+  - THM-773   # prime-seven token polynomial, heptagon fibre, and event holonomy
   - HYP-6830  # the splice; complementarity refuted, ratio invariant measured
-related: [THM-745, THM-754, HYP-6785, HYP-6820, MISTAKE-146]
+related: [THM-745, THM-754, HYP-6785, HYP-6820, HYP-6840, MISTAKE-146]
 ---
 
 # HYP-6835 — the deck Kirchhoff–Smith program
@@ -85,6 +86,19 @@ available: unramified owner events have gaps `1/(w_a/g_a)`; quantify
 different lens c with fewer exceptions — r(c) varies with c; prove a MIN-LENS
 statement: min over 7|c lenses of r(c) ≤ 7 for covering families with bounded shape,
 else THM-761 applies.
+
+**Prime-lens update (THM-773).** At `c=7`, every unramified non-event owner is
+a token `k_a=-w_a^{-1}round(w_a x)` in `F_7`.  For any number of owners the
+deck is covered exactly when `X^7-X` divides `product_a(X-k_a)`.  At `r=8`, a
+covered wall must be a simple event and the other seven owners must be an
+exact heptagon state.  The displayed survivor above has unique event owner
+`108`; its other tokens are `(6,5,3,1,4,2,0)` and map to mask `32153` in
+metagraph fibre `n7-a267`.  The next target is no longer an unstructured
+eight-owner census: track the absent owner over a seven-owner heptagon stalk
+and force either a simultaneous event (which cannot remain covered at `r=8`)
+or failure of the divisor condition.  For `r>8`, the quotient polynomial
+`product(X-k_a)/(X^7-X)` on covered chambers is a candidate exact redundancy
+sidecar.
 
 ## 5. Lean targets (decide-friendly)
 

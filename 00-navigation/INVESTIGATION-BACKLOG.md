@@ -72,6 +72,33 @@
   distinguishes 13 covers from `13^12` candidates.  Use tournaments only
   after proving a reconstruction lemma for simultaneous option compatibility.
 
+## Lead codex-2026-07-14-S6: transport the absent owner over the prime-seven heptagon stalk
+
+- **Source:** THM-773; THM-771; HYP-6825/6835/6840; HYP-3802 heptagon thread.
+- **Proved structure:** At `c=7`, an unramified owner is the token
+  `k_a=-w_a^{-1}round(w_a x)` in `F_7`.  Seven owners tile exactly iff
+  `product(X-k_a)=X^7-X`, equivalently their six finite-field moments equal
+  `(0,0,0,0,0,-1)`.  Event transport is `k_a->k_a-w_a^{-1}` and exact returns
+  obey inverse-winding holonomy.  For arbitrary owner count, coverage is the
+  exact divisibility predicate `X^7-X | product(X-k_a)`.
+- **Metagraph bridge:** Cut precedence sends all 5040 exact assignments to
+  `n7-a000`; circular precedence sends them to `n7-a267`; a least-Hamiltonian-
+  path gauge maps onto exactly all 25 masks in `a267`'s inverse fibre.  The
+  gauges differ by the six long chords, equal to the node's local depth.
+- **r=8 reduction:** Any covered eight-owner wall is simple and deleting its
+  event owner leaves a seven-owner heptagon stalk.  The published HYP-6835
+  survivor has absent owner `108` and remaining mask `32153` at `a267`.
+- **Information guardrail:** The same node, mask, moment vector, and even
+  instantaneous owner assignment can have different next event/free-sheet
+  futures.  Retain inverse steps, endpoint phases/order, metric core base, and
+  global sheet carry.
+- **Next theorem:** Follow the absent owner across consecutive heptagon stalks.
+  Prove that a core-safe interval forces either a simultaneous event (which
+  cannot remain covered at `r=8`), a failure of polynomial divisibility, or a
+  rigid periodic orbit; classify any periodic orbit by its 25-mask word and
+  inverse-step holonomy.  For `r>8`, test the quotient polynomial after
+  dividing by `X^7-X` as the redundancy sidecar.
+
 ## Lead codex-2026-07-14-S4: pull the canonical metagraph address back to the LRC slope suspension
 
 - **Source:** HYP-6825/HYP-6815; THM-761; HYP-2245/2989/3106/3513; exact

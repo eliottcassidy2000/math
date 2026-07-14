@@ -13,6 +13,10 @@ artifacts:
   - 03-artifacts/visualizations/tournament-tiling-explorer.html
   - 07-reflections/the-metagraph-needs-a-stalk-canonical-addresses-tiling-fibres-and-the-4d-lrc-object-codex-S4.md
   - 00-navigation/METAGRAPH-PRESERVATION-AVENUES-2026-07-14.md
+  - 01-canon/theorems/THM-773-prime-seven-sheet-monodromy-and-tournament-fibre.md
+  - 04-computation/lrc14_prime7_sheet_monodromy_metagraph_codex_S6.py
+  - 05-knowledge/results/lrc14_prime7_sheet_monodromy_metagraph_codex_S6.json
+  - 07-reflections/the-heptagon-node-is-a-basepoint-not-the-sheet-state-codex-S6.md
 related:
   - HYP-2245
   - HYP-2989
@@ -22,6 +26,7 @@ related:
   - HYP-6815
   - THM-550
   - THM-646
+  - THM-773
 ---
 
 # HYP-6825 — Canonical metagraph addresses and tiling fibers
@@ -135,6 +140,24 @@ committed JSON atlases contain all `33866` tilings at `n=3..7`.  The browser
 explorer loads the `n<=6` atlas to display the address and both indices; the
 compact `n=7` atlas stores mask-indexed class/node/global/fibre arrays and
 complete inverse node fibres.
+
+## Prime-seven sheet pullback: the node is a base, not the state
+
+THM-773 gives the first exact functor from an LRC sheet tiling into this
+atlas.  At `c=7`, seven unramified owner tokens form an exact cover precisely
+when they are a permutation of `F_7`.  The marked-cut tournament sends all
+`7!=5040` assignments to transitive node `n7-a000`; circular three-step
+precedence sends all of them to heptagon node `n7-a267`.  Choosing the least
+Hamiltonian path maps the 5040 assignments onto exactly the 25 masks in
+`a267`'s stored inverse fibre.  The two tournament gauges differ on the six
+long chords, matching `a267`'s local depth six.
+
+This exact success is also a sharp controlled-forgetting failure.  Two speed
+rows can have the same node, same mask, same six finite-field moments, and the
+same owner-to-sheet assignment but different next event owner and free sheet.
+Thus the inverse fibre is not an LRC continuation state.  Inverse windings,
+endpoint order/phase, metric base, and the global `x -> x+1` sheet carry remain
+mandatory transport fields.
 
 ## Preservation statement
 

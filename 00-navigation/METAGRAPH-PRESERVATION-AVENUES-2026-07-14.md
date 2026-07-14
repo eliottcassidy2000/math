@@ -153,6 +153,11 @@ certificate clauses, and proof obligations.
 
 ### MPA-12 — Continuation equivalence for controlled forgetting
 
+- **Delivered prime-seven separator:** THM-773 gives two exact `c=7` states
+  with the same node, least-path mask `27833`, six-moment vector, and
+  owner-to-sheet assignment, but different next futures `(owner 10, sheet 6)`
+  and `(owner 4, sheet 5)`.  Inverse steps and endpoint schedule are therefore
+  mathematically necessary fields.
 - **Pull:** formalize two states as equivalent only when every legal future
   wall, deletion, lift, and threshold continuation has the same terminal
   result.
@@ -184,6 +189,10 @@ certificate clauses, and proof obligations.
 
 ### MPA-15 — Sector-carry movie rather than static tournament
 
+- **Delivered prime-seven slice:** THM-773 gives the exact token update
+  `k_a -> k_a-w_a^{-1}`, first-moment return holonomy, complete six-moment
+  exact-cover test, and global carry `k_a(x+1)=k_a(x)-1`.  The general
+  14-sector/metric movie remains open.
 - **Pull:** implement the state `(14-sector potential, microphase weak order)`
   and annotate each wall crossing by its metagraph address change.
 - **Old thread:** `lrc14-prime-grid-cover-sector-carry-and-threshold-tournament-...md`;
@@ -207,6 +216,10 @@ certificate clauses, and proof obligations.
 
 ### MPA-17 — THM-761 seven-exception cyclic tiling wall
 
+- **Delivered at the prime lens:** THM-771 supplies the exact defect and wall
+  tear; THM-773 identifies every `c=7` exact partition with a permutation of
+  `F_7`, gives its polynomial/moment certificate, and supplies owner-event
+  holonomy.  Ramified `c>7` normal forms remain open.
 - **Pull:** classify covers of the sheet cycle `Z_c` by seven equal-length
   bad arcs, with gcd multiplicities and movable core-safe time `t_0`.
 - **Old thread:** THM-761 multi-exception sheet theorem.
@@ -217,6 +230,12 @@ certificate clauses, and proof obligations.
 
 ### MPA-18 — Compare cyclic sheet tilings with staircase tilings
 
+- **Delivered:** THM-773 constructs the map.  The cut gauge sends all 5040
+  owner assignments to `n7-a000`; circular precedence sends all to
+  `n7-a267`; a least-Hamiltonian-path gauge maps them onto exactly the 25
+  masks in `a267`'s inverse fibre.  The sharp obstruction is also proved: the
+  iso node is constant and even `(node,mask,assignment)` is not
+  continuation-complete without inverse-step and endpoint transport.
 - **Pull:** search for a functor, not an analogy, between seven-arc cyclic
   covers and fixed-Hamiltonian-path binary staircase fillings.
 - **Old thread:** THM-761; HYP-6825; half-tiling fold.
@@ -312,11 +331,11 @@ certificate clauses, and proof obligations.
   for each field.  This is the most direct answer to “precisely what
   information needs to be preserved?”
 
-## Recommended first three pulls
+## Recommended next three pulls
 
-1. `MPA-01`: the `n=8` WL frontier or a proof of the `n<=7` completeness
-   mechanism is the cleanest next test of the new combinatorial claim.
-2. `MPA-17`: THM-761 has isolated a real seven-arc method wall with strong
-   LRC relevance.
-3. `MPA-14` plus `MPA-15`: one exact slope/chamber/sector movie would test the
-   proposed base-stalk-transport architecture end to end.
+1. Continue `MPA-17/18`: transport THM-773's absent eighth owner over the
+   25-mask heptagon stalk and classify rigid periodic survivor words.
+2. Continue `MPA-12/26`: minimize the bounded prime-sheet movie and prove
+   whether inverse steps plus cyclic endpoint word are continuation-complete.
+3. `MPA-01`: test the `n=8` WL frontier or prove the `n<=7` completeness
+   mechanism independently of canonical codes.
