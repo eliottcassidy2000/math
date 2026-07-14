@@ -1,0 +1,41 @@
+THM-755 verification: disc_v vs the capped-envelope bound (exact Fractions)
+
+deep-well core {1..12}:  |G'|=0.03410  r=12  maxP=12 ;  (H)-band edge v* = r/(pi|G'|) = 112.0  (isolated thr 13maxP = 156)
+   v=   13: disc=1.650e-02  capped-bnd=4.240e-02  ok=True ;  (H) true=False  thm-755 fires=False
+   v=   18: disc=1.453e-03  capped-bnd=3.127e-02  ok=True ;  (H) true=True  thm-755 fires=False
+   v=   25: disc=6.447e-04  capped-bnd=2.317e-02  ok=True ;  (H) true=True  thm-755 fires=False
+   v=   49: disc=3.719e-04  capped-bnd=1.296e-02  ok=True ;  (H) true=True  thm-755 fires=False
+   v=  113: disc=1.185e-04  capped-bnd=6.937e-03  ok=True ;  (H) true=True  thm-755 fires=True  <-- band edge
+   v=  157: disc=1.465e-04  capped-bnd=5.644e-03  ok=True ;  (H) true=True  thm-755 fires=True
+   violations: 0
+
+residue core {1..11,13}:  |G'|=0.01216  r=4  maxP=13 ;  (H)-band edge v* = r/(pi|G'|) = 104.7  (isolated thr 13maxP = 169)
+   v=   14: disc=1.292e-03  capped-bnd=4.719e-03  ok=True ;  (H) true=False  thm-755 fires=False
+   v=   19: disc=4.921e-04  capped-bnd=3.555e-03  ok=True ;  (H) true=True  thm-755 fires=False
+   v=   27: disc=5.985e-04  capped-bnd=2.589e-03  ok=True ;  (H) true=True  thm-755 fires=False
+   v=   53: disc=1.426e-04  capped-bnd=1.464e-03  ok=True ;  (H) true=True  thm-755 fires=False
+   v=  105: disc=4.407e-05  capped-bnd=8.855e-04  ok=True ;  (H) true=True  thm-755 fires=True  <-- band edge
+   v=  170: disc=1.295e-05  capped-bnd=6.600e-04  ok=True ;  (H) true=True  thm-755 fires=True
+   violations: 0
+
+loose core {2..12,14}:  |G'|=0.08512  r=14  maxP=14 ;  (H)-band edge v* = r/(pi|G'|) = 52.4  (isolated thr 13maxP = 182)
+   v=   15: disc=1.298e-03  capped-bnd=1.156e-01  ok=True ;  (H) true=True  thm-755 fires=False
+   v=   21: disc=1.940e-03  capped-bnd=8.674e-02  ok=True ;  (H) true=True  thm-755 fires=False
+   v=   29: disc=8.138e-04  capped-bnd=6.681e-02  ok=True ;  (H) true=True  thm-755 fires=False
+   v=   57: disc=3.886e-04  capped-bnd=4.111e-02  ok=True ;  (H) true=True  thm-755 fires=True
+   v=   53: disc=1.461e-04  capped-bnd=4.312e-02  ok=True ;  (H) true=True  thm-755 fires=True  <-- band edge
+   v=  183: disc=4.669e-05  capped-bnd=2.278e-02  ok=True ;  (H) true=True  thm-755 fires=True
+   violations: 0
+
+spread core {1,10,21,24,56,65,77,135,219,265,335,367}:  |G'|=0.13743  r=278  maxP=367 ;  (H)-band edge v* = r/(pi|G'|) = 643.9  (isolated thr 13maxP = 4771)
+   v=  368: disc=7.814e-05  capped-bnd=1.700e-01  ok=True ;  (H) true=True  thm-755 fires=False
+   v=  550: disc=1.187e-04  capped-bnd=1.262e-01  ok=True ;  (H) true=True  thm-755 fires=False
+   v=  735: disc=1.973e-04  capped-bnd=1.040e-01  ok=True ;  (H) true=True  thm-755 fires=True
+   v= 1469: disc=3.309e-05  capped-bnd=7.088e-02  ok=True ;  (H) true=True  thm-755 fires=True
+   v=  644: disc=4.929e-05  capped-bnd=1.133e-01  ok=True ;  (H) true=True  thm-755 fires=True  <-- band edge
+   v= 4772: disc=1.830e-06  capped-bnd=4.797e-02  ok=True ;  (H) true=True  thm-755 fires=True
+   violations: 0
+
+Summary: (H) is PROVED for v > v* = r_P/(pi |G'_P|) per core; the residual (H)-band is
+v in (maxP, v*], nonempty only when the core is tight (|G'| small): the band edge is an
+exact computable of the core -- the moderate regime is no longer uniform-open.

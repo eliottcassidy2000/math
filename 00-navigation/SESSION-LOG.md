@@ -1,3 +1,33 @@
+## opus-2026-07-14-S289 -- THM-755: the CAPPED-ENVELOPE theorem -- (H) PROVED for every v > v* = r_P/(pi |G'_P|), unconditionally (splice the origin's cap |c_m| <= |G'| with the spoke envelope r/(pi m) at their crossover: disc_v <= 4r|G'|/(pi v) + 2|G'|^2); the (H)-residual collapses to the per-core FINITE band (maxP, v*] -- band edges 112/105/52/644 vs old isolated thresholds 156/169/182/4771; zero violations exact
+
+Prompt (owner): prove the (H) inequality with the perspective frame.
+
+THE THEOREM (six lines): every Fourier coefficient of 1_{G'_P} obeys BOTH |c_m| <= |G'|
+(the ORIGIN's view: measure bounds correlation with any clock) and |c_m| <= r/(pi m) (the SPOKE
+view: 2r boundary jumps, one spoke each). Splitting disc_v = sum |c_{lv}|^2 at the crossover
+l* = ceil(r/(pi v|G'|)): disc_v <= 4r|G'|/(pi v) + 2|G'|^2; the l* = 1 endpoint recovers
+THM-732's crude bound -- the crude and the capped are ONE family, spliced perspectives.
+
+THE COROLLARY: (H): disc_v < 6|G'|^2 holds whenever v > v* = r_P/(pi |G'_P|) -- NO alignment,
+NO isolation hypothesis. VERIFIED exact (Bernoulli disc, 4 cores x 6 v): zero violations; the
+bound fires exactly at the computed edges.
+
+THE BAND: deep-well core v* = 112 (isolated threshold was 156); residue core 105 (169); loose
+core 52 (182); klein-stall spread core 644 (4771). The (H)-residual = the per-core finite band
+(maxP, v*], NONEMPTY ONLY FOR TIGHT CORES (which are near-AP-rigid, THM-724/730); inside it
+the true disc measures 10-100x below threshold and the per-body closers (kps exact-Q, THM-752
+fine-comb, klein iterated peel) already operate.
+
+POSITION: klein-S306's THM-753 ('LRC(14) covering = ONE inequality atop the proved finite
+skeleton') -- that inequality is now needed only at finitely many v per core, each decidable.
+The moderate regime is no longer uniformly open.
+
+FILES: THM-755 canon; HYP-6700; lrc14_capped_envelope_thm755_opus_S289.out. -> klein (your (H)
+is discharged above v*; the skeleton's residual is the finite band -- your S306 merge + this =
+the assembly's last mile is enumerable), kps (the band contents are exact-Q territory; band
+edges are one-line computables), mac-mini (tight-core-only residual = your binding tiles' home).
+
+---
 ## opus-2026-07-14-S288 -- THM-754: the 7-CLOCK PARTITION THEOREM (the six unit cells + origin cell TILE the circle exactly: k=7 unique self-dual; the (7,a)-slot family is a PARTITION of LRC(14), not a restriction -- the S287 collapse EXPLAINED; tight witnesses live on cell CORNERS) + the clean-slot criterion (THM-748's mod-7 sibling: explicit delta*, fires 16% census, silent on extremals); the full-window k=7 survival IS (A) = klein-S306's (H) in slot coordinates
 
 Prompt (owner): prove the k=7 slot lemma with the perspective frame.
