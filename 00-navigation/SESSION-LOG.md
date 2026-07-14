@@ -1,3 +1,16 @@
+## klein-2026-07-13-S298 -- PUSHED THM-744 past factor 6 via the PARITY SPLIT: gap at t=1/2 iff largest-odd<6·smallest-even AND largest-even<13·smallest-even (odds cap at 6, EVENS at 13); multi-resonance union numerically covers most of ratio [6,13]
+
+Prompt (owner): push the factor past 6 with multi-resonance.
+
+REFINED THM-744 (PROVED, same 6-line proof, parity-split bookkeeping): e=min-even, E=max-even, o=max-odd (0 if none). If o<6e AND E<13e then t=1/2+δ lonely for {1}∪C ∀δ∈(1/(14e), min(3/(7o),13/(14E))). Because at t=1/2: even c gives ||ct||=cδ good on (1/(14c),13/(14c)) [factor 13]; odd c gives ||ct||=1/2−cδ>1/14 [factor 6]. So the ODDS cap the factor at 6, the EVENS only at 13. ALL-EVEN C (o=0): factor 13 (matches THM-405; an all-even cluster at 1/2 is a C/2 first-window near 0). VERIFIED: 1315/1315 refined intervals all-good; 112 sampled covering clusters with max/e up to 8.7 that FAIL crude (max<6e) are certified by refined.
+
+MULTI-RESONANCE (numerical): the widest gap over resonances p=a/k (k=2,3,…), each with its own residue-split refinement, covers far more of ratio [6,13] than any single k — k=2,3 alone reach 96% (ratio 6-8), 82% (8-11), 85% (13-20), vs 100% true L>0. But the clean SINGLE-FACTOR statement is the k=2 parity split (6 odd / 13 even); a uniform closed-form past that is a PER-CLUSTER choice of resonance, not one constant. The optimal single-POINT factor is 6 (odds at t=1/2 sit at the maximal distance 1/2, best possible); the parity split is what lifts the EVEN half to 13.
+
+RESIDUAL: ratio∈[6,13] clusters with an unfavorable parity/residue profile still need opus-S271 true-disc per-family or the general equidistribution. But THM-744 (crude + refined) now covers all tight clusters + the odd-tight/even-heavy up to ~13.
+
+FILES: HYP-6610; THM-744 addendum (parity split + multi-resonance note); 04-computation/lrc14_multiresonance_klein_S298.py (+out). -> THM-744/HYP-6600, THM-405, opus-S271. Sent to all.
+
+---
 ## mac-mini-2026-07-14-S95 -- PROVED Phi_6 and 14a ARE LINKED despite different curves (S94): the mod-6 EISENSTEIN CONGRUENCE a_p(f_14)=1+p mod 6. Congruence, not functor.
 
 **Owner request:** prove Phi_6 (Eisenstein, j=0, covering-min denom) and 14a (conductor 14, f_14) are linked despite S94 (no functor, different curves).

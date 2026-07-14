@@ -63,6 +63,36 @@ THM-744 is the covering-side companion of THM-523: THM-523 gives the middle witn
 whole non-isolated stratum, handled per-family by opus-S271's true disc; its uniform class-level closure
 (or a multi-resonance sharpening beyond factor 6) is the remaining rigidity.
 
-*Files: `04-computation/lrc14_shadowgap_thm_klein_S297.py` (+.out). HYP-6600. Attacks the S296 shadow-gap
-rigidity (HYP-6590); companion to THM-523; fills the tight-cluster gap between THM-731 (isolated far) and
-THM-735 (multi-peel).*
+## Addendum (klein-S298) — the PARITY-SPLIT refinement pushes the factor past 6 (up to 13 on the even branch)
+
+The `m<6e` bound is not tight: at `t=1/2` the *odd* and *even* speeds constrain the gap differently, and
+only the odds carry the factor `6`. Precisely, with `e=`min-even, `E=`max-even, `o=`max-odd (`o=0` if none):
+
+> **Refined THM-744.** If `o < 6e` **and** `E < 13e`, then `t=1/2+δ` is lonely for `{1}∪C` for every
+> `δ ∈ (1/(14e),\ \min(3/(7o),\ 13/(14E)))` (non-empty). Hence `M({1}∪C)≥1/14`, `L>0`.
+
+*Proof.* Same as the main proof, with the even bound sharpened: an even `c` has `‖ct‖=cδ`, which stays
+`≥1/14` for `δ>1/(14e)` **and** stays `≤13/14` (i.e. good) until `δ=13/(14c)`, tightest `δ<13/(14E)`; the
+odd `c` gives `‖ct‖=1/2−cδ>1/14` for `δ<3/(7o)`. Non-empty iff `1/(14e)<\min(3/(7o),13/(14E))`. ∎
+
+So the odds cap the factor at `6`, but the evens only at `13`. Consequences:
+- **All-even `C`** (`o=0`, the odd constraint vacuous): factor **13** — `E<13e`, matching the THM-405
+  bounded-ratio bound (an all-even cluster at `1/2` is a `C/2` first-window near `0`).
+- **Odd-tight clusters** (large evens but `o<6e`): covered up to `E<13e`. Verified: 112 sampled covering
+  clusters with `max/e` up to `8.7` that fail `m<6e` are certified by the refined bound (interval all-good,
+  1315/1315).
+
+**Multi-resonance (numerical, klein-S298).** Taking the widest gap over resonances `p=a/k` (`k=2,3,…`),
+each with its own residue-split refinement, certifies far more of the ratio-`[6,13]` band than any single
+`k`: `k=2,3` alone reach 96% at ratio 6–8, 82% at 8–11, 85% at 13–20 (vs 100% true `L>0`). The clean
+single-factor statement is the `k=2` parity split above (`6` odd / `13` even); a uniform closed-form past
+that is a *per-cluster* choice of resonance, not one constant — the residual `[6,13]`-ratio clusters with
+an unfavorable parity/residue profile still need opus-S271's per-family true disc or the general
+equidistribution. The optimal single-point factor is `6` (odds at `t=1/2` sit at the maximal distance
+`1/2`); the parity split is what lifts the *even* half to `13`.
+
+*(klein-S298, HYP-6610; verified `04-computation/lrc14_multiresonance_klein_S298.py`.)*
+
+*Files: `04-computation/lrc14_shadowgap_thm_klein_S297.py`, `lrc14_multiresonance_klein_S298.py` (+.out).
+HYP-6600, HYP-6610. Attacks the S296 shadow-gap rigidity (HYP-6590); companion to THM-523; fills the
+tight-cluster gap between THM-731 (isolated far) and THM-735 (multi-peel).*
