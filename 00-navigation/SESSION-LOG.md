@@ -1,3 +1,40 @@
+## opus-2026-07-14-S288 -- THM-754: the 7-CLOCK PARTITION THEOREM (the six unit cells + origin cell TILE the circle exactly: k=7 unique self-dual; the (7,a)-slot family is a PARTITION of LRC(14), not a restriction -- the S287 collapse EXPLAINED; tight witnesses live on cell CORNERS) + the clean-slot criterion (THM-748's mod-7 sibling: explicit delta*, fires 16% census, silent on extremals); the full-window k=7 survival IS (A) = klein-S306's (H) in slot coordinates
+
+Prompt (owner): prove the k=7 slot lemma with the perspective frame.
+
+WHAT THE FRAME REVEALED (worked by hand before computing): the k=7 'lemma' is not a lemma.
+a/7 + 1/14 = (a+1)/7 - 1/14 EXACTLY: the seven cells tile; k=7 is the UNIQUE clock with
+k/14 = 1/2. Hence 'some (7,a)-slot survives' <=> the safe set meets [1/14, 13/14] <=> (small
+element kills the origin cell) L > 0 itself. The (7,a)-family PARTITIONS the problem: that is
+WHY the S287 scarcity map collapses to k=7 (k>=8 slots are genuine restrictions and die; the
+7-clock's cannot all die without the body covering). TIGHT WITNESSES = CELL CORNERS: at
+M = 1/14 the safe points are corners t = (2a+1)/14 (the AP's 1/14 is one). klein-S295's
+middle-reach localization is the tiling corollary.
+
+THE PROVED TILE (clean-slot criterion, THM-748's mod-7 sibling): delta* = 1/(14 c_min);
+slot (7,a) works if carriers clear delta* and non-carriers respect the residue-level
+thresholds (1,3,5)c_min. Three-line clearance proof; exact witnesses; fires 489/3000 of the
+covering census; SILENT on the extremals (their second residue-lifts always exceed c_min) --
+an honest minor tile, as the partition theorem predicts (nothing single-delta can reach the
+binding stratum: the full window is the problem).
+
+THE BOUNDARY: full-window k=7 survival = (A) re-coordinatized into six windows permuted by the
+unit group (the pair sector); the union-bound gap is 2x and SCALE-SELF-SIMILAR; in peel
+coordinates it is klein-S306's one-step hypothesis (H): disc_v < 6|G'_P|^2. Convergence: the
+fleet's one remaining inequality now has THREE equivalent coordinatizations (peel/slot/budget),
+all exact, all pointing at the same 2x.
+
+THE CODA: the problem's last inequality lives on the unique clock whose half-cell IS the
+origin band -- the incompressible frame measuring itself. Eighteen sessions from the owner's
+(n-1)^2 = 13 + 2 T(12) hint, the perspective frame has carried from a tournament counting
+identity to the exact shape of what remains of LRC(14).
+
+FILES: THM-754 canon; HYP-6695; lrc14_seven_clock_thm754_opus_S288.out. -> klein (S295/S306:
+the tiling explains the localization; (H) = the slot form -- one inequality, three coordinate
+systems), mac-mini (corner-witness structure composes with your shadow delta-intervals), kps
+(the clean-slot tile is 3-line Lean; the partition theorem is exact arithmetic).
+
+---
 ## opus-2026-07-14-S287 -- the mod-360360 CLASSIFICATION RUN: exact delta-interval slot test + 21,459 rigidity-guided CRT blockers + 250k mega-hunt = ZERO all-blocked bodies (the conjecture SURVIVES, structurally: the optimal blockers keep 57/57 slots); THE K=7 DISCOVERY: as M -> 1/14 feasibility collapses to the 7-clock (AP and GW share the identical 5/57-all-at-k=7 signature) -- (A)'s terminal form: low-M covering => some (7,a)-slot survives
 
 Prompt (owner): run the mod-360360 classification and decide the conjecture.

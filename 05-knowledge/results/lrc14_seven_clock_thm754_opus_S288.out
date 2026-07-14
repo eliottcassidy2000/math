@@ -1,0 +1,19 @@
+(i) TILING check: a/7 + 1/14 == (a+1)/7 - 1/14 for all a: True
+    => the seven cells [a/7 - 1/14, a/7 + 1/14] tile R/Z exactly; unit cells (a=1..6)
+    cover [1/14, 13/14]: the (7,a)-slot family is a PARTITION of the loneliness problem.
+
+(ii) CLEAN-SLOT CRITERION on test bodies (exact witnesses):
+   deep well {1..12,182}        no clean slot (criterion silent -- full-window/other tiles needed)
+   GW doubling {1..11,13,24}    no clean slot (criterion silent -- full-window/other tiles needed)
+   residue {1..11,13,84}        no clean slot (criterion silent -- full-window/other tiles needed)
+   AP {1..13}                   no clean slot (criterion silent -- full-window/other tiles needed)
+   compressed 2{1..12}u{13}     no clean slot (criterion silent -- full-window/other tiles needed)
+   spread {11,13,...,390}       no clean slot (criterion silent -- full-window/other tiles needed)
+   klein stall {1,10,...,390}   no clean slot (criterion silent -- full-window/other tiles needed)
+
+   census: clean-slot criterion fires on 489/3000 random covering bodies (16%)
+
+(iii) the honest boundary: the tight extremals (AP, GW) fail the single-delta criterion
+      (their k=7 witnesses need the full window: larger delta where big speeds' teeth
+      reopen). The full-window survival at k=7 IS (A) re-coordinatized -- the 2x gap
+      between union-bound supply and demand is scale-self-similar: the named residue.
