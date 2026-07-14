@@ -1,5 +1,6 @@
 ---
-id: THM-738
+id: THM-739
+renumber_note: "filed as THM-738 in-session; kps-S128 cont.4 reserved THM-738 (1001-body j=3 tree) as first pusher — renumbered per the first-pusher protocol"
 title: The cluster-clock lemma (additive pack-clock) — every far-cluster family B ∪ (W+J) has L ≥ Area(B,J) − C(B,J)/W with Area and C exactly computable; uniform tail closure of the additively-coherent slice of the j ≥ 7 seam (beyond kps THM-735's Bonferroni boundary j ≤ 6), with |J| = 1 degenerating to the far-element peel
 status: PROVED (proof below) + VERIFIED-EXACT (Area exact by adaptive piecewise-linear Fraction integration with midpoint-linearity self-check; bound valid at all tested W; klein-S289's {1,90..101} sits at 99.9% of its Area limit) — below-threshold sweep in the companion .out
 source: opus-2026-07-13-S273 (owner prompt: work the gcd-incoherent sector with the perspective frame)
@@ -13,7 +14,7 @@ related:
   - klein-S289 (HYP-6505 second use)               # {1,90..101}, {1,2,3,50..59}: the non-isolated counterexample shapes this lemma closes uniformly
 ---
 
-# THM-738 — the cluster-clock lemma (additive pack-clock)
+# THM-739 — the cluster-clock lemma (additive pack-clock)
 
 ## Statement
 
