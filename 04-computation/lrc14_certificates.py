@@ -59,23 +59,31 @@ def L_exact(speeds, lam=LAM):
     return sum(b - a for a, b in good_intervals(speeds, lam))
 
 def M_exact(speeds):
-    """exact M = sup_t min_v ||v t|| by bisection on lam over the rational lattice.
+    """Return exact M = max_t min_v ||v t|| by evaluating every finite breakpoint.
 
-    M is attained; it is a rational with denominator dividing lcm-type combinations.
-    Strategy: binary search on lam via L_exact(speeds, lam) > 0 over the finite set of
-    candidate lams = clearances at interval endpoints of iterated refinements."""
-    lo, hi = F(0), F(1, 2)
-    for _ in range(80):
-        mid = (lo + hi) / 2
-        if L_exact(speeds, mid) > 0: lo = mid
-        else: hi = mid
-    # snap: the true M is min_v ||v t*|| at an endpoint witness of the lo-level set
-    ivs = good_intervals(speeds, lo)
+    The lower envelope of the triangular waves ||v t|| can peak only where affine
+    branches for two runners meet, with denominator v+w or |v-w|, or at a
+    single runner's half-integer cusp, with denominator 2v.  Evaluating all m/q
+    for those denominators therefore gives the attained maximum as a Fraction."""
+    values = sorted({abs(v) for v in speeds})
+    if not values:
+        raise ValueError("M_exact requires at least one speed")
+    if values[0] == 0:
+        return F(0)
+
+    denoms = {2 * v for v in values}
+    for i, v in enumerate(values):
+        for w in values[i + 1:]:
+            denoms.add(v + w)
+            denoms.add(w - v)
+
     best = F(0)
-    for a, b in ivs:
-        for t in (a, b, (a + b) / 2):
-            c = min(min((v * t) % 1, 1 - (v * t) % 1) for v in speeds)
-            if c > best: best = c
+    for q in denoms:
+        for m in range(1, q):
+            numerator = min(min((v * m) % q, q - ((v * m) % q)) for v in values)
+            candidate = F(numerator, q)
+            if candidate > best:
+                best = candidate
     return best
 
 def is_covering(speeds):
@@ -211,6 +219,9 @@ def _selftest():
     lay, det = h_band_protocol([1, 2, 3, 4, 5, 6, 7, 9, 10, 14, 60, 150, 431])
     check("band protocol closes a band body at layer <= 2", lay in (1, 2))
     ap = list(range(1, 14))
+    check("M_exact AP {1..13} = 1/14", M_exact(ap) == F(1, 14))
+    check("M_exact {1,2,4} = 1/3", M_exact([1, 2, 4]) == F(1, 3))
+    check("M_exact singleton = 1/2", M_exact([7]) == F(1, 2))
     check("AP is the tight boundary (L = 0)", L_exact(ap) == 0)
     check("AP is lonely with equality at t = 1/14",
           min(min((v * LAM) % 1, 1 - (v * LAM) % 1) for v in ap) == LAM)
