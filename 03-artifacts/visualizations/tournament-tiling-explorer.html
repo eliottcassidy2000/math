@@ -35,6 +35,7 @@
     .action-btn:hover { background: #ddd; }
     .score-display { margin-top: 10px; font-family: monospace; font-size: 15px; }
     .score-label { font-size: 12px; color: #666; }
+    .address-display { margin-top: 10px; padding: 7px 9px; border: 1px solid #c9d8eb; border-radius: 6px; background: #f4f8ff; font: 12px/1.45 monospace; color: #24415f; max-width: 430px; }
     #main-canvas { display: block; border: 1px solid #ddd; border-radius: 6px; }
     #big-panel { border: 1px solid #ccc; border-radius: 10px; background: #fff; padding: 16px; }
     #big-panel h3 { margin: 0 0 8px; font-size: 1em; }
@@ -79,6 +80,7 @@
       <div class="score-label">Score sequence:</div>
       <div id="scoreseq"></div>
     </div>
+    <div class="address-display" id="address-display">Loading exact metagraph address map…</div>
   </div>
   <div class="panel">
     <h3>Tournament graph</h3>
@@ -107,6 +109,15 @@
 let N=5, VERTS, TILES, TRANS_MAP, tilings, groups, canonSigs, classTransposeTarget, classPairs;
 let parentClassMap=[]; // parentClassMap[ci] = parent class index at n-1, or -1 if n<=3
 let parentVertexOrbits=[]; // parentVertexOrbits[ci] = number of vertex orbits in this class's rep
+let addressAtlas=null;
+
+function addressSizeData(){return addressAtlas?.sizes?.find(r=>r.n===N)||null;}
+function addressForMask(mask){return addressSizeData()?._byMask?.[mask]||null;}
+function addressNode(rank){return addressSizeData()?.nodes?.find(node=>node.rank===rank)||null;}
+function addressPrefix(mask){
+  const rec=addressForMask(mask);
+  return rec?`a${String(rec.node_rank).padStart(2,'0')}/`:'';
+}
 
 // ─────────────────────────────────────────────────────────────────────
 // CORE MATH
@@ -525,7 +536,7 @@ function buildSingleNode(ci,cp,TOURN_R,ORBIT_R,THUMB_W,THUMB_H,showThumbs){
   classLayer.appendChild(tfo);
   classCanvases[ci]={canvas:tc,adj:members[0].adj,clabel:_clabelS};
   const lbl=svgEl('text',{x:cp.x,y:cp.y+TOURN_R+16,'text-anchor':'middle','font-size':Math.max(9,TOURN_R/5),fill:'#334','font-family':'monospace'});
-  lbl.textContent=`#${ci} [${members[0].scores}] ×${members.length}`;
+  lbl.textContent=`${addressPrefix(members[0].mask)}#${ci} [${members[0].scores}] ×${members.length}`;
   classLayer.appendChild(lbl);
   if(showThumbs) buildTilingOrbit(members,cp,ORBIT_R,THUMB_W,THUMB_H,Math.PI*2,0,-Math.PI/2);
 }
@@ -572,9 +583,9 @@ function buildMergedNode(node,cp,TOURN_R,ORBIT_R,THUMB_W,THUMB_H,showThumbs){
 
   // Labels
   const lblA=svgEl('text',{x:cp.x-TOURN_R*0.6,y:cp.y+TOURN_R+16,'text-anchor':'middle','font-size':9,fill:'#336','font-family':'monospace'});
-  lblA.textContent=`#${a} ×${membersA.length}`;classLayer.appendChild(lblA);
+  lblA.textContent=`${addressPrefix(membersA[0].mask)}#${a} ×${membersA.length}`;classLayer.appendChild(lblA);
   const lblB=svgEl('text',{x:cp.x+TOURN_R*0.6,y:cp.y+TOURN_R+16,'text-anchor':'middle','font-size':9,fill:'#633','font-family':'monospace'});
-  lblB.textContent=`#${b} ×${membersB.length}`;classLayer.appendChild(lblB);
+  lblB.textContent=`${addressPrefix(membersB[0].mask)}#${b} ×${membersB.length}`;classLayer.appendChild(lblB);
 
   if(showThumbs){
     // Class A tilings on left semicircle (angles π/2 to 3π/2, going counterclockwise from top)
@@ -699,6 +710,15 @@ function onBitsChanged(){
   const A=window._bitsToAdj(bits);
   document.getElementById('scoreseq').textContent=window._adjScores(A).join(', ');
   const mask=bits.reduce((m,b,k)=>m|(b<<k),0);
+  const rec=addressForMask(mask),box=document.getElementById('address-display');
+  if(rec){
+    const node=addressNode(rec.node_rank);
+    const localWord=node?.local_path_word||'root';
+    const lineWord=node?.blueblack_root_word||'root';
+    box.textContent=`node ${rec.node_id} · global tiling ${rec.global_index}/${tilings.length-1} · fibre ${rec.fibre_index}/${(node?.tiling_count||1)-1} · local depth/path ${node?.local_depth}:${localWord} · blue/black path ${node?.blueblack_root_distance}:${lineWord}`;
+  }else{
+    box.textContent='Exact address atlas unavailable. Generate it with 04-computation/tournament_tiling_metagraph_address_codex_S4.py.';
+  }
   updateGlow(mask);
 }
 
@@ -726,6 +746,17 @@ function rebuildForN(n){
 }
 document.getElementById('n-slider').addEventListener('input',e=>rebuildForN(parseInt(e.target.value)));
 rebuildForN(5);
+fetch('../../05-knowledge/results/tournament_tiling_metagraph_address_codex_S4.json')
+  .then(response=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json();})
+  .then(data=>{
+    addressAtlas=data;
+    for(const size of addressAtlas.sizes){
+      size._byMask={};
+      for(const rec of size.tiling_map)size._byMask[rec.mask]=rec;
+    }
+    buildOverview();onBitsChanged();
+  })
+  .catch(()=>onBitsChanged());
 </script>
 </body>
 </html>

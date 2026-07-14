@@ -1,8 +1,13 @@
 ---
 id: HYP-6825
 title: Canonical merged-metagraph addresses and exact tiling fibers
-status: IN PROGRESS — representation and executable audit reserved
+status: VERIFIED FINITE ATLAS n=3..6; general completeness conjecture open
 source: codex-2026-07-14-S4
+artifacts:
+  - 04-computation/tournament_tiling_metagraph_address_codex_S4.py
+  - 05-knowledge/results/tournament_tiling_metagraph_address_codex_S4.out
+  - 05-knowledge/results/tournament_tiling_metagraph_address_codex_S4.json
+  - 03-artifacts/visualizations/tournament-tiling-explorer.html
 related:
   - HYP-2245
   - HYP-2989
@@ -16,15 +21,26 @@ related:
 
 # HYP-6825 — Canonical metagraph addresses and tiling fibers
 
-This session is testing whether every tournament isomorphism-class node in the
-merged tournament metagraph can be given an objective address, rooted at the
-transitive class, and whether the tournament-tiling explorer's tilings can be
-mapped exactly to and from the corresponding node fibers.
+Every tournament isomorphism-class node in the explorer's converse-merged
+metagraph at `n=3..6` now has an executable objective address rooted at the
+transitive class, and every explorer tiling maps exactly to and from the
+corresponding node fibre.
 
-The candidate address is not raw graph distance.  It is a lexicographically
-minimal colored path word, refined by recursive parent addresses, node
-invariants, and a canonical adjacency-bit code.  Blue/black lines are retained
-as structural letters rather than flattened into uncolored adjacency.
+The address is not raw graph distance.  It is the tuple
+
+~~~text
+(one-tile quotient depth,
+ lexicographically least spine/rib/sea path word,
+ rooted blue/black complement-line distance and word,
+ stable weighted blue/black colour-refinement class,
+ stable combined-channel colour-refinement class,
+ recursive all-vertex-deletion parent address,
+ canonical converse-orbit tournament code).
+~~~
+
+The canonical code is an admitted final tie-breaker.  Every preceding
+controlled-forgetting stage is audited for collisions, so a profile is never
+silently promoted to a complete invariant.
 
 The exact relation under study is two-sorted:
 
@@ -36,23 +52,118 @@ labelled tiling/tournament realization
 
 with inverse maps returning fibers, not a fictitious unique tiling.
 
-Known at reservation time:
+## The distinction that makes the address work
 
-- the explorer already enumerates tournaments and tiling matrices at small n;
-- the merged metagraph has BLUE/BLACK/GREEN structural edges plus independent
-  score, parent-fiber, H-step, parity, and multiplicity labels;
-- boolean profiles cease to distinguish nodes at n=6;
-- complement merging and vertex relabelling are distinct quotients; and
-- past LRC work repeatedly shows that raw tournament class loses metric,
-  endpoint-owner, scale, and threshold information.
+Two graphs had previously been described with overlapping colour language.
+They must remain separate.
 
-Missing before promotion:
+1. A **local flip** changes one staircase tile.  Its quotient gives the radial
+   coordinate from the transitive class.  Its channels are named `F_S`, `F_R`,
+   `F_G` for SC--SC spine, SC--NS rib, and NS--NS sea moves.
+2. A **complement line** is the antipodal pair `{t,t xor (2^m-1)}`.  It is
+   `L_B` (blue) when the tiling is anti-diagonally grid-symmetric and `L_K`
+   (black) otherwise.  These are the blue/black lines drawn by the
+   tournament-tiling explorer.
 
-1. reconstruct the exact explorer and merged-edge schemas;
-2. define and prove invariance of the canonical node address;
-3. execute tiling -> class -> merged-node and node -> tiling-fiber maps;
-4. quantify collisions under each controlled forgetting step;
-5. state which extra LRC sidecars must decorate a node/fiber; and
-6. run Tournament Analysis on candidate address coordinates and route
-   carriers, with an explicit tie Hamiltonian path.
+Blue/black complement lines do not express one-step distance from the
+transitive tiling.  Conversely, a local-flip distance forgets the antipodal
+line parity/folding structure.  The address is therefore bi-axial.
 
+## Exact finite result
+
+The explorer convention fixes the Hamiltonian path `n -> ... -> 1` and orders
+the `m=C(n-1,2)` non-path tiles row by row.  Exhaustive enumeration gives:
+
+| n | tilings | classes | merged nodes | blue/black line components | rooted line-WL cells |
+|---:|---:|---:|---:|---:|---:|
+| 3 | 2 | 2 | 2 | 1 | 2 |
+| 4 | 8 | 4 | 3 | 1 | 3 |
+| 5 | 64 | 12 | 10 | 1 | 10 |
+| 6 | 1024 | 56 | 34 | 1 | 34 |
+
+Thus, through `n=6`:
+
+- the projected weighted blue/black complement-line graph is connected;
+- raw blue/black incidence is incomplete at `n=6` (26 cells for 34 nodes,
+  largest collision cell 3);
+- rooted stable colour refinement of that same weighted graph separates all
+  34 merged nodes;
+- the local quotient distance agrees with minimum labelled tiling Hamming
+  weight at every node; and
+- self-converse nodes have odd tiling fibre, non-self-converse merged nodes
+  have even fibre, supplying an independent checksum.
+
+The line-WL completeness is a finite observation, not a claim for all `n`.
+The canonical orbit code makes the address exact even if refinement develops
+twins later.
+
+## Exact forward and inverse indices
+
+For a tiling mask `t`, the JSON stores
+
+~~~text
+t -> canonical class code -> merged address n-aXX
+  -> (global tiling index, fibre-local index).
+~~~
+
+Global tilings are ordered by
+
+~~~text
+(Hamming distance from all-off transitive tiling,
+ merged-node address rank,
+ canonical unmerged class code,
+ explorer mask).
+~~~
+
+The fibre-local order uses `(Hamming weight, class code, mask)`.  Conversely,
+each node record lists every tiling mask and global index in its fibre.  The
+committed JSON contains all 1098 tilings at `n=3..6`, and the explorer now
+loads it to display the address and both indices of the selected tiling.
+
+## Preservation statement
+
+This solves the combinatorial address problem, not the LRC quotient problem.
+The raw tournament node still destroys the observer cut, gap metric, exact
+threshold side, endpoint owner, scale/residue, wall chronology, and line-orbit
+identity.  The tiling fibre repairs the fixed-cut address but not those LRC
+sidecars.  HYP-6815's slope suspension should therefore carry the metagraph
+address as a constructible chamber label with metric/owner/monodromy stalks,
+not identify the 4-coordinate object with a bare node.
+
+## Tournament Analysis
+
+Vertices are candidate information carriers rather than runners:
+
+~~~text
+raw SC type, radial depth, blue/black incidence, rooted blue/black WL,
+local parent atlas, combined coloured WL, structural address, exact address.
+~~~
+
+The pairwise observable is how many unordered node pairs each carrier
+separates.  The retention switch and retention-per-description-bit switch both
+produce transitive tournaments at `n=3..6`, but their edge order differs (18
+edge flips at `n=6`).  At `n=6`, separated-pair counts advance
+
+~~~text
+264 (SC type), 410 (depth), 552 (line incidence), 561 (rooted line-WL).
+~~~
+
+The tie Hamiltonian path is the carrier list above.  At `n=6` each gauge has
+score histogram `{0:1,...,7:1}`, zero directed 3-cycles, eight singleton SCCs,
+and one Hamiltonian path.  The challenged assumption is that tournament
+vertices must be runners or arcs; here they are quotient carriers/proof
+obligations.
+
+## Open boundary
+
+1. Test whether rooted weighted blue/black 1-WL remains complete at `n=7`;
+   if not, classify the first twins by line-class, spectrum, or 2-WL.
+2. Prove or refute connectivity of the projected blue/black line graph for all
+   `n`.
+3. Prove that local quotient depth always equals minimum tiling weight/MFAS;
+   the finite equality alone does not justify the general statement.
+4. Replace raw all-deletion parent codes by a genuine functor on the whole
+   recursive metagraph tower, retaining deletion multiplicities and orbits.
+5. Pull the exact node/fibre atlas back over the LRC slope suspension and test
+   fibre-purity of threshold nonemptiness after adding metric gap, owner,
+   carry, scale, and wall-monodromy sidecars.

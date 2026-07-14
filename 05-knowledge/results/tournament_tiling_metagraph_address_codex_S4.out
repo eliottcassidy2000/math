@@ -1,0 +1,110 @@
+TOURNAMENT-TILING METAGRAPH ADDRESS AND FIBRE AUDIT
+exact enumeration; explorer convention; n=3..6
+
+CHANNELS: local F_S/F_R/F_G are one-tile spine/rib/sea moves;
+          line L_B/L_K are all-tile complement blue/black lines.
+These channels are kept distinct throughout.
+
+n=3 m=1: tilings=2 classes=2 merged=2 local_edges=1
+  complement lines: blue=1 black=0; blue/black components=1, root reaches 2/2 nodes
+  local graph: components=1; quotient depth equals minimum labelled tiling weight at 2/2 nodes
+  controlled-forgetting audit (cells / max collision / separated pairs):
+    raw_sc_type                1 /  2 /    0
+    radial_depth               2 /  1 /    1
+    blueblack_incidence        1 /  2 /    0
+    rooted_blueblack_wl        2 /  1 /    1
+    local_parent_atlas         2 /  1 /    1
+    combined_colored_wl        2 /  1 /    1
+    structural_address         2 /  1 /    1
+    exact_address              2 /  1 /    1
+  Tournament Analysis retention: scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 SCC=[1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+  Tournament Analysis economy: scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 SCC=[1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+  gauge edge flips=0
+
+n=4 m=3: tilings=8 classes=4 merged=3 local_edges=12
+  complement lines: blue=2 black=2; blue/black components=1, root reaches 3/3 nodes
+  local graph: components=1; quotient depth equals minimum labelled tiling weight at 3/3 nodes
+  controlled-forgetting audit (cells / max collision / separated pairs):
+    raw_sc_type                2 /  2 /    2
+    radial_depth               2 /  2 /    2
+    blueblack_incidence        3 /  1 /    3
+    rooted_blueblack_wl        3 /  1 /    3
+    local_parent_atlas         3 /  1 /    3
+    combined_colored_wl        3 /  1 /    3
+    structural_address         3 /  1 /    3
+    exact_address              3 /  1 /    3
+  Tournament Analysis retention: scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 SCC=[1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+  Tournament Analysis economy: scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 SCC=[1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+  gauge edge flips=12
+
+n=5 m=6: tilings=64 classes=12 merged=10 local_edges=192
+  complement lines: blue=8 black=24; blue/black components=1, root reaches 10/10 nodes
+  local graph: components=1; quotient depth equals minimum labelled tiling weight at 10/10 nodes
+  controlled-forgetting audit (cells / max collision / separated pairs):
+    raw_sc_type                2 /  8 /   16
+    radial_depth               4 /  4 /   33
+    blueblack_incidence        9 /  2 /   44
+    rooted_blueblack_wl       10 /  1 /   45
+    local_parent_atlas        10 /  1 /   45
+    combined_colored_wl       10 /  1 /   45
+    structural_address        10 /  1 /   45
+    exact_address             10 /  1 /   45
+  Tournament Analysis retention: scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 SCC=[1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+  Tournament Analysis economy: scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 SCC=[1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+  gauge edge flips=17
+
+n=6 m=10: tilings=1024 classes=56 merged=34 local_edges=5120
+  complement lines: blue=32 black=480; blue/black components=1, root reaches 34/34 nodes
+  local graph: components=1; quotient depth equals minimum labelled tiling weight at 34/34 nodes
+  controlled-forgetting audit (cells / max collision / separated pairs):
+    raw_sc_type                2 / 22 /  264
+    radial_depth               5 / 13 /  410
+    blueblack_incidence       26 /  3 /  552
+    rooted_blueblack_wl       34 /  1 /  561
+    local_parent_atlas        34 /  1 /  561
+    combined_colored_wl       34 /  1 /  561
+    structural_address        34 /  1 /  561
+    exact_address             34 /  1 /  561
+  Tournament Analysis retention: scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 SCC=[1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+  Tournament Analysis economy: scores={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 SCC=[1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+  gauge edge flips=18
+
+n=6 OBJECTIVE NODE ORDER
+rank code(s) SC depth/path line-root line-WL combined-WL fibre
+ 0           0x0 Y 0:-     0:            18 27 x1
+ 1          0x10 Y 1:S     2:BB           9 18 x17
+ 2           0x9 Y 1:S     3:BBB          6 26 x5
+ 3      0x8,0x11 N 1:R     2:BK          23 28 x18
+ 4      0x4,0x13 N 1:R     3:BBK          0  1 x10
+ 5      0x2,0x17 N 1:R     4:BBKK         7 29 x2
+ 6       0x5,0xb N 1:R     4:BBKK         8 30 x2
+ 7          0x90 Y 2:SS    2:BB          17 24 x37
+ 8     0x50,0xb0 N 2:SR    2:BK          12 12 x18
+ 9     0x14,0x1a N 2:SR    2:BK          24  3 x38
+10     0x18,0x1c N 2:SR    2:BK          27  4 x46
+11      0xc,0x19 N 2:SR    3:BBK         20 31 x22
+12     0x12,0x16 N 2:SR    3:BBK         21  2 x30
+13     0x49,0xb3 N 2:SR    3:BBK         22 33 x26
+14      0xa,0x15 N 2:SR    3:BBK         28 23 x18
+15          0x53 Y 2:RR    1:B           10 19 x17
+16          0x91 Y 2:RR    2:BB          16 22 x33
+17          0x57 Y 2:RR    3:BBB          4 15 x1
+18     0x48,0xb2 N 2:RG    3:BBK          1  0 x10
+19     0x51,0x93 N 2:RG    3:BBK         25  5 x46
+20    0x94,0x139 N 3:SSR   3:BBK          3 13 x74
+21     0x92,0x95 N 3:SSR   3:BBK         30  9 x62
+22    0x98,0x119 N 3:SSR   3:BBK         32 11 x74
+23         0x118 Y 3:SRR   3:BBB         11 25 x41
+24          0x99 Y 3:SRR   3:BBB         14 20 x29
+25          0x9a Y 3:SRR   3:BBB         15 21 x29
+26     0x59,0x96 N 3:SRG   3:BBK         26  6 x50
+27    0x9c,0x11a N 3:SRG   3:BBK         33 10 x66
+28    0x58,0x179 N 3:SRG   3:BKK         19 32 x22
+29     0xb1,0xb5 N 3:SRG   3:BKK         29  7 x58
+30    0x8c,0x13a N 3:SRG   4:BBKK        31  8 x6
+31         0x534 Y 4:SSRR  3:BBB          5 17 x15
+32         0x198 Y 4:SSRR  3:BBB         13 16 x15
+33   0x158,0x159 N 4:SSRG  3:BBK          2 14 x86
+
+ROUND TRIP: every tiling mask occurs once in tiling_map; every node lists exactly its inverse fibre.
+ORDER: depth and coloured structure precede the canonical converse-orbit code; the code only breaks residual ties.
