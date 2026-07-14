@@ -61709,6 +61709,8 @@ theorem claimed THM-759 first, so the sheet-dodge theorem was renumbered
 THM-760.
 - **2026-07-14 — codex-2026-07-14-S3 (started):** auditing and attacking two requested LRC uniformity gaps: the `q<=25` good-period/rational-witness claim and emptiness of the `n=12` sporadic tight branch. Reserved HYP-6820 (renumbered from a concurrent HYP-6810 collision) without promoting either claim. Initial sync found that `LRC14-FRONTIER-2026-07-15.md` overstates closure relative to corrected canonical THM-758/HYP-6780: the 120-family q-bank is sampled, S105's 8260 sweep is capped/interval-core restricted, and the scale-normal `f>=4` residual remains open. Parallel lanes are reconstructing the exact proof obligations and tournament history.
 
+- **2026-07-14 — codex-2026-07-14-S4 (started):** creative information-preservation session on the 4D LRC object and the tournament-tiling merged metagraph. Reserved HYP-6825 for a canonical transitive-rooted colored-path address, exact tiling-to-isomorphism-class mapping, complement-merged node fibers, and an audit of the LRC sidecars destroyed by each quotient. Initial historical signal: the merged graph already has five independent edge labelings and boolean node profiles collapse at n=6, so raw graph distance/profile cannot be the address.
+
 Final incoming-signal integration: HYP-6815's affine-slope suspension gives an
 exact two-torus chart V(c)=cP+R for multi-exception scale rays, while
 structure-S1's endpoint audit confirms that runner/endpoint tournaments lose
