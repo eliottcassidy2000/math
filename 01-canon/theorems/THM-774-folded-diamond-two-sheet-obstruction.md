@@ -7,6 +7,7 @@ depends_on:
   - THM-769
 related:
   - THM-772
+  - THM-773
   - THM-775
   - HYP-6820
 verification:

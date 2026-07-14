@@ -700,6 +700,31 @@ size gauges flip 114 edges yet remain transitive; THM-770's tournament is all
 ties; the winding atlas has transitive liars.  These are not unrelated
 failures.  Pairwise orientation repeatedly forgets the simultaneous stalk.
 
+THM-773 supplies the positive tournament-side comparison.  At the prime lens
+`c=7`, the labelled token polynomial
+
+```text
+product_a(X-k_a)
+```
+
+preserves exact coverage through divisibility by `X^7-X`, and event transport
+updates one labelled token by `-w_a^(-1)`.  Only after this exact conjugacy do
+the two tournament gauges appear: linear sheet order collapses every exact
+state to the transitive node `n7-a000`, circular order to the heptagon node
+`n7-a267`, while a labelled Hamiltonian-path rule spreads the `5,040` states
+over all 25 inverse masks.  The node is a basepoint; owner labels, token
+polynomial, endpoint word, and holonomy form the stalk.  This suggests a
+general tactic: **fold the dynamics before quotienting it**.  THM-774 does so
+with half-sum/half-difference coordinates; THM-773 does so with finite-field
+tokens.  Searching for better tournament vertices comes only afterward.
+
+THM-777 sharpens the scale side without overclaiming it.  It proves the
+normalized bridge `rho<=12/(pi|G'_P|)`, the unconditional height-decaying
+Lipschitz floor, and an exact minimum `7/858` through `max(P)<=18`, uniquely at
+the detuned near-AP `{1,...,13}\{6}`.  Its global positive floor is still a
+conjecture.  Thus safe measure is a credible shape coordinate, but it is not
+yet the compactness theorem the `f>=4` assembly needs.
+
 The most promising synthesis is a weighted Euler-current/monodromy dichotomy.
 THM-770's `chi_13=kappa-P_splice` and THM-771's
 `F=Q+Omega-sigma` look like adjacent-dimensional defects of one labelled

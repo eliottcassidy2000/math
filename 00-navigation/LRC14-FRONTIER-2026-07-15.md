@@ -83,6 +83,7 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
 | prime lens `c=7`, any unramified owner count | Exact token polynomial: coverage iff `X^7-X` divides `product(X-k_a)`; seven-owner exact states map to all 25 masks at heptagon node `n7-a267`; any covered `r=8` wall is a simple event with a seven-owner heptagon stalk | THM-773 + exact 5,040-state/3,003-profile audits |
 | seven-owner deck defect / ramified residue | Exact identity `F=Q+Omega-sigma`; exact tilings are chamber-locked, KCL necessity is WITHDRAWN, and mirror coincidence is diagnostic. Primitive `c=21` row realizes `(0,12,12,0)` | THM-771 + corrected THM-767 + exact audits |
 | raw fragmentation bound r_P ≤ B(c*) | REFUTED twice (exact falsifier + census); surviving peel-relative invariant ρ = v*/maxP measured ≤ 9.335, extremal at {1..12} | HYP-6830 correction; MISTAKE-145 |
+| safe-measure floor / normalized band bridge | `rho<=12/(pi|G'_P|)` and `|G'_P|>=1/(91 maxP)` PROVED; exact `maxP<=18` floor is `7/858`, unique at `{1,...,13}\{6}`; the same global floor is CONJECTURAL | THM-777 |
 | primitive tight 12-speed locus | UNIFORMLY FINITE (`sum A<=78^11`), not classified | THM-763 |
 | hereditary primitivity of tight 12-sets | PROVED; every leave-one-out core is primitive | THM-765 |
 | unique-largest-13-multiple tight branch | IMPOSSIBLE by explicit prime-grid perturbation | THM-768 |
@@ -115,7 +116,10 @@ unfinished evidence checklist. Neither may be used as an unconditional assembly 
    closes compatible r=7 decks above `w_max>7 sum(P)` by an event witness. The raw bound
    `r_P≤B(c*)` is false; `P_N={1,...,11,N}` has `c*=1` and `r_P≥N/77-O(1)`.
    The surviving endgame coordinate is peel-relative boundary intensity
-   `r_P/(max(P)|G'_P|)`, with endpoint owners and divisor/gcd sidecars retained.*
+   `r_P/(max(P)|G'_P|)`, with endpoint owners and divisor/gcd sidecars retained.
+   THM-777 proves `rho<=12/(pi|G'_P|)`, the height-decaying Lipschitz floor,
+   and the exact shape floor `7/858` through `maxP<=18`; its global asymptotic
+   floor is still a named conjecture, not a compactness theorem.*
 2. **Attack persistent translate covers with their metric stalks retained.** At level one,
    `I(13,p,1)` is exactly a 13-translate cover of `F_p^x/{±1}` by the
    strict-danger set.  In the tight `s=2` quotient, THM-772 now forces a

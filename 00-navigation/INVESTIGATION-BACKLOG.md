@@ -36,6 +36,13 @@
   s-threshold decks, r≥8 alignment residue (survivor realized), and Lean decide-targets.
   Tooling: deck_event_witness() in the library (16/16).
   Reflection: 07-reflections/the-deck-is-a-smith-diagram-opus-S300.md.
+- **S301/S9 floor update:** THM-777 proves the bridge
+  `rho<=12/(pi|G'_P|)`, the unconditional but height-decaying floor
+  `|G'_P|>=1/(91 maxP)`, and the exact bounded-shape minimum `7/858` for every
+  primitive 12-core with `maxP<=18`, uniquely at `{1,...,13}\{6}`.  The
+  adversarial battery finds no decay, but the global shape floor remains a
+  conjecture.  Do not promote the proposed `rho<469` normalized atlas bound
+  outside strata where that floor is proved.
 
 ## Lead codex-2026-07-14-S3: finish n=12 by shallow gcd descent or deep folded-collar failure
 
