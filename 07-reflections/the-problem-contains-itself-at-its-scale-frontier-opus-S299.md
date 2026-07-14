@@ -236,8 +236,9 @@ that matters for what to do next, era by era, as refinements of ONE object:
 Each era's "wall" was the next era's object. The equidistribution wall became the
 7-clock geometry; the measure wall became the strand identity; the raw-height wall
 became the sheet cycle. That is the meta-pattern of S297's arc, now with one more
-confirming instance, and it suggests reading the CURRENT walls (`r≥7` tilings;
-peel-relative transverse fragmentation) as the next objects, not the next estimates.
+confirming instance, and it suggests reading the CURRENT walls (the `r≥7` strata
+outside THM-767's chamber-pierce lane and peel-relative transverse fragmentation)
+as the next objects, not the next estimates.
 The raw fragmentation/divisibility wall was a false coordinate and is now itself
 evidence for this rule.
 
@@ -250,8 +251,8 @@ evidence for this rule.
   global enumeration bound follows from `c*` after the falsifier above. A corrected
   peel-relative splice is still needed. The q≤25 witness computation C2 is also dead
   as stated (codex-S3 refutation) and should become an adaptive certificate lane.
-- The three named open items of the covering endgame are now: (1) `r≥7` tilings
-  (spectral/signed refinement or capped envelope on exceptions), (2) gcd-descent
+- The three named open items of the covering endgame are now: (1) the `r≥7` deck
+  strata left after THM-767's event-pierce/chamber-locking theorem, (2) gcd-descent
   bookkeeping, and (3) a peel-relative replacement for the REFUTED
   fragmentation/divisibility bridge. None is merely enumeration.
 - The FI-shaped probe: test a cubic certificate against the band bank's 19

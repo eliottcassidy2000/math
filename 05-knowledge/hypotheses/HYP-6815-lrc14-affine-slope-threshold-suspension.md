@@ -231,11 +231,19 @@ high-frequency tooth insertion are independent directions of noncompactness.
 The scalar `c*` sees the first only when at least seven speeds share the scale and
 is blind to the second; it can also miss radial dilation of the four far coordinates.
 
-This does not threaten LRC14: the audited `V_N` rows fire the capped-envelope
-peel. It identifies a missing coordinate. A transport state for the splice
+This does not threaten LRC14: THM-771 proves that every prime member of the
+`V_N` family fires the capped-envelope peel. It identifies a missing coordinate.
+A transport state for the splice
 must retain at least the normalized cap load
 `r_P/(v|G'_P|)=pi*v*(P)/v`, rather than `r_P` alone, together with the
 divisor-support profile and endpoint/tooth ownership.
+
+THM-772 turns this diagnosis into a reusable terminal face. A fixed base safe
+interval retains asymptotic duty cycle `6/7` under a new frequency `N`, the
+component count is at most linear in `N`, and a sufficiently fast proportional
+peel `aN` closes by THM-755 at an explicit rational threshold. The remaining
+noncompactness is therefore not "many walls" by itself, but many walls coupled
+to vanishing base mass or inadequate peel rate.
 
 There is also an exact compressed local coordinate.  At a fixed time put
 `x_i={s_i t}`, `kappa_i=floor(14x_i)`, and `rho_i={14x_i}`.  If

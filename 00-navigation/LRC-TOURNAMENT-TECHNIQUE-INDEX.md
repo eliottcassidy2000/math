@@ -39,6 +39,36 @@ boundaries, wall-crossing events, residue packets, cover arcs, Fourier modes,
 Haar rectangles, matroid topes/cocircuits, Fejer atom banks, state-lift
 obligations, and proof-carrier interfaces.
 
+## LTT-434 - Persistent Sheet-Ownership Hypergraph / Pairwise Collapse
+
+- **Move:** At a binding scale `Q=13s`, split the tight core into the on-sheet
+  packet `sU` and off-sheet tighteners, then use sheets `Z/sZ` as obligations.
+  Retain the closed-danger incidence `(tau,j,w)` over every `tau` in the loose
+  set `G_U`; do not collapse the persistent cover to one binding time.
+- **LRC use:** THM-769 turns the deep tight 12-core branch into an `s`-colour
+  ownership problem. Two tighteners force `s=2` and persistent opposite parity;
+  the three-tightener equality edge has the analogous three-colour cover.
+  THM-770 proves the shallow full-residue branch exactly through lift height 12.
+- **Preserves:** quotient-core loose components, sheet label, tightener owner,
+  gcd multiplicity, nearest-integer colour, endpoint wall, and the universal
+  quantifier over `tau in G_U`. This reconstructs the folded tightness tests.
+- **Forgets / guardrail:** A residue multiset or runner-pair tournament loses
+  simultaneous sheet coverage and persistence. In THM-770 all 66 pairwise
+  owner-pressure comparisons tie, while the endpoint-incidence hypergraph
+  distinguishes 13 zero-defect packets among `13^12` candidates.
+- **Pairwise observable:** For diagnostic residue-obligation vertices, compare
+  atomic cells exclusively ownable after the other ten groups are erased.
+  The exact observable ties on every pair in the height-12 census.
+- **Switch/gauge:** Use residue order `1->2->...->12` only as a declared tie
+  gauge. The resulting tournament is transitive with score histogram
+  `{0:1,...,11:1}`, no directed triangles, singleton SCCs, zero edge flips, and
+  one Hamiltonian path. These fingerprints certify collapse, not rigidity.
+- **Next pull:** Solve the persistent `s=2` opposite-parity cover over each
+  component of `G_U`, then classify the `s=3` equality cover and the ramified
+  higher-`s` packets admitted by THM-769's capacity inequality.
+- **Pointers:** THM-769, THM-770, THM-765, HYP-6775, HYP-6820;
+  `lrc13_full_residue_endpoint_owner_h12_codex_S3.cpp/.out`.
+
 ## LTT-433 - Rooted Metagraph Address / Exact Tiling-Fibre Stalk
 
 - **Move:** Keep two tournament-tiling graphs separate: local one-tile
@@ -91,7 +121,8 @@ obligations, and proof-carrier interfaces.
   `v*=r_P/(pi|G'_P|)`, HYP-6780 says the remaining band is a scale quotient
   rather than a raw speed cutoff, THM-764 refutes a uniform `q<=25` terminal,
   and THM-771/MISTAKE-145 refute control of `r_P` by maximal divisor scale even
-  inside exactly `f=4`. The card prevents
+  inside exactly `f=4`. THM-772 closes the fixed-window/proportional-peel
+  transverse face by retaining wall rate, mass, and peel rate together. The card prevents
   future agents from treating "bounded band" as a scalar table or from
   re-promoting the `k<=13` shadow to a uniform route.
 - **Preserves:** `M>=1/14` terminal status, far count, normalized core shape,
@@ -122,7 +153,7 @@ obligations, and proof-carrier interfaces.
   tight corners or with a near-dilate equality family without retaining the
   certificate sidecar.
 - **Pointers:** THM-758, THM-755, THM-756, THM-753, THM-751, THM-738,
-  THM-757, THM-759, THM-764, THM-771, HYP-6780, HYP-6815, HYP-6830, HYP-6800,
+  THM-757, THM-759, THM-764, THM-771, THM-772, HYP-6780, HYP-6815, HYP-6830, HYP-6800,
   MISTAKE-145, klein-S312, opus-S295,
   `00-navigation/LRC14-FRONTIER-AND-AVENUES-2026-07-14.md`.
 

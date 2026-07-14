@@ -61,7 +61,6 @@ Format per entry:
   codex-2026-07-14-S5; `lrc14_thm767_correction_referee_opus_S300.py` and
   `lrc14_r7_sheet_endpoint_defect_codex_S5.py` with stored exact outputs.
 
-## MISTAKE-145 -- "good-set fragmentation only via divisibility: r_P <= B(c*)" (HYP-6830/opus-S299) -- refuted twice within hours (codex exact falsifier + opus scale-free census); FOURTH instance of the MISTAKE-140 genus: raw counts over height-unbounded families are not compactness coordinates
 ## MISTAKE-145 -- "good-set fragmentation only via divisibility: r_P <= B(c*)" (HYP-6830/opus-S299) -- refuted by exact tooth families and an independent scale-free census
 
 - **What was claimed (opus-S299, as the OPEN "load-bearing sentence" of the two-regime
@@ -80,8 +79,9 @@ Format per entry:
 - **The correct framing:** the candidate invariant is PEEL-RELATIVE, not absolute:
   rho(P) = v*(P)/maxP = r_P/(pi |G'_P| maxP). It is scale-invariant on dilates
   (9.334... at every c for c*{1..12}) and is O(1) on every tested family, with the
-  measured maximum at the `{1,...,12}` shape. The audited falsifier instances have
-  empty top bands. None of this yet proves a global rho bound: the remaining proposed
+  measured maximum at the `{1,...,12}` shape. THM-771 proves the entire chart-native
+  prime falsifier family has empty top bands. None of this proves a global rho bound:
+  the remaining proposed
   obligation is a `|G'|` floor off classified tight families, using `r_P<=Sum(P)`.
 - **Impact:** none downstream -- the claim lived a few hours as OPEN, was consumed by
   nobody, and both refutations landed before any theorem cited it. HYP-6830 carries

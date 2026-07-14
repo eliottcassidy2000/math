@@ -39,8 +39,9 @@ each \emph{core's} unresolved peels, and sheet-covering theorems close every sca
 up to six exceptional runners above explicit thresholds. The band edge scales with dilation
 ($v^\ast(cP)=c\,v^\ast(P)$), while an exactly four-far scale-free family shows that raw
 good-set fragmentation is not controlled by the maximal common-divisor scale. Thus the
-remaining domain has not yet been reduced to a globally bounded one: a peel-relative splice, together with the
-$r\ge7$ deck residue, is the honest open remainder. We state precisely what is proved,
+remaining domain has not yet been reduced to a globally bounded one: a peel-relative splice,
+together with the residual $r\ge7$ deck strata outside the event-pierce lane, is the
+honest open remainder. We state precisely what is proved,
 what is machine-checked, what is exactly computed, what is refuted (including a uniform
 bounded-period witness finish), and what remains.
 \end{abstract}
@@ -190,8 +191,10 @@ For $r=1$, gcd coprime, the stronger clearance $\tfrac12-\tfrac1{2c}$ holds
 
 Seven exceptions can cover the sheet cycle ($7\cdot\tfrac17=1$); the tight configurations
 are cyclic tilings of $\Zb_c$ --- the $7$-clock of Theorem~\ref{thm:sevenclock} one level
-down --- and the wall is realized by an explicit $c=7$ family that is nonetheless lonely by
-a non-sheet route. The remaining structured-family toolkit, each proved in canon:
+down. Corrected \textsc{thm}-767 proves that, in the commensurate $7g_a\mid c$ strata,
+an exception event inside the closed core-safe set frees a sheet; in particular
+$\max_a(w_a/g_a)\ge7\max(P)$ closes the row. Exact deck tilings cannot cross such an
+event and are chamber-locked. The remaining structured-family toolkit, each proved in canon:
 safe peels reducing $\sim\!98\%$ of covering sets to settled $\le13$-runner instances
 (\textsc{thm}-753, parts A/B); aligned far-element monotonicity (\textsc{thm}-751); the
 detuned dispatch and pack/cluster/hierarchical clocks for coherent families
@@ -207,9 +210,13 @@ protocol of Theorem~\ref{thm:band} decides. The proposed argument for a global b
 bound from raw component count and maximal common-factor scale fails: for prime $N>110$,
 $\{1,\ldots,9,15,110,N,1092N\}$ is covering, primitive, exactly four-far, and has no
 seven-member divisor packet, while the component count of its top-peeled good set tends
-to infinity (\textsc{thm}-771; \textsc{hyp}-6830). This does not refute a bounded
+to infinity (\textsc{thm}-771; \textsc{hyp}-6830). The same theorem proves every member
+of this prime family is nevertheless closed by the capped peel. This does not refute a bounded
 peel-relative domain; it shows that any proof must retain normalized cap load and
-endpoint ownership. On the executed exact checks the
+endpoint ownership. More generally, \textsc{thm}-772 proves that a fixed safe interval
+survives a new frequency $N$ with asymptotic duty cycle $6/7$, while the component
+count grows at most linearly; any sufficiently fast proportional peel is therefore
+eventually terminal at an explicit rational threshold. On the executed exact checks the
 bands are uniformly loose: $8260$ interval-core band families, all $M\ge 1/13$, zero
 exceptions. A uniform bounded-period witness finish is \emph{refuted}: the family
 $26\cdot\{1,\dots,12\}\cup\{339\}$ has no rational witness of period $q\le25$ (first

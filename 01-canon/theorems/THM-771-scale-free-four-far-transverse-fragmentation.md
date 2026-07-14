@@ -5,6 +5,7 @@ status: PROVED (elementary interval geometry and capped tail) + VERIFIED-EXACT (
 source: codex-2026-07-14-S2
 depends_on:
   - THM-755   # the peel-relative capped-envelope coordinate
+  - THM-772   # general fixed-window transverse-tooth cap
 related: [HYP-6780, HYP-6815, HYP-6830, MISTAKE-145]
 verification: 04-computation/lrc14_affine_slope_suspension_codex_S2.py
   (+ 05-knowledge/results/lrc14_affine_slope_suspension_codex_S2.out)

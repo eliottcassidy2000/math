@@ -310,9 +310,15 @@ The exactly-`f=4` family
 It has no divisor packet of size seven, but the top-peeled core's component
 count is unbounded because the `N`-runner inserts new teeth into a fixed safe
 interval. Thus common scale and transverse frequency are independent
-noncompact directions in the same four-far chart. The audited rows close by
-the capped peel, whose ratio normalizes component count against the named
+noncompact directions in the same four-far chart. THM-771 closes the entire
+prime family by the capped peel, whose ratio normalizes component count against the named
 peel; `c*` alone cannot support the automaton quotient.
+
+THM-772 extracts the general mechanism: a fixed safe interval of length `L`
+survives a new frequency `N` with measure at least `6L/7-2/(7N)`, while its
+component count is at most `N+sum(B)`. A proportional peel `aN` is therefore
+eventually terminal under an explicit rational inequality. The genuinely open
+transverse face must include collapsing base-window mass or subcritical peel rate.
 
 The incoming exact endpoint-sidecar audit independently confirms the payload
 rule.  Runner and unweighted endpoint tournaments do not preserve covering,

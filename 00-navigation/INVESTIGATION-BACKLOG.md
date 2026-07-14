@@ -20,8 +20,14 @@
 - **Critical correction:** HYP-6830's proposed complementarity `r_P≤B(c*)` is REFUTED by the
   exactly-`f=4` primitive covering family `{1,...,9,15,110,N,1092N}`. No divisor packet has seven
   members, but the top-peeled core has unbounded good-set components (`66,104,174,310` exactly at
-  `N=211,503,1009,2003`). The audited rows fire the capped peel. Thus coherent scale and
-  transverse tooth frequency are independent coordinates (THM-771; MISTAKE-145).
+  `N=211,503,1009,2003`). THM-771 proves the entire prime family fires the capped peel.
+  Thus coherent scale and transverse tooth frequency are independent coordinates
+  (THM-771; MISTAKE-145).
+- **Terminal transverse face:** THM-772 generalizes the successful cap calculation. If a fixed
+  base core has one safe interval of length `L`, adjoining frequency `N` leaves measure at least
+  `6L/7-2/(7N)` and creates at most `N+sum(B)` components. A proportional peel `aN` therefore
+  closes beyond an explicit rational threshold whenever `(333/106)*a*6L/7>1`. The unresolved
+  degeneration must lose base-window mass, peel rate, or both; raw wall proliferation alone is terminal.
 - **Open remainder:** (i) `r ≥ 7` decks — union wall structural; tight case = cyclic tilings of
   `Z_c`; (ii) a peel-relative splice retaining `r_P/(v|G'_P|)`, divisor support, and endpoint
   owners; (iii) gcd-descent bookkeeping. No global regime-2 bound has been proved from
@@ -39,12 +45,12 @@
   is pierced at a switching time. The promoted raw-`w` bound and KCL absorption law
   are withdrawn (MISTAKE-146); the exact replacement is `F=Q+Omega-sigma`. (ii) the
 - **S300 UPDATE (owner directive: r>=7 decks + regime 2 via squaring-the-square/Smith/Kirchhoff):**
-  (i) the r=7 STRATUM IS CLOSED above w_max > 7·Σ(P) — THM-767's EVENT PIERCE (7g|c strata:
+  (i) the r=7 STRATUM IS CLOSED when `max(w/g) >= 7*max(P)` — THM-767's EVENT PIERCE (7g|c strata:
   counts constant = c/7 off events; any event moment in the closed core-safe set frees a sheet;
   the S299 wall instance pierced at all 203 core-safe event moments — the witness lives at the
-  SWITCHING TIMES, not the core optimum). The proposed KCL absorption inequality for
-  maintained exact tilings is false/ambiguous under strict bad sheets (MSG-1621) and must
-  not be used; only the event-pierce lane is currently available. (ii) the
+  SWITCHING TIMES, not the core optimum). The proposed KCL absorption inequality was
+  withdrawn (MISTAKE-146): strict-set handoffs instead prove that exact tilings are
+  chamber-locked, while the coincidence law only locates double-boundary events. (ii) the
   complementarity item RESOLVED NEGATIVELY as phrased (MISTAKE-145; codex exact falsifier + my
   census, same day): the surviving regime-2 invariant is peel-relative ρ = v*/maxP, measured
   ≤ 9.335, extremal AT {1..12} (adversarial climb converges to it); one lemma remains (|G'|

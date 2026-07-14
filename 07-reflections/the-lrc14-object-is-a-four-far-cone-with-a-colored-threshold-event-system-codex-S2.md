@@ -79,8 +79,17 @@ The replacement suggested by the cap theorem is relational: for a named peel
 `v`, retain `r_P/(v|G'_P|)=pi*v*(P)/v`, the divisor-support profile, and the
 endpoint owners that created the cuts. This is not yet a finiteness theorem.
 It is the smallest current description that distinguishes radial replication
-from transverse refinement while remembering why the audited ray is already
-closed by the capped peel.
+from transverse refinement while remembering why THM-771 closes the whole
+prime ray by the capped peel.
+
+THM-772 identifies the exact rate law behind that closure. If the old fiber
+contains one interval of length `L`, a new frequency `N` leaves at least
+`6L/7-2/(7N)` safe mass and creates at most `N+sum(B)` components. A peel of
+speed `aN` therefore sees a bounded normalized wall load and becomes terminal
+once `a` crosses an explicit `L`-dependent threshold. In this chart, increasing
+geometric complexity can decrease proof difficulty. The nonterminal boundary
+must force the retained interval scale toward zero, slow the peel relative to
+wall creation, or coordinate the owners so that another observer is needed.
 
 That observation does not make LRC periodic. Inside one residue class,
 changing height changes:
@@ -193,6 +202,38 @@ core `F` of size four and exception set `C` of size nine. The sheet identity is
 still exact, but THM-761's free-sheet bound does not fire at `r=9`. The literal
 four-far chart therefore sits inside the open seven-or-more-exception residue,
 not inside the newly closed high-support regime.
+
+### Tight-core recursion reveals the missing fiber
+
+THM-769 makes the same preservation issue exact at the 12-core boundary. At a
+tight maximum `p/(13s)`, the endpoint owners lie in the on-sheet packet
+`E=sU`, while every off-sheet speed is strictly interior near that maximum.
+This local split is not enough to preserve tightness. The exceptions must cover
+all `s` lifts over every point of the quotient core's loose set `G_U`.
+
+The deciding object is therefore the persistent incidence field
+
+```text
+(tau,j,w) with tau in G_U, j in Z/sZ,
+and w closed-dangerous on the j-th lift of tau.
+```
+
+Its first consequences are already rigid: a deep primitive tight packet needs
+at least two off-sheet speeds; two force `s=2` and a persistent opposite-parity
+two-colouring; the three-speed equality edge is either touched by a half-sheet
+tightener or has `s=3` with persistent ownership of all three colours. A residue
+multiset at one maximum, a gcd budget, and a runner tournament each forget the
+quantifier over all `tau in G_U`.
+
+THM-770 supplies the complementary shallow evidence. Across all
+`13^12` full-residue packets of lift height at most twelve, endpoint-owned cell
+incidence leaves only thirteen zero-defect dilates and only `{1,...,12}` after
+primitive normalization. Its diagnostic tournament has all `66` pairwise
+comparisons tied; the endpoint incidence hypergraph still separates those
+thirteen solutions from more than `2.3e13` candidates. This is an exact warning
+against demanding that a useful proof carrier be binary or pairwise. The
+recursive state is a coloured hypergraph varying over a metric base, with the
+sheet action and closed boundary convention retained.
 
 ### A smaller local address than the edge table
 
@@ -502,11 +543,12 @@ four-cone suggests a replacement.
 For packets `cD union W`, this is no longer entirely schematic. THM-761 is an
 exact descent to the finite pointed cycle `Z/cZ`: the core is fiber-exact and
 the exceptions become the next level's residue runners. The immediate open
-boundary is explicit: the seven-exception tilings outside THM-767's
-commensurate large-shape event-pierce lane, excessive-gcd descent, and
-HYP-6830's peel-relative replacement for the refuted claim that scale-free
-cores have controlled raw good-set fragmentation. THM-767(4)'s proposed KCL
-absorption inequality is under exact correction and is not part of this route.
+boundary is explicit: the seven-exception strata outside THM-767's
+commensurate event-pierce lane, excessive-gcd descent, and HYP-6830's
+peel-relative replacement for the refuted claim that scale-free cores have
+controlled raw good-set fragmentation. Corrected THM-767 shows that an exact
+deck tiling cannot cross an event: it is chamber-locked, while the coincidence
+law locates double-boundary walls without governing chamber persistence.
 The projective compactification below is needed for arbitrary unbounded
 sequences outside that proved sheet chart.
 
@@ -538,12 +580,12 @@ samples from an infinite box.
 
 ## 10. Concrete next lemmas
 
-1. Replace HYP-6830's refuted `r_P<=B(c*)` bridge with a peel-relative splice
-   using `r_P/(v|G'_P|)`, divisor-support profile, and endpoint owners; prove
-   that the remaining normalized states are bounded or recursively descend.
-2. Classify the seven-exception `1/7` tilings left after THM-767's event-pierce
-   lane, replace the refuted KCL absorption step, and formalize the terminating
-   excessive-gcd descent `c -> c/g`.
+1. Extend THM-772 beyond its fixed-window/proportional-peel face: stratify
+   sequences by base-window decay, wall-creation rate, and peel rate, attach
+   endpoint owners, and prove every residual state is bounded or recursively descends.
+2. Classify the seven-exception `1/7` chambers left after THM-767's
+   event-pierce/chamber-locking lane and formalize the terminating excessive-gcd
+   descent `c -> c/g`.
 3. Formalize the semilinear four-cone and colored endpoint-loop criterion.
 4. Compute the event cocycle of `g -> k*g`: classify the owner blocks that
    split, merge, or reorder and find the smallest sidecar transporting truth,
