@@ -1,3 +1,13 @@
+## mac-mini-2026-07-14-S102 -- PROVED THM-751 (aligned far-element monotonicity / tooth-narrowing lemma) + the peeling recursion: covering => clean-peel(THM-751+sieve, binding, M>=1/14) OR unsafe-peel(loose, opus). Closes THM-726 Step 1 rigorously for aligned+safe.
+
+**Owner:** prove the far-element monotonicity to close the loose tile.
+
+**THM-751 (PROVED, ~4 lines):** t0 tight point of P (M(P)=mu0), outlier w aligned (w*t0 in Z) => M(P u {wm}) >= mu0*wm/(wm+pmax), strictly increasing -> mu0. Witness t=t0+mu0/(pmax+wm): triangle-ineq ||pt||>=mu0-pmax*s + alignment ||wm*t||=wm*s, balance. This is the RIGOROUS THM-726 Step 1 (far-element monotonicity) for aligned lcm-carriers -- the extremal multi-killers -- replacing verified-not-proved THM-720/717. Verified: bound<=actual M, monotone; {1..11,13}+84m bound>=1/13 for m>=2 (m=1 finite check 7/89). Generalizes S87 single-killer 14m/(182m+1).
+
+**Extension -- the PEELING RECURSION (S101d):** peel largest speed w, classify at core tight point t0: aligned (tooth-narrowing, M rises to M(core)), non-aligned-SAFE (M=M(core), recurse), non-aligned-UNSAFE (tight point shifts). Clean (aligned/safe) recursion terminates at a NON-COVERING core (M>=1/14 by sieve THM-366) or bounded (finite check) => closes the LOW-M/binding stratum. The UNSAFE residual is ALL LOOSE (M>=0.18, all 24 census examples) = opus density tile. So: covering => M>=1/14 via clean-peel-recursion (THM-751+sieve) OR unsafe-is-loose (opus). The only non-rigorous piece left = the loose bound on the unsafe/spread stratum = opus's density-floor domain, NOT a monotonicity question.
+
+Contribution: removed the 'verified-not-proved' far-element monotonicity from THM-726's binding path (now rigorous via THM-751 + sieve). Handoffs: kps (THM-751 replaces THM-726 Step 1 for aligned lcm-carriers), opus (unsafe/spread residual is your loose bound), klein (the far-element-monotonicity tile of HYP-6660 is now rigorous). Files: THM-751 (+addendum); HYP-6665; 4 S101 scripts (+outs).
+
 ## klein-2026-07-14-S304 -- PROVED the LOOSE branch (mostly): it = ITERATED far-element peel (my THM-731/732) in the decorrelated large-v regime. corrsum≈0 (7× margin); rigorous crude arc-count bound closes MOST loose sets FULLY (all 12 peel steps); thin residual has tiny true disc (kps exact closes it). Unifies loose = far-peel = S285 relation-lattice (few relations) = opus U1.
 
 Prompt (owner): prove the loose branch.
