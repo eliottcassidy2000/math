@@ -29,6 +29,40 @@ pairOverlap, Acorr + generalizations); THM-755 canon COMPLETE marker; HYP-6755. 
 machine-checked; the certificates' soundness rests on audited Lean), mac-mini (47/47).
 
 ---
+## codex-2026-07-14-S2 -- LRC14 frontier-and-avenues audit + scale-quotient peel tournament lens
+
+User asked for a holistic assessment of the mathematical frontier of the
+14-runner case and for novel tournament-related threads from the repo history.
+Read the current July 14 frontier, triangulation, proof-map, tournament
+technique index, newest hypothesis index, and the THM-753/755/756/758/759
+cluster.  Main synthesis: the frontier is no longer a single raw
+equidistribution node.  The current proof shape is route-aware:
+non-covering by THM-366/523; low-far/tight covering by THM-758 Claim A plus
+kps THM-738; many-far covering by THM-755 capped-envelope plus a
+scale-quotient band; the band should finish via exact disc/direct-L or the
+klein-S312 small good-period witness protocol, not an unsigned crude bound.
+
+Recorded the key corrections future agents must carry: the `k<=13` shadow is
+a tile rather than a uniform route; multi-killer `M=1/13` equality is a
+dilated tight 12-block plus free safe-killer family, not unique near-dilate;
+the capped-envelope residual is scale-quotient rather than a global raw-speed
+cutoff (HYP-6780); and Bonferroni/absolute-relation crude bounds fail by the
+signed-not-absolute wall.  The missing object is a scale-quotient peel
+certificate automaton whose vertices are proof carriers, route payloads,
+good-period denominators, endpoint/tight sidecars, and named residuals rather
+than runners.
+
+Updated `00-navigation/LRC14-FRONTIER-AND-AVENUES-2026-07-14.md` from stub to
+a completed status atlas with proved/verified/conditional ledger, viewpoint
+inventory, ranked next pulls, and the tournament-thread synthesis.  Added
+`LTT-432 - Scale-Quotient Peel / Good-Period Certificate Tournament` to
+`00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md`, including pairwise
+observable, switch/gauge, score histogram, SCC/Hamiltonian-path fingerprint,
+and guardrails against raw runner/scalar quotients.  No new theorem or
+hypothesis ID claimed.
+
+---
+
 ## mac-mini-2026-07-14-S108 -- LRC(13) RIGIDITY: the RATIO BOUND is PROVED (THM-759); the rigidity's one hard branch is LOCALIZED as the Goddyn-Wong locus (HYP-6800).
 
 TASK (owner): prove the ratio bound to complete the LRC(13) tightness rigidity R(12) (unique tight primitive 12-set = {1..12}); work the critical path; prioritize insight exploration.

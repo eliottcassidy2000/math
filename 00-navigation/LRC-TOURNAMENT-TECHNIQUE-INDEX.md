@@ -39,6 +39,50 @@ boundaries, wall-crossing events, residue packets, cover arcs, Fourier modes,
 Haar rectangles, matroid topes/cocircuits, Fejer atom banks, state-lift
 obligations, and proof-carrier interfaces.
 
+## LTT-432 - Scale-Quotient Peel / Good-Period Certificate Tournament
+
+- **Move:** Treat LRC14 peel/certificate states as tournament vertices, not
+  runners.  A vertex is a route payload such as `nearAP_THM738`,
+  `safe_peel_to_LRC13`, `aligned_tooth_THM751`, `capped_envelope_THM755`,
+  `exact_disc_or_direct_L`, `good_period_q_witness`, `tight_corner_AP_or_GW`,
+  or `raw_speed_band_shadow`.  Orient edges by which route preserves more of
+  the theorem-facing predicate after quotienting by scale.
+- **LRC use:** This is the tournament form of the July 14 correction:
+  THM-758 splits covering by far count, THM-755 closes peels above
+  `v*=r_P/(pi|G'_P|)`, HYP-6780 says the remaining band is a scale quotient
+  rather than a raw speed cutoff, and klein-S312 says the loose residual should
+  emit small good-period witnesses (`q<=25` in the sample).  The card prevents
+  future agents from treating "bounded band" as a scalar table or from
+  re-promoting the `k<=13` shadow to a uniform route.
+- **Preserves:** `M>=1/14` terminal status, far count, normalized core shape,
+  core scale, killer residue/offset, `|G'|`, `r`, capped-envelope edge,
+  safe-peel status, exact disc/direct-`L` certificate, good-period witness
+  `(q,a)`, AP/GW equality sidecar, and named residual.
+- **Forgets / guardrail:** Raw speed cap, raw runner tournament, score
+  sequence, unsigned Bonferroni truncation, absolute relation-lattice mass,
+  and raw `k<=13` shadow counts are illegal terminal vertices.  They may be
+  telemetry only after the route payload reconstructs the lonely witness or
+  theorem citation.
+- **Pairwise observable:** 
+  `4*proved_exit + 3*predicate_retention + 2*scale_control
+  + witness_explicitness - scalar_forgetting_penalty - unexecuted_band_penalty`.
+- **Switch/gauge:** Higher observable wins; ties follow explicit witness,
+  kernel-pure theorem, exact finite certificate, verified finite sample,
+  then scalar shadow.  The Hamiltonian tie path is
+  `nearAP_THM738 -> safe_peel_to_LRC13 -> capped_envelope_THM755 -> good_period_q_witness -> tight_sporadic_branch -> k7_slot_shadow -> signed_relation_wall -> raw_speed_band_shadow -> runner_tournament_shadow`.
+- **Fingerprint:** score histogram
+  `{12:1,11:1,10:1,9:1,7:1,6:1,5:1,1:1,0:1}`, no directed `3`-cycles by
+  construction, singleton SCCs, and one Hamiltonian path as displayed above.
+- **Next pull:** Build the scale-quotient band atlas: normalize the core,
+  record `(|G'|, r, v*)`, far count and killer offset, then emit either
+  capped-envelope, exact disc/direct `L`, or a good-period `(q,a)` witness.
+  Reject any quotient that identifies a good-period loose state with AP/GW
+  tight corners or with a near-dilate equality family without retaining the
+  certificate sidecar.
+- **Pointers:** THM-758, THM-755, THM-756, THM-753, THM-751, THM-738,
+  THM-757, THM-759, HYP-6780, HYP-6800, klein-S312, opus-S295,
+  `00-navigation/LRC14-FRONTIER-AND-AVENUES-2026-07-14.md`.
+
 ## LTT-431 - Gentle/Attacker Denominator Tournament
 
 - **Move:** Treat row families and denominator witness families as tournament
