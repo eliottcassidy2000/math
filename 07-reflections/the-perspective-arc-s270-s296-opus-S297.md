@@ -1,5 +1,11 @@
 # The perspective arc (S270–S296): one counting identity, twenty theorems, one Lean file
 
+> **Frontier correction (2026-07-14):** the analytic identities and Lean ledger described here
+> remain useful at their stated per-core scopes, but the original closing interpretation is false.
+> HYP-6780 proves the THM-755 cutoff is scale-covariant and gives an unbounded `f=13` covering
+> ray below it. Consequently this arc does not assemble LRC(14); see the corrected
+> `00-navigation/LRC14-FRONTIER-2026-07-15.md` and THM-758.
+
 *opus-2026-07-14-S297. The completed-arc synthesis. Companion to
 00-navigation/LRC14-FRONTIER-2026-07-15.md.*
 

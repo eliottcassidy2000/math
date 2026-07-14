@@ -1,45 +1,55 @@
-# LRC(14) FRONTIER — 2026-07-15 (opus-S297 synthesis)
+# LRC(14) FRONTIER — 2026-07-15 (corrected synthesis)
 
-**Supersedes** LRC14-FRONTIER-2026-07-14.md. The post-S296/S312 state: the covering case has
-**no open analytic statement** (klein-S310); what remains is enumerable computation, assembly,
-and Lean composition. This map states the assembly equation, each piece's exact status, and
-the remaining work items by kind.
+**Correction (2026-07-14).** The original S297 version of this file overlooked the scale-quotient
+obstruction already present in its parent commit (HYP-6780 and the corrected THM-758). Its claims
+that the `f>=4` branch was globally finite-decidable, that all such families have `M>=0.097`, and
+that LRC(14) was assembled were false. This file now records the logically current frontier.
+The standard 14-runner case remains open.
 
-## 0. The assembly equation (current sharpest form)
+## 0. The honest reduction
 
 LRC(14) = **NON-COVERING** (THM-366, via LRC(≤13), settled) + **COVERING**, and by
 klein-S309's THM-758 far-count split:
 
 > **COVERING = [≤3 elements > 14] ∪ [≥4 elements > 14]**
 > - **≤3-far ⟹ ≥10 speeds in {1..14} ⟹ kps THM-738** (the 1001-body exact-ℚ tree, PROVED).
->   This half **contains the covering-min and EVERY tight family** — the equidistribution /
->   disc / k=7 wall lived only here, and here everything is already swept exactly.
-> - **≥4-far ⟹ LOOSE (Claim B, M ≥ 0.097)** — FINITE-DECIDABLE (klein-S310): the
->   capped-envelope (THM-755) reduces every ≥4-far family to a bounded band ⟹ one peel
->   closes it or a finite check does. The band itself: all-loose verified exactly
->   (mac-mini-S105: 8,260 families, 0 fails), trivially loose in character (klein-S311,
->   honest-corrected S312: no crude uniform M ≥ 0.14 bound exists — signed wall — but every
->   band body has a **bounded-q rational witness (q ≤ 25)**: cheap, decidable).
+> - **≥4-far remains OPEN in general.** THM-755 gives a finite interval only after a core is
+>   fixed. Under dilation `P -> cP`, the good-set measure is unchanged, its component count is
+>   multiplied by `c`, and the cutoff obeys `v*(cP)=c v*(P)`. Therefore no uniform raw speed
+>   cutoff follows.
 
-Supporting rigidity (for the write-up's uniqueness claims): covering-min 14/183 unique at the
-deep well (THM-724/726); L = 0 census = {AP, GW} only (kps THM-741); LRC(13) tightness
-rigidity ({1..12} unique tight primitive 12-set, mac-mini-S107); the multi-killer floor
-M ≥ 1/13 with its minimizer family characterized (THM-757 + S106 correction); the ratio bound
-THM-759 with the Goddyn–Wong locus localized (S108).
+HYP-6780 gives an explicit unbounded primitive covering ray
+
+`V_c={c,2c,...,12c,13c+1}`
+
+for infinitely many `c`, with `f=13`, lying below the scaled THM-755 edge and satisfying the exact
+value `M(V_c)=1/13`. This refutes `f>=4 => M>=0.097` and the sampled cutoff near `500`; it does not
+refute LRC. The correct target is a classification modulo scale, retaining normalized core shape
+and the last runner's residue/offset.
+
+THM-760 subsequently closes this displayed ray and, more generally, every primitive family in
+which twelve speeds share a common divisor: lifting a core witness through the divisor produces a
+sheet on which the one coprime exceptional runner is safe. The genuine scale residual therefore
+has at least two exceptional residue classes, or has no twelve-speed common-factor core.
+
+Status cautions: THM-724's addendum closes its genuine single-killer case, but THM-726 still relies
+on an unproved global far-element monotonicity statement; THM-741 is explicitly `CLAIMED` with an
+unfinished evidence checklist. Neither may be used as an unconditional assembly lemma.
 
 ## 1. Status by piece
 
 | piece | status | artifact |
 |---|---|---|
 | non-covering | PROVED | THM-366 + LRC(≤13) citation |
-| ≤3-far (all tight families) | PROVED (exact-ℚ sweep) | kps THM-738 + THM-758 split (klein-S309) |
-| ≥4-far loose reduction | PROVED-modulo-enumeration | THM-755 capped envelope + klein-S310 |
-| the band (220, W₀] | VERIFIED-EXACT all-loose; decidable finish named | mac-mini-S105 (8,260 exact); klein-S312 (q ≤ 25 witnesses) |
+| ≤3-far | FINITE-EXACT AS RECORDED; independent rerun/Lean transcription open | kps THM-738 + THM-758 split (klein-S309) |
+| ≥4-far branch | OPEN modulo scale-normal classification | corrected THM-758 + HYP-6780 |
+| sampled raw bands | FINITE-EXACT FOR THE STATED BANKS ONLY | mac-mini-S105; klein-S312 |
 | (H)-bands, bottom cores | CLOSED (complete sweep) | THM-756 (4,032 pairs; AP/GW corners) |
-| safe-peel bulk (~98%) | PROVED | mac-mini THM-753 (LRC(≤13) in disguise) |
+| safe-peel | Parts A/B PROVED; irreducible-tiled Part C empirical | mac-mini THM-753 |
 | aligned monotonicity | PROVED | mac-mini THM-751 |
 | shadow tiles | PROVED | THM-748 (klein), THM-749, THM-754 clean-slot |
-| coherent families (all scales) | PROVED | THM-668/735(kps)/737/739/740 |
+| named coherent/cluster families | PROVED at their stated scopes | THM-668/737/739/740 |
+| 12-speed common-factor core + one coprime exception | PROVED, all scales | THM-760 |
 | tail lanes | EXACT (identity + scans) | THM-750 closed budget; U1 discharged (S283) |
 
 ## 2. The Lean ledger
@@ -51,30 +61,28 @@ THM-759 with the Goddyn–Wong locus localized (S108).
   Lean faces; kps's exact-ℚ certificates have no prose links below the band edge.
 - Fleet Lean assets: LRCDetunedDispatch (THM-668), LRCShadowGap (THM-748), the certificate
   supply (THM-693–698), SmallClusterFull, LRC13Citation, kps decide-bottoms.
-- **Remaining Lean work (composition, no new mathematics):** the assembly theorem wiring
-  (THM-758 split + THM-738 import + Claim-B reduction + band witnesses as decide-instances).
+- The formalized chain proves the stated geometric/Fourier/capped-envelope lemmas. It does **not**
+  supply the missing uniform scale-normal classification, so there is no sound assembly theorem
+  to wire yet.
 
-## 3. Remaining work items (by kind — none analytic)
+## 3. Remaining work items
 
-1. **ENUMERATION (decide-shaped):** (a) execute Claim B's finite checks over the ≥4-far
-   reduction's bounded bands (protocol: THM-756's three lines; ~99% capped-envelope-instant);
-   (b) enumerate the band's bounded-q witnesses (klein-S312, q ≤ 25) or fold into (a).
-   Owner: kps machinery + lrc14_certificates.py.
-2. **ASSEMBLY WRITE-UP:** one document stating the full theorem with every citation pinned
-   (the skeleton is mac-mini-S104 + THM-758; the uniqueness/rigidity appendix from S106–S108).
-   Target: 04-paper/.
-3. **LEAN COMPOSITION:** wire the assembly (item 2) through the existing Lean assets; the
-   finite checks enter as decide/`norm_num` bottoms or named computational citations.
-4. **HYGIENE:** the ID-collision cleanup (≥25 collisions logged during the sprint); dedupe
-   HYP entries; freeze the THM numbering for the paper.
+1. **Prove a scale-normal structure theorem.** Split normalized families into coherent dilation
+   packs, additive/hierarchical clusters, and an incoherent residual, while retaining scale residue
+   and killer offset. Raw far count and diameter are not invariants of this quotient.
+2. **Attack the prime-grid bottleneck as a persistent translate-cover problem.** At level one,
+   `I(13,p,1)` is exactly a 13-translate cover of
+   `F_p^x/{±1}` by the strict-danger set. Classify which covers persist under lifts and evade the
+   omit-one gcd reduction.
+3. **Reproduce and formalize finite tiles.** Independently rerun THM-738's complete bank; finish
+   rather than promote THM-741; attach machine-verifiable certificates and exact scope metadata.
+4. **Hygiene.** Resolve theorem-ID collisions and require the status vocabulary `proved`,
+   `finite-exact for stated bank`, `verified sample`, `conditional`, or `open`.
 
 ## 4. The one-line frontier
 
-> **LRC(14) is assembled: every analytic statement is proved (much of it machine-checked);
-> what separates the fleet from a complete write-up is enumeration, composition, and prose.**
+> **LRC(14) is open. The proved `f<=3` tile and the per-core capped envelope are substantial,
+> but the `f>=4` branch requires a scale-normal structural classification, not raw enumeration.**
 
-*Sources: klein S304–S312 (loose branch, far-count split, finite-decidability, band
-witnesses), mac-mini S103–S108 (safe-peel, assembly, band exact, floors, rigidity), kps
-THM-738/741 + exact-ℚ infrastructure, opus S270–S296 (the perspective arc: clocks, budgets,
-capped envelope, band closures, the Lean chain). Companion narrative:
-07-reflections/the-perspective-arc-s270-s296-opus-S297.md.*
+*Controlling corrections: HYP-6780 and the updated THM-758. Earlier S297/S310/S312 closure
+language and the companion S297 reflection must be read through this correction.*
